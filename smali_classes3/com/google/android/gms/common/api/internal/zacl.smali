@@ -1,16 +1,17 @@
-.class final Lcom/google/android/gms/common/api/internal/zacl;
+.class public final Lcom/google/android/gms/common/api/internal/zacl;
 .super Lcom/google/android/gms/common/api/internal/UnregisterListenerMethod;
 .source "SourceFile"
 
 
 # instance fields
-.field final synthetic zaa:Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;
+.field public final synthetic zaa:Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;Lcom/google/android/gms/common/api/internal/ListenerHolder$ListenerKey;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/common/api/internal/zacl;->zaa:Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;
 
     invoke-direct {p0, p2}, Lcom/google/android/gms/common/api/internal/UnregisterListenerMethod;-><init>(Lcom/google/android/gms/common/api/internal/ListenerHolder$ListenerKey;)V
@@ -38,6 +39,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zacl;->zaa:Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;
 
     invoke-static {p0}, Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;->zab(Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;)Lcom/google/android/gms/common/api/internal/RemoteCall;

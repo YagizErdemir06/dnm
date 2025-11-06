@@ -18,14 +18,15 @@
 
 
 # instance fields
-.field public final synthetic a:Lmiuix/preference/DropDownPreference;
+.field public final synthetic c:Lmiuix/preference/DropDownPreference;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/preference/DropDownPreference;)V
     .locals 0
 
-    iput-object p1, p0, Lmiuix/preference/DropDownPreference$b;->a:Lmiuix/preference/DropDownPreference;
+    .line 1
+    iput-object p1, p0, Lmiuix/preference/DropDownPreference$b;->c:Lmiuix/preference/DropDownPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,9 +38,10 @@
 .method public run()V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/preference/DropDownPreference$b;->a:Lmiuix/preference/DropDownPreference;
+    .line 1
+    iget-object p0, p0, Lmiuix/preference/DropDownPreference$b;->c:Lmiuix/preference/DropDownPreference;
 
-    invoke-static {p0}, Lmiuix/preference/DropDownPreference;->g(Lmiuix/preference/DropDownPreference;)Landroid/widget/ArrayAdapter;
+    invoke-static {p0}, Lmiuix/preference/DropDownPreference;->c(Lmiuix/preference/DropDownPreference;)Landroid/widget/ArrayAdapter;
 
     move-result-object p0
 

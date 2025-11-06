@@ -60,6 +60,7 @@
 .method public index(I)Lcom/google/common/math/Quantiles$ScaleAndIndex;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/common/math/Quantiles$ScaleAndIndex;
 
     iget p0, p0, Lcom/google/common/math/Quantiles$Scale;->scale:I

@@ -1,4 +1,4 @@
-.class Landroidx/recyclerview/widget/DiffUtil$Range;
+.class public Landroidx/recyclerview/widget/DiffUtil$Range;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field newListEnd:I
+.field public newListEnd:I
 
-.field newListStart:I
+.field public newListStart:I
 
-.field oldListEnd:I
+.field public oldListEnd:I
 
-.field oldListStart:I
+.field public oldListStart:I
 
 
 # direct methods
@@ -60,6 +60,7 @@
 .method public newSize()I
     .locals 1
 
+    .line 1
     iget v0, p0, Landroidx/recyclerview/widget/DiffUtil$Range;->newListEnd:I
 
     iget p0, p0, Landroidx/recyclerview/widget/DiffUtil$Range;->newListStart:I
@@ -72,6 +73,7 @@
 .method public oldSize()I
     .locals 1
 
+    .line 1
     iget v0, p0, Landroidx/recyclerview/widget/DiffUtil$Range;->oldListEnd:I
 
     iget p0, p0, Landroidx/recyclerview/widget/DiffUtil$Range;->oldListStart:I

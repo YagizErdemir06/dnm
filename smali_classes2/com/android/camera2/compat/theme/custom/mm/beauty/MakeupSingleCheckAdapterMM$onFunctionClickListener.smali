@@ -16,6 +16,21 @@
 
 # virtual methods
 .method public abstract onFunctionClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "parent",
+            "view",
+            "position",
+            "id"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

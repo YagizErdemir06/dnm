@@ -15,16 +15,24 @@
 
 
 # instance fields
-.field protected mIsRTL:Z
+.field public mIsRTL:Z
 
-.field protected marginStart:I
+.field public marginStart:I
 
-.field protected padding:I
+.field public padding:I
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -36,6 +44,16 @@
 
 .method public constructor <init>(Landroid/content/Context;I)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "marginStart"
+        }
+    .end annotation
 
     .line 2
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;-><init>()V
@@ -52,7 +70,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f070157
+    const v2, 0x7f070153
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -81,7 +99,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070155
+    const v1, 0x7f070151
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -100,7 +118,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070156
+    const v1, 0x7f070152
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -110,7 +128,7 @@
 
     .line 11
     :cond_2
-    invoke-static {p1}, Lcom/android/camera/a6;->R2(Landroid/content/Context;)Z
+    invoke-static {p1}, Ld/d/a/z5;->G2(Landroid/content/Context;)Z
 
     move-result p1
 
@@ -127,11 +145,32 @@
 # virtual methods
 .method public functionItemOutRectLaptopPosition(Landroid/content/Context;Landroid/graphics/Rect;IIIZI)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "outRect",
+            "position",
+            "padding",
+            "marginStart",
+            "right",
+            "lastPosition"
+        }
+    .end annotation
 
     const/4 p0, 0x0
 
     if-eqz p6, :cond_0
 
+    .line 1
     div-int/lit8 p4, p4, 0x2
 
     invoke-virtual {p2, p4, p0, p4, p0}, Landroid/graphics/Rect;->set(IIII)V
@@ -145,6 +184,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_1
     div-int/lit8 p1, p4, 0x2
 
@@ -159,16 +199,37 @@
 
 .method public functionItemOutRectPosition(Landroid/content/Context;Landroid/graphics/Rect;IIIZI)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "outRect",
+            "position",
+            "padding",
+            "marginStart",
+            "right",
+            "lastPosition"
+        }
+    .end annotation
 
     const/4 p0, 0x0
 
     if-eqz p6, :cond_4
 
+    .line 1
     sget-boolean p1, Lcom/android/camera2/compat/theme/custom/mm/beauty/MakeupSingleSideAdapterMM;->mIsGallery:Z
 
     if-eqz p1, :cond_2
 
-    invoke-static {}, Ly2/b;->F0()Z
+    invoke-static {}, Ld/d/a/n6/b;->F0()Z
 
     move-result p1
 
@@ -182,12 +243,14 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     div-int/lit8 p1, p4, 0x2
 
     :goto_0
     if-nez p3, :cond_1
 
+    .line 3
     div-int/lit8 p4, p4, 0x2
 
     add-int/2addr p5, p4
@@ -197,16 +260,19 @@
     :cond_1
     div-int/lit8 p5, p4, 0x2
 
+    .line 4
     :goto_1
     invoke-virtual {p2, p1, p0, p5, p0}, Landroid/graphics/Rect;->set(IIII)V
 
     return-void
 
+    .line 5
     :cond_2
     div-int/lit8 p1, p4, 0x2
 
     if-nez p3, :cond_3
 
+    .line 6
     div-int/lit8 p4, p4, 0x4
 
     add-int/2addr p5, p4
@@ -216,11 +282,13 @@
     :cond_3
     move p5, p1
 
+    .line 7
     :goto_2
     invoke-virtual {p2, p1, p0, p5, p0}, Landroid/graphics/Rect;->set(IIII)V
 
     goto :goto_3
 
+    .line 8
     :cond_4
     div-int/lit8 p4, p4, 0x2
 
@@ -232,11 +300,27 @@
 
 .method public getItemOffsets(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V
     .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "outRect",
+            "view",
+            "parent",
+            "state"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p3, p2}, Landroidx/recyclerview/widget/RecyclerView;->getChildAdapterPosition(Landroid/view/View;)I
 
     move-result p4
 
+    .line 2
     invoke-virtual {p3}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object p3
@@ -245,6 +329,7 @@
 
     move-result p3
 
+    .line 3
     invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -263,12 +348,15 @@
 
     move v7, p3
 
+    .line 4
     invoke-virtual/range {v0 .. v7}, Lcom/android/camera2/compat/theme/custom/mm/beauty/MakeupSingleSideAdapterMM$FunctionItemPadding;->functionItemOutRectPosition(Landroid/content/Context;Landroid/graphics/Rect;IIIZI)V
 
+    .line 5
     sget-boolean v0, Lcom/android/camera2/compat/theme/custom/mm/beauty/MakeupSingleSideAdapterMM;->mIsLaptop:Z
 
     if-eqz v0, :cond_0
 
+    .line 6
     invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -287,6 +375,7 @@
 
     move v7, p3
 
+    .line 7
     invoke-virtual/range {v0 .. v7}, Lcom/android/camera2/compat/theme/custom/mm/beauty/MakeupSingleSideAdapterMM$FunctionItemPadding;->functionItemOutRectLaptopPosition(Landroid/content/Context;Landroid/graphics/Rect;IIIZI)V
 
     :cond_0
@@ -296,6 +385,7 @@
 .method public getPadding()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/MakeupSingleSideAdapterMM$FunctionItemPadding;->padding:I
 
     return p0

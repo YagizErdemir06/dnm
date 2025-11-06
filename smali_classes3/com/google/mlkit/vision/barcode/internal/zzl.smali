@@ -1,4 +1,4 @@
-.class final Lcom/google/mlkit/vision/barcode/internal/zzl;
+.class public final Lcom/google/mlkit/vision/barcode/internal/zzl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -37,6 +37,7 @@
 
     const-string v1, "com.google.android.gms.tflite_dynamite"
 
+    .line 1
     invoke-static {v0, v1}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcd;->zzh(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcd;
 
     move-result-object v0
@@ -65,6 +66,7 @@
 
     const-string v0, "com.google.mlkit.dynamite.barcode"
 
+    .line 1
     invoke-static {p0, v0}, Lcom/google/android/gms/dynamite/DynamiteModule;->getLocalVersion(Landroid/content/Context;Ljava/lang/String;)I
 
     move-result p0
@@ -94,6 +96,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/mlkit/vision/barcode/internal/zzl;->zzh:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzsw;
 
     if-nez v0, :cond_0
@@ -103,6 +106,7 @@
     :cond_0
     iget-object v0, p0, Lcom/google/mlkit/vision/barcode/internal/zzl;->zzh:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzsw;
 
+    .line 2
     invoke-static {v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -115,6 +119,7 @@
 
     if-nez v1, :cond_1
 
+    .line 3
     :try_start_0
     invoke-virtual {v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzsw;->zze()V
 
@@ -129,6 +134,7 @@
     :catch_0
     move-exception p0
 
+    .line 4
     new-instance p1, Lcom/google/mlkit/common/MlKitException;
 
     const-string v0, "Failed to init barcode scanner."
@@ -137,12 +143,14 @@
 
     throw p1
 
+    .line 5
     :cond_1
     :goto_0
     invoke-virtual {p1}, Lcom/google/mlkit/vision/common/InputImage;->getWidth()I
 
     move-result p0
 
+    .line 6
     invoke-virtual {p1}, Lcom/google/mlkit/vision/common/InputImage;->getFormat()I
 
     move-result v1
@@ -151,6 +159,7 @@
 
     if-ne v1, v3, :cond_2
 
+    .line 7
     invoke-virtual {p1}, Lcom/google/mlkit/vision/common/InputImage;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object p0
@@ -172,16 +181,20 @@
     :cond_2
     move v5, p0
 
+    .line 8
     new-instance p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zztf;
 
+    .line 9
     invoke-virtual {p1}, Lcom/google/mlkit/vision/common/InputImage;->getFormat()I
 
     move-result v4
 
+    .line 10
     invoke-virtual {p1}, Lcom/google/mlkit/vision/common/InputImage;->getHeight()I
 
     move-result v6
 
+    .line 11
     invoke-virtual {p1}, Lcom/google/mlkit/vision/common/InputImage;->getRotationDegrees()I
 
     move-result v1
@@ -190,6 +203,7 @@
 
     move-result v7
 
+    .line 12
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v8
@@ -198,6 +212,7 @@
 
     invoke-direct/range {v3 .. v9}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zztf;-><init>(IIIIJ)V
 
+    .line 13
     invoke-static {}, Lcom/google/mlkit/vision/common/internal/ImageUtils;->getInstance()Lcom/google/mlkit/vision/common/internal/ImageUtils;
 
     move-result-object v1
@@ -206,6 +221,7 @@
 
     move-result-object v1
 
+    .line 14
     :try_start_1
     invoke-virtual {v0, v1, p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzsw;->zzd(Lcom/google/android/gms/dynamic/IObjectWrapper;Lcom/google/android/gms/internal/mlkit_vision_barcode/zztf;)Ljava/util/List;
 
@@ -215,8 +231,10 @@
 
     new-instance v0, Ljava/util/ArrayList;
 
+    .line 15
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 16
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -234,18 +252,21 @@
 
     check-cast v1, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzsm;
 
+    .line 17
     new-instance v2, Lcom/google/mlkit/vision/barcode/common/Barcode;
 
     new-instance v3, Lcom/google/mlkit/vision/barcode/internal/zzk;
 
     invoke-direct {v3, v1}, Lcom/google/mlkit/vision/barcode/internal/zzk;-><init>(Lcom/google/android/gms/internal/mlkit_vision_barcode/zzsm;)V
 
+    .line 18
     invoke-virtual {p1}, Lcom/google/mlkit/vision/common/InputImage;->getCoordinatesMatrix()Landroid/graphics/Matrix;
 
     move-result-object v1
 
     invoke-direct {v2, v3, v1}, Lcom/google/mlkit/vision/barcode/common/Barcode;-><init>(Lcom/google/mlkit/vision/barcode/common/internal/BarcodeSource;Landroid/graphics/Matrix;)V
 
+    .line 19
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
@@ -256,6 +277,7 @@
     :catch_1
     move-exception p0
 
+    .line 20
     new-instance p1, Lcom/google/mlkit/common/MlKitException;
 
     const-string v0, "Failed to run barcode scanner."
@@ -270,6 +292,7 @@
     .annotation build Landroidx/annotation/WorkerThread;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/mlkit/vision/barcode/internal/zzl;->zzh:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzsw;
 
     if-eqz v0, :cond_0
@@ -288,11 +311,13 @@
 
     const-string v2, "Failed to release barcode scanner."
 
+    .line 2
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
     const/4 v0, 0x0
 
+    .line 3
     iput-object v0, p0, Lcom/google/mlkit/vision/barcode/internal/zzl;->zzh:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzsw;
 
     const/4 v0, 0x0
@@ -314,6 +339,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/mlkit/vision/barcode/internal/zzl;->zzh:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzsw;
 
     if-eqz v0, :cond_0
@@ -337,6 +363,7 @@
 
     iput-boolean v1, p0, Lcom/google/mlkit/vision/barcode/internal/zzl;->zzc:Z
 
+    .line 2
     :try_start_0
     sget-object v0, Lcom/google/android/gms/dynamite/DynamiteModule;->PREFER_LOCAL:Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy;
 
@@ -344,6 +371,7 @@
 
     const-string v3, "com.google.mlkit.vision.barcode.bundled.internal.ThickBarcodeScannerCreator"
 
+    .line 3
     invoke-virtual {p0, v0, v1, v3}, Lcom/google/mlkit/vision/barcode/internal/zzl;->zze(Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy;Ljava/lang/String;Ljava/lang/String;)Lcom/google/android/gms/internal/mlkit_vision_barcode/zzsw;
 
     move-result-object v0
@@ -358,6 +386,7 @@
     :catch_0
     move-exception p0
 
+    .line 4
     new-instance v0, Lcom/google/mlkit/common/MlKitException;
 
     const-string v1, "Failed to create thick barcode scanner."
@@ -369,6 +398,7 @@
     :catch_1
     move-exception p0
 
+    .line 5
     new-instance v0, Lcom/google/mlkit/common/MlKitException;
 
     const-string v1, "Failed to load the bundled barcode module."
@@ -380,12 +410,14 @@
     :cond_1
     const/4 v0, 0x0
 
+    .line 6
     iput-boolean v0, p0, Lcom/google/mlkit/vision/barcode/internal/zzl;->zzc:Z
 
     iget-object v0, p0, Lcom/google/mlkit/vision/barcode/internal/zzl;->zze:Landroid/content/Context;
 
     sget-object v3, Lcom/google/mlkit/vision/barcode/internal/zzl;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcd;
 
+    .line 7
     invoke-static {v0, v3}, Lcom/google/mlkit/common/sdkinternal/OptionalModuleUtils;->areAllRequiredModulesAvailable(Landroid/content/Context;Ljava/util/List;)Z
 
     move-result v0
@@ -402,10 +434,12 @@
 
     const-string v3, "tflite_dynamite"
 
+    .line 8
     invoke-static {v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcd;->zzh(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcd;
 
     move-result-object v2
 
+    .line 9
     invoke-static {v0, v2}, Lcom/google/mlkit/common/sdkinternal/OptionalModuleUtils;->requestDownload(Landroid/content/Context;Ljava/util/List;)V
 
     iput-boolean v1, p0, Lcom/google/mlkit/vision/barcode/internal/zzl;->zzd:Z
@@ -413,20 +447,23 @@
     :cond_2
     iget-object p0, p0, Lcom/google/mlkit/vision/barcode/internal/zzl;->zzg:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrl;
 
+    .line 10
     sget-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznd;->zzB:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznd;
 
     invoke-static {p0, v0}, Lcom/google/mlkit/vision/barcode/internal/zzb;->zze(Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrl;Lcom/google/android/gms/internal/mlkit_vision_barcode/zznd;)V
 
+    .line 11
     new-instance p0, Lcom/google/mlkit/common/MlKitException;
 
-    const-string v0, "Waiting for the barcode module to be downloaded. Please wait."
+    const/16 v0, 0xe
 
-    const/16 v1, 0xe
+    const-string v1, "Waiting for the barcode module to be downloaded. Please wait."
 
-    invoke-direct {p0, v0, v1}, Lcom/google/mlkit/common/MlKitException;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0, v1, v0}, Lcom/google/mlkit/common/MlKitException;-><init>(Ljava/lang/String;I)V
 
     throw p0
 
+    .line 12
     :cond_3
     :try_start_1
     sget-object v0, Lcom/google/android/gms/dynamite/DynamiteModule;->PREFER_REMOTE:Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy;
@@ -435,6 +472,7 @@
 
     const-string v3, "com.google.android.gms.vision.barcode.mlkit.BarcodeScannerCreator"
 
+    .line 13
     invoke-virtual {p0, v0, v1, v3}, Lcom/google/mlkit/vision/barcode/internal/zzl;->zze(Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy;Ljava/lang/String;Ljava/lang/String;)Lcom/google/android/gms/internal/mlkit_vision_barcode/zzsw;
 
     move-result-object v0
@@ -444,9 +482,11 @@
     .catch Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException; {:try_start_1 .. :try_end_1} :catch_2
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_2
 
+    .line 14
     :goto_0
     iget-object v0, p0, Lcom/google/mlkit/vision/barcode/internal/zzl;->zzg:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrl;
 
+    .line 15
     sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznd;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznd;
 
     invoke-static {v0, v1}, Lcom/google/mlkit/vision/barcode/internal/zzb;->zze(Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrl;Lcom/google/android/gms/internal/mlkit_vision_barcode/zznd;)V
@@ -458,12 +498,15 @@
     :catch_2
     move-exception v0
 
+    .line 16
     iget-object p0, p0, Lcom/google/mlkit/vision/barcode/internal/zzl;->zzg:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrl;
 
+    .line 17
     sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznd;->zzC:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznd;
 
     invoke-static {p0, v1}, Lcom/google/mlkit/vision/barcode/internal/zzb;->zze(Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrl;Lcom/google/android/gms/internal/mlkit_vision_barcode/zznd;)V
 
+    .line 18
     new-instance p0, Lcom/google/mlkit/common/MlKitException;
 
     const-string v1, "Failed to create thin barcode scanner."
@@ -485,12 +528,14 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/mlkit/vision/barcode/internal/zzl;->zze:Landroid/content/Context;
 
     invoke-static {v0, p1, p2}, Lcom/google/android/gms/dynamite/DynamiteModule;->load(Landroid/content/Context;Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy;Ljava/lang/String;)Lcom/google/android/gms/dynamite/DynamiteModule;
 
     move-result-object p1
 
+    .line 2
     invoke-virtual {p1, p3}, Lcom/google/android/gms/dynamite/DynamiteModule;->instantiate(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object p1
@@ -501,6 +546,7 @@
 
     iget-object p2, p0, Lcom/google/mlkit/vision/barcode/internal/zzl;->zze:Landroid/content/Context;
 
+    .line 3
     invoke-static {p2}, Lcom/google/android/gms/dynamic/ObjectWrapper;->wrap(Ljava/lang/Object;)Lcom/google/android/gms/dynamic/IObjectWrapper;
 
     move-result-object p2
@@ -509,6 +555,7 @@
 
     iget-object v0, p0, Lcom/google/mlkit/vision/barcode/internal/zzl;->zzf:Lcom/google/mlkit/vision/barcode/BarcodeScannerOptions;
 
+    .line 4
     invoke-virtual {v0}, Lcom/google/mlkit/vision/barcode/BarcodeScannerOptions;->zza()I
 
     move-result v0
@@ -521,6 +568,7 @@
 
     invoke-direct {p3, v0, p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzso;-><init>(IZ)V
 
+    .line 5
     invoke-interface {p1, p2, p3}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzsz;->zzd(Lcom/google/android/gms/dynamic/IObjectWrapper;Lcom/google/android/gms/internal/mlkit_vision_barcode/zzso;)Lcom/google/android/gms/internal/mlkit_vision_barcode/zzsw;
 
     move-result-object p0

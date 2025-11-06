@@ -1,4 +1,4 @@
-.class Lorg/dom4j/xpath/DefaultXPath$1;
+.class public Lorg/dom4j/xpath/DefaultXPath$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -16,6 +16,7 @@
 .method public constructor <init>(Lorg/dom4j/xpath/DefaultXPath;Ljava/util/Map;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/dom4j/xpath/DefaultXPath$1;->this$0:Lorg/dom4j/xpath/DefaultXPath;
@@ -30,12 +31,14 @@
 .method public compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/xpath/DefaultXPath$1;->val$sortValues:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
+    .line 2
     iget-object p0, p0, Lorg/dom4j/xpath/DefaultXPath$1;->val$sortValues:Ljava/util/Map;
 
     invoke-interface {p0, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -48,13 +51,16 @@
 
     return p2
 
+    .line 3
     :cond_0
     instance-of v0, p1, Ljava/lang/Comparable;
 
     if-eqz v0, :cond_1
 
+    .line 4
     check-cast p1, Ljava/lang/Comparable;
 
+    .line 5
     invoke-interface {p1, p0}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
 
     move-result p0
@@ -75,6 +81,7 @@
 
     return v0
 
+    .line 6
     :cond_3
     invoke-virtual {p1, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 

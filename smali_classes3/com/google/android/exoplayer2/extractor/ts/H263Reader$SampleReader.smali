@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/extractor/ts/H263Reader$SampleReader;
+.class public final Lcom/google/android/exoplayer2/extractor/ts/H263Reader$SampleReader;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -42,8 +42,10 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/extractor/TrackOutput;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$SampleReader;->output:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     return-void
@@ -54,18 +56,21 @@
 .method public onData([BII)V
     .locals 2
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$SampleReader;->lookingForVopCodingType:Z
 
     if-eqz v0, :cond_2
 
     add-int/lit8 v0, p2, 0x1
 
+    .line 2
     iget v1, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$SampleReader;->vopBytesRead:I
 
     sub-int/2addr v0, v1
 
     if-ge v0, p3, :cond_1
 
+    .line 3
     aget-byte p1, p1, v0
 
     and-int/lit16 p1, p1, 0xc0
@@ -86,6 +91,7 @@
     :goto_0
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$SampleReader;->sampleIsKeyframe:Z
 
+    .line 4
     iput-boolean p2, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$SampleReader;->lookingForVopCodingType:Z
 
     goto :goto_1
@@ -95,6 +101,7 @@
 
     add-int/2addr v1, p3
 
+    .line 5
     iput v1, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$SampleReader;->vopBytesRead:I
 
     :cond_2
@@ -105,6 +112,7 @@
 .method public onDataEnd(JIZ)V
     .locals 7
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$SampleReader;->startCodeValue:I
 
     const/16 v1, 0xb6
@@ -125,14 +133,17 @@
 
     if-eqz p4, :cond_0
 
+    .line 2
     iget-wide v3, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$SampleReader;->samplePosition:J
 
     sub-long v3, p1, v3
 
     long-to-int v4, v3
 
+    .line 3
     iget-boolean v3, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$SampleReader;->sampleIsKeyframe:Z
 
+    .line 4
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$SampleReader;->output:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     const/4 v6, 0x0
@@ -141,6 +152,7 @@
 
     invoke-interface/range {v0 .. v6}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->sampleMetadata(JIIILcom/google/android/exoplayer2/extractor/TrackOutput$CryptoData;)V
 
+    .line 5
     :cond_0
     iget p3, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$SampleReader;->startCodeValue:I
 
@@ -148,6 +160,7 @@
 
     if-eq p3, p4, :cond_1
 
+    .line 6
     iput-wide p1, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$SampleReader;->samplePosition:J
 
     :cond_1
@@ -157,10 +170,12 @@
 .method public onStartCode(IJ)V
     .locals 4
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$SampleReader;->startCodeValue:I
 
     const/4 v0, 0x0
 
+    .line 2
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$SampleReader;->sampleIsKeyframe:Z
 
     const/4 v1, 0x1
@@ -184,6 +199,7 @@
     :goto_0
     move v3, v1
 
+    .line 3
     :goto_1
     iput-boolean v3, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$SampleReader;->readingSample:Z
 
@@ -194,11 +210,14 @@
     :cond_2
     move v1, v0
 
+    .line 4
     :goto_2
     iput-boolean v1, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$SampleReader;->lookingForVopCodingType:Z
 
+    .line 5
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$SampleReader;->vopBytesRead:I
 
+    .line 6
     iput-wide p2, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$SampleReader;->sampleTimeUs:J
 
     return-void
@@ -209,14 +228,18 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$SampleReader;->readingSample:Z
 
+    .line 2
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$SampleReader;->lookingForVopCodingType:Z
 
+    .line 3
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$SampleReader;->sampleIsKeyframe:Z
 
     const/4 v0, -0x1
 
+    .line 4
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$SampleReader;->startCodeValue:I
 
     return-void

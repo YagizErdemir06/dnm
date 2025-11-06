@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final INT_ALL:I = 0x1
+.field public static final INT_ALL:I = 0x1
 
 .field private static final serialVersionUID:J = 0x1L
 
@@ -26,6 +26,7 @@
 .method public static constructor <clinit>()V
     .locals 5
 
+    .line 1
     new-instance v0, Lorg/apache/xmlbeans/StringEnumAbstractBase$Table;
 
     const/4 v1, 0x1
@@ -52,6 +53,7 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lorg/apache/xmlbeans/StringEnumAbstractBase;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -60,6 +62,7 @@
 .method public static forInt(I)Lorg/apache/xmlbeans/impl/xb/xsdschema/SimpleDerivationSet$Member$Enum;
     .locals 1
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/xb/xsdschema/SimpleDerivationSet$Member$Enum;->table:Lorg/apache/xmlbeans/StringEnumAbstractBase$Table;
 
     invoke-virtual {v0, p0}, Lorg/apache/xmlbeans/StringEnumAbstractBase$Table;->forInt(I)Lorg/apache/xmlbeans/StringEnumAbstractBase;
@@ -74,6 +77,7 @@
 .method public static forString(Ljava/lang/String;)Lorg/apache/xmlbeans/impl/xb/xsdschema/SimpleDerivationSet$Member$Enum;
     .locals 1
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/xb/xsdschema/SimpleDerivationSet$Member$Enum;->table:Lorg/apache/xmlbeans/StringEnumAbstractBase$Table;
 
     invoke-virtual {v0, p0}, Lorg/apache/xmlbeans/StringEnumAbstractBase$Table;->forString(Ljava/lang/String;)Lorg/apache/xmlbeans/StringEnumAbstractBase;
@@ -88,6 +92,7 @@
 .method private readResolve()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/StringEnumAbstractBase;->intValue()I
 
     move-result p0

@@ -30,6 +30,7 @@
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Landroid/content/ComponentName;
 
     const-string v1, "com.google.android.gms"

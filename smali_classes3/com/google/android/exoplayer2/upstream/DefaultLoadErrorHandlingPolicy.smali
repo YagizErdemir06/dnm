@@ -58,6 +58,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p2, p2, Lcom/google/android/exoplayer2/upstream/LoadErrorHandlingPolicy$LoadErrorInfo;->exception:Ljava/io/IOException;
 
     invoke-virtual {p0, p2}, Lcom/google/android/exoplayer2/upstream/DefaultLoadErrorHandlingPolicy;->isEligibleForFallback(Ljava/io/IOException;)Z
@@ -73,12 +74,14 @@
     :cond_0
     const/4 p0, 0x1
 
+    .line 2
     invoke-virtual {p1, p0}, Lcom/google/android/exoplayer2/upstream/LoadErrorHandlingPolicy$FallbackOptions;->isFallbackAvailable(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 3
     new-instance p1, Lcom/google/android/exoplayer2/upstream/LoadErrorHandlingPolicy$FallbackSelection;
 
     const-wide/32 v0, 0x493e0
@@ -90,12 +93,14 @@
     :cond_1
     const/4 p0, 0x2
 
+    .line 4
     invoke-virtual {p1, p0}, Lcom/google/android/exoplayer2/upstream/LoadErrorHandlingPolicy$FallbackOptions;->isFallbackAvailable(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
+    .line 5
     new-instance p1, Lcom/google/android/exoplayer2/upstream/LoadErrorHandlingPolicy$FallbackSelection;
 
     const-wide/32 v0, 0xea60
@@ -111,6 +116,7 @@
 .method public getMinimumLoadableRetryCount(I)I
     .locals 1
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/upstream/DefaultLoadErrorHandlingPolicy;->minimumLoadableRetryCount:I
 
     const/4 v0, -0x1
@@ -136,8 +142,10 @@
 .method public getRetryDelayMsFor(Lcom/google/android/exoplayer2/upstream/LoadErrorHandlingPolicy$LoadErrorInfo;)J
     .locals 1
 
+    .line 1
     iget-object p0, p1, Lcom/google/android/exoplayer2/upstream/LoadErrorHandlingPolicy$LoadErrorInfo;->exception:Ljava/io/IOException;
 
+    .line 2
     instance-of v0, p0, Lcom/google/android/exoplayer2/ParserException;
 
     if-nez v0, :cond_1
@@ -162,6 +170,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget p0, p1, Lcom/google/android/exoplayer2/upstream/LoadErrorHandlingPolicy$LoadErrorInfo;->errorCount:I
 
@@ -190,6 +199,7 @@
 .method public isEligibleForFallback(Ljava/io/IOException;)Z
     .locals 1
 
+    .line 1
     instance-of p0, p1, Lcom/google/android/exoplayer2/upstream/HttpDataSource$InvalidResponseCodeException;
 
     const/4 v0, 0x0
@@ -198,9 +208,11 @@
 
     return v0
 
+    .line 2
     :cond_0
     check-cast p1, Lcom/google/android/exoplayer2/upstream/HttpDataSource$InvalidResponseCodeException;
 
+    .line 3
     iget p0, p1, Lcom/google/android/exoplayer2/upstream/HttpDataSource$InvalidResponseCodeException;->responseCode:I
 
     const/16 p1, 0x193

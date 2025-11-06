@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Iterables$6;
+.class public Lcom/google/common/collect/Iterables$6;
 .super Lcom/google/common/collect/FluentIterable;
 .source "SourceFile"
 
@@ -22,15 +22,16 @@
 
 
 # instance fields
-.field final synthetic val$iterable:Ljava/lang/Iterable;
+.field public final synthetic val$iterable:Ljava/lang/Iterable;
 
-.field final synthetic val$numberToSkip:I
+.field public final synthetic val$numberToSkip:I
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/Iterable;I)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/Iterables$6;->val$iterable:Ljava/lang/Iterable;
 
     iput p2, p0, Lcom/google/common/collect/Iterables$6;->val$numberToSkip:I
@@ -52,14 +53,17 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Iterables$6;->val$iterable:Ljava/lang/Iterable;
 
     instance-of v1, v0, Ljava/util/List;
 
     if-eqz v1, :cond_0
 
+    .line 2
     check-cast v0, Ljava/util/List;
 
+    .line 3
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -70,6 +74,7 @@
 
     move-result p0
 
+    .line 4
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -84,15 +89,18 @@
 
     return-object p0
 
+    .line 5
     :cond_0
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
+    .line 6
     iget v1, p0, Lcom/google/common/collect/Iterables$6;->val$numberToSkip:I
 
     invoke-static {v0, v1}, Lcom/google/common/collect/Iterators;->advance(Ljava/util/Iterator;I)I
 
+    .line 7
     new-instance v1, Lcom/google/common/collect/Iterables$6$1;
 
     invoke-direct {v1, p0, v0}, Lcom/google/common/collect/Iterables$6$1;-><init>(Lcom/google/common/collect/Iterables$6;Ljava/util/Iterator;)V

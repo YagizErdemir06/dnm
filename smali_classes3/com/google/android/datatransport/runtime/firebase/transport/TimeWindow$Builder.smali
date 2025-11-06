@@ -24,12 +24,15 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
+    .line 2
     iput-wide v0, p0, Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow$Builder;->start_ms_:J
 
+    .line 3
     iput-wide v0, p0, Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow$Builder;->end_ms_:J
 
     return-void
@@ -40,6 +43,7 @@
 .method public build()Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow;
     .locals 5
 
+    .line 1
     new-instance v0, Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow;
 
     iget-wide v1, p0, Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow$Builder;->start_ms_:J
@@ -54,6 +58,7 @@
 .method public setEndMs(J)Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow$Builder;
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow$Builder;->end_ms_:J
 
     return-object p0
@@ -62,6 +67,7 @@
 .method public setStartMs(J)Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow$Builder;
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow$Builder;->start_ms_:J
 
     return-object p0

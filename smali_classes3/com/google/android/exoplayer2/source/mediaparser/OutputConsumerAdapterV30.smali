@@ -156,8 +156,10 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     sget-object v0, Landroid/media/MediaParser$SeekPoint;->START:Landroid/media/MediaParser$SeekPoint;
 
+    .line 2
     invoke-static {v0, v0}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
     move-result-object v0
@@ -166,6 +168,7 @@
 
     const-string v0, "pattern \\(encrypt: (\\d+), skip: (\\d+)\\)"
 
+    .line 3
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -178,14 +181,14 @@
 .method public constructor <init>()V
     .locals 3
 
-    const/4 v0, -0x2
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    const/4 v1, -0x2
 
     const/4 v2, 0x0
 
     .line 1
-    invoke-direct {p0, v2, v0, v1}, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;-><init>(Lcom/google/android/exoplayer2/Format;IZ)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;-><init>(Lcom/google/android/exoplayer2/Format;IZ)V
 
     return-void
 .end method
@@ -271,6 +274,7 @@
 .method private ensureSpaceForTrackIndex(I)V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->trackOutputs:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -280,20 +284,24 @@
     :goto_0
     if-gt v0, p1, :cond_0
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->trackOutputs:Ljava/util/ArrayList;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->trackFormats:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 4
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->lastReceivedCryptoInfos:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 5
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->lastOutputCryptoDatas:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -309,12 +317,14 @@
 .method private static getArray(Ljava/nio/ByteBuffer;)[B
     .locals 1
 
-    invoke-virtual {p0}, Ljava/nio/Buffer;->remaining()I
+    .line 1
+    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v0
 
     new-array v0, v0, [B
 
+    .line 2
     invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
     return-object v0
@@ -327,6 +337,7 @@
 
     const-string v0, "hdr-static-info"
 
+    .line 1
     invoke-virtual {p0, v0}, Landroid/media/MediaFormat;->getByteBuffer(Ljava/lang/String;)Ljava/nio/ByteBuffer;
 
     move-result-object v0
@@ -335,6 +346,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-static {v0}, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->getArray(Ljava/nio/ByteBuffer;)[B
 
     move-result-object v0
@@ -349,18 +361,21 @@
 
     const/4 v3, -0x1
 
+    .line 3
     invoke-virtual {p0, v2, v3}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;I)I
 
     move-result v2
 
     const-string v4, "color-range"
 
+    .line 4
     invoke-virtual {p0, v4, v3}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;I)I
 
     move-result v4
 
     const-string v5, "color-standard"
 
+    .line 5
     invoke-virtual {p0, v5, v3}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;I)I
 
     move-result p0
@@ -378,6 +393,7 @@
     :cond_1
     return-object v1
 
+    .line 6
     :cond_2
     :goto_1
     new-instance v1, Lcom/google/android/exoplayer2/video/ColorInfo;
@@ -392,6 +408,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, v0}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;I)I
 
     move-result p0
@@ -419,12 +436,14 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v1, 0x0
 
+    .line 2
     :goto_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -450,6 +469,7 @@
 
     return-object v0
 
+    .line 3
     :cond_0
     invoke-static {v1}, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->getArray(Ljava/nio/ByteBuffer;)[B
 
@@ -465,6 +485,7 @@
 .method private static getMimeType(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -702,6 +723,7 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
+    .line 2
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -833,6 +855,7 @@
 
     const/4 v1, 0x4
 
+    .line 1
     invoke-static {p0, v0, v1}, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->getFlag(Landroid/media/MediaFormat;Ljava/lang/String;I)I
 
     move-result v0
@@ -843,6 +866,7 @@
 
     const/4 v2, 0x1
 
+    .line 2
     invoke-static {p0, v1, v2}, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->getFlag(Landroid/media/MediaFormat;Ljava/lang/String;I)I
 
     move-result v1
@@ -853,6 +877,7 @@
 
     const/4 v2, 0x2
 
+    .line 3
     invoke-static {p0, v1, v2}, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->getFlag(Landroid/media/MediaFormat;Ljava/lang/String;I)I
 
     move-result p0
@@ -865,6 +890,7 @@
 .method private maybeEndTracks()V
     .locals 3
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->tracksFoundCalled:Z
 
     if-eqz v0, :cond_3
@@ -875,6 +901,7 @@
 
     goto :goto_1
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->trackOutputs:Ljava/util/ArrayList;
 
@@ -887,6 +914,7 @@
     :goto_0
     if-ge v1, v0, :cond_2
 
+    .line 3
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->trackOutputs:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -902,6 +930,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->extractorOutput:Lcom/google/android/exoplayer2/extractor/ExtractorOutput;
 
@@ -909,6 +938,7 @@
 
     const/4 v0, 0x1
 
+    .line 5
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->tracksEnded:Z
 
     :cond_3
@@ -921,6 +951,7 @@
 
     const-string v0, "chunk-index-int-sizes"
 
+    .line 1
     invoke-virtual {p1, v0}, Landroid/media/MediaFormat;->getByteBuffer(Ljava/lang/String;)Ljava/nio/ByteBuffer;
 
     move-result-object v0
@@ -931,6 +962,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->asIntBuffer()Ljava/nio/IntBuffer;
 
@@ -938,6 +970,7 @@
 
     const-string v1, "chunk-index-long-offsets"
 
+    .line 3
     invoke-virtual {p1, v1}, Landroid/media/MediaFormat;->getByteBuffer(Ljava/lang/String;)Ljava/nio/ByteBuffer;
 
     move-result-object v1
@@ -948,12 +981,14 @@
 
     check-cast v1, Ljava/nio/ByteBuffer;
 
+    .line 4
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->asLongBuffer()Ljava/nio/LongBuffer;
 
     move-result-object v1
 
     const-string v2, "chunk-index-long-us-durations"
 
+    .line 5
     invoke-virtual {p1, v2}, Landroid/media/MediaFormat;->getByteBuffer(Ljava/lang/String;)Ljava/nio/ByteBuffer;
 
     move-result-object v2
@@ -964,12 +999,14 @@
 
     check-cast v2, Ljava/nio/ByteBuffer;
 
+    .line 6
     invoke-virtual {v2}, Ljava/nio/ByteBuffer;->asLongBuffer()Ljava/nio/LongBuffer;
 
     move-result-object v2
 
     const-string v3, "chunk-index-long-us-times"
 
+    .line 7
     invoke-virtual {p1, v3}, Landroid/media/MediaFormat;->getByteBuffer(Ljava/lang/String;)Ljava/nio/ByteBuffer;
 
     move-result-object p1
@@ -980,48 +1017,59 @@
 
     check-cast p1, Ljava/nio/ByteBuffer;
 
+    .line 8
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->asLongBuffer()Ljava/nio/LongBuffer;
 
     move-result-object p1
 
-    invoke-virtual {v0}, Ljava/nio/Buffer;->remaining()I
+    .line 9
+    invoke-virtual {v0}, Ljava/nio/IntBuffer;->remaining()I
 
     move-result v3
 
     new-array v3, v3, [I
 
-    invoke-virtual {v1}, Ljava/nio/Buffer;->remaining()I
+    .line 10
+    invoke-virtual {v1}, Ljava/nio/LongBuffer;->remaining()I
 
     move-result v4
 
     new-array v4, v4, [J
 
-    invoke-virtual {v2}, Ljava/nio/Buffer;->remaining()I
+    .line 11
+    invoke-virtual {v2}, Ljava/nio/LongBuffer;->remaining()I
 
     move-result v5
 
     new-array v5, v5, [J
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+    .line 12
+    invoke-virtual {p1}, Ljava/nio/LongBuffer;->remaining()I
 
     move-result v6
 
     new-array v6, v6, [J
 
+    .line 13
     invoke-virtual {v0, v3}, Ljava/nio/IntBuffer;->get([I)Ljava/nio/IntBuffer;
 
+    .line 14
     invoke-virtual {v1, v4}, Ljava/nio/LongBuffer;->get([J)Ljava/nio/LongBuffer;
 
+    .line 15
     invoke-virtual {v2, v5}, Ljava/nio/LongBuffer;->get([J)Ljava/nio/LongBuffer;
 
+    .line 16
     invoke-virtual {p1, v6}, Ljava/nio/LongBuffer;->get([J)Ljava/nio/LongBuffer;
 
+    .line 17
     new-instance p1, Lcom/google/android/exoplayer2/extractor/ChunkIndex;
 
     invoke-direct {p1, v3, v4, v5, v6}, Lcom/google/android/exoplayer2/extractor/ChunkIndex;-><init>([I[J[J[J)V
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->lastChunkIndex:Lcom/google/android/exoplayer2/extractor/ChunkIndex;
 
+    .line 18
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->extractorOutput:Lcom/google/android/exoplayer2/extractor/ExtractorOutput;
 
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/extractor/ExtractorOutput;->seekMap(Lcom/google/android/exoplayer2/extractor/SeekMap;)V
@@ -1046,6 +1094,7 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->lastReceivedCryptoInfos:Ljava/util/ArrayList;
 
@@ -1057,6 +1106,7 @@
 
     if-ne v0, p2, :cond_1
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->lastOutputCryptoDatas:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1074,22 +1124,44 @@
     goto :goto_1
 
     :cond_1
+    const/4 v0, 0x0
+
+    .line 3
     :try_start_0
-    sget-object v0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->REGEX_CRYPTO_INFO_PATTERN:Ljava/util/regex/Pattern;
+    sget-object v1, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->REGEX_CRYPTO_INFO_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {p2}, Landroid/media/MediaCodec$CryptoInfo;->toString()Ljava/lang/String;
 
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+    .line 4
+    invoke-virtual {v1}, Ljava/util/regex/Matcher;->find()Z
 
-    move-result-object v0
+    const/4 v2, 0x1
 
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
+    .line 5
+    invoke-virtual {v1, v2}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
-    const/4 v1, 0x1
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+    invoke-static {v2}, Lcom/google/android/exoplayer2/util/Util;->castNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/String;
+
+    invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v2
+
+    const/4 v3, 0x2
+
+    .line 6
+    invoke-virtual {v1, v3}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1101,53 +1173,41 @@
 
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    move-result v1
-
-    const/4 v2, 0x2
-
-    invoke-virtual {v0, v2}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/google/android/exoplayer2/util/Util;->castNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
     move-result v0
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
+    move v1, v0
+
+    move v0, v2
+
     goto :goto_0
 
     :catch_0
-    move-exception v0
+    move-exception v1
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 7
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "Unexpected error while parsing CryptoInfo: "
+    const-string v3, "Unexpected error while parsing CryptoInfo: "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    const-string v2, "OConsumerAdapterV30"
+    const-string v3, "OConsumerAdapterV30"
 
-    invoke-static {v2, v1, v0}, Lcom/google/android/exoplayer2/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v3, v2, v1}, Lcom/google/android/exoplayer2/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    const/4 v1, 0x0
+    move v1, v0
 
-    move v0, v1
-
+    .line 8
     :goto_0
     new-instance v2, Lcom/google/android/exoplayer2/extractor/TrackOutput$CryptoData;
 
@@ -1155,12 +1215,14 @@
 
     iget-object v4, p2, Landroid/media/MediaCodec$CryptoInfo;->key:[B
 
-    invoke-direct {v2, v3, v4, v1, v0}, Lcom/google/android/exoplayer2/extractor/TrackOutput$CryptoData;-><init>(I[BII)V
+    invoke-direct {v2, v3, v4, v0, v1}, Lcom/google/android/exoplayer2/extractor/TrackOutput$CryptoData;-><init>(I[BII)V
 
+    .line 9
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->lastReceivedCryptoInfos:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
+    .line 10
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->lastOutputCryptoDatas:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1, v2}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
@@ -1190,6 +1252,7 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     invoke-virtual {p1}, Landroid/media/DrmInitData;->getSchemeInitDataCount()I
 
@@ -1202,10 +1265,12 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
+    .line 2
     invoke-virtual {p1, v2}, Landroid/media/DrmInitData;->getSchemeInitDataAt(I)Landroid/media/DrmInitData$SchemeInitData;
 
     move-result-object v3
 
+    .line 3
     new-instance v4, Lcom/google/android/exoplayer2/drm/DrmInitData$SchemeData;
 
     iget-object v5, v3, Landroid/media/DrmInitData$SchemeInitData;->uuid:Ljava/util/UUID;
@@ -1222,6 +1287,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     new-instance p1, Lcom/google/android/exoplayer2/drm/DrmInitData;
 
@@ -1233,10 +1299,12 @@
 .method private toExoPlayerFormat(Landroid/media/MediaParser$TrackData;)Lcom/google/android/exoplayer2/Format;
     .locals 8
 
+    .line 1
     iget-object v0, p1, Landroid/media/MediaParser$TrackData;->mediaFormat:Landroid/media/MediaFormat;
 
     const-string v1, "mime"
 
+    .line 2
     invoke-virtual {v0, v1}, Landroid/media/MediaFormat;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -1245,56 +1313,67 @@
 
     const/4 v3, -0x1
 
+    .line 3
     invoke-virtual {v0, v2, v3}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;I)I
 
     move-result v2
 
+    .line 4
     new-instance v4, Lcom/google/android/exoplayer2/Format$Builder;
 
     invoke-direct {v4}, Lcom/google/android/exoplayer2/Format$Builder;-><init>()V
 
     const-string v5, "crypto-mode-fourcc"
 
+    .line 5
     invoke-virtual {v0, v5}, Landroid/media/MediaFormat;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     iget-object p1, p1, Landroid/media/MediaParser$TrackData;->drmInitData:Landroid/media/DrmInitData;
 
+    .line 6
     invoke-static {v5, p1}, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->toExoPlayerDrmInitData(Ljava/lang/String;Landroid/media/DrmInitData;)Lcom/google/android/exoplayer2/drm/DrmInitData;
 
     move-result-object p1
 
+    .line 7
     invoke-virtual {v4, p1}, Lcom/google/android/exoplayer2/Format$Builder;->setDrmInitData(Lcom/google/android/exoplayer2/drm/DrmInitData;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p1
 
     iget-object v4, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->containerMimeType:Ljava/lang/String;
 
+    .line 8
     invoke-virtual {p1, v4}, Lcom/google/android/exoplayer2/Format$Builder;->setContainerMimeType(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p1
 
     const-string v4, "bitrate"
 
+    .line 9
     invoke-virtual {v0, v4, v3}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;I)I
 
     move-result v4
 
+    .line 10
     invoke-virtual {p1, v4}, Lcom/google/android/exoplayer2/Format$Builder;->setPeakBitrate(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p1
 
     const-string v4, "channel-count"
 
+    .line 11
     invoke-virtual {v0, v4, v3}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;I)I
 
     move-result v4
 
+    .line 12
     invoke-virtual {p1, v4}, Lcom/google/android/exoplayer2/Format$Builder;->setChannelCount(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p1
 
+    .line 13
     invoke-static {v0}, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->getColorInfo(Landroid/media/MediaFormat;)Lcom/google/android/exoplayer2/video/ColorInfo;
 
     move-result-object v4
@@ -1303,12 +1382,14 @@
 
     move-result-object p1
 
+    .line 14
     invoke-virtual {p1, v1}, Lcom/google/android/exoplayer2/Format$Builder;->setSampleMimeType(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p1
 
     const-string v4, "codecs-string"
 
+    .line 15
     invoke-virtual {v0, v4}, Landroid/media/MediaFormat;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -1321,34 +1402,41 @@
 
     const/high16 v5, -0x40800000    # -1.0f
 
+    .line 16
     invoke-virtual {v0, v4, v5}, Landroid/media/MediaFormat;->getFloat(Ljava/lang/String;F)F
 
     move-result v4
 
+    .line 17
     invoke-virtual {p1, v4}, Lcom/google/android/exoplayer2/Format$Builder;->setFrameRate(F)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p1
 
     const-string v4, "width"
 
+    .line 18
     invoke-virtual {v0, v4, v3}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;I)I
 
     move-result v4
 
+    .line 19
     invoke-virtual {p1, v4}, Lcom/google/android/exoplayer2/Format$Builder;->setWidth(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p1
 
     const-string v4, "height"
 
+    .line 20
     invoke-virtual {v0, v4, v3}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;I)I
 
     move-result v4
 
+    .line 21
     invoke-virtual {p1, v4}, Lcom/google/android/exoplayer2/Format$Builder;->setHeight(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p1
 
+    .line 22
     invoke-static {v0}, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->getInitializationData(Landroid/media/MediaFormat;)Ljava/util/List;
 
     move-result-object v4
@@ -1359,6 +1447,7 @@
 
     const-string v4, "language"
 
+    .line 23
     invoke-virtual {v0, v4}, Landroid/media/MediaFormat;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -1369,20 +1458,24 @@
 
     const-string v4, "max-input-size"
 
+    .line 24
     invoke-virtual {v0, v4, v3}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;I)I
 
     move-result v4
 
+    .line 25
     invoke-virtual {p1, v4}, Lcom/google/android/exoplayer2/Format$Builder;->setMaxInputSize(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p1
 
     const-string v4, "exo-pcm-encoding"
 
+    .line 26
     invoke-virtual {v0, v4, v3}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;I)I
 
     move-result v4
 
+    .line 27
     invoke-virtual {p1, v4}, Lcom/google/android/exoplayer2/Format$Builder;->setPcmEncoding(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p1
@@ -1391,24 +1484,29 @@
 
     const/4 v5, 0x0
 
+    .line 28
     invoke-virtual {v0, v4, v5}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;I)I
 
     move-result v4
 
+    .line 29
     invoke-virtual {p1, v4}, Lcom/google/android/exoplayer2/Format$Builder;->setRotationDegrees(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p1
 
     const-string v4, "sample-rate"
 
+    .line 30
     invoke-virtual {v0, v4, v3}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;I)I
 
     move-result v3
 
+    .line 31
     invoke-virtual {p1, v3}, Lcom/google/android/exoplayer2/Format$Builder;->setSampleRate(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p1
 
+    .line 32
     invoke-static {v0}, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->getSelectionFlags(Landroid/media/MediaFormat;)I
 
     move-result v3
@@ -1419,20 +1517,24 @@
 
     const-string v3, "encoder-delay"
 
+    .line 33
     invoke-virtual {v0, v3, v5}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;I)I
 
     move-result v3
 
+    .line 34
     invoke-virtual {p1, v3}, Lcom/google/android/exoplayer2/Format$Builder;->setEncoderDelay(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p1
 
     const-string v3, "encoder-padding"
 
+    .line 35
     invoke-virtual {v0, v3, v5}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;I)I
 
     move-result v3
 
+    .line 36
     invoke-virtual {p1, v3}, Lcom/google/android/exoplayer2/Format$Builder;->setEncoderPadding(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p1
@@ -1441,10 +1543,12 @@
 
     const/high16 v4, 0x3f800000    # 1.0f
 
+    .line 37
     invoke-virtual {v0, v3, v4}, Landroid/media/MediaFormat;->getFloat(Ljava/lang/String;F)F
 
     move-result v3
 
+    .line 38
     invoke-virtual {p1, v3}, Lcom/google/android/exoplayer2/Format$Builder;->setPixelWidthHeightRatio(F)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p1
@@ -1453,18 +1557,22 @@
 
     const-wide v6, 0x7fffffffffffffffL
 
+    .line 39
     invoke-virtual {v0, v3, v6, v7}, Landroid/media/MediaFormat;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v3
 
+    .line 40
     invoke-virtual {p1, v3, v4}, Lcom/google/android/exoplayer2/Format$Builder;->setSubsampleOffsetUs(J)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p1
 
+    .line 41
     invoke-virtual {p1, v2}, Lcom/google/android/exoplayer2/Format$Builder;->setAccessibilityChannel(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p1
 
+    .line 42
     :goto_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->muxedCaptionFormats:Ljava/util/List;
 
@@ -1474,6 +1582,7 @@
 
     if-ge v5, v0, :cond_1
 
+    .line 43
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->muxedCaptionFormats:Ljava/util/List;
 
     invoke-interface {v0, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1482,6 +1591,7 @@
 
     check-cast v0, Lcom/google/android/exoplayer2/Format;
 
+    .line 44
     iget-object v3, v0, Lcom/google/android/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
     invoke-static {v3, v1}, Lcom/google/android/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -1494,32 +1604,38 @@
 
     if-ne v3, v2, :cond_0
 
+    .line 45
     iget-object p0, v0, Lcom/google/android/exoplayer2/Format;->language:Ljava/lang/String;
 
+    .line 46
     invoke-virtual {p1, p0}, Lcom/google/android/exoplayer2/Format$Builder;->setLanguage(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
     iget v1, v0, Lcom/google/android/exoplayer2/Format;->roleFlags:I
 
+    .line 47
     invoke-virtual {p0, v1}, Lcom/google/android/exoplayer2/Format$Builder;->setRoleFlags(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
     iget v1, v0, Lcom/google/android/exoplayer2/Format;->selectionFlags:I
 
+    .line 48
     invoke-virtual {p0, v1}, Lcom/google/android/exoplayer2/Format$Builder;->setSelectionFlags(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
     iget-object v1, v0, Lcom/google/android/exoplayer2/Format;->label:Ljava/lang/String;
 
+    .line 49
     invoke-virtual {p0, v1}, Lcom/google/android/exoplayer2/Format$Builder;->setLabel(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
     iget-object v0, v0, Lcom/google/android/exoplayer2/Format;->metadata:Lcom/google/android/exoplayer2/metadata/Metadata;
 
+    .line 50
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/Format$Builder;->setMetadata(Lcom/google/android/exoplayer2/metadata/Metadata;)Lcom/google/android/exoplayer2/Format$Builder;
 
     goto :goto_1
@@ -1529,6 +1645,7 @@
 
     goto :goto_0
 
+    .line 51
     :cond_1
     :goto_1
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/Format$Builder;->build()Lcom/google/android/exoplayer2/Format;
@@ -1551,6 +1668,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
@@ -1650,6 +1768,7 @@
     :goto_1
     packed-switch v1, :pswitch_data_0
 
+    .line 2
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/MimeTypes;->getTrackType(Ljava/lang/String;)I
 
     move-result p0
@@ -1699,6 +1818,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->seekingDisabled:Z
 
     return-void
@@ -1709,6 +1829,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->lastChunkIndex:Lcom/google/android/exoplayer2/extractor/ChunkIndex;
 
     return-object p0
@@ -1719,6 +1840,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->dummySeekMap:Landroid/media/MediaParser$SeekMap;
 
     return-object p0
@@ -1729,6 +1851,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->tracksFoundCalled:Z
 
     if-nez v0, :cond_0
@@ -1737,6 +1860,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->trackFormats:Ljava/util/ArrayList;
 
@@ -1748,6 +1872,7 @@
 
     const/4 v1, 0x0
 
+    .line 3
     :goto_0
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->trackFormats:Ljava/util/ArrayList;
 
@@ -1757,6 +1882,7 @@
 
     if-ge v1, v2, :cond_1
 
+    .line 4
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->trackFormats:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1793,6 +1919,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->lastSeekMap:Landroid/media/MediaParser$SeekMap;
 
     if-eqz p0, :cond_0
@@ -1817,6 +1944,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->sampleTimestampUpperLimitFilterUs:J
 
     const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
@@ -1831,11 +1959,13 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->timestampAdjuster:Lcom/google/android/exoplayer2/util/TimestampAdjuster;
 
     if-eqz v0, :cond_1
 
+    .line 3
     invoke-virtual {v0, p2, p3}, Lcom/google/android/exoplayer2/util/TimestampAdjuster;->adjustSampleTimestamp(J)J
 
     move-result-wide p2
@@ -1843,6 +1973,7 @@
     :cond_1
     move-wide v1, p2
 
+    .line 4
     iget-object p2, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->trackOutputs:Ljava/util/ArrayList;
 
     invoke-virtual {p2, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1859,6 +1990,7 @@
 
     check-cast v0, Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
+    .line 5
     invoke-direct {p0, p1, p7}, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->toExoPlayerCryptoData(ILandroid/media/MediaCodec$CryptoInfo;)Lcom/google/android/exoplayer2/extractor/TrackOutput$CryptoData;
 
     move-result-object v6
@@ -1882,12 +2014,15 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->ensureSpaceForTrackIndex(I)V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->scratchDataReaderAdapter:Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30$DataReaderAdapter;
 
     iput-object p2, v0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30$DataReaderAdapter;->input:Landroid/media/MediaParser$InputReader;
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->trackOutputs:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1898,6 +2033,7 @@
 
     if-nez v0, :cond_0
 
+    .line 4
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->extractorOutput:Lcom/google/android/exoplayer2/extractor/ExtractorOutput;
 
     const/4 v1, -0x1
@@ -1906,13 +2042,16 @@
 
     move-result-object v0
 
+    .line 5
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->trackOutputs:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
+    .line 6
     :cond_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->scratchDataReaderAdapter:Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30$DataReaderAdapter;
 
+    .line 7
     invoke-interface {p2}, Landroid/media/MediaParser$InputReader;->getLength()J
 
     move-result-wide p1
@@ -1921,6 +2060,7 @@
 
     const/4 p2, 0x1
 
+    .line 8
     invoke-interface {v0, p0, p1, p2}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->sampleData(Lcom/google/android/exoplayer2/upstream/DataReader;IZ)I
 
     return-void
@@ -1929,6 +2069,7 @@
 .method public onSeekMapFound(Landroid/media/MediaParser$SeekMap;)V
     .locals 5
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->expectDummySeekMap:Z
 
     if-eqz v0, :cond_0
@@ -1937,23 +2078,29 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->dummySeekMap:Landroid/media/MediaParser$SeekMap;
 
     goto :goto_2
 
+    .line 3
     :cond_0
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->lastSeekMap:Landroid/media/MediaParser$SeekMap;
 
+    .line 4
     invoke-virtual {p1}, Landroid/media/MediaParser$SeekMap;->getDurationMicros()J
 
     move-result-wide v0
 
+    .line 5
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->extractorOutput:Lcom/google/android/exoplayer2/extractor/ExtractorOutput;
 
+    .line 6
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->seekingDisabled:Z
 
     if-eqz p0, :cond_2
 
+    .line 7
     new-instance p0, Lcom/google/android/exoplayer2/extractor/SeekMap$Unseekable;
 
     const-wide/32 v3, -0x80000000
@@ -1967,16 +2114,19 @@
     :cond_1
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 8
     :goto_0
     invoke-direct {p0, v0, v1}, Lcom/google/android/exoplayer2/extractor/SeekMap$Unseekable;-><init>(J)V
 
     goto :goto_1
 
+    .line 9
     :cond_2
     new-instance p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30$SeekMapAdapter;
 
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30$SeekMapAdapter;-><init>(Landroid/media/MediaParser$SeekMap;)V
 
+    .line 10
     :goto_1
     invoke-interface {v2, p0}, Lcom/google/android/exoplayer2/extractor/ExtractorOutput;->seekMap(Lcom/google/android/exoplayer2/extractor/SeekMap;)V
 
@@ -1989,8 +2139,10 @@
 
     const/4 p1, 0x1
 
+    .line 1
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->tracksFoundCalled:Z
 
+    .line 2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->maybeEndTracks()V
 
     return-void
@@ -1999,6 +2151,7 @@
 .method public onTrackDataFound(ILandroid/media/MediaParser$TrackData;)V
     .locals 3
 
+    .line 1
     iget-object v0, p2, Landroid/media/MediaParser$TrackData;->mediaFormat:Landroid/media/MediaFormat;
 
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->maybeObtainChunkIndex(Landroid/media/MediaFormat;)Z
@@ -2009,9 +2162,11 @@
 
     return-void
 
+    .line 2
     :cond_0
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->ensureSpaceForTrackIndex(I)V
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->trackOutputs:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2022,6 +2177,7 @@
 
     if-nez v0, :cond_4
 
+    .line 4
     iget-object v0, p2, Landroid/media/MediaParser$TrackData;->mediaFormat:Landroid/media/MediaFormat;
 
     const-string v1, "track-type-string"
@@ -2036,6 +2192,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     iget-object v1, p2, Landroid/media/MediaParser$TrackData;->mediaFormat:Landroid/media/MediaFormat;
 
@@ -2045,17 +2202,21 @@
 
     move-result-object v1
 
+    .line 6
     :goto_0
     invoke-static {v1}, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->toTrackTypeConstant(Ljava/lang/String;)I
 
     move-result v1
 
+    .line 7
     iget v2, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->primaryTrackType:I
 
     if-ne v1, v2, :cond_2
 
+    .line 8
     iput p1, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->primaryTrackIndex:I
 
+    .line 9
     :cond_2
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->extractorOutput:Lcom/google/android/exoplayer2/extractor/ExtractorOutput;
 
@@ -2063,6 +2224,7 @@
 
     move-result-object v1
 
+    .line 10
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->trackOutputs:Ljava/util/ArrayList;
 
     invoke-virtual {v2, p1, v1}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
@@ -2074,11 +2236,13 @@
     :cond_3
     move-object v0, v1
 
+    .line 11
     :cond_4
     invoke-direct {p0, p2}, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->toExoPlayerFormat(Landroid/media/MediaParser$TrackData;)Lcom/google/android/exoplayer2/Format;
 
     move-result-object p2
 
+    .line 12
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->primaryTrackManifestFormat:Lcom/google/android/exoplayer2/Format;
 
     if-eqz v1, :cond_5
@@ -2087,6 +2251,7 @@
 
     if-ne p1, v2, :cond_5
 
+    .line 13
     invoke-virtual {p2, v1}, Lcom/google/android/exoplayer2/Format;->withManifestFormatInfo(Lcom/google/android/exoplayer2/Format;)Lcom/google/android/exoplayer2/Format;
 
     move-result-object v1
@@ -2096,13 +2261,16 @@
     :cond_5
     move-object v1, p2
 
+    .line 14
     :goto_1
     invoke-interface {v0, v1}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->format(Lcom/google/android/exoplayer2/Format;)V
 
+    .line 15
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->trackFormats:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
+    .line 16
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->maybeEndTracks()V
 
     return-void
@@ -2111,6 +2279,7 @@
 .method public setExtractorOutput(Lcom/google/android/exoplayer2/extractor/ExtractorOutput;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->extractorOutput:Lcom/google/android/exoplayer2/extractor/ExtractorOutput;
 
     return-void
@@ -2127,6 +2296,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->muxedCaptionFormats:Ljava/util/List;
 
     return-void
@@ -2135,6 +2305,7 @@
 .method public setSampleTimestampUpperLimitFilterUs(J)V
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->sampleTimestampUpperLimitFilterUs:J
 
     return-void
@@ -2143,6 +2314,7 @@
 .method public setSelectedParserName(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->getMimeType(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -2155,6 +2327,7 @@
 .method public setTimestampAdjuster(Lcom/google/android/exoplayer2/util/TimestampAdjuster;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30;->timestampAdjuster:Lcom/google/android/exoplayer2/util/TimestampAdjuster;
 
     return-void

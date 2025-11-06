@@ -56,14 +56,6 @@
         <item quantity="other">Varaktighet: %d sekunder</item>
         <item quantity="one">Varaktighet: %d sekund</item>
     </plurals>
-    <plurals name="accessibility_watermark_characters_inputted">
-        <item quantity="other">Angav %d tecken.</item>
-        <item quantity="one">Angav %d tecken.</item>
-    </plurals>
-    <plurals name="accessibility_watermark_characters_max">
-        <item quantity="other">Ange upp till %d tecken.</item>
-        <item quantity="one">Ange upp till %d tecken.</item>
-    </plurals>
     <plurals name="cinemaster_toast_camera_overflow">
         <item quantity="other">Du kan ansluta upp till %d kameror till samma nätverk</item>
         <item quantity="one">Du kan ansluta upp till %d kamera till samma nätverk</item>
@@ -139,10 +131,6 @@
     <plurals name="miuix_appcompat_items_selected">
         <item quantity="other">%d objekt valda</item>
         <item quantity="one">%d objekt vald</item>
-    </plurals>
-    <plurals name="mtrl_badge_content_description">
-        <item quantity="other">%d nya aviseringar</item>
-        <item quantity="one">%d ny avisering</item>
     </plurals>
     <plurals name="num_minutes_ago">
         <item quantity="other">%d minuter sedan</item>

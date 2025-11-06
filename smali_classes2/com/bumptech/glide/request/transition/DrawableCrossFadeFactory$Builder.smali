@@ -53,6 +53,7 @@
 .method public build()Lcom/bumptech/glide/request/transition/DrawableCrossFadeFactory;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/bumptech/glide/request/transition/DrawableCrossFadeFactory;
 
     iget v1, p0, Lcom/bumptech/glide/request/transition/DrawableCrossFadeFactory$Builder;->durationMillis:I
@@ -67,6 +68,7 @@
 .method public setCrossFadeEnabled(Z)Lcom/bumptech/glide/request/transition/DrawableCrossFadeFactory$Builder;
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/bumptech/glide/request/transition/DrawableCrossFadeFactory$Builder;->isCrossFadeEnabled:Z
 
     return-object p0

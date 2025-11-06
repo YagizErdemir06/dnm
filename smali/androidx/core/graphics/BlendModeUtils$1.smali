@@ -1,4 +1,4 @@
-.class synthetic Landroidx/core/graphics/BlendModeUtils$1;
+.class public synthetic Landroidx/core/graphics/BlendModeUtils$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$androidx$core$graphics$BlendModeCompat:[I
+.field public static final synthetic $SwitchMap$androidx$core$graphics$BlendModeCompat:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Landroidx/core/graphics/BlendModeCompat;->values()[Landroidx/core/graphics/BlendModeCompat;
 
     move-result-object v0

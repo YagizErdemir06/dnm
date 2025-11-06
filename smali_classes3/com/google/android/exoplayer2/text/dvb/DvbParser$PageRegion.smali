@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/text/dvb/DvbParser$PageRegion;
+.class public final Lcom/google/android/exoplayer2/text/dvb/DvbParser$PageRegion;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -24,10 +24,13 @@
 .method public constructor <init>(II)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/text/dvb/DvbParser$PageRegion;->horizontalAddress:I
 
+    .line 3
     iput p2, p0, Lcom/google/android/exoplayer2/text/dvb/DvbParser$PageRegion;->verticalAddress:I
 
     return-void

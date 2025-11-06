@@ -28,6 +28,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/metadata/mp4/SmtaMetadataEntry$1;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/metadata/mp4/SmtaMetadataEntry$1;-><init>()V
@@ -112,6 +113,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 1
     const-class v2, Lcom/google/android/exoplayer2/metadata/mp4/SmtaMetadataEntry;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -122,9 +124,11 @@
 
     goto :goto_1
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/metadata/mp4/SmtaMetadataEntry;
 
+    .line 3
     iget v2, p0, Lcom/google/android/exoplayer2/metadata/mp4/SmtaMetadataEntry;->captureFrameRate:F
 
     iget v3, p1, Lcom/google/android/exoplayer2/metadata/mp4/SmtaMetadataEntry;->captureFrameRate:F
@@ -155,6 +159,7 @@
 .method public hashCode()I
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/metadata/mp4/SmtaMetadataEntry;->captureFrameRate:F
 
     invoke-static {v0}, Lcom/google/common/primitives/Floats;->hashCode(F)I
@@ -167,6 +172,7 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
+    .line 2
     iget p0, p0, Lcom/google/android/exoplayer2/metadata/mp4/SmtaMetadataEntry;->svcTemporalLayerCount:I
 
     add-int/2addr v1, p0
@@ -177,6 +183,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -207,10 +214,12 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
+    .line 1
     iget p2, p0, Lcom/google/android/exoplayer2/metadata/mp4/SmtaMetadataEntry;->captureFrameRate:F
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
+    .line 2
     iget p0, p0, Lcom/google/android/exoplayer2/metadata/mp4/SmtaMetadataEntry;->svcTemporalLayerCount:I
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V

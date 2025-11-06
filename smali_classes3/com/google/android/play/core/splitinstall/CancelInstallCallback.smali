@@ -1,4 +1,4 @@
-.class final Lcom/google/android/play/core/splitinstall/CancelInstallCallback;
+.class public final Lcom/google/android/play/core/splitinstall/CancelInstallCallback;
 .super Lcom/google/android/play/core/splitinstall/SplitInstallServiceCallbackImpl;
 .source "SourceFile"
 
@@ -26,6 +26,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/play/core/splitinstall/SplitInstallServiceCallbackImpl;-><init>(Lcom/google/android/play/core/splitinstall/SplitInstallService;Lcom/google/android/play/core/tasks/TaskWrapper;)V
 
     return-void
@@ -36,8 +37,10 @@
 .method public onCancelInstall(ILandroid/os/Bundle;)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/google/android/play/core/splitinstall/SplitInstallServiceCallbackImpl;->onCancelInstall(ILandroid/os/Bundle;)V
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/play/core/splitinstall/SplitInstallServiceCallbackImpl;->mTask:Lcom/google/android/play/core/tasks/TaskWrapper;
 
     const/4 p1, 0x0

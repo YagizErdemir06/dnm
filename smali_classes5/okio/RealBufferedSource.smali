@@ -11,86 +11,124 @@
     value = "SMAP\nRealBufferedSource.kt\nKotlin\n*S Kotlin\n*F\n+ 1 RealBufferedSource.kt\nokio/RealBufferedSource\n+ 2 -RealBufferedSource.kt\nokio/internal/_RealBufferedSourceKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 4 -Util.kt\nokio/_UtilKt\n*L\n1#1,182:1\n61#1:188\n61#1:198\n61#1:205\n61#1:211\n61#1:213\n61#1:217\n61#1:222\n61#1:237\n61#1:241\n61#1:248\n61#1:261\n61#1:269\n61#1:270\n61#1:271\n61#1:277\n61#1:285\n61#1:298\n61#1:302\n61#1:303\n61#1:304\n61#1:305\n61#1:310\n61#1:322\n61#1:338\n61#1:348\n61#1:351\n61#1:354\n61#1:357\n61#1:360\n61#1:363\n61#1:369\n61#1:386\n61#1:406\n61#1:421\n61#1:438\n61#1:451\n61#1:472\n61#1:479\n35#2:183\n36#2,3:185\n39#2,6:189\n48#2:195\n49#2:197\n53#2,2:199\n57#2:201\n58#2,2:203\n60#2,3:206\n66#2,2:209\n71#2:212\n72#2:214\n76#2,2:215\n81#2:218\n83#2,2:220\n85#2,13:223\n104#2:236\n105#2:238\n109#2,2:239\n114#2,6:242\n120#2,9:249\n131#2,3:258\n134#2,5:262\n139#2:268\n143#2,5:272\n148#2,5:278\n155#2,2:283\n157#2,11:286\n171#2:297\n172#2:299\n176#2,2:300\n181#2,4:306\n185#2,6:311\n195#2:317\n196#2,3:319\n199#2,8:323\n207#2,3:332\n214#2,3:335\n217#2,7:339\n227#2,2:346\n232#2,2:349\n237#2,2:352\n242#2,2:355\n247#2,2:358\n252#2,2:361\n257#2,5:364\n262#2,11:370\n276#2,5:381\n281#2,14:387\n298#2,2:401\n300#2,2:404\n302#2,7:407\n311#2,2:414\n313#2,4:417\n317#2,11:422\n331#2,2:433\n334#2,2:436\n336#2,7:439\n347#2,2:446\n350#2,2:449\n352#2,7:452\n368#2:459\n370#2,11:461\n382#2:473\n386#2:474\n390#2,4:475\n394#2:480\n396#2:481\n398#2:482\n1#3:184\n1#3:196\n1#3:202\n1#3:219\n1#3:318\n1#3:403\n1#3:416\n1#3:435\n1#3:448\n1#3:460\n87#4:267\n87#4:331\n*S KotlinDebug\n*F\n+ 1 RealBufferedSource.kt\nokio/RealBufferedSource\n*L\n65#1:188\n66#1:198\n68#1:205\n69#1:211\n70#1:213\n71#1:217\n72#1:222\n73#1:237\n74#1:241\n76#1:248\n78#1:261\n81#1:269\n82#1:270\n86#1:271\n89#1:277\n90#1:285\n91#1:298\n92#1:302\n95#1:303\n96#1:304\n101#1:305\n104#1:310\n106#1:322\n107#1:338\n108#1:348\n109#1:351\n110#1:354\n111#1:357\n112#1:360\n113#1:363\n114#1:369\n115#1:386\n116#1:406\n120#1:421\n123#1:438\n126#1:451\n138#1:472\n178#1:479\n65#1:183\n65#1:185,3\n65#1:189,6\n66#1:195\n66#1:197\n67#1:199,2\n68#1:201\n68#1:203,2\n68#1:206,3\n69#1:209,2\n70#1:212\n70#1:214\n71#1:215,2\n72#1:218\n72#1:220,2\n72#1:223,13\n73#1:236\n73#1:238\n74#1:239,2\n76#1:242,6\n76#1:249,9\n78#1:258,3\n78#1:262,5\n78#1:268\n89#1:272,5\n89#1:278,5\n90#1:283,2\n90#1:286,11\n91#1:297\n91#1:299\n92#1:300,2\n104#1:306,4\n104#1:311,6\n106#1:317\n106#1:319,3\n106#1:323,8\n106#1:332,3\n107#1:335,3\n107#1:339,7\n108#1:346,2\n109#1:349,2\n110#1:352,2\n111#1:355,2\n112#1:358,2\n113#1:361,2\n114#1:364,5\n114#1:370,11\n115#1:381,5\n115#1:387,14\n116#1:401,2\n116#1:404,2\n116#1:407,7\n120#1:414,2\n120#1:417,4\n120#1:422,11\n123#1:433,2\n123#1:436,2\n123#1:439,7\n126#1:446,2\n126#1:449,2\n126#1:452,7\n138#1:459\n138#1:461,11\n138#1:473\n140#1:474\n178#1:475,4\n178#1:480\n179#1:481\n180#1:482\n65#1:184\n66#1:196\n68#1:202\n72#1:219\n106#1:318\n116#1:403\n120#1:416\n123#1:435\n126#1:448\n138#1:460\n78#1:267\n106#1:331\n*E\n"
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000~\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\t\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0005\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0000\n\u0002\u0010\u0012\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0010\n\n\u0002\u0008\u0013\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\r\u0008\u0000\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010A\u001a\u00020@\u00a2\u0006\u0004\u0008K\u0010LJ\u0008\u0010\u0003\u001a\u00020\u0002H\u0016J\u0018\u0010\u0007\u001a\u00020\u00052\u0006\u0010\u0004\u001a\u00020\u00022\u0006\u0010\u0006\u001a\u00020\u0005H\u0016J\u0008\u0010\t\u001a\u00020\u0008H\u0016J\u0010\u0010\u000b\u001a\u00020\n2\u0006\u0010\u0006\u001a\u00020\u0005H\u0016J\u0010\u0010\u000c\u001a\u00020\u00082\u0006\u0010\u0006\u001a\u00020\u0005H\u0016J\u0008\u0010\u000e\u001a\u00020\rH\u0016J\u0008\u0010\u0010\u001a\u00020\u000fH\u0016J\u0010\u0010\u0010\u001a\u00020\u000f2\u0006\u0010\u0006\u001a\u00020\u0005H\u0016J\u0010\u0010\u0014\u001a\u00020\u00132\u0006\u0010\u0012\u001a\u00020\u0011H\u0016J\u0008\u0010\u0016\u001a\u00020\u0015H\u0016J\u0010\u0010\u0016\u001a\u00020\u00152\u0006\u0010\u0006\u001a\u00020\u0005H\u0016J\u0010\u0010\u0007\u001a\u00020\u00132\u0006\u0010\u0004\u001a\u00020\u0015H\u0016J\u0010\u0010\u0017\u001a\u00020\n2\u0006\u0010\u0004\u001a\u00020\u0015H\u0016J \u0010\u0007\u001a\u00020\u00132\u0006\u0010\u0004\u001a\u00020\u00152\u0006\u0010\u0018\u001a\u00020\u00132\u0006\u0010\u0006\u001a\u00020\u0013H\u0016J\u0010\u0010\u0007\u001a\u00020\u00132\u0006\u0010\u0004\u001a\u00020\u0019H\u0016J\u0018\u0010\u0017\u001a\u00020\n2\u0006\u0010\u0004\u001a\u00020\u00022\u0006\u0010\u0006\u001a\u00020\u0005H\u0016J\u0010\u0010\u001b\u001a\u00020\u00052\u0006\u0010\u0004\u001a\u00020\u001aH\u0016J\u0008\u0010\u001d\u001a\u00020\u001cH\u0016J\u0010\u0010\u001d\u001a\u00020\u001c2\u0006\u0010\u0006\u001a\u00020\u0005H\u0016J\u0010\u0010 \u001a\u00020\u001c2\u0006\u0010\u001f\u001a\u00020\u001eH\u0016J\u0018\u0010 \u001a\u00020\u001c2\u0006\u0010\u0006\u001a\u00020\u00052\u0006\u0010\u001f\u001a\u00020\u001eH\u0016J\n\u0010!\u001a\u0004\u0018\u00010\u001cH\u0016J\u0008\u0010\"\u001a\u00020\u001cH\u0016J\u0010\u0010\"\u001a\u00020\u001c2\u0006\u0010#\u001a\u00020\u0005H\u0016J\u0008\u0010$\u001a\u00020\u0013H\u0016J\u0008\u0010&\u001a\u00020%H\u0016J\u0008\u0010\'\u001a\u00020%H\u0016J\u0008\u0010(\u001a\u00020\u0013H\u0016J\u0008\u0010)\u001a\u00020\u0013H\u0016J\u0008\u0010*\u001a\u00020\u0005H\u0016J\u0008\u0010+\u001a\u00020\u0005H\u0016J\u0008\u0010,\u001a\u00020\u0005H\u0016J\u0008\u0010-\u001a\u00020\u0005H\u0016J\u0010\u0010.\u001a\u00020\n2\u0006\u0010\u0006\u001a\u00020\u0005H\u0016J\u0010\u00100\u001a\u00020\u00052\u0006\u0010/\u001a\u00020\rH\u0016J\u0018\u00100\u001a\u00020\u00052\u0006\u0010/\u001a\u00020\r2\u0006\u00101\u001a\u00020\u0005H\u0016J \u00100\u001a\u00020\u00052\u0006\u0010/\u001a\u00020\r2\u0006\u00101\u001a\u00020\u00052\u0006\u00102\u001a\u00020\u0005H\u0016J\u0010\u00100\u001a\u00020\u00052\u0006\u00103\u001a\u00020\u000fH\u0016J\u0018\u00100\u001a\u00020\u00052\u0006\u00103\u001a\u00020\u000f2\u0006\u00101\u001a\u00020\u0005H\u0016J\u0010\u00105\u001a\u00020\u00052\u0006\u00104\u001a\u00020\u000fH\u0016J\u0018\u00105\u001a\u00020\u00052\u0006\u00104\u001a\u00020\u000f2\u0006\u00101\u001a\u00020\u0005H\u0016J\u0018\u00106\u001a\u00020\u00082\u0006\u0010\u0018\u001a\u00020\u00052\u0006\u00103\u001a\u00020\u000fH\u0016J(\u00106\u001a\u00020\u00082\u0006\u0010\u0018\u001a\u00020\u00052\u0006\u00103\u001a\u00020\u000f2\u0006\u00107\u001a\u00020\u00132\u0006\u0010\u0006\u001a\u00020\u0013H\u0016J\u0008\u00108\u001a\u00020\u0001H\u0016J\u0008\u0010:\u001a\u000209H\u0016J\u0008\u0010;\u001a\u00020\u0008H\u0016J\u0008\u0010<\u001a\u00020\nH\u0016J\u0008\u0010>\u001a\u00020=H\u0016J\u0008\u0010?\u001a\u00020\u001cH\u0016R\u0014\u0010A\u001a\u00020@8\u0006X\u0087\u0004\u00a2\u0006\u0006\n\u0004\u0008A\u0010BR\u0014\u0010C\u001a\u00020\u00028\u0006X\u0087\u0004\u00a2\u0006\u0006\n\u0004\u0008C\u0010DR\u0016\u0010E\u001a\u00020\u00088\u0006@\u0006X\u0087\u000e\u00a2\u0006\u0006\n\u0004\u0008E\u0010FR\u001b\u0010\u0003\u001a\u00020\u00028\u00d6\u0002X\u0096\u0004\u00a2\u0006\u000c\u0012\u0004\u0008I\u0010J\u001a\u0004\u0008G\u0010H\u00a8\u0006M"
+        "\u0000\u008e\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\t\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\u0005\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0010\u0012\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\t\n\u0002\u0010\n\n\u0002\u0008\u001d\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\t\n\u0002\u0018\u0002\n\u0002\u0008\u0005\u0008\u0000\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010j\u001a\u00020i\u00a2\u0006\u0004\u0008l\u0010mJ\u000f\u0010\u0003\u001a\u00020\u0002H\u0016\u00a2\u0006\u0004\u0008\u0003\u0010\u0004J\u001f\u0010\u0008\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u00022\u0006\u0010\u0007\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u0008\u0008\u0010\tJ\u000f\u0010\u000b\u001a\u00020\nH\u0016\u00a2\u0006\u0004\u0008\u000b\u0010\u000cJ\u0017\u0010\u000e\u001a\u00020\r2\u0006\u0010\u0007\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u0008\u000e\u0010\u000fJ\u0017\u0010\u0010\u001a\u00020\n2\u0006\u0010\u0007\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u0008\u0010\u0010\u0011J\u000f\u0010\u0013\u001a\u00020\u0012H\u0016\u00a2\u0006\u0004\u0008\u0013\u0010\u0014J\u000f\u0010\u0016\u001a\u00020\u0015H\u0016\u00a2\u0006\u0004\u0008\u0016\u0010\u0017J\u0017\u0010\u0016\u001a\u00020\u00152\u0006\u0010\u0007\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u0008\u0016\u0010\u0018J\u0017\u0010\u001c\u001a\u00020\u001b2\u0006\u0010\u001a\u001a\u00020\u0019H\u0016\u00a2\u0006\u0004\u0008\u001c\u0010\u001dJ\u000f\u0010\u001f\u001a\u00020\u001eH\u0016\u00a2\u0006\u0004\u0008\u001f\u0010 J\u0017\u0010\u001f\u001a\u00020\u001e2\u0006\u0010\u0007\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u0008\u001f\u0010!J\u0017\u0010\u0008\u001a\u00020\u001b2\u0006\u0010\u0005\u001a\u00020\u001eH\u0016\u00a2\u0006\u0004\u0008\u0008\u0010\"J\u0017\u0010#\u001a\u00020\r2\u0006\u0010\u0005\u001a\u00020\u001eH\u0016\u00a2\u0006\u0004\u0008#\u0010$J\'\u0010\u0008\u001a\u00020\u001b2\u0006\u0010\u0005\u001a\u00020\u001e2\u0006\u0010%\u001a\u00020\u001b2\u0006\u0010\u0007\u001a\u00020\u001bH\u0016\u00a2\u0006\u0004\u0008\u0008\u0010&J\u0017\u0010\u0008\u001a\u00020\u001b2\u0006\u0010\u0005\u001a\u00020\'H\u0016\u00a2\u0006\u0004\u0008\u0008\u0010(J\u001f\u0010#\u001a\u00020\r2\u0006\u0010\u0005\u001a\u00020\u00022\u0006\u0010\u0007\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u0008#\u0010)J\u0017\u0010+\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020*H\u0016\u00a2\u0006\u0004\u0008+\u0010,J\u000f\u0010.\u001a\u00020-H\u0016\u00a2\u0006\u0004\u0008.\u0010/J\u0017\u0010.\u001a\u00020-2\u0006\u0010\u0007\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u0008.\u00100J\u0017\u00103\u001a\u00020-2\u0006\u00102\u001a\u000201H\u0016\u00a2\u0006\u0004\u00083\u00104J\u001f\u00103\u001a\u00020-2\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u00102\u001a\u000201H\u0016\u00a2\u0006\u0004\u00083\u00105J\u0011\u00106\u001a\u0004\u0018\u00010-H\u0016\u00a2\u0006\u0004\u00086\u0010/J\u000f\u00107\u001a\u00020-H\u0016\u00a2\u0006\u0004\u00087\u0010/J\u0017\u00107\u001a\u00020-2\u0006\u00108\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u00087\u00100J\u000f\u00109\u001a\u00020\u001bH\u0016\u00a2\u0006\u0004\u00089\u0010:J\u000f\u0010<\u001a\u00020;H\u0016\u00a2\u0006\u0004\u0008<\u0010=J\u000f\u0010>\u001a\u00020;H\u0016\u00a2\u0006\u0004\u0008>\u0010=J\u000f\u0010?\u001a\u00020\u001bH\u0016\u00a2\u0006\u0004\u0008?\u0010:J\u000f\u0010@\u001a\u00020\u001bH\u0016\u00a2\u0006\u0004\u0008@\u0010:J\u000f\u0010A\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u0008A\u0010BJ\u000f\u0010C\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u0008C\u0010BJ\u000f\u0010D\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u0008D\u0010BJ\u000f\u0010E\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u0008E\u0010BJ\u0017\u0010F\u001a\u00020\r2\u0006\u0010\u0007\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u0008F\u0010\u000fJ\u0017\u0010H\u001a\u00020\u00062\u0006\u0010G\u001a\u00020\u0012H\u0016\u00a2\u0006\u0004\u0008H\u0010IJ\u001f\u0010H\u001a\u00020\u00062\u0006\u0010G\u001a\u00020\u00122\u0006\u0010J\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u0008H\u0010KJ\'\u0010H\u001a\u00020\u00062\u0006\u0010G\u001a\u00020\u00122\u0006\u0010J\u001a\u00020\u00062\u0006\u0010L\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u0008H\u0010MJ\u0017\u0010H\u001a\u00020\u00062\u0006\u0010N\u001a\u00020\u0015H\u0016\u00a2\u0006\u0004\u0008H\u0010OJ\u001f\u0010H\u001a\u00020\u00062\u0006\u0010N\u001a\u00020\u00152\u0006\u0010J\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u0008H\u0010PJ\u0017\u0010R\u001a\u00020\u00062\u0006\u0010Q\u001a\u00020\u0015H\u0016\u00a2\u0006\u0004\u0008R\u0010OJ\u001f\u0010R\u001a\u00020\u00062\u0006\u0010Q\u001a\u00020\u00152\u0006\u0010J\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u0008R\u0010PJ\u001f\u0010S\u001a\u00020\n2\u0006\u0010%\u001a\u00020\u00062\u0006\u0010N\u001a\u00020\u0015H\u0016\u00a2\u0006\u0004\u0008S\u0010TJ/\u0010S\u001a\u00020\n2\u0006\u0010%\u001a\u00020\u00062\u0006\u0010N\u001a\u00020\u00152\u0006\u0010U\u001a\u00020\u001b2\u0006\u0010\u0007\u001a\u00020\u001bH\u0016\u00a2\u0006\u0004\u0008S\u0010VJ\u000f\u0010W\u001a\u00020\u0001H\u0016\u00a2\u0006\u0004\u0008W\u0010XJ\u000f\u0010Z\u001a\u00020YH\u0016\u00a2\u0006\u0004\u0008Z\u0010[J\u000f\u0010\\\u001a\u00020\nH\u0016\u00a2\u0006\u0004\u0008\\\u0010\u000cJ\u000f\u0010]\u001a\u00020\rH\u0016\u00a2\u0006\u0004\u0008]\u0010^J\u000f\u0010`\u001a\u00020_H\u0016\u00a2\u0006\u0004\u0008`\u0010aJ\u000f\u0010b\u001a\u00020-H\u0016\u00a2\u0006\u0004\u0008b\u0010/R\u001d\u0010\u0003\u001a\u00020\u00028\u00d6\u0002@\u0016X\u0096\u0004\u00a2\u0006\u000c\u0012\u0004\u0008d\u0010^\u001a\u0004\u0008c\u0010\u0004R\u0016\u0010e\u001a\u00020\u00028\u0006@\u0007X\u0087\u0004\u00a2\u0006\u0006\n\u0004\u0008e\u0010fR\u0016\u0010g\u001a\u00020\n8\u0006@\u0006X\u0087\u000e\u00a2\u0006\u0006\n\u0004\u0008g\u0010hR\u0016\u0010j\u001a\u00020i8\u0006@\u0007X\u0087\u0004\u00a2\u0006\u0006\n\u0004\u0008j\u0010k\u00a8\u0006n"
     }
     d2 = {
         "Lokio/RealBufferedSource;",
         "Lokio/BufferedSource;",
         "Lokio/Buffer;",
         "buffer",
+        "()Lokio/Buffer;",
         "sink",
         "",
         "byteCount",
         "read",
+        "(Lokio/Buffer;J)J",
         "",
         "exhausted",
-        "Lnm/l2;",
+        "()Z",
+        "Lh/l2;",
         "require",
+        "(J)V",
         "request",
+        "(J)Z",
         "",
         "readByte",
+        "()B",
         "Lokio/ByteString;",
         "readByteString",
+        "()Lokio/ByteString;",
+        "(J)Lokio/ByteString;",
         "Lokio/Options;",
         "options",
         "",
         "select",
+        "(Lokio/Options;)I",
         "",
         "readByteArray",
+        "()[B",
+        "(J)[B",
+        "([B)I",
         "readFully",
+        "([B)V",
         "offset",
+        "([BII)I",
         "Ljava/nio/ByteBuffer;",
+        "(Ljava/nio/ByteBuffer;)I",
+        "(Lokio/Buffer;J)V",
         "Lokio/Sink;",
         "readAll",
+        "(Lokio/Sink;)J",
         "",
         "readUtf8",
+        "()Ljava/lang/String;",
+        "(J)Ljava/lang/String;",
         "Ljava/nio/charset/Charset;",
         "charset",
         "readString",
+        "(Ljava/nio/charset/Charset;)Ljava/lang/String;",
+        "(JLjava/nio/charset/Charset;)Ljava/lang/String;",
         "readUtf8Line",
         "readUtf8LineStrict",
         "limit",
         "readUtf8CodePoint",
+        "()I",
         "",
         "readShort",
+        "()S",
         "readShortLe",
         "readInt",
         "readIntLe",
         "readLong",
+        "()J",
         "readLongLe",
         "readDecimalLong",
         "readHexadecimalUnsignedLong",
         "skip",
         "b",
         "indexOf",
+        "(B)J",
         "fromIndex",
+        "(BJ)J",
         "toIndex",
+        "(BJJ)J",
         "bytes",
+        "(Lokio/ByteString;)J",
+        "(Lokio/ByteString;J)J",
         "targetBytes",
         "indexOfElement",
         "rangeEquals",
+        "(JLokio/ByteString;)Z",
         "bytesOffset",
+        "(JLokio/ByteString;II)Z",
         "peek",
+        "()Lokio/BufferedSource;",
         "Ljava/io/InputStream;",
         "inputStream",
+        "()Ljava/io/InputStream;",
         "isOpen",
         "close",
+        "()V",
         "Lokio/Timeout;",
         "timeout",
+        "()Lokio/Timeout;",
         "toString",
-        "Lokio/Source;",
-        "source",
-        "Lokio/Source;",
+        "getBuffer",
+        "getBuffer$annotations",
         "bufferField",
         "Lokio/Buffer;",
         "closed",
         "Z",
-        "getBuffer",
-        "()Lokio/Buffer;",
-        "getBuffer$annotations",
-        "()V",
+        "Lokio/Source;",
+        "source",
+        "Lokio/Source;",
         "<init>",
         "(Lokio/Source;)V",
         "okio"
@@ -106,23 +144,23 @@
 
 # instance fields
 .field public final bufferField:Lokio/Buffer;
-    .annotation build Lin/e;
+    .annotation build Lh/d3/e;
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field public closed:Z
-    .annotation build Lin/e;
+    .annotation build Lh/d3/e;
     .end annotation
 .end field
 
 .field public final source:Lokio/Source;
-    .annotation build Lin/e;
+    .annotation build Lh/d3/e;
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -131,18 +169,21 @@
 .method public constructor <init>(Lokio/Source;)V
     .locals 1
     .param p1    # Lokio/Source;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "source"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lokio/RealBufferedSource;->source:Lokio/Source;
 
+    .line 3
     new-instance p1, Lokio/Buffer;
 
     invoke-direct {p1}, Lokio/Buffer;-><init>()V
@@ -162,9 +203,10 @@
 # virtual methods
 .method public buffer()Lokio/Buffer;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
     return-object p0
@@ -173,6 +215,7 @@
 .method public close()V
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lokio/RealBufferedSource;->closed:Z
 
     if-eqz v0, :cond_0
@@ -182,14 +225,18 @@
     :cond_0
     const/4 v0, 0x1
 
+    .line 2
     iput-boolean v0, p0, Lokio/RealBufferedSource;->closed:Z
 
+    .line 3
     iget-object v0, p0, Lokio/RealBufferedSource;->source:Lokio/Source;
 
     invoke-interface {v0}, Lokio/Source;->close()V
 
+    .line 4
     iget-object p0, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
+    .line 5
     invoke-virtual {p0}, Lokio/Buffer;->clear()V
 
     :goto_0
@@ -199,6 +246,7 @@
 .method public exhausted()Z
     .locals 6
 
+    .line 1
     iget-boolean v0, p0, Lokio/RealBufferedSource;->closed:Z
 
     const/4 v1, 0x1
@@ -207,8 +255,10 @@
 
     if-eqz v0, :cond_1
 
+    .line 2
     iget-object v0, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
+    .line 3
     invoke-virtual {v0}, Lokio/Buffer;->exhausted()Z
 
     move-result v0
@@ -217,10 +267,12 @@
 
     iget-object v0, p0, Lokio/RealBufferedSource;->source:Lokio/Source;
 
+    .line 4
     iget-object p0, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
     const-wide/16 v2, 0x2000
 
+    .line 5
     invoke-interface {v0, p0, v2, v3}, Lokio/Source;->read(Lokio/Buffer;J)J
 
     move-result-wide v2
@@ -239,6 +291,7 @@
     :goto_0
     return v1
 
+    .line 6
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -255,9 +308,10 @@
 
 .method public getBuffer()Lokio/Buffer;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
     return-object p0
@@ -456,13 +510,13 @@
 .method public indexOf(Lokio/ByteString;)J
     .locals 2
     .param p1    # Lokio/ByteString;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "bytes"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-wide/16 v0, 0x0
 
@@ -477,13 +531,13 @@
 .method public indexOf(Lokio/ByteString;J)J
     .locals 8
     .param p1    # Lokio/ByteString;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "bytes"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 15
     iget-boolean v0, p0, Lokio/RealBufferedSource;->closed:Z
@@ -578,13 +632,13 @@
 .method public indexOfElement(Lokio/ByteString;)J
     .locals 2
     .param p1    # Lokio/ByteString;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "targetBytes"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-wide/16 v0, 0x0
 
@@ -599,13 +653,13 @@
 .method public indexOfElement(Lokio/ByteString;J)J
     .locals 8
     .param p1    # Lokio/ByteString;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "targetBytes"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     iget-boolean v0, p0, Lokio/RealBufferedSource;->closed:Z
@@ -687,9 +741,10 @@
 
 .method public inputStream()Ljava/io/InputStream;
     .locals 1
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     new-instance v0, Lokio/RealBufferedSource$inputStream$1;
 
     invoke-direct {v0, p0}, Lokio/RealBufferedSource$inputStream$1;-><init>(Lokio/RealBufferedSource;)V
@@ -700,6 +755,7 @@
 .method public isOpen()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lokio/RealBufferedSource;->closed:Z
 
     xor-int/lit8 p0, p0, 0x1
@@ -709,9 +765,10 @@
 
 .method public peek()Lokio/BufferedSource;
     .locals 1
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     new-instance v0, Lokio/PeekSource;
 
     invoke-direct {v0, p0}, Lokio/PeekSource;-><init>(Lokio/BufferedSource;)V
@@ -726,20 +783,20 @@
 .method public rangeEquals(JLokio/ByteString;)Z
     .locals 7
     .param p3    # Lokio/ByteString;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "bytes"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const/4 v5, 0x0
+    invoke-static {p3, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     invoke-virtual {p3}, Lokio/ByteString;->size()I
 
     move-result v6
+
+    const/4 v5, 0x0
 
     move-object v1, p0
 
@@ -758,13 +815,13 @@
 .method public rangeEquals(JLokio/ByteString;II)Z
     .locals 8
     .param p3    # Lokio/ByteString;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "bytes"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
     iget-boolean v0, p0, Lokio/RealBufferedSource;->closed:Z
@@ -878,13 +935,13 @@
 .method public read(Ljava/nio/ByteBuffer;)I
     .locals 4
     .param p1    # Ljava/nio/ByteBuffer;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "sink"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 25
     iget-object v0, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
@@ -938,13 +995,13 @@
 .method public read([B)I
     .locals 2
     .param p1    # [B
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "sink"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     array-length v0, p1
@@ -961,13 +1018,13 @@
 .method public read([BII)I
     .locals 9
     .param p1    # [B
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "sink"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 14
     array-length v0, p1
@@ -1048,15 +1105,15 @@
 .end method
 
 .method public read(Lokio/Buffer;J)J
-    .locals 4
+    .locals 6
     .param p1    # Lokio/Buffer;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "sink"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-wide/16 v0, 0x0
 
@@ -1093,24 +1150,24 @@
 
     cmp-long v0, v2, v0
 
+    const-wide/16 v1, -0x1
+
     if-nez v0, :cond_1
 
     .line 5
     iget-object v0, p0, Lokio/RealBufferedSource;->source:Lokio/Source;
 
     .line 6
-    iget-object v1, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
+    iget-object v3, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
-    const-wide/16 v2, 0x2000
+    const-wide/16 v4, 0x2000
 
     .line 7
-    invoke-interface {v0, v1, v2, v3}, Lokio/Source;->read(Lokio/Buffer;J)J
+    invoke-interface {v0, v3, v4, v5}, Lokio/Source;->read(Lokio/Buffer;J)J
 
-    move-result-wide v0
+    move-result-wide v3
 
-    const-wide/16 v2, -0x1
-
-    cmp-long v0, v0, v2
+    cmp-long v0, v3, v1
 
     if-nez v0, :cond_1
 
@@ -1135,10 +1192,10 @@
     .line 11
     invoke-virtual {p0, p1, p2, p3}, Lokio/Buffer;->read(Lokio/Buffer;J)J
 
-    move-result-wide v2
+    move-result-wide v1
 
     :goto_1
-    return-wide v2
+    return-wide v1
 
     .line 12
     :cond_2
@@ -1154,15 +1211,15 @@
 
     throw p0
 
-    :cond_3
-    const-string p0, "byteCount < 0: "
-
     .line 13
+    :cond_3
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
+    const-string p1, "byteCount < 0: "
+
+    invoke-static {p1, p0}, Lh/d3/x/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -1180,26 +1237,29 @@
 .method public readAll(Lokio/Sink;)J
     .locals 8
     .param p1    # Lokio/Sink;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "sink"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-wide/16 v0, 0x0
 
     move-wide v2, v0
 
+    .line 1
     :cond_0
     :goto_0
     iget-object v4, p0, Lokio/RealBufferedSource;->source:Lokio/Source;
 
+    .line 2
     iget-object v5, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
     const-wide/16 v6, 0x2000
 
+    .line 3
     invoke-interface {v4, v5, v6, v7}, Lokio/Source;->read(Lokio/Buffer;J)J
 
     move-result-wide v4
@@ -1210,8 +1270,10 @@
 
     if-eqz v4, :cond_1
 
+    .line 4
     iget-object v4, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
+    .line 5
     invoke-virtual {v4}, Lokio/Buffer;->completeSegmentByteCount()J
 
     move-result-wide v4
@@ -1222,15 +1284,19 @@
 
     add-long/2addr v2, v4
 
+    .line 6
     iget-object v6, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
+    .line 7
     invoke-interface {p1, v6, v4, v5}, Lokio/Sink;->write(Lokio/Buffer;J)V
 
     goto :goto_0
 
+    .line 8
     :cond_1
     iget-object v4, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
+    .line 9
     invoke-virtual {v4}, Lokio/Buffer;->size()J
 
     move-result-wide v4
@@ -1239,16 +1305,20 @@
 
     if-lez v0, :cond_2
 
+    .line 10
     iget-object v0, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
+    .line 11
     invoke-virtual {v0}, Lokio/Buffer;->size()J
 
     move-result-wide v0
 
     add-long/2addr v2, v0
 
+    .line 12
     iget-object p0, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
+    .line 13
     invoke-virtual {p0}, Lokio/Buffer;->size()J
 
     move-result-wide v0
@@ -1264,10 +1334,13 @@
 
     const-wide/16 v0, 0x1
 
+    .line 1
     invoke-virtual {p0, v0, v1}, Lokio/RealBufferedSource;->require(J)V
 
+    .line 2
     iget-object p0, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
+    .line 3
     invoke-virtual {p0}, Lokio/Buffer;->readByte()B
 
     move-result p0
@@ -1277,7 +1350,7 @@
 
 .method public readByteArray()[B
     .locals 2
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     .line 1
@@ -1301,7 +1374,7 @@
 
 .method public readByteArray(J)[B
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     .line 5
@@ -1320,7 +1393,7 @@
 
 .method public readByteString()Lokio/ByteString;
     .locals 2
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     .line 1
@@ -1344,7 +1417,7 @@
 
 .method public readByteString(J)Lokio/ByteString;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     .line 5
@@ -1366,6 +1439,7 @@
 
     const-wide/16 v0, 0x1
 
+    .line 1
     invoke-virtual {p0, v0, v1}, Lokio/RealBufferedSource;->require(J)V
 
     const-wide/16 v2, 0x0
@@ -1375,14 +1449,17 @@
     :goto_0
     add-long v6, v4, v0
 
+    .line 2
     invoke-virtual {p0, v6, v7}, Lokio/RealBufferedSource;->request(J)Z
 
     move-result v8
 
     if-eqz v8, :cond_4
 
+    .line 3
     iget-object v8, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
+    .line 4
     invoke-virtual {v8, v4, v5}, Lokio/Buffer;->getByte(J)B
 
     move-result v8
@@ -1423,16 +1500,17 @@
 
     goto :goto_2
 
+    .line 5
     :cond_3
     new-instance p0, Ljava/lang/NumberFormatException;
 
     const/16 v0, 0x10
 
-    invoke-static {v0}, Lxn/d;->a(I)I
+    invoke-static {v0}, Lh/m3/d;->a(I)I
 
     move-result v0
 
-    invoke-static {v0}, Lxn/d;->a(I)I
+    invoke-static {v0}, Lh/m3/d;->a(I)I
 
     move-result v0
 
@@ -1442,11 +1520,11 @@
 
     const-string v1, "java.lang.Integer.toStri\u2026(this, checkRadix(radix))"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v1, "Expected a digit or \'-\' but was 0x"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v1, v0}, Lh/d3/x/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1454,10 +1532,12 @@
 
     throw p0
 
+    .line 6
     :cond_4
     :goto_2
     iget-object p0, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
+    .line 7
     invoke-virtual {p0}, Lokio/Buffer;->readDecimalLong()J
 
     move-result-wide v0
@@ -1468,13 +1548,13 @@
 .method public readFully(Lokio/Buffer;J)V
     .locals 1
     .param p1    # Lokio/Buffer;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "sink"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 10
     :try_start_0
@@ -1506,13 +1586,13 @@
 .method public readFully([B)V
     .locals 6
     .param p1    # [B
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "sink"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     :try_start_0
@@ -1592,6 +1672,7 @@
 
     const-wide/16 v0, 0x1
 
+    .line 1
     invoke-virtual {p0, v0, v1}, Lokio/RealBufferedSource;->require(J)V
 
     const/4 v0, 0x0
@@ -1601,16 +1682,19 @@
 
     int-to-long v2, v1
 
+    .line 2
     invoke-virtual {p0, v2, v3}, Lokio/RealBufferedSource;->request(J)Z
 
     move-result v2
 
     if-eqz v2, :cond_5
 
+    .line 3
     iget-object v2, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
     int-to-long v3, v0
 
+    .line 4
     invoke-virtual {v2, v3, v4}, Lokio/Buffer;->getByte(J)B
 
     move-result v2
@@ -1666,16 +1750,17 @@
 
     goto :goto_2
 
+    .line 5
     :cond_4
     new-instance p0, Ljava/lang/NumberFormatException;
 
     const/16 v0, 0x10
 
-    invoke-static {v0}, Lxn/d;->a(I)I
+    invoke-static {v0}, Lh/m3/d;->a(I)I
 
     move-result v0
 
-    invoke-static {v0}, Lxn/d;->a(I)I
+    invoke-static {v0}, Lh/m3/d;->a(I)I
 
     move-result v0
 
@@ -1685,11 +1770,11 @@
 
     const-string v1, "java.lang.Integer.toStri\u2026(this, checkRadix(radix))"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v1, "Expected leading [0-9a-fA-F] character but was 0x"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v1, v0}, Lh/d3/x/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1697,10 +1782,12 @@
 
     throw p0
 
+    .line 6
     :cond_5
     :goto_2
     iget-object p0, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
+    .line 7
     invoke-virtual {p0}, Lokio/Buffer;->readHexadecimalUnsignedLong()J
 
     move-result-wide v0
@@ -1713,10 +1800,13 @@
 
     const-wide/16 v0, 0x4
 
+    .line 1
     invoke-virtual {p0, v0, v1}, Lokio/RealBufferedSource;->require(J)V
 
+    .line 2
     iget-object p0, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
+    .line 3
     invoke-virtual {p0}, Lokio/Buffer;->readInt()I
 
     move-result p0
@@ -1729,10 +1819,13 @@
 
     const-wide/16 v0, 0x4
 
+    .line 1
     invoke-virtual {p0, v0, v1}, Lokio/RealBufferedSource;->require(J)V
 
+    .line 2
     iget-object p0, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
+    .line 3
     invoke-virtual {p0}, Lokio/Buffer;->readIntLe()I
 
     move-result p0
@@ -1745,10 +1838,13 @@
 
     const-wide/16 v0, 0x8
 
+    .line 1
     invoke-virtual {p0, v0, v1}, Lokio/RealBufferedSource;->require(J)V
 
+    .line 2
     iget-object p0, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
+    .line 3
     invoke-virtual {p0}, Lokio/Buffer;->readLong()J
 
     move-result-wide v0
@@ -1761,10 +1857,13 @@
 
     const-wide/16 v0, 0x8
 
+    .line 1
     invoke-virtual {p0, v0, v1}, Lokio/RealBufferedSource;->require(J)V
 
+    .line 2
     iget-object p0, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
+    .line 3
     invoke-virtual {p0}, Lokio/Buffer;->readLongLe()J
 
     move-result-wide v0
@@ -1777,10 +1876,13 @@
 
     const-wide/16 v0, 0x2
 
+    .line 1
     invoke-virtual {p0, v0, v1}, Lokio/RealBufferedSource;->require(J)V
 
+    .line 2
     iget-object p0, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
+    .line 3
     invoke-virtual {p0}, Lokio/Buffer;->readShort()S
 
     move-result p0
@@ -1793,10 +1895,13 @@
 
     const-wide/16 v0, 0x2
 
+    .line 1
     invoke-virtual {p0, v0, v1}, Lokio/RealBufferedSource;->require(J)V
 
+    .line 2
     iget-object p0, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
+    .line 3
     invoke-virtual {p0}, Lokio/Buffer;->readShortLe()S
 
     move-result p0
@@ -1807,15 +1912,15 @@
 .method public readString(JLjava/nio/charset/Charset;)Ljava/lang/String;
     .locals 1
     .param p3    # Ljava/nio/charset/Charset;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "charset"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     invoke-virtual {p0, p1, p2}, Lokio/RealBufferedSource;->require(J)V
@@ -1834,15 +1939,15 @@
 .method public readString(Ljava/nio/charset/Charset;)Ljava/lang/String;
     .locals 2
     .param p1    # Ljava/nio/charset/Charset;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "charset"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
     iget-object v0, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
@@ -1865,7 +1970,7 @@
 
 .method public readUtf8()Ljava/lang/String;
     .locals 2
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     .line 1
@@ -1889,7 +1994,7 @@
 
 .method public readUtf8(J)Ljava/lang/String;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     .line 5
@@ -1911,12 +2016,15 @@
 
     const-wide/16 v0, 0x1
 
+    .line 1
     invoke-virtual {p0, v0, v1}, Lokio/RealBufferedSource;->require(J)V
 
+    .line 2
     iget-object v0, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
     const-wide/16 v1, 0x0
 
+    .line 3
     invoke-virtual {v0, v1, v2}, Lokio/Buffer;->getByte(J)B
 
     move-result v0
@@ -1929,6 +2037,7 @@
 
     const-wide/16 v0, 0x2
 
+    .line 4
     invoke-virtual {p0, v0, v1}, Lokio/RealBufferedSource;->require(J)V
 
     goto :goto_0
@@ -1942,6 +2051,7 @@
 
     const-wide/16 v0, 0x3
 
+    .line 5
     invoke-virtual {p0, v0, v1}, Lokio/RealBufferedSource;->require(J)V
 
     goto :goto_0
@@ -1955,12 +2065,15 @@
 
     const-wide/16 v0, 0x4
 
+    .line 6
     invoke-virtual {p0, v0, v1}, Lokio/RealBufferedSource;->require(J)V
 
+    .line 7
     :cond_2
     :goto_0
     iget-object p0, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
+    .line 8
     invoke-virtual {p0}, Lokio/Buffer;->readUtf8CodePoint()I
 
     move-result p0
@@ -1970,13 +2083,14 @@
 
 .method public readUtf8Line()Ljava/lang/String;
     .locals 4
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
     const/16 v0, 0xa
 
     int-to-byte v0, v0
 
+    .line 1
     invoke-virtual {p0, v0}, Lokio/RealBufferedSource;->indexOf(B)J
 
     move-result-wide v0
@@ -1987,8 +2101,10 @@
 
     if-nez v2, :cond_1
 
+    .line 2
     iget-object v0, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
+    .line 3
     invoke-virtual {v0}, Lokio/Buffer;->size()J
 
     move-result-wide v0
@@ -1999,8 +2115,10 @@
 
     if-eqz v0, :cond_0
 
+    .line 4
     iget-object v0, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
+    .line 5
     invoke-virtual {v0}, Lokio/Buffer;->size()J
 
     move-result-wide v0
@@ -2016,9 +2134,11 @@
 
     goto :goto_0
 
+    .line 6
     :cond_1
     iget-object p0, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
+    .line 7
     invoke-static {p0, v0, v1}, Lokio/internal/_BufferKt;->readUtf8Line(Lokio/Buffer;J)Ljava/lang/String;
 
     move-result-object p0
@@ -2029,7 +2149,7 @@
 
 .method public readUtf8LineStrict()Ljava/lang/String;
     .locals 2
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-wide v0, 0x7fffffffffffffffL
@@ -2044,7 +2164,7 @@
 
 .method public readUtf8LineStrict(J)Ljava/lang/String;
     .locals 13
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-wide/16 v0, 0x0
@@ -2181,12 +2301,12 @@
 
     const-wide/16 v2, 0x0
 
+    const/16 v1, 0x20
+
     .line 15
     invoke-virtual {v0}, Lokio/Buffer;->size()J
 
     move-result-wide v4
-
-    const/16 v1, 0x20
 
     int-to-long v7, v1
 
@@ -2255,15 +2375,15 @@
 
     throw v0
 
-    :cond_4
-    const-string p0, "limit < 0: "
-
     .line 25
+    :cond_4
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
+    const-string p1, "limit < 0: "
+
+    invoke-static {p1, p0}, Lh/d3/x/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -2301,15 +2421,18 @@
     :goto_0
     if-eqz v0, :cond_4
 
+    .line 1
     iget-boolean v0, p0, Lokio/RealBufferedSource;->closed:Z
 
     xor-int/2addr v0, v2
 
     if-eqz v0, :cond_3
 
+    .line 2
     :cond_1
     iget-object v0, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
+    .line 3
     invoke-virtual {v0}, Lokio/Buffer;->size()J
 
     move-result-wide v3
@@ -2318,12 +2441,15 @@
 
     if-gez v0, :cond_2
 
+    .line 4
     iget-object v0, p0, Lokio/RealBufferedSource;->source:Lokio/Source;
 
+    .line 5
     iget-object v3, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
     const-wide/16 v4, 0x2000
 
+    .line 6
     invoke-interface {v0, v3, v4, v5}, Lokio/Source;->read(Lokio/Buffer;J)J
 
     move-result-wide v3
@@ -2342,6 +2468,7 @@
     :goto_1
     return v1
 
+    .line 7
     :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2355,14 +2482,15 @@
 
     throw p0
 
+    .line 8
     :cond_4
-    const-string p0, "byteCount < 0: "
-
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
+    const-string p1, "byteCount < 0: "
+
+    invoke-static {p1, p0}, Lh/d3/x/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -2380,6 +2508,7 @@
 .method public require(J)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lokio/RealBufferedSource;->request(J)Z
 
     move-result p0
@@ -2399,14 +2528,15 @@
 .method public select(Lokio/Options;)I
     .locals 8
     .param p1    # Lokio/Options;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "options"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-boolean v0, p0, Lokio/RealBufferedSource;->closed:Z
 
     const/4 v1, 0x1
@@ -2415,9 +2545,11 @@
 
     if-eqz v0, :cond_3
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
+    .line 3
     invoke-static {v0, p1, v1}, Lokio/internal/_BufferKt;->selectPrefix(Lokio/Buffer;Lokio/Options;Z)I
 
     move-result v0
@@ -2430,6 +2562,7 @@
 
     if-eq v0, v3, :cond_1
 
+    .line 4
     invoke-virtual {p1}, Lokio/Options;->getByteStrings$okio()[Lokio/ByteString;
 
     move-result-object p1
@@ -2440,10 +2573,12 @@
 
     move-result p1
 
+    .line 5
     iget-object p0, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
     int-to-long v1, p1
 
+    .line 6
     invoke-virtual {p0, v1, v2}, Lokio/Buffer;->skip(J)V
 
     goto :goto_1
@@ -2454,13 +2589,16 @@
 
     goto :goto_1
 
+    .line 7
     :cond_2
     iget-object v0, p0, Lokio/RealBufferedSource;->source:Lokio/Source;
 
+    .line 8
     iget-object v2, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
     const-wide/16 v4, 0x2000
 
+    .line 9
     invoke-interface {v0, v2, v4, v5}, Lokio/Source;->read(Lokio/Buffer;J)J
 
     move-result-wide v4
@@ -2476,6 +2614,7 @@
     :goto_1
     return v0
 
+    .line 10
     :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2493,6 +2632,7 @@
 .method public skip(J)V
     .locals 4
 
+    .line 1
     iget-boolean v0, p0, Lokio/RealBufferedSource;->closed:Z
 
     xor-int/lit8 v0, v0, 0x1
@@ -2506,8 +2646,10 @@
 
     if-lez v2, :cond_2
 
+    .line 2
     iget-object v2, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
+    .line 3
     invoke-virtual {v2}, Lokio/Buffer;->size()J
 
     move-result-wide v2
@@ -2518,10 +2660,12 @@
 
     iget-object v0, p0, Lokio/RealBufferedSource;->source:Lokio/Source;
 
+    .line 4
     iget-object v1, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
     const-wide/16 v2, 0x2000
 
+    .line 5
     invoke-interface {v0, v1, v2, v3}, Lokio/Source;->read(Lokio/Buffer;J)J
 
     move-result-wide v0
@@ -2534,6 +2678,7 @@
 
     goto :goto_1
 
+    .line 6
     :cond_0
     new-instance p0, Ljava/io/EOFException;
 
@@ -2541,10 +2686,12 @@
 
     throw p0
 
+    .line 7
     :cond_1
     :goto_1
     iget-object v0, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
+    .line 8
     invoke-virtual {v0}, Lokio/Buffer;->size()J
 
     move-result-wide v0
@@ -2553,8 +2700,10 @@
 
     move-result-wide v0
 
+    .line 9
     iget-object v2, p0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
+    .line 10
     invoke-virtual {v2, v0, v1}, Lokio/Buffer;->skip(J)V
 
     sub-long/2addr p1, v0
@@ -2564,6 +2713,7 @@
     :cond_2
     return-void
 
+    .line 11
     :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2580,9 +2730,10 @@
 
 .method public timeout()Lokio/Timeout;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lokio/RealBufferedSource;->source:Lokio/Source;
 
     invoke-interface {p0}, Lokio/Source;->timeout()Lokio/Timeout;
@@ -2594,9 +2745,10 @@
 
 .method public toString()Ljava/lang/String;
     .locals 2
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

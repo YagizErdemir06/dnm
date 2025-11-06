@@ -30,6 +30,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Landroid/support/v4/media/session/MediaControllerCompat$h;-><init>(Landroid/media/session/MediaController$TransportControls;)V
 
     return-void
@@ -40,6 +41,7 @@
 .method public g()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$g;->b:Landroid/media/session/MediaController$TransportControls;
 
     invoke-virtual {p0}, Landroid/media/session/MediaController$TransportControls;->prepare()V
@@ -60,6 +62,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$g;->b:Landroid/media/session/MediaController$TransportControls;
 
     invoke-virtual {p0, p1, p2}, Landroid/media/session/MediaController$TransportControls;->prepareFromMediaId(Ljava/lang/String;Landroid/os/Bundle;)V
@@ -80,6 +83,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$g;->b:Landroid/media/session/MediaController$TransportControls;
 
     invoke-virtual {p0, p1, p2}, Landroid/media/session/MediaController$TransportControls;->prepareFromSearch(Ljava/lang/String;Landroid/os/Bundle;)V
@@ -100,6 +104,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$g;->b:Landroid/media/session/MediaController$TransportControls;
 
     invoke-virtual {p0, p1, p2}, Landroid/media/session/MediaController$TransportControls;->prepareFromUri(Landroid/net/Uri;Landroid/os/Bundle;)V

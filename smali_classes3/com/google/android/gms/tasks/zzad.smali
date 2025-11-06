@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/tasks/zzad;
+.class public final Lcom/google/android/gms/tasks/zzad;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -64,6 +64,7 @@
 .method public final onCanceled()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/tasks/zzad;->zza:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -78,6 +79,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/tasks/zzad;->zza:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -93,6 +95,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/tasks/zzad;->zza:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -108,6 +111,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/tasks/zzad;->zza:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->await()V
@@ -123,6 +127,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/tasks/zzad;->zza:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p0, p1, p2, p3}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z

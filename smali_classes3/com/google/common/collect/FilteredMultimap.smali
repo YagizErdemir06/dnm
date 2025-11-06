@@ -1,4 +1,4 @@
-.class interface abstract Lcom/google/common/collect/FilteredMultimap;
+.class public interface abstract Lcom/google/common/collect/FilteredMultimap;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

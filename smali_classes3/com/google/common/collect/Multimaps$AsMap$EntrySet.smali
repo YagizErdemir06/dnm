@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Multimaps$AsMap$EntrySet;
+.class public Lcom/google/common/collect/Multimaps$AsMap$EntrySet;
 .super Lcom/google/common/collect/Maps$EntrySet;
 .source "SourceFile"
 
@@ -24,13 +24,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/Multimaps$AsMap;
+.field public final synthetic this$0:Lcom/google/common/collect/Multimaps$AsMap;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/Multimaps$AsMap;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/Multimaps$AsMap$EntrySet;->this$0:Lcom/google/common/collect/Multimaps$AsMap;
 
     invoke-direct {p0}, Lcom/google/common/collect/Maps$EntrySet;-><init>()V
@@ -53,8 +54,10 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Multimaps$AsMap$EntrySet;->this$0:Lcom/google/common/collect/Multimaps$AsMap;
 
+    .line 2
     invoke-static {v0}, Lcom/google/common/collect/Multimaps$AsMap;->access$200(Lcom/google/common/collect/Multimaps$AsMap;)Lcom/google/common/collect/Multimap;
 
     move-result-object v0
@@ -67,6 +70,7 @@
 
     invoke-direct {v1, p0}, Lcom/google/common/collect/Multimaps$AsMap$EntrySet$1;-><init>(Lcom/google/common/collect/Multimaps$AsMap$EntrySet;)V
 
+    .line 3
     invoke-static {v0, v1}, Lcom/google/common/collect/Maps;->asMapEntryIterator(Ljava/util/Set;Lcom/google/common/base/Function;)Ljava/util/Iterator;
 
     move-result-object p0
@@ -86,6 +90,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Multimaps$AsMap$EntrySet;->this$0:Lcom/google/common/collect/Multimaps$AsMap;
 
     return-object p0
@@ -98,6 +103,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/Maps$EntrySet;->contains(Ljava/lang/Object;)Z
 
     move-result v0
@@ -108,6 +114,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     check-cast p1, Ljava/util/Map$Entry;
 
@@ -115,6 +122,7 @@
 
     check-cast p1, Ljava/util/Map$Entry;
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/collect/Multimaps$AsMap$EntrySet;->this$0:Lcom/google/common/collect/Multimaps$AsMap;
 
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;

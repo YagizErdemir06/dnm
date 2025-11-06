@@ -12,9 +12,9 @@
 
 
 # static fields
-.field protected static final DEFAULT_HTML_FORMAT:Lorg/dom4j/io/OutputFormat;
+.field public static final DEFAULT_HTML_FORMAT:Lorg/dom4j/io/OutputFormat;
 
-.field protected static final DEFAULT_PREFORMATTED_TAGS:Ljava/util/HashSet;
+.field public static final DEFAULT_PREFORMATTED_TAGS:Ljava/util/HashSet;
 
 .field private static lineSeparator:Ljava/lang/String;
 
@@ -39,12 +39,14 @@
 
     const-string v0, "line.separator"
 
+    .line 1
     invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Lorg/dom4j/io/HTMLWriter;->lineSeparator:Ljava/lang/String;
 
+    .line 2
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -53,20 +55,25 @@
 
     const-string v1, "PRE"
 
+    .line 3
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     const-string v1, "SCRIPT"
 
+    .line 4
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     const-string v1, "STYLE"
 
+    .line 5
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     const-string v1, "TEXTAREA"
 
+    .line 6
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    .line 7
     new-instance v0, Lorg/dom4j/io/OutputFormat;
 
     const-string v1, "  "
@@ -77,8 +84,10 @@
 
     sput-object v0, Lorg/dom4j/io/HTMLWriter;->DEFAULT_HTML_FORMAT:Lorg/dom4j/io/OutputFormat;
 
+    .line 8
     invoke-virtual {v0, v2}, Lorg/dom4j/io/OutputFormat;->setTrimText(Z)V
 
+    .line 9
     invoke-virtual {v0, v2}, Lorg/dom4j/io/OutputFormat;->setSuppressDeclaration(Z)V
 
     return-void
@@ -329,18 +338,22 @@
 .method private internalGetOmitElementCloseSet()Ljava/util/HashSet;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/HTMLWriter;->omitElementCloseSet:Ljava/util/HashSet;
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lorg/dom4j/io/HTMLWriter;->omitElementCloseSet:Ljava/util/HashSet;
 
+    .line 3
     invoke-virtual {p0, v0}, Lorg/dom4j/io/HTMLWriter;->loadOmitElementCloseSet(Ljava/util/Set;)V
 
+    .line 4
     :cond_0
     iget-object p0, p0, Lorg/dom4j/io/HTMLWriter;->omitElementCloseSet:Ljava/util/HashSet;
 
@@ -350,10 +363,12 @@
 .method private justSpaces(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result p0
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0, p0}, Ljava/lang/StringBuffer;-><init>(I)V
@@ -363,6 +378,7 @@
     :goto_0
     if-ge v1, p0, :cond_1
 
+    .line 3
     invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
@@ -375,6 +391,7 @@
 
     if-eq v2, v3, :cond_0
 
+    .line 4
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
     :cond_0
@@ -382,6 +399,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -393,6 +411,7 @@
 .method private lazyInitNewLinesAfterNTags()V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/io/XMLWriter;->getOutputFormat()Lorg/dom4j/io/OutputFormat;
 
     move-result-object v0
@@ -405,10 +424,12 @@
 
     const/4 v0, 0x0
 
+    .line 2
     iput v0, p0, Lorg/dom4j/io/HTMLWriter;->newLineAfterNTags:I
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Lorg/dom4j/io/XMLWriter;->getOutputFormat()Lorg/dom4j/io/OutputFormat;
 
@@ -516,6 +537,7 @@
 
     const/4 v1, 0x0
 
+    .line 1
     invoke-static {p0, v0, v0, v0, v1}, Lorg/dom4j/io/HTMLWriter;->prettyPrintHTML(Ljava/lang/String;ZZZZ)Ljava/lang/String;
 
     move-result-object p0
@@ -539,6 +561,7 @@
 .method public getOmitElementCloseSet()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/dom4j/io/HTMLWriter;->internalGetOmitElementCloseSet()Ljava/util/HashSet;
 
     move-result-object p0
@@ -555,6 +578,7 @@
 .method public getPreformattedTags()Ljava/util/Set;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/HTMLWriter;->preformattedTags:Ljava/util/HashSet;
 
     invoke-virtual {p0}, Ljava/util/HashSet;->clone()Ljava/lang/Object;
@@ -569,6 +593,7 @@
 .method public isPreformattedTag(Ljava/lang/String;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/HTMLWriter;->preformattedTags:Ljava/util/HashSet;
 
     if-eqz p0, :cond_0
@@ -599,46 +624,57 @@
 
     const-string p0, "AREA"
 
+    .line 1
     invoke-interface {p1, p0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string p0, "BASE"
 
+    .line 2
     invoke-interface {p1, p0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string p0, "BR"
 
+    .line 3
     invoke-interface {p1, p0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string p0, "COL"
 
+    .line 4
     invoke-interface {p1, p0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string p0, "HR"
 
+    .line 5
     invoke-interface {p1, p0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string p0, "IMG"
 
+    .line 6
     invoke-interface {p1, p0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string p0, "INPUT"
 
+    .line 7
     invoke-interface {p1, p0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string p0, "LINK"
 
+    .line 8
     invoke-interface {p1, p0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string p0, "META"
 
+    .line 9
     invoke-interface {p1, p0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string p0, "P"
 
+    .line 10
     invoke-interface {p1, p0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string p0, "PARAM"
 
+    .line 11
     invoke-interface {p1, p0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     return-void
@@ -647,6 +683,7 @@
 .method public omitElementClose(Ljava/lang/String;)Z
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/dom4j/io/HTMLWriter;->internalGetOmitElementCloseSet()Ljava/util/HashSet;
 
     move-result-object p0
@@ -665,6 +702,7 @@
 .method public setOmitElementCloseSet(Ljava/util/Set;)V
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -673,16 +711,19 @@
 
     if-eqz p1, :cond_1
 
+    .line 2
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lorg/dom4j/io/HTMLWriter;->omitElementCloseSet:Ljava/util/HashSet;
 
+    .line 3
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
+    .line 4
     :cond_0
     :goto_0
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
@@ -691,12 +732,14 @@
 
     if-eqz v0, :cond_1
 
+    .line 5
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 6
     iget-object v1, p0, Lorg/dom4j/io/HTMLWriter;->omitElementCloseSet:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -718,6 +761,7 @@
 .method public setPreformattedTags(Ljava/util/Set;)V
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -726,10 +770,12 @@
 
     if-eqz p1, :cond_1
 
+    .line 2
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
+    .line 3
     :cond_0
     :goto_0
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
@@ -738,12 +784,14 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 5
     iget-object v1, p0, Lorg/dom4j/io/HTMLWriter;->preformattedTags:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -781,6 +829,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/io/XMLWriter;->getOutputFormat()Lorg/dom4j/io/OutputFormat;
 
     move-result-object v0
@@ -791,10 +840,12 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-super {p0, p1}, Lorg/dom4j/io/XMLWriter;->writeCDATA(Ljava/lang/String;)V
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
@@ -803,6 +854,7 @@
     :goto_0
     const/4 p1, 0x4
 
+    .line 4
     iput p1, p0, Lorg/dom4j/io/XMLWriter;->lastOutputNodeType:I
 
     return-void
@@ -816,12 +868,14 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/dom4j/io/HTMLWriter;->omitElementClose(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-super {p0, p1}, Lorg/dom4j/io/XMLWriter;->writeClose(Ljava/lang/String;)V
 
     :cond_0
@@ -847,19 +901,23 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Lorg/dom4j/io/HTMLWriter;->newLineAfterNTags:I
 
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_0
 
+    .line 2
     invoke-direct {p0}, Lorg/dom4j/io/HTMLWriter;->lazyInitNewLinesAfterNTags()V
 
+    .line 3
     :cond_0
     iget v0, p0, Lorg/dom4j/io/HTMLWriter;->newLineAfterNTags:I
 
     if-lez v0, :cond_1
 
+    .line 4
     iget v1, p0, Lorg/dom4j/io/HTMLWriter;->tagsOuput:I
 
     if-lez v1, :cond_1
@@ -868,12 +926,14 @@
 
     if-nez v1, :cond_1
 
+    .line 5
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     sget-object v1, Lorg/dom4j/io/HTMLWriter;->lineSeparator:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 6
     :cond_1
     iget v0, p0, Lorg/dom4j/io/HTMLWriter;->tagsOuput:I
 
@@ -881,36 +941,45 @@
 
     iput v0, p0, Lorg/dom4j/io/HTMLWriter;->tagsOuput:I
 
+    .line 7
     invoke-interface {p1}, Lorg/dom4j/Element;->getQualifiedName()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 8
     iget-object v1, p0, Lorg/dom4j/io/HTMLWriter;->lastText:Ljava/lang/String;
 
+    .line 9
     invoke-interface {p1}, Lorg/dom4j/Branch;->nodeCount()I
 
+    .line 10
     invoke-virtual {p0, v0}, Lorg/dom4j/io/HTMLWriter;->isPreformattedTag(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
+    .line 11
     invoke-virtual {p0}, Lorg/dom4j/io/XMLWriter;->getOutputFormat()Lorg/dom4j/io/OutputFormat;
 
     move-result-object v0
 
+    .line 12
     invoke-virtual {v0}, Lorg/dom4j/io/OutputFormat;->isNewlines()Z
 
     move-result v2
 
+    .line 13
     invoke-virtual {v0}, Lorg/dom4j/io/OutputFormat;->isTrimText()Z
 
     move-result v3
 
+    .line 14
     invoke-virtual {v0}, Lorg/dom4j/io/OutputFormat;->getIndent()Ljava/lang/String;
 
     move-result-object v4
 
+    .line 15
     iget-object v5, p0, Lorg/dom4j/io/HTMLWriter;->formatStack:Ljava/util/Stack;
 
     new-instance v6, Lorg/dom4j/io/HTMLWriter$FormatState;
@@ -919,9 +988,11 @@
 
     invoke-virtual {v5, v6}, Ljava/util/Stack;->push(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 16
     :try_start_0
     invoke-super {p0}, Lorg/dom4j/io/XMLWriter;->writePrintln()V
 
+    .line 17
     invoke-virtual {v1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v2
@@ -940,6 +1011,7 @@
 
     if-lez v2, :cond_2
 
+    .line 18
     iget-object v2, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-direct {p0, v1}, Lorg/dom4j/io/HTMLWriter;->justSpaces(Ljava/lang/String;)Ljava/lang/String;
@@ -951,18 +1023,23 @@
     :cond_2
     const/4 v1, 0x0
 
+    .line 19
     invoke-virtual {v0, v1}, Lorg/dom4j/io/OutputFormat;->setNewlines(Z)V
 
+    .line 20
     invoke-virtual {v0, v1}, Lorg/dom4j/io/OutputFormat;->setTrimText(Z)V
 
     const-string v1, ""
 
+    .line 21
     invoke-virtual {v0, v1}, Lorg/dom4j/io/OutputFormat;->setIndent(Ljava/lang/String;)V
 
+    .line 22
     invoke-super {p0, p1}, Lorg/dom4j/io/XMLWriter;->writeElement(Lorg/dom4j/Element;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 23
     iget-object p0, p0, Lorg/dom4j/io/HTMLWriter;->formatStack:Ljava/util/Stack;
 
     invoke-virtual {p0}, Ljava/util/Stack;->pop()Ljava/lang/Object;
@@ -971,18 +1048,21 @@
 
     check-cast p0, Lorg/dom4j/io/HTMLWriter$FormatState;
 
+    .line 24
     invoke-virtual {p0}, Lorg/dom4j/io/HTMLWriter$FormatState;->isNewlines()Z
 
     move-result p1
 
     invoke-virtual {v0, p1}, Lorg/dom4j/io/OutputFormat;->setNewlines(Z)V
 
+    .line 25
     invoke-virtual {p0}, Lorg/dom4j/io/HTMLWriter$FormatState;->isTrimText()Z
 
     move-result p1
 
     invoke-virtual {v0, p1}, Lorg/dom4j/io/OutputFormat;->setTrimText(Z)V
 
+    .line 26
     invoke-virtual {p0}, Lorg/dom4j/io/HTMLWriter$FormatState;->getIndent()Ljava/lang/String;
 
     move-result-object p0
@@ -1002,26 +1082,31 @@
 
     check-cast p0, Lorg/dom4j/io/HTMLWriter$FormatState;
 
+    .line 27
     invoke-virtual {p0}, Lorg/dom4j/io/HTMLWriter$FormatState;->isNewlines()Z
 
     move-result v1
 
     invoke-virtual {v0, v1}, Lorg/dom4j/io/OutputFormat;->setNewlines(Z)V
 
+    .line 28
     invoke-virtual {p0}, Lorg/dom4j/io/HTMLWriter$FormatState;->isTrimText()Z
 
     move-result v1
 
     invoke-virtual {v0, v1}, Lorg/dom4j/io/OutputFormat;->setTrimText(Z)V
 
+    .line 29
     invoke-virtual {p0}, Lorg/dom4j/io/HTMLWriter$FormatState;->getIndent()Ljava/lang/String;
 
     move-result-object p0
 
     invoke-virtual {v0, p0}, Lorg/dom4j/io/OutputFormat;->setIndent(Ljava/lang/String;)V
 
+    .line 30
     throw p1
 
+    .line 31
     :cond_3
     invoke-super {p0, p1}, Lorg/dom4j/io/XMLWriter;->writeElement(Lorg/dom4j/Element;)V
 
@@ -1037,6 +1122,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/io/XMLWriter;->getOutputFormat()Lorg/dom4j/io/OutputFormat;
 
     move-result-object v0
@@ -1047,12 +1133,14 @@
 
     if-eqz v0, :cond_1
 
+    .line 2
     invoke-virtual {p0, p1}, Lorg/dom4j/io/HTMLWriter;->omitElementClose(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object p0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     const-string p1, " />"
@@ -1061,11 +1149,13 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-super {p0, p1}, Lorg/dom4j/io/XMLWriter;->writeEmptyElementClose(Ljava/lang/String;)V
 
     goto :goto_0
 
+    .line 5
     :cond_1
     invoke-virtual {p0, p1}, Lorg/dom4j/io/HTMLWriter;->omitElementClose(Ljava/lang/String;)Z
 
@@ -1073,6 +1163,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 6
     iget-object p0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     const-string p1, ">"
@@ -1081,6 +1172,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_2
     invoke-super {p0, p1}, Lorg/dom4j/io/XMLWriter;->writeEmptyElementClose(Ljava/lang/String;)V
 
@@ -1096,6 +1188,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-interface {p1}, Lorg/dom4j/Node;->getText()Ljava/lang/String;
@@ -1106,6 +1199,7 @@
 
     const/4 p1, 0x5
 
+    .line 2
     iput p1, p0, Lorg/dom4j/io/XMLWriter;->lastOutputNodeType:I
 
     return-void
@@ -1121,12 +1215,14 @@
 
     const-string v0, "\n"
 
+    .line 1
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 2
     iget-object p1, p0, Lorg/dom4j/io/HTMLWriter;->formatStack:Ljava/util/Stack;
 
     invoke-virtual {p1}, Ljava/util/Stack;->empty()Z
@@ -1135,6 +1231,7 @@
 
     if-nez p1, :cond_0
 
+    .line 3
     sget-object p1, Lorg/dom4j/io/HTMLWriter;->lineSeparator:Ljava/lang/String;
 
     invoke-super {p0, p1}, Lorg/dom4j/io/XMLWriter;->writeString(Ljava/lang/String;)V
@@ -1142,9 +1239,11 @@
     :cond_0
     return-void
 
+    .line 4
     :cond_1
     iput-object p1, p0, Lorg/dom4j/io/HTMLWriter;->lastText:Ljava/lang/String;
 
+    .line 5
     iget-object v0, p0, Lorg/dom4j/io/HTMLWriter;->formatStack:Ljava/util/Stack;
 
     invoke-virtual {v0}, Ljava/util/Stack;->empty()Z
@@ -1153,6 +1252,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 6
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object p1
@@ -1161,6 +1261,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_2
     invoke-super {p0, p1}, Lorg/dom4j/io/XMLWriter;->writeString(Ljava/lang/String;)V
 

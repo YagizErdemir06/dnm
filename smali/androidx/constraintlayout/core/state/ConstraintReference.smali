@@ -18,21 +18,21 @@
 # instance fields
 .field private key:Ljava/lang/Object;
 
-.field mAlpha:F
+.field public mAlpha:F
 
-.field mBaselineToBaseline:Ljava/lang/Object;
+.field public mBaselineToBaseline:Ljava/lang/Object;
 
-.field mBaselineToBottom:Ljava/lang/Object;
+.field public mBaselineToBottom:Ljava/lang/Object;
 
-.field mBaselineToTop:Ljava/lang/Object;
+.field public mBaselineToTop:Ljava/lang/Object;
 
-.field protected mBottomToBottom:Ljava/lang/Object;
+.field public mBottomToBottom:Ljava/lang/Object;
 
-.field protected mBottomToTop:Ljava/lang/Object;
+.field public mBottomToTop:Ljava/lang/Object;
 
 .field private mCircularAngle:F
 
-.field mCircularConstraint:Ljava/lang/Object;
+.field public mCircularConstraint:Ljava/lang/Object;
 
 .field private mCircularDistance:F
 
@@ -60,221 +60,274 @@
     .end annotation
 .end field
 
-.field protected mEndToEnd:Ljava/lang/Object;
+.field public mEndToEnd:Ljava/lang/Object;
 
-.field protected mEndToStart:Ljava/lang/Object;
+.field public mEndToStart:Ljava/lang/Object;
 
-.field mFacade:Landroidx/constraintlayout/core/state/helpers/Facade;
+.field public mFacade:Landroidx/constraintlayout/core/state/helpers/Facade;
 
-.field mHorizontalBias:F
+.field public mHorizontalBias:F
 
-.field mHorizontalChainStyle:I
+.field public mHorizontalChainStyle:I
 
-.field mHorizontalChainWeight:F
+.field public mHorizontalChainWeight:F
 
-.field mHorizontalDimension:Landroidx/constraintlayout/core/state/Dimension;
+.field public mHorizontalDimension:Landroidx/constraintlayout/core/state/Dimension;
 
-.field mLast:Landroidx/constraintlayout/core/state/State$Constraint;
+.field public mLast:Landroidx/constraintlayout/core/state/State$Constraint;
 
-.field protected mLeftToLeft:Ljava/lang/Object;
+.field public mLeftToLeft:Ljava/lang/Object;
 
-.field protected mLeftToRight:Ljava/lang/Object;
+.field public mLeftToRight:Ljava/lang/Object;
 
-.field mMarginBaseline:I
+.field public mMarginBaseline:I
 
-.field mMarginBaselineGone:I
+.field public mMarginBaselineGone:I
 
-.field protected mMarginBottom:I
+.field public mMarginBottom:I
 
-.field protected mMarginBottomGone:I
+.field public mMarginBottomGone:I
 
-.field protected mMarginEnd:I
+.field public mMarginEnd:I
 
-.field protected mMarginEndGone:I
+.field public mMarginEndGone:I
 
-.field protected mMarginLeft:I
+.field public mMarginLeft:I
 
-.field protected mMarginLeftGone:I
+.field public mMarginLeftGone:I
 
-.field protected mMarginRight:I
+.field public mMarginRight:I
 
-.field protected mMarginRightGone:I
+.field public mMarginRightGone:I
 
-.field protected mMarginStart:I
+.field public mMarginStart:I
 
-.field protected mMarginStartGone:I
+.field public mMarginStartGone:I
 
-.field protected mMarginTop:I
+.field public mMarginTop:I
 
-.field protected mMarginTopGone:I
+.field public mMarginTopGone:I
 
-.field mPivotX:F
+.field public mPivotX:F
 
-.field mPivotY:F
+.field public mPivotY:F
 
-.field protected mRightToLeft:Ljava/lang/Object;
+.field public mRightToLeft:Ljava/lang/Object;
 
-.field protected mRightToRight:Ljava/lang/Object;
+.field public mRightToRight:Ljava/lang/Object;
 
-.field mRotationX:F
+.field public mRotationX:F
 
-.field mRotationY:F
+.field public mRotationY:F
 
-.field mRotationZ:F
+.field public mRotationZ:F
 
-.field mScaleX:F
+.field public mScaleX:F
 
-.field mScaleY:F
+.field public mScaleY:F
 
-.field protected mStartToEnd:Ljava/lang/Object;
+.field public mStartToEnd:Ljava/lang/Object;
 
-.field protected mStartToStart:Ljava/lang/Object;
+.field public mStartToStart:Ljava/lang/Object;
 
-.field final mState:Landroidx/constraintlayout/core/state/State;
+.field public final mState:Landroidx/constraintlayout/core/state/State;
 
-.field mTag:Ljava/lang/String;
+.field public mTag:Ljava/lang/String;
 
-.field protected mTopToBottom:Ljava/lang/Object;
+.field public mTopToBottom:Ljava/lang/Object;
 
-.field protected mTopToTop:Ljava/lang/Object;
+.field public mTopToTop:Ljava/lang/Object;
 
-.field mTranslationX:F
+.field public mTranslationX:F
 
-.field mTranslationY:F
+.field public mTranslationY:F
 
-.field mTranslationZ:F
+.field public mTranslationZ:F
 
-.field mVerticalBias:F
+.field public mVerticalBias:F
 
-.field mVerticalChainStyle:I
+.field public mVerticalChainStyle:I
 
-.field mVerticalChainWeight:F
+.field public mVerticalChainWeight:F
 
-.field mVerticalDimension:Landroidx/constraintlayout/core/state/Dimension;
+.field public mVerticalDimension:Landroidx/constraintlayout/core/state/Dimension;
 
 .field private mView:Ljava/lang/Object;
 
-.field mVisibility:I
+.field public mVisibility:I
 
 
 # direct methods
 .method public constructor <init>(Landroidx/constraintlayout/core/state/State;)V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mTag:Ljava/lang/String;
 
+    .line 3
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mFacade:Landroidx/constraintlayout/core/state/helpers/Facade;
 
     const/4 v1, 0x0
 
+    .line 4
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mHorizontalChainStyle:I
 
+    .line 5
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mVerticalChainStyle:I
 
     const/high16 v2, -0x40800000    # -1.0f
 
+    .line 6
     iput v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mHorizontalChainWeight:F
 
+    .line 7
     iput v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mVerticalChainWeight:F
 
     const/high16 v2, 0x3f000000    # 0.5f
 
+    .line 8
     iput v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mHorizontalBias:F
 
+    .line 9
     iput v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mVerticalBias:F
 
+    .line 10
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginLeft:I
 
+    .line 11
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginRight:I
 
+    .line 12
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginStart:I
 
+    .line 13
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginEnd:I
 
+    .line 14
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginTop:I
 
+    .line 15
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginBottom:I
 
+    .line 16
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginLeftGone:I
 
+    .line 17
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginRightGone:I
 
+    .line 18
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginStartGone:I
 
+    .line 19
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginEndGone:I
 
+    .line 20
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginTopGone:I
 
+    .line 21
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginBottomGone:I
 
+    .line 22
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginBaseline:I
 
+    .line 23
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginBaselineGone:I
 
     const/high16 v2, 0x7fc00000    # Float.NaN
 
+    .line 24
     iput v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mPivotX:F
 
+    .line 25
     iput v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mPivotY:F
 
+    .line 26
     iput v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mRotationX:F
 
+    .line 27
     iput v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mRotationY:F
 
+    .line 28
     iput v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mRotationZ:F
 
+    .line 29
     iput v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mTranslationX:F
 
+    .line 30
     iput v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mTranslationY:F
 
+    .line 31
     iput v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mTranslationZ:F
 
+    .line 32
     iput v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mAlpha:F
 
+    .line 33
     iput v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mScaleX:F
 
+    .line 34
     iput v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mScaleY:F
 
+    .line 35
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mVisibility:I
 
+    .line 36
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLeftToLeft:Ljava/lang/Object;
 
+    .line 37
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLeftToRight:Ljava/lang/Object;
 
+    .line 38
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mRightToLeft:Ljava/lang/Object;
 
+    .line 39
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mRightToRight:Ljava/lang/Object;
 
+    .line 40
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mStartToStart:Ljava/lang/Object;
 
+    .line 41
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mStartToEnd:Ljava/lang/Object;
 
+    .line 42
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mEndToStart:Ljava/lang/Object;
 
+    .line 43
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mEndToEnd:Ljava/lang/Object;
 
+    .line 44
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mTopToTop:Ljava/lang/Object;
 
+    .line 45
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mTopToBottom:Ljava/lang/Object;
 
+    .line 46
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mBottomToTop:Ljava/lang/Object;
 
+    .line 47
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mBottomToBottom:Ljava/lang/Object;
 
+    .line 48
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mBaselineToBaseline:Ljava/lang/Object;
 
+    .line 49
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mBaselineToTop:Ljava/lang/Object;
 
+    .line 50
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mBaselineToBottom:Ljava/lang/Object;
 
+    .line 51
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mCircularConstraint:Ljava/lang/Object;
 
+    .line 52
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLast:Landroidx/constraintlayout/core/state/State$Constraint;
 
+    .line 53
     sget-object v0, Landroidx/constraintlayout/core/state/Dimension;->WRAP_DIMENSION:Ljava/lang/Object;
 
     invoke-static {v0}, Landroidx/constraintlayout/core/state/Dimension;->Fixed(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/Dimension;
@@ -283,24 +336,28 @@
 
     iput-object v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mHorizontalDimension:Landroidx/constraintlayout/core/state/Dimension;
 
+    .line 54
     invoke-static {v0}, Landroidx/constraintlayout/core/state/Dimension;->Fixed(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/Dimension;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mVerticalDimension:Landroidx/constraintlayout/core/state/Dimension;
 
+    .line 55
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mCustomColors:Ljava/util/HashMap;
 
+    .line 56
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mCustomFloats:Ljava/util/HashMap;
 
+    .line 57
     iput-object p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mState:Landroidx/constraintlayout/core/state/State;
 
     return-void
@@ -309,6 +366,7 @@
 .method private applyConnection(Landroidx/constraintlayout/core/widgets/ConstraintWidget;Ljava/lang/Object;Landroidx/constraintlayout/core/state/State$Constraint;)V
     .locals 6
 
+    .line 1
     invoke-direct {p0, p2}, Landroidx/constraintlayout/core/state/ConstraintReference;->getTarget(Ljava/lang/Object;)Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     move-result-object v2
@@ -317,6 +375,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     sget-object p2, Landroidx/constraintlayout/core/state/ConstraintReference$1;->$SwitchMap$androidx$constraintlayout$core$state$State$Constraint:[I
 
@@ -326,6 +385,7 @@
 
     aget v0, p2, v0
 
+    .line 3
     invoke-virtual {p3}, Ljava/lang/Enum;->ordinal()I
 
     move-result p3
@@ -338,6 +398,7 @@
 
     goto/16 :goto_0
 
+    .line 4
     :pswitch_0
     iget p2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mCircularAngle:F
 
@@ -349,6 +410,7 @@
 
     goto/16 :goto_0
 
+    .line 5
     :pswitch_1
     sget-object v3, Landroidx/constraintlayout/core/widgets/ConstraintAnchor$Type;->BASELINE:Landroidx/constraintlayout/core/widgets/ConstraintAnchor$Type;
 
@@ -364,6 +426,7 @@
 
     goto/16 :goto_0
 
+    .line 6
     :pswitch_2
     sget-object v1, Landroidx/constraintlayout/core/widgets/ConstraintAnchor$Type;->BASELINE:Landroidx/constraintlayout/core/widgets/ConstraintAnchor$Type;
 
@@ -379,6 +442,7 @@
 
     goto/16 :goto_0
 
+    .line 7
     :pswitch_3
     sget-object v1, Landroidx/constraintlayout/core/widgets/ConstraintAnchor$Type;->BASELINE:Landroidx/constraintlayout/core/widgets/ConstraintAnchor$Type;
 
@@ -394,6 +458,7 @@
 
     goto/16 :goto_0
 
+    .line 8
     :pswitch_4
     sget-object p2, Landroidx/constraintlayout/core/widgets/ConstraintAnchor$Type;->BOTTOM:Landroidx/constraintlayout/core/widgets/ConstraintAnchor$Type;
 
@@ -413,6 +478,7 @@
 
     goto/16 :goto_0
 
+    .line 9
     :pswitch_5
     sget-object p2, Landroidx/constraintlayout/core/widgets/ConstraintAnchor$Type;->BOTTOM:Landroidx/constraintlayout/core/widgets/ConstraintAnchor$Type;
 
@@ -434,6 +500,7 @@
 
     goto/16 :goto_0
 
+    .line 10
     :pswitch_6
     sget-object p2, Landroidx/constraintlayout/core/widgets/ConstraintAnchor$Type;->TOP:Landroidx/constraintlayout/core/widgets/ConstraintAnchor$Type;
 
@@ -455,6 +522,7 @@
 
     goto/16 :goto_0
 
+    .line 11
     :pswitch_7
     sget-object p2, Landroidx/constraintlayout/core/widgets/ConstraintAnchor$Type;->TOP:Landroidx/constraintlayout/core/widgets/ConstraintAnchor$Type;
 
@@ -474,6 +542,7 @@
 
     goto/16 :goto_0
 
+    .line 12
     :pswitch_8
     sget-object p2, Landroidx/constraintlayout/core/widgets/ConstraintAnchor$Type;->RIGHT:Landroidx/constraintlayout/core/widgets/ConstraintAnchor$Type;
 
@@ -493,6 +562,7 @@
 
     goto/16 :goto_0
 
+    .line 13
     :pswitch_9
     sget-object p2, Landroidx/constraintlayout/core/widgets/ConstraintAnchor$Type;->RIGHT:Landroidx/constraintlayout/core/widgets/ConstraintAnchor$Type;
 
@@ -514,6 +584,7 @@
 
     goto :goto_0
 
+    .line 14
     :pswitch_a
     sget-object p2, Landroidx/constraintlayout/core/widgets/ConstraintAnchor$Type;->LEFT:Landroidx/constraintlayout/core/widgets/ConstraintAnchor$Type;
 
@@ -535,6 +606,7 @@
 
     goto :goto_0
 
+    .line 15
     :pswitch_b
     sget-object p2, Landroidx/constraintlayout/core/widgets/ConstraintAnchor$Type;->LEFT:Landroidx/constraintlayout/core/widgets/ConstraintAnchor$Type;
 
@@ -554,6 +626,7 @@
 
     goto :goto_0
 
+    .line 16
     :pswitch_c
     sget-object p2, Landroidx/constraintlayout/core/widgets/ConstraintAnchor$Type;->RIGHT:Landroidx/constraintlayout/core/widgets/ConstraintAnchor$Type;
 
@@ -573,6 +646,7 @@
 
     goto :goto_0
 
+    .line 17
     :pswitch_d
     sget-object p2, Landroidx/constraintlayout/core/widgets/ConstraintAnchor$Type;->RIGHT:Landroidx/constraintlayout/core/widgets/ConstraintAnchor$Type;
 
@@ -594,6 +668,7 @@
 
     goto :goto_0
 
+    .line 18
     :pswitch_e
     sget-object p2, Landroidx/constraintlayout/core/widgets/ConstraintAnchor$Type;->LEFT:Landroidx/constraintlayout/core/widgets/ConstraintAnchor$Type;
 
@@ -615,6 +690,7 @@
 
     goto :goto_0
 
+    .line 19
     :pswitch_f
     sget-object p2, Landroidx/constraintlayout/core/widgets/ConstraintAnchor$Type;->LEFT:Landroidx/constraintlayout/core/widgets/ConstraintAnchor$Type;
 
@@ -661,6 +737,7 @@
 .method private dereference()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLeftToLeft:Ljava/lang/Object;
 
     invoke-direct {p0, v0}, Landroidx/constraintlayout/core/state/ConstraintReference;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -669,6 +746,7 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLeftToLeft:Ljava/lang/Object;
 
+    .line 2
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLeftToRight:Ljava/lang/Object;
 
     invoke-direct {p0, v0}, Landroidx/constraintlayout/core/state/ConstraintReference;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -677,6 +755,7 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLeftToRight:Ljava/lang/Object;
 
+    .line 3
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mRightToLeft:Ljava/lang/Object;
 
     invoke-direct {p0, v0}, Landroidx/constraintlayout/core/state/ConstraintReference;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -685,6 +764,7 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mRightToLeft:Ljava/lang/Object;
 
+    .line 4
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mRightToRight:Ljava/lang/Object;
 
     invoke-direct {p0, v0}, Landroidx/constraintlayout/core/state/ConstraintReference;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -693,6 +773,7 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mRightToRight:Ljava/lang/Object;
 
+    .line 5
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mStartToStart:Ljava/lang/Object;
 
     invoke-direct {p0, v0}, Landroidx/constraintlayout/core/state/ConstraintReference;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -701,6 +782,7 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mStartToStart:Ljava/lang/Object;
 
+    .line 6
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mStartToEnd:Ljava/lang/Object;
 
     invoke-direct {p0, v0}, Landroidx/constraintlayout/core/state/ConstraintReference;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -709,6 +791,7 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mStartToEnd:Ljava/lang/Object;
 
+    .line 7
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mEndToStart:Ljava/lang/Object;
 
     invoke-direct {p0, v0}, Landroidx/constraintlayout/core/state/ConstraintReference;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -717,6 +800,7 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mEndToStart:Ljava/lang/Object;
 
+    .line 8
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mEndToEnd:Ljava/lang/Object;
 
     invoke-direct {p0, v0}, Landroidx/constraintlayout/core/state/ConstraintReference;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -725,6 +809,7 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mEndToEnd:Ljava/lang/Object;
 
+    .line 9
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mTopToTop:Ljava/lang/Object;
 
     invoke-direct {p0, v0}, Landroidx/constraintlayout/core/state/ConstraintReference;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -733,6 +818,7 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mTopToTop:Ljava/lang/Object;
 
+    .line 10
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mTopToBottom:Ljava/lang/Object;
 
     invoke-direct {p0, v0}, Landroidx/constraintlayout/core/state/ConstraintReference;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -741,6 +827,7 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mTopToBottom:Ljava/lang/Object;
 
+    .line 11
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mBottomToTop:Ljava/lang/Object;
 
     invoke-direct {p0, v0}, Landroidx/constraintlayout/core/state/ConstraintReference;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -749,6 +836,7 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mBottomToTop:Ljava/lang/Object;
 
+    .line 12
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mBottomToBottom:Ljava/lang/Object;
 
     invoke-direct {p0, v0}, Landroidx/constraintlayout/core/state/ConstraintReference;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -757,6 +845,7 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mBottomToBottom:Ljava/lang/Object;
 
+    .line 13
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mBaselineToBaseline:Ljava/lang/Object;
 
     invoke-direct {p0, v0}, Landroidx/constraintlayout/core/state/ConstraintReference;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -765,6 +854,7 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mBaselineToBaseline:Ljava/lang/Object;
 
+    .line 14
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mBaselineToTop:Ljava/lang/Object;
 
     invoke-direct {p0, v0}, Landroidx/constraintlayout/core/state/ConstraintReference;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -773,6 +863,7 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mBaselineToTop:Ljava/lang/Object;
 
+    .line 15
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mBaselineToBottom:Ljava/lang/Object;
 
     invoke-direct {p0, v0}, Landroidx/constraintlayout/core/state/ConstraintReference;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -793,11 +884,13 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     instance-of v0, p1, Landroidx/constraintlayout/core/state/ConstraintReference;
 
     if-nez v0, :cond_1
 
+    .line 2
     iget-object p0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mState:Landroidx/constraintlayout/core/state/State;
 
     invoke-virtual {p0, p1}, Landroidx/constraintlayout/core/state/State;->reference(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/Reference;
@@ -813,12 +906,15 @@
 .method private getTarget(Ljava/lang/Object;)Landroidx/constraintlayout/core/widgets/ConstraintWidget;
     .locals 0
 
+    .line 1
     instance-of p0, p1, Landroidx/constraintlayout/core/state/Reference;
 
     if-eqz p0, :cond_0
 
+    .line 2
     check-cast p1, Landroidx/constraintlayout/core/state/Reference;
 
+    .line 3
     invoke-interface {p1}, Landroidx/constraintlayout/core/state/Reference;->getConstraintWidget()Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     move-result-object p0
@@ -836,6 +932,7 @@
 .method public addCustomColor(Ljava/lang/String;I)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mCustomColors:Ljava/util/HashMap;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -850,16 +947,19 @@
 .method public addCustomFloat(Ljava/lang/String;F)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mCustomFloats:Ljava/util/HashMap;
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mCustomFloats:Ljava/util/HashMap;
 
+    .line 3
     :cond_0
     iget-object p0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mCustomFloats:Ljava/util/HashMap;
 
@@ -875,6 +975,7 @@
 .method public alpha(F)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mAlpha:F
 
     return-object p0
@@ -883,19 +984,23 @@
 .method public apply()V
     .locals 5
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mConstraintWidget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     if-nez v0, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mFacade:Landroidx/constraintlayout/core/state/helpers/Facade;
 
     if-eqz v0, :cond_1
 
+    .line 3
     invoke-interface {v0}, Landroidx/constraintlayout/core/state/helpers/Facade;->apply()V
 
+    .line 4
     :cond_1
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mHorizontalDimension:Landroidx/constraintlayout/core/state/Dimension;
 
@@ -907,6 +1012,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroidx/constraintlayout/core/state/Dimension;->apply(Landroidx/constraintlayout/core/state/State;Landroidx/constraintlayout/core/widgets/ConstraintWidget;I)V
 
+    .line 5
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mVerticalDimension:Landroidx/constraintlayout/core/state/Dimension;
 
     iget-object v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mState:Landroidx/constraintlayout/core/state/State;
@@ -917,8 +1023,10 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroidx/constraintlayout/core/state/Dimension;->apply(Landroidx/constraintlayout/core/state/State;Landroidx/constraintlayout/core/widgets/ConstraintWidget;I)V
 
+    .line 6
     invoke-direct {p0}, Landroidx/constraintlayout/core/state/ConstraintReference;->dereference()V
 
+    .line 7
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mConstraintWidget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     iget-object v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLeftToLeft:Ljava/lang/Object;
@@ -927,6 +1035,7 @@
 
     invoke-direct {p0, v0, v1, v2}, Landroidx/constraintlayout/core/state/ConstraintReference;->applyConnection(Landroidx/constraintlayout/core/widgets/ConstraintWidget;Ljava/lang/Object;Landroidx/constraintlayout/core/state/State$Constraint;)V
 
+    .line 8
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mConstraintWidget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     iget-object v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLeftToRight:Ljava/lang/Object;
@@ -935,6 +1044,7 @@
 
     invoke-direct {p0, v0, v1, v2}, Landroidx/constraintlayout/core/state/ConstraintReference;->applyConnection(Landroidx/constraintlayout/core/widgets/ConstraintWidget;Ljava/lang/Object;Landroidx/constraintlayout/core/state/State$Constraint;)V
 
+    .line 9
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mConstraintWidget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     iget-object v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mRightToLeft:Ljava/lang/Object;
@@ -943,6 +1053,7 @@
 
     invoke-direct {p0, v0, v1, v2}, Landroidx/constraintlayout/core/state/ConstraintReference;->applyConnection(Landroidx/constraintlayout/core/widgets/ConstraintWidget;Ljava/lang/Object;Landroidx/constraintlayout/core/state/State$Constraint;)V
 
+    .line 10
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mConstraintWidget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     iget-object v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mRightToRight:Ljava/lang/Object;
@@ -951,6 +1062,7 @@
 
     invoke-direct {p0, v0, v1, v2}, Landroidx/constraintlayout/core/state/ConstraintReference;->applyConnection(Landroidx/constraintlayout/core/widgets/ConstraintWidget;Ljava/lang/Object;Landroidx/constraintlayout/core/state/State$Constraint;)V
 
+    .line 11
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mConstraintWidget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     iget-object v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mStartToStart:Ljava/lang/Object;
@@ -959,6 +1071,7 @@
 
     invoke-direct {p0, v0, v1, v2}, Landroidx/constraintlayout/core/state/ConstraintReference;->applyConnection(Landroidx/constraintlayout/core/widgets/ConstraintWidget;Ljava/lang/Object;Landroidx/constraintlayout/core/state/State$Constraint;)V
 
+    .line 12
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mConstraintWidget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     iget-object v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mStartToEnd:Ljava/lang/Object;
@@ -967,6 +1080,7 @@
 
     invoke-direct {p0, v0, v1, v2}, Landroidx/constraintlayout/core/state/ConstraintReference;->applyConnection(Landroidx/constraintlayout/core/widgets/ConstraintWidget;Ljava/lang/Object;Landroidx/constraintlayout/core/state/State$Constraint;)V
 
+    .line 13
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mConstraintWidget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     iget-object v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mEndToStart:Ljava/lang/Object;
@@ -975,6 +1089,7 @@
 
     invoke-direct {p0, v0, v1, v2}, Landroidx/constraintlayout/core/state/ConstraintReference;->applyConnection(Landroidx/constraintlayout/core/widgets/ConstraintWidget;Ljava/lang/Object;Landroidx/constraintlayout/core/state/State$Constraint;)V
 
+    .line 14
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mConstraintWidget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     iget-object v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mEndToEnd:Ljava/lang/Object;
@@ -983,6 +1098,7 @@
 
     invoke-direct {p0, v0, v1, v2}, Landroidx/constraintlayout/core/state/ConstraintReference;->applyConnection(Landroidx/constraintlayout/core/widgets/ConstraintWidget;Ljava/lang/Object;Landroidx/constraintlayout/core/state/State$Constraint;)V
 
+    .line 15
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mConstraintWidget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     iget-object v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mTopToTop:Ljava/lang/Object;
@@ -991,6 +1107,7 @@
 
     invoke-direct {p0, v0, v1, v2}, Landroidx/constraintlayout/core/state/ConstraintReference;->applyConnection(Landroidx/constraintlayout/core/widgets/ConstraintWidget;Ljava/lang/Object;Landroidx/constraintlayout/core/state/State$Constraint;)V
 
+    .line 16
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mConstraintWidget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     iget-object v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mTopToBottom:Ljava/lang/Object;
@@ -999,6 +1116,7 @@
 
     invoke-direct {p0, v0, v1, v2}, Landroidx/constraintlayout/core/state/ConstraintReference;->applyConnection(Landroidx/constraintlayout/core/widgets/ConstraintWidget;Ljava/lang/Object;Landroidx/constraintlayout/core/state/State$Constraint;)V
 
+    .line 17
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mConstraintWidget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     iget-object v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mBottomToTop:Ljava/lang/Object;
@@ -1007,6 +1125,7 @@
 
     invoke-direct {p0, v0, v1, v2}, Landroidx/constraintlayout/core/state/ConstraintReference;->applyConnection(Landroidx/constraintlayout/core/widgets/ConstraintWidget;Ljava/lang/Object;Landroidx/constraintlayout/core/state/State$Constraint;)V
 
+    .line 18
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mConstraintWidget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     iget-object v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mBottomToBottom:Ljava/lang/Object;
@@ -1015,6 +1134,7 @@
 
     invoke-direct {p0, v0, v1, v2}, Landroidx/constraintlayout/core/state/ConstraintReference;->applyConnection(Landroidx/constraintlayout/core/widgets/ConstraintWidget;Ljava/lang/Object;Landroidx/constraintlayout/core/state/State$Constraint;)V
 
+    .line 19
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mConstraintWidget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     iget-object v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mBaselineToBaseline:Ljava/lang/Object;
@@ -1023,6 +1143,7 @@
 
     invoke-direct {p0, v0, v1, v2}, Landroidx/constraintlayout/core/state/ConstraintReference;->applyConnection(Landroidx/constraintlayout/core/widgets/ConstraintWidget;Ljava/lang/Object;Landroidx/constraintlayout/core/state/State$Constraint;)V
 
+    .line 20
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mConstraintWidget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     iget-object v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mBaselineToTop:Ljava/lang/Object;
@@ -1031,6 +1152,7 @@
 
     invoke-direct {p0, v0, v1, v2}, Landroidx/constraintlayout/core/state/ConstraintReference;->applyConnection(Landroidx/constraintlayout/core/widgets/ConstraintWidget;Ljava/lang/Object;Landroidx/constraintlayout/core/state/State$Constraint;)V
 
+    .line 21
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mConstraintWidget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     iget-object v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mBaselineToBottom:Ljava/lang/Object;
@@ -1039,6 +1161,7 @@
 
     invoke-direct {p0, v0, v1, v2}, Landroidx/constraintlayout/core/state/ConstraintReference;->applyConnection(Landroidx/constraintlayout/core/widgets/ConstraintWidget;Ljava/lang/Object;Landroidx/constraintlayout/core/state/State$Constraint;)V
 
+    .line 22
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mConstraintWidget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     iget-object v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mCircularConstraint:Ljava/lang/Object;
@@ -1047,23 +1170,28 @@
 
     invoke-direct {p0, v0, v1, v2}, Landroidx/constraintlayout/core/state/ConstraintReference;->applyConnection(Landroidx/constraintlayout/core/widgets/ConstraintWidget;Ljava/lang/Object;Landroidx/constraintlayout/core/state/State$Constraint;)V
 
+    .line 23
     iget v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mHorizontalChainStyle:I
 
     if-eqz v0, :cond_2
 
+    .line 24
     iget-object v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mConstraintWidget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     invoke-virtual {v1, v0}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->setHorizontalChainStyle(I)V
 
+    .line 25
     :cond_2
     iget v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mVerticalChainStyle:I
 
     if-eqz v0, :cond_3
 
+    .line 26
     iget-object v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mConstraintWidget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     invoke-virtual {v1, v0}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->setVerticalChainStyle(I)V
 
+    .line 27
     :cond_3
     iget v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mHorizontalChainWeight:F
 
@@ -1073,10 +1201,12 @@
 
     if-eqz v2, :cond_4
 
+    .line 28
     iget-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mConstraintWidget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     invoke-virtual {v2, v0}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->setHorizontalWeight(F)V
 
+    .line 29
     :cond_4
     iget v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mVerticalChainWeight:F
 
@@ -1084,10 +1214,12 @@
 
     if-eqz v1, :cond_5
 
+    .line 30
     iget-object v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mConstraintWidget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     invoke-virtual {v1, v0}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->setVerticalWeight(F)V
 
+    .line 31
     :cond_5
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mConstraintWidget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
@@ -1095,12 +1227,14 @@
 
     invoke-virtual {v0, v1}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->setHorizontalBiasPercent(F)V
 
+    .line 32
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mConstraintWidget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     iget v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mVerticalBias:F
 
     invoke-virtual {v0, v1}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->setVerticalBiasPercent(F)V
 
+    .line 33
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mConstraintWidget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     iget-object v1, v0, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->frame:Landroidx/constraintlayout/core/state/WidgetFrame;
@@ -1109,56 +1243,70 @@
 
     iput v2, v1, Landroidx/constraintlayout/core/state/WidgetFrame;->pivotX:F
 
+    .line 34
     iget v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mPivotY:F
 
     iput v2, v1, Landroidx/constraintlayout/core/state/WidgetFrame;->pivotY:F
 
+    .line 35
     iget v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mRotationX:F
 
     iput v2, v1, Landroidx/constraintlayout/core/state/WidgetFrame;->rotationX:F
 
+    .line 36
     iget v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mRotationY:F
 
     iput v2, v1, Landroidx/constraintlayout/core/state/WidgetFrame;->rotationY:F
 
+    .line 37
     iget v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mRotationZ:F
 
     iput v2, v1, Landroidx/constraintlayout/core/state/WidgetFrame;->rotationZ:F
 
+    .line 38
     iget v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mTranslationX:F
 
     iput v2, v1, Landroidx/constraintlayout/core/state/WidgetFrame;->translationX:F
 
+    .line 39
     iget v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mTranslationY:F
 
     iput v2, v1, Landroidx/constraintlayout/core/state/WidgetFrame;->translationY:F
 
+    .line 40
     iget v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mTranslationZ:F
 
     iput v2, v1, Landroidx/constraintlayout/core/state/WidgetFrame;->translationZ:F
 
+    .line 41
     iget v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mScaleX:F
 
     iput v2, v1, Landroidx/constraintlayout/core/state/WidgetFrame;->scaleX:F
 
+    .line 42
     iget v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mScaleY:F
 
     iput v2, v1, Landroidx/constraintlayout/core/state/WidgetFrame;->scaleY:F
 
+    .line 43
     iget v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mAlpha:F
 
     iput v2, v1, Landroidx/constraintlayout/core/state/WidgetFrame;->alpha:F
 
+    .line 44
     iget v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mVisibility:I
 
     iput v2, v1, Landroidx/constraintlayout/core/state/WidgetFrame;->visibility:I
 
+    .line 45
     invoke-virtual {v0, v2}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->setVisibility(I)V
 
+    .line 46
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mCustomColors:Ljava/util/HashMap;
 
     if-eqz v0, :cond_6
 
+    .line 47
     invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
     move-result-object v0
@@ -1180,6 +1328,7 @@
 
     check-cast v1, Ljava/lang/String;
 
+    .line 48
     iget-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mCustomColors:Ljava/util/HashMap;
 
     invoke-virtual {v2, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1188,6 +1337,7 @@
 
     check-cast v2, Ljava/lang/Integer;
 
+    .line 49
     iget-object v3, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mConstraintWidget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     iget-object v3, v3, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->frame:Landroidx/constraintlayout/core/state/WidgetFrame;
@@ -1202,11 +1352,13 @@
 
     goto :goto_0
 
+    .line 50
     :cond_6
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mCustomFloats:Ljava/util/HashMap;
 
     if-eqz v0, :cond_7
 
+    .line 51
     invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
     move-result-object v0
@@ -1228,6 +1380,7 @@
 
     check-cast v1, Ljava/lang/String;
 
+    .line 52
     iget-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mCustomFloats:Ljava/util/HashMap;
 
     invoke-virtual {v2, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1240,6 +1393,7 @@
 
     move-result v2
 
+    .line 53
     iget-object v3, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mConstraintWidget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     iget-object v3, v3, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->frame:Landroidx/constraintlayout/core/state/WidgetFrame;
@@ -1257,6 +1411,7 @@
 .method public baseline()Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 1
 
+    .line 1
     sget-object v0, Landroidx/constraintlayout/core/state/State$Constraint;->BASELINE_TO_BASELINE:Landroidx/constraintlayout/core/state/State$Constraint;
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLast:Landroidx/constraintlayout/core/state/State$Constraint;
@@ -1267,10 +1422,12 @@
 .method public baselineToBaseline(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 1
 
+    .line 1
     sget-object v0, Landroidx/constraintlayout/core/state/State$Constraint;->BASELINE_TO_BASELINE:Landroidx/constraintlayout/core/state/State$Constraint;
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLast:Landroidx/constraintlayout/core/state/State$Constraint;
 
+    .line 2
     iput-object p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mBaselineToBaseline:Ljava/lang/Object;
 
     return-object p0
@@ -1279,10 +1436,12 @@
 .method public baselineToBottom(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 1
 
+    .line 1
     sget-object v0, Landroidx/constraintlayout/core/state/State$Constraint;->BASELINE_TO_BOTTOM:Landroidx/constraintlayout/core/state/State$Constraint;
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLast:Landroidx/constraintlayout/core/state/State$Constraint;
 
+    .line 2
     iput-object p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mBaselineToBottom:Ljava/lang/Object;
 
     return-object p0
@@ -1291,10 +1450,12 @@
 .method public baselineToTop(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 1
 
+    .line 1
     sget-object v0, Landroidx/constraintlayout/core/state/State$Constraint;->BASELINE_TO_TOP:Landroidx/constraintlayout/core/state/State$Constraint;
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLast:Landroidx/constraintlayout/core/state/State$Constraint;
 
+    .line 2
     iput-object p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mBaselineToTop:Ljava/lang/Object;
 
     return-object p0
@@ -1303,12 +1464,14 @@
 .method public bias(F)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLast:Landroidx/constraintlayout/core/state/State$Constraint;
 
     if-nez v0, :cond_0
 
     return-object p0
 
+    .line 2
     :cond_0
     sget-object v1, Landroidx/constraintlayout/core/state/ConstraintReference$1;->$SwitchMap$androidx$constraintlayout$core$state$State$Constraint:[I
 
@@ -1330,12 +1493,14 @@
 
     goto :goto_0
 
+    .line 3
     :cond_1
     :pswitch_0
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mVerticalBias:F
 
     goto :goto_0
 
+    .line 4
     :cond_2
     :pswitch_1
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mHorizontalBias:F
@@ -1365,16 +1530,19 @@
 .method public bottom()Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mBottomToTop:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
+    .line 2
     sget-object v0, Landroidx/constraintlayout/core/state/State$Constraint;->BOTTOM_TO_TOP:Landroidx/constraintlayout/core/state/State$Constraint;
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLast:Landroidx/constraintlayout/core/state/State$Constraint;
 
     goto :goto_0
 
+    .line 3
     :cond_0
     sget-object v0, Landroidx/constraintlayout/core/state/State$Constraint;->BOTTOM_TO_BOTTOM:Landroidx/constraintlayout/core/state/State$Constraint;
 
@@ -1387,10 +1555,12 @@
 .method public bottomToBottom(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 1
 
+    .line 1
     sget-object v0, Landroidx/constraintlayout/core/state/State$Constraint;->BOTTOM_TO_BOTTOM:Landroidx/constraintlayout/core/state/State$Constraint;
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLast:Landroidx/constraintlayout/core/state/State$Constraint;
 
+    .line 2
     iput-object p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mBottomToBottom:Ljava/lang/Object;
 
     return-object p0
@@ -1399,10 +1569,12 @@
 .method public bottomToTop(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 1
 
+    .line 1
     sget-object v0, Landroidx/constraintlayout/core/state/State$Constraint;->BOTTOM_TO_TOP:Landroidx/constraintlayout/core/state/State$Constraint;
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLast:Landroidx/constraintlayout/core/state/State$Constraint;
 
+    .line 2
     iput-object p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mBottomToTop:Ljava/lang/Object;
 
     return-object p0
@@ -1411,20 +1583,25 @@
 .method public centerHorizontally(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/constraintlayout/core/state/ConstraintReference;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
+    .line 2
     iput-object p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mStartToStart:Ljava/lang/Object;
 
+    .line 3
     iput-object p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mEndToEnd:Ljava/lang/Object;
 
+    .line 4
     sget-object p1, Landroidx/constraintlayout/core/state/State$Constraint;->CENTER_HORIZONTALLY:Landroidx/constraintlayout/core/state/State$Constraint;
 
     iput-object p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLast:Landroidx/constraintlayout/core/state/State$Constraint;
 
     const/high16 p1, 0x3f000000    # 0.5f
 
+    .line 5
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mHorizontalBias:F
 
     return-object p0
@@ -1433,20 +1610,25 @@
 .method public centerVertically(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/constraintlayout/core/state/ConstraintReference;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
+    .line 2
     iput-object p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mTopToTop:Ljava/lang/Object;
 
+    .line 3
     iput-object p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mBottomToBottom:Ljava/lang/Object;
 
+    .line 4
     sget-object p1, Landroidx/constraintlayout/core/state/State$Constraint;->CENTER_VERTICALLY:Landroidx/constraintlayout/core/state/State$Constraint;
 
     iput-object p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLast:Landroidx/constraintlayout/core/state/State$Constraint;
 
     const/high16 p1, 0x3f000000    # 0.5f
 
+    .line 5
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mVerticalBias:F
 
     return-object p0
@@ -1455,16 +1637,21 @@
 .method public circularConstraint(Ljava/lang/Object;FF)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/constraintlayout/core/state/ConstraintReference;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
+    .line 2
     iput-object p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mCircularConstraint:Ljava/lang/Object;
 
+    .line 3
     iput p2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mCircularAngle:F
 
+    .line 4
     iput p3, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mCircularDistance:F
 
+    .line 5
     sget-object p1, Landroidx/constraintlayout/core/state/State$Constraint;->CIRCULAR_CONSTRAINT:Landroidx/constraintlayout/core/state/State$Constraint;
 
     iput-object p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLast:Landroidx/constraintlayout/core/state/State$Constraint;
@@ -1475,6 +1662,7 @@
 .method public clear()Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 4
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLast:Landroidx/constraintlayout/core/state/State$Constraint;
 
     const/4 v1, 0x0
@@ -1483,6 +1671,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     sget-object v3, Landroidx/constraintlayout/core/state/ConstraintReference$1;->$SwitchMap$androidx$constraintlayout$core$state$State$Constraint:[I
 
     invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
@@ -1496,139 +1685,193 @@
     :pswitch_0
     goto/16 :goto_0
 
+    .line 3
     :pswitch_1
     iput-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mCircularConstraint:Ljava/lang/Object;
 
     goto/16 :goto_0
 
+    .line 4
     :pswitch_2
     iput-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mBaselineToBaseline:Ljava/lang/Object;
 
     goto :goto_0
 
+    .line 5
     :pswitch_3
     iput-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mBottomToTop:Ljava/lang/Object;
 
+    .line 6
     iput-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mBottomToBottom:Ljava/lang/Object;
 
+    .line 7
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginBottom:I
 
+    .line 8
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginBottomGone:I
 
     goto :goto_0
 
+    .line 9
     :pswitch_4
     iput-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mTopToTop:Ljava/lang/Object;
 
+    .line 10
     iput-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mTopToBottom:Ljava/lang/Object;
 
+    .line 11
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginTop:I
 
+    .line 12
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginTopGone:I
 
     goto :goto_0
 
+    .line 13
     :pswitch_5
     iput-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mEndToStart:Ljava/lang/Object;
 
+    .line 14
     iput-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mEndToEnd:Ljava/lang/Object;
 
+    .line 15
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginEnd:I
 
+    .line 16
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginEndGone:I
 
     goto :goto_0
 
+    .line 17
     :pswitch_6
     iput-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mStartToStart:Ljava/lang/Object;
 
+    .line 18
     iput-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mStartToEnd:Ljava/lang/Object;
 
+    .line 19
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginStart:I
 
+    .line 20
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginStartGone:I
 
     goto :goto_0
 
+    .line 21
     :pswitch_7
     iput-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mRightToLeft:Ljava/lang/Object;
 
+    .line 22
     iput-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mRightToRight:Ljava/lang/Object;
 
+    .line 23
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginRight:I
 
+    .line 24
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginRightGone:I
 
     goto :goto_0
 
+    .line 25
     :pswitch_8
     iput-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLeftToLeft:Ljava/lang/Object;
 
+    .line 26
     iput-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLeftToRight:Ljava/lang/Object;
 
+    .line 27
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginLeft:I
 
+    .line 28
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginLeftGone:I
 
     goto :goto_0
 
+    .line 29
     :cond_0
     iput-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLeftToLeft:Ljava/lang/Object;
 
+    .line 30
     iput-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLeftToRight:Ljava/lang/Object;
 
+    .line 31
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginLeft:I
 
+    .line 32
     iput-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mRightToLeft:Ljava/lang/Object;
 
+    .line 33
     iput-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mRightToRight:Ljava/lang/Object;
 
+    .line 34
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginRight:I
 
+    .line 35
     iput-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mStartToStart:Ljava/lang/Object;
 
+    .line 36
     iput-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mStartToEnd:Ljava/lang/Object;
 
+    .line 37
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginStart:I
 
+    .line 38
     iput-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mEndToStart:Ljava/lang/Object;
 
+    .line 39
     iput-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mEndToEnd:Ljava/lang/Object;
 
+    .line 40
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginEnd:I
 
+    .line 41
     iput-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mTopToTop:Ljava/lang/Object;
 
+    .line 42
     iput-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mTopToBottom:Ljava/lang/Object;
 
+    .line 43
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginTop:I
 
+    .line 44
     iput-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mBottomToTop:Ljava/lang/Object;
 
+    .line 45
     iput-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mBottomToBottom:Ljava/lang/Object;
 
+    .line 46
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginBottom:I
 
+    .line 47
     iput-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mBaselineToBaseline:Ljava/lang/Object;
 
+    .line 48
     iput-object v2, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mCircularConstraint:Ljava/lang/Object;
 
     const/high16 v0, 0x3f000000    # 0.5f
 
+    .line 49
     iput v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mHorizontalBias:F
 
+    .line 50
     iput v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mVerticalBias:F
 
+    .line 51
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginLeftGone:I
 
+    .line 52
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginRightGone:I
 
+    .line 53
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginStartGone:I
 
+    .line 54
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginEndGone:I
 
+    .line 55
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginTopGone:I
 
+    .line 56
     iput v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginBottomGone:I
 
     :goto_0
@@ -1660,24 +1903,28 @@
 .method public clearHorizontal()Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Landroidx/constraintlayout/core/state/ConstraintReference;->start()Landroidx/constraintlayout/core/state/ConstraintReference;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroidx/constraintlayout/core/state/ConstraintReference;->clear()Landroidx/constraintlayout/core/state/ConstraintReference;
 
+    .line 2
     invoke-virtual {p0}, Landroidx/constraintlayout/core/state/ConstraintReference;->end()Landroidx/constraintlayout/core/state/ConstraintReference;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroidx/constraintlayout/core/state/ConstraintReference;->clear()Landroidx/constraintlayout/core/state/ConstraintReference;
 
+    .line 3
     invoke-virtual {p0}, Landroidx/constraintlayout/core/state/ConstraintReference;->left()Landroidx/constraintlayout/core/state/ConstraintReference;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroidx/constraintlayout/core/state/ConstraintReference;->clear()Landroidx/constraintlayout/core/state/ConstraintReference;
 
+    .line 4
     invoke-virtual {p0}, Landroidx/constraintlayout/core/state/ConstraintReference;->right()Landroidx/constraintlayout/core/state/ConstraintReference;
 
     move-result-object v0
@@ -1690,18 +1937,21 @@
 .method public clearVertical()Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Landroidx/constraintlayout/core/state/ConstraintReference;->top()Landroidx/constraintlayout/core/state/ConstraintReference;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroidx/constraintlayout/core/state/ConstraintReference;->clear()Landroidx/constraintlayout/core/state/ConstraintReference;
 
+    .line 2
     invoke-virtual {p0}, Landroidx/constraintlayout/core/state/ConstraintReference;->baseline()Landroidx/constraintlayout/core/state/ConstraintReference;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroidx/constraintlayout/core/state/ConstraintReference;->clear()Landroidx/constraintlayout/core/state/ConstraintReference;
 
+    .line 3
     invoke-virtual {p0}, Landroidx/constraintlayout/core/state/ConstraintReference;->bottom()Landroidx/constraintlayout/core/state/ConstraintReference;
 
     move-result-object v0
@@ -1714,8 +1964,10 @@
 .method public createConstraintWidget()Landroidx/constraintlayout/core/widgets/ConstraintWidget;
     .locals 2
 
+    .line 1
     new-instance v0, Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
+    .line 2
     invoke-virtual {p0}, Landroidx/constraintlayout/core/state/ConstraintReference;->getWidth()Landroidx/constraintlayout/core/state/Dimension;
 
     move-result-object v1
@@ -1724,6 +1976,7 @@
 
     move-result v1
 
+    .line 3
     invoke-virtual {p0}, Landroidx/constraintlayout/core/state/ConstraintReference;->getHeight()Landroidx/constraintlayout/core/state/Dimension;
 
     move-result-object p0
@@ -1740,16 +1993,19 @@
 .method public end()Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mEndToStart:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
+    .line 2
     sget-object v0, Landroidx/constraintlayout/core/state/State$Constraint;->END_TO_START:Landroidx/constraintlayout/core/state/State$Constraint;
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLast:Landroidx/constraintlayout/core/state/State$Constraint;
 
     goto :goto_0
 
+    .line 3
     :cond_0
     sget-object v0, Landroidx/constraintlayout/core/state/State$Constraint;->END_TO_END:Landroidx/constraintlayout/core/state/State$Constraint;
 
@@ -1762,10 +2018,12 @@
 .method public endToEnd(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 1
 
+    .line 1
     sget-object v0, Landroidx/constraintlayout/core/state/State$Constraint;->END_TO_END:Landroidx/constraintlayout/core/state/State$Constraint;
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLast:Landroidx/constraintlayout/core/state/State$Constraint;
 
+    .line 2
     iput-object p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mEndToEnd:Ljava/lang/Object;
 
     return-object p0
@@ -1774,10 +2032,12 @@
 .method public endToStart(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 1
 
+    .line 1
     sget-object v0, Landroidx/constraintlayout/core/state/State$Constraint;->END_TO_START:Landroidx/constraintlayout/core/state/State$Constraint;
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLast:Landroidx/constraintlayout/core/state/State$Constraint;
 
+    .line 2
     iput-object p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mEndToStart:Ljava/lang/Object;
 
     return-object p0
@@ -1786,6 +2046,7 @@
 .method public getAlpha()F
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mAlpha:F
 
     return p0
@@ -1794,20 +2055,24 @@
 .method public getConstraintWidget()Landroidx/constraintlayout/core/widgets/ConstraintWidget;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mConstraintWidget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Landroidx/constraintlayout/core/state/ConstraintReference;->createConstraintWidget()Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mConstraintWidget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
+    .line 3
     iget-object v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mView:Ljava/lang/Object;
 
     invoke-virtual {v0, v1}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->setCompanionWidget(Ljava/lang/Object;)V
 
+    .line 4
     :cond_0
     iget-object p0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mConstraintWidget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
@@ -1817,6 +2082,7 @@
 .method public getFacade()Landroidx/constraintlayout/core/state/helpers/Facade;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mFacade:Landroidx/constraintlayout/core/state/helpers/Facade;
 
     return-object p0
@@ -1825,6 +2091,7 @@
 .method public getHeight()Landroidx/constraintlayout/core/state/Dimension;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mVerticalDimension:Landroidx/constraintlayout/core/state/Dimension;
 
     return-object p0
@@ -1833,6 +2100,7 @@
 .method public getHorizontalChainStyle()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mHorizontalChainStyle:I
 
     return p0
@@ -1841,6 +2109,7 @@
 .method public getHorizontalChainWeight()F
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mHorizontalChainWeight:F
 
     return p0
@@ -1849,6 +2118,7 @@
 .method public getKey()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->key:Ljava/lang/Object;
 
     return-object p0
@@ -1857,6 +2127,7 @@
 .method public getPivotX()F
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mPivotX:F
 
     return p0
@@ -1865,6 +2136,7 @@
 .method public getPivotY()F
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mPivotY:F
 
     return p0
@@ -1873,6 +2145,7 @@
 .method public getRotationX()F
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mRotationX:F
 
     return p0
@@ -1881,6 +2154,7 @@
 .method public getRotationY()F
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mRotationY:F
 
     return p0
@@ -1889,6 +2163,7 @@
 .method public getRotationZ()F
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mRotationZ:F
 
     return p0
@@ -1897,6 +2172,7 @@
 .method public getScaleX()F
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mScaleX:F
 
     return p0
@@ -1905,6 +2181,7 @@
 .method public getScaleY()F
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mScaleY:F
 
     return p0
@@ -1913,6 +2190,7 @@
 .method public getTag()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mTag:Ljava/lang/String;
 
     return-object p0
@@ -1921,6 +2199,7 @@
 .method public getTranslationX()F
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mTranslationX:F
 
     return p0
@@ -1929,6 +2208,7 @@
 .method public getTranslationY()F
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mTranslationY:F
 
     return p0
@@ -1937,6 +2217,7 @@
 .method public getTranslationZ()F
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mTranslationZ:F
 
     return p0
@@ -1945,6 +2226,7 @@
 .method public getVerticalChainStyle(I)I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mVerticalChainStyle:I
 
     return p0
@@ -1953,6 +2235,7 @@
 .method public getVerticalChainWeight()F
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mVerticalChainWeight:F
 
     return p0
@@ -1961,6 +2244,7 @@
 .method public getView()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mView:Ljava/lang/Object;
 
     return-object p0
@@ -1969,6 +2253,7 @@
 .method public getWidth()Landroidx/constraintlayout/core/state/Dimension;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mHorizontalDimension:Landroidx/constraintlayout/core/state/Dimension;
 
     return-object p0
@@ -1977,6 +2262,7 @@
 .method public height(Landroidx/constraintlayout/core/state/Dimension;)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/constraintlayout/core/state/ConstraintReference;->setHeight(Landroidx/constraintlayout/core/state/Dimension;)Landroidx/constraintlayout/core/state/ConstraintReference;
 
     move-result-object p0
@@ -1987,6 +2273,7 @@
 .method public horizontalBias(F)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mHorizontalBias:F
 
     return-object p0
@@ -1995,16 +2282,19 @@
 .method public left()Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLeftToLeft:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
+    .line 2
     sget-object v0, Landroidx/constraintlayout/core/state/State$Constraint;->LEFT_TO_LEFT:Landroidx/constraintlayout/core/state/State$Constraint;
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLast:Landroidx/constraintlayout/core/state/State$Constraint;
 
     goto :goto_0
 
+    .line 3
     :cond_0
     sget-object v0, Landroidx/constraintlayout/core/state/State$Constraint;->LEFT_TO_RIGHT:Landroidx/constraintlayout/core/state/State$Constraint;
 
@@ -2017,10 +2307,12 @@
 .method public leftToLeft(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 1
 
+    .line 1
     sget-object v0, Landroidx/constraintlayout/core/state/State$Constraint;->LEFT_TO_LEFT:Landroidx/constraintlayout/core/state/State$Constraint;
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLast:Landroidx/constraintlayout/core/state/State$Constraint;
 
+    .line 2
     iput-object p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLeftToLeft:Ljava/lang/Object;
 
     return-object p0
@@ -2029,10 +2321,12 @@
 .method public leftToRight(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 1
 
+    .line 1
     sget-object v0, Landroidx/constraintlayout/core/state/State$Constraint;->LEFT_TO_RIGHT:Landroidx/constraintlayout/core/state/State$Constraint;
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLast:Landroidx/constraintlayout/core/state/State$Constraint;
 
+    .line 2
     iput-object p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLeftToRight:Ljava/lang/Object;
 
     return-object p0
@@ -2059,17 +2353,15 @@
 
     goto :goto_0
 
+    .line 4
     :pswitch_0
+    iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginBaseline:I
+
+    :pswitch_1
     int-to-float p1, p1
 
-    .line 4
-    iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mCircularDistance:F
-
-    goto :goto_0
-
     .line 5
-    :pswitch_1
-    iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mMarginBaseline:I
+    iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mCircularDistance:F
 
     goto :goto_0
 
@@ -2131,6 +2423,8 @@
     :goto_0
     return-object p0
 
+    nop
+
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_7
@@ -2145,10 +2439,10 @@
         :pswitch_3
         :pswitch_2
         :pswitch_2
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
         :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_1
     .end packed-switch
 .end method
 
@@ -2294,6 +2588,7 @@
 .method public pivotX(F)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mPivotX:F
 
     return-object p0
@@ -2302,6 +2597,7 @@
 .method public pivotY(F)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mPivotY:F
 
     return-object p0
@@ -2310,16 +2606,19 @@
 .method public right()Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mRightToLeft:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
+    .line 2
     sget-object v0, Landroidx/constraintlayout/core/state/State$Constraint;->RIGHT_TO_LEFT:Landroidx/constraintlayout/core/state/State$Constraint;
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLast:Landroidx/constraintlayout/core/state/State$Constraint;
 
     goto :goto_0
 
+    .line 3
     :cond_0
     sget-object v0, Landroidx/constraintlayout/core/state/State$Constraint;->RIGHT_TO_RIGHT:Landroidx/constraintlayout/core/state/State$Constraint;
 
@@ -2332,10 +2631,12 @@
 .method public rightToLeft(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 1
 
+    .line 1
     sget-object v0, Landroidx/constraintlayout/core/state/State$Constraint;->RIGHT_TO_LEFT:Landroidx/constraintlayout/core/state/State$Constraint;
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLast:Landroidx/constraintlayout/core/state/State$Constraint;
 
+    .line 2
     iput-object p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mRightToLeft:Ljava/lang/Object;
 
     return-object p0
@@ -2344,10 +2645,12 @@
 .method public rightToRight(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 1
 
+    .line 1
     sget-object v0, Landroidx/constraintlayout/core/state/State$Constraint;->RIGHT_TO_RIGHT:Landroidx/constraintlayout/core/state/State$Constraint;
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLast:Landroidx/constraintlayout/core/state/State$Constraint;
 
+    .line 2
     iput-object p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mRightToRight:Ljava/lang/Object;
 
     return-object p0
@@ -2356,6 +2659,7 @@
 .method public rotationX(F)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mRotationX:F
 
     return-object p0
@@ -2364,6 +2668,7 @@
 .method public rotationY(F)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mRotationY:F
 
     return-object p0
@@ -2372,6 +2677,7 @@
 .method public rotationZ(F)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mRotationZ:F
 
     return-object p0
@@ -2380,6 +2686,7 @@
 .method public scaleX(F)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mScaleX:F
 
     return-object p0
@@ -2388,6 +2695,7 @@
 .method public scaleY(F)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mScaleY:F
 
     return-object p0
@@ -2400,9 +2708,11 @@
 
     return-void
 
+    .line 1
     :cond_0
     iput-object p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mConstraintWidget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
+    .line 2
     iget-object p0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mView:Ljava/lang/Object;
 
     invoke-virtual {p1, p0}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->setCompanionWidget(Ljava/lang/Object;)V
@@ -2413,10 +2723,12 @@
 .method public setFacade(Landroidx/constraintlayout/core/state/helpers/Facade;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mFacade:Landroidx/constraintlayout/core/state/helpers/Facade;
 
     if-eqz p1, :cond_0
 
+    .line 2
     invoke-interface {p1}, Landroidx/constraintlayout/core/state/helpers/Facade;->getConstraintWidget()Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     move-result-object p1
@@ -2430,6 +2742,7 @@
 .method public setHeight(Landroidx/constraintlayout/core/state/Dimension;)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mVerticalDimension:Landroidx/constraintlayout/core/state/Dimension;
 
     return-object p0
@@ -2438,6 +2751,7 @@
 .method public setHorizontalChainStyle(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mHorizontalChainStyle:I
 
     return-void
@@ -2446,6 +2760,7 @@
 .method public setHorizontalChainWeight(F)V
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mHorizontalChainWeight:F
 
     return-void
@@ -2454,6 +2769,7 @@
 .method public setKey(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->key:Ljava/lang/Object;
 
     return-void
@@ -2462,6 +2778,7 @@
 .method public setTag(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mTag:Ljava/lang/String;
 
     return-void
@@ -2470,6 +2787,7 @@
 .method public setVerticalChainStyle(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mVerticalChainStyle:I
 
     return-void
@@ -2478,6 +2796,7 @@
 .method public setVerticalChainWeight(F)V
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mVerticalChainWeight:F
 
     return-void
@@ -2486,12 +2805,15 @@
 .method public setView(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mView:Ljava/lang/Object;
 
+    .line 2
     iget-object p0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mConstraintWidget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {p0, p1}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->setCompanionWidget(Ljava/lang/Object;)V
 
     :cond_0
@@ -2501,6 +2823,7 @@
 .method public setWidth(Landroidx/constraintlayout/core/state/Dimension;)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mHorizontalDimension:Landroidx/constraintlayout/core/state/Dimension;
 
     return-object p0
@@ -2509,16 +2832,19 @@
 .method public start()Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mStartToStart:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
+    .line 2
     sget-object v0, Landroidx/constraintlayout/core/state/State$Constraint;->START_TO_START:Landroidx/constraintlayout/core/state/State$Constraint;
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLast:Landroidx/constraintlayout/core/state/State$Constraint;
 
     goto :goto_0
 
+    .line 3
     :cond_0
     sget-object v0, Landroidx/constraintlayout/core/state/State$Constraint;->START_TO_END:Landroidx/constraintlayout/core/state/State$Constraint;
 
@@ -2531,10 +2857,12 @@
 .method public startToEnd(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 1
 
+    .line 1
     sget-object v0, Landroidx/constraintlayout/core/state/State$Constraint;->START_TO_END:Landroidx/constraintlayout/core/state/State$Constraint;
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLast:Landroidx/constraintlayout/core/state/State$Constraint;
 
+    .line 2
     iput-object p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mStartToEnd:Ljava/lang/Object;
 
     return-object p0
@@ -2543,10 +2871,12 @@
 .method public startToStart(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 1
 
+    .line 1
     sget-object v0, Landroidx/constraintlayout/core/state/State$Constraint;->START_TO_START:Landroidx/constraintlayout/core/state/State$Constraint;
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLast:Landroidx/constraintlayout/core/state/State$Constraint;
 
+    .line 2
     iput-object p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mStartToStart:Ljava/lang/Object;
 
     return-object p0
@@ -2555,16 +2885,19 @@
 .method public top()Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mTopToTop:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
+    .line 2
     sget-object v0, Landroidx/constraintlayout/core/state/State$Constraint;->TOP_TO_TOP:Landroidx/constraintlayout/core/state/State$Constraint;
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLast:Landroidx/constraintlayout/core/state/State$Constraint;
 
     goto :goto_0
 
+    .line 3
     :cond_0
     sget-object v0, Landroidx/constraintlayout/core/state/State$Constraint;->TOP_TO_BOTTOM:Landroidx/constraintlayout/core/state/State$Constraint;
 
@@ -2577,10 +2910,12 @@
 .method public topToBottom(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 1
 
+    .line 1
     sget-object v0, Landroidx/constraintlayout/core/state/State$Constraint;->TOP_TO_BOTTOM:Landroidx/constraintlayout/core/state/State$Constraint;
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLast:Landroidx/constraintlayout/core/state/State$Constraint;
 
+    .line 2
     iput-object p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mTopToBottom:Ljava/lang/Object;
 
     return-object p0
@@ -2589,10 +2924,12 @@
 .method public topToTop(Ljava/lang/Object;)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 1
 
+    .line 1
     sget-object v0, Landroidx/constraintlayout/core/state/State$Constraint;->TOP_TO_TOP:Landroidx/constraintlayout/core/state/State$Constraint;
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLast:Landroidx/constraintlayout/core/state/State$Constraint;
 
+    .line 2
     iput-object p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mTopToTop:Ljava/lang/Object;
 
     return-object p0
@@ -2601,6 +2938,7 @@
 .method public translationX(F)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mTranslationX:F
 
     return-object p0
@@ -2609,6 +2947,7 @@
 .method public translationY(F)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mTranslationY:F
 
     return-object p0
@@ -2617,6 +2956,7 @@
 .method public translationZ(F)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mTranslationZ:F
 
     return-object p0
@@ -2630,10 +2970,12 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 2
     iget-object v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLeftToLeft:Ljava/lang/Object;
 
     if-eqz v1, :cond_0
@@ -2644,8 +2986,10 @@
 
     const-string v1, "LeftToLeft and LeftToRight both defined"
 
+    .line 3
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 4
     :cond_0
     iget-object v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mRightToLeft:Ljava/lang/Object;
 
@@ -2657,8 +3001,10 @@
 
     const-string v1, "RightToLeft and RightToRight both defined"
 
+    .line 5
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 6
     :cond_1
     iget-object v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mStartToStart:Ljava/lang/Object;
 
@@ -2670,8 +3016,10 @@
 
     const-string v1, "StartToStart and StartToEnd both defined"
 
+    .line 7
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 8
     :cond_2
     iget-object v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mEndToStart:Ljava/lang/Object;
 
@@ -2683,8 +3031,10 @@
 
     const-string v1, "EndToStart and EndToEnd both defined"
 
+    .line 9
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 10
     :cond_3
     iget-object v1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mLeftToLeft:Ljava/lang/Object;
 
@@ -2722,8 +3072,10 @@
     :cond_5
     const-string p0, "Both left/right and start/end constraints defined"
 
+    .line 11
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 12
     :cond_6
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -2733,6 +3085,7 @@
 
     return-void
 
+    .line 13
     :cond_7
     new-instance p0, Landroidx/constraintlayout/core/state/ConstraintReference$IncorrectConstraintException;
 
@@ -2744,6 +3097,7 @@
 .method public verticalBias(F)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mVerticalBias:F
 
     return-object p0
@@ -2752,6 +3106,7 @@
 .method public visibility(I)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference;->mVisibility:I
 
     return-object p0
@@ -2760,6 +3115,7 @@
 .method public width(Landroidx/constraintlayout/core/state/Dimension;)Landroidx/constraintlayout/core/state/ConstraintReference;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/constraintlayout/core/state/ConstraintReference;->setWidth(Landroidx/constraintlayout/core/state/Dimension;)Landroidx/constraintlayout/core/state/ConstraintReference;
 
     move-result-object p0

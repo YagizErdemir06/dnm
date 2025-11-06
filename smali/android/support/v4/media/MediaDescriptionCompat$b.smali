@@ -19,9 +19,10 @@
 
 
 # direct methods
-.method public constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,6 +42,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/media/MediaDescription$Builder;->build()Landroid/media/MediaDescription;
 
     move-result-object p0
@@ -53,6 +55,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     new-instance v0, Landroid/media/MediaDescription$Builder;
 
     invoke-direct {v0}, Landroid/media/MediaDescription$Builder;-><init>()V
@@ -77,6 +80,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/media/MediaDescription;->getDescription()Ljava/lang/CharSequence;
 
     move-result-object p0
@@ -101,6 +105,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/media/MediaDescription;->getExtras()Landroid/os/Bundle;
 
     move-result-object p0
@@ -125,6 +130,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/media/MediaDescription;->getIconBitmap()Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -149,6 +155,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/media/MediaDescription;->getIconUri()Landroid/net/Uri;
 
     move-result-object p0
@@ -173,6 +180,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/media/MediaDescription;->getMediaId()Ljava/lang/String;
 
     move-result-object p0
@@ -197,6 +205,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/media/MediaDescription;->getSubtitle()Ljava/lang/CharSequence;
 
     move-result-object p0
@@ -221,6 +230,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/media/MediaDescription;->getTitle()Ljava/lang/CharSequence;
 
     move-result-object p0
@@ -248,6 +258,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/media/MediaDescription$Builder;->setDescription(Ljava/lang/CharSequence;)Landroid/media/MediaDescription$Builder;
 
     return-void
@@ -273,6 +284,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/media/MediaDescription$Builder;->setExtras(Landroid/os/Bundle;)Landroid/media/MediaDescription$Builder;
 
     return-void
@@ -298,6 +310,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/media/MediaDescription$Builder;->setIconBitmap(Landroid/graphics/Bitmap;)Landroid/media/MediaDescription$Builder;
 
     return-void
@@ -323,6 +336,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/media/MediaDescription$Builder;->setIconUri(Landroid/net/Uri;)Landroid/media/MediaDescription$Builder;
 
     return-void
@@ -348,6 +362,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/media/MediaDescription$Builder;->setMediaId(Ljava/lang/String;)Landroid/media/MediaDescription$Builder;
 
     return-void
@@ -373,6 +388,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/media/MediaDescription$Builder;->setSubtitle(Ljava/lang/CharSequence;)Landroid/media/MediaDescription$Builder;
 
     return-void
@@ -398,6 +414,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/media/MediaDescription$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/media/MediaDescription$Builder;
 
     return-void

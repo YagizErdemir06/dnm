@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Sets$4$1;
+.class public Lcom/google/common/collect/Sets$4$1;
 .super Lcom/google/common/collect/AbstractIterator;
 .source "SourceFile"
 
@@ -22,17 +22,18 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/Sets$4;
+.field public final synthetic this$0:Lcom/google/common/collect/Sets$4;
 
-.field final synthetic val$itr1:Ljava/util/Iterator;
+.field public final synthetic val$itr1:Ljava/util/Iterator;
 
-.field final synthetic val$itr2:Ljava/util/Iterator;
+.field public final synthetic val$itr2:Ljava/util/Iterator;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/Sets$4;Ljava/util/Iterator;Ljava/util/Iterator;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/Sets$4$1;->this$0:Lcom/google/common/collect/Sets$4;
 
     iput-object p2, p0, Lcom/google/common/collect/Sets$4$1;->val$itr1:Ljava/util/Iterator;
@@ -57,6 +58,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     :cond_0
     iget-object v0, p0, Lcom/google/common/collect/Sets$4$1;->val$itr1:Ljava/util/Iterator;
 
@@ -66,12 +68,14 @@
 
     if-eqz v0, :cond_1
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/Sets$4$1;->val$itr1:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 3
     iget-object v1, p0, Lcom/google/common/collect/Sets$4$1;->this$0:Lcom/google/common/collect/Sets$4;
 
     iget-object v1, v1, Lcom/google/common/collect/Sets$4;->val$set2:Ljava/util/Set;
@@ -84,6 +88,7 @@
 
     return-object v0
 
+    .line 4
     :cond_1
     iget-object v0, p0, Lcom/google/common/collect/Sets$4$1;->val$itr2:Ljava/util/Iterator;
 
@@ -93,12 +98,14 @@
 
     if-eqz v0, :cond_2
 
+    .line 5
     iget-object v0, p0, Lcom/google/common/collect/Sets$4$1;->val$itr2:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 6
     iget-object v1, p0, Lcom/google/common/collect/Sets$4$1;->this$0:Lcom/google/common/collect/Sets$4;
 
     iget-object v1, v1, Lcom/google/common/collect/Sets$4;->val$set1:Ljava/util/Set;
@@ -111,6 +118,7 @@
 
     return-object v0
 
+    .line 7
     :cond_2
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractIterator;->endOfData()Ljava/lang/Object;
 

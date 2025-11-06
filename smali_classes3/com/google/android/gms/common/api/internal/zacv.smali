@@ -1,16 +1,17 @@
-.class final Lcom/google/android/gms/common/api/internal/zacv;
+.class public final Lcom/google/android/gms/common/api/internal/zacv;
 .super Lcom/google/android/gms/common/api/internal/TaskApiCall;
 .source "SourceFile"
 
 
 # instance fields
-.field final synthetic zaa:Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;
+.field public final synthetic zaa:Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;[Lcom/google/android/gms/common/Feature;ZI)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/common/api/internal/zacv;->zaa:Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;
 
     invoke-direct {p0, p2, p3, p4}, Lcom/google/android/gms/common/api/internal/TaskApiCall;-><init>([Lcom/google/android/gms/common/Feature;ZI)V
@@ -28,6 +29,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zacv;->zaa:Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;
 
     invoke-static {p0}, Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;->zaa(Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;)Lcom/google/android/gms/common/api/internal/RemoteCall;

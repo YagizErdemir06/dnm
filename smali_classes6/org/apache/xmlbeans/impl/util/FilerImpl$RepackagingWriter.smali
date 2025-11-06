@@ -1,4 +1,4 @@
-.class Lorg/apache/xmlbeans/impl/util/FilerImpl$RepackagingWriter;
+.class public Lorg/apache/xmlbeans/impl/util/FilerImpl$RepackagingWriter;
 .super Ljava/io/StringWriter;
 .source "SourceFile"
 
@@ -17,18 +17,21 @@
 # instance fields
 .field private _file:Ljava/io/File;
 
-.field private _repackager:Llv/c;
+.field private _repackager:Lo/c;
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/File;Llv/c;)V
+.method public constructor <init>(Ljava/io/File;Lo/c;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/io/StringWriter;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/util/FilerImpl$RepackagingWriter;->_file:Ljava/io/File;
 
-    iput-object p2, p0, Lorg/apache/xmlbeans/impl/util/FilerImpl$RepackagingWriter;->_repackager:Llv/c;
+    .line 3
+    iput-object p2, p0, Lorg/apache/xmlbeans/impl/util/FilerImpl$RepackagingWriter;->_repackager:Lo/c;
 
     return-void
 .end method
@@ -43,22 +46,25 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0}, Ljava/io/StringWriter;->close()V
 
+    .line 2
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/util/FilerImpl$RepackagingWriter;->_file:Ljava/io/File;
 
     invoke-static {v0}, Lorg/apache/xmlbeans/impl/util/FilerImpl;->access$000(Ljava/io/File;)Ljava/io/Writer;
 
     move-result-object v0
 
+    .line 3
     :try_start_0
-    iget-object v1, p0, Lorg/apache/xmlbeans/impl/util/FilerImpl$RepackagingWriter;->_repackager:Llv/c;
+    iget-object v1, p0, Lorg/apache/xmlbeans/impl/util/FilerImpl$RepackagingWriter;->_repackager:Lo/c;
 
     invoke-virtual {p0}, Ljava/io/StringWriter;->getBuffer()Ljava/lang/StringBuffer;
 
     move-result-object p0
 
-    invoke-virtual {v1, p0}, Llv/c;->e(Ljava/lang/StringBuffer;)Ljava/lang/StringBuffer;
+    invoke-virtual {v1, p0}, Lo/c;->e(Ljava/lang/StringBuffer;)Ljava/lang/StringBuffer;
 
     move-result-object p0
 
@@ -70,6 +76,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
     invoke-virtual {v0}, Ljava/io/Writer;->close()V
 
     return-void

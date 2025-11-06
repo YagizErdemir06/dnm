@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/ui/TrackSelectionView$TrackInfo;
+.class public final Lcom/google/android/exoplayer2/ui/TrackSelectionView$TrackInfo;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -24,10 +24,13 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/Tracks$Group;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView$TrackInfo;->trackGroup:Lcom/google/android/exoplayer2/Tracks$Group;
 
+    .line 3
     iput p2, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView$TrackInfo;->trackIndex:I
 
     return-void
@@ -38,6 +41,7 @@
 .method public getFormat()Lcom/google/android/exoplayer2/Format;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView$TrackInfo;->trackGroup:Lcom/google/android/exoplayer2/Tracks$Group;
 
     iget p0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView$TrackInfo;->trackIndex:I

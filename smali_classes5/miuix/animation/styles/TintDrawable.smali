@@ -3,14 +3,6 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lmiuix/animation/styles/TintDrawable$InitTintTask;
-    }
-.end annotation
-
-
 # static fields
 .field private static final sListener:Landroid/view/View$OnAttachStateChangeListener;
 
@@ -26,15 +18,11 @@
 
 .field private mBitmap:Landroid/graphics/Bitmap;
 
-.field private final mBitmapLock:Ljava/lang/Object;
-
 .field private mBounds:Landroid/graphics/RectF;
 
 .field private mCornerBounds:Landroid/graphics/RectF;
 
 .field private mHoverRadius:F
-
-.field private mInitTintTask:Ljava/lang/Runnable;
 
 .field private mOriDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -61,6 +49,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lmiuix/animation/styles/TintDrawable$1;
 
     invoke-direct {v0}, Lmiuix/animation/styles/TintDrawable$1;-><init>()V
@@ -73,58 +62,63 @@
 .method public constructor <init>()V
     .locals 4
 
+    .line 1
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
     const/4 v0, 0x1
 
+    .line 2
     iput v0, p0, Lmiuix/animation/styles/TintDrawable;->TINT_STYLE_VIEW_SHAPE:I
 
     const/4 v1, 0x2
 
+    .line 3
     iput v1, p0, Lmiuix/animation/styles/TintDrawable;->TINT_STYLE_RECT_ROUND:I
 
     const/4 v1, 0x4
 
+    .line 4
     iput v1, p0, Lmiuix/animation/styles/TintDrawable;->TINT_STYLE_HOVER:I
 
     const/high16 v1, 0x41d00000    # 26.0f
 
+    .line 5
     iput v1, p0, Lmiuix/animation/styles/TintDrawable;->TOUCH_RADIUS_RECT_ROUND_DEFAULT:F
 
-    new-instance v1, Ljava/lang/Object;
-
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    iput-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mBitmapLock:Ljava/lang/Object;
-
+    .line 6
     new-instance v1, Landroid/graphics/Paint;
 
     invoke-direct {v1}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mPaint:Landroid/graphics/Paint;
 
+    .line 7
     new-instance v1, Landroid/graphics/RectF;
 
     invoke-direct {v1}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mBounds:Landroid/graphics/RectF;
 
+    .line 8
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mSrcRect:Landroid/graphics/Rect;
 
+    .line 9
     new-instance v1, Landroid/graphics/RectF;
 
     invoke-direct {v1}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mCornerBounds:Landroid/graphics/RectF;
 
+    .line 10
     iput v0, p0, Lmiuix/animation/styles/TintDrawable;->mTintStyle:I
 
     const/4 v1, 0x0
 
+    .line 11
     iput v1, p0, Lmiuix/animation/styles/TintDrawable;->mHoverRadius:F
 
     new-array v2, v0, [F
@@ -133,22 +127,27 @@
 
     aput v1, v2, v3
 
+    .line 12
     iput-object v2, p0, Lmiuix/animation/styles/TintDrawable;->mTouchRadius:[F
 
     const/4 v1, 0x0
 
+    .line 13
     iput-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mTouchRectRoundRect:Landroid/graphics/RectF;
 
+    .line 14
     new-instance v1, Landroid/graphics/RectF;
 
     invoke-direct {v1}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mTouchRectRoundPadding:Landroid/graphics/RectF;
 
+    .line 15
     sget-object v1, Lmiuix/animation/ITouchStyle$TouchRectGravity;->CENTER_IN_PARENT:Lmiuix/animation/ITouchStyle$TouchRectGravity;
 
     iput-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mTouchRectGravity:Lmiuix/animation/ITouchStyle$TouchRectGravity;
 
+    .line 16
     iput v0, p0, Lmiuix/animation/styles/TintDrawable;->mTouchRectLocationMode:I
 
     return-void
@@ -157,6 +156,7 @@
 .method public static synthetic access$000(Lmiuix/animation/styles/TintDrawable;)Landroid/graphics/drawable/Drawable;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/animation/styles/TintDrawable;->mOriDrawable:Landroid/graphics/drawable/Drawable;
 
     return-object p0
@@ -165,15 +165,8 @@
 .method public static synthetic access$100(Lmiuix/animation/styles/TintDrawable;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lmiuix/animation/styles/TintDrawable;->clear()V
-
-    return-void
-.end method
-
-.method public static synthetic access$200(Lmiuix/animation/styles/TintDrawable;I)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lmiuix/animation/styles/TintDrawable;->initBitmap(I)V
 
     return-void
 .end method
@@ -181,228 +174,116 @@
 .method private clear()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lmiuix/animation/styles/TintDrawable;->recycleBitmap()V
 
     return-void
 .end method
 
-.method private createBitmap(II)Z
-    .locals 5
+.method private createBitmap(II)V
+    .locals 2
 
-    iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mBitmapLock:Ljava/lang/Object;
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    monitor-enter v0
+    const/16 v1, 0x17
 
-    :try_start_0
-    iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mBitmap:Landroid/graphics/Bitmap;
+    if-lt v0, v1, :cond_1
 
-    const/4 v2, 0x0
+    iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mBitmap:Landroid/graphics/Bitmap;
 
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
+    .line 2
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v0
+
+    if-ne v0, p1, :cond_0
+
+    iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mBitmap:Landroid/graphics/Bitmap;
+
+    .line 3
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v0
+
+    iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
+
+    invoke-virtual {v1}, Landroid/view/View;->getHeight()I
 
     move-result v1
 
-    if-ne v1, p1, :cond_0
+    if-ne v0, v1, :cond_0
 
-    iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mBitmap:Landroid/graphics/Bitmap;
+    goto :goto_0
 
-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v1
-
-    iget-object v3, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
-
-    invoke-virtual {v3}, Landroid/view/View;->getHeight()I
-
-    move-result v3
-
-    if-ne v1, v3, :cond_0
-
-    const-string p1, "miuix_anim"
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "createBitmap failed "
-
-    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lmiuix/animation/styles/TintDrawable;->mBitmap:Landroid/graphics/Bitmap;
-
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    monitor-exit v0
-
-    return v2
-
+    .line 4
     :cond_0
     invoke-direct {p0}, Lmiuix/animation/styles/TintDrawable;->recycleBitmap()V
 
-    iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mPaint:Landroid/graphics/Paint;
+    .line 5
+    iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mPaint:Landroid/graphics/Paint;
 
-    const/4 v3, 0x1
+    const/4 v1, 0x1
 
-    invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setAntiAlias(Z)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    :try_start_1
-    iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
+    .line 6
+    :try_start_0
+    iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
 
-    invoke-virtual {v1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result-object v1
+    move-result-object v0
 
-    sget-object v4, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+    sget-object v1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
-    invoke-static {v1, p1, p2, v4}, Landroid/graphics/Bitmap;->createBitmap(Landroid/util/DisplayMetrics;IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+    invoke-static {v0, p1, p2, v1}, Landroid/graphics/Bitmap;->createBitmap(Landroid/util/DisplayMetrics;IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
     iput-object p1, p0, Lmiuix/animation/styles/TintDrawable;->mBitmap:Landroid/graphics/Bitmap;
-    :try_end_1
-    .catch Ljava/lang/OutOfMemoryError; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :try_end_0
+    .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_0
 
-    :try_start_2
-    monitor-exit v0
-
-    return v3
+    goto :goto_0
 
     :catch_0
     const-string p0, "miuix_anim"
 
     const-string p1, "TintDrawable.createBitmap failed, out of memory"
 
+    .line 7
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    monitor-exit v0
-
-    return v2
-
+    :cond_1
     :goto_0
-    monitor-exit v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw p0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_0
+    return-void
 .end method
 
 .method private drawBlackeningByExtractingBg(Landroid/graphics/Canvas;I)V
-    .locals 4
+    .locals 3
 
-    iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mBitmapLock:Ljava/lang/Object;
+    .line 1
+    iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mBitmap:Landroid/graphics/Bitmap;
 
-    monitor-enter v0
+    if-eqz v0, :cond_1
 
-    :try_start_0
-    iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mBitmap:Landroid/graphics/Bitmap;
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
 
-    if-eqz v1, :cond_2
+    move-result v0
 
-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->isRecycled()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
+    .line 2
     :cond_0
-    iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mSrcRect:Landroid/graphics/Rect;
-
-    invoke-virtual {v1}, Landroid/graphics/Rect;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mBounds:Landroid/graphics/RectF;
-
-    invoke-virtual {v1}, Landroid/graphics/RectF;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mPaint:Landroid/graphics/Paint;
-
-    new-instance v2, Landroid/graphics/PorterDuffColorFilter;
-
-    sget-object v3, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
-
-    invoke-direct {v2, p2, v3}, Landroid/graphics/PorterDuffColorFilter;-><init>(ILandroid/graphics/PorterDuff$Mode;)V
-
-    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
-
-    iget-object p2, p0, Lmiuix/animation/styles/TintDrawable;->mBitmap:Landroid/graphics/Bitmap;
-
-    iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mSrcRect:Landroid/graphics/Rect;
-
-    iget-object v2, p0, Lmiuix/animation/styles/TintDrawable;->mBounds:Landroid/graphics/RectF;
-
-    iget-object p0, p0, Lmiuix/animation/styles/TintDrawable;->mPaint:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, p2, v1, v2, p0}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/RectF;Landroid/graphics/Paint;)V
-
-    :cond_1
-    monitor-exit v0
-
-    return-void
-
-    :cond_2
-    :goto_0
-    iget-object p1, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
-
-    iget-object p0, p0, Lmiuix/animation/styles/TintDrawable;->mOriDrawable:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->setForeground(Landroid/graphics/drawable/Drawable;)V
-
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
-.end method
-
-.method private drawHoverTint(Landroid/graphics/Canvas;I)V
-    .locals 3
-    .param p1    # Landroid/graphics/Canvas;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mCornerBounds:Landroid/graphics/RectF;
-
-    iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mSrcRect:Landroid/graphics/Rect;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
-
     iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mPaint:Landroid/graphics/Paint;
 
     new-instance v1, Landroid/graphics/PorterDuffColorFilter;
@@ -413,6 +294,65 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
+    .line 3
+    iget-object p2, p0, Lmiuix/animation/styles/TintDrawable;->mBitmap:Landroid/graphics/Bitmap;
+
+    iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mSrcRect:Landroid/graphics/Rect;
+
+    iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mBounds:Landroid/graphics/RectF;
+
+    iget-object p0, p0, Lmiuix/animation/styles/TintDrawable;->mPaint:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, p2, v0, v1, p0}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/RectF;Landroid/graphics/Paint;)V
+
+    return-void
+
+    .line 4
+    :cond_1
+    :goto_0
+    sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 p2, 0x17
+
+    if-lt p1, p2, :cond_2
+
+    .line 5
+    iget-object p1, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
+
+    iget-object p0, p0, Lmiuix/animation/styles/TintDrawable;->mOriDrawable:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {p1, p0}, Landroid/view/View;->setForeground(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_2
+    return-void
+.end method
+
+.method private drawHoverTint(Landroid/graphics/Canvas;I)V
+    .locals 3
+    .param p1    # Landroid/graphics/Canvas;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mCornerBounds:Landroid/graphics/RectF;
+
+    iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mSrcRect:Landroid/graphics/Rect;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
+
+    .line 2
+    iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mPaint:Landroid/graphics/Paint;
+
+    new-instance v1, Landroid/graphics/PorterDuffColorFilter;
+
+    sget-object v2, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-direct {v1, p2, v2}, Landroid/graphics/PorterDuffColorFilter;-><init>(ILandroid/graphics/PorterDuff$Mode;)V
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
+
+    .line 3
     iget-object p2, p0, Lmiuix/animation/styles/TintDrawable;->mCornerBounds:Landroid/graphics/RectF;
 
     iget v0, p0, Lmiuix/animation/styles/TintDrawable;->mHoverRadius:F
@@ -431,26 +371,31 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mPaint:Landroid/graphics/Paint;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
+    .line 2
     iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mPaint:Landroid/graphics/Paint;
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
+    .line 3
     iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
+    .line 4
     iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p2}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 5
     iget v0, p0, Lmiuix/animation/styles/TintDrawable;->mTouchRectLocationMode:I
 
     if-eq v0, v1, :cond_4
@@ -465,11 +410,13 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-direct {p0, p1, p2}, Lmiuix/animation/styles/TintDrawable;->perFromDrawRoundRectRelative(Landroid/graphics/Canvas;I)V
 
     goto :goto_0
 
+    .line 7
     :cond_1
     iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
 
@@ -489,6 +436,7 @@
 
     invoke-direct {p0, v0, v1}, Lmiuix/animation/styles/TintDrawable;->setBounds(FF)V
 
+    .line 8
     iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mCornerBounds:Landroid/graphics/RectF;
 
     iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mSrcRect:Landroid/graphics/Rect;
@@ -505,6 +453,7 @@
 
     iput v2, v0, Landroid/graphics/RectF;->left:F
 
+    .line 9
     iget v2, v1, Landroid/graphics/Rect;->top:I
 
     int-to-float v2, v2
@@ -515,6 +464,7 @@
 
     iput v2, v0, Landroid/graphics/RectF;->top:F
 
+    .line 10
     iget v2, v1, Landroid/graphics/Rect;->right:I
 
     int-to-float v2, v2
@@ -525,6 +475,7 @@
 
     iput v2, v0, Landroid/graphics/RectF;->right:F
 
+    .line 11
     iget v1, v1, Landroid/graphics/Rect;->bottom:I
 
     int-to-float v1, v1
@@ -535,6 +486,7 @@
 
     iput v1, v0, Landroid/graphics/RectF;->bottom:F
 
+    .line 12
     invoke-virtual {v0}, Landroid/graphics/RectF;->width()F
 
     move-result v0
@@ -545,12 +497,14 @@
 
     if-gez v0, :cond_2
 
+    .line 13
     iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mCornerBounds:Landroid/graphics/RectF;
 
     iget v2, v0, Landroid/graphics/RectF;->left:F
 
     iput v2, v0, Landroid/graphics/RectF;->right:F
 
+    .line 14
     :cond_2
     iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mCornerBounds:Landroid/graphics/RectF;
 
@@ -562,12 +516,14 @@
 
     if-gez v0, :cond_3
 
+    .line 15
     iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mCornerBounds:Landroid/graphics/RectF;
 
     iget v1, v0, Landroid/graphics/RectF;->top:F
 
     iput v1, v0, Landroid/graphics/RectF;->bottom:F
 
+    .line 16
     :cond_3
     iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mCornerBounds:Landroid/graphics/RectF;
 
@@ -575,6 +531,7 @@
 
     goto :goto_0
 
+    .line 17
     :cond_4
     iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
 
@@ -594,6 +551,7 @@
 
     invoke-direct {p0, v0, v1}, Lmiuix/animation/styles/TintDrawable;->setBounds(FF)V
 
+    .line 18
     iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mBounds:Landroid/graphics/RectF;
 
     invoke-direct {p0, p1, p2, v0}, Lmiuix/animation/styles/TintDrawable;->realPerFromDrawRoundRect(Landroid/graphics/Canvas;ILandroid/graphics/RectF;)V
@@ -603,16 +561,26 @@
 .end method
 
 .method public static get(Landroid/view/View;)Lmiuix/animation/styles/TintDrawable;
-    .locals 1
+    .locals 2
 
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x17
+
+    if-lt v0, v1, :cond_0
+
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getForeground()Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
 
+    .line 3
     instance-of v0, p0, Lmiuix/animation/styles/TintDrawable;
 
     if-eqz v0, :cond_0
 
+    .line 4
     check-cast p0, Lmiuix/animation/styles/TintDrawable;
 
     return-object p0
@@ -634,6 +602,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     iget p1, p0, Lmiuix/animation/styles/TintDrawable;->mTintStyle:I
 
@@ -646,6 +615,7 @@
 .method private getRectRoundGravityFromView()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
 
     sget v1, Lmiuix/animation/R$id;->miuix_animation_tag_view_touch_rect_gravity:I
@@ -654,10 +624,12 @@
 
     move-result-object v0
 
+    .line 2
     instance-of v1, v0, Lmiuix/animation/ITouchStyle$TouchRectGravity;
 
     if-eqz v1, :cond_0
 
+    .line 3
     check-cast v0, Lmiuix/animation/ITouchStyle$TouchRectGravity;
 
     iput-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mTouchRectGravity:Lmiuix/animation/ITouchStyle$TouchRectGravity;
@@ -669,6 +641,7 @@
 .method private getRectRoundPaddingsFromView()V
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
 
     sget v1, Lmiuix/animation/R$id;->miuix_animation_tag_view_touch_padding_rect:I
@@ -677,14 +650,17 @@
 
     move-result-object v0
 
+    .line 2
     instance-of v1, v0, Landroid/graphics/RectF;
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_0
 
+    .line 3
     check-cast v0, Landroid/graphics/RectF;
 
+    .line 4
     iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mTouchRectRoundPadding:Landroid/graphics/RectF;
 
     iget v3, v0, Landroid/graphics/RectF;->left:F
@@ -695,6 +671,7 @@
 
     iput v3, v1, Landroid/graphics/RectF;->left:F
 
+    .line 5
     iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mTouchRectRoundPadding:Landroid/graphics/RectF;
 
     iget v3, v0, Landroid/graphics/RectF;->top:F
@@ -705,6 +682,7 @@
 
     iput v3, v1, Landroid/graphics/RectF;->top:F
 
+    .line 6
     iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mTouchRectRoundPadding:Landroid/graphics/RectF;
 
     iget v3, v0, Landroid/graphics/RectF;->right:F
@@ -715,6 +693,7 @@
 
     iput v3, v1, Landroid/graphics/RectF;->right:F
 
+    .line 7
     iget-object p0, p0, Lmiuix/animation/styles/TintDrawable;->mTouchRectRoundPadding:Landroid/graphics/RectF;
 
     iget v0, v0, Landroid/graphics/RectF;->bottom:F
@@ -727,15 +706,19 @@
 
     goto :goto_0
 
+    .line 8
     :cond_0
     iget-object p0, p0, Lmiuix/animation/styles/TintDrawable;->mTouchRectRoundPadding:Landroid/graphics/RectF;
 
     iput v2, p0, Landroid/graphics/RectF;->left:F
 
+    .line 9
     iput v2, p0, Landroid/graphics/RectF;->top:F
 
+    .line 10
     iput v2, p0, Landroid/graphics/RectF;->right:F
 
+    .line 11
     iput v2, p0, Landroid/graphics/RectF;->bottom:F
 
     :goto_0
@@ -745,6 +728,7 @@
 .method private getRectRoundRadiusFromView()V
     .locals 6
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
 
     sget v1, Lmiuix/animation/R$id;->miuix_animation_tag_view_touch_corners:I
@@ -753,6 +737,7 @@
 
     move-result-object v0
 
+    .line 2
     instance-of v1, v0, Ljava/lang/Float;
 
     const/4 v2, 0x0
@@ -767,6 +752,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     instance-of v1, v0, Landroid/graphics/RectF;
 
@@ -776,12 +762,15 @@
 
     new-array v1, v1, [F
 
+    .line 4
     fill-array-data v1, :array_0
 
     iput-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mTouchRadius:[F
 
+    .line 5
     check-cast v0, Landroid/graphics/RectF;
 
+    .line 6
     iget v4, v0, Landroid/graphics/RectF;->left:F
 
     const/4 v5, 0x0
@@ -792,6 +781,7 @@
 
     aput v4, v1, v2
 
+    .line 7
     iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mTouchRadius:[F
 
     iget v2, v0, Landroid/graphics/RectF;->left:F
@@ -802,75 +792,81 @@
 
     aput v2, v1, v3
 
+    .line 8
     iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mTouchRadius:[F
 
-    iget v2, v0, Landroid/graphics/RectF;->top:F
+    const/4 v2, 0x2
 
-    invoke-static {v2, v5}, Ljava/lang/Math;->max(FF)F
+    iget v3, v0, Landroid/graphics/RectF;->top:F
 
-    move-result v2
+    invoke-static {v3, v5}, Ljava/lang/Math;->max(FF)F
 
-    const/4 v3, 0x2
+    move-result v3
 
-    aput v2, v1, v3
+    aput v3, v1, v2
 
+    .line 9
     iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mTouchRadius:[F
 
-    iget v2, v0, Landroid/graphics/RectF;->top:F
+    const/4 v2, 0x3
 
-    invoke-static {v2, v5}, Ljava/lang/Math;->max(FF)F
+    iget v3, v0, Landroid/graphics/RectF;->top:F
 
-    move-result v2
+    invoke-static {v3, v5}, Ljava/lang/Math;->max(FF)F
 
-    const/4 v3, 0x3
+    move-result v3
 
-    aput v2, v1, v3
+    aput v3, v1, v2
 
+    .line 10
     iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mTouchRadius:[F
 
-    iget v2, v0, Landroid/graphics/RectF;->right:F
+    const/4 v2, 0x4
 
-    invoke-static {v2, v5}, Ljava/lang/Math;->max(FF)F
+    iget v3, v0, Landroid/graphics/RectF;->right:F
 
-    move-result v2
+    invoke-static {v3, v5}, Ljava/lang/Math;->max(FF)F
 
-    const/4 v3, 0x4
+    move-result v3
 
-    aput v2, v1, v3
+    aput v3, v1, v2
 
+    .line 11
     iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mTouchRadius:[F
 
-    iget v2, v0, Landroid/graphics/RectF;->right:F
+    const/4 v2, 0x5
 
-    invoke-static {v2, v5}, Ljava/lang/Math;->max(FF)F
+    iget v3, v0, Landroid/graphics/RectF;->right:F
 
-    move-result v2
+    invoke-static {v3, v5}, Ljava/lang/Math;->max(FF)F
 
-    const/4 v3, 0x5
+    move-result v3
 
-    aput v2, v1, v3
+    aput v3, v1, v2
 
+    .line 12
     iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mTouchRadius:[F
 
-    iget v2, v0, Landroid/graphics/RectF;->bottom:F
+    const/4 v2, 0x6
 
-    invoke-static {v2, v5}, Ljava/lang/Math;->max(FF)F
+    iget v3, v0, Landroid/graphics/RectF;->bottom:F
 
-    move-result v2
+    invoke-static {v3, v5}, Ljava/lang/Math;->max(FF)F
 
-    const/4 v3, 0x6
+    move-result v3
 
-    aput v2, v1, v3
+    aput v3, v1, v2
 
+    .line 13
     iget-object p0, p0, Lmiuix/animation/styles/TintDrawable;->mTouchRadius:[F
+
+    const/4 v1, 0x7
 
     iget v0, v0, Landroid/graphics/RectF;->bottom:F
 
     invoke-static {v0, v5}, Ljava/lang/Math;->max(FF)F
 
     move-result v0
-
-    const/4 v1, 0x7
 
     aput v0, p0, v1
 
@@ -883,6 +879,7 @@
 
     aput v1, v0, v2
 
+    .line 14
     iput-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mTouchRadius:[F
 
     goto :goto_1
@@ -891,6 +888,7 @@
     :goto_0
     new-array v1, v3, [F
 
+    .line 15
     check-cast v0, Ljava/lang/Float;
 
     invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
@@ -920,6 +918,7 @@
 .method private getTouchLocationModeFromView()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
 
     sget v1, Lmiuix/animation/R$id;->miuix_animation_tag_view_touch_rect_location_mode:I
@@ -928,10 +927,12 @@
 
     move-result-object v0
 
+    .line 2
     instance-of v1, v0, Ljava/lang/Integer;
 
     if-eqz v1, :cond_0
 
+    .line 3
     check-cast v0, Ljava/lang/Integer;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -945,6 +946,7 @@
     :cond_0
     const/4 v0, 0x1
 
+    .line 4
     iput v0, p0, Lmiuix/animation/styles/TintDrawable;->mTouchRectLocationMode:I
 
     :goto_0
@@ -954,6 +956,7 @@
 .method private getTouchRectFromView()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
 
     sget v1, Lmiuix/animation/R$id;->miuix_animation_tag_view_touch_rect:I
@@ -962,12 +965,15 @@
 
     move-result-object v0
 
+    .line 2
     instance-of v1, v0, Landroid/graphics/RectF;
 
     if-eqz v1, :cond_0
 
+    .line 3
     check-cast v0, Landroid/graphics/RectF;
 
+    .line 4
     new-instance v1, Landroid/graphics/RectF;
 
     invoke-direct {v1, v0}, Landroid/graphics/RectF;-><init>(Landroid/graphics/RectF;)V
@@ -979,6 +985,7 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 5
     iput-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mTouchRectRoundRect:Landroid/graphics/RectF;
 
     :goto_0
@@ -988,49 +995,55 @@
 .method private initBitmap(I)V
     .locals 6
 
-    iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mBitmapLock:Ljava/lang/Object;
+    const-string v0, "miuix_anim"
 
-    monitor-enter v0
+    .line 1
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const/4 v1, 0x0
+    const/16 v2, 0x17
 
-    :try_start_0
-    iput-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mInitTintTask:Ljava/lang/Runnable;
+    if-ge v1, v2, :cond_0
 
+    return-void
+
+    .line 2
+    :cond_0
     iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mBitmap:Landroid/graphics/Bitmap;
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->isRecycled()Z
 
     move-result v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
-    :cond_0
-    :try_start_1
+    .line 3
+    :cond_1
+    :try_start_0
     iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mBitmap:Landroid/graphics/Bitmap;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/graphics/Bitmap;->eraseColor(I)V
 
+    .line 4
     new-instance v1, Landroid/graphics/Canvas;
 
     iget-object v3, p0, Lmiuix/animation/styles/TintDrawable;->mBitmap:Landroid/graphics/Bitmap;
 
     invoke-direct {v1, v3}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
+    .line 5
     iget-object v3, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
 
     invoke-virtual {v3}, Landroid/view/View;->getScrollX()I
 
     move-result v3
 
+    .line 6
     iget-object v4, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
 
     invoke-virtual {v4}, Landroid/view/View;->getScrollY()I
@@ -1045,24 +1058,32 @@
 
     int-to-float v4, v4
 
+    .line 7
     invoke-virtual {v1, v3, v4}, Landroid/graphics/Canvas;->translate(FF)V
 
+    .line 8
     iget-object v3, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
 
     iget-object v4, p0, Lmiuix/animation/styles/TintDrawable;->mOriDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setForeground(Landroid/graphics/drawable/Drawable;)V
 
+    .line 9
     iget-object v3, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
 
     invoke-virtual {v3, v1}, Landroid/view/View;->draw(Landroid/graphics/Canvas;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    if-nez p1, :cond_1
+    .line 10
+    iget-object v3, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
 
-    :try_start_2
+    invoke-virtual {v3, p0}, Landroid/view/View;->setForeground(Landroid/graphics/drawable/Drawable;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+
+    if-nez p1, :cond_2
+
+    .line 11
+    :try_start_1
     new-instance p1, Landroid/graphics/ColorMatrix;
 
     const/16 v3, 0x14
@@ -1155,6 +1176,7 @@
 
     invoke-direct {p1, v3}, Landroid/graphics/ColorMatrix;-><init>([F)V
 
+    .line 12
     iget-object v2, p0, Lmiuix/animation/styles/TintDrawable;->mPaint:Landroid/graphics/Paint;
 
     new-instance v3, Landroid/graphics/ColorMatrixColorFilter;
@@ -1163,94 +1185,68 @@
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
+    .line 13
     iget-object p1, p0, Lmiuix/animation/styles/TintDrawable;->mBitmap:Landroid/graphics/Bitmap;
 
-    iget-object v2, p0, Lmiuix/animation/styles/TintDrawable;->mPaint:Landroid/graphics/Paint;
+    iget-object p0, p0, Lmiuix/animation/styles/TintDrawable;->mPaint:Landroid/graphics/Paint;
 
-    invoke-virtual {v1, p1, v5, v5, v2}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    invoke-virtual {v1, p1, v5, v5, p0}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
     goto :goto_0
 
     :catch_0
-    :try_start_3
-    const-string p1, "miuix_anim"
+    :try_start_2
+    const-string p0, "the Bitmap empty or Recycled"
 
-    const-string v1, "the Bitmap empty or Recycled"
+    .line 14
+    invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    invoke-static {p1, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_1
-    :goto_0
-    iget-object p1, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->setForeground(Landroid/graphics/drawable/Drawable;)V
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-    :try_end_3
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    goto :goto_1
+    goto :goto_0
 
     :catch_1
     move-exception p0
 
-    :try_start_4
-    const-string p1, "miuix_anim"
+    .line 15
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v1, "TintDrawable.initBitmap failed, "
 
-    const-string v2, "TintDrawable.initBitmap failed, "
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-static {p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    :goto_1
-    monitor-exit v0
-
-    return-void
+    invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
-    :goto_2
+    :goto_0
+    return-void
+
+    .line 16
+    :cond_3
+    :goto_1
     iget-object p1, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
 
     iget-object p0, p0, Lmiuix/animation/styles/TintDrawable;->mOriDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p1, p0}, Landroid/view/View;->setForeground(Landroid/graphics/drawable/Drawable;)V
 
-    monitor-exit v0
-
     return-void
-
-    :catchall_0
-    move-exception p0
-
-    monitor-exit v0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    throw p0
 .end method
 
 .method private perFromDrawRoundRectRelative(Landroid/graphics/Canvas;I)V
     .locals 5
 
-    iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mTouchRectRoundRect:Landroid/graphics/RectF;
-
-    if-eqz v0, :cond_3
-
+    .line 1
     sget-object v0, Lmiuix/animation/styles/TintDrawable$3;->$SwitchMap$miuix$animation$ITouchStyle$TouchRectGravity:[I
 
     iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mTouchRectGravity:Lmiuix/animation/ITouchStyle$TouchRectGravity;
@@ -1277,6 +1273,7 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 2
     iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getWidth()I
@@ -1299,6 +1296,7 @@
 
     mul-float/2addr v0, v3
 
+    .line 3
     iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getHeight()I
@@ -1321,6 +1319,7 @@
 
     mul-float/2addr v1, v3
 
+    .line 4
     iget-object v3, p0, Lmiuix/animation/styles/TintDrawable;->mTouchRectRoundRect:Landroid/graphics/RectF;
 
     invoke-virtual {v3}, Landroid/graphics/RectF;->width()F
@@ -1345,6 +1344,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
 
@@ -1368,6 +1368,7 @@
 
     mul-float/2addr v0, v3
 
+    .line 6
     iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mTouchRectRoundRect:Landroid/graphics/RectF;
 
     invoke-virtual {v1}, Landroid/graphics/RectF;->width()F
@@ -1392,6 +1393,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_1
     iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
 
@@ -1415,6 +1417,7 @@
 
     mul-float/2addr v0, v3
 
+    .line 8
     iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mTouchRectRoundRect:Landroid/graphics/RectF;
 
     invoke-virtual {v1}, Landroid/graphics/RectF;->width()F
@@ -1439,6 +1442,7 @@
 
     goto :goto_0
 
+    .line 9
     :cond_2
     iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mTouchRectRoundRect:Landroid/graphics/RectF;
 
@@ -1462,7 +1466,7 @@
 
     invoke-direct {p0, v2, v2, v0, v1}, Lmiuix/animation/styles/TintDrawable;->setBounds(FFFF)V
 
-    :cond_3
+    .line 10
     :goto_0
     iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mBounds:Landroid/graphics/RectF;
 
@@ -1472,15 +1476,17 @@
 .end method
 
 .method private processingOOMForDrawBitmap(Ljava/lang/RuntimeException;Landroid/graphics/Canvas;)V
-    .locals 3
+    .locals 2
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 1
+    invoke-virtual {p1}, Ljava/lang/RuntimeException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 2
+    invoke-virtual {p1}, Ljava/lang/RuntimeException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1488,9 +1494,10 @@
 
     move-result v0
 
-    if-lez v0, :cond_1
+    if-lez v0, :cond_0
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 3
+    invoke-virtual {p1}, Ljava/lang/RuntimeException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1500,94 +1507,62 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
+    .line 4
     :try_start_0
-    iget-object p1, p0, Lmiuix/animation/styles/TintDrawable;->mBitmapLock:Ljava/lang/Object;
+    iget-object p1, p0, Lmiuix/animation/styles/TintDrawable;->mBitmap:Landroid/graphics/Bitmap;
 
-    monitor-enter p1
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    const/16 v0, 0x32
 
-    :try_start_1
+    const/4 v1, 0x2
+
+    invoke-static {p1, v0, v1}, Lmiuix/animation/utils/CommonUtils;->compressImage(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lmiuix/animation/styles/TintDrawable;->mBitmap:Landroid/graphics/Bitmap;
+
+    .line 5
     iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mSrcRect:Landroid/graphics/Rect;
 
-    invoke-virtual {v0}, Landroid/graphics/Rect;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mBounds:Landroid/graphics/RectF;
-
-    invoke-virtual {v0}, Landroid/graphics/RectF;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mBitmap:Landroid/graphics/Bitmap;
-
-    const/16 v1, 0x32
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v1, v2}, Lmiuix/animation/utils/CommonUtils;->compressImage(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mBitmap:Landroid/graphics/Bitmap;
-
-    iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mSrcRect:Landroid/graphics/Rect;
-
-    iget-object v2, p0, Lmiuix/animation/styles/TintDrawable;->mBounds:Landroid/graphics/RectF;
+    iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mBounds:Landroid/graphics/RectF;
 
     iget-object p0, p0, Lmiuix/animation/styles/TintDrawable;->mPaint:Landroid/graphics/Paint;
 
-    invoke-virtual {p2, v0, v1, v2, p0}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/RectF;Landroid/graphics/Paint;)V
-
-    :cond_0
-    monitor-exit p1
+    invoke-virtual {p2, p1, v0, v1, p0}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/RectF;Landroid/graphics/Paint;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    monitor-exit p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :try_start_2
-    throw p0
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
     :catch_0
     move-exception p0
 
-    const-string p1, "miuix_anim"
+    .line 6
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+    const-string p2, "TintDrawable.processingOOMForDrawBitmap failed, "
 
-    const-string v0, "TintDrawable.processingOOMForDrawBitmap failed, "
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
+
+    const-string p1, "miuix_anim"
 
     invoke-static {p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
     return-void
 
-    :cond_1
+    .line 7
+    :cond_0
     throw p1
 .end method
 
@@ -1598,6 +1573,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p2, p0, Lmiuix/animation/styles/TintDrawable;->mTouchRadius:[F
 
     array-length v0, p2
@@ -1608,14 +1584,18 @@
 
     const/4 v0, 0x0
 
+    .line 2
+    aget v1, p2, v0
+
     aget p2, p2, v0
 
     iget-object p0, p0, Lmiuix/animation/styles/TintDrawable;->mPaint:Landroid/graphics/Paint;
 
-    invoke-virtual {p1, p3, p2, p2, p0}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
+    invoke-virtual {p1, p3, v1, p2, p0}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
     goto :goto_0
 
+    .line 3
     :cond_0
     array-length p2, p2
 
@@ -1623,16 +1603,19 @@
 
     if-ne p2, v0, :cond_1
 
+    .line 4
     new-instance p2, Landroid/graphics/Path;
 
     invoke-direct {p2}, Landroid/graphics/Path;-><init>()V
 
+    .line 5
     iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mTouchRadius:[F
 
     sget-object v1, Landroid/graphics/Path$Direction;->CCW:Landroid/graphics/Path$Direction;
 
     invoke-virtual {p2, p3, v0, v1}, Landroid/graphics/Path;->addRoundRect(Landroid/graphics/RectF;[FLandroid/graphics/Path$Direction;)V
 
+    .line 6
     iget-object p0, p0, Lmiuix/animation/styles/TintDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, p2, p0}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
@@ -1643,63 +1626,63 @@
 .end method
 
 .method private recycleBitmap()V
-    .locals 2
+    .locals 1
 
-    iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mBitmapLock:Ljava/lang/Object;
+    .line 1
+    iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mBitmap:Landroid/graphics/Bitmap;
 
-    monitor-enter v0
+    if-eqz v0, :cond_0
 
-    :try_start_0
-    iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mBitmap:Landroid/graphics/Bitmap;
+    .line 2
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    if-eqz v1, :cond_0
+    const/4 v0, 0x0
 
-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
-
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mBitmap:Landroid/graphics/Bitmap;
+    .line 3
+    iput-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mBitmap:Landroid/graphics/Bitmap;
 
     :cond_0
-    monitor-exit v0
-
     return-void
-
-    :catchall_0
-    move-exception p0
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
 .end method
 
 .method public static setAndGet(Landroid/view/View;)Lmiuix/animation/styles/TintDrawable;
-    .locals 2
+    .locals 3
 
+    .line 1
     invoke-static {p0}, Lmiuix/animation/styles/TintDrawable;->get(Landroid/view/View;)Lmiuix/animation/styles/TintDrawable;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
+    .line 2
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v2, 0x17
+
+    if-lt v1, v2, :cond_0
+
+    .line 3
     new-instance v0, Lmiuix/animation/styles/TintDrawable;
 
     invoke-direct {v0}, Lmiuix/animation/styles/TintDrawable;-><init>()V
 
+    .line 4
     iput-object p0, v0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
 
+    .line 5
     invoke-virtual {p0}, Landroid/view/View;->getForeground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Lmiuix/animation/styles/TintDrawable;->setOriDrawable(Landroid/graphics/drawable/Drawable;)V
 
+    .line 6
     sget-object v1, Lmiuix/animation/styles/TintDrawable;->sListener:Landroid/view/View$OnAttachStateChangeListener;
 
     invoke-virtual {p0, v1}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
+    .line 7
     new-instance v1, Lmiuix/animation/styles/TintDrawable$2;
 
     invoke-direct {v1, p0, v0}, Lmiuix/animation/styles/TintDrawable$2;-><init>(Landroid/view/View;Lmiuix/animation/styles/TintDrawable;)V
@@ -1783,6 +1766,7 @@
 .method private setOriDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/animation/styles/TintDrawable;->mOriDrawable:Landroid/graphics/drawable/Drawable;
 
     return-void
@@ -1791,8 +1775,10 @@
 .method private tintStyleLoadData()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lmiuix/animation/styles/TintDrawable;->getTouchLocationModeFromView()V
 
+    .line 2
     iget v0, p0, Lmiuix/animation/styles/TintDrawable;->mTouchRectLocationMode:I
 
     const/4 v1, 0x1
@@ -1813,29 +1799,37 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-direct {p0}, Lmiuix/animation/styles/TintDrawable;->getRectRoundRadiusFromView()V
 
+    .line 4
     invoke-direct {p0}, Lmiuix/animation/styles/TintDrawable;->getTouchRectFromView()V
 
+    .line 5
     invoke-direct {p0}, Lmiuix/animation/styles/TintDrawable;->getRectRoundGravityFromView()V
 
     goto :goto_0
 
+    .line 6
     :cond_1
     invoke-direct {p0}, Lmiuix/animation/styles/TintDrawable;->getRectRoundRadiusFromView()V
 
+    .line 7
     invoke-direct {p0}, Lmiuix/animation/styles/TintDrawable;->getRectRoundPaddingsFromView()V
 
     goto :goto_0
 
+    .line 8
     :cond_2
     invoke-direct {p0}, Lmiuix/animation/styles/TintDrawable;->getRectRoundRadiusFromView()V
 
+    .line 9
     invoke-direct {p0}, Lmiuix/animation/styles/TintDrawable;->getTouchRectFromView()V
 
     goto :goto_0
 
+    .line 10
     :cond_3
     invoke-direct {p0}, Lmiuix/animation/styles/TintDrawable;->getRectRoundRadiusFromView()V
 
@@ -1852,30 +1846,35 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getScrollX()I
 
     move-result v0
 
+    .line 2
     iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getScrollY()I
 
     move-result v1
 
+    .line 3
     iget-object v2, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
 
     invoke-virtual {v2}, Landroid/view/View;->getWidth()I
 
     move-result v2
 
+    .line 4
     iget-object v3, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
 
     invoke-virtual {v3}, Landroid/view/View;->getHeight()I
 
     move-result v3
 
+    .line 5
     iget-object v4, p0, Lmiuix/animation/styles/TintDrawable;->mBounds:Landroid/graphics/RectF;
 
     int-to-float v5, v0
@@ -1892,14 +1891,17 @@
 
     invoke-virtual {v4, v5, v6, v0, v1}, Landroid/graphics/RectF;->set(FFFF)V
 
+    .line 6
     iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mSrcRect:Landroid/graphics/Rect;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1, v1, v2, v3}, Landroid/graphics/Rect;->set(IIII)V
 
+    .line 7
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
+    .line 8
     sget-object v0, Lmiuix/animation/property/ViewPropertyExt;->FOREGROUND:Lmiuix/animation/property/ViewPropertyExt$ForegroundProperty;
 
     iget-object v2, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
@@ -1908,19 +1910,24 @@
 
     move-result v0
 
+    .line 9
     :try_start_0
     iget-object v2, p0, Lmiuix/animation/styles/TintDrawable;->mBounds:Landroid/graphics/RectF;
 
     invoke-virtual {p1, v2}, Landroid/graphics/Canvas;->clipRect(Landroid/graphics/RectF;)Z
 
+    .line 10
     invoke-virtual {p1, v1}, Landroid/graphics/Canvas;->drawColor(I)V
 
+    .line 11
     iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mOriDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_0
 
+    .line 12
     invoke-virtual {v1, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
+    .line 13
     :cond_0
     iget v1, p0, Lmiuix/animation/styles/TintDrawable;->mTintStyle:I
 
@@ -1932,15 +1939,18 @@
 
     if-eq v1, v2, :cond_1
 
+    .line 14
     invoke-direct {p0, p1, v0}, Lmiuix/animation/styles/TintDrawable;->drawBlackeningByExtractingBg(Landroid/graphics/Canvas;I)V
 
     goto :goto_0
 
+    .line 15
     :cond_1
     invoke-direct {p0, p1, v0}, Lmiuix/animation/styles/TintDrawable;->drawHoverTint(Landroid/graphics/Canvas;I)V
 
     goto :goto_0
 
+    .line 16
     :cond_2
     invoke-direct {p0, p1, v0}, Lmiuix/animation/styles/TintDrawable;->drawRectRound(Landroid/graphics/Canvas;I)V
     :try_end_0
@@ -1957,11 +1967,13 @@
     :catch_0
     move-exception v0
 
+    .line 17
     :try_start_1
     invoke-direct {p0, v0, p1}, Lmiuix/animation/styles/TintDrawable;->processingOOMForDrawBitmap(Ljava/lang/RuntimeException;Landroid/graphics/Canvas;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 18
     :goto_0
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
@@ -1970,6 +1982,7 @@
     :goto_1
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
+    .line 19
     throw p0
 .end method
 
@@ -1981,42 +1994,39 @@
     return p0
 .end method
 
-.method public declared-synchronized initTintBuffer(I)V
+.method public initTintBuffer(I)V
     .locals 2
 
-    monitor-enter p0
-
-    :try_start_0
+    .line 1
     iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-nez v0, :cond_0
 
-    monitor-exit p0
-
     return-void
 
+    .line 2
     :cond_0
-    :try_start_1
     invoke-direct {p0, p1}, Lmiuix/animation/styles/TintDrawable;->getRectRoundEnableFromView(I)V
 
+    .line 3
     iget v0, p0, Lmiuix/animation/styles/TintDrawable;->mTintStyle:I
 
     const/4 v1, 0x2
 
-    if-eq v0, v1, :cond_4
+    if-eq v0, v1, :cond_3
 
     const/4 v1, 0x4
 
-    if-eq v0, v1, :cond_5
+    if-eq v0, v1, :cond_4
 
+    .line 4
     iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
     move-result v0
 
+    .line 5
     iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getHeight()I
@@ -2029,103 +2039,41 @@
 
     goto :goto_0
 
+    .line 6
     :cond_1
-    invoke-direct {p0, v0, v1}, Lmiuix/animation/styles/TintDrawable;->createBitmap(II)Z
+    invoke-direct {p0, v0, v1}, Lmiuix/animation/styles/TintDrawable;->createBitmap(II)V
 
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    new-instance v0, Lmiuix/animation/styles/TintDrawable$InitTintTask;
-
-    invoke-direct {v0, p0, p1}, Lmiuix/animation/styles/TintDrawable$InitTintTask;-><init>(Lmiuix/animation/styles/TintDrawable;I)V
-
-    iput-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mInitTintTask:Ljava/lang/Runnable;
-
-    iget-object p1, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+    .line 7
+    invoke-direct {p0, p1}, Lmiuix/animation/styles/TintDrawable;->initBitmap(I)V
 
     goto :goto_1
 
+    .line 8
     :cond_2
     :goto_0
     invoke-direct {p0}, Lmiuix/animation/styles/TintDrawable;->recycleBitmap()V
 
-    iget-object p1, p0, Lmiuix/animation/styles/TintDrawable;->mInitTintTask:Ljava/lang/Runnable;
-
-    if-eqz p1, :cond_3
-
-    iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lmiuix/animation/styles/TintDrawable;->mInitTintTask:Ljava/lang/Runnable;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :cond_3
-    monitor-exit p0
-
     return-void
+
+    .line 9
+    :cond_3
+    invoke-direct {p0}, Lmiuix/animation/styles/TintDrawable;->tintStyleLoadData()V
 
     :cond_4
-    :try_start_2
-    invoke-direct {p0}, Lmiuix/animation/styles/TintDrawable;->tintStyleLoadData()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :cond_5
     :goto_1
-    monitor-exit p0
-
     return-void
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit p0
-
-    throw p1
 .end method
 
-.method public declared-synchronized restoreOriginalDrawable()V
-    .locals 2
+.method public restoreOriginalDrawable()V
+    .locals 0
 
-    monitor-enter p0
-
-    :try_start_0
+    .line 1
     invoke-direct {p0}, Lmiuix/animation/styles/TintDrawable;->clear()V
 
-    iget-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mInitTintTask:Ljava/lang/Runnable;
-
-    if-eqz v0, :cond_0
-
-    iget-object v1, p0, Lmiuix/animation/styles/TintDrawable;->mView:Landroid/view/View;
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lmiuix/animation/styles/TintDrawable;->mInitTintTask:Ljava/lang/Runnable;
-
-    :cond_0
+    .line 2
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
 
     return-void
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
 .end method
 
 .method public setAlpha(I)V
@@ -2157,12 +2105,14 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     iget v0, p0, Lmiuix/animation/styles/TintDrawable;->mTintStyle:I
 
     :goto_0
     iput v0, p0, Lmiuix/animation/styles/TintDrawable;->mTintStyle:I
 
+    .line 2
     iput p1, p0, Lmiuix/animation/styles/TintDrawable;->mHoverRadius:F
 
     return-void

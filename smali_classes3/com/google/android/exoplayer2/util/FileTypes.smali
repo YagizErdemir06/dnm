@@ -92,7 +92,7 @@
 
 .field public static final FLV:I = 0x5
 
-.field static final HEADER_CONTENT_TYPE:Ljava/lang/String; = "Content-Type"
+.field public static final HEADER_CONTENT_TYPE:Ljava/lang/String; = "Content-Type"
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 .end field
@@ -124,6 +124,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -142,11 +143,13 @@
 
     return v0
 
+    .line 1
     :cond_0
     invoke-static/range {p0 .. p0}, Lcom/google/android/exoplayer2/util/MimeTypes;->normalizeMimeType(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 2
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
@@ -737,6 +740,7 @@
 
     const-string v0, "Content-Type"
 
+    .line 1
     invoke-interface {p0, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -745,6 +749,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 2
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
@@ -768,6 +773,7 @@
     :goto_0
     const/4 p0, 0x0
 
+    .line 3
     :goto_1
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/FileTypes;->inferFileTypeFromMimeType(Ljava/lang/String;)I
 
@@ -779,6 +785,7 @@
 .method public static inferFileTypeFromUri(Landroid/net/Uri;)I
     .locals 6
 
+    .line 1
     invoke-virtual {p0}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object p0
@@ -792,6 +799,7 @@
     :cond_0
     const-string v1, ".ac3"
 
+    .line 2
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -811,6 +819,7 @@
     :cond_1
     const-string v1, ".ac4"
 
+    .line 3
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -824,6 +833,7 @@
     :cond_2
     const-string v1, ".adts"
 
+    .line 4
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -843,6 +853,7 @@
     :cond_3
     const-string v1, ".amr"
 
+    .line 5
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -856,6 +867,7 @@
     :cond_4
     const-string v1, ".flac"
 
+    .line 6
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -869,6 +881,7 @@
     :cond_5
     const-string v1, ".flv"
 
+    .line 7
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -882,6 +895,7 @@
     :cond_6
     const-string v1, ".mid"
 
+    .line 8
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -890,6 +904,7 @@
 
     const-string v1, ".midi"
 
+    .line 9
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -898,6 +913,7 @@
 
     const-string v1, ".smf"
 
+    .line 10
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -906,6 +922,7 @@
 
     goto/16 :goto_8
 
+    .line 11
     :cond_7
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -915,6 +932,7 @@
 
     const-string v4, ".mk"
 
+    .line 12
     invoke-virtual {p0, v4, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;I)Z
 
     move-result v1
@@ -923,6 +941,7 @@
 
     const-string v1, ".webm"
 
+    .line 13
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -934,6 +953,7 @@
     :cond_8
     const-string v1, ".mp3"
 
+    .line 14
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -947,12 +967,14 @@
     :cond_9
     const-string v1, ".mp4"
 
+    .line 15
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v4
 
     if-nez v4, :cond_18
 
+    .line 16
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v4
@@ -961,24 +983,28 @@
 
     const-string v5, ".m4"
 
+    .line 17
     invoke-virtual {p0, v5, v4}, Ljava/lang/String;->startsWith(Ljava/lang/String;I)Z
 
     move-result v4
 
     if-nez v4, :cond_18
 
+    .line 18
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v4
 
     sub-int/2addr v4, v3
 
+    .line 19
     invoke-virtual {p0, v1, v4}, Ljava/lang/String;->startsWith(Ljava/lang/String;I)Z
 
     move-result v1
 
     if-nez v1, :cond_18
 
+    .line 20
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -987,6 +1013,7 @@
 
     const-string v3, ".cmf"
 
+    .line 21
     invoke-virtual {p0, v3, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;I)Z
 
     move-result v1
@@ -995,6 +1022,7 @@
 
     goto/16 :goto_6
 
+    .line 22
     :cond_a
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -1004,6 +1032,7 @@
 
     const-string v3, ".og"
 
+    .line 23
     invoke-virtual {p0, v3, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;I)Z
 
     move-result v1
@@ -1012,6 +1041,7 @@
 
     const-string v1, ".opus"
 
+    .line 24
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -1023,6 +1053,7 @@
     :cond_b
     const-string v1, ".ps"
 
+    .line 25
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -1031,6 +1062,7 @@
 
     const-string v1, ".mpeg"
 
+    .line 26
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -1039,6 +1071,7 @@
 
     const-string v1, ".mpg"
 
+    .line 27
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -1047,6 +1080,7 @@
 
     const-string v1, ".m2p"
 
+    .line 28
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -1058,18 +1092,21 @@
     :cond_c
     const-string v1, ".ts"
 
+    .line 29
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v3
 
     if-nez v3, :cond_15
 
+    .line 30
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v3
 
     sub-int/2addr v3, v2
 
+    .line 31
     invoke-virtual {p0, v1, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;I)Z
 
     move-result v1
@@ -1081,6 +1118,7 @@
     :cond_d
     const-string v1, ".wav"
 
+    .line 32
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -1100,6 +1138,7 @@
     :cond_e
     const-string v1, ".vtt"
 
+    .line 33
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -1119,6 +1158,7 @@
     :cond_f
     const-string v1, ".jpg"
 
+    .line 34
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -1138,6 +1178,7 @@
     :cond_10
     const-string v1, ".avi"
 
+    .line 35
     invoke-virtual {p0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result p0

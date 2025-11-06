@@ -1,4 +1,4 @@
-.class final Lcom/google/common/graph/DirectedGraphConnections$PredAndSucc;
+.class public final Lcom/google/common/graph/DirectedGraphConnections$PredAndSucc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,8 +22,10 @@
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/graph/DirectedGraphConnections$PredAndSucc;->successorValue:Ljava/lang/Object;
 
     return-void
@@ -32,6 +34,7 @@
 .method public static synthetic access$600(Lcom/google/common/graph/DirectedGraphConnections$PredAndSucc;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/DirectedGraphConnections$PredAndSucc;->successorValue:Ljava/lang/Object;
 
     return-object p0

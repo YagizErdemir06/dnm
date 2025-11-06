@@ -30,6 +30,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ForwardingDeque;-><init>()V
 
     return-void
@@ -106,7 +107,7 @@
 
     move-result-object p0
 
-    invoke-interface {p0, p1}, Ljava/util/concurrent/BlockingQueue;->drainTo(Ljava/util/Collection;)I
+    invoke-interface {p0, p1}, Ljava/util/concurrent/BlockingDeque;->drainTo(Ljava/util/Collection;)I
 
     move-result p0
 
@@ -128,7 +129,7 @@
 
     move-result-object p0
 
-    invoke-interface {p0, p1, p2}, Ljava/util/concurrent/BlockingQueue;->drainTo(Ljava/util/Collection;I)I
+    invoke-interface {p0, p1, p2}, Ljava/util/concurrent/BlockingDeque;->drainTo(Ljava/util/Collection;I)I
 
     move-result p0
 
@@ -151,6 +152,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingBlockingDeque;->delegate()Ljava/util/concurrent/BlockingDeque;
 
     move-result-object p0
@@ -178,6 +180,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingBlockingDeque;->delegate()Ljava/util/concurrent/BlockingDeque;
 
     move-result-object p0
@@ -205,6 +208,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingBlockingDeque;->delegate()Ljava/util/concurrent/BlockingDeque;
 
     move-result-object p0
@@ -235,6 +239,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingBlockingDeque;->delegate()Ljava/util/concurrent/BlockingDeque;
 
     move-result-object p0
@@ -265,6 +270,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingBlockingDeque;->delegate()Ljava/util/concurrent/BlockingDeque;
 
     move-result-object p0
@@ -295,6 +301,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingBlockingDeque;->delegate()Ljava/util/concurrent/BlockingDeque;
 
     move-result-object p0
@@ -320,6 +327,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingBlockingDeque;->delegate()Ljava/util/concurrent/BlockingDeque;
 
     move-result-object p0
@@ -343,6 +351,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingBlockingDeque;->delegate()Ljava/util/concurrent/BlockingDeque;
 
     move-result-object p0
@@ -366,6 +375,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingBlockingDeque;->delegate()Ljava/util/concurrent/BlockingDeque;
 
     move-result-object p0
@@ -378,11 +388,12 @@
 .method public remainingCapacity()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingBlockingDeque;->delegate()Ljava/util/concurrent/BlockingDeque;
 
     move-result-object p0
 
-    invoke-interface {p0}, Ljava/util/concurrent/BlockingQueue;->remainingCapacity()I
+    invoke-interface {p0}, Ljava/util/concurrent/BlockingDeque;->remainingCapacity()I
 
     move-result p0
 
@@ -403,6 +414,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingBlockingDeque;->delegate()Ljava/util/concurrent/BlockingDeque;
 
     move-result-object p0
@@ -428,6 +440,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingBlockingDeque;->delegate()Ljava/util/concurrent/BlockingDeque;
 
     move-result-object p0
@@ -453,6 +466,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingBlockingDeque;->delegate()Ljava/util/concurrent/BlockingDeque;
 
     move-result-object p0

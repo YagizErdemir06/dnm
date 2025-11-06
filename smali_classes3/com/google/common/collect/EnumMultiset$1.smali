@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/EnumMultiset$1;
+.class public Lcom/google/common/collect/EnumMultiset$1;
 .super Lcom/google/common/collect/EnumMultiset$Itr;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/EnumMultiset;
+.field public final synthetic this$0:Lcom/google/common/collect/EnumMultiset;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/EnumMultiset;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/EnumMultiset$1;->this$0:Lcom/google/common/collect/EnumMultiset;
 
     invoke-direct {p0, p1}, Lcom/google/common/collect/EnumMultiset$Itr;-><init>(Lcom/google/common/collect/EnumMultiset;)V

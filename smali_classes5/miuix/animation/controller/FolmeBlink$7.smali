@@ -1,4 +1,4 @@
-.class Lmiuix/animation/controller/FolmeBlink$7;
+.class public Lmiuix/animation/controller/FolmeBlink$7;
 .super Lmiuix/animation/listener/TransitionListener;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lmiuix/animation/controller/FolmeBlink;
+.field public final synthetic this$0:Lmiuix/animation/controller/FolmeBlink;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/animation/controller/FolmeBlink;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/animation/controller/FolmeBlink$7;->this$0:Lmiuix/animation/controller/FolmeBlink;
 
     invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
@@ -34,35 +35,10 @@
 .method public onComplete(Ljava/lang/Object;)V
     .locals 3
 
+    .line 1
     invoke-super {p0, p1}, Lmiuix/animation/listener/TransitionListener;->onComplete(Ljava/lang/Object;)V
 
-    invoke-static {}, Lmiuix/animation/utils/LogUtils;->isLogMainEnabled()Z
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "blink: onComplete "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    new-array v0, v1, [Ljava/lang/Object;
-
-    invoke-static {p1, v0}, Lmiuix/animation/utils/LogUtils;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    :cond_0
+    .line 2
     iget-object p1, p0, Lmiuix/animation/controller/FolmeBlink$7;->this$0:Lmiuix/animation/controller/FolmeBlink;
 
     iget-object p1, p1, Lmiuix/animation/controller/FolmeBase;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
@@ -73,19 +49,21 @@
 
     move-result-object v0
 
-    const/4 v2, 0x1
+    const/4 v1, 0x1
 
-    new-array v2, v2, [Lmiuix/animation/base/AnimConfig;
+    new-array v1, v1, [Lmiuix/animation/base/AnimConfig;
 
     iget-object p0, p0, Lmiuix/animation/controller/FolmeBlink$7;->this$0:Lmiuix/animation/controller/FolmeBlink;
 
-    invoke-static {p0}, Lmiuix/animation/controller/FolmeBlink;->access$200(Lmiuix/animation/controller/FolmeBlink;)Lmiuix/animation/base/AnimConfig;
+    invoke-static {p0}, Lmiuix/animation/controller/FolmeBlink;->access$100(Lmiuix/animation/controller/FolmeBlink;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object p0
 
-    aput-object p0, v2, v1
+    const/4 v2, 0x0
 
-    invoke-interface {p1, v0, v2}, Lmiuix/animation/IStateStyle;->to(Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
+    aput-object p0, v1, v2
+
+    invoke-interface {p1, v0, v1}, Lmiuix/animation/IStateStyle;->to(Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
 
     return-void
 .end method

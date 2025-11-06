@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/CompactHashMap$ValuesView;
+.class public Lcom/google/common/collect/CompactHashMap$ValuesView;
 .super Ljava/util/AbstractCollection;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/CompactHashMap;
+.field public final synthetic this$0:Lcom/google/common/collect/CompactHashMap;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/CompactHashMap;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/CompactHashMap$ValuesView;->this$0:Lcom/google/common/collect/CompactHashMap;
 
     invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
@@ -41,6 +42,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/CompactHashMap$ValuesView;->this$0:Lcom/google/common/collect/CompactHashMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/CompactHashMap;->clear()V
@@ -58,6 +60,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/CompactHashMap$ValuesView;->this$0:Lcom/google/common/collect/CompactHashMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/CompactHashMap;->valuesIterator()Ljava/util/Iterator;
@@ -70,6 +73,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/CompactHashMap$ValuesView;->this$0:Lcom/google/common/collect/CompactHashMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/CompactHashMap;->size()I

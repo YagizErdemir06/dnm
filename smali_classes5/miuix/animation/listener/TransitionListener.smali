@@ -47,14 +47,38 @@
     return-void
 .end method
 
+.method public onBegin(Ljava/lang/Object;Lmiuix/animation/listener/UpdateInfo;)V
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    return-void
+.end method
+
 .method public onCancel(Ljava/lang/Object;)V
     .locals 0
 
     return-void
 .end method
 
+.method public onCancel(Ljava/lang/Object;Lmiuix/animation/listener/UpdateInfo;)V
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    return-void
+.end method
+
 .method public onComplete(Ljava/lang/Object;)V
     .locals 0
+
+    return-void
+.end method
+
+.method public onComplete(Ljava/lang/Object;Lmiuix/animation/listener/UpdateInfo;)V
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
     return-void
 .end method
@@ -69,6 +93,30 @@
             "Lmiuix/animation/listener/UpdateInfo;",
             ">;)V"
         }
+    .end annotation
+
+    return-void
+.end method
+
+.method public onUpdate(Ljava/lang/Object;Lmiuix/animation/property/FloatProperty;FFZ)V
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    return-void
+.end method
+
+.method public onUpdate(Ljava/lang/Object;Lmiuix/animation/property/FloatProperty;FZ)V
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    return-void
+.end method
+
+.method public onUpdate(Ljava/lang/Object;Lmiuix/animation/property/IIntValueProperty;IFZ)V
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     return-void

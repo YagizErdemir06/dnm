@@ -26,21 +26,23 @@
 .method public final get()Ljava/lang/Object;
     .locals 4
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_common/zzps;->zza:Lcom/google/android/datatransport/TransportFactory;
 
-    const-string v0, "json"
+    const-class v0, [B
 
-    invoke-static {v0}, Lcom/google/android/datatransport/Encoding;->of(Ljava/lang/String;)Lcom/google/android/datatransport/Encoding;
+    const-string v1, "json"
 
-    move-result-object v0
+    invoke-static {v1}, Lcom/google/android/datatransport/Encoding;->of(Ljava/lang/String;)Lcom/google/android/datatransport/Encoding;
 
-    sget-object v1, Lcom/google/android/gms/internal/mlkit_common/zzpu;->zza:Lcom/google/android/gms/internal/mlkit_common/zzpu;
+    move-result-object v1
 
-    const-string v2, "FIREBASE_ML_SDK"
+    sget-object v2, Lcom/google/android/gms/internal/mlkit_common/zzpu;->zza:Lcom/google/android/gms/internal/mlkit_common/zzpu;
 
-    const-class v3, [B
+    const-string v3, "FIREBASE_ML_SDK"
 
-    invoke-interface {p0, v2, v3, v0, v1}, Lcom/google/android/datatransport/TransportFactory;->getTransport(Ljava/lang/String;Ljava/lang/Class;Lcom/google/android/datatransport/Encoding;Lcom/google/android/datatransport/Transformer;)Lcom/google/android/datatransport/Transport;
+    .line 2
+    invoke-interface {p0, v3, v0, v1, v2}, Lcom/google/android/datatransport/TransportFactory;->getTransport(Ljava/lang/String;Ljava/lang/Class;Lcom/google/android/datatransport/Encoding;Lcom/google/android/datatransport/Transformer;)Lcom/google/android/datatransport/Transport;
 
     move-result-object p0
 

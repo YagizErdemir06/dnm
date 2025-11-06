@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ForwardingNavigableMap$StandardDescendingMap$1;
+.class public Lcom/google/common/collect/ForwardingNavigableMap$StandardDescendingMap$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -39,7 +39,7 @@
     .end annotation
 .end field
 
-.field final synthetic this$1:Lcom/google/common/collect/ForwardingNavigableMap$StandardDescendingMap;
+.field public final synthetic this$1:Lcom/google/common/collect/ForwardingNavigableMap$StandardDescendingMap;
 
 .field private toRemove:Ljava/util/Map$Entry;
     .annotation system Ldalvik/annotation/Signature;
@@ -58,14 +58,17 @@
 .method public constructor <init>(Lcom/google/common/collect/ForwardingNavigableMap$StandardDescendingMap;)V
     .locals 1
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/ForwardingNavigableMap$StandardDescendingMap$1;->this$1:Lcom/google/common/collect/ForwardingNavigableMap$StandardDescendingMap;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Lcom/google/common/collect/ForwardingNavigableMap$StandardDescendingMap$1;->toRemove:Ljava/util/Map$Entry;
 
+    .line 3
     invoke-virtual {p1}, Lcom/google/common/collect/ForwardingNavigableMap$StandardDescendingMap;->forward()Ljava/util/NavigableMap;
 
     move-result-object p1
@@ -84,6 +87,7 @@
 .method public hasNext()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ForwardingNavigableMap$StandardDescendingMap$1;->nextOrNull:Ljava/util/Map$Entry;
 
     if-eqz p0, :cond_0
@@ -161,10 +165,12 @@
 .method public remove()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/ForwardingNavigableMap$StandardDescendingMap$1;->toRemove:Ljava/util/Map$Entry;
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/ForwardingNavigableMap$StandardDescendingMap$1;->this$1:Lcom/google/common/collect/ForwardingNavigableMap$StandardDescendingMap;
 
     invoke-virtual {v0}, Lcom/google/common/collect/ForwardingNavigableMap$StandardDescendingMap;->forward()Ljava/util/NavigableMap;
@@ -177,14 +183,16 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Ljava/util/NavigableMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     const/4 v0, 0x0
 
+    .line 3
     iput-object v0, p0, Lcom/google/common/collect/ForwardingNavigableMap$StandardDescendingMap$1;->toRemove:Ljava/util/Map$Entry;
 
     return-void
 
+    .line 4
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 

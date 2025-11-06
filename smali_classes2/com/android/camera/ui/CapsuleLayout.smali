@@ -8,17 +8,17 @@
 
 
 # instance fields
-.field protected isAnimatorEnd:Ljava/lang/Boolean;
+.field public isAnimatorEnd:Ljava/lang/Boolean;
 
-.field protected mOffset:I
+.field public mOffset:I
 
-.field protected mProgress:F
+.field public mProgress:F
 
-.field protected mShowAnimator:Landroid/animation/ValueAnimator;
+.field public mShowAnimator:Landroid/animation/ValueAnimator;
 
-.field protected mTarget:Landroid/view/View;
+.field public mTarget:Landroid/view/View;
 
-.field protected mTargetId:I
+.field public mTargetId:I
 
 
 # direct methods
@@ -28,6 +28,14 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -47,6 +55,16 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     const/4 v0, -0x1
 
@@ -66,6 +84,18 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr"
+        }
+    .end annotation
 
     .line 3
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -81,7 +111,7 @@
     iput-object p3, p0, Lcom/android/camera/ui/CapsuleLayout;->isAnimatorEnd:Ljava/lang/Boolean;
 
     .line 6
-    sget-object p3, Lcom/android/camera/n4$u;->CapsuleLayout:[I
+    sget-object p3, Ld/d/a/k5$u;->CapsuleLayout:[I
 
     invoke-virtual {p1, p2, p3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -109,17 +139,20 @@
 .method public ensureTarget()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera/ui/CapsuleLayout;->mTarget:Landroid/view/View;
 
     if-nez v0, :cond_1
 
+    .line 2
     iget v0, p0, Lcom/android/camera/ui/CapsuleLayout;->mTargetId:I
 
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    .line 3
+    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -127,6 +160,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -136,6 +170,7 @@
 
     throw p0
 
+    .line 5
     :cond_1
     :goto_0
     iget-object p0, p0, Lcom/android/camera/ui/CapsuleLayout;->mTarget:Landroid/view/View;
@@ -144,6 +179,7 @@
 
     return-void
 
+    .line 6
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -157,6 +193,7 @@
 .method public getAnimatorEnd()Ljava/lang/Boolean;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera/ui/CapsuleLayout;->isAnimatorEnd:Ljava/lang/Boolean;
 
     return-object p0
@@ -164,7 +201,24 @@
 
 .method public onLayout(ZIIII)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "changed",
+            "left",
+            "top",
+            "right",
+            "bottom"
+        }
+    .end annotation
 
+    .line 1
     iget-object p1, p0, Lcom/android/camera/ui/CapsuleLayout;->mTarget:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
@@ -185,8 +239,10 @@
 
     iput p1, p0, Lcom/android/camera/ui/CapsuleLayout;->mOffset:I
 
+    .line 2
     iget-object p1, p0, Lcom/android/camera/ui/CapsuleLayout;->mTarget:Landroid/view/View;
 
+    .line 3
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result p2
@@ -199,6 +255,7 @@
 
     iget-object p3, p0, Lcom/android/camera/ui/CapsuleLayout;->mTarget:Landroid/view/View;
 
+    .line 4
     invoke-virtual {p3}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result p3
@@ -219,6 +276,7 @@
 
     const/4 p4, 0x0
 
+    .line 5
     invoke-virtual {p1, p2, p4, p3, p0}, Landroid/view/View;->layout(IIII)V
 
     return-void
@@ -226,29 +284,46 @@
 
 .method public onMeasure(II)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "widthMeasureSpec",
+            "heightMeasureSpec"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera/ui/CapsuleLayout;->ensureTarget()V
 
+    .line 2
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
     move-result v0
 
+    .line 3
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
     move-result v1
 
+    .line 4
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v2
 
+    .line 5
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v3
 
+    .line 6
     iget-object v4, p0, Lcom/android/camera/ui/CapsuleLayout;->mTarget:Landroid/view/View;
 
-    invoke-virtual {p0, v4, p1, p2}, Landroid/view/ViewGroup;->measureChild(Landroid/view/View;II)V
+    invoke-virtual {p0, v4, p1, p2}, Landroid/widget/FrameLayout;->measureChild(Landroid/view/View;II)V
 
+    .line 7
     iget-object p1, p0, Lcom/android/camera/ui/CapsuleLayout;->mTarget:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
@@ -257,12 +332,14 @@
 
     if-le v2, p1, :cond_0
 
+    .line 8
     iget-object p1, p0, Lcom/android/camera/ui/CapsuleLayout;->mTarget:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v2
 
+    .line 9
     :cond_0
     iget-object p1, p0, Lcom/android/camera/ui/CapsuleLayout;->mTarget:Landroid/view/View;
 
@@ -272,6 +349,7 @@
 
     if-le v3, p1, :cond_1
 
+    .line 10
     iget-object p1, p0, Lcom/android/camera/ui/CapsuleLayout;->mTarget:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
@@ -285,6 +363,7 @@
 
     goto :goto_0
 
+    .line 11
     :cond_2
     iget-object p2, p0, Lcom/android/camera/ui/CapsuleLayout;->mTarget:Landroid/view/View;
 
@@ -297,6 +376,7 @@
 
     goto :goto_1
 
+    .line 12
     :cond_3
     iget-object p1, p0, Lcom/android/camera/ui/CapsuleLayout;->mTarget:Landroid/view/View;
 
@@ -304,8 +384,9 @@
 
     move-result v3
 
+    .line 13
     :goto_1
-    invoke-virtual {p0, v2, v3}, Landroid/view/View;->setMeasuredDimension(II)V
+    invoke-virtual {p0, v2, v3}, Landroid/widget/FrameLayout;->setMeasuredDimension(II)V
 
     return-void
 .end method
@@ -316,7 +397,16 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "target"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/ui/CapsuleLayout;->mTarget:Landroid/view/View;
 
     return-void
@@ -325,6 +415,7 @@
 .method public start()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera/ui/CapsuleLayout;->mShowAnimator:Landroid/animation/ValueAnimator;
 
     if-nez v0, :cond_0
@@ -333,6 +424,7 @@
 
     new-array v0, v0, [F
 
+    .line 2
     fill-array-data v0, :array_0
 
     invoke-static {v0}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
@@ -343,8 +435,10 @@
 
     const-wide/16 v1, 0x12c
 
+    .line 3
     invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
+    .line 4
     iget-object v0, p0, Lcom/android/camera/ui/CapsuleLayout;->mShowAnimator:Landroid/animation/ValueAnimator;
 
     new-instance v1, Lcom/android/camera/ui/CapsuleLayout$a;
@@ -353,6 +447,7 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
+    .line 5
     iget-object v0, p0, Lcom/android/camera/ui/CapsuleLayout;->mShowAnimator:Landroid/animation/ValueAnimator;
 
     new-instance v1, Lcom/android/camera/ui/CapsuleLayout$b;
@@ -361,6 +456,7 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
+    .line 6
     :cond_0
     iget-object p0, p0, Lcom/android/camera/ui/CapsuleLayout;->mShowAnimator:Landroid/animation/ValueAnimator;
 

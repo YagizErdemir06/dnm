@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/CollectionFuture$Present;
+.class public final Lcom/google/common/util/concurrent/CollectionFuture$Present;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -24,7 +24,7 @@
 
 
 # instance fields
-.field value:Ljava/lang/Object;
+.field public value:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TV;"
@@ -42,8 +42,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/util/concurrent/CollectionFuture$Present;->value:Ljava/lang/Object;
 
     return-void

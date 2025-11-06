@@ -52,27 +52,33 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Lcom/google/android/gms/common/api/Result;->getStatus()Lcom/google/android/gms/common/api/Status;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Lcom/google/android/gms/common/api/Status;->isSuccess()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 3
     invoke-virtual {p0, p1}, Lcom/google/android/gms/common/api/ResultCallbacks;->onSuccess(Lcom/google/android/gms/common/api/Result;)V
 
     return-void
 
+    .line 4
     :cond_0
     invoke-virtual {p0, v0}, Lcom/google/android/gms/common/api/ResultCallbacks;->onFailure(Lcom/google/android/gms/common/api/Status;)V
 
+    .line 5
     instance-of p0, p1, Lcom/google/android/gms/common/api/Releasable;
 
     if-eqz p0, :cond_1
 
+    .line 6
     :try_start_0
     move-object p0, p1
 
@@ -87,6 +93,7 @@
     :catch_0
     move-exception p0
 
+    .line 7
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1

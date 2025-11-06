@@ -18,26 +18,41 @@
 
 
 # instance fields
-.field public final synthetic a:Landroid/media/MediaPlayer;
+.field public final synthetic c:Landroid/media/MediaPlayer;
 
-.field public final synthetic b:I
+.field public final synthetic d:I
 
-.field public final synthetic c:I
+.field public final synthetic f:I
 
-.field public final synthetic d:Lcom/android/camera/ui/FastmotionTextureVideoView;
+.field public final synthetic g:Lcom/android/camera/ui/FastmotionTextureVideoView;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera/ui/FastmotionTextureVideoView;Landroid/media/MediaPlayer;II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010,
+            0x1010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$mp",
+            "val$what",
+            "val$extra"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera/ui/FastmotionTextureVideoView$h;->d:Lcom/android/camera/ui/FastmotionTextureVideoView;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/ui/FastmotionTextureVideoView$h;->g:Lcom/android/camera/ui/FastmotionTextureVideoView;
 
-    iput-object p2, p0, Lcom/android/camera/ui/FastmotionTextureVideoView$h;->a:Landroid/media/MediaPlayer;
+    iput-object p2, p0, Lcom/android/camera/ui/FastmotionTextureVideoView$h;->c:Landroid/media/MediaPlayer;
 
-    iput p3, p0, Lcom/android/camera/ui/FastmotionTextureVideoView$h;->b:I
+    iput p3, p0, Lcom/android/camera/ui/FastmotionTextureVideoView$h;->d:I
 
-    iput p4, p0, Lcom/android/camera/ui/FastmotionTextureVideoView$h;->c:I
+    iput p4, p0, Lcom/android/camera/ui/FastmotionTextureVideoView$h;->f:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,25 +64,27 @@
 .method public run()V
     .locals 3
 
-    iget-object v0, p0, Lcom/android/camera/ui/FastmotionTextureVideoView$h;->d:Lcom/android/camera/ui/FastmotionTextureVideoView;
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/ui/FastmotionTextureVideoView$h;->g:Lcom/android/camera/ui/FastmotionTextureVideoView;
 
-    invoke-static {v0}, Lcom/android/camera/ui/FastmotionTextureVideoView;->b(Lcom/android/camera/ui/FastmotionTextureVideoView;)Lcom/android/camera/ui/FastmotionTextureVideoView$i;
+    invoke-static {v0}, Lcom/android/camera/ui/FastmotionTextureVideoView;->a(Lcom/android/camera/ui/FastmotionTextureVideoView;)Lcom/android/camera/ui/FastmotionTextureVideoView$i;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/camera/ui/FastmotionTextureVideoView$h;->d:Lcom/android/camera/ui/FastmotionTextureVideoView;
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/ui/FastmotionTextureVideoView$h;->g:Lcom/android/camera/ui/FastmotionTextureVideoView;
 
-    invoke-static {v0}, Lcom/android/camera/ui/FastmotionTextureVideoView;->b(Lcom/android/camera/ui/FastmotionTextureVideoView;)Lcom/android/camera/ui/FastmotionTextureVideoView$i;
+    invoke-static {v0}, Lcom/android/camera/ui/FastmotionTextureVideoView;->a(Lcom/android/camera/ui/FastmotionTextureVideoView;)Lcom/android/camera/ui/FastmotionTextureVideoView$i;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/camera/ui/FastmotionTextureVideoView$h;->a:Landroid/media/MediaPlayer;
+    iget-object v1, p0, Lcom/android/camera/ui/FastmotionTextureVideoView$h;->c:Landroid/media/MediaPlayer;
 
-    iget v2, p0, Lcom/android/camera/ui/FastmotionTextureVideoView$h;->b:I
+    iget v2, p0, Lcom/android/camera/ui/FastmotionTextureVideoView$h;->d:I
 
-    iget p0, p0, Lcom/android/camera/ui/FastmotionTextureVideoView$h;->c:I
+    iget p0, p0, Lcom/android/camera/ui/FastmotionTextureVideoView$h;->f:I
 
     invoke-interface {v0, v1, v2, p0}, Lcom/android/camera/ui/FastmotionTextureVideoView$i;->onInfo(Landroid/media/MediaPlayer;II)Z
 

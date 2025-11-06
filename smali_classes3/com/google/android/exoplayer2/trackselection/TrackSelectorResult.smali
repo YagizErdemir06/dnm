@@ -186,6 +186,7 @@
 .method public isRendererEnabled(I)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/trackselection/TrackSelectorResult;->rendererConfigurations:[Lcom/google/android/exoplayer2/RendererConfiguration;
 
     aget-object p0, p0, p1

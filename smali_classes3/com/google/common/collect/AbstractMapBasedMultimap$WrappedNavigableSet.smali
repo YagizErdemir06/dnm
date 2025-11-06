@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedNavigableSet;
+.class public Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedNavigableSet;
 .super Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedSortedSet;
 .source "SourceFile"
 
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/AbstractMapBasedMultimap;
+.field public final synthetic this$0:Lcom/google/common/collect/AbstractMapBasedMultimap;
 
 
 # direct methods
@@ -51,8 +51,10 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedNavigableSet;->this$0:Lcom/google/common/collect/AbstractMapBasedMultimap;
 
+    .line 2
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedSortedSet;-><init>(Lcom/google/common/collect/AbstractMapBasedMultimap;Ljava/lang/Object;Ljava/util/SortedSet;Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection;)V
 
     return-void
@@ -70,6 +72,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedNavigableSet;
 
     iget-object v1, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedNavigableSet;->this$0:Lcom/google/common/collect/AbstractMapBasedMultimap;
@@ -112,6 +115,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedNavigableSet;->getSortedSetDelegate()Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -133,6 +137,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection$WrappedIterator;
 
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedNavigableSet;->getSortedSetDelegate()Ljava/util/NavigableSet;
@@ -158,6 +163,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedNavigableSet;->getSortedSetDelegate()Ljava/util/NavigableSet;
 
     move-result-object v0
@@ -188,6 +194,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedNavigableSet;->getSortedSetDelegate()Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -244,6 +251,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedNavigableSet;->getSortedSetDelegate()Ljava/util/NavigableSet;
 
     move-result-object v0
@@ -274,6 +282,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedNavigableSet;->getSortedSetDelegate()Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -300,6 +309,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedNavigableSet;->getSortedSetDelegate()Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -322,6 +332,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -344,6 +355,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedNavigableSet;->descendingIterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -373,6 +385,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedNavigableSet;->getSortedSetDelegate()Ljava/util/NavigableSet;
 
     move-result-object v0
@@ -381,6 +394,7 @@
 
     move-result-object p1
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedNavigableSet;->wrap(Ljava/util/NavigableSet;)Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -402,6 +416,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedNavigableSet;->getSortedSetDelegate()Ljava/util/NavigableSet;
 
     move-result-object v0

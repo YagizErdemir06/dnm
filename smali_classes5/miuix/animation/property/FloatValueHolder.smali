@@ -44,6 +44,7 @@
 .method public getValue()F
     .locals 0
 
+    .line 1
     iget p0, p0, Lmiuix/animation/property/FloatValueHolder;->mValue:F
 
     return p0
@@ -52,6 +53,7 @@
 .method public setValue(F)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lmiuix/animation/property/FloatValueHolder;->mValue:F
 
     return-void

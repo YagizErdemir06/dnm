@@ -1,4 +1,4 @@
-.class Lcom/google/common/base/Throwables$1;
+.class public Lcom/google/common/base/Throwables$1;
 .super Ljava/util/AbstractList;
 .source "SourceFile"
 
@@ -23,13 +23,14 @@
 
 
 # instance fields
-.field final synthetic val$t:Ljava/lang/Throwable;
+.field public final synthetic val$t:Ljava/lang/Throwable;
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/base/Throwables$1;->val$t:Ljava/lang/Throwable;
 
     invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
@@ -60,6 +61,8 @@
 
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    check-cast v0, Ljava/lang/reflect/Method;
+
     invoke-static {}, Lcom/google/common/base/Throwables;->access$100()Ljava/lang/Object;
 
     move-result-object v1
@@ -70,19 +73,19 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    const/4 v3, 0x0
-
     iget-object p0, p0, Lcom/google/common/base/Throwables$1;->val$t:Ljava/lang/Throwable;
+
+    const/4 v3, 0x0
 
     aput-object p0, v2, v3
 
-    const/4 p0, 0x1
-
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object p1
+    move-result-object p0
 
-    aput-object p1, v2, p0
+    const/4 p1, 0x1
+
+    aput-object p0, v2, p1
 
     .line 3
     invoke-static {v0, v1, v2}, Lcom/google/common/base/Throwables;->access$200(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
@@ -97,11 +100,14 @@
 .method public size()I
     .locals 4
 
+    .line 1
     invoke-static {}, Lcom/google/common/base/Throwables;->access$300()Ljava/lang/reflect/Method;
 
     move-result-object v0
 
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/reflect/Method;
 
     invoke-static {}, Lcom/google/common/base/Throwables;->access$100()Ljava/lang/Object;
 
@@ -113,18 +119,20 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    const/4 v3, 0x0
-
     iget-object p0, p0, Lcom/google/common/base/Throwables$1;->val$t:Ljava/lang/Throwable;
+
+    const/4 v3, 0x0
 
     aput-object p0, v2, v3
 
+    .line 2
     invoke-static {v0, v1, v2}, Lcom/google/common/base/Throwables;->access$200(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Ljava/lang/Integer;
 
+    .line 3
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0

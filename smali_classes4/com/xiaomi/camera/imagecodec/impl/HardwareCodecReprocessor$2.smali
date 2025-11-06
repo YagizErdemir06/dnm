@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor$2;
+.class public Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,15 +18,15 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor;
+.field public final synthetic this$0:Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor;
 
-.field final synthetic val$flip:Z
+.field public final synthetic val$flip:Z
 
-.field final synthetic val$imageFormat:I
+.field public final synthetic val$imageFormat:I
 
-.field final synthetic val$jpegQuality:B
+.field public final synthetic val$jpegQuality:B
 
-.field final synthetic val$yuvImage:Landroid/media/Image;
+.field public final synthetic val$yuvImage:Landroid/media/Image;
 
 
 # direct methods
@@ -49,6 +49,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor$2;->this$0:Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor;
 
     iput-object p2, p0, Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor$2;->val$yuvImage:Landroid/media/Image;
@@ -69,6 +70,7 @@
 .method public run()V
     .locals 5
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor;->access$100()Ljava/lang/String;
 
     move-result-object v0
@@ -103,12 +105,14 @@
 
     invoke-static {v0, v1}, Lcom/xiaomi/engine/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    const/16 v0, 0x100
+    .line 2
+    iget v0, p0, Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor$2;->val$imageFormat:I
 
-    iget v1, p0, Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor$2;->val$imageFormat:I
+    const/16 v1, 0x100
 
-    if-ne v0, v1, :cond_0
+    if-ne v1, v0, :cond_0
 
+    .line 3
     iget-object v0, p0, Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor$2;->this$0:Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor;
 
     invoke-static {v0}, Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor;->access$200(Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor;)Ljava/lang/Object;
@@ -117,6 +121,7 @@
 
     monitor-enter v0
 
+    .line 4
     :try_start_0
     iget-object v1, p0, Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor$2;->this$0:Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor;
 
@@ -128,6 +133,7 @@
 
     invoke-virtual {v1, v2}, Lcom/xiaomi/media/imagecodec/ImageCodec;->setFlip(Z)V
 
+    .line 5
     iget-object v1, p0, Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor$2;->this$0:Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor;
 
     invoke-static {v1}, Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor;->access$300(Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor;)Lcom/xiaomi/media/imagecodec/ImageCodec;
@@ -138,6 +144,7 @@
 
     invoke-virtual {v1, v2}, Lcom/xiaomi/media/imagecodec/ImageCodec;->setQuality(I)V
 
+    .line 6
     iget-object v1, p0, Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor$2;->this$0:Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor;
 
     invoke-static {v1}, Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor;->access$300(Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor;)Lcom/xiaomi/media/imagecodec/ImageCodec;
@@ -148,6 +155,7 @@
 
     invoke-virtual {v1, v2}, Lcom/xiaomi/media/imagecodec/ImageCodec;->drainInputImage(Landroid/media/Image;)V
 
+    .line 7
     invoke-static {}, Lcom/xiaomi/camera/imagecodec/ImagePool;->getInstance()Lcom/xiaomi/camera/imagecodec/ImagePool;
 
     move-result-object v1
@@ -156,6 +164,7 @@
 
     invoke-virtual {v1, v2}, Lcom/xiaomi/camera/imagecodec/ImagePool;->releaseImage(Landroid/media/Image;)V
 
+    .line 8
     monitor-exit v0
 
     goto :goto_0
@@ -169,6 +178,7 @@
 
     throw p0
 
+    .line 9
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor$2;->this$0:Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor;
 
@@ -178,6 +188,7 @@
 
     monitor-enter v0
 
+    .line 10
     :try_start_1
     iget-object v1, p0, Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor$2;->this$0:Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor;
 
@@ -193,6 +204,7 @@
 
     iget-object v3, p0, Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor$2;->this$0:Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor;
 
+    .line 11
     invoke-static {v3}, Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor;->access$500(Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor;)Lcom/xiaomi/camera/imagecodec/ReprocessData;
 
     move-result-object v3
@@ -203,6 +215,7 @@
 
     iget-object v4, p0, Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor$2;->this$0:Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor;
 
+    .line 12
     invoke-static {v4}, Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor;->access$500(Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor;)Lcom/xiaomi/camera/imagecodec/ReprocessData;
 
     move-result-object v4
@@ -211,18 +224,22 @@
 
     move-result v4
 
+    .line 13
     invoke-interface {v1, v2, v3, v4}, Lcom/xiaomi/camera/imagecodec/ReprocessData$OnDataAvailableListener;->onYuvAvailable(Landroid/media/Image;Ljava/lang/String;Z)V
 
+    .line 14
     iget-object v1, p0, Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor$2;->this$0:Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor;
 
     const/4 v2, 0x0
 
     invoke-static {v1, v2}, Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor;->access$502(Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor;Lcom/xiaomi/camera/imagecodec/ReprocessData;)Lcom/xiaomi/camera/imagecodec/ReprocessData;
 
+    .line 15
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    .line 16
     :goto_0
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor$2;->this$0:Lcom/xiaomi/camera/imagecodec/impl/HardwareCodecReprocessor;
 
@@ -233,6 +250,7 @@
     :catchall_1
     move-exception p0
 
+    .line 17
     :try_start_2
     monitor-exit v0
     :try_end_2

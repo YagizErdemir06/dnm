@@ -22,26 +22,26 @@
 
 
 # instance fields
-.field zza:Landroid/os/Bundle;
+.field public zza:Landroid/os/Bundle;
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         id = 0x1
     .end annotation
 .end field
 
-.field zzb:[Lcom/google/android/gms/common/Feature;
+.field public zzb:[Lcom/google/android/gms/common/Feature;
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         id = 0x2
     .end annotation
 .end field
 
-.field zzc:I
+.field public zzc:I
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         defaultValue = "0"
         id = 0x3
     .end annotation
 .end field
 
-.field zzd:Lcom/google/android/gms/common/internal/ConnectionTelemetryConfiguration;
+.field public zzd:Lcom/google/android/gms/common/internal/ConnectionTelemetryConfiguration;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -67,6 +67,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;-><init>()V
 
     return-void
@@ -118,6 +119,7 @@
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 4
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->beginObjectHeader(Landroid/os/Parcel;)I
 
     move-result v0
@@ -128,26 +130,31 @@
 
     const/4 v3, 0x0
 
+    .line 2
     invoke-static {p1, v2, v1, v3}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeBundle(Landroid/os/Parcel;ILandroid/os/Bundle;Z)V
 
-    const/4 v1, 0x2
+    iget-object v1, p0, Lcom/google/android/gms/common/internal/zzj;->zzb:[Lcom/google/android/gms/common/Feature;
 
-    iget-object v2, p0, Lcom/google/android/gms/common/internal/zzj;->zzb:[Lcom/google/android/gms/common/Feature;
+    const/4 v2, 0x2
 
-    invoke-static {p1, v1, v2, p2, v3}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeTypedArray(Landroid/os/Parcel;I[Landroid/os/Parcelable;IZ)V
+    .line 3
+    invoke-static {p1, v2, v1, p2, v3}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeTypedArray(Landroid/os/Parcel;I[Landroid/os/Parcelable;IZ)V
 
-    const/4 v1, 0x3
+    iget v1, p0, Lcom/google/android/gms/common/internal/zzj;->zzc:I
 
-    iget v2, p0, Lcom/google/android/gms/common/internal/zzj;->zzc:I
+    const/4 v2, 0x3
 
-    invoke-static {p1, v1, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
-
-    const/4 v1, 0x4
+    .line 4
+    invoke-static {p1, v2, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
     iget-object p0, p0, Lcom/google/android/gms/common/internal/zzj;->zzd:Lcom/google/android/gms/common/internal/ConnectionTelemetryConfiguration;
 
+    const/4 v1, 0x4
+
+    .line 5
     invoke-static {p1, v1, p0, p2, v3}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeParcelable(Landroid/os/Parcel;ILandroid/os/Parcelable;IZ)V
 
+    .line 6
     invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->finishObjectHeader(Landroid/os/Parcel;I)V
 
     return-void

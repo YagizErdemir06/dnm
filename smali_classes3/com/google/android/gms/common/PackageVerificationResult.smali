@@ -118,6 +118,7 @@
 .method public final zzb()V
     .locals 2
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/gms/common/PackageVerificationResult;->zzb:Z
 
     if-nez v0, :cond_1
@@ -147,6 +148,7 @@
     :cond_0
     new-instance p0, Ljava/lang/SecurityException;
 
+    .line 2
     invoke-direct {p0, v0}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
 
     throw p0

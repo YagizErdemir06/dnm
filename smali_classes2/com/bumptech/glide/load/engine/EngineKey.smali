@@ -1,4 +1,4 @@
-.class Lcom/bumptech/glide/load/engine/EngineKey;
+.class public Lcom/bumptech/glide/load/engine/EngineKey;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -73,8 +73,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -83,6 +85,7 @@
 
     const-string p1, "Signature must not be null"
 
+    .line 3
     invoke-static {p2, p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -91,10 +94,13 @@
 
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/EngineKey;->signature:Lcom/bumptech/glide/load/Key;
 
+    .line 4
     iput p3, p0, Lcom/bumptech/glide/load/engine/EngineKey;->width:I
 
+    .line 5
     iput p4, p0, Lcom/bumptech/glide/load/engine/EngineKey;->height:I
 
+    .line 6
     invoke-static {p5}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -105,6 +111,7 @@
 
     const-string p1, "Resource class must not be null"
 
+    .line 7
     invoke-static {p6, p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -115,6 +122,7 @@
 
     const-string p1, "Transcode class must not be null"
 
+    .line 8
     invoke-static {p7, p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -123,6 +131,7 @@
 
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/EngineKey;->transcodeClass:Ljava/lang/Class;
 
+    .line 9
     invoke-static {p8}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -139,14 +148,17 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
+    .line 1
     instance-of v0, p1, Lcom/bumptech/glide/load/engine/EngineKey;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/bumptech/glide/load/engine/EngineKey;
 
+    .line 3
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/EngineKey;->model:Ljava/lang/Object;
 
     iget-object v2, p1, Lcom/bumptech/glide/load/engine/EngineKey;->model:Ljava/lang/Object;
@@ -161,6 +173,7 @@
 
     iget-object v2, p1, Lcom/bumptech/glide/load/engine/EngineKey;->signature:Lcom/bumptech/glide/load/Key;
 
+    .line 4
     invoke-interface {v0, v2}, Lcom/bumptech/glide/load/Key;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -183,6 +196,7 @@
 
     iget-object v2, p1, Lcom/bumptech/glide/load/engine/EngineKey;->transformations:Ljava/util/Map;
 
+    .line 5
     invoke-interface {v0, v2}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -193,6 +207,7 @@
 
     iget-object v2, p1, Lcom/bumptech/glide/load/engine/EngineKey;->resourceClass:Ljava/lang/Class;
 
+    .line 6
     invoke-virtual {v0, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -203,6 +218,7 @@
 
     iget-object v2, p1, Lcom/bumptech/glide/load/engine/EngineKey;->transcodeClass:Ljava/lang/Class;
 
+    .line 7
     invoke-virtual {v0, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -213,6 +229,7 @@
 
     iget-object p1, p1, Lcom/bumptech/glide/load/engine/EngineKey;->options:Lcom/bumptech/glide/load/Options;
 
+    .line 8
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/Options;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -228,10 +245,12 @@
 .method public hashCode()I
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/bumptech/glide/load/engine/EngineKey;->hashCode:I
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/EngineKey;->model:Ljava/lang/Object;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -242,6 +261,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 3
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/EngineKey;->signature:Lcom/bumptech/glide/load/Key;
 
     invoke-interface {v1}, Lcom/bumptech/glide/load/Key;->hashCode()I
@@ -250,14 +270,20 @@
 
     add-int/2addr v0, v1
 
+    iput v0, p0, Lcom/bumptech/glide/load/engine/EngineKey;->hashCode:I
+
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 4
     iget v1, p0, Lcom/bumptech/glide/load/engine/EngineKey;->width:I
 
     add-int/2addr v0, v1
 
+    iput v0, p0, Lcom/bumptech/glide/load/engine/EngineKey;->hashCode:I
+
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 5
     iget v1, p0, Lcom/bumptech/glide/load/engine/EngineKey;->height:I
 
     add-int/2addr v0, v1
@@ -266,6 +292,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 6
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/EngineKey;->transformations:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->hashCode()I
@@ -278,6 +305,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 7
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/EngineKey;->resourceClass:Ljava/lang/Class;
 
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
@@ -290,6 +318,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 8
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/EngineKey;->transcodeClass:Ljava/lang/Class;
 
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
@@ -302,6 +331,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 9
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/EngineKey;->options:Lcom/bumptech/glide/load/Options;
 
     invoke-virtual {v1}, Lcom/bumptech/glide/load/Options;->hashCode()I
@@ -312,6 +342,7 @@
 
     iput v0, p0, Lcom/bumptech/glide/load/engine/EngineKey;->hashCode:I
 
+    .line 10
     :cond_0
     iget p0, p0, Lcom/bumptech/glide/load/engine/EngineKey;->hashCode:I
 
@@ -321,6 +352,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -415,6 +447,7 @@
         .end annotation
     .end param
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V

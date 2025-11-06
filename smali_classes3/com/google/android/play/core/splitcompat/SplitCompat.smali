@@ -19,6 +19,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     const/4 v1, 0x0
@@ -33,6 +34,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,6 +43,7 @@
 .method public static hasInstance()Z
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/play/core/splitcompat/SplitCompat;->sSplitCompatReference:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -63,6 +66,7 @@
 .method public static install(Landroid/content/Context;)Z
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/play/core/splitcompat/SplitCompat;->installInternal(Landroid/content/Context;)Z
 
     move-result p0
@@ -73,6 +77,7 @@
 .method private static installInternal(Landroid/content/Context;)Z
     .locals 2
 
+    .line 1
     sget-object p0, Lcom/google/android/play/core/splitcompat/SplitCompat;->sSplitCompatReference:Ljava/util/concurrent/atomic/AtomicReference;
 
     new-instance v0, Lcom/google/android/play/core/splitcompat/SplitCompat;
@@ -81,18 +86,20 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p0, v1, v0}, Landroidx/lifecycle/a;->a(Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p0, v1, v0}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Lcom/google/android/play/core/splitcompat/SplitCompat;
 
+    .line 3
     new-instance v0, Lcom/google/android/play/core/splitcompat/SplitSessionLoaderImpl;
 
     sget-object v1, Lcom/google/android/play/core/tasks/TaskExecutors;->MAIN_THREAD:Ljava/util/concurrent/Executor;
@@ -101,6 +108,7 @@
 
     invoke-static {v0}, Lcom/google/android/play/core/splitinstall/SplitSessionLoaderSingleton;->set(Lcom/google/android/play/core/splitinstall/SplitSessionLoader;)V
 
+    .line 4
     new-instance v0, Lcom/google/android/play/core/splitcompat/LoadedSplitFetcherImpl;
 
     invoke-direct {v0, p0}, Lcom/google/android/play/core/splitcompat/LoadedSplitFetcherImpl;-><init>(Lcom/google/android/play/core/splitcompat/SplitCompat;)V
@@ -126,10 +134,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadManagerService;->getInstance()Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadManager;
 
     move-result-object p0
 
+    .line 2
     invoke-virtual {p0}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadManager;->getLoadedSplitNames()Ljava/util/Set;
 
     move-result-object p0

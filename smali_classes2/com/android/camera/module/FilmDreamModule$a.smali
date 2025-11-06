@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/android/camera/z4$p;
+.implements Ld/d/a/m5$p;
 
 
 # annotations
@@ -24,7 +24,16 @@
 # direct methods
 .method public constructor <init>(Lcom/android/camera/module/FilmDreamModule;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/module/FilmDreamModule$a;->a:Lcom/android/camera/module/FilmDreamModule;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,10 +45,20 @@
 # virtual methods
 .method public a(D)V
     .locals 7
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
-    invoke-static {}, Lv8/n1;->impl()Ljava/util/Optional;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "a"
+        }
+    .end annotation
+
+    .line 1
+    invoke-static {}, Ld/d/a/m7/g/q1;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
@@ -47,11 +66,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lv8/n1;
+    check-cast v0, Ld/d/a/m7/g/q1;
 
     const/4 v1, 0x1
 
-    invoke-interface {v0, v1}, Lv8/d1;->isEvAdjusted(Z)Z
+    invoke-interface {v0, v1}, Ld/d/a/m7/g/g1;->isEvAdjusted(Z)Z
 
     move-result v0
 
@@ -59,37 +78,40 @@
 
     iget-object v0, p0, Lcom/android/camera/module/FilmDreamModule$a;->a:Lcom/android/camera/module/FilmDreamModule;
 
-    iget-object v0, v0, Lq7/i0;->c:Lr7/h;
+    iget-object v0, v0, Ld/d/a/d7/p7;->p:Ld/d/a/d7/i8/n;
 
-    invoke-interface {v0}, Lr7/h;->isPaused()Z
+    .line 2
+    invoke-interface {v0}, Ld/d/a/d7/i8/n;->isPaused()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 3
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
 
     iget-object v0, p0, Lcom/android/camera/module/FilmDreamModule$a;->a:Lcom/android/camera/module/FilmDreamModule;
 
-    invoke-static {v0}, Lcom/android/camera/module/FilmDreamModule;->al(Lcom/android/camera/module/FilmDreamModule;)J
+    invoke-static {v0}, Lcom/android/camera/module/FilmDreamModule;->kk(Lcom/android/camera/module/FilmDreamModule;)J
 
     move-result-wide v3
 
     const-wide/16 v5, 0xbb8
 
-    invoke-static/range {v1 .. v6}, Lcom/android/camera/a6;->u3(JJJ)Z
+    invoke-static/range {v1 .. v6}, Ld/d/a/z5;->i3(JJJ)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 4
     iget-object v0, p0, Lcom/android/camera/module/FilmDreamModule$a;->a:Lcom/android/camera/module/FilmDreamModule;
 
-    iget-object v0, v0, Lq7/i0;->b:Lr7/m;
+    iget-object v0, v0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
 
-    invoke-interface {v0}, Lr7/m;->W()Lc8/u;
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->u1()Ld/d/a/d7/o8/b/x;
 
     move-result-object v0
 
@@ -97,29 +119,31 @@
 
     iget-object v0, p0, Lcom/android/camera/module/FilmDreamModule$a;->a:Lcom/android/camera/module/FilmDreamModule;
 
-    iget-object v0, v0, Lq7/i0;->b:Lr7/m;
+    iget-object v0, v0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
 
-    invoke-interface {v0}, Lr7/m;->W()Lc8/u;
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->u1()Ld/d/a/d7/o8/b/x;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lc8/u;->x0()Z
+    invoke-virtual {v0}, Ld/d/a/d7/o8/b/x;->x0()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 5
     iget-object v0, p0, Lcom/android/camera/module/FilmDreamModule$a;->a:Lcom/android/camera/module/FilmDreamModule;
 
-    invoke-virtual {v0}, Lcom/android/camera/module/FilmDreamModule;->d()Z
+    invoke-virtual {v0}, Lcom/android/camera/module/FilmDreamModule;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 6
     iget-object p0, p0, Lcom/android/camera/module/FilmDreamModule$a;->a:Lcom/android/camera/module/FilmDreamModule;
 
-    invoke-static {p0, p1, p2}, Lcom/android/camera/module/FilmDreamModule;->bl(Lcom/android/camera/module/FilmDreamModule;D)Z
+    invoke-static {p0, p1, p2}, Lcom/android/camera/module/FilmDreamModule;->lk(Lcom/android/camera/module/FilmDreamModule;D)Z
 
     :cond_0
     return-void
@@ -127,9 +151,21 @@
 
 .method public c(FZ)V
     .locals 3
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "orientation",
+            "isLying"
+        }
+    .end annotation
+
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -156,53 +192,59 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object p1, p0, Lcom/android/camera/module/FilmDreamModule$a;->a:Lcom/android/camera/module/FilmDreamModule;
 
-    iget-object p1, p1, Lq7/i0;->d:Lr7/b;
+    iget-object p1, p1, Ld/d/a/d7/p7;->s:Ld/d/a/d7/i8/k;
 
-    invoke-interface {p1}, Lr7/b;->getOrientation()I
+    invoke-interface {p1}, Ld/d/a/d7/i8/k;->getOrientation()I
 
     move-result p1
 
     int-to-float p1, p1
 
+    .line 3
     :goto_0
     iget-object v0, p0, Lcom/android/camera/module/FilmDreamModule$a;->a:Lcom/android/camera/module/FilmDreamModule;
 
-    iget-object v0, v0, Lq7/i0;->d:Lr7/b;
+    iget-object v0, v0, Ld/d/a/d7/p7;->s:Ld/d/a/d7/i8/k;
 
-    invoke-interface {v0, p1}, Lr7/b;->j(F)V
+    invoke-interface {v0, p1}, Ld/d/a/d7/i8/k;->Q(F)V
 
+    .line 4
     iget-object p1, p0, Lcom/android/camera/module/FilmDreamModule$a;->a:Lcom/android/camera/module/FilmDreamModule;
 
-    iget-object p1, p1, Lq7/i0;->c:Lr7/h;
+    iget-object p1, p1, Ld/d/a/d7/p7;->p:Ld/d/a/d7/i8/n;
 
-    invoke-interface {p1}, Lr7/h;->z()Z
+    invoke-interface {p1}, Ld/d/a/d7/i8/n;->w()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    invoke-static {}, Lcom/android/camera/effect/b;->getInstance()Lcom/android/camera/effect/b;
+    .line 5
+    invoke-static {}, Ld/d/a/q6/b;->getInstance()Ld/d/a/q6/b;
 
     move-result-object p1
 
     iget-object p0, p0, Lcom/android/camera/module/FilmDreamModule$a;->a:Lcom/android/camera/module/FilmDreamModule;
 
-    iget-object v0, p0, Lq7/i0;->q:Lcom/android/camera/Camera;
+    iget-object v0, p0, Ld/d/a/d7/p7;->K8:Lcom/android/camera/Camera;
 
-    iget-object p0, p0, Lq7/i0;->d:Lr7/b;
+    iget-object p0, p0, Ld/d/a/d7/p7;->s:Ld/d/a/d7/i8/k;
 
-    invoke-interface {p0}, Lr7/b;->C()F
-
-    move-result p0
-
-    invoke-static {v0, p0}, Lcom/android/camera/a6;->R1(Landroid/app/Activity;F)F
+    .line 6
+    invoke-interface {p0}, Ld/d/a/d7/i8/k;->i0()F
 
     move-result p0
 
-    invoke-virtual {p1, p2, p0}, Lcom/android/camera/effect/b;->setDeviceRotation(ZF)V
+    invoke-static {v0, p0}, Ld/d/a/z5;->I1(Landroid/app/Activity;F)F
+
+    move-result p0
+
+    .line 7
+    invoke-virtual {p1, p2, p0}, Ld/d/a/q6/b;->setDeviceRotation(ZF)V
 
     :cond_1
     return-void
@@ -211,11 +253,12 @@
 .method public g()Z
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera/module/FilmDreamModule$a;->a:Lcom/android/camera/module/FilmDreamModule;
 
-    iget-object v0, v0, Lq7/i0;->c:Lr7/h;
+    iget-object v0, v0, Ld/d/a/d7/p7;->p:Ld/d/a/d7/i8/n;
 
-    invoke-interface {v0}, Lr7/h;->J()Z
+    invoke-interface {v0}, Ld/d/a/d7/i8/n;->G()Z
 
     move-result v0
 
@@ -223,9 +266,9 @@
 
     iget-object p0, p0, Lcom/android/camera/module/FilmDreamModule$a;->a:Lcom/android/camera/module/FilmDreamModule;
 
-    iget-object p0, p0, Lq7/i0;->b:Lr7/m;
+    iget-object p0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
 
-    invoke-interface {p0}, Lr7/m;->s()I
+    invoke-interface {p0}, Ld/d/a/d7/i8/s;->P0()I
 
     move-result p0
 
@@ -244,6 +287,14 @@
 
 .method public onSensorChanged(Landroid/hardware/SensorEvent;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "e"
+        }
+    .end annotation
 
     return-void
 .end method

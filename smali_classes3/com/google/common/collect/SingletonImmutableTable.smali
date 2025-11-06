@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/SingletonImmutableTable;
+.class public Lcom/google/common/collect/SingletonImmutableTable;
 .super Lcom/google/common/collect/ImmutableTable;
 .source "SourceFile"
 
@@ -26,7 +26,7 @@
 
 
 # instance fields
-.field final singleColumnKey:Ljava/lang/Object;
+.field public final singleColumnKey:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TC;"
@@ -34,7 +34,7 @@
     .end annotation
 .end field
 
-.field final singleRowKey:Ljava/lang/Object;
+.field public final singleRowKey:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TR;"
@@ -42,7 +42,7 @@
     .end annotation
 .end field
 
-.field final singleValue:Ljava/lang/Object;
+.field public final singleValue:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TV;"
@@ -265,6 +265,7 @@
 
     aput v2, v0, v2
 
+    .line 1
     invoke-static {p0, v1, v0}, Lcom/google/common/collect/ImmutableTable$SerializedForm;->create(Lcom/google/common/collect/ImmutableTable;[I[I)Lcom/google/common/collect/ImmutableTable$SerializedForm;
 
     move-result-object p0

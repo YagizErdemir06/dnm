@@ -1,4 +1,4 @@
-.class Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat$AccessibilityNodeProviderApi16;
+.class public Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat$AccessibilityNodeProviderApi16;
 .super Landroid/view/accessibility/AccessibilityNodeProvider;
 .source "SourceFile"
 
@@ -19,15 +19,17 @@
 
 
 # instance fields
-.field final mCompat:Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;
+.field public final mCompat:Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroid/view/accessibility/AccessibilityNodeProvider;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat$AccessibilityNodeProviderApi16;->mCompat:Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;
 
     return-void
@@ -38,8 +40,10 @@
 .method public createAccessibilityNodeInfo(I)Landroid/view/accessibility/AccessibilityNodeInfo;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat$AccessibilityNodeProviderApi16;->mCompat:Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;
 
+    .line 2
     invoke-virtual {p0, p1}, Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;->createAccessibilityNodeInfo(I)Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;
 
     move-result-object p0
@@ -50,6 +54,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->unwrap()Landroid/view/accessibility/AccessibilityNodeInfo;
 
@@ -71,8 +76,10 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat$AccessibilityNodeProviderApi16;->mCompat:Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;
 
+    .line 2
     invoke-virtual {p0, p1, p2}, Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;->findAccessibilityNodeInfosByText(Ljava/lang/String;I)Ljava/util/List;
 
     move-result-object p0
@@ -83,11 +90,13 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 4
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p2
@@ -97,12 +106,14 @@
     :goto_0
     if-ge v0, p2, :cond_1
 
+    .line 5
     invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;
 
+    .line 6
     invoke-virtual {v1}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->unwrap()Landroid/view/accessibility/AccessibilityNodeInfo;
 
     move-result-object v1
@@ -120,6 +131,7 @@
 .method public performAction(IILandroid/os/Bundle;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat$AccessibilityNodeProviderApi16;->mCompat:Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;
 
     invoke-virtual {p0, p1, p2, p3}, Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;->performAction(IILandroid/os/Bundle;)Z

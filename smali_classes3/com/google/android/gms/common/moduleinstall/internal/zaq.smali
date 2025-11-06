@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/moduleinstall/internal/zaq;
+.class public final Lcom/google/android/gms/common/moduleinstall/internal/zaq;
 .super Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;
 .source "SourceFile"
 
@@ -17,8 +17,10 @@
 .method public final synthetic buildClient(Landroid/content/Context;Landroid/os/Looper;Lcom/google/android/gms/common/internal/ClientSettings;Ljava/lang/Object;Lcom/google/android/gms/common/api/internal/ConnectionCallbacks;Lcom/google/android/gms/common/api/internal/OnConnectionFailedListener;)Lcom/google/android/gms/common/api/Api$Client;
     .locals 6
 
+    .line 1
     check-cast p4, Lcom/google/android/gms/common/api/Api$ApiOptions$NoOptions;
 
+    .line 2
     new-instance p0, Lcom/google/android/gms/common/moduleinstall/internal/zaz;
 
     move-object v0, p0

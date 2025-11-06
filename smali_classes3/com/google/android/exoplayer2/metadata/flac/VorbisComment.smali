@@ -30,9 +30,10 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/metadata/flac/VorbisComment$1;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/metadata/flac/VorbisComment$1;-><init>()V
@@ -120,6 +121,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -132,9 +134,11 @@
 
     goto :goto_1
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/metadata/flac/VorbisComment;
 
+    .line 3
     iget-object v2, p0, Lcom/google/android/exoplayer2/metadata/flac/VorbisComment;->key:Ljava/lang/String;
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/metadata/flac/VorbisComment;->key:Ljava/lang/String;
@@ -171,6 +175,7 @@
 .method public hashCode()I
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/metadata/flac/VorbisComment;->key:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -183,6 +188,7 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/metadata/flac/VorbisComment;->value:Ljava/lang/String;
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -197,6 +203,7 @@
 .method public populateMediaMetadata(Lcom/google/android/exoplayer2/MediaMetadata$Builder;)V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/metadata/flac/VorbisComment;->key:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -294,6 +301,7 @@
 
     goto :goto_1
 
+    .line 2
     :pswitch_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/metadata/flac/VorbisComment;->value:Ljava/lang/String;
 
@@ -301,6 +309,7 @@
 
     goto :goto_1
 
+    .line 3
     :pswitch_1
     iget-object p0, p0, Lcom/google/android/exoplayer2/metadata/flac/VorbisComment;->value:Ljava/lang/String;
 
@@ -308,6 +317,7 @@
 
     goto :goto_1
 
+    .line 4
     :pswitch_2
     iget-object p0, p0, Lcom/google/android/exoplayer2/metadata/flac/VorbisComment;->value:Ljava/lang/String;
 
@@ -315,6 +325,7 @@
 
     goto :goto_1
 
+    .line 5
     :pswitch_3
     iget-object p0, p0, Lcom/google/android/exoplayer2/metadata/flac/VorbisComment;->value:Ljava/lang/String;
 
@@ -322,6 +333,7 @@
 
     goto :goto_1
 
+    .line 6
     :pswitch_4
     iget-object p0, p0, Lcom/google/android/exoplayer2/metadata/flac/VorbisComment;->value:Ljava/lang/String;
 
@@ -352,6 +364,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -382,10 +395,12 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
+    .line 1
     iget-object p2, p0, Lcom/google/android/exoplayer2/metadata/flac/VorbisComment;->key:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/metadata/flac/VorbisComment;->value:Ljava/lang/String;
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V

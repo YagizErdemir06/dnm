@@ -1,4 +1,4 @@
-.class synthetic Lcom/xiaomi/media/imagecodec/ImageCodec$1;
+.class public synthetic Lcom/xiaomi/media/imagecodec/ImageCodec$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

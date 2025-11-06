@@ -1,4 +1,4 @@
-.class abstract Lcom/google/android/datatransport/runtime/TransportRuntimeComponent;
+.class public abstract Lcom/google/android/datatransport/runtime/TransportRuntimeComponent;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -24,7 +24,7 @@
     }
 .end annotation
 
-.annotation runtime Lmm/f;
+.annotation runtime Lg/a/f;
 .end annotation
 
 
@@ -32,6 +32,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,6 +48,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/TransportRuntimeComponent;->getEventStore()Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;
 
     move-result-object p0

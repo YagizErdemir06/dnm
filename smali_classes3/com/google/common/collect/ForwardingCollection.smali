@@ -29,6 +29,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ForwardingObject;-><init>()V
 
     return-void
@@ -51,6 +52,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingCollection;->delegate()Ljava/util/Collection;
 
     move-result-object p0
@@ -75,6 +77,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingCollection;->delegate()Ljava/util/Collection;
 
     move-result-object p0
@@ -89,6 +92,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingCollection;->delegate()Ljava/util/Collection;
 
     move-result-object p0
@@ -105,6 +109,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingCollection;->delegate()Ljava/util/Collection;
 
     move-result-object p0
@@ -126,6 +131,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingCollection;->delegate()Ljava/util/Collection;
 
     move-result-object p0
@@ -140,6 +146,7 @@
 .method public bridge synthetic delegate()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingCollection;->delegate()Ljava/util/Collection;
 
     move-result-object p0
@@ -160,6 +167,7 @@
 .method public isEmpty()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingCollection;->delegate()Ljava/util/Collection;
 
     move-result-object p0
@@ -181,6 +189,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingCollection;->delegate()Ljava/util/Collection;
 
     move-result-object p0
@@ -201,6 +210,7 @@
     .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingCollection;->delegate()Ljava/util/Collection;
 
     move-result-object p0
@@ -225,6 +235,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingCollection;->delegate()Ljava/util/Collection;
 
     move-result-object p0
@@ -249,6 +260,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingCollection;->delegate()Ljava/util/Collection;
 
     move-result-object p0
@@ -263,6 +275,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingCollection;->delegate()Ljava/util/Collection;
 
     move-result-object p0
@@ -284,6 +297,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -298,6 +312,7 @@
 .method public standardClear()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingCollection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -314,6 +329,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingCollection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -335,6 +351,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/common/collect/Collections2;->containsAllImpl(Ljava/util/Collection;Ljava/util/Collection;)Z
 
     move-result p0
@@ -345,6 +362,7 @@
 .method public standardIsEmpty()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingCollection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -365,10 +383,12 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingCollection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
+    .line 2
     :cond_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -376,6 +396,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 3
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -386,6 +407,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V
 
     const/4 p0, 0x1
@@ -408,6 +430,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingCollection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -429,6 +452,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingCollection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -479,6 +503,7 @@
 .method public standardToString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/collect/Collections2;->toStringImpl(Ljava/util/Collection;)Ljava/lang/String;
 
     move-result-object p0

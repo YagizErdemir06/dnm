@@ -1,4 +1,4 @@
-.class final Lcom/google/common/math/LinearTransformation$RegularLinearTransformation;
+.class public final Lcom/google/common/math/LinearTransformation$RegularLinearTransformation;
 .super Lcom/google/common/math/LinearTransformation;
 .source "SourceFile"
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field inverse:Lcom/google/common/math/LinearTransformation;
+.field public inverse:Lcom/google/common/math/LinearTransformation;
     .annotation runtime Lcom/google/errorprone/annotations/concurrent/LazyInit;
     .end annotation
 
@@ -23,9 +23,9 @@
     .end annotation
 .end field
 
-.field final slope:D
+.field public final slope:D
 
-.field final yIntercept:D
+.field public final yIntercept:D
 
 
 # direct methods
@@ -70,6 +70,7 @@
 .method private createInverse()Lcom/google/common/math/LinearTransformation;
     .locals 10
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/math/LinearTransformation$RegularLinearTransformation;->slope:D
 
     const-wide/16 v2, 0x0
@@ -78,6 +79,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 2
     new-instance v2, Lcom/google/common/math/LinearTransformation$RegularLinearTransformation;
 
     const-wide/high16 v3, 0x3ff0000000000000L    # 1.0
@@ -100,6 +102,7 @@
 
     return-object v2
 
+    .line 3
     :cond_0
     new-instance v0, Lcom/google/common/math/LinearTransformation$VerticalLinearTransformation;
 
@@ -115,10 +118,12 @@
 .method public inverse()Lcom/google/common/math/LinearTransformation;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/math/LinearTransformation$RegularLinearTransformation;->inverse:Lcom/google/common/math/LinearTransformation;
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-direct {p0}, Lcom/google/common/math/LinearTransformation$RegularLinearTransformation;->createInverse()Lcom/google/common/math/LinearTransformation;
 
     move-result-object v0
@@ -132,6 +137,7 @@
 .method public isHorizontal()Z
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/math/LinearTransformation$RegularLinearTransformation;->slope:D
 
     const-wide/16 v2, 0x0
@@ -162,6 +168,7 @@
 .method public slope()D
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/math/LinearTransformation$RegularLinearTransformation;->slope:D
 
     return-wide v0
@@ -174,6 +181,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 1
     iget-wide v1, p0, Lcom/google/common/math/LinearTransformation$RegularLinearTransformation;->slope:D
 
     invoke-static {v1, v2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
@@ -206,6 +214,7 @@
 .method public transform(D)D
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/math/LinearTransformation$RegularLinearTransformation;->slope:D
 
     mul-double/2addr p1, v0

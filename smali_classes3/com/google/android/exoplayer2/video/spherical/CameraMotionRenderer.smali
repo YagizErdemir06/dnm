@@ -30,8 +30,10 @@
 
     const/4 v0, 0x6
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/BaseRenderer;-><init>(I)V
 
+    .line 2
     new-instance v0, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;
 
     const/4 v1, 0x1
@@ -40,6 +42,7 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/video/spherical/CameraMotionRenderer;->buffer:Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;
 
+    .line 3
     new-instance v0, Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;-><init>()V
@@ -54,7 +57,8 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+    .line 1
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v0
 
@@ -66,6 +70,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/video/spherical/CameraMotionRenderer;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
@@ -73,12 +78,13 @@
 
     move-result-object v1
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v2
 
     invoke-virtual {v0, v1, v2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->reset([BI)V
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/video/spherical/CameraMotionRenderer;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->arrayOffset()I
@@ -98,6 +104,7 @@
     :goto_0
     if-ge v1, p1, :cond_1
 
+    .line 4
     iget-object v2, p0, Lcom/google/android/exoplayer2/video/spherical/CameraMotionRenderer;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLittleEndianInt()I
@@ -121,10 +128,12 @@
 .method private resetListener()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/video/spherical/CameraMotionRenderer;->listener:Lcom/google/android/exoplayer2/video/spherical/CameraMotionListener;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0}, Lcom/google/android/exoplayer2/video/spherical/CameraMotionListener;->onCameraMotionReset()V
 
     :cond_0
@@ -157,12 +166,14 @@
 
     if-ne p1, v0, :cond_0
 
+    .line 1
     check-cast p2, Lcom/google/android/exoplayer2/video/spherical/CameraMotionListener;
 
     iput-object p2, p0, Lcom/google/android/exoplayer2/video/spherical/CameraMotionRenderer;->listener:Lcom/google/android/exoplayer2/video/spherical/CameraMotionListener;
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-super {p0, p1, p2}, Lcom/google/android/exoplayer2/BaseRenderer;->handleMessage(ILjava/lang/Object;)V
 
@@ -173,6 +184,7 @@
 .method public isEnded()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BaseRenderer;->hasReadStreamToEnd()Z
 
     move-result p0
@@ -191,6 +203,7 @@
 .method public onDisabled()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/video/spherical/CameraMotionRenderer;->resetListener()V
 
     return-void
@@ -201,8 +214,10 @@
 
     const-wide/high16 p1, -0x8000000000000000L
 
+    .line 1
     iput-wide p1, p0, Lcom/google/android/exoplayer2/video/spherical/CameraMotionRenderer;->lastTimestampUs:J
 
+    .line 2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/video/spherical/CameraMotionRenderer;->resetListener()V
 
     return-void
@@ -211,6 +226,7 @@
 .method public onStreamChanged([Lcom/google/android/exoplayer2/Format;JJ)V
     .locals 0
 
+    .line 1
     iput-wide p4, p0, Lcom/google/android/exoplayer2/video/spherical/CameraMotionRenderer;->offsetUs:J
 
     return-void
@@ -219,6 +235,7 @@
 .method public render(JJ)V
     .locals 4
 
+    .line 1
     :cond_0
     :goto_0
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BaseRenderer;->hasReadStreamToEnd()Z
@@ -237,14 +254,17 @@
 
     if-gez p3, :cond_4
 
+    .line 2
     iget-object p3, p0, Lcom/google/android/exoplayer2/video/spherical/CameraMotionRenderer;->buffer:Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;
 
     invoke-virtual {p3}, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->clear()V
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BaseRenderer;->getFormatHolder()Lcom/google/android/exoplayer2/FormatHolder;
 
     move-result-object p3
 
+    .line 4
     iget-object p4, p0, Lcom/google/android/exoplayer2/video/spherical/CameraMotionRenderer;->buffer:Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;
 
     const/4 v0, 0x0
@@ -257,6 +277,7 @@
 
     if-ne p3, p4, :cond_4
 
+    .line 5
     iget-object p3, p0, Lcom/google/android/exoplayer2/video/spherical/CameraMotionRenderer;->buffer:Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;
 
     invoke-virtual {p3}, Lcom/google/android/exoplayer2/decoder/Buffer;->isEndOfStream()Z
@@ -267,6 +288,7 @@
 
     goto :goto_1
 
+    .line 6
     :cond_1
     iget-object p3, p0, Lcom/google/android/exoplayer2/video/spherical/CameraMotionRenderer;->buffer:Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;
 
@@ -274,6 +296,7 @@
 
     iput-wide v0, p0, Lcom/google/android/exoplayer2/video/spherical/CameraMotionRenderer;->lastTimestampUs:J
 
+    .line 7
     iget-object p4, p0, Lcom/google/android/exoplayer2/video/spherical/CameraMotionRenderer;->listener:Lcom/google/android/exoplayer2/video/spherical/CameraMotionListener;
 
     if-eqz p4, :cond_0
@@ -286,11 +309,13 @@
 
     goto :goto_0
 
+    .line 8
     :cond_2
     iget-object p3, p0, Lcom/google/android/exoplayer2/video/spherical/CameraMotionRenderer;->buffer:Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;
 
     invoke-virtual {p3}, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->flip()V
 
+    .line 9
     iget-object p3, p0, Lcom/google/android/exoplayer2/video/spherical/CameraMotionRenderer;->buffer:Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;
 
     iget-object p3, p3, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->data:Ljava/nio/ByteBuffer;
@@ -309,6 +334,7 @@
 
     goto :goto_0
 
+    .line 10
     :cond_3
     iget-object p4, p0, Lcom/google/android/exoplayer2/video/spherical/CameraMotionRenderer;->listener:Lcom/google/android/exoplayer2/video/spherical/CameraMotionListener;
 
@@ -336,11 +362,12 @@
 .method public supportsFormat(Lcom/google/android/exoplayer2/Format;)I
     .locals 0
 
-    const-string p0, "application/x-camera-motion"
+    .line 1
+    iget-object p0, p1, Lcom/google/android/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
-    iget-object p1, p1, Lcom/google/android/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
+    const-string p1, "application/x-camera-motion"
 
-    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -348,6 +375,7 @@
 
     const/4 p0, 0x4
 
+    .line 2
     invoke-static {p0}, Lcom/google/android/exoplayer2/RendererCapabilities;->create(I)I
 
     move-result p0
@@ -357,6 +385,7 @@
     :cond_0
     const/4 p0, 0x0
 
+    .line 3
     invoke-static {p0}, Lcom/google/android/exoplayer2/RendererCapabilities;->create(I)I
 
     move-result p0

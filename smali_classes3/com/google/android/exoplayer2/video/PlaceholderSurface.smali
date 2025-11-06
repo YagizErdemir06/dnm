@@ -59,12 +59,14 @@
 .method private static getSecureMode(Landroid/content/Context;)I
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/GlUtil;->isProtectedContentExtensionSupported(Landroid/content/Context;)Z
 
     move-result p0
 
     if-eqz p0, :cond_1
 
+    .line 2
     invoke-static {}, Lcom/google/android/exoplayer2/util/GlUtil;->isSurfacelessContextExtensionSupported()Z
 
     move-result p0
@@ -93,6 +95,7 @@
 
     monitor-enter v0
 
+    .line 1
     :try_start_0
     sget-boolean v1, Lcom/google/android/exoplayer2/video/PlaceholderSurface;->secureModeInitialized:Z
 
@@ -100,14 +103,17 @@
 
     if-nez v1, :cond_0
 
+    .line 2
     invoke-static {p0}, Lcom/google/android/exoplayer2/video/PlaceholderSurface;->getSecureMode(Landroid/content/Context;)I
 
     move-result p0
 
     sput p0, Lcom/google/android/exoplayer2/video/PlaceholderSurface;->secureMode:I
 
+    .line 3
     sput-boolean v2, Lcom/google/android/exoplayer2/video/PlaceholderSurface;->secureModeInitialized:Z
 
+    .line 4
     :cond_0
     sget p0, Lcom/google/android/exoplayer2/video/PlaceholderSurface;->secureMode:I
     :try_end_0
@@ -140,6 +146,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/video/PlaceholderSurface;->isSecureSupported(Landroid/content/Context;)Z
 
     move-result p0
@@ -160,12 +167,14 @@
     :goto_1
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     new-instance p0, Lcom/google/android/exoplayer2/video/PlaceholderSurface$PlaceholderSurfaceThread;
 
     invoke-direct {p0}, Lcom/google/android/exoplayer2/video/PlaceholderSurface$PlaceholderSurfaceThread;-><init>()V
 
     if-eqz p1, :cond_2
 
+    .line 3
     sget v0, Lcom/google/android/exoplayer2/video/PlaceholderSurface;->secureMode:I
 
     :cond_2
@@ -181,25 +190,31 @@
 .method public release()V
     .locals 2
 
+    .line 1
     invoke-super {p0}, Landroid/view/Surface;->release()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/video/PlaceholderSurface;->thread:Lcom/google/android/exoplayer2/video/PlaceholderSurface$PlaceholderSurfaceThread;
 
     monitor-enter v0
 
+    .line 3
     :try_start_0
     iget-boolean v1, p0, Lcom/google/android/exoplayer2/video/PlaceholderSurface;->threadReleased:Z
 
     if-nez v1, :cond_0
 
+    .line 4
     iget-object v1, p0, Lcom/google/android/exoplayer2/video/PlaceholderSurface;->thread:Lcom/google/android/exoplayer2/video/PlaceholderSurface$PlaceholderSurfaceThread;
 
     invoke-virtual {v1}, Lcom/google/android/exoplayer2/video/PlaceholderSurface$PlaceholderSurfaceThread;->release()V
 
     const/4 v1, 0x1
 
+    .line 5
     iput-boolean v1, p0, Lcom/google/android/exoplayer2/video/PlaceholderSurface;->threadReleased:Z
 
+    .line 6
     :cond_0
     monitor-exit v0
 

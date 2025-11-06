@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/JdkFutureAdapters$ListenableFutureAdapter$1;
+.class public Lcom/google/common/util/concurrent/JdkFutureAdapters$ListenableFutureAdapter$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/util/concurrent/JdkFutureAdapters$ListenableFutureAdapter;
+.field public final synthetic this$0:Lcom/google/common/util/concurrent/JdkFutureAdapters$ListenableFutureAdapter;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/util/concurrent/JdkFutureAdapters$ListenableFutureAdapter;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/JdkFutureAdapters$ListenableFutureAdapter$1;->this$0:Lcom/google/common/util/concurrent/JdkFutureAdapters$ListenableFutureAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,6 +38,7 @@
 .method public run()V
     .locals 1
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/common/util/concurrent/JdkFutureAdapters$ListenableFutureAdapter$1;->this$0:Lcom/google/common/util/concurrent/JdkFutureAdapters$ListenableFutureAdapter;
 
@@ -48,6 +50,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     :catchall_0
     iget-object p0, p0, Lcom/google/common/util/concurrent/JdkFutureAdapters$ListenableFutureAdapter$1;->this$0:Lcom/google/common/util/concurrent/JdkFutureAdapters$ListenableFutureAdapter;
 

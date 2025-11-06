@@ -7,6 +7,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -14,6 +15,17 @@
 
 .method public static copyAllBytes(Ljava/io/InputStream;Ljava/io/OutputStream;)I
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "in",
+            "out"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -28,6 +40,7 @@
 
     move v2, v1
 
+    .line 1
     :goto_0
     invoke-virtual {p0, v0}, Ljava/io/InputStream;->read([B)I
 
@@ -39,6 +52,7 @@
 
     return v2
 
+    .line 2
     :cond_0
     invoke-virtual {p1, v0, v1, v3}, Ljava/io/OutputStream;->write([BII)V
 
@@ -49,6 +63,19 @@
 
 .method public static executeSqlScript(Landroid/content/Context;Lorg/greenrobot/greendao/database/Database;Ljava/lang/String;)I
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "db",
+            "assetFilename"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -67,6 +94,21 @@
 
 .method public static executeSqlScript(Landroid/content/Context;Lorg/greenrobot/greendao/database/Database;Ljava/lang/String;Z)I
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "db",
+            "assetFilename",
+            "transactional"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -140,7 +182,18 @@
 
 .method public static executeSqlStatements(Lorg/greenrobot/greendao/database/Database;[Ljava/lang/String;)I
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "db",
+            "statements"
+        }
+    .end annotation
 
+    .line 1
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -152,16 +205,19 @@
 
     aget-object v3, p1, v1
 
+    .line 2
     invoke-virtual {v3}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v3
 
+    .line 3
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     move-result v4
 
     if-lez v4, :cond_0
 
+    .line 4
     invoke-interface {p0, v3}, Lorg/greenrobot/greendao/database/Database;->execSQL(Ljava/lang/String;)V
 
     add-int/lit8 v2, v2, 0x1
@@ -177,18 +233,32 @@
 
 .method public static executeSqlStatementsInTx(Lorg/greenrobot/greendao/database/Database;[Ljava/lang/String;)I
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "db",
+            "statements"
+        }
+    .end annotation
 
+    .line 1
     invoke-interface {p0}, Lorg/greenrobot/greendao/database/Database;->beginTransaction()V
 
+    .line 2
     :try_start_0
     invoke-static {p0, p1}, Lorg/greenrobot/greendao/DbUtils;->executeSqlStatements(Lorg/greenrobot/greendao/database/Database;[Ljava/lang/String;)I
 
     move-result p1
 
+    .line 3
     invoke-interface {p0}, Lorg/greenrobot/greendao/database/Database;->setTransactionSuccessful()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
     invoke-interface {p0}, Lorg/greenrobot/greendao/database/Database;->endTransaction()V
 
     return p1
@@ -198,11 +268,22 @@
 
     invoke-interface {p0}, Lorg/greenrobot/greendao/database/Database;->endTransaction()V
 
+    .line 5
     throw p1
 .end method
 
 .method public static logTableDump(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;)V
     .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "db",
+            "tablename"
+        }
+    .end annotation
 
     const/4 v2, 0x0
 
@@ -220,19 +301,23 @@
 
     move-object v1, p1
 
+    .line 1
     invoke-virtual/range {v0 .. v7}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object p0
 
+    .line 2
     :try_start_0
     invoke-static {p0}, Landroid/database/DatabaseUtils;->dumpCursorToString(Landroid/database/Cursor;)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 3
     invoke-static {p1}, Lorg/greenrobot/greendao/DaoLog;->d(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
     return-void
@@ -242,23 +327,36 @@
 
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
+    .line 5
     throw p1
 .end method
 
 .method public static readAllBytes(Ljava/io/InputStream;)[B
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "in"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
+    .line 2
     invoke-static {p0, v0}, Lorg/greenrobot/greendao/DbUtils;->copyAllBytes(Ljava/io/InputStream;Ljava/io/OutputStream;)I
 
+    .line 3
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p0
@@ -268,12 +366,24 @@
 
 .method public static readAsset(Landroid/content/Context;Ljava/lang/String;)[B
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "filename"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -286,6 +396,7 @@
 
     move-result-object p0
 
+    .line 2
     :try_start_0
     invoke-static {p0}, Lorg/greenrobot/greendao/DbUtils;->readAllBytes(Ljava/io/InputStream;)[B
 
@@ -293,6 +404,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
 
     return-object p1
@@ -302,14 +414,24 @@
 
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
 
+    .line 4
     throw p1
 .end method
 
 .method public static vacuum(Lorg/greenrobot/greendao/database/Database;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "db"
+        }
+    .end annotation
 
     const-string v0, "VACUUM"
 
+    .line 1
     invoke-interface {p0, v0}, Lorg/greenrobot/greendao/database/Database;->execSQL(Ljava/lang/String;)V
 
     return-void

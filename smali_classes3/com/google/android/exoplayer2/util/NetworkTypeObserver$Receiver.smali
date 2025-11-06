@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/util/NetworkTypeObserver$Receiver;
+.class public final Lcom/google/android/exoplayer2/util/NetworkTypeObserver$Receiver;
 .super Landroid/content/BroadcastReceiver;
 .source "SourceFile"
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/android/exoplayer2/util/NetworkTypeObserver;
+.field public final synthetic this$0:Lcom/google/android/exoplayer2/util/NetworkTypeObserver;
 
 
 # direct methods
@@ -44,10 +44,12 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/NetworkTypeObserver;->access$100(Landroid/content/Context;)I
 
     move-result p2
 
+    .line 2
     sget v0, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
     const/16 v1, 0x1f
@@ -58,12 +60,14 @@
 
     if-ne p2, v0, :cond_0
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/NetworkTypeObserver$Receiver;->this$0:Lcom/google/android/exoplayer2/util/NetworkTypeObserver;
 
     invoke-static {p1, p0}, Lcom/google/android/exoplayer2/util/NetworkTypeObserver$Api31;->disambiguate4gAnd5gNsa(Landroid/content/Context;Lcom/google/android/exoplayer2/util/NetworkTypeObserver;)V
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/NetworkTypeObserver$Receiver;->this$0:Lcom/google/android/exoplayer2/util/NetworkTypeObserver;
 

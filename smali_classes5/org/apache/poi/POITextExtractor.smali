@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field protected document:Lorg/apache/poi/POIDocument;
+.field public document:Lorg/apache/poi/POIDocument;
 
 
 # direct methods

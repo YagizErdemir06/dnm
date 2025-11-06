@@ -1,12 +1,12 @@
-.class final Lcom/google/mlkit/common/sdkinternal/zzv;
+.class public final Lcom/google/mlkit/common/sdkinternal/zzv;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field final zza:Ljava/util/concurrent/Executor;
+.field public final zza:Ljava/util/concurrent/Executor;
 
-.field final zzb:Ljava/lang/Runnable;
+.field public final zzb:Ljava/lang/Runnable;
 
 
 # direct methods

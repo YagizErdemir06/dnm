@@ -57,6 +57,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/gif/GifBitmapProvider;->bitmapPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;
 
     invoke-interface {p0, p1, p2, p3}, Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;->getDirty(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
@@ -71,14 +72,17 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/gif/GifBitmapProvider;->arrayPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;
 
     if-nez p0, :cond_0
 
+    .line 2
     new-array p0, p1, [B
 
     return-object p0
 
+    .line 3
     :cond_0
     const-class v0, [B
 
@@ -96,14 +100,17 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/gif/GifBitmapProvider;->arrayPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;
 
     if-nez p0, :cond_0
 
+    .line 2
     new-array p0, p1, [I
 
     return-object p0
 
+    .line 3
     :cond_0
     const-class v0, [I
 

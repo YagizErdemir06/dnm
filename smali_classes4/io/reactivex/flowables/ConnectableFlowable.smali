@@ -19,6 +19,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lio/reactivex/Flowable;-><init>()V
 
     return-void
@@ -123,12 +124,15 @@
 .method public final connect()Lio/reactivex/disposables/Disposable;
     .locals 1
 
+    .line 1
     new-instance v0, Lio/reactivex/internal/util/ConnectConsumer;
 
     invoke-direct {v0}, Lio/reactivex/internal/util/ConnectConsumer;-><init>()V
 
+    .line 2
     invoke-virtual {p0, v0}, Lio/reactivex/flowables/ConnectableFlowable;->connect(Lio/reactivex/functions/Consumer;)V
 
+    .line 3
     iget-object p0, v0, Lio/reactivex/internal/util/ConnectConsumer;->disposable:Lio/reactivex/disposables/Disposable;
 
     return-object p0
@@ -163,6 +167,7 @@
     .annotation build Lio/reactivex/annotations/NonNull;
     .end annotation
 
+    .line 1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableRefCount;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/flowable/FlowableRefCount;-><init>(Lio/reactivex/flowables/ConnectableFlowable;)V

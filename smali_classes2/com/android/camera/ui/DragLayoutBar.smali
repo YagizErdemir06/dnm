@@ -1,5 +1,5 @@
 .class public Lcom/android/camera/ui/DragLayoutBar;
-.super Lcom/android/camera/ui/c;
+.super Ld/d/a/d8/n1;
 .source "SourceFile"
 
 
@@ -12,68 +12,76 @@
 
 
 # static fields
-.field public static final t:Ljava/lang/String; = "DragLayoutBar"
+.field public static final c:Ljava/lang/String; = "DragLayoutBar"
 
-.field public static final u:I = 0xc8
+.field private static final d:I = 0xc8
 
-.field public static final v:I = 0x258
+.field private static final f:I = 0x258
 
-.field public static final w:I = -0x1
+.field public static final g:I = -0x1
 
-.field public static final x:I = 0x0
+.field public static final j:I = 0x0
 
-.field public static final y:I = 0x1
+.field public static final m:I = 0x1
 
 
 # instance fields
-.field public a:Landroid/graphics/drawable/GradientDrawable;
+.field public C1:I
 
-.field public b:Landroid/graphics/drawable/GradientDrawable;
+.field private C2:Landroid/view/animation/Interpolator;
 
-.field public c:F
+.field private K0:F
 
-.field public d:F
+.field public K1:F
 
-.field public e:F
+.field private K2:Landroid/view/animation/Interpolator;
 
-.field public f:F
-
-.field public g:F
-
-.field public h:F
-
-.field public i:F
-
-.field public j:F
-
-.field public k:I
-
-.field public l:F
-
-.field public m:Landroid/animation/ValueAnimator;
-
-.field public n:Landroid/view/animation/Interpolator;
-
-.field public o:Landroid/view/animation/Interpolator;
-
-.field public p:I
+.field private K8:I
     .annotation build Lcom/android/camera/ui/DragLayoutBar$c;
     .end annotation
 .end field
 
-.field public q:I
+.field private L8:I
     .annotation build Lcom/android/camera/ui/DragLayoutBar$c;
     .end annotation
 .end field
 
-.field public r:Z
+.field private M8:Z
 
-.field public s:Z
+.field private N8:Z
+
+.field private k0:F
+
+.field private k1:F
+
+.field private n:Landroid/graphics/drawable/GradientDrawable;
+
+.field private p:Landroid/graphics/drawable/GradientDrawable;
+
+.field private s:F
+
+.field private t:F
+
+.field private u:F
+
+.field private v1:F
+
+.field private v2:Landroid/animation/ValueAnimator;
+
+.field private w:F
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -89,6 +97,16 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -104,25 +122,37 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr"
+        }
+    .end annotation
 
     .line 3
-    invoke-direct {p0, p1, p2, p3}, Lcom/android/camera/ui/c;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, Ld/d/a/d8/n1;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/4 p2, 0x0
 
     .line 4
-    iput p2, p0, Lcom/android/camera/ui/DragLayoutBar;->p:I
+    iput p2, p0, Lcom/android/camera/ui/DragLayoutBar;->K8:I
 
     .line 5
-    iput p2, p0, Lcom/android/camera/ui/DragLayoutBar;->q:I
+    iput p2, p0, Lcom/android/camera/ui/DragLayoutBar;->L8:I
 
     const/4 p2, 0x1
 
     .line 6
-    iput-boolean p2, p0, Lcom/android/camera/ui/DragLayoutBar;->s:Z
+    iput-boolean p2, p0, Lcom/android/camera/ui/DragLayoutBar;->N8:Z
 
     .line 7
-    invoke-virtual {p0, p1}, Lcom/android/camera/ui/DragLayoutBar;->i(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/android/camera/ui/DragLayoutBar;->i(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -130,7 +160,8 @@
 .method public static synthetic a(Lcom/android/camera/ui/DragLayoutBar;F)F
     .locals 0
 
-    iput p1, p0, Lcom/android/camera/ui/DragLayoutBar;->c:F
+    .line 1
+    iput p1, p0, Lcom/android/camera/ui/DragLayoutBar;->s:F
 
     return p1
 .end method
@@ -138,7 +169,8 @@
 .method public static synthetic b(Lcom/android/camera/ui/DragLayoutBar;F)F
     .locals 0
 
-    iput p1, p0, Lcom/android/camera/ui/DragLayoutBar;->e:F
+    .line 1
+    iput p1, p0, Lcom/android/camera/ui/DragLayoutBar;->u:F
 
     return p1
 .end method
@@ -146,7 +178,8 @@
 .method public static synthetic c(Lcom/android/camera/ui/DragLayoutBar;)F
     .locals 0
 
-    iget p0, p0, Lcom/android/camera/ui/DragLayoutBar;->f:F
+    .line 1
+    iget p0, p0, Lcom/android/camera/ui/DragLayoutBar;->w:F
 
     return p0
 .end method
@@ -154,7 +187,8 @@
 .method public static synthetic d(Lcom/android/camera/ui/DragLayoutBar;)F
     .locals 0
 
-    iget p0, p0, Lcom/android/camera/ui/DragLayoutBar;->h:F
+    .line 1
+    iget p0, p0, Lcom/android/camera/ui/DragLayoutBar;->K0:F
 
     return p0
 .end method
@@ -162,7 +196,8 @@
 .method public static synthetic e(Lcom/android/camera/ui/DragLayoutBar;)Z
     .locals 0
 
-    iget-boolean p0, p0, Lcom/android/camera/ui/DragLayoutBar;->r:Z
+    .line 1
+    iget-boolean p0, p0, Lcom/android/camera/ui/DragLayoutBar;->M8:Z
 
     return p0
 .end method
@@ -170,7 +205,8 @@
 .method public static synthetic f(Lcom/android/camera/ui/DragLayoutBar;F)F
     .locals 0
 
-    iput p1, p0, Lcom/android/camera/ui/DragLayoutBar;->j:F
+    .line 1
+    iput p1, p0, Lcom/android/camera/ui/DragLayoutBar;->v1:F
 
     return p1
 .end method
@@ -178,7 +214,8 @@
 .method public static synthetic g(Lcom/android/camera/ui/DragLayoutBar;I)I
     .locals 0
 
-    iput p1, p0, Lcom/android/camera/ui/DragLayoutBar;->p:I
+    .line 1
+    iput p1, p0, Lcom/android/camera/ui/DragLayoutBar;->K8:I
 
     return p1
 .end method
@@ -186,81 +223,88 @@
 .method public static synthetic h(Lcom/android/camera/ui/DragLayoutBar;)I
     .locals 0
 
-    iget p0, p0, Lcom/android/camera/ui/DragLayoutBar;->q:I
+    .line 1
+    iget p0, p0, Lcom/android/camera/ui/DragLayoutBar;->L8:I
 
     return p0
 .end method
 
-
-# virtual methods
-.method public getTargetAlpha()F
-    .locals 0
-
-    iget p0, p0, Lcom/android/camera/ui/DragLayoutBar;->l:F
-
-    return p0
-.end method
-
-.method public final i(Landroid/content/Context;)V
+.method private i(Landroid/content/Context;)V
     .locals 11
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f070ad3
+    const v1, 0x7f07090c
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v0
 
-    iput v0, p0, Lcom/android/camera/ui/DragLayoutBar;->f:F
+    iput v0, p0, Lcom/android/camera/ui/DragLayoutBar;->w:F
 
+    .line 2
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f070ad4
+    const v1, 0x7f07090d
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v0
 
-    iput v0, p0, Lcom/android/camera/ui/DragLayoutBar;->g:F
+    iput v0, p0, Lcom/android/camera/ui/DragLayoutBar;->k0:F
 
-    iget v1, p0, Lcom/android/camera/ui/DragLayoutBar;->f:F
+    .line 3
+    iget v1, p0, Lcom/android/camera/ui/DragLayoutBar;->w:F
 
     sub-float v0, v1, v0
 
-    iput v0, p0, Lcom/android/camera/ui/DragLayoutBar;->h:F
+    iput v0, p0, Lcom/android/camera/ui/DragLayoutBar;->K0:F
 
-    iput v1, p0, Lcom/android/camera/ui/DragLayoutBar;->e:F
+    .line 4
+    iput v1, p0, Lcom/android/camera/ui/DragLayoutBar;->u:F
 
+    .line 5
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const v0, 0x7f070ace
+    const v0, 0x7f070907
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result p1
 
-    iput p1, p0, Lcom/android/camera/ui/DragLayoutBar;->d:F
+    iput p1, p0, Lcom/android/camera/ui/DragLayoutBar;->t:F
 
     const/high16 v0, 0x40000000    # 2.0f
 
     div-float/2addr p1, v0
 
-    iput p1, p0, Lcom/android/camera/ui/DragLayoutBar;->i:F
+    .line 6
+    iput p1, p0, Lcom/android/camera/ui/DragLayoutBar;->k1:F
 
+    .line 7
     new-instance p1, Landroid/graphics/drawable/GradientDrawable;
 
     invoke-direct {p1}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/DragLayoutBar;->a:Landroid/graphics/drawable/GradientDrawable;
+    iput-object p1, p0, Lcom/android/camera/ui/DragLayoutBar;->n:Landroid/graphics/drawable/GradientDrawable;
 
-    iget v0, p0, Lcom/android/camera/ui/DragLayoutBar;->e:F
+    .line 8
+    iget v0, p0, Lcom/android/camera/ui/DragLayoutBar;->u:F
 
     float-to-int v0, v0
 
@@ -268,35 +312,37 @@
 
     div-int/2addr v0, v1
 
-    iget v2, p0, Lcom/android/camera/ui/DragLayoutBar;->d:F
+    iget v2, p0, Lcom/android/camera/ui/DragLayoutBar;->t:F
 
     float-to-int v2, v2
 
     invoke-virtual {p1, v0, v2}, Landroid/graphics/drawable/GradientDrawable;->setSize(II)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/DragLayoutBar;->a:Landroid/graphics/drawable/GradientDrawable;
+    .line 9
+    iget-object p1, p0, Lcom/android/camera/ui/DragLayoutBar;->n:Landroid/graphics/drawable/GradientDrawable;
 
-    iget v0, p0, Lcom/android/camera/ui/DragLayoutBar;->e:F
+    iget v0, p0, Lcom/android/camera/ui/DragLayoutBar;->u:F
 
     float-to-int v0, v0
 
     div-int/2addr v0, v1
 
-    iget v2, p0, Lcom/android/camera/ui/DragLayoutBar;->d:F
+    iget v2, p0, Lcom/android/camera/ui/DragLayoutBar;->t:F
 
     float-to-int v2, v2
 
     const/4 v3, 0x0
 
-    invoke-virtual {p1, v3, v3, v0, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+    invoke-virtual {p1, v3, v3, v0, v2}, Landroid/graphics/drawable/GradientDrawable;->setBounds(IIII)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/DragLayoutBar;->a:Landroid/graphics/drawable/GradientDrawable;
+    .line 10
+    iget-object p1, p0, Lcom/android/camera/ui/DragLayoutBar;->n:Landroid/graphics/drawable/GradientDrawable;
 
     const/16 v0, 0x8
 
     new-array v2, v0, [F
 
-    iget v4, p0, Lcom/android/camera/ui/DragLayoutBar;->i:F
+    iget v4, p0, Lcom/android/camera/ui/DragLayoutBar;->k1:F
 
     aput v4, v2, v3
 
@@ -328,43 +374,47 @@
 
     invoke-virtual {p1, v2}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadii([F)V
 
+    .line 11
     new-instance p1, Landroid/graphics/drawable/GradientDrawable;
 
     invoke-direct {p1}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/DragLayoutBar;->b:Landroid/graphics/drawable/GradientDrawable;
+    iput-object p1, p0, Lcom/android/camera/ui/DragLayoutBar;->p:Landroid/graphics/drawable/GradientDrawable;
 
-    iget v2, p0, Lcom/android/camera/ui/DragLayoutBar;->e:F
+    .line 12
+    iget v2, p0, Lcom/android/camera/ui/DragLayoutBar;->u:F
 
     float-to-int v2, v2
 
     div-int/2addr v2, v1
 
-    iget v4, p0, Lcom/android/camera/ui/DragLayoutBar;->d:F
+    iget v4, p0, Lcom/android/camera/ui/DragLayoutBar;->t:F
 
     float-to-int v4, v4
 
     invoke-virtual {p1, v2, v4}, Landroid/graphics/drawable/GradientDrawable;->setSize(II)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/DragLayoutBar;->b:Landroid/graphics/drawable/GradientDrawable;
+    .line 13
+    iget-object p1, p0, Lcom/android/camera/ui/DragLayoutBar;->p:Landroid/graphics/drawable/GradientDrawable;
 
-    iget v2, p0, Lcom/android/camera/ui/DragLayoutBar;->e:F
+    iget v2, p0, Lcom/android/camera/ui/DragLayoutBar;->u:F
 
     float-to-int v2, v2
 
     div-int/2addr v2, v1
 
-    iget v4, p0, Lcom/android/camera/ui/DragLayoutBar;->d:F
+    iget v4, p0, Lcom/android/camera/ui/DragLayoutBar;->t:F
 
     float-to-int v4, v4
 
-    invoke-virtual {p1, v3, v3, v2, v4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+    invoke-virtual {p1, v3, v3, v2, v4}, Landroid/graphics/drawable/GradientDrawable;->setBounds(IIII)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/DragLayoutBar;->b:Landroid/graphics/drawable/GradientDrawable;
+    .line 14
+    iget-object p1, p0, Lcom/android/camera/ui/DragLayoutBar;->p:Landroid/graphics/drawable/GradientDrawable;
 
     new-array v0, v0, [F
 
-    iget v2, p0, Lcom/android/camera/ui/DragLayoutBar;->i:F
+    iget v2, p0, Lcom/android/camera/ui/DragLayoutBar;->k1:F
 
     aput v2, v0, v3
 
@@ -384,45 +434,51 @@
 
     invoke-virtual {p1, v0}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadii([F)V
 
+    .line 15
     invoke-virtual {p0}, Lcom/android/camera/ui/DragLayoutBar;->updateBgColor()V
 
-    new-instance p1, Lps/m;
+    .line 16
+    new-instance p1, Lk/j0/k/l;
 
-    invoke-direct {p1}, Lps/m;-><init>()V
+    invoke-direct {p1}, Lk/j0/k/l;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/DragLayoutBar;->n:Landroid/view/animation/Interpolator;
+    iput-object p1, p0, Lcom/android/camera/ui/DragLayoutBar;->C2:Landroid/view/animation/Interpolator;
 
+    .line 17
     new-instance p1, Landroid/view/animation/PathInterpolator;
 
-    const v0, 0x3e4ccccd    # 0.2f
+    const v0, 0x3ecccccd    # 0.4f
 
-    const/high16 v2, 0x3f800000    # 1.0f
+    const/4 v2, 0x0
 
-    const v3, 0x3ecccccd    # 0.4f
+    const v3, 0x3e4ccccd    # 0.2f
 
-    const/4 v4, 0x0
+    const/high16 v4, 0x3f800000    # 1.0f
 
-    invoke-direct {p1, v3, v4, v0, v2}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
+    invoke-direct {p1, v0, v2, v3, v4}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
 
-    iput-object p1, p0, Lcom/android/camera/ui/DragLayoutBar;->o:Landroid/view/animation/Interpolator;
+    iput-object p1, p0, Lcom/android/camera/ui/DragLayoutBar;->K2:Landroid/view/animation/Interpolator;
 
     new-array p1, v1, [F
 
+    .line 18
     fill-array-data p1, :array_0
 
     invoke-static {p1}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/android/camera/ui/DragLayoutBar;->m:Landroid/animation/ValueAnimator;
+    iput-object p1, p0, Lcom/android/camera/ui/DragLayoutBar;->v2:Landroid/animation/ValueAnimator;
 
+    .line 19
     new-instance v0, Lcom/android/camera/ui/DragLayoutBar$a;
 
     invoke-direct {v0, p0}, Lcom/android/camera/ui/DragLayoutBar$a;-><init>(Lcom/android/camera/ui/DragLayoutBar;)V
 
     invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/DragLayoutBar;->m:Landroid/animation/ValueAnimator;
+    .line 20
+    iget-object p1, p0, Lcom/android/camera/ui/DragLayoutBar;->v2:Landroid/animation/ValueAnimator;
 
     new-instance v0, Lcom/android/camera/ui/DragLayoutBar$b;
 
@@ -439,12 +495,33 @@
     .end array-data
 .end method
 
+
+# virtual methods
+.method public getTargetAlpha()F
+    .locals 0
+
+    .line 1
+    iget p0, p0, Lcom/android/camera/ui/DragLayoutBar;->K1:F
+
+    return p0
+.end method
+
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "canvas"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    iget v0, p0, Lcom/android/camera/ui/DragLayoutBar;->f:F
+    .line 2
+    iget v0, p0, Lcom/android/camera/ui/DragLayoutBar;->w:F
 
     const/high16 v1, 0x40000000    # 2.0f
 
@@ -454,71 +531,76 @@
 
     mul-float/2addr v0, v3
 
-    iget v3, p0, Lcom/android/camera/ui/DragLayoutBar;->j:F
+    iget v3, p0, Lcom/android/camera/ui/DragLayoutBar;->v1:F
 
     add-float/2addr v0, v3
 
     invoke-virtual {p1, v2, v0}, Landroid/graphics/Canvas;->translate(FF)V
 
+    .line 3
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    iget-boolean v0, p0, Lcom/android/camera/ui/DragLayoutBar;->r:Z
+    .line 4
+    iget-boolean v0, p0, Lcom/android/camera/ui/DragLayoutBar;->M8:Z
 
     const/high16 v2, 0x43340000    # 180.0f
 
     if-eqz v0, :cond_0
 
-    iget v0, p0, Lcom/android/camera/ui/DragLayoutBar;->c:F
+    iget v0, p0, Lcom/android/camera/ui/DragLayoutBar;->s:F
 
     sub-float/2addr v2, v0
 
     goto :goto_0
 
     :cond_0
-    iget v0, p0, Lcom/android/camera/ui/DragLayoutBar;->c:F
+    iget v0, p0, Lcom/android/camera/ui/DragLayoutBar;->s:F
 
     sub-float v2, v0, v2
 
     :goto_0
     invoke-virtual {p1, v2}, Landroid/graphics/Canvas;->rotate(F)V
 
-    iget-object v0, p0, Lcom/android/camera/ui/DragLayoutBar;->a:Landroid/graphics/drawable/GradientDrawable;
+    .line 5
+    iget-object v0, p0, Lcom/android/camera/ui/DragLayoutBar;->n:Landroid/graphics/drawable/GradientDrawable;
 
-    iget v2, p0, Lcom/android/camera/ui/DragLayoutBar;->e:F
+    iget v2, p0, Lcom/android/camera/ui/DragLayoutBar;->u:F
 
     float-to-int v2, v2
 
     div-int/lit8 v2, v2, 0x2
 
-    iget v3, p0, Lcom/android/camera/ui/DragLayoutBar;->d:F
+    iget v3, p0, Lcom/android/camera/ui/DragLayoutBar;->t:F
 
     float-to-int v3, v3
 
     invoke-virtual {v0, v2, v3}, Landroid/graphics/drawable/GradientDrawable;->setSize(II)V
 
-    iget-object v0, p0, Lcom/android/camera/ui/DragLayoutBar;->a:Landroid/graphics/drawable/GradientDrawable;
+    .line 6
+    iget-object v0, p0, Lcom/android/camera/ui/DragLayoutBar;->n:Landroid/graphics/drawable/GradientDrawable;
 
-    iget v2, p0, Lcom/android/camera/ui/DragLayoutBar;->e:F
+    iget v2, p0, Lcom/android/camera/ui/DragLayoutBar;->u:F
 
     float-to-int v2, v2
 
     div-int/lit8 v2, v2, 0x2
 
-    iget v3, p0, Lcom/android/camera/ui/DragLayoutBar;->d:F
+    iget v3, p0, Lcom/android/camera/ui/DragLayoutBar;->t:F
 
     float-to-int v3, v3
 
     const/4 v4, 0x0
 
-    invoke-virtual {v0, v4, v4, v2, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+    invoke-virtual {v0, v4, v4, v2, v3}, Landroid/graphics/drawable/GradientDrawable;->setBounds(IIII)V
 
-    iget v0, p0, Lcom/android/camera/ui/DragLayoutBar;->i:F
+    .line 7
+    iget v0, p0, Lcom/android/camera/ui/DragLayoutBar;->k1:F
 
     neg-float v0, v0
 
-    iget-object v2, p0, Lcom/android/camera/ui/DragLayoutBar;->a:Landroid/graphics/drawable/GradientDrawable;
+    iget-object v2, p0, Lcom/android/camera/ui/DragLayoutBar;->n:Landroid/graphics/drawable/GradientDrawable;
 
-    invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    invoke-virtual {v2}, Landroid/graphics/drawable/GradientDrawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v2
 
@@ -534,65 +616,72 @@
 
     invoke-virtual {p1, v0, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    iget-object v0, p0, Lcom/android/camera/ui/DragLayoutBar;->a:Landroid/graphics/drawable/GradientDrawable;
+    .line 8
+    iget-object v0, p0, Lcom/android/camera/ui/DragLayoutBar;->n:Landroid/graphics/drawable/GradientDrawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/GradientDrawable;->draw(Landroid/graphics/Canvas;)V
 
+    .line 9
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
+    .line 10
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    iget-boolean v0, p0, Lcom/android/camera/ui/DragLayoutBar;->r:Z
+    .line 11
+    iget-boolean v0, p0, Lcom/android/camera/ui/DragLayoutBar;->M8:Z
 
     if-eqz v0, :cond_1
 
-    iget v0, p0, Lcom/android/camera/ui/DragLayoutBar;->c:F
+    iget v0, p0, Lcom/android/camera/ui/DragLayoutBar;->s:F
 
     goto :goto_1
 
     :cond_1
-    iget v0, p0, Lcom/android/camera/ui/DragLayoutBar;->c:F
+    iget v0, p0, Lcom/android/camera/ui/DragLayoutBar;->s:F
 
     neg-float v0, v0
 
     :goto_1
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->rotate(F)V
 
-    iget-object v0, p0, Lcom/android/camera/ui/DragLayoutBar;->b:Landroid/graphics/drawable/GradientDrawable;
+    .line 12
+    iget-object v0, p0, Lcom/android/camera/ui/DragLayoutBar;->p:Landroid/graphics/drawable/GradientDrawable;
 
-    iget v2, p0, Lcom/android/camera/ui/DragLayoutBar;->e:F
+    iget v2, p0, Lcom/android/camera/ui/DragLayoutBar;->u:F
 
     float-to-int v2, v2
 
     div-int/lit8 v2, v2, 0x2
 
-    iget v3, p0, Lcom/android/camera/ui/DragLayoutBar;->d:F
+    iget v3, p0, Lcom/android/camera/ui/DragLayoutBar;->t:F
 
     float-to-int v3, v3
 
     invoke-virtual {v0, v2, v3}, Landroid/graphics/drawable/GradientDrawable;->setSize(II)V
 
-    iget-object v0, p0, Lcom/android/camera/ui/DragLayoutBar;->b:Landroid/graphics/drawable/GradientDrawable;
+    .line 13
+    iget-object v0, p0, Lcom/android/camera/ui/DragLayoutBar;->p:Landroid/graphics/drawable/GradientDrawable;
 
-    iget v2, p0, Lcom/android/camera/ui/DragLayoutBar;->e:F
+    iget v2, p0, Lcom/android/camera/ui/DragLayoutBar;->u:F
 
     float-to-int v2, v2
 
     div-int/lit8 v2, v2, 0x2
 
-    iget v3, p0, Lcom/android/camera/ui/DragLayoutBar;->d:F
+    iget v3, p0, Lcom/android/camera/ui/DragLayoutBar;->t:F
 
     float-to-int v3, v3
 
-    invoke-virtual {v0, v4, v4, v2, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+    invoke-virtual {v0, v4, v4, v2, v3}, Landroid/graphics/drawable/GradientDrawable;->setBounds(IIII)V
 
-    iget v0, p0, Lcom/android/camera/ui/DragLayoutBar;->i:F
+    .line 14
+    iget v0, p0, Lcom/android/camera/ui/DragLayoutBar;->k1:F
 
     neg-float v0, v0
 
-    iget-object v2, p0, Lcom/android/camera/ui/DragLayoutBar;->a:Landroid/graphics/drawable/GradientDrawable;
+    iget-object v2, p0, Lcom/android/camera/ui/DragLayoutBar;->n:Landroid/graphics/drawable/GradientDrawable;
 
-    invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    invoke-virtual {v2}, Landroid/graphics/drawable/GradientDrawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v2
 
@@ -608,12 +697,15 @@
 
     invoke-virtual {p1, v0, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    iget-object p0, p0, Lcom/android/camera/ui/DragLayoutBar;->b:Landroid/graphics/drawable/GradientDrawable;
+    .line 15
+    iget-object p0, p0, Lcom/android/camera/ui/DragLayoutBar;->p:Landroid/graphics/drawable/GradientDrawable;
 
     invoke-virtual {p0, p1}, Landroid/graphics/drawable/GradientDrawable;->draw(Landroid/graphics/Canvas;)V
 
+    .line 16
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
+    .line 17
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     return-void
@@ -621,24 +713,42 @@
 
 .method public setFlatEnable(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "enable"
+        }
+    .end annotation
 
-    iput-boolean p1, p0, Lcom/android/camera/ui/DragLayoutBar;->s:Z
+    .line 1
+    iput-boolean p1, p0, Lcom/android/camera/ui/DragLayoutBar;->N8:Z
 
     return-void
 .end method
 
 .method public showWithAnim(Z)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "anim"
+        }
+    .end annotation
 
     if-eqz p1, :cond_0
 
-    new-instance p1, Lcom/android/camera/animation/folme/c;
+    .line 1
+    new-instance p1, Ld/d/a/f6/i/c;
 
     const/4 v0, 0x0
 
-    iget v1, p0, Lcom/android/camera/ui/DragLayoutBar;->l:F
+    iget v1, p0, Lcom/android/camera/ui/DragLayoutBar;->K1:F
 
-    invoke-direct {p1, p0, v0, v1}, Lcom/android/camera/animation/folme/c;-><init>(Landroid/view/View;FF)V
+    invoke-direct {p1, p0, v0, v1}, Ld/d/a/f6/i/c;-><init>(Landroid/view/View;FF)V
 
     invoke-static {p1}, Lio/reactivex/Completable;->create(Lio/reactivex/CompletableOnSubscribe;)Lio/reactivex/Completable;
 
@@ -651,6 +761,7 @@
     :cond_0
     const/4 p1, 0x0
 
+    .line 2
     invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
 
     :goto_0
@@ -666,7 +777,17 @@
     .annotation build Landroidx/annotation/UiThread;
     .end annotation
 
-    iget-boolean v0, p0, Lcom/android/camera/ui/DragLayoutBar;->s:Z
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "targetState"
+        }
+    .end annotation
+
+    .line 1
+    iget-boolean v0, p0, Lcom/android/camera/ui/DragLayoutBar;->N8:Z
 
     const/4 v1, 0x0
 
@@ -674,8 +795,9 @@
 
     return v1
 
+    .line 2
     :cond_0
-    iget v0, p0, Lcom/android/camera/ui/DragLayoutBar;->q:I
+    iget v0, p0, Lcom/android/camera/ui/DragLayoutBar;->L8:I
 
     const/4 v2, 0x2
 
@@ -687,13 +809,14 @@
 
     new-array v0, v2, [Ljava/lang/Object;
 
+    .line 3
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
     aput-object p1, v0, v1
 
-    iget p0, p0, Lcom/android/camera/ui/DragLayoutBar;->q:I
+    iget p0, p0, Lcom/android/camera/ui/DragLayoutBar;->L8:I
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -703,6 +826,7 @@
 
     const-string p0, "start bar animation with invalid state {%d} , and cur target state {%d}"
 
+    .line 4
     invoke-static {p0, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -729,10 +853,12 @@
     :goto_0
     move v0, v4
 
+    .line 5
     :goto_1
-    iput-boolean v0, p0, Lcom/android/camera/ui/DragLayoutBar;->r:Z
+    iput-boolean v0, p0, Lcom/android/camera/ui/DragLayoutBar;->M8:Z
 
-    iget v0, p0, Lcom/android/camera/ui/DragLayoutBar;->p:I
+    .line 6
+    iget v0, p0, Lcom/android/camera/ui/DragLayoutBar;->K8:I
 
     const/4 v5, 0x0
 
@@ -747,10 +873,12 @@
     :cond_4
     move v0, v6
 
+    .line 7
     :goto_2
-    iput p1, p0, Lcom/android/camera/ui/DragLayoutBar;->q:I
+    iput p1, p0, Lcom/android/camera/ui/DragLayoutBar;->L8:I
 
-    iget-object v7, p0, Lcom/android/camera/ui/DragLayoutBar;->m:Landroid/animation/ValueAnimator;
+    .line 8
+    iget-object v7, p0, Lcom/android/camera/ui/DragLayoutBar;->v2:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v7}, Landroid/animation/ValueAnimator;->isRunning()Z
 
@@ -758,7 +886,8 @@
 
     if-eqz v7, :cond_5
 
-    iget-object v0, p0, Lcom/android/camera/ui/DragLayoutBar;->m:Landroid/animation/ValueAnimator;
+    .line 9
+    iget-object v0, p0, Lcom/android/camera/ui/DragLayoutBar;->v2:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
@@ -770,6 +899,7 @@
 
     move-result v0
 
+    .line 10
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -788,7 +918,8 @@
 
     invoke-static {v3, v7, v8}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v7, p0, Lcom/android/camera/ui/DragLayoutBar;->m:Landroid/animation/ValueAnimator;
+    .line 11
+    iget-object v7, p0, Lcom/android/camera/ui/DragLayoutBar;->v2:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v7}, Landroid/animation/ValueAnimator;->cancel()V
 
@@ -802,8 +933,9 @@
     :cond_6
     move v5, v6
 
+    .line 12
     :goto_3
-    iget-object v6, p0, Lcom/android/camera/ui/DragLayoutBar;->m:Landroid/animation/ValueAnimator;
+    iget-object v6, p0, Lcom/android/camera/ui/DragLayoutBar;->v2:Landroid/animation/ValueAnimator;
 
     new-array v7, v2, [F
 
@@ -813,12 +945,14 @@
 
     invoke-virtual {v6, v7}, Landroid/animation/ValueAnimator;->setFloatValues([F)V
 
-    iget-object v6, p0, Lcom/android/camera/ui/DragLayoutBar;->m:Landroid/animation/ValueAnimator;
+    .line 13
+    iget-object v6, p0, Lcom/android/camera/ui/DragLayoutBar;->v2:Landroid/animation/ValueAnimator;
 
     if-nez p1, :cond_7
 
     sub-float v7, v5, v0
 
+    .line 14
     invoke-static {v7}, Ljava/lang/Math;->abs(F)F
 
     move-result v7
@@ -830,6 +964,7 @@
     :cond_7
     sub-float v7, v5, v0
 
+    .line 15
     invoke-static {v7}, Ljava/lang/Math;->abs(F)F
 
     move-result v7
@@ -843,18 +978,20 @@
 
     int-to-long v7, v7
 
+    .line 16
     invoke-virtual {v6, v7, v8}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    iget-object v6, p0, Lcom/android/camera/ui/DragLayoutBar;->m:Landroid/animation/ValueAnimator;
+    .line 17
+    iget-object v6, p0, Lcom/android/camera/ui/DragLayoutBar;->v2:Landroid/animation/ValueAnimator;
 
     if-nez p1, :cond_8
 
-    iget-object p1, p0, Lcom/android/camera/ui/DragLayoutBar;->o:Landroid/view/animation/Interpolator;
+    iget-object p1, p0, Lcom/android/camera/ui/DragLayoutBar;->K2:Landroid/view/animation/Interpolator;
 
     goto :goto_5
 
     :cond_8
-    iget-object p1, p0, Lcom/android/camera/ui/DragLayoutBar;->n:Landroid/view/animation/Interpolator;
+    iget-object p1, p0, Lcom/android/camera/ui/DragLayoutBar;->C2:Landroid/view/animation/Interpolator;
 
     :goto_5
     invoke-virtual {v6, p1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
@@ -863,15 +1000,17 @@
 
     new-array p1, p1, [Ljava/lang/Object;
 
-    iget v6, p0, Lcom/android/camera/ui/DragLayoutBar;->p:I
+    .line 18
+    iget v6, p0, Lcom/android/camera/ui/DragLayoutBar;->K8:I
 
+    .line 19
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
 
     aput-object v6, p1, v1
 
-    iget v6, p0, Lcom/android/camera/ui/DragLayoutBar;->q:I
+    iget v6, p0, Lcom/android/camera/ui/DragLayoutBar;->L8:I
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -879,7 +1018,7 @@
 
     aput-object v6, p1, v4
 
-    iget-object v6, p0, Lcom/android/camera/ui/DragLayoutBar;->m:Landroid/animation/ValueAnimator;
+    iget-object v6, p0, Lcom/android/camera/ui/DragLayoutBar;->v2:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v6}, Landroid/animation/ValueAnimator;->getDuration()J
 
@@ -907,18 +1046,19 @@
 
     aput-object v2, p1, v0
 
-    iget-boolean v0, p0, Lcom/android/camera/ui/DragLayoutBar;->r:Z
+    const/4 v0, 0x5
 
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    iget-boolean v2, p0, Lcom/android/camera/ui/DragLayoutBar;->M8:Z
 
-    move-result-object v0
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    const/4 v2, 0x5
+    move-result-object v2
 
-    aput-object v0, p1, v2
+    aput-object v2, p1, v0
 
     const-string v0, "start animation with states {%d} {%d} AND duration {%s} , values {%s:%s} , isUp {%s}"
 
+    .line 20
     invoke-static {v0, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -927,7 +1067,8 @@
 
     invoke-static {v3, p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object p0, p0, Lcom/android/camera/ui/DragLayoutBar;->m:Landroid/animation/ValueAnimator;
+    .line 21
+    iget-object p0, p0, Lcom/android/camera/ui/DragLayoutBar;->v2:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p0}, Landroid/animation/ValueAnimator;->start()V
 
@@ -937,18 +1078,20 @@
 .method public updateBgColor()V
     .locals 4
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    .line 1
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object v0
 
-    const v1, 0x7f0607f6
+    const v1, 0x7f0603c5
 
-    invoke-virtual {v0, v1}, Lf2/e;->b(I)I
+    invoke-virtual {v0, v1}, Ld/d/a/k6/f;->b(I)I
 
     move-result v0
 
-    iput v0, p0, Lcom/android/camera/ui/DragLayoutBar;->k:I
+    iput v0, p0, Lcom/android/camera/ui/DragLayoutBar;->C1:I
 
+    .line 2
     invoke-static {v0}, Landroid/graphics/Color;->alpha(I)I
 
     move-result v0
@@ -959,21 +1102,22 @@
 
     div-float/2addr v0, v1
 
-    iput v0, p0, Lcom/android/camera/ui/DragLayoutBar;->l:F
+    iput v0, p0, Lcom/android/camera/ui/DragLayoutBar;->K1:F
 
-    iget v0, p0, Lcom/android/camera/ui/DragLayoutBar;->k:I
+    .line 3
+    iget v0, p0, Lcom/android/camera/ui/DragLayoutBar;->C1:I
 
     invoke-static {v0}, Landroid/graphics/Color;->red(I)I
 
     move-result v0
 
-    iget v1, p0, Lcom/android/camera/ui/DragLayoutBar;->k:I
+    iget v1, p0, Lcom/android/camera/ui/DragLayoutBar;->C1:I
 
     invoke-static {v1}, Landroid/graphics/Color;->green(I)I
 
     move-result v1
 
-    iget v2, p0, Lcom/android/camera/ui/DragLayoutBar;->k:I
+    iget v2, p0, Lcom/android/camera/ui/DragLayoutBar;->C1:I
 
     invoke-static {v2}, Landroid/graphics/Color;->blue(I)I
 
@@ -985,24 +1129,28 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/android/camera/ui/DragLayoutBar;->k:I
+    iput v0, p0, Lcom/android/camera/ui/DragLayoutBar;->C1:I
 
-    iget v0, p0, Lcom/android/camera/ui/DragLayoutBar;->l:F
+    .line 4
+    iget v0, p0, Lcom/android/camera/ui/DragLayoutBar;->K1:F
 
     invoke-virtual {p0, v0}, Landroid/view/View;->setAlpha(F)V
 
-    iget-object v0, p0, Lcom/android/camera/ui/DragLayoutBar;->a:Landroid/graphics/drawable/GradientDrawable;
+    .line 5
+    iget-object v0, p0, Lcom/android/camera/ui/DragLayoutBar;->n:Landroid/graphics/drawable/GradientDrawable;
 
-    iget v1, p0, Lcom/android/camera/ui/DragLayoutBar;->k:I
-
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
-
-    iget-object v0, p0, Lcom/android/camera/ui/DragLayoutBar;->b:Landroid/graphics/drawable/GradientDrawable;
-
-    iget v1, p0, Lcom/android/camera/ui/DragLayoutBar;->k:I
+    iget v1, p0, Lcom/android/camera/ui/DragLayoutBar;->C1:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
 
+    .line 6
+    iget-object v0, p0, Lcom/android/camera/ui/DragLayoutBar;->p:Landroid/graphics/drawable/GradientDrawable;
+
+    iget v1, p0, Lcom/android/camera/ui/DragLayoutBar;->C1:I
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
+
+    .line 7
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     return-void

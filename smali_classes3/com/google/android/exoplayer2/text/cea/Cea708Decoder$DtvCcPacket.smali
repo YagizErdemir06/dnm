@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$DtvCcPacket;
+.class public final Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$DtvCcPacket;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field currentIndex:I
+.field public currentIndex:I
 
 .field public final packetData:[B
 
@@ -28,22 +28,27 @@
 .method public constructor <init>(II)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$DtvCcPacket;->sequenceNumber:I
 
+    .line 3
     iput p2, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$DtvCcPacket;->packetSize:I
 
     mul-int/lit8 p2, p2, 0x2
 
     add-int/lit8 p2, p2, -0x1
 
+    .line 4
     new-array p1, p2, [B
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$DtvCcPacket;->packetData:[B
 
     const/4 p1, 0x0
 
+    .line 5
     iput p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$DtvCcPacket;->currentIndex:I
 
     return-void

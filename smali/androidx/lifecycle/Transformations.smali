@@ -7,6 +7,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,10 +42,12 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Landroidx/lifecycle/MediatorLiveData;
 
     invoke-direct {v0}, Landroidx/lifecycle/MediatorLiveData;-><init>()V
 
+    .line 2
     new-instance v1, Landroidx/lifecycle/Transformations$1;
 
     invoke-direct {v1, v0, p1}, Landroidx/lifecycle/Transformations$1;-><init>(Landroidx/lifecycle/MediatorLiveData;Landroidx/arch/core/util/Function;)V
@@ -85,10 +88,12 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Landroidx/lifecycle/MediatorLiveData;
 
     invoke-direct {v0}, Landroidx/lifecycle/MediatorLiveData;-><init>()V
 
+    .line 2
     new-instance v1, Landroidx/lifecycle/Transformations$2;
 
     invoke-direct {v1, p1, v0}, Landroidx/lifecycle/Transformations$2;-><init>(Landroidx/arch/core/util/Function;Landroidx/lifecycle/MediatorLiveData;)V

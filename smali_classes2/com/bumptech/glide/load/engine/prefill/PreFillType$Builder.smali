@@ -83,6 +83,7 @@
 .method public build()Lcom/bumptech/glide/load/engine/prefill/PreFillType;
     .locals 4
 
+    .line 1
     new-instance v0, Lcom/bumptech/glide/load/engine/prefill/PreFillType;
 
     iget v1, p0, Lcom/bumptech/glide/load/engine/prefill/PreFillType$Builder;->width:I
@@ -101,6 +102,7 @@
 .method public getConfig()Landroid/graphics/Bitmap$Config;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/prefill/PreFillType$Builder;->config:Landroid/graphics/Bitmap$Config;
 
     return-object p0
@@ -113,6 +115,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/prefill/PreFillType$Builder;->config:Landroid/graphics/Bitmap$Config;
 
     return-object p0
@@ -123,10 +126,12 @@
 
     if-lez p1, :cond_0
 
+    .line 1
     iput p1, p0, Lcom/bumptech/glide/load/engine/prefill/PreFillType$Builder;->weight:I
 
     return-object p0
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

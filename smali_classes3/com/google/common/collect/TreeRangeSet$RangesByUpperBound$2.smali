@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/TreeRangeSet$RangesByUpperBound$2;
+.class public Lcom/google/common/collect/TreeRangeSet$RangesByUpperBound$2;
 .super Lcom/google/common/collect/AbstractIterator;
 .source "SourceFile"
 
@@ -26,15 +26,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/TreeRangeSet$RangesByUpperBound;
+.field public final synthetic this$0:Lcom/google/common/collect/TreeRangeSet$RangesByUpperBound;
 
-.field final synthetic val$backingItr:Lcom/google/common/collect/PeekingIterator;
+.field public final synthetic val$backingItr:Lcom/google/common/collect/PeekingIterator;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/TreeRangeSet$RangesByUpperBound;Lcom/google/common/collect/PeekingIterator;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/TreeRangeSet$RangesByUpperBound$2;->this$0:Lcom/google/common/collect/TreeRangeSet$RangesByUpperBound;
 
     iput-object p2, p0, Lcom/google/common/collect/TreeRangeSet$RangesByUpperBound$2;->val$backingItr:Lcom/google/common/collect/PeekingIterator;

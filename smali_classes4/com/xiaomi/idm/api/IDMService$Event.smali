@@ -33,10 +33,13 @@
 .method public constructor <init>(Lcom/xiaomi/idm/api/IDMService;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/xiaomi/idm/api/IDMService$Event;->mService:Lcom/xiaomi/idm/api/IDMService;
 
+    .line 3
     iput p2, p0, Lcom/xiaomi/idm/api/IDMService$Event;->mEid:I
 
     return-void
@@ -47,6 +50,7 @@
 .method public getEid()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/idm/api/IDMService$Event;->mEid:I
 
     return p0
@@ -55,6 +59,7 @@
 .method public getServiceId()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMService$Event;->mService:Lcom/xiaomi/idm/api/IDMService;
 
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMService;->getServiceId()Ljava/lang/String;
@@ -92,6 +97,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -124,6 +130,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 2
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMService$Event;->getEid()I
 
     move-result p0

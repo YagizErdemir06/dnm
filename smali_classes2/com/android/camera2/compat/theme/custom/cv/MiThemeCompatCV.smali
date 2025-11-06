@@ -30,44 +30,52 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationFragmentCV;
 
     invoke-direct {v0}, Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationFragmentCV;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/MiThemeCompatCV;->mMiThemeOperationFragmentCV:Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationFragmentCV;
 
+    .line 3
     new-instance v0, Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationBottomCV;
 
     invoke-direct {v0}, Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationBottomCV;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/MiThemeCompatCV;->miThemeOperationBottomCV:Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationBottomCV;
 
+    .line 4
     new-instance v0, Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationTopAlertCV;
 
     invoke-direct {v0}, Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationTopAlertCV;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/MiThemeCompatCV;->miThemeOperationTopAlertCV:Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationTopAlertCV;
 
+    .line 5
     new-instance v0, Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationZoomCV;
 
     invoke-direct {v0}, Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationZoomCV;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/MiThemeCompatCV;->miThemeOperationZoomCV:Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationZoomCV;
 
+    .line 6
     new-instance v0, Lcom/android/camera2/compat/theme/custom/cv/MithemeOperationFocusCV;
 
     invoke-direct {v0}, Lcom/android/camera2/compat/theme/custom/cv/MithemeOperationFocusCV;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/MiThemeCompatCV;->miThemeOperationFocusCV:Lcom/android/camera2/compat/theme/custom/cv/MithemeOperationFocusCV;
 
+    .line 7
     new-instance v0, Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationTopMenuCV;
 
     invoke-direct {v0}, Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationTopMenuCV;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/MiThemeCompatCV;->miThemeOperationTopMenuCV:Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationTopMenuCV;
 
+    .line 8
     new-instance v0, Lcom/android/camera2/compat/theme/common/MiThemeOperationNewTopMenu;
 
     invoke-direct {v0}, Lcom/android/camera2/compat/theme/common/MiThemeOperationNewTopMenu;-><init>()V
@@ -81,6 +89,14 @@
 # virtual methods
 .method public create(Landroid/content/Context;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     return-void
 .end method
@@ -91,9 +107,22 @@
     return-void
 .end method
 
-.method public getDeviceWatermark(Ljava/lang/String;FZ)Lcom/android/gallery3d/ui/b;
+.method public getDeviceWatermark(Ljava/lang/String;FZ)Ld/d/c/a/b;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "customText",
+            "ratio",
+            "isLTR"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {p1, p2, p3}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvDeviceWaterMarkTexture;->newInstance(Ljava/lang/String;FZ)Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvDeviceWaterMarkTexture;
 
     move-result-object p0
@@ -104,6 +133,7 @@
 .method public getFragmentOverlay()Lcom/android/camera2/compat/theme/common/MiThemeOperationFragmentIf;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/MiThemeCompatCV;->mMiThemeOperationFragmentCV:Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationFragmentCV;
 
     return-object p0
@@ -112,6 +142,7 @@
 .method public getOperationBottom()Lcom/android/camera2/compat/theme/common/MiThemeOperationBottomInterface;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/MiThemeCompatCV;->miThemeOperationBottomCV:Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationBottomCV;
 
     return-object p0
@@ -120,6 +151,7 @@
 .method public getOperationFocus()Lcom/android/camera2/compat/theme/common/MithemeOperationFocusInterface;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/MiThemeCompatCV;->miThemeOperationFocusCV:Lcom/android/camera2/compat/theme/custom/cv/MithemeOperationFocusCV;
 
     return-object p0
@@ -128,6 +160,7 @@
 .method public getOperationNewTopMenu()Lcom/android/camera2/compat/theme/common/MiThemeOperationNewTopMenuInterface;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/MiThemeCompatCV;->miThemeOperationNewTopMenu:Lcom/android/camera2/compat/theme/common/MiThemeOperationNewTopMenu;
 
     return-object p0
@@ -136,6 +169,7 @@
 .method public getOperationTopAlert()Lcom/android/camera2/compat/theme/common/MiThemeOperationTopAlertInterface;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/MiThemeCompatCV;->miThemeOperationTopAlertCV:Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationTopAlertCV;
 
     return-object p0
@@ -144,6 +178,7 @@
 .method public getOperationTopMenu()Lcom/android/camera2/compat/theme/common/MiThemeOperationTopMenuInterface;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/MiThemeCompatCV;->miThemeOperationTopMenuCV:Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationTopMenuCV;
 
     return-object p0
@@ -152,6 +187,7 @@
 .method public getOperationZoom()Lcom/android/camera2/compat/theme/common/MiThemeOperationZoomInterface;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/MiThemeCompatCV;->miThemeOperationZoomCV:Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationZoomCV;
 
     return-object p0
@@ -159,9 +195,18 @@
 
 .method public getOverlayResByDefaultSuffix(I)I
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "srcId"
+        }
+    .end annotation
 
     const-string v0, "_cv"
 
+    .line 1
     invoke-virtual {p0, p1, v0}, Lcom/android/camera2/compat/theme/custom/cv/MiThemeCompatCV;->getOverlayResBySuffix(ILjava/lang/String;)I
 
     move-result p0
@@ -171,6 +216,16 @@
 
 .method public getOverlayResBySuffix(ILjava/lang/String;)I
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "srcId",
+            "suffix"
+        }
+    .end annotation
 
     const/4 p0, -0x1
 
@@ -178,8 +233,9 @@
 
     return p1
 
+    .line 1
     :cond_0
-    invoke-static {}, Lcom/android/camera/CameraAppImpl;->o()Landroid/content/Context;
+    invoke-static {}, Lcom/android/camera/CameraAppImpl;->d()Landroid/content/Context;
 
     move-result-object p0
 
@@ -187,10 +243,12 @@
 
     move-result-object p0
 
+    .line 2
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getResourceTypeName(I)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 3
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -207,7 +265,8 @@
 
     move-result-object p2
 
-    invoke-static {}, Lcom/android/camera/CameraAppImpl;->o()Landroid/content/Context;
+    .line 4
+    invoke-static {}, Lcom/android/camera/CameraAppImpl;->d()Landroid/content/Context;
 
     move-result-object v1
 
@@ -233,19 +292,37 @@
 .method public getTestStringID()I
     .locals 0
 
-    const p0, 0x7f140bd4
+    const p0, 0x7f130b4f
 
     return p0
 .end method
 
 .method public getTypeface(Landroid/content/Context;Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "tf"
+        }
+    .end annotation
 
     return-object p2
 .end method
 
 .method public setTheme(Landroid/app/Activity;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "activity"
+        }
+    .end annotation
 
     return-void
 .end method

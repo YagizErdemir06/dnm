@@ -17,28 +17,27 @@
     .end annotation
 .end field
 
-.field static final FIELD_RATING_TYPE:I = 0x0
+.field public static final FIELD_RATING_TYPE:I = 0x0
 
-.field static final RATING_TYPE_HEART:I = 0x0
+.field public static final RATING_TYPE_HEART:I = 0x0
 
-.field static final RATING_TYPE_PERCENTAGE:I = 0x1
+.field public static final RATING_TYPE_PERCENTAGE:I = 0x1
 
-.field static final RATING_TYPE_STAR:I = 0x2
+.field public static final RATING_TYPE_STAR:I = 0x2
 
-.field static final RATING_TYPE_THUMB:I = 0x3
+.field public static final RATING_TYPE_THUMB:I = 0x3
 
-.field static final RATING_TYPE_UNSET:I = -0x1
+.field public static final RATING_TYPE_UNSET:I = -0x1
 
-.field static final RATING_UNSET:F = -1.0f
+.field public static final RATING_UNSET:F = -1.0f
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/google/android/exoplayer2/h2;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/h2;-><init>()V
+    .line 1
+    sget-object v0, Ld/j/a/b/z1;->a:Ld/j/a/b/z1;
 
     sput-object v0, Lcom/google/android/exoplayer2/Rating;->CREATOR:Lcom/google/android/exoplayer2/Bundleable$Creator;
 
@@ -48,6 +47,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -68,6 +68,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {v0}, Lcom/google/android/exoplayer2/Rating;->keyForField(I)Ljava/lang/String;
 
     move-result-object v0
@@ -92,6 +93,7 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 2
     sget-object v0, Lcom/google/android/exoplayer2/ThumbRating;->CREATOR:Lcom/google/android/exoplayer2/Bundleable$Creator;
 
     invoke-interface {v0, p0}, Lcom/google/android/exoplayer2/Bundleable$Creator;->fromBundle(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/Bundleable;
@@ -102,6 +104,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -123,6 +126,7 @@
 
     throw p0
 
+    .line 4
     :cond_1
     sget-object v0, Lcom/google/android/exoplayer2/StarRating;->CREATOR:Lcom/google/android/exoplayer2/Bundleable$Creator;
 
@@ -134,6 +138,7 @@
 
     return-object p0
 
+    .line 5
     :cond_2
     sget-object v0, Lcom/google/android/exoplayer2/PercentageRating;->CREATOR:Lcom/google/android/exoplayer2/Bundleable$Creator;
 
@@ -145,6 +150,7 @@
 
     return-object p0
 
+    .line 6
     :cond_3
     sget-object v0, Lcom/google/android/exoplayer2/HeartRating;->CREATOR:Lcom/google/android/exoplayer2/Bundleable$Creator;
 
@@ -162,6 +168,7 @@
 
     const/16 v0, 0x24
 
+    .line 1
     invoke-static {p0, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
     move-result-object p0

@@ -1,4 +1,4 @@
-.class Lio/reactivex/android/MainThreadDisposable$1;
+.class public Lio/reactivex/android/MainThreadDisposable$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lio/reactivex/android/MainThreadDisposable;
+.field public final synthetic this$0:Lio/reactivex/android/MainThreadDisposable;
 
 
 # direct methods
 .method public constructor <init>(Lio/reactivex/android/MainThreadDisposable;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lio/reactivex/android/MainThreadDisposable$1;->this$0:Lio/reactivex/android/MainThreadDisposable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,6 +38,7 @@
 .method public run()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lio/reactivex/android/MainThreadDisposable$1;->this$0:Lio/reactivex/android/MainThreadDisposable;
 
     invoke-virtual {p0}, Lio/reactivex/android/MainThreadDisposable;->onDispose()V

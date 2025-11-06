@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/ImmutableSetMultimap$EntrySet;
+.class public final Lcom/google/common/collect/ImmutableSetMultimap$EntrySet;
 .super Lcom/google/common/collect/ImmutableSet;
 .source "SourceFile"
 
@@ -52,8 +52,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableSet;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/ImmutableSetMultimap$EntrySet;->multimap:Lcom/google/common/collect/ImmutableSetMultimap;
 
     return-void
@@ -68,12 +70,15 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Ljava/util/Map$Entry;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Ljava/util/Map$Entry;
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/collect/ImmutableSetMultimap$EntrySet;->multimap:Lcom/google/common/collect/ImmutableSetMultimap;
 
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
@@ -139,6 +144,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableSetMultimap$EntrySet;->multimap:Lcom/google/common/collect/ImmutableSetMultimap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMultimap;->size()I

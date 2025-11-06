@@ -10,6 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/dom4j/tree/AbstractNode;-><init>()V
 
     return-void
@@ -20,6 +21,7 @@
 .method public accept(Lorg/dom4j/Visitor;)V
     .locals 0
 
+    .line 1
     invoke-interface {p1, p0}, Lorg/dom4j/Visitor;->visit(Lorg/dom4j/Entity;)V
 
     return-void
@@ -28,6 +30,7 @@
 .method public asXML()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -64,6 +67,7 @@
 .method public getPath(Lorg/dom4j/Element;)Ljava/lang/String;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractNode;->getParent()Lorg/dom4j/Element;
 
     move-result-object p0
@@ -72,6 +76,7 @@
 
     if-eq p0, p1, :cond_0
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -102,6 +107,7 @@
 .method public getStringValue()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -130,6 +136,7 @@
 .method public getUniquePath(Lorg/dom4j/Element;)Ljava/lang/String;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractNode;->getParent()Lorg/dom4j/Element;
 
     move-result-object p0
@@ -138,6 +145,7 @@
 
     if-eq p0, p1, :cond_0
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -168,6 +176,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -209,8 +218,10 @@
 
     const-string v0, "&"
 
+    .line 1
     invoke-virtual {p1, v0}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractNode;->getName()Ljava/lang/String;
 
     move-result-object p0
@@ -219,6 +230,7 @@
 
     const-string p0, ";"
 
+    .line 3
     invoke-virtual {p1, p0}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
     return-void

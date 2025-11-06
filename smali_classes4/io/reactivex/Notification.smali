@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final COMPLETE:Lio/reactivex/Notification;
+.field public static final COMPLETE:Lio/reactivex/Notification;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lio/reactivex/Notification<",
@@ -27,13 +27,14 @@
 
 
 # instance fields
-.field final value:Ljava/lang/Object;
+.field public final value:Ljava/lang/Object;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lio/reactivex/Notification;
 
     const/4 v1, 0x0
@@ -48,8 +49,10 @@
 .method private constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lio/reactivex/Notification;->value:Ljava/lang/Object;
 
     return-void
@@ -70,6 +73,7 @@
     .annotation build Lio/reactivex/annotations/NonNull;
     .end annotation
 
+    .line 1
     sget-object v0, Lio/reactivex/Notification;->COMPLETE:Lio/reactivex/Notification;
 
     return-object v0
@@ -98,8 +102,10 @@
 
     const-string v0, "error is null"
 
+    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lio/reactivex/Notification;
 
     invoke-static {p0}, Lio/reactivex/internal/util/NotificationLite;->error(Ljava/lang/Throwable;)Ljava/lang/Object;
@@ -132,8 +138,10 @@
 
     const-string v0, "value is null"
 
+    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lio/reactivex/Notification;
 
     invoke-direct {v0, p0}, Lio/reactivex/Notification;-><init>(Ljava/lang/Object;)V
@@ -146,12 +154,15 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
+    .line 1
     instance-of v0, p1, Lio/reactivex/Notification;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lio/reactivex/Notification;
 
+    .line 3
     iget-object p0, p0, Lio/reactivex/Notification;->value:Ljava/lang/Object;
 
     iget-object p1, p1, Lio/reactivex/Notification;->value:Ljava/lang/Object;
@@ -173,14 +184,17 @@
     .annotation build Lio/reactivex/annotations/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lio/reactivex/Notification;->value:Ljava/lang/Object;
 
+    .line 2
     invoke-static {p0}, Lio/reactivex/internal/util/NotificationLite;->isError(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-static {p0}, Lio/reactivex/internal/util/NotificationLite;->getError(Ljava/lang/Object;)Ljava/lang/Throwable;
 
     move-result-object p0
@@ -204,16 +218,19 @@
     .annotation build Lio/reactivex/annotations/Nullable;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lio/reactivex/Notification;->value:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-static {v0}, Lio/reactivex/internal/util/NotificationLite;->isError(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 3
     iget-object p0, p0, Lio/reactivex/Notification;->value:Ljava/lang/Object;
 
     return-object p0
@@ -227,10 +244,12 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lio/reactivex/Notification;->value:Ljava/lang/Object;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
     move-result p0
@@ -247,6 +266,7 @@
 .method public isOnComplete()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lio/reactivex/Notification;->value:Ljava/lang/Object;
 
     if-nez p0, :cond_0
@@ -265,6 +285,7 @@
 .method public isOnError()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lio/reactivex/Notification;->value:Ljava/lang/Object;
 
     invoke-static {p0}, Lio/reactivex/internal/util/NotificationLite;->isError(Ljava/lang/Object;)Z
@@ -277,10 +298,12 @@
 .method public isOnNext()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lio/reactivex/Notification;->value:Ljava/lang/Object;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-static {p0}, Lio/reactivex/internal/util/NotificationLite;->isError(Ljava/lang/Object;)Z
 
     move-result p0
@@ -301,6 +324,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lio/reactivex/Notification;->value:Ljava/lang/Object;
 
     if-nez v0, :cond_0
@@ -309,6 +333,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     invoke-static {v0}, Lio/reactivex/internal/util/NotificationLite;->isError(Ljava/lang/Object;)Z
 
@@ -318,6 +343,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 3
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -340,6 +366,7 @@
 
     return-object p0
 
+    .line 4
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 

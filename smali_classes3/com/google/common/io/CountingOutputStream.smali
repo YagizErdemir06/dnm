@@ -19,6 +19,7 @@
 .method public constructor <init>(Ljava/io/OutputStream;)V
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -40,6 +41,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
 
     invoke-virtual {p0}, Ljava/io/OutputStream;->close()V
@@ -50,6 +52,7 @@
 .method public getCount()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/io/CountingOutputStream;->count:J
 
     return-wide v0

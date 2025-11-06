@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/collect/Tables$AbstractCell;
+.class public abstract Lcom/google/common/collect/Tables$AbstractCell;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -36,6 +36,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -56,6 +57,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/common/collect/Table$Cell;
 
@@ -63,8 +65,10 @@
 
     if-eqz v1, :cond_2
 
+    .line 2
     check-cast p1, Lcom/google/common/collect/Table$Cell;
 
+    .line 3
     invoke-interface {p0}, Lcom/google/common/collect/Table$Cell;->getRowKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -79,6 +83,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 4
     invoke-interface {p0}, Lcom/google/common/collect/Table$Cell;->getColumnKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -93,6 +98,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 5
     invoke-interface {p0}, Lcom/google/common/collect/Table$Cell;->getValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -126,27 +132,28 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    const/4 v1, 0x0
-
+    .line 1
     invoke-interface {p0}, Lcom/google/common/collect/Table$Cell;->getRowKey()Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v1
 
-    aput-object v2, v0, v1
+    const/4 v2, 0x0
 
-    const/4 v1, 0x1
+    aput-object v1, v0, v2
 
     invoke-interface {p0}, Lcom/google/common/collect/Table$Cell;->getColumnKey()Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v1
 
-    aput-object v2, v0, v1
+    const/4 v2, 0x1
 
-    const/4 v1, 0x2
+    aput-object v1, v0, v2
 
     invoke-interface {p0}, Lcom/google/common/collect/Table$Cell;->getValue()Ljava/lang/Object;
 
     move-result-object p0
+
+    const/4 v1, 0x2
 
     aput-object p0, v0, v1
 
@@ -160,6 +167,7 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
+    .line 1
     invoke-interface {p0}, Lcom/google/common/collect/Table$Cell;->getRowKey()Ljava/lang/Object;
 
     move-result-object v0

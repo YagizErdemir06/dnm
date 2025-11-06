@@ -15,19 +15,34 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/camera2/compat/theme/custom/cv/panleentrance/MakeupSingleCheckAdapterCV;
+.field public final synthetic this$0:Lcom/android/camera2/compat/theme/custom/cv/panleentrance/MakeupSingleCheckAdapterCV;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera2/compat/theme/custom/cv/panleentrance/MakeupSingleCheckAdapterCV;Landroid/view/View;Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x0,
+            0x0
+        }
+        names = {
+            "this$0",
+            "itemView",
+            "mAdapter"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/panleentrance/MakeupSingleCheckAdapterCV$SingleCheckViewHolderCV;->this$0:Lcom/android/camera2/compat/theme/custom/cv/panleentrance/MakeupSingleCheckAdapterCV;
 
+    .line 2
     invoke-direct {p0, p1, p2, p3}, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter$SingleCheckViewHolder;-><init>(Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter;Landroid/view/View;Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter;)V
 
-    const p1, 0x7f0b043f
+    const p1, 0x7f0b03e7
 
+    .line 3
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -41,6 +56,16 @@
 
 .method private visibleAnimate(Landroid/widget/ImageView;Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x10,
+            0x0
+        }
+        names = {
+            "imageView",
+            "select"
+        }
+    .end annotation
 
     if-eqz p2, :cond_0
 
@@ -51,6 +76,7 @@
     :cond_0
     const/16 p0, 0x8
 
+    .line 1
     :goto_0
     invoke-virtual {p1, p0}, Landroid/widget/ImageView;->setVisibility(I)V
 
@@ -63,8 +89,9 @@
     :cond_1
     const/4 p0, 0x0
 
+    .line 2
     :goto_1
-    invoke-virtual {p1, p0}, Landroid/view/View;->setAlpha(F)V
+    invoke-virtual {p1, p0}, Landroid/widget/ImageView;->setAlpha(F)V
 
     return-void
 .end method
@@ -73,42 +100,59 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->getAdapterPosition()I
 
     move-result p1
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/panleentrance/MakeupSingleCheckAdapterCV$SingleCheckViewHolderCV;->this$0:Lcom/android/camera2/compat/theme/custom/cv/panleentrance/MakeupSingleCheckAdapterCV;
 
     iget v1, v0, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter;->mSelectedItem:I
 
     if-ne p1, v1, :cond_0
 
+    .line 3
     iget-object p1, p0, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter$SingleCheckViewHolder;->mAdapter:Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter;
 
     invoke-virtual {p1, p0}, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter;->onItemHolderClick(Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter$SingleCheckViewHolder;)V
 
     return-void
 
+    .line 4
     :cond_0
     iput v1, v0, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter;->mPreSelectedItem:I
 
+    .line 5
     iput p1, v0, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter;->mSelectedItem:I
 
+    .line 6
     iget-object p1, v0, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
+    .line 7
     invoke-virtual {p1, v1}, Landroidx/recyclerview/widget/RecyclerView;->findViewHolderForAdapterPosition(I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     move-result-object p1
 
     check-cast p1, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter$SingleCheckViewHolder;
 
+    .line 8
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/panleentrance/MakeupSingleCheckAdapterCV$SingleCheckViewHolderCV;->this$0:Lcom/android/camera2/compat/theme/custom/cv/panleentrance/MakeupSingleCheckAdapterCV;
 
     iget-object v1, v0, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     iget v0, v0, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter;->mSelectedItem:I
 
+    .line 9
     invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->findViewHolderForAdapterPosition(I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     move-result-object v0
@@ -117,6 +161,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 10
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/cv/panleentrance/MakeupSingleCheckAdapterCV$SingleCheckViewHolderCV;->this$0:Lcom/android/camera2/compat/theme/custom/cv/panleentrance/MakeupSingleCheckAdapterCV;
 
     iget v2, v1, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter;->mPreSelectedItem:I
@@ -137,6 +182,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 11
     iget-object v1, p1, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter$SingleCheckViewHolder;->mText:Landroid/widget/TextView;
 
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/cv/panleentrance/MakeupSingleCheckAdapterCV$SingleCheckViewHolderCV;->this$0:Lcom/android/camera2/compat/theme/custom/cv/panleentrance/MakeupSingleCheckAdapterCV;
@@ -151,9 +197,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/android/camera/data/data/j;
+    check-cast v2, Ld/d/a/l6/e/i;
 
-    invoke-virtual {v2}, Lcom/android/camera/data/data/j;->h()I
+    invoke-virtual {v2}, Ld/d/a/l6/e/i;->h()I
 
     move-result v2
 
@@ -161,8 +207,9 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setContentDescription(Ljava/lang/CharSequence;)V
 
+    .line 12
     iget-object v1, p1, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter$SingleCheckViewHolder;->mSelectedIndicator:Landroid/widget/ImageView;
 
     const/4 v2, 0x0
@@ -172,6 +219,7 @@
     :cond_1
     if-eqz v0, :cond_2
 
+    .line 13
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/cv/panleentrance/MakeupSingleCheckAdapterCV$SingleCheckViewHolderCV;->this$0:Lcom/android/camera2/compat/theme/custom/cv/panleentrance/MakeupSingleCheckAdapterCV;
 
     iget v2, v1, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter;->mPreSelectedItem:I
@@ -192,6 +240,7 @@
 
     if-eqz v1, :cond_2
 
+    .line 14
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/cv/panleentrance/MakeupSingleCheckAdapterCV$SingleCheckViewHolderCV;->this$0:Lcom/android/camera2/compat/theme/custom/cv/panleentrance/MakeupSingleCheckAdapterCV;
 
     iget-object v2, v1, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter;->mContext:Landroid/content/Context;
@@ -204,9 +253,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/android/camera/data/data/j;
+    check-cast v1, Ld/d/a/l6/e/i;
 
-    invoke-virtual {v1}, Lcom/android/camera/data/data/j;->h()I
+    invoke-virtual {v1}, Ld/d/a/l6/e/i;->h()I
 
     move-result v1
 
@@ -214,6 +263,7 @@
 
     move-result-object v1
 
+    .line 15
     iget-object v2, v0, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter$SingleCheckViewHolder;->mText:Landroid/widget/TextView;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -230,7 +280,7 @@
 
     iget-object v4, v4, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f1400d4
+    const v5, 0x7f1300d3
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -242,8 +292,9 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setContentDescription(Ljava/lang/CharSequence;)V
 
+    .line 16
     invoke-static {}, Lcom/android/camera2/compat/theme/custom/cv/panleentrance/MakeupSingleCheckAdapterCV;->access$500()Ljava/lang/String;
 
     move-result-object v2
@@ -274,6 +325,7 @@
 
     invoke-static {v2, v1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 17
     iget-object v0, v0, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter$SingleCheckViewHolder;->mSelectedIndicator:Landroid/widget/ImageView;
 
     const/4 v1, 0x1
@@ -283,6 +335,7 @@
     :cond_2
     if-nez p1, :cond_3
 
+    .line 18
     iget-object p1, p0, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter$SingleCheckViewHolder;->mAdapter:Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter;
 
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/panleentrance/MakeupSingleCheckAdapterCV$SingleCheckViewHolderCV;->this$0:Lcom/android/camera2/compat/theme/custom/cv/panleentrance/MakeupSingleCheckAdapterCV;
@@ -291,6 +344,7 @@
 
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemChanged(I)V
 
+    .line 19
     :cond_3
     iget-object p1, p0, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter$SingleCheckViewHolder;->mAdapter:Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter;
 
@@ -299,38 +353,52 @@
     return-void
 .end method
 
-.method public setDataToView(Lcom/android/camera/data/data/j;I)V
+.method public setDataToView(Ld/d/a/l6/e/i;I)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "item",
+            "position"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter$SingleCheckViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    .line 2
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lm2/h1;->C0()Laa/p;
+    invoke-virtual {v0}, Ld/d/a/l6/e/m/g1;->u0()Ld/d/a/d8/n2/f/p;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Laa/p;->S()Z
+    .line 3
+    invoke-virtual {v0}, Ld/d/a/d8/n2/f/p;->S()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lf2/a;->e()Lf2/a;
+    invoke-static {}, Ld/d/a/k6/c;->e()Ld/d/a/k6/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lf2/a;->c()Z
+    invoke-virtual {v0}, Ld/d/a/k6/c;->c()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    .line 4
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object v0
 
@@ -338,37 +406,40 @@
 
     iget-object v1, v1, Lcom/android/camera2/compat/theme/custom/cv/panleentrance/MakeupSingleCheckAdapterCV;->mMakeupItem:Landroid/widget/LinearLayout;
 
-    const v2, 0x7f080a57
+    const v2, 0x7f080a46
 
     const v3, 0x7f06004f
 
-    invoke-virtual {v0, v1, v2, v3}, Lf2/e;->l(Landroid/view/View;II)V
+    invoke-virtual {v0, v1, v2, v3}, Ld/d/a/k6/f;->l(Landroid/view/View;II)V
 
     goto :goto_0
 
+    .line 5
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/panleentrance/MakeupSingleCheckAdapterCV$SingleCheckViewHolderCV;->this$0:Lcom/android/camera2/compat/theme/custom/cv/panleentrance/MakeupSingleCheckAdapterCV;
 
     iget-object v0, v0, Lcom/android/camera2/compat/theme/custom/cv/panleentrance/MakeupSingleCheckAdapterCV;->mMakeupItem:Landroid/widget/LinearLayout;
 
-    const v1, 0x7f080a53
+    const v1, 0x7f080a42
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackgroundResource(I)V
 
+    .line 6
     :goto_0
     iget-object v0, p0, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter$SingleCheckViewHolder;->mText:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/android/camera/data/data/j;->h()I
+    invoke-virtual {p1}, Ld/d/a/l6/e/i;->h()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
+    .line 7
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/panleentrance/MakeupSingleCheckAdapterCV$SingleCheckViewHolderCV;->this$0:Lcom/android/camera2/compat/theme/custom/cv/panleentrance/MakeupSingleCheckAdapterCV;
 
     iget-object v1, p0, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter$SingleCheckViewHolder;->itemView:Landroid/view/View;
 
-    invoke-virtual {p1}, Lcom/android/camera/data/data/j;->h()I
+    invoke-virtual {p1}, Ld/d/a/l6/e/i;->h()I
 
     move-result v2
 
@@ -392,6 +463,7 @@
     :goto_1
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter;->setAccessible(Landroid/view/View;IZ)V
 
+    .line 8
     iget-object v0, p0, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter$SingleCheckViewHolder;->mText:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter$SingleCheckViewHolder;->itemView:Landroid/view/View;
@@ -400,7 +472,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0704ad
+    const v2, 0x7f070480
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -408,9 +480,11 @@
 
     invoke-virtual {v0, v5, v1}, Landroid/widget/TextView;->setTextSize(IF)V
 
+    .line 9
     iget-object v0, p0, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter$SingleCheckViewHolder;->mBase:Lcom/android/camera/ui/ColorImageView;
 
-    invoke-virtual {p1}, Lcom/android/camera/data/data/j;->g()I
+    .line 10
+    invoke-virtual {p1}, Ld/d/a/l6/e/i;->g()I
 
     move-result v1
 
@@ -418,12 +492,14 @@
 
     if-ne v1, v2, :cond_2
 
-    invoke-virtual {p1}, Lcom/android/camera/data/data/j;->g()I
+    .line 11
+    invoke-virtual {p1}, Ld/d/a/l6/e/i;->g()I
 
     move-result p1
 
     goto :goto_2
 
+    .line 12
     :cond_2
     iget-object v1, p0, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter$SingleCheckViewHolder;->itemView:Landroid/view/View;
 
@@ -431,7 +507,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcom/android/camera/data/data/j;->g()I
+    invoke-virtual {p1}, Ld/d/a/l6/e/i;->g()I
 
     move-result p1
 
@@ -441,9 +517,11 @@
 
     move-result p1
 
+    .line 13
     :goto_2
     invoke-virtual {v0, p1}, Lcom/airbnb/lottie/LottieAnimationView;->setImageResource(I)V
 
+    .line 14
     iget-object p1, p0, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter$SingleCheckViewHolder;->mSelectedIndicator:Landroid/widget/ImageView;
 
     iget-object v0, p0, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter$SingleCheckViewHolder;->itemView:Landroid/view/View;
@@ -452,22 +530,22 @@
 
     move-result-object v0
 
-    invoke-static {}, Lf2/a;->e()Lf2/a;
+    invoke-static {}, Ld/d/a/k6/c;->e()Ld/d/a/k6/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lf2/a;->c()Z
+    invoke-virtual {v1}, Ld/d/a/k6/c;->c()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    const v1, 0x7f080224
+    const v1, 0x7f080208
 
     goto :goto_3
 
     :cond_3
-    const v1, 0x7f080220
+    const v1, 0x7f080204
 
     :goto_3
     invoke-virtual {v0, v1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -476,6 +554,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
+    .line 15
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/panleentrance/MakeupSingleCheckAdapterCV$SingleCheckViewHolderCV;->this$0:Lcom/android/camera2/compat/theme/custom/cv/panleentrance/MakeupSingleCheckAdapterCV;
 
     iget v0, p1, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter;->mSelectedItem:I
@@ -493,6 +572,7 @@
     :cond_4
     move v4, v5
 
+    .line 16
     :goto_4
     iget-object p1, p0, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter$SingleCheckViewHolder;->mSelectedIndicator:Landroid/widget/ImageView;
 

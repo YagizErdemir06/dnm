@@ -7,6 +7,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/milab/videosdk/XmsFilter;-><init>()V
 
     return-void
@@ -96,6 +97,7 @@
         }
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     invoke-direct {p0, v0, v1, p1}, Lcom/xiaomi/milab/videosdk/XmsAudioFilter;->nativeGetDoubleValue(JLjava/lang/String;)D
@@ -116,6 +118,7 @@
         }
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     invoke-direct {p0, v0, v1, p1}, Lcom/xiaomi/milab/videosdk/XmsAudioFilter;->nativeGetIntValue(JLjava/lang/String;)I
@@ -140,6 +143,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
@@ -148,6 +152,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-wide v2, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -179,6 +184,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
@@ -187,6 +193,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -212,6 +219,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
@@ -220,6 +228,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 

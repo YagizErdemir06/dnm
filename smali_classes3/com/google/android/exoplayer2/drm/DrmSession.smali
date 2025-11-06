@@ -45,11 +45,13 @@
 
     if-eqz p1, :cond_1
 
+    .line 1
     invoke-interface {p1, v0}, Lcom/google/android/exoplayer2/drm/DrmSession;->acquire(Lcom/google/android/exoplayer2/drm/DrmSessionEventListener$EventDispatcher;)V
 
     :cond_1
     if-eqz p0, :cond_2
 
+    .line 2
     invoke-interface {p0, v0}, Lcom/google/android/exoplayer2/drm/DrmSession;->release(Lcom/google/android/exoplayer2/drm/DrmSessionEventListener$EventDispatcher;)V
 
     :cond_2

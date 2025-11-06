@@ -39,6 +39,7 @@
 
     monitor-enter v0
 
+    .line 1
     :try_start_0
     sget-object v1, Lcom/google/android/gms/dynamite/zzb;->zza:Ljava/lang/ClassLoader;
 
@@ -76,6 +77,7 @@
 
     monitor-enter v0
 
+    .line 1
     :try_start_0
     sget-object v1, Lcom/google/android/gms/dynamite/zzb;->zzb:Ljava/lang/Thread;
 
@@ -97,16 +99,19 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     monitor-exit v0
 
     return-object v2
 
+    .line 3
     :cond_1
     :goto_0
     :try_start_1
     sget-object v1, Lcom/google/android/gms/dynamite/zzb;->zzb:Ljava/lang/Thread;
 
+    .line 4
     monitor-enter v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
@@ -114,6 +119,7 @@
     :try_start_2
     sget-object v3, Lcom/google/android/gms/dynamite/zzb;->zzb:Ljava/lang/Thread;
 
+    .line 5
     invoke-virtual {v3}, Ljava/lang/Thread;->getContextClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v2
@@ -131,8 +137,9 @@
     :catch_0
     move-exception v3
 
+    .line 6
     :try_start_3
-    invoke-virtual {v3}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/SecurityException;->getMessage()Ljava/lang/String;
 
     move-result-object v3
 
@@ -154,6 +161,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 7
     :goto_1
     monitor-exit v1
     :try_end_3
@@ -163,6 +171,7 @@
 
     return-object v2
 
+    .line 8
     :goto_2
     :try_start_4
     monitor-exit v1
@@ -191,6 +200,7 @@
 
     monitor-enter v0
 
+    .line 1
     :try_start_0
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
@@ -222,6 +232,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    .line 2
     :try_start_2
     invoke-virtual {v1}, Ljava/lang/ThreadGroup;->activeGroupCount()I
 
@@ -229,6 +240,7 @@
 
     new-array v5, v4, [Ljava/lang/ThreadGroup;
 
+    .line 3
     invoke-virtual {v1, v5}, Ljava/lang/ThreadGroup;->enumerate([Ljava/lang/ThreadGroup;)I
 
     const/4 v6, 0x0
@@ -238,10 +250,12 @@
     :goto_0
     if-ge v7, v4, :cond_2
 
+    .line 4
     aget-object v8, v5, v7
 
     const-string v9, "dynamiteLoader"
 
+    .line 5
     invoke-virtual {v8}, Ljava/lang/ThreadGroup;->getName()Ljava/lang/String;
 
     move-result-object v10
@@ -269,8 +283,10 @@
 
     const-string v4, "dynamiteLoader"
 
+    .line 6
     invoke-direct {v8, v1, v4}, Ljava/lang/ThreadGroup;-><init>(Ljava/lang/ThreadGroup;Ljava/lang/String;)V
 
+    .line 7
     :cond_3
     invoke-virtual {v8}, Ljava/lang/ThreadGroup;->activeCount()I
 
@@ -278,15 +294,18 @@
 
     new-array v4, v1, [Ljava/lang/Thread;
 
+    .line 8
     invoke-virtual {v8, v4}, Ljava/lang/ThreadGroup;->enumerate([Ljava/lang/Thread;)I
 
     :goto_2
     if-ge v6, v1, :cond_5
 
+    .line 9
     aget-object v5, v4, v6
 
     const-string v7, "GmsDynamite"
 
+    .line 10
     invoke-virtual {v5}, Ljava/lang/Thread;->getName()Ljava/lang/String;
 
     move-result-object v9
@@ -318,14 +337,17 @@
 
     const-string v4, "GmsDynamite"
 
+    .line 11
     invoke-direct {v1, v8, v4}, Lcom/google/android/gms/dynamite/zza;-><init>(Ljava/lang/ThreadGroup;Ljava/lang/String;)V
     :try_end_3
     .catch Ljava/lang/SecurityException; {:try_start_3 .. :try_end_3} :catch_1
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
+    .line 12
     :try_start_4
     invoke-virtual {v1, v2}, Ljava/lang/Thread;->setContextClassLoader(Ljava/lang/ClassLoader;)V
 
+    .line 13
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
     :try_end_4
     .catch Ljava/lang/SecurityException; {:try_start_4 .. :try_end_4} :catch_0
@@ -361,9 +383,10 @@
 
     move-object v1, v11
 
+    .line 14
     :goto_4
     :try_start_5
-    invoke-virtual {v2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/SecurityException;->getMessage()Ljava/lang/String;
 
     move-result-object v2
 
@@ -388,6 +411,7 @@
     :goto_5
     move-object v5, v1
 
+    .line 15
     :cond_6
     monitor-exit v3
     :try_end_5
@@ -397,6 +421,7 @@
 
     return-object v5
 
+    .line 16
     :goto_6
     :try_start_6
     monitor-exit v3

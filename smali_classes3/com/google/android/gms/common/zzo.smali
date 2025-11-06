@@ -103,6 +103,7 @@
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Constructor;
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/AbstractSafeParcelable;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/gms/common/zzo;->zza:Ljava/lang/String;
@@ -133,6 +134,7 @@
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->beginObjectHeader(Landroid/os/Parcel;)I
 
     move-result p2
@@ -143,36 +145,43 @@
 
     const/4 v2, 0x0
 
+    .line 2
     invoke-static {p1, v1, v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeString(Landroid/os/Parcel;ILjava/lang/String;Z)V
 
-    const/4 v0, 0x2
+    iget-boolean v0, p0, Lcom/google/android/gms/common/zzo;->zzb:Z
 
-    iget-boolean v1, p0, Lcom/google/android/gms/common/zzo;->zzb:Z
+    const/4 v1, 0x2
 
-    invoke-static {p1, v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeBoolean(Landroid/os/Parcel;IZ)V
+    .line 3
+    invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeBoolean(Landroid/os/Parcel;IZ)V
 
-    const/4 v0, 0x3
+    iget-boolean v0, p0, Lcom/google/android/gms/common/zzo;->zzc:Z
 
-    iget-boolean v1, p0, Lcom/google/android/gms/common/zzo;->zzc:Z
+    const/4 v1, 0x3
 
-    invoke-static {p1, v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeBoolean(Landroid/os/Parcel;IZ)V
+    .line 4
+    invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeBoolean(Landroid/os/Parcel;IZ)V
 
     iget-object v0, p0, Lcom/google/android/gms/common/zzo;->zzd:Landroid/content/Context;
 
+    .line 5
     invoke-static {v0}, Lcom/google/android/gms/dynamic/ObjectWrapper;->wrap(Ljava/lang/Object;)Lcom/google/android/gms/dynamic/IObjectWrapper;
 
     move-result-object v0
 
     const/4 v1, 0x4
 
+    .line 6
     invoke-static {p1, v1, v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeIBinder(Landroid/os/Parcel;ILandroid/os/IBinder;Z)V
-
-    const/4 v0, 0x5
 
     iget-boolean p0, p0, Lcom/google/android/gms/common/zzo;->zze:Z
 
+    const/4 v0, 0x5
+
+    .line 7
     invoke-static {p1, v0, p0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeBoolean(Landroid/os/Parcel;IZ)V
 
+    .line 8
     invoke-static {p1, p2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->finishObjectHeader(Landroid/os/Parcel;I)V
 
     return-void

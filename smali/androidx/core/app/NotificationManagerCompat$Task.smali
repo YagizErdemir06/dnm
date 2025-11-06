@@ -1,4 +1,4 @@
-.class interface abstract Landroidx/core/app/NotificationManagerCompat$Task;
+.class public interface abstract Landroidx/core/app/NotificationManagerCompat$Task;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,7 +15,7 @@
 
 
 # virtual methods
-.method public abstract send(Landroid/support/v4/app/a;)V
+.method public abstract send(Lb/b/a/a/a;)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;

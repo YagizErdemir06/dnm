@@ -21,7 +21,16 @@
 # direct methods
 .method public constructor <init>(Lcom/android/camera/fragment/videoprompter/VideoPrompterAdjustLayout;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/videoprompter/VideoPrompterAdjustLayout$c;->a:Lcom/android/camera/fragment/videoprompter/VideoPrompterAdjustLayout;
 
     invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
@@ -33,9 +42,19 @@
 # virtual methods
 .method public onComplete(Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "toTag"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lmiuix/animation/listener/TransitionListener;->onComplete(Ljava/lang/Object;)V
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera/fragment/videoprompter/VideoPrompterAdjustLayout$c;->a:Lcom/android/camera/fragment/videoprompter/VideoPrompterAdjustLayout;
 
     const/4 p1, 0x0
@@ -47,6 +66,17 @@
 
 .method public onUpdate(Ljava/lang/Object;Ljava/util/Collection;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "toTag",
+            "updateList"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -57,10 +87,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Lmiuix/animation/listener/TransitionListener;->onUpdate(Ljava/lang/Object;Ljava/util/Collection;)V
 
     const-string p1, "height"
 
+    .line 2
     invoke-static {p2, p1}, Lmiuix/animation/listener/UpdateInfo;->findByName(Ljava/util/Collection;Ljava/lang/String;)Lmiuix/animation/listener/UpdateInfo;
 
     move-result-object p1
@@ -69,6 +101,7 @@
 
     move-result p1
 
+    .line 3
     iget-object p2, p0, Lcom/android/camera/fragment/videoprompter/VideoPrompterAdjustLayout$c;->a:Lcom/android/camera/fragment/videoprompter/VideoPrompterAdjustLayout;
 
     invoke-static {p2}, Lcom/android/camera/fragment/videoprompter/VideoPrompterAdjustLayout;->e(Lcom/android/camera/fragment/videoprompter/VideoPrompterAdjustLayout;)Lcom/android/camera/fragment/videoprompter/VideoPrompterAdjustLayout$d;
@@ -77,7 +110,7 @@
 
     if-eqz p2, :cond_0
 
-    invoke-static {}, Ly2/b;->j0()I
+    invoke-static {}, Ld/d/a/n6/b;->j0()I
 
     move-result p2
 
@@ -87,6 +120,7 @@
 
     if-gez p1, :cond_0
 
+    .line 4
     iget-object p1, p0, Lcom/android/camera/fragment/videoprompter/VideoPrompterAdjustLayout$c;->a:Lcom/android/camera/fragment/videoprompter/VideoPrompterAdjustLayout;
 
     invoke-static {p1}, Lcom/android/camera/fragment/videoprompter/VideoPrompterAdjustLayout;->e(Lcom/android/camera/fragment/videoprompter/VideoPrompterAdjustLayout;)Lcom/android/camera/fragment/videoprompter/VideoPrompterAdjustLayout$d;
@@ -95,6 +129,7 @@
 
     invoke-interface {p1}, Lcom/android/camera/fragment/videoprompter/VideoPrompterAdjustLayout$d;->a()V
 
+    .line 5
     iget-object p0, p0, Lcom/android/camera/fragment/videoprompter/VideoPrompterAdjustLayout$c;->a:Lcom/android/camera/fragment/videoprompter/VideoPrompterAdjustLayout;
 
     const/4 p1, 0x0

@@ -1,4 +1,4 @@
-.class Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper$1;
+.class public Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;
+.field public final synthetic this$0:Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;
 
 
 # direct methods
 .method public constructor <init>(Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper$1;->this$0:Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,6 +40,7 @@
     .annotation build Lcom/faceunity/pta_helper/NotProguard;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper$1;->this$0:Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;
 
     invoke-static {v0}, Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;->access$000(Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;)Lcom/faceunity/pta_helper/gif/GifHardEncoder;
@@ -47,12 +49,14 @@
 
     invoke-virtual {v0}, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->cancel()V
 
+    .line 2
     iget-object v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper$1;->this$0:Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;->access$002(Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;Lcom/faceunity/pta_helper/gif/GifHardEncoder;)Lcom/faceunity/pta_helper/gif/GifHardEncoder;
 
+    .line 3
     iget-object v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper$1;->this$0:Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;
 
     invoke-static {v0}, Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;->access$100(Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;)Landroid/os/Handler;
@@ -63,6 +67,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
+    .line 4
     iget-object p0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper$1;->this$0:Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;
 
     invoke-static {p0}, Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;->access$200(Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;)Landroid/os/HandlerThread;
@@ -71,6 +76,7 @@
 
     invoke-virtual {p0}, Landroid/os/HandlerThread;->quitSafely()Z
 
+    .line 5
     invoke-static {}, Lcom/faceunity/pta_helper/gif/GifHardEncoderWrapper;->access$300()Ljava/lang/String;
 
     move-result-object p0

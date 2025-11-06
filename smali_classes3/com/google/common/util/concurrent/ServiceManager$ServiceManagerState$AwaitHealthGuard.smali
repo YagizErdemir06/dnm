@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState$AwaitHealthGuard;
+.class public final Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState$AwaitHealthGuard;
 .super Lcom/google/common/util/concurrent/Monitor$Guard;
 .source "SourceFile"
 
@@ -15,15 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;
+.field public final synthetic this$0:Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState$AwaitHealthGuard;->this$0:Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;
 
+    .line 2
     iget-object p1, p1, Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;->monitor:Lcom/google/common/util/concurrent/Monitor;
 
     invoke-direct {p0, p1}, Lcom/google/common/util/concurrent/Monitor$Guard;-><init>(Lcom/google/common/util/concurrent/Monitor;)V
@@ -39,6 +41,7 @@
         value = "ServiceManagerState.this.monitor"
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState$AwaitHealthGuard;->this$0:Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;
 
     iget-object v0, v0, Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;->states:Lcom/google/common/collect/Multiset;
@@ -59,6 +62,7 @@
 
     sget-object v1, Lcom/google/common/util/concurrent/Service$State;->STOPPING:Lcom/google/common/util/concurrent/Service$State;
 
+    .line 2
     invoke-interface {v0, v1}, Lcom/google/common/collect/Multiset;->contains(Ljava/lang/Object;)Z
 
     move-result v0
@@ -71,6 +75,7 @@
 
     sget-object v1, Lcom/google/common/util/concurrent/Service$State;->TERMINATED:Lcom/google/common/util/concurrent/Service$State;
 
+    .line 3
     invoke-interface {v0, v1}, Lcom/google/common/collect/Multiset;->contains(Ljava/lang/Object;)Z
 
     move-result v0
@@ -83,6 +88,7 @@
 
     sget-object v0, Lcom/google/common/util/concurrent/Service$State;->FAILED:Lcom/google/common/util/concurrent/Service$State;
 
+    .line 4
     invoke-interface {p0, v0}, Lcom/google/common/collect/Multiset;->contains(Ljava/lang/Object;)Z
 
     move-result p0

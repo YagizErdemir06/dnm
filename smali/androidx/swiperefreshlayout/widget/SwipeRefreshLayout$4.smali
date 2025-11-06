@@ -1,4 +1,4 @@
-.class Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$4;
+.class public Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$4;
 .super Landroid/view/animation/Animation;
 .source "SourceFile"
 
@@ -15,17 +15,18 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
+.field public final synthetic this$0:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
 
-.field final synthetic val$endingAlpha:I
+.field public final synthetic val$endingAlpha:I
 
-.field final synthetic val$startingAlpha:I
+.field public final synthetic val$startingAlpha:I
 
 
 # direct methods
 .method public constructor <init>(Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;II)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$4;->this$0:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
 
     iput p2, p0, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$4;->val$startingAlpha:I
@@ -42,6 +43,7 @@
 .method public applyTransformation(FLandroid/view/animation/Transformation;)V
     .locals 2
 
+    .line 1
     iget-object p2, p0, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$4;->this$0:Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
 
     iget-object p2, p2, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->mProgress:Landroidx/swiperefreshlayout/widget/CircularProgressDrawable;

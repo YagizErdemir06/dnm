@@ -9,7 +9,7 @@
 
 
 # instance fields
-.field protected final mDataHolder:Lcom/google/android/gms/common/data/DataHolder;
+.field public final mDataHolder:Lcom/google/android/gms/common/data/DataHolder;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -17,7 +17,7 @@
     .end annotation
 .end field
 
-.field protected mDataRow:I
+.field public mDataRow:I
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 .end field
@@ -35,6 +35,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     invoke-static {p1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -45,6 +46,7 @@
 
     iput-object p1, p0, Lcom/google/android/gms/common/data/DataBufferRef;->mDataHolder:Lcom/google/android/gms/common/data/DataHolder;
 
+    .line 2
     invoke-virtual {p0, p2}, Lcom/google/android/gms/common/data/DataBufferRef;->zaa(I)V
 
     return-void
@@ -65,6 +67,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/data/DataBufferRef;->mDataHolder:Lcom/google/android/gms/common/data/DataHolder;
 
     iget v1, p0, Lcom/google/android/gms/common/data/DataBufferRef;->mDataRow:I
@@ -85,14 +88,17 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     instance-of v0, p1, Lcom/google/android/gms/common/data/DataBufferRef;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/android/gms/common/data/DataBufferRef;
 
+    .line 3
     iget v0, p1, Lcom/google/android/gms/common/data/DataBufferRef;->mDataRow:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -113,6 +119,7 @@
 
     iget v0, p1, Lcom/google/android/gms/common/data/DataBufferRef;->zaa:I
 
+    .line 4
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -152,6 +159,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/data/DataBufferRef;->mDataHolder:Lcom/google/android/gms/common/data/DataHolder;
 
     iget v1, p0, Lcom/google/android/gms/common/data/DataBufferRef;->mDataRow:I
@@ -177,6 +185,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/data/DataBufferRef;->mDataHolder:Lcom/google/android/gms/common/data/DataHolder;
 
     iget v1, p0, Lcom/google/android/gms/common/data/DataBufferRef;->mDataRow:I
@@ -209,6 +218,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/data/DataBufferRef;->mDataHolder:Lcom/google/android/gms/common/data/DataHolder;
 
     iget v1, p0, Lcom/google/android/gms/common/data/DataBufferRef;->mDataRow:I
@@ -231,6 +241,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/data/DataBufferRef;->mDataHolder:Lcom/google/android/gms/common/data/DataHolder;
 
     iget v1, p0, Lcom/google/android/gms/common/data/DataBufferRef;->mDataRow:I
@@ -253,6 +264,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/data/DataBufferRef;->mDataHolder:Lcom/google/android/gms/common/data/DataHolder;
 
     iget v1, p0, Lcom/google/android/gms/common/data/DataBufferRef;->mDataRow:I
@@ -275,6 +287,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/data/DataBufferRef;->mDataHolder:Lcom/google/android/gms/common/data/DataHolder;
 
     iget v1, p0, Lcom/google/android/gms/common/data/DataBufferRef;->mDataRow:I
@@ -300,6 +313,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/data/DataBufferRef;->mDataHolder:Lcom/google/android/gms/common/data/DataHolder;
 
     iget v1, p0, Lcom/google/android/gms/common/data/DataBufferRef;->mDataRow:I
@@ -322,6 +336,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/data/DataBufferRef;->mDataHolder:Lcom/google/android/gms/common/data/DataHolder;
 
     invoke-virtual {p0, p1}, Lcom/google/android/gms/common/data/DataHolder;->hasColumn(Ljava/lang/String;)Z
@@ -340,6 +355,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/data/DataBufferRef;->mDataHolder:Lcom/google/android/gms/common/data/DataHolder;
 
     iget v1, p0, Lcom/google/android/gms/common/data/DataBufferRef;->mDataRow:I
@@ -362,6 +378,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 1
     iget v1, p0, Lcom/google/android/gms/common/data/DataBufferRef;->mDataRow:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -382,9 +399,9 @@
 
     aput-object v1, v0, v2
 
-    const/4 v1, 0x2
-
     iget-object p0, p0, Lcom/google/android/gms/common/data/DataBufferRef;->mDataHolder:Lcom/google/android/gms/common/data/DataHolder;
+
+    const/4 v1, 0x2
 
     aput-object p0, v0, v1
 
@@ -400,6 +417,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/data/DataBufferRef;->mDataHolder:Lcom/google/android/gms/common/data/DataHolder;
 
     invoke-virtual {p0}, Lcom/google/android/gms/common/data/DataHolder;->isClosed()Z
@@ -430,6 +448,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/data/DataBufferRef;->mDataHolder:Lcom/google/android/gms/common/data/DataHolder;
 
     iget v1, p0, Lcom/google/android/gms/common/data/DataBufferRef;->mDataRow:I
@@ -446,6 +465,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -461,6 +481,7 @@
 
     if-ltz p1, :cond_0
 
+    .line 1
     iget-object v1, p0, Lcom/google/android/gms/common/data/DataBufferRef;->mDataHolder:Lcom/google/android/gms/common/data/DataHolder;
 
     invoke-virtual {v1}, Lcom/google/android/gms/common/data/DataHolder;->getCount()I
@@ -478,6 +499,7 @@
 
     iget-object v0, p0, Lcom/google/android/gms/common/data/DataBufferRef;->mDataHolder:Lcom/google/android/gms/common/data/DataHolder;
 
+    .line 2
     invoke-virtual {v0, p1}, Lcom/google/android/gms/common/data/DataHolder;->getWindowIndex(I)I
 
     move-result p1

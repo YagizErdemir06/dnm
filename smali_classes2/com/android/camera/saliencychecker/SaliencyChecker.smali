@@ -35,6 +35,7 @@
     :try_start_0
     const-string v0, "mialgo_saliency_jni"
 
+    .line 1
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_0
@@ -44,6 +45,7 @@
     :catch_0
     move-exception v0
 
+    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -52,7 +54,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/UnsatisfiedLinkError;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
@@ -77,29 +79,26 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
+    .line 2
     iput-wide v0, p0, Lcom/android/camera/saliencychecker/SaliencyChecker;->mAlgoHandle:J
 
     const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
 
+    .line 3
     iput-wide v0, p0, Lcom/android/camera/saliencychecker/SaliencyChecker;->mRatio:D
 
     const/4 v0, 0x0
 
+    .line 4
     iput v0, p0, Lcom/android/camera/saliencychecker/SaliencyChecker;->mWidth:I
 
+    .line 5
     iput v0, p0, Lcom/android/camera/saliencychecker/SaliencyChecker;->mHeight:I
-
-    return-void
-.end method
-
-.method public static synthetic a(Lcom/android/camera/saliencychecker/SaliencyChecker;Lcom/android/camera/saliencychecker/data/SaliencyFreeObject;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera/saliencychecker/SaliencyChecker;->lambda$destroy$0(Lcom/android/camera/saliencychecker/data/SaliencyFreeObject;)V
 
     return-void
 .end method
@@ -107,16 +106,19 @@
 .method public static getInstance()Lcom/android/camera/saliencychecker/SaliencyChecker;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/android/camera/saliencychecker/SaliencyChecker;->sInstance:Lcom/android/camera/saliencychecker/SaliencyChecker;
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Lcom/android/camera/saliencychecker/SaliencyChecker;
 
     invoke-direct {v0}, Lcom/android/camera/saliencychecker/SaliencyChecker;-><init>()V
 
     sput-object v0, Lcom/android/camera/saliencychecker/SaliencyChecker;->sInstance:Lcom/android/camera/saliencychecker/SaliencyChecker;
 
+    .line 3
     :cond_0
     sget-object v0, Lcom/android/camera/saliencychecker/SaliencyChecker;->sInstance:Lcom/android/camera/saliencychecker/SaliencyChecker;
 
@@ -130,6 +132,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 1
     invoke-virtual {p1}, Lcom/android/camera/saliencychecker/data/SaliencyFreeObject;->getAlgoHandle()J
 
     move-result-wide v1
@@ -144,6 +147,7 @@
 
     const-string v1, "nativeFree E: algoHandle = 0x%x"
 
+    .line 2
     invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -154,31 +158,69 @@
 
     invoke-static {v3, v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 3
     invoke-direct {p0, p1}, Lcom/android/camera/saliencychecker/SaliencyChecker;->nativeFree(Lcom/android/camera/saliencychecker/data/SaliencyFreeObject;)Z
 
-    const-string p0, "nativeFree X"
+    new-array p0, v2, [Ljava/lang/Object;
 
-    new-array p1, v2, [Ljava/lang/Object;
+    const-string p1, "nativeFree X"
 
-    invoke-static {v3, p0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 4
+    invoke-static {v3, p1, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 .end method
 
 .method private native nativeFree(Lcom/android/camera/saliencychecker/data/SaliencyFreeObject;)Z
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "doFreeInputObject"
+        }
+    .end annotation
 .end method
 
 .method private native nativeGetVersion()Ljava/lang/String;
 .end method
 
 .method private native nativeInit(Lcom/android/camera/saliencychecker/data/SaliencyInitInputObject;Lcom/android/camera/saliencychecker/data/SaliencyInitOutputObject;)Z
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "doInitializeInputObject",
+            "doInitializeOutputObject"
+        }
+    .end annotation
 .end method
 
 .method private native nativeProcess(Lcom/android/camera/saliencychecker/data/SaliencyProcessInputObject;Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;)Z
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "saliencyProcessInputObject",
+            "saliencyProcessOutputObject"
+        }
+    .end annotation
 .end method
 
 
 # virtual methods
+.method public synthetic a(Lcom/android/camera/saliencychecker/data/SaliencyFreeObject;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera/saliencychecker/SaliencyChecker;->lambda$destroy$0(Lcom/android/camera/saliencychecker/data/SaliencyFreeObject;)V
+
+    return-void
+.end method
+
 .method public destroy()V
     .locals 7
 
@@ -190,8 +232,10 @@
 
     const-string v3, "destroy E"
 
+    .line 1
     invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     iget-wide v3, p0, Lcom/android/camera/saliencychecker/SaliencyChecker;->mAlgoHandle:J
 
     const-wide/16 v5, 0x0
@@ -200,40 +244,48 @@
 
     if-eqz v1, :cond_0
 
+    .line 3
     new-instance v1, Lcom/android/camera/saliencychecker/data/SaliencyFreeObject;
 
     invoke-direct {v1}, Lcom/android/camera/saliencychecker/data/SaliencyFreeObject;-><init>()V
 
+    .line 4
     iget-wide v3, p0, Lcom/android/camera/saliencychecker/SaliencyChecker;->mAlgoHandle:J
 
     invoke-virtual {v1, v3, v4}, Lcom/android/camera/saliencychecker/data/SaliencyFreeObject;->setAlgoHandle(J)V
 
+    .line 5
     iput-wide v5, p0, Lcom/android/camera/saliencychecker/SaliencyChecker;->mAlgoHandle:J
 
     const-wide/high16 v3, 0x3ff0000000000000L    # 1.0
 
+    .line 6
     iput-wide v3, p0, Lcom/android/camera/saliencychecker/SaliencyChecker;->mRatio:D
 
+    .line 7
     iput v0, p0, Lcom/android/camera/saliencychecker/SaliencyChecker;->mWidth:I
 
+    .line 8
     iput v0, p0, Lcom/android/camera/saliencychecker/SaliencyChecker;->mHeight:I
 
+    .line 9
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->io()Lio/reactivex/Scheduler;
 
     move-result-object v3
 
-    new-instance v4, Lf9/a;
+    new-instance v4, Ld/d/a/q7/a;
 
-    invoke-direct {v4, p0, v1}, Lf9/a;-><init>(Lcom/android/camera/saliencychecker/SaliencyChecker;Lcom/android/camera/saliencychecker/data/SaliencyFreeObject;)V
+    invoke-direct {v4, p0, v1}, Ld/d/a/q7/a;-><init>(Lcom/android/camera/saliencychecker/SaliencyChecker;Lcom/android/camera/saliencychecker/data/SaliencyFreeObject;)V
 
-    invoke-static {v3, v4}, Leg/i;->r(Lio/reactivex/Scheduler;Ljava/lang/Runnable;)Lio/reactivex/disposables/Disposable;
+    invoke-static {v3, v4}, Ld/o/f/u/k;->k(Lio/reactivex/Scheduler;Ljava/lang/Runnable;)Lio/reactivex/disposables/Disposable;
 
     :cond_0
-    const-string p0, "destroy X"
+    new-array p0, v0, [Ljava/lang/Object;
 
-    new-array v0, v0, [Ljava/lang/Object;
+    const-string v0, "destroy X"
 
-    invoke-static {v2, p0, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 10
+    invoke-static {v2, v0, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -241,6 +293,7 @@
 .method public hasInit()Z
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/android/camera/saliencychecker/SaliencyChecker;->mAlgoHandle:J
 
     const-wide/16 v2, 0x0
@@ -258,6 +311,7 @@
     :cond_0
     move p0, v0
 
+    .line 2
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -284,7 +338,16 @@
 
 .method public init(Lcom/android/camera/saliencychecker/data/SaliencyInitInputObject;)Z
     .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "saliencyInitInputObject"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p1}, Lcom/android/camera/saliencychecker/data/SaliencyInitInputObject;->isInvalid()Z
 
     move-result v0
@@ -295,14 +358,16 @@
 
     if-eqz v0, :cond_0
 
-    const-string p0, "init input isInvalid, return"
+    new-array p0, v2, [Ljava/lang/Object;
 
-    new-array p1, v2, [Ljava/lang/Object;
+    const-string p1, "init input isInvalid, return"
 
-    invoke-static {v1, p0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 2
+    invoke-static {v1, p1, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return v2
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/saliencychecker/SaliencyChecker;->hasInit()Z
 
@@ -312,6 +377,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 4
     iget-wide v4, p0, Lcom/android/camera/saliencychecker/SaliencyChecker;->mRatio:D
 
     invoke-virtual {p1}, Lcom/android/camera/saliencychecker/data/SaliencyInitInputObject;->getRatio()D
@@ -324,6 +390,7 @@
 
     iget v0, p0, Lcom/android/camera/saliencychecker/SaliencyChecker;->mWidth:I
 
+    .line 5
     invoke-virtual {p1}, Lcom/android/camera/saliencychecker/data/SaliencyInitInputObject;->getImgWidth()I
 
     move-result v4
@@ -332,6 +399,7 @@
 
     iget v0, p0, Lcom/android/camera/saliencychecker/SaliencyChecker;->mHeight:I
 
+    .line 6
     invoke-virtual {p1}, Lcom/android/camera/saliencychecker/data/SaliencyInitInputObject;->getImgHeight()I
 
     move-result v4
@@ -343,63 +411,75 @@
     :cond_1
     return v3
 
+    .line 7
     :cond_2
     :goto_0
     invoke-virtual {p0}, Lcom/android/camera/saliencychecker/SaliencyChecker;->destroy()V
 
-    const-string v0, "size changed, reinit"
+    new-array v0, v2, [Ljava/lang/Object;
 
-    new-array v4, v2, [Ljava/lang/Object;
+    const-string v4, "size changed, reinit"
 
-    invoke-static {v1, v0, v4}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 8
+    invoke-static {v1, v4, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :cond_3
-    const-string v0, "init E"
+    new-array v0, v2, [Ljava/lang/Object;
 
-    new-array v4, v2, [Ljava/lang/Object;
+    const-string v4, "init E"
 
-    invoke-static {v1, v0, v4}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 9
+    invoke-static {v1, v4, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     const-wide/16 v4, 0x0
 
+    .line 10
     iput-wide v4, p0, Lcom/android/camera/saliencychecker/SaliencyChecker;->mAlgoHandle:J
 
+    .line 11
     new-instance v0, Lcom/android/camera/saliencychecker/data/SaliencyInitOutputObject;
 
     invoke-direct {v0}, Lcom/android/camera/saliencychecker/data/SaliencyInitOutputObject;-><init>()V
 
+    .line 12
     invoke-direct {p0, p1, v0}, Lcom/android/camera/saliencychecker/SaliencyChecker;->nativeInit(Lcom/android/camera/saliencychecker/data/SaliencyInitInputObject;Lcom/android/camera/saliencychecker/data/SaliencyInitOutputObject;)Z
 
     move-result v6
 
     if-eqz v6, :cond_4
 
+    .line 13
     iget-wide v6, v0, Lcom/android/camera/saliencychecker/data/SaliencyInitOutputObject;->algoHandle:J
 
     cmp-long v0, v6, v4
 
     if-eqz v0, :cond_4
 
+    .line 14
     iput-wide v6, p0, Lcom/android/camera/saliencychecker/SaliencyChecker;->mAlgoHandle:J
 
+    .line 15
     invoke-virtual {p1}, Lcom/android/camera/saliencychecker/data/SaliencyInitInputObject;->getRatio()D
 
     move-result-wide v6
 
     iput-wide v6, p0, Lcom/android/camera/saliencychecker/SaliencyChecker;->mRatio:D
 
+    .line 16
     invoke-virtual {p1}, Lcom/android/camera/saliencychecker/data/SaliencyInitInputObject;->getImgWidth()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera/saliencychecker/SaliencyChecker;->mWidth:I
 
+    .line 17
     invoke-virtual {p1}, Lcom/android/camera/saliencychecker/data/SaliencyInitInputObject;->getImgHeight()I
 
     move-result p1
 
     iput p1, p0, Lcom/android/camera/saliencychecker/SaliencyChecker;->mHeight:I
 
+    .line 18
     :cond_4
     iget-wide v6, p0, Lcom/android/camera/saliencychecker/SaliencyChecker;->mAlgoHandle:J
 
@@ -419,6 +499,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 19
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v4
@@ -456,6 +537,16 @@
 
 .method public process(Lcom/android/camera/saliencychecker/data/SaliencyProcessInputObject;Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;)Z
     .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "saliencyCheckerProcessInputObject",
+            "saliencyProcessOutputObject"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -465,8 +556,10 @@
 
     const-string v3, "process E"
 
+    .line 1
     invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     iget-wide v3, p0, Lcom/android/camera/saliencychecker/SaliencyChecker;->mAlgoHandle:J
 
     const-wide/16 v5, 0x0
@@ -475,8 +568,10 @@
 
     if-eqz v1, :cond_0
 
+    .line 3
     invoke-virtual {p1, v3, v4}, Lcom/android/camera/saliencychecker/data/SaliencyProcessInputObject;->setAlgoHandle(J)V
 
+    .line 4
     invoke-direct {p0, p1, p2}, Lcom/android/camera/saliencychecker/SaliencyChecker;->nativeProcess(Lcom/android/camera/saliencychecker/data/SaliencyProcessInputObject;Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;)Z
 
     move-result p0
@@ -486,6 +581,7 @@
     :cond_0
     move p0, v0
 
+    .line 5
     :goto_0
     new-instance p1, Ljava/lang/StringBuilder;
 

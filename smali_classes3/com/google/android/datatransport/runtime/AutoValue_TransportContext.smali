@@ -1,4 +1,4 @@
-.class final Lcom/google/android/datatransport/runtime/AutoValue_TransportContext;
+.class public final Lcom/google/android/datatransport/runtime/AutoValue_TransportContext;
 .super Lcom/google/android/datatransport/runtime/TransportContext;
 .source "SourceFile"
 
@@ -62,6 +62,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/android/datatransport/runtime/TransportContext;
 
@@ -69,8 +70,10 @@
 
     if-eqz v1, :cond_3
 
+    .line 2
     check-cast p1, Lcom/google/android/datatransport/runtime/TransportContext;
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/datatransport/runtime/AutoValue_TransportContext;->backendName:Ljava/lang/String;
 
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getBackendName()Ljava/lang/String;
@@ -85,6 +88,7 @@
 
     iget-object v1, p0, Lcom/google/android/datatransport/runtime/AutoValue_TransportContext;->extras:[B
 
+    .line 4
     instance-of v3, p1, Lcom/google/android/datatransport/runtime/AutoValue_TransportContext;
 
     if-eqz v3, :cond_1
@@ -111,11 +115,12 @@
 
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/AutoValue_TransportContext;->priority:Lcom/google/android/datatransport/Priority;
 
+    .line 5
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getPriority()Lcom/google/android/datatransport/Priority;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -136,6 +141,7 @@
 .method public getBackendName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/AutoValue_TransportContext;->backendName:Ljava/lang/String;
 
     return-object p0
@@ -146,6 +152,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/AutoValue_TransportContext;->extras:[B
 
     return-object p0
@@ -159,6 +166,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/AutoValue_TransportContext;->priority:Lcom/google/android/datatransport/Priority;
 
     return-object p0
@@ -167,6 +175,7 @@
 .method public hashCode()I
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/AutoValue_TransportContext;->backendName:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -179,6 +188,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 2
     iget-object v2, p0, Lcom/google/android/datatransport/runtime/AutoValue_TransportContext;->extras:[B
 
     invoke-static {v2}, Ljava/util/Arrays;->hashCode([B)I
@@ -189,9 +199,10 @@
 
     mul-int/2addr v0, v1
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/AutoValue_TransportContext;->priority:Lcom/google/android/datatransport/Priority;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {p0}, Ljava/lang/Enum;->hashCode()I
 
     move-result p0
 

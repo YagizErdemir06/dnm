@@ -93,12 +93,15 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;
 
     invoke-direct {v0}, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;-><init>()V
 
+    .line 2
     sput-object v0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;
 
+    .line 3
     const-class v1, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;
 
     invoke-static {v1, v0}, Lcom/google/protobuf/GeneratedMessageLite;->registerDefaultInstance(Ljava/lang/Class;Lcom/google/protobuf/GeneratedMessageLite;)V
@@ -109,14 +112,18 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageLite;-><init>()V
 
     const-string v0, ""
 
+    .line 2
     iput-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->clientId_:Ljava/lang/String;
 
+    .line 3
     iput-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->interfaceName_:Ljava/lang/String;
 
+    .line 4
     invoke-static {}, Lcom/google/protobuf/GeneratedMessageLite;->emptyProtobufList()Lcom/google/protobuf/Internal$ProtobufList;
 
     move-result-object v0
@@ -129,6 +136,7 @@
 .method public static synthetic access$2700()Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;
 
     return-object v0
@@ -137,6 +145,7 @@
 .method public static synthetic access$2800(Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->setPid(I)V
 
     return-void
@@ -145,6 +154,7 @@
 .method public static synthetic access$2900(Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->clearPid()V
 
     return-void
@@ -153,6 +163,7 @@
 .method public static synthetic access$3000(Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->setUid(I)V
 
     return-void
@@ -161,6 +172,7 @@
 .method public static synthetic access$3100(Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->clearUid()V
 
     return-void
@@ -169,6 +181,7 @@
 .method public static synthetic access$3200(Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->setClientId(Ljava/lang/String;)V
 
     return-void
@@ -177,6 +190,7 @@
 .method public static synthetic access$3300(Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->clearClientId()V
 
     return-void
@@ -185,6 +199,7 @@
 .method public static synthetic access$3400(Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->setClientIdBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -193,6 +208,7 @@
 .method public static synthetic access$3500(Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->setInterfaceName(Ljava/lang/String;)V
 
     return-void
@@ -201,6 +217,7 @@
 .method public static synthetic access$3600(Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->clearInterfaceName()V
 
     return-void
@@ -209,6 +226,7 @@
 .method public static synthetic access$3700(Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->setInterfaceNameBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -217,6 +235,7 @@
 .method public static synthetic access$3800(Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->setCommType(I)V
 
     return-void
@@ -225,6 +244,7 @@
 .method public static synthetic access$3900(Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->clearCommType()V
 
     return-void
@@ -233,6 +253,7 @@
 .method public static synthetic access$4000(Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->setDiscType(I)V
 
     return-void
@@ -241,6 +262,7 @@
 .method public static synthetic access$4100(Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->clearDiscType()V
 
     return-void
@@ -249,6 +271,7 @@
 .method public static synthetic access$4200(Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;ILjava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->setServiceTypes(ILjava/lang/String;)V
 
     return-void
@@ -257,6 +280,7 @@
 .method public static synthetic access$4300(Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->addServiceTypes(Ljava/lang/String;)V
 
     return-void
@@ -265,6 +289,7 @@
 .method public static synthetic access$4400(Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;Ljava/lang/Iterable;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->addAllServiceTypes(Ljava/lang/Iterable;)V
 
     return-void
@@ -273,6 +298,7 @@
 .method public static synthetic access$4500(Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->clearServiceTypes()V
 
     return-void
@@ -281,6 +307,7 @@
 .method public static synthetic access$4600(Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->addServiceTypesBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -289,6 +316,7 @@
 .method public static synthetic access$4700(Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->setIsDiscTypeRequired(Z)V
 
     return-void
@@ -297,6 +325,7 @@
 .method public static synthetic access$4800(Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->clearIsDiscTypeRequired()V
 
     return-void
@@ -313,8 +342,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->ensureServiceTypesIsMutable()V
 
+    .line 2
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->serviceTypes_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-static {p1, p0}, Lcom/google/protobuf/AbstractMessageLite;->addAll(Ljava/lang/Iterable;Ljava/util/List;)V
@@ -325,10 +356,13 @@
 .method private addServiceTypes(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 2
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->ensureServiceTypesIsMutable()V
 
+    .line 3
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->serviceTypes_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -339,10 +373,13 @@
 .method private addServiceTypesBytes(Lcom/google/protobuf/ByteString;)V
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/google/protobuf/AbstractMessageLite;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
+    .line 2
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->ensureServiceTypesIsMutable()V
 
+    .line 3
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->serviceTypes_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
@@ -357,6 +394,7 @@
 .method private clearClientId()V
     .locals 1
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->getDefaultInstance()Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;
 
     move-result-object v0
@@ -375,6 +413,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput v0, p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->commType_:I
 
     return-void
@@ -385,6 +424,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput v0, p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->discType_:I
 
     return-void
@@ -393,6 +433,7 @@
 .method private clearInterfaceName()V
     .locals 1
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->getDefaultInstance()Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;
 
     move-result-object v0
@@ -411,6 +452,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-boolean v0, p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->isDiscTypeRequired_:Z
 
     return-void
@@ -421,6 +463,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput v0, p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->pid_:I
 
     return-void
@@ -429,6 +472,7 @@
 .method private clearServiceTypes()V
     .locals 1
 
+    .line 1
     invoke-static {}, Lcom/google/protobuf/GeneratedMessageLite;->emptyProtobufList()Lcom/google/protobuf/Internal$ProtobufList;
 
     move-result-object v0
@@ -443,6 +487,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput v0, p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->uid_:I
 
     return-void
@@ -451,14 +496,17 @@
 .method private ensureServiceTypesIsMutable()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->serviceTypes_:Lcom/google/protobuf/Internal$ProtobufList;
 
+    .line 2
     invoke-interface {v0}, Lcom/google/protobuf/Internal$ProtobufList;->isModifiable()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
+    .line 3
     invoke-static {v0}, Lcom/google/protobuf/GeneratedMessageLite;->mutableCopy(Lcom/google/protobuf/Internal$ProtobufList;)Lcom/google/protobuf/Internal$ProtobufList;
 
     move-result-object v0
@@ -472,6 +520,7 @@
 .method public static getDefaultInstance()Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;
 
     return-object v0
@@ -758,6 +807,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;
 
     invoke-virtual {v0}, Lcom/google/protobuf/GeneratedMessageLite;->getParserForType()Lcom/google/protobuf/Parser;
@@ -770,8 +820,10 @@
 .method private setClientId(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 2
     iput-object p1, p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->clientId_:Ljava/lang/String;
 
     return-void
@@ -780,8 +832,10 @@
 .method private setClientIdBytes(Lcom/google/protobuf/ByteString;)V
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/google/protobuf/AbstractMessageLite;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object p1
@@ -794,6 +848,7 @@
 .method private setCommType(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->commType_:I
 
     return-void
@@ -802,6 +857,7 @@
 .method private setDiscType(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->discType_:I
 
     return-void
@@ -810,8 +866,10 @@
 .method private setInterfaceName(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 2
     iput-object p1, p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->interfaceName_:Ljava/lang/String;
 
     return-void
@@ -820,8 +878,10 @@
 .method private setInterfaceNameBytes(Lcom/google/protobuf/ByteString;)V
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/google/protobuf/AbstractMessageLite;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object p1
@@ -834,6 +894,7 @@
 .method private setIsDiscTypeRequired(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->isDiscTypeRequired_:Z
 
     return-void
@@ -842,6 +903,7 @@
 .method private setPid(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->pid_:I
 
     return-void
@@ -850,10 +912,13 @@
 .method private setServiceTypes(ILjava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 2
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->ensureServiceTypesIsMutable()V
 
+    .line 3
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->serviceTypes_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-interface {p0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
@@ -864,6 +929,7 @@
 .method private setUid(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->uid_:I
 
     return-void
@@ -874,6 +940,7 @@
 .method public final dynamicMethod(Lcom/google/protobuf/GeneratedMessageLite$MethodToInvoke;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     sget-object p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$1;->$SwitchMap$com$google$protobuf$GeneratedMessageLite$MethodToInvoke:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
@@ -888,6 +955,7 @@
 
     packed-switch p0, :pswitch_data_0
 
+    .line 2
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -897,6 +965,7 @@
     :pswitch_0
     return-object p2
 
+    .line 3
     :pswitch_1
     invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
@@ -904,28 +973,34 @@
 
     return-object p0
 
+    .line 4
     :pswitch_2
     sget-object p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->PARSER:Lcom/google/protobuf/Parser;
 
     if-nez p0, :cond_1
 
+    .line 5
     const-class p1, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;
 
     monitor-enter p1
 
+    .line 6
     :try_start_0
     sget-object p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->PARSER:Lcom/google/protobuf/Parser;
 
     if-nez p0, :cond_0
 
+    .line 7
     new-instance p0, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;
 
     sget-object p2, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;
 
     invoke-direct {p0, p2}, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;-><init>(Lcom/google/protobuf/GeneratedMessageLite;)V
 
+    .line 8
     sput-object p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->PARSER:Lcom/google/protobuf/Parser;
 
+    .line 9
     :cond_0
     monitor-exit p1
 
@@ -944,6 +1019,7 @@
     :goto_0
     return-object p0
 
+    .line 10
     :pswitch_3
     sget-object p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;
 
@@ -1002,6 +1078,7 @@
 
     const-string p1, "\u0000\u0008\u0000\u0000\u0001\u0008\u0008\u0000\u0001\u0000\u0001\u0004\u0002\u0004\u0003\u0208\u0004\u0208\u0005\u0004\u0006\u0004\u0007\u021a\u0008\u0007"
 
+    .line 11
     sget-object p2, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->DEFAULT_INSTANCE:Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;
 
     invoke-static {p2, p1, p0}, Lcom/google/protobuf/GeneratedMessageLite;->newMessageInfo(Lcom/google/protobuf/MessageLite;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
@@ -1010,6 +1087,7 @@
 
     return-object p0
 
+    .line 12
     :pswitch_5
     new-instance p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam$Builder;
 
@@ -1017,6 +1095,7 @@
 
     return-object p0
 
+    .line 13
     :pswitch_6
     new-instance p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;
 
@@ -1039,6 +1118,7 @@
 .method public getClientId()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->clientId_:Ljava/lang/String;
 
     return-object p0
@@ -1047,6 +1127,7 @@
 .method public getClientIdBytes()Lcom/google/protobuf/ByteString;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->clientId_:Ljava/lang/String;
 
     invoke-static {p0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
@@ -1059,6 +1140,7 @@
 .method public getCommType()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->commType_:I
 
     return p0
@@ -1067,6 +1149,7 @@
 .method public getDiscType()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->discType_:I
 
     return p0
@@ -1075,6 +1158,7 @@
 .method public getInterfaceName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->interfaceName_:Ljava/lang/String;
 
     return-object p0
@@ -1083,6 +1167,7 @@
 .method public getInterfaceNameBytes()Lcom/google/protobuf/ByteString;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->interfaceName_:Ljava/lang/String;
 
     invoke-static {p0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
@@ -1095,6 +1180,7 @@
 .method public getIsDiscTypeRequired()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->isDiscTypeRequired_:Z
 
     return p0
@@ -1103,6 +1189,7 @@
 .method public getPid()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->pid_:I
 
     return p0
@@ -1111,6 +1198,7 @@
 .method public getServiceTypes(I)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->serviceTypes_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1125,14 +1213,17 @@
 .method public getServiceTypesBytes(I)Lcom/google/protobuf/ByteString;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->serviceTypes_:Lcom/google/protobuf/Internal$ProtobufList;
 
+    .line 2
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Ljava/lang/String;
 
+    .line 3
     invoke-static {p0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
 
     move-result-object p0
@@ -1143,6 +1234,7 @@
 .method public getServiceTypesCount()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->serviceTypes_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-interface {p0}, Ljava/util/List;->size()I
@@ -1163,6 +1255,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->serviceTypes_:Lcom/google/protobuf/Internal$ProtobufList;
 
     return-object p0
@@ -1171,6 +1264,7 @@
 .method public getUid()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$checkPermissionByBlockListParam;->uid_:I
 
     return p0

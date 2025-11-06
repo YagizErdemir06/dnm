@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;
+.class public final Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -14,7 +14,7 @@
 # static fields
 .field public static final CONSECUTIVE_MATCHING_FRAME_DURATIONS_FOR_SYNC:I = 0xf
 
-.field static final MAX_MATCHING_FRAME_DIFFERENCE_NS:J = 0xf4240L
+.field public static final MAX_MATCHING_FRAME_DIFFERENCE_NS:J = 0xf4240L
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 .end field
@@ -38,14 +38,17 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator$Matcher;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator$Matcher;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;->currentMatcher:Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator$Matcher;
 
+    .line 3
     new-instance v0, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator$Matcher;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator$Matcher;-><init>()V
@@ -54,6 +57,7 @@
 
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 4
     iput-wide v0, p0, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;->lastFramePresentationTimeNs:J
 
     return-void
@@ -64,6 +68,7 @@
 .method public getFrameDurationNs()J
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;->isSynced()Z
 
     move-result v0
@@ -88,25 +93,27 @@
 .method public getFrameRate()F
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;->isSynced()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    const-wide v0, 0x41cdcd6500000000L    # 1.0E9
+
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;->currentMatcher:Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator$Matcher;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator$Matcher;->getFrameDurationNs()J
 
-    move-result-wide v0
+    move-result-wide v2
 
-    long-to-double v0, v0
+    long-to-double v2, v2
 
-    const-wide v2, 0x41cdcd6500000000L    # 1.0E9
+    div-double/2addr v0, v2
 
-    div-double/2addr v2, v0
-
-    double-to-float p0, v2
+    double-to-float p0, v0
 
     goto :goto_0
 
@@ -120,6 +127,7 @@
 .method public getFramesWithoutSyncCount()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;->framesWithoutSyncCount:I
 
     return p0
@@ -128,6 +136,7 @@
 .method public getMatchingFrameDurationSumNs()J
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;->isSynced()Z
 
     move-result v0
@@ -152,6 +161,7 @@
 .method public isSynced()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;->currentMatcher:Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator$Matcher;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator$Matcher;->isSynced()Z
@@ -164,10 +174,12 @@
 .method public onNextFrame(J)V
     .locals 7
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;->currentMatcher:Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator$Matcher;
 
     invoke-virtual {v0, p1, p2}, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator$Matcher;->onNextFrame(J)V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;->currentMatcher:Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator$Matcher;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator$Matcher;->isSynced()Z
@@ -184,10 +196,12 @@
 
     if-nez v0, :cond_0
 
+    .line 3
     iput-boolean v2, p0, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;->candidateMatcherActive:Z
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-wide v3, p0, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;->lastFramePresentationTimeNs:J
 
@@ -197,6 +211,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 5
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;->candidateMatcherActive:Z
 
     if-eqz v0, :cond_1
@@ -209,24 +224,29 @@
 
     if-eqz v0, :cond_2
 
+    .line 6
     :cond_1
     iget-object v0, p0, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;->candidateMatcher:Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator$Matcher;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator$Matcher;->reset()V
 
+    .line 7
     iget-object v0, p0, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;->candidateMatcher:Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator$Matcher;
 
     iget-wide v3, p0, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;->lastFramePresentationTimeNs:J
 
     invoke-virtual {v0, v3, v4}, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator$Matcher;->onNextFrame(J)V
 
+    .line 8
     :cond_2
     iput-boolean v1, p0, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;->candidateMatcherActive:Z
 
+    .line 9
     iget-object v0, p0, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;->candidateMatcher:Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator$Matcher;
 
     invoke-virtual {v0, p1, p2}, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator$Matcher;->onNextFrame(J)V
 
+    .line 10
     :cond_3
     :goto_0
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;->candidateMatcherActive:Z
@@ -241,21 +261,28 @@
 
     if-eqz v0, :cond_4
 
+    .line 11
     iget-object v0, p0, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;->currentMatcher:Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator$Matcher;
 
+    .line 12
     iget-object v3, p0, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;->candidateMatcher:Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator$Matcher;
 
     iput-object v3, p0, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;->currentMatcher:Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator$Matcher;
 
+    .line 13
     iput-object v0, p0, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;->candidateMatcher:Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator$Matcher;
 
+    .line 14
     iput-boolean v2, p0, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;->candidateMatcherActive:Z
 
+    .line 15
     iput-boolean v2, p0, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;->switchToCandidateMatcherWhenSynced:Z
 
+    .line 16
     :cond_4
     iput-wide p1, p0, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;->lastFramePresentationTimeNs:J
 
+    .line 17
     iget-object p1, p0, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;->currentMatcher:Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator$Matcher;
 
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator$Matcher;->isSynced()Z
@@ -280,22 +307,27 @@
 .method public reset()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;->currentMatcher:Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator$Matcher;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator$Matcher;->reset()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;->candidateMatcher:Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator$Matcher;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator$Matcher;->reset()V
 
     const/4 v0, 0x0
 
+    .line 3
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;->candidateMatcherActive:Z
 
     const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 4
     iput-wide v1, p0, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;->lastFramePresentationTimeNs:J
 
+    .line 5
     iput v0, p0, Lcom/google/android/exoplayer2/video/FixedFrameRateEstimator;->framesWithoutSyncCount:I
 
     return-void

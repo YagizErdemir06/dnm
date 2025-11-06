@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/TreeTraverser$1;
+.class public Lcom/google/common/collect/TreeTraverser$1;
 .super Lcom/google/common/collect/TreeTraverser;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic val$nodeToChildrenFunction:Lcom/google/common/base/Function;
+.field public final synthetic val$nodeToChildrenFunction:Lcom/google/common/base/Function;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/base/Function;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/TreeTraverser$1;->val$nodeToChildrenFunction:Lcom/google/common/base/Function;
 
     invoke-direct {p0}, Lcom/google/common/collect/TreeTraverser;-><init>()V
@@ -48,6 +49,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/TreeTraverser$1;->val$nodeToChildrenFunction:Lcom/google/common/base/Function;
 
     invoke-interface {p0, p1}, Lcom/google/common/base/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;

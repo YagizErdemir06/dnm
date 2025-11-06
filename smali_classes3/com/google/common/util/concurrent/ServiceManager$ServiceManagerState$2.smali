@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState$2;
+.class public Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,13 +27,14 @@
 
 
 # instance fields
-.field final synthetic val$service:Lcom/google/common/util/concurrent/Service;
+.field public final synthetic val$service:Lcom/google/common/util/concurrent/Service;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;Lcom/google/common/util/concurrent/Service;)V
     .locals 0
 
+    .line 1
     iput-object p2, p0, Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState$2;->val$service:Lcom/google/common/util/concurrent/Service;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -68,6 +69,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState$2;->val$service:Lcom/google/common/util/concurrent/Service;
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/view/menu/ListMenuPresenter$MenuAdapter;
+.class public Landroidx/appcompat/view/menu/ListMenuPresenter$MenuAdapter;
 .super Landroid/widget/BaseAdapter;
 .source "SourceFile"
 
@@ -17,21 +17,24 @@
 # instance fields
 .field private mExpandedIndex:I
 
-.field final synthetic this$0:Landroidx/appcompat/view/menu/ListMenuPresenter;
+.field public final synthetic this$0:Landroidx/appcompat/view/menu/ListMenuPresenter;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/appcompat/view/menu/ListMenuPresenter;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/view/menu/ListMenuPresenter$MenuAdapter;->this$0:Landroidx/appcompat/view/menu/ListMenuPresenter;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
     const/4 p1, -0x1
 
+    .line 2
     iput p1, p0, Landroidx/appcompat/view/menu/ListMenuPresenter$MenuAdapter;->mExpandedIndex:I
 
+    .line 3
     invoke-virtual {p0}, Landroidx/appcompat/view/menu/ListMenuPresenter$MenuAdapter;->findExpandedIndex()V
 
     return-void
@@ -42,6 +45,7 @@
 .method public findExpandedIndex()V
     .locals 5
 
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/view/menu/ListMenuPresenter$MenuAdapter;->this$0:Landroidx/appcompat/view/menu/ListMenuPresenter;
 
     iget-object v0, v0, Landroidx/appcompat/view/menu/ListMenuPresenter;->mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
@@ -52,6 +56,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 2
     iget-object v1, p0, Landroidx/appcompat/view/menu/ListMenuPresenter$MenuAdapter;->this$0:Landroidx/appcompat/view/menu/ListMenuPresenter;
 
     iget-object v1, v1, Landroidx/appcompat/view/menu/ListMenuPresenter;->mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
@@ -60,6 +65,7 @@
 
     move-result-object v1
 
+    .line 3
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v2
@@ -69,6 +75,7 @@
     :goto_0
     if-ge v3, v2, :cond_1
 
+    .line 4
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -77,6 +84,7 @@
 
     if-ne v4, v0, :cond_0
 
+    .line 5
     iput v3, p0, Landroidx/appcompat/view/menu/ListMenuPresenter$MenuAdapter;->mExpandedIndex:I
 
     return-void
@@ -89,6 +97,7 @@
     :cond_1
     const/4 v0, -0x1
 
+    .line 6
     iput v0, p0, Landroidx/appcompat/view/menu/ListMenuPresenter$MenuAdapter;->mExpandedIndex:I
 
     return-void
@@ -97,6 +106,7 @@
 .method public getCount()I
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/view/menu/ListMenuPresenter$MenuAdapter;->this$0:Landroidx/appcompat/view/menu/ListMenuPresenter;
 
     iget-object v0, v0, Landroidx/appcompat/view/menu/ListMenuPresenter;->mMenu:Landroidx/appcompat/view/menu/MenuBuilder;
@@ -105,6 +115,7 @@
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -115,6 +126,7 @@
 
     sub-int/2addr v0, v1
 
+    .line 3
     iget p0, p0, Landroidx/appcompat/view/menu/ListMenuPresenter$MenuAdapter;->mExpandedIndex:I
 
     if-gez p0, :cond_0
@@ -192,6 +204,7 @@
 
     if-nez p2, :cond_0
 
+    .line 1
     iget-object p2, p0, Landroidx/appcompat/view/menu/ListMenuPresenter$MenuAdapter;->this$0:Landroidx/appcompat/view/menu/ListMenuPresenter;
 
     iget-object v1, p2, Landroidx/appcompat/view/menu/ListMenuPresenter;->mInflater:Landroid/view/LayoutInflater;
@@ -202,11 +215,13 @@
 
     move-result-object p2
 
+    .line 2
     :cond_0
     move-object p3, p2
 
     check-cast p3, Landroidx/appcompat/view/menu/MenuView$ItemView;
 
+    .line 3
     invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/ListMenuPresenter$MenuAdapter;->getItem(I)Landroidx/appcompat/view/menu/MenuItemImpl;
 
     move-result-object p0
@@ -219,8 +234,10 @@
 .method public notifyDataSetChanged()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/appcompat/view/menu/ListMenuPresenter$MenuAdapter;->findExpandedIndex()V
 
+    .line 2
     invoke-super {p0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
 
     return-void

@@ -11,6 +11,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,6 +20,7 @@
 .method private static getMsg(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -39,6 +41,7 @@
 .method private static getTag(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -59,6 +62,7 @@
 .method public static i(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/android/camera/log/LogU;->getTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0

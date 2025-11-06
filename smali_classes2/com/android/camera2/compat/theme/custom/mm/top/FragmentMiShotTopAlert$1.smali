@@ -1,4 +1,4 @@
-.class Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert$1;
+.class public Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,22 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;
+.field public final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert$1;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,11 +45,25 @@
 # virtual methods
 .method public onSurfaceTextureAvailable(Landroid/graphics/SurfaceTexture;II)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "surface",
+            "width",
+            "height"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert$1;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;
 
     invoke-static {v0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;->access$102(Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;Landroid/graphics/SurfaceTexture;)Landroid/graphics/SurfaceTexture;
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert$1;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;
 
     invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;->access$100(Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;)Landroid/graphics/SurfaceTexture;
@@ -54,6 +77,14 @@
 
 .method public onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)Z
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "surface"
+        }
+    .end annotation
 
     const/4 p0, 0x0
 
@@ -62,7 +93,20 @@
 
 .method public onSurfaceTextureSizeChanged(Landroid/graphics/SurfaceTexture;II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "surface",
+            "width",
+            "height"
+        }
+    .end annotation
 
+    .line 1
     iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert$1;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;
 
     invoke-static {p2}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;->access$100(Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;)Landroid/graphics/SurfaceTexture;
@@ -71,6 +115,7 @@
 
     if-nez p2, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert$1;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;
 
     invoke-static {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;->access$102(Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;Landroid/graphics/SurfaceTexture;)Landroid/graphics/SurfaceTexture;
@@ -81,7 +126,16 @@
 
 .method public onSurfaceTextureUpdated(Landroid/graphics/SurfaceTexture;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "surface"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert$1;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;
 
     invoke-static {v0}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;->access$100(Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;)Landroid/graphics/SurfaceTexture;
@@ -90,6 +144,7 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert$1;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;
 
     invoke-static {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;->access$102(Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;Landroid/graphics/SurfaceTexture;)Landroid/graphics/SurfaceTexture;

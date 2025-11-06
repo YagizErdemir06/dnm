@@ -137,6 +137,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget v0, p0, Lcom/google/android/exoplayer2/upstream/DefaultAllocator;->allocatedCount:I
 
@@ -144,10 +145,12 @@
 
     iput v0, p0, Lcom/google/android/exoplayer2/upstream/DefaultAllocator;->allocatedCount:I
 
+    .line 2
     iget v0, p0, Lcom/google/android/exoplayer2/upstream/DefaultAllocator;->availableCount:I
 
     if-lez v0, :cond_0
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/upstream/DefaultAllocator;->availableAllocations:[Lcom/google/android/exoplayer2/upstream/Allocation;
 
     add-int/lit8 v0, v0, -0x1
@@ -162,6 +165,7 @@
 
     check-cast v0, Lcom/google/android/exoplayer2/upstream/Allocation;
 
+    .line 4
     iget-object v1, p0, Lcom/google/android/exoplayer2/upstream/DefaultAllocator;->availableAllocations:[Lcom/google/android/exoplayer2/upstream/Allocation;
 
     iget v2, p0, Lcom/google/android/exoplayer2/upstream/DefaultAllocator;->availableCount:I
@@ -172,6 +176,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     new-instance v0, Lcom/google/android/exoplayer2/upstream/Allocation;
 
@@ -183,6 +188,7 @@
 
     invoke-direct {v0, v1, v2}, Lcom/google/android/exoplayer2/upstream/Allocation;-><init>([BI)V
 
+    .line 6
     iget v1, p0, Lcom/google/android/exoplayer2/upstream/DefaultAllocator;->allocatedCount:I
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/upstream/DefaultAllocator;->availableAllocations:[Lcom/google/android/exoplayer2/upstream/Allocation;
@@ -191,6 +197,7 @@
 
     if-le v1, v3, :cond_1
 
+    .line 7
     array-length v1, v2
 
     mul-int/lit8 v1, v1, 0x2
@@ -205,6 +212,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 8
     :cond_1
     :goto_0
     monitor-exit p0
@@ -222,6 +230,7 @@
 .method public getIndividualAllocationLength()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/upstream/DefaultAllocator;->individualAllocationSize:I
 
     return p0
@@ -232,6 +241,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget v0, p0, Lcom/google/android/exoplayer2/upstream/DefaultAllocator;->allocatedCount:I
 
@@ -361,6 +371,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/upstream/DefaultAllocator;->trimOnReset:Z
 
@@ -368,10 +379,12 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/upstream/DefaultAllocator;->setTargetBufferSize(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     :cond_0
     monitor-exit p0
 
@@ -390,6 +403,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget v0, p0, Lcom/google/android/exoplayer2/upstream/DefaultAllocator;->targetBufferSize:I
 
@@ -402,15 +416,18 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 2
     :goto_0
     iput p1, p0, Lcom/google/android/exoplayer2/upstream/DefaultAllocator;->targetBufferSize:I
 
     if-eqz v0, :cond_1
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/upstream/DefaultAllocator;->trim()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
     :cond_1
     monitor-exit p0
 
@@ -429,6 +446,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget v0, p0, Lcom/google/android/exoplayer2/upstream/DefaultAllocator;->targetBufferSize:I
 
@@ -438,6 +456,7 @@
 
     move-result v0
 
+    .line 2
     iget v1, p0, Lcom/google/android/exoplayer2/upstream/DefaultAllocator;->allocatedCount:I
 
     sub-int/2addr v0, v1
@@ -448,16 +467,19 @@
 
     move-result v0
 
+    .line 3
     iget v2, p0, Lcom/google/android/exoplayer2/upstream/DefaultAllocator;->availableCount:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-lt v0, v2, :cond_0
 
+    .line 4
     monitor-exit p0
 
     return-void
 
+    .line 5
     :cond_0
     :try_start_1
     iget-object v3, p0, Lcom/google/android/exoplayer2/upstream/DefaultAllocator;->initialAllocationBlock:[B
@@ -469,6 +491,7 @@
     :goto_0
     if-gt v1, v2, :cond_3
 
+    .line 6
     iget-object v3, p0, Lcom/google/android/exoplayer2/upstream/DefaultAllocator;->availableAllocations:[Lcom/google/android/exoplayer2/upstream/Allocation;
 
     aget-object v3, v3, v1
@@ -479,6 +502,7 @@
 
     check-cast v3, Lcom/google/android/exoplayer2/upstream/Allocation;
 
+    .line 7
     iget-object v4, v3, Lcom/google/android/exoplayer2/upstream/Allocation;->data:[B
 
     iget-object v5, p0, Lcom/google/android/exoplayer2/upstream/DefaultAllocator;->initialAllocationBlock:[B
@@ -489,6 +513,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_1
     iget-object v4, p0, Lcom/google/android/exoplayer2/upstream/DefaultAllocator;->availableAllocations:[Lcom/google/android/exoplayer2/upstream/Allocation;
 
@@ -500,6 +525,7 @@
 
     check-cast v4, Lcom/google/android/exoplayer2/upstream/Allocation;
 
+    .line 9
     iget-object v5, v4, Lcom/google/android/exoplayer2/upstream/Allocation;->data:[B
 
     iget-object v6, p0, Lcom/google/android/exoplayer2/upstream/DefaultAllocator;->initialAllocationBlock:[B
@@ -510,6 +536,7 @@
 
     goto :goto_0
 
+    .line 10
     :cond_2
     iget-object v5, p0, Lcom/google/android/exoplayer2/upstream/DefaultAllocator;->availableAllocations:[Lcom/google/android/exoplayer2/upstream/Allocation;
 
@@ -519,6 +546,7 @@
 
     add-int/lit8 v1, v2, -0x1
 
+    .line 11
     aput-object v3, v5, v2
 
     move v2, v1
@@ -527,21 +555,25 @@
 
     goto :goto_0
 
+    .line 12
     :cond_3
     invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v0
 
+    .line 13
     iget v1, p0, Lcom/google/android/exoplayer2/upstream/DefaultAllocator;->availableCount:I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     if-lt v0, v1, :cond_4
 
+    .line 14
     monitor-exit p0
 
     return-void
 
+    .line 15
     :cond_4
     :try_start_2
     iget-object v1, p0, Lcom/google/android/exoplayer2/upstream/DefaultAllocator;->availableAllocations:[Lcom/google/android/exoplayer2/upstream/Allocation;
@@ -552,10 +584,12 @@
 
     invoke-static {v1, v0, v2, v3}, Ljava/util/Arrays;->fill([Ljava/lang/Object;IILjava/lang/Object;)V
 
+    .line 16
     iput v0, p0, Lcom/google/android/exoplayer2/upstream/DefaultAllocator;->availableCount:I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 17
     monitor-exit p0
 
     return-void

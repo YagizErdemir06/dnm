@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_common/zzi;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_common/zzi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -13,11 +13,13 @@
 
     return-void
 
+    .line 1
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    .line 2
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v1, "null value in entry: "
@@ -38,18 +40,25 @@
 
     throw p1
 
+    .line 3
     :cond_1
     new-instance p0, Ljava/lang/NullPointerException;
 
-    invoke-static {p1}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "null key in entry: null="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
-    const-string v0, "null key in entry: null="
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

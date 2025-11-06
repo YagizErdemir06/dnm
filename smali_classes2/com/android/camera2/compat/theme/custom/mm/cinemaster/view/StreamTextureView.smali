@@ -4,13 +4,13 @@
 
 # interfaces
 .implements Landroid/view/TextureView$SurfaceTextureListener;
-.implements Lve/g$h;
-.implements Lve/g$d;
-.implements Lve/g$c;
+.implements Ld/o/f/f/f$h;
+.implements Ld/o/f/f/f$d;
+.implements Ld/o/f/f/f$c;
 .implements Landroid/view/View$OnCapturedPointerListener;
-.implements Lve/g$f;
-.implements Lve/g$e;
-.implements Lve/g$g;
+.implements Ld/o/f/f/f$f;
+.implements Ld/o/f/f/f$e;
+.implements Ld/o/f/f/f$g;
 
 
 # annotations
@@ -77,7 +77,7 @@
 
 .field private mTextureView:Landroid/view/TextureView;
 
-.field private player:Lve/g;
+.field private player:Ld/o/f/f/f;
 
 .field private remoteStateListener:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView$OnRemoteStateListener;
 
@@ -96,7 +96,8 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lgg/f;->c(Ljava/lang/String;Z)Z
+    .line 1
+    invoke-static {v0, v1}, Ld/o/f/w/f;->c(Ljava/lang/String;Z)Z
 
     move-result v0
 
@@ -107,6 +108,16 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     .line 15
     invoke-direct {p0, p1, p2}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -138,9 +149,9 @@
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mHandler:Landroid/os/Handler;
 
     .line 20
-    new-instance p1, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/n;
+    new-instance p1, Ld/d/b/x5/a/b/b/g/n1/k;
 
-    invoke-direct {p1, p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/n;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;)V
+    invoke-direct {p1, p0}, Ld/d/b/x5/a/b/b/g/n1/k;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;)V
 
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mPlaybackRecoveryTask:Ljava/lang/Runnable;
 
@@ -158,6 +169,18 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr"
+        }
+    .end annotation
 
     .line 22
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -189,9 +212,9 @@
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mHandler:Landroid/os/Handler;
 
     .line 27
-    new-instance p1, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/n;
+    new-instance p1, Ld/d/b/x5/a/b/b/g/n1/k;
 
-    invoke-direct {p1, p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/n;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;)V
+    invoke-direct {p1, p0}, Ld/d/b/x5/a/b/b/g/n1/k;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;)V
 
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mPlaybackRecoveryTask:Ljava/lang/Runnable;
 
@@ -209,6 +232,24 @@
 
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;ZZZ)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "ip",
+            "name",
+            "isPadOrFold",
+            "isLandscape",
+            "isDoubleShow"
+        }
+    .end annotation
 
     .line 1
     invoke-direct {p0, p1}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
@@ -240,9 +281,9 @@
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mHandler:Landroid/os/Handler;
 
     .line 6
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/n;
+    new-instance v0, Ld/d/b/x5/a/b/b/g/n1/k;
 
-    invoke-direct {v0, p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/n;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;)V
+    invoke-direct {v0, p0}, Ld/d/b/x5/a/b/b/g/n1/k;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;)V
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mPlaybackRecoveryTask:Ljava/lang/Runnable;
 
@@ -269,7 +310,7 @@
 
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIp:Ljava/lang/String;
 
-    invoke-static {v0}, Lbg/a;->h(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v0}, Ld/o/f/r/m/a;->h(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -303,18 +344,11 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;)V
+.method public static synthetic access$100(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;)Ld/o/f/f/f;
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->lambda$new$1()V
-
-    return-void
-.end method
-
-.method public static synthetic access$100(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;)Lve/g;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Lve/g;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Ld/o/f/f/f;
 
     return-object p0
 .end method
@@ -322,6 +356,7 @@
 .method public static synthetic access$200(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;)Landroid/widget/TextView;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->tvDebug:Landroid/widget/TextView;
 
     return-object p0
@@ -330,6 +365,7 @@
 .method public static synthetic access$300(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;)Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsLandscape:Z
 
     return p0
@@ -338,6 +374,7 @@
 .method public static synthetic access$400(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;)Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView$DebugRunnable;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->debugRunnable:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView$DebugRunnable;
 
     return-object p0
@@ -346,22 +383,16 @@
 .method public static synthetic access$500(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;)Landroid/os/Handler;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mHandler:Landroid/os/Handler;
 
     return-object p0
 .end method
 
-.method public static synthetic b(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->lambda$onVideoRenderStart$0()V
-
-    return-void
-.end method
-
 .method private configureTransform()V
     .locals 7
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mTextureView:Landroid/view/TextureView;
 
     if-eqz v0, :cond_4
@@ -376,8 +407,9 @@
 
     goto/16 :goto_2
 
+    .line 2
     :cond_0
-    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
+    invoke-virtual {v0}, Landroid/view/TextureView;->getWidth()I
 
     move-result v0
 
@@ -389,9 +421,10 @@
 
     div-float/2addr v0, v1
 
+    .line 3
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mTextureView:Landroid/view/TextureView;
 
-    invoke-virtual {v1}, Landroid/view/View;->getHeight()I
+    invoke-virtual {v1}, Landroid/view/TextureView;->getHeight()I
 
     move-result v1
 
@@ -403,6 +436,7 @@
 
     div-float/2addr v1, v2
 
+    .line 4
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -431,33 +465,38 @@
 
     invoke-static {v2, v3, v5}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 5
     iget-boolean v2, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsLandscape:Z
 
     if-eqz v2, :cond_1
 
+    .line 6
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mTextureView:Landroid/view/TextureView;
 
     const/high16 v3, -0x3d4c0000    # -90.0f
 
-    invoke-virtual {v2, v3}, Landroid/view/View;->setRotation(F)V
+    invoke-virtual {v2, v3}, Landroid/view/TextureView;->setRotation(F)V
 
     goto :goto_0
 
+    .line 7
     :cond_1
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mTextureView:Landroid/view/TextureView;
 
     const/4 v3, 0x0
 
-    invoke-virtual {v2, v3}, Landroid/view/View;->setRotation(F)V
+    invoke-virtual {v2, v3}, Landroid/view/TextureView;->setRotation(F)V
 
+    .line 8
     :goto_0
     new-instance v2, Landroid/graphics/Matrix;
 
     invoke-direct {v2}, Landroid/graphics/Matrix;-><init>()V
 
+    .line 9
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mTextureView:Landroid/view/TextureView;
 
-    invoke-virtual {v3}, Landroid/view/View;->getWidth()I
+    invoke-virtual {v3}, Landroid/view/TextureView;->getWidth()I
 
     move-result v3
 
@@ -471,7 +510,7 @@
 
     iget-object v5, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mTextureView:Landroid/view/TextureView;
 
-    invoke-virtual {v5}, Landroid/view/View;->getHeight()I
+    invoke-virtual {v5}, Landroid/view/TextureView;->getHeight()I
 
     move-result v5
 
@@ -485,13 +524,14 @@
 
     invoke-virtual {v2, v3, v5}, Landroid/graphics/Matrix;->preTranslate(FF)Z
 
+    .line 10
     iget v3, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mStreamWidth:I
 
     int-to-float v3, v3
 
     iget-object v5, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mTextureView:Landroid/view/TextureView;
 
-    invoke-virtual {v5}, Landroid/view/View;->getWidth()I
+    invoke-virtual {v5}, Landroid/view/TextureView;->getWidth()I
 
     move-result v5
 
@@ -505,7 +545,7 @@
 
     iget-object v6, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mTextureView:Landroid/view/TextureView;
 
-    invoke-virtual {v6}, Landroid/view/View;->getHeight()I
+    invoke-virtual {v6}, Landroid/view/TextureView;->getHeight()I
 
     move-result v6
 
@@ -519,17 +559,19 @@
 
     if-ltz v3, :cond_2
 
+    .line 11
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->TAG:Ljava/lang/String;
 
-    const-string v3, "updateTextureViewSize: sx > sy"
+    new-array v3, v4, [Ljava/lang/Object;
 
-    new-array v5, v4, [Ljava/lang/Object;
+    const-string v5, "updateTextureViewSize: sx > sy"
 
-    invoke-static {v0, v3, v5}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v5, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 12
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mTextureView:Landroid/view/TextureView;
 
-    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
+    invoke-virtual {v0}, Landroid/view/TextureView;->getWidth()I
 
     move-result v0
 
@@ -539,7 +581,7 @@
 
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mTextureView:Landroid/view/TextureView;
 
-    invoke-virtual {v3}, Landroid/view/View;->getHeight()I
+    invoke-virtual {v3}, Landroid/view/TextureView;->getHeight()I
 
     move-result v3
 
@@ -551,18 +593,20 @@
 
     goto :goto_1
 
+    .line 13
     :cond_2
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->TAG:Ljava/lang/String;
 
-    const-string v3, "updateTextureViewSize: sx < sy"
+    new-array v3, v4, [Ljava/lang/Object;
 
-    new-array v5, v4, [Ljava/lang/Object;
+    const-string v5, "updateTextureViewSize: sx < sy"
 
-    invoke-static {v1, v3, v5}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v5, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 14
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mTextureView:Landroid/view/TextureView;
 
-    invoke-virtual {v1}, Landroid/view/View;->getWidth()I
+    invoke-virtual {v1}, Landroid/view/TextureView;->getWidth()I
 
     move-result v1
 
@@ -572,7 +616,7 @@
 
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mTextureView:Landroid/view/TextureView;
 
-    invoke-virtual {v3}, Landroid/view/View;->getHeight()I
+    invoke-virtual {v3}, Landroid/view/TextureView;->getHeight()I
 
     move-result v3
 
@@ -582,22 +626,26 @@
 
     invoke-virtual {v2, v0, v0, v1, v3}, Landroid/graphics/Matrix;->postScale(FFFF)Z
 
+    .line 15
     :goto_1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mTextureView:Landroid/view/TextureView;
 
     invoke-virtual {v0, v2}, Landroid/view/TextureView;->setTransform(Landroid/graphics/Matrix;)V
 
+    .line 16
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mTextureView:Landroid/view/TextureView;
 
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    invoke-virtual {v0}, Landroid/view/TextureView;->invalidate()V
 
+    .line 17
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsLandscape:Z
 
     if-eqz v0, :cond_3
 
+    .line 18
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mTextureView:Landroid/view/TextureView;
 
-    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
+    invoke-virtual {v0}, Landroid/view/TextureView;->getWidth()I
 
     move-result v0
 
@@ -605,7 +653,7 @@
 
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mTextureView:Landroid/view/TextureView;
 
-    invoke-virtual {v1}, Landroid/view/View;->getHeight()I
+    invoke-virtual {v1}, Landroid/view/TextureView;->getHeight()I
 
     move-result v1
 
@@ -613,6 +661,7 @@
 
     div-float/2addr v0, v1
 
+    .line 19
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -633,26 +682,30 @@
 
     invoke-static {v1, v2, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 20
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mTextureView:Landroid/view/TextureView;
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->setScaleX(F)V
+    invoke-virtual {v1, v0}, Landroid/view/TextureView;->setScaleX(F)V
 
+    .line 21
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mTextureView:Landroid/view/TextureView;
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setScaleY(F)V
+    invoke-virtual {p0, v0}, Landroid/view/TextureView;->setScaleY(F)V
 
     goto :goto_2
 
+    .line 22
     :cond_3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mTextureView:Landroid/view/TextureView;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setScaleX(F)V
+    invoke-virtual {v0, v1}, Landroid/view/TextureView;->setScaleX(F)V
 
+    .line 23
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mTextureView:Landroid/view/TextureView;
 
-    invoke-virtual {p0, v1}, Landroid/view/View;->setScaleY(F)V
+    invoke-virtual {p0, v1}, Landroid/view/TextureView;->setScaleY(F)V
 
     :cond_4
     :goto_2
@@ -661,28 +714,41 @@
 
 .method private initView(Landroid/content/Context;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     const v0, 0x7f0e003e
 
-    invoke-static {p1, v0, p0}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
+    .line 1
+    invoke-static {p1, v0, p0}, Landroid/widget/RelativeLayout;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
+    .line 2
     new-instance v0, Landroid/animation/LayoutTransition;
 
     invoke-direct {v0}, Landroid/animation/LayoutTransition;-><init>()V
 
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->setLayoutTransition(Landroid/animation/LayoutTransition;)V
+    .line 3
+    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->setLayoutTransition(Landroid/animation/LayoutTransition;)V
 
-    const v0, 0x7f0b01ac
+    const v0, 0x7f0b0183
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    .line 4
+    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mCover:Landroid/view/View;
 
-    const v0, 0x7f0b076f
+    const v0, 0x7f0b068f
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    .line 5
+    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -690,9 +756,10 @@
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mTextureView:Landroid/view/TextureView;
 
-    const v0, 0x7f0b0778
+    const v0, 0x7f0b0698
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    .line 6
+    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -700,9 +767,10 @@
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->cameraSignView:Lcom/android/camera/ui/VerticalLabelView;
 
-    const v0, 0x7f0b039c
+    const v0, 0x7f0b034b
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    .line 7
+    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -710,9 +778,10 @@
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->ivBorderView:Landroid/widget/ImageView;
 
-    const v0, 0x7f0b040f
+    const v0, 0x7f0b03b9
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    .line 8
+    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -720,9 +789,10 @@
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->loading:Lmiuix/androidbasewidget/widget/ProgressBar;
 
-    const v0, 0x7f0b0777
+    const v0, 0x7f0b0697
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    .line 9
+    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -730,9 +800,10 @@
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->cameraParamTextView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StrokeTextView;
 
-    const v0, 0x7f0b079a
+    const v0, 0x7f0b06ba
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    .line 10
+    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -740,9 +811,10 @@
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->tvPlayError:Landroid/widget/TextView;
 
-    const v0, 0x7f0b078d
+    const v0, 0x7f0b06ad
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    .line 11
+    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -750,6 +822,7 @@
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->tvDebug:Landroid/widget/TextView;
 
+    .line 12
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mDeviceName:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -758,6 +831,7 @@
 
     if-nez v0, :cond_0
 
+    .line 13
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->cameraSignView:Lcom/android/camera/ui/VerticalLabelView;
 
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mDeviceName:Ljava/lang/String;
@@ -768,13 +842,17 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 14
     :cond_0
-    invoke-virtual {p0, p0}, Landroid/view/View;->setOnCapturedPointerListener(Landroid/view/View$OnCapturedPointerListener;)V
+    invoke-virtual {p0, p0}, Landroid/widget/RelativeLayout;->setOnCapturedPointerListener(Landroid/view/View$OnCapturedPointerListener;)V
 
+    .line 15
     invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->refreshSignView(Landroid/content/Context;)V
 
+    .line 16
     invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->refreshParamView(Landroid/content/Context;)V
 
+    .line 17
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->refreshErrorTextView()V
 
     return-void
@@ -783,10 +861,12 @@
 .method private synthetic lambda$new$1()V
     .locals 3
 
-    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Lve/g;
+    .line 1
+    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Ld/o/f/f/f;
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -797,9 +877,10 @@
 
     invoke-static {v0, v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Lve/g;
+    .line 3
+    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Ld/o/f/f/f;
 
-    invoke-virtual {p0}, Lve/g;->z()V
+    invoke-virtual {p0}, Ld/o/f/f/f;->y()V
 
     :cond_0
     return-void
@@ -810,26 +891,33 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsRecovering:Z
 
+    .line 2
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mRecoveryRetries:I
 
+    .line 3
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->stopRecovering()V
 
+    .line 4
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mCover:Landroid/view/View;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
+    .line 5
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->tvPlayError:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
 
     const-string v1, ""
 
+    .line 6
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 7
     :cond_0
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->startDebugUpdate()V
 
@@ -839,36 +927,42 @@
 .method private refreshErrorTextView()V
     .locals 3
 
+    .line 1
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsPadOrFold:Z
 
     const/high16 v1, 0x42b40000    # 90.0f
 
     if-eqz v0, :cond_1
 
+    .line 2
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsLandscape:Z
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->tvPlayError:Landroid/widget/TextView;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setRotation(F)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setRotation(F)V
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->tvPlayError:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setRotation(F)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setRotation(F)V
 
     goto :goto_0
 
+    .line 5
     :cond_1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->tvPlayError:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setRotation(F)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setRotation(F)V
 
+    .line 6
     :goto_0
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsLargeShow:Z
 
@@ -876,13 +970,14 @@
 
     if-eqz v0, :cond_2
 
+    .line 7
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->tvPlayError:Landroid/widget/TextView;
 
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const v2, 0x7f070af6
+    const v2, 0x7f07092f
 
     invoke-virtual {p0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -894,14 +989,15 @@
 
     goto :goto_1
 
+    .line 8
     :cond_2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->tvPlayError:Landroid/widget/TextView;
 
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const v2, 0x7f070af5
+    const v2, 0x7f07092e
 
     invoke-virtual {p0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -917,26 +1013,37 @@
 
 .method private refreshParamView(Landroid/content/Context;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     if-nez p1, :cond_0
 
     return-void
 
+    .line 1
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->cameraParamTextView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StrokeTextView;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->cameraParamTextView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StrokeTextView;
 
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v0}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/RelativeLayout$LayoutParams;
 
+    .line 3
     iget-boolean v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsPadOrFold:Z
 
     if-eqz v1, :cond_1
@@ -945,10 +1052,12 @@
 
     if-eqz v1, :cond_1
 
+    .line 4
     invoke-direct {p0, p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->refreshParamViewLand(Landroid/content/Context;Landroid/widget/RelativeLayout$LayoutParams;)V
 
     goto :goto_0
 
+    .line 5
     :cond_1
     invoke-direct {p0, p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->refreshParamViewPor(Landroid/content/Context;Landroid/widget/RelativeLayout$LayoutParams;)V
 
@@ -958,8 +1067,19 @@
 
 .method private refreshParamViewLand(Landroid/content/Context;Landroid/widget/RelativeLayout$LayoutParams;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "layoutParams"
+        }
+    .end annotation
 
-    invoke-static {}, Lcom/android/camera/a6;->Q2()Z
+    .line 1
+    invoke-static {}, Ld/d/a/z5;->F2()Z
 
     move-result v0
 
@@ -967,6 +1087,7 @@
 
     const/16 v0, 0xc
 
+    .line 2
     invoke-virtual {p2, v0}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
     goto :goto_0
@@ -974,16 +1095,20 @@
     :cond_0
     const/16 v0, 0x14
 
+    .line 3
     invoke-virtual {p2, v0}, Landroid/widget/RelativeLayout$LayoutParams;->removeRule(I)V
 
     const/16 v0, 0xa
 
+    .line 4
     invoke-virtual {p2, v0}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
     const/16 v0, 0x15
 
+    .line 5
     invoke-virtual {p2, v0}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
+    .line 6
     :goto_0
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsLargeShow:Z
 
@@ -991,17 +1116,18 @@
 
     if-eqz v0, :cond_2
 
+    .line 7
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v2, 0x7f070af4
+    const v2, 0x7f07092d
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
-    invoke-static {}, Ly2/b;->j0()I
+    invoke-static {}, Ld/d/a/n6/b;->j0()I
 
     move-result v2
 
@@ -1009,14 +1135,16 @@
 
     iput v0, p2, Landroid/widget/RelativeLayout$LayoutParams;->leftMargin:I
 
-    invoke-static {}, Lcom/android/camera/a6;->Q2()Z
+    .line 8
+    invoke-static {}, Ld/d/a/z5;->F2()Z
 
     move-result v0
 
-    const v2, 0x7f070af2
+    const v2, 0x7f07092b
 
     if-eqz v0, :cond_1
 
+    .line 9
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -1029,6 +1157,7 @@
 
     goto :goto_1
 
+    .line 10
     :cond_1
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1040,14 +1169,15 @@
 
     iput p1, p2, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
 
+    .line 11
     :goto_1
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->cameraParamTextView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StrokeTextView;
 
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
 
-    const v0, 0x7f070af6
+    const v0, 0x7f07092f
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1059,12 +1189,13 @@
 
     goto :goto_3
 
+    .line 12
     :cond_2
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v2, 0x7f070af3
+    const v2, 0x7f07092c
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1072,14 +1203,16 @@
 
     iput v0, p2, Landroid/widget/RelativeLayout$LayoutParams;->leftMargin:I
 
-    invoke-static {}, Lcom/android/camera/a6;->Q2()Z
+    .line 13
+    invoke-static {}, Ld/d/a/z5;->F2()Z
 
     move-result v0
 
-    const v2, 0x7f070af1
+    const v2, 0x7f07092a
 
     if-eqz v0, :cond_3
 
+    .line 14
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -1092,6 +1225,7 @@
 
     goto :goto_2
 
+    .line 15
     :cond_3
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1103,14 +1237,15 @@
 
     iput p1, p2, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
 
+    .line 16
     :goto_2
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->cameraParamTextView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StrokeTextView;
 
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
 
-    const v0, 0x7f070af5
+    const v0, 0x7f07092e
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1120,6 +1255,7 @@
 
     invoke-virtual {p1, v1, p2}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StrokeTextView;->setTextSize(IF)V
 
+    .line 17
     :goto_3
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->cameraParamTextView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StrokeTextView;
 
@@ -1132,8 +1268,19 @@
 
 .method private refreshParamViewPor(Landroid/content/Context;Landroid/widget/RelativeLayout$LayoutParams;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "layoutParams"
+        }
+    .end annotation
 
-    invoke-static {}, Lcom/android/camera/a6;->Q2()Z
+    .line 1
+    invoke-static {}, Ld/d/a/z5;->F2()Z
 
     move-result v0
 
@@ -1141,6 +1288,7 @@
 
     const/16 v0, 0xc
 
+    .line 2
     invoke-virtual {p2, v0}, Landroid/widget/RelativeLayout$LayoutParams;->removeRule(I)V
 
     goto :goto_0
@@ -1148,16 +1296,20 @@
     :cond_0
     const/16 v0, 0x15
 
+    .line 3
     invoke-virtual {p2, v0}, Landroid/widget/RelativeLayout$LayoutParams;->removeRule(I)V
 
     const/16 v0, 0xa
 
+    .line 4
     invoke-virtual {p2, v0}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
     const/16 v0, 0x14
 
+    .line 5
     invoke-virtual {p2, v0}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
+    .line 6
     :goto_0
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsLargeShow:Z
 
@@ -1165,14 +1317,16 @@
 
     if-eqz v0, :cond_3
 
-    invoke-static {}, Lcom/android/camera/a6;->Q2()Z
+    .line 7
+    invoke-static {}, Ld/d/a/z5;->F2()Z
 
     move-result v0
 
-    const v2, 0x7f070af2
+    const v2, 0x7f07092b
 
     if-eqz v0, :cond_1
 
+    .line 8
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1185,6 +1339,7 @@
 
     goto :goto_1
 
+    .line 9
     :cond_1
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1196,12 +1351,13 @@
 
     iput v0, p2, Landroid/widget/RelativeLayout$LayoutParams;->rightMargin:I
 
+    .line 10
     :goto_1
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const v0, 0x7f070af4
+    const v0, 0x7f07092d
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1209,11 +1365,13 @@
 
     iput p1, p2, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
 
+    .line 11
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsPadOrFold:Z
 
     if-eqz v0, :cond_2
 
-    invoke-static {}, Ly2/b;->j0()I
+    .line 12
+    invoke-static {}, Ld/d/a/n6/b;->j0()I
 
     move-result v0
 
@@ -1221,14 +1379,15 @@
 
     iput p1, p2, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
 
+    .line 13
     :cond_2
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->cameraParamTextView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StrokeTextView;
 
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
 
-    const v0, 0x7f070af6
+    const v0, 0x7f07092f
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1240,15 +1399,17 @@
 
     goto :goto_3
 
+    .line 14
     :cond_3
-    invoke-static {}, Lcom/android/camera/a6;->Q2()Z
+    invoke-static {}, Ld/d/a/z5;->F2()Z
 
     move-result v0
 
-    const v2, 0x7f070af1
+    const v2, 0x7f07092a
 
     if-eqz v0, :cond_4
 
+    .line 15
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1261,6 +1422,7 @@
 
     goto :goto_2
 
+    .line 16
     :cond_4
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1272,12 +1434,13 @@
 
     iput v0, p2, Landroid/widget/RelativeLayout$LayoutParams;->rightMargin:I
 
+    .line 17
     :goto_2
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const v0, 0x7f070af3
+    const v0, 0x7f07092c
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1285,13 +1448,14 @@
 
     iput p1, p2, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
 
+    .line 18
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->cameraParamTextView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StrokeTextView;
 
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
 
-    const v0, 0x7f070af5
+    const v0, 0x7f07092e
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1301,6 +1465,7 @@
 
     invoke-virtual {p1, v1, p2}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StrokeTextView;->setTextSize(IF)V
 
+    .line 19
     :goto_3
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->cameraParamTextView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StrokeTextView;
 
@@ -1311,26 +1476,37 @@
 
 .method private refreshSignView(Landroid/content/Context;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     if-nez p1, :cond_0
 
     return-void
 
+    .line 1
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->cameraSignView:Lcom/android/camera/ui/VerticalLabelView;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->cameraSignView:Lcom/android/camera/ui/VerticalLabelView;
 
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v0}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/RelativeLayout$LayoutParams;
 
+    .line 3
     iget-boolean v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsPadOrFold:Z
 
     if-eqz v1, :cond_1
@@ -1339,10 +1515,12 @@
 
     if-eqz v1, :cond_1
 
+    .line 4
     invoke-direct {p0, p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->refreshSignViewLand(Landroid/content/Context;Landroid/widget/RelativeLayout$LayoutParams;)V
 
     goto :goto_0
 
+    .line 5
     :cond_1
     invoke-direct {p0, p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->refreshSignViewPor(Landroid/content/Context;Landroid/widget/RelativeLayout$LayoutParams;)V
 
@@ -1352,24 +1530,36 @@
 
 .method private refreshSignViewLand(Landroid/content/Context;Landroid/widget/RelativeLayout$LayoutParams;)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "layoutParams"
+        }
+    .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsLargeShow:Z
 
-    const v1, 0x7f070af8
+    const v1, 0x7f070931
 
     const/4 v2, 0x0
 
-    const v3, 0x7f070af7
+    const v3, 0x7f070930
 
     if-eqz v0, :cond_1
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->cameraSignView:Lcom/android/camera/ui/VerticalLabelView;
 
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    const v5, 0x7f070afa
+    const v5, 0x7f070933
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1379,12 +1569,14 @@
 
     invoke-virtual {v0, v2, v4}, Landroidx/appcompat/widget/AppCompatTextView;->setTextSize(IF)V
 
-    invoke-static {}, Lcom/android/camera/a6;->Q2()Z
+    .line 3
+    invoke-static {}, Ld/d/a/z5;->F2()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1397,6 +1589,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1408,6 +1601,7 @@
 
     iput v0, p2, Landroid/widget/RelativeLayout$LayoutParams;->bottomMargin:I
 
+    .line 6
     :goto_0
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1419,7 +1613,8 @@
 
     iput p1, p2, Landroid/widget/RelativeLayout$LayoutParams;->leftMargin:I
 
-    invoke-static {}, Ly2/b;->j0()I
+    .line 7
+    invoke-static {}, Ld/d/a/n6/b;->j0()I
 
     move-result v0
 
@@ -1429,14 +1624,15 @@
 
     goto :goto_2
 
+    .line 8
     :cond_1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->cameraSignView:Lcom/android/camera/ui/VerticalLabelView;
 
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    const v5, 0x7f070af9
+    const v5, 0x7f070932
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1446,12 +1642,14 @@
 
     invoke-virtual {v0, v2, v4}, Landroidx/appcompat/widget/AppCompatTextView;->setTextSize(IF)V
 
-    invoke-static {}, Lcom/android/camera/a6;->Q2()Z
+    .line 9
+    invoke-static {}, Ld/d/a/z5;->F2()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
+    .line 10
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1466,6 +1664,7 @@
 
     goto :goto_1
 
+    .line 11
     :cond_2
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1479,6 +1678,7 @@
 
     iput v0, p2, Landroid/widget/RelativeLayout$LayoutParams;->bottomMargin:I
 
+    .line 12
     :goto_1
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1492,8 +1692,9 @@
 
     iput p1, p2, Landroid/widget/RelativeLayout$LayoutParams;->leftMargin:I
 
+    .line 13
     :goto_2
-    invoke-static {}, Lcom/android/camera/a6;->Q2()Z
+    invoke-static {}, Ld/d/a/z5;->F2()Z
 
     move-result p1
 
@@ -1501,10 +1702,12 @@
 
     if-eqz p1, :cond_3
 
+    .line 14
     invoke-virtual {p2, v0}, Landroid/widget/RelativeLayout$LayoutParams;->removeRule(I)V
 
     const/16 p1, 0x14
 
+    .line 15
     invoke-virtual {p2, p1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
     goto :goto_3
@@ -1512,14 +1715,18 @@
     :cond_3
     const/16 p1, 0xa
 
+    .line 16
     invoke-virtual {p2, p1}, Landroid/widget/RelativeLayout$LayoutParams;->removeRule(I)V
 
+    .line 17
     invoke-virtual {p2, v0}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
     const/16 p1, 0xc
 
+    .line 18
     invoke-virtual {p2, p1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
+    .line 19
     :goto_3
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->cameraSignView:Lcom/android/camera/ui/VerticalLabelView;
 
@@ -1532,24 +1739,36 @@
 
 .method private refreshSignViewPor(Landroid/content/Context;Landroid/widget/RelativeLayout$LayoutParams;)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "layoutParams"
+        }
+    .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsLargeShow:Z
 
-    const v1, 0x7f070af8
+    const v1, 0x7f070931
 
     const/4 v2, 0x0
 
-    const v3, 0x7f070af7
+    const v3, 0x7f070930
 
     if-eqz v0, :cond_1
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->cameraSignView:Lcom/android/camera/ui/VerticalLabelView;
 
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    const v5, 0x7f070afa
+    const v5, 0x7f070933
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1559,6 +1778,7 @@
 
     invoke-virtual {v0, v2, v4}, Landroidx/appcompat/widget/AppCompatTextView;->setTextSize(IF)V
 
+    .line 3
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1569,12 +1789,14 @@
 
     iput v0, p2, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
 
-    invoke-static {}, Lcom/android/camera/a6;->Q2()Z
+    .line 4
+    invoke-static {}, Ld/d/a/z5;->F2()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 5
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -1587,6 +1809,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1598,14 +1821,16 @@
 
     iput p1, p2, Landroid/widget/RelativeLayout$LayoutParams;->leftMargin:I
 
+    .line 7
     :goto_0
     iget-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsPadOrFold:Z
 
     if-eqz p1, :cond_3
 
+    .line 8
     iget p1, p2, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
 
-    invoke-static {}, Ly2/b;->j0()I
+    invoke-static {}, Ld/d/a/n6/b;->j0()I
 
     move-result v0
 
@@ -1615,14 +1840,15 @@
 
     goto :goto_1
 
+    .line 9
     :cond_1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->cameraSignView:Lcom/android/camera/ui/VerticalLabelView;
 
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    const v5, 0x7f070af9
+    const v5, 0x7f070932
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1632,6 +1858,7 @@
 
     invoke-virtual {v0, v2, v4}, Landroidx/appcompat/widget/AppCompatTextView;->setTextSize(IF)V
 
+    .line 10
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1644,12 +1871,14 @@
 
     iput v0, p2, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
 
-    invoke-static {}, Lcom/android/camera/a6;->Q2()Z
+    .line 11
+    invoke-static {}, Ld/d/a/z5;->F2()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
+    .line 12
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -1664,6 +1893,7 @@
 
     goto :goto_1
 
+    .line 13
     :cond_2
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1677,9 +1907,10 @@
 
     iput p1, p2, Landroid/widget/RelativeLayout$LayoutParams;->leftMargin:I
 
+    .line 14
     :cond_3
     :goto_1
-    invoke-static {}, Lcom/android/camera/a6;->Q2()Z
+    invoke-static {}, Ld/d/a/z5;->F2()Z
 
     move-result p1
 
@@ -1689,8 +1920,10 @@
 
     const/16 p1, 0x14
 
+    .line 15
     invoke-virtual {p2, p1}, Landroid/widget/RelativeLayout$LayoutParams;->removeRule(I)V
 
+    .line 16
     invoke-virtual {p2, v0}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
     goto :goto_2
@@ -1698,14 +1931,18 @@
     :cond_4
     const/16 p1, 0xc
 
+    .line 17
     invoke-virtual {p2, p1}, Landroid/widget/RelativeLayout$LayoutParams;->removeRule(I)V
 
+    .line 18
     invoke-virtual {p2, v0}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
     const/16 p1, 0xa
 
+    .line 19
     invoke-virtual {p2, p1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
+    .line 20
     :goto_2
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->cameraSignView:Lcom/android/camera/ui/VerticalLabelView;
 
@@ -1717,12 +1954,15 @@
 .method private startDebugUpdate()V
     .locals 3
 
+    .line 1
     sget-boolean v0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->SHOW_DEBUG_TEXT:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->stopDebugUpdate()V
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mHandler:Landroid/os/Handler;
 
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->debugRunnable:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView$DebugRunnable;
@@ -1738,8 +1978,10 @@
 .method private startRecovering()V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->stopRecovering()V
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mHandler:Landroid/os/Handler;
 
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mPlaybackRecoveryTask:Ljava/lang/Runnable;
@@ -1754,10 +1996,12 @@
 .method private stopDebugUpdate()V
     .locals 1
 
+    .line 1
     sget-boolean v0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->SHOW_DEBUG_TEXT:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mHandler:Landroid/os/Handler;
 
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->debugRunnable:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView$DebugRunnable;
@@ -1771,6 +2015,7 @@
 .method private stopRecovering()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mPlaybackRecoveryTask:Ljava/lang/Runnable;
@@ -1781,6 +2026,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mHandler:Landroid/os/Handler;
 
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mPlaybackRecoveryTask:Ljava/lang/Runnable;
@@ -1793,9 +2039,26 @@
 
 
 # virtual methods
+.method public synthetic a()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->lambda$new$1()V
+
+    return-void
+.end method
+
+.method public synthetic b()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->lambda$onVideoRenderStart$0()V
+
+    return-void
+.end method
+
 .method public getIp()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIp:Ljava/lang/String;
 
     return-object p0
@@ -1804,15 +2067,17 @@
 .method public getLabel()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mDeviceName:Ljava/lang/String;
 
     return-object p0
 .end method
 
-.method public getPlayer()Lve/g;
+.method public getPlayer()Ld/o/f/f/f;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Lve/g;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Ld/o/f/f/f;
 
     return-object p0
 .end method
@@ -1820,11 +2085,12 @@
 .method public isPlaying()Z
     .locals 0
 
-    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Lve/g;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Ld/o/f/f/f;
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Lve/g;->j()Z
+    invoke-virtual {p0}, Ld/o/f/f/f;->i()Z
 
     move-result p0
 
@@ -1844,6 +2110,7 @@
 .method public isRecoding()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsRecoding:Z
 
     return p0
@@ -1852,23 +2119,33 @@
 .method public notifyEventControlRemote(I)V
     .locals 1
     .param p1    # I
-        .annotation build Ltf/h$a;
+        .annotation build Ld/o/f/r/h$a;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "state"
+        }
+    .end annotation
 
-    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Lve/g;
+    .line 1
+    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Ld/o/f/f/f;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lve/g;->j()Z
+    invoke-virtual {v0}, Ld/o/f/f/f;->i()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Lve/g;
+    .line 2
+    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Ld/o/f/f/f;
 
-    invoke-virtual {p0, p1}, Lve/g;->l(I)V
+    invoke-virtual {p0, p1}, Ld/o/f/f/f;->k(I)V
 
     :cond_0
     return-void
@@ -1877,6 +2154,7 @@
 .method public onAttachedToWindow()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -1887,42 +2165,52 @@
 
     invoke-static {v0, v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
+    .line 2
+    invoke-super {p0}, Landroid/widget/RelativeLayout;->onAttachedToWindow()V
 
-    new-instance v0, Lve/g;
+    .line 3
+    new-instance v0, Ld/o/f/f/f;
 
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIp:Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Lve/g;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ld/o/f/f/f;-><init>(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Lve/g;
+    iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Ld/o/f/f/f;
 
-    invoke-virtual {v0, p0}, Lve/g;->w(Lve/g$h;)V
+    .line 4
+    invoke-virtual {v0, p0}, Ld/o/f/f/f;->v(Ld/o/f/f/f$h;)V
 
-    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Lve/g;
+    .line 5
+    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Ld/o/f/f/f;
 
-    invoke-virtual {v0, p0}, Lve/g;->s(Lve/g$c;)V
+    invoke-virtual {v0, p0}, Ld/o/f/f/f;->r(Ld/o/f/f/f$c;)V
 
-    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Lve/g;
+    .line 6
+    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Ld/o/f/f/f;
 
-    invoke-virtual {v0, p0}, Lve/g;->t(Lve/g$d;)V
+    invoke-virtual {v0, p0}, Ld/o/f/f/f;->s(Ld/o/f/f/f$d;)V
 
-    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Lve/g;
+    .line 7
+    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Ld/o/f/f/f;
 
-    invoke-virtual {v0, p0}, Lve/g;->u(Lve/g$f;)V
+    invoke-virtual {v0, p0}, Ld/o/f/f/f;->t(Ld/o/f/f/f$f;)V
 
-    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Lve/g;
+    .line 8
+    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Ld/o/f/f/f;
 
-    invoke-virtual {v0, p0}, Lve/g;->x(Lve/g$e;)V
+    invoke-virtual {v0, p0}, Ld/o/f/f/f;->w(Ld/o/f/f/f$e;)V
 
-    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Lve/g;
+    .line 9
+    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Ld/o/f/f/f;
 
-    invoke-virtual {v0, p0}, Lve/g;->v(Lve/g$g;)V
+    invoke-virtual {v0, p0}, Ld/o/f/f/f;->u(Ld/o/f/f/f$g;)V
 
+    .line 10
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mTextureView:Landroid/view/TextureView;
 
     invoke-virtual {v0, p0}, Landroid/view/TextureView;->setSurfaceTextureListener(Landroid/view/TextureView$SurfaceTextureListener;)V
 
+    .line 11
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mTextureView:Landroid/view/TextureView;
 
     invoke-virtual {v0}, Landroid/view/TextureView;->isAvailable()Z
@@ -1931,6 +2219,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 12
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mTextureView:Landroid/view/TextureView;
 
     invoke-virtual {v0}, Landroid/view/TextureView;->getSurfaceTexture()Landroid/graphics/SurfaceTexture;
@@ -1939,6 +2228,7 @@
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->surfaceTexture:Landroid/graphics/SurfaceTexture;
 
+    .line 13
     new-instance v0, Landroid/view/Surface;
 
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->surfaceTexture:Landroid/graphics/SurfaceTexture;
@@ -1947,13 +2237,15 @@
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mSurface:Landroid/view/Surface;
 
-    iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Lve/g;
+    .line 14
+    iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Ld/o/f/f/f;
 
-    invoke-virtual {v1, v0}, Lve/g;->y(Landroid/view/Surface;)V
+    invoke-virtual {v1, v0}, Ld/o/f/f/f;->x(Landroid/view/Surface;)V
 
-    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Lve/g;
+    .line 15
+    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Ld/o/f/f/f;
 
-    invoke-virtual {p0}, Lve/g;->z()V
+    invoke-virtual {p0}, Ld/o/f/f/f;->y()V
 
     :cond_0
     return-void
@@ -1961,6 +2253,16 @@
 
 .method public onCapturedPointer(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "view",
+            "event"
+        }
+    .end annotation
 
     const/4 p0, 0x0
 
@@ -1970,8 +2272,10 @@
 .method public onDetachedFromWindow()V
     .locals 0
 
-    invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
+    .line 1
+    invoke-super {p0}, Landroid/widget/RelativeLayout;->onDetachedFromWindow()V
 
+    .line 2
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->stopRecovering()V
 
     return-void
@@ -1979,11 +2283,23 @@
 
 .method public onError(II)Z
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "what",
+            "extra"
+        }
+    .end annotation
 
-    invoke-static {p2}, Lve/h;->d(I)Ljava/lang/String;
+    .line 1
+    invoke-static {p2}, Ld/o/f/f/g;->d(I)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 2
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2006,18 +2322,19 @@
 
     invoke-static {v1, v0, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    const/16 v0, -0x6e
+    const/4 v0, 0x1
 
-    const/4 v1, 0x1
+    const/16 v1, -0x6e
 
-    if-eq p2, v0, :cond_0
+    if-eq p2, v1, :cond_0
 
-    const/16 v0, -0x2710
+    const/16 v1, -0x2710
 
-    if-ne p1, v0, :cond_2
+    if-ne p1, v1, :cond_2
 
     if-nez p2, :cond_2
 
+    .line 3
     :cond_0
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->TAG:Ljava/lang/String;
 
@@ -2025,39 +2342,42 @@
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v0, "onError: resumed = "
+    const-string v1, "onError: resumed = "
 
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsResumed:Z
+    iget-boolean v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsResumed:Z
 
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v0, ", retries = "
+    const-string v1, ", retries = "
 
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mRecoveryRetries:I
+    iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mRecoveryRetries:I
 
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p2
 
-    new-array v0, v2, [Ljava/lang/Object;
+    new-array v1, v2, [Ljava/lang/Object;
 
-    invoke-static {p1, p2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {p1, p2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iput-boolean v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsRecovering:Z
+    .line 4
+    iput-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsRecovering:Z
 
+    .line 5
     iget-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsResumed:Z
 
     if-eqz p1, :cond_2
 
+    .line 6
     iget p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mRecoveryRetries:I
 
-    add-int/2addr p1, v1
+    add-int/2addr p1, v0
 
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mRecoveryRetries:I
 
@@ -2065,40 +2385,47 @@
 
     if-lt p1, p2, :cond_1
 
+    .line 7
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->stopRecovering()V
 
+    .line 8
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->onStreamingInterrupted()V
 
     return v2
 
+    .line 9
     :cond_1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->startRecovering()V
 
+    .line 10
     :cond_2
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    new-array p2, v1, [Ljava/lang/Object;
+    const p2, 0x7f1302d4
 
-    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mDeviceName:Ljava/lang/String;
+    new-array v0, v0, [Ljava/lang/Object;
 
-    aput-object v0, p2, v2
+    iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mDeviceName:Ljava/lang/String;
 
-    const v0, 0x7f1402ea
+    aput-object v1, v0, v2
 
-    invoke-virtual {p1, v0, p2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p1, p2, v0}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 11
     iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->tvPlayError:Landroid/widget/TextView;
 
     invoke-virtual {p2, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 12
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mCover:Landroid/view/View;
 
     invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
 
+    .line 13
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->startDebugUpdate()V
 
     return v2
@@ -2107,7 +2434,8 @@
 .method public onMaxConnectionsReached()V
     .locals 5
 
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    .line 1
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -2115,22 +2443,25 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    const/4 v2, 0x4
 
-    const/4 v3, 0x4
+    .line 2
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v3
 
-    move-result-object v4
+    const/4 v4, 0x0
 
-    aput-object v4, v1, v2
+    aput-object v3, v1, v4
 
-    const v2, 0x7f120011
+    const v3, 0x7f11000f
 
-    invoke-virtual {v0, v2, v3, v1}, Landroid/content/res/Resources;->getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
+    .line 3
+    invoke-virtual {v0, v3, v2, v1}, Landroid/content/res/Resources;->getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 4
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->tvPlayError:Landroid/widget/TextView;
 
     invoke-virtual {p0, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
@@ -2140,7 +2471,18 @@
 
 .method public onMeasure(II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "widthMeasureSpec",
+            "heightMeasureSpec"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroid/widget/RelativeLayout;->onMeasure(II)V
 
     return-void
@@ -2149,6 +2491,7 @@
 .method public onPause()V
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2173,8 +2516,10 @@
 
     invoke-static {v0, v1, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     iput-boolean v2, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsResumed:Z
 
+    .line 3
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->stopRecovering()V
 
     return-void
@@ -2183,12 +2528,14 @@
 .method public onPrepared()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->loading:Lmiuix/androidbasewidget/widget/ProgressBar;
 
     const/16 v1, 0x8
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->TAG:Ljava/lang/String;
 
     const/4 v0, 0x0
@@ -2204,20 +2551,32 @@
 
 .method public onRemoteCameraParam(Ljava/lang/String;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "param"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->cameraParamTextView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StrokeTextView;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 3
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->cameraParamTextView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StrokeTextView;
 
-    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
+    invoke-virtual {p1}, Landroid/widget/TextView;->requestLayout()V
 
+    .line 4
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->cameraParamTextView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StrokeTextView;
 
-    invoke-virtual {p0}, Landroid/view/View;->postInvalidate()V
+    invoke-virtual {p0}, Landroid/widget/TextView;->postInvalidate()V
 
     :cond_0
     return-void
@@ -2225,17 +2584,29 @@
 
 .method public onRemoteRecodingState(Z)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isRecoding"
+        }
+    .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsRemoteControl:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->setIsRecoding(Z)V
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->remoteStateListener:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView$OnRemoteStateListener;
 
     if-eqz v0, :cond_0
 
+    .line 4
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIp:Ljava/lang/String;
 
     invoke-interface {v0, p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView$OnRemoteStateListener;->onRemoteRecordingStateChanged(Ljava/lang/String;Z)V
@@ -2247,6 +2618,7 @@
 .method public onResume()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2273,12 +2645,15 @@
 
     const/4 v0, 0x1
 
+    .line 2
     iput-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsResumed:Z
 
+    .line 3
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsRecovering:Z
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->startRecovering()V
 
     :cond_0
@@ -2288,6 +2663,7 @@
 .method public onStreamingInterrupted()V
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -2298,10 +2674,12 @@
 
     invoke-static {v0, v3, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->remoteStateListener:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView$OnRemoteStateListener;
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIp:Ljava/lang/String;
 
     invoke-interface {v0, p0, v1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView$OnRemoteStateListener;->onRemoteCameraStateChanged(Ljava/lang/String;I)V
@@ -2313,6 +2691,7 @@
 .method public onStreamingServerExit()V
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -2323,10 +2702,12 @@
 
     invoke-static {v0, v3, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->remoteStateListener:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView$OnRemoteStateListener;
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIp:Ljava/lang/String;
 
     invoke-interface {v0, p0, v1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView$OnRemoteStateListener;->onRemoteCameraStateChanged(Ljava/lang/String;I)V
@@ -2341,7 +2722,20 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "surface",
+            "width",
+            "height"
+        }
+    .end annotation
 
+    .line 1
     iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->TAG:Ljava/lang/String;
 
     const/4 p3, 0x0
@@ -2352,12 +2746,15 @@
 
     invoke-static {p2, v0, p3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mSurface:Landroid/view/Surface;
 
     if-nez p2, :cond_0
 
+    .line 3
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->surfaceTexture:Landroid/graphics/SurfaceTexture;
 
+    .line 4
     new-instance p1, Landroid/view/Surface;
 
     iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->surfaceTexture:Landroid/graphics/SurfaceTexture;
@@ -2366,13 +2763,15 @@
 
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mSurface:Landroid/view/Surface;
 
-    iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Lve/g;
+    .line 5
+    iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Ld/o/f/f/f;
 
-    invoke-virtual {p2, p1}, Lve/g;->y(Landroid/view/Surface;)V
+    invoke-virtual {p2, p1}, Ld/o/f/f/f;->x(Landroid/view/Surface;)V
 
-    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Lve/g;
+    .line 6
+    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Ld/o/f/f/f;
 
-    invoke-virtual {p0}, Lve/g;->z()V
+    invoke-virtual {p0}, Ld/o/f/f/f;->y()V
 
     :cond_0
     return-void
@@ -2384,7 +2783,16 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "surface"
+        }
+    .end annotation
 
+    .line 1
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->TAG:Ljava/lang/String;
 
     const/4 v0, 0x0
@@ -2395,22 +2803,29 @@
 
     invoke-static {p1, v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Lve/g;
+    .line 2
+    iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Ld/o/f/f/f;
 
-    invoke-virtual {p1}, Lve/g;->C()V
+    invoke-virtual {p1}, Ld/o/f/f/f;->B()V
 
-    iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Lve/g;
+    .line 3
+    iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->player:Ld/o/f/f/f;
 
-    invoke-virtual {p1}, Lve/g;->q()V
+    invoke-virtual {p1}, Ld/o/f/f/f;->p()V
 
+    .line 4
     iput-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsRecovering:Z
 
+    .line 5
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mRecoveryRetries:I
 
+    .line 6
     iput-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsResumed:Z
 
+    .line 7
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->stopRecovering()V
 
+    .line 8
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->stopDebugUpdate()V
 
     return v0
@@ -2422,7 +2837,20 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "surface",
+            "width",
+            "height"
+        }
+    .end annotation
 
+    .line 1
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -2451,8 +2879,10 @@
 
     invoke-static {p1, p2, p3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {}, Lgg/g;->c()V
+    .line 2
+    invoke-static {}, Ld/o/f/w/g;->c()V
 
+    .line 3
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->configureTransform()V
 
     return-void
@@ -2464,6 +2894,14 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "surface"
+        }
+    .end annotation
 
     return-void
 .end method
@@ -2471,6 +2909,7 @@
 .method public onVideoRenderStart()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -2481,18 +2920,30 @@
 
     invoke-static {v0, v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/o;
+    .line 2
+    new-instance v0, Ld/d/b/x5/a/b/b/g/n1/l;
 
-    invoke-direct {v0, p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/o;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;)V
+    invoke-direct {v0, p0}, Ld/d/b/x5/a/b/b/g/n1/l;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;)V
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
 .method public onVideoSizeChanged(II)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "width",
+            "height"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2521,10 +2972,13 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     iput p2, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mStreamHeight:I
 
+    .line 3
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mStreamWidth:I
 
+    .line 4
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->configureTransform()V
 
     return-void
@@ -2532,11 +2986,21 @@
 
 .method public setIsLandscape(Z)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mIsLandscape"
+        }
+    .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsLandscape:Z
 
     if-eq v0, p1, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2559,23 +3023,28 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 3
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsLandscape:Z
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    .line 4
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
     invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->refreshSignView(Landroid/content/Context;)V
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    .line 5
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
     invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->refreshParamView(Landroid/content/Context;)V
 
+    .line 6
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->refreshErrorTextView()V
 
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
+    .line 7
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->requestLayout()V
 
     :cond_0
     return-void
@@ -2583,7 +3052,16 @@
 
 .method public setIsPadOrFold(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mIsPadOrFold"
+        }
+    .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsPadOrFold:Z
 
     return-void
@@ -2591,7 +3069,16 @@
 
 .method public setIsRecoding(Z)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isRecoding"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2614,14 +3101,17 @@
 
     invoke-static {v0, v1, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsRecoding:Z
 
+    .line 3
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->ivBorderView:Landroid/widget/ImageView;
 
     if-eqz p0, :cond_1
 
     if-eqz p1, :cond_0
 
+    .line 4
     invoke-virtual {p0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto :goto_0
@@ -2629,6 +3119,7 @@
     :cond_0
     const/16 p1, 0x8
 
+    .line 5
     invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     :cond_1
@@ -2638,7 +3129,16 @@
 
 .method public setIsRemoteControl(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mIsRemoteControl"
+        }
+    .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsRemoteControl:Z
 
     return-void
@@ -2646,15 +3146,26 @@
 
 .method public setLabelText(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "text"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mDeviceName:Ljava/lang/String;
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->cameraSignView:Lcom/android/camera/ui/VerticalLabelView;
 
     if-eqz p0, :cond_0
 
     if-eqz p1, :cond_0
 
+    .line 3
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object p1
@@ -2667,12 +3178,22 @@
 
 .method public setLabelTextVisible(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "visibility"
+        }
+    .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->cameraSignView:Lcom/android/camera/ui/VerticalLabelView;
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
+    .line 2
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setVisibility(I)V
 
     :cond_0
     return-void
@@ -2680,7 +3201,16 @@
 
 .method public setParamTextSizeLarge(Z)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isLarge"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2703,31 +3233,38 @@
 
     invoke-static {v0, v1, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->cameraSignView:Lcom/android/camera/ui/VerticalLabelView;
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
+    .line 3
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsLargeShow:Z
 
     if-eq v0, p1, :cond_0
 
+    .line 4
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->mIsLargeShow:Z
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    .line 5
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
     invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->refreshSignView(Landroid/content/Context;)V
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    .line 6
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
     invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->refreshParamView(Landroid/content/Context;)V
 
+    .line 7
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->refreshErrorTextView()V
 
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
+    .line 8
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->requestLayout()V
 
     :cond_0
     return-void
@@ -2735,12 +3272,22 @@
 
 .method public setParamTextVisible(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "visibility"
+        }
+    .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->cameraParamTextView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StrokeTextView;
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
+    .line 2
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setVisibility(I)V
 
     :cond_0
     return-void
@@ -2748,7 +3295,16 @@
 
 .method public setRemoteStateListener(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView$OnRemoteStateListener;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "remoteStateListener"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->remoteStateListener:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView$OnRemoteStateListener;
 
     return-void

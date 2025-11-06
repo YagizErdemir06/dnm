@@ -1,4 +1,4 @@
-.class Lcom/google/common/base/Joiner$1;
+.class public Lcom/google/common/base/Joiner$1;
 .super Lcom/google/common/base/Joiner;
 .source "SourceFile"
 
@@ -15,15 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/base/Joiner;
+.field public final synthetic this$0:Lcom/google/common/base/Joiner;
 
-.field final synthetic val$nullText:Ljava/lang/String;
+.field public final synthetic val$nullText:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/base/Joiner;Lcom/google/common/base/Joiner;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/base/Joiner$1;->this$0:Lcom/google/common/base/Joiner;
 
     iput-object p3, p0, Lcom/google/common/base/Joiner$1;->val$nullText:Ljava/lang/String;
@@ -40,6 +41,7 @@
 .method public skipNulls()Lcom/google/common/base/Joiner;
     .locals 1
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string v0, "already specified useForNull"
@@ -58,6 +60,7 @@
 
     if-nez p1, :cond_0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/Joiner$1;->val$nullText:Ljava/lang/String;
 
     goto :goto_0
@@ -76,6 +79,7 @@
 .method public useForNull(Ljava/lang/String;)Lcom/google/common/base/Joiner;
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "already specified useForNull"

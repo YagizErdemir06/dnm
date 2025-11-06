@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/DescendingImmutableSortedSet;
+.class public final Lcom/google/common/collect/DescendingImmutableSortedSet;
 .super Lcom/google/common/collect/ImmutableSortedSet;
 .source "SourceFile"
 
@@ -43,6 +43,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/common/collect/ImmutableSortedSet;->comparator()Ljava/util/Comparator;
 
     move-result-object v0
@@ -57,6 +58,7 @@
 
     invoke-direct {p0, v0}, Lcom/google/common/collect/ImmutableSortedSet;-><init>(Ljava/util/Comparator;)V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/DescendingImmutableSortedSet;->forward:Lcom/google/common/collect/ImmutableSortedSet;
 
     return-void
@@ -75,6 +77,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/DescendingImmutableSortedSet;->forward:Lcom/google/common/collect/ImmutableSortedSet;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableSortedSet;->floor(Ljava/lang/Object;)Ljava/lang/Object;
@@ -91,6 +94,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/DescendingImmutableSortedSet;->forward:Lcom/google/common/collect/ImmutableSortedSet;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableCollection;->contains(Ljava/lang/Object;)Z
@@ -114,6 +118,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/AssertionError;
 
     const-string v0, "should never be called"
@@ -206,6 +211,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/DescendingImmutableSortedSet;->forward:Lcom/google/common/collect/ImmutableSortedSet;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableSortedSet;->ceiling(Ljava/lang/Object;)Ljava/lang/Object;
@@ -225,6 +231,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/DescendingImmutableSortedSet;->forward:Lcom/google/common/collect/ImmutableSortedSet;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/ImmutableSortedSet;->tailSet(Ljava/lang/Object;Z)Lcom/google/common/collect/ImmutableSortedSet;
@@ -249,6 +256,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/DescendingImmutableSortedSet;->forward:Lcom/google/common/collect/ImmutableSortedSet;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableSortedSet;->lower(Ljava/lang/Object;)Ljava/lang/Object;
@@ -265,6 +273,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/DescendingImmutableSortedSet;->forward:Lcom/google/common/collect/ImmutableSortedSet;
 
     invoke-virtual {v0, p1}, Lcom/google/common/collect/ImmutableSortedSet;->indexOf(Ljava/lang/Object;)I
@@ -277,6 +286,7 @@
 
     return p1
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Lcom/google/common/collect/DescendingImmutableSortedSet;->size()I
 
@@ -292,6 +302,7 @@
 .method public isPartialView()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/DescendingImmutableSortedSet;->forward:Lcom/google/common/collect/ImmutableSortedSet;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->isPartialView()Z
@@ -343,6 +354,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/DescendingImmutableSortedSet;->forward:Lcom/google/common/collect/ImmutableSortedSet;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableSortedSet;->higher(Ljava/lang/Object;)Ljava/lang/Object;
@@ -355,6 +367,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/DescendingImmutableSortedSet;->forward:Lcom/google/common/collect/ImmutableSortedSet;
 
     invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
@@ -374,6 +387,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/DescendingImmutableSortedSet;->forward:Lcom/google/common/collect/ImmutableSortedSet;
 
     invoke-virtual {p0, p3, p4, p1, p2}, Lcom/google/common/collect/ImmutableSortedSet;->subSet(Ljava/lang/Object;ZLjava/lang/Object;Z)Lcom/google/common/collect/ImmutableSortedSet;
@@ -397,6 +411,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/DescendingImmutableSortedSet;->forward:Lcom/google/common/collect/ImmutableSortedSet;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/ImmutableSortedSet;->headSet(Ljava/lang/Object;Z)Lcom/google/common/collect/ImmutableSortedSet;

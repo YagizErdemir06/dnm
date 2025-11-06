@@ -1,4 +1,4 @@
-.class abstract Lcom/google/android/datatransport/runtime/ExecutionModule;
+.class public abstract Lcom/google/android/datatransport/runtime/ExecutionModule;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -12,6 +12,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,9 +29,10 @@
     .annotation runtime Lcom/google/android/datatransport/runtime/dagger/Provides;
     .end annotation
 
-    .annotation runtime Lmm/f;
+    .annotation runtime Lg/a/f;
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/datatransport/runtime/SafeLoggingExecutor;
 
     invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;

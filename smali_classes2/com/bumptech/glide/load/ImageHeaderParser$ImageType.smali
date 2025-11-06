@@ -50,6 +50,7 @@
 .method public static constructor <clinit>()V
     .locals 16
 
+    .line 1
     new-instance v0, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
     const-string v1, "GIF"
@@ -62,6 +63,7 @@
 
     sput-object v0, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->GIF:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
+    .line 2
     new-instance v1, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
     const-string v4, "JPEG"
@@ -70,6 +72,7 @@
 
     sput-object v1, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->JPEG:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
+    .line 3
     new-instance v4, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
     const-string v5, "RAW"
@@ -80,6 +83,7 @@
 
     sput-object v4, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->RAW:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
+    .line 4
     new-instance v5, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
     const-string v7, "PNG_A"
@@ -90,6 +94,7 @@
 
     sput-object v5, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->PNG_A:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
+    .line 5
     new-instance v7, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
     const-string v9, "PNG"
@@ -100,6 +105,7 @@
 
     sput-object v7, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->PNG:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
+    .line 6
     new-instance v9, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
     const-string v11, "WEBP_A"
@@ -110,6 +116,7 @@
 
     sput-object v9, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->WEBP_A:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
+    .line 7
     new-instance v11, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
     const-string v13, "WEBP"
@@ -120,6 +127,7 @@
 
     sput-object v11, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->WEBP:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
+    .line 8
     new-instance v13, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
     const-string v15, "UNKNOWN"
@@ -152,6 +160,7 @@
 
     aput-object v13, v15, v14
 
+    .line 9
     sput-object v15, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->$VALUES:[Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
     return-void
@@ -165,8 +174,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 2
     iput-boolean p3, p0, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->hasAlpha:Z
 
     return-void
@@ -175,6 +186,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
     .locals 1
 
+    .line 1
     const-class v0, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -189,6 +201,7 @@
 .method public static values()[Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->$VALUES:[Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
     invoke-virtual {v0}, [Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->clone()Ljava/lang/Object;
@@ -205,6 +218,7 @@
 .method public hasAlpha()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->hasAlpha:Z
 
     return p0

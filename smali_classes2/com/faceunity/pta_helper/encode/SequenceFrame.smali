@@ -12,11 +12,11 @@
 
 
 # instance fields
-.field protected encoder:J
+.field public encoder:J
 
-.field protected h:I
+.field public h:I
 
-.field protected w:I
+.field public w:I
 
 
 # direct methods
@@ -25,6 +25,7 @@
 
     const-string v0, "FUP2AHelper"
 
+    .line 1
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     return-void
@@ -33,16 +34,20 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
+    .line 2
     iput-wide v0, p0, Lcom/faceunity/pta_helper/encode/SequenceFrame;->encoder:J
 
     const/4 v0, 0x0
 
+    .line 3
     iput v0, p0, Lcom/faceunity/pta_helper/encode/SequenceFrame;->w:I
 
+    .line 4
     iput v0, p0, Lcom/faceunity/pta_helper/encode/SequenceFrame;->h:I
 
     return-void
@@ -68,6 +73,7 @@
 .method public cancel()V
     .locals 5
 
+    .line 1
     iget-wide v0, p0, Lcom/faceunity/pta_helper/encode/SequenceFrame;->encoder:J
 
     const-wide/16 v2, 0x0
@@ -76,8 +82,10 @@
 
     if-eqz v4, :cond_0
 
+    .line 2
     invoke-direct {p0, v0, v1}, Lcom/faceunity/pta_helper/encode/SequenceFrame;->cancelEncoder(J)V
 
+    .line 3
     iput-wide v2, p0, Lcom/faceunity/pta_helper/encode/SequenceFrame;->encoder:J
 
     :cond_0
@@ -115,6 +123,7 @@
 .method public init(Ljava/lang/String;III)Z
     .locals 0
 
+    .line 1
     invoke-direct {p0, p4, p2, p3, p1}, Lcom/faceunity/pta_helper/encode/SequenceFrame;->createEncoder(IIILjava/lang/String;)J
 
     move-result-wide p1
@@ -141,6 +150,7 @@
 .method public release()V
     .locals 5
 
+    .line 1
     iget-wide v0, p0, Lcom/faceunity/pta_helper/encode/SequenceFrame;->encoder:J
 
     const-wide/16 v2, 0x0
@@ -149,8 +159,10 @@
 
     if-eqz v4, :cond_0
 
+    .line 2
     invoke-direct {p0, v0, v1}, Lcom/faceunity/pta_helper/encode/SequenceFrame;->releaseEncoder(J)V
 
+    .line 3
     iput-wide v2, p0, Lcom/faceunity/pta_helper/encode/SequenceFrame;->encoder:J
 
     :cond_0

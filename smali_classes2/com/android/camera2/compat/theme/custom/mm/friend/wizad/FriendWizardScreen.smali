@@ -12,18 +12,19 @@
 
 
 # instance fields
-.field protected final mFriendWizardFragment:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizardFragment;
+.field public final mFriendWizardFragment:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizardFragment;
 
-.field protected final mSetupWizardView:Landroid/view/View;
+.field public final mSetupWizardView:Landroid/view/View;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     const-string v0, "FriendWizardScreen"
 
-    invoke-static {v0}, Lbg/a;->a(Ljava/lang/String;)Ljava/lang/String;
+    .line 1
+    invoke-static {v0}, Ld/o/f/r/m/a;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -34,47 +35,57 @@
 
 .method public constructor <init>(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizardFragment;Landroid/view/View;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "fragment",
+            "contentView"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizardScreen;->mFriendWizardFragment:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizardFragment;
 
+    .line 3
     iput-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizardScreen;->mSetupWizardView:Landroid/view/View;
 
     return-void
 .end method
 
-.method public static synthetic a(Lv8/b1;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizardScreen;->lambda$removeFragment$0(Lv8/b1;)V
-
-    return-void
-.end method
-
-.method private static synthetic lambda$removeFragment$0(Lv8/b1;)V
+.method public static synthetic lambda$removeFragment$0(Ld/d/a/m7/g/e1;)V
     .locals 4
 
-    new-instance v0, Lm6/x;
+    .line 1
+    new-instance v0, Ld/d/a/u6/w4/c0;
 
-    invoke-direct {v0}, Lm6/x;-><init>()V
+    invoke-direct {v0}, Ld/d/a/u6/w4/c0;-><init>()V
 
-    const/4 v1, -0x4
+    const/16 v1, 0x16
 
-    const/16 v2, 0xc
+    const/4 v2, -0x4
 
-    const/16 v3, 0x16
+    const/16 v3, 0xc
 
-    invoke-virtual {v0, v3, v1, v2}, Lm6/x;->d(III)Lm6/u;
+    .line 2
+    invoke-virtual {v0, v1, v2, v3}, Ld/d/a/u6/w4/c0;->b(III)Ld/d/a/u6/w4/b0;
 
-    invoke-static {}, Lm6/i0;->l()Lm6/i0;
+    .line 3
+    invoke-static {}, Ld/d/a/u6/w4/i0;->e()Ld/d/a/u6/w4/i0;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lm6/x;->j(Lm6/y;)V
+    invoke-virtual {v0, v1}, Ld/d/a/u6/w4/c0;->h(Ld/d/a/u6/w4/d0;)V
 
-    invoke-interface {p0, v0}, Lv8/b1;->cb(Lm6/x;)V
+    .line 4
+    invoke-interface {p0, v0}, Ld/d/a/m7/g/e1;->O9(Ld/d/a/u6/w4/c0;)V
 
+    .line 5
     sget-object p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizardScreen;->TAG:Ljava/lang/String;
 
     const/4 v0, 0x0
@@ -92,7 +103,16 @@
 # virtual methods
 .method public getAlertDialogButton(I)Landroid/widget/Button;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "which"
+        }
+    .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizardScreen;->mFriendWizardFragment:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizardFragment;
 
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizardFragment;->getAlertDialog()Lmiuix/appcompat/app/AlertDialog;
@@ -109,6 +129,7 @@
 .method public getContentView()Landroid/view/View;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizardScreen;->mSetupWizardView:Landroid/view/View;
 
     return-object p0
@@ -117,6 +138,7 @@
 .method public getFriendShotWizard()Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizardScreen;->mFriendWizardFragment:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizardFragment;
 
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizardFragment;->getFriendModeWizard()Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
@@ -126,14 +148,30 @@
     return-object p0
 .end method
 
-.method public onAvailabilityStateChanged(Lm3/c;)V
+.method public onAvailabilityStateChanged(Ld/d/a/o6/c/c;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "device"
+        }
+    .end annotation
 
     return-void
 .end method
 
-.method public onConnectivityStateChanged(Lm3/c;)V
+.method public onConnectivityStateChanged(Ld/d/a/o6/c/c;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "device"
+        }
+    .end annotation
 
     return-void
 .end method
@@ -150,6 +188,14 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "timer"
+        }
+    .end annotation
 
     return-void
 .end method
@@ -157,13 +203,12 @@
 .method public removeFragment()V
     .locals 1
 
-    invoke-static {}, Lv8/b1;->impl()Ljava/util/Optional;
+    .line 1
+    invoke-static {}, Ld/d/a/m7/g/e1;->impl()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/g;
-
-    invoke-direct {v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/g;-><init>()V
+    sget-object v0, Ld/d/b/x5/a/b/b/j/a0/g;->c:Ld/d/b/x5/a/b/b/j/a0/g;
 
     invoke-virtual {p0, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -172,7 +217,16 @@
 
 .method public setAlertDialogTipsIconVisible(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "visible"
+        }
+    .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizardScreen;->mFriendWizardFragment:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizardFragment;
 
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizardFragment;->getGuideTipsView()Landroid/widget/ImageView;
@@ -190,7 +244,16 @@
         .annotation build Landroidx/annotation/StringRes;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "id"
+        }
+    .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizardScreen;->mFriendWizardFragment:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizardFragment;
 
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizardFragment;->getTitleTextView()Landroid/widget/TextView;
@@ -204,7 +267,16 @@
 
 .method public setVisibility(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "visibility"
+        }
+    .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizardScreen;->mSetupWizardView:Landroid/view/View;
 
     invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V

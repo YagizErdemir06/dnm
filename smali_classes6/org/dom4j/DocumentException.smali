@@ -61,15 +61,17 @@
 .method public getMessage()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/DocumentException;->nestedException:Ljava/lang/Throwable;
 
     if-eqz v0, :cond_0
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    invoke-super {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-super {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v1
 
@@ -93,8 +95,9 @@
 
     return-object p0
 
+    .line 3
     :cond_0
-    invoke-super {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-super {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p0
 
@@ -104,6 +107,7 @@
 .method public getNestedException()Ljava/lang/Throwable;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/DocumentException;->nestedException:Ljava/lang/Throwable;
 
     return-object p0
@@ -113,7 +117,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    invoke-super {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     .line 2
     iget-object v0, p0, Lorg/dom4j/DocumentException;->nestedException:Ljava/lang/Throwable;
@@ -140,7 +144,7 @@
     .locals 1
 
     .line 5
-    invoke-super {p0, p1}, Ljava/lang/Throwable;->printStackTrace(Ljava/io/PrintStream;)V
+    invoke-super {p0, p1}, Ljava/lang/Exception;->printStackTrace(Ljava/io/PrintStream;)V
 
     .line 6
     iget-object v0, p0, Lorg/dom4j/DocumentException;->nestedException:Ljava/lang/Throwable;
@@ -165,7 +169,7 @@
     .locals 1
 
     .line 9
-    invoke-super {p0, p1}, Ljava/lang/Throwable;->printStackTrace(Ljava/io/PrintWriter;)V
+    invoke-super {p0, p1}, Ljava/lang/Exception;->printStackTrace(Ljava/io/PrintWriter;)V
 
     .line 10
     iget-object v0, p0, Lorg/dom4j/DocumentException;->nestedException:Ljava/lang/Throwable;

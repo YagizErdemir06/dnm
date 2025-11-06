@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/TreeRangeMap$AsMapOfRanges;
+.class public final Lcom/google/common/collect/TreeRangeMap$AsMapOfRanges;
 .super Lcom/google/common/collect/Maps$IteratorBasedAbstractMap;
 .source "SourceFile"
 
@@ -23,7 +23,7 @@
 
 
 # instance fields
-.field final entryIterable:Ljava/lang/Iterable;
+.field public final entryIterable:Ljava/lang/Iterable;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Iterable<",
@@ -34,7 +34,7 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Lcom/google/common/collect/TreeRangeMap;
+.field public final synthetic this$0:Lcom/google/common/collect/TreeRangeMap;
 
 
 # direct methods
@@ -49,10 +49,12 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/TreeRangeMap$AsMapOfRanges;->this$0:Lcom/google/common/collect/TreeRangeMap;
 
     invoke-direct {p0}, Lcom/google/common/collect/Maps$IteratorBasedAbstractMap;-><init>()V
 
+    .line 2
     iput-object p2, p0, Lcom/google/common/collect/TreeRangeMap$AsMapOfRanges;->entryIterable:Ljava/lang/Iterable;
 
     return-void
@@ -67,6 +69,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/TreeRangeMap$AsMapOfRanges;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -96,6 +99,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/TreeRangeMap$AsMapOfRanges;->entryIterable:Ljava/lang/Iterable;
 
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -122,12 +126,15 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     instance-of v0, p1, Lcom/google/common/collect/Range;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/common/collect/Range;
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/collect/TreeRangeMap$AsMapOfRanges;->this$0:Lcom/google/common/collect/TreeRangeMap;
 
     invoke-static {p0}, Lcom/google/common/collect/TreeRangeMap;->access$000(Lcom/google/common/collect/TreeRangeMap;)Ljava/util/NavigableMap;
@@ -136,7 +143,7 @@
 
     iget-object v0, p1, Lcom/google/common/collect/Range;->lowerBound:Lcom/google/common/collect/Cut;
 
-    invoke-interface {p0, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, v0}, Ljava/util/NavigableMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -144,6 +151,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/common/collect/TreeRangeMap$RangeMapEntry;->getKey()Lcom/google/common/collect/Range;
 
     move-result-object v0
@@ -154,6 +162,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/common/collect/TreeRangeMap$RangeMapEntry;->getValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -169,13 +178,14 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/TreeRangeMap$AsMapOfRanges;->this$0:Lcom/google/common/collect/TreeRangeMap;
 
     invoke-static {p0}, Lcom/google/common/collect/TreeRangeMap;->access$000(Lcom/google/common/collect/TreeRangeMap;)Ljava/util/NavigableMap;
 
     move-result-object p0
 
-    invoke-interface {p0}, Ljava/util/Map;->size()I
+    invoke-interface {p0}, Ljava/util/NavigableMap;->size()I
 
     move-result p0
 

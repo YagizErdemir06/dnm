@@ -42,6 +42,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/common/api/internal/IStatusCallback$Stub;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/gms/common/api/internal/StatusCallback;->mResultHolder:Lcom/google/android/gms/common/api/internal/BaseImplementation$ResultHolder;
@@ -60,6 +61,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/StatusCallback;->mResultHolder:Lcom/google/android/gms/common/api/internal/BaseImplementation$ResultHolder;
 
     invoke-interface {p0, p1}, Lcom/google/android/gms/common/api/internal/BaseImplementation$ResultHolder;->setResult(Ljava/lang/Object;)V

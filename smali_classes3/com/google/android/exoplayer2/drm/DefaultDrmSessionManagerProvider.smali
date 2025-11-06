@@ -36,8 +36,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -53,12 +55,14 @@
         value = 0x12
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/drm/DefaultDrmSessionManagerProvider;->drmHttpDataSourceFactory:Lcom/google/android/exoplayer2/upstream/DataSource$Factory;
 
     if-eqz v0, :cond_0
 
     goto :goto_0
 
+    .line 2
     :cond_0
     new-instance v0, Lcom/google/android/exoplayer2/upstream/DefaultHttpDataSource$Factory;
 
@@ -70,9 +74,11 @@
 
     move-result-object v0
 
+    .line 3
     :goto_0
     new-instance p0, Lcom/google/android/exoplayer2/drm/HttpMediaDrmCallback;
 
+    .line 4
     iget-object v1, p1, Lcom/google/android/exoplayer2/MediaItem$DrmConfiguration;->licenseUri:Landroid/net/Uri;
 
     if-nez v1, :cond_1
@@ -91,6 +97,7 @@
 
     invoke-direct {p0, v1, v2, v0}, Lcom/google/android/exoplayer2/drm/HttpMediaDrmCallback;-><init>(Ljava/lang/String;ZLcom/google/android/exoplayer2/upstream/DataSource$Factory;)V
 
+    .line 5
     iget-object v0, p1, Lcom/google/android/exoplayer2/MediaItem$DrmConfiguration;->licenseRequestHeaders:Lcom/google/common/collect/ImmutableMap;
 
     invoke-virtual {v0}, Lcom/google/common/collect/ImmutableMap;->entrySet()Lcom/google/common/collect/ImmutableSet;
@@ -114,6 +121,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
+    .line 6
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -130,6 +138,7 @@
 
     goto :goto_2
 
+    .line 7
     :cond_2
     new-instance v0, Lcom/google/android/exoplayer2/drm/DefaultDrmSessionManager$Builder;
 
@@ -139,38 +148,45 @@
 
     sget-object v2, Lcom/google/android/exoplayer2/drm/FrameworkMediaDrm;->DEFAULT_PROVIDER:Lcom/google/android/exoplayer2/drm/ExoMediaDrm$Provider;
 
+    .line 8
     invoke-virtual {v0, v1, v2}, Lcom/google/android/exoplayer2/drm/DefaultDrmSessionManager$Builder;->setUuidAndExoMediaDrmProvider(Ljava/util/UUID;Lcom/google/android/exoplayer2/drm/ExoMediaDrm$Provider;)Lcom/google/android/exoplayer2/drm/DefaultDrmSessionManager$Builder;
 
     move-result-object v0
 
     iget-boolean v1, p1, Lcom/google/android/exoplayer2/MediaItem$DrmConfiguration;->multiSession:Z
 
+    .line 9
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/drm/DefaultDrmSessionManager$Builder;->setMultiSession(Z)Lcom/google/android/exoplayer2/drm/DefaultDrmSessionManager$Builder;
 
     move-result-object v0
 
     iget-boolean v1, p1, Lcom/google/android/exoplayer2/MediaItem$DrmConfiguration;->playClearContentWithoutKey:Z
 
+    .line 10
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/drm/DefaultDrmSessionManager$Builder;->setPlayClearSamplesWithoutKeys(Z)Lcom/google/android/exoplayer2/drm/DefaultDrmSessionManager$Builder;
 
     move-result-object v0
 
     iget-object v1, p1, Lcom/google/android/exoplayer2/MediaItem$DrmConfiguration;->forcedSessionTrackTypes:Lcom/google/common/collect/ImmutableList;
 
+    .line 11
     invoke-static {v1}, Lcom/google/common/primitives/Ints;->toArray(Ljava/util/Collection;)[I
 
     move-result-object v1
 
+    .line 12
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/drm/DefaultDrmSessionManager$Builder;->setUseDrmSessionsForClearContent([I)Lcom/google/android/exoplayer2/drm/DefaultDrmSessionManager$Builder;
 
     move-result-object v0
 
+    .line 13
     invoke-virtual {v0, p0}, Lcom/google/android/exoplayer2/drm/DefaultDrmSessionManager$Builder;->build(Lcom/google/android/exoplayer2/drm/MediaDrmCallback;)Lcom/google/android/exoplayer2/drm/DefaultDrmSessionManager;
 
     move-result-object p0
 
     const/4 v0, 0x0
 
+    .line 14
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/MediaItem$DrmConfiguration;->getKeySetId()[B
 
     move-result-object p1
@@ -185,16 +201,19 @@
 .method public get(Lcom/google/android/exoplayer2/MediaItem;)Lcom/google/android/exoplayer2/drm/DrmSessionManager;
     .locals 2
 
+    .line 1
     iget-object v0, p1, Lcom/google/android/exoplayer2/MediaItem;->localConfiguration:Lcom/google/android/exoplayer2/MediaItem$LocalConfiguration;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object p1, p1, Lcom/google/android/exoplayer2/MediaItem;->localConfiguration:Lcom/google/android/exoplayer2/MediaItem$LocalConfiguration;
 
     iget-object p1, p1, Lcom/google/android/exoplayer2/MediaItem$LocalConfiguration;->drmConfiguration:Lcom/google/android/exoplayer2/MediaItem$DrmConfiguration;
 
     if-eqz p1, :cond_2
 
+    .line 3
     sget v0, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
     const/16 v1, 0x12
@@ -203,11 +222,13 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/drm/DefaultDrmSessionManagerProvider;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 5
     :try_start_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/drm/DefaultDrmSessionManagerProvider;->drmConfiguration:Lcom/google/android/exoplayer2/MediaItem$DrmConfiguration;
 
@@ -217,14 +238,17 @@
 
     if-nez v1, :cond_1
 
+    .line 6
     iput-object p1, p0, Lcom/google/android/exoplayer2/drm/DefaultDrmSessionManagerProvider;->drmConfiguration:Lcom/google/android/exoplayer2/MediaItem$DrmConfiguration;
 
+    .line 7
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/drm/DefaultDrmSessionManagerProvider;->createManager(Lcom/google/android/exoplayer2/MediaItem$DrmConfiguration;)Lcom/google/android/exoplayer2/drm/DrmSessionManager;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/drm/DefaultDrmSessionManagerProvider;->manager:Lcom/google/android/exoplayer2/drm/DrmSessionManager;
 
+    .line 8
     :cond_1
     iget-object p0, p0, Lcom/google/android/exoplayer2/drm/DefaultDrmSessionManagerProvider;->manager:Lcom/google/android/exoplayer2/drm/DrmSessionManager;
 
@@ -241,12 +265,14 @@
     :catchall_0
     move-exception p0
 
+    .line 9
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw p0
 
+    .line 10
     :cond_2
     :goto_0
     sget-object p0, Lcom/google/android/exoplayer2/drm/DrmSessionManager;->DRM_UNSUPPORTED:Lcom/google/android/exoplayer2/drm/DrmSessionManager;
@@ -261,6 +287,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/drm/DefaultDrmSessionManagerProvider;->drmHttpDataSourceFactory:Lcom/google/android/exoplayer2/upstream/DataSource$Factory;
 
     return-void
@@ -275,6 +302,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/drm/DefaultDrmSessionManagerProvider;->userAgent:Ljava/lang/String;
 
     return-void

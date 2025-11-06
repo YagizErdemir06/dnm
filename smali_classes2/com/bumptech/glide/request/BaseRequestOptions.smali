@@ -167,54 +167,67 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/high16 v0, 0x3f800000    # 1.0f
 
+    .line 2
     iput v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->sizeMultiplier:F
 
+    .line 3
     sget-object v0, Lcom/bumptech/glide/load/engine/DiskCacheStrategy;->AUTOMATIC:Lcom/bumptech/glide/load/engine/DiskCacheStrategy;
 
     iput-object v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->diskCacheStrategy:Lcom/bumptech/glide/load/engine/DiskCacheStrategy;
 
+    .line 4
     sget-object v0, Lcom/bumptech/glide/Priority;->NORMAL:Lcom/bumptech/glide/Priority;
 
     iput-object v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->priority:Lcom/bumptech/glide/Priority;
 
     const/4 v0, 0x1
 
+    .line 5
     iput-boolean v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isCacheable:Z
 
     const/4 v1, -0x1
 
+    .line 6
     iput v1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->overrideHeight:I
 
+    .line 7
     iput v1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->overrideWidth:I
 
+    .line 8
     invoke-static {}, Lcom/bumptech/glide/signature/EmptySignature;->obtain()Lcom/bumptech/glide/signature/EmptySignature;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->signature:Lcom/bumptech/glide/load/Key;
 
+    .line 9
     iput-boolean v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isTransformationAllowed:Z
 
+    .line 10
     new-instance v1, Lcom/bumptech/glide/load/Options;
 
     invoke-direct {v1}, Lcom/bumptech/glide/load/Options;-><init>()V
 
     iput-object v1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->options:Lcom/bumptech/glide/load/Options;
 
+    .line 11
     new-instance v1, Lcom/bumptech/glide/util/CachedHashCodeArrayMap;
 
     invoke-direct {v1}, Lcom/bumptech/glide/util/CachedHashCodeArrayMap;-><init>()V
 
     iput-object v1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->transformations:Ljava/util/Map;
 
+    .line 12
     const-class v1, Ljava/lang/Object;
 
     iput-object v1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->resourceClass:Ljava/lang/Class;
 
+    .line 13
     iput-boolean v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isScaleOnlyOrNoTransform:Z
 
     return-void
@@ -223,6 +236,7 @@
 .method private isSet(I)Z
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
     invoke-static {p0, p1}, Lcom/bumptech/glide/request/BaseRequestOptions;->isSet(II)Z
@@ -275,6 +289,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, p2, v0}, Lcom/bumptech/glide/request/BaseRequestOptions;->scaleOnlyTransform(Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;Lcom/bumptech/glide/load/Transformation;Z)Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object p0
@@ -384,16 +399,19 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isLocked:Z
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-direct {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->self()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object p0
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -426,10 +444,12 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isAutoCloneEnabled:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->clone()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object p0
@@ -440,6 +460,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     iget v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
@@ -451,10 +472,12 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     iget v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->sizeMultiplier:F
 
     iput v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->sizeMultiplier:F
 
+    .line 5
     :cond_1
     iget v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
@@ -466,10 +489,12 @@
 
     if-eqz v0, :cond_2
 
+    .line 6
     iget-boolean v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->useUnlimitedSourceGeneratorsPool:Z
 
     iput-boolean v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->useUnlimitedSourceGeneratorsPool:Z
 
+    .line 7
     :cond_2
     iget v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
@@ -481,10 +506,12 @@
 
     if-eqz v0, :cond_3
 
+    .line 8
     iget-boolean v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->useAnimationPool:Z
 
     iput-boolean v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->useAnimationPool:Z
 
+    .line 9
     :cond_3
     iget v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
@@ -496,10 +523,12 @@
 
     if-eqz v0, :cond_4
 
+    .line 10
     iget-object v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->diskCacheStrategy:Lcom/bumptech/glide/load/engine/DiskCacheStrategy;
 
     iput-object v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->diskCacheStrategy:Lcom/bumptech/glide/load/engine/DiskCacheStrategy;
 
+    .line 11
     :cond_4
     iget v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
@@ -511,10 +540,12 @@
 
     if-eqz v0, :cond_5
 
+    .line 12
     iget-object v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->priority:Lcom/bumptech/glide/Priority;
 
     iput-object v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->priority:Lcom/bumptech/glide/Priority;
 
+    .line 13
     :cond_5
     iget v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
@@ -528,18 +559,22 @@
 
     if-eqz v0, :cond_6
 
+    .line 14
     iget-object v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->errorPlaceholder:Landroid/graphics/drawable/Drawable;
 
     iput-object v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->errorPlaceholder:Landroid/graphics/drawable/Drawable;
 
+    .line 15
     iput v1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->errorId:I
 
+    .line 16
     iget v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
     and-int/lit8 v0, v0, -0x21
 
     iput v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
+    .line 17
     :cond_6
     iget v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
@@ -553,18 +588,22 @@
 
     if-eqz v0, :cond_7
 
+    .line 18
     iget v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->errorId:I
 
     iput v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->errorId:I
 
+    .line 19
     iput-object v2, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->errorPlaceholder:Landroid/graphics/drawable/Drawable;
 
+    .line 20
     iget v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
     and-int/lit8 v0, v0, -0x11
 
     iput v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
+    .line 21
     :cond_7
     iget v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
@@ -576,18 +615,22 @@
 
     if-eqz v0, :cond_8
 
+    .line 22
     iget-object v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->placeholderDrawable:Landroid/graphics/drawable/Drawable;
 
     iput-object v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->placeholderDrawable:Landroid/graphics/drawable/Drawable;
 
+    .line 23
     iput v1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->placeholderId:I
 
+    .line 24
     iget v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
     and-int/lit16 v0, v0, -0x81
 
     iput v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
+    .line 25
     :cond_8
     iget v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
@@ -599,18 +642,22 @@
 
     if-eqz v0, :cond_9
 
+    .line 26
     iget v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->placeholderId:I
 
     iput v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->placeholderId:I
 
+    .line 27
     iput-object v2, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->placeholderDrawable:Landroid/graphics/drawable/Drawable;
 
+    .line 28
     iget v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
     and-int/lit8 v0, v0, -0x41
 
     iput v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
+    .line 29
     :cond_9
     iget v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
@@ -622,10 +669,12 @@
 
     if-eqz v0, :cond_a
 
+    .line 30
     iget-boolean v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->isCacheable:Z
 
     iput-boolean v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isCacheable:Z
 
+    .line 31
     :cond_a
     iget v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
@@ -637,14 +686,17 @@
 
     if-eqz v0, :cond_b
 
+    .line 32
     iget v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->overrideWidth:I
 
     iput v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->overrideWidth:I
 
+    .line 33
     iget v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->overrideHeight:I
 
     iput v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->overrideHeight:I
 
+    .line 34
     :cond_b
     iget v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
@@ -656,10 +708,12 @@
 
     if-eqz v0, :cond_c
 
+    .line 35
     iget-object v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->signature:Lcom/bumptech/glide/load/Key;
 
     iput-object v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->signature:Lcom/bumptech/glide/load/Key;
 
+    .line 36
     :cond_c
     iget v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
@@ -671,10 +725,12 @@
 
     if-eqz v0, :cond_d
 
+    .line 37
     iget-object v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->resourceClass:Ljava/lang/Class;
 
     iput-object v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->resourceClass:Ljava/lang/Class;
 
+    .line 38
     :cond_d
     iget v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
@@ -686,18 +742,22 @@
 
     if-eqz v0, :cond_e
 
+    .line 39
     iget-object v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->fallbackDrawable:Landroid/graphics/drawable/Drawable;
 
     iput-object v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fallbackDrawable:Landroid/graphics/drawable/Drawable;
 
+    .line 40
     iput v1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fallbackId:I
 
+    .line 41
     iget v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
     and-int/lit16 v0, v0, -0x4001
 
     iput v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
+    .line 42
     :cond_e
     iget v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
@@ -709,18 +769,22 @@
 
     if-eqz v0, :cond_f
 
+    .line 43
     iget v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->fallbackId:I
 
     iput v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fallbackId:I
 
+    .line 44
     iput-object v2, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fallbackDrawable:Landroid/graphics/drawable/Drawable;
 
+    .line 45
     iget v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
     and-int/lit16 v0, v0, -0x2001
 
     iput v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
+    .line 46
     :cond_f
     iget v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
@@ -732,10 +796,12 @@
 
     if-eqz v0, :cond_10
 
+    .line 47
     iget-object v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->theme:Landroid/content/res/Resources$Theme;
 
     iput-object v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->theme:Landroid/content/res/Resources$Theme;
 
+    .line 48
     :cond_10
     iget v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
@@ -747,10 +813,12 @@
 
     if-eqz v0, :cond_11
 
+    .line 49
     iget-boolean v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->isTransformationAllowed:Z
 
     iput-boolean v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isTransformationAllowed:Z
 
+    .line 50
     :cond_11
     iget v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
@@ -762,10 +830,12 @@
 
     if-eqz v0, :cond_12
 
+    .line 51
     iget-boolean v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->isTransformationRequired:Z
 
     iput-boolean v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isTransformationRequired:Z
 
+    .line 52
     :cond_12
     iget v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
@@ -777,16 +847,19 @@
 
     if-eqz v0, :cond_13
 
+    .line 53
     iget-object v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->transformations:Ljava/util/Map;
 
     iget-object v2, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->transformations:Ljava/util/Map;
 
     invoke-interface {v0, v2}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
+    .line 54
     iget-boolean v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->isScaleOnlyOrNoTransform:Z
 
     iput-boolean v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isScaleOnlyOrNoTransform:Z
 
+    .line 55
     :cond_13
     iget v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
@@ -798,35 +871,45 @@
 
     if-eqz v0, :cond_14
 
+    .line 56
     iget-boolean v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->onlyRetrieveFromCache:Z
 
     iput-boolean v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->onlyRetrieveFromCache:Z
 
+    .line 57
     :cond_14
     iget-boolean v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isTransformationAllowed:Z
 
     if-nez v0, :cond_15
 
+    .line 58
     iget-object v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->transformations:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
+    .line 59
     iget v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
     and-int/lit16 v0, v0, -0x801
 
+    iput v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
+
+    .line 60
     iput-boolean v1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isTransformationRequired:Z
 
     const v1, -0x20001
 
     and-int/2addr v0, v1
 
+    .line 61
     iput v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
     const/4 v0, 0x1
 
+    .line 62
     iput-boolean v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isScaleOnlyOrNoTransform:Z
 
+    .line 63
     :cond_15
     iget v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
@@ -836,12 +919,14 @@
 
     iput v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
+    .line 64
     iget-object v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->options:Lcom/bumptech/glide/load/Options;
 
     iget-object p1, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->options:Lcom/bumptech/glide/load/Options;
 
     invoke-virtual {v0, p1}, Lcom/bumptech/glide/load/Options;->putAll(Lcom/bumptech/glide/load/Options;)V
 
+    .line 65
     invoke-direct {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->selfOrThrowIfLocked()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object p0
@@ -860,6 +945,7 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isLocked:Z
 
     if-eqz v0, :cond_1
@@ -870,6 +956,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -883,8 +970,10 @@
     :goto_0
     const/4 v0, 0x1
 
+    .line 3
     iput-boolean v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isAutoCloneEnabled:Z
 
+    .line 4
     invoke-virtual {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->lock()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object p0
@@ -906,6 +995,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;->CENTER_OUTSIDE:Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;
 
     new-instance v1, Lcom/bumptech/glide/load/resource/bitmap/CenterCrop;
@@ -933,6 +1023,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;->CENTER_INSIDE:Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;
 
     new-instance v1, Lcom/bumptech/glide/load/resource/bitmap/CenterInside;
@@ -960,6 +1051,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;->CENTER_INSIDE:Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;
 
     new-instance v1, Lcom/bumptech/glide/load/resource/bitmap/CircleCrop;
@@ -1078,10 +1170,12 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isAutoCloneEnabled:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->clone()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object p0
@@ -1092,6 +1186,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1101,12 +1196,14 @@
 
     iput-object p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->resourceClass:Ljava/lang/Class;
 
+    .line 4
     iget p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
     or-int/lit16 p1, p1, 0x1000
 
     iput p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
+    .line 5
     invoke-direct {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->selfOrThrowIfLocked()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object p0
@@ -1128,6 +1225,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->ALLOW_HARDWARE_CONFIG:Lcom/bumptech/glide/load/Option;
 
     sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
@@ -1159,10 +1257,12 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isAutoCloneEnabled:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->clone()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object p0
@@ -1173,6 +1273,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1182,12 +1283,14 @@
 
     iput-object p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->diskCacheStrategy:Lcom/bumptech/glide/load/engine/DiskCacheStrategy;
 
+    .line 4
     iget p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
     or-int/lit8 p1, p1, 0x4
 
     iput p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
+    .line 5
     invoke-direct {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->selfOrThrowIfLocked()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object p0
@@ -1209,6 +1312,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/bumptech/glide/load/resource/gif/GifOptions;->DISABLE_ANIMATION:Lcom/bumptech/glide/load/Option;
 
     sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
@@ -1234,10 +1338,12 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isAutoCloneEnabled:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->clone()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object p0
@@ -1248,35 +1354,47 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->transformations:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
+    .line 4
     iget v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
     and-int/lit16 v0, v0, -0x801
 
+    iput v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
+
     const/4 v1, 0x0
 
+    .line 5
     iput-boolean v1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isTransformationRequired:Z
 
     const v2, -0x20001
 
     and-int/2addr v0, v2
 
+    .line 6
+    iput v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
+
+    .line 7
     iput-boolean v1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isTransformationAllowed:Z
 
     const/high16 v1, 0x10000
 
     or-int/2addr v0, v1
 
+    .line 8
     iput v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
     const/4 v0, 0x1
 
+    .line 9
     iput-boolean v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isScaleOnlyOrNoTransform:Z
 
+    .line 10
     invoke-direct {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->selfOrThrowIfLocked()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object p0
@@ -1304,6 +1422,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;->OPTION:Lcom/bumptech/glide/load/Option;
 
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1337,6 +1456,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/bumptech/glide/load/resource/bitmap/BitmapEncoder;->COMPRESSION_FORMAT:Lcom/bumptech/glide/load/Option;
 
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1370,6 +1490,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/bumptech/glide/load/resource/bitmap/BitmapEncoder;->COMPRESSION_QUALITY:Lcom/bumptech/glide/load/Option;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1386,14 +1507,17 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
+    .line 1
     instance-of v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/bumptech/glide/request/BaseRequestOptions;
 
+    .line 3
     iget v0, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->sizeMultiplier:F
 
     iget v2, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->sizeMultiplier:F
@@ -1414,6 +1538,7 @@
 
     iget-object v2, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->errorPlaceholder:Landroid/graphics/drawable/Drawable;
 
+    .line 4
     invoke-static {v0, v2}, Lcom/bumptech/glide/util/Util;->bothNullOrEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
@@ -1430,6 +1555,7 @@
 
     iget-object v2, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->placeholderDrawable:Landroid/graphics/drawable/Drawable;
 
+    .line 5
     invoke-static {v0, v2}, Lcom/bumptech/glide/util/Util;->bothNullOrEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
@@ -1446,6 +1572,7 @@
 
     iget-object v2, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->fallbackDrawable:Landroid/graphics/drawable/Drawable;
 
+    .line 6
     invoke-static {v0, v2}, Lcom/bumptech/glide/util/Util;->bothNullOrEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
@@ -1498,6 +1625,7 @@
 
     iget-object v2, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->diskCacheStrategy:Lcom/bumptech/glide/load/engine/DiskCacheStrategy;
 
+    .line 7
     invoke-virtual {v0, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -1514,6 +1642,7 @@
 
     iget-object v2, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->options:Lcom/bumptech/glide/load/Options;
 
+    .line 8
     invoke-virtual {v0, v2}, Lcom/bumptech/glide/load/Options;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -1524,6 +1653,7 @@
 
     iget-object v2, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->transformations:Ljava/util/Map;
 
+    .line 9
     invoke-interface {v0, v2}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -1534,6 +1664,7 @@
 
     iget-object v2, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->resourceClass:Ljava/lang/Class;
 
+    .line 10
     invoke-virtual {v0, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -1544,6 +1675,7 @@
 
     iget-object v2, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->signature:Lcom/bumptech/glide/load/Key;
 
+    .line 11
     invoke-static {v0, v2}, Lcom/bumptech/glide/util/Util;->bothNullOrEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
@@ -1554,6 +1686,7 @@
 
     iget-object p1, p1, Lcom/bumptech/glide/request/BaseRequestOptions;->theme:Landroid/content/res/Resources$Theme;
 
+    .line 12
     invoke-static {p0, p1}, Lcom/bumptech/glide/util/Util;->bothNullOrEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -1608,6 +1741,8 @@
     iget p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
     or-int/lit8 p1, p1, 0x20
+
+    iput p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
     const/4 v0, 0x0
 
@@ -1672,6 +1807,8 @@
 
     or-int/lit8 p1, p1, 0x10
 
+    iput p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
+
     const/4 v0, 0x0
 
     .line 5
@@ -1732,6 +1869,8 @@
     iget p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
     or-int/lit16 p1, p1, 0x4000
+
+    iput p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
     const/4 v0, 0x0
 
@@ -1796,6 +1935,8 @@
 
     or-int/lit16 p1, p1, 0x2000
 
+    iput p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
+
     const/4 v0, 0x0
 
     .line 5
@@ -1828,6 +1969,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;->FIT_CENTER:Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;
 
     new-instance v1, Lcom/bumptech/glide/load/resource/bitmap/FitCenter;
@@ -1861,8 +2003,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     sget-object v0, Lcom/bumptech/glide/load/resource/bitmap/Downsampler;->DECODE_FORMAT:Lcom/bumptech/glide/load/Option;
 
     invoke-virtual {p0, v0, p1}, Lcom/bumptech/glide/request/BaseRequestOptions;->set(Lcom/bumptech/glide/load/Option;Ljava/lang/Object;)Lcom/bumptech/glide/request/BaseRequestOptions;
@@ -1897,6 +2041,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder;->TARGET_FRAME:Lcom/bumptech/glide/load/Option;
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -1915,6 +2060,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->diskCacheStrategy:Lcom/bumptech/glide/load/engine/DiskCacheStrategy;
 
     return-object p0
@@ -1923,6 +2069,7 @@
 .method public final getErrorId()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->errorId:I
 
     return p0
@@ -1933,6 +2080,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->errorPlaceholder:Landroid/graphics/drawable/Drawable;
 
     return-object p0
@@ -1943,6 +2091,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fallbackDrawable:Landroid/graphics/drawable/Drawable;
 
     return-object p0
@@ -1951,6 +2100,7 @@
 .method public final getFallbackId()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fallbackId:I
 
     return p0
@@ -1959,6 +2109,7 @@
 .method public final getOnlyRetrieveFromCache()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->onlyRetrieveFromCache:Z
 
     return p0
@@ -1969,6 +2120,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->options:Lcom/bumptech/glide/load/Options;
 
     return-object p0
@@ -1977,6 +2129,7 @@
 .method public final getOverrideHeight()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->overrideHeight:I
 
     return p0
@@ -1985,6 +2138,7 @@
 .method public final getOverrideWidth()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->overrideWidth:I
 
     return p0
@@ -1995,6 +2149,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->placeholderDrawable:Landroid/graphics/drawable/Drawable;
 
     return-object p0
@@ -2003,6 +2158,7 @@
 .method public final getPlaceholderId()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->placeholderId:I
 
     return p0
@@ -2013,6 +2169,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->priority:Lcom/bumptech/glide/Priority;
 
     return-object p0
@@ -2031,6 +2188,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->resourceClass:Ljava/lang/Class;
 
     return-object p0
@@ -2041,6 +2199,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->signature:Lcom/bumptech/glide/load/Key;
 
     return-object p0
@@ -2049,6 +2208,7 @@
 .method public final getSizeMultiplier()F
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->sizeMultiplier:F
 
     return p0
@@ -2059,6 +2219,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->theme:Landroid/content/res/Resources$Theme;
 
     return-object p0
@@ -2080,6 +2241,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->transformations:Ljava/util/Map;
 
     return-object p0
@@ -2088,6 +2250,7 @@
 .method public final getUseAnimationPool()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->useAnimationPool:Z
 
     return p0
@@ -2096,6 +2259,7 @@
 .method public final getUseUnlimitedSourceGeneratorsPool()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->useUnlimitedSourceGeneratorsPool:Z
 
     return p0
@@ -2104,126 +2268,147 @@
 .method public hashCode()I
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->sizeMultiplier:F
 
     invoke-static {v0}, Lcom/bumptech/glide/util/Util;->hashCode(F)I
 
     move-result v0
 
+    .line 2
     iget v1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->errorId:I
 
     invoke-static {v1, v0}, Lcom/bumptech/glide/util/Util;->hashCode(II)I
 
     move-result v0
 
+    .line 3
     iget-object v1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->errorPlaceholder:Landroid/graphics/drawable/Drawable;
 
     invoke-static {v1, v0}, Lcom/bumptech/glide/util/Util;->hashCode(Ljava/lang/Object;I)I
 
     move-result v0
 
+    .line 4
     iget v1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->placeholderId:I
 
     invoke-static {v1, v0}, Lcom/bumptech/glide/util/Util;->hashCode(II)I
 
     move-result v0
 
+    .line 5
     iget-object v1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->placeholderDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-static {v1, v0}, Lcom/bumptech/glide/util/Util;->hashCode(Ljava/lang/Object;I)I
 
     move-result v0
 
+    .line 6
     iget v1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fallbackId:I
 
     invoke-static {v1, v0}, Lcom/bumptech/glide/util/Util;->hashCode(II)I
 
     move-result v0
 
+    .line 7
     iget-object v1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fallbackDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-static {v1, v0}, Lcom/bumptech/glide/util/Util;->hashCode(Ljava/lang/Object;I)I
 
     move-result v0
 
+    .line 8
     iget-boolean v1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isCacheable:Z
 
     invoke-static {v1, v0}, Lcom/bumptech/glide/util/Util;->hashCode(ZI)I
 
     move-result v0
 
+    .line 9
     iget v1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->overrideHeight:I
 
     invoke-static {v1, v0}, Lcom/bumptech/glide/util/Util;->hashCode(II)I
 
     move-result v0
 
+    .line 10
     iget v1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->overrideWidth:I
 
     invoke-static {v1, v0}, Lcom/bumptech/glide/util/Util;->hashCode(II)I
 
     move-result v0
 
+    .line 11
     iget-boolean v1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isTransformationRequired:Z
 
     invoke-static {v1, v0}, Lcom/bumptech/glide/util/Util;->hashCode(ZI)I
 
     move-result v0
 
+    .line 12
     iget-boolean v1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isTransformationAllowed:Z
 
     invoke-static {v1, v0}, Lcom/bumptech/glide/util/Util;->hashCode(ZI)I
 
     move-result v0
 
+    .line 13
     iget-boolean v1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->useUnlimitedSourceGeneratorsPool:Z
 
     invoke-static {v1, v0}, Lcom/bumptech/glide/util/Util;->hashCode(ZI)I
 
     move-result v0
 
+    .line 14
     iget-boolean v1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->onlyRetrieveFromCache:Z
 
     invoke-static {v1, v0}, Lcom/bumptech/glide/util/Util;->hashCode(ZI)I
 
     move-result v0
 
+    .line 15
     iget-object v1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->diskCacheStrategy:Lcom/bumptech/glide/load/engine/DiskCacheStrategy;
 
     invoke-static {v1, v0}, Lcom/bumptech/glide/util/Util;->hashCode(Ljava/lang/Object;I)I
 
     move-result v0
 
+    .line 16
     iget-object v1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->priority:Lcom/bumptech/glide/Priority;
 
     invoke-static {v1, v0}, Lcom/bumptech/glide/util/Util;->hashCode(Ljava/lang/Object;I)I
 
     move-result v0
 
+    .line 17
     iget-object v1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->options:Lcom/bumptech/glide/load/Options;
 
     invoke-static {v1, v0}, Lcom/bumptech/glide/util/Util;->hashCode(Ljava/lang/Object;I)I
 
     move-result v0
 
+    .line 18
     iget-object v1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->transformations:Ljava/util/Map;
 
     invoke-static {v1, v0}, Lcom/bumptech/glide/util/Util;->hashCode(Ljava/lang/Object;I)I
 
     move-result v0
 
+    .line 19
     iget-object v1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->resourceClass:Ljava/lang/Class;
 
     invoke-static {v1, v0}, Lcom/bumptech/glide/util/Util;->hashCode(Ljava/lang/Object;I)I
 
     move-result v0
 
+    .line 20
     iget-object v1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->signature:Lcom/bumptech/glide/load/Key;
 
     invoke-static {v1, v0}, Lcom/bumptech/glide/util/Util;->hashCode(Ljava/lang/Object;I)I
 
     move-result v0
 
+    .line 21
     iget-object p0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->theme:Landroid/content/res/Resources$Theme;
 
     invoke-static {p0, v0}, Lcom/bumptech/glide/util/Util;->hashCode(Ljava/lang/Object;I)I
@@ -2236,6 +2421,7 @@
 .method public isAutoCloneEnabled()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isAutoCloneEnabled:Z
 
     return p0
@@ -2246,6 +2432,7 @@
 
     const/4 v0, 0x4
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/bumptech/glide/request/BaseRequestOptions;->isSet(I)Z
 
     move-result p0
@@ -2256,6 +2443,7 @@
 .method public final isLocked()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isLocked:Z
 
     return p0
@@ -2264,6 +2452,7 @@
 .method public final isMemoryCacheable()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isCacheable:Z
 
     return p0
@@ -2274,6 +2463,7 @@
 
     const/16 v0, 0x8
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/bumptech/glide/request/BaseRequestOptions;->isSet(I)Z
 
     move-result p0
@@ -2284,6 +2474,7 @@
 .method public isScaleOnlyOrNoTransform()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isScaleOnlyOrNoTransform:Z
 
     return p0
@@ -2294,6 +2485,7 @@
 
     const/16 v0, 0x100
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/bumptech/glide/request/BaseRequestOptions;->isSet(I)Z
 
     move-result p0
@@ -2304,6 +2496,7 @@
 .method public final isTransformationAllowed()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isTransformationAllowed:Z
 
     return p0
@@ -2312,6 +2505,7 @@
 .method public final isTransformationRequired()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isTransformationRequired:Z
 
     return p0
@@ -2322,6 +2516,7 @@
 
     const/16 v0, 0x800
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/bumptech/glide/request/BaseRequestOptions;->isSet(I)Z
 
     move-result p0
@@ -2332,6 +2527,7 @@
 .method public final isValidOverride()Z
     .locals 1
 
+    .line 1
     iget v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->overrideWidth:I
 
     iget p0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->overrideHeight:I
@@ -2356,8 +2552,10 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isLocked:Z
 
+    .line 2
     invoke-direct {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->self()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object p0
@@ -2379,10 +2577,12 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isAutoCloneEnabled:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->clone()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object p0
@@ -2393,9 +2593,11 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     iput-boolean p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->onlyRetrieveFromCache:Z
 
+    .line 4
     iget p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
     const/high16 v0, 0x80000
@@ -2404,6 +2606,7 @@
 
     iput p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
+    .line 5
     invoke-direct {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->selfOrThrowIfLocked()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object p0
@@ -2425,6 +2628,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;->CENTER_OUTSIDE:Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;
 
     new-instance v1, Lcom/bumptech/glide/load/resource/bitmap/CenterCrop;
@@ -2452,6 +2656,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;->CENTER_INSIDE:Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;
 
     new-instance v1, Lcom/bumptech/glide/load/resource/bitmap/CenterInside;
@@ -2479,6 +2684,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;->CENTER_OUTSIDE:Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;
 
     new-instance v1, Lcom/bumptech/glide/load/resource/bitmap/CircleCrop;
@@ -2506,6 +2712,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;->FIT_CENTER:Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;
 
     new-instance v1, Lcom/bumptech/glide/load/resource/bitmap/FitCenter;
@@ -2758,6 +2965,8 @@
 
     or-int/lit16 p1, p1, 0x80
 
+    iput p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
+
     const/4 v0, 0x0
 
     .line 12
@@ -2821,6 +3030,8 @@
 
     or-int/lit8 p1, p1, 0x40
 
+    iput p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
+
     const/4 v0, 0x0
 
     .line 5
@@ -2859,10 +3070,12 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isAutoCloneEnabled:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->clone()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object p0
@@ -2873,6 +3086,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -2882,12 +3096,14 @@
 
     iput-object p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->priority:Lcom/bumptech/glide/Priority;
 
+    .line 4
     iget p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
     or-int/lit8 p1, p1, 0x8
 
     iput p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
+    .line 5
     invoke-direct {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->selfOrThrowIfLocked()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object p0
@@ -2921,10 +3137,12 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isAutoCloneEnabled:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->clone()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object p0
@@ -2935,15 +3153,19 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     invoke-static {p2}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 5
     iget-object v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->options:Lcom/bumptech/glide/load/Options;
 
     invoke-virtual {v0, p1, p2}, Lcom/bumptech/glide/load/Options;->set(Lcom/bumptech/glide/load/Option;Ljava/lang/Object;)Lcom/bumptech/glide/load/Options;
 
+    .line 6
     invoke-direct {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->selfOrThrowIfLocked()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object p0
@@ -2971,10 +3193,12 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isAutoCloneEnabled:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->clone()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object p0
@@ -2985,6 +3209,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -2994,12 +3219,14 @@
 
     iput-object p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->signature:Lcom/bumptech/glide/load/Key;
 
+    .line 4
     iget p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
     or-int/lit16 p1, p1, 0x400
 
     iput p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
+    .line 5
     invoke-direct {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->selfOrThrowIfLocked()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object p0
@@ -3027,10 +3254,12 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isAutoCloneEnabled:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->clone()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object p0
@@ -3054,20 +3283,24 @@
 
     if-gtz v0, :cond_1
 
+    .line 3
     iput p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->sizeMultiplier:F
 
+    .line 4
     iget p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
     or-int/lit8 p1, p1, 0x2
 
     iput p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
+    .line 5
     invoke-direct {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->selfOrThrowIfLocked()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object p0
 
     return-object p0
 
+    .line 6
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -3092,12 +3325,14 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isAutoCloneEnabled:Z
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->clone()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object p0
@@ -3111,14 +3346,17 @@
     :cond_0
     xor-int/2addr p1, v1
 
+    .line 3
     iput-boolean p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isCacheable:Z
 
+    .line 4
     iget p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
     or-int/lit16 p1, p1, 0x100
 
     iput p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
+    .line 5
     invoke-direct {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->selfOrThrowIfLocked()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object p0
@@ -3146,10 +3384,12 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isAutoCloneEnabled:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->clone()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object p0
@@ -3160,9 +3400,11 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     iput-object p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->theme:Landroid/content/res/Resources$Theme;
 
+    .line 4
     iget p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
     const v0, 0x8000
@@ -3171,6 +3413,7 @@
 
     iput p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
+    .line 5
     invoke-direct {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->selfOrThrowIfLocked()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object p0
@@ -3197,6 +3440,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/bumptech/glide/load/model/stream/HttpGlideUrlLoader;->TIMEOUT:Lcom/bumptech/glide/load/Option;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3301,13 +3545,13 @@
     invoke-virtual {p0, v1, v0, p2}, Lcom/bumptech/glide/request/BaseRequestOptions;->transform(Ljava/lang/Class;Lcom/bumptech/glide/load/Transformation;Z)Lcom/bumptech/glide/request/BaseRequestOptions;
 
     .line 17
-    new-instance v0, Lcom/bumptech/glide/load/resource/gif/GifDrawableTransformation;
+    const-class v0, Lcom/bumptech/glide/load/resource/gif/GifDrawable;
 
-    invoke-direct {v0, p1}, Lcom/bumptech/glide/load/resource/gif/GifDrawableTransformation;-><init>(Lcom/bumptech/glide/load/Transformation;)V
+    new-instance v1, Lcom/bumptech/glide/load/resource/gif/GifDrawableTransformation;
 
-    const-class p1, Lcom/bumptech/glide/load/resource/gif/GifDrawable;
+    invoke-direct {v1, p1}, Lcom/bumptech/glide/load/resource/gif/GifDrawableTransformation;-><init>(Lcom/bumptech/glide/load/Transformation;)V
 
-    invoke-virtual {p0, p1, v0, p2}, Lcom/bumptech/glide/request/BaseRequestOptions;->transform(Ljava/lang/Class;Lcom/bumptech/glide/load/Transformation;Z)Lcom/bumptech/glide/request/BaseRequestOptions;
+    invoke-virtual {p0, v0, v1, p2}, Lcom/bumptech/glide/request/BaseRequestOptions;->transform(Ljava/lang/Class;Lcom/bumptech/glide/load/Transformation;Z)Lcom/bumptech/glide/request/BaseRequestOptions;
 
     .line 18
     invoke-direct {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->selfOrThrowIfLocked()Lcom/bumptech/glide/request/BaseRequestOptions;
@@ -3467,6 +3711,8 @@
 
     or-int/lit16 p1, p1, 0x800
 
+    iput p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
+
     const/4 p2, 0x1
 
     .line 25
@@ -3594,6 +3840,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/bumptech/glide/load/MultiTransformation;
 
     invoke-direct {v0, p1}, Lcom/bumptech/glide/load/MultiTransformation;-><init>([Lcom/bumptech/glide/load/Transformation;)V
@@ -3621,10 +3868,12 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isAutoCloneEnabled:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->clone()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object p0
@@ -3635,9 +3884,11 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     iput-boolean p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->useAnimationPool:Z
 
+    .line 4
     iget p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
     const/high16 v0, 0x100000
@@ -3646,6 +3897,7 @@
 
     iput p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
+    .line 5
     invoke-direct {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->selfOrThrowIfLocked()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object p0
@@ -3667,10 +3919,12 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->isAutoCloneEnabled:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->clone()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object p0
@@ -3681,9 +3935,11 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     iput-boolean p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->useUnlimitedSourceGeneratorsPool:Z
 
+    .line 4
     iget p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
     const/high16 v0, 0x40000
@@ -3692,6 +3948,7 @@
 
     iput p1, p0, Lcom/bumptech/glide/request/BaseRequestOptions;->fields:I
 
+    .line 5
     invoke-direct {p0}, Lcom/bumptech/glide/request/BaseRequestOptions;->selfOrThrowIfLocked()Lcom/bumptech/glide/request/BaseRequestOptions;
 
     move-result-object p0

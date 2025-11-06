@@ -14,9 +14,14 @@
     value = "SMAP\nFileSystem.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FileSystem.kt\nokio/FileSystem\n+ 2 Okio.kt\nokio/Okio__OkioKt\n*L\n1#1,160:1\n52#2,18:161\n52#2,18:179\n*S KotlinDebug\n*F\n+ 1 FileSystem.kt\nokio/FileSystem\n*L\n66#1:161,18\n80#1:179,18\n*E\n"
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000f\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0010 \n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\r\u0008&\u0018\u0000 52\u00020\u0001:\u00015B\u0007\u00a2\u0006\u0004\u00083\u00104J\u0010\u0010\u0004\u001a\u00020\u00022\u0006\u0010\u0003\u001a\u00020\u0002H&J\u000e\u0010\u0006\u001a\u00020\u00052\u0006\u0010\u0003\u001a\u00020\u0002J\u0012\u0010\u0007\u001a\u0004\u0018\u00010\u00052\u0006\u0010\u0003\u001a\u00020\u0002H&J\u000e\u0010\t\u001a\u00020\u00082\u0006\u0010\u0003\u001a\u00020\u0002J\u0016\u0010\u000c\u001a\u0008\u0012\u0004\u0012\u00020\u00020\u000b2\u0006\u0010\n\u001a\u00020\u0002H&J\u0018\u0010\r\u001a\n\u0012\u0004\u0012\u00020\u0002\u0018\u00010\u000b2\u0006\u0010\n\u001a\u00020\u0002H&J \u0010\u0010\u001a\u0008\u0012\u0004\u0012\u00020\u00020\u000f2\u0006\u0010\n\u001a\u00020\u00022\u0008\u0008\u0002\u0010\u000e\u001a\u00020\u0008H\u0016J\u0014\u0010\u0010\u001a\u0008\u0012\u0004\u0012\u00020\u00020\u000f2\u0006\u0010\n\u001a\u00020\u0002J\u0010\u0010\u0013\u001a\u00020\u00122\u0006\u0010\u0011\u001a\u00020\u0002H&J$\u0010\u0016\u001a\u00020\u00122\u0006\u0010\u0011\u001a\u00020\u00022\u0008\u0008\u0002\u0010\u0014\u001a\u00020\u00082\u0008\u0008\u0002\u0010\u0015\u001a\u00020\u0008H&J\u000e\u0010\u0016\u001a\u00020\u00122\u0006\u0010\u0011\u001a\u00020\u0002J\u0010\u0010\u0018\u001a\u00020\u00172\u0006\u0010\u0011\u001a\u00020\u0002H&J:\u0010 \u001a\u00028\u0000\"\u0004\u0008\u0000\u0010\u00192\u0006\u0010\u0011\u001a\u00020\u00022\u0017\u0010\u001d\u001a\u0013\u0012\u0004\u0012\u00020\u001b\u0012\u0004\u0012\u00028\u00000\u001a\u00a2\u0006\u0002\u0008\u001cH\u0087\u0008\u00f8\u0001\u0000\u00a2\u0006\u0004\u0008\u001e\u0010\u001fJ\u001a\u0010\"\u001a\u00020!2\u0006\u0010\u0011\u001a\u00020\u00022\u0008\u0008\u0002\u0010\u0014\u001a\u00020\u0008H&J\u000e\u0010\"\u001a\u00020!2\u0006\u0010\u0011\u001a\u00020\u0002JD\u0010\'\u001a\u00028\u0000\"\u0004\u0008\u0000\u0010\u00192\u0006\u0010\u0011\u001a\u00020\u00022\u0008\u0008\u0002\u0010\u0014\u001a\u00020\u00082\u0017\u0010$\u001a\u0013\u0012\u0004\u0012\u00020#\u0012\u0004\u0012\u00028\u00000\u001a\u00a2\u0006\u0002\u0008\u001cH\u0087\u0008\u00f8\u0001\u0000\u00a2\u0006\u0004\u0008%\u0010&J\u001a\u0010(\u001a\u00020!2\u0006\u0010\u0011\u001a\u00020\u00022\u0008\u0008\u0002\u0010\u0015\u001a\u00020\u0008H&J\u000e\u0010(\u001a\u00020!2\u0006\u0010\u0011\u001a\u00020\u0002J\u001a\u0010*\u001a\u00020)2\u0006\u0010\n\u001a\u00020\u00022\u0008\u0008\u0002\u0010\u0014\u001a\u00020\u0008H&J\u000e\u0010*\u001a\u00020)2\u0006\u0010\n\u001a\u00020\u0002J\u0018\u0010+\u001a\u00020)2\u0006\u0010\n\u001a\u00020\u00022\u0008\u0008\u0002\u0010\u0014\u001a\u00020\u0008J\u000e\u0010+\u001a\u00020)2\u0006\u0010\n\u001a\u00020\u0002J\u0018\u0010-\u001a\u00020)2\u0006\u0010\u0018\u001a\u00020\u00022\u0006\u0010,\u001a\u00020\u0002H&J\u0018\u0010.\u001a\u00020)2\u0006\u0010\u0018\u001a\u00020\u00022\u0006\u0010,\u001a\u00020\u0002H\u0016J\u001a\u0010/\u001a\u00020)2\u0006\u0010\u0003\u001a\u00020\u00022\u0008\u0008\u0002\u0010\u0015\u001a\u00020\u0008H&J\u000e\u0010/\u001a\u00020)2\u0006\u0010\u0003\u001a\u00020\u0002J\u001a\u00101\u001a\u00020)2\u0006\u00100\u001a\u00020\u00022\u0008\u0008\u0002\u0010\u0015\u001a\u00020\u0008H\u0016J\u000e\u00101\u001a\u00020)2\u0006\u00100\u001a\u00020\u0002J\u0018\u00102\u001a\u00020)2\u0006\u0010\u0018\u001a\u00020\u00022\u0006\u0010,\u001a\u00020\u0002H&\u0082\u0002\u0007\n\u0005\u0008\u009920\u0001\u00a8\u00066"
+        "\u0000h\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0002\u0008\u0003\n\u0002\u0010 \n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0010\u0008&\u0018\u0000 C2\u00020\u0001:\u0001CB\u0007\u00a2\u0006\u0004\u0008A\u0010BJ\u0017\u0010\u0004\u001a\u00020\u00022\u0006\u0010\u0003\u001a\u00020\u0002H&\u00a2\u0006\u0004\u0008\u0004\u0010\u0005J\u0015\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u0002\u00a2\u0006\u0004\u0008\u0007\u0010\u0008J\u0019\u0010\t\u001a\u0004\u0018\u00010\u00062\u0006\u0010\u0003\u001a\u00020\u0002H&\u00a2\u0006\u0004\u0008\t\u0010\u0008J\u0015\u0010\u000b\u001a\u00020\n2\u0006\u0010\u0003\u001a\u00020\u0002\u00a2\u0006\u0004\u0008\u000b\u0010\u000cJ\u001d\u0010\u000f\u001a\u0008\u0012\u0004\u0012\u00020\u00020\u000e2\u0006\u0010\r\u001a\u00020\u0002H&\u00a2\u0006\u0004\u0008\u000f\u0010\u0010J\u001f\u0010\u0011\u001a\n\u0012\u0004\u0012\u00020\u0002\u0018\u00010\u000e2\u0006\u0010\r\u001a\u00020\u0002H&\u00a2\u0006\u0004\u0008\u0011\u0010\u0010J\'\u0010\u0014\u001a\u0008\u0012\u0004\u0012\u00020\u00020\u00132\u0006\u0010\r\u001a\u00020\u00022\u0008\u0008\u0002\u0010\u0012\u001a\u00020\nH\u0016\u00a2\u0006\u0004\u0008\u0014\u0010\u0015J\u001b\u0010\u0014\u001a\u0008\u0012\u0004\u0012\u00020\u00020\u00132\u0006\u0010\r\u001a\u00020\u0002\u00a2\u0006\u0004\u0008\u0014\u0010\u0016J\u0017\u0010\u0019\u001a\u00020\u00182\u0006\u0010\u0017\u001a\u00020\u0002H&\u00a2\u0006\u0004\u0008\u0019\u0010\u001aJ+\u0010\u001d\u001a\u00020\u00182\u0006\u0010\u0017\u001a\u00020\u00022\u0008\u0008\u0002\u0010\u001b\u001a\u00020\n2\u0008\u0008\u0002\u0010\u001c\u001a\u00020\nH&\u00a2\u0006\u0004\u0008\u001d\u0010\u001eJ\u0015\u0010\u001d\u001a\u00020\u00182\u0006\u0010\u0017\u001a\u00020\u0002\u00a2\u0006\u0004\u0008\u001d\u0010\u001aJ\u0017\u0010 \u001a\u00020\u001f2\u0006\u0010\u0017\u001a\u00020\u0002H&\u00a2\u0006\u0004\u0008 \u0010!J:\u0010)\u001a\u00028\u0000\"\u0004\u0008\u0000\u0010\"2\u0006\u0010\u0017\u001a\u00020\u00022\u0017\u0010&\u001a\u0013\u0012\u0004\u0012\u00020$\u0012\u0004\u0012\u00028\u00000#\u00a2\u0006\u0002\u0008%H\u0087\u0008\u00f8\u0001\u0000\u00a2\u0006\u0004\u0008\'\u0010(J!\u0010+\u001a\u00020*2\u0006\u0010\u0017\u001a\u00020\u00022\u0008\u0008\u0002\u0010\u001b\u001a\u00020\nH&\u00a2\u0006\u0004\u0008+\u0010,J\u0015\u0010+\u001a\u00020*2\u0006\u0010\u0017\u001a\u00020\u0002\u00a2\u0006\u0004\u0008+\u0010-JD\u00102\u001a\u00028\u0000\"\u0004\u0008\u0000\u0010\"2\u0006\u0010\u0017\u001a\u00020\u00022\u0008\u0008\u0002\u0010\u001b\u001a\u00020\n2\u0017\u0010/\u001a\u0013\u0012\u0004\u0012\u00020.\u0012\u0004\u0012\u00028\u00000#\u00a2\u0006\u0002\u0008%H\u0087\u0008\u00f8\u0001\u0000\u00a2\u0006\u0004\u00080\u00101J!\u00103\u001a\u00020*2\u0006\u0010\u0017\u001a\u00020\u00022\u0008\u0008\u0002\u0010\u001c\u001a\u00020\nH&\u00a2\u0006\u0004\u00083\u0010,J\u0015\u00103\u001a\u00020*2\u0006\u0010\u0017\u001a\u00020\u0002\u00a2\u0006\u0004\u00083\u0010-J!\u00105\u001a\u0002042\u0006\u0010\r\u001a\u00020\u00022\u0008\u0008\u0002\u0010\u001b\u001a\u00020\nH&\u00a2\u0006\u0004\u00085\u00106J\u0015\u00105\u001a\u0002042\u0006\u0010\r\u001a\u00020\u0002\u00a2\u0006\u0004\u00085\u00107J\u001f\u00108\u001a\u0002042\u0006\u0010\r\u001a\u00020\u00022\u0008\u0008\u0002\u0010\u001b\u001a\u00020\n\u00a2\u0006\u0004\u00088\u00106J\u0015\u00108\u001a\u0002042\u0006\u0010\r\u001a\u00020\u0002\u00a2\u0006\u0004\u00088\u00107J\u001f\u0010:\u001a\u0002042\u0006\u0010 \u001a\u00020\u00022\u0006\u00109\u001a\u00020\u0002H&\u00a2\u0006\u0004\u0008:\u0010;J\u001f\u0010<\u001a\u0002042\u0006\u0010 \u001a\u00020\u00022\u0006\u00109\u001a\u00020\u0002H\u0016\u00a2\u0006\u0004\u0008<\u0010;J!\u0010=\u001a\u0002042\u0006\u0010\u0003\u001a\u00020\u00022\u0008\u0008\u0002\u0010\u001c\u001a\u00020\nH&\u00a2\u0006\u0004\u0008=\u00106J\u0015\u0010=\u001a\u0002042\u0006\u0010\u0003\u001a\u00020\u0002\u00a2\u0006\u0004\u0008=\u00107J!\u0010?\u001a\u0002042\u0006\u0010>\u001a\u00020\u00022\u0008\u0008\u0002\u0010\u001c\u001a\u00020\nH\u0016\u00a2\u0006\u0004\u0008?\u00106J\u0015\u0010?\u001a\u0002042\u0006\u0010>\u001a\u00020\u0002\u00a2\u0006\u0004\u0008?\u00107J\u001f\u0010@\u001a\u0002042\u0006\u0010 \u001a\u00020\u00022\u0006\u00109\u001a\u00020\u0002H&\u00a2\u0006\u0004\u0008@\u0010;\u0082\u0002\u0007\n\u0005\u0008\u009920\u0001\u00a8\u0006D"
     }
     d2 = {
         "Lokio/FileSystem;",
@@ -24,47 +29,61 @@
         "Lokio/Path;",
         "path",
         "canonicalize",
+        "(Lokio/Path;)Lokio/Path;",
         "Lokio/FileMetadata;",
         "metadata",
+        "(Lokio/Path;)Lokio/FileMetadata;",
         "metadataOrNull",
         "",
         "exists",
+        "(Lokio/Path;)Z",
         "dir",
         "",
         "list",
+        "(Lokio/Path;)Ljava/util/List;",
         "listOrNull",
         "followSymlinks",
-        "Lun/m;",
+        "Lh/j3/m;",
         "listRecursively",
+        "(Lokio/Path;Z)Lh/j3/m;",
+        "(Lokio/Path;)Lh/j3/m;",
         "file",
         "Lokio/FileHandle;",
         "openReadOnly",
+        "(Lokio/Path;)Lokio/FileHandle;",
         "mustCreate",
         "mustExist",
         "openReadWrite",
+        "(Lokio/Path;ZZ)Lokio/FileHandle;",
         "Lokio/Source;",
         "source",
+        "(Lokio/Path;)Lokio/Source;",
         "T",
         "Lkotlin/Function1;",
         "Lokio/BufferedSource;",
-        "Lnm/u;",
+        "Lh/u;",
         "readerAction",
         "-read",
-        "(Lokio/Path;Ljn/l;)Ljava/lang/Object;",
+        "(Lokio/Path;Lh/d3/w/l;)Ljava/lang/Object;",
         "read",
         "Lokio/Sink;",
         "sink",
+        "(Lokio/Path;Z)Lokio/Sink;",
+        "(Lokio/Path;)Lokio/Sink;",
         "Lokio/BufferedSink;",
         "writerAction",
         "-write",
-        "(Lokio/Path;ZLjn/l;)Ljava/lang/Object;",
+        "(Lokio/Path;ZLh/d3/w/l;)Ljava/lang/Object;",
         "write",
         "appendingSink",
-        "Lnm/l2;",
+        "Lh/l2;",
         "createDirectory",
+        "(Lokio/Path;Z)V",
+        "(Lokio/Path;)V",
         "createDirectories",
         "target",
         "atomicMove",
+        "(Lokio/Path;Lokio/Path;)V",
         "copy",
         "delete",
         "fileOrDirectory",
@@ -86,37 +105,37 @@
 
 # static fields
 .field public static final Companion:Lokio/FileSystem$Companion;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field public static final RESOURCES:Lokio/FileSystem;
-    .annotation build Lin/e;
+    .annotation build Lh/d3/e;
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field public static final SYSTEM:Lokio/FileSystem;
-    .annotation build Lin/e;
+    .annotation build Lh/d3/e;
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field public static final SYSTEM_TEMPORARY_DIRECTORY:Lokio/Path;
-    .annotation build Lin/e;
+    .annotation build Lh/d3/e;
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 
 # direct methods
-.method public static synthetic -write$default(Lokio/FileSystem;Lokio/Path;ZLjn/l;ILjava/lang/Object;)Ljava/lang/Object;
+.method public static synthetic -write$default(Lokio/FileSystem;Lokio/Path;ZLh/d3/w/l;ILjava/lang/Object;)Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -135,12 +154,14 @@
     :cond_0
     const-string p4, "file"
 
-    invoke-static {p1, p4}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 1
+    invoke-static {p1, p4}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string p4, "writerAction"
+    const-string/jumbo p4, "writerAction"
 
-    invoke-static {p3, p4}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p4}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     invoke-virtual {p0, p1, p2}, Lokio/FileSystem;->sink(Lokio/Path;Z)Lokio/Sink;
 
     move-result-object p0
@@ -151,8 +172,9 @@
 
     const/4 p1, 0x0
 
+    .line 3
     :try_start_0
-    invoke-interface {p3, p0}, Ljn/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, p0}, Lh/d3/w/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
     :try_end_0
@@ -174,6 +196,7 @@
 
     goto :goto_1
 
+    .line 4
     :cond_1
     :try_start_1
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
@@ -191,19 +214,23 @@
 
     goto :goto_1
 
+    .line 5
     :cond_2
-    invoke-static {p1, p0}, Lnm/p;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+    invoke-static {p1, p0}, Lh/p;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
 
     :goto_1
     if-nez p1, :cond_3
 
-    invoke-static {p2}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    .line 6
+    invoke-static {p2}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     return-object p2
 
+    .line 7
     :cond_3
     throw p1
 
+    .line 8
     :cond_4
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -214,22 +241,24 @@
     throw p0
 .end method
 
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 5
 
     new-instance v0, Lokio/FileSystem$Companion;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lokio/FileSystem$Companion;-><init>(Lkotlin/jvm/internal/w;)V
+    invoke-direct {v0, v1}, Lokio/FileSystem$Companion;-><init>(Lh/d3/x/w;)V
 
     sput-object v0, Lokio/FileSystem;->Companion:Lokio/FileSystem$Companion;
 
     :try_start_0
     const-string v0, "java.nio.file.Files"
 
+    .line 1
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
+    .line 2
     new-instance v0, Lokio/NioSystemFileSystem;
 
     invoke-direct {v0}, Lokio/NioSystemFileSystem;-><init>()V
@@ -238,14 +267,17 @@
 
     goto :goto_0
 
+    .line 3
     :catch_0
     new-instance v0, Lokio/JvmSystemFileSystem;
 
     invoke-direct {v0}, Lokio/JvmSystemFileSystem;-><init>()V
 
+    .line 4
     :goto_0
     sput-object v0, Lokio/FileSystem;->SYSTEM:Lokio/FileSystem;
 
+    .line 5
     sget-object v0, Lokio/Path;->Companion:Lokio/Path$Companion;
 
     const-string v2, "java.io.tmpdir"
@@ -256,7 +288,7 @@
 
     const-string v3, "getProperty(\"java.io.tmpdir\")"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v3, 0x1
 
@@ -268,18 +300,21 @@
 
     sput-object v0, Lokio/FileSystem;->SYSTEM_TEMPORARY_DIRECTORY:Lokio/Path;
 
+    .line 6
     new-instance v0, Lokio/internal/ResourceFileSystem;
 
     const-class v1, Lokio/internal/ResourceFileSystem;
 
+    .line 7
     invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v1
 
     const-string v2, "ResourceFileSystem::class.java.classLoader"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 8
     invoke-direct {v0, v1, v4}, Lokio/internal/ResourceFileSystem;-><init>(Ljava/lang/ClassLoader;Z)V
 
     sput-object v0, Lokio/FileSystem;->RESOURCES:Lokio/FileSystem;
@@ -290,6 +325,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -311,6 +347,7 @@
 
     const/4 p2, 0x0
 
+    .line 1
     :cond_0
     invoke-virtual {p0, p1, p2}, Lokio/FileSystem;->appendingSink(Lokio/Path;Z)Lokio/Sink;
 
@@ -344,6 +381,7 @@
 
     const/4 p2, 0x0
 
+    .line 1
     :cond_0
     invoke-virtual {p0, p1, p2}, Lokio/FileSystem;->createDirectories(Lokio/Path;Z)V
 
@@ -375,6 +413,7 @@
 
     const/4 p2, 0x0
 
+    .line 1
     :cond_0
     invoke-virtual {p0, p1, p2}, Lokio/FileSystem;->createDirectory(Lokio/Path;Z)V
 
@@ -406,6 +445,7 @@
 
     const/4 p2, 0x0
 
+    .line 1
     :cond_0
     invoke-virtual {p0, p1, p2}, Lokio/FileSystem;->delete(Lokio/Path;Z)V
 
@@ -437,6 +477,7 @@
 
     const/4 p2, 0x0
 
+    .line 1
     :cond_0
     invoke-virtual {p0, p1, p2}, Lokio/FileSystem;->deleteRecursively(Lokio/Path;Z)V
 
@@ -452,7 +493,7 @@
     throw p0
 .end method
 
-.method public static synthetic listRecursively$default(Lokio/FileSystem;Lokio/Path;ZILjava/lang/Object;)Lun/m;
+.method public static synthetic listRecursively$default(Lokio/FileSystem;Lokio/Path;ZILjava/lang/Object;)Lh/j3/m;
     .locals 0
 
     if-nez p4, :cond_1
@@ -463,8 +504,9 @@
 
     const/4 p2, 0x0
 
+    .line 1
     :cond_0
-    invoke-virtual {p0, p1, p2}, Lokio/FileSystem;->listRecursively(Lokio/Path;Z)Lun/m;
+    invoke-virtual {p0, p1, p2}, Lokio/FileSystem;->listRecursively(Lokio/Path;Z)Lh/j3/m;
 
     move-result-object p0
 
@@ -505,6 +547,7 @@
 
     move p3, v0
 
+    .line 1
     :cond_1
     invoke-virtual {p0, p1, p2, p3}, Lokio/FileSystem;->openReadWrite(Lokio/Path;ZZ)Lokio/FileHandle;
 
@@ -538,6 +581,7 @@
 
     const/4 p2, 0x0
 
+    .line 1
     :cond_0
     invoke-virtual {p0, p1, p2}, Lokio/FileSystem;->sink(Lokio/Path;Z)Lokio/Sink;
 
@@ -557,14 +601,14 @@
 
 
 # virtual methods
-.method public final -read(Lokio/Path;Ljn/l;)Ljava/lang/Object;
+.method public final -read(Lokio/Path;Lh/d3/w/l;)Ljava/lang/Object;
     .locals 2
     .param p1    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .param p2    # Ljn/l;
-        .annotation build Ljv/d;
+    .param p2    # Lh/d3/w/l;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
@@ -573,7 +617,7 @@
             "Ljava/lang/Object;",
             ">(",
             "Lokio/Path;",
-            "Ljn/l<",
+            "Lh/d3/w/l<",
             "-",
             "Lokio/BufferedSource;",
             "+TT;>;)TT;"
@@ -586,18 +630,19 @@
         }
     .end annotation
 
-    .annotation build Lin/h;
+    .annotation build Lh/d3/h;
         name = "-read"
     .end annotation
 
     const-string v0, "file"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "readerAction"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-virtual {p0, p1}, Lokio/FileSystem;->source(Lokio/Path;)Lokio/Source;
 
     move-result-object p0
@@ -608,8 +653,9 @@
 
     const/4 p1, 0x0
 
+    .line 2
     :try_start_0
-    invoke-interface {p2, p0}, Ljn/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, p0}, Lh/d3/w/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
     :try_end_0
@@ -631,6 +677,7 @@
 
     goto :goto_1
 
+    .line 3
     :cond_0
     :try_start_1
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
@@ -648,28 +695,31 @@
 
     goto :goto_1
 
+    .line 4
     :cond_1
-    invoke-static {p1, p0}, Lnm/p;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+    invoke-static {p1, p0}, Lh/p;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
 
     :goto_1
     if-nez p1, :cond_2
 
-    invoke-static {p2}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    .line 5
+    invoke-static {p2}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     return-object p2
 
+    .line 6
     :cond_2
     throw p1
 .end method
 
-.method public final -write(Lokio/Path;ZLjn/l;)Ljava/lang/Object;
+.method public final -write(Lokio/Path;ZLh/d3/w/l;)Ljava/lang/Object;
     .locals 2
     .param p1    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .param p3    # Ljn/l;
-        .annotation build Ljv/d;
+    .param p3    # Lh/d3/w/l;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
@@ -679,7 +729,7 @@
             ">(",
             "Lokio/Path;",
             "Z",
-            "Ljn/l<",
+            "Lh/d3/w/l<",
             "-",
             "Lokio/BufferedSink;",
             "+TT;>;)TT;"
@@ -692,18 +742,19 @@
         }
     .end annotation
 
-    .annotation build Lin/h;
+    .annotation build Lh/d3/h;
         name = "-write"
     .end annotation
 
     const-string v0, "file"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "writerAction"
+    const-string/jumbo v0, "writerAction"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lokio/FileSystem;->sink(Lokio/Path;Z)Lokio/Sink;
 
     move-result-object p0
@@ -714,8 +765,9 @@
 
     const/4 p1, 0x0
 
+    .line 2
     :try_start_0
-    invoke-interface {p3, p0}, Ljn/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, p0}, Lh/d3/w/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
     :try_end_0
@@ -737,6 +789,7 @@
 
     goto :goto_1
 
+    .line 3
     :cond_0
     :try_start_1
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
@@ -754,16 +807,19 @@
 
     goto :goto_1
 
+    .line 4
     :cond_1
-    invoke-static {p1, p0}, Lnm/p;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+    invoke-static {p1, p0}, Lh/p;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
 
     :goto_1
     if-nez p1, :cond_2
 
-    invoke-static {p2}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    .line 5
+    invoke-static {p2}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     return-object p2
 
+    .line 6
     :cond_2
     throw p1
 .end method
@@ -771,7 +827,7 @@
 .method public final appendingSink(Lokio/Path;)Lokio/Sink;
     .locals 1
     .param p1    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -780,15 +836,16 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "file"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, v0}, Lokio/FileSystem;->appendingSink(Lokio/Path;Z)Lokio/Sink;
 
     move-result-object p0
@@ -798,7 +855,7 @@
 
 .method public abstract appendingSink(Lokio/Path;Z)Lokio/Sink;
     .param p1    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -807,17 +864,17 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end method
 
 .method public abstract atomicMove(Lokio/Path;Lokio/Path;)V
     .param p1    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -829,7 +886,7 @@
 
 .method public abstract canonicalize(Lokio/Path;)Lokio/Path;
     .param p1    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -838,18 +895,18 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end method
 
 .method public copy(Lokio/Path;Lokio/Path;)V
     .locals 1
     .param p1    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -860,12 +917,13 @@
 
     const-string v0, "source"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "target"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-static {p0, p1, p2}, Lokio/internal/_FileSystemKt;->commonCopy(Lokio/FileSystem;Lokio/Path;Lokio/Path;)V
 
     return-void
@@ -874,7 +932,7 @@
 .method public final createDirectories(Lokio/Path;)V
     .locals 1
     .param p1    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -885,7 +943,7 @@
 
     const-string v0, "dir"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -898,7 +956,7 @@
 .method public final createDirectories(Lokio/Path;Z)V
     .locals 1
     .param p1    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -909,7 +967,7 @@
 
     const-string v0, "dir"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     invoke-static {p0, p1, p2}, Lokio/internal/_FileSystemKt;->commonCreateDirectories(Lokio/FileSystem;Lokio/Path;Z)V
@@ -920,7 +978,7 @@
 .method public final createDirectory(Lokio/Path;)V
     .locals 1
     .param p1    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -931,10 +989,11 @@
 
     const-string v0, "dir"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, v0}, Lokio/FileSystem;->createDirectory(Lokio/Path;Z)V
 
     return-void
@@ -942,7 +1001,7 @@
 
 .method public abstract createDirectory(Lokio/Path;Z)V
     .param p1    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -954,11 +1013,11 @@
 
 .method public abstract createSymlink(Lokio/Path;Lokio/Path;)V
     .param p1    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -971,7 +1030,7 @@
 .method public final delete(Lokio/Path;)V
     .locals 1
     .param p1    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -982,10 +1041,11 @@
 
     const-string v0, "path"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, v0}, Lokio/FileSystem;->delete(Lokio/Path;Z)V
 
     return-void
@@ -993,7 +1053,7 @@
 
 .method public abstract delete(Lokio/Path;Z)V
     .param p1    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -1006,7 +1066,7 @@
 .method public final deleteRecursively(Lokio/Path;)V
     .locals 1
     .param p1    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -1017,7 +1077,7 @@
 
     const-string v0, "fileOrDirectory"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1030,7 +1090,7 @@
 .method public deleteRecursively(Lokio/Path;Z)V
     .locals 1
     .param p1    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -1041,7 +1101,7 @@
 
     const-string v0, "fileOrDirectory"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     invoke-static {p0, p1, p2}, Lokio/internal/_FileSystemKt;->commonDeleteRecursively(Lokio/FileSystem;Lokio/Path;Z)V
@@ -1052,7 +1112,7 @@
 .method public final exists(Lokio/Path;)Z
     .locals 1
     .param p1    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -1063,8 +1123,9 @@
 
     const-string v0, "path"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-static {p0, p1}, Lokio/internal/_FileSystemKt;->commonExists(Lokio/FileSystem;Lokio/Path;)Z
 
     move-result p0
@@ -1074,7 +1135,7 @@
 
 .method public abstract list(Lokio/Path;)Ljava/util/List;
     .param p1    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
@@ -1094,13 +1155,13 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end method
 
 .method public abstract listOrNull(Lokio/Path;)Ljava/util/List;
     .param p1    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
@@ -1114,14 +1175,14 @@
         }
     .end annotation
 
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 .end method
 
-.method public final listRecursively(Lokio/Path;)Lun/m;
+.method public final listRecursively(Lokio/Path;)Lh/j3/m;
     .locals 1
     .param p1    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
@@ -1129,33 +1190,33 @@
             "(",
             "Lokio/Path;",
             ")",
-            "Lun/m<",
+            "Lh/j3/m<",
             "Lokio/Path;",
             ">;"
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "dir"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
     .line 2
-    invoke-virtual {p0, p1, v0}, Lokio/FileSystem;->listRecursively(Lokio/Path;Z)Lun/m;
+    invoke-virtual {p0, p1, v0}, Lokio/FileSystem;->listRecursively(Lokio/Path;Z)Lh/j3/m;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public listRecursively(Lokio/Path;Z)Lun/m;
+.method public listRecursively(Lokio/Path;Z)Lh/j3/m;
     .locals 1
     .param p1    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
@@ -1163,21 +1224,21 @@
             "(",
             "Lokio/Path;",
             "Z)",
-            "Lun/m<",
+            "Lh/j3/m<",
             "Lokio/Path;",
             ">;"
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "dir"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
-    invoke-static {p0, p1, p2}, Lokio/internal/_FileSystemKt;->commonListRecursively(Lokio/FileSystem;Lokio/Path;Z)Lun/m;
+    invoke-static {p0, p1, p2}, Lokio/internal/_FileSystemKt;->commonListRecursively(Lokio/FileSystem;Lokio/Path;Z)Lh/j3/m;
 
     move-result-object p0
 
@@ -1187,7 +1248,7 @@
 .method public final metadata(Lokio/Path;)Lokio/FileMetadata;
     .locals 1
     .param p1    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -1196,13 +1257,14 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "path"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-static {p0, p1}, Lokio/internal/_FileSystemKt;->commonMetadata(Lokio/FileSystem;Lokio/Path;)Lokio/FileMetadata;
 
     move-result-object p0
@@ -1212,7 +1274,7 @@
 
 .method public abstract metadataOrNull(Lokio/Path;)Lokio/FileMetadata;
     .param p1    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -1221,13 +1283,13 @@
         }
     .end annotation
 
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 .end method
 
 .method public abstract openReadOnly(Lokio/Path;)Lokio/FileHandle;
     .param p1    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -1236,14 +1298,14 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end method
 
 .method public final openReadWrite(Lokio/Path;)Lokio/FileHandle;
     .locals 1
     .param p1    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -1252,15 +1314,16 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "file"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, v0, v0}, Lokio/FileSystem;->openReadWrite(Lokio/Path;ZZ)Lokio/FileHandle;
 
     move-result-object p0
@@ -1270,7 +1333,7 @@
 
 .method public abstract openReadWrite(Lokio/Path;ZZ)Lokio/FileHandle;
     .param p1    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -1279,14 +1342,14 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end method
 
 .method public final sink(Lokio/Path;)Lokio/Sink;
     .locals 1
     .param p1    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -1295,15 +1358,16 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "file"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, v0}, Lokio/FileSystem;->sink(Lokio/Path;Z)Lokio/Sink;
 
     move-result-object p0
@@ -1313,7 +1377,7 @@
 
 .method public abstract sink(Lokio/Path;Z)Lokio/Sink;
     .param p1    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -1322,13 +1386,13 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end method
 
 .method public abstract source(Lokio/Path;)Lokio/Source;
     .param p1    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -1337,6 +1401,6 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end method

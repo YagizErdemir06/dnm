@@ -51,9 +51,19 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "view"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -62,7 +72,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070e51
+    const v1, 0x7f070bb2
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -70,8 +80,10 @@
 
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mStrikethroughLength:F
 
+    .line 3
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mBindView:Landroid/view/View;
 
+    .line 4
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
@@ -80,32 +92,40 @@
 
     const/4 v0, -0x1
 
+    .line 5
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
     const/4 v0, 0x1
 
+    .line 6
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
     const/high16 v1, 0x40800000    # 4.0f
 
+    .line 7
     invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
+    .line 8
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
+    .line 9
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
 
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mPaintShadow:Landroid/graphics/Paint;
 
+    .line 10
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
     const/high16 v0, 0x41400000    # 12.0f
 
+    .line 11
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
+    .line 12
     new-instance v0, Landroid/graphics/PorterDuffXfermode;
 
     sget-object v1, Landroid/graphics/PorterDuff$Mode;->DST_OUT:Landroid/graphics/PorterDuff$Mode;
@@ -114,6 +134,7 @@
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
+    .line 13
     new-instance p1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
@@ -127,17 +148,10 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;Landroid/animation/ValueAnimator;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->lambda$showStrikethrough$0(Landroid/animation/ValueAnimator;)V
-
-    return-void
-.end method
-
 .method public static synthetic access$002(Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;F)F
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mChangeX:F
 
     return p1
@@ -146,6 +160,7 @@
 .method public static synthetic access$100(Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;)F
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mStartX:F
 
     return p0
@@ -154,6 +169,7 @@
 .method public static synthetic access$202(Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;F)F
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mChangeY:F
 
     return p1
@@ -162,6 +178,7 @@
 .method public static synthetic access$300(Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;)F
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mStartY:F
 
     return p0
@@ -170,6 +187,7 @@
 .method public static synthetic access$400(Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;)Landroid/os/Handler;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -178,6 +196,7 @@
 .method public static synthetic access$500(Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;)Landroid/view/View;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mBindView:Landroid/view/View;
 
     return-object p0
@@ -186,6 +205,7 @@
 .method private synthetic lambda$showStrikethrough$0(Landroid/animation/ValueAnimator;)V
     .locals 2
 
+    .line 1
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -196,6 +216,7 @@
 
     move-result p1
 
+    .line 2
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mStartX:F
 
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mEndX:F
@@ -208,6 +229,7 @@
 
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mChangeX:F
 
+    .line 3
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mStartY:F
 
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mEndY:F
@@ -220,6 +242,7 @@
 
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mChangeY:F
 
+    .line 4
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mBindView:Landroid/view/View;
 
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
@@ -229,9 +252,28 @@
 
 
 # virtual methods
+.method public synthetic a(Landroid/animation/ValueAnimator;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->lambda$showStrikethrough$0(Landroid/animation/ValueAnimator;)V
+
+    return-void
+.end method
+
 .method public drawStrikethrough(Landroid/graphics/Canvas;Landroid/graphics/ColorFilter;)V
     .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "canvas",
+            "colorFilter"
+        }
+    .end annotation
 
+    .line 1
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mEndX:F
 
     const/4 v1, 0x0
@@ -246,6 +288,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 2
     :cond_0
     iget v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mStartX:F
 
@@ -261,10 +304,12 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p2}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
+    .line 4
     iget v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mStartX:F
 
     iget v3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mStartY:F
@@ -286,10 +331,12 @@
 
     const-wide v0, 0x4046800000000000L    # 45.0
 
+    .line 1
     invoke-static {v0, v1}, Ljava/lang/Math;->toRadians(D)D
 
     move-result-wide v0
 
+    .line 2
     invoke-static {v0, v1}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v2
@@ -302,6 +349,7 @@
 
     double-to-float v2, v2
 
+    .line 3
     invoke-static {v0, v1}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v0
@@ -314,18 +362,20 @@
 
     double-to-float v0, v0
 
+    .line 4
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mBindView:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v3, 0x7f070e54
+    const v3, 0x7f070bb5
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v1
 
+    .line 5
     iget-object v4, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mBindView:Landroid/view/View;
 
     invoke-virtual {v4}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
@@ -344,6 +394,7 @@
 
     sub-float v5, v1, v0
 
+    .line 6
     iput v5, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mStartX:F
 
     div-float/2addr v3, v4
@@ -352,18 +403,23 @@
 
     sub-float v4, v3, v2
 
+    .line 7
     iput v4, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mStartY:F
 
+    .line 8
     iput v5, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mChangeX:F
 
+    .line 9
     iput v4, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mChangeY:F
 
     add-float/2addr v1, v0
 
+    .line 10
     iput v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mEndX:F
 
     add-float/2addr v3, v2
 
+    .line 11
     iput v3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mEndY:F
 
     return-void
@@ -372,6 +428,7 @@
 .method public isStrikethroughShowing()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mValueAnimator:Landroid/animation/ValueAnimator;
 
     if-eqz p0, :cond_0
@@ -400,8 +457,10 @@
 
     const-string v1, "reset"
 
+    .line 1
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mValueAnimator:Landroid/animation/ValueAnimator;
 
     if-eqz v0, :cond_0
@@ -412,25 +471,30 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mValueAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
+    .line 4
     :cond_0
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mStartX:F
 
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mChangeX:F
 
+    .line 5
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mStartY:F
 
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mChangeY:F
 
+    .line 6
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mBindView:Landroid/view/View;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setClickable(Z)V
 
+    .line 7
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mBindView:Landroid/view/View;
 
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
@@ -440,11 +504,22 @@
 
 .method public showStrikethrough(Lcom/android/camera2/compat/theme/custom/mm/top/IStrikethrough$IStrikethroughCallable;I)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "strikethroughCallable",
+            "delay"
+        }
+    .end annotation
 
     const/4 v0, 0x2
 
     new-array v0, v0, [F
 
+    .line 1
     fill-array-data v0, :array_0
 
     invoke-static {v0}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
@@ -453,12 +528,14 @@
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mValueAnimator:Landroid/animation/ValueAnimator;
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/top/a1;
+    .line 2
+    new-instance v1, Ld/d/b/x5/a/b/b/m/f1;
 
-    invoke-direct {v1, p0}, Lcom/android/camera2/compat/theme/custom/mm/top/a1;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;)V
+    invoke-direct {v1, p0}, Ld/d/b/x5/a/b/b/m/f1;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mValueAnimator:Landroid/animation/ValueAnimator;
 
     new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable$1;
@@ -467,12 +544,14 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
+    .line 4
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mValueAnimator:Landroid/animation/ValueAnimator;
 
     const-wide/16 v0, 0x12c
 
     invoke-virtual {p1, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
+    .line 5
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->mValueAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p0}, Landroid/animation/ValueAnimator;->start()V

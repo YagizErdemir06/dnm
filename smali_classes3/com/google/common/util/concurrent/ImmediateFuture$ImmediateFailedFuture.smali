@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/ImmediateFuture$ImmediateFailedFuture;
+.class public final Lcom/google/common/util/concurrent/ImmediateFuture$ImmediateFailedFuture;
 .super Lcom/google/common/util/concurrent/AbstractFuture$TrustedFuture;
 .source "SourceFile"
 
@@ -28,8 +28,10 @@
 .method public constructor <init>(Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/util/concurrent/AbstractFuture$TrustedFuture;-><init>()V
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/google/common/util/concurrent/AbstractFuture;->setException(Ljava/lang/Throwable;)Z
 
     return-void

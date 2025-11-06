@@ -30,6 +30,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ForwardingCollection;-><init>()V
 
     return-void
@@ -80,6 +81,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingQueue;->delegate()Ljava/util/Queue;
 
     move-result-object p0
@@ -106,6 +108,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingQueue;->delegate()Ljava/util/Queue;
 
     move-result-object p0
@@ -128,6 +131,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingQueue;->delegate()Ljava/util/Queue;
 
     move-result-object p0
@@ -153,6 +157,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingQueue;->delegate()Ljava/util/Queue;
 
     move-result-object p0
@@ -178,6 +183,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingQueue;->delegate()Ljava/util/Queue;
 
     move-result-object p0
@@ -201,6 +207,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ForwardingCollection;->add(Ljava/lang/Object;)Z
 
@@ -227,6 +234,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingQueue;->element()Ljava/lang/Object;
 
@@ -253,6 +261,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingQueue;->remove()Ljava/lang/Object;
 

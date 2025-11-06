@@ -23,45 +23,45 @@
 
 
 # static fields
-.field public static final enum b:Lcom/xiaomi/ai/core/XMDChannel$b;
+.field public static final enum C1:Lcom/xiaomi/ai/core/XMDChannel$b;
+
+.field public static final enum K0:Lcom/xiaomi/ai/core/XMDChannel$b;
+
+.field private static final synthetic K1:[Lcom/xiaomi/ai/core/XMDChannel$b;
 
 .field public static final enum c:Lcom/xiaomi/ai/core/XMDChannel$b;
 
 .field public static final enum d:Lcom/xiaomi/ai/core/XMDChannel$b;
 
-.field public static final enum e:Lcom/xiaomi/ai/core/XMDChannel$b;
-
 .field public static final enum f:Lcom/xiaomi/ai/core/XMDChannel$b;
 
 .field public static final enum g:Lcom/xiaomi/ai/core/XMDChannel$b;
 
-.field public static final enum h:Lcom/xiaomi/ai/core/XMDChannel$b;
-
-.field public static final enum i:Lcom/xiaomi/ai/core/XMDChannel$b;
-
 .field public static final enum j:Lcom/xiaomi/ai/core/XMDChannel$b;
 
-.field public static final enum k:Lcom/xiaomi/ai/core/XMDChannel$b;
+.field public static final enum k0:Lcom/xiaomi/ai/core/XMDChannel$b;
 
-.field public static final enum l:Lcom/xiaomi/ai/core/XMDChannel$b;
+.field public static final enum k1:Lcom/xiaomi/ai/core/XMDChannel$b;
 
 .field public static final enum m:Lcom/xiaomi/ai/core/XMDChannel$b;
 
 .field public static final enum n:Lcom/xiaomi/ai/core/XMDChannel$b;
 
-.field public static final enum o:Lcom/xiaomi/ai/core/XMDChannel$b;
-
 .field public static final enum p:Lcom/xiaomi/ai/core/XMDChannel$b;
 
-.field public static final enum q:Lcom/xiaomi/ai/core/XMDChannel$b;
+.field public static final enum s:Lcom/xiaomi/ai/core/XMDChannel$b;
 
-.field public static final enum r:Lcom/xiaomi/ai/core/XMDChannel$b;
+.field public static final enum t:Lcom/xiaomi/ai/core/XMDChannel$b;
 
-.field public static final synthetic s:[Lcom/xiaomi/ai/core/XMDChannel$b;
+.field public static final enum u:Lcom/xiaomi/ai/core/XMDChannel$b;
+
+.field public static final enum v1:Lcom/xiaomi/ai/core/XMDChannel$b;
+
+.field public static final enum w:Lcom/xiaomi/ai/core/XMDChannel$b;
 
 
 # instance fields
-.field public final a:I
+.field private final v2:I
 
 
 # direct methods
@@ -76,7 +76,7 @@
 
     invoke-direct {v0, v1, v2, v2}, Lcom/xiaomi/ai/core/XMDChannel$b;-><init>(Ljava/lang/String;II)V
 
-    sput-object v0, Lcom/xiaomi/ai/core/XMDChannel$b;->b:Lcom/xiaomi/ai/core/XMDChannel$b;
+    sput-object v0, Lcom/xiaomi/ai/core/XMDChannel$b;->c:Lcom/xiaomi/ai/core/XMDChannel$b;
 
     new-instance v1, Lcom/xiaomi/ai/core/XMDChannel$b;
 
@@ -86,7 +86,7 @@
 
     invoke-direct {v1, v3, v4, v4}, Lcom/xiaomi/ai/core/XMDChannel$b;-><init>(Ljava/lang/String;II)V
 
-    sput-object v1, Lcom/xiaomi/ai/core/XMDChannel$b;->c:Lcom/xiaomi/ai/core/XMDChannel$b;
+    sput-object v1, Lcom/xiaomi/ai/core/XMDChannel$b;->d:Lcom/xiaomi/ai/core/XMDChannel$b;
 
     new-instance v3, Lcom/xiaomi/ai/core/XMDChannel$b;
 
@@ -96,7 +96,7 @@
 
     invoke-direct {v3, v5, v6, v6}, Lcom/xiaomi/ai/core/XMDChannel$b;-><init>(Ljava/lang/String;II)V
 
-    sput-object v3, Lcom/xiaomi/ai/core/XMDChannel$b;->d:Lcom/xiaomi/ai/core/XMDChannel$b;
+    sput-object v3, Lcom/xiaomi/ai/core/XMDChannel$b;->f:Lcom/xiaomi/ai/core/XMDChannel$b;
 
     new-instance v5, Lcom/xiaomi/ai/core/XMDChannel$b;
 
@@ -106,7 +106,7 @@
 
     invoke-direct {v5, v7, v8, v8}, Lcom/xiaomi/ai/core/XMDChannel$b;-><init>(Ljava/lang/String;II)V
 
-    sput-object v5, Lcom/xiaomi/ai/core/XMDChannel$b;->e:Lcom/xiaomi/ai/core/XMDChannel$b;
+    sput-object v5, Lcom/xiaomi/ai/core/XMDChannel$b;->g:Lcom/xiaomi/ai/core/XMDChannel$b;
 
     new-instance v7, Lcom/xiaomi/ai/core/XMDChannel$b;
 
@@ -116,7 +116,7 @@
 
     invoke-direct {v7, v9, v10, v10}, Lcom/xiaomi/ai/core/XMDChannel$b;-><init>(Ljava/lang/String;II)V
 
-    sput-object v7, Lcom/xiaomi/ai/core/XMDChannel$b;->f:Lcom/xiaomi/ai/core/XMDChannel$b;
+    sput-object v7, Lcom/xiaomi/ai/core/XMDChannel$b;->j:Lcom/xiaomi/ai/core/XMDChannel$b;
 
     new-instance v9, Lcom/xiaomi/ai/core/XMDChannel$b;
 
@@ -126,7 +126,7 @@
 
     invoke-direct {v9, v11, v12, v12}, Lcom/xiaomi/ai/core/XMDChannel$b;-><init>(Ljava/lang/String;II)V
 
-    sput-object v9, Lcom/xiaomi/ai/core/XMDChannel$b;->g:Lcom/xiaomi/ai/core/XMDChannel$b;
+    sput-object v9, Lcom/xiaomi/ai/core/XMDChannel$b;->m:Lcom/xiaomi/ai/core/XMDChannel$b;
 
     new-instance v11, Lcom/xiaomi/ai/core/XMDChannel$b;
 
@@ -136,7 +136,7 @@
 
     invoke-direct {v11, v13, v14, v14}, Lcom/xiaomi/ai/core/XMDChannel$b;-><init>(Ljava/lang/String;II)V
 
-    sput-object v11, Lcom/xiaomi/ai/core/XMDChannel$b;->h:Lcom/xiaomi/ai/core/XMDChannel$b;
+    sput-object v11, Lcom/xiaomi/ai/core/XMDChannel$b;->n:Lcom/xiaomi/ai/core/XMDChannel$b;
 
     new-instance v13, Lcom/xiaomi/ai/core/XMDChannel$b;
 
@@ -146,7 +146,7 @@
 
     invoke-direct {v13, v15, v14, v14}, Lcom/xiaomi/ai/core/XMDChannel$b;-><init>(Ljava/lang/String;II)V
 
-    sput-object v13, Lcom/xiaomi/ai/core/XMDChannel$b;->i:Lcom/xiaomi/ai/core/XMDChannel$b;
+    sput-object v13, Lcom/xiaomi/ai/core/XMDChannel$b;->p:Lcom/xiaomi/ai/core/XMDChannel$b;
 
     new-instance v15, Lcom/xiaomi/ai/core/XMDChannel$b;
 
@@ -156,7 +156,7 @@
 
     invoke-direct {v15, v14, v12, v12}, Lcom/xiaomi/ai/core/XMDChannel$b;-><init>(Ljava/lang/String;II)V
 
-    sput-object v15, Lcom/xiaomi/ai/core/XMDChannel$b;->j:Lcom/xiaomi/ai/core/XMDChannel$b;
+    sput-object v15, Lcom/xiaomi/ai/core/XMDChannel$b;->s:Lcom/xiaomi/ai/core/XMDChannel$b;
 
     new-instance v14, Lcom/xiaomi/ai/core/XMDChannel$b;
 
@@ -166,7 +166,7 @@
 
     invoke-direct {v14, v12, v10, v10}, Lcom/xiaomi/ai/core/XMDChannel$b;-><init>(Ljava/lang/String;II)V
 
-    sput-object v14, Lcom/xiaomi/ai/core/XMDChannel$b;->k:Lcom/xiaomi/ai/core/XMDChannel$b;
+    sput-object v14, Lcom/xiaomi/ai/core/XMDChannel$b;->t:Lcom/xiaomi/ai/core/XMDChannel$b;
 
     new-instance v12, Lcom/xiaomi/ai/core/XMDChannel$b;
 
@@ -176,7 +176,7 @@
 
     invoke-direct {v12, v10, v8, v8}, Lcom/xiaomi/ai/core/XMDChannel$b;-><init>(Ljava/lang/String;II)V
 
-    sput-object v12, Lcom/xiaomi/ai/core/XMDChannel$b;->l:Lcom/xiaomi/ai/core/XMDChannel$b;
+    sput-object v12, Lcom/xiaomi/ai/core/XMDChannel$b;->u:Lcom/xiaomi/ai/core/XMDChannel$b;
 
     new-instance v10, Lcom/xiaomi/ai/core/XMDChannel$b;
 
@@ -186,7 +186,7 @@
 
     invoke-direct {v10, v8, v6, v6}, Lcom/xiaomi/ai/core/XMDChannel$b;-><init>(Ljava/lang/String;II)V
 
-    sput-object v10, Lcom/xiaomi/ai/core/XMDChannel$b;->m:Lcom/xiaomi/ai/core/XMDChannel$b;
+    sput-object v10, Lcom/xiaomi/ai/core/XMDChannel$b;->w:Lcom/xiaomi/ai/core/XMDChannel$b;
 
     new-instance v8, Lcom/xiaomi/ai/core/XMDChannel$b;
 
@@ -196,7 +196,7 @@
 
     invoke-direct {v8, v6, v4, v4}, Lcom/xiaomi/ai/core/XMDChannel$b;-><init>(Ljava/lang/String;II)V
 
-    sput-object v8, Lcom/xiaomi/ai/core/XMDChannel$b;->n:Lcom/xiaomi/ai/core/XMDChannel$b;
+    sput-object v8, Lcom/xiaomi/ai/core/XMDChannel$b;->k0:Lcom/xiaomi/ai/core/XMDChannel$b;
 
     new-instance v6, Lcom/xiaomi/ai/core/XMDChannel$b;
 
@@ -206,7 +206,7 @@
 
     invoke-direct {v6, v4, v2, v2}, Lcom/xiaomi/ai/core/XMDChannel$b;-><init>(Ljava/lang/String;II)V
 
-    sput-object v6, Lcom/xiaomi/ai/core/XMDChannel$b;->o:Lcom/xiaomi/ai/core/XMDChannel$b;
+    sput-object v6, Lcom/xiaomi/ai/core/XMDChannel$b;->K0:Lcom/xiaomi/ai/core/XMDChannel$b;
 
     new-instance v4, Lcom/xiaomi/ai/core/XMDChannel$b;
 
@@ -218,7 +218,7 @@
 
     invoke-direct {v4, v2, v6, v6}, Lcom/xiaomi/ai/core/XMDChannel$b;-><init>(Ljava/lang/String;II)V
 
-    sput-object v4, Lcom/xiaomi/ai/core/XMDChannel$b;->p:Lcom/xiaomi/ai/core/XMDChannel$b;
+    sput-object v4, Lcom/xiaomi/ai/core/XMDChannel$b;->k1:Lcom/xiaomi/ai/core/XMDChannel$b;
 
     new-instance v2, Lcom/xiaomi/ai/core/XMDChannel$b;
 
@@ -230,7 +230,7 @@
 
     invoke-direct {v2, v6, v4, v4}, Lcom/xiaomi/ai/core/XMDChannel$b;-><init>(Ljava/lang/String;II)V
 
-    sput-object v2, Lcom/xiaomi/ai/core/XMDChannel$b;->q:Lcom/xiaomi/ai/core/XMDChannel$b;
+    sput-object v2, Lcom/xiaomi/ai/core/XMDChannel$b;->v1:Lcom/xiaomi/ai/core/XMDChannel$b;
 
     new-instance v6, Lcom/xiaomi/ai/core/XMDChannel$b;
 
@@ -242,7 +242,7 @@
 
     invoke-direct {v6, v4, v2, v2}, Lcom/xiaomi/ai/core/XMDChannel$b;-><init>(Ljava/lang/String;II)V
 
-    sput-object v6, Lcom/xiaomi/ai/core/XMDChannel$b;->r:Lcom/xiaomi/ai/core/XMDChannel$b;
+    sput-object v6, Lcom/xiaomi/ai/core/XMDChannel$b;->C1:Lcom/xiaomi/ai/core/XMDChannel$b;
 
     const/16 v4, 0x11
 
@@ -314,12 +314,12 @@
 
     aput-object v6, v4, v2
 
-    sput-object v4, Lcom/xiaomi/ai/core/XMDChannel$b;->s:[Lcom/xiaomi/ai/core/XMDChannel$b;
+    sput-object v4, Lcom/xiaomi/ai/core/XMDChannel$b;->K1:[Lcom/xiaomi/ai/core/XMDChannel$b;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;II)V
+.method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -329,7 +329,7 @@
 
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput p3, p0, Lcom/xiaomi/ai/core/XMDChannel$b;->a:I
+    iput p3, p0, Lcom/xiaomi/ai/core/XMDChannel$b;->v2:I
 
     return-void
 .end method
@@ -337,7 +337,7 @@
 .method public static synthetic a(Lcom/xiaomi/ai/core/XMDChannel$b;)I
     .locals 0
 
-    iget p0, p0, Lcom/xiaomi/ai/core/XMDChannel$b;->a:I
+    iget p0, p0, Lcom/xiaomi/ai/core/XMDChannel$b;->v2:I
 
     return p0
 .end method
@@ -359,7 +359,7 @@
 .method public static values()[Lcom/xiaomi/ai/core/XMDChannel$b;
     .locals 1
 
-    sget-object v0, Lcom/xiaomi/ai/core/XMDChannel$b;->s:[Lcom/xiaomi/ai/core/XMDChannel$b;
+    sget-object v0, Lcom/xiaomi/ai/core/XMDChannel$b;->K1:[Lcom/xiaomi/ai/core/XMDChannel$b;
 
     invoke-virtual {v0}, [Lcom/xiaomi/ai/core/XMDChannel$b;->clone()Ljava/lang/Object;
 

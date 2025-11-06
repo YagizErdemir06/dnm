@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/widget/ShareActionProvider$ShareActivityChooserModelPolicy;
+.class public Landroidx/appcompat/widget/ShareActionProvider$ShareActivityChooserModelPolicy;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/appcompat/widget/ShareActionProvider;
+.field public final synthetic this$0:Landroidx/appcompat/widget/ShareActionProvider;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/appcompat/widget/ShareActionProvider;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/widget/ShareActionProvider$ShareActivityChooserModelPolicy;->this$0:Landroidx/appcompat/widget/ShareActionProvider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,12 +38,14 @@
 .method public onChooseActivity(Landroidx/appcompat/widget/ActivityChooserModel;Landroid/content/Intent;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/widget/ShareActionProvider$ShareActivityChooserModelPolicy;->this$0:Landroidx/appcompat/widget/ShareActionProvider;
 
     iget-object p1, p0, Landroidx/appcompat/widget/ShareActionProvider;->mOnShareTargetSelectedListener:Landroidx/appcompat/widget/ShareActionProvider$OnShareTargetSelectedListener;
 
     if-eqz p1, :cond_0
 
+    .line 2
     invoke-interface {p1, p0, p2}, Landroidx/appcompat/widget/ShareActionProvider$OnShareTargetSelectedListener;->onShareTargetSelected(Landroidx/appcompat/widget/ShareActionProvider;Landroid/content/Intent;)Z
 
     :cond_0

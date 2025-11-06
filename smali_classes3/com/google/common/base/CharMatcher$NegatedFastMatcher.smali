@@ -1,4 +1,4 @@
-.class Lcom/google/common/base/CharMatcher$NegatedFastMatcher;
+.class public Lcom/google/common/base/CharMatcher$NegatedFastMatcher;
 .super Lcom/google/common/base/CharMatcher$Negated;
 .source "SourceFile"
 
@@ -18,6 +18,7 @@
 .method public constructor <init>(Lcom/google/common/base/CharMatcher;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/base/CharMatcher$Negated;-><init>(Lcom/google/common/base/CharMatcher;)V
 
     return-void

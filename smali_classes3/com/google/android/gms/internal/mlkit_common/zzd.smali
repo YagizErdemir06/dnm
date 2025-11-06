@@ -30,6 +30,7 @@
 
     sget v0, Lcom/google/android/gms/internal/mlkit_common/zzj;->zza:I
 
+    .line 1
     invoke-static {p0}, Landroidx/core/content/ContextCompat;->getExternalCacheDirs(Landroid/content/Context;)[Ljava/io/File;
 
     move-result-object p0

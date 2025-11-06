@@ -39,8 +39,10 @@
 .method public constructor <init>(Landroid/content/res/AssetManager;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/bumptech/glide/load/model/AssetUriLoader$FileDescriptorFactory;->assetManager:Landroid/content/res/AssetManager;
 
     return-void
@@ -65,6 +67,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p1, Lcom/bumptech/glide/load/model/AssetUriLoader;
 
     iget-object v0, p0, Lcom/bumptech/glide/load/model/AssetUriLoader$FileDescriptorFactory;->assetManager:Landroid/content/res/AssetManager;
@@ -88,6 +91,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Lcom/bumptech/glide/load/data/FileDescriptorAssetPathFetcher;
 
     invoke-direct {p0, p1, p2}, Lcom/bumptech/glide/load/data/FileDescriptorAssetPathFetcher;-><init>(Landroid/content/res/AssetManager;Ljava/lang/String;)V

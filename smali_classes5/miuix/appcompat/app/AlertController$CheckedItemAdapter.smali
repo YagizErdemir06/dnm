@@ -1,4 +1,4 @@
-.class Lmiuix/appcompat/app/AlertController$CheckedItemAdapter;
+.class public Lmiuix/appcompat/app/AlertController$CheckedItemAdapter;
 .super Landroid/widget/ArrayAdapter;
 .source "SourceFile"
 
@@ -26,6 +26,7 @@
 .method public constructor <init>(Landroid/content/Context;II[Ljava/lang/CharSequence;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;II[Ljava/lang/Object;)V
 
     return-void
@@ -54,15 +55,28 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2, p3}, Landroid/widget/ArrayAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p0
 
     if-nez p2, :cond_0
 
-    invoke-static {p0}, Lnq/d;->c(Landroid/view/View;)V
+    .line 2
+    invoke-static {p0}, Lk/l/c/c;->a(Landroid/view/View;)V
 
     :cond_0
+    const p1, 0x1020014
+
+    .line 3
+    invoke-virtual {p0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/TextView;
+
+    invoke-static {p1}, Lk/b/e/d/e;->b(Landroid/widget/TextView;)V
+
     return-object p0
 .end method
 

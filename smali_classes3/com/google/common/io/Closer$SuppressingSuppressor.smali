@@ -1,4 +1,4 @@
-.class final Lcom/google/common/io/Closer$SuppressingSuppressor;
+.class public final Lcom/google/common/io/Closer$SuppressingSuppressor;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -28,21 +28,24 @@
 .method private constructor <init>(Ljava/lang/reflect/Method;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/io/Closer$SuppressingSuppressor;->addSuppressed:Ljava/lang/reflect/Method;
 
     return-void
 .end method
 
 .method public static tryCreate()Lcom/google/common/io/Closer$SuppressingSuppressor;
-    .locals 4
+    .locals 5
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
+    :try_start_0
     const-class v0, Ljava/lang/Throwable;
 
-    :try_start_0
     const-string v1, "addSuppressed"
 
     const/4 v2, 0x1
@@ -51,7 +54,9 @@
 
     const/4 v3, 0x0
 
-    aput-object v0, v2, v3
+    const-class v4, Ljava/lang/Throwable;
+
+    aput-object v4, v2, v3
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
@@ -59,6 +64,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     new-instance v1, Lcom/google/common/io/Closer$SuppressingSuppressor;
 
     invoke-direct {v1, v0}, Lcom/google/common/io/Closer$SuppressingSuppressor;-><init>(Ljava/lang/reflect/Method;)V
@@ -80,6 +86,7 @@
 
     return-void
 
+    .line 1
     :cond_0
     :try_start_0
     iget-object p0, p0, Lcom/google/common/io/Closer$SuppressingSuppressor;->addSuppressed:Ljava/lang/reflect/Method;
@@ -98,6 +105,7 @@
 
     goto :goto_0
 
+    .line 2
     :catchall_0
     sget-object p0, Lcom/google/common/io/Closer$LoggingSuppressor;->INSTANCE:Lcom/google/common/io/Closer$LoggingSuppressor;
 

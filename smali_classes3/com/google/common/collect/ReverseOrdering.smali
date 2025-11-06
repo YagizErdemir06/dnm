@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/ReverseOrdering;
+.class public final Lcom/google/common/collect/ReverseOrdering;
 .super Lcom/google/common/collect/Ordering;
 .source "SourceFile"
 
@@ -31,7 +31,7 @@
 
 
 # instance fields
-.field final forwardOrder:Lcom/google/common/collect/Ordering;
+.field public final forwardOrder:Lcom/google/common/collect/Ordering;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/Ordering<",
@@ -52,8 +52,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/Ordering;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -83,6 +85,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ReverseOrdering;->forwardOrder:Lcom/google/common/collect/Ordering;
 
     invoke-virtual {p0, p2, p1}, Lcom/google/common/collect/Ordering;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
@@ -105,13 +108,16 @@
 
     return p0
 
+    .line 1
     :cond_0
     instance-of v0, p1, Lcom/google/common/collect/ReverseOrdering;
 
     if-eqz v0, :cond_1
 
+    .line 2
     check-cast p1, Lcom/google/common/collect/ReverseOrdering;
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/collect/ReverseOrdering;->forwardOrder:Lcom/google/common/collect/Ordering;
 
     iget-object p1, p1, Lcom/google/common/collect/ReverseOrdering;->forwardOrder:Lcom/google/common/collect/Ordering;
@@ -131,6 +137,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ReverseOrdering;->forwardOrder:Lcom/google/common/collect/Ordering;
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
@@ -344,6 +351,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ReverseOrdering;->forwardOrder:Lcom/google/common/collect/Ordering;
 
     return-object p0
@@ -352,6 +360,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ReverseOrdering;->forwardOrder:Lcom/google/common/collect/Ordering;
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

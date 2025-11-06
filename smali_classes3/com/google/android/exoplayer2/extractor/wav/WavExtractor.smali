@@ -54,9 +54,8 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/google/android/exoplayer2/extractor/wav/a;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/extractor/wav/a;-><init>()V
+    .line 1
+    sget-object v0, Ld/j/a/b/q2/l/a;->a:Ld/j/a/b/q2/l/a;
 
     sput-object v0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->FACTORY:Lcom/google/android/exoplayer2/extractor/ExtractorsFactory;
 
@@ -66,33 +65,28 @@
 .method public constructor <init>()V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->state:I
 
     const-wide/16 v0, -0x1
 
+    .line 3
     iput-wide v0, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->rf64SampleDataSize:J
 
     const/4 v2, -0x1
 
+    .line 4
     iput v2, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->dataStartPosition:I
 
+    .line 5
     iput-wide v0, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->dataEndPosition:J
 
     return-void
-.end method
-
-.method public static synthetic a()[Lcom/google/android/exoplayer2/extractor/Extractor;
-    .locals 1
-
-    invoke-static {}, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->lambda$static$0()[Lcom/google/android/exoplayer2/extractor/Extractor;
-
-    move-result-object v0
-
-    return-object v0
 .end method
 
 .method private assertInitialized()V
@@ -104,10 +98,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->trackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkStateNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->extractorOutput:Lcom/google/android/exoplayer2/extractor/ExtractorOutput;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Util;->castNonNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -115,13 +111,14 @@
     return-void
 .end method
 
-.method private static synthetic lambda$static$0()[Lcom/google/android/exoplayer2/extractor/Extractor;
+.method public static synthetic lambda$static$0()[Lcom/google/android/exoplayer2/extractor/Extractor;
     .locals 3
 
     const/4 v0, 0x1
 
     new-array v0, v0, [Lcom/google/android/exoplayer2/extractor/Extractor;
 
+    .line 1
     new-instance v1, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;
 
     invoke-direct {v1}, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;-><init>()V
@@ -141,6 +138,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
     move-result-wide v0
@@ -163,20 +161,24 @@
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->dataStartPosition:I
 
     const/4 v2, -0x1
 
     if-eq v0, v2, :cond_1
 
+    .line 3
     invoke-interface {p1, v0}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->skipFully(I)V
 
     const/4 p1, 0x4
 
+    .line 4
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->state:I
 
     return-void
 
+    .line 5
     :cond_1
     invoke-static {p1}, Lcom/google/android/exoplayer2/extractor/wav/WavHeaderReader;->checkFileType(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)Z
 
@@ -184,6 +186,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 6
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPeekPosition()J
 
     move-result-wide v2
@@ -198,16 +201,18 @@
 
     invoke-interface {p1, v0}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->skipFully(I)V
 
+    .line 7
     iput v1, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->state:I
 
     return-void
 
     :cond_2
-    const-string p0, "Unsupported or unrecognized wav file type."
+    const/4 p0, 0x0
 
-    const/4 p1, 0x0
+    const-string p1, "Unsupported or unrecognized wav file type."
 
-    invoke-static {p0, p1}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedContainer(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
+    .line 8
+    invoke-static {p1, p0}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedContainer(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
     move-result-object p0
 
@@ -229,16 +234,19 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/exoplayer2/extractor/wav/WavHeaderReader;->readFormat(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)Lcom/google/android/exoplayer2/extractor/wav/WavFormat;
 
     move-result-object v3
 
+    .line 2
     iget p1, v3, Lcom/google/android/exoplayer2/extractor/wav/WavFormat;->formatType:I
 
     const/16 v0, 0x11
 
     if-ne p1, v0, :cond_0
 
+    .line 3
     new-instance p1, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;
 
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->extractorOutput:Lcom/google/android/exoplayer2/extractor/ExtractorOutput;
@@ -256,15 +264,16 @@
 
     if-ne p1, v0, :cond_1
 
+    .line 4
     new-instance p1, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$PassthroughOutputWriter;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->extractorOutput:Lcom/google/android/exoplayer2/extractor/ExtractorOutput;
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->trackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
-    const-string v4, "audio/g711-alaw"
-
     const/4 v5, -0x1
+
+    const-string v4, "audio/g711-alaw"
 
     move-object v0, p1
 
@@ -279,15 +288,16 @@
 
     if-ne p1, v0, :cond_2
 
+    .line 5
     new-instance p1, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$PassthroughOutputWriter;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->extractorOutput:Lcom/google/android/exoplayer2/extractor/ExtractorOutput;
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->trackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
-    const-string v4, "audio/g711-mlaw"
-
     const/4 v5, -0x1
+
+    const-string v4, "audio/g711-mlaw"
 
     move-object v0, p1
 
@@ -297,15 +307,18 @@
 
     goto :goto_0
 
+    .line 6
     :cond_2
     iget v0, v3, Lcom/google/android/exoplayer2/extractor/wav/WavFormat;->bitsPerSample:I
 
+    .line 7
     invoke-static {p1, v0}, Lcom/google/android/exoplayer2/audio/WavUtil;->getPcmEncodingForType(II)I
 
     move-result v5
 
     if-eqz v5, :cond_3
 
+    .line 8
     new-instance p1, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$PassthroughOutputWriter;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->extractorOutput:Lcom/google/android/exoplayer2/extractor/ExtractorOutput;
@@ -323,10 +336,12 @@
     :goto_0
     const/4 p1, 0x3
 
+    .line 9
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->state:I
 
     return-void
 
+    .line 10
     :cond_3
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -359,6 +374,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/exoplayer2/extractor/wav/WavHeaderReader;->readRf64SampleDataSize(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)J
 
     move-result-wide v0
@@ -367,6 +383,7 @@
 
     const/4 p1, 0x2
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->state:I
 
     return-void
@@ -380,6 +397,7 @@
         }
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->dataEndPosition:J
 
     const-wide/16 v2, -0x1
@@ -400,6 +418,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iget-wide v2, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->dataEndPosition:J
 
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPosition()J
@@ -408,6 +427,7 @@
 
     sub-long/2addr v2, v4
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->outputWriter:Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$OutputWriter;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -436,10 +456,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/exoplayer2/extractor/wav/WavHeaderReader;->skipToSampleData(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)Landroid/util/Pair;
 
     move-result-object v0
 
+    .line 2
     iget-object v1, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/Long;
@@ -450,6 +472,7 @@
 
     iput v1, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->dataStartPosition:I
 
+    .line 3
     iget-object v0, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Long;
@@ -458,6 +481,7 @@
 
     move-result-wide v0
 
+    .line 4
     iget-wide v2, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->rf64SampleDataSize:J
 
     const-wide/16 v4, -0x1
@@ -474,6 +498,7 @@
 
     move-wide v0, v2
 
+    .line 5
     :cond_0
     iget v2, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->dataStartPosition:I
 
@@ -483,6 +508,7 @@
 
     iput-wide v2, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->dataEndPosition:J
 
+    .line 6
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getLength()J
 
     move-result-wide v0
@@ -491,12 +517,14 @@
 
     if-eqz p1, :cond_1
 
+    .line 7
     iget-wide v2, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->dataEndPosition:J
 
     cmp-long p1, v2, v0
 
     if-lez p1, :cond_1
 
+    .line 8
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -523,8 +551,10 @@
 
     invoke-static {v2, p1}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 9
     iput-wide v0, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->dataEndPosition:J
 
+    .line 10
     :cond_1
     iget-object p1, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->outputWriter:Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$OutputWriter;
 
@@ -542,6 +572,7 @@
 
     const/4 p1, 0x4
 
+    .line 11
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->state:I
 
     return-void
@@ -552,18 +583,21 @@
 .method public init(Lcom/google/android/exoplayer2/extractor/ExtractorOutput;)V
     .locals 2
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->extractorOutput:Lcom/google/android/exoplayer2/extractor/ExtractorOutput;
 
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
+    .line 2
     invoke-interface {p1, v0, v1}, Lcom/google/android/exoplayer2/extractor/ExtractorOutput;->track(II)Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->trackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
+    .line 3
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorOutput;->endTracks()V
 
     return-void
@@ -577,8 +611,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->assertInitialized()V
 
+    .line 2
     iget p2, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->state:I
 
     const/4 v0, 0x0
@@ -601,12 +637,14 @@
 
     if-ne p2, v0, :cond_0
 
+    .line 3
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->readSampleData(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)I
 
     move-result p0
 
     return p0
 
+    .line 4
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -614,21 +652,25 @@
 
     throw p0
 
+    .line 5
     :cond_1
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->skipToSampleData(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)V
 
     return v0
 
+    .line 6
     :cond_2
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->readFormat(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)V
 
     return v0
 
+    .line 7
     :cond_3
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->readRf64SampleDataSize(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)V
 
     return v0
 
+    .line 8
     :cond_4
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->readFileType(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)V
 
@@ -657,13 +699,16 @@
     :cond_0
     const/4 p1, 0x4
 
+    .line 1
     :goto_0
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->state:I
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;->outputWriter:Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$OutputWriter;
 
     if-eqz p0, :cond_1
 
+    .line 3
     invoke-interface {p0, p3, p4}, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$OutputWriter;->reset(J)V
 
     :cond_1
@@ -678,6 +723,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/exoplayer2/extractor/wav/WavHeaderReader;->checkFileType(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)Z
 
     move-result p0

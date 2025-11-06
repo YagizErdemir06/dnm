@@ -54,6 +54,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-interface {p0, p1}, Lcom/google/common/collect/ListMultimap;->get(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
@@ -84,6 +85,7 @@
     .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
+    .line 1
     invoke-interface {p0, p1}, Lcom/google/common/collect/ListMultimap;->removeAll(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
@@ -119,6 +121,7 @@
     .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
+    .line 1
     invoke-interface {p0, p1, p2}, Lcom/google/common/collect/ListMultimap;->replaceValues(Ljava/lang/Object;Ljava/lang/Iterable;)Ljava/util/List;
 
     move-result-object p0

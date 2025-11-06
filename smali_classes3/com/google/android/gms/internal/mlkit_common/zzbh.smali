@@ -25,6 +25,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_common/zzbh;->zzb()Ljava/util/concurrent/ExecutorService;
 
     move-result-object p0
@@ -39,11 +40,12 @@
 .method public execute(Ljava/lang/Runnable;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_common/zzbh;->zzb()Ljava/util/concurrent/ExecutorService;
 
     move-result-object p0
 
-    invoke-interface {p0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-interface {p0, p1}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -134,6 +136,7 @@
 .method public final isShutdown()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_common/zzbh;->zzb()Ljava/util/concurrent/ExecutorService;
 
     move-result-object p0
@@ -148,6 +151,7 @@
 .method public final isTerminated()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_common/zzbh;->zzb()Ljava/util/concurrent/ExecutorService;
 
     move-result-object p0
@@ -162,6 +166,7 @@
 .method public final shutdown()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_common/zzbh;->zzb()Ljava/util/concurrent/ExecutorService;
 
     move-result-object p0
@@ -174,6 +179,7 @@
 .method public final shutdownNow()Ljava/util/List;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_common/zzbh;->zzb()Ljava/util/concurrent/ExecutorService;
 
     move-result-object p0

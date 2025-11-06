@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/camera/mivi/MockCameraImageReceiver$3;
+.class public Lcom/xiaomi/camera/mivi/MockCameraImageReceiver$3;
 .super Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
 .source "SourceFile"
 
@@ -15,15 +15,26 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/xiaomi/camera/mivi/MockCameraImageReceiver;
+.field public final synthetic this$0:Lcom/xiaomi/camera/mivi/MockCameraImageReceiver;
 
-.field final synthetic val$requestData:Lcom/xiaomi/camera/mivi/bean/RequestData;
+.field public final synthetic val$requestData:Lcom/xiaomi/camera/mivi/bean/RequestData;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/camera/mivi/MockCameraImageReceiver;Lcom/xiaomi/camera/mivi/bean/RequestData;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$requestData"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/mivi/MockCameraImageReceiver$3;->this$0:Lcom/xiaomi/camera/mivi/MockCameraImageReceiver;
 
     iput-object p2, p0, Lcom/xiaomi/camera/mivi/MockCameraImageReceiver$3;->val$requestData:Lcom/xiaomi/camera/mivi/bean/RequestData;
@@ -49,12 +60,26 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "session",
+            "request",
+            "result"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2, p3}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureCompleted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/TotalCaptureResult;)V
 
-    sget-object p1, Lkb/hi;->Q4:Lkb/kp;
+    .line 2
+    sget-object p1, Ld/d/b/b6/hp;->Q4:Ld/d/b/b6/jp;
 
-    invoke-static {p2, p1}, Lkb/lp;->g(Landroid/hardware/camera2/CaptureRequest;Lkb/kp;)Ljava/lang/Object;
+    invoke-static {p2, p1}, Ld/d/b/b6/kp;->g(Landroid/hardware/camera2/CaptureRequest;Ld/d/b/b6/jp;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -64,6 +89,7 @@
 
     move-result-wide p1
 
+    .line 3
     iget-object v0, p0, Lcom/xiaomi/camera/mivi/MockCameraImageReceiver$3;->this$0:Lcom/xiaomi/camera/mivi/MockCameraImageReceiver;
 
     invoke-static {v0}, Lcom/xiaomi/camera/mivi/MockCameraImageReceiver;->access$200(Lcom/xiaomi/camera/mivi/MockCameraImageReceiver;)Ljava/lang/String;
@@ -90,6 +116,7 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 4
     iget-object p0, p0, Lcom/xiaomi/camera/mivi/MockCameraImageReceiver$3;->this$0:Lcom/xiaomi/camera/mivi/MockCameraImageReceiver;
 
     invoke-static {p0, p3, p1, p2}, Lcom/xiaomi/camera/mivi/MockCameraImageReceiver;->access$900(Lcom/xiaomi/camera/mivi/MockCameraImageReceiver;Landroid/hardware/camera2/CaptureResult;J)V
@@ -111,11 +138,26 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "session",
+            "request",
+            "failure"
+        }
+    .end annotation
+
+    .line 1
     invoke-super {p0, p1, p2, p3}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureFailed(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CaptureFailure;)V
 
+    .line 2
     iget-object p1, p0, Lcom/xiaomi/camera/mivi/MockCameraImageReceiver$3;->this$0:Lcom/xiaomi/camera/mivi/MockCameraImageReceiver;
 
     invoke-static {p1}, Lcom/xiaomi/camera/mivi/MockCameraImageReceiver;->access$200(Lcom/xiaomi/camera/mivi/MockCameraImageReceiver;)Ljava/lang/String;
@@ -162,12 +204,14 @@
 
     invoke-static {p1, p2, p3}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 3
     iget-object p1, p0, Lcom/xiaomi/camera/mivi/MockCameraImageReceiver$3;->this$0:Lcom/xiaomi/camera/mivi/MockCameraImageReceiver;
 
     const/4 p2, 0x4
 
     invoke-static {p1, p2}, Lcom/xiaomi/camera/mivi/MockCameraImageReceiver;->access$600(Lcom/xiaomi/camera/mivi/MockCameraImageReceiver;I)V
 
+    .line 4
     iget-object p1, p0, Lcom/xiaomi/camera/mivi/MockCameraImageReceiver$3;->this$0:Lcom/xiaomi/camera/mivi/MockCameraImageReceiver;
 
     iget-object p0, p0, Lcom/xiaomi/camera/mivi/MockCameraImageReceiver$3;->val$requestData:Lcom/xiaomi/camera/mivi/bean/RequestData;
@@ -195,11 +239,26 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "session",
+            "request",
+            "partialResult"
+        }
+    .end annotation
+
+    .line 1
     invoke-super {p0, p1, p2, p3}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureProgressed(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CaptureResult;)V
 
+    .line 2
     iget-object p0, p0, Lcom/xiaomi/camera/mivi/MockCameraImageReceiver$3;->this$0:Lcom/xiaomi/camera/mivi/MockCameraImageReceiver;
 
     invoke-static {p0}, Lcom/xiaomi/camera/mivi/MockCameraImageReceiver;->access$200(Lcom/xiaomi/camera/mivi/MockCameraImageReceiver;)Ljava/lang/String;
@@ -227,12 +286,28 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "session",
+            "request",
+            "timestamp",
+            "frameNumber"
+        }
+    .end annotation
 
+    .line 1
     invoke-super/range {p0 .. p6}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureStarted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;JJ)V
 
-    sget-object p1, Lkb/hi;->Q4:Lkb/kp;
+    .line 2
+    sget-object p1, Ld/d/b/b6/hp;->Q4:Ld/d/b/b6/jp;
 
-    invoke-static {p2, p1}, Lkb/lp;->g(Landroid/hardware/camera2/CaptureRequest;Lkb/kp;)Ljava/lang/Object;
+    invoke-static {p2, p1}, Ld/d/b/b6/kp;->g(Landroid/hardware/camera2/CaptureRequest;Ld/d/b/b6/jp;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -242,6 +317,7 @@
 
     move-result-wide p1
 
+    .line 3
     iget-object p5, p0, Lcom/xiaomi/camera/mivi/MockCameraImageReceiver$3;->this$0:Lcom/xiaomi/camera/mivi/MockCameraImageReceiver;
 
     invoke-static {p5}, Lcom/xiaomi/camera/mivi/MockCameraImageReceiver;->access$200(Lcom/xiaomi/camera/mivi/MockCameraImageReceiver;)Ljava/lang/String;
@@ -262,13 +338,13 @@
 
     aput-object v1, v0, v2
 
-    const/4 v1, 0x1
-
     invoke-static {p3, p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v3
+    move-result-object v1
 
-    aput-object v3, v0, v1
+    const/4 v3, 0x1
+
+    aput-object v1, v0, v3
 
     const-string v1, "onCaptureStarted: shootingTs: %d, shutterTs: %d"
 
@@ -280,6 +356,7 @@
 
     invoke-static {p5, p6, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 4
     iget-object p0, p0, Lcom/xiaomi/camera/mivi/MockCameraImageReceiver$3;->this$0:Lcom/xiaomi/camera/mivi/MockCameraImageReceiver;
 
     invoke-static {p0, p3, p4, p1, p2}, Lcom/xiaomi/camera/mivi/MockCameraImageReceiver;->access$800(Lcom/xiaomi/camera/mivi/MockCameraImageReceiver;JJ)V

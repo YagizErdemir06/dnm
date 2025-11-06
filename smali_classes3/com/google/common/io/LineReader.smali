@@ -43,32 +43,38 @@
 .method public constructor <init>(Ljava/lang/Readable;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {}, Lcom/google/common/io/CharStreams;->createBuffer()Ljava/nio/CharBuffer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/common/io/LineReader;->cbuf:Ljava/nio/CharBuffer;
 
+    .line 3
     invoke-virtual {v0}, Ljava/nio/CharBuffer;->array()[C
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/common/io/LineReader;->buf:[C
 
+    .line 4
     new-instance v0, Ljava/util/ArrayDeque;
 
     invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
 
     iput-object v0, p0, Lcom/google/common/io/LineReader;->lines:Ljava/util/Queue;
 
+    .line 5
     new-instance v0, Lcom/google/common/io/LineReader$1;
 
     invoke-direct {v0, p0}, Lcom/google/common/io/LineReader$1;-><init>(Lcom/google/common/io/LineReader;)V
 
     iput-object v0, p0, Lcom/google/common/io/LineReader;->lineBuf:Lcom/google/common/io/LineBuffer;
 
+    .line 6
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -77,6 +83,7 @@
 
     iput-object v0, p0, Lcom/google/common/io/LineReader;->readable:Ljava/lang/Readable;
 
+    .line 7
     instance-of v0, p1, Ljava/io/Reader;
 
     if-eqz v0, :cond_0
@@ -97,6 +104,7 @@
 .method public static synthetic access$000(Lcom/google/common/io/LineReader;)Ljava/util/Queue;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/io/LineReader;->lines:Ljava/util/Queue;
 
     return-object p0
@@ -118,6 +126,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     :goto_0
     iget-object v0, p0, Lcom/google/common/io/LineReader;->lines:Ljava/util/Queue;
 
@@ -127,10 +136,12 @@
 
     if-nez v0, :cond_2
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/io/LineReader;->cbuf:Ljava/nio/CharBuffer;
 
     invoke-static {v0}, Lcom/google/common/io/Java8Compatibility;->clear(Ljava/nio/Buffer;)V
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/io/LineReader;->reader:Ljava/io/Reader;
 
     const/4 v1, 0x0
@@ -161,12 +172,14 @@
 
     if-ne v0, v2, :cond_1
 
+    .line 4
     iget-object v0, p0, Lcom/google/common/io/LineReader;->lineBuf:Lcom/google/common/io/LineBuffer;
 
     invoke-virtual {v0}, Lcom/google/common/io/LineBuffer;->finish()V
 
     goto :goto_2
 
+    .line 5
     :cond_1
     iget-object v2, p0, Lcom/google/common/io/LineReader;->lineBuf:Lcom/google/common/io/LineBuffer;
 
@@ -176,6 +189,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_2
     :goto_2
     iget-object p0, p0, Lcom/google/common/io/LineReader;->lines:Ljava/util/Queue;

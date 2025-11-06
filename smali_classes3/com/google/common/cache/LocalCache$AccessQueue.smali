@@ -1,4 +1,4 @@
-.class final Lcom/google/common/cache/LocalCache$AccessQueue;
+.class public final Lcom/google/common/cache/LocalCache$AccessQueue;
 .super Ljava/util/AbstractQueue;
 .source "SourceFile"
 
@@ -28,7 +28,7 @@
 
 
 # instance fields
-.field final head:Lcom/google/common/cache/ReferenceEntry;
+.field public final head:Lcom/google/common/cache/ReferenceEntry;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/cache/ReferenceEntry<",
@@ -42,8 +42,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/util/AbstractQueue;-><init>()V
 
+    .line 2
     new-instance v0, Lcom/google/common/cache/LocalCache$AccessQueue$1;
 
     invoke-direct {v0, p0}, Lcom/google/common/cache/LocalCache$AccessQueue$1;-><init>(Lcom/google/common/cache/LocalCache$AccessQueue;)V
@@ -58,30 +60,36 @@
 .method public clear()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/cache/LocalCache$AccessQueue;->head:Lcom/google/common/cache/ReferenceEntry;
 
     invoke-interface {v0}, Lcom/google/common/cache/ReferenceEntry;->getNextInAccessQueue()Lcom/google/common/cache/ReferenceEntry;
 
     move-result-object v0
 
+    .line 2
     :goto_0
     iget-object v1, p0, Lcom/google/common/cache/LocalCache$AccessQueue;->head:Lcom/google/common/cache/ReferenceEntry;
 
     if-eq v0, v1, :cond_0
 
+    .line 3
     invoke-interface {v0}, Lcom/google/common/cache/ReferenceEntry;->getNextInAccessQueue()Lcom/google/common/cache/ReferenceEntry;
 
     move-result-object v1
 
+    .line 4
     invoke-static {v0}, Lcom/google/common/cache/LocalCache;->nullifyAccessOrder(Lcom/google/common/cache/ReferenceEntry;)V
 
     move-object v0, v1
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-interface {v1, v1}, Lcom/google/common/cache/ReferenceEntry;->setNextInAccessQueue(Lcom/google/common/cache/ReferenceEntry;)V
 
+    .line 6
     iget-object p0, p0, Lcom/google/common/cache/LocalCache$AccessQueue;->head:Lcom/google/common/cache/ReferenceEntry;
 
     invoke-interface {p0, p0}, Lcom/google/common/cache/ReferenceEntry;->setPreviousInAccessQueue(Lcom/google/common/cache/ReferenceEntry;)V
@@ -92,8 +100,10 @@
 .method public contains(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/google/common/cache/ReferenceEntry;
 
+    .line 2
     invoke-interface {p1}, Lcom/google/common/cache/ReferenceEntry;->getNextInAccessQueue()Lcom/google/common/cache/ReferenceEntry;
 
     move-result-object p0
@@ -116,6 +126,7 @@
 .method public isEmpty()Z
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/cache/LocalCache$AccessQueue;->head:Lcom/google/common/cache/ReferenceEntry;
 
     invoke-interface {v0}, Lcom/google/common/cache/ReferenceEntry;->getNextInAccessQueue()Lcom/google/common/cache/ReferenceEntry;
@@ -148,6 +159,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/cache/LocalCache$AccessQueue$2;
 
     invoke-virtual {p0}, Lcom/google/common/cache/LocalCache$AccessQueue;->peek()Lcom/google/common/cache/ReferenceEntry;
@@ -298,20 +310,26 @@
 .method public remove(Ljava/lang/Object;)Z
     .locals 1
 
+    .line 1
     check-cast p1, Lcom/google/common/cache/ReferenceEntry;
 
+    .line 2
     invoke-interface {p1}, Lcom/google/common/cache/ReferenceEntry;->getPreviousInAccessQueue()Lcom/google/common/cache/ReferenceEntry;
 
     move-result-object p0
 
+    .line 3
     invoke-interface {p1}, Lcom/google/common/cache/ReferenceEntry;->getNextInAccessQueue()Lcom/google/common/cache/ReferenceEntry;
 
     move-result-object v0
 
+    .line 4
     invoke-static {p0, v0}, Lcom/google/common/cache/LocalCache;->connectAccessOrder(Lcom/google/common/cache/ReferenceEntry;Lcom/google/common/cache/ReferenceEntry;)V
 
+    .line 5
     invoke-static {p1}, Lcom/google/common/cache/LocalCache;->nullifyAccessOrder(Lcom/google/common/cache/ReferenceEntry;)V
 
+    .line 6
     sget-object p0, Lcom/google/common/cache/LocalCache$NullEntry;->INSTANCE:Lcom/google/common/cache/LocalCache$NullEntry;
 
     if-eq v0, p0, :cond_0
@@ -330,6 +348,7 @@
 .method public size()I
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/cache/LocalCache$AccessQueue;->head:Lcom/google/common/cache/ReferenceEntry;
 
     invoke-interface {v0}, Lcom/google/common/cache/ReferenceEntry;->getNextInAccessQueue()Lcom/google/common/cache/ReferenceEntry;
@@ -338,6 +357,7 @@
 
     const/4 v1, 0x0
 
+    .line 2
     :goto_0
     iget-object v2, p0, Lcom/google/common/cache/LocalCache$AccessQueue;->head:Lcom/google/common/cache/ReferenceEntry;
 
@@ -345,6 +365,7 @@
 
     add-int/lit8 v1, v1, 0x1
 
+    .line 3
     invoke-interface {v0}, Lcom/google/common/cache/ReferenceEntry;->getNextInAccessQueue()Lcom/google/common/cache/ReferenceEntry;
 
     move-result-object v0

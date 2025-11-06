@@ -15,5 +15,15 @@
 
 
 # virtual methods
-.method public abstract T2(Lcom/android/camera/display/layout/g;Lcom/android/camera/display/layout/g;)V
+.method public abstract m2(Ld/d/a/n6/i/n;Ld/d/a/n6/i/n;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "src",
+            "dst"
+        }
+    .end annotation
 .end method

@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;->Gi(Landroidx/recyclerview/widget/RecyclerView;)V
+    value = Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;->ff(Landroidx/recyclerview/widget/RecyclerView;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -21,7 +21,16 @@
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$c;->n:Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;
 
     invoke-direct {p0}, Lcom/android/camera/fragment/DefaultItemAnimator;-><init>()V
@@ -37,7 +46,16 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "viewHolder"
+        }
     .end annotation
 
     const/4 p0, 0x1
@@ -55,6 +73,17 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "viewHolder",
+            "payloads"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

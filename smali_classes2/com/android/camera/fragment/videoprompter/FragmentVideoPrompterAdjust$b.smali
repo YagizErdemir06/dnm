@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompterAdjust;->ai()V
+    value = Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompterAdjust;->qb()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,16 @@
 # direct methods
 .method public constructor <init>(Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompterAdjust;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompterAdjust$b;->a:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompterAdjust;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,7 +46,8 @@
 .method public a()V
     .locals 2
 
-    invoke-static {}, Lcom/android/camera/v2;->f2()I
+    .line 1
+    invoke-static {}, Ld/d/a/d4;->d2()I
 
     move-result p0
 
@@ -45,13 +55,12 @@
 
     move-result-object p0
 
-    invoke-static {}, Lu8/g;->impl()Ljava/util/Optional;
+    .line 2
+    invoke-static {}, Ld/d/a/m7/f;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera/fragment/videoprompter/w;
-
-    invoke-direct {v1}, Lcom/android/camera/fragment/videoprompter/w;-><init>()V
+    sget-object v1, Ld/d/a/u6/g5/a0;->a:Ld/d/a/u6/g5/a0;
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->map(Ljava/util/function/Function;)Ljava/util/Optional;
 
@@ -67,7 +76,8 @@
 
     const-string v1, "prompter_scrolling_speed"
 
-    invoke-static {v1, p0, v0}, Lk9/a;->U3(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .line 3
+    invoke-static {v1, p0, v0}, Ld/d/a/v7/f;->Q3(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

@@ -1,4 +1,4 @@
-.class Landroidx/activity/ComponentActivity$2$1;
+.class public Landroidx/activity/ComponentActivity$2$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,17 +18,18 @@
 
 
 # instance fields
-.field final synthetic this$1:Landroidx/activity/ComponentActivity$2;
+.field public final synthetic this$1:Landroidx/activity/ComponentActivity$2;
 
-.field final synthetic val$requestCode:I
+.field public final synthetic val$requestCode:I
 
-.field final synthetic val$synchronousResult:Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;
+.field public final synthetic val$synchronousResult:Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/activity/ComponentActivity$2;ILandroidx/activity/result/contract/ActivityResultContract$SynchronousResult;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/activity/ComponentActivity$2$1;->this$1:Landroidx/activity/ComponentActivity$2;
 
     iput p2, p0, Landroidx/activity/ComponentActivity$2$1;->val$requestCode:I
@@ -45,6 +46,7 @@
 .method public run()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/activity/ComponentActivity$2$1;->this$1:Landroidx/activity/ComponentActivity$2;
 
     iget v1, p0, Landroidx/activity/ComponentActivity$2$1;->val$requestCode:I

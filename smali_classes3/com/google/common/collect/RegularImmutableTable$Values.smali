@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/RegularImmutableTable$Values;
+.class public final Lcom/google/common/collect/RegularImmutableTable$Values;
 .super Lcom/google/common/collect/ImmutableList;
 .source "SourceFile"
 
@@ -22,7 +22,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/RegularImmutableTable;
+.field public final synthetic this$0:Lcom/google/common/collect/RegularImmutableTable;
 
 
 # direct methods
@@ -56,6 +56,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/RegularImmutableTable$Values;->this$0:Lcom/google/common/collect/RegularImmutableTable;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/RegularImmutableTable;->getValue(I)Ljava/lang/Object;
@@ -76,6 +77,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/RegularImmutableTable$Values;->this$0:Lcom/google/common/collect/RegularImmutableTable;
 
     invoke-interface {p0}, Lcom/google/common/collect/Table;->size()I

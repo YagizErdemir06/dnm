@@ -1,4 +1,4 @@
-.class Landroidx/core/text/PrecomputedTextCompat$PrecomputedTextFutureTask;
+.class public Landroidx/core/text/PrecomputedTextCompat$PrecomputedTextFutureTask;
 .super Ljava/util/concurrent/FutureTask;
 .source "SourceFile"
 
@@ -40,6 +40,7 @@
         .end annotation
     .end param
 
+    .line 1
     new-instance v0, Landroidx/core/text/PrecomputedTextCompat$PrecomputedTextFutureTask$PrecomputedTextCallback;
 
     invoke-direct {v0, p1, p2}, Landroidx/core/text/PrecomputedTextCompat$PrecomputedTextFutureTask$PrecomputedTextCallback;-><init>(Landroidx/core/text/PrecomputedTextCompat$Params;Ljava/lang/CharSequence;)V

@@ -46,9 +46,19 @@
 
 .method public constructor <init>(Lcom/xiaomi/camera/mivi/bean/ResultImageData;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "data"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-virtual {p1}, Lcom/xiaomi/camera/mivi/bean/ResultImageData;->getImages()[Landroid/media/Image;
 
     move-result-object v0
@@ -59,42 +69,49 @@
 
     iput-object v0, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mOutputData:[Lcom/xiaomi/camera/mivi/bean/ResultOutputData$OutputData;
 
+    .line 3
     invoke-virtual {p1}, Lcom/xiaomi/camera/mivi/bean/ResultImageData;->getTimestamp()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mTimestamp:J
 
+    .line 4
     invoke-virtual {p1}, Lcom/xiaomi/camera/mivi/bean/ResultImageData;->getCaptureResult()Landroid/hardware/camera2/CaptureResult;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mCaptureResult:Landroid/hardware/camera2/CaptureResult;
 
+    .line 5
     invoke-virtual {p1}, Lcom/xiaomi/camera/mivi/bean/ResultImageData;->getCustomCaptureResult()Lcom/xiaomi/protocol/ICustomCaptureResult;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mCustomCaptureResult:Lcom/xiaomi/protocol/ICustomCaptureResult;
 
+    .line 6
     invoke-virtual {p1}, Lcom/xiaomi/camera/mivi/bean/ResultImageData;->getPictureName()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mPictureName:Ljava/lang/String;
 
+    .line 7
     invoke-virtual {p1}, Lcom/xiaomi/camera/mivi/bean/ResultImageData;->getFrameNumber()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mFrameNumber:J
 
+    .line 8
     invoke-virtual {p1}, Lcom/xiaomi/camera/mivi/bean/ResultImageData;->getMetadata()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mMetadata:Ljava/lang/String;
 
+    .line 9
     invoke-virtual {p1}, Lcom/xiaomi/camera/mivi/bean/ResultImageData;->getType()I
 
     move-result p1
@@ -108,7 +125,20 @@
 # virtual methods
 .method public addOutputData([BII)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "data",
+            "format",
+            "index"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -127,14 +157,18 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     new-instance v0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData$OutputData;
 
     invoke-direct {v0, p0}, Lcom/xiaomi/camera/mivi/bean/ResultOutputData$OutputData;-><init>(Lcom/xiaomi/camera/mivi/bean/ResultOutputData;)V
 
+    .line 3
     iput-object p1, v0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData$OutputData;->data:[B
 
+    .line 4
     iput p2, v0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData$OutputData;->format:I
 
+    .line 5
     iget-object p0, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mOutputData:[Lcom/xiaomi/camera/mivi/bean/ResultOutputData$OutputData;
 
     aput-object v0, p0, p3
@@ -147,6 +181,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mOutputData:[Lcom/xiaomi/camera/mivi/bean/ResultOutputData$OutputData;
 
     return-void
@@ -154,6 +189,14 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "o"
+        }
+    .end annotation
 
     const/4 v0, 0x1
 
@@ -166,6 +209,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -178,9 +222,11 @@
 
     goto :goto_1
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;
 
+    .line 3
     iget-wide v2, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mTimestamp:J
 
     iget-wide v4, p1, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mTimestamp:J
@@ -199,6 +245,7 @@
 
     iget-object v3, p1, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mOutputData:[Lcom/xiaomi/camera/mivi/bean/ResultOutputData$OutputData;
 
+    .line 4
     invoke-static {v2, v3}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
 
     move-result v2
@@ -209,6 +256,7 @@
 
     iget-object v3, p1, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mCustomCaptureResult:Lcom/xiaomi/protocol/ICustomCaptureResult;
 
+    .line 5
     invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -219,6 +267,7 @@
 
     iget-object p1, p1, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mCaptureResult:Landroid/hardware/camera2/CaptureResult;
 
+    .line 6
     invoke-static {p0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -241,6 +290,7 @@
 .method public getCaptureResult()Landroid/hardware/camera2/CaptureResult;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mCaptureResult:Landroid/hardware/camera2/CaptureResult;
 
     return-object p0
@@ -249,6 +299,7 @@
 .method public getCustomCaptureResult()Lcom/xiaomi/protocol/ICustomCaptureResult;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mCustomCaptureResult:Lcom/xiaomi/protocol/ICustomCaptureResult;
 
     return-object p0
@@ -257,6 +308,7 @@
 .method public getFrameNumber()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mFrameNumber:J
 
     return-wide v0
@@ -265,6 +317,7 @@
 .method public getMetadata()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mMetadata:Ljava/lang/String;
 
     return-object p0
@@ -273,6 +326,7 @@
 .method public getOutputData()[Lcom/xiaomi/camera/mivi/bean/ResultOutputData$OutputData;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mOutputData:[Lcom/xiaomi/camera/mivi/bean/ResultOutputData$OutputData;
 
     return-object p0
@@ -281,6 +335,7 @@
 .method public getOutputFormat()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mOutputFormat:I
 
     return p0
@@ -289,6 +344,7 @@
 .method public getPictureName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mPictureName:Ljava/lang/String;
 
     return-object p0
@@ -297,6 +353,7 @@
 .method public getTimestamp()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mTimestamp:J
 
     return-wide v0
@@ -305,6 +362,7 @@
 .method public getType()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mType:I
 
     return p0
@@ -317,6 +375,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 1
     iget-wide v1, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mTimestamp:J
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -327,17 +386,17 @@
 
     aput-object v1, v0, v2
 
-    const/4 v1, 0x1
+    iget-object v1, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mCustomCaptureResult:Lcom/xiaomi/protocol/ICustomCaptureResult;
 
-    iget-object v2, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mCustomCaptureResult:Lcom/xiaomi/protocol/ICustomCaptureResult;
+    const/4 v2, 0x1
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/4 v1, 0x2
+    iget-object v1, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mCaptureResult:Landroid/hardware/camera2/CaptureResult;
 
-    iget-object v2, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mCaptureResult:Landroid/hardware/camera2/CaptureResult;
+    const/4 v2, 0x2
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
     iget v1, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mOutputFormat:I
 
@@ -355,6 +414,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 2
     iget-object p0, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mOutputData:[Lcom/xiaomi/camera/mivi/bean/ResultOutputData$OutputData;
 
     invoke-static {p0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
@@ -369,17 +429,18 @@
 .method public isDataReady()Z
     .locals 7
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mOutputData:[Lcom/xiaomi/camera/mivi/bean/ResultOutputData$OutputData;
 
     array-length v1, v0
 
-    const/4 v2, 0x1
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    const/4 v3, 0x1
 
-    move v5, v2
+    move v4, v2
 
-    move v4, v3
+    move v5, v3
 
     :goto_0
     if-ge v4, v1, :cond_2
@@ -390,12 +451,12 @@
 
     if-eqz v6, :cond_0
 
-    move v5, v2
+    move v5, v3
 
     goto :goto_1
 
     :cond_0
-    move v5, v3
+    move v5, v2
 
     :goto_1
     if-nez v5, :cond_1
@@ -411,22 +472,21 @@
     :goto_2
     if-eqz v5, :cond_3
 
+    .line 2
     iget-object p0, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mCaptureResult:Landroid/hardware/camera2/CaptureResult;
 
     if-eqz p0, :cond_3
 
-    goto :goto_3
-
-    :cond_3
     move v2, v3
 
-    :goto_3
+    :cond_3
     return v2
 .end method
 
 .method public isUltraRawType()Z
     .locals 5
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mOutputData:[Lcom/xiaomi/camera/mivi/bean/ResultOutputData$OutputData;
 
     const/4 v0, 0x0
@@ -441,6 +501,7 @@
 
     goto :goto_1
 
+    .line 2
     :cond_0
     array-length v1, p0
 
@@ -451,6 +512,7 @@
 
     aget-object v3, p0, v2
 
+    .line 3
     iget v3, v3, Lcom/xiaomi/camera/mivi/bean/ResultOutputData$OutputData;->format:I
 
     const/16 v4, 0x20
@@ -473,7 +535,16 @@
 
 .method public setCaptureResult(Landroid/hardware/camera2/CaptureResult;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mCaptureResult"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mCaptureResult:Landroid/hardware/camera2/CaptureResult;
 
     return-void
@@ -481,7 +552,16 @@
 
 .method public setCustomCaptureResult(Lcom/xiaomi/protocol/ICustomCaptureResult;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mCaptureResult"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mCustomCaptureResult:Lcom/xiaomi/protocol/ICustomCaptureResult;
 
     return-void
@@ -489,7 +569,16 @@
 
 .method public setOutputFormat(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mOutputFormat"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mOutputFormat:I
 
     return-void
@@ -497,7 +586,16 @@
 
 .method public setTimestamp(J)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mTimestamp"
+        }
+    .end annotation
 
+    .line 1
     iput-wide p1, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mTimestamp:J
 
     return-void
@@ -506,6 +604,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -540,6 +639,7 @@
 
     iget-object v1, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData;->mOutputData:[Lcom/xiaomi/camera/mivi/bean/ResultOutputData$OutputData;
 
+    .line 2
     invoke-static {v1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1

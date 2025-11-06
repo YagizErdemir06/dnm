@@ -1,4 +1,4 @@
-.class Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicInternal;
+.class public Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicInternal;
 .super Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicImpl;
 .source "SourceFile"
 
@@ -22,8 +22,10 @@
 .method public constructor <init>(Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionAlgorithm;Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicImpl;-><init>(Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionAlgorithm;)V
 
+    .line 2
     iput-boolean p2, p0, Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicInternal;->mDefaultIsRtl:Z
 
     return-void
@@ -34,6 +36,7 @@
 .method public defaultIsRtl()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Landroidx/core/text/TextDirectionHeuristicsCompat$TextDirectionHeuristicInternal;->mDefaultIsRtl:Z
 
     return p0

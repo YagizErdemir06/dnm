@@ -1,4 +1,4 @@
-.class Lcom/faceunity/core/weight/GLTextureView$DefaultContextFactory;
+.class public Lcom/faceunity/core/weight/GLTextureView$DefaultContextFactory;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -20,7 +20,7 @@
 # instance fields
 .field private EGL_CONTEXT_CLIENT_VERSION:I
 
-.field final synthetic this$0:Lcom/faceunity/core/weight/GLTextureView;
+.field public final synthetic this$0:Lcom/faceunity/core/weight/GLTextureView;
 
 
 # direct methods
@@ -58,6 +58,7 @@
 
     new-array v0, v0, [I
 
+    .line 1
     iget v1, p0, Lcom/faceunity/core/weight/GLTextureView$DefaultContextFactory;->EGL_CONTEXT_CLIENT_VERSION:I
 
     const/4 v2, 0x0
@@ -66,6 +67,7 @@
 
     iget-object v1, p0, Lcom/faceunity/core/weight/GLTextureView$DefaultContextFactory;->this$0:Lcom/faceunity/core/weight/GLTextureView;
 
+    .line 2
     invoke-static {v1}, Lcom/faceunity/core/weight/GLTextureView;->access$200(Lcom/faceunity/core/weight/GLTextureView;)I
 
     move-result v1
@@ -80,8 +82,10 @@
 
     aput v3, v0, v1
 
+    .line 3
     sget-object v1, Landroid/opengl/EGL14;->EGL_NO_CONTEXT:Landroid/opengl/EGLContext;
 
+    .line 4
     iget-object p0, p0, Lcom/faceunity/core/weight/GLTextureView$DefaultContextFactory;->this$0:Lcom/faceunity/core/weight/GLTextureView;
 
     invoke-static {p0}, Lcom/faceunity/core/weight/GLTextureView;->access$200(Lcom/faceunity/core/weight/GLTextureView;)I
@@ -95,6 +99,7 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 5
     :goto_0
     invoke-static {p1, p2, v1, v0, v2}, Landroid/opengl/EGL14;->eglCreateContext(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLConfig;Landroid/opengl/EGLContext;[II)Landroid/opengl/EGLContext;
 
@@ -106,12 +111,14 @@
 .method public destroyContext(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLContext;)V
     .locals 1
 
+    .line 1
     invoke-static {p1, p2}, Landroid/opengl/EGL14;->eglDestroyContext(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLContext;)Z
 
     move-result p0
 
     if-nez p0, :cond_0
 
+    .line 2
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -136,13 +143,14 @@
 
     invoke-static {p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-string p0, "eglDestroyContex"
-
+    .line 3
     invoke-static {}, Landroid/opengl/EGL14;->eglGetError()I
 
-    move-result p1
+    move-result p0
 
-    invoke-static {p0, p1}, Lcom/faceunity/core/weight/GLTextureView$EglHelper;->throwEglException(Ljava/lang/String;I)V
+    const-string p1, "eglDestroyContex"
+
+    invoke-static {p1, p0}, Lcom/faceunity/core/weight/GLTextureView$EglHelper;->throwEglException(Ljava/lang/String;I)V
 
     :cond_0
     return-void

@@ -89,12 +89,15 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->defaultReadObject()V
 
+    .line 2
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readInt()I
 
     move-result v0
 
+    .line 3
     invoke-static {}, Lcom/google/common/primitives/ImmutableLongArray;->builder()Lcom/google/common/primitives/ImmutableLongArray$Builder;
 
     move-result-object v1
@@ -104,6 +107,7 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
+    .line 4
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readDouble()D
 
     move-result-wide v3
@@ -118,6 +122,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     new-instance p1, Ljava/util/concurrent/atomic/AtomicLongArray;
 
@@ -144,12 +149,15 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/io/ObjectOutputStream;->defaultWriteObject()V
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/AtomicDoubleArray;->length()I
 
     move-result v0
 
+    .line 3
     invoke-virtual {p1, v0}, Ljava/io/ObjectOutputStream;->writeInt(I)V
 
     const/4 v1, 0x0
@@ -157,6 +165,7 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
+    .line 4
     invoke-virtual {p0, v1}, Lcom/google/common/util/concurrent/AtomicDoubleArray;->get(I)D
 
     move-result-wide v2
@@ -178,6 +187,7 @@
     .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
+    .line 1
     :cond_0
     iget-object v0, p0, Lcom/google/common/util/concurrent/AtomicDoubleArray;->longs:Ljava/util/concurrent/atomic/AtomicLongArray;
 
@@ -185,16 +195,19 @@
 
     move-result-wide v3
 
+    .line 2
     invoke-static {v3, v4}, Ljava/lang/Double;->longBitsToDouble(J)D
 
     move-result-wide v0
 
     add-double v7, v0, p2
 
+    .line 3
     invoke-static {v7, v8}, Ljava/lang/Double;->doubleToRawLongBits(D)J
 
     move-result-wide v5
 
+    .line 4
     iget-object v1, p0, Lcom/google/common/util/concurrent/AtomicDoubleArray;->longs:Ljava/util/concurrent/atomic/AtomicLongArray;
 
     move v2, p1
@@ -211,6 +224,7 @@
 .method public final compareAndSet(IDD)Z
     .locals 6
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/util/concurrent/AtomicDoubleArray;->longs:Ljava/util/concurrent/atomic/AtomicLongArray;
 
     invoke-static {p2, p3}, Ljava/lang/Double;->doubleToRawLongBits(D)J
@@ -233,6 +247,7 @@
 .method public final get(I)D
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/AtomicDoubleArray;->longs:Ljava/util/concurrent/atomic/AtomicLongArray;
 
     invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicLongArray;->get(I)J
@@ -251,6 +266,7 @@
     .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
+    .line 1
     :cond_0
     iget-object v0, p0, Lcom/google/common/util/concurrent/AtomicDoubleArray;->longs:Ljava/util/concurrent/atomic/AtomicLongArray;
 
@@ -258,16 +274,19 @@
 
     move-result-wide v3
 
+    .line 2
     invoke-static {v3, v4}, Ljava/lang/Double;->longBitsToDouble(J)D
 
     move-result-wide v7
 
     add-double v0, v7, p2
 
+    .line 3
     invoke-static {v0, v1}, Ljava/lang/Double;->doubleToRawLongBits(D)J
 
     move-result-wide v5
 
+    .line 4
     iget-object v1, p0, Lcom/google/common/util/concurrent/AtomicDoubleArray;->longs:Ljava/util/concurrent/atomic/AtomicLongArray;
 
     move v2, p1
@@ -284,10 +303,12 @@
 .method public final getAndSet(ID)D
     .locals 0
 
+    .line 1
     invoke-static {p2, p3}, Ljava/lang/Double;->doubleToRawLongBits(D)J
 
     move-result-wide p2
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/util/concurrent/AtomicDoubleArray;->longs:Ljava/util/concurrent/atomic/AtomicLongArray;
 
     invoke-virtual {p0, p1, p2, p3}, Ljava/util/concurrent/atomic/AtomicLongArray;->getAndSet(IJ)J
@@ -304,10 +325,12 @@
 .method public final lazySet(ID)V
     .locals 0
 
+    .line 1
     invoke-static {p2, p3}, Ljava/lang/Double;->doubleToRawLongBits(D)J
 
     move-result-wide p2
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/util/concurrent/AtomicDoubleArray;->longs:Ljava/util/concurrent/atomic/AtomicLongArray;
 
     invoke-virtual {p0, p1, p2, p3}, Ljava/util/concurrent/atomic/AtomicLongArray;->lazySet(IJ)V
@@ -318,6 +341,7 @@
 .method public final length()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/AtomicDoubleArray;->longs:Ljava/util/concurrent/atomic/AtomicLongArray;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicLongArray;->length()I
@@ -330,10 +354,12 @@
 .method public final set(ID)V
     .locals 0
 
+    .line 1
     invoke-static {p2, p3}, Ljava/lang/Double;->doubleToRawLongBits(D)J
 
     move-result-wide p2
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/util/concurrent/AtomicDoubleArray;->longs:Ljava/util/concurrent/atomic/AtomicLongArray;
 
     invoke-virtual {p0, p1, p2, p3}, Ljava/util/concurrent/atomic/AtomicLongArray;->set(IJ)V
@@ -344,6 +370,7 @@
 .method public toString()Ljava/lang/String;
     .locals 5
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/AtomicDoubleArray;->length()I
 
     move-result v0
@@ -358,6 +385,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -369,10 +397,12 @@
 
     const/16 v2, 0x5b
 
+    .line 3
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     const/4 v2, 0x0
 
+    .line 4
     :goto_0
     iget-object v3, p0, Lcom/google/common/util/concurrent/AtomicDoubleArray;->longs:Ljava/util/concurrent/atomic/AtomicLongArray;
 
@@ -390,6 +420,7 @@
 
     const/16 p0, 0x5d
 
+    .line 5
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -401,6 +432,7 @@
     :cond_1
     const/16 v3, 0x2c
 
+    .line 6
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     const/16 v3, 0x20
@@ -415,6 +447,7 @@
 .method public final weakCompareAndSet(IDD)Z
     .locals 6
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/util/concurrent/AtomicDoubleArray;->longs:Ljava/util/concurrent/atomic/AtomicLongArray;
 
     invoke-static {p2, p3}, Ljava/lang/Double;->doubleToRawLongBits(D)J

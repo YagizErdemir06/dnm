@@ -1,4 +1,4 @@
-.class abstract Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$Transition;
+.class public abstract Landroidx/appcompat/graphics/drawable/AnimatedStateListDrawableCompat$Transition;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

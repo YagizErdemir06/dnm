@@ -1,4 +1,4 @@
-.class final Lcom/google/gson/internal/Streams$AppendableWriter;
+.class public final Lcom/google/gson/internal/Streams$AppendableWriter;
 .super Ljava/io/Writer;
 .source "SourceFile"
 

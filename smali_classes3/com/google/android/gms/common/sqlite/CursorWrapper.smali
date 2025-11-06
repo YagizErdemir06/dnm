@@ -25,6 +25,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Landroid/database/CursorWrapper;-><init>(Landroid/database/Cursor;)V
 
     const/4 v0, 0x0
@@ -34,10 +35,12 @@
 
     if-ge v0, v1, :cond_0
 
+    .line 2
     instance-of v1, p1, Landroid/database/CursorWrapper;
 
     if-eqz v1, :cond_0
 
+    .line 3
     check-cast p1, Landroid/database/CursorWrapper;
 
     invoke-virtual {p1}, Landroid/database/CursorWrapper;->getWrappedCursor()Landroid/database/Cursor;
@@ -48,20 +51,24 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     instance-of v0, p1, Landroid/database/AbstractWindowedCursor;
 
     if-eqz v0, :cond_1
 
+    .line 5
     check-cast p1, Landroid/database/AbstractWindowedCursor;
 
     iput-object p1, p0, Lcom/google/android/gms/common/sqlite/CursorWrapper;->zza:Landroid/database/AbstractWindowedCursor;
 
     return-void
 
+    .line 6
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
+    .line 7
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1
@@ -92,9 +99,10 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/sqlite/CursorWrapper;->zza:Landroid/database/AbstractWindowedCursor;
 
-    invoke-virtual {p0, p1, p2}, Landroid/database/AbstractCursor;->fillWindow(ILandroid/database/CursorWindow;)V
+    invoke-virtual {p0, p1, p2}, Landroid/database/AbstractWindowedCursor;->fillWindow(ILandroid/database/CursorWindow;)V
 
     return-void
 .end method
@@ -107,6 +115,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/sqlite/CursorWrapper;->zza:Landroid/database/AbstractWindowedCursor;
 
     invoke-virtual {p0}, Landroid/database/AbstractWindowedCursor;->getWindow()Landroid/database/CursorWindow;
@@ -129,9 +138,10 @@
 .method public final onMove(II)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/sqlite/CursorWrapper;->zza:Landroid/database/AbstractWindowedCursor;
 
-    invoke-virtual {p0, p1, p2}, Landroid/database/AbstractCursor;->onMove(II)Z
+    invoke-virtual {p0, p1, p2}, Landroid/database/AbstractWindowedCursor;->onMove(II)Z
 
     move-result p0
 
@@ -147,6 +157,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/sqlite/CursorWrapper;->zza:Landroid/database/AbstractWindowedCursor;
 
     invoke-virtual {p0, p1}, Landroid/database/AbstractWindowedCursor;->setWindow(Landroid/database/CursorWindow;)V

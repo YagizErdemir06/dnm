@@ -172,6 +172,7 @@
 .method public isHoleSpan()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/upstream/cache/CacheSpan;->isCached:Z
 
     xor-int/lit8 p0, p0, 0x1
@@ -182,6 +183,7 @@
 .method public isOpenEnded()Z
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/upstream/cache/CacheSpan;->length:J
 
     const-wide/16 v2, -0x1
@@ -204,6 +206,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

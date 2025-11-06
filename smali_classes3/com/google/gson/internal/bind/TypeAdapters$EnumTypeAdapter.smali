@@ -1,4 +1,4 @@
-.class final Lcom/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;
+.class public final Lcom/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;
 .super Lcom/google/gson/TypeAdapter;
 .source "SourceFile"
 
@@ -58,20 +58,24 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/gson/TypeAdapter;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;->nameToConstant:Ljava/util/Map;
 
+    .line 3
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;->constantToName:Ljava/util/Map;
 
+    .line 4
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/Class;->getEnumConstants()[Ljava/lang/Object;
 
@@ -88,10 +92,12 @@
 
     aget-object v3, v0, v2
 
+    .line 5
     invoke-virtual {v3}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v4
 
+    .line 6
     invoke-virtual {p1, v4}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v5
@@ -106,15 +112,18 @@
 
     if-eqz v5, :cond_0
 
+    .line 7
     invoke-interface {v5}, Lcom/google/gson/annotations/SerializedName;->value()Ljava/lang/String;
 
     move-result-object v4
 
+    .line 8
     :cond_0
     iget-object v5, p0, Lcom/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;->nameToConstant:Ljava/util/Map;
 
     invoke-interface {v5, v4, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 9
     iget-object v5, p0, Lcom/google/gson/internal/bind/TypeAdapters$EnumTypeAdapter;->constantToName:Ljava/util/Map;
 
     invoke-interface {v5, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -128,6 +137,7 @@
     :cond_1
     return-void
 
+    .line 10
     :catch_0
     new-instance p0, Ljava/lang/AssertionError;
 

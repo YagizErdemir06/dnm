@@ -38,10 +38,12 @@
 .method public final zza(F)Lcom/google/barhopper/deeplearning/zzb;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdx;->zzm()V
 
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdx;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;
 
+    .line 2
     check-cast v0, Lcom/google/barhopper/deeplearning/zzc;
 
     invoke-static {v0, p1}, Lcom/google/barhopper/deeplearning/zzc;->zzd(Lcom/google/barhopper/deeplearning/zzc;F)V
@@ -52,10 +54,12 @@
 .method public final zzb(F)Lcom/google/barhopper/deeplearning/zzb;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdx;->zzm()V
 
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdx;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;
 
+    .line 2
     check-cast v0, Lcom/google/barhopper/deeplearning/zzc;
 
     invoke-static {v0, p1}, Lcom/google/barhopper/deeplearning/zzc;->zze(Lcom/google/barhopper/deeplearning/zzc;F)V
@@ -66,10 +70,12 @@
 .method public final zzc(I)Lcom/google/barhopper/deeplearning/zzb;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdx;->zzm()V
 
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdx;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;
 
+    .line 2
     check-cast v0, Lcom/google/barhopper/deeplearning/zzc;
 
     invoke-static {v0, p1}, Lcom/google/barhopper/deeplearning/zzc;->zzf(Lcom/google/barhopper/deeplearning/zzc;I)V
@@ -80,10 +86,12 @@
 .method public final zzd(I)Lcom/google/barhopper/deeplearning/zzb;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdx;->zzm()V
 
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdx;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;
 
+    .line 2
     check-cast v0, Lcom/google/barhopper/deeplearning/zzc;
 
     invoke-static {v0, p1}, Lcom/google/barhopper/deeplearning/zzc;->zzc(Lcom/google/barhopper/deeplearning/zzc;I)V

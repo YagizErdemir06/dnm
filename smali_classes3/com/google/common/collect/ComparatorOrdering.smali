@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/ComparatorOrdering;
+.class public final Lcom/google/common/collect/ComparatorOrdering;
 .super Lcom/google/common/collect/Ordering;
 .source "SourceFile"
 
@@ -31,7 +31,7 @@
 
 
 # instance fields
-.field final comparator:Ljava/util/Comparator;
+.field public final comparator:Ljava/util/Comparator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Comparator<",
@@ -52,8 +52,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/Ordering;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -83,6 +85,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ComparatorOrdering;->comparator:Ljava/util/Comparator;
 
     invoke-interface {p0, p1, p2}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
@@ -105,13 +108,16 @@
 
     return p0
 
+    .line 1
     :cond_0
     instance-of v0, p1, Lcom/google/common/collect/ComparatorOrdering;
 
     if-eqz v0, :cond_1
 
+    .line 2
     check-cast p1, Lcom/google/common/collect/ComparatorOrdering;
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/collect/ComparatorOrdering;->comparator:Ljava/util/Comparator;
 
     iget-object p1, p1, Lcom/google/common/collect/ComparatorOrdering;->comparator:Ljava/util/Comparator;
@@ -131,6 +137,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ComparatorOrdering;->comparator:Ljava/util/Comparator;
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
@@ -143,6 +150,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ComparatorOrdering;->comparator:Ljava/util/Comparator;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;

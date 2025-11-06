@@ -15,26 +15,26 @@
 
 
 # instance fields
-.field mIcon:Landroidx/core/graphics/drawable/IconCompat;
+.field public mIcon:Landroidx/core/graphics/drawable/IconCompat;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field mIsBot:Z
+.field public mIsBot:Z
 
-.field mIsImportant:Z
+.field public mIsImportant:Z
 
-.field mKey:Ljava/lang/String;
+.field public mKey:Ljava/lang/String;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field mName:Ljava/lang/CharSequence;
+.field public mName:Ljava/lang/CharSequence;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field mUri:Ljava/lang/String;
+.field public mUri:Ljava/lang/String;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -96,6 +96,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     new-instance v0, Landroidx/core/app/Person;
 
     invoke-direct {v0, p0}, Landroidx/core/app/Person;-><init>(Landroidx/core/app/Person$Builder;)V
@@ -108,6 +109,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iput-boolean p1, p0, Landroidx/core/app/Person$Builder;->mIsBot:Z
 
     return-object p0
@@ -122,6 +124,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroidx/core/app/Person$Builder;->mIcon:Landroidx/core/graphics/drawable/IconCompat;
 
     return-object p0
@@ -132,6 +135,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iput-boolean p1, p0, Landroidx/core/app/Person$Builder;->mIsImportant:Z
 
     return-object p0
@@ -146,6 +150,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroidx/core/app/Person$Builder;->mKey:Ljava/lang/String;
 
     return-object p0
@@ -160,6 +165,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroidx/core/app/Person$Builder;->mName:Ljava/lang/CharSequence;
 
     return-object p0
@@ -174,6 +180,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroidx/core/app/Person$Builder;->mUri:Ljava/lang/String;
 
     return-object p0

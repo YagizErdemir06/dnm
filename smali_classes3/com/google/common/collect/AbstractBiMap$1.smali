@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/AbstractBiMap$1;
+.class public Lcom/google/common/collect/AbstractBiMap$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field entry:Ljava/util/Map$Entry;
+.field public entry:Ljava/util/Map$Entry;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map$Entry<",
@@ -39,15 +39,16 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Lcom/google/common/collect/AbstractBiMap;
+.field public final synthetic this$0:Lcom/google/common/collect/AbstractBiMap;
 
-.field final synthetic val$iterator:Ljava/util/Iterator;
+.field public final synthetic val$iterator:Ljava/util/Iterator;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/AbstractBiMap;Ljava/util/Iterator;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/AbstractBiMap$1;->this$0:Lcom/google/common/collect/AbstractBiMap;
 
     iput-object p2, p0, Lcom/google/common/collect/AbstractBiMap$1;->val$iterator:Ljava/util/Iterator;
@@ -62,6 +63,7 @@
 .method public hasNext()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/AbstractBiMap$1;->val$iterator:Ljava/util/Iterator;
 
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
@@ -116,28 +118,34 @@
 .method public remove()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/AbstractBiMap$1;->entry:Ljava/util/Map$Entry;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 3
     iget-object v1, p0, Lcom/google/common/collect/AbstractBiMap$1;->val$iterator:Ljava/util/Iterator;
 
     invoke-interface {v1}, Ljava/util/Iterator;->remove()V
 
+    .line 4
     iget-object v1, p0, Lcom/google/common/collect/AbstractBiMap$1;->this$0:Lcom/google/common/collect/AbstractBiMap;
 
     invoke-static {v1, v0}, Lcom/google/common/collect/AbstractBiMap;->access$600(Lcom/google/common/collect/AbstractBiMap;Ljava/lang/Object;)V
 
     const/4 v0, 0x0
 
+    .line 5
     iput-object v0, p0, Lcom/google/common/collect/AbstractBiMap$1;->entry:Ljava/util/Map$Entry;
 
     return-void
 
+    .line 6
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 

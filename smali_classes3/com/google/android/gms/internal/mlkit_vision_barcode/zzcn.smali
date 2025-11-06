@@ -1,16 +1,17 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcn;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcn;
 .super Ljava/util/AbstractCollection;
 .source "SourceFile"
 
 
 # instance fields
-.field final zza:Ljava/util/Map;
+.field public final zza:Ljava/util/Map;
 
 
 # direct methods
 .method public constructor <init>(Ljava/util/Map;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcn;->zza:Ljava/util/Map;
@@ -23,6 +24,7 @@
 .method public final clear()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcn;->zza:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->clear()V
@@ -37,6 +39,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcn;->zza:Ljava/util/Map;
 
     invoke-interface {p0, p1}, Ljava/util/Map;->containsValue(Ljava/lang/Object;)Z
@@ -49,6 +52,7 @@
 .method public final isEmpty()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcn;->zza:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->isEmpty()Z
@@ -61,6 +65,7 @@
 .method public final iterator()Ljava/util/Iterator;
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcn;->zza:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -73,6 +78,7 @@
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzck;
 
+    .line 2
     invoke-direct {v0, p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzck;-><init>(Ljava/util/Iterator;)V
 
     return-object v0
@@ -85,6 +91,7 @@
         .end annotation
     .end param
 
+    .line 1
     :try_start_0
     invoke-super {p0, p1}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
 
@@ -97,6 +104,7 @@
     :catch_0
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcn;->zza:Ljava/util/Map;
 
+    .line 2
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v0
@@ -118,6 +126,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
+    .line 3
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
@@ -130,6 +139,7 @@
 
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcn;->zza:Ljava/util/Map;
 
+    .line 4
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object p1
@@ -149,8 +159,10 @@
 .method public final removeAll(Ljava/util/Collection;)Z
     .locals 4
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 1
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     :try_start_0
     invoke-super {p0, p1}, Ljava/util/AbstractCollection;->removeAll(Ljava/util/Collection;)Z
 
@@ -160,13 +172,16 @@
 
     return p0
 
+    .line 3
     :catch_0
     new-instance v0, Ljava/util/HashSet;
 
+    .line 4
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iget-object v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcn;->zza:Ljava/util/Map;
 
+    .line 5
     invoke-interface {v1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v1
@@ -189,6 +204,7 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
+    .line 6
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
@@ -199,6 +215,7 @@
 
     if-eqz v3, :cond_0
 
+    .line 7
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -210,6 +227,7 @@
     :cond_1
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcn;->zza:Ljava/util/Map;
 
+    .line 8
     invoke-interface {p0}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object p0
@@ -224,8 +242,10 @@
 .method public final retainAll(Ljava/util/Collection;)Z
     .locals 4
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 1
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     :try_start_0
     invoke-super {p0, p1}, Ljava/util/AbstractCollection;->retainAll(Ljava/util/Collection;)Z
 
@@ -235,13 +255,16 @@
 
     return p0
 
+    .line 3
     :catch_0
     new-instance v0, Ljava/util/HashSet;
 
+    .line 4
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iget-object v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcn;->zza:Ljava/util/Map;
 
+    .line 5
     invoke-interface {v1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v1
@@ -264,6 +287,7 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
+    .line 6
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
@@ -274,6 +298,7 @@
 
     if-eqz v3, :cond_0
 
+    .line 7
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -285,6 +310,7 @@
     :cond_1
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcn;->zza:Ljava/util/Map;
 
+    .line 8
     invoke-interface {p0}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object p0
@@ -299,6 +325,7 @@
 .method public final size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcn;->zza:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->size()I

@@ -1,4 +1,4 @@
-.class Lcom/google/android/gms/internal/mlkit_vision_barcode/zzat;
+.class public Lcom/google/android/gms/internal/mlkit_vision_barcode/zzat;
 .super Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbe;
 .source "SourceFile"
 
@@ -10,6 +10,7 @@
 .method public constructor <init>(Ljava/util/Map;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbe;-><init>(Ljava/util/Map;)V
 
     return-void
@@ -28,6 +29,7 @@
 .method public final zzb(Ljava/lang/Object;Ljava/util/Collection;)Ljava/util/Collection;
     .locals 1
 
+    .line 1
     check-cast p2, Ljava/util/List;
 
     const/4 v0, 0x0
@@ -42,6 +44,7 @@
 .method public final zzc(Ljava/lang/Object;)Ljava/util/List;
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbe;->zze(Ljava/lang/Object;)Ljava/util/Collection;
 
     move-result-object p0

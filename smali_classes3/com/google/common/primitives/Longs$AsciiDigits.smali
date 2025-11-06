@@ -1,4 +1,4 @@
-.class final Lcom/google/common/primitives/Longs$AsciiDigits;
+.class public final Lcom/google/common/primitives/Longs$AsciiDigits;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -28,6 +28,7 @@
 
     const/4 v1, -0x1
 
+    .line 1
     invoke-static {v0, v1}, Ljava/util/Arrays;->fill([BB)V
 
     const/4 v1, 0x0
@@ -43,6 +44,7 @@
 
     int-to-byte v4, v2
 
+    .line 2
     aput-byte v4, v0, v3
 
     add-int/lit8 v2, v2, 0x1
@@ -61,16 +63,19 @@
 
     int-to-byte v3, v3
 
+    .line 3
     aput-byte v3, v0, v2
 
     add-int/lit8 v2, v1, 0x61
 
+    .line 4
     aput-byte v3, v0, v2
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
+    .line 5
     :cond_1
     sput-object v0, Lcom/google/common/primitives/Longs$AsciiDigits;->asciiDigits:[B
 
@@ -80,6 +85,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -92,6 +98,7 @@
 
     if-ge p0, v0, :cond_0
 
+    .line 1
     sget-object v0, Lcom/google/common/primitives/Longs$AsciiDigits;->asciiDigits:[B
 
     aget-byte p0, v0, p0

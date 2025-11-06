@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/RegularImmutableSortedMultiset;
+.class public final Lcom/google/common/collect/RegularImmutableSortedMultiset;
 .super Lcom/google/common/collect/ImmutableSortedMultiset;
 .source "SourceFile"
 
@@ -22,7 +22,7 @@
 
 
 # static fields
-.field static final NATURAL_EMPTY_MULTISET:Lcom/google/common/collect/ImmutableSortedMultiset;
+.field public static final NATURAL_EMPTY_MULTISET:Lcom/google/common/collect/ImmutableSortedMultiset;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/ImmutableSortedMultiset<",
@@ -38,7 +38,7 @@
 # instance fields
 .field private final transient cumulativeCounts:[J
 
-.field final transient elementSet:Lcom/google/common/collect/RegularImmutableSortedSet;
+.field public final transient elementSet:Lcom/google/common/collect/RegularImmutableSortedSet;
     .annotation build Lcom/google/common/annotations/VisibleForTesting;
     .end annotation
 
@@ -69,10 +69,13 @@
 
     aput-wide v2, v0, v1
 
+    .line 1
     sput-object v0, Lcom/google/common/collect/RegularImmutableSortedMultiset;->ZERO_CUMULATIVE_COUNTS:[J
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/RegularImmutableSortedMultiset;
 
+    .line 3
     invoke-static {}, Lcom/google/common/collect/Ordering;->natural()Lcom/google/common/collect/Ordering;
 
     move-result-object v1
@@ -151,6 +154,7 @@
 .method private getCount(I)I
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/RegularImmutableSortedMultiset;->cumulativeCounts:[J
 
     iget p0, p0, Lcom/google/common/collect/RegularImmutableSortedMultiset;->offset:I
@@ -181,6 +185,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/RegularImmutableSortedMultiset;->elementSet:Lcom/google/common/collect/RegularImmutableSortedSet;
 
     invoke-virtual {v0, p1}, Lcom/google/common/collect/RegularImmutableSortedSet;->indexOf(Ljava/lang/Object;)I
@@ -189,6 +194,7 @@
 
     if-ltz p1, :cond_0
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/common/collect/RegularImmutableSortedMultiset;->getCount(I)I
 
     move-result p0
@@ -275,6 +281,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Ljava/util/AbstractCollection;->isEmpty()Z
 
     move-result v0
@@ -306,6 +313,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/RegularImmutableSortedMultiset;->elementSet:Lcom/google/common/collect/RegularImmutableSortedSet;
 
     invoke-virtual {v0}, Lcom/google/common/collect/RegularImmutableSortedSet;->asList()Lcom/google/common/collect/ImmutableList;
@@ -337,12 +345,14 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/common/collect/RegularImmutableSortedMultiset;->length:I
 
     invoke-static {p1, p2, v0}, Lcom/google/common/base/Preconditions;->checkPositionIndexes(III)V
 
     if-ne p1, p2, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableSortedMultiset;->comparator()Ljava/util/Comparator;
 
     move-result-object p0
@@ -356,12 +366,14 @@
     :cond_0
     if-nez p1, :cond_1
 
+    .line 3
     iget v0, p0, Lcom/google/common/collect/RegularImmutableSortedMultiset;->length:I
 
     if-ne p2, v0, :cond_1
 
     return-object p0
 
+    .line 4
     :cond_1
     iget-object v0, p0, Lcom/google/common/collect/RegularImmutableSortedMultiset;->elementSet:Lcom/google/common/collect/RegularImmutableSortedSet;
 
@@ -369,6 +381,7 @@
 
     move-result-object v0
 
+    .line 5
     new-instance v1, Lcom/google/common/collect/RegularImmutableSortedMultiset;
 
     iget-object v2, p0, Lcom/google/common/collect/RegularImmutableSortedMultiset;->cumulativeCounts:[J
@@ -442,6 +455,7 @@
 .method public isPartialView()Z
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/common/collect/RegularImmutableSortedMultiset;->offset:I
 
     const/4 v1, 0x1
@@ -481,6 +495,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Ljava/util/AbstractCollection;->isEmpty()Z
 
     move-result v0
@@ -507,6 +522,7 @@
 .method public size()I
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/RegularImmutableSortedMultiset;->cumulativeCounts:[J
 
     iget v1, p0, Lcom/google/common/collect/RegularImmutableSortedMultiset;->offset:I
@@ -521,6 +537,7 @@
 
     sub-long/2addr v2, v0
 
+    .line 2
     invoke-static {v2, v3}, Lcom/google/common/primitives/Ints;->saturatedCast(J)I
 
     move-result p0

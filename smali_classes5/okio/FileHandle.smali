@@ -18,9 +18,14 @@
     value = "SMAP\nFileHandle.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FileHandle.kt\nokio/FileHandle\n+ 2 -JvmPlatform.kt\nokio/_JvmPlatformKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 4 RealBufferedSource.kt\nokio/RealBufferedSource\n+ 5 RealBufferedSink.kt\nokio/RealBufferedSink\n+ 6 -Util.kt\nokio/_UtilKt\n*L\n1#1,442:1\n27#2:443\n27#2:445\n27#2:446\n27#2:447\n27#2:448\n27#2:449\n27#2:450\n27#2:451\n27#2:455\n27#2:457\n1#3:444\n61#4:452\n61#4:453\n61#4:454\n50#5:456\n84#6:458\n84#6:459\n*S KotlinDebug\n*F\n+ 1 FileHandle.kt\nokio/FileHandle\n*L\n67#1:443\n79#1:445\n90#1:446\n103#1:447\n117#1:448\n127#1:449\n137#1:450\n149#1:451\n219#1:455\n285#1:457\n167#1:452\n193#1:453\n200#1:454\n246#1:456\n343#1:458\n372#1:459\n*E\n"
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000F\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0010\u000b\n\u0002\u0008\u000c\u0008&\u0018\u00002\u00060\u0001j\u0002`\u0002:\u0002+,B\u000f\u0012\u0006\u0010\"\u001a\u00020!\u00a2\u0006\u0004\u0008)\u0010*J \u0010\u0008\u001a\u00020\u00032\u0006\u0010\u0004\u001a\u00020\u00032\u0006\u0010\u0006\u001a\u00020\u00052\u0006\u0010\u0007\u001a\u00020\u0003H\u0002J \u0010\u000b\u001a\u00020\n2\u0006\u0010\u0004\u001a\u00020\u00032\u0006\u0010\t\u001a\u00020\u00052\u0006\u0010\u0007\u001a\u00020\u0003H\u0002J&\u0010\u0010\u001a\u00020\u000e2\u0006\u0010\u0004\u001a\u00020\u00032\u0006\u0010\r\u001a\u00020\u000c2\u0006\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\u0007\u001a\u00020\u000eJ\u001e\u0010\u0010\u001a\u00020\u00032\u0006\u0010\u0004\u001a\u00020\u00032\u0006\u0010\u0006\u001a\u00020\u00052\u0006\u0010\u0007\u001a\u00020\u0003J\u0006\u0010\u0011\u001a\u00020\u0003J\u000e\u0010\u0012\u001a\u00020\n2\u0006\u0010\u0011\u001a\u00020\u0003J&\u0010\u0013\u001a\u00020\n2\u0006\u0010\u0004\u001a\u00020\u00032\u0006\u0010\r\u001a\u00020\u000c2\u0006\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\u0007\u001a\u00020\u000eJ\u001e\u0010\u0013\u001a\u00020\n2\u0006\u0010\u0004\u001a\u00020\u00032\u0006\u0010\t\u001a\u00020\u00052\u0006\u0010\u0007\u001a\u00020\u0003J\u0006\u0010\u0014\u001a\u00020\nJ\u0010\u0010\t\u001a\u00020\u00152\u0008\u0008\u0002\u0010\u0004\u001a\u00020\u0003J\u000e\u0010\u0016\u001a\u00020\u00032\u0006\u0010\t\u001a\u00020\u0015J\u0016\u0010\u0017\u001a\u00020\n2\u0006\u0010\t\u001a\u00020\u00152\u0006\u0010\u0016\u001a\u00020\u0003J\u0010\u0010\u0006\u001a\u00020\u00182\u0008\u0008\u0002\u0010\u0004\u001a\u00020\u0003J\u0006\u0010\u0019\u001a\u00020\u0018J\u000e\u0010\u0016\u001a\u00020\u00032\u0006\u0010\u0006\u001a\u00020\u0018J\u0016\u0010\u0017\u001a\u00020\n2\u0006\u0010\u0006\u001a\u00020\u00182\u0006\u0010\u0016\u001a\u00020\u0003J\u0006\u0010\u001a\u001a\u00020\nJ(\u0010\u001b\u001a\u00020\u000e2\u0006\u0010\u0004\u001a\u00020\u00032\u0006\u0010\r\u001a\u00020\u000c2\u0006\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\u0007\u001a\u00020\u000eH$J(\u0010\u001c\u001a\u00020\n2\u0006\u0010\u0004\u001a\u00020\u00032\u0006\u0010\r\u001a\u00020\u000c2\u0006\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\u0007\u001a\u00020\u000eH$J\u0008\u0010\u001d\u001a\u00020\nH$J\u0010\u0010\u001e\u001a\u00020\n2\u0006\u0010\u0011\u001a\u00020\u0003H$J\u0008\u0010\u001f\u001a\u00020\u0003H$J\u0008\u0010 \u001a\u00020\nH$R\u0017\u0010\"\u001a\u00020!8\u0006\u00a2\u0006\u000c\n\u0004\u0008\"\u0010#\u001a\u0004\u0008$\u0010%R\u0016\u0010&\u001a\u00020!8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008&\u0010#R\u0016\u0010\'\u001a\u00020\u000e8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\'\u0010(\u00a8\u0006-"
+        "\u0000H\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u000b\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u000c\n\u0002\u0010\u000b\n\u0002\u0008\u000c\u0008&\u0018\u00002\u00060\u0001j\u0002`\u0002:\u00029:B\u000f\u0012\u0006\u00104\u001a\u00020/\u00a2\u0006\u0004\u00087\u00108J\'\u0010\u0008\u001a\u00020\u00032\u0006\u0010\u0004\u001a\u00020\u00032\u0006\u0010\u0006\u001a\u00020\u00052\u0006\u0010\u0007\u001a\u00020\u0003H\u0002\u00a2\u0006\u0004\u0008\u0008\u0010\tJ\'\u0010\u000c\u001a\u00020\u000b2\u0006\u0010\u0004\u001a\u00020\u00032\u0006\u0010\n\u001a\u00020\u00052\u0006\u0010\u0007\u001a\u00020\u0003H\u0002\u00a2\u0006\u0004\u0008\u000c\u0010\rJ-\u0010\u0012\u001a\u00020\u00102\u0006\u0010\u0004\u001a\u00020\u00032\u0006\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\u0011\u001a\u00020\u00102\u0006\u0010\u0007\u001a\u00020\u0010\u00a2\u0006\u0004\u0008\u0012\u0010\u0013J%\u0010\u0012\u001a\u00020\u00032\u0006\u0010\u0004\u001a\u00020\u00032\u0006\u0010\u0006\u001a\u00020\u00052\u0006\u0010\u0007\u001a\u00020\u0003\u00a2\u0006\u0004\u0008\u0012\u0010\tJ\r\u0010\u0014\u001a\u00020\u0003\u00a2\u0006\u0004\u0008\u0014\u0010\u0015J\u0015\u0010\u0016\u001a\u00020\u000b2\u0006\u0010\u0014\u001a\u00020\u0003\u00a2\u0006\u0004\u0008\u0016\u0010\u0017J-\u0010\u0018\u001a\u00020\u000b2\u0006\u0010\u0004\u001a\u00020\u00032\u0006\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\u0011\u001a\u00020\u00102\u0006\u0010\u0007\u001a\u00020\u0010\u00a2\u0006\u0004\u0008\u0018\u0010\u0019J%\u0010\u0018\u001a\u00020\u000b2\u0006\u0010\u0004\u001a\u00020\u00032\u0006\u0010\n\u001a\u00020\u00052\u0006\u0010\u0007\u001a\u00020\u0003\u00a2\u0006\u0004\u0008\u0018\u0010\rJ\r\u0010\u001a\u001a\u00020\u000b\u00a2\u0006\u0004\u0008\u001a\u0010\u001bJ\u0017\u0010\n\u001a\u00020\u001c2\u0008\u0008\u0002\u0010\u0004\u001a\u00020\u0003\u00a2\u0006\u0004\u0008\n\u0010\u001dJ\u0015\u0010\u001e\u001a\u00020\u00032\u0006\u0010\n\u001a\u00020\u001c\u00a2\u0006\u0004\u0008\u001e\u0010\u001fJ\u001d\u0010 \u001a\u00020\u000b2\u0006\u0010\n\u001a\u00020\u001c2\u0006\u0010\u001e\u001a\u00020\u0003\u00a2\u0006\u0004\u0008 \u0010!J\u0017\u0010\u0006\u001a\u00020\"2\u0008\u0008\u0002\u0010\u0004\u001a\u00020\u0003\u00a2\u0006\u0004\u0008\u0006\u0010#J\r\u0010$\u001a\u00020\"\u00a2\u0006\u0004\u0008$\u0010%J\u0015\u0010\u001e\u001a\u00020\u00032\u0006\u0010\u0006\u001a\u00020\"\u00a2\u0006\u0004\u0008\u001e\u0010&J\u001d\u0010 \u001a\u00020\u000b2\u0006\u0010\u0006\u001a\u00020\"2\u0006\u0010\u001e\u001a\u00020\u0003\u00a2\u0006\u0004\u0008 \u0010\'J\r\u0010(\u001a\u00020\u000b\u00a2\u0006\u0004\u0008(\u0010\u001bJ/\u0010)\u001a\u00020\u00102\u0006\u0010\u0004\u001a\u00020\u00032\u0006\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\u0011\u001a\u00020\u00102\u0006\u0010\u0007\u001a\u00020\u0010H$\u00a2\u0006\u0004\u0008)\u0010\u0013J/\u0010*\u001a\u00020\u000b2\u0006\u0010\u0004\u001a\u00020\u00032\u0006\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\u0011\u001a\u00020\u00102\u0006\u0010\u0007\u001a\u00020\u0010H$\u00a2\u0006\u0004\u0008*\u0010\u0019J\u000f\u0010+\u001a\u00020\u000bH$\u00a2\u0006\u0004\u0008+\u0010\u001bJ\u0017\u0010,\u001a\u00020\u000b2\u0006\u0010\u0014\u001a\u00020\u0003H$\u00a2\u0006\u0004\u0008,\u0010\u0017J\u000f\u0010-\u001a\u00020\u0003H$\u00a2\u0006\u0004\u0008-\u0010\u0015J\u000f\u0010.\u001a\u00020\u000bH$\u00a2\u0006\u0004\u0008.\u0010\u001bR\u0016\u00100\u001a\u00020/8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u00080\u00101R\u0016\u00102\u001a\u00020\u00108\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u00082\u00103R\u0019\u00104\u001a\u00020/8\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u00084\u00101\u001a\u0004\u00085\u00106\u00a8\u0006;"
     }
     d2 = {
         "Lokio/FileHandle;",
@@ -32,23 +37,37 @@
         "sink",
         "byteCount",
         "readNoCloseCheck",
+        "(JLokio/Buffer;J)J",
         "source",
-        "Lnm/l2;",
+        "Lh/l2;",
         "writeNoCloseCheck",
+        "(JLokio/Buffer;J)V",
         "",
         "array",
         "",
         "arrayOffset",
         "read",
+        "(J[BII)I",
         "size",
+        "()J",
         "resize",
+        "(J)V",
         "write",
+        "(J[BII)V",
         "flush",
+        "()V",
         "Lokio/Source;",
+        "(J)Lokio/Source;",
         "position",
+        "(Lokio/Source;)J",
         "reposition",
+        "(Lokio/Source;J)V",
         "Lokio/Sink;",
+        "(J)Lokio/Sink;",
         "appendingSink",
+        "()Lokio/Sink;",
+        "(Lokio/Sink;)J",
+        "(Lokio/Sink;J)V",
         "close",
         "protectedRead",
         "protectedWrite",
@@ -57,13 +76,13 @@
         "protectedSize",
         "protectedClose",
         "",
-        "readWrite",
-        "Z",
-        "getReadWrite",
-        "()Z",
         "closed",
+        "Z",
         "openStreamCount",
         "I",
+        "readWrite",
+        "getReadWrite",
+        "()Z",
         "<init>",
         "(Z)V",
         "FileHandleSink",
@@ -91,8 +110,10 @@
 .method public constructor <init>(Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-boolean p1, p0, Lokio/FileHandle;->readWrite:Z
 
     return-void
@@ -101,6 +122,7 @@
 .method public static final synthetic access$getClosed$p(Lokio/FileHandle;)Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lokio/FileHandle;->closed:Z
 
     return p0
@@ -109,6 +131,7 @@
 .method public static final synthetic access$getOpenStreamCount$p(Lokio/FileHandle;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lokio/FileHandle;->openStreamCount:I
 
     return p0
@@ -117,6 +140,7 @@
 .method public static final synthetic access$readNoCloseCheck(Lokio/FileHandle;JLokio/Buffer;J)J
     .locals 0
 
+    .line 1
     invoke-direct/range {p0 .. p5}, Lokio/FileHandle;->readNoCloseCheck(JLokio/Buffer;J)J
 
     move-result-wide p0
@@ -127,6 +151,7 @@
 .method public static final synthetic access$setOpenStreamCount$p(Lokio/FileHandle;I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lokio/FileHandle;->openStreamCount:I
 
     return-void
@@ -135,6 +160,7 @@
 .method public static final synthetic access$writeNoCloseCheck(Lokio/FileHandle;JLokio/Buffer;J)V
     .locals 0
 
+    .line 1
     invoke-direct/range {p0 .. p5}, Lokio/FileHandle;->writeNoCloseCheck(JLokio/Buffer;J)V
 
     return-void
@@ -172,12 +198,15 @@
 
     if-gez v1, :cond_3
 
+    .line 1
     invoke-virtual {v0, v2}, Lokio/Buffer;->writableSegment$okio(I)Lokio/Segment;
 
     move-result-object v1
 
+    .line 2
     iget-object v8, v1, Lokio/Segment;->data:[B
 
+    .line 3
     iget v9, v1, Lokio/Segment;->limit:I
 
     sub-long v5, v3, v11
@@ -186,6 +215,7 @@
 
     int-to-long v13, v7
 
+    .line 4
     invoke-static {v5, v6, v13, v14}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v5
@@ -196,6 +226,7 @@
 
     move-wide v6, v11
 
+    .line 5
     invoke-virtual/range {v5 .. v10}, Lokio/FileHandle;->protectedRead(J[BII)I
 
     move-result v5
@@ -204,18 +235,21 @@
 
     if-ne v5, v6, :cond_2
 
+    .line 6
     iget v2, v1, Lokio/Segment;->pos:I
 
     iget v3, v1, Lokio/Segment;->limit:I
 
     if-ne v2, v3, :cond_1
 
+    .line 7
     invoke-virtual {v1}, Lokio/Segment;->pop()Lokio/Segment;
 
     move-result-object v2
 
     iput-object v2, v0, Lokio/Buffer;->head:Lokio/Segment;
 
+    .line 8
     invoke-static {v1}, Lokio/SegmentPool;->recycle(Lokio/Segment;)V
 
     :cond_1
@@ -227,6 +261,7 @@
 
     return-wide v0
 
+    .line 9
     :cond_2
     iget v6, v1, Lokio/Segment;->limit:I
 
@@ -238,6 +273,7 @@
 
     add-long/2addr v11, v5
 
+    .line 10
     invoke-virtual/range {p3 .. p3}, Lokio/Buffer;->size()J
 
     move-result-wide v7
@@ -253,14 +289,15 @@
 
     return-wide v11
 
+    .line 11
     :cond_4
-    const-string v0, "byteCount < 0: "
-
     invoke-static/range {p4 .. p5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
+    const-string v1, "byteCount < 0: "
+
+    invoke-static {v1, v0}, Lh/d3/x/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -291,6 +328,7 @@
 
     const-wide/16 p1, 0x0
 
+    .line 1
     :cond_0
     invoke-virtual {p0, p1, p2}, Lokio/FileHandle;->sink(J)Lokio/Sink;
 
@@ -324,6 +362,7 @@
 
     const-wide/16 p1, 0x0
 
+    .line 1
     :cond_0
     invoke-virtual {p0, p1, p2}, Lokio/FileHandle;->source(J)Lokio/Source;
 
@@ -344,6 +383,7 @@
 .method private final writeNoCloseCheck(JLokio/Buffer;J)V
     .locals 8
 
+    .line 1
     invoke-virtual {p3}, Lokio/Buffer;->size()J
 
     move-result-wide v0
@@ -362,12 +402,14 @@
 
     if-gez v0, :cond_1
 
+    .line 2
     iget-object v6, p3, Lokio/Buffer;->head:Lokio/Segment;
 
-    invoke-static {v6}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {v6}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     sub-long v0, p4, p1
 
+    .line 3
     iget v2, v6, Lokio/Segment;->limit:I
 
     iget v3, v6, Lokio/Segment;->pos:I
@@ -376,12 +418,14 @@
 
     int-to-long v2, v2
 
+    .line 4
     invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v0
 
     long-to-int v7, v0
 
+    .line 5
     iget-object v3, v6, Lokio/Segment;->data:[B
 
     iget v4, v6, Lokio/Segment;->pos:I
@@ -394,6 +438,7 @@
 
     invoke-virtual/range {v0 .. v5}, Lokio/FileHandle;->protectedWrite(J[BII)V
 
+    .line 6
     iget v0, v6, Lokio/Segment;->pos:I
 
     add-int/2addr v0, v7
@@ -404,6 +449,7 @@
 
     add-long/2addr p1, v0
 
+    .line 7
     invoke-virtual {p3}, Lokio/Buffer;->size()J
 
     move-result-wide v2
@@ -412,18 +458,21 @@
 
     invoke-virtual {p3, v2, v3}, Lokio/Buffer;->setSize$okio(J)V
 
+    .line 8
     iget v0, v6, Lokio/Segment;->pos:I
 
     iget v1, v6, Lokio/Segment;->limit:I
 
     if-ne v0, v1, :cond_0
 
+    .line 9
     invoke-virtual {v6}, Lokio/Segment;->pop()Lokio/Segment;
 
     move-result-object v0
 
     iput-object v0, p3, Lokio/Buffer;->head:Lokio/Segment;
 
+    .line 10
     invoke-static {v6}, Lokio/SegmentPool;->recycle(Lokio/Segment;)V
 
     goto :goto_0
@@ -442,9 +491,10 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lokio/FileHandle;->size()J
 
     move-result-wide v0
@@ -464,8 +514,10 @@
         }
     .end annotation
 
+    .line 1
     monitor-enter p0
 
+    .line 2
     :try_start_0
     iget-boolean v0, p0, Lokio/FileHandle;->closed:Z
     :try_end_0
@@ -480,9 +532,11 @@
     :cond_0
     const/4 v0, 0x1
 
+    .line 3
     :try_start_1
     iput-boolean v0, p0, Lokio/FileHandle;->closed:Z
 
+    .line 4
     iget v0, p0, Lokio/FileHandle;->openStreamCount:I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -493,14 +547,16 @@
 
     return-void
 
+    .line 5
     :cond_1
     :try_start_2
-    sget-object v0, Lnm/l2;->a:Lnm/l2;
+    sget-object v0, Lh/l2;->a:Lh/l2;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     monitor-exit p0
 
+    .line 6
     invoke-virtual {p0}, Lokio/FileHandle;->protectedClose()V
 
     return-void
@@ -508,6 +564,7 @@
     :catchall_0
     move-exception v0
 
+    .line 7
     monitor-exit p0
 
     throw v0
@@ -521,12 +578,15 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lokio/FileHandle;->readWrite:Z
 
     if-eqz v0, :cond_1
 
+    .line 2
     monitor-enter p0
 
+    .line 3
     :try_start_0
     iget-boolean v0, p0, Lokio/FileHandle;->closed:Z
 
@@ -534,12 +594,14 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lnm/l2;->a:Lnm/l2;
+    .line 4
+    sget-object v0, Lh/l2;->a:Lh/l2;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     monitor-exit p0
 
+    .line 5
     invoke-virtual {p0}, Lokio/FileHandle;->protectedFlush()V
 
     return-void
@@ -548,6 +610,7 @@
     :try_start_1
     const-string v0, "closed"
 
+    .line 6
     new-instance v1, Ljava/lang/IllegalStateException;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -563,6 +626,7 @@
     :catchall_0
     move-exception v0
 
+    .line 7
     monitor-exit p0
 
     throw v0
@@ -570,6 +634,7 @@
     :cond_1
     const-string p0, "file handle is read-only"
 
+    .line 8
     new-instance v0, Ljava/lang/IllegalStateException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -584,6 +649,7 @@
 .method public final getReadWrite()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lokio/FileHandle;->readWrite:Z
 
     return p0
@@ -592,7 +658,7 @@
 .method public final position(Lokio/Sink;)J
     .locals 4
     .param p1    # Lokio/Sink;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -603,7 +669,7 @@
 
     const-string v0, "sink"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 11
     instance-of v0, p1, Lokio/RealBufferedSink;
@@ -709,7 +775,7 @@
 .method public final position(Lokio/Source;)J
     .locals 4
     .param p1    # Lokio/Source;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -720,7 +786,7 @@
 
     const-string v0, "source"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     instance-of v0, p1, Lokio/RealBufferedSource;
@@ -841,7 +907,7 @@
 
 .method public abstract protectedRead(J[BII)I
     .param p3    # [B
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -869,7 +935,7 @@
 
 .method public abstract protectedWrite(J[BII)V
     .param p3    # [B
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -882,7 +948,7 @@
 .method public final read(J[BII)I
     .locals 1
     .param p3    # [B
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -893,7 +959,7 @@
 
     const-string v0, "array"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     monitor-enter p0
@@ -907,7 +973,7 @@
     if-eqz v0, :cond_0
 
     .line 3
-    sget-object v0, Lnm/l2;->a:Lnm/l2;
+    sget-object v0, Lh/l2;->a:Lh/l2;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -949,7 +1015,7 @@
 .method public final read(JLokio/Buffer;J)J
     .locals 1
     .param p3    # Lokio/Buffer;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -960,7 +1026,7 @@
 
     const-string v0, "sink"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
     monitor-enter p0
@@ -974,7 +1040,7 @@
     if-eqz v0, :cond_0
 
     .line 9
-    sget-object v0, Lnm/l2;->a:Lnm/l2;
+    sget-object v0, Lh/l2;->a:Lh/l2;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1016,7 +1082,7 @@
 .method public final reposition(Lokio/Sink;J)V
     .locals 6
     .param p1    # Lokio/Sink;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -1027,7 +1093,7 @@
 
     const-string v0, "sink"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 19
     instance-of v0, p1, Lokio/RealBufferedSink;
@@ -1176,7 +1242,7 @@
 .method public final reposition(Lokio/Source;J)V
     .locals 9
     .param p1    # Lokio/Source;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -1187,7 +1253,7 @@
 
     const-string v0, "source"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     instance-of v0, p1, Lokio/RealBufferedSource;
@@ -1387,12 +1453,15 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lokio/FileHandle;->readWrite:Z
 
     if-eqz v0, :cond_1
 
+    .line 2
     monitor-enter p0
 
+    .line 3
     :try_start_0
     iget-boolean v0, p0, Lokio/FileHandle;->closed:Z
 
@@ -1400,12 +1469,14 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lnm/l2;->a:Lnm/l2;
+    .line 4
+    sget-object v0, Lh/l2;->a:Lh/l2;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     monitor-exit p0
 
+    .line 5
     invoke-virtual {p0, p1, p2}, Lokio/FileHandle;->protectedResize(J)V
 
     return-void
@@ -1414,6 +1485,7 @@
     :try_start_1
     const-string p1, "closed"
 
+    .line 6
     new-instance p2, Ljava/lang/IllegalStateException;
 
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -1429,6 +1501,7 @@
     :catchall_0
     move-exception p1
 
+    .line 7
     monitor-exit p0
 
     throw p1
@@ -1436,6 +1509,7 @@
     :cond_1
     const-string p0, "file handle is read-only"
 
+    .line 8
     new-instance p1, Ljava/lang/IllegalStateException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -1455,15 +1529,18 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lokio/FileHandle;->readWrite:Z
 
     if-eqz v0, :cond_1
 
+    .line 2
     monitor-enter p0
 
+    .line 3
     :try_start_0
     iget-boolean v0, p0, Lokio/FileHandle;->closed:Z
 
@@ -1471,6 +1548,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 4
     iget v0, p0, Lokio/FileHandle;->openStreamCount:I
 
     add-int/lit8 v0, v0, 0x1
@@ -1481,6 +1559,7 @@
 
     monitor-exit p0
 
+    .line 5
     new-instance v0, Lokio/FileHandle$FileHandleSink;
 
     invoke-direct {v0, p0, p1, p2}, Lokio/FileHandle$FileHandleSink;-><init>(Lokio/FileHandle;J)V
@@ -1491,6 +1570,7 @@
     :try_start_1
     const-string p1, "closed"
 
+    .line 6
     new-instance p2, Ljava/lang/IllegalStateException;
 
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -1506,6 +1586,7 @@
     :catchall_0
     move-exception p1
 
+    .line 7
     monitor-exit p0
 
     throw p1
@@ -1513,6 +1594,7 @@
     :cond_1
     const-string p0, "file handle is read-only"
 
+    .line 8
     new-instance p1, Ljava/lang/IllegalStateException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -1532,8 +1614,10 @@
         }
     .end annotation
 
+    .line 1
     monitor-enter p0
 
+    .line 2
     :try_start_0
     iget-boolean v0, p0, Lokio/FileHandle;->closed:Z
 
@@ -1541,12 +1625,14 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lnm/l2;->a:Lnm/l2;
+    .line 3
+    sget-object v0, Lh/l2;->a:Lh/l2;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     monitor-exit p0
 
+    .line 4
     invoke-virtual {p0}, Lokio/FileHandle;->protectedSize()J
 
     move-result-wide v0
@@ -1557,6 +1643,7 @@
     :try_start_1
     const-string v0, "closed"
 
+    .line 5
     new-instance v1, Ljava/lang/IllegalStateException;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -1572,6 +1659,7 @@
     :catchall_0
     move-exception v0
 
+    .line 6
     monitor-exit p0
 
     throw v0
@@ -1585,11 +1673,13 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     monitor-enter p0
 
+    .line 2
     :try_start_0
     iget-boolean v0, p0, Lokio/FileHandle;->closed:Z
 
@@ -1597,6 +1687,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget v0, p0, Lokio/FileHandle;->openStreamCount:I
 
     add-int/lit8 v0, v0, 0x1
@@ -1607,6 +1698,7 @@
 
     monitor-exit p0
 
+    .line 4
     new-instance v0, Lokio/FileHandle$FileHandleSource;
 
     invoke-direct {v0, p0, p1, p2}, Lokio/FileHandle$FileHandleSource;-><init>(Lokio/FileHandle;J)V
@@ -1617,6 +1709,7 @@
     :try_start_1
     const-string p1, "closed"
 
+    .line 5
     new-instance p2, Ljava/lang/IllegalStateException;
 
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -1632,6 +1725,7 @@
     :catchall_0
     move-exception p1
 
+    .line 6
     monitor-exit p0
 
     throw p1
@@ -1640,7 +1734,7 @@
 .method public final write(JLokio/Buffer;J)V
     .locals 1
     .param p3    # Lokio/Buffer;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -1651,7 +1745,7 @@
 
     const-string v0, "source"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 9
     iget-boolean v0, p0, Lokio/FileHandle;->readWrite:Z
@@ -1670,7 +1764,7 @@
     if-eqz v0, :cond_0
 
     .line 12
-    sget-object v0, Lnm/l2;->a:Lnm/l2;
+    sget-object v0, Lh/l2;->a:Lh/l2;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1724,13 +1818,13 @@
 .method public final write(J[BII)V
     .locals 1
     .param p3    # [B
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "array"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     iget-boolean v0, p0, Lokio/FileHandle;->readWrite:Z
@@ -1749,7 +1843,7 @@
     if-eqz v0, :cond_0
 
     .line 4
-    sget-object v0, Lnm/l2;->a:Lnm/l2;
+    sget-object v0, Lh/l2;->a:Lh/l2;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

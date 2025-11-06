@@ -33,13 +33,14 @@
 
 
 # instance fields
-.field mLayoutState:Landroid/os/Parcelable;
+.field public mLayoutState:Landroid/os/Parcelable;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/recyclerview/widget/RecyclerView$SavedState$1;
 
     invoke-direct {v0}, Landroidx/recyclerview/widget/RecyclerView$SavedState$1;-><init>()V
@@ -92,6 +93,7 @@
 .method public copyFrom(Landroidx/recyclerview/widget/RecyclerView$SavedState;)V
     .locals 0
 
+    .line 1
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$SavedState;->mLayoutState:Landroid/os/Parcelable;
 
     iput-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$SavedState;->mLayoutState:Landroid/os/Parcelable;
@@ -102,8 +104,10 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
+    .line 2
     iget-object p0, p0, Landroidx/recyclerview/widget/RecyclerView$SavedState;->mLayoutState:Landroid/os/Parcelable;
 
     const/4 p2, 0x0

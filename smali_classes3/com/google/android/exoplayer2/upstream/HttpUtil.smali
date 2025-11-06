@@ -17,6 +17,7 @@
 
     const-string v0, "bytes (\\d+)-(\\d+)/(?:\\d+|\\*)"
 
+    .line 1
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -25,6 +26,7 @@
 
     const-string v0, "bytes (?:(?:\\d+-\\d+)|\\*)/(\\d+)"
 
+    .line 2
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -37,6 +39,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -63,6 +66,7 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -70,12 +74,15 @@
 
     const-string v3, "bytes="
 
+    .line 2
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 3
     invoke-virtual {v0, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     const-string v3, "-"
 
+    .line 4
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     cmp-long v1, p2, v1
@@ -88,8 +95,10 @@
 
     sub-long/2addr p0, p2
 
+    .line 5
     invoke-virtual {v0, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
+    .line 6
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -109,6 +118,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -119,6 +129,7 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     :try_start_0
     invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
@@ -128,6 +139,7 @@
 
     goto :goto_0
 
+    .line 3
     :catch_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -150,6 +162,7 @@
     :cond_0
     const-wide/16 v3, -0x1
 
+    .line 4
     :goto_0
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -157,12 +170,14 @@
 
     if-nez v0, :cond_2
 
+    .line 5
     sget-object v0, Lcom/google/android/exoplayer2/upstream/HttpUtil;->CONTENT_RANGE_WITH_START_AND_END:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
+    .line 6
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v5
@@ -171,6 +186,7 @@
 
     const/4 v5, 0x2
 
+    .line 7
     :try_start_1
     invoke-virtual {v0, v5}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
@@ -188,6 +204,7 @@
 
     const/4 v7, 0x1
 
+    .line 8
     invoke-virtual {v0, v7}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v0
@@ -223,6 +240,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 9
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -247,6 +265,7 @@
 
     invoke-static {v2, p0}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 10
     invoke-static {v3, v4, v5, v6}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide p0
@@ -257,6 +276,7 @@
 
     goto :goto_1
 
+    .line 11
     :catch_1
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -288,6 +308,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -298,6 +319,7 @@
 
     return-wide v1
 
+    .line 2
     :cond_0
     sget-object v0, Lcom/google/android/exoplayer2/upstream/HttpUtil;->CONTENT_RANGE_WITH_SIZE:Ljava/util/regex/Pattern;
 
@@ -305,6 +327,7 @@
 
     move-result-object p0
 
+    .line 3
     invoke-virtual {p0}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v0

@@ -145,6 +145,7 @@
 .method public final zzd(Ljava/lang/Integer;)Lcom/google/android/gms/internal/mlkit_vision_common/zzky;
     .locals 1
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1

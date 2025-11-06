@@ -26,6 +26,7 @@
 .method public static constructor <clinit>()V
     .locals 9
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznc;
 
     const-string v1, "TYPE_UNKNOWN"
@@ -42,6 +43,7 @@
 
     const/4 v4, 0x1
 
+    .line 2
     invoke-direct {v1, v3, v4, v4}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznc;-><init>(Ljava/lang/String;II)V
 
     sput-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznc;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznc;
@@ -52,6 +54,7 @@
 
     const/4 v6, 0x2
 
+    .line 3
     invoke-direct {v3, v5, v6, v6}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznc;-><init>(Ljava/lang/String;II)V
 
     sput-object v3, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznc;->zzc:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznc;
@@ -62,6 +65,7 @@
 
     const/4 v8, 0x3
 
+    .line 4
     invoke-direct {v5, v7, v8, v8}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznc;-><init>(Ljava/lang/String;II)V
 
     sput-object v5, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznc;->zzd:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznc;
@@ -86,6 +90,7 @@
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     iput p3, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznc;->zzf:I
@@ -96,6 +101,7 @@
 .method public static values()[Lcom/google/android/gms/internal/mlkit_vision_barcode/zznc;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznc;->zze:[Lcom/google/android/gms/internal/mlkit_vision_barcode/zznc;
 
     invoke-virtual {v0}, [Lcom/google/android/gms/internal/mlkit_vision_barcode/zznc;->clone()Ljava/lang/Object;

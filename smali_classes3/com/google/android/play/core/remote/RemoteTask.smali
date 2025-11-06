@@ -67,6 +67,7 @@
 .method public final getTask()Lcom/google/android/play/core/tasks/TaskWrapper;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/play/core/remote/RemoteTask;->task:Lcom/google/android/play/core/tasks/TaskWrapper;
 
     return-object p0
@@ -75,6 +76,7 @@
 .method public final run()V
     .locals 2
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Lcom/google/android/play/core/remote/RemoteTask;->execute()V
     :try_end_0
@@ -85,12 +87,15 @@
     :catch_0
     move-exception v0
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 2
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/play/core/remote/RemoteTask;->task:Lcom/google/android/play/core/tasks/TaskWrapper;
 
     if-eqz v1, :cond_0
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/play/core/remote/RemoteTask;->task:Lcom/google/android/play/core/tasks/TaskWrapper;
 
     invoke-virtual {p0, v0}, Lcom/google/android/play/core/tasks/TaskWrapper;->setException(Ljava/lang/Exception;)Z

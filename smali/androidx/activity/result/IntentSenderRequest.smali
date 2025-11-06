@@ -55,6 +55,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/activity/result/IntentSenderRequest$1;
 
     invoke-direct {v0}, Landroidx/activity/result/IntentSenderRequest$1;-><init>()V
@@ -165,6 +166,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/activity/result/IntentSenderRequest;->mFillInIntent:Landroid/content/Intent;
 
     return-object p0
@@ -173,6 +175,7 @@
 .method public getFlagsMask()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/activity/result/IntentSenderRequest;->mFlagsMask:I
 
     return p0
@@ -181,6 +184,7 @@
 .method public getFlagsValues()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/activity/result/IntentSenderRequest;->mFlagsValues:I
 
     return p0
@@ -191,6 +195,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/activity/result/IntentSenderRequest;->mIntentSender:Landroid/content/IntentSender;
 
     return-object p0
@@ -203,18 +208,22 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Landroidx/activity/result/IntentSenderRequest;->mIntentSender:Landroid/content/IntentSender;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
+    .line 2
     iget-object v0, p0, Landroidx/activity/result/IntentSenderRequest;->mFillInIntent:Landroid/content/Intent;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
+    .line 3
     iget p2, p0, Landroidx/activity/result/IntentSenderRequest;->mFlagsMask:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 4
     iget p0, p0, Landroidx/activity/result/IntentSenderRequest;->mFlagsValues:I
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V

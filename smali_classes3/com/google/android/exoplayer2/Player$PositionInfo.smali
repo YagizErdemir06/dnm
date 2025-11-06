@@ -81,9 +81,8 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/google/android/exoplayer2/g2;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/g2;-><init>()V
+    .line 1
+    sget-object v0, Ld/j/a/b/y1;->a:Ld/j/a/b/y1;
 
     sput-object v0, Lcom/google/android/exoplayer2/Player$PositionInfo;->CREATOR:Lcom/google/android/exoplayer2/Bundleable$Creator;
 
@@ -195,6 +194,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {v0}, Lcom/google/android/exoplayer2/Player$PositionInfo;->keyForField(I)Ljava/lang/String;
 
     move-result-object v0
@@ -207,6 +207,7 @@
 
     const/4 v0, 0x1
 
+    .line 2
     invoke-static {v0}, Lcom/google/android/exoplayer2/Player$PositionInfo;->keyForField(I)Ljava/lang/String;
 
     move-result-object v0
@@ -221,6 +222,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     sget-object v2, Lcom/google/android/exoplayer2/MediaItem;->CREATOR:Lcom/google/android/exoplayer2/Bundleable$Creator;
 
@@ -235,6 +237,7 @@
 
     const/4 v0, 0x2
 
+    .line 4
     invoke-static {v0}, Lcom/google/android/exoplayer2/Player$PositionInfo;->keyForField(I)Ljava/lang/String;
 
     move-result-object v0
@@ -245,6 +248,7 @@
 
     const/4 v0, 0x3
 
+    .line 5
     invoke-static {v0}, Lcom/google/android/exoplayer2/Player$PositionInfo;->keyForField(I)Ljava/lang/String;
 
     move-result-object v0
@@ -257,6 +261,7 @@
 
     const/4 v0, 0x4
 
+    .line 6
     invoke-static {v0}, Lcom/google/android/exoplayer2/Player$PositionInfo;->keyForField(I)Ljava/lang/String;
 
     move-result-object v0
@@ -267,6 +272,7 @@
 
     const/4 v0, 0x5
 
+    .line 7
     invoke-static {v0}, Lcom/google/android/exoplayer2/Player$PositionInfo;->keyForField(I)Ljava/lang/String;
 
     move-result-object v0
@@ -277,6 +283,7 @@
 
     const/4 v0, 0x6
 
+    .line 8
     invoke-static {v0}, Lcom/google/android/exoplayer2/Player$PositionInfo;->keyForField(I)Ljava/lang/String;
 
     move-result-object v0
@@ -285,6 +292,7 @@
 
     move-result v13
 
+    .line 9
     new-instance p0, Lcom/google/android/exoplayer2/Player$PositionInfo;
 
     const/4 v3, 0x0
@@ -303,6 +311,7 @@
 
     const/16 v0, 0x24
 
+    .line 1
     invoke-static {p0, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
     move-result-object p0
@@ -330,6 +339,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 1
     const-class v2, Lcom/google/android/exoplayer2/Player$PositionInfo;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -340,9 +350,11 @@
 
     goto :goto_1
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/Player$PositionInfo;
 
+    .line 3
     iget v2, p0, Lcom/google/android/exoplayer2/Player$PositionInfo;->mediaItemIndex:I
 
     iget v3, p1, Lcom/google/android/exoplayer2/Player$PositionInfo;->mediaItemIndex:I
@@ -387,6 +399,7 @@
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/Player$PositionInfo;->windowUid:Ljava/lang/Object;
 
+    .line 4
     invoke-static {v2, v3}, Lcom/google/common/base/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -397,6 +410,7 @@
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/Player$PositionInfo;->periodUid:Ljava/lang/Object;
 
+    .line 5
     invoke-static {v2, v3}, Lcom/google/common/base/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -407,6 +421,7 @@
 
     iget-object p1, p1, Lcom/google/android/exoplayer2/Player$PositionInfo;->mediaItem:Lcom/google/android/exoplayer2/MediaItem;
 
+    .line 6
     invoke-static {p0, p1}, Lcom/google/common/base/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -433,14 +448,16 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    .line 1
+    iget-object v1, p0, Lcom/google/android/exoplayer2/Player$PositionInfo;->windowUid:Ljava/lang/Object;
 
-    iget-object v2, p0, Lcom/google/android/exoplayer2/Player$PositionInfo;->windowUid:Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
     iget v1, p0, Lcom/google/android/exoplayer2/Player$PositionInfo;->mediaItemIndex:I
 
+    .line 2
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -449,20 +466,21 @@
 
     aput-object v1, v0, v2
 
-    const/4 v1, 0x2
+    iget-object v1, p0, Lcom/google/android/exoplayer2/Player$PositionInfo;->mediaItem:Lcom/google/android/exoplayer2/MediaItem;
 
-    iget-object v2, p0, Lcom/google/android/exoplayer2/Player$PositionInfo;->mediaItem:Lcom/google/android/exoplayer2/MediaItem;
+    const/4 v2, 0x2
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/4 v1, 0x3
+    iget-object v1, p0, Lcom/google/android/exoplayer2/Player$PositionInfo;->periodUid:Ljava/lang/Object;
 
-    iget-object v2, p0, Lcom/google/android/exoplayer2/Player$PositionInfo;->periodUid:Ljava/lang/Object;
+    const/4 v2, 0x3
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
     iget v1, p0, Lcom/google/android/exoplayer2/Player$PositionInfo;->periodIndex:I
 
+    .line 3
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -473,6 +491,7 @@
 
     iget-wide v1, p0, Lcom/google/android/exoplayer2/Player$PositionInfo;->positionMs:J
 
+    .line 4
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
@@ -483,6 +502,7 @@
 
     iget-wide v1, p0, Lcom/google/android/exoplayer2/Player$PositionInfo;->contentPositionMs:J
 
+    .line 5
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
@@ -493,6 +513,7 @@
 
     iget v1, p0, Lcom/google/android/exoplayer2/Player$PositionInfo;->adGroupIndex:I
 
+    .line 6
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -503,6 +524,7 @@
 
     iget p0, p0, Lcom/google/android/exoplayer2/Player$PositionInfo;->adIndexInAdGroup:I
 
+    .line 7
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -511,6 +533,7 @@
 
     aput-object p0, v0, v1
 
+    .line 8
     invoke-static {v0}, Lcom/google/common/base/Objects;->hashCode([Ljava/lang/Object;)I
 
     move-result p0
@@ -521,12 +544,14 @@
 .method public toBundle()Landroid/os/Bundle;
     .locals 4
 
+    .line 1
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-static {v1}, Lcom/google/android/exoplayer2/Player$PositionInfo;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -535,12 +560,14 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/Player$PositionInfo;->mediaItem:Lcom/google/android/exoplayer2/MediaItem;
 
     if-eqz v1, :cond_0
 
     const/4 v1, 0x1
 
+    .line 4
     invoke-static {v1}, Lcom/google/android/exoplayer2/Player$PositionInfo;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -556,6 +583,7 @@
     :cond_0
     const/4 v1, 0x2
 
+    .line 5
     invoke-static {v1}, Lcom/google/android/exoplayer2/Player$PositionInfo;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -566,6 +594,7 @@
 
     const/4 v1, 0x3
 
+    .line 6
     invoke-static {v1}, Lcom/google/android/exoplayer2/Player$PositionInfo;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -576,6 +605,7 @@
 
     const/4 v1, 0x4
 
+    .line 7
     invoke-static {v1}, Lcom/google/android/exoplayer2/Player$PositionInfo;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -586,6 +616,7 @@
 
     const/4 v1, 0x5
 
+    .line 8
     invoke-static {v1}, Lcom/google/android/exoplayer2/Player$PositionInfo;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -596,6 +627,7 @@
 
     const/4 v1, 0x6
 
+    .line 9
     invoke-static {v1}, Lcom/google/android/exoplayer2/Player$PositionInfo;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1

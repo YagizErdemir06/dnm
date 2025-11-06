@@ -1,4 +1,4 @@
-.class final Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;
+.class public final Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;
 .super Lcom/google/android/datatransport/runtime/TransportRuntimeComponent;
 .source "SourceFile"
 
@@ -12,106 +12,106 @@
 
 
 # instance fields
-.field private configProvider:Lmm/c;
+.field private configProvider:Lg/a/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private creationContextFactoryProvider:Lmm/c;
+.field private creationContextFactoryProvider:Lg/a/c;
 
-.field private defaultSchedulerProvider:Lmm/c;
+.field private defaultSchedulerProvider:Lg/a/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private executorProvider:Lmm/c;
+.field private executorProvider:Lg/a/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lmm/c<",
+            "Lg/a/c<",
             "Ljava/util/concurrent/Executor;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private metadataBackendRegistryProvider:Lmm/c;
+.field private metadataBackendRegistryProvider:Lg/a/c;
 
-.field private packageNameProvider:Lmm/c;
+.field private packageNameProvider:Lg/a/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lmm/c<",
+            "Lg/a/c<",
             "Ljava/lang/String;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private sQLiteEventStoreProvider:Lmm/c;
+.field private sQLiteEventStoreProvider:Lg/a/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private schemaManagerProvider:Lmm/c;
+.field private schemaManagerProvider:Lg/a/c;
 
-.field private setApplicationContextProvider:Lmm/c;
+.field private setApplicationContextProvider:Lg/a/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lmm/c<",
+            "Lg/a/c<",
             "Landroid/content/Context;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private transportRuntimeProvider:Lmm/c;
+.field private transportRuntimeProvider:Lg/a/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/TransportRuntime;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private uploaderProvider:Lmm/c;
+.field private uploaderProvider:Lg/a/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private workInitializerProvider:Lmm/c;
+.field private workInitializerProvider:Lg/a/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private workSchedulerProvider:Lmm/c;
+.field private workSchedulerProvider:Lg/a/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkScheduler;",
             ">;"
         }
@@ -144,6 +144,7 @@
 .method public static builder()Lcom/google/android/datatransport/runtime/TransportRuntimeComponent$Builder;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent$Builder;
 
     const/4 v1, 0x0
@@ -156,22 +157,25 @@
 .method private initialize(Landroid/content/Context;)V
     .locals 9
 
+    .line 1
     invoke-static {}, Lcom/google/android/datatransport/runtime/ExecutionModule_ExecutorFactory;->create()Lcom/google/android/datatransport/runtime/ExecutionModule_ExecutorFactory;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/google/android/datatransport/runtime/dagger/internal/DoubleCheck;->provider(Lmm/c;)Lmm/c;
+    invoke-static {v0}, Lcom/google/android/datatransport/runtime/dagger/internal/DoubleCheck;->provider(Lg/a/c;)Lg/a/c;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->executorProvider:Lmm/c;
+    iput-object v0, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->executorProvider:Lg/a/c;
 
+    .line 2
     invoke-static {p1}, Lcom/google/android/datatransport/runtime/dagger/internal/InstanceFactory;->create(Ljava/lang/Object;)Lcom/google/android/datatransport/runtime/dagger/internal/Factory;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->setApplicationContextProvider:Lmm/c;
+    iput-object p1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->setApplicationContextProvider:Lg/a/c;
 
+    .line 3
     invoke-static {}, Lcom/google/android/datatransport/runtime/time/TimeModule_EventClockFactory;->create()Lcom/google/android/datatransport/runtime/time/TimeModule_EventClockFactory;
 
     move-result-object v0
@@ -180,25 +184,27 @@
 
     move-result-object v1
 
-    invoke-static {p1, v0, v1}, Lcom/google/android/datatransport/runtime/backends/CreationContextFactory_Factory;->create(Lmm/c;Lmm/c;Lmm/c;)Lcom/google/android/datatransport/runtime/backends/CreationContextFactory_Factory;
+    invoke-static {p1, v0, v1}, Lcom/google/android/datatransport/runtime/backends/CreationContextFactory_Factory;->create(Lg/a/c;Lg/a/c;Lg/a/c;)Lcom/google/android/datatransport/runtime/backends/CreationContextFactory_Factory;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->creationContextFactoryProvider:Lmm/c;
+    iput-object p1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->creationContextFactoryProvider:Lg/a/c;
 
-    iget-object v0, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->setApplicationContextProvider:Lmm/c;
+    .line 4
+    iget-object v0, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->setApplicationContextProvider:Lg/a/c;
 
-    invoke-static {v0, p1}, Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry_Factory;->create(Lmm/c;Lmm/c;)Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry_Factory;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcom/google/android/datatransport/runtime/dagger/internal/DoubleCheck;->provider(Lmm/c;)Lmm/c;
+    invoke-static {v0, p1}, Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry_Factory;->create(Lg/a/c;Lg/a/c;)Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry_Factory;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->metadataBackendRegistryProvider:Lmm/c;
+    invoke-static {p1}, Lcom/google/android/datatransport/runtime/dagger/internal/DoubleCheck;->provider(Lg/a/c;)Lg/a/c;
 
-    iget-object p1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->setApplicationContextProvider:Lmm/c;
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->metadataBackendRegistryProvider:Lg/a/c;
+
+    .line 5
+    iget-object p1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->setApplicationContextProvider:Lg/a/c;
 
     invoke-static {}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_DbNameFactory;->create()Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_DbNameFactory;
 
@@ -208,24 +214,26 @@
 
     move-result-object v1
 
-    invoke-static {p1, v0, v1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager_Factory;->create(Lmm/c;Lmm/c;Lmm/c;)Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager_Factory;
+    invoke-static {p1, v0, v1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager_Factory;->create(Lg/a/c;Lg/a/c;Lg/a/c;)Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager_Factory;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->schemaManagerProvider:Lmm/c;
+    iput-object p1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->schemaManagerProvider:Lg/a/c;
 
-    iget-object p1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->setApplicationContextProvider:Lmm/c;
+    .line 6
+    iget-object p1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->setApplicationContextProvider:Lg/a/c;
 
-    invoke-static {p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_PackageNameFactory;->create(Lmm/c;)Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_PackageNameFactory;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcom/google/android/datatransport/runtime/dagger/internal/DoubleCheck;->provider(Lmm/c;)Lmm/c;
+    invoke-static {p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_PackageNameFactory;->create(Lg/a/c;)Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_PackageNameFactory;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->packageNameProvider:Lmm/c;
+    invoke-static {p1}, Lcom/google/android/datatransport/runtime/dagger/internal/DoubleCheck;->provider(Lg/a/c;)Lg/a/c;
 
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->packageNameProvider:Lg/a/c;
+
+    .line 7
     invoke-static {}, Lcom/google/android/datatransport/runtime/time/TimeModule_EventClockFactory;->create()Lcom/google/android/datatransport/runtime/time/TimeModule_EventClockFactory;
 
     move-result-object p1
@@ -238,65 +246,69 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->schemaManagerProvider:Lmm/c;
+    iget-object v2, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->schemaManagerProvider:Lg/a/c;
 
-    iget-object v3, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->packageNameProvider:Lmm/c;
+    iget-object v3, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->packageNameProvider:Lg/a/c;
 
-    invoke-static {p1, v0, v1, v2, v3}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore_Factory;->create(Lmm/c;Lmm/c;Lmm/c;Lmm/c;Lmm/c;)Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore_Factory;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcom/google/android/datatransport/runtime/dagger/internal/DoubleCheck;->provider(Lmm/c;)Lmm/c;
+    invoke-static {p1, v0, v1, v2, v3}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore_Factory;->create(Lg/a/c;Lg/a/c;Lg/a/c;Lg/a/c;Lg/a/c;)Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore_Factory;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->sQLiteEventStoreProvider:Lmm/c;
+    invoke-static {p1}, Lcom/google/android/datatransport/runtime/dagger/internal/DoubleCheck;->provider(Lg/a/c;)Lg/a/c;
 
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->sQLiteEventStoreProvider:Lg/a/c;
+
+    .line 8
     invoke-static {}, Lcom/google/android/datatransport/runtime/time/TimeModule_EventClockFactory;->create()Lcom/google/android/datatransport/runtime/time/TimeModule_EventClockFactory;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/google/android/datatransport/runtime/scheduling/SchedulingConfigModule_ConfigFactory;->create(Lmm/c;)Lcom/google/android/datatransport/runtime/scheduling/SchedulingConfigModule_ConfigFactory;
+    invoke-static {p1}, Lcom/google/android/datatransport/runtime/scheduling/SchedulingConfigModule_ConfigFactory;->create(Lg/a/c;)Lcom/google/android/datatransport/runtime/scheduling/SchedulingConfigModule_ConfigFactory;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->configProvider:Lmm/c;
+    iput-object p1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->configProvider:Lg/a/c;
 
-    iget-object v0, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->setApplicationContextProvider:Lmm/c;
+    .line 9
+    iget-object v0, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->setApplicationContextProvider:Lg/a/c;
 
-    iget-object v1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->sQLiteEventStoreProvider:Lmm/c;
+    iget-object v1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->sQLiteEventStoreProvider:Lg/a/c;
 
     invoke-static {}, Lcom/google/android/datatransport/runtime/time/TimeModule_UptimeClockFactory;->create()Lcom/google/android/datatransport/runtime/time/TimeModule_UptimeClockFactory;
 
     move-result-object v2
 
-    invoke-static {v0, v1, p1, v2}, Lcom/google/android/datatransport/runtime/scheduling/SchedulingModule_WorkSchedulerFactory;->create(Lmm/c;Lmm/c;Lmm/c;Lmm/c;)Lcom/google/android/datatransport/runtime/scheduling/SchedulingModule_WorkSchedulerFactory;
+    invoke-static {v0, v1, p1, v2}, Lcom/google/android/datatransport/runtime/scheduling/SchedulingModule_WorkSchedulerFactory;->create(Lg/a/c;Lg/a/c;Lg/a/c;Lg/a/c;)Lcom/google/android/datatransport/runtime/scheduling/SchedulingModule_WorkSchedulerFactory;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->workSchedulerProvider:Lmm/c;
+    iput-object p1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->workSchedulerProvider:Lg/a/c;
 
-    iget-object v0, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->executorProvider:Lmm/c;
+    .line 10
+    iget-object v0, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->executorProvider:Lg/a/c;
 
-    iget-object v1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->metadataBackendRegistryProvider:Lmm/c;
+    iget-object v1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->metadataBackendRegistryProvider:Lg/a/c;
 
-    iget-object v2, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->sQLiteEventStoreProvider:Lmm/c;
+    iget-object v2, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->sQLiteEventStoreProvider:Lg/a/c;
 
-    invoke-static {v0, v1, p1, v2, v2}, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;->create(Lmm/c;Lmm/c;Lmm/c;Lmm/c;Lmm/c;)Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;
+    invoke-static {v0, v1, p1, v2, v2}, Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;->create(Lg/a/c;Lg/a/c;Lg/a/c;Lg/a/c;Lg/a/c;)Lcom/google/android/datatransport/runtime/scheduling/DefaultScheduler_Factory;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->defaultSchedulerProvider:Lmm/c;
+    iput-object p1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->defaultSchedulerProvider:Lg/a/c;
 
-    iget-object v0, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->setApplicationContextProvider:Lmm/c;
+    .line 11
+    iget-object v0, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->setApplicationContextProvider:Lg/a/c;
 
-    iget-object v1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->metadataBackendRegistryProvider:Lmm/c;
+    iget-object v1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->metadataBackendRegistryProvider:Lg/a/c;
 
-    iget-object v5, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->sQLiteEventStoreProvider:Lmm/c;
+    iget-object v5, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->sQLiteEventStoreProvider:Lg/a/c;
 
-    iget-object v3, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->workSchedulerProvider:Lmm/c;
+    iget-object v3, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->workSchedulerProvider:Lg/a/c;
 
-    iget-object v4, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->executorProvider:Lmm/c;
+    iget-object v4, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->executorProvider:Lg/a/c;
 
     invoke-static {}, Lcom/google/android/datatransport/runtime/time/TimeModule_EventClockFactory;->create()Lcom/google/android/datatransport/runtime/time/TimeModule_EventClockFactory;
 
@@ -306,28 +318,30 @@
 
     move-result-object v7
 
-    iget-object v8, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->sQLiteEventStoreProvider:Lmm/c;
+    iget-object v8, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->sQLiteEventStoreProvider:Lg/a/c;
 
     move-object v2, v5
 
-    invoke-static/range {v0 .. v8}, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->create(Lmm/c;Lmm/c;Lmm/c;Lmm/c;Lmm/c;Lmm/c;Lmm/c;Lmm/c;Lmm/c;)Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;
+    invoke-static/range {v0 .. v8}, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->create(Lg/a/c;Lg/a/c;Lg/a/c;Lg/a/c;Lg/a/c;Lg/a/c;Lg/a/c;Lg/a/c;Lg/a/c;)Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->uploaderProvider:Lmm/c;
+    iput-object p1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->uploaderProvider:Lg/a/c;
 
-    iget-object p1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->executorProvider:Lmm/c;
+    .line 12
+    iget-object p1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->executorProvider:Lg/a/c;
 
-    iget-object v0, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->sQLiteEventStoreProvider:Lmm/c;
+    iget-object v0, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->sQLiteEventStoreProvider:Lg/a/c;
 
-    iget-object v1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->workSchedulerProvider:Lmm/c;
+    iget-object v1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->workSchedulerProvider:Lg/a/c;
 
-    invoke-static {p1, v0, v1, v0}, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer_Factory;->create(Lmm/c;Lmm/c;Lmm/c;Lmm/c;)Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer_Factory;
+    invoke-static {p1, v0, v1, v0}, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer_Factory;->create(Lg/a/c;Lg/a/c;Lg/a/c;Lg/a/c;)Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkInitializer_Factory;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->workInitializerProvider:Lmm/c;
+    iput-object p1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->workInitializerProvider:Lg/a/c;
 
+    .line 13
     invoke-static {}, Lcom/google/android/datatransport/runtime/time/TimeModule_EventClockFactory;->create()Lcom/google/android/datatransport/runtime/time/TimeModule_EventClockFactory;
 
     move-result-object p1
@@ -336,21 +350,21 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->defaultSchedulerProvider:Lmm/c;
+    iget-object v1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->defaultSchedulerProvider:Lg/a/c;
 
-    iget-object v2, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->uploaderProvider:Lmm/c;
+    iget-object v2, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->uploaderProvider:Lg/a/c;
 
-    iget-object v3, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->workInitializerProvider:Lmm/c;
+    iget-object v3, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->workInitializerProvider:Lg/a/c;
 
-    invoke-static {p1, v0, v1, v2, v3}, Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;->create(Lmm/c;Lmm/c;Lmm/c;Lmm/c;Lmm/c;)Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcom/google/android/datatransport/runtime/dagger/internal/DoubleCheck;->provider(Lmm/c;)Lmm/c;
+    invoke-static {p1, v0, v1, v2, v3}, Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;->create(Lg/a/c;Lg/a/c;Lg/a/c;Lg/a/c;Lg/a/c;)Lcom/google/android/datatransport/runtime/TransportRuntime_Factory;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->transportRuntimeProvider:Lmm/c;
+    invoke-static {p1}, Lcom/google/android/datatransport/runtime/dagger/internal/DoubleCheck;->provider(Lg/a/c;)Lg/a/c;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->transportRuntimeProvider:Lg/a/c;
 
     return-void
 .end method
@@ -360,9 +374,10 @@
 .method public getEventStore()Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;
     .locals 0
 
-    iget-object p0, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->sQLiteEventStoreProvider:Lmm/c;
+    .line 1
+    iget-object p0, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->sQLiteEventStoreProvider:Lg/a/c;
 
-    invoke-interface {p0}, Lmm/c;->get()Ljava/lang/Object;
+    invoke-interface {p0}, Lg/a/c;->get()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -374,9 +389,10 @@
 .method public getTransportRuntime()Lcom/google/android/datatransport/runtime/TransportRuntime;
     .locals 0
 
-    iget-object p0, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->transportRuntimeProvider:Lmm/c;
+    .line 1
+    iget-object p0, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;->transportRuntimeProvider:Lg/a/c;
 
-    invoke-interface {p0}, Lmm/c;->get()Ljava/lang/Object;
+    invoke-interface {p0}, Lg/a/c;->get()Ljava/lang/Object;
 
     move-result-object p0
 

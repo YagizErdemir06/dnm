@@ -55,26 +55,33 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/source/dash/manifest/DashManifest;Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler$PlayerEmsgCallback;Lcom/google/android/exoplayer2/upstream/Allocator;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->manifest:Lcom/google/android/exoplayer2/source/dash/manifest/DashManifest;
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->playerEmsgCallback:Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler$PlayerEmsgCallback;
 
+    .line 4
     iput-object p3, p0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->allocator:Lcom/google/android/exoplayer2/upstream/Allocator;
 
+    .line 5
     new-instance p1, Ljava/util/TreeMap;
 
     invoke-direct {p1}, Ljava/util/TreeMap;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->manifestPublishTimeToExpiryTimeUs:Ljava/util/TreeMap;
 
+    .line 6
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Util;->createHandlerForCurrentLooper(Landroid/os/Handler$Callback;)Landroid/os/Handler;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->handler:Landroid/os/Handler;
 
+    .line 7
     new-instance p1, Lcom/google/android/exoplayer2/metadata/emsg/EventMessageDecoder;
 
     invoke-direct {p1}, Lcom/google/android/exoplayer2/metadata/emsg/EventMessageDecoder;-><init>()V
@@ -87,6 +94,7 @@
 .method public static synthetic access$000(Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;)Lcom/google/android/exoplayer2/metadata/emsg/EventMessageDecoder;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->decoder:Lcom/google/android/exoplayer2/metadata/emsg/EventMessageDecoder;
 
     return-object p0
@@ -95,6 +103,7 @@
 .method public static synthetic access$100(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 0
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->isPlayerEmsgEvent(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p0
@@ -105,6 +114,7 @@
 .method public static synthetic access$200(Lcom/google/android/exoplayer2/metadata/emsg/EventMessage;)J
     .locals 2
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->getManifestPublishTimeMsInEmsg(Lcom/google/android/exoplayer2/metadata/emsg/EventMessage;)J
 
     move-result-wide v0
@@ -115,6 +125,7 @@
 .method public static synthetic access$300(Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;)Landroid/os/Handler;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->handler:Landroid/os/Handler;
 
     return-object p0
@@ -135,6 +146,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->manifestPublishTimeToExpiryTimeUs:Ljava/util/TreeMap;
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -151,6 +163,7 @@
 .method private static getManifestPublishTimeMsInEmsg(Lcom/google/android/exoplayer2/metadata/emsg/EventMessage;)J
     .locals 2
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/metadata/emsg/EventMessage;->messageData:[B
 
@@ -175,6 +188,7 @@
 .method private handleManifestExpiredMessage(JJ)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->manifestPublishTimeToExpiryTimeUs:Ljava/util/TreeMap;
 
     invoke-static {p3, p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -189,6 +203,7 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->manifestPublishTimeToExpiryTimeUs:Ljava/util/TreeMap;
 
     invoke-static {p3, p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -203,6 +218,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
@@ -212,6 +228,7 @@
 
     if-lez v0, :cond_1
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->manifestPublishTimeToExpiryTimeUs:Ljava/util/TreeMap;
 
     invoke-static {p3, p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -234,6 +251,7 @@
 
     const-string v0, "urn:mpeg:dash:event:2012"
 
+    .line 1
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -242,6 +260,7 @@
 
     const-string p0, "1"
 
+    .line 2
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -279,6 +298,7 @@
 .method private maybeNotifyDashManifestRefreshNeeded()V
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->chunkLoadedCompletedSinceLastManifestRefreshRequest:Z
 
     if-nez v0, :cond_0
@@ -288,12 +308,15 @@
     :cond_0
     const/4 v0, 0x1
 
+    .line 2
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->isWaitingForManifestRefresh:Z
 
     const/4 v0, 0x0
 
+    .line 3
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->chunkLoadedCompletedSinceLastManifestRefreshRequest:Z
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->playerEmsgCallback:Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler$PlayerEmsgCallback;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler$PlayerEmsgCallback;->onDashManifestRefreshRequested()V
@@ -304,6 +327,7 @@
 .method private notifyManifestPublishTimeExpired()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->playerEmsgCallback:Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler$PlayerEmsgCallback;
 
     iget-wide v1, p0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->expiredManifestPublishTimeUs:J
@@ -316,8 +340,10 @@
 .method private removePreviouslyExpiredManifestPublishTimeValues()V
     .locals 5
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->manifestPublishTimeToExpiryTimeUs:Ljava/util/TreeMap;
 
+    .line 2
     invoke-virtual {v0}, Ljava/util/TreeMap;->entrySet()Ljava/util/Set;
 
     move-result-object v0
@@ -326,6 +352,7 @@
 
     move-result-object v0
 
+    .line 3
     :cond_0
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -334,12 +361,14 @@
 
     if-eqz v1, :cond_1
 
+    .line 4
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/Map$Entry;
 
+    .line 5
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -350,6 +379,7 @@
 
     move-result-wide v1
 
+    .line 6
     iget-object v3, p0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->manifest:Lcom/google/android/exoplayer2/source/dash/manifest/DashManifest;
 
     iget-wide v3, v3, Lcom/google/android/exoplayer2/source/dash/manifest/DashManifest;->publishTimeMs:J
@@ -358,6 +388,7 @@
 
     if-gez v1, :cond_0
 
+    .line 7
     invoke-interface {v0}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
@@ -371,6 +402,7 @@
 .method public handleMessage(Landroid/os/Message;)Z
     .locals 6
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->released:Z
 
     const/4 v1, 0x1
@@ -379,6 +411,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     iget v0, p1, Landroid/os/Message;->what:I
 
@@ -388,11 +421,13 @@
 
     return p0
 
+    .line 3
     :cond_1
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler$ManifestExpiryEventInfo;
 
+    .line 4
     iget-wide v2, p1, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler$ManifestExpiryEventInfo;->eventTimeUs:J
 
     iget-wide v4, p1, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler$ManifestExpiryEventInfo;->manifestPublishTimeMsInEmsg:J
@@ -405,6 +440,7 @@
 .method public maybeRefreshManifestBeforeLoadingNextChunk(J)Z
     .locals 6
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->manifest:Lcom/google/android/exoplayer2/source/dash/manifest/DashManifest;
 
     iget-boolean v1, v0, Lcom/google/android/exoplayer2/source/dash/manifest/DashManifest;->dynamic:Z
@@ -415,6 +451,7 @@
 
     return v2
 
+    .line 2
     :cond_0
     iget-boolean v1, p0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->isWaitingForManifestRefresh:Z
 
@@ -424,6 +461,7 @@
 
     return v3
 
+    .line 3
     :cond_1
     iget-wide v0, v0, Lcom/google/android/exoplayer2/source/dash/manifest/DashManifest;->publishTimeMs:J
 
@@ -433,6 +471,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 4
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -447,6 +486,7 @@
 
     if-gez p1, :cond_2
 
+    .line 5
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object p1
@@ -459,6 +499,7 @@
 
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->expiredManifestPublishTimeUs:J
 
+    .line 6
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->notifyManifestPublishTimeExpired()V
 
     move v2, v3
@@ -466,6 +507,7 @@
     :cond_2
     if-eqz v2, :cond_3
 
+    .line 7
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->maybeNotifyDashManifestRefreshNeeded()V
 
     :cond_3
@@ -475,6 +517,7 @@
 .method public newPlayerTrackEmsgHandler()Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler$PlayerTrackEmsgHandler;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler$PlayerTrackEmsgHandler;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->allocator:Lcom/google/android/exoplayer2/upstream/Allocator;
@@ -489,6 +532,7 @@
 
     const/4 p1, 0x1
 
+    .line 1
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->chunkLoadedCompletedSinceLastManifestRefreshRequest:Z
 
     return-void
@@ -497,6 +541,7 @@
 .method public onChunkLoadError(Z)Z
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->manifest:Lcom/google/android/exoplayer2/source/dash/manifest/DashManifest;
 
     iget-boolean v0, v0, Lcom/google/android/exoplayer2/source/dash/manifest/DashManifest;->dynamic:Z
@@ -507,6 +552,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->isWaitingForManifestRefresh:Z
 
@@ -519,6 +565,7 @@
     :cond_1
     if-eqz p1, :cond_2
 
+    .line 3
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->maybeNotifyDashManifestRefreshNeeded()V
 
     return v2
@@ -532,8 +579,10 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->released:Z
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->handler:Landroid/os/Handler;
 
     const/4 v0, 0x0
@@ -548,14 +597,18 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->isWaitingForManifestRefresh:Z
 
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 2
     iput-wide v0, p0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->expiredManifestPublishTimeUs:J
 
+    .line 3
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->manifest:Lcom/google/android/exoplayer2/source/dash/manifest/DashManifest;
 
+    .line 4
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/dash/PlayerEmsgHandler;->removePreviouslyExpiredManifestPublishTimeValues()V
 
     return-void

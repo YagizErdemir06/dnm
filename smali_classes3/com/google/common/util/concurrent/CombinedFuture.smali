@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/CombinedFuture;
+.class public final Lcom/google/common/util/concurrent/CombinedFuture;
 .super Lcom/google/common/util/concurrent/AggregateFuture;
 .source "SourceFile"
 
@@ -114,6 +114,7 @@
 .method public static synthetic access$002(Lcom/google/common/util/concurrent/CombinedFuture;Lcom/google/common/util/concurrent/CombinedFuture$CombinedFutureInterruptibleTask;)Lcom/google/common/util/concurrent/CombinedFuture$CombinedFutureInterruptibleTask;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/CombinedFuture;->task:Lcom/google/common/util/concurrent/CombinedFuture$CombinedFutureInterruptibleTask;
 
     return-object p1
@@ -134,10 +135,12 @@
 .method public handleAllCompleted()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/CombinedFuture;->task:Lcom/google/common/util/concurrent/CombinedFuture$CombinedFutureInterruptibleTask;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/CombinedFuture$CombinedFutureInterruptibleTask;->execute()V
 
     :cond_0
@@ -147,10 +150,12 @@
 .method public interruptTask()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/CombinedFuture;->task:Lcom/google/common/util/concurrent/CombinedFuture$CombinedFutureInterruptibleTask;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/InterruptibleTask;->interruptTask()V
 
     :cond_0
@@ -160,14 +165,17 @@
 .method public releaseResources(Lcom/google/common/util/concurrent/AggregateFuture$ReleaseResourcesReason;)V
     .locals 1
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/util/concurrent/AggregateFuture;->releaseResources(Lcom/google/common/util/concurrent/AggregateFuture$ReleaseResourcesReason;)V
 
+    .line 2
     sget-object v0, Lcom/google/common/util/concurrent/AggregateFuture$ReleaseResourcesReason;->OUTPUT_FUTURE_DONE:Lcom/google/common/util/concurrent/AggregateFuture$ReleaseResourcesReason;
 
     if-ne p1, v0, :cond_0
 
     const/4 p1, 0x0
 
+    .line 3
     iput-object p1, p0, Lcom/google/common/util/concurrent/CombinedFuture;->task:Lcom/google/common/util/concurrent/CombinedFuture$CombinedFutureInterruptibleTask;
 
     :cond_0

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/api/internal/zaat;
+.class public final Lcom/google/android/gms/common/api/internal/zaat;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -8,7 +8,7 @@
 
 
 # instance fields
-.field final synthetic zaa:Lcom/google/android/gms/common/api/internal/zaaw;
+.field public final synthetic zaa:Lcom/google/android/gms/common/api/internal/zaaw;
 
 
 # direct methods
@@ -31,6 +31,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p1, p0, Lcom/google/android/gms/common/api/internal/zaat;->zaa:Lcom/google/android/gms/common/api/internal/zaaw;
 
     invoke-static {p1}, Lcom/google/android/gms/common/api/internal/zaaw;->zal(Lcom/google/android/gms/common/api/internal/zaaw;)Lcom/google/android/gms/common/internal/ClientSettings;
@@ -49,6 +50,7 @@
 
     move-result-object p1
 
+    .line 2
     invoke-static {p1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -61,6 +63,7 @@
 
     invoke-direct {v0, p0}, Lcom/google/android/gms/common/api/internal/zaar;-><init>(Lcom/google/android/gms/common/api/internal/zaaw;)V
 
+    .line 3
     invoke-interface {p1, v0}, Lcom/google/android/gms/signin/zae;->zad(Lcom/google/android/gms/signin/internal/zae;)V
 
     return-void
@@ -73,6 +76,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zaat;->zaa:Lcom/google/android/gms/common/api/internal/zaaw;
 
     invoke-static {v0}, Lcom/google/android/gms/common/api/internal/zaaw;->zap(Lcom/google/android/gms/common/api/internal/zaaw;)Ljava/util/concurrent/locks/Lock;
@@ -84,6 +88,7 @@
     :try_start_0
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zaat;->zaa:Lcom/google/android/gms/common/api/internal/zaaw;
 
+    .line 2
     invoke-static {v0, p1}, Lcom/google/android/gms/common/api/internal/zaaw;->zay(Lcom/google/android/gms/common/api/internal/zaaw;Lcom/google/android/gms/common/ConnectionResult;)Z
 
     move-result v0
@@ -92,21 +97,26 @@
 
     iget-object p1, p0, Lcom/google/android/gms/common/api/internal/zaat;->zaa:Lcom/google/android/gms/common/api/internal/zaaw;
 
+    .line 3
     invoke-static {p1}, Lcom/google/android/gms/common/api/internal/zaaw;->zaq(Lcom/google/android/gms/common/api/internal/zaaw;)V
 
     iget-object p1, p0, Lcom/google/android/gms/common/api/internal/zaat;->zaa:Lcom/google/android/gms/common/api/internal/zaaw;
 
+    .line 4
     invoke-static {p1}, Lcom/google/android/gms/common/api/internal/zaaw;->zau(Lcom/google/android/gms/common/api/internal/zaaw;)V
 
     goto :goto_0
 
+    .line 5
     :cond_0
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zaat;->zaa:Lcom/google/android/gms/common/api/internal/zaaw;
 
+    .line 6
     invoke-static {v0, p1}, Lcom/google/android/gms/common/api/internal/zaaw;->zas(Lcom/google/android/gms/common/api/internal/zaaw;Lcom/google/android/gms/common/ConnectionResult;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 7
     :goto_0
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zaat;->zaa:Lcom/google/android/gms/common/api/internal/zaaw;
 
@@ -114,6 +124,7 @@
 
     move-result-object p0
 
+    .line 8
     invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return-void
@@ -129,6 +140,7 @@
 
     invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
+    .line 9
     throw p1
 .end method
 

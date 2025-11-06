@@ -20,7 +20,7 @@
 # instance fields
 .field private final file:Ljava/io/File;
 
-.field final loader:Ljava/lang/ClassLoader;
+.field public final loader:Ljava/lang/ClassLoader;
 
 .field private final resourceName:Ljava/lang/String;
 
@@ -29,8 +29,10 @@
 .method public constructor <init>(Ljava/io/File;Ljava/lang/String;Ljava/lang/ClassLoader;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -39,6 +41,7 @@
 
     iput-object p1, p0, Lcom/google/common/reflect/ClassPath$ResourceInfo;->file:Ljava/io/File;
 
+    .line 3
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -47,6 +50,7 @@
 
     iput-object p1, p0, Lcom/google/common/reflect/ClassPath$ResourceInfo;->resourceName:Ljava/lang/String;
 
+    .line 4
     invoke-static {p3}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -63,18 +67,21 @@
 
     const-string v0, ".class"
 
+    .line 1
     invoke-virtual {p1, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     new-instance v0, Lcom/google/common/reflect/ClassPath$ClassInfo;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/google/common/reflect/ClassPath$ClassInfo;-><init>(Ljava/io/File;Ljava/lang/String;Ljava/lang/ClassLoader;)V
 
     return-object v0
 
+    .line 3
     :cond_0
     new-instance v0, Lcom/google/common/reflect/ClassPath$ResourceInfo;
 
@@ -88,6 +95,7 @@
 .method public final asByteSource()Lcom/google/common/io/ByteSource;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/reflect/ClassPath$ResourceInfo;->url()Ljava/net/URL;
 
     move-result-object p0
@@ -102,6 +110,7 @@
 .method public final asCharSource(Ljava/nio/charset/Charset;)Lcom/google/common/io/CharSource;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/reflect/ClassPath$ResourceInfo;->url()Ljava/net/URL;
 
     move-result-object p0
@@ -120,14 +129,17 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/common/reflect/ClassPath$ResourceInfo;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/common/reflect/ClassPath$ResourceInfo;
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/reflect/ClassPath$ResourceInfo;->resourceName:Ljava/lang/String;
 
     iget-object v2, p1, Lcom/google/common/reflect/ClassPath$ResourceInfo;->resourceName:Ljava/lang/String;
@@ -153,6 +165,7 @@
 .method public final getFile()Ljava/io/File;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/ClassPath$ResourceInfo;->file:Ljava/io/File;
 
     return-object p0
@@ -161,6 +174,7 @@
 .method public final getResourceName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/ClassPath$ResourceInfo;->resourceName:Ljava/lang/String;
 
     return-object p0
@@ -169,6 +183,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/ClassPath$ResourceInfo;->resourceName:Ljava/lang/String;
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -181,6 +196,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/ClassPath$ResourceInfo;->resourceName:Ljava/lang/String;
 
     return-object p0
@@ -189,6 +205,7 @@
 .method public final url()Ljava/net/URL;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/reflect/ClassPath$ResourceInfo;->loader:Ljava/lang/ClassLoader;
 
     iget-object v1, p0, Lcom/google/common/reflect/ClassPath$ResourceInfo;->resourceName:Ljava/lang/String;
@@ -201,6 +218,7 @@
 
     return-object v0
 
+    .line 2
     :cond_0
     new-instance v0, Ljava/util/NoSuchElementException;
 

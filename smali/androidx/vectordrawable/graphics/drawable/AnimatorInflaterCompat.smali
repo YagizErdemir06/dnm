@@ -41,6 +41,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -206,7 +207,7 @@
     goto :goto_1
 
     :cond_4
-    const-string/jumbo v3, "set"
+    const-string v3, "set"
 
     .line 9
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -267,7 +268,7 @@
     goto :goto_2
 
     :cond_5
-    const-string/jumbo v3, "propertyValuesHolder"
+    const-string v3, "propertyValuesHolder"
 
     .line 15
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -408,6 +409,7 @@
 .method private static createNewKeyframe(Landroid/animation/Keyframe;F)Landroid/animation/Keyframe;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Landroid/animation/Keyframe;->getType()Ljava/lang/Class;
 
     move-result-object v0
@@ -416,12 +418,14 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 2
     invoke-static {p1}, Landroid/animation/Keyframe;->ofFloat(F)Landroid/animation/Keyframe;
 
     move-result-object p0
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Landroid/animation/Keyframe;->getType()Ljava/lang/Class;
 
@@ -431,12 +435,14 @@
 
     if-ne p0, v0, :cond_1
 
+    .line 4
     invoke-static {p1}, Landroid/animation/Keyframe;->ofInt(F)Landroid/animation/Keyframe;
 
     move-result-object p0
 
     goto :goto_0
 
+    .line 5
     :cond_1
     invoke-static {p1}, Landroid/animation/Keyframe;->ofObject(F)Landroid/animation/Keyframe;
 
@@ -460,6 +466,7 @@
     :goto_0
     if-gt p2, p3, :cond_0
 
+    .line 1
     aget-object v0, p0, p2
 
     add-int/lit8 v1, p2, -0x1
@@ -487,6 +494,7 @@
 
     if-eqz p0, :cond_3
 
+    .line 1
     array-length v0, p0
 
     if-nez v0, :cond_0
@@ -496,8 +504,10 @@
     :cond_0
     const-string v0, "AnimatorInflater"
 
+    .line 2
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 3
     array-length p1, p0
 
     const/4 v1, 0x0
@@ -505,10 +515,12 @@
     :goto_0
     if-ge v1, p1, :cond_3
 
+    .line 4
     aget-object v2, p0, v1
 
     check-cast v2, Landroid/animation/Keyframe;
 
+    .line 5
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -523,6 +535,7 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 6
     invoke-virtual {v2}, Landroid/animation/Keyframe;->getFraction()F
 
     move-result v4
@@ -555,6 +568,7 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 7
     invoke-virtual {v2}, Landroid/animation/Keyframe;->hasValue()Z
 
     move-result v4
@@ -572,6 +586,7 @@
 
     move-result-object v2
 
+    .line 8
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     add-int/lit8 v1, v1, 0x1
@@ -586,6 +601,7 @@
 .method private static getPVH(Landroid/content/res/TypedArray;IIILjava/lang/String;)Landroid/animation/PropertyValuesHolder;
     .locals 11
 
+    .line 1
     invoke-virtual {p0, p2}, Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
 
     move-result-object v0
@@ -606,6 +622,7 @@
     :goto_0
     if-eqz v3, :cond_1
 
+    .line 2
     iget v0, v0, Landroid/util/TypedValue;->type:I
 
     goto :goto_1
@@ -613,6 +630,7 @@
     :cond_1
     move v0, v2
 
+    .line 3
     :goto_1
     invoke-virtual {p0, p3}, Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
 
@@ -630,6 +648,7 @@
     :goto_2
     if-eqz v5, :cond_3
 
+    .line 4
     iget v4, v4, Landroid/util/TypedValue;->type:I
 
     goto :goto_3
@@ -646,6 +665,7 @@
 
     if-eqz v3, :cond_4
 
+    .line 5
     invoke-static {v0}, Landroidx/vectordrawable/graphics/drawable/AnimatorInflaterCompat;->isColorType(I)Z
 
     move-result p1
@@ -687,18 +707,22 @@
 
     if-ne p1, v9, :cond_d
 
+    .line 6
     invoke-virtual {p0, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 7
     invoke-virtual {p0, p3}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 8
     invoke-static {p1}, Landroidx/core/graphics/PathParser;->createNodesFromPathData(Ljava/lang/String;)[Landroidx/core/graphics/PathParser$PathDataNode;
 
     move-result-object p2
 
+    .line 9
     invoke-static {p0}, Landroidx/core/graphics/PathParser;->createNodesFromPathData(Ljava/lang/String;)[Landroidx/core/graphics/PathParser$PathDataNode;
 
     move-result-object p3
@@ -710,12 +734,14 @@
     :cond_9
     if-eqz p2, :cond_c
 
+    .line 10
     new-instance v0, Landroidx/vectordrawable/graphics/drawable/AnimatorInflaterCompat$PathDataEvaluator;
 
     invoke-direct {v0}, Landroidx/vectordrawable/graphics/drawable/AnimatorInflaterCompat$PathDataEvaluator;-><init>()V
 
     if-eqz p3, :cond_b
 
+    .line 11
     invoke-static {p2, p3}, Landroidx/core/graphics/PathParser;->canMorph([Landroidx/core/graphics/PathParser$PathDataNode;[Landroidx/core/graphics/PathParser$PathDataNode;)Z
 
     move-result v3
@@ -728,12 +754,14 @@
 
     aput-object p3, p0, v1
 
+    .line 12
     invoke-static {p4, v0, p0}, Landroid/animation/PropertyValuesHolder;->ofObject(Ljava/lang/String;Landroid/animation/TypeEvaluator;[Ljava/lang/Object;)Landroid/animation/PropertyValuesHolder;
 
     move-result-object p0
 
     goto :goto_6
 
+    .line 13
     :cond_a
     new-instance p2, Landroid/view/InflateException;
 
@@ -766,6 +794,7 @@
 
     aput-object p2, p0, v2
 
+    .line 14
     invoke-static {p4, v0, p0}, Landroid/animation/PropertyValuesHolder;->ofObject(Ljava/lang/String;Landroid/animation/TypeEvaluator;[Ljava/lang/Object;)Landroid/animation/PropertyValuesHolder;
 
     move-result-object p0
@@ -778,6 +807,7 @@
     :cond_c
     if-eqz p3, :cond_1e
 
+    .line 15
     new-instance p0, Landroidx/vectordrawable/graphics/drawable/AnimatorInflaterCompat$PathDataEvaluator;
 
     invoke-direct {p0}, Landroidx/vectordrawable/graphics/drawable/AnimatorInflaterCompat$PathDataEvaluator;-><init>()V
@@ -786,6 +816,7 @@
 
     aput-object p3, p1, v2
 
+    .line 16
     invoke-static {p4, p0, p1}, Landroid/animation/PropertyValuesHolder;->ofObject(Ljava/lang/String;Landroid/animation/TypeEvaluator;[Ljava/lang/Object;)Landroid/animation/PropertyValuesHolder;
 
     move-result-object v8
@@ -795,6 +826,7 @@
     :cond_d
     if-ne p1, v7, :cond_e
 
+    .line 17
     invoke-static {}, Landroidx/vectordrawable/graphics/drawable/ArgbEvaluator;->getInstance()Landroidx/vectordrawable/graphics/drawable/ArgbEvaluator;
 
     move-result-object p1
@@ -815,12 +847,14 @@
 
     if-ne v0, v7, :cond_f
 
+    .line 18
     invoke-virtual {p0, p2, v10}, Landroid/content/res/TypedArray;->getDimension(IF)F
 
     move-result p2
 
     goto :goto_8
 
+    .line 19
     :cond_f
     invoke-virtual {p0, p2, v10}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
@@ -831,12 +865,14 @@
 
     if-ne v4, v7, :cond_10
 
+    .line 20
     invoke-virtual {p0, p3, v10}, Landroid/content/res/TypedArray;->getDimension(IF)F
 
     move-result p0
 
     goto :goto_9
 
+    .line 21
     :cond_10
     invoke-virtual {p0, p3, v10}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
@@ -849,6 +885,7 @@
 
     aput p0, p3, v1
 
+    .line 22
     invoke-static {p4, p3}, Landroid/animation/PropertyValuesHolder;->ofFloat(Ljava/lang/String;[F)Landroid/animation/PropertyValuesHolder;
 
     move-result-object p0
@@ -860,6 +897,7 @@
 
     aput p2, p0, v2
 
+    .line 23
     invoke-static {p4, p0}, Landroid/animation/PropertyValuesHolder;->ofFloat(Ljava/lang/String;[F)Landroid/animation/PropertyValuesHolder;
 
     move-result-object p0
@@ -869,12 +907,14 @@
     :cond_12
     if-ne v4, v7, :cond_13
 
+    .line 24
     invoke-virtual {p0, p3, v10}, Landroid/content/res/TypedArray;->getDimension(IF)F
 
     move-result p0
 
     goto :goto_a
 
+    .line 25
     :cond_13
     invoke-virtual {p0, p3, v10}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
@@ -885,6 +925,7 @@
 
     aput p0, p2, v2
 
+    .line 26
     invoke-static {p4, p2}, Landroid/animation/PropertyValuesHolder;->ofFloat(Ljava/lang/String;[F)Landroid/animation/PropertyValuesHolder;
 
     move-result-object p0
@@ -899,6 +940,7 @@
 
     if-ne v0, v7, :cond_15
 
+    .line 27
     invoke-virtual {p0, p2, v10}, Landroid/content/res/TypedArray;->getDimension(IF)F
 
     move-result p2
@@ -907,6 +949,7 @@
 
     goto :goto_c
 
+    .line 28
     :cond_15
     invoke-static {v0}, Landroidx/vectordrawable/graphics/drawable/AnimatorInflaterCompat;->isColorType(I)Z
 
@@ -914,12 +957,14 @@
 
     if-eqz v0, :cond_16
 
+    .line 29
     invoke-virtual {p0, p2, v2}, Landroid/content/res/TypedArray;->getColor(II)I
 
     move-result p2
 
     goto :goto_c
 
+    .line 30
     :cond_16
     invoke-virtual {p0, p2, v2}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -930,6 +975,7 @@
 
     if-ne v4, v7, :cond_17
 
+    .line 31
     invoke-virtual {p0, p3, v10}, Landroid/content/res/TypedArray;->getDimension(IF)F
 
     move-result p0
@@ -938,6 +984,7 @@
 
     goto :goto_d
 
+    .line 32
     :cond_17
     invoke-static {v4}, Landroidx/vectordrawable/graphics/drawable/AnimatorInflaterCompat;->isColorType(I)Z
 
@@ -945,12 +992,14 @@
 
     if-eqz v0, :cond_18
 
+    .line 33
     invoke-virtual {p0, p3, v2}, Landroid/content/res/TypedArray;->getColor(II)I
 
     move-result p0
 
     goto :goto_d
 
+    .line 34
     :cond_18
     invoke-virtual {p0, p3, v2}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -963,6 +1012,7 @@
 
     aput p0, p3, v1
 
+    .line 35
     invoke-static {p4, p3}, Landroid/animation/PropertyValuesHolder;->ofInt(Ljava/lang/String;[I)Landroid/animation/PropertyValuesHolder;
 
     move-result-object v8
@@ -974,6 +1024,7 @@
 
     aput p2, p0, v2
 
+    .line 36
     invoke-static {p4, p0}, Landroid/animation/PropertyValuesHolder;->ofInt(Ljava/lang/String;[I)Landroid/animation/PropertyValuesHolder;
 
     move-result-object v8
@@ -985,6 +1036,7 @@
 
     if-ne v4, v7, :cond_1b
 
+    .line 37
     invoke-virtual {p0, p3, v10}, Landroid/content/res/TypedArray;->getDimension(IF)F
 
     move-result p0
@@ -993,6 +1045,7 @@
 
     goto :goto_e
 
+    .line 38
     :cond_1b
     invoke-static {v4}, Landroidx/vectordrawable/graphics/drawable/AnimatorInflaterCompat;->isColorType(I)Z
 
@@ -1000,12 +1053,14 @@
 
     if-eqz p2, :cond_1c
 
+    .line 39
     invoke-virtual {p0, p3, v2}, Landroid/content/res/TypedArray;->getColor(II)I
 
     move-result p0
 
     goto :goto_e
 
+    .line 40
     :cond_1c
     invoke-virtual {p0, p3, v2}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -1016,6 +1071,7 @@
 
     aput p0, p2, v2
 
+    .line 41
     invoke-static {p4, p2}, Landroid/animation/PropertyValuesHolder;->ofInt(Ljava/lang/String;[I)Landroid/animation/PropertyValuesHolder;
 
     move-result-object v8
@@ -1026,6 +1082,7 @@
 
     if-eqz p1, :cond_1e
 
+    .line 42
     invoke-virtual {v8, p1}, Landroid/animation/PropertyValuesHolder;->setEvaluator(Landroid/animation/TypeEvaluator;)V
 
     :cond_1e
@@ -1036,6 +1093,7 @@
 .method private static inferValueTypeFromValues(Landroid/content/res/TypedArray;II)I
     .locals 3
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
 
     move-result-object p1
@@ -1056,6 +1114,7 @@
     :goto_0
     if-eqz v2, :cond_1
 
+    .line 2
     iget p1, p1, Landroid/util/TypedValue;->type:I
 
     goto :goto_1
@@ -1063,6 +1122,7 @@
     :cond_1
     move p1, v1
 
+    .line 3
     :goto_1
     invoke-virtual {p0, p2}, Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
 
@@ -1078,6 +1138,7 @@
     :goto_2
     if-eqz v0, :cond_3
 
+    .line 4
     iget p0, p0, Landroid/util/TypedValue;->type:I
 
     goto :goto_3
@@ -1088,6 +1149,7 @@
     :goto_3
     if-eqz v2, :cond_4
 
+    .line 5
     invoke-static {p1}, Landroidx/vectordrawable/graphics/drawable/AnimatorInflaterCompat;->isColorType(I)Z
 
     move-result p1
@@ -1113,6 +1175,7 @@
 .method private static inferValueTypeOfKeyframe(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;Lorg/xmlpull/v1/XmlPullParser;)I
     .locals 1
 
+    .line 1
     sget-object v0, Landroidx/vectordrawable/graphics/drawable/AndroidResources;->STYLEABLE_KEYFRAME:[I
 
     invoke-static {p0, p1, p2, v0}, Landroidx/core/content/res/TypedArrayUtils;->obtainAttributes(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
@@ -1123,6 +1186,7 @@
 
     const/4 p2, 0x0
 
+    .line 2
     invoke-static {p0, p3, p1, p2}, Landroidx/core/content/res/TypedArrayUtils;->peekNamedValue(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Landroid/util/TypedValue;
 
     move-result-object p1
@@ -1139,6 +1203,7 @@
     :goto_0
     if-eqz p3, :cond_1
 
+    .line 3
     iget p1, p1, Landroid/util/TypedValue;->type:I
 
     invoke-static {p1}, Landroidx/vectordrawable/graphics/drawable/AnimatorInflaterCompat;->isColorType(I)Z
@@ -1149,6 +1214,7 @@
 
     const/4 p2, 0x3
 
+    .line 4
     :cond_1
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
 
@@ -1178,7 +1244,7 @@
 .end method
 
 .method public static loadAnimator(Landroid/content/Context;I)Landroid/animation/Animator;
-    .locals 0
+    .locals 2
     .param p1    # I
         .annotation build Landroidx/annotation/AnimatorRes;
         .end annotation
@@ -1190,10 +1256,34 @@
     .end annotation
 
     .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x18
+
+    if-lt v0, v1, :cond_0
+
+    .line 2
     invoke-static {p0, p1}, Landroid/animation/AnimatorInflater;->loadAnimator(Landroid/content/Context;I)Landroid/animation/Animator;
 
     move-result-object p0
 
+    goto :goto_0
+
+    .line 3
+    :cond_0
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+
+    move-result-object v1
+
+    invoke-static {p0, v0, v1, p1}, Landroidx/vectordrawable/graphics/drawable/AnimatorInflaterCompat;->loadAnimator(Landroid/content/Context;Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;I)Landroid/animation/Animator;
+
+    move-result-object p0
+
+    :goto_0
     return-object p0
 .end method
 
@@ -1211,7 +1301,7 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 2
+    .line 4
     invoke-static {p0, p1, p2, p3, v0}, Landroidx/vectordrawable/graphics/drawable/AnimatorInflaterCompat;->loadAnimator(Landroid/content/Context;Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;IF)Landroid/animation/Animator;
 
     move-result-object p0
@@ -1235,13 +1325,13 @@
 
     const/4 v1, 0x0
 
-    .line 3
+    .line 5
     :try_start_0
     invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getAnimation(I)Landroid/content/res/XmlResourceParser;
 
     move-result-object v1
 
-    .line 4
+    .line 6
     invoke-static {p0, p1, p2, v1, p4}, Landroidx/vectordrawable/graphics/drawable/AnimatorInflaterCompat;->createAnimatorFromXml(Landroid/content/Context;Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Lorg/xmlpull/v1/XmlPullParser;F)Landroid/animation/Animator;
 
     move-result-object p0
@@ -1252,7 +1342,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 5
+    .line 7
     invoke-interface {v1}, Landroid/content/res/XmlResourceParser;->close()V
 
     :cond_0
@@ -1266,7 +1356,7 @@
     :catch_0
     move-exception p0
 
-    .line 6
+    .line 8
     :try_start_1
     new-instance p1, Landroid/content/res/Resources$NotFoundException;
 
@@ -1276,7 +1366,7 @@
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 7
+    .line 9
     invoke-static {p3}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object p3
@@ -1289,16 +1379,16 @@
 
     invoke-direct {p1, p2}, Landroid/content/res/Resources$NotFoundException;-><init>(Ljava/lang/String;)V
 
-    .line 8
-    invoke-virtual {p1, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    .line 10
+    invoke-virtual {p1, p0}, Landroid/content/res/Resources$NotFoundException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
-    .line 9
+    .line 11
     throw p1
 
     :catch_1
     move-exception p0
 
-    .line 10
+    .line 12
     new-instance p1, Landroid/content/res/Resources$NotFoundException;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -1307,7 +1397,7 @@
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 11
+    .line 13
     invoke-static {p3}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object p3
@@ -1320,10 +1410,10 @@
 
     invoke-direct {p1, p2}, Landroid/content/res/Resources$NotFoundException;-><init>(Ljava/lang/String;)V
 
-    .line 12
-    invoke-virtual {p1, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    .line 14
+    invoke-virtual {p1, p0}, Landroid/content/res/Resources$NotFoundException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
-    .line 13
+    .line 15
     throw p1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -1331,10 +1421,10 @@
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 14
+    .line 16
     invoke-interface {v1}, Landroid/content/res/XmlResourceParser;->close()V
 
-    .line 15
+    .line 17
     :cond_1
     throw p0
 .end method
@@ -1347,14 +1437,14 @@
         }
     .end annotation
 
-    .line 16
+    .line 18
     sget-object v0, Landroidx/vectordrawable/graphics/drawable/AndroidResources;->STYLEABLE_ANIMATOR:[I
 
     invoke-static {p1, p2, p3, v0}, Landroidx/core/content/res/TypedArrayUtils;->obtainAttributes(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 17
+    .line 19
     sget-object v1, Landroidx/vectordrawable/graphics/drawable/AndroidResources;->STYLEABLE_PROPERTY_ANIMATOR:[I
 
     invoke-static {p1, p2, p3, v1}, Landroidx/core/content/res/TypedArrayUtils;->obtainAttributes(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
@@ -1363,12 +1453,12 @@
 
     if-nez p4, :cond_0
 
-    .line 18
+    .line 20
     new-instance p4, Landroid/animation/ValueAnimator;
 
     invoke-direct {p4}, Landroid/animation/ValueAnimator;-><init>()V
 
-    .line 19
+    .line 21
     :cond_0
     invoke-static {p4, v0, p1, p5, p6}, Landroidx/vectordrawable/graphics/drawable/AnimatorInflaterCompat;->parseAnimatorFromTypeArray(Landroid/animation/ValueAnimator;Landroid/content/res/TypedArray;Landroid/content/res/TypedArray;FLorg/xmlpull/v1/XmlPullParser;)V
 
@@ -1376,28 +1466,28 @@
 
     const/4 p3, 0x0
 
-    .line 20
+    .line 22
     invoke-static {v0, p6, p2, p3, p3}, Landroidx/core/content/res/TypedArrayUtils;->getNamedResourceId(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
     move-result p2
 
     if-lez p2, :cond_1
 
-    .line 21
+    .line 23
     invoke-static {p0, p2}, Landroidx/vectordrawable/graphics/drawable/AnimationUtilsCompat;->loadInterpolator(Landroid/content/Context;I)Landroid/view/animation/Interpolator;
 
     move-result-object p0
 
-    .line 22
+    .line 24
     invoke-virtual {p4, p0}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 23
+    .line 25
     :cond_1
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
     if-eqz p1, :cond_2
 
-    .line 24
+    .line 26
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
     :cond_2
@@ -1413,27 +1503,30 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Landroidx/vectordrawable/graphics/drawable/AndroidResources;->STYLEABLE_KEYFRAME:[I
 
     invoke-static {p1, p2, p3, v0}, Landroidx/core/content/res/TypedArrayUtils;->obtainAttributes(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    const/high16 p2, -0x40800000    # -1.0f
+    const-string p2, "fraction"
 
-    const-string p3, "fraction"
+    const/4 p3, 0x3
 
-    const/4 v0, 0x3
+    const/high16 v0, -0x40800000    # -1.0f
 
-    invoke-static {p1, p5, p3, v0, p2}, Landroidx/core/content/res/TypedArrayUtils;->getNamedFloat(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
+    .line 2
+    invoke-static {p1, p5, p2, p3, v0}, Landroidx/core/content/res/TypedArrayUtils;->getNamedFloat(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
 
     move-result p2
 
-    const-string/jumbo p3, "value"
+    const-string/jumbo v0, "value"
 
     const/4 v1, 0x0
 
-    invoke-static {p1, p5, p3, v1}, Landroidx/core/content/res/TypedArrayUtils;->peekNamedValue(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Landroid/util/TypedValue;
+    .line 3
+    invoke-static {p1, p5, v0, v1}, Landroidx/core/content/res/TypedArrayUtils;->peekNamedValue(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Landroid/util/TypedValue;
 
     move-result-object v2
 
@@ -1455,6 +1548,7 @@
 
     if-eqz v4, :cond_1
 
+    .line 4
     iget p4, v2, Landroid/util/TypedValue;->type:I
 
     invoke-static {p4}, Landroidx/vectordrawable/graphics/drawable/AnimatorInflaterCompat;->isColorType(I)Z
@@ -1463,7 +1557,7 @@
 
     if-eqz p4, :cond_1
 
-    move p4, v0
+    move p4, p3
 
     goto :goto_1
 
@@ -1478,17 +1572,19 @@
 
     if-eq p4, v3, :cond_3
 
-    if-eq p4, v0, :cond_3
+    if-eq p4, p3, :cond_3
 
     const/4 p2, 0x0
 
     goto :goto_2
 
+    .line 5
     :cond_3
-    invoke-static {p1, p5, p3, v1, v1}, Landroidx/core/content/res/TypedArrayUtils;->getNamedInt(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
+    invoke-static {p1, p5, v0, v1, v1}, Landroidx/core/content/res/TypedArrayUtils;->getNamedInt(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
     move-result p3
 
+    .line 6
     invoke-static {p2, p3}, Landroid/animation/Keyframe;->ofInt(FI)Landroid/animation/Keyframe;
 
     move-result-object p2
@@ -1496,12 +1592,14 @@
     goto :goto_2
 
     :cond_4
-    const/4 p4, 0x0
+    const/4 p3, 0x0
 
-    invoke-static {p1, p5, p3, v1, p4}, Landroidx/core/content/res/TypedArrayUtils;->getNamedFloat(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
+    .line 7
+    invoke-static {p1, p5, v0, v1, p3}, Landroidx/core/content/res/TypedArrayUtils;->getNamedFloat(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
 
     move-result p3
 
+    .line 8
     invoke-static {p2, p3}, Landroid/animation/Keyframe;->ofFloat(FF)Landroid/animation/Keyframe;
 
     move-result-object p2
@@ -1511,12 +1609,14 @@
     :cond_5
     if-nez p4, :cond_6
 
+    .line 9
     invoke-static {p2}, Landroid/animation/Keyframe;->ofFloat(F)Landroid/animation/Keyframe;
 
     move-result-object p2
 
     goto :goto_2
 
+    .line 10
     :cond_6
     invoke-static {p2}, Landroid/animation/Keyframe;->ofInt(F)Landroid/animation/Keyframe;
 
@@ -1525,18 +1625,22 @@
     :goto_2
     const-string p3, "interpolator"
 
+    .line 11
     invoke-static {p1, p5, p3, v3, v1}, Landroidx/core/content/res/TypedArrayUtils;->getNamedResourceId(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
     move-result p3
 
     if-lez p3, :cond_7
 
+    .line 12
     invoke-static {p0, p3}, Landroidx/vectordrawable/graphics/drawable/AnimationUtilsCompat;->loadInterpolator(Landroid/content/Context;I)Landroid/view/animation/Interpolator;
 
     move-result-object p0
 
+    .line 13
     invoke-virtual {p2, p0}, Landroid/animation/Keyframe;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
+    .line 14
     :cond_7
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
@@ -1551,6 +1655,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v7, Landroid/animation/ObjectAnimator;
 
     invoke-direct {v7}, Landroid/animation/ObjectAnimator;-><init>()V
@@ -1569,6 +1674,7 @@
 
     move-object v6, p5
 
+    .line 2
     invoke-static/range {v0 .. v6}, Landroidx/vectordrawable/graphics/drawable/AnimatorInflaterCompat;->loadAnimator(Landroid/content/Context;Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;Landroid/animation/ValueAnimator;FLorg/xmlpull/v1/XmlPullParser;)Landroid/animation/ValueAnimator;
 
     return-object v7
@@ -1587,6 +1693,7 @@
 
     move-object v1, v0
 
+    .line 1
     :cond_0
     :goto_0
     invoke-interface {p3}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -1601,12 +1708,14 @@
 
     if-eq v2, v4, :cond_4
 
+    .line 2
     invoke-interface {p3}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "keyframe"
 
+    .line 3
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -1617,6 +1726,7 @@
 
     if-ne p5, v2, :cond_1
 
+    .line 4
     invoke-static {p3}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
 
     move-result-object p5
@@ -1625,6 +1735,7 @@
 
     move-result p5
 
+    .line 5
     :cond_1
     invoke-static {p3}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
 
@@ -1648,13 +1759,16 @@
 
     if-nez v1, :cond_2
 
+    .line 6
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 7
     :cond_2
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 8
     :cond_3
     invoke-interface {p3}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
@@ -1663,6 +1777,7 @@
     :cond_4
     if-eqz v1, :cond_f
 
+    .line 9
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result p0
@@ -1671,6 +1786,7 @@
 
     const/4 p1, 0x0
 
+    .line 10
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object p2
@@ -1679,12 +1795,14 @@
 
     add-int/lit8 p3, p0, -0x1
 
+    .line 11
     invoke-virtual {v1, p3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object p3
 
     check-cast p3, Landroid/animation/Keyframe;
 
+    .line 12
     invoke-virtual {p3}, Landroid/animation/Keyframe;->getFraction()F
 
     move-result v0
@@ -1701,10 +1819,12 @@
 
     if-gez v0, :cond_5
 
+    .line 13
     invoke-virtual {p3, v2}, Landroid/animation/Keyframe;->setFraction(F)V
 
     goto :goto_1
 
+    .line 14
     :cond_5
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -1718,6 +1838,7 @@
 
     add-int/lit8 p0, p0, 0x1
 
+    .line 15
     :cond_6
     :goto_1
     invoke-virtual {p2}, Landroid/animation/Keyframe;->getFraction()F
@@ -1732,10 +1853,12 @@
 
     if-gez p3, :cond_7
 
+    .line 16
     invoke-virtual {p2, v5}, Landroid/animation/Keyframe;->setFraction(F)V
 
     goto :goto_2
 
+    .line 17
     :cond_7
     invoke-static {p2, v5}, Landroidx/vectordrawable/graphics/drawable/AnimatorInflaterCompat;->createNewKeyframe(Landroid/animation/Keyframe;F)Landroid/animation/Keyframe;
 
@@ -1745,17 +1868,21 @@
 
     add-int/lit8 p0, p0, 0x1
 
+    .line 18
     :cond_8
     :goto_2
     new-array p2, p0, [Landroid/animation/Keyframe;
 
+    .line 19
     invoke-virtual {v1, p2}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     :goto_3
     if-ge p1, p0, :cond_e
 
+    .line 20
     aget-object p3, p2, p1
 
+    .line 21
     invoke-virtual {p3}, Landroid/animation/Keyframe;->getFraction()F
 
     move-result v0
@@ -1766,6 +1893,7 @@
 
     if-nez p1, :cond_9
 
+    .line 22
     invoke-virtual {p3, v5}, Landroid/animation/Keyframe;->setFraction(F)V
 
     goto :goto_6
@@ -1775,6 +1903,7 @@
 
     if-ne p1, v0, :cond_a
 
+    .line 23
     invoke-virtual {p3, v2}, Landroid/animation/Keyframe;->setFraction(F)V
 
     goto :goto_6
@@ -1787,6 +1916,7 @@
     :goto_4
     if-ge p3, v0, :cond_c
 
+    .line 24
     aget-object v4, p2, p3
 
     invoke-virtual {v4}, Landroid/animation/Keyframe;->getFraction()F
@@ -1814,6 +1944,7 @@
     :goto_5
     add-int/lit8 p3, v1, 0x1
 
+    .line 25
     aget-object p3, p2, p3
 
     invoke-virtual {p3}, Landroid/animation/Keyframe;->getFraction()F
@@ -1824,12 +1955,14 @@
 
     aget-object v0, p2, v0
 
+    .line 26
     invoke-virtual {v0}, Landroid/animation/Keyframe;->getFraction()F
 
     move-result v0
 
     sub-float/2addr p3, v0
 
+    .line 27
     invoke-static {p2, p3, p1, v1}, Landroidx/vectordrawable/graphics/drawable/AnimatorInflaterCompat;->distributeKeyframes([Landroid/animation/Keyframe;FII)V
 
     :cond_d
@@ -1838,6 +1971,7 @@
 
     goto :goto_3
 
+    .line 28
     :cond_e
     invoke-static {p4, p2}, Landroid/animation/PropertyValuesHolder;->ofKeyframe(Ljava/lang/String;[Landroid/animation/Keyframe;)Landroid/animation/PropertyValuesHolder;
 
@@ -1845,6 +1979,7 @@
 
     if-ne p5, v3, :cond_f
 
+    .line 29
     invoke-static {}, Landroidx/vectordrawable/graphics/drawable/ArgbEvaluator;->getInstance()Landroidx/vectordrawable/graphics/drawable/ArgbEvaluator;
 
     move-result-object p0
@@ -1870,6 +2005,7 @@
 
     move-object v8, v7
 
+    .line 1
     :goto_0
     invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
@@ -1889,23 +2025,27 @@
 
     if-eq v0, v2, :cond_0
 
+    .line 2
     invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string/jumbo v3, "propertyValuesHolder"
+    const-string v3, "propertyValuesHolder"
 
+    .line 4
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
+    .line 5
     sget-object v0, Landroidx/vectordrawable/graphics/drawable/AndroidResources;->STYLEABLE_PROPERTY_VALUES_HOLDER:[I
 
     move-object/from16 v11, p1
@@ -1918,17 +2058,19 @@
 
     move-result-object v14
 
-    const-string/jumbo v0, "propertyName"
+    const-string v0, "propertyName"
 
+    .line 6
     invoke-static {v14, v6, v0, v1}, Landroidx/core/content/res/TypedArrayUtils;->getNamedString(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v15
 
-    const-string/jumbo v0, "valueType"
+    const/4 v0, 0x4
 
-    const/4 v1, 0x4
+    const-string/jumbo v1, "valueType"
 
-    invoke-static {v14, v6, v0, v2, v1}, Landroidx/core/content/res/TypedArrayUtils;->getNamedInt(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
+    .line 7
+    invoke-static {v14, v6, v1, v2, v0}, Landroidx/core/content/res/TypedArrayUtils;->getNamedInt(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
     move-result v5
 
@@ -1944,6 +2086,7 @@
 
     move/from16 v16, v5
 
+    .line 8
     invoke-static/range {v0 .. v5}, Landroidx/vectordrawable/graphics/drawable/AnimatorInflaterCompat;->loadPvh(Landroid/content/Context;Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Landroid/animation/PropertyValuesHolder;
 
     move-result-object v0
@@ -1952,6 +2095,7 @@
 
     move/from16 v1, v16
 
+    .line 9
     invoke-static {v14, v1, v9, v10, v15}, Landroidx/vectordrawable/graphics/drawable/AnimatorInflaterCompat;->getPVH(Landroid/content/res/TypedArray;IIILjava/lang/String;)Landroid/animation/PropertyValuesHolder;
 
     move-result-object v0
@@ -1961,15 +2105,18 @@
 
     if-nez v8, :cond_2
 
+    .line 10
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     move-object v8, v1
 
+    .line 11
     :cond_2
     invoke-virtual {v8, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 12
     :cond_3
     invoke-virtual {v14}, Landroid/content/res/TypedArray;->recycle()V
 
@@ -1982,6 +2129,7 @@
 
     move-object/from16 v13, p4
 
+    .line 13
     :goto_1
     invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
@@ -1990,15 +2138,18 @@
     :cond_5
     if-eqz v8, :cond_6
 
+    .line 14
     invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
+    .line 15
     new-array v7, v0, [Landroid/animation/PropertyValuesHolder;
 
     :goto_2
     if-ge v9, v0, :cond_6
 
+    .line 16
     invoke-virtual {v8, v9}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -2018,99 +2169,111 @@
 .method private static parseAnimatorFromTypeArray(Landroid/animation/ValueAnimator;Landroid/content/res/TypedArray;Landroid/content/res/TypedArray;FLorg/xmlpull/v1/XmlPullParser;)V
     .locals 11
 
-    const/16 v0, 0x12c
+    const-string v0, "duration"
 
-    const-string v1, "duration"
+    const/4 v1, 0x1
 
-    const/4 v2, 0x1
+    const/16 v2, 0x12c
 
-    invoke-static {p1, p4, v1, v2, v0}, Landroidx/core/content/res/TypedArrayUtils;->getNamedInt(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
+    .line 1
+    invoke-static {p1, p4, v0, v1, v2}, Landroidx/core/content/res/TypedArrayUtils;->getNamedInt(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
     move-result v0
 
-    int-to-long v0, v0
+    int-to-long v2, v0
 
-    const-string/jumbo v3, "startOffset"
+    const-string v0, "startOffset"
 
     const/4 v4, 0x2
 
     const/4 v5, 0x0
 
-    invoke-static {p1, p4, v3, v4, v5}, Landroidx/core/content/res/TypedArrayUtils;->getNamedInt(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
+    .line 2
+    invoke-static {p1, p4, v0, v4, v5}, Landroidx/core/content/res/TypedArrayUtils;->getNamedInt(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
-    move-result v3
+    move-result v0
 
-    int-to-long v3, v3
+    int-to-long v6, v0
 
-    const-string/jumbo v6, "valueType"
+    const-string/jumbo v0, "valueType"
 
-    const/4 v7, 0x7
+    const/4 v4, 0x7
 
     const/4 v8, 0x4
 
-    invoke-static {p1, p4, v6, v7, v8}, Landroidx/core/content/res/TypedArrayUtils;->getNamedInt(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
+    .line 3
+    invoke-static {p1, p4, v0, v4, v8}, Landroidx/core/content/res/TypedArrayUtils;->getNamedInt(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
-    move-result v6
+    move-result v0
 
-    const-string/jumbo v7, "valueFrom"
+    const-string/jumbo v4, "valueFrom"
 
-    invoke-static {p4, v7}, Landroidx/core/content/res/TypedArrayUtils;->hasAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+    .line 4
+    invoke-static {p4, v4}, Landroidx/core/content/res/TypedArrayUtils;->hasAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
-    move-result v7
+    move-result v4
 
-    if-eqz v7, :cond_1
+    if-eqz v4, :cond_1
 
-    const-string/jumbo v7, "valueTo"
+    const-string/jumbo v4, "valueTo"
 
-    invoke-static {p4, v7}, Landroidx/core/content/res/TypedArrayUtils;->hasAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+    .line 5
+    invoke-static {p4, v4}, Landroidx/core/content/res/TypedArrayUtils;->hasAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
-    move-result v7
+    move-result v4
 
-    if-eqz v7, :cond_1
+    if-eqz v4, :cond_1
 
-    const/4 v7, 0x6
+    const/4 v4, 0x6
 
     const/4 v9, 0x5
 
-    if-ne v6, v8, :cond_0
+    if-ne v0, v8, :cond_0
 
-    invoke-static {p1, v9, v7}, Landroidx/vectordrawable/graphics/drawable/AnimatorInflaterCompat;->inferValueTypeFromValues(Landroid/content/res/TypedArray;II)I
+    .line 6
+    invoke-static {p1, v9, v4}, Landroidx/vectordrawable/graphics/drawable/AnimatorInflaterCompat;->inferValueTypeFromValues(Landroid/content/res/TypedArray;II)I
 
-    move-result v6
+    move-result v0
 
     :cond_0
     const-string v10, ""
 
-    invoke-static {p1, v6, v9, v7, v10}, Landroidx/vectordrawable/graphics/drawable/AnimatorInflaterCompat;->getPVH(Landroid/content/res/TypedArray;IIILjava/lang/String;)Landroid/animation/PropertyValuesHolder;
+    .line 7
+    invoke-static {p1, v0, v9, v4, v10}, Landroidx/vectordrawable/graphics/drawable/AnimatorInflaterCompat;->getPVH(Landroid/content/res/TypedArray;IIILjava/lang/String;)Landroid/animation/PropertyValuesHolder;
 
-    move-result-object v7
+    move-result-object v4
 
-    if-eqz v7, :cond_1
+    if-eqz v4, :cond_1
 
-    new-array v9, v2, [Landroid/animation/PropertyValuesHolder;
+    new-array v9, v1, [Landroid/animation/PropertyValuesHolder;
 
-    aput-object v7, v9, v5
+    aput-object v4, v9, v5
 
+    .line 8
     invoke-virtual {p0, v9}, Landroid/animation/ValueAnimator;->setValues([Landroid/animation/PropertyValuesHolder;)V
 
+    .line 9
     :cond_1
-    invoke-virtual {p0, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    invoke-virtual {p0, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    invoke-virtual {p0, v3, v4}, Landroid/animation/ValueAnimator;->setStartDelay(J)V
+    .line 10
+    invoke-virtual {p0, v6, v7}, Landroid/animation/ValueAnimator;->setStartDelay(J)V
 
-    const-string/jumbo v0, "repeatCount"
+    const/4 v2, 0x3
 
-    const/4 v1, 0x3
+    const-string v3, "repeatCount"
 
-    invoke-static {p1, p4, v0, v1, v5}, Landroidx/core/content/res/TypedArrayUtils;->getNamedInt(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
+    .line 11
+    invoke-static {p1, p4, v3, v2, v5}, Landroidx/core/content/res/TypedArrayUtils;->getNamedInt(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
-    move-result v0
+    move-result v2
 
-    invoke-virtual {p0, v0}, Landroid/animation/ValueAnimator;->setRepeatCount(I)V
+    invoke-virtual {p0, v2}, Landroid/animation/ValueAnimator;->setRepeatCount(I)V
 
-    const-string/jumbo v0, "repeatMode"
+    const-string v2, "repeatMode"
 
-    invoke-static {p1, p4, v0, v8, v2}, Landroidx/core/content/res/TypedArrayUtils;->getNamedInt(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
+    .line 12
+    invoke-static {p1, p4, v2, v8, v1}, Landroidx/core/content/res/TypedArrayUtils;->getNamedInt(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
     move-result p1
 
@@ -2118,7 +2281,8 @@
 
     if-eqz p2, :cond_2
 
-    invoke-static {p0, p2, v6, p3, p4}, Landroidx/vectordrawable/graphics/drawable/AnimatorInflaterCompat;->setupObjectAnimator(Landroid/animation/ValueAnimator;Landroid/content/res/TypedArray;IFLorg/xmlpull/v1/XmlPullParser;)V
+    .line 13
+    invoke-static {p0, p2, v0, p3, p4}, Landroidx/vectordrawable/graphics/drawable/AnimatorInflaterCompat;->setupObjectAnimator(Landroid/animation/ValueAnimator;Landroid/content/res/TypedArray;IFLorg/xmlpull/v1/XmlPullParser;)V
 
     :cond_2
     return-void
@@ -2127,31 +2291,35 @@
 .method private static setupObjectAnimator(Landroid/animation/ValueAnimator;Landroid/content/res/TypedArray;IFLorg/xmlpull/v1/XmlPullParser;)V
     .locals 5
 
+    .line 1
     check-cast p0, Landroid/animation/ObjectAnimator;
 
     const-string v0, "pathData"
 
     const/4 v1, 0x1
 
+    .line 2
     invoke-static {p1, p4, v0, v1}, Landroidx/core/content/res/TypedArrayUtils;->getNamedString(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
-    const-string/jumbo v1, "propertyXName"
+    const-string v1, "propertyXName"
 
     const/4 v2, 0x2
 
+    .line 3
     invoke-static {p1, p4, v1, v2}, Landroidx/core/content/res/TypedArrayUtils;->getNamedString(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
 
-    const-string/jumbo v3, "propertyYName"
+    const/4 v3, 0x3
 
-    const/4 v4, 0x3
+    const-string v4, "propertyYName"
 
-    invoke-static {p1, p4, v3, v4}, Landroidx/core/content/res/TypedArrayUtils;->getNamedString(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Ljava/lang/String;
+    .line 4
+    invoke-static {p1, p4, v4, v3}, Landroidx/core/content/res/TypedArrayUtils;->getNamedString(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p4
 
@@ -2166,6 +2334,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     new-instance p0, Landroid/view/InflateException;
 
@@ -2191,6 +2360,7 @@
 
     throw p0
 
+    .line 6
     :cond_2
     :goto_0
     invoke-static {v0}, Landroidx/core/graphics/PathParser;->createPathFromPathData(Ljava/lang/String;)Landroid/graphics/Path;
@@ -2201,19 +2371,22 @@
 
     mul-float/2addr p3, p2
 
+    .line 7
     invoke-static {p1, p0, p3, v1, p4}, Landroidx/vectordrawable/graphics/drawable/AnimatorInflaterCompat;->setupPathMotion(Landroid/graphics/Path;Landroid/animation/ObjectAnimator;FLjava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
     :cond_3
-    const-string/jumbo p2, "propertyName"
+    const/4 p2, 0x0
 
-    const/4 p3, 0x0
+    const-string p3, "propertyName"
 
-    invoke-static {p1, p4, p2, p3}, Landroidx/core/content/res/TypedArrayUtils;->getNamedString(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Ljava/lang/String;
+    .line 8
+    invoke-static {p1, p4, p3, p2}, Landroidx/core/content/res/TypedArrayUtils;->getNamedString(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 9
     invoke-virtual {p0, p1}, Landroid/animation/ObjectAnimator;->setPropertyName(Ljava/lang/String;)V
 
     :goto_1
@@ -2231,18 +2404,21 @@
 
     move-object/from16 v3, p4
 
+    .line 1
     new-instance v4, Landroid/graphics/PathMeasure;
 
     const/4 v5, 0x0
 
     invoke-direct {v4, v0, v5}, Landroid/graphics/PathMeasure;-><init>(Landroid/graphics/Path;Z)V
 
+    .line 2
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v7, 0x0
 
+    .line 3
     invoke-static {v7}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v8
@@ -2251,6 +2427,7 @@
 
     move v8, v7
 
+    .line 4
     :cond_0
     invoke-virtual {v4}, Landroid/graphics/PathMeasure;->getLength()F
 
@@ -2258,38 +2435,44 @@
 
     add-float/2addr v8, v9
 
+    .line 5
     invoke-static {v8}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v9
 
     invoke-virtual {v6, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 6
     invoke-virtual {v4}, Landroid/graphics/PathMeasure;->nextContour()Z
 
     move-result v9
 
     if-nez v9, :cond_0
 
+    .line 7
     new-instance v4, Landroid/graphics/PathMeasure;
 
     invoke-direct {v4, v0, v5}, Landroid/graphics/PathMeasure;-><init>(Landroid/graphics/Path;Z)V
 
-    div-float v0, v8, p2
+    const/16 v0, 0x64
 
-    float-to-int v0, v0
+    div-float v9, v8, p2
 
-    const/4 v9, 0x1
+    float-to-int v9, v9
 
-    add-int/2addr v0, v9
+    const/4 v10, 0x1
 
-    const/16 v10, 0x64
+    add-int/2addr v9, v10
 
-    invoke-static {v10, v0}, Ljava/lang/Math;->min(II)I
+    .line 8
+    invoke-static {v0, v9}, Ljava/lang/Math;->min(II)I
 
     move-result v0
 
-    new-array v10, v0, [F
+    .line 9
+    new-array v9, v0, [F
 
+    .line 10
     new-array v11, v0, [F
 
     const/4 v12, 0x2
@@ -2311,6 +2494,7 @@
 
     if-ge v14, v0, :cond_2
 
+    .line 11
     invoke-virtual {v6, v15}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v16
@@ -2321,31 +2505,35 @@
 
     move-result v16
 
-    sub-float v9, v7, v16
+    sub-float v10, v7, v16
 
-    invoke-virtual {v4, v9, v13, v12}, Landroid/graphics/PathMeasure;->getPosTan(F[F[F)Z
+    invoke-virtual {v4, v10, v13, v12}, Landroid/graphics/PathMeasure;->getPosTan(F[F[F)Z
 
-    aget v9, v13, v5
+    .line 12
+    aget v10, v13, v5
 
-    aput v9, v10, v14
+    aput v10, v9, v14
 
-    const/4 v9, 0x1
+    const/4 v10, 0x1
 
-    aget v12, v13, v9
+    .line 13
+    aget v12, v13, v10
 
     aput v12, v11, v14
 
     add-float/2addr v7, v8
 
-    add-int/lit8 v9, v15, 0x1
+    add-int/lit8 v10, v15, 0x1
 
+    .line 14
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
     move-result v12
 
-    if-ge v9, v12, :cond_1
+    if-ge v10, v12, :cond_1
 
-    invoke-virtual {v6, v9}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    .line 15
+    invoke-virtual {v6, v10}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v12
 
@@ -2359,21 +2547,23 @@
 
     if-lez v12, :cond_1
 
+    .line 16
     invoke-virtual {v4}, Landroid/graphics/PathMeasure;->nextContour()Z
 
-    move v15, v9
+    move v15, v10
 
     :cond_1
     add-int/lit8 v14, v14, 0x1
 
-    const/4 v9, 0x1
+    const/4 v10, 0x1
 
     goto :goto_0
 
     :cond_2
     if-eqz v2, :cond_3
 
-    invoke-static {v2, v10}, Landroid/animation/PropertyValuesHolder;->ofFloat(Ljava/lang/String;[F)Landroid/animation/PropertyValuesHolder;
+    .line 17
+    invoke-static {v2, v9}, Landroid/animation/PropertyValuesHolder;->ofFloat(Ljava/lang/String;[F)Landroid/animation/PropertyValuesHolder;
 
     move-result-object v0
 
@@ -2385,6 +2575,7 @@
     :goto_1
     if-eqz v3, :cond_4
 
+    .line 18
     invoke-static {v3, v11}, Landroid/animation/PropertyValuesHolder;->ofFloat(Ljava/lang/String;[F)Landroid/animation/PropertyValuesHolder;
 
     move-result-object v12
@@ -2398,6 +2589,7 @@
 
     aput-object v12, v0, v5
 
+    .line 19
     invoke-virtual {v1, v0}, Landroid/animation/ObjectAnimator;->setValues([Landroid/animation/PropertyValuesHolder;)V
 
     goto :goto_2
@@ -2411,6 +2603,7 @@
 
     aput-object v0, v2, v5
 
+    .line 20
     invoke-virtual {v1, v2}, Landroid/animation/ObjectAnimator;->setValues([Landroid/animation/PropertyValuesHolder;)V
 
     goto :goto_2
@@ -2424,6 +2617,7 @@
 
     aput-object v12, v3, v2
 
+    .line 21
     invoke-virtual {v1, v3}, Landroid/animation/ObjectAnimator;->setValues([Landroid/animation/PropertyValuesHolder;)V
 
     :goto_2

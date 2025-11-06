@@ -34,6 +34,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/bumptech/glide/load/resource/transcode/UnitTranscoder;
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/resource/transcode/UnitTranscoder;-><init>()V
@@ -46,6 +47,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -63,6 +65,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/bumptech/glide/load/resource/transcode/UnitTranscoder;->UNIT_TRANSCODER:Lcom/bumptech/glide/load/resource/transcode/UnitTranscoder;
 
     return-object v0

@@ -1,4 +1,4 @@
-.class abstract Lcom/google/android/gms/internal/mlkit_common/zzah;
+.class public abstract Lcom/google/android/gms/internal/mlkit_common/zzah;
 .super Lcom/google/android/gms/internal/mlkit_common/zzbf;
 .source "SourceFile"
 
@@ -13,6 +13,7 @@
 .method public constructor <init>(II)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/internal/mlkit_common/zzbf;-><init>()V
 
     const-string v0, "index"
@@ -67,6 +68,7 @@
 .method public final next()Ljava/lang/Object;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_common/zzah;->hasNext()Z
 
     move-result v0
@@ -79,12 +81,14 @@
 
     iput v1, p0, Lcom/google/android/gms/internal/mlkit_common/zzah;->zzb:I
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/mlkit_common/zzah;->zza(I)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/util/NoSuchElementException;
 
@@ -104,6 +108,7 @@
 .method public final previous()Ljava/lang/Object;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_common/zzah;->hasPrevious()Z
 
     move-result v0
@@ -116,12 +121,14 @@
 
     iput v0, p0, Lcom/google/android/gms/internal/mlkit_common/zzah;->zzb:I
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/mlkit_common/zzah;->zza(I)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/util/NoSuchElementException;
 

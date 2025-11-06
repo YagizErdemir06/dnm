@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/AbstractMapBasedMultimap$AsMap;
+.class public Lcom/google/common/collect/AbstractMapBasedMultimap$AsMap;
 .super Lcom/google/common/collect/Maps$ViewCachingAbstractMap;
 .source "SourceFile"
 
@@ -31,7 +31,7 @@
 
 
 # instance fields
-.field final transient submap:Ljava/util/Map;
+.field public final transient submap:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -42,7 +42,7 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Lcom/google/common/collect/AbstractMapBasedMultimap;
+.field public final synthetic this$0:Lcom/google/common/collect/AbstractMapBasedMultimap;
 
 
 # direct methods
@@ -58,10 +58,12 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$AsMap;->this$0:Lcom/google/common/collect/AbstractMapBasedMultimap;
 
     invoke-direct {p0}, Lcom/google/common/collect/Maps$ViewCachingAbstractMap;-><init>()V
 
+    .line 2
     iput-object p2, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$AsMap;->submap:Ljava/util/Map;
 
     return-void
@@ -72,6 +74,7 @@
 .method public clear()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$AsMap;->submap:Ljava/util/Map;
 
     iget-object v1, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$AsMap;->this$0:Lcom/google/common/collect/AbstractMapBasedMultimap;
@@ -82,12 +85,14 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$AsMap;->this$0:Lcom/google/common/collect/AbstractMapBasedMultimap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap;->clear()V
 
     goto :goto_0
 
+    .line 3
     :cond_0
     new-instance v0, Lcom/google/common/collect/AbstractMapBasedMultimap$AsMap$AsMapIterator;
 
@@ -106,6 +111,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$AsMap;->submap:Ljava/util/Map;
 
     invoke-static {p0, p1}, Lcom/google/common/collect/Maps;->safeContainsKey(Ljava/util/Map;Ljava/lang/Object;)Z
@@ -128,6 +134,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/AbstractMapBasedMultimap$AsMap$AsMapEntries;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$AsMap$AsMapEntries;-><init>(Lcom/google/common/collect/AbstractMapBasedMultimap$AsMap;)V
@@ -144,6 +151,7 @@
 
     if-eq p0, p1, :cond_1
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$AsMap;->submap:Ljava/util/Map;
 
     invoke-interface {p0, p1}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
@@ -232,6 +240,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$AsMap;->submap:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->hashCode()I
@@ -251,6 +260,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$AsMap;->this$0:Lcom/google/common/collect/AbstractMapBasedMultimap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMultimap;->keySet()Ljava/util/Set;
@@ -340,6 +350,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$AsMap;->submap:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->size()I
@@ -352,6 +363,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$AsMap;->submap:Ljava/util/Map;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -377,10 +389,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$AsMap;->this$0:Lcom/google/common/collect/AbstractMapBasedMultimap;
 
     invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;

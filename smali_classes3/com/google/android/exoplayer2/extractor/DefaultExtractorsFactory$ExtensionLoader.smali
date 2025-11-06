@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory$ExtensionLoader;
+.class public final Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory$ExtensionLoader;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -48,10 +48,13 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory$ExtensionLoader$ConstructorSupplier;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory$ExtensionLoader;->constructorSupplier:Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory$ExtensionLoader$ConstructorSupplier;
 
+    .line 3
     new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v0, 0x0
@@ -78,10 +81,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory$ExtensionLoader;->extensionLoaded:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory$ExtensionLoader;->extensionLoaded:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -91,6 +96,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory$ExtensionLoader;->extractorConstructor:Ljava/lang/reflect/Constructor;
 
     monitor-exit v0
@@ -99,6 +105,7 @@
 
     return-object p0
 
+    .line 4
     :cond_0
     :try_start_1
     iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory$ExtensionLoader;->constructorSupplier:Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory$ExtensionLoader$ConstructorSupplier;
@@ -119,6 +126,7 @@
     :catch_0
     move-exception p0
 
+    .line 5
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string v2, "Error instantiating extension"
@@ -127,6 +135,7 @@
 
     throw v1
 
+    .line 6
     :catch_1
     iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory$ExtensionLoader;->extensionLoaded:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -134,6 +143,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
+    .line 7
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory$ExtensionLoader;->extractorConstructor:Ljava/lang/reflect/Constructor;
 
     monitor-exit v0
@@ -143,6 +153,7 @@
     :catchall_0
     move-exception p0
 
+    .line 8
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -157,6 +168,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory$ExtensionLoader;->maybeLoadExtractorConstructor()Ljava/lang/reflect/Constructor;
 
     move-result-object p0
@@ -167,6 +179,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     :try_start_0
     invoke-virtual {p0, p1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
@@ -182,6 +195,7 @@
     :catch_0
     move-exception p0
 
+    .line 3
     new-instance p1, Ljava/lang/IllegalStateException;
 
     const-string v0, "Unexpected error creating extractor"

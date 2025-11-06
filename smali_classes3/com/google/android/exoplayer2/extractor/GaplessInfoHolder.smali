@@ -23,6 +23,7 @@
 
     const-string v0, "^ [0-9a-fA-F]{8} ([0-9a-fA-F]{8}) ([0-9a-fA-F]{8})"
 
+    .line 1
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -35,12 +36,15 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
+    .line 2
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/GaplessInfoHolder;->encoderDelay:I
 
+    .line 3
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/GaplessInfoHolder;->encoderPadding:I
 
     return-void
@@ -49,12 +53,14 @@
 .method private setFromComment(Ljava/lang/String;)Z
     .locals 4
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/extractor/GaplessInfoHolder;->GAPLESS_COMMENT_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object p1
 
+    .line 2
     invoke-virtual {p1}, Ljava/util/regex/Matcher;->find()Z
 
     move-result v0
@@ -63,6 +69,7 @@
 
     const/4 v0, 0x1
 
+    .line 3
     :try_start_0
     invoke-virtual {p1, v0}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
@@ -82,6 +89,7 @@
 
     const/4 v3, 0x2
 
+    .line 4
     invoke-virtual {p1, v3}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object p1
@@ -100,9 +108,11 @@
 
     if-lez p1, :cond_1
 
+    .line 5
     :cond_0
     iput v1, p0, Lcom/google/android/exoplayer2/extractor/GaplessInfoHolder;->encoderDelay:I
 
+    .line 6
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/GaplessInfoHolder;->encoderPadding:I
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
@@ -121,6 +131,7 @@
 .method public hasGaplessInfo()Z
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/GaplessInfoHolder;->encoderDelay:I
 
     const/4 v1, -0x1
@@ -149,6 +160,7 @@
 
     move v1, v0
 
+    .line 1
     :goto_0
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/metadata/Metadata;->length()I
 
@@ -156,10 +168,12 @@
 
     if-ge v1, v2, :cond_2
 
+    .line 2
     invoke-virtual {p1, v1}, Lcom/google/android/exoplayer2/metadata/Metadata;->get(I)Lcom/google/android/exoplayer2/metadata/Metadata$Entry;
 
     move-result-object v2
 
+    .line 3
     instance-of v3, v2, Lcom/google/android/exoplayer2/metadata/id3/CommentFrame;
 
     const-string v4, "iTunSMPB"
@@ -168,8 +182,10 @@
 
     if-eqz v3, :cond_0
 
+    .line 4
     check-cast v2, Lcom/google/android/exoplayer2/metadata/id3/CommentFrame;
 
+    .line 5
     iget-object v3, v2, Lcom/google/android/exoplayer2/metadata/id3/CommentFrame;->description:Ljava/lang/String;
 
     invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -180,6 +196,7 @@
 
     iget-object v2, v2, Lcom/google/android/exoplayer2/metadata/id3/CommentFrame;->text:Ljava/lang/String;
 
+    .line 6
     invoke-direct {p0, v2}, Lcom/google/android/exoplayer2/extractor/GaplessInfoHolder;->setFromComment(Ljava/lang/String;)Z
 
     move-result v2
@@ -188,13 +205,16 @@
 
     return v5
 
+    .line 7
     :cond_0
     instance-of v3, v2, Lcom/google/android/exoplayer2/metadata/id3/InternalFrame;
 
     if-eqz v3, :cond_1
 
+    .line 8
     check-cast v2, Lcom/google/android/exoplayer2/metadata/id3/InternalFrame;
 
+    .line 9
     iget-object v3, v2, Lcom/google/android/exoplayer2/metadata/id3/InternalFrame;->domain:Ljava/lang/String;
 
     const-string v6, "com.apple.iTunes"
@@ -207,6 +227,7 @@
 
     iget-object v3, v2, Lcom/google/android/exoplayer2/metadata/id3/InternalFrame;->description:Ljava/lang/String;
 
+    .line 10
     invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -215,6 +236,7 @@
 
     iget-object v2, v2, Lcom/google/android/exoplayer2/metadata/id3/InternalFrame;->text:Ljava/lang/String;
 
+    .line 11
     invoke-direct {p0, v2}, Lcom/google/android/exoplayer2/extractor/GaplessInfoHolder;->setFromComment(Ljava/lang/String;)Z
 
     move-result v2
@@ -250,10 +272,12 @@
 
     return p0
 
+    .line 1
     :cond_1
     :goto_0
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/GaplessInfoHolder;->encoderDelay:I
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/GaplessInfoHolder;->encoderPadding:I
 
     const/4 p0, 0x1

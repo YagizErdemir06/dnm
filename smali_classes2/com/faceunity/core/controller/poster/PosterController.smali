@@ -4,15 +4,21 @@
 
 
 # annotations
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000<\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0014\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0010\u0012\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0006\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0002\u0008\t\u0018\u00002\u00020\u0001B\u0007\u00a2\u0006\u0004\u0008\u0019\u0010\u001aJ\u0008\u0010\u0003\u001a\u00020\u0002H\u0002J.\u0010\r\u001a\u00020\u000c2\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0008\u001a\u00020\u00062\u0006\u0010\n\u001a\u00020\t2\u0006\u0010\u000b\u001a\u00020\u0002J.\u0010\u000e\u001a\u00020\u000c2\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0008\u001a\u00020\u00062\u0006\u0010\n\u001a\u00020\t2\u0006\u0010\u000b\u001a\u00020\u0002J\u0016\u0010\u0011\u001a\u00020\u000c2\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0010\u001a\u00020\u000fJ\u0006\u0010\u0013\u001a\u00020\u0012J\u0016\u0010\u0016\u001a\u00020\u000c2\u0006\u0010\u0014\u001a\u00020\u00062\u0006\u0010\u0015\u001a\u00020\u0002J\u000e\u0010\u0018\u001a\u00020\u00022\u0006\u0010\u0017\u001a\u00020\u0006\u00a8\u0006\u001b"
+        "\u0000>\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0014\n\u0002\u0008\u0002\n\u0002\u0010\t\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0010\u0012\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0006\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0002\u0008\u000c\u0018\u00002\u00020\u0001B\u0007\u00a2\u0006\u0004\u0008\u001f\u0010 J\u000f\u0010\u0003\u001a\u00020\u0002H\u0002\u00a2\u0006\u0004\u0008\u0003\u0010\u0004J5\u0010\u000e\u001a\u00020\r2\u0006\u0010\u0006\u001a\u00020\u00052\u0006\u0010\u0008\u001a\u00020\u00072\u0006\u0010\t\u001a\u00020\u00072\u0006\u0010\u000b\u001a\u00020\n2\u0006\u0010\u000c\u001a\u00020\u0002\u00a2\u0006\u0004\u0008\u000e\u0010\u000fJ5\u0010\u0010\u001a\u00020\r2\u0006\u0010\u0006\u001a\u00020\u00052\u0006\u0010\u0008\u001a\u00020\u00072\u0006\u0010\t\u001a\u00020\u00072\u0006\u0010\u000b\u001a\u00020\n2\u0006\u0010\u000c\u001a\u00020\u0002\u00a2\u0006\u0004\u0008\u0010\u0010\u000fJ\u001d\u0010\u0013\u001a\u00020\r2\u0006\u0010\u0006\u001a\u00020\u00052\u0006\u0010\u0012\u001a\u00020\u0011\u00a2\u0006\u0004\u0008\u0013\u0010\u0014J\r\u0010\u0016\u001a\u00020\u0015\u00a2\u0006\u0004\u0008\u0016\u0010\u0017J\u001d\u0010\u001a\u001a\u00020\r2\u0006\u0010\u0018\u001a\u00020\u00072\u0006\u0010\u0019\u001a\u00020\u0002\u00a2\u0006\u0004\u0008\u001a\u0010\u001bJ\u0015\u0010\u001d\u001a\u00020\u00022\u0006\u0010\u001c\u001a\u00020\u0007\u00a2\u0006\u0004\u0008\u001d\u0010\u001e\u00a8\u0006!"
     }
     d2 = {
         "Lcom/faceunity/core/controller/poster/PosterController;",
         "Lcom/faceunity/core/controller/BaseSingleController;",
         "",
         "getRotationData",
+        "()[F",
         "",
         "modelId",
         "",
@@ -21,19 +27,24 @@
         "",
         "input",
         "landmark",
-        "Lnm/l2;",
+        "Lh/l2;",
         "loadPosterPhoto",
+        "(JII[B[F)V",
         "loadPosterTemplate",
         "",
         "value",
         "fixPosterFaceParam",
+        "(JD)V",
         "",
         "checkRotation",
+        "()Z",
         "faceId",
         "landmarks",
         "getLandmarksData",
+        "(I[F)V",
         "index",
         "getFaceRectData",
+        "(I)[F",
         "<init>",
         "()V",
         "lib_core_release"
@@ -51,6 +62,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/core/controller/BaseSingleController;-><init>()V
 
     return-void
@@ -59,6 +71,7 @@
 .method public static final synthetic access$itemSetParam(Lcom/faceunity/core/controller/poster/PosterController;ILjava/lang/String;Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2, p3}, Lcom/faceunity/core/controller/BaseSingleController;->itemSetParam(ILjava/lang/String;Ljava/lang/Object;)V
 
     return-void
@@ -71,6 +84,7 @@
 
     new-array p0, p0, [F
 
+    .line 1
     sget-object v0, Lcom/faceunity/core/support/FUSDKController;->INSTANCE:Lcom/faceunity/core/support/FUSDKController;
 
     const/4 v1, 0x0
@@ -87,30 +101,35 @@
 .method public final checkRotation()Z
     .locals 26
 
+    .line 1
     invoke-direct/range {p0 .. p0}, Lcom/faceunity/core/controller/poster/PosterController;->getRotationData()[F
 
     move-result-object v0
 
     const/4 v1, 0x0
 
+    .line 2
     aget v2, v0, v1
 
     float-to-double v2, v2
 
     const/4 v4, 0x1
 
+    .line 3
     aget v5, v0, v4
 
     float-to-double v5, v5
 
     const/4 v7, 0x2
 
+    .line 4
     aget v8, v0, v7
 
     float-to-double v8, v8
 
     const/4 v10, 0x3
 
+    .line 5
     aget v0, v0, v10
 
     float-to-double v10, v0
@@ -139,6 +158,7 @@
 
     sub-double v4, v0, v16
 
+    .line 6
     invoke-static {v14, v15, v4, v5}, Ljava/lang/Math;->atan2(DD)D
 
     move-result-wide v4
@@ -161,6 +181,7 @@
 
     mul-double v22, v22, v12
 
+    .line 7
     invoke-static/range {v22 .. v23}, Ljava/lang/Math;->asin(D)D
 
     move-result-wide v22
@@ -187,6 +208,7 @@
 
     sub-double/2addr v0, v12
 
+    .line 8
     invoke-static {v10, v11, v0, v1}, Ljava/lang/Math;->atan2(DD)D
 
     const/16 v0, 0x1e
@@ -239,6 +261,7 @@
 .method public final fixPosterFaceParam(JD)V
     .locals 3
 
+    .line 1
     sget-object v0, Lcom/faceunity/core/controller/BaseSingleController;->Companion:Lcom/faceunity/core/controller/BaseSingleController$Companion;
 
     invoke-virtual {v0}, Lcom/faceunity/core/controller/BaseSingleController$Companion;->getTAG()Ljava/lang/String;
@@ -261,24 +284,26 @@
 
     invoke-static {v0, v1}, Lcom/faceunity/toolbox/utils/FULogger;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 2
     new-instance v0, Lcom/faceunity/core/controller/poster/PosterController$fixPosterFaceParam$1;
 
     invoke-direct {v0, p0, p3, p4}, Lcom/faceunity/core/controller/poster/PosterController$fixPosterFaceParam$1;-><init>(Lcom/faceunity/core/controller/poster/PosterController;D)V
 
-    invoke-virtual {p0, p1, p2, v0}, Lcom/faceunity/core/controller/BaseSingleController;->doControllerActionBackground(JLjn/l;)V
+    invoke-virtual {p0, p1, p2, v0}, Lcom/faceunity/core/controller/BaseSingleController;->doControllerActionBackground(JLh/d3/w/l;)V
 
     return-void
 .end method
 
 .method public final getFaceRectData(I)[F
     .locals 2
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const/4 p0, 0x4
 
     new-array p0, p0, [F
 
+    .line 1
     sget-object v0, Lcom/faceunity/core/support/FUSDKController;->INSTANCE:Lcom/faceunity/core/support/FUSDKController;
 
     const-string v1, "face_rect_origin"
@@ -291,14 +316,15 @@
 .method public final getLandmarksData(I[F)V
     .locals 1
     .param p2    # [F
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string p0, "landmarks"
 
-    invoke-static {p2, p0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     sget-object p0, Lcom/faceunity/core/support/FUSDKController;->INSTANCE:Lcom/faceunity/core/support/FUSDKController;
 
     invoke-virtual {p0}, Lcom/faceunity/core/support/FUSDKController;->isTracking()I
@@ -309,6 +335,7 @@
 
     const-string v0, "landmarks_origin"
 
+    .line 2
     invoke-virtual {p0, p1, v0, p2}, Lcom/faceunity/core/support/FUSDKController;->getFaceInfo(ILjava/lang/String;[F)V
 
     :cond_0
@@ -318,22 +345,23 @@
 .method public final loadPosterPhoto(JII[B[F)V
     .locals 7
     .param p5    # [B
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p6    # [F
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "input"
 
-    invoke-static {p5, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p5, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "landmark"
 
-    invoke-static {p6, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p6, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     new-instance v0, Lcom/faceunity/core/controller/poster/PosterController$loadPosterPhoto$1;
 
     move-object v1, v0
@@ -350,7 +378,7 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/faceunity/core/controller/poster/PosterController$loadPosterPhoto$1;-><init>(Lcom/faceunity/core/controller/poster/PosterController;[FII[B)V
 
-    invoke-virtual {p0, p1, p2, v0}, Lcom/faceunity/core/controller/BaseSingleController;->doControllerActionGL(JLjn/l;)V
+    invoke-virtual {p0, p1, p2, v0}, Lcom/faceunity/core/controller/BaseSingleController;->doControllerActionGL(JLh/d3/w/l;)V
 
     return-void
 .end method
@@ -358,22 +386,23 @@
 .method public final loadPosterTemplate(JII[B[F)V
     .locals 7
     .param p5    # [B
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p6    # [F
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "input"
 
-    invoke-static {p5, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p5, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "landmark"
 
-    invoke-static {p6, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p6, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     new-instance v0, Lcom/faceunity/core/controller/poster/PosterController$loadPosterTemplate$1;
 
     move-object v1, v0
@@ -390,7 +419,7 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/faceunity/core/controller/poster/PosterController$loadPosterTemplate$1;-><init>(Lcom/faceunity/core/controller/poster/PosterController;[FII[B)V
 
-    invoke-virtual {p0, p1, p2, v0}, Lcom/faceunity/core/controller/BaseSingleController;->doControllerActionGL(JLjn/l;)V
+    invoke-virtual {p0, p1, p2, v0}, Lcom/faceunity/core/controller/BaseSingleController;->doControllerActionGL(JLh/d3/w/l;)V
 
     return-void
 .end method

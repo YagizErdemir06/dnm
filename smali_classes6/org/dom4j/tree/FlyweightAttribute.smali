@@ -6,7 +6,7 @@
 # instance fields
 .field private qname:Lorg/dom4j/QName;
 
-.field protected value:Ljava/lang/String;
+.field public value:Ljava/lang/String;
 
 
 # direct methods
@@ -88,6 +88,7 @@
 .method public getQName()Lorg/dom4j/QName;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/FlyweightAttribute;->qname:Lorg/dom4j/QName;
 
     return-object p0
@@ -96,6 +97,7 @@
 .method public getValue()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/FlyweightAttribute;->value:Ljava/lang/String;
 
     return-object p0

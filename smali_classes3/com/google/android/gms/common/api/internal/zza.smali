@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/api/internal/zza;
+.class public final Lcom/google/android/gms/common/api/internal/zza;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,11 +7,11 @@
 
 
 # instance fields
-.field final synthetic zza:Lcom/google/android/gms/common/api/internal/LifecycleCallback;
+.field public final synthetic zza:Lcom/google/android/gms/common/api/internal/LifecycleCallback;
 
-.field final synthetic zzb:Ljava/lang/String;
+.field public final synthetic zzb:Ljava/lang/String;
 
-.field final synthetic zzc:Lcom/google/android/gms/common/api/internal/zzb;
+.field public final synthetic zzc:Lcom/google/android/gms/common/api/internal/zzb;
 
 
 # direct methods
@@ -34,6 +34,7 @@
 .method public final run()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zza;->zzc:Lcom/google/android/gms/common/api/internal/zzb;
 
     invoke-static {v0}, Lcom/google/android/gms/common/api/internal/zzb;->zza(Lcom/google/android/gms/common/api/internal/zzb;)I
@@ -65,6 +66,7 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 2
     :goto_0
     invoke-virtual {v1, v0}, Lcom/google/android/gms/common/api/internal/LifecycleCallback;->onCreate(Landroid/os/Bundle;)V
 
@@ -81,6 +83,7 @@
 
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zza;->zza:Lcom/google/android/gms/common/api/internal/LifecycleCallback;
 
+    .line 3
     invoke-virtual {v0}, Lcom/google/android/gms/common/api/internal/LifecycleCallback;->onStart()V
 
     :cond_2
@@ -96,6 +99,7 @@
 
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zza;->zza:Lcom/google/android/gms/common/api/internal/LifecycleCallback;
 
+    .line 4
     invoke-virtual {v0}, Lcom/google/android/gms/common/api/internal/LifecycleCallback;->onResume()V
 
     :cond_3
@@ -111,6 +115,7 @@
 
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zza;->zza:Lcom/google/android/gms/common/api/internal/LifecycleCallback;
 
+    .line 5
     invoke-virtual {v0}, Lcom/google/android/gms/common/api/internal/LifecycleCallback;->onStop()V
 
     :cond_4
@@ -126,6 +131,7 @@
 
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zza;->zza:Lcom/google/android/gms/common/api/internal/LifecycleCallback;
 
+    .line 6
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/internal/LifecycleCallback;->onDestroy()V
 
     :cond_5

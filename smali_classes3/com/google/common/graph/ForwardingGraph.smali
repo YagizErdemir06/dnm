@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/graph/ForwardingGraph;
+.class public abstract Lcom/google/common/graph/ForwardingGraph;
 .super Lcom/google/common/graph/AbstractGraph;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/graph/AbstractGraph;-><init>()V
 
     return-void
@@ -39,6 +40,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/ForwardingGraph;->delegate()Lcom/google/common/graph/BaseGraph;
 
     move-result-object p0
@@ -53,6 +55,7 @@
 .method public allowsSelfLoops()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/ForwardingGraph;->delegate()Lcom/google/common/graph/BaseGraph;
 
     move-result-object p0
@@ -72,6 +75,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/ForwardingGraph;->delegate()Lcom/google/common/graph/BaseGraph;
 
     move-result-object p0
@@ -96,6 +100,7 @@
 .method public edgeCount()J
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/ForwardingGraph;->delegate()Lcom/google/common/graph/BaseGraph;
 
     move-result-object p0
@@ -163,6 +168,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/ForwardingGraph;->delegate()Lcom/google/common/graph/BaseGraph;
 
     move-result-object p0
@@ -184,6 +190,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/ForwardingGraph;->delegate()Lcom/google/common/graph/BaseGraph;
 
     move-result-object p0
@@ -206,6 +213,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/ForwardingGraph;->delegate()Lcom/google/common/graph/BaseGraph;
 
     move-result-object p0
@@ -220,6 +228,7 @@
 .method public isDirected()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/ForwardingGraph;->delegate()Lcom/google/common/graph/BaseGraph;
 
     move-result-object p0
@@ -241,6 +250,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/ForwardingGraph;->delegate()Lcom/google/common/graph/BaseGraph;
 
     move-result-object p0
@@ -262,6 +272,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/ForwardingGraph;->delegate()Lcom/google/common/graph/BaseGraph;
 
     move-result-object p0
@@ -281,6 +292,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/ForwardingGraph;->delegate()Lcom/google/common/graph/BaseGraph;
 
     move-result-object p0

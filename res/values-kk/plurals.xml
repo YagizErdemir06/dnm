@@ -8,8 +8,4 @@
         <item quantity="other">%d секунд артқа айналдыру</item>
         <item quantity="one">%d секунд артқа айналдыру</item>
     </plurals>
-    <plurals name="mtrl_badge_content_description">
-        <item quantity="other">%d жаңа хабарландыру</item>
-        <item quantity="one">%d жаңа хабарландыру</item>
-    </plurals>
 </resources>

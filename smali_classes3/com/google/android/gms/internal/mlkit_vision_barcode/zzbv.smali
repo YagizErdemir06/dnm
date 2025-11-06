@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbv;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbv;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -17,6 +17,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
@@ -33,6 +34,7 @@
 
     const/16 v0, 0xf
 
+    .line 2
     invoke-static {p0, v0}, Ljava/lang/Integer;->rotateLeft(II)I
 
     move-result p0

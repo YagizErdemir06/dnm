@@ -1,4 +1,4 @@
-.class Landroidx/core/view/ViewCompat$Api24Impl;
+.class public Landroidx/core/view/ViewCompat$Api24Impl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,6 +37,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->cancelDragAndDrop()V
 
     return-void
@@ -46,6 +48,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->dispatchFinishTemporaryDetach()V
 
     return-void
@@ -56,6 +59,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->dispatchStartTemporaryDetach()V
 
     return-void
@@ -70,6 +74,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/View;->setPointerIcon(Landroid/view/PointerIcon;)V
 
     return-void
@@ -96,6 +101,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/view/View;->startDragAndDrop(Landroid/content/ClipData;Landroid/view/View$DragShadowBuilder;Ljava/lang/Object;I)Z
 
     move-result p0
@@ -116,6 +122,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/View;->updateDragShadow(Landroid/view/View$DragShadowBuilder;)V
 
     return-void

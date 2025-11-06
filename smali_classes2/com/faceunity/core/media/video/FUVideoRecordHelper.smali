@@ -15,67 +15,76 @@
     value = "SMAP\nFUVideoRecordHelper.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FUVideoRecordHelper.kt\ncom/faceunity/core/media/video/FUVideoRecordHelper\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,254:1\n1#2:255\n*E\n"
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000k\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0004\n\u0002\u0010\u000e\n\u0002\u0008\u0002\n\u0002\u0010\u0014\n\u0002\u0008\u0008\n\u0002\u0010\u000b\n\u0002\u0008\u0003\n\u0002\u0010\t\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0008\u0008*\u00013\u0018\u0000 82\u00020\u0001:\u000289B\u0007\u00a2\u0006\u0004\u00086\u00107J\u0010\u0010\u0005\u001a\u00020\u00042\u0008\u0010\u0003\u001a\u0004\u0018\u00010\u0002J\u0006\u0010\u0006\u001a\u00020\u0004J\u001e\u0010\u000c\u001a\u00020\u00042\u0006\u0010\u0008\u001a\u00020\u00072\u0006\u0010\n\u001a\u00020\t2\u0006\u0010\u000b\u001a\u00020\tJ&\u0010\u000c\u001a\u00020\u00042\u0006\u0010\r\u001a\u00020\u00072\u0006\u0010\n\u001a\u00020\t2\u0006\u0010\u000b\u001a\u00020\t2\u0006\u0010\u000f\u001a\u00020\u000eJ\u001e\u0010\u0014\u001a\u00020\u00042\u0006\u0010\u0010\u001a\u00020\t2\u0006\u0010\u0012\u001a\u00020\u00112\u0006\u0010\u0013\u001a\u00020\u0011J\u0006\u0010\u0015\u001a\u00020\u0004R\u0018\u0010\u0016\u001a\u0004\u0018\u00010\u00028\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0016\u0010\u0017R\u0018\u0010\u0018\u001a\u0004\u0018\u00010\u00078\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0018\u0010\u0019R\u0016\u0010\u001b\u001a\u00020\u001a8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u001b\u0010\u001cR\u0016\u0010\u001d\u001a\u00020\u001a8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u001d\u0010\u001cR\u0016\u0010\u001f\u001a\u00020\u001e8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u001f\u0010 R\u0014\u0010!\u001a\u00020\u000e8\u0002X\u0082D\u00a2\u0006\u0006\n\u0004\u0008!\u0010\"R\u0018\u0010$\u001a\u0004\u0018\u00010#8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008$\u0010%R\u0018\u0010\'\u001a\u0004\u0018\u00010&8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\'\u0010(R\u0018\u0010*\u001a\u0004\u0018\u00010)8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008*\u0010+R\u0018\u0010-\u001a\u0004\u0018\u00010,8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008-\u0010.R\u0014\u0010/\u001a\u00020\u00018\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008/\u00100R\u0016\u00101\u001a\u00020\t8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u00081\u00102R\u0014\u00104\u001a\u0002038\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u00084\u00105\u00a8\u0006:"
+        "\u0000k\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0005\n\u0002\u0010\u000e\n\u0002\u0008\u0003\n\u0002\u0010\u0014\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\u000b\n\u0002\u0008\t\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\t\n\u0002\u0008\u0002\n\u0002\u0008\u0007*\u00018\u0018\u0000 <2\u00020\u0001:\u0002<=B\u0007\u00a2\u0006\u0004\u0008;\u0010\u0008J\u0017\u0010\u0005\u001a\u00020\u00042\u0008\u0010\u0003\u001a\u0004\u0018\u00010\u0002\u00a2\u0006\u0004\u0008\u0005\u0010\u0006J\r\u0010\u0007\u001a\u00020\u0004\u00a2\u0006\u0004\u0008\u0007\u0010\u0008J%\u0010\u000e\u001a\u00020\u00042\u0006\u0010\n\u001a\u00020\t2\u0006\u0010\u000c\u001a\u00020\u000b2\u0006\u0010\r\u001a\u00020\u000b\u00a2\u0006\u0004\u0008\u000e\u0010\u000fJ-\u0010\u000e\u001a\u00020\u00042\u0006\u0010\u0010\u001a\u00020\t2\u0006\u0010\u000c\u001a\u00020\u000b2\u0006\u0010\r\u001a\u00020\u000b2\u0006\u0010\u0012\u001a\u00020\u0011\u00a2\u0006\u0004\u0008\u000e\u0010\u0013J%\u0010\u0018\u001a\u00020\u00042\u0006\u0010\u0014\u001a\u00020\u000b2\u0006\u0010\u0016\u001a\u00020\u00152\u0006\u0010\u0017\u001a\u00020\u0015\u00a2\u0006\u0004\u0008\u0018\u0010\u0019J\r\u0010\u001a\u001a\u00020\u0004\u00a2\u0006\u0004\u0008\u001a\u0010\u0008R\u0018\u0010\u001c\u001a\u0004\u0018\u00010\u001b8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u001c\u0010\u001dR\u0018\u0010\u001e\u001a\u0004\u0018\u00010\t8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u001e\u0010\u001fR\u0018\u0010!\u001a\u0004\u0018\u00010 8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008!\u0010\"R\u0018\u0010#\u001a\u0004\u0018\u00010\u00028\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008#\u0010$R\u0016\u0010&\u001a\u00020%8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008&\u0010\'R\u0016\u0010(\u001a\u00020\u00118\u0002@\u0002X\u0082D\u00a2\u0006\u0006\n\u0004\u0008(\u0010)R\u0016\u0010*\u001a\u00020\u00018\u0002@\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008*\u0010+R\u0016\u0010,\u001a\u00020\u000b8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008,\u0010-R\u0016\u0010.\u001a\u00020%8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008.\u0010\'R\u0018\u00100\u001a\u0004\u0018\u00010/8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u00080\u00101R\u0018\u00103\u001a\u0004\u0018\u0001028\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u00083\u00104R\u0016\u00106\u001a\u0002058\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u00086\u00107R\u0016\u00109\u001a\u0002088\u0002@\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u00089\u0010:\u00a8\u0006>"
     }
     d2 = {
         "Lcom/faceunity/core/media/video/FUVideoRecordHelper;",
         "",
         "Lcom/faceunity/core/media/video/FUVideoRecordHelper$OnVideoRecordingListener;",
         "listener",
-        "Lnm/l2;",
+        "Lh/l2;",
         "bindListener",
+        "(Lcom/faceunity/core/media/video/FUVideoRecordHelper$OnVideoRecordingListener;)V",
         "release",
+        "()V",
         "Lcom/faceunity/core/weight/GLTextureView;",
         "textureView",
         "",
         "width",
         "height",
         "prepareRecording",
+        "(Lcom/faceunity/core/weight/GLTextureView;II)V",
         "glSurfaceView",
         "",
         "filePath",
+        "(Lcom/faceunity/core/weight/GLTextureView;IILjava/lang/String;)V",
         "texId",
         "",
         "texMatrix",
         "mvpMatrix",
         "frameAvailableSoon",
+        "(I[F[F)V",
         "stopRecording",
-        "mOnVideoRecordingListener",
-        "Lcom/faceunity/core/media/video/FUVideoRecordHelper$OnVideoRecordingListener;",
-        "mGLTextureView",
-        "Lcom/faceunity/core/weight/GLTextureView;",
-        "",
-        "mIsRecording",
-        "Z",
-        "isStopRecording",
-        "",
-        "mFrameAvailableTime",
-        "J",
-        "mOutputFileDir",
-        "Ljava/lang/String;",
-        "Ljava/io/File;",
-        "mOutputFile",
-        "Ljava/io/File;",
         "Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;",
         "mMuxer",
         "Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;",
-        "Lcom/faceunity/core/media/video/encoder/MediaVideoEncoder;",
-        "mVideoEncoder",
-        "Lcom/faceunity/core/media/video/encoder/MediaVideoEncoder;",
+        "mGLTextureView",
+        "Lcom/faceunity/core/weight/GLTextureView;",
         "Ljava/util/concurrent/CountDownLatch;",
         "mCountDownLatch",
         "Ljava/util/concurrent/CountDownLatch;",
+        "mOnVideoRecordingListener",
+        "Lcom/faceunity/core/media/video/FUVideoRecordHelper$OnVideoRecordingListener;",
+        "",
+        "mIsRecording",
+        "Z",
+        "mOutputFileDir",
+        "Ljava/lang/String;",
         "mRecordLock",
         "Ljava/lang/Object;",
         "mVideoOrientation",
         "I",
+        "isStopRecording",
+        "Ljava/io/File;",
+        "mOutputFile",
+        "Ljava/io/File;",
+        "Lcom/faceunity/core/media/video/encoder/MediaVideoEncoder;",
+        "mVideoEncoder",
+        "Lcom/faceunity/core/media/video/encoder/MediaVideoEncoder;",
+        "",
+        "mFrameAvailableTime",
+        "J",
         "com/faceunity/core/media/video/FUVideoRecordHelper$mMediaEncoderListener$1",
         "mMediaEncoderListener",
         "Lcom/faceunity/core/media/video/FUVideoRecordHelper$mMediaEncoderListener$1;",
         "<init>",
-        "()V",
         "Companion",
         "OnVideoRecordingListener",
         "lib_core_release"
@@ -91,7 +100,7 @@
 
 # static fields
 .field public static final Companion:Lcom/faceunity/core/media/video/FUVideoRecordHelper$Companion;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -134,7 +143,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/faceunity/core/media/video/FUVideoRecordHelper$Companion;-><init>(Lkotlin/jvm/internal/w;)V
+    invoke-direct {v0, v1}, Lcom/faceunity/core/media/video/FUVideoRecordHelper$Companion;-><init>(Lh/d3/x/w;)V
 
     sput-object v0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->Companion:Lcom/faceunity/core/media/video/FUVideoRecordHelper$Companion;
 
@@ -144,18 +153,22 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "record"
 
+    .line 2
     iput-object v0, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mOutputFileDir:Ljava/lang/String;
 
+    .line 3
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mRecordLock:Ljava/lang/Object;
 
+    .line 4
     new-instance v0, Lcom/faceunity/core/media/video/FUVideoRecordHelper$mMediaEncoderListener$1;
 
     invoke-direct {v0, p0}, Lcom/faceunity/core/media/video/FUVideoRecordHelper$mMediaEncoderListener$1;-><init>(Lcom/faceunity/core/media/video/FUVideoRecordHelper;)V
@@ -168,6 +181,7 @@
 .method public static final synthetic access$getMCountDownLatch$p(Lcom/faceunity/core/media/video/FUVideoRecordHelper;)Ljava/util/concurrent/CountDownLatch;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     return-object p0
@@ -176,6 +190,7 @@
 .method public static final synthetic access$getMGLTextureView$p(Lcom/faceunity/core/media/video/FUVideoRecordHelper;)Lcom/faceunity/core/weight/GLTextureView;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mGLTextureView:Lcom/faceunity/core/weight/GLTextureView;
 
     return-object p0
@@ -184,6 +199,7 @@
 .method public static final synthetic access$getMIsRecording$p(Lcom/faceunity/core/media/video/FUVideoRecordHelper;)Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mIsRecording:Z
 
     return p0
@@ -192,6 +208,7 @@
 .method public static final synthetic access$getMOnVideoRecordingListener$p(Lcom/faceunity/core/media/video/FUVideoRecordHelper;)Lcom/faceunity/core/media/video/FUVideoRecordHelper$OnVideoRecordingListener;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mOnVideoRecordingListener:Lcom/faceunity/core/media/video/FUVideoRecordHelper$OnVideoRecordingListener;
 
     return-object p0
@@ -200,6 +217,7 @@
 .method public static final synthetic access$getMOutputFile$p(Lcom/faceunity/core/media/video/FUVideoRecordHelper;)Ljava/io/File;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mOutputFile:Ljava/io/File;
 
     return-object p0
@@ -208,6 +226,7 @@
 .method public static final synthetic access$getMRecordLock$p(Lcom/faceunity/core/media/video/FUVideoRecordHelper;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mRecordLock:Ljava/lang/Object;
 
     return-object p0
@@ -216,6 +235,7 @@
 .method public static final synthetic access$getMVideoEncoder$p(Lcom/faceunity/core/media/video/FUVideoRecordHelper;)Lcom/faceunity/core/media/video/encoder/MediaVideoEncoder;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mVideoEncoder:Lcom/faceunity/core/media/video/encoder/MediaVideoEncoder;
 
     return-object p0
@@ -224,6 +244,7 @@
 .method public static final synthetic access$setMCountDownLatch$p(Lcom/faceunity/core/media/video/FUVideoRecordHelper;Ljava/util/concurrent/CountDownLatch;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mCountDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     return-void
@@ -232,6 +253,7 @@
 .method public static final synthetic access$setMGLTextureView$p(Lcom/faceunity/core/media/video/FUVideoRecordHelper;Lcom/faceunity/core/weight/GLTextureView;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mGLTextureView:Lcom/faceunity/core/weight/GLTextureView;
 
     return-void
@@ -240,6 +262,7 @@
 .method public static final synthetic access$setMIsRecording$p(Lcom/faceunity/core/media/video/FUVideoRecordHelper;Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mIsRecording:Z
 
     return-void
@@ -248,6 +271,7 @@
 .method public static final synthetic access$setMOnVideoRecordingListener$p(Lcom/faceunity/core/media/video/FUVideoRecordHelper;Lcom/faceunity/core/media/video/FUVideoRecordHelper$OnVideoRecordingListener;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mOnVideoRecordingListener:Lcom/faceunity/core/media/video/FUVideoRecordHelper$OnVideoRecordingListener;
 
     return-void
@@ -256,6 +280,7 @@
 .method public static final synthetic access$setMOutputFile$p(Lcom/faceunity/core/media/video/FUVideoRecordHelper;Ljava/io/File;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mOutputFile:Ljava/io/File;
 
     return-void
@@ -264,6 +289,7 @@
 .method public static final synthetic access$setMVideoEncoder$p(Lcom/faceunity/core/media/video/FUVideoRecordHelper;Lcom/faceunity/core/media/video/encoder/MediaVideoEncoder;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mVideoEncoder:Lcom/faceunity/core/media/video/encoder/MediaVideoEncoder;
 
     return-void
@@ -274,10 +300,11 @@
 .method public final bindListener(Lcom/faceunity/core/media/video/FUVideoRecordHelper$OnVideoRecordingListener;)V
     .locals 0
     .param p1    # Lcom/faceunity/core/media/video/FUVideoRecordHelper$OnVideoRecordingListener;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mOnVideoRecordingListener:Lcom/faceunity/core/media/video/FUVideoRecordHelper$OnVideoRecordingListener;
 
     return-void
@@ -286,31 +313,34 @@
 .method public final frameAvailableSoon(I[F[F)V
     .locals 8
     .param p2    # [F
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p3    # [F
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "texMatrix"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "mvpMatrix"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mRecordLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mVideoEncoder:Lcom/faceunity/core/media/video/encoder/MediaVideoEncoder;
 
     if-eqz v1, :cond_5
 
+    .line 3
     iget-wide v2, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mFrameAvailableTime:J
 
     const-wide/16 v4, 0x0
@@ -319,17 +349,20 @@
 
     if-nez v2, :cond_0
 
+    .line 4
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
     iput-wide v2, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mFrameAvailableTime:J
 
+    .line 5
     :cond_0
     invoke-static {p3}, Lcom/faceunity/toolbox/utils/FUDecimalUtils;->copyArray([F)[F
 
     move-result-object p3
 
+    .line 6
     iget v2, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mVideoOrientation:I
 
     const/16 v3, 0x5a
@@ -359,6 +392,7 @@
 
     move-object v2, p3
 
+    .line 7
     invoke-static/range {v2 .. v7}, Landroid/opengl/Matrix;->rotateM([FIFFFF)V
 
     goto :goto_0
@@ -376,6 +410,7 @@
 
     move-object v2, p3
 
+    .line 8
     invoke-static/range {v2 .. v7}, Landroid/opengl/Matrix;->rotateM([FIFFFF)V
 
     goto :goto_0
@@ -393,15 +428,19 @@
 
     move-object v2, p3
 
+    .line 9
     invoke-static/range {v2 .. v7}, Landroid/opengl/Matrix;->rotateM([FIFFFF)V
 
+    .line 10
     :goto_0
     invoke-virtual {v1, p1, p2, p3}, Lcom/faceunity/core/media/video/encoder/MediaVideoEncoder;->frameAvailableSoon(I[F[F)Z
 
+    .line 11
     iget-boolean p1, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->isStopRecording:Z
 
     if-nez p1, :cond_4
 
+    .line 12
     iget-object p1, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mOnVideoRecordingListener:Lcom/faceunity/core/media/video/FUVideoRecordHelper$OnVideoRecordingListener;
 
     if-eqz p1, :cond_4
@@ -420,11 +459,13 @@
 
     invoke-interface {p1, p0}, Lcom/faceunity/core/media/video/FUVideoRecordHelper$OnVideoRecordingListener;->onProcess(Ljava/lang/Long;)V
 
+    .line 13
     :cond_4
-    sget-object p0, Lnm/l2;->a:Lnm/l2;
+    sget-object p0, Lh/l2;->a:Lh/l2;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 14
     :cond_5
     monitor-exit v0
 
@@ -441,13 +482,13 @@
 .method public final prepareRecording(Lcom/faceunity/core/weight/GLTextureView;II)V
     .locals 3
     .param p1    # Lcom/faceunity/core/weight/GLTextureView;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "textureView"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     iget-boolean v0, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mIsRecording:Z
@@ -501,7 +542,7 @@
 
     iget-object v1, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mOutputFile:Ljava/io/File;
 
-    invoke-static {v1}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {v1}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     invoke-virtual {v1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -569,7 +610,7 @@
     move-exception p0
 
     .line 14
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     :cond_2
     :goto_0
@@ -579,21 +620,21 @@
 .method public final prepareRecording(Lcom/faceunity/core/weight/GLTextureView;IILjava/lang/String;)V
     .locals 3
     .param p1    # Lcom/faceunity/core/weight/GLTextureView;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p4    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "glSurfaceView"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "filePath"
 
-    invoke-static {p4, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 15
     iget-boolean v0, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mIsRecording:Z
@@ -647,11 +688,11 @@
 
     move-result-object p4
 
-    invoke-static {p4}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {p4}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     const-string v1, "mediaMetadataRetriever.e\u2026ATA_KEY_VIDEO_ROTATION)!!"
 
-    invoke-static {p4, v1}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, v1}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -681,7 +722,7 @@
 
     .line 25
     :try_start_3
-    invoke-virtual {p4}, Ljava/lang/Throwable;->printStackTrace()V
+    invoke-virtual {p4}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
@@ -707,7 +748,7 @@
 
     iget-object p4, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mOutputFile:Ljava/io/File;
 
-    invoke-static {p4}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {p4}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     invoke-virtual {p4}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -784,14 +825,14 @@
     .line 32
     iget-object p1, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mMuxer:Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;
 
-    invoke-static {p1}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {p1}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     invoke-virtual {p1}, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->prepare()V
 
     .line 33
     iget-object p0, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mMuxer:Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;
 
-    invoke-static {p0}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {p0}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->startRecording()V
 
@@ -809,7 +850,7 @@
     move-exception p0
 
     .line 35
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     :goto_5
     return-void
@@ -820,10 +861,13 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mOnVideoRecordingListener:Lcom/faceunity/core/media/video/FUVideoRecordHelper$OnVideoRecordingListener;
 
+    .line 2
     iput-object v0, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mGLTextureView:Lcom/faceunity/core/weight/GLTextureView;
 
+    .line 3
     invoke-virtual {p0}, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->stopRecording()V
 
     return-void
@@ -834,14 +878,17 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->isStopRecording:Z
 
+    .line 2
     iget-object v0, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mMuxer:Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object v2, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mRecordLock:Ljava/lang/Object;
 
     monitor-enter v2
@@ -849,12 +896,13 @@
     :try_start_0
     iput-object v1, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mVideoEncoder:Lcom/faceunity/core/media/video/encoder/MediaVideoEncoder;
 
-    sget-object v3, Lnm/l2;->a:Lnm/l2;
+    sget-object v3, Lh/l2;->a:Lh/l2;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     monitor-exit v2
 
+    .line 4
     invoke-virtual {v0}, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->stopRecording()V
 
     goto :goto_0
@@ -862,10 +910,12 @@
     :catchall_0
     move-exception p0
 
+    .line 5
     monitor-exit v2
 
     throw p0
 
+    .line 6
     :cond_0
     :goto_0
     iput-object v1, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->mMuxer:Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;

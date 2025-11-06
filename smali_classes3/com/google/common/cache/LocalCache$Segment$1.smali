@@ -1,4 +1,4 @@
-.class Lcom/google/common/cache/LocalCache$Segment$1;
+.class public Lcom/google/common/cache/LocalCache$Segment$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,21 +18,22 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/cache/LocalCache$Segment;
+.field public final synthetic this$0:Lcom/google/common/cache/LocalCache$Segment;
 
-.field final synthetic val$hash:I
+.field public final synthetic val$hash:I
 
-.field final synthetic val$key:Ljava/lang/Object;
+.field public final synthetic val$key:Ljava/lang/Object;
 
-.field final synthetic val$loadingFuture:Lcom/google/common/util/concurrent/ListenableFuture;
+.field public final synthetic val$loadingFuture:Lcom/google/common/util/concurrent/ListenableFuture;
 
-.field final synthetic val$loadingValueReference:Lcom/google/common/cache/LocalCache$LoadingValueReference;
+.field public final synthetic val$loadingValueReference:Lcom/google/common/cache/LocalCache$LoadingValueReference;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/cache/LocalCache$Segment;Ljava/lang/Object;ILcom/google/common/cache/LocalCache$LoadingValueReference;Lcom/google/common/util/concurrent/ListenableFuture;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/cache/LocalCache$Segment$1;->this$0:Lcom/google/common/cache/LocalCache$Segment;
 
     iput-object p2, p0, Lcom/google/common/cache/LocalCache$Segment$1;->val$key:Ljava/lang/Object;
@@ -53,6 +54,7 @@
 .method public run()V
     .locals 5
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/common/cache/LocalCache$Segment$1;->this$0:Lcom/google/common/cache/LocalCache$Segment;
 
@@ -73,6 +75,7 @@
     :catchall_0
     move-exception v0
 
+    .line 2
     sget-object v1, Lcom/google/common/cache/LocalCache;->logger:Ljava/util/logging/Logger;
 
     sget-object v2, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
@@ -81,6 +84,7 @@
 
     invoke-virtual {v1, v2, v3, v0}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/cache/LocalCache$Segment$1;->val$loadingValueReference:Lcom/google/common/cache/LocalCache$LoadingValueReference;
 
     invoke-virtual {p0, v0}, Lcom/google/common/cache/LocalCache$LoadingValueReference;->setException(Ljava/lang/Throwable;)Z

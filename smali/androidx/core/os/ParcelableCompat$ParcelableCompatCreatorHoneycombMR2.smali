@@ -1,4 +1,4 @@
-.class Landroidx/core/os/ParcelableCompat$ParcelableCompatCreatorHoneycombMR2;
+.class public Landroidx/core/os/ParcelableCompat$ParcelableCompatCreatorHoneycombMR2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -50,8 +50,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/core/os/ParcelableCompat$ParcelableCompatCreatorHoneycombMR2;->mCallbacks:Landroidx/core/os/ParcelableCompatCreatorCallbacks;
 
     return-void
@@ -110,6 +112,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/os/ParcelableCompat$ParcelableCompatCreatorHoneycombMR2;->mCallbacks:Landroidx/core/os/ParcelableCompatCreatorCallbacks;
 
     invoke-interface {p0, p1}, Landroidx/core/os/ParcelableCompatCreatorCallbacks;->newArray(I)[Ljava/lang/Object;

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/text/webvtt/Mp4WebvttSubtitle;
+.class public final Lcom/google/android/exoplayer2/text/webvtt/Mp4WebvttSubtitle;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -30,8 +30,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p1
@@ -60,6 +62,7 @@
 
     if-ltz p1, :cond_0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/webvtt/Mp4WebvttSubtitle;->cues:Ljava/util/List;
 
     goto :goto_0
@@ -85,6 +88,7 @@
     :cond_0
     const/4 p0, 0x0
 
+    .line 1
     :goto_0
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 

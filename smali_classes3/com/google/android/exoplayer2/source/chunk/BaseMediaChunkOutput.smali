@@ -20,10 +20,13 @@
 .method public constructor <init>([I[Lcom/google/android/exoplayer2/source/SampleQueue;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunkOutput;->trackTypes:[I
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunkOutput;->sampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     return-void
@@ -34,6 +37,7 @@
 .method public getWriteIndices()[I
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunkOutput;->sampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     array-length v0, v0
@@ -42,6 +46,7 @@
 
     const/4 v1, 0x0
 
+    .line 2
     :goto_0
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunkOutput;->sampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
@@ -49,6 +54,7 @@
 
     if-ge v1, v3, :cond_0
 
+    .line 3
     aget-object v2, v2, v1
 
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/source/SampleQueue;->getWriteIndex()I
@@ -68,6 +74,7 @@
 .method public setSampleOffsetUs(J)V
     .locals 3
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunkOutput;->sampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     array-length v0, p0
@@ -79,6 +86,7 @@
 
     aget-object v2, p0, v1
 
+    .line 2
     invoke-virtual {v2, p1, p2}, Lcom/google/android/exoplayer2/source/SampleQueue;->setSampleOffsetUs(J)V
 
     add-int/lit8 v1, v1, 0x1
@@ -94,6 +102,7 @@
 
     const/4 p1, 0x0
 
+    .line 1
     :goto_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunkOutput;->trackTypes:[I
 
@@ -101,10 +110,12 @@
 
     if-ge p1, v1, :cond_1
 
+    .line 2
     aget v0, v0, p1
 
     if-ne p2, v0, :cond_0
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunkOutput;->sampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     aget-object p0, p0, p1
@@ -116,6 +127,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -135,6 +147,7 @@
 
     invoke-static {p1, p0}, Lcom/google/android/exoplayer2/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 5
     new-instance p0, Lcom/google/android/exoplayer2/extractor/DummyTrackOutput;
 
     invoke-direct {p0}, Lcom/google/android/exoplayer2/extractor/DummyTrackOutput;-><init>()V

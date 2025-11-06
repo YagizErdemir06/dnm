@@ -4,34 +4,51 @@
 
 
 # static fields
-.field public static final p5:I = 0x2
+.field public static final m9:I = 0x1
 
-.field public static final p6:I = 0x8
+.field public static final n9:I = 0x2
 
-.field public static final q4:I = 0x1
+.field public static final o9:I = 0x4
 
-.field public static final q5:I = 0x4
+.field public static final p9:I = 0x8
 
-.field public static final q6:Ljava/lang/String; = "EdgeSpringBackLayout"
+.field private static final q9:Ljava/lang/String;
 
 
 # instance fields
-.field public p3:I
+.field private r9:I
 
-.field public p4:Landroid/graphics/Paint;
+.field private s9:I
 
-.field public q3:I
+.field private t9:Landroid/graphics/Paint;
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 0
+    .locals 1
+
+    .line 1
+    const-class v0, Lcom/android/camera/ui/EdgeSpringBackLayout;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/android/camera/ui/EdgeSpringBackLayout;->q9:Ljava/lang/String;
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     .line 1
     invoke-direct {p0, p1}, Lmiuix/springback/view/SpringBackLayout;-><init>(Landroid/content/Context;)V
@@ -41,12 +58,22 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 10
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     .line 2
     invoke-direct {p0, p1, p2}, Lmiuix/springback/view/SpringBackLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 3
-    sget-object v0, Lcom/android/camera/n4$u;->EdgeSpringBackLayout:[I
+    sget-object v0, Ld/d/a/k5$u;->EdgeSpringBackLayout:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -59,7 +86,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/android/camera/ui/EdgeSpringBackLayout;->p3:I
+    iput v0, p0, Lcom/android/camera/ui/EdgeSpringBackLayout;->r9:I
 
     const/4 v0, 0x1
 
@@ -68,13 +95,13 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/camera/ui/EdgeSpringBackLayout;->q3:I
+    iput v1, p0, Lcom/android/camera/ui/EdgeSpringBackLayout;->s9:I
 
     .line 6
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 7
-    sget-object p1, Lcom/android/camera/ui/EdgeSpringBackLayout;->q6:Ljava/lang/String;
+    sget-object p1, Lcom/android/camera/ui/EdgeSpringBackLayout;->q9:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -84,7 +111,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v2, p0, Lcom/android/camera/ui/EdgeSpringBackLayout;->p3:I
+    iget v2, p0, Lcom/android/camera/ui/EdgeSpringBackLayout;->r9:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -92,7 +119,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v2, p0, Lcom/android/camera/ui/EdgeSpringBackLayout;->q3:I
+    iget v2, p0, Lcom/android/camera/ui/EdgeSpringBackLayout;->s9:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -107,13 +134,7 @@
     .line 8
     new-instance p1, Landroid/graphics/LinearGradient;
 
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    iget p2, p0, Lcom/android/camera/ui/EdgeSpringBackLayout;->q3:I
+    iget p2, p0, Lcom/android/camera/ui/EdgeSpringBackLayout;->s9:I
 
     int-to-float v6, p2
 
@@ -129,6 +150,12 @@
 
     sget-object v9, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
 
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
     move-object v2, p1
 
     invoke-direct/range {v2 .. v9}, Landroid/graphics/LinearGradient;-><init>(FFFF[I[FLandroid/graphics/Shader$TileMode;)V
@@ -138,20 +165,20 @@
 
     invoke-direct {p2}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object p2, p0, Lcom/android/camera/ui/EdgeSpringBackLayout;->p4:Landroid/graphics/Paint;
+    iput-object p2, p0, Lcom/android/camera/ui/EdgeSpringBackLayout;->t9:Landroid/graphics/Paint;
 
     .line 10
     invoke-virtual {p2, v0}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
     .line 11
-    iget-object p2, p0, Lcom/android/camera/ui/EdgeSpringBackLayout;->p4:Landroid/graphics/Paint;
+    iget-object p2, p0, Lcom/android/camera/ui/EdgeSpringBackLayout;->t9:Landroid/graphics/Paint;
 
     sget-object v0, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {p2, v0}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
     .line 12
-    iget-object p2, p0, Lcom/android/camera/ui/EdgeSpringBackLayout;->p4:Landroid/graphics/Paint;
+    iget-object p2, p0, Lcom/android/camera/ui/EdgeSpringBackLayout;->t9:Landroid/graphics/Paint;
 
     new-instance v0, Landroid/graphics/PorterDuffXfermode;
 
@@ -162,7 +189,7 @@
     invoke-virtual {p2, v0}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
     .line 13
-    iget-object p0, p0, Lcom/android/camera/ui/EdgeSpringBackLayout;->p4:Landroid/graphics/Paint;
+    iget-object p0, p0, Lcom/android/camera/ui/EdgeSpringBackLayout;->t9:Landroid/graphics/Paint;
 
     invoke-virtual {p0, p1}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
@@ -183,12 +210,19 @@
     .end array-data
 .end method
 
-
-# virtual methods
-.method public final P(I)Z
+.method private P(I)Z
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "edgeFlag"
+        }
+    .end annotation
 
-    iget p0, p0, Lcom/android/camera/ui/EdgeSpringBackLayout;->p3:I
+    .line 1
+    iget p0, p0, Lcom/android/camera/ui/EdgeSpringBackLayout;->r9:I
 
     and-int/2addr p0, p1
 
@@ -205,25 +239,38 @@
     return p0
 .end method
 
+
+# virtual methods
 .method public drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
     .locals 16
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "canvas",
+            "child",
+            "drawingTime"
+        }
+    .end annotation
 
     move-object/from16 v0, p0
 
     move-object/from16 v8, p1
 
-    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWidth()I
+    .line 1
+    invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getWidth()I
 
     move-result v9
 
-    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getHeight()I
+    .line 2
+    invoke-virtual/range {p0 .. p0}, Landroid/view/ViewGroup;->getHeight()I
 
     move-result v10
 
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
+    .line 3
     invoke-virtual/range {p2 .. p2}, Landroid/view/View;->getWidth()I
 
     move-result v1
@@ -244,6 +291,10 @@
 
     int-to-float v5, v1
 
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
     const/4 v6, 0x0
 
     const/16 v7, 0x1f
@@ -254,6 +305,7 @@
 
     move-result v7
 
+    .line 4
     invoke-super/range {p0 .. p4}, Landroid/view/ViewGroup;->drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
 
     move-result v11
@@ -276,7 +328,8 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/ui/EdgeSpringBackLayout;->P(I)Z
+    .line 5
+    invoke-direct {v0, v1}, Lcom/android/camera/ui/EdgeSpringBackLayout;->P(I)Z
 
     move-result v1
 
@@ -284,14 +337,17 @@
 
     if-eqz v1, :cond_0
 
+    .line 6
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v15
 
     const/high16 v1, 0x42b40000    # 90.0f
 
+    .line 7
     invoke-virtual {v8, v1, v13, v14}, Landroid/graphics/Canvas;->rotate(FFF)V
 
+    .line 8
     invoke-virtual {v8, v10, v9}, Landroid/graphics/Canvas;->translate(FF)V
 
     sub-float v2, v10, v9
@@ -300,35 +356,41 @@
 
     add-float v4, v12, v9
 
-    iget v1, v0, Lcom/android/camera/ui/EdgeSpringBackLayout;->q3:I
+    .line 9
+    iget v1, v0, Lcom/android/camera/ui/EdgeSpringBackLayout;->s9:I
 
     int-to-float v5, v1
 
-    iget-object v6, v0, Lcom/android/camera/ui/EdgeSpringBackLayout;->p4:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/EdgeSpringBackLayout;->t9:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
+    .line 10
     invoke-virtual {v8, v15}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
     :cond_0
     const/4 v1, 0x4
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/ui/EdgeSpringBackLayout;->P(I)Z
+    .line 11
+    invoke-direct {v0, v1}, Lcom/android/camera/ui/EdgeSpringBackLayout;->P(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
+    .line 12
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v15
 
     const/high16 v1, -0x3d4c0000    # -90.0f
 
+    .line 13
     invoke-virtual {v8, v1, v13, v14}, Landroid/graphics/Canvas;->rotate(FFF)V
 
+    .line 14
     invoke-virtual {v8, v10, v9}, Landroid/graphics/Canvas;->translate(FF)V
 
     sub-float v2, v10, v9
@@ -337,27 +399,31 @@
 
     add-float v4, v12, v9
 
-    iget v1, v0, Lcom/android/camera/ui/EdgeSpringBackLayout;->q3:I
+    .line 15
+    iget v1, v0, Lcom/android/camera/ui/EdgeSpringBackLayout;->s9:I
 
     int-to-float v5, v1
 
-    iget-object v6, v0, Lcom/android/camera/ui/EdgeSpringBackLayout;->p4:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/EdgeSpringBackLayout;->t9:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
+    .line 16
     invoke-virtual {v8, v15}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
     :cond_1
     const/4 v1, 0x2
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/ui/EdgeSpringBackLayout;->P(I)Z
+    .line 17
+    invoke-direct {v0, v1}, Lcom/android/camera/ui/EdgeSpringBackLayout;->P(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
+    .line 18
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v9
@@ -366,11 +432,12 @@
 
     const/4 v3, 0x0
 
-    iget v1, v0, Lcom/android/camera/ui/EdgeSpringBackLayout;->q3:I
+    .line 19
+    iget v1, v0, Lcom/android/camera/ui/EdgeSpringBackLayout;->s9:I
 
     int-to-float v5, v1
 
-    iget-object v6, v0, Lcom/android/camera/ui/EdgeSpringBackLayout;->p4:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/EdgeSpringBackLayout;->t9:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -378,34 +445,39 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
+    .line 20
     invoke-virtual {v8, v9}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
     :cond_2
     const/16 v1, 0x8
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/ui/EdgeSpringBackLayout;->P(I)Z
+    .line 21
+    invoke-direct {v0, v1}, Lcom/android/camera/ui/EdgeSpringBackLayout;->P(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
+    .line 22
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v6
 
     const/high16 v1, 0x43340000    # 180.0f
 
+    .line 23
     invoke-virtual {v8, v1, v13, v14}, Landroid/graphics/Canvas;->rotate(FFF)V
 
     const/4 v1, 0x0
 
     const/4 v2, 0x0
 
-    iget v3, v0, Lcom/android/camera/ui/EdgeSpringBackLayout;->q3:I
+    .line 24
+    iget v3, v0, Lcom/android/camera/ui/EdgeSpringBackLayout;->s9:I
 
     int-to-float v4, v3
 
-    iget-object v5, v0, Lcom/android/camera/ui/EdgeSpringBackLayout;->p4:Landroid/graphics/Paint;
+    iget-object v5, v0, Lcom/android/camera/ui/EdgeSpringBackLayout;->t9:Landroid/graphics/Paint;
 
     move-object/from16 v0, p1
 
@@ -413,8 +485,10 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
+    .line 25
     invoke-virtual {v8, v6}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
+    .line 26
     :cond_3
     invoke-virtual {v8, v7}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
@@ -423,8 +497,17 @@
 
 .method public setEdgeFlags(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "edgeFlags"
+        }
+    .end annotation
 
-    iput p1, p0, Lcom/android/camera/ui/EdgeSpringBackLayout;->p3:I
+    .line 1
+    iput p1, p0, Lcom/android/camera/ui/EdgeSpringBackLayout;->r9:I
 
     return-void
 .end method

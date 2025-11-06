@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Sets$DescendingSet;
+.class public Lcom/google/common/collect/Sets$DescendingSet;
 .super Lcom/google/common/collect/ForwardingNavigableSet;
 .source "SourceFile"
 
@@ -49,8 +49,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ForwardingNavigableSet;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/Sets$DescendingSet;->forward:Ljava/util/NavigableSet;
 
     return-void
@@ -70,6 +72,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/collect/Ordering;->from(Ljava/util/Comparator;)Lcom/google/common/collect/Ordering;
 
     move-result-object p0
@@ -98,6 +101,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Sets$DescendingSet;->forward:Ljava/util/NavigableSet;
 
     invoke-interface {p0, p1}, Ljava/util/NavigableSet;->floor(Ljava/lang/Object;)Ljava/lang/Object;
@@ -117,14 +121,16 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Sets$DescendingSet;->forward:Ljava/util/NavigableSet;
 
-    invoke-interface {p0}, Ljava/util/SortedSet;->comparator()Ljava/util/Comparator;
+    invoke-interface {p0}, Ljava/util/NavigableSet;->comparator()Ljava/util/Comparator;
 
     move-result-object p0
 
     if-nez p0, :cond_0
 
+    .line 2
     invoke-static {}, Lcom/google/common/collect/Ordering;->natural()Lcom/google/common/collect/Ordering;
 
     move-result-object p0
@@ -135,6 +141,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-static {p0}, Lcom/google/common/collect/Sets$DescendingSet;->reverse(Ljava/util/Comparator;)Lcom/google/common/collect/Ordering;
 
@@ -213,6 +220,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Sets$DescendingSet;->forward:Ljava/util/NavigableSet;
 
     invoke-interface {p0}, Ljava/util/NavigableSet;->iterator()Ljava/util/Iterator;
@@ -232,6 +240,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Sets$DescendingSet;->forward:Ljava/util/NavigableSet;
 
     return-object p0
@@ -248,9 +257,10 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Sets$DescendingSet;->forward:Ljava/util/NavigableSet;
 
-    invoke-interface {p0}, Ljava/util/SortedSet;->last()Ljava/lang/Object;
+    invoke-interface {p0}, Ljava/util/NavigableSet;->last()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -272,6 +282,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Sets$DescendingSet;->forward:Ljava/util/NavigableSet;
 
     invoke-interface {p0, p1}, Ljava/util/NavigableSet;->ceiling(Ljava/lang/Object;)Ljava/lang/Object;
@@ -346,6 +357,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Sets$DescendingSet;->forward:Ljava/util/NavigableSet;
 
     invoke-interface {p0, p1}, Ljava/util/NavigableSet;->lower(Ljava/lang/Object;)Ljava/lang/Object;
@@ -365,6 +377,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Sets$DescendingSet;->forward:Ljava/util/NavigableSet;
 
     invoke-interface {p0}, Ljava/util/NavigableSet;->descendingIterator()Ljava/util/Iterator;
@@ -385,9 +398,10 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Sets$DescendingSet;->forward:Ljava/util/NavigableSet;
 
-    invoke-interface {p0}, Ljava/util/SortedSet;->first()Ljava/lang/Object;
+    invoke-interface {p0}, Ljava/util/NavigableSet;->first()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -409,6 +423,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Sets$DescendingSet;->forward:Ljava/util/NavigableSet;
 
     invoke-interface {p0, p1}, Ljava/util/NavigableSet;->higher(Ljava/lang/Object;)Ljava/lang/Object;
@@ -429,6 +444,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Sets$DescendingSet;->forward:Ljava/util/NavigableSet;
 
     invoke-interface {p0}, Ljava/util/NavigableSet;->pollLast()Ljava/lang/Object;
@@ -449,6 +465,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Sets$DescendingSet;->forward:Ljava/util/NavigableSet;
 
     invoke-interface {p0}, Ljava/util/NavigableSet;->pollFirst()Ljava/lang/Object;
@@ -598,6 +615,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingCollection;->standardToString()Ljava/lang/String;
 
     move-result-object p0

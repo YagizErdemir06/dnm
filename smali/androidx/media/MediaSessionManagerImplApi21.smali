@@ -1,4 +1,4 @@
-.class Landroidx/media/MediaSessionManagerImplApi21;
+.class public Landroidx/media/MediaSessionManagerImplApi21;
 .super Landroidx/media/MediaSessionManagerImplBase;
 .source "SourceFile"
 
@@ -21,8 +21,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/media/MediaSessionManagerImplBase;-><init>(Landroid/content/Context;)V
 
+    .line 2
     iput-object p1, p0, Landroidx/media/MediaSessionManagerImplBase;->mContext:Landroid/content/Context;
 
     return-void
@@ -43,10 +45,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroidx/media/MediaSessionManagerImplBase;->getContext()Landroid/content/Context;
 
     move-result-object p0
 
+    .line 2
     invoke-interface {p1}, Landroidx/media/MediaSessionManager$RemoteUserInfoImpl;->getPid()I
 
     move-result v0
@@ -57,6 +61,7 @@
 
     const-string v1, "android.permission.MEDIA_CONTENT_CONTROL"
 
+    .line 3
     invoke-virtual {p0, v1, v0, p1}, Landroid/content/Context;->checkPermission(Ljava/lang/String;II)I
 
     move-result p0
@@ -91,6 +96,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/media/MediaSessionManagerImplApi21;->hasMediaControlPermission(Landroidx/media/MediaSessionManager$RemoteUserInfoImpl;)Z
 
     move-result v0

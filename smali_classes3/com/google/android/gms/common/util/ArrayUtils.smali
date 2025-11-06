@@ -40,6 +40,7 @@
         }
     .end annotation
 
+    .line 1
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -50,11 +51,13 @@
 
     move v2, v0
 
+    .line 2
     :goto_0
     array-length v3, p0
 
     if-ge v0, v3, :cond_0
 
+    .line 3
     aget-object v3, p0, v0
 
     array-length v3, v3
@@ -65,6 +68,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     aget-object v0, p0, v1
 
@@ -72,19 +76,23 @@
 
     move-result-object v0
 
+    .line 5
     aget-object v2, p0, v1
 
     array-length v2, v2
 
     const/4 v3, 0x1
 
+    .line 6
     :goto_1
     array-length v4, p0
 
     if-ge v3, v4, :cond_1
 
+    .line 7
     aget-object v4, p0, v3
 
+    .line 8
     array-length v5, v4
 
     invoke-static {v4, v1, v0, v2, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
@@ -98,6 +106,7 @@
     :cond_1
     return-object v0
 
+    .line 9
     :cond_2
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -124,6 +133,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -134,11 +144,13 @@
 
     move v2, v0
 
+    .line 2
     :goto_0
     array-length v3, p0
 
     if-ge v0, v3, :cond_0
 
+    .line 3
     aget-object v3, p0, v0
 
     array-length v3, v3
@@ -149,6 +161,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     aget-object v0, p0, v1
 
@@ -156,19 +169,23 @@
 
     move-result-object v0
 
+    .line 5
     aget-object v2, p0, v1
 
     array-length v2, v2
 
     const/4 v3, 0x1
 
+    .line 6
     :goto_1
     array-length v4, p0
 
     if-ge v3, v4, :cond_1
 
+    .line 7
     aget-object v4, p0, v3
 
+    .line 8
     array-length v5, v4
 
     invoke-static {v4, v1, v0, v2, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
@@ -309,6 +326,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -355,11 +373,13 @@
 
     goto :goto_3
 
+    .line 1
     :cond_1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
 
+    .line 2
     invoke-virtual {v2}, Ljava/lang/Class;->getComponentType()Ljava/lang/Class;
 
     move-result-object v2
@@ -385,8 +405,10 @@
     :goto_0
     if-ge v1, v3, :cond_6
 
+    .line 3
     aget-object v6, p0, v1
 
+    .line 4
     aget-object v7, p1, v4
 
     invoke-static {v7, v6}, Lcom/google/android/gms/common/internal/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -397,6 +419,7 @@
 
     add-int/lit8 v7, v5, 0x1
 
+    .line 5
     aput-object v6, v2, v5
 
     move v5, v7
@@ -412,8 +435,10 @@
     :goto_1
     if-ge v4, v3, :cond_5
 
+    .line 6
     aget-object v5, p0, v4
 
+    .line 7
     invoke-static {p1, v5}, Lcom/google/android/gms/common/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v6
@@ -422,6 +447,7 @@
 
     add-int/lit8 v6, v1, 0x1
 
+    .line 8
     aput-object v5, v2, v1
 
     move v1, v6
@@ -439,6 +465,7 @@
 
     goto :goto_2
 
+    .line 9
     :cond_7
     array-length p0, v2
 
@@ -449,6 +476,7 @@
     :goto_2
     return-object v0
 
+    .line 10
     :cond_8
     invoke-static {v2, v5}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
@@ -456,10 +484,12 @@
 
     return-object p0
 
+    .line 11
     :cond_9
     :goto_3
     array-length p1, p0
 
+    .line 12
     invoke-static {p0, p1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     move-result-object p0
@@ -489,10 +519,12 @@
         }
     .end annotation
 
+    .line 1
     array-length v0, p0
 
     new-instance v1, Ljava/util/ArrayList;
 
+    .line 2
     invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(I)V
 
     const/4 v2, 0x0
@@ -500,6 +532,7 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
+    .line 3
     aget-object v3, p0, v2
 
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -537,6 +570,7 @@
 
     if-eqz p0, :cond_2
 
+    .line 1
     invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
 
     move-result v1
@@ -545,6 +579,7 @@
 
     goto :goto_1
 
+    .line 2
     :cond_0
     invoke-interface {p0}, Ljava/util/Collection;->size()I
 
@@ -552,6 +587,7 @@
 
     new-array v1, v1, [I
 
+    .line 3
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -571,6 +607,7 @@
 
     check-cast v3, Ljava/lang/Integer;
 
+    .line 4
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
     move-result v3
@@ -612,6 +649,7 @@
     :cond_0
     array-length v0, p0
 
+    .line 1
     new-array v1, v0, [Ljava/lang/Integer;
 
     const/4 v2, 0x0
@@ -930,6 +968,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -941,11 +980,13 @@
 
     const-string v2, ","
 
+    .line 2
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_0
     const-string v2, "\""
 
+    .line 3
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     aget-object v3, p1, v1

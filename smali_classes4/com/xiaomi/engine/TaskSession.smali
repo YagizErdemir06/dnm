@@ -44,8 +44,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-wide p1, p0, Lcom/xiaomi/engine/TaskSession;->mSessionHandle:J
 
     return-void
@@ -54,10 +56,12 @@
 .method private destroy()V
     .locals 3
 
+    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/engine/TaskSession;->mHasDestroyed:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     sget-object v0, Lcom/xiaomi/engine/TaskSession;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -82,6 +86,7 @@
 
     return-void
 
+    .line 3
     :cond_0
     iget-wide v0, p0, Lcom/xiaomi/engine/TaskSession;->mSessionHandle:J
 
@@ -89,6 +94,7 @@
 
     move-result v0
 
+    .line 4
     sget-object v1, Lcom/xiaomi/engine/TaskSession;->TAG:Ljava/lang/String;
 
     const-string v2, "destroy"
@@ -99,6 +105,7 @@
 
     const/4 v0, 0x1
 
+    .line 5
     iput-boolean v0, p0, Lcom/xiaomi/engine/TaskSession;->mHasDestroyed:Z
 
     :cond_1
@@ -108,10 +115,12 @@
 .method private flush()V
     .locals 3
 
+    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/engine/TaskSession;->mHasFlushed:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     sget-object v0, Lcom/xiaomi/engine/TaskSession;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -136,6 +145,7 @@
 
     return-void
 
+    .line 3
     :cond_0
     iget-wide v0, p0, Lcom/xiaomi/engine/TaskSession;->mSessionHandle:J
 
@@ -143,6 +153,7 @@
 
     move-result v0
 
+    .line 4
     sget-object v1, Lcom/xiaomi/engine/TaskSession;->TAG:Ljava/lang/String;
 
     const-string v2, "flush"
@@ -153,6 +164,7 @@
 
     const/4 v0, 0x1
 
+    .line 5
     iput-boolean v0, p0, Lcom/xiaomi/engine/TaskSession;->mHasFlushed:Z
 
     :cond_1
@@ -164,10 +176,13 @@
 .method public close()V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/engine/TaskSession;->flush()V
 
+    .line 2
     invoke-direct {p0}, Lcom/xiaomi/engine/TaskSession;->destroy()V
 
+    .line 3
     sget-object v0, Lcom/xiaomi/engine/TaskSession;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -197,8 +212,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/engine/TaskSession;->close()V
 
+    .line 2
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
     return-void
@@ -207,12 +224,14 @@
 .method public flushCurrentTask()V
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/engine/TaskSession;->mSessionHandle:J
 
     invoke-static {v0, v1}, Lcom/xiaomi/engine/MiCamAlgoInterfaceJNI;->flush(J)I
 
     move-result p0
 
+    .line 2
     sget-object v0, Lcom/xiaomi/engine/TaskSession;->TAG:Ljava/lang/String;
 
     const-string v1, "flushCurrentTask"
@@ -225,6 +244,7 @@
 .method public getSessionHandle()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/engine/TaskSession;->mSessionHandle:J
 
     return-wide v0
@@ -245,6 +265,7 @@
         }
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/engine/TaskSession;->mSessionHandle:J
 
     invoke-static {v0, v1, p1}, Lcom/xiaomi/engine/MiCamAlgoInterfaceJNI;->preProcess(JLcom/xiaomi/engine/PreProcessData;)I
@@ -269,6 +290,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/xiaomi/engine/TaskSession;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -291,6 +313,7 @@
 
     invoke-static {v0, v1}, Lcom/xiaomi/engine/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     iget-wide v1, p0, Lcom/xiaomi/engine/TaskSession;->mSessionHandle:J
 
     invoke-static {v1, v2, p1, p2}, Lcom/xiaomi/engine/MiCamAlgoInterfaceJNI;->processFrame(JLcom/xiaomi/engine/FrameData;Lcom/xiaomi/engine/TaskSession$FrameCallback;)I
@@ -299,15 +322,17 @@
 
     const-string p1, "processFrame"
 
+    .line 3
     invoke-static {p0, v0, p1}, Lcom/xiaomi/engine/Util;->assertOrNot(ILjava/lang/String;Ljava/lang/String;)V
 
     if-nez p0, :cond_0
 
-    const-string p1, "onProcessStarted"
+    const/4 p1, 0x0
 
-    const/4 v0, 0x0
+    const-string v0, "onProcessStarted"
 
-    invoke-interface {p2, p0, p1, v0}, Lcom/xiaomi/engine/TaskSession$FrameCallback;->onFrameProcessed(ILjava/lang/String;Ljava/lang/Object;)V
+    .line 4
+    invoke-interface {p2, p0, v0, p1}, Lcom/xiaomi/engine/TaskSession$FrameCallback;->onFrameProcessed(ILjava/lang/String;Ljava/lang/Object;)V
 
     :cond_0
     return-void
@@ -347,22 +372,26 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
+    .line 2
     sget-object v2, Lcom/xiaomi/engine/TaskSession;->TAG:Ljava/lang/String;
 
     const-string v3, "processFrameWithSync: E"
 
     invoke-static {v2, v3}, Lcom/xiaomi/engine/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 3
     iget-wide v3, p0, Lcom/xiaomi/engine/TaskSession;->mSessionHandle:J
 
     invoke-static {v3, v4, p1, p2, p3}, Lcom/xiaomi/engine/MiCamAlgoInterfaceJNI;->processFrameWithSync(JLjava/util/List;Landroid/media/Image;I)I
 
     move-result p0
 
+    .line 4
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -399,6 +428,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/engine/MiCamAlgoInterfaceJNI;->getVersionCode()I
 
     move-result v0
@@ -407,6 +437,7 @@
 
     if-lt v0, v1, :cond_0
 
+    .line 2
     iget-wide v0, p0, Lcom/xiaomi/engine/TaskSession;->mSessionHandle:J
 
     const/4 p0, 0x0
@@ -415,6 +446,7 @@
 
     move-result p0
 
+    .line 3
     sget-object p1, Lcom/xiaomi/engine/TaskSession;->TAG:Ljava/lang/String;
 
     const-string p2, "flushCurrentTask quick flush"
@@ -423,6 +455,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-wide p0, p0, Lcom/xiaomi/engine/TaskSession;->mSessionHandle:J
 
@@ -430,6 +463,7 @@
 
     move-result p0
 
+    .line 5
     sget-object p1, Lcom/xiaomi/engine/TaskSession;->TAG:Ljava/lang/String;
 
     const-string p2, "flushCurrentTask normal flush"

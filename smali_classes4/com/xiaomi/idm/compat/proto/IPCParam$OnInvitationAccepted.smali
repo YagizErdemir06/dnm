@@ -57,12 +57,15 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;
 
     invoke-direct {v0}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;-><init>()V
 
+    .line 2
     sput-object v0, Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;
 
+    .line 3
     const-class v1, Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;
 
     invoke-static {v1, v0}, Lcom/google/protobuf/GeneratedMessageLite;->registerDefaultInstance(Ljava/lang/Class;Lcom/google/protobuf/GeneratedMessageLite;)V
@@ -73,6 +76,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageLite;-><init>()V
 
     return-void
@@ -81,6 +85,7 @@
 .method public static synthetic access$34600()Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;
 
     return-object v0
@@ -89,6 +94,7 @@
 .method public static synthetic access$34700(Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;->setIdmService(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;)V
 
     return-void
@@ -97,6 +103,7 @@
 .method public static synthetic access$34800(Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;->mergeIdmService(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;)V
 
     return-void
@@ -105,6 +112,7 @@
 .method public static synthetic access$34900(Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;->clearIdmService()V
 
     return-void
@@ -115,6 +123,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;->idmService_:Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;
 
     return-void
@@ -123,6 +132,7 @@
 .method public static getDefaultInstance()Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;
 
     return-object v0
@@ -131,20 +141,25 @@
 .method private mergeIdmService(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;)V
     .locals 2
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;->idmService_:Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-static {}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;->getDefaultInstance()Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;
 
     move-result-object v1
 
     if-eq v0, v1, :cond_0
 
+    .line 4
     iget-object v0, p0, Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;->idmService_:Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;
 
+    .line 5
     invoke-static {v0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;->newBuilder(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService$Builder;
 
     move-result-object v0
@@ -165,6 +180,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     iput-object p1, p0, Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;->idmService_:Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;
 
@@ -453,6 +469,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;
 
     invoke-virtual {v0}, Lcom/google/protobuf/GeneratedMessageLite;->getParserForType()Lcom/google/protobuf/Parser;
@@ -465,8 +482,10 @@
 .method private setIdmService(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 2
     iput-object p1, p0, Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;->idmService_:Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;
 
     return-void
@@ -477,6 +496,7 @@
 .method public final dynamicMethod(Lcom/google/protobuf/GeneratedMessageLite$MethodToInvoke;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     sget-object p0, Lcom/xiaomi/idm/compat/proto/IPCParam$1;->$SwitchMap$com$google$protobuf$GeneratedMessageLite$MethodToInvoke:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
@@ -491,6 +511,7 @@
 
     packed-switch p0, :pswitch_data_0
 
+    .line 2
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -500,6 +521,7 @@
     :pswitch_0
     return-object p2
 
+    .line 3
     :pswitch_1
     invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
@@ -507,28 +529,34 @@
 
     return-object p0
 
+    .line 4
     :pswitch_2
     sget-object p0, Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;->PARSER:Lcom/google/protobuf/Parser;
 
     if-nez p0, :cond_1
 
+    .line 5
     const-class p1, Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;
 
     monitor-enter p1
 
+    .line 6
     :try_start_0
     sget-object p0, Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;->PARSER:Lcom/google/protobuf/Parser;
 
     if-nez p0, :cond_0
 
+    .line 7
     new-instance p0, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;
 
     sget-object p2, Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;
 
     invoke-direct {p0, p2}, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;-><init>(Lcom/google/protobuf/GeneratedMessageLite;)V
 
+    .line 8
     sput-object p0, Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;->PARSER:Lcom/google/protobuf/Parser;
 
+    .line 9
     :cond_0
     monitor-exit p1
 
@@ -547,6 +575,7 @@
     :goto_0
     return-object p0
 
+    .line 10
     :pswitch_3
     sget-object p0, Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;
 
@@ -563,6 +592,7 @@
 
     const-string p1, "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\t"
 
+    .line 11
     sget-object p2, Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;
 
     invoke-static {p2, p1, p0}, Lcom/google/protobuf/GeneratedMessageLite;->newMessageInfo(Lcom/google/protobuf/MessageLite;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
@@ -571,6 +601,7 @@
 
     return-object p0
 
+    .line 12
     :pswitch_5
     new-instance p0, Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted$Builder;
 
@@ -578,6 +609,7 @@
 
     return-object p0
 
+    .line 13
     :pswitch_6
     new-instance p0, Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;
 
@@ -600,6 +632,7 @@
 .method public getIdmService()Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;->idmService_:Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;
 
     if-nez p0, :cond_0
@@ -615,6 +648,7 @@
 .method public hasIdmService()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;->idmService_:Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;
 
     if-eqz p0, :cond_0

@@ -1,4 +1,4 @@
-.class Landroidx/core/view/LayoutInflaterCompat$Factory2Wrapper;
+.class public Landroidx/core/view/LayoutInflaterCompat$Factory2Wrapper;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,15 +18,17 @@
 
 
 # instance fields
-.field final mDelegateFactory:Landroidx/core/view/LayoutInflaterFactory;
+.field public final mDelegateFactory:Landroidx/core/view/LayoutInflaterFactory;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/core/view/LayoutInflaterFactory;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/core/view/LayoutInflaterCompat$Factory2Wrapper;->mDelegateFactory:Landroidx/core/view/LayoutInflaterFactory;
 
     return-void
@@ -67,6 +69,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -37,9 +37,10 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/xb/xsdschema/NamespaceList$1;->class$org$apache$xmlbeans$impl$xb$xsdschema$NamespaceList$Member2$Item$Member:Ljava/lang/Class;
 
     if-nez v0, :cond_0
@@ -75,6 +76,7 @@
 
     const-string v0, "##targetNamespace"
 
+    .line 2
     invoke-static {v0}, Lorg/apache/xmlbeans/impl/xb/xsdschema/NamespaceList$Member2$Item$Member$Enum;->forString(Ljava/lang/String;)Lorg/apache/xmlbeans/impl/xb/xsdschema/NamespaceList$Member2$Item$Member$Enum;
 
     move-result-object v0
@@ -83,6 +85,7 @@
 
     const-string v0, "##local"
 
+    .line 3
     invoke-static {v0}, Lorg/apache/xmlbeans/impl/xb/xsdschema/NamespaceList$Member2$Item$Member$Enum;->forString(Ljava/lang/String;)Lorg/apache/xmlbeans/impl/xb/xsdschema/NamespaceList$Member2$Item$Member$Enum;
 
     move-result-object v0

@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Sets$4;
+.class public Lcom/google/common/collect/Sets$4;
 .super Lcom/google/common/collect/Sets$SetView;
 .source "SourceFile"
 
@@ -22,15 +22,16 @@
 
 
 # instance fields
-.field final synthetic val$set1:Ljava/util/Set;
+.field public final synthetic val$set1:Ljava/util/Set;
 
-.field final synthetic val$set2:Ljava/util/Set;
+.field public final synthetic val$set2:Ljava/util/Set;
 
 
 # direct methods
 .method public constructor <init>(Ljava/util/Set;Ljava/util/Set;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/Sets$4;->val$set1:Ljava/util/Set;
 
     iput-object p2, p0, Lcom/google/common/collect/Sets$4;->val$set2:Ljava/util/Set;
@@ -51,6 +52,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Sets$4;->val$set1:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -71,6 +73,7 @@
 .method public isEmpty()Z
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Sets$4;->val$set1:Ljava/util/Set;
 
     iget-object p0, p0, Lcom/google/common/collect/Sets$4;->val$set2:Ljava/util/Set;
@@ -128,6 +131,7 @@
 .method public size()I
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Sets$4;->val$set1:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -148,6 +152,7 @@
 
     move-result-object v2
 
+    .line 2
     iget-object v3, p0, Lcom/google/common/collect/Sets$4;->val$set2:Ljava/util/Set;
 
     invoke-interface {v3, v2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -160,6 +165,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_1
     iget-object v0, p0, Lcom/google/common/collect/Sets$4;->val$set2:Ljava/util/Set;
 
@@ -179,6 +185,7 @@
 
     move-result-object v2
 
+    .line 4
     iget-object v3, p0, Lcom/google/common/collect/Sets$4;->val$set1:Ljava/util/Set;
 
     invoke-interface {v3, v2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z

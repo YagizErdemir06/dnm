@@ -35,6 +35,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,10 +46,12 @@
 .method public getAndResetSeekPosition()J
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/mediaparser/InputReaderAdapterV30;->lastSeekPosition:J
 
     const-wide/16 v2, -0x1
 
+    .line 2
     iput-wide v2, p0, Lcom/google/android/exoplayer2/source/mediaparser/InputReaderAdapterV30;->lastSeekPosition:J
 
     return-wide v0
@@ -57,6 +60,7 @@
 .method public getLength()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/mediaparser/InputReaderAdapterV30;->resourceLength:J
 
     return-wide v0
@@ -65,6 +69,7 @@
 .method public getPosition()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/mediaparser/InputReaderAdapterV30;->currentPosition:J
 
     return-wide v0
@@ -78,6 +83,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/mediaparser/InputReaderAdapterV30;->dataReader:Lcom/google/android/exoplayer2/upstream/DataReader;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Util;->castNonNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -90,6 +96,7 @@
 
     move-result p1
 
+    .line 2
     iget-wide p2, p0, Lcom/google/android/exoplayer2/source/mediaparser/InputReaderAdapterV30;->currentPosition:J
 
     int-to-long v0, p1
@@ -104,6 +111,7 @@
 .method public seekToPosition(J)V
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/mediaparser/InputReaderAdapterV30;->lastSeekPosition:J
 
     return-void
@@ -112,6 +120,7 @@
 .method public setCurrentPosition(J)V
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/mediaparser/InputReaderAdapterV30;->currentPosition:J
 
     return-void
@@ -120,12 +129,15 @@
 .method public setDataReader(Lcom/google/android/exoplayer2/upstream/DataReader;J)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/mediaparser/InputReaderAdapterV30;->dataReader:Lcom/google/android/exoplayer2/upstream/DataReader;
 
+    .line 2
     iput-wide p2, p0, Lcom/google/android/exoplayer2/source/mediaparser/InputReaderAdapterV30;->resourceLength:J
 
     const-wide/16 p1, -0x1
 
+    .line 3
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/mediaparser/InputReaderAdapterV30;->lastSeekPosition:J
 
     return-void

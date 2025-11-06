@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/RegularImmutableMap$EntrySet;
+.class public Lcom/google/common/collect/RegularImmutableMap$EntrySet;
 .super Lcom/google/common/collect/ImmutableSet;
 .source "SourceFile"
 
@@ -57,14 +57,19 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableSet;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/RegularImmutableMap$EntrySet;->map:Lcom/google/common/collect/ImmutableMap;
 
+    .line 3
     iput-object p2, p0, Lcom/google/common/collect/RegularImmutableMap$EntrySet;->alternatingKeysAndValues:[Ljava/lang/Object;
 
+    .line 4
     iput p3, p0, Lcom/google/common/collect/RegularImmutableMap$EntrySet;->keyOffset:I
 
+    .line 5
     iput p4, p0, Lcom/google/common/collect/RegularImmutableMap$EntrySet;->size:I
 
     return-void
@@ -73,6 +78,7 @@
 .method public static synthetic access$000(Lcom/google/common/collect/RegularImmutableMap$EntrySet;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/collect/RegularImmutableMap$EntrySet;->size:I
 
     return p0
@@ -81,6 +87,7 @@
 .method public static synthetic access$100(Lcom/google/common/collect/RegularImmutableMap$EntrySet;)[Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/RegularImmutableMap$EntrySet;->alternatingKeysAndValues:[Ljava/lang/Object;
 
     return-object p0
@@ -89,6 +96,7 @@
 .method public static synthetic access$200(Lcom/google/common/collect/RegularImmutableMap$EntrySet;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/collect/RegularImmutableMap$EntrySet;->keyOffset:I
 
     return p0
@@ -103,24 +111,29 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Ljava/util/Map$Entry;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Ljava/util/Map$Entry;
 
+    .line 3
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 4
     invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
+    .line 5
     iget-object p0, p0, Lcom/google/common/collect/RegularImmutableMap$EntrySet;->map:Lcom/google/common/collect/ImmutableMap;
 
     invoke-virtual {p0, v0}, Lcom/google/common/collect/ImmutableMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -142,6 +155,7 @@
 .method public copyIntoArray([Ljava/lang/Object;I)I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableSet;->asList()Lcom/google/common/collect/ImmutableList;
 
     move-result-object p0
@@ -164,6 +178,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/RegularImmutableMap$EntrySet$1;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/RegularImmutableMap$EntrySet$1;-><init>(Lcom/google/common/collect/RegularImmutableMap$EntrySet;)V
@@ -216,6 +231,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/collect/RegularImmutableMap$EntrySet;->size:I
 
     return p0

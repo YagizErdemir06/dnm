@@ -1,4 +1,4 @@
-.class Landroidx/recyclerview/widget/ConcatAdapterController$WrapperAndLocalPosition;
+.class public Landroidx/recyclerview/widget/ConcatAdapterController$WrapperAndLocalPosition;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,17 +15,18 @@
 
 
 # instance fields
-.field mInUse:Z
+.field public mInUse:Z
 
-.field mLocalPosition:I
+.field public mLocalPosition:I
 
-.field mWrapper:Landroidx/recyclerview/widget/NestedAdapterWrapper;
+.field public mWrapper:Landroidx/recyclerview/widget/NestedAdapterWrapper;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

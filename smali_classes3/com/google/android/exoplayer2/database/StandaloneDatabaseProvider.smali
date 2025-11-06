@@ -18,17 +18,18 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
+    .line 1
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
 
-    const/4 v0, 0x0
+    const-string v0, "exoplayer_internal.db"
 
-    const/4 v1, 0x1
+    const/4 v1, 0x0
 
-    const-string v2, "exoplayer_internal.db"
+    const/4 v2, 0x1
 
-    invoke-direct {p0, p1, v2, v0, v1}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
+    invoke-direct {p0, p1, v0, v1, v2}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
 
     return-void
 .end method
@@ -40,6 +41,7 @@
 
     const-string v1, "name"
 
+    .line 1
     filled-new-array {v0, v1}, [Ljava/lang/String;
 
     move-result-object v4
@@ -58,10 +60,12 @@
 
     move-object v2, p0
 
+    .line 2
     invoke-virtual/range {v2 .. v9}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
 
+    .line 3
     :cond_0
     :goto_0
     :try_start_0
@@ -73,24 +77,28 @@
 
     const/4 v1, 0x0
 
+    .line 4
     invoke-interface {v0, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, 0x1
 
+    .line 5
     invoke-interface {v0, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "sqlite_sequence"
 
+    .line 6
     invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
+    .line 7
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -113,6 +121,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 8
     :try_start_1
     invoke-virtual {p0, v1}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
     :try_end_1
@@ -127,6 +136,7 @@
     :try_start_2
     const-string v3, "SADatabaseProvider"
 
+    .line 9
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -147,6 +157,7 @@
 
     goto :goto_0
 
+    .line 10
     :cond_1
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
@@ -157,6 +168,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 11
     :try_start_3
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
     :try_end_3
@@ -185,6 +197,7 @@
 .method public onDowngrade(Landroid/database/sqlite/SQLiteDatabase;II)V
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/exoplayer2/database/StandaloneDatabaseProvider;->wipeDatabase(Landroid/database/sqlite/SQLiteDatabase;)V
 
     return-void

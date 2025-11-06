@@ -1,4 +1,4 @@
-.class final Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AutoValue_SchedulerConfig_ConfigValue;
+.class public final Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AutoValue_SchedulerConfig_ConfigValue;
 .super Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig$ConfigValue;
 .source "SourceFile"
 
@@ -74,6 +74,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig$ConfigValue;
 
@@ -81,8 +82,10 @@
 
     if-eqz v1, :cond_2
 
+    .line 2
     check-cast p1, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig$ConfigValue;
 
+    .line 3
     iget-wide v3, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AutoValue_SchedulerConfig_ConfigValue;->delta:J
 
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig$ConfigValue;->getDelta()J
@@ -95,6 +98,7 @@
 
     iget-wide v3, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AutoValue_SchedulerConfig_ConfigValue;->maxAllowedDelay:J
 
+    .line 4
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig$ConfigValue;->getMaxAllowedDelay()J
 
     move-result-wide v5
@@ -105,6 +109,7 @@
 
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AutoValue_SchedulerConfig_ConfigValue;->flags:Ljava/util/Set;
 
+    .line 5
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig$ConfigValue;->getFlags()Ljava/util/Set;
 
     move-result-object p1
@@ -130,6 +135,7 @@
 .method public getDelta()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AutoValue_SchedulerConfig_ConfigValue;->delta:J
 
     return-wide v0
@@ -146,6 +152,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AutoValue_SchedulerConfig_ConfigValue;->flags:Ljava/util/Set;
 
     return-object p0
@@ -154,6 +161,7 @@
 .method public getMaxAllowedDelay()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AutoValue_SchedulerConfig_ConfigValue;->maxAllowedDelay:J
 
     return-wide v0
@@ -162,6 +170,7 @@
 .method public hashCode()I
     .locals 7
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AutoValue_SchedulerConfig_ConfigValue;->delta:J
 
     const/16 v2, 0x20
@@ -178,6 +187,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 2
     iget-wide v3, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AutoValue_SchedulerConfig_ConfigValue;->maxAllowedDelay:J
 
     ushr-long v5, v3, v2
@@ -190,6 +200,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AutoValue_SchedulerConfig_ConfigValue;->flags:Ljava/util/Set;
 
     invoke-interface {p0}, Ljava/util/Set;->hashCode()I
@@ -204,6 +215,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

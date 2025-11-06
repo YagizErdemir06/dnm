@@ -22,4 +22,12 @@
 .end method
 
 .method public abstract c(Landroid/view/MotionEvent;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "event"
+        }
+    .end annotation
 .end method

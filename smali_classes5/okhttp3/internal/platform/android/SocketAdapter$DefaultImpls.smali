@@ -13,7 +13,7 @@
     name = "DefaultImpls"
 .end annotation
 
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
     k = 0x3
     mv = {
         0x1,
@@ -28,21 +28,21 @@
 .method public static matchesSocketFactory(Lokhttp3/internal/platform/android/SocketAdapter;Ljavax/net/ssl/SSLSocketFactory;)Z
     .locals 1
     .param p0    # Lokhttp3/internal/platform/android/SocketAdapter;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p1    # Ljavax/net/ssl/SSLSocketFactory;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "this"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string p0, "sslSocketFactory"
 
-    invoke-static {p1, p0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -52,23 +52,23 @@
 .method public static trustManager(Lokhttp3/internal/platform/android/SocketAdapter;Ljavax/net/ssl/SSLSocketFactory;)Ljavax/net/ssl/X509TrustManager;
     .locals 1
     .param p0    # Lokhttp3/internal/platform/android/SocketAdapter;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p1    # Ljavax/net/ssl/SSLSocketFactory;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
     const-string v0, "this"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string p0, "sslSocketFactory"
 
-    invoke-static {p1, p0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 p0, 0x0
 

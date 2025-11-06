@@ -1,4 +1,4 @@
-.class abstract Landroidx/viewpager2/widget/ViewPager2$DataSetChangeObserver;
+.class public abstract Landroidx/viewpager2/widget/ViewPager2$DataSetChangeObserver;
 .super Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;
 .source "SourceFile"
 
@@ -63,6 +63,7 @@
 .method public final onItemRangeInserted(II)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2$DataSetChangeObserver;->onChanged()V
 
     return-void
@@ -71,6 +72,7 @@
 .method public final onItemRangeMoved(III)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2$DataSetChangeObserver;->onChanged()V
 
     return-void
@@ -79,6 +81,7 @@
 .method public final onItemRangeRemoved(II)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2$DataSetChangeObserver;->onChanged()V
 
     return-void

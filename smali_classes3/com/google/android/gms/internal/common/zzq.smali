@@ -16,8 +16,10 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 2
     instance-of p1, p0, Ljava/lang/CharSequence;
 
     if-eqz p1, :cond_0

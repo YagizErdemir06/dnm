@@ -24,6 +24,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/constraintlayout/core/state/Registry;
 
     invoke-direct {v0}, Landroidx/constraintlayout/core/state/Registry;-><init>()V
@@ -36,8 +37,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -50,6 +53,7 @@
 .method public static getInstance()Landroidx/constraintlayout/core/state/Registry;
     .locals 1
 
+    .line 1
     sget-object v0, Landroidx/constraintlayout/core/state/Registry;->sRegistry:Landroidx/constraintlayout/core/state/Registry;
 
     return-object v0
@@ -60,6 +64,7 @@
 .method public currentContent(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/state/Registry;->mCallbacks:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -70,6 +75,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0}, Landroidx/constraintlayout/core/state/RegistryCallback;->currentMotionScene()Ljava/lang/String;
 
     move-result-object p0
@@ -85,6 +91,7 @@
 .method public currentLayoutInformation(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/state/Registry;->mCallbacks:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -95,6 +102,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0}, Landroidx/constraintlayout/core/state/RegistryCallback;->currentLayoutInformation()Ljava/lang/String;
 
     move-result-object p0
@@ -110,6 +118,7 @@
 .method public getLastModified(Ljava/lang/String;)J
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/state/Registry;->mCallbacks:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -120,6 +129,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0}, Landroidx/constraintlayout/core/state/RegistryCallback;->getLastModified()J
 
     move-result-wide p0
@@ -143,6 +153,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/state/Registry;->mCallbacks:Ljava/util/HashMap;
 
     invoke-virtual {p0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
@@ -155,6 +166,7 @@
 .method public register(Ljava/lang/String;Landroidx/constraintlayout/core/state/RegistryCallback;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/state/Registry;->mCallbacks:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -165,6 +177,7 @@
 .method public setDrawDebug(Ljava/lang/String;I)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/state/Registry;->mCallbacks:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -175,6 +188,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0, p2}, Landroidx/constraintlayout/core/state/RegistryCallback;->setDrawDebug(I)V
 
     :cond_0
@@ -184,6 +198,7 @@
 .method public setLayoutInformationMode(Ljava/lang/String;I)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/state/Registry;->mCallbacks:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -194,6 +209,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0, p2}, Landroidx/constraintlayout/core/state/RegistryCallback;->setLayoutInformationMode(I)V
 
     :cond_0
@@ -203,6 +219,7 @@
 .method public unregister(Ljava/lang/String;Landroidx/constraintlayout/core/state/RegistryCallback;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/state/Registry;->mCallbacks:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -213,6 +230,7 @@
 .method public updateContent(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/state/Registry;->mCallbacks:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -223,6 +241,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0, p2}, Landroidx/constraintlayout/core/state/RegistryCallback;->onNewMotionScene(Ljava/lang/String;)V
 
     :cond_0
@@ -232,6 +251,7 @@
 .method public updateDimensions(Ljava/lang/String;II)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/state/Registry;->mCallbacks:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -242,6 +262,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0, p2, p3}, Landroidx/constraintlayout/core/state/RegistryCallback;->onDimensions(II)V
 
     :cond_0
@@ -251,6 +272,7 @@
 .method public updateProgress(Ljava/lang/String;F)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/state/Registry;->mCallbacks:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -261,6 +283,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0, p2}, Landroidx/constraintlayout/core/state/RegistryCallback;->onProgress(F)V
 
     :cond_0

@@ -67,6 +67,7 @@
 .method public buildUpon()Lcom/google/android/exoplayer2/MediaItem$AdsConfiguration$Builder;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/MediaItem$AdsConfiguration$Builder;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/MediaItem$AdsConfiguration;->adTagUri:Landroid/net/Uri;
@@ -95,6 +96,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/android/exoplayer2/MediaItem$AdsConfiguration;
 
@@ -104,9 +106,11 @@
 
     return v2
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/MediaItem$AdsConfiguration;
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/MediaItem$AdsConfiguration;->adTagUri:Landroid/net/Uri;
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/MediaItem$AdsConfiguration;->adTagUri:Landroid/net/Uri;
@@ -139,6 +143,7 @@
 .method public hashCode()I
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/MediaItem$AdsConfiguration;->adTagUri:Landroid/net/Uri;
 
     invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
@@ -147,6 +152,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/MediaItem$AdsConfiguration;->adsId:Ljava/lang/Object;
 
     if-eqz p0, :cond_0

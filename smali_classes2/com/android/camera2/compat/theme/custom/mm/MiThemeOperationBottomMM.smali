@@ -7,6 +7,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationBottomCV;-><init>()V
 
     return-void
@@ -16,18 +17,28 @@
 # virtual methods
 .method public addCustomInputDevices(Landroid/util/SparseArray;)Z
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mInputDevices"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/util/SparseArray<",
-            "Lg7/a;",
+            "Ld/d/a/w6/e/a;",
             ">;)Z"
         }
     .end annotation
 
-    new-instance p0, L꽎꽂꽀꼃꽌꽃꽉꽟꽂꽄꽉꼃꽎꽌꽀꽈꽟꽌꼃꽄꽃꽝꽘꽙꽉꽈꽛꽄꽎꽈꼃꽉꽈꽛꽄꽎꽈꽞꼃꽠꼜꽪;
+    .line 1
+    new-instance p0, L䠛䠗䠕䡖䠙䠖䠜䠊䠗䠑䠜䡖䠛䠙䠕䠝䠊䠙䡖䠑䠖䠈䠍䠌䠜䠝䠎䠑䠛䠝䡖䠜䠝䠎䠑䠛䠝䠋䡖䠵䡉䠿;
 
-    invoke-direct {p0}, L꽎꽂꽀꼃꽌꽃꽉꽟꽂꽄꽉꼃꽎꽌꽀꽈꽟꽌꼃꽄꽃꽝꽘꽙꽉꽈꽛꽄꽎꽈꼃꽉꽈꽛꽄꽎꽈꽞꼃꽠꼜꽪;-><init>()V
+    invoke-direct {p0}, L䠛䠗䠕䡖䠙䠖䠜䠊䠗䠑䠜䡖䠛䠙䠕䠝䠊䠙䡖䠑䠖䠈䠍䠌䠜䠝䠎䠑䠛䠝䡖䠜䠝䠎䠑䠛䠝䠋䡖䠵䡉䠿;-><init>()V
 
     const/4 v0, 0x1
 
@@ -39,7 +50,8 @@
 .method public getCineBottomMarginGap()I
     .locals 0
 
-    invoke-static {}, Ly2/b;->u()I
+    .line 1
+    invoke-static {}, Ld/d/a/n6/b;->u()I
 
     move-result p0
 
@@ -50,6 +62,14 @@
 
 .method public getHorizontalMargin(Landroid/content/Context;)I
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -63,6 +83,16 @@
 
 .method public getHorizontalMargin(Landroid/content/Context;Z)I
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "isJ18Portrait"
+        }
+    .end annotation
 
     if-eqz p2, :cond_0
 
@@ -71,7 +101,7 @@
 
     move-result-object p0
 
-    const p1, 0x7f070e57
+    const p1, 0x7f070bb8
 
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -85,7 +115,7 @@
 
     move-result-object p0
 
-    const p1, 0x7f070e58
+    const p1, 0x7f070bb9
 
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -112,7 +142,16 @@
 
 .method public getVideoGuideViewHolder(Landroid/view/View;)Lcom/android/camera/fragment/clone/VideoViewHolder;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "view"
+        }
+    .end annotation
 
+    .line 1
     new-instance p0, Lcom/android/camera/fragment/clone/VideoViewHolderMM;
 
     invoke-direct {p0, p1}, Lcom/android/camera/fragment/clone/VideoViewHolderMM;-><init>(Landroid/view/View;)V
@@ -123,7 +162,7 @@
 .method public getVideoGuideViewLayout()I
     .locals 0
 
-    const p0, 0x7f0e0095
+    const p0, 0x7f0e0086
 
     return p0
 .end method

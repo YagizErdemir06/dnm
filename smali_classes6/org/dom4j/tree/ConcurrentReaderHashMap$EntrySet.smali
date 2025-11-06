@@ -1,4 +1,4 @@
-.class Lorg/dom4j/tree/ConcurrentReaderHashMap$EntrySet;
+.class public Lorg/dom4j/tree/ConcurrentReaderHashMap$EntrySet;
 .super Ljava/util/AbstractSet;
 .source "SourceFile"
 
@@ -44,6 +44,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/ConcurrentReaderHashMap$EntrySet;->this$0:Lorg/dom4j/tree/ConcurrentReaderHashMap;
 
     invoke-virtual {p0}, Lorg/dom4j/tree/ConcurrentReaderHashMap;->clear()V
@@ -54,6 +55,7 @@
 .method public contains(Ljava/lang/Object;)Z
     .locals 2
 
+    .line 1
     instance-of v0, p1, Ljava/util/Map$Entry;
 
     const/4 v1, 0x0
@@ -62,9 +64,11 @@
 
     return v1
 
+    .line 2
     :cond_0
     check-cast p1, Ljava/util/Map$Entry;
 
+    .line 3
     iget-object p0, p0, Lorg/dom4j/tree/ConcurrentReaderHashMap$EntrySet;->this$0:Lorg/dom4j/tree/ConcurrentReaderHashMap;
 
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
@@ -77,6 +81,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 4
     invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -96,6 +101,7 @@
 .method public iterator()Ljava/util/Iterator;
     .locals 1
 
+    .line 1
     new-instance v0, Lorg/dom4j/tree/ConcurrentReaderHashMap$HashIterator;
 
     iget-object p0, p0, Lorg/dom4j/tree/ConcurrentReaderHashMap$EntrySet;->this$0:Lorg/dom4j/tree/ConcurrentReaderHashMap;
@@ -108,6 +114,7 @@
 .method public remove(Ljava/lang/Object;)Z
     .locals 1
 
+    .line 1
     instance-of v0, p1, Ljava/util/Map$Entry;
 
     if-nez v0, :cond_0
@@ -116,6 +123,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lorg/dom4j/tree/ConcurrentReaderHashMap$EntrySet;->this$0:Lorg/dom4j/tree/ConcurrentReaderHashMap;
 
@@ -131,6 +139,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/ConcurrentReaderHashMap$EntrySet;->this$0:Lorg/dom4j/tree/ConcurrentReaderHashMap;
 
     invoke-virtual {p0}, Lorg/dom4j/tree/ConcurrentReaderHashMap;->size()I

@@ -1,4 +1,4 @@
-.class final Lcom/google/common/hash/LongAddables;
+.class public final Lcom/google/common/hash/LongAddables;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -30,11 +30,13 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     :try_start_0
     new-instance v0, Lcom/google/common/hash/LongAdder;
 
     invoke-direct {v0}, Lcom/google/common/hash/LongAdder;-><init>()V
 
+    .line 2
     new-instance v0, Lcom/google/common/hash/LongAddables$1;
 
     invoke-direct {v0}, Lcom/google/common/hash/LongAddables$1;-><init>()V
@@ -43,11 +45,13 @@
 
     goto :goto_0
 
+    .line 3
     :catchall_0
     new-instance v0, Lcom/google/common/hash/LongAddables$2;
 
     invoke-direct {v0}, Lcom/google/common/hash/LongAddables$2;-><init>()V
 
+    .line 4
     :goto_0
     sput-object v0, Lcom/google/common/hash/LongAddables;->SUPPLIER:Lcom/google/common/base/Supplier;
 
@@ -57,6 +61,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -65,6 +70,7 @@
 .method public static create()Lcom/google/common/hash/LongAddable;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/common/hash/LongAddables;->SUPPLIER:Lcom/google/common/base/Supplier;
 
     invoke-interface {v0}, Lcom/google/common/base/Supplier;->get()Ljava/lang/Object;

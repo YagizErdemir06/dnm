@@ -24,7 +24,16 @@
 # direct methods
 .method public constructor <init>(Lcom/android/camera/ui/VerticalZoomView;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/ui/VerticalZoomView$c;->a:Lcom/android/camera/ui/VerticalZoomView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +45,16 @@
 # virtual methods
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera/ui/VerticalZoomView$c;->a:Lcom/android/camera/ui/VerticalZoomView;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
@@ -49,14 +67,16 @@
 
     move-result p1
 
-    iput p1, v0, Lcom/android/camera/ui/VerticalZoomView;->h:F
+    iput p1, v0, Lcom/android/camera/ui/VerticalZoomView;->k0:F
 
+    .line 2
     iget-object p1, p0, Lcom/android/camera/ui/VerticalZoomView$c;->a:Lcom/android/camera/ui/VerticalZoomView;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/android/camera/ui/VerticalZoomView;->c(Lcom/android/camera/ui/VerticalZoomView;Z)Z
 
+    .line 3
     iget-object p0, p0, Lcom/android/camera/ui/VerticalZoomView$c;->a:Lcom/android/camera/ui/VerticalZoomView;
 
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V

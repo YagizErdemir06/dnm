@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Multimaps$MapMultimap;
+.class public Lcom/google/common/collect/Multimaps$MapMultimap;
 .super Lcom/google/common/collect/AbstractMultimap;
 .source "SourceFile"
 
@@ -38,7 +38,7 @@
 
 
 # instance fields
-.field final map:Ljava/util/Map;
+.field public final map:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -59,8 +59,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/AbstractMultimap;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -77,6 +79,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Multimaps$MapMultimap;->map:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->clear()V
@@ -95,6 +98,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Multimaps$MapMultimap;->map:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -119,6 +123,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Multimaps$MapMultimap;->map:Ljava/util/Map;
 
     invoke-interface {p0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -135,6 +140,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Multimaps$MapMultimap;->map:Ljava/util/Map;
 
     invoke-interface {p0, p1}, Ljava/util/Map;->containsValue(Ljava/lang/Object;)Z
@@ -156,6 +162,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/Multimaps$AsMap;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/Multimaps$AsMap;-><init>(Lcom/google/common/collect/Multimap;)V
@@ -174,6 +181,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/AssertionError;
 
     const-string v0, "unreachable"
@@ -193,6 +201,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Multimaps$MapMultimap;->map:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -212,6 +221,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/Multimaps$Keys;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/Multimaps$Keys;-><init>(Lcom/google/common/collect/Multimap;)V
@@ -229,6 +239,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Multimaps$MapMultimap;->map:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -281,6 +292,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Multimaps$MapMultimap;->map:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -334,6 +346,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Multimaps$MapMultimap;->map:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->hashCode()I
@@ -359,6 +372,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -417,6 +431,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Multimaps$MapMultimap;->map:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -538,6 +553,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Multimaps$MapMultimap;->map:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->size()I

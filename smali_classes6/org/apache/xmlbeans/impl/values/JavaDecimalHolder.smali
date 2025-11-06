@@ -4,13 +4,13 @@
 
 
 # static fields
-.field static final synthetic $assertionsDisabled:Z
+.field public static final synthetic $assertionsDisabled:Z
 
 .field private static _maxlong:Ljava/math/BigInteger;
 
 .field private static _minlong:Ljava/math/BigInteger;
 
-.field static synthetic class$org$apache$xmlbeans$impl$values$JavaDecimalHolder:Ljava/lang/Class;
+.field public static synthetic class$org$apache$xmlbeans$impl$values$JavaDecimalHolder:Ljava/lang/Class;
 
 
 # instance fields
@@ -18,9 +18,10 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/values/JavaDecimalHolder;->class$org$apache$xmlbeans$impl$values$JavaDecimalHolder:Ljava/lang/Class;
 
     if-nez v0, :cond_0
@@ -40,6 +41,7 @@
 
     const-wide v0, 0x7fffffffffffffffL
 
+    .line 2
     invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object v0
@@ -48,6 +50,7 @@
 
     const-wide/high16 v0, -0x8000000000000000L
 
+    .line 3
     invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object v0
@@ -60,14 +63,16 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;-><init>()V
 
     return-void
 .end method
 
-.method static synthetic class$(Ljava/lang/String;)Ljava/lang/Class;
+.method public static synthetic class$(Ljava/lang/String;)Ljava/lang/Class;
     .locals 1
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -84,7 +89,7 @@
 
     invoke-direct {v0}, Ljava/lang/NoClassDefFoundError;-><init>()V
 
-    invoke-virtual {v0, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v0, p0}, Ljava/lang/NoClassDefFoundError;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -94,17 +99,19 @@
 .method public static validateLexical(Ljava/lang/String;Lorg/apache/xmlbeans/impl/common/ValidationContext;)V
     .locals 9
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    const/4 v1, 0x1
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
     if-lez v0, :cond_1
 
-    invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
+    .line 2
+    invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
 
@@ -117,15 +124,15 @@
     if-ne v3, v4, :cond_1
 
     :cond_0
-    move v3, v1
+    move v3, v2
 
     goto :goto_0
 
     :cond_1
-    move v3, v2
+    move v3, v1
 
     :goto_0
-    move v4, v2
+    move v4, v1
 
     move v5, v4
 
@@ -134,6 +141,7 @@
 
     if-ge v3, v0, :cond_5
 
+    .line 3
     invoke-virtual {p0, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v7
@@ -144,30 +152,31 @@
 
     if-eqz v5, :cond_2
 
-    new-array v0, v1, [Ljava/lang/Object;
+    new-array v0, v2, [Ljava/lang/Object;
 
-    new-instance v1, Ljava/lang/StringBuffer;
+    .line 4
+    new-instance v2, Ljava/lang/StringBuffer;
 
-    invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
 
     const-string v3, "saw \'.\' more than once: "
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    aput-object p0, v0, v2
+    aput-object p0, v0, v1
 
     invoke-interface {p1, v6, v0}, Lorg/apache/xmlbeans/impl/common/ValidationContext;->invalid(Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
     :cond_2
-    move v5, v1
+    move v5, v2
 
     goto :goto_2
 
@@ -180,7 +189,7 @@
 
     if-gt v7, v4, :cond_4
 
-    move v4, v1
+    move v4, v2
 
     :goto_2
     add-int/lit8 v3, v3, 0x1
@@ -188,27 +197,28 @@
     goto :goto_1
 
     :cond_4
-    new-array p0, v1, [Ljava/lang/Object;
+    new-array p0, v2, [Ljava/lang/Object;
 
+    .line 5
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    const-string v1, "unexpected char \'"
+    const-string v2, "unexpected char \'"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     invoke-virtual {v0, v7}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
-    const-string v1, "\'"
+    const-string v2, "\'"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    aput-object v0, p0, v2
+    aput-object v0, p0, v1
 
     invoke-interface {p1, v6, p0}, Lorg/apache/xmlbeans/impl/common/ValidationContext;->invalid(Ljava/lang/String;[Ljava/lang/Object;)V
 
@@ -217,12 +227,13 @@
     :cond_5
     if-nez v4, :cond_6
 
-    new-array p0, v1, [Ljava/lang/Object;
+    new-array p0, v2, [Ljava/lang/Object;
 
     const-string v0, "expected at least one digit"
 
-    aput-object v0, p0, v2
+    aput-object v0, p0, v1
 
+    .line 6
     invoke-interface {p1, v6, p0}, Lorg/apache/xmlbeans/impl/common/ValidationContext;->invalid(Ljava/lang/String;[Ljava/lang/Object;)V
 
     :cond_6
@@ -234,6 +245,7 @@
 .method public bigDecimalValue()Ljava/math/BigDecimal;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaDecimalHolder;->_value:Ljava/math/BigDecimal;
@@ -244,6 +256,7 @@
 .method public compare_to(Lorg/apache/xmlbeans/XmlObject;)I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaDecimalHolder;->_value:Ljava/math/BigDecimal;
 
     check-cast p1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
@@ -262,6 +275,7 @@
 .method public compute_text(Lorg/apache/xmlbeans/impl/values/NamespaceManager;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaDecimalHolder;->_value:Ljava/math/BigDecimal;
 
     invoke-virtual {p0}, Ljava/math/BigDecimal;->toString()Ljava/lang/String;
@@ -274,6 +288,7 @@
 .method public decimalHashCode()I
     .locals 3
 
+    .line 1
     sget-boolean v0, Lorg/apache/xmlbeans/impl/values/JavaDecimalHolder;->$assertionsDisabled:Z
 
     if-nez v0, :cond_1
@@ -295,6 +310,7 @@
 
     throw p0
 
+    .line 2
     :cond_1
     :goto_0
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaDecimalHolder;->_value:Ljava/math/BigDecimal;
@@ -303,6 +319,7 @@
 
     move-result-object p0
 
+    .line 3
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -312,6 +329,7 @@
     :goto_1
     if-ltz v0, :cond_3
 
+    .line 4
     invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
@@ -327,6 +345,7 @@
 
     goto :goto_1
 
+    .line 5
     :cond_3
     :goto_2
     sget-boolean v1, Lorg/apache/xmlbeans/impl/values/JavaDecimalHolder;->$assertionsDisabled:Z
@@ -356,6 +375,7 @@
 
     add-int/lit8 v0, v0, 0x1
 
+    .line 6
     invoke-virtual {p0, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0
@@ -370,6 +390,7 @@
 .method public equal_to(Lorg/apache/xmlbeans/XmlObject;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaDecimalHolder;->_value:Ljava/math/BigDecimal;
 
     check-cast p1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
@@ -398,6 +419,7 @@
 .method public schemaType()Lorg/apache/xmlbeans/SchemaType;
     .locals 0
 
+    .line 1
     sget-object p0, Lorg/apache/xmlbeans/impl/schema/BuiltinSchemaTypeSystem;->ST_DECIMAL:Lorg/apache/xmlbeans/impl/schema/SchemaTypeImpl;
 
     return-object p0
@@ -406,6 +428,7 @@
 .method public set_BigDecimal(Ljava/math/BigDecimal;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/values/JavaDecimalHolder;->_value:Ljava/math/BigDecimal;
 
     return-void
@@ -416,6 +439,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Lorg/apache/xmlbeans/impl/values/JavaDecimalHolder;->_value:Ljava/math/BigDecimal;
 
     return-void
@@ -424,16 +448,19 @@
 .method public set_text(Ljava/lang/String;)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_validateOnSet()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     sget-object v0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_voorVc:Lorg/apache/xmlbeans/impl/common/ValidationContext;
 
     invoke-static {p1, v0}, Lorg/apache/xmlbeans/impl/values/JavaDecimalHolder;->validateLexical(Ljava/lang/String;Lorg/apache/xmlbeans/impl/common/ValidationContext;)V
 
+    .line 3
     :cond_0
     :try_start_0
     new-instance v0, Ljava/math/BigDecimal;
@@ -446,6 +473,7 @@
 
     goto :goto_0
 
+    .line 4
     :catch_0
     sget-object p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_voorVc:Lorg/apache/xmlbeans/impl/common/ValidationContext;
 
@@ -468,6 +496,7 @@
 .method public value_hash_code()I
     .locals 6
 
+    .line 1
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/JavaDecimalHolder;->_value:Ljava/math/BigDecimal;
 
     invoke-virtual {v0}, Ljava/math/BigDecimal;->scale()I
@@ -476,6 +505,7 @@
 
     if-lez v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/JavaDecimalHolder;->_value:Ljava/math/BigDecimal;
 
     const/4 v1, 0x0
@@ -494,12 +524,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/JavaDecimalHolder;->decimalHashCode()I
 
     move-result p0
 
     return p0
 
+    .line 4
     :cond_0
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaDecimalHolder;->_value:Ljava/math/BigDecimal;
 
@@ -507,6 +539,7 @@
 
     move-result-object p0
 
+    .line 5
     sget-object v0, Lorg/apache/xmlbeans/impl/values/JavaDecimalHolder;->_maxlong:Ljava/math/BigInteger;
 
     invoke-virtual {p0, v0}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
@@ -525,6 +558,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_1
     invoke-virtual {p0}, Ljava/math/BigInteger;->longValue()J
 
@@ -544,6 +578,7 @@
 
     return p0
 
+    .line 7
     :cond_2
     :goto_0
     invoke-virtual {p0}, Ljava/math/BigInteger;->hashCode()I

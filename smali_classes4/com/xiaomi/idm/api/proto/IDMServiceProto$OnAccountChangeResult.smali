@@ -70,12 +70,15 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;
 
     invoke-direct {v0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;-><init>()V
 
+    .line 2
     sput-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;
 
+    .line 3
     const-class v1, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;
 
     invoke-static {v1, v0}, Lcom/google/protobuf/GeneratedMessageLite;->registerDefaultInstance(Ljava/lang/Class;Lcom/google/protobuf/GeneratedMessageLite;)V
@@ -86,16 +89,20 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageLite;-><init>()V
 
+    .line 2
     sget-object v0, Lcom/google/protobuf/ByteString;->EMPTY:Lcom/google/protobuf/ByteString;
 
     iput-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->newIdHash_:Lcom/google/protobuf/ByteString;
 
     const-string v0, ""
 
+    .line 3
     iput-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->oldAccount_:Ljava/lang/String;
 
+    .line 4
     iput-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->newAccount_:Ljava/lang/String;
 
     return-void
@@ -104,6 +111,7 @@
 .method public static synthetic access$19000()Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;
 
     return-object v0
@@ -112,6 +120,7 @@
 .method public static synthetic access$19100(Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->setSubChangeTypeValue(I)V
 
     return-void
@@ -120,6 +129,7 @@
 .method public static synthetic access$19200(Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult$SubChangeType;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->setSubChangeType(Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult$SubChangeType;)V
 
     return-void
@@ -128,6 +138,7 @@
 .method public static synthetic access$19300(Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->clearSubChangeType()V
 
     return-void
@@ -136,6 +147,7 @@
 .method public static synthetic access$19400(Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->setNewIdHash(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -144,6 +156,7 @@
 .method public static synthetic access$19500(Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->clearNewIdHash()V
 
     return-void
@@ -152,6 +165,7 @@
 .method public static synthetic access$19600(Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->setOldAccount(Ljava/lang/String;)V
 
     return-void
@@ -160,6 +174,7 @@
 .method public static synthetic access$19700(Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->clearOldAccount()V
 
     return-void
@@ -168,6 +183,7 @@
 .method public static synthetic access$19800(Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->setOldAccountBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -176,6 +192,7 @@
 .method public static synthetic access$19900(Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->setNewAccount(Ljava/lang/String;)V
 
     return-void
@@ -184,6 +201,7 @@
 .method public static synthetic access$20000(Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->clearNewAccount()V
 
     return-void
@@ -192,6 +210,7 @@
 .method public static synthetic access$20100(Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->setNewAccountBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -200,6 +219,7 @@
 .method private clearNewAccount()V
     .locals 1
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->getDefaultInstance()Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;
 
     move-result-object v0
@@ -216,6 +236,7 @@
 .method private clearNewIdHash()V
     .locals 1
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->getDefaultInstance()Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;
 
     move-result-object v0
@@ -232,6 +253,7 @@
 .method private clearOldAccount()V
     .locals 1
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->getDefaultInstance()Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;
 
     move-result-object v0
@@ -250,6 +272,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->subChangeType_:I
 
     return-void
@@ -258,6 +281,7 @@
 .method public static getDefaultInstance()Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;
 
     return-object v0
@@ -544,6 +568,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;
 
     invoke-virtual {v0}, Lcom/google/protobuf/GeneratedMessageLite;->getParserForType()Lcom/google/protobuf/Parser;
@@ -556,8 +581,10 @@
 .method private setNewAccount(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 2
     iput-object p1, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->newAccount_:Ljava/lang/String;
 
     return-void
@@ -566,8 +593,10 @@
 .method private setNewAccountBytes(Lcom/google/protobuf/ByteString;)V
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/google/protobuf/AbstractMessageLite;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object p1
@@ -580,8 +609,10 @@
 .method private setNewIdHash(Lcom/google/protobuf/ByteString;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 2
     iput-object p1, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->newIdHash_:Lcom/google/protobuf/ByteString;
 
     return-void
@@ -590,8 +621,10 @@
 .method private setOldAccount(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 2
     iput-object p1, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->oldAccount_:Ljava/lang/String;
 
     return-void
@@ -600,8 +633,10 @@
 .method private setOldAccountBytes(Lcom/google/protobuf/ByteString;)V
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/google/protobuf/AbstractMessageLite;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object p1
@@ -614,6 +649,7 @@
 .method private setSubChangeType(Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult$SubChangeType;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult$SubChangeType;->getNumber()I
 
     move-result p1
@@ -626,6 +662,7 @@
 .method private setSubChangeTypeValue(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->subChangeType_:I
 
     return-void
@@ -636,6 +673,7 @@
 .method public final dynamicMethod(Lcom/google/protobuf/GeneratedMessageLite$MethodToInvoke;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     sget-object p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$1;->$SwitchMap$com$google$protobuf$GeneratedMessageLite$MethodToInvoke:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
@@ -650,6 +688,7 @@
 
     packed-switch p0, :pswitch_data_0
 
+    .line 2
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -659,6 +698,7 @@
     :pswitch_0
     return-object p2
 
+    .line 3
     :pswitch_1
     invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
@@ -666,28 +706,34 @@
 
     return-object p0
 
+    .line 4
     :pswitch_2
     sget-object p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->PARSER:Lcom/google/protobuf/Parser;
 
     if-nez p0, :cond_1
 
+    .line 5
     const-class p1, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;
 
     monitor-enter p1
 
+    .line 6
     :try_start_0
     sget-object p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->PARSER:Lcom/google/protobuf/Parser;
 
     if-nez p0, :cond_0
 
+    .line 7
     new-instance p0, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;
 
     sget-object p2, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;
 
     invoke-direct {p0, p2}, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;-><init>(Lcom/google/protobuf/GeneratedMessageLite;)V
 
+    .line 8
     sput-object p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->PARSER:Lcom/google/protobuf/Parser;
 
+    .line 9
     :cond_0
     monitor-exit p1
 
@@ -706,6 +752,7 @@
     :goto_0
     return-object p0
 
+    .line 10
     :pswitch_3
     sget-object p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;
 
@@ -740,6 +787,7 @@
 
     const-string p1, "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u000c\u0002\n\u0003\u0208\u0004\u0208"
 
+    .line 11
     sget-object p2, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;
 
     invoke-static {p2, p1, p0}, Lcom/google/protobuf/GeneratedMessageLite;->newMessageInfo(Lcom/google/protobuf/MessageLite;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
@@ -748,6 +796,7 @@
 
     return-object p0
 
+    .line 12
     :pswitch_5
     new-instance p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult$Builder;
 
@@ -755,6 +804,7 @@
 
     return-object p0
 
+    .line 13
     :pswitch_6
     new-instance p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;
 
@@ -779,6 +829,7 @@
 .method public getNewAccount()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->newAccount_:Ljava/lang/String;
 
     return-object p0
@@ -787,6 +838,7 @@
 .method public getNewAccountBytes()Lcom/google/protobuf/ByteString;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->newAccount_:Ljava/lang/String;
 
     invoke-static {p0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
@@ -799,6 +851,7 @@
 .method public getNewIdHash()Lcom/google/protobuf/ByteString;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->newIdHash_:Lcom/google/protobuf/ByteString;
 
     return-object p0
@@ -807,6 +860,7 @@
 .method public getOldAccount()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->oldAccount_:Ljava/lang/String;
 
     return-object p0
@@ -815,6 +869,7 @@
 .method public getOldAccountBytes()Lcom/google/protobuf/ByteString;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->oldAccount_:Ljava/lang/String;
 
     invoke-static {p0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
@@ -827,6 +882,7 @@
 .method public getSubChangeType()Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult$SubChangeType;
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->subChangeType_:I
 
     invoke-static {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult$SubChangeType;->forNumber(I)Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult$SubChangeType;
@@ -835,6 +891,7 @@
 
     if-nez p0, :cond_0
 
+    .line 2
     sget-object p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult$SubChangeType;->UNRECOGNIZED:Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult$SubChangeType;
 
     :cond_0
@@ -844,6 +901,7 @@
 .method public getSubChangeTypeValue()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult;->subChangeType_:I
 
     return p0

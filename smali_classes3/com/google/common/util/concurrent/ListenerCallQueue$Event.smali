@@ -1,4 +1,4 @@
-.class interface abstract Lcom/google/common/util/concurrent/ListenerCallQueue$Event;
+.class public interface abstract Lcom/google/common/util/concurrent/ListenerCallQueue$Event;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

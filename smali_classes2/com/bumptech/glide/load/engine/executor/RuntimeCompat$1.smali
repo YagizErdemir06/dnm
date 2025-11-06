@@ -1,4 +1,4 @@
-.class final Lcom/bumptech/glide/load/engine/executor/RuntimeCompat$1;
+.class public final Lcom/bumptech/glide/load/engine/executor/RuntimeCompat$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic val$cpuNamePattern:Ljava/util/regex/Pattern;
+.field public final synthetic val$cpuNamePattern:Ljava/util/regex/Pattern;
 
 
 # direct methods
 .method public constructor <init>(Ljava/util/regex/Pattern;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/executor/RuntimeCompat$1;->val$cpuNamePattern:Ljava/util/regex/Pattern;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,6 +38,7 @@
 .method public accept(Ljava/io/File;Ljava/lang/String;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/executor/RuntimeCompat$1;->val$cpuNamePattern:Ljava/util/regex/Pattern;
 
     invoke-virtual {p0, p2}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;

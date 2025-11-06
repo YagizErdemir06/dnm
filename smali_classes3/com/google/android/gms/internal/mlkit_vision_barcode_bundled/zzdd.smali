@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdd;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdd;
 .super Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdf;
 .source "SourceFile"
 
@@ -19,6 +19,7 @@
 
     const/4 p2, 0x0
 
+    .line 1
     invoke-direct {p0, p2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdf;-><init>(Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzde;)V
 
     const p2, 0x7fffffff

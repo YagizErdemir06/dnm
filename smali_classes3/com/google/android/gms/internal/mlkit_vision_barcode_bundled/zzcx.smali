@@ -1,4 +1,4 @@
-.class abstract Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcx;
+.class public abstract Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcx;
 .super Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;
 .source "SourceFile"
 
@@ -7,6 +7,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;-><init>()V
 
     return-void

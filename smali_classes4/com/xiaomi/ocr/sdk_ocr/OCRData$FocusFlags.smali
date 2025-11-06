@@ -34,6 +34,7 @@
 .method public static constructor <clinit>()V
     .locals 5
 
+    .line 1
     new-instance v0, Lcom/xiaomi/ocr/sdk_ocr/OCRData$FocusFlags;
 
     const-string v1, "FOCUS_TYPE_AUTO"
@@ -44,6 +45,7 @@
 
     sput-object v0, Lcom/xiaomi/ocr/sdk_ocr/OCRData$FocusFlags;->FOCUS_TYPE_AUTO:Lcom/xiaomi/ocr/sdk_ocr/OCRData$FocusFlags;
 
+    .line 2
     new-instance v1, Lcom/xiaomi/ocr/sdk_ocr/OCRData$FocusFlags;
 
     const-string v3, "FOCUS_TYPE_FORCE"
@@ -62,6 +64,7 @@
 
     aput-object v1, v3, v4
 
+    .line 3
     sput-object v3, Lcom/xiaomi/ocr/sdk_ocr/OCRData$FocusFlags;->$VALUES:[Lcom/xiaomi/ocr/sdk_ocr/OCRData$FocusFlags;
 
     return-void
@@ -69,12 +72,18 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "$enum$name",
+            "$enum$ordinal"
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -82,7 +91,16 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/ocr/sdk_ocr/OCRData$FocusFlags;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8000
+        }
+        names = {
+            "name"
+        }
+    .end annotation
 
+    .line 1
     const-class v0, Lcom/xiaomi/ocr/sdk_ocr/OCRData$FocusFlags;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -97,6 +115,7 @@
 .method public static values()[Lcom/xiaomi/ocr/sdk_ocr/OCRData$FocusFlags;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/ocr/sdk_ocr/OCRData$FocusFlags;->$VALUES:[Lcom/xiaomi/ocr/sdk_ocr/OCRData$FocusFlags;
 
     invoke-virtual {v0}, [Lcom/xiaomi/ocr/sdk_ocr/OCRData$FocusFlags;->clone()Ljava/lang/Object;

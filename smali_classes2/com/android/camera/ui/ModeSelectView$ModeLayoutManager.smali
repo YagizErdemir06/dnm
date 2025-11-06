@@ -21,9 +21,21 @@
 # direct methods
 .method public constructor <init>(Lcom/android/camera/ui/ModeSelectView;Landroid/content/Context;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x0
+        }
+        names = {
+            "this$0",
+            "context"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/ui/ModeSelectView$ModeLayoutManager;->a:Lcom/android/camera/ui/ModeSelectView;
 
+    .line 2
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -33,7 +45,18 @@
 # virtual methods
 .method public onLayoutChildren(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "recycler",
+            "state"
+        }
+    .end annotation
 
+    .line 1
     :try_start_0
     invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/LinearLayoutManager;->onLayoutChildren(Landroidx/recyclerview/widget/RecyclerView$Recycler;Landroidx/recyclerview/widget/RecyclerView$State;)V
     :try_end_0
@@ -47,6 +70,7 @@
 
     const-string p1, "ModeSelectViewCV"
 
+    .line 2
     invoke-static {p1, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
@@ -55,7 +79,16 @@
 
 .method public onLayoutCompleted(Landroidx/recyclerview/widget/RecyclerView$State;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "state"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->onLayoutCompleted(Landroidx/recyclerview/widget/RecyclerView$State;)V
 
     return-void

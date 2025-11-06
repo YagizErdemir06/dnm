@@ -31,8 +31,10 @@
 .method public constructor <init>(Lcom/xiaomi/inceptionmediaprocess/MediaEffectGraph;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/xiaomi/inceptionmediaprocess/EffectMediaPlayer;->mMediaEffectGraph:Lcom/xiaomi/inceptionmediaprocess/MediaEffectGraph;
 
     return-void
@@ -97,10 +99,12 @@
 .method public ConstructMediaPlayer()Z
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/inceptionmediaprocess/EffectMediaPlayer;->mMediaEffectGraph:Lcom/xiaomi/inceptionmediaprocess/MediaEffectGraph;
 
     if-nez p0, :cond_0
 
+    .line 2
     sget-object p0, Lcom/xiaomi/inceptionmediaprocess/EffectMediaPlayer;->TAG:Ljava/lang/String;
 
     const-string v0, "effect graph is null, failed!"
@@ -111,6 +115,7 @@
 
     return p0
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Lcom/xiaomi/inceptionmediaprocess/MediaEffectGraph;->GetGraphLine()J
 
@@ -118,6 +123,7 @@
 
     invoke-static {v0, v1}, Lcom/xiaomi/inceptionmediaprocess/EffectMediaPlayer;->ConstructMediaPlayerJni(J)Z
 
+    .line 4
     sget-object p0, Lcom/xiaomi/inceptionmediaprocess/EffectMediaPlayer;->TAG:Ljava/lang/String;
 
     const-string v0, "construct EffectPlayer"
@@ -132,12 +138,14 @@
 .method public DestructMediaPlayer()V
     .locals 1
 
+    .line 1
     sget-object p0, Lcom/xiaomi/inceptionmediaprocess/EffectMediaPlayer;->TAG:Ljava/lang/String;
 
     const-string v0, "desctruct EffectPlayer"
 
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {}, Lcom/xiaomi/inceptionmediaprocess/EffectMediaPlayer;->DestructMediaPlayerJni()V
 
     return-void
@@ -146,6 +154,7 @@
 .method public EnableUserAdjustRotatePlay(Z)V
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/xiaomi/inceptionmediaprocess/EffectMediaPlayer;->EnableUserAdjustRotatePlayJni(Z)V
 
     return-void
@@ -154,6 +163,7 @@
 .method public GetCurrentPlayingPosition()J
     .locals 2
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/inceptionmediaprocess/EffectMediaPlayer;->GetCurrentPlayingPositionJni()J
 
     move-result-wide v0
@@ -164,12 +174,14 @@
 .method public GetPreViewStatus()Lcom/xiaomi/inceptionmediaprocess/PreViewStatus;
     .locals 1
 
+    .line 1
     sget-object p0, Lcom/xiaomi/inceptionmediaprocess/EffectMediaPlayer;->TAG:Ljava/lang/String;
 
     const-string v0, "GetPreViewStatus "
 
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {}, Lcom/xiaomi/inceptionmediaprocess/EffectMediaPlayer;->GetPreViewStatusJni()I
 
     move-result p0
@@ -184,6 +196,7 @@
 .method public GetStreamDuration(Z)J
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/xiaomi/inceptionmediaprocess/EffectMediaPlayer;->GetStreamDurationJni(Z)J
 
     move-result-wide p0
@@ -194,12 +207,14 @@
 .method public PausePreView()V
     .locals 1
 
+    .line 1
     sget-object p0, Lcom/xiaomi/inceptionmediaprocess/EffectMediaPlayer;->TAG:Ljava/lang/String;
 
     const-string v0, "pause preview "
 
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {}, Lcom/xiaomi/inceptionmediaprocess/EffectMediaPlayer;->PausePreViewJni()V
 
     return-void
@@ -208,10 +223,12 @@
 .method public ResumePreView()Z
     .locals 3
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/inceptionmediaprocess/EffectMediaPlayer;->ResumePreViewJni()Z
 
     move-result p0
 
+    .line 2
     sget-object v0, Lcom/xiaomi/inceptionmediaprocess/EffectMediaPlayer;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -236,6 +253,7 @@
 .method public SeekTo(JLcom/xiaomi/inceptionplayer/enums/PlayerSeekingMode;)Z
     .locals 0
 
+    .line 1
     invoke-virtual {p3}, Ljava/lang/Enum;->ordinal()I
 
     move-result p0
@@ -250,6 +268,7 @@
 .method public SetGraphLoop(Z)V
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/xiaomi/inceptionmediaprocess/EffectMediaPlayer;->SetGraphLoopJni(Z)V
 
     return-void
@@ -258,8 +277,10 @@
 .method public SetMediaEffectGraph(Lcom/xiaomi/inceptionmediaprocess/MediaEffectGraph;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/inceptionmediaprocess/EffectMediaPlayer;->mMediaEffectGraph:Lcom/xiaomi/inceptionmediaprocess/MediaEffectGraph;
 
+    .line 2
     invoke-virtual {p1}, Lcom/xiaomi/inceptionmediaprocess/MediaEffectGraph;->GetGraphLine()J
 
     move-result-wide p0
@@ -272,6 +293,7 @@
 .method public SetPlayLoop(Z)V
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/xiaomi/inceptionmediaprocess/EffectMediaPlayer;->SetPlayLoopJni(Z)V
 
     return-void
@@ -280,6 +302,7 @@
 .method public SetPlayerNotify(Lcom/xiaomi/inceptionmediaprocess/EffectNotifier;)V
     .locals 2
 
+    .line 1
     sget-object p0, Lcom/xiaomi/inceptionmediaprocess/EffectMediaPlayer;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -298,6 +321,7 @@
 
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {p1}, Lcom/xiaomi/inceptionmediaprocess/EffectMediaPlayer;->SetPlayerNotifyJni(Lcom/xiaomi/inceptionmediaprocess/EffectNotifier;)V
 
     return-void
@@ -306,12 +330,14 @@
 .method public SetViewSurface(Landroid/view/Surface;)V
     .locals 1
 
+    .line 1
     sget-object p0, Lcom/xiaomi/inceptionmediaprocess/EffectMediaPlayer;->TAG:Ljava/lang/String;
 
     const-string v0, "set view surface "
 
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {p1}, Lcom/xiaomi/inceptionmediaprocess/EffectMediaPlayer;->SetViewSurfaceJni(Landroid/view/Surface;)V
 
     return-void
@@ -364,12 +390,14 @@
 .method public StopPreView()V
     .locals 1
 
+    .line 1
     sget-object p0, Lcom/xiaomi/inceptionmediaprocess/EffectMediaPlayer;->TAG:Ljava/lang/String;
 
     const-string v0, "stop preview "
 
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {}, Lcom/xiaomi/inceptionmediaprocess/EffectMediaPlayer;->StopPreViewJni()V
 
     return-void
@@ -378,6 +406,7 @@
 .method public setGravity(Lcom/xiaomi/inceptionmediaprocess/EffectMediaPlayer$SurfaceGravity;II)V
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Lcom/xiaomi/inceptionmediaprocess/EffectMediaPlayer$SurfaceGravity;->toInt()I
 
     move-result p0

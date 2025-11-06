@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/api/internal/zacq;
+.class public final Lcom/google/android/gms/common/api/internal/zacq;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field final synthetic zaa:Lcom/google/android/gms/common/api/internal/zact;
+.field public final synthetic zaa:Lcom/google/android/gms/common/api/internal/zact;
 
 
 # direct methods
@@ -26,6 +26,7 @@
 .method public final run()V
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zacq;->zaa:Lcom/google/android/gms/common/api/internal/zact;
 
     invoke-static {p0}, Lcom/google/android/gms/common/api/internal/zact;->zac(Lcom/google/android/gms/common/api/internal/zact;)Lcom/google/android/gms/common/api/internal/zacs;

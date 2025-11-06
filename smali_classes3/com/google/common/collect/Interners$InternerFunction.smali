@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Interners$InternerFunction;
+.class public Lcom/google/common/collect/Interners$InternerFunction;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -50,8 +50,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/Interners$InternerFunction;->interner:Lcom/google/common/collect/Interner;
 
     return-void
@@ -67,6 +69,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Interners$InternerFunction;->interner:Lcom/google/common/collect/Interner;
 
     invoke-interface {p0, p1}, Lcom/google/common/collect/Interner;->intern(Ljava/lang/Object;)Ljava/lang/Object;
@@ -83,12 +86,15 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/common/collect/Interners$InternerFunction;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/common/collect/Interners$InternerFunction;
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/collect/Interners$InternerFunction;->interner:Lcom/google/common/collect/Interner;
 
     iget-object p1, p1, Lcom/google/common/collect/Interners$InternerFunction;->interner:Lcom/google/common/collect/Interner;
@@ -108,6 +114,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Interners$InternerFunction;->interner:Lcom/google/common/collect/Interner;
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I

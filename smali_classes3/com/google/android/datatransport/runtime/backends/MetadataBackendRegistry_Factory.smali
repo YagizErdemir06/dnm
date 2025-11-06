@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field private final applicationContextProvider:Lmm/c;
+.field private final applicationContextProvider:Lg/a/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lmm/c<",
+            "Lg/a/c<",
             "Landroid/content/Context;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final creationContextFactoryProvider:Lmm/c;
+.field private final creationContextFactoryProvider:Lg/a/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/backends/CreationContextFactory;",
             ">;"
         }
@@ -40,47 +40,51 @@
 
 
 # direct methods
-.method public constructor <init>(Lmm/c;Lmm/c;)V
+.method public constructor <init>(Lg/a/c;Lg/a/c;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Landroid/content/Context;",
             ">;",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/backends/CreationContextFactory;",
             ">;)V"
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry_Factory;->applicationContextProvider:Lmm/c;
+    .line 2
+    iput-object p1, p0, Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry_Factory;->applicationContextProvider:Lg/a/c;
 
-    iput-object p2, p0, Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry_Factory;->creationContextFactoryProvider:Lmm/c;
+    .line 3
+    iput-object p2, p0, Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry_Factory;->creationContextFactoryProvider:Lg/a/c;
 
     return-void
 .end method
 
-.method public static create(Lmm/c;Lmm/c;)Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry_Factory;
+.method public static create(Lg/a/c;Lg/a/c;)Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry_Factory;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Landroid/content/Context;",
             ">;",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/backends/CreationContextFactory;",
             ">;)",
             "Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry_Factory;"
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry_Factory;
 
-    invoke-direct {v0, p0, p1}, Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry_Factory;-><init>(Lmm/c;Lmm/c;)V
+    invoke-direct {v0, p0, p1}, Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry_Factory;-><init>(Lg/a/c;Lg/a/c;)V
 
     return-object v0
 .end method
@@ -88,6 +92,7 @@
 .method public static newInstance(Landroid/content/Context;Ljava/lang/Object;)Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry;
 
     check-cast p1, Lcom/google/android/datatransport/runtime/backends/CreationContextFactory;
@@ -103,17 +108,17 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry_Factory;->applicationContextProvider:Lmm/c;
+    iget-object v0, p0, Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry_Factory;->applicationContextProvider:Lg/a/c;
 
-    invoke-interface {v0}, Lmm/c;->get()Ljava/lang/Object;
+    invoke-interface {v0}, Lg/a/c;->get()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/content/Context;
 
-    iget-object p0, p0, Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry_Factory;->creationContextFactoryProvider:Lmm/c;
+    iget-object p0, p0, Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry_Factory;->creationContextFactoryProvider:Lg/a/c;
 
-    invoke-interface {p0}, Lmm/c;->get()Ljava/lang/Object;
+    invoke-interface {p0}, Lg/a/c;->get()Ljava/lang/Object;
 
     move-result-object p0
 

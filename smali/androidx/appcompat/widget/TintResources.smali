@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/widget/TintResources;
+.class public Landroidx/appcompat/widget/TintResources;
 .super Landroidx/appcompat/widget/ResourcesWrapper;
 .source "SourceFile"
 
@@ -27,8 +27,10 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0, p2}, Landroidx/appcompat/widget/ResourcesWrapper;-><init>(Landroid/content/res/Resources;)V
 
+    .line 2
     new-instance p2, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -48,13 +50,15 @@
         }
     .end annotation
 
-    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/ResourcesWrapper;->getDrawableCanonical(I)Landroid/graphics/drawable/Drawable;
+    .line 1
+    invoke-super {p0, p1}, Landroidx/appcompat/widget/ResourcesWrapper;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
+    .line 2
     iget-object p0, p0, Landroidx/appcompat/widget/TintResources;->mContextRef:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -64,6 +68,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-static {}, Landroidx/appcompat/widget/ResourceManagerInternal;->get()Landroidx/appcompat/widget/ResourceManagerInternal;
 
     move-result-object v1

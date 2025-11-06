@@ -10,6 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,17 +18,21 @@
 
 
 # virtual methods
-.method public getParameters([D[D)V
+.method public getParameters([F[D)V
     .locals 4
 
     const/4 p0, 0x0
 
-    aget-wide v0, p1, p0
+    .line 1
+    aget p1, p1, p0
+
+    float-to-double v0, p1
 
     const-wide v2, 0x408f400000000000L    # 1000.0
 
     mul-double/2addr v0, v2
 
+    .line 2
     aput-wide v0, p2, p0
 
     return-void

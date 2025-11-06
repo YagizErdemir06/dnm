@@ -1,4 +1,4 @@
-.class abstract Lcom/google/android/gms/common/api/internal/zabg;
+.class public abstract Lcom/google/android/gms/common/api/internal/zabg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,12 +26,14 @@
 .method public final zab(Lcom/google/android/gms/common/api/internal/zabi;)V
     .locals 2
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/api/internal/zabi;->zah(Lcom/google/android/gms/common/api/internal/zabi;)Ljava/util/concurrent/locks/Lock;
 
     move-result-object v0
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
 
+    .line 2
     :try_start_0
     invoke-static {p1}, Lcom/google/android/gms/common/api/internal/zabi;->zag(Lcom/google/android/gms/common/api/internal/zabi;)Lcom/google/android/gms/common/api/internal/zabf;
 
@@ -47,17 +49,20 @@
 
     move-result-object p0
 
+    .line 3
     :goto_0
     invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return-void
 
+    .line 4
     :cond_0
     :try_start_1
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/internal/zabg;->zaa()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 5
     invoke-static {p1}, Lcom/google/android/gms/common/api/internal/zabi;->zah(Lcom/google/android/gms/common/api/internal/zabi;)Ljava/util/concurrent/locks/Lock;
 
     move-result-object p0
@@ -67,11 +72,14 @@
     :catchall_0
     move-exception p0
 
+    .line 6
     invoke-static {p1}, Lcom/google/android/gms/common/api/internal/zabi;->zah(Lcom/google/android/gms/common/api/internal/zabi;)Ljava/util/concurrent/locks/Lock;
 
     move-result-object p1
 
+    .line 7
     invoke-interface {p1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
+    .line 8
     throw p0
 .end method

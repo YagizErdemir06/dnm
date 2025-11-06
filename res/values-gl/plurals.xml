@@ -8,8 +8,4 @@
         <item quantity="other">Rebobina %d segundos</item>
         <item quantity="one">Rebobina %d segundo</item>
     </plurals>
-    <plurals name="mtrl_badge_content_description">
-        <item quantity="other">%d notificacións novas</item>
-        <item quantity="one">%d notificación nova</item>
-    </plurals>
 </resources>

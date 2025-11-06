@@ -57,6 +57,7 @@
 .method public static zzb()V
     .locals 0
 
+    .line 1
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_common/zzqa;->zza()V
 
     return-void

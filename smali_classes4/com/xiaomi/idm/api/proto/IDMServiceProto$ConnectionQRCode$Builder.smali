@@ -55,8 +55,10 @@
 .method public clearChannel()Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
@@ -69,8 +71,10 @@
 .method public clearConnType()Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
@@ -83,8 +87,10 @@
 .method public clearIdHash()Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
@@ -97,8 +103,10 @@
 .method public clearMacAddr()Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
@@ -111,8 +119,10 @@
 .method public clearPwd()Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
@@ -125,8 +135,10 @@
 .method public clearSsid()Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
@@ -139,6 +151,7 @@
 .method public getChannel()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
@@ -153,6 +166,7 @@
 .method public getConnType()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
@@ -167,6 +181,7 @@
 .method public getIdHash()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
@@ -181,6 +196,7 @@
 .method public getIdHashBytes()Lcom/google/protobuf/ByteString;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
@@ -195,6 +211,7 @@
 .method public getMacAddr()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
@@ -209,6 +226,7 @@
 .method public getMacAddrBytes()Lcom/google/protobuf/ByteString;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
@@ -223,6 +241,7 @@
 .method public getPwd()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
@@ -237,6 +256,7 @@
 .method public getPwdBytes()Lcom/google/protobuf/ByteString;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
@@ -251,6 +271,7 @@
 .method public getSsid()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
@@ -265,6 +286,7 @@
 .method public getSsidBytes()Lcom/google/protobuf/ByteString;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
@@ -279,8 +301,10 @@
 .method public setChannel(I)Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
@@ -293,8 +317,10 @@
 .method public setConnType(I)Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
@@ -307,8 +333,10 @@
 .method public setIdHash(Ljava/lang/String;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
@@ -321,8 +349,10 @@
 .method public setIdHashBytes(Lcom/google/protobuf/ByteString;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
@@ -335,8 +365,10 @@
 .method public setMacAddr(Ljava/lang/String;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
@@ -349,8 +381,10 @@
 .method public setMacAddrBytes(Lcom/google/protobuf/ByteString;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
@@ -363,8 +397,10 @@
 .method public setPwd(Ljava/lang/String;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
@@ -377,8 +413,10 @@
 .method public setPwdBytes(Lcom/google/protobuf/ByteString;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
@@ -391,8 +429,10 @@
 .method public setSsid(Ljava/lang/String;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;
@@ -405,8 +445,10 @@
 .method public setSsidBytes(Lcom/google/protobuf/ByteString;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnectionQRCode;

@@ -1,4 +1,4 @@
-.class Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter$StrikethroughCallable;
+.class public Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter$StrikethroughCallable;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,19 +18,31 @@
 
 
 # instance fields
-.field configItem:I
+.field public configItem:I
 
-.field final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
+.field public final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1010,
+            0x0
+        }
+        names = {
+            "this$0",
+            "configItem"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter$StrikethroughCallable;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter$StrikethroughCallable;->configItem:I
 
     return-void
@@ -41,6 +53,7 @@
 .method public onShowEnd()V
     .locals 5
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter$StrikethroughCallable;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
     iget-object v0, v0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->TAG:Ljava/lang/String;
@@ -81,6 +94,7 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter$StrikethroughCallable;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
     invoke-static {v0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->access$000(Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;)Landroid/util/SparseBooleanArray;
@@ -95,6 +109,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter$StrikethroughCallable;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
     invoke-static {v0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->access$000(Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;)Landroid/util/SparseBooleanArray;
@@ -105,6 +120,7 @@
 
     invoke-virtual {v0, v1}, Landroid/util/SparseBooleanArray;->delete(I)V
 
+    .line 4
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter$StrikethroughCallable;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
     invoke-static {v0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->access$100(Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;)Ljava/util/List;
@@ -117,6 +133,7 @@
 
     move-result v0
 
+    .line 5
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter$StrikethroughCallable;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
     iget-object v1, v1, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->TAG:Ljava/lang/String;
@@ -139,6 +156,7 @@
 
     invoke-static {v1, v2, v4}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 6
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter$StrikethroughCallable;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
     invoke-static {v1}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->access$100(Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;)Ljava/util/List;
@@ -151,6 +169,7 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 7
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter$StrikethroughCallable;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
     invoke-static {v1}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->access$100(Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;)Ljava/util/List;
@@ -159,22 +178,24 @@
 
     invoke-interface {v1, v0}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
+    .line 8
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter$StrikethroughCallable;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
     invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemRemoved(I)V
 
     goto :goto_0
 
+    .line 9
     :cond_0
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter$StrikethroughCallable;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->TAG:Ljava/lang/String;
 
-    const-string v0, "Warning: List is empty or list size is 0!"
+    new-array v0, v3, [Ljava/lang/Object;
 
-    new-array v1, v3, [Ljava/lang/Object;
+    const-string v1, "Warning: List is empty or list size is 0!"
 
-    invoke-static {p0, v0, v1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {p0, v1, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :cond_1
     :goto_0

@@ -1,4 +1,4 @@
-.class Landroidx/recyclerview/widget/AsyncListDiffer$MainThreadExecutor;
+.class public Landroidx/recyclerview/widget/AsyncListDiffer$MainThreadExecutor;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,15 +18,17 @@
 
 
 # instance fields
-.field final mHandler:Landroid/os/Handler;
+.field public final mHandler:Landroid/os/Handler;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -49,6 +51,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/AsyncListDiffer$MainThreadExecutor;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z

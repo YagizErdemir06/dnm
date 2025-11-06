@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/IndexedImmutableSet$1;
+.class public Lcom/google/common/collect/IndexedImmutableSet$1;
 .super Lcom/google/common/collect/ImmutableList;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/IndexedImmutableSet;
+.field public final synthetic this$0:Lcom/google/common/collect/IndexedImmutableSet;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/IndexedImmutableSet;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/IndexedImmutableSet$1;->this$0:Lcom/google/common/collect/IndexedImmutableSet;
 
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableList;-><init>()V
@@ -46,6 +47,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/IndexedImmutableSet$1;->this$0:Lcom/google/common/collect/IndexedImmutableSet;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/IndexedImmutableSet;->get(I)Ljava/lang/Object;
@@ -58,6 +60,7 @@
 .method public isPartialView()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/IndexedImmutableSet$1;->this$0:Lcom/google/common/collect/IndexedImmutableSet;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->isPartialView()Z
@@ -70,6 +73,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/IndexedImmutableSet$1;->this$0:Lcom/google/common/collect/IndexedImmutableSet;
 
     invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I

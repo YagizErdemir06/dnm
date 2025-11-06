@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/MaskingMediaSource$MaskingTimeline;
+.class public final Lcom/google/android/exoplayer2/source/MaskingMediaSource$MaskingTimeline;
 .super Lcom/google/android/exoplayer2/source/ForwardingTimeline;
 .source "SourceFile"
 
@@ -34,6 +34,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -54,10 +55,13 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/source/ForwardingTimeline;-><init>(Lcom/google/android/exoplayer2/Timeline;)V
 
+    .line 2
     iput-object p2, p0, Lcom/google/android/exoplayer2/source/MaskingMediaSource$MaskingTimeline;->replacedInternalWindowUid:Ljava/lang/Object;
 
+    .line 3
     iput-object p3, p0, Lcom/google/android/exoplayer2/source/MaskingMediaSource$MaskingTimeline;->replacedInternalPeriodUid:Ljava/lang/Object;
 
     return-void
@@ -66,6 +70,7 @@
 .method public static synthetic access$000(Lcom/google/android/exoplayer2/source/MaskingMediaSource$MaskingTimeline;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/MaskingMediaSource$MaskingTimeline;->replacedInternalPeriodUid:Ljava/lang/Object;
 
     return-object p0
@@ -74,6 +79,7 @@
 .method public static createWithPlaceholderTimeline(Lcom/google/android/exoplayer2/MediaItem;)Lcom/google/android/exoplayer2/source/MaskingMediaSource$MaskingTimeline;
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/source/MaskingMediaSource$MaskingTimeline;
 
     new-instance v1, Lcom/google/android/exoplayer2/source/MaskingMediaSource$PlaceholderTimeline;
@@ -100,6 +106,7 @@
         .end annotation
     .end param
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/source/MaskingMediaSource$MaskingTimeline;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/google/android/exoplayer2/source/MaskingMediaSource$MaskingTimeline;-><init>(Lcom/google/android/exoplayer2/Timeline;Ljava/lang/Object;Ljava/lang/Object;)V
@@ -112,6 +119,7 @@
 .method public cloneWithUpdatedTimeline(Lcom/google/android/exoplayer2/Timeline;)Lcom/google/android/exoplayer2/source/MaskingMediaSource$MaskingTimeline;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/source/MaskingMediaSource$MaskingTimeline;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/MaskingMediaSource$MaskingTimeline;->replacedInternalWindowUid:Ljava/lang/Object;
@@ -126,8 +134,10 @@
 .method public getIndexOfPeriod(Ljava/lang/Object;)I
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ForwardingTimeline;->timeline:Lcom/google/android/exoplayer2/Timeline;
 
+    .line 2
     sget-object v1, Lcom/google/android/exoplayer2/source/MaskingMediaSource$MaskingTimeline;->MASKING_EXTERNAL_PERIOD_UID:Ljava/lang/Object;
 
     invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -142,6 +152,7 @@
 
     move-object p1, p0
 
+    .line 3
     :cond_0
     invoke-virtual {v0, p1}, Lcom/google/android/exoplayer2/Timeline;->getIndexOfPeriod(Ljava/lang/Object;)I
 
@@ -153,10 +164,12 @@
 .method public getPeriod(ILcom/google/android/exoplayer2/Timeline$Period;Z)Lcom/google/android/exoplayer2/Timeline$Period;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ForwardingTimeline;->timeline:Lcom/google/android/exoplayer2/Timeline;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/google/android/exoplayer2/Timeline;->getPeriod(ILcom/google/android/exoplayer2/Timeline$Period;Z)Lcom/google/android/exoplayer2/Timeline$Period;
 
+    .line 2
     iget-object p1, p2, Lcom/google/android/exoplayer2/Timeline$Period;->uid:Ljava/lang/Object;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/MaskingMediaSource$MaskingTimeline;->replacedInternalPeriodUid:Ljava/lang/Object;
@@ -169,6 +182,7 @@
 
     if-eqz p3, :cond_0
 
+    .line 3
     sget-object p0, Lcom/google/android/exoplayer2/source/MaskingMediaSource$MaskingTimeline;->MASKING_EXTERNAL_PERIOD_UID:Ljava/lang/Object;
 
     iput-object p0, p2, Lcom/google/android/exoplayer2/Timeline$Period;->uid:Ljava/lang/Object;
@@ -180,6 +194,7 @@
 .method public getTimeline()Lcom/google/android/exoplayer2/Timeline;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ForwardingTimeline;->timeline:Lcom/google/android/exoplayer2/Timeline;
 
     return-object p0
@@ -188,12 +203,14 @@
 .method public getUidOfPeriod(I)Ljava/lang/Object;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ForwardingTimeline;->timeline:Lcom/google/android/exoplayer2/Timeline;
 
     invoke-virtual {v0, p1}, Lcom/google/android/exoplayer2/Timeline;->getUidOfPeriod(I)Ljava/lang/Object;
 
     move-result-object p1
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/MaskingMediaSource$MaskingTimeline;->replacedInternalPeriodUid:Ljava/lang/Object;
 
     invoke-static {p1, p0}, Lcom/google/android/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -211,10 +228,12 @@
 .method public getWindow(ILcom/google/android/exoplayer2/Timeline$Window;J)Lcom/google/android/exoplayer2/Timeline$Window;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ForwardingTimeline;->timeline:Lcom/google/android/exoplayer2/Timeline;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/google/android/exoplayer2/Timeline;->getWindow(ILcom/google/android/exoplayer2/Timeline$Window;J)Lcom/google/android/exoplayer2/Timeline$Window;
 
+    .line 2
     iget-object p1, p2, Lcom/google/android/exoplayer2/Timeline$Window;->uid:Ljava/lang/Object;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/MaskingMediaSource$MaskingTimeline;->replacedInternalWindowUid:Ljava/lang/Object;
@@ -225,6 +244,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 3
     sget-object p0, Lcom/google/android/exoplayer2/Timeline$Window;->SINGLE_WINDOW_UID:Ljava/lang/Object;
 
     iput-object p0, p2, Lcom/google/android/exoplayer2/Timeline$Window;->uid:Ljava/lang/Object;

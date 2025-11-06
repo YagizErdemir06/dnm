@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfx;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfx;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -17,6 +17,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfx;
 
     invoke-direct {v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfx;-><init>()V
@@ -29,6 +30,7 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
@@ -39,6 +41,7 @@
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfg;
 
+    .line 2
     invoke-direct {v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfg;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfx;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgi;
@@ -61,11 +64,13 @@
 
     const-string v0, "messageType"
 
+    .line 1
     invoke-static {p1, v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzem;->zzc(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     iget-object v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfx;->zzc:Ljava/util/concurrent/ConcurrentMap;
 
-    invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 2
+    invoke-interface {v1, p1}, Ljava/util/concurrent/ConcurrentMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -75,18 +80,22 @@
 
     iget-object v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfx;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgi;
 
+    .line 3
     invoke-interface {v1, p1}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgi;->zza(Ljava/lang/Class;)Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgh;
 
     move-result-object v1
 
+    .line 4
     invoke-static {p1, v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzem;->zzc(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "schema"
 
+    .line 5
     invoke-static {v1, v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzem;->zzc(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfx;->zzc:Ljava/util/concurrent/ConcurrentMap;
 
+    .line 6
     invoke-interface {p0, p1, v1}, Ljava/util/concurrent/ConcurrentMap;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0

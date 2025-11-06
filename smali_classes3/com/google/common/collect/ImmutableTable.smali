@@ -40,6 +40,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/AbstractTable;-><init>()V
 
     return-void
@@ -61,6 +62,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ImmutableTable$Builder;
 
     invoke-direct {v0}, Lcom/google/common/collect/ImmutableTable$Builder;-><init>()V
@@ -86,22 +88,26 @@
 
     const-string v0, "rowKey"
 
+    .line 1
     invoke-static {p0, v0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
     const-string v0, "columnKey"
 
+    .line 2
     invoke-static {p1, v0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
     const-string v0, "value"
 
+    .line 3
     invoke-static {p2, v0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
 
+    .line 4
     invoke-static {p0, p1, p2}, Lcom/google/common/collect/Tables;->immutableCell(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/Table$Cell;
 
     move-result-object p0
@@ -328,6 +334,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -434,6 +441,7 @@
 .method public bridge synthetic columnMap()Ljava/util/Map;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableTable;->columnMap()Lcom/google/common/collect/ImmutableMap;
 
     move-result-object p0
@@ -452,6 +460,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/ImmutableTable;->get(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -476,6 +485,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/AbstractTable;->containsColumn(Ljava/lang/Object;)Z
 
     move-result p0
@@ -490,6 +500,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/AbstractTable;->containsRow(Ljava/lang/Object;)Z
 
     move-result p0
@@ -504,6 +515,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableTable;->values()Lcom/google/common/collect/ImmutableCollection;
 
     move-result-object p0
@@ -529,6 +541,7 @@
 .method public bridge synthetic createCellSet()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableTable;->createCellSet()Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p0
@@ -552,6 +565,7 @@
 .method public bridge synthetic createValues()Ljava/util/Collection;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableTable;->createValues()Lcom/google/common/collect/ImmutableCollection;
 
     move-result-object p0
@@ -566,6 +580,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/AbstractTable;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -586,6 +601,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/google/common/collect/AbstractTable;->get(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -596,6 +612,7 @@
 .method public bridge synthetic hashCode()I
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractTable;->hashCode()I
 
     move-result p0
@@ -606,6 +623,7 @@
 .method public bridge synthetic isEmpty()Z
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractTable;->isEmpty()Z
 
     move-result p0
@@ -634,6 +652,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -658,6 +677,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -697,6 +717,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -803,6 +824,7 @@
 .method public bridge synthetic rowMap()Ljava/util/Map;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableTable;->rowMap()Lcom/google/common/collect/ImmutableMap;
 
     move-result-object p0
@@ -813,6 +835,7 @@
 .method public bridge synthetic toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractTable;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -861,6 +884,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/AssertionError;
 
     const-string v0, "should never be called"
@@ -873,6 +897,7 @@
 .method public final writeReplace()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableTable;->createSerializedForm()Lcom/google/common/collect/ImmutableTable$SerializedForm;
 
     move-result-object p0

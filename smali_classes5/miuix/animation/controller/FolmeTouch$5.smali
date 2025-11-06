@@ -1,4 +1,4 @@
-.class Lmiuix/animation/controller/FolmeTouch$5;
+.class public Lmiuix/animation/controller/FolmeTouch$5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lmiuix/animation/controller/FolmeTouch;
+.field public final synthetic this$0:Lmiuix/animation/controller/FolmeTouch;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/animation/controller/FolmeTouch;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/animation/controller/FolmeTouch$5;->this$0:Lmiuix/animation/controller/FolmeTouch;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,6 +38,7 @@
 .method public onLongClick(Landroid/view/View;)Z
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch$5;->this$0:Lmiuix/animation/controller/FolmeTouch;
 
     invoke-static {v0}, Lmiuix/animation/controller/FolmeTouch;->access$300(Lmiuix/animation/controller/FolmeTouch;)Z
@@ -45,6 +47,7 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lmiuix/animation/controller/FolmeTouch$5;->this$0:Lmiuix/animation/controller/FolmeTouch;
 
     invoke-static {p0, p1}, Lmiuix/animation/controller/FolmeTouch;->access$400(Lmiuix/animation/controller/FolmeTouch;Landroid/view/View;)V

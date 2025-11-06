@@ -1,4 +1,4 @@
-.class Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager$SchemaResource;
+.class public Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager$SchemaResource;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field _cacheEntry:Lorg/apache/xmlbeans/impl/xb/xsdownload/DownloadedSchemaEntry;
+.field public _cacheEntry:Lorg/apache/xmlbeans/impl/xb/xsdownload/DownloadedSchemaEntry;
 
 .field private final synthetic this$0:Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager;
 
@@ -27,10 +27,12 @@
 .method public constructor <init>(Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager;Lorg/apache/xmlbeans/impl/xb/xsdownload/DownloadedSchemaEntry;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager$SchemaResource;->this$0:Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p2, p0, Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager$SchemaResource;->_cacheEntry:Lorg/apache/xmlbeans/impl/xb/xsdownload/DownloadedSchemaEntry;
 
     return-void
@@ -41,6 +43,7 @@
 .method public addSchemaLocation(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager$SchemaResource;->_cacheEntry:Lorg/apache/xmlbeans/impl/xb/xsdownload/DownloadedSchemaEntry;
 
     invoke-interface {p0, p1}, Lorg/apache/xmlbeans/impl/xb/xsdownload/DownloadedSchemaEntry;->addSchemaLocation(Ljava/lang/String;)V
@@ -53,6 +56,7 @@
 
     if-eq p0, p1, :cond_1
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager$SchemaResource;->getFilename()Ljava/lang/String;
 
     move-result-object p0
@@ -87,6 +91,7 @@
 .method public getFilename()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager$SchemaResource;->_cacheEntry:Lorg/apache/xmlbeans/impl/xb/xsdownload/DownloadedSchemaEntry;
 
     invoke-interface {p0}, Lorg/apache/xmlbeans/impl/xb/xsdownload/DownloadedSchemaEntry;->getFilename()Ljava/lang/String;
@@ -99,6 +104,7 @@
 .method public getNamespace()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager$SchemaResource;->_cacheEntry:Lorg/apache/xmlbeans/impl/xb/xsdownload/DownloadedSchemaEntry;
 
     invoke-interface {p0}, Lorg/apache/xmlbeans/impl/xb/xsdownload/DownloadedSchemaEntry;->getNamespace()Ljava/lang/String;
@@ -111,6 +117,7 @@
 .method public getSchema()Lorg/apache/xmlbeans/impl/xb/xsdschema/SchemaDocument$Schema;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager$SchemaResource;->this$0:Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager;
 
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager$SchemaResource;->getFilename()Ljava/lang/String;
@@ -123,10 +130,12 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager$SchemaResource;->this$0:Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager;
 
     invoke-static {v0, p0}, Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager;->access$000(Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager;Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager$SchemaResource;)V
 
+    .line 3
     :cond_0
     :try_start_0
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager$SchemaResource;->this$0:Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager;
@@ -160,6 +169,7 @@
 .method public getSchemaLocation()Ljava/lang/String;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager$SchemaResource;->_cacheEntry:Lorg/apache/xmlbeans/impl/xb/xsdownload/DownloadedSchemaEntry;
 
     invoke-interface {v0}, Lorg/apache/xmlbeans/impl/xb/xsdownload/DownloadedSchemaEntry;->sizeOfSchemaLocationArray()I
@@ -168,6 +178,7 @@
 
     if-lez v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager$SchemaResource;->_cacheEntry:Lorg/apache/xmlbeans/impl/xb/xsdownload/DownloadedSchemaEntry;
 
     const/4 v0, 0x0
@@ -187,6 +198,7 @@
 .method public getSchemaLocationArray()[Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager$SchemaResource;->_cacheEntry:Lorg/apache/xmlbeans/impl/xb/xsdownload/DownloadedSchemaEntry;
 
     invoke-interface {p0}, Lorg/apache/xmlbeans/impl/xb/xsdownload/DownloadedSchemaEntry;->getSchemaLocationArray()[Ljava/lang/String;
@@ -199,6 +211,7 @@
 .method public getSha1()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager$SchemaResource;->_cacheEntry:Lorg/apache/xmlbeans/impl/xb/xsdownload/DownloadedSchemaEntry;
 
     invoke-interface {p0}, Lorg/apache/xmlbeans/impl/xb/xsdownload/DownloadedSchemaEntry;->getSha1()Ljava/lang/String;
@@ -211,6 +224,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager$SchemaResource;->getFilename()Ljava/lang/String;
 
     move-result-object p0
@@ -225,6 +239,7 @@
 .method public setFilename(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager$SchemaResource;->_cacheEntry:Lorg/apache/xmlbeans/impl/xb/xsdownload/DownloadedSchemaEntry;
 
     invoke-interface {p0, p1}, Lorg/apache/xmlbeans/impl/xb/xsdownload/DownloadedSchemaEntry;->setFilename(Ljava/lang/String;)V
@@ -235,6 +250,7 @@
 .method public setNamespace(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager$SchemaResource;->_cacheEntry:Lorg/apache/xmlbeans/impl/xb/xsdownload/DownloadedSchemaEntry;
 
     invoke-interface {p0, p1}, Lorg/apache/xmlbeans/impl/xb/xsdownload/DownloadedSchemaEntry;->setNamespace(Ljava/lang/String;)V

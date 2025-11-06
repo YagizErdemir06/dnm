@@ -1,4 +1,4 @@
-.class Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder$ByteBufferInitializer$1;
+.class public Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder$ByteBufferInitializer$1;
 .super Landroid/media/MediaDataSource;
 .source "SourceFile"
 
@@ -15,15 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder$ByteBufferInitializer;
+.field public final synthetic this$0:Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder$ByteBufferInitializer;
 
-.field final synthetic val$data:Ljava/nio/ByteBuffer;
+.field public final synthetic val$data:Ljava/nio/ByteBuffer;
 
 
 # direct methods
 .method public constructor <init>(Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder$ByteBufferInitializer;Ljava/nio/ByteBuffer;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder$ByteBufferInitializer$1;->this$0:Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder$ByteBufferInitializer;
 
     iput-object p2, p0, Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder$ByteBufferInitializer$1;->val$data:Ljava/nio/ByteBuffer;
@@ -44,9 +45,10 @@
 .method public getSize()J
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder$ByteBufferInitializer$1;->val$data:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {p0}, Ljava/nio/Buffer;->limit()I
+    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result p0
 
@@ -58,9 +60,10 @@
 .method public readAt(J[BII)I
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder$ByteBufferInitializer$1;->val$data:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {v0}, Ljava/nio/Buffer;->limit()I
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v0
 
@@ -74,6 +77,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder$ByteBufferInitializer$1;->val$data:Ljava/nio/ByteBuffer;
 
@@ -81,9 +85,10 @@
 
     invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
+    .line 3
     iget-object p1, p0, Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder$ByteBufferInitializer$1;->val$data:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result p1
 
@@ -91,6 +96,7 @@
 
     move-result p1
 
+    .line 4
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder$ByteBufferInitializer$1;->val$data:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p0, p3, p4, p1}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;

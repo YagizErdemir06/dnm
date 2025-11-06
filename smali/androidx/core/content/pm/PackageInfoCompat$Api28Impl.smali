@@ -1,4 +1,4 @@
-.class Landroidx/core/content/pm/PackageInfoCompat$Api28Impl;
+.class public Landroidx/core/content/pm/PackageInfoCompat$Api28Impl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,29 +34,15 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/DoNotInline;
-    .end annotation
-
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/content/pm/SigningInfo;->getApkContentsSigners()[Landroid/content/pm/Signature;
 
     move-result-object p0
 
     return-object p0
-.end method
-
-.method public static getLongVersionCode(Landroid/content/pm/PackageInfo;)J
-    .locals 2
-    .annotation build Landroidx/annotation/DoNotInline;
-    .end annotation
-
-    invoke-virtual {p0}, Landroid/content/pm/PackageInfo;->getLongVersionCode()J
-
-    move-result-wide v0
-
-    return-wide v0
 .end method
 
 .method public static getSigningCertificateHistory(Landroid/content/pm/SigningInfo;)[Landroid/content/pm/Signature;
@@ -64,12 +51,10 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/DoNotInline;
-    .end annotation
-
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/content/pm/SigningInfo;->getSigningCertificateHistory()[Landroid/content/pm/Signature;
 
     move-result-object p0
@@ -83,9 +68,8 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/DoNotInline;
-    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/content/pm/SigningInfo;->hasMultipleSigners()Z
 
     move-result p0
@@ -107,9 +91,8 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/DoNotInline;
-    .end annotation
 
+    .line 1
     invoke-virtual {p0, p1, p2, p3}, Landroid/content/pm/PackageManager;->hasSigningCertificate(Ljava/lang/String;[BI)Z
 
     move-result p0

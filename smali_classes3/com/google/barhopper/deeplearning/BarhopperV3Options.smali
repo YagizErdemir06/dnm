@@ -34,6 +34,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/barhopper/deeplearning/BarhopperV3Options;
 
     invoke-direct {v0}, Lcom/google/barhopper/deeplearning/BarhopperV3Options;-><init>()V
@@ -50,6 +51,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;-><init>()V
 
     return-void
@@ -58,6 +60,7 @@
 .method public static zza()Lcom/google/barhopper/deeplearning/zzk;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/barhopper/deeplearning/BarhopperV3Options;->zza:Lcom/google/barhopper/deeplearning/BarhopperV3Options;
 
     invoke-virtual {v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;->zzF()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdx;
@@ -80,6 +83,7 @@
 .method public static synthetic zzc(Lcom/google/barhopper/deeplearning/BarhopperV3Options;Lcom/google/barhopper/deeplearning/zzi;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     iput-object p1, p0, Lcom/google/barhopper/deeplearning/BarhopperV3Options;->zze:Lcom/google/barhopper/deeplearning/zzi;
@@ -96,6 +100,7 @@
 .method public static synthetic zzd(Lcom/google/barhopper/deeplearning/BarhopperV3Options;Lcom/google/barhopper/deeplearning/zzn;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     iput-object p1, p0, Lcom/google/barhopper/deeplearning/BarhopperV3Options;->zzf:Lcom/google/barhopper/deeplearning/zzn;
@@ -150,6 +155,7 @@
 
     return-object p2
 
+    .line 1
     :cond_0
     sget-object p0, Lcom/google/barhopper/deeplearning/BarhopperV3Options;->zza:Lcom/google/barhopper/deeplearning/BarhopperV3Options;
 
@@ -158,6 +164,7 @@
     :cond_1
     new-instance p0, Lcom/google/barhopper/deeplearning/zzk;
 
+    .line 2
     invoke-direct {p0, p2}, Lcom/google/barhopper/deeplearning/zzk;-><init>(Lcom/google/barhopper/deeplearning/zzj;)V
 
     return-object p0
@@ -186,6 +193,7 @@
 
     aput-object p0, p1, p3
 
+    .line 3
     sget-object p0, Lcom/google/barhopper/deeplearning/BarhopperV3Options;->zza:Lcom/google/barhopper/deeplearning/BarhopperV3Options;
 
     const-string p2, "\u0001\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1009\u0000\u0002\u1009\u0001"
@@ -196,6 +204,7 @@
 
     return-object p0
 
+    .line 4
     :cond_4
     invoke-static {p0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 

@@ -1,4 +1,4 @@
-.class final Lcom/google/common/base/Equivalence$Identity;
+.class public final Lcom/google/common/base/Equivalence$Identity;
 .super Lcom/google/common/base/Equivalence;
 .source "SourceFile"
 
@@ -27,7 +27,7 @@
 
 
 # static fields
-.field static final INSTANCE:Lcom/google/common/base/Equivalence$Identity;
+.field public static final INSTANCE:Lcom/google/common/base/Equivalence$Identity;
 
 .field private static final serialVersionUID:J = 0x1L
 
@@ -36,6 +36,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/base/Equivalence$Identity;
 
     invoke-direct {v0}, Lcom/google/common/base/Equivalence$Identity;-><init>()V
@@ -48,6 +49,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/base/Equivalence;-><init>()V
 
     return-void
@@ -56,6 +58,7 @@
 .method private readResolve()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     sget-object p0, Lcom/google/common/base/Equivalence$Identity;->INSTANCE:Lcom/google/common/base/Equivalence$Identity;
 
     return-object p0
@@ -74,6 +77,7 @@
 .method public doHash(Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     invoke-static {p1}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result p0

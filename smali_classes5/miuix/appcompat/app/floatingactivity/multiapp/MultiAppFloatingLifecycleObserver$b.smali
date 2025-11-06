@@ -18,22 +18,23 @@
 
 
 # instance fields
-.field public final synthetic a:Landroid/view/View;
+.field public final synthetic c:Landroid/view/View;
 
-.field public final synthetic b:Landroid/view/View;
+.field public final synthetic d:Landroid/view/View;
 
-.field public final synthetic c:Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver;
+.field public final synthetic f:Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver;Landroid/view/View;Landroid/view/View;)V
     .locals 0
 
-    iput-object p1, p0, Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver$b;->c:Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver;
+    .line 1
+    iput-object p1, p0, Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver$b;->f:Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver;
 
-    iput-object p2, p0, Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver$b;->a:Landroid/view/View;
+    iput-object p2, p0, Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver$b;->c:Landroid/view/View;
 
-    iput-object p3, p0, Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver$b;->b:Landroid/view/View;
+    iput-object p3, p0, Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver$b;->d:Landroid/view/View;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,7 +46,8 @@
 .method public run()V
     .locals 5
 
-    iget-object v0, p0, Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver$b;->a:Landroid/view/View;
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver$b;->c:Landroid/view/View;
 
     check-cast v0, Landroid/view/ViewGroup;
 
@@ -57,7 +59,8 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v1, v2}, Luo/d;->m(ILjava/lang/Runnable;)Lmiuix/animation/base/AnimConfig;
+    .line 2
+    invoke-static {v1, v2}, Lk/b/d/s/e;->m(ILjava/lang/Runnable;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v2
 
@@ -65,6 +68,7 @@
 
     new-array v3, v3, [Lmiuix/animation/listener/TransitionListener;
 
+    .line 3
     new-instance v4, Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver$b$a;
 
     invoke-direct {v4, p0}, Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver$b$a;-><init>(Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver$b;)V
@@ -73,7 +77,8 @@
 
     invoke-virtual {v2, v3}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
 
-    invoke-static {v0, v2}, Luo/d;->e(Landroid/view/View;Lmiuix/animation/base/AnimConfig;)V
+    .line 4
+    invoke-static {v0, v2}, Lk/b/d/s/e;->e(Landroid/view/View;Lmiuix/animation/base/AnimConfig;)V
 
     return-void
 .end method

@@ -15,14 +15,23 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/android/camera/ui/DragLayoutBar;
+.field public final synthetic c:Lcom/android/camera/ui/DragLayoutBar;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera/ui/DragLayoutBar;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera/ui/DragLayoutBar$b;->a:Lcom/android/camera/ui/DragLayoutBar;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/ui/DragLayoutBar$b;->c:Lcom/android/camera/ui/DragLayoutBar;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
@@ -33,10 +42,20 @@
 # virtual methods
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
 
-    iget-object p0, p0, Lcom/android/camera/ui/DragLayoutBar$b;->a:Lcom/android/camera/ui/DragLayoutBar;
+    .line 2
+    iget-object p0, p0, Lcom/android/camera/ui/DragLayoutBar$b;->c:Lcom/android/camera/ui/DragLayoutBar;
 
     invoke-static {p0}, Lcom/android/camera/ui/DragLayoutBar;->h(Lcom/android/camera/ui/DragLayoutBar;)I
 
@@ -49,7 +68,16 @@
 
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
 
     return-void

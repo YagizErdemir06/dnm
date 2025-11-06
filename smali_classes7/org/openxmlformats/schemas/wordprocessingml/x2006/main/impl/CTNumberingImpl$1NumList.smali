@@ -1,4 +1,4 @@
-.class final Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTNumberingImpl$1NumList;
+.class public final Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTNumberingImpl$1NumList;
 .super Ljava/util/AbstractList;
 .source "SourceFile"
 
@@ -23,7 +23,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTNumberingImpl;
+.field public final synthetic this$0:Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTNumberingImpl;
 
 
 # direct methods

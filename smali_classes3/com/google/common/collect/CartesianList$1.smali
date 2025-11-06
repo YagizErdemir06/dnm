@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/CartesianList$1;
+.class public Lcom/google/common/collect/CartesianList$1;
 .super Lcom/google/common/collect/ImmutableList;
 .source "SourceFile"
 
@@ -22,15 +22,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/CartesianList;
+.field public final synthetic this$0:Lcom/google/common/collect/CartesianList;
 
-.field final synthetic val$index:I
+.field public final synthetic val$index:I
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/CartesianList;I)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/CartesianList$1;->this$0:Lcom/google/common/collect/CartesianList;
 
     iput p2, p0, Lcom/google/common/collect/CartesianList$1;->val$index:I
@@ -50,12 +51,14 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/CartesianList$1;->size()I
 
     move-result v0
 
     invoke-static {p1, v0}, Lcom/google/common/base/Preconditions;->checkElementIndex(II)I
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/CartesianList$1;->this$0:Lcom/google/common/collect/CartesianList;
 
     iget v1, p0, Lcom/google/common/collect/CartesianList$1;->val$index:I
@@ -64,6 +67,7 @@
 
     move-result v0
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/collect/CartesianList$1;->this$0:Lcom/google/common/collect/CartesianList;
 
     invoke-static {p0}, Lcom/google/common/collect/CartesianList;->access$000(Lcom/google/common/collect/CartesianList;)Lcom/google/common/collect/ImmutableList;
@@ -94,6 +98,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/CartesianList$1;->this$0:Lcom/google/common/collect/CartesianList;
 
     invoke-static {p0}, Lcom/google/common/collect/CartesianList;->access$000(Lcom/google/common/collect/CartesianList;)Lcom/google/common/collect/ImmutableList;

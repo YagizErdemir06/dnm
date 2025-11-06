@@ -30,6 +30,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,6 +41,7 @@
 .method public a(Landroid/os/Parcel;)Lmiuix/preference/DropDownPreference$h;
     .locals 0
 
+    .line 1
     new-instance p0, Lmiuix/preference/DropDownPreference$h;
 
     invoke-direct {p0, p1}, Lmiuix/preference/DropDownPreference$h;-><init>(Landroid/os/Parcel;)V
@@ -50,6 +52,7 @@
 .method public b(I)[Lmiuix/preference/DropDownPreference$h;
     .locals 0
 
+    .line 1
     new-array p0, p1, [Lmiuix/preference/DropDownPreference$h;
 
     return-object p0
@@ -58,6 +61,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lmiuix/preference/DropDownPreference$h$a;->a(Landroid/os/Parcel;)Lmiuix/preference/DropDownPreference$h;
 
     move-result-object p0
@@ -68,6 +72,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lmiuix/preference/DropDownPreference$h$a;->b(I)[Lmiuix/preference/DropDownPreference$h;
 
     move-result-object p0

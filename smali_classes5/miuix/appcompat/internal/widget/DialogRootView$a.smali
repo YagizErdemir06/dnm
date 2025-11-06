@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/content/ComponentCallbacks;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lmiuix/appcompat/internal/widget/DialogRootView;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lmiuix/appcompat/internal/widget/DialogRootView;->onLayout(ZIIII)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,14 +18,39 @@
 
 
 # instance fields
-.field public final synthetic a:Lmiuix/appcompat/internal/widget/DialogRootView;
+.field public final synthetic c:I
+
+.field public final synthetic d:I
+
+.field public final synthetic f:I
+
+.field public final synthetic g:I
+
+.field public final synthetic j:I
+
+.field public final synthetic m:I
+
+.field public final synthetic n:Lmiuix/appcompat/internal/widget/DialogRootView;
 
 
 # direct methods
-.method public constructor <init>(Lmiuix/appcompat/internal/widget/DialogRootView;)V
+.method public constructor <init>(Lmiuix/appcompat/internal/widget/DialogRootView;IIIIII)V
     .locals 0
 
-    iput-object p1, p0, Lmiuix/appcompat/internal/widget/DialogRootView$a;->a:Lmiuix/appcompat/internal/widget/DialogRootView;
+    .line 1
+    iput-object p1, p0, Lmiuix/appcompat/internal/widget/DialogRootView$a;->n:Lmiuix/appcompat/internal/widget/DialogRootView;
+
+    iput p2, p0, Lmiuix/appcompat/internal/widget/DialogRootView$a;->c:I
+
+    iput p3, p0, Lmiuix/appcompat/internal/widget/DialogRootView$a;->d:I
+
+    iput p4, p0, Lmiuix/appcompat/internal/widget/DialogRootView$a;->f:I
+
+    iput p5, p0, Lmiuix/appcompat/internal/widget/DialogRootView$a;->g:I
+
+    iput p6, p0, Lmiuix/appcompat/internal/widget/DialogRootView$a;->j:I
+
+    iput p7, p0, Lmiuix/appcompat/internal/widget/DialogRootView$a;->m:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -34,73 +59,70 @@
 
 
 # virtual methods
-.method public onConfigurationChanged(Landroid/content/res/Configuration;)V
-    .locals 2
-    .param p1    # Landroid/content/res/Configuration;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
+.method public run()V
+    .locals 7
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/widget/DialogRootView$a;->a:Lmiuix/appcompat/internal/widget/DialogRootView;
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/widget/DialogRootView$a;->n:Lmiuix/appcompat/internal/widget/DialogRootView;
 
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lmiuix/appcompat/internal/widget/DialogRootView;->b(Lmiuix/appcompat/internal/widget/DialogRootView;Z)Z
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/widget/DialogRootView$a;->a:Lmiuix/appcompat/internal/widget/DialogRootView;
-
-    invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/widget/DialogRootView;->onConfigurationChanged(Landroid/content/res/Configuration;)V
-
-    iget-object p1, p0, Lmiuix/appcompat/internal/widget/DialogRootView$a;->a:Lmiuix/appcompat/internal/widget/DialogRootView;
-
-    invoke-virtual {p1}, Landroid/view/View;->getHandler()Landroid/os/Handler;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lmiuix/appcompat/internal/widget/DialogRootView$a;->a:Lmiuix/appcompat/internal/widget/DialogRootView;
-
-    invoke-static {v0}, Lmiuix/appcompat/internal/widget/DialogRootView;->c(Lmiuix/appcompat/internal/widget/DialogRootView;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
-    move-result-object p1
+    move-result-object v0
 
-    if-ne v0, p1, :cond_1
+    .line 2
+    iget v1, v0, Landroid/content/res/Configuration;->screenWidthDp:I
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/widget/DialogRootView$a;->a:Lmiuix/appcompat/internal/widget/DialogRootView;
+    iget v2, p0, Lmiuix/appcompat/internal/widget/DialogRootView$a;->c:I
 
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
+    if-ne v1, v2, :cond_0
 
-    goto :goto_0
+    iget v0, v0, Landroid/content/res/Configuration;->screenHeightDp:I
+
+    iget v1, p0, Lmiuix/appcompat/internal/widget/DialogRootView$a;->d:I
+
+    if-eq v0, v1, :cond_1
+
+    .line 3
+    :cond_0
+    iget-object v0, p0, Lmiuix/appcompat/internal/widget/DialogRootView$a;->n:Lmiuix/appcompat/internal/widget/DialogRootView;
+
+    invoke-static {v0}, Lmiuix/appcompat/internal/widget/DialogRootView;->a(Lmiuix/appcompat/internal/widget/DialogRootView;)Lmiuix/appcompat/internal/widget/DialogRootView$b;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    .line 4
+    iget-object v0, p0, Lmiuix/appcompat/internal/widget/DialogRootView$a;->n:Lmiuix/appcompat/internal/widget/DialogRootView;
+
+    invoke-static {v0}, Lmiuix/appcompat/internal/widget/DialogRootView;->a(Lmiuix/appcompat/internal/widget/DialogRootView;)Lmiuix/appcompat/internal/widget/DialogRootView$b;
+
+    move-result-object v1
+
+    iget-object v0, p0, Lmiuix/appcompat/internal/widget/DialogRootView$a;->n:Lmiuix/appcompat/internal/widget/DialogRootView;
+
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v2
+
+    iget v3, p0, Lmiuix/appcompat/internal/widget/DialogRootView$a;->f:I
+
+    iget v4, p0, Lmiuix/appcompat/internal/widget/DialogRootView$a;->g:I
+
+    iget v5, p0, Lmiuix/appcompat/internal/widget/DialogRootView$a;->j:I
+
+    iget v6, p0, Lmiuix/appcompat/internal/widget/DialogRootView$a;->m:I
+
+    invoke-interface/range {v1 .. v6}, Lmiuix/appcompat/internal/widget/DialogRootView$b;->onConfigurationChanged(Landroid/content/res/Configuration;IIII)V
 
     :cond_1
-    iget-object p1, p0, Lmiuix/appcompat/internal/widget/DialogRootView$a;->a:Lmiuix/appcompat/internal/widget/DialogRootView;
-
-    new-instance v0, Lmiuix/appcompat/internal/widget/DialogRootView$a$a;
-
-    invoke-direct {v0, p0}, Lmiuix/appcompat/internal/widget/DialogRootView$a$a;-><init>(Lmiuix/appcompat/internal/widget/DialogRootView$a;)V
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    :goto_0
-    return-void
-.end method
-
-.method public onLowMemory()V
-    .locals 0
-
     return-void
 .end method

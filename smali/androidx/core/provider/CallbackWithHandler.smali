@@ -1,4 +1,4 @@
-.class Landroidx/core/provider/CallbackWithHandler;
+.class public Landroidx/core/provider/CallbackWithHandler;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -65,8 +65,10 @@
 .method private onTypefaceRequestFailed(I)V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Landroidx/core/provider/CallbackWithHandler;->mCallback:Landroidx/core/provider/FontsContractCompat$FontRequestCallback;
 
+    .line 2
     iget-object v1, p0, Landroidx/core/provider/CallbackWithHandler;->mCallbackHandler:Landroid/os/Handler;
 
     new-instance v2, Landroidx/core/provider/CallbackWithHandler$2;
@@ -85,8 +87,10 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Landroidx/core/provider/CallbackWithHandler;->mCallback:Landroidx/core/provider/FontsContractCompat$FontRequestCallback;
 
+    .line 2
     iget-object v1, p0, Landroidx/core/provider/CallbackWithHandler;->mCallbackHandler:Landroid/os/Handler;
 
     new-instance v2, Landroidx/core/provider/CallbackWithHandler$1;
@@ -107,18 +111,21 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p1}, Landroidx/core/provider/FontRequestWorker$TypefaceResult;->isSuccess()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p1, p1, Landroidx/core/provider/FontRequestWorker$TypefaceResult;->mTypeface:Landroid/graphics/Typeface;
 
     invoke-direct {p0, p1}, Landroidx/core/provider/CallbackWithHandler;->onTypefaceRetrieved(Landroid/graphics/Typeface;)V
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget p1, p1, Landroidx/core/provider/FontRequestWorker$TypefaceResult;->mResult:I
 

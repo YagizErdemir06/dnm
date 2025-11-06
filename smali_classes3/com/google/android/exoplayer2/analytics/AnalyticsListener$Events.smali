@@ -41,10 +41,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/analytics/AnalyticsListener$Events;->flags:Lcom/google/android/exoplayer2/util/FlagSet;
 
+    .line 3
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/FlagSet;->size()I
@@ -55,6 +58,7 @@
 
     const/4 v1, 0x0
 
+    .line 4
     :goto_0
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/FlagSet;->size()I
 
@@ -62,10 +66,12 @@
 
     if-ge v1, v2, :cond_0
 
+    .line 5
     invoke-virtual {p1, v1}, Lcom/google/android/exoplayer2/util/FlagSet;->get(I)I
 
     move-result v2
 
+    .line 6
     invoke-virtual {p2, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -84,6 +90,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_0
     iput-object v0, p0, Lcom/google/android/exoplayer2/analytics/AnalyticsListener$Events;->eventTimes:Landroid/util/SparseArray;
 
@@ -95,6 +102,7 @@
 .method public contains(I)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/analytics/AnalyticsListener$Events;->flags:Lcom/google/android/exoplayer2/util/FlagSet;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/util/FlagSet;->contains(I)Z
@@ -107,6 +115,7 @@
 .method public varargs containsAny([I)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/analytics/AnalyticsListener$Events;->flags:Lcom/google/android/exoplayer2/util/FlagSet;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/util/FlagSet;->containsAny([I)Z
@@ -119,6 +128,7 @@
 .method public get(I)I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/analytics/AnalyticsListener$Events;->flags:Lcom/google/android/exoplayer2/util/FlagSet;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/util/FlagSet;->get(I)I
@@ -131,6 +141,7 @@
 .method public getEventTime(I)Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/analytics/AnalyticsListener$Events;->eventTimes:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -151,6 +162,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/analytics/AnalyticsListener$Events;->flags:Lcom/google/android/exoplayer2/util/FlagSet;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/FlagSet;->size()I

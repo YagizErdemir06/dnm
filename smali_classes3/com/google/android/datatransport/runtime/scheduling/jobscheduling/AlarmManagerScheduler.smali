@@ -7,13 +7,13 @@
 
 
 # static fields
-.field static final ATTEMPT_NUMBER:Ljava/lang/String; = "attemptNumber"
+.field public static final ATTEMPT_NUMBER:Ljava/lang/String; = "attemptNumber"
 
-.field static final BACKEND_NAME:Ljava/lang/String; = "backendName"
+.field public static final BACKEND_NAME:Ljava/lang/String; = "backendName"
 
-.field static final EVENT_PRIORITY:Ljava/lang/String; = "priority"
+.field public static final EVENT_PRIORITY:Ljava/lang/String; = "priority"
 
-.field static final EXTRAS:Ljava/lang/String; = "extras"
+.field public static final EXTRAS:Ljava/lang/String; = "extras"
 
 .field private static final LOG_TAG:Ljava/lang/String; = "AlarmManagerScheduler"
 
@@ -94,22 +94,36 @@
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x17
+
+    if-lt v0, v1, :cond_0
+
+    const/high16 v0, 0x24000000
+
+    goto :goto_0
+
+    :cond_0
+    const/high16 v0, 0x20000000
+
+    .line 2
+    :goto_0
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AlarmManagerScheduler;->context:Landroid/content/Context;
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    const/high16 v1, 0x24000000
-
-    invoke-static {p0, v0, p1, v1}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+    invoke-static {p0, v1, p1, v0}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object p0
 
-    if-eqz p0, :cond_0
+    if-eqz p0, :cond_1
 
-    const/4 v0, 0x1
+    const/4 v1, 0x1
 
-    :cond_0
-    return v0
+    :cond_1
+    return v1
 .end method
 
 .method public schedule(Lcom/google/android/datatransport/runtime/TransportContext;I)V
@@ -282,26 +296,39 @@
     .line 21
     iget-object p1, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AlarmManagerScheduler;->context:Landroid/content/Context;
 
+    .line 22
+    sget p3, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v0, 0x17
+
+    if-lt p3, v0, :cond_2
+
     const/high16 p3, 0x4000000
 
-    .line 22
+    goto :goto_0
+
+    :cond_2
+    move p3, v2
+
+    .line 23
+    :goto_0
     invoke-static {p1, v2, v1, p3}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object p1
 
-    .line 23
+    .line 24
     iget-object p3, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AlarmManagerScheduler;->alarmManager:Landroid/app/AlarmManager;
 
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/AlarmManagerScheduler;->clock:Lcom/google/android/datatransport/runtime/time/Clock;
 
-    .line 24
+    .line 25
     invoke-interface {p0}, Lcom/google/android/datatransport/runtime/time/Clock;->getTime()J
 
     move-result-wide v0
 
     add-long/2addr v0, v5
 
-    .line 25
+    .line 26
     invoke-virtual {p3, p2, v0, v1, p1}, Landroid/app/AlarmManager;->set(IJLandroid/app/PendingIntent;)V
 
     return-void

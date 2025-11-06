@@ -14,6 +14,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,6 +24,24 @@
 # virtual methods
 .method public drawZoomRatioBackground(Landroid/content/Context;Lcom/android/camera/ui/zoom/ZoomRatioToggleView;Landroid/graphics/Canvas;Landroid/graphics/Paint;Landroid/graphics/Paint;I)V
     .locals 22
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "view",
+            "canvas",
+            "bgPaint",
+            "circlePaint",
+            "currentIndex"
+        }
+    .end annotation
 
     move-object/from16 v8, p3
 
@@ -30,6 +49,7 @@
 
     move-object/from16 v9, p5
 
+    .line 1
     invoke-virtual/range {p2 .. p2}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v10
@@ -40,31 +60,38 @@
 
     div-float v12, v0, v11
 
-    invoke-virtual/range {p2 .. p2}, Landroid/view/View;->getWidth()I
+    .line 2
+    invoke-virtual/range {p2 .. p2}, Landroid/view/ViewGroup;->getWidth()I
 
     move-result v13
 
-    invoke-virtual/range {p2 .. p2}, Landroid/view/View;->getHeight()I
+    .line 3
+    invoke-virtual/range {p2 .. p2}, Landroid/view/ViewGroup;->getHeight()I
 
     move-result v14
 
+    .line 4
     invoke-virtual/range {p2 .. p2}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->getZoomViewBgDelta()F
 
     move-result v0
 
+    .line 5
     invoke-virtual/range {p2 .. p2}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->getItemWidth()I
 
     move-result v15
 
+    .line 6
     invoke-virtual/range {p2 .. p2}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->getItemSize()I
 
     move-result v1
 
-    invoke-virtual/range {p2 .. p2}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->A()Z
+    .line 7
+    invoke-virtual/range {p2 .. p2}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->y()Z
 
     move-result v16
 
-    invoke-virtual/range {p2 .. p2}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->u()Z
+    .line 8
+    invoke-virtual/range {p2 .. p2}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->s()Z
 
     move-result v17
 
@@ -72,25 +99,28 @@
 
     div-float v18, v2, v11
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    .line 9
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object v2
 
-    const v3, 0x7f060951
+    const v3, 0x7f0604e7
 
-    invoke-virtual {v2, v3}, Lf2/e;->b(I)I
+    invoke-virtual {v2, v3}, Ld/d/a/k6/f;->b(I)I
 
     move-result v2
 
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    .line 10
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lm2/h1;->G0()I
+    invoke-virtual {v3}, Ld/d/a/l6/e/m/g1;->x0()I
 
     move-result v3
 
-    invoke-static {}, Ly2/b;->G0()Z
+    .line 11
+    invoke-static {}, Ld/d/a/n6/b;->G0()Z
 
     move-result v4
 
@@ -116,25 +146,27 @@
 
     if-ne v3, v4, :cond_4
 
+    .line 12
     :cond_2
-    invoke-static {}, Lf2/a;->e()Lf2/a;
+    invoke-static {}, Ld/d/a/k6/c;->e()Ld/d/a/k6/c;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lf2/a;->c()Z
+    invoke-virtual {v3}, Ld/d/a/k6/c;->c()Z
 
     move-result v3
 
     if-nez v3, :cond_4
 
+    .line 13
     :cond_3
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object v2
 
-    const v3, 0x7f060952
+    const v3, 0x7f0604e8
 
-    invoke-virtual {v2, v3}, Lf2/e;->b(I)I
+    invoke-virtual {v2, v3}, Ld/d/a/k6/f;->b(I)I
 
     move-result v2
 
@@ -143,11 +175,12 @@
 
     if-eqz v16, :cond_5
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 14
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lid/b;->n4()Z
+    invoke-virtual {v3}, Ld/k/a/b;->c4()Z
 
     move-result v3
 
@@ -246,13 +279,16 @@
 
     move/from16 v19, v5
 
+    .line 15
     :goto_0
     invoke-virtual/range {p3 .. p3}, Landroid/graphics/Canvas;->save()I
 
     move-result v6
 
+    .line 16
     invoke-virtual {v7, v2}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 17
     sget-object v0, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v7, v0}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
@@ -271,19 +307,23 @@
 
     move-object/from16 v7, p4
 
+    .line 18
     invoke-virtual/range {v0 .. v7}, Landroid/graphics/Canvas;->drawRoundRect(FFFFFFLandroid/graphics/Paint;)V
 
+    .line 19
     invoke-virtual {v8, v11}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
+    .line 20
     invoke-virtual/range {p2 .. p2}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->getZoomSelectedViewPosition()F
 
     move-result v0
 
+    .line 21
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f07108c
+    const v2, 0x7f070def
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -293,11 +333,12 @@
 
     if-eqz v16, :cond_7
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 22
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lid/b;->n4()Z
+    invoke-virtual {v3}, Ld/k/a/b;->c4()Z
 
     move-result v3
 
@@ -341,6 +382,7 @@
 
     add-float/2addr v0, v4
 
+    .line 23
     div-int/lit8 v1, v1, 0x2
 
     int-to-float v1, v1
@@ -412,6 +454,7 @@
 
     add-float/2addr v0, v3
 
+    .line 24
     div-int/lit8 v14, v14, 0x2
 
     int-to-float v2, v14
@@ -432,7 +475,8 @@
 .method public getIndicatorColor()I
     .locals 0
 
-    invoke-static {}, Lf2/f;->j()I
+    .line 1
+    invoke-static {}, Ld/d/a/k6/g;->j()I
 
     move-result p0
 
@@ -449,31 +493,40 @@
 
 .method public getOuterSingleZoomViewType(I)I
     .locals 1
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
-    const/16 p0, 0xbc
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mode"
+        }
+    .end annotation
 
-    const/16 v0, 0xe1
+    const/16 p0, 0xe1
 
-    if-eq p1, p0, :cond_0
-
-    const/16 p0, 0xaf
-
-    if-eq p1, p0, :cond_0
-
-    const/16 p0, 0xad
-
-    if-eq p1, p0, :cond_0
+    const/16 v0, 0xbc
 
     if-eq p1, v0, :cond_0
+
+    const/16 v0, 0xaf
+
+    if-eq p1, v0, :cond_0
+
+    const/16 v0, 0xad
+
+    if-eq p1, v0, :cond_0
+
+    if-eq p1, p0, :cond_0
 
     const/4 p0, 0x6
 
     return p0
 
     :cond_0
-    if-ne p1, v0, :cond_1
+    if-ne p1, p0, :cond_1
 
     const/4 p0, 0x7
 
@@ -498,7 +551,7 @@
     .annotation build Landroidx/annotation/StyleRes;
     .end annotation
 
-    const p0, 0x7f150261
+    const p0, 0x7f14019d
 
     return p0
 .end method
@@ -514,13 +567,14 @@
 .method public getSlideIndicatorColor()I
     .locals 1
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    .line 1
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object p0
 
-    const v0, 0x7f060922
+    const v0, 0x7f0604b8
 
-    invoke-virtual {p0, v0}, Lf2/e;->b(I)I
+    invoke-virtual {p0, v0}, Ld/d/a/k6/f;->b(I)I
 
     move-result p0
 
@@ -529,12 +583,21 @@
 
 .method public getZoomItemGap(Landroid/content/Context;)I
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const p1, 0x7f071082
+    const p1, 0x7f070de5
 
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -545,6 +608,16 @@
 
 .method public getZoomRes(Landroid/content/Context;I)I
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "res"
+        }
+    .end annotation
 
     const/4 p0, -0x1
 
@@ -555,6 +628,7 @@
     :cond_0
     const-string p0, "_cv"
 
+    .line 1
     invoke-static {p1, p2, p0}, Lcom/android/camera2/compat/theme/MiThemeCompat;->getOverlayRes(Landroid/content/Context;ILjava/lang/String;)I
 
     move-result p2
@@ -565,12 +639,21 @@
 
 .method public getZoomSelectedViewStrockWidth(Landroid/content/Context;)I
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const p1, 0x7f07108c
+    const p1, 0x7f070def
 
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -579,10 +662,21 @@
     return p0
 .end method
 
-.method public isOnlyZoomCount(Lea/d;Z)V
+.method public isOnlyZoomCount(Ld/d/a/d8/q2/d;Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "entryView",
+            "suppressed"
+        }
+    .end annotation
 
-    invoke-virtual {p1, p2}, Lea/d;->c(Z)V
+    .line 1
+    invoke-virtual {p1, p2}, Ld/d/a/d8/q2/d;->c(Z)V
 
     return-void
 .end method
@@ -597,27 +691,41 @@
 
 .method public setZoomSelectedPositionByIndex(Lcom/android/camera/ui/zoom/ZoomRatioToggleView;)V
     .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "zoomRatioToggleView"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p1}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->getSelectedChildIndex()I
 
     move-result p0
 
+    .line 2
     invoke-virtual {p1}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->getViewWidth()I
 
     move-result v0
 
+    .line 3
     invoke-virtual {p1}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->getViewHeight()I
 
     move-result v1
 
+    .line 4
     invoke-virtual {p1}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->getItemWidth()I
 
     move-result v2
 
-    invoke-virtual {p1}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->A()Z
+    .line 5
+    invoke-virtual {p1}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->y()Z
 
     move-result v3
 
+    .line 6
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v4
@@ -628,17 +736,19 @@
 
     div-float/2addr v5, v6
 
-    invoke-virtual {p1}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->u()Z
+    .line 7
+    invoke-virtual {p1}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->s()Z
 
     move-result v7
 
     if-eqz v3, :cond_0
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 8
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lid/b;->n4()Z
+    invoke-virtual {v3}, Ld/k/a/b;->c4()Z
 
     move-result v3
 
@@ -692,6 +802,7 @@
 
     goto :goto_0
 
+    .line 9
     :goto_2
     invoke-virtual {p1, v0}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->setZoomSelectedViewPosition(F)V
 
@@ -700,23 +811,42 @@
 
 .method public zoomSelectedViewAnimation(Lcom/android/camera/ui/zoom/ZoomRatioToggleView;II[Landroid/animation/ValueAnimator;)V
     .locals 9
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "zoomRatioToggleView",
+            "currentIndex",
+            "nextIndex",
+            "valueAnimator"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p1}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->getViewWidth()I
 
     move-result v0
 
+    .line 2
     invoke-virtual {p1}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->getViewHeight()I
 
     move-result v1
 
+    .line 3
     invoke-virtual {p1}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->getItemWidth()I
 
     move-result v2
 
-    invoke-virtual {p1}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->A()Z
+    .line 4
+    invoke-virtual {p1}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->y()Z
 
     move-result v3
 
+    .line 5
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v4
@@ -727,7 +857,8 @@
 
     div-float/2addr v5, v6
 
-    invoke-virtual {p1}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->u()Z
+    .line 6
+    invoke-virtual {p1}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->s()Z
 
     move-result v7
 
@@ -735,11 +866,12 @@
 
     if-eqz v3, :cond_0
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 7
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lid/b;->n4()Z
+    invoke-virtual {v3}, Ld/k/a/b;->c4()Z
 
     move-result v3
 
@@ -860,11 +992,15 @@
 
     aput v0, p3, v8
 
+    .line 8
     invoke-static {p3}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
     move-result-object p2
 
     aput-object p2, p4, v1
+
+    .line 9
+    aget-object p2, p4, v1
 
     new-instance p3, Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationZoomCV$1;
 
@@ -872,6 +1008,7 @@
 
     invoke-virtual {p2, p3}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
+    .line 10
     aget-object p2, p4, v1
 
     new-instance p3, Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationZoomCV$2;
@@ -880,28 +1017,34 @@
 
     invoke-virtual {p2, p3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
+    .line 11
     new-instance p0, Lmiuix/animation/utils/EaseManager$SpringInterpolator;
 
     invoke-direct {p0}, Lmiuix/animation/utils/EaseManager$SpringInterpolator;-><init>()V
 
     const p1, 0x3f666666    # 0.9f
 
+    .line 12
     invoke-virtual {p0, p1}, Lmiuix/animation/utils/EaseManager$SpringInterpolator;->setDamping(F)Lmiuix/animation/utils/EaseManager$SpringInterpolator;
 
     const p1, 0x3e99999a    # 0.3f
 
+    .line 13
     invoke-virtual {p0, p1}, Lmiuix/animation/utils/EaseManager$SpringInterpolator;->setResponse(F)Lmiuix/animation/utils/EaseManager$SpringInterpolator;
 
+    .line 14
     aget-object p1, p4, v1
 
     invoke-virtual {p1, p0}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
+    .line 15
     aget-object p0, p4, v1
 
     const-wide/16 p1, 0x384
 
     invoke-virtual {p0, p1, p2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
+    .line 16
     aget-object p0, p4, v1
 
     invoke-virtual {p0}, Landroid/animation/ValueAnimator;->start()V
@@ -911,6 +1054,21 @@
 
 .method public zoomViewBackgroundAnimation(Lcom/android/camera/ui/zoom/ZoomRatioToggleView;FLjava/util/List;I)V
     .locals 10
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "zoomRatioToggleView",
+            "start",
+            "animators",
+            "curIndex"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -922,14 +1080,17 @@
         }
     .end annotation
 
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+    .line 1
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getWidth()I
 
     move-result v0
 
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+    .line 2
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getHeight()I
 
     move-result v1
 
+    .line 3
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v2
@@ -940,15 +1101,18 @@
 
     div-float/2addr v3, v4
 
+    .line 4
     invoke-virtual {p1}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->getItemWidth()I
 
     move-result v5
 
-    invoke-virtual {p1}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->A()Z
+    .line 5
+    invoke-virtual {p1}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->y()Z
 
     move-result v6
 
-    invoke-virtual {p1}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->u()Z
+    .line 6
+    invoke-virtual {p1}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->s()Z
 
     move-result v7
 
@@ -956,11 +1120,12 @@
 
     if-eqz v6, :cond_0
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 7
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v6
 
-    invoke-virtual {v6}, Lid/b;->n4()Z
+    invoke-virtual {v6}, Ld/k/a/b;->c4()Z
 
     move-result v6
 
@@ -1040,16 +1205,19 @@
 
     aput v1, v0, v8
 
+    .line 8
     invoke-static {v0}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
     move-result-object v8
 
+    .line 9
     new-instance v0, Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationZoomCV$3;
 
     invoke-direct {v0, p0, p1, v6}, Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationZoomCV$3;-><init>(Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationZoomCV;Lcom/android/camera/ui/zoom/ZoomRatioToggleView;F)V
 
     invoke-virtual {v8, v0}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
+    .line 10
     new-instance v9, Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationZoomCV$4;
 
     move-object v0, v9
@@ -1066,6 +1234,7 @@
 
     invoke-virtual {v8, v9}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
+    .line 11
     invoke-interface {p3, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-void

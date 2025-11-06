@@ -4,21 +4,22 @@
 
 
 # static fields
-.field public static final a:Ljava/lang/String; = "getMiviInfo"
+.field public static final c:Ljava/lang/String; = "getMiviInfo"
 
-.field public static final b:Ljava/lang/String; = "getCameraControllerInfo"
+.field public static final d:Ljava/lang/String; = "getCameraControllerInfo"
 
-.field public static final c:Ljava/lang/String; = "CameraControllerInfo"
+.field public static final f:Ljava/lang/String; = "CameraControllerInfo"
 
-.field public static final d:Ljava/lang/String; = "miviInfo"
+.field public static final g:Ljava/lang/String; = "miviInfo"
 
-.field public static final e:Ljava/lang/String; = "MiviInfoContentProvider"
+.field private static final j:Ljava/lang/String; = "MiviInfoContentProvider"
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroid/content/ContentProvider;-><init>()V
 
     return-void
@@ -43,10 +44,25 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "method",
+            "arg",
+            "extras"
+        }
+    .end annotation
+
+    .line 1
     new-instance p2, Landroid/os/Bundle;
 
     invoke-direct {p2}, Landroid/os/Bundle;-><init>()V
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     const-string p3, "getMiviInfo"
@@ -72,16 +88,19 @@
     goto :goto_0
 
     :cond_0
-    const-string p0, "METHOD_CAMERA_CONTROLLER_INFO: E"
+    new-array p0, v0, [Ljava/lang/Object;
 
-    new-array p1, v0, [Ljava/lang/Object;
+    const-string p1, "METHOD_CAMERA_CONTROLLER_INFO: E"
 
-    invoke-static {v1, p0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 3
+    invoke-static {v1, p1, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {}, Le4/c;->c()Ljava/lang/String;
+    .line 4
+    invoke-static {}, Ld/d/a/r6/e/c;->a()Ljava/lang/String;
 
     move-result-object p0
 
+    .line 5
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -102,25 +121,29 @@
 
     const-string p1, "CameraControllerInfo"
 
+    .line 6
     invoke-virtual {p2, p1, p0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string p0, "METHOD_CAMERA_CONTROLLER_INFO: X"
+    new-array p0, v0, [Ljava/lang/Object;
 
-    new-array p1, v0, [Ljava/lang/Object;
+    const-string p1, "METHOD_CAMERA_CONTROLLER_INFO: X"
 
-    invoke-static {v1, p0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 7
+    invoke-static {v1, p1, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
+    .line 8
     :cond_1
     invoke-virtual {p0}, Landroid/content/ContentProvider;->getCallingPackage()Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-static {p0}, Le4/c;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Ld/d/a/r6/e/c;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 9
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -141,6 +164,7 @@
 
     const-string p1, "miviInfo"
 
+    .line 10
     invoke-virtual {p2, p1, p0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
@@ -161,6 +185,18 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "uri",
+            "selection",
+            "selectionArgs"
+        }
+    .end annotation
 
     const/4 p0, 0x0
 
@@ -174,6 +210,15 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "uri"
+        }
     .end annotation
 
     const/4 p0, 0x0
@@ -192,6 +237,17 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "uri",
+            "values"
+        }
     .end annotation
 
     const/4 p0, 0x0
@@ -232,6 +288,23 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "uri",
+            "projection",
+            "selection",
+            "selectionArgs",
+            "sortOrder"
+        }
+    .end annotation
+
     const/4 p0, 0x0
 
     return-object p0
@@ -255,6 +328,20 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "uri",
+            "values",
+            "selection",
+            "selectionArgs"
+        }
+    .end annotation
 
     const/4 p0, 0x0
 

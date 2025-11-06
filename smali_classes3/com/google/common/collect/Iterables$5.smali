@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Iterables$5;
+.class public Lcom/google/common/collect/Iterables$5;
 .super Lcom/google/common/collect/FluentIterable;
 .source "SourceFile"
 
@@ -22,15 +22,16 @@
 
 
 # instance fields
-.field final synthetic val$fromIterable:Ljava/lang/Iterable;
+.field public final synthetic val$fromIterable:Ljava/lang/Iterable;
 
-.field final synthetic val$function:Lcom/google/common/base/Function;
+.field public final synthetic val$function:Lcom/google/common/base/Function;
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/Iterable;Lcom/google/common/base/Function;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/Iterables$5;->val$fromIterable:Ljava/lang/Iterable;
 
     iput-object p2, p0, Lcom/google/common/collect/Iterables$5;->val$function:Lcom/google/common/base/Function;
@@ -52,6 +53,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Iterables$5;->val$fromIterable:Ljava/lang/Iterable;
 
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;

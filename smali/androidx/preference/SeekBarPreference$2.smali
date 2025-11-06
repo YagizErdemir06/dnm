@@ -1,4 +1,4 @@
-.class Landroidx/preference/SeekBarPreference$2;
+.class public Landroidx/preference/SeekBarPreference$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/preference/SeekBarPreference;
+.field public final synthetic this$0:Landroidx/preference/SeekBarPreference;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/preference/SeekBarPreference;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/preference/SeekBarPreference$2;->this$0:Landroidx/preference/SeekBarPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,6 +38,7 @@
 .method public onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
     .locals 1
 
+    .line 1
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
     move-result p1
@@ -47,6 +49,7 @@
 
     return v0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Landroidx/preference/SeekBarPreference$2;->this$0:Landroidx/preference/SeekBarPreference;
 
@@ -76,6 +79,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_3
     iget-object p0, p0, Landroidx/preference/SeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
 
@@ -85,12 +89,14 @@
 
     const-string p1, "SeekBar view is null and hence cannot be adjusted."
 
+    .line 4
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
 
+    .line 5
     :cond_4
-    invoke-virtual {p0, p2, p3}, Landroid/view/View;->onKeyDown(ILandroid/view/KeyEvent;)Z
+    invoke-virtual {p0, p2, p3}, Landroid/widget/SeekBar;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
     move-result p0
 

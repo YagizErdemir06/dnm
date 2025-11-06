@@ -1,14 +1,14 @@
-.class final Lcom/faceunity/core/avatar/control/BaseAvatarController$doAvatarActionBackgroundGL$1;
-.super Lkotlin/jvm/internal/n0;
+.class public final Lcom/faceunity/core/avatar/control/BaseAvatarController$doAvatarActionBackgroundGL$1;
+.super Lh/d3/x/n0;
 .source "SourceFile"
 
 # interfaces
-.implements Ljn/a;
+.implements Lh/d3/w/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/faceunity/core/avatar/control/BaseAvatarController;->doAvatarActionBackgroundGL(JZLjn/l;)V
+    value = Lcom/faceunity/core/avatar/control/BaseAvatarController;->doAvatarActionBackgroundGL(JZLh/d3/w/l;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,19 +18,24 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lkotlin/jvm/internal/n0;",
-        "Ljn/a<",
-        "Lnm/l2;",
+        "Lh/d3/x/n0;",
+        "Lh/d3/w/a<",
+        "Lh/l2;",
         ">;"
     }
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
         "\u0000\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0003\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0001\u0010\u0002"
     }
     d2 = {
-        "Lnm/l2;",
+        "Lh/l2;",
         "invoke",
         "()V",
         "<anonymous>"
@@ -45,26 +50,26 @@
 
 
 # instance fields
-.field final synthetic $avatarId:J
+.field public final synthetic $avatarId:J
 
-.field final synthetic $unit:Ljn/l;
+.field public final synthetic $unit:Lh/d3/w/l;
 
-.field final synthetic this$0:Lcom/faceunity/core/avatar/control/BaseAvatarController;
+.field public final synthetic this$0:Lcom/faceunity/core/avatar/control/BaseAvatarController;
 
 
 # direct methods
-.method public constructor <init>(Lcom/faceunity/core/avatar/control/BaseAvatarController;JLjn/l;)V
+.method public constructor <init>(Lcom/faceunity/core/avatar/control/BaseAvatarController;JLh/d3/w/l;)V
     .locals 0
 
     iput-object p1, p0, Lcom/faceunity/core/avatar/control/BaseAvatarController$doAvatarActionBackgroundGL$1;->this$0:Lcom/faceunity/core/avatar/control/BaseAvatarController;
 
     iput-wide p2, p0, Lcom/faceunity/core/avatar/control/BaseAvatarController$doAvatarActionBackgroundGL$1;->$avatarId:J
 
-    iput-object p4, p0, Lcom/faceunity/core/avatar/control/BaseAvatarController$doAvatarActionBackgroundGL$1;->$unit:Ljn/l;
+    iput-object p4, p0, Lcom/faceunity/core/avatar/control/BaseAvatarController$doAvatarActionBackgroundGL$1;->$unit:Lh/d3/w/l;
 
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Lkotlin/jvm/internal/n0;-><init>(I)V
+    invoke-direct {p0, p1}, Lh/d3/x/n0;-><init>(I)V
 
     return-void
 .end method
@@ -77,7 +82,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/avatar/control/BaseAvatarController$doAvatarActionBackgroundGL$1;->invoke()V
 
-    sget-object p0, Lnm/l2;->a:Lnm/l2;
+    sget-object p0, Lh/l2;->a:Lh/l2;
 
     return-object p0
 .end method
@@ -109,9 +114,9 @@
 
     iget-wide v1, p0, Lcom/faceunity/core/avatar/control/BaseAvatarController$doAvatarActionBackgroundGL$1;->$avatarId:J
 
-    iget-object p0, p0, Lcom/faceunity/core/avatar/control/BaseAvatarController$doAvatarActionBackgroundGL$1;->$unit:Ljn/l;
+    iget-object p0, p0, Lcom/faceunity/core/avatar/control/BaseAvatarController$doAvatarActionBackgroundGL$1;->$unit:Lh/d3/w/l;
 
-    invoke-virtual {v0, v1, v2, p0}, Lcom/faceunity/core/avatar/control/BaseAvatarController;->doAvatarActionGL(JLjn/l;)V
+    invoke-virtual {v0, v1, v2, p0}, Lcom/faceunity/core/avatar/control/BaseAvatarController;->doAvatarActionGL(JLh/d3/w/l;)V
 
     return-void
 

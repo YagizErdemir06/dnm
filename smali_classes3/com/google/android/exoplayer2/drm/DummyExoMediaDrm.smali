@@ -16,6 +16,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,6 +25,7 @@
 .method public static getInstance()Lcom/google/android/exoplayer2/drm/DummyExoMediaDrm;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/drm/DummyExoMediaDrm;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/drm/DummyExoMediaDrm;-><init>()V
@@ -48,6 +50,7 @@
 .method public createCryptoConfig([B)Lcom/google/android/exoplayer2/decoder/CryptoConfig;
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/IllegalStateException;
 
     invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
@@ -87,6 +90,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/IllegalStateException;
 
     invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
@@ -107,6 +111,7 @@
 .method public getPropertyByteArray(Ljava/lang/String;)[B
     .locals 0
 
+    .line 1
     sget-object p0, Lcom/google/android/exoplayer2/util/Util;->EMPTY_BYTE_ARRAY:[B
 
     return-object p0
@@ -123,6 +128,7 @@
 .method public getProvisionRequest()Lcom/google/android/exoplayer2/drm/ExoMediaDrm$ProvisionRequest;
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/IllegalStateException;
 
     invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
@@ -138,6 +144,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Landroid/media/MediaDrmException;
 
     const-string v0, "Attempting to open a session using a dummy ExoMediaDrm."
@@ -152,6 +159,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/IllegalStateException;
 
     invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
@@ -162,6 +170,7 @@
 .method public provideProvisionResponse([B)V
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/IllegalStateException;
 
     invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
@@ -181,6 +190,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/IllegalStateException;
 
     invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
@@ -197,6 +207,7 @@
 .method public requiresSecureDecoder([BLjava/lang/String;)Z
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/IllegalStateException;
 
     invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
@@ -207,6 +218,7 @@
 .method public restoreKeys([B[B)V
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/IllegalStateException;
 
     invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V

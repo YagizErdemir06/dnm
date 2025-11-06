@@ -34,6 +34,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -88,6 +89,7 @@
 .method public onChanged(IILjava/lang/Object;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroidx/recyclerview/widget/SortedList$Callback;->onChanged(II)V
 
     return-void

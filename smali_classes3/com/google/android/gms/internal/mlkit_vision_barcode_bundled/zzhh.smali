@@ -1,10 +1,10 @@
-.class abstract Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhh;
+.class public abstract Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field final zza:Lsun/misc/Unsafe;
+.field public final zza:Lsun/misc/Unsafe;
 
 
 # direct methods

@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/ImmutableMapKeySet;
+.class public final Lcom/google/common/collect/ImmutableMapKeySet;
 .super Lcom/google/common/collect/IndexedImmutableSet;
 .source "SourceFile"
 
@@ -52,8 +52,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/IndexedImmutableSet;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/ImmutableMapKeySet;->map:Lcom/google/common/collect/ImmutableMap;
 
     return-void
@@ -68,6 +70,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMapKeySet;->map:Lcom/google/common/collect/ImmutableMap;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableMap;->containsKey(Ljava/lang/Object;)Z
@@ -85,6 +88,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMapKeySet;->map:Lcom/google/common/collect/ImmutableMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMap;->entrySet()Lcom/google/common/collect/ImmutableSet;
@@ -150,6 +154,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMapKeySet;->map:Lcom/google/common/collect/ImmutableMap;
 
     invoke-interface {p0}, Ljava/util/Map;->size()I
@@ -164,6 +169,7 @@
     .annotation build Lcom/google/common/annotations/GwtIncompatible;
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ImmutableMapKeySet$KeySetSerializedForm;
 
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMapKeySet;->map:Lcom/google/common/collect/ImmutableMap;

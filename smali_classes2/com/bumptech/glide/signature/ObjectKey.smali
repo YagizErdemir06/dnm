@@ -18,8 +18,10 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -34,12 +36,15 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
+    .line 1
     instance-of v0, p1, Lcom/bumptech/glide/signature/ObjectKey;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/bumptech/glide/signature/ObjectKey;
 
+    .line 3
     iget-object p0, p0, Lcom/bumptech/glide/signature/ObjectKey;->object:Ljava/lang/Object;
 
     iget-object p1, p1, Lcom/bumptech/glide/signature/ObjectKey;->object:Ljava/lang/Object;
@@ -59,6 +64,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/signature/ObjectKey;->object:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
@@ -71,6 +77,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -101,6 +108,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/signature/ObjectKey;->object:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;

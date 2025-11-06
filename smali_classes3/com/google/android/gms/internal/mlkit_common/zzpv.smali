@@ -21,14 +21,17 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/google/android/gms/internal/mlkit_common/zzph;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p2, p0, Lcom/google/android/gms/internal/mlkit_common/zzpv;->zzc:Lcom/google/android/gms/internal/mlkit_common/zzph;
 
     sget-object p2, Lcom/google/android/datatransport/cct/CCTDestination;->INSTANCE:Lcom/google/android/datatransport/cct/CCTDestination;
 
+    .line 2
     invoke-static {p1}, Lcom/google/android/datatransport/runtime/TransportRuntime;->initialize(Landroid/content/Context;)V
 
+    .line 3
     invoke-static {}, Lcom/google/android/datatransport/runtime/TransportRuntime;->getInstance()Lcom/google/android/datatransport/runtime/TransportRuntime;
 
     move-result-object p1
@@ -37,6 +40,7 @@
 
     move-result-object p1
 
+    .line 4
     invoke-virtual {p2}, Lcom/google/android/datatransport/cct/CCTDestination;->getSupportedEncodings()Ljava/util/Set;
 
     move-result-object p2
@@ -53,6 +57,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 5
     new-instance p2, Lcom/google/firebase/components/Lazy;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_common/zzps;
@@ -63,6 +68,7 @@
 
     iput-object p2, p0, Lcom/google/android/gms/internal/mlkit_common/zzpv;->zza:Lcom/google/firebase/inject/Provider;
 
+    .line 6
     :cond_0
     new-instance p2, Lcom/google/firebase/components/Lazy;
 
@@ -82,12 +88,14 @@
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_common/zzph;->zza()I
 
     move-result p0
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-interface {p1, p0, v0}, Lcom/google/android/gms/internal/mlkit_common/zzpe;->zze(IZ)[B
 
     move-result-object p0
@@ -104,6 +112,7 @@
 .method public final zza(Lcom/google/android/gms/internal/mlkit_common/zzpe;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_common/zzpv;->zzc:Lcom/google/android/gms/internal/mlkit_common/zzph;
 
     invoke-virtual {v0}, Lcom/google/android/gms/internal/mlkit_common/zzph;->zza()I
@@ -116,6 +125,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {v0}, Lcom/google/firebase/inject/Provider;->get()Ljava/lang/Object;
 
     move-result-object v0
@@ -136,6 +146,7 @@
     :cond_1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_common/zzpv;->zzb:Lcom/google/firebase/inject/Provider;
 
+    .line 3
     invoke-interface {v0}, Lcom/google/firebase/inject/Provider;->get()Ljava/lang/Object;
 
     move-result-object v0

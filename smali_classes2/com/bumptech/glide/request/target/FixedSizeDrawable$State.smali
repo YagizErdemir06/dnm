@@ -1,4 +1,4 @@
-.class final Lcom/bumptech/glide/request/target/FixedSizeDrawable$State;
+.class public final Lcom/bumptech/glide/request/target/FixedSizeDrawable$State;
 .super Landroid/graphics/drawable/Drawable$ConstantState;
 .source "SourceFile"
 
@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field final height:I
+.field public final height:I
 
-.field final width:I
+.field public final width:I
 
 .field private final wrapped:Landroid/graphics/drawable/Drawable$ConstantState;
 

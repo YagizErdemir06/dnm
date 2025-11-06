@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/DenseImmutableTable$Column;
+.class public final Lcom/google/common/collect/DenseImmutableTable$Column;
 .super Lcom/google/common/collect/DenseImmutableTable$ImmutableArrayMap;
 .source "SourceFile"
 
@@ -24,15 +24,17 @@
 # instance fields
 .field private final columnIndex:I
 
-.field final synthetic this$0:Lcom/google/common/collect/DenseImmutableTable;
+.field public final synthetic this$0:Lcom/google/common/collect/DenseImmutableTable;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/DenseImmutableTable;I)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/DenseImmutableTable$Column;->this$0:Lcom/google/common/collect/DenseImmutableTable;
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/collect/DenseImmutableTable;->access$500(Lcom/google/common/collect/DenseImmutableTable;)[I
 
     move-result-object p1
@@ -41,6 +43,7 @@
 
     invoke-direct {p0, p1}, Lcom/google/common/collect/DenseImmutableTable$ImmutableArrayMap;-><init>(I)V
 
+    .line 3
     iput p2, p0, Lcom/google/common/collect/DenseImmutableTable$Column;->columnIndex:I
 
     return-void
@@ -59,6 +62,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/DenseImmutableTable$Column;->this$0:Lcom/google/common/collect/DenseImmutableTable;
 
     invoke-static {v0}, Lcom/google/common/collect/DenseImmutableTable;->access$400(Lcom/google/common/collect/DenseImmutableTable;)[[Ljava/lang/Object;
@@ -94,6 +98,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/DenseImmutableTable$Column;->this$0:Lcom/google/common/collect/DenseImmutableTable;
 
     invoke-static {p0}, Lcom/google/common/collect/DenseImmutableTable;->access$600(Lcom/google/common/collect/DenseImmutableTable;)Lcom/google/common/collect/ImmutableMap;

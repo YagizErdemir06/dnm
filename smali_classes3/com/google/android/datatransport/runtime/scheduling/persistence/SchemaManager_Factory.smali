@@ -18,30 +18,30 @@
 
 
 # instance fields
-.field private final contextProvider:Lmm/c;
+.field private final contextProvider:Lg/a/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lmm/c<",
+            "Lg/a/c<",
             "Landroid/content/Context;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final dbNameProvider:Lmm/c;
+.field private final dbNameProvider:Lg/a/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lmm/c<",
+            "Lg/a/c<",
             "Ljava/lang/String;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final schemaVersionProvider:Lmm/c;
+.field private final schemaVersionProvider:Lg/a/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lmm/c<",
+            "Lg/a/c<",
             "Ljava/lang/Integer;",
             ">;"
         }
@@ -50,55 +50,60 @@
 
 
 # direct methods
-.method public constructor <init>(Lmm/c;Lmm/c;Lmm/c;)V
+.method public constructor <init>(Lg/a/c;Lg/a/c;Lg/a/c;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Landroid/content/Context;",
             ">;",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Ljava/lang/String;",
             ">;",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Ljava/lang/Integer;",
             ">;)V"
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager_Factory;->contextProvider:Lmm/c;
+    .line 2
+    iput-object p1, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager_Factory;->contextProvider:Lg/a/c;
 
-    iput-object p2, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager_Factory;->dbNameProvider:Lmm/c;
+    .line 3
+    iput-object p2, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager_Factory;->dbNameProvider:Lg/a/c;
 
-    iput-object p3, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager_Factory;->schemaVersionProvider:Lmm/c;
+    .line 4
+    iput-object p3, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager_Factory;->schemaVersionProvider:Lg/a/c;
 
     return-void
 .end method
 
-.method public static create(Lmm/c;Lmm/c;Lmm/c;)Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager_Factory;
+.method public static create(Lg/a/c;Lg/a/c;Lg/a/c;)Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager_Factory;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Landroid/content/Context;",
             ">;",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Ljava/lang/String;",
             ">;",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Ljava/lang/Integer;",
             ">;)",
             "Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager_Factory;"
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager_Factory;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager_Factory;-><init>(Lmm/c;Lmm/c;Lmm/c;)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager_Factory;-><init>(Lg/a/c;Lg/a/c;Lg/a/c;)V
 
     return-object v0
 .end method
@@ -106,6 +111,7 @@
 .method public static newInstance(Landroid/content/Context;Ljava/lang/String;I)Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager;-><init>(Landroid/content/Context;Ljava/lang/String;I)V
@@ -119,25 +125,25 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager_Factory;->contextProvider:Lmm/c;
+    iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager_Factory;->contextProvider:Lg/a/c;
 
-    invoke-interface {v0}, Lmm/c;->get()Ljava/lang/Object;
+    invoke-interface {v0}, Lg/a/c;->get()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager_Factory;->dbNameProvider:Lmm/c;
+    iget-object v1, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager_Factory;->dbNameProvider:Lg/a/c;
 
-    invoke-interface {v1}, Lmm/c;->get()Ljava/lang/Object;
+    invoke-interface {v1}, Lg/a/c;->get()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
-    iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager_Factory;->schemaVersionProvider:Lmm/c;
+    iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager_Factory;->schemaVersionProvider:Lg/a/c;
 
-    invoke-interface {p0}, Lmm/c;->get()Ljava/lang/Object;
+    invoke-interface {p0}, Lg/a/c;->get()Ljava/lang/Object;
 
     move-result-object p0
 

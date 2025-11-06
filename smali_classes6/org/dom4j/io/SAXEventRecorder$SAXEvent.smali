@@ -1,4 +1,4 @@
-.class Lorg/dom4j/io/SAXEventRecorder$SAXEvent;
+.class public Lorg/dom4j/io/SAXEventRecorder$SAXEvent;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,51 +18,51 @@
 
 
 # static fields
-.field static final ATTRIBUTE_DECL:B = 0x11t
+.field public static final ATTRIBUTE_DECL:B = 0x11t
 
-.field static final CHARACTERS:B = 0x8t
+.field public static final CHARACTERS:B = 0x8t
 
-.field static final COMMENT:B = 0xft
+.field public static final COMMENT:B = 0xft
 
-.field static final ELEMENT_DECL:B = 0x10t
+.field public static final ELEMENT_DECL:B = 0x10t
 
-.field static final END_CDATA:B = 0xet
+.field public static final END_CDATA:B = 0xet
 
-.field static final END_DOCUMENT:B = 0x5t
+.field public static final END_DOCUMENT:B = 0x5t
 
-.field static final END_DTD:B = 0xat
+.field public static final END_DTD:B = 0xat
 
-.field static final END_ELEMENT:B = 0x7t
+.field public static final END_ELEMENT:B = 0x7t
 
-.field static final END_ENTITY:B = 0xct
+.field public static final END_ENTITY:B = 0xct
 
-.field static final END_PREFIX_MAPPING:B = 0x3t
+.field public static final END_PREFIX_MAPPING:B = 0x3t
 
-.field static final EXTERNAL_ENTITY_DECL:B = 0x13t
+.field public static final EXTERNAL_ENTITY_DECL:B = 0x13t
 
-.field static final INTERNAL_ENTITY_DECL:B = 0x12t
+.field public static final INTERNAL_ENTITY_DECL:B = 0x12t
 
-.field static final PROCESSING_INSTRUCTION:B = 0x1t
+.field public static final PROCESSING_INSTRUCTION:B = 0x1t
 
-.field static final START_CDATA:B = 0xdt
+.field public static final START_CDATA:B = 0xdt
 
-.field static final START_DOCUMENT:B = 0x4t
+.field public static final START_DOCUMENT:B = 0x4t
 
-.field static final START_DTD:B = 0x9t
+.field public static final START_DTD:B = 0x9t
 
-.field static final START_ELEMENT:B = 0x6t
+.field public static final START_ELEMENT:B = 0x6t
 
-.field static final START_ENTITY:B = 0xbt
+.field public static final START_ENTITY:B = 0xbt
 
-.field static final START_PREFIX_MAPPING:B = 0x2t
+.field public static final START_PREFIX_MAPPING:B = 0x2t
 
 .field public static final serialVersionUID:J = 0x1L
 
 
 # instance fields
-.field protected event:B
+.field public event:B
 
-.field protected parms:Ljava/util/List;
+.field public parms:Ljava/util/List;
 
 
 # direct methods
@@ -92,10 +92,12 @@
 .method public addParm(Ljava/lang/Object;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/SAXEventRecorder$SAXEvent;->parms:Ljava/util/List;
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x3
@@ -104,6 +106,7 @@
 
     iput-object v0, p0, Lorg/dom4j/io/SAXEventRecorder$SAXEvent;->parms:Ljava/util/List;
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lorg/dom4j/io/SAXEventRecorder$SAXEvent;->parms:Ljava/util/List;
 
@@ -115,6 +118,7 @@
 .method public getParm(I)Ljava/lang/Object;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/SAXEventRecorder$SAXEvent;->parms:Ljava/util/List;
 
     if-eqz v0, :cond_0
@@ -125,6 +129,7 @@
 
     if-ge p1, v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lorg/dom4j/io/SAXEventRecorder$SAXEvent;->parms:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -148,13 +153,15 @@
         }
     .end annotation
 
-    invoke-interface {p1}, Ljava/io/DataInput;->readByte()B
+    .line 1
+    invoke-interface {p1}, Ljava/io/ObjectInput;->readByte()B
 
     move-result v0
 
     iput-byte v0, p0, Lorg/dom4j/io/SAXEventRecorder$SAXEvent;->event:B
 
-    invoke-interface {p1}, Ljava/io/DataInput;->readByte()B
+    .line 2
+    invoke-interface {p1}, Ljava/io/ObjectInput;->readByte()B
 
     move-result v0
 
@@ -162,6 +169,7 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 3
     invoke-interface {p1}, Ljava/io/ObjectInput;->readObject()Ljava/lang/Object;
 
     move-result-object p1
@@ -182,25 +190,30 @@
         }
     .end annotation
 
+    .line 1
     iget-byte v0, p0, Lorg/dom4j/io/SAXEventRecorder$SAXEvent;->event:B
 
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeByte(I)V
+    invoke-interface {p1, v0}, Ljava/io/ObjectOutput;->writeByte(I)V
 
+    .line 2
     iget-object v0, p0, Lorg/dom4j/io/SAXEventRecorder$SAXEvent;->parms:Ljava/util/List;
 
     if-nez v0, :cond_0
 
     const/4 p0, 0x2
 
-    invoke-interface {p1, p0}, Ljava/io/DataOutput;->writeByte(I)V
+    .line 3
+    invoke-interface {p1, p0}, Ljava/io/ObjectOutput;->writeByte(I)V
 
     goto :goto_0
 
     :cond_0
     const/4 v0, 0x1
 
-    invoke-interface {p1, v0}, Ljava/io/DataOutput;->writeByte(I)V
+    .line 4
+    invoke-interface {p1, v0}, Ljava/io/ObjectOutput;->writeByte(I)V
 
+    .line 5
     iget-object p0, p0, Lorg/dom4j/io/SAXEventRecorder$SAXEvent;->parms:Ljava/util/List;
 
     invoke-interface {p1, p0}, Ljava/io/ObjectOutput;->writeObject(Ljava/lang/Object;)V

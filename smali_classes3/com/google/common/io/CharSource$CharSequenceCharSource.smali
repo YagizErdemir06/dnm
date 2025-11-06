@@ -1,4 +1,4 @@
-.class Lcom/google/common/io/CharSource$CharSequenceCharSource;
+.class public Lcom/google/common/io/CharSource$CharSequenceCharSource;
 .super Lcom/google/common/io/CharSource;
 .source "SourceFile"
 
@@ -19,7 +19,7 @@
 
 
 # instance fields
-.field protected final seq:Ljava/lang/CharSequence;
+.field public final seq:Ljava/lang/CharSequence;
 
 
 # direct methods
@@ -28,6 +28,7 @@
 
     const-string v0, "\r\n|\n|\r"
 
+    .line 1
     invoke-static {v0}, Lcom/google/common/base/Splitter;->onPattern(Ljava/lang/String;)Lcom/google/common/base/Splitter;
 
     move-result-object v0
@@ -40,8 +41,10 @@
 .method public constructor <init>(Ljava/lang/CharSequence;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/io/CharSource;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -56,6 +59,7 @@
 .method public static synthetic access$100()Lcom/google/common/base/Splitter;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/common/io/CharSource$CharSequenceCharSource;->LINE_SPLITTER:Lcom/google/common/base/Splitter;
 
     return-object v0
@@ -72,6 +76,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/io/CharSource$CharSequenceCharSource$1;
 
     invoke-direct {v0, p0}, Lcom/google/common/io/CharSource$CharSequenceCharSource$1;-><init>(Lcom/google/common/io/CharSource$CharSequenceCharSource;)V
@@ -84,6 +89,7 @@
 .method public isEmpty()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/io/CharSource$CharSequenceCharSource;->seq:Ljava/lang/CharSequence;
 
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
@@ -106,6 +112,7 @@
 .method public length()J
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/io/CharSource$CharSequenceCharSource;->seq:Ljava/lang/CharSequence;
 
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
@@ -128,6 +135,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/io/CharSource$CharSequenceCharSource;->seq:Ljava/lang/CharSequence;
 
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
@@ -150,6 +158,7 @@
 .method public openStream()Ljava/io/Reader;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/io/CharSequenceReader;
 
     iget-object p0, p0, Lcom/google/common/io/CharSource$CharSequenceCharSource;->seq:Ljava/lang/CharSequence;
@@ -162,6 +171,7 @@
 .method public read()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/io/CharSource$CharSequenceCharSource;->seq:Ljava/lang/CharSequence;
 
     invoke-interface {p0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
@@ -176,10 +186,12 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/io/CharSource$CharSequenceCharSource;->linesIterator()Ljava/util/Iterator;
 
     move-result-object p0
 
+    .line 2
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
@@ -283,6 +295,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/io/CharSource$CharSequenceCharSource;->seq:Ljava/lang/CharSequence;
 
     const/16 v0, 0x1e

@@ -18,9 +18,10 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     invoke-static {}, Lorg/dom4j/DocumentFactory;->getInstance()Lorg/dom4j/DocumentFactory;
 
     move-result-object v0
@@ -107,18 +108,21 @@
 .method public add(Lorg/dom4j/Attribute;)V
     .locals 2
 
+    .line 1
     invoke-interface {p1}, Lorg/dom4j/Node;->getParent()Lorg/dom4j/Element;
 
     move-result-object v0
 
     if-nez v0, :cond_3
 
+    .line 2
     invoke-interface {p1}, Lorg/dom4j/Attribute;->getValue()Ljava/lang/String;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
+    .line 3
     invoke-interface {p1}, Lorg/dom4j/Attribute;->getQName()Lorg/dom4j/QName;
 
     move-result-object p1
@@ -129,19 +133,23 @@
 
     if-eqz p1, :cond_2
 
+    .line 4
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/DefaultElement;->remove(Lorg/dom4j/Attribute;)Z
 
     goto :goto_1
 
+    .line 5
     :cond_0
     iget-object v0, p0, Lorg/dom4j/tree/DefaultElement;->attributes:Ljava/lang/Object;
 
     if-nez v0, :cond_1
 
+    .line 6
     iput-object p1, p0, Lorg/dom4j/tree/DefaultElement;->attributes:Ljava/lang/Object;
 
     goto :goto_0
 
+    .line 7
     :cond_1
     invoke-virtual {p0}, Lorg/dom4j/tree/DefaultElement;->attributeList()Ljava/util/List;
 
@@ -149,6 +157,7 @@
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 8
     :goto_0
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/AbstractElement;->childAdded(Lorg/dom4j/Node;)V
 
@@ -156,6 +165,7 @@
     :goto_1
     return-void
 
+    .line 9
     :cond_3
     new-instance v0, Ljava/lang/StringBuffer;
 
@@ -183,6 +193,7 @@
 
     move-result-object v0
 
+    .line 10
     new-instance v1, Lorg/dom4j/IllegalAddException;
 
     invoke-direct {v1, p0, p1, v0}, Lorg/dom4j/IllegalAddException;-><init>(Lorg/dom4j/Element;Lorg/dom4j/Node;Ljava/lang/String;)V
@@ -193,36 +204,46 @@
 .method public addNewNode(Lorg/dom4j/Node;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/tree/DefaultElement;->content:Ljava/lang/Object;
 
     if-nez v0, :cond_0
 
+    .line 2
     iput-object p1, p0, Lorg/dom4j/tree/DefaultElement;->content:Ljava/lang/Object;
 
     goto :goto_0
 
+    .line 3
     :cond_0
     instance-of v1, v0, Ljava/util/List;
 
     if-eqz v1, :cond_1
 
+    .line 4
     check-cast v0, Ljava/util/List;
 
+    .line 5
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 6
     :cond_1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractBranch;->createContentList()Ljava/util/List;
 
     move-result-object v1
 
+    .line 7
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 8
     invoke-interface {v1, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 9
     iput-object v1, p0, Lorg/dom4j/tree/DefaultElement;->content:Ljava/lang/Object;
 
+    .line 10
     :goto_0
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/AbstractElement;->childAdded(Lorg/dom4j/Node;)V
 
@@ -646,14 +667,18 @@
 .method public attributeCount()I
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/DefaultElement;->attributes:Ljava/lang/Object;
 
+    .line 2
     instance-of v0, p0, Ljava/util/List;
 
     if-eqz v0, :cond_0
 
+    .line 3
     check-cast p0, Ljava/util/List;
 
+    .line 4
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p0
@@ -677,14 +702,18 @@
 .method public attributeIterator()Ljava/util/Iterator;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/tree/DefaultElement;->attributes:Ljava/lang/Object;
 
+    .line 2
     instance-of v1, v0, Ljava/util/List;
 
     if-eqz v1, :cond_0
 
+    .line 3
     check-cast v0, Ljava/util/List;
 
+    .line 4
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -694,12 +723,14 @@
     :cond_0
     if-eqz v0, :cond_1
 
+    .line 5
     invoke-virtual {p0, v0}, Lorg/dom4j/tree/AbstractElement;->createSingleIterator(Ljava/lang/Object;)Ljava/util/Iterator;
 
     move-result-object p0
 
     return-object p0
 
+    .line 6
     :cond_1
     sget-object p0, Lorg/dom4j/tree/AbstractElement;->EMPTY_ITERATOR:Ljava/util/Iterator;
 
@@ -797,6 +828,7 @@
 .method public attributes()Ljava/util/List;
     .locals 2
 
+    .line 1
     new-instance v0, Lorg/dom4j/tree/ContentListFacade;
 
     invoke-virtual {p0}, Lorg/dom4j/tree/DefaultElement;->attributeList()Ljava/util/List;
@@ -811,14 +843,17 @@
 .method public clearContent()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/tree/DefaultElement;->content:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractBranch;->contentRemoved()V
 
     const/4 v0, 0x0
 
+    .line 3
     iput-object v0, p0, Lorg/dom4j/tree/DefaultElement;->content:Ljava/lang/Object;
 
     :cond_0
@@ -828,6 +863,7 @@
 .method public clone()Ljava/lang/Object;
     .locals 2
 
+    .line 1
     invoke-super {p0}, Lorg/dom4j/tree/AbstractNode;->clone()Ljava/lang/Object;
 
     move-result-object v0
@@ -838,12 +874,16 @@
 
     const/4 v1, 0x0
 
+    .line 2
     iput-object v1, v0, Lorg/dom4j/tree/DefaultElement;->content:Ljava/lang/Object;
 
+    .line 3
     iput-object v1, v0, Lorg/dom4j/tree/DefaultElement;->attributes:Ljava/lang/Object;
 
+    .line 4
     invoke-virtual {v0, p0}, Lorg/dom4j/tree/AbstractElement;->appendAttributes(Lorg/dom4j/Element;)V
 
+    .line 5
     invoke-virtual {v0, p0}, Lorg/dom4j/tree/AbstractBranch;->appendContent(Lorg/dom4j/Branch;)V
 
     :cond_0
@@ -853,16 +893,20 @@
 .method public contentList()Ljava/util/List;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/tree/DefaultElement;->content:Ljava/lang/Object;
 
+    .line 2
     instance-of v1, v0, Ljava/util/List;
 
     if-eqz v1, :cond_0
 
+    .line 3
     check-cast v0, Ljava/util/List;
 
     return-object v0
 
+    .line 4
     :cond_0
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractBranch;->createContentList()Ljava/util/List;
 
@@ -870,8 +914,10 @@
 
     if-eqz v0, :cond_1
 
+    .line 5
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 6
     :cond_1
     iput-object v1, p0, Lorg/dom4j/tree/DefaultElement;->content:Ljava/lang/Object;
 
@@ -881,18 +927,23 @@
 .method public declaredNamespaces()Ljava/util/List;
     .locals 5
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractBranch;->createResultList()Lorg/dom4j/tree/BackedList;
 
     move-result-object v0
 
+    .line 2
     iget-object p0, p0, Lorg/dom4j/tree/DefaultElement;->content:Ljava/lang/Object;
 
+    .line 3
     instance-of v1, p0, Ljava/util/List;
 
     if-eqz v1, :cond_1
 
+    .line 4
     check-cast p0, Ljava/util/List;
 
+    .line 5
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -902,14 +953,17 @@
     :goto_0
     if-ge v2, v1, :cond_2
 
+    .line 6
     invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
+    .line 7
     instance-of v4, v3, Lorg/dom4j/Namespace;
 
     if-eqz v4, :cond_0
 
+    .line 8
     invoke-virtual {v0, v3}, Lorg/dom4j/tree/BackedList;->addLocal(Ljava/lang/Object;)V
 
     :cond_0
@@ -917,11 +971,13 @@
 
     goto :goto_0
 
+    .line 9
     :cond_1
     instance-of v1, p0, Lorg/dom4j/Namespace;
 
     if-eqz v1, :cond_2
 
+    .line 10
     invoke-virtual {v0, p0}, Lorg/dom4j/tree/BackedList;->addLocal(Ljava/lang/Object;)V
 
     :cond_2
@@ -1116,23 +1172,28 @@
 .method public getDocument()Lorg/dom4j/Document;
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/DefaultElement;->parentBranch:Lorg/dom4j/Branch;
 
     instance-of v0, p0, Lorg/dom4j/Document;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Lorg/dom4j/Document;
 
     return-object p0
 
+    .line 3
     :cond_0
     instance-of v0, p0, Lorg/dom4j/Element;
 
     if-eqz v0, :cond_1
 
+    .line 4
     check-cast p0, Lorg/dom4j/Element;
 
+    .line 5
     invoke-interface {p0}, Lorg/dom4j/Node;->getDocument()Lorg/dom4j/Document;
 
     move-result-object p0
@@ -1148,6 +1209,7 @@
 .method public getDocumentFactory()Lorg/dom4j/DocumentFactory;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/DefaultElement;->qname:Lorg/dom4j/QName;
 
     invoke-virtual {p0}, Lorg/dom4j/QName;->getDocumentFactory()Lorg/dom4j/DocumentFactory;
@@ -1158,6 +1220,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     sget-object p0, Lorg/dom4j/tree/DefaultElement;->DOCUMENT_FACTORY:Lorg/dom4j/DocumentFactory;
 
@@ -1172,6 +1235,7 @@
 
     const-string p1, ""
 
+    .line 1
     :cond_0
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->getNamespacePrefix()Ljava/lang/String;
 
@@ -1183,6 +1247,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->getNamespace()Lorg/dom4j/Namespace;
 
     move-result-object p0
@@ -1192,25 +1257,31 @@
     :cond_1
     const-string v0, "xml"
 
+    .line 3
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
+    .line 4
     sget-object p0, Lorg/dom4j/Namespace;->XML_NAMESPACE:Lorg/dom4j/Namespace;
 
     return-object p0
 
+    .line 5
     :cond_2
     iget-object v0, p0, Lorg/dom4j/tree/DefaultElement;->content:Ljava/lang/Object;
 
+    .line 6
     instance-of v1, v0, Ljava/util/List;
 
     if-eqz v1, :cond_4
 
+    .line 7
     check-cast v0, Ljava/util/List;
 
+    .line 8
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -1220,16 +1291,20 @@
     :goto_0
     if-ge v2, v1, :cond_5
 
+    .line 9
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
+    .line 10
     instance-of v4, v3, Lorg/dom4j/Namespace;
 
     if-eqz v4, :cond_3
 
+    .line 11
     check-cast v3, Lorg/dom4j/Namespace;
 
+    .line 12
     invoke-virtual {v3}, Lorg/dom4j/Namespace;->getPrefix()Ljava/lang/String;
 
     move-result-object v4
@@ -1247,13 +1322,16 @@
 
     goto :goto_0
 
+    .line 13
     :cond_4
     instance-of v1, v0, Lorg/dom4j/Namespace;
 
     if-eqz v1, :cond_5
 
+    .line 14
     check-cast v0, Lorg/dom4j/Namespace;
 
+    .line 15
     invoke-virtual {v0}, Lorg/dom4j/Namespace;->getPrefix()Ljava/lang/String;
 
     move-result-object v1
@@ -1266,6 +1344,7 @@
 
     return-object v0
 
+    .line 16
     :cond_5
     invoke-virtual {p0}, Lorg/dom4j/tree/DefaultElement;->getParent()Lorg/dom4j/Element;
 
@@ -1273,6 +1352,7 @@
 
     if-eqz p0, :cond_6
 
+    .line 17
     invoke-interface {p0, p1}, Lorg/dom4j/Element;->getNamespaceForPrefix(Ljava/lang/String;)Lorg/dom4j/Namespace;
 
     move-result-object p0
@@ -1281,6 +1361,7 @@
 
     return-object p0
 
+    .line 18
     :cond_6
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -1288,6 +1369,7 @@
 
     if-gtz p0, :cond_7
 
+    .line 19
     sget-object p0, Lorg/dom4j/Namespace;->NO_NAMESPACE:Lorg/dom4j/Namespace;
 
     return-object p0
@@ -1303,6 +1385,7 @@
 
     if-eqz p1, :cond_6
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -1311,6 +1394,7 @@
 
     goto :goto_1
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->getNamespaceURI()Ljava/lang/String;
 
@@ -1322,21 +1406,26 @@
 
     if-eqz v0, :cond_1
 
+    .line 3
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->getNamespace()Lorg/dom4j/Namespace;
 
     move-result-object p0
 
     return-object p0
 
+    .line 4
     :cond_1
     iget-object v0, p0, Lorg/dom4j/tree/DefaultElement;->content:Ljava/lang/Object;
 
+    .line 5
     instance-of v1, v0, Ljava/util/List;
 
     if-eqz v1, :cond_3
 
+    .line 6
     check-cast v0, Ljava/util/List;
 
+    .line 7
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -1346,16 +1435,20 @@
     :goto_0
     if-ge v2, v1, :cond_4
 
+    .line 8
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
+    .line 9
     instance-of v4, v3, Lorg/dom4j/Namespace;
 
     if-eqz v4, :cond_2
 
+    .line 10
     check-cast v3, Lorg/dom4j/Namespace;
 
+    .line 11
     invoke-virtual {v3}, Lorg/dom4j/Namespace;->getURI()Ljava/lang/String;
 
     move-result-object v4
@@ -1373,13 +1466,16 @@
 
     goto :goto_0
 
+    .line 12
     :cond_3
     instance-of v1, v0, Lorg/dom4j/Namespace;
 
     if-eqz v1, :cond_4
 
+    .line 13
     check-cast v0, Lorg/dom4j/Namespace;
 
+    .line 14
     invoke-virtual {v0}, Lorg/dom4j/Namespace;->getURI()Ljava/lang/String;
 
     move-result-object v1
@@ -1392,6 +1488,7 @@
 
     return-object v0
 
+    .line 15
     :cond_4
     invoke-virtual {p0}, Lorg/dom4j/tree/DefaultElement;->getParent()Lorg/dom4j/Element;
 
@@ -1399,6 +1496,7 @@
 
     if-eqz p0, :cond_5
 
+    .line 16
     invoke-interface {p0, p1}, Lorg/dom4j/Element;->getNamespaceForURI(Ljava/lang/String;)Lorg/dom4j/Namespace;
 
     move-result-object p0
@@ -1410,6 +1508,7 @@
 
     return-object p0
 
+    .line 17
     :cond_6
     :goto_1
     sget-object p0, Lorg/dom4j/Namespace;->NO_NAMESPACE:Lorg/dom4j/Namespace;
@@ -1420,12 +1519,14 @@
 .method public getParent()Lorg/dom4j/Element;
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/DefaultElement;->parentBranch:Lorg/dom4j/Branch;
 
     instance-of v0, p0, Lorg/dom4j/Element;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Lorg/dom4j/Element;
 
     goto :goto_0
@@ -1440,6 +1541,7 @@
 .method public getQName()Lorg/dom4j/QName;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/DefaultElement;->qname:Lorg/dom4j/QName;
 
     return-object p0
@@ -1448,14 +1550,18 @@
 .method public getStringValue()Ljava/lang/String;
     .locals 6
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/tree/DefaultElement;->content:Ljava/lang/Object;
 
+    .line 2
     instance-of v1, v0, Ljava/util/List;
 
     if-eqz v1, :cond_3
 
+    .line 3
     check-cast v0, Ljava/util/List;
 
+    .line 4
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -1468,6 +1574,7 @@
 
     if-ne v1, v3, :cond_0
 
+    .line 5
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -1478,6 +1585,7 @@
 
     return-object p0
 
+    .line 6
     :cond_0
     new-instance v3, Ljava/lang/StringBuffer;
 
@@ -1486,20 +1594,24 @@
     :goto_0
     if-ge v2, v1, :cond_2
 
+    .line 7
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
+    .line 8
     invoke-virtual {p0, v4}, Lorg/dom4j/tree/AbstractBranch;->getContentAsStringValue(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
+    .line 9
     invoke-virtual {v4}, Ljava/lang/String;->length()I
 
     move-result v5
 
     if-lez v5, :cond_1
 
+    .line 10
     invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_1
@@ -1507,6 +1619,7 @@
 
     goto :goto_0
 
+    .line 11
     :cond_2
     invoke-virtual {v3}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -1517,6 +1630,7 @@
     :cond_3
     if-eqz v0, :cond_4
 
+    .line 12
     invoke-virtual {p0, v0}, Lorg/dom4j/tree/AbstractBranch;->getContentAsStringValue(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -1532,12 +1646,15 @@
 .method public getText()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/tree/DefaultElement;->content:Ljava/lang/Object;
 
+    .line 2
     instance-of v1, v0, Ljava/util/List;
 
     if-eqz v1, :cond_0
 
+    .line 3
     invoke-super {p0}, Lorg/dom4j/tree/AbstractBranch;->getText()Ljava/lang/String;
 
     move-result-object p0
@@ -1547,6 +1664,7 @@
     :cond_0
     if-eqz v0, :cond_1
 
+    .line 4
     invoke-virtual {p0, v0}, Lorg/dom4j/tree/AbstractBranch;->getContentAsText(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -1562,14 +1680,18 @@
 .method public indexOf(Lorg/dom4j/Node;)I
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/DefaultElement;->content:Ljava/lang/Object;
 
+    .line 2
     instance-of v0, p0, Ljava/util/List;
 
     if-eqz v0, :cond_0
 
+    .line 3
     check-cast p0, Ljava/util/List;
 
+    .line 4
     invoke-interface {p0, p1}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
 
     move-result p0
@@ -1579,6 +1701,7 @@
     :cond_0
     if-eqz p0, :cond_1
 
+    .line 5
     invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -1602,14 +1725,18 @@
 
     if-ltz p1, :cond_4
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/DefaultElement;->content:Ljava/lang/Object;
 
+    .line 2
     instance-of v1, p0, Ljava/util/List;
 
     if-eqz v1, :cond_1
 
+    .line 3
     check-cast p0, Ljava/util/List;
 
+    .line 4
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -1618,6 +1745,7 @@
 
     return-object v0
 
+    .line 5
     :cond_0
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1636,14 +1764,17 @@
     :goto_0
     if-eqz p0, :cond_4
 
+    .line 6
     instance-of p1, p0, Lorg/dom4j/Node;
 
     if-eqz p1, :cond_3
 
+    .line 7
     check-cast p0, Lorg/dom4j/Node;
 
     return-object p0
 
+    .line 8
     :cond_3
     new-instance p1, Lorg/dom4j/tree/DefaultText;
 
@@ -1662,14 +1793,18 @@
 .method public nodeCount()I
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/DefaultElement;->content:Ljava/lang/Object;
 
+    .line 2
     instance-of v0, p0, Ljava/util/List;
 
     if-eqz v0, :cond_0
 
+    .line 3
     check-cast p0, Ljava/util/List;
 
+    .line 4
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p0
@@ -1693,14 +1828,18 @@
 .method public nodeIterator()Ljava/util/Iterator;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/tree/DefaultElement;->content:Ljava/lang/Object;
 
+    .line 2
     instance-of v1, v0, Ljava/util/List;
 
     if-eqz v1, :cond_0
 
+    .line 3
     check-cast v0, Ljava/util/List;
 
+    .line 4
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -1710,12 +1849,14 @@
     :cond_0
     if-eqz v0, :cond_1
 
+    .line 5
     invoke-virtual {p0, v0}, Lorg/dom4j/tree/AbstractElement;->createSingleIterator(Ljava/lang/Object;)Ljava/util/Iterator;
 
     move-result-object p0
 
     return-object p0
 
+    .line 6
     :cond_1
     sget-object p0, Lorg/dom4j/tree/AbstractElement;->EMPTY_ITERATOR:Ljava/util/Iterator;
 
@@ -1725,14 +1866,18 @@
 .method public processingInstruction(Ljava/lang/String;)Lorg/dom4j/ProcessingInstruction;
     .locals 4
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/DefaultElement;->content:Ljava/lang/Object;
 
+    .line 2
     instance-of v0, p0, Ljava/util/List;
 
     if-eqz v0, :cond_1
 
+    .line 3
     check-cast p0, Ljava/util/List;
 
+    .line 4
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -1742,16 +1887,20 @@
     :goto_0
     if-ge v1, v0, :cond_2
 
+    .line 5
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
+    .line 6
     instance-of v3, v2, Lorg/dom4j/ProcessingInstruction;
 
     if-eqz v3, :cond_0
 
+    .line 7
     check-cast v2, Lorg/dom4j/ProcessingInstruction;
 
+    .line 8
     invoke-interface {v2}, Lorg/dom4j/Node;->getName()Ljava/lang/String;
 
     move-result-object v3
@@ -1769,13 +1918,16 @@
 
     goto :goto_0
 
+    .line 9
     :cond_1
     instance-of v0, p0, Lorg/dom4j/ProcessingInstruction;
 
     if-eqz v0, :cond_2
 
+    .line 10
     check-cast p0, Lorg/dom4j/ProcessingInstruction;
 
+    .line 11
     invoke-interface {p0}, Lorg/dom4j/Node;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -1969,22 +2121,27 @@
 .method public remove(Lorg/dom4j/Attribute;)Z
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/tree/DefaultElement;->attributes:Ljava/lang/Object;
 
+    .line 2
     instance-of v1, v0, Ljava/util/List;
 
     const/4 v2, 0x1
 
     if-eqz v1, :cond_1
 
+    .line 3
     check-cast v0, Ljava/util/List;
 
+    .line 4
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
+    .line 5
     invoke-interface {p1}, Lorg/dom4j/Attribute;->getQName()Lorg/dom4j/QName;
 
     move-result-object v3
@@ -1995,6 +2152,7 @@
 
     if-eqz v3, :cond_0
 
+    .line 6
     invoke-interface {v0, v3}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -2007,6 +2165,7 @@
     :cond_1
     if-eqz v0, :cond_3
 
+    .line 7
     invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2015,13 +2174,16 @@
 
     if-eqz v1, :cond_2
 
+    .line 8
     iput-object v3, p0, Lorg/dom4j/tree/DefaultElement;->attributes:Ljava/lang/Object;
 
     goto :goto_0
 
+    .line 9
     :cond_2
     check-cast v0, Lorg/dom4j/Attribute;
 
+    .line 10
     invoke-interface {p1}, Lorg/dom4j/Attribute;->getQName()Lorg/dom4j/QName;
 
     move-result-object v1
@@ -2036,6 +2198,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 11
     iput-object v3, p0, Lorg/dom4j/tree/DefaultElement;->attributes:Ljava/lang/Object;
 
     goto :goto_0
@@ -2046,6 +2209,7 @@
     :goto_0
     if-eqz v2, :cond_4
 
+    .line 12
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/AbstractElement;->childRemoved(Lorg/dom4j/Node;)V
 
     :cond_4
@@ -2055,6 +2219,7 @@
 .method public removeNode(Lorg/dom4j/Node;)Z
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/tree/DefaultElement;->content:Ljava/lang/Object;
 
     if-eqz v0, :cond_1
@@ -2063,19 +2228,23 @@
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Lorg/dom4j/tree/DefaultElement;->content:Ljava/lang/Object;
 
     const/4 v0, 0x1
 
     goto :goto_0
 
+    .line 3
     :cond_0
     instance-of v1, v0, Ljava/util/List;
 
     if-eqz v1, :cond_1
 
+    .line 4
     check-cast v0, Ljava/util/List;
 
+    .line 5
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
     move-result v0
@@ -2088,6 +2257,7 @@
     :goto_0
     if-eqz v0, :cond_2
 
+    .line 6
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/AbstractElement;->childRemoved(Lorg/dom4j/Node;)V
 
     :cond_2
@@ -2097,16 +2267,20 @@
 .method public removeProcessingInstruction(Ljava/lang/String;)Z
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/tree/DefaultElement;->content:Ljava/lang/Object;
 
+    .line 2
     instance-of v1, v0, Ljava/util/List;
 
     const/4 v2, 0x1
 
     if-eqz v1, :cond_1
 
+    .line 3
     check-cast v0, Ljava/util/List;
 
+    .line 4
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -2118,16 +2292,20 @@
 
     if-eqz v0, :cond_2
 
+    .line 5
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 6
     instance-of v1, v0, Lorg/dom4j/ProcessingInstruction;
 
     if-eqz v1, :cond_0
 
+    .line 7
     check-cast v0, Lorg/dom4j/ProcessingInstruction;
 
+    .line 8
     invoke-interface {v0}, Lorg/dom4j/Node;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -2138,17 +2316,21 @@
 
     if-eqz v0, :cond_0
 
+    .line 9
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V
 
     return v2
 
+    .line 10
     :cond_1
     instance-of v1, v0, Lorg/dom4j/ProcessingInstruction;
 
     if-eqz v1, :cond_2
 
+    .line 11
     check-cast v0, Lorg/dom4j/ProcessingInstruction;
 
+    .line 12
     invoke-interface {v0}, Lorg/dom4j/Node;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -2161,6 +2343,7 @@
 
     const/4 p1, 0x0
 
+    .line 13
     iput-object p1, p0, Lorg/dom4j/tree/DefaultElement;->content:Ljava/lang/Object;
 
     return v2
@@ -2174,6 +2357,7 @@
 .method public setAttributeList(Ljava/util/List;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/tree/DefaultElement;->attributes:Ljava/lang/Object;
 
     return-void
@@ -2182,16 +2366,19 @@
 .method public setAttributes(Ljava/util/List;)V
     .locals 1
 
+    .line 1
     instance-of v0, p1, Lorg/dom4j/tree/ContentListFacade;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lorg/dom4j/tree/ContentListFacade;
 
     invoke-virtual {p1}, Lorg/dom4j/tree/ContentListFacade;->getBackingList()Ljava/util/List;
 
     move-result-object p1
 
+    .line 3
     :cond_0
     iput-object p1, p0, Lorg/dom4j/tree/DefaultElement;->attributes:Ljava/lang/Object;
 
@@ -2201,12 +2388,15 @@
 .method public setContent(Ljava/util/List;)V
     .locals 5
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractBranch;->contentRemoved()V
 
+    .line 2
     instance-of v0, p1, Lorg/dom4j/tree/ContentListFacade;
 
     if-eqz v0, :cond_0
 
+    .line 3
     check-cast p1, Lorg/dom4j/tree/ContentListFacade;
 
     invoke-virtual {p1}, Lorg/dom4j/tree/ContentListFacade;->getBackingList()Ljava/util/List;
@@ -2218,15 +2408,18 @@
 
     const/4 p1, 0x0
 
+    .line 4
     iput-object p1, p0, Lorg/dom4j/tree/DefaultElement;->content:Ljava/lang/Object;
 
     goto :goto_2
 
+    .line 5
     :cond_1
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
 
+    .line 6
     invoke-virtual {p0, v0}, Lorg/dom4j/tree/AbstractBranch;->createContentList(I)Ljava/util/List;
 
     move-result-object v1
@@ -2236,16 +2429,20 @@
     :goto_0
     if-ge v2, v0, :cond_5
 
+    .line 7
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
+    .line 8
     instance-of v4, v3, Lorg/dom4j/Node;
 
     if-eqz v4, :cond_3
 
+    .line 9
     check-cast v3, Lorg/dom4j/Node;
 
+    .line 10
     invoke-interface {v3}, Lorg/dom4j/Node;->getParent()Lorg/dom4j/Element;
 
     move-result-object v4
@@ -2254,15 +2451,18 @@
 
     if-eq v4, p0, :cond_2
 
+    .line 11
     invoke-interface {v3}, Lorg/dom4j/Node;->clone()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lorg/dom4j/Node;
 
+    .line 12
     :cond_2
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 13
     invoke-virtual {p0, v3}, Lorg/dom4j/tree/AbstractElement;->childAdded(Lorg/dom4j/Node;)V
 
     goto :goto_1
@@ -2270,10 +2470,12 @@
     :cond_3
     if-eqz v3, :cond_4
 
+    .line 14
     invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v3
 
+    .line 15
     invoke-virtual {p0}, Lorg/dom4j/tree/DefaultElement;->getDocumentFactory()Lorg/dom4j/DocumentFactory;
 
     move-result-object v4
@@ -2282,8 +2484,10 @@
 
     move-result-object v3
 
+    .line 16
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 17
     invoke-virtual {p0, v3}, Lorg/dom4j/tree/AbstractElement;->childAdded(Lorg/dom4j/Node;)V
 
     :cond_4
@@ -2292,6 +2496,7 @@
 
     goto :goto_0
 
+    .line 18
     :cond_5
     iput-object v1, p0, Lorg/dom4j/tree/DefaultElement;->content:Ljava/lang/Object;
 
@@ -2302,6 +2507,7 @@
 .method public setDocument(Lorg/dom4j/Document;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/tree/DefaultElement;->parentBranch:Lorg/dom4j/Branch;
 
     instance-of v0, v0, Lorg/dom4j/Document;
@@ -2310,6 +2516,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 2
     :cond_0
     iput-object p1, p0, Lorg/dom4j/tree/DefaultElement;->parentBranch:Lorg/dom4j/Branch;
 
@@ -2320,6 +2527,7 @@
 .method public setParent(Lorg/dom4j/Element;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/tree/DefaultElement;->parentBranch:Lorg/dom4j/Branch;
 
     instance-of v0, v0, Lorg/dom4j/Element;
@@ -2328,6 +2536,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 2
     :cond_0
     iput-object p1, p0, Lorg/dom4j/tree/DefaultElement;->parentBranch:Lorg/dom4j/Branch;
 
@@ -2338,6 +2547,7 @@
 .method public setQName(Lorg/dom4j/QName;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/tree/DefaultElement;->qname:Lorg/dom4j/QName;
 
     return-void

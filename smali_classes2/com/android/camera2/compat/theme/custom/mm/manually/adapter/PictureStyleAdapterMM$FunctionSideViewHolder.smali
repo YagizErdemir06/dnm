@@ -1,4 +1,4 @@
-.class Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/PictureStyleAdapterMM$FunctionSideViewHolder;
+.class public Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/PictureStyleAdapterMM$FunctionSideViewHolder;
 .super Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/DiverseAdapter$DiverseViewHolder;
 .source "SourceFile"
 
@@ -16,30 +16,45 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/DiverseAdapter<",
-        "Lcom/android/camera/data/data/c;",
+        "Ld/d/a/l6/e/c;",
         ">.DiverseViewHolder;"
     }
 .end annotation
 
 
 # instance fields
-.field recyclerView:Landroidx/recyclerview/widget/RecyclerView;
+.field public recyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-.field rootView:Landroid/widget/LinearLayout;
+.field public rootView:Landroid/widget/LinearLayout;
 
-.field final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/PictureStyleAdapterMM;
+.field public final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/PictureStyleAdapterMM;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/PictureStyleAdapterMM;Landroid/view/View;Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/DiverseAdapter;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x0,
+            0x0
+        }
+        names = {
+            "this$0",
+            "itemView",
+            "mAdapter"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/PictureStyleAdapterMM$FunctionSideViewHolder;->this$0:Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/PictureStyleAdapterMM;
 
+    .line 2
     invoke-direct {p0, p1, p2, p3}, Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/DiverseAdapter$DiverseViewHolder;-><init>(Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/DiverseAdapter;Landroid/view/View;Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/DiverseAdapter;)V
 
-    const p1, 0x7f0b0679
+    const p1, 0x7f0b05b8
 
+    .line 3
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -48,8 +63,9 @@
 
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/PictureStyleAdapterMM$FunctionSideViewHolder;->rootView:Landroid/widget/LinearLayout;
 
-    const p1, 0x7f0b0678
+    const p1, 0x7f0b05b7
 
+    .line 4
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -71,8 +87,18 @@
     return p0
 .end method
 
-.method public setDataToView(Lcom/android/camera/data/data/c;I)V
+.method public setDataToView(Ld/d/a/l6/e/c;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "item",
+            "position"
+        }
+    .end annotation
 
     .line 2
     invoke-super {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/DiverseAdapter$DiverseViewHolder;->setDataToView(Ljava/lang/Object;I)V
@@ -82,11 +108,21 @@
 
 .method public bridge synthetic setDataToView(Ljava/lang/Object;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "item",
+            "position"
+        }
+    .end annotation
 
     .line 1
-    check-cast p1, Lcom/android/camera/data/data/c;
+    check-cast p1, Ld/d/a/l6/e/c;
 
-    invoke-virtual {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/PictureStyleAdapterMM$FunctionSideViewHolder;->setDataToView(Lcom/android/camera/data/data/c;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/PictureStyleAdapterMM$FunctionSideViewHolder;->setDataToView(Ld/d/a/l6/e/c;I)V
 
     return-void
 .end method

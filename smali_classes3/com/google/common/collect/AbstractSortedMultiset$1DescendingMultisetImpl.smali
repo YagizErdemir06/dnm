@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/AbstractSortedMultiset$1DescendingMultisetImpl;
+.class public Lcom/google/common/collect/AbstractSortedMultiset$1DescendingMultisetImpl;
 .super Lcom/google/common/collect/DescendingMultiset;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/AbstractSortedMultiset;
+.field public final synthetic this$0:Lcom/google/common/collect/AbstractSortedMultiset;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/AbstractSortedMultiset;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/AbstractSortedMultiset$1DescendingMultisetImpl;->this$0:Lcom/google/common/collect/AbstractSortedMultiset;
 
     invoke-direct {p0}, Lcom/google/common/collect/DescendingMultiset;-><init>()V
@@ -49,6 +50,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/AbstractSortedMultiset$1DescendingMultisetImpl;->this$0:Lcom/google/common/collect/AbstractSortedMultiset;
 
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractSortedMultiset;->descendingEntryIterator()Ljava/util/Iterator;
@@ -68,6 +70,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/AbstractSortedMultiset$1DescendingMultisetImpl;->this$0:Lcom/google/common/collect/AbstractSortedMultiset;
 
     return-object p0
@@ -83,6 +86,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/AbstractSortedMultiset$1DescendingMultisetImpl;->this$0:Lcom/google/common/collect/AbstractSortedMultiset;
 
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractSortedMultiset;->descendingIterator()Ljava/util/Iterator;

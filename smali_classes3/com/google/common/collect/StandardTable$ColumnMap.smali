@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/StandardTable$ColumnMap;
+.class public Lcom/google/common/collect/StandardTable$ColumnMap;
 .super Lcom/google/common/collect/Maps$ViewCachingAbstractMap;
 .source "SourceFile"
 
@@ -31,7 +31,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/StandardTable;
+.field public final synthetic this$0:Lcom/google/common/collect/StandardTable;
 
 
 # direct methods
@@ -64,6 +64,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/StandardTable$ColumnMap;->this$0:Lcom/google/common/collect/StandardTable;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/StandardTable;->containsColumn(Ljava/lang/Object;)Z
@@ -86,6 +87,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/StandardTable$ColumnMap$ColumnMapEntrySet;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/StandardTable$ColumnMap$ColumnMapEntrySet;-><init>(Lcom/google/common/collect/StandardTable$ColumnMap;)V
@@ -104,6 +106,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/StandardTable$ColumnMap$ColumnMapValues;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/StandardTable$ColumnMap$ColumnMapValues;-><init>(Lcom/google/common/collect/StandardTable$ColumnMap;)V
@@ -183,6 +186,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/StandardTable$ColumnMap;->this$0:Lcom/google/common/collect/StandardTable;
 
     invoke-virtual {p0}, Lcom/google/common/collect/StandardTable;->columnKeySet()Ljava/util/Set;

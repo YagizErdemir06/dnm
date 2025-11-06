@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final key:Ljava/lang/Object;
+.field public final key:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TK;"
@@ -40,8 +40,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lio/reactivex/Flowable;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lio/reactivex/flowables/GroupedFlowable;->key:Ljava/lang/Object;
 
     return-void
@@ -60,6 +62,7 @@
     .annotation build Lio/reactivex/annotations/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lio/reactivex/flowables/GroupedFlowable;->key:Ljava/lang/Object;
 
     return-object p0

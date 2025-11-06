@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/MutableClassToInstanceMap$1;
+.class public Lcom/google/common/collect/MutableClassToInstanceMap$1;
 .super Lcom/google/common/collect/ForwardingMapEntry;
 .source "SourceFile"
 
@@ -23,13 +23,14 @@
 
 
 # instance fields
-.field final synthetic val$entry:Ljava/util/Map$Entry;
+.field public final synthetic val$entry:Ljava/util/Map$Entry;
 
 
 # direct methods
 .method public constructor <init>(Ljava/util/Map$Entry;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/MutableClassToInstanceMap$1;->val$entry:Ljava/util/Map$Entry;
 
     invoke-direct {p0}, Lcom/google/common/collect/ForwardingMapEntry;-><init>()V
@@ -75,6 +76,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingMapEntry;->getKey()Ljava/lang/Object;
 
     move-result-object v0

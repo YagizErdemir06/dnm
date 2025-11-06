@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public c:[I
+.field private c:[I
 
 .field public d:I
 
@@ -35,7 +35,28 @@
 # direct methods
 .method public constructor <init>(Lcom/android/camera/ui/GLTextureView;IIIIII)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1010,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "this$0",
+            "redSize",
+            "greenSize",
+            "blueSize",
+            "alphaSize",
+            "depthSize",
+            "stencilSize"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/ui/GLTextureView$c;->j:Lcom/android/camera/ui/GLTextureView;
 
     const/16 v0, 0xd
@@ -108,32 +129,94 @@
 
     aput v3, v0, v2
 
+    .line 2
     invoke-direct {p0, p1, v0}, Lcom/android/camera/ui/GLTextureView$b;-><init>(Lcom/android/camera/ui/GLTextureView;[I)V
 
     new-array p1, v1, [I
 
+    .line 3
     iput-object p1, p0, Lcom/android/camera/ui/GLTextureView$c;->c:[I
 
+    .line 4
     iput p2, p0, Lcom/android/camera/ui/GLTextureView$c;->d:I
 
+    .line 5
     iput p3, p0, Lcom/android/camera/ui/GLTextureView$c;->e:I
 
+    .line 6
     iput p4, p0, Lcom/android/camera/ui/GLTextureView$c;->f:I
 
+    .line 7
     iput p5, p0, Lcom/android/camera/ui/GLTextureView$c;->g:I
 
+    .line 8
     iput p6, p0, Lcom/android/camera/ui/GLTextureView$c;->h:I
 
+    .line 9
     iput p7, p0, Lcom/android/camera/ui/GLTextureView$c;->i:I
 
     return-void
+.end method
+
+.method private d(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;II)I
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "egl",
+            "display",
+            "config",
+            "attribute",
+            "defaultValue"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/ui/GLTextureView$c;->c:[I
+
+    invoke-interface {p1, p2, p3, p4, v0}, Ljavax/microedition/khronos/egl/EGL10;->eglGetConfigAttrib(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;I[I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    .line 2
+    iget-object p0, p0, Lcom/android/camera/ui/GLTextureView$c;->c:[I
+
+    const/4 p1, 0x0
+
+    aget p0, p0, p1
+
+    return p0
+
+    :cond_0
+    return p5
 .end method
 
 
 # virtual methods
 .method public b(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay;[Ljavax/microedition/khronos/egl/EGLConfig;)Ljavax/microedition/khronos/egl/EGLConfig;
     .locals 12
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "egl",
+            "display",
+            "configs"
+        }
+    .end annotation
 
+    .line 1
     array-length v0, p3
 
     const/4 v1, 0x0
@@ -155,16 +238,19 @@
 
     move-object v5, v8
 
-    invoke-virtual/range {v2 .. v7}, Lcom/android/camera/ui/GLTextureView$c;->d(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;II)I
+    .line 2
+    invoke-direct/range {v2 .. v7}, Lcom/android/camera/ui/GLTextureView$c;->d(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;II)I
 
     move-result v9
 
     const/16 v6, 0x3026
 
-    invoke-virtual/range {v2 .. v7}, Lcom/android/camera/ui/GLTextureView$c;->d(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;II)I
+    .line 3
+    invoke-direct/range {v2 .. v7}, Lcom/android/camera/ui/GLTextureView$c;->d(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;II)I
 
     move-result v2
 
+    .line 4
     iget v3, p0, Lcom/android/camera/ui/GLTextureView$c;->h:I
 
     if-lt v9, v3, :cond_0
@@ -185,28 +271,33 @@
 
     move-object v5, v8
 
-    invoke-virtual/range {v2 .. v7}, Lcom/android/camera/ui/GLTextureView$c;->d(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;II)I
+    .line 5
+    invoke-direct/range {v2 .. v7}, Lcom/android/camera/ui/GLTextureView$c;->d(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;II)I
 
     move-result v9
 
     const/16 v6, 0x3023
 
-    invoke-virtual/range {v2 .. v7}, Lcom/android/camera/ui/GLTextureView$c;->d(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;II)I
+    .line 6
+    invoke-direct/range {v2 .. v7}, Lcom/android/camera/ui/GLTextureView$c;->d(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;II)I
 
     move-result v10
 
     const/16 v6, 0x3022
 
-    invoke-virtual/range {v2 .. v7}, Lcom/android/camera/ui/GLTextureView$c;->d(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;II)I
+    .line 7
+    invoke-direct/range {v2 .. v7}, Lcom/android/camera/ui/GLTextureView$c;->d(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;II)I
 
     move-result v11
 
     const/16 v6, 0x3021
 
-    invoke-virtual/range {v2 .. v7}, Lcom/android/camera/ui/GLTextureView$c;->d(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;II)I
+    .line 8
+    invoke-direct/range {v2 .. v7}, Lcom/android/camera/ui/GLTextureView$c;->d(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;II)I
 
     move-result v2
 
+    .line 9
     iget v3, p0, Lcom/android/camera/ui/GLTextureView$c;->d:I
 
     if-ne v9, v3, :cond_0
@@ -234,27 +325,4 @@
     const/4 p0, 0x0
 
     return-object p0
-.end method
-
-.method public final d(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;II)I
-    .locals 1
-
-    iget-object v0, p0, Lcom/android/camera/ui/GLTextureView$c;->c:[I
-
-    invoke-interface {p1, p2, p3, p4, v0}, Ljavax/microedition/khronos/egl/EGL10;->eglGetConfigAttrib(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;I[I)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p0, p0, Lcom/android/camera/ui/GLTextureView$c;->c:[I
-
-    const/4 p1, 0x0
-
-    aget p0, p0, p1
-
-    return p0
-
-    :cond_0
-    return p5
 .end method

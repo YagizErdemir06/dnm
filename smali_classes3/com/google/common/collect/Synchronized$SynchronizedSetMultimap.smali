@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Synchronized$SynchronizedSetMultimap;
+.class public Lcom/google/common/collect/Synchronized$SynchronizedSetMultimap;
 .super Lcom/google/common/collect/Synchronized$SynchronizedMultimap;
 .source "SourceFile"
 
@@ -36,7 +36,7 @@
 
 
 # instance fields
-.field transient entrySet:Ljava/util/Set;
+.field public transient entrySet:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
@@ -67,6 +67,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/common/collect/Synchronized$SynchronizedMultimap;-><init>(Lcom/google/common/collect/Multimap;Ljava/lang/Object;)V
 
     return-void
@@ -105,7 +106,7 @@
     return-object p0
 .end method
 
-.method bridge synthetic delegate()Ljava/lang/Object;
+.method public bridge synthetic delegate()Ljava/lang/Object;
     .locals 0
 
     .line 2

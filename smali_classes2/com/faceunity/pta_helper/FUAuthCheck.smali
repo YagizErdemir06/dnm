@@ -7,19 +7,22 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    const-string v0, "jni loadLibrary beg"
+    const-string v0, "FaceUnityAPP-pta_helper"
 
-    const-string v1, "FaceUnityAPP-pta_helper"
+    const-string v1, "jni loadLibrary beg"
 
-    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    .line 1
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-string v0, "FUP2AHelper"
+    const-string v1, "FUP2AHelper"
 
-    invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+    .line 2
+    invoke-static {v1}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    const-string v0, "jni loadLibrary end"
+    const-string v1, "jni loadLibrary end"
 
-    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    .line 3
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method
@@ -27,6 +30,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

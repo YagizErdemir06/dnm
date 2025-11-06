@@ -1,5 +1,5 @@
 .class public Lmiuix/animation/styles/ForegroundColorStyle;
-.super Ljava/lang/Object;
+.super Lmiuix/animation/styles/PropertyStyle;
 .source "SourceFile"
 
 
@@ -19,50 +19,67 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1
+    invoke-direct {p0}, Lmiuix/animation/styles/PropertyStyle;-><init>()V
 
     return-void
 .end method
 
-.method public static synthetic access$000(Lmiuix/animation/IAnimTarget;)Landroid/view/View;
-    .locals 0
+.method public static end(Lmiuix/animation/IAnimTarget;Lmiuix/animation/listener/UpdateInfo;)V
+    .locals 2
 
+    .line 1
     invoke-static {p0}, Lmiuix/animation/styles/ForegroundColorStyle;->getView(Lmiuix/animation/IAnimTarget;)Landroid/view/View;
 
     move-result-object p0
 
-    return-object p0
-.end method
-
-.method public static synthetic access$100(Landroid/view/View;)Z
-    .locals 0
-
+    .line 2
     invoke-static {p0}, Lmiuix/animation/styles/ForegroundColorStyle;->isInvalid(Landroid/view/View;)Z
 
-    move-result p0
+    move-result v0
 
-    return p0
-.end method
+    if-eqz v0, :cond_0
 
-.method public static end(Lmiuix/animation/IAnimTarget;Lmiuix/animation/listener/UpdateInfo;)V
-    .locals 1
+    return-void
 
-    new-instance v0, Lmiuix/animation/styles/ForegroundColorStyle$2;
+    .line 3
+    :cond_0
+    invoke-static {p0}, Lmiuix/animation/styles/TintDrawable;->get(Landroid/view/View;)Lmiuix/animation/styles/TintDrawable;
 
-    invoke-direct {v0, p0, p1}, Lmiuix/animation/styles/ForegroundColorStyle$2;-><init>(Lmiuix/animation/IAnimTarget;Lmiuix/animation/listener/UpdateInfo;)V
+    move-result-object p0
 
-    invoke-virtual {p0, v0}, Lmiuix/animation/IAnimTarget;->post(Ljava/lang/Runnable;)V
+    .line 4
+    iget-object p1, p1, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
 
+    iget-wide v0, p1, Lmiuix/animation/internal/AnimInfo;->value:D
+
+    double-to-int p1, v0
+
+    if-eqz p0, :cond_1
+
+    .line 5
+    invoke-static {p1}, Landroid/graphics/Color;->alpha(I)I
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    .line 6
+    invoke-virtual {p0}, Lmiuix/animation/styles/TintDrawable;->restoreOriginalDrawable()V
+
+    :cond_1
     return-void
 .end method
 
 .method private static getView(Lmiuix/animation/IAnimTarget;)Landroid/view/View;
     .locals 1
 
+    .line 1
     instance-of v0, p0, Lmiuix/animation/ViewTarget;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Lmiuix/animation/ViewTarget;
 
     invoke-virtual {p0}, Lmiuix/animation/ViewTarget;->getTargetObject()Landroid/view/View;
@@ -78,79 +95,114 @@
 .end method
 
 .method private static isInvalid(Landroid/view/View;)Z
-    .locals 0
+    .locals 1
 
-    if-eqz p0, :cond_0
+    if-eqz p0, :cond_1
 
-    const/4 p0, 0x0
+    .line 1
+    sget p0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v0, 0x17
+
+    if-ge p0, v0, :cond_0
 
     goto :goto_0
 
     :cond_0
+    const/4 p0, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
     const/4 p0, 0x1
 
-    :goto_0
+    :goto_1
     return p0
 .end method
 
-.method public static isValid(Lmiuix/animation/IAnimTarget;Lmiuix/animation/internal/AnimData;)Z
+.method public static start(Lmiuix/animation/IAnimTarget;Lmiuix/animation/listener/UpdateInfo;)V
     .locals 2
 
-    iget-wide v0, p1, Lmiuix/animation/internal/AnimData;->targetValue:D
-
-    double-to-int p1, v0
-
-    shr-int/lit8 v0, p1, 0x18
-
-    and-int/lit16 v0, v0, 0xff
-
-    if-nez v0, :cond_1
-
+    .line 1
     invoke-static {p0}, Lmiuix/animation/styles/ForegroundColorStyle;->getView(Lmiuix/animation/IAnimTarget;)Landroid/view/View;
 
     move-result-object p0
 
-    if-eqz p0, :cond_1
+    .line 2
+    invoke-static {p0}, Lmiuix/animation/styles/ForegroundColorStyle;->isInvalid(Landroid/view/View;)Z
 
-    invoke-static {p0}, Lmiuix/animation/styles/TintDrawable;->get(Landroid/view/View;)Lmiuix/animation/styles/TintDrawable;
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    .line 3
+    :cond_0
+    iget-object p1, p1, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
+
+    iget p1, p1, Lmiuix/animation/internal/AnimInfo;->tintMode:I
+
+    .line 4
+    invoke-static {p0}, Lmiuix/animation/styles/TintDrawable;->setAndGet(Landroid/view/View;)Lmiuix/animation/styles/TintDrawable;
 
     move-result-object v0
 
-    if-nez v0, :cond_1
+    .line 5
+    sget v1, Lmiuix/animation/R$id;->miuix_animation_tag_view_hover_corners:I
 
-    sget v0, Lmiuix/animation/R$id;->miuix_animation_tag_foreground_color:I
+    invoke-virtual {p0, v1}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+    move-result-object p0
 
-    move-result-object v1
+    .line 6
+    instance-of v1, p0, Ljava/lang/Float;
 
-    if-eqz v1, :cond_0
+    if-nez v1, :cond_1
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    instance-of v1, p0, Ljava/lang/Integer;
 
-    move-result-object p1
+    if-eqz v1, :cond_2
 
-    invoke-virtual {p0, v0, p1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-
+    .line 7
     :cond_1
-    const/4 p0, 0x1
+    check-cast p0, Ljava/lang/Float;
 
-    return p0
-.end method
+    invoke-virtual {p0}, Ljava/lang/Float;->floatValue()F
 
-.method public static start(Lmiuix/animation/IAnimTarget;I)V
-    .locals 1
+    move-result p0
 
-    new-instance v0, Lmiuix/animation/styles/ForegroundColorStyle$1;
+    .line 8
+    invoke-virtual {v0, p0}, Lmiuix/animation/styles/TintDrawable;->setHoverCorner(F)V
 
-    invoke-direct {v0, p0, p1}, Lmiuix/animation/styles/ForegroundColorStyle$1;-><init>(Lmiuix/animation/IAnimTarget;I)V
+    .line 9
+    :cond_2
+    invoke-static {}, Lmiuix/animation/utils/DeviceUtils;->getDeviceLevel()I
 
-    invoke-static {v0}, Lmiuix/animation/internal/ThreadPoolUtil;->post(Ljava/lang/Runnable;)V
+    move-result p0
+
+    const/4 v1, -0x1
+
+    if-nez p0, :cond_3
+
+    if-ne p1, v1, :cond_3
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    if-ne p1, v1, :cond_4
+
+    const/4 p1, 0x0
+
+    :cond_4
+    :goto_0
+    and-int/lit8 p0, p1, 0x3
+
+    .line 10
+    invoke-virtual {v0, p0}, Lmiuix/animation/styles/TintDrawable;->initTintBuffer(I)V
 
     return-void
 .end method

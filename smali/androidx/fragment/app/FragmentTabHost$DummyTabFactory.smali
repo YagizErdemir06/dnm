@@ -1,4 +1,4 @@
-.class Landroidx/fragment/app/FragmentTabHost$DummyTabFactory;
+.class public Landroidx/fragment/app/FragmentTabHost$DummyTabFactory;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -25,8 +25,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/fragment/app/FragmentTabHost$DummyTabFactory;->mContext:Landroid/content/Context;
 
     return-void
@@ -37,6 +39,7 @@
 .method public createTabContent(Ljava/lang/String;)Landroid/view/View;
     .locals 0
 
+    .line 1
     new-instance p1, Landroid/view/View;
 
     iget-object p0, p0, Landroidx/fragment/app/FragmentTabHost$DummyTabFactory;->mContext:Landroid/content/Context;
@@ -45,8 +48,10 @@
 
     const/4 p0, 0x0
 
+    .line 2
     invoke-virtual {p1, p0}, Landroid/view/View;->setMinimumWidth(I)V
 
+    .line 3
     invoke-virtual {p1, p0}, Landroid/view/View;->setMinimumHeight(I)V
 
     return-object p1

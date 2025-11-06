@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel$Receiver;
+.class public final Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel$Receiver;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -28,23 +28,26 @@
 
 .field private final messageParser:Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel$MessageParser;
 
-.field final synthetic this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;
+.field public final synthetic this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;Ljava/io/InputStream;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel$Receiver;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance p1, Ljava/io/DataInputStream;
 
     invoke-direct {p1, p2}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel$Receiver;->dataInputStream:Ljava/io/DataInputStream;
 
+    .line 3
     new-instance p1, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel$MessageParser;
 
     invoke-direct {p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel$MessageParser;-><init>()V
@@ -62,26 +65,31 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel$Receiver;->dataInputStream:Ljava/io/DataInputStream;
 
     invoke-virtual {v0}, Ljava/io/DataInputStream;->readUnsignedByte()I
 
     move-result v0
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel$Receiver;->dataInputStream:Ljava/io/DataInputStream;
 
     invoke-virtual {v1}, Ljava/io/DataInputStream;->readUnsignedShort()I
 
     move-result v1
 
+    .line 3
     new-array v2, v1, [B
 
+    .line 4
     iget-object v3, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel$Receiver;->dataInputStream:Ljava/io/DataInputStream;
 
     const/4 v4, 0x0
 
     invoke-virtual {v3, v2, v4, v1}, Ljava/io/DataInputStream;->readFully([BII)V
 
+    .line 5
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel$Receiver;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;
 
     invoke-static {v1}, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;->access$300(Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;)Ljava/util/Map;
@@ -100,6 +108,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 6
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel$Receiver;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;->access$100(Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;)Z
@@ -108,6 +117,7 @@
 
     if-nez p0, :cond_0
 
+    .line 7
     invoke-interface {v0, v2}, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel$InterleavedBinaryDataListener;->onInterleavedBinaryDataReceived([B)V
 
     :cond_0
@@ -122,6 +132,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel$Receiver;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;->access$100(Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;)Z
@@ -130,6 +141,7 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel$Receiver;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;->access$200(Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;)Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel$MessageListener;
@@ -157,6 +169,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel$Receiver;->loadCanceled:Z
 
     return-void
@@ -170,11 +183,13 @@
         }
     .end annotation
 
+    .line 1
     :goto_0
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel$Receiver;->loadCanceled:Z
 
     if-nez v0, :cond_1
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel$Receiver;->dataInputStream:Ljava/io/DataInputStream;
 
     invoke-virtual {v0}, Ljava/io/DataInputStream;->readByte()B
@@ -185,10 +200,12 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 3
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel$Receiver;->handleInterleavedBinaryData()V
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel$Receiver;->handleRtspMessage(B)V
 

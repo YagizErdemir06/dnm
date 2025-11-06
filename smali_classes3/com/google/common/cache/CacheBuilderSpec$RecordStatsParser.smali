@@ -1,4 +1,4 @@
-.class Lcom/google/common/cache/CacheBuilderSpec$RecordStatsParser;
+.class public Lcom/google/common/cache/CacheBuilderSpec$RecordStatsParser;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -21,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -51,8 +52,10 @@
     :goto_0
     const-string v0, "recordStats does not take values"
 
+    .line 1
     invoke-static {p3, v0}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 2
     iget-object p3, p1, Lcom/google/common/cache/CacheBuilderSpec;->recordStats:Ljava/lang/Boolean;
 
     if-nez p3, :cond_1
@@ -67,6 +70,7 @@
 
     invoke-static {p0, p2}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 3
     sget-object p0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     iput-object p0, p1, Lcom/google/common/cache/CacheBuilderSpec;->recordStats:Ljava/lang/Boolean;

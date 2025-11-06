@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/dash/DashMediaSource$Iso8601Parser;
+.class public final Lcom/google/android/exoplayer2/source/dash/DashMediaSource$Iso8601Parser;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -36,6 +36,7 @@
 
     const-string v0, "(.+?)(Z|((\\+|-|\u2212)(\\d\\d)(:?(\\d\\d))?))"
 
+    .line 1
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -48,6 +49,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -119,10 +121,10 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/text/DateFormat;->setTimeZone(Ljava/util/TimeZone;)V
+    invoke-virtual {v0, v1}, Ljava/text/SimpleDateFormat;->setTimeZone(Ljava/util/TimeZone;)V
 
     .line 9
-    invoke-virtual {v0, p0}, Ljava/text/DateFormat;->parse(Ljava/lang/String;)Ljava/util/Date;
+    invoke-virtual {v0, p0}, Ljava/text/SimpleDateFormat;->parse(Ljava/lang/String;)Ljava/util/Date;
 
     move-result-object p0
 

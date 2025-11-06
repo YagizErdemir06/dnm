@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Iterables$9;
+.class public Lcom/google/common/collect/Iterables$9;
 .super Lcom/google/common/collect/FluentIterable;
 .source "SourceFile"
 
@@ -22,15 +22,16 @@
 
 
 # instance fields
-.field final synthetic val$comparator:Ljava/util/Comparator;
+.field public final synthetic val$comparator:Ljava/util/Comparator;
 
-.field final synthetic val$iterables:Ljava/lang/Iterable;
+.field public final synthetic val$iterables:Ljava/lang/Iterable;
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/Iterable;Ljava/util/Comparator;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/Iterables$9;->val$iterables:Ljava/lang/Iterable;
 
     iput-object p2, p0, Lcom/google/common/collect/Iterables$9;->val$comparator:Ljava/util/Comparator;
@@ -52,8 +53,10 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Iterables$9;->val$iterables:Ljava/lang/Iterable;
 
+    .line 2
     invoke-static {}, Lcom/google/common/collect/Iterables;->toIterator()Lcom/google/common/base/Function;
 
     move-result-object v1
@@ -64,6 +67,7 @@
 
     iget-object p0, p0, Lcom/google/common/collect/Iterables$9;->val$comparator:Ljava/util/Comparator;
 
+    .line 3
     invoke-static {v0, p0}, Lcom/google/common/collect/Iterators;->mergeSorted(Ljava/lang/Iterable;Ljava/util/Comparator;)Lcom/google/common/collect/UnmodifiableIterator;
 
     move-result-object p0

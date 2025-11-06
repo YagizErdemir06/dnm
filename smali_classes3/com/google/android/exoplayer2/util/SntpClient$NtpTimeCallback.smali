@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/util/SntpClient$NtpTimeCallback;
+.class public final Lcom/google/android/exoplayer2/util/SntpClient$NtpTimeCallback;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -41,8 +41,10 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/util/SntpClient$NtpTimeCallback;->callback:Lcom/google/android/exoplayer2/util/SntpClient$InitializationCallback;
 
     return-void
@@ -59,16 +61,19 @@
 .method public onLoadCompleted(Lcom/google/android/exoplayer2/upstream/Loader$Loadable;JJ)V
     .locals 0
 
+    .line 1
     iget-object p1, p0, Lcom/google/android/exoplayer2/util/SntpClient$NtpTimeCallback;->callback:Lcom/google/android/exoplayer2/util/SntpClient$InitializationCallback;
 
     if-eqz p1, :cond_1
 
+    .line 2
     invoke-static {}, Lcom/google/android/exoplayer2/util/SntpClient;->isInitialized()Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/SntpClient$NtpTimeCallback;->callback:Lcom/google/android/exoplayer2/util/SntpClient$InitializationCallback;
 
     new-instance p1, Ljava/io/IOException;
@@ -83,6 +88,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/SntpClient$NtpTimeCallback;->callback:Lcom/google/android/exoplayer2/util/SntpClient$InitializationCallback;
 
@@ -96,12 +102,15 @@
 .method public onLoadError(Lcom/google/android/exoplayer2/upstream/Loader$Loadable;JJLjava/io/IOException;I)Lcom/google/android/exoplayer2/upstream/Loader$LoadErrorAction;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/SntpClient$NtpTimeCallback;->callback:Lcom/google/android/exoplayer2/util/SntpClient$InitializationCallback;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0, p6}, Lcom/google/android/exoplayer2/util/SntpClient$InitializationCallback;->onInitializationFailed(Ljava/io/IOException;)V
 
+    .line 3
     :cond_0
     sget-object p0, Lcom/google/android/exoplayer2/upstream/Loader;->DONT_RETRY:Lcom/google/android/exoplayer2/upstream/Loader$LoadErrorAction;
 

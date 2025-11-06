@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Multisets$FilteredMultiset$1;
+.class public Lcom/google/common/collect/Multisets$FilteredMultiset$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,13 +27,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/Multisets$FilteredMultiset;
+.field public final synthetic this$0:Lcom/google/common/collect/Multisets$FilteredMultiset;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/Multisets$FilteredMultiset;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/Multisets$FilteredMultiset$1;->this$0:Lcom/google/common/collect/Multisets$FilteredMultiset;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

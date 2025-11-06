@@ -24,7 +24,16 @@
 # direct methods
 .method public constructor <init>(Lcom/android/camera/AudioMapMove;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/AudioMapMove$b;->a:Lcom/android/camera/AudioMapMove;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +45,16 @@
 # virtual methods
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera/AudioMapMove$b;->a:Lcom/android/camera/AudioMapMove;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
@@ -51,6 +69,7 @@
 
     invoke-static {v0, p1}, Lcom/android/camera/AudioMapMove;->t(Lcom/android/camera/AudioMapMove;F)F
 
+    .line 2
     iget-object p1, p0, Lcom/android/camera/AudioMapMove$b;->a:Lcom/android/camera/AudioMapMove;
 
     invoke-static {p1}, Lcom/android/camera/AudioMapMove;->f(Lcom/android/camera/AudioMapMove;)F
@@ -83,6 +102,7 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/AudioMapMove;->d(Lcom/android/camera/AudioMapMove;F)F
 
+    .line 3
     iget-object p1, p0, Lcom/android/camera/AudioMapMove$b;->a:Lcom/android/camera/AudioMapMove;
 
     invoke-static {p1}, Lcom/android/camera/AudioMapMove;->h(Lcom/android/camera/AudioMapMove;)F
@@ -115,6 +135,7 @@
 
     invoke-static {p1, v0}, Lcom/android/camera/AudioMapMove;->g(Lcom/android/camera/AudioMapMove;F)F
 
+    .line 4
     iget-object p0, p0, Lcom/android/camera/AudioMapMove$b;->a:Lcom/android/camera/AudioMapMove;
 
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V

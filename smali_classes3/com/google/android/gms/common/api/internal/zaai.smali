@@ -1,16 +1,17 @@
-.class final Lcom/google/android/gms/common/api/internal/zaai;
+.class public final Lcom/google/android/gms/common/api/internal/zaai;
 .super Lcom/google/android/gms/common/api/internal/zabg;
 .source "SourceFile"
 
 
 # instance fields
-.field final synthetic zaa:Lcom/google/android/gms/common/api/internal/zaaj;
+.field public final synthetic zaa:Lcom/google/android/gms/common/api/internal/zaaj;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/gms/common/api/internal/zaaj;Lcom/google/android/gms/common/api/internal/zabf;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/common/api/internal/zaai;->zaa:Lcom/google/android/gms/common/api/internal/zaaj;
 
     invoke-direct {p0, p2}, Lcom/google/android/gms/common/api/internal/zabg;-><init>(Lcom/google/android/gms/common/api/internal/zabf;)V
@@ -23,6 +24,7 @@
 .method public final zaa()V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zaai;->zaa:Lcom/google/android/gms/common/api/internal/zaaj;
 
     invoke-static {p0}, Lcom/google/android/gms/common/api/internal/zaaj;->zac(Lcom/google/android/gms/common/api/internal/zaaj;)Lcom/google/android/gms/common/api/internal/zabi;

@@ -110,6 +110,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/upstream/DefaultDataSource$Factory;->transferListener:Lcom/google/android/exoplayer2/upstream/TransferListener;
 
     return-object p0

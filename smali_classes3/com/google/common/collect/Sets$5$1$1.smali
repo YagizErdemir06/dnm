@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Sets$5$1$1;
+.class public Lcom/google/common/collect/Sets$5$1$1;
 .super Ljava/util/AbstractSet;
 .source "SourceFile"
 
@@ -22,15 +22,16 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/google/common/collect/Sets$5$1;
+.field public final synthetic this$1:Lcom/google/common/collect/Sets$5$1;
 
-.field final synthetic val$copy:Ljava/util/BitSet;
+.field public final synthetic val$copy:Ljava/util/BitSet;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/Sets$5$1;Ljava/util/BitSet;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/Sets$5$1$1;->this$1:Lcom/google/common/collect/Sets$5$1;
 
     iput-object p2, p0, Lcom/google/common/collect/Sets$5$1$1;->val$copy:Ljava/util/BitSet;
@@ -49,6 +50,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Sets$5$1$1;->this$1:Lcom/google/common/collect/Sets$5$1;
 
     iget-object v0, v0, Lcom/google/common/collect/Sets$5$1;->this$0:Lcom/google/common/collect/Sets$5;
@@ -63,6 +65,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/Sets$5$1$1;->val$copy:Ljava/util/BitSet;
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
@@ -96,6 +99,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/Sets$5$1$1$1;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/Sets$5$1$1$1;-><init>(Lcom/google/common/collect/Sets$5$1$1;)V
@@ -106,6 +110,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Sets$5$1$1;->this$1:Lcom/google/common/collect/Sets$5$1;
 
     iget-object p0, p0, Lcom/google/common/collect/Sets$5$1;->this$0:Lcom/google/common/collect/Sets$5;

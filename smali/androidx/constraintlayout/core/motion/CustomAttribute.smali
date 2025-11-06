@@ -16,7 +16,7 @@
 
 
 # instance fields
-.field mBooleanValue:Z
+.field public mBooleanValue:Z
 
 .field private mColorValue:I
 
@@ -26,7 +26,7 @@
 
 .field private mMethod:Z
 
-.field mName:Ljava/lang/String;
+.field public mName:Ljava/lang/String;
 
 .field private mStringValue:Ljava/lang/String;
 
@@ -37,25 +37,25 @@
 .method public constructor <init>(Landroidx/constraintlayout/core/motion/CustomAttribute;Ljava/lang/Object;)V
     .locals 1
 
-    .line 10
+    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 11
+    .line 12
     iput-boolean v0, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mMethod:Z
 
-    .line 12
+    .line 13
     iget-object v0, p1, Landroidx/constraintlayout/core/motion/CustomAttribute;->mName:Ljava/lang/String;
 
     iput-object v0, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mName:Ljava/lang/String;
 
-    .line 13
+    .line 14
     iget-object p1, p1, Landroidx/constraintlayout/core/motion/CustomAttribute;->mType:Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
 
     iput-object p1, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mType:Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
 
-    .line 14
+    .line 15
     invoke-virtual {p0, p2}, Landroidx/constraintlayout/core/motion/CustomAttribute;->setValue(Ljava/lang/Object;)V
 
     return-void
@@ -82,21 +82,26 @@
 .end method
 
 .method public constructor <init>(Ljava/lang/String;Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;Ljava/lang/Object;Z)V
-    .locals 0
+    .locals 1
 
     .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    const/4 v0, 0x0
+
     .line 6
-    iput-object p1, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mName:Ljava/lang/String;
+    iput-boolean v0, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mMethod:Z
 
     .line 7
-    iput-object p2, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mType:Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
+    iput-object p1, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mName:Ljava/lang/String;
 
     .line 8
-    iput-boolean p4, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mMethod:Z
+    iput-object p2, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mType:Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
 
     .line 9
+    iput-boolean p4, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mMethod:Z
+
+    .line 10
     invoke-virtual {p0, p3}, Landroidx/constraintlayout/core/motion/CustomAttribute;->setValue(Ljava/lang/Object;)V
 
     return-void
@@ -293,6 +298,7 @@
 
     if-eqz p1, :cond_6
 
+    .line 1
     iget-object v1, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mType:Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
 
     iget-object v2, p1, Landroidx/constraintlayout/core/motion/CustomAttribute;->mType:Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
@@ -301,6 +307,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     sget-object v2, Landroidx/constraintlayout/core/motion/CustomAttribute$1;->$SwitchMap$androidx$constraintlayout$core$motion$CustomAttribute$AttributeType:[I
 
@@ -316,6 +323,7 @@
 
     return v0
 
+    .line 3
     :pswitch_0
     iget p0, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mFloatValue:F
 
@@ -330,6 +338,7 @@
     :cond_1
     return v0
 
+    .line 4
     :pswitch_1
     iget p0, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mFloatValue:F
 
@@ -344,6 +353,7 @@
     :cond_2
     return v0
 
+    .line 5
     :pswitch_2
     iget p0, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mColorValue:I
 
@@ -356,6 +366,7 @@
     :cond_3
     return v0
 
+    .line 6
     :pswitch_3
     iget p0, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mIntegerValue:I
 
@@ -368,6 +379,7 @@
     :cond_4
     return v0
 
+    .line 7
     :pswitch_4
     iget-boolean p0, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mBooleanValue:Z
 
@@ -380,6 +392,7 @@
     :cond_5
     return v0
 
+    .line 8
     :pswitch_5
     iget p0, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mIntegerValue:I
 
@@ -411,6 +424,7 @@
 .method public getType()Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mType:Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
 
     return-object p0
@@ -419,6 +433,7 @@
 .method public getValueToInterpolate()F
     .locals 2
 
+    .line 1
     sget-object v0, Landroidx/constraintlayout/core/motion/CustomAttribute$1;->$SwitchMap$androidx$constraintlayout$core$motion$CustomAttribute$AttributeType:[I
 
     iget-object v1, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mType:Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
@@ -435,16 +450,19 @@
 
     return p0
 
+    .line 2
     :pswitch_0
     iget p0, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mFloatValue:F
 
     return p0
 
+    .line 3
     :pswitch_1
     iget p0, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mFloatValue:F
 
     return p0
 
+    .line 4
     :pswitch_2
     iget p0, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mIntegerValue:I
 
@@ -452,6 +470,7 @@
 
     return p0
 
+    .line 5
     :pswitch_3
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -461,6 +480,7 @@
 
     throw p0
 
+    .line 6
     :pswitch_4
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -470,6 +490,7 @@
 
     throw p0
 
+    .line 7
     :pswitch_5
     iget-boolean p0, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mBooleanValue:Z
 
@@ -502,6 +523,7 @@
 .method public getValuesToInterpolate([F)V
     .locals 9
 
+    .line 1
     sget-object v0, Landroidx/constraintlayout/core/motion/CustomAttribute$1;->$SwitchMap$androidx$constraintlayout$core$motion$CustomAttribute$AttributeType:[I
 
     iget-object v1, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mType:Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
@@ -518,6 +540,7 @@
 
     goto :goto_1
 
+    .line 2
     :pswitch_0
     iget p0, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mFloatValue:F
 
@@ -525,6 +548,7 @@
 
     goto :goto_1
 
+    .line 3
     :pswitch_1
     iget p0, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mFloatValue:F
 
@@ -532,6 +556,7 @@
 
     goto :goto_1
 
+    .line 4
     :pswitch_2
     iget p0, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mIntegerValue:I
 
@@ -541,6 +566,7 @@
 
     goto :goto_1
 
+    .line 5
     :pswitch_3
     iget p0, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mColorValue:I
 
@@ -568,6 +594,7 @@
 
     const-wide v7, 0x400199999999999aL    # 2.2
 
+    .line 6
     invoke-static {v5, v6, v7, v8}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v5
@@ -580,6 +607,7 @@
 
     float-to-double v5, v3
 
+    .line 7
     invoke-static {v5, v6, v7, v8}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v5
@@ -592,32 +620,38 @@
 
     float-to-double v5, p0
 
+    .line 8
     invoke-static {v5, v6, v7, v8}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v5
 
     double-to-float p0, v5
 
+    .line 9
     aput v2, p1, v1
 
     const/4 v1, 0x1
 
+    .line 10
     aput v3, p1, v1
 
     const/4 v1, 0x2
 
+    .line 11
     aput p0, p1, v1
 
-    int-to-float p0, v0
+    const/4 p0, 0x3
 
-    div-float/2addr p0, v4
+    int-to-float v0, v0
 
-    const/4 v0, 0x3
+    div-float/2addr v0, v4
 
-    aput p0, p1, v0
+    .line 12
+    aput v0, p1, p0
 
     goto :goto_1
 
+    .line 13
     :pswitch_4
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -627,6 +661,7 @@
 
     throw p0
 
+    .line 14
     :pswitch_5
     iget-boolean p0, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mBooleanValue:Z
 
@@ -662,6 +697,7 @@
 .method public isContinuous()Z
     .locals 2
 
+    .line 1
     sget-object v0, Landroidx/constraintlayout/core/motion/CustomAttribute$1;->$SwitchMap$androidx$constraintlayout$core$motion$CustomAttribute$AttributeType:[I
 
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mType:Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
@@ -695,6 +731,7 @@
 .method public numberOfInterpolatedValues()I
     .locals 2
 
+    .line 1
     sget-object v0, Landroidx/constraintlayout/core/motion/CustomAttribute$1;->$SwitchMap$androidx$constraintlayout$core$motion$CustomAttribute$AttributeType:[I
 
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mType:Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
@@ -724,6 +761,7 @@
 .method public setColorValue(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mColorValue:I
 
     return-void
@@ -732,6 +770,7 @@
 .method public setFloatValue(F)V
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mFloatValue:F
 
     return-void
@@ -740,6 +779,7 @@
 .method public setIntValue(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mIntegerValue:I
 
     return-void
@@ -748,6 +788,7 @@
 .method public setStringValue(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/constraintlayout/core/motion/CustomAttribute;->mStringValue:Ljava/lang/String;
 
     return-void
@@ -911,12 +952,12 @@
 
     and-int/2addr v0, v1
 
-    const/4 v1, 0x3
+    const/high16 v1, 0x437f0000    # 255.0f
+
+    const/4 v2, 0x3
 
     .line 5
-    aget p1, p1, v1
-
-    const/high16 v1, 0x437f0000    # 255.0f
+    aget p1, p1, v2
 
     mul-float/2addr p1, v1
 

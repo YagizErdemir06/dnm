@@ -38,6 +38,7 @@
 .method public static constructor <clinit>()V
     .locals 9
 
+    .line 1
     new-instance v0, Lcom/android/camera/resource/LoggingInterceptor$Level;
 
     const-string v1, "NONE"
@@ -48,6 +49,7 @@
 
     sput-object v0, Lcom/android/camera/resource/LoggingInterceptor$Level;->NONE:Lcom/android/camera/resource/LoggingInterceptor$Level;
 
+    .line 2
     new-instance v1, Lcom/android/camera/resource/LoggingInterceptor$Level;
 
     const-string v3, "BASIC"
@@ -58,6 +60,7 @@
 
     sput-object v1, Lcom/android/camera/resource/LoggingInterceptor$Level;->BASIC:Lcom/android/camera/resource/LoggingInterceptor$Level;
 
+    .line 3
     new-instance v3, Lcom/android/camera/resource/LoggingInterceptor$Level;
 
     const-string v5, "HEADERS"
@@ -68,6 +71,7 @@
 
     sput-object v3, Lcom/android/camera/resource/LoggingInterceptor$Level;->HEADERS:Lcom/android/camera/resource/LoggingInterceptor$Level;
 
+    .line 4
     new-instance v5, Lcom/android/camera/resource/LoggingInterceptor$Level;
 
     const-string v7, "BODY"
@@ -90,6 +94,7 @@
 
     aput-object v5, v7, v8
 
+    .line 5
     sput-object v7, Lcom/android/camera/resource/LoggingInterceptor$Level;->$VALUES:[Lcom/android/camera/resource/LoggingInterceptor$Level;
 
     return-void
@@ -97,12 +102,18 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "$enum$name",
+            "$enum$ordinal"
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -110,7 +121,16 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/android/camera/resource/LoggingInterceptor$Level;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8000
+        }
+        names = {
+            "name"
+        }
+    .end annotation
 
+    .line 1
     const-class v0, Lcom/android/camera/resource/LoggingInterceptor$Level;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -125,6 +145,7 @@
 .method public static values()[Lcom/android/camera/resource/LoggingInterceptor$Level;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/android/camera/resource/LoggingInterceptor$Level;->$VALUES:[Lcom/android/camera/resource/LoggingInterceptor$Level;
 
     invoke-virtual {v0}, [Lcom/android/camera/resource/LoggingInterceptor$Level;->clone()Ljava/lang/Object;

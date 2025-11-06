@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/extractor/jpeg/StartOffsetExtractorOutput$1;
+.class public Lcom/google/android/exoplayer2/extractor/jpeg/StartOffsetExtractorOutput$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,15 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/android/exoplayer2/extractor/jpeg/StartOffsetExtractorOutput;
+.field public final synthetic this$0:Lcom/google/android/exoplayer2/extractor/jpeg/StartOffsetExtractorOutput;
 
-.field final synthetic val$seekMap:Lcom/google/android/exoplayer2/extractor/SeekMap;
+.field public final synthetic val$seekMap:Lcom/google/android/exoplayer2/extractor/SeekMap;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/exoplayer2/extractor/jpeg/StartOffsetExtractorOutput;Lcom/google/android/exoplayer2/extractor/SeekMap;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/extractor/jpeg/StartOffsetExtractorOutput$1;->this$0:Lcom/google/android/exoplayer2/extractor/jpeg/StartOffsetExtractorOutput;
 
     iput-object p2, p0, Lcom/google/android/exoplayer2/extractor/jpeg/StartOffsetExtractorOutput$1;->val$seekMap:Lcom/google/android/exoplayer2/extractor/SeekMap;
@@ -41,6 +42,7 @@
 .method public getDurationUs()J
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/jpeg/StartOffsetExtractorOutput$1;->val$seekMap:Lcom/google/android/exoplayer2/extractor/SeekMap;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/extractor/SeekMap;->getDurationUs()J
@@ -53,12 +55,14 @@
 .method public getSeekPoints(J)Lcom/google/android/exoplayer2/extractor/SeekMap$SeekPoints;
     .locals 8
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/jpeg/StartOffsetExtractorOutput$1;->val$seekMap:Lcom/google/android/exoplayer2/extractor/SeekMap;
 
     invoke-interface {v0, p1, p2}, Lcom/google/android/exoplayer2/extractor/SeekMap;->getSeekPoints(J)Lcom/google/android/exoplayer2/extractor/SeekMap$SeekPoints;
 
     move-result-object p1
 
+    .line 2
     new-instance p2, Lcom/google/android/exoplayer2/extractor/SeekMap$SeekPoints;
 
     new-instance v0, Lcom/google/android/exoplayer2/extractor/SeekPoint;
@@ -71,6 +75,7 @@
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/jpeg/StartOffsetExtractorOutput$1;->this$0:Lcom/google/android/exoplayer2/extractor/jpeg/StartOffsetExtractorOutput;
 
+    .line 3
     invoke-static {v1}, Lcom/google/android/exoplayer2/extractor/jpeg/StartOffsetExtractorOutput;->access$000(Lcom/google/android/exoplayer2/extractor/jpeg/StartOffsetExtractorOutput;)J
 
     move-result-wide v6
@@ -89,6 +94,7 @@
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/jpeg/StartOffsetExtractorOutput$1;->this$0:Lcom/google/android/exoplayer2/extractor/jpeg/StartOffsetExtractorOutput;
 
+    .line 4
     invoke-static {p0}, Lcom/google/android/exoplayer2/extractor/jpeg/StartOffsetExtractorOutput;->access$000(Lcom/google/android/exoplayer2/extractor/jpeg/StartOffsetExtractorOutput;)J
 
     move-result-wide p0
@@ -105,6 +111,7 @@
 .method public isSeekable()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/jpeg/StartOffsetExtractorOutput$1;->val$seekMap:Lcom/google/android/exoplayer2/extractor/SeekMap;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/extractor/SeekMap;->isSeekable()Z

@@ -7,6 +7,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -16,14 +17,25 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "intent"
+        }
+    .end annotation
 
-    const-string p0, "miui.intent.action.RESET_CAMERA_PREF"
-
+    .line 1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const-string p1, "miui.intent.action.RESET_CAMERA_PREF"
+
+    invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -40,11 +52,13 @@
 
     const-string p2, "receive ACTION_RESET_CAMERA_PREF action, reset camera settings!"
 
+    .line 2
     invoke-static {p1, p2, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     const/4 p0, 0x1
 
-    invoke-static {p0}, Lcom/android/camera/fragment/settings/CameraPreferenceFragment;->wj(Z)V
+    .line 3
+    invoke-static {p0}, Lcom/android/camera/fragment/settings/CameraPreferenceFragment;->gi(Z)V
 
     return-void
 .end method

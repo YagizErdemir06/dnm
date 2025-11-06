@@ -21,8 +21,10 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/mediacodec/MediaCodecDecoderException;-><init>(Ljava/lang/Throwable;Lcom/google/android/exoplayer2/mediacodec/MediaCodecInfo;)V
 
+    .line 2
     invoke-static {p3}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result p1
@@ -31,6 +33,7 @@
 
     if-eqz p3, :cond_1
 
+    .line 3
     invoke-virtual {p3}, Landroid/view/Surface;->isValid()Z
 
     move-result p1

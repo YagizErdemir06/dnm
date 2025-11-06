@@ -1,4 +1,4 @@
-.class final Lcom/google/android/play/core/splitinstall/DeferredInstallTask;
+.class public final Lcom/google/android/play/core/splitinstall/DeferredInstallTask;
 .super Lcom/google/android/play/core/remote/RemoteTask;
 .source "SourceFile"
 
@@ -44,12 +44,16 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p2}, Lcom/google/android/play/core/remote/RemoteTask;-><init>(Lcom/google/android/play/core/tasks/TaskWrapper;)V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/play/core/splitinstall/DeferredInstallTask;->mSplitInstallService:Lcom/google/android/play/core/splitinstall/SplitInstallService;
 
+    .line 3
     iput-object p3, p0, Lcom/google/android/play/core/splitinstall/DeferredInstallTask;->moduleNames:Ljava/util/List;
 
+    .line 4
     iput-object p4, p0, Lcom/google/android/play/core/splitinstall/DeferredInstallTask;->mTask:Lcom/google/android/play/core/tasks/TaskWrapper;
 
     return-void
@@ -60,6 +64,7 @@
 .method public execute()V
     .locals 7
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/android/play/core/splitinstall/DeferredInstallTask;->mSplitInstallService:Lcom/google/android/play/core/splitinstall/SplitInstallService;
 
@@ -77,10 +82,12 @@
 
     iget-object v2, p0, Lcom/google/android/play/core/splitinstall/DeferredInstallTask;->moduleNames:Ljava/util/List;
 
+    .line 2
     invoke-static {v2}, Lcom/google/android/play/core/splitinstall/SplitInstallService;->wrapModuleNames(Ljava/util/Collection;)Ljava/util/List;
 
     move-result-object v2
 
+    .line 3
     invoke-static {}, Lcom/google/android/play/core/splitinstall/SplitInstallService;->wrapVersionCode()Landroid/os/Bundle;
 
     move-result-object v3
@@ -93,6 +100,7 @@
 
     invoke-direct {v4, v5, v6}, Lcom/google/android/play/core/splitinstall/DeferredInstallCallback;-><init>(Lcom/google/android/play/core/splitinstall/SplitInstallService;Lcom/google/android/play/core/tasks/TaskWrapper;)V
 
+    .line 4
     invoke-interface {v0, v1, v2, v3, v4}, Lcom/google/android/play/core/splitinstall/protocol/ISplitInstallServiceProxy;->deferredInstall(Ljava/lang/String;Ljava/util/List;Landroid/os/Bundle;Lcom/google/android/play/core/splitinstall/protocol/ISplitInstallServiceCallbackProxy;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -102,6 +110,7 @@
     :catch_0
     move-exception v0
 
+    .line 5
     sget-object v1, Lcom/google/android/play/core/splitinstall/SplitInstallService;->playCore:Lcom/google/android/play/core/splitcompat/util/PlayCore;
 
     const/4 v2, 0x1
@@ -118,6 +127,7 @@
 
     invoke-virtual {v1, v0, v3, v2}, Lcom/google/android/play/core/splitcompat/util/PlayCore;->error(Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)I
 
+    .line 6
     iget-object p0, p0, Lcom/google/android/play/core/splitinstall/DeferredInstallTask;->mTask:Lcom/google/android/play/core/tasks/TaskWrapper;
 
     new-instance v1, Ljava/lang/RuntimeException;

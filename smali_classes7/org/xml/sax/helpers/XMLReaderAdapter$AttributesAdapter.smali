@@ -1,4 +1,4 @@
-.class final Lorg/xml/sax/helpers/XMLReaderAdapter$AttributesAdapter;
+.class public final Lorg/xml/sax/helpers/XMLReaderAdapter$AttributesAdapter;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

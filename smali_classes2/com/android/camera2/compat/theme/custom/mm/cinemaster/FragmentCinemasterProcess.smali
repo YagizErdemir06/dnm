@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lv8/v;
+.implements Ld/d/a/m7/g/y;
 
 
 # static fields
@@ -31,7 +31,7 @@
 
 .field private mDiscoveryRetries:I
 
-.field protected mExitDialog:Lmiuix/appcompat/app/AlertDialog;
+.field public mExitDialog:Lmiuix/appcompat/app/AlertDialog;
 
 .field private final mHandler:Landroid/os/Handler;
 
@@ -53,9 +53,9 @@
     .end annotation
 .end field
 
-.field private final mNetworkStateCallback:Lxf/b;
+.field private final mNetworkStateCallback:Ld/o/f/r/k/c/n;
 
-.field private mNetworkStateManager:Lxf/c;
+.field private mNetworkStateManager:Ld/o/f/r/k/c/o;
 
 .field private final mRejectedRemoteDeviceSet:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
@@ -72,7 +72,7 @@
         value = {
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Lm3/c;",
+            "Ld/d/a/o6/c/c;",
             ">;"
         }
     .end annotation
@@ -89,7 +89,8 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lgg/f;->c(Ljava/lang/String;Z)Z
+    .line 1
+    invoke-static {v0, v1}, Ld/o/f/w/f;->c(Ljava/lang/String;Z)Z
 
     move-result v0
 
@@ -101,12 +102,15 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/BaseFragment;-><init>()V
 
     const-string v0, ""
 
+    .line 2
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mIpAddress:Ljava/lang/String;
 
+    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -117,18 +121,21 @@
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mMonitorDeviceList:Ljava/util/List;
 
+    .line 4
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mRemoteDeviceCache:Ljava/util/Map;
 
+    .line 5
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mRejectedRemoteDeviceSet:Ljava/util/Set;
 
+    .line 6
     new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess$1;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -141,45 +148,15 @@
 
     const/4 v0, 0x0
 
+    .line 7
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mDiscoveryRetries:I
 
+    .line 8
     new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess$2;
 
     invoke-direct {v0, p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess$2;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;)V
 
-    iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mNetworkStateCallback:Lxf/b;
-
-    return-void
-.end method
-
-.method public static synthetic Gh(Lq7/i0;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$showGuide$12(Lq7/i0;)V
-
-    return-void
-.end method
-
-.method public static synthetic Hh(Lv8/p1;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$hideClient$9(Lv8/p1;)V
-
-    return-void
-.end method
-
-.method public static synthetic Xh(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$onRemoteCameraStateChanged$15(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;)V
-
-    return-void
-.end method
-
-.method public static synthetic Zh(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;Landroid/content/DialogInterface;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$showExitDialog$22(Landroid/content/DialogInterface;)V
+    iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mNetworkStateCallback:Ld/o/f/r/k/c/n;
 
     return-void
 .end method
@@ -187,6 +164,7 @@
 .method public static synthetic access$000(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->showErrorToast()V
 
     return-void
@@ -195,6 +173,7 @@
 .method public static synthetic access$100(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mDiscoveryRetries:I
 
     return p0
@@ -203,6 +182,7 @@
 .method public static synthetic access$1000()Z
     .locals 1
 
+    .line 1
     sget-boolean v0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->IGNORE_ENDPOINT_LOST_EVENT:Z
 
     return v0
@@ -211,6 +191,7 @@
 .method public static synthetic access$102(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;I)I
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mDiscoveryRetries:I
 
     return p1
@@ -219,6 +200,7 @@
 .method public static synthetic access$108(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;)I
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mDiscoveryRetries:I
 
     add-int/lit8 v1, v0, 0x1
@@ -228,18 +210,20 @@
     return v0
 .end method
 
-.method public static synthetic access$1100(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;Lm3/c;)V
+.method public static synthetic access$1100(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;Ld/d/a/o6/c/c;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->handleEndpointLost(Lm3/c;)V
+    .line 1
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->handleEndpointLost(Ld/d/a/o6/c/c;)V
 
     return-void
 .end method
 
-.method public static synthetic access$200(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;)Lxf/c;
+.method public static synthetic access$200(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;)Ld/o/f/r/k/c/o;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mNetworkStateManager:Lxf/c;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mNetworkStateManager:Ld/o/f/r/k/c/o;
 
     return-object p0
 .end method
@@ -247,6 +231,7 @@
 .method public static synthetic access$300(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;)Landroid/os/Handler;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -255,6 +240,7 @@
 .method public static synthetic access$400(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->showSuccessToast()V
 
     return-void
@@ -263,6 +249,7 @@
 .method public static synthetic access$500(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;)Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mCinePopupView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;
 
     return-object p0
@@ -271,15 +258,17 @@
 .method public static synthetic access$600(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->stopIDMManager()V
 
     return-void
 .end method
 
-.method public static synthetic access$700(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;)Lcom/android/camera/f5;
+.method public static synthetic access$700(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;)Ld/d/a/r5;
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->getStreamingController()Lcom/android/camera/f5;
+    .line 1
+    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->getStreamingController()Ld/d/a/r5;
 
     move-result-object p0
 
@@ -289,67 +278,19 @@
 .method public static synthetic access$800(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;)Ljava/util/Map;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mRemoteDeviceCache:Ljava/util/Map;
 
     return-object p0
 .end method
 
-.method public static synthetic access$900(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;Lm3/c;)V
+.method public static synthetic access$900(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;Ld/d/a/o6/c/c;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->handleEndpointFound(Lm3/c;)V
+    .line 1
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->handleEndpointFound(Ld/d/a/o6/c/c;)V
 
     return-void
-.end method
-
-.method public static synthetic ai(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;Lm3/c;Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$handleEndpointLost$19(Lm3/c;Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;)V
-
-    return-void
-.end method
-
-.method public static synthetic bi(Lv8/y2;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$showClient$3(Lv8/y2;)V
-
-    return-void
-.end method
-
-.method public static synthetic ci(Landroid/content/DialogInterface;I)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$showVideoCastDialog$2(Landroid/content/DialogInterface;I)V
-
-    return-void
-.end method
-
-.method public static synthetic di(Lq7/i0;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$hideGuide$13(Lq7/i0;)V
-
-    return-void
-.end method
-
-.method public static synthetic ei(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$showExitDialog$21()V
-
-    return-void
-.end method
-
-.method public static synthetic fi(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;Lm3/c;)Z
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$handleEndpointLost$18(Lm3/c;)Z
-
-    move-result p0
-
-    return p0
 .end method
 
 .method private getModule()Ljava/util/Optional;
@@ -358,11 +299,12 @@
         value = {
             "()",
             "Ljava/util/Optional<",
-            "Lq7/v4;",
+            "Ld/d/a/d7/z7;",
             ">;"
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p0
@@ -373,9 +315,7 @@
 
     move-result-object p0
 
-    new-instance v0, Ly7/m8;
-
-    invoke-direct {v0}, Ly7/m8;-><init>()V
+    sget-object v0, Ld/d/b/x5/a/b/b/g/i1;->a:Ld/d/b/x5/a/b/b/g/i1;
 
     invoke-virtual {p0, v0}, Ljava/util/Optional;->map(Ljava/util/function/Function;)Ljava/util/Optional;
 
@@ -384,18 +324,20 @@
     return-object p0
 .end method
 
-.method private getStreamingController()Lcom/android/camera/f5;
+.method private getStreamingController()Ld/d/a/r5;
     .locals 0
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    invoke-virtual {p0}, Lcom/android/camera/fragment/BaseFragment;->getAppController()Lcom/android/camera/l;
+    .line 1
+    invoke-virtual {p0}, Lcom/android/camera/fragment/BaseFragment;->getAppController()Ld/d/a/n3;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    invoke-interface {p0}, Lcom/android/camera/l;->j2()Lcom/android/camera/f5;
+    .line 2
+    invoke-interface {p0}, Ld/d/a/n3;->M0()Ld/d/a/r5;
 
     move-result-object p0
 
@@ -407,48 +349,60 @@
     return-object p0
 .end method
 
-.method public static synthetic gi(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$hideClient$7(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;)V
-
-    return-void
-.end method
-
-.method private handleEndpointFound(Lm3/c;)V
+.method private handleEndpointFound(Ld/d/a/o6/c/c;)V
     .locals 2
-    .param p1    # Lm3/c;
+    .param p1    # Ld/d/a/o6/c/c;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "device"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/f1;
+    .line 2
+    new-instance v1, Ld/d/b/x5/a/b/b/g/v0;
 
-    invoke-direct {v1, p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/f1;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;Lm3/c;)V
+    invoke-direct {v1, p0, p1}, Ld/d/b/x5/a/b/b/g/v0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;Ld/d/a/o6/c/c;)V
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
     return-void
 .end method
 
-.method private handleEndpointLost(Lm3/c;)V
+.method private handleEndpointLost(Ld/d/a/o6/c/c;)V
     .locals 2
-    .param p1    # Lm3/c;
+    .param p1    # Ld/d/a/o6/c/c;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "device"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/x0;
+    .line 2
+    new-instance v1, Ld/d/b/x5/a/b/b/g/m0;
 
-    invoke-direct {v1, p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/x0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;Lm3/c;)V
+    invoke-direct {v1, p0, p1}, Ld/d/b/x5/a/b/b/g/m0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;Ld/d/a/o6/c/c;)V
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -457,23 +411,35 @@
 
 .method private handleStartIDM(I)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "checkedType"
+        }
+    .end annotation
 
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_1
 
-    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->getStreamingController()Lcom/android/camera/f5;
+    .line 1
+    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->getStreamingController()Ld/d/a/r5;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1, v0}, Lcom/android/camera/f5;->z(Z)V
+    .line 2
+    invoke-virtual {p1, v0}, Ld/d/a/r5;->z(Z)V
 
+    .line 3
     invoke-direct {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->startIDMManager(Z)V
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->showErrorToast()V
 
@@ -482,36 +448,22 @@
     :cond_1
     const/4 p1, 0x0
 
+    .line 5
     invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->startIDMManager(Z)V
 
     :goto_0
     return-void
 .end method
 
-.method public static synthetic hi(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;Z)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$showExitDialog$20(Z)V
-
-    return-void
-.end method
-
-.method public static synthetic ii(Lv8/y2;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$hideClient$8(Lv8/y2;)V
-
-    return-void
-.end method
-
 .method private initListener()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mCinePopupView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/m0;
+    new-instance v1, Ld/d/b/x5/a/b/b/g/b1;
 
-    invoke-direct {v1, p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/m0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;)V
+    invoke-direct {v1, p0}, Ld/d/b/x5/a/b/b/g/b1;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;)V
 
     invoke-virtual {v0, v1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->setClickEventListener(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView$ClickEventListener;)V
 
@@ -521,7 +473,8 @@
 .method public static isShowFirstCineMasterUseHint()Z
     .locals 3
 
-    invoke-static {}, Lg2/b;->h()Ll2/g;
+    .line 1
+    invoke-static {}, Ld/d/a/l6/b;->h()Ld/d/a/l6/e/l/g;
 
     move-result-object v0
 
@@ -529,35 +482,20 @@
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/camera/data/data/g;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-virtual {v0, v1, v2}, Ld/d/a/l6/e/f;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public static synthetic ji(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;Lm3/c;Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;)V
+.method private synthetic lambda$handleEndpointFound$16(Ld/d/a/o6/c/c;)Z
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$handleEndpointFound$17(Lm3/c;Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;)V
-
-    return-void
-.end method
-
-.method public static synthetic ki(Lv8/y2;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$onResume$0(Lv8/y2;)V
-
-    return-void
-.end method
-
-.method private synthetic lambda$handleEndpointFound$16(Lm3/c;)Z
-    .locals 0
-
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mRejectedRemoteDeviceSet:Ljava/util/Set;
 
-    iget-object p1, p1, Lm3/c;->e:Ljava/lang/String;
+    iget-object p1, p1, Ld/d/a/o6/c/c;->g:Ljava/lang/String;
 
     invoke-interface {p0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
@@ -566,15 +504,18 @@
     return p0
 .end method
 
-.method private synthetic lambda$handleEndpointFound$17(Lm3/c;Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;)V
+.method private synthetic lambda$handleEndpointFound$17(Ld/d/a/o6/c/c;Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;)V
     .locals 0
 
-    invoke-interface {p2, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;->handleEndpointFound(Lm3/c;)V
+    .line 1
+    invoke-interface {p2, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;->handleEndpointFound(Ld/d/a/o6/c/c;)V
 
+    .line 2
     invoke-interface {p2}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;->getCameraDeviceList()Ljava/util/Set;
 
     move-result-object p1
 
+    .line 3
     invoke-interface {p1}, Ljava/util/Set;->isEmpty()Z
 
     move-result p2
@@ -589,12 +530,14 @@
 
     if-nez p2, :cond_0
 
-    new-instance p2, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/h0;
+    .line 4
+    new-instance p2, Ld/d/b/x5/a/b/b/g/y0;
 
-    invoke-direct {p2, p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/h0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;)V
+    invoke-direct {p2, p0}, Ld/d/b/x5/a/b/b/g/y0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;)V
 
-    invoke-interface {p1, p2}, Ljava/util/Collection;->removeIf(Ljava/util/function/Predicate;)Z
+    invoke-interface {p1, p2}, Ljava/util/Set;->removeIf(Ljava/util/function/Predicate;)Z
 
+    .line 5
     :cond_0
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mCinePopupView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;
 
@@ -603,12 +546,13 @@
     return-void
 .end method
 
-.method private synthetic lambda$handleEndpointLost$18(Lm3/c;)Z
+.method private synthetic lambda$handleEndpointLost$18(Ld/d/a/o6/c/c;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mRejectedRemoteDeviceSet:Ljava/util/Set;
 
-    iget-object p1, p1, Lm3/c;->e:Ljava/lang/String;
+    iget-object p1, p1, Ld/d/a/o6/c/c;->g:Ljava/lang/String;
 
     invoke-interface {p0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
@@ -617,15 +561,18 @@
     return p0
 .end method
 
-.method private synthetic lambda$handleEndpointLost$19(Lm3/c;Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;)V
+.method private synthetic lambda$handleEndpointLost$19(Ld/d/a/o6/c/c;Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;)V
     .locals 0
 
-    invoke-interface {p2, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;->handleEndpointLost(Lm3/c;)V
+    .line 1
+    invoke-interface {p2, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;->handleEndpointLost(Ld/d/a/o6/c/c;)V
 
+    .line 2
     invoke-interface {p2}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;->getCameraDeviceList()Ljava/util/Set;
 
     move-result-object p1
 
+    .line 3
     invoke-interface {p1}, Ljava/util/Set;->isEmpty()Z
 
     move-result p2
@@ -640,12 +587,14 @@
 
     if-nez p2, :cond_0
 
-    new-instance p2, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/y0;
+    .line 4
+    new-instance p2, Ld/d/b/x5/a/b/b/g/r0;
 
-    invoke-direct {p2, p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/y0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;)V
+    invoke-direct {p2, p0}, Ld/d/b/x5/a/b/b/g/r0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;)V
 
-    invoke-interface {p1, p2}, Ljava/util/Collection;->removeIf(Ljava/util/function/Predicate;)Z
+    invoke-interface {p1, p2}, Ljava/util/Set;->removeIf(Ljava/util/function/Predicate;)Z
 
+    .line 5
     :cond_0
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mCinePopupView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;
 
@@ -654,64 +603,70 @@
     return-void
 .end method
 
-.method private static synthetic lambda$hideClient$10(Lv8/h2;)V
+.method public static synthetic lambda$hideClient$10(Ld/d/a/m7/g/k2;)V
     .locals 1
 
     const/4 v0, 0x1
 
-    invoke-interface {p0, v0}, Lv8/h2;->setExtraVisibility(Z)Z
+    .line 1
+    invoke-interface {p0, v0}, Ld/d/a/m7/g/k2;->setExtraVisibility(Z)Z
 
     return-void
 .end method
 
-.method private static synthetic lambda$hideClient$11(Lq7/v4;)V
+.method public static synthetic lambda$hideClient$11(Ld/d/a/d7/z7;)V
     .locals 0
 
-    check-cast p0, Lq7/h7;
+    .line 1
+    check-cast p0, Ld/d/a/d7/f8;
 
-    invoke-virtual {p0}, Lq7/h7;->lk()V
+    invoke-virtual {p0}, Ld/d/a/d7/f8;->Cj()V
 
     return-void
 .end method
 
-.method private static synthetic lambda$hideClient$7(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;)V
+.method public static synthetic lambda$hideClient$7(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;)V
     .locals 2
 
     const/4 v0, 0x3
 
     const/4 v1, 0x6
 
-    invoke-interface {p0, v0, v1}, Ly8/a;->dismiss(II)Z
+    .line 1
+    invoke-interface {p0, v0, v1}, Ld/d/a/m7/g/s3/a;->dismiss(II)Z
 
     return-void
 .end method
 
-.method private static synthetic lambda$hideClient$8(Lv8/y2;)V
+.method public static synthetic lambda$hideClient$8(Ld/d/a/m7/g/a3;)V
     .locals 1
 
     const/4 v0, 0x0
 
-    invoke-interface {p0, v0}, Lv8/y2;->setMenuIndicatorVisibility(I)V
+    .line 1
+    invoke-interface {p0, v0}, Ld/d/a/m7/g/a3;->setMenuIndicatorVisibility(I)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$hideClient$9(Lv8/p1;)V
+.method public static synthetic lambda$hideClient$9(Ld/d/a/m7/g/s1;)V
     .locals 1
 
     const/4 v0, 0x1
 
-    invoke-interface {p0, v0}, Lv8/p1;->setManuallyLayoutVisible(Z)V
+    .line 1
+    invoke-interface {p0, v0}, Ld/d/a/m7/g/s1;->setManuallyLayoutVisible(Z)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$hideGuide$13(Lq7/i0;)V
+.method public static synthetic lambda$hideGuide$13(Ld/d/a/d7/p7;)V
     .locals 1
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lq7/i0;->Pj(Z)V
+    .line 1
+    invoke-virtual {p0, v0}, Ld/d/a/d7/p7;->gj(Z)V
 
     return-void
 .end method
@@ -719,6 +674,7 @@
 .method private synthetic lambda$initListener$1(IZZ)V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -727,37 +683,44 @@
 
     return-void
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lk8/a;->d(Landroid/content/Context;)Z
+    invoke-static {v0}, Ld/d/a/f7/a;->d(Landroid/content/Context;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
+    .line 3
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->showVideoCastDialog()V
 
+    .line 4
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mCinePopupView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;
 
     if-eqz p0, :cond_1
 
     const/4 p1, 0x0
 
+    .line 5
     invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->showResultStatue(Z)V
 
     :cond_1
     return-void
 
+    .line 6
     :cond_2
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mCheckType:I
 
+    .line 7
     iput-boolean p2, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mIsRemoteControl:Z
 
     if-eqz p3, :cond_3
 
+    .line 8
     iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mCinePopupView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;
 
     invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
@@ -766,10 +729,12 @@
 
     invoke-virtual {p2, p3}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->refreshCameraDeviceList(Ljava/util/Set;)V
 
+    .line 9
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->stopMonitorConnect()V
 
     goto :goto_0
 
+    .line 10
     :cond_3
     invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->handleStartIDM(I)V
 
@@ -792,6 +757,7 @@
 
     goto :goto_2
 
+    .line 11
     :cond_5
     iget-boolean p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mIsRemoteControl:Z
 
@@ -804,18 +770,20 @@
     :cond_6
     const-string p0, "off"
 
+    .line 12
     :goto_2
-    invoke-static {p3, p0}, Lk9/a;->t0(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p3, p0}, Ld/d/a/v7/f;->p0(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method private synthetic lambda$onRemoteCameraStateChanged$14(Lm3/c;)Z
+.method private synthetic lambda$onRemoteCameraStateChanged$14(Ld/d/a/o6/c/c;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mRejectedRemoteDeviceSet:Ljava/util/Set;
 
-    iget-object p1, p1, Lm3/c;->e:Ljava/lang/String;
+    iget-object p1, p1, Ld/d/a/o6/c/c;->g:Ljava/lang/String;
 
     invoke-interface {p0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
@@ -827,10 +795,12 @@
 .method private synthetic lambda$onRemoteCameraStateChanged$15(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;)V
     .locals 1
 
+    .line 1
     invoke-interface {p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;->getCameraDeviceList()Ljava/util/Set;
 
     move-result-object p1
 
+    .line 2
     invoke-interface {p1}, Ljava/util/Set;->isEmpty()Z
 
     move-result v0
@@ -845,12 +815,14 @@
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/e1;
+    .line 3
+    new-instance v0, Ld/d/b/x5/a/b/b/g/x0;
 
-    invoke-direct {v0, p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/e1;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;)V
+    invoke-direct {v0, p0}, Ld/d/b/x5/a/b/b/g/x0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;)V
 
-    invoke-interface {p1, v0}, Ljava/util/Collection;->removeIf(Ljava/util/function/Predicate;)Z
+    invoke-interface {p1, v0}, Ljava/util/Set;->removeIf(Ljava/util/function/Predicate;)Z
 
+    .line 4
     :cond_0
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mCinePopupView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;
 
@@ -859,58 +831,64 @@
     return-void
 .end method
 
-.method private static synthetic lambda$onResume$0(Lv8/y2;)V
+.method public static synthetic lambda$onResume$0(Ld/d/a/m7/g/a3;)V
     .locals 4
 
-    const/4 v0, 0x0
+    const/16 v0, 0x8
 
-    const-wide/16 v1, 0x0
+    const/4 v1, 0x0
 
-    const/16 v3, 0x8
+    const-wide/16 v2, 0x0
 
-    invoke-interface {p0, v3, v0, v1, v2}, Lv8/y2;->alertAiDetectTipHint(ILjava/lang/String;J)V
+    .line 1
+    invoke-interface {p0, v0, v1, v2, v3}, Ld/d/a/m7/g/a3;->alertAiDetectTipHint(ILjava/lang/String;J)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$showClient$3(Lv8/y2;)V
+.method public static synthetic lambda$showClient$3(Ld/d/a/m7/g/a3;)V
     .locals 1
 
     const/16 v0, 0x8
 
-    invoke-interface {p0, v0}, Lv8/y2;->setMenuIndicatorVisibility(I)V
+    .line 1
+    invoke-interface {p0, v0}, Ld/d/a/m7/g/a3;->setMenuIndicatorVisibility(I)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$showClient$4(Lq7/v4;)V
+.method public static synthetic lambda$showClient$4(Ld/d/a/d7/z7;)V
     .locals 0
 
-    check-cast p0, Lq7/h7;
+    .line 1
+    check-cast p0, Ld/d/a/d7/f8;
 
-    invoke-virtual {p0}, Lq7/h7;->gk()V
+    invoke-virtual {p0}, Ld/d/a/d7/f8;->xj()V
 
-    invoke-virtual {p0}, Lq7/b6;->Jk()V
-
-    return-void
-.end method
-
-.method private static synthetic lambda$showClient$5(Lv8/p1;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-interface {p0, v0}, Lv8/p1;->setManuallyLayoutVisible(Z)V
+    .line 2
+    invoke-virtual {p0}, Ld/d/a/d7/e8;->ak()V
 
     return-void
 .end method
 
-.method private static synthetic lambda$showClient$6(Lv8/h2;)V
+.method public static synthetic lambda$showClient$5(Ld/d/a/m7/g/s1;)V
     .locals 1
 
     const/4 v0, 0x0
 
-    invoke-interface {p0, v0}, Lv8/h2;->setExtraVisibility(Z)Z
+    .line 1
+    invoke-interface {p0, v0}, Ld/d/a/m7/g/s1;->setManuallyLayoutVisible(Z)V
+
+    return-void
+.end method
+
+.method public static synthetic lambda$showClient$6(Ld/d/a/m7/g/k2;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-interface {p0, v0}, Ld/d/a/m7/g/k2;->setExtraVisibility(Z)Z
 
     return-void
 .end method
@@ -918,6 +896,7 @@
 .method private synthetic lambda$showExitDialog$20(Z)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mCinePopupView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;
 
     invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
@@ -926,25 +905,27 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->refreshCameraDeviceList(Ljava/util/Set;)V
 
+    .line 2
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->stopMonitorConnect()V
 
     if-eqz p1, :cond_0
 
-    invoke-static {}, Lv8/v1;->impl()Ljava/util/Optional;
+    .line 3
+    invoke-static {}, Ld/d/a/m7/g/y1;->impl()Ljava/util/Optional;
 
     move-result-object p1
 
-    new-instance v0, La6/s;
-
-    invoke-direct {v0}, La6/s;-><init>()V
+    sget-object v0, Ld/d/b/x5/a/b/b/g/k1;->c:Ld/d/b/x5/a/b/b/g/k1;
 
     invoke-virtual {p1, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
+    .line 4
     :cond_0
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mExitDialog:Lmiuix/appcompat/app/AlertDialog;
 
     if-eqz p0, :cond_1
 
+    .line 5
     invoke-virtual {p0}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
 
     :cond_1
@@ -954,10 +935,12 @@
 .method private synthetic lambda$showExitDialog$21()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mExitDialog:Lmiuix/appcompat/app/AlertDialog;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
 
     :cond_0
@@ -969,85 +952,28 @@
 
     const/4 p1, 0x0
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mExitDialog:Lmiuix/appcompat/app/AlertDialog;
 
     return-void
 .end method
 
-.method private static synthetic lambda$showGuide$12(Lq7/i0;)V
+.method public static synthetic lambda$showGuide$12(Ld/d/a/d7/p7;)V
     .locals 1
 
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lq7/i0;->Pj(Z)V
+    .line 1
+    invoke-virtual {p0, v0}, Ld/d/a/d7/p7;->gj(Z)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$showVideoCastDialog$2(Landroid/content/DialogInterface;I)V
+.method public static synthetic lambda$showVideoCastDialog$2(Landroid/content/DialogInterface;I)V
     .locals 0
 
+    .line 1
     invoke-interface {p0}, Landroid/content/DialogInterface;->dismiss()V
-
-    return-void
-.end method
-
-.method public static synthetic li(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;Lm3/c;)Z
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$onRemoteCameraStateChanged$14(Lm3/c;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static synthetic mi(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;Lm3/c;)Z
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$handleEndpointFound$16(Lm3/c;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static synthetic ni(Lv8/h2;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$hideClient$10(Lv8/h2;)V
-
-    return-void
-.end method
-
-.method public static synthetic oi(Lv8/h2;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$showClient$6(Lv8/h2;)V
-
-    return-void
-.end method
-
-.method public static synthetic pi(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;IZZ)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2, p3}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$initListener$1(IZZ)V
-
-    return-void
-.end method
-
-.method public static synthetic qi(Lq7/v4;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$showClient$4(Lq7/v4;)V
-
-    return-void
-.end method
-
-.method public static synthetic ri(Lq7/v4;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$hideClient$11(Lq7/v4;)V
 
     return-void
 .end method
@@ -1055,12 +981,14 @@
 .method private showErrorToast()V
     .locals 1
 
+    .line 1
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mCheckType:I
 
     if-nez v0, :cond_0
 
-    const v0, 0x7f14039a
+    const v0, 0x7f130384
 
+    .line 2
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -1070,14 +998,16 @@
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f140399
+    const v0, 0x7f130383
 
+    .line 3
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->showRotateToast(Ljava/lang/String;)V
 
+    .line 4
     :goto_0
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mCheckType:I
 
@@ -1095,14 +1025,24 @@
     :goto_1
     const-string v0, "fail"
 
-    invoke-static {p0, v0}, Lk9/a;->u0(Ljava/lang/String;Ljava/lang/String;)V
+    .line 5
+    invoke-static {p0, v0}, Ld/d/a/v7/f;->q0(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method private showExitDialog(Z)V
     .locals 12
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isReset"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1125,65 +1065,73 @@
 
     invoke-static {v3, v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    new-instance v0, Lcom/android/camera/y4;
+    .line 2
+    new-instance v0, Ld/d/a/l5;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v2
 
-    invoke-direct {v0, v2, v1}, Lcom/android/camera/y4;-><init>(Landroid/app/Activity;I)V
+    invoke-direct {v0, v2, v1}, Ld/d/a/l5;-><init>(Landroid/app/Activity;I)V
 
+    .line 3
     invoke-virtual {p0}, Lcom/android/camera/fragment/BaseFragment;->getDegree()I
 
     move-result v2
 
-    invoke-virtual {v0, v2, v1}, Lcom/android/camera/y4;->d(IZ)V
+    invoke-virtual {v0, v2, v1}, Ld/d/a/l5;->d(IZ)V
 
+    .line 4
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
-    const/4 v4, 0x0
+    const v0, 0x7f1302c6
 
-    const v0, 0x7f1402dc
-
+    .line 5
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
-    const v0, 0x7f1402db
+    const v0, 0x7f1302c5
 
+    .line 6
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
-    new-instance v7, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/g1;
+    new-instance v7, Ld/d/b/x5/a/b/b/g/t0;
 
-    invoke-direct {v7, p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/g1;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;Z)V
+    invoke-direct {v7, p0, p1}, Ld/d/b/x5/a/b/b/g/t0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;Z)V
+
+    const p1, 0x7f1302c4
+
+    .line 7
+    invoke-virtual {p0, p1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
+
+    move-result-object v10
+
+    new-instance v11, Ld/d/b/x5/a/b/b/g/q0;
+
+    invoke-direct {v11, p0}, Ld/d/b/x5/a/b/b/g/q0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;)V
+
+    const/4 v4, 0x0
 
     const/4 v8, 0x0
 
     const/4 v9, 0x0
 
-    const p1, 0x7f1402da
-
-    invoke-virtual {p0, p1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
-
-    move-result-object v10
-
-    new-instance v11, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/i0;
-
-    invoke-direct {v11, p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/i0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;)V
-
-    invoke-static/range {v3 .. v11}, Lcom/android/camera/y4;->E(Landroid/content/Context;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;)Lmiuix/appcompat/app/AlertDialog;
+    .line 8
+    invoke-static/range {v3 .. v11}, Ld/d/a/l5;->u(Landroid/content/Context;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;)Lmiuix/appcompat/app/AlertDialog;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mExitDialog:Lmiuix/appcompat/app/AlertDialog;
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/j0;
+    .line 9
+    new-instance v0, Ld/d/b/x5/a/b/b/g/l0;
 
-    invoke-direct {v0, p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/j0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;)V
+    invoke-direct {v0, p0}, Ld/d/b/x5/a/b/b/g/l0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;)V
 
     invoke-virtual {p1, v0}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
@@ -1192,6 +1140,14 @@
 
 .method private showRotateToast(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "res"
+        }
+    .end annotation
 
     .line 1
     invoke-virtual {p0, p1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
@@ -1205,6 +1161,14 @@
 
 .method private showRotateToast(Ljava/lang/String;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "res"
+        }
+    .end annotation
 
     .line 2
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1273,7 +1237,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/android/camera/ui/d1;->d(Landroid/app/Activity;)Lcom/android/camera/ui/d1;
+    invoke-static {v1}, Ld/d/a/d8/a2;->d(Landroid/app/Activity;)Ld/d/a/d8/a2;
 
     move-result-object v1
 
@@ -1283,7 +1247,7 @@
 
     rsub-int p0, p0, 0x168
 
-    invoke-virtual {v1, p1, p0, v0}, Lcom/android/camera/ui/d1;->j(Ljava/lang/String;II)V
+    invoke-virtual {v1, p1, p0, v0}, Ld/d/a/d8/a2;->j(Ljava/lang/String;II)V
 
     return-void
 .end method
@@ -1291,12 +1255,14 @@
 .method private showSuccessToast()V
     .locals 1
 
+    .line 1
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mCheckType:I
 
     if-nez v0, :cond_0
 
-    const v0, 0x7f14039c
+    const v0, 0x7f130386
 
+    .line 2
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -1306,14 +1272,16 @@
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f14039b
+    const v0, 0x7f130385
 
+    .line 3
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->showRotateToast(Ljava/lang/String;)V
 
+    .line 4
     :goto_0
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mCheckType:I
 
@@ -1331,7 +1299,8 @@
     :goto_1
     const-string v0, "land"
 
-    invoke-static {p0, v0}, Lk9/a;->u0(Ljava/lang/String;Ljava/lang/String;)V
+    .line 5
+    invoke-static {p0, v0}, Ld/d/a/v7/f;->q0(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1339,6 +1308,7 @@
 .method private showVideoCastDialog()V
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -1347,6 +1317,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mVideoCastDialog:Lmiuix/appcompat/app/AlertDialog;
 
@@ -1360,50 +1331,52 @@
 
     return-void
 
+    .line 3
     :cond_1
-    new-instance v0, Lmiuix/appcompat/app/AlertDialog$a;
+    new-instance v0, Lmiuix/appcompat/app/AlertDialog$b;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lmiuix/appcompat/app/AlertDialog$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lmiuix/appcompat/app/AlertDialog$b;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f1402e2
+    const v1, 0x7f1302cc
 
-    invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$a;->X(I)Lmiuix/appcompat/app/AlertDialog$a;
+    .line 4
+    invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$b;->U(I)Lmiuix/appcompat/app/AlertDialog$b;
 
-    invoke-static {}, Lid/c;->e()Z
+    .line 5
+    invoke-static {}, Ld/k/a/c;->e()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    const v1, 0x7f1402dd
+    const v1, 0x7f1302c7
 
     goto :goto_0
 
     :cond_2
-    const v1, 0x7f1402de
+    const v1, 0x7f1302c8
 
     :goto_0
-    invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$a;->y(I)Lmiuix/appcompat/app/AlertDialog$a;
+    invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$b;->w(I)Lmiuix/appcompat/app/AlertDialog$b;
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/s0;
+    const v1, 0x7f1303dc
 
-    invoke-direct {v1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/s0;-><init>()V
+    .line 6
+    sget-object v2, Ld/d/b/x5/a/b/b/g/o0;->c:Ld/d/b/x5/a/b/b/g/o0;
 
-    const v2, 0x7f1403f2
+    invoke-virtual {v0, v1, v2}, Lmiuix/appcompat/app/AlertDialog$b;->M(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$b;
 
-    invoke-virtual {v0, v2, v1}, Lmiuix/appcompat/app/AlertDialog$a;->P(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$a;
+    .line 7
+    sget-object v1, Ld/d/b/x5/a/b/b/g/f1;->c:Ld/d/b/x5/a/b/b/g/f1;
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/z0;
+    invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$b;->F(Landroid/content/DialogInterface$OnCancelListener;)Lmiuix/appcompat/app/AlertDialog$b;
 
-    invoke-direct {v1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/z0;-><init>()V
-
-    invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$a;->I(Landroid/content/DialogInterface$OnCancelListener;)Lmiuix/appcompat/app/AlertDialog$a;
-
-    invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog$a;->c0()Lmiuix/appcompat/app/AlertDialog;
+    .line 8
+    invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog$b;->Z()Lmiuix/appcompat/app/AlertDialog;
 
     move-result-object v0
 
@@ -1412,22 +1385,24 @@
     return-void
 .end method
 
-.method public static synthetic si(Lv8/p1;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$showClient$5(Lv8/p1;)V
-
-    return-void
-.end method
-
 .method private startIDMManager(Z)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isServer"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->stopIDMManager()V
 
     const/4 v0, 0x1
 
-    invoke-static {v0}, Lwf/b;->a(Z)Ljava/lang/String;
+    .line 2
+    invoke-static {v0}, Ld/o/f/r/k/a;->a(Z)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1441,9 +1416,11 @@
 
     const-string v3, "startIDMManager"
 
+    .line 3
     invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {}, Lcom/android/camera/CameraAppImpl;->o()Landroid/content/Context;
+    .line 4
+    invoke-static {}, Lcom/android/camera/CameraAppImpl;->d()Landroid/content/Context;
 
     move-result-object v1
 
@@ -1459,25 +1436,29 @@
     :goto_0
     const/16 p1, 0x3ff6
 
-    invoke-static {v1, p1, v0, v2, v2}, Lxf/c;->e1(Landroid/content/Context;IIII)Lxf/c;
+    .line 5
+    invoke-static {v1, p1, v0, v2, v2}, Ld/o/f/r/k/c/o;->e1(Landroid/content/Context;IIII)Ld/o/f/r/k/c/o;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mNetworkStateManager:Lxf/c;
+    iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mNetworkStateManager:Ld/o/f/r/k/c/o;
 
-    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mNetworkStateCallback:Lxf/b;
+    .line 6
+    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mNetworkStateCallback:Ld/o/f/r/k/c/n;
 
-    invoke-virtual {p1, v0}, Lxf/c;->d1(Lxf/b;)V
+    invoke-virtual {p1, v0}, Ld/o/f/r/k/c/o;->d1(Ld/o/f/r/k/c/n;)V
 
-    iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mNetworkStateManager:Lxf/c;
+    .line 7
+    iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mNetworkStateManager:Ld/o/f/r/k/c/o;
 
-    invoke-virtual {p1}, Lxf/c;->q0()V
+    invoke-virtual {p1}, Ld/o/f/r/k/c/o;->q0()V
 
-    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mNetworkStateManager:Lxf/c;
+    .line 8
+    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mNetworkStateManager:Ld/o/f/r/k/c/o;
 
     const p1, 0xbabe
 
-    invoke-virtual {p0, p1}, Lgg/d;->U(I)V
+    invoke-virtual {p0, p1}, Ld/o/f/w/e;->U(I)V
 
     return-void
 .end method
@@ -1487,52 +1468,63 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mDiscoveryRetries:I
 
+    .line 2
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mHandler:Landroid/os/Handler;
 
     const v2, 0xbeba
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
+    .line 3
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mHandler:Landroid/os/Handler;
 
     const v2, 0xdead
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
+    .line 4
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mRemoteDeviceCache:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->clear()V
 
+    .line 5
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mRejectedRemoteDeviceSet:Ljava/util/Set;
 
     invoke-interface {v1}, Ljava/util/Set;->clear()V
 
-    iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mNetworkStateManager:Lxf/c;
+    .line 6
+    iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mNetworkStateManager:Ld/o/f/r/k/c/o;
 
     if-eqz v1, :cond_0
 
-    const-string v1, "stopIDMManager"
-
     new-array v0, v0, [Ljava/lang/Object;
 
-    const-string v3, "FragmentCinemasterProcess"
+    const-string v1, "FragmentCinemasterProcess"
 
-    invoke-static {v3, v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    const-string v3, "stopIDMManager"
 
-    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mNetworkStateManager:Lxf/c;
+    .line 7
+    invoke-static {v1, v3, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-virtual {v0, v2}, Lgg/d;->U(I)V
+    .line 8
+    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mNetworkStateManager:Ld/o/f/r/k/c/o;
 
-    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mNetworkStateManager:Lxf/c;
+    invoke-virtual {v0, v2}, Ld/o/f/w/e;->U(I)V
 
-    invoke-virtual {v0}, Lxf/c;->g1()V
+    .line 9
+    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mNetworkStateManager:Ld/o/f/r/k/c/o;
+
+    invoke-virtual {v0}, Ld/o/f/r/k/c/o;->g1()V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mNetworkStateManager:Lxf/c;
+    .line 10
+    iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mNetworkStateManager:Ld/o/f/r/k/c/o;
 
+    .line 11
     :cond_0
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mCheckType:I
 
@@ -1550,7 +1542,8 @@
     :goto_0
     const-string v0, "end"
 
-    invoke-static {p0, v0}, Lk9/a;->u0(Ljava/lang/String;Ljava/lang/String;)V
+    .line 12
+    invoke-static {p0, v0}, Ld/d/a/v7/f;->q0(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1558,6 +1551,7 @@
 .method private stopMonitorConnect()V
     .locals 4
 
+    .line 1
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mCheckType:I
 
     const-string v1, "FragmentCinemasterProcess"
@@ -1566,70 +1560,78 @@
 
     if-nez v0, :cond_0
 
-    const-string v0, "stopMonitorConnect: role = monitor"
+    new-array v0, v2, [Ljava/lang/Object;
 
-    new-array v2, v2, [Ljava/lang/Object;
+    const-string v2, "stopMonitorConnect: role = monitor"
 
-    invoke-static {v1, v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 2
+    invoke-static {v1, v2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 3
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->hideClient()V
 
+    .line 4
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/camera/s;->d(Landroid/content/Context;)Lcom/android/camera/s;
+    invoke-static {v0}, Ld/d/a/t3;->c(Landroid/content/Context;)Ld/d/a/t3;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/camera/s;->f()V
+    invoke-virtual {v0}, Ld/d/a/t3;->e()V
 
+    .line 5
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->getModule()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/c0;
-
-    invoke-direct {v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/c0;-><init>()V
+    sget-object v0, Ld/d/b/x5/a/b/b/g/l1;->c:Ld/d/b/x5/a/b/b/g/l1;
 
     invoke-virtual {p0, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
     goto :goto_0
 
     :cond_0
-    const-string v0, "stopMonitorConnect: role = camera"
+    new-array v0, v2, [Ljava/lang/Object;
 
-    new-array v3, v2, [Ljava/lang/Object;
+    const-string v3, "stopMonitorConnect: role = camera"
 
-    invoke-static {v1, v0, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 6
+    invoke-static {v1, v3, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 7
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->stopIDMManager()V
 
+    .line 8
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->getModule()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/b1;
-
-    invoke-direct {v1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/b1;-><init>()V
+    sget-object v1, Ld/d/b/x5/a/b/b/g/a;->c:Ld/d/b/x5/a/b/b/g/a;
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->getStreamingController()Lcom/android/camera/f5;
+    .line 9
+    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->getStreamingController()Ld/d/a/r5;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/android/camera/f5;->A()V
+    .line 10
+    invoke-virtual {v0}, Ld/d/a/r5;->A()V
 
+    .line 11
     :cond_1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mCinePopupView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;
 
     if-eqz v0, :cond_2
 
+    .line 12
     invoke-virtual {v0, v2}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->showResultStatue(Z)V
 
+    .line 13
     :cond_2
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mMonitorDeviceList:Ljava/util/List;
 
@@ -1641,6 +1643,40 @@
 
 
 # virtual methods
+.method public synthetic Fb(Ld/d/a/o6/c/c;Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$handleEndpointLost$19(Ld/d/a/o6/c/c;Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;)V
+
+    return-void
+.end method
+
+.method public synthetic Mb(IZZ)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2, p3}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$initListener$1(IZZ)V
+
+    return-void
+.end method
+
+.method public synthetic Yb(Ld/d/a/o6/c/c;)Z
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$onRemoteCameraStateChanged$14(Ld/d/a/o6/c/c;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public synthetic gc(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$onRemoteCameraStateChanged$15(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;)V
+
+    return-void
+.end method
+
 .method public getFragmentInto()I
     .locals 0
 
@@ -1652,7 +1688,7 @@
 .method public getLayoutResourceId()I
     .locals 0
 
-    const p0, 0x7f0e00ab
+    const p0, 0x7f0e009c
 
     return p0
 .end method
@@ -1660,6 +1696,7 @@
 .method public getMonitorCount()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mMonitorDeviceList:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->size()I
@@ -1671,6 +1708,14 @@
 
 .method public handleExitRequest(Z)Z
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isReset"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -1680,12 +1725,15 @@
 
     const-string v3, "handleExitRequest"
 
+    .line 1
     invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mNetworkStateManager:Lxf/c;
+    .line 2
+    iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mNetworkStateManager:Ld/o/f/r/k/c/o;
 
     if-eqz v1, :cond_0
 
+    .line 3
     invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->showExitDialog(Z)V
 
     const/4 p0, 0x1
@@ -1707,69 +1755,72 @@
 
     const-string v3, "hideClient"
 
+    .line 1
     invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     iput-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mIsClientShow:Z
 
+    .line 3
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->stopIDMManager()V
 
+    .line 4
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mCinePopupView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;
 
     if-eqz v1, :cond_0
 
+    .line 5
     invoke-virtual {v1, v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->showResultStatue(Z)V
 
+    .line 6
     :cond_0
     invoke-static {}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/n0;
-
-    invoke-direct {v1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/n0;-><init>()V
+    .line 7
+    sget-object v1, Ld/d/b/x5/a/b/b/g/s0;->c:Ld/d/b/x5/a/b/b/g/s0;
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    invoke-static {}, Lv8/y2;->impl()Ljava/util/Optional;
+    .line 8
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/o0;
-
-    invoke-direct {v1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/o0;-><init>()V
+    .line 9
+    sget-object v1, Ld/d/b/x5/a/b/b/g/u0;->c:Ld/d/b/x5/a/b/b/g/u0;
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    invoke-static {}, Lv8/p1;->impl()Ljava/util/Optional;
+    .line 10
+    invoke-static {}, Ld/d/a/m7/g/s1;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/p0;
-
-    invoke-direct {v1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/p0;-><init>()V
+    sget-object v1, Ld/d/b/x5/a/b/b/g/i0;->c:Ld/d/b/x5/a/b/b/g/i0;
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    invoke-static {}, Lv8/h2;->impl()Ljava/util/Optional;
+    .line 11
+    invoke-static {}, Ld/d/a/m7/g/k2;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/q0;
-
-    invoke-direct {v1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/q0;-><init>()V
+    sget-object v1, Ld/d/b/x5/a/b/b/g/z0;->c:Ld/d/b/x5/a/b/b/g/z0;
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
+    .line 12
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->getModule()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/r0;
-
-    invoke-direct {v1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/r0;-><init>()V
+    sget-object v1, Ld/d/b/x5/a/b/b/g/d1;->c:Ld/d/b/x5/a/b/b/g/d1;
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
+    .line 13
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getChildFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object p0
@@ -1780,7 +1831,7 @@
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcom/android/camera/fragment/u3;->c(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)Z
+    invoke-static {p0, v0}, Ld/d/a/u6/x3;->c(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)Z
 
     return-void
 .end method
@@ -1788,6 +1839,7 @@
 .method public hideGuide()Z
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getChildFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
@@ -1798,12 +1850,13 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/android/camera/fragment/u3;->c(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)Z
+    invoke-static {v0, v1}, Ld/d/a/u6/x3;->c(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 2
     invoke-static {}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->isShowFirstCineMasterUseHint()Z
 
     move-result v1
@@ -1812,16 +1865,16 @@
 
     const/4 v1, 0x0
 
+    .line 3
     invoke-virtual {p0, v1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->setShowFirstCineMasterUseHint(Z)V
 
+    .line 4
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/fragment/BaseFragment;->getBaseModule()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/l0;
-
-    invoke-direct {v1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/l0;-><init>()V
+    sget-object v1, Ld/d/b/x5/a/b/b/g/p0;->c:Ld/d/b/x5/a/b/b/g/p0;
 
     invoke-virtual {p0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -1832,10 +1885,12 @@
 .method public hidePopupBottom()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mCinePopupView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->hideView()V
 
     :cond_0
@@ -1844,6 +1899,14 @@
 
 .method public initView(Landroid/view/View;)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -1853,10 +1916,12 @@
 
     const-string v3, "initView"
 
+    .line 1
     invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    const v1, 0x7f0b014f
+    const v1, 0x7f0b012f
 
+    .line 2
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -1865,14 +1930,17 @@
 
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mCinePopupView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;
 
+    .line 3
     invoke-virtual {p0}, Lcom/android/camera/fragment/BaseFragment;->getDegree()I
 
     move-result v1
 
     invoke-virtual {p1, v1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->setDegree(I)V
 
+    .line 4
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->initListener()V
 
+    .line 5
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->showGuide(Z)V
 
     return-void
@@ -1881,11 +1949,12 @@
 .method public isBottomShow()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mCinePopupView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getVisibility()I
 
     move-result p0
 
@@ -1905,6 +1974,7 @@
 .method public isClientVisible()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mIsClientShow:Z
 
     return p0
@@ -1913,6 +1983,7 @@
 .method public isGuideShown()Z
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getChildFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object p0
@@ -1923,12 +1994,13 @@
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcom/android/camera/fragment/u3;->b(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)Landroidx/fragment/app/Fragment;
+    invoke-static {p0, v0}, Ld/d/a/u6/x3;->b(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)Landroidx/fragment/app/Fragment;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result p0
@@ -1949,6 +2021,7 @@
 .method public isRemoteControl()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mIsRemoteControl:Z
 
     return p0
@@ -1957,13 +2030,12 @@
 .method public isRemoteRecoding()Z
     .locals 1
 
+    .line 1
     invoke-static {}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;->impl()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/k0;
-
-    invoke-direct {v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/k0;-><init>()V
+    sget-object v0, Ld/d/b/x5/a/b/b/g/j1;->a:Ld/d/b/x5/a/b/b/g/j1;
 
     invoke-virtual {p0, v0}, Ljava/util/Optional;->map(Ljava/util/function/Function;)Ljava/util/Optional;
 
@@ -1984,9 +2056,20 @@
     return p0
 .end method
 
+.method public synthetic nb(Ld/d/a/o6/c/c;)Z
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$handleEndpointFound$16(Ld/d/a/o6/c/c;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
 .method public onDestroy()V
     .locals 2
 
+    .line 1
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroy()V
 
     const/4 p0, 0x0
@@ -1997,6 +2080,7 @@
 
     const-string v1, "onDestroy"
 
+    .line 2
     invoke-static {v0, v1, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
@@ -2005,6 +2089,7 @@
 .method public onDestroyView()V
     .locals 4
 
+    .line 1
     invoke-super {p0}, Lcom/android/camera/fragment/BaseFragment;->onDestroyView()V
 
     const/4 v0, 0x0
@@ -2015,29 +2100,35 @@
 
     const-string v3, "onDestroyView"
 
+    .line 2
     invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 3
     iput-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mIsClientShow:Z
 
+    .line 4
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/camera/ui/d1;->d(Landroid/app/Activity;)Lcom/android/camera/ui/d1;
+    invoke-static {v0}, Ld/d/a/d8/a2;->d(Landroid/app/Activity;)Ld/d/a/d8/a2;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/camera/ui/d1;->b()V
+    invoke-virtual {v0}, Ld/d/a/d8/a2;->b()V
 
+    .line 5
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->stopIDMManager()V
 
-    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->getStreamingController()Lcom/android/camera/f5;
+    .line 6
+    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->getStreamingController()Ld/d/a/r5;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/camera/f5;->A()V
+    .line 7
+    invoke-virtual {p0}, Ld/d/a/r5;->A()V
 
     :cond_0
     return-void
@@ -2046,6 +2137,7 @@
 .method public onPause()V
     .locals 3
 
+    .line 1
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onPause()V
 
     const/4 v0, 0x0
@@ -2056,14 +2148,17 @@
 
     const-string v2, "onPause"
 
+    .line 2
     invoke-static {v1, v2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mHandler:Landroid/os/Handler;
 
     const v1, 0xdead
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
+    .line 4
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->hideGuide()Z
 
     return-void
@@ -2071,7 +2166,18 @@
 
 .method public onRemoteCameraStateChanged(Ljava/lang/String;I)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "ip",
+            "state"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2080,7 +2186,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p1}, Lbg/a;->h(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p1}, Ld/o/f/r/m/a;->h(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -2108,76 +2214,91 @@
 
     if-ne p2, v0, :cond_0
 
+    .line 2
     iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mRejectedRemoteDeviceSet:Ljava/util/Set;
 
     invoke-interface {p2, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 3
     invoke-static {}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;->impl()Ljava/util/Optional;
 
     move-result-object p1
 
-    new-instance p2, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/c1;
+    new-instance p2, Ld/d/b/x5/a/b/b/g/k0;
 
-    invoke-direct {p2, p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/c1;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;)V
+    invoke-direct {p2, p0}, Ld/d/b/x5/a/b/b/g/k0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;)V
 
     invoke-virtual {p1, p2}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_0
     if-nez p2, :cond_3
 
-    iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mRemoteDeviceCache:Ljava/util/Map;
+    const/4 p2, 0x0
 
-    invoke-interface {p2}, Ljava/util/Map;->values()Ljava/util/Collection;
+    .line 4
+    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mRemoteDeviceCache:Ljava/util/Map;
 
-    move-result-object p2
-
-    invoke-interface {p2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object p2
-
-    :cond_1
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
 
     move-result-object v0
 
-    check-cast v0, Lm3/c;
+    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
-    if-eqz v0, :cond_1
+    move-result-object v0
 
-    iget-object v1, v0, Lm3/c;->e:Ljava/lang/String;
-
-    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :cond_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
+    if-eqz v1, :cond_2
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ld/d/a/o6/c/c;
+
     if-eqz v1, :cond_1
 
-    goto :goto_0
+    .line 5
+    iget-object v2, v1, Ld/d/a/o6/c/c;->g:Ljava/lang/String;
+
+    invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    move-object p2, v1
 
     :cond_2
-    const/4 v0, 0x0
+    if-eqz p2, :cond_3
 
-    :goto_0
-    if-eqz v0, :cond_3
-
-    invoke-direct {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->handleEndpointLost(Lm3/c;)V
+    .line 6
+    invoke-direct {p0, p2}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->handleEndpointLost(Ld/d/a/o6/c/c;)V
 
     :cond_3
-    :goto_1
+    :goto_0
     return-void
 .end method
 
 .method public onRemoteMonitorStateChanged(Ljava/lang/String;I)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "ip",
+            "state"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2186,7 +2307,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p1}, Lbg/a;->h(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p1}, Ld/o/f/r/m/a;->h(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -2210,11 +2331,13 @@
 
     invoke-static {v3, v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mNetworkStateManager:Lxf/c;
+    .line 2
+    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mNetworkStateManager:Ld/o/f/r/k/c/o;
 
     if-eqz v0, :cond_5
 
-    invoke-virtual {v0}, Lwf/c;->A0()I
+    .line 3
+    invoke-virtual {v0}, Ld/o/f/r/k/b;->A0()I
 
     move-result v0
 
@@ -2224,6 +2347,7 @@
 
     goto :goto_1
 
+    .line 4
     :cond_0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
@@ -2236,6 +2360,7 @@
     :cond_1
     if-ne p2, v2, :cond_3
 
+    .line 5
     iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mMonitorDeviceList:Ljava/util/List;
 
     invoke-interface {p2}, Ljava/util/List;->size()I
@@ -2246,21 +2371,24 @@
 
     if-lt p2, v0, :cond_2
 
+    .line 6
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    new-array p2, v2, [Ljava/lang/Object;
+    const p2, 0x7f11000f
 
+    new-array v2, v2, [Ljava/lang/Object;
+
+    .line 7
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v2
+    move-result-object v3
 
-    aput-object v2, p2, v1
+    aput-object v3, v2, v1
 
-    const v1, 0x7f120011
-
-    invoke-virtual {p1, v1, v0, p2}, Landroid/content/res/Resources;->getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
+    .line 8
+    invoke-virtual {p1, p2, v0, v2}, Landroid/content/res/Resources;->getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -2268,6 +2396,7 @@
 
     return-void
 
+    .line 9
     :cond_2
     iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mMonitorDeviceList:Ljava/util/List;
 
@@ -2277,37 +2406,43 @@
 
     if-nez p2, :cond_4
 
+    .line 10
     iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mMonitorDeviceList:Ljava/util/List;
 
     invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 11
     :cond_3
     iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mMonitorDeviceList:Ljava/util/List;
 
     invoke-interface {p2, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
+    .line 12
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-static {p1}, Lk8/a;->d(Landroid/content/Context;)Z
+    invoke-static {p1}, Ld/d/a/f7/a;->d(Landroid/content/Context;)Z
 
     move-result p1
 
     if-eqz p1, :cond_4
 
-    const p1, 0x7f1402e9
+    const p1, 0x7f1302d3
 
+    .line 13
     invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->showRotateToast(I)V
 
+    .line 14
     :cond_4
     :goto_0
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mCinePopupView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;
 
     if-eqz p1, :cond_5
 
+    .line 15
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mMonitorDeviceList:Ljava/util/List;
 
     invoke-virtual {p1, p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->refreshMonitorDeviceList(Ljava/util/List;)V
@@ -2320,6 +2455,7 @@
 .method public onResume()V
     .locals 4
 
+    .line 1
     invoke-super {p0}, Lcom/android/camera/fragment/BaseFragment;->onResume()V
 
     const/4 v0, 0x0
@@ -2330,20 +2466,25 @@
 
     const-string v3, "onResume"
 
+    .line 2
     invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 3
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mCinePopupView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;
 
     if-eqz v1, :cond_0
 
+    .line 4
     invoke-virtual {v1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->hideView()V
 
+    .line 5
     :cond_0
-    iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mNetworkStateManager:Lxf/c;
+    iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mNetworkStateManager:Ld/o/f/r/k/c/o;
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v1}, Lwf/c;->A0()I
+    .line 6
+    invoke-virtual {v1}, Ld/o/f/r/k/b;->A0()I
 
     move-result v1
 
@@ -2351,14 +2492,17 @@
 
     if-ne v1, v3, :cond_1
 
-    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->getStreamingController()Lcom/android/camera/f5;
+    .line 7
+    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->getStreamingController()Ld/d/a/r5;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v1, v3}, Lcom/android/camera/f5;->z(Z)V
+    .line 8
+    invoke-virtual {v1, v3}, Ld/d/a/r5;->z(Z)V
 
+    .line 9
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2388,15 +2532,17 @@
 
     invoke-static {v2, v1, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 10
     iget-boolean v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mIsClientShow:Z
 
     if-eqz v1, :cond_2
 
-    iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mNetworkStateManager:Lxf/c;
+    iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mNetworkStateManager:Ld/o/f/r/k/c/o;
 
     if-eqz v1, :cond_2
 
-    invoke-virtual {v1}, Lwf/c;->A0()I
+    .line 11
+    invoke-virtual {v1}, Ld/o/f/r/k/b;->A0()I
 
     move-result v1
 
@@ -2404,8 +2550,10 @@
 
     if-ne v1, v2, :cond_2
 
+    .line 12
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mDiscoveryRetries:I
 
+    .line 13
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mHandler:Landroid/os/Handler;
 
     const v0, 0xdead
@@ -2414,14 +2562,13 @@
 
     invoke-virtual {p0, v0, v1, v2}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
+    .line 14
     :cond_2
-    invoke-static {}, Lv8/y2;->impl()Ljava/util/Optional;
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/a1;
-
-    invoke-direct {v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/a1;-><init>()V
+    sget-object v0, Ld/d/b/x5/a/b/b/g/w0;->c:Ld/d/b/x5/a/b/b/g/w0;
 
     invoke-virtual {p0, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -2431,6 +2578,7 @@
 .method public onWiFiLost()V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result v0
@@ -2439,13 +2587,16 @@
 
     return-void
 
+    .line 2
     :cond_0
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->stopMonitorConnect()V
 
-    const v0, 0x7f1402e3
+    const v0, 0x7f1302cd
 
+    .line 3
     invoke-direct {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->showRotateToast(I)V
 
+    .line 4
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->showPopupBottom()V
 
     return-void
@@ -2453,6 +2604,19 @@
 
 .method public provideAnimateElement(ILjava/util/List;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "newMode",
+            "animateInElements",
+            "resetType"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -2462,6 +2626,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2, p3}, Lcom/android/camera/fragment/BaseFragment;->provideAnimateElement(ILjava/util/List;I)V
 
     const/4 p1, 0x4
@@ -2476,17 +2641,21 @@
 
     const-string p3, "provideAnimateElement: stop streaming"
 
+    .line 2
     invoke-static {p2, p3, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 3
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->stopIDMManager()V
 
-    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->getStreamingController()Lcom/android/camera/f5;
+    .line 4
+    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->getStreamingController()Ld/d/a/r5;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/camera/f5;->A()V
+    .line 5
+    invoke-virtual {p0}, Ld/d/a/r5;->A()V
 
     :cond_0
     return-void
@@ -2494,6 +2663,17 @@
 
 .method public provideRotateItem(Ljava/util/List;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "pendingRotateItems",
+            "newDegree"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2503,12 +2683,15 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/android/camera/fragment/BaseFragment;->provideRotateItem(Ljava/util/List;I)V
 
+    .line 2
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mCinePopupView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;
 
     if-eqz p1, :cond_0
 
+    .line 3
     iget p0, p0, Lcom/android/camera/fragment/BaseFragment;->mDegree:I
 
     invoke-virtual {p1, p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->setDegree(I)V
@@ -2517,10 +2700,35 @@
     return-void
 .end method
 
-.method public register(Lu8/d;)V
-    .locals 3
+.method public synthetic qb(Ld/d/a/o6/c/c;Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;)V
+    .locals 0
 
-    invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->register(Lu8/d;)V
+    invoke-direct {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$handleEndpointFound$17(Ld/d/a/o6/c/c;Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;)V
+
+    return-void
+.end method
+
+.method public synthetic qc(Z)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$showExitDialog$20(Z)V
+
+    return-void
+.end method
+
+.method public register(Ld/d/a/m7/c;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "modeCoordinator"
+        }
+    .end annotation
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->register(Ld/d/a/m7/c;)V
 
     const/4 v0, 0x0
 
@@ -2530,33 +2738,47 @@
 
     const-string v2, "register"
 
+    .line 2
     invoke-static {v1, v2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    const-class v0, Lv8/v;
+    .line 3
+    const-class v0, Ld/d/a/m7/g/y;
 
-    invoke-interface {p1, v0, p0}, Lu8/d;->d(Ljava/lang/Class;Lu8/a;)V
+    invoke-interface {p1, v0, p0}, Ld/d/a/m7/c;->b(Ljava/lang/Class;Ld/d/a/m7/a;)V
 
     return-void
 .end method
 
 .method public setShowFirstCineMasterUseHint(Z)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "flag"
+        }
+    .end annotation
 
-    invoke-static {}, Lg2/b;->h()Ll2/g;
+    .line 1
+    invoke-static {}, Ld/d/a/l6/b;->h()Ld/d/a/l6/e/l/g;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/camera/data/data/g;->b()Lr2/a$a;
+    .line 2
+    invoke-virtual {p0}, Ld/d/a/l6/e/f;->b()Ld/d/a/l6/g/a$a;
 
     move-result-object p0
 
     const-string v0, "pref_camera_first_cine_master_use_hint_shown_key"
 
-    invoke-interface {p0, v0, p1}, Lr2/a$a;->putBoolean(Ljava/lang/String;Z)Lr2/a$a;
+    .line 3
+    invoke-interface {p0, v0, p1}, Ld/d/a/l6/g/a$a;->putBoolean(Ljava/lang/String;Z)Ld/d/a/l6/g/a$a;
 
     move-result-object p0
 
-    invoke-interface {p0}, Lr2/a$a;->apply()V
+    .line 4
+    invoke-interface {p0}, Ld/d/a/l6/g/a$a;->apply()V
 
     return-void
 .end method
@@ -2572,101 +2794,117 @@
 
     const-string v2, "showClient"
 
+    .line 1
     invoke-static {v1, v2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     invoke-static {}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
+    .line 3
     invoke-virtual {v0}, Ljava/util/Optional;->isPresent()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 4
     invoke-virtual {v0}, Ljava/util/Optional;->get()Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;
 
-    invoke-interface {p0}, Ly8/a;->show()V
+    invoke-interface {p0}, Ld/d/a/m7/g/s3/a;->show()V
 
     return-void
 
+    .line 5
     :cond_0
-    invoke-static {}, Lv8/y2;->impl()Ljava/util/Optional;
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/t0;
-
-    invoke-direct {v1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/t0;-><init>()V
+    .line 6
+    sget-object v1, Ld/d/b/x5/a/b/b/g/n0;->c:Ld/d/b/x5/a/b/b/g/n0;
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
     const/4 v0, 0x1
 
+    .line 7
     iput-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mIsClientShow:Z
 
+    .line 8
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->getModule()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/u0;
-
-    invoke-direct {v1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/u0;-><init>()V
+    sget-object v1, Ld/d/b/x5/a/b/b/g/c1;->c:Ld/d/b/x5/a/b/b/g/c1;
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    invoke-static {}, Lv8/p1;->impl()Ljava/util/Optional;
+    .line 9
+    invoke-static {}, Ld/d/a/m7/g/s1;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/v0;
-
-    invoke-direct {v1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/v0;-><init>()V
+    sget-object v1, Ld/d/b/x5/a/b/b/g/e1;->c:Ld/d/b/x5/a/b/b/g/e1;
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    invoke-static {}, Lv8/h2;->impl()Ljava/util/Optional;
+    .line 10
+    invoke-static {}, Ld/d/a/m7/g/k2;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/w0;
-
-    invoke-direct {v1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/w0;-><init>()V
+    sget-object v1, Ld/d/b/x5/a/b/b/g/a1;->c:Ld/d/b/x5/a/b/b/g/a1;
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
+    .line 11
     new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterClient;
 
     invoke-direct {v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterClient;-><init>()V
 
+    .line 12
     invoke-virtual {p0}, Lcom/android/camera/fragment/BaseFragment;->getDegree()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Lcom/android/camera/fragment/BaseFragment;->setDegree(I)V
 
+    .line 13
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getChildFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object p0
 
-    const v1, 0x7f0b0150
+    const v1, 0x7f0b0130
 
+    .line 14
     invoke-virtual {v0}, Lcom/android/camera/fragment/BaseFragment;->getFragmentTag()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {p0, v1, v0, v2}, Lcom/android/camera/fragment/u3;->a(Landroidx/fragment/app/FragmentManager;ILandroidx/fragment/app/Fragment;Ljava/lang/String;)V
+    .line 15
+    invoke-static {p0, v1, v0, v2}, Ld/d/a/u6/x3;->a(Landroidx/fragment/app/FragmentManager;ILandroidx/fragment/app/Fragment;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method public showGuide(Z)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isUserInteraction"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->isShowFirstCineMasterUseHint()Z
 
     move-result v0
@@ -2684,40 +2922,46 @@
 
     const-string v1, "showGuide"
 
+    .line 2
     invoke-static {v0, v1, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 3
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mCinePopupView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;
 
     if-eqz p1, :cond_1
 
+    .line 4
     invoke-virtual {p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->hideView()V
 
+    .line 5
     :cond_1
     invoke-virtual {p0}, Lcom/android/camera/fragment/BaseFragment;->getBaseModule()Ljava/util/Optional;
 
     move-result-object p1
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/d1;
-
-    invoke-direct {v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/d1;-><init>()V
+    sget-object v0, Ld/d/b/x5/a/b/b/g/h0;->c:Ld/d/b/x5/a/b/b/g/h0;
 
     invoke-virtual {p1, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
+    .line 6
     new-instance p1, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterGuide;
 
     invoke-direct {p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterGuide;-><init>()V
 
+    .line 7
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getChildFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object p0
 
-    const v0, 0x7f0b0151
+    const v0, 0x7f0b0131
 
+    .line 8
     invoke-virtual {p1}, Lcom/android/camera/fragment/BaseFragment;->getFragmentTag()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {p0, v0, p1, v1}, Lcom/android/camera/fragment/u3;->a(Landroidx/fragment/app/FragmentManager;ILandroidx/fragment/app/Fragment;Ljava/lang/String;)V
+    .line 9
+    invoke-static {p0, v0, p1, v1}, Ld/d/a/u6/x3;->a(Landroidx/fragment/app/FragmentManager;ILandroidx/fragment/app/Fragment;Ljava/lang/String;)V
 
     :cond_2
     return-void
@@ -2734,20 +2978,25 @@
 
     const-string v2, "showPopupBottom"
 
+    .line 1
     invoke-static {v1, v2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mCinePopupView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mIpAddress:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->setIpAddress(Ljava/lang/String;)V
 
+    .line 4
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mCinePopupView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;
 
     invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->showView()V
 
+    .line 5
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mCinePopupView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;
 
     invoke-virtual {p0}, Lcom/android/camera/fragment/BaseFragment;->getDegree()I
@@ -2760,8 +3009,24 @@
     return-void
 .end method
 
-.method public unRegister(Lu8/d;)V
+.method public synthetic uc()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$showExitDialog$21()V
+
+    return-void
+.end method
+
+.method public unRegister(Ld/d/a/m7/c;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "modeCoordinator"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -2771,13 +3036,16 @@
 
     const-string v2, "unRegister"
 
+    .line 1
     invoke-static {v1, v2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->unRegister(Lu8/d;)V
+    .line 2
+    invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->unRegister(Ld/d/a/m7/c;)V
 
-    const-class v0, Lv8/v;
+    .line 3
+    const-class v0, Ld/d/a/m7/g/y;
 
-    invoke-interface {p1, v0, p0}, Lu8/d;->c(Ljava/lang/Class;Lu8/a;)V
+    invoke-interface {p1, v0, p0}, Ld/d/a/m7/c;->d(Ljava/lang/Class;Ld/d/a/m7/a;)V
 
     return-void
 .end method
@@ -2788,6 +3056,16 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "v",
+            "savedInstanceState"
+        }
+    .end annotation
 
     const/4 p1, 0x0
 
@@ -2797,25 +3075,28 @@
 
     const-string v1, "updateView"
 
+    .line 1
     invoke-static {v0, v1, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {}, Ly2/b;->k()Z
+    .line 2
+    invoke-static {}, Ld/d/a/n6/b;->k()Z
 
     move-result p2
 
     if-eqz p2, :cond_4
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lid/b;->n4()Z
+    invoke-virtual {p2}, Ld/k/a/b;->c4()Z
 
     move-result p2
 
     if-eqz p2, :cond_4
 
-    invoke-static {}, Ly2/b;->j()Z
+    .line 3
+    invoke-static {}, Ld/d/a/n6/b;->j()Z
 
     move-result p2
 
@@ -2823,30 +3104,34 @@
 
     if-eqz p2, :cond_1
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lid/b;->m4()Z
+    invoke-virtual {p2}, Ld/k/a/b;->b4()Z
 
     move-result p2
 
     if-eqz p2, :cond_1
 
+    .line 4
     iput-boolean v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mIsPadOrFold:Z
 
-    invoke-static {}, Ly2/b;->F0()Z
+    .line 5
+    invoke-static {}, Ld/d/a/n6/b;->F0()Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    const-string p2, "updateView: pad landscape"
-
     new-array p1, p1, [Ljava/lang/Object;
 
+    const-string p2, "updateView: pad landscape"
+
+    .line 6
     invoke-static {v0, p2, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 7
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mCinePopupView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;
 
     invoke-virtual {p0, v1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->setShowDirection(I)V
@@ -2854,113 +3139,147 @@
     goto :goto_0
 
     :cond_0
-    const-string p2, "updateView: pad portrait"
+    new-array p2, p1, [Ljava/lang/Object;
 
-    new-array v1, p1, [Ljava/lang/Object;
+    const-string v1, "updateView: pad portrait"
 
-    invoke-static {v0, p2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 8
+    invoke-static {v0, v1, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 9
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mCinePopupView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;
 
     invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->setShowDirection(I)V
 
     goto :goto_0
 
+    .line 10
     :cond_1
-    const-string p2, "4:3"
+    invoke-static {}, Ld/d/a/n6/b;->D()Ljava/lang/String;
 
-    invoke-static {}, Ly2/b;->D()Ljava/lang/String;
+    move-result-object p2
 
-    move-result-object v2
+    const-string v2, "4:3"
 
-    invoke-virtual {p2, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v2, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-eqz p2, :cond_2
 
-    const-string p2, "updateView: pad = 4:3"
-
     new-array p1, p1, [Ljava/lang/Object;
 
+    const-string p2, "updateView: pad = 4:3"
+
+    .line 11
     invoke-static {v0, p2, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 12
     iput-boolean v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mIsPadOrFold:Z
 
     goto :goto_0
 
+    .line 13
     :cond_2
     iput-boolean v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mIsPadOrFold:Z
 
-    invoke-static {}, Ly2/b;->F0()Z
+    .line 14
+    invoke-static {}, Ld/d/a/n6/b;->F0()Z
 
     move-result p2
 
     if-eqz p2, :cond_3
 
+    .line 15
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mCinePopupView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;
 
     invoke-virtual {p0, v1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->setShowDirection(I)V
 
-    const-string p0, "updateView: pad < 4:3 e.g.:L81 landscape"
+    new-array p0, p1, [Ljava/lang/Object;
 
-    new-array p1, p1, [Ljava/lang/Object;
+    const-string p1, "updateView: pad < 4:3 e.g.:L81 landscape"
 
-    invoke-static {v0, p0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 16
+    invoke-static {v0, p1, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
+    .line 17
     :cond_3
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mCinePopupView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;
 
     invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->setShowDirection(I)V
 
-    const-string p0, "updateView: pad < 4:3 e.g.:L81 portrait"
+    new-array p0, p1, [Ljava/lang/Object;
 
-    new-array p1, p1, [Ljava/lang/Object;
+    const-string p1, "updateView: pad < 4:3 e.g.:L81 portrait"
 
-    invoke-static {v0, p0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 18
+    invoke-static {v0, p1, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
+    .line 19
     :cond_4
-    invoke-static {}, Ly2/b;->l()Z
+    invoke-static {}, Ld/d/a/n6/b;->l()Z
 
     move-result p2
 
     if-eqz p2, :cond_5
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lid/b;->B5()Z
+    invoke-virtual {p2}, Ld/k/a/b;->p5()Z
 
     move-result p2
 
     if-eqz p2, :cond_5
 
-    const-string p0, "updateView: split screen or external screen"
+    new-array p0, p1, [Ljava/lang/Object;
 
-    new-array p1, p1, [Ljava/lang/Object;
+    const-string p1, "updateView: split screen or external screen"
 
-    invoke-static {v0, p0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 20
+    invoke-static {v0, p1, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
+    .line 21
     :cond_5
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mIsPadOrFold:Z
 
-    const-string p2, "updateView: normal screen"
+    new-array p2, p1, [Ljava/lang/Object;
 
-    new-array v1, p1, [Ljava/lang/Object;
+    const-string v1, "updateView: normal screen"
 
-    invoke-static {v0, p2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 22
+    invoke-static {v0, v1, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 23
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->mCinePopupView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;
 
     invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->setShowDirection(I)V
 
     :goto_0
+    return-void
+.end method
+
+.method public synthetic wb(Ld/d/a/o6/c/c;)Z
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$handleEndpointLost$18(Ld/d/a/o6/c/c;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public synthetic xc(Landroid/content/DialogInterface;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/FragmentCinemasterProcess;->lambda$showExitDialog$22(Landroid/content/DialogInterface;)V
+
     return-void
 .end method

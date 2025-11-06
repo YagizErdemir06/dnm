@@ -1,4 +1,4 @@
-.class Lcom/google/common/cache/LocalCache$AccessQueue$1;
+.class public Lcom/google/common/cache/LocalCache$AccessQueue$1;
 .super Lcom/google/common/cache/LocalCache$AbstractReferenceEntry;
 .source "SourceFile"
 
@@ -22,7 +22,7 @@
 
 
 # instance fields
-.field nextAccess:Lcom/google/common/cache/ReferenceEntry;
+.field public nextAccess:Lcom/google/common/cache/ReferenceEntry;
     .annotation build Lcom/google/j2objc/annotations/Weak;
     .end annotation
 
@@ -34,7 +34,7 @@
     .end annotation
 .end field
 
-.field previousAccess:Lcom/google/common/cache/ReferenceEntry;
+.field public previousAccess:Lcom/google/common/cache/ReferenceEntry;
     .annotation build Lcom/google/j2objc/annotations/Weak;
     .end annotation
 
@@ -51,10 +51,13 @@
 .method public constructor <init>(Lcom/google/common/cache/LocalCache$AccessQueue;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/cache/LocalCache$AbstractReferenceEntry;-><init>()V
 
+    .line 2
     iput-object p0, p0, Lcom/google/common/cache/LocalCache$AccessQueue$1;->nextAccess:Lcom/google/common/cache/ReferenceEntry;
 
+    .line 3
     iput-object p0, p0, Lcom/google/common/cache/LocalCache$AccessQueue$1;->previousAccess:Lcom/google/common/cache/ReferenceEntry;
 
     return-void
@@ -80,6 +83,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/cache/LocalCache$AccessQueue$1;->nextAccess:Lcom/google/common/cache/ReferenceEntry;
 
     return-object p0
@@ -95,6 +99,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/cache/LocalCache$AccessQueue$1;->previousAccess:Lcom/google/common/cache/ReferenceEntry;
 
     return-object p0
@@ -116,6 +121,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/cache/LocalCache$AccessQueue$1;->nextAccess:Lcom/google/common/cache/ReferenceEntry;
 
     return-void
@@ -131,6 +137,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/cache/LocalCache$AccessQueue$1;->previousAccess:Lcom/google/common/cache/ReferenceEntry;
 
     return-void

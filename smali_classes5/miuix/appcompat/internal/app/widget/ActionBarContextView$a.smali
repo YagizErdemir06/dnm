@@ -18,14 +18,15 @@
 
 
 # instance fields
-.field public final synthetic a:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+.field public final synthetic c:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/appcompat/internal/app/widget/ActionBarContextView;)V
     .locals 0
 
-    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$a;->a:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+    .line 1
+    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$a;->c:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,6 +38,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
+    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result p1
@@ -45,51 +47,55 @@
 
     if-ne p1, v0, :cond_0
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$a;->a:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$a;->c:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->P(Lmiuix/appcompat/internal/app/widget/ActionBarContextView;)Lep/a;
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->K(Lmiuix/appcompat/internal/app/widget/ActionBarContextView;)Lk/b/e/e/f/m/b;
 
     move-result-object p1
 
     goto :goto_0
 
+    .line 2
     :cond_0
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$a;->a:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$a;->c:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->Q(Lmiuix/appcompat/internal/app/widget/ActionBarContextView;)Lep/a;
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->L(Lmiuix/appcompat/internal/app/widget/ActionBarContextView;)Lk/b/e/e/f/m/b;
 
     move-result-object p1
 
+    .line 3
     :goto_0
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$a;->a:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$a;->c:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
-    invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->S(Lmiuix/appcompat/internal/app/widget/ActionBarContextView;)Ljava/lang/ref/WeakReference;
+    invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->P(Lmiuix/appcompat/internal/app/widget/ActionBarContextView;)Ljava/lang/ref/WeakReference;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$a;->a:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+    .line 4
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$a;->c:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
-    invoke-static {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->S(Lmiuix/appcompat/internal/app/widget/ActionBarContextView;)Ljava/lang/ref/WeakReference;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-static {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->P(Lmiuix/appcompat/internal/app/widget/ActionBarContextView;)Ljava/lang/ref/WeakReference;
 
     move-result-object p0
 
-    check-cast p0, Ldp/f;
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lk/b/e/e/c;
 
     if-eqz p0, :cond_1
 
-    invoke-virtual {p0}, Ldp/b;->getMenu()Landroid/view/Menu;
+    .line 5
+    invoke-virtual {p0}, Lk/b/e/e/b;->getMenu()Landroid/view/Menu;
 
     move-result-object v0
 
-    check-cast v0, Lmiuix/appcompat/internal/view/menu/j;
+    check-cast v0, Lk/b/e/e/f/g;
 
-    invoke-virtual {p0, v0, p1}, Ldp/b;->i(Lmiuix/appcompat/internal/view/menu/j;Landroid/view/MenuItem;)Z
+    invoke-virtual {p0, v0, p1}, Lk/b/e/e/b;->h(Lk/b/e/e/f/g;Landroid/view/MenuItem;)Z
 
     :cond_1
     return-void

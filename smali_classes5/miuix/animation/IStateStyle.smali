@@ -50,8 +50,6 @@
 .end method
 
 .method public varargs abstract fromTo(Ljava/lang/Object;Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
 .end method
 
 .method public abstract getCurrentState()Lmiuix/animation/controller/AnimState;
@@ -69,15 +67,6 @@
 .method public abstract removeListener(Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/IStateStyle;
 .end method
 
-.method public abstract resetTo(Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
-.end method
-
-.method public varargs abstract resetTo(Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
-.end method
-
-.method public varargs abstract resetTo([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
-.end method
-
 .method public abstract set(Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 .end method
 
@@ -85,9 +74,6 @@
 .end method
 
 .method public varargs abstract setEase(I[F)Lmiuix/animation/IStateStyle;
-.end method
-
-.method public varargs abstract setEase(I[Lmiuix/animation/physics/FactorOperator;)Lmiuix/animation/IStateStyle;
 .end method
 
 .method public varargs abstract setEase(Lmiuix/animation/property/FloatProperty;I[F)Lmiuix/animation/IStateStyle;
@@ -127,7 +113,4 @@
 .end method
 
 .method public varargs abstract to([Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
-.end method
-
-.method public varargs abstract toWithInit([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 .end method

@@ -1,4 +1,4 @@
-.class final enum Lcom/google/common/cache/LocalCache$EntryFactory$3;
+.class public final enum Lcom/google/common/cache/LocalCache$EntryFactory$3;
 .super Lcom/google/common/cache/LocalCache$EntryFactory;
 .source "SourceFile"
 
@@ -20,6 +20,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, p2, v0}, Lcom/google/common/cache/LocalCache$EntryFactory;-><init>(Ljava/lang/String;ILcom/google/common/cache/LocalCache$1;)V
 
     return-void
@@ -47,10 +48,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2, p3}, Lcom/google/common/cache/LocalCache$EntryFactory;->copyEntry(Lcom/google/common/cache/LocalCache$Segment;Lcom/google/common/cache/ReferenceEntry;Lcom/google/common/cache/ReferenceEntry;)Lcom/google/common/cache/ReferenceEntry;
 
     move-result-object p1
 
+    .line 2
     invoke-virtual {p0, p2, p1}, Lcom/google/common/cache/LocalCache$EntryFactory;->copyWriteEntry(Lcom/google/common/cache/ReferenceEntry;Lcom/google/common/cache/ReferenceEntry;)V
 
     return-object p1
@@ -78,6 +81,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Lcom/google/common/cache/LocalCache$StrongWriteEntry;
 
     invoke-direct {p0, p2, p3, p4}, Lcom/google/common/cache/LocalCache$StrongWriteEntry;-><init>(Ljava/lang/Object;ILcom/google/common/cache/ReferenceEntry;)V

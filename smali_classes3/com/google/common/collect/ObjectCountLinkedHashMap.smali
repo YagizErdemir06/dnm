@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ObjectCountLinkedHashMap;
+.class public Lcom/google/common/collect/ObjectCountLinkedHashMap;
 .super Lcom/google/common/collect/ObjectCountHashMap;
 .source "SourceFile"
 
@@ -32,7 +32,7 @@
 
 .field private transient lastEntry:I
 
-.field transient links:[J
+.field public transient links:[J
     .annotation build Lcom/google/common/annotations/VisibleForTesting;
     .end annotation
 .end field
@@ -136,6 +136,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ObjectCountLinkedHashMap;
 
     invoke-direct {v0}, Lcom/google/common/collect/ObjectCountLinkedHashMap;-><init>()V
@@ -155,6 +156,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ObjectCountLinkedHashMap;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/ObjectCountLinkedHashMap;-><init>(I)V
@@ -165,6 +167,7 @@
 .method private getPredecessor(I)I
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ObjectCountLinkedHashMap;->links:[J
 
     aget-wide p0, p0, p1
@@ -181,6 +184,7 @@
 .method private getSuccessor(I)I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ObjectCountLinkedHashMap;->links:[J
 
     aget-wide p0, p0, p1
@@ -193,6 +197,7 @@
 .method private setPredecessor(II)V
     .locals 4
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ObjectCountLinkedHashMap;->links:[J
 
     aget-wide v0, p0, p1
@@ -221,20 +226,24 @@
 
     if-ne p1, v0, :cond_0
 
+    .line 1
     iput p2, p0, Lcom/google/common/collect/ObjectCountLinkedHashMap;->firstEntry:I
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-direct {p0, p1, p2}, Lcom/google/common/collect/ObjectCountLinkedHashMap;->setSuccessor(II)V
 
     :goto_0
     if-ne p2, v0, :cond_1
 
+    .line 3
     iput p1, p0, Lcom/google/common/collect/ObjectCountLinkedHashMap;->lastEntry:I
 
     goto :goto_1
 
+    .line 4
     :cond_1
     invoke-direct {p0, p2, p1}, Lcom/google/common/collect/ObjectCountLinkedHashMap;->setPredecessor(II)V
 
@@ -245,6 +254,7 @@
 .method private setSuccessor(II)V
     .locals 6
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ObjectCountLinkedHashMap;->links:[J
 
     aget-wide v0, p0, p1
@@ -271,12 +281,15 @@
 .method public clear()V
     .locals 1
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/ObjectCountHashMap;->clear()V
 
     const/4 v0, -0x2
 
+    .line 2
     iput v0, p0, Lcom/google/common/collect/ObjectCountLinkedHashMap;->firstEntry:I
 
+    .line 3
     iput v0, p0, Lcom/google/common/collect/ObjectCountLinkedHashMap;->lastEntry:I
 
     return-void
@@ -285,6 +298,7 @@
 .method public firstIndex()I
     .locals 1
 
+    .line 1
     iget p0, p0, Lcom/google/common/collect/ObjectCountLinkedHashMap;->firstEntry:I
 
     const/4 v0, -0x2
@@ -300,20 +314,25 @@
 .method public init(IF)V
     .locals 2
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/google/common/collect/ObjectCountHashMap;->init(IF)V
 
     const/4 p2, -0x2
 
+    .line 2
     iput p2, p0, Lcom/google/common/collect/ObjectCountLinkedHashMap;->firstEntry:I
 
+    .line 3
     iput p2, p0, Lcom/google/common/collect/ObjectCountLinkedHashMap;->lastEntry:I
 
+    .line 4
     new-array p1, p1, [J
 
     iput-object p1, p0, Lcom/google/common/collect/ObjectCountLinkedHashMap;->links:[J
 
     const-wide/16 v0, -0x1
 
+    .line 5
     invoke-static {p1, v0, v1}, Ljava/util/Arrays;->fill([JJ)V
 
     return-void
@@ -331,14 +350,17 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2, p3, p4}, Lcom/google/common/collect/ObjectCountHashMap;->insertEntry(ILjava/lang/Object;II)V
 
+    .line 2
     iget p2, p0, Lcom/google/common/collect/ObjectCountLinkedHashMap;->lastEntry:I
 
     invoke-direct {p0, p2, p1}, Lcom/google/common/collect/ObjectCountLinkedHashMap;->setSucceeds(II)V
 
     const/4 p2, -0x2
 
+    .line 3
     invoke-direct {p0, p1, p2}, Lcom/google/common/collect/ObjectCountLinkedHashMap;->setSucceeds(II)V
 
     return-void
@@ -347,12 +369,14 @@
 .method public moveLastEntry(I)V
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ObjectCountHashMap;->size()I
 
     move-result v0
 
     add-int/lit8 v0, v0, -0x1
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/common/collect/ObjectCountLinkedHashMap;->getPredecessor(I)I
 
     move-result v1
@@ -365,18 +389,21 @@
 
     if-ge p1, v0, :cond_0
 
+    .line 3
     invoke-direct {p0, v0}, Lcom/google/common/collect/ObjectCountLinkedHashMap;->getPredecessor(I)I
 
     move-result v1
 
     invoke-direct {p0, v1, p1}, Lcom/google/common/collect/ObjectCountLinkedHashMap;->setSucceeds(II)V
 
+    .line 4
     invoke-direct {p0, v0}, Lcom/google/common/collect/ObjectCountLinkedHashMap;->getSuccessor(I)I
 
     move-result v0
 
     invoke-direct {p0, p1, v0}, Lcom/google/common/collect/ObjectCountLinkedHashMap;->setSucceeds(II)V
 
+    .line 5
     :cond_0
     invoke-super {p0, p1}, Lcom/google/common/collect/ObjectCountHashMap;->moveLastEntry(I)V
 
@@ -386,6 +413,7 @@
 .method public nextIndex(I)I
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/ObjectCountLinkedHashMap;->getSuccessor(I)I
 
     move-result p0
@@ -403,6 +431,7 @@
 .method public nextIndexAfterRemove(II)I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ObjectCountHashMap;->size()I
 
     move-result p0
@@ -418,12 +447,15 @@
 .method public resizeEntries(I)V
     .locals 4
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/ObjectCountHashMap;->resizeEntries(I)V
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/ObjectCountLinkedHashMap;->links:[J
 
     array-length v1, v0
 
+    .line 3
     invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([JI)[J
 
     move-result-object v0
@@ -432,6 +464,7 @@
 
     const-wide/16 v2, -0x1
 
+    .line 4
     invoke-static {v0, v1, p1, v2, v3}, Ljava/util/Arrays;->fill([JIIJ)V
 
     return-void

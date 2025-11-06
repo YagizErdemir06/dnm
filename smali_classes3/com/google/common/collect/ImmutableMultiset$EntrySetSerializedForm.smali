@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ImmutableMultiset$EntrySetSerializedForm;
+.class public Lcom/google/common/collect/ImmutableMultiset$EntrySetSerializedForm;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -31,7 +31,7 @@
 
 
 # instance fields
-.field final multiset:Lcom/google/common/collect/ImmutableMultiset;
+.field public final multiset:Lcom/google/common/collect/ImmutableMultiset;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/ImmutableMultiset<",
@@ -52,8 +52,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/ImmutableMultiset$EntrySetSerializedForm;->multiset:Lcom/google/common/collect/ImmutableMultiset;
 
     return-void
@@ -64,6 +66,7 @@
 .method public readResolve()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMultiset$EntrySetSerializedForm;->multiset:Lcom/google/common/collect/ImmutableMultiset;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMultiset;->entrySet()Lcom/google/common/collect/ImmutableSet;

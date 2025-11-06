@@ -1,4 +1,4 @@
-.class final Lcom/google/android/odml/image/zzb;
+.class public final Lcom/google/android/odml/image/zzb;
 .super Lcom/google/android/odml/image/zzh;
 .source "SourceFile"
 
@@ -23,6 +23,7 @@
 .method public final zza(I)Lcom/google/android/odml/image/zzh;
     .locals 0
 
+    .line 1
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -35,6 +36,7 @@
 .method public final zzb(I)Lcom/google/android/odml/image/zzh;
     .locals 0
 
+    .line 1
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -57,15 +59,18 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     new-instance v1, Lcom/google/android/odml/image/zzc;
 
+    .line 2
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
     iget-object p0, p0, Lcom/google/android/odml/image/zzb;->zzb:Ljava/lang/Integer;
 
+    .line 3
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -76,10 +81,12 @@
 
     return-object v1
 
+    .line 4
     :cond_1
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
+    .line 5
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     iget-object v1, p0, Lcom/google/android/odml/image/zzb;->zza:Ljava/lang/Integer;
@@ -88,6 +95,7 @@
 
     const-string v1, " imageFormat"
 
+    .line 6
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_2
@@ -97,11 +105,13 @@
 
     const-string p0, " storageType"
 
+    .line 7
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 
+    .line 8
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0

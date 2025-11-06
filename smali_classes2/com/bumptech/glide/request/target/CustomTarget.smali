@@ -99,6 +99,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/target/CustomTarget;->request:Lcom/bumptech/glide/request/Request;
 
     return-object p0
@@ -111,6 +112,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget v0, p0, Lcom/bumptech/glide/request/target/CustomTarget;->width:I
 
     iget p0, p0, Lcom/bumptech/glide/request/target/CustomTarget;->height:I
@@ -175,6 +177,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/bumptech/glide/request/target/CustomTarget;->request:Lcom/bumptech/glide/request/Request;
 
     return-void

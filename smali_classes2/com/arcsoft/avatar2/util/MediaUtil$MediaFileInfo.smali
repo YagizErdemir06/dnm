@@ -58,6 +58,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -228,6 +229,7 @@
 .method public static synthetic e(Lcom/arcsoft/avatar2/util/MediaUtil$MediaFileInfo;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/util/MediaUtil$MediaFileInfo;->l:Ljava/lang/String;
 
     return-object p1
@@ -236,6 +238,7 @@
 .method public static synthetic f(Lcom/arcsoft/avatar2/util/MediaUtil$MediaFileInfo;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/util/MediaUtil$MediaFileInfo;->m:Ljava/lang/String;
 
     return-object p1
@@ -244,6 +247,7 @@
 .method public static synthetic g(Lcom/arcsoft/avatar2/util/MediaUtil$MediaFileInfo;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/util/MediaUtil$MediaFileInfo;->n:Ljava/lang/String;
 
     return-object p1
@@ -252,6 +256,7 @@
 .method public static synthetic h(Lcom/arcsoft/avatar2/util/MediaUtil$MediaFileInfo;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/util/MediaUtil$MediaFileInfo;->s:Ljava/lang/String;
 
     return-object p1

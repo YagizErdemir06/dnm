@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Maps$6;
+.class public Lcom/google/common/collect/Maps$6;
 .super Lcom/google/common/collect/ForwardingNavigableSet;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic val$set:Ljava/util/NavigableSet;
+.field public final synthetic val$set:Ljava/util/NavigableSet;
 
 
 # direct methods
 .method public constructor <init>(Ljava/util/NavigableSet;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/Maps$6;->val$set:Ljava/util/NavigableSet;
 
     invoke-direct {p0}, Lcom/google/common/collect/ForwardingNavigableSet;-><init>()V
@@ -50,6 +51,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -67,6 +69,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -144,6 +147,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/ForwardingNavigableSet;->descendingSet()Ljava/util/NavigableSet;
 
     move-result-object p0

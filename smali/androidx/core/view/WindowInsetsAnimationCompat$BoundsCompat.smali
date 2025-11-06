@@ -87,6 +87,7 @@
         value = 0x1e
     .end annotation
 
+    .line 1
     new-instance v0, Landroidx/core/view/WindowInsetsAnimationCompat$BoundsCompat;
 
     invoke-direct {v0, p0}, Landroidx/core/view/WindowInsetsAnimationCompat$BoundsCompat;-><init>(Landroid/view/WindowInsetsAnimation$Bounds;)V
@@ -101,6 +102,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/WindowInsetsAnimationCompat$BoundsCompat;->mLowerBound:Landroidx/core/graphics/Insets;
 
     return-object p0
@@ -111,6 +113,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/WindowInsetsAnimationCompat$BoundsCompat;->mUpperBound:Landroidx/core/graphics/Insets;
 
     return-object p0
@@ -125,6 +128,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     new-instance v0, Landroidx/core/view/WindowInsetsAnimationCompat$BoundsCompat;
 
     iget-object v1, p0, Landroidx/core/view/WindowInsetsAnimationCompat$BoundsCompat;->mLowerBound:Landroidx/core/graphics/Insets;
@@ -137,6 +141,7 @@
 
     iget v5, p1, Landroidx/core/graphics/Insets;->bottom:I
 
+    .line 2
     invoke-static {v1, v2, v3, v4, v5}, Landroidx/core/view/WindowInsetsCompat;->insetInsets(Landroidx/core/graphics/Insets;IIII)Landroidx/core/graphics/Insets;
 
     move-result-object v1
@@ -151,6 +156,7 @@
 
     iget p1, p1, Landroidx/core/graphics/Insets;->bottom:I
 
+    .line 3
     invoke-static {p0, v2, v3, v4, p1}, Landroidx/core/view/WindowInsetsCompat;->insetInsets(Landroidx/core/graphics/Insets;IIII)Landroidx/core/graphics/Insets;
 
     move-result-object p0
@@ -169,6 +175,7 @@
         value = 0x1e
     .end annotation
 
+    .line 1
     invoke-static {p0}, Landroidx/core/view/WindowInsetsAnimationCompat$Impl30;->createPlatformBounds(Landroidx/core/view/WindowInsetsAnimationCompat$BoundsCompat;)Landroid/view/WindowInsetsAnimation$Bounds;
 
     move-result-object p0
@@ -179,6 +186,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

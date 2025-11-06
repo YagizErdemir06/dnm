@@ -16,7 +16,23 @@
 
 # virtual methods
 .method public abstract a(I)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "pageIndex"
+        }
+    .end annotation
 .end method
 
 .method public abstract b(I)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "pageSize"
+        }
+    .end annotation
 .end method

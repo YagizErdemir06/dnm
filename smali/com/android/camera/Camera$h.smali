@@ -20,22 +20,31 @@
     value = {
         "Ljava/lang/Object;",
         "Lio/reactivex/functions/Consumer<",
-        "Lb8/k<",
-        "Lq7/v4;",
+        "Ld/d/a/d7/o8/a/k<",
+        "Ld/d/a/d7/z7;",
         ">;>;"
     }
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lcom/android/camera/Camera;
+.field public final synthetic c:Lcom/android/camera/Camera;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera/Camera;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera/Camera$h;->a:Lcom/android/camera/Camera;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/Camera$h;->c:Lcom/android/camera/Camera;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,17 +53,26 @@
 
 
 # virtual methods
-.method public a(Lb8/k;)V
+.method public a(Ld/d/a/d7/o8/a/k;)V
     .locals 6
-    .param p1    # Lb8/k;
+    .param p1    # Ld/d/a/d7/o8/a/k;
         .annotation build Lio/reactivex/annotations/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "baseModuleNullHolder"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lb8/k<",
-            "Lq7/v4;",
+            "Ld/d/a/d7/o8/a/k<",
+            "Ld/d/a/d7/z7;",
             ">;)V"
         }
     .end annotation
@@ -65,15 +83,17 @@
         }
     .end annotation
 
-    invoke-static {}, Lp8/m;->x()Lp8/m;
+    .line 1
+    invoke-static {}, Ld/d/a/h7/n;->n()Ld/d/a/h7/n;
 
     move-result-object v0
 
     const-string v1, "A7:switch_setup_consumer"
 
-    invoke-virtual {v0, v1}, Lp8/m;->W(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ld/d/a/h7/n;->T(Ljava/lang/String;)V
 
-    invoke-interface {p1}, Lb8/k;->b()Z
+    .line 2
+    invoke-interface {p1}, Ld/d/a/d7/o8/a/k;->b()Z
 
     move-result v0
 
@@ -81,103 +101,120 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/camera/Camera$h;->a:Lcom/android/camera/Camera;
+    .line 3
+    iget-object v0, p0, Lcom/android/camera/Camera$h;->c:Lcom/android/camera/Camera;
 
-    invoke-interface {p1}, Lb8/k;->a()I
+    invoke-interface {p1}, Ld/d/a/d7/o8/a/k;->a()I
 
     move-result v3
 
-    invoke-static {v0, v3}, Lcom/android/camera/Camera;->el(Lcom/android/camera/Camera;I)V
+    invoke-static {v0, v3}, Lcom/android/camera/Camera;->Si(Lcom/android/camera/Camera;I)V
 
-    iget-object v0, p0, Lcom/android/camera/Camera$h;->a:Lcom/android/camera/Camera;
+    .line 4
+    iget-object v0, p0, Lcom/android/camera/Camera$h;->c:Lcom/android/camera/Camera;
 
-    iput-object v2, v0, Lcom/android/camera/ActivityBase;->e:Lq7/v4;
+    iput-object v2, v0, Lcom/android/camera/ActivityBase;->v1:Ld/d/a/d7/z7;
 
-    iput-object v2, v0, Lcom/android/camera/ActivityBase;->f:Ls6/l;
+    .line 5
+    iput-object v2, v0, Lcom/android/camera/ActivityBase;->C1:Ld/d/a/u6/a5/l;
 
     goto :goto_0
 
+    .line 6
     :cond_0
-    iget-object v0, p0, Lcom/android/camera/Camera$h;->a:Lcom/android/camera/Camera;
+    iget-object v0, p0, Lcom/android/camera/Camera$h;->c:Lcom/android/camera/Camera;
 
-    invoke-static {v0}, Lcom/android/camera/ui/a2;->w(Lcom/android/camera/ActivityBase;)Lcom/android/camera/ui/a2;
+    invoke-static {v0}, Ld/d/a/d8/h2;->v(Lcom/android/camera/ActivityBase;)Ld/d/a/d8/h2;
 
     move-result-object v0
 
-    invoke-interface {p1}, Lb8/k;->get()Ljava/lang/Object;
+    invoke-interface {p1}, Ld/d/a/d7/o8/a/k;->get()Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Lq7/v4;
+    check-cast v3, Ld/d/a/d7/z7;
 
-    invoke-virtual {v0, v3}, Lcom/android/camera/ui/a2;->H(Lq7/v4;)V
+    invoke-virtual {v0, v3}, Ld/d/a/d8/h2;->G(Ld/d/a/d7/z7;)V
 
+    .line 7
     :goto_0
-    iget-object v0, p0, Lcom/android/camera/Camera$h;->a:Lcom/android/camera/Camera;
+    iget-object v0, p0, Lcom/android/camera/Camera$h;->c:Lcom/android/camera/Camera;
 
     const/4 v3, 0x0
 
-    invoke-virtual {v0, v3}, Lcom/android/camera/ActivityBase;->Gj(Z)V
+    invoke-virtual {v0, v3}, Lcom/android/camera/ActivityBase;->hi(Z)V
 
-    iget-object v0, p0, Lcom/android/camera/Camera$h;->a:Lcom/android/camera/Camera;
+    .line 8
+    iget-object v0, p0, Lcom/android/camera/Camera$h;->c:Lcom/android/camera/Camera;
 
-    iget-object v0, v0, Lcom/android/camera/ActivityBase;->I:Lcom/android/camera/ui/a1;
+    iget-object v0, v0, Lcom/android/camera/ActivityBase;->g9:Ld/d/a/d8/x1;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lcom/android/camera/ui/a1;->Q0()V
+    .line 9
+    invoke-interface {v0}, Ld/d/a/d8/x1;->B()V
 
+    .line 10
     :cond_1
-    invoke-static {}, Lgg/g;->c()V
+    invoke-static {}, Ld/o/f/w/g;->c()V
 
-    iget-object v0, p0, Lcom/android/camera/Camera$h;->a:Lcom/android/camera/Camera;
+    .line 11
+    iget-object v0, p0, Lcom/android/camera/Camera$h;->c:Lcom/android/camera/Camera;
 
-    invoke-static {v0, v2}, Lcom/android/camera/Camera;->fl(Lcom/android/camera/Camera;Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
+    invoke-static {v0, v2}, Lcom/android/camera/Camera;->Ti(Lcom/android/camera/Camera;Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
 
-    invoke-static {}, Lg2/b;->e()Li2/a$c;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Li2/a$c;->a()V
-
-    iget-object v0, p0, Lcom/android/camera/Camera$h;->a:Lcom/android/camera/Camera;
-
-    invoke-static {v0}, Lcom/android/camera/s;->d(Landroid/content/Context;)Lcom/android/camera/s;
+    .line 12
+    invoke-static {}, Ld/d/a/l6/b;->e()Ld/d/a/l6/d/a$c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/camera/s;->f()V
+    invoke-interface {v0}, Ld/d/a/l6/d/a$c;->a()V
 
-    invoke-static {}, Lcom/android/camera/v2;->j3()Z
+    .line 13
+    iget-object v0, p0, Lcom/android/camera/Camera$h;->c:Lcom/android/camera/Camera;
+
+    invoke-static {v0}, Ld/d/a/t3;->c(Landroid/content/Context;)Ld/d/a/t3;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ld/d/a/t3;->e()V
+
+    .line 14
+    invoke-static {}, Ld/d/a/d4;->h3()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
+    .line 15
     invoke-static {}, Lcom/xiaomi/camera/imagecodec/ImagePool;->getInstance()Lcom/xiaomi/camera/imagecodec/ImagePool;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/xiaomi/camera/imagecodec/ImagePool;->trimPoolBuffer()V
 
+    .line 16
     invoke-static {}, Lcom/xiaomi/camera/imagecodec/ImagePool;->getHalPoolInstance()Lcom/xiaomi/camera/imagecodec/ImagePool;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/xiaomi/camera/imagecodec/ImagePool;->trimPoolBuffer()V
 
+    .line 17
     :cond_2
-    invoke-static {}, Lv8/a2;->impl2()Lv8/a2;
+    invoke-static {}, Ld/d/a/m7/g/d2;->impl2()Ld/d/a/m7/g/d2;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
-    invoke-interface {v0}, Lv8/a2;->init()V
+    .line 18
+    invoke-interface {v0}, Ld/d/a/m7/g/d2;->init()V
 
-    iget-object v0, p0, Lcom/android/camera/Camera$h;->a:Lcom/android/camera/Camera;
+    .line 19
+    iget-object v0, p0, Lcom/android/camera/Camera$h;->c:Lcom/android/camera/Camera;
 
-    iget-object v0, v0, Lcom/android/camera/ActivityBase;->K1:Landroid/os/Handler;
+    iget-object v0, v0, Lcom/android/camera/ActivityBase;->s9:Landroid/os/Handler;
 
     const/16 v2, 0x9
 
@@ -185,61 +222,66 @@
 
     invoke-virtual {v0, v2, v4, v5}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
+    .line 20
     :cond_3
-    invoke-interface {p1}, Lb8/k;->b()Z
+    invoke-interface {p1}, Ld/d/a/d7/o8/a/k;->b()Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    iget-object v0, p0, Lcom/android/camera/Camera$h;->a:Lcom/android/camera/Camera;
+    .line 21
+    iget-object v0, p0, Lcom/android/camera/Camera$h;->c:Lcom/android/camera/Camera;
 
-    invoke-static {v0}, Lcom/android/camera/Camera;->gl(Lcom/android/camera/Camera;)Lf7/c;
+    invoke-static {v0}, Lcom/android/camera/Camera;->Ui(Lcom/android/camera/Camera;)Ld/d/a/w6/c;
 
     move-result-object v0
 
-    invoke-interface {p1}, Lb8/k;->get()Ljava/lang/Object;
+    invoke-interface {p1}, Ld/d/a/d7/o8/a/k;->get()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lq7/v4;
+    check-cast p1, Ld/d/a/d7/z7;
 
-    invoke-interface {p1}, Lq7/v4;->U()I
+    invoke-interface {p1}, Ld/d/a/d7/z7;->U()I
 
     move-result p1
 
-    invoke-static {}, Lcom/android/camera/v2;->Y3()Z
+    invoke-static {}, Ld/d/a/d4;->W3()Z
 
     move-result v2
 
-    invoke-virtual {v0, p1, v2}, Lf7/c;->S(IZ)V
+    invoke-virtual {v0, p1, v2}, Ld/d/a/w6/c;->S(IZ)V
 
-    iget-object p1, p0, Lcom/android/camera/Camera$h;->a:Lcom/android/camera/Camera;
+    .line 22
+    iget-object p1, p0, Lcom/android/camera/Camera$h;->c:Lcom/android/camera/Camera;
 
-    invoke-virtual {p1}, Lcom/android/camera/ActivityBase;->q4()Lcom/android/camera/ThumbnailUpdater;
+    invoke-virtual {p1}, Lcom/android/camera/ActivityBase;->T2()Lcom/android/camera/ThumbnailUpdater;
 
     move-result-object p1
 
     invoke-virtual {p1}, Lcom/android/camera/ThumbnailUpdater;->x()V
 
+    .line 23
     :cond_4
-    iget-object p0, p0, Lcom/android/camera/Camera$h;->a:Lcom/android/camera/Camera;
+    iget-object p0, p0, Lcom/android/camera/Camera$h;->c:Lcom/android/camera/Camera;
 
-    invoke-static {p0}, Lcom/android/camera/Camera;->Pk(Lcom/android/camera/Camera;)Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string p1, "CameraSetupConsumer#accept: switch module done"
-
-    new-array v0, v3, [Ljava/lang/Object;
-
-    invoke-static {p0, p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    invoke-static {}, Lp8/m;->x()Lp8/m;
+    invoke-static {p0}, Lcom/android/camera/Camera;->Di(Lcom/android/camera/Camera;)Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-virtual {p0, v1}, Lp8/m;->s(Ljava/lang/String;)J
+    new-array p1, v3, [Ljava/lang/Object;
+
+    const-string v0, "CameraSetupConsumer#accept: switch module done"
+
+    invoke-static {p0, v0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 24
+    invoke-static {}, Ld/d/a/h7/n;->n()Ld/d/a/h7/n;
+
+    move-result-object p0
+
+    invoke-virtual {p0, v1}, Ld/d/a/h7/n;->i(Ljava/lang/String;)J
 
     return-void
 .end method
@@ -250,15 +292,25 @@
         .annotation build Lio/reactivex/annotations/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "baseModuleNullHolder"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
         }
     .end annotation
 
-    check-cast p1, Lb8/k;
+    .line 1
+    check-cast p1, Ld/d/a/d7/o8/a/k;
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/Camera$h;->a(Lb8/k;)V
+    invoke-virtual {p0, p1}, Lcom/android/camera/Camera$h;->a(Ld/d/a/d7/o8/a/k;)V
 
     return-void
 .end method

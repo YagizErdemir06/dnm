@@ -18,18 +18,19 @@
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/String;
+.field public final synthetic c:Ljava/lang/String;
 
-.field public final synthetic b:Lmiuix/preference/DropDownPreference$a;
+.field public final synthetic d:Lmiuix/preference/DropDownPreference$a;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/preference/DropDownPreference$a;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lmiuix/preference/DropDownPreference$a$a;->b:Lmiuix/preference/DropDownPreference$a;
+    .line 1
+    iput-object p1, p0, Lmiuix/preference/DropDownPreference$a$a;->d:Lmiuix/preference/DropDownPreference$a;
 
-    iput-object p2, p0, Lmiuix/preference/DropDownPreference$a$a;->a:Ljava/lang/String;
+    iput-object p2, p0, Lmiuix/preference/DropDownPreference$a$a;->c:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,11 +42,12 @@
 .method public run()V
     .locals 2
 
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference$a$a;->a:Ljava/lang/String;
+    .line 1
+    iget-object v0, p0, Lmiuix/preference/DropDownPreference$a$a;->c:Ljava/lang/String;
 
-    iget-object v1, p0, Lmiuix/preference/DropDownPreference$a$a;->b:Lmiuix/preference/DropDownPreference$a;
+    iget-object v1, p0, Lmiuix/preference/DropDownPreference$a$a;->d:Lmiuix/preference/DropDownPreference$a;
 
-    iget-object v1, v1, Lmiuix/preference/DropDownPreference$a;->a:Lmiuix/preference/DropDownPreference;
+    iget-object v1, v1, Lmiuix/preference/DropDownPreference$a;->c:Lmiuix/preference/DropDownPreference;
 
     invoke-virtual {v1}, Lmiuix/preference/DropDownPreference;->getValue()Ljava/lang/String;
 
@@ -57,11 +59,11 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference$a$a;->b:Lmiuix/preference/DropDownPreference$a;
+    iget-object v0, p0, Lmiuix/preference/DropDownPreference$a$a;->d:Lmiuix/preference/DropDownPreference$a;
 
-    iget-object v0, v0, Lmiuix/preference/DropDownPreference$a;->a:Lmiuix/preference/DropDownPreference;
+    iget-object v0, v0, Lmiuix/preference/DropDownPreference$a;->c:Lmiuix/preference/DropDownPreference;
 
-    iget-object v1, p0, Lmiuix/preference/DropDownPreference$a$a;->a:Ljava/lang/String;
+    iget-object v1, p0, Lmiuix/preference/DropDownPreference$a$a;->c:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->callChangeListener(Ljava/lang/Object;)Z
 
@@ -69,11 +71,12 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference$a$a;->b:Lmiuix/preference/DropDownPreference$a;
+    .line 2
+    iget-object v0, p0, Lmiuix/preference/DropDownPreference$a$a;->d:Lmiuix/preference/DropDownPreference$a;
 
-    iget-object v0, v0, Lmiuix/preference/DropDownPreference$a;->a:Lmiuix/preference/DropDownPreference;
+    iget-object v0, v0, Lmiuix/preference/DropDownPreference$a;->c:Lmiuix/preference/DropDownPreference;
 
-    iget-object p0, p0, Lmiuix/preference/DropDownPreference$a$a;->a:Ljava/lang/String;
+    iget-object p0, p0, Lmiuix/preference/DropDownPreference$a$a;->c:Ljava/lang/String;
 
     invoke-virtual {v0, p0}, Lmiuix/preference/DropDownPreference;->setValue(Ljava/lang/String;)V
 

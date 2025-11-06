@@ -39,6 +39,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcj;->zze()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcj;
 
     move-result-object p0

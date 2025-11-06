@@ -35,19 +35,21 @@
 .method public static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Ljava/util/EnumMap;
+    .line 1
+    const-class v0, Lcom/google/mlkit/common/sdkinternal/model/BaseModel;
 
-    const-class v1, Lcom/google/mlkit/common/sdkinternal/model/BaseModel;
+    new-instance v1, Ljava/util/EnumMap;
 
-    invoke-direct {v0, v1}, Ljava/util/EnumMap;-><init>(Ljava/lang/Class;)V
+    invoke-direct {v1, v0}, Ljava/util/EnumMap;-><init>(Ljava/lang/Class;)V
 
-    sput-object v0, Lcom/google/mlkit/common/model/RemoteModel;->zzb:Ljava/util/Map;
+    sput-object v1, Lcom/google/mlkit/common/model/RemoteModel;->zzb:Ljava/util/Map;
 
-    new-instance v0, Ljava/util/EnumMap;
+    new-instance v1, Ljava/util/EnumMap;
 
-    invoke-direct {v0, v1}, Ljava/util/EnumMap;-><init>(Ljava/lang/Class;)V
+    .line 2
+    invoke-direct {v1, v0}, Ljava/util/EnumMap;-><init>(Ljava/lang/Class;)V
 
-    sput-object v0, Lcom/google/mlkit/common/model/RemoteModel;->zza:Ljava/util/Map;
+    sput-object v1, Lcom/google/mlkit/common/model/RemoteModel;->zza:Ljava/util/Map;
 
     return-void
 .end method
@@ -69,6 +71,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -96,6 +99,7 @@
     :cond_1
     const-string v0, "One of cloud model name and base model cannot be empty"
 
+    .line 2
     invoke-static {v1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
     iput-object p1, p0, Lcom/google/mlkit/common/model/RemoteModel;->zzc:Ljava/lang/String;
@@ -118,6 +122,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/common/model/RemoteModel;->zzd:Lcom/google/mlkit/common/sdkinternal/model/BaseModel;
 
     if-nez p0, :cond_0
@@ -153,6 +158,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/mlkit/common/model/RemoteModel;
 
@@ -162,11 +168,13 @@
 
     return v2
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/mlkit/common/model/RemoteModel;
 
     iget-object v1, p0, Lcom/google/mlkit/common/model/RemoteModel;->zzc:Ljava/lang/String;
 
+    .line 3
     iget-object v3, p1, Lcom/google/mlkit/common/model/RemoteModel;->zzc:Ljava/lang/String;
 
     invoke-static {v1, v3}, Lcom/google/android/gms/common/internal/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -179,6 +187,7 @@
 
     iget-object v3, p1, Lcom/google/mlkit/common/model/RemoteModel;->zzd:Lcom/google/mlkit/common/sdkinternal/model/BaseModel;
 
+    .line 4
     invoke-static {v1, v3}, Lcom/google/android/gms/common/internal/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
@@ -189,6 +198,7 @@
 
     iget-object p1, p1, Lcom/google/mlkit/common/model/RemoteModel;->zze:Lcom/google/mlkit/common/sdkinternal/ModelType;
 
+    .line 5
     invoke-static {p0, p1}, Lcom/google/android/gms/common/internal/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -235,6 +245,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/mlkit/common/model/RemoteModel;->zzc:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -276,6 +287,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/mlkit/common/model/RemoteModel;->zzc:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -313,21 +325,22 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    .line 1
+    iget-object v1, p0, Lcom/google/mlkit/common/model/RemoteModel;->zzc:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/google/mlkit/common/model/RemoteModel;->zzc:Ljava/lang/String;
+    const/4 v2, 0x0
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/4 v1, 0x1
+    iget-object v1, p0, Lcom/google/mlkit/common/model/RemoteModel;->zzd:Lcom/google/mlkit/common/sdkinternal/model/BaseModel;
 
-    iget-object v2, p0, Lcom/google/mlkit/common/model/RemoteModel;->zzd:Lcom/google/mlkit/common/sdkinternal/model/BaseModel;
+    const/4 v2, 0x1
 
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x2
+    aput-object v1, v0, v2
 
     iget-object p0, p0, Lcom/google/mlkit/common/model/RemoteModel;->zze:Lcom/google/mlkit/common/sdkinternal/ModelType;
+
+    const/4 v1, 0x2
 
     aput-object p0, v0, v1
 
@@ -378,28 +391,33 @@
 
     const-string v0, "RemoteModel"
 
+    .line 1
     invoke-static {v0}, Lcom/google/android/gms/internal/mlkit_common/zzaa;->zzb(Ljava/lang/String;)Lcom/google/android/gms/internal/mlkit_common/zzz;
 
     move-result-object v0
 
-    const-string v1, "modelName"
+    iget-object v1, p0, Lcom/google/mlkit/common/model/RemoteModel;->zzc:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/google/mlkit/common/model/RemoteModel;->zzc:Ljava/lang/String;
+    const-string v2, "modelName"
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/android/gms/internal/mlkit_common/zzz;->zza(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzz;
+    .line 2
+    invoke-virtual {v0, v2, v1}, Lcom/google/android/gms/internal/mlkit_common/zzz;->zza(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzz;
 
-    const-string v1, "baseModel"
+    iget-object v1, p0, Lcom/google/mlkit/common/model/RemoteModel;->zzd:Lcom/google/mlkit/common/sdkinternal/model/BaseModel;
 
-    iget-object v2, p0, Lcom/google/mlkit/common/model/RemoteModel;->zzd:Lcom/google/mlkit/common/sdkinternal/model/BaseModel;
+    const-string v2, "baseModel"
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/android/gms/internal/mlkit_common/zzz;->zza(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzz;
-
-    const-string v1, "modelType"
+    .line 3
+    invoke-virtual {v0, v2, v1}, Lcom/google/android/gms/internal/mlkit_common/zzz;->zza(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzz;
 
     iget-object p0, p0, Lcom/google/mlkit/common/model/RemoteModel;->zze:Lcom/google/mlkit/common/sdkinternal/ModelType;
 
+    const-string v1, "modelType"
+
+    .line 4
     invoke-virtual {v0, v1, p0}, Lcom/google/android/gms/internal/mlkit_common/zzz;->zza(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzz;
 
+    .line 5
     invoke-virtual {v0}, Lcom/google/android/gms/internal/mlkit_common/zzz;->toString()Ljava/lang/String;
 
     move-result-object p0

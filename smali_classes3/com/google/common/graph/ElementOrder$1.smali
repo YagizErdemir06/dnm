@@ -1,4 +1,4 @@
-.class synthetic Lcom/google/common/graph/ElementOrder$1;
+.class public synthetic Lcom/google/common/graph/ElementOrder$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$com$google$common$graph$ElementOrder$Type:[I
+.field public static final synthetic $SwitchMap$com$google$common$graph$ElementOrder$Type:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Lcom/google/common/graph/ElementOrder$Type;->values()[Lcom/google/common/graph/ElementOrder$Type;
 
     move-result-object v0

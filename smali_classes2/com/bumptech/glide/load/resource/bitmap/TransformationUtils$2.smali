@@ -1,4 +1,4 @@
-.class final Lcom/bumptech/glide/load/resource/bitmap/TransformationUtils$2;
+.class public final Lcom/bumptech/glide/load/resource/bitmap/TransformationUtils$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,19 +18,20 @@
 
 
 # instance fields
-.field final synthetic val$bottomLeft:F
+.field public final synthetic val$bottomLeft:F
 
-.field final synthetic val$bottomRight:F
+.field public final synthetic val$bottomRight:F
 
-.field final synthetic val$topLeft:F
+.field public final synthetic val$topLeft:F
 
-.field final synthetic val$topRight:F
+.field public final synthetic val$topRight:F
 
 
 # direct methods
 .method public constructor <init>(FFFF)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/bumptech/glide/load/resource/bitmap/TransformationUtils$2;->val$topLeft:F
 
     iput p2, p0, Lcom/bumptech/glide/load/resource/bitmap/TransformationUtils$2;->val$topRight:F
@@ -49,6 +50,7 @@
 .method public drawRoundedCorners(Landroid/graphics/Canvas;Landroid/graphics/Paint;Landroid/graphics/RectF;)V
     .locals 4
 
+    .line 1
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
@@ -57,6 +59,7 @@
 
     new-array v1, v1, [F
 
+    .line 2
     iget v2, p0, Lcom/bumptech/glide/load/resource/bitmap/TransformationUtils$2;->val$topLeft:F
 
     const/4 v3, 0x0
@@ -101,6 +104,7 @@
 
     invoke-virtual {v0, p3, v1, p0}, Landroid/graphics/Path;->addRoundRect(Landroid/graphics/RectF;[FLandroid/graphics/Path$Direction;)V
 
+    .line 3
     invoke-virtual {p1, v0, p2}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
     return-void

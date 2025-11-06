@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/AbstractMultimap$Entries;
+.class public Lcom/google/common/collect/AbstractMultimap$Entries;
 .super Lcom/google/common/collect/Multimaps$Entries;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/AbstractMultimap;
+.field public final synthetic this$0:Lcom/google/common/collect/AbstractMultimap;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/AbstractMultimap;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/AbstractMultimap$Entries;->this$0:Lcom/google/common/collect/AbstractMultimap;
 
     invoke-direct {p0}, Lcom/google/common/collect/Multimaps$Entries;-><init>()V
@@ -49,6 +50,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/AbstractMultimap$Entries;->this$0:Lcom/google/common/collect/AbstractMultimap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMultimap;->entryIterator()Ljava/util/Iterator;
@@ -68,6 +70,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/AbstractMultimap$Entries;->this$0:Lcom/google/common/collect/AbstractMultimap;
 
     return-object p0

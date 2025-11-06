@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public final a:Landroid/os/Bundle;
+.field private final a:Landroid/os/Bundle;
 
 
 # direct methods
@@ -52,7 +52,7 @@
     .line 4
     new-instance v0, Landroid/os/Bundle;
 
-    iget-object p1, p1, Landroid/support/v4/media/MediaMetadataCompat;->a:Landroid/os/Bundle;
+    iget-object p1, p1, Landroid/support/v4/media/MediaMetadataCompat;->d9:Landroid/os/Bundle;
 
     invoke-direct {v0, p1}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
 
@@ -141,7 +141,7 @@
 
     .line 12
     :cond_1
-    invoke-virtual {p0, v1, p2}, Landroid/support/v4/media/MediaMetadataCompat$b;->g(Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
+    invoke-direct {p0, v1, p2}, Landroid/support/v4/media/MediaMetadataCompat$b;->g(Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
@@ -153,11 +153,82 @@
     return-void
 .end method
 
+.method private g(Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "bmp",
+            "maxSize"
+        }
+    .end annotation
+
+    int-to-float p0, p2
+
+    .line 1
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result p2
+
+    int-to-float p2, p2
+
+    div-float p2, p0, p2
+
+    .line 2
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    div-float/2addr p0, v0
+
+    .line 3
+    invoke-static {p2, p0}, Ljava/lang/Math;->min(FF)F
+
+    move-result p0
+
+    .line 4
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result p2
+
+    int-to-float p2, p2
+
+    mul-float/2addr p2, p0
+
+    float-to-int p2, p2
+
+    .line 5
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    mul-float/2addr v0, p0
+
+    float-to-int p0, v0
+
+    const/4 v0, 0x1
+
+    .line 6
+    invoke-static {p1, p0, p2, v0}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 
 # virtual methods
 .method public a()Landroid/support/v4/media/MediaMetadataCompat;
     .locals 1
 
+    .line 1
     new-instance v0, Landroid/support/v4/media/MediaMetadataCompat;
 
     iget-object p0, p0, Landroid/support/v4/media/MediaMetadataCompat$b;->a:Landroid/os/Bundle;
@@ -180,7 +251,8 @@
         }
     .end annotation
 
-    sget-object v0, Landroid/support/v4/media/MediaMetadataCompat;->k1:Landroidx/collection/ArrayMap;
+    .line 1
+    sget-object v0, Landroid/support/v4/media/MediaMetadataCompat;->Z8:Landroidx/collection/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -188,6 +260,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 2
     invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -204,6 +277,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -229,6 +303,7 @@
 
     throw p0
 
+    .line 4
     :cond_1
     :goto_0
     iget-object v0, p0, Landroid/support/v4/media/MediaMetadataCompat$b;->a:Landroid/os/Bundle;
@@ -251,7 +326,8 @@
         }
     .end annotation
 
-    sget-object v0, Landroid/support/v4/media/MediaMetadataCompat;->k1:Landroidx/collection/ArrayMap;
+    .line 1
+    sget-object v0, Landroid/support/v4/media/MediaMetadataCompat;->Z8:Landroidx/collection/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -259,6 +335,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 2
     invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -273,6 +350,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -298,6 +376,7 @@
 
     throw p0
 
+    .line 4
     :cond_1
     :goto_0
     iget-object v0, p0, Landroid/support/v4/media/MediaMetadataCompat$b;->a:Landroid/os/Bundle;
@@ -320,7 +399,8 @@
         }
     .end annotation
 
-    sget-object v0, Landroid/support/v4/media/MediaMetadataCompat;->k1:Landroidx/collection/ArrayMap;
+    .line 1
+    sget-object v0, Landroid/support/v4/media/MediaMetadataCompat;->Z8:Landroidx/collection/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -328,6 +408,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 2
     invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -344,6 +425,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -369,11 +451,19 @@
 
     throw p0
 
+    .line 4
     :cond_1
     :goto_0
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x13
+
+    if-lt v0, v1, :cond_2
+
+    .line 5
     iget-object v0, p0, Landroid/support/v4/media/MediaMetadataCompat$b;->a:Landroid/os/Bundle;
 
-    invoke-virtual {p2}, Landroid/support/v4/media/RatingCompat;->d()Ljava/lang/Object;
+    invoke-virtual {p2}, Landroid/support/v4/media/RatingCompat;->c()Ljava/lang/Object;
 
     move-result-object p2
 
@@ -381,6 +471,15 @@
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
+    goto :goto_1
+
+    .line 6
+    :cond_2
+    iget-object v0, p0, Landroid/support/v4/media/MediaMetadataCompat$b;->a:Landroid/os/Bundle;
+
+    invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+
+    :goto_1
     return-object p0
 .end method
 
@@ -397,7 +496,8 @@
         }
     .end annotation
 
-    sget-object v0, Landroid/support/v4/media/MediaMetadataCompat;->k1:Landroidx/collection/ArrayMap;
+    .line 1
+    sget-object v0, Landroid/support/v4/media/MediaMetadataCompat;->Z8:Landroidx/collection/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -405,6 +505,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 2
     invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -421,6 +522,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -446,6 +548,7 @@
 
     throw p0
 
+    .line 4
     :cond_1
     :goto_0
     iget-object v0, p0, Landroid/support/v4/media/MediaMetadataCompat$b;->a:Landroid/os/Bundle;
@@ -468,7 +571,8 @@
         }
     .end annotation
 
-    sget-object v0, Landroid/support/v4/media/MediaMetadataCompat;->k1:Landroidx/collection/ArrayMap;
+    .line 1
+    sget-object v0, Landroid/support/v4/media/MediaMetadataCompat;->Z8:Landroidx/collection/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -476,6 +580,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 2
     invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -492,6 +597,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -517,75 +623,12 @@
 
     throw p0
 
+    .line 4
     :cond_1
     :goto_0
     iget-object v0, p0, Landroid/support/v4/media/MediaMetadataCompat$b;->a:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
-
-    return-object p0
-.end method
-
-.method public final g(Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
-    .locals 1
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0,
-            0x0
-        }
-        names = {
-            "bmp",
-            "maxSize"
-        }
-    .end annotation
-
-    int-to-float p0, p2
-
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result p2
-
-    int-to-float p2, p2
-
-    div-float p2, p0, p2
-
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    div-float/2addr p0, v0
-
-    invoke-static {p2, p0}, Ljava/lang/Math;->min(FF)F
-
-    move-result p0
-
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result p2
-
-    int-to-float p2, p2
-
-    mul-float/2addr p2, p0
-
-    float-to-int p2, p2
-
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    mul-float/2addr v0, p0
-
-    float-to-int p0, v0
-
-    const/4 v0, 0x1
-
-    invoke-static {p1, p0, p2, v0}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
-
-    move-result-object p0
 
     return-object p0
 .end method

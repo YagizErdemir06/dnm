@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/api/internal/zaay;
+.class public final Lcom/google/android/gms/common/api/internal/zaay;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field final synthetic zaa:Lcom/google/android/gms/common/api/internal/zabe;
+.field public final synthetic zaa:Lcom/google/android/gms/common/api/internal/zabe;
 
 
 # direct methods
@@ -26,6 +26,7 @@
 .method public final isConnected()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zaay;->zaa:Lcom/google/android/gms/common/api/internal/zabe;
 
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/internal/zabe;->isConnected()Z

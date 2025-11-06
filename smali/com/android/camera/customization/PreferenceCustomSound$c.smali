@@ -25,9 +25,21 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x0
+        }
+        names = {
+            "this$0",
+            "itemView"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/customization/PreferenceCustomSound$c;->a:Lcom/android/camera/customization/PreferenceCustomSound;
 
+    .line 2
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
     return-void

@@ -26,6 +26,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -48,45 +49,53 @@
 
     const/4 p0, 0x1
 
+    .line 1
     aget v0, p1, p0
 
     const/4 v1, 0x0
 
-    aget p1, p1, v1
+    aget v2, p1, v1
 
-    sub-int v2, v0, p1
+    sub-int/2addr v0, v2
 
-    add-int/2addr v2, p0
+    add-int/2addr v0, p0
 
-    div-int/lit8 v3, v2, 0x2
+    .line 2
+    div-int/lit8 v2, v0, 0x2
+
+    .line 3
+    aget v3, p1, v1
 
     if-ne p3, p0, :cond_0
 
-    move v4, v2
+    move v4, v0
 
     goto :goto_0
 
     :cond_0
-    move v4, v3
+    move v4, v2
 
     :goto_0
-    sub-int/2addr p1, v4
+    sub-int/2addr v3, v4
 
-    aput p1, p2, v1
+    aput v3, p2, v1
 
-    const/4 p1, 0x2
+    .line 4
+    aget p1, p1, p0
 
-    if-ne p3, p1, :cond_1
+    const/4 v1, 0x2
+
+    if-ne p3, v1, :cond_1
 
     goto :goto_1
 
     :cond_1
-    move v2, v3
+    move v0, v2
 
     :goto_1
-    add-int/2addr v0, v2
+    add-int/2addr p1, v0
 
-    aput v0, p2, p0
+    aput p1, p2, p0
 
     return-void
 .end method

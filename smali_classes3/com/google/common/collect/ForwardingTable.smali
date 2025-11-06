@@ -33,6 +33,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ForwardingObject;-><init>()V
 
     return-void
@@ -51,6 +52,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingTable;->delegate()Lcom/google/common/collect/Table;
 
     move-result-object p0
@@ -65,6 +67,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingTable;->delegate()Lcom/google/common/collect/Table;
 
     move-result-object p0
@@ -88,6 +91,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingTable;->delegate()Lcom/google/common/collect/Table;
 
     move-result-object p0
@@ -109,6 +113,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingTable;->delegate()Lcom/google/common/collect/Table;
 
     move-result-object p0
@@ -132,6 +137,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingTable;->delegate()Lcom/google/common/collect/Table;
 
     move-result-object p0
@@ -154,6 +160,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingTable;->delegate()Lcom/google/common/collect/Table;
 
     move-result-object p0
@@ -172,6 +179,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingTable;->delegate()Lcom/google/common/collect/Table;
 
     move-result-object p0
@@ -190,6 +198,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingTable;->delegate()Lcom/google/common/collect/Table;
 
     move-result-object p0
@@ -208,6 +217,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingTable;->delegate()Lcom/google/common/collect/Table;
 
     move-result-object p0
@@ -232,6 +242,7 @@
 .method public bridge synthetic delegate()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingTable;->delegate()Lcom/google/common/collect/Table;
 
     move-result-object p0
@@ -248,6 +259,7 @@
 
     if-eq p1, p0, :cond_1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingTable;->delegate()Lcom/google/common/collect/Table;
 
     move-result-object p0
@@ -295,6 +307,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingTable;->delegate()Lcom/google/common/collect/Table;
 
     move-result-object p0
@@ -309,6 +322,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingTable;->delegate()Lcom/google/common/collect/Table;
 
     move-result-object p0
@@ -323,6 +337,7 @@
 .method public isEmpty()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingTable;->delegate()Lcom/google/common/collect/Table;
 
     move-result-object p0
@@ -360,6 +375,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingTable;->delegate()Lcom/google/common/collect/Table;
 
     move-result-object p0
@@ -381,6 +397,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingTable;->delegate()Lcom/google/common/collect/Table;
 
     move-result-object p0
@@ -415,6 +432,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingTable;->delegate()Lcom/google/common/collect/Table;
 
     move-result-object p0
@@ -440,6 +458,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingTable;->delegate()Lcom/google/common/collect/Table;
 
     move-result-object p0
@@ -461,6 +480,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingTable;->delegate()Lcom/google/common/collect/Table;
 
     move-result-object p0
@@ -484,6 +504,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingTable;->delegate()Lcom/google/common/collect/Table;
 
     move-result-object p0
@@ -498,6 +519,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingTable;->delegate()Lcom/google/common/collect/Table;
 
     move-result-object p0
@@ -519,6 +541,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingTable;->delegate()Lcom/google/common/collect/Table;
 
     move-result-object p0

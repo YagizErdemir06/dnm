@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/StandardTable$RowMap;
+.class public Lcom/google/common/collect/StandardTable$RowMap;
 .super Lcom/google/common/collect/Maps$ViewCachingAbstractMap;
 .source "SourceFile"
 
@@ -30,13 +30,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/StandardTable;
+.field public final synthetic this$0:Lcom/google/common/collect/StandardTable;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/StandardTable;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/StandardTable$RowMap;->this$0:Lcom/google/common/collect/StandardTable;
 
     invoke-direct {p0}, Lcom/google/common/collect/Maps$ViewCachingAbstractMap;-><init>()V
@@ -53,6 +54,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/StandardTable$RowMap;->this$0:Lcom/google/common/collect/StandardTable;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/StandardTable;->containsRow(Ljava/lang/Object;)Z
@@ -75,6 +77,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/StandardTable$RowMap$EntrySet;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/StandardTable$RowMap$EntrySet;-><init>(Lcom/google/common/collect/StandardTable$RowMap;)V

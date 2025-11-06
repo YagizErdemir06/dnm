@@ -26,10 +26,6 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .param p1    # Landroid/content/Context;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 
     const/4 v0, 0x0
 
@@ -41,14 +37,6 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
-    .param p1    # Landroid/content/Context;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroid/util/AttributeSet;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
 
     const/4 v0, 0x0
 
@@ -60,14 +48,6 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 3
-    .param p1    # Landroid/content/Context;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroid/util/AttributeSet;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
 
     .line 3
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -118,6 +98,7 @@
 .method public getMaxHeight()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/preference/internal/PreferenceImageView;->mMaxHeight:I
 
     return p0
@@ -126,6 +107,7 @@
 .method public getMaxWidth()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/preference/internal/PreferenceImageView;->mMaxWidth:I
 
     return p0
@@ -134,6 +116,7 @@
 .method public onMeasure(II)V
     .locals 5
 
+    .line 1
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
     move-result v0
@@ -146,11 +129,13 @@
 
     if-nez v0, :cond_2
 
+    .line 2
     :cond_0
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v3
 
+    .line 3
     invoke-virtual {p0}, Landroidx/preference/internal/PreferenceImageView;->getMaxWidth()I
 
     move-result v4
@@ -161,11 +146,13 @@
 
     if-nez v0, :cond_2
 
+    .line 4
     :cond_1
     invoke-static {v4, v2}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result p1
 
+    .line 5
     :cond_2
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
@@ -175,11 +162,13 @@
 
     if-nez v0, :cond_5
 
+    .line 6
     :cond_3
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v3
 
+    .line 7
     invoke-virtual {p0}, Landroidx/preference/internal/PreferenceImageView;->getMaxHeight()I
 
     move-result v4
@@ -190,11 +179,13 @@
 
     if-nez v0, :cond_5
 
+    .line 8
     :cond_4
     invoke-static {v4, v2}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result p2
 
+    .line 9
     :cond_5
     invoke-super {p0, p1, p2}, Landroid/widget/ImageView;->onMeasure(II)V
 
@@ -204,8 +195,10 @@
 .method public setMaxHeight(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/preference/internal/PreferenceImageView;->mMaxHeight:I
 
+    .line 2
     invoke-super {p0, p1}, Landroid/widget/ImageView;->setMaxHeight(I)V
 
     return-void
@@ -214,8 +207,10 @@
 .method public setMaxWidth(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/preference/internal/PreferenceImageView;->mMaxWidth:I
 
+    .line 2
     invoke-super {p0, p1}, Landroid/widget/ImageView;->setMaxWidth(I)V
 
     return-void

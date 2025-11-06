@@ -26,6 +26,7 @@
 .method public constructor <init>(Lorg/apache/xmlbeans/impl/tool/Extension;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/Extension$Param;->this$0:Lorg/apache/xmlbeans/impl/tool/Extension;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,6 +39,7 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/Extension$Param;->name:Ljava/lang/String;
 
     return-object p0
@@ -46,6 +48,7 @@
 .method public getValue()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/Extension$Param;->value:Ljava/lang/String;
 
     return-object p0
@@ -54,6 +57,7 @@
 .method public setName(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/Extension$Param;->name:Ljava/lang/String;
 
     return-void
@@ -62,6 +66,7 @@
 .method public setValue(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/Extension$Param;->value:Ljava/lang/String;
 
     return-void

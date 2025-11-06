@@ -16,14 +16,14 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerViewHolder<",
-        "Lki/i;",
+        "Ld/o/v/d/b/a/a/i;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field public a:Landroid/widget/ImageView;
+.field private a:Landroid/widget/ImageView;
 
 .field public final synthetic b:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter;
 
@@ -35,13 +35,26 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x0
+        }
+        names = {
+            "this$0",
+            "itemView"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter$MimojiThumbnailHolder;->b:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter;
 
+    .line 2
     invoke-direct {p0, p2}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerViewHolder;-><init>(Landroid/view/View;)V
 
-    const p1, 0x7f0b03b1
+    const p1, 0x7f0b0360
 
+    .line 3
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -55,13 +68,25 @@
 
 
 # virtual methods
-.method public d(Lki/i;I)V
+.method public c(Ld/o/v/d/b/a/a/i;I)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "data",
+            "position"
+        }
+    .end annotation
 
-    invoke-virtual {p1}, Lki/i;->l()Landroid/graphics/Bitmap;
+    .line 1
+    invoke-virtual {p1}, Ld/o/v/d/b/a/a/i;->l()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
+    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -102,23 +127,27 @@
 
     if-eqz v0, :cond_2
 
+    .line 3
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
+    .line 4
     iget-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter$MimojiThumbnailHolder;->a:Landroid/widget/ImageView;
 
     invoke-virtual {v1, p2}, Landroid/widget/ImageView;->setVisibility(I)V
 
+    .line 5
     iget-object p2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter$MimojiThumbnailHolder;->a:Landroid/widget/ImageView;
 
     invoke-virtual {p2, v0}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
+    .line 6
     iget-object p2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter$MimojiThumbnailHolder;->a:Landroid/widget/ImageView;
 
-    invoke-virtual {p1}, Lci/d;->e()Z
+    invoke-virtual {p1}, Ld/o/v/a/g0/b/d;->e()Z
 
     move-result v0
 
@@ -130,7 +159,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080128
+    const v1, 0x7f080111
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -142,10 +171,11 @@
     const/4 v0, 0x0
 
     :goto_1
-    invoke-virtual {p2, v0}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p2, v0}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_2
 
+    .line 7
     :cond_2
     iget-object p2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter$MimojiThumbnailHolder;->a:Landroid/widget/ImageView;
 
@@ -153,6 +183,7 @@
 
     invoke-virtual {p2, v0}, Landroid/widget/ImageView;->setVisibility(I)V
 
+    .line 8
     :goto_2
     iget-object p0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -160,7 +191,7 @@
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p1}, Lki/i;->n()Ljava/lang/String;
+    invoke-virtual {p1}, Ld/o/v/d/b/a/a/i;->n()Ljava/lang/String;
 
     move-result-object p1
 
@@ -181,10 +212,21 @@
 
 .method public bridge synthetic setData(Ljava/lang/Object;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "data",
+            "position"
+        }
+    .end annotation
 
-    check-cast p1, Lki/i;
+    .line 1
+    check-cast p1, Ld/o/v/d/b/a/a/i;
 
-    invoke-virtual {p0, p1, p2}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter$MimojiThumbnailHolder;->d(Lki/i;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter$MimojiThumbnailHolder;->c(Ld/o/v/d/b/a/a/i;I)V
 
     return-void
 .end method

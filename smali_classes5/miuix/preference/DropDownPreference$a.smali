@@ -18,14 +18,15 @@
 
 
 # instance fields
-.field public final synthetic a:Lmiuix/preference/DropDownPreference;
+.field public final synthetic c:Lmiuix/preference/DropDownPreference;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/preference/DropDownPreference;)V
     .locals 0
 
-    iput-object p1, p0, Lmiuix/preference/DropDownPreference$a;->a:Lmiuix/preference/DropDownPreference;
+    .line 1
+    iput-object p1, p0, Lmiuix/preference/DropDownPreference$a;->c:Lmiuix/preference/DropDownPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,25 +47,12 @@
         }
     .end annotation
 
-    iget-object p1, p0, Lmiuix/preference/DropDownPreference$a;->a:Lmiuix/preference/DropDownPreference;
-
-    invoke-static {p1, p3}, Lmiuix/preference/DropDownPreference;->d(Lmiuix/preference/DropDownPreference;I)V
-
     if-ltz p3, :cond_0
 
-    iget-object p1, p0, Lmiuix/preference/DropDownPreference$a;->a:Lmiuix/preference/DropDownPreference;
+    .line 1
+    iget-object p1, p0, Lmiuix/preference/DropDownPreference$a;->c:Lmiuix/preference/DropDownPreference;
 
-    invoke-static {p1}, Lmiuix/preference/DropDownPreference;->e(Lmiuix/preference/DropDownPreference;)[Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    array-length p1, p1
-
-    if-ge p3, p1, :cond_0
-
-    iget-object p1, p0, Lmiuix/preference/DropDownPreference$a;->a:Lmiuix/preference/DropDownPreference;
-
-    invoke-static {p1}, Lmiuix/preference/DropDownPreference;->e(Lmiuix/preference/DropDownPreference;)[Ljava/lang/CharSequence;
+    invoke-static {p1}, Lmiuix/preference/DropDownPreference;->a(Lmiuix/preference/DropDownPreference;)[Ljava/lang/CharSequence;
 
     move-result-object p1
 
@@ -72,9 +60,10 @@
 
     check-cast p1, Ljava/lang/String;
 
-    iget-object p2, p0, Lmiuix/preference/DropDownPreference$a;->a:Lmiuix/preference/DropDownPreference;
+    .line 2
+    iget-object p2, p0, Lmiuix/preference/DropDownPreference$a;->c:Lmiuix/preference/DropDownPreference;
 
-    invoke-static {p2}, Lmiuix/preference/DropDownPreference;->f(Lmiuix/preference/DropDownPreference;)Landroid/os/Handler;
+    invoke-static {p2}, Lmiuix/preference/DropDownPreference;->b(Lmiuix/preference/DropDownPreference;)Landroid/os/Handler;
 
     move-result-object p2
 
@@ -84,16 +73,7 @@
 
     invoke-virtual {p2, p3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    goto :goto_0
-
     :cond_0
-    const-string p0, "DropDownPreference"
-
-    const-string p1, "Illegal Position In Entry Values\' Array. "
-
-    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :goto_0
     return-void
 .end method
 

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmiuix/view/a;
+.implements Lk/j0/a;
 
 
 # annotations
@@ -18,14 +18,15 @@
 
 
 # instance fields
-.field public final synthetic a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+.field public final synthetic c:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)V
     .locals 0
 
-    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+    .line 1
+    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->c:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,9 +42,10 @@
 
     sub-float v1, v0, p1
 
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+    .line 1
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->c:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
-    invoke-static {v2}, Lnq/n;->l(Landroid/view/View;)Z
+    invoke-static {v2}, Lk/l/c/k;->g(Landroid/view/View;)Z
 
     move-result v2
 
@@ -51,59 +53,22 @@
 
     sub-float v1, p1, v0
 
+    .line 2
     :cond_0
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->c:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
-    invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->A(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Landroid/widget/TextView;
+    invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->I(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Landroid/widget/TextView;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
+    invoke-virtual {v0}, Landroid/widget/TextView;->getMeasuredWidth()I
 
     move-result v0
 
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+    .line 3
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->c:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
-    invoke-static {v2}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->A(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Landroid/widget/TextView;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v2
-
-    instance-of v2, v2, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    if-eqz v2, :cond_1
-
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
-
-    invoke-static {v2}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->A(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Landroid/widget/TextView;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    invoke-virtual {v2}, Landroid/view/ViewGroup$MarginLayoutParams;->getMarginStart()I
-
-    move-result v3
-
-    invoke-virtual {v2}, Landroid/view/ViewGroup$MarginLayoutParams;->getMarginEnd()I
-
-    move-result v2
-
-    add-int/2addr v3, v2
-
-    add-int/2addr v0, v3
-
-    :cond_1
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
-
-    invoke-static {v2}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->A(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Landroid/widget/TextView;
+    invoke-static {v2}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->I(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Landroid/widget/TextView;
 
     move-result-object v2
 
@@ -111,39 +76,36 @@
 
     mul-float/2addr v3, v1
 
-    invoke-virtual {v2, v3}, Landroid/view/View;->setTranslationX(F)V
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setTranslationX(F)V
 
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+    .line 4
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->c:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
-    invoke-static {v1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->B(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Landroid/view/ViewGroup;
+    invoke-static {v1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->J(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Landroid/view/ViewGroup;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
     instance-of v1, v1, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+    .line 5
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->c:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
-    invoke-static {v1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->B(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Landroid/view/ViewGroup;
+    .line 6
+    invoke-static {v1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->J(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Landroid/view/ViewGroup;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
     check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
-
-    invoke-virtual {v2}, Landroid/view/View;->getPaddingStart()I
-
-    move-result v2
 
     sub-int/2addr v0, p2
 
@@ -157,25 +119,23 @@
 
     float-to-int p1, v0
 
-    invoke-static {v2, p1}, Ljava/lang/Math;->max(II)I
-
-    move-result p1
-
+    .line 7
     invoke-virtual {v1, p1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginEnd(I)V
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+    .line 8
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->c:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
-    invoke-static {p0}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->B(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Landroid/view/ViewGroup;
+    invoke-static {p0}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->J(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Landroid/view/ViewGroup;
 
     move-result-object p0
 
-    invoke-virtual {p0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    :cond_2
+    :cond_1
     return-void
 .end method
 
-.method public j(ZF)V
+.method public i(ZF)V
     .locals 5
 
     if-nez p1, :cond_0
@@ -184,22 +144,25 @@
 
     sub-float p2, p1, p2
 
+    .line 1
     :cond_0
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->c:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->w(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)I
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->z(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)I
 
     move-result p1
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+    .line 2
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->c:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
-    invoke-virtual {v0}, Landroid/view/View;->getPaddingStart()I
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getPaddingStart()I
 
     move-result v1
 
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->c:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
-    invoke-static {v2}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->y(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)I
+    .line 3
+    invoke-static {v2}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->G(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)I
 
     move-result v2
 
@@ -213,29 +176,33 @@
 
     float-to-int v2, v2
 
-    iget-object v3, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+    iget-object v3, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->c:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
-    invoke-virtual {v3}, Landroid/view/View;->getPaddingEnd()I
+    .line 4
+    invoke-virtual {v3}, Landroid/widget/FrameLayout;->getPaddingEnd()I
 
     move-result v3
 
-    iget-object v4, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+    iget-object v4, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->c:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
-    invoke-virtual {v4}, Landroid/view/View;->getPaddingBottom()I
+    invoke-virtual {v4}, Landroid/widget/FrameLayout;->getPaddingBottom()I
 
     move-result v4
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/view/View;->setPaddingRelative(IIII)V
+    .line 5
+    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/widget/FrameLayout;->setPaddingRelative(IIII)V
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+    .line 6
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->c:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+    .line 7
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->c:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
-    invoke-static {v1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->z(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)I
+    invoke-static {v1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->H(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)I
 
     move-result v1
 
@@ -245,22 +212,24 @@
 
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+    .line 8
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->c:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->j(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)I
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->i(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)I
 
     move-result p1
 
     invoke-virtual {p0, p2, p1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a(FI)V
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+    .line 9
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->c:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
 .end method
 
-.method public k(Z)V
+.method public j(Z)V
     .locals 2
 
     if-eqz p1, :cond_0
@@ -272,10 +241,11 @@
     :cond_0
     const/high16 v0, 0x3f800000    # 1.0f
 
+    .line 1
     :goto_0
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->c:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
-    invoke-static {v1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->j(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)I
+    invoke-static {v1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->i(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)I
 
     move-result v1
 
@@ -283,9 +253,10 @@
 
     if-eqz p1, :cond_1
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+    .line 2
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->c:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->k(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Landroid/widget/EditText;
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->j(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Landroid/widget/EditText;
 
     move-result-object p1
 
@@ -295,32 +266,35 @@
 
     invoke-interface {p1}, Landroid/text/Editable;->clear()V
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+    .line 3
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->c:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->k(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Landroid/widget/EditText;
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->j(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Landroid/widget/EditText;
 
     move-result-object p1
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->c:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
-    invoke-virtual {p1, p0}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
+    invoke-virtual {p1, p0}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     goto :goto_1
 
+    .line 4
     :cond_1
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->c:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->k(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Landroid/widget/EditText;
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->j(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Landroid/widget/EditText;
 
     move-result-object p1
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->c:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->removeTextChangedListener(Landroid/text/TextWatcher;)V
+    invoke-virtual {p1, v0}, Landroid/widget/EditText;->removeTextChangedListener(Landroid/text/TextWatcher;)V
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+    .line 5
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->c:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
-    invoke-static {p0}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->k(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Landroid/widget/EditText;
+    invoke-static {p0}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->j(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Landroid/widget/EditText;
 
     move-result-object p0
 
@@ -334,88 +308,22 @@
     return-void
 .end method
 
-.method public m(Z)V
-    .locals 5
+.method public l(Z)V
+    .locals 0
 
     if-nez p1, :cond_0
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+    .line 1
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->c:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->k(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Landroid/widget/EditText;
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->j(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)Landroid/widget/EditText;
 
     move-result-object p1
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->c:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
-    invoke-virtual {p1, p0}, Landroid/widget/TextView;->removeTextChangedListener(Landroid/text/TextWatcher;)V
-
-    goto :goto_0
+    invoke-virtual {p1, p0}, Landroid/widget/EditText;->removeTextChangedListener(Landroid/text/TextWatcher;)V
 
     :cond_0
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
-
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->w(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)I
-
-    move-result p1
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
-
-    invoke-virtual {v0}, Landroid/view/View;->getPaddingStart()I
-
-    move-result v1
-
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
-
-    invoke-static {v2}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->y(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)I
-
-    move-result v2
-
-    add-int/2addr v2, p1
-
-    iget-object v3, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
-
-    invoke-virtual {v3}, Landroid/view/View;->getPaddingEnd()I
-
-    move-result v3
-
-    iget-object v4, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
-
-    invoke-virtual {v4}, Landroid/view/View;->getPaddingBottom()I
-
-    move-result v4
-
-    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/view/View;->setPaddingRelative(IIII)V
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
-
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
-
-    invoke-static {v1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->z(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)I
-
-    move-result v1
-
-    add-int/2addr v1, p1
-
-    iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
-
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->j(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)I
-
-    move-result p1
-
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    invoke-virtual {p0, v1, p1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a(FI)V
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$d;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    :goto_0
     return-void
 .end method

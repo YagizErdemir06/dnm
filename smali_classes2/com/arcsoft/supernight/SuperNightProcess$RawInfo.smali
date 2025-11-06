@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/arcsoft/supernight/SuperNightProcess;
+.field public final synthetic a:Lcom/arcsoft/supernight/SuperNightProcess;
 
 .field public blackLevel:[I
 
@@ -46,6 +46,7 @@
 .method public constructor <init>(Lcom/arcsoft/supernight/SuperNightProcess;)V
     .locals 3
 
+    .line 1
     iput-object p1, p0, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;->a:Lcom/arcsoft/supernight/SuperNightProcess;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -54,20 +55,24 @@
 
     new-array p1, p1, [I
 
+    .line 2
     iput-object p1, p0, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;->evList:[I
 
     const/4 p1, 0x4
 
     new-array v0, p1, [I
 
+    .line 3
     iput-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;->brightLevel:[I
 
     new-array v0, p1, [I
 
+    .line 4
     iput-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;->blackLevel:[I
 
     new-array v0, p1, [F
 
+    .line 5
     iput-object v0, p0, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;->fWbGain:[F
 
     const/4 v0, 0x0
@@ -77,6 +82,7 @@
 
     if-ge v0, p1, :cond_0
 
+    .line 6
     iget-object v2, p0, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;->fWbGain:[F
 
     aput v1, v2, v0
@@ -85,6 +91,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_0
     iput v1, p0, Lcom/arcsoft/supernight/SuperNightProcess$RawInfo;->fAdrcGain:F
 

@@ -21,9 +21,21 @@
 # direct methods
 .method public constructor <init>(Lcom/android/camera/module/FilmDreamModule;Landroid/os/Looper;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1010,
+            0x0
+        }
+        names = {
+            "this$0",
+            "looper"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/module/FilmDreamModule$b;->a:Lcom/android/camera/module/FilmDreamModule;
 
+    .line 2
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -33,7 +45,16 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "msg"
+        }
+    .end annotation
 
+    .line 1
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/16 v0, 0x80
@@ -64,53 +85,60 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/android/camera/module/FilmDreamModule$b;->a:Lcom/android/camera/module/FilmDreamModule;
 
-    invoke-static {p0}, Lcom/android/camera/module/FilmDreamModule;->Zk(Lcom/android/camera/module/FilmDreamModule;)V
+    invoke-static {p0}, Lcom/android/camera/module/FilmDreamModule;->jk(Lcom/android/camera/module/FilmDreamModule;)V
 
     goto :goto_0
 
+    .line 3
     :cond_1
     iget-object p0, p0, Lcom/android/camera/module/FilmDreamModule$b;->a:Lcom/android/camera/module/FilmDreamModule;
 
-    invoke-virtual {p0}, Lq7/i0;->Vj()V
+    invoke-virtual {p0}, Ld/d/a/d7/p7;->mj()V
 
     goto :goto_0
 
+    .line 4
     :cond_2
     iget-object p0, p0, Lcom/android/camera/module/FilmDreamModule$b;->a:Lcom/android/camera/module/FilmDreamModule;
 
-    invoke-static {p0}, Lcom/android/camera/module/FilmDreamModule;->Yk(Lcom/android/camera/module/FilmDreamModule;)V
+    invoke-static {p0}, Lcom/android/camera/module/FilmDreamModule;->ik(Lcom/android/camera/module/FilmDreamModule;)V
 
     goto :goto_0
 
+    .line 5
     :cond_3
     iget-object p1, p0, Lcom/android/camera/module/FilmDreamModule$b;->a:Lcom/android/camera/module/FilmDreamModule;
 
-    iget-object p1, p1, Lq7/i0;->k:Landroid/os/Handler;
+    iget-object p1, p1, Ld/d/a/d7/p7;->v1:Landroid/os/Handler;
 
     invoke-virtual {p1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
+    .line 6
     iget-object p1, p0, Lcom/android/camera/module/FilmDreamModule$b;->a:Lcom/android/camera/module/FilmDreamModule;
 
-    iget-object p1, p1, Lq7/i0;->k:Landroid/os/Handler;
+    iget-object p1, p1, Ld/d/a/d7/p7;->v1:Landroid/os/Handler;
 
     invoke-virtual {p1, v1}, Landroid/os/Handler;->removeMessages(I)V
 
+    .line 7
     iget-object p1, p0, Lcom/android/camera/module/FilmDreamModule$b;->a:Lcom/android/camera/module/FilmDreamModule;
 
-    invoke-virtual {p1}, Lq7/i0;->Ui()Landroid/view/Window;
+    invoke-virtual {p1}, Ld/d/a/d7/p7;->gi()Landroid/view/Window;
 
     move-result-object p1
 
     invoke-virtual {p1, v0}, Landroid/view/Window;->addFlags(I)V
 
+    .line 8
     iget-object p0, p0, Lcom/android/camera/module/FilmDreamModule$b;->a:Lcom/android/camera/module/FilmDreamModule;
 
-    iget-object p1, p0, Lq7/i0;->k:Landroid/os/Handler;
+    iget-object p1, p0, Ld/d/a/d7/p7;->v1:Landroid/os/Handler;
 
-    invoke-virtual {p0}, Lq7/i0;->Ri()I
+    invoke-virtual {p0}, Ld/d/a/d7/p7;->di()I
 
     move-result p0
 
@@ -120,18 +148,20 @@
 
     goto :goto_0
 
+    .line 9
     :cond_4
     iget-object p1, p0, Lcom/android/camera/module/FilmDreamModule$b;->a:Lcom/android/camera/module/FilmDreamModule;
 
-    invoke-virtual {p1}, Lq7/i0;->Ig()V
+    invoke-virtual {p1}, Ld/d/a/d7/p7;->og()V
 
+    .line 10
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
     iget-object p1, p0, Lcom/android/camera/module/FilmDreamModule$b;->a:Lcom/android/camera/module/FilmDreamModule;
 
-    invoke-static {p1}, Lcom/android/camera/module/FilmDreamModule;->Xk(Lcom/android/camera/module/FilmDreamModule;)J
+    invoke-static {p1}, Lcom/android/camera/module/FilmDreamModule;->hk(Lcom/android/camera/module/FilmDreamModule;)J
 
     move-result-wide v3
 
@@ -143,9 +173,10 @@
 
     if-gez p1, :cond_6
 
+    .line 11
     iget-object p0, p0, Lcom/android/camera/module/FilmDreamModule$b;->a:Lcom/android/camera/module/FilmDreamModule;
 
-    iget-object p0, p0, Lq7/i0;->k:Landroid/os/Handler;
+    iget-object p0, p0, Ld/d/a/d7/p7;->v1:Landroid/os/Handler;
 
     const-wide/16 v0, 0x64
 
@@ -153,10 +184,11 @@
 
     goto :goto_0
 
+    .line 12
     :cond_5
     iget-object p0, p0, Lcom/android/camera/module/FilmDreamModule$b;->a:Lcom/android/camera/module/FilmDreamModule;
 
-    invoke-virtual {p0}, Lq7/i0;->Ui()Landroid/view/Window;
+    invoke-virtual {p0}, Ld/d/a/d7/p7;->gi()Landroid/view/Window;
 
     move-result-object p0
 

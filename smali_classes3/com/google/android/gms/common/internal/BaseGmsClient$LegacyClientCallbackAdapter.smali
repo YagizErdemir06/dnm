@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic zza:Lcom/google/android/gms/common/internal/BaseGmsClient;
+.field public final synthetic zza:Lcom/google/android/gms/common/internal/BaseGmsClient;
 
 
 # direct methods
@@ -43,6 +43,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/gms/common/ConnectionResult;->isSuccess()Z
 
     move-result v0
@@ -51,19 +52,21 @@
 
     iget-object p0, p0, Lcom/google/android/gms/common/internal/BaseGmsClient$LegacyClientCallbackAdapter;->zza:Lcom/google/android/gms/common/internal/BaseGmsClient;
 
+    const/4 p1, 0x0
+
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/gms/common/internal/BaseGmsClient;->getScopes()Ljava/util/Set;
 
-    move-result-object p1
+    move-result-object v0
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0, p1}, Lcom/google/android/gms/common/internal/BaseGmsClient;->getRemoteService(Lcom/google/android/gms/common/internal/IAccountAccessor;Ljava/util/Set;)V
+    invoke-virtual {p0, p1, v0}, Lcom/google/android/gms/common/internal/BaseGmsClient;->getRemoteService(Lcom/google/android/gms/common/internal/IAccountAccessor;Ljava/util/Set;)V
 
     return-void
 
     :cond_0
     iget-object v0, p0, Lcom/google/android/gms/common/internal/BaseGmsClient$LegacyClientCallbackAdapter;->zza:Lcom/google/android/gms/common/internal/BaseGmsClient;
 
+    .line 3
     invoke-static {v0}, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzc(Lcom/google/android/gms/common/internal/BaseGmsClient;)Lcom/google/android/gms/common/internal/BaseGmsClient$BaseOnConnectionFailedListener;
 
     move-result-object v0
@@ -72,6 +75,7 @@
 
     iget-object p0, p0, Lcom/google/android/gms/common/internal/BaseGmsClient$LegacyClientCallbackAdapter;->zza:Lcom/google/android/gms/common/internal/BaseGmsClient;
 
+    .line 4
     invoke-static {p0}, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzc(Lcom/google/android/gms/common/internal/BaseGmsClient;)Lcom/google/android/gms/common/internal/BaseGmsClient$BaseOnConnectionFailedListener;
 
     move-result-object p0

@@ -68,6 +68,7 @@
 .method public constructor <init>(Ljava/lang/String;Lcom/google/android/exoplayer2/Format;Lcom/google/android/exoplayer2/Format;II)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-eqz p4, :cond_1
@@ -85,15 +86,18 @@
     :goto_0
     const/4 v0, 0x1
 
+    .line 2
     :goto_1
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 3
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotEmpty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;->decoderName:Ljava/lang/String;
 
+    .line 4
     invoke-static {p2}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -102,6 +106,7 @@
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;->oldFormat:Lcom/google/android/exoplayer2/Format;
 
+    .line 5
     invoke-static {p3}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -110,8 +115,10 @@
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;->newFormat:Lcom/google/android/exoplayer2/Format;
 
+    .line 6
     iput p4, p0, Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;->result:I
 
+    .line 7
     iput p5, p0, Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;->discardReasons:I
 
     return-void
@@ -137,6 +144,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 1
     const-class v2, Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -147,9 +155,11 @@
 
     goto :goto_1
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;
 
+    .line 3
     iget v2, p0, Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;->result:I
 
     iget v3, p1, Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;->result:I
@@ -166,6 +176,7 @@
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;->decoderName:Ljava/lang/String;
 
+    .line 4
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -176,6 +187,7 @@
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;->oldFormat:Lcom/google/android/exoplayer2/Format;
 
+    .line 5
     invoke-virtual {v2, v3}, Lcom/google/android/exoplayer2/Format;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -186,6 +198,7 @@
 
     iget-object p1, p1, Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;->newFormat:Lcom/google/android/exoplayer2/Format;
 
+    .line 6
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/Format;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -208,47 +221,52 @@
 .method public hashCode()I
     .locals 2
 
-    const/16 v0, 0x20f
+    .line 1
+    iget v0, p0, Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;->result:I
 
-    iget v1, p0, Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;->result:I
+    const/16 v1, 0x20f
 
-    add-int/2addr v0, v1
+    add-int/2addr v1, v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    mul-int/lit8 v1, v1, 0x1f
 
-    iget v1, p0, Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;->discardReasons:I
+    .line 2
+    iget v0, p0, Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;->discardReasons:I
 
-    add-int/2addr v0, v1
+    add-int/2addr v1, v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    mul-int/lit8 v1, v1, 0x1f
 
-    iget-object v1, p0, Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;->decoderName:Ljava/lang/String;
+    .line 3
+    iget-object v0, p0, Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;->decoderName:Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    move-result v1
+    move-result v0
 
-    add-int/2addr v0, v1
+    add-int/2addr v1, v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    mul-int/lit8 v1, v1, 0x1f
 
-    iget-object v1, p0, Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;->oldFormat:Lcom/google/android/exoplayer2/Format;
+    .line 4
+    iget-object v0, p0, Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;->oldFormat:Lcom/google/android/exoplayer2/Format;
 
-    invoke-virtual {v1}, Lcom/google/android/exoplayer2/Format;->hashCode()I
+    invoke-virtual {v0}, Lcom/google/android/exoplayer2/Format;->hashCode()I
 
-    move-result v1
+    move-result v0
 
-    add-int/2addr v0, v1
+    add-int/2addr v1, v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    mul-int/lit8 v1, v1, 0x1f
 
+    .line 5
     iget-object p0, p0, Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;->newFormat:Lcom/google/android/exoplayer2/Format;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Format;->hashCode()I
 
     move-result p0
 
-    add-int/2addr v0, p0
+    add-int/2addr v1, p0
 
-    return v0
+    return v1
 .end method

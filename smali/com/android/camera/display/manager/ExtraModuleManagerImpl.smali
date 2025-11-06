@@ -7,17 +7,17 @@
 
 
 # static fields
-.field public static final c:Ljava/lang/String; = "ExtraModuleManagerImpl"
+.field private static final c:Ljava/lang/String; = "ExtraModuleManagerImpl"
 
 
 # instance fields
-.field public a:Lcom/android/camera/ActivityBase;
+.field public d:Lcom/android/camera/ActivityBase;
 
-.field public b:Landroid/content/res/Configuration;
+.field public f:Landroid/content/res/Configuration;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 0
 
     return-void
@@ -25,10 +25,20 @@
 
 .method public constructor <init>(Lcom/android/camera/ActivityBase;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "activity"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->a:Lcom/android/camera/ActivityBase;
+    .line 2
+    iput-object p1, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->d:Lcom/android/camera/ActivityBase;
 
     return-void
 .end method
@@ -40,6 +50,14 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "newConfig"
+        }
+    .end annotation
 .end method
 
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)Z
@@ -48,13 +66,23 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "supportMultiWindow"
         type = 0x0
     .end annotation
 
-    iget-object v0, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->a:Lcom/android/camera/ActivityBase;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "newConfig"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->d:Lcom/android/camera/ActivityBase;
 
     const/4 v1, 0x0
 
@@ -62,17 +90,20 @@
 
     return v1
 
+    .line 2
     :cond_0
-    iget-object v0, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->b:Landroid/content/res/Configuration;
+    iget-object v0, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->f:Landroid/content/res/Configuration;
 
     invoke-virtual {p1, v0}, Landroid/content/res/Configuration;->diff(Landroid/content/res/Configuration;)I
 
     move-result v0
 
-    iget-object v2, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->b:Landroid/content/res/Configuration;
+    .line 3
+    iget-object v2, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->f:Landroid/content/res/Configuration;
 
     invoke-virtual {v2, p1}, Landroid/content/res/Configuration;->setTo(Landroid/content/res/Configuration;)V
 
+    .line 4
     sget-object v2, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->c:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -119,8 +150,10 @@
 
     if-ne v0, v4, :cond_2
 
-    iget-object v0, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->a:Lcom/android/camera/ActivityBase;
+    .line 5
+    iget-object v0, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->d:Lcom/android/camera/ActivityBase;
 
+    .line 6
     invoke-virtual {v0}, Landroid/app/Activity;->isInMultiWindowMode()Z
 
     move-result v0
@@ -142,6 +175,7 @@
     :cond_3
     return v1
 
+    .line 7
     :cond_4
     :goto_2
     invoke-virtual {p0, p1}, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->e(Landroid/content/res/Configuration;)Z
@@ -157,6 +191,7 @@
         value = .enum Landroidx/lifecycle/Lifecycle$Event;->ON_CREATE:Landroidx/lifecycle/Lifecycle$Event;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->c:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -167,11 +202,12 @@
 
     invoke-static {v0, v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     new-instance v0, Landroid/content/res/Configuration;
 
-    iget-object v1, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->a:Lcom/android/camera/ActivityBase;
+    iget-object v1, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->d:Lcom/android/camera/ActivityBase;
 
-    invoke-virtual {v1}, Landroid/view/ContextThemeWrapper;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -181,7 +217,7 @@
 
     invoke-direct {v0, v1}, Landroid/content/res/Configuration;-><init>(Landroid/content/res/Configuration;)V
 
-    iput-object v0, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->b:Landroid/content/res/Configuration;
+    iput-object v0, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->f:Landroid/content/res/Configuration;
 
     return-void
 .end method
@@ -192,6 +228,7 @@
         value = .enum Landroidx/lifecycle/Lifecycle$Event;->ON_DESTROY:Landroidx/lifecycle/Lifecycle$Event;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->c:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -204,9 +241,11 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->a:Lcom/android/camera/ActivityBase;
+    .line 2
+    iput-object v0, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->d:Lcom/android/camera/ActivityBase;
 
-    iput-object v0, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->b:Landroid/content/res/Configuration;
+    .line 3
+    iput-object v0, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->f:Landroid/content/res/Configuration;
 
     return-void
 .end method
@@ -217,6 +256,7 @@
         value = .enum Landroidx/lifecycle/Lifecycle$Event;->ON_PAUSE:Landroidx/lifecycle/Lifecycle$Event;
     .end annotation
 
+    .line 1
     sget-object p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->c:Ljava/lang/String;
 
     const/4 v0, 0x0
@@ -236,6 +276,7 @@
         value = .enum Landroidx/lifecycle/Lifecycle$Event;->ON_RESUME:Landroidx/lifecycle/Lifecycle$Event;
     .end annotation
 
+    .line 1
     sget-object p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->c:Ljava/lang/String;
 
     const/4 v0, 0x0
@@ -255,6 +296,7 @@
         value = .enum Landroidx/lifecycle/Lifecycle$Event;->ON_START:Landroidx/lifecycle/Lifecycle$Event;
     .end annotation
 
+    .line 1
     sget-object p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->c:Ljava/lang/String;
 
     const/4 v0, 0x0
@@ -274,6 +316,7 @@
         value = .enum Landroidx/lifecycle/Lifecycle$Event;->ON_STOP:Landroidx/lifecycle/Lifecycle$Event;
     .end annotation
 
+    .line 1
     sget-object p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->c:Ljava/lang/String;
 
     const/4 v0, 0x0

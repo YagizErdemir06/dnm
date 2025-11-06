@@ -1,4 +1,4 @@
-.class final Lcom/bumptech/glide/load/resource/gif/GifDrawable$GifState;
+.class public final Lcom/bumptech/glide/load/resource/gif/GifDrawable$GifState;
 .super Landroid/graphics/drawable/Drawable$ConstantState;
 .source "SourceFile"
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final frameLoader:Lcom/bumptech/glide/load/resource/gif/GifFrameLoader;
+.field public final frameLoader:Lcom/bumptech/glide/load/resource/gif/GifFrameLoader;
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 .end field
@@ -25,8 +25,10 @@
 .method public constructor <init>(Lcom/bumptech/glide/load/resource/gif/GifFrameLoader;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/bumptech/glide/load/resource/gif/GifDrawable$GifState;->frameLoader:Lcom/bumptech/glide/load/resource/gif/GifFrameLoader;
 
     return-void

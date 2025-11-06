@@ -1,4 +1,4 @@
-.class Lcom/google/common/graph/StandardValueGraph$1;
+.class public Lcom/google/common/graph/StandardValueGraph$1;
 .super Lcom/google/common/graph/IncidentEdgeSet;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic val$connections:Lcom/google/common/graph/GraphConnections;
+.field public final synthetic val$connections:Lcom/google/common/graph/GraphConnections;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/graph/StandardValueGraph;Lcom/google/common/graph/BaseGraph;Ljava/lang/Object;Lcom/google/common/graph/GraphConnections;)V
     .locals 0
 
+    .line 1
     iput-object p4, p0, Lcom/google/common/graph/StandardValueGraph$1;->val$connections:Lcom/google/common/graph/GraphConnections;
 
     invoke-direct {p0, p2, p3}, Lcom/google/common/graph/IncidentEdgeSet;-><init>(Lcom/google/common/graph/BaseGraph;Ljava/lang/Object;)V
@@ -49,6 +50,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/graph/StandardValueGraph$1;->val$connections:Lcom/google/common/graph/GraphConnections;
 
     iget-object p0, p0, Lcom/google/common/graph/IncidentEdgeSet;->node:Ljava/lang/Object;

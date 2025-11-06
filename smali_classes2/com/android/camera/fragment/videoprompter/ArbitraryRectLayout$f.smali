@@ -35,7 +35,30 @@
 # direct methods
 .method public constructor <init>(Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout;Ljava/lang/String;Ljava/lang/String;ZLandroid/graphics/RectF;ZLandroid/graphics/RectF;Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010,
+            0x1010,
+            0x1010,
+            0x1010,
+            0x1010,
+            0x1010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$heightFolme",
+            "val$widthFolme",
+            "val$isOnRight",
+            "val$displayedRect",
+            "val$isOnBottom",
+            "val$actualRect",
+            "val$isLandscape"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout$f;->h:Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout;
 
     iput-object p2, p0, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout$f;->a:Ljava/lang/String;
@@ -61,6 +84,17 @@
 # virtual methods
 .method public onUpdate(Ljava/lang/Object;Ljava/util/Collection;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "toTag",
+            "updateList"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -71,10 +105,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Lmiuix/animation/listener/TransitionListener;->onUpdate(Ljava/lang/Object;Ljava/util/Collection;)V
 
     if-eqz p2, :cond_5
 
+    .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout$f;->a:Ljava/lang/String;
 
     invoke-static {p2, p1}, Lmiuix/animation/listener/UpdateInfo;->findByName(Ljava/util/Collection;Ljava/lang/String;)Lmiuix/animation/listener/UpdateInfo;
@@ -85,6 +121,7 @@
 
     return-void
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout$f;->b:Ljava/lang/String;
 
@@ -96,19 +133,23 @@
 
     return-void
 
+    .line 4
     :cond_1
     invoke-virtual {p1}, Lmiuix/animation/listener/UpdateInfo;->getFloatValue()F
 
     move-result p1
 
+    .line 5
     invoke-virtual {p2}, Lmiuix/animation/listener/UpdateInfo;->getFloatValue()F
 
     move-result p2
 
+    .line 6
     iget-boolean v0, p0, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout$f;->c:Z
 
     if-eqz v0, :cond_2
 
+    .line 7
     iget-object v0, p0, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout$f;->d:Landroid/graphics/RectF;
 
     iget v1, v0, Landroid/graphics/RectF;->right:F
@@ -119,6 +160,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_2
     iget-object v0, p0, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout$f;->d:Landroid/graphics/RectF;
 
@@ -128,11 +170,13 @@
 
     iput v1, v0, Landroid/graphics/RectF;->right:F
 
+    .line 9
     :goto_0
     iget-boolean p2, p0, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout$f;->e:Z
 
     if-eqz p2, :cond_3
 
+    .line 10
     iget-object p2, p0, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout$f;->d:Landroid/graphics/RectF;
 
     iget v0, p2, Landroid/graphics/RectF;->bottom:F
@@ -143,6 +187,7 @@
 
     goto :goto_1
 
+    .line 11
     :cond_3
     iget-object p2, p0, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout$f;->d:Landroid/graphics/RectF;
 
@@ -152,6 +197,7 @@
 
     iput v0, p2, Landroid/graphics/RectF;->bottom:F
 
+    .line 12
     :goto_1
     iget-object p1, p0, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout$f;->f:Landroid/graphics/RectF;
 
@@ -159,20 +205,23 @@
 
     invoke-virtual {p1, p2}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
 
+    .line 13
     iget-boolean p1, p0, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout$f;->g:Z
 
     if-eqz p1, :cond_4
 
+    .line 14
     iget-object p1, p0, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout$f;->h:Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout;
 
     iget-object p2, p0, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout$f;->f:Landroid/graphics/RectF;
 
     invoke-static {p1, p2}, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout;->c(Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout;Landroid/graphics/RectF;)V
 
+    .line 15
     :cond_4
     iget-object p1, p0, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout$f;->h:Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout;
 
-    iget-object p2, p1, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout;->e:Landroid/view/ViewGroup$MarginLayoutParams;
+    iget-object p2, p1, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout;->u:Landroid/view/ViewGroup$MarginLayoutParams;
 
     iget-object v0, p0, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout$f;->f:Landroid/graphics/RectF;
 
@@ -196,9 +245,10 @@
 
     invoke-virtual {p2, p1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
 
+    .line 16
     iget-object p1, p0, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout$f;->h:Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout;
 
-    iget-object p1, p1, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout;->e:Landroid/view/ViewGroup$MarginLayoutParams;
+    iget-object p1, p1, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout;->u:Landroid/view/ViewGroup$MarginLayoutParams;
 
     iget-object p2, p0, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout$f;->f:Landroid/graphics/RectF;
 
@@ -210,11 +260,12 @@
 
     iput p2, p1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
+    .line 17
     iget-object p0, p0, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout$f;->h:Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout;
 
-    iget-object p1, p0, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout;->e:Landroid/view/ViewGroup$MarginLayoutParams;
+    iget-object p1, p0, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout;->u:Landroid/view/ViewGroup$MarginLayoutParams;
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     :cond_5
     return-void

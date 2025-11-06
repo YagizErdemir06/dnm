@@ -18,14 +18,17 @@
 .method public constructor <init>(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/common/eventbus/DeadEvent;->source:Ljava/lang/Object;
 
+    .line 3
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -40,6 +43,7 @@
 .method public getEvent()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/eventbus/DeadEvent;->event:Ljava/lang/Object;
 
     return-object p0
@@ -48,6 +52,7 @@
 .method public getSource()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/eventbus/DeadEvent;->source:Ljava/lang/Object;
 
     return-object p0
@@ -56,21 +61,22 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/base/MoreObjects;->toStringHelper(Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     move-result-object v0
 
-    const-string v1, "source"
+    iget-object v1, p0, Lcom/google/common/eventbus/DeadEvent;->source:Ljava/lang/Object;
 
-    iget-object v2, p0, Lcom/google/common/eventbus/DeadEvent;->source:Ljava/lang/Object;
+    const-string v2, "source"
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    invoke-virtual {v0, v2, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     move-result-object v0
 
-    const-string v1, "event"
-
     iget-object p0, p0, Lcom/google/common/eventbus/DeadEvent;->event:Ljava/lang/Object;
+
+    const-string v1, "event"
 
     invoke-virtual {v0, v1, p0}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 

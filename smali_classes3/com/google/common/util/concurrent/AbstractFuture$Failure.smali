@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/AbstractFuture$Failure;
+.class public final Lcom/google/common/util/concurrent/AbstractFuture$Failure;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,17 +15,18 @@
 
 
 # static fields
-.field static final FALLBACK_INSTANCE:Lcom/google/common/util/concurrent/AbstractFuture$Failure;
+.field public static final FALLBACK_INSTANCE:Lcom/google/common/util/concurrent/AbstractFuture$Failure;
 
 
 # instance fields
-.field final exception:Ljava/lang/Throwable;
+.field public final exception:Ljava/lang/Throwable;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/AbstractFuture$Failure;
 
     new-instance v1, Lcom/google/common/util/concurrent/AbstractFuture$Failure$1;
@@ -44,8 +45,10 @@
 .method public constructor <init>(Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1

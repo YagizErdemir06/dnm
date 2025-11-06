@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Range$RangeLexOrdering;
+.class public Lcom/google/common/collect/Range$RangeLexOrdering;
 .super Lcom/google/common/collect/Ordering;
 .source "SourceFile"
 
@@ -27,7 +27,7 @@
 
 
 # static fields
-.field static final INSTANCE:Lcom/google/common/collect/Ordering;
+.field public static final INSTANCE:Lcom/google/common/collect/Ordering;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/Ordering<",
@@ -44,6 +44,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/Range$RangeLexOrdering;
 
     invoke-direct {v0}, Lcom/google/common/collect/Range$RangeLexOrdering;-><init>()V
@@ -56,6 +57,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/Ordering;-><init>()V
 
     return-void

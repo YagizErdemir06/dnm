@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/providers/zza;
+.class public final Lcom/google/android/gms/common/providers/zza;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -20,14 +20,17 @@
 .method public final newSingleThreadScheduledExecutor()Ljava/util/concurrent/ScheduledExecutorService;
     .locals 0
 
+    .line 1
     invoke-static {}, Lcom/google/android/gms/internal/common/zzh;->zza()Lcom/google/android/gms/internal/common/zze;
 
     const/4 p0, 0x1
 
+    .line 2
     invoke-static {p0}, Ljava/util/concurrent/Executors;->newScheduledThreadPool(I)Ljava/util/concurrent/ScheduledExecutorService;
 
     move-result-object p0
 
+    .line 3
     invoke-static {p0}, Ljava/util/concurrent/Executors;->unconfigurableScheduledExecutorService(Ljava/util/concurrent/ScheduledExecutorService;)Ljava/util/concurrent/ScheduledExecutorService;
 
     move-result-object p0

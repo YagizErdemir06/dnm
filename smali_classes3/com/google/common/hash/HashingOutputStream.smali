@@ -19,6 +19,7 @@
 .method public constructor <init>(Lcom/google/common/hash/HashFunction;Ljava/io/OutputStream;)V
     .locals 0
 
+    .line 1
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
@@ -27,6 +28,7 @@
 
     invoke-direct {p0, p2}, Ljava/io/FilterOutputStream;-><init>(Ljava/io/OutputStream;)V
 
+    .line 2
     invoke-interface {p1}, Lcom/google/common/hash/HashFunction;->newHasher()Lcom/google/common/hash/Hasher;
 
     move-result-object p1
@@ -52,6 +54,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
 
     invoke-virtual {p0}, Ljava/io/OutputStream;->close()V
@@ -62,6 +65,7 @@
 .method public hash()Lcom/google/common/hash/HashCode;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/hash/HashingOutputStream;->hasher:Lcom/google/common/hash/Hasher;
 
     invoke-interface {p0}, Lcom/google/common/hash/Hasher;->hash()Lcom/google/common/hash/HashCode;

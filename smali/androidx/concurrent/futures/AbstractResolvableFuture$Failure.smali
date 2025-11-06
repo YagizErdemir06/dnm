@@ -1,4 +1,4 @@
-.class final Landroidx/concurrent/futures/AbstractResolvableFuture$Failure;
+.class public final Landroidx/concurrent/futures/AbstractResolvableFuture$Failure;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,17 +15,18 @@
 
 
 # static fields
-.field static final FALLBACK_INSTANCE:Landroidx/concurrent/futures/AbstractResolvableFuture$Failure;
+.field public static final FALLBACK_INSTANCE:Landroidx/concurrent/futures/AbstractResolvableFuture$Failure;
 
 
 # instance fields
-.field final exception:Ljava/lang/Throwable;
+.field public final exception:Ljava/lang/Throwable;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Landroidx/concurrent/futures/AbstractResolvableFuture$Failure;
 
     new-instance v1, Landroidx/concurrent/futures/AbstractResolvableFuture$Failure$1;
@@ -44,8 +45,10 @@
 .method public constructor <init>(Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Landroidx/concurrent/futures/AbstractResolvableFuture;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1

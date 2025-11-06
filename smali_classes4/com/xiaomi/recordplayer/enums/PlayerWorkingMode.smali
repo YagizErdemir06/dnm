@@ -33,6 +33,7 @@
 .method public static constructor <clinit>()V
     .locals 9
 
+    .line 1
     new-instance v0, Lcom/xiaomi/recordplayer/enums/PlayerWorkingMode;
 
     const-string v1, "PlayerWorkingLipSyncMode"
@@ -43,6 +44,7 @@
 
     sput-object v0, Lcom/xiaomi/recordplayer/enums/PlayerWorkingMode;->PlayerWorkingLipSyncMode:Lcom/xiaomi/recordplayer/enums/PlayerWorkingMode;
 
+    .line 2
     new-instance v1, Lcom/xiaomi/recordplayer/enums/PlayerWorkingMode;
 
     const-string v3, "PlayerWorkingLowVideoDelayMode"
@@ -53,6 +55,7 @@
 
     sput-object v1, Lcom/xiaomi/recordplayer/enums/PlayerWorkingMode;->PlayerWorkingLowVideoDelayMode:Lcom/xiaomi/recordplayer/enums/PlayerWorkingMode;
 
+    .line 3
     new-instance v3, Lcom/xiaomi/recordplayer/enums/PlayerWorkingMode;
 
     const-string v5, "PlayerWorkingVideoSmoothMode"
@@ -63,6 +66,7 @@
 
     sput-object v3, Lcom/xiaomi/recordplayer/enums/PlayerWorkingMode;->PlayerWorkingVideoSmoothMode:Lcom/xiaomi/recordplayer/enums/PlayerWorkingMode;
 
+    .line 4
     new-instance v5, Lcom/xiaomi/recordplayer/enums/PlayerWorkingMode;
 
     const-string v7, "PlayerWorkingDisableAudioDeviceMode"
@@ -85,6 +89,7 @@
 
     aput-object v5, v7, v8
 
+    .line 5
     sput-object v7, Lcom/xiaomi/recordplayer/enums/PlayerWorkingMode;->$VALUES:[Lcom/xiaomi/recordplayer/enums/PlayerWorkingMode;
 
     return-void
@@ -98,8 +103,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 2
     iput p3, p0, Lcom/xiaomi/recordplayer/enums/PlayerWorkingMode;->nCode:I
 
     return-void
@@ -108,8 +115,10 @@
 .method public static int2enum(I)Lcom/xiaomi/recordplayer/enums/PlayerWorkingMode;
     .locals 6
 
+    .line 1
     sget-object v0, Lcom/xiaomi/recordplayer/enums/PlayerWorkingMode;->PlayerWorkingLipSyncMode:Lcom/xiaomi/recordplayer/enums/PlayerWorkingMode;
 
+    .line 2
     invoke-static {}, Lcom/xiaomi/recordplayer/enums/PlayerWorkingMode;->values()[Lcom/xiaomi/recordplayer/enums/PlayerWorkingMode;
 
     move-result-object v1
@@ -123,6 +132,7 @@
 
     aget-object v4, v1, v3
 
+    .line 3
     invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
 
     move-result v5
@@ -143,6 +153,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/recordplayer/enums/PlayerWorkingMode;
     .locals 1
 
+    .line 1
     const-class v0, Lcom/xiaomi/recordplayer/enums/PlayerWorkingMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -157,6 +168,7 @@
 .method public static values()[Lcom/xiaomi/recordplayer/enums/PlayerWorkingMode;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/recordplayer/enums/PlayerWorkingMode;->$VALUES:[Lcom/xiaomi/recordplayer/enums/PlayerWorkingMode;
 
     invoke-virtual {v0}, [Lcom/xiaomi/recordplayer/enums/PlayerWorkingMode;->clone()Ljava/lang/Object;
@@ -173,6 +185,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/recordplayer/enums/PlayerWorkingMode;->nCode:I
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;

@@ -35,11 +35,23 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "itemView",
+            "name"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerViewHolder;-><init>(Landroid/view/View;)V
 
-    const v0, 0x7f0b0715
+    const v0, 0x7f0b063b
 
+    .line 2
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -48,22 +60,16 @@
 
     iput-object p1, p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/MimojiAsThumbnailRecyclerAdapter$a;->a:Landroid/widget/ImageView;
 
+    .line 3
     iput-object p2, p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/MimojiAsThumbnailRecyclerAdapter$a;->b:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static synthetic d(Lcom/xiaomi/mimoji/mimojias/fragment/edit/MimojiAsThumbnailRecyclerAdapter$a;Ljava/lang/String;)V
+.method private synthetic c(Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/xiaomi/mimoji/mimojias/fragment/edit/MimojiAsThumbnailRecyclerAdapter$a;->e(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method private synthetic e(Ljava/lang/String;)V
-    .locals 0
-
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {p0, p1}, Landroid/view/View;->announceForAccessibility(Ljava/lang/CharSequence;)V
@@ -73,9 +79,28 @@
 
 
 # virtual methods
-.method public f(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;I)V
-    .locals 5
+.method public synthetic d(Ljava/lang/String;)V
+    .locals 0
 
+    invoke-direct {p0, p1}, Lcom/xiaomi/mimoji/mimojias/fragment/edit/MimojiAsThumbnailRecyclerAdapter$a;->c(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public e(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;I)V
+    .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "data",
+            "position"
+        }
+    .end annotation
+
+    .line 1
     new-instance v0, Lcom/bumptech/glide/request/transition/DrawableCrossFadeFactory$Builder;
 
     const/16 v1, 0x12c
@@ -94,6 +119,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 2
     iget-object v2, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;->thum:Landroid/graphics/Bitmap;
 
     if-eqz v2, :cond_0
@@ -104,6 +130,7 @@
 
     if-nez v2, :cond_0
 
+    .line 3
     iget-object v2, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -126,6 +153,7 @@
 
     iget-object v4, p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/MimojiAsThumbnailRecyclerAdapter$a;->a:Landroid/widget/ImageView;
 
+    .line 4
     invoke-virtual {v4}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
@@ -138,12 +166,13 @@
 
     move-result-object v2
 
-    new-instance v3, Lii/c;
+    new-instance v3, Ld/o/v/c/d/c;
 
     const/16 v4, 0x14
 
-    invoke-direct {v3, v4, v1}, Lii/c;-><init>(II)V
+    invoke-direct {v3, v4, v1}, Ld/o/v/c/d/c;-><init>(II)V
 
+    .line 5
     invoke-static {v3}, Lcom/bumptech/glide/request/RequestOptions;->bitmapTransform(Lcom/bumptech/glide/load/Transformation;)Lcom/bumptech/glide/request/RequestOptions;
 
     move-result-object v3
@@ -154,10 +183,12 @@
 
     iget-object v3, p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/MimojiAsThumbnailRecyclerAdapter$a;->a:Landroid/widget/ImageView;
 
+    .line 6
     invoke-virtual {v2, v3}, Lcom/bumptech/glide/RequestBuilder;->into(Landroid/widget/ImageView;)Lcom/bumptech/glide/request/target/ViewTarget;
 
     goto :goto_0
 
+    .line 7
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -167,15 +198,16 @@
 
     move-result-object v2
 
-    const-string v3, "fmoji bitmap isRecycled"
+    new-array v3, v0, [Ljava/lang/Object;
 
-    new-array v4, v0, [Ljava/lang/Object;
+    const-string v4, "fmoji bitmap isRecycled"
 
-    invoke-static {v2, v3, v4}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v4, v3}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :goto_0
     if-eqz p1, :cond_1
 
+    .line 8
     iget v2, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;->configType:I
 
     invoke-static {v2}, Lcom/xiaomi/mimoji/mimojias/fragment/edit/MimojiAsThumbnailRecyclerAdapter;->h(I)F
@@ -192,6 +224,7 @@
 
     move v0, v1
 
+    .line 9
     :cond_1
     iget-object p1, p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/MimojiAsThumbnailRecyclerAdapter$a;->a:Landroid/widget/ImageView;
 
@@ -203,7 +236,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f080128
+    const v3, 0x7f080111
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -215,10 +248,11 @@
     const/4 v2, 0x0
 
     :goto_1
-    invoke-virtual {p1, v2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p1, v2}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     if-eqz v0, :cond_3
 
+    .line 10
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -237,11 +271,11 @@
 
     iget-object p2, p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/MimojiAsThumbnailRecyclerAdapter$a;->a:Landroid/widget/ImageView;
 
-    invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p2}, Landroid/widget/ImageView;->getContext()Landroid/content/Context;
 
     move-result-object p2
 
-    const v0, 0x7f1400d4
+    const v0, 0x7f1300d3
 
     invoke-virtual {p2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -253,21 +287,24 @@
 
     move-result-object p1
 
+    .line 11
     iget-object p2, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {p2, p1}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    invoke-static {}, Lcom/android/camera/a6;->u2()Z
+    .line 12
+    invoke-static {}, Ld/d/a/z5;->k2()Z
 
     move-result p2
 
     if-eqz p2, :cond_4
 
+    .line 13
     iget-object p2, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    new-instance v0, Lgi/a0;
+    new-instance v0, Ld/o/v/c/b/a/y;
 
-    invoke-direct {v0, p0, p1}, Lgi/a0;-><init>(Lcom/xiaomi/mimoji/mimojias/fragment/edit/MimojiAsThumbnailRecyclerAdapter$a;Ljava/lang/String;)V
+    invoke-direct {v0, p0, p1}, Ld/o/v/c/b/a/y;-><init>(Lcom/xiaomi/mimoji/mimojias/fragment/edit/MimojiAsThumbnailRecyclerAdapter$a;Ljava/lang/String;)V
 
     const-wide/16 p0, 0x64
 
@@ -275,6 +312,7 @@
 
     goto :goto_2
 
+    .line 14
     :cond_3
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -303,10 +341,21 @@
 
 .method public bridge synthetic setData(Ljava/lang/Object;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "data",
+            "position"
+        }
+    .end annotation
 
+    .line 1
     check-cast p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;
 
-    invoke-virtual {p0, p1, p2}, Lcom/xiaomi/mimoji/mimojias/fragment/edit/MimojiAsThumbnailRecyclerAdapter$a;->f(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/xiaomi/mimoji/mimojias/fragment/edit/MimojiAsThumbnailRecyclerAdapter$a;->e(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;I)V
 
     return-void
 .end method

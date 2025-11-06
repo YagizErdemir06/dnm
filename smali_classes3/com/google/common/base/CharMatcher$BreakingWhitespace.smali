@@ -1,4 +1,4 @@
-.class final Lcom/google/common/base/CharMatcher$BreakingWhitespace;
+.class public final Lcom/google/common/base/CharMatcher$BreakingWhitespace;
 .super Lcom/google/common/base/CharMatcher;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # static fields
-.field static final INSTANCE:Lcom/google/common/base/CharMatcher;
+.field public static final INSTANCE:Lcom/google/common/base/CharMatcher;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/base/CharMatcher$BreakingWhitespace;
 
     invoke-direct {v0}, Lcom/google/common/base/CharMatcher$BreakingWhitespace;-><init>()V
@@ -34,6 +35,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/base/CharMatcher;-><init>()V
 
     return-void
@@ -46,6 +48,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     check-cast p1, Ljava/lang/Character;
 
     invoke-super {p0, p1}, Lcom/google/common/base/CharMatcher;->apply(Ljava/lang/Character;)Z

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/datatransport/runtime/AutoProtoEncoderDoNotUseEncoder$GlobalMetricsEncoder;
+.class public final Lcom/google/android/datatransport/runtime/AutoProtoEncoderDoNotUseEncoder$GlobalMetricsEncoder;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,7 +27,7 @@
 
 
 # static fields
-.field static final INSTANCE:Lcom/google/android/datatransport/runtime/AutoProtoEncoderDoNotUseEncoder$GlobalMetricsEncoder;
+.field public static final INSTANCE:Lcom/google/android/datatransport/runtime/AutoProtoEncoderDoNotUseEncoder$GlobalMetricsEncoder;
 
 .field private static final STORAGEMETRICS_DESCRIPTOR:Lcom/google/firebase/encoders/FieldDescriptor;
 
@@ -36,6 +36,7 @@
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/android/datatransport/runtime/AutoProtoEncoderDoNotUseEncoder$GlobalMetricsEncoder;
 
     invoke-direct {v0}, Lcom/google/android/datatransport/runtime/AutoProtoEncoderDoNotUseEncoder$GlobalMetricsEncoder;-><init>()V
@@ -44,28 +45,34 @@
 
     const-string v0, "storageMetrics"
 
+    .line 2
     invoke-static {v0}, Lcom/google/firebase/encoders/FieldDescriptor;->builder(Ljava/lang/String;)Lcom/google/firebase/encoders/FieldDescriptor$Builder;
 
     move-result-object v0
 
+    .line 3
     invoke-static {}, Lcom/google/firebase/encoders/proto/AtProtobuf;->builder()Lcom/google/firebase/encoders/proto/AtProtobuf;
 
     move-result-object v1
 
     const/4 v2, 0x1
 
+    .line 4
     invoke-virtual {v1, v2}, Lcom/google/firebase/encoders/proto/AtProtobuf;->tag(I)Lcom/google/firebase/encoders/proto/AtProtobuf;
 
     move-result-object v1
 
+    .line 5
     invoke-virtual {v1}, Lcom/google/firebase/encoders/proto/AtProtobuf;->build()Lcom/google/firebase/encoders/proto/Protobuf;
 
     move-result-object v1
 
+    .line 6
     invoke-virtual {v0, v1}, Lcom/google/firebase/encoders/FieldDescriptor$Builder;->withProperty(Ljava/lang/annotation/Annotation;)Lcom/google/firebase/encoders/FieldDescriptor$Builder;
 
     move-result-object v0
 
+    .line 7
     invoke-virtual {v0}, Lcom/google/firebase/encoders/FieldDescriptor$Builder;->build()Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -78,6 +85,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

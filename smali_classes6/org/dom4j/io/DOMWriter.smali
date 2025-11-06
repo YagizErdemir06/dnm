@@ -6,7 +6,7 @@
 # static fields
 .field private static final DEFAULT_DOM_DOCUMENT_CLASSES:[Ljava/lang/String;
 
-.field static synthetic class$org$dom4j$io$DOMWriter:Ljava/lang/Class; = null
+.field public static synthetic class$org$dom4j$io$DOMWriter:Ljava/lang/Class; = null
 
 .field private static loggedWarning:Z = false
 
@@ -35,6 +35,7 @@
 
     const-string v6, "org.dom4j.dom.DOMDocument"
 
+    .line 1
     filled-new-array/range {v0 .. v6}, [Ljava/lang/String;
 
     move-result-object v0
@@ -82,6 +83,7 @@
 .method public static synthetic class$(Ljava/lang/String;)Ljava/lang/Class;
     .locals 1
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -96,7 +98,7 @@
 
     new-instance v0, Ljava/lang/NoClassDefFoundError;
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/ClassNotFoundException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
 
@@ -479,10 +481,12 @@
 .method public attributeNameForNamespace(Lorg/dom4j/Namespace;)Ljava/lang/String;
     .locals 1
 
+    .line 1
     invoke-virtual {p1}, Lorg/dom4j/Namespace;->getPrefix()Ljava/lang/String;
 
     move-result-object p0
 
+    .line 2
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result p1
@@ -491,6 +495,7 @@
 
     if-lez p1, :cond_0
 
+    .line 3
     new-instance p1, Ljava/lang/StringBuffer;
 
     invoke-direct {p1}, Ljava/lang/StringBuffer;-><init>()V
@@ -654,6 +659,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     :try_start_0
     invoke-static {p0, v0}, Lorg/dom4j/io/JAXPHelper;->createDocument(ZZ)Lorg/w3c/dom/Document;
 
@@ -666,24 +672,29 @@
     :catchall_0
     move-exception p0
 
+    .line 2
     sget-boolean v1, Lorg/dom4j/io/DOMWriter;->loggedWarning:Z
 
     if-nez v1, :cond_1
 
+    .line 3
     sput-boolean v0, Lorg/dom4j/io/DOMWriter;->loggedWarning:Z
 
+    .line 4
     invoke-static {}, Lorg/dom4j/io/SAXHelper;->isVerboseErrorReporting()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 5
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "Warning: Caught exception attempting to use JAXP to create a W3C DOM document"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 6
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v1, Ljava/lang/StringBuffer;
@@ -702,10 +713,12 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 7
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 
+    .line 8
     :cond_0
     sget-object p0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
@@ -728,10 +741,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/DOMWriter;->domDocumentClass:Ljava/lang/Class;
 
     if-nez p0, :cond_2
 
+    .line 2
     sget-object v0, Lorg/dom4j/io/DOMWriter;->DEFAULT_DOM_DOCUMENT_CLASSES:[Ljava/lang/String;
 
     array-length v0, v0
@@ -741,11 +756,13 @@
     :goto_0
     if-ge v1, v0, :cond_2
 
+    .line 3
     :try_start_0
     sget-object v2, Lorg/dom4j/io/DOMWriter;->DEFAULT_DOM_DOCUMENT_CLASSES:[Ljava/lang/String;
 
     aget-object v2, v2, v1
 
+    .line 4
     sget-object v3, Lorg/dom4j/io/DOMWriter;->class$org$dom4j$io$DOMWriter:Ljava/lang/Class;
 
     if-nez v3, :cond_0
@@ -791,6 +808,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     sget-object v0, Lorg/dom4j/Namespace;->NO_NAMESPACE:Lorg/dom4j/Namespace;
 
     if-eq p1, v0, :cond_0
@@ -799,18 +817,21 @@
 
     if-eq p1, v0, :cond_0
 
+    .line 2
     invoke-virtual {p1}, Lorg/dom4j/Namespace;->getURI()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v0
 
     if-lez v0, :cond_0
 
+    .line 4
     iget-object p0, p0, Lorg/dom4j/io/DOMWriter;->namespaceStack:Lorg/dom4j/tree/NamespaceStack;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/NamespaceStack;->contains(Lorg/dom4j/Namespace;)Z
@@ -832,10 +853,12 @@
 .method public resetNamespaceStack()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/DOMWriter;->namespaceStack:Lorg/dom4j/tree/NamespaceStack;
 
     invoke-virtual {v0}, Lorg/dom4j/tree/NamespaceStack;->clear()V
 
+    .line 2
     iget-object p0, p0, Lorg/dom4j/io/DOMWriter;->namespaceStack:Lorg/dom4j/tree/NamespaceStack;
 
     sget-object v0, Lorg/dom4j/Namespace;->XML_NAMESPACE:Lorg/dom4j/Namespace;
@@ -848,6 +871,7 @@
 .method public setDomDocumentClass(Ljava/lang/Class;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/io/DOMWriter;->domDocumentClass:Ljava/lang/Class;
 
     return-void
@@ -861,27 +885,28 @@
         }
     .end annotation
 
+    const/4 v0, 0x1
+
+    .line 1
     :try_start_0
-    sget-object v0, Lorg/dom4j/io/DOMWriter;->class$org$dom4j$io$DOMWriter:Ljava/lang/Class;
+    sget-object v1, Lorg/dom4j/io/DOMWriter;->class$org$dom4j$io$DOMWriter:Ljava/lang/Class;
 
-    if-nez v0, :cond_0
+    if-nez v1, :cond_0
 
-    const-string v0, "org.dom4j.io.DOMWriter"
+    const-string v1, "org.dom4j.io.DOMWriter"
 
-    invoke-static {v0}, Lorg/dom4j/io/DOMWriter;->class$(Ljava/lang/String;)Ljava/lang/Class;
+    invoke-static {v1}, Lorg/dom4j/io/DOMWriter;->class$(Ljava/lang/String;)Ljava/lang/Class;
 
-    move-result-object v0
+    move-result-object v1
 
-    sput-object v0, Lorg/dom4j/io/DOMWriter;->class$org$dom4j$io$DOMWriter:Ljava/lang/Class;
+    sput-object v1, Lorg/dom4j/io/DOMWriter;->class$org$dom4j$io$DOMWriter:Ljava/lang/Class;
 
     :cond_0
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
-    move-result-object v0
+    move-result-object v1
 
-    const/4 v1, 0x1
-
-    invoke-static {p1, v1, v0}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
+    invoke-static {p1, v0, v1}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
 
     move-result-object v0
 
@@ -894,6 +919,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance v0, Lorg/dom4j/DocumentException;
 
     new-instance v1, Ljava/lang/StringBuffer;
@@ -1002,10 +1028,12 @@
 .method public writeNamespace(Lorg/w3c/dom/Element;Lorg/dom4j/Namespace;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p2}, Lorg/dom4j/io/DOMWriter;->attributeNameForNamespace(Lorg/dom4j/Namespace;)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 2
     invoke-virtual {p2}, Lorg/dom4j/Namespace;->getURI()Ljava/lang/String;
 
     move-result-object p2

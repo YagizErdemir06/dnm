@@ -1,4 +1,4 @@
-.class Lcom/google/common/cache/LocalCache$WriteQueue$2;
+.class public Lcom/google/common/cache/LocalCache$WriteQueue$2;
 .super Lcom/google/common/collect/AbstractSequentialIterator;
 .source "SourceFile"
 
@@ -23,13 +23,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/cache/LocalCache$WriteQueue;
+.field public final synthetic this$0:Lcom/google/common/cache/LocalCache$WriteQueue;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/cache/LocalCache$WriteQueue;Lcom/google/common/cache/ReferenceEntry;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/cache/LocalCache$WriteQueue$2;->this$0:Lcom/google/common/cache/LocalCache$WriteQueue;
 
     invoke-direct {p0, p2}, Lcom/google/common/collect/AbstractSequentialIterator;-><init>(Ljava/lang/Object;)V

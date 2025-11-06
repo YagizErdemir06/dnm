@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/extractor/wav/WavHeaderReader;
+.class public final Lcom/google/android/exoplayer2/extractor/wav/WavHeaderReader;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -19,6 +19,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,41 +33,47 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     const/16 v1, 0x8
 
     invoke-direct {v0, v1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;-><init>(I)V
 
+    .line 2
     invoke-static {p0, v0}, Lcom/google/android/exoplayer2/extractor/wav/WavHeaderReader$ChunkHeader;->peek(Lcom/google/android/exoplayer2/extractor/ExtractorInput;Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/extractor/wav/WavHeaderReader$ChunkHeader;
 
     move-result-object v1
 
+    .line 3
     iget v1, v1, Lcom/google/android/exoplayer2/extractor/wav/WavHeaderReader$ChunkHeader;->id:I
 
-    const v2, 0x52494646
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    const v3, 0x52494646
 
-    if-eq v1, v2, :cond_0
+    if-eq v1, v3, :cond_0
 
-    const v2, 0x52463634
+    const v3, 0x52463634
 
-    if-eq v1, v2, :cond_0
+    if-eq v1, v3, :cond_0
 
-    return v3
+    return v2
 
+    .line 4
     :cond_0
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
     move-result-object v1
 
-    const/4 v2, 0x4
+    const/4 v3, 0x4
 
-    invoke-interface {p0, v1, v3, v2}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->peekFully([BII)V
+    invoke-interface {p0, v1, v2, v3}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->peekFully([BII)V
 
-    invoke-virtual {v0, v3}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
+    .line 5
+    invoke-virtual {v0, v2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
+    .line 6
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result p0
@@ -75,6 +82,7 @@
 
     if-eq p0, v0, :cond_1
 
+    .line 7
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -93,7 +101,7 @@
 
     invoke-static {v0, p0}, Lcom/google/android/exoplayer2/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    return v3
+    return v2
 
     :cond_1
     const/4 p0, 0x1
@@ -109,6 +117,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     const/16 v1, 0x10
@@ -117,10 +126,12 @@
 
     const v2, 0x666d7420
 
+    .line 2
     invoke-static {v2, p0, v0}, Lcom/google/android/exoplayer2/extractor/wav/WavHeaderReader;->skipToChunk(ILcom/google/android/exoplayer2/extractor/ExtractorInput;Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/extractor/wav/WavHeaderReader$ChunkHeader;
 
     move-result-object v2
 
+    .line 3
     iget-wide v3, v2, Lcom/google/android/exoplayer2/extractor/wav/WavHeaderReader$ChunkHeader;->size:J
 
     const-wide/16 v5, 0x10
@@ -141,38 +152,47 @@
     :goto_0
     invoke-static {v3}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 4
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
     move-result-object v3
 
     invoke-interface {p0, v3, v4, v1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->peekFully([BII)V
 
+    .line 5
     invoke-virtual {v0, v4}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
+    .line 6
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLittleEndianUnsignedShort()I
 
     move-result v6
 
+    .line 7
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLittleEndianUnsignedShort()I
 
     move-result v7
 
+    .line 8
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLittleEndianUnsignedIntToInt()I
 
     move-result v8
 
+    .line 9
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLittleEndianUnsignedIntToInt()I
 
     move-result v9
 
+    .line 10
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLittleEndianUnsignedShort()I
 
     move-result v10
 
+    .line 11
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLittleEndianUnsignedShort()I
 
     move-result v11
 
+    .line 12
     iget-wide v2, v2, Lcom/google/android/exoplayer2/extractor/wav/WavHeaderReader$ChunkHeader;->size:J
 
     long-to-int v0, v2
@@ -181,19 +201,23 @@
 
     if-lez v0, :cond_1
 
+    .line 13
     new-array v1, v0, [B
 
+    .line 14
     invoke-interface {p0, v1, v4, v0}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->peekFully([BII)V
 
     move-object v12, v1
 
     goto :goto_1
 
+    .line 15
     :cond_1
     sget-object v0, Lcom/google/android/exoplayer2/util/Util;->EMPTY_BYTE_ARRAY:[B
 
     move-object v12, v0
 
+    .line 16
     :goto_1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPeekPosition()J
 
@@ -209,6 +233,7 @@
 
     invoke-interface {p0, v0}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->skipFully(I)V
 
+    .line 17
     new-instance p0, Lcom/google/android/exoplayer2/extractor/wav/WavFormat;
 
     move-object v5, p0
@@ -226,45 +251,54 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     const/16 v1, 0x8
 
     invoke-direct {v0, v1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;-><init>(I)V
 
+    .line 2
     invoke-static {p0, v0}, Lcom/google/android/exoplayer2/extractor/wav/WavHeaderReader$ChunkHeader;->peek(Lcom/google/android/exoplayer2/extractor/ExtractorInput;Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/extractor/wav/WavHeaderReader$ChunkHeader;
 
     move-result-object v2
 
+    .line 3
     iget v3, v2, Lcom/google/android/exoplayer2/extractor/wav/WavHeaderReader$ChunkHeader;->id:I
 
     const v4, 0x64733634
 
     if-eq v3, v4, :cond_0
 
+    .line 4
     invoke-interface {p0}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
 
     const-wide/16 v0, -0x1
 
     return-wide v0
 
+    .line 5
     :cond_0
     invoke-interface {p0, v1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->advancePeekPosition(I)V
 
     const/4 v3, 0x0
 
+    .line 6
     invoke-virtual {v0, v3}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
+    .line 7
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
     move-result-object v4
 
     invoke-interface {p0, v4, v3, v1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->peekFully([BII)V
 
+    .line 8
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLittleEndianLong()J
 
     move-result-wide v3
 
+    .line 9
     iget-wide v5, v2, Lcom/google/android/exoplayer2/extractor/wav/WavHeaderReader$ChunkHeader;->size:J
 
     long-to-int v0, v5
@@ -284,15 +318,18 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1, p2}, Lcom/google/android/exoplayer2/extractor/wav/WavHeaderReader$ChunkHeader;->peek(Lcom/google/android/exoplayer2/extractor/ExtractorInput;Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/extractor/wav/WavHeaderReader$ChunkHeader;
 
     move-result-object v0
 
+    .line 2
     :goto_0
     iget v1, v0, Lcom/google/android/exoplayer2/extractor/wav/WavHeaderReader$ChunkHeader;->id:I
 
     if-eq v1, p0, :cond_1
 
+    .line 3
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -315,6 +352,7 @@
 
     const-wide/16 v1, 0x8
 
+    .line 4
     iget-wide v3, v0, Lcom/google/android/exoplayer2/extractor/wav/WavHeaderReader$ChunkHeader;->size:J
 
     add-long/2addr v3, v1
@@ -327,14 +365,17 @@
 
     long-to-int v0, v3
 
+    .line 5
     invoke-interface {p1, v0}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->skipFully(I)V
 
+    .line 6
     invoke-static {p1, p2}, Lcom/google/android/exoplayer2/extractor/wav/WavHeaderReader$ChunkHeader;->peek(Lcom/google/android/exoplayer2/extractor/ExtractorInput;Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/extractor/wav/WavHeaderReader$ChunkHeader;
 
     move-result-object v0
 
     goto :goto_0
 
+    .line 7
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -382,8 +423,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
 
+    .line 2
     new-instance v0, Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     const/16 v1, 0x8
@@ -392,16 +435,20 @@
 
     const v2, 0x64617461
 
+    .line 3
     invoke-static {v2, p0, v0}, Lcom/google/android/exoplayer2/extractor/wav/WavHeaderReader;->skipToChunk(ILcom/google/android/exoplayer2/extractor/ExtractorInput;Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/extractor/wav/WavHeaderReader$ChunkHeader;
 
     move-result-object v0
 
+    .line 4
     invoke-interface {p0, v1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->skipFully(I)V
 
+    .line 5
     invoke-interface {p0}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
     move-result-wide v1
 
+    .line 6
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p0

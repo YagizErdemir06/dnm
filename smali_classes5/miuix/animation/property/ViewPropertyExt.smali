@@ -22,6 +22,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lmiuix/animation/property/ViewPropertyExt$ForegroundProperty;
 
     const/4 v1, 0x0
@@ -30,6 +31,7 @@
 
     sput-object v0, Lmiuix/animation/property/ViewPropertyExt;->FOREGROUND:Lmiuix/animation/property/ViewPropertyExt$ForegroundProperty;
 
+    .line 2
     new-instance v0, Lmiuix/animation/property/ViewPropertyExt$BackgroundProperty;
 
     invoke-direct {v0, v1}, Lmiuix/animation/property/ViewPropertyExt$BackgroundProperty;-><init>(Lmiuix/animation/property/ViewPropertyExt$1;)V
@@ -42,6 +44,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/AbstractFuture$Waiter;
+.class public final Lcom/google/common/util/concurrent/AbstractFuture$Waiter;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,16 +15,16 @@
 
 
 # static fields
-.field static final TOMBSTONE:Lcom/google/common/util/concurrent/AbstractFuture$Waiter;
+.field public static final TOMBSTONE:Lcom/google/common/util/concurrent/AbstractFuture$Waiter;
 
 
 # instance fields
-.field volatile next:Lcom/google/common/util/concurrent/AbstractFuture$Waiter;
+.field public volatile next:Lcom/google/common/util/concurrent/AbstractFuture$Waiter;
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 .end field
 
-.field volatile thread:Ljava/lang/Thread;
+.field public volatile thread:Ljava/lang/Thread;
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 .end field
@@ -34,6 +34,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/AbstractFuture$Waiter;
 
     const/4 v1, 0x0
@@ -83,6 +84,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {}, Lcom/google/common/util/concurrent/AbstractFuture;->access$200()Lcom/google/common/util/concurrent/AbstractFuture$AtomicHelper;
 
     move-result-object v0
@@ -95,14 +97,17 @@
 .method public unpark()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/util/concurrent/AbstractFuture$Waiter;->thread:Ljava/lang/Thread;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x0
 
+    .line 2
     iput-object v1, p0, Lcom/google/common/util/concurrent/AbstractFuture$Waiter;->thread:Ljava/lang/Thread;
 
+    .line 3
     invoke-static {v0}, Ljava/util/concurrent/locks/LockSupport;->unpark(Ljava/lang/Thread;)V
 
     :cond_0

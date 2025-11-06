@@ -1,4 +1,4 @@
-.class Landroidx/core/content/ContextCompat$Api30Impl;
+.class public Landroidx/core/content/ContextCompat$Api30Impl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,6 +33,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getAttributionTag()Ljava/lang/String;
 
     move-result-object p0

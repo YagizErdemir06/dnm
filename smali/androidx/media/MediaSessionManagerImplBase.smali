@@ -1,4 +1,4 @@
-.class Landroidx/media/MediaSessionManagerImplBase;
+.class public Landroidx/media/MediaSessionManagerImplBase;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,15 +27,16 @@
 
 
 # instance fields
-.field mContentResolver:Landroid/content/ContentResolver;
+.field public mContentResolver:Landroid/content/ContentResolver;
 
-.field mContext:Landroid/content/Context;
+.field public mContext:Landroid/content/Context;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     sget-boolean v0, Landroidx/media/MediaSessionManager;->DEBUG:Z
 
     sput-boolean v0, Landroidx/media/MediaSessionManagerImplBase;->DEBUG:Z
@@ -54,10 +55,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/media/MediaSessionManagerImplBase;->mContext:Landroid/content/Context;
 
+    .line 3
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
@@ -80,6 +84,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Landroidx/media/MediaSessionManager$RemoteUserInfoImpl;->getPid()I
 
     move-result v0
@@ -90,16 +95,19 @@
 
     if-gez v0, :cond_1
 
+    .line 2
     iget-object p0, p0, Landroidx/media/MediaSessionManagerImplBase;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
+    .line 3
     invoke-interface {p1}, Landroidx/media/MediaSessionManager$RemoteUserInfoImpl;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 4
     invoke-virtual {p0, p2, p1}, Landroid/content/pm/PackageManager;->checkPermission(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p0
@@ -114,6 +122,7 @@
     :goto_0
     return v1
 
+    .line 5
     :cond_1
     iget-object p0, p0, Landroidx/media/MediaSessionManagerImplBase;->mContext:Landroid/content/Context;
 
@@ -145,6 +154,7 @@
 .method public getContext()Landroid/content/Context;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/media/MediaSessionManagerImplBase;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -165,6 +175,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/media/MediaSessionManagerImplBase;->mContentResolver:Landroid/content/ContentResolver;
 
     const-string v0, "enabled_notification_listeners"
@@ -179,25 +190,30 @@
 
     const-string v1, ":"
 
+    .line 2
     invoke-virtual {p0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
     move v1, v0
 
+    .line 3
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_1
 
+    .line 4
     aget-object v2, p0, v1
 
+    .line 5
     invoke-static {v2}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
+    .line 6
     invoke-virtual {v2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
@@ -242,6 +258,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :try_start_0
     iget-object v1, p0, Landroidx/media/MediaSessionManagerImplBase;->mContext:Landroid/content/Context;
 
@@ -249,10 +266,12 @@
 
     move-result-object v1
 
+    .line 2
     invoke-interface {p1}, Landroidx/media/MediaSessionManager$RemoteUserInfoImpl;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
+    .line 3
     invoke-virtual {v1, v2, v0}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
     move-result-object v1
@@ -266,6 +285,7 @@
     :cond_0
     const-string v1, "android.permission.STATUS_BAR_SERVICE"
 
+    .line 4
     invoke-direct {p0, p1, v1}, Landroidx/media/MediaSessionManagerImplBase;->isPermissionGranted(Landroidx/media/MediaSessionManager$RemoteUserInfoImpl;Ljava/lang/String;)Z
 
     move-result v1
@@ -274,12 +294,14 @@
 
     const-string v1, "android.permission.MEDIA_CONTENT_CONTROL"
 
+    .line 5
     invoke-direct {p0, p1, v1}, Landroidx/media/MediaSessionManagerImplBase;->isPermissionGranted(Landroidx/media/MediaSessionManager$RemoteUserInfoImpl;Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
+    .line 6
     invoke-interface {p1}, Landroidx/media/MediaSessionManager$RemoteUserInfoImpl;->getUid()I
 
     move-result v1
@@ -288,6 +310,7 @@
 
     if-eq v1, v2, :cond_1
 
+    .line 7
     invoke-virtual {p0, p1}, Landroidx/media/MediaSessionManagerImplBase;->isEnabledNotificationListener(Landroidx/media/MediaSessionManager$RemoteUserInfoImpl;)Z
 
     move-result p0
@@ -300,11 +323,13 @@
     :cond_2
     return v0
 
+    .line 8
     :catch_0
     sget-boolean p0, Landroidx/media/MediaSessionManagerImplBase;->DEBUG:Z
 
     if-eqz p0, :cond_3
 
+    .line 9
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V

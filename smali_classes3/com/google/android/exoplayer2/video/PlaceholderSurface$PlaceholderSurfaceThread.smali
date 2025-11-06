@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/video/PlaceholderSurface$PlaceholderSurfaceThread;
+.class public Lcom/google/android/exoplayer2/video/PlaceholderSurface$PlaceholderSurfaceThread;
 .super Landroid/os/HandlerThread;
 .source "SourceFile"
 
@@ -50,6 +50,7 @@
 
     const-string v0, "ExoPlayer:PlaceholderSurface"
 
+    .line 1
     invoke-direct {p0, v0}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -58,18 +59,22 @@
 .method private initInternal(I)V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/video/PlaceholderSurface$PlaceholderSurfaceThread;->eglSurfaceTexture:Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/video/PlaceholderSurface$PlaceholderSurfaceThread;->eglSurfaceTexture:Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;
 
     invoke-virtual {v0, p1}, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->init(I)V
 
+    .line 3
     new-instance v0, Lcom/google/android/exoplayer2/video/PlaceholderSurface;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/video/PlaceholderSurface$PlaceholderSurfaceThread;->eglSurfaceTexture:Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;
 
+    .line 4
     invoke-virtual {v1}, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->getSurfaceTexture()Landroid/graphics/SurfaceTexture;
 
     move-result-object v1
@@ -96,10 +101,12 @@
 .method private releaseInternal()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/video/PlaceholderSurface$PlaceholderSurfaceThread;->eglSurfaceTexture:Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/video/PlaceholderSurface$PlaceholderSurfaceThread;->eglSurfaceTexture:Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->release()V
@@ -112,6 +119,7 @@
 .method public handleMessage(Landroid/os/Message;)Z
     .locals 3
 
+    .line 1
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
@@ -124,12 +132,14 @@
 
     return v1
 
+    .line 2
     :cond_0
     :try_start_0
     invoke-direct {p0}, Lcom/google/android/exoplayer2/video/PlaceholderSurface$PlaceholderSurfaceThread;->releaseInternal()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     :goto_0
     invoke-virtual {p0}, Landroid/os/HandlerThread;->quit()Z
 
@@ -143,6 +153,7 @@
 
     const-string v2, "Failed to release placeholder surface"
 
+    .line 4
     invoke-static {v0, v2, p1}, Lcom/google/android/exoplayer2/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
@@ -155,10 +166,13 @@
     :catchall_1
     move-exception p1
 
+    .line 5
     invoke-virtual {p0}, Landroid/os/HandlerThread;->quit()Z
 
+    .line 6
     throw p1
 
+    .line 7
     :cond_1
     :try_start_2
     iget p1, p1, Landroid/os/Message;->arg1:I
@@ -169,11 +183,14 @@
     .catch Ljava/lang/Error; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_3
 
+    .line 8
     monitor-enter p0
 
+    .line 9
     :try_start_3
     invoke-virtual {p0}, Ljava/lang/Object;->notify()V
 
+    .line 10
     monitor-exit p0
 
     goto :goto_2
@@ -200,17 +217,22 @@
 
     const-string v2, "Failed to initialize placeholder surface"
 
+    .line 11
     invoke-static {v0, v2, p1}, Lcom/google/android/exoplayer2/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 12
     iput-object p1, p0, Lcom/google/android/exoplayer2/video/PlaceholderSurface$PlaceholderSurfaceThread;->initError:Ljava/lang/Error;
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_3
 
+    .line 13
     monitor-enter p0
 
+    .line 14
     :try_start_5
     invoke-virtual {p0}, Ljava/lang/Object;->notify()V
 
+    .line 15
     monitor-exit p0
 
     goto :goto_2
@@ -232,17 +254,22 @@
 
     const-string v2, "Failed to initialize placeholder surface"
 
+    .line 16
     invoke-static {v0, v2, p1}, Lcom/google/android/exoplayer2/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 17
     iput-object p1, p0, Lcom/google/android/exoplayer2/video/PlaceholderSurface$PlaceholderSurfaceThread;->initException:Ljava/lang/RuntimeException;
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_3
 
+    .line 18
     monitor-enter p0
 
+    .line 19
     :try_start_7
     invoke-virtual {p0}, Ljava/lang/Object;->notify()V
 
+    .line 20
     monitor-exit p0
 
     :goto_2
@@ -257,21 +284,26 @@
 
     throw p1
 
+    .line 21
     :goto_3
     monitor-enter p0
 
+    .line 22
     :try_start_8
     invoke-virtual {p0}, Ljava/lang/Object;->notify()V
 
+    .line 23
     monitor-exit p0
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_6
 
+    .line 24
     throw p1
 
     :catchall_6
     move-exception p1
 
+    .line 25
     :try_start_9
     monitor-exit p0
     :try_end_9
@@ -283,8 +315,10 @@
 .method public init(I)Lcom/google/android/exoplayer2/video/PlaceholderSurface;
     .locals 3
 
-    invoke-virtual {p0}, Ljava/lang/Thread;->start()V
+    .line 1
+    invoke-virtual {p0}, Landroid/os/HandlerThread;->start()V
 
+    .line 2
     new-instance v0, Landroid/os/Handler;
 
     invoke-virtual {p0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -295,6 +329,7 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/video/PlaceholderSurface$PlaceholderSurfaceThread;->handler:Landroid/os/Handler;
 
+    .line 3
     new-instance v0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/video/PlaceholderSurface$PlaceholderSurfaceThread;->handler:Landroid/os/Handler;
@@ -303,8 +338,10 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/video/PlaceholderSurface$PlaceholderSurfaceThread;->eglSurfaceTexture:Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;
 
+    .line 4
     monitor-enter p0
 
+    .line 5
     :try_start_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/video/PlaceholderSurface$PlaceholderSurfaceThread;->handler:Landroid/os/Handler;
 
@@ -318,6 +355,7 @@
 
     invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
 
+    .line 6
     :goto_0
     iget-object p1, p0, Lcom/google/android/exoplayer2/video/PlaceholderSurface$PlaceholderSurfaceThread;->surface:Lcom/google/android/exoplayer2/video/PlaceholderSurface;
 
@@ -333,6 +371,7 @@
 
     if-nez p1, :cond_0
 
+    .line 7
     :try_start_1
     invoke-virtual {p0}, Ljava/lang/Object;->wait()V
     :try_end_1
@@ -346,6 +385,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_0
     :try_start_2
     monitor-exit p0
@@ -354,21 +394,25 @@
 
     if-eqz v2, :cond_1
 
+    .line 9
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object p1
 
     invoke-virtual {p1}, Ljava/lang/Thread;->interrupt()V
 
+    .line 10
     :cond_1
     iget-object p1, p0, Lcom/google/android/exoplayer2/video/PlaceholderSurface$PlaceholderSurfaceThread;->initException:Ljava/lang/RuntimeException;
 
     if-nez p1, :cond_3
 
+    .line 11
     iget-object p1, p0, Lcom/google/android/exoplayer2/video/PlaceholderSurface$PlaceholderSurfaceThread;->initError:Ljava/lang/Error;
 
     if-nez p1, :cond_2
 
+    .line 12
     iget-object p0, p0, Lcom/google/android/exoplayer2/video/PlaceholderSurface$PlaceholderSurfaceThread;->surface:Lcom/google/android/exoplayer2/video/PlaceholderSurface;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -379,15 +423,18 @@
 
     return-object p0
 
+    .line 13
     :cond_2
     throw p1
 
+    .line 14
     :cond_3
     throw p1
 
     :catchall_0
     move-exception p1
 
+    .line 15
     :try_start_3
     monitor-exit p0
     :try_end_3
@@ -399,10 +446,12 @@
 .method public release()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/video/PlaceholderSurface$PlaceholderSurfaceThread;->handler:Landroid/os/Handler;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/video/PlaceholderSurface$PlaceholderSurfaceThread;->handler:Landroid/os/Handler;
 
     const/4 v0, 0x2

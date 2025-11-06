@@ -56,12 +56,12 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/google/android/exoplayer2/source/chunk/a;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/source/chunk/a;-><init>()V
+    .line 1
+    sget-object v0, Ld/j/a/b/v2/y/a;->a:Ld/j/a/b/v2/y/a;
 
     sput-object v0, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;->FACTORY:Lcom/google/android/exoplayer2/source/chunk/ChunkExtractor$Factory;
 
+    .line 2
     new-instance v0, Lcom/google/android/exoplayer2/extractor/PositionHolder;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/extractor/PositionHolder;-><init>()V
@@ -74,14 +74,19 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/extractor/Extractor;ILcom/google/android/exoplayer2/Format;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;->extractor:Lcom/google/android/exoplayer2/extractor/Extractor;
 
+    .line 3
     iput p2, p0, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;->primaryTrackType:I
 
+    .line 4
     iput-object p3, p0, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;->primaryTrackManifestFormat:Lcom/google/android/exoplayer2/Format;
 
+    .line 5
     new-instance p1, Landroid/util/SparseArray;
 
     invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
@@ -91,21 +96,13 @@
     return-void
 .end method
 
-.method public static synthetic a(ILcom/google/android/exoplayer2/Format;ZLjava/util/List;Lcom/google/android/exoplayer2/extractor/TrackOutput;Lcom/google/android/exoplayer2/analytics/PlayerId;)Lcom/google/android/exoplayer2/source/chunk/ChunkExtractor;
-    .locals 0
-
-    invoke-static/range {p0 .. p5}, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;->lambda$static$0(ILcom/google/android/exoplayer2/Format;ZLjava/util/List;Lcom/google/android/exoplayer2/extractor/TrackOutput;Lcom/google/android/exoplayer2/analytics/PlayerId;)Lcom/google/android/exoplayer2/source/chunk/ChunkExtractor;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method private static synthetic lambda$static$0(ILcom/google/android/exoplayer2/Format;ZLjava/util/List;Lcom/google/android/exoplayer2/extractor/TrackOutput;Lcom/google/android/exoplayer2/analytics/PlayerId;)Lcom/google/android/exoplayer2/source/chunk/ChunkExtractor;
+.method public static synthetic lambda$static$0(ILcom/google/android/exoplayer2/Format;ZLjava/util/List;Lcom/google/android/exoplayer2/extractor/TrackOutput;Lcom/google/android/exoplayer2/analytics/PlayerId;)Lcom/google/android/exoplayer2/source/chunk/ChunkExtractor;
     .locals 6
 
+    .line 1
     iget-object p5, p1, Lcom/google/android/exoplayer2/Format;->containerMimeType:Ljava/lang/String;
 
+    .line 2
     invoke-static {p5}, Lcom/google/android/exoplayer2/util/MimeTypes;->isText(Ljava/lang/String;)Z
 
     move-result v0
@@ -116,6 +113,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-static {p5}, Lcom/google/android/exoplayer2/util/MimeTypes;->isMatroska(Ljava/lang/String;)Z
 
@@ -123,27 +121,26 @@
 
     if-eqz p5, :cond_1
 
+    .line 4
     new-instance p2, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor;
 
     const/4 p3, 0x1
 
     invoke-direct {p2, p3}, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor;-><init>(I)V
 
-    goto :goto_1
-
-    :cond_1
-    if-eqz p2, :cond_2
-
-    const/4 p2, 0x4
-
     goto :goto_0
 
+    :cond_1
+    const/4 p5, 0x0
+
+    if-eqz p2, :cond_2
+
+    const/4 p5, 0x4
+
     :cond_2
-    const/4 p2, 0x0
+    move v1, p5
 
-    :goto_0
-    move v1, p2
-
+    .line 5
     new-instance p2, Lcom/google/android/exoplayer2/extractor/mp4/FragmentedMp4Extractor;
 
     const/4 v2, 0x0
@@ -158,7 +155,8 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/google/android/exoplayer2/extractor/mp4/FragmentedMp4Extractor;-><init>(ILcom/google/android/exoplayer2/util/TimestampAdjuster;Lcom/google/android/exoplayer2/extractor/mp4/Track;Ljava/util/List;Lcom/google/android/exoplayer2/extractor/TrackOutput;)V
 
-    :goto_1
+    .line 6
+    :goto_0
     new-instance p3, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;
 
     invoke-direct {p3, p2, p0, p1}, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;-><init>(Lcom/google/android/exoplayer2/extractor/Extractor;ILcom/google/android/exoplayer2/Format;)V
@@ -171,6 +169,7 @@
 .method public endTracks()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;->bindingTrackOutputs:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
@@ -181,6 +180,7 @@
 
     const/4 v1, 0x0
 
+    .line 2
     :goto_0
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;->bindingTrackOutputs:Landroid/util/SparseArray;
 
@@ -190,6 +190,7 @@
 
     if-ge v1, v2, :cond_0
 
+    .line 3
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;->bindingTrackOutputs:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -212,6 +213,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iput-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;->sampleFormats:[Lcom/google/android/exoplayer2/Format;
 
@@ -223,6 +225,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;->seekMap:Lcom/google/android/exoplayer2/extractor/SeekMap;
 
     instance-of v0, p0, Lcom/google/android/exoplayer2/extractor/ChunkIndex;
@@ -245,6 +248,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;->sampleFormats:[Lcom/google/android/exoplayer2/Format;
 
     return-object p0
@@ -257,10 +261,13 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;->trackOutputProvider:Lcom/google/android/exoplayer2/source/chunk/ChunkExtractor$TrackOutputProvider;
 
+    .line 2
     iput-wide p4, p0, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;->endTimeUs:J
 
+    .line 3
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;->extractorInitialized:Z
 
     const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
@@ -269,6 +276,7 @@
 
     if-nez v0, :cond_1
 
+    .line 4
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;->extractor:Lcom/google/android/exoplayer2/extractor/Extractor;
 
     invoke-interface {p1, p0}, Lcom/google/android/exoplayer2/extractor/Extractor;->init(Lcom/google/android/exoplayer2/extractor/ExtractorOutput;)V
@@ -277,6 +285,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 5
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;->extractor:Lcom/google/android/exoplayer2/extractor/Extractor;
 
     invoke-interface {p1, v3, v4, p2, p3}, Lcom/google/android/exoplayer2/extractor/Extractor;->seek(JJ)V
@@ -284,10 +293,12 @@
     :cond_0
     const/4 p1, 0x1
 
+    .line 6
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;->extractorInitialized:Z
 
     goto :goto_1
 
+    .line 7
     :cond_1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;->extractor:Lcom/google/android/exoplayer2/extractor/Extractor;
 
@@ -302,6 +313,7 @@
 
     const/4 p2, 0x0
 
+    .line 8
     :goto_0
     iget-object p3, p0, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;->bindingTrackOutputs:Landroid/util/SparseArray;
 
@@ -311,6 +323,7 @@
 
     if-ge p2, p3, :cond_3
 
+    .line 9
     iget-object p3, p0, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;->bindingTrackOutputs:Landroid/util/SparseArray;
 
     invoke-virtual {p3, p2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -338,6 +351,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;->extractor:Lcom/google/android/exoplayer2/extractor/Extractor;
 
     sget-object v0, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;->POSITION_HOLDER:Lcom/google/android/exoplayer2/extractor/PositionHolder;
@@ -359,6 +373,7 @@
     :cond_0
     move v1, p1
 
+    .line 2
     :goto_0
     invoke-static {v1}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
@@ -373,6 +388,7 @@
 .method public release()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;->extractor:Lcom/google/android/exoplayer2/extractor/Extractor;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/extractor/Extractor;->release()V
@@ -383,6 +399,7 @@
 .method public seekMap(Lcom/google/android/exoplayer2/extractor/SeekMap;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;->seekMap:Lcom/google/android/exoplayer2/extractor/SeekMap;
 
     return-void
@@ -391,6 +408,7 @@
 .method public track(II)Lcom/google/android/exoplayer2/extractor/TrackOutput;
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;->bindingTrackOutputs:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -401,6 +419,7 @@
 
     if-nez v0, :cond_2
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;->sampleFormats:[Lcom/google/android/exoplayer2/Format;
 
     if-nez v0, :cond_0
@@ -415,8 +434,10 @@
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 3
     new-instance v0, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor$BindingTrackOutput;
 
+    .line 4
     iget v1, p0, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;->primaryTrackType:I
 
     if-ne p2, v1, :cond_1
@@ -431,12 +452,14 @@
     :goto_1
     invoke-direct {v0, p1, p2, v1}, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor$BindingTrackOutput;-><init>(IILcom/google/android/exoplayer2/Format;)V
 
+    .line 5
     iget-object p2, p0, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;->trackOutputProvider:Lcom/google/android/exoplayer2/source/chunk/ChunkExtractor$TrackOutputProvider;
 
     iget-wide v1, p0, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;->endTimeUs:J
 
     invoke-virtual {v0, p2, v1, v2}, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor$BindingTrackOutput;->bind(Lcom/google/android/exoplayer2/source/chunk/ChunkExtractor$TrackOutputProvider;J)V
 
+    .line 6
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;->bindingTrackOutputs:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V

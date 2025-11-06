@@ -1,4 +1,4 @@
-.class Lmiuix/animation/ViewTarget$2;
+.class public Lmiuix/animation/ViewTarget$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,17 +18,18 @@
 
 
 # instance fields
-.field final synthetic this$0:Lmiuix/animation/ViewTarget;
+.field public final synthetic this$0:Lmiuix/animation/ViewTarget;
 
-.field final synthetic val$task:Ljava/lang/Runnable;
+.field public final synthetic val$task:Ljava/lang/Runnable;
 
-.field final synthetic val$view:Landroid/view/View;
+.field public final synthetic val$view:Landroid/view/View;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/animation/ViewTarget;Landroid/view/View;Ljava/lang/Runnable;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/animation/ViewTarget$2;->this$0:Lmiuix/animation/ViewTarget;
 
     iput-object p2, p0, Lmiuix/animation/ViewTarget$2;->val$view:Landroid/view/View;
@@ -45,6 +46,7 @@
 .method public run()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/ViewTarget$2;->this$0:Lmiuix/animation/ViewTarget;
 
     iget-object v1, p0, Lmiuix/animation/ViewTarget$2;->val$view:Landroid/view/View;

@@ -1,4 +1,4 @@
-.class Landroidx/preference/PreferenceGroupAdapter$2;
+.class public Landroidx/preference/PreferenceGroupAdapter$2;
 .super Landroidx/recyclerview/widget/DiffUtil$Callback;
 .source "SourceFile"
 
@@ -15,19 +15,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/preference/PreferenceGroupAdapter;
+.field public final synthetic this$0:Landroidx/preference/PreferenceGroupAdapter;
 
-.field final synthetic val$comparisonCallback:Landroidx/preference/PreferenceManager$PreferenceComparisonCallback;
+.field public final synthetic val$comparisonCallback:Landroidx/preference/PreferenceManager$PreferenceComparisonCallback;
 
-.field final synthetic val$oldVisibleList:Ljava/util/List;
+.field public final synthetic val$oldVisibleList:Ljava/util/List;
 
-.field final synthetic val$visiblePreferenceList:Ljava/util/List;
+.field public final synthetic val$visiblePreferenceList:Ljava/util/List;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/preference/PreferenceGroupAdapter;Ljava/util/List;Ljava/util/List;Landroidx/preference/PreferenceManager$PreferenceComparisonCallback;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/preference/PreferenceGroupAdapter$2;->this$0:Landroidx/preference/PreferenceGroupAdapter;
 
     iput-object p2, p0, Landroidx/preference/PreferenceGroupAdapter$2;->val$oldVisibleList:Ljava/util/List;
@@ -46,10 +47,12 @@
 .method public areContentsTheSame(II)Z
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/preference/PreferenceGroupAdapter$2;->val$comparisonCallback:Landroidx/preference/PreferenceManager$PreferenceComparisonCallback;
 
     iget-object v1, p0, Landroidx/preference/PreferenceGroupAdapter$2;->val$oldVisibleList:Ljava/util/List;
 
+    .line 2
     invoke-interface {v1, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -58,12 +61,14 @@
 
     iget-object p0, p0, Landroidx/preference/PreferenceGroupAdapter$2;->val$visiblePreferenceList:Ljava/util/List;
 
+    .line 3
     invoke-interface {p0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroidx/preference/Preference;
 
+    .line 4
     invoke-virtual {v0, p1, p0}, Landroidx/preference/PreferenceManager$PreferenceComparisonCallback;->arePreferenceContentsTheSame(Landroidx/preference/Preference;Landroidx/preference/Preference;)Z
 
     move-result p0
@@ -74,10 +79,12 @@
 .method public areItemsTheSame(II)Z
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/preference/PreferenceGroupAdapter$2;->val$comparisonCallback:Landroidx/preference/PreferenceManager$PreferenceComparisonCallback;
 
     iget-object v1, p0, Landroidx/preference/PreferenceGroupAdapter$2;->val$oldVisibleList:Ljava/util/List;
 
+    .line 2
     invoke-interface {v1, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -86,12 +93,14 @@
 
     iget-object p0, p0, Landroidx/preference/PreferenceGroupAdapter$2;->val$visiblePreferenceList:Ljava/util/List;
 
+    .line 3
     invoke-interface {p0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroidx/preference/Preference;
 
+    .line 4
     invoke-virtual {v0, p1, p0}, Landroidx/preference/PreferenceManager$PreferenceComparisonCallback;->arePreferenceItemsTheSame(Landroidx/preference/Preference;Landroidx/preference/Preference;)Z
 
     move-result p0
@@ -102,6 +111,7 @@
 .method public getNewListSize()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/preference/PreferenceGroupAdapter$2;->val$visiblePreferenceList:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->size()I
@@ -114,6 +124,7 @@
 .method public getOldListSize()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/preference/PreferenceGroupAdapter$2;->val$oldVisibleList:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->size()I

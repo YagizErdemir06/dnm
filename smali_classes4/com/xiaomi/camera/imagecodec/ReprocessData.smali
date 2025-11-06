@@ -301,6 +301,7 @@
 .method public getCropRegion()[I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mCropRegion:[I
 
     return-object p0
@@ -309,6 +310,7 @@
 .method public getDataStatusCallback()Lcom/xiaomi/camera/imagecodec/ReprocessData$DataStatusCallback;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mDataStatusCallback:Lcom/xiaomi/camera/imagecodec/ReprocessData$DataStatusCallback;
 
     return-object p0
@@ -317,6 +319,7 @@
 .method public getImageName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mImageName:Ljava/lang/String;
 
     return-object p0
@@ -325,6 +328,7 @@
 .method public getImageTag()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mImageTag:Ljava/lang/String;
 
     return-object p0
@@ -333,6 +337,7 @@
 .method public getJpegQuality()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mJpegQuality:I
 
     return p0
@@ -349,6 +354,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mMainImageList:Ljava/util/ArrayList;
 
     return-object p0
@@ -357,6 +363,7 @@
 .method public getOrientation()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mOrientation:I
 
     return p0
@@ -365,6 +372,7 @@
 .method public getOutputFormat()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mOutputFormat:I
 
     return p0
@@ -373,6 +381,7 @@
 .method public getOutputHeight()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mOutputHeight:I
 
     return p0
@@ -381,6 +390,7 @@
 .method public getOutputWidth()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mOutputWidth:I
 
     return p0
@@ -389,6 +399,7 @@
 .method public getRawInputHeight()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mRawInputHeight:I
 
     return p0
@@ -397,6 +408,7 @@
 .method public getRawInputWidth()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mRawInputWidth:I
 
     return p0
@@ -405,6 +417,7 @@
 .method public getReprocessFunctionType()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mReprocessFunctionType:I
 
     return p0
@@ -413,6 +426,7 @@
 .method public getResultListener()Lcom/xiaomi/camera/imagecodec/ReprocessData$OnDataAvailableListener;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mResultListener:Lcom/xiaomi/camera/imagecodec/ReprocessData$OnDataAvailableListener;
 
     return-object p0
@@ -421,6 +435,7 @@
 .method public getSiqeType()B
     .locals 0
 
+    .line 1
     iget-byte p0, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mSiqeType:B
 
     return p0
@@ -429,6 +444,7 @@
 .method public getTotalCaptureResult()Lcom/xiaomi/protocol/ICustomCaptureResult;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mTotalCaptureResult:Lcom/xiaomi/protocol/ICustomCaptureResult;
 
     return-object p0
@@ -445,6 +461,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mTuningImageList:Ljava/util/ArrayList;
 
     return-object p0
@@ -453,6 +470,7 @@
 .method public getYuvInputHeight()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mYuvInputHeight:I
 
     return p0
@@ -461,6 +479,7 @@
 .method public getYuvInputWidth()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mYuvInputWidth:I
 
     return p0
@@ -469,6 +488,7 @@
 .method public isFrontCamera()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mIsFrontCamera:Z
 
     return p0
@@ -477,6 +497,7 @@
 .method public isFrontMirror()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mIsFrontMirror:Z
 
     return p0
@@ -485,6 +506,7 @@
 .method public isImageFromPool()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mIsMainImageFromPool:Z
 
     return p0
@@ -493,6 +515,7 @@
 .method public isKeepTuningImage()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mKeepTuningImage:Z
 
     return p0
@@ -501,6 +524,7 @@
 .method public isRemosaic()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mIsRemosaic:I
 
     return p0
@@ -509,6 +533,7 @@
 .method public isRotateOrientationToZero()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mRotateOrientationToZero:Z
 
     return p0
@@ -517,6 +542,7 @@
 .method public isTuningImageFromPool()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mIsTuningImageFromPool:Z
 
     return p0
@@ -533,6 +559,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mCropRegion:[I
 
     return-void
@@ -549,6 +576,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mDataStatusCallback:Lcom/xiaomi/camera/imagecodec/ReprocessData$DataStatusCallback;
 
     return-void
@@ -565,6 +593,7 @@
         }
     .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mIsFrontMirror:Z
 
     return-void
@@ -581,6 +610,7 @@
         }
     .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mIsMainImageFromPool:Z
 
     return-void
@@ -597,6 +627,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mImageName:Ljava/lang/String;
 
     return-void
@@ -613,24 +644,26 @@
         }
     .end annotation
 
-    const/4 v0, 0x1
+    const/16 v0, 0x64
 
-    const/16 v1, 0x64
+    const/4 v1, 0x1
 
-    if-lt p1, v0, :cond_1
+    if-lt p1, v1, :cond_1
 
-    if-le p1, v1, :cond_0
+    if-le p1, v0, :cond_0
 
     goto :goto_0
 
+    .line 1
     :cond_0
     iput p1, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mJpegQuality:I
 
     goto :goto_1
 
+    .line 2
     :cond_1
     :goto_0
-    iput v1, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mJpegQuality:I
+    iput v0, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mJpegQuality:I
 
     :goto_1
     return-void
@@ -647,6 +680,7 @@
         }
     .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mKeepTuningImage:Z
 
     return-void
@@ -735,6 +769,7 @@
         }
     .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mOrientation:I
 
     return-void
@@ -753,8 +788,10 @@
         }
     .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mRawInputWidth:I
 
+    .line 2
     iput p2, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mRawInputHeight:I
 
     return-void
@@ -771,6 +808,7 @@
         }
     .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mReprocessFunctionType:I
 
     return-void
@@ -787,6 +825,7 @@
         }
     .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mRotateOrientationToZero:Z
 
     return-void
@@ -803,6 +842,7 @@
         }
     .end annotation
 
+    .line 1
     iput-byte p1, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mSiqeType:B
 
     return-void
@@ -891,6 +931,7 @@
         }
     .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mIsTuningImageFromPool:Z
 
     return-void
@@ -909,8 +950,10 @@
         }
     .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mYuvInputWidth:I
 
+    .line 2
     iput p2, p0, Lcom/xiaomi/camera/imagecodec/ReprocessData;->mYuvInputHeight:I
 
     return-void

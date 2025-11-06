@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/Futures$3;
+.class public Lcom/google/common/util/concurrent/Futures$3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,17 +18,18 @@
 
 
 # instance fields
-.field final synthetic val$delegates:Lcom/google/common/collect/ImmutableList;
+.field public final synthetic val$delegates:Lcom/google/common/collect/ImmutableList;
 
-.field final synthetic val$localI:I
+.field public final synthetic val$localI:I
 
-.field final synthetic val$state:Lcom/google/common/util/concurrent/Futures$InCompletionOrderState;
+.field public final synthetic val$state:Lcom/google/common/util/concurrent/Futures$InCompletionOrderState;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/util/concurrent/Futures$InCompletionOrderState;Lcom/google/common/collect/ImmutableList;I)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/Futures$3;->val$state:Lcom/google/common/util/concurrent/Futures$InCompletionOrderState;
 
     iput-object p2, p0, Lcom/google/common/util/concurrent/Futures$3;->val$delegates:Lcom/google/common/collect/ImmutableList;
@@ -45,6 +46,7 @@
 .method public run()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/util/concurrent/Futures$3;->val$state:Lcom/google/common/util/concurrent/Futures$InCompletionOrderState;
 
     iget-object v1, p0, Lcom/google/common/util/concurrent/Futures$3;->val$delegates:Lcom/google/common/collect/ImmutableList;

@@ -54,12 +54,16 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     iput-object p1, p0, Lcom/google/common/reflect/Invokable;->accessibleObject:Ljava/lang/reflect/AccessibleObject;
 
+    .line 4
     check-cast p1, Ljava/lang/reflect/Member;
 
     iput-object p1, p0, Lcom/google/common/reflect/Invokable;->member:Ljava/lang/reflect/Member;
@@ -120,14 +124,17 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/common/reflect/Invokable;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/common/reflect/Invokable;
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/common/reflect/Invokable;->getOwnerType()Lcom/google/common/reflect/TypeToken;
 
     move-result-object v0
@@ -173,6 +180,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/Invokable;->accessibleObject:Ljava/lang/reflect/AccessibleObject;
 
     invoke-virtual {p0, p1}, Ljava/lang/reflect/AccessibleObject;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
@@ -185,6 +193,7 @@
 .method public final getAnnotations()[Ljava/lang/annotation/Annotation;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/Invokable;->accessibleObject:Ljava/lang/reflect/AccessibleObject;
 
     invoke-virtual {p0}, Ljava/lang/reflect/AccessibleObject;->getAnnotations()[Ljava/lang/annotation/Annotation;
@@ -197,6 +206,7 @@
 .method public final getDeclaredAnnotations()[Ljava/lang/annotation/Annotation;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/Invokable;->accessibleObject:Ljava/lang/reflect/AccessibleObject;
 
     invoke-virtual {p0}, Ljava/lang/reflect/AccessibleObject;->getDeclaredAnnotations()[Ljava/lang/annotation/Annotation;
@@ -216,6 +226,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/Invokable;->member:Ljava/lang/reflect/Member;
 
     invoke-interface {p0}, Ljava/lang/reflect/Member;->getDeclaringClass()Ljava/lang/Class;
@@ -238,10 +249,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->builder()Lcom/google/common/collect/ImmutableList$Builder;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/reflect/Invokable;->getGenericExceptionTypes()[Ljava/lang/reflect/Type;
 
     move-result-object p0
@@ -255,16 +268,19 @@
 
     aget-object v3, p0, v2
 
+    .line 3
     invoke-static {v3}, Lcom/google/common/reflect/TypeToken;->of(Ljava/lang/reflect/Type;)Lcom/google/common/reflect/TypeToken;
 
     move-result-object v3
 
+    .line 4
     invoke-virtual {v0, v3}, Lcom/google/common/collect/ImmutableList$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-virtual {v0}, Lcom/google/common/collect/ImmutableList$Builder;->build()Lcom/google/common/collect/ImmutableList;
 
@@ -285,6 +301,7 @@
 .method public final getModifiers()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/Invokable;->member:Ljava/lang/reflect/Member;
 
     invoke-interface {p0}, Ljava/lang/reflect/Member;->getModifiers()I
@@ -297,6 +314,7 @@
 .method public final getName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/Invokable;->member:Ljava/lang/reflect/Member;
 
     invoke-interface {p0}, Ljava/lang/reflect/Member;->getName()Ljava/lang/String;
@@ -316,6 +334,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/reflect/Invokable;->getDeclaringClass()Ljava/lang/Class;
 
     move-result-object p0
@@ -341,25 +360,30 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/reflect/Invokable;->getGenericParameterTypes()[Ljava/lang/reflect/Type;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/reflect/Invokable;->getParameterAnnotations()[[Ljava/lang/annotation/Annotation;
 
     move-result-object v1
 
+    .line 3
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->builder()Lcom/google/common/collect/ImmutableList$Builder;
 
     move-result-object v2
 
     const/4 v3, 0x0
 
+    .line 4
     :goto_0
     array-length v4, v0
 
     if-ge v3, v4, :cond_0
 
+    .line 5
     new-instance v4, Lcom/google/common/reflect/Parameter;
 
     aget-object v5, v0, v3
@@ -378,6 +402,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-virtual {v2}, Lcom/google/common/collect/ImmutableList$Builder;->build()Lcom/google/common/collect/ImmutableList;
 
@@ -396,6 +421,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/reflect/Invokable;->getGenericReturnType()Ljava/lang/reflect/Type;
 
     move-result-object p0
@@ -420,6 +446,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/Invokable;->member:Ljava/lang/reflect/Member;
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
@@ -456,6 +483,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
@@ -488,6 +516,7 @@
 .method public final isAbstract()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/reflect/Invokable;->getModifiers()I
 
     move-result p0
@@ -502,6 +531,7 @@
 .method public final isAccessible()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/Invokable;->accessibleObject:Ljava/lang/reflect/AccessibleObject;
 
     invoke-virtual {p0}, Ljava/lang/reflect/AccessibleObject;->isAccessible()Z
@@ -523,6 +553,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/Invokable;->accessibleObject:Ljava/lang/reflect/AccessibleObject;
 
     invoke-virtual {p0, p1}, Ljava/lang/reflect/AccessibleObject;->isAnnotationPresent(Ljava/lang/Class;)Z
@@ -535,6 +566,7 @@
 .method public final isFinal()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/reflect/Invokable;->getModifiers()I
 
     move-result p0
@@ -549,6 +581,7 @@
 .method public final isNative()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/reflect/Invokable;->getModifiers()I
 
     move-result p0
@@ -566,6 +599,7 @@
 .method public final isPackagePrivate()Z
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/reflect/Invokable;->isPrivate()Z
 
     move-result v0
@@ -598,6 +632,7 @@
 .method public final isPrivate()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/reflect/Invokable;->getModifiers()I
 
     move-result p0
@@ -612,6 +647,7 @@
 .method public final isProtected()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/reflect/Invokable;->getModifiers()I
 
     move-result p0
@@ -626,6 +662,7 @@
 .method public final isPublic()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/reflect/Invokable;->getModifiers()I
 
     move-result p0
@@ -640,6 +677,7 @@
 .method public final isStatic()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/reflect/Invokable;->getModifiers()I
 
     move-result p0
@@ -654,6 +692,7 @@
 .method public final isSynchronized()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/reflect/Invokable;->getModifiers()I
 
     move-result p0
@@ -668,6 +707,7 @@
 .method public final isSynthetic()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/Invokable;->member:Ljava/lang/reflect/Member;
 
     invoke-interface {p0}, Ljava/lang/reflect/Member;->isSynthetic()Z
@@ -680,6 +720,7 @@
 .method public final isTransient()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/reflect/Invokable;->getModifiers()I
 
     move-result p0
@@ -697,6 +738,7 @@
 .method public final isVolatile()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/reflect/Invokable;->getModifiers()I
 
     move-result p0
@@ -814,6 +856,7 @@
 .method public final setAccessible(Z)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/Invokable;->accessibleObject:Ljava/lang/reflect/AccessibleObject;
 
     invoke-virtual {p0, p1}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
@@ -824,6 +867,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/Invokable;->member:Ljava/lang/reflect/Member;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -836,6 +880,7 @@
 .method public final trySetAccessible()Z
     .locals 1
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/google/common/reflect/Invokable;->accessibleObject:Ljava/lang/reflect/AccessibleObject;
 

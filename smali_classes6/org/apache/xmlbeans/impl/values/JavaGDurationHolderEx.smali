@@ -6,13 +6,14 @@
 # instance fields
 .field private _schemaType:Lorg/apache/xmlbeans/SchemaType;
 
-.field _value:Lorg/apache/xmlbeans/GDuration;
+.field public _value:Lorg/apache/xmlbeans/GDuration;
 
 
 # direct methods
 .method public constructor <init>(Lorg/apache/xmlbeans/SchemaType;Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;-><init>()V
 
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/values/JavaGDurationHolderEx;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
@@ -27,6 +28,7 @@
 .method public static lex(Ljava/lang/String;Lorg/apache/xmlbeans/impl/common/ValidationContext;)Lorg/apache/xmlbeans/GDuration;
     .locals 2
 
+    .line 1
     :try_start_0
     new-instance v0, Lorg/apache/xmlbeans/GDuration;
 
@@ -47,6 +49,7 @@
 
     const-string p0, "duration"
 
+    .line 2
     invoke-interface {p1, p0, v0}, Lorg/apache/xmlbeans/impl/common/ValidationContext;->invalid(Ljava/lang/String;[Ljava/lang/Object;)V
 
     const/4 v0, 0x0
@@ -58,18 +61,21 @@
 .method public static validateLexical(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/impl/common/ValidationContext;)Lorg/apache/xmlbeans/GDuration;
     .locals 4
 
+    .line 1
     invoke-static {p0, p2}, Lorg/apache/xmlbeans/impl/values/JavaGDurationHolderEx;->lex(Ljava/lang/String;Lorg/apache/xmlbeans/impl/common/ValidationContext;)Lorg/apache/xmlbeans/GDuration;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaType;->hasPatternFacet()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 3
     invoke-interface {p1, p0}, Lorg/apache/xmlbeans/SchemaType;->matchPatternFacet(Ljava/lang/String;)Z
 
     move-result v1
@@ -92,6 +98,7 @@
 
     const/4 p0, 0x2
 
+    .line 4
     invoke-static {p1}, Lorg/apache/xmlbeans/impl/common/QNameHelper;->readable(Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object p1
@@ -111,6 +118,7 @@
 
     const/4 v0, 0x3
 
+    .line 1
     invoke-interface {p1, v0}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v1
@@ -127,6 +135,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 2
     check-cast v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
 
     invoke-virtual {v1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->gDurationValue()Lorg/apache/xmlbeans/GDuration;
@@ -147,6 +156,7 @@
 
     aput-object v1, v7, v2
 
+    .line 3
     invoke-static {p1}, Lorg/apache/xmlbeans/impl/common/QNameHelper;->readable(Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object v1
@@ -157,6 +167,7 @@
 
     invoke-interface {p2, v1, v7}, Lorg/apache/xmlbeans/impl/common/ValidationContext;->invalid(Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 4
     :cond_0
     invoke-interface {p1, v4}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
@@ -164,6 +175,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 5
     check-cast v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
 
     invoke-virtual {v1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->gDurationValue()Lorg/apache/xmlbeans/GDuration;
@@ -184,6 +196,7 @@
 
     aput-object v1, v7, v2
 
+    .line 6
     invoke-static {p1}, Lorg/apache/xmlbeans/impl/common/QNameHelper;->readable(Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object v1
@@ -197,12 +210,14 @@
     :cond_1
     const/4 v1, 0x6
 
+    .line 7
     invoke-interface {p1, v1}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v1
 
     if-eqz v1, :cond_2
 
+    .line 8
     check-cast v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
 
     invoke-virtual {v1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->gDurationValue()Lorg/apache/xmlbeans/GDuration;
@@ -223,6 +238,7 @@
 
     aput-object v1, v7, v2
 
+    .line 9
     invoke-static {p1}, Lorg/apache/xmlbeans/impl/common/QNameHelper;->readable(Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object v1
@@ -236,12 +252,14 @@
     :cond_2
     const/4 v1, 0x5
 
+    .line 10
     invoke-interface {p1, v1}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v1
 
     if-eqz v1, :cond_3
 
+    .line 11
     check-cast v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
 
     invoke-virtual {v1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->gDurationValue()Lorg/apache/xmlbeans/GDuration;
@@ -262,6 +280,7 @@
 
     aput-object v1, v4, v2
 
+    .line 12
     invoke-static {p1}, Lorg/apache/xmlbeans/impl/common/QNameHelper;->readable(Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object v1
@@ -272,6 +291,7 @@
 
     invoke-interface {p2, v1, v4}, Lorg/apache/xmlbeans/impl/common/ValidationContext;->invalid(Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 13
     :cond_3
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaType;->getEnumerationValues()[Lorg/apache/xmlbeans/XmlAnySimpleType;
 
@@ -281,11 +301,13 @@
 
     move v4, v6
 
+    .line 14
     :goto_0
     array-length v7, v1
 
     if-ge v4, v7, :cond_5
 
+    .line 15
     aget-object v7, v1, v4
 
     check-cast v7, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
@@ -314,6 +336,7 @@
 
     aput-object p0, v0, v5
 
+    .line 16
     invoke-static {p1}, Lorg/apache/xmlbeans/impl/common/QNameHelper;->readable(Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object p0
@@ -333,6 +356,7 @@
 .method public compare_to(Lorg/apache/xmlbeans/XmlObject;)I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaGDurationHolderEx;->_value:Lorg/apache/xmlbeans/GDuration;
 
     check-cast p1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
@@ -351,6 +375,7 @@
 .method public compute_text(Lorg/apache/xmlbeans/impl/values/NamespaceManager;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaGDurationHolderEx;->_value:Lorg/apache/xmlbeans/GDuration;
 
     if-nez p0, :cond_0
@@ -371,6 +396,7 @@
 .method public equal_to(Lorg/apache/xmlbeans/XmlObject;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaGDurationHolderEx;->_value:Lorg/apache/xmlbeans/GDuration;
 
     check-cast p1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
@@ -389,8 +415,10 @@
 .method public gDurationValue()Lorg/apache/xmlbeans/GDuration;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
+    .line 2
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaGDurationHolderEx;->_value:Lorg/apache/xmlbeans/GDuration;
 
     if-nez p0, :cond_0
@@ -404,6 +432,7 @@
 .method public schemaType()Lorg/apache/xmlbeans/SchemaType;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaGDurationHolderEx;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     return-object p0
@@ -412,18 +441,21 @@
 .method public set_GDuration(Lorg/apache/xmlbeans/GDurationSpecification;)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_validateOnSet()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/JavaGDurationHolderEx;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     sget-object v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_voorVc:Lorg/apache/xmlbeans/impl/common/ValidationContext;
 
     invoke-static {p1, v0, v1}, Lorg/apache/xmlbeans/impl/values/JavaGDurationHolderEx;->validateValue(Lorg/apache/xmlbeans/GDurationSpecification;Lorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/impl/common/ValidationContext;)V
 
+    .line 3
     :cond_0
     invoke-interface {p1}, Lorg/apache/xmlbeans/GDurationSpecification;->isImmutable()Z
 
@@ -435,12 +467,14 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     check-cast p1, Lorg/apache/xmlbeans/GDuration;
 
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/values/JavaGDurationHolderEx;->_value:Lorg/apache/xmlbeans/GDuration;
 
     goto :goto_0
 
+    .line 5
     :cond_1
     new-instance v0, Lorg/apache/xmlbeans/GDuration;
 
@@ -457,6 +491,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Lorg/apache/xmlbeans/impl/values/JavaGDurationHolderEx;->_value:Lorg/apache/xmlbeans/GDuration;
 
     return-void
@@ -465,12 +500,14 @@
 .method public set_text(Ljava/lang/String;)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_validateOnSet()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/JavaGDurationHolderEx;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     sget-object v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_voorVc:Lorg/apache/xmlbeans/impl/common/ValidationContext;
@@ -481,6 +518,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     sget-object v0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_voorVc:Lorg/apache/xmlbeans/impl/common/ValidationContext;
 
@@ -488,6 +526,7 @@
 
     move-result-object p1
 
+    .line 4
     :goto_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_validateOnSet()Z
 
@@ -497,12 +536,14 @@
 
     if-eqz p1, :cond_1
 
+    .line 5
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/JavaGDurationHolderEx;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     sget-object v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_voorVc:Lorg/apache/xmlbeans/impl/common/ValidationContext;
 
     invoke-static {p1, v0, v1}, Lorg/apache/xmlbeans/impl/values/JavaGDurationHolderEx;->validateValue(Lorg/apache/xmlbeans/GDurationSpecification;Lorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/impl/common/ValidationContext;)V
 
+    .line 6
     :cond_1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/values/JavaGDurationHolderEx;->_value:Lorg/apache/xmlbeans/GDuration;
 
@@ -512,12 +553,14 @@
 .method public validate_simpleval(Ljava/lang/String;Lorg/apache/xmlbeans/impl/common/ValidationContext;)V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/JavaGDurationHolderEx;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object v0
 
     invoke-static {p1, v0, p2}, Lorg/apache/xmlbeans/impl/values/JavaGDurationHolderEx;->validateLexical(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/impl/common/ValidationContext;)Lorg/apache/xmlbeans/GDuration;
 
+    .line 2
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/JavaGDurationHolderEx;->gDurationValue()Lorg/apache/xmlbeans/GDuration;
 
     move-result-object p1
@@ -534,6 +577,7 @@
 .method public value_hash_code()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaGDurationHolderEx;->_value:Lorg/apache/xmlbeans/GDuration;
 
     invoke-virtual {p0}, Lorg/apache/xmlbeans/GDuration;->hashCode()I

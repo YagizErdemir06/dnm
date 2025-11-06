@@ -18,11 +18,11 @@
 
 
 # static fields
-.field public static final MAX_ANIM_COUNT_SINGLE_TASK:I = 0x64
+.field public static final MAX_PAGE_SIZE:I = 0x96
 
-.field public static final MAX_MAIN_THREAD_TASK_SIZE:I = 0xfa0
+.field public static final MAX_SINGLE_TASK_SIZE:I = 0xfa0
 
-.field public static final MAX_SUB_THREAD_TASK_SIZE:I
+.field public static final MAX_TO_PAGE_SIZE:I = 0x1f4
 
 .field public static final OP_CANCEL:B = 0x4t
 
@@ -32,55 +32,37 @@
 
 .field public static final OP_INVALID:B = 0x0t
 
-.field public static final OP_REUSE:B = 0x6t
-
 .field public static final OP_START:B = 0x1t
 
 .field public static final OP_UPDATE:B = 0x2t
+
+.field public static final sTaskCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # instance fields
 .field public final animStats:Lmiuix/animation/internal/AnimStats;
 
-.field public delta:D
+.field public volatile deltaT:J
 
-.field public deltaTNanos:J
+.field public volatile info:Lmiuix/animation/internal/TransitionInfo;
 
-.field public frameCount:I
+.field public volatile startPos:I
 
-.field public info:Lmiuix/animation/internal/TransitionInfo;
+.field public volatile toPage:Z
 
-.field public runInMainThread:Z
-
-.field public scheduler:Lmiuix/animation/internal/AnimScheduler;
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-.end field
-
-.field public startPos:I
-
-.field public totalTNanos:J
+.field public volatile totalT:J
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    sget v0, Lmiuix/animation/internal/ThreadPoolUtil;->MAX_SPLIT_COUNT:I
+    .line 1
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    add-int/lit8 v0, v0, -0x1
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
-    int-to-float v0, v0
-
-    const v1, 0x475ac000    # 56000.0f
-
-    div-float/2addr v1, v0
-
-    invoke-static {v1}, Ljava/lang/Math;->round(F)I
-
-    move-result v0
-
-    sput v0, Lmiuix/animation/internal/AnimTask;->MAX_SUB_THREAD_TASK_SIZE:I
+    sput-object v0, Lmiuix/animation/internal/AnimTask;->sTaskCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
     return-void
 .end method
@@ -88,8 +70,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lmiuix/animation/utils/LinkNode;-><init>()V
 
+    .line 2
     new-instance v0, Lmiuix/animation/internal/AnimStats;
 
     invoke-direct {v0}, Lmiuix/animation/internal/AnimStats;-><init>()V
@@ -97,52 +81,6 @@
     iput-object v0, p0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
 
     return-void
-.end method
-
-.method public static asyncStart(Lmiuix/animation/internal/AnimTask;Lmiuix/animation/internal/AnimScheduler;JJID)V
-    .locals 0
-
-    iput-wide p2, p0, Lmiuix/animation/internal/AnimTask;->totalTNanos:J
-
-    iput-wide p4, p0, Lmiuix/animation/internal/AnimTask;->deltaTNanos:J
-
-    const/4 p2, 0x0
-
-    iput-boolean p2, p0, Lmiuix/animation/internal/AnimTask;->runInMainThread:Z
-
-    iput-object p1, p0, Lmiuix/animation/internal/AnimTask;->scheduler:Lmiuix/animation/internal/AnimScheduler;
-
-    iput p6, p0, Lmiuix/animation/internal/AnimTask;->frameCount:I
-
-    iput-wide p7, p0, Lmiuix/animation/internal/AnimTask;->delta:D
-
-    invoke-static {p0}, Lmiuix/animation/internal/ThreadPoolUtil;->post(Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public static getAnimCountOfTaskStack(Lmiuix/animation/internal/AnimTask;)I
-    .locals 2
-
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz p0, :cond_0
-
-    iget-object v1, p0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
-
-    iget v1, v1, Lmiuix/animation/internal/AnimStats;->animCount:I
-
-    add-int/2addr v0, v1
-
-    iget-object p0, p0, Lmiuix/animation/utils/LinkNode;->next:Lmiuix/animation/utils/LinkNode;
-
-    check-cast p0, Lmiuix/animation/internal/AnimTask;
-
-    goto :goto_0
-
-    :cond_0
-    return v0
 .end method
 
 .method public static isRunning(B)Z
@@ -166,33 +104,12 @@
     return v0
 .end method
 
-.method public static start(Lmiuix/animation/internal/AnimTask;Lmiuix/animation/internal/AnimScheduler;JJID)V
-    .locals 0
-
-    iput-wide p2, p0, Lmiuix/animation/internal/AnimTask;->totalTNanos:J
-
-    iput-wide p4, p0, Lmiuix/animation/internal/AnimTask;->deltaTNanos:J
-
-    const/4 p2, 0x1
-
-    iput-boolean p2, p0, Lmiuix/animation/internal/AnimTask;->runInMainThread:Z
-
-    iput-object p1, p0, Lmiuix/animation/internal/AnimTask;->scheduler:Lmiuix/animation/internal/AnimScheduler;
-
-    iput p6, p0, Lmiuix/animation/internal/AnimTask;->frameCount:I
-
-    iput-wide p7, p0, Lmiuix/animation/internal/AnimTask;->delta:D
-
-    invoke-virtual {p0}, Lmiuix/animation/internal/AnimTask;->run()V
-
-    return-void
-.end method
-
 
 # virtual methods
 .method public getAnimCount()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
 
     iget p0, p0, Lmiuix/animation/internal/AnimStats;->animCount:I
@@ -200,271 +117,126 @@
     return p0
 .end method
 
-.method public run()V
-    .locals 21
+.method public getTotalAnimCount()I
+    .locals 2
 
-    move-object/from16 v10, p0
+    const/4 v0, 0x0
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    :goto_0
+    if-eqz p0, :cond_0
 
-    move-result-wide v11
+    .line 1
+    iget-object v1, p0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    iget v1, v1, Lmiuix/animation/internal/AnimStats;->animCount:I
 
-    move-result-object v0
+    add-int/2addr v0, v1
 
-    invoke-virtual {v0}, Ljava/lang/Thread;->getId()J
+    .line 2
+    iget-object p0, p0, Lmiuix/animation/utils/LinkNode;->next:Lmiuix/animation/utils/LinkNode;
 
-    move-result-wide v13
-
-    invoke-static {}, Lmiuix/animation/utils/LogUtils;->isLogDetailEnable()Z
-
-    move-result v15
-
-    const-string v9, "-"
-
-    const-string v7, "miuix_anim"
-
-    if-eqz v15, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "++++ AnimTask run stack onFrame start belong to Scheduler@"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, v10, Lmiuix/animation/internal/AnimTask;->scheduler:Lmiuix/animation/internal/AnimScheduler;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v13, v14}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v7, v0}, Lmiuix/animation/utils/LogUtils;->logThread(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    :try_start_0
-    iget-wide v2, v10, Lmiuix/animation/internal/AnimTask;->totalTNanos:J
-
-    iget-wide v4, v10, Lmiuix/animation/internal/AnimTask;->deltaTNanos:J
-
-    iget v6, v10, Lmiuix/animation/internal/AnimTask;->frameCount:I
-
-    iget-wide v0, v10, Lmiuix/animation/internal/AnimTask;->delta:D
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
-
-    const/16 v16, 0x1
-
-    move-wide/from16 v17, v0
-
-    move-object/from16 v1, p0
-
-    move-wide/from16 v19, v13
-
-    move-object v13, v7
-
-    move-wide/from16 v7, v17
-
-    move-object v14, v9
-
-    move/from16 v9, v16
-
-    :try_start_1
-    invoke-static/range {v1 .. v9}, Lmiuix/animation/internal/AnimTaskStackRunner;->doAnimationFrame(Lmiuix/animation/internal/AnimTask;JJIDZ)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v0
+    check-cast p0, Lmiuix/animation/internal/AnimTask;
 
     goto :goto_0
 
-    :catch_1
-    move-exception v0
+    :cond_0
+    return v0
+.end method
 
-    move-wide/from16 v19, v13
+.method public run()V
+    .locals 7
 
-    move-object v13, v7
+    .line 1
+    :try_start_0
+    iget-wide v1, p0, Lmiuix/animation/internal/AnimTask;->totalT:J
 
-    move-object v14, v9
+    iget-wide v3, p0, Lmiuix/animation/internal/AnimTask;->deltaT:J
 
+    const/4 v5, 0x1
+
+    iget-boolean v6, p0, Lmiuix/animation/internal/AnimTask;->toPage:Z
+
+    move-object v0, p0
+
+    invoke-static/range {v0 .. v6}, Lmiuix/animation/internal/AnimRunnerTask;->doAnimationFrame(Lmiuix/animation/internal/AnimTask;JJZZ)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p0
+
+    const-string v0, "miuix_anim"
+
+    const-string v1, "doAnimationFrame failed"
+
+    .line 2
+    invoke-static {v0, v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 3
     :goto_0
-    const/4 v1, 0x1
+    sget-object p0, Lmiuix/animation/internal/AnimTask;->sTaskCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    new-array v1, v1, [Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
 
-    const/4 v2, 0x0
+    move-result p0
 
-    invoke-static {v0}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
+    if-nez p0, :cond_0
 
-    move-result-object v0
+    .line 4
+    sget-object p0, Lmiuix/animation/internal/AnimRunner;->sRunnerHandler:Lmiuix/animation/internal/RunnerHandler;
 
-    aput-object v0, v1, v2
+    const/4 v0, 0x2
 
-    const-string v0, "---- AnimTaskRunner.doAnimationFrame failed"
+    invoke-virtual {p0, v0}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    invoke-static {v13, v0, v1}, Lmiuix/animation/utils/LogUtils;->logThread(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    :goto_1
-    iget-object v0, v10, Lmiuix/animation/internal/AnimTask;->scheduler:Lmiuix/animation/internal/AnimScheduler;
-
-    iget-object v0, v0, Lmiuix/animation/internal/AnimScheduler;->runningStackCount:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
-
-    move-result v0
-
-    if-eqz v15, :cond_1
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v1
-
-    sub-long/2addr v1, v11
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "---- AnimTask run stack onFrame end cost "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, " runStackCount "
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, " belong to Scheduler@"
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, v10, Lmiuix/animation/internal/AnimTask;->scheduler:Lmiuix/animation/internal/AnimScheduler;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-wide/from16 v1, v19
-
-    invoke-virtual {v3, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v13, v1}, Lmiuix/animation/utils/LogUtils;->logThread(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_1
-    if-nez v0, :cond_2
-
-    iget-object v0, v10, Lmiuix/animation/internal/AnimTask;->scheduler:Lmiuix/animation/internal/AnimScheduler;
-
-    invoke-virtual {v0}, Lmiuix/animation/internal/AnimScheduler;->executeUpdate()V
-
-    :cond_2
+    :cond_0
     return-void
 .end method
 
 .method public setup(II)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
 
     invoke-virtual {v0}, Lmiuix/animation/internal/AnimStats;->clear()V
 
+    .line 2
     iget-object v0, p0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
 
     iput p2, v0, Lmiuix/animation/internal/AnimStats;->animCount:I
 
+    .line 3
     iput p1, p0, Lmiuix/animation/internal/AnimTask;->startPos:I
 
     return-void
 .end method
 
-.method public toString()Ljava/lang/String;
-    .locals 2
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
+.method public start(JJZ)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 1
+    iput-wide p1, p0, Lmiuix/animation/internal/AnimTask;->totalT:J
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    .line 2
+    iput-wide p3, p0, Lmiuix/animation/internal/AnimTask;->deltaT:J
 
-    const-string v1, "AnimTask@"
+    .line 3
+    iput-boolean p5, p0, Lmiuix/animation/internal/AnimTask;->toPage:Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 4
+    invoke-static {p0}, Lmiuix/animation/internal/ThreadPoolUtil;->post(Ljava/lang/Runnable;)V
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, "{info.id="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lmiuix/animation/internal/AnimTask;->info:Lmiuix/animation/internal/TransitionInfo;
-
-    iget v1, v1, Lmiuix/animation/internal/TransitionInfo;->id:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, " start="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lmiuix/animation/internal/AnimTask;->startPos:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, " animStats="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, "}"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method
 
 .method public updateAnimStats()V
-    .locals 7
+    .locals 6
 
-    iget-object v0, p0, Lmiuix/animation/internal/AnimTask;->info:Lmiuix/animation/internal/TransitionInfo;
-
-    iget-object v0, v0, Lmiuix/animation/internal/TransitionInfo;->updateList:Ljava/util/List;
+    .line 1
+    iget v0, p0, Lmiuix/animation/internal/AnimTask;->startPos:I
 
     iget v1, p0, Lmiuix/animation/internal/AnimTask;->startPos:I
 
@@ -472,114 +244,122 @@
 
     iget v2, v2, Lmiuix/animation/internal/AnimStats;->animCount:I
 
-    add-int/2addr v2, v1
+    add-int/2addr v1, v2
 
     :goto_0
-    if-ge v1, v2, :cond_6
+    if-ge v0, v1, :cond_6
 
-    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    .line 2
+    iget-object v2, p0, Lmiuix/animation/internal/AnimTask;->info:Lmiuix/animation/internal/TransitionInfo;
 
-    move-result-object v3
+    iget-object v2, v2, Lmiuix/animation/internal/TransitionInfo;->updateList:Ljava/util/List;
 
-    check-cast v3, Lmiuix/animation/listener/UpdateInfo;
+    invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    if-nez v3, :cond_0
+    move-result-object v2
+
+    check-cast v2, Lmiuix/animation/listener/UpdateInfo;
+
+    if-nez v2, :cond_0
 
     goto :goto_2
 
+    .line 3
     :cond_0
-    iget-object v4, v3, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
-
-    iget-byte v4, v4, Lmiuix/animation/internal/AnimInfo;->op:B
-
-    const/4 v5, 0x1
-
-    if-eqz v4, :cond_5
-
-    iget-object v4, v3, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
-
-    iget-byte v4, v4, Lmiuix/animation/internal/AnimInfo;->op:B
-
-    if-ne v4, v5, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    iget-object v4, p0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
-
-    iget v6, v4, Lmiuix/animation/internal/AnimStats;->startedCount:I
-
-    add-int/2addr v6, v5
-
-    iput v6, v4, Lmiuix/animation/internal/AnimStats;->startedCount:I
-
-    iget-object v3, v3, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
+    iget-object v3, v2, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
 
     iget-byte v3, v3, Lmiuix/animation/internal/AnimInfo;->op:B
 
-    const/4 v4, 0x3
+    const/4 v4, 0x1
 
-    if-eq v3, v4, :cond_4
+    if-eqz v3, :cond_5
 
-    const/4 v4, 0x4
+    iget-object v3, v2, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
 
-    if-eq v3, v4, :cond_3
+    iget-byte v3, v3, Lmiuix/animation/internal/AnimInfo;->op:B
 
-    const/4 v4, 0x5
+    if-ne v3, v4, :cond_1
 
-    if-eq v3, v4, :cond_2
+    goto :goto_1
 
-    const/4 v4, 0x6
+    .line 4
+    :cond_1
+    iget-object v3, p0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
 
-    if-eq v3, v4, :cond_2
+    iget v5, v3, Lmiuix/animation/internal/AnimStats;->initCount:I
+
+    add-int/2addr v5, v4
+
+    iput v5, v3, Lmiuix/animation/internal/AnimStats;->initCount:I
+
+    .line 5
+    iget-object v2, v2, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
+
+    iget-byte v2, v2, Lmiuix/animation/internal/AnimInfo;->op:B
+
+    const/4 v3, 0x3
+
+    if-eq v2, v3, :cond_4
+
+    const/4 v3, 0x4
+
+    if-eq v2, v3, :cond_3
+
+    const/4 v3, 0x5
+
+    if-eq v2, v3, :cond_2
 
     goto :goto_2
 
+    .line 6
     :cond_2
-    iget-object v3, p0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
+    iget-object v2, p0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
 
-    iget v4, v3, Lmiuix/animation/internal/AnimStats;->failCount:I
+    iget v3, v2, Lmiuix/animation/internal/AnimStats;->failCount:I
 
-    add-int/2addr v4, v5
+    add-int/2addr v3, v4
 
-    iput v4, v3, Lmiuix/animation/internal/AnimStats;->failCount:I
+    iput v3, v2, Lmiuix/animation/internal/AnimStats;->failCount:I
 
     goto :goto_2
 
+    .line 7
     :cond_3
-    iget-object v3, p0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
+    iget-object v2, p0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
 
-    iget v4, v3, Lmiuix/animation/internal/AnimStats;->cancelCount:I
+    iget v3, v2, Lmiuix/animation/internal/AnimStats;->cancelCount:I
 
-    add-int/2addr v4, v5
+    add-int/2addr v3, v4
 
-    iput v4, v3, Lmiuix/animation/internal/AnimStats;->cancelCount:I
+    iput v3, v2, Lmiuix/animation/internal/AnimStats;->cancelCount:I
 
     goto :goto_2
 
+    .line 8
     :cond_4
-    iget-object v3, p0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
+    iget-object v2, p0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
 
-    iget v4, v3, Lmiuix/animation/internal/AnimStats;->endCount:I
+    iget v3, v2, Lmiuix/animation/internal/AnimStats;->endCount:I
 
-    add-int/2addr v4, v5
+    add-int/2addr v3, v4
 
-    iput v4, v3, Lmiuix/animation/internal/AnimStats;->endCount:I
+    iput v3, v2, Lmiuix/animation/internal/AnimStats;->endCount:I
 
     goto :goto_2
 
+    .line 9
     :cond_5
     :goto_1
-    iget-object v3, p0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
+    iget-object v2, p0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
 
-    iget v4, v3, Lmiuix/animation/internal/AnimStats;->prepareCount:I
+    iget v3, v2, Lmiuix/animation/internal/AnimStats;->startCount:I
 
-    add-int/2addr v4, v5
+    add-int/2addr v3, v4
 
-    iput v4, v3, Lmiuix/animation/internal/AnimStats;->prepareCount:I
+    iput v3, v2, Lmiuix/animation/internal/AnimStats;->startCount:I
 
     :goto_2
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 

@@ -127,6 +127,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/common/api/internal/zacx;
 
     invoke-direct {v0}, Lcom/google/android/gms/common/api/internal/zacx;-><init>()V
@@ -167,18 +168,21 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/Status;->isSuccess()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p2, p1}, Lcom/google/android/gms/tasks/TaskCompletionSource;->trySetResult(Ljava/lang/Object;)Z
 
     move-result p0
 
     return p0
 
+    .line 3
     :cond_0
     invoke-static {p0}, Lcom/google/android/gms/common/internal/ApiExceptionUtil;->fromStatus(Lcom/google/android/gms/common/api/Status;)Lcom/google/android/gms/common/api/ApiException;
 

@@ -1,4 +1,4 @@
-.class Landroidx/print/PrintHelper$PrintUriAdapter$1$1;
+.class public Landroidx/print/PrintHelper$PrintUriAdapter$1$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$2:Landroidx/print/PrintHelper$PrintUriAdapter$1;
+.field public final synthetic this$2:Landroidx/print/PrintHelper$PrintUriAdapter$1;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/print/PrintHelper$PrintUriAdapter$1;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/print/PrintHelper$PrintUriAdapter$1$1;->this$2:Landroidx/print/PrintHelper$PrintUriAdapter$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,12 +38,14 @@
 .method public onCancel()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/print/PrintHelper$PrintUriAdapter$1$1;->this$2:Landroidx/print/PrintHelper$PrintUriAdapter$1;
 
     iget-object v0, v0, Landroidx/print/PrintHelper$PrintUriAdapter$1;->this$1:Landroidx/print/PrintHelper$PrintUriAdapter;
 
     invoke-virtual {v0}, Landroidx/print/PrintHelper$PrintUriAdapter;->cancelLoad()V
 
+    .line 2
     iget-object p0, p0, Landroidx/print/PrintHelper$PrintUriAdapter$1$1;->this$2:Landroidx/print/PrintHelper$PrintUriAdapter$1;
 
     const/4 v0, 0x0

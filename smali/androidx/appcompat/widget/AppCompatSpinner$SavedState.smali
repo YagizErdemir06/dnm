@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/widget/AppCompatSpinner$SavedState;
+.class public Landroidx/appcompat/widget/AppCompatSpinner$SavedState;
 .super Landroid/view/View$BaseSavedState;
 .source "SourceFile"
 
@@ -27,13 +27,14 @@
 
 
 # instance fields
-.field mShowDropdown:Z
+.field public mShowDropdown:Z
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/appcompat/widget/AppCompatSpinner$SavedState$1;
 
     invoke-direct {v0}, Landroidx/appcompat/widget/AppCompatSpinner$SavedState$1;-><init>()V
@@ -83,8 +84,10 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
+    .line 2
     iget-boolean p0, p0, Landroidx/appcompat/widget/AppCompatSpinner$SavedState;->mShowDropdown:Z
 
     int-to-byte p0, p0

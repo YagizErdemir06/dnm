@@ -1,4 +1,4 @@
-.class synthetic Landroidx/constraintlayout/core/parser/CLParser$1;
+.class public synthetic Landroidx/constraintlayout/core/parser/CLParser$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$androidx$constraintlayout$core$parser$CLParser$TYPE:[I
+.field public static final synthetic $SwitchMap$androidx$constraintlayout$core$parser$CLParser$TYPE:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Landroidx/constraintlayout/core/parser/CLParser$TYPE;->values()[Landroidx/constraintlayout/core/parser/CLParser$TYPE;
 
     move-result-object v0

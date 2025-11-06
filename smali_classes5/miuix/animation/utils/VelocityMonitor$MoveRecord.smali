@@ -1,4 +1,4 @@
-.class Lmiuix/animation/utils/VelocityMonitor$MoveRecord;
+.class public Lmiuix/animation/utils/VelocityMonitor$MoveRecord;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field timeStamp:J
+.field public timeStamp:J
 
-.field values:[D
+.field public values:[D
 
 
 # direct methods

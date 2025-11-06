@@ -4,15 +4,17 @@
 
 
 # instance fields
-.field protected final timeline:Lcom/google/android/exoplayer2/Timeline;
+.field public final timeline:Lcom/google/android/exoplayer2/Timeline;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/exoplayer2/Timeline;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/Timeline;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/ForwardingTimeline;->timeline:Lcom/google/android/exoplayer2/Timeline;
 
     return-void
@@ -23,6 +25,7 @@
 .method public getFirstWindowIndex(Z)I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ForwardingTimeline;->timeline:Lcom/google/android/exoplayer2/Timeline;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/Timeline;->getFirstWindowIndex(Z)I
@@ -35,6 +38,7 @@
 .method public getIndexOfPeriod(Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ForwardingTimeline;->timeline:Lcom/google/android/exoplayer2/Timeline;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/Timeline;->getIndexOfPeriod(Ljava/lang/Object;)I
@@ -47,6 +51,7 @@
 .method public getLastWindowIndex(Z)I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ForwardingTimeline;->timeline:Lcom/google/android/exoplayer2/Timeline;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/Timeline;->getLastWindowIndex(Z)I
@@ -59,6 +64,7 @@
 .method public getNextWindowIndex(IIZ)I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ForwardingTimeline;->timeline:Lcom/google/android/exoplayer2/Timeline;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/Timeline;->getNextWindowIndex(IIZ)I
@@ -71,6 +77,7 @@
 .method public getPeriod(ILcom/google/android/exoplayer2/Timeline$Period;Z)Lcom/google/android/exoplayer2/Timeline$Period;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ForwardingTimeline;->timeline:Lcom/google/android/exoplayer2/Timeline;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/Timeline;->getPeriod(ILcom/google/android/exoplayer2/Timeline$Period;Z)Lcom/google/android/exoplayer2/Timeline$Period;
@@ -83,6 +90,7 @@
 .method public getPeriodCount()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ForwardingTimeline;->timeline:Lcom/google/android/exoplayer2/Timeline;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Timeline;->getPeriodCount()I
@@ -95,6 +103,7 @@
 .method public getPreviousWindowIndex(IIZ)I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ForwardingTimeline;->timeline:Lcom/google/android/exoplayer2/Timeline;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/Timeline;->getPreviousWindowIndex(IIZ)I
@@ -107,6 +116,7 @@
 .method public getUidOfPeriod(I)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ForwardingTimeline;->timeline:Lcom/google/android/exoplayer2/Timeline;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/Timeline;->getUidOfPeriod(I)Ljava/lang/Object;
@@ -119,6 +129,7 @@
 .method public getWindow(ILcom/google/android/exoplayer2/Timeline$Window;J)Lcom/google/android/exoplayer2/Timeline$Window;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ForwardingTimeline;->timeline:Lcom/google/android/exoplayer2/Timeline;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/google/android/exoplayer2/Timeline;->getWindow(ILcom/google/android/exoplayer2/Timeline$Window;J)Lcom/google/android/exoplayer2/Timeline$Window;
@@ -131,6 +142,7 @@
 .method public getWindowCount()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ForwardingTimeline;->timeline:Lcom/google/android/exoplayer2/Timeline;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Timeline;->getWindowCount()I

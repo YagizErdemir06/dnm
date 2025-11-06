@@ -19,9 +19,10 @@
 
 
 # direct methods
-.method public constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,6 +44,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/media/session/PlaybackState$Builder;->addCustomAction(Landroid/media/session/PlaybackState$CustomAction;)Landroid/media/session/PlaybackState$Builder;
 
     return-void
@@ -62,6 +64,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/media/session/PlaybackState$CustomAction$Builder;->build()Landroid/media/session/PlaybackState$CustomAction;
 
     move-result-object p0
@@ -83,6 +86,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/media/session/PlaybackState$Builder;->build()Landroid/media/session/PlaybackState;
 
     move-result-object p0
@@ -95,6 +99,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     new-instance v0, Landroid/media/session/PlaybackState$Builder;
 
     invoke-direct {v0}, Landroid/media/session/PlaybackState$Builder;-><init>()V
@@ -120,6 +125,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Landroid/media/session/PlaybackState$CustomAction$Builder;
 
     invoke-direct {v0, p0, p1, p2}, Landroid/media/session/PlaybackState$CustomAction$Builder;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;I)V
@@ -141,6 +147,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/media/session/PlaybackState$CustomAction;->getAction()Ljava/lang/String;
 
     move-result-object p0
@@ -162,6 +169,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/media/session/PlaybackState;->getActions()J
 
     move-result-wide v0
@@ -183,6 +191,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/media/session/PlaybackState;->getActiveQueueItemId()J
 
     move-result-wide v0
@@ -204,6 +213,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/media/session/PlaybackState;->getBufferedPosition()J
 
     move-result-wide v0
@@ -236,6 +246,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/media/session/PlaybackState;->getCustomActions()Ljava/util/List;
 
     move-result-object p0
@@ -257,6 +268,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/media/session/PlaybackState;->getErrorMessage()Ljava/lang/CharSequence;
 
     move-result-object p0
@@ -278,6 +290,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/media/session/PlaybackState$CustomAction;->getExtras()Landroid/os/Bundle;
 
     move-result-object p0
@@ -299,6 +312,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/media/session/PlaybackState$CustomAction;->getIcon()I
 
     move-result p0
@@ -320,6 +334,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/media/session/PlaybackState;->getLastPositionUpdateTime()J
 
     move-result-wide v0
@@ -341,6 +356,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/media/session/PlaybackState$CustomAction;->getName()Ljava/lang/CharSequence;
 
     move-result-object p0
@@ -362,6 +378,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/media/session/PlaybackState;->getPlaybackSpeed()F
 
     move-result p0
@@ -383,6 +400,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/media/session/PlaybackState;->getPosition()J
 
     move-result-wide v0
@@ -404,6 +422,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/media/session/PlaybackState;->getState()I
 
     move-result p0
@@ -427,6 +446,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroid/media/session/PlaybackState$Builder;->setActions(J)Landroid/media/session/PlaybackState$Builder;
 
     return-void
@@ -448,6 +468,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroid/media/session/PlaybackState$Builder;->setActiveQueueItemId(J)Landroid/media/session/PlaybackState$Builder;
 
     return-void
@@ -469,6 +490,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroid/media/session/PlaybackState$Builder;->setBufferedPosition(J)Landroid/media/session/PlaybackState$Builder;
 
     return-void
@@ -490,6 +512,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/media/session/PlaybackState$Builder;->setErrorMessage(Ljava/lang/CharSequence;)Landroid/media/session/PlaybackState$Builder;
 
     return-void
@@ -511,6 +534,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/media/session/PlaybackState$CustomAction$Builder;->setExtras(Landroid/os/Bundle;)Landroid/media/session/PlaybackState$CustomAction$Builder;
 
     return-void
@@ -538,6 +562,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual/range {p0 .. p6}, Landroid/media/session/PlaybackState$Builder;->setState(IJFJ)Landroid/media/session/PlaybackState$Builder;
 
     return-void

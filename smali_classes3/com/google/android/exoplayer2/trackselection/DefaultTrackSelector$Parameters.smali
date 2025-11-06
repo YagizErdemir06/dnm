@@ -122,6 +122,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;-><init>()V
@@ -132,11 +133,11 @@
 
     sput-object v0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->DEFAULT_WITHOUT_CONTEXT:Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
 
+    .line 2
     sput-object v0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->DEFAULT:Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
 
-    new-instance v0, Lcom/google/android/exoplayer2/trackselection/k;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/trackselection/k;-><init>()V
+    .line 3
+    sget-object v0, Ld/j/a/b/x2/e;->a:Ld/j/a/b/x2/e;
 
     sput-object v0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->CREATOR:Lcom/google/android/exoplayer2/Bundleable$Creator;
 
@@ -266,19 +267,10 @@
     return-void
 .end method
 
-.method public static synthetic a(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->lambda$static$0(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 .method public static synthetic access$000(Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;)Landroid/util/SparseArray;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->selectionOverrides:Landroid/util/SparseArray;
 
     return-object p0
@@ -287,6 +279,7 @@
 .method public static synthetic access$100(Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;)Landroid/util/SparseBooleanArray;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->rendererDisabledFlags:Landroid/util/SparseBooleanArray;
 
     return-object p0
@@ -295,10 +288,12 @@
 .method private static areRendererDisabledFlagsEqual(Landroid/util/SparseBooleanArray;Landroid/util/SparseBooleanArray;)Z
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Landroid/util/SparseBooleanArray;->size()I
 
     move-result v0
 
+    .line 2
     invoke-virtual {p1}, Landroid/util/SparseBooleanArray;->size()I
 
     move-result v1
@@ -315,6 +310,7 @@
     :goto_0
     if-ge v1, v0, :cond_2
 
+    .line 3
     invoke-virtual {p0, v1}, Landroid/util/SparseBooleanArray;->keyAt(I)I
 
     move-result v3
@@ -521,6 +517,7 @@
 .method public static getDefaults(Landroid/content/Context;)Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;
 
     invoke-direct {v0, p0}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;-><init>(Landroid/content/Context;)V
@@ -535,6 +532,7 @@
 .method private static getKeysFromSparseBooleanArray(Landroid/util/SparseBooleanArray;)[I
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Landroid/util/SparseBooleanArray;->size()I
 
     move-result v0
@@ -543,6 +541,7 @@
 
     const/4 v1, 0x0
 
+    .line 2
     :goto_0
     invoke-virtual {p0}, Landroid/util/SparseBooleanArray;->size()I
 
@@ -550,6 +549,7 @@
 
     if-ge v1, v2, :cond_0
 
+    .line 3
     invoke-virtual {p0, v1}, Landroid/util/SparseBooleanArray;->keyAt(I)I
 
     move-result v2
@@ -564,9 +564,10 @@
     return-object v0
 .end method
 
-.method private static synthetic lambda$static$0(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
+.method public static synthetic lambda$static$0(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;
 
     const/4 v1, 0x0
@@ -594,20 +595,24 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 2
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 3
     new-instance v2, Landroid/util/SparseArray;
 
     invoke-direct {v2}, Landroid/util/SparseArray;-><init>()V
 
     const/4 v3, 0x0
 
+    .line 4
     :goto_0
     invoke-virtual {p1}, Landroid/util/SparseArray;->size()I
 
@@ -615,10 +620,12 @@
 
     if-ge v3, v4, :cond_2
 
+    .line 5
     invoke-virtual {p1, v3}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v4
 
+    .line 6
     invoke-virtual {p1, v3}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -646,6 +653,7 @@
 
     check-cast v6, Ljava/util/Map$Entry;
 
+    .line 7
     invoke-interface {v6}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v7
@@ -654,12 +662,14 @@
 
     if-eqz v7, :cond_0
 
+    .line 8
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v8
 
     invoke-virtual {v2, v8, v7}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
+    .line 9
     :cond_0
     invoke-interface {v6}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -669,6 +679,7 @@
 
     invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 10
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -680,6 +691,7 @@
     :cond_1
     const/16 v4, 0x3f2
 
+    .line 11
     invoke-static {v4}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->keyForField(I)Ljava/lang/String;
 
     move-result-object v4
@@ -688,22 +700,27 @@
 
     move-result-object v5
 
+    .line 12
     invoke-virtual {p0, v4, v5}, Landroid/os/Bundle;->putIntArray(Ljava/lang/String;[I)V
 
     const/16 v4, 0x3f3
 
+    .line 13
     invoke-static {v4}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->keyForField(I)Ljava/lang/String;
 
     move-result-object v4
 
+    .line 14
     invoke-static {v1}, Lcom/google/android/exoplayer2/util/BundleableUtil;->toBundleArrayList(Ljava/util/Collection;)Ljava/util/ArrayList;
 
     move-result-object v5
 
+    .line 15
     invoke-virtual {p0, v4, v5}, Landroid/os/Bundle;->putParcelableArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
     const/16 v4, 0x3f4
 
+    .line 16
     invoke-static {v4}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->keyForField(I)Ljava/lang/String;
 
     move-result-object v4
@@ -712,6 +729,7 @@
 
     move-result-object v5
 
+    .line 17
     invoke-virtual {p0, v4, v5}, Landroid/os/Bundle;->putSparseParcelableArray(Ljava/lang/String;Landroid/util/SparseArray;)V
 
     add-int/lit8 v3, v3, 0x1
@@ -766,6 +784,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 1
     const-class v2, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -776,9 +795,11 @@
 
     goto/16 :goto_1
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
 
+    .line 3
     invoke-super {p0, p1}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -867,6 +888,7 @@
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->rendererDisabledFlags:Landroid/util/SparseBooleanArray;
 
+    .line 4
     invoke-static {v2, v3}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->areRendererDisabledFlagsEqual(Landroid/util/SparseBooleanArray;Landroid/util/SparseBooleanArray;)Z
 
     move-result v2
@@ -877,6 +899,7 @@
 
     iget-object p1, p1, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->selectionOverrides:Landroid/util/SparseArray;
 
+    .line 5
     invoke-static {p0, p1}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->areSelectionOverridesEqual(Landroid/util/SparseArray;Landroid/util/SparseArray;)Z
 
     move-result p0
@@ -899,6 +922,7 @@
 .method public getRendererDisabled(I)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->rendererDisabledFlags:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseBooleanArray;->get(I)Z
@@ -916,8 +940,10 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->selectionOverrides:Landroid/util/SparseArray;
 
+    .line 2
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -926,6 +952,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-interface {p0, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -946,8 +973,10 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->selectionOverrides:Landroid/util/SparseArray;
 
+    .line 2
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -956,6 +985,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-interface {p0, p2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result p0
@@ -976,6 +1006,7 @@
 .method public hashCode()I
     .locals 3
 
+    .line 1
     invoke-super {p0}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->hashCode()I
 
     move-result v0
@@ -986,78 +1017,91 @@
 
     mul-int/2addr v0, v1
 
+    .line 2
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->exceedVideoConstraintsIfNecessary:Z
 
     add-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
+    .line 3
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->allowVideoMixedMimeTypeAdaptiveness:Z
 
     add-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
+    .line 4
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->allowVideoNonSeamlessAdaptiveness:Z
 
     add-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
+    .line 5
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->allowVideoMixedDecoderSupportAdaptiveness:Z
 
     add-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
+    .line 6
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->exceedAudioConstraintsIfNecessary:Z
 
     add-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
+    .line 7
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->allowAudioMixedMimeTypeAdaptiveness:Z
 
     add-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
+    .line 8
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->allowAudioMixedSampleRateAdaptiveness:Z
 
     add-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
+    .line 9
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->allowAudioMixedChannelCountAdaptiveness:Z
 
     add-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
+    .line 10
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->allowAudioMixedDecoderSupportAdaptiveness:Z
 
     add-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
+    .line 11
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->constrainAudioChannelCountToDeviceCapabilities:Z
 
     add-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
+    .line 12
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->exceedRendererCapabilitiesIfNecessary:Z
 
     add-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
+    .line 13
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->tunnelingEnabled:Z
 
     add-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
+    .line 14
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->allowMultipleAdaptiveSelections:Z
 
     add-int/2addr v0, p0
@@ -1068,122 +1112,146 @@
 .method public toBundle()Landroid/os/Bundle;
     .locals 3
 
+    .line 1
     invoke-super {p0}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->toBundle()Landroid/os/Bundle;
 
     move-result-object v0
 
     const/16 v1, 0x3e8
 
+    .line 2
     invoke-static {v1}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
 
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->exceedVideoConstraintsIfNecessary:Z
 
+    .line 3
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     const/16 v1, 0x3e9
 
+    .line 4
     invoke-static {v1}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
 
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->allowVideoMixedMimeTypeAdaptiveness:Z
 
+    .line 5
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     const/16 v1, 0x3ea
 
+    .line 6
     invoke-static {v1}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
 
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->allowVideoNonSeamlessAdaptiveness:Z
 
+    .line 7
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     const/16 v1, 0x3f6
 
+    .line 8
     invoke-static {v1}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
 
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->allowVideoMixedDecoderSupportAdaptiveness:Z
 
+    .line 9
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     const/16 v1, 0x3eb
 
+    .line 10
     invoke-static {v1}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
 
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->exceedAudioConstraintsIfNecessary:Z
 
+    .line 11
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     const/16 v1, 0x3ec
 
+    .line 12
     invoke-static {v1}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
 
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->allowAudioMixedMimeTypeAdaptiveness:Z
 
+    .line 13
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     const/16 v1, 0x3ed
 
+    .line 14
     invoke-static {v1}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
 
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->allowAudioMixedSampleRateAdaptiveness:Z
 
+    .line 15
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     const/16 v1, 0x3ee
 
+    .line 16
     invoke-static {v1}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
 
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->allowAudioMixedChannelCountAdaptiveness:Z
 
+    .line 17
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     const/16 v1, 0x3f7
 
+    .line 18
     invoke-static {v1}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
 
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->allowAudioMixedDecoderSupportAdaptiveness:Z
 
+    .line 19
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     const/16 v1, 0x3f8
 
+    .line 20
     invoke-static {v1}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
 
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->constrainAudioChannelCountToDeviceCapabilities:Z
 
+    .line 21
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     const/16 v1, 0x3ef
 
+    .line 22
     invoke-static {v1}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
 
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->exceedRendererCapabilitiesIfNecessary:Z
 
+    .line 23
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     const/16 v1, 0x3f0
 
+    .line 24
     invoke-static {v1}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1194,30 +1262,36 @@
 
     const/16 v1, 0x3f1
 
+    .line 25
     invoke-static {v1}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
 
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->allowMultipleAdaptiveSelections:Z
 
+    .line 26
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
+    .line 27
     iget-object v1, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->selectionOverrides:Landroid/util/SparseArray;
 
     invoke-static {v0, v1}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->putSelectionOverridesToBundle(Landroid/os/Bundle;Landroid/util/SparseArray;)V
 
     const/16 v1, 0x3f5
 
+    .line 28
     invoke-static {v1}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->rendererDisabledFlags:Landroid/util/SparseBooleanArray;
 
+    .line 29
     invoke-static {p0}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->getKeysFromSparseBooleanArray(Landroid/util/SparseBooleanArray;)[I
 
     move-result-object p0
 
+    .line 30
     invoke-virtual {v0, v1, p0}, Landroid/os/Bundle;->putIntArray(Ljava/lang/String;[I)V
 
     return-object v0

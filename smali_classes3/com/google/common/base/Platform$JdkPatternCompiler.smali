@@ -1,4 +1,4 @@
-.class final Lcom/google/common/base/Platform$JdkPatternCompiler;
+.class public final Lcom/google/common/base/Platform$JdkPatternCompiler;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -41,6 +41,7 @@
 .method public compile(Ljava/lang/String;)Lcom/google/common/base/CommonPattern;
     .locals 0
 
+    .line 1
     new-instance p0, Lcom/google/common/base/JdkPattern;
 
     invoke-static {p1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;

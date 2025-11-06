@@ -13,16 +13,18 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 1
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lid/b;->a8()Z
+    invoke-virtual {v0}, Ld/k/a/b;->O7()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-static {}, Lcom/android/camera2/compat/theme/MiThemeCompat;->getImpl()Lcom/android/camera2/compat/theme/MiThemeInterface;
 
     move-result-object v0
@@ -31,6 +33,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     new-instance v0, Lcom/android/camera2/compat/theme/common/MiThemeCompatBaseImpl;
 
@@ -45,6 +48,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -52,7 +56,16 @@
 
 .method public static create(Landroid/content/Context;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
+    .line 1
     sget-object v0, Lcom/android/camera2/compat/theme/MiThemeCompat;->IMPL:Lcom/android/camera2/compat/theme/MiThemeInterface;
 
     invoke-interface {v0, p0}, Lcom/android/camera2/compat/theme/MiThemeInterface;->create(Landroid/content/Context;)V
@@ -63,6 +76,7 @@
 .method public static destroy()V
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/android/camera2/compat/theme/MiThemeCompat;->IMPL:Lcom/android/camera2/compat/theme/MiThemeInterface;
 
     invoke-interface {v0}, Lcom/android/camera2/compat/theme/MiThemeInterface;->destroy()V
@@ -70,12 +84,25 @@
     return-void
 .end method
 
-.method public static final getDeviceWatermark(Ljava/lang/String;FZ)Lcom/android/gallery3d/ui/b;
+.method public static final getDeviceWatermark(Ljava/lang/String;FZ)Ld/d/c/a/b;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "customText",
+            "ratio",
+            "isLTR"
+        }
+    .end annotation
 
+    .line 1
     sget-object v0, Lcom/android/camera2/compat/theme/MiThemeCompat;->IMPL:Lcom/android/camera2/compat/theme/MiThemeInterface;
 
-    invoke-interface {v0, p0, p1, p2}, Lcom/android/camera2/compat/theme/MiThemeInterface;->getDeviceWatermark(Ljava/lang/String;FZ)Lcom/android/gallery3d/ui/b;
+    invoke-interface {v0, p0, p1, p2}, Lcom/android/camera2/compat/theme/MiThemeInterface;->getDeviceWatermark(Ljava/lang/String;FZ)Ld/d/c/a/b;
 
     move-result-object p0
 
@@ -84,16 +111,28 @@
 
 .method public static getIfLeicaResBySuffix(Landroid/content/Context;I)I
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "res"
+        }
+    .end annotation
 
     const/4 v0, -0x1
 
     if-eq p1, v0, :cond_1
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 1
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lid/b;->j0()I
+    .line 2
+    invoke-virtual {v0}, Ld/k/a/b;->h0()I
 
     move-result v0
 
@@ -104,6 +143,7 @@
     :cond_0
     const-string v0, "_yellow"
 
+    .line 3
     invoke-static {p0, p1, v0}, Lcom/android/camera2/compat/theme/MiThemeCompat;->getOverlayRes(Landroid/content/Context;ILjava/lang/String;)I
 
     move-result p0
@@ -121,14 +161,21 @@
     const/4 v0, 0x0
 
     :try_start_0
-    const-class v1, Lcom/android/camera/d0;
+    const-string v1, "d.d.a.w3"
+
+    .line 1
+    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v1
 
     const-string v2, "THEME_NAME"
 
+    .line 2
     invoke-virtual {v1, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v1
 
+    .line 3
     invoke-virtual {v1, v0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -144,10 +191,12 @@
     :catch_0
     move-exception v1
 
-    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 4
+    invoke-virtual {v1}, Ljava/lang/ReflectiveOperationException;->printStackTrace()V
 
     move-object v1, v0
 
+    .line 5
     :goto_0
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -155,14 +204,16 @@
 
     if-eqz v2, :cond_0
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 6
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lid/b;->X1()Ljava/lang/String;
+    invoke-virtual {v1}, Ld/k/a/b;->R1()Ljava/lang/String;
 
     move-result-object v1
 
+    .line 7
     :cond_0
     :try_start_1
     new-instance v2, Ljava/lang/StringBuilder;
@@ -183,6 +234,7 @@
 
     move-result-object v1
 
+    .line 8
     invoke-virtual {v1}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
     move-result-object v1
@@ -202,6 +254,7 @@
 
     const-string v2, "MiThemeCompat"
 
+    .line 9
     invoke-static {v2, v1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_1
@@ -211,6 +264,7 @@
 .method public static final getOperationFocus()Lcom/android/camera2/compat/theme/common/MithemeOperationFocusInterface;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/android/camera2/compat/theme/MiThemeCompat;->IMPL:Lcom/android/camera2/compat/theme/MiThemeInterface;
 
     invoke-interface {v0}, Lcom/android/camera2/compat/theme/MiThemeInterface;->getOperationFocus()Lcom/android/camera2/compat/theme/common/MithemeOperationFocusInterface;
@@ -223,6 +277,7 @@
 .method public static final getOperationFragment()Lcom/android/camera2/compat/theme/common/MiThemeOperationFragmentIf;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/android/camera2/compat/theme/MiThemeCompat;->IMPL:Lcom/android/camera2/compat/theme/MiThemeInterface;
 
     invoke-interface {v0}, Lcom/android/camera2/compat/theme/MiThemeInterface;->getFragmentOverlay()Lcom/android/camera2/compat/theme/common/MiThemeOperationFragmentIf;
@@ -235,6 +290,7 @@
 .method public static final getOperationNewTopMenu()Lcom/android/camera2/compat/theme/common/MiThemeOperationNewTopMenuInterface;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/android/camera2/compat/theme/MiThemeCompat;->IMPL:Lcom/android/camera2/compat/theme/MiThemeInterface;
 
     invoke-interface {v0}, Lcom/android/camera2/compat/theme/MiThemeInterface;->getOperationNewTopMenu()Lcom/android/camera2/compat/theme/common/MiThemeOperationNewTopMenuInterface;
@@ -247,6 +303,7 @@
 .method public static final getOperationTopAlert()Lcom/android/camera2/compat/theme/common/MiThemeOperationTopAlertInterface;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/android/camera2/compat/theme/MiThemeCompat;->IMPL:Lcom/android/camera2/compat/theme/MiThemeInterface;
 
     invoke-interface {v0}, Lcom/android/camera2/compat/theme/MiThemeInterface;->getOperationTopAlert()Lcom/android/camera2/compat/theme/common/MiThemeOperationTopAlertInterface;
@@ -259,6 +316,7 @@
 .method public static final getOperationTopMenu()Lcom/android/camera2/compat/theme/common/MiThemeOperationTopMenuInterface;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/android/camera2/compat/theme/MiThemeCompat;->IMPL:Lcom/android/camera2/compat/theme/MiThemeInterface;
 
     invoke-interface {v0}, Lcom/android/camera2/compat/theme/MiThemeInterface;->getOperationTopMenu()Lcom/android/camera2/compat/theme/common/MiThemeOperationTopMenuInterface;
@@ -270,11 +328,24 @@
 
 .method public static getOverlayRes(Landroid/content/Context;ILjava/lang/String;)I
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "srcId",
+            "suffix"
+        }
+    .end annotation
 
     if-nez p1, :cond_0
 
     return p1
 
+    .line 1
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -284,6 +355,7 @@
 
     move-result-object v0
 
+    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -304,6 +376,7 @@
 
     move-result-object p2
 
+    .line 3
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -329,6 +402,14 @@
 
 .method public static getOverlayResBySuffix(I)I
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "srcId"
+        }
+    .end annotation
 
     .line 1
     sget-object v0, Lcom/android/camera2/compat/theme/MiThemeCompat;->IMPL:Lcom/android/camera2/compat/theme/MiThemeInterface;
@@ -342,6 +423,16 @@
 
 .method public static getOverlayResBySuffix(ILjava/lang/String;)I
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "srcId",
+            "suffix"
+        }
+    .end annotation
 
     .line 2
     sget-object v0, Lcom/android/camera2/compat/theme/MiThemeCompat;->IMPL:Lcom/android/camera2/compat/theme/MiThemeInterface;
@@ -356,6 +447,7 @@
 .method public static final getTestStringID()I
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/android/camera2/compat/theme/MiThemeCompat;->IMPL:Lcom/android/camera2/compat/theme/MiThemeInterface;
 
     invoke-interface {v0}, Lcom/android/camera2/compat/theme/MiThemeInterface;->getTestStringID()I
@@ -367,7 +459,18 @@
 
 .method public static getTypeface(Landroid/content/Context;Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "tf"
+        }
+    .end annotation
 
+    .line 1
     sget-object v0, Lcom/android/camera2/compat/theme/MiThemeCompat;->IMPL:Lcom/android/camera2/compat/theme/MiThemeInterface;
 
     invoke-interface {v0, p0, p1}, Lcom/android/camera2/compat/theme/MiThemeInterface;->getTypeface(Landroid/content/Context;Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
@@ -380,6 +483,7 @@
 .method public static final geteOperationZoom()Lcom/android/camera2/compat/theme/common/MiThemeOperationZoomInterface;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/android/camera2/compat/theme/MiThemeCompat;->IMPL:Lcom/android/camera2/compat/theme/MiThemeInterface;
 
     invoke-interface {v0}, Lcom/android/camera2/compat/theme/MiThemeInterface;->getOperationZoom()Lcom/android/camera2/compat/theme/common/MiThemeOperationZoomInterface;
@@ -391,7 +495,16 @@
 
 .method public static setTheme(Landroid/app/Activity;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "activity"
+        }
+    .end annotation
 
+    .line 1
     sget-object v0, Lcom/android/camera2/compat/theme/MiThemeCompat;->IMPL:Lcom/android/camera2/compat/theme/MiThemeInterface;
 
     invoke-interface {v0, p0}, Lcom/android/camera2/compat/theme/MiThemeInterface;->setTheme(Landroid/app/Activity;)V

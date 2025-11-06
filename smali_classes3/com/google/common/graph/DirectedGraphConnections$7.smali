@@ -1,4 +1,4 @@
-.class Lcom/google/common/graph/DirectedGraphConnections$7;
+.class public Lcom/google/common/graph/DirectedGraphConnections$7;
 .super Lcom/google/common/collect/AbstractIterator;
 .source "SourceFile"
 
@@ -23,15 +23,16 @@
 
 
 # instance fields
-.field final synthetic val$alreadySeenSelfLoop:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final synthetic val$alreadySeenSelfLoop:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field final synthetic val$resultWithDoubleSelfLoop:Ljava/util/Iterator;
+.field public final synthetic val$resultWithDoubleSelfLoop:Ljava/util/Iterator;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/graph/DirectedGraphConnections;Ljava/util/Iterator;Ljava/util/concurrent/atomic/AtomicBoolean;)V
     .locals 0
 
+    .line 1
     iput-object p2, p0, Lcom/google/common/graph/DirectedGraphConnections$7;->val$resultWithDoubleSelfLoop:Ljava/util/Iterator;
 
     iput-object p3, p0, Lcom/google/common/graph/DirectedGraphConnections$7;->val$alreadySeenSelfLoop:Ljava/util/concurrent/atomic/AtomicBoolean;

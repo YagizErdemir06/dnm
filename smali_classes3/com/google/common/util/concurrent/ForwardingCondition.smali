@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/util/concurrent/ForwardingCondition;
+.class public abstract Lcom/google/common/util/concurrent/ForwardingCondition;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,6 +15,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -68,6 +69,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingCondition;->delegate()Ljava/util/concurrent/locks/Condition;
 
     move-result-object p0
@@ -82,6 +84,7 @@
 .method public awaitUninterruptibly()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingCondition;->delegate()Ljava/util/concurrent/locks/Condition;
 
     move-result-object p0
@@ -99,6 +102,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingCondition;->delegate()Ljava/util/concurrent/locks/Condition;
 
     move-result-object p0
@@ -116,6 +120,7 @@
 .method public signal()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingCondition;->delegate()Ljava/util/concurrent/locks/Condition;
 
     move-result-object p0
@@ -128,6 +133,7 @@
 .method public signalAll()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingCondition;->delegate()Ljava/util/concurrent/locks/Condition;
 
     move-result-object p0

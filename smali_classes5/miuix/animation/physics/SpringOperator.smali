@@ -7,71 +7,91 @@
 
 
 # instance fields
-.field params:[D
+.field public params:[D
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public constructor <init>(FF)V
+    .locals 3
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x2
+
+    new-array v1, v0, [D
+
+    .line 3
+    iput-object v1, p0, Lmiuix/animation/physics/SpringOperator;->params:[D
+
+    new-array v0, v0, [F
+
+    const/4 v2, 0x0
+
+    aput p1, v0, v2
+
+    const/4 p1, 0x1
+
+    aput p2, v0, p1
+
+    .line 4
+    invoke-virtual {p0, v0, v1}, Lmiuix/animation/physics/SpringOperator;->getParameters([F[D)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public getParameters([D[D)V
-    .locals 11
+.method public getParameters([F[D)V
+    .locals 9
 
     const/4 p0, 0x0
 
-    aget-wide v0, p1, p0
+    .line 1
+    aget v0, p1, p0
+
+    float-to-double v0, v0
 
     const/4 v2, 0x1
 
-    aget-wide v3, p1, v2
+    .line 2
+    aget p1, p1, v2
 
-    array-length v5, p1
+    float-to-double v3, p1
 
-    const/4 v6, 0x3
+    const-wide v5, 0x401921fb54442d18L    # 6.283185307179586
 
-    if-lt v5, v6, :cond_0
+    div-double/2addr v5, v3
 
-    const/4 v5, 0x2
+    const-wide/high16 v7, 0x4000000000000000L    # 2.0
 
-    aget-wide v5, p1, v5
+    .line 3
+    invoke-static {v5, v6, v7, v8}, Ljava/lang/Math;->pow(DD)D
 
-    goto :goto_0
+    move-result-wide v5
 
-    :cond_0
-    const-wide/high16 v5, 0x3ff0000000000000L    # 1.0
-
-    :goto_0
-    const-wide v7, 0x401921fb54442d18L    # 6.283185307179586
-
-    div-double/2addr v7, v3
-
-    const-wide/high16 v9, 0x4000000000000000L    # 2.0
-
-    invoke-static {v7, v8, v9, v10}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v7
-
-    mul-double/2addr v7, v5
-
-    aput-wide v7, p2, p0
+    aput-wide v5, p2, p0
 
     const-wide p0, 0x402921fb54442d18L    # 12.566370614359172
 
     mul-double/2addr v0, p0
 
-    mul-double/2addr v0, v5
-
     div-double/2addr v0, v3
 
     const-wide/high16 p0, 0x404e000000000000L    # 60.0
 
+    .line 4
     invoke-static {v0, v1, p0, p1}, Ljava/lang/Math;->min(DD)D
 
     move-result-wide p0
@@ -94,9 +114,9 @@
     .line 7
     aget-wide v2, p9, p0
 
-    const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
-
     mul-double/2addr p5, p7
+
+    const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
 
     sub-double/2addr v4, p5
 

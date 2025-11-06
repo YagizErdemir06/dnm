@@ -397,7 +397,7 @@
 .end method
 
 .method private constructor <init>(Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Builder;)V
-    .locals 13
+    .locals 12
     .annotation runtime Lorg/checkerframework/checker/nullness/qual/RequiresNonNull;
         value = {
             "#1.audioProcessorChain"
@@ -424,54 +424,54 @@
     .line 21
     sget v1, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
-    const/16 v2, 0x15
+    const/4 v2, 0x1
 
-    const/4 v3, 0x1
+    const/4 v3, 0x0
 
-    const/4 v4, 0x0
+    const/16 v4, 0x15
 
-    if-lt v1, v2, :cond_0
+    if-lt v1, v4, :cond_0
 
     invoke-static {p1}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Builder;->access$300(Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Builder;)Z
 
-    move-result v2
+    move-result v4
 
-    if-eqz v2, :cond_0
+    if-eqz v4, :cond_0
 
-    move v2, v3
+    move v4, v2
 
     goto :goto_0
 
     :cond_0
-    move v2, v4
+    move v4, v3
 
     :goto_0
-    iput-boolean v2, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->enableFloatOutput:Z
+    iput-boolean v4, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->enableFloatOutput:Z
 
-    const/16 v2, 0x17
+    const/16 v4, 0x17
 
-    if-lt v1, v2, :cond_1
+    if-lt v1, v4, :cond_1
 
     .line 22
     invoke-static {p1}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Builder;->access$400(Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Builder;)Z
 
-    move-result v2
+    move-result v4
 
-    if-eqz v2, :cond_1
+    if-eqz v4, :cond_1
 
-    move v2, v3
+    move v4, v2
 
     goto :goto_1
 
     :cond_1
-    move v2, v4
+    move v4, v3
 
     :goto_1
-    iput-boolean v2, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->enableAudioTrackPlaybackParams:Z
+    iput-boolean v4, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->enableAudioTrackPlaybackParams:Z
 
-    const/16 v2, 0x1d
+    const/16 v4, 0x1d
 
-    if-lt v1, v2, :cond_2
+    if-lt v1, v4, :cond_2
 
     .line 23
     invoke-static {p1}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Builder;->access$500(Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Builder;)I
@@ -481,7 +481,7 @@
     goto :goto_2
 
     :cond_2
-    move v1, v4
+    move v1, v3
 
     :goto_2
     iput v1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->offloadMode:I
@@ -494,7 +494,7 @@
     .line 25
     new-instance p1, Landroid/os/ConditionVariable;
 
-    invoke-direct {p1, v3}, Landroid/os/ConditionVariable;-><init>(Z)V
+    invoke-direct {p1, v2}, Landroid/os/ConditionVariable;-><init>(Z)V
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->releasingConditionVariable:Landroid/os/ConditionVariable;
 
@@ -503,9 +503,9 @@
 
     new-instance v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$PositionTrackerListener;
 
-    const/4 v2, 0x0
+    const/4 v4, 0x0
 
-    invoke-direct {v1, p0, v2}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$PositionTrackerListener;-><init>(Lcom/google/android/exoplayer2/audio/DefaultAudioSink;Lcom/google/android/exoplayer2/audio/DefaultAudioSink$1;)V
+    invoke-direct {v1, p0, v4}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$PositionTrackerListener;-><init>(Lcom/google/android/exoplayer2/audio/DefaultAudioSink;Lcom/google/android/exoplayer2/audio/DefaultAudioSink$1;)V
 
     invoke-direct {p1, v1}, Lcom/google/android/exoplayer2/audio/AudioTrackPositionTracker;-><init>(Lcom/google/android/exoplayer2/audio/AudioTrackPositionTracker$Listener;)V
 
@@ -526,9 +526,9 @@
     iput-object v1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->trimmingAudioProcessor:Lcom/google/android/exoplayer2/audio/TrimmingAudioProcessor;
 
     .line 29
-    new-instance v2, Ljava/util/ArrayList;
+    new-instance v4, Ljava/util/ArrayList;
 
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v5, 0x3
 
@@ -539,27 +539,27 @@
 
     invoke-direct {v6}, Lcom/google/android/exoplayer2/audio/ResamplingAudioProcessor;-><init>()V
 
-    aput-object v6, v5, v4
+    aput-object v6, v5, v3
 
-    aput-object p1, v5, v3
+    aput-object p1, v5, v2
 
     const/4 p1, 0x2
 
     aput-object v1, v5, p1
 
-    invoke-static {v2, v5}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
+    invoke-static {v4, v5}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
 
     .line 31
     invoke-interface {v0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$AudioProcessorChain;->getAudioProcessors()[Lcom/google/android/exoplayer2/audio/AudioProcessor;
 
     move-result-object p1
 
-    invoke-static {v2, p1}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
+    invoke-static {v4, p1}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
 
-    new-array p1, v4, [Lcom/google/android/exoplayer2/audio/AudioProcessor;
+    new-array p1, v3, [Lcom/google/android/exoplayer2/audio/AudioProcessor;
 
     .line 32
-    invoke-virtual {v2, p1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-virtual {v4, p1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p1
 
@@ -567,14 +567,14 @@
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->toIntPcmAvailableAudioProcessors:[Lcom/google/android/exoplayer2/audio/AudioProcessor;
 
-    new-array p1, v3, [Lcom/google/android/exoplayer2/audio/AudioProcessor;
+    new-array p1, v2, [Lcom/google/android/exoplayer2/audio/AudioProcessor;
 
     .line 33
     new-instance v0, Lcom/google/android/exoplayer2/audio/FloatResamplingAudioProcessor;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/audio/FloatResamplingAudioProcessor;-><init>()V
 
-    aput-object v0, p1, v4
+    aput-object v0, p1, v3
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->toFloatPcmAvailableAudioProcessors:[Lcom/google/android/exoplayer2/audio/AudioProcessor;
 
@@ -589,14 +589,14 @@
     iput-object p1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioAttributes:Lcom/google/android/exoplayer2/audio/AudioAttributes;
 
     .line 36
-    iput v4, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioSessionId:I
+    iput v3, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioSessionId:I
 
     .line 37
     new-instance p1, Lcom/google/android/exoplayer2/audio/AuxEffectInfo;
 
     const/4 v0, 0x0
 
-    invoke-direct {p1, v4, v0}, Lcom/google/android/exoplayer2/audio/AuxEffectInfo;-><init>(IF)V
+    invoke-direct {p1, v3, v0}, Lcom/google/android/exoplayer2/audio/AuxEffectInfo;-><init>(IF)V
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->auxEffectInfo:Lcom/google/android/exoplayer2/audio/AuxEffectInfo;
 
@@ -605,19 +605,19 @@
 
     sget-object v0, Lcom/google/android/exoplayer2/PlaybackParameters;->DEFAULT:Lcom/google/android/exoplayer2/PlaybackParameters;
 
-    const/4 v7, 0x0
+    const/4 v6, 0x0
 
-    const-wide/16 v8, 0x0
+    const-wide/16 v7, 0x0
 
-    const-wide/16 v10, 0x0
+    const-wide/16 v9, 0x0
 
-    const/4 v12, 0x0
+    const/4 v11, 0x0
 
-    move-object v5, p1
+    move-object v4, p1
 
-    move-object v6, v0
+    move-object v5, v0
 
-    invoke-direct/range {v5 .. v12}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;-><init>(Lcom/google/android/exoplayer2/PlaybackParameters;ZJJLcom/google/android/exoplayer2/audio/DefaultAudioSink$1;)V
+    invoke-direct/range {v4 .. v11}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;-><init>(Lcom/google/android/exoplayer2/PlaybackParameters;ZJJLcom/google/android/exoplayer2/audio/DefaultAudioSink$1;)V
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->mediaPositionParameters:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;
 
@@ -629,12 +629,12 @@
     .line 40
     iput p1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->drainingAudioProcessorIndex:I
 
-    new-array p1, v4, [Lcom/google/android/exoplayer2/audio/AudioProcessor;
+    new-array p1, v3, [Lcom/google/android/exoplayer2/audio/AudioProcessor;
 
     .line 41
     iput-object p1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->activeAudioProcessors:[Lcom/google/android/exoplayer2/audio/AudioProcessor;
 
-    new-array p1, v4, [Ljava/nio/ByteBuffer;
+    new-array p1, v3, [Ljava/nio/ByteBuffer;
 
     .line 42
     iput-object p1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->outputBuffers:[Ljava/nio/ByteBuffer;
@@ -677,6 +677,7 @@
 .method public static synthetic access$1000(Lcom/google/android/exoplayer2/audio/DefaultAudioSink;)Lcom/google/android/exoplayer2/audio/AudioSink$Listener;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->listener:Lcom/google/android/exoplayer2/audio/AudioSink$Listener;
 
     return-object p0
@@ -685,6 +686,7 @@
 .method public static synthetic access$1100(Lcom/google/android/exoplayer2/audio/DefaultAudioSink;)Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->playing:Z
 
     return p0
@@ -693,6 +695,7 @@
 .method public static synthetic access$1200(Lcom/google/android/exoplayer2/audio/DefaultAudioSink;)J
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->getSubmittedFrames()J
 
     move-result-wide v0
@@ -703,6 +706,7 @@
 .method public static synthetic access$1300(Lcom/google/android/exoplayer2/audio/DefaultAudioSink;)J
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->getWrittenFrames()J
 
     move-result-wide v0
@@ -713,6 +717,7 @@
 .method public static synthetic access$1500(Lcom/google/android/exoplayer2/audio/DefaultAudioSink;)J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->lastFeedElapsedRealtimeMs:J
 
     return-wide v0
@@ -721,6 +726,7 @@
 .method public static synthetic access$1600(III)Landroid/media/AudioFormat;
     .locals 0
 
+    .line 1
     invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->getAudioFormat(III)Landroid/media/AudioFormat;
 
     move-result-object p0
@@ -731,6 +737,7 @@
 .method public static synthetic access$800(Lcom/google/android/exoplayer2/audio/DefaultAudioSink;)Landroid/os/ConditionVariable;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->releasingConditionVariable:Landroid/os/ConditionVariable;
 
     return-object p0
@@ -739,6 +746,7 @@
 .method public static synthetic access$900(Lcom/google/android/exoplayer2/audio/DefaultAudioSink;)Landroid/media/AudioTrack;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
 
     return-object p0
@@ -747,12 +755,14 @@
 .method private applyAudioProcessorPlaybackParametersAndSkipSilence(J)V
     .locals 11
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->shouldApplyAudioProcessorPlaybackParameters()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioProcessorChain:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$AudioProcessorChain;
 
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->getAudioProcessorPlaybackParameters()Lcom/google/android/exoplayer2/PlaybackParameters;
@@ -765,18 +775,21 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     sget-object v0, Lcom/google/android/exoplayer2/PlaybackParameters;->DEFAULT:Lcom/google/android/exoplayer2/PlaybackParameters;
 
     :goto_0
     move-object v2, v0
 
+    .line 4
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->shouldApplyAudioProcessorPlaybackParameters()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 5
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioProcessorChain:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$AudioProcessorChain;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->getSkipSilenceEnabled()Z
@@ -792,6 +805,7 @@
     :cond_1
     const/4 v0, 0x0
 
+    .line 6
     :goto_1
     iget-object v9, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->mediaPositionParametersCheckpoints:Ljava/util/ArrayDeque;
 
@@ -799,12 +813,14 @@
 
     const-wide/16 v3, 0x0
 
+    .line 7
     invoke-static {v3, v4, p1, p2}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide v4
 
     iget-object p1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->configuration:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;
 
+    .line 8
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->getWrittenFrames()J
 
     move-result-wide v6
@@ -821,14 +837,18 @@
 
     invoke-direct/range {v1 .. v8}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;-><init>(Lcom/google/android/exoplayer2/PlaybackParameters;ZJJLcom/google/android/exoplayer2/audio/DefaultAudioSink$1;)V
 
+    .line 9
     invoke-virtual {v9, v10}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
 
+    .line 10
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->setupAudioProcessors()V
 
+    .line 11
     iget-object p0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->listener:Lcom/google/android/exoplayer2/audio/AudioSink$Listener;
 
     if-eqz p0, :cond_2
 
+    .line 12
     invoke-interface {p0, v0}, Lcom/google/android/exoplayer2/audio/AudioSink$Listener;->onSkipSilenceEnabledChanged(Z)V
 
     :cond_2
@@ -838,6 +858,7 @@
 .method private applyMediaPositionParameters(J)J
     .locals 4
 
+    .line 1
     :goto_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->mediaPositionParametersCheckpoints:Ljava/util/ArrayDeque;
 
@@ -849,6 +870,7 @@
 
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->mediaPositionParametersCheckpoints:Ljava/util/ArrayDeque;
 
+    .line 2
     invoke-virtual {v0}, Ljava/util/ArrayDeque;->getFirst()Ljava/lang/Object;
 
     move-result-object v0
@@ -861,6 +883,7 @@
 
     if-ltz v0, :cond_0
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->mediaPositionParametersCheckpoints:Ljava/util/ArrayDeque;
 
     invoke-virtual {v0}, Ljava/util/ArrayDeque;->remove()Ljava/lang/Object;
@@ -873,6 +896,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->mediaPositionParameters:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;
 
@@ -880,6 +904,7 @@
 
     sub-long v1, p1, v1
 
+    .line 5
     iget-object v0, v0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;->playbackParameters:Lcom/google/android/exoplayer2/PlaybackParameters;
 
     sget-object v3, Lcom/google/android/exoplayer2/PlaybackParameters;->DEFAULT:Lcom/google/android/exoplayer2/PlaybackParameters;
@@ -890,6 +915,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 6
     iget-object p0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->mediaPositionParameters:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;
 
     iget-wide p0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;->mediaTimeUs:J
@@ -898,6 +924,7 @@
 
     return-wide p0
 
+    .line 7
     :cond_1
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->mediaPositionParametersCheckpoints:Ljava/util/ArrayDeque;
 
@@ -907,12 +934,15 @@
 
     if-eqz v0, :cond_2
 
+    .line 8
     iget-object p1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioProcessorChain:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$AudioProcessorChain;
 
+    .line 9
     invoke-interface {p1, v1, v2}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$AudioProcessorChain;->getMediaDuration(J)J
 
     move-result-wide p1
 
+    .line 10
     iget-object p0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->mediaPositionParameters:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;
 
     iget-wide v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;->mediaTimeUs:J
@@ -921,29 +951,35 @@
 
     return-wide v0
 
+    .line 11
     :cond_2
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->mediaPositionParametersCheckpoints:Ljava/util/ArrayDeque;
 
+    .line 12
     invoke-virtual {v0}, Ljava/util/ArrayDeque;->getFirst()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;
 
+    .line 13
     iget-wide v1, v0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;->audioTrackPositionUs:J
 
     sub-long/2addr v1, p1
 
+    .line 14
     iget-object p0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->mediaPositionParameters:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;->playbackParameters:Lcom/google/android/exoplayer2/PlaybackParameters;
 
     iget p0, p0, Lcom/google/android/exoplayer2/PlaybackParameters;->speed:F
 
+    .line 15
     invoke-static {v1, v2, p0}, Lcom/google/android/exoplayer2/util/Util;->getMediaDurationForPlayoutDuration(JF)J
 
     move-result-wide p0
 
+    .line 16
     iget-wide v0, v0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;->mediaTimeUs:J
 
     sub-long/2addr v0, p0
@@ -954,10 +990,12 @@
 .method private applySkipping(J)J
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->configuration:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioProcessorChain:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$AudioProcessorChain;
 
+    .line 2
     invoke-interface {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$AudioProcessorChain;->getSkippedOutputFrameCount()J
 
     move-result-wide v1
@@ -979,6 +1017,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->tunneling:Z
 
@@ -997,12 +1036,15 @@
     :catch_0
     move-exception p1
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->listener:Lcom/google/android/exoplayer2/audio/AudioSink$Listener;
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/audio/AudioSink$Listener;->onAudioSinkError(Ljava/lang/Exception;)V
 
+    .line 4
     :cond_0
     throw p1
 .end method
@@ -1015,6 +1057,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->configuration:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;
 
@@ -1035,6 +1078,7 @@
     :catch_0
     move-exception v0
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->configuration:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;
 
     iget v2, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;->bufferSize:I
@@ -1043,15 +1087,18 @@
 
     if-le v2, v3, :cond_0
 
+    .line 3
     invoke-virtual {v1, v3}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;->copyWithBufferSize(I)Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;
 
     move-result-object v1
 
+    .line 4
     :try_start_1
     invoke-direct {p0, v1}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->buildAudioTrack(Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;)Landroid/media/AudioTrack;
 
     move-result-object v2
 
+    .line 5
     iput-object v1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->configuration:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;
     :try_end_1
     .catch Lcom/google/android/exoplayer2/audio/AudioSink$InitializationException; {:try_start_1 .. :try_end_1} :catch_1
@@ -1061,11 +1108,14 @@
     :catch_1
     move-exception v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+    .line 6
+    invoke-virtual {v0, v1}, Ljava/lang/Exception;->addSuppressed(Ljava/lang/Throwable;)V
 
+    .line 7
     :cond_0
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->maybeDisableOffload()V
 
+    .line 8
     throw v0
 .end method
 
@@ -1077,26 +1127,29 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->drainingAudioProcessorIndex:I
 
-    const/4 v1, 0x1
+    const/4 v1, -0x1
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
-    const/4 v3, -0x1
+    const/4 v3, 0x0
 
-    if-ne v0, v3, :cond_0
+    if-ne v0, v1, :cond_0
 
-    iput v2, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->drainingAudioProcessorIndex:I
+    .line 2
+    iput v3, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->drainingAudioProcessorIndex:I
 
     :goto_0
-    move v0, v1
+    move v0, v2
 
     goto :goto_1
 
     :cond_0
-    move v0, v2
+    move v0, v3
 
+    .line 3
     :goto_1
     iget v4, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->drainingAudioProcessorIndex:I
 
@@ -1108,49 +1161,58 @@
 
     if-ge v4, v6, :cond_3
 
+    .line 4
     aget-object v4, v5, v4
 
     if-eqz v0, :cond_1
 
+    .line 5
     invoke-interface {v4}, Lcom/google/android/exoplayer2/audio/AudioProcessor;->queueEndOfStream()V
 
+    .line 6
     :cond_1
     invoke-direct {p0, v7, v8}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->processBuffers(J)V
 
+    .line 7
     invoke-interface {v4}, Lcom/google/android/exoplayer2/audio/AudioProcessor;->isEnded()Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    return v2
+    return v3
 
+    .line 8
     :cond_2
     iget v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->drainingAudioProcessorIndex:I
 
-    add-int/2addr v0, v1
+    add-int/2addr v0, v2
 
     iput v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->drainingAudioProcessorIndex:I
 
     goto :goto_0
 
+    .line 9
     :cond_3
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->outputBuffer:Ljava/nio/ByteBuffer;
 
     if-eqz v0, :cond_4
 
+    .line 10
     invoke-direct {p0, v0, v7, v8}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->writeBuffer(Ljava/nio/ByteBuffer;J)V
 
+    .line 11
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->outputBuffer:Ljava/nio/ByteBuffer;
 
     if-eqz v0, :cond_4
 
-    return v2
+    return v3
 
+    .line 12
     :cond_4
-    iput v3, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->drainingAudioProcessorIndex:I
+    iput v1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->drainingAudioProcessorIndex:I
 
-    return v1
+    return v2
 .end method
 
 .method private flushAudioProcessors()V
@@ -1158,6 +1220,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->activeAudioProcessors:[Lcom/google/android/exoplayer2/audio/AudioProcessor;
 
@@ -1165,10 +1228,13 @@
 
     if-ge v0, v2, :cond_0
 
+    .line 2
     aget-object v1, v1, v0
 
+    .line 3
     invoke-interface {v1}, Lcom/google/android/exoplayer2/audio/AudioProcessor;->flush()V
 
+    .line 4
     iget-object v2, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->outputBuffers:[Ljava/nio/ByteBuffer;
 
     invoke-interface {v1}, Lcom/google/android/exoplayer2/audio/AudioProcessor;->getOutput()Ljava/nio/ByteBuffer;
@@ -1191,22 +1257,27 @@
         value = 0x15
     .end annotation
 
+    .line 1
     new-instance v0, Landroid/media/AudioFormat$Builder;
 
     invoke-direct {v0}, Landroid/media/AudioFormat$Builder;-><init>()V
 
+    .line 2
     invoke-virtual {v0, p0}, Landroid/media/AudioFormat$Builder;->setSampleRate(I)Landroid/media/AudioFormat$Builder;
 
     move-result-object p0
 
+    .line 3
     invoke-virtual {p0, p1}, Landroid/media/AudioFormat$Builder;->setChannelMask(I)Landroid/media/AudioFormat$Builder;
 
     move-result-object p0
 
+    .line 4
     invoke-virtual {p0, p2}, Landroid/media/AudioFormat$Builder;->setEncoding(I)Landroid/media/AudioFormat$Builder;
 
     move-result-object p0
 
+    .line 5
     invoke-virtual {p0}, Landroid/media/AudioFormat$Builder;->build()Landroid/media/AudioFormat;
 
     move-result-object p0
@@ -1217,6 +1288,7 @@
 .method private getAudioProcessorPlaybackParameters()Lcom/google/android/exoplayer2/PlaybackParameters;
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->getMediaPositionParameters()Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;
 
     move-result-object p0
@@ -1229,6 +1301,7 @@
 .method private static getAudioTrackMinBufferSize(III)I
     .locals 0
 
+    .line 1
     invoke-static {p0, p1, p2}, Landroid/media/AudioTrack;->getMinBufferSize(III)I
 
     move-result p0
@@ -1244,6 +1317,7 @@
     :cond_0
     const/4 p1, 0x0
 
+    .line 2
     :goto_0
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
@@ -1259,6 +1333,7 @@
 
     packed-switch p0, :pswitch_data_0
 
+    .line 1
     :pswitch_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -1280,6 +1355,7 @@
 
     throw p1
 
+    .line 2
     :pswitch_1
     invoke-static {p1}, Lcom/google/android/exoplayer2/audio/Ac4Util;->parseAc4SyncframeAudioSampleCount(Ljava/nio/ByteBuffer;)I
 
@@ -1295,6 +1371,7 @@
 
     return p0
 
+    .line 3
     :pswitch_4
     invoke-static {p1}, Lcom/google/android/exoplayer2/audio/Ac3Util;->findTrueHdSyncframeOffset(Ljava/nio/ByteBuffer;)I
 
@@ -1306,6 +1383,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-static {p1, p0}, Lcom/google/android/exoplayer2/audio/Ac3Util;->parseTrueHdSyncframeAudioSampleCount(Ljava/nio/ByteBuffer;I)I
 
@@ -1324,8 +1402,9 @@
     :pswitch_6
     return v0
 
+    .line 5
     :pswitch_7
-    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
 
     move-result p0
 
@@ -1333,6 +1412,7 @@
 
     move-result p0
 
+    .line 6
     invoke-static {p0}, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->parseMpegAudioFrameSampleCount(I)I
 
     move-result p0
@@ -1341,6 +1421,7 @@
 
     return p0
 
+    .line 7
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1348,6 +1429,7 @@
 
     throw p0
 
+    .line 8
     :pswitch_8
     invoke-static {p1}, Lcom/google/android/exoplayer2/audio/DtsUtil;->parseDtsAudioSampleCount(Ljava/nio/ByteBuffer;)I
 
@@ -1355,6 +1437,7 @@
 
     return p0
 
+    .line 9
     :pswitch_9
     invoke-static {p1}, Lcom/google/android/exoplayer2/audio/Ac3Util;->parseAc3SyncframeAudioSampleCount(Ljava/nio/ByteBuffer;)I
 
@@ -1384,12 +1467,14 @@
 .method private getMediaPositionParameters()Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->afterDrainParameters:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;
 
     if-eqz v0, :cond_0
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->mediaPositionParametersCheckpoints:Ljava/util/ArrayDeque;
 
@@ -1399,6 +1484,7 @@
 
     if-nez v0, :cond_1
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->mediaPositionParametersCheckpoints:Ljava/util/ArrayDeque;
 
     invoke-virtual {p0}, Ljava/util/ArrayDeque;->getLast()Ljava/lang/Object;
@@ -1411,6 +1497,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->mediaPositionParameters:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;
 
@@ -1430,18 +1517,21 @@
         value = 0x1d
     .end annotation
 
+    .line 1
     sget p0, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
     const/16 v0, 0x1f
 
     if-lt p0, v0, :cond_0
 
+    .line 2
     invoke-static {p1, p2}, Landroid/media/AudioManager;->getPlaybackOffloadSupport(Landroid/media/AudioFormat;Landroid/media/AudioAttributes;)I
 
     move-result p0
 
     return p0
 
+    .line 3
     :cond_0
     invoke-static {p1, p2}, Landroid/media/AudioManager;->isOffloadedPlaybackSupported(Landroid/media/AudioFormat;Landroid/media/AudioAttributes;)Z
 
@@ -1458,6 +1548,7 @@
 
     if-ne p0, p1, :cond_2
 
+    .line 4
     sget-object p0, Lcom/google/android/exoplayer2/util/Util;->MODEL:Ljava/lang/String;
 
     const-string p1, "Pixel"
@@ -1481,12 +1572,14 @@
 .method private getSubmittedFrames()J
     .locals 5
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->configuration:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;
 
     iget v1, v0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;->outputMode:I
 
     if-nez v1, :cond_0
 
+    .line 2
     iget-wide v1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->submittedPcmBytes:J
 
     iget p0, v0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;->inputPcmFrameSize:I
@@ -1497,6 +1590,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-wide v1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->submittedEncodedFrames:J
 
@@ -1507,12 +1601,14 @@
 .method private getWrittenFrames()J
     .locals 5
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->configuration:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;
 
     iget v1, v0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;->outputMode:I
 
     if-nez v1, :cond_0
 
+    .line 2
     iget-wide v1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->writtenPcmBytes:J
 
     iget p0, v0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;->outputPcmFrameSize:I
@@ -1523,6 +1619,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-wide v1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->writtenEncodedFrames:J
 
@@ -1538,32 +1635,38 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->releasingConditionVariable:Landroid/os/ConditionVariable;
 
     invoke-virtual {v0}, Landroid/os/ConditionVariable;->block()V
 
+    .line 2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->buildAudioTrackWithRetry()Landroid/media/AudioTrack;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
 
+    .line 3
     invoke-static {v0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->isOffloadedPlayback(Landroid/media/AudioTrack;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 4
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
 
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->registerStreamEventCallbackV29(Landroid/media/AudioTrack;)V
 
+    .line 5
     iget v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->offloadMode:I
 
     const/4 v1, 0x3
 
     if-eq v0, v1, :cond_0
 
+    .line 6
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->configuration:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;
@@ -1576,6 +1679,7 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/media/AudioTrack;->setOffloadDelayPadding(II)V
 
+    .line 7
     :cond_0
     sget v0, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
@@ -1587,10 +1691,12 @@
 
     if-eqz v0, :cond_1
 
+    .line 8
     iget-object v1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
 
     invoke-static {v1, v0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Api31;->setLogSessionIdOnAudioTrack(Landroid/media/AudioTrack;Lcom/google/android/exoplayer2/analytics/PlayerId;)V
 
+    .line 9
     :cond_1
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
 
@@ -1600,6 +1706,7 @@
 
     iput v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioSessionId:I
 
+    .line 10
     iget-object v1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrackPositionTracker:Lcom/google/android/exoplayer2/audio/AudioTrackPositionTracker;
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
@@ -1630,18 +1737,22 @@
 
     invoke-virtual/range {v1 .. v6}, Lcom/google/android/exoplayer2/audio/AudioTrackPositionTracker;->setAudioTrack(Landroid/media/AudioTrack;ZIII)V
 
+    .line 11
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->setVolumeInternal()V
 
+    .line 12
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->auxEffectInfo:Lcom/google/android/exoplayer2/audio/AuxEffectInfo;
 
     iget v0, v0, Lcom/google/android/exoplayer2/audio/AuxEffectInfo;->effectId:I
 
     if-eqz v0, :cond_3
 
+    .line 13
     iget-object v1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
 
     invoke-virtual {v1, v0}, Landroid/media/AudioTrack;->attachAuxEffect(I)I
 
+    .line 14
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->auxEffectInfo:Lcom/google/android/exoplayer2/audio/AuxEffectInfo;
@@ -1650,6 +1761,7 @@
 
     invoke-virtual {v0, v1}, Landroid/media/AudioTrack;->setAuxEffectSendLevel(F)I
 
+    .line 15
     :cond_3
     iput-boolean v7, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->startMediaTimeUsNeedsInit:Z
 
@@ -1659,6 +1771,7 @@
 .method private static isAudioTrackDeadObject(I)Z
     .locals 2
 
+    .line 1
     sget v0, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
     const/16 v1, 0x18
@@ -1689,6 +1802,7 @@
 .method private isAudioTrackInitialized()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
 
     if-eqz p0, :cond_0
@@ -1707,6 +1821,7 @@
 .method private static isOffloadedPlayback(Landroid/media/AudioTrack;)Z
     .locals 2
 
+    .line 1
     sget v0, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
     const/16 v1, 0x1d
@@ -1733,6 +1848,7 @@
 .method private maybeDisableOffload()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->configuration:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;->outputModeIsOffload()Z
@@ -1746,6 +1862,7 @@
     :cond_0
     const/4 v0, 0x1
 
+    .line 2
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->offloadDisabledUntilNextConfiguration:Z
 
     return-void
@@ -1754,14 +1871,17 @@
 .method private playPendingData()V
     .locals 3
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->stoppedAudioTrack:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
+    .line 2
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->stoppedAudioTrack:Z
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrackPositionTracker:Lcom/google/android/exoplayer2/audio/AudioTrackPositionTracker;
 
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->getWrittenFrames()J
@@ -1770,12 +1890,14 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/google/android/exoplayer2/audio/AudioTrackPositionTracker;->handleEndOfStream(J)V
 
+    .line 4
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
 
     invoke-virtual {v0}, Landroid/media/AudioTrack;->stop()V
 
     const/4 v0, 0x0
 
+    .line 5
     iput v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->bytesUntilNextAvSync:I
 
     :cond_0
@@ -1790,6 +1912,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->activeAudioProcessors:[Lcom/google/android/exoplayer2/audio/AudioProcessor;
 
     array-length v0, v0
@@ -1801,6 +1924,7 @@
 
     if-lez v1, :cond_0
 
+    .line 2
     iget-object v2, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->outputBuffers:[Ljava/nio/ByteBuffer;
 
     add-int/lit8 v3, v1, -0x1
@@ -1809,6 +1933,7 @@
 
     goto :goto_1
 
+    .line 3
     :cond_0
     iget-object v2, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->inputBuffer:Ljava/nio/ByteBuffer;
 
@@ -1822,31 +1947,38 @@
     :goto_1
     if-ne v1, v0, :cond_2
 
+    .line 4
     invoke-direct {p0, v2, p1, p2}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->writeBuffer(Ljava/nio/ByteBuffer;J)V
 
     goto :goto_2
 
+    .line 5
     :cond_2
     iget-object v3, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->activeAudioProcessors:[Lcom/google/android/exoplayer2/audio/AudioProcessor;
 
     aget-object v3, v3, v1
 
+    .line 6
     iget v4, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->drainingAudioProcessorIndex:I
 
     if-le v1, v4, :cond_3
 
+    .line 7
     invoke-interface {v3, v2}, Lcom/google/android/exoplayer2/audio/AudioProcessor;->queueInput(Ljava/nio/ByteBuffer;)V
 
+    .line 8
     :cond_3
     invoke-interface {v3}, Lcom/google/android/exoplayer2/audio/AudioProcessor;->getOutput()Ljava/nio/ByteBuffer;
 
     move-result-object v3
 
+    .line 9
     iget-object v4, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->outputBuffers:[Ljava/nio/ByteBuffer;
 
     aput-object v3, v4, v1
 
-    invoke-virtual {v3}, Ljava/nio/Buffer;->hasRemaining()Z
+    .line 10
+    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->hasRemaining()Z
 
     move-result v3
 
@@ -1856,9 +1988,10 @@
 
     goto :goto_0
 
+    .line 11
     :cond_4
     :goto_2
-    invoke-virtual {v2}, Ljava/nio/Buffer;->hasRemaining()Z
+    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->hasRemaining()Z
 
     move-result v2
 
@@ -1881,16 +2014,19 @@
         value = 0x1d
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->offloadStreamEventCallbackV29:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$StreamEventCallbackV29;
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$StreamEventCallbackV29;
 
     invoke-direct {v0, p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$StreamEventCallbackV29;-><init>(Lcom/google/android/exoplayer2/audio/DefaultAudioSink;)V
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->offloadStreamEventCallbackV29:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$StreamEventCallbackV29;
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->offloadStreamEventCallbackV29:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$StreamEventCallbackV29;
 
@@ -1904,26 +2040,35 @@
 
     const-wide/16 v0, 0x0
 
+    .line 1
     iput-wide v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->submittedPcmBytes:J
 
+    .line 2
     iput-wide v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->submittedEncodedFrames:J
 
+    .line 3
     iput-wide v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->writtenPcmBytes:J
 
+    .line 4
     iput-wide v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->writtenEncodedFrames:J
 
     const/4 v2, 0x0
 
+    .line 5
     iput-boolean v2, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->isWaitingForOffloadEndOfStreamHandled:Z
 
+    .line 6
     iput v2, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->framesPerEncodedSample:I
 
+    .line 7
     new-instance v11, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;
 
+    .line 8
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->getAudioProcessorPlaybackParameters()Lcom/google/android/exoplayer2/PlaybackParameters;
 
     move-result-object v4
 
+    .line 9
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->getSkipSilenceEnabled()Z
 
     move-result v5
@@ -1940,38 +2085,51 @@
 
     iput-object v11, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->mediaPositionParameters:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;
 
+    .line 10
     iput-wide v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->startMediaTimeUs:J
 
     const/4 v0, 0x0
 
+    .line 11
     iput-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->afterDrainParameters:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;
 
+    .line 12
     iget-object v1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->mediaPositionParametersCheckpoints:Ljava/util/ArrayDeque;
 
     invoke-virtual {v1}, Ljava/util/ArrayDeque;->clear()V
 
+    .line 13
     iput-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->inputBuffer:Ljava/nio/ByteBuffer;
 
+    .line 14
     iput v2, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->inputBufferAccessUnitCount:I
 
+    .line 15
     iput-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->outputBuffer:Ljava/nio/ByteBuffer;
 
+    .line 16
     iput-boolean v2, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->stoppedAudioTrack:Z
 
+    .line 17
     iput-boolean v2, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->handledEndOfStream:Z
 
     const/4 v1, -0x1
 
+    .line 18
     iput v1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->drainingAudioProcessorIndex:I
 
+    .line 19
     iput-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->avSyncHeader:Ljava/nio/ByteBuffer;
 
+    .line 20
     iput v2, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->bytesUntilNextAvSync:I
 
+    .line 21
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->trimmingAudioProcessor:Lcom/google/android/exoplayer2/audio/TrimmingAudioProcessor;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/audio/TrimmingAudioProcessor;->resetTrimmedFrameCount()V
 
+    .line 22
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->flushAudioProcessors()V
 
     return-void
@@ -1980,10 +2138,12 @@
 .method private setAudioProcessorPlaybackParametersAndSkipSilence(Lcom/google/android/exoplayer2/PlaybackParameters;Z)V
     .locals 9
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->getMediaPositionParameters()Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;
 
     move-result-object v0
 
+    .line 2
     iget-object v1, v0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;->playbackParameters:Lcom/google/android/exoplayer2/PlaybackParameters;
 
     invoke-virtual {p1, v1}, Lcom/google/android/exoplayer2/PlaybackParameters;->equals(Ljava/lang/Object;)Z
@@ -1996,6 +2156,7 @@
 
     if-eq p2, v0, :cond_2
 
+    .line 3
     :cond_0
     new-instance v0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;
 
@@ -2013,16 +2174,19 @@
 
     invoke-direct/range {v1 .. v8}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;-><init>(Lcom/google/android/exoplayer2/PlaybackParameters;ZJJLcom/google/android/exoplayer2/audio/DefaultAudioSink$1;)V
 
+    .line 4
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->isAudioTrackInitialized()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
+    .line 5
     iput-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->afterDrainParameters:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;
 
     goto :goto_0
 
+    .line 6
     :cond_1
     iput-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->mediaPositionParameters:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;
 
@@ -2037,38 +2201,45 @@
         value = 0x17
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->isAudioTrackInitialized()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     new-instance v0, Landroid/media/PlaybackParams;
 
     invoke-direct {v0}, Landroid/media/PlaybackParams;-><init>()V
 
+    .line 3
     invoke-virtual {v0}, Landroid/media/PlaybackParams;->allowDefaults()Landroid/media/PlaybackParams;
 
     move-result-object v0
 
     iget v1, p1, Lcom/google/android/exoplayer2/PlaybackParameters;->speed:F
 
+    .line 4
     invoke-virtual {v0, v1}, Landroid/media/PlaybackParams;->setSpeed(F)Landroid/media/PlaybackParams;
 
     move-result-object v0
 
     iget p1, p1, Lcom/google/android/exoplayer2/PlaybackParameters;->pitch:F
 
+    .line 5
     invoke-virtual {v0, p1}, Landroid/media/PlaybackParams;->setPitch(F)Landroid/media/PlaybackParams;
 
     move-result-object p1
 
     const/4 v0, 0x2
 
+    .line 6
     invoke-virtual {p1, v0}, Landroid/media/PlaybackParams;->setAudioFallbackMode(I)Landroid/media/PlaybackParams;
 
     move-result-object p1
 
+    .line 7
     :try_start_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
 
@@ -2085,13 +2256,16 @@
 
     const-string v1, "Failed to set playback params"
 
+    .line 8
     invoke-static {v0, v1, p1}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 9
     :goto_0
     new-instance p1, Lcom/google/android/exoplayer2/PlaybackParameters;
 
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
 
+    .line 10
     invoke-virtual {v0}, Landroid/media/AudioTrack;->getPlaybackParams()Landroid/media/PlaybackParams;
 
     move-result-object v0
@@ -2112,12 +2286,14 @@
 
     invoke-direct {p1, v0, v1}, Lcom/google/android/exoplayer2/PlaybackParameters;-><init>(FF)V
 
+    .line 11
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrackPositionTracker:Lcom/google/android/exoplayer2/audio/AudioTrackPositionTracker;
 
     iget v1, p1, Lcom/google/android/exoplayer2/PlaybackParameters;->speed:F
 
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/audio/AudioTrackPositionTracker;->setAudioTrackPlaybackSpeed(F)V
 
+    .line 12
     :cond_0
     iput-object p1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrackPlaybackParameters:Lcom/google/android/exoplayer2/PlaybackParameters;
 
@@ -2127,6 +2303,7 @@
 .method private setVolumeInternal()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->isAudioTrackInitialized()Z
 
     move-result v0
@@ -2135,6 +2312,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     sget v0, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
@@ -2142,6 +2320,7 @@
 
     if-lt v0, v1, :cond_1
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
 
     iget p0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->volume:F
@@ -2150,6 +2329,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
 
@@ -2167,6 +2347,7 @@
         value = 0x15
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/media/AudioTrack;->setVolume(F)I
 
     return-void
@@ -2175,6 +2356,7 @@
 .method private static setVolumeInternalV3(Landroid/media/AudioTrack;F)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p1}, Landroid/media/AudioTrack;->setStereoVolume(FF)I
 
     return-void
@@ -2183,14 +2365,17 @@
 .method private setupAudioProcessors()V
     .locals 6
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->configuration:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;
 
     iget-object v0, v0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;->availableAudioProcessors:[Lcom/google/android/exoplayer2/audio/AudioProcessor;
 
+    .line 2
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 3
     array-length v2, v0
 
     const/4 v3, 0x0
@@ -2200,16 +2385,19 @@
 
     aget-object v4, v0, v3
 
+    .line 4
     invoke-interface {v4}, Lcom/google/android/exoplayer2/audio/AudioProcessor;->isActive()Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
+    .line 5
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
+    .line 6
     :cond_0
     invoke-interface {v4}, Lcom/google/android/exoplayer2/audio/AudioProcessor;->flush()V
 
@@ -2218,11 +2406,13 @@
 
     goto :goto_0
 
+    .line 7
     :cond_1
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
+    .line 8
     new-array v2, v0, [Lcom/google/android/exoplayer2/audio/AudioProcessor;
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
@@ -2233,10 +2423,12 @@
 
     iput-object v1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->activeAudioProcessors:[Lcom/google/android/exoplayer2/audio/AudioProcessor;
 
+    .line 9
     new-array v0, v0, [Ljava/nio/ByteBuffer;
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->outputBuffers:[Ljava/nio/ByteBuffer;
 
+    .line 10
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->flushAudioProcessors()V
 
     return-void
@@ -2245,6 +2437,7 @@
 .method private shouldApplyAudioProcessorPlaybackParameters()Z
     .locals 2
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->tunneling:Z
 
     if-nez v0, :cond_0
@@ -2257,6 +2450,7 @@
 
     const-string v1, "audio/raw"
 
+    .line 2
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -2269,6 +2463,7 @@
 
     iget v0, v0, Lcom/google/android/exoplayer2/Format;->pcmEncoding:I
 
+    .line 3
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->shouldUseFloatOutput(I)Z
 
     move-result p0
@@ -2289,6 +2484,7 @@
 .method private shouldUseFloatOutput(I)Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->enableFloatOutput:Z
 
     if-eqz p0, :cond_0
@@ -2313,13 +2509,14 @@
 .method private useOffloadedPlayback(Lcom/google/android/exoplayer2/Format;Lcom/google/android/exoplayer2/audio/AudioAttributes;)Z
     .locals 4
 
+    .line 1
     sget v0, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
-    const/16 v1, 0x1d
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const/16 v2, 0x1d
 
-    if-lt v0, v1, :cond_9
+    if-lt v0, v2, :cond_9
 
     iget v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->offloadMode:I
 
@@ -2327,6 +2524,7 @@
 
     goto :goto_3
 
+    .line 2
     :cond_0
     iget-object v0, p1, Lcom/google/android/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
@@ -2336,40 +2534,44 @@
 
     check-cast v0, Ljava/lang/String;
 
-    iget-object v1, p1, Lcom/google/android/exoplayer2/Format;->codecs:Ljava/lang/String;
+    iget-object v2, p1, Lcom/google/android/exoplayer2/Format;->codecs:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lcom/google/android/exoplayer2/util/MimeTypes;->getEncoding(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Lcom/google/android/exoplayer2/util/MimeTypes;->getEncoding(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    return v2
+    return v1
 
+    .line 3
     :cond_1
-    iget v1, p1, Lcom/google/android/exoplayer2/Format;->channelCount:I
+    iget v2, p1, Lcom/google/android/exoplayer2/Format;->channelCount:I
 
-    invoke-static {v1}, Lcom/google/android/exoplayer2/util/Util;->getAudioTrackChannelConfig(I)I
+    invoke-static {v2}, Lcom/google/android/exoplayer2/util/Util;->getAudioTrackChannelConfig(I)I
 
-    move-result v1
+    move-result v2
 
-    if-nez v1, :cond_2
+    if-nez v2, :cond_2
 
-    return v2
+    return v1
 
+    .line 4
     :cond_2
     iget v3, p1, Lcom/google/android/exoplayer2/Format;->sampleRate:I
 
-    invoke-static {v3, v1, v0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->getAudioFormat(III)Landroid/media/AudioFormat;
+    invoke-static {v3, v2, v0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->getAudioFormat(III)Landroid/media/AudioFormat;
 
     move-result-object v0
 
+    .line 5
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/audio/AudioAttributes;->getAudioAttributesV21()Lcom/google/android/exoplayer2/audio/AudioAttributes$AudioAttributesV21;
 
     move-result-object p2
 
     iget-object p2, p2, Lcom/google/android/exoplayer2/audio/AudioAttributes$AudioAttributesV21;->audioAttributes:Landroid/media/AudioAttributes;
 
+    .line 6
     invoke-direct {p0, v0, p2}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->getOffloadedPlaybackSupport(Landroid/media/AudioFormat;Landroid/media/AudioAttributes;)I
 
     move-result p2
@@ -2386,6 +2588,7 @@
 
     return v0
 
+    .line 7
     :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2393,6 +2596,7 @@
 
     throw p0
 
+    .line 8
     :cond_4
     iget p2, p1, Lcom/google/android/exoplayer2/Format;->encoderDelay:I
 
@@ -2405,7 +2609,7 @@
     goto :goto_0
 
     :cond_5
-    move p1, v2
+    move p1, v1
 
     goto :goto_1
 
@@ -2413,6 +2617,7 @@
     :goto_0
     move p1, v0
 
+    .line 9
     :goto_1
     iget p0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->offloadMode:I
 
@@ -2423,7 +2628,7 @@
     goto :goto_2
 
     :cond_7
-    move p0, v2
+    move p0, v1
 
     :goto_2
     if-eqz p1, :cond_8
@@ -2431,11 +2636,11 @@
     if-nez p0, :cond_9
 
     :cond_8
-    move v2, v0
+    move v1, v0
 
     :cond_9
     :goto_3
-    return v2
+    return v1
 .end method
 
 .method private writeBuffer(Ljava/nio/ByteBuffer;J)V
@@ -2446,7 +2651,8 @@
         }
     .end annotation
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->hasRemaining()Z
+    .line 1
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->hasRemaining()Z
 
     move-result v0
 
@@ -2454,6 +2660,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->outputBuffer:Ljava/nio/ByteBuffer;
 
@@ -2474,22 +2681,27 @@
     :cond_1
     move v0, v3
 
+    .line 3
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
     goto :goto_1
 
+    .line 4
     :cond_2
     iput-object p1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->outputBuffer:Ljava/nio/ByteBuffer;
 
+    .line 5
     sget v0, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
     if-ge v0, v1, :cond_5
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+    .line 6
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v0
 
+    .line 7
     iget-object v4, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->preV21OutputBuffer:[B
 
     if-eqz v4, :cond_3
@@ -2498,34 +2710,42 @@
 
     if-ge v4, v0, :cond_4
 
+    .line 8
     :cond_3
     new-array v4, v0, [B
 
     iput-object v4, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->preV21OutputBuffer:[B
 
+    .line 9
     :cond_4
-    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v4
 
+    .line 10
     iget-object v5, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->preV21OutputBuffer:[B
 
     invoke-virtual {p1, v5, v3, v0}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
+    .line 11
     invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
+    .line 12
     iput v3, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->preV21OutputBufferOffset:I
 
+    .line 13
     :cond_5
     :goto_1
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v0
 
+    .line 14
     sget v4, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
     if-ge v4, v1, :cond_7
 
+    .line 15
     iget-object p2, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrackPositionTracker:Lcom/google/android/exoplayer2/audio/AudioTrackPositionTracker;
 
     iget-wide v4, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->writtenPcmBytes:J
@@ -2536,29 +2756,34 @@
 
     if-lez p2, :cond_6
 
+    .line 16
     invoke-static {v0, p2}, Ljava/lang/Math;->min(II)I
 
     move-result p2
 
+    .line 17
     iget-object p3, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->preV21OutputBuffer:[B
 
     iget v4, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->preV21OutputBufferOffset:I
 
+    .line 18
     invoke-virtual {p3, v1, v4, p2}, Landroid/media/AudioTrack;->write([BII)I
 
     move-result p2
 
     if-lez p2, :cond_a
 
+    .line 19
     iget p3, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->preV21OutputBufferOffset:I
 
     add-int/2addr p3, p2
 
     iput p3, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->preV21OutputBufferOffset:I
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
+    .line 20
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
 
     move-result p3
 
@@ -2573,6 +2798,7 @@
 
     goto :goto_3
 
+    .line 21
     :cond_7
     iget-boolean v1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->tunneling:Z
 
@@ -2591,9 +2817,11 @@
     :cond_8
     move v1, v3
 
+    .line 22
     :goto_2
     invoke-static {v1}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 23
     iget-object v7, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
 
     move-object v6, p0
@@ -2604,12 +2832,14 @@
 
     move-wide v10, p2
 
+    .line 24
     invoke-direct/range {v6 .. v11}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->writeNonBlockingWithAvSyncV21(Landroid/media/AudioTrack;Ljava/nio/ByteBuffer;IJ)I
 
     move-result p2
 
     goto :goto_3
 
+    .line 25
     :cond_9
     iget-object p2, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
 
@@ -2617,6 +2847,7 @@
 
     move-result p2
 
+    .line 26
     :cond_a
     :goto_3
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -2627,14 +2858,17 @@
 
     if-gez p2, :cond_e
 
+    .line 27
     invoke-static {p2}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->isAudioTrackDeadObject(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_b
 
+    .line 28
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->maybeDisableOffload()V
 
+    .line 29
     :cond_b
     new-instance p3, Lcom/google/android/exoplayer2/audio/AudioSink$WriteException;
 
@@ -2644,31 +2878,38 @@
 
     invoke-direct {p3, p2, v0, p1}, Lcom/google/android/exoplayer2/audio/AudioSink$WriteException;-><init>(ILcom/google/android/exoplayer2/Format;Z)V
 
+    .line 30
     iget-object p1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->listener:Lcom/google/android/exoplayer2/audio/AudioSink$Listener;
 
     if-eqz p1, :cond_c
 
+    .line 31
     invoke-interface {p1, p3}, Lcom/google/android/exoplayer2/audio/AudioSink$Listener;->onAudioSinkError(Ljava/lang/Exception;)V
 
+    .line 32
     :cond_c
     iget-boolean p1, p3, Lcom/google/android/exoplayer2/audio/AudioSink$WriteException;->isRecoverable:Z
 
     if-nez p1, :cond_d
 
+    .line 33
     iget-object p0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->writeExceptionPendingExceptionHolder:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$PendingExceptionHolder;
 
     invoke-virtual {p0, p3}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$PendingExceptionHolder;->throwExceptionIfDeadlineIsReached(Ljava/lang/Exception;)V
 
     return-void
 
+    .line 34
     :cond_d
     throw p3
 
+    .line 35
     :cond_e
     iget-object p3, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->writeExceptionPendingExceptionHolder:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$PendingExceptionHolder;
 
     invoke-virtual {p3}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$PendingExceptionHolder;->clear()V
 
+    .line 36
     iget-object p3, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
 
     invoke-static {p3}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->isOffloadedPlayback(Landroid/media/AudioTrack;)Z
@@ -2677,6 +2918,7 @@
 
     if-eqz p3, :cond_10
 
+    .line 37
     iget-wide v4, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->writtenEncodedFrames:J
 
     const-wide/16 v6, 0x0
@@ -2685,8 +2927,10 @@
 
     if-lez p3, :cond_f
 
+    .line 38
     iput-boolean v3, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->isWaitingForOffloadEndOfStreamHandled:Z
 
+    .line 39
     :cond_f
     iget-boolean p3, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->playing:Z
 
@@ -2702,8 +2946,10 @@
 
     if-nez v1, :cond_10
 
+    .line 40
     invoke-interface {p3}, Lcom/google/android/exoplayer2/audio/AudioSink$Listener;->onOffloadBufferFull()V
 
+    .line 41
     :cond_10
     iget-object p3, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->configuration:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;
 
@@ -2711,6 +2957,7 @@
 
     if-nez p3, :cond_11
 
+    .line 42
     iget-wide v4, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->writtenPcmBytes:J
 
     int-to-long v6, p2
@@ -2724,6 +2971,7 @@
 
     if-eqz p3, :cond_13
 
+    .line 43
     iget-object p2, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->inputBuffer:Ljava/nio/ByteBuffer;
 
     if-ne p1, p2, :cond_12
@@ -2736,6 +2984,7 @@
     :goto_4
     invoke-static {v2}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 44
     iget-wide p1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->writtenEncodedFrames:J
 
     iget p3, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->framesPerEncodedSample:I
@@ -2755,6 +3004,7 @@
     :cond_13
     const/4 p1, 0x0
 
+    .line 45
     iput-object p1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->outputBuffer:Ljava/nio/ByteBuffer;
 
     :cond_14
@@ -2769,6 +3019,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-virtual {p0, p1, p2, v0}, Landroid/media/AudioTrack;->write(Ljava/nio/ByteBuffer;II)I
 
     move-result p0
@@ -2782,17 +3033,18 @@
         value = 0x15
     .end annotation
 
+    .line 1
     sget v0, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
-    const/16 v1, 0x1a
+    const-wide/16 v1, 0x3e8
 
-    const-wide/16 v2, 0x3e8
+    const/16 v3, 0x1a
 
-    if-lt v0, v1, :cond_0
+    if-lt v0, v3, :cond_0
 
     const/4 v7, 0x1
 
-    mul-long v8, p4, v2
+    mul-long v8, p4, v1
 
     move-object v4, p1
 
@@ -2800,12 +3052,14 @@
 
     move v6, p3
 
+    .line 2
     invoke-virtual/range {v4 .. v9}, Landroid/media/AudioTrack;->write(Ljava/nio/ByteBuffer;IIJ)I
 
     move-result p0
 
     return p0
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->avSyncHeader:Ljava/nio/ByteBuffer;
 
@@ -2813,77 +3067,90 @@
 
     const/16 v0, 0x10
 
+    .line 4
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->avSyncHeader:Ljava/nio/ByteBuffer;
 
-    sget-object v1, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
+    .line 5
+    sget-object v3, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
 
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+    invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
+    .line 6
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->avSyncHeader:Ljava/nio/ByteBuffer;
 
-    const v1, 0x55550001
+    const v3, 0x55550001
 
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
+    .line 7
     :cond_1
     iget v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->bytesUntilNextAvSync:I
 
-    const/4 v1, 0x0
+    const/4 v3, 0x0
 
     if-nez v0, :cond_2
 
+    .line 8
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->avSyncHeader:Ljava/nio/ByteBuffer;
 
     const/4 v4, 0x4
 
     invoke-virtual {v0, v4, p3}, Ljava/nio/ByteBuffer;->putInt(II)Ljava/nio/ByteBuffer;
 
+    .line 9
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->avSyncHeader:Ljava/nio/ByteBuffer;
 
     const/16 v4, 0x8
 
-    mul-long/2addr p4, v2
+    mul-long/2addr p4, v1
 
     invoke-virtual {v0, v4, p4, p5}, Ljava/nio/ByteBuffer;->putLong(IJ)Ljava/nio/ByteBuffer;
 
+    .line 10
     iget-object p4, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->avSyncHeader:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {p4, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-virtual {p4, v3}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
+    .line 11
     iput p3, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->bytesUntilNextAvSync:I
 
+    .line 12
     :cond_2
     iget-object p4, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->avSyncHeader:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {p4}, Ljava/nio/Buffer;->remaining()I
+    invoke-virtual {p4}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result p4
 
     if-lez p4, :cond_4
 
+    .line 13
     iget-object p5, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->avSyncHeader:Ljava/nio/ByteBuffer;
 
     const/4 v0, 0x1
 
+    .line 14
     invoke-virtual {p1, p5, p4, v0}, Landroid/media/AudioTrack;->write(Ljava/nio/ByteBuffer;II)I
 
     move-result p5
 
     if-gez p5, :cond_3
 
-    iput v1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->bytesUntilNextAvSync:I
+    .line 15
+    iput v3, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->bytesUntilNextAvSync:I
 
     return p5
 
     :cond_3
     if-ge p5, p4, :cond_4
 
-    return v1
+    return v3
 
+    .line 16
     :cond_4
     invoke-static {p1, p2, p3}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->writeNonBlockingV21(Landroid/media/AudioTrack;Ljava/nio/ByteBuffer;I)I
 
@@ -2891,10 +3158,12 @@
 
     if-gez p1, :cond_5
 
-    iput v1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->bytesUntilNextAvSync:I
+    .line 17
+    iput v3, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->bytesUntilNextAvSync:I
 
     return p1
 
+    .line 18
     :cond_5
     iget p2, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->bytesUntilNextAvSync:I
 
@@ -2923,6 +3192,7 @@
 
     move-object/from16 v2, p1
 
+    .line 1
     iget-object v1, v2, Lcom/google/android/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
     const-string v3, "audio/raw"
@@ -2931,10 +3201,13 @@
 
     move-result v1
 
-    const/4 v3, 0x0
+    const/4 v3, -0x1
+
+    const/4 v4, 0x0
 
     if-eqz v1, :cond_5
 
+    .line 2
     iget v1, v2, Lcom/google/android/exoplayer2/Format;->pcmEncoding:I
 
     invoke-static {v1}, Lcom/google/android/exoplayer2/util/Util;->isEncodingLinearPcm(I)Z
@@ -2943,29 +3216,34 @@
 
     invoke-static {v1}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 3
     iget v1, v2, Lcom/google/android/exoplayer2/Format;->pcmEncoding:I
 
-    iget v4, v2, Lcom/google/android/exoplayer2/Format;->channelCount:I
+    iget v3, v2, Lcom/google/android/exoplayer2/Format;->channelCount:I
 
-    invoke-static {v1, v4}, Lcom/google/android/exoplayer2/util/Util;->getPcmFrameSize(II)I
+    invoke-static {v1, v3}, Lcom/google/android/exoplayer2/util/Util;->getPcmFrameSize(II)I
 
     move-result v1
 
-    iget v4, v2, Lcom/google/android/exoplayer2/Format;->pcmEncoding:I
+    .line 4
+    iget v3, v2, Lcom/google/android/exoplayer2/Format;->pcmEncoding:I
 
-    invoke-direct {v0, v4}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->shouldUseFloatOutput(I)Z
+    invoke-direct {v0, v3}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->shouldUseFloatOutput(I)Z
 
-    move-result v4
+    move-result v3
 
-    if-eqz v4, :cond_0
+    if-eqz v3, :cond_0
 
-    iget-object v4, v0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->toFloatPcmAvailableAudioProcessors:[Lcom/google/android/exoplayer2/audio/AudioProcessor;
+    .line 5
+    iget-object v3, v0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->toFloatPcmAvailableAudioProcessors:[Lcom/google/android/exoplayer2/audio/AudioProcessor;
 
     goto :goto_0
 
+    .line 6
     :cond_0
-    iget-object v4, v0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->toIntPcmAvailableAudioProcessors:[Lcom/google/android/exoplayer2/audio/AudioProcessor;
+    iget-object v3, v0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->toIntPcmAvailableAudioProcessors:[Lcom/google/android/exoplayer2/audio/AudioProcessor;
 
+    .line 7
     :goto_0
     iget-object v5, v0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->trimmingAudioProcessor:Lcom/google/android/exoplayer2/audio/TrimmingAudioProcessor;
 
@@ -2975,6 +3253,7 @@
 
     invoke-virtual {v5, v6, v7}, Lcom/google/android/exoplayer2/audio/TrimmingAudioProcessor;->setTrimFrameCount(II)V
 
+    .line 8
     sget v5, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
     const/16 v6, 0x15
@@ -2993,11 +3272,12 @@
 
     new-array v6, v5, [I
 
-    move v7, v3
+    move v7, v4
 
     :goto_1
     if-ge v7, v5, :cond_2
 
+    .line 9
     aput v7, v6, v7
 
     add-int/lit8 v7, v7, 0x1
@@ -3007,11 +3287,13 @@
     :cond_1
     move-object/from16 v6, p3
 
+    .line 10
     :cond_2
     iget-object v5, v0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->channelMappingAudioProcessor:Lcom/google/android/exoplayer2/audio/ChannelMappingAudioProcessor;
 
     invoke-virtual {v5, v6}, Lcom/google/android/exoplayer2/audio/ChannelMappingAudioProcessor;->setChannelMap([I)V
 
+    .line 11
     new-instance v5, Lcom/google/android/exoplayer2/audio/AudioProcessor$AudioFormat;
 
     iget v6, v2, Lcom/google/android/exoplayer2/Format;->sampleRate:I
@@ -3022,20 +3304,23 @@
 
     invoke-direct {v5, v6, v7, v8}, Lcom/google/android/exoplayer2/audio/AudioProcessor$AudioFormat;-><init>(III)V
 
-    array-length v6, v4
+    .line 12
+    array-length v6, v3
 
-    move v7, v3
+    move v7, v4
 
     :goto_2
     if-ge v7, v6, :cond_4
 
-    aget-object v8, v4, v7
+    aget-object v8, v3, v7
 
+    .line 13
     :try_start_0
     invoke-interface {v8, v5}, Lcom/google/android/exoplayer2/audio/AudioProcessor;->configure(Lcom/google/android/exoplayer2/audio/AudioProcessor$AudioFormat;)Lcom/google/android/exoplayer2/audio/AudioProcessor$AudioFormat;
 
     move-result-object v9
 
+    .line 14
     invoke-interface {v8}, Lcom/google/android/exoplayer2/audio/AudioProcessor;->isActive()Z
 
     move-result v8
@@ -3054,72 +3339,82 @@
     :catch_0
     move-exception v0
 
+    .line 15
     new-instance v1, Lcom/google/android/exoplayer2/audio/AudioSink$ConfigurationException;
 
     invoke-direct {v1, v0, v2}, Lcom/google/android/exoplayer2/audio/AudioSink$ConfigurationException;-><init>(Ljava/lang/Throwable;Lcom/google/android/exoplayer2/Format;)V
 
     throw v1
 
+    .line 16
     :cond_4
     iget v6, v5, Lcom/google/android/exoplayer2/audio/AudioProcessor$AudioFormat;->encoding:I
 
+    .line 17
     iget v7, v5, Lcom/google/android/exoplayer2/audio/AudioProcessor$AudioFormat;->sampleRate:I
 
+    .line 18
     iget v8, v5, Lcom/google/android/exoplayer2/audio/AudioProcessor$AudioFormat;->channelCount:I
 
     invoke-static {v8}, Lcom/google/android/exoplayer2/util/Util;->getAudioTrackChannelConfig(I)I
 
     move-result v8
 
+    .line 19
     iget v5, v5, Lcom/google/android/exoplayer2/audio/AudioProcessor$AudioFormat;->channelCount:I
 
     invoke-static {v6, v5}, Lcom/google/android/exoplayer2/util/Util;->getPcmFrameSize(II)I
 
     move-result v5
 
-    move-object/from16 v16, v4
+    move-object/from16 v16, v3
 
-    move v13, v6
+    move v13, v4
+
+    move v14, v5
+
+    move v11, v6
 
     move v15, v7
 
-    move v6, v1
-
-    move v4, v3
+    move v3, v1
 
     move v1, v8
 
-    goto :goto_4
+    goto :goto_3
 
     :cond_5
-    new-array v1, v3, [Lcom/google/android/exoplayer2/audio/AudioProcessor;
+    new-array v1, v4, [Lcom/google/android/exoplayer2/audio/AudioProcessor;
 
-    iget v4, v2, Lcom/google/android/exoplayer2/Format;->sampleRate:I
+    .line 20
+    iget v5, v2, Lcom/google/android/exoplayer2/Format;->sampleRate:I
 
-    iget-object v5, v0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioAttributes:Lcom/google/android/exoplayer2/audio/AudioAttributes;
+    .line 21
+    iget-object v6, v0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioAttributes:Lcom/google/android/exoplayer2/audio/AudioAttributes;
 
-    invoke-direct {v0, v2, v5}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->useOffloadedPlayback(Lcom/google/android/exoplayer2/Format;Lcom/google/android/exoplayer2/audio/AudioAttributes;)Z
+    invoke-direct {v0, v2, v6}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->useOffloadedPlayback(Lcom/google/android/exoplayer2/Format;Lcom/google/android/exoplayer2/audio/AudioAttributes;)Z
 
-    move-result v5
+    move-result v6
 
-    const/4 v6, -0x1
+    if-eqz v6, :cond_6
 
-    if-eqz v5, :cond_6
+    .line 22
+    iget-object v6, v2, Lcom/google/android/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
-    iget-object v5, v2, Lcom/google/android/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
+    .line 23
+    invoke-static {v6}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v5}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v6
 
-    move-result-object v5
-
-    check-cast v5, Ljava/lang/String;
+    check-cast v6, Ljava/lang/String;
 
     iget-object v7, v2, Lcom/google/android/exoplayer2/Format;->codecs:Ljava/lang/String;
 
-    invoke-static {v5, v7}, Lcom/google/android/exoplayer2/util/MimeTypes;->getEncoding(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, v7}, Lcom/google/android/exoplayer2/util/MimeTypes;->getEncoding(Ljava/lang/String;Ljava/lang/String;)I
 
-    move-result v5
+    move-result v6
 
+    .line 24
     iget v7, v2, Lcom/google/android/exoplayer2/Format;->channelCount:I
 
     invoke-static {v7}, Lcom/google/android/exoplayer2/util/Util;->getAudioTrackChannelConfig(I)I
@@ -3130,29 +3425,42 @@
 
     move-object/from16 v16, v1
 
-    move v15, v4
+    move v14, v3
 
-    move v13, v5
+    move v15, v5
 
-    move v5, v6
+    move v11, v6
 
     move v1, v7
 
-    :goto_3
-    move v4, v8
+    move v13, v8
 
-    goto :goto_4
+    goto :goto_3
 
     :cond_6
-    iget-object v5, v0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioCapabilities:Lcom/google/android/exoplayer2/audio/AudioCapabilities;
+    const/4 v6, 0x2
 
-    invoke-virtual {v5, v2}, Lcom/google/android/exoplayer2/audio/AudioCapabilities;->getEncodingAndChannelConfigForPassthrough(Lcom/google/android/exoplayer2/Format;)Landroid/util/Pair;
+    .line 25
+    iget-object v7, v0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioCapabilities:Lcom/google/android/exoplayer2/audio/AudioCapabilities;
 
-    move-result-object v5
+    .line 26
+    invoke-virtual {v7, v2}, Lcom/google/android/exoplayer2/audio/AudioCapabilities;->getEncodingAndChannelConfigForPassthrough(Lcom/google/android/exoplayer2/Format;)Landroid/util/Pair;
 
-    if-eqz v5, :cond_c
+    move-result-object v7
 
-    iget-object v7, v5, Landroid/util/Pair;->first:Ljava/lang/Object;
+    if-eqz v7, :cond_c
+
+    .line 27
+    iget-object v8, v7, Landroid/util/Pair;->first:Ljava/lang/Object;
+
+    check-cast v8, Ljava/lang/Integer;
+
+    invoke-virtual {v8}, Ljava/lang/Integer;->intValue()I
+
+    move-result v8
+
+    .line 28
+    iget-object v7, v7, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v7, Ljava/lang/Integer;
 
@@ -3160,85 +3468,81 @@
 
     move-result v7
 
-    iget-object v5, v5, Landroid/util/Pair;->second:Ljava/lang/Object;
-
-    check-cast v5, Ljava/lang/Integer;
-
-    invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
-
-    move-result v5
-
-    const/4 v8, 0x2
-
     move-object/from16 v16, v1
 
-    move v15, v4
+    move v14, v3
 
-    move v1, v5
+    move v15, v5
 
-    move v5, v6
+    move v13, v6
 
-    move v13, v7
+    move v1, v7
 
-    goto :goto_3
+    move v11, v8
 
-    :goto_4
+    :goto_3
     if-eqz p2, :cond_7
 
     move/from16 v9, p2
 
-    move/from16 v19, v13
-
-    goto :goto_6
-
-    :cond_7
-    iget-object v7, v0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrackBufferSizeProvider:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$AudioTrackBufferSizeProvider;
-
-    invoke-static {v15, v1, v13}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->getAudioTrackMinBufferSize(III)I
-
-    move-result v8
-
-    iget-boolean v9, v0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->enableAudioTrackPlaybackParams:Z
-
-    if-eqz v9, :cond_8
-
-    const-wide/high16 v9, 0x4020000000000000L    # 8.0
+    move/from16 v19, v11
 
     goto :goto_5
 
+    .line 29
+    :cond_7
+    iget-object v5, v0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrackBufferSizeProvider:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$AudioTrackBufferSizeProvider;
+
+    .line 30
+    invoke-static {v15, v1, v11}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->getAudioTrackMinBufferSize(III)I
+
+    move-result v6
+
+    .line 31
+    iget-boolean v7, v0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->enableAudioTrackPlaybackParams:Z
+
+    if-eqz v7, :cond_8
+
+    const-wide/high16 v7, 0x4020000000000000L    # 8.0
+
+    goto :goto_4
+
     :cond_8
-    const-wide/high16 v9, 0x3ff0000000000000L    # 1.0
+    const-wide/high16 v7, 0x3ff0000000000000L    # 1.0
+
+    :goto_4
+    move-wide/from16 v17, v7
+
+    move v7, v11
+
+    move v8, v13
+
+    move v9, v14
+
+    move v10, v15
+
+    move/from16 v19, v11
+
+    move-wide/from16 v11, v17
+
+    .line 32
+    invoke-interface/range {v5 .. v12}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$AudioTrackBufferSizeProvider;->getBufferSizeInBytes(IIIIID)I
+
+    move-result v5
+
+    move v9, v5
 
     :goto_5
-    move-wide/from16 v17, v9
-
-    move v9, v13
-
-    move v10, v4
-
-    move v11, v5
-
-    move v12, v15
-
-    move/from16 v19, v13
-
-    move-wide/from16 v13, v17
-
-    invoke-interface/range {v7 .. v14}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$AudioTrackBufferSizeProvider;->getBufferSizeInBytes(IIIIID)I
-
-    move-result v7
-
-    move v9, v7
-
-    :goto_6
-    const-string v7, ") for: "
+    const-string v5, ") for: "
 
     if-eqz v19, :cond_b
 
     if-eqz v1, :cond_a
 
-    iput-boolean v3, v0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->offloadDisabledUntilNextConfiguration:Z
+    .line 33
+    iput-boolean v4, v0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->offloadDisabledUntilNextConfiguration:Z
 
+    .line 34
     new-instance v11, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;
 
     move v7, v1
@@ -3247,7 +3551,9 @@
 
     move-object/from16 v2, p1
 
-    move v3, v6
+    move v4, v13
+
+    move v5, v14
 
     move v6, v15
 
@@ -3257,22 +3563,26 @@
 
     invoke-direct/range {v1 .. v10}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;-><init>(Lcom/google/android/exoplayer2/Format;IIIIIII[Lcom/google/android/exoplayer2/audio/AudioProcessor;)V
 
+    .line 35
     invoke-direct/range {p0 .. p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->isAudioTrackInitialized()Z
 
     move-result v1
 
     if-eqz v1, :cond_9
 
+    .line 36
     iput-object v11, v0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->pendingConfiguration:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;
 
-    goto :goto_7
+    goto :goto_6
 
+    .line 37
     :cond_9
     iput-object v11, v0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->configuration:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;
 
-    :goto_7
+    :goto_6
     return-void
 
+    .line 38
     :cond_a
     new-instance v0, Lcom/google/android/exoplayer2/audio/AudioSink$ConfigurationException;
 
@@ -3284,9 +3594,9 @@
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v13}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -3298,6 +3608,7 @@
 
     throw v0
 
+    .line 39
     :cond_b
     new-instance v0, Lcom/google/android/exoplayer2/audio/AudioSink$ConfigurationException;
 
@@ -3309,9 +3620,9 @@
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v13}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -3323,6 +3634,7 @@
 
     throw v0
 
+    .line 40
     :cond_c
     new-instance v0, Lcom/google/android/exoplayer2/audio/AudioSink$ConfigurationException;
 
@@ -3348,14 +3660,17 @@
 .method public disableTunneling()V
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->tunneling:Z
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
+    .line 2
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->tunneling:Z
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->flush()V
 
     :cond_0
@@ -3365,15 +3680,16 @@
 .method public enableTunnelingV21()V
     .locals 3
 
+    .line 1
     sget v0, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
-    const/16 v1, 0x15
+    const/4 v1, 0x1
 
-    const/4 v2, 0x1
+    const/16 v2, 0x15
 
-    if-lt v0, v1, :cond_0
+    if-lt v0, v2, :cond_0
 
-    move v0, v2
+    move v0, v1
 
     goto :goto_0
 
@@ -3383,16 +3699,20 @@
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->externalAudioSessionIdProvided:Z
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 3
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->tunneling:Z
 
     if-nez v0, :cond_1
 
-    iput-boolean v2, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->tunneling:Z
+    .line 4
+    iput-boolean v1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->tunneling:Z
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->flush()V
 
     :cond_1
@@ -3402,25 +3722,30 @@
 .method public experimentalFlushWithoutAudioTrackRelease()V
     .locals 8
 
+    .line 1
     sget v0, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
     const/16 v1, 0x19
 
     if-ge v0, v1, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->flush()V
 
     return-void
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->writeExceptionPendingExceptionHolder:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$PendingExceptionHolder;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$PendingExceptionHolder;->clear()V
 
+    .line 4
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->initializationExceptionPendingExceptionHolder:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$PendingExceptionHolder;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$PendingExceptionHolder;->clear()V
 
+    .line 5
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->isAudioTrackInitialized()Z
 
     move-result v0
@@ -3429,9 +3754,11 @@
 
     return-void
 
+    .line 6
     :cond_1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->resetSinkStateForFlush()V
 
+    .line 7
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrackPositionTracker:Lcom/google/android/exoplayer2/audio/AudioTrackPositionTracker;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/audio/AudioTrackPositionTracker;->isPlaying()Z
@@ -3440,19 +3767,23 @@
 
     if-eqz v0, :cond_2
 
+    .line 8
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
 
     invoke-virtual {v0}, Landroid/media/AudioTrack;->pause()V
 
+    .line 9
     :cond_2
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
 
     invoke-virtual {v0}, Landroid/media/AudioTrack;->flush()V
 
+    .line 10
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrackPositionTracker:Lcom/google/android/exoplayer2/audio/AudioTrackPositionTracker;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/audio/AudioTrackPositionTracker;->reset()V
 
+    .line 11
     iget-object v1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrackPositionTracker:Lcom/google/android/exoplayer2/audio/AudioTrackPositionTracker;
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
@@ -3483,6 +3814,7 @@
 
     invoke-virtual/range {v1 .. v6}, Lcom/google/android/exoplayer2/audio/AudioTrackPositionTracker;->setAudioTrack(Landroid/media/AudioTrack;ZIII)V
 
+    .line 12
     iput-boolean v7, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->startMediaTimeUsNeedsInit:Z
 
     return-void
@@ -3491,14 +3823,17 @@
 .method public flush()V
     .locals 4
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->isAudioTrackInitialized()Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
+    .line 2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->resetSinkStateForFlush()V
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrackPositionTracker:Lcom/google/android/exoplayer2/audio/AudioTrackPositionTracker;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/audio/AudioTrackPositionTracker;->isPlaying()Z
@@ -3507,10 +3842,12 @@
 
     if-eqz v0, :cond_0
 
+    .line 4
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
 
     invoke-virtual {v0}, Landroid/media/AudioTrack;->pause()V
 
+    .line 5
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
 
@@ -3520,6 +3857,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 6
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->offloadStreamEventCallbackV29:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$StreamEventCallbackV29;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -3532,13 +3870,16 @@
 
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$StreamEventCallbackV29;->unregister(Landroid/media/AudioTrack;)V
 
+    .line 7
     :cond_1
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
 
     const/4 v1, 0x0
 
+    .line 8
     iput-object v1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
 
+    .line 9
     sget v2, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
     const/16 v3, 0x15
@@ -3551,39 +3892,49 @@
 
     const/4 v2, 0x0
 
+    .line 10
     iput v2, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioSessionId:I
 
+    .line 11
     :cond_2
     iget-object v2, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->pendingConfiguration:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;
 
     if-eqz v2, :cond_3
 
+    .line 12
     iput-object v2, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->configuration:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;
 
+    .line 13
     iput-object v1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->pendingConfiguration:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;
 
+    .line 14
     :cond_3
     iget-object v1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrackPositionTracker:Lcom/google/android/exoplayer2/audio/AudioTrackPositionTracker;
 
     invoke-virtual {v1}, Lcom/google/android/exoplayer2/audio/AudioTrackPositionTracker;->reset()V
 
+    .line 15
     iget-object v1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->releasingConditionVariable:Landroid/os/ConditionVariable;
 
     invoke-virtual {v1}, Landroid/os/ConditionVariable;->close()V
 
+    .line 16
     new-instance v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$1;
 
     const-string v2, "ExoPlayer:AudioTrackReleaseThread"
 
     invoke-direct {v1, p0, v2, v0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$1;-><init>(Lcom/google/android/exoplayer2/audio/DefaultAudioSink;Ljava/lang/String;Landroid/media/AudioTrack;)V
 
+    .line 17
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
+    .line 18
     :cond_4
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->writeExceptionPendingExceptionHolder:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$PendingExceptionHolder;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$PendingExceptionHolder;->clear()V
 
+    .line 19
     iget-object p0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->initializationExceptionPendingExceptionHolder:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$PendingExceptionHolder;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$PendingExceptionHolder;->clear()V
@@ -3594,6 +3945,7 @@
 .method public getAudioAttributes()Lcom/google/android/exoplayer2/audio/AudioAttributes;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioAttributes:Lcom/google/android/exoplayer2/audio/AudioAttributes;
 
     return-object p0
@@ -3602,6 +3954,7 @@
 .method public getCurrentPositionUs(Z)J
     .locals 4
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->isAudioTrackInitialized()Z
 
     move-result v0
@@ -3614,6 +3967,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrackPositionTracker:Lcom/google/android/exoplayer2/audio/AudioTrackPositionTracker;
 
@@ -3621,6 +3975,7 @@
 
     move-result-wide v0
 
+    .line 3
     iget-object p1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->configuration:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;
 
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->getWrittenFrames()J
@@ -3635,6 +3990,7 @@
 
     move-result-wide v0
 
+    .line 4
     invoke-direct {p0, v0, v1}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->applyMediaPositionParameters(J)J
 
     move-result-wide v0
@@ -3655,6 +4011,7 @@
 .method public getFormatSupport(Lcom/google/android/exoplayer2/Format;)I
     .locals 3
 
+    .line 1
     iget-object v0, p1, Lcom/google/android/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
     const-string v1, "audio/raw"
@@ -3669,6 +4026,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 2
     iget v0, p1, Lcom/google/android/exoplayer2/Format;->pcmEncoding:I
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Util;->isEncodingLinearPcm(I)Z
@@ -3677,6 +4035,7 @@
 
     if-nez v0, :cond_0
 
+    .line 3
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3699,6 +4058,7 @@
 
     return v1
 
+    .line 4
     :cond_0
     iget p1, p1, Lcom/google/android/exoplayer2/Format;->pcmEncoding:I
 
@@ -3723,6 +4083,7 @@
     :goto_0
     return v2
 
+    .line 5
     :cond_3
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->offloadDisabledUntilNextConfiguration:Z
 
@@ -3738,6 +4099,7 @@
 
     return v2
 
+    .line 6
     :cond_4
     iget-object p0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioCapabilities:Lcom/google/android/exoplayer2/audio/AudioCapabilities;
 
@@ -3756,14 +4118,17 @@
 .method public getPlaybackParameters()Lcom/google/android/exoplayer2/PlaybackParameters;
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->enableAudioTrackPlaybackParams:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrackPlaybackParameters:Lcom/google/android/exoplayer2/PlaybackParameters;
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->getAudioProcessorPlaybackParameters()Lcom/google/android/exoplayer2/PlaybackParameters;
 
@@ -3776,6 +4141,7 @@
 .method public getSkipSilenceEnabled()Z
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->getMediaPositionParameters()Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;
 
     move-result-object p0
@@ -3802,6 +4168,7 @@
 
     move/from16 v4, p4
 
+    .line 1
     iget-object v5, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->inputBuffer:Ljava/nio/ByteBuffer;
 
     const/4 v6, 0x1
@@ -3826,12 +4193,14 @@
     :goto_1
     invoke-static {v5}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 2
     iget-object v5, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->pendingConfiguration:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;
 
     const/4 v8, 0x0
 
     if-eqz v5, :cond_7
 
+    .line 3
     invoke-direct/range {p0 .. p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->drainToEndOfStream()Z
 
     move-result v5
@@ -3840,6 +4209,7 @@
 
     return v7
 
+    .line 4
     :cond_2
     iget-object v5, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->pendingConfiguration:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;
 
@@ -3851,8 +4221,10 @@
 
     if-nez v5, :cond_4
 
+    .line 5
     invoke-direct/range {p0 .. p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->playPendingData()V
 
+    .line 6
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->hasPendingData()Z
 
     move-result v5
@@ -3861,18 +4233,22 @@
 
     return v7
 
+    .line 7
     :cond_3
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->flush()V
 
     goto :goto_2
 
+    .line 8
     :cond_4
     iget-object v5, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->pendingConfiguration:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;
 
     iput-object v5, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->configuration:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;
 
+    .line 9
     iput-object v8, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->pendingConfiguration:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;
 
+    .line 10
     iget-object v5, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
 
     invoke-static {v5}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->isOffloadedPlayback(Landroid/media/AudioTrack;)Z
@@ -3887,6 +4263,7 @@
 
     if-eq v5, v9, :cond_6
 
+    .line 11
     iget-object v5, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
 
     invoke-virtual {v5}, Landroid/media/AudioTrack;->getPlayState()I
@@ -3895,10 +4272,12 @@
 
     if-ne v5, v9, :cond_5
 
+    .line 12
     iget-object v5, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
 
     invoke-virtual {v5}, Landroid/media/AudioTrack;->setOffloadEndOfStream()V
 
+    .line 13
     :cond_5
     iget-object v5, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
 
@@ -3912,12 +4291,15 @@
 
     invoke-virtual {v5, v10, v9}, Landroid/media/AudioTrack;->setOffloadDelayPadding(II)V
 
+    .line 14
     iput-boolean v6, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->isWaitingForOffloadEndOfStreamHandled:Z
 
+    .line 15
     :cond_6
     :goto_2
     invoke-direct {v1, v2, v3}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->applyAudioProcessorPlaybackParametersAndSkipSilence(J)V
 
+    .line 16
     :cond_7
     invoke-direct/range {p0 .. p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->isAudioTrackInitialized()Z
 
@@ -3925,6 +4307,7 @@
 
     if-nez v5, :cond_9
 
+    .line 17
     :try_start_0
     invoke-direct/range {p0 .. p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->initializeAudioTrack()V
     :try_end_0
@@ -3937,41 +4320,50 @@
 
     move-object v2, v0
 
+    .line 18
     iget-boolean v0, v2, Lcom/google/android/exoplayer2/audio/AudioSink$InitializationException;->isRecoverable:Z
 
     if-nez v0, :cond_8
 
+    .line 19
     iget-object v0, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->initializationExceptionPendingExceptionHolder:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$PendingExceptionHolder;
 
     invoke-virtual {v0, v2}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$PendingExceptionHolder;->throwExceptionIfDeadlineIsReached(Ljava/lang/Exception;)V
 
     return v7
 
+    .line 20
     :cond_8
     throw v2
 
+    .line 21
     :cond_9
     :goto_3
     iget-object v5, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->initializationExceptionPendingExceptionHolder:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$PendingExceptionHolder;
 
     invoke-virtual {v5}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$PendingExceptionHolder;->clear()V
 
+    .line 22
     iget-boolean v5, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->startMediaTimeUsNeedsInit:Z
 
     const-wide/16 v9, 0x0
 
     if-eqz v5, :cond_b
 
+    .line 23
     invoke-static {v9, v10, v2, v3}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide v11
 
     iput-wide v11, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->startMediaTimeUs:J
 
+    .line 24
     iput-boolean v7, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->startMediaTimeUsNeedsSync:Z
 
+    .line 25
     iput-boolean v7, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->startMediaTimeUsNeedsInit:Z
 
+    .line 26
     iget-boolean v5, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->enableAudioTrackPlaybackParams:Z
 
     if-eqz v5, :cond_a
@@ -3982,19 +4374,24 @@
 
     if-lt v5, v11, :cond_a
 
+    .line 27
     iget-object v5, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrackPlaybackParameters:Lcom/google/android/exoplayer2/PlaybackParameters;
 
     invoke-direct {v1, v5}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->setAudioTrackPlaybackParametersV23(Lcom/google/android/exoplayer2/PlaybackParameters;)V
 
+    .line 28
     :cond_a
     invoke-direct {v1, v2, v3}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->applyAudioProcessorPlaybackParametersAndSkipSilence(J)V
 
+    .line 29
     iget-boolean v5, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->playing:Z
 
     if-eqz v5, :cond_b
 
+    .line 30
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->play()V
 
+    .line 31
     :cond_b
     iget-object v5, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrackPositionTracker:Lcom/google/android/exoplayer2/audio/AudioTrackPositionTracker;
 
@@ -4010,11 +4407,13 @@
 
     return v7
 
+    .line 32
     :cond_c
     iget-object v5, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->inputBuffer:Ljava/nio/ByteBuffer;
 
     if-nez v5, :cond_16
 
+    .line 33
     invoke-virtual/range {p1 .. p1}, Ljava/nio/ByteBuffer;->order()Ljava/nio/ByteOrder;
 
     move-result-object v5
@@ -4033,7 +4432,8 @@
     :goto_4
     invoke-static {v5}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
-    invoke-virtual/range {p1 .. p1}, Ljava/nio/Buffer;->hasRemaining()Z
+    .line 34
+    invoke-virtual/range {p1 .. p1}, Ljava/nio/ByteBuffer;->hasRemaining()Z
 
     move-result v5
 
@@ -4041,6 +4441,7 @@
 
     return v6
 
+    .line 35
     :cond_e
     iget-object v5, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->configuration:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;
 
@@ -4052,6 +4453,7 @@
 
     if-nez v11, :cond_f
 
+    .line 36
     iget v5, v5, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;->outputEncoding:I
 
     invoke-static {v5, v0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->getFramesPerEncodedSample(ILjava/nio/ByteBuffer;)I
@@ -4064,11 +4466,13 @@
 
     return v6
 
+    .line 37
     :cond_f
     iget-object v5, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->afterDrainParameters:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;
 
     if-eqz v5, :cond_11
 
+    .line 38
     invoke-direct/range {p0 .. p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->drainToEndOfStream()Z
 
     move-result v5
@@ -4077,16 +4481,20 @@
 
     return v7
 
+    .line 39
     :cond_10
     invoke-direct {v1, v2, v3}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->applyAudioProcessorPlaybackParametersAndSkipSilence(J)V
 
+    .line 40
     iput-object v8, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->afterDrainParameters:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;
 
+    .line 41
     :cond_11
     iget-wide v11, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->startMediaTimeUs:J
 
     iget-object v5, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->configuration:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;
 
+    .line 42
     invoke-direct/range {p0 .. p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->getSubmittedFrames()J
 
     move-result-wide v13
@@ -4099,18 +4507,21 @@
 
     sub-long/2addr v13, v15
 
+    .line 43
     invoke-virtual {v5, v13, v14}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;->inputFramesToDurationUs(J)J
 
     move-result-wide v13
 
     add-long/2addr v11, v13
 
+    .line 44
     iget-boolean v5, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->startMediaTimeUsNeedsSync:Z
 
     if-nez v5, :cond_12
 
     sub-long v13, v11, v2
 
+    .line 45
     invoke-static {v13, v14}, Ljava/lang/Math;->abs(J)J
 
     move-result-wide v13
@@ -4121,6 +4532,7 @@
 
     if-lez v5, :cond_12
 
+    .line 46
     iget-object v5, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->listener:Lcom/google/android/exoplayer2/audio/AudioSink$Listener;
 
     new-instance v13, Lcom/google/android/exoplayer2/audio/AudioSink$UnexpectedDiscontinuityException;
@@ -4129,13 +4541,16 @@
 
     invoke-interface {v5, v13}, Lcom/google/android/exoplayer2/audio/AudioSink$Listener;->onAudioSinkError(Ljava/lang/Exception;)V
 
+    .line 47
     iput-boolean v6, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->startMediaTimeUsNeedsSync:Z
 
+    .line 48
     :cond_12
     iget-boolean v5, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->startMediaTimeUsNeedsSync:Z
 
     if-eqz v5, :cond_14
 
+    .line 49
     invoke-direct/range {p0 .. p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->drainToEndOfStream()Z
 
     move-result v5
@@ -4147,16 +4562,20 @@
     :cond_13
     sub-long v11, v2, v11
 
+    .line 50
     iget-wide v13, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->startMediaTimeUs:J
 
     add-long/2addr v13, v11
 
     iput-wide v13, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->startMediaTimeUs:J
 
+    .line 51
     iput-boolean v7, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->startMediaTimeUsNeedsSync:Z
 
+    .line 52
     invoke-direct {v1, v2, v3}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->applyAudioProcessorPlaybackParametersAndSkipSilence(J)V
 
+    .line 53
     iget-object v5, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->listener:Lcom/google/android/exoplayer2/audio/AudioSink$Listener;
 
     if-eqz v5, :cond_14
@@ -4165,8 +4584,10 @@
 
     if-eqz v9, :cond_14
 
+    .line 54
     invoke-interface {v5}, Lcom/google/android/exoplayer2/audio/AudioSink$Listener;->onPositionDiscontinuity()V
 
+    .line 55
     :cond_14
     iget-object v5, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->configuration:Lcom/google/android/exoplayer2/audio/DefaultAudioSink$Configuration;
 
@@ -4174,9 +4595,10 @@
 
     if-nez v5, :cond_15
 
+    .line 56
     iget-wide v9, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->submittedPcmBytes:J
 
-    invoke-virtual/range {p1 .. p1}, Ljava/nio/Buffer;->remaining()I
+    invoke-virtual/range {p1 .. p1}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v5
 
@@ -4188,6 +4610,7 @@
 
     goto :goto_5
 
+    .line 57
     :cond_15
     iget-wide v9, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->submittedEncodedFrames:J
 
@@ -4203,28 +4626,35 @@
 
     iput-wide v9, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->submittedEncodedFrames:J
 
+    .line 58
     :goto_5
     iput-object v0, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->inputBuffer:Ljava/nio/ByteBuffer;
 
+    .line 59
     iput v4, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->inputBufferAccessUnitCount:I
 
+    .line 60
     :cond_16
     invoke-direct {v1, v2, v3}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->processBuffers(J)V
 
+    .line 61
     iget-object v0, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->inputBuffer:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {v0}, Ljava/nio/Buffer;->hasRemaining()Z
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->hasRemaining()Z
 
     move-result v0
 
     if-nez v0, :cond_17
 
+    .line 62
     iput-object v8, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->inputBuffer:Ljava/nio/ByteBuffer;
 
+    .line 63
     iput v7, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->inputBufferAccessUnitCount:I
 
     return v6
 
+    .line 64
     :cond_17
     iget-object v0, v1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrackPositionTracker:Lcom/google/android/exoplayer2/audio/AudioTrackPositionTracker;
 
@@ -4242,8 +4672,10 @@
 
     const-string v2, "Resetting stalled audio track"
 
+    .line 65
     invoke-static {v0, v2}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 66
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->flush()V
 
     return v6
@@ -4257,6 +4689,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->startMediaTimeUsNeedsSync:Z
 
     return-void
@@ -4265,6 +4698,7 @@
 .method public hasPendingData()Z
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->isAudioTrackInitialized()Z
 
     move-result v0
@@ -4273,6 +4707,7 @@
 
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrackPositionTracker:Lcom/google/android/exoplayer2/audio/AudioTrackPositionTracker;
 
+    .line 2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->getWrittenFrames()J
 
     move-result-wide v1
@@ -4297,6 +4732,7 @@
 .method public isEnded()Z
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->isAudioTrackInitialized()Z
 
     move-result v0
@@ -4333,8 +4769,10 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->playing:Z
 
+    .line 2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->isAudioTrackInitialized()Z
 
     move-result v0
@@ -4349,6 +4787,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
 
     invoke-virtual {p0}, Landroid/media/AudioTrack;->pause()V
@@ -4362,18 +4801,22 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->playing:Z
 
+    .line 2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->isAudioTrackInitialized()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrackPositionTracker:Lcom/google/android/exoplayer2/audio/AudioTrackPositionTracker;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/audio/AudioTrackPositionTracker;->start()V
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
 
     invoke-virtual {p0}, Landroid/media/AudioTrack;->play()V
@@ -4390,6 +4833,7 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->handledEndOfStream:Z
 
     if-nez v0, :cond_0
@@ -4406,10 +4850,12 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->playPendingData()V
 
     const/4 v0, 0x1
 
+    .line 3
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->handledEndOfStream:Z
 
     :cond_0
@@ -4419,8 +4865,10 @@
 .method public reset()V
     .locals 5
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->flush()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->toIntPcmAvailableAudioProcessors:[Lcom/google/android/exoplayer2/audio/AudioProcessor;
 
     array-length v1, v0
@@ -4434,12 +4882,14 @@
 
     aget-object v4, v0, v3
 
+    .line 3
     invoke-interface {v4}, Lcom/google/android/exoplayer2/audio/AudioProcessor;->reset()V
 
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->toFloatPcmAvailableAudioProcessors:[Lcom/google/android/exoplayer2/audio/AudioProcessor;
 
@@ -4452,15 +4902,18 @@
 
     aget-object v4, v0, v3
 
+    .line 5
     invoke-interface {v4}, Lcom/google/android/exoplayer2/audio/AudioProcessor;->reset()V
 
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
+    .line 6
     :cond_1
     iput-boolean v2, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->playing:Z
 
+    .line 7
     iput-boolean v2, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->offloadDisabledUntilNextConfiguration:Z
 
     return-void
@@ -4469,6 +4922,7 @@
 .method public setAudioAttributes(Lcom/google/android/exoplayer2/audio/AudioAttributes;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioAttributes:Lcom/google/android/exoplayer2/audio/AudioAttributes;
 
     invoke-virtual {v0, p1}, Lcom/google/android/exoplayer2/audio/AudioAttributes;->equals(Ljava/lang/Object;)Z
@@ -4479,15 +4933,18 @@
 
     return-void
 
+    .line 2
     :cond_0
     iput-object p1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioAttributes:Lcom/google/android/exoplayer2/audio/AudioAttributes;
 
+    .line 3
     iget-boolean p1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->tunneling:Z
 
     if-eqz p1, :cond_1
 
     return-void
 
+    .line 4
     :cond_1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->flush()V
 
@@ -4497,10 +4954,12 @@
 .method public setAudioSessionId(I)V
     .locals 1
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioSessionId:I
 
     if-eq v0, p1, :cond_1
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioSessionId:I
 
     if-eqz p1, :cond_0
@@ -4512,9 +4971,11 @@
     :cond_0
     const/4 p1, 0x0
 
+    .line 3
     :goto_0
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->externalAudioSessionIdProvided:Z
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->flush()V
 
     :cond_1
@@ -4524,6 +4985,7 @@
 .method public setAuxEffectInfo(Lcom/google/android/exoplayer2/audio/AuxEffectInfo;)V
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->auxEffectInfo:Lcom/google/android/exoplayer2/audio/AuxEffectInfo;
 
     invoke-virtual {v0, p1}, Lcom/google/android/exoplayer2/audio/AuxEffectInfo;->equals(Ljava/lang/Object;)Z
@@ -4534,30 +4996,37 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget v0, p1, Lcom/google/android/exoplayer2/audio/AuxEffectInfo;->effectId:I
 
+    .line 3
     iget v1, p1, Lcom/google/android/exoplayer2/audio/AuxEffectInfo;->sendLevel:F
 
+    .line 4
     iget-object v2, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
 
     if-eqz v2, :cond_2
 
+    .line 5
     iget-object v3, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->auxEffectInfo:Lcom/google/android/exoplayer2/audio/AuxEffectInfo;
 
     iget v3, v3, Lcom/google/android/exoplayer2/audio/AuxEffectInfo;->effectId:I
 
     if-eq v3, v0, :cond_1
 
+    .line 6
     invoke-virtual {v2, v0}, Landroid/media/AudioTrack;->attachAuxEffect(I)I
 
     :cond_1
     if-eqz v0, :cond_2
 
+    .line 7
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->audioTrack:Landroid/media/AudioTrack;
 
     invoke-virtual {v0, v1}, Landroid/media/AudioTrack;->setAuxEffectSendLevel(F)I
 
+    .line 8
     :cond_2
     iput-object p1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->auxEffectInfo:Lcom/google/android/exoplayer2/audio/AuxEffectInfo;
 
@@ -4567,6 +5036,7 @@
 .method public setListener(Lcom/google/android/exoplayer2/audio/AudioSink$Listener;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->listener:Lcom/google/android/exoplayer2/audio/AudioSink$Listener;
 
     return-void
@@ -4575,6 +5045,7 @@
 .method public setPlaybackParameters(Lcom/google/android/exoplayer2/PlaybackParameters;)V
     .locals 4
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/PlaybackParameters;
 
     iget v1, p1, Lcom/google/android/exoplayer2/PlaybackParameters;->speed:F
@@ -4583,18 +5054,21 @@
 
     const/high16 v3, 0x41000000    # 8.0f
 
+    .line 2
     invoke-static {v1, v2, v3}, Lcom/google/android/exoplayer2/util/Util;->constrainValue(FFF)F
 
     move-result v1
 
     iget p1, p1, Lcom/google/android/exoplayer2/PlaybackParameters;->pitch:F
 
+    .line 3
     invoke-static {p1, v2, v3}, Lcom/google/android/exoplayer2/util/Util;->constrainValue(FFF)F
 
     move-result p1
 
     invoke-direct {v0, v1, p1}, Lcom/google/android/exoplayer2/PlaybackParameters;-><init>(FF)V
 
+    .line 4
     iget-boolean p1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->enableAudioTrackPlaybackParams:Z
 
     if-eqz p1, :cond_0
@@ -4605,15 +5079,18 @@
 
     if-lt p1, v1, :cond_0
 
+    .line 5
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->setAudioTrackPlaybackParametersV23(Lcom/google/android/exoplayer2/PlaybackParameters;)V
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->getSkipSilenceEnabled()Z
 
     move-result p1
 
+    .line 7
     invoke-direct {p0, v0, p1}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->setAudioProcessorPlaybackParametersAndSkipSilence(Lcom/google/android/exoplayer2/PlaybackParameters;Z)V
 
     :goto_0
@@ -4627,6 +5104,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->playerId:Lcom/google/android/exoplayer2/analytics/PlayerId;
 
     return-void
@@ -4635,10 +5113,12 @@
 .method public setSkipSilenceEnabled(Z)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->getAudioProcessorPlaybackParameters()Lcom/google/android/exoplayer2/PlaybackParameters;
 
     move-result-object v0
 
+    .line 2
     invoke-direct {p0, v0, p1}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->setAudioProcessorPlaybackParametersAndSkipSilence(Lcom/google/android/exoplayer2/PlaybackParameters;Z)V
 
     return-void
@@ -4647,14 +5127,17 @@
 .method public setVolume(F)V
     .locals 1
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->volume:F
 
     cmpl-float v0, v0, p1
 
     if-eqz v0, :cond_0
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->volume:F
 
+    .line 3
     invoke-direct {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->setVolumeInternal()V
 
     :cond_0
@@ -4664,6 +5147,7 @@
 .method public supportsFormat(Lcom/google/android/exoplayer2/Format;)Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->getFormatSupport(Lcom/google/android/exoplayer2/Format;)I
 
     move-result p0

@@ -1,4 +1,4 @@
-.class Landroidx/media/AudioFocusRequestCompat$OnAudioFocusChangeListenerHandlerCompat;
+.class public Landroidx/media/AudioFocusRequestCompat$OnAudioFocusChangeListenerHandlerCompat;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -50,10 +50,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/media/AudioFocusRequestCompat$OnAudioFocusChangeListenerHandlerCompat;->mListener:Landroid/media/AudioManager$OnAudioFocusChangeListener;
 
+    .line 3
     new-instance p1, Landroid/os/Handler;
 
     invoke-virtual {p2}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
@@ -80,12 +83,14 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p1, Landroid/os/Message;->what:I
 
     const v1, 0x2a74b2
 
     if-ne v0, v1, :cond_0
 
+    .line 2
     iget-object p0, p0, Landroidx/media/AudioFocusRequestCompat$OnAudioFocusChangeListenerHandlerCompat;->mListener:Landroid/media/AudioManager$OnAudioFocusChangeListener;
 
     iget p1, p1, Landroid/os/Message;->arg1:I
@@ -113,6 +118,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/media/AudioFocusRequestCompat$OnAudioFocusChangeListenerHandlerCompat;->mHandler:Landroid/os/Handler;
 
     const v0, 0x2a74b2

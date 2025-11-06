@@ -16,4 +16,12 @@
 
 # virtual methods
 .method public abstract onClick(Ljava/lang/String;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "newValue"
+        }
+    .end annotation
 .end method

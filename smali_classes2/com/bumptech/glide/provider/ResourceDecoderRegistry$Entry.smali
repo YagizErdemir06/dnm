@@ -1,4 +1,4 @@
-.class Lcom/bumptech/glide/provider/ResourceDecoderRegistry$Entry;
+.class public Lcom/bumptech/glide/provider/ResourceDecoderRegistry$Entry;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -35,7 +35,7 @@
     .end annotation
 .end field
 
-.field final decoder:Lcom/bumptech/glide/load/ResourceDecoder;
+.field public final decoder:Lcom/bumptech/glide/load/ResourceDecoder;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/bumptech/glide/load/ResourceDecoder<",
@@ -44,7 +44,7 @@
     .end annotation
 .end field
 
-.field final resourceClass:Ljava/lang/Class;
+.field public final resourceClass:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class<",
@@ -77,12 +77,16 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/bumptech/glide/provider/ResourceDecoderRegistry$Entry;->dataClass:Ljava/lang/Class;
 
+    .line 3
     iput-object p2, p0, Lcom/bumptech/glide/provider/ResourceDecoderRegistry$Entry;->resourceClass:Ljava/lang/Class;
 
+    .line 4
     iput-object p3, p0, Lcom/bumptech/glide/provider/ResourceDecoderRegistry$Entry;->decoder:Lcom/bumptech/glide/load/ResourceDecoder;
 
     return-void
@@ -110,6 +114,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/provider/ResourceDecoderRegistry$Entry;->dataClass:Ljava/lang/Class;
 
     invoke-virtual {v0, p1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -120,6 +125,7 @@
 
     iget-object p0, p0, Lcom/bumptech/glide/provider/ResourceDecoderRegistry$Entry;->resourceClass:Ljava/lang/Class;
 
+    .line 2
     invoke-virtual {p2, p0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
     move-result p0

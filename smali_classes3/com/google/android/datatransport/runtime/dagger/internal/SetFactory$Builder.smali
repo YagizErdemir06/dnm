@@ -24,7 +24,7 @@
 
 
 # static fields
-.field static final synthetic $assertionsDisabled:Z
+.field public static final synthetic $assertionsDisabled:Z
 
 
 # instance fields
@@ -32,7 +32,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Ljava/util/Collection<",
             "TT;>;>;>;"
         }
@@ -43,7 +43,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lmm/c<",
+            "Lg/a/c<",
             "TT;>;>;"
         }
     .end annotation
@@ -91,12 +91,12 @@
 
 
 # virtual methods
-.method public addCollectionProvider(Lmm/c;)Lcom/google/android/datatransport/runtime/dagger/internal/SetFactory$Builder;
+.method public addCollectionProvider(Lg/a/c;)Lcom/google/android/datatransport/runtime/dagger/internal/SetFactory$Builder;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lmm/c<",
+            "Lg/a/c<",
             "+",
             "Ljava/util/Collection<",
             "+TT;>;>;)",
@@ -105,6 +105,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/dagger/internal/SetFactory$Builder;->collectionProviders:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -112,18 +113,19 @@
     return-object p0
 .end method
 
-.method public addProvider(Lmm/c;)Lcom/google/android/datatransport/runtime/dagger/internal/SetFactory$Builder;
+.method public addProvider(Lg/a/c;)Lcom/google/android/datatransport/runtime/dagger/internal/SetFactory$Builder;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lmm/c<",
+            "Lg/a/c<",
             "+TT;>;)",
             "Lcom/google/android/datatransport/runtime/dagger/internal/SetFactory$Builder<",
             "TT;>;"
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/dagger/internal/SetFactory$Builder;->individualProviders:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -141,6 +143,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/datatransport/runtime/dagger/internal/SetFactory;
 
     iget-object v1, p0, Lcom/google/android/datatransport/runtime/dagger/internal/SetFactory$Builder;->individualProviders:Ljava/util/List;

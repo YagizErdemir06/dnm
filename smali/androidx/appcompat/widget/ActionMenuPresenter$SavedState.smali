@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/widget/ActionMenuPresenter$SavedState;
+.class public Landroidx/appcompat/widget/ActionMenuPresenter$SavedState;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -43,6 +43,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/appcompat/widget/ActionMenuPresenter$SavedState$1;
 
     invoke-direct {v0}, Landroidx/appcompat/widget/ActionMenuPresenter$SavedState$1;-><init>()V
@@ -90,6 +91,7 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/appcompat/widget/ActionMenuPresenter$SavedState;->openSubMenuId:I
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V

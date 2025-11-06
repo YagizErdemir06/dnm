@@ -1,4 +1,4 @@
-.class abstract enum Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;
+.class public abstract enum Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;
 .super Ljava/lang/Enum;
 .source "SourceFile"
 
@@ -46,17 +46,18 @@
 
     new-array v0, v0, [Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;
 
-    const/4 v1, 0x0
+    .line 1
+    sget-object v1, Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;->UNSAFE_LITTLE_ENDIAN:Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;
 
-    sget-object v2, Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;->UNSAFE_LITTLE_ENDIAN:Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;
+    const/4 v2, 0x0
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/4 v1, 0x1
+    sget-object v1, Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;->UNSAFE_BIG_ENDIAN:Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;
 
-    sget-object v2, Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;->UNSAFE_BIG_ENDIAN:Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;
+    const/4 v2, 0x1
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
     return-object v0
 .end method
@@ -64,54 +65,61 @@
 .method public static constructor <clinit>()V
     .locals 4
 
-    new-instance v0, Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray$1;
+    .line 1
+    const-class v0, [B
 
-    const-string v1, "UNSAFE_LITTLE_ENDIAN"
+    new-instance v1, Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray$1;
 
-    const/4 v2, 0x0
+    const-string v2, "UNSAFE_LITTLE_ENDIAN"
 
-    invoke-direct {v0, v1, v2}, Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray$1;-><init>(Ljava/lang/String;I)V
+    const/4 v3, 0x0
 
-    sput-object v0, Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;->UNSAFE_LITTLE_ENDIAN:Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;
+    invoke-direct {v1, v2, v3}, Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray$1;-><init>(Ljava/lang/String;I)V
 
-    new-instance v0, Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray$2;
+    sput-object v1, Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;->UNSAFE_LITTLE_ENDIAN:Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;
 
-    const-string v1, "UNSAFE_BIG_ENDIAN"
+    .line 2
+    new-instance v1, Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray$2;
 
-    const/4 v2, 0x1
+    const-string v2, "UNSAFE_BIG_ENDIAN"
 
-    invoke-direct {v0, v1, v2}, Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray$2;-><init>(Ljava/lang/String;I)V
+    const/4 v3, 0x1
 
-    sput-object v0, Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;->UNSAFE_BIG_ENDIAN:Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;
+    invoke-direct {v1, v2, v3}, Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray$2;-><init>(Ljava/lang/String;I)V
 
+    sput-object v1, Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;->UNSAFE_BIG_ENDIAN:Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;
+
+    .line 3
     invoke-static {}, Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;->$values()[Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;
 
-    move-result-object v0
+    move-result-object v1
 
-    sput-object v0, Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;->$VALUES:[Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;
+    sput-object v1, Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;->$VALUES:[Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;
 
+    .line 4
     invoke-static {}, Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;->getUnsafe()Lsun/misc/Unsafe;
 
-    move-result-object v0
+    move-result-object v1
 
-    sput-object v0, Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;->theUnsafe:Lsun/misc/Unsafe;
+    sput-object v1, Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;->theUnsafe:Lsun/misc/Unsafe;
 
-    const-class v1, [B
+    .line 5
+    invoke-virtual {v1, v0}, Lsun/misc/Unsafe;->arrayBaseOffset(Ljava/lang/Class;)I
 
-    invoke-virtual {v0, v1}, Lsun/misc/Unsafe;->arrayBaseOffset(Ljava/lang/Class;)I
+    move-result v2
 
-    move-result v3
+    sput v2, Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;->BYTE_ARRAY_BASE_OFFSET:I
 
-    sput v3, Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;->BYTE_ARRAY_BASE_OFFSET:I
-
-    invoke-virtual {v0, v1}, Lsun/misc/Unsafe;->arrayIndexScale(Ljava/lang/Class;)I
+    .line 6
+    invoke-virtual {v1, v0}, Lsun/misc/Unsafe;->arrayIndexScale(Ljava/lang/Class;)I
 
     move-result v0
 
-    if-ne v0, v2, :cond_0
+    if-ne v0, v3, :cond_0
 
     return-void
 
+    .line 7
     :cond_0
     new-instance v0, Ljava/lang/AssertionError;
 
@@ -122,11 +130,6 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
@@ -146,6 +149,7 @@
 .method public static synthetic access$100()I
     .locals 1
 
+    .line 1
     sget v0, Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;->BYTE_ARRAY_BASE_OFFSET:I
 
     return v0
@@ -154,6 +158,7 @@
 .method public static synthetic access$200()Lsun/misc/Unsafe;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;->theUnsafe:Lsun/misc/Unsafe;
 
     return-object v0
@@ -162,6 +167,7 @@
 .method private static getUnsafe()Lsun/misc/Unsafe;
     .locals 3
 
+    .line 1
     :try_start_0
     invoke-static {}, Lsun/misc/Unsafe;->getUnsafe()Lsun/misc/Unsafe;
 
@@ -171,6 +177,7 @@
 
     return-object v0
 
+    .line 2
     :catch_0
     :try_start_1
     new-instance v0, Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray$3;
@@ -190,13 +197,14 @@
     :catch_1
     move-exception v0
 
+    .line 3
     new-instance v1, Ljava/lang/RuntimeException;
-
-    const-string v2, "Could not initialize intrinsics"
 
     invoke-virtual {v0}, Ljava/security/PrivilegedActionException;->getCause()Ljava/lang/Throwable;
 
     move-result-object v0
+
+    const-string v2, "Could not initialize intrinsics"
 
     invoke-direct {v1, v2, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
@@ -206,6 +214,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;
     .locals 1
 
+    .line 1
     const-class v0, Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -220,6 +229,7 @@
 .method public static values()[Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;->$VALUES:[Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;
 
     invoke-virtual {v0}, [Lcom/google/common/hash/LittleEndianByteArray$UnsafeByteArray;->clone()Ljava/lang/Object;

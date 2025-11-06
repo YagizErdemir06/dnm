@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field data:[Ljava/lang/String;
+.field public data:[Ljava/lang/String;
 
-.field length:I
+.field public length:I
 
 
 # direct methods

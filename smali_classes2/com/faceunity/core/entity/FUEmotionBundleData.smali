@@ -4,29 +4,33 @@
 
 
 # annotations
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
     bv = {
         0x1,
         0x0,
         0x3
     }
     d1 = {
-        "\u0000\u001a\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u0007\u0018\u00002\u00020\u0001B/\u0008\u0007\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0008\u0008\u0002\u0010\u0004\u001a\u00020\u0003\u0012\u0008\u0008\u0002\u0010\u0005\u001a\u00020\u0006\u0012\n\u0008\u0002\u0010\u0007\u001a\u0004\u0018\u00010\u0006\u00a2\u0006\u0002\u0010\u0008J\u0008\u0010\t\u001a\u00020\u0000H\u0016J\u0008\u0010\n\u001a\u00020\u0003H\u0016J\u000e\u0010\u000b\u001a\u00020\u00062\u0006\u0010\u000c\u001a\u00020\u0000\u00a8\u0006\r"
+        "\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0002\u0008\t\u0018\u00002\u00020\u0001B1\u0008\u0007\u0012\u0006\u0010\u000b\u001a\u00020\u0008\u0012\u0008\u0008\u0002\u0010\u000c\u001a\u00020\u0008\u0012\u0008\u0008\u0002\u0010\r\u001a\u00020\u0005\u0012\n\u0008\u0002\u0010\u000e\u001a\u0004\u0018\u00010\u0005\u00a2\u0006\u0004\u0008\u000f\u0010\u0010J\u000f\u0010\u0002\u001a\u00020\u0000H\u0016\u00a2\u0006\u0004\u0008\u0002\u0010\u0003J\u0015\u0010\u0006\u001a\u00020\u00052\u0006\u0010\u0004\u001a\u00020\u0000\u00a2\u0006\u0004\u0008\u0006\u0010\u0007J\u000f\u0010\t\u001a\u00020\u0008H\u0016\u00a2\u0006\u0004\u0008\t\u0010\n\u00a8\u0006\u0011"
     }
     d2 = {
         "Lcom/faceunity/core/entity/FUEmotionBundleData;",
         "Lcom/faceunity/core/entity/FUAnimationBundleData;",
-        "path",
+        "clone",
+        "()Lcom/faceunity/core/entity/FUEmotionBundleData;",
+        "data",
         "",
+        "isEqual",
+        "(Lcom/faceunity/core/entity/FUEmotionBundleData;)Z",
+        "",
+        "getDataMark",
+        "()Ljava/lang/String;",
+        "path",
         "name",
         "repeatable",
-        "",
         "internalLerp",
+        "<init>",
         "(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/Boolean;)V",
-        "clone",
-        "getDataMark",
-        "isEqual",
-        "data",
         "lib_core_release"
     }
     k = 0x1
@@ -42,10 +46,10 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 7
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const/4 v2, 0x0
@@ -62,7 +66,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v6}, Lcom/faceunity/core/entity/FUEmotionBundleData;-><init>(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/Boolean;ILkotlin/jvm/internal/w;)V
+    invoke-direct/range {v0 .. v6}, Lcom/faceunity/core/entity/FUEmotionBundleData;-><init>(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/Boolean;ILh/d3/x/w;)V
 
     return-void
 .end method
@@ -70,14 +74,14 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 7
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const/4 v3, 0x0
@@ -94,7 +98,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v6}, Lcom/faceunity/core/entity/FUEmotionBundleData;-><init>(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/Boolean;ILkotlin/jvm/internal/w;)V
+    invoke-direct/range {v0 .. v6}, Lcom/faceunity/core/entity/FUEmotionBundleData;-><init>(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/Boolean;ILh/d3/x/w;)V
 
     return-void
 .end method
@@ -102,14 +106,14 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 7
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const/4 v4, 0x0
@@ -126,7 +130,7 @@
 
     move v3, p3
 
-    invoke-direct/range {v0 .. v6}, Lcom/faceunity/core/entity/FUEmotionBundleData;-><init>(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/Boolean;ILkotlin/jvm/internal/w;)V
+    invoke-direct/range {v0 .. v6}, Lcom/faceunity/core/entity/FUEmotionBundleData;-><init>(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/Boolean;ILh/d3/x/w;)V
 
     return-void
 .end method
@@ -134,31 +138,31 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/Boolean;)V
     .locals 13
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p4    # Ljava/lang/Boolean;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const-string v0, "path"
 
     move-object v2, p1
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "name"
 
     move-object v3, p2
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
     sget-object v0, Lcom/faceunity/core/entity/FULogicNodeEnum;->HEAD_ANIMATION:Lcom/faceunity/core/entity/FULogicNodeEnum;
@@ -185,12 +189,12 @@
 
     move-object/from16 v6, p4
 
-    invoke-direct/range {v1 .. v12}, Lcom/faceunity/core/entity/FUAnimationBundleData;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/Boolean;ILjava/lang/String;Ljava/lang/Integer;Ljava/lang/Boolean;ILkotlin/jvm/internal/w;)V
+    invoke-direct/range {v1 .. v12}, Lcom/faceunity/core/entity/FUAnimationBundleData;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/Boolean;ILjava/lang/String;Ljava/lang/Integer;Ljava/lang/Boolean;ILh/d3/x/w;)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/Boolean;ILkotlin/jvm/internal/w;)V
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/Boolean;ILh/d3/x/w;)V
     .locals 0
 
     and-int/lit8 p6, p5, 0x2
@@ -251,7 +255,7 @@
 
 .method public clone()Lcom/faceunity/core/entity/FUEmotionBundleData;
     .locals 4
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     .line 3
@@ -280,9 +284,10 @@
 
 .method public getDataMark()Ljava/lang/String;
     .locals 3
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -321,14 +326,15 @@
 .method public final isEqual(Lcom/faceunity/core/entity/FUEmotionBundleData;)Z
     .locals 2
     .param p1    # Lcom/faceunity/core/entity/FUEmotionBundleData;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "data"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/entity/FUBundleData;->getPath()Ljava/lang/String;
 
     move-result-object v0
@@ -337,7 +343,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lh/d3/x/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -351,7 +357,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lh/d3/x/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

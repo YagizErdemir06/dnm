@@ -1,4 +1,4 @@
-.class Landroidx/fragment/app/SpecialEffectsController$Operation$1;
+.class public Landroidx/fragment/app/SpecialEffectsController$Operation$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/fragment/app/SpecialEffectsController$Operation;
+.field public final synthetic this$0:Landroidx/fragment/app/SpecialEffectsController$Operation;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/fragment/app/SpecialEffectsController$Operation;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/fragment/app/SpecialEffectsController$Operation$1;->this$0:Landroidx/fragment/app/SpecialEffectsController$Operation;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,6 +38,7 @@
 .method public onCancel()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/fragment/app/SpecialEffectsController$Operation$1;->this$0:Landroidx/fragment/app/SpecialEffectsController$Operation;
 
     invoke-virtual {p0}, Landroidx/fragment/app/SpecialEffectsController$Operation;->cancel()V

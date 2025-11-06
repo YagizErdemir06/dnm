@@ -1,4 +1,4 @@
-.class final Lcom/google/common/graph/EndpointPairIterator$Directed;
+.class public final Lcom/google/common/graph/EndpointPairIterator$Directed;
 .super Lcom/google/common/graph/EndpointPairIterator;
 .source "SourceFile"
 

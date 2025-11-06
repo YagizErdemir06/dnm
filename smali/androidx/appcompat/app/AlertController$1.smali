@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/app/AlertController$1;
+.class public Landroidx/appcompat/app/AlertController$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/appcompat/app/AlertController;
+.field public final synthetic this$0:Landroidx/appcompat/app/AlertController;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/appcompat/app/AlertController;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/app/AlertController$1;->this$0:Landroidx/appcompat/app/AlertController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,6 +38,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/app/AlertController$1;->this$0:Landroidx/appcompat/app/AlertController;
 
     iget-object v1, v0, Landroidx/appcompat/app/AlertController;->mButtonPositive:Landroid/widget/Button;
@@ -47,12 +49,14 @@
 
     if-eqz v1, :cond_0
 
+    .line 2
     invoke-static {v1}, Landroid/os/Message;->obtain(Landroid/os/Message;)Landroid/os/Message;
 
     move-result-object p1
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object v1, v0, Landroidx/appcompat/app/AlertController;->mButtonNegative:Landroid/widget/Button;
 
@@ -62,12 +66,14 @@
 
     if-eqz v1, :cond_1
 
+    .line 4
     invoke-static {v1}, Landroid/os/Message;->obtain(Landroid/os/Message;)Landroid/os/Message;
 
     move-result-object p1
 
     goto :goto_0
 
+    .line 5
     :cond_1
     iget-object v1, v0, Landroidx/appcompat/app/AlertController;->mButtonNeutral:Landroid/widget/Button;
 
@@ -77,6 +83,7 @@
 
     if-eqz p1, :cond_2
 
+    .line 6
     invoke-static {p1}, Landroid/os/Message;->obtain(Landroid/os/Message;)Landroid/os/Message;
 
     move-result-object p1
@@ -89,8 +96,10 @@
     :goto_0
     if-eqz p1, :cond_3
 
+    .line 7
     invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
 
+    .line 8
     :cond_3
     iget-object p0, p0, Landroidx/appcompat/app/AlertController$1;->this$0:Landroidx/appcompat/app/AlertController;
 
@@ -104,6 +113,7 @@
 
     move-result-object p0
 
+    .line 9
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     return-void

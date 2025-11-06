@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Lcom/android/camera2/compat/theme/custom/mm/aid/FriendRemoteDisplayProtocol;
-.implements Lv8/z0;
+.implements Ld/d/a/m7/g/c1;
 .implements Lcom/android/camera2/compat/theme/custom/mm/aid/FriendStreamTextureView$DisplayActionOnVideoListener;
 
 
@@ -45,7 +45,7 @@
 
 .field private final mHandler:Landroid/os/Handler;
 
-.field private mRemoteFileSaveListener:Lq7/q4$c;
+.field private mRemoteFileSaveListener:Ld/d/a/d7/x7$c;
 
 .field private mRootView:Landroid/view/ViewGroup;
 
@@ -60,7 +60,8 @@
 
     const-string v0, "FragmentFriendDisplay"
 
-    invoke-static {v0}, Lbg/a;->a(Ljava/lang/String;)Ljava/lang/String;
+    .line 1
+    invoke-static {v0}, Ld/o/f/r/m/a;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -72,18 +73,22 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/BaseFragment;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mTargetUiStyle:I
 
+    .line 3
     new-instance v1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->isVideoPause:Ljava/util/concurrent/atomic/AtomicBoolean;
 
+    .line 4
     new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay$1;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -97,49 +102,10 @@
     return-void
 .end method
 
-.method public static synthetic Ai(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;Lv8/x2;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$onAcceptRatioChanged$24(Lv8/x2;)V
-
-    return-void
-.end method
-
-.method public static synthetic Gh(Lv8/z;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$configReferenceLineSwitch$25(Lv8/z;)V
-
-    return-void
-.end method
-
-.method public static synthetic Hh(Ljava/lang/String;Lv8/y2;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$onAcceptZoomRatioChange$29(Ljava/lang/String;Lv8/y2;)V
-
-    return-void
-.end method
-
-.method public static synthetic Xh(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;Lv8/y2;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$onClientStreamStream$14(Lv8/y2;)V
-
-    return-void
-.end method
-
-.method public static synthetic Zh(Lv8/z;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$configGradienterSwitch$28(Lv8/z;)V
-
-    return-void
-.end method
-
 .method public static synthetic access$000(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->handlePlayerPause()V
 
     return-void
@@ -148,6 +114,7 @@
 .method public static synthetic access$100()Ljava/lang/String;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -156,39 +123,25 @@
 .method public static synthetic access$200(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->forceExitFriendMode(Z)V
-
-    return-void
-.end method
-
-.method public static synthetic ai(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;Lv8/y2;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$onResume$3(Lv8/y2;)V
-
-    return-void
-.end method
-
-.method public static synthetic bi(Lv8/d;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$showBackProcessDialog$15(Lv8/d;)V
-
-    return-void
-.end method
-
-.method public static synthetic ci(Ljava/lang/String;Lv8/w2;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$onAcceptTimerAck$30(Ljava/lang/String;Lv8/w2;)V
 
     return-void
 .end method
 
 .method private configReferenceLineSwitch(Z)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "switchOn"
+        }
+    .end annotation
 
-    invoke-static {}, Lg2/b;->h()Ll2/g;
+    .line 1
+    invoke-static {}, Ld/d/a/l6/b;->h()Ld/d/a/l6/e/l/g;
 
     move-result-object p0
 
@@ -196,52 +149,36 @@
 
     const-string v0, "pref_camera_referenceline_key"
 
-    invoke-virtual {p0, v0, p1}, Lcom/android/camera/data/data/g;->putBoolean(Ljava/lang/String;Z)Lr2/a$a;
+    invoke-virtual {p0, v0, p1}, Ld/d/a/l6/e/f;->putBoolean(Ljava/lang/String;Z)Ld/d/a/l6/g/a$a;
 
     move-result-object p0
 
-    invoke-interface {p0}, Lr2/a$a;->apply()V
+    invoke-interface {p0}, Ld/d/a/l6/g/a$a;->apply()V
 
-    invoke-static {}, Lv8/z;->impl()Ljava/util/Optional;
+    .line 2
+    invoke-static {}, Ld/d/a/m7/g/c0;->impl()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance p1, Lcom/android/camera2/compat/theme/custom/mm/aid/u;
-
-    invoke-direct {p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/u;-><init>()V
+    sget-object p1, Ld/d/b/x5/a/b/b/d/b;->c:Ld/d/b/x5/a/b/b/d/b;
 
     invoke-virtual {p0, p1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
     return-void
 .end method
 
-.method public static synthetic di(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$showBackProcessDialog$16()V
-
-    return-void
-.end method
-
-.method public static synthetic ei(Ljava/lang/String;Lv8/z;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$onAcceptCountDownTimeChange$19(Ljava/lang/String;Lv8/z;)V
-
-    return-void
-.end method
-
-.method public static synthetic fi(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;Lv8/j2;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$notifyAfterFrameAvailable$7(Lv8/j2;)V
-
-    return-void
-.end method
-
 .method private forceExitFriendMode(Z)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "delay"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x1
@@ -254,6 +191,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     sget-object p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -276,6 +214,7 @@
 
     return-void
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -285,6 +224,7 @@
 
     return-void
 
+    .line 4
     :cond_1
     sget-object v0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->TAG:Ljava/lang/String;
 
@@ -306,39 +246,43 @@
 
     invoke-static {v0, v3, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 5
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lwf/b;->f(Landroid/content/Context;)Z
+    invoke-static {v0}, Ld/o/f/r/k/a;->f(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    invoke-static {}, Lv8/y2;->impl()Ljava/util/Optional;
+    .line 6
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v2, Lcom/android/camera2/compat/theme/custom/mm/aid/e0;
+    new-instance v2, Ld/d/b/x5/a/b/b/d/n;
 
-    invoke-direct {v2, p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/e0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
+    invoke-direct {v2, p0}, Ld/d/b/x5/a/b/b/d/n;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
 
     invoke-virtual {v0, v2}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
     goto :goto_0
 
+    .line 7
     :cond_2
-    invoke-static {}, Lv8/y2;->impl()Ljava/util/Optional;
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v2, Lcom/android/camera2/compat/theme/custom/mm/aid/b;
+    new-instance v2, Ld/d/b/x5/a/b/b/d/v;
 
-    invoke-direct {v2, p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/b;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
+    invoke-direct {v2, p0}, Ld/d/b/x5/a/b/b/d/v;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
 
     invoke-virtual {v0, v2}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
+    .line 8
     :goto_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mHandler:Landroid/os/Handler;
 
@@ -346,18 +290,21 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeMessages(I)V
 
+    .line 9
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
     if-eqz p1, :cond_3
 
-    invoke-static {}, Luf/t0;->F()Luf/t0;
+    .line 10
+    invoke-static {}, Ld/o/f/r/i/x0;->l()Ld/o/f/r/i/x0;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Luf/t0;->D()V
+    invoke-virtual {p1}, Ld/o/f/r/i/x0;->j()V
 
+    .line 11
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mHandler:Landroid/os/Handler;
 
     const-wide/16 v2, 0x7d0
@@ -366,20 +313,20 @@
 
     goto :goto_1
 
+    .line 12
     :cond_3
-    invoke-static {}, Luf/t0;->F()Luf/t0;
+    invoke-static {}, Ld/o/f/r/i/x0;->l()Ld/o/f/r/i/x0;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Luf/t0;->D()V
+    invoke-virtual {p0}, Ld/o/f/r/i/x0;->j()V
 
-    invoke-static {}, Lv8/v1;->impl()Ljava/util/Optional;
+    .line 13
+    invoke-static {}, Ld/d/a/m7/g/y1;->impl()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance p1, La6/s;
-
-    invoke-direct {p1}, La6/s;-><init>()V
+    sget-object p1, Ld/d/b/x5/a/b/b/d/h0;->c:Ld/d/b/x5/a/b/b/d/h0;
 
     invoke-virtual {p0, p1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -387,17 +334,10 @@
     return-void
 .end method
 
-.method public static synthetic gi(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;Lv8/y2;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$onVideoRenderStart$11(Lv8/y2;)V
-
-    return-void
-.end method
-
 .method private handlePlayerPause()V
     .locals 4
 
+    .line 1
     sget-object v0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -408,6 +348,7 @@
 
     invoke-static {v0, v3, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result v2
@@ -420,6 +361,7 @@
 
     if-eqz v2, :cond_1
 
+    .line 3
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mTextureView:Lcom/android/camera2/compat/theme/custom/mm/aid/FriendStreamTextureView;
 
     if-eqz v2, :cond_0
@@ -430,24 +372,27 @@
 
     if-eqz v2, :cond_0
 
-    const-string v2, "handlePlayerPause: pausePlay"
-
     new-array v1, v1, [Ljava/lang/Object;
 
+    const-string v2, "handlePlayerPause: pausePlay"
+
+    .line 4
     invoke-static {v0, v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 5
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mTextureView:Lcom/android/camera2/compat/theme/custom/mm/aid/FriendStreamTextureView;
 
     invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/BaseStreamTextureView;->pausePlay()V
 
+    .line 6
     :cond_0
-    invoke-static {}, Lv8/y2;->impl()Ljava/util/Optional;
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/aid/e;
+    new-instance v1, Ld/d/b/x5/a/b/b/d/p;
 
-    invoke-direct {v1, p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/e;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
+    invoke-direct {v1, p0}, Ld/d/b/x5/a/b/b/d/p;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -455,93 +400,67 @@
     return-void
 .end method
 
-.method public static synthetic hi(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$onSocketClose$13()V
-
-    return-void
-.end method
-
-.method public static synthetic ii(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;Lv8/y2;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$forceExitFriendMode$17(Lv8/y2;)V
-
-    return-void
-.end method
-
-.method public static synthetic ji(Lv8/d;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$callHostPictureReceived$5(Lv8/d;)V
-
-    return-void
-.end method
-
-.method public static synthetic ki(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;Lv8/y2;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$handlePlayerPause$12(Lv8/y2;)V
-
-    return-void
-.end method
-
-.method private static synthetic lambda$callHostPictureReceived$5(Lv8/d;)V
+.method public static synthetic lambda$callHostPictureReceived$5(Ld/d/a/m7/g/h;)V
     .locals 1
 
     const/4 v0, 0x1
 
-    invoke-interface {p0, v0}, Lv8/d;->X5(Z)V
+    .line 1
+    invoke-interface {p0, v0}, Ld/d/a/m7/g/h;->O5(Z)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$configCenterMarkSwitch$27(Lv8/z;)V
+.method public static synthetic lambda$configCenterMarkSwitch$27(Ld/d/a/m7/g/c0;)V
     .locals 1
 
     const/4 v0, 0x2
 
-    invoke-interface {p0, v0}, Lv8/z;->X2(I)V
+    .line 1
+    invoke-interface {p0, v0}, Ld/d/a/m7/g/c0;->X2(I)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$configGradienterSwitch$28(Lv8/z;)V
+.method public static synthetic lambda$configGradienterSwitch$28(Ld/d/a/m7/g/c0;)V
     .locals 1
 
     const/4 v0, 0x2
 
-    invoke-interface {p0, v0}, Lv8/z;->Ub(I)V
+    .line 1
+    invoke-interface {p0, v0}, Ld/d/a/m7/g/c0;->Db(I)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$configReferenceLineSwitch$25(Lv8/z;)V
+.method public static synthetic lambda$configReferenceLineSwitch$25(Ld/d/a/m7/g/c0;)V
     .locals 1
 
     const/16 v0, 0xdb
 
-    invoke-interface {p0, v0}, Lv8/z;->b4(I)V
+    .line 1
+    invoke-interface {p0, v0}, Ld/d/a/m7/g/c0;->X3(I)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$configReferenceSwitch$26(Ljava/lang/String;Lv8/z;)V
+.method public static synthetic lambda$configReferenceSwitch$26(Ljava/lang/String;Ld/d/a/m7/g/c0;)V
     .locals 1
 
     const/16 v0, 0xb9
 
-    invoke-interface {p1, v0, p0}, Lv8/z;->u1(ILjava/lang/String;)V
+    .line 1
+    invoke-interface {p1, v0, p0}, Ld/d/a/m7/g/c0;->w1(ILjava/lang/String;)V
 
     return-void
 .end method
 
-.method private synthetic lambda$forceExitFriendMode$17(Lv8/y2;)V
+.method private synthetic lambda$forceExitFriendMode$17(Ld/d/a/m7/g/a3;)V
     .locals 2
 
-    const v0, 0x7f140c14
+    const v0, 0x7f130b8e
 
+    .line 1
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -550,16 +469,17 @@
 
     const/4 v1, 0x0
 
-    invoke-interface {p1, v0, v1, p0}, Lv8/y2;->alertRecommendDescTip(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-interface {p1, v0, v1, p0}, Ld/d/a/m7/g/a3;->alertRecommendDescTip(Ljava/lang/String;ILjava/lang/String;)V
 
     return-void
 .end method
 
-.method private synthetic lambda$forceExitFriendMode$18(Lv8/y2;)V
+.method private synthetic lambda$forceExitFriendMode$18(Ld/d/a/m7/g/a3;)V
     .locals 2
 
-    const v0, 0x7f140c15
+    const v0, 0x7f130b8f
 
+    .line 1
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -568,16 +488,17 @@
 
     const/4 v1, 0x0
 
-    invoke-interface {p1, v0, v1, p0}, Lv8/y2;->alertRecommendDescTip(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-interface {p1, v0, v1, p0}, Ld/d/a/m7/g/a3;->alertRecommendDescTip(Ljava/lang/String;ILjava/lang/String;)V
 
     return-void
 .end method
 
-.method private synthetic lambda$handlePlayerPause$12(Lv8/y2;)V
+.method private synthetic lambda$handlePlayerPause$12(Ld/d/a/m7/g/a3;)V
     .locals 2
 
-    const v0, 0x7f140c13
+    const v0, 0x7f130b8d
 
+    .line 1
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -586,20 +507,22 @@
 
     const/4 v1, 0x0
 
-    invoke-interface {p1, v0, v1, p0, v1}, Lv8/y2;->alertFriendDisplayDeviceNameTip(Ljava/lang/String;ILjava/lang/String;Z)V
+    invoke-interface {p1, v0, v1, p0, v1}, Ld/d/a/m7/g/a3;->alertFriendDisplayDeviceNameTip(Ljava/lang/String;ILjava/lang/String;Z)V
 
     return-void
 .end method
 
-.method private synthetic lambda$notifyAfterFrameAvailable$6(Lv8/y2;)V
+.method private synthetic lambda$notifyAfterFrameAvailable$6(Ld/d/a/m7/g/a3;)V
     .locals 5
 
-    const v0, 0x7f140c12
+    const v0, 0x7f130b8c
 
+    .line 1
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 2
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mTextureView:Lcom/android/camera2/compat/theme/custom/mm/aid/FriendStreamTextureView;
 
     const/4 v2, 0x0
@@ -616,71 +539,79 @@
 
     if-nez v1, :cond_1
 
+    .line 3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v1}, Lwf/b;->f(Landroid/content/Context;)Z
+    invoke-static {v1}, Ld/o/f/r/k/a;->f(Landroid/content/Context;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    const v0, 0x7f140c15
+    const v0, 0x7f130b8f
 
+    .line 4
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-interface {p1, v4, v2, p0, v3}, Lv8/y2;->alertFriendDisplayDeviceNameTip(Ljava/lang/String;ILjava/lang/String;Z)V
+    .line 5
+    invoke-interface {p1, v4, v2, p0, v3}, Ld/d/a/m7/g/a3;->alertFriendDisplayDeviceNameTip(Ljava/lang/String;ILjava/lang/String;Z)V
 
     goto :goto_0
 
     :cond_0
     const/16 p0, 0x8
 
-    invoke-interface {p1, v4, p0, v0, v3}, Lv8/y2;->alertFriendDisplayDeviceNameTip(Ljava/lang/String;ILjava/lang/String;Z)V
+    .line 6
+    invoke-interface {p1, v4, p0, v0, v3}, Ld/d/a/m7/g/a3;->alertFriendDisplayDeviceNameTip(Ljava/lang/String;ILjava/lang/String;Z)V
 
     goto :goto_0
 
+    .line 7
     :cond_1
-    invoke-interface {p1, v4, v2, v0, v3}, Lv8/y2;->alertFriendDisplayDeviceNameTip(Ljava/lang/String;ILjava/lang/String;Z)V
+    invoke-interface {p1, v4, v2, v0, v3}, Ld/d/a/m7/g/a3;->alertFriendDisplayDeviceNameTip(Ljava/lang/String;ILjava/lang/String;Z)V
 
     :goto_0
     return-void
 .end method
 
-.method private synthetic lambda$notifyAfterFrameAvailable$7(Lv8/j2;)V
+.method private synthetic lambda$notifyAfterFrameAvailable$7(Ld/d/a/m7/g/m2;)V
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mTargetUiStyle:I
 
-    invoke-interface {p1, p0}, Lv8/j2;->c0(I)V
+    invoke-interface {p1, p0}, Ld/d/a/m7/g/m2;->d0(I)V
 
     return-void
 .end method
 
-.method private synthetic lambda$notifyAfterFrameAvailable$8(Lv8/x2;)V
+.method private synthetic lambda$notifyAfterFrameAvailable$8(Ld/d/a/m7/g/z2;)V
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mTargetUiStyle:I
 
-    invoke-interface {p1, p0}, Lv8/x2;->c0(I)V
+    invoke-interface {p1, p0}, Ld/d/a/m7/g/z2;->d0(I)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onAcceptCountDownTimeChange$19(Ljava/lang/String;Lv8/z;)V
+.method public static synthetic lambda$onAcceptCountDownTimeChange$19(Ljava/lang/String;Ld/d/a/m7/g/c0;)V
     .locals 1
 
     const/16 v0, 0xe2
 
-    invoke-interface {p1, v0, p0}, Lv8/z;->u1(ILjava/lang/String;)V
+    .line 1
+    invoke-interface {p1, v0, p0}, Ld/d/a/m7/g/c0;->w1(ILjava/lang/String;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onAcceptCountDownTimeChange$20(Lv8/y2;)V
+.method public static synthetic lambda$onAcceptCountDownTimeChange$20(Ld/d/a/m7/g/a3;)V
     .locals 3
 
     const/4 v0, 0x1
@@ -693,189 +624,206 @@
 
     aput v2, v0, v1
 
-    invoke-interface {p0, v0}, Lv8/y2;->updateConfigItem([I)V
+    .line 1
+    invoke-interface {p0, v0}, Ld/d/a/m7/g/a3;->updateConfigItem([I)V
 
     return-void
 .end method
 
-.method private synthetic lambda$onAcceptRatioChanged$23(Lv8/j2;)V
+.method private synthetic lambda$onAcceptRatioChanged$23(Ld/d/a/m7/g/m2;)V
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mTargetUiStyle:I
 
-    invoke-interface {p1, p0}, Lv8/j2;->c0(I)V
+    invoke-interface {p1, p0}, Ld/d/a/m7/g/m2;->d0(I)V
 
     return-void
 .end method
 
-.method private synthetic lambda$onAcceptRatioChanged$24(Lv8/x2;)V
+.method private synthetic lambda$onAcceptRatioChanged$24(Ld/d/a/m7/g/z2;)V
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mTargetUiStyle:I
 
-    invoke-interface {p1, p0}, Lv8/x2;->c0(I)V
+    invoke-interface {p1, p0}, Ld/d/a/m7/g/z2;->d0(I)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onAcceptShutter$21(Lv8/q;)V
+.method public static synthetic lambda$onAcceptShutter$21(Ld/d/a/m7/g/t;)V
     .locals 2
 
     const/4 v0, 0x1
 
     const/4 v1, 0x2
 
-    invoke-interface {p0, v0, v1}, Lv8/q;->Xg(ZI)V
+    .line 1
+    invoke-interface {p0, v0, v1}, Ld/d/a/m7/g/t;->Bg(ZI)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onAcceptShutter$22(Ljava/lang/String;Lv8/w2;)V
+.method public static synthetic lambda$onAcceptShutter$22(Ljava/lang/String;Ld/d/a/m7/g/y2;)V
     .locals 0
 
+    .line 1
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p0
 
-    invoke-interface {p1, p0}, Lv8/w2;->wf(I)V
+    invoke-interface {p1, p0}, Ld/d/a/m7/g/y2;->jf(I)V
 
     const/16 p0, 0xbe
 
-    invoke-interface {p1, p0}, Lv8/w2;->Fd(I)Z
+    .line 2
+    invoke-interface {p1, p0}, Ld/d/a/m7/g/y2;->pd(I)Z
 
     return-void
 .end method
 
-.method private static synthetic lambda$onAcceptTimerAck$30(Ljava/lang/String;Lv8/w2;)V
+.method public static synthetic lambda$onAcceptTimerAck$30(Ljava/lang/String;Ld/d/a/m7/g/y2;)V
     .locals 0
 
+    .line 1
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p0
 
-    invoke-interface {p1, p0}, Lv8/w2;->wf(I)V
+    invoke-interface {p1, p0}, Ld/d/a/m7/g/y2;->jf(I)V
 
     const/16 p0, 0xbe
 
-    invoke-interface {p1, p0}, Lv8/w2;->Fd(I)Z
+    .line 2
+    invoke-interface {p1, p0}, Ld/d/a/m7/g/y2;->pd(I)Z
 
     return-void
 .end method
 
-.method private static synthetic lambda$onAcceptZoomRatioChange$29(Ljava/lang/String;Lv8/y2;)V
+.method public static synthetic lambda$onAcceptZoomRatioChange$29(Ljava/lang/String;Ld/d/a/m7/g/a3;)V
     .locals 2
 
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    invoke-interface {p1, v0, v1, p0}, Lv8/y2;->alertUpdateValue(IILjava/lang/String;)V
+    .line 1
+    invoke-interface {p1, v0, v1, p0}, Ld/d/a/m7/g/a3;->alertUpdateValue(IILjava/lang/String;)V
 
     return-void
 .end method
 
-.method private synthetic lambda$onClientStreamStream$14(Lv8/y2;)V
+.method private synthetic lambda$onClientStreamStream$14(Ld/d/a/m7/g/a3;)V
     .locals 3
 
-    const v0, 0x7f140c12
+    const v0, 0x7f130b8c
 
+    .line 1
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object p0
 
-    const/4 v0, 0x1
+    const-string v0, "host_name"
 
-    const-string v1, "host_name"
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
-    invoke-interface {p1, v1, v2, p0, v0}, Lv8/y2;->alertFriendDisplayDeviceNameTip(Ljava/lang/String;ILjava/lang/String;Z)V
+    invoke-interface {p1, v0, v1, p0, v2}, Ld/d/a/m7/g/a3;->alertFriendDisplayDeviceNameTip(Ljava/lang/String;ILjava/lang/String;Z)V
 
     return-void
 .end method
 
-.method private synthetic lambda$onResume$0(Lv8/y2;)V
+.method private synthetic lambda$onResume$0(Ld/d/a/m7/g/a3;)V
     .locals 3
 
-    const v0, 0x7f140c12
+    const v0, 0x7f130b8c
 
+    .line 1
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object p0
 
-    const/4 v0, 0x1
+    const-string v0, "host_name"
 
-    const-string v1, "host_name"
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
-    invoke-interface {p1, v1, v2, p0, v0}, Lv8/y2;->alertFriendDisplayDeviceNameTip(Ljava/lang/String;ILjava/lang/String;Z)V
+    invoke-interface {p1, v0, v1, p0, v2}, Ld/d/a/m7/g/a3;->alertFriendDisplayDeviceNameTip(Ljava/lang/String;ILjava/lang/String;Z)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onResume$1(Lm2/d1;Lv8/b1;)V
+.method public static synthetic lambda$onResume$1(Ld/d/a/l6/e/m/d1;Ld/d/a/m7/g/e1;)V
     .locals 4
 
-    new-instance v0, Lm6/x;
+    .line 1
+    new-instance v0, Ld/d/a/u6/w4/c0;
 
-    invoke-direct {v0}, Lm6/x;-><init>()V
+    invoke-direct {v0}, Ld/d/a/u6/w4/c0;-><init>()V
 
-    const v1, 0xffffff9
+    const/16 v1, 0x14
 
-    const/16 v2, 0x9
+    const v2, 0xffffff9
 
-    const/16 v3, 0x14
+    const/16 v3, 0x9
 
-    invoke-virtual {v0, v3, v1, v2}, Lm6/x;->d(III)Lm6/u;
+    .line 2
+    invoke-virtual {v0, v1, v2, v3}, Ld/d/a/u6/w4/c0;->b(III)Ld/d/a/u6/w4/b0;
 
-    invoke-static {p0}, Lm6/k;->l(Lcom/android/camera/data/data/b;)Lm6/k;
+    .line 3
+    invoke-static {p0}, Ld/d/a/u6/w4/y;->e(Ld/d/a/l6/e/b;)Ld/d/a/u6/w4/y;
 
     move-result-object p0
 
-    invoke-virtual {v0, p0}, Lm6/x;->j(Lm6/y;)V
+    invoke-virtual {v0, p0}, Ld/d/a/u6/w4/c0;->h(Ld/d/a/u6/w4/d0;)V
 
-    invoke-interface {p1, v0}, Lv8/b1;->cb(Lm6/x;)V
+    .line 4
+    invoke-interface {p1, v0}, Ld/d/a/m7/g/e1;->O9(Ld/d/a/u6/w4/c0;)V
 
     return-void
 .end method
 
-.method private synthetic lambda$onResume$2(Lv8/y2;)V
+.method private synthetic lambda$onResume$2(Ld/d/a/m7/g/a3;)V
     .locals 3
 
-    const v0, 0x7f140c12
+    const v0, 0x7f130b8c
 
+    .line 1
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object p0
 
-    const/4 v0, 0x1
+    const-string v0, "host_name"
 
-    const-string v1, "host_name"
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
-    invoke-interface {p1, v1, v2, p0, v0}, Lv8/y2;->alertFriendDisplayDeviceNameTip(Ljava/lang/String;ILjava/lang/String;Z)V
+    invoke-interface {p1, v0, v1, p0, v2}, Ld/d/a/m7/g/a3;->alertFriendDisplayDeviceNameTip(Ljava/lang/String;ILjava/lang/String;Z)V
 
     return-void
 .end method
 
-.method private synthetic lambda$onResume$3(Lv8/y2;)V
+.method private synthetic lambda$onResume$3(Ld/d/a/m7/g/a3;)V
     .locals 3
 
-    const v0, 0x7f140c13
+    const v0, 0x7f130b8d
 
+    .line 1
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object p0
 
-    const/4 v0, 0x1
+    const-string v0, "host_name"
 
-    const-string v1, "host_name"
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
-    invoke-interface {p1, v1, v2, p0, v0}, Lv8/y2;->alertFriendDisplayDeviceNameTip(Ljava/lang/String;ILjava/lang/String;Z)V
+    invoke-interface {p1, v0, v1, p0, v2}, Ld/d/a/m7/g/a3;->alertFriendDisplayDeviceNameTip(Ljava/lang/String;ILjava/lang/String;Z)V
 
     return-void
 .end method
@@ -885,16 +833,18 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->forceExitFriendMode(Z)V
 
     return-void
 .end method
 
-.method private synthetic lambda$onStreamingReConnect$9(Lv8/y2;)V
+.method private synthetic lambda$onStreamingReConnect$9(Ld/d/a/m7/g/a3;)V
     .locals 2
 
-    const v0, 0x7f140c13
+    const v0, 0x7f130b8d
 
+    .line 1
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -903,16 +853,17 @@
 
     const/4 v1, 0x0
 
-    invoke-interface {p1, v0, v1, p0, v1}, Lv8/y2;->alertFriendDisplayDeviceNameTip(Ljava/lang/String;ILjava/lang/String;Z)V
+    invoke-interface {p1, v0, v1, p0, v1}, Ld/d/a/m7/g/a3;->alertFriendDisplayDeviceNameTip(Ljava/lang/String;ILjava/lang/String;Z)V
 
     return-void
 .end method
 
-.method private synthetic lambda$onVideoRenderStart$10(Lv8/y2;)V
+.method private synthetic lambda$onVideoRenderStart$10(Ld/d/a/m7/g/a3;)V
     .locals 2
 
-    const v0, 0x7f140c13
+    const v0, 0x7f130b8d
 
+    .line 1
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -921,16 +872,17 @@
 
     const/4 v1, 0x0
 
-    invoke-interface {p1, v0, v1, p0, v1}, Lv8/y2;->alertFriendDisplayDeviceNameTip(Ljava/lang/String;ILjava/lang/String;Z)V
+    invoke-interface {p1, v0, v1, p0, v1}, Ld/d/a/m7/g/a3;->alertFriendDisplayDeviceNameTip(Ljava/lang/String;ILjava/lang/String;Z)V
 
     return-void
 .end method
 
-.method private synthetic lambda$onVideoRenderStart$11(Lv8/y2;)V
+.method private synthetic lambda$onVideoRenderStart$11(Ld/d/a/m7/g/a3;)V
     .locals 2
 
-    const v0, 0x7f140c12
+    const v0, 0x7f130b8c
 
+    .line 1
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -939,17 +891,18 @@
 
     const/4 v1, 0x0
 
-    invoke-interface {p1, v0, v1, p0, v1}, Lv8/y2;->alertFriendDisplayDeviceNameTip(Ljava/lang/String;ILjava/lang/String;Z)V
+    invoke-interface {p1, v0, v1, p0, v1}, Ld/d/a/m7/g/a3;->alertFriendDisplayDeviceNameTip(Ljava/lang/String;ILjava/lang/String;Z)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$showBackProcessDialog$15(Lv8/d;)V
+.method public static synthetic lambda$showBackProcessDialog$15(Ld/d/a/m7/g/h;)V
     .locals 1
 
     const/4 v0, 0x1
 
-    invoke-interface {p0, v0}, Lv8/d;->X5(Z)V
+    .line 1
+    invoke-interface {p0, v0}, Ld/d/a/m7/g/h;->O5(Z)V
 
     return-void
 .end method
@@ -957,46 +910,47 @@
 .method private synthetic lambda$showBackProcessDialog$16()V
     .locals 2
 
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    .line 1
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lm2/h1;->d1()Z
+    invoke-virtual {v0}, Ld/d/a/l6/e/m/g1;->S0()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lv8/w2;->impl()Ljava/util/Optional;
+    .line 2
+    invoke-static {}, Ld/d/a/m7/g/y2;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera/fragment/m3;
-
-    invoke-direct {v1}, Lcom/android/camera/fragment/m3;-><init>()V
+    sget-object v1, Ld/d/b/x5/a/b/b/d/g0;->c:Ld/d/b/x5/a/b/b/d/g0;
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
+    .line 3
     :cond_0
-    invoke-static {}, Lv8/d;->impl()Ljava/util/Optional;
+    invoke-static {}, Ld/d/a/m7/g/h;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/aid/j;
-
-    invoke-direct {v1}, Lcom/android/camera2/compat/theme/custom/mm/aid/j;-><init>()V
+    sget-object v1, Ld/d/b/x5/a/b/b/d/g;->c:Ld/d/b/x5/a/b/b/d/g;
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
     const/4 v0, 0x0
 
+    .line 4
     invoke-direct {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->forceExitFriendMode(Z)V
 
     const-string p0, "remote_control"
 
     const-string v0, "click_exit_final"
 
-    invoke-static {p0, v0}, Lk9/a;->m1(Ljava/lang/String;Ljava/lang/String;)V
+    .line 5
+    invoke-static {p0, v0}, Ld/d/a/v7/f;->i1(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1004,6 +958,7 @@
 .method private synthetic lambda$startCaptureAnimation$4()V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mBlackCover:Landroid/view/View;
 
     const/16 v0, 0x8
@@ -1013,41 +968,18 @@
     return-void
 .end method
 
-.method public static synthetic li(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;Lv8/y2;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$onResume$0(Lv8/y2;)V
-
-    return-void
-.end method
-
-.method public static synthetic mi(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$startCaptureAnimation$4()V
-
-    return-void
-.end method
-
-.method public static synthetic ni(Ljava/lang/String;Lv8/z;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$configReferenceSwitch$26(Ljava/lang/String;Lv8/z;)V
-
-    return-void
-.end method
-
-.method public static synthetic oi(Lv8/z;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$configCenterMarkSwitch$27(Lv8/z;)V
-
-    return-void
-.end method
-
 .method private onAcceptCountDownTimeChange(Ljava/lang/String;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "time"
+        }
+    .end annotation
 
+    .line 1
     sget-object v0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1070,25 +1002,26 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mCurrentTimer:Ljava/lang/String;
 
-    invoke-static {}, Lv8/z;->impl()Ljava/util/Optional;
+    .line 3
+    invoke-static {}, Ld/d/a/m7/g/c0;->impl()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/aid/z;
+    new-instance v0, Ld/d/b/x5/a/b/b/d/j;
 
-    invoke-direct {v0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/z;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Ld/d/b/x5/a/b/b/d/j;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {p0, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    invoke-static {}, Lv8/y2;->impl()Ljava/util/Optional;
+    .line 4
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance p1, Lcom/android/camera2/compat/theme/custom/mm/aid/a0;
-
-    invoke-direct {p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/a0;-><init>()V
+    sget-object p1, Ld/d/b/x5/a/b/b/d/u;->c:Ld/d/b/x5/a/b/b/d/u;
 
     invoke-virtual {p0, p1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -1097,7 +1030,16 @@
 
 .method private onAcceptJpegRotationChanged(Ljava/lang/String;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "newJpegRotation"
+        }
+    .end annotation
 
+    .line 1
     sget-object v0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1120,11 +1062,12 @@
 
     invoke-static {v0, p1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 2
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lid/b;->e3()Z
+    invoke-virtual {p1}, Ld/k/a/b;->X2()Z
 
     move-result p1
 
@@ -1132,11 +1075,13 @@
 
     return-void
 
+    .line 3
     :cond_0
-    iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mRemoteFileSaveListener:Lq7/q4$c;
+    iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mRemoteFileSaveListener:Ld/d/a/d7/x7$c;
 
     if-eqz p1, :cond_1
 
+    .line 4
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mTextureView:Lcom/android/camera2/compat/theme/custom/mm/aid/FriendStreamTextureView;
 
     invoke-virtual {p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FriendStreamTextureView;->getTextureView()Landroid/view/TextureView;
@@ -1147,25 +1092,30 @@
 
     move-result-object p1
 
+    .line 5
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getByteCount()I
 
     move-result v0
 
+    .line 6
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
+    .line 7
     invoke-virtual {p1, v0}, Landroid/graphics/Bitmap;->copyPixelsToBuffer(Ljava/nio/Buffer;)V
 
+    .line 8
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object p1
 
-    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mRemoteFileSaveListener:Lq7/q4$c;
+    .line 9
+    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mRemoteFileSaveListener:Ld/d/a/d7/x7$c;
 
     const-string v0, ""
 
-    invoke-interface {p0, p1, v0, v1}, Lq7/q4$c;->a([BLjava/lang/String;Z)V
+    invoke-interface {p0, p1, v0, v1}, Ld/d/a/d7/x7$c;->a([BLjava/lang/String;Z)V
 
     :cond_1
     return-void
@@ -1174,6 +1124,7 @@
 .method private onAcceptQueueFull()V
     .locals 3
 
+    .line 1
     sget-object v0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -1184,26 +1135,37 @@
 
     invoke-static {v0, v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p0
 
-    const v0, 0x7f14053c
+    const v0, 0x7f130520
 
-    invoke-static {p0, v0}, Lcom/android/camera/q5;->c(Landroid/content/Context;I)V
+    invoke-static {p0, v0}, Ld/d/a/x5;->c(Landroid/content/Context;I)V
 
     const-string p0, "remote_control"
 
     const-string v0, "tips_picture_transmission"
 
-    invoke-static {p0, v0}, Lk9/a;->m1(Ljava/lang/String;Ljava/lang/String;)V
+    .line 3
+    invoke-static {p0, v0}, Ld/d/a/v7/f;->i1(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method private onAcceptRatioChanged(Ljava/lang/String;)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "newRatio"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mCurrentRatio:Ljava/lang/String;
 
     invoke-static {p1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -1214,31 +1176,33 @@
 
     return-void
 
+    .line 2
     :cond_0
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mCurrentRatio:Ljava/lang/String;
 
+    .line 3
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
+    const/4 v0, -0x1
+
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
-    move-result v0
+    move-result v1
 
-    const/4 v1, 0x3
+    const/4 v2, 0x3
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
-    const/4 v4, -0x1
-
-    sparse-switch v0, :sswitch_data_0
+    sparse-switch v1, :sswitch_data_0
 
     goto :goto_0
 
     :sswitch_0
-    const-string v0, "2.39x1"
+    const-string v1, "2.39x1"
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -1247,14 +1211,14 @@
     goto :goto_0
 
     :cond_1
-    move v4, v1
+    move v0, v2
 
     goto :goto_0
 
     :sswitch_1
-    const-string v0, "16x9"
+    const-string v1, "16x9"
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -1263,14 +1227,14 @@
     goto :goto_0
 
     :cond_2
-    const/4 v4, 0x2
+    const/4 v0, 0x2
 
     goto :goto_0
 
     :sswitch_2
-    const-string v0, "4x3"
+    const-string v1, "4x3"
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -1279,14 +1243,14 @@
     goto :goto_0
 
     :cond_3
-    move v4, v2
+    move v0, v3
 
     goto :goto_0
 
     :sswitch_3
-    const-string v0, "1x1"
+    const-string v1, "1x1"
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -1295,62 +1259,71 @@
     goto :goto_0
 
     :cond_4
-    move v4, v3
+    move v0, v4
 
     :goto_0
-    packed-switch v4, :pswitch_data_0
+    packed-switch v0, :pswitch_data_0
 
-    iput v1, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mTargetUiStyle:I
+    .line 4
+    iput v2, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mTargetUiStyle:I
 
     goto :goto_1
 
     :pswitch_0
     const/4 p1, 0x5
 
+    .line 5
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mTargetUiStyle:I
 
     goto :goto_1
 
+    .line 6
     :pswitch_1
-    iput v2, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mTargetUiStyle:I
+    iput v3, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mTargetUiStyle:I
 
     goto :goto_1
 
+    .line 7
     :pswitch_2
-    iput v3, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mTargetUiStyle:I
+    iput v4, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mTargetUiStyle:I
 
     goto :goto_1
 
     :pswitch_3
     const/4 p1, 0x4
 
+    .line 8
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mTargetUiStyle:I
 
+    .line 9
     :goto_1
-    invoke-static {}, Lv8/j2;->impl()Ljava/util/Optional;
+    invoke-static {}, Ld/d/a/m7/g/m2;->impl()Ljava/util/Optional;
 
     move-result-object p1
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/aid/c0;
+    new-instance v0, Ld/d/b/x5/a/b/b/d/y;
 
-    invoke-direct {v0, p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/c0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
+    invoke-direct {v0, p0}, Ld/d/b/x5/a/b/b/d/y;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
 
     invoke-virtual {p1, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    invoke-static {}, Lv8/x2;->impl()Ljava/util/Optional;
+    .line 10
+    invoke-static {}, Ld/d/a/m7/g/z2;->impl()Ljava/util/Optional;
 
     move-result-object p1
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/aid/d0;
+    new-instance v0, Ld/d/b/x5/a/b/b/d/f0;
 
-    invoke-direct {v0, p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/d0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
+    invoke-direct {v0, p0}, Ld/d/b/x5/a/b/b/d/f0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
 
     invoke-virtual {p1, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
+    .line 11
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mTextureView:Lcom/android/camera2/compat/theme/custom/mm/aid/FriendStreamTextureView;
 
     if-eqz p1, :cond_5
 
+    .line 12
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mTargetUiStyle:I
 
     invoke-virtual {p1, p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/FriendStreamTextureView;->fitRatio(I)V
@@ -1377,7 +1350,16 @@
 
 .method private onAcceptShutter(Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x10
+        }
+        names = {
+            "time"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result v0
@@ -1390,16 +1372,16 @@
 
     if-eqz v0, :cond_1
 
-    invoke-static {}, Lv8/q;->impl()Ljava/util/Optional;
+    .line 2
+    invoke-static {}, Ld/d/a/m7/g/t;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/aid/v;
-
-    invoke-direct {v1}, Lcom/android/camera2/compat/theme/custom/mm/aid/v;-><init>()V
+    sget-object v1, Ld/d/b/x5/a/b/b/d/c0;->c:Ld/d/b/x5/a/b/b/d/c0;
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
+    .line 3
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1412,18 +1394,20 @@
 
     if-lez v0, :cond_0
 
-    invoke-static {}, Lv8/w2;->impl()Ljava/util/Optional;
+    .line 4
+    invoke-static {}, Ld/d/a/m7/g/y2;->impl()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/aid/x;
+    new-instance v0, Ld/d/b/x5/a/b/b/d/b0;
 
-    invoke-direct {v0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/x;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Ld/d/b/x5/a/b/b/d/b0;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {p0, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
@@ -1431,19 +1415,21 @@
 
     check-cast p0, Lcom/android/camera/ActivityBase;
 
-    invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->z2()Lq7/v4;
+    invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->N1()Ld/d/a/d7/z7;
 
     move-result-object p0
 
-    instance-of p1, p0, Lq7/q4;
+    .line 6
+    instance-of p1, p0, Ld/d/a/d7/x7;
 
     if-eqz p1, :cond_1
 
-    check-cast p0, Lq7/q4;
+    .line 7
+    check-cast p0, Ld/d/a/d7/x7;
 
     const/16 p1, 0xbe
 
-    invoke-virtual {p0, p1}, Lq7/q4;->dl(I)Z
+    invoke-virtual {p0, p1}, Ld/d/a/d7/x7;->rk(I)Z
 
     :cond_1
     :goto_0
@@ -1453,23 +1439,23 @@
 .method private onAcceptStopTimer()V
     .locals 1
 
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    .line 1
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lm2/h1;->d1()Z
+    invoke-virtual {p0}, Ld/d/a/l6/e/m/g1;->S0()Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    invoke-static {}, Lv8/w2;->impl()Ljava/util/Optional;
+    .line 2
+    invoke-static {}, Ld/d/a/m7/g/y2;->impl()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance v0, Lcom/android/camera/fragment/m3;
-
-    invoke-direct {v0}, Lcom/android/camera/fragment/m3;-><init>()V
+    sget-object v0, Ld/d/b/x5/a/b/b/d/g0;->c:Ld/d/b/x5/a/b/b/d/g0;
 
     invoke-virtual {p0, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -1479,7 +1465,16 @@
 
 .method private onAcceptTimerAck(Ljava/lang/String;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "time"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p0
@@ -1492,13 +1487,14 @@
 
     if-lez p0, :cond_0
 
-    invoke-static {}, Lv8/w2;->impl()Ljava/util/Optional;
+    .line 2
+    invoke-static {}, Ld/d/a/m7/g/y2;->impl()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/aid/o;
+    new-instance v0, Ld/d/b/x5/a/b/b/d/h;
 
-    invoke-direct {v0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/o;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Ld/d/b/x5/a/b/b/d/h;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {p0, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -1508,7 +1504,16 @@
 
 .method private onAcceptZoomRatioChange(Ljava/lang/String;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "zoom"
+        }
+    .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1523,39 +1528,16 @@
 
     move-result-object p0
 
-    invoke-static {}, Lv8/y2;->impl()Ljava/util/Optional;
+    .line 2
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl()Ljava/util/Optional;
 
     move-result-object p1
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/aid/d;
+    new-instance v0, Ld/d/b/x5/a/b/b/d/c;
 
-    invoke-direct {v0, p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/d;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Ld/d/b/x5/a/b/b/d/c;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {p1, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
-
-    return-void
-.end method
-
-.method public static synthetic pi(Lv8/y2;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$onAcceptCountDownTimeChange$20(Lv8/y2;)V
-
-    return-void
-.end method
-
-.method public static synthetic qi(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;Lv8/y2;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$forceExitFriendMode$18(Lv8/y2;)V
-
-    return-void
-.end method
-
-.method public static synthetic ri(Lm2/d1;Lv8/b1;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$onResume$1(Lm2/d1;Lv8/b1;)V
 
     return-void
 .end method
@@ -1563,6 +1545,7 @@
 .method private showBackProcessDialog()Z
     .locals 9
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1573,50 +1556,55 @@
 
     return p0
 
+    .line 2
     :cond_0
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f140526
+    const v2, 0x7f13050a
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 3
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    const v3, 0x7f140525
+    const v3, 0x7f130509
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    const v3, 0x7f14065d
+    const v3, 0x7f13061f
 
+    .line 4
     invoke-virtual {v0, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    new-instance v4, Lcom/android/camera2/compat/theme/custom/mm/aid/b0;
+    new-instance v4, Ld/d/b/x5/a/b/b/d/i;
 
-    invoke-direct {v4, p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/b0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
+    invoke-direct {v4, p0}, Ld/d/b/x5/a/b/b/d/i;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
 
     const/4 v5, 0x0
 
     const/4 v6, 0x0
 
-    const v7, 0x7f140b4c
+    const v7, 0x7f130ac7
 
+    .line 5
     invoke-virtual {v0, v7}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
     const/4 v8, 0x0
 
-    invoke-static/range {v0 .. v8}, Lcom/android/camera/y4;->E(Landroid/content/Context;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;)Lmiuix/appcompat/app/AlertDialog;
+    .line 6
+    invoke-static/range {v0 .. v8}, Ld/d/a/l5;->u(Landroid/content/Context;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;)Lmiuix/appcompat/app/AlertDialog;
 
     move-result-object v0
 
@@ -1627,122 +1615,147 @@
     return p0
 .end method
 
-.method public static synthetic si(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;Lv8/y2;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$onResume$2(Lv8/y2;)V
-
-    return-void
-.end method
-
-.method public static synthetic ti(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;Lv8/j2;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$onAcceptRatioChanged$23(Lv8/j2;)V
-
-    return-void
-.end method
-
 .method private tryStopFriendProcess()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->showBackProcessDialog()Z
-
-    return-void
-.end method
-
-.method public static synthetic ui(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;Lv8/x2;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$notifyAfterFrameAvailable$8(Lv8/x2;)V
-
-    return-void
-.end method
-
-.method public static synthetic vi(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;Lv8/y2;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$onStreamingReConnect$9(Lv8/y2;)V
-
-    return-void
-.end method
-
-.method public static synthetic wi(Ljava/lang/String;Lv8/w2;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$onAcceptShutter$22(Ljava/lang/String;Lv8/w2;)V
-
-    return-void
-.end method
-
-.method public static synthetic xi(Lv8/q;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$onAcceptShutter$21(Lv8/q;)V
-
-    return-void
-.end method
-
-.method public static synthetic yi(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;Lv8/y2;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$notifyAfterFrameAvailable$6(Lv8/y2;)V
-
-    return-void
-.end method
-
-.method public static synthetic zi(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;Lv8/y2;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$onVideoRenderStart$10(Lv8/y2;)V
 
     return-void
 .end method
 
 
 # virtual methods
+.method public synthetic Fb(Ld/d/a/m7/g/a3;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$notifyAfterFrameAvailable$6(Ld/d/a/m7/g/a3;)V
+
+    return-void
+.end method
+
+.method public synthetic Hc(Ld/d/a/m7/g/a3;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$onResume$2(Ld/d/a/m7/g/a3;)V
+
+    return-void
+.end method
+
+.method public synthetic Ic(Ld/d/a/m7/g/a3;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$onResume$3(Ld/d/a/m7/g/a3;)V
+
+    return-void
+.end method
+
+.method public synthetic Lc()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$onSocketClose$13()V
+
+    return-void
+.end method
+
+.method public synthetic Mb(Ld/d/a/m7/g/m2;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$notifyAfterFrameAvailable$7(Ld/d/a/m7/g/m2;)V
+
+    return-void
+.end method
+
+.method public synthetic Sd()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$startCaptureAnimation$4()V
+
+    return-void
+.end method
+
+.method public synthetic Wc(Ld/d/a/m7/g/a3;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$onStreamingReConnect$9(Ld/d/a/m7/g/a3;)V
+
+    return-void
+.end method
+
+.method public synthetic Yb(Ld/d/a/m7/g/z2;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$notifyAfterFrameAvailable$8(Ld/d/a/m7/g/z2;)V
+
+    return-void
+.end method
+
+.method public synthetic bd(Ld/d/a/m7/g/a3;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$onVideoRenderStart$10(Ld/d/a/m7/g/a3;)V
+
+    return-void
+.end method
+
 .method public callHostFriendSnap()V
     .locals 3
 
-    invoke-static {}, Lcom/android/camera/v2;->Q()I
+    .line 1
+    invoke-static {}, Ld/d/a/d4;->P()I
 
     move-result p0
 
-    invoke-static {}, Luf/t0;->F()Luf/t0;
+    .line 2
+    invoke-static {}, Ld/o/f/r/i/x0;->l()Ld/o/f/r/i/x0;
 
     move-result-object v0
 
-    const/16 v1, 0xa0
-
     invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v0, v1, v2}, Luf/t0;->k0(ILjava/lang/String;)V
+    const/16 v2, 0xa0
+
+    invoke-virtual {v0, v2, v1}, Ld/o/f/r/i/x0;->h0(ILjava/lang/String;)V
 
     const-string v0, "remote_control"
 
     const-string v1, "capture"
 
-    invoke-static {v0, v1, p0}, Lk9/a;->l1(Ljava/lang/String;Ljava/lang/String;I)V
+    .line 3
+    invoke-static {v0, v1, p0}, Ld/d/a/v7/f;->h1(Ljava/lang/String;Ljava/lang/String;I)V
 
     return-void
 .end method
 
 .method public callHostPictureReceived([BLjava/lang/String;Z)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "pixels",
+            "fileName",
+            "isHeic"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lid/b;->e3()Z
+    invoke-virtual {v0}, Ld/k/a/b;->X2()Z
 
     move-result v0
 
@@ -1750,25 +1763,26 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
-    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mRemoteFileSaveListener:Lq7/q4$c;
+    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mRemoteFileSaveListener:Ld/d/a/d7/x7$c;
 
     if-eqz p0, :cond_1
 
-    invoke-interface {p0, p1, p2, p3}, Lq7/q4$c;->a([BLjava/lang/String;Z)V
+    .line 3
+    invoke-interface {p0, p1, p2, p3}, Ld/d/a/d7/x7$c;->a([BLjava/lang/String;Z)V
 
     :cond_1
     return-void
 
+    .line 4
     :cond_2
     :goto_0
-    invoke-static {}, Lv8/d;->impl()Ljava/util/Optional;
+    invoke-static {}, Ld/d/a/m7/g/h;->impl()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance p1, Lcom/android/camera2/compat/theme/custom/mm/aid/f;
-
-    invoke-direct {p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/f;-><init>()V
+    sget-object p1, Ld/d/b/x5/a/b/b/d/o;->c:Ld/d/b/x5/a/b/b/d/o;
 
     invoke-virtual {p0, p1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -1778,7 +1792,8 @@
 .method public callHostStopTimer()V
     .locals 2
 
-    invoke-static {}, Luf/t0;->F()Luf/t0;
+    .line 1
+    invoke-static {}, Ld/o/f/r/i/x0;->l()Ld/o/f/r/i/x0;
 
     move-result-object p0
 
@@ -1786,43 +1801,68 @@
 
     const-string v1, ""
 
-    invoke-virtual {p0, v0, v1}, Luf/t0;->k0(ILjava/lang/String;)V
+    invoke-virtual {p0, v0, v1}, Ld/o/f/r/i/x0;->h0(ILjava/lang/String;)V
 
     return-void
 .end method
 
 .method public callHostTimerChanged(Ljava/lang/String;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "nextValue"
+        }
+    .end annotation
 
-    invoke-static {}, Luf/t0;->F()Luf/t0;
+    .line 1
+    invoke-static {}, Ld/o/f/r/i/x0;->l()Ld/o/f/r/i/x0;
 
     move-result-object p0
 
     const/16 v0, 0xa2
 
-    invoke-virtual {p0, v0, p1}, Luf/t0;->k0(ILjava/lang/String;)V
+    invoke-virtual {p0, v0, p1}, Ld/o/f/r/i/x0;->h0(ILjava/lang/String;)V
 
     return-void
 .end method
 
 .method public changeViewAccessibility(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "enable"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public configCenterMarkSwitch(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "switchOn"
+        }
+    .end annotation
 
-    invoke-static {p1}, Lcom/android/camera/v2;->d8(Z)V
+    .line 1
+    invoke-static {p1}, Ld/d/a/d4;->a8(Z)V
 
-    invoke-static {}, Lv8/z;->impl()Ljava/util/Optional;
+    .line 2
+    invoke-static {}, Ld/d/a/m7/g/c0;->impl()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance p1, Lcom/android/camera2/compat/theme/custom/mm/aid/p;
-
-    invoke-direct {p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/p;-><init>()V
+    sget-object p1, Ld/d/b/x5/a/b/b/d/t;->c:Ld/d/b/x5/a/b/b/d/t;
 
     invoke-virtual {p0, p1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -1831,16 +1871,24 @@
 
 .method public configGradienterSwitch(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "switchOn"
+        }
+    .end annotation
 
-    invoke-static {p1}, Lcom/android/camera/v2;->y8(Z)V
+    .line 1
+    invoke-static {p1}, Ld/d/a/d4;->u8(Z)V
 
-    invoke-static {}, Lv8/z;->impl()Ljava/util/Optional;
+    .line 2
+    invoke-static {}, Ld/d/a/m7/g/c0;->impl()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance p1, Lcom/android/camera2/compat/theme/custom/mm/aid/n;
-
-    invoke-direct {p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/n;-><init>()V
+    sget-object p1, Ld/d/b/x5/a/b/b/d/e;->c:Ld/d/b/x5/a/b/b/d/e;
 
     invoke-virtual {p0, p1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -1849,14 +1897,23 @@
 
 .method public configReferenceSwitch(Ljava/lang/String;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
 
-    invoke-static {}, Lv8/z;->impl()Ljava/util/Optional;
+    .line 1
+    invoke-static {}, Ld/d/a/m7/g/c0;->impl()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/aid/i;
+    new-instance v0, Ld/d/b/x5/a/b/b/d/s;
 
-    invoke-direct {v0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/i;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Ld/d/b/x5/a/b/b/d/s;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {p0, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -1865,6 +1922,16 @@
 
 .method public dismiss(II)Z
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "dismissType",
+            "callingFrom"
+        }
+    .end annotation
 
     const/4 p0, 0x0
 
@@ -1878,13 +1945,23 @@
 
     const-string v1, "click_back_exit"
 
-    invoke-static {v0, v1}, Lk9/a;->m1(Ljava/lang/String;Ljava/lang/String;)V
+    .line 1
+    invoke-static {v0, v1}, Ld/d/a/v7/f;->i1(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 2
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->showBackProcessDialog()Z
 
     move-result p0
 
     return p0
+.end method
+
+.method public synthetic gc(Ld/d/a/m7/g/m2;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$onAcceptRatioChanged$23(Ld/d/a/m7/g/m2;)V
+
+    return-void
 .end method
 
 .method public getFragmentInto()I
@@ -1898,14 +1975,23 @@
 .method public getLayoutResourceId()I
     .locals 0
 
-    const p0, 0x7f0e00e5
+    const p0, 0x7f0e00d6
 
     return p0
 .end method
 
 .method public initView(Landroid/view/View;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
+    .line 1
     move-object v0, p1
 
     check-cast v0, Landroid/view/ViewGroup;
@@ -1914,10 +2000,12 @@
 
     const/high16 v1, -0x1000000
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
+    .line 2
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setBackgroundColor(I)V
 
-    const v0, 0x7f0b030c
+    const v0, 0x7f0b02c5
 
+    .line 3
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -1926,13 +2014,15 @@
 
     const/16 v0, 0x8
 
+    .line 4
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-static {}, Luf/t0;->F()Luf/t0;
+    .line 5
+    invoke-static {}, Ld/o/f/r/i/x0;->l()Ld/o/f/r/i/x0;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Luf/t0;->I()Z
+    invoke-virtual {p1}, Ld/o/f/r/i/x0;->o()Z
 
     move-result p1
 
@@ -1940,21 +2030,25 @@
 
     if-nez p1, :cond_0
 
+    .line 6
     invoke-direct {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->forceExitFriendMode(Z)V
 
     return-void
 
+    .line 7
     :cond_0
-    invoke-static {}, Lcom/android/camera/v2;->y0()Ljava/lang/String;
+    invoke-static {}, Ld/d/a/d4;->x0()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 8
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
+    .line 9
     new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/aid/FriendStreamTextureView;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
@@ -1965,28 +2059,33 @@
 
     iput-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mTextureView:Lcom/android/camera2/compat/theme/custom/mm/aid/FriendStreamTextureView;
 
+    .line 10
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mRootView:Landroid/view/ViewGroup;
 
     invoke-virtual {p1, v1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
 
+    .line 11
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mTextureView:Lcom/android/camera2/compat/theme/custom/mm/aid/FriendStreamTextureView;
 
     invoke-virtual {p1, p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/FriendStreamTextureView;->setVideoListener(Lcom/android/camera2/compat/theme/custom/mm/aid/FriendStreamTextureView$DisplayActionOnVideoListener;)V
 
-    invoke-static {}, Luf/t0;->F()Luf/t0;
+    .line 12
+    invoke-static {}, Ld/o/f/r/i/x0;->l()Ld/o/f/r/i/x0;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Luf/t0;->m0()V
+    invoke-virtual {p0}, Ld/o/f/r/i/x0;->j0()V
 
     const-string p0, "remote_control"
 
     const-string p1, "connect_success"
 
-    invoke-static {p0, p1}, Lk9/a;->m1(Ljava/lang/String;Ljava/lang/String;)V
+    .line 13
+    invoke-static {p0, p1}, Ld/d/a/v7/f;->i1(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
+    .line 14
     :cond_1
     sget-object p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->TAG:Ljava/lang/String;
 
@@ -1998,7 +2097,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p1}, Lbg/a;->h(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p1}, Ld/o/f/r/m/a;->h(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -2024,9 +2123,26 @@
     return p0
 .end method
 
+.method public synthetic nb(Ld/d/a/m7/g/a3;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$forceExitFriendMode$17(Ld/d/a/m7/g/a3;)V
+
+    return-void
+.end method
+
 .method public notifyAfterFrameAvailable(I)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "arrivedType"
+        }
+    .end annotation
 
+    .line 1
     sget-object v0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -2037,6 +2153,7 @@
 
     invoke-static {v0, v3, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v2
@@ -2045,12 +2162,14 @@
 
     return-void
 
+    .line 3
     :cond_0
     invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->notifyAfterFrameAvailable(I)V
 
+    .line 4
     new-instance p1, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;
 
-    invoke-static {}, Lcom/android/camera/v2;->z0()Ljava/lang/String;
+    invoke-static {}, Ld/d/a/d4;->y0()Ljava/lang/String;
 
     move-result-object v2
 
@@ -2060,66 +2179,73 @@
 
     const/16 v2, 0xa7
 
+    .line 5
     invoke-virtual {p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->getRatio()Ljava/lang/String;
 
     move-result-object p1
 
     invoke-virtual {p0, v2, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->onExtendValueChanged(ILjava/lang/String;)V
 
-    iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mFriendModeParam:Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;
+    const/16 p1, 0xa3
 
-    invoke-virtual {p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->getReference()Ljava/lang/String;
+    .line 6
+    iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mFriendModeParam:Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;
 
-    move-result-object p1
+    invoke-virtual {v2}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->getReference()Ljava/lang/String;
 
-    const/16 v2, 0xa3
+    move-result-object v2
 
-    invoke-virtual {p0, v2, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->onExtendValueChanged(ILjava/lang/String;)V
+    invoke-virtual {p0, p1, v2}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->onExtendValueChanged(ILjava/lang/String;)V
 
-    iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mFriendModeParam:Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;
+    const/16 p1, 0xa4
 
-    invoke-virtual {p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->getReferenceType()Ljava/lang/String;
+    .line 7
+    iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mFriendModeParam:Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;
 
-    move-result-object p1
+    invoke-virtual {v2}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->getReferenceType()Ljava/lang/String;
 
-    const/16 v2, 0xa4
+    move-result-object v2
 
-    invoke-virtual {p0, v2, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->onExtendValueChanged(ILjava/lang/String;)V
+    invoke-virtual {p0, p1, v2}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->onExtendValueChanged(ILjava/lang/String;)V
 
-    iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mFriendModeParam:Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;
+    const/16 p1, 0xa5
 
-    invoke-virtual {p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->getGradienter()Ljava/lang/String;
+    .line 8
+    iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mFriendModeParam:Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;
 
-    move-result-object p1
+    invoke-virtual {v2}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->getGradienter()Ljava/lang/String;
 
-    const/16 v2, 0xa5
+    move-result-object v2
 
-    invoke-virtual {p0, v2, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->onExtendValueChanged(ILjava/lang/String;)V
+    invoke-virtual {p0, p1, v2}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->onExtendValueChanged(ILjava/lang/String;)V
 
-    iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mFriendModeParam:Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;
+    const/16 p1, 0xa6
 
-    invoke-virtual {p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->getCenterMark()Ljava/lang/String;
+    .line 9
+    iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mFriendModeParam:Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;
 
-    move-result-object p1
+    invoke-virtual {v2}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->getCenterMark()Ljava/lang/String;
 
-    const/16 v2, 0xa6
+    move-result-object v2
 
-    invoke-virtual {p0, v2, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->onExtendValueChanged(ILjava/lang/String;)V
+    invoke-virtual {p0, p1, v2}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->onExtendValueChanged(ILjava/lang/String;)V
 
-    iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mFriendModeParam:Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;
+    const/16 p1, 0xac
 
-    invoke-virtual {p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->isSupportedRealSquare()Z
+    .line 10
+    iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mFriendModeParam:Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;
 
-    move-result p1
+    invoke-virtual {v2}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->isSupportedRealSquare()Z
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
+    move-result v2
 
-    move-result-object p1
+    invoke-static {v2}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
-    const/16 v2, 0xac
+    move-result-object v2
 
-    invoke-virtual {p0, v2, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->onExtendValueChanged(ILjava/lang/String;)V
+    invoke-virtual {p0, p1, v2}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->onExtendValueChanged(ILjava/lang/String;)V
 
+    .line 11
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2148,33 +2274,36 @@
 
     invoke-static {v0, p1, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {}, Lv8/y2;->impl()Ljava/util/Optional;
+    .line 12
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl()Ljava/util/Optional;
 
     move-result-object p1
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/aid/q;
+    new-instance v0, Ld/d/b/x5/a/b/b/d/d0;
 
-    invoke-direct {v0, p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/q;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
+    invoke-direct {v0, p0}, Ld/d/b/x5/a/b/b/d/d0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
 
     invoke-virtual {p1, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    invoke-static {}, Lv8/j2;->impl()Ljava/util/Optional;
+    .line 13
+    invoke-static {}, Ld/d/a/m7/g/m2;->impl()Ljava/util/Optional;
 
     move-result-object p1
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/aid/r;
+    new-instance v0, Ld/d/b/x5/a/b/b/d/k;
 
-    invoke-direct {v0, p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/r;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
+    invoke-direct {v0, p0}, Ld/d/b/x5/a/b/b/d/k;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
 
     invoke-virtual {p1, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    invoke-static {}, Lv8/x2;->impl()Ljava/util/Optional;
+    .line 14
+    invoke-static {}, Ld/d/a/m7/g/z2;->impl()Ljava/util/Optional;
 
     move-result-object p1
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/aid/s;
+    new-instance v0, Ld/d/b/x5/a/b/b/d/z;
 
-    invoke-direct {v0, p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/s;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
+    invoke-direct {v0, p0}, Ld/d/b/x5/a/b/b/d/z;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
 
     invoke-virtual {p1, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -2183,6 +2312,14 @@
 
 .method public onBackEvent(I)Z
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "callingFrom"
+        }
+    .end annotation
 
     const/4 v0, 0x1
 
@@ -2192,8 +2329,10 @@
 
     const-string v1, "click_exit"
 
-    invoke-static {p1, v1}, Lk9/a;->m1(Ljava/lang/String;Ljava/lang/String;)V
+    .line 1
+    invoke-static {p1, v1}, Ld/d/a/v7/f;->i1(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 2
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->tryStopFriendProcess()V
 
     return v0
@@ -2206,7 +2345,16 @@
 
 .method public onClientStreamStream(Z)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isPause"
+        }
+    .end annotation
 
+    .line 1
     sget-object v0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2229,10 +2377,12 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->isVideoPause:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
+    .line 3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result v0
@@ -2247,6 +2397,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 4
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mHandler:Landroid/os/Handler;
 
     const-wide/16 v1, 0x3e8
@@ -2255,11 +2406,13 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->removeMessages(I)V
 
+    .line 6
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mTextureView:Lcom/android/camera2/compat/theme/custom/mm/aid/FriendStreamTextureView;
 
     invoke-virtual {p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/BaseStreamTextureView;->isPlaying()Z
@@ -2268,18 +2421,20 @@
 
     if-nez p1, :cond_1
 
+    .line 7
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mTextureView:Lcom/android/camera2/compat/theme/custom/mm/aid/FriendStreamTextureView;
 
     invoke-virtual {p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/BaseStreamTextureView;->reStartPlay()V
 
+    .line 8
     :cond_1
-    invoke-static {}, Lv8/y2;->impl()Ljava/util/Optional;
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl()Ljava/util/Optional;
 
     move-result-object p1
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/aid/h;
+    new-instance v0, Ld/d/b/x5/a/b/b/d/d;
 
-    invoke-direct {v0, p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/h;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
+    invoke-direct {v0, p0}, Ld/d/b/x5/a/b/b/d/d;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
 
     invoke-virtual {p1, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -2291,8 +2446,10 @@
 .method public onDestroy()V
     .locals 4
 
+    .line 1
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroy()V
 
+    .line 2
     sget-object v0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -2303,16 +2460,18 @@
 
     invoke-static {v0, v3, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {}, Luf/t0;->F()Luf/t0;
+    .line 3
+    invoke-static {}, Ld/o/f/r/i/x0;->l()Ld/o/f/r/i/x0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Luf/t0;->I()Z
+    invoke-virtual {v0}, Ld/o/f/r/i/x0;->o()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-direct {p0, v1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->forceExitFriendMode(Z)V
 
     :cond_0
@@ -2321,7 +2480,18 @@
 
 .method public onExtendValueChanged(ILjava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "type",
+            "value"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result v0
@@ -2330,14 +2500,16 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mFriendModeParam:Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;
 
     if-nez v0, :cond_1
 
+    .line 3
     new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;
 
-    invoke-static {}, Lcom/android/camera/v2;->z0()Ljava/lang/String;
+    invoke-static {}, Ld/d/a/d4;->y0()Ljava/lang/String;
 
     move-result-object v1
 
@@ -2351,21 +2523,25 @@
     :pswitch_0
     goto/16 :goto_0
 
+    .line 4
     :pswitch_1
     new-instance p1, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;
 
     invoke-direct {p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;-><init>(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->getRatio()Ljava/lang/String;
 
     move-result-object p2
 
+    .line 6
     invoke-virtual {p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->isSupportedRealSquare()Z
 
     move-result p1
 
     const/16 v0, 0xac
 
+    .line 7
     invoke-static {p1}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
     move-result-object p1
@@ -2374,15 +2550,18 @@
 
     const/16 p1, 0xa7
 
+    .line 8
     invoke-virtual {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->onExtendValueChanged(ILjava/lang/String;)V
 
     goto/16 :goto_0
 
+    .line 9
     :pswitch_2
     invoke-direct {p0, p2}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->onAcceptTimerAck(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
+    .line 10
     :pswitch_3
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mFriendModeParam:Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;
 
@@ -2392,10 +2571,12 @@
 
     invoke-virtual {p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->setSupportedRealSquare(Z)V
 
+    .line 11
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mTextureView:Lcom/android/camera2/compat/theme/custom/mm/aid/FriendStreamTextureView;
 
     if-eqz p1, :cond_2
 
+    .line 12
     invoke-static {p2}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result p2
@@ -2404,35 +2585,42 @@
 
     goto :goto_0
 
+    .line 13
     :pswitch_4
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->onAcceptStopTimer()V
 
     goto :goto_0
 
+    .line 14
     :pswitch_5
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->onAcceptQueueFull()V
 
     goto :goto_0
 
+    .line 15
     :pswitch_6
     invoke-direct {p0, p2}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->onAcceptJpegRotationChanged(Ljava/lang/String;)V
 
     goto :goto_0
 
+    .line 16
     :pswitch_7
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mFriendModeParam:Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;
 
     invoke-virtual {p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->setRatio(Ljava/lang/String;)V
 
+    .line 17
     invoke-direct {p0, p2}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->onAcceptRatioChanged(Ljava/lang/String;)V
 
     goto :goto_0
 
+    .line 18
     :pswitch_8
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mFriendModeParam:Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;
 
     invoke-virtual {p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->setCenterMark(Ljava/lang/String;)V
 
+    .line 19
     invoke-static {p2}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result p1
@@ -2441,11 +2629,13 @@
 
     goto :goto_0
 
+    .line 20
     :pswitch_9
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mFriendModeParam:Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;
 
     invoke-virtual {p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->setGradienter(Ljava/lang/String;)V
 
+    .line 21
     invoke-static {p2}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result p1
@@ -2454,20 +2644,24 @@
 
     goto :goto_0
 
+    .line 22
     :pswitch_a
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mFriendModeParam:Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;
 
     invoke-virtual {p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->setReferenceType(Ljava/lang/String;)V
 
+    .line 23
     invoke-virtual {p0, p2}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->configReferenceSwitch(Ljava/lang/String;)V
 
     goto :goto_0
 
+    .line 24
     :pswitch_b
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mFriendModeParam:Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;
 
     invoke-virtual {p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->setReference(Ljava/lang/String;)V
 
+    .line 25
     invoke-static {p2}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result p1
@@ -2476,23 +2670,28 @@
 
     goto :goto_0
 
+    .line 26
     :pswitch_c
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mFriendModeParam:Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;
 
     invoke-virtual {p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->setTimer(Ljava/lang/String;)V
 
+    .line 27
     invoke-direct {p0, p2}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->onAcceptCountDownTimeChange(Ljava/lang/String;)V
 
     goto :goto_0
 
+    .line 28
     :pswitch_d
     invoke-direct {p0, p2}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->onAcceptZoomRatioChange(Ljava/lang/String;)V
 
     goto :goto_0
 
+    .line 29
     :pswitch_e
     invoke-direct {p0, p2}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->onAcceptShutter(Ljava/lang/String;)V
 
+    .line 30
     :cond_2
     :goto_0
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mFriendModeParam:Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;
@@ -2501,7 +2700,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/camera/v2;->C8(Ljava/lang/String;)V
+    invoke-static {p0}, Ld/d/a/d4;->y8(Ljava/lang/String;)V
 
     return-void
 
@@ -2537,6 +2736,7 @@
 .method public onMainDeviceLeave()V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result v0
@@ -2545,6 +2745,7 @@
 
     const/4 v0, 0x1
 
+    .line 2
     invoke-direct {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->forceExitFriendMode(Z)V
 
     :cond_0
@@ -2554,20 +2755,24 @@
 .method public onPause()V
     .locals 2
 
+    .line 1
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onPause()V
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mCancelDialog:Lmiuix/appcompat/app/AlertDialog;
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
 
+    .line 4
     :cond_0
-    invoke-static {}, Luf/t0;->F()Luf/t0;
+    invoke-static {}, Ld/o/f/r/i/x0;->l()Ld/o/f/r/i/x0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Luf/t0;->I()Z
+    invoke-virtual {v0}, Ld/o/f/r/i/x0;->o()Z
 
     move-result v0
 
@@ -2588,24 +2793,28 @@
     :cond_1
     const/4 v1, 0x0
 
+    .line 5
     :cond_2
     :goto_0
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lm2/h1;->y1(Z)V
+    invoke-virtual {v0, v1}, Ld/d/a/l6/e/m/g1;->g1(Z)V
 
+    .line 6
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
+    .line 7
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mTextureView:Lcom/android/camera2/compat/theme/custom/mm/aid/FriendStreamTextureView;
 
     if-eqz p0, :cond_3
 
+    .line 8
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/BaseStreamTextureView;->pausePlay()V
 
     :cond_3
@@ -2615,6 +2824,7 @@
 .method public onReceiveHeartBeat()V
     .locals 4
 
+    .line 1
     sget-object v0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -2625,18 +2835,21 @@
 
     invoke-static {v0, v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
+    .line 4
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mHandler:Landroid/os/Handler;
 
     const-wide/16 v2, 0x3a98
@@ -2650,39 +2863,43 @@
 .method public onResume()V
     .locals 3
 
+    .line 1
     invoke-super {p0}, Lcom/android/camera/fragment/BaseFragment;->onResume()V
 
-    invoke-static {}, Luf/t0;->F()Luf/t0;
+    .line 2
+    invoke-static {}, Ld/o/f/r/i/x0;->l()Ld/o/f/r/i/x0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Luf/t0;->I()Z
+    invoke-virtual {v0}, Ld/o/f/r/i/x0;->o()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    invoke-static {}, Lv8/y2;->impl()Ljava/util/Optional;
+    .line 3
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/aid/a;
+    new-instance v1, Ld/d/b/x5/a/b/b/d/q;
 
-    invoke-direct {v1, p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/a;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
+    invoke-direct {v1, p0}, Ld/d/b/x5/a/b/b/d/q;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 4
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lid/b;->M5()Z
+    invoke-virtual {v0}, Ld/k/a/b;->A5()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lv8/x2;->impl()Ljava/util/Optional;
+    invoke-static {}, Ld/d/a/m7/g/z2;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
@@ -2692,24 +2909,27 @@
 
     if-nez v0, :cond_0
 
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    .line 5
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lm2/h1;->o0()Lm2/d1;
+    invoke-virtual {v0}, Ld/d/a/l6/e/m/g1;->g0()Ld/d/a/l6/e/m/d1;
 
     move-result-object v0
 
-    invoke-static {}, Lv8/b1;->impl()Ljava/util/Optional;
+    .line 6
+    invoke-static {}, Ld/d/a/m7/g/e1;->impl()Ljava/util/Optional;
 
     move-result-object v1
 
-    new-instance v2, Lcom/android/camera2/compat/theme/custom/mm/aid/l;
+    new-instance v2, Ld/d/b/x5/a/b/b/d/w;
 
-    invoke-direct {v2, v0}, Lcom/android/camera2/compat/theme/custom/mm/aid/l;-><init>(Lm2/d1;)V
+    invoke-direct {v2, v0}, Ld/d/b/x5/a/b/b/d/w;-><init>(Ld/d/a/l6/e/m/d1;)V
 
     invoke-virtual {v1, v2}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
+    .line 7
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mTextureView:Lcom/android/camera2/compat/theme/custom/mm/aid/FriendStreamTextureView;
 
@@ -2723,30 +2943,33 @@
 
     if-nez v0, :cond_1
 
+    .line 8
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mTextureView:Lcom/android/camera2/compat/theme/custom/mm/aid/FriendStreamTextureView;
 
     invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/BaseStreamTextureView;->reStartPlay()V
 
-    invoke-static {}, Lv8/y2;->impl()Ljava/util/Optional;
+    .line 9
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/aid/w;
+    new-instance v1, Ld/d/b/x5/a/b/b/d/x;
 
-    invoke-direct {v1, p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/w;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
+    invoke-direct {v1, p0}, Ld/d/b/x5/a/b/b/d/x;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
     goto :goto_0
 
+    .line 10
     :cond_1
-    invoke-static {}, Lv8/y2;->impl()Ljava/util/Optional;
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/aid/y;
+    new-instance v1, Ld/d/b/x5/a/b/b/d/f;
 
-    invoke-direct {v1, p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/y;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
+    invoke-direct {v1, p0}, Ld/d/b/x5/a/b/b/d/f;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -2758,17 +2981,19 @@
 .method public onSocketClose()V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mHandler:Landroid/os/Handler;
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/aid/t;
+    new-instance v1, Ld/d/b/x5/a/b/b/d/m;
 
-    invoke-direct {v1, p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/t;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
+    invoke-direct {v1, p0}, Ld/d/b/x5/a/b/b/d/m;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -2777,7 +3002,8 @@
 
     const-string v0, "tips_exit_opposite"
 
-    invoke-static {p0, v0}, Lk9/a;->m1(Ljava/lang/String;Ljava/lang/String;)V
+    .line 3
+    invoke-static {p0, v0}, Ld/d/a/v7/f;->i1(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -2785,6 +3011,7 @@
 .method public onStreamingError()V
     .locals 3
 
+    .line 1
     sget-object v0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -2797,13 +3024,15 @@
 
     const/4 v0, 0x1
 
+    .line 2
     invoke-direct {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->forceExitFriendMode(Z)V
 
     const-string p0, "remote_control"
 
     const-string v0, "tips_signal_lost"
 
-    invoke-static {p0, v0}, Lk9/a;->m1(Ljava/lang/String;Ljava/lang/String;)V
+    .line 3
+    invoke-static {p0, v0}, Ld/d/a/v7/f;->i1(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -2811,19 +3040,21 @@
 .method public onStreamingReConnect()V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lv8/y2;->impl()Ljava/util/Optional;
+    .line 2
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/aid/c;
+    new-instance v1, Ld/d/b/x5/a/b/b/d/a0;
 
-    invoke-direct {v1, p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/c;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
+    invoke-direct {v1, p0}, Ld/d/b/x5/a/b/b/d/a0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -2834,6 +3065,7 @@
 .method public onVideoRenderStart()V
     .locals 4
 
+    .line 1
     sget-object v0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -2844,12 +3076,14 @@
 
     invoke-static {v0, v3, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
+    .line 3
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->isVideoPause:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -2858,6 +3092,7 @@
 
     if-eqz v2, :cond_1
 
+    .line 4
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mTextureView:Lcom/android/camera2/compat/theme/custom/mm/aid/FriendStreamTextureView;
 
     if-eqz v2, :cond_0
@@ -2868,37 +3103,41 @@
 
     if-eqz v2, :cond_0
 
-    const-string v2, "handlePlayerPause: pausePlay"
-
     new-array v1, v1, [Ljava/lang/Object;
 
+    const-string v2, "handlePlayerPause: pausePlay"
+
+    .line 5
     invoke-static {v0, v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 6
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mTextureView:Lcom/android/camera2/compat/theme/custom/mm/aid/FriendStreamTextureView;
 
     invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/BaseStreamTextureView;->pausePlay()V
 
+    .line 7
     :cond_0
-    invoke-static {}, Lv8/y2;->impl()Ljava/util/Optional;
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/aid/k;
+    new-instance v1, Ld/d/b/x5/a/b/b/d/e0;
 
-    invoke-direct {v1, p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/k;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
+    invoke-direct {v1, p0}, Ld/d/b/x5/a/b/b/d/e0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
     goto :goto_0
 
+    .line 8
     :cond_1
-    invoke-static {}, Lv8/y2;->impl()Ljava/util/Optional;
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/aid/m;
+    new-instance v1, Ld/d/b/x5/a/b/b/d/l;
 
-    invoke-direct {v1, p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/m;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
+    invoke-direct {v1, p0}, Ld/d/b/x5/a/b/b/d/l;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -2907,24 +3146,68 @@
     return-void
 .end method
 
-.method public prepareCapture(Lq7/q4$c;)V
+.method public prepareCapture(Ld/d/a/d7/x7$c;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "previewSaveListener"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mRemoteFileSaveListener:Lq7/q4$c;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mRemoteFileSaveListener:Ld/d/a/d7/x7$c;
 
     return-void
 .end method
 
-.method public register(Lu8/d;)V
+.method public synthetic qb(Ld/d/a/m7/g/a3;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$forceExitFriendMode$18(Ld/d/a/m7/g/a3;)V
+
+    return-void
+.end method
+
+.method public synthetic qc(Ld/d/a/m7/g/z2;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$onAcceptRatioChanged$24(Ld/d/a/m7/g/z2;)V
+
+    return-void
+.end method
+
+.method public register(Ld/d/a/m7/c;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "modeCoordinator"
+        }
+    .end annotation
 
-    invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->register(Lu8/d;)V
+    .line 1
+    invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->register(Ld/d/a/m7/c;)V
 
-    invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->registerBackStack(Lu8/d;Lv8/z0;)V
+    .line 2
+    invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->registerBackStack(Ld/d/a/m7/c;Ld/d/a/m7/g/c1;)V
 
+    .line 3
     const-class v0, Lcom/android/camera2/compat/theme/custom/mm/aid/FriendRemoteDisplayProtocol;
 
-    invoke-interface {p1, v0, p0}, Lu8/d;->d(Ljava/lang/Class;Lu8/a;)V
+    invoke-interface {p1, v0, p0}, Ld/d/a/m7/c;->b(Ljava/lang/Class;Ld/d/a/m7/a;)V
+
+    return-void
+.end method
+
+.method public synthetic sd(Ld/d/a/m7/g/a3;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$onVideoRenderStart$11(Ld/d/a/m7/g/a3;)V
 
     return-void
 .end method
@@ -2932,6 +3215,7 @@
 .method public show()V
     .locals 2
 
+    .line 1
     sget-object p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->TAG:Ljava/lang/String;
 
     const/4 v0, 0x0
@@ -2948,6 +3232,7 @@
 .method public startCaptureAnimation()V
     .locals 5
 
+    .line 1
     sget-object v0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -2958,38 +3243,43 @@
 
     invoke-static {v0, v3, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 2
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lid/b;->e3()Z
+    invoke-virtual {v0}, Ld/k/a/b;->X2()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x2
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeMessages(I)V
 
+    .line 4
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mHandler:Landroid/os/Handler;
 
     const-wide/16 v3, 0x2710
 
     invoke-virtual {v0, v2, v3, v4}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
+    .line 5
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mBlackCover:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
+    .line 6
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->mHandler:Landroid/os/Handler;
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/aid/g;
+    new-instance v1, Ld/d/b/x5/a/b/b/d/r;
 
-    invoke-direct {v1, p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/g;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
+    invoke-direct {v1, p0}, Ld/d/b/x5/a/b/b/d/r;-><init>(Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;)V
 
     const-wide/16 v2, 0x1e
 
@@ -2998,16 +3288,59 @@
     return-void
 .end method
 
-.method public unRegister(Lu8/d;)V
+.method public synthetic uc(Ld/d/a/m7/g/a3;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$onClientStreamStream$14(Ld/d/a/m7/g/a3;)V
+
+    return-void
+.end method
+
+.method public unRegister(Ld/d/a/m7/c;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "modeCoordinator"
+        }
+    .end annotation
 
-    invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->unRegister(Lu8/d;)V
+    .line 1
+    invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->unRegister(Ld/d/a/m7/c;)V
 
-    invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->unRegisterBackStack(Lu8/d;Lv8/z0;)V
+    .line 2
+    invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->unRegisterBackStack(Ld/d/a/m7/c;Ld/d/a/m7/g/c1;)V
 
+    .line 3
     const-class v0, Lcom/android/camera2/compat/theme/custom/mm/aid/FriendRemoteDisplayProtocol;
 
-    invoke-interface {p1, v0, p0}, Lu8/d;->c(Ljava/lang/Class;Lu8/a;)V
+    invoke-interface {p1, v0, p0}, Ld/d/a/m7/c;->d(Ljava/lang/Class;Ld/d/a/m7/a;)V
+
+    return-void
+.end method
+
+.method public synthetic wb(Ld/d/a/m7/g/a3;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$handlePlayerPause$12(Ld/d/a/m7/g/a3;)V
+
+    return-void
+.end method
+
+.method public synthetic xc(Ld/d/a/m7/g/a3;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$onResume$0(Ld/d/a/m7/g/a3;)V
+
+    return-void
+.end method
+
+.method public synthetic yd()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/aid/FragmentFriendDisplay;->lambda$showBackProcessDialog$16()V
 
     return-void
 .end method

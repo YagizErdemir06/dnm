@@ -1,4 +1,4 @@
-.class Lmiuix/animation/physics/AnimationHandler$FrameCallbackProvider16;
+.class public Lmiuix/animation/physics/AnimationHandler$FrameCallbackProvider16;
 .super Lmiuix/animation/physics/AnimationHandler$AnimationFrameCallbackProvider;
 .source "SourceFile"
 
@@ -26,20 +26,24 @@
 .method public constructor <init>(Lmiuix/animation/physics/AnimationHandler$AnimationCallbackDispatcher;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lmiuix/animation/physics/AnimationHandler$AnimationFrameCallbackProvider;-><init>(Lmiuix/animation/physics/AnimationHandler$AnimationCallbackDispatcher;)V
 
+    .line 2
     invoke-static {}, Landroid/view/Choreographer;->getInstance()Landroid/view/Choreographer;
 
     move-result-object p1
 
     iput-object p1, p0, Lmiuix/animation/physics/AnimationHandler$FrameCallbackProvider16;->mChoreographer:Landroid/view/Choreographer;
 
+    .line 3
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object p1
 
     iput-object p1, p0, Lmiuix/animation/physics/AnimationHandler$FrameCallbackProvider16;->mLooper:Landroid/os/Looper;
 
+    .line 4
     new-instance p1, Lmiuix/animation/physics/AnimationHandler$FrameCallbackProvider16$1;
 
     invoke-direct {p1, p0}, Lmiuix/animation/physics/AnimationHandler$FrameCallbackProvider16$1;-><init>(Lmiuix/animation/physics/AnimationHandler$FrameCallbackProvider16;)V
@@ -54,6 +58,7 @@
 .method public getLooper()Landroid/os/Looper;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/animation/physics/AnimationHandler$FrameCallbackProvider16;->mLooper:Landroid/os/Looper;
 
     return-object p0
@@ -62,6 +67,7 @@
 .method public isCurrentThread()Z
     .locals 1
 
+    .line 1
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
@@ -88,6 +94,7 @@
 .method public postFrameCallback()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/physics/AnimationHandler$FrameCallbackProvider16;->mChoreographer:Landroid/view/Choreographer;
 
     iget-object p0, p0, Lmiuix/animation/physics/AnimationHandler$FrameCallbackProvider16;->mChoreographerCallback:Landroid/view/Choreographer$FrameCallback;

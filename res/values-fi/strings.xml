@@ -232,7 +232,6 @@
     <string name="accessibility_video_capture_button">Painike valokuvien ottamiseen videoita kuvattaessa</string>
     <string name="accessibility_video_pause_button">Videokuvaus keskeytetty</string>
     <string name="accessibility_video_resume_button">Videokuvausta jatketaan</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">Vesileima on pois käytöstä</string>
     <string name="accessibility_watermark_image_on">Vesileima on käytössä</string>
     <string name="accessibility_watermark_text">Avaa vesileiman säätöpaneeli</string>
@@ -240,16 +239,6 @@
     <string name="accessibility_zoom_button">Zoomaustila</string>
     <string name="actionbar_button_up_description">Takaisin</string>
     <string name="afternoon">Iltapäivä</string>
-    <string name="agent_flip_tbc">Jatka sisänäytöltä</string>
-    <string name="agent_function_max">Säädetty maksimiarvoon</string>
-    <string name="agent_function_min">Säädetty minimiarvoon</string>
-    <string name="agent_workspace_mode_not_supported">Tätä ominaisuutta ei tueta</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"Tätä ominaisuutta ei tueta.
-Valokuvatila avattiin sen sijaan."</string>
-    <string name="agent_workspace_on">Parametrit asetettu valokuvaamiseen \"%1$s\"</string>
-    <string name="agent_workspace_tbc">Tutkitaan kohtausta</string>
-    <string name="agent_workspace_tbc_use_default">"Tutkitaan kohtausta…
-Kameran parametrit asetettu oletusarvoiksi"</string>
     <string name="ai_agra_fort">Agran linnoitus</string>
     <string name="ai_amber_fort">Amerin linnoitus</string>
     <string name="ai_baby">Vauva</string>
@@ -476,7 +465,6 @@ ja säädä asetuksia automaattisesti"</string>
     <string name="bluetooth_headset_permission_des">Bluetooth-kuulokkeiden yhteystilan määrittämiseen ja äänen tallentamiseen kuulokkeiden mikrofonilla</string>
     <string name="bluetooth_permission_not_ask_again">Anna tämän sovelluksen muodostaa yhteys lähellä oleviin laitteisiin asetuksissa, jotta se voi muodostaa yhteyden Bluetooth-kuulokkeisiin.</string>
     <string name="bokeh_use_hint">Syvyysefekti</string>
-    <string name="bottomsheet_action_expand_halfway">Laajenna puoliväliin</string>
     <string name="burst_shoot_exit_button_text">Sammuta Sarjakuvaus</string>
     <string name="button_fisheye_camera_title">Kalansilmä</string>
     <string name="button_front_camera_title">Ota selfie</string>
@@ -517,8 +505,6 @@ ja säädä asetuksia automaattisesti"</string>
     <string name="ccc_temperature_warning_msg">Laitteesi on ylikumentunut. Kamera suljetaan %d sekunnissa. Kuvasi tai videosi tallennetaan automaattisesti.</string>
     <string name="ccc_temperature_warning_title">Laite on ylikuumentunut</string>
     <string name="center_mark">Keskimerkki</string>
-    <string name="character_counter_content_description">%1$d/%2$d merkkiä kirjoitettu</string>
-    <string name="character_counter_overflowed_content_description">Merkkiraja ylitetty: %1$d/%2$d</string>
     <string name="cinemaster_cancel">Peruuta</string>
     <string name="cinemaster_confirm">Poistu</string>
     <string name="cinemaster_connect_exit_message">Poistutaanko monikameran asennuksesta nyt?</string>
@@ -537,7 +523,6 @@ ja säädä asetuksia automaattisesti"</string>
     <string name="cinemaster_toast_monitor_disconnect">Monitori on irrotettu monikamera-asetuksista</string>
     <string name="cinemaster_toast_monitor_play_error">Kameran %s yhteys monikameran asetuksista irti virheen vuoksi</string>
     <string name="cinemaster_wifi_24g_tips">Vaihda %s GHz:n verkkoon parantaaksesi näytön syötteen vakautta</string>
-    <string name="clear_text_end_icon_content_description">Tyhjennä teksti</string>
     <string name="clearable_edittext_clear_description">Tyhjennä</string>
     <string name="clone_adjust">Säädä</string>
     <string name="clone_copy_mode">Pysäytyskuva</string>
@@ -831,7 +816,6 @@ skannattuja asiakirjoja automaattisesti"</string>
     <string name="download_hint_cn">Näyttää siltä, että laitteesi ei ole yhteydessä WLAN-verkkoon. Käytätkö %1$s Mt mobiilidataa kohteiden lataamiseen nyt?</string>
     <string name="download_hint_wifi">Näyttää siltä, että laitteesi ei ole yhteydessä Wi-Fi-verkkoon. Käytetäänkö %1$s Mt mobiilidataa kohteiden lataamiseen nyt?</string>
     <string name="download_in_progress">Ladataan…</string>
-    <string name="download_network_error">Ei voitu ladata. Tarkista verkkoasetukset.</string>
     <string name="download_title">Datankäyttövaroitus</string>
     <string name="download_waiting">Odotetaan…</string>
     <string name="dual_camera_lens_covered_toast">Linssi on peitetty.</string>
@@ -882,7 +866,6 @@ Kaksoistallennus puhelimella voi myös muodostaa yhteyden toiseen lahellä oleva
     <string name="eras_ad">jKr.</string>
     <string name="eras_bc">eKr.</string>
     <string name="error_fail_to_start_audio_capture">Ei voitu aloittaa äänen tallennusta</string>
-    <string name="error_icon_content_description">Virhe</string>
     <string name="esp_tip">Ulkoisen näytön esikatselu</string>
     <string name="evening">Iltapäivä</string>
     <string name="exo_controls_cc_disabled_description">Ota tekstitykset käyttöön</string>
@@ -937,7 +920,6 @@ Kaksoistallennus puhelimella voi myös muodostaa yhteyden toiseen lahellä oleva
     <string name="exo_track_surround_7_point_1">7.1-surround-ääni</string>
     <string name="exo_track_unknown">Tuntematon</string>
     <string name="expand_button_title">Lisäasetukset</string>
-    <string name="exposed_dropdown_menu_content_description">Näytä avattava valikko</string>
     <string name="exposure_mode_adjust_title">ExposureMode</string>
     <string name="eye_light">Silmäkimalle</string>
     <string name="eye_light_angel">Enkeli</string>
@@ -1094,7 +1076,6 @@ ja luo niistä yhden otoksen, jossa kaikki näyttävät hyviltä."</string>
     <string name="hint_subtitle_prompt">Voit sanella tekstitykset nyt</string>
     <string name="histogram_summary_tip">Näytä reaaliaikainen valotuspalaute</string>
     <string name="hunt_dual_water_mark">Kaksoiskameran vesileima lisätään automaattisesti.</string>
-    <string name="icon_content_description">Valintaikkunan kuvake</string>
     <string name="id_card_mode_hint_back">Skannaa tunnuksesi kääntöpuoli</string>
     <string name="id_card_mode_hint_front">Skannaa tunnuksesi etupuoli</string>
     <string name="id_card_mode_use_hint_text_body">"Yhdistä tunnuksen molemmat puolet yhteen kuvaan.
@@ -1105,7 +1086,6 @@ Tulosta kopio langattomasti A4-paperille."</string>
     <string name="invisible_mode_dialog_summary">Kameraa ei voi käyttää nyt. Poista inkognito-tila käytöstä kohdassa Asetukset, jotta voit käyttää kameraa.</string>
     <string name="invisible_mode_dialog_title">Olet inkognito-tilassa</string>
     <string name="invisible_mode_dialog_to_close">Asetukset</string>
-    <string name="item_view_role_description">Välilehti</string>
     <string name="kaleidoscope_fragment_tab_name">Kaleidoskooppi</string>
     <string name="lens_dirty_detected_content">"Kamerasi linssi vaikuttaa olevan likainen.
 Puhdista linssi saadaksesi parempia kuvia."</string>
@@ -1228,18 +1208,6 @@ näyttämään suuremmilta valokuvissa"</string>
     <string name="manually_raw_tip">Zoomausta ei voi käyttää RAW-muodossa</string>
     <string name="manually_ultra_raw_tip">Zoomausta ei voi käyttää Ultra RAW:n kanssa</string>
     <string name="masterfilter_description_title">Elokuvasuodattimet</string>
-    <string name="material_clock_toggle_content_description">Valitse AP tai IP</string>
-    <string name="material_hour_selection">Valitse tunti</string>
-    <string name="material_hour_suffix">klo %1$s</string>
-    <string name="material_minute_selection">Valitse minuutit</string>
-    <string name="material_minute_suffix">%1$s minuuttia</string>
-    <string name="material_timepicker_am">ap</string>
-    <string name="material_timepicker_clock_mode_description">Vaihda ajan syöttämiseen kellotilassa.</string>
-    <string name="material_timepicker_hour">Tunnit</string>
-    <string name="material_timepicker_minute">Minuutti</string>
-    <string name="material_timepicker_pm">ip</string>
-    <string name="material_timepicker_select_time">Valitse aika</string>
-    <string name="material_timepicker_text_input_mode_description">Vaihda ajan syöttämiseen tekstitilassa.</string>
     <string name="message_snap_double_confirm">Äänenvoimakkuuspainikkeen pitkä painallus käynnistää kohteen NFC nyt. Korvataanko tämä ominaisuus?</string>
     <string name="midnight">Yö</string>
     <string name="mimoji_app_name">Fun Cam</string>
@@ -1378,7 +1346,6 @@ näyttämään suuremmilta valokuvissa"</string>
     <string name="miuix_appcompat_delete_description">Poista</string>
     <string name="miuix_appcompat_deselect_all">Kumoa kaikkien valinta</string>
     <string name="miuix_appcompat_deselect_all_description">Kumoa kaikkien valinta</string>
-    <string name="miuix_appcompat_edit">Muokkaa</string>
     <string name="miuix_appcompat_search_action_mode_cancel">Peruuta</string>
     <string name="miuix_appcompat_search_input_description">Etsi</string>
     <string name="miuix_appcompat_select_all">Valitse kaikki</string>
@@ -1486,42 +1453,6 @@ näyttämään suuremmilta valokuvissa"</string>
     <string name="msg_bubble_doc4_first_use">Napauta tunnistaaksesi tekstiä</string>
     <string name="msg_toast_doc4_recognition_failed">Tapahtui virhe. Yritä uudelleen.</string>
     <string name="msg_toast_doc4_text_not_found">Tekstiä ei voitu havaita</string>
-    <string name="mtrl_badge_numberless_content_description">Uusi ilmoitus</string>
-    <string name="mtrl_chip_close_icon_content_description">Poista %1$s</string>
-    <string name="mtrl_exceed_max_badge_number_content_description">Yli %1$d uutta ilmoitusta</string>
-    <string name="mtrl_picker_a11y_next_month">Vaihda seuraavaan kuukauteen</string>
-    <string name="mtrl_picker_a11y_prev_month">Vaihda edelliseen kuukauteen</string>
-    <string name="mtrl_picker_announce_current_selection">Nykyinen valinta: %1$s</string>
-    <string name="mtrl_picker_cancel">Peru</string>
-    <string name="mtrl_picker_confirm">OK</string>
-    <string name="mtrl_picker_date_header_selected">%1$s</string>
-    <string name="mtrl_picker_date_header_title">Valitse päivämäärä</string>
-    <string name="mtrl_picker_date_header_unselected">Valittu päivämäärä</string>
-    <string name="mtrl_picker_day_of_week_column_header">Päiväsarake: %1$s</string>
-    <string name="mtrl_picker_invalid_format">Virheellinen muoto</string>
-    <string name="mtrl_picker_invalid_format_example">Esimerkki: %1$s</string>
-    <string name="mtrl_picker_invalid_format_use">Käytä muotoa %1$s</string>
-    <string name="mtrl_picker_invalid_range">Virheellinen alue</string>
-    <string name="mtrl_picker_navigate_to_year_description">Siirry vuoteen %1$s</string>
-    <string name="mtrl_picker_out_of_range">Aikavälin ulkop.: %1$s</string>
-    <string name="mtrl_picker_range_header_only_end_selected">Alkamispäivä – %1$s</string>
-    <string name="mtrl_picker_range_header_only_start_selected">%1$s – päättymispäivä</string>
-    <string name="mtrl_picker_range_header_selected">%1$s – %2$s</string>
-    <string name="mtrl_picker_range_header_title">Valitse jakso</string>
-    <string name="mtrl_picker_range_header_unselected">Alkamispäivä – päättymispäivä</string>
-    <string name="mtrl_picker_save">Tallenna</string>
-    <string name="mtrl_picker_text_input_date_hint">Päivämäärä</string>
-    <string name="mtrl_picker_text_input_date_range_end_hint">Päättymispäivä</string>
-    <string name="mtrl_picker_text_input_date_range_start_hint">Alkamispäivä</string>
-    <string name="mtrl_picker_text_input_day_abbr">p</string>
-    <string name="mtrl_picker_text_input_month_abbr">k</string>
-    <string name="mtrl_picker_text_input_year_abbr">v</string>
-    <string name="mtrl_picker_toggle_to_calendar_input_mode">Vaihda syöttötavaksi kalenteri</string>
-    <string name="mtrl_picker_toggle_to_day_selection">Siirry päivän valintaan napauttamalla</string>
-    <string name="mtrl_picker_toggle_to_text_input_mode">Valitse syöttötavaksi teksti</string>
-    <string name="mtrl_picker_toggle_to_year_selection">Siirry vuoden valintaan napauttamalla</string>
-    <string name="mtrl_timepicker_cancel">Peru</string>
-    <string name="mtrl_timepicker_confirm">OK</string>
     <string name="multi_window_mode_not_supported">Kameraa ei voi käyttää usean ikkunan tilassa</string>
     <string name="network_access_user_notice_agree">Hyväksy</string>
     <string name="network_access_user_notice_message_live_video">&lt;Data>Kameran on oltava yhteydessä Internettiin tarjotakseen tehosteita, musiikkia ja muita ominaisuuksia lyhyille videoille.&lt;br/>&lt;br/>Napauttamalla \"Hyväksy\" alapuolella hyväksyt meidän &lt;a href =%1$s>Käyttäjäsopimuksen&lt;/a> ja &lt;a href =%2$s>Tietosuojakäytännön&lt;/a>, ja sallit kameran muodostaa verkkoyhteyden.&lt;/Data></string>
@@ -1616,7 +1547,6 @@ UltraRAW-kuvat säästävät %d bittiä tietoa ja säilyttävät entistä enemm�
     <string name="parameter_wb_title">Valkotasapaino</string>
     <string name="parameter_zoom_slider_description">Vedä zoomauksen liukusäädintä vaakasuunnassa vaihtaaksesi sujuvasti etäotoksesta lähiotokseen.</string>
     <string name="parameter_zoom_slider_title">Zoomaus</string>
-    <string name="password_toggle_content_description">Näytä salasana</string>
     <string name="path_settings">Järjestelmäsovellukset/Kamera/Asetukset</string>
     <string name="photo_assistance_tips_title">Live-vinkkejä</string>
     <string name="pic_flaw_blink_more">Näyttää siltä, että joku kehyksessä sulki silmänsä</string>
@@ -2359,7 +2289,6 @@ Se pitää kohteen tarkkana ja sumentaa taustan."</string>
     <string name="time_picker_label_hour">T</string>
     <string name="time_picker_label_minute">M</string>
     <string name="time_stamp_date_format">d.M.yyyy</string>
-    <string name="time_stamp_date_format_minute">d.M.yyyy HH.mm</string>
     <string name="timefreeze_guide_tip2">Voit pysäyttää ja vapauttaa taustan milloin tahansa ennen kuvaamista tai sen aikana.</string>
     <string name="timefreeze_guide_tip3">Pyydä kohdettasi pysymään kehyksen keskellä.</string>
     <string name="timefreeze_guide_tip4">Pysäytä liikenne.</string>
@@ -2397,7 +2326,7 @@ Se pitää kohteen tarkkana ja sumentaa taustan."</string>
     <string name="tip_flash_screen_light_on">Pehmeä salama: Päällä</string>
     <string name="tip_flash_soft_light_off">Pehmeä salama: Pois</string>
     <string name="tip_flash_soft_light_torch">Pehmeä salama: Taskulampputila</string>
-    <string name="tip_flash_torch">Salama: Taskulamppu</string>
+    <string name="tip_flash_torch">Salama: Aina päällä</string>
     <string name="tip_friend_mode_connect_when_24GHz">Käytä %s GHz -yhteyttä parantaaksesi esikatselun laatua</string>
     <string name="tip_friend_mode_display_device_name_connect">Jaettu esikatselu</string>
     <string name="tip_friend_mode_display_device_name_disconnect">Toinen laite poistui tästä istunnosta</string>

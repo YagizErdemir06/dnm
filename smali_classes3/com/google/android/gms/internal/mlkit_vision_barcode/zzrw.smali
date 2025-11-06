@@ -18,6 +18,7 @@
 
     monitor-enter v0
 
+    .line 1
     :try_start_0
     sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrw;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrv;
 
@@ -34,6 +35,7 @@
     :cond_0
     sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrw;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrv;
 
+    .line 2
     invoke-virtual {v1, p0}, Lcom/google/mlkit/common/sdkinternal/LazyInstanceMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -61,15 +63,18 @@
 
     monitor-enter v0
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrd;->zzd(Ljava/lang/String;)Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrc;
 
     move-result-object p0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrc;->zzd()Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrd;
 
     move-result-object p0
 
+    .line 3
     invoke-static {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrw;->zza(Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrd;)Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrl;
 
     move-result-object p0

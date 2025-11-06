@@ -153,6 +153,7 @@
 .method public bridge synthetic predecessors(Ljava/lang/Object;)Ljava/lang/Iterable;
     .locals 0
 
+    .line 1
     invoke-interface {p0, p1}, Lcom/google/common/graph/Graph;->predecessors(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0
@@ -173,6 +174,7 @@
 .method public bridge synthetic successors(Ljava/lang/Object;)Ljava/lang/Iterable;
     .locals 0
 
+    .line 1
     invoke-interface {p0, p1}, Lcom/google/common/graph/Graph;->successors(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0

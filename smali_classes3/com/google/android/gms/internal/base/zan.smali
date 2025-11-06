@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/base/zan;
+.class public final Lcom/google/android/gms/internal/base/zan;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -11,6 +11,7 @@
         codename = "Tiramisu"
     .end annotation
 
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x21

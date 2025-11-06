@@ -1,4 +1,4 @@
-.class Landroidx/core/provider/RequestExecutor$DefaultThreadFactory;
+.class public Landroidx/core/provider/RequestExecutor$DefaultThreadFactory;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -37,10 +37,13 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/core/provider/RequestExecutor$DefaultThreadFactory;->mThreadName:Ljava/lang/String;
 
+    .line 3
     iput p2, p0, Landroidx/core/provider/RequestExecutor$DefaultThreadFactory;->mPriority:I
 
     return-void
@@ -51,6 +54,7 @@
 .method public newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 2
 
+    .line 1
     new-instance v0, Landroidx/core/provider/RequestExecutor$DefaultThreadFactory$ProcessPriorityThread;
 
     iget-object v1, p0, Landroidx/core/provider/RequestExecutor$DefaultThreadFactory;->mThreadName:Ljava/lang/String;

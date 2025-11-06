@@ -1,4 +1,4 @@
-.class final Lorg/apache/xmlbeans/impl/validator/Validator$State;
+.class public final Lorg/apache/xmlbeans/impl/validator/Validator$State;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,35 +15,35 @@
 
 
 # static fields
-.field static final synthetic $assertionsDisabled:Z
+.field public static final synthetic $assertionsDisabled:Z
 
 
 # instance fields
-.field _attrModel:Lorg/apache/xmlbeans/SchemaAttributeModel;
+.field public _attrModel:Lorg/apache/xmlbeans/SchemaAttributeModel;
 
-.field _attrs:Ljava/util/HashSet;
+.field public _attrs:Ljava/util/HashSet;
 
-.field _canHaveAttrs:Z
+.field public _canHaveAttrs:Z
 
-.field _canHaveElements:Z
+.field public _canHaveElements:Z
 
-.field _canHaveMixedContent:Z
+.field public _canHaveMixedContent:Z
 
-.field _field:Lorg/apache/xmlbeans/SchemaField;
+.field public _field:Lorg/apache/xmlbeans/SchemaField;
 
-.field _hasSimpleContent:Z
+.field public _hasSimpleContent:Z
 
-.field _isEmpty:Z
+.field public _isEmpty:Z
 
-.field _isNil:Z
+.field public _isNil:Z
 
-.field _next:Lorg/apache/xmlbeans/impl/validator/Validator$State;
+.field public _next:Lorg/apache/xmlbeans/impl/validator/Validator$State;
 
-.field _sawText:Z
+.field public _sawText:Z
 
-.field _type:Lorg/apache/xmlbeans/SchemaType;
+.field public _type:Lorg/apache/xmlbeans/SchemaType;
 
-.field _visitor:Lorg/apache/xmlbeans/impl/schema/SchemaTypeVisitorImpl;
+.field public _visitor:Lorg/apache/xmlbeans/impl/schema/SchemaTypeVisitorImpl;
 
 .field private final synthetic this$0:Lorg/apache/xmlbeans/impl/validator/Validator;
 
@@ -52,6 +52,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/validator/Validator;->class$org$apache$xmlbeans$impl$validator$Validator:Ljava/lang/Class;
 
     if-nez v0, :cond_0
@@ -97,6 +98,7 @@
 .method public currentParticle()Lorg/apache/xmlbeans/SchemaParticle;
     .locals 1
 
+    .line 1
     sget-boolean v0, Lorg/apache/xmlbeans/impl/validator/Validator$State;->$assertionsDisabled:Z
 
     if-nez v0, :cond_1
@@ -114,6 +116,7 @@
 
     throw p0
 
+    .line 2
     :cond_1
     :goto_0
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/Validator$State;->_visitor:Lorg/apache/xmlbeans/impl/schema/SchemaTypeVisitorImpl;
@@ -128,6 +131,7 @@
 .method public end()Z
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lorg/apache/xmlbeans/impl/validator/Validator$State;->_canHaveElements:Z
 
     if-eqz v0, :cond_1
@@ -160,6 +164,7 @@
 .method public test(Ljavax/xml/namespace/QName;)Z
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lorg/apache/xmlbeans/impl/validator/Validator$State;->_canHaveElements:Z
 
     if-eqz v0, :cond_0
@@ -186,6 +191,7 @@
 .method public visit(Ljavax/xml/namespace/QName;)Z
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lorg/apache/xmlbeans/impl/validator/Validator$State;->_canHaveElements:Z
 
     if-eqz v0, :cond_0

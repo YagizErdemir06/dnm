@@ -14,6 +14,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/common/internal/IGmsServiceBroker$Stub;-><init>()V
 
     return-void

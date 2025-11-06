@@ -20,8 +20,10 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/upstream/DataSource;Lcom/google/android/exoplayer2/upstream/DataSink;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -30,6 +32,7 @@
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/upstream/TeeDataSource;->upstream:Lcom/google/android/exoplayer2/upstream/DataSource;
 
+    .line 3
     invoke-static {p2}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -46,8 +49,10 @@
 .method public addTransferListener(Lcom/google/android/exoplayer2/upstream/TransferListener;)V
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/upstream/TeeDataSource;->upstream:Lcom/google/android/exoplayer2/upstream/DataSource;
 
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/upstream/DataSource;->addTransferListener(Lcom/google/android/exoplayer2/upstream/TransferListener;)V
@@ -65,6 +70,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :try_start_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/upstream/TeeDataSource;->upstream:Lcom/google/android/exoplayer2/upstream/DataSource;
 
@@ -72,12 +78,15 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     iget-boolean v1, p0, Lcom/google/android/exoplayer2/upstream/TeeDataSource;->dataSinkNeedsClosing:Z
 
     if-eqz v1, :cond_0
 
+    .line 3
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/upstream/TeeDataSource;->dataSinkNeedsClosing:Z
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/exoplayer2/upstream/TeeDataSource;->dataSink:Lcom/google/android/exoplayer2/upstream/DataSink;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/upstream/DataSink;->close()V
@@ -88,16 +97,20 @@
     :catchall_0
     move-exception v1
 
+    .line 5
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/upstream/TeeDataSource;->dataSinkNeedsClosing:Z
 
     if-eqz v2, :cond_1
 
+    .line 6
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/upstream/TeeDataSource;->dataSinkNeedsClosing:Z
 
+    .line 7
     iget-object p0, p0, Lcom/google/android/exoplayer2/upstream/TeeDataSource;->dataSink:Lcom/google/android/exoplayer2/upstream/DataSink;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/upstream/DataSink;->close()V
 
+    .line 8
     :cond_1
     throw v1
 .end method
@@ -115,6 +128,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/upstream/TeeDataSource;->upstream:Lcom/google/android/exoplayer2/upstream/DataSource;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/upstream/DataSource;->getResponseHeaders()Ljava/util/Map;
@@ -129,6 +143,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/upstream/TeeDataSource;->upstream:Lcom/google/android/exoplayer2/upstream/DataSource;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/upstream/DataSource;->getUri()Landroid/net/Uri;
@@ -146,6 +161,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/upstream/TeeDataSource;->upstream:Lcom/google/android/exoplayer2/upstream/DataSource;
 
     invoke-interface {v0, p1}, Lcom/google/android/exoplayer2/upstream/DataSource;->open(Lcom/google/android/exoplayer2/upstream/DataSpec;)J
@@ -162,6 +178,7 @@
 
     return-wide v2
 
+    .line 2
     :cond_0
     iget-wide v4, p1, Lcom/google/android/exoplayer2/upstream/DataSpec;->length:J
 
@@ -175,6 +192,7 @@
 
     if-eqz v4, :cond_1
 
+    .line 3
     invoke-virtual {p1, v2, v3, v0, v1}, Lcom/google/android/exoplayer2/upstream/DataSpec;->subrange(JJ)Lcom/google/android/exoplayer2/upstream/DataSpec;
 
     move-result-object p1
@@ -182,12 +200,15 @@
     :cond_1
     const/4 v0, 0x1
 
+    .line 4
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/upstream/TeeDataSource;->dataSinkNeedsClosing:Z
 
+    .line 5
     iget-object v0, p0, Lcom/google/android/exoplayer2/upstream/TeeDataSource;->dataSink:Lcom/google/android/exoplayer2/upstream/DataSink;
 
     invoke-interface {v0, p1}, Lcom/google/android/exoplayer2/upstream/DataSink;->open(Lcom/google/android/exoplayer2/upstream/DataSpec;)V
 
+    .line 6
     iget-wide p0, p0, Lcom/google/android/exoplayer2/upstream/TeeDataSource;->bytesRemaining:J
 
     return-wide p0
@@ -201,6 +222,7 @@
         }
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/upstream/TeeDataSource;->bytesRemaining:J
 
     const-wide/16 v2, 0x0
@@ -213,6 +235,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/upstream/TeeDataSource;->upstream:Lcom/google/android/exoplayer2/upstream/DataSource;
 
@@ -222,10 +245,12 @@
 
     if-lez p3, :cond_1
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/upstream/TeeDataSource;->dataSink:Lcom/google/android/exoplayer2/upstream/DataSink;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/google/android/exoplayer2/upstream/DataSink;->write([BII)V
 
+    .line 4
     iget-wide p1, p0, Lcom/google/android/exoplayer2/upstream/TeeDataSource;->bytesRemaining:J
 
     const-wide/16 v0, -0x1
@@ -238,6 +263,7 @@
 
     sub-long/2addr p1, v0
 
+    .line 5
     iput-wide p1, p0, Lcom/google/android/exoplayer2/upstream/TeeDataSource;->bytesRemaining:J
 
     :cond_1

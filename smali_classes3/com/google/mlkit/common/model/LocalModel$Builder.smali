@@ -61,34 +61,35 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/mlkit/common/model/LocalModel$Builder;->zza:Ljava/lang/String;
 
     const/4 v1, 0x1
 
+    const/4 v2, 0x0
+
     if-eqz v0, :cond_0
 
-    iget-object v2, p0, Lcom/google/mlkit/common/model/LocalModel$Builder;->zzb:Ljava/lang/String;
+    iget-object v3, p0, Lcom/google/mlkit/common/model/LocalModel$Builder;->zzb:Ljava/lang/String;
 
-    if-nez v2, :cond_0
+    if-nez v3, :cond_0
 
-    iget-object v2, p0, Lcom/google/mlkit/common/model/LocalModel$Builder;->zzc:Landroid/net/Uri;
+    iget-object v3, p0, Lcom/google/mlkit/common/model/LocalModel$Builder;->zzc:Landroid/net/Uri;
 
-    if-eqz v2, :cond_3
+    if-eqz v3, :cond_3
 
     :cond_0
     if-nez v0, :cond_1
 
-    iget-object v2, p0, Lcom/google/mlkit/common/model/LocalModel$Builder;->zzb:Ljava/lang/String;
+    iget-object v3, p0, Lcom/google/mlkit/common/model/LocalModel$Builder;->zzb:Ljava/lang/String;
 
-    if-eqz v2, :cond_1
+    if-eqz v3, :cond_1
 
-    iget-object v2, p0, Lcom/google/mlkit/common/model/LocalModel$Builder;->zzc:Landroid/net/Uri;
+    iget-object v3, p0, Lcom/google/mlkit/common/model/LocalModel$Builder;->zzc:Landroid/net/Uri;
 
-    if-eqz v2, :cond_3
+    if-eqz v3, :cond_3
 
     :cond_1
-    const/4 v2, 0x0
-
     if-nez v0, :cond_2
 
     iget-object v0, p0, Lcom/google/mlkit/common/model/LocalModel$Builder;->zzb:Ljava/lang/String;
@@ -140,6 +141,7 @@
 
     const-string v0, "Model Source file path can not be empty"
 
+    .line 1
     invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotEmpty(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
 
     iget-object v0, p0, Lcom/google/mlkit/common/model/LocalModel$Builder;->zzb:Ljava/lang/String;
@@ -161,6 +163,7 @@
     :cond_0
     const-string v0, "A local model source is from absolute file path, asset file path or URI, you can only set one of them."
 
+    .line 2
     invoke-static {v1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
     iput-object p1, p0, Lcom/google/mlkit/common/model/LocalModel$Builder;->zza:Ljava/lang/String;
@@ -179,6 +182,7 @@
 
     const-string v0, "Manifest file path can not be empty"
 
+    .line 1
     invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotEmpty(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
 
     iget-object v0, p0, Lcom/google/mlkit/common/model/LocalModel$Builder;->zzb:Ljava/lang/String;
@@ -207,6 +211,7 @@
     :cond_1
     const-string v0, "A local model source is from absolute file path, asset file path or URI, you can only set one of them."
 
+    .line 2
     invoke-static {v2, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
     iput-object p1, p0, Lcom/google/mlkit/common/model/LocalModel$Builder;->zza:Ljava/lang/String;
@@ -227,6 +232,7 @@
 
     const-string v0, "Model Source file path can not be empty"
 
+    .line 1
     invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotEmpty(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
 
     iget-object v0, p0, Lcom/google/mlkit/common/model/LocalModel$Builder;->zza:Ljava/lang/String;
@@ -248,6 +254,7 @@
     :cond_0
     const-string v0, "A local model source is from absolute file path, asset file path or URI, you can only set one of them."
 
+    .line 2
     invoke-static {v1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
     iput-object p1, p0, Lcom/google/mlkit/common/model/LocalModel$Builder;->zzb:Ljava/lang/String;
@@ -266,6 +273,7 @@
 
     const-string v0, "Manifest file path can not be empty"
 
+    .line 1
     invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotEmpty(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
 
     iget-object v0, p0, Lcom/google/mlkit/common/model/LocalModel$Builder;->zza:Ljava/lang/String;
@@ -294,6 +302,7 @@
     :cond_1
     const-string v0, "A local model source is from absolute file path, asset file path or URI, you can only set one of them."
 
+    .line 2
     invoke-static {v2, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
     iput-object p1, p0, Lcom/google/mlkit/common/model/LocalModel$Builder;->zzb:Ljava/lang/String;
@@ -312,6 +321,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/mlkit/common/model/LocalModel$Builder;->zza:Ljava/lang/String;
 
     const/4 v1, 0x0

@@ -55,8 +55,10 @@
 .method public clearBlockId()Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment;
@@ -69,8 +71,10 @@
 .method public clearBlockSize()Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment;
@@ -83,8 +87,10 @@
 .method public clearFragmentOffset()Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment;
@@ -97,8 +103,10 @@
 .method public clearFragmentSize()Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment;
@@ -111,6 +119,7 @@
 .method public getBlockId()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast p0, Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment;
@@ -125,6 +134,7 @@
 .method public getBlockSize()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast p0, Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment;
@@ -139,6 +149,7 @@
 .method public getFragmentOffset()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast p0, Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment;
@@ -153,6 +164,7 @@
 .method public getFragmentSize()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast p0, Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment;
@@ -167,8 +179,10 @@
 .method public setBlockId(I)Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment;
@@ -181,8 +195,10 @@
 .method public setBlockSize(I)Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment;
@@ -195,8 +211,10 @@
 .method public setFragmentOffset(I)Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment;
@@ -209,8 +227,10 @@
 .method public setFragmentSize(I)Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment;

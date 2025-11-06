@@ -1,4 +1,4 @@
-.class final Lcom/google/android/odml/image/zzc;
+.class public final Lcom/google/android/odml/image/zzc;
 .super Lcom/google/android/odml/image/ImageProperties;
 .source "SourceFile"
 
@@ -33,6 +33,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/android/odml/image/ImageProperties;
 
@@ -40,10 +41,12 @@
 
     if-eqz v1, :cond_1
 
+    .line 2
     check-cast p1, Lcom/google/android/odml/image/ImageProperties;
 
     iget v1, p0, Lcom/google/android/odml/image/zzc;->zza:I
 
+    .line 3
     invoke-virtual {p1}, Lcom/google/android/odml/image/ImageProperties;->getImageFormat()I
 
     move-result v3
@@ -52,6 +55,7 @@
 
     iget p0, p0, Lcom/google/android/odml/image/zzc;->zzb:I
 
+    .line 4
     invoke-virtual {p1}, Lcom/google/android/odml/image/ImageProperties;->getStorageType()I
 
     move-result p1
@@ -109,6 +113,7 @@
 
     const/16 v2, 0x41
 
+    .line 1
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
     const-string v2, "ImageProperties{imageFormat="

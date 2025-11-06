@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/AbstractMapBasedMultimap$RandomAccessWrappedList;
+.class public Lcom/google/common/collect/AbstractMapBasedMultimap$RandomAccessWrappedList;
 .super Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedList;
 .source "SourceFile"
 
@@ -47,6 +47,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedList;-><init>(Lcom/google/common/collect/AbstractMapBasedMultimap;Ljava/lang/Object;Ljava/util/List;Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection;)V
 
     return-void

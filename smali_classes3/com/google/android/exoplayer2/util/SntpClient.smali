@@ -71,12 +71,14 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lcom/google/android/exoplayer2/util/SntpClient;->loaderLock:Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -89,6 +91,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -97,6 +100,7 @@
 .method public static synthetic access$100()Ljava/lang/Object;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/util/SntpClient;->loaderLock:Ljava/lang/Object;
 
     return-object v0
@@ -105,6 +109,7 @@
 .method public static synthetic access$200()Ljava/lang/Object;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/util/SntpClient;->valueLock:Ljava/lang/Object;
 
     return-object v0
@@ -113,6 +118,7 @@
 .method public static synthetic access$300()Z
     .locals 1
 
+    .line 1
     sget-boolean v0, Lcom/google/android/exoplayer2/util/SntpClient;->isInitialized:Z
 
     return v0
@@ -121,6 +127,7 @@
 .method public static synthetic access$302(Z)Z
     .locals 0
 
+    .line 1
     sput-boolean p0, Lcom/google/android/exoplayer2/util/SntpClient;->isInitialized:Z
 
     return p0
@@ -134,6 +141,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/android/exoplayer2/util/SntpClient;->loadNtpTimeOffsetMs()J
 
     move-result-wide v0
@@ -144,6 +152,7 @@
 .method public static synthetic access$502(J)J
     .locals 0
 
+    .line 1
     sput-wide p0, Lcom/google/android/exoplayer2/util/SntpClient;->elapsedRealtimeOffsetMs:J
 
     return-wide p0
@@ -171,6 +180,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     new-instance p0, Ljava/io/IOException;
 
@@ -208,6 +218,7 @@
 
     return-void
 
+    .line 2
     :cond_2
     new-instance p0, Ljava/io/IOException;
 
@@ -217,6 +228,7 @@
 
     throw p0
 
+    .line 3
     :cond_3
     new-instance p0, Ljava/io/IOException;
 
@@ -238,6 +250,7 @@
 
     throw p0
 
+    .line 4
     :cond_4
     new-instance p0, Ljava/io/IOException;
 
@@ -251,10 +264,12 @@
 .method public static getElapsedRealtimeOffsetMs()J
     .locals 3
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/util/SntpClient;->valueLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     sget-boolean v1, Lcom/google/android/exoplayer2/util/SntpClient;->isInitialized:Z
 
@@ -275,6 +290,7 @@
     :catchall_0
     move-exception v1
 
+    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -285,10 +301,12 @@
 .method public static getNtpHost()Ljava/lang/String;
     .locals 2
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/util/SntpClient;->valueLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     sget-object v1, Lcom/google/android/exoplayer2/util/SntpClient;->ntpHost:Ljava/lang/String;
 
@@ -299,6 +317,7 @@
     :catchall_0
     move-exception v1
 
+    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -317,6 +336,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {}, Lcom/google/android/exoplayer2/util/SntpClient;->isInitialized()Z
 
     move-result v0
@@ -325,6 +345,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 2
     invoke-interface {p1}, Lcom/google/android/exoplayer2/util/SntpClient$InitializationCallback;->onInitialized()V
 
     :cond_0
@@ -333,12 +354,14 @@
     :cond_1
     if-nez p0, :cond_2
 
+    .line 3
     new-instance p0, Lcom/google/android/exoplayer2/upstream/Loader;
 
     const-string v0, "SntpClient"
 
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/upstream/Loader;-><init>(Ljava/lang/String;)V
 
+    .line 4
     :cond_2
     new-instance v0, Lcom/google/android/exoplayer2/util/SntpClient$NtpTimeLoadable;
 
@@ -360,10 +383,12 @@
 .method public static isInitialized()Z
     .locals 2
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/util/SntpClient;->valueLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     sget-boolean v1, Lcom/google/android/exoplayer2/util/SntpClient;->isInitialized:Z
 
@@ -374,6 +399,7 @@
     :catchall_0
     move-exception v1
 
+    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -389,6 +415,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/android/exoplayer2/util/SntpClient;->getNtpHost()Ljava/lang/String;
 
     move-result-object v0
@@ -397,12 +424,14 @@
 
     move-result-object v0
 
+    .line 2
     new-instance v1, Ljava/net/DatagramSocket;
 
     invoke-direct {v1}, Ljava/net/DatagramSocket;-><init>()V
 
     const/16 v2, 0x2710
 
+    .line 3
     :try_start_0
     invoke-virtual {v1, v2}, Ljava/net/DatagramSocket;->setSoTimeout(I)V
 
@@ -410,6 +439,7 @@
 
     new-array v3, v2, [B
 
+    .line 4
     new-instance v4, Ljava/net/DatagramPacket;
 
     const/16 v5, 0x7b
@@ -422,26 +452,33 @@
 
     aput-byte v0, v3, v5
 
+    .line 5
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v6
 
+    .line 6
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v8
 
     const/16 v0, 0x28
 
+    .line 7
     invoke-static {v3, v0, v6, v7}, Lcom/google/android/exoplayer2/util/SntpClient;->writeTimestamp([BIJ)V
 
+    .line 8
     invoke-virtual {v1, v4}, Ljava/net/DatagramSocket;->send(Ljava/net/DatagramPacket;)V
 
+    .line 9
     new-instance v4, Ljava/net/DatagramPacket;
 
     invoke-direct {v4, v3, v2}, Ljava/net/DatagramPacket;-><init>([BI)V
 
+    .line 10
     invoke-virtual {v1, v4}, Ljava/net/DatagramSocket;->receive(Ljava/net/DatagramPacket;)V
 
+    .line 11
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v10
@@ -450,41 +487,50 @@
 
     add-long/2addr v6, v8
 
+    .line 12
     aget-byte v2, v3, v5
 
-    shr-int/lit8 v4, v2, 0x6
+    shr-int/lit8 v2, v2, 0x6
 
-    and-int/lit8 v4, v4, 0x3
-
-    int-to-byte v4, v4
-
-    and-int/lit8 v2, v2, 0x7
+    and-int/lit8 v2, v2, 0x3
 
     int-to-byte v2, v2
 
+    .line 13
+    aget-byte v4, v3, v5
+
+    and-int/lit8 v4, v4, 0x7
+
+    int-to-byte v4, v4
+
     const/4 v5, 0x1
 
+    .line 14
     aget-byte v5, v3, v5
 
     and-int/lit16 v5, v5, 0xff
 
     const/16 v8, 0x18
 
+    .line 15
     invoke-static {v3, v8}, Lcom/google/android/exoplayer2/util/SntpClient;->readTimestamp([BI)J
 
     move-result-wide v8
 
     const/16 v12, 0x20
 
+    .line 16
     invoke-static {v3, v12}, Lcom/google/android/exoplayer2/util/SntpClient;->readTimestamp([BI)J
 
     move-result-wide v12
 
+    .line 17
     invoke-static {v3, v0}, Lcom/google/android/exoplayer2/util/SntpClient;->readTimestamp([BI)J
 
     move-result-wide v14
 
-    invoke-static {v4, v2, v5, v14, v15}, Lcom/google/android/exoplayer2/util/SntpClient;->checkValidServerReply(BBIJ)V
+    .line 18
+    invoke-static {v2, v4, v5, v14, v15}, Lcom/google/android/exoplayer2/util/SntpClient;->checkValidServerReply(BBIJ)V
 
     sub-long/2addr v12, v8
 
@@ -494,6 +540,7 @@
 
     const-wide/16 v2, 0x2
 
+    .line 19
     div-long/2addr v12, v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -502,6 +549,7 @@
 
     sub-long/2addr v6, v10
 
+    .line 20
     invoke-virtual {v1}, Ljava/net/DatagramSocket;->close()V
 
     return-wide v6
@@ -509,6 +557,7 @@
     :catchall_0
     move-exception v0
 
+    .line 21
     :try_start_1
     invoke-virtual {v1}, Ljava/net/DatagramSocket;->close()V
     :try_end_1
@@ -528,18 +577,22 @@
 .method private static read32([BI)J
     .locals 5
 
+    .line 1
     aget-byte v0, p0, p1
 
     add-int/lit8 v1, p1, 0x1
 
+    .line 2
     aget-byte v1, p0, v1
 
     add-int/lit8 v2, p1, 0x2
 
+    .line 3
     aget-byte v2, p0, v2
 
     add-int/lit8 p1, p1, 0x3
 
+    .line 4
     aget-byte p0, p0, p1
 
     and-int/lit16 p1, v0, 0x80
@@ -612,12 +665,14 @@
 .method private static readTimestamp([BI)J
     .locals 5
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/android/exoplayer2/util/SntpClient;->read32([BI)J
 
     move-result-wide v0
 
     add-int/lit8 p1, p1, 0x4
 
+    .line 2
     invoke-static {p0, p1}, Lcom/google/android/exoplayer2/util/SntpClient;->read32([BI)J
 
     move-result-wide p0
@@ -647,6 +702,7 @@
 
     const-wide v2, 0x100000000L
 
+    .line 3
     div-long/2addr p0, v2
 
     add-long/2addr v0, p0
@@ -657,10 +713,12 @@
 .method public static setNtpHost(Ljava/lang/String;)V
     .locals 2
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/util/SntpClient;->valueLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     sget-object v1, Lcom/google/android/exoplayer2/util/SntpClient;->ntpHost:Ljava/lang/String;
 
@@ -670,12 +728,15 @@
 
     if-nez v1, :cond_0
 
+    .line 3
     sput-object p0, Lcom/google/android/exoplayer2/util/SntpClient;->ntpHost:Ljava/lang/String;
 
     const/4 p0, 0x0
 
+    .line 4
     sput-boolean p0, Lcom/google/android/exoplayer2/util/SntpClient;->isInitialized:Z
 
+    .line 5
     :cond_0
     monitor-exit v0
 
@@ -704,6 +765,7 @@
 
     add-int/lit8 p2, p1, 0x8
 
+    .line 1
     invoke-static {p0, p1, p2, v1}, Ljava/util/Arrays;->fill([BIIB)V
 
     return-void
@@ -711,6 +773,7 @@
     :cond_0
     const-wide/16 v2, 0x3e8
 
+    .line 2
     div-long v4, p2, v2
 
     mul-long v6, v4, v2
@@ -731,6 +794,7 @@
 
     int-to-byte v7, v7
 
+    .line 3
     aput-byte v7, p0, p1
 
     add-int/lit8 p1, v0, 0x1
@@ -743,6 +807,7 @@
 
     int-to-byte v8, v8
 
+    .line 4
     aput-byte v8, p0, v0
 
     add-int/lit8 v0, p1, 0x1
@@ -755,6 +820,7 @@
 
     int-to-byte v9, v9
 
+    .line 5
     aput-byte v9, p0, p1
 
     add-int/lit8 p1, v0, 0x1
@@ -765,12 +831,14 @@
 
     int-to-byte v1, v1
 
+    .line 6
     aput-byte v1, p0, v0
 
     const-wide v0, 0x100000000L
 
     mul-long/2addr p2, v0
 
+    .line 7
     div-long/2addr p2, v2
 
     add-int/lit8 v0, p1, 0x1
@@ -781,6 +849,7 @@
 
     int-to-byte v1, v1
 
+    .line 8
     aput-byte v1, p0, p1
 
     add-int/lit8 p1, v0, 0x1
@@ -791,6 +860,7 @@
 
     int-to-byte v1, v1
 
+    .line 9
     aput-byte v1, p0, v0
 
     add-int/lit8 v0, p1, 0x1
@@ -801,8 +871,10 @@
 
     int-to-byte p2, p2
 
+    .line 10
     aput-byte p2, p0, p1
 
+    .line 11
     invoke-static {}, Ljava/lang/Math;->random()D
 
     move-result-wide p1

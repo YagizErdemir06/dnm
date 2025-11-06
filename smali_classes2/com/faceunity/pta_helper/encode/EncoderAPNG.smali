@@ -13,6 +13,7 @@
 
     const-string v0, "FUP2AHelper"
 
+    .line 1
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     return-void
@@ -21,6 +22,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/pta_helper/encode/SequenceFrame;-><init>()V
 
     return-void
@@ -33,6 +35,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/faceunity/pta_helper/encode/SequenceFrame;->init(Ljava/lang/String;III)Z
 
     move-result p0

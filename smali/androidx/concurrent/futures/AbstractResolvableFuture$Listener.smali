@@ -1,4 +1,4 @@
-.class final Landroidx/concurrent/futures/AbstractResolvableFuture$Listener;
+.class public final Landroidx/concurrent/futures/AbstractResolvableFuture$Listener;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,24 +15,25 @@
 
 
 # static fields
-.field static final TOMBSTONE:Landroidx/concurrent/futures/AbstractResolvableFuture$Listener;
+.field public static final TOMBSTONE:Landroidx/concurrent/futures/AbstractResolvableFuture$Listener;
 
 
 # instance fields
-.field final executor:Ljava/util/concurrent/Executor;
+.field public final executor:Ljava/util/concurrent/Executor;
 
-.field next:Landroidx/concurrent/futures/AbstractResolvableFuture$Listener;
+.field public next:Landroidx/concurrent/futures/AbstractResolvableFuture$Listener;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field final task:Ljava/lang/Runnable;
+.field public final task:Ljava/lang/Runnable;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Landroidx/concurrent/futures/AbstractResolvableFuture$Listener;
 
     const/4 v1, 0x0
@@ -47,10 +48,13 @@
 .method public constructor <init>(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/concurrent/futures/AbstractResolvableFuture$Listener;->task:Ljava/lang/Runnable;
 
+    .line 3
     iput-object p2, p0, Landroidx/concurrent/futures/AbstractResolvableFuture$Listener;->executor:Ljava/util/concurrent/Executor;
 
     return-void

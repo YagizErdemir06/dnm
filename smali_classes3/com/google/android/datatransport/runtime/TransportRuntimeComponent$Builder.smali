@@ -1,4 +1,4 @@
-.class interface abstract Lcom/google/android/datatransport/runtime/TransportRuntimeComponent$Builder;
+.class public interface abstract Lcom/google/android/datatransport/runtime/TransportRuntimeComponent$Builder;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

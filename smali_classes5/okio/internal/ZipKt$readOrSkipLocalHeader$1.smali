@@ -1,9 +1,9 @@
-.class final Lokio/internal/ZipKt$readOrSkipLocalHeader$1;
-.super Lkotlin/jvm/internal/n0;
+.class public final Lokio/internal/ZipKt$readOrSkipLocalHeader$1;
+.super Lh/d3/x/n0;
 .source "SourceFile"
 
 # interfaces
-.implements Ljn/p;
+.implements Lh/d3/w/p;
 
 
 # annotations
@@ -18,26 +18,32 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lkotlin/jvm/internal/n0;",
-        "Ljn/p<",
+        "Lh/d3/x/n0;",
+        "Lh/d3/w/p<",
         "Ljava/lang/Integer;",
         "Ljava/lang/Long;",
-        "Lnm/l2;",
+        "Lh/l2;",
         ">;"
     }
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000\u0012\n\u0002\u0010\u0008\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0000\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0001\u001a\u00020\u00002\u0006\u0010\u0003\u001a\u00020\u0002H\n"
+        "\u0000\u0014\n\u0002\u0010\u0008\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0001\u001a\u00020\u00002\u0006\u0010\u0003\u001a\u00020\u0002H\n\u00a2\u0006\u0004\u0008\u0005\u0010\u0006"
     }
     d2 = {
         "",
         "headerId",
         "",
         "dataSize",
-        "Lnm/l2;",
-        "<anonymous>"
+        "Lh/l2;",
+        "<anonymous>",
+        "(IJ)V"
     }
     k = 0x3
     mv = {
@@ -49,53 +55,53 @@
 
 
 # instance fields
-.field final synthetic $createdAtMillis:Lkotlin/jvm/internal/k1$h;
+.field public final synthetic $createdAtMillis:Lh/d3/x/k1$h;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/internal/k1$h<",
+            "Lh/d3/x/k1$h<",
             "Ljava/lang/Long;",
             ">;"
         }
     .end annotation
 .end field
 
-.field final synthetic $lastAccessedAtMillis:Lkotlin/jvm/internal/k1$h;
+.field public final synthetic $lastAccessedAtMillis:Lh/d3/x/k1$h;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/internal/k1$h<",
+            "Lh/d3/x/k1$h<",
             "Ljava/lang/Long;",
             ">;"
         }
     .end annotation
 .end field
 
-.field final synthetic $lastModifiedAtMillis:Lkotlin/jvm/internal/k1$h;
+.field public final synthetic $lastModifiedAtMillis:Lh/d3/x/k1$h;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/internal/k1$h<",
+            "Lh/d3/x/k1$h<",
             "Ljava/lang/Long;",
             ">;"
         }
     .end annotation
 .end field
 
-.field final synthetic $this_readOrSkipLocalHeader:Lokio/BufferedSource;
+.field public final synthetic $this_readOrSkipLocalHeader:Lokio/BufferedSource;
 
 
 # direct methods
-.method public constructor <init>(Lokio/BufferedSource;Lkotlin/jvm/internal/k1$h;Lkotlin/jvm/internal/k1$h;Lkotlin/jvm/internal/k1$h;)V
+.method public constructor <init>(Lokio/BufferedSource;Lh/d3/x/k1$h;Lh/d3/x/k1$h;Lh/d3/x/k1$h;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lokio/BufferedSource;",
-            "Lkotlin/jvm/internal/k1$h<",
+            "Lh/d3/x/k1$h<",
             "Ljava/lang/Long;",
             ">;",
-            "Lkotlin/jvm/internal/k1$h<",
+            "Lh/d3/x/k1$h<",
             "Ljava/lang/Long;",
             ">;",
-            "Lkotlin/jvm/internal/k1$h<",
+            "Lh/d3/x/k1$h<",
             "Ljava/lang/Long;",
             ">;)V"
         }
@@ -103,15 +109,15 @@
 
     iput-object p1, p0, Lokio/internal/ZipKt$readOrSkipLocalHeader$1;->$this_readOrSkipLocalHeader:Lokio/BufferedSource;
 
-    iput-object p2, p0, Lokio/internal/ZipKt$readOrSkipLocalHeader$1;->$lastModifiedAtMillis:Lkotlin/jvm/internal/k1$h;
+    iput-object p2, p0, Lokio/internal/ZipKt$readOrSkipLocalHeader$1;->$lastModifiedAtMillis:Lh/d3/x/k1$h;
 
-    iput-object p3, p0, Lokio/internal/ZipKt$readOrSkipLocalHeader$1;->$lastAccessedAtMillis:Lkotlin/jvm/internal/k1$h;
+    iput-object p3, p0, Lokio/internal/ZipKt$readOrSkipLocalHeader$1;->$lastAccessedAtMillis:Lh/d3/x/k1$h;
 
-    iput-object p4, p0, Lokio/internal/ZipKt$readOrSkipLocalHeader$1;->$createdAtMillis:Lkotlin/jvm/internal/k1$h;
+    iput-object p4, p0, Lokio/internal/ZipKt$readOrSkipLocalHeader$1;->$createdAtMillis:Lh/d3/x/k1$h;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1}, Lkotlin/jvm/internal/n0;-><init>(I)V
+    invoke-direct {p0, p1}, Lh/d3/x/n0;-><init>(I)V
 
     return-void
 .end method
@@ -136,7 +142,7 @@
 
     invoke-virtual {p0, p1, v0, v1}, Lokio/internal/ZipKt$readOrSkipLocalHeader$1;->invoke(IJ)V
 
-    sget-object p0, Lnm/l2;->a:Lnm/l2;
+    sget-object p0, Lh/l2;->a:Lh/l2;
 
     return-object p0
 .end method
@@ -233,7 +239,7 @@
     if-eqz v3, :cond_6
 
     .line 4
-    iget-object v0, p0, Lokio/internal/ZipKt$readOrSkipLocalHeader$1;->$lastModifiedAtMillis:Lkotlin/jvm/internal/k1$h;
+    iget-object v0, p0, Lokio/internal/ZipKt$readOrSkipLocalHeader$1;->$lastModifiedAtMillis:Lh/d3/x/k1$h;
 
     invoke-interface {p1}, Lokio/BufferedSource;->readIntLe()I
 
@@ -247,13 +253,13 @@
 
     move-result-object p1
 
-    iput-object p1, v0, Lkotlin/jvm/internal/k1$h;->a:Ljava/lang/Object;
+    iput-object p1, v0, Lh/d3/x/k1$h;->c:Ljava/lang/Object;
 
     :cond_6
     if-eqz v6, :cond_7
 
     .line 5
-    iget-object p1, p0, Lokio/internal/ZipKt$readOrSkipLocalHeader$1;->$lastAccessedAtMillis:Lkotlin/jvm/internal/k1$h;
+    iget-object p1, p0, Lokio/internal/ZipKt$readOrSkipLocalHeader$1;->$lastAccessedAtMillis:Lh/d3/x/k1$h;
 
     iget-object v0, p0, Lokio/internal/ZipKt$readOrSkipLocalHeader$1;->$this_readOrSkipLocalHeader:Lokio/BufferedSource;
 
@@ -269,13 +275,13 @@
 
     move-result-object v0
 
-    iput-object v0, p1, Lkotlin/jvm/internal/k1$h;->a:Ljava/lang/Object;
+    iput-object v0, p1, Lh/d3/x/k1$h;->c:Ljava/lang/Object;
 
     :cond_7
     if-eqz v4, :cond_a
 
     .line 6
-    iget-object p1, p0, Lokio/internal/ZipKt$readOrSkipLocalHeader$1;->$createdAtMillis:Lkotlin/jvm/internal/k1$h;
+    iget-object p1, p0, Lokio/internal/ZipKt$readOrSkipLocalHeader$1;->$createdAtMillis:Lh/d3/x/k1$h;
 
     iget-object p0, p0, Lokio/internal/ZipKt$readOrSkipLocalHeader$1;->$this_readOrSkipLocalHeader:Lokio/BufferedSource;
 
@@ -291,7 +297,7 @@
 
     move-result-object p0
 
-    iput-object p0, p1, Lkotlin/jvm/internal/k1$h;->a:Ljava/lang/Object;
+    iput-object p0, p1, Lh/d3/x/k1$h;->c:Ljava/lang/Object;
 
     goto :goto_2
 

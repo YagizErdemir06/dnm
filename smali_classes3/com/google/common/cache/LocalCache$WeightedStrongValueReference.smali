@@ -1,4 +1,4 @@
-.class final Lcom/google/common/cache/LocalCache$WeightedStrongValueReference;
+.class public final Lcom/google/common/cache/LocalCache$WeightedStrongValueReference;
 .super Lcom/google/common/cache/LocalCache$StrongValueReference;
 .source "SourceFile"
 
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field final weight:I
+.field public final weight:I
 
 
 # direct methods
@@ -39,8 +39,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/cache/LocalCache$StrongValueReference;-><init>(Ljava/lang/Object;)V
 
+    .line 2
     iput p2, p0, Lcom/google/common/cache/LocalCache$WeightedStrongValueReference;->weight:I
 
     return-void
@@ -51,6 +53,7 @@
 .method public getWeight()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/cache/LocalCache$WeightedStrongValueReference;->weight:I
 
     return p0

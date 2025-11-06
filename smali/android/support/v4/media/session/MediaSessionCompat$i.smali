@@ -74,7 +74,7 @@
 
 
 # virtual methods
-.method public r(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/media/session/MediaSession;
+.method public v(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/media/session/MediaSession;
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -89,6 +89,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Landroid/media/session/MediaSession;
 
     invoke-direct {p0, p1, p2, p3}, Landroid/media/session/MediaSession;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)V

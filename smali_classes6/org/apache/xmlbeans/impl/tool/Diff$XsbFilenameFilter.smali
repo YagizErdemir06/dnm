@@ -1,4 +1,4 @@
-.class Lorg/apache/xmlbeans/impl/tool/Diff$XsbFilenameFilter;
+.class public Lorg/apache/xmlbeans/impl/tool/Diff$XsbFilenameFilter;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -43,6 +43,7 @@
 
     const-string p0, ".xsb"
 
+    .line 1
     invoke-virtual {p2, p0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result p0

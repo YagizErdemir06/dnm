@@ -22,35 +22,35 @@
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "numPicBullet"
+    const-string v1, "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
 
-    const-string v2, "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+    const-string v2, "numPicBullet"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTNumberingImpl;->NUMPICBULLET$0:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "abstractNum"
+    const-string v2, "abstractNum"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTNumberingImpl;->ABSTRACTNUM$2:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "num"
+    const-string v2, "num"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTNumberingImpl;->NUM$4:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "numIdMacAtCleanup"
+    const-string v2, "numIdMacAtCleanup"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTNumberingImpl;->NUMIDMACATCLEANUP$6:Ljavax/xml/namespace/QName;
 
@@ -471,9 +471,9 @@
 
     if-nez p0, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    monitor-exit v0
 
     return-object p0
 

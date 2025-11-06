@@ -3,7 +3,7 @@
     <string name="abc_action_bar_home_description">Ir a inicio</string>
     <string name="abc_action_bar_up_description">Desplazarse hacia arriba</string>
     <string name="abc_action_menu_overflow_description">Más opciones</string>
-    <string name="abc_action_mode_done">Hecho</string>
+    <string name="abc_action_mode_done">Listo</string>
     <string name="abc_activity_chooser_view_see_all">Ver todo</string>
     <string name="abc_activitychooserview_choose_application">Seleccionar una aplicación</string>
     <string name="abc_capital_off">DESACTIVADO</string>
@@ -232,7 +232,6 @@
     <string name="accessibility_video_capture_button">Botón para tomar fotos mientras grabas vídeos</string>
     <string name="accessibility_video_pause_button">Grabación de vídeo pausada</string>
     <string name="accessibility_video_resume_button">Grabación de vídeo reanudada</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">Marca de agua desactivada</string>
     <string name="accessibility_watermark_image_on">Marca de agua activada</string>
     <string name="accessibility_watermark_text">Abrir el panel de ajustes de marcas de agua</string>
@@ -240,16 +239,6 @@
     <string name="accessibility_zoom_button">Zoom</string>
     <string name="actionbar_button_up_description">Atrás</string>
     <string name="afternoon">Tarde</string>
-    <string name="agent_flip_tbc">Continuar en la pantalla interior</string>
-    <string name="agent_function_max">Ajustado al valor máximo</string>
-    <string name="agent_function_min">Ajustado al valor mínimo</string>
-    <string name="agent_workspace_mode_not_supported">Esta función no es compatible</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"Esta función no es compatible.
-Se ha abierto el modo foto en su lugar."</string>
-    <string name="agent_workspace_on">Parámetros ajustados para fotografiar \"%1$s\"</string>
-    <string name="agent_workspace_tbc">Estudiando escena</string>
-    <string name="agent_workspace_tbc_use_default">"Estudiando escena…
-Parámetros de la cámara ajustados por defecto"</string>
     <string name="ai_agra_fort">Fuerte de Agra</string>
     <string name="ai_amber_fort">Fuerte Amber</string>
     <string name="ai_baby">Bebé</string>
@@ -476,7 +465,6 @@ y ajustar preferencias automáticamente"</string>
     <string name="bluetooth_headset_permission_des">Para determinar el estatus de conexión de los auriculares Bluetooth y grabar audio usando el micrófono de los auriculares</string>
     <string name="bluetooth_permission_not_ask_again">Permite a esta aplicación conectarse a dispositivos cercanos en Ajustes para poder conectarse a auriculares Bluetooth.</string>
     <string name="bokeh_use_hint">Efecto de profundidad</string>
-    <string name="bottomsheet_action_expand_halfway">Desplegar hasta la mitad</string>
     <string name="burst_shoot_exit_button_text">Desactivar Modo ráfaga</string>
     <string name="button_fisheye_camera_title">Ojo de pez</string>
     <string name="button_front_camera_title">Hacer un selfie</string>
@@ -517,8 +505,6 @@ y ajustar preferencias automáticamente"</string>
     <string name="ccc_temperature_warning_msg">Tu dispositivo se ha sobrecalentado. La cámara se cerrará en %d segundos. Tus fotos o vídeos serán guardados automáticamente.</string>
     <string name="ccc_temperature_warning_title">Dispositivo sobrecalentado</string>
     <string name="center_mark">Marca central</string>
-    <string name="character_counter_content_description">Caracteres introducidos: %1$d de %2$d</string>
-    <string name="character_counter_overflowed_content_description">Límite de caracteres superado (%1$d de %2$d)</string>
     <string name="cinemaster_cancel">Cancelar</string>
     <string name="cinemaster_confirm">Salir</string>
     <string name="cinemaster_connect_exit_message">¿Salir ahora de la configuración multicámara?</string>
@@ -537,7 +523,6 @@ y ajustar preferencias automáticamente"</string>
     <string name="cinemaster_toast_monitor_disconnect">Monitor desconectado de la configuración multicámara</string>
     <string name="cinemaster_toast_monitor_play_error">Cámara %s desconectada de la configuración multicámara debido a un error</string>
     <string name="cinemaster_wifi_24g_tips">Cambia a una red de %s GHz para optimizar la estabilidad de la alimentación del monitor</string>
-    <string name="clear_text_end_icon_content_description">Borrar texto</string>
     <string name="clearable_edittext_clear_description">Eliminar</string>
     <string name="clone_adjust">Ajustar</string>
     <string name="clone_copy_mode">Congelar fotograma</string>
@@ -831,7 +816,6 @@ los documentos escaneados automáticamente"</string>
     <string name="download_hint_cn">"Looks like your device isn't connected to WLAN. Use %1$s MB of mobile data to download items now?"</string>
     <string name="download_hint_wifi">Parece que tu dispositivo no está conectado al Wi-Fi. ¿Usar ahora %1$s MB de datos móviles para descargar elementos?</string>
     <string name="download_in_progress">Descargando…</string>
-    <string name="download_network_error">No se pudo descargar. Comprueba tus ajustes de red.</string>
     <string name="download_title">Aviso de uso de datos</string>
     <string name="download_waiting">Pendiente…</string>
     <string name="dual_camera_lens_covered_toast">La lente está cubierta.</string>
@@ -882,7 +866,6 @@ La Grabación dual también te permite conectarte al otro dispositivo cercano y 
     <string name="eras_ad">d.C</string>
     <string name="eras_bc">a.C</string>
     <string name="error_fail_to_start_audio_capture">No se pudo iniciar la captura por sonido</string>
-    <string name="error_icon_content_description">Error</string>
     <string name="esp_tip">Previsualización de la pantalla exterior</string>
     <string name="evening">Tarde</string>
     <string name="exo_controls_cc_disabled_description">Habilitar subtítulos</string>
@@ -936,8 +919,7 @@ La Grabación dual también te permite conectarte al otro dispositivo cercano y 
     <string name="exo_track_surround_5_point_1">Sonido envolvente 5.1</string>
     <string name="exo_track_surround_7_point_1">Sonido envolvente 7.1</string>
     <string name="exo_track_unknown">Desconocido</string>
-    <string name="expand_button_title">Ajustes avanzados</string>
-    <string name="exposed_dropdown_menu_content_description">Mostrar menú desplegable</string>
+    <string name="expand_button_title">Avanzado</string>
     <string name="exposure_mode_adjust_title">ExposureMode</string>
     <string name="eye_light">Brillo en los ojos</string>
     <string name="eye_light_angel">Ángel</string>
@@ -1094,7 +1076,6 @@ y creará una en la que todos se vean mejor."</string>
     <string name="hint_subtitle_prompt">Ahora puedes dictar subtítulos</string>
     <string name="histogram_summary_tip">Mostrar comentarios de exposición en tiempo real</string>
     <string name="hunt_dual_water_mark">La marca de agua dual se añadirá automáticamente.</string>
-    <string name="icon_content_description">Icono del cuadro de diálogo</string>
     <string name="id_card_mode_hint_back">Escanea la parte trasera de tu ID</string>
     <string name="id_card_mode_hint_front">Escanea la parte delantera de tu ID</string>
     <string name="id_card_mode_use_hint_text_body">"Junta ambas caras de tu ID en una imagen.
@@ -1105,7 +1086,6 @@ Imprime la copia de forma inalámbrica en una hoja A4."</string>
     <string name="invisible_mode_dialog_summary">Ahora no se puede usar la cámara. Desactiva el Modo incógnito en Ajustes para poder usar la cámara.</string>
     <string name="invisible_mode_dialog_title">Estás de incógnito</string>
     <string name="invisible_mode_dialog_to_close">Ajustes</string>
-    <string name="item_view_role_description">Pestaña</string>
     <string name="kaleidoscope_fragment_tab_name">Caleidoscopio</string>
     <string name="lens_dirty_detected_content">"Parece que la lente de la cámara está sucia.
 Limpia la lente para un mejor resultado."</string>
@@ -1228,18 +1208,6 @@ parezcan más grandes en las fotos"</string>
     <string name="manually_raw_tip">No se puede usar el zoom con el formato RAW</string>
     <string name="manually_ultra_raw_tip">No se puede usar el zoom con Ultra RAW</string>
     <string name="masterfilter_description_title">Filtros de películas</string>
-    <string name="material_clock_toggle_content_description">Selecciona AM o PM</string>
-    <string name="material_hour_selection">Seleccionar hora</string>
-    <string name="material_hour_suffix">%1$s en punto</string>
-    <string name="material_minute_selection">Seleccionar minutos</string>
-    <string name="material_minute_suffix">%1$s minutos</string>
-    <string name="material_timepicker_am">A.M.</string>
-    <string name="material_timepicker_clock_mode_description">Cambia al modo de reloj para escribir la hora.</string>
-    <string name="material_timepicker_hour">Hora</string>
-    <string name="material_timepicker_minute">Minuto</string>
-    <string name="material_timepicker_pm">P.M.</string>
-    <string name="material_timepicker_select_time">Seleccionar la hora</string>
-    <string name="material_timepicker_text_input_mode_description">Cambia al modo de introducción de texto para escribir la hora.</string>
     <string name="message_snap_double_confirm">Mantener presionado el botón de volumen activará el NFC. ¿Reemplazar esta función?</string>
     <string name="midnight">Noche</string>
     <string name="mimoji_app_name">Fun Cam</string>
@@ -1378,7 +1346,6 @@ parezcan más grandes en las fotos"</string>
     <string name="miuix_appcompat_delete_description">Eliminar</string>
     <string name="miuix_appcompat_deselect_all">Deseleccionar todo</string>
     <string name="miuix_appcompat_deselect_all_description">Deseleccionar todo</string>
-    <string name="miuix_appcompat_edit">Editar</string>
     <string name="miuix_appcompat_search_action_mode_cancel">Cancelar</string>
     <string name="miuix_appcompat_search_input_description">Buscar</string>
     <string name="miuix_appcompat_select_all">Seleccionar todo</string>
@@ -1486,42 +1453,6 @@ parezcan más grandes en las fotos"</string>
     <string name="msg_bubble_doc4_first_use">Pulsa para reconocer el texto</string>
     <string name="msg_toast_doc4_recognition_failed">Ha ocurrido un error. Vuelve a intentarlo.</string>
     <string name="msg_toast_doc4_text_not_found">No se pudo detectar el texto</string>
-    <string name="mtrl_badge_numberless_content_description">Notificación nueva</string>
-    <string name="mtrl_chip_close_icon_content_description">Retirar %1$s</string>
-    <string name="mtrl_exceed_max_badge_number_content_description">Más de %1$d notificaciones nuevas</string>
-    <string name="mtrl_picker_a11y_next_month">Cambiar al mes siguiente</string>
-    <string name="mtrl_picker_a11y_prev_month">Cambiar al mes anterior</string>
-    <string name="mtrl_picker_announce_current_selection">Selección actual: %1$s</string>
-    <string name="mtrl_picker_cancel">Cancelar</string>
-    <string name="mtrl_picker_confirm">Aceptar</string>
-    <string name="mtrl_picker_date_header_selected">%1$s</string>
-    <string name="mtrl_picker_date_header_title">Selecciona una fecha</string>
-    <string name="mtrl_picker_date_header_unselected">Fecha seleccionada</string>
-    <string name="mtrl_picker_day_of_week_column_header">Columna de días: %1$s</string>
-    <string name="mtrl_picker_invalid_format">Formato no válido.</string>
-    <string name="mtrl_picker_invalid_format_example">Ejemplo: %1$s</string>
-    <string name="mtrl_picker_invalid_format_use">Usar: %1$s</string>
-    <string name="mtrl_picker_invalid_range">El periodo no es válido.</string>
-    <string name="mtrl_picker_navigate_to_year_description">Ir al año %1$s</string>
-    <string name="mtrl_picker_out_of_range">Fuera del periodo válido: %1$s</string>
-    <string name="mtrl_picker_range_header_only_end_selected">Fecha de inicio–%1$s</string>
-    <string name="mtrl_picker_range_header_only_start_selected">%1$s–Fecha de finalización</string>
-    <string name="mtrl_picker_range_header_selected">%1$s – %2$s</string>
-    <string name="mtrl_picker_range_header_title">Selecciona un periodo</string>
-    <string name="mtrl_picker_range_header_unselected">Fecha de inicio–Fecha de finalización</string>
-    <string name="mtrl_picker_save">Guardar</string>
-    <string name="mtrl_picker_text_input_date_hint">Fecha</string>
-    <string name="mtrl_picker_text_input_date_range_end_hint">Fecha de finalización</string>
-    <string name="mtrl_picker_text_input_date_range_start_hint">Fecha de inicio</string>
-    <string name="mtrl_picker_text_input_day_abbr">d</string>
-    <string name="mtrl_picker_text_input_month_abbr">m</string>
-    <string name="mtrl_picker_text_input_year_abbr">a</string>
-    <string name="mtrl_picker_toggle_to_calendar_input_mode">Cambiar al modo de introducción Calendario</string>
-    <string name="mtrl_picker_toggle_to_day_selection">Toca para seleccionar un día</string>
-    <string name="mtrl_picker_toggle_to_text_input_mode">Cambiar al modo de introducción Texto</string>
-    <string name="mtrl_picker_toggle_to_year_selection">Toca para seleccionar un año</string>
-    <string name="mtrl_timepicker_cancel">Cancelar</string>
-    <string name="mtrl_timepicker_confirm">Aceptar</string>
     <string name="multi_window_mode_not_supported">No se puede usar la cámara en el modo multiventana</string>
     <string name="network_access_user_notice_agree">Aceptar</string>
     <string name="network_access_user_notice_message_live_video">&lt;Data>La Cámara necesita conectarse a internet para proporcionar efectos, música y otras características para vídeos cortos.&lt;br/>&lt;br/>Al pulsar \"Aceptar\" estás de acuerdo nuestro &lt;a href =%1$s>Acuerdo de Usuario&lt;/a> y nuestra &lt;a href =%2$s>Política de Privacidad&lt;/a> y permites que la Cámara se conecte a internet.&lt;/Data></string>
@@ -1543,7 +1474,7 @@ parezcan más grandes en las fotos"</string>
     <string name="no_storage">Inserta una tarjeta SD antes de usar la cámara</string>
     <string name="noon">Mediodía</string>
     <string name="not_enough_space">La tarjeta SD está llena</string>
-    <string name="not_set">Sin establecer</string>
+    <string name="not_set">Sin definir</string>
     <string name="object_track_enable_toast">Para seleccionar un objeto, toca simultáneamente dos puntos diagonales alrededor de su borde.</string>
     <string name="only_mimoji_multi_window_mode_not_supported">No se puede usar esta función en el modo multiventana</string>
     <string name="pad_cannot_connect_camera_twice">Todavía no se puede acceder a la cámara. Prueba a reiniciar el dispositivo.</string>
@@ -1616,7 +1547,6 @@ Las imágenes Ultra RAW guardan %d bits de datos manteniendo mayor detalle."</st
     <string name="parameter_wb_title">Balance de blancos</string>
     <string name="parameter_zoom_slider_description">Arrastra el control deslizante del zoom horizontalmente para cambiar tu toma suavemente de un plano largo a un primer plano.</string>
     <string name="parameter_zoom_slider_title">Zoom</string>
-    <string name="password_toggle_content_description">Mostrar contraseña</string>
     <string name="path_settings">Aplicaciones del sistema/Cámara/Ajustes</string>
     <string name="photo_assistance_tips_title">Consejos en vivo</string>
     <string name="pic_flaw_blink_more">Parece que alguien en el marco cerró los ojos</string>
@@ -2359,7 +2289,6 @@ Mantiene el sujeto nítido mientras difumina el fondo."</string>
     <string name="time_picker_label_hour">h</string>
     <string name="time_picker_label_minute">min</string>
     <string name="time_stamp_date_format">dd/MM/yyyy</string>
-    <string name="time_stamp_date_format_minute">dd/MM/yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">Puedes congelar y descongelar el fondo en cualquier momento antes o durante la captura.</string>
     <string name="timefreeze_guide_tip3">Pídele a tu sujeto que permanezca en el centro del marco.</string>
     <string name="timefreeze_guide_tip4">Haz que el tráfico se detenga.</string>
@@ -2397,7 +2326,7 @@ Mantiene el sujeto nítido mientras difumina el fondo."</string>
     <string name="tip_flash_screen_light_on">Flash suave: Activado</string>
     <string name="tip_flash_soft_light_off">Flash suave: Desactivado</string>
     <string name="tip_flash_soft_light_torch">Flash suave: Modo linterna</string>
-    <string name="tip_flash_torch">Flash: Linterna</string>
+    <string name="tip_flash_torch">Flash: Siempre activado</string>
     <string name="tip_friend_mode_connect_when_24GHz">Usa una conexión de %s GHz para optimizar la calidad de previsualización</string>
     <string name="tip_friend_mode_display_device_name_connect">Previsualización compartida</string>
     <string name="tip_friend_mode_display_device_name_disconnect">El otro dispositivo salió de esta sesión</string>

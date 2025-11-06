@@ -1,4 +1,4 @@
-.class final Lcom/google/android/odml/image/zzf;
+.class public final Lcom/google/android/odml/image/zzf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,10 +26,13 @@
 
     const/4 v0, 0x2
 
+    .line 1
     invoke-virtual {p1, v0}, Lcom/google/android/odml/image/zzh;->zzb(I)Lcom/google/android/odml/image/zzh;
 
+    .line 2
     invoke-virtual {p1, p2}, Lcom/google/android/odml/image/zzh;->zza(I)Lcom/google/android/odml/image/zzh;
 
+    .line 3
     invoke-virtual {p1}, Lcom/google/android/odml/image/zzh;->zzc()Lcom/google/android/odml/image/ImageProperties;
 
     move-result-object p1

@@ -1,4 +1,4 @@
-.class final Lcom/google/common/graph/MapRetrievalCache$CacheEntry;
+.class public final Lcom/google/common/graph/MapRetrievalCache$CacheEntry;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,7 +26,7 @@
 
 
 # instance fields
-.field final key:Ljava/lang/Object;
+.field public final key:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TK;"
@@ -34,7 +34,7 @@
     .end annotation
 .end field
 
-.field final value:Ljava/lang/Object;
+.field public final value:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TV;"
@@ -52,10 +52,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/graph/MapRetrievalCache$CacheEntry;->key:Ljava/lang/Object;
 
+    .line 3
     iput-object p2, p0, Lcom/google/common/graph/MapRetrievalCache$CacheEntry;->value:Ljava/lang/Object;
 
     return-void

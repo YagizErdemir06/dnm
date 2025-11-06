@@ -18,29 +18,29 @@
 
 
 # instance fields
-.field public a:Landroid/animation/ObjectAnimator;
+.field private c:Landroid/animation/ObjectAnimator;
 
-.field public b:Landroid/animation/ObjectAnimator;
+.field private d:Landroid/animation/ObjectAnimator;
 
-.field public c:Landroid/view/View$OnClickListener;
+.field private f:Landroid/view/View$OnClickListener;
 
-.field public final synthetic d:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+.field public final synthetic g:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
 
 
 # direct methods
-.method public constructor <init>(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;Landroid/view/View$OnClickListener;)V
+.method private constructor <init>(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;Landroid/view/View$OnClickListener;)V
     .locals 3
 
     .line 2
-    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->d:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->g:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
-    iput-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->c:Landroid/view/View$OnClickListener;
+    iput-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->f:Landroid/view/View$OnClickListener;
 
     .line 4
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->h(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Landroid/view/View;
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->b(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Landroid/view/View;
 
     move-result-object p2
 
@@ -56,13 +56,13 @@
 
     move-result-object p2
 
-    iput-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->a:Landroid/animation/ObjectAnimator;
+    iput-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->c:Landroid/animation/ObjectAnimator;
 
     .line 5
     invoke-virtual {p2, p0}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
     .line 6
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->h(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Landroid/view/View;
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->b(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Landroid/view/View;
 
     move-result-object p1
 
@@ -74,27 +74,27 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->b:Landroid/animation/ObjectAnimator;
+    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->d:Landroid/animation/ObjectAnimator;
 
     .line 7
     invoke-virtual {p1, p0}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
     .line 8
-    invoke-static {}, Lnq/f;->a()Z
+    invoke-static {}, Lk/l/c/e;->a()Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
     .line 9
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->a:Landroid/animation/ObjectAnimator;
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->c:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v0, 0x0
 
     invoke-virtual {p1, v0, v1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
     .line 10
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->b:Landroid/animation/ObjectAnimator;
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->d:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {p0, v0, v1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
@@ -130,7 +130,8 @@
 .method public a()Landroid/animation/Animator;
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->b:Landroid/animation/ObjectAnimator;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->d:Landroid/animation/ObjectAnimator;
 
     return-object p0
 .end method
@@ -138,7 +139,8 @@
 .method public b()Landroid/animation/Animator;
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->a:Landroid/animation/ObjectAnimator;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->c:Landroid/animation/ObjectAnimator;
 
     return-object p0
 .end method
@@ -146,37 +148,40 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 1
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->d:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->g:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
 
-    invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->h(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->d:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->i(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->b(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->b:Landroid/animation/ObjectAnimator;
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->g:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+
+    invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->c(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->d:Landroid/animation/ObjectAnimator;
 
     if-ne p1, v0, :cond_0
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->d:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+    .line 2
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->g:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->i(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->c(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroid/view/View;->bringToFront()V
+    invoke-virtual {p1}, Landroid/widget/FrameLayout;->bringToFront()V
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->d:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+    .line 3
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->g:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
 
-    invoke-static {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->h(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Landroid/view/View;
+    invoke-static {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->b(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Landroid/view/View;
 
     move-result-object p0
 
@@ -191,25 +196,26 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->d:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+    .line 1
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->g:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->h(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Landroid/view/View;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->d:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->i(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->b(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Landroid/view/View;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->d:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->g:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->h(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Landroid/view/View;
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->c(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->g:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->b(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Landroid/view/View;
 
     move-result-object p1
 
@@ -223,17 +229,19 @@
 
     if-nez p1, :cond_0
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->d:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+    .line 2
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->g:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->i(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->c(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroid/view/View;->bringToFront()V
+    invoke-virtual {p1}, Landroid/widget/FrameLayout;->bringToFront()V
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->d:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+    .line 3
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->g:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->h(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Landroid/view/View;
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->b(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Landroid/view/View;
 
     move-result-object p1
 
@@ -241,9 +249,10 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->d:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+    .line 4
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->g:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
 
-    invoke-static {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->h(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Landroid/view/View;
+    invoke-static {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->b(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Landroid/view/View;
 
     move-result-object p0
 
@@ -264,29 +273,31 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 1
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->d:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->g:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
 
-    invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->h(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->d:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->i(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->b(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->a:Landroid/animation/ObjectAnimator;
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->g:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+
+    invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->c(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->c:Landroid/animation/ObjectAnimator;
 
     if-ne p1, v0, :cond_0
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->d:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+    .line 2
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->g:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->h(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Landroid/view/View;
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->b(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Landroid/view/View;
 
     move-result-object p1
 
@@ -294,29 +305,32 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->d:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+    .line 3
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->g:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->h(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/view/View;->bringToFront()V
-
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->d:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->i(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->b(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Landroid/view/View;
 
     move-result-object p1
 
     invoke-virtual {p1}, Landroid/view/View;->bringToFront()V
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->d:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+    .line 4
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->g:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->h(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Landroid/view/View;
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->c(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
     move-result-object p1
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->c:Landroid/view/View$OnClickListener;
+    invoke-virtual {p1}, Landroid/widget/FrameLayout;->bringToFront()V
+
+    .line 5
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->g:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->b(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)Landroid/view/View;
+
+    move-result-object p1
+
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->f:Landroid/view/View$OnClickListener;
 
     invoke-virtual {p1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

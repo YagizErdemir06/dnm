@@ -60,6 +60,7 @@
 
     const/16 v0, 0x64
 
+    .line 1
     invoke-direct {p0, p1, p2, v0}, Lcom/google/mlkit/vision/common/internal/MultiFlavorDetectorCreator$Registration;-><init>(Ljava/lang/Class;Lcom/google/firebase/inject/Provider;I)V
 
     return-void

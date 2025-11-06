@@ -1,4 +1,4 @@
-.class Lcom/google/common/base/Splitter$5;
+.class public Lcom/google/common/base/Splitter$5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,15 +27,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/base/Splitter;
+.field public final synthetic this$0:Lcom/google/common/base/Splitter;
 
-.field final synthetic val$sequence:Ljava/lang/CharSequence;
+.field public final synthetic val$sequence:Ljava/lang/CharSequence;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/base/Splitter;Ljava/lang/CharSequence;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/base/Splitter$5;->this$0:Lcom/google/common/base/Splitter;
 
     iput-object p2, p0, Lcom/google/common/base/Splitter$5;->val$sequence:Ljava/lang/CharSequence;
@@ -58,6 +59,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/base/Splitter$5;->this$0:Lcom/google/common/base/Splitter;
 
     iget-object p0, p0, Lcom/google/common/base/Splitter$5;->val$sequence:Ljava/lang/CharSequence;
@@ -74,6 +76,7 @@
 
     const-string v0, ", "
 
+    .line 1
     invoke-static {v0}, Lcom/google/common/base/Joiner;->on(Ljava/lang/String;)Lcom/google/common/base/Joiner;
 
     move-result-object v0
@@ -84,6 +87,7 @@
 
     const/16 v2, 0x5b
 
+    .line 2
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v1, p0}, Lcom/google/common/base/Joiner;->appendTo(Ljava/lang/StringBuilder;Ljava/lang/Iterable;)Ljava/lang/StringBuilder;
@@ -92,8 +96,10 @@
 
     const/16 v0, 0x5d
 
+    .line 3
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 4
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

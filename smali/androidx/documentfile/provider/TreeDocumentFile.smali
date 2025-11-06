@@ -1,4 +1,4 @@
-.class Landroidx/documentfile/provider/TreeDocumentFile;
+.class public Landroidx/documentfile/provider/TreeDocumentFile;
 .super Landroidx/documentfile/provider/DocumentFile;
 .source "SourceFile"
 
@@ -23,10 +23,13 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/documentfile/provider/DocumentFile;-><init>(Landroidx/documentfile/provider/DocumentFile;)V
 
+    .line 2
     iput-object p2, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mContext:Landroid/content/Context;
 
+    .line 3
     iput-object p3, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mUri:Landroid/net/Uri;
 
     return-void
@@ -41,6 +44,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 1
     :try_start_0
     invoke-interface {p0}, Ljava/lang/AutoCloseable;->close()V
     :try_end_0
@@ -52,6 +56,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     throw p0
 
     :catch_1
@@ -90,6 +95,7 @@
 .method public canRead()Z
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mContext:Landroid/content/Context;
 
     iget-object p0, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mUri:Landroid/net/Uri;
@@ -104,6 +110,7 @@
 .method public canWrite()Z
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mContext:Landroid/content/Context;
 
     iget-object p0, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mUri:Landroid/net/Uri;
@@ -120,6 +127,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mUri:Landroid/net/Uri;
@@ -132,6 +140,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 2
     new-instance v0, Landroidx/documentfile/provider/TreeDocumentFile;
 
     iget-object v1, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mContext:Landroid/content/Context;
@@ -182,6 +191,7 @@
 .method public delete()Z
     .locals 1
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mContext:Landroid/content/Context;
 
@@ -208,6 +218,7 @@
 .method public exists()Z
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mContext:Landroid/content/Context;
 
     iget-object p0, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mUri:Landroid/net/Uri;
@@ -224,6 +235,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mContext:Landroid/content/Context;
 
     iget-object p0, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mUri:Landroid/net/Uri;
@@ -240,6 +252,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mContext:Landroid/content/Context;
 
     iget-object p0, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mUri:Landroid/net/Uri;
@@ -254,6 +267,7 @@
 .method public getUri()Landroid/net/Uri;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mUri:Landroid/net/Uri;
 
     return-object p0
@@ -262,6 +276,7 @@
 .method public isDirectory()Z
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mContext:Landroid/content/Context;
 
     iget-object p0, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mUri:Landroid/net/Uri;
@@ -276,6 +291,7 @@
 .method public isFile()Z
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mContext:Landroid/content/Context;
 
     iget-object p0, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mUri:Landroid/net/Uri;
@@ -290,6 +306,7 @@
 .method public isVirtual()Z
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mContext:Landroid/content/Context;
 
     iget-object p0, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mUri:Landroid/net/Uri;
@@ -304,6 +321,7 @@
 .method public lastModified()J
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mContext:Landroid/content/Context;
 
     iget-object p0, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mUri:Landroid/net/Uri;
@@ -318,6 +336,7 @@
 .method public length()J
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mContext:Landroid/content/Context;
 
     iget-object p0, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mUri:Landroid/net/Uri;
@@ -332,22 +351,27 @@
 .method public listFiles()[Landroidx/documentfile/provider/DocumentFile;
     .locals 9
 
+    .line 1
     iget-object v0, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
+    .line 2
     iget-object v0, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mUri:Landroid/net/Uri;
 
+    .line 3
     invoke-static {v0}, Landroid/provider/DocumentsContract;->getDocumentId(Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 4
     invoke-static {v0, v2}, Landroid/provider/DocumentsContract;->buildChildDocumentsUriUsingTree(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v2
 
+    .line 5
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -359,6 +383,7 @@
     :try_start_0
     const-string v3, "document_id"
 
+    .line 6
     filled-new-array {v3}, [Ljava/lang/String;
 
     move-result-object v3
@@ -373,6 +398,7 @@
 
     move-result-object v8
 
+    .line 7
     :goto_0
     invoke-interface {v8}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -380,16 +406,19 @@
 
     if-eqz v1, :cond_0
 
+    .line 8
     invoke-interface {v8, v7}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 9
     iget-object v2, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mUri:Landroid/net/Uri;
 
     invoke-static {v2, v1}, Landroid/provider/DocumentsContract;->buildDocumentUriUsingTree(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
 
+    .line 10
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -397,6 +426,7 @@
 
     goto :goto_0
 
+    .line 11
     :cond_0
     :goto_1
     invoke-static {v8}, Landroidx/documentfile/provider/TreeDocumentFile;->closeQuietly(Ljava/lang/AutoCloseable;)V
@@ -414,6 +444,7 @@
     :try_start_1
     const-string v2, "DocumentFile"
 
+    .line 12
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -434,6 +465,7 @@
 
     goto :goto_1
 
+    .line 13
     :goto_2
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -447,15 +479,18 @@
 
     check-cast v0, [Landroid/net/Uri;
 
+    .line 14
     array-length v1, v0
 
     new-array v1, v1, [Landroidx/documentfile/provider/DocumentFile;
 
+    .line 15
     :goto_3
     array-length v2, v0
 
     if-ge v7, v2, :cond_1
 
+    .line 16
     new-instance v2, Landroidx/documentfile/provider/TreeDocumentFile;
 
     iget-object v3, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mContext:Landroid/content/Context;
@@ -473,6 +508,7 @@
     :cond_1
     return-object v1
 
+    .line 17
     :goto_4
     invoke-static {v8}, Landroidx/documentfile/provider/TreeDocumentFile;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
@@ -484,21 +520,25 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :try_start_0
     iget-object v1, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mContext:Landroid/content/Context;
 
+    .line 2
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
     iget-object v2, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mUri:Landroid/net/Uri;
 
+    .line 3
     invoke-static {v1, v2, p1}, Landroid/provider/DocumentsContract;->renameDocument(Landroid/content/ContentResolver;Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
+    .line 4
     iput-object p1, p0, Landroidx/documentfile/provider/TreeDocumentFile;->mUri:Landroid/net/Uri;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0

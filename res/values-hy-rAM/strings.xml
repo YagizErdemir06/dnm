@@ -205,7 +205,6 @@
     <string name="accessibility_video_capture_button">Նկարահանումներ կատարելու ժամանակ լուսանկարներ նկարելու համար կոճակ</string>
     <string name="accessibility_video_pause_button">Տեսագրությունը կասեցվել է</string>
     <string name="accessibility_video_resume_button">Տեսագրությունը վերսկսվեց</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">Ջրանիշն անջատված է</string>
     <string name="accessibility_watermark_image_on">Ջրանիշը միացված է</string>
     <string name="accessibility_watermark_text">Բացեք ջրանիշի ճշգրտման վահանակը</string>
@@ -213,16 +212,6 @@
     <string name="accessibility_zoom_button">Խոշորացման ռեժիմ</string>
     <string name="actionbar_button_up_description">Ետ</string>
     <string name="afternoon">Ցերեկ</string>
-    <string name="agent_flip_tbc">Շարունակեք ներքին էկրանին</string>
-    <string name="agent_function_max">Ճշգրտված է առավելագույն արժեքին</string>
-    <string name="agent_function_min">Ճշգրտված է նվազագույն արժեքին</string>
-    <string name="agent_workspace_mode_not_supported">Այս հատկությունը չի աջակցվում</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"Այս գործառույթը չի աջակցվում:
-Փոխարենը բացվել է Լուսանկարի ռեժիմը:"</string>
-    <string name="agent_workspace_on">«%1$s» լուսանկարելու համար սահմանված պարամետրերը</string>
-    <string name="agent_workspace_tbc">Տեսարանի ուսումնասիրություն</string>
-    <string name="agent_workspace_tbc_use_default">"Տեսարանի ուսումնասիրություն…
-Տեսախցիկի պարամետրերը սահմանված են որպես կանխադրված"</string>
     <string name="ai_agra_fort">Ագրա Բերդ</string>
     <string name="ai_amber_fort">Ամբեր պալատ</string>
     <string name="ai_baby">Երեխա</string>
@@ -781,7 +770,6 @@
     <string name="download_hint_cn">"Looks like your device isn't connected to WLAN. Use %1$s MB of mobile data to download items now?"</string>
     <string name="download_hint_wifi">Կարծես ձեր սարքը միացված չէ Wi-Fi-ին: Օգտագործե՞լ այժմ %1$s ՄԲ բջջային տվյալներ՝ տարրեր ներբեռնելու համար:</string>
     <string name="download_in_progress">Ներբեռնում…</string>
-    <string name="download_network_error">Չհաջողվեց ներբեռնել: Ստուգեք ձեր ցանցի կարգավորումները:</string>
     <string name="download_title">Տվյալների օգտագործման նախազգուշացում</string>
     <string name="download_waiting">Սպասում է…</string>
     <string name="dual_camera_lens_covered_toast">Ոսպնյակը ծածկված է:</string>
@@ -1260,7 +1248,6 @@
     <string name="miuix_appcompat_delete_description">Ջնջել</string>
     <string name="miuix_appcompat_deselect_all">Ընտրությունից հանել բոլորը</string>
     <string name="miuix_appcompat_deselect_all_description">Ընտրությունից հանել բոլորը</string>
-    <string name="miuix_appcompat_edit">Խմբագրել</string>
     <string name="miuix_appcompat_search_action_mode_cancel">Չեղարկել</string>
     <string name="miuix_appcompat_search_input_description">Որոնել</string>
     <string name="miuix_appcompat_select_all">Ընտրել բոլորը</string>
@@ -2199,7 +2186,6 @@ a և առաջ բերում մարդկանց։"</string>
     <string name="time_picker_label_hour">Ժ</string>
     <string name="time_picker_label_minute">Ր</string>
     <string name="time_stamp_date_format">dd.MM.yyyy</string>
-    <string name="time_stamp_date_format_minute">dd.MM.yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">Կարող եք սառեցնել և ապասառեցնել ֆոնը ցանկացած ժամանակ նկարահանելուց առաջ կամ դրա ընթացքում:</string>
     <string name="timefreeze_guide_tip3">Խնդրեք անձին մնալ շրջանակի կենտրոնում:</string>
     <string name="timefreeze_guide_tip4">Կանգնեցրել երթևեկությունը:</string>
@@ -2237,7 +2223,7 @@ a և առաջ բերում մարդկանց։"</string>
     <string name="tip_flash_screen_light_on">Փափուկ ֆլեշ. Միացնել</string>
     <string name="tip_flash_soft_light_off">Փափուկ ֆլեշ՝ Անջատել</string>
     <string name="tip_flash_soft_light_torch">Փափուկ ֆլեշ՝ Լապտերի ռեժիմ</string>
-    <string name="tip_flash_torch">Լապտեր. Լուսավորություն</string>
+    <string name="tip_flash_torch">Ֆլեշ: Միշտ միացված է</string>
     <string name="tip_friend_mode_connect_when_24GHz">Օգտագործեք %s ԳՀց միացում՝ նախադիտման որակը բարձրացնելու համար</string>
     <string name="tip_friend_mode_display_device_name_connect">Համօգտագործվող նախադիտում</string>
     <string name="tip_friend_mode_display_device_name_disconnect">Մյուս սարքը լքեց այս նիստը</string>

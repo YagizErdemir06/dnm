@@ -16,8 +16,4 @@
 
 # virtual methods
 .method public abstract onNavigateToScreen(Landroidx/preference/PreferenceScreen;)V
-    .param p1    # Landroidx/preference/PreferenceScreen;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 .end method

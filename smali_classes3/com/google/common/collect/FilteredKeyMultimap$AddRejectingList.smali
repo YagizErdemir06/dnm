@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/FilteredKeyMultimap$AddRejectingList;
+.class public Lcom/google/common/collect/FilteredKeyMultimap$AddRejectingList;
 .super Lcom/google/common/collect/ForwardingList;
 .source "SourceFile"
 
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field final key:Ljava/lang/Object;
+.field public final key:Ljava/lang/Object;
     .annotation runtime Lcom/google/common/collect/ParametricNullness;
     .end annotation
 
@@ -52,8 +52,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ForwardingList;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/FilteredKeyMultimap$AddRejectingList;->key:Ljava/lang/Object;
 
     return-void

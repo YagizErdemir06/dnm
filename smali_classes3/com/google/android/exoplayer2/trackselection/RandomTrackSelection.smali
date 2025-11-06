@@ -21,10 +21,13 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/source/TrackGroup;[IILjava/util/Random;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;-><init>(Lcom/google/android/exoplayer2/source/TrackGroup;[II)V
 
+    .line 2
     iput-object p4, p0, Lcom/google/android/exoplayer2/trackselection/RandomTrackSelection;->random:Ljava/util/Random;
 
+    .line 3
     iget p1, p0, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->length:I
 
     invoke-virtual {p4, p1}, Ljava/util/Random;->nextInt(I)I
@@ -41,6 +44,7 @@
 .method public getSelectedIndex()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/trackselection/RandomTrackSelection;->selectedIndex:I
 
     return p0
@@ -78,6 +82,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide p1
@@ -88,11 +93,13 @@
 
     move p5, p4
 
+    .line 2
     :goto_0
     iget p6, p0, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->length:I
 
     if-ge p4, p6, :cond_1
 
+    .line 3
     invoke-virtual {p0, p4, p1, p2}, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->isBlacklisted(IJ)Z
 
     move-result p6
@@ -106,6 +113,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     iget-object p4, p0, Lcom/google/android/exoplayer2/trackselection/RandomTrackSelection;->random:Ljava/util/Random;
 
@@ -115,17 +123,20 @@
 
     iput p4, p0, Lcom/google/android/exoplayer2/trackselection/RandomTrackSelection;->selectedIndex:I
 
+    .line 5
     iget p4, p0, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->length:I
 
     if-eq p5, p4, :cond_4
 
     move p4, p3
 
+    .line 6
     :goto_1
     iget p5, p0, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->length:I
 
     if-ge p3, p5, :cond_4
 
+    .line 7
     invoke-virtual {p0, p3, p1, p2}, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->isBlacklisted(IJ)Z
 
     move-result p5
@@ -138,6 +149,7 @@
 
     if-ne p5, p4, :cond_2
 
+    .line 8
     iput p3, p0, Lcom/google/android/exoplayer2/trackselection/RandomTrackSelection;->selectedIndex:I
 
     return-void

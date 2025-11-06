@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/AggregateFutureState$SafeAtomicHelper;
+.class public final Lcom/google/common/util/concurrent/AggregateFutureState$SafeAtomicHelper;
 .super Lcom/google/common/util/concurrent/AggregateFutureState$AtomicHelper;
 .source "SourceFile"
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final remainingCountUpdater:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+.field public final remainingCountUpdater:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater<",
@@ -25,7 +25,7 @@
     .end annotation
 .end field
 
-.field final seenExceptionsUpdater:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+.field public final seenExceptionsUpdater:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater<",
@@ -45,10 +45,13 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/google/common/util/concurrent/AggregateFutureState$AtomicHelper;-><init>(Lcom/google/common/util/concurrent/AggregateFutureState$1;)V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/util/concurrent/AggregateFutureState$SafeAtomicHelper;->seenExceptionsUpdater:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
+    .line 3
     iput-object p2, p0, Lcom/google/common/util/concurrent/AggregateFutureState$SafeAtomicHelper;->remainingCountUpdater:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
     return-void
@@ -76,9 +79,10 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/AggregateFutureState$SafeAtomicHelper;->seenExceptionsUpdater:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    invoke-static {p0, p1, p2, p3}, Landroidx/concurrent/futures/a;->a(Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1, p2, p3}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
 
     return-void
 .end method
@@ -93,6 +97,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/AggregateFutureState$SafeAtomicHelper;->remainingCountUpdater:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
     invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->decrementAndGet(Ljava/lang/Object;)I

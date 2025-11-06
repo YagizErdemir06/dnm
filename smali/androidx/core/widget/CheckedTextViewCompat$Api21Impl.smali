@@ -1,4 +1,4 @@
-.class Landroidx/core/widget/CheckedTextViewCompat$Api21Impl;
+.class public Landroidx/core/widget/CheckedTextViewCompat$Api21Impl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,6 +37,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/widget/CheckedTextView;->getCheckMarkTintList()Landroid/content/res/ColorStateList;
 
     move-result-object p0
@@ -52,6 +54,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/widget/CheckedTextView;->getCheckMarkTintMode()Landroid/graphics/PorterDuff$Mode;
 
     move-result-object p0
@@ -70,6 +73,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/widget/CheckedTextView;->setCheckMarkTintList(Landroid/content/res/ColorStateList;)V
 
     return-void
@@ -86,6 +90,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/widget/CheckedTextView;->setCheckMarkTintMode(Landroid/graphics/PorterDuff$Mode;)V
 
     return-void

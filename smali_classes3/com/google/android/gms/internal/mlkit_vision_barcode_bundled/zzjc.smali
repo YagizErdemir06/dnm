@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzjc;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzjc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,7 +7,7 @@
 
 
 # static fields
-.field static final zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeh;
+.field public static final zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeh;
 
 
 # direct methods

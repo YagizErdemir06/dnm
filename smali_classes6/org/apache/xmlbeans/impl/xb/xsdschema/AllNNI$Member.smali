@@ -33,9 +33,10 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/xb/xsdschema/AllNNI$1;->class$org$apache$xmlbeans$impl$xb$xsdschema$AllNNI$Member:Ljava/lang/Class;
 
     if-nez v0, :cond_0
@@ -71,6 +72,7 @@
 
     const-string v0, "unbounded"
 
+    .line 2
     invoke-static {v0}, Lorg/apache/xmlbeans/impl/xb/xsdschema/AllNNI$Member$Enum;->forString(Ljava/lang/String;)Lorg/apache/xmlbeans/impl/xb/xsdschema/AllNNI$Member$Enum;
 
     move-result-object v0

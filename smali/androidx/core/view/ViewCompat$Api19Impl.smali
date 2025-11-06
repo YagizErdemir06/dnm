@@ -1,4 +1,4 @@
-.class Landroidx/core/view/ViewCompat$Api19Impl;
+.class public Landroidx/core/view/ViewCompat$Api19Impl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,6 +33,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getAccessibilityLiveRegion()I
 
     move-result p0
@@ -48,6 +50,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->isAttachedToWindow()Z
 
     move-result p0
@@ -64,6 +67,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->isLaidOut()Z
 
     move-result p0
@@ -80,6 +84,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->isLayoutDirectionResolved()Z
 
     move-result p0
@@ -92,6 +97,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-interface {p0, p1, p2, p3}, Landroid/view/ViewParent;->notifySubtreeAccessibilityStateChanged(Landroid/view/View;Landroid/view/View;I)V
 
     return-void
@@ -102,6 +108,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/View;->setAccessibilityLiveRegion(I)V
 
     return-void
@@ -112,6 +119,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityEvent;->setContentChangeTypes(I)V
 
     return-void

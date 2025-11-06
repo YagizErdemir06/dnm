@@ -1,4 +1,4 @@
-.class Landroidx/fragment/app/FragmentManager$PopBackStackState;
+.class public Landroidx/fragment/app/FragmentManager$PopBackStackState;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,13 @@
 
 
 # instance fields
-.field final mFlags:I
+.field public final mFlags:I
 
-.field final mId:I
+.field public final mId:I
 
-.field final mName:Ljava/lang/String;
+.field public final mName:Ljava/lang/String;
 
-.field final synthetic this$0:Landroidx/fragment/app/FragmentManager;
+.field public final synthetic this$0:Landroidx/fragment/app/FragmentManager;
 
 
 # direct methods
@@ -35,14 +35,18 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Landroidx/fragment/app/FragmentManager$PopBackStackState;->this$0:Landroidx/fragment/app/FragmentManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p2, p0, Landroidx/fragment/app/FragmentManager$PopBackStackState;->mName:Ljava/lang/String;
 
+    .line 3
     iput p3, p0, Landroidx/fragment/app/FragmentManager$PopBackStackState;->mId:I
 
+    .line 4
     iput p4, p0, Landroidx/fragment/app/FragmentManager$PopBackStackState;->mFlags:I
 
     return-void
@@ -72,6 +76,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/FragmentManager$PopBackStackState;->this$0:Landroidx/fragment/app/FragmentManager;
 
     iget-object v0, v0, Landroidx/fragment/app/FragmentManager;->mPrimaryNav:Landroidx/fragment/app/Fragment;
@@ -86,10 +91,12 @@
 
     if-nez v1, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getChildFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
 
+    .line 3
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->popBackStackImmediate()Z
 
     move-result v0
@@ -100,6 +107,7 @@
 
     return p0
 
+    .line 4
     :cond_0
     iget-object v0, p0, Landroidx/fragment/app/FragmentManager$PopBackStackState;->this$0:Landroidx/fragment/app/FragmentManager;
 

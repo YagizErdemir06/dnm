@@ -24,19 +24,22 @@
 
 
 # instance fields
-.field protected aid:I
+.field public aid:I
 
-.field protected service:Lcom/xiaomi/idm/api/IDMService;
+.field public service:Lcom/xiaomi/idm/api/IDMService;
 
 
 # direct methods
 .method public constructor <init>(ILcom/xiaomi/idm/api/IDMService;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/xiaomi/idm/api/IDMService$Action;->aid:I
 
+    .line 3
     iput-object p2, p0, Lcom/xiaomi/idm/api/IDMService$Action;->service:Lcom/xiaomi/idm/api/IDMService;
 
     return-void
@@ -47,6 +50,7 @@
 .method public getAid()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/idm/api/IDMService$Action;->aid:I
 
     return p0
@@ -55,6 +59,7 @@
 .method public getServiceId()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMService$Action;->service:Lcom/xiaomi/idm/api/IDMService;
 
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMService;->getServiceId()Ljava/lang/String;

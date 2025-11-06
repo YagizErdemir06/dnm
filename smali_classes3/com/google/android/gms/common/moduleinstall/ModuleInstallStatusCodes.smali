@@ -19,6 +19,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/common/api/CommonStatusCodes;-><init>()V
 
     return-void
@@ -31,6 +32,7 @@
 
     packed-switch p0, :pswitch_data_0
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/gms/common/api/CommonStatusCodes;->getStatusCodeString(I)Ljava/lang/String;
 
     move-result-object p0

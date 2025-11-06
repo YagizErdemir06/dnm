@@ -1,4 +1,4 @@
-.class Lmiuix/animation/controller/FolmeHover$1;
+.class public Lmiuix/animation/controller/FolmeHover$1;
 .super Lmiuix/animation/listener/TransitionListener;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lmiuix/animation/controller/FolmeHover;
+.field public final synthetic this$0:Lmiuix/animation/controller/FolmeHover;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/animation/controller/FolmeHover;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/animation/controller/FolmeHover$1;->this$0:Lmiuix/animation/controller/FolmeHover;
 
     invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
@@ -43,6 +44,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lmiuix/animation/IHoverStyle$HoverType;->ENTER:Lmiuix/animation/IHoverStyle$HoverType;
 
     invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -51,6 +53,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 2
     iget-object p0, p0, Lmiuix/animation/controller/FolmeHover$1;->this$0:Lmiuix/animation/controller/FolmeHover;
 
     iget-object p0, p0, Lmiuix/animation/controller/FolmeBase;->mState:Lmiuix/animation/controller/IFolmeStateStyle;

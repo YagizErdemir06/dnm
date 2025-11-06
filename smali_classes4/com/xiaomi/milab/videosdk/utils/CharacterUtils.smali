@@ -7,6 +7,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,10 +38,12 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 2
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
@@ -49,6 +52,7 @@
 
     move v3, v2
 
+    .line 3
     :goto_0
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
@@ -56,12 +60,14 @@
 
     if-ge v3, v4, :cond_2
 
+    .line 4
     invoke-interface {p0, v3}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v4
 
     move v5, v2
 
+    .line 5
     :goto_1
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
@@ -69,6 +75,7 @@
 
     if-ge v5, v6, :cond_1
 
+    .line 6
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -85,22 +92,28 @@
 
     if-ne v4, v6, :cond_0
 
+    .line 7
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
 
     invoke-interface {v1, v6}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 8
     new-instance v6, Lcom/xiaomi/milab/videosdk/utils/CharacterDiffResult;
 
     invoke-direct {v6}, Lcom/xiaomi/milab/videosdk/utils/CharacterDiffResult;-><init>()V
 
+    .line 9
     iput-char v4, v6, Lcom/xiaomi/milab/videosdk/utils/CharacterDiffResult;->c:C
 
+    .line 10
     iput v3, v6, Lcom/xiaomi/milab/videosdk/utils/CharacterDiffResult;->fromIndex:I
 
+    .line 11
     iput v5, v6, Lcom/xiaomi/milab/videosdk/utils/CharacterDiffResult;->moveIndex:I
 
+    .line 12
     invoke-interface {v0, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
@@ -162,6 +175,7 @@
     :goto_0
     if-ge v1, p1, :cond_0
 
+    .line 1
     invoke-interface {p5, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -182,6 +196,7 @@
     :goto_1
     if-ge v0, p0, :cond_1
 
+    .line 2
     invoke-interface {p6, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -230,6 +245,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -247,10 +263,12 @@
 
     check-cast v0, Lcom/xiaomi/milab/videosdk/utils/CharacterDiffResult;
 
+    .line 2
     iget v1, v0, Lcom/xiaomi/milab/videosdk/utils/CharacterDiffResult;->fromIndex:I
 
     if-ne v1, p0, :cond_0
 
+    .line 3
     iget p0, v0, Lcom/xiaomi/milab/videosdk/utils/CharacterDiffResult;->moveIndex:I
 
     return p0
@@ -283,6 +301,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -300,6 +319,7 @@
 
     check-cast v0, Lcom/xiaomi/milab/videosdk/utils/CharacterDiffResult;
 
+    .line 2
     iget v0, v0, Lcom/xiaomi/milab/videosdk/utils/CharacterDiffResult;->moveIndex:I
 
     if-ne v0, p0, :cond_0

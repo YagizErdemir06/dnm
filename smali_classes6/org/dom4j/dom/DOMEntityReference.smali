@@ -42,6 +42,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Lorg/w3c/dom/Node;->getNodeType()S
 
     move-result p0
@@ -72,6 +73,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     new-instance p0, Lorg/w3c/dom/DOMException;
 
@@ -96,8 +98,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lorg/dom4j/dom/DOMEntityReference;->checkNewChildNode(Lorg/w3c/dom/Node;)V
 
+    .line 2
     invoke-static {p0, p1}, Lorg/dom4j/dom/DOMNodeHelper;->appendChild(Lorg/dom4j/Node;Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
     move-result-object p0
@@ -108,6 +112,7 @@
 .method public cloneNode(Z)Lorg/w3c/dom/Node;
     .locals 0
 
+    .line 1
     invoke-static {p0, p1}, Lorg/dom4j/dom/DOMNodeHelper;->cloneNode(Lorg/dom4j/Node;Z)Lorg/w3c/dom/Node;
 
     move-result-object p0
@@ -126,6 +131,7 @@
 .method public getChildNodes()Lorg/w3c/dom/NodeList;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lorg/dom4j/dom/DOMNodeHelper;->getChildNodes(Lorg/dom4j/Node;)Lorg/w3c/dom/NodeList;
 
     move-result-object p0
@@ -136,6 +142,7 @@
 .method public getFirstChild()Lorg/w3c/dom/Node;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lorg/dom4j/dom/DOMNodeHelper;->getFirstChild(Lorg/dom4j/Node;)Lorg/w3c/dom/Node;
 
     move-result-object p0
@@ -146,6 +153,7 @@
 .method public getLastChild()Lorg/w3c/dom/Node;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lorg/dom4j/dom/DOMNodeHelper;->getLastChild(Lorg/dom4j/Node;)Lorg/w3c/dom/Node;
 
     move-result-object p0
@@ -156,6 +164,7 @@
 .method public getLocalName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lorg/dom4j/dom/DOMNodeHelper;->getLocalName(Lorg/dom4j/Node;)Ljava/lang/String;
 
     move-result-object p0
@@ -166,6 +175,7 @@
 .method public getNamespaceURI()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lorg/dom4j/dom/DOMNodeHelper;->getNamespaceURI(Lorg/dom4j/Node;)Ljava/lang/String;
 
     move-result-object p0
@@ -176,6 +186,7 @@
 .method public getNextSibling()Lorg/w3c/dom/Node;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lorg/dom4j/dom/DOMNodeHelper;->getNextSibling(Lorg/dom4j/Node;)Lorg/w3c/dom/Node;
 
     move-result-object p0
@@ -186,6 +197,7 @@
 .method public getNodeName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/FlyweightEntity;->getName()Ljava/lang/String;
 
     move-result-object p0
@@ -209,6 +221,7 @@
 .method public getOwnerDocument()Lorg/w3c/dom/Document;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lorg/dom4j/dom/DOMNodeHelper;->getOwnerDocument(Lorg/dom4j/Node;)Lorg/w3c/dom/Document;
 
     move-result-object p0
@@ -219,6 +232,7 @@
 .method public getParentNode()Lorg/w3c/dom/Node;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lorg/dom4j/dom/DOMNodeHelper;->getParentNode(Lorg/dom4j/Node;)Lorg/w3c/dom/Node;
 
     move-result-object p0
@@ -229,6 +243,7 @@
 .method public getPrefix()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lorg/dom4j/dom/DOMNodeHelper;->getPrefix(Lorg/dom4j/Node;)Ljava/lang/String;
 
     move-result-object p0
@@ -239,6 +254,7 @@
 .method public getPreviousSibling()Lorg/w3c/dom/Node;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lorg/dom4j/dom/DOMNodeHelper;->getPreviousSibling(Lorg/dom4j/Node;)Lorg/w3c/dom/Node;
 
     move-result-object p0
@@ -249,6 +265,7 @@
 .method public hasAttributes()Z
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lorg/dom4j/dom/DOMNodeHelper;->hasAttributes(Lorg/dom4j/Node;)Z
 
     move-result p0
@@ -259,6 +276,7 @@
 .method public hasChildNodes()Z
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lorg/dom4j/dom/DOMNodeHelper;->hasChildNodes(Lorg/dom4j/Node;)Z
 
     move-result p0
@@ -274,8 +292,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lorg/dom4j/dom/DOMEntityReference;->checkNewChildNode(Lorg/w3c/dom/Node;)V
 
+    .line 2
     invoke-static {p0, p1, p2}, Lorg/dom4j/dom/DOMNodeHelper;->insertBefore(Lorg/dom4j/Node;Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
     move-result-object p0
@@ -286,6 +306,7 @@
 .method public isSupported(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 0
 
+    .line 1
     invoke-static {p0, p1, p2}, Lorg/dom4j/dom/DOMNodeHelper;->isSupported(Lorg/dom4j/Node;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p0
@@ -296,6 +317,7 @@
 .method public normalize()V
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lorg/dom4j/dom/DOMNodeHelper;->normalize(Lorg/dom4j/Node;)V
 
     return-void
@@ -309,6 +331,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0, p1}, Lorg/dom4j/dom/DOMNodeHelper;->removeChild(Lorg/dom4j/Node;Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
     move-result-object p0
@@ -324,8 +347,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lorg/dom4j/dom/DOMEntityReference;->checkNewChildNode(Lorg/w3c/dom/Node;)V
 
+    .line 2
     invoke-static {p0, p1, p2}, Lorg/dom4j/dom/DOMNodeHelper;->replaceChild(Lorg/dom4j/Node;Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
     move-result-object p0
@@ -352,6 +377,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0, p1}, Lorg/dom4j/dom/DOMNodeHelper;->setPrefix(Lorg/dom4j/Node;Ljava/lang/String;)V
 
     return-void
@@ -360,6 +386,7 @@
 .method public supports(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 0
 
+    .line 1
     invoke-static {p0, p1, p2}, Lorg/dom4j/dom/DOMNodeHelper;->supports(Lorg/dom4j/Node;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p0

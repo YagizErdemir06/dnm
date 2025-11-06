@@ -4,9 +4,9 @@
 
 
 # static fields
-.field public static final a:Ljava/lang/String; = "OpenGl3dUtils"
+.field private static final a:Ljava/lang/String; = "OpenGl3dUtils"
 
-.field public static final b:I = 0x200
+.field private static final b:I = 0x200
 
 
 # direct methods
@@ -15,6 +15,7 @@
 
     const-string v0, "render_engine"
 
+    .line 1
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     return-void
@@ -23,31 +24,49 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;Lxl/b;Ljava/lang/String;I)I
+.method public static a(Landroid/content/Context;Ld/o/g0/p0/b;Ljava/lang/String;I)I
     .locals 9
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attribute",
+            "mCurrentLutName",
+            "lookupTableSize"
+        }
+    .end annotation
 
     const-string v0, "OpenGl3dUtils"
 
-    invoke-static {v0}, Lsg/h;->H(Ljava/lang/String;)I
+    .line 1
+    invoke-static {v0}, Ld/o/k/h;->B(Ljava/lang/String;)I
 
     move-result v1
 
-    sget v2, Lyl/i;->e:I
+    .line 2
+    sget v2, Ld/o/g0/q0/l;->e:I
 
     const/4 v3, 0x1
 
     if-ne v2, v3, :cond_0
 
+    .line 3
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v3, Lyl/i;->f:Ljava/lang/String;
+    sget-object v3, Ld/o/g0/q0/l;->f:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -69,10 +88,11 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lyl/g;->b(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    invoke-static {v2}, Ld/o/g0/q0/j;->b(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
+    .line 4
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -93,7 +113,7 @@
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Lzl/a;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Ld/o/g0/r0/a;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -104,13 +124,15 @@
 
     const-string v2, "debug_blank_lut"
 
-    invoke-static {p0, v2}, Lyl/g;->c(Landroid/content/Context;Ljava/lang/String;)Landroid/graphics/Bitmap;
+    .line 5
+    invoke-static {p0, v2}, Ld/o/g0/q0/j;->c(Landroid/content/Context;Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
     const-string v3, "LUT debug mode,blank lut."
 
-    invoke-static {v0, v3}, Lzl/a;->b(Ljava/lang/String;Ljava/lang/String;)V
+    .line 6
+    invoke-static {v0, v3}, Ld/o/g0/r0/a;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -122,18 +144,21 @@
 
     if-eqz p1, :cond_2
 
-    iget-boolean p1, p1, Lxl/b;->i:Z
+    .line 7
+    iget-boolean p1, p1, Ld/o/g0/p0/b;->j:Z
 
     if-eqz p1, :cond_2
 
-    invoke-static {p2}, Lyl/g;->b(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    .line 8
+    invoke-static {p2}, Ld/o/g0/q0/j;->b(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
     goto :goto_1
 
+    .line 9
     :cond_2
-    invoke-static {p0, p2}, Lyl/g;->c(Landroid/content/Context;Ljava/lang/String;)Landroid/graphics/Bitmap;
+    invoke-static {p0, p2}, Ld/o/g0/q0/j;->c(Landroid/content/Context;Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
@@ -141,45 +166,52 @@
     :goto_1
     const p0, 0x806f
 
+    .line 10
     invoke-static {p0, v1}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
     const/16 p1, 0x2801
 
     const/16 v3, 0x2601
 
-    invoke-static {p0, p1, v3}, Landroid/opengl/GLES20;->glTexParameteri(III)V
+    .line 11
+    invoke-static {p0, p1, v3}, Landroid/opengl/GLES31;->glTexParameteri(III)V
 
     const/16 p1, 0x2800
 
-    invoke-static {p0, p1, v3}, Landroid/opengl/GLES20;->glTexParameteri(III)V
+    .line 12
+    invoke-static {p0, p1, v3}, Landroid/opengl/GLES31;->glTexParameteri(III)V
 
     const/16 p1, 0x2802
 
     const v3, 0x812f
 
-    invoke-static {p0, p1, v3}, Landroid/opengl/GLES20;->glTexParameteri(III)V
+    .line 13
+    invoke-static {p0, p1, v3}, Landroid/opengl/GLES31;->glTexParameteri(III)V
 
     const/16 p1, 0x2803
 
-    invoke-static {p0, p1, v3}, Landroid/opengl/GLES20;->glTexParameteri(III)V
+    .line 14
+    invoke-static {p0, p1, v3}, Landroid/opengl/GLES31;->glTexParameteri(III)V
 
     const p1, 0x8072
 
-    invoke-static {p0, p1, v3}, Landroid/opengl/GLES20;->glTexParameteri(III)V
+    .line 15
+    invoke-static {p0, p1, v3}, Landroid/opengl/GLES31;->glTexParameteri(III)V
 
     const/16 p0, 0x200
 
     if-ne p3, p0, :cond_4
 
-    sget-object p0, Lwl/b;->b:Lwl/b;
+    .line 16
+    sget-object p0, Ld/o/g0/o0/b;->c:Ld/o/g0/o0/b;
 
     goto :goto_2
 
     :cond_4
-    sget-object p0, Lwl/b;->c:Lwl/b;
+    sget-object p0, Ld/o/g0/o0/b;->d:Ld/o/g0/o0/b;
 
     :goto_2
-    invoke-virtual {p0}, Lwl/b;->a()I
+    invoke-virtual {p0}, Ld/o/g0/o0/b;->a()I
 
     move-result p0
 
@@ -195,18 +227,22 @@
 
     move v8, p0
 
-    invoke-static/range {v3 .. v8}, Landroid/opengl/GLES30;->glTexStorage3D(IIIIII)V
+    .line 17
+    invoke-static/range {v3 .. v8}, Landroid/opengl/GLES31;->glTexStorage3D(IIIIII)V
 
     if-eqz v2, :cond_5
 
+    .line 18
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result p1
 
     invoke-static {v2, p0, p1}, Lcom/xiaomi/utils/OpenGl3dUtils;->putPngToTexture3D(Landroid/graphics/Bitmap;II)V
 
+    .line 19
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->recycle()V
 
+    .line 20
     :cond_5
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -228,12 +264,13 @@
 
     move-result-object p0
 
-    invoke-static {v0, p0}, Lzl/a;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p0}, Ld/o/g0/r0/a;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz v1, :cond_6
 
     return v1
 
+    .line 21
     :cond_6
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -245,4 +282,16 @@
 .end method
 
 .method public static native putPngToTexture3D(Landroid/graphics/Bitmap;II)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "bitmap",
+            "stride",
+            "width"
+        }
+    .end annotation
 .end method

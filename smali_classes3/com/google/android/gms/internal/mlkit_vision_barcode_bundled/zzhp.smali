@@ -33,6 +33,7 @@
 .method public static constructor <clinit>()V
     .locals 16
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhp;
 
     const/4 v1, 0x0
@@ -51,6 +52,7 @@
 
     const-wide/16 v3, 0x0
 
+    .line 2
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
@@ -67,6 +69,7 @@
 
     const/4 v4, 0x0
 
+    .line 3
     invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v4
@@ -83,6 +86,7 @@
 
     const-wide/16 v8, 0x0
 
+    .line 4
     invoke-static {v8, v9}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v6
@@ -97,6 +101,7 @@
 
     new-instance v6, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhp;
 
+    .line 5
     sget-object v8, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     const-string v10, "BOOLEAN"
@@ -115,12 +120,14 @@
 
     const-string v13, ""
 
+    .line 6
     invoke-direct {v8, v10, v12, v13}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhp;-><init>(Ljava/lang/String;ILjava/lang/Object;)V
 
     sput-object v8, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhp;->zzf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhp;
 
     new-instance v10, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhp;
 
+    .line 7
     sget-object v13, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;
 
     const-string v14, "BYTE_STRING"
@@ -139,6 +146,7 @@
 
     const/4 v12, 0x0
 
+    .line 8
     invoke-direct {v13, v14, v15, v12}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhp;-><init>(Ljava/lang/String;ILjava/lang/Object;)V
 
     sput-object v13, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhp;->zzh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhp;
@@ -149,6 +157,7 @@
 
     const/16 v11, 0x8
 
+    .line 9
     invoke-direct {v14, v15, v11, v12}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhp;-><init>(Ljava/lang/String;ILjava/lang/Object;)V
 
     sput-object v14, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhp;->zzi:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhp;
@@ -191,6 +200,7 @@
 .method private constructor <init>(Ljava/lang/String;ILjava/lang/Object;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     iput-object p3, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhp;->zzk:Ljava/lang/Object;
@@ -201,6 +211,7 @@
 .method public static values()[Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhp;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhp;->zzj:[Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhp;
 
     invoke-virtual {v0}, [Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhp;->clone()Ljava/lang/Object;

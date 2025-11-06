@@ -125,6 +125,7 @@
 
     if-nez p1, :cond_0
 
+    .line 1
     :try_start_0
     sget-object p1, Lcom/google/android/gms/common/internal/RootTelemetryConfigManager;->zzb:Lcom/google/android/gms/common/internal/RootTelemetryConfiguration;
 

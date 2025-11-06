@@ -2,6 +2,7 @@
 <resources>
     <bool name="abc_action_bar_embed_tabs">true</bool>
     <bool name="abc_action_bar_expanded_action_views_exclusive">true</bool>
+    <bool name="abc_allow_stacked_button_bar">false</bool>
     <bool name="abc_config_actionMenuItemAllCaps">true</bool>
     <bool name="abc_config_showMenuShortcutsWhenKeyboardPresent">false</bool>
     <bool name="abc_split_action_bar_is_narrow">true</bool>
@@ -13,9 +14,6 @@
     <bool name="leak_canary_watcher_watch_dismissed_dialogs">false</bool>
     <bool name="miuix_appcompat_floating_window_is_translucent">false</bool>
     <bool name="miuix_appcompat_window_floating">false</bool>
-    <bool name="miuix_theme_use_light_theme_in_dark">false</bool>
-    <bool name="miuix_theme_use_light_theme_in_light">true</bool>
-    <bool name="mtrl_btn_textappearance_all_caps">true</bool>
     <bool name="pref_3d_audio_denoise_default">false</bool>
     <bool name="pref_camera_AEAF_lock_support">true</bool>
     <bool name="pref_camera_ai_noise_reduction_default">false</bool>
@@ -59,8 +57,7 @@
     <bool name="pref_camera_quick_shot_anim_enable_default">true</bool>
     <bool name="pref_camera_quick_shot_enable_default">true</bool>
     <bool name="pref_camera_quick_tap_shot_default">false</bool>
-    <bool name="pref_camera_rec_type_3d_record_default_false">false</bool>
-    <bool name="pref_camera_rec_type_3d_record_default_true">true</bool>
+    <bool name="pref_camera_rec_type_3d_record_default">false</bool>
     <bool name="pref_camera_recordlocation_default">false</bool>
     <bool name="pref_camera_smart_tip_default">true</bool>
     <bool name="pref_camera_snap_default">false</bool>

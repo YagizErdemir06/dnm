@@ -70,16 +70,6 @@
         <item quantity="one">Durată: %d secundă</item>
         <item quantity="few">Durată: %d secunde</item>
     </plurals>
-    <plurals name="accessibility_watermark_characters_inputted">
-        <item quantity="other">S-au introdus %d caractere.</item>
-        <item quantity="one">S-a introdus %d caracter.</item>
-        <item quantity="few">S-au introdus %d caractere.</item>
-    </plurals>
-    <plurals name="accessibility_watermark_characters_max">
-        <item quantity="other">Introduceți până la %d caractere.</item>
-        <item quantity="one">Introduceți până la %d caracter.</item>
-        <item quantity="few">Introduceți până la %d caractere.</item>
-    </plurals>
     <plurals name="cinemaster_toast_camera_overflow">
         <item quantity="other">Puteți conecta până la %d camere la aceeași rețea</item>
         <item quantity="one">Puteți conecta până la %d cameră la aceeași rețea</item>
@@ -174,11 +164,6 @@
         <item quantity="other">%d elemente selectate</item>
         <item quantity="one">%d element selectat</item>
         <item quantity="few">%d elemente selectate</item>
-    </plurals>
-    <plurals name="mtrl_badge_content_description">
-        <item quantity="other">%d de notificări noi</item>
-        <item quantity="one">%d notificare nouă</item>
-        <item quantity="few">%d notificări noi</item>
     </plurals>
     <plurals name="num_minutes_ago">
         <item quantity="other">%d min în urmă</item>

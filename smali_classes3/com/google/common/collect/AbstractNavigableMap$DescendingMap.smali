@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/AbstractNavigableMap$DescendingMap;
+.class public final Lcom/google/common/collect/AbstractNavigableMap$DescendingMap;
 .super Lcom/google/common/collect/Maps$DescendingMap;
 .source "SourceFile"
 
@@ -22,7 +22,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/AbstractNavigableMap;
+.field public final synthetic this$0:Lcom/google/common/collect/AbstractNavigableMap;
 
 
 # direct methods
@@ -59,6 +59,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/AbstractNavigableMap$DescendingMap;->this$0:Lcom/google/common/collect/AbstractNavigableMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractNavigableMap;->descendingEntryIterator()Ljava/util/Iterator;
@@ -78,6 +79,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/AbstractNavigableMap$DescendingMap;->this$0:Lcom/google/common/collect/AbstractNavigableMap;
 
     return-object p0

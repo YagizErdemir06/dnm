@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/dynamite/zzn;
+.class public final Lcom/google/android/gms/dynamite/zzn;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -11,6 +11,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

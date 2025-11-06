@@ -40,10 +40,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/extractor/ts/DvbSubtitleReader;->subtitleInfos:Ljava/util/List;
 
+    .line 3
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result p1
@@ -54,6 +57,7 @@
 
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 4
     iput-wide v0, p0, Lcom/google/android/exoplayer2/extractor/ts/DvbSubtitleReader;->sampleTimeUs:J
 
     return-void
@@ -62,6 +66,7 @@
 .method private checkNextByte(Lcom/google/android/exoplayer2/util/ParsableByteArray;I)Z
     .locals 2
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
     move-result v0
@@ -72,6 +77,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
@@ -79,8 +85,10 @@
 
     if-eq p1, p2, :cond_1
 
+    .line 3
     iput-boolean v1, p0, Lcom/google/android/exoplayer2/extractor/ts/DvbSubtitleReader;->writingSample:Z
 
+    .line 4
     :cond_1
     iget p1, p0, Lcom/google/android/exoplayer2/extractor/ts/DvbSubtitleReader;->bytesToCheck:I
 
@@ -88,6 +96,7 @@
 
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/ts/DvbSubtitleReader;->bytesToCheck:I
 
+    .line 5
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/extractor/ts/DvbSubtitleReader;->writingSample:Z
 
     return p0
@@ -98,10 +107,12 @@
 .method public consume(Lcom/google/android/exoplayer2/util/ParsableByteArray;)V
     .locals 6
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/extractor/ts/DvbSubtitleReader;->writingSample:Z
 
     if-eqz v0, :cond_3
 
+    .line 2
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/ts/DvbSubtitleReader;->bytesToCheck:I
 
     const/4 v1, 0x2
@@ -118,6 +129,7 @@
 
     return-void
 
+    .line 3
     :cond_0
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/ts/DvbSubtitleReader;->bytesToCheck:I
 
@@ -135,15 +147,18 @@
 
     return-void
 
+    .line 4
     :cond_1
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getPosition()I
 
     move-result v0
 
+    .line 5
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
     move-result v2
 
+    .line 6
     iget-object v3, p0, Lcom/google/android/exoplayer2/extractor/ts/DvbSubtitleReader;->outputs:[Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     array-length v4, v3
@@ -153,14 +168,17 @@
 
     aget-object v5, v3, v1
 
+    .line 7
     invoke-virtual {p1, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
+    .line 8
     invoke-interface {v5, p1, v2}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->sampleData(Lcom/google/android/exoplayer2/util/ParsableByteArray;I)V
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 9
     :cond_2
     iget p1, p0, Lcom/google/android/exoplayer2/extractor/ts/DvbSubtitleReader;->sampleBytesWritten:I
 
@@ -177,6 +195,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/ts/DvbSubtitleReader;->outputs:[Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
@@ -184,6 +203,7 @@
 
     if-ge v0, v1, :cond_0
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/ts/DvbSubtitleReader;->subtitleInfos:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -192,8 +212,10 @@
 
     check-cast v1, Lcom/google/android/exoplayer2/extractor/ts/TsPayloadReader$DvbSubtitleInfo;
 
+    .line 3
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;->generateNewId()V
 
+    .line 4
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;->getTrackId()I
 
     move-result v2
@@ -204,10 +226,12 @@
 
     move-result-object v2
 
+    .line 5
     new-instance v3, Lcom/google/android/exoplayer2/Format$Builder;
 
     invoke-direct {v3}, Lcom/google/android/exoplayer2/Format$Builder;-><init>()V
 
+    .line 6
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;->getFormatId()Ljava/lang/String;
 
     move-result-object v4
@@ -218,12 +242,14 @@
 
     const-string v4, "application/dvbsubs"
 
+    .line 7
     invoke-virtual {v3, v4}, Lcom/google/android/exoplayer2/Format$Builder;->setSampleMimeType(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v3
 
     iget-object v4, v1, Lcom/google/android/exoplayer2/extractor/ts/TsPayloadReader$DvbSubtitleInfo;->initializationData:[B
 
+    .line 8
     invoke-static {v4}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v4
@@ -234,16 +260,20 @@
 
     iget-object v1, v1, Lcom/google/android/exoplayer2/extractor/ts/TsPayloadReader$DvbSubtitleInfo;->language:Ljava/lang/String;
 
+    .line 9
     invoke-virtual {v3, v1}, Lcom/google/android/exoplayer2/Format$Builder;->setLanguage(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v1
 
+    .line 10
     invoke-virtual {v1}, Lcom/google/android/exoplayer2/Format$Builder;->build()Lcom/google/android/exoplayer2/Format;
 
     move-result-object v1
 
+    .line 11
     invoke-interface {v2, v1}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->format(Lcom/google/android/exoplayer2/Format;)V
 
+    .line 12
     iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/ts/DvbSubtitleReader;->outputs:[Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     aput-object v2, v1, v0
@@ -259,10 +289,12 @@
 .method public packetFinished()V
     .locals 11
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/extractor/ts/DvbSubtitleReader;->writingSample:Z
 
     if-eqz v0, :cond_1
 
+    .line 2
     iget-wide v0, p0, Lcom/google/android/exoplayer2/extractor/ts/DvbSubtitleReader;->sampleTimeUs:J
 
     const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
@@ -273,6 +305,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/DvbSubtitleReader;->outputs:[Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     array-length v2, v0
@@ -284,6 +317,7 @@
 
     aget-object v4, v0, v3
 
+    .line 4
     iget-wide v5, p0, Lcom/google/android/exoplayer2/extractor/ts/DvbSubtitleReader;->sampleTimeUs:J
 
     const/4 v7, 0x1
@@ -300,6 +334,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     iput-boolean v1, p0, Lcom/google/android/exoplayer2/extractor/ts/DvbSubtitleReader;->writingSample:Z
 
@@ -319,6 +354,7 @@
     :cond_0
     const/4 p3, 0x1
 
+    .line 1
     iput-boolean p3, p0, Lcom/google/android/exoplayer2/extractor/ts/DvbSubtitleReader;->writingSample:Z
 
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
@@ -327,15 +363,18 @@
 
     if-eqz p3, :cond_1
 
+    .line 2
     iput-wide p1, p0, Lcom/google/android/exoplayer2/extractor/ts/DvbSubtitleReader;->sampleTimeUs:J
 
     :cond_1
     const/4 p1, 0x0
 
+    .line 3
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/ts/DvbSubtitleReader;->sampleBytesWritten:I
 
     const/4 p1, 0x2
 
+    .line 4
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/ts/DvbSubtitleReader;->bytesToCheck:I
 
     return-void
@@ -346,10 +385,12 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/extractor/ts/DvbSubtitleReader;->writingSample:Z
 
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 2
     iput-wide v0, p0, Lcom/google/android/exoplayer2/extractor/ts/DvbSubtitleReader;->sampleTimeUs:J
 
     return-void

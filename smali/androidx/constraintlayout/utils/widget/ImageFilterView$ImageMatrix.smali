@@ -1,4 +1,4 @@
-.class Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;
+.class public Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,39 +15,43 @@
 
 
 # instance fields
-.field m:[F
+.field public m:[F
 
-.field mBrightness:F
+.field public mBrightness:F
 
-.field mColorMatrix:Landroid/graphics/ColorMatrix;
+.field public mColorMatrix:Landroid/graphics/ColorMatrix;
 
-.field mContrast:F
+.field public mContrast:F
 
-.field mSaturation:F
+.field public mSaturation:F
 
-.field mTmpColorMatrix:Landroid/graphics/ColorMatrix;
+.field public mTmpColorMatrix:Landroid/graphics/ColorMatrix;
 
-.field mWarmth:F
+.field public mWarmth:F
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x14
 
     new-array v0, v0, [F
 
+    .line 2
     iput-object v0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;->m:[F
 
+    .line 3
     new-instance v0, Landroid/graphics/ColorMatrix;
 
     invoke-direct {v0}, Landroid/graphics/ColorMatrix;-><init>()V
 
     iput-object v0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;->mColorMatrix:Landroid/graphics/ColorMatrix;
 
+    .line 4
     new-instance v0, Landroid/graphics/ColorMatrix;
 
     invoke-direct {v0}, Landroid/graphics/ColorMatrix;-><init>()V
@@ -56,12 +60,16 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
+    .line 5
     iput v0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;->mBrightness:F
 
+    .line 6
     iput v0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;->mSaturation:F
 
+    .line 7
     iput v0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;->mContrast:F
 
+    .line 8
     iput v0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;->mWarmth:F
 
     return-void
@@ -78,6 +86,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;->m:[F
 
     const/4 v0, 0x0
@@ -88,80 +97,99 @@
 
     const/4 v1, 0x0
 
+    .line 2
     aput v1, p0, v0
 
     const/4 v0, 0x2
 
+    .line 3
     aput v1, p0, v0
 
     const/4 v0, 0x3
 
+    .line 4
     aput v1, p0, v0
 
     const/4 v0, 0x4
 
+    .line 5
     aput v1, p0, v0
 
     const/4 v0, 0x5
 
+    .line 6
     aput v1, p0, v0
 
     const/4 v0, 0x6
 
+    .line 7
     aput p1, p0, v0
 
     const/4 v0, 0x7
 
+    .line 8
     aput v1, p0, v0
 
     const/16 v0, 0x8
 
+    .line 9
     aput v1, p0, v0
 
     const/16 v0, 0x9
 
+    .line 10
     aput v1, p0, v0
 
     const/16 v0, 0xa
 
+    .line 11
     aput v1, p0, v0
 
     const/16 v0, 0xb
 
+    .line 12
     aput v1, p0, v0
 
     const/16 v0, 0xc
 
+    .line 13
     aput p1, p0, v0
 
     const/16 p1, 0xd
 
+    .line 14
     aput v1, p0, p1
 
     const/16 p1, 0xe
 
+    .line 15
     aput v1, p0, p1
 
     const/16 p1, 0xf
 
+    .line 16
     aput v1, p0, p1
 
     const/16 p1, 0x10
 
+    .line 17
     aput v1, p0, p1
 
     const/16 p1, 0x11
 
+    .line 18
     aput v1, p0, p1
 
     const/16 p1, 0x12
 
     const/high16 v0, 0x3f800000    # 1.0f
 
+    .line 19
     aput v0, p0, p1
 
     const/16 p1, 0x13
 
+    .line 20
     aput v1, p0, p1
 
     return-void
@@ -194,94 +222,114 @@
 
     mul-float/2addr v1, v4
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;->m:[F
 
-    const/4 v4, 0x0
+    add-float v4, v2, p1
 
-    add-float v5, v2, p1
+    const/4 v5, 0x0
 
-    aput v5, p0, v4
+    aput v4, p0, v5
 
     const/4 v4, 0x1
 
+    .line 2
     aput v3, p0, v4
 
     const/4 v4, 0x2
 
+    .line 3
     aput v1, p0, v4
 
     const/4 v4, 0x3
 
     const/4 v5, 0x0
 
+    .line 4
     aput v5, p0, v4
 
     const/4 v4, 0x4
 
+    .line 5
     aput v5, p0, v4
 
     const/4 v4, 0x5
 
+    .line 6
     aput v2, p0, v4
 
-    const/4 v4, 0x6
+    add-float v4, v3, p1
 
-    add-float v6, v3, p1
+    const/4 v6, 0x6
 
-    aput v6, p0, v4
+    .line 7
+    aput v4, p0, v6
 
     const/4 v4, 0x7
 
+    .line 8
     aput v1, p0, v4
 
     const/16 v4, 0x8
 
+    .line 9
     aput v5, p0, v4
 
     const/16 v4, 0x9
 
+    .line 10
     aput v5, p0, v4
 
     const/16 v4, 0xa
 
+    .line 11
     aput v2, p0, v4
 
     const/16 v2, 0xb
 
+    .line 12
     aput v3, p0, v2
-
-    const/16 v2, 0xc
 
     add-float/2addr v1, p1
 
-    aput v1, p0, v2
+    const/16 p1, 0xc
+
+    .line 13
+    aput v1, p0, p1
 
     const/16 p1, 0xd
 
+    .line 14
     aput v5, p0, p1
 
     const/16 p1, 0xe
 
+    .line 15
     aput v5, p0, p1
 
     const/16 p1, 0xf
 
+    .line 16
     aput v5, p0, p1
 
     const/16 p1, 0x10
 
+    .line 17
     aput v5, p0, p1
 
     const/16 p1, 0x11
 
+    .line 18
     aput v5, p0, p1
 
     const/16 p1, 0x12
 
+    .line 19
     aput v0, p0, p1
 
     const/16 p1, 0x13
 
+    .line 20
     aput v5, p0, p1
 
     return-void
@@ -331,37 +379,40 @@
 
     sub-float v2, v1, v2
 
-    float-to-double v6, v2
+    const v6, 0x43a4d970
 
-    const-wide v8, -0x403ef32580000000L    # -0.13320475816726685
+    float-to-double v7, v2
 
-    invoke-static {v6, v7, v8, v9}, Ljava/lang/Math;->pow(DD)D
+    const-wide v9, -0x403ef32580000000L    # -0.13320475816726685
 
-    move-result-wide v8
+    .line 1
+    invoke-static {v7, v8, v9, v10}, Ljava/lang/Math;->pow(DD)D
 
-    double-to-float v2, v8
+    move-result-wide v9
 
-    const v8, 0x43a4d970
+    double-to-float v2, v9
 
-    mul-float/2addr v2, v8
+    mul-float/2addr v2, v6
 
-    const-wide v8, 0x3fb354f0e0000000L
+    const v6, 0x43900fa3
 
-    invoke-static {v6, v7, v8, v9}, Ljava/lang/Math;->pow(DD)D
+    const-wide v9, 0x3fb354f0e0000000L
 
-    move-result-wide v6
+    .line 2
+    invoke-static {v7, v8, v9, v10}, Ljava/lang/Math;->pow(DD)D
 
-    double-to-float v6, v6
+    move-result-wide v7
 
-    const v7, 0x43900fa3
+    double-to-float v7, v7
 
-    mul-float/2addr v6, v7
+    mul-float/2addr v7, v6
 
     goto :goto_0
 
     :cond_1
     float-to-double v6, v1
 
+    .line 3
     invoke-static {v6, v7}, Ljava/lang/Math;->log(D)D
 
     move-result-wide v6
@@ -370,14 +421,14 @@
 
     mul-float/2addr v2, v4
 
-    sub-float v6, v2, v3
+    sub-float v7, v2, v3
 
     move v2, v5
 
     :goto_0
     cmpg-float p1, v1, p1
 
-    const v7, 0x439885bc
+    const v6, 0x439885bc
 
     const v8, 0x430a848a
 
@@ -395,6 +446,7 @@
 
     float-to-double v9, v1
 
+    .line 4
     invoke-static {v9, v10}, Ljava/lang/Math;->log(D)D
 
     move-result-wide v9
@@ -403,7 +455,7 @@
 
     mul-float/2addr p1, v8
 
-    sub-float/2addr p1, v7
+    sub-float/2addr p1, v6
 
     goto :goto_1
 
@@ -415,6 +467,7 @@
     :cond_3
     move p1, v5
 
+    .line 5
     :goto_1
     invoke-static {v2, v0}, Ljava/lang/Math;->max(FF)F
 
@@ -424,7 +477,8 @@
 
     move-result v1
 
-    invoke-static {v6, v0}, Ljava/lang/Math;->max(FF)F
+    .line 6
+    invoke-static {v7, v0}, Ljava/lang/Math;->max(FF)F
 
     move-result v2
 
@@ -432,6 +486,7 @@
 
     move-result v2
 
+    .line 7
     invoke-static {p1, v0}, Ljava/lang/Math;->max(FF)F
 
     move-result p1
@@ -440,24 +495,26 @@
 
     move-result p1
 
-    const/high16 v6, 0x42480000    # 50.0f
+    const/high16 v7, 0x42480000    # 50.0f
 
-    float-to-double v9, v6
+    float-to-double v9, v7
 
+    .line 8
     invoke-static {v9, v10}, Ljava/lang/Math;->log(D)D
 
     move-result-wide v9
 
-    double-to-float v6, v9
+    double-to-float v7, v9
 
-    mul-float/2addr v6, v4
+    mul-float/2addr v7, v4
 
-    sub-float/2addr v6, v3
+    sub-float/2addr v7, v3
 
     const/high16 v3, 0x42200000    # 40.0f
 
     float-to-double v3, v3
 
+    .line 9
     invoke-static {v3, v4}, Ljava/lang/Math;->log(D)D
 
     move-result-wide v3
@@ -466,8 +523,9 @@
 
     mul-float/2addr v3, v8
 
-    sub-float/2addr v3, v7
+    sub-float/2addr v3, v6
 
+    .line 10
     invoke-static {v5, v0}, Ljava/lang/Math;->max(FF)F
 
     move-result v4
@@ -476,7 +534,8 @@
 
     move-result v4
 
-    invoke-static {v6, v0}, Ljava/lang/Math;->max(FF)F
+    .line 11
+    invoke-static {v7, v0}, Ljava/lang/Math;->max(FF)F
 
     move-result v6
 
@@ -484,6 +543,7 @@
 
     move-result v6
 
+    .line 12
     invoke-static {v3, v0}, Ljava/lang/Math;->max(FF)F
 
     move-result v3
@@ -498,6 +558,7 @@
 
     div-float/2addr p1, v3
 
+    .line 13
     iget-object p0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;->m:[F
 
     const/4 v3, 0x0
@@ -506,80 +567,99 @@
 
     const/4 v1, 0x1
 
+    .line 14
     aput v0, p0, v1
 
     const/4 v1, 0x2
 
+    .line 15
     aput v0, p0, v1
 
     const/4 v1, 0x3
 
+    .line 16
     aput v0, p0, v1
 
     const/4 v1, 0x4
 
+    .line 17
     aput v0, p0, v1
 
     const/4 v1, 0x5
 
+    .line 18
     aput v0, p0, v1
 
     const/4 v1, 0x6
 
+    .line 19
     aput v2, p0, v1
 
     const/4 v1, 0x7
 
+    .line 20
     aput v0, p0, v1
 
     const/16 v1, 0x8
 
+    .line 21
     aput v0, p0, v1
 
     const/16 v1, 0x9
 
+    .line 22
     aput v0, p0, v1
 
     const/16 v1, 0xa
 
+    .line 23
     aput v0, p0, v1
 
     const/16 v1, 0xb
 
+    .line 24
     aput v0, p0, v1
 
     const/16 v1, 0xc
 
+    .line 25
     aput p1, p0, v1
 
     const/16 p1, 0xd
 
+    .line 26
     aput v0, p0, p1
 
     const/16 p1, 0xe
 
+    .line 27
     aput v0, p0, p1
 
     const/16 p1, 0xf
 
+    .line 28
     aput v0, p0, p1
 
     const/16 p1, 0x10
 
+    .line 29
     aput v0, p0, p1
 
     const/16 p1, 0x11
 
+    .line 30
     aput v0, p0, p1
 
     const/16 p1, 0x12
 
     const/high16 v1, 0x3f800000    # 1.0f
 
+    .line 31
     aput v1, p0, p1
 
     const/16 p1, 0x13
 
+    .line 32
     aput v0, p0, p1
 
     return-void
@@ -598,10 +678,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;->mColorMatrix:Landroid/graphics/ColorMatrix;
 
     invoke-virtual {v0}, Landroid/graphics/ColorMatrix;->reset()V
 
+    .line 2
     iget v0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;->mSaturation:F
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -612,8 +694,10 @@
 
     if-eqz v2, :cond_0
 
+    .line 3
     invoke-direct {p0, v0}, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;->saturation(F)V
 
+    .line 4
     iget-object v0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;->mColorMatrix:Landroid/graphics/ColorMatrix;
 
     iget-object v2, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;->m:[F
@@ -627,6 +711,7 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 5
     :goto_0
     iget v2, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;->mContrast:F
 
@@ -634,10 +719,12 @@
 
     if-eqz v4, :cond_1
 
+    .line 6
     iget-object v0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;->mTmpColorMatrix:Landroid/graphics/ColorMatrix;
 
     invoke-virtual {v0, v2, v2, v2, v1}, Landroid/graphics/ColorMatrix;->setScale(FFFF)V
 
+    .line 7
     iget-object v0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;->mColorMatrix:Landroid/graphics/ColorMatrix;
 
     iget-object v2, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;->mTmpColorMatrix:Landroid/graphics/ColorMatrix;
@@ -646,6 +733,7 @@
 
     move v0, v3
 
+    .line 8
     :cond_1
     iget v2, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;->mWarmth:F
 
@@ -653,14 +741,17 @@
 
     if-eqz v4, :cond_2
 
+    .line 9
     invoke-direct {p0, v2}, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;->warmth(F)V
 
+    .line 10
     iget-object v0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;->mTmpColorMatrix:Landroid/graphics/ColorMatrix;
 
     iget-object v2, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;->m:[F
 
     invoke-virtual {v0, v2}, Landroid/graphics/ColorMatrix;->set([F)V
 
+    .line 11
     iget-object v0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;->mColorMatrix:Landroid/graphics/ColorMatrix;
 
     iget-object v2, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;->mTmpColorMatrix:Landroid/graphics/ColorMatrix;
@@ -669,6 +760,7 @@
 
     move v0, v3
 
+    .line 12
     :cond_2
     iget v2, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;->mBrightness:F
 
@@ -676,14 +768,17 @@
 
     if-eqz v1, :cond_3
 
+    .line 13
     invoke-direct {p0, v2}, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;->brightness(F)V
 
+    .line 14
     iget-object v0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;->mTmpColorMatrix:Landroid/graphics/ColorMatrix;
 
     iget-object v1, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;->m:[F
 
     invoke-virtual {v0, v1}, Landroid/graphics/ColorMatrix;->set([F)V
 
+    .line 15
     iget-object v0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;->mColorMatrix:Landroid/graphics/ColorMatrix;
 
     iget-object v1, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;->mTmpColorMatrix:Landroid/graphics/ColorMatrix;
@@ -698,6 +793,7 @@
     :goto_1
     if-eqz v3, :cond_4
 
+    .line 16
     new-instance v0, Landroid/graphics/ColorMatrixColorFilter;
 
     iget-object p0, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$ImageMatrix;->mColorMatrix:Landroid/graphics/ColorMatrix;
@@ -708,6 +804,7 @@
 
     goto :goto_2
 
+    .line 17
     :cond_4
     invoke-virtual {p1}, Landroid/widget/ImageView;->clearColorFilter()V
 

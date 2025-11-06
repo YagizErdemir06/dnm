@@ -26,6 +26,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/DiffUtil$ItemCallback;-><init>()V
 
     return-void
@@ -43,9 +44,21 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "oldStr",
+            "newStr"
+        }
+    .end annotation
+
+    .line 1
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -63,9 +76,21 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "oldStr",
+            "newStr"
+        }
+    .end annotation
+
+    .line 1
     check-cast p1, Ljava/lang/String;
 
     check-cast p2, Ljava/lang/String;
@@ -87,9 +112,21 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "oldStr",
+            "newStr"
+        }
+    .end annotation
+
+    .line 1
     check-cast p1, Ljava/lang/String;
 
     check-cast p2, Ljava/lang/String;
@@ -111,9 +148,21 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "oldStr",
+            "newStr"
+        }
+    .end annotation
+
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/privacywatermark/EditHistoryAdapter$a;->a(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p0

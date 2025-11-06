@@ -1,4 +1,4 @@
-.class Landroidx/fragment/app/FragmentTransition$5;
+.class public Landroidx/fragment/app/FragmentTransition$5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,25 +18,26 @@
 
 
 # instance fields
-.field final synthetic val$epicenter:Landroid/graphics/Rect;
+.field public final synthetic val$epicenter:Landroid/graphics/Rect;
 
-.field final synthetic val$epicenterView:Landroid/view/View;
+.field public final synthetic val$epicenterView:Landroid/view/View;
 
-.field final synthetic val$impl:Landroidx/fragment/app/FragmentTransitionImpl;
+.field public final synthetic val$impl:Landroidx/fragment/app/FragmentTransitionImpl;
 
-.field final synthetic val$inFragment:Landroidx/fragment/app/Fragment;
+.field public final synthetic val$inFragment:Landroidx/fragment/app/Fragment;
 
-.field final synthetic val$inIsPop:Z
+.field public final synthetic val$inIsPop:Z
 
-.field final synthetic val$inSharedElements:Landroidx/collection/ArrayMap;
+.field public final synthetic val$inSharedElements:Landroidx/collection/ArrayMap;
 
-.field final synthetic val$outFragment:Landroidx/fragment/app/Fragment;
+.field public final synthetic val$outFragment:Landroidx/fragment/app/Fragment;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/fragment/app/Fragment;Landroidx/fragment/app/Fragment;ZLandroidx/collection/ArrayMap;Landroid/view/View;Landroidx/fragment/app/FragmentTransitionImpl;Landroid/graphics/Rect;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/fragment/app/FragmentTransition$5;->val$inFragment:Landroidx/fragment/app/Fragment;
 
     iput-object p2, p0, Landroidx/fragment/app/FragmentTransition$5;->val$outFragment:Landroidx/fragment/app/Fragment;
@@ -61,6 +62,7 @@
 .method public run()V
     .locals 5
 
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/FragmentTransition$5;->val$inFragment:Landroidx/fragment/app/Fragment;
 
     iget-object v1, p0, Landroidx/fragment/app/FragmentTransition$5;->val$outFragment:Landroidx/fragment/app/Fragment;
@@ -73,10 +75,12 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Landroidx/fragment/app/FragmentTransition;->callSharedElementStartEnd(Landroidx/fragment/app/Fragment;Landroidx/fragment/app/Fragment;ZLandroidx/collection/ArrayMap;Z)V
 
+    .line 2
     iget-object v0, p0, Landroidx/fragment/app/FragmentTransition$5;->val$epicenterView:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object v1, p0, Landroidx/fragment/app/FragmentTransition$5;->val$impl:Landroidx/fragment/app/FragmentTransitionImpl;
 
     iget-object p0, p0, Landroidx/fragment/app/FragmentTransition$5;->val$epicenter:Landroid/graphics/Rect;

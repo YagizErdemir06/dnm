@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/rtsp/TransferRtpDataChannel;
+.class public final Lcom/google/android/exoplayer2/source/rtsp/TransferRtpDataChannel;
 .super Lcom/google/android/exoplayer2/upstream/BaseDataSource;
 .source "SourceFile"
 
@@ -34,10 +34,13 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/upstream/BaseDataSource;-><init>(Z)V
 
+    .line 2
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/rtsp/TransferRtpDataChannel;->pollTimeoutMs:J
 
+    .line 3
     new-instance p1, Ljava/util/concurrent/LinkedBlockingQueue;
 
     invoke-direct {p1}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
@@ -48,10 +51,12 @@
 
     new-array p1, p1, [B
 
+    .line 4
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/TransferRtpDataChannel;->unreadData:[B
 
     const/4 p1, -0x1
 
+    .line 5
     iput p1, p0, Lcom/google/android/exoplayer2/source/rtsp/TransferRtpDataChannel;->channelNumber:I
 
     return-void
@@ -74,6 +79,7 @@
 .method public getLocalPort()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/source/rtsp/TransferRtpDataChannel;->channelNumber:I
 
     return p0
@@ -82,22 +88,23 @@
 .method public getTransport()Ljava/lang/String;
     .locals 4
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/source/rtsp/TransferRtpDataChannel;->channelNumber:I
 
-    const/4 v1, -0x1
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
-    const/4 v3, 0x1
+    const/4 v3, -0x1
 
-    if-eq v0, v1, :cond_0
+    if-eq v0, v3, :cond_0
 
-    move v0, v3
+    move v0, v2
 
     goto :goto_0
 
     :cond_0
-    move v0, v2
+    move v0, v1
 
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
@@ -106,23 +113,24 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    iget v1, p0, Lcom/google/android/exoplayer2/source/rtsp/TransferRtpDataChannel;->channelNumber:I
+    .line 2
+    iget v3, p0, Lcom/google/android/exoplayer2/source/rtsp/TransferRtpDataChannel;->channelNumber:I
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v1
+    move-result-object v3
 
-    aput-object v1, v0, v2
+    aput-object v3, v0, v1
 
     iget p0, p0, Lcom/google/android/exoplayer2/source/rtsp/TransferRtpDataChannel;->channelNumber:I
 
-    add-int/2addr p0, v3
+    add-int/2addr p0, v2
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
 
-    aput-object p0, v0, v3
+    aput-object p0, v0, v2
 
     const-string p0, "RTP/AVP/TCP;unicast;interleaved=%d-%d"
 
@@ -146,9 +154,10 @@
 .method public onInterleavedBinaryDataReceived([B)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/TransferRtpDataChannel;->packetQueue:Ljava/util/concurrent/LinkedBlockingQueue;
 
-    invoke-virtual {p0, p1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Ljava/util/concurrent/LinkedBlockingQueue;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
@@ -156,6 +165,7 @@
 .method public open(Lcom/google/android/exoplayer2/upstream/DataSpec;)J
     .locals 0
 
+    .line 1
     iget-object p1, p1, Lcom/google/android/exoplayer2/upstream/DataSpec;->uri:Landroid/net/Uri;
 
     invoke-virtual {p1}, Landroid/net/Uri;->getPort()I
@@ -178,6 +188,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/rtsp/TransferRtpDataChannel;->unreadData:[B
 
@@ -187,12 +198,14 @@
 
     move-result v1
 
+    .line 2
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/rtsp/TransferRtpDataChannel;->unreadData:[B
 
     invoke-static {v2, v0, p1, p2, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     add-int/lit8 v2, v1, 0x0
 
+    .line 3
     iget-object v3, p0, Lcom/google/android/exoplayer2/source/rtsp/TransferRtpDataChannel;->unreadData:[B
 
     array-length v4, v3
@@ -210,6 +223,7 @@
     :cond_1
     const/4 v1, -0x1
 
+    .line 4
     :try_start_0
     iget-object v3, p0, Lcom/google/android/exoplayer2/source/rtsp/TransferRtpDataChannel;->packetQueue:Ljava/util/concurrent/LinkedBlockingQueue;
 
@@ -232,6 +246,7 @@
     :cond_2
     sub-int/2addr p3, v2
 
+    .line 5
     array-length v1, v3
 
     invoke-static {p3, v1}, Ljava/lang/Math;->min(II)I
@@ -240,12 +255,15 @@
 
     add-int/2addr p2, v2
 
+    .line 6
     invoke-static {v3, v0, p1, p2, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 7
     array-length p1, v3
 
     if-ge p3, p1, :cond_3
 
+    .line 8
     array-length p1, v3
 
     invoke-static {v3, p3, p1}, Ljava/util/Arrays;->copyOfRange([BII)[B
@@ -259,6 +277,7 @@
 
     return v2
 
+    .line 9
     :catch_0
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 

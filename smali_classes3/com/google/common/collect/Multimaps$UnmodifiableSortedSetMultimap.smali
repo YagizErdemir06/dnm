@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Multimaps$UnmodifiableSortedSetMultimap;
+.class public Lcom/google/common/collect/Multimaps$UnmodifiableSortedSetMultimap;
 .super Lcom/google/common/collect/Multimaps$UnmodifiableSetMultimap;
 .source "SourceFile"
 
@@ -46,6 +46,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/Multimaps$UnmodifiableSetMultimap;-><init>(Lcom/google/common/collect/SetMultimap;)V
 
     return-void
@@ -287,6 +288,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Multimaps$UnmodifiableSortedSetMultimap;->delegate()Lcom/google/common/collect/SortedSetMultimap;
 
     move-result-object p0

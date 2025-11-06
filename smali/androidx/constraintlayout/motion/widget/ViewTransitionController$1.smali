@@ -1,4 +1,4 @@
-.class Landroidx/constraintlayout/motion/widget/ViewTransitionController$1;
+.class public Landroidx/constraintlayout/motion/widget/ViewTransitionController$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,15 +18,15 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/constraintlayout/motion/widget/ViewTransitionController;
+.field public final synthetic this$0:Landroidx/constraintlayout/motion/widget/ViewTransitionController;
 
-.field final synthetic val$isSet:Z
+.field public final synthetic val$isSet:Z
 
-.field final synthetic val$listen_for_id:I
+.field public final synthetic val$listen_for_id:I
 
-.field final synthetic val$listen_for_value:I
+.field public final synthetic val$listen_for_value:I
 
-.field final synthetic val$viewTransition:Landroidx/constraintlayout/motion/widget/ViewTransition;
+.field public final synthetic val$viewTransition:Landroidx/constraintlayout/motion/widget/ViewTransition;
 
 
 # direct methods
@@ -49,6 +49,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroidx/constraintlayout/motion/widget/ViewTransitionController$1;->this$0:Landroidx/constraintlayout/motion/widget/ViewTransitionController;
 
     iput-object p2, p0, Landroidx/constraintlayout/motion/widget/ViewTransitionController$1;->val$viewTransition:Landroidx/constraintlayout/motion/widget/ViewTransition;
@@ -81,22 +82,26 @@
         }
     .end annotation
 
+    .line 1
     iget-object p3, p0, Landroidx/constraintlayout/motion/widget/ViewTransitionController$1;->val$viewTransition:Landroidx/constraintlayout/motion/widget/ViewTransition;
 
     invoke-virtual {p3}, Landroidx/constraintlayout/motion/widget/ViewTransition;->getSharedValueCurrent()I
 
     move-result p3
 
+    .line 2
     iget-object v0, p0, Landroidx/constraintlayout/motion/widget/ViewTransitionController$1;->val$viewTransition:Landroidx/constraintlayout/motion/widget/ViewTransition;
 
     invoke-virtual {v0, p2}, Landroidx/constraintlayout/motion/widget/ViewTransition;->setSharedValueCurrent(I)V
 
+    .line 3
     iget v0, p0, Landroidx/constraintlayout/motion/widget/ViewTransitionController$1;->val$listen_for_id:I
 
     if-ne v0, p1, :cond_3
 
     if-eq p3, p2, :cond_3
 
+    .line 4
     iget-boolean p1, p0, Landroidx/constraintlayout/motion/widget/ViewTransitionController$1;->val$isSet:Z
 
     const/4 p3, 0x1
@@ -105,10 +110,12 @@
 
     if-eqz p1, :cond_1
 
+    .line 5
     iget p1, p0, Landroidx/constraintlayout/motion/widget/ViewTransitionController$1;->val$listen_for_value:I
 
     if-ne p1, p2, :cond_3
 
+    .line 6
     iget-object p1, p0, Landroidx/constraintlayout/motion/widget/ViewTransitionController$1;->this$0:Landroidx/constraintlayout/motion/widget/ViewTransitionController;
 
     invoke-static {p1}, Landroidx/constraintlayout/motion/widget/ViewTransitionController;->access$000(Landroidx/constraintlayout/motion/widget/ViewTransitionController;)Landroidx/constraintlayout/motion/widget/MotionLayout;
@@ -124,6 +131,7 @@
     :goto_0
     if-ge p2, p1, :cond_3
 
+    .line 7
     iget-object v1, p0, Landroidx/constraintlayout/motion/widget/ViewTransitionController$1;->this$0:Landroidx/constraintlayout/motion/widget/ViewTransitionController;
 
     invoke-static {v1}, Landroidx/constraintlayout/motion/widget/ViewTransitionController;->access$000(Landroidx/constraintlayout/motion/widget/ViewTransitionController;)Landroidx/constraintlayout/motion/widget/MotionLayout;
@@ -134,6 +142,7 @@
 
     move-result-object v1
 
+    .line 8
     iget-object v2, p0, Landroidx/constraintlayout/motion/widget/ViewTransitionController$1;->val$viewTransition:Landroidx/constraintlayout/motion/widget/ViewTransition;
 
     invoke-virtual {v2, v1}, Landroidx/constraintlayout/motion/widget/ViewTransition;->matchesView(Landroid/view/View;)Z
@@ -142,6 +151,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 9
     iget-object v2, p0, Landroidx/constraintlayout/motion/widget/ViewTransitionController$1;->this$0:Landroidx/constraintlayout/motion/widget/ViewTransitionController;
 
     invoke-static {v2}, Landroidx/constraintlayout/motion/widget/ViewTransitionController;->access$000(Landroidx/constraintlayout/motion/widget/ViewTransitionController;)Landroidx/constraintlayout/motion/widget/MotionLayout;
@@ -152,6 +162,7 @@
 
     move-result v6
 
+    .line 10
     iget-object v2, p0, Landroidx/constraintlayout/motion/widget/ViewTransitionController$1;->this$0:Landroidx/constraintlayout/motion/widget/ViewTransitionController;
 
     invoke-static {v2}, Landroidx/constraintlayout/motion/widget/ViewTransitionController;->access$000(Landroidx/constraintlayout/motion/widget/ViewTransitionController;)Landroidx/constraintlayout/motion/widget/MotionLayout;
@@ -162,6 +173,7 @@
 
     move-result-object v7
 
+    .line 11
     iget-object v3, p0, Landroidx/constraintlayout/motion/widget/ViewTransitionController$1;->val$viewTransition:Landroidx/constraintlayout/motion/widget/ViewTransition;
 
     iget-object v4, p0, Landroidx/constraintlayout/motion/widget/ViewTransitionController$1;->this$0:Landroidx/constraintlayout/motion/widget/ViewTransitionController;
@@ -181,11 +193,13 @@
 
     goto :goto_0
 
+    .line 12
     :cond_1
     iget p1, p0, Landroidx/constraintlayout/motion/widget/ViewTransitionController$1;->val$listen_for_value:I
 
     if-eq p1, p2, :cond_3
 
+    .line 13
     iget-object p1, p0, Landroidx/constraintlayout/motion/widget/ViewTransitionController$1;->this$0:Landroidx/constraintlayout/motion/widget/ViewTransitionController;
 
     invoke-static {p1}, Landroidx/constraintlayout/motion/widget/ViewTransitionController;->access$000(Landroidx/constraintlayout/motion/widget/ViewTransitionController;)Landroidx/constraintlayout/motion/widget/MotionLayout;
@@ -201,6 +215,7 @@
     :goto_1
     if-ge p2, p1, :cond_3
 
+    .line 14
     iget-object v1, p0, Landroidx/constraintlayout/motion/widget/ViewTransitionController$1;->this$0:Landroidx/constraintlayout/motion/widget/ViewTransitionController;
 
     invoke-static {v1}, Landroidx/constraintlayout/motion/widget/ViewTransitionController;->access$000(Landroidx/constraintlayout/motion/widget/ViewTransitionController;)Landroidx/constraintlayout/motion/widget/MotionLayout;
@@ -211,6 +226,7 @@
 
     move-result-object v1
 
+    .line 15
     iget-object v2, p0, Landroidx/constraintlayout/motion/widget/ViewTransitionController$1;->val$viewTransition:Landroidx/constraintlayout/motion/widget/ViewTransition;
 
     invoke-virtual {v2, v1}, Landroidx/constraintlayout/motion/widget/ViewTransition;->matchesView(Landroid/view/View;)Z
@@ -219,6 +235,7 @@
 
     if-eqz v2, :cond_2
 
+    .line 16
     iget-object v2, p0, Landroidx/constraintlayout/motion/widget/ViewTransitionController$1;->this$0:Landroidx/constraintlayout/motion/widget/ViewTransitionController;
 
     invoke-static {v2}, Landroidx/constraintlayout/motion/widget/ViewTransitionController;->access$000(Landroidx/constraintlayout/motion/widget/ViewTransitionController;)Landroidx/constraintlayout/motion/widget/MotionLayout;
@@ -229,6 +246,7 @@
 
     move-result v6
 
+    .line 17
     iget-object v2, p0, Landroidx/constraintlayout/motion/widget/ViewTransitionController$1;->this$0:Landroidx/constraintlayout/motion/widget/ViewTransitionController;
 
     invoke-static {v2}, Landroidx/constraintlayout/motion/widget/ViewTransitionController;->access$000(Landroidx/constraintlayout/motion/widget/ViewTransitionController;)Landroidx/constraintlayout/motion/widget/MotionLayout;
@@ -239,6 +257,7 @@
 
     move-result-object v7
 
+    .line 18
     iget-object v3, p0, Landroidx/constraintlayout/motion/widget/ViewTransitionController$1;->val$viewTransition:Landroidx/constraintlayout/motion/widget/ViewTransition;
 
     iget-object v4, p0, Landroidx/constraintlayout/motion/widget/ViewTransitionController$1;->this$0:Landroidx/constraintlayout/motion/widget/ViewTransitionController;

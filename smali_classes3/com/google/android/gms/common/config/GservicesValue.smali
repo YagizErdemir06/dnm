@@ -22,12 +22,12 @@
 
 
 # instance fields
-.field protected final zza:Ljava/lang/String;
+.field public final zza:Ljava/lang/String;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field protected final zzb:Ljava/lang/Object;
+.field public final zzb:Ljava/lang/Object;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
@@ -80,6 +80,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/common/config/GservicesValue;->zzc:Ljava/lang/Object;
 
     monitor-enter v0
@@ -94,6 +95,7 @@
     :catchall_0
     move-exception v1
 
+    .line 2
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -264,6 +266,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/common/config/zza;
 
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -291,6 +294,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/config/GservicesValue;->zzd:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
@@ -306,6 +310,7 @@
 
     monitor-enter v1
 
+    .line 2
     :try_start_0
     monitor-exit v1
     :try_end_0
@@ -313,6 +318,7 @@
 
     monitor-enter v1
 
+    .line 3
     :try_start_1
     monitor-exit v1
     :try_end_1
@@ -321,6 +327,7 @@
     :try_start_2
     iget-object v1, p0, Lcom/google/android/gms/common/config/GservicesValue;->zza:Ljava/lang/String;
 
+    .line 4
     invoke-virtual {p0, v1}, Lcom/google/android/gms/common/config/GservicesValue;->zza(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -328,6 +335,7 @@
     .catch Ljava/lang/SecurityException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 5
     invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
     return-object p0
@@ -337,6 +345,7 @@
 
     goto :goto_0
 
+    .line 6
     :catch_0
     :try_start_3
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
@@ -348,17 +357,20 @@
     :try_start_4
     iget-object v3, p0, Lcom/google/android/gms/common/config/GservicesValue;->zza:Ljava/lang/String;
 
+    .line 7
     invoke-virtual {p0, v3}, Lcom/google/android/gms/common/config/GservicesValue;->zza(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
+    .line 8
     :try_start_5
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
+    .line 9
     invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
     return-object p0
@@ -366,21 +378,26 @@
     :catchall_1
     move-exception p0
 
+    .line 10
     :try_start_6
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
+    .line 11
     throw p0
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
+    .line 12
     :goto_0
     invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
+    .line 13
     throw p0
 
     :catchall_2
     move-exception p0
 
+    .line 14
     :try_start_7
     monitor-exit v1
     :try_end_7
@@ -391,6 +408,7 @@
     :catchall_3
     move-exception p0
 
+    .line 15
     :try_start_8
     monitor-exit v1
     :try_end_8
@@ -416,6 +434,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/common/config/GservicesValue;->get()Ljava/lang/Object;
 
     move-result-object p0
@@ -445,6 +464,7 @@
 
     const-string v1, "GservicesValue.override(): test should probably call initForTests() first"
 
+    .line 1
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     iput-object p1, p0, Lcom/google/android/gms/common/config/GservicesValue;->zzd:Ljava/lang/Object;
@@ -458,11 +478,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
+    .line 2
     :try_start_1
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 3
     :try_start_2
     monitor-exit p0
     :try_end_2
@@ -473,6 +495,7 @@
     :catchall_0
     move-exception p1
 
+    .line 4
     :try_start_3
     monitor-exit p0
     :try_end_3
@@ -484,6 +507,7 @@
     :catchall_1
     move-exception p1
 
+    .line 5
     monitor-exit p0
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1

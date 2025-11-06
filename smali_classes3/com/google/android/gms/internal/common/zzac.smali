@@ -20,7 +20,7 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     const/4 v0, 0x0
@@ -35,6 +35,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
     return-void
@@ -54,6 +55,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -73,6 +75,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -89,6 +92,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -99,6 +103,7 @@
 .method public bridge synthetic iterator()Ljava/util/Iterator;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/common/zzac;->zze()Lcom/google/android/gms/internal/common/zzaj;
 
     move-result-object p0
@@ -122,6 +127,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -141,6 +147,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -160,6 +167,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -186,7 +194,7 @@
     .end annotation
 
     .line 2
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3
     invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
@@ -260,7 +268,7 @@
     return-object p1
 .end method
 
-.method zza([Ljava/lang/Object;I)I
+.method public zza([Ljava/lang/Object;I)I
     .locals 0
     .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
@@ -270,7 +278,7 @@
     throw p0
 .end method
 
-.method zzb()I
+.method public zzb()I
     .locals 0
 
     const/4 p0, 0x0
@@ -278,7 +286,7 @@
     throw p0
 .end method
 
-.method zzc()I
+.method public zzc()I
     .locals 0
 
     const/4 p0, 0x0
@@ -297,7 +305,7 @@
 .method public abstract zze()Lcom/google/android/gms/internal/common/zzaj;
 .end method
 
-.method abstract zzf()Z
+.method public abstract zzf()Z
 .end method
 
 .method public zzg()[Ljava/lang/Object;

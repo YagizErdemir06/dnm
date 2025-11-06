@@ -1,4 +1,4 @@
-.class Lcom/google/common/base/Predicates$ContainsPatternFromStringPredicate;
+.class public Lcom/google/common/base/Predicates$ContainsPatternFromStringPredicate;
 .super Lcom/google/common/base/Predicates$ContainsPatternPredicate;
 .source "SourceFile"
 
@@ -25,6 +25,7 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Platform;->compilePattern(Ljava/lang/String;)Lcom/google/common/base/CommonPattern;
 
     move-result-object p1
@@ -39,6 +40,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/Predicates$ContainsPatternPredicate;->pattern:Lcom/google/common/base/CommonPattern;
 
     invoke-virtual {p0}, Lcom/google/common/base/CommonPattern;->pattern()Ljava/lang/String;

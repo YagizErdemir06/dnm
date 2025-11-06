@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/MapMakerInternalMap$CleanupMapTask;
+.class public final Lcom/google/common/collect/MapMakerInternalMap$CleanupMapTask;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final mapReference:Ljava/lang/ref/WeakReference;
+.field public final mapReference:Ljava/lang/ref/WeakReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference<",
@@ -40,8 +40,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -56,9 +58,10 @@
 .method public run()V
     .locals 3
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/MapMakerInternalMap$CleanupMapTask;->mapReference:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -66,6 +69,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/MapMakerInternalMap;->segments:[Lcom/google/common/collect/MapMakerInternalMap$Segment;
 
     array-length v0, p0
@@ -77,6 +81,7 @@
 
     aget-object v2, p0, v1
 
+    .line 3
     invoke-virtual {v2}, Lcom/google/common/collect/MapMakerInternalMap$Segment;->runCleanup()V
 
     add-int/lit8 v1, v1, 0x1
@@ -86,6 +91,7 @@
     :cond_0
     return-void
 
+    .line 4
     :cond_1
     new-instance p0, Ljava/util/concurrent/CancellationException;
 

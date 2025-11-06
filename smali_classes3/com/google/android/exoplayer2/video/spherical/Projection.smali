@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/video/spherical/Projection;
+.class public final Lcom/google/android/exoplayer2/video/spherical/Projection;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

@@ -19,15 +19,15 @@
 
 
 # instance fields
-.field public final synthetic a:Lmiuix/os/AsyncTaskWithProgress;
+.field public final synthetic c:Lmiuix/os/AsyncTaskWithProgress;
 
 
 # direct methods
-.method public constructor <init>(Lmiuix/os/AsyncTaskWithProgress;)V
+.method private constructor <init>(Lmiuix/os/AsyncTaskWithProgress;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lmiuix/os/AsyncTaskWithProgress$b;->a:Lmiuix/os/AsyncTaskWithProgress;
+    iput-object p1, p0, Lmiuix/os/AsyncTaskWithProgress$b;->c:Lmiuix/os/AsyncTaskWithProgress;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,6 +50,7 @@
 
     const/4 v0, -0x2
 
+    .line 1
     invoke-virtual {p0, p1, v0}, Lmiuix/os/AsyncTaskWithProgress$b;->onClick(Landroid/content/DialogInterface;I)V
 
     return-void
@@ -58,7 +59,8 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 1
 
-    iget-object v0, p0, Lmiuix/os/AsyncTaskWithProgress$b;->a:Lmiuix/os/AsyncTaskWithProgress;
+    .line 1
+    iget-object v0, p0, Lmiuix/os/AsyncTaskWithProgress$b;->c:Lmiuix/os/AsyncTaskWithProgress;
 
     invoke-static {v0}, Lmiuix/os/AsyncTaskWithProgress;->a(Lmiuix/os/AsyncTaskWithProgress;)Lmiuix/os/AsyncTaskWithProgress$ProgressDialogFragment;
 
@@ -66,7 +68,8 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lmiuix/os/AsyncTaskWithProgress$b;->a:Lmiuix/os/AsyncTaskWithProgress;
+    .line 2
+    iget-object v0, p0, Lmiuix/os/AsyncTaskWithProgress$b;->c:Lmiuix/os/AsyncTaskWithProgress;
 
     invoke-static {v0}, Lmiuix/os/AsyncTaskWithProgress;->a(Lmiuix/os/AsyncTaskWithProgress;)Lmiuix/os/AsyncTaskWithProgress$ProgressDialogFragment;
 
@@ -84,7 +87,8 @@
 
     if-ne p2, p1, :cond_0
 
-    iget-object p0, p0, Lmiuix/os/AsyncTaskWithProgress$b;->a:Lmiuix/os/AsyncTaskWithProgress;
+    .line 3
+    iget-object p0, p0, Lmiuix/os/AsyncTaskWithProgress$b;->c:Lmiuix/os/AsyncTaskWithProgress;
 
     const/4 p1, 0x1
 

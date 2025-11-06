@@ -148,6 +148,7 @@
 .method public static synthetic access$000(Lcom/google/common/collect/LinkedListMultimap;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/collect/LinkedListMultimap;->modCount:I
 
     return p0
@@ -156,6 +157,7 @@
 .method public static synthetic access$100(Lcom/google/common/collect/LinkedListMultimap;)Lcom/google/common/collect/LinkedListMultimap$Node;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/LinkedListMultimap;->tail:Lcom/google/common/collect/LinkedListMultimap$Node;
 
     return-object p0
@@ -164,6 +166,7 @@
 .method public static synthetic access$200(Lcom/google/common/collect/LinkedListMultimap;)Lcom/google/common/collect/LinkedListMultimap$Node;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/LinkedListMultimap;->head:Lcom/google/common/collect/LinkedListMultimap$Node;
 
     return-object p0
@@ -172,6 +175,7 @@
 .method public static synthetic access$300(Lcom/google/common/collect/LinkedListMultimap;Lcom/google/common/collect/LinkedListMultimap$Node;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/LinkedListMultimap;->removeNode(Lcom/google/common/collect/LinkedListMultimap$Node;)V
 
     return-void
@@ -180,6 +184,7 @@
 .method public static synthetic access$400(Lcom/google/common/collect/LinkedListMultimap;Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/LinkedListMultimap;->removeAllNodes(Ljava/lang/Object;)V
 
     return-void
@@ -188,6 +193,7 @@
 .method public static synthetic access$500(Lcom/google/common/collect/LinkedListMultimap;)Ljava/util/Map;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/LinkedListMultimap;->keyToKeyList:Ljava/util/Map;
 
     return-object p0
@@ -196,6 +202,7 @@
 .method public static synthetic access$600(Lcom/google/common/collect/LinkedListMultimap;Ljava/lang/Object;Ljava/lang/Object;Lcom/google/common/collect/LinkedListMultimap$Node;)Lcom/google/common/collect/LinkedListMultimap$Node;
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/google/common/collect/LinkedListMultimap;->addNode(Ljava/lang/Object;Ljava/lang/Object;Lcom/google/common/collect/LinkedListMultimap$Node;)Lcom/google/common/collect/LinkedListMultimap$Node;
 
     move-result-object p0
@@ -206,6 +213,7 @@
 .method public static synthetic access$800(Lcom/google/common/collect/LinkedListMultimap;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/collect/LinkedListMultimap;->size:I
 
     return p0
@@ -238,18 +246,22 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/LinkedListMultimap$Node;
 
     invoke-direct {v0, p1, p2}, Lcom/google/common/collect/LinkedListMultimap$Node;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
+    .line 2
     iget-object p2, p0, Lcom/google/common/collect/LinkedListMultimap;->head:Lcom/google/common/collect/LinkedListMultimap$Node;
 
     if-nez p2, :cond_0
 
+    .line 3
     iput-object v0, p0, Lcom/google/common/collect/LinkedListMultimap;->tail:Lcom/google/common/collect/LinkedListMultimap$Node;
 
     iput-object v0, p0, Lcom/google/common/collect/LinkedListMultimap;->head:Lcom/google/common/collect/LinkedListMultimap$Node;
 
+    .line 4
     iget-object p2, p0, Lcom/google/common/collect/LinkedListMultimap;->keyToKeyList:Ljava/util/Map;
 
     new-instance p3, Lcom/google/common/collect/LinkedListMultimap$KeyList;
@@ -258,6 +270,7 @@
 
     invoke-interface {p2, p1, p3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 5
     iget p1, p0, Lcom/google/common/collect/LinkedListMultimap;->modCount:I
 
     add-int/lit8 p1, p1, 0x1
@@ -269,18 +282,24 @@
     :cond_0
     if-nez p3, :cond_2
 
+    .line 6
     iget-object p2, p0, Lcom/google/common/collect/LinkedListMultimap;->tail:Lcom/google/common/collect/LinkedListMultimap$Node;
 
     invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    check-cast p2, Lcom/google/common/collect/LinkedListMultimap$Node;
+
     iput-object v0, p2, Lcom/google/common/collect/LinkedListMultimap$Node;->next:Lcom/google/common/collect/LinkedListMultimap$Node;
 
+    .line 7
     iget-object p2, p0, Lcom/google/common/collect/LinkedListMultimap;->tail:Lcom/google/common/collect/LinkedListMultimap$Node;
 
     iput-object p2, v0, Lcom/google/common/collect/LinkedListMultimap$Node;->previous:Lcom/google/common/collect/LinkedListMultimap$Node;
 
+    .line 8
     iput-object v0, p0, Lcom/google/common/collect/LinkedListMultimap;->tail:Lcom/google/common/collect/LinkedListMultimap$Node;
 
+    .line 9
     iget-object p2, p0, Lcom/google/common/collect/LinkedListMultimap;->keyToKeyList:Ljava/util/Map;
 
     invoke-interface {p2, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -291,6 +310,7 @@
 
     if-nez p2, :cond_1
 
+    .line 10
     iget-object p2, p0, Lcom/google/common/collect/LinkedListMultimap;->keyToKeyList:Ljava/util/Map;
 
     new-instance p3, Lcom/google/common/collect/LinkedListMultimap$KeyList;
@@ -299,6 +319,7 @@
 
     invoke-interface {p2, p1, p3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 11
     iget p1, p0, Lcom/google/common/collect/LinkedListMultimap;->modCount:I
 
     add-int/lit8 p1, p1, 0x1
@@ -307,6 +328,7 @@
 
     goto :goto_2
 
+    .line 12
     :cond_1
     iget p1, p2, Lcom/google/common/collect/LinkedListMultimap$KeyList;->count:I
 
@@ -314,16 +336,21 @@
 
     iput p1, p2, Lcom/google/common/collect/LinkedListMultimap$KeyList;->count:I
 
+    .line 13
     iget-object p1, p2, Lcom/google/common/collect/LinkedListMultimap$KeyList;->tail:Lcom/google/common/collect/LinkedListMultimap$Node;
 
+    .line 14
     iput-object v0, p1, Lcom/google/common/collect/LinkedListMultimap$Node;->nextSibling:Lcom/google/common/collect/LinkedListMultimap$Node;
 
+    .line 15
     iput-object p1, v0, Lcom/google/common/collect/LinkedListMultimap$Node;->previousSibling:Lcom/google/common/collect/LinkedListMultimap$Node;
 
+    .line 16
     iput-object v0, p2, Lcom/google/common/collect/LinkedListMultimap$KeyList;->tail:Lcom/google/common/collect/LinkedListMultimap$Node;
 
     goto :goto_2
 
+    .line 17
     :cond_2
     iget-object p2, p0, Lcom/google/common/collect/LinkedListMultimap;->keyToKeyList:Ljava/util/Map;
 
@@ -335,52 +362,68 @@
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    check-cast p1, Lcom/google/common/collect/LinkedListMultimap$KeyList;
+
+    .line 18
     iget p2, p1, Lcom/google/common/collect/LinkedListMultimap$KeyList;->count:I
 
     add-int/lit8 p2, p2, 0x1
 
     iput p2, p1, Lcom/google/common/collect/LinkedListMultimap$KeyList;->count:I
 
+    .line 19
     iget-object p2, p3, Lcom/google/common/collect/LinkedListMultimap$Node;->previous:Lcom/google/common/collect/LinkedListMultimap$Node;
 
     iput-object p2, v0, Lcom/google/common/collect/LinkedListMultimap$Node;->previous:Lcom/google/common/collect/LinkedListMultimap$Node;
 
+    .line 20
     iget-object p2, p3, Lcom/google/common/collect/LinkedListMultimap$Node;->previousSibling:Lcom/google/common/collect/LinkedListMultimap$Node;
 
     iput-object p2, v0, Lcom/google/common/collect/LinkedListMultimap$Node;->previousSibling:Lcom/google/common/collect/LinkedListMultimap$Node;
 
+    .line 21
     iput-object p3, v0, Lcom/google/common/collect/LinkedListMultimap$Node;->next:Lcom/google/common/collect/LinkedListMultimap$Node;
 
+    .line 22
     iput-object p3, v0, Lcom/google/common/collect/LinkedListMultimap$Node;->nextSibling:Lcom/google/common/collect/LinkedListMultimap$Node;
 
+    .line 23
     iget-object p2, p3, Lcom/google/common/collect/LinkedListMultimap$Node;->previousSibling:Lcom/google/common/collect/LinkedListMultimap$Node;
 
     if-nez p2, :cond_3
 
+    .line 24
     iput-object v0, p1, Lcom/google/common/collect/LinkedListMultimap$KeyList;->head:Lcom/google/common/collect/LinkedListMultimap$Node;
 
     goto :goto_0
 
+    .line 25
     :cond_3
     iput-object v0, p2, Lcom/google/common/collect/LinkedListMultimap$Node;->nextSibling:Lcom/google/common/collect/LinkedListMultimap$Node;
 
+    .line 26
     :goto_0
     iget-object p1, p3, Lcom/google/common/collect/LinkedListMultimap$Node;->previous:Lcom/google/common/collect/LinkedListMultimap$Node;
 
     if-nez p1, :cond_4
 
+    .line 27
     iput-object v0, p0, Lcom/google/common/collect/LinkedListMultimap;->head:Lcom/google/common/collect/LinkedListMultimap$Node;
 
     goto :goto_1
 
+    .line 28
     :cond_4
     iput-object v0, p1, Lcom/google/common/collect/LinkedListMultimap$Node;->next:Lcom/google/common/collect/LinkedListMultimap$Node;
 
+    .line 29
     :goto_1
     iput-object v0, p3, Lcom/google/common/collect/LinkedListMultimap$Node;->previous:Lcom/google/common/collect/LinkedListMultimap$Node;
 
+    .line 30
     iput-object v0, p3, Lcom/google/common/collect/LinkedListMultimap$Node;->previousSibling:Lcom/google/common/collect/LinkedListMultimap$Node;
 
+    .line 31
     :goto_2
     iget p1, p0, Lcom/google/common/collect/LinkedListMultimap;->size:I
 
@@ -473,6 +516,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/LinkedListMultimap$ValueForKeyIterator;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/collect/LinkedListMultimap$ValueForKeyIterator;-><init>(Lcom/google/common/collect/LinkedListMultimap;Ljava/lang/Object;)V
@@ -500,14 +544,17 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->defaultReadObject()V
 
+    .line 2
     invoke-static {}, Lcom/google/common/collect/CompactLinkedHashMap;->create()Lcom/google/common/collect/CompactLinkedHashMap;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/common/collect/LinkedListMultimap;->keyToKeyList:Ljava/util/Map;
 
+    .line 3
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readInt()I
 
     move-result v0
@@ -517,14 +564,17 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
+    .line 4
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
     move-result-object v2
 
+    .line 5
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
     move-result-object v3
 
+    .line 6
     invoke-virtual {p0, v2, v3}, Lcom/google/common/collect/LinkedListMultimap;->put(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     add-int/lit8 v1, v1, 0x1
@@ -547,6 +597,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/LinkedListMultimap$ValueForKeyIterator;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/collect/LinkedListMultimap$ValueForKeyIterator;-><init>(Lcom/google/common/collect/LinkedListMultimap;Ljava/lang/Object;)V
@@ -566,33 +617,40 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p1, Lcom/google/common/collect/LinkedListMultimap$Node;->previous:Lcom/google/common/collect/LinkedListMultimap$Node;
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v1, p1, Lcom/google/common/collect/LinkedListMultimap$Node;->next:Lcom/google/common/collect/LinkedListMultimap$Node;
 
     iput-object v1, v0, Lcom/google/common/collect/LinkedListMultimap$Node;->next:Lcom/google/common/collect/LinkedListMultimap$Node;
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object v1, p1, Lcom/google/common/collect/LinkedListMultimap$Node;->next:Lcom/google/common/collect/LinkedListMultimap$Node;
 
     iput-object v1, p0, Lcom/google/common/collect/LinkedListMultimap;->head:Lcom/google/common/collect/LinkedListMultimap$Node;
 
+    .line 4
     :goto_0
     iget-object v1, p1, Lcom/google/common/collect/LinkedListMultimap$Node;->next:Lcom/google/common/collect/LinkedListMultimap$Node;
 
     if-eqz v1, :cond_1
 
+    .line 5
     iput-object v0, v1, Lcom/google/common/collect/LinkedListMultimap$Node;->previous:Lcom/google/common/collect/LinkedListMultimap$Node;
 
     goto :goto_1
 
+    .line 6
     :cond_1
     iput-object v0, p0, Lcom/google/common/collect/LinkedListMultimap;->tail:Lcom/google/common/collect/LinkedListMultimap$Node;
 
+    .line 7
     :goto_1
     iget-object v0, p1, Lcom/google/common/collect/LinkedListMultimap$Node;->previousSibling:Lcom/google/common/collect/LinkedListMultimap$Node;
 
@@ -602,6 +660,7 @@
 
     if-nez v0, :cond_2
 
+    .line 8
     iget-object v0, p0, Lcom/google/common/collect/LinkedListMultimap;->keyToKeyList:Ljava/util/Map;
 
     iget-object p1, p1, Lcom/google/common/collect/LinkedListMultimap$Node;->key:Ljava/lang/Object;
@@ -614,10 +673,14 @@
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    check-cast p1, Lcom/google/common/collect/LinkedListMultimap$KeyList;
+
     const/4 v0, 0x0
 
+    .line 9
     iput v0, p1, Lcom/google/common/collect/LinkedListMultimap$KeyList;->count:I
 
+    .line 10
     iget p1, p0, Lcom/google/common/collect/LinkedListMultimap;->modCount:I
 
     add-int/lit8 p1, p1, 0x1
@@ -626,6 +689,7 @@
 
     goto :goto_3
 
+    .line 11
     :cond_2
     iget-object v0, p0, Lcom/google/common/collect/LinkedListMultimap;->keyToKeyList:Ljava/util/Map;
 
@@ -639,47 +703,61 @@
 
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    check-cast v0, Lcom/google/common/collect/LinkedListMultimap$KeyList;
+
+    .line 12
     iget v1, v0, Lcom/google/common/collect/LinkedListMultimap$KeyList;->count:I
 
     add-int/lit8 v1, v1, -0x1
 
     iput v1, v0, Lcom/google/common/collect/LinkedListMultimap$KeyList;->count:I
 
+    .line 13
     iget-object v1, p1, Lcom/google/common/collect/LinkedListMultimap$Node;->previousSibling:Lcom/google/common/collect/LinkedListMultimap$Node;
 
     if-nez v1, :cond_3
 
+    .line 14
     iget-object v1, p1, Lcom/google/common/collect/LinkedListMultimap$Node;->nextSibling:Lcom/google/common/collect/LinkedListMultimap$Node;
 
     invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    check-cast v1, Lcom/google/common/collect/LinkedListMultimap$Node;
 
     iput-object v1, v0, Lcom/google/common/collect/LinkedListMultimap$KeyList;->head:Lcom/google/common/collect/LinkedListMultimap$Node;
 
     goto :goto_2
 
+    .line 15
     :cond_3
     iget-object v2, p1, Lcom/google/common/collect/LinkedListMultimap$Node;->nextSibling:Lcom/google/common/collect/LinkedListMultimap$Node;
 
     iput-object v2, v1, Lcom/google/common/collect/LinkedListMultimap$Node;->nextSibling:Lcom/google/common/collect/LinkedListMultimap$Node;
 
+    .line 16
     :goto_2
     iget-object v1, p1, Lcom/google/common/collect/LinkedListMultimap$Node;->nextSibling:Lcom/google/common/collect/LinkedListMultimap$Node;
 
     if-nez v1, :cond_4
 
+    .line 17
     iget-object p1, p1, Lcom/google/common/collect/LinkedListMultimap$Node;->previousSibling:Lcom/google/common/collect/LinkedListMultimap$Node;
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    check-cast p1, Lcom/google/common/collect/LinkedListMultimap$Node;
 
     iput-object p1, v0, Lcom/google/common/collect/LinkedListMultimap$KeyList;->tail:Lcom/google/common/collect/LinkedListMultimap$Node;
 
     goto :goto_3
 
+    .line 18
     :cond_4
     iget-object p1, p1, Lcom/google/common/collect/LinkedListMultimap$Node;->previousSibling:Lcom/google/common/collect/LinkedListMultimap$Node;
 
     iput-object p1, v1, Lcom/google/common/collect/LinkedListMultimap$Node;->previousSibling:Lcom/google/common/collect/LinkedListMultimap$Node;
 
+    .line 19
     :goto_3
     iget p1, p0, Lcom/google/common/collect/LinkedListMultimap;->size:I
 
@@ -701,14 +779,17 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/io/ObjectOutputStream;->defaultWriteObject()V
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/LinkedListMultimap;->size()I
 
     move-result v0
 
     invoke-virtual {p1, v0}, Ljava/io/ObjectOutputStream;->writeInt(I)V
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/common/collect/LinkedListMultimap;->entries()Ljava/util/List;
 
     move-result-object p0
@@ -730,12 +811,14 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
+    .line 4
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
 
     invoke-virtual {p1, v1}, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
 
+    .line 5
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -753,6 +836,7 @@
 .method public bridge synthetic asMap()Ljava/util/Map;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractMultimap;->asMap()Ljava/util/Map;
 
     move-result-object p0
@@ -765,18 +849,23 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Lcom/google/common/collect/LinkedListMultimap;->head:Lcom/google/common/collect/LinkedListMultimap$Node;
 
+    .line 2
     iput-object v0, p0, Lcom/google/common/collect/LinkedListMultimap;->tail:Lcom/google/common/collect/LinkedListMultimap$Node;
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/collect/LinkedListMultimap;->keyToKeyList:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
     const/4 v0, 0x0
 
+    .line 4
     iput v0, p0, Lcom/google/common/collect/LinkedListMultimap;->size:I
 
+    .line 5
     iget v0, p0, Lcom/google/common/collect/LinkedListMultimap;->modCount:I
 
     add-int/lit8 v0, v0, 0x1
@@ -797,6 +886,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/google/common/collect/AbstractMultimap;->containsEntry(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -811,6 +901,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/LinkedListMultimap;->keyToKeyList:Ljava/util/Map;
 
     invoke-interface {p0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -827,6 +918,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/LinkedListMultimap;->values()Ljava/util/List;
 
     move-result-object p0
@@ -850,6 +942,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/Multimaps$AsMap;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/Multimaps$AsMap;-><init>(Lcom/google/common/collect/Multimap;)V
@@ -897,6 +990,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/LinkedListMultimap$1KeySetImpl;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/LinkedListMultimap$1KeySetImpl;-><init>(Lcom/google/common/collect/LinkedListMultimap;)V
@@ -914,6 +1008,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/Multimaps$Keys;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/Multimaps$Keys;-><init>(Lcom/google/common/collect/Multimap;)V
@@ -993,6 +1088,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/AssertionError;
 
     const-string v0, "should never be called"
@@ -1009,6 +1105,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/AbstractMultimap;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -1056,6 +1153,7 @@
 .method public bridge synthetic hashCode()I
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractMultimap;->hashCode()I
 
     move-result p0
@@ -1066,6 +1164,7 @@
 .method public isEmpty()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/LinkedListMultimap;->head:Lcom/google/common/collect/LinkedListMultimap$Node;
 
     if-nez p0, :cond_0
@@ -1084,6 +1183,7 @@
 .method public bridge synthetic keySet()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractMultimap;->keySet()Ljava/util/Set;
 
     move-result-object p0
@@ -1094,6 +1194,7 @@
 .method public bridge synthetic keys()Lcom/google/common/collect/Multiset;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractMultimap;->keys()Lcom/google/common/collect/Multiset;
 
     move-result-object p0
@@ -1122,6 +1223,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, p2, v0}, Lcom/google/common/collect/LinkedListMultimap;->addNode(Ljava/lang/Object;Ljava/lang/Object;Lcom/google/common/collect/LinkedListMultimap$Node;)Lcom/google/common/collect/LinkedListMultimap$Node;
 
     const/4 p0, 0x1
@@ -1172,6 +1274,7 @@
     .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/google/common/collect/AbstractMultimap;->remove(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -1337,6 +1440,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/collect/LinkedListMultimap;->size:I
 
     return p0
@@ -1345,6 +1449,7 @@
 .method public bridge synthetic toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractMultimap;->toString()Ljava/lang/String;
 
     move-result-object p0

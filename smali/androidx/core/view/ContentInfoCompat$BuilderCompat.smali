@@ -1,4 +1,4 @@
-.class interface abstract Landroidx/core/view/ContentInfoCompat$BuilderCompat;
+.class public interface abstract Landroidx/core/view/ContentInfoCompat$BuilderCompat;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

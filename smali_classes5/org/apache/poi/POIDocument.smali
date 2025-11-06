@@ -8,7 +8,7 @@
 
 
 # instance fields
-.field protected directory:Lorg/apache/poi/poifs/filesystem/DirectoryNode;
+.field public directory:Lorg/apache/poi/poifs/filesystem/DirectoryNode;
 
 .field private dsInf:Lorg/apache/poi/hpsf/DocumentSummaryInformation;
 
@@ -18,9 +18,10 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     const-class v0, Lorg/apache/poi/POIDocument;
 
     invoke-static {v0}, Lorg/apache/poi/util/POILogFactory;->getLogger(Ljava/lang/Class;)Lorg/apache/poi/util/POILogger;
@@ -110,6 +111,7 @@
     .annotation runtime Lorg/apache/poi/util/Internal;
     .end annotation
 
+    .line 1
     invoke-static {p1, p2}, Lorg/apache/poi/poifs/filesystem/EntryUtils;->copyNodeRecursively(Lorg/apache/poi/poifs/filesystem/Entry;Lorg/apache/poi/poifs/filesystem/DirectoryEntry;)V
 
     return-void
@@ -174,28 +176,33 @@
 .method public createInformationProperties()V
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lorg/apache/poi/POIDocument;->initialized:Z
 
     if-nez v0, :cond_0
 
     invoke-virtual {p0}, Lorg/apache/poi/POIDocument;->readProperties()V
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lorg/apache/poi/POIDocument;->sInf:Lorg/apache/poi/hpsf/SummaryInformation;
 
     if-nez v0, :cond_1
 
+    .line 3
     invoke-static {}, Lorg/apache/poi/hpsf/PropertySetFactory;->newSummaryInformation()Lorg/apache/poi/hpsf/SummaryInformation;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/apache/poi/POIDocument;->sInf:Lorg/apache/poi/hpsf/SummaryInformation;
 
+    .line 4
     :cond_1
     iget-object v0, p0, Lorg/apache/poi/POIDocument;->dsInf:Lorg/apache/poi/hpsf/DocumentSummaryInformation;
 
     if-nez v0, :cond_2
 
+    .line 5
     invoke-static {}, Lorg/apache/poi/hpsf/PropertySetFactory;->newDocumentSummaryInformation()Lorg/apache/poi/hpsf/DocumentSummaryInformation;
 
     move-result-object v0
@@ -209,12 +216,14 @@
 .method public getDocumentSummaryInformation()Lorg/apache/poi/hpsf/DocumentSummaryInformation;
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lorg/apache/poi/POIDocument;->initialized:Z
 
     if-nez v0, :cond_0
 
     invoke-virtual {p0}, Lorg/apache/poi/POIDocument;->readProperties()V
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lorg/apache/poi/POIDocument;->dsInf:Lorg/apache/poi/hpsf/DocumentSummaryInformation;
 
@@ -228,6 +237,7 @@
 
     const-string v1, "\n"
 
+    .line 1
     iget-object v2, p0, Lorg/apache/poi/POIDocument;->directory:Lorg/apache/poi/poifs/filesystem/DirectoryNode;
 
     const/4 v3, 0x0
@@ -245,6 +255,7 @@
     :cond_0
     const/4 v2, 0x5
 
+    .line 2
     :try_start_0
     iget-object p0, p0, Lorg/apache/poi/POIDocument;->directory:Lorg/apache/poi/poifs/filesystem/DirectoryNode;
 
@@ -258,6 +269,7 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
 
+    .line 3
     :try_start_1
     invoke-static {p0}, Lorg/apache/poi/hpsf/PropertySetFactory;->create(Ljava/io/InputStream;)Lorg/apache/poi/hpsf/PropertySet;
 
@@ -271,6 +283,7 @@
     :catch_0
     move-exception p0
 
+    .line 4
     sget-object v4, Lorg/apache/poi/POIDocument;->logger:Lorg/apache/poi/util/POILogger;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -296,6 +309,7 @@
     :catch_1
     move-exception p0
 
+    .line 5
     sget-object v4, Lorg/apache/poi/POIDocument;->logger:Lorg/apache/poi/util/POILogger;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -322,6 +336,7 @@
     :catch_2
     move-exception p0
 
+    .line 6
     sget-object v0, Lorg/apache/poi/POIDocument;->logger:Lorg/apache/poi/util/POILogger;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -352,12 +367,14 @@
 .method public getSummaryInformation()Lorg/apache/poi/hpsf/SummaryInformation;
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lorg/apache/poi/POIDocument;->initialized:Z
 
     if-nez v0, :cond_0
 
     invoke-virtual {p0}, Lorg/apache/poi/POIDocument;->readProperties()V
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lorg/apache/poi/POIDocument;->sInf:Lorg/apache/poi/hpsf/SummaryInformation;
 
@@ -369,6 +386,7 @@
 
     const-string v0, "\u0005DocumentSummaryInformation"
 
+    .line 1
     invoke-virtual {p0, v0}, Lorg/apache/poi/POIDocument;->getPropertySet(Ljava/lang/String;)Lorg/apache/poi/hpsf/PropertySet;
 
     move-result-object v0
@@ -377,10 +395,12 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     instance-of v2, v0, Lorg/apache/poi/hpsf/DocumentSummaryInformation;
 
     if-eqz v2, :cond_0
 
+    .line 3
     check-cast v0, Lorg/apache/poi/hpsf/DocumentSummaryInformation;
 
     iput-object v0, p0, Lorg/apache/poi/POIDocument;->dsInf:Lorg/apache/poi/hpsf/DocumentSummaryInformation;
@@ -390,6 +410,7 @@
     :cond_0
     if-eqz v0, :cond_1
 
+    .line 4
     sget-object v2, Lorg/apache/poi/POIDocument;->logger:Lorg/apache/poi/util/POILogger;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -404,14 +425,17 @@
     :goto_0
     const-string v0, "\u0005SummaryInformation"
 
+    .line 5
     invoke-virtual {p0, v0}, Lorg/apache/poi/POIDocument;->getPropertySet(Ljava/lang/String;)Lorg/apache/poi/hpsf/PropertySet;
 
     move-result-object v0
 
+    .line 6
     instance-of v2, v0, Lorg/apache/poi/hpsf/SummaryInformation;
 
     if-eqz v2, :cond_2
 
+    .line 7
     check-cast v0, Lorg/apache/poi/hpsf/SummaryInformation;
 
     iput-object v0, p0, Lorg/apache/poi/POIDocument;->sInf:Lorg/apache/poi/hpsf/SummaryInformation;
@@ -421,6 +445,7 @@
     :cond_2
     if-eqz v0, :cond_3
 
+    .line 8
     sget-object v2, Lorg/apache/poi/POIDocument;->logger:Lorg/apache/poi/util/POILogger;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -435,6 +460,7 @@
     :goto_1
     const/4 v0, 0x1
 
+    .line 9
     iput-boolean v0, p0, Lorg/apache/poi/POIDocument;->initialized:Z
 
     return-void
@@ -522,59 +548,66 @@
 .end method
 
 .method public writePropertySet(Ljava/lang/String;Lorg/apache/poi/hpsf/PropertySet;Lorg/apache/poi/poifs/filesystem/POIFSFileSystem;)V
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
+    .line 1
     :try_start_0
     new-instance p0, Lorg/apache/poi/hpsf/MutablePropertySet;
 
     invoke-direct {p0, p2}, Lorg/apache/poi/hpsf/MutablePropertySet;-><init>(Lorg/apache/poi/hpsf/PropertySet;)V
 
+    .line 2
     new-instance p2, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {p2}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
+    .line 3
     invoke-virtual {p0, p2}, Lorg/apache/poi/hpsf/MutablePropertySet;->write(Ljava/io/OutputStream;)V
 
+    .line 4
     invoke-virtual {p2}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p0
 
+    .line 5
     new-instance p2, Ljava/io/ByteArrayInputStream;
 
     invoke-direct {p2, p0}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
+    .line 6
     invoke-virtual {p3, p2, p1}, Lorg/apache/poi/poifs/filesystem/POIFSFileSystem;->createDocument(Ljava/io/InputStream;Ljava/lang/String;)Lorg/apache/poi/poifs/filesystem/DocumentEntry;
 
+    .line 7
     sget-object p2, Lorg/apache/poi/POIDocument;->logger:Lorg/apache/poi/util/POILogger;
 
-    new-instance p3, Ljava/lang/StringBuilder;
+    const/4 p3, 0x3
 
-    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v0, "Wrote property set "
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, "Wrote property set "
 
-    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v0, " of size "
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, " of size "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     array-length p0, p0
 
-    invoke-virtual {p3, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
-
-    const/4 p3, 0x3
 
     invoke-virtual {p2, p3, p0}, Lorg/apache/poi/util/POILogger;->log(ILjava/lang/Object;)V
     :try_end_0
@@ -582,28 +615,29 @@
 
     goto :goto_0
 
+    .line 8
     :catch_0
     sget-object p0, Lorg/apache/poi/POIDocument;->logger:Lorg/apache/poi/util/POILogger;
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    const/4 p2, 0x7
 
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+    new-instance p3, Ljava/lang/StringBuilder;
 
-    const-string p3, "Couldn\'t write property set with name "
+    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, "Couldn\'t write property set with name "
 
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string p1, " as not supported by HPSF yet"
 
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
-
-    const/4 p2, 0x7
 
     invoke-virtual {p0, p2, p1}, Lorg/apache/poi/util/POILogger;->log(ILjava/lang/Object;)V
 

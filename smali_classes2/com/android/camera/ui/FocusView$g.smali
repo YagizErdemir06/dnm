@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field public a:Ljava/lang/ref/WeakReference;
+.field public c:Ljava/lang/ref/WeakReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference<",
@@ -32,14 +32,24 @@
 # direct methods
 .method public constructor <init>(Lcom/android/camera/ui/FocusView;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "focusView"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lcom/android/camera/ui/FocusView$g;->a:Ljava/lang/ref/WeakReference;
+    iput-object v0, p0, Lcom/android/camera/ui/FocusView$g;->c:Ljava/lang/ref/WeakReference;
 
     return-void
 .end method
@@ -49,9 +59,10 @@
 .method public run()V
     .locals 2
 
-    iget-object p0, p0, Lcom/android/camera/ui/FocusView$g;->a:Ljava/lang/ref/WeakReference;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/ui/FocusView$g;->c:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -59,17 +70,20 @@
 
     if-eqz p0, :cond_0
 
-    const-string v0, "[WTP]drawableInitialize: E"
+    const-string v0, "FocusView"
 
-    const-string v1, "FocusView"
+    const-string v1, "[WTP]drawableInitialize: E"
 
-    invoke-static {v1, v0}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
+    .line 2
+    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcom/android/camera/ui/FocusView;->q(Lcom/android/camera/ui/FocusView;)V
+    .line 3
+    invoke-static {p0}, Lcom/android/camera/ui/FocusView;->m(Lcom/android/camera/ui/FocusView;)V
 
     const-string p0, "[WTP]drawableInitialize: X"
 
-    invoke-static {v1, p0}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
+    .line 4
+    invoke-static {v0, p0}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void

@@ -1,4 +1,4 @@
-.class final Lorg/xml/sax/helpers/NamespaceSupport$Context;
+.class public final Lorg/xml/sax/helpers/NamespaceSupport$Context;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,25 +15,25 @@
 
 
 # instance fields
-.field attributeNameTable:Ljava/util/Hashtable;
+.field public attributeNameTable:Ljava/util/Hashtable;
 
 .field private declSeen:Z
 
 .field private declarations:Ljava/util/Vector;
 
-.field declsOK:Z
+.field public declsOK:Z
 
-.field defaultNS:Ljava/lang/String;
+.field public defaultNS:Ljava/lang/String;
 
-.field elementNameTable:Ljava/util/Hashtable;
+.field public elementNameTable:Ljava/util/Hashtable;
 
 .field private parent:Lorg/xml/sax/helpers/NamespaceSupport$Context;
 
-.field prefixTable:Ljava/util/Hashtable;
+.field public prefixTable:Ljava/util/Hashtable;
 
 .field private final synthetic this$0:Lorg/xml/sax/helpers/NamespaceSupport;
 
-.field uriTable:Ljava/util/Hashtable;
+.field public uriTable:Ljava/util/Hashtable;
 
 
 # direct methods

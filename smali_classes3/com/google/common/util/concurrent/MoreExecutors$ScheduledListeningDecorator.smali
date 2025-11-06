@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/MoreExecutors$ScheduledListeningDecorator;
+.class public final Lcom/google/common/util/concurrent/MoreExecutors$ScheduledListeningDecorator;
 .super Lcom/google/common/util/concurrent/MoreExecutors$ListeningDecorator;
 .source "SourceFile"
 
@@ -28,15 +28,17 @@
 
 
 # instance fields
-.field final delegate:Ljava/util/concurrent/ScheduledExecutorService;
+.field public final delegate:Ljava/util/concurrent/ScheduledExecutorService;
 
 
 # direct methods
 .method public constructor <init>(Ljava/util/concurrent/ScheduledExecutorService;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/util/concurrent/MoreExecutors$ListeningDecorator;-><init>(Ljava/util/concurrent/ExecutorService;)V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1

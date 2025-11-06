@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/app/AlertController$CheckedItemAdapter;
+.class public Landroidx/appcompat/app/AlertController$CheckedItemAdapter;
 .super Landroid/widget/ArrayAdapter;
 .source "SourceFile"
 
@@ -26,6 +26,7 @@
 .method public constructor <init>(Landroid/content/Context;II[Ljava/lang/CharSequence;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;II[Ljava/lang/Object;)V
 
     return-void

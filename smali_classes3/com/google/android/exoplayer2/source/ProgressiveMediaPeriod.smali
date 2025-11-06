@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;
+.class public final Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -143,18 +143,21 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     invoke-static {}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->createIcyMetadataHeaders()Ljava/util/Map;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->ICY_METADATA_HEADERS:Ljava/util/Map;
 
+    .line 2
     new-instance v0, Lcom/google/android/exoplayer2/Format$Builder;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/Format$Builder;-><init>()V
 
     const-string v1, "icy"
 
+    .line 3
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/Format$Builder;->setId(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v0
@@ -181,30 +184,42 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->uri:Landroid/net/Uri;
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->dataSource:Lcom/google/android/exoplayer2/upstream/DataSource;
 
+    .line 4
     iput-object p4, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->drmSessionManager:Lcom/google/android/exoplayer2/drm/DrmSessionManager;
 
+    .line 5
     iput-object p5, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->drmEventDispatcher:Lcom/google/android/exoplayer2/drm/DrmSessionEventListener$EventDispatcher;
 
+    .line 6
     iput-object p6, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->loadErrorHandlingPolicy:Lcom/google/android/exoplayer2/upstream/LoadErrorHandlingPolicy;
 
+    .line 7
     iput-object p7, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->mediaSourceEventDispatcher:Lcom/google/android/exoplayer2/source/MediaSourceEventListener$EventDispatcher;
 
+    .line 8
     iput-object p8, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->listener:Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$Listener;
 
+    .line 9
     iput-object p9, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->allocator:Lcom/google/android/exoplayer2/upstream/Allocator;
 
+    .line 10
     iput-object p10, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->customCacheKey:Ljava/lang/String;
 
     int-to-long p1, p11
 
+    .line 11
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->continueLoadingCheckIntervalBytes:J
 
+    .line 12
     new-instance p1, Lcom/google/android/exoplayer2/upstream/Loader;
 
     const-string p2, "ProgressiveMediaPeriod"
@@ -213,26 +228,31 @@
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->loader:Lcom/google/android/exoplayer2/upstream/Loader;
 
+    .line 13
     iput-object p3, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->progressiveMediaExtractor:Lcom/google/android/exoplayer2/source/ProgressiveMediaExtractor;
 
+    .line 14
     new-instance p1, Lcom/google/android/exoplayer2/util/ConditionVariable;
 
     invoke-direct {p1}, Lcom/google/android/exoplayer2/util/ConditionVariable;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->loadCondition:Lcom/google/android/exoplayer2/util/ConditionVariable;
 
-    new-instance p1, Lcom/google/android/exoplayer2/source/p;
+    .line 15
+    new-instance p1, Ld/j/a/b/v2/p;
 
-    invoke-direct {p1, p0}, Lcom/google/android/exoplayer2/source/p;-><init>(Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;)V
+    invoke-direct {p1, p0}, Ld/j/a/b/v2/p;-><init>(Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;)V
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->maybeFinishPrepareRunnable:Ljava/lang/Runnable;
 
-    new-instance p1, Lcom/google/android/exoplayer2/source/q;
+    .line 16
+    new-instance p1, Ld/j/a/b/v2/r;
 
-    invoke-direct {p1, p0}, Lcom/google/android/exoplayer2/source/q;-><init>(Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;)V
+    invoke-direct {p1, p0}, Ld/j/a/b/v2/r;-><init>(Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;)V
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->onContinueLoadingRequestedRunnable:Ljava/lang/Runnable;
 
+    .line 17
     invoke-static {}, Lcom/google/android/exoplayer2/util/Util;->createHandlerForCurrentLooper()Landroid/os/Handler;
 
     move-result-object p1
@@ -243,24 +263,30 @@
 
     new-array p2, p1, [Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$TrackId;
 
+    .line 18
     iput-object p2, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueueTrackIds:[Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$TrackId;
 
     new-array p1, p1, [Lcom/google/android/exoplayer2/source/SampleQueue;
 
+    .line 19
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 20
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->pendingResetPositionUs:J
 
     const-wide/16 p3, -0x1
 
+    .line 21
     iput-wide p3, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->length:J
 
+    .line 22
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->durationUs:J
 
     const/4 p1, 0x1
 
+    .line 23
     iput p1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->dataType:I
 
     return-void
@@ -277,6 +303,7 @@
 .method public static synthetic access$1000(Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;)Ljava/lang/Runnable;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->onContinueLoadingRequestedRunnable:Ljava/lang/Runnable;
 
     return-object p0
@@ -285,6 +312,7 @@
 .method public static synthetic access$1100(Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;)Landroid/os/Handler;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->handler:Landroid/os/Handler;
 
     return-object p0
@@ -293,6 +321,7 @@
 .method public static synthetic access$1200(Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;)J
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->getLargestQueuedTimestampUs()J
 
     move-result-wide v0
@@ -303,6 +332,7 @@
 .method public static synthetic access$1300()Ljava/util/Map;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->ICY_METADATA_HEADERS:Ljava/util/Map;
 
     return-object v0
@@ -311,6 +341,7 @@
 .method public static synthetic access$1400(Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->customCacheKey:Ljava/lang/String;
 
     return-object p0
@@ -319,6 +350,7 @@
 .method public static synthetic access$700(Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;)Lcom/google/android/exoplayer2/metadata/icy/IcyHeaders;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->icyHeaders:Lcom/google/android/exoplayer2/metadata/icy/IcyHeaders;
 
     return-object p0
@@ -327,6 +359,7 @@
 .method public static synthetic access$702(Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;Lcom/google/android/exoplayer2/metadata/icy/IcyHeaders;)Lcom/google/android/exoplayer2/metadata/icy/IcyHeaders;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->icyHeaders:Lcom/google/android/exoplayer2/metadata/icy/IcyHeaders;
 
     return-object p1
@@ -335,6 +368,7 @@
 .method public static synthetic access$800()Lcom/google/android/exoplayer2/Format;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->ICY_FORMAT:Lcom/google/android/exoplayer2/Format;
 
     return-object v0
@@ -343,6 +377,7 @@
 .method public static synthetic access$900(Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;)J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->continueLoadingCheckIntervalBytes:J
 
     return-wide v0
@@ -357,14 +392,17 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->prepared:Z
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->trackState:Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$TrackState;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->seekMap:Lcom/google/android/exoplayer2/extractor/SeekMap;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -372,25 +410,10 @@
     return-void
 .end method
 
-.method public static synthetic b(Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;Lcom/google/android/exoplayer2/extractor/SeekMap;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->lambda$seekMap$1(Lcom/google/android/exoplayer2/extractor/SeekMap;)V
-
-    return-void
-.end method
-
-.method public static synthetic c(Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->lambda$new$0()V
-
-    return-void
-.end method
-
 .method private configureRetry(Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$ExtractingLoadable;I)Z
     .locals 6
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->length:J
 
     const-wide/16 v2, -0x1
@@ -417,6 +440,7 @@
 
     goto :goto_1
 
+    .line 2
     :cond_0
     iget-boolean p2, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->prepared:Z
 
@@ -430,10 +454,12 @@
 
     if-nez p2, :cond_1
 
+    .line 3
     iput-boolean v1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->pendingDeferredRetry:Z
 
     return v0
 
+    .line 4
     :cond_1
     iget-boolean p2, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->prepared:Z
 
@@ -441,10 +467,13 @@
 
     const-wide/16 v2, 0x0
 
+    .line 5
     iput-wide v2, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->lastSeekPositionUs:J
 
+    .line 6
     iput v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->extractedSamplesCountAtStartOfLoad:I
 
+    .line 7
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     array-length p2, p0
@@ -454,17 +483,20 @@
 
     aget-object v4, p0, v0
 
+    .line 8
     invoke-virtual {v4}, Lcom/google/android/exoplayer2/source/SampleQueue;->reset()V
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
+    .line 9
     :cond_2
     invoke-static {p1, v2, v3, v2, v3}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$ExtractingLoadable;->access$600(Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$ExtractingLoadable;JJ)V
 
     return v1
 
+    .line 10
     :cond_3
     :goto_1
     iput p2, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->extractedSamplesCountAtStartOfLoad:I
@@ -475,6 +507,7 @@
 .method private copyLengthFromLoader(Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$ExtractingLoadable;)V
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->length:J
 
     const-wide/16 v2, -0x1
@@ -483,6 +516,7 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-static {p1}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$ExtractingLoadable;->access$500(Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$ExtractingLoadable;)J
 
     move-result-wide v0
@@ -505,6 +539,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -513,8 +548,10 @@
 
     const-string v2, "1"
 
+    .line 2
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
@@ -525,6 +562,7 @@
 .method private getExtractedSamplesCount()I
     .locals 4
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     array-length v0, p0
@@ -538,6 +576,7 @@
 
     aget-object v3, p0, v1
 
+    .line 2
     invoke-virtual {v3}, Lcom/google/android/exoplayer2/source/SampleQueue;->getWriteIndex()I
 
     move-result v3
@@ -555,6 +594,7 @@
 .method private getLargestQueuedTimestampUs()J
     .locals 6
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     array-length v0, p0
@@ -568,6 +608,7 @@
 
     aget-object v4, p0, v3
 
+    .line 2
     invoke-virtual {v4}, Lcom/google/android/exoplayer2/source/SampleQueue;->getLargestQueuedTimestampUs()J
 
     move-result-wide v4
@@ -587,6 +628,7 @@
 .method private isPendingReset()Z
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->pendingResetPositionUs:J
 
     const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
@@ -609,10 +651,12 @@
 .method private synthetic lambda$new$0()V
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->released:Z
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->callback:Lcom/google/android/exoplayer2/source/MediaPeriod$Callback;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -621,6 +665,7 @@
 
     check-cast v0, Lcom/google/android/exoplayer2/source/MediaPeriod$Callback;
 
+    .line 3
     invoke-interface {v0, p0}, Lcom/google/android/exoplayer2/source/SequenceableLoader$Callback;->onContinueLoadingRequested(Lcom/google/android/exoplayer2/source/SequenceableLoader;)V
 
     :cond_0
@@ -630,6 +675,7 @@
 .method private synthetic lambda$seekMap$1(Lcom/google/android/exoplayer2/extractor/SeekMap;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->setSeekMap(Lcom/google/android/exoplayer2/extractor/SeekMap;)V
 
     return-void
@@ -638,6 +684,7 @@
 .method private maybeFinishPrepare()V
     .locals 11
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->released:Z
 
     if-nez v0, :cond_a
@@ -656,6 +703,7 @@
 
     goto/16 :goto_5
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
@@ -670,6 +718,7 @@
 
     aget-object v4, v0, v3
 
+    .line 3
     invoke-virtual {v4}, Lcom/google/android/exoplayer2/source/SampleQueue;->getUpstreamFormat()Lcom/google/android/exoplayer2/Format;
 
     move-result-object v4
@@ -683,17 +732,21 @@
 
     goto :goto_0
 
+    .line 4
     :cond_2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->loadCondition:Lcom/google/android/exoplayer2/util/ConditionVariable;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ConditionVariable;->close()Z
 
+    .line 5
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     array-length v0, v0
 
+    .line 6
     new-array v1, v0, [Lcom/google/android/exoplayer2/source/TrackGroup;
 
+    .line 7
     new-array v3, v0, [Z
 
     move v4, v2
@@ -703,6 +756,7 @@
 
     if-ge v4, v0, :cond_9
 
+    .line 8
     iget-object v6, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     aget-object v6, v6, v4
@@ -717,14 +771,17 @@
 
     check-cast v6, Lcom/google/android/exoplayer2/Format;
 
+    .line 9
     iget-object v7, v6, Lcom/google/android/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
+    .line 10
     invoke-static {v7}, Lcom/google/android/exoplayer2/util/MimeTypes;->isAudio(Ljava/lang/String;)Z
 
     move-result v8
 
     if-nez v8, :cond_4
 
+    .line 11
     invoke-static {v7}, Lcom/google/android/exoplayer2/util/MimeTypes;->isVideo(Ljava/lang/String;)Z
 
     move-result v7
@@ -742,21 +799,25 @@
     :goto_2
     move v7, v5
 
+    .line 12
     :goto_3
     aput-boolean v7, v3, v4
 
+    .line 13
     iget-boolean v9, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->haveAudioVideoTracks:Z
 
     or-int/2addr v7, v9
 
     iput-boolean v7, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->haveAudioVideoTracks:Z
 
+    .line 14
     iget-object v7, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->icyHeaders:Lcom/google/android/exoplayer2/metadata/icy/IcyHeaders;
 
     if-eqz v7, :cond_8
 
     if-nez v8, :cond_5
 
+    .line 15
     iget-object v9, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueueTrackIds:[Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$TrackId;
 
     aget-object v9, v9, v4
@@ -765,11 +826,13 @@
 
     if-eqz v9, :cond_7
 
+    .line 16
     :cond_5
     iget-object v9, v6, Lcom/google/android/exoplayer2/Format;->metadata:Lcom/google/android/exoplayer2/metadata/Metadata;
 
     if-nez v9, :cond_6
 
+    .line 17
     new-instance v9, Lcom/google/android/exoplayer2/metadata/Metadata;
 
     new-array v10, v5, [Lcom/google/android/exoplayer2/metadata/Metadata$Entry;
@@ -785,10 +848,12 @@
 
     aput-object v7, v10, v2
 
+    .line 18
     invoke-virtual {v9, v10}, Lcom/google/android/exoplayer2/metadata/Metadata;->copyWithAppendedEntries([Lcom/google/android/exoplayer2/metadata/Metadata$Entry;)Lcom/google/android/exoplayer2/metadata/Metadata;
 
     move-result-object v9
 
+    .line 19
     :goto_4
     invoke-virtual {v6}, Lcom/google/android/exoplayer2/Format;->buildUpon()Lcom/google/android/exoplayer2/Format$Builder;
 
@@ -805,6 +870,7 @@
     :cond_7
     if-eqz v8, :cond_8
 
+    .line 20
     iget v8, v6, Lcom/google/android/exoplayer2/Format;->averageBitrate:I
 
     const/4 v9, -0x1
@@ -819,6 +885,7 @@
 
     if-eq v8, v9, :cond_8
 
+    .line 21
     invoke-virtual {v6}, Lcom/google/android/exoplayer2/Format;->buildUpon()Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v6
@@ -833,6 +900,7 @@
 
     move-result-object v6
 
+    .line 22
     :cond_8
     iget-object v7, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->drmSessionManager:Lcom/google/android/exoplayer2/drm/DrmSessionManager;
 
@@ -844,6 +912,7 @@
 
     move-result-object v6
 
+    .line 23
     new-instance v7, Lcom/google/android/exoplayer2/source/TrackGroup;
 
     invoke-static {v4}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -862,6 +931,7 @@
 
     goto/16 :goto_1
 
+    .line 24
     :cond_9
     new-instance v0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$TrackState;
 
@@ -873,8 +943,10 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->trackState:Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$TrackState;
 
+    .line 25
     iput-boolean v5, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->prepared:Z
 
+    .line 26
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->callback:Lcom/google/android/exoplayer2/source/MediaPeriod$Callback;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -893,16 +965,20 @@
 .method private maybeNotifyDownstreamFormat(I)V
     .locals 10
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->assertPrepared()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->trackState:Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$TrackState;
 
     iget-object v1, v0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$TrackState;->trackNotifiedDownstreamFormats:[Z
 
+    .line 3
     aget-boolean v2, v1, p1
 
     if-nez v2, :cond_0
 
+    .line 4
     iget-object v0, v0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$TrackState;->tracks:Lcom/google/android/exoplayer2/source/TrackGroupArray;
 
     invoke-virtual {v0, p1}, Lcom/google/android/exoplayer2/source/TrackGroupArray;->get(I)Lcom/google/android/exoplayer2/source/TrackGroup;
@@ -915,10 +991,12 @@
 
     move-result-object v5
 
+    .line 5
     iget-object v3, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->mediaSourceEventDispatcher:Lcom/google/android/exoplayer2/source/MediaSourceEventListener$EventDispatcher;
 
     iget-object v0, v5, Lcom/google/android/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
+    .line 6
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/MimeTypes;->getTrackType(Ljava/lang/String;)I
 
     move-result v4
@@ -929,10 +1007,12 @@
 
     iget-wide v8, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->lastSeekPositionUs:J
 
+    .line 7
     invoke-virtual/range {v3 .. v9}, Lcom/google/android/exoplayer2/source/MediaSourceEventListener$EventDispatcher;->downstreamFormatChanged(ILcom/google/android/exoplayer2/Format;ILjava/lang/Object;J)V
 
     const/4 p0, 0x1
 
+    .line 8
     aput-boolean p0, v1, p1
 
     :cond_0
@@ -942,12 +1022,15 @@
 .method private maybeStartDeferredRetry(I)V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->assertPrepared()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->trackState:Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$TrackState;
 
     iget-object v0, v0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$TrackState;->trackIsAudioVideoFlags:[Z
 
+    .line 3
     iget-boolean v1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->pendingDeferredRetry:Z
 
     if-eqz v1, :cond_2
@@ -962,6 +1045,7 @@
 
     const/4 v0, 0x0
 
+    .line 4
     invoke-virtual {p1, v0}, Lcom/google/android/exoplayer2/source/SampleQueue;->isReady(Z)Z
 
     move-result p1
@@ -973,18 +1057,24 @@
     :cond_0
     const-wide/16 v1, 0x0
 
+    .line 5
     iput-wide v1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->pendingResetPositionUs:J
 
+    .line 6
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->pendingDeferredRetry:Z
 
     const/4 p1, 0x1
 
+    .line 7
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->notifyDiscontinuity:Z
 
+    .line 8
     iput-wide v1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->lastSeekPositionUs:J
 
+    .line 9
     iput v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->extractedSamplesCountAtStartOfLoad:I
 
+    .line 10
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     array-length v1, p1
@@ -994,12 +1084,14 @@
 
     aget-object v2, p1, v0
 
+    .line 11
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/source/SampleQueue;->reset()V
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
+    .line 12
     :cond_1
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->callback:Lcom/google/android/exoplayer2/source/MediaPeriod$Callback;
 
@@ -1019,6 +1111,7 @@
 .method private prepareTrackOutput(Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$TrackId;)Lcom/google/android/exoplayer2/extractor/TrackOutput;
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     array-length v0, v0
@@ -1028,6 +1121,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 2
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueueTrackIds:[Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$TrackId;
 
     aget-object v2, v2, v1
@@ -1038,6 +1132,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     aget-object p0, p0, v1
@@ -1049,6 +1144,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->allocator:Lcom/google/android/exoplayer2/upstream/Allocator;
 
@@ -1056,12 +1152,15 @@
 
     iget-object v3, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->drmEventDispatcher:Lcom/google/android/exoplayer2/drm/DrmSessionEventListener$EventDispatcher;
 
+    .line 5
     invoke-static {v1, v2, v3}, Lcom/google/android/exoplayer2/source/SampleQueue;->createWithDrm(Lcom/google/android/exoplayer2/upstream/Allocator;Lcom/google/android/exoplayer2/drm/DrmSessionManager;Lcom/google/android/exoplayer2/drm/DrmSessionEventListener$EventDispatcher;)Lcom/google/android/exoplayer2/source/SampleQueue;
 
     move-result-object v1
 
+    .line 6
     invoke-virtual {v1, p0}, Lcom/google/android/exoplayer2/source/SampleQueue;->setUpstreamFormatChangeListener(Lcom/google/android/exoplayer2/source/SampleQueue$UpstreamFormatChangedListener;)V
 
+    .line 7
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueueTrackIds:[Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$TrackId;
 
     add-int/lit8 v3, v0, 0x1
@@ -1072,8 +1171,10 @@
 
     check-cast v2, [Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$TrackId;
 
+    .line 8
     aput-object p1, v2, v0
 
+    .line 9
     invoke-static {v2}, Lcom/google/android/exoplayer2/util/Util;->castNonNullTypeArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p1
@@ -1082,6 +1183,7 @@
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueueTrackIds:[Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$TrackId;
 
+    .line 10
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     invoke-static {p1, v3}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
@@ -1090,8 +1192,10 @@
 
     check-cast p1, [Lcom/google/android/exoplayer2/source/SampleQueue;
 
+    .line 11
     aput-object v1, p1, v0
 
+    .line 12
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Util;->castNonNullTypeArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p1
@@ -1106,6 +1210,7 @@
 .method private seekInsideBufferUs([ZJ)Z
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     array-length v0, v0
@@ -1117,16 +1222,19 @@
     :goto_0
     if-ge v2, v0, :cond_2
 
+    .line 2
     iget-object v3, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     aget-object v3, v3, v2
 
+    .line 3
     invoke-virtual {v3, p2, p3, v1}, Lcom/google/android/exoplayer2/source/SampleQueue;->seekTo(JZ)Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
+    .line 4
     aget-boolean v3, p1, v2
 
     if-nez v3, :cond_0
@@ -1152,6 +1260,7 @@
 .method private setSeekMap(Lcom/google/android/exoplayer2/extractor/SeekMap;)V
     .locals 7
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->icyHeaders:Lcom/google/android/exoplayer2/metadata/icy/IcyHeaders;
 
     const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
@@ -1170,12 +1279,14 @@
     :goto_0
     iput-object v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->seekMap:Lcom/google/android/exoplayer2/extractor/SeekMap;
 
+    .line 2
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/SeekMap;->getDurationUs()J
 
     move-result-wide v3
 
     iput-wide v3, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->durationUs:J
 
+    .line 3
     iget-wide v3, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->length:J
 
     const-wide/16 v5, -0x1
@@ -1208,9 +1319,11 @@
 
     const/4 v3, 0x7
 
+    .line 4
     :cond_2
     iput v3, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->dataType:I
 
+    .line 5
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->listener:Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$Listener;
 
     iget-wide v1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->durationUs:J
@@ -1223,10 +1336,12 @@
 
     invoke-interface {v0, v1, v2, p1, v3}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$Listener;->onSourceInfoRefreshed(JZZ)V
 
+    .line 6
     iget-boolean p1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->prepared:Z
 
     if-nez p1, :cond_3
 
+    .line 7
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->maybeFinishPrepare()V
 
     :cond_3
@@ -1238,6 +1353,7 @@
 
     move-object/from16 v7, p0
 
+    .line 1
     new-instance v8, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$ExtractingLoadable;
 
     iget-object v2, v7, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->uri:Landroid/net/Uri;
@@ -1256,16 +1372,19 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$ExtractingLoadable;-><init>(Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;Landroid/net/Uri;Lcom/google/android/exoplayer2/upstream/DataSource;Lcom/google/android/exoplayer2/source/ProgressiveMediaExtractor;Lcom/google/android/exoplayer2/extractor/ExtractorOutput;Lcom/google/android/exoplayer2/util/ConditionVariable;)V
 
+    .line 2
     iget-boolean v0, v7, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->prepared:Z
 
     if-eqz v0, :cond_2
 
+    .line 3
     invoke-direct/range {p0 .. p0}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->isPendingReset()Z
 
     move-result v0
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 4
     iget-wide v0, v7, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->durationUs:J
 
     const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
@@ -1282,15 +1401,19 @@
 
     const/4 v0, 0x1
 
+    .line 5
     iput-boolean v0, v7, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->loadingFinished:Z
 
+    .line 6
     iput-wide v2, v7, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->pendingResetPositionUs:J
 
     return-void
 
+    .line 7
     :cond_0
     iget-object v0, v7, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->seekMap:Lcom/google/android/exoplayer2/extractor/SeekMap;
 
+    .line 8
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -1309,8 +1432,10 @@
 
     iget-wide v4, v7, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->pendingResetPositionUs:J
 
+    .line 9
     invoke-static {v8, v0, v1, v4, v5}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$ExtractingLoadable;->access$600(Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$ExtractingLoadable;JJ)V
 
+    .line 10
     iget-object v0, v7, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     array-length v1, v0
@@ -1322,6 +1447,7 @@
 
     aget-object v5, v0, v4
 
+    .line 11
     iget-wide v9, v7, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->pendingResetPositionUs:J
 
     invoke-virtual {v5, v9, v10}, Lcom/google/android/exoplayer2/source/SampleQueue;->setStartTimeUs(J)V
@@ -1330,9 +1456,11 @@
 
     goto :goto_0
 
+    .line 12
     :cond_1
     iput-wide v2, v7, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->pendingResetPositionUs:J
 
+    .line 13
     :cond_2
     invoke-direct/range {p0 .. p0}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->getExtractedSamplesCount()I
 
@@ -1340,28 +1468,34 @@
 
     iput v0, v7, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->extractedSamplesCountAtStartOfLoad:I
 
+    .line 14
     iget-object v0, v7, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->loader:Lcom/google/android/exoplayer2/upstream/Loader;
 
     iget-object v1, v7, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->loadErrorHandlingPolicy:Lcom/google/android/exoplayer2/upstream/LoadErrorHandlingPolicy;
 
     iget v2, v7, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->dataType:I
 
+    .line 15
     invoke-interface {v1, v2}, Lcom/google/android/exoplayer2/upstream/LoadErrorHandlingPolicy;->getMinimumLoadableRetryCount(I)I
 
     move-result v1
 
+    .line 16
     invoke-virtual {v0, v8, v7, v1}, Lcom/google/android/exoplayer2/upstream/Loader;->startLoading(Lcom/google/android/exoplayer2/upstream/Loader$Loadable;Lcom/google/android/exoplayer2/upstream/Loader$Callback;I)J
 
     move-result-wide v13
 
+    .line 17
     invoke-static {v8}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$ExtractingLoadable;->access$300(Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$ExtractingLoadable;)Lcom/google/android/exoplayer2/upstream/DataSpec;
 
     move-result-object v12
 
+    .line 18
     iget-object v15, v7, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->mediaSourceEventDispatcher:Lcom/google/android/exoplayer2/source/MediaSourceEventListener$EventDispatcher;
 
     new-instance v16, Lcom/google/android/exoplayer2/source/LoadEventInfo;
 
+    .line 19
     invoke-static {v8}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$ExtractingLoadable;->access$200(Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$ExtractingLoadable;)J
 
     move-result-wide v10
@@ -1380,6 +1514,7 @@
 
     const/16 v21, 0x0
 
+    .line 20
     invoke-static {v8}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$ExtractingLoadable;->access$400(Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$ExtractingLoadable;)J
 
     move-result-wide v22
@@ -1388,6 +1523,7 @@
 
     move-wide/from16 v24, v0
 
+    .line 21
     invoke-virtual/range {v15 .. v25}, Lcom/google/android/exoplayer2/source/MediaSourceEventListener$EventDispatcher;->loadStarted(Lcom/google/android/exoplayer2/source/LoadEventInfo;IILcom/google/android/exoplayer2/Format;ILjava/lang/Object;JJ)V
 
     return-void
@@ -1396,6 +1532,7 @@
 .method private suppressRead()Z
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->notifyDiscontinuity:Z
 
     if-nez v0, :cond_1
@@ -1423,15 +1560,33 @@
 
 
 # virtual methods
+.method public synthetic b()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->lambda$new$0()V
+
+    return-void
+.end method
+
+.method public synthetic c(Lcom/google/android/exoplayer2/extractor/SeekMap;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->lambda$seekMap$1(Lcom/google/android/exoplayer2/extractor/SeekMap;)V
+
+    return-void
+.end method
+
 .method public continueLoading(J)Z
     .locals 0
 
+    .line 1
     iget-boolean p1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->loadingFinished:Z
 
     if-nez p1, :cond_2
 
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->loader:Lcom/google/android/exoplayer2/upstream/Loader;
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/upstream/Loader;->hasFatalError()Z
 
     move-result p1
@@ -1452,6 +1607,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->loadCondition:Lcom/google/android/exoplayer2/util/ConditionVariable;
 
@@ -1459,6 +1615,7 @@
 
     move-result p1
 
+    .line 4
     iget-object p2, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->loader:Lcom/google/android/exoplayer2/upstream/Loader;
 
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/upstream/Loader;->isLoading()Z
@@ -1467,6 +1624,7 @@
 
     if-nez p2, :cond_1
 
+    .line 5
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->startLoading()V
 
     const/4 p1, 0x1
@@ -1484,8 +1642,10 @@
 .method public discardBuffer(JZ)V
     .locals 5
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->assertPrepared()V
 
+    .line 2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->isPendingReset()Z
 
     move-result v0
@@ -1494,11 +1654,13 @@
 
     return-void
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->trackState:Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$TrackState;
 
     iget-object v0, v0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$TrackState;->trackEnabledStates:[Z
 
+    .line 4
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     array-length v1, v1
@@ -1508,6 +1670,7 @@
     :goto_0
     if-ge v2, v1, :cond_1
 
+    .line 5
     iget-object v3, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     aget-object v3, v3, v2
@@ -1529,8 +1692,10 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueuesBuilt:Z
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->handler:Landroid/os/Handler;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->maybeFinishPrepareRunnable:Ljava/lang/Runnable;
@@ -1543,8 +1708,10 @@
 .method public getAdjustedSeekPositionUs(JLcom/google/android/exoplayer2/SeekParameters;)J
     .locals 8
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->assertPrepared()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->seekMap:Lcom/google/android/exoplayer2/extractor/SeekMap;
 
     invoke-interface {v0}, Lcom/google/android/exoplayer2/extractor/SeekMap;->isSeekable()Z
@@ -1557,6 +1724,7 @@
 
     return-wide p0
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->seekMap:Lcom/google/android/exoplayer2/extractor/SeekMap;
 
@@ -1564,6 +1732,7 @@
 
     move-result-object p0
 
+    .line 4
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/SeekMap$SeekPoints;->first:Lcom/google/android/exoplayer2/extractor/SeekPoint;
 
     iget-wide v4, v0, Lcom/google/android/exoplayer2/extractor/SeekPoint;->timeUs:J
@@ -1586,12 +1755,15 @@
 .method public getBufferedPositionUs()J
     .locals 11
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->assertPrepared()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->trackState:Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$TrackState;
 
     iget-object v0, v0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$TrackState;->trackIsAudioVideoFlags:[Z
 
+    .line 3
     iget-boolean v1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->loadingFinished:Z
 
     const-wide/high16 v2, -0x8000000000000000L
@@ -1600,6 +1772,7 @@
 
     return-wide v2
 
+    .line 4
     :cond_0
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->isPendingReset()Z
 
@@ -1607,10 +1780,12 @@
 
     if-eqz v1, :cond_1
 
+    .line 5
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->pendingResetPositionUs:J
 
     return-wide v0
 
+    .line 6
     :cond_1
     iget-boolean v1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->haveAudioVideoTracks:Z
 
@@ -1618,6 +1793,7 @@
 
     if-eqz v1, :cond_3
 
+    .line 7
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     array-length v1, v1
@@ -1629,6 +1805,7 @@
     :goto_0
     if-ge v6, v1, :cond_4
 
+    .line 8
     aget-boolean v9, v0, v6
 
     if-eqz v9, :cond_2
@@ -1643,10 +1820,12 @@
 
     if-nez v9, :cond_2
 
+    .line 9
     iget-object v9, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     aget-object v9, v9, v6
 
+    .line 10
     invoke-virtual {v9}, Lcom/google/android/exoplayer2/source/SampleQueue;->getLargestQueuedTimestampUs()J
 
     move-result-wide v9
@@ -1668,6 +1847,7 @@
 
     if-nez v0, :cond_5
 
+    .line 11
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->getLargestQueuedTimestampUs()J
 
     move-result-wide v7
@@ -1677,6 +1857,7 @@
 
     if-nez v0, :cond_6
 
+    .line 12
     iget-wide v7, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->lastSeekPositionUs:J
 
     :cond_6
@@ -1686,6 +1867,7 @@
 .method public getNextLoadPositionUs()J
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->enabledTrackCount:I
 
     if-nez v0, :cond_0
@@ -1706,8 +1888,10 @@
 .method public getTrackGroups()Lcom/google/android/exoplayer2/source/TrackGroupArray;
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->assertPrepared()V
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->trackState:Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$TrackState;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$TrackState;->tracks:Lcom/google/android/exoplayer2/source/TrackGroupArray;
@@ -1718,6 +1902,7 @@
 .method public icyTrack()Lcom/google/android/exoplayer2/extractor/TrackOutput;
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$TrackId;
 
     const/4 v1, 0x0
@@ -1736,6 +1921,7 @@
 .method public isLoading()Z
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->loader:Lcom/google/android/exoplayer2/upstream/Loader;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/upstream/Loader;->isLoading()Z
@@ -1766,6 +1952,7 @@
 .method public isReady(I)Z
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->suppressRead()Z
 
     move-result v0
@@ -1848,8 +2035,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->maybeThrowError()V
 
+    .line 2
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->loadingFinished:Z
 
     if-eqz v0, :cond_1
@@ -1861,11 +2050,12 @@
     goto :goto_0
 
     :cond_0
-    const-string p0, "Loading finished before preparation is complete."
+    const/4 p0, 0x0
 
-    const/4 v0, 0x0
+    const-string v0, "Loading finished before preparation is complete."
 
-    invoke-static {p0, v0}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedContainer(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
+    .line 3
+    invoke-static {v0, p0}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedContainer(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
     move-result-object p0
 
@@ -1934,6 +2124,13 @@
     .line 10
     iget-object v2, v0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->mediaSourceEventDispatcher:Lcom/google/android/exoplayer2/source/MediaSourceEventListener$EventDispatcher;
 
+    .line 11
+    invoke-static/range {p1 .. p1}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$ExtractingLoadable;->access$400(Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$ExtractingLoadable;)J
+
+    move-result-wide v9
+
+    iget-wide v11, v0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->durationUs:J
+
     const/4 v4, 0x1
 
     const/4 v5, -0x1
@@ -1943,13 +2140,6 @@
     const/4 v7, 0x0
 
     const/4 v8, 0x0
-
-    .line 11
-    invoke-static/range {p1 .. p1}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$ExtractingLoadable;->access$400(Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$ExtractingLoadable;)J
-
-    move-result-wide v9
-
-    iget-wide v11, v0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->durationUs:J
 
     move-object v3, v14
 
@@ -2227,16 +2417,6 @@
     .line 10
     new-instance v1, Lcom/google/android/exoplayer2/source/MediaLoadData;
 
-    const/16 v16, 0x1
-
-    const/16 v17, -0x1
-
-    const/16 v18, 0x0
-
-    const/16 v19, 0x0
-
-    const/16 v20, 0x0
-
     .line 11
     invoke-static/range {p1 .. p1}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$ExtractingLoadable;->access$400(Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$ExtractingLoadable;)J
 
@@ -2252,6 +2432,16 @@
     invoke-static {v2, v3}, Lcom/google/android/exoplayer2/util/Util;->usToMs(J)J
 
     move-result-wide v23
+
+    const/16 v16, 0x1
+
+    const/16 v17, -0x1
+
+    const/16 v18, 0x0
+
+    const/16 v19, 0x0
+
+    const/16 v20, 0x0
 
     move-object v15, v1
 
@@ -2397,6 +2587,7 @@
 .method public onLoaderReleased()V
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     array-length v1, v0
@@ -2408,12 +2599,14 @@
 
     aget-object v3, v0, v2
 
+    .line 2
     invoke-virtual {v3}, Lcom/google/android/exoplayer2/source/SampleQueue;->release()V
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->progressiveMediaExtractor:Lcom/google/android/exoplayer2/source/ProgressiveMediaExtractor;
 
@@ -2425,6 +2618,7 @@
 .method public onUpstreamFormatChanged(Lcom/google/android/exoplayer2/Format;)V
     .locals 0
 
+    .line 1
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->handler:Landroid/os/Handler;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->maybeFinishPrepareRunnable:Ljava/lang/Runnable;
@@ -2437,12 +2631,15 @@
 .method public prepare(Lcom/google/android/exoplayer2/source/MediaPeriod$Callback;J)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->callback:Lcom/google/android/exoplayer2/source/MediaPeriod$Callback;
 
+    .line 2
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->loadCondition:Lcom/google/android/exoplayer2/util/ConditionVariable;
 
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ConditionVariable;->open()Z
 
+    .line 3
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->startLoading()V
 
     return-void
@@ -2451,6 +2648,7 @@
 .method public readData(ILcom/google/android/exoplayer2/FormatHolder;Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;I)I
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->suppressRead()Z
 
     move-result v0
@@ -2461,21 +2659,25 @@
 
     return v1
 
+    .line 2
     :cond_0
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->maybeNotifyDownstreamFormat(I)V
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     aget-object v0, v0, p1
 
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->loadingFinished:Z
 
+    .line 4
     invoke-virtual {v0, p2, p3, p4, v2}, Lcom/google/android/exoplayer2/source/SampleQueue;->read(Lcom/google/android/exoplayer2/FormatHolder;Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;IZ)I
 
     move-result p2
 
     if-ne p2, v1, :cond_1
 
+    .line 5
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->maybeStartDeferredRetry(I)V
 
     :cond_1
@@ -2485,6 +2687,7 @@
 .method public readDiscontinuity()J
     .locals 2
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->notifyDiscontinuity:Z
 
     if-eqz v0, :cond_1
@@ -2493,6 +2696,7 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->getExtractedSamplesCount()I
 
     move-result v0
@@ -2504,8 +2708,10 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 3
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->notifyDiscontinuity:Z
 
+    .line 4
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->lastSeekPositionUs:J
 
     return-wide v0
@@ -2525,10 +2731,12 @@
 .method public release()V
     .locals 4
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->prepared:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     array-length v1, v0
@@ -2540,27 +2748,32 @@
 
     aget-object v3, v0, v2
 
+    .line 3
     invoke-virtual {v3}, Lcom/google/android/exoplayer2/source/SampleQueue;->preRelease()V
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->loader:Lcom/google/android/exoplayer2/upstream/Loader;
 
     invoke-virtual {v0, p0}, Lcom/google/android/exoplayer2/upstream/Loader;->release(Lcom/google/android/exoplayer2/upstream/Loader$ReleaseCallback;)V
 
+    .line 5
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->handler:Landroid/os/Handler;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
+    .line 6
     iput-object v1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->callback:Lcom/google/android/exoplayer2/source/MediaPeriod$Callback;
 
     const/4 v0, 0x1
 
+    .line 7
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->released:Z
 
     return-void
@@ -2569,11 +2782,12 @@
 .method public seekMap(Lcom/google/android/exoplayer2/extractor/SeekMap;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->handler:Landroid/os/Handler;
 
-    new-instance v1, Lcom/google/android/exoplayer2/source/r;
+    new-instance v1, Ld/j/a/b/v2/q;
 
-    invoke-direct {v1, p0, p1}, Lcom/google/android/exoplayer2/source/r;-><init>(Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;Lcom/google/android/exoplayer2/extractor/SeekMap;)V
+    invoke-direct {v1, p0, p1}, Ld/j/a/b/v2/q;-><init>(Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;Lcom/google/android/exoplayer2/extractor/SeekMap;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -2583,12 +2797,15 @@
 .method public seekToUs(J)J
     .locals 4
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->assertPrepared()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->trackState:Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$TrackState;
 
     iget-object v0, v0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$TrackState;->trackIsAudioVideoFlags:[Z
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->seekMap:Lcom/google/android/exoplayer2/extractor/SeekMap;
 
     invoke-interface {v1}, Lcom/google/android/exoplayer2/extractor/SeekMap;->isSeekable()Z
@@ -2605,20 +2822,25 @@
     :goto_0
     const/4 v1, 0x0
 
+    .line 4
     iput-boolean v1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->notifyDiscontinuity:Z
 
+    .line 5
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->lastSeekPositionUs:J
 
+    .line 6
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->isPendingReset()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
+    .line 7
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->pendingResetPositionUs:J
 
     return-wide p1
 
+    .line 8
     :cond_1
     iget v2, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->dataType:I
 
@@ -2626,6 +2848,7 @@
 
     if-eq v2, v3, :cond_2
 
+    .line 9
     invoke-direct {p0, v0, p1, p2}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->seekInsideBufferUs([ZJ)Z
 
     move-result v0
@@ -2634,13 +2857,17 @@
 
     return-wide p1
 
+    .line 10
     :cond_2
     iput-boolean v1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->pendingDeferredRetry:Z
 
+    .line 11
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->pendingResetPositionUs:J
 
+    .line 12
     iput-boolean v1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->loadingFinished:Z
 
+    .line 13
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->loader:Lcom/google/android/exoplayer2/upstream/Loader;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/upstream/Loader;->isLoading()Z
@@ -2649,6 +2876,7 @@
 
     if-eqz v0, :cond_4
 
+    .line 14
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     array-length v2, v0
@@ -2658,12 +2886,14 @@
 
     aget-object v3, v0, v1
 
+    .line 15
     invoke-virtual {v3}, Lcom/google/android/exoplayer2/source/SampleQueue;->discardToEnd()V
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
+    .line 16
     :cond_3
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->loader:Lcom/google/android/exoplayer2/upstream/Loader;
 
@@ -2671,11 +2901,13 @@
 
     goto :goto_3
 
+    .line 17
     :cond_4
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->loader:Lcom/google/android/exoplayer2/upstream/Loader;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/upstream/Loader;->clearFatalError()V
 
+    .line 18
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     array-length v0, p0
@@ -2685,6 +2917,7 @@
 
     aget-object v2, p0, v1
 
+    .line 19
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/source/SampleQueue;->reset()V
 
     add-int/lit8 v1, v1, 0x1
@@ -2699,20 +2932,25 @@
 .method public selectTracks([Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;[Z[Lcom/google/android/exoplayer2/source/SampleStream;[ZJ)J
     .locals 8
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->assertPrepared()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->trackState:Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$TrackState;
 
     iget-object v1, v0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$TrackState;->tracks:Lcom/google/android/exoplayer2/source/TrackGroupArray;
 
+    .line 3
     iget-object v0, v0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$TrackState;->trackEnabledStates:[Z
 
+    .line 4
     iget v2, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->enabledTrackCount:I
 
     const/4 v3, 0x0
 
     move v4, v3
 
+    .line 5
     :goto_0
     array-length v5, p1
 
@@ -2720,39 +2958,47 @@
 
     if-ge v4, v5, :cond_2
 
+    .line 6
     aget-object v5, p3, v4
 
     if-eqz v5, :cond_1
 
-    aget-object v7, p1, v4
+    aget-object v5, p1, v4
 
-    if-eqz v7, :cond_0
+    if-eqz v5, :cond_0
 
-    aget-boolean v7, p2, v4
+    aget-boolean v5, p2, v4
 
-    if-nez v7, :cond_1
+    if-nez v5, :cond_1
 
+    .line 7
     :cond_0
+    aget-object v5, p3, v4
+
     check-cast v5, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$SampleStreamImpl;
 
     invoke-static {v5}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$SampleStreamImpl;->access$000(Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$SampleStreamImpl;)I
 
     move-result v5
 
+    .line 8
     aget-boolean v7, v0, v5
 
     invoke-static {v7}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 9
     iget v7, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->enabledTrackCount:I
 
     sub-int/2addr v7, v6
 
     iput v7, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->enabledTrackCount:I
 
+    .line 10
     aput-boolean v3, v0, v5
 
     const/4 v5, 0x0
 
+    .line 11
     aput-object v5, p3, v4
 
     :cond_1
@@ -2760,6 +3006,7 @@
 
     goto :goto_0
 
+    .line 12
     :cond_2
     iget-boolean p2, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->seenFirstTrackSelection:Z
 
@@ -2787,11 +3034,13 @@
     :goto_2
     move v2, v3
 
+    .line 13
     :goto_3
     array-length v4, p1
 
     if-ge v2, v4, :cond_9
 
+    .line 14
     aget-object v4, p3, v2
 
     if-nez v4, :cond_8
@@ -2800,6 +3049,10 @@
 
     if-eqz v4, :cond_8
 
+    .line 15
+    aget-object v4, p1, v2
+
+    .line 16
     invoke-interface {v4}, Lcom/google/android/exoplayer2/trackselection/TrackSelection;->length()I
 
     move-result v5
@@ -2816,6 +3069,7 @@
     :goto_4
     invoke-static {v5}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 17
     invoke-interface {v4, v3}, Lcom/google/android/exoplayer2/trackselection/TrackSelection;->getIndexInTrackGroup(I)I
 
     move-result v5
@@ -2832,6 +3086,7 @@
     :goto_5
     invoke-static {v5}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 18
     invoke-interface {v4}, Lcom/google/android/exoplayer2/trackselection/TrackSelection;->getTrackGroup()Lcom/google/android/exoplayer2/source/TrackGroup;
 
     move-result-object v4
@@ -2840,40 +3095,48 @@
 
     move-result v4
 
+    .line 19
     aget-boolean v5, v0, v4
 
     xor-int/2addr v5, v6
 
     invoke-static {v5}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 20
     iget v5, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->enabledTrackCount:I
 
     add-int/2addr v5, v6
 
     iput v5, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->enabledTrackCount:I
 
+    .line 21
     aput-boolean v6, v0, v4
 
+    .line 22
     new-instance v5, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$SampleStreamImpl;
 
     invoke-direct {v5, p0, v4}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$SampleStreamImpl;-><init>(Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;I)V
 
     aput-object v5, p3, v2
 
+    .line 23
     aput-boolean v6, p4, v2
 
     if-nez p2, :cond_8
 
+    .line 24
     iget-object p2, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     aget-object p2, p2, v4
 
+    .line 25
     invoke-virtual {p2, p5, p6, v6}, Lcom/google/android/exoplayer2/source/SampleQueue;->seekTo(JZ)Z
 
     move-result v4
 
     if-nez v4, :cond_7
 
+    .line 26
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/source/SampleQueue;->getReadIndex()I
 
     move-result p2
@@ -2893,15 +3156,19 @@
 
     goto :goto_3
 
+    .line 27
     :cond_9
     iget p1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->enabledTrackCount:I
 
     if-nez p1, :cond_c
 
+    .line 28
     iput-boolean v3, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->pendingDeferredRetry:Z
 
+    .line 29
     iput-boolean v3, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->notifyDiscontinuity:Z
 
+    .line 30
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->loader:Lcom/google/android/exoplayer2/upstream/Loader;
 
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/upstream/Loader;->isLoading()Z
@@ -2910,6 +3177,7 @@
 
     if-eqz p1, :cond_b
 
+    .line 31
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     array-length p2, p1
@@ -2919,12 +3187,14 @@
 
     aget-object p3, p1, v3
 
+    .line 32
     invoke-virtual {p3}, Lcom/google/android/exoplayer2/source/SampleQueue;->discardToEnd()V
 
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_7
 
+    .line 33
     :cond_a
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->loader:Lcom/google/android/exoplayer2/upstream/Loader;
 
@@ -2932,6 +3202,7 @@
 
     goto :goto_a
 
+    .line 34
     :cond_b
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
@@ -2942,6 +3213,7 @@
 
     aget-object p3, p1, v3
 
+    .line 35
     invoke-virtual {p3}, Lcom/google/android/exoplayer2/source/SampleQueue;->reset()V
 
     add-int/lit8 v3, v3, 0x1
@@ -2951,19 +3223,23 @@
     :cond_c
     if-eqz p2, :cond_e
 
+    .line 36
     invoke-virtual {p0, p5, p6}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->seekToUs(J)J
 
     move-result-wide p5
 
+    .line 37
     :goto_9
     array-length p1, p3
 
     if-ge v3, p1, :cond_e
 
+    .line 38
     aget-object p1, p3, v3
 
     if-eqz p1, :cond_d
 
+    .line 39
     aput-boolean v6, p4, v3
 
     :cond_d
@@ -2971,6 +3247,7 @@
 
     goto :goto_9
 
+    .line 40
     :cond_e
     :goto_a
     iput-boolean v6, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->seenFirstTrackSelection:Z
@@ -2981,6 +3258,7 @@
 .method public skipData(IJ)I
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->suppressRead()Z
 
     move-result v0
@@ -2991,23 +3269,28 @@
 
     return p0
 
+    .line 2
     :cond_0
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->maybeNotifyDownstreamFormat(I)V
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->sampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     aget-object v0, v0, p1
 
+    .line 4
     iget-boolean v1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->loadingFinished:Z
 
     invoke-virtual {v0, p2, p3, v1}, Lcom/google/android/exoplayer2/source/SampleQueue;->getSkipCount(JZ)I
 
     move-result p2
 
+    .line 5
     invoke-virtual {v0, p2}, Lcom/google/android/exoplayer2/source/SampleQueue;->skip(I)V
 
     if-nez p2, :cond_1
 
+    .line 6
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod;->maybeStartDeferredRetry(I)V
 
     :cond_1
@@ -3017,6 +3300,7 @@
 .method public track(II)Lcom/google/android/exoplayer2/extractor/TrackOutput;
     .locals 1
 
+    .line 1
     new-instance p2, Lcom/google/android/exoplayer2/source/ProgressiveMediaPeriod$TrackId;
 
     const/4 v0, 0x0

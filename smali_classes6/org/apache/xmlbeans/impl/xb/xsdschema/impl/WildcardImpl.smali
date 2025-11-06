@@ -21,24 +21,26 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "namespace"
+    const-string v1, ""
 
-    const-string v2, ""
+    const-string v2, "namespace"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/apache/xmlbeans/impl/xb/xsdschema/impl/WildcardImpl;->NAMESPACE$0:Ljavax/xml/namespace/QName;
 
+    .line 2
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "processContents"
+    const-string v2, "processContents"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/apache/xmlbeans/impl/xb/xsdschema/impl/WildcardImpl;->PROCESSCONTENTS$2:Ljavax/xml/namespace/QName;
 
@@ -48,6 +50,7 @@
 .method public constructor <init>(Lorg/apache/xmlbeans/SchemaType;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lorg/apache/xmlbeans/impl/xb/xsdschema/impl/AnnotatedImpl;-><init>(Lorg/apache/xmlbeans/SchemaType;)V
 
     return-void
@@ -58,15 +61,18 @@
 .method public getNamespace()Ljava/lang/Object;
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object v1
@@ -81,6 +87,7 @@
 
     if-nez v1, :cond_0
 
+    .line 4
     invoke-virtual {p0, v2}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_default_attribute_value(Ljavax/xml/namespace/QName;)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object p0
@@ -92,12 +99,14 @@
     :cond_0
     if-nez v1, :cond_1
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    .line 5
+    monitor-exit v0
 
     return-object p0
 
+    .line 6
     :cond_1
     invoke-interface {v1}, Lorg/apache/xmlbeans/SimpleValue;->getObjectValue()Ljava/lang/Object;
 
@@ -110,6 +119,7 @@
     :catchall_0
     move-exception p0
 
+    .line 7
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -120,15 +130,18 @@
 .method public getProcessContents()Lorg/apache/xmlbeans/impl/xb/xsdschema/Wildcard$ProcessContents$Enum;
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object v1
@@ -143,6 +156,7 @@
 
     if-nez v1, :cond_0
 
+    .line 4
     invoke-virtual {p0, v2}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_default_attribute_value(Ljavax/xml/namespace/QName;)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object p0
@@ -154,12 +168,14 @@
     :cond_0
     if-nez v1, :cond_1
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    .line 5
+    monitor-exit v0
 
     return-object p0
 
+    .line 6
     :cond_1
     invoke-interface {v1}, Lorg/apache/xmlbeans/SimpleValue;->getEnumValue()Lorg/apache/xmlbeans/StringEnumAbstractBase;
 
@@ -174,6 +190,7 @@
     :catchall_0
     move-exception p0
 
+    .line 7
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -184,15 +201,18 @@
 .method public isSetNamespace()Z
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -220,6 +240,7 @@
     :catchall_0
     move-exception p0
 
+    .line 4
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -230,15 +251,18 @@
 .method public isSetProcessContents()Z
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -266,6 +290,7 @@
     :catchall_0
     move-exception p0
 
+    .line 4
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -276,15 +301,18 @@
 .method public setNamespace(Ljava/lang/Object;)V
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object v1
@@ -299,6 +327,7 @@
 
     if-nez v1, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -311,9 +340,11 @@
 
     check-cast v1, Lorg/apache/xmlbeans/SimpleValue;
 
+    .line 5
     :cond_0
     invoke-interface {v1, p1}, Lorg/apache/xmlbeans/SimpleValue;->setObjectValue(Ljava/lang/Object;)V
 
+    .line 6
     monitor-exit v0
 
     return-void
@@ -331,15 +362,18 @@
 .method public setProcessContents(Lorg/apache/xmlbeans/impl/xb/xsdschema/Wildcard$ProcessContents$Enum;)V
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object v1
@@ -354,6 +388,7 @@
 
     if-nez v1, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -366,9 +401,11 @@
 
     check-cast v1, Lorg/apache/xmlbeans/SimpleValue;
 
+    .line 5
     :cond_0
     invoke-interface {v1, p1}, Lorg/apache/xmlbeans/SimpleValue;->setEnumValue(Lorg/apache/xmlbeans/StringEnumAbstractBase;)V
 
+    .line 6
     monitor-exit v0
 
     return-void
@@ -386,15 +423,18 @@
 .method public unsetNamespace()V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -403,6 +443,7 @@
 
     invoke-interface {p0, v1}, Lorg/apache/xmlbeans/impl/values/TypeStore;->remove_attribute(Ljavax/xml/namespace/QName;)V
 
+    .line 4
     monitor-exit v0
 
     return-void
@@ -420,15 +461,18 @@
 .method public unsetProcessContents()V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -437,6 +481,7 @@
 
     invoke-interface {p0, v1}, Lorg/apache/xmlbeans/impl/values/TypeStore;->remove_attribute(Ljavax/xml/namespace/QName;)V
 
+    .line 4
     monitor-exit v0
 
     return-void
@@ -454,15 +499,18 @@
 .method public xgetNamespace()Lorg/apache/xmlbeans/impl/xb/xsdschema/NamespaceList;
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object v1
@@ -477,6 +525,7 @@
 
     if-nez v1, :cond_0
 
+    .line 4
     invoke-virtual {p0, v2}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_default_attribute_value(Ljavax/xml/namespace/QName;)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object p0
@@ -485,6 +534,7 @@
 
     check-cast v1, Lorg/apache/xmlbeans/impl/xb/xsdschema/NamespaceList;
 
+    .line 5
     :cond_0
     monitor-exit v0
 
@@ -493,6 +543,7 @@
     :catchall_0
     move-exception p0
 
+    .line 6
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -503,15 +554,18 @@
 .method public xgetProcessContents()Lorg/apache/xmlbeans/impl/xb/xsdschema/Wildcard$ProcessContents;
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object v1
@@ -526,6 +580,7 @@
 
     if-nez v1, :cond_0
 
+    .line 4
     invoke-virtual {p0, v2}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_default_attribute_value(Ljavax/xml/namespace/QName;)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object p0
@@ -534,6 +589,7 @@
 
     check-cast v1, Lorg/apache/xmlbeans/impl/xb/xsdschema/Wildcard$ProcessContents;
 
+    .line 5
     :cond_0
     monitor-exit v0
 
@@ -542,6 +598,7 @@
     :catchall_0
     move-exception p0
 
+    .line 6
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -552,15 +609,18 @@
 .method public xsetNamespace(Lorg/apache/xmlbeans/impl/xb/xsdschema/NamespaceList;)V
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object v1
@@ -575,6 +635,7 @@
 
     if-nez v1, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -587,9 +648,11 @@
 
     check-cast v1, Lorg/apache/xmlbeans/impl/xb/xsdschema/NamespaceList;
 
+    .line 5
     :cond_0
     invoke-interface {v1, p1}, Lorg/apache/xmlbeans/XmlObject;->set(Lorg/apache/xmlbeans/XmlObject;)Lorg/apache/xmlbeans/XmlObject;
 
+    .line 6
     monitor-exit v0
 
     return-void
@@ -607,15 +670,18 @@
 .method public xsetProcessContents(Lorg/apache/xmlbeans/impl/xb/xsdschema/Wildcard$ProcessContents;)V
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object v1
@@ -630,6 +696,7 @@
 
     if-nez v1, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -642,9 +709,11 @@
 
     check-cast v1, Lorg/apache/xmlbeans/impl/xb/xsdschema/Wildcard$ProcessContents;
 
+    .line 5
     :cond_0
     invoke-interface {v1, p1}, Lorg/apache/xmlbeans/XmlObject;->set(Lorg/apache/xmlbeans/XmlObject;)Lorg/apache/xmlbeans/XmlObject;
 
+    .line 6
     monitor-exit v0
 
     return-void

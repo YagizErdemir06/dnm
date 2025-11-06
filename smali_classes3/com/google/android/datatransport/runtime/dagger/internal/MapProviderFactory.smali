@@ -22,12 +22,12 @@
         ">",
         "Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory<",
         "TK;TV;",
-        "Lmm/c<",
+        "Lg/a/c<",
         "TV;>;>;",
         "Lcom/google/android/datatransport/runtime/dagger/Lazy<",
         "Ljava/util/Map<",
         "TK;",
-        "Lmm/c<",
+        "Lg/a/c<",
         "TV;>;>;>;"
     }
 .end annotation
@@ -41,7 +41,7 @@
             "(",
             "Ljava/util/Map<",
             "TK;",
-            "Lmm/c<",
+            "Lg/a/c<",
             "TV;>;>;)V"
         }
     .end annotation
@@ -75,6 +75,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/datatransport/runtime/dagger/internal/MapProviderFactory$Builder;
 
     const/4 v1, 0x0
@@ -104,7 +105,7 @@
             "()",
             "Ljava/util/Map<",
             "TK;",
-            "Lmm/c<",
+            "Lg/a/c<",
             "TV;>;>;"
         }
     .end annotation

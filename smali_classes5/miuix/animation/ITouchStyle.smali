@@ -23,9 +23,6 @@
 .method public abstract clearTintColor()Lmiuix/animation/ITouchStyle;
 .end method
 
-.method public varargs abstract handleNoScaleTouchOf(Landroid/view/View;[Lmiuix/animation/base/AnimConfig;)V
-.end method
-
 .method public varargs abstract handleTouchOf(Landroid/view/View;Landroid/view/View$OnClickListener;Landroid/view/View$OnLongClickListener;[Lmiuix/animation/base/AnimConfig;)V
 .end method
 
@@ -54,9 +51,6 @@
 .end method
 
 .method public abstract setBackgroundColor(I)Lmiuix/animation/ITouchStyle;
-.end method
-
-.method public abstract setNoScale(Z)Lmiuix/animation/ITouchStyle;
 .end method
 
 .method public varargs abstract setScale(F[Lmiuix/animation/ITouchStyle$TouchType;)Lmiuix/animation/ITouchStyle;

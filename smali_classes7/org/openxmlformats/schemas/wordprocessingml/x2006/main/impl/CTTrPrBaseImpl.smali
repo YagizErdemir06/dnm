@@ -33,104 +33,104 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 3
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "cnfStyle"
+    const-string v1, "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
 
-    const-string v2, "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+    const-string v2, "cnfStyle"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTTrPrBaseImpl;->CNFSTYLE$0:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "divId"
+    const-string v2, "divId"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTTrPrBaseImpl;->DIVID$2:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "gridBefore"
+    const-string v2, "gridBefore"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTTrPrBaseImpl;->GRIDBEFORE$4:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "gridAfter"
+    const-string v2, "gridAfter"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTTrPrBaseImpl;->GRIDAFTER$6:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "wBefore"
+    const-string v2, "wBefore"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTTrPrBaseImpl;->WBEFORE$8:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "wAfter"
+    const-string v2, "wAfter"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTTrPrBaseImpl;->WAFTER$10:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "cantSplit"
+    const-string v2, "cantSplit"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTTrPrBaseImpl;->CANTSPLIT$12:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "trHeight"
+    const-string v2, "trHeight"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTTrPrBaseImpl;->TRHEIGHT$14:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "tblHeader"
+    const-string v2, "tblHeader"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTTrPrBaseImpl;->TBLHEADER$16:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "tblCellSpacing"
+    const-string v2, "tblCellSpacing"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTTrPrBaseImpl;->TBLCELLSPACING$18:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "jc"
+    const-string v2, "jc"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTTrPrBaseImpl;->JC$20:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "hidden"
+    const-string v2, "hidden"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTTrPrBaseImpl;->HIDDEN$22:Ljavax/xml/namespace/QName;
 

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdn;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdn;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,6 +27,7 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
+    .line 1
     instance-of v0, p1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdn;
 
     const/4 v1, 0x0
@@ -35,11 +36,13 @@
 
     return v1
 
+    .line 2
     :cond_0
     check-cast p1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdn;
 
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdn;->zza:Ljava/lang/Object;
 
+    .line 3
     iget-object v2, p1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdn;->zza:Ljava/lang/Object;
 
     if-ne v0, v2, :cond_1
@@ -61,6 +64,7 @@
 .method public final hashCode()I
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdn;->zza:Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I

@@ -22,9 +22,10 @@
 # direct methods
 .method private constructor <init>()V
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,9 +33,18 @@
 
 .method public static toString(I)Ljava/lang/String;
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "state"
+        }
+    .end annotation
 
     packed-switch p0, :pswitch_data_0
 
+    .line 1
     sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     const/4 v1, 0x1

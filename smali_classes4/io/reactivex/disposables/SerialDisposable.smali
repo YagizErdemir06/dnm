@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field final resource:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final resource:Ljava/util/concurrent/atomic/AtomicReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/atomic/AtomicReference<",
@@ -60,6 +60,7 @@
 .method public dispose()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lio/reactivex/disposables/SerialDisposable;->resource:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-static {p0}, Lio/reactivex/internal/disposables/DisposableHelper;->dispose(Ljava/util/concurrent/atomic/AtomicReference;)Z
@@ -72,6 +73,7 @@
     .annotation build Lio/reactivex/annotations/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lio/reactivex/disposables/SerialDisposable;->resource:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -80,10 +82,12 @@
 
     check-cast p0, Lio/reactivex/disposables/Disposable;
 
+    .line 2
     sget-object v0, Lio/reactivex/internal/disposables/DisposableHelper;->DISPOSED:Lio/reactivex/internal/disposables/DisposableHelper;
 
     if-ne p0, v0, :cond_0
 
+    .line 3
     invoke-static {}, Lio/reactivex/disposables/Disposables;->disposed()Lio/reactivex/disposables/Disposable;
 
     move-result-object p0
@@ -95,6 +99,7 @@
 .method public isDisposed()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lio/reactivex/disposables/SerialDisposable;->resource:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -117,6 +122,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lio/reactivex/disposables/SerialDisposable;->resource:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-static {p0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->replace(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/Disposable;)Z
@@ -133,6 +139,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lio/reactivex/disposables/SerialDisposable;->resource:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-static {p0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->set(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/Disposable;)Z

@@ -1,4 +1,4 @@
-.class Landroidx/fragment/app/SpecialEffectsController$2;
+.class public Landroidx/fragment/app/SpecialEffectsController$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,15 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/fragment/app/SpecialEffectsController;
+.field public final synthetic this$0:Landroidx/fragment/app/SpecialEffectsController;
 
-.field final synthetic val$operation:Landroidx/fragment/app/SpecialEffectsController$FragmentStateManagerOperation;
+.field public final synthetic val$operation:Landroidx/fragment/app/SpecialEffectsController$FragmentStateManagerOperation;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/fragment/app/SpecialEffectsController;Landroidx/fragment/app/SpecialEffectsController$FragmentStateManagerOperation;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/fragment/app/SpecialEffectsController$2;->this$0:Landroidx/fragment/app/SpecialEffectsController;
 
     iput-object p2, p0, Landroidx/fragment/app/SpecialEffectsController$2;->val$operation:Landroidx/fragment/app/SpecialEffectsController$FragmentStateManagerOperation;
@@ -41,6 +42,7 @@
 .method public run()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/SpecialEffectsController$2;->this$0:Landroidx/fragment/app/SpecialEffectsController;
 
     iget-object v0, v0, Landroidx/fragment/app/SpecialEffectsController;->mPendingOperations:Ljava/util/ArrayList;
@@ -49,6 +51,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
+    .line 2
     iget-object v0, p0, Landroidx/fragment/app/SpecialEffectsController$2;->this$0:Landroidx/fragment/app/SpecialEffectsController;
 
     iget-object v0, v0, Landroidx/fragment/app/SpecialEffectsController;->mRunningOperations:Ljava/util/ArrayList;

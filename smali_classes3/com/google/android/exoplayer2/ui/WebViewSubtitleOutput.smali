@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/ui/WebViewSubtitleOutput;
+.class public final Lcom/google/android/exoplayer2/ui/WebViewSubtitleOutput;
 .super Landroid/widget/FrameLayout;
 .source "SourceFile"
 
@@ -103,10 +103,10 @@
     invoke-virtual {v2, v0}, Landroid/webkit/WebView;->setBackgroundColor(I)V
 
     .line 11
-    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    invoke-virtual {p0, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
     .line 12
-    invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    invoke-virtual {p0, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
     return-void
 .end method
@@ -150,10 +150,11 @@
 
     return-object v0
 
+    .line 1
     :cond_0
     sget-object v1, Lcom/google/android/exoplayer2/ui/WebViewSubtitleOutput$2;->$SwitchMap$android$text$Layout$Alignment:[I
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {p0}, Landroid/text/Layout$Alignment;->ordinal()I
 
     move-result p0
 
@@ -183,6 +184,7 @@
 .method private static convertCaptionStyleToCssTextShadow(Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;)Ljava/lang/String;
     .locals 4
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;->edgeType:I
 
     const/4 v1, 0x0
@@ -210,8 +212,10 @@
     :cond_0
     new-array v0, v2, [Ljava/lang/Object;
 
+    .line 2
     iget p0, p0, Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;->edgeColor:I
 
+    .line 3
     invoke-static {p0}, Lcom/google/android/exoplayer2/ui/HtmlUtils;->toCssRgba(I)Ljava/lang/String;
 
     move-result-object p0
@@ -220,6 +224,7 @@
 
     const-string p0, "-0.05em -0.05em 0.15em %s"
 
+    .line 4
     invoke-static {p0, v0}, Lcom/google/android/exoplayer2/util/Util;->formatInvariant(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -229,8 +234,10 @@
     :cond_1
     new-array v0, v2, [Ljava/lang/Object;
 
+    .line 5
     iget p0, p0, Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;->edgeColor:I
 
+    .line 6
     invoke-static {p0}, Lcom/google/android/exoplayer2/ui/HtmlUtils;->toCssRgba(I)Ljava/lang/String;
 
     move-result-object p0
@@ -239,6 +246,7 @@
 
     const-string p0, "0.06em 0.08em 0.15em %s"
 
+    .line 7
     invoke-static {p0, v0}, Lcom/google/android/exoplayer2/util/Util;->formatInvariant(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -248,6 +256,7 @@
     :cond_2
     new-array v0, v2, [Ljava/lang/Object;
 
+    .line 8
     iget p0, p0, Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;->edgeColor:I
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/ui/HtmlUtils;->toCssRgba(I)Ljava/lang/String;
@@ -267,8 +276,10 @@
     :cond_3
     new-array v0, v2, [Ljava/lang/Object;
 
+    .line 9
     iget p0, p0, Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;->edgeColor:I
 
+    .line 10
     invoke-static {p0}, Lcom/google/android/exoplayer2/ui/HtmlUtils;->toCssRgba(I)Ljava/lang/String;
 
     move-result-object p0
@@ -277,6 +288,7 @@
 
     const-string p0, "1px 1px 0 %1$s, 1px -1px 0 %1$s, -1px 1px 0 %1$s, -1px -1px 0 %1$s"
 
+    .line 11
     invoke-static {p0, v0}, Lcom/google/android/exoplayer2/util/Util;->formatInvariant(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -287,26 +299,28 @@
 .method private convertTextSizeToCss(IF)Ljava/lang/String;
     .locals 3
 
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+    .line 1
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getHeight()I
 
     move-result v0
 
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getHeight()I
 
     move-result v1
 
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getPaddingTop()I
 
     move-result v2
 
     sub-int/2addr v1, v2
 
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getPaddingBottom()I
 
     move-result v2
 
     sub-int/2addr v1, v2
 
+    .line 2
     invoke-static {p1, p2, v0, v1}, Lcom/google/android/exoplayer2/ui/SubtitleViewUtils;->resolveTextSize(IFII)F
 
     move-result p1
@@ -321,8 +335,9 @@
 
     return-object p0
 
+    .line 3
     :cond_0
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object p0
 
@@ -344,6 +359,7 @@
 
     const/4 p2, 0x0
 
+    .line 4
     invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object p1
@@ -388,6 +404,7 @@
 .method private static getBlockShearTransformFunction(Lcom/google/android/exoplayer2/text/Cue;)Ljava/lang/String;
     .locals 4
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/text/Cue;->shearDegrees:F
 
     const/4 v1, 0x0
@@ -396,6 +413,7 @@
 
     if-eqz v1, :cond_2
 
+    .line 2
     iget p0, p0, Lcom/google/android/exoplayer2/text/Cue;->verticalType:I
 
     const/4 v1, 0x1
@@ -424,6 +442,7 @@
 
     aput-object p0, v2, v3
 
+    .line 3
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object p0
@@ -449,6 +468,7 @@
 
     move-object/from16 v0, p0
 
+    .line 1
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -457,10 +477,12 @@
 
     new-array v3, v2, [Ljava/lang/Object;
 
+    .line 2
     iget-object v4, v0, Lcom/google/android/exoplayer2/ui/WebViewSubtitleOutput;->style:Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;
 
     iget v4, v4, Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;->foregroundColor:I
 
+    .line 3
     invoke-static {v4}, Lcom/google/android/exoplayer2/ui/HtmlUtils;->toCssRgba(I)Ljava/lang/String;
 
     move-result-object v4
@@ -473,6 +495,7 @@
 
     iget v6, v0, Lcom/google/android/exoplayer2/ui/WebViewSubtitleOutput;->defaultTextSize:F
 
+    .line 4
     invoke-direct {v0, v4, v6}, Lcom/google/android/exoplayer2/ui/WebViewSubtitleOutput;->convertTextSizeToCss(IF)Ljava/lang/String;
 
     move-result-object v4
@@ -483,6 +506,7 @@
 
     const v4, 0x3f99999a    # 1.2f
 
+    .line 5
     invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v7
@@ -493,6 +517,7 @@
 
     iget-object v7, v0, Lcom/google/android/exoplayer2/ui/WebViewSubtitleOutput;->style:Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;
 
+    .line 6
     invoke-static {v7}, Lcom/google/android/exoplayer2/ui/WebViewSubtitleOutput;->convertCaptionStyleToCssTextShadow(Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;)Ljava/lang/String;
 
     move-result-object v7
@@ -503,18 +528,22 @@
 
     const-string v7, "<body><div style=\'-webkit-user-select:none;position:fixed;top:0;bottom:0;left:0;right:0;color:%s;font-size:%s;line-height:%.2f;text-shadow:%s;\'>"
 
+    .line 7
     invoke-static {v7, v3}, Lcom/google/android/exoplayer2/util/Util;->formatInvariant(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
+    .line 8
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 9
     new-instance v3, Ljava/util/HashMap;
 
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
     const-string v7, "default_bg"
 
+    .line 10
     invoke-static {v7}, Lcom/google/android/exoplayer2/ui/HtmlUtils;->cssAllClassDescendantsSelector(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
@@ -525,6 +554,7 @@
 
     iget v12, v12, Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;->backgroundColor:I
 
+    .line 11
     invoke-static {v12}, Lcom/google/android/exoplayer2/ui/HtmlUtils;->toCssRgba(I)Ljava/lang/String;
 
     move-result-object v12
@@ -537,10 +567,12 @@
 
     move-result-object v11
 
+    .line 12
     invoke-interface {v3, v10, v11}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move v10, v5
 
+    .line 13
     :goto_0
     iget-object v11, v0, Lcom/google/android/exoplayer2/ui/WebViewSubtitleOutput;->textCues:Ljava/util/List;
 
@@ -550,6 +582,7 @@
 
     if-ge v10, v11, :cond_12
 
+    .line 14
     iget-object v11, v0, Lcom/google/android/exoplayer2/ui/WebViewSubtitleOutput;->textCues:Ljava/util/List;
 
     invoke-interface {v11, v10}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -558,6 +591,7 @@
 
     check-cast v11, Lcom/google/android/exoplayer2/text/Cue;
 
+    .line 15
     iget v12, v11, Lcom/google/android/exoplayer2/text/Cue;->position:F
 
     const v13, -0x800001
@@ -575,6 +609,7 @@
     :cond_0
     const/high16 v12, 0x42480000    # 50.0f
 
+    .line 16
     :goto_1
     iget v14, v11, Lcom/google/android/exoplayer2/text/Cue;->positionAnchor:I
 
@@ -582,6 +617,7 @@
 
     move-result v14
 
+    .line 17
     iget v2, v11, Lcom/google/android/exoplayer2/text/Cue;->line:F
 
     cmpl-float v17, v2, v13
@@ -592,6 +628,7 @@
 
     if-eqz v17, :cond_4
 
+    .line 18
     iget v8, v11, Lcom/google/android/exoplayer2/text/Cue;->lineType:I
 
     if-eq v8, v6, :cond_2
@@ -600,6 +637,7 @@
 
     mul-float/2addr v2, v15
 
+    .line 19
     invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v2
@@ -610,10 +648,12 @@
 
     move-result-object v2
 
+    .line 20
     iget v8, v11, Lcom/google/android/exoplayer2/text/Cue;->verticalType:I
 
     if-ne v8, v6, :cond_1
 
+    .line 21
     iget v8, v11, Lcom/google/android/exoplayer2/text/Cue;->lineAnchor:I
 
     invoke-static {v8}, Lcom/google/android/exoplayer2/ui/WebViewSubtitleOutput;->anchorTypeToTranslatePercent(I)I
@@ -624,6 +664,7 @@
 
     goto :goto_2
 
+    .line 22
     :cond_1
     iget v8, v11, Lcom/google/android/exoplayer2/text/Cue;->lineAnchor:I
 
@@ -646,6 +687,7 @@
 
     mul-float/2addr v2, v4
 
+    .line 23
     invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v2
@@ -671,6 +713,7 @@
 
     mul-float/2addr v2, v4
 
+    .line 24
     invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v2
@@ -690,6 +733,7 @@
     :cond_4
     new-array v2, v6, [Ljava/lang/Object;
 
+    .line 25
     iget v8, v0, Lcom/google/android/exoplayer2/ui/WebViewSubtitleOutput;->bottomPaddingFraction:F
 
     sub-float v18, v18, v8
@@ -711,6 +755,7 @@
     :goto_2
     move v13, v5
 
+    .line 26
     :goto_3
     iget v4, v11, Lcom/google/android/exoplayer2/text/Cue;->size:F
 
@@ -724,6 +769,7 @@
 
     mul-float/2addr v4, v15
 
+    .line 27
     invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v4
@@ -741,6 +787,7 @@
     :cond_5
     const-string v4, "fit-content"
 
+    .line 28
     :goto_4
     iget-object v5, v11, Lcom/google/android/exoplayer2/text/Cue;->textAlignment:Landroid/text/Layout$Alignment;
 
@@ -748,12 +795,14 @@
 
     move-result-object v5
 
+    .line 29
     iget v9, v11, Lcom/google/android/exoplayer2/text/Cue;->verticalType:I
 
     invoke-static {v9}, Lcom/google/android/exoplayer2/ui/WebViewSubtitleOutput;->convertVerticalTypeToCss(I)Ljava/lang/String;
 
     move-result-object v9
 
+    .line 30
     iget v15, v11, Lcom/google/android/exoplayer2/text/Cue;->textSizeType:I
 
     iget v6, v11, Lcom/google/android/exoplayer2/text/Cue;->textSize:F
@@ -762,6 +811,7 @@
 
     move-result-object v6
 
+    .line 31
     iget-boolean v15, v11, Lcom/google/android/exoplayer2/text/Cue;->windowColorSet:Z
 
     if-eqz v15, :cond_6
@@ -782,6 +832,7 @@
 
     move/from16 v20, v8
 
+    .line 32
     iget v8, v11, Lcom/google/android/exoplayer2/text/Cue;->verticalType:I
 
     const-string v21, "right"
@@ -852,10 +903,12 @@
 
     move/from16 v20, v24
 
+    .line 33
     :goto_9
     iget-object v13, v11, Lcom/google/android/exoplayer2/text/Cue;->text:Ljava/lang/CharSequence;
 
-    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    .line 34
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v21
 
@@ -869,10 +922,12 @@
 
     iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 
+    .line 35
     invoke-static {v13, v0}, Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter;->convert(Ljava/lang/CharSequence;F)Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$HtmlAndCss;
 
     move-result-object v0
 
+    .line 36
     invoke-interface {v3}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v13
@@ -898,6 +953,7 @@
 
     check-cast v13, Ljava/lang/String;
 
+    .line 37
     invoke-interface {v3, v13}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v21
@@ -916,6 +972,7 @@
 
     if-eqz v0, :cond_f
 
+    .line 38
     invoke-interface {v3, v13}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v13
@@ -937,6 +994,7 @@
     :goto_b
     const/4 v0, 0x1
 
+    .line 39
     :goto_c
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
@@ -953,6 +1011,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 40
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v13
@@ -965,6 +1024,7 @@
 
     aput-object v22, v0, v13
 
+    .line 41
     invoke-static {v12}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v12
@@ -1007,6 +1067,7 @@
 
     const/16 v2, 0xb
 
+    .line 42
     invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -1015,6 +1076,7 @@
 
     const/16 v2, 0xc
 
+    .line 43
     invoke-static/range {v20 .. v20}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -1023,6 +1085,7 @@
 
     const/16 v2, 0xd
 
+    .line 44
     invoke-static {v11}, Lcom/google/android/exoplayer2/ui/WebViewSubtitleOutput;->getBlockShearTransformFunction(Lcom/google/android/exoplayer2/text/Cue;)Ljava/lang/String;
 
     move-result-object v4
@@ -1031,10 +1094,12 @@
 
     const-string v2, "<div style=\'position:absolute;z-index:%s;%s:%.2f%%;%s:%s;%s:%s;text-align:%s;writing-mode:%s;font-size:%s;background-color:%s;transform:translate(%s%%,%s%%)%s;\'>"
 
+    .line 45
     invoke-static {v2, v0}, Lcom/google/android/exoplayer2/util/Util;->formatInvariant(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 46
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const/4 v0, 0x1
@@ -1047,12 +1112,14 @@
 
     const-string v5, "<span class=\'%s\'>"
 
+    .line 47
     invoke-static {v5, v2}, Lcom/google/android/exoplayer2/util/Util;->formatInvariant(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 48
     iget-object v2, v11, Lcom/google/android/exoplayer2/text/Cue;->multiRowAlignment:Landroid/text/Layout$Alignment;
 
     const-string v5, "</span>"
@@ -1061,6 +1128,7 @@
 
     new-array v6, v0, [Ljava/lang/Object;
 
+    .line 49
     invoke-static {v2}, Lcom/google/android/exoplayer2/ui/WebViewSubtitleOutput;->convertAlignmentToCss(Landroid/text/Layout$Alignment;)Ljava/lang/String;
 
     move-result-object v0
@@ -1069,18 +1137,22 @@
 
     const-string v0, "<span style=\'display:inline-block; text-align:%s;\'>"
 
+    .line 50
     invoke-static {v0, v6}, Lcom/google/android/exoplayer2/util/Util;->formatInvariant(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 51
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-object/from16 v0, v25
 
     iget-object v0, v0, Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$HtmlAndCss;->html:Ljava/lang/String;
 
+    .line 52
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 53
     invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_d
@@ -1088,10 +1160,12 @@
     :cond_11
     move-object/from16 v0, v25
 
+    .line 54
     iget-object v0, v0, Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$HtmlAndCss;->html:Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 55
     :goto_d
     invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1120,16 +1194,20 @@
     :cond_12
     const-string v0, "</div></body></html>"
 
+    .line 56
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 57
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v2, "<html><head><style>"
 
+    .line 58
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 59
     invoke-interface {v3}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v2
@@ -1151,6 +1229,7 @@
 
     check-cast v4, Ljava/lang/String;
 
+    .line 60
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v5, "{"
@@ -1174,8 +1253,10 @@
     :cond_13
     const-string v2, "</style></head>"
 
+    .line 61
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 62
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -1186,8 +1267,10 @@
 
     move-object/from16 v0, p0
 
+    .line 63
     iget-object v0, v0, Lcom/google/android/exoplayer2/ui/WebViewSubtitleOutput;->webView:Landroid/webkit/WebView;
 
+    .line 64
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -1208,6 +1291,7 @@
 
     const-string v3, "base64"
 
+    .line 65
     invoke-virtual {v0, v1, v2, v3}, Landroid/webkit/WebView;->loadData(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -1218,6 +1302,7 @@
 .method public destroy()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/WebViewSubtitleOutput;->webView:Landroid/webkit/WebView;
 
     invoke-virtual {p0}, Landroid/webkit/WebView;->destroy()V
@@ -1228,10 +1313,12 @@
 .method public onLayout(ZIIII)V
     .locals 0
 
+    .line 1
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
 
     if-eqz p1, :cond_0
 
+    .line 2
     iget-object p1, p0, Lcom/google/android/exoplayer2/ui/WebViewSubtitleOutput;->textCues:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
@@ -1240,6 +1327,7 @@
 
     if-nez p1, :cond_0
 
+    .line 3
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/WebViewSubtitleOutput;->updateWebView()V
 
     :cond_0
@@ -1259,24 +1347,31 @@
         }
     .end annotation
 
+    .line 1
     iput-object p2, p0, Lcom/google/android/exoplayer2/ui/WebViewSubtitleOutput;->style:Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;
 
+    .line 2
     iput p3, p0, Lcom/google/android/exoplayer2/ui/WebViewSubtitleOutput;->defaultTextSize:F
 
+    .line 3
     iput p4, p0, Lcom/google/android/exoplayer2/ui/WebViewSubtitleOutput;->defaultTextSizeType:I
 
+    .line 4
     iput p5, p0, Lcom/google/android/exoplayer2/ui/WebViewSubtitleOutput;->bottomPaddingFraction:F
 
+    .line 5
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 6
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v2, 0x0
 
+    .line 7
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -1284,20 +1379,24 @@
 
     if-ge v2, v3, :cond_1
 
+    .line 8
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/google/android/exoplayer2/text/Cue;
 
+    .line 9
     iget-object v4, v3, Lcom/google/android/exoplayer2/text/Cue;->bitmap:Landroid/graphics/Bitmap;
 
     if-eqz v4, :cond_0
 
+    .line 10
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
+    .line 11
     :cond_0
     invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1306,6 +1405,7 @@
 
     goto :goto_0
 
+    .line 12
     :cond_1
     iget-object p1, p0, Lcom/google/android/exoplayer2/ui/WebViewSubtitleOutput;->textCues:Ljava/util/List;
 
@@ -1321,11 +1421,14 @@
 
     if-nez p1, :cond_3
 
+    .line 13
     :cond_2
     iput-object v0, p0, Lcom/google/android/exoplayer2/ui/WebViewSubtitleOutput;->textCues:Ljava/util/List;
 
+    .line 14
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/WebViewSubtitleOutput;->updateWebView()V
 
+    .line 15
     :cond_3
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/WebViewSubtitleOutput;->canvasSubtitleOutput:Lcom/google/android/exoplayer2/ui/CanvasSubtitleOutput;
 
@@ -1339,7 +1442,8 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/google/android/exoplayer2/ui/CanvasSubtitleOutput;->update(Ljava/util/List;Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;FIF)V
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    .line 16
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     return-void
 .end method

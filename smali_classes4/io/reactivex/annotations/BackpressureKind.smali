@@ -33,6 +33,7 @@
 .method public static constructor <clinit>()V
     .locals 13
 
+    .line 1
     new-instance v0, Lio/reactivex/annotations/BackpressureKind;
 
     const-string v1, "PASS_THROUGH"
@@ -43,6 +44,7 @@
 
     sput-object v0, Lio/reactivex/annotations/BackpressureKind;->PASS_THROUGH:Lio/reactivex/annotations/BackpressureKind;
 
+    .line 2
     new-instance v1, Lio/reactivex/annotations/BackpressureKind;
 
     const-string v3, "FULL"
@@ -53,6 +55,7 @@
 
     sput-object v1, Lio/reactivex/annotations/BackpressureKind;->FULL:Lio/reactivex/annotations/BackpressureKind;
 
+    .line 3
     new-instance v3, Lio/reactivex/annotations/BackpressureKind;
 
     const-string v5, "SPECIAL"
@@ -63,6 +66,7 @@
 
     sput-object v3, Lio/reactivex/annotations/BackpressureKind;->SPECIAL:Lio/reactivex/annotations/BackpressureKind;
 
+    .line 4
     new-instance v5, Lio/reactivex/annotations/BackpressureKind;
 
     const-string v7, "UNBOUNDED_IN"
@@ -73,6 +77,7 @@
 
     sput-object v5, Lio/reactivex/annotations/BackpressureKind;->UNBOUNDED_IN:Lio/reactivex/annotations/BackpressureKind;
 
+    .line 5
     new-instance v7, Lio/reactivex/annotations/BackpressureKind;
 
     const-string v9, "ERROR"
@@ -83,6 +88,7 @@
 
     sput-object v7, Lio/reactivex/annotations/BackpressureKind;->ERROR:Lio/reactivex/annotations/BackpressureKind;
 
+    .line 6
     new-instance v9, Lio/reactivex/annotations/BackpressureKind;
 
     const-string v11, "NONE"
@@ -109,6 +115,7 @@
 
     aput-object v9, v11, v12
 
+    .line 7
     sput-object v11, Lio/reactivex/annotations/BackpressureKind;->$VALUES:[Lio/reactivex/annotations/BackpressureKind;
 
     return-void
@@ -116,12 +123,8 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -130,6 +133,7 @@
 .method public static valueOf(Ljava/lang/String;)Lio/reactivex/annotations/BackpressureKind;
     .locals 1
 
+    .line 1
     const-class v0, Lio/reactivex/annotations/BackpressureKind;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -144,6 +148,7 @@
 .method public static values()[Lio/reactivex/annotations/BackpressureKind;
     .locals 1
 
+    .line 1
     sget-object v0, Lio/reactivex/annotations/BackpressureKind;->$VALUES:[Lio/reactivex/annotations/BackpressureKind;
 
     invoke-virtual {v0}, [Lio/reactivex/annotations/BackpressureKind;->clone()Ljava/lang/Object;

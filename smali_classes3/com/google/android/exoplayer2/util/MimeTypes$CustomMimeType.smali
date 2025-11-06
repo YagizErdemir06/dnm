@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/util/MimeTypes$CustomMimeType;
+.class public final Lcom/google/android/exoplayer2/util/MimeTypes$CustomMimeType;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,12 +26,16 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/util/MimeTypes$CustomMimeType;->mimeType:Ljava/lang/String;
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/exoplayer2/util/MimeTypes$CustomMimeType;->codecPrefix:Ljava/lang/String;
 
+    .line 4
     iput p3, p0, Lcom/google/android/exoplayer2/util/MimeTypes$CustomMimeType;->trackType:I
 
     return-void

@@ -1,4 +1,4 @@
-.class Landroidx/versionedparcelable/VersionedParcelStream$1;
+.class public Landroidx/versionedparcelable/VersionedParcelStream$1;
 .super Ljava/io/FilterInputStream;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/versionedparcelable/VersionedParcelStream;
+.field public final synthetic this$0:Landroidx/versionedparcelable/VersionedParcelStream;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/versionedparcelable/VersionedParcelStream;Ljava/io/InputStream;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/versionedparcelable/VersionedParcelStream$1;->this$0:Landroidx/versionedparcelable/VersionedParcelStream;
 
     invoke-direct {p0, p2}, Ljava/io/FilterInputStream;-><init>(Ljava/io/InputStream;)V
@@ -142,6 +143,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/versionedparcelable/VersionedParcelStream$1;->this$0:Landroidx/versionedparcelable/VersionedParcelStream;
 
     iget v1, v0, Landroidx/versionedparcelable/VersionedParcelStream;->mFieldSize:I
@@ -156,6 +158,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/io/IOException;
 
@@ -163,6 +166,7 @@
 
     throw p0
 
+    .line 3
     :cond_1
     :goto_0
     invoke-super {p0, p1, p2}, Ljava/io/FilterInputStream;->skip(J)J
@@ -175,6 +179,7 @@
 
     if-lez v0, :cond_2
 
+    .line 4
     iget-object p0, p0, Landroidx/versionedparcelable/VersionedParcelStream$1;->this$0:Landroidx/versionedparcelable/VersionedParcelStream;
 
     iget v0, p0, Landroidx/versionedparcelable/VersionedParcelStream;->mCount:I

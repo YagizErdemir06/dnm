@@ -8,17 +8,17 @@
 
 
 # instance fields
-.field mDRotate:F
+.field public mDRotate:F
 
-.field mDScaleX:F
+.field public mDScaleX:F
 
-.field mDScaleY:F
+.field public mDScaleY:F
 
-.field mDTranslateX:F
+.field public mDTranslateX:F
 
-.field mDTranslateY:F
+.field public mDTranslateY:F
 
-.field mRotate:F
+.field public mRotate:F
 
 
 # direct methods
@@ -31,6 +31,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,10 +48,12 @@
 
     const/4 v2, 0x0
 
+    .line 1
     aget v3, p5, v2
 
     const/4 v4, 0x1
 
+    .line 2
     aget v5, p5, v4
 
     const/high16 v6, 0x3f000000    # 0.5f
@@ -65,26 +68,31 @@
 
     mul-float/2addr v6, v8
 
+    .line 3
     iget v8, v0, Landroidx/constraintlayout/core/motion/utils/VelocityMatrix;->mDTranslateX:F
 
     add-float/2addr v3, v8
 
+    .line 4
     iget v8, v0, Landroidx/constraintlayout/core/motion/utils/VelocityMatrix;->mDTranslateY:F
 
     add-float/2addr v5, v8
 
+    .line 5
     iget v8, v0, Landroidx/constraintlayout/core/motion/utils/VelocityMatrix;->mDScaleX:F
 
     mul-float/2addr v8, v7
 
     add-float/2addr v3, v8
 
+    .line 6
     iget v8, v0, Landroidx/constraintlayout/core/motion/utils/VelocityMatrix;->mDScaleY:F
 
     mul-float/2addr v8, v6
 
     add-float/2addr v5, v8
 
+    .line 7
     iget v8, v0, Landroidx/constraintlayout/core/motion/utils/VelocityMatrix;->mRotate:F
 
     float-to-double v8, v8
@@ -95,6 +103,7 @@
 
     double-to-float v8, v8
 
+    .line 8
     iget v0, v0, Landroidx/constraintlayout/core/motion/utils/VelocityMatrix;->mDRotate:F
 
     float-to-double v9, v0
@@ -115,6 +124,7 @@
 
     float-to-double v11, v8
 
+    .line 9
     invoke-static {v11, v12}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v13
@@ -149,6 +159,7 @@
 
     float-to-double v6, v1
 
+    .line 10
     invoke-static {v11, v12}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v8
@@ -169,8 +180,10 @@
 
     add-float/2addr v5, v0
 
+    .line 11
     aput v3, p5, v2
 
+    .line 12
     aput v5, p5, v4
 
     return-void
@@ -181,6 +194,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput v0, p0, Landroidx/constraintlayout/core/motion/utils/VelocityMatrix;->mDRotate:F
 
     iput v0, p0, Landroidx/constraintlayout/core/motion/utils/VelocityMatrix;->mDTranslateY:F

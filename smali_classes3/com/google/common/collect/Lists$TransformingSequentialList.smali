@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Lists$TransformingSequentialList;
+.class public Lcom/google/common/collect/Lists$TransformingSequentialList;
 .super Ljava/util/AbstractSequentialList;
 .source "SourceFile"
 
@@ -35,7 +35,7 @@
 
 
 # instance fields
-.field final fromList:Ljava/util/List;
+.field public final fromList:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -44,7 +44,7 @@
     .end annotation
 .end field
 
-.field final function:Lcom/google/common/base/Function;
+.field public final function:Lcom/google/common/base/Function;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/base/Function<",
@@ -67,8 +67,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/util/AbstractSequentialList;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -77,6 +79,7 @@
 
     iput-object p1, p0, Lcom/google/common/collect/Lists$TransformingSequentialList;->fromList:Ljava/util/List;
 
+    .line 3
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -93,6 +96,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Lists$TransformingSequentialList;->fromList:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->clear()V
@@ -110,6 +114,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/Lists$TransformingSequentialList$1;
 
     iget-object v1, p0, Lcom/google/common/collect/Lists$TransformingSequentialList;->fromList:Ljava/util/List;
@@ -126,6 +131,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Lists$TransformingSequentialList;->fromList:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->size()I

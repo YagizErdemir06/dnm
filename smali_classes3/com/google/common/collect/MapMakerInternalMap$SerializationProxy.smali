@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/MapMakerInternalMap$SerializationProxy;
+.class public final Lcom/google/common/collect/MapMakerInternalMap$SerializationProxy;
 .super Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;
 .source "SourceFile"
 
@@ -49,6 +49,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct/range {p0 .. p6}, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;-><init>(Lcom/google/common/collect/MapMakerInternalMap$Strength;Lcom/google/common/collect/MapMakerInternalMap$Strength;Lcom/google/common/base/Equivalence;Lcom/google/common/base/Equivalence;ILjava/util/concurrent/ConcurrentMap;)V
 
     return-void
@@ -63,18 +64,22 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->defaultReadObject()V
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->readMapMaker(Ljava/io/ObjectInputStream;)Lcom/google/common/collect/MapMaker;
 
     move-result-object v0
 
+    .line 3
     invoke-virtual {v0}, Lcom/google/common/collect/MapMaker;->makeMap()Ljava/util/concurrent/ConcurrentMap;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->delegate:Ljava/util/concurrent/ConcurrentMap;
 
+    .line 4
     invoke-virtual {p0, p1}, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->readEntries(Ljava/io/ObjectInputStream;)V
 
     return-void
@@ -83,6 +88,7 @@
 .method private readResolve()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->delegate:Ljava/util/concurrent/ConcurrentMap;
 
     return-object p0
@@ -96,8 +102,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/io/ObjectOutputStream;->defaultWriteObject()V
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->writeMapTo(Ljava/io/ObjectOutputStream;)V
 
     return-void

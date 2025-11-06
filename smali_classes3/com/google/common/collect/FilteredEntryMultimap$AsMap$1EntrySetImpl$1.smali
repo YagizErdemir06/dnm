@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/FilteredEntryMultimap$AsMap$1EntrySetImpl$1;
+.class public Lcom/google/common/collect/FilteredEntryMultimap$AsMap$1EntrySetImpl$1;
 .super Lcom/google/common/collect/AbstractIterator;
 .source "SourceFile"
 
@@ -25,7 +25,7 @@
 
 
 # instance fields
-.field final backingIterator:Ljava/util/Iterator;
+.field public final backingIterator:Ljava/util/Iterator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Iterator<",
@@ -37,23 +37,26 @@
     .end annotation
 .end field
 
-.field final synthetic this$2:Lcom/google/common/collect/FilteredEntryMultimap$AsMap$1EntrySetImpl;
+.field public final synthetic this$2:Lcom/google/common/collect/FilteredEntryMultimap$AsMap$1EntrySetImpl;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/FilteredEntryMultimap$AsMap$1EntrySetImpl;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/FilteredEntryMultimap$AsMap$1EntrySetImpl$1;->this$2:Lcom/google/common/collect/FilteredEntryMultimap$AsMap$1EntrySetImpl;
 
     invoke-direct {p0}, Lcom/google/common/collect/AbstractIterator;-><init>()V
 
+    .line 2
     iget-object p1, p1, Lcom/google/common/collect/FilteredEntryMultimap$AsMap$1EntrySetImpl;->this$1:Lcom/google/common/collect/FilteredEntryMultimap$AsMap;
 
     iget-object p1, p1, Lcom/google/common/collect/FilteredEntryMultimap$AsMap;->this$0:Lcom/google/common/collect/FilteredEntryMultimap;
 
     iget-object p1, p1, Lcom/google/common/collect/FilteredEntryMultimap;->unfiltered:Lcom/google/common/collect/Multimap;
 
+    .line 3
     invoke-interface {p1}, Lcom/google/common/collect/Multimap;->asMap()Ljava/util/Map;
 
     move-result-object p1

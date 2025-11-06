@@ -17,37 +17,37 @@
 # static fields
 .field private static final DEBUG:Z = false
 
-.field protected static final MSG_FRAME_AVAILABLE:I = 0x1
+.field public static final MSG_FRAME_AVAILABLE:I = 0x1
 
-.field protected static final MSG_STOP_RECORDING:I = 0x9
+.field public static final MSG_STOP_RECORDING:I = 0x9
 
-.field protected static final TIMEOUT_USEC:I = 0x2710
+.field public static final TIMEOUT_USEC:I = 0x2710
 
 
 # instance fields
-.field protected TAG:Ljava/lang/String;
+.field public TAG:Ljava/lang/String;
 
-.field protected mBufferInfo:Landroid/media/MediaCodec$BufferInfo;
+.field public mBufferInfo:Landroid/media/MediaCodec$BufferInfo;
 
-.field protected volatile mIsCapturing:Z
+.field public volatile mIsCapturing:Z
 
-.field protected mIsEOS:Z
+.field public mIsEOS:Z
 
-.field protected final mListener:Lcom/faceunity/core/media/video/encoder/MediaEncoder$MediaEncoderListener;
+.field public final mListener:Lcom/faceunity/core/media/video/encoder/MediaEncoder$MediaEncoderListener;
 
-.field protected mMediaCodec:Landroid/media/MediaCodec;
+.field public mMediaCodec:Landroid/media/MediaCodec;
 
-.field protected mMuxerStarted:Z
+.field public mMuxerStarted:Z
 
 .field private mRequestDrain:I
 
-.field protected volatile mRequestStop:Z
+.field public volatile mRequestStop:Z
 
-.field protected final mSync:Ljava/lang/Object;
+.field public final mSync:Ljava/lang/Object;
 
-.field protected mTrackIndex:I
+.field public mTrackIndex:I
 
-.field protected final mWeakMuxer:Ljava/lang/ref/WeakReference;
+.field public final mWeakMuxer:Ljava/lang/ref/WeakReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference<",
@@ -57,19 +57,22 @@
     .end annotation
 .end field
 
-.field protected prevOutputPTSUs:J
+.field public prevOutputPTSUs:J
 
 
 # direct methods
 .method public constructor <init>(Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;Lcom/faceunity/core/media/video/encoder/MediaEncoder$MediaEncoderListener;)V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "Video_MediaEncoder"
 
+    .line 2
     iput-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->TAG:Ljava/lang/String;
 
+    .line 3
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -78,24 +81,36 @@
 
     const-wide/16 v1, 0x0
 
+    .line 4
     iput-wide v1, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->prevOutputPTSUs:J
 
-    if-eqz p2, :cond_1
+    const-string v1, "MediaEncoderListener is null"
 
-    if-eqz p1, :cond_0
+    .line 5
+    invoke-static {p2, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    const-string v1, "MediaMuxerWrapper is null"
+
+    .line 6
+    invoke-static {p1, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 7
     new-instance v1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v1, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v1, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mWeakMuxer:Ljava/lang/ref/WeakReference;
 
+    .line 8
     invoke-virtual {p1, p0}, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->addEncoder(Lcom/faceunity/core/media/video/encoder/MediaEncoder;)V
 
+    .line 9
     iput-object p2, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mListener:Lcom/faceunity/core/media/video/encoder/MediaEncoder$MediaEncoderListener;
 
+    .line 10
     monitor-enter v0
 
+    .line 11
     :try_start_0
     new-instance p1, Landroid/media/MediaCodec$BufferInfo;
 
@@ -103,6 +118,7 @@
 
     iput-object p1, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mBufferInfo:Landroid/media/MediaCodec$BufferInfo;
 
+    .line 12
     new-instance p1, Ljava/lang/Thread;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -119,12 +135,14 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 13
     :try_start_1
     invoke-virtual {v0}, Ljava/lang/Object;->wait()V
     :try_end_1
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 14
     :catch_0
     :try_start_2
     monitor-exit v0
@@ -139,24 +157,6 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     throw p0
-
-    :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string p1, "MediaMuxerWrapper is null"
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string p1, "MediaEncoderListener is null"
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method
 
 
@@ -164,20 +164,23 @@
 .method public drain()V
     .locals 9
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mMediaCodec:Landroid/media/MediaCodec;
 
     if-nez v0, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     invoke-virtual {v0}, Landroid/media/MediaCodec;->getOutputBuffers()[Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
+    .line 3
     iget-object v1, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mWeakMuxer:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -185,6 +188,7 @@
 
     if-nez v1, :cond_1
 
+    .line 4
     iget-object p0, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->TAG:Ljava/lang/String;
 
     const-string v0, "muxer is unexpectedly null"
@@ -198,12 +202,14 @@
 
     move v3, v2
 
+    .line 5
     :cond_2
     :goto_0
     iget-boolean v4, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mIsCapturing:Z
 
     if-eqz v4, :cond_e
 
+    .line 6
     iget-object v4, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mMediaCodec:Landroid/media/MediaCodec;
 
     iget-object v5, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mBufferInfo:Landroid/media/MediaCodec$BufferInfo;
@@ -218,6 +224,7 @@
 
     if-ne v4, v5, :cond_3
 
+    .line 7
     iget-boolean v4, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mIsEOS:Z
 
     if-nez v4, :cond_2
@@ -235,6 +242,7 @@
 
     if-ne v4, v5, :cond_4
 
+    .line 8
     iget-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mMediaCodec:Landroid/media/MediaCodec;
 
     invoke-virtual {v0}, Landroid/media/MediaCodec;->getOutputBuffers()[Ljava/nio/ByteBuffer;
@@ -248,16 +256,19 @@
 
     if-ne v4, v5, :cond_7
 
+    .line 9
     iget-boolean v4, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mMuxerStarted:Z
 
     if-nez v4, :cond_6
 
+    .line 10
     iget-object v4, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mMediaCodec:Landroid/media/MediaCodec;
 
     invoke-virtual {v4}, Landroid/media/MediaCodec;->getOutputFormat()Landroid/media/MediaFormat;
 
     move-result-object v4
 
+    .line 11
     invoke-virtual {v1, v4}, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->addTrack(Landroid/media/MediaFormat;)I
 
     move-result v4
@@ -266,16 +277,20 @@
 
     const/4 v4, 0x1
 
+    .line 12
     iput-boolean v4, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mMuxerStarted:Z
 
+    .line 13
     invoke-virtual {v1}, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->start()Z
 
     move-result v4
 
     if-nez v4, :cond_2
 
+    .line 14
     monitor-enter v1
 
+    .line 15
     :goto_1
     :try_start_0
     invoke-virtual {v1}, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->hasStopEncoder()Z
@@ -294,6 +309,7 @@
 
     const-wide/16 v4, 0x64
 
+    .line 16
     :try_start_1
     invoke-virtual {v1, v4, v5}, Ljava/lang/Object;->wait(J)V
     :try_end_1
@@ -302,12 +318,14 @@
 
     goto :goto_1
 
+    .line 17
     :catch_0
     :try_start_2
     monitor-exit v1
 
     goto/16 :goto_3
 
+    .line 18
     :cond_5
     monitor-exit v1
 
@@ -322,6 +340,7 @@
 
     throw p0
 
+    .line 19
     :cond_6
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -336,11 +355,13 @@
 
     goto :goto_0
 
+    .line 20
     :cond_8
     aget-object v5, v0, v4
 
     if-eqz v5, :cond_d
 
+    .line 21
     iget-object v6, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mBufferInfo:Landroid/media/MediaCodec$BufferInfo;
 
     iget v7, v6, Landroid/media/MediaCodec$BufferInfo;->flags:I
@@ -349,35 +370,42 @@
 
     if-eqz v7, :cond_9
 
+    .line 22
     iput v2, v6, Landroid/media/MediaCodec$BufferInfo;->size:I
 
+    .line 23
     :cond_9
     iget v7, v6, Landroid/media/MediaCodec$BufferInfo;->size:I
 
     if-eqz v7, :cond_c
 
+    .line 24
     iget-boolean v3, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mMuxerStarted:Z
 
     if-eqz v3, :cond_b
 
+    .line 25
     invoke-virtual {p0}, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->getPTSUs()J
 
     move-result-wide v7
 
     iput-wide v7, v6, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
 
+    .line 26
     invoke-virtual {v1}, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->isStarted()Z
 
     move-result v3
 
     if-eqz v3, :cond_a
 
+    .line 27
     iget v3, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mTrackIndex:I
 
     iget-object v6, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mBufferInfo:Landroid/media/MediaCodec$BufferInfo;
 
     invoke-virtual {v1, v3, v5, v6}, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->writeSampleData(ILjava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;)V
 
+    .line 28
     :cond_a
     iget-object v3, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mBufferInfo:Landroid/media/MediaCodec$BufferInfo;
 
@@ -389,6 +417,7 @@
 
     goto :goto_2
 
+    .line 29
     :cond_b
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -398,12 +427,14 @@
 
     throw p0
 
+    .line 30
     :cond_c
     :goto_2
     iget-object v5, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mMediaCodec:Landroid/media/MediaCodec;
 
     invoke-virtual {v5, v4, v2}, Landroid/media/MediaCodec;->releaseOutputBuffer(IZ)V
 
+    .line 31
     iget-object v4, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mBufferInfo:Landroid/media/MediaCodec$BufferInfo;
 
     iget v4, v4, Landroid/media/MediaCodec$BufferInfo;->flags:I
@@ -412,10 +443,12 @@
 
     if-eqz v4, :cond_2
 
+    .line 32
     iput-boolean v2, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mIsCapturing:Z
 
     goto :goto_3
 
+    .line 33
     :cond_d
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -449,12 +482,14 @@
 .method public encode(Ljava/nio/ByteBuffer;IJ)V
     .locals 11
 
+    .line 1
     iget-boolean v0, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mIsCapturing:Z
 
     if-nez v0, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mMediaCodec:Landroid/media/MediaCodec;
 
@@ -462,11 +497,13 @@
 
     move-result-object v0
 
+    .line 3
     :cond_1
     iget-boolean v1, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mIsCapturing:Z
 
     if-eqz v1, :cond_4
 
+    .line 4
     iget-object v1, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mMediaCodec:Landroid/media/MediaCodec;
 
     const-wide/16 v2, 0x2710
@@ -477,12 +514,15 @@
 
     if-ltz v5, :cond_1
 
+    .line 5
     aget-object v0, v0, v5
 
+    .line 6
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
     if-eqz p1, :cond_2
 
+    .line 7
     invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
     :cond_2
@@ -490,8 +530,10 @@
 
     const/4 p1, 0x1
 
+    .line 8
     iput-boolean p1, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mIsEOS:Z
 
+    .line 9
     iget-object v4, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mMediaCodec:Landroid/media/MediaCodec;
 
     const/4 v6, 0x0
@@ -506,6 +548,7 @@
 
     goto :goto_0
 
+    .line 10
     :cond_3
     iget-object v4, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mMediaCodec:Landroid/media/MediaCodec;
 
@@ -527,10 +570,12 @@
 .method public frameAvailableSoon()Z
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mSync:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-boolean v1, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mIsCapturing:Z
 
@@ -542,6 +587,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget v1, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mRequestDrain:I
 
@@ -551,25 +597,29 @@
 
     iput v1, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mRequestDrain:I
 
+    .line 4
     iget-object p0, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mSync:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
+    .line 5
     monitor-exit v0
 
     return v2
 
     :cond_1
     :goto_0
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    .line 6
+    monitor-exit v0
 
     return p0
 
     :catchall_0
     move-exception p0
 
+    .line 7
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -580,6 +630,7 @@
 .method public getPTSUs()J
     .locals 4
 
+    .line 1
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v0
@@ -588,6 +639,7 @@
 
     div-long/2addr v0, v2
 
+    .line 2
     iget-wide v2, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->prevOutputPTSUs:J
 
     cmp-long p0, v0, v2
@@ -615,21 +667,26 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-boolean v0, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mIsCapturing:Z
 
+    .line 2
     iget-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mMediaCodec:Landroid/media/MediaCodec;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 3
     :try_start_0
     invoke-virtual {v0}, Landroid/media/MediaCodec;->stop()V
 
+    .line 4
     iget-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mMediaCodec:Landroid/media/MediaCodec;
 
     invoke-virtual {v0}, Landroid/media/MediaCodec;->release()V
 
+    .line 5
     iput-object v1, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mMediaCodec:Landroid/media/MediaCodec;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -639,23 +696,26 @@
     :catch_0
     move-exception v0
 
+    .line 6
     iget-object v2, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->TAG:Ljava/lang/String;
 
     const-string v3, "failed releasing MediaCodec"
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 7
     :cond_0
     :goto_0
     iget-boolean v0, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mMuxerStarted:Z
 
     if-eqz v0, :cond_2
 
+    .line 8
     iget-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mWeakMuxer:Ljava/lang/ref/WeakReference;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -669,6 +729,7 @@
     :goto_1
     if-eqz v0, :cond_2
 
+    .line 9
     :try_start_1
     invoke-virtual {v0}, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->stop()V
     :try_end_1
@@ -679,16 +740,19 @@
     :catch_1
     move-exception v0
 
+    .line 10
     iget-object v2, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->TAG:Ljava/lang/String;
 
     const-string v3, "failed stopping muxer"
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 11
     :cond_2
     :goto_2
     iput-object v1, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mBufferInfo:Landroid/media/MediaCodec$BufferInfo;
 
+    .line 12
     :try_start_2
     iget-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mListener:Lcom/faceunity/core/media/video/encoder/MediaEncoder$MediaEncoderListener;
 
@@ -701,6 +765,7 @@
     :catch_2
     move-exception v0
 
+    .line 13
     iget-object p0, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->TAG:Ljava/lang/String;
 
     const-string v1, "failed onStopped"
@@ -714,33 +779,41 @@
 .method public run()V
     .locals 6
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mSync:Ljava/lang/Object;
 
     monitor-enter v0
 
     const/4 v1, 0x0
 
+    .line 2
     :try_start_0
     iput-boolean v1, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mRequestStop:Z
 
+    .line 3
     iput v1, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mRequestDrain:I
 
+    .line 4
     iget-object v2, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mSync:Ljava/lang/Object;
 
     invoke-virtual {v2}, Ljava/lang/Object;->notify()V
 
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_3
 
+    .line 6
     :goto_0
     iget-object v2, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mSync:Ljava/lang/Object;
 
     monitor-enter v2
 
+    .line 7
     :try_start_1
     iget-boolean v0, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mRequestStop:Z
 
+    .line 8
     iget v3, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mRequestDrain:I
 
     const/4 v4, 0x1
@@ -759,8 +832,10 @@
 
     add-int/lit8 v3, v3, -0x1
 
+    .line 9
     iput v3, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mRequestDrain:I
 
+    .line 10
     :cond_1
     monitor-exit v2
     :try_end_1
@@ -768,12 +843,16 @@
 
     if-eqz v0, :cond_2
 
+    .line 11
     invoke-virtual {p0}, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->drain()V
 
+    .line 12
     invoke-virtual {p0}, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->signalEndOfInputStream()V
 
+    .line 13
     invoke-virtual {p0}, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->drain()V
 
+    .line 14
     invoke-virtual {p0}, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->release()V
 
     goto :goto_2
@@ -781,15 +860,18 @@
     :cond_2
     if-eqz v5, :cond_3
 
+    .line 15
     invoke-virtual {p0}, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->drain()V
 
     goto :goto_0
 
+    .line 16
     :cond_3
     iget-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mSync:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 17
     :try_start_2
     iget-object v2, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mSync:Ljava/lang/Object;
 
@@ -798,6 +880,7 @@
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 18
     :try_start_3
     monitor-exit v0
 
@@ -808,21 +891,26 @@
 
     goto :goto_3
 
+    .line 19
     :catch_0
     monitor-exit v0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
+    .line 20
     :goto_2
     iget-object v2, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mSync:Ljava/lang/Object;
 
     monitor-enter v2
 
+    .line 21
     :try_start_4
     iput-boolean v4, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mRequestStop:Z
 
+    .line 22
     iput-boolean v1, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mIsCapturing:Z
 
+    .line 23
     monitor-exit v2
 
     return-void
@@ -836,6 +924,7 @@
 
     throw p0
 
+    .line 24
     :goto_3
     :try_start_5
     monitor-exit v0
@@ -847,6 +936,7 @@
     :catchall_2
     move-exception p0
 
+    .line 25
     :try_start_6
     monitor-exit v2
     :try_end_6
@@ -857,6 +947,7 @@
     :catchall_3
     move-exception p0
 
+    .line 26
     :try_start_7
     monitor-exit v0
     :try_end_7
@@ -868,15 +959,16 @@
 .method public signalEndOfInputStream()V
     .locals 4
 
-    const/4 v0, 0x0
-
+    .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->getPTSUs()J
 
-    move-result-wide v1
+    move-result-wide v0
+
+    const/4 v2, 0x0
 
     const/4 v3, 0x0
 
-    invoke-virtual {p0, v3, v0, v1, v2}, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->encode(Ljava/nio/ByteBuffer;IJ)V
+    invoke-virtual {p0, v2, v3, v0, v1}, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->encode(Ljava/nio/ByteBuffer;IJ)V
 
     return-void
 .end method
@@ -884,23 +976,28 @@
 .method public startRecording()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mSync:Ljava/lang/Object;
 
     monitor-enter v0
 
     const/4 v1, 0x1
 
+    .line 2
     :try_start_0
     iput-boolean v1, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mIsCapturing:Z
 
     const/4 v1, 0x0
 
+    .line 3
     iput-boolean v1, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mRequestStop:Z
 
+    .line 4
     iget-object p0, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mSync:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
+    .line 5
     monitor-exit v0
 
     return-void
@@ -918,10 +1015,12 @@
 .method public stopRecording()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mSync:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-boolean v1, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mIsCapturing:Z
 
@@ -936,16 +1035,20 @@
     :cond_0
     const/4 v1, 0x1
 
+    .line 3
     iput-boolean v1, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mRequestStop:Z
 
+    .line 4
     iget-object p0, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mSync:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
+    .line 5
     monitor-exit v0
 
     return-void
 
+    .line 6
     :cond_1
     :goto_0
     monitor-exit v0
@@ -955,6 +1058,7 @@
     :catchall_0
     move-exception p0
 
+    .line 7
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

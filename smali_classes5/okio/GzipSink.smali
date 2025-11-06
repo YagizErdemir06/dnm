@@ -11,40 +11,48 @@
     value = "SMAP\nGzipSink.kt\nKotlin\n*S Kotlin\n*F\n+ 1 GzipSink.kt\nokio/GzipSink\n+ 2 RealBufferedSink.kt\nokio/RealBufferedSink\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 4 -Util.kt\nokio/_UtilKt\n*L\n1#1,153:1\n50#2:154\n1#3:155\n84#4:156\n*S KotlinDebug\n*F\n+ 1 GzipSink.kt\nokio/GzipSink\n*L\n63#1:154\n131#1:156\n*E\n"
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000L\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0014\u001a\u00020\u0001\u00a2\u0006\u0004\u0008 \u0010!J\u0008\u0010\u0003\u001a\u00020\u0002H\u0002J\u0018\u0010\u0008\u001a\u00020\u00022\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0007\u001a\u00020\u0006H\u0002J\u0018\u0010\n\u001a\u00020\u00022\u0006\u0010\t\u001a\u00020\u00042\u0006\u0010\u0007\u001a\u00020\u0006H\u0016J\u0008\u0010\u000b\u001a\u00020\u0002H\u0016J\u0008\u0010\r\u001a\u00020\u000cH\u0016J\u0008\u0010\u000e\u001a\u00020\u0002H\u0016J\u000f\u0010\u0012\u001a\u00020\u000fH\u0007\u00a2\u0006\u0004\u0008\u0010\u0010\u0011R\u0014\u0010\u0014\u001a\u00020\u00138\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0014\u0010\u0015R\u0017\u0010\u0012\u001a\u00020\u000f8G\u00a2\u0006\u000c\n\u0004\u0008\u0012\u0010\u0016\u001a\u0004\u0008\u0012\u0010\u0011R\u0014\u0010\u0018\u001a\u00020\u00178\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0018\u0010\u0019R\u0016\u0010\u001b\u001a\u00020\u001a8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u001b\u0010\u001cR\u0014\u0010\u001e\u001a\u00020\u001d8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u001e\u0010\u001f\u00a8\u0006\""
+        "\u0000N\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u001b\u001a\u00020\u0001\u00a2\u0006\u0004\u0008#\u0010$J\u000f\u0010\u0003\u001a\u00020\u0002H\u0002\u00a2\u0006\u0004\u0008\u0003\u0010\u0004J\u001f\u0010\t\u001a\u00020\u00022\u0006\u0010\u0006\u001a\u00020\u00052\u0006\u0010\u0008\u001a\u00020\u0007H\u0002\u00a2\u0006\u0004\u0008\t\u0010\nJ\u001f\u0010\u000c\u001a\u00020\u00022\u0006\u0010\u000b\u001a\u00020\u00052\u0006\u0010\u0008\u001a\u00020\u0007H\u0016\u00a2\u0006\u0004\u0008\u000c\u0010\nJ\u000f\u0010\r\u001a\u00020\u0002H\u0016\u00a2\u0006\u0004\u0008\r\u0010\u0004J\u000f\u0010\u000f\u001a\u00020\u000eH\u0016\u00a2\u0006\u0004\u0008\u000f\u0010\u0010J\u000f\u0010\u0011\u001a\u00020\u0002H\u0016\u00a2\u0006\u0004\u0008\u0011\u0010\u0004J\u000f\u0010\u0015\u001a\u00020\u0012H\u0007\u00a2\u0006\u0004\u0008\u0013\u0010\u0014R\u0016\u0010\u0017\u001a\u00020\u00168\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0017\u0010\u0018R\u0019\u0010\u0015\u001a\u00020\u00128G@\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0015\u0010\u0019\u001a\u0004\u0008\u0015\u0010\u0014R\u0016\u0010\u001b\u001a\u00020\u001a8\u0002@\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u001b\u0010\u001cR\u0016\u0010\u001e\u001a\u00020\u001d8\u0002@\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u001e\u0010\u001fR\u0016\u0010!\u001a\u00020 8\u0002@\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008!\u0010\"\u00a8\u0006%"
     }
     d2 = {
         "Lokio/GzipSink;",
         "Lokio/Sink;",
-        "Lnm/l2;",
+        "Lh/l2;",
         "writeFooter",
+        "()V",
         "Lokio/Buffer;",
         "buffer",
         "",
         "byteCount",
         "updateCrc",
+        "(Lokio/Buffer;J)V",
         "source",
         "write",
         "flush",
         "Lokio/Timeout;",
         "timeout",
+        "()Lokio/Timeout;",
         "close",
         "Ljava/util/zip/Deflater;",
         "-deprecated_deflater",
         "()Ljava/util/zip/Deflater;",
         "deflater",
-        "Lokio/RealBufferedSink;",
-        "sink",
-        "Lokio/RealBufferedSink;",
-        "Ljava/util/zip/Deflater;",
-        "Lokio/DeflaterSink;",
-        "deflaterSink",
-        "Lokio/DeflaterSink;",
         "",
         "closed",
         "Z",
+        "Ljava/util/zip/Deflater;",
+        "Lokio/RealBufferedSink;",
+        "sink",
+        "Lokio/RealBufferedSink;",
+        "Lokio/DeflaterSink;",
+        "deflaterSink",
+        "Lokio/DeflaterSink;",
         "Ljava/util/zip/CRC32;",
         "crc",
         "Ljava/util/zip/CRC32;",
@@ -65,22 +73,22 @@
 .field private closed:Z
 
 .field private final crc:Ljava/util/zip/CRC32;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field private final deflater:Ljava/util/zip/Deflater;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field private final deflaterSink:Lokio/DeflaterSink;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field private final sink:Lokio/RealBufferedSink;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -89,22 +97,25 @@
 .method public constructor <init>(Lokio/Sink;)V
     .locals 3
     .param p1    # Lokio/Sink;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "sink"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Lokio/RealBufferedSink;
 
     invoke-direct {v0, p1}, Lokio/RealBufferedSink;-><init>(Lokio/Sink;)V
 
     iput-object v0, p0, Lokio/GzipSink;->sink:Lokio/RealBufferedSink;
 
+    .line 3
     new-instance p1, Ljava/util/zip/Deflater;
 
     const/4 v1, -0x1
@@ -115,36 +126,45 @@
 
     iput-object p1, p0, Lokio/GzipSink;->deflater:Ljava/util/zip/Deflater;
 
+    .line 4
     new-instance v1, Lokio/DeflaterSink;
 
     invoke-direct {v1, v0, p1}, Lokio/DeflaterSink;-><init>(Lokio/BufferedSink;Ljava/util/zip/Deflater;)V
 
     iput-object v1, p0, Lokio/GzipSink;->deflaterSink:Lokio/DeflaterSink;
 
+    .line 5
     new-instance p1, Ljava/util/zip/CRC32;
 
     invoke-direct {p1}, Ljava/util/zip/CRC32;-><init>()V
 
     iput-object p1, p0, Lokio/GzipSink;->crc:Ljava/util/zip/CRC32;
 
+    .line 6
     iget-object p0, v0, Lokio/RealBufferedSink;->bufferField:Lokio/Buffer;
 
     const/16 p1, 0x1f8b
 
+    .line 7
     invoke-virtual {p0, p1}, Lokio/Buffer;->writeShort(I)Lokio/Buffer;
 
     const/16 p1, 0x8
 
+    .line 8
     invoke-virtual {p0, p1}, Lokio/Buffer;->writeByte(I)Lokio/Buffer;
 
     const/4 p1, 0x0
 
+    .line 9
     invoke-virtual {p0, p1}, Lokio/Buffer;->writeByte(I)Lokio/Buffer;
 
+    .line 10
     invoke-virtual {p0, p1}, Lokio/Buffer;->writeInt(I)Lokio/Buffer;
 
+    .line 11
     invoke-virtual {p0, p1}, Lokio/Buffer;->writeByte(I)Lokio/Buffer;
 
+    .line 12
     invoke-virtual {p0, p1}, Lokio/Buffer;->writeByte(I)Lokio/Buffer;
 
     return-void
@@ -153,9 +173,10 @@
 .method private final updateCrc(Lokio/Buffer;J)V
     .locals 4
 
+    .line 1
     iget-object p1, p1, Lokio/Buffer;->head:Lokio/Segment;
 
-    invoke-static {p1}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {p1}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     :goto_0
     const-wide/16 v0, 0x0
@@ -164,6 +185,7 @@
 
     if-lez v0, :cond_0
 
+    .line 2
     iget v0, p1, Lokio/Segment;->limit:I
 
     iget v1, p1, Lokio/Segment;->pos:I
@@ -172,12 +194,14 @@
 
     int-to-long v0, v0
 
+    .line 3
     invoke-static {p2, p3, v0, v1}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v0
 
     long-to-int v0, v0
 
+    .line 4
     iget-object v1, p0, Lokio/GzipSink;->crc:Ljava/util/zip/CRC32;
 
     iget-object v2, p1, Lokio/Segment;->data:[B
@@ -190,9 +214,10 @@
 
     sub-long/2addr p2, v0
 
+    .line 5
     iget-object p1, p1, Lokio/Segment;->next:Lokio/Segment;
 
-    invoke-static {p1}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {p1}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -203,6 +228,7 @@
 .method private final writeFooter()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lokio/GzipSink;->sink:Lokio/RealBufferedSink;
 
     iget-object v1, p0, Lokio/GzipSink;->crc:Ljava/util/zip/CRC32;
@@ -215,6 +241,7 @@
 
     invoke-virtual {v0, v1}, Lokio/RealBufferedSink;->writeIntLe(I)Lokio/BufferedSink;
 
+    .line 2
     iget-object v0, p0, Lokio/GzipSink;->sink:Lokio/RealBufferedSink;
 
     iget-object p0, p0, Lokio/GzipSink;->deflater:Ljava/util/zip/Deflater;
@@ -234,22 +261,23 @@
 # virtual methods
 .method public final -deprecated_deflater()Ljava/util/zip/Deflater;
     .locals 0
-    .annotation build Lin/h;
+    .annotation build Lh/d3/h;
         name = "-deprecated_deflater"
     .end annotation
 
-    .annotation build Ljv/d;
-    .end annotation
-
-    .annotation runtime Lnm/k;
-        level = .enum Lnm/m;->b:Lnm/m;
+    .annotation runtime Lh/k;
+        level = .enum Lh/m;->d:Lh/m;
         message = "moved to val"
-        replaceWith = .subannotation Lnm/b1;
+        replaceWith = .subannotation Lh/b1;
             expression = "deflater"
             imports = {}
         .end subannotation
     .end annotation
 
+    .annotation build Ln/d/a/d;
+    .end annotation
+
+    .line 1
     iget-object p0, p0, Lokio/GzipSink;->deflater:Ljava/util/zip/Deflater;
 
     return-object p0
@@ -263,6 +291,7 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lokio/GzipSink;->closed:Z
 
     if-eqz v0, :cond_0
@@ -270,22 +299,25 @@
     return-void
 
     :cond_0
+    const/4 v0, 0x0
+
+    .line 2
     :try_start_0
-    iget-object v0, p0, Lokio/GzipSink;->deflaterSink:Lokio/DeflaterSink;
+    iget-object v1, p0, Lokio/GzipSink;->deflaterSink:Lokio/DeflaterSink;
 
-    invoke-virtual {v0}, Lokio/DeflaterSink;->finishDeflate$okio()V
+    invoke-virtual {v1}, Lokio/DeflaterSink;->finishDeflate$okio()V
 
+    .line 3
     invoke-direct {p0}, Lokio/GzipSink;->writeFooter()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    const/4 v0, 0x0
 
     goto :goto_0
 
     :catchall_0
     move-exception v0
 
+    .line 4
     :goto_0
     :try_start_1
     iget-object v1, p0, Lokio/GzipSink;->deflater:Ljava/util/zip/Deflater;
@@ -303,6 +335,7 @@
 
     move-object v0, v1
 
+    .line 5
     :cond_1
     :goto_1
     :try_start_2
@@ -325,25 +358,28 @@
     :goto_2
     const/4 v1, 0x1
 
+    .line 6
     iput-boolean v1, p0, Lokio/GzipSink;->closed:Z
 
     if-nez v0, :cond_3
 
     return-void
 
+    .line 7
     :cond_3
     throw v0
 .end method
 
 .method public final deflater()Ljava/util/zip/Deflater;
     .locals 0
-    .annotation build Lin/h;
+    .annotation build Lh/d3/h;
         name = "deflater"
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lokio/GzipSink;->deflater:Ljava/util/zip/Deflater;
 
     return-object p0
@@ -357,6 +393,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lokio/GzipSink;->deflaterSink:Lokio/DeflaterSink;
 
     invoke-virtual {p0}, Lokio/DeflaterSink;->flush()V
@@ -366,9 +403,10 @@
 
 .method public timeout()Lokio/Timeout;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lokio/GzipSink;->sink:Lokio/RealBufferedSink;
 
     invoke-virtual {p0}, Lokio/RealBufferedSink;->timeout()Lokio/Timeout;
@@ -381,7 +419,7 @@
 .method public write(Lokio/Buffer;J)V
     .locals 2
     .param p1    # Lokio/Buffer;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -392,7 +430,7 @@
 
     const-string v0, "source"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-wide/16 v0, 0x0
 
@@ -414,23 +452,26 @@
 
     return-void
 
+    .line 1
     :cond_1
     invoke-direct {p0, p1, p2, p3}, Lokio/GzipSink;->updateCrc(Lokio/Buffer;J)V
 
+    .line 2
     iget-object p0, p0, Lokio/GzipSink;->deflaterSink:Lokio/DeflaterSink;
 
     invoke-virtual {p0, p1, p2, p3}, Lokio/DeflaterSink;->write(Lokio/Buffer;J)V
 
     return-void
 
+    .line 3
     :cond_2
-    const-string p0, "byteCount < 0: "
-
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
+    const-string p1, "byteCount < 0: "
+
+    invoke-static {p1, p0}, Lh/d3/x/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 

@@ -198,7 +198,7 @@
 
     const/4 v3, 0x0
 
-    move v4, v3
+    move v4, v2
 
     .line 6
     :goto_0
@@ -222,11 +222,11 @@
 
     aget-object v6, v6, v7
 
-    if-eq v6, v2, :cond_0
+    if-eq v6, v3, :cond_0
 
-    if-eqz v2, :cond_0
+    if-eqz v3, :cond_0
 
-    new-array v7, v3, [Lcom/google/android/exoplayer2/Format;
+    new-array v7, v2, [Lcom/google/android/exoplayer2/Format;
 
     .line 9
     invoke-interface {v1, v7}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
@@ -235,35 +235,35 @@
 
     check-cast v7, [Lcom/google/android/exoplayer2/Format;
 
-    invoke-virtual {v2, v7}, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->copy([Lcom/google/android/exoplayer2/Format;)Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;
+    invoke-virtual {v3, v7}, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->copy([Lcom/google/android/exoplayer2/Format;)Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-interface {p1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {p1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 10
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
     .line 11
     :cond_0
-    iget-object v2, v6, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->formats:[Lcom/google/android/exoplayer2/Format;
+    iget-object v3, v6, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->formats:[Lcom/google/android/exoplayer2/Format;
 
     iget v5, v5, Lcom/google/android/exoplayer2/offline/StreamKey;->streamIndex:I
 
-    aget-object v2, v2, v5
+    aget-object v3, v3, v5
 
-    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v4, v4, 0x1
 
-    move-object v2, v6
+    move-object v3, v6
 
     goto :goto_0
 
     :cond_1
-    if-eqz v2, :cond_2
+    if-eqz v3, :cond_2
 
-    new-array v0, v3, [Lcom/google/android/exoplayer2/Format;
+    new-array v0, v2, [Lcom/google/android/exoplayer2/Format;
 
     .line 12
     invoke-interface {v1, v0}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
@@ -272,14 +272,14 @@
 
     check-cast v0, [Lcom/google/android/exoplayer2/Format;
 
-    invoke-virtual {v2, v0}, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->copy([Lcom/google/android/exoplayer2/Format;)Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;
+    invoke-virtual {v3, v0}, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->copy([Lcom/google/android/exoplayer2/Format;)Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;
 
     move-result-object v0
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_2
-    new-array v0, v3, [Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;
+    new-array v0, v2, [Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;
 
     .line 13
     invoke-interface {p1, v0}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;

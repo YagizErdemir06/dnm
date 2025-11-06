@@ -1,4 +1,4 @@
-.class Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;
+.class public Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -19,25 +19,25 @@
 
 
 # instance fields
-.field final BASELINE:Ljava/lang/String;
+.field public final BASELINE:Ljava/lang/String;
 
-.field final BOTTOM:Ljava/lang/String;
+.field public final BOTTOM:Ljava/lang/String;
 
-.field final END:Ljava/lang/String;
+.field public final END:Ljava/lang/String;
 
-.field final LEFT:Ljava/lang/String;
+.field public final LEFT:Ljava/lang/String;
 
-.field final RIGHT:Ljava/lang/String;
+.field public final RIGHT:Ljava/lang/String;
 
-.field final START:Ljava/lang/String;
+.field public final START:Ljava/lang/String;
 
-.field final TOP:Ljava/lang/String;
+.field public final TOP:Ljava/lang/String;
 
-.field context:Landroid/content/Context;
+.field public context:Landroid/content/Context;
 
-.field flags:I
+.field public flags:I
 
-.field idMap:Ljava/util/HashMap;
+.field public idMap:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashMap<",
@@ -48,13 +48,13 @@
     .end annotation
 .end field
 
-.field layout:Landroidx/constraintlayout/widget/ConstraintLayout;
+.field public layout:Landroidx/constraintlayout/widget/ConstraintLayout;
 
-.field final synthetic this$0:Landroidx/constraintlayout/widget/ConstraintSet;
+.field public final synthetic this$0:Landroidx/constraintlayout/widget/ConstraintSet;
 
-.field unknownCount:I
+.field public unknownCount:I
 
-.field writer:Ljava/io/Writer;
+.field public writer:Ljava/io/Writer;
 
 
 # direct methods
@@ -81,58 +81,72 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->this$0:Landroidx/constraintlayout/widget/ConstraintSet;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
+    .line 2
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->unknownCount:I
 
     const-string p1, "\'left\'"
 
+    .line 3
     iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->LEFT:Ljava/lang/String;
 
     const-string p1, "\'right\'"
 
+    .line 4
     iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->RIGHT:Ljava/lang/String;
 
     const-string p1, "\'baseline\'"
 
+    .line 5
     iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->BASELINE:Ljava/lang/String;
 
     const-string p1, "\'bottom\'"
 
+    .line 6
     iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->BOTTOM:Ljava/lang/String;
 
     const-string p1, "\'top\'"
 
+    .line 7
     iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->TOP:Ljava/lang/String;
 
     const-string p1, "\'start\'"
 
+    .line 8
     iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->START:Ljava/lang/String;
 
     const-string p1, "\'end\'"
 
+    .line 9
     iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->END:Ljava/lang/String;
 
+    .line 10
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
     iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->idMap:Ljava/util/HashMap;
 
+    .line 11
     iput-object p2, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writer:Ljava/io/Writer;
 
+    .line 12
     iput-object p3, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->layout:Landroidx/constraintlayout/widget/ConstraintLayout;
 
-    invoke-virtual {p3}, Landroid/view/View;->getContext()Landroid/content/Context;
+    .line 13
+    invoke-virtual {p3}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
     iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->context:Landroid/content/Context;
 
+    .line 14
     iput p4, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->flags:I
 
     return-void
@@ -190,6 +204,7 @@
 
     goto/16 :goto_2
 
+    .line 1
     :cond_1
     iget-object p0, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writer:Ljava/io/Writer;
 
@@ -219,6 +234,7 @@
 
     return-void
 
+    .line 2
     :cond_2
     iget-object p0, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writer:Ljava/io/Writer;
 
@@ -256,6 +272,7 @@
 
     goto :goto_1
 
+    .line 3
     :cond_4
     iget-object p0, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writer:Ljava/io/Writer;
 
@@ -293,6 +310,7 @@
 
     return-void
 
+    .line 4
     :cond_5
     iget-object p0, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writer:Ljava/io/Writer;
 
@@ -324,6 +342,7 @@
 
     return-void
 
+    .line 5
     :cond_6
     iget-object p0, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writer:Ljava/io/Writer;
 
@@ -361,6 +380,7 @@
 
     if-ne p2, p3, :cond_8
 
+    .line 6
     iget-object p0, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writer:Ljava/io/Writer;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -386,6 +406,7 @@
     :cond_8
     if-ne p2, p7, :cond_9
 
+    .line 7
     iget-object p0, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writer:Ljava/io/Writer;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -408,6 +429,7 @@
 
     goto :goto_2
 
+    .line 8
     :cond_9
     iget-object p0, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writer:Ljava/io/Writer;
 
@@ -472,6 +494,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->idMap:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -486,6 +509,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -521,11 +545,13 @@
 
     return-object p0
 
+    .line 3
     :cond_1
     invoke-virtual {p0, p1}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->lookup(I)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 4
     iget-object p0, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->idMap:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -534,6 +560,7 @@
 
     invoke-virtual {p0, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 5
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -568,6 +595,7 @@
 
     if-eq p1, v0, :cond_0
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->context:Landroid/content/Context;
 
@@ -581,6 +609,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -604,6 +633,7 @@
 
     return-object p0
 
+    .line 3
     :catch_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -653,6 +683,7 @@
 
     return-void
 
+    .line 1
     :cond_0
     iget-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writer:Ljava/io/Writer;
 
@@ -660,12 +691,14 @@
 
     invoke-virtual {v0, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 2
     iget-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writer:Ljava/io/Writer;
 
     const-string v1, ":["
 
     invoke-virtual {v0, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 3
     iget-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writer:Ljava/io/Writer;
 
     invoke-virtual {p0, p1}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->getName(I)Ljava/lang/String;
@@ -674,6 +707,7 @@
 
     invoke-virtual {v0, p1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 4
     iget-object p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writer:Ljava/io/Writer;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -692,6 +726,7 @@
 
     invoke-virtual {p1, p2}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 5
     iget-object p0, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writer:Ljava/io/Writer;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -744,6 +779,7 @@
 
     return-void
 
+    .line 1
     :cond_0
     iget-object p5, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writer:Ljava/io/Writer;
 
@@ -763,12 +799,14 @@
 
     invoke-virtual {p5, p1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 2
     iget-object p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writer:Ljava/io/Writer;
 
     const-string p5, ":["
 
     invoke-virtual {p1, p5}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 3
     iget-object p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writer:Ljava/io/Writer;
 
     invoke-virtual {p0, p2}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->getName(I)Ljava/lang/String;
@@ -777,18 +815,21 @@
 
     invoke-virtual {p1, p2}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 4
     iget-object p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writer:Ljava/io/Writer;
 
     const-string p2, " , "
 
     invoke-virtual {p1, p2}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 5
     iget-object p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writer:Ljava/io/Writer;
 
     invoke-virtual {p1, p3}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
     if-eqz p4, :cond_1
 
+    .line 6
     iget-object p1, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writer:Ljava/io/Writer;
 
     new-instance p3, Ljava/lang/StringBuilder;
@@ -805,6 +846,7 @@
 
     invoke-virtual {p1, p2}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 7
     :cond_1
     iget-object p0, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writer:Ljava/io/Writer;
 
@@ -823,12 +865,14 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writer:Ljava/io/Writer;
 
     const-string v1, "\n\'ConstraintSet\':{\n"
 
     invoke-virtual {v0, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 2
     iget-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->this$0:Landroidx/constraintlayout/widget/ConstraintSet;
 
     invoke-static {v0}, Landroidx/constraintlayout/widget/ConstraintSet;->access$1300(Landroidx/constraintlayout/widget/ConstraintSet;)Ljava/util/HashMap;
@@ -858,6 +902,7 @@
 
     check-cast v0, Ljava/lang/Integer;
 
+    .line 3
     iget-object v1, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->this$0:Landroidx/constraintlayout/widget/ConstraintSet;
 
     invoke-static {v1}, Landroidx/constraintlayout/widget/ConstraintSet;->access$1300(Landroidx/constraintlayout/widget/ConstraintSet;)Ljava/util/HashMap;
@@ -870,6 +915,7 @@
 
     check-cast v1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;
 
+    .line 4
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
@@ -878,6 +924,7 @@
 
     move-result-object v0
 
+    .line 5
     iget-object v2, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writer:Ljava/io/Writer;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -896,10 +943,10 @@
 
     invoke-virtual {v2, v0}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 6
     iget-object v10, v1, Landroidx/constraintlayout/widget/ConstraintSet$Constraint;->layout:Landroidx/constraintlayout/widget/ConstraintSet$Layout;
 
-    const-string v1, "height"
-
+    .line 7
     iget v2, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mHeight:I
 
     iget v3, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->heightDefault:I
@@ -912,12 +959,13 @@
 
     iget-boolean v7, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->constrainedHeight:Z
 
+    const-string v1, "height"
+
     move-object v0, p0
 
     invoke-direct/range {v0 .. v7}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeDimension(Ljava/lang/String;IIFIIZ)V
 
-    const-string/jumbo v1, "width"
-
+    .line 8
     iget v2, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mWidth:I
 
     iget v3, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->widthDefault:I
@@ -930,198 +978,218 @@
 
     iget-boolean v7, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->constrainedWidth:Z
 
+    const-string/jumbo v1, "width"
+
     invoke-direct/range {v0 .. v7}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeDimension(Ljava/lang/String;IIFIIZ)V
 
-    const-string v1, "\'left\'"
-
+    .line 9
     iget v2, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->leftToLeft:I
 
-    const-string v3, "\'left\'"
-
     iget v4, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->leftMargin:I
 
     iget v5, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneLeftMargin:I
-
-    invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeConstraint(Ljava/lang/String;ILjava/lang/String;II)V
 
     const-string v1, "\'left\'"
 
-    iget v2, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->leftToRight:I
+    const-string v3, "\'left\'"
 
-    const-string v3, "\'right\'"
+    invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeConstraint(Ljava/lang/String;ILjava/lang/String;II)V
+
+    .line 10
+    iget v2, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->leftToRight:I
 
     iget v4, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->leftMargin:I
 
     iget v5, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneLeftMargin:I
 
-    invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeConstraint(Ljava/lang/String;ILjava/lang/String;II)V
-
-    const-string v1, "\'right\'"
-
-    iget v2, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->rightToLeft:I
-
-    const-string v3, "\'left\'"
-
-    iget v4, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->rightMargin:I
-
-    iget v5, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneRightMargin:I
-
-    invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeConstraint(Ljava/lang/String;ILjava/lang/String;II)V
-
-    const-string v1, "\'right\'"
-
-    iget v2, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->rightToRight:I
+    const-string v1, "\'left\'"
 
     const-string v3, "\'right\'"
 
+    invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeConstraint(Ljava/lang/String;ILjava/lang/String;II)V
+
+    .line 11
+    iget v2, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->rightToLeft:I
+
     iget v4, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->rightMargin:I
 
     iget v5, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneRightMargin:I
 
+    const-string v1, "\'right\'"
+
+    const-string v3, "\'left\'"
+
     invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeConstraint(Ljava/lang/String;ILjava/lang/String;II)V
 
-    const-string v1, "\'baseline\'"
+    .line 12
+    iget v2, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->rightToRight:I
 
+    iget v4, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->rightMargin:I
+
+    iget v5, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneRightMargin:I
+
+    const-string v1, "\'right\'"
+
+    const-string v3, "\'right\'"
+
+    invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeConstraint(Ljava/lang/String;ILjava/lang/String;II)V
+
+    .line 13
     iget v2, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->baselineToBaseline:I
-
-    const-string v3, "\'baseline\'"
 
     const/4 v4, -0x1
 
     iget v5, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneBaselineMargin:I
 
-    invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeConstraint(Ljava/lang/String;ILjava/lang/String;II)V
-
     const-string v1, "\'baseline\'"
 
+    const-string v3, "\'baseline\'"
+
+    invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeConstraint(Ljava/lang/String;ILjava/lang/String;II)V
+
+    .line 14
     iget v2, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->baselineToTop:I
 
-    const-string v3, "\'top\'"
-
     iget v5, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneBaselineMargin:I
-
-    invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeConstraint(Ljava/lang/String;ILjava/lang/String;II)V
 
     const-string v1, "\'baseline\'"
 
-    iget v2, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->baselineToBottom:I
+    const-string v3, "\'top\'"
 
-    const-string v3, "\'bottom\'"
+    invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeConstraint(Ljava/lang/String;ILjava/lang/String;II)V
+
+    .line 15
+    iget v2, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->baselineToBottom:I
 
     iget v5, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneBaselineMargin:I
 
+    const-string v1, "\'baseline\'"
+
+    const-string v3, "\'bottom\'"
+
     invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeConstraint(Ljava/lang/String;ILjava/lang/String;II)V
 
-    const-string v1, "\'top\'"
-
+    .line 16
     iget v2, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->topToBottom:I
 
-    const-string v3, "\'bottom\'"
-
     iget v4, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->topMargin:I
 
     iget v5, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneTopMargin:I
-
-    invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeConstraint(Ljava/lang/String;ILjava/lang/String;II)V
 
     const-string v1, "\'top\'"
 
-    iget v2, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->topToTop:I
+    const-string v3, "\'bottom\'"
 
-    const-string v3, "\'top\'"
+    invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeConstraint(Ljava/lang/String;ILjava/lang/String;II)V
+
+    .line 17
+    iget v2, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->topToTop:I
 
     iget v4, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->topMargin:I
 
     iget v5, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneTopMargin:I
 
-    invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeConstraint(Ljava/lang/String;ILjava/lang/String;II)V
-
-    const-string v1, "\'bottom\'"
-
-    iget v2, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->bottomToBottom:I
-
-    const-string v3, "\'bottom\'"
-
-    iget v4, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->bottomMargin:I
-
-    iget v5, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneBottomMargin:I
-
-    invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeConstraint(Ljava/lang/String;ILjava/lang/String;II)V
-
-    const-string v1, "\'bottom\'"
-
-    iget v2, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->bottomToTop:I
+    const-string v1, "\'top\'"
 
     const-string v3, "\'top\'"
 
+    invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeConstraint(Ljava/lang/String;ILjava/lang/String;II)V
+
+    .line 18
+    iget v2, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->bottomToBottom:I
+
     iget v4, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->bottomMargin:I
 
     iget v5, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneBottomMargin:I
 
+    const-string v1, "\'bottom\'"
+
+    const-string v3, "\'bottom\'"
+
     invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeConstraint(Ljava/lang/String;ILjava/lang/String;II)V
 
-    const-string v1, "\'start\'"
+    .line 19
+    iget v2, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->bottomToTop:I
 
+    iget v4, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->bottomMargin:I
+
+    iget v5, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneBottomMargin:I
+
+    const-string v1, "\'bottom\'"
+
+    const-string v3, "\'top\'"
+
+    invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeConstraint(Ljava/lang/String;ILjava/lang/String;II)V
+
+    .line 20
     iget v2, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->startToStart:I
 
-    const-string v3, "\'start\'"
-
     iget v4, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->startMargin:I
 
     iget v5, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneStartMargin:I
-
-    invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeConstraint(Ljava/lang/String;ILjava/lang/String;II)V
 
     const-string v1, "\'start\'"
 
-    iget v2, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->startToEnd:I
+    const-string v3, "\'start\'"
 
-    const-string v3, "\'end\'"
+    invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeConstraint(Ljava/lang/String;ILjava/lang/String;II)V
+
+    .line 21
+    iget v2, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->startToEnd:I
 
     iget v4, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->startMargin:I
 
     iget v5, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneStartMargin:I
 
-    invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeConstraint(Ljava/lang/String;ILjava/lang/String;II)V
-
-    const-string v1, "\'end\'"
-
-    iget v2, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->endToStart:I
-
-    const-string v3, "\'start\'"
-
-    iget v4, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->endMargin:I
-
-    iget v5, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneEndMargin:I
-
-    invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeConstraint(Ljava/lang/String;ILjava/lang/String;II)V
-
-    const-string v1, "\'end\'"
-
-    iget v2, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->endToEnd:I
+    const-string v1, "\'start\'"
 
     const-string v3, "\'end\'"
 
+    invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeConstraint(Ljava/lang/String;ILjava/lang/String;II)V
+
+    .line 22
+    iget v2, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->endToStart:I
+
     iget v4, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->endMargin:I
 
     iget v5, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneEndMargin:I
 
+    const-string v1, "\'end\'"
+
+    const-string v3, "\'start\'"
+
     invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeConstraint(Ljava/lang/String;ILjava/lang/String;II)V
 
-    const-string v0, "\'horizontalBias\'"
+    .line 23
+    iget v2, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->endToEnd:I
 
-    iget v1, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->horizontalBias:F
+    iget v4, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->endMargin:I
+
+    iget v5, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->goneEndMargin:I
+
+    const-string v1, "\'end\'"
+
+    const-string v3, "\'end\'"
+
+    invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeConstraint(Ljava/lang/String;ILjava/lang/String;II)V
+
+    .line 24
+    iget v0, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->horizontalBias:F
+
+    const-string v1, "\'horizontalBias\'"
 
     const/high16 v2, 0x3f000000    # 0.5f
 
-    invoke-virtual {p0, v0, v1, v2}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeVariable(Ljava/lang/String;FF)V
+    invoke-virtual {p0, v1, v0, v2}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeVariable(Ljava/lang/String;FF)V
 
-    const-string v0, "\'verticalBias\'"
+    .line 25
+    iget v0, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->verticalBias:F
 
-    iget v1, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->verticalBias:F
+    const-string v1, "\'verticalBias\'"
 
-    invoke-virtual {p0, v0, v1, v2}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeVariable(Ljava/lang/String;FF)V
+    invoke-virtual {p0, v1, v0, v2}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeVariable(Ljava/lang/String;FF)V
 
+    .line 26
     iget v0, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->circleConstraint:I
 
     iget v1, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->circleAngle:F
@@ -1130,6 +1198,7 @@
 
     invoke-virtual {p0, v0, v1, v2}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeCircle(IFI)V
 
+    .line 27
     iget v0, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->orientation:I
 
     iget v1, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->guideBegin:I
@@ -1140,30 +1209,35 @@
 
     invoke-direct {p0, v0, v1, v2, v3}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeGuideline(IIIF)V
 
-    const-string v0, "\'dimensionRatio\'"
+    .line 28
+    iget-object v0, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->dimensionRatio:Ljava/lang/String;
 
-    iget-object v1, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->dimensionRatio:Ljava/lang/String;
+    const-string v1, "\'dimensionRatio\'"
 
-    invoke-virtual {p0, v0, v1}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeVariable(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, v1, v0}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeVariable(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v0, "\'barrierMargin\'"
+    .line 29
+    iget v0, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mBarrierMargin:I
 
-    iget v1, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mBarrierMargin:I
+    const-string v1, "\'barrierMargin\'"
 
-    invoke-virtual {p0, v0, v1}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeVariable(Ljava/lang/String;I)V
+    invoke-virtual {p0, v1, v0}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeVariable(Ljava/lang/String;I)V
 
-    const-string v0, "\'type\'"
+    .line 30
+    iget v0, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mHelperType:I
 
-    iget v1, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mHelperType:I
+    const-string v1, "\'type\'"
 
-    invoke-virtual {p0, v0, v1}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeVariable(Ljava/lang/String;I)V
+    invoke-virtual {p0, v1, v0}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeVariable(Ljava/lang/String;I)V
 
-    const-string v0, "\'ReferenceId\'"
+    .line 31
+    iget-object v0, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mReferenceIdString:Ljava/lang/String;
 
-    iget-object v1, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mReferenceIdString:Ljava/lang/String;
+    const-string v1, "\'ReferenceId\'"
 
-    invoke-virtual {p0, v0, v1}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeVariable(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, v1, v0}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeVariable(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 32
     iget-boolean v0, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mBarrierAllowsGoneWidgets:Z
 
     const/4 v1, 0x1
@@ -1172,50 +1246,59 @@
 
     invoke-virtual {p0, v2, v0, v1}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeVariable(Ljava/lang/String;ZZ)V
 
-    const-string v0, "\'WrapBehavior\'"
+    .line 33
+    iget v0, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mWrapBehavior:I
 
-    iget v1, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mWrapBehavior:I
+    const-string v1, "\'WrapBehavior\'"
 
-    invoke-virtual {p0, v0, v1}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeVariable(Ljava/lang/String;I)V
+    invoke-virtual {p0, v1, v0}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeVariable(Ljava/lang/String;I)V
 
-    const-string v0, "\'verticalWeight\'"
+    .line 34
+    iget v0, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->verticalWeight:F
 
-    iget v1, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->verticalWeight:F
+    const-string v1, "\'verticalWeight\'"
 
-    invoke-virtual {p0, v0, v1}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeVariable(Ljava/lang/String;F)V
+    invoke-virtual {p0, v1, v0}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeVariable(Ljava/lang/String;F)V
 
-    const-string v0, "\'horizontalWeight\'"
+    .line 35
+    iget v0, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->horizontalWeight:F
 
-    iget v1, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->horizontalWeight:F
+    const-string v1, "\'horizontalWeight\'"
 
-    invoke-virtual {p0, v0, v1}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeVariable(Ljava/lang/String;F)V
+    invoke-virtual {p0, v1, v0}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeVariable(Ljava/lang/String;F)V
 
-    const-string v0, "\'horizontalChainStyle\'"
+    .line 36
+    iget v0, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->horizontalChainStyle:I
 
-    iget v1, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->horizontalChainStyle:I
+    const-string v1, "\'horizontalChainStyle\'"
 
-    invoke-virtual {p0, v0, v1}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeVariable(Ljava/lang/String;I)V
+    invoke-virtual {p0, v1, v0}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeVariable(Ljava/lang/String;I)V
 
-    const-string v0, "\'verticalChainStyle\'"
+    .line 37
+    iget v0, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->verticalChainStyle:I
 
-    iget v1, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->verticalChainStyle:I
+    const-string v1, "\'verticalChainStyle\'"
 
-    invoke-virtual {p0, v0, v1}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeVariable(Ljava/lang/String;I)V
+    invoke-virtual {p0, v1, v0}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeVariable(Ljava/lang/String;I)V
 
-    const-string v0, "\'barrierDirection\'"
+    .line 38
+    iget v0, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mBarrierDirection:I
 
-    iget v1, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mBarrierDirection:I
+    const-string v1, "\'barrierDirection\'"
 
-    invoke-virtual {p0, v0, v1}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeVariable(Ljava/lang/String;I)V
+    invoke-virtual {p0, v1, v0}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeVariable(Ljava/lang/String;I)V
 
+    .line 39
     iget-object v0, v10, Landroidx/constraintlayout/widget/ConstraintSet$Layout;->mReferenceIds:[I
 
     if-eqz v0, :cond_0
 
     const-string v1, "\'ReferenceIds\'"
 
+    .line 40
     invoke-virtual {p0, v1, v0}, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writeVariable(Ljava/lang/String;[I)V
 
+    .line 41
     :cond_0
     iget-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writer:Ljava/io/Writer;
 
@@ -1223,6 +1306,7 @@
 
     goto/16 :goto_0
 
+    .line 42
     :cond_1
     iget-object v0, p0, Landroidx/constraintlayout/widget/ConstraintSet$WriteJsonEngine;->writer:Ljava/io/Writer;
 

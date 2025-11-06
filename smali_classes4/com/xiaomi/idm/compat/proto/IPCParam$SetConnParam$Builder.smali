@@ -55,8 +55,10 @@
 .method public clearConnParam()Lcom/xiaomi/idm/compat/proto/IPCParam$SetConnParam$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/compat/proto/IPCParam$SetConnParam;
@@ -69,6 +71,7 @@
 .method public getConnParam()Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast p0, Lcom/xiaomi/idm/compat/proto/IPCParam$SetConnParam;
@@ -83,6 +86,7 @@
 .method public hasConnParam()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast p0, Lcom/xiaomi/idm/compat/proto/IPCParam$SetConnParam;
@@ -97,8 +101,10 @@
 .method public mergeConnParam(Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam;)Lcom/xiaomi/idm/compat/proto/IPCParam$SetConnParam$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/compat/proto/IPCParam$SetConnParam;

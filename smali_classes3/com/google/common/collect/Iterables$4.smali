@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Iterables$4;
+.class public Lcom/google/common/collect/Iterables$4;
 .super Lcom/google/common/collect/FluentIterable;
 .source "SourceFile"
 
@@ -22,15 +22,16 @@
 
 
 # instance fields
-.field final synthetic val$retainIfTrue:Lcom/google/common/base/Predicate;
+.field public final synthetic val$retainIfTrue:Lcom/google/common/base/Predicate;
 
-.field final synthetic val$unfiltered:Ljava/lang/Iterable;
+.field public final synthetic val$unfiltered:Ljava/lang/Iterable;
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/Iterable;Lcom/google/common/base/Predicate;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/Iterables$4;->val$unfiltered:Ljava/lang/Iterable;
 
     iput-object p2, p0, Lcom/google/common/collect/Iterables$4;->val$retainIfTrue:Lcom/google/common/base/Predicate;
@@ -52,6 +53,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Iterables$4;->val$unfiltered:Ljava/lang/Iterable;
 
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;

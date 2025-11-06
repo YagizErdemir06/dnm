@@ -22,6 +22,7 @@
 .method public constructor <init>(Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver$b;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver$b$a;->a:Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver$b;
 
     invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
@@ -34,11 +35,13 @@
 .method public onComplete(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lmiuix/animation/listener/TransitionListener;->onComplete(Ljava/lang/Object;)V
 
+    .line 2
     iget-object p1, p0, Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver$b$a;->a:Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver$b;
 
-    iget-object p1, p1, Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver$b;->b:Landroid/view/View;
+    iget-object p1, p1, Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver$b;->d:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
@@ -52,11 +55,12 @@
 
     iget-object p0, p0, Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver$b$a;->a:Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver$b;
 
-    iget-object p0, p0, Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver$b;->a:Landroid/view/View;
+    iget-object p0, p0, Lmiuix/appcompat/app/floatingactivity/multiapp/MultiAppFloatingLifecycleObserver$b;->c:Landroid/view/View;
 
     invoke-virtual {p1, p0}, Landroid/view/ViewGroupOverlay;->remove(Landroid/view/View;)V
 
-    invoke-static {}, Lwo/g;->H()Lwo/g;
+    .line 3
+    invoke-static {}, Lk/b/d/s/o/g;->G()Lk/b/d/s/o/g;
 
     move-result-object p0
 
@@ -64,7 +68,8 @@
 
     const/4 p1, 0x0
 
-    invoke-virtual {p0, p1}, Lwo/g;->i0(Landroid/view/View;)V
+    .line 4
+    invoke-virtual {p0, p1}, Lk/b/d/s/o/g;->g0(Landroid/view/View;)V
 
     :cond_0
     return-void

@@ -1,4 +1,4 @@
-.class synthetic Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$1;
+.class public synthetic Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$com$xiaomi$camera$imagecodec$ReprocessorFactory$ReprocessorType:[I
+.field public static final synthetic $SwitchMap$com$xiaomi$camera$imagecodec$ReprocessorFactory$ReprocessorType:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$ReprocessorType;->values()[Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$ReprocessorType;
 
     move-result-object v0

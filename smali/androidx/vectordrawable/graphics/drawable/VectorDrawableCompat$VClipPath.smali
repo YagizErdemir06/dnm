@@ -1,4 +1,4 @@
-.class Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VClipPath;
+.class public Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VClipPath;
 .super Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VPath;
 .source "SourceFile"
 
@@ -38,23 +38,27 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
+    .line 2
     iput-object v1, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VPath;->mPathName:Ljava/lang/String;
 
     :cond_0
     const/4 v1, 0x1
 
+    .line 3
     invoke-virtual {p1, v1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
+    .line 4
     invoke-static {v1}, Landroidx/core/graphics/PathParser;->createNodesFromPathData(Ljava/lang/String;)[Landroidx/core/graphics/PathParser$PathDataNode;
 
     move-result-object v1
@@ -62,11 +66,12 @@
     iput-object v1, p0, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VPath;->mNodes:[Landroidx/core/graphics/PathParser$PathDataNode;
 
     :cond_1
-    const-string v1, "fillType"
+    const/4 v1, 0x2
 
-    const/4 v2, 0x2
+    const-string v2, "fillType"
 
-    invoke-static {p1, p2, v1, v2, v0}, Landroidx/core/content/res/TypedArrayUtils;->getNamedInt(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
+    .line 5
+    invoke-static {p1, p2, v2, v1, v0}, Landroidx/core/content/res/TypedArrayUtils;->getNamedInt(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
     move-result p1
 
@@ -82,6 +87,7 @@
 
     const-string v0, "pathData"
 
+    .line 1
     invoke-static {p4, v0}, Landroidx/core/content/res/TypedArrayUtils;->hasAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
     move-result v0
@@ -90,6 +96,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     sget-object v0, Landroidx/vectordrawable/graphics/drawable/AndroidResources;->STYLEABLE_VECTOR_DRAWABLE_CLIP_PATH:[I
 
@@ -97,8 +104,10 @@
 
     move-result-object p1
 
+    .line 3
     invoke-direct {p0, p1, p4}, Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VClipPath;->updateStateFromTypedArray(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;)V
 
+    .line 4
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void

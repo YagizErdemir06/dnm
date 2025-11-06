@@ -4,27 +4,35 @@
 
 
 # annotations
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000J\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u000b\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u0012\u0008\u0086\u0008\u0018\u00002\u00020\u0001B\u00c1\u0001\u0012\u0006\u0010\u0012\u001a\u00020\u0002\u0012\u0018\u0008\u0002\u0010\u0013\u001a\u0012\u0012\u0004\u0012\u00020\u00050\u0004j\u0008\u0012\u0004\u0012\u00020\u0005`\u0006\u0012\u0018\u0008\u0002\u0010\u0014\u001a\u0012\u0012\u0004\u0012\u00020\u00080\u0004j\u0008\u0012\u0004\u0012\u00020\u0008`\u0006\u00120\u0008\u0002\u0010\u0015\u001a*\u0012\u0004\u0012\u00020\u000b\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\r0\u000c0\nj\u0014\u0012\u0004\u0012\u00020\u000b\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\r0\u000c`\u000e\u00120\u0008\u0002\u0010\u0016\u001a*\u0012\u0004\u0012\u00020\u000b\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\r0\u000c0\nj\u0014\u0012\u0004\u0012\u00020\u000b\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\r0\u000c`\u000e\u0012\u0018\u0008\u0002\u0010\u0017\u001a\u0012\u0012\u0004\u0012\u00020\u00080\u0004j\u0008\u0012\u0004\u0012\u00020\u0008`\u0006\u00a2\u0006\u0004\u0008-\u0010.J\t\u0010\u0003\u001a\u00020\u0002H\u00c6\u0003J\u0019\u0010\u0007\u001a\u0012\u0012\u0004\u0012\u00020\u00050\u0004j\u0008\u0012\u0004\u0012\u00020\u0005`\u0006H\u00c6\u0003J\u0019\u0010\t\u001a\u0012\u0012\u0004\u0012\u00020\u00080\u0004j\u0008\u0012\u0004\u0012\u00020\u0008`\u0006H\u00c6\u0003J1\u0010\u000f\u001a*\u0012\u0004\u0012\u00020\u000b\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\r0\u000c0\nj\u0014\u0012\u0004\u0012\u00020\u000b\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\r0\u000c`\u000eH\u00c6\u0003J1\u0010\u0010\u001a*\u0012\u0004\u0012\u00020\u000b\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\r0\u000c0\nj\u0014\u0012\u0004\u0012\u00020\u000b\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\r0\u000c`\u000eH\u00c6\u0003J\u0019\u0010\u0011\u001a\u0012\u0012\u0004\u0012\u00020\u00080\u0004j\u0008\u0012\u0004\u0012\u00020\u0008`\u0006H\u00c6\u0003J\u00c5\u0001\u0010\u0018\u001a\u00020\u00002\u0008\u0008\u0002\u0010\u0012\u001a\u00020\u00022\u0018\u0008\u0002\u0010\u0013\u001a\u0012\u0012\u0004\u0012\u00020\u00050\u0004j\u0008\u0012\u0004\u0012\u00020\u0005`\u00062\u0018\u0008\u0002\u0010\u0014\u001a\u0012\u0012\u0004\u0012\u00020\u00080\u0004j\u0008\u0012\u0004\u0012\u00020\u0008`\u000620\u0008\u0002\u0010\u0015\u001a*\u0012\u0004\u0012\u00020\u000b\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\r0\u000c0\nj\u0014\u0012\u0004\u0012\u00020\u000b\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\r0\u000c`\u000e20\u0008\u0002\u0010\u0016\u001a*\u0012\u0004\u0012\u00020\u000b\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\r0\u000c0\nj\u0014\u0012\u0004\u0012\u00020\u000b\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\r0\u000c`\u000e2\u0018\u0008\u0002\u0010\u0017\u001a\u0012\u0012\u0004\u0012\u00020\u00080\u0004j\u0008\u0012\u0004\u0012\u00020\u0008`\u0006H\u00c6\u0001J\t\u0010\u0019\u001a\u00020\u000bH\u00d6\u0001J\t\u0010\u001b\u001a\u00020\u001aH\u00d6\u0001J\u0013\u0010\u001e\u001a\u00020\u001d2\u0008\u0010\u001c\u001a\u0004\u0018\u00010\u0001H\u00d6\u0003R\u0017\u0010\u0012\u001a\u00020\u00028\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0012\u0010\u001f\u001a\u0004\u0008 \u0010!R\'\u0010\u0013\u001a\u0012\u0012\u0004\u0012\u00020\u00050\u0004j\u0008\u0012\u0004\u0012\u00020\u0005`\u00068\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0013\u0010\"\u001a\u0004\u0008#\u0010$R\'\u0010\u0014\u001a\u0012\u0012\u0004\u0012\u00020\u00080\u0004j\u0008\u0012\u0004\u0012\u00020\u0008`\u00068\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0014\u0010\"\u001a\u0004\u0008%\u0010$R?\u0010\u0015\u001a*\u0012\u0004\u0012\u00020\u000b\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\r0\u000c0\nj\u0014\u0012\u0004\u0012\u00020\u000b\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\r0\u000c`\u000e8\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0015\u0010&\u001a\u0004\u0008\'\u0010(RJ\u0010\u0016\u001a*\u0012\u0004\u0012\u00020\u000b\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\r0\u000c0\nj\u0014\u0012\u0004\u0012\u00020\u000b\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\r0\u000c`\u000e8\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0016\u0010&\u001a\u0004\u0008)\u0010(\"\u0004\u0008*\u0010+R\'\u0010\u0017\u001a\u0012\u0012\u0004\u0012\u00020\u00080\u0004j\u0008\u0012\u0004\u0012\u00020\u0008`\u00068\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0017\u0010\"\u001a\u0004\u0008,\u0010$\u00a8\u0006/"
+        "\u0000N\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\t\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u000e\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0002\u0008\u0010\u0008\u0086\u0008\u0018\u00002\u00020\u0001B\u00c1\u0001\u0012\u0006\u0010\u0015\u001a\u00020\u0002\u0012\u0018\u0008\u0002\u0010\u0016\u001a\u0012\u0012\u0004\u0012\u00020\u00060\u0005j\u0008\u0012\u0004\u0012\u00020\u0006`\u0007\u0012\u0018\u0008\u0002\u0010\u0017\u001a\u0012\u0012\u0004\u0012\u00020\n0\u0005j\u0008\u0012\u0004\u0012\u00020\n`\u0007\u00120\u0008\u0002\u0010\u0018\u001a*\u0012\u0004\u0012\u00020\r\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u000f0\u000e0\u000cj\u0014\u0012\u0004\u0012\u00020\r\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u000f0\u000e`\u0010\u00120\u0008\u0002\u0010\u0019\u001a*\u0012\u0004\u0012\u00020\r\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u000f0\u000e0\u000cj\u0014\u0012\u0004\u0012\u00020\r\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u000f0\u000e`\u0010\u0012\u0018\u0008\u0002\u0010\u001a\u001a\u0012\u0012\u0004\u0012\u00020\n0\u0005j\u0008\u0012\u0004\u0012\u00020\n`\u0007\u00a2\u0006\u0004\u00081\u00102J\u0010\u0010\u0003\u001a\u00020\u0002H\u00c6\u0003\u00a2\u0006\u0004\u0008\u0003\u0010\u0004J \u0010\u0008\u001a\u0012\u0012\u0004\u0012\u00020\u00060\u0005j\u0008\u0012\u0004\u0012\u00020\u0006`\u0007H\u00c6\u0003\u00a2\u0006\u0004\u0008\u0008\u0010\tJ \u0010\u000b\u001a\u0012\u0012\u0004\u0012\u00020\n0\u0005j\u0008\u0012\u0004\u0012\u00020\n`\u0007H\u00c6\u0003\u00a2\u0006\u0004\u0008\u000b\u0010\tJ8\u0010\u0011\u001a*\u0012\u0004\u0012\u00020\r\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u000f0\u000e0\u000cj\u0014\u0012\u0004\u0012\u00020\r\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u000f0\u000e`\u0010H\u00c6\u0003\u00a2\u0006\u0004\u0008\u0011\u0010\u0012J8\u0010\u0013\u001a*\u0012\u0004\u0012\u00020\r\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u000f0\u000e0\u000cj\u0014\u0012\u0004\u0012\u00020\r\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u000f0\u000e`\u0010H\u00c6\u0003\u00a2\u0006\u0004\u0008\u0013\u0010\u0012J \u0010\u0014\u001a\u0012\u0012\u0004\u0012\u00020\n0\u0005j\u0008\u0012\u0004\u0012\u00020\n`\u0007H\u00c6\u0003\u00a2\u0006\u0004\u0008\u0014\u0010\tJ\u00cc\u0001\u0010\u001b\u001a\u00020\u00002\u0008\u0008\u0002\u0010\u0015\u001a\u00020\u00022\u0018\u0008\u0002\u0010\u0016\u001a\u0012\u0012\u0004\u0012\u00020\u00060\u0005j\u0008\u0012\u0004\u0012\u00020\u0006`\u00072\u0018\u0008\u0002\u0010\u0017\u001a\u0012\u0012\u0004\u0012\u00020\n0\u0005j\u0008\u0012\u0004\u0012\u00020\n`\u000720\u0008\u0002\u0010\u0018\u001a*\u0012\u0004\u0012\u00020\r\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u000f0\u000e0\u000cj\u0014\u0012\u0004\u0012\u00020\r\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u000f0\u000e`\u001020\u0008\u0002\u0010\u0019\u001a*\u0012\u0004\u0012\u00020\r\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u000f0\u000e0\u000cj\u0014\u0012\u0004\u0012\u00020\r\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u000f0\u000e`\u00102\u0018\u0008\u0002\u0010\u001a\u001a\u0012\u0012\u0004\u0012\u00020\n0\u0005j\u0008\u0012\u0004\u0012\u00020\n`\u0007H\u00c6\u0001\u00a2\u0006\u0004\u0008\u001b\u0010\u001cJ\u0010\u0010\u001d\u001a\u00020\rH\u00d6\u0001\u00a2\u0006\u0004\u0008\u001d\u0010\u001eJ\u0010\u0010 \u001a\u00020\u001fH\u00d6\u0001\u00a2\u0006\u0004\u0008 \u0010!J\u001a\u0010$\u001a\u00020#2\u0008\u0010\"\u001a\u0004\u0018\u00010\u0001H\u00d6\u0003\u00a2\u0006\u0004\u0008$\u0010%R\u0019\u0010\u0015\u001a\u00020\u00028\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0015\u0010&\u001a\u0004\u0008\'\u0010\u0004R)\u0010\u001a\u001a\u0012\u0012\u0004\u0012\u00020\n0\u0005j\u0008\u0012\u0004\u0012\u00020\n`\u00078\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\u001a\u0010(\u001a\u0004\u0008)\u0010\tR)\u0010\u0016\u001a\u0012\u0012\u0004\u0012\u00020\u00060\u0005j\u0008\u0012\u0004\u0012\u00020\u0006`\u00078\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0016\u0010(\u001a\u0004\u0008*\u0010\tRA\u0010\u0018\u001a*\u0012\u0004\u0012\u00020\r\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u000f0\u000e0\u000cj\u0014\u0012\u0004\u0012\u00020\r\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u000f0\u000e`\u00108\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0018\u0010+\u001a\u0004\u0008,\u0010\u0012RJ\u0010\u0019\u001a*\u0012\u0004\u0012\u00020\r\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u000f0\u000e0\u000cj\u0014\u0012\u0004\u0012\u00020\r\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u000f0\u000e`\u00108\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0019\u0010+\u001a\u0004\u0008-\u0010\u0012\"\u0004\u0008.\u0010/R)\u0010\u0017\u001a\u0012\u0012\u0004\u0012\u00020\n0\u0005j\u0008\u0012\u0004\u0012\u00020\n`\u00078\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0017\u0010(\u001a\u0004\u00080\u0010\t\u00a8\u00063"
     }
     d2 = {
         "Lcom/faceunity/core/avatar/entity/FUAAvatarData;",
         "",
         "",
         "component1",
+        "()J",
         "Ljava/util/ArrayList;",
         "Lcom/faceunity/core/entity/FUBundleData;",
         "Lkotlin/collections/ArrayList;",
         "component2",
+        "()Ljava/util/ArrayList;",
         "Lcom/faceunity/core/entity/FUAnimationBundleData;",
         "component3",
         "Ljava/util/LinkedHashMap;",
         "",
         "Lkotlin/Function0;",
-        "Lnm/l2;",
+        "Lh/l2;",
         "Lkotlin/collections/LinkedHashMap;",
         "component4",
+        "()Ljava/util/LinkedHashMap;",
         "component5",
         "component6",
         "id",
@@ -34,26 +42,27 @@
         "priorityParams",
         "currentAnimationData",
         "copy",
+        "(JLjava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/LinkedHashMap;Ljava/util/LinkedHashMap;Ljava/util/ArrayList;)Lcom/faceunity/core/avatar/entity/FUAAvatarData;",
         "toString",
+        "()Ljava/lang/String;",
         "",
         "hashCode",
+        "()I",
         "other",
         "",
         "equals",
+        "(Ljava/lang/Object;)Z",
         "J",
         "getId",
-        "()J",
         "Ljava/util/ArrayList;",
+        "getCurrentAnimationData",
         "getItemBundles",
-        "()Ljava/util/ArrayList;",
-        "getAnimationBundles",
         "Ljava/util/LinkedHashMap;",
         "getParam",
-        "()Ljava/util/LinkedHashMap;",
         "getPriorityParams",
         "setPriorityParams",
         "(Ljava/util/LinkedHashMap;)V",
-        "getCurrentAnimationData",
+        "getAnimationBundles",
         "<init>",
         "(JLjava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/LinkedHashMap;Ljava/util/LinkedHashMap;Ljava/util/ArrayList;)V",
         "lib_core_release"
@@ -77,7 +86,7 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -90,7 +99,7 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -105,7 +114,7 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -114,13 +123,13 @@
         value = {
             "Ljava/util/LinkedHashMap<",
             "Ljava/lang/String;",
-            "Ljn/a<",
-            "Lnm/l2;",
+            "Lh/d3/w/a<",
+            "Lh/l2;",
             ">;>;"
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -129,13 +138,13 @@
         value = {
             "Ljava/util/LinkedHashMap<",
             "Ljava/lang/String;",
-            "Ljn/a<",
-            "Lnm/l2;",
+            "Lh/d3/w/a<",
+            "Lh/l2;",
             ">;>;"
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -144,23 +153,23 @@
 .method public constructor <init>(JLjava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/LinkedHashMap;Ljava/util/LinkedHashMap;Ljava/util/ArrayList;)V
     .locals 1
     .param p3    # Ljava/util/ArrayList;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p4    # Ljava/util/ArrayList;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p5    # Ljava/util/LinkedHashMap;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p6    # Ljava/util/LinkedHashMap;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p7    # Ljava/util/ArrayList;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
@@ -174,13 +183,13 @@
             ">;",
             "Ljava/util/LinkedHashMap<",
             "Ljava/lang/String;",
-            "Ljn/a<",
-            "Lnm/l2;",
+            "Lh/d3/w/a<",
+            "Lh/l2;",
             ">;>;",
             "Ljava/util/LinkedHashMap<",
             "Ljava/lang/String;",
-            "Ljn/a<",
-            "Lnm/l2;",
+            "Lh/d3/w/a<",
+            "Lh/l2;",
             ">;>;",
             "Ljava/util/ArrayList<",
             "Lcom/faceunity/core/entity/FUAnimationBundleData;",
@@ -190,23 +199,23 @@
 
     const-string v0, "itemBundles"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "animationBundles"
 
-    invoke-static {p4, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "param"
 
-    invoke-static {p5, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p5, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "priorityParams"
 
-    invoke-static {p6, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p6, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "currentAnimationData"
 
-    invoke-static {p7, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p7, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -226,7 +235,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(JLjava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/LinkedHashMap;Ljava/util/LinkedHashMap;Ljava/util/ArrayList;ILkotlin/jvm/internal/w;)V
+.method public synthetic constructor <init>(JLjava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/LinkedHashMap;Ljava/util/LinkedHashMap;Ljava/util/ArrayList;ILh/d3/x/w;)V
     .locals 9
 
     and-int/lit8 v0, p8, 0x2
@@ -440,7 +449,7 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     iget-object p0, p0, Lcom/faceunity/core/avatar/entity/FUAAvatarData;->itemBundles:Ljava/util/ArrayList;
@@ -459,7 +468,7 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     iget-object p0, p0, Lcom/faceunity/core/avatar/entity/FUAAvatarData;->animationBundles:Ljava/util/ArrayList;
@@ -474,13 +483,13 @@
             "()",
             "Ljava/util/LinkedHashMap<",
             "Ljava/lang/String;",
-            "Ljn/a<",
-            "Lnm/l2;",
+            "Lh/d3/w/a<",
+            "Lh/l2;",
             ">;>;"
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     iget-object p0, p0, Lcom/faceunity/core/avatar/entity/FUAAvatarData;->param:Ljava/util/LinkedHashMap;
@@ -495,13 +504,13 @@
             "()",
             "Ljava/util/LinkedHashMap<",
             "Ljava/lang/String;",
-            "Ljn/a<",
-            "Lnm/l2;",
+            "Lh/d3/w/a<",
+            "Lh/l2;",
             ">;>;"
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     iget-object p0, p0, Lcom/faceunity/core/avatar/entity/FUAAvatarData;->priorityParams:Ljava/util/LinkedHashMap;
@@ -520,7 +529,7 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     iget-object p0, p0, Lcom/faceunity/core/avatar/entity/FUAAvatarData;->currentAnimationData:Ljava/util/ArrayList;
@@ -531,23 +540,23 @@
 .method public final copy(JLjava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/LinkedHashMap;Ljava/util/LinkedHashMap;Ljava/util/ArrayList;)Lcom/faceunity/core/avatar/entity/FUAAvatarData;
     .locals 8
     .param p3    # Ljava/util/ArrayList;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p4    # Ljava/util/ArrayList;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p5    # Ljava/util/LinkedHashMap;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p6    # Ljava/util/LinkedHashMap;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p7    # Ljava/util/ArrayList;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
@@ -561,13 +570,13 @@
             ">;",
             "Ljava/util/LinkedHashMap<",
             "Ljava/lang/String;",
-            "Ljn/a<",
-            "Lnm/l2;",
+            "Lh/d3/w/a<",
+            "Lh/l2;",
             ">;>;",
             "Ljava/util/LinkedHashMap<",
             "Ljava/lang/String;",
-            "Ljn/a<",
-            "Lnm/l2;",
+            "Lh/d3/w/a<",
+            "Lh/l2;",
             ">;>;",
             "Ljava/util/ArrayList<",
             "Lcom/faceunity/core/entity/FUAnimationBundleData;",
@@ -576,28 +585,28 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string p0, "itemBundles"
 
-    invoke-static {p3, p0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string p0, "animationBundles"
 
-    invoke-static {p4, p0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, p0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string p0, "param"
 
-    invoke-static {p5, p0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p5, p0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string p0, "priorityParams"
 
-    invoke-static {p6, p0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p6, p0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string p0, "currentAnimationData"
 
-    invoke-static {p7, p0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p7, p0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p0, Lcom/faceunity/core/avatar/entity/FUAAvatarData;
 
@@ -623,7 +632,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
     .param p1    # Ljava/lang/Object;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
 
@@ -647,7 +656,7 @@
 
     iget-object v1, p1, Lcom/faceunity/core/avatar/entity/FUAAvatarData;->itemBundles:Ljava/util/ArrayList;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lh/d3/x/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -657,7 +666,7 @@
 
     iget-object v1, p1, Lcom/faceunity/core/avatar/entity/FUAAvatarData;->animationBundles:Ljava/util/ArrayList;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lh/d3/x/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -667,7 +676,7 @@
 
     iget-object v1, p1, Lcom/faceunity/core/avatar/entity/FUAAvatarData;->param:Ljava/util/LinkedHashMap;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lh/d3/x/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -677,7 +686,7 @@
 
     iget-object v1, p1, Lcom/faceunity/core/avatar/entity/FUAAvatarData;->priorityParams:Ljava/util/LinkedHashMap;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lh/d3/x/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -687,7 +696,7 @@
 
     iget-object p1, p1, Lcom/faceunity/core/avatar/entity/FUAAvatarData;->currentAnimationData:Ljava/util/ArrayList;
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, p1}, Lh/d3/x/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -718,9 +727,10 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/avatar/entity/FUAAvatarData;->animationBundles:Ljava/util/ArrayList;
 
     return-object p0
@@ -737,9 +747,10 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/avatar/entity/FUAAvatarData;->currentAnimationData:Ljava/util/ArrayList;
 
     return-object p0
@@ -748,6 +759,7 @@
 .method public final getId()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/faceunity/core/avatar/entity/FUAAvatarData;->id:J
 
     return-wide v0
@@ -764,9 +776,10 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/avatar/entity/FUAAvatarData;->itemBundles:Ljava/util/ArrayList;
 
     return-object p0
@@ -779,15 +792,16 @@
             "()",
             "Ljava/util/LinkedHashMap<",
             "Ljava/lang/String;",
-            "Ljn/a<",
-            "Lnm/l2;",
+            "Lh/d3/w/a<",
+            "Lh/l2;",
             ">;>;"
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/avatar/entity/FUAAvatarData;->param:Ljava/util/LinkedHashMap;
 
     return-object p0
@@ -800,15 +814,16 @@
             "()",
             "Ljava/util/LinkedHashMap<",
             "Ljava/lang/String;",
-            "Ljn/a<",
-            "Lnm/l2;",
+            "Lh/d3/w/a<",
+            "Lh/l2;",
             ">;>;"
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/avatar/entity/FUAAvatarData;->priorityParams:Ljava/util/LinkedHashMap;
 
     return-object p0
@@ -916,7 +931,7 @@
 .method public final setPriorityParams(Ljava/util/LinkedHashMap;)V
     .locals 1
     .param p1    # Ljava/util/LinkedHashMap;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
@@ -924,16 +939,17 @@
             "(",
             "Ljava/util/LinkedHashMap<",
             "Ljava/lang/String;",
-            "Ljn/a<",
-            "Lnm/l2;",
+            "Lh/d3/w/a<",
+            "Lh/l2;",
             ">;>;)V"
         }
     .end annotation
 
     const-string v0, "<set-?>"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/core/avatar/entity/FUAAvatarData;->priorityParams:Ljava/util/LinkedHashMap;
 
     return-void
@@ -941,7 +957,7 @@
 
 .method public toString()Ljava/lang/String;
     .locals 3
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     new-instance v0, Ljava/lang/StringBuilder;

@@ -65,7 +65,7 @@
 .method public getMessage()Ljava/lang/String;
     .locals 1
 
-    invoke-super {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-super {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
@@ -75,7 +75,7 @@
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p0
 
@@ -92,14 +92,14 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
     :cond_0
-    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-super {p0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object p0
 

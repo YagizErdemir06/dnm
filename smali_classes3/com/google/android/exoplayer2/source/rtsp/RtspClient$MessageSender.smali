@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;
+.class public final Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -19,7 +19,7 @@
 
 .field private lastRequest:Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;
 
-.field final synthetic this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
+.field public final synthetic this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
 
 # direct methods
@@ -63,6 +63,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders$Builder;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
@@ -79,6 +80,7 @@
 
     invoke-direct {v0, v1, p2, v2}, Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders$Builder;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
 
+    .line 2
     iget-object p2, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
     invoke-static {p2}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->access$500(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;)Lcom/google/android/exoplayer2/source/rtsp/RtspAuthenticationInfo;
@@ -87,6 +89,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 3
     iget-object p2, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
     invoke-static {p2}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->access$600(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;)Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil$RtspAuthUserInfo;
@@ -98,8 +101,10 @@
     :try_start_0
     const-string p2, "Authorization"
 
+    .line 4
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
+    .line 5
     invoke-static {v1}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->access$500(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;)Lcom/google/android/exoplayer2/source/rtsp/RtspAuthenticationInfo;
 
     move-result-object v1
@@ -114,6 +119,7 @@
 
     move-result-object v1
 
+    .line 6
     invoke-virtual {v0, p2, v1}, Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders$Builder;->add(Ljava/lang/String;Ljava/lang/String;)Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders$Builder;
     :try_end_0
     .catch Lcom/google/android/exoplayer2/ParserException; {:try_start_0 .. :try_end_0} :catch_0
@@ -123,6 +129,7 @@
     :catch_0
     move-exception p2
 
+    .line 7
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
     new-instance v1, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$RtspPlaybackException;
@@ -131,10 +138,12 @@
 
     invoke-static {p0, v1}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->access$700(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;Ljava/lang/Throwable;)V
 
+    .line 8
     :cond_0
     :goto_0
     invoke-virtual {v0, p3}, Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders$Builder;->addAll(Ljava/util/Map;)Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders$Builder;
 
+    .line 9
     new-instance p0, Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders$Builder;->build()Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders;
@@ -151,6 +160,7 @@
 .method private sendRequest(Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;)V
     .locals 2
 
+    .line 1
     iget-object v0, p1, Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;->headers:Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders;
 
     const-string v1, "CSeq"
@@ -169,6 +179,7 @@
 
     move-result v0
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
     invoke-static {v1}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->access$800(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;)Landroid/util/SparseArray;
@@ -191,6 +202,7 @@
     :goto_0
     invoke-static {v1}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
     invoke-static {v1}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->access$800(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;)Landroid/util/SparseArray;
@@ -199,14 +211,17 @@
 
     invoke-virtual {v1, v0, p1}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
+    .line 4
     invoke-static {p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil;->serializeRequest(Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object v0
 
+    .line 5
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
     invoke-static {v1, v0}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->access$900(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;Ljava/util/List;)V
 
+    .line 6
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
     invoke-static {v1}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->access$1000(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;)Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;
@@ -215,6 +230,7 @@
 
     invoke-virtual {v1, v0}, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;->send(Ljava/util/List;)V
 
+    .line 7
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->lastRequest:Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;
 
     return-void
@@ -223,14 +239,17 @@
 .method private sendResponse(Lcom/google/android/exoplayer2/source/rtsp/RtspResponse;)V
     .locals 1
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil;->serializeResponse(Lcom/google/android/exoplayer2/source/rtsp/RtspResponse;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object p1
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
     invoke-static {v0, p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->access$900(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;Ljava/util/List;)V
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->access$1000(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;)Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;
@@ -247,10 +266,12 @@
 .method public retryLastRequest()V
     .locals 5
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->lastRequest:Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkStateNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->lastRequest:Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;
 
     iget-object v0, v0, Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;->headers:Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders;
@@ -259,10 +280,12 @@
 
     move-result-object v0
 
+    .line 3
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
+    .line 4
     invoke-interface {v0}, Lcom/google/common/collect/Multimap;->keySet()Ljava/util/Set;
 
     move-result-object v2
@@ -287,6 +310,7 @@
 
     const-string v4, "CSeq"
 
+    .line 5
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -295,6 +319,7 @@
 
     const-string v4, "User-Agent"
 
+    .line 6
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -303,6 +328,7 @@
 
     const-string v4, "Session"
 
+    .line 7
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -311,6 +337,7 @@
 
     const-string v4, "Authorization"
 
+    .line 8
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -319,6 +346,7 @@
 
     goto :goto_0
 
+    .line 9
     :cond_1
     invoke-interface {v0, v3}, Lcom/google/common/collect/Multimap;->get(Ljava/lang/Object;)Ljava/util/Collection;
 
@@ -334,6 +362,7 @@
 
     goto :goto_0
 
+    .line 10
     :cond_2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->lastRequest:Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;
 
@@ -341,6 +370,7 @@
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
+    .line 11
     invoke-static {v2}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->access$300(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;)Ljava/lang/String;
 
     move-result-object v2
@@ -349,10 +379,12 @@
 
     iget-object v3, v3, Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;->uri:Landroid/net/Uri;
 
+    .line 12
     invoke-direct {p0, v0, v2, v1, v3}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->getRequestWithCommonHeaders(ILjava/lang/String;Ljava/util/Map;Landroid/net/Uri;)Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;
 
     move-result-object v0
 
+    .line 13
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->sendRequest(Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;)V
 
     return-void
@@ -365,16 +397,19 @@
         .end annotation
     .end param
 
-    const/4 v0, 0x2
-
+    .line 1
     invoke-static {}, Lcom/google/common/collect/ImmutableMap;->of()Lcom/google/common/collect/ImmutableMap;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-direct {p0, v0, p2, v1, p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->getRequestWithCommonHeaders(ILjava/lang/String;Ljava/util/Map;Landroid/net/Uri;)Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;
+    const/4 v1, 0x2
+
+    .line 2
+    invoke-direct {p0, v1, p2, v0, p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->getRequestWithCommonHeaders(ILjava/lang/String;Ljava/util/Map;Landroid/net/Uri;)Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;
 
     move-result-object p1
 
+    .line 3
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->sendRequest(Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;)V
 
     return-void
@@ -383,12 +418,14 @@
 .method public sendMethodNotAllowedResponse(I)V
     .locals 4
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/source/rtsp/RtspResponse;
 
     new-instance v1, Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders$Builder;
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
+    .line 2
     invoke-static {v2}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->access$400(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;)Ljava/lang/String;
 
     move-result-object v2
@@ -409,8 +446,10 @@
 
     invoke-direct {v0, v2, v1}, Lcom/google/android/exoplayer2/source/rtsp/RtspResponse;-><init>(ILcom/google/android/exoplayer2/source/rtsp/RtspHeaders;)V
 
+    .line 3
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->sendResponse(Lcom/google/android/exoplayer2/source/rtsp/RtspResponse;)V
 
+    .line 4
     iget v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->cSeq:I
 
     add-int/lit8 p1, p1, 0x1
@@ -431,16 +470,19 @@
         .end annotation
     .end param
 
-    const/4 v0, 0x4
-
+    .line 1
     invoke-static {}, Lcom/google/common/collect/ImmutableMap;->of()Lcom/google/common/collect/ImmutableMap;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-direct {p0, v0, p2, v1, p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->getRequestWithCommonHeaders(ILjava/lang/String;Ljava/util/Map;Landroid/net/Uri;)Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;
+    const/4 v1, 0x4
+
+    .line 2
+    invoke-direct {p0, v1, p2, v0, p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->getRequestWithCommonHeaders(ILjava/lang/String;Ljava/util/Map;Landroid/net/Uri;)Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;
 
     move-result-object p1
 
+    .line 3
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->sendRequest(Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;)V
 
     return-void
@@ -449,19 +491,20 @@
 .method public sendPauseRequest(Landroid/net/Uri;Ljava/lang/String;)V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->access$100(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;)I
 
     move-result v0
 
-    const/4 v1, 0x2
+    const/4 v1, 0x1
 
-    const/4 v2, 0x1
+    const/4 v2, 0x2
 
-    if-ne v0, v1, :cond_0
+    if-ne v0, v2, :cond_0
 
-    move v0, v2
+    move v0, v1
 
     goto :goto_0
 
@@ -473,19 +516,23 @@
 
     const/4 v0, 0x5
 
+    .line 2
     invoke-static {}, Lcom/google/common/collect/ImmutableMap;->of()Lcom/google/common/collect/ImmutableMap;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-direct {p0, v0, p2, v1, p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->getRequestWithCommonHeaders(ILjava/lang/String;Ljava/util/Map;Landroid/net/Uri;)Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;
+    .line 3
+    invoke-direct {p0, v0, p2, v2, p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->getRequestWithCommonHeaders(ILjava/lang/String;Ljava/util/Map;Landroid/net/Uri;)Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;
 
     move-result-object p1
 
+    .line 4
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->sendRequest(Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;)V
 
+    .line 5
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
-    invoke-static {p0, v2}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->access$202(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;Z)Z
+    invoke-static {p0, v1}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->access$202(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;Z)Z
 
     return-void
 .end method
@@ -493,6 +540,7 @@
 .method public sendPlayRequest(Landroid/net/Uri;JLjava/lang/String;)V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->access$100(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;)I
@@ -522,22 +570,26 @@
     :goto_0
     invoke-static {v1}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
-    const-string v0, "Range"
+    const/4 v0, 0x6
 
+    .line 2
     invoke-static {p2, p3}, Lcom/google/android/exoplayer2/source/rtsp/RtspSessionTiming;->getOffsetStartTimeTiming(J)Ljava/lang/String;
 
     move-result-object p2
 
-    invoke-static {v0, p2}, Lcom/google/common/collect/ImmutableMap;->of(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMap;
+    const-string p3, "Range"
+
+    .line 3
+    invoke-static {p3, p2}, Lcom/google/common/collect/ImmutableMap;->of(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMap;
 
     move-result-object p2
 
-    const/4 p3, 0x6
-
-    invoke-direct {p0, p3, p4, p2, p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->getRequestWithCommonHeaders(ILjava/lang/String;Ljava/util/Map;Landroid/net/Uri;)Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;
+    .line 4
+    invoke-direct {p0, v0, p4, p2, p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->getRequestWithCommonHeaders(ILjava/lang/String;Ljava/util/Map;Landroid/net/Uri;)Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;
 
     move-result-object p1
 
+    .line 5
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->sendRequest(Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;)V
 
     return-void
@@ -550,6 +602,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
     const/4 v1, 0x0
@@ -558,16 +611,19 @@
 
     const-string v0, "Transport"
 
+    .line 2
     invoke-static {v0, p2}, Lcom/google/common/collect/ImmutableMap;->of(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMap;
 
     move-result-object p2
 
     const/16 v0, 0xa
 
+    .line 3
     invoke-direct {p0, v0, p3, p2, p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->getRequestWithCommonHeaders(ILjava/lang/String;Ljava/util/Map;Landroid/net/Uri;)Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;
 
     move-result-object p1
 
+    .line 4
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->sendRequest(Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;)V
 
     return-void
@@ -576,6 +632,7 @@
 .method public sendTeardownRequest(Landroid/net/Uri;Ljava/lang/String;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->access$100(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;)I
@@ -596,6 +653,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
@@ -605,14 +663,17 @@
 
     const/16 v0, 0xc
 
+    .line 3
     invoke-static {}, Lcom/google/common/collect/ImmutableMap;->of()Lcom/google/common/collect/ImmutableMap;
 
     move-result-object v1
 
+    .line 4
     invoke-direct {p0, v0, p2, v1, p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->getRequestWithCommonHeaders(ILjava/lang/String;Ljava/util/Map;Landroid/net/Uri;)Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;
 
     move-result-object p1
 
+    .line 5
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->sendRequest(Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;)V
 
     :cond_1

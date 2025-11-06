@@ -1,5 +1,5 @@
 .class public Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;
-.super Lcom/android/camera/effect/renders/p;
+.super Ld/d/a/q6/n/p;
 .source "SourceFile"
 
 
@@ -38,29 +38,47 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/gallery3d/ui/h;I)V
+.method public constructor <init>(Ld/d/c/a/h;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "canvas",
+            "id"
+        }
+    .end annotation
 
-    invoke-direct {p0, p1, p2}, Lcom/android/camera/effect/renders/p;-><init>(Lcom/android/gallery3d/ui/h;I)V
+    .line 1
+    invoke-direct {p0, p1, p2}, Ld/d/a/q6/n/p;-><init>(Ld/d/c/a/h;I)V
 
     const/4 p1, 0x0
 
+    .line 2
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mNeedNoise:Z
 
+    .line 3
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mNeedDark:Z
 
+    .line 4
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mSourceTexture:I
 
+    .line 5
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mIsSnapshot:Z
 
     const/4 p1, 0x1
 
+    .line 6
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mNeedUpdateTexture:Z
 
     const/4 p1, 0x0
 
+    .line 7
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mRenderBlock:Landroid/graphics/RectF;
 
+    .line 8
     new-instance p1, Ljava/util/concurrent/atomic/AtomicLong;
 
     invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
@@ -73,11 +91,13 @@
 .method private getNoiseDensity()F
     .locals 4
 
-    iget v0, p0, Lcom/android/camera/effect/renders/r;->mSnapshotOriginHeight:I
+    .line 1
+    iget v0, p0, Ld/d/a/q6/n/r;->mSnapshotOriginHeight:I
 
     if-gtz v0, :cond_0
 
-    iget v0, p0, Lcom/android/camera/effect/renders/r;->mPreviewHeight:I
+    .line 2
+    iget v0, p0, Ld/d/a/q6/n/r;->mPreviewHeight:I
 
     :cond_0
     int-to-double v0, v0
@@ -86,7 +106,8 @@
 
     mul-double/2addr v0, v2
 
-    iget p0, p0, Lcom/android/camera/effect/renders/r;->mPreviewHeight:I
+    .line 3
+    iget p0, p0, Ld/d/a/q6/n/r;->mPreviewHeight:I
 
     int-to-double v2, p0
 
@@ -102,6 +123,7 @@
 .method public destroy()V
     .locals 4
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -128,6 +150,7 @@
 
     invoke-static {v2, v0, v1}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mFrameNumberCount:Ljava/util/concurrent/atomic/AtomicLong;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
@@ -140,28 +163,40 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mFrameNumberCount:Ljava/util/concurrent/atomic/AtomicLong;
 
     invoke-virtual {v0, v2, v3}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
 
+    .line 4
     :cond_0
-    invoke-super {p0}, Lcom/android/camera/effect/renders/u;->destroy()V
+    invoke-super {p0}, Ld/d/a/q6/n/u;->destroy()V
 
     return-void
 .end method
 
-.method public draw(Lt3/a;)Z
+.method public draw(Ld/d/a/q6/h/a;)Z
     .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "attr"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    invoke-virtual {p1}, Lt3/a;->a()I
+    .line 2
+    invoke-virtual {p1}, Ld/d/a/q6/h/a;->a()I
 
     move-result v2
 
-    invoke-virtual {p0, v2}, Lcom/android/camera/effect/renders/u;->isAttriSupported(I)Z
+    invoke-virtual {p0, v2}, Ld/d/a/q6/n/u;->isAttriSupported(I)Z
 
     move-result v2
 
@@ -171,8 +206,9 @@
 
     return v3
 
+    .line 3
     :cond_0
-    invoke-virtual {p1}, Lt3/a;->a()I
+    invoke-virtual {p1}, Ld/d/a/q6/h/a;->a()I
 
     move-result v2
 
@@ -186,6 +222,7 @@
 
     if-eq v2, v4, :cond_1
 
+    .line 4
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -194,7 +231,7 @@
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Lt3/a;->a()I
+    invoke-virtual {p1}, Ld/d/a/q6/h/a;->a()I
 
     move-result v4
 
@@ -210,43 +247,51 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     move-object v2, p1
 
-    check-cast v2, Lt3/f;
+    check-cast v2, Ld/d/a/q6/h/f;
 
-    iget v4, v2, Lt3/f;->s:I
+    .line 6
+    iget v4, v2, Ld/d/a/q6/h/f;->s:I
 
     iput v4, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mSourceTexture:I
 
-    iget-boolean v2, v2, Lt3/f;->t:Z
+    .line 7
+    iget-boolean v2, v2, Ld/d/a/q6/h/f;->t:Z
 
     iput-boolean v2, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mIsSnapshot:Z
 
     goto :goto_0
 
+    .line 8
     :cond_2
     move-object v2, p1
 
-    check-cast v2, Lt3/b;
+    check-cast v2, Ld/d/a/q6/h/b;
 
-    iget-object v4, v2, Lt3/b;->s:Lcom/android/gallery3d/ui/b;
+    .line 9
+    iget-object v4, v2, Ld/d/a/q6/h/b;->s:Ld/d/c/a/b;
 
-    invoke-virtual {v4}, Lcom/android/gallery3d/ui/b;->getId()I
+    invoke-virtual {v4}, Ld/d/c/a/b;->getId()I
 
     move-result v4
 
     iput v4, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mSourceTexture:I
 
-    iget-boolean v2, v2, Lt3/b;->t:Z
+    .line 10
+    iget-boolean v2, v2, Ld/d/a/q6/h/b;->t:Z
 
     iput-boolean v2, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mIsSnapshot:Z
 
+    .line 11
     :goto_0
-    invoke-super {p0, p1}, Lcom/android/camera/effect/renders/p;->draw(Lt3/a;)Z
+    invoke-super {p0, p1}, Ld/d/a/q6/n/p;->draw(Ld/d/a/q6/h/a;)Z
 
     move-result p1
 
+    .line 12
     iget-boolean v2, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mIsSnapshot:Z
 
     if-eqz v2, :cond_3
@@ -255,6 +300,7 @@
 
     if-eqz p0, :cond_3
 
+    .line 13
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -288,7 +334,8 @@
 
     const-string p0, "frag_madrid.c"
 
-    invoke-static {p0}, Lcom/android/camera/a6;->N3(Ljava/lang/String;)Ljava/lang/String;
+    .line 1
+    invoke-static {p0}, Ld/d/a/z5;->B3(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -298,9 +345,11 @@
 .method public initShader()V
     .locals 2
 
-    invoke-super {p0}, Lcom/android/camera/effect/renders/p;->initShader()V
+    .line 1
+    invoke-super {p0}, Ld/d/a/q6/n/p;->initShader()V
 
-    iget v0, p0, Lcom/android/camera/effect/renders/u;->mProgram:I
+    .line 2
+    iget v0, p0, Ld/d/a/q6/n/u;->mProgram:I
 
     const-string v1, "text_source"
 
@@ -310,7 +359,8 @@
 
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mUniformSourceTexture:I
 
-    iget v0, p0, Lcom/android/camera/effect/renders/u;->mProgram:I
+    .line 3
+    iget v0, p0, Ld/d/a/q6/n/u;->mProgram:I
 
     const-string v1, "needDark"
 
@@ -320,7 +370,8 @@
 
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mUniformNeedDark:I
 
-    iget v0, p0, Lcom/android/camera/effect/renders/u;->mProgram:I
+    .line 4
+    iget v0, p0, Ld/d/a/q6/n/u;->mProgram:I
 
     const-string v1, "needNoise"
 
@@ -330,7 +381,8 @@
 
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mUniformNeedNoise:I
 
-    iget v0, p0, Lcom/android/camera/effect/renders/u;->mProgram:I
+    .line 5
+    iget v0, p0, Ld/d/a/q6/n/u;->mProgram:I
 
     const-string v1, "frameNumberCount"
 
@@ -340,7 +392,8 @@
 
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mUniformFrameCount:I
 
-    iget v0, p0, Lcom/android/camera/effect/renders/u;->mProgram:I
+    .line 6
+    iget v0, p0, Ld/d/a/q6/n/u;->mProgram:I
 
     const-string v1, "noiseDensity"
 
@@ -350,7 +403,8 @@
 
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mUniformNoiseDensity:I
 
-    iget v0, p0, Lcom/android/camera/effect/renders/u;->mProgram:I
+    .line 7
+    iget v0, p0, Ld/d/a/q6/n/u;->mProgram:I
 
     const-string v1, "blockCount"
 
@@ -360,7 +414,8 @@
 
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mUniformBlockCount:I
 
-    iget v0, p0, Lcom/android/camera/effect/renders/u;->mProgram:I
+    .line 8
+    iget v0, p0, Ld/d/a/q6/n/u;->mProgram:I
 
     const-string v1, "blockOffset"
 
@@ -375,9 +430,19 @@
 
 .method public initShaderValue(Z)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isSnapShot"
+        }
+    .end annotation
 
-    invoke-super {p0, p1}, Lcom/android/camera/effect/renders/p;->initShaderValue(Z)V
+    .line 1
+    invoke-super {p0, p1}, Ld/d/a/q6/n/p;->initShaderValue(Z)V
 
+    .line 2
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mSourceTexture:I
 
     const/4 v1, 0x1
@@ -386,23 +451,27 @@
 
     const v2, 0x84c1
 
-    invoke-virtual {p0, v0, v2}, Lcom/android/camera/effect/renders/u;->bindTexture(II)Z
+    .line 3
+    invoke-virtual {p0, v0, v2}, Ld/d/a/q6/n/u;->bindTexture(II)Z
 
+    .line 4
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mUniformSourceTexture:I
 
     invoke-static {v0, v1}, Landroid/opengl/GLES20;->glUniform1i(II)V
 
+    .line 5
     :cond_0
-    invoke-static {}, Lcom/android/camera/effect/b;->getInstance()Lcom/android/camera/effect/b;
+    invoke-static {}, Ld/d/a/q6/b;->getInstance()Ld/d/a/q6/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/camera/effect/b;->isFilterNoiseNeeded()Z
+    invoke-virtual {v0}, Ld/d/a/q6/b;->isFilterNoiseNeeded()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 6
     iput-boolean v1, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mNeedNoise:Z
 
     goto :goto_0
@@ -410,13 +479,16 @@
     :cond_1
     const/4 v0, 0x0
 
+    .line 7
     iput-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mNeedNoise:Z
 
+    .line 8
     :goto_0
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mIsSnapshot:Z
 
     if-eqz v0, :cond_2
 
+    .line 9
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mUniformNeedDark:I
 
     iget-boolean v1, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mNeedDark:Z
@@ -425,21 +497,24 @@
 
     goto :goto_1
 
+    .line 10
     :cond_2
-    invoke-static {}, Lcom/android/camera/effect/b;->getInstance()Lcom/android/camera/effect/b;
+    invoke-static {}, Ld/d/a/q6/b;->getInstance()Ld/d/a/q6/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/camera/effect/b;->isFilterDarkNeeded()Z
+    invoke-virtual {v0}, Ld/d/a/q6/b;->isFilterDarkNeeded()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mNeedDark:Z
 
+    .line 11
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mUniformNeedDark:I
 
     invoke-static {v1, v0}, Landroid/opengl/GLES20;->glUniform1i(II)V
 
+    .line 12
     :goto_1
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mUniformNeedNoise:I
 
@@ -447,10 +522,12 @@
 
     invoke-static {v0, v1}, Landroid/opengl/GLES20;->glUniform1i(II)V
 
+    .line 13
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mFrameNumberCount:Ljava/util/concurrent/atomic/AtomicLong;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->getAndIncrement()J
 
+    .line 14
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mUniformFrameCount:I
 
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mFrameNumberCount:Ljava/util/concurrent/atomic/AtomicLong;
@@ -463,6 +540,7 @@
 
     invoke-static {v0, v1}, Landroid/opengl/GLES20;->glUniform1f(IF)V
 
+    .line 15
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mUniformNoiseDensity:I
 
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->getNoiseDensity()F
@@ -473,28 +551,33 @@
 
     if-eqz p1, :cond_3
 
+    .line 16
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mRenderBlock:Landroid/graphics/RectF;
 
     if-eqz p1, :cond_3
 
     const/high16 v0, 0x3f800000    # 1.0f
 
+    .line 17
     invoke-virtual {p1}, Landroid/graphics/RectF;->height()F
 
     move-result p1
 
     div-float/2addr v0, p1
 
+    .line 18
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mRenderBlock:Landroid/graphics/RectF;
 
     iget p1, p1, Landroid/graphics/RectF;->top:F
 
     mul-float/2addr p1, v0
 
+    .line 19
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mUniformBlockCount:I
 
     invoke-static {v1, v0}, Landroid/opengl/GLES20;->glUniform1f(IF)V
 
+    .line 20
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mUniformBlockOffset:I
 
     invoke-static {p0, p1}, Landroid/opengl/GLES20;->glUniform1f(IF)V
@@ -505,7 +588,16 @@
 
 .method public setDarkEffectEnable(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "needDark"
+        }
+    .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mNeedDark:Z
 
     return-void
@@ -513,9 +605,19 @@
 
 .method public setRenderBlock(Landroid/graphics/RectF;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "blkRect"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/filter/MadridEffectRender;->mRenderBlock:Landroid/graphics/RectF;
 
+    .line 2
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V

@@ -26,12 +26,16 @@
 .method public constructor <init>(Lmiuix/appcompat/app/CrossUserPickerActivity;Landroid/content/Context;Landroid/os/UserHandle;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/appcompat/app/CrossUserPickerActivity$a;->c:Lmiuix/appcompat/app/CrossUserPickerActivity;
 
+    .line 2
     invoke-direct {p0, p2}, Landroid/content/ContextWrapper;-><init>(Landroid/content/Context;)V
 
+    .line 3
     iput-object p2, p0, Lmiuix/appcompat/app/CrossUserPickerActivity$a;->a:Landroid/content/Context;
 
+    .line 4
     iput-object p3, p0, Lmiuix/appcompat/app/CrossUserPickerActivity$a;->b:Landroid/os/UserHandle;
 
     return-void
@@ -42,11 +46,12 @@
 .method public getContentResolver()Landroid/content/ContentResolver;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lmiuix/appcompat/app/CrossUserPickerActivity$a;->a:Landroid/content/Context;
 
     iget-object p0, p0, Lmiuix/appcompat/app/CrossUserPickerActivity$a;->b:Landroid/os/UserHandle;
 
-    invoke-static {v0, p0}, Llp/a;->a(Landroid/content/Context;Landroid/os/UserHandle;)Landroid/content/ContentResolver;
+    invoke-static {v0, p0}, Lk/e/c/a;->a(Landroid/content/Context;Landroid/os/UserHandle;)Landroid/content/ContentResolver;
 
     move-result-object p0
 

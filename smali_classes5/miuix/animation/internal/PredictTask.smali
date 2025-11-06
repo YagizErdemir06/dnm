@@ -4,13 +4,14 @@
 
 
 # static fields
-.field static final sCreator:Lmiuix/animation/internal/TransitionInfo$IUpdateInfoCreator;
+.field private static final sCreator:Lmiuix/animation/internal/TransitionInfo$IUpdateInfoCreator;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lmiuix/animation/internal/PredictTask$1;
 
     invoke-direct {v0}, Lmiuix/animation/internal/PredictTask$1;-><init>()V
@@ -23,148 +24,94 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 .method public static predictDuration(Lmiuix/animation/IAnimTarget;Lmiuix/animation/controller/AnimState;Lmiuix/animation/controller/AnimState;Lmiuix/animation/base/AnimConfigLink;)J
-    .locals 17
+    .locals 9
 
+    .line 1
     new-instance v0, Lmiuix/animation/internal/TransitionInfo;
 
-    move-object/from16 v1, p0
+    invoke-direct {v0, p0, p1, p2, p3}, Lmiuix/animation/internal/TransitionInfo;-><init>(Lmiuix/animation/IAnimTarget;Lmiuix/animation/controller/AnimState;Lmiuix/animation/controller/AnimState;Lmiuix/animation/base/AnimConfigLink;)V
 
-    move-object/from16 v2, p1
+    .line 2
+    sget-object p0, Lmiuix/animation/internal/PredictTask;->sCreator:Lmiuix/animation/internal/TransitionInfo$IUpdateInfoCreator;
 
-    move-object/from16 v3, p2
+    invoke-virtual {v0, p0}, Lmiuix/animation/internal/TransitionInfo;->initUpdateList(Lmiuix/animation/internal/TransitionInfo$IUpdateInfoCreator;)V
 
-    move-object/from16 v4, p3
+    const/4 p0, 0x1
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lmiuix/animation/internal/TransitionInfo;-><init>(Lmiuix/animation/IAnimTarget;Lmiuix/animation/controller/AnimState;Lmiuix/animation/controller/AnimState;Lmiuix/animation/base/AnimConfigLink;)V
+    .line 3
+    invoke-virtual {v0, p0}, Lmiuix/animation/internal/TransitionInfo;->setupTasks(Z)V
 
-    sget-object v1, Lmiuix/animation/internal/PredictTask;->sCreator:Lmiuix/animation/internal/TransitionInfo$IUpdateInfoCreator;
+    .line 4
+    invoke-static {}, Lmiuix/animation/internal/AnimRunner;->getInst()Lmiuix/animation/internal/AnimRunner;
 
-    invoke-virtual {v0, v1}, Lmiuix/animation/internal/TransitionInfo;->initUpdateList(Lmiuix/animation/internal/TransitionInfo$IUpdateInfoCreator;)Z
+    move-result-object p0
 
+    invoke-virtual {p0}, Lmiuix/animation/internal/AnimRunner;->getAverageDelta()J
+
+    move-result-wide p0
+
+    move-wide p2, p0
+
+    .line 5
+    :goto_0
     iget-object v1, v0, Lmiuix/animation/internal/TransitionInfo;->animTasks:Ljava/util/List;
 
-    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v8
+
+    :goto_1
+    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    move-result-object v1
 
-    const-string v2, "warning!! predictDuration failed! info "
+    check-cast v1, Lmiuix/animation/internal/AnimTask;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v6, 0x0
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/4 v7, 0x1
 
-    const-string v0, " trace:"
+    move-wide v2, p2
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-wide v4, p0
 
-    new-instance v0, Ljava/lang/Throwable;
-
-    invoke-direct {v0}, Ljava/lang/Throwable;-><init>()V
-
-    invoke-static {v0}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "miuix_anim"
-
-    invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-
-    :cond_0
-    const-wide/32 v1, 0xfe502a
-
-    long-to-double v3, v1
-
-    const-wide v5, 0x41cdcd6500000000L    # 1.0E9
-
-    div-double/2addr v3, v5
-
-    move-wide v5, v1
-
-    :goto_0
-    iget-object v7, v0, Lmiuix/animation/internal/TransitionInfo;->animTasks:Ljava/util/List;
-
-    invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v16
-
-    :goto_1
-    invoke-interface/range {v16 .. v16}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_1
-
-    invoke-interface/range {v16 .. v16}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Lmiuix/animation/internal/AnimTask;
-
-    const/4 v12, 0x1
-
-    const/4 v15, 0x0
-
-    const-wide/32 v10, 0xfe502a
-
-    move-wide v8, v5
-
-    move-wide v13, v3
-
-    invoke-static/range {v7 .. v15}, Lmiuix/animation/internal/AnimTaskStackRunner;->doAnimationFrame(Lmiuix/animation/internal/AnimTask;JJIDZ)V
+    .line 6
+    invoke-static/range {v1 .. v7}, Lmiuix/animation/internal/AnimRunnerTask;->doAnimationFrame(Lmiuix/animation/internal/AnimTask;JJZZ)V
 
     goto :goto_1
 
-    :cond_1
-    invoke-virtual {v0}, Lmiuix/animation/internal/TransitionInfo;->getInfoAnimStats()Lmiuix/animation/internal/AnimStats;
+    .line 7
+    :cond_0
+    invoke-virtual {v0}, Lmiuix/animation/internal/TransitionInfo;->getAnimStats()Lmiuix/animation/internal/AnimStats;
 
-    move-result-object v7
+    move-result-object v1
 
-    invoke-virtual {v7}, Lmiuix/animation/internal/AnimStats;->isRunning()Z
+    .line 8
+    invoke-virtual {v1}, Lmiuix/animation/internal/AnimStats;->isRunning()Z
 
-    move-result v7
+    move-result v1
 
-    if-eqz v7, :cond_2
+    if-eqz v1, :cond_1
 
-    add-long/2addr v5, v1
+    add-long/2addr p2, p0
 
     goto :goto_0
 
-    :cond_2
-    sget-object v0, Lmiuix/animation/internal/AnimTaskStackRunner;->animDataLocal:Ljava/lang/ThreadLocal;
-
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->remove()V
-
-    long-to-double v0, v5
-
-    const-wide v2, 0x412e848000000000L    # 1000000.0
-
-    div-double/2addr v0, v2
-
-    double-to-long v0, v0
-
-    return-wide v0
+    :cond_1
+    return-wide p2
 .end method
 
 .method public static predictNextValue(Lmiuix/animation/IAnimTarget;Lmiuix/animation/controller/AnimState;Lmiuix/animation/property/FloatProperty;Lmiuix/animation/base/AnimConfig;)D
@@ -176,10 +123,12 @@
 
     move-object/from16 v2, p3
 
+    .line 1
     invoke-virtual {v2, v1}, Lmiuix/animation/base/AnimConfig;->getSpecialConfig(Lmiuix/animation/property/FloatProperty;)Lmiuix/animation/base/AnimSpecialConfig;
 
     move-result-object v2
 
+    .line 2
     invoke-virtual/range {p1 .. p1}, Lmiuix/animation/controller/AnimState;->getConfig()Lmiuix/animation/base/AnimConfig;
 
     move-result-object v3
@@ -188,26 +137,27 @@
 
     move-result-object v2
 
+    .line 3
     invoke-virtual {v0, v1}, Lmiuix/animation/IAnimTarget;->getValue(Lmiuix/animation/property/FloatProperty;)F
 
     move-result v3
 
+    .line 4
     invoke-virtual {v0, v1}, Lmiuix/animation/IAnimTarget;->getVelocity(Lmiuix/animation/property/FloatProperty;)D
 
     move-result-wide v14
 
+    .line 5
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    new-instance v5, Ljava/util/ArrayList;
-
-    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
-
+    .line 6
     iget-object v0, v0, Lmiuix/animation/IAnimTarget;->animManager:Lmiuix/animation/internal/AnimManager;
 
-    invoke-virtual {v0, v4}, Lmiuix/animation/internal/AnimManager;->addToTransitionInfoList(Ljava/util/List;)V
+    invoke-virtual {v0, v4}, Lmiuix/animation/internal/AnimManager;->getTransitionInfos(Ljava/util/List;)V
 
+    .line 7
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -218,29 +168,25 @@
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v6
+    move-result v5
 
-    if-eqz v6, :cond_1
+    if-eqz v5, :cond_1
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v6
+    move-result-object v5
 
-    check-cast v6, Lmiuix/animation/internal/TransitionInfo;
+    check-cast v5, Lmiuix/animation/internal/TransitionInfo;
 
-    invoke-interface {v5}, Ljava/util/List;->clear()V
+    .line 8
+    invoke-virtual {v5, v1}, Lmiuix/animation/internal/TransitionInfo;->containsProperty(Lmiuix/animation/property/FloatProperty;)Z
 
-    iget-object v7, v6, Lmiuix/animation/internal/TransitionInfo;->updateList:Ljava/util/List;
+    move-result v6
 
-    invoke-interface {v5, v7}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+    if-eqz v6, :cond_0
 
-    invoke-virtual {v6, v1}, Lmiuix/animation/internal/TransitionInfo;->containsProperty(Lmiuix/animation/property/FloatProperty;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_0
-
-    iget-object v4, v6, Lmiuix/animation/internal/TransitionInfo;->updateList:Ljava/util/List;
+    .line 9
+    iget-object v4, v5, Lmiuix/animation/internal/TransitionInfo;->updateList:Ljava/util/List;
 
     invoke-static {v4, v1}, Lmiuix/animation/listener/UpdateInfo;->findBy(Ljava/util/Collection;Lmiuix/animation/property/FloatProperty;)Lmiuix/animation/listener/UpdateInfo;
 
@@ -253,20 +199,22 @@
 
     if-eqz v4, :cond_5
 
-    invoke-static {}, Lmiuix/animation/internal/AndroidEngine;->getInst()Lmiuix/animation/internal/AndroidEngine;
+    .line 10
+    invoke-static {}, Lmiuix/animation/internal/AnimRunner;->getInst()Lmiuix/animation/internal/AnimRunner;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lmiuix/animation/internal/FolmeEngine;->getAverageDeltaNanos()J
+    invoke-virtual {v5}, Lmiuix/animation/internal/AnimRunner;->getAverageDelta()J
 
     move-result-wide v5
 
     long-to-double v5, v5
 
-    const-wide v7, 0x41cdcd6500000000L    # 1.0E9
+    const-wide v7, 0x408f400000000000L    # 1000.0
 
     div-double v11, v5, v7
 
+    .line 11
     iget v5, v2, Lmiuix/animation/utils/EaseManager$EaseStyle;->style:I
 
     invoke-static {v5}, Lmiuix/animation/utils/EaseManager;->isPhysicsStyle(I)Z
@@ -275,16 +223,14 @@
 
     if-eqz v5, :cond_3
 
-    iget-object v5, v2, Lmiuix/animation/utils/EaseManager$EaseStyle;->parameters:[D
-
-    if-eqz v5, :cond_3
-
+    .line 12
     iget v5, v2, Lmiuix/animation/utils/EaseManager$EaseStyle;->style:I
 
-    invoke-static {v5}, Lmiuix/animation/internal/FolmeCore;->getPhyOperator(I)Lmiuix/animation/physics/PhysicsOperator;
+    invoke-static {v5}, Lmiuix/animation/styles/PropertyStyle;->getPhyOperator(I)Lmiuix/animation/physics/PhysicsOperator;
 
     move-result-object v5
 
+    .line 13
     iget-object v6, v4, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
 
     iget-wide v6, v6, Lmiuix/animation/internal/AnimInfo;->targetValue:D
@@ -297,6 +243,7 @@
 
     return-wide v0
 
+    .line 14
     :cond_2
     iget-object v0, v2, Lmiuix/animation/utils/EaseManager$EaseStyle;->parameters:[D
 
@@ -351,39 +298,44 @@
     :cond_3
     move-wide v5, v11
 
+    .line 15
     check-cast v2, Lmiuix/animation/utils/EaseManager$InterpolateEaseStyle;
 
+    .line 16
     invoke-static {v2}, Lmiuix/animation/utils/EaseManager;->getInterpolator(Lmiuix/animation/utils/EaseManager$InterpolateEaseStyle;)Landroid/animation/TimeInterpolator;
 
     move-result-object v0
 
+    .line 17
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v7
 
     iget-object v1, v4, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
 
-    iget-wide v3, v1, Lmiuix/animation/internal/AnimInfo;->startTime:J
+    iget-wide v9, v1, Lmiuix/animation/internal/AnimInfo;->startTime:J
 
-    sub-long/2addr v7, v3
+    sub-long/2addr v7, v9
 
-    double-to-long v3, v5
+    double-to-long v5, v5
 
-    add-long/2addr v7, v3
+    add-long/2addr v7, v5
 
-    iget-wide v2, v2, Lmiuix/animation/utils/EaseManager$InterpolateEaseStyle;->duration:J
+    .line 18
+    iget-wide v1, v2, Lmiuix/animation/utils/EaseManager$InterpolateEaseStyle;->duration:J
 
-    cmp-long v4, v7, v2
+    cmp-long v3, v7, v1
 
-    if-gez v4, :cond_4
+    if-gez v3, :cond_4
 
-    long-to-float v1, v7
+    long-to-float v3, v7
 
-    long-to-float v2, v2
+    long-to-float v1, v1
 
-    div-float/2addr v1, v2
+    div-float/2addr v3, v1
 
-    invoke-interface {v0, v1}, Landroid/animation/TimeInterpolator;->getInterpolation(F)F
+    .line 19
+    invoke-interface {v0, v3}, Landroid/animation/TimeInterpolator;->getInterpolation(F)F
 
     move-result v0
 
@@ -391,8 +343,11 @@
 
     goto :goto_1
 
+    .line 20
     :cond_4
-    iget-wide v0, v1, Lmiuix/animation/internal/AnimInfo;->targetValue:D
+    iget-object v0, v4, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
+
+    iget-wide v0, v0, Lmiuix/animation/internal/AnimInfo;->targetValue:D
 
     :cond_5
     :goto_1
@@ -408,10 +363,12 @@
 
     move-object/from16 v2, p3
 
+    .line 1
     invoke-virtual {v2, v1}, Lmiuix/animation/base/AnimConfig;->getSpecialConfig(Lmiuix/animation/property/FloatProperty;)Lmiuix/animation/base/AnimSpecialConfig;
 
     move-result-object v2
 
+    .line 2
     invoke-virtual/range {p1 .. p1}, Lmiuix/animation/controller/AnimState;->getConfig()Lmiuix/animation/base/AnimConfig;
 
     move-result-object v3
@@ -420,26 +377,27 @@
 
     move-result-object v2
 
+    .line 3
     invoke-virtual {p0, v1}, Lmiuix/animation/IAnimTarget;->getValue(Lmiuix/animation/property/FloatProperty;)F
 
     move-result v3
 
+    .line 4
     invoke-virtual {p0, v1}, Lmiuix/animation/IAnimTarget;->getVelocity(Lmiuix/animation/property/FloatProperty;)D
 
     move-result-wide v5
 
+    .line 5
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    new-instance v7, Ljava/util/ArrayList;
-
-    invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
-
+    .line 6
     iget-object v0, v0, Lmiuix/animation/IAnimTarget;->animManager:Lmiuix/animation/internal/AnimManager;
 
-    invoke-virtual {v0, v4}, Lmiuix/animation/internal/AnimManager;->addToTransitionInfoList(Ljava/util/List;)V
+    invoke-virtual {v0, v4}, Lmiuix/animation/internal/AnimManager;->getTransitionInfos(Ljava/util/List;)V
 
+    .line 7
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -450,29 +408,27 @@
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v8
+    move-result v7
 
-    if-eqz v8, :cond_1
+    if-eqz v7, :cond_1
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v8
+    move-result-object v7
 
-    check-cast v8, Lmiuix/animation/internal/TransitionInfo;
+    check-cast v7, Lmiuix/animation/internal/TransitionInfo;
 
-    invoke-interface {v7}, Ljava/util/List;->clear()V
-
-    iget-object v9, v8, Lmiuix/animation/internal/TransitionInfo;->updateList:Ljava/util/List;
-
-    invoke-interface {v7, v9}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
-
-    invoke-virtual {v8, v1}, Lmiuix/animation/internal/TransitionInfo;->containsProperty(Lmiuix/animation/property/FloatProperty;)Z
+    .line 8
+    invoke-virtual {v7, v1}, Lmiuix/animation/internal/TransitionInfo;->containsProperty(Lmiuix/animation/property/FloatProperty;)Z
 
     move-result v8
 
     if-eqz v8, :cond_0
 
-    invoke-static {v7, v1}, Lmiuix/animation/listener/UpdateInfo;->findBy(Ljava/util/Collection;Lmiuix/animation/property/FloatProperty;)Lmiuix/animation/listener/UpdateInfo;
+    .line 9
+    iget-object v4, v7, Lmiuix/animation/internal/TransitionInfo;->updateList:Ljava/util/List;
+
+    invoke-static {v4, v1}, Lmiuix/animation/listener/UpdateInfo;->findBy(Ljava/util/Collection;Lmiuix/animation/property/FloatProperty;)Lmiuix/animation/listener/UpdateInfo;
 
     move-result-object v4
 
@@ -483,6 +439,7 @@
 
     if-eqz v4, :cond_3
 
+    .line 10
     iget v7, v2, Lmiuix/animation/utils/EaseManager$EaseStyle;->style:I
 
     invoke-static {v7}, Lmiuix/animation/utils/EaseManager;->isPhysicsStyle(I)Z
@@ -491,30 +448,29 @@
 
     if-eqz v7, :cond_3
 
-    iget-object v7, v2, Lmiuix/animation/utils/EaseManager$EaseStyle;->parameters:[D
-
-    if-eqz v7, :cond_3
-
-    invoke-static {}, Lmiuix/animation/internal/AndroidEngine;->getInst()Lmiuix/animation/internal/AndroidEngine;
+    .line 11
+    invoke-static {}, Lmiuix/animation/internal/AnimRunner;->getInst()Lmiuix/animation/internal/AnimRunner;
 
     move-result-object v7
 
-    invoke-virtual {v7}, Lmiuix/animation/internal/FolmeEngine;->getAverageDeltaNanos()J
+    invoke-virtual {v7}, Lmiuix/animation/internal/AnimRunner;->getAverageDelta()J
 
     move-result-wide v7
 
     long-to-double v7, v7
 
-    const-wide v9, 0x41cdcd6500000000L    # 1.0E9
+    const-wide v9, 0x408f400000000000L    # 1000.0
 
     div-double v11, v7, v9
 
+    .line 12
     iget v7, v2, Lmiuix/animation/utils/EaseManager$EaseStyle;->style:I
 
-    invoke-static {v7}, Lmiuix/animation/internal/FolmeCore;->getPhyOperator(I)Lmiuix/animation/physics/PhysicsOperator;
+    invoke-static {v7}, Lmiuix/animation/styles/PropertyStyle;->getPhyOperator(I)Lmiuix/animation/physics/PhysicsOperator;
 
     move-result-object v7
 
+    .line 13
     iget-object v8, v4, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
 
     iget-wide v8, v8, Lmiuix/animation/internal/AnimInfo;->targetValue:D
@@ -527,6 +483,7 @@
 
     return-wide v0
 
+    .line 14
     :cond_2
     iget-object v0, v2, Lmiuix/animation/utils/EaseManager$EaseStyle;->parameters:[D
 

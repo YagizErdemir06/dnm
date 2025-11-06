@@ -38,6 +38,7 @@
 .method public final execute(Ljava/lang/Runnable;)V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/zzm;->zza:Ljava/util/concurrent/Executor;
 
     iget-object v1, p0, Lcom/google/mlkit/common/sdkinternal/zzm;->zzb:Lcom/google/android/gms/tasks/CancellationToken;
@@ -56,19 +57,23 @@
     :catch_0
     move-exception p1
 
+    .line 2
     invoke-virtual {v1}, Lcom/google/android/gms/tasks/CancellationToken;->isCancellationRequested()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {v2}, Lcom/google/android/gms/tasks/CancellationTokenSource;->cancel()V
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-virtual {p0, p1}, Lcom/google/android/gms/tasks/TaskCompletionSource;->setException(Ljava/lang/Exception;)V
 
+    .line 5
     :goto_0
     throw p1
 .end method

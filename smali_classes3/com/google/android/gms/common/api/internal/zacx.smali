@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/api/internal/zacx;
+.class public final Lcom/google/android/gms/common/api/internal/zacx;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -29,6 +29,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->getResult()Ljava/lang/Object;
 
     move-result-object p0
@@ -45,6 +46,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     new-instance p0, Lcom/google/android/gms/common/api/ApiException;
 

@@ -1,4 +1,4 @@
-.class final Lcom/google/common/hash/LongAdder;
+.class public final Lcom/google/common/hash/LongAdder;
 .super Lcom/google/common/hash/Striped64;
 .source "SourceFile"
 
@@ -20,6 +20,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/hash/Striped64;-><init>()V
 
     return-void
@@ -34,16 +35,20 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->defaultReadObject()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput v0, p0, Lcom/google/common/hash/Striped64;->busy:I
 
     const/4 v0, 0x0
 
+    .line 3
     iput-object v0, p0, Lcom/google/common/hash/Striped64;->cells:[Lcom/google/common/hash/Striped64$Cell;
 
+    .line 4
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readLong()J
 
     move-result-wide v0
@@ -61,8 +66,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/io/ObjectOutputStream;->defaultWriteObject()V
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/hash/LongAdder;->sum()J
 
     move-result-wide v0
@@ -77,6 +84,7 @@
 .method public add(J)V
     .locals 6
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/hash/Striped64;->cells:[Lcom/google/common/hash/Striped64$Cell;
 
     if-nez v0, :cond_0
@@ -91,6 +99,7 @@
 
     if-nez v1, :cond_2
 
+    .line 2
     :cond_0
     sget-object v1, Lcom/google/common/hash/Striped64;->threadHashCode:Ljava/lang/ThreadLocal;
 
@@ -126,6 +135,7 @@
 
     add-long v4, v2, p1
 
+    .line 3
     invoke-virtual {v0, v2, v3, v4, v5}, Lcom/google/common/hash/Striped64$Cell;->cas(JJ)Z
 
     move-result v2
@@ -144,6 +154,7 @@
 
     const-wide/16 v0, -0x1
 
+    .line 1
     invoke-virtual {p0, v0, v1}, Lcom/google/common/hash/LongAdder;->add(J)V
 
     return-void
@@ -152,6 +163,7 @@
 .method public doubleValue()D
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/hash/LongAdder;->sum()J
 
     move-result-wide v0
@@ -164,6 +176,7 @@
 .method public floatValue()F
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/hash/LongAdder;->sum()J
 
     move-result-wide v0
@@ -186,6 +199,7 @@
 
     const-wide/16 v0, 0x1
 
+    .line 1
     invoke-virtual {p0, v0, v1}, Lcom/google/common/hash/LongAdder;->add(J)V
 
     return-void
@@ -194,6 +208,7 @@
 .method public intValue()I
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/hash/LongAdder;->sum()J
 
     move-result-wide v0
@@ -206,6 +221,7 @@
 .method public longValue()J
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/hash/LongAdder;->sum()J
 
     move-result-wide v0
@@ -218,6 +234,7 @@
 
     const-wide/16 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, v0, v1}, Lcom/google/common/hash/Striped64;->internalReset(J)V
 
     return-void
@@ -226,12 +243,15 @@
 .method public sum()J
     .locals 6
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/hash/Striped64;->base:J
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/hash/Striped64;->cells:[Lcom/google/common/hash/Striped64$Cell;
 
     if-eqz p0, :cond_1
 
+    .line 3
     array-length v2, p0
 
     const/4 v3, 0x0
@@ -239,10 +259,12 @@
     :goto_0
     if-ge v3, v2, :cond_1
 
+    .line 4
     aget-object v4, p0, v3
 
     if-eqz v4, :cond_0
 
+    .line 5
     iget-wide v4, v4, Lcom/google/common/hash/Striped64$Cell;->value:J
 
     add-long/2addr v0, v4
@@ -259,16 +281,20 @@
 .method public sumThenReset()J
     .locals 9
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/hash/Striped64;->base:J
 
+    .line 2
     iget-object v2, p0, Lcom/google/common/hash/Striped64;->cells:[Lcom/google/common/hash/Striped64$Cell;
 
     const-wide/16 v3, 0x0
 
+    .line 3
     iput-wide v3, p0, Lcom/google/common/hash/Striped64;->base:J
 
     if-eqz v2, :cond_1
 
+    .line 4
     array-length p0, v2
 
     const/4 v5, 0x0
@@ -276,14 +302,17 @@
     :goto_0
     if-ge v5, p0, :cond_1
 
+    .line 5
     aget-object v6, v2, v5
 
     if-eqz v6, :cond_0
 
+    .line 6
     iget-wide v7, v6, Lcom/google/common/hash/Striped64$Cell;->value:J
 
     add-long/2addr v0, v7
 
+    .line 7
     iput-wide v3, v6, Lcom/google/common/hash/Striped64$Cell;->value:J
 
     :cond_0
@@ -298,6 +327,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/hash/LongAdder;->sum()J
 
     move-result-wide v0

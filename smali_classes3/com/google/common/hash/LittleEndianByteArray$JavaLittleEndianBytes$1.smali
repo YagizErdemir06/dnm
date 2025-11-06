@@ -1,4 +1,4 @@
-.class final enum Lcom/google/common/hash/LittleEndianByteArray$JavaLittleEndianBytes$1;
+.class public final enum Lcom/google/common/hash/LittleEndianByteArray$JavaLittleEndianBytes$1;
 .super Lcom/google/common/hash/LittleEndianByteArray$JavaLittleEndianBytes;
 .source "SourceFile"
 
@@ -20,6 +20,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, p2, v0}, Lcom/google/common/hash/LittleEndianByteArray$JavaLittleEndianBytes;-><init>(Ljava/lang/String;ILcom/google/common/hash/LittleEndianByteArray$1;)V
 
     return-void
@@ -32,6 +33,7 @@
 
     add-int/lit8 p0, p2, 0x7
 
+    .line 1
     aget-byte v0, p1, p0
 
     add-int/lit8 p0, p2, 0x6
@@ -91,6 +93,7 @@
 
     int-to-byte v4, v4
 
+    .line 1
     aput-byte v4, p1, v3
 
     shl-long/2addr v0, v2

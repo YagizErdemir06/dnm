@@ -35,6 +35,7 @@
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/common/internal/GmsLogger;
 
     const-string v1, "RemoteModelFileManager"
@@ -76,6 +77,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelFileManager;->zzb:Lcom/google/mlkit/common/sdkinternal/MlKitContext;
@@ -86,26 +88,31 @@
 
     iput-object v0, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelFileManager;->zzd:Lcom/google/mlkit/common/sdkinternal/ModelType;
 
+    .line 2
     sget-object v1, Lcom/google/mlkit/common/sdkinternal/ModelType;->TRANSLATE:Lcom/google/mlkit/common/sdkinternal/ModelType;
 
     if-ne v0, v1, :cond_0
 
+    .line 3
     invoke-virtual {p2}, Lcom/google/mlkit/common/model/RemoteModel;->getModelNameForBackend()Ljava/lang/String;
 
     move-result-object p2
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-virtual {p2}, Lcom/google/mlkit/common/model/RemoteModel;->getUniqueModelNameForPersist()Ljava/lang/String;
 
     move-result-object p2
 
+    .line 5
     :goto_0
     iput-object p2, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelFileManager;->zzc:Ljava/lang/String;
 
     iput-object p3, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelFileManager;->zze:Lcom/google/mlkit/common/sdkinternal/model/ModelValidator;
 
+    .line 6
     invoke-static {p1}, Lcom/google/mlkit/common/sdkinternal/SharedPrefManager;->getInstance(Lcom/google/mlkit/common/sdkinternal/MlKitContext;)Lcom/google/mlkit/common/sdkinternal/SharedPrefManager;
 
     move-result-object p1
@@ -129,6 +136,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelFileManager;->zzh:Lcom/google/mlkit/common/sdkinternal/model/ModelFileHelper;
 
     iget-object v1, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelFileManager;->zzc:Ljava/lang/String;
@@ -173,6 +181,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelFileManager;->zzh:Lcom/google/mlkit/common/sdkinternal/model/ModelFileHelper;
 
@@ -188,12 +197,14 @@
 
     new-instance v2, Ljava/io/File;
 
+    .line 2
     invoke-direct {v2, v0, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_4
 
     const/4 v0, 0x0
 
+    .line 3
     :try_start_1
     new-instance v1, Landroid/os/ParcelFileDescriptor$AutoCloseInputStream;
 
@@ -205,6 +216,7 @@
     :try_start_2
     new-instance p1, Ljava/io/FileOutputStream;
 
+    .line 4
     invoke-direct {p1, v2}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
@@ -214,6 +226,7 @@
     :try_start_3
     new-array v3, v3, [B
 
+    .line 5
     :goto_0
     invoke-virtual {v1, v3}, Ljava/io/FileInputStream;->read([B)I
 
@@ -225,10 +238,12 @@
 
     const/4 v5, 0x0
 
+    .line 6
     invoke-virtual {p1, v3, v5, v4}, Ljava/io/FileOutputStream;->write([BII)V
 
     goto :goto_0
 
+    .line 7
     :cond_0
     invoke-virtual {p1}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
 
@@ -238,6 +253,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
+    .line 8
     :try_start_4
     invoke-virtual {p1}, Ljava/io/FileOutputStream;->close()V
     :try_end_4
@@ -249,6 +265,7 @@
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_0
     .catchall {:try_start_5 .. :try_end_5} :catchall_4
 
+    .line 9
     :try_start_6
     invoke-static {v2, p2}, Lcom/google/mlkit/common/internal/model/ModelUtils;->zza(Ljava/io/File;Ljava/lang/String;)Z
 
@@ -260,17 +277,20 @@
 
     if-eqz v1, :cond_1
 
+    .line 10
     invoke-interface {v1, v2, p3}, Lcom/google/mlkit/common/sdkinternal/model/ModelValidator;->validateModel(Ljava/io/File;Lcom/google/mlkit/common/model/RemoteModel;)Lcom/google/mlkit/common/sdkinternal/model/ModelValidator$ValidationResult;
 
     move-result-object v0
 
+    .line 11
     invoke-virtual {v0}, Lcom/google/mlkit/common/sdkinternal/model/ModelValidator$ValidationResult;->getErrorCode()Lcom/google/mlkit/common/sdkinternal/model/ModelValidator$ValidationResult$ErrorCode;
 
     move-result-object v1
 
     sget-object v3, Lcom/google/mlkit/common/sdkinternal/model/ModelValidator$ValidationResult$ErrorCode;->TFLITE_VERSION_INCOMPATIBLE:Lcom/google/mlkit/common/sdkinternal/model/ModelValidator$ValidationResult$ErrorCode;
 
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    .line 12
+    invoke-virtual {v1, v3}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -278,6 +298,7 @@
 
     iget-object v1, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelFileManager;->zzb:Lcom/google/mlkit/common/sdkinternal/MlKitContext;
 
+    .line 13
     invoke-virtual {v1}, Lcom/google/mlkit/common/sdkinternal/MlKitContext;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
@@ -288,6 +309,7 @@
 
     iget-object v3, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelFileManager;->zzg:Lcom/google/mlkit/common/sdkinternal/SharedPrefManager;
 
+    .line 14
     invoke-virtual {v3, p3, p2, v1}, Lcom/google/mlkit/common/sdkinternal/SharedPrefManager;->setIncompatibleModelInfo(Lcom/google/mlkit/common/model/RemoteModel;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -304,6 +326,7 @@
 
     move-result-object v3
 
+    .line 15
     invoke-virtual {v5, v6, v3}, Lcom/google/android/gms/common/internal/GmsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -318,6 +341,7 @@
 
     move-result-object v1
 
+    .line 16
     invoke-virtual {v5, v4, v1}, Lcom/google/android/gms/common/internal/GmsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
@@ -325,6 +349,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 17
     invoke-virtual {v0}, Lcom/google/mlkit/common/sdkinternal/model/ModelValidator$ValidationResult;->isValid()Z
 
     move-result v0
@@ -333,9 +358,11 @@
 
     goto :goto_1
 
+    .line 18
     :cond_2
     iget-object p1, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelFileManager;->zzf:Lcom/google/mlkit/common/sdkinternal/model/RemoteModelFileMover;
 
+    .line 19
     invoke-interface {p1, v2}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelFileMover;->moveAllFilesFromPrivateTempToPrivateDestination(Ljava/io/File;)Ljava/io/File;
 
     move-result-object p1
@@ -350,6 +377,7 @@
     :goto_1
     if-nez p1, :cond_4
 
+    .line 20
     :try_start_7
     invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -365,14 +393,17 @@
 
     move-result-object p1
 
+    .line 21
     invoke-virtual {v0, v1, p1}, Lcom/google/android/gms/common/internal/GmsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "common"
 
+    .line 22
     invoke-static {p1}, Lcom/google/android/gms/internal/mlkit_common/zzpy;->zzb(Ljava/lang/String;)Lcom/google/android/gms/internal/mlkit_common/zzpn;
 
     move-result-object v3
 
+    .line 23
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_common/zzpq;->zzg()Lcom/google/android/gms/internal/mlkit_common/zzpe;
 
     move-result-object v4
@@ -387,6 +418,7 @@
 
     move-object v5, p3
 
+    .line 24
     invoke-virtual/range {v3 .. v9}, Lcom/google/android/gms/internal/mlkit_common/zzpn;->zzf(Lcom/google/android/gms/internal/mlkit_common/zzpe;Lcom/google/mlkit/common/model/RemoteModel;Lcom/google/android/gms/internal/mlkit_common/zzlc;ZLcom/google/mlkit/common/sdkinternal/ModelType;Lcom/google/android/gms/internal/mlkit_common/zzli;)V
 
     new-instance p1, Lcom/google/mlkit/common/MlKitException;
@@ -395,10 +427,12 @@
 
     const/16 p3, 0x66
 
+    .line 25
     invoke-direct {p1, p2, p3}, Lcom/google/mlkit/common/MlKitException;-><init>(Ljava/lang/String;I)V
 
     goto :goto_2
 
+    .line 26
     :cond_4
     new-instance p1, Lcom/google/mlkit/common/MlKitException;
 
@@ -406,8 +440,10 @@
 
     const/16 p3, 0x64
 
+    .line 27
     invoke-direct {p1, p2, p3}, Lcom/google/mlkit/common/MlKitException;-><init>(Ljava/lang/String;I)V
 
+    .line 28
     :goto_2
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
@@ -417,6 +453,7 @@
 
     sget-object p2, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelFileManager;->zza:Lcom/google/android/gms/common/internal/GmsLogger;
 
+    .line 29
     invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object p3
@@ -435,6 +472,7 @@
 
     invoke-virtual {p2, v1, p3}, Lcom/google/android/gms/common/internal/GmsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 30
     :cond_5
     throw p1
     :try_end_7
@@ -443,6 +481,7 @@
     :catchall_0
     move-exception p2
 
+    .line 31
     :try_start_8
     invoke-virtual {p1}, Ljava/io/FileOutputStream;->close()V
     :try_end_8
@@ -489,8 +528,10 @@
     :try_start_c
     const-string p2, "Failed to copy downloaded model file to private folder: "
 
+    .line 32
     sget-object p3, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelFileManager;->zza:Lcom/google/android/gms/common/internal/GmsLogger;
 
+    .line 33
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -537,6 +578,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelFileManager;->zzh:Lcom/google/mlkit/common/sdkinternal/model/ModelFileHelper;
 
@@ -548,6 +590,7 @@
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v0
@@ -564,8 +607,10 @@
 
     move-result-object v0
 
+    .line 3
     invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v0
@@ -578,6 +623,7 @@
 
     return-object p1
 
+    .line 5
     :cond_0
     :try_start_1
     invoke-virtual {p1, v1}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
@@ -619,6 +665,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelFileManager;->zzh:Lcom/google/mlkit/common/sdkinternal/model/ModelFileHelper;
 
@@ -657,11 +704,13 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :try_start_0
     invoke-virtual {p0, v0}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelFileManager;->getModelDirUnsafe(Z)Ljava/io/File;
 
     move-result-object v1
 
+    .line 2
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v2
@@ -674,6 +723,7 @@
 
     return-void
 
+    .line 3
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Ljava/io/File;->listFiles()[Ljava/io/File;
@@ -687,8 +737,10 @@
 
     if-ge v0, v2, :cond_2
 
+    .line 4
     aget-object v2, v1, v0
 
+    .line 5
     invoke-virtual {v2, p1}, Ljava/io/File;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -697,6 +749,7 @@
 
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelFileManager;->zzh:Lcom/google/mlkit/common/sdkinternal/model/ModelFileHelper;
 
+    .line 6
     invoke-virtual {v0, p1}, Lcom/google/mlkit/common/sdkinternal/model/ModelFileHelper;->deleteRecursively(Ljava/io/File;)Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -745,6 +798,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelFileManager;->zzh:Lcom/google/mlkit/common/sdkinternal/model/ModelFileHelper;
 
@@ -756,6 +810,7 @@
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -770,6 +825,7 @@
 
     return v2
 
+    .line 3
     :cond_0
     :try_start_1
     invoke-virtual {v0}, Ljava/io/File;->listFiles()[Ljava/io/File;
@@ -787,8 +843,10 @@
 
     if-ge v3, v4, :cond_2
 
+    .line 4
     aget-object v4, v0, v3
 
+    .line 5
     invoke-virtual {v4, p1}, Ljava/io/File;->equals(Ljava/lang/Object;)Z
 
     move-result v5

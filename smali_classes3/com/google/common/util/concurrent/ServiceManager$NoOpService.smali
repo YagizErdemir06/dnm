@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/ServiceManager$NoOpService;
+.class public final Lcom/google/common/util/concurrent/ServiceManager$NoOpService;
 .super Lcom/google/common/util/concurrent/AbstractService;
 .source "SourceFile"
 
@@ -38,6 +38,7 @@
 .method public doStart()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/AbstractService;->notifyStarted()V
 
     return-void
@@ -46,6 +47,7 @@
 .method public doStop()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/AbstractService;->notifyStopped()V
 
     return-void

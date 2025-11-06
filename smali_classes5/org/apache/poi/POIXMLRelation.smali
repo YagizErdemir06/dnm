@@ -15,11 +15,11 @@
     .end annotation
 .end field
 
-.field protected _defaultName:Ljava/lang/String;
+.field public _defaultName:Ljava/lang/String;
 
-.field protected _relation:Ljava/lang/String;
+.field public _relation:Ljava/lang/String;
 
-.field protected _type:Ljava/lang/String;
+.field public _type:Ljava/lang/String;
 
 
 # direct methods
@@ -72,6 +72,7 @@
 .method public getContentType()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLRelation;->_type:Ljava/lang/String;
 
     return-object p0
@@ -80,6 +81,7 @@
 .method public getDefaultFileName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLRelation;->_defaultName:Ljava/lang/String;
 
     return-object p0
@@ -88,6 +90,7 @@
 .method public getFileName(I)Ljava/lang/String;
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lorg/apache/poi/POIXMLRelation;->_defaultName:Ljava/lang/String;
 
     const-string v1, "#"
@@ -100,12 +103,14 @@
 
     if-ne v0, v2, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lorg/apache/poi/POIXMLRelation;->getDefaultFileName()Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lorg/apache/poi/POIXMLRelation;->_defaultName:Ljava/lang/String;
 
@@ -123,6 +128,7 @@
 .method public getRelation()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLRelation;->_relation:Ljava/lang/String;
 
     return-object p0
@@ -140,6 +146,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLRelation;->_cls:Ljava/lang/Class;
 
     return-object p0

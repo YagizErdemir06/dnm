@@ -15,6 +15,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/RendererConfiguration;
 
     const/4 v1, 0x0
@@ -29,8 +30,10 @@
 .method public constructor <init>(Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/RendererConfiguration;->tunneling:Z
 
     return-void
@@ -56,6 +59,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 1
     const-class v2, Lcom/google/android/exoplayer2/RendererConfiguration;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -66,9 +70,11 @@
 
     goto :goto_1
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/RendererConfiguration;
 
+    .line 3
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/RendererConfiguration;->tunneling:Z
 
     iget-boolean p1, p1, Lcom/google/android/exoplayer2/RendererConfiguration;->tunneling:Z
@@ -91,6 +97,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/RendererConfiguration;->tunneling:Z
 
     xor-int/lit8 p0, p0, 0x1

@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/LexicographicalOrdering;
+.class public final Lcom/google/common/collect/LexicographicalOrdering;
 .super Lcom/google/common/collect/Ordering;
 .source "SourceFile"
 
@@ -32,7 +32,7 @@
 
 
 # instance fields
-.field final elementOrder:Ljava/util/Comparator;
+.field public final elementOrder:Ljava/util/Comparator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Comparator<",
@@ -53,8 +53,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/Ordering;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/LexicographicalOrdering;->elementOrder:Ljava/util/Comparator;
 
     return-void
@@ -169,13 +171,16 @@
 
     return p0
 
+    .line 1
     :cond_0
     instance-of v0, p1, Lcom/google/common/collect/LexicographicalOrdering;
 
     if-eqz v0, :cond_1
 
+    .line 2
     check-cast p1, Lcom/google/common/collect/LexicographicalOrdering;
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/collect/LexicographicalOrdering;->elementOrder:Ljava/util/Comparator;
 
     iget-object p1, p1, Lcom/google/common/collect/LexicographicalOrdering;->elementOrder:Ljava/util/Comparator;
@@ -195,6 +200,7 @@
 .method public hashCode()I
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/LexicographicalOrdering;->elementOrder:Ljava/util/Comparator;
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
@@ -211,6 +217,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/LexicographicalOrdering;->elementOrder:Ljava/util/Comparator;
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

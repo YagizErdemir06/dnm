@@ -1,4 +1,4 @@
-.class Lcom/android/camera2/compat/theme/custom/mm/top/TopBarItemAnimator$1;
+.class public Lcom/android/camera2/compat/theme/custom/mm/top/TopBarItemAnimator$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,15 +18,26 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarItemAnimator;
+.field public final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarItemAnimator;
 
-.field final synthetic val$moves:Ljava/util/ArrayList;
+.field public final synthetic val$moves:Ljava/util/ArrayList;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera2/compat/theme/custom/mm/top/TopBarItemAnimator;Ljava/util/ArrayList;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$moves"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarItemAnimator$1;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarItemAnimator;
 
     iput-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarItemAnimator$1;->val$moves:Ljava/util/ArrayList;
@@ -41,6 +52,7 @@
 .method public run()V
     .locals 8
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarItemAnimator$1;->val$moves:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -60,6 +72,7 @@
 
     check-cast v1, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarItemAnimator$MoveInfo;
 
+    .line 2
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarItemAnimator$1;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarItemAnimator;
 
     iget-object v3, v1, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarItemAnimator$MoveInfo;->holder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
@@ -76,11 +89,13 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarItemAnimator$1;->val$moves:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
+    .line 4
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarItemAnimator$1;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarItemAnimator;
 
     iget-object v0, v0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarItemAnimator;->mMovesList:Ljava/util/ArrayList;

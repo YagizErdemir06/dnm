@@ -24,21 +24,21 @@
 
 
 # instance fields
-.field PI2:D
+.field public PI2:D
 
-.field mArea:[D
+.field public mArea:[D
 
-.field mCustomCurve:Landroidx/constraintlayout/core/motion/utils/MonotonicCurveFit;
+.field public mCustomCurve:Landroidx/constraintlayout/core/motion/utils/MonotonicCurveFit;
 
-.field mCustomType:Ljava/lang/String;
+.field public mCustomType:Ljava/lang/String;
 
 .field private mNormalized:Z
 
-.field mPeriod:[F
+.field public mPeriod:[F
 
-.field mPosition:[D
+.field public mPosition:[D
 
-.field mType:I
+.field public mType:I
 
 
 # direct methods
@@ -51,22 +51,27 @@
 .method public constructor <init>()V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
     new-array v1, v0, [F
 
+    .line 2
     iput-object v1, p0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mPeriod:[F
 
     new-array v1, v0, [D
 
+    .line 3
     iput-object v1, p0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mPosition:[D
 
     const-wide v1, 0x401921fb54442d18L    # 6.283185307179586
 
+    .line 4
     iput-wide v1, p0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->PI2:D
 
+    .line 5
     iput-boolean v0, p0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mNormalized:Z
 
     return-void
@@ -77,12 +82,14 @@
 .method public addPoint(DF)V
     .locals 4
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mPeriod:[F
 
     array-length v0, v0
 
     add-int/lit8 v0, v0, 0x1
 
+    .line 2
     iget-object v1, p0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mPosition:[D
 
     invoke-static {v1, p1, p2}, Ljava/util/Arrays;->binarySearch([DD)I
@@ -95,6 +102,7 @@
 
     add-int/lit8 v1, v1, -0x1
 
+    .line 3
     :cond_0
     iget-object v2, p0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mPosition:[D
 
@@ -104,6 +112,7 @@
 
     iput-object v2, p0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mPosition:[D
 
+    .line 4
     iget-object v2, p0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mPeriod:[F
 
     invoke-static {v2, v0}, Ljava/util/Arrays;->copyOf([FI)[F
@@ -112,10 +121,12 @@
 
     iput-object v2, p0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mPeriod:[F
 
+    .line 5
     new-array v2, v0, [D
 
     iput-object v2, p0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mArea:[D
 
+    .line 6
     iget-object v2, p0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mPosition:[D
 
     add-int/lit8 v3, v1, 0x1
@@ -126,23 +137,26 @@
 
     invoke-static {v2, v1, v2, v3, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 7
     iget-object v0, p0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mPosition:[D
 
     aput-wide p1, v0, v1
 
+    .line 8
     iget-object p1, p0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mPeriod:[F
 
     aput p3, p1, v1
 
     const/4 p1, 0x0
 
+    .line 9
     iput-boolean p1, p0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mNormalized:Z
 
     return-void
 .end method
 
 .method public getDP(D)D
-    .locals 8
+    .locals 10
 
     const-wide/16 v0, 0x0
 
@@ -163,6 +177,7 @@
 
     const-wide p1, 0x3feffffde7210be9L    # 0.999999
 
+    .line 1
     :cond_1
     :goto_0
     iget-object v2, p0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mPosition:[D
@@ -182,15 +197,16 @@
 
     add-int/lit8 v0, v0, -0x1
 
+    .line 2
     iget-object v1, p0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mPeriod:[F
 
     aget v2, v1, v0
 
     add-int/lit8 v3, v0, -0x1
 
-    aget v1, v1, v3
+    aget v4, v1, v3
 
-    sub-float/2addr v2, v1
+    sub-float/2addr v2, v4
 
     float-to-double v4, v2
 
@@ -198,15 +214,20 @@
 
     aget-wide v6, p0, v0
 
-    aget-wide v2, p0, v3
+    aget-wide v8, p0, v3
 
-    sub-double/2addr v6, v2
+    sub-double/2addr v6, v8
 
     div-double/2addr v4, v6
 
     mul-double/2addr p1, v4
 
-    float-to-double v0, v1
+    .line 3
+    aget v0, v1, v3
+
+    float-to-double v0, v0
+
+    aget-wide v2, p0, v3
 
     mul-double/2addr v4, v2
 
@@ -240,6 +261,7 @@
 
     move-wide p1, v3
 
+    .line 1
     :cond_1
     :goto_0
     iget-object v2, p0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mPosition:[D
@@ -261,15 +283,16 @@
 
     add-int/lit8 v0, v0, -0x1
 
+    .line 2
     iget-object v1, p0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mPeriod:[F
 
     aget v2, v1, v0
 
     add-int/lit8 v3, v0, -0x1
 
-    aget v1, v1, v3
+    aget v4, v1, v3
 
-    sub-float/2addr v2, v1
+    sub-float/2addr v2, v4
 
     float-to-double v4, v2
 
@@ -283,27 +306,38 @@
 
     div-double/2addr v4, v6
 
+    .line 3
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mArea:[D
 
-    aget-wide v2, p0, v3
+    aget-wide v6, p0, v3
 
-    float-to-double v0, v1
+    aget p0, v1, v3
 
-    mul-double v6, v4, v8
+    float-to-double v0, p0
 
-    sub-double/2addr v0, v6
+    aget-wide v8, v2, v3
 
-    sub-double v6, p1, v8
+    mul-double/2addr v8, v4
 
-    mul-double/2addr v0, v6
+    sub-double/2addr v0, v8
 
-    add-double/2addr v2, v0
+    aget-wide v8, v2, v3
+
+    sub-double v8, p1, v8
+
+    mul-double/2addr v0, v8
+
+    add-double/2addr v6, v0
 
     mul-double/2addr p1, p1
 
-    mul-double/2addr v8, v8
+    aget-wide v0, v2, v3
 
-    sub-double/2addr p1, v8
+    aget-wide v2, v2, v3
+
+    mul-double/2addr v0, v2
+
+    sub-double/2addr p1, v0
 
     mul-double/2addr v4, p1
 
@@ -311,7 +345,7 @@
 
     div-double/2addr v4, p0
 
-    add-double v0, v2, v4
+    add-double v0, v6, v4
 
     :cond_3
     :goto_1
@@ -321,18 +355,21 @@
 .method public getSlope(DDD)D
     .locals 4
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroidx/constraintlayout/core/motion/utils/Oscillator;->getP(D)D
 
     move-result-wide v0
 
     add-double/2addr p3, v0
 
+    .line 2
     invoke-virtual {p0, p1, p2}, Landroidx/constraintlayout/core/motion/utils/Oscillator;->getDP(D)D
 
     move-result-wide p1
 
     add-double/2addr p1, p5
 
+    .line 3
     iget p5, p0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mType:I
 
     const-wide/high16 v0, 0x4000000000000000L    # 2.0
@@ -341,6 +378,7 @@
 
     packed-switch p5, :pswitch_data_0
 
+    .line 4
     iget-wide p5, p0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->PI2:D
 
     mul-double/2addr p1, p5
@@ -356,6 +394,7 @@
 
     return-wide p1
 
+    .line 5
     :pswitch_0
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mCustomCurve:Landroidx/constraintlayout/core/motion/utils/MonotonicCurveFit;
 
@@ -384,6 +423,7 @@
 
     goto :goto_0
 
+    .line 6
     :pswitch_2
     iget-wide p5, p0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->PI2:D
 
@@ -426,6 +466,7 @@
 
     sub-double/2addr p3, v0
 
+    .line 7
     invoke-static {p3, p4}, Ljava/lang/Math;->signum(D)D
 
     move-result-wide p3
@@ -454,12 +495,14 @@
 .method public getValue(DD)D
     .locals 7
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroidx/constraintlayout/core/motion/utils/Oscillator;->getP(D)D
 
     move-result-wide p1
 
     add-double/2addr p1, p3
 
+    .line 2
     iget v0, p0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mType:I
 
     const-wide/high16 v1, 0x4010000000000000L    # 4.0
@@ -470,6 +513,7 @@
 
     packed-switch v0, :pswitch_data_0
 
+    .line 3
     iget-wide p3, p0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->PI2:D
 
     mul-double/2addr p3, p1
@@ -480,6 +524,7 @@
 
     return-wide p0
 
+    .line 4
     :pswitch_0
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mCustomCurve:Landroidx/constraintlayout/core/motion/utils/MonotonicCurveFit;
 
@@ -500,6 +545,7 @@
 
     sub-double/2addr p1, v3
 
+    .line 5
     invoke-static {p1, p2}, Ljava/lang/Math;->abs(D)D
 
     move-result-wide p0
@@ -512,6 +558,7 @@
 
     return-wide v5
 
+    .line 6
     :pswitch_2
     iget-wide v0, p0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->PI2:D
 
@@ -556,6 +603,7 @@
 
     sub-double/2addr p1, v3
 
+    .line 7
     invoke-static {p1, p2}, Ljava/lang/Math;->abs(D)D
 
     move-result-wide p0
@@ -571,6 +619,7 @@
 
     sub-double/2addr p3, p1
 
+    .line 8
     invoke-static {p3, p4}, Ljava/lang/Math;->signum(D)D
 
     move-result-wide p0
@@ -596,14 +645,15 @@
 
     move-object/from16 v0, p0
 
-    const-wide/16 v1, 0x0
+    const/4 v1, 0x0
 
-    const/4 v3, 0x0
+    const-wide/16 v2, 0x0
 
-    move-wide v5, v1
+    move v4, v1
 
-    move v4, v3
+    move-wide v5, v2
 
+    .line 1
     :goto_0
     iget-object v7, v0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mPeriod:[F
 
@@ -611,6 +661,7 @@
 
     if-ge v4, v8, :cond_0
 
+    .line 2
     aget v7, v7, v4
 
     float-to-double v7, v7
@@ -624,10 +675,11 @@
     :cond_0
     const/4 v4, 0x1
 
-    move-wide v8, v1
+    move-wide v8, v2
 
     move v7, v4
 
+    .line 3
     :goto_1
     iget-object v10, v0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mPeriod:[F
 
@@ -639,6 +691,7 @@
 
     add-int/lit8 v11, v7, -0x1
 
+    .line 4
     aget v13, v10, v11
 
     aget v10, v10, v7
@@ -647,6 +700,7 @@
 
     div-float/2addr v13, v12
 
+    .line 5
     iget-object v10, v0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mPosition:[D
 
     aget-wide v14, v10, v7
@@ -666,8 +720,9 @@
     goto :goto_1
 
     :cond_1
-    move v7, v3
+    move v7, v1
 
+    .line 6
     :goto_2
     iget-object v10, v0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mPeriod:[F
 
@@ -675,6 +730,7 @@
 
     if-ge v7, v11, :cond_2
 
+    .line 7
     aget v11, v10, v7
 
     float-to-double v13, v11
@@ -691,13 +747,15 @@
 
     goto :goto_2
 
+    .line 8
     :cond_2
     iget-object v5, v0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mArea:[D
 
-    aput-wide v1, v5, v3
+    aput-wide v2, v5, v1
 
     move v1, v4
 
+    .line 9
     :goto_3
     iget-object v2, v0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mPeriod:[F
 
@@ -707,6 +765,7 @@
 
     add-int/lit8 v3, v1, -0x1
 
+    .line 10
     aget v5, v2, v3
 
     aget v2, v2, v1
@@ -715,6 +774,7 @@
 
     div-float/2addr v5, v12
 
+    .line 11
     iget-object v2, v0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mPosition:[D
 
     aget-wide v6, v2, v1
@@ -723,6 +783,7 @@
 
     sub-double/2addr v6, v8
 
+    .line 12
     iget-object v2, v0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mArea:[D
 
     aget-wide v8, v2, v3
@@ -739,6 +800,7 @@
 
     goto :goto_3
 
+    .line 13
     :cond_3
     iput-boolean v4, v0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mNormalized:Z
 
@@ -748,12 +810,15 @@
 .method public setType(ILjava/lang/String;)V
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mType:I
 
+    .line 2
     iput-object p2, p0, Landroidx/constraintlayout/core/motion/utils/Oscillator;->mCustomType:Ljava/lang/String;
 
     if-eqz p2, :cond_0
 
+    .line 3
     invoke-static {p2}, Landroidx/constraintlayout/core/motion/utils/MonotonicCurveFit;->buildWave(Ljava/lang/String;)Landroidx/constraintlayout/core/motion/utils/MonotonicCurveFit;
 
     move-result-object p1
@@ -767,6 +832,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

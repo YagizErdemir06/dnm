@@ -1,4 +1,4 @@
-.class synthetic Landroidx/constraintlayout/core/state/ConstraintReference$1;
+.class public synthetic Landroidx/constraintlayout/core/state/ConstraintReference$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$androidx$constraintlayout$core$state$State$Constraint:[I
+.field public static final synthetic $SwitchMap$androidx$constraintlayout$core$state$State$Constraint:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Landroidx/constraintlayout/core/state/State$Constraint;->values()[Landroidx/constraintlayout/core/state/State$Constraint;
 
     move-result-object v0

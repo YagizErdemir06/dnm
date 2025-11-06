@@ -14,36 +14,34 @@
     value = "SMAP\nAndroid10Platform.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Android10Platform.kt\nokhttp3/internal/platform/Android10Platform\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,72:1\n764#2:73\n855#2,2:74\n1#3:76\n*S KotlinDebug\n*F\n+ 1 Android10Platform.kt\nokhttp3/internal/platform/Android10Platform\n*L\n43#1:73\n43#1:74,2\n*E\n"
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
     d1 = {
-        "\u0000F\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0006\u0008\u0007\u0018\u0000 \u00192\u00020\u0001:\u0001\u0019B\u0007\u00a2\u0006\u0004\u0008\u0017\u0010\u0018J\u0012\u0010\u0005\u001a\u0004\u0018\u00010\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0016J(\u0010\u000e\u001a\u00020\r2\u0006\u0010\u0007\u001a\u00020\u00062\u0008\u0010\t\u001a\u0004\u0018\u00010\u00082\u000c\u0010\u000c\u001a\u0008\u0012\u0004\u0012\u00020\u000b0\nH\u0016J\u0012\u0010\u000f\u001a\u0004\u0018\u00010\u00082\u0006\u0010\u0007\u001a\u00020\u0006H\u0016J\u0010\u0010\u0011\u001a\u00020\u00102\u0006\u0010\t\u001a\u00020\u0008H\u0017J\u0010\u0010\u0013\u001a\u00020\u00122\u0006\u0010\u0005\u001a\u00020\u0004H\u0016R\u001a\u0010\u0015\u001a\u0008\u0012\u0004\u0012\u00020\u00140\n8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0015\u0010\u0016\u00a8\u0006\u001a"
+        "\u0000J\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0008\u0007\u0018\u0000 \u00172\u00020\u0001:\u0001\u0017B\u0005\u00a2\u0006\u0002\u0010\u0002J\u0010\u0010\u0006\u001a\u00020\u00072\u0006\u0010\u0008\u001a\u00020\tH\u0016J(\u0010\n\u001a\u00020\u000b2\u0006\u0010\u000c\u001a\u00020\r2\u0008\u0010\u000e\u001a\u0004\u0018\u00010\u000f2\u000c\u0010\u0010\u001a\u0008\u0012\u0004\u0012\u00020\u00110\u0004H\u0016J\u0012\u0010\u0012\u001a\u0004\u0018\u00010\u000f2\u0006\u0010\u000c\u001a\u00020\rH\u0016J\u0010\u0010\u0013\u001a\u00020\u00142\u0006\u0010\u000e\u001a\u00020\u000fH\u0017J\u0012\u0010\u0008\u001a\u0004\u0018\u00010\t2\u0006\u0010\u0015\u001a\u00020\u0016H\u0016R\u0014\u0010\u0003\u001a\u0008\u0012\u0004\u0012\u00020\u00050\u0004X\u0082\u0004\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u0018"
     }
     d2 = {
         "Lokhttp3/internal/platform/Android10Platform;",
         "Lokhttp3/internal/platform/Platform;",
-        "Ljavax/net/ssl/SSLSocketFactory;",
-        "sslSocketFactory",
-        "Ljavax/net/ssl/X509TrustManager;",
-        "trustManager",
-        "Ljavax/net/ssl/SSLSocket;",
-        "sslSocket",
+        "()V",
+        "socketAdapters",
         "",
+        "Lokhttp3/internal/platform/android/SocketAdapter;",
+        "buildCertificateChainCleaner",
+        "Lokhttp3/internal/tls/CertificateChainCleaner;",
+        "trustManager",
+        "Ljavax/net/ssl/X509TrustManager;",
+        "configureTlsExtensions",
+        "",
+        "sslSocket",
+        "Ljavax/net/ssl/SSLSocket;",
         "hostname",
         "",
-        "Lokhttp3/Protocol;",
         "protocols",
-        "Lnm/l2;",
-        "configureTlsExtensions",
+        "Lokhttp3/Protocol;",
         "getSelectedProtocol",
-        "",
         "isCleartextTrafficPermitted",
-        "Lokhttp3/internal/tls/CertificateChainCleaner;",
-        "buildCertificateChainCleaner",
-        "Lokhttp3/internal/platform/android/SocketAdapter;",
-        "socketAdapters",
-        "Ljava/util/List;",
-        "<init>",
-        "()V",
+        "",
+        "sslSocketFactory",
+        "Ljavax/net/ssl/SSLSocketFactory;",
         "Companion",
         "okhttp"
     }
@@ -53,6 +51,7 @@
         0x6,
         0x0
     }
+    xi = 0x30
 .end annotation
 
 .annotation build Lokhttp3/internal/SuppressSignatureCheck;
@@ -61,7 +60,7 @@
 
 # static fields
 .field public static final Companion:Lokhttp3/internal/platform/Android10Platform$Companion;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -78,7 +77,7 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -91,10 +90,11 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lokhttp3/internal/platform/Android10Platform$Companion;-><init>(Lkotlin/jvm/internal/w;)V
+    invoke-direct {v0, v1}, Lokhttp3/internal/platform/Android10Platform$Companion;-><init>(Lh/d3/x/w;)V
 
     sput-object v0, Lokhttp3/internal/platform/Android10Platform;->Companion:Lokhttp3/internal/platform/Android10Platform$Companion;
 
+    .line 1
     sget-object v0, Lokhttp3/internal/platform/Platform;->Companion:Lokhttp3/internal/platform/Platform$Companion;
 
     invoke-virtual {v0}, Lokhttp3/internal/platform/Platform$Companion;->isAndroid()Z
@@ -102,6 +102,12 @@
     move-result v0
 
     if-eqz v0, :cond_0
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1d
+
+    if-lt v0, v1, :cond_0
 
     const/4 v0, 0x1
 
@@ -119,12 +125,14 @@
 .method public constructor <init>()V
     .locals 4
 
+    .line 1
     invoke-direct {p0}, Lokhttp3/internal/platform/Platform;-><init>()V
 
     const/4 v0, 0x4
 
     new-array v0, v0, [Lokhttp3/internal/platform/android/SocketAdapter;
 
+    .line 2
     sget-object v1, Lokhttp3/internal/platform/android/Android10SocketAdapter;->Companion:Lokhttp3/internal/platform/android/Android10SocketAdapter$Companion;
 
     invoke-virtual {v1}, Lokhttp3/internal/platform/android/Android10SocketAdapter$Companion;->buildIfSupported()Lokhttp3/internal/platform/android/SocketAdapter;
@@ -135,6 +143,7 @@
 
     aput-object v1, v0, v2
 
+    .line 3
     new-instance v1, Lokhttp3/internal/platform/android/DeferredSocketAdapter;
 
     sget-object v2, Lokhttp3/internal/platform/android/AndroidSocketAdapter;->Companion:Lokhttp3/internal/platform/android/AndroidSocketAdapter$Companion;
@@ -149,6 +158,7 @@
 
     aput-object v1, v0, v2
 
+    .line 4
     new-instance v1, Lokhttp3/internal/platform/android/DeferredSocketAdapter;
 
     sget-object v2, Lokhttp3/internal/platform/android/ConscryptSocketAdapter;->Companion:Lokhttp3/internal/platform/android/ConscryptSocketAdapter$Companion;
@@ -163,6 +173,7 @@
 
     aput-object v1, v0, v2
 
+    .line 5
     new-instance v1, Lokhttp3/internal/platform/android/DeferredSocketAdapter;
 
     sget-object v2, Lokhttp3/internal/platform/android/BouncyCastleSocketAdapter;->Companion:Lokhttp3/internal/platform/android/BouncyCastleSocketAdapter$Companion;
@@ -177,16 +188,17 @@
 
     aput-object v1, v0, v2
 
-    invoke-static {v0}, Lpm/y;->O([Ljava/lang/Object;)Ljava/util/List;
+    .line 6
+    invoke-static {v0}, Lh/t2/y;->O([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Iterable;
-
+    .line 7
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 8
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -207,6 +219,7 @@
 
     check-cast v3, Lokhttp3/internal/platform/android/SocketAdapter;
 
+    .line 9
     invoke-interface {v3}, Lokhttp3/internal/platform/android/SocketAdapter;->isSupported()Z
 
     move-result v3
@@ -226,6 +239,7 @@
 .method public static final synthetic access$isSupported$cp()Z
     .locals 1
 
+    .line 1
     sget-boolean v0, Lokhttp3/internal/platform/Android10Platform;->isSupported:Z
 
     return v0
@@ -236,16 +250,17 @@
 .method public buildCertificateChainCleaner(Ljavax/net/ssl/X509TrustManager;)Lokhttp3/internal/tls/CertificateChainCleaner;
     .locals 1
     .param p1    # Ljavax/net/ssl/X509TrustManager;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "trustManager"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     sget-object v0, Lokhttp3/internal/platform/android/AndroidCertificateChainCleaner;->Companion:Lokhttp3/internal/platform/android/AndroidCertificateChainCleaner$Companion;
 
     invoke-virtual {v0, p1}, Lokhttp3/internal/platform/android/AndroidCertificateChainCleaner$Companion;->buildIfSupported(Ljavax/net/ssl/X509TrustManager;)Lokhttp3/internal/platform/android/AndroidCertificateChainCleaner;
@@ -265,15 +280,15 @@
 .method public configureTlsExtensions(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
     .locals 2
     .param p1    # Ljavax/net/ssl/SSLSocket;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
     .param p3    # Ljava/util/List;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
@@ -290,15 +305,14 @@
 
     const-string v0, "sslSocket"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "protocols"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-object p0, p0, Lokhttp3/internal/platform/Android10Platform;->socketAdapters:Ljava/util/List;
-
-    check-cast p0, Ljava/lang/Iterable;
 
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -337,6 +351,7 @@
 
     goto :goto_1
 
+    .line 2
     :cond_2
     invoke-interface {v0, p1, p2, p3}, Lokhttp3/internal/platform/android/SocketAdapter;->configureTlsExtensions(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
 
@@ -347,19 +362,18 @@
 .method public getSelectedProtocol(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
     .locals 3
     .param p1    # Ljavax/net/ssl/SSLSocket;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
     const-string v0, "sslSocket"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-object p0, p0, Lokhttp3/internal/platform/Android10Platform;->socketAdapters:Ljava/util/List;
-
-    check-cast p0, Ljava/lang/Iterable;
 
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -412,7 +426,7 @@
 .method public isCleartextTrafficPermitted(Ljava/lang/String;)Z
     .locals 0
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation build Landroid/annotation/SuppressLint;
@@ -423,8 +437,9 @@
 
     const-string p0, "hostname"
 
-    invoke-static {p1, p0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-static {}, Landroid/security/NetworkSecurityPolicy;->getInstance()Landroid/security/NetworkSecurityPolicy;
 
     move-result-object p0
@@ -439,19 +454,18 @@
 .method public trustManager(Ljavax/net/ssl/SSLSocketFactory;)Ljavax/net/ssl/X509TrustManager;
     .locals 3
     .param p1    # Ljavax/net/ssl/SSLSocketFactory;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
     const-string v0, "sslSocketFactory"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-object p0, p0, Lokhttp3/internal/platform/Android10Platform;->socketAdapters:Ljava/util/List;
-
-    check-cast p0, Ljava/lang/Iterable;
 
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -492,6 +506,7 @@
 
     goto :goto_1
 
+    .line 2
     :cond_2
     invoke-interface {v0, p1}, Lokhttp3/internal/platform/android/SocketAdapter;->trustManager(Ljavax/net/ssl/SSLSocketFactory;)Ljavax/net/ssl/X509TrustManager;
 

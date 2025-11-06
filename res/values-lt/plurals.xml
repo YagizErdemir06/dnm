@@ -84,18 +84,6 @@
         <item quantity="few">Trukmė: %d sekundės</item>
         <item quantity="many">Trukmė: %d sekundės</item>
     </plurals>
-    <plurals name="accessibility_watermark_characters_inputted">
-        <item quantity="other">Įvesta %d simbolių.</item>
-        <item quantity="one">Įvestas %d simbolis.</item>
-        <item quantity="few">Įvesti %d simboliai.</item>
-        <item quantity="many">Įvesta %d simbolių.</item>
-    </plurals>
-    <plurals name="accessibility_watermark_characters_max">
-        <item quantity="other">Įveskite iki %d simbolių.</item>
-        <item quantity="one">Įveskite iki %d simbolio.</item>
-        <item quantity="few">Įveskite iki %d simbolių.</item>
-        <item quantity="many">Įveskite iki %d simbolių.</item>
-    </plurals>
     <plurals name="cinemaster_toast_camera_overflow">
         <item quantity="other">Į tą patį tinklą galite prijungti iki %d kamerų</item>
         <item quantity="one">Į tą patį tinklą galite prijungti iki %d kameros</item>
@@ -209,12 +197,6 @@
         <item quantity="one">Pasirinktas %d elementas</item>
         <item quantity="few">Pasirinkti %d elementai</item>
         <item quantity="many">Pasirinkta %d elemento</item>
-    </plurals>
-    <plurals name="mtrl_badge_content_description">
-        <item quantity="other">%d naujų pranešimų</item>
-        <item quantity="one">%d naujas pranešimas</item>
-        <item quantity="few">%d nauji pranešimai</item>
-        <item quantity="many">%d naujo pranešimo</item>
     </plurals>
     <plurals name="num_minutes_ago">
         <item quantity="other">Prieš %d minučių</item>

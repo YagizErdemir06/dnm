@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_common/zzao;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_common/zzao;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -36,6 +36,7 @@
 .method private final zzb()V
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/gms/internal/mlkit_vision_common/zzao;->zza:Z
 
     if-nez v0, :cond_0

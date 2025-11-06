@@ -23,7 +23,7 @@
 
 .field private final sequenceNumber:J
 
-.field final synthetic this$0:Lcom/bumptech/glide/disklrucache/DiskLruCache;
+.field public final synthetic this$0:Lcom/bumptech/glide/disklrucache/DiskLruCache;
 
 
 # direct methods
@@ -69,6 +69,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/disklrucache/DiskLruCache$Value;->this$0:Lcom/bumptech/glide/disklrucache/DiskLruCache;
 
     iget-object v1, p0, Lcom/bumptech/glide/disklrucache/DiskLruCache$Value;->key:Ljava/lang/String;
@@ -85,6 +86,7 @@
 .method public getFile(I)Ljava/io/File;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/disklrucache/DiskLruCache$Value;->files:[Ljava/io/File;
 
     aget-object p0, p0, p1
@@ -95,6 +97,7 @@
 .method public getLength(I)J
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/disklrucache/DiskLruCache$Value;->lengths:[J
 
     aget-wide p0, p0, p1
@@ -110,6 +113,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/io/FileInputStream;
 
     iget-object p0, p0, Lcom/bumptech/glide/disklrucache/DiskLruCache$Value;->files:[Ljava/io/File;
@@ -118,6 +122,7 @@
 
     invoke-direct {v0, p0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
+    .line 2
     invoke-static {v0}, Lcom/bumptech/glide/disklrucache/DiskLruCache;->access$1800(Ljava/io/InputStream;)Ljava/lang/String;
 
     move-result-object p0

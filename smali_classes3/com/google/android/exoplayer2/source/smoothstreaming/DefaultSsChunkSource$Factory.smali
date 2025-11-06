@@ -25,8 +25,10 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/upstream/DataSource$Factory;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource$Factory;->dataSourceFactory:Lcom/google/android/exoplayer2/upstream/DataSource$Factory;
 
     return-void
@@ -41,6 +43,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource$Factory;->dataSourceFactory:Lcom/google/android/exoplayer2/upstream/DataSource$Factory;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/upstream/DataSource$Factory;->createDataSource()Lcom/google/android/exoplayer2/upstream/DataSource;
@@ -49,8 +52,10 @@
 
     if-eqz p5, :cond_0
 
+    .line 2
     invoke-interface {v5, p5}, Lcom/google/android/exoplayer2/upstream/DataSource;->addTransferListener(Lcom/google/android/exoplayer2/upstream/TransferListener;)V
 
+    .line 3
     :cond_0
     new-instance p0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;
 

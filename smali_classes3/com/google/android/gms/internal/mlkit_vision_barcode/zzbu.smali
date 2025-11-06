@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbu;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbu;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -41,12 +41,14 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbv;->zza(Ljava/lang/Object;)I
 
     move-result v0
 
     and-int v1, v0, p2
 
+    .line 2
     invoke-static {p3, v1}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbu;->zzc(Ljava/lang/Object;I)I
 
     move-result v2
@@ -64,14 +66,17 @@
     :goto_0
     add-int/2addr v2, v3
 
+    .line 3
     aget v6, p4, v2
 
     and-int v7, v6, v4
 
     if-ne v7, v0, :cond_2
 
+    .line 4
     aget-object v7, p5, v2
 
+    .line 5
     invoke-static {p0, v7}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzam;->zza(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v7
@@ -82,6 +87,7 @@
 
     aget-object v7, p6, v2
 
+    .line 6
     invoke-static {p1, v7}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzam;->zza(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v7
@@ -93,10 +99,12 @@
 
     if-ne v5, v3, :cond_1
 
+    .line 7
     invoke-static {p3, v1, p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbu;->zze(Ljava/lang/Object;II)V
 
     goto :goto_1
 
+    .line 8
     :cond_1
     aget p1, p4, v5
 
@@ -131,10 +139,12 @@
 .method public static zzc(Ljava/lang/Object;I)I
     .locals 1
 
+    .line 1
     instance-of v0, p0, [B
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, [B
 
     aget-byte p0, p0, p1
@@ -143,11 +153,13 @@
 
     return p0
 
+    .line 3
     :cond_0
     instance-of v0, p0, [S
 
     if-eqz v0, :cond_1
 
+    .line 4
     check-cast p0, [S
 
     aget-short p0, p0, p1
@@ -156,6 +168,7 @@
 
     return p0
 
+    .line 5
     :cond_1
     check-cast p0, [I
 
@@ -175,6 +188,7 @@
 
     if-gt p0, v0, :cond_2
 
+    .line 1
     invoke-static {p0}, Ljava/lang/Integer;->highestOneBit(I)I
 
     move-result v0
@@ -185,6 +199,7 @@
 
     if-gt p0, v0, :cond_0
 
+    .line 2
     new-array p0, p0, [B
 
     return-object p0
@@ -203,11 +218,13 @@
 
     return-object p0
 
+    .line 3
     :cond_2
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    .line 4
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v2, "must be power of 2 between 2^1 and 2^30: "
@@ -228,10 +245,12 @@
 .method public static zze(Ljava/lang/Object;II)V
     .locals 1
 
+    .line 1
     instance-of v0, p0, [B
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, [B
 
     int-to-byte p2, p2
@@ -240,11 +259,13 @@
 
     return-void
 
+    .line 3
     :cond_0
     instance-of v0, p0, [S
 
     if-eqz v0, :cond_1
 
+    .line 4
     check-cast p0, [S
 
     int-to-short p2, p2
@@ -253,6 +274,7 @@
 
     return-void
 
+    .line 5
     :cond_1
     check-cast p0, [I
 

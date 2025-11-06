@@ -15,19 +15,20 @@
 
 
 # instance fields
-.field clientId:Ljava/lang/String;
+.field public clientId:Ljava/lang/String;
 
-.field connectLevel:I
+.field public connectLevel:I
 
-.field rpcChannelType:I
+.field public rpcChannelType:I
 
-.field serviceId:Ljava/lang/String;
+.field public serviceId:Ljava/lang/String;
 
 
 # direct methods
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,6 +37,7 @@
 .method public static newBuilder()Lcom/xiaomi/idm/bean/RpcChannelStatus$Builder;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/xiaomi/idm/bean/RpcChannelStatus$Builder;
 
     invoke-direct {v0}, Lcom/xiaomi/idm/bean/RpcChannelStatus$Builder;-><init>()V
@@ -48,6 +50,7 @@
 .method public build()Lcom/xiaomi/idm/bean/RpcChannelStatus;
     .locals 4
 
+    .line 1
     new-instance v0, Lcom/xiaomi/idm/bean/RpcChannelStatus;
 
     iget-object v1, p0, Lcom/xiaomi/idm/bean/RpcChannelStatus$Builder;->clientId:Ljava/lang/String;
@@ -66,6 +69,7 @@
 .method public getClientId()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/bean/RpcChannelStatus$Builder;->clientId:Ljava/lang/String;
 
     return-object p0
@@ -74,6 +78,7 @@
 .method public getConnectLevel()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/idm/bean/RpcChannelStatus$Builder;->connectLevel:I
 
     return p0
@@ -82,6 +87,7 @@
 .method public getRpcChannelType()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/idm/bean/RpcChannelStatus$Builder;->rpcChannelType:I
 
     return p0
@@ -90,6 +96,7 @@
 .method public getServiceId()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/bean/RpcChannelStatus$Builder;->serviceId:Ljava/lang/String;
 
     return-object p0
@@ -98,6 +105,7 @@
 .method public setClientId(Ljava/lang/String;)Lcom/xiaomi/idm/bean/RpcChannelStatus$Builder;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/bean/RpcChannelStatus$Builder;->clientId:Ljava/lang/String;
 
     return-object p0
@@ -106,6 +114,7 @@
 .method public setConnectLevel(I)Lcom/xiaomi/idm/bean/RpcChannelStatus$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/idm/bean/RpcChannelStatus$Builder;->connectLevel:I
 
     return-object p0
@@ -114,6 +123,7 @@
 .method public setRpcChannelType(I)Lcom/xiaomi/idm/bean/RpcChannelStatus$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/idm/bean/RpcChannelStatus$Builder;->rpcChannelType:I
 
     return-object p0
@@ -122,6 +132,7 @@
 .method public setServiceId(Ljava/lang/String;)Lcom/xiaomi/idm/bean/RpcChannelStatus$Builder;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/bean/RpcChannelStatus$Builder;->serviceId:Ljava/lang/String;
 
     return-object p0

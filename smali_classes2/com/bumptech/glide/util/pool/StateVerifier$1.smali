@@ -1,4 +1,4 @@
-.class synthetic Lcom/bumptech/glide/util/pool/StateVerifier$1;
+.class public synthetic Lcom/bumptech/glide/util/pool/StateVerifier$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

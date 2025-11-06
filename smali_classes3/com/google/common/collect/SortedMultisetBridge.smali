@@ -1,4 +1,4 @@
-.class interface abstract Lcom/google/common/collect/SortedMultisetBridge;
+.class public interface abstract Lcom/google/common/collect/SortedMultisetBridge;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -29,6 +29,7 @@
 .method public bridge synthetic elementSet()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-interface {p0}, Lcom/google/common/collect/SortedMultisetBridge;->elementSet()Ljava/util/SortedSet;
 
     move-result-object p0

@@ -18,14 +18,15 @@
 
 
 # instance fields
-.field public final synthetic a:Lmiuix/appcompat/app/DatePickerDialog;
+.field public final synthetic c:Lmiuix/appcompat/app/DatePickerDialog;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/appcompat/app/DatePickerDialog;)V
     .locals 0
 
-    iput-object p1, p0, Lmiuix/appcompat/app/DatePickerDialog$b;->a:Lmiuix/appcompat/app/DatePickerDialog;
+    .line 1
+    iput-object p1, p0, Lmiuix/appcompat/app/DatePickerDialog$b;->c:Lmiuix/appcompat/app/DatePickerDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,9 +38,10 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/DatePickerDialog$b;->a:Lmiuix/appcompat/app/DatePickerDialog;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/DatePickerDialog$b;->c:Lmiuix/appcompat/app/DatePickerDialog;
 
-    invoke-static {p0}, Lmiuix/appcompat/app/DatePickerDialog;->O(Lmiuix/appcompat/app/DatePickerDialog;)V
+    invoke-static {p0}, Lmiuix/appcompat/app/DatePickerDialog;->C(Lmiuix/appcompat/app/DatePickerDialog;)V
 
     return-void
 .end method

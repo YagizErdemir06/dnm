@@ -17,6 +17,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/metadata/SimpleMetadataDecoder;-><init>()V
 
     return-void
@@ -29,12 +30,15 @@
 
     const/16 v0, 0xc
 
+    .line 1
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v1
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->getBytePosition()I
 
     move-result v2
@@ -47,22 +51,28 @@
 
     const/16 v3, 0x2c
 
+    .line 4
     invoke-virtual {p0, v3}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
+    .line 5
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v3
 
+    .line 6
     invoke-virtual {p0, v3}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBytes(I)V
 
     const/16 v3, 0x10
 
+    .line 7
     invoke-virtual {p0, v3}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
+    .line 8
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
+    .line 9
     :cond_0
     :goto_0
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->getBytePosition()I
@@ -75,20 +85,25 @@
 
     const/16 v5, 0x30
 
+    .line 10
     invoke-virtual {p0, v5}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
     const/16 v5, 0x8
 
+    .line 11
     invoke-virtual {p0, v5}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v7
 
+    .line 12
     invoke-virtual {p0, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
+    .line 13
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v8
 
+    .line 14
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->getBytePosition()I
 
     move-result v9
@@ -97,6 +112,7 @@
 
     move-object v8, v6
 
+    .line 15
     :goto_1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->getBytePosition()I
 
@@ -104,14 +120,17 @@
 
     if-ge v10, v9, :cond_4
 
+    .line 16
     invoke-virtual {p0, v5}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v10
 
+    .line 17
     invoke-virtual {p0, v5}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v11
 
+    .line 18
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->getBytePosition()I
 
     move-result v12
@@ -122,16 +141,19 @@
 
     if-ne v10, v13, :cond_2
 
+    .line 19
     invoke-virtual {p0, v3}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v10
 
+    .line 20
     invoke-virtual {p0, v5}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
     const/4 v11, 0x3
 
     if-ne v10, v11, :cond_3
 
+    .line 21
     :cond_1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->getBytePosition()I
 
@@ -139,16 +161,19 @@
 
     if-ge v10, v12, :cond_3
 
+    .line 22
     invoke-virtual {p0, v5}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v6
 
+    .line 23
     sget-object v10, Lcom/google/common/base/Charsets;->US_ASCII:Ljava/nio/charset/Charset;
 
     invoke-virtual {p0, v6, v10}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBytesAsString(ILjava/nio/charset/Charset;)Ljava/lang/String;
 
     move-result-object v6
 
+    .line 24
     invoke-virtual {p0, v5}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v10
@@ -158,10 +183,12 @@
     :goto_2
     if-ge v11, v10, :cond_1
 
+    .line 25
     invoke-virtual {p0, v5}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v13
 
+    .line 26
     invoke-virtual {p0, v13}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBytes(I)V
 
     add-int/lit8 v11, v11, 0x1
@@ -173,6 +200,7 @@
 
     if-ne v10, v13, :cond_3
 
+    .line 27
     sget-object v8, Lcom/google/common/base/Charsets;->US_ASCII:Ljava/nio/charset/Charset;
 
     invoke-virtual {p0, v11, v8}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBytesAsString(ILjava/nio/charset/Charset;)Ljava/lang/String;
@@ -182,6 +210,7 @@
     :cond_3
     mul-int/lit8 v12, v12, 0x8
 
+    .line 28
     invoke-virtual {p0, v12}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->setPosition(I)V
 
     goto :goto_1
@@ -189,12 +218,14 @@
     :cond_4
     mul-int/lit8 v9, v9, 0x8
 
+    .line 29
     invoke-virtual {p0, v9}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->setPosition(I)V
 
     if-eqz v6, :cond_0
 
     if-eqz v8, :cond_0
 
+    .line 30
     new-instance v5, Lcom/google/android/exoplayer2/metadata/dvbsi/AppInfoTable;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -215,6 +246,7 @@
 
     goto/16 :goto_0
 
+    .line 31
     :cond_5
     invoke-virtual {v4}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -240,6 +272,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->get()B
 
     move-result p0
@@ -248,13 +281,14 @@
 
     if-ne p0, p1, :cond_0
 
+    .line 2
     new-instance p0, Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object p1
 
-    invoke-virtual {p2}, Ljava/nio/Buffer;->limit()I
+    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result p2
 

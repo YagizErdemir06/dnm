@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/TreeRangeMap$SubRangeMap$1$1;
+.class public Lcom/google/common/collect/TreeRangeMap$SubRangeMap$1$1;
 .super Lcom/google/common/collect/AbstractIterator;
 .source "SourceFile"
 
@@ -24,15 +24,16 @@
 
 
 # instance fields
-.field final synthetic this$2:Lcom/google/common/collect/TreeRangeMap$SubRangeMap$1;
+.field public final synthetic this$2:Lcom/google/common/collect/TreeRangeMap$SubRangeMap$1;
 
-.field final synthetic val$backingItr:Ljava/util/Iterator;
+.field public final synthetic val$backingItr:Ljava/util/Iterator;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/TreeRangeMap$SubRangeMap$1;Ljava/util/Iterator;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/TreeRangeMap$SubRangeMap$1$1;->this$2:Lcom/google/common/collect/TreeRangeMap$SubRangeMap$1;
 
     iput-object p2, p0, Lcom/google/common/collect/TreeRangeMap$SubRangeMap$1$1;->val$backingItr:Ljava/util/Iterator;

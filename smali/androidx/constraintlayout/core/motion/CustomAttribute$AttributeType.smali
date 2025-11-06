@@ -46,6 +46,7 @@
 .method public static constructor <clinit>()V
     .locals 16
 
+    .line 1
     new-instance v0, Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
 
     const-string v1, "INT_TYPE"
@@ -56,6 +57,7 @@
 
     sput-object v0, Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;->INT_TYPE:Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
 
+    .line 2
     new-instance v1, Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
 
     const-string v3, "FLOAT_TYPE"
@@ -66,6 +68,7 @@
 
     sput-object v1, Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;->FLOAT_TYPE:Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
 
+    .line 3
     new-instance v3, Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
 
     const-string v5, "COLOR_TYPE"
@@ -76,6 +79,7 @@
 
     sput-object v3, Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;->COLOR_TYPE:Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
 
+    .line 4
     new-instance v5, Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
 
     const-string v7, "COLOR_DRAWABLE_TYPE"
@@ -86,6 +90,7 @@
 
     sput-object v5, Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;->COLOR_DRAWABLE_TYPE:Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
 
+    .line 5
     new-instance v7, Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
 
     const-string v9, "STRING_TYPE"
@@ -96,6 +101,7 @@
 
     sput-object v7, Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;->STRING_TYPE:Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
 
+    .line 6
     new-instance v9, Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
 
     const-string v11, "BOOLEAN_TYPE"
@@ -106,6 +112,7 @@
 
     sput-object v9, Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;->BOOLEAN_TYPE:Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
 
+    .line 7
     new-instance v11, Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
 
     const-string v13, "DIMENSION_TYPE"
@@ -116,6 +123,7 @@
 
     sput-object v11, Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;->DIMENSION_TYPE:Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
 
+    .line 8
     new-instance v13, Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
 
     const-string v15, "REFERENCE_TYPE"
@@ -148,6 +156,7 @@
 
     aput-object v13, v15, v14
 
+    .line 9
     sput-object v15, Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;->$VALUES:[Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
 
     return-void
@@ -155,12 +164,8 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -169,6 +174,7 @@
 .method public static valueOf(Ljava/lang/String;)Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
     .locals 1
 
+    .line 1
     const-class v0, Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -183,6 +189,7 @@
 .method public static values()[Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
     .locals 1
 
+    .line 1
     sget-object v0, Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;->$VALUES:[Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
 
     invoke-virtual {v0}, [Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;->clone()Ljava/lang/Object;

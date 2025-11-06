@@ -1,4 +1,4 @@
-.class Landroidx/core/provider/FontRequestWorker$3;
+.class public Landroidx/core/provider/FontRequestWorker$3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,19 +27,20 @@
 
 
 # instance fields
-.field final synthetic val$context:Landroid/content/Context;
+.field public final synthetic val$context:Landroid/content/Context;
 
-.field final synthetic val$id:Ljava/lang/String;
+.field public final synthetic val$id:Ljava/lang/String;
 
-.field final synthetic val$request:Landroidx/core/provider/FontRequest;
+.field public final synthetic val$request:Landroidx/core/provider/FontRequest;
 
-.field final synthetic val$style:I
+.field public final synthetic val$style:I
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Landroid/content/Context;Landroidx/core/provider/FontRequest;I)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/core/provider/FontRequestWorker$3;->val$id:Ljava/lang/String;
 
     iput-object p2, p0, Landroidx/core/provider/FontRequestWorker$3;->val$context:Landroid/content/Context;

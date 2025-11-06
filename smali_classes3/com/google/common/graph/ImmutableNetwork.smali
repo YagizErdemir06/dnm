@@ -47,6 +47,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/graph/NetworkBuilder;->from(Lcom/google/common/graph/Network;)Lcom/google/common/graph/NetworkBuilder;
 
     move-result-object v0
@@ -59,6 +60,7 @@
 
     move-result-object p1
 
+    .line 2
     invoke-direct {p0, v0, v1, p1}, Lcom/google/common/graph/StandardNetwork;-><init>(Lcom/google/common/graph/NetworkBuilder;Ljava/util/Map;Ljava/util/Map;)V
 
     return-void
@@ -80,6 +82,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/graph/ImmutableNetwork$3;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/graph/ImmutableNetwork$3;-><init>(Lcom/google/common/graph/Network;Ljava/lang/Object;)V
@@ -103,12 +106,14 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Lcom/google/common/graph/Network;->isDirected()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 2
     invoke-interface {p0, p1}, Lcom/google/common/graph/Network;->inEdges(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object v0
@@ -121,6 +126,7 @@
 
     move-result-object v0
 
+    .line 3
     invoke-interface {p0, p1}, Lcom/google/common/graph/Network;->outEdges(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object v1
@@ -133,6 +139,7 @@
 
     move-result-object v1
 
+    .line 4
     invoke-interface {p0, p1, p1}, Lcom/google/common/graph/Network;->edgesConnecting(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p1
@@ -141,18 +148,21 @@
 
     move-result p1
 
+    .line 5
     invoke-interface {p0}, Lcom/google/common/graph/Network;->allowsParallelEdges()Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 6
     invoke-static {v0, v1, p1}, Lcom/google/common/graph/DirectedMultiNetworkConnections;->ofImmutable(Ljava/util/Map;Ljava/util/Map;I)Lcom/google/common/graph/DirectedMultiNetworkConnections;
 
     move-result-object p0
 
     goto :goto_0
 
+    .line 7
     :cond_0
     invoke-static {v0, v1, p1}, Lcom/google/common/graph/DirectedNetworkConnections;->ofImmutable(Ljava/util/Map;Ljava/util/Map;I)Lcom/google/common/graph/DirectedNetworkConnections;
 
@@ -161,6 +171,7 @@
     :goto_0
     return-object p0
 
+    .line 8
     :cond_1
     invoke-interface {p0, p1}, Lcom/google/common/graph/Network;->incidentEdges(Ljava/lang/Object;)Ljava/util/Set;
 
@@ -174,18 +185,21 @@
 
     move-result-object p1
 
+    .line 9
     invoke-interface {p0}, Lcom/google/common/graph/Network;->allowsParallelEdges()Z
 
     move-result p0
 
     if-eqz p0, :cond_2
 
+    .line 10
     invoke-static {p1}, Lcom/google/common/graph/UndirectedMultiNetworkConnections;->ofImmutable(Ljava/util/Map;)Lcom/google/common/graph/UndirectedMultiNetworkConnections;
 
     move-result-object p0
 
     goto :goto_1
 
+    .line 11
     :cond_2
     invoke-static {p1}, Lcom/google/common/graph/UndirectedNetworkConnections;->ofImmutable(Ljava/util/Map;)Lcom/google/common/graph/UndirectedNetworkConnections;
 
@@ -278,10 +292,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/ImmutableMap;->builder()Lcom/google/common/collect/ImmutableMap$Builder;
 
     move-result-object v0
 
+    .line 2
     invoke-interface {p0}, Lcom/google/common/graph/Network;->edges()Ljava/util/Set;
 
     move-result-object v1
@@ -301,6 +317,7 @@
 
     move-result-object v2
 
+    .line 3
     invoke-interface {p0, v2}, Lcom/google/common/graph/Network;->incidentNodes(Ljava/lang/Object;)Lcom/google/common/graph/EndpointPair;
 
     move-result-object v3
@@ -313,6 +330,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-virtual {v0}, Lcom/google/common/collect/ImmutableMap$Builder;->build()Lcom/google/common/collect/ImmutableMap;
 
@@ -339,10 +357,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/ImmutableMap;->builder()Lcom/google/common/collect/ImmutableMap$Builder;
 
     move-result-object v0
 
+    .line 2
     invoke-interface {p0}, Lcom/google/common/graph/Network;->nodes()Ljava/util/Set;
 
     move-result-object v1
@@ -362,6 +382,7 @@
 
     move-result-object v2
 
+    .line 3
     invoke-static {p0, v2}, Lcom/google/common/graph/ImmutableNetwork;->connectionsOf(Lcom/google/common/graph/Network;Ljava/lang/Object;)Lcom/google/common/graph/NetworkConnections;
 
     move-result-object v3
@@ -370,6 +391,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-virtual {v0}, Lcom/google/common/collect/ImmutableMap$Builder;->build()Lcom/google/common/collect/ImmutableMap;
 
@@ -394,6 +416,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/graph/ImmutableNetwork$1;
 
     invoke-direct {v0, p0}, Lcom/google/common/graph/ImmutableNetwork$1;-><init>(Lcom/google/common/graph/Network;)V
@@ -417,6 +440,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/graph/ImmutableNetwork$2;
 
     invoke-direct {v0, p0}, Lcom/google/common/graph/ImmutableNetwork$2;-><init>(Lcom/google/common/graph/Network;)V
@@ -429,6 +453,7 @@
 .method public bridge synthetic adjacentNodes(Ljava/lang/Object;)Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/graph/StandardNetwork;->adjacentNodes(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0
@@ -439,6 +464,7 @@
 .method public bridge synthetic allowsParallelEdges()Z
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/graph/StandardNetwork;->allowsParallelEdges()Z
 
     move-result p0
@@ -449,6 +475,7 @@
 .method public bridge synthetic allowsSelfLoops()Z
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/graph/StandardNetwork;->allowsSelfLoops()Z
 
     move-result p0
@@ -492,6 +519,7 @@
 .method public bridge synthetic edgeOrder()Lcom/google/common/graph/ElementOrder;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/graph/StandardNetwork;->edgeOrder()Lcom/google/common/graph/ElementOrder;
 
     move-result-object p0
@@ -502,6 +530,7 @@
 .method public bridge synthetic edges()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/graph/StandardNetwork;->edges()Ljava/util/Set;
 
     move-result-object p0
@@ -512,6 +541,7 @@
 .method public bridge synthetic edgesConnecting(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/google/common/graph/StandardNetwork;->edgesConnecting(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0
@@ -522,6 +552,7 @@
 .method public bridge synthetic inEdges(Ljava/lang/Object;)Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/graph/StandardNetwork;->inEdges(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0
@@ -532,6 +563,7 @@
 .method public bridge synthetic incidentEdges(Ljava/lang/Object;)Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/graph/StandardNetwork;->incidentEdges(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0
@@ -542,6 +574,7 @@
 .method public bridge synthetic incidentNodes(Ljava/lang/Object;)Lcom/google/common/graph/EndpointPair;
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/graph/StandardNetwork;->incidentNodes(Ljava/lang/Object;)Lcom/google/common/graph/EndpointPair;
 
     move-result-object p0
@@ -552,6 +585,7 @@
 .method public bridge synthetic isDirected()Z
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/graph/StandardNetwork;->isDirected()Z
 
     move-result p0
@@ -562,6 +596,7 @@
 .method public bridge synthetic nodeOrder()Lcom/google/common/graph/ElementOrder;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/graph/StandardNetwork;->nodeOrder()Lcom/google/common/graph/ElementOrder;
 
     move-result-object p0
@@ -572,6 +607,7 @@
 .method public bridge synthetic nodes()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/graph/StandardNetwork;->nodes()Ljava/util/Set;
 
     move-result-object p0
@@ -582,6 +618,7 @@
 .method public bridge synthetic outEdges(Ljava/lang/Object;)Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/graph/StandardNetwork;->outEdges(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0
@@ -592,6 +629,7 @@
 .method public bridge synthetic predecessors(Ljava/lang/Object;)Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/graph/StandardNetwork;->predecessors(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0
@@ -602,6 +640,7 @@
 .method public bridge synthetic successors(Ljava/lang/Object;)Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/graph/StandardNetwork;->successors(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0

@@ -25,10 +25,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lorg/dom4j/xpath/DefaultXPath;->text:Ljava/lang/String;
 
+    .line 3
     invoke-static {p1}, Lorg/dom4j/xpath/DefaultXPath;->parse(Ljava/lang/String;)Lorg/jaxen/XPath;
 
     move-result-object p1
@@ -41,6 +44,7 @@
 .method public static parse(Ljava/lang/String;)Lorg/jaxen/XPath;
     .locals 2
 
+    .line 1
     :try_start_0
     new-instance v0, Lorg/jaxen/dom4j/Dom4jXPath;
 
@@ -54,6 +58,7 @@
     :catchall_0
     move-exception v0
 
+    .line 2
     new-instance v1, Lorg/dom4j/InvalidXPathException;
 
     invoke-direct {v1, p0, v0}, Lorg/dom4j/InvalidXPathException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
@@ -63,6 +68,7 @@
     :catch_0
     move-exception v0
 
+    .line 3
     new-instance v1, Lorg/dom4j/InvalidXPathException;
 
     invoke-virtual {v0}, Lorg/jaxen/JaxenException;->getMessage()Ljava/lang/String;
@@ -79,9 +85,11 @@
 .method public booleanValueOf(Ljava/lang/Object;)Z
     .locals 1
 
+    .line 1
     :try_start_0
     invoke-virtual {p0, p1}, Lorg/dom4j/xpath/DefaultXPath;->setNSContext(Ljava/lang/Object;)V
 
+    .line 2
     iget-object v0, p0, Lorg/dom4j/xpath/DefaultXPath;->xpath:Lorg/jaxen/XPath;
 
     invoke-interface {v0, p1}, Lorg/jaxen/XPath;->booleanValueOf(Ljava/lang/Object;)Z
@@ -95,6 +103,7 @@
     :catch_0
     move-exception p1
 
+    .line 3
     invoke-virtual {p0, p1}, Lorg/dom4j/xpath/DefaultXPath;->handleJaxenException(Lorg/jaxen/JaxenException;)V
 
     const/4 p0, 0x0
@@ -105,9 +114,11 @@
 .method public evaluate(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
+    .line 1
     :try_start_0
     invoke-virtual {p0, p1}, Lorg/dom4j/xpath/DefaultXPath;->setNSContext(Ljava/lang/Object;)V
 
+    .line 2
     iget-object v0, p0, Lorg/dom4j/xpath/DefaultXPath;->xpath:Lorg/jaxen/XPath;
 
     invoke-interface {v0, p1}, Lorg/jaxen/XPath;->selectNodes(Ljava/lang/Object;)Ljava/util/List;
@@ -116,6 +127,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 3
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -126,6 +138,7 @@
 
     const/4 v0, 0x0
 
+    .line 4
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -140,6 +153,7 @@
     :catch_0
     move-exception p1
 
+    .line 5
     invoke-virtual {p0, p1}, Lorg/dom4j/xpath/DefaultXPath;->handleJaxenException(Lorg/jaxen/JaxenException;)V
 
     const/4 p0, 0x0
@@ -150,6 +164,7 @@
 .method public getCompareValue(Lorg/dom4j/Node;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/dom4j/xpath/DefaultXPath;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -160,6 +175,7 @@
 .method public getFunctionContext()Lorg/jaxen/FunctionContext;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/xpath/DefaultXPath;->xpath:Lorg/jaxen/XPath;
 
     invoke-interface {p0}, Lorg/jaxen/XPath;->getFunctionContext()Lorg/jaxen/FunctionContext;
@@ -172,6 +188,7 @@
 .method public getNamespaceContext()Lorg/jaxen/NamespaceContext;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/xpath/DefaultXPath;->namespaceContext:Lorg/jaxen/NamespaceContext;
 
     return-object p0
@@ -180,6 +197,7 @@
 .method public getText()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/xpath/DefaultXPath;->text:Ljava/lang/String;
 
     return-object p0
@@ -188,6 +206,7 @@
 .method public getVariableContext()Lorg/jaxen/VariableContext;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/xpath/DefaultXPath;->xpath:Lorg/jaxen/XPath;
 
     invoke-interface {p0}, Lorg/jaxen/XPath;->getVariableContext()Lorg/jaxen/VariableContext;
@@ -205,6 +224,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lorg/dom4j/XPathException;
 
     iget-object p0, p0, Lorg/dom4j/xpath/DefaultXPath;->text:Ljava/lang/String;
@@ -219,9 +239,11 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :try_start_0
     invoke-virtual {p0, p1}, Lorg/dom4j/xpath/DefaultXPath;->setNSContext(Ljava/lang/Object;)V
 
+    .line 2
     iget-object v1, p0, Lorg/dom4j/xpath/DefaultXPath;->xpath:Lorg/jaxen/XPath;
 
     invoke-interface {v1, p1}, Lorg/jaxen/XPath;->selectNodes(Ljava/lang/Object;)Ljava/util/List;
@@ -230,20 +252,24 @@
 
     if-eqz v1, :cond_1
 
+    .line 3
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v2
 
     if-lez v2, :cond_1
 
+    .line 4
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
+    .line 5
     instance-of v3, v2, Ljava/lang/Boolean;
 
     if-eqz v3, :cond_0
 
+    .line 6
     check-cast v2, Ljava/lang/Boolean;
 
     invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
@@ -252,6 +278,7 @@
 
     return p0
 
+    .line 7
     :cond_0
     invoke-interface {v1, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -267,6 +294,7 @@
     :catch_0
     move-exception p1
 
+    .line 8
     invoke-virtual {p0, p1}, Lorg/dom4j/xpath/DefaultXPath;->handleJaxenException(Lorg/jaxen/JaxenException;)V
 
     return v0
@@ -275,9 +303,11 @@
 .method public numberValueOf(Ljava/lang/Object;)Ljava/lang/Number;
     .locals 1
 
+    .line 1
     :try_start_0
     invoke-virtual {p0, p1}, Lorg/dom4j/xpath/DefaultXPath;->setNSContext(Ljava/lang/Object;)V
 
+    .line 2
     iget-object v0, p0, Lorg/dom4j/xpath/DefaultXPath;->xpath:Lorg/jaxen/XPath;
 
     invoke-interface {v0, p1}, Lorg/jaxen/XPath;->numberValueOf(Ljava/lang/Object;)Ljava/lang/Number;
@@ -291,6 +321,7 @@
     :catch_0
     move-exception p1
 
+    .line 3
     invoke-virtual {p0, p1}, Lorg/dom4j/xpath/DefaultXPath;->handleJaxenException(Lorg/jaxen/JaxenException;)V
 
     const/4 p0, 0x0
@@ -301,10 +332,12 @@
 .method public removeDuplicates(Ljava/util/List;Ljava/util/Map;)V
     .locals 2
 
+    .line 1
     new-instance p0, Ljava/util/HashSet;
 
     invoke-direct {p0}, Ljava/util/HashSet;-><init>()V
 
+    .line 2
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -316,24 +349,29 @@
 
     if-eqz v0, :cond_1
 
+    .line 3
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 4
     invoke-interface {p2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 5
     invoke-virtual {p0, v0}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 6
     invoke-interface {p1}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
+    .line 7
     :cond_0
     invoke-virtual {p0, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
@@ -404,6 +442,7 @@
 .method public selectObject(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/dom4j/xpath/DefaultXPath;->evaluate(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -416,19 +455,23 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :try_start_0
     invoke-virtual {p0, p1}, Lorg/dom4j/xpath/DefaultXPath;->setNSContext(Ljava/lang/Object;)V
 
+    .line 2
     iget-object v1, p0, Lorg/dom4j/xpath/DefaultXPath;->xpath:Lorg/jaxen/XPath;
 
     invoke-interface {v1, p1}, Lorg/jaxen/XPath;->selectSingleNode(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
+    .line 3
     instance-of v1, p1, Lorg/dom4j/Node;
 
     if-eqz v1, :cond_0
 
+    .line 4
     check-cast p1, Lorg/dom4j/Node;
 
     return-object p1
@@ -438,6 +481,7 @@
 
     return-object v0
 
+    .line 5
     :cond_1
     new-instance v1, Lorg/dom4j/XPathException;
 
@@ -478,6 +522,7 @@
     :catch_0
     move-exception p1
 
+    .line 6
     invoke-virtual {p0, p1}, Lorg/dom4j/xpath/DefaultXPath;->handleJaxenException(Lorg/jaxen/JaxenException;)V
 
     return-object v0
@@ -486,6 +531,7 @@
 .method public setFunctionContext(Lorg/jaxen/FunctionContext;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/xpath/DefaultXPath;->xpath:Lorg/jaxen/XPath;
 
     invoke-interface {p0, p1}, Lorg/jaxen/XPath;->setFunctionContext(Lorg/jaxen/FunctionContext;)V
@@ -496,10 +542,12 @@
 .method public setNSContext(Ljava/lang/Object;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/xpath/DefaultXPath;->namespaceContext:Lorg/jaxen/NamespaceContext;
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lorg/dom4j/xpath/DefaultXPath;->xpath:Lorg/jaxen/XPath;
 
     invoke-static {p1}, Lorg/dom4j/xpath/DefaultNamespaceContext;->create(Ljava/lang/Object;)Lorg/dom4j/xpath/DefaultNamespaceContext;
@@ -515,8 +563,10 @@
 .method public setNamespaceContext(Lorg/jaxen/NamespaceContext;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/xpath/DefaultXPath;->namespaceContext:Lorg/jaxen/NamespaceContext;
 
+    .line 2
     iget-object p0, p0, Lorg/dom4j/xpath/DefaultXPath;->xpath:Lorg/jaxen/XPath;
 
     invoke-interface {p0, p1}, Lorg/jaxen/XPath;->setNamespaceContext(Lorg/jaxen/NamespaceContext;)V
@@ -527,6 +577,7 @@
 .method public setNamespaceURIs(Ljava/util/Map;)V
     .locals 1
 
+    .line 1
     new-instance v0, Lorg/jaxen/SimpleNamespaceContext;
 
     invoke-direct {v0, p1}, Lorg/jaxen/SimpleNamespaceContext;-><init>(Ljava/util/Map;)V
@@ -539,6 +590,7 @@
 .method public setVariableContext(Lorg/jaxen/VariableContext;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/xpath/DefaultXPath;->xpath:Lorg/jaxen/XPath;
 
     invoke-interface {p0, p1}, Lorg/jaxen/XPath;->setVariableContext(Lorg/jaxen/VariableContext;)V
@@ -639,6 +691,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -665,9 +718,11 @@
 .method public valueOf(Ljava/lang/Object;)Ljava/lang/String;
     .locals 1
 
+    .line 1
     :try_start_0
     invoke-virtual {p0, p1}, Lorg/dom4j/xpath/DefaultXPath;->setNSContext(Ljava/lang/Object;)V
 
+    .line 2
     iget-object v0, p0, Lorg/dom4j/xpath/DefaultXPath;->xpath:Lorg/jaxen/XPath;
 
     invoke-interface {v0, p1}, Lorg/jaxen/XPath;->stringValueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -681,6 +736,7 @@
     :catch_0
     move-exception p1
 
+    .line 3
     invoke-virtual {p0, p1}, Lorg/dom4j/xpath/DefaultXPath;->handleJaxenException(Lorg/jaxen/JaxenException;)V
 
     const-string p0, ""

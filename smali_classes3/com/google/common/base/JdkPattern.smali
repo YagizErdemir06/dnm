@@ -1,4 +1,4 @@
-.class final Lcom/google/common/base/JdkPattern;
+.class public final Lcom/google/common/base/JdkPattern;
 .super Lcom/google/common/base/CommonPattern;
 .source "SourceFile"
 
@@ -32,8 +32,10 @@
 .method public constructor <init>(Ljava/util/regex/Pattern;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/base/CommonPattern;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -50,6 +52,7 @@
 .method public flags()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/JdkPattern;->pattern:Ljava/util/regex/Pattern;
 
     invoke-virtual {p0}, Ljava/util/regex/Pattern;->flags()I
@@ -62,6 +65,7 @@
 .method public matcher(Ljava/lang/CharSequence;)Lcom/google/common/base/CommonMatcher;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/base/JdkPattern$JdkMatcher;
 
     iget-object p0, p0, Lcom/google/common/base/JdkPattern;->pattern:Ljava/util/regex/Pattern;
@@ -78,6 +82,7 @@
 .method public pattern()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/JdkPattern;->pattern:Ljava/util/regex/Pattern;
 
     invoke-virtual {p0}, Ljava/util/regex/Pattern;->pattern()Ljava/lang/String;
@@ -90,6 +95,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/JdkPattern;->pattern:Ljava/util/regex/Pattern;
 
     invoke-virtual {p0}, Ljava/util/regex/Pattern;->toString()Ljava/lang/String;

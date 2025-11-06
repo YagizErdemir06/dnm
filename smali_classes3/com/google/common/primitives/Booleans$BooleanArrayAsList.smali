@@ -1,4 +1,4 @@
-.class Lcom/google/common/primitives/Booleans$BooleanArrayAsList;
+.class public Lcom/google/common/primitives/Booleans$BooleanArrayAsList;
 .super Ljava/util/AbstractList;
 .source "SourceFile"
 
@@ -36,11 +36,11 @@
 
 
 # instance fields
-.field final array:[Z
+.field public final array:[Z
 
-.field final end:I
+.field public final end:I
 
-.field final start:I
+.field public final start:I
 
 
 # direct methods
@@ -84,6 +84,7 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Ljava/lang/Boolean;
 
     if-eqz v0, :cond_0
@@ -92,6 +93,7 @@
 
     check-cast p1, Ljava/lang/Boolean;
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
@@ -132,17 +134,21 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/common/primitives/Booleans$BooleanArrayAsList;
 
     if-eqz v1, :cond_4
 
+    .line 2
     check-cast p1, Lcom/google/common/primitives/Booleans$BooleanArrayAsList;
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/common/primitives/Booleans$BooleanArrayAsList;->size()I
 
     move-result v1
 
+    .line 4
     invoke-virtual {p1}, Lcom/google/common/primitives/Booleans$BooleanArrayAsList;->size()I
 
     move-result v2
@@ -159,6 +165,7 @@
     :goto_0
     if-ge v2, v1, :cond_3
 
+    .line 5
     iget-object v4, p0, Lcom/google/common/primitives/Booleans$BooleanArrayAsList;->array:[Z
 
     iget v5, p0, Lcom/google/common/primitives/Booleans$BooleanArrayAsList;->start:I
@@ -187,6 +194,7 @@
     :cond_3
     return v0
 
+    .line 6
     :cond_4
     invoke-super {p0, p1}, Ljava/util/AbstractList;->equals(Ljava/lang/Object;)Z
 
@@ -235,6 +243,7 @@
 .method public hashCode()I
     .locals 3
 
+    .line 1
     iget v0, p0, Lcom/google/common/primitives/Booleans$BooleanArrayAsList;->start:I
 
     const/4 v1, 0x1
@@ -246,6 +255,7 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
+    .line 2
     iget-object v2, p0, Lcom/google/common/primitives/Booleans$BooleanArrayAsList;->array:[Z
 
     aget-boolean v2, v2, v0
@@ -271,10 +281,12 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Ljava/lang/Boolean;
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/primitives/Booleans$BooleanArrayAsList;->array:[Z
 
     check-cast p1, Ljava/lang/Boolean;
@@ -293,6 +305,7 @@
 
     if-ltz p1, :cond_0
 
+    .line 3
     iget p0, p0, Lcom/google/common/primitives/Booleans$BooleanArrayAsList;->start:I
 
     sub-int/2addr p1, p0
@@ -320,10 +333,12 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Ljava/lang/Boolean;
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/primitives/Booleans$BooleanArrayAsList;->array:[Z
 
     check-cast p1, Ljava/lang/Boolean;
@@ -342,6 +357,7 @@
 
     if-ltz p1, :cond_0
 
+    .line 3
     iget p0, p0, Lcom/google/common/primitives/Booleans$BooleanArrayAsList;->start:I
 
     sub-int/2addr p1, p0
@@ -412,6 +428,7 @@
 .method public size()I
     .locals 1
 
+    .line 1
     iget v0, p0, Lcom/google/common/primitives/Booleans$BooleanArrayAsList;->end:I
 
     iget p0, p0, Lcom/google/common/primitives/Booleans$BooleanArrayAsList;->start:I
@@ -432,20 +449,24 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/primitives/Booleans$BooleanArrayAsList;->size()I
 
     move-result v0
 
+    .line 2
     invoke-static {p1, p2, v0}, Lcom/google/common/base/Preconditions;->checkPositionIndexes(III)V
 
     if-ne p1, p2, :cond_0
 
+    .line 3
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p0
 
     return-object p0
 
+    .line 4
     :cond_0
     new-instance v0, Lcom/google/common/primitives/Booleans$BooleanArrayAsList;
 
@@ -465,6 +486,7 @@
 .method public toBooleanArray()[Z
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/primitives/Booleans$BooleanArrayAsList;->array:[Z
 
     iget v1, p0, Lcom/google/common/primitives/Booleans$BooleanArrayAsList;->start:I
@@ -481,6 +503,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Lcom/google/common/primitives/Booleans$BooleanArrayAsList;->size()I
@@ -491,6 +514,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
+    .line 2
     iget-object v1, p0, Lcom/google/common/primitives/Booleans$BooleanArrayAsList;->array:[Z
 
     iget v2, p0, Lcom/google/common/primitives/Booleans$BooleanArrayAsList;->start:I
@@ -509,6 +533,7 @@
     :goto_0
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 3
     iget v1, p0, Lcom/google/common/primitives/Booleans$BooleanArrayAsList;->start:I
 
     :goto_1
@@ -518,6 +543,7 @@
 
     if-ge v1, v2, :cond_2
 
+    .line 4
     iget-object v2, p0, Lcom/google/common/primitives/Booleans$BooleanArrayAsList;->array:[Z
 
     aget-boolean v2, v2, v1
@@ -539,6 +565,7 @@
     :cond_2
     const/16 p0, 0x5d
 
+    .line 5
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;

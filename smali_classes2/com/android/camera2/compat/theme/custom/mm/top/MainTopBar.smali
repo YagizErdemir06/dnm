@@ -4,8 +4,8 @@
 
 # interfaces
 .implements Lcom/android/camera2/compat/theme/custom/mm/top/IFragmentTopBar;
-.implements Lv8/y2;
-.implements Lv8/z0;
+.implements Ld/d/a/m7/g/a3;
+.implements Ld/d/a/m7/g/c1;
 .implements Landroid/view/View$OnClickListener;
 
 
@@ -22,7 +22,7 @@
 
 .field private mCurrentAiSceneLevel:I
 
-.field protected mCurrentMode:I
+.field public mCurrentMode:I
 
 .field private mDisabledFunctionMenu:Landroid/util/SparseBooleanArray;
 
@@ -65,7 +65,7 @@
         value = {
             "Landroid/util/SparseArray<",
             "Ljava/util/List<",
-            "Lw6/p2;",
+            "Ld/d/a/u6/a5/q/k4;",
             ">;>;"
         }
     .end annotation
@@ -90,43 +90,59 @@
 
 .field private mTopConfigMenu:Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBarLayout;
 
-.field private mVMFeature:Lcom/android/camera/data/observeable/c;
+.field private mVMFeature:Ld/d/a/l6/f/m;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "baseFragmentTopConfig"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mIsShowRecommendLandscapeTips:Z
 
+    .line 3
     iput-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCaptureNumberAutoHibernationOffset:Z
 
     const/4 v0, 0x1
 
+    .line 4
     iput-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mEnableClick:Z
 
+    .line 5
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTipsState:Ljava/util/Map;
 
+    .line 6
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mBaseFragmentTopConfig:Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
-    invoke-static {}, Lg2/b;->h()Ll2/g;
+    .line 7
+    invoke-static {}, Ld/d/a/l6/b;->h()Ld/d/a/l6/e/l/g;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ll2/g;->D()I
+    invoke-virtual {p1}, Ld/d/a/l6/e/l/g;->A()I
 
     move-result p1
 
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
+    .line 8
     new-instance p1, Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     invoke-direct {p1}, Lcom/android/camera/fragment/top/FragmentTopAlert;-><init>()V
@@ -136,129 +152,10 @@
     return-void
 .end method
 
-.method public static synthetic A0(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Landroid/view/View;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$onCvClick$13(Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method public static synthetic B2(Lv8/z;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$onTimerClick$18(Lv8/z;)V
-
-    return-void
-.end method
-
-.method public static synthetic C0(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Landroid/view/View;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$onVideoQualityClick$7(Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method public static synthetic E0(Ljava/lang/String;Lv8/z;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$onHdrClick$3(Ljava/lang/String;Lv8/z;)V
-
-    return-void
-.end method
-
-.method public static synthetic G0(ZLv8/p;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$recheckFlashFrontAdjust$26(ZLv8/p;)V
-
-    return-void
-.end method
-
-.method public static synthetic H(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Lv8/v;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$updateTopBarData$23(Lv8/v;)V
-
-    return-void
-.end method
-
-.method public static synthetic H0(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Landroid/view/View;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$onVideoFpsClick$22(Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method public static synthetic K0(Lv8/z;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$alertFlashFrontAdjustSwitchLayout$28(Lv8/z;)V
-
-    return-void
-.end method
-
-.method public static synthetic L0(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Landroid/view/View;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$onMiLiveVideoQualityClick$10(Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method public static synthetic M0(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;ZLv8/p;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$configBottomPopupTips$24(ZLv8/p;)V
-
-    return-void
-.end method
-
-.method public static synthetic S(ILv8/y2;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$onFlashClick$0(ILv8/y2;)V
-
-    return-void
-.end method
-
-.method public static synthetic W(Ljava/lang/String;Lv8/z;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$onVideoQualityClick$6(Ljava/lang/String;Lv8/z;)V
-
-    return-void
-.end method
-
-.method public static synthetic X(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Landroid/view/View;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$onHdrClick$5(Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method public static synthetic X1(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Lj2/j;Lv8/y2;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$onHdrClick$4(Lj2/j;Lv8/y2;)V
-
-    return-void
-.end method
-
-.method public static synthetic Z1(Ljava/lang/String;Lv8/z;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$onCvClick$12(Ljava/lang/String;Lv8/z;)V
-
-    return-void
-.end method
-
 .method public static synthetic access$000(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;)Landroid/content/res/Resources;
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -268,99 +165,103 @@
 
 .method private alertTopMusicHint(ILjava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "text"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertMusicTip(ILjava/lang/String;)V
 
     :cond_0
     return-void
 .end method
 
-.method public static synthetic b(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Landroid/view/View;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$onSlowMotionVideoFpsClick$9(Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method public static synthetic c1(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Landroid/view/View;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$onFlashClick$2(Landroid/view/View;)V
-
-    return-void
-.end method
-
 .method private checkFeatureState()V
     .locals 4
 
+    .line 1
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-static {v0}, Lcom/android/camera/data/observeable/c;->f(I)Ljava/lang/String;
+    invoke-static {v0}, Ld/d/a/l6/f/m;->f(I)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 2
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    invoke-static {}, Lv8/a2;->impl2()Lv8/a2;
+    .line 3
+    invoke-static {}, Ld/d/a/m7/g/d2;->impl2()Ld/d/a/m7/g/d2;
 
     move-result-object v1
 
-    invoke-interface {v1, v0}, Lv8/a2;->m1(Ljava/lang/String;)Z
+    .line 4
+    invoke-interface {v1, v0}, Ld/d/a/m7/g/d2;->n1(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 5
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    const/4 v1, -0x1
 
-    iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTopConfigMenu:Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBarLayout;
+    const/4 v2, 0x0
 
-    const/4 v3, -0x1
+    iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTopConfigMenu:Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBarLayout;
 
-    invoke-virtual {v0, v3, v1, v2}, Lcom/android/camera/fragment/BaseFragment;->animateViews(IZLandroid/view/View;)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/android/camera/fragment/BaseFragment;->animateViews(IZLandroid/view/View;)V
 
-    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mVMFeature:Lcom/android/camera/data/observeable/c;
+    .line 6
+    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mVMFeature:Ld/d/a/l6/f/m;
 
     if-nez v0, :cond_0
 
-    invoke-static {}, Lg2/b;->j()Lq2/a;
+    .line 7
+    invoke-static {}, Ld/d/a/l6/b;->j()Ld/d/a/l6/f/h;
 
     move-result-object v0
 
-    const-class v1, Lcom/android/camera/data/observeable/c;
+    const-class v1, Ld/d/a/l6/f/m;
 
-    invoke-virtual {v0, v1}, Lq2/a;->c(Ljava/lang/Class;)Lq2/d;
+    invoke-virtual {v0, v1}, Ld/d/a/l6/f/h;->c(Ljava/lang/Class;)Ld/d/a/l6/f/l;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/camera/data/observeable/c;
+    check-cast v0, Ld/d/a/l6/f/m;
 
-    iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mVMFeature:Lcom/android/camera/data/observeable/c;
+    iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mVMFeature:Ld/d/a/l6/f/m;
 
+    .line 8
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object v1
 
-    new-instance v2, Lcom/android/camera2/compat/theme/custom/mm/top/v;
+    new-instance v2, Ld/d/b/x5/a/b/b/m/b0;
 
-    invoke-direct {v2, p0}, Lcom/android/camera2/compat/theme/custom/mm/top/v;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;)V
+    invoke-direct {v2, p0}, Ld/d/b/x5/a/b/b/m/b0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/camera/data/observeable/c;->m(Landroidx/lifecycle/LifecycleOwner;Lio/reactivex/functions/Consumer;)V
+    invoke-virtual {v0, v1, v2}, Ld/d/a/l6/f/m;->m(Landroidx/lifecycle/LifecycleOwner;Lio/reactivex/functions/Consumer;)V
 
     :cond_0
     return-void
@@ -368,33 +269,44 @@
 
 .method private configBottomPopupTips(Z)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "show"
+        }
+    .end annotation
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 1
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lid/b;->A6()Z
+    invoke-virtual {v0}, Ld/k/a/b;->o6()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lg2/b;->h()Ll2/g;
+    .line 2
+    invoke-static {}, Ld/d/a/l6/b;->h()Ld/d/a/l6/e/l/g;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ll2/g;->j0()Z
+    invoke-virtual {v0}, Ld/d/a/l6/e/l/g;->f0()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
+    .line 3
     :cond_0
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lid/b;->E5()Z
+    invoke-virtual {v0}, Ld/k/a/b;->s5()Z
 
     move-result v0
 
@@ -402,33 +314,50 @@
 
     return-void
 
+    .line 4
     :cond_1
-    invoke-static {}, Lv8/p;->impl()Ljava/util/Optional;
+    invoke-static {}, Ld/d/a/m7/g/s;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/top/i0;
+    new-instance v1, Ld/d/b/x5/a/b/b/m/o0;
 
-    invoke-direct {v1, p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/i0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Z)V
+    invoke-direct {v1, p0, p1}, Ld/d/b/x5/a/b/b/m/o0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Z)V
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
     return-void
 .end method
 
-.method private configTopCoverBackground(Laa/p;Ljava/util/List;II)V
+.method private configTopCoverBackground(Ld/d/a/d8/n2/f/p;Ljava/util/List;II)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "conditionReferred",
+            "animateInElements",
+            "newMode",
+            "resetType"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Laa/p;",
+            "Ld/d/a/d8/n2/f/p;",
             "Ljava/util/List<",
             "Lio/reactivex/Completable;",
             ">;II)V"
         }
     .end annotation
 
-    invoke-static {}, Ly2/b;->k()Z
+    .line 1
+    invoke-static {}, Ld/d/a/n6/b;->k()Z
 
     move-result v0
 
@@ -441,36 +370,42 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p1}, Laa/p;->H()I
+    invoke-virtual {p1}, Ld/d/a/d8/n2/f/p;->I()I
 
     move-result p1
 
+    .line 2
     :goto_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTopBackgroundView:Lcom/android/camera/ui/ShapeBackGroundView;
 
     invoke-virtual {v0, p1}, Lcom/android/camera/ui/ShapeBackGroundView;->setBlackOriginHeight(I)V
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTopBackgroundView:Lcom/android/camera/ui/ShapeBackGroundView;
 
     invoke-virtual {v0, v1}, Lcom/android/camera/ui/ShapeBackGroundView;->setCurrentRadius(I)V
 
+    .line 4
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTopBackgroundView:Lcom/android/camera/ui/ShapeBackGroundView;
 
     const/4 v2, 0x4
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
+    .line 5
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTopBackgroundView:Lcom/android/camera/ui/ShapeBackGroundView;
 
     invoke-virtual {v0, v1}, Lcom/android/camera/ui/ShapeBackGroundView;->setBackgroundAlpha(I)V
 
+    .line 6
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTopBackgroundView:Lcom/android/camera/ui/ShapeBackGroundView;
 
     invoke-virtual {v0, v1, p4}, Lcom/android/camera/ui/ShapeBackGroundView;->y(II)V
 
+    .line 7
     iget-object p4, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTopBackgroundView:Lcom/android/camera/ui/ShapeBackGroundView;
 
-    invoke-virtual {p4}, Landroid/view/View;->getTag()Ljava/lang/Object;
+    invoke-virtual {p4}, Landroid/widget/FrameLayout;->getTag()Ljava/lang/Object;
 
     move-result-object p4
 
@@ -478,12 +413,14 @@
 
     if-eqz p4, :cond_1
 
+    .line 8
     invoke-virtual {p4}, Ljava/lang/Integer;->intValue()I
 
     move-result p4
 
     if-eq p4, p1, :cond_7
 
+    .line 9
     :cond_1
     iget-object p4, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTopBackgroundView:Lcom/android/camera/ui/ShapeBackGroundView;
 
@@ -491,8 +428,9 @@
 
     move-result-object v0
 
-    invoke-virtual {p4, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+    invoke-virtual {p4, v0}, Landroid/widget/FrameLayout;->setTag(Ljava/lang/Object;)V
 
+    .line 10
     iget-object p4, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTopBackgroundView:Lcom/android/camera/ui/ShapeBackGroundView;
 
     invoke-virtual {p4}, Lcom/android/camera/ui/ShapeBackGroundView;->getCurrentMaskHeight()I
@@ -522,6 +460,7 @@
     :cond_3
     if-nez p2, :cond_7
 
+    .line 11
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTopBackgroundView:Lcom/android/camera/ui/ShapeBackGroundView;
 
     if-eqz p2, :cond_4
@@ -533,6 +472,7 @@
 
     goto :goto_3
 
+    .line 12
     :cond_5
     :goto_2
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTopBackgroundView:Lcom/android/camera/ui/ShapeBackGroundView;
@@ -549,17 +489,10 @@
     return-void
 .end method
 
-.method public static synthetic e0(Ljava/lang/String;Lv8/z;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$onBeautyModeClick$14(Ljava/lang/String;Lv8/z;)V
-
-    return-void
-.end method
-
 .method private enableAllDisabledMenuItem()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mDisabledFunctionMenu:Landroid/util/SparseBooleanArray;
 
     if-eqz v0, :cond_3
@@ -572,6 +505,7 @@
 
     goto :goto_1
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mDisabledFunctionMenu:Landroid/util/SparseBooleanArray;
 
@@ -584,25 +518,29 @@
     :goto_0
     if-ge v1, v0, :cond_2
 
+    .line 3
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mDisabledFunctionMenu:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseBooleanArray;->keyAt(I)I
 
     move-result v2
 
+    .line 4
     invoke-virtual {p0, v2}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopView(I)Landroid/view/View;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    invoke-static {v2}, La2/a;->n(Landroid/view/View;)V
+    .line 5
+    invoke-static {v2}, Ld/d/a/f6/j/a;->i(Landroid/view/View;)V
 
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 6
     :cond_2
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mDisabledFunctionMenu:Landroid/util/SparseBooleanArray;
 
@@ -613,17 +551,10 @@
     return-void
 .end method
 
-.method public static synthetic g(Lj2/c;Ljava/lang/String;Lv8/y2;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$onBeautyModeClick$16(Lj2/c;Ljava/lang/String;Lv8/y2;)V
-
-    return-void
-.end method
-
 .method private getActivity()Landroidx/fragment/app/FragmentActivity;
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object p0
@@ -637,7 +568,16 @@
 
 .method private getAiSceneDrawable(I)Landroid/graphics/drawable/Drawable;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "level"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -650,12 +590,14 @@
 
     if-ltz p1, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->length()I
 
     move-result v0
 
     if-ge p1, v0, :cond_0
 
+    .line 3
     invoke-virtual {p0, p1}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
@@ -665,6 +607,7 @@
     :cond_0
     const/4 p1, 0x0
 
+    .line 4
     :goto_0
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
 
@@ -673,7 +616,16 @@
 
 .method private getAiSceneResId(I)I
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "level"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -684,20 +636,23 @@
 
     move-result-object p0
 
-    const v0, 0x7f08063d
+    const v0, 0x7f080635
 
     if-ltz p1, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->length()I
 
     move-result v1
 
     if-ge p1, v1, :cond_0
 
+    .line 3
     invoke-virtual {p0, p1, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v0
 
+    .line 4
     :cond_0
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
 
@@ -706,7 +661,16 @@
 
 .method private getAiSceneShadowDrawable(I)Landroid/graphics/drawable/Drawable;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "level"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -719,12 +683,14 @@
 
     if-ltz p1, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->length()I
 
     move-result v0
 
     if-ge p1, v0, :cond_0
 
+    .line 3
     invoke-virtual {p0, p1}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
@@ -734,6 +700,7 @@
     :cond_0
     const/4 p1, 0x0
 
+    .line 4
     :goto_0
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
 
@@ -743,6 +710,7 @@
 .method private getContext()Landroid/content/Context;
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object p0
@@ -757,6 +725,7 @@
 .method private getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mBaseFragmentTopConfig:Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     return-object p0
@@ -765,6 +734,7 @@
 .method private getResources()Landroid/content/res/Resources;
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object p0
@@ -779,6 +749,7 @@
 .method private getTopConfigAnimation()Lcom/android/camera2/compat/theme/custom/mm/top/ITopConfigAnimator;
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object p0
@@ -793,6 +764,7 @@
 .method private getTopConfigDataProcessing()Lcom/android/camera2/compat/theme/custom/mm/top/ITopConfigDataProcessing;
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object p0
@@ -804,26 +776,28 @@
     return-object p0
 .end method
 
-.method public static synthetic h0(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Lcom/android/camera/data/observeable/RxData$c;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$checkFeatureState$25(Lcom/android/camera/data/observeable/RxData$c;)V
-
-    return-void
-.end method
-
 .method private inTopMaskRegion(I)Z
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "top"
+        }
+    .end annotation
 
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    .line 1
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lm2/h1;->C0()Laa/p;
+    invoke-virtual {p0}, Ld/d/a/l6/e/m/g1;->u0()Ld/d/a/d8/n2/f/p;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Laa/p;->H()I
+    .line 2
+    invoke-virtual {p0}, Ld/d/a/d8/n2/f/p;->I()I
 
     move-result p0
 
@@ -842,9 +816,18 @@
 
 .method private initEndTopBarView(Landroid/view/View;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "rootView"
+        }
+    .end annotation
 
-    const v0, 0x7f0b0267
+    const v0, 0x7f0b022e
 
+    .line 1
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -853,12 +836,14 @@
 
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mEndTopBarRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
+    .line 2
     new-instance p1, Lcom/android/camera2/compat/theme/custom/mm/top/EndTopBarAdapter;
 
     invoke-direct {p1, p0}, Lcom/android/camera2/compat/theme/custom/mm/top/EndTopBarAdapter;-><init>(Landroid/view/View$OnClickListener;)V
 
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mEndTopBarAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
+    .line 3
     new-instance p1, Lcom/android/camera2/compat/theme/custom/mm/top/EndTopBarLinearLayoutManager;
 
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getContext()Landroid/content/Context;
@@ -869,6 +854,7 @@
 
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mEndTopBarLinearLayoutManager:Lcom/android/camera2/compat/theme/custom/mm/top/EndTopBarLinearLayoutManager;
 
+    .line 4
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopConfigAnimation()Lcom/android/camera2/compat/theme/custom/mm/top/ITopConfigAnimator;
 
     move-result-object p1
@@ -885,36 +871,42 @@
 
     const-wide/16 v0, 0xc8
 
+    .line 5
     invoke-virtual {p1, v0, v1}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->setRemoveDuration(J)V
 
+    .line 6
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mEndTopBarRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTopBarItemDecoration:Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;
 
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
+    .line 7
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mEndTopBarRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mEndTopBarAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
+    .line 8
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mEndTopBarRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mEndTopBarLinearLayoutManager:Lcom/android/camera2/compat/theme/custom/mm/top/EndTopBarLinearLayoutManager;
 
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 9
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lid/b;->w6()Z
+    invoke-virtual {p1}, Ld/k/a/b;->k6()Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
+    .line 10
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mEndTopBarRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mEndTopBarItemAnimator:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarItemAnimator;
@@ -923,6 +915,7 @@
 
     goto :goto_0
 
+    .line 11
     :cond_0
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mEndTopBarRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
@@ -936,9 +929,18 @@
 
 .method private initStartTopBarView(Landroid/view/View;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "rootView"
+        }
+    .end annotation
 
-    const v0, 0x7f0b06be
+    const v0, 0x7f0b05f2
 
+    .line 1
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -947,12 +949,14 @@
 
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mStartTopBarRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
+    .line 2
     new-instance p1, Lcom/android/camera2/compat/theme/custom/mm/top/StartTopBarAdapter;
 
     invoke-direct {p1, p0}, Lcom/android/camera2/compat/theme/custom/mm/top/StartTopBarAdapter;-><init>(Landroid/view/View$OnClickListener;)V
 
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mStartTopBarAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
+    .line 3
     new-instance p1, Lcom/android/camera2/compat/theme/custom/mm/top/StartTopBarLinearLayoutManager;
 
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getContext()Landroid/content/Context;
@@ -963,6 +967,7 @@
 
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mStartTopBarLinearLayoutManager:Lcom/android/camera2/compat/theme/custom/mm/top/StartTopBarLinearLayoutManager;
 
+    .line 4
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopConfigAnimation()Lcom/android/camera2/compat/theme/custom/mm/top/ITopConfigAnimator;
 
     move-result-object p1
@@ -979,36 +984,42 @@
 
     const-wide/16 v0, 0xc8
 
+    .line 5
     invoke-virtual {p1, v0, v1}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->setRemoveDuration(J)V
 
+    .line 6
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mStartTopBarRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTopBarItemDecoration:Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;
 
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
+    .line 7
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mStartTopBarRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mStartTopBarAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
+    .line 8
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mStartTopBarRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mStartTopBarLinearLayoutManager:Lcom/android/camera2/compat/theme/custom/mm/top/StartTopBarLinearLayoutManager;
 
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 9
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lid/b;->w6()Z
+    invoke-virtual {p1}, Ld/k/a/b;->k6()Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
+    .line 10
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mStartTopBarRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mStartTopBarItemAnimator:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarItemAnimator;
@@ -1017,6 +1028,7 @@
 
     goto :goto_0
 
+    .line 11
     :cond_0
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mStartTopBarRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
@@ -1031,6 +1043,7 @@
 .method private initTopBarItemDecoration()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar$1;
 
     invoke-direct {v0, p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar$1;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;)V
@@ -1042,6 +1055,14 @@
 
 .method private isExtraTopBarNeedHideItem(I)Z
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "topConfigItem"
+        }
+    .end annotation
 
     const/16 p0, 0xea
 
@@ -1057,40 +1078,26 @@
     return p0
 .end method
 
-.method public static synthetic j2(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Landroid/view/View;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$onBeautyModeClick$15(Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method public static synthetic l0(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$collapseMenuIndicator$20()V
-
-    return-void
-.end method
-
-.method private static synthetic lambda$alertFlashFrontAdjustSwitchLayout$27(Ly8/h;)V
+.method public static synthetic lambda$alertFlashFrontAdjustSwitchLayout$27(Ld/d/a/m7/g/s3/h;)V
     .locals 2
 
     const/4 v0, 0x2
 
     const/4 v1, 0x6
 
-    invoke-interface {p0, v0, v1}, Ly8/a;->dismiss(II)Z
+    .line 1
+    invoke-interface {p0, v0, v1}, Ld/d/a/m7/g/s3/a;->dismiss(II)Z
 
     return-void
 .end method
 
-.method private static synthetic lambda$alertFlashFrontAdjustSwitchLayout$28(Lv8/z;)V
+.method public static synthetic lambda$alertFlashFrontAdjustSwitchLayout$28(Ld/d/a/m7/g/c0;)V
     .locals 1
 
     const/16 v0, 0x20e
 
-    invoke-interface {p0, v0}, Lv8/z;->b4(I)V
+    .line 1
+    invoke-interface {p0, v0}, Ld/d/a/m7/g/c0;->X3(I)V
 
     return-void
 .end method
@@ -1103,6 +1110,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Lcom/android/camera/data/observeable/RxData$c;->a()Ljava/lang/Object;
 
     move-result-object p1
@@ -1117,6 +1125,7 @@
 .method private synthetic lambda$collapseMenuIndicator$20()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object v0
@@ -1127,21 +1136,23 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mMenuIndicatorView:Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;
 
     const/16 v0, 0x80
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->sendAccessibilityEvent(I)V
+    invoke-virtual {p0, v0}, Landroid/widget/ImageView;->sendAccessibilityEvent(I)V
 
     :cond_0
     return-void
 .end method
 
-.method private synthetic lambda$configBottomPopupTips$24(ZLv8/p;)V
+.method private synthetic lambda$configBottomPopupTips$24(ZLd/d/a/m7/g/s;)V
     .locals 0
 
     if-eqz p1, :cond_0
 
+    .line 1
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentAiSceneLevel:I
 
     goto :goto_0
@@ -1150,7 +1161,7 @@
     const/4 p0, 0x0
 
     :goto_0
-    invoke-interface {p2, p0}, Lv8/p;->lb(I)V
+    invoke-interface {p2, p0}, Ld/d/a/m7/g/s;->Va(I)V
 
     return-void
 .end method
@@ -1158,6 +1169,7 @@
 .method private synthetic lambda$expandMenuIndicator$19()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object v0
@@ -1168,22 +1180,24 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mMenuIndicatorView:Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;
 
     const/16 v0, 0x80
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->sendAccessibilityEvent(I)V
+    invoke-virtual {p0, v0}, Landroid/widget/ImageView;->sendAccessibilityEvent(I)V
 
     :cond_0
     return-void
 .end method
 
-.method private static synthetic lambda$onBeautyModeClick$14(Ljava/lang/String;Lv8/z;)V
+.method public static synthetic lambda$onBeautyModeClick$14(Ljava/lang/String;Ld/d/a/m7/g/c0;)V
     .locals 1
 
     const/16 v0, 0xbc
 
-    invoke-interface {p1, v0, p0}, Lv8/z;->u1(ILjava/lang/String;)V
+    .line 1
+    invoke-interface {p1, v0, p0}, Ld/d/a/m7/g/c0;->w1(ILjava/lang/String;)V
 
     return-void
 .end method
@@ -1191,6 +1205,7 @@
 .method private synthetic lambda$onBeautyModeClick$15(Landroid/view/View;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object p0
@@ -1203,44 +1218,49 @@
 
     const/16 p0, 0x80
 
+    .line 2
     invoke-virtual {p1, p0}, Landroid/view/View;->sendAccessibilityEvent(I)V
 
     :cond_0
     return-void
 .end method
 
-.method private static synthetic lambda$onBeautyModeClick$16(Lj2/c;Ljava/lang/String;Lv8/y2;)V
+.method public static synthetic lambda$onBeautyModeClick$16(Ld/d/a/l6/e/j/l;Ljava/lang/String;Ld/d/a/m7/g/a3;)V
     .locals 1
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, p1}, Lj2/c;->h(Ljava/lang/String;)I
+    .line 1
+    invoke-virtual {p0, p1}, Ld/d/a/l6/e/j/l;->h(Ljava/lang/String;)I
 
     move-result p0
 
     const-string p1, "beauty_mode"
 
-    invoke-interface {p2, p1, v0, p0}, Lv8/y2;->alertTopBarOperationTip(Ljava/lang/String;II)V
+    const/4 v0, 0x0
+
+    .line 2
+    invoke-interface {p2, p1, v0, p0}, Ld/d/a/m7/g/a3;->alertTopBarOperationTip(Ljava/lang/String;II)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onCvClick$11(Ljava/lang/String;Lv8/y2;)V
+.method public static synthetic lambda$onCvClick$11(Ljava/lang/String;Ld/d/a/m7/g/a3;)V
     .locals 3
 
     const/4 v0, 0x0
 
     const-wide/16 v1, 0xbb8
 
-    invoke-interface {p1, v0, p0, v1, v2}, Lv8/y2;->alertRecommendTipHint(ILjava/lang/String;J)V
+    .line 1
+    invoke-interface {p1, v0, p0, v1, v2}, Ld/d/a/m7/g/a3;->alertRecommendTipHint(ILjava/lang/String;J)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onCvClick$12(Ljava/lang/String;Lv8/z;)V
+.method public static synthetic lambda$onCvClick$12(Ljava/lang/String;Ld/d/a/m7/g/c0;)V
     .locals 0
 
-    invoke-interface {p1, p0}, Lv8/z;->H2(Ljava/lang/String;)V
+    .line 1
+    invoke-interface {p1, p0}, Ld/d/a/m7/g/c0;->H2(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1248,6 +1268,7 @@
 .method private synthetic lambda$onCvClick$13(Landroid/view/View;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object p0
@@ -1260,16 +1281,18 @@
 
     const/16 p0, 0x80
 
+    .line 2
     invoke-virtual {p1, p0}, Landroid/view/View;->sendAccessibilityEvent(I)V
 
     :cond_0
     return-void
 .end method
 
-.method private static synthetic lambda$onFlashClick$0(ILv8/y2;)V
+.method public static synthetic lambda$onFlashClick$0(ILd/d/a/m7/g/a3;)V
     .locals 3
 
-    invoke-static {}, Lcom/android/camera/CameraAppImpl;->o()Landroid/content/Context;
+    .line 1
+    invoke-static {}, Lcom/android/camera/CameraAppImpl;->d()Landroid/content/Context;
 
     move-result-object v0
 
@@ -1281,19 +1304,21 @@
 
     move-result-object p0
 
-    const-wide/16 v0, 0xbb8
+    const/4 v0, 0x0
 
-    const/4 v2, 0x0
+    const-wide/16 v1, 0xbb8
 
-    invoke-interface {p1, v2, p0, v0, v1}, Lv8/y2;->alertRecommendTipHint(ILjava/lang/String;J)V
+    .line 2
+    invoke-interface {p1, v0, p0, v1, v2}, Ld/d/a/m7/g/a3;->alertRecommendTipHint(ILjava/lang/String;J)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onFlashClick$1(Ljava/lang/String;Ljava/lang/String;ZLv8/z;)V
+.method public static synthetic lambda$onFlashClick$1(Ljava/lang/String;Ljava/lang/String;ZLd/d/a/m7/g/c0;)V
     .locals 0
 
-    invoke-interface {p3, p0, p1, p2}, Lv8/z;->I8(Ljava/lang/String;Ljava/lang/String;Z)V
+    .line 1
+    invoke-interface {p3, p0, p1, p2}, Ld/d/a/m7/g/c0;->u8(Ljava/lang/String;Ljava/lang/String;Z)V
 
     return-void
 .end method
@@ -1301,6 +1326,7 @@
 .method private synthetic lambda$onFlashClick$2(Landroid/view/View;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object p0
@@ -1313,26 +1339,29 @@
 
     const/16 p0, 0x80
 
+    .line 2
     invoke-virtual {p1, p0}, Landroid/view/View;->sendAccessibilityEvent(I)V
 
     :cond_0
     return-void
 .end method
 
-.method private static synthetic lambda$onHdrClick$3(Ljava/lang/String;Lv8/z;)V
+.method public static synthetic lambda$onHdrClick$3(Ljava/lang/String;Ld/d/a/m7/g/c0;)V
     .locals 0
 
-    invoke-interface {p1, p0}, Lv8/z;->A1(Ljava/lang/String;)V
+    .line 1
+    invoke-interface {p1, p0}, Ld/d/a/m7/g/c0;->A1(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method private synthetic lambda$onHdrClick$4(Lj2/j;Lv8/y2;)V
+.method private synthetic lambda$onHdrClick$4(Ld/d/a/l6/e/j/r;Ld/d/a/m7/g/a3;)V
     .locals 1
 
+    .line 1
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {p1, p0}, Lj2/j;->j(I)I
+    invoke-virtual {p1, p0}, Ld/d/a/l6/e/j/r;->j(I)I
 
     move-result p0
 
@@ -1340,7 +1369,7 @@
 
     const/4 v0, 0x0
 
-    invoke-interface {p2, p1, v0, p0}, Lv8/y2;->alertTopBarOperationTip(Ljava/lang/String;II)V
+    invoke-interface {p2, p1, v0, p0}, Ld/d/a/m7/g/a3;->alertTopBarOperationTip(Ljava/lang/String;II)V
 
     return-void
 .end method
@@ -1348,6 +1377,7 @@
 .method private synthetic lambda$onHdrClick$5(Landroid/view/View;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object p0
@@ -1360,6 +1390,7 @@
 
     const/16 p0, 0x80
 
+    .line 2
     invoke-virtual {p1, p0}, Landroid/view/View;->sendAccessibilityEvent(I)V
 
     :cond_0
@@ -1369,6 +1400,7 @@
 .method private synthetic lambda$onMiLiveVideoQualityClick$10(Landroid/view/View;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object p0
@@ -1381,6 +1413,7 @@
 
     const/16 p0, 0x80
 
+    .line 2
     invoke-virtual {p1, p0}, Landroid/view/View;->sendAccessibilityEvent(I)V
 
     :cond_0
@@ -1390,6 +1423,7 @@
 .method private synthetic lambda$onSlowMotionVideoFpsClick$9(Landroid/view/View;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object p0
@@ -1402,6 +1436,7 @@
 
     const/16 p0, 0x80
 
+    .line 2
     invoke-virtual {p1, p0}, Landroid/view/View;->sendAccessibilityEvent(I)V
 
     :cond_0
@@ -1411,6 +1446,7 @@
 .method private synthetic lambda$onSlowMotionVideoQualityClick$8(Landroid/view/View;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object p0
@@ -1423,36 +1459,40 @@
 
     const/16 p0, 0x80
 
+    .line 2
     invoke-virtual {p1, p0}, Landroid/view/View;->sendAccessibilityEvent(I)V
 
     :cond_0
     return-void
 .end method
 
-.method private static synthetic lambda$onTimerClick$17(Ljava/lang/String;Lv8/z;)V
+.method public static synthetic lambda$onTimerClick$17(Ljava/lang/String;Ld/d/a/m7/g/c0;)V
     .locals 0
 
-    invoke-interface {p1, p0}, Lv8/z;->fe(Ljava/lang/String;)V
+    .line 1
+    invoke-interface {p1, p0}, Ld/d/a/m7/g/c0;->Qd(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onTimerClick$18(Lv8/z;)V
+.method public static synthetic lambda$onTimerClick$18(Ld/d/a/m7/g/c0;)V
     .locals 1
 
     const-string v0, "0"
 
-    invoke-interface {p0, v0}, Lv8/z;->fe(Ljava/lang/String;)V
+    .line 1
+    invoke-interface {p0, v0}, Ld/d/a/m7/g/c0;->Qd(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onVideoFpsClick$21(Ljava/lang/String;Lv8/z;)V
+.method public static synthetic lambda$onVideoFpsClick$21(Ljava/lang/String;Ld/d/a/m7/g/c0;)V
     .locals 1
 
     const/16 v0, 0xae
 
-    invoke-interface {p1, v0, p0}, Lv8/z;->u1(ILjava/lang/String;)V
+    .line 1
+    invoke-interface {p1, v0, p0}, Ld/d/a/m7/g/c0;->w1(ILjava/lang/String;)V
 
     return-void
 .end method
@@ -1460,6 +1500,7 @@
 .method private synthetic lambda$onVideoFpsClick$22(Landroid/view/View;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object p0
@@ -1472,18 +1513,20 @@
 
     const/16 p0, 0x80
 
+    .line 2
     invoke-virtual {p1, p0}, Landroid/view/View;->sendAccessibilityEvent(I)V
 
     :cond_0
     return-void
 .end method
 
-.method private static synthetic lambda$onVideoQualityClick$6(Ljava/lang/String;Lv8/z;)V
+.method public static synthetic lambda$onVideoQualityClick$6(Ljava/lang/String;Ld/d/a/m7/g/c0;)V
     .locals 1
 
     const/16 v0, 0xad
 
-    invoke-interface {p1, v0, p0}, Lv8/z;->u1(ILjava/lang/String;)V
+    .line 1
+    invoke-interface {p1, v0, p0}, Ld/d/a/m7/g/c0;->w1(ILjava/lang/String;)V
 
     return-void
 .end method
@@ -1491,6 +1534,7 @@
 .method private synthetic lambda$onVideoQualityClick$7(Landroid/view/View;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object p0
@@ -1503,49 +1547,54 @@
 
     const/16 p0, 0x80
 
+    .line 2
     invoke-virtual {p1, p0}, Landroid/view/View;->sendAccessibilityEvent(I)V
 
     :cond_0
     return-void
 .end method
 
-.method private static synthetic lambda$recheckFlashFrontAdjust$26(ZLv8/p;)V
+.method public static synthetic lambda$recheckFlashFrontAdjust$26(ZLd/d/a/m7/g/s;)V
     .locals 0
 
-    invoke-interface {p1, p0}, Lv8/p;->k2(Z)V
+    .line 1
+    invoke-interface {p1, p0}, Ld/d/a/m7/g/s;->n2(Z)V
 
     return-void
 .end method
 
-.method private synthetic lambda$updateTopBarData$23(Lv8/v;)V
+.method private synthetic lambda$updateTopBarData$23(Ld/d/a/m7/g/y;)V
     .locals 0
 
-    invoke-interface {p1}, Lv8/v;->isClientVisible()Z
+    .line 1
+    invoke-interface {p1}, Ld/d/a/m7/g/y;->isClientVisible()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mMenuIndicatorView:Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;
 
     const/4 p1, 0x4
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     :cond_0
     return-void
 .end method
 
-.method public static synthetic o2(Ljava/lang/String;Lv8/y2;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$onCvClick$11(Ljava/lang/String;Lv8/y2;)V
-
-    return-void
-.end method
-
 .method private onInstallStateChanged(Ljava/util/HashMap;)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "state"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1556,6 +1605,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object v0
@@ -1568,6 +1618,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     invoke-virtual {p1}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
@@ -1590,18 +1641,21 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
+    .line 3
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
+    .line 4
     iget v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-static {v2}, Lcom/android/camera/data/observeable/c;->f(I)Ljava/lang/String;
+    invoke-static {v2}, Ld/d/a/l6/f/m;->f(I)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 5
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -1610,6 +1664,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_1
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -1621,7 +1676,8 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/android/camera/data/observeable/c;->h(I)I
+    .line 7
+    invoke-static {v0}, Ld/d/a/l6/f/m;->h(I)I
 
     move-result v1
 
@@ -1638,18 +1694,19 @@
 
     goto :goto_0
 
+    .line 8
     :cond_3
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
-    iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTopConfigMenu:Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBarLayout;
+    const/4 v2, 0x0
 
-    const/4 v3, 0x1
+    iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTopConfigMenu:Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBarLayout;
 
-    invoke-virtual {v0, v3, v1, v2}, Lcom/android/camera/fragment/BaseFragment;->animateViews(IZLandroid/view/View;)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/android/camera/fragment/BaseFragment;->animateViews(IZLandroid/view/View;)V
 
     goto :goto_0
 
@@ -1657,50 +1714,37 @@
     return-void
 .end method
 
-.method public static synthetic q0(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Landroid/view/View;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$onSlowMotionVideoQualityClick$8(Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method public static synthetic r0(Ljava/lang/String;Lv8/z;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$onTimerClick$17(Ljava/lang/String;Lv8/z;)V
-
-    return-void
-.end method
-
 .method private reConfigTipOfAiEnhancedVideo()V
     .locals 2
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "supportAiEnhancedVideo"
         type = 0x2
     .end annotation
 
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    .line 1
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lm2/h1;->I()Lm2/f;
+    invoke-virtual {v0}, Ld/d/a/l6/e/m/g1;->B()Ld/d/a/l6/e/m/b0;
 
     move-result-object v0
 
+    .line 2
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v0, v1}, Lm2/f;->isSwitchOn(I)Z
+    invoke-virtual {v0, v1}, Ld/d/a/l6/e/m/b0;->isSwitchOn(I)Z
 
     move-result v0
 
-    const v1, 0x7f1409cd
+    const v1, 0x7f130947
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
+    .line 3
     invoke-virtual {p0, v0, v1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->alertAiEnhancedVideoHint(II)V
 
     goto :goto_0
@@ -1708,6 +1752,7 @@
     :cond_0
     const/16 v0, 0x8
 
+    .line 4
     invoke-virtual {p0, v0, v1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->alertAiEnhancedVideoHint(II)V
 
     :goto_0
@@ -1716,7 +1761,16 @@
 
 .method private reConfigTipOfMusicHint(Z)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "anim"
+        }
+    .end annotation
 
+    .line 1
     iget p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
     const/16 v0, 0xb7
@@ -1727,10 +1781,12 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-direct {p0, p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->alertTopMusicHint(ILjava/lang/String;)V
 
     return-void
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isExtraMenuShowing()Z
 
@@ -1740,13 +1796,15 @@
 
     return-void
 
+    .line 4
     :cond_1
-    invoke-static {}, Lcom/android/camera/v2;->R()[Ljava/lang/String;
+    invoke-static {}, Ld/d/a/d4;->Q()[Ljava/lang/String;
 
     move-result-object p1
 
     const/4 v0, 0x1
 
+    .line 5
     aget-object v1, p1, v0
 
     invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
@@ -1757,6 +1815,7 @@
 
     const/4 v1, 0x0
 
+    .line 6
     aget-object p1, p1, v0
 
     invoke-direct {p0, v1, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->alertTopMusicHint(ILjava/lang/String;)V
@@ -1767,32 +1826,35 @@
 
 .method private reConfigTipOfSubtitle()V
     .locals 2
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isSupportSubtitle"
         type = 0x0
     .end annotation
 
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    .line 1
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lm2/h1;->l0()Lm2/a1;
+    invoke-virtual {v0}, Ld/d/a/l6/e/m/g1;->d0()Ld/d/a/l6/e/m/a1;
 
     move-result-object v0
 
+    .line 2
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v0, v1}, Lm2/a1;->isSwitchOn(I)Z
+    invoke-virtual {v0, v1}, Ld/d/a/l6/e/m/a1;->isSwitchOn(I)Z
 
     move-result v0
 
-    const v1, 0x7f140ad1
+    const v1, 0x7f130a4b
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
+    .line 3
     invoke-virtual {p0, v0, v1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->alertSubtitleHint(II)V
 
     goto :goto_0
@@ -1800,6 +1862,7 @@
     :cond_0
     const/16 v0, 0x8
 
+    .line 4
     invoke-virtual {p0, v0, v1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->alertSubtitleHint(II)V
 
     :goto_0
@@ -1808,7 +1871,16 @@
 
 .method private reInitAlertAction(Z)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "anim"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
@@ -1820,46 +1892,63 @@
     :cond_0
     const/4 v1, 0x1
 
+    .line 2
     invoke-virtual {v0, v1}, Lcom/android/camera/fragment/top/FragmentTopAlert;->setShow(Z)V
 
+    .line 3
     invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->reConfigTipOfMusicHint(Z)V
 
     const/4 v0, 0x0
 
     const/4 v2, 0x0
 
+    .line 4
     invoke-virtual {p0, v2, v2, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->alertUpdateValue(IILjava/lang/String;)V
 
+    .line 5
     invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->setAlertAnim(Z)V
 
+    .line 6
     invoke-virtual {p0, v2, v1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->updateLyingDirectHint(ZZ)V
 
-    invoke-static {}, Lv8/z;->impl2()Lv8/z;
+    .line 7
+    invoke-static {}, Ld/d/a/m7/g/c0;->impl2()Ld/d/a/m7/g/c0;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
-    invoke-direct {p0, p1, v1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->showTips(Lv8/z;Z)V
+    .line 8
+    invoke-direct {p0, p1, v1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->showTips(Ld/d/a/m7/g/c0;Z)V
 
-    invoke-interface {p1}, Lv8/z;->M7()V
+    .line 9
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->B7()V
 
-    invoke-interface {p1}, Lv8/z;->U8()V
+    .line 10
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->I8()V
 
-    invoke-interface {p1}, Lv8/z;->D1()V
+    .line 11
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->D1()V
 
-    invoke-interface {p1}, Lv8/z;->G7()V
+    .line 12
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->v7()V
 
-    invoke-interface {p1, v1}, Lv8/z;->Ih(Z)V
+    .line 13
+    invoke-interface {p1, v1}, Ld/d/a/m7/g/c0;->kh(Z)V
 
-    invoke-interface {p1}, Lv8/z;->Ve()V
+    .line 14
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->Ge()V
 
-    invoke-interface {p1}, Lv8/z;->te()V
+    .line 15
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->fe()V
 
-    invoke-interface {p1}, Lv8/z;->d1()V
+    .line 16
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->d1()V
 
-    invoke-interface {p1, v1}, Lv8/z;->F2(Z)V
+    .line 17
+    invoke-interface {p1, v1}, Ld/d/a/m7/g/c0;->F2(Z)V
 
+    .line 18
     invoke-static {}, Lcom/android/camera2/compat/theme/MiThemeCompat;->getOperationNewTopMenu()Lcom/android/camera2/compat/theme/common/MiThemeOperationNewTopMenuInterface;
 
     move-result-object v0
@@ -1870,43 +1959,58 @@
 
     if-nez v0, :cond_1
 
-    invoke-interface {p1, v2}, Lv8/z;->wa(Z)V
+    .line 19
+    invoke-interface {p1, v2}, Ld/d/a/m7/g/c0;->ia(Z)V
 
+    .line 20
     :cond_1
-    invoke-interface {p1}, Lv8/z;->w4()V
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->r4()V
 
-    invoke-interface {p1}, Lv8/z;->vd()V
+    .line 21
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->fd()V
 
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lm2/h1;->j0()Lm2/v0;
+    .line 22
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lm2/v0;->L()Z
+    .line 23
+    invoke-virtual {v0}, Ld/d/a/l6/e/m/g1;->b0()Ld/d/a/l6/e/m/x0;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ld/d/a/l6/e/m/x0;->E()Z
 
     move-result v0
 
-    invoke-interface {p1, v0}, Lv8/z;->E2(Z)V
+    .line 24
+    invoke-interface {p1, v0}, Ld/d/a/m7/g/c0;->E2(Z)V
 
-    invoke-interface {p1}, Lv8/z;->Dh()V
+    .line 25
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->fh()V
 
-    invoke-interface {p1}, Lv8/z;->Vd()V
+    .line 26
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->Fd()V
 
-    invoke-interface {p1}, Lv8/z;->le()V
+    .line 27
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->Xd()V
 
-    invoke-interface {p1}, Lv8/z;->kb()V
+    .line 28
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->Ua()V
 
-    invoke-interface {p1}, Lv8/z;->t6()V
+    .line 29
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->k6()V
 
-    invoke-interface {p1}, Lv8/z;->sc()V
+    .line 30
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->cc()V
 
-    invoke-interface {p1}, Lv8/z;->q9()V
+    .line 31
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->c9()V
 
-    invoke-interface {p1}, Lv8/z;->z4()V
+    .line 32
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->v4()V
 
+    .line 33
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->resetTipsWidth()V
 
     :cond_2
@@ -1916,25 +2020,27 @@
 .method private refreshMenuIndicatorBackgroundColor()V
     .locals 3
 
-    invoke-static {}, Lf2/a;->e()Lf2/a;
+    .line 1
+    invoke-static {}, Ld/d/a/k6/c;->e()Ld/d/a/k6/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lf2/a;->c()Z
+    invoke-virtual {v0}, Ld/d/a/k6/c;->c()Z
 
     move-result v0
 
-    const v1, 0x7f0608ca
+    const v1, 0x7f060462
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mMenuIndicatorView:Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lf2/e;->b(I)I
+    invoke-virtual {v0, v1}, Ld/d/a/k6/f;->b(I)I
 
     move-result v0
 
@@ -1942,20 +2048,22 @@
 
     return-void
 
+    .line 3
     :cond_0
-    invoke-static {}, Ly2/b;->G0()Z
+    invoke-static {}, Ld/d/a/n6/b;->G0()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 4
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mMenuIndicatorView:Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lf2/e;->b(I)I
+    invoke-virtual {v0, v1}, Ld/d/a/k6/f;->b(I)I
 
     move-result v0
 
@@ -1963,36 +2071,39 @@
 
     return-void
 
+    .line 5
     :cond_1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mMenuIndicatorView:Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;
 
-    invoke-virtual {v0}, Landroid/view/View;->getTop()I
+    invoke-virtual {v0}, Landroid/widget/ImageView;->getTop()I
 
     move-result v0
 
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTopConfigMenu:Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBarLayout;
 
-    invoke-virtual {v2}, Landroid/view/View;->getTop()I
+    invoke-virtual {v2}, Landroid/widget/RelativeLayout;->getTop()I
 
     move-result v2
 
     add-int/2addr v0, v2
 
+    .line 6
     invoke-direct {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->inTopMaskRegion(I)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
+    .line 7
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mMenuIndicatorView:Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object v0
 
-    const v1, 0x7f0608cb
+    const v1, 0x7f060463
 
-    invoke-virtual {v0, v1}, Lf2/e;->b(I)I
+    invoke-virtual {v0, v1}, Ld/d/a/k6/f;->b(I)I
 
     move-result v0
 
@@ -2000,14 +2111,15 @@
 
     return-void
 
+    .line 8
     :cond_2
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mMenuIndicatorView:Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lf2/e;->b(I)I
+    invoke-virtual {v0, v1}, Ld/d/a/k6/f;->b(I)I
 
     move-result v0
 
@@ -2016,13 +2128,25 @@
     return-void
 .end method
 
-.method private showTips(Lv8/z;Z)V
+.method private showTips(Ld/d/a/m7/g/c0;Z)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "configChanges",
+            "isFromReinit"
+        }
+    .end annotation
 
-    invoke-interface {p1}, Lv8/z;->t3()V
+    .line 1
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->t3()V
 
     const-string p2, "ai_watermark"
 
+    .line 2
     invoke-virtual {p0, p2}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTipsState(Ljava/lang/String;)Z
 
     move-result v0
@@ -2033,62 +2157,77 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {p0, p2, v2}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->setTipsState(Ljava/lang/String;Z)V
 
-    invoke-interface {p1, v1}, Lv8/z;->nb(Z)V
+    .line 4
+    invoke-interface {p1, v1}, Ld/d/a/m7/g/c0;->Xa(Z)V
 
     :cond_0
     const-string p2, "hdr"
 
+    .line 5
     invoke-virtual {p0, p2}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTipsState(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 6
     invoke-virtual {p0, p2, v2}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->setTipsState(Ljava/lang/String;Z)V
 
-    invoke-interface {p1}, Lv8/z;->C4()V
+    .line 7
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->y4()V
 
     :cond_1
     const-string p2, "super_eis"
 
+    .line 8
     invoke-virtual {p0, p2}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTipsState(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
+    .line 9
     invoke-virtual {p0, p2, v2}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->setTipsState(Ljava/lang/String;Z)V
 
-    invoke-interface {p1}, Lv8/z;->Kc()V
+    .line 10
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->tc()V
 
     :cond_2
     const-string p2, "cvtype"
 
+    .line 11
     invoke-virtual {p0, p2}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTipsState(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
+    .line 12
     invoke-virtual {p0, p2, v2}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->setTipsState(Ljava/lang/String;Z)V
 
-    invoke-interface {p1}, Lv8/z;->M1()V
+    .line 13
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->O1()V
 
     :cond_3
     const-string p2, "live_shot"
 
+    .line 14
     invoke-virtual {p0, p2}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTipsState(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
+    .line 15
     invoke-virtual {p0, p2, v2}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->setTipsState(Ljava/lang/String;Z)V
 
-    invoke-interface {p1}, Lv8/z;->W9()V
+    .line 16
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->D9()V
 
+    .line 17
     :cond_4
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isExtraMenuShowing()Z
 
@@ -2096,65 +2235,76 @@
 
     if-nez p2, :cond_5
 
-    invoke-interface {p1}, Lv8/z;->Kb()V
+    .line 18
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->tb()V
 
     :cond_5
     const-string p2, "live_duration"
 
+    .line 19
     invoke-virtual {p0, p2}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTipsState(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
+    .line 20
     invoke-virtual {p0, p2, v2}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->setTipsState(Ljava/lang/String;Z)V
 
-    invoke-interface {p1}, Lv8/z;->qc()V
+    .line 21
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->ac()V
 
+    .line 22
     :cond_6
     iget-boolean p2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mIsShowRecommendLandscapeTips:Z
 
     if-eqz p2, :cond_7
 
-    invoke-static {}, Lcom/android/camera/v2;->Y3()Z
+    invoke-static {}, Ld/d/a/d4;->W3()Z
 
     move-result p2
 
     if-eqz p2, :cond_7
 
-    invoke-static {}, Ly2/b;->F0()Z
+    invoke-static {}, Ld/d/a/n6/b;->F0()Z
 
     move-result p2
 
     if-nez p2, :cond_7
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lid/b;->z7()Z
+    invoke-virtual {p2}, Ld/k/a/b;->n7()Z
 
     move-result p2
 
     if-eqz p2, :cond_7
 
+    .line 23
     iput-boolean v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mIsShowRecommendLandscapeTips:Z
 
-    invoke-interface {p1}, Lv8/z;->Ee()V
+    .line 24
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->oe()V
 
     :cond_7
     const-string p2, "track_focus_desc"
 
+    .line 25
     invoke-virtual {p0, p2}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTipsState(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_8
 
+    .line 26
     invoke-virtual {p0, p2, v2}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->setTipsState(Ljava/lang/String;Z)V
 
-    invoke-interface {p1}, Lv8/z;->Qc()V
+    .line 27
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->Ac()V
 
+    .line 28
     :cond_8
     iget p2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
@@ -2166,8 +2316,9 @@
 
     if-ne p2, v0, :cond_a
 
+    .line 29
     :cond_9
-    invoke-static {}, Lb9/n;->l()Z
+    invoke-static {}, Ld/d/a/m7/g/v3/p;->j()Z
 
     move-result p2
 
@@ -2178,6 +2329,7 @@
     :cond_a
     move v1, v2
 
+    .line 30
     :goto_0
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isExtraMenuShowing()Z
 
@@ -2189,10 +2341,13 @@
 
     const-string p2, "macro"
 
+    .line 31
     invoke-virtual {p0, p2, v2}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->setTipsState(Ljava/lang/String;Z)V
 
-    invoke-interface {p1}, Lv8/z;->B1()V
+    .line 32
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->B1()V
 
+    .line 33
     :cond_b
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isExtraMenuShowing()Z
 
@@ -2202,10 +2357,13 @@
 
     const-string p2, "timer_burst"
 
+    .line 34
     invoke-virtual {p0, p2, v2}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->setTipsState(Ljava/lang/String;Z)V
 
-    invoke-interface {p1}, Lv8/z;->Vb()V
+    .line 35
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->Eb()V
 
+    .line 36
     :cond_c
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isExtraMenuShowing()Z
 
@@ -2213,8 +2371,10 @@
 
     if-nez p2, :cond_d
 
-    invoke-interface {p1}, Lv8/z;->Qf()V
+    .line 37
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->Bf()V
 
+    .line 38
     :cond_d
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isExtraMenuShowing()Z
 
@@ -2222,8 +2382,10 @@
 
     if-nez p2, :cond_e
 
-    invoke-interface {p1}, Lv8/z;->qc()V
+    .line 39
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->ac()V
 
+    .line 40
     :cond_e
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isExtraMenuShowing()Z
 
@@ -2231,27 +2393,33 @@
 
     if-nez p2, :cond_f
 
-    invoke-interface {p1}, Lv8/z;->Df()V
+    .line 41
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->of()V
 
+    .line 42
     :cond_f
-    invoke-static {}, Lv8/i3;->impl2()Lv8/i3;
+    invoke-static {}, Ld/d/a/m7/g/g3;->impl2()Ld/d/a/m7/g/g3;
 
     move-result-object p2
 
+    .line 43
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mIsVideoCastIntent:Z
 
     if-eqz v0, :cond_11
 
     if-eqz p2, :cond_11
 
-    invoke-interface {p2}, Lv8/i3;->W8()Z
+    .line 44
+    invoke-interface {p2}, Ld/d/a/m7/g/g3;->K8()Z
 
     move-result p2
 
     if-eqz p2, :cond_10
 
-    invoke-interface {p1}, Lv8/z;->Rf()V
+    .line 45
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->Cf()V
 
+    .line 46
     :cond_10
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isExtraMenuShowing()Z
 
@@ -2259,14 +2427,17 @@
 
     if-nez p2, :cond_11
 
+    .line 47
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p2
 
     if-eqz p2, :cond_11
 
+    .line 48
     invoke-virtual {p2}, Lcom/android/camera/fragment/top/FragmentTopAlert;->hideRecordingTime()V
 
+    .line 49
     :cond_11
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isExtraMenuShowing()Z
 
@@ -2274,13 +2445,16 @@
 
     if-nez p2, :cond_12
 
-    invoke-interface {p1}, Lv8/z;->ed()V
+    .line 50
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->Nc()V
 
+    .line 51
     :cond_12
-    invoke-static {}, Lv8/s;->impl2()Lv8/s;
+    invoke-static {}, Ld/d/a/m7/g/v;->impl2()Ld/d/a/m7/g/v;
 
     move-result-object p2
 
+    .line 52
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isExtraMenuShowing()Z
 
     move-result v0
@@ -2289,20 +2463,24 @@
 
     if-eqz p2, :cond_13
 
-    invoke-interface {p2}, Lv8/s;->h7()Z
+    .line 53
+    invoke-interface {p2}, Ld/d/a/m7/g/v;->W6()Z
 
     move-result p2
 
     if-nez p2, :cond_14
 
+    .line 54
     :cond_13
-    invoke-interface {p1}, Lv8/z;->na()V
+    invoke-interface {p1}, Ld/d/a/m7/g/c0;->ba()V
 
+    .line 55
     :cond_14
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p2
 
+    .line 56
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isExtraMenuShowing()Z
 
     move-result v0
@@ -2311,13 +2489,14 @@
 
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-static {v0}, Lcom/android/camera/v2;->m5(I)Z
+    .line 57
+    invoke-static {v0}, Ld/d/a/d4;->k5(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_15
 
-    invoke-static {}, Lcom/android/camera/v2;->n5()Z
+    invoke-static {}, Ld/d/a/d4;->l5()Z
 
     move-result v0
 
@@ -2326,7 +2505,7 @@
     :cond_15
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-static {v0}, Lcom/android/camera/v2;->k5(I)Z
+    invoke-static {v0}, Ld/d/a/d4;->i5(I)Z
 
     move-result v0
 
@@ -2335,18 +2514,21 @@
     :cond_16
     if-eqz p2, :cond_17
 
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    .line 58
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lm2/h1;->d1()Z
+    invoke-virtual {v0}, Ld/d/a/l6/e/m/g1;->S0()Z
 
     move-result v0
 
     if-nez v0, :cond_17
 
+    .line 59
     invoke-virtual {p2, v2}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertHistogram(I)V
 
+    .line 60
     :cond_17
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isExtraMenuShowing()Z
 
@@ -2356,13 +2538,13 @@
 
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-static {v0}, Lcom/android/camera/v2;->l5(I)Z
+    invoke-static {v0}, Ld/d/a/d4;->j5(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_18
 
-    invoke-static {}, Lcom/android/camera/v2;->n5()Z
+    invoke-static {}, Ld/d/a/d4;->l5()Z
 
     move-result v0
 
@@ -2370,24 +2552,29 @@
 
     if-eqz p2, :cond_18
 
+    .line 61
     invoke-virtual {p2, v2}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertAudioMap(I)V
 
+    .line 62
     invoke-virtual {p2}, Lcom/android/camera/fragment/top/FragmentTopAlert;->getVolumeControlPanel()Lcom/android/camera/VolumeControlPanel;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/android/camera/v2;->s0()F
+    invoke-static {}, Ld/d/a/d4;->r0()F
 
     move-result v1
 
     invoke-virtual {v0, v1}, Lcom/android/camera/VolumeControlPanel;->a(F)V
 
+    .line 63
     invoke-virtual {p2, v2}, Lcom/android/camera/fragment/top/FragmentTopAlert;->setAudioMapVisibility(I)V
 
     const/16 v0, 0x8
 
+    .line 64
     invoke-virtual {p2, v0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->setVolumeControlPanelGone(I)V
 
+    .line 65
     :cond_18
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isExtraMenuShowing()Z
 
@@ -2395,35 +2582,43 @@
 
     if-nez p0, :cond_19
 
-    invoke-interface {p1, v2}, Lv8/z;->r4(Z)V
+    .line 66
+    invoke-interface {p1, v2}, Ld/d/a/m7/g/c0;->m4(Z)V
 
     :cond_19
     return-void
 .end method
 
-.method public static synthetic u0(Ljava/lang/String;Lv8/z;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$onVideoFpsClick$21(Ljava/lang/String;Lv8/z;)V
-
-    return-void
-.end method
-
 .method private updateTopBarData(ILjava/util/Optional;I)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "newMode",
+            "iModeUI",
+            "resetType"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
             "Ljava/util/Optional<",
-            "Ls6/l;",
+            "Ld/d/a/u6/a5/l;",
             ">;I)V"
         }
     .end annotation
 
-    new-instance v0, Ls6/m;
+    .line 1
+    new-instance v0, Ld/d/a/u6/a5/m;
 
-    invoke-direct {v0}, Ls6/m;-><init>()V
+    invoke-direct {v0}, Ld/d/a/u6/a5/m;-><init>()V
 
+    .line 2
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object v1
@@ -2438,7 +2633,7 @@
 
     if-nez v1, :cond_1
 
-    invoke-static {}, Ly2/b;->F0()Z
+    invoke-static {}, Ld/d/a/n6/b;->F0()Z
 
     move-result v1
 
@@ -2456,18 +2651,20 @@
     move v1, v2
 
     :goto_1
-    iput-boolean v1, v0, Ls6/m;->a:Z
+    iput-boolean v1, v0, Ld/d/a/u6/a5/m;->a:Z
 
+    .line 3
     invoke-virtual {p2}, Ljava/util/Optional;->get()Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, Ls6/l;
+    check-cast p2, Ld/d/a/u6/a5/l;
 
-    invoke-interface {p2, v0}, Ls6/l;->j(Ls6/m;)Ljava/util/List;
+    invoke-interface {p2, v0}, Ld/d/a/u6/a5/l;->b(Ld/d/a/u6/a5/m;)Ljava/util/List;
 
     move-result-object p2
 
+    .line 4
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopConfigDataProcessing()Lcom/android/camera2/compat/theme/custom/mm/top/ITopConfigDataProcessing;
 
     move-result-object v0
@@ -2501,6 +2698,7 @@
 
     if-eqz p2, :cond_b
 
+    .line 5
     invoke-virtual {p2}, Landroid/util/SparseArray;->size()I
 
     move-result p2
@@ -2512,6 +2710,7 @@
     :cond_4
     move p2, v3
 
+    .line 6
     :goto_3
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mSupportedConfigs:Landroid/util/SparseArray;
 
@@ -2521,12 +2720,14 @@
 
     if-ge p2, v1, :cond_a
 
+    .line 7
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mSupportedConfigs:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p2}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v1
 
+    .line 8
     iget-object v4, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mSupportedConfigs:Landroid/util/SparseArray;
 
     invoke-virtual {v4, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -2549,26 +2750,32 @@
 
     goto :goto_5
 
+    .line 9
     :cond_5
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mEndTopBarAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
     if-eqz v1, :cond_9
 
+    .line 10
     invoke-virtual {v1, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->setMode(I)V
 
+    .line 11
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mEndTopBarAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
     invoke-virtual {v1, v4, v2}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->setData(Ljava/util/List;Z)V
 
     goto :goto_5
 
+    .line 12
     :cond_6
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mStartTopBarAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
     if-eqz v1, :cond_9
 
+    .line 13
     invoke-virtual {v1, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->setMode(I)V
 
+    .line 14
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mStartTopBarAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
     invoke-virtual {v1, v4, v2}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->setData(Ljava/util/List;Z)V
@@ -2578,51 +2785,59 @@
     :cond_7
     if-eqz v4, :cond_8
 
+    .line 15
     invoke-interface {v4}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
 
     if-nez v1, :cond_8
 
+    .line 16
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mMenuIndicatorView:Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;
 
-    invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
+    .line 17
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mMenuIndicatorView:Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;
 
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    invoke-virtual {v1, v4}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+    invoke-virtual {v1, v4}, Landroid/widget/ImageView;->setTag(Ljava/lang/Object;)V
 
+    .line 18
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mMenuIndicatorView:Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;
 
-    invoke-virtual {v1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v1, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     goto :goto_4
 
+    .line 19
     :cond_8
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mMenuIndicatorView:Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;
 
-    invoke-virtual {v1, p3}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v1, p3}, Landroid/widget/ImageView;->setVisibility(I)V
 
+    .line 20
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mMenuIndicatorView:Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setTag(Ljava/lang/Object;)V
 
+    .line 21
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mMenuIndicatorView:Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    .line 22
     :goto_4
-    invoke-static {}, Lv8/v;->impl()Ljava/util/Optional;
+    invoke-static {}, Ld/d/a/m7/g/y;->impl()Ljava/util/Optional;
 
     move-result-object v1
 
-    new-instance v4, Lcom/android/camera2/compat/theme/custom/mm/top/b0;
+    new-instance v4, Ld/d/b/x5/a/b/b/m/w;
 
-    invoke-direct {v4, p0}, Lcom/android/camera2/compat/theme/custom/mm/top/b0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;)V
+    invoke-direct {v4, p0}, Ld/d/b/x5/a/b/b/m/w;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;)V
 
     invoke-virtual {v1, v4}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -2635,66 +2850,94 @@
     :cond_a
     return-void
 
+    .line 23
     :cond_b
     :goto_6
     iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mStartTopBarAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
     if-eqz p2, :cond_c
 
+    .line 24
     invoke-virtual {p2, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->setMode(I)V
 
+    .line 25
     iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mStartTopBarAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
     invoke-virtual {p2, v0, v2}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->setData(Ljava/util/List;Z)V
 
+    .line 26
     iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mStartTopBarAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
+    .line 27
     :cond_c
     iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mEndTopBarAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
     if-eqz p2, :cond_d
 
+    .line 28
     invoke-virtual {p2, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->setMode(I)V
 
+    .line 29
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mEndTopBarAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
     invoke-virtual {p1, v0, v2}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->setData(Ljava/util/List;Z)V
 
+    .line 30
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mEndTopBarAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
+    .line 31
     :cond_d
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mMenuIndicatorView:Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;
 
-    invoke-virtual {p1, p3}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {p1, p3}, Landroid/widget/ImageView;->setVisibility(I)V
 
+    .line 32
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mMenuIndicatorView:Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     return-void
 .end method
 
-.method public static synthetic w0(Ljava/lang/String;Ljava/lang/String;ZLv8/z;)V
+
+# virtual methods
+.method public synthetic A0(Landroid/view/View;)V
     .locals 0
 
-    invoke-static {p0, p1, p2, p3}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$onFlashClick$1(Ljava/lang/String;Ljava/lang/String;ZLv8/z;)V
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$onVideoFpsClick$22(Landroid/view/View;)V
 
     return-void
 .end method
 
-.method public static synthetic w2(Ly8/h;)V
+.method public synthetic C0(Landroid/view/View;)V
     .locals 0
 
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$alertFlashFrontAdjustSwitchLayout$27(Ly8/h;)V
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$onVideoQualityClick$7(Landroid/view/View;)V
 
     return-void
 .end method
 
-.method public static synthetic z2(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;)V
+.method public synthetic E0(Ld/d/a/m7/g/y;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$updateTopBarData$23(Ld/d/a/m7/g/y;)V
+
+    return-void
+.end method
+
+.method public synthetic I(ZLd/d/a/m7/g/s;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$configBottomPopupTips$24(ZLd/d/a/m7/g/s;)V
+
+    return-void
+.end method
+
+.method public synthetic S()V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$expandMenuIndicator$19()V
@@ -2702,35 +2945,70 @@
     return-void
 .end method
 
+.method public synthetic W(Landroid/view/View;)V
+    .locals 0
 
-# virtual methods
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$onBeautyModeClick$15(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public synthetic X(Landroid/view/View;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$onCvClick$13(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public synthetic Y(Landroid/view/View;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$onFlashClick$2(Landroid/view/View;)V
+
+    return-void
+.end method
+
 .method public alert960FpsDirectOverheatHint(I)V
     .locals 5
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isSupportMotionDetectionEnable"
         type = 0x2
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "visible"
+        }
+    .end annotation
+
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
-    invoke-static {}, Lg2/b;->g()Lj2/b1;
+    .line 2
+    invoke-static {}, Ld/d/a/l6/b;->g()Ld/d/a/l6/e/j/a1;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lj2/b1;->D()Lj2/s;
+    invoke-virtual {v1}, Ld/d/a/l6/e/j/a1;->D()Ld/d/a/l6/e/j/a0;
 
     move-result-object v1
 
     const/16 v2, 0xac
 
-    invoke-virtual {v1, v2}, Lj2/s;->getComponentValue(I)Ljava/lang/String;
+    .line 3
+    invoke-virtual {v1, v2}, Ld/d/a/l6/e/j/a0;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lg8/l0;->Xp(Ljava/lang/String;)Z
+    .line 4
+    invoke-static {v1}, Ld/d/a/d7/r8/u0;->Yo(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -2740,19 +3018,22 @@
 
     if-nez v1, :cond_1
 
-    invoke-static {}, Lg2/b;->g()Lj2/b1;
+    .line 5
+    invoke-static {}, Ld/d/a/l6/b;->g()Ld/d/a/l6/e/j/a1;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lj2/b1;->D()Lj2/s;
+    invoke-virtual {v1}, Ld/d/a/l6/e/j/a1;->D()Ld/d/a/l6/e/j/a0;
 
     move-result-object v1
 
-    invoke-virtual {v1, v2}, Lj2/s;->getComponentValue(I)Ljava/lang/String;
+    .line 6
+    invoke-virtual {v1, v2}, Ld/d/a/l6/e/j/a0;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lg8/l0;->Vp(Ljava/lang/String;)Z
+    .line 7
+    invoke-static {v1}, Ld/d/a/d7/r8/u0;->Wo(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -2774,23 +3055,24 @@
 
     if-eqz v1, :cond_2
 
+    .line 8
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    new-array v1, v4, [Ljava/lang/Object;
+    const v1, 0x7f1306bb
 
-    const/4 v2, 0x3
+    new-array v2, v4, [Ljava/lang/Object;
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/4 v4, 0x3
 
-    move-result-object v2
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    aput-object v2, v1, v3
+    move-result-object v4
 
-    const v2, 0x7f140704
+    aput-object v4, v2, v3
 
-    invoke-virtual {p0, v2, v1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v1, v2}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -2808,13 +3090,25 @@
         .annotation build Landroidx/annotation/StringRes;
         .end annotation
     .end param
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isSupportAiAudioNew"
         type = 0x0
     .end annotation
 
-    invoke-static {}, Lcom/android/camera/a6;->B3()Z
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes"
+        }
+    .end annotation
+
+    .line 1
+    invoke-static {}, Ld/d/a/z5;->p3()Z
 
     move-result v0
 
@@ -2822,6 +3116,7 @@
 
     const/16 p1, 0x8
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
@@ -2831,6 +3126,7 @@
 
     const/4 v0, 0x0
 
+    .line 3
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertAiAudio(IIZ)V
 
     :cond_1
@@ -2839,10 +3135,21 @@
 
 .method public alertAiAudioBGHint(II)V
     .locals 0
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isSupportAiAudioNew"
         type = 0x0
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes"
+        }
     .end annotation
 
     return-void
@@ -2850,18 +3157,29 @@
 
 .method public alertAiAudioMutexToastIfNeed(I)V
     .locals 0
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isSupportAiAudioNew"
         type = 0x0
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "res"
+        }
+    .end annotation
+
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertAiAudioMutexToastIfNeed(I)V
 
     :cond_0
@@ -2870,10 +3188,23 @@
 
 .method public alertAiAudioNewDescTip(Ljava/lang/String;II)V
     .locals 0
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isSupportAiAudioNew"
         type = 0x0
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "visibility",
+            "stringRes"
+        }
     .end annotation
 
     return-void
@@ -2881,18 +3212,35 @@
 
 .method public alertAiAudioNewDescTip(Ljava/lang/String;IIJ)V
     .locals 6
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isSupportAiAudioNew"
         type = 0x0
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "visibility",
+            "stringRes",
+            "delay"
+        }
+    .end annotation
+
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result p0
@@ -2907,6 +3255,7 @@
 
     move-wide v4, p4
 
+    .line 3
     invoke-virtual/range {v0 .. v5}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertAiAudioNewDescTip(Ljava/lang/String;IIJ)V
 
     :cond_0
@@ -2915,10 +3264,21 @@
 
 .method public alertAiAudioSingleBGHint(II)V
     .locals 0
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isSupportAiAudioNew"
         type = 0x0
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes"
+        }
     .end annotation
 
     return-void
@@ -2926,10 +3286,23 @@
 
 .method public alertAiAudioSingleDescTip(Ljava/lang/String;II)V
     .locals 6
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isSupportAiAudioNew"
         type = 0x0
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "visibility",
+            "stringRes"
+        }
     .end annotation
 
     const-wide/16 v4, 0xbb8
@@ -2950,10 +3323,25 @@
 
 .method public alertAiAudioSingleDescTip(Ljava/lang/String;IIJ)V
     .locals 6
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isSupportAiAudioNew"
         type = 0x0
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "visibility",
+            "stringRes",
+            "delay"
+        }
     .end annotation
 
     .line 2
@@ -2993,6 +3381,19 @@
         }
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes",
+            "delay"
+        }
+    .end annotation
+
     if-gtz p2, :cond_0
 
     const/4 p2, 0x0
@@ -3017,6 +3418,18 @@
 
 .method public alertAiDetectTipHint(ILjava/lang/String;J)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "res",
+            "delay"
+        }
+    .end annotation
 
     .line 2
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
@@ -3041,24 +3454,38 @@
 
 .method public alertAiEnhancedVideoHint(II)V
     .locals 1
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "supportAiEnhancedVideo"
         type = 0x2
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes"
+        }
+    .end annotation
+
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {v0, p1, p2}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertAiEnhancedVideoHint(II)V
 
     :cond_0
@@ -3067,6 +3494,14 @@
 
 .method public alertAmbientLightTip(Z)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "visible"
+        }
+    .end annotation
 
     if-eqz p1, :cond_0
 
@@ -3078,10 +3513,11 @@
     const/16 p1, 0x8
 
     :goto_0
-    const v0, 0x7f140177
+    const v0, 0x7f13016c
 
     const-string v1, "ambient_lighting_need_flash_on_tip_desc"
 
+    .line 1
     invoke-virtual {p0, v1, p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->alertRecommendDescTip(Ljava/lang/String;II)V
 
     return-void
@@ -3089,13 +3525,23 @@
 
 .method public alertAudioZoomIndicator(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "remove"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertAudioZoomIndicator(Z)V
 
     :cond_0
@@ -3104,12 +3550,28 @@
 
 .method public alertAutoHibernationDescTip(Ljava/lang/String;IIJ)V
     .locals 6
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isSupportAutoHibernation"
         type = 0x0
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "visibility",
+            "stringRes",
+            "delay"
+        }
+    .end annotation
+
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
@@ -3124,6 +3586,7 @@
 
     move-wide v4, p4
 
+    .line 2
     invoke-virtual/range {v0 .. v5}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertRecommendDescTip(Ljava/lang/String;IIJ)V
 
     :cond_0
@@ -3136,6 +3599,7 @@
     :cond_1
     const/4 p1, 0x0
 
+    .line 3
     :goto_0
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCaptureNumberAutoHibernationOffset:Z
 
@@ -3144,18 +3608,31 @@
 
 .method public alertCastVideoHint(II)V
     .locals 0
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isRemoteOnlineSupported"
         type = 0x0
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes"
+        }
+    .end annotation
+
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertCastVideoHint(II)V
 
     :cond_0
@@ -3164,18 +3641,31 @@
 
 .method public alertDualVideoHint(II)V
     .locals 1
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isSupportDualVideo"
         type = 0x0
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes"
+        }
+    .end annotation
+
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result p0
@@ -3184,6 +3674,7 @@
 
     const/4 p0, 0x1
 
+    .line 3
     invoke-virtual {v0, p1, p2, p0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertDualVideoHint(IIZ)V
 
     :cond_0
@@ -3192,18 +3683,29 @@
 
 .method public alertESPFeatureTip(Z)V
     .locals 0
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isSupportPresentationDisplay"
         type = 0x0
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "visible"
+        }
+    .end annotation
+
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertESPFeatureTip(Z)V
 
     :cond_0
@@ -3212,19 +3714,32 @@
 
 .method public alertFaceDetect(ZI)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "show",
+            "desc"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {v0, p1, p2}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertFaceDetect(ZI)V
 
     :cond_0
@@ -3233,12 +3748,30 @@
 
 .method public alertFastmotionIndicator(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 6
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isSupportFastMotionMode"
         type = 0x0
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "speed",
+            "number",
+            "duration",
+            "anim"
+        }
+    .end annotation
+
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
@@ -3255,6 +3788,7 @@
 
     move v5, p5
 
+    .line 2
     invoke-virtual/range {v0 .. v5}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertFastmotionIndicator(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
     :cond_0
@@ -3263,18 +3797,37 @@
 
 .method public alertFastmotionProValue(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V
     .locals 6
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isSupportFastmotionEnhancePro"
         type = 0x0
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "title",
+            "speedDesc",
+            "saveTime",
+            "singleShow",
+            "needExtendSpeedWidth"
+        }
+    .end annotation
+
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result p0
@@ -3291,6 +3844,7 @@
 
     move v5, p5
 
+    .line 3
     invoke-virtual/range {v0 .. v5}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertFastmotionProTip(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V
 
     :cond_0
@@ -3299,24 +3853,38 @@
 
 .method public alertFastmotionValue(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isSupportFastMotionMode"
         type = 0x0
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "title",
+            "desc"
+        }
+    .end annotation
+
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {v0, p1, p2}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertFastmotionTip(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
@@ -3325,6 +3893,18 @@
 
 .method public alertFlash(ILjava/lang/String;Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "flashComponentValue",
+            "showSelector"
+        }
+    .end annotation
 
     return-void
 .end method
@@ -3332,18 +3912,21 @@
 .method public alertFlashFrontAdjustLayoutClear()V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {v0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertFlashFrontAdjustLayoutClear()V
 
     :cond_0
@@ -3353,18 +3936,21 @@
 .method public alertFlashFrontAdjustLayoutIsShow()Z
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {v0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertFlashFrontAdjustLayoutIsShow()Z
 
     move-result p0
@@ -3379,30 +3965,45 @@
 
 .method public alertFlashFrontAdjustSwitchLayout(ZZ)V
     .locals 1
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isSupportFrontSoftLightAdjust"
         type = 0x2
     .end annotation
 
-    invoke-static {}, Lcom/android/camera/v2;->e6()Z
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "isVisible",
+            "isAnimEnd2Start"
+        }
+    .end annotation
+
+    .line 1
+    invoke-static {}, Ld/d/a/d4;->c6()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
+    .line 3
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result p0
 
     if-eqz p0, :cond_2
 
+    .line 4
     invoke-virtual {v0, p1, p2}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertSoftlightCapsuleSwitchView(ZZ)V
 
     goto :goto_0
@@ -3410,26 +4011,24 @@
     :cond_0
     if-nez p1, :cond_1
 
-    invoke-static {}, Ly8/h;->impl()Ljava/util/Optional;
+    .line 5
+    invoke-static {}, Ld/d/a/m7/g/s3/h;->impl()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance p1, Lcom/android/camera2/compat/theme/custom/mm/top/r;
-
-    invoke-direct {p1}, Lcom/android/camera2/compat/theme/custom/mm/top/r;-><init>()V
+    sget-object p1, Ld/d/b/x5/a/b/b/m/u0;->c:Ld/d/b/x5/a/b/b/m/u0;
 
     invoke-virtual {p0, p1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
     goto :goto_0
 
+    .line 6
     :cond_1
-    invoke-static {}, Lv8/z;->impl()Ljava/util/Optional;
+    invoke-static {}, Ld/d/a/m7/g/c0;->impl()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance p1, Lcom/android/camera2/compat/theme/custom/mm/top/c0;
-
-    invoke-direct {p1}, Lcom/android/camera2/compat/theme/custom/mm/top/c0;-><init>()V
+    sget-object p1, Ld/d/b/x5/a/b/b/m/m0;->c:Ld/d/b/x5/a/b/b/m/m0;
 
     invoke-virtual {p0, p1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -3440,18 +4039,35 @@
 
 .method public alertFocusViewDescTip(Ljava/lang/String;IIJ)V
     .locals 6
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isSupportCvType"
         type = 0x0
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "visibility",
+            "stringRes",
+            "delay"
+        }
+    .end annotation
+
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result p0
@@ -3466,6 +4082,7 @@
 
     move-wide v4, p4
 
+    .line 3
     invoke-virtual/range {v0 .. v5}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertFocusViewDescTip(Ljava/lang/String;IIJ)V
 
     :cond_0
@@ -3474,19 +4091,36 @@
 
 .method public alertFriendDisplayDeviceNameTip(Ljava/lang/String;ILjava/lang/String;Z)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "visibility",
+            "stringRes",
+            "isConnected"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertFriendDisplayDeviceNameTip(Ljava/lang/String;ILjava/lang/String;Z)V
 
     :cond_0
@@ -3495,16 +4129,37 @@
 
 .method public alertHDR(IZZ)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "live",
+            "showSelector"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertHandGestureHint(I)V
     .locals 0
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isSupportHandGesture"
         type = 0x0
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "stringRes"
+        }
     .end annotation
 
     return-void
@@ -3512,24 +4167,36 @@
 
 .method public alertLightingTip(I)V
     .locals 1
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isLightingVersion1"
         type = 0x2
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "result"
+        }
+    .end annotation
+
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {v0, p1}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertLightingTip(I)V
 
     :cond_0
@@ -3538,10 +4205,21 @@
 
 .method public alertLiveShotHint(II)V
     .locals 0
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isSupportLiveShot"
         type = 0x0
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes"
+        }
     .end annotation
 
     return-void
@@ -3549,10 +4227,21 @@
 
 .method public alertMacroModeHint(II)V
     .locals 0
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isSupportMacroMode"
         type = 0x0
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes"
+        }
     .end annotation
 
     return-void
@@ -3560,31 +4249,44 @@
 
 .method public alertMotionDetectionTip(I)V
     .locals 2
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isSupportMotionDetectionEnable"
         type = 0x2
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "visible"
+        }
+    .end annotation
+
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-static {v1}, Lcom/android/camera/v2;->F4(I)Z
+    .line 3
+    invoke-static {v1}, Ld/d/a/d4;->D4(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 4
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const v1, 0x7f140701
+    const v1, 0x7f1306b8
 
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3598,18 +4300,29 @@
 
 .method public alertMusicClose(Z)V
     .locals 0
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isSupportMiLiveModule"
         type = 0x0
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "show"
+        }
+    .end annotation
+
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertMusicClose(Z)V
 
     :cond_0
@@ -3618,19 +4331,34 @@
 
 .method public alertPanoramaApertureTipHint(ILjava/lang/String;J)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "str",
+            "delay"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertRecommendTipHintDown(ILjava/lang/String;J)V
 
     :cond_0
@@ -3639,7 +4367,16 @@
 
 .method public alertParameterDescriptionTip(I)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "visible"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
@@ -3648,6 +4385,7 @@
 
     const/4 v0, 0x1
 
+    .line 2
     invoke-virtual {p0, p1, v0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertParameterDescriptionTip(IZ)V
 
     :cond_0
@@ -3660,7 +4398,20 @@
         .annotation build Landroidx/annotation/StringRes;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "isRefrensh",
+            "visible",
+            "stringRes"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
@@ -3669,17 +4420,19 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v1}, Lcom/android/camera/a6;->R0(I)Landroid/graphics/Rect;
+    .line 2
+    invoke-static {v1}, Ld/d/a/z5;->I0(I)Landroid/graphics/Rect;
 
     move-result-object v1
 
     iget v1, v1, Landroid/graphics/Rect;->top:I
 
+    .line 3
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const v2, 0x7f070d40
+    const v2, 0x7f070ab3
 
     invoke-virtual {p0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -3695,6 +4448,7 @@
 
     move v3, p3
 
+    .line 4
     invoke-virtual/range {v0 .. v5}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertParameterResetTip(ZIIIZ)V
 
     :cond_0
@@ -3703,24 +4457,38 @@
 
 .method public alertProColourHint(II)V
     .locals 1
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isSupportedColorEnhance"
         type = 0x2
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes"
+        }
+    .end annotation
+
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {v0, p1, p2}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertProColourHint(II)V
 
     :cond_0
@@ -3729,19 +4497,32 @@
 
 .method public alertQVGASubtitleHint(II)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {v0, p1, p2}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertSubtitleHint(II)V
 
     :cond_0
@@ -3750,6 +4531,18 @@
 
 .method public alertRecommendDescTip(Ljava/lang/String;II)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "visibility",
+            "stringRes"
+        }
+    .end annotation
 
     const-wide/16 v4, 0xbb8
 
@@ -3769,6 +4562,20 @@
 
 .method public alertRecommendDescTip(Ljava/lang/String;IIJ)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "visibility",
+            "stringRes",
+            "delay"
+        }
+    .end annotation
 
     .line 2
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
@@ -3801,6 +4608,18 @@
 
 .method public alertRecommendDescTip(Ljava/lang/String;ILjava/lang/String;)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "visibility",
+            "string"
+        }
+    .end annotation
 
     const-wide/16 v4, 0xbb8
 
@@ -3820,6 +4639,20 @@
 
 .method public alertRecommendDescTip(Ljava/lang/String;ILjava/lang/String;J)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "visibility",
+            "string",
+            "delay"
+        }
+    .end annotation
 
     .line 6
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
@@ -3852,19 +4685,34 @@
 
 .method public alertRecommendTipHint(ILjava/lang/String;J)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "str",
+            "delay"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertRecommendTipHint(ILjava/lang/String;J)V
 
     :cond_0
@@ -3873,19 +4721,32 @@
 
 .method public alertSlideSwitchLayout(ZI)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x10,
+            0x10
+        }
+        names = {
+            "visible",
+            "configItem"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {v0, p1, p2}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertSlideSwitchLayout(ZI)V
 
     :cond_0
@@ -3894,7 +4755,16 @@
 
 .method public alertSlowMotionDisableRecordTip(I)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "visible"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
@@ -3903,11 +4773,12 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/android/camera/k5;->h()Lcom/android/camera/k5;
+    .line 2
+    invoke-static {}, Ld/d/a/u5;->f()Ld/d/a/u5;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/android/camera/k5;->g()I
+    invoke-virtual {v3}, Ld/d/a/u5;->e()I
 
     move-result v3
 
@@ -3917,11 +4788,12 @@
 
     if-lt v3, v4, :cond_0
 
+    .line 3
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v4, 0x7f140705
+    const v4, 0x7f1306bc
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3934,17 +4806,19 @@
 
     const/16 v3, 0x14
 
-    invoke-static {v3}, Lcom/android/camera/a6;->y2(I)Z
+    .line 4
+    invoke-static {v3}, Ld/d/a/z5;->o2(I)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
+    .line 5
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const v3, 0x7f140703
+    const v3, 0x7f1306ba
 
     invoke-virtual {p0, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3958,13 +4832,32 @@
 
 .method public alertSubtitleHint(II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertSuperNightSeTip(I)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "visible"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
@@ -3973,12 +4866,13 @@
 
     return-void
 
+    .line 2
     :cond_0
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lm2/h1;->A0()Llb/m;
+    invoke-virtual {v0}, Ld/d/a/l6/e/m/g1;->s0()Ld/d/b/b6/lp/o;
 
     move-result-object v0
 
@@ -3988,36 +4882,41 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Llb/m;->s()Z
+    .line 3
+    invoke-virtual {v0}, Ld/d/b/b6/lp/o;->s()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-static {}, Lcom/android/camera/a6;->C3()Z
+    .line 4
+    invoke-static {}, Ld/d/a/z5;->q3()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f140ba4
+    const v0, 0x7f130b1f
 
+    .line 5
     invoke-virtual {p0, p1, v0, v1, v2}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertRecommendTipHint(IIJ)V
 
     goto :goto_1
 
+    .line 6
     :cond_1
-    sget-boolean v0, Lid/c;->c:Z
+    sget-boolean v0, Ld/k/a/c;->c:Z
 
     if-eqz v0, :cond_2
 
-    const v0, 0x7f14078d
+    const v0, 0x7f13070c
 
     goto :goto_0
 
     :cond_2
-    const v0, 0x7f140ba6
+    const v0, 0x7f130b21
 
+    .line 7
     :goto_0
     invoke-virtual {p0, p1, v0, v1, v2}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertRecommendTipHint(IIJ)V
 
@@ -4027,6 +4926,18 @@
 
 .method public alertSwitchTip(Ljava/lang/String;II)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "visibility",
+            "hint"
+        }
+    .end annotation
 
     .line 5
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getResources()Landroid/content/res/Resources;
@@ -4044,6 +4955,22 @@
 
 .method public alertSwitchTip(Ljava/lang/String;IILjava/lang/String;J)V
     .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "visibility",
+            "clearType",
+            "hint",
+            "delay"
+        }
+    .end annotation
 
     .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
@@ -4078,6 +5005,18 @@
 
 .method public alertSwitchTip(Ljava/lang/String;ILjava/lang/String;)V
     .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "visibility",
+            "hint"
+        }
+    .end annotation
 
     const/4 v3, 0x1
 
@@ -4099,6 +5038,16 @@
 
 .method public alertTimerBurstHint(II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes"
+        }
+    .end annotation
 
     return-void
 .end method
@@ -4109,6 +5058,18 @@
         .annotation build Landroidx/annotation/StringRes;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "visibility",
+            "stringRes"
+        }
+    .end annotation
 
     .line 1
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
@@ -4151,6 +5112,18 @@
 
 .method public alertTopBarOperationTip(Ljava/lang/String;ILjava/lang/CharSequence;)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "visibility",
+            "string"
+        }
+    .end annotation
 
     .line 5
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
@@ -4187,6 +5160,16 @@
         .annotation build Landroidx/annotation/StringRes;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes"
+        }
+    .end annotation
 
     .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
@@ -4211,6 +5194,18 @@
 
 .method public alertTopHint(IIJ)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes",
+            "delay"
+        }
+    .end annotation
 
     .line 4
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
@@ -4235,19 +5230,34 @@
 
 .method public alertTopTip(ZII)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "show",
+            "desc",
+            "delay"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertTopTip(ZII)V
 
     :cond_0
@@ -4260,19 +5270,34 @@
         .annotation build Landroidx/annotation/StringRes;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "type",
+            "displayNameRes",
+            "value"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/camera/fragment/top/FragmentTopAlert;->alertUpdateValue(IILjava/lang/String;)V
 
     :cond_0
@@ -4281,18 +5306,28 @@
 
 .method public alertVideoLowBatteryHint(I)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "visible"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const v1, 0x7f140cb0
+    const v1, 0x7f130c2a
 
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -4308,18 +5343,28 @@
 
 .method public alertVideoOverheatHint(I)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "visible"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const v1, 0x7f140cb1
+    const v1, 0x7f130c2b
 
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -4339,6 +5384,16 @@
         .annotation build Landroidx/annotation/StringRes;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes"
+        }
+    .end annotation
 
     .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
@@ -4358,6 +5413,16 @@
 
 .method public alertVideoUltraClear(ILjava/lang/String;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "showText"
+        }
+    .end annotation
 
     .line 3
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
@@ -4381,9 +5446,18 @@
     return-void
 .end method
 
+.method public synthetic c(Lcom/android/camera/data/observeable/RxData$c;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$checkFeatureState$25(Lcom/android/camera/data/observeable/RxData$c;)V
+
+    return-void
+.end method
+
 .method public canProvide()Z
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object p0
@@ -4397,7 +5471,16 @@
 
 .method public changeViewAccessibility(Z)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "enable"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTopConfigMenu:Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBarLayout;
 
     if-eqz v0, :cond_1
@@ -4411,14 +5494,17 @@
     :cond_0
     const/4 v1, 0x4
 
+    .line 2
     :goto_0
-    invoke-virtual {v0, v1}, Landroid/view/View;->setImportantForAccessibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setImportantForAccessibility(I)V
 
+    .line 3
     :cond_1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mFragmentTopAlert:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     if-eqz p0, :cond_2
 
+    .line 4
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/top/FragmentTopAlert;->changeViewAccessibility(Z)V
 
     :cond_2
@@ -4427,19 +5513,30 @@
 
 .method public checkLutTopAlert(I)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "visible"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {v0, p1}, Lcom/android/camera/fragment/top/FragmentTopAlert;->checkLutTopAlert(I)V
 
     :cond_0
@@ -4449,6 +5546,7 @@
 .method public clearAllTipsState()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTipsState:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->clear()V
@@ -4458,24 +5556,27 @@
 
 .method public clearFastmotionValue()V
     .locals 1
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isSupportFastMotionMode"
         type = 0x0
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {v0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->clearFastmotionTip()V
 
     :cond_0
@@ -4485,6 +5586,7 @@
 .method public clearTopAlertView()V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
@@ -4493,6 +5595,7 @@
 
     const/4 v0, 0x1
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->clear(Z)V
 
     :cond_0
@@ -4502,12 +5605,14 @@
 .method public clearVideoUltraClear()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->clearVideoUltraClear()V
 
     :cond_0
@@ -4517,12 +5622,14 @@
 .method public clearZoomAlertStatus()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->clearZoomAlertStatus()V
 
     :cond_0
@@ -4532,12 +5639,14 @@
 .method public clearZoomAlertStatusWithoutAnim()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->clearZoomAlertStatusWithoutAnim()V
 
     :cond_0
@@ -4547,23 +5656,26 @@
 .method public collapseMenuIndicator()V
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mMenuIndicatorView:Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;
 
     if-eqz v0, :cond_1
 
+    .line 2
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    const v2, 0x7f1400a2
+    const v2, 0x7f1300a1
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    invoke-static {}, Lcom/android/camera/a6;->u2()Z
+    .line 3
+    invoke-static {}, Ld/d/a/z5;->k2()Z
 
     move-result v0
 
@@ -4573,14 +5685,16 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/top/s0;
+    .line 4
+    new-instance v1, Ld/d/b/x5/a/b/b/m/c0;
 
-    invoke-direct {v1, p0}, Lcom/android/camera2/compat/theme/custom/mm/top/s0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;)V
+    invoke-direct {v1, p0}, Ld/d/b/x5/a/b/b/m/c0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;)V
 
     const-wide/16 v2, 0x190
 
-    invoke-virtual {v0, v1, v2, v3}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v0, v1, v2, v3}, Landroid/widget/ImageView;->postDelayed(Ljava/lang/Runnable;J)Z
 
+    .line 5
     :cond_0
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mMenuIndicatorView:Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;
 
@@ -4592,7 +5706,7 @@
 
 .method public directHideLyingDirectHint()V
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
     return-void
@@ -4600,13 +5714,25 @@
 
 .method public varargs disableMenuItem(Z[I)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "isHide",
+            "configItems"
+        }
+    .end annotation
 
     if-eqz p2, :cond_1
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mDisabledFunctionMenu:Landroid/util/SparseBooleanArray;
 
     if-eqz v0, :cond_1
 
+    .line 2
     array-length v0, p2
 
     const/4 v1, 0x0
@@ -4616,19 +5742,22 @@
 
     aget v2, p2, v1
 
+    .line 3
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mDisabledFunctionMenu:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v3, v2, p1}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
     if-eqz p1, :cond_0
 
+    .line 4
     invoke-virtual {p0, v2}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopView(I)Landroid/view/View;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    invoke-static {v2}, La2/b;->o(Landroid/view/View;)V
+    .line 5
+    invoke-static {v2}, Ld/d/a/f6/j/b;->i(Landroid/view/View;)V
 
     :cond_0
     add-int/lit8 v1, v1, 0x1
@@ -4641,7 +5770,18 @@
 
 .method public varargs enableMenuItem(Z[I)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "isShow",
+            "configItems"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mDisabledFunctionMenu:Landroid/util/SparseBooleanArray;
 
     if-eqz v0, :cond_2
@@ -4654,6 +5794,7 @@
 
     goto :goto_1
 
+    .line 2
     :cond_0
     array-length v0, p2
 
@@ -4664,19 +5805,22 @@
 
     aget v2, p2, v1
 
+    .line 3
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mDisabledFunctionMenu:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v3, v2}, Landroid/util/SparseBooleanArray;->delete(I)V
 
     if-eqz p1, :cond_1
 
+    .line 4
     invoke-virtual {p0, v2}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopView(I)Landroid/view/View;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    invoke-static {v2}, La2/a;->n(Landroid/view/View;)V
+    .line 5
+    invoke-static {v2}, Ld/d/a/f6/j/a;->i(Landroid/view/View;)V
 
     :cond_1
     add-int/lit8 v1, v1, 0x1
@@ -4694,8 +5838,20 @@
     return-void
 .end method
 
-.method public expandExtraView(Lcom/android/camera/data/data/b;Landroid/view/View;I)V
+.method public expandExtraView(Ld/d/a/l6/e/b;Landroid/view/View;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x10,
+            0x10,
+            0x10
+        }
+        names = {
+            "componentData",
+            "anchorView",
+            "tag"
+        }
+    .end annotation
 
     return-void
 .end method
@@ -4703,23 +5859,26 @@
 .method public expandMenuIndicator()V
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mMenuIndicatorView:Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;
 
     if-eqz v0, :cond_1
 
+    .line 2
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    const v2, 0x7f1400a3
+    const v2, 0x7f1300a2
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    invoke-static {}, Lcom/android/camera/a6;->u2()Z
+    .line 3
+    invoke-static {}, Ld/d/a/z5;->k2()Z
 
     move-result v0
 
@@ -4729,14 +5888,16 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/top/o0;
+    .line 4
+    new-instance v1, Ld/d/b/x5/a/b/b/m/v0;
 
-    invoke-direct {v1, p0}, Lcom/android/camera2/compat/theme/custom/mm/top/o0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;)V
+    invoke-direct {v1, p0}, Ld/d/b/x5/a/b/b/m/v0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;)V
 
     const-wide/16 v2, 0x190
 
-    invoke-virtual {v0, v1, v2, v3}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v0, v1, v2, v3}, Landroid/widget/ImageView;->postDelayed(Ljava/lang/Runnable;J)Z
 
+    .line 5
     :cond_0
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mMenuIndicatorView:Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;
 
@@ -4746,19 +5907,30 @@
     return-void
 .end method
 
+.method public synthetic f0(Ld/d/a/l6/e/j/r;Ld/d/a/m7/g/a3;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$onHdrClick$4(Ld/d/a/l6/e/j/r;Ld/d/a/m7/g/a3;)V
+
+    return-void
+.end method
+
 .method public getComputeMode()I
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     instance-of v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;
 
     if-eqz v0, :cond_0
 
+    .line 3
     check-cast p0, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;
 
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;->getComputeMode()I
@@ -4776,6 +5948,7 @@
 .method public getCurrentAiResId()I
     .locals 1
 
+    .line 1
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentAiSceneLevel:I
 
     invoke-direct {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getAiSceneResId(I)I
@@ -4788,6 +5961,7 @@
 .method public getCurrentAiSceneLevel()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentAiSceneLevel:I
 
     return p0
@@ -4796,6 +5970,7 @@
 .method public getDeviceDegree()I
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object p0
@@ -4818,7 +5993,7 @@
 .method public getLayoutResourceId()I
     .locals 0
 
-    const p0, 0x7f0e0148
+    const p0, 0x7f0e0139
 
     return p0
 .end method
@@ -4826,16 +6001,19 @@
 .method public getMishotTopSurface()Landroid/graphics/SurfaceTexture;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     instance-of v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;
 
     if-eqz v0, :cond_0
 
+    .line 3
     check-cast p0, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;
 
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;->getOutputSurface()Landroid/graphics/SurfaceTexture;
@@ -4852,7 +6030,16 @@
 
 .method public getTipsState(Ljava/lang/String;)Z
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "tipType"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isExtraMenuShowing()Z
 
     move-result v0
@@ -4863,6 +6050,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTipsState:Ljava/util/Map;
 
@@ -4874,6 +6062,7 @@
 
     if-eqz p0, :cond_2
 
+    .line 3
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p0
@@ -4895,31 +6084,34 @@
 .method public getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
     .locals 7
 
+    .line 1
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    const/16 v1, 0xa4
+    const-string v1, "getTopAlert(): fragment is not added yet"
 
-    const-string v2, "getTopAlert(): fragment is not added yet"
+    const-string v2, "getTopAlert(): fragment is null"
 
-    const-string v3, "getTopAlert(): fragment is null"
+    const/4 v3, 0x0
 
     const/4 v4, 0x0
 
-    const/4 v5, 0x0
+    const-string v5, "FragmentTopConfig"
 
-    const-string v6, "FragmentTopConfig"
+    const/16 v6, 0xa4
 
-    if-eq v0, v1, :cond_2
+    if-eq v0, v6, :cond_2
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mFragmentTopAlert:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     if-nez v0, :cond_0
 
+    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
@@ -4935,12 +6127,13 @@
 
     move-result-object p0
 
-    new-array v0, v5, [Ljava/lang/Object;
+    new-array v0, v4, [Ljava/lang/Object;
 
-    invoke-static {v6, p0, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, p0, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    return-object v4
+    return-object v3
 
+    .line 4
     :cond_0
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
@@ -4948,18 +6141,59 @@
 
     if-nez v0, :cond_1
 
+    .line 5
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mFragmentTopAlert:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1}, Lcom/android/camera/fragment/BaseFragment;->getDegree()I
+    invoke-virtual {v2}, Lcom/android/camera/fragment/BaseFragment;->getDegree()I
 
-    move-result v1
+    move-result v2
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/fragment/BaseFragment;->setDegree(I)V
+    invoke-virtual {v0, v2}, Lcom/android/camera/fragment/BaseFragment;->setDegree(I)V
 
+    .line 6
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/camera/fragment/BaseFragment;->getDegree()I
+
+    move-result p0
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    new-array v0, v4, [Ljava/lang/Object;
+
+    invoke-static {v5, p0, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-object v3
+
+    .line 7
+    :cond_1
+    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mFragmentTopAlert:Lcom/android/camera/fragment/top/FragmentTopAlert;
+
+    return-object p0
+
+    .line 8
+    :cond_2
+    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mFragmentMiShotTopAlert:Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;
+
+    if-nez v0, :cond_3
+
+    .line 9
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4980,48 +6214,13 @@
 
     move-result-object p0
 
-    new-array v0, v5, [Ljava/lang/Object;
+    new-array v0, v4, [Ljava/lang/Object;
 
-    invoke-static {v6, p0, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, p0, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    return-object v4
+    return-object v3
 
-    :cond_1
-    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mFragmentTopAlert:Lcom/android/camera/fragment/top/FragmentTopAlert;
-
-    return-object p0
-
-    :cond_2
-    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mFragmentMiShotTopAlert:Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;
-
-    if-nez v0, :cond_3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lcom/android/camera/fragment/BaseFragment;->getDegree()I
-
-    move-result p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    new-array v0, v5, [Ljava/lang/Object;
-
-    invoke-static {v6, p0, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-object v4
-
+    .line 10
     :cond_3
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
@@ -5029,23 +6228,25 @@
 
     if-nez v0, :cond_4
 
+    .line 11
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mFragmentMiShotTopAlert:Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;
 
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1}, Lcom/android/camera/fragment/BaseFragment;->getDegree()I
+    invoke-virtual {v2}, Lcom/android/camera/fragment/BaseFragment;->getDegree()I
 
-    move-result v1
+    move-result v2
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/fragment/BaseFragment;->setDegree(I)V
+    invoke-virtual {v0, v2}, Lcom/android/camera/fragment/BaseFragment;->setDegree(I)V
 
+    .line 12
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
@@ -5061,12 +6262,13 @@
 
     move-result-object p0
 
-    new-array v0, v5, [Ljava/lang/Object;
+    new-array v0, v4, [Ljava/lang/Object;
 
-    invoke-static {v6, p0, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, p0, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    return-object v4
+    return-object v3
 
+    .line 13
     :cond_4
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mFragmentMiShotTopAlert:Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;
 
@@ -5075,7 +6277,16 @@
 
 .method public getTopView(I)Landroid/view/View;
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "config"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mStartTopBarRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
     const/4 v1, 0x0
@@ -5090,6 +6301,7 @@
 
     move v0, v1
 
+    .line 2
     :goto_0
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mStartTopBarRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
@@ -5099,21 +6311,24 @@
 
     if-ge v0, v2, :cond_1
 
+    .line 3
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mStartTopBarRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
     invoke-virtual {v2, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
+    .line 4
     invoke-virtual {v2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Lw6/p2;
+    check-cast v3, Ld/d/a/u6/a5/q/k4;
 
     if-eqz v3, :cond_0
 
-    invoke-virtual {v3}, Lw6/p2;->a()I
+    .line 5
+    invoke-virtual {v3}, Ld/d/a/u6/a5/q/k4;->a()I
 
     move-result v3
 
@@ -5126,6 +6341,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mEndTopBarRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
@@ -5137,6 +6353,7 @@
 
     if-lez v0, :cond_3
 
+    .line 7
     :goto_1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mEndTopBarRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
@@ -5146,21 +6363,24 @@
 
     if-ge v1, v0, :cond_3
 
+    .line 8
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mEndTopBarRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
+    .line 9
     invoke-virtual {v0}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lw6/p2;
+    check-cast v2, Ld/d/a/u6/a5/q/k4;
 
     if-eqz v2, :cond_2
 
-    invoke-virtual {v2}, Lw6/p2;->a()I
+    .line 10
+    invoke-virtual {v2}, Ld/d/a/u6/a5/q/k4;->a()I
 
     move-result v2
 
@@ -5173,6 +6393,7 @@
 
     goto :goto_1
 
+    .line 11
     :cond_3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mMenuIndicatorView:Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;
 
@@ -5180,42 +6401,46 @@
 
     if-eqz v0, :cond_5
 
-    invoke-virtual {v0}, Landroid/view/View;->getTag()Ljava/lang/Object;
+    invoke-virtual {v0}, Landroid/widget/ImageView;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
     if-eqz v0, :cond_5
 
+    .line 12
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mMenuIndicatorView:Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;
 
-    invoke-virtual {v0}, Landroid/view/View;->getTag()Ljava/lang/Object;
+    invoke-virtual {v0}, Landroid/widget/ImageView;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
-    instance-of v0, v0, Lw6/p2;
+    instance-of v0, v0, Ld/d/a/u6/a5/q/k4;
 
     if-eqz v0, :cond_4
 
+    .line 13
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mMenuIndicatorView:Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;
 
-    invoke-virtual {v0}, Landroid/view/View;->getTag()Ljava/lang/Object;
+    invoke-virtual {v0}, Landroid/widget/ImageView;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lw6/p2;
+    check-cast v0, Ld/d/a/u6/a5/q/k4;
 
     goto :goto_2
 
     :cond_4
     move-object v0, v1
 
+    .line 14
     :goto_2
-    invoke-virtual {v0}, Lw6/p2;->a()I
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/k4;->a()I
 
     move-result v0
 
     if-ne v0, p1, :cond_5
 
+    .line 15
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mMenuIndicatorView:Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;
 
     return-object p0
@@ -5224,9 +6449,10 @@
     return-object v1
 .end method
 
-.method public getVideoTag()Lcom/android/camera/ui/j2;
+.method public getVideoTag()Ld/d/a/d8/j2;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
@@ -5237,8 +6463,9 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
-    invoke-virtual {p0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->getVideoTag()Lcom/android/camera/ui/j2;
+    invoke-virtual {p0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->getVideoTag()Ld/d/a/d8/j2;
 
     move-result-object p0
 
@@ -5249,6 +6476,7 @@
 .method public getVideoTagContent()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mFragmentTopAlert:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     if-nez p0, :cond_0
@@ -5266,15 +6494,33 @@
     return-object p0
 .end method
 
-.method public handleProVideoRecordingSimple(Z)V
+.method public synthetic h()V
     .locals 0
 
+    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$collapseMenuIndicator$20()V
+
+    return-void
+.end method
+
+.method public handleProVideoRecordingSimple(Z)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "needSimple"
+        }
+    .end annotation
+
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/top/FragmentTopAlert;->handleProVideoRecordingSimple(Z)V
 
     :cond_0
@@ -5284,22 +6530,26 @@
 .method public hideAlert()V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-boolean p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCaptureNumberAutoHibernationOffset:Z
 
     if-nez p0, :cond_0
 
     const/4 p0, 0x1
 
+    .line 3
     invoke-virtual {v0, p0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->clear(Z)V
 
     const/4 p0, 0x0
 
+    .line 4
     invoke-virtual {v0, p0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->setShow(Z)V
 
     :cond_0
@@ -5308,7 +6558,16 @@
 
 .method public hideConfigMenu(Z)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object v0
@@ -5319,6 +6578,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object v0
@@ -5329,21 +6589,23 @@
 
     invoke-virtual {v0, v1, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->animateViews(IZLandroid/view/View;)V
 
-    invoke-static {}, Lu8/e;->i()Lu8/e;
+    .line 3
+    invoke-static {}, Ld/d/a/m7/d;->i()Ld/d/a/m7/d;
 
     move-result-object p0
 
-    const-class v0, Lv8/k0;
+    const-class v0, Ld/d/a/m7/g/n0;
 
-    invoke-virtual {p0, v0}, Lu8/e;->a(Ljava/lang/Class;)Lu8/a;
+    invoke-virtual {p0, v0}, Ld/d/a/m7/d;->a(Ljava/lang/Class;)Ld/d/a/m7/a;
 
     move-result-object p0
 
-    check-cast p0, Lv8/k0;
+    check-cast p0, Ld/d/a/m7/g/n0;
 
     if-eqz p0, :cond_0
 
-    invoke-interface {p0, p1}, Lv8/k0;->hideExtraTopConfig(Z)V
+    .line 4
+    invoke-interface {p0, p1}, Ld/d/a/m7/g/n0;->hideExtraTopConfig(Z)V
 
     :cond_0
     return-void
@@ -5352,6 +6614,7 @@
 .method public hideExtraMenu()V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isExtraMenuShowing()Z
 
     move-result v0
@@ -5363,6 +6626,7 @@
     :cond_0
     const/4 v0, 0x6
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->onBackEvent(I)Z
 
     return-void
@@ -5370,19 +6634,30 @@
 
 .method public hideRecommendDescTip(Ljava/lang/String;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "tipType"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {v0, p1}, Lcom/android/camera/fragment/top/FragmentTopAlert;->hideRecommendDescTip(Ljava/lang/String;)V
 
     :cond_0
@@ -5392,18 +6667,21 @@
 .method public hideSwitchTip()V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {v0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->hideSwitchTip()V
 
     :cond_0
@@ -5412,7 +6690,16 @@
 
 .method public initView(Landroid/view/View;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Landroid/util/SparseBooleanArray;
 
     const/4 v1, 0x1
@@ -5421,8 +6708,9 @@
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mDisabledFunctionMenu:Landroid/util/SparseBooleanArray;
 
-    const v0, 0x7f0b07bb
+    const v0, 0x7f0b06dc
 
+    .line 2
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -5431,8 +6719,9 @@
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mMultiSnapNum:Landroid/widget/TextView;
 
-    const v0, 0x7f0b0740
+    const v0, 0x7f0b0666
 
+    .line 3
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -5441,8 +6730,9 @@
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTopBackgroundView:Lcom/android/camera/ui/ShapeBackGroundView;
 
-    const v0, 0x7f0b0744
+    const v0, 0x7f0b066a
 
+    .line 4
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -5451,26 +6741,32 @@
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTopConfigMenu:Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBarLayout;
 
-    invoke-static {}, Lg2/b;->h()Ll2/g;
+    .line 5
+    invoke-static {}, Ld/d/a/l6/b;->h()Ld/d/a/l6/e/l/g;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ll2/g;->q0()Z
+    invoke-virtual {v0}, Ld/d/a/l6/e/l/g;->m0()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mIsVideoCastIntent:Z
 
+    .line 6
     iput-boolean v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mIsShowRecommendLandscapeTips:Z
 
+    .line 7
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->initTopBarItemDecoration()V
 
+    .line 8
     invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->initStartTopBarView(Landroid/view/View;)V
 
+    .line 9
     invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->initEndTopBarView(Landroid/view/View;)V
 
-    const v0, 0x7f0b0489
+    const v0, 0x7f0b0415
 
+    .line 10
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -5479,18 +6775,20 @@
 
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mMenuIndicatorView:Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;
 
+    .line 11
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f1400a2
+    const v1, 0x7f1300a1
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
+    .line 12
     iget p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
     const/4 v0, 0x0
@@ -5504,57 +6802,82 @@
 
 .method public isContainAlertLightingTip(I)Z
     .locals 3
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isLightingVersion1"
         type = 0x2
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "result"
+        }
+    .end annotation
+
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    const/4 p0, 0x1
+    new-array p0, v1, [I
 
-    new-array v2, p0, [I
-
+    .line 3
     invoke-virtual {v0, p1}, Lcom/android/camera/fragment/top/FragmentTopAlert;->parseLightingRes(I)I
 
     move-result p1
 
-    aput p1, v2, v1
+    aput p1, p0, v2
 
-    invoke-virtual {v0, v2}, Lcom/android/camera/fragment/top/FragmentTopAlert;->isContainAlertRecommendTip([I)Z
+    invoke-virtual {v0, p0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->isContainAlertRecommendTip([I)Z
 
-    move-result p1
+    move-result p0
 
-    if-eqz p1, :cond_0
+    if-eqz p0, :cond_0
 
-    move v1, p0
+    goto :goto_0
 
     :cond_0
+    move v1, v2
+
+    :goto_0
     return v1
 .end method
 
 .method public varargs isContainAlertRecommendTip([I)Z
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "tokenRes"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/top/FragmentTopAlert;->isContainAlertRecommendTip([I)Z
 
     move-result p0
@@ -5574,15 +6897,26 @@
 
 .method public isCurrentRecommendTipText(I)Z
     .locals 1
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "resId"
+        }
+    .end annotation
+
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result p0
@@ -5609,6 +6943,7 @@
 .method public isEnableClick()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mEnableClick:Z
 
     return p0
@@ -5625,12 +6960,14 @@
 .method public isHDRShowing()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->isHDRShowing()Z
 
     move-result p0
@@ -5651,6 +6988,7 @@
 .method public isMenuIndicatorExpanding()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mMenuIndicatorView:Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;
 
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;->isExpanding()Z
@@ -5663,12 +7001,14 @@
 .method public isShow()Z
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
@@ -5688,12 +7028,14 @@
 .method public isShowBacklightSelector()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->isShowBacklightSelector()Z
 
     move-result p0
@@ -5713,9 +7055,18 @@
 
 .method public isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "topAlert"
+        }
+    .end annotation
 
     if-eqz p1, :cond_1
 
+    .line 1
     invoke-virtual {p1}, Lcom/android/camera/fragment/top/FragmentTopAlert;->isShow()Z
 
     move-result p1
@@ -5753,12 +7104,14 @@
 .method public isZoomTipShowing()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->isZoomTipShowing()Z
 
     move-result p0
@@ -5776,9 +7129,17 @@
     return p0
 .end method
 
+.method public synthetic l0(Landroid/view/View;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$onHdrClick$5(Landroid/view/View;)V
+
+    return-void
+.end method
+
 .method public needViewClear()Z
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
     const/4 p0, 0x1
@@ -5788,31 +7149,45 @@
 
 .method public notifyAfterFrameAvailable(I)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "arrivedType"
+        }
+    .end annotation
 
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    .line 1
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lm2/h1;->p0()Lj2/y0;
+    invoke-virtual {v0}, Ld/d/a/l6/e/m/g1;->h0()Ld/d/a/l6/e/j/x0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lj2/y0;->k()V
+    .line 2
+    invoke-virtual {v0}, Ld/d/a/l6/e/j/x0;->k()V
 
+    .line 3
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 5
     invoke-virtual {v0, p1}, Lcom/android/camera/fragment/top/FragmentTopAlert;->notifyAfterFrameAvailable(I)V
 
+    .line 6
     :cond_0
     iget p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
@@ -5834,6 +7209,7 @@
 
     if-eq p1, v2, :cond_2
 
+    .line 7
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p1
@@ -5846,29 +7222,33 @@
 
     if-ne p1, v2, :cond_1
 
-    invoke-static {}, Lg2/b;->j()Lq2/a;
+    .line 8
+    invoke-static {}, Ld/d/a/l6/b;->j()Ld/d/a/l6/f/h;
 
     move-result-object p1
 
-    const-class v2, Lrh/x;
+    const-class v2, Ld/o/v/a/x;
 
-    invoke-virtual {p1, v2}, Lq2/a;->c(Ljava/lang/Class;)Lq2/d;
+    invoke-virtual {p1, v2}, Ld/d/a/l6/f/h;->c(Ljava/lang/Class;)Ld/d/a/l6/f/l;
 
     move-result-object p1
 
-    check-cast p1, Lrh/x;
+    check-cast p1, Ld/o/v/a/x;
 
-    invoke-virtual {p1}, Lrh/x;->u()Z
+    invoke-virtual {p1}, Ld/o/v/a/x;->u()Z
 
     move-result p1
 
     if-nez p1, :cond_2
 
+    .line 9
     :cond_1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->clearVideoUltraClear()V
 
+    .line 10
     invoke-direct {p0, v1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->reConfigTipOfMusicHint(Z)V
 
+    .line 11
     iget p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
     const/16 v2, 0xa2
@@ -5877,8 +7257,10 @@
 
     const/4 p1, 0x0
 
+    .line 12
     invoke-virtual {p0, v1, v1, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->alertUpdateValue(IILjava/lang/String;)V
 
+    .line 13
     :cond_2
     iget p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
@@ -5886,46 +7268,55 @@
 
     if-eq p1, v2, :cond_3
 
+    .line 14
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->animTopBlackCover()V
 
+    .line 15
     :cond_3
-    invoke-static {}, Lv8/z;->impl2()Lv8/z;
+    invoke-static {}, Ld/d/a/m7/g/c0;->impl2()Ld/d/a/m7/g/c0;
 
     move-result-object p1
 
+    .line 16
     iget v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
     if-eq v2, v0, :cond_4
 
     if-eqz p1, :cond_4
 
-    invoke-direct {p0, p1, v1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->showTips(Lv8/z;Z)V
+    .line 17
+    invoke-direct {p0, p1, v1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->showTips(Ld/d/a/m7/g/c0;Z)V
 
+    .line 18
     :cond_4
-    invoke-static {}, Lv8/i3;->impl2()Lv8/i3;
+    invoke-static {}, Ld/d/a/m7/g/g3;->impl2()Ld/d/a/m7/g/g3;
 
     move-result-object p1
 
-    invoke-static {}, Lv8/e0;->impl2()Lv8/e0;
+    .line 19
+    invoke-static {}, Ld/d/a/m7/g/h0;->impl2()Ld/d/a/m7/g/h0;
 
     move-result-object v0
 
-    invoke-static {}, Lhh/d;->impl2()Lhh/d;
+    .line 20
+    invoke-static {}, Ld/o/t/b/z/d;->impl2()Ld/o/t/b/z/d;
 
     move-result-object v2
 
+    .line 21
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isExtraMenuShowing()Z
 
     move-result v3
 
     if-nez v3, :cond_8
 
-    invoke-static {}, Lb9/n;->r()Z
+    invoke-static {}, Ld/d/a/m7/g/v3/p;->p()Z
 
     move-result v3
 
     if-eqz v3, :cond_8
 
+    .line 22
     iget-boolean v3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mIsVideoCastIntent:Z
 
     const/4 v4, 0x1
@@ -5934,18 +7325,20 @@
 
     if-eqz p1, :cond_5
 
-    invoke-interface {p1}, Lv8/i3;->W8()Z
+    .line 23
+    invoke-interface {p1}, Ld/d/a/m7/g/g3;->K8()Z
 
     move-result v0
 
     if-nez v0, :cond_8
 
-    invoke-interface {p1}, Lv8/i3;->d2()Z
+    invoke-interface {p1}, Ld/d/a/m7/g/g3;->g2()Z
 
     move-result p1
 
     if-nez p1, :cond_8
 
+    .line 24
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object p1
@@ -5959,7 +7352,8 @@
     :cond_5
     if-eqz v0, :cond_6
 
-    invoke-interface {v0}, Lv8/e0;->u6()Z
+    .line 25
+    invoke-interface {v0}, Ld/d/a/m7/g/h0;->l6()Z
 
     move-result p1
 
@@ -5968,12 +7362,14 @@
     :cond_6
     if-eqz v2, :cond_7
 
-    invoke-interface {v2}, Lhh/d;->isShowing()Z
+    .line 26
+    invoke-interface {v2}, Ld/o/t/b/z/d;->isShowing()Z
 
     move-result p1
 
     if-nez p1, :cond_8
 
+    .line 27
     :cond_7
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
@@ -5983,10 +7379,12 @@
 
     invoke-virtual {p1, v4, v1, v0}, Lcom/android/camera/fragment/BaseFragment;->animateViews(IZLandroid/view/View;)V
 
+    .line 28
     :cond_8
     :goto_0
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->checkFeatureState()V
 
+    .line 29
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->refreshMenuIndicatorBackgroundColor()V
 
     return-void
@@ -5994,7 +7392,18 @@
 
 .method public notifyDataChanged(II)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "dataChangeType",
+            "currentMode"
+        }
+    .end annotation
 
+    .line 1
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -6017,6 +7426,7 @@
 
     invoke-static {v2, p1, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object p1
@@ -6031,6 +7441,7 @@
 
     const/4 v2, 0x0
 
+    .line 3
     invoke-virtual {p0, p2, v2, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->provideAnimateElement(ILjava/util/List;I)V
 
     :cond_0
@@ -6064,6 +7475,7 @@
 
     aput v3, p1, v0
 
+    .line 4
     invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->updateConfigItem([I)V
 
     :cond_3
@@ -6071,11 +7483,12 @@
 
     if-ne p2, p1, :cond_4
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 5
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lid/b;->L5()Z
+    invoke-virtual {p1}, Ld/k/a/b;->z5()Z
 
     move-result p1
 
@@ -6087,6 +7500,7 @@
 
     aput v3, p1, v0
 
+    .line 6
     invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->updateConfigItem([I)V
 
     :cond_4
@@ -6098,36 +7512,42 @@
 
     new-array p1, p1, [I
 
+    .line 7
     fill-array-data p1, :array_0
 
     invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->updateConfigItem([I)V
 
+    .line 8
     :cond_5
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mFragmentTopAlert:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     if-nez p1, :cond_6
 
+    .line 9
     new-instance p1, Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     invoke-direct {p1}, Lcom/android/camera/fragment/top/FragmentTopAlert;-><init>()V
 
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mFragmentTopAlert:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
+    .line 10
     :cond_6
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mFragmentMiShotTopAlert:Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;
 
     if-nez p1, :cond_7
 
+    .line 11
     new-instance p1, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;
 
     invoke-direct {p1}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;-><init>()V
 
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mFragmentMiShotTopAlert:Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;
 
+    .line 12
     :cond_7
     iget p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    const p2, 0x7f0b0731
+    const p2, 0x7f0b0657
 
     const/16 v0, 0xa4
 
@@ -6141,6 +7561,7 @@
 
     if-nez p1, :cond_8
 
+    .line 13
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mFragmentMiShotTopAlert:Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;
 
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isExtraMenuShowing()Z
@@ -6151,6 +7572,7 @@
 
     invoke-virtual {p1, v0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->setShow(Z)V
 
+    .line 14
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mFragmentMiShotTopAlert:Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;
 
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
@@ -6163,6 +7585,7 @@
 
     invoke-virtual {p1, v0}, Lcom/android/camera/fragment/BaseFragment;->setDegree(I)V
 
+    .line 15
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
@@ -6173,14 +7596,17 @@
 
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mFragmentMiShotTopAlert:Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;
 
+    .line 16
     invoke-virtual {v0}, Lcom/android/camera/fragment/BaseFragment;->getFragmentTag()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {p1, p2, v0, v2}, Lcom/android/camera/fragment/u3;->a(Landroidx/fragment/app/FragmentManager;ILandroidx/fragment/app/Fragment;Ljava/lang/String;)V
+    .line 17
+    invoke-static {p1, p2, v0, v2}, Ld/d/a/u6/x3;->a(Landroidx/fragment/app/FragmentManager;ILandroidx/fragment/app/Fragment;Ljava/lang/String;)V
 
     goto :goto_2
 
+    .line 18
     :cond_8
     iget p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
@@ -6194,6 +7620,7 @@
 
     if-nez p1, :cond_9
 
+    .line 19
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mFragmentTopAlert:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isExtraMenuShowing()Z
@@ -6204,6 +7631,7 @@
 
     invoke-virtual {p1, v0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->setShow(Z)V
 
+    .line 20
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mFragmentTopAlert:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
@@ -6216,6 +7644,7 @@
 
     invoke-virtual {p1, v0}, Lcom/android/camera/fragment/BaseFragment;->setDegree(I)V
 
+    .line 21
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
@@ -6226,27 +7655,30 @@
 
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mFragmentTopAlert:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
+    .line 22
     invoke-virtual {v0}, Lcom/android/camera/fragment/BaseFragment;->getFragmentTag()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {p1, p2, v0, v2}, Lcom/android/camera/fragment/u3;->a(Landroidx/fragment/app/FragmentManager;ILandroidx/fragment/app/Fragment;Ljava/lang/String;)V
+    .line 23
+    invoke-static {p1, p2, v0, v2}, Ld/d/a/u6/x3;->a(Landroidx/fragment/app/FragmentManager;ILandroidx/fragment/app/Fragment;Ljava/lang/String;)V
 
+    .line 24
     :cond_9
     :goto_2
-    invoke-static {}, Lg2/b;->j()Lq2/a;
+    invoke-static {}, Ld/d/a/l6/b;->j()Ld/d/a/l6/f/h;
 
     move-result-object p1
 
-    const-class p2, Lrh/x;
+    const-class p2, Ld/o/v/a/x;
 
-    invoke-virtual {p1, p2}, Lq2/a;->c(Ljava/lang/Class;)Lq2/d;
+    invoke-virtual {p1, p2}, Ld/d/a/l6/f/h;->c(Ljava/lang/Class;)Ld/d/a/l6/f/l;
 
     move-result-object p1
 
-    check-cast p1, Lrh/x;
+    check-cast p1, Ld/o/v/a/x;
 
-    invoke-virtual {p1}, Lrh/x;->u()Z
+    invoke-virtual {p1}, Ld/o/v/a/x;->u()Z
 
     move-result p1
 
@@ -6254,10 +7686,12 @@
 
     new-array p1, v1, [I
 
+    .line 25
     fill-array-data p1, :array_1
 
     invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->updateConfigItem([I)V
 
+    .line 26
     :cond_a
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mFragmentMiShotTopAlert:Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;
 
@@ -6265,6 +7699,7 @@
 
     const/16 p1, 0xc1
 
+    .line 27
     invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;->updateConfigItem(I)V
 
     :cond_b
@@ -6288,6 +7723,7 @@
 .method public notifyLayoutChange()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mFragmentTopAlert:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     if-eqz v0, :cond_0
@@ -6298,6 +7734,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mFragmentTopAlert:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     invoke-virtual {p0}, Lcom/android/camera/fragment/BaseFragment;->notifyLayoutChange()V
@@ -6306,9 +7743,22 @@
     return-void
 .end method
 
-.method public notifyPreviewRectChange(Landroid/graphics/Rect;FLz1/c$a$b;)V
+.method public notifyPreviewRectChange(Landroid/graphics/Rect;FLd/d/a/f6/c$a$b;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "rect",
+            "fraction",
+            "state"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mFragmentTopAlert:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     if-eqz v0, :cond_0
@@ -6319,9 +7769,10 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mFragmentTopAlert:Lcom/android/camera/fragment/top/FragmentTopAlert;
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/android/camera/fragment/top/FragmentTopAlert;->notifyPreviewRectChange(Landroid/graphics/Rect;FLz1/c$a$b;)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/android/camera/fragment/top/FragmentTopAlert;->notifyPreviewRectChange(Landroid/graphics/Rect;FLd/d/a/f6/c$a$b;)V
 
     :cond_0
     return-void
@@ -6329,6 +7780,25 @@
 
 .method public notifyThemeChanged(ILjava/util/List;I)V
     .locals 3
+    .annotation build Ld/d/a/x6/d;
+        ignore = false
+        key = "isSupportFlashScreenHalo"
+        type = 0x0
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "newMode",
+            "animateInElements",
+            "themeChangeType"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -6336,12 +7806,6 @@
             "Lio/reactivex/Completable;",
             ">;I)V"
         }
-    .end annotation
-
-    .annotation build Lh7/d;
-        ignore = false
-        key = "isSupportFlashScreenHalo"
-        type = 0x0
     .end annotation
 
     const/4 v0, 0x0
@@ -6352,27 +7816,33 @@
 
     const-string v2, "notifyThemeChanged"
 
+    .line 1
     invoke-static {v1, v2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mStartTopBarAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->updateTheme()V
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mEndTopBarAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
     if-eqz v0, :cond_1
 
+    .line 5
     invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->updateTheme()V
 
+    .line 6
     :cond_1
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lm2/h1;->C0()Laa/p;
+    invoke-virtual {v0}, Ld/d/a/l6/e/m/g1;->u0()Ld/d/a/d8/n2/f/p;
 
     move-result-object v0
 
@@ -6380,17 +7850,21 @@
 
     const/4 v1, 0x1
 
-    invoke-direct {p0, v0, p2, p1, v1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->configTopCoverBackground(Laa/p;Ljava/util/List;II)V
+    .line 7
+    invoke-direct {p0, v0, p2, p1, v1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->configTopCoverBackground(Ld/d/a/d8/n2/f/p;Ljava/util/List;II)V
 
+    .line 8
     :cond_2
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->refreshMenuIndicatorBackgroundColor()V
 
+    .line 9
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
 
     if-eqz p0, :cond_3
 
+    .line 10
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/camera/fragment/top/FragmentTopAlert;->notifyThemeChanged(ILjava/util/List;I)V
 
     :cond_3
@@ -6398,35 +7872,38 @@
 
     if-ne p1, p0, :cond_4
 
-    invoke-static {}, Lcom/android/camera/v2;->z()I
+    .line 11
+    invoke-static {}, Ld/d/a/d4;->y()I
 
     move-result p0
 
-    invoke-static {}, Lc8/g;->a0()Lc8/g;
+    .line 12
+    invoke-static {}, Ld/d/a/d7/o8/b/r;->R()Ld/d/a/d7/o8/b/r;
 
     move-result-object p2
 
-    invoke-virtual {p2, p0}, Lc8/g;->e(I)Lya/f;
+    invoke-virtual {p2, p0}, Ld/d/a/d7/o8/b/r;->e(I)Ld/d/b/g4;
 
     move-result-object p2
 
-    invoke-static {}, Lg2/b;->g()Lj2/b1;
+    .line 13
+    invoke-static {}, Ld/d/a/l6/b;->g()Ld/d/a/l6/e/j/a1;
 
     move-result-object p3
 
-    invoke-virtual {p3}, Lj2/b1;->J()Lj2/w;
+    invoke-virtual {p3}, Ld/d/a/l6/e/j/a1;->J()Ld/d/a/l6/e/j/e0;
 
     move-result-object p3
 
-    invoke-static {}, Lg2/b;->h()Ll2/g;
+    invoke-static {}, Ld/d/a/l6/b;->h()Ld/d/a/l6/e/l/g;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ll2/g;->L()I
+    invoke-virtual {v0}, Ld/d/a/l6/e/l/g;->I()I
 
     move-result v0
 
-    invoke-virtual {p3, p1, p0, p2, v0}, Lj2/w;->G(IILya/f;I)V
+    invoke-virtual {p3, p1, p0, p2, v0}, Ld/d/a/l6/e/j/e0;->G(IILd/d/b/g4;I)V
 
     :cond_4
     return-void
@@ -6434,31 +7911,43 @@
 
 .method public onBackEvent(I)Z
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "callingFrom"
+        }
+    .end annotation
 
+    .line 1
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    const/16 v1, 0xbc
+    const/16 v1, 0x8
 
-    const/16 v2, 0x8
+    const/16 v2, 0xbc
 
-    if-ne v0, v1, :cond_0
+    if-ne v0, v2, :cond_0
 
     const/4 v0, 0x3
 
     if-ne p1, v0, :cond_0
 
-    const v0, 0x7f140b9d
+    const v0, 0x7f130b18
 
-    const-wide/16 v3, -0x1
+    const-wide/16 v2, -0x1
 
-    invoke-virtual {p0, v2, v0, v3, v4}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->alertAiDetectTipHint(IIJ)V
+    .line 2
+    invoke-virtual {p0, v1, v0, v2, v3}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->alertAiDetectTipHint(IIJ)V
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
-    iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
+    .line 4
+    iget v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
     const/16 v3, 0xb4
 
@@ -6466,48 +7955,56 @@
 
     const/4 v5, 0x0
 
-    if-eq v1, v3, :cond_1
+    if-eq v2, v3, :cond_1
 
     const/16 v3, 0xa4
 
-    if-ne v1, v3, :cond_2
+    if-ne v2, v3, :cond_2
 
     :cond_1
-    invoke-static {}, Lg2/b;->h()Ll2/g;
+    invoke-static {}, Ld/d/a/l6/b;->h()Ld/d/a/l6/e/l/g;
 
-    move-result-object v1
+    move-result-object v2
 
     const-string v3, "pref_audio_map_key"
 
-    invoke-virtual {v1, v3, v4}, Lcom/android/camera/data/data/g;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-virtual {v2, v3, v4}, Ld/d/a/l6/e/f;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_2
+    if-eqz v2, :cond_2
 
     if-eqz v0, :cond_2
 
+    .line 5
     invoke-virtual {v0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->getAudioMapVisibilityState()I
 
-    move-result v1
+    move-result v2
 
-    if-ne v1, v2, :cond_2
+    if-ne v2, v1, :cond_2
 
+    .line 6
     invoke-virtual {v0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->removeHandlerCallBack()V
 
+    .line 7
     invoke-virtual {v0, v5}, Lcom/android/camera/fragment/top/FragmentTopAlert;->setAudioMapVisibility(I)V
 
-    invoke-virtual {v0, v2}, Lcom/android/camera/fragment/top/FragmentTopAlert;->setVolumeControlAnimationViewVisibility(I)V
+    .line 8
+    invoke-virtual {v0, v1}, Lcom/android/camera/fragment/top/FragmentTopAlert;->setVolumeControlAnimationViewVisibility(I)V
 
-    invoke-virtual {v0, v2}, Lcom/android/camera/fragment/top/FragmentTopAlert;->setVolumeControlPanelVisibility(I)V
+    .line 9
+    invoke-virtual {v0, v1}, Lcom/android/camera/fragment/top/FragmentTopAlert;->setVolumeControlPanelVisibility(I)V
 
     :cond_2
     if-eqz v0, :cond_3
 
+    .line 10
     invoke-virtual {v0, v4}, Lcom/android/camera/fragment/top/FragmentTopAlert;->showRightPart(Z)V
 
+    .line 11
     invoke-virtual {v0, v4}, Lcom/android/camera/fragment/top/FragmentTopAlert;->showMishotLeftTips(Z)V
 
+    .line 12
     :cond_3
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->alertFlashFrontAdjustLayoutIsShow()Z
 
@@ -6519,10 +8016,12 @@
 
     if-eq p1, v0, :cond_4
 
+    .line 13
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->alertFlashFrontAdjustLayoutClear()V
 
     goto :goto_0
 
+    .line 14
     :cond_4
     invoke-virtual {p0, v5, v5}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->alertFlashFrontAdjustSwitchLayout(ZZ)V
 
@@ -6533,24 +8032,35 @@
 
 .method public onBeautyModeClick(Landroid/view/View;)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "view"
+        }
+    .end annotation
 
-    invoke-static {}, Lg2/b;->g()Lj2/b1;
+    .line 1
+    invoke-static {}, Ld/d/a/l6/b;->g()Ld/d/a/l6/e/j/a1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lj2/b1;->r()Lj2/c;
+    invoke-virtual {v0}, Ld/d/a/l6/e/j/a1;->r()Ld/d/a/l6/e/j/l;
 
     move-result-object v0
 
+    .line 2
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v0, v1}, Lj2/c;->b(I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ld/d/a/l6/e/j/l;->b(I)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 3
     iget v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v0, v2}, Lcom/android/camera/data/data/b;->getComponentValue(I)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Ld/d/a/l6/e/b;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -6562,14 +8072,16 @@
 
     return-void
 
+    .line 4
     :cond_0
     iget v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v0, v2, v1}, Lcom/android/camera/data/data/b;->setComponentValue(ILjava/lang/String;)V
+    invoke-virtual {v0, v2, v1}, Ld/d/a/l6/e/b;->setComponentValue(ILjava/lang/String;)V
 
     const-string v2, "female"
 
-    invoke-static {v2}, Lcom/android/camera/v2;->O6(Ljava/lang/String;)Z
+    .line 5
+    invoke-static {v2}, Ld/d/a/d4;->M6(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -6587,19 +8099,22 @@
 
     const-string v4, "click"
 
-    invoke-static {v3, v2, v4}, Lk9/d;->a(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;)V
+    .line 6
+    invoke-static {v3, v2, v4}, Ld/d/a/v7/i;->a(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {}, Lv8/z;->impl()Ljava/util/Optional;
+    .line 7
+    invoke-static {}, Ld/d/a/m7/g/c0;->impl()Ljava/util/Optional;
 
     move-result-object v2
 
-    new-instance v3, Lcom/android/camera2/compat/theme/custom/mm/top/d0;
+    new-instance v3, Ld/d/b/x5/a/b/b/m/a0;
 
-    invoke-direct {v3, v1}, Lcom/android/camera2/compat/theme/custom/mm/top/d0;-><init>(Ljava/lang/String;)V
+    invoke-direct {v3, v1}, Ld/d/b/x5/a/b/b/m/a0;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v2, v3}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    invoke-static {}, Lcom/android/camera/a6;->u2()Z
+    .line 8
+    invoke-static {}, Ld/d/a/z5;->k2()Z
 
     move-result v2
 
@@ -6607,22 +8122,24 @@
 
     if-eqz p1, :cond_2
 
-    new-instance v2, Lcom/android/camera2/compat/theme/custom/mm/top/e0;
+    .line 9
+    new-instance v2, Ld/d/b/x5/a/b/b/m/s0;
 
-    invoke-direct {v2, p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/e0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Landroid/view/View;)V
+    invoke-direct {v2, p0, p1}, Ld/d/b/x5/a/b/b/m/s0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Landroid/view/View;)V
 
     const-wide/16 v3, 0x190
 
     invoke-virtual {p1, v2, v3, v4}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
 
+    .line 10
     :cond_2
-    invoke-static {}, Lv8/y2;->impl()Ljava/util/Optional;
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance p1, Lcom/android/camera2/compat/theme/custom/mm/top/f0;
+    new-instance p1, Ld/d/b/x5/a/b/b/m/v;
 
-    invoke-direct {p1, v0, v1}, Lcom/android/camera2/compat/theme/custom/mm/top/f0;-><init>(Lj2/c;Ljava/lang/String;)V
+    invoke-direct {p1, v0, v1}, Ld/d/b/x5/a/b/b/m/v;-><init>(Ld/d/a/l6/e/j/l;Ljava/lang/String;)V
 
     invoke-virtual {p0, p1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -6631,12 +8148,21 @@
 
 .method public onClick(Landroid/view/View;)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lw6/p2;
+    check-cast v0, Ld/d/a/u6/a5/q/k4;
 
     const/4 v1, 0x1
 
@@ -6644,7 +8170,8 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lw6/p2;->a()I
+    .line 2
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/k4;->a()I
 
     move-result v3
 
@@ -6665,8 +8192,9 @@
     :goto_0
     move v3, v1
 
+    .line 3
     :goto_1
-    invoke-static {}, Lb9/n;->g()Z
+    invoke-static {}, Ld/d/a/m7/g/v3/p;->e()Z
 
     move-result v4
 
@@ -6676,14 +8204,16 @@
 
     if-eqz v3, :cond_2
 
-    const-string p0, "TopBar onClick: doing action"
+    new-array p0, v2, [Ljava/lang/Object;
 
-    new-array p1, v2, [Ljava/lang/Object;
+    const-string p1, "TopBar onClick: doing action"
 
-    invoke-static {v5, p0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 4
+    invoke-static {v5, p1, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
+    .line 5
     :cond_2
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isEnableClick()Z
 
@@ -6691,14 +8221,16 @@
 
     if-nez v3, :cond_3
 
-    const-string p0, "TopBar onClick: disable click"
+    new-array p0, v2, [Ljava/lang/Object;
 
-    new-array p1, v2, [Ljava/lang/Object;
+    const-string p1, "TopBar onClick: disable click"
 
-    invoke-static {v5, p0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 6
+    invoke-static {v5, p1, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
+    .line 7
     :cond_3
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mStartTopBarAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
@@ -6719,14 +8251,16 @@
     goto :goto_3
 
     :cond_4
-    const v2, 0x7f0b0489
+    const v2, 0x7f0b0415
 
+    .line 8
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v3
 
     if-ne v2, v3, :cond_6
 
+    .line 9
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object p0
@@ -6739,14 +8273,16 @@
 
     return-void
 
+    .line 10
     :cond_5
-    invoke-virtual {v0}, Lw6/p2;->e()Landroid/view/View$OnClickListener;
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/k4;->e()Landroid/view/View$OnClickListener;
 
     move-result-object p0
 
     if-eqz p0, :cond_8
 
-    invoke-virtual {v0}, Lw6/p2;->e()Landroid/view/View$OnClickListener;
+    .line 11
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/k4;->e()Landroid/view/View$OnClickListener;
 
     move-result-object p0
 
@@ -6754,43 +8290,50 @@
 
     goto :goto_2
 
+    .line 12
     :cond_6
-    invoke-virtual {v0}, Lw6/p2;->e()Landroid/view/View$OnClickListener;
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/k4;->e()Landroid/view/View$OnClickListener;
 
     move-result-object p0
 
     if-eqz p0, :cond_7
 
-    invoke-virtual {v0, v1}, Lw6/p2;->k(Z)V
+    .line 13
+    invoke-virtual {v0, v1}, Ld/d/a/u6/a5/q/k4;->k(Z)V
 
-    invoke-virtual {v0}, Lw6/p2;->e()Landroid/view/View$OnClickListener;
+    .line 14
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/k4;->e()Landroid/view/View$OnClickListener;
 
     move-result-object p0
 
     invoke-interface {p0, p1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
 
+    .line 15
     :cond_7
-    invoke-static {}, Lv8/g3;->impl2()Lv8/g3;
+    invoke-static {}, Ld/d/a/m7/g/e3;->impl2()Ld/d/a/m7/g/e3;
 
     move-result-object p0
 
     if-eqz p0, :cond_8
 
-    invoke-interface {p0}, Ly8/a;->isShowing()Z
+    .line 16
+    invoke-interface {p0}, Ld/d/a/m7/g/s3/a;->isShowing()Z
 
     move-result p1
 
     if-eqz p1, :cond_8
 
-    invoke-interface {p0}, Lv8/g3;->refreshTopMenu()V
+    .line 17
+    invoke-interface {p0}, Ld/d/a/m7/g/e3;->refreshTopMenu()V
 
+    .line 18
     :cond_8
     :goto_2
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lid/b;->j9()Z
+    invoke-virtual {p0}, Ld/k/a/b;->X8()Z
 
     move-result p0
 
@@ -6798,82 +8341,99 @@
 
     const-string p0, "top_menu"
 
-    invoke-static {p0}, Lk9/a;->R1(Ljava/lang/String;)V
+    .line 19
+    invoke-static {p0}, Ld/d/a/v7/f;->N1(Ljava/lang/String;)V
 
     :cond_9
     return-void
 
     :cond_a
     :goto_3
-    const-string p0, "TopBar onClick: strikethrough showing"
+    new-array p0, v2, [Ljava/lang/Object;
 
-    new-array p1, v2, [Ljava/lang/Object;
+    const-string p1, "TopBar onClick: strikethrough showing"
 
-    invoke-static {v5, p0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 20
+    invoke-static {v5, p1, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 .end method
 
 .method public onCvClick(Landroid/view/View;)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "view"
+        }
+    .end annotation
 
     const-string v0, "FragmentMainTopBar"
 
     const-string v1, "onCvClick"
 
+    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lg2/b;->g()Lj2/b1;
+    .line 2
+    invoke-static {}, Ld/d/a/l6/b;->g()Ld/d/a/l6/e/j/a1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lj2/b1;->t()Lj2/e;
+    invoke-virtual {v0}, Ld/d/a/l6/e/j/a1;->t()Ld/d/a/l6/e/j/n;
 
     move-result-object v0
 
+    .line 3
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v0, v1}, Lj2/e;->i(I)Z
+    invoke-virtual {v0, v1}, Ld/d/a/l6/e/j/n;->i(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
+    .line 4
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getContext()Landroid/content/Context;
 
     move-result-object p0
 
-    invoke-virtual {v0, p0}, Lj2/e;->getDisableReasonString(Landroid/content/Context;)Ljava/lang/String;
+    invoke-virtual {v0, p0}, Ld/d/a/l6/e/j/n;->getDisableReasonString(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    invoke-static {}, Lv8/y2;->impl()Ljava/util/Optional;
+    .line 5
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl()Ljava/util/Optional;
 
     move-result-object p1
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/top/p0;
+    new-instance v0, Ld/d/b/x5/a/b/b/m/t0;
 
-    invoke-direct {v0, p0}, Lcom/android/camera2/compat/theme/custom/mm/top/p0;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Ld/d/b/x5/a/b/b/m/t0;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {p1, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
     :cond_0
     return-void
 
+    .line 6
     :cond_1
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v0, v1}, Lj2/e;->c(I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ld/d/a/l6/e/j/n;->c(I)Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_4
 
+    .line 7
     iget v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v0, v2}, Lj2/e;->getComponentValue(I)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Ld/d/a/l6/e/j/n;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -6885,22 +8445,25 @@
 
     goto :goto_0
 
+    .line 8
     :cond_2
     iget v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v0, v2, v1}, Lj2/e;->setComponentValue(ILjava/lang/String;)V
+    invoke-virtual {v0, v2, v1}, Ld/d/a/l6/e/j/n;->setComponentValue(ILjava/lang/String;)V
 
-    invoke-static {}, Lv8/z;->impl()Ljava/util/Optional;
+    .line 9
+    invoke-static {}, Ld/d/a/m7/g/c0;->impl()Ljava/util/Optional;
 
     move-result-object v2
 
-    new-instance v3, Lcom/android/camera2/compat/theme/custom/mm/top/q0;
+    new-instance v3, Ld/d/b/x5/a/b/b/m/r0;
 
-    invoke-direct {v3, v1}, Lcom/android/camera2/compat/theme/custom/mm/top/q0;-><init>(Ljava/lang/String;)V
+    invoke-direct {v3, v1}, Ld/d/b/x5/a/b/b/m/r0;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v2, v3}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    invoke-static {}, Lcom/android/camera/a6;->u2()Z
+    .line 10
+    invoke-static {}, Ld/d/a/z5;->k2()Z
 
     move-result v2
 
@@ -6908,16 +8471,18 @@
 
     if-eqz p1, :cond_3
 
-    new-instance v2, Lcom/android/camera2/compat/theme/custom/mm/top/r0;
+    .line 11
+    new-instance v2, Ld/d/b/x5/a/b/b/m/h0;
 
-    invoke-direct {v2, p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/r0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Landroid/view/View;)V
+    invoke-direct {v2, p0, p1}, Ld/d/b/x5/a/b/b/m/h0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Landroid/view/View;)V
 
     const-wide/16 v3, 0x190
 
     invoke-virtual {p1, v2, v3, v4}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
 
+    .line 12
     :cond_3
-    invoke-static {}, Lv8/y2;->impl2()Lv8/y2;
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl2()Ld/d/a/m7/g/a3;
 
     move-result-object p0
 
@@ -6933,15 +8498,17 @@
 
     aput v2, p1, v3
 
-    invoke-interface {p0, p1}, Lv8/y2;->updateConfigItem([I)V
+    .line 13
+    invoke-interface {p0, p1}, Ld/d/a/m7/g/a3;->updateConfigItem([I)V
 
-    const-string p1, "cvtype"
+    .line 14
+    invoke-virtual {v0, v1}, Ld/d/a/l6/e/j/n;->h(Ljava/lang/String;)I
 
-    invoke-virtual {v0, v1}, Lj2/e;->h(Ljava/lang/String;)I
+    move-result p1
 
-    move-result v0
+    const-string v0, "cvtype"
 
-    invoke-interface {p0, p1, v3, v0}, Lv8/y2;->alertTopBarOperationTip(Ljava/lang/String;II)V
+    invoke-interface {p0, v0, v3, p1}, Ld/d/a/m7/g/a3;->alertTopBarOperationTip(Ljava/lang/String;II)V
 
     :cond_4
     :goto_0
@@ -6950,47 +8517,63 @@
 
 .method public onEisProClick(Landroid/view/View;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "view"
+        }
+    .end annotation
 
     const-string p1, "FragmentMainTopBar"
 
     const-string v0, "onEisProClick"
 
+    .line 1
     invoke-static {p1, v0}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    .line 2
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lm2/h1;->T()Lm2/g0;
+    invoke-virtual {p1}, Ld/d/a/l6/e/m/g1;->M()Ld/d/a/l6/e/m/k0;
 
     move-result-object p1
 
+    .line 3
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {p1, v0}, Lm2/g0;->getComponentValue(I)Ljava/lang/String;
+    invoke-virtual {p1, v0}, Ld/d/a/l6/e/m/k0;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 4
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
     const-string v2, "off"
 
-    invoke-virtual {p1, v1, v2}, Lcom/android/camera/data/data/b;->setComponentValue(ILjava/lang/String;)V
+    invoke-virtual {p1, v1, v2}, Ld/d/a/l6/e/b;->setComponentValue(ILjava/lang/String;)V
 
+    .line 5
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-static {p0, v2}, Lk9/a;->i3(ILjava/lang/String;)V
+    invoke-static {p0, v2}, Ld/d/a/v7/f;->e3(ILjava/lang/String;)V
 
-    invoke-static {}, Lv8/z;->impl2()Lv8/z;
+    .line 6
+    invoke-static {}, Ld/d/a/m7/g/c0;->impl2()Ld/d/a/m7/g/c0;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    invoke-interface {p0, v2}, Lv8/z;->w6(Ljava/lang/String;)V
+    .line 7
+    invoke-interface {p0, v2}, Ld/d/a/m7/g/c0;->n6(Ljava/lang/String;)V
 
+    .line 8
     :cond_0
-    invoke-static {}, Lv8/y2;->impl2()Lv8/y2;
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl2()Ld/d/a/m7/g/a3;
 
     move-result-object p0
 
@@ -6998,13 +8581,14 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {p1, v0}, Lm2/g0;->i(Ljava/lang/String;)I
+    .line 9
+    invoke-virtual {p1, v0}, Ld/d/a/l6/e/m/k0;->i(Ljava/lang/String;)I
 
     move-result p1
 
     const-string v0, "super_eis_pro"
 
-    invoke-interface {p0, v0, v1, p1}, Lv8/y2;->alertTopBarOperationTip(Ljava/lang/String;II)V
+    invoke-interface {p0, v0, v1, p1}, Ld/d/a/m7/g/a3;->alertTopBarOperationTip(Ljava/lang/String;II)V
 
     :cond_1
     return-void
@@ -7012,75 +8596,91 @@
 
 .method public onFlashClick(Landroid/view/View;)V
     .locals 12
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
-    const-string v0, "onFlashClick"
+    const-string v0, "FragmentMainTopBar"
 
-    const-string v1, "FragmentMainTopBar"
+    const-string v1, "onFlashClick"
 
-    invoke-static {v1, v0}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
+    .line 1
+    invoke-static {v0, v1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-object v0, p1
+    .line 2
+    move-object v1, p1
 
-    check-cast v0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughImageView;
+    check-cast v1, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughImageView;
 
-    invoke-virtual {v0}, Lcom/airbnb/lottie/LottieAnimationView;->isAnimating()Z
+    invoke-virtual {v1}, Lcom/airbnb/lottie/LottieAnimationView;->isAnimating()Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
     return-void
 
+    .line 3
     :cond_0
-    invoke-static {}, Lg2/b;->n()Lr2/a;
+    invoke-static {}, Ld/d/a/l6/b;->n()Ld/d/a/l6/g/a;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-interface {v0}, Lr2/a;->f()Lr2/a$b;
+    invoke-interface {v1}, Ld/d/a/l6/g/a;->e()Ld/d/a/l6/g/a$b;
 
-    move-result-object v0
+    move-result-object v1
 
-    check-cast v0, Lj2/b1;
+    check-cast v1, Ld/d/a/l6/e/j/a1;
 
-    invoke-virtual {v0}, Lj2/b1;->N()Lj2/h;
+    .line 4
+    invoke-virtual {v1}, Ld/d/a/l6/e/j/a1;->N()Ld/d/a/l6/e/j/p;
 
     move-result-object v2
 
+    .line 5
     iget v3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v2, v3}, Lj2/h;->v(I)Z
+    invoke-virtual {v2, v3}, Ld/d/a/l6/e/j/p;->u(I)Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    invoke-virtual {v2}, Lj2/h;->getDisableReasonString()I
+    .line 6
+    invoke-virtual {v2}, Ld/d/a/l6/e/j/p;->getDisableReasonString()I
 
     move-result p0
 
     if-eqz p0, :cond_1
 
-    invoke-static {}, Lv8/y2;->impl()Ljava/util/Optional;
+    .line 7
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl()Ljava/util/Optional;
 
     move-result-object p1
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/top/t0;
+    new-instance v0, Ld/d/b/x5/a/b/b/m/x;
 
-    invoke-direct {v0, p0}, Lcom/android/camera2/compat/theme/custom/mm/top/t0;-><init>(I)V
+    invoke-direct {v0, p0}, Ld/d/b/x5/a/b/b/m/x;-><init>(I)V
 
     invoke-virtual {p1, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
     :cond_1
     return-void
 
+    .line 8
     :cond_2
-    invoke-virtual {v2}, Lcom/android/camera/data/data/b;->isEmpty()Z
+    invoke-virtual {v2}, Ld/d/a/l6/e/b;->isEmpty()Z
 
     move-result v3
 
     if-nez v3, :cond_e
 
-    invoke-virtual {v2}, Lj2/h;->getItems()Ljava/util/List;
+    invoke-virtual {v2}, Ld/d/a/l6/e/j/p;->getItems()Ljava/util/List;
 
     move-result-object v3
 
@@ -7094,10 +8694,11 @@
 
     goto/16 :goto_1
 
+    .line 9
     :cond_3
     iget v3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v2, v3}, Lj2/h;->getComponentValue(I)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Ld/d/a/l6/e/j/p;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -7109,26 +8710,29 @@
 
     if-eqz v3, :cond_4
 
+    .line 10
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p0
 
-    const p1, 0x7f140178
+    const p1, 0x7f13016d
 
-    invoke-static {p0, p1}, Lcom/android/camera/q5;->c(Landroid/content/Context;I)V
+    invoke-static {p0, p1}, Ld/d/a/x5;->c(Landroid/content/Context;I)V
 
     return-void
 
     :cond_4
-    const-string v3, "flash_out_button"
+    const/4 v3, 0x0
 
-    const/4 v4, 0x0
+    const-string v4, "attr_feature_name"
 
-    const-string v5, "attr_feature_name"
+    const-string v5, "flash_out_button"
 
-    invoke-static {v5, v3, v4}, Lk9/d;->a(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;)V
+    .line 11
+    invoke-static {v4, v5, v3}, Ld/d/a/v7/i;->a(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v2}, Lj2/h;->disableUpdate()Z
+    .line 12
+    invoke-virtual {v2}, Ld/d/a/l6/e/j/p;->disableUpdate()Z
 
     move-result v3
 
@@ -7136,30 +8740,35 @@
 
     if-nez v3, :cond_c
 
+    .line 13
     iget v3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v2, v3}, Lj2/h;->getComponentValue(I)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Ld/d/a/l6/e/j/p;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v3
 
+    .line 14
     iget v5, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v2, v5}, Lj2/h;->g(I)Ljava/lang/String;
+    invoke-virtual {v2, v5}, Ld/d/a/l6/e/j/p;->f(I)Ljava/lang/String;
 
     move-result-object v5
 
+    .line 15
     iget v6, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v2, v6, v5}, Lj2/h;->setComponentValue(ILjava/lang/String;)V
+    invoke-virtual {v2, v6, v5}, Ld/d/a/l6/e/j/p;->setComponentValue(ILjava/lang/String;)V
 
-    invoke-virtual {v2}, Lj2/h;->getDisplayTitleString()I
+    .line 16
+    invoke-virtual {v2}, Ld/d/a/l6/e/j/p;->getDisplayTitleString()I
 
     move-result v6
 
-    const v7, 0x7f1408d8
+    const v7, 0x7f130852
 
     if-ne v6, v7, :cond_6
 
+    .line 17
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v6
@@ -7168,6 +8777,7 @@
 
     if-eqz v6, :cond_5
 
+    .line 18
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v6
@@ -7176,8 +8786,9 @@
 
     const/4 v7, -0x1
 
-    invoke-virtual {v6, v7}, Lcom/android/camera/ActivityBase;->Bj(I)V
+    invoke-virtual {v6, v7}, Lcom/android/camera/ActivityBase;->ci(I)V
 
+    .line 19
     :cond_5
     invoke-virtual {v3, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -7185,54 +8796,61 @@
 
     if-nez v6, :cond_6
 
-    invoke-static {}, Lf2/a;->e()Lf2/a;
+    .line 20
+    invoke-static {}, Ld/d/a/k6/c;->e()Ld/d/a/k6/c;
 
     move-result-object v6
 
     iget v7, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v6, v7, v4, v4, v4}, Lf2/a;->h(IZZZ)V
+    invoke-virtual {v6, v7, v4, v4, v4}, Ld/d/a/k6/c;->h(IZZZ)V
 
+    .line 21
     :cond_6
     iget v6, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-static {v6, v5}, Lk9/a;->i1(ILjava/lang/String;)V
+    invoke-static {v6, v5}, Ld/d/a/v7/f;->e1(ILjava/lang/String;)V
 
+    .line 22
     iget-object v6, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mFragmentMiShotTopAlert:Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;
 
     if-eqz v6, :cond_7
 
     const/16 v7, 0xc1
 
+    .line 23
     invoke-virtual {v6, v7}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;->updateConfigItem(I)V
 
+    .line 24
     :cond_7
     iget v6, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v0, v6, v3, v5}, Lj2/b1;->k0(ILjava/lang/String;Ljava/lang/String;)Z
+    invoke-virtual {v1, v6, v3, v5}, Ld/d/a/l6/e/j/a1;->k0(ILjava/lang/String;Ljava/lang/String;)Z
 
     move-result v6
 
     if-eqz v6, :cond_a
 
-    invoke-virtual {v0}, Lj2/b1;->N()Lj2/h;
+    .line 25
+    invoke-virtual {v1}, Ld/d/a/l6/e/j/a1;->N()Ld/d/a/l6/e/j/p;
 
     move-result-object v7
 
-    invoke-virtual {v0}, Lj2/b1;->N()Lj2/h;
+    invoke-virtual {v1}, Ld/d/a/l6/e/j/a1;->N()Ld/d/a/l6/e/j/p;
 
     move-result-object v8
 
     iget v9, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v8, v9}, Lj2/h;->getKey(I)Ljava/lang/String;
+    invoke-virtual {v8, v9}, Ld/d/a/l6/e/j/p;->getKey(I)Ljava/lang/String;
 
     move-result-object v8
 
-    invoke-virtual {v7, v8}, Lj2/h;->n(Ljava/lang/String;)[I
+    invoke-virtual {v7, v8}, Ld/d/a/l6/e/j/p;->m(Ljava/lang/String;)[I
 
     move-result-object v7
 
+    .line 26
     array-length v8, v7
 
     move v9, v4
@@ -7246,11 +8864,13 @@
 
     if-eq v10, v11, :cond_8
 
+    .line 27
     iget v11, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
     if-eq v10, v11, :cond_8
 
-    invoke-virtual {v0, v10, v3, v5}, Lj2/b1;->k0(ILjava/lang/String;Ljava/lang/String;)Z
+    .line 28
+    invoke-virtual {v1, v10, v3, v5}, Ld/d/a/l6/e/j/a1;->k0(ILjava/lang/String;Ljava/lang/String;)Z
 
     :cond_8
     add-int/lit8 v9, v9, 0x1
@@ -7258,34 +8878,38 @@
     goto :goto_0
 
     :cond_9
-    const/4 v0, 0x1
+    const/4 v1, 0x1
 
-    new-array v0, v0, [I
+    new-array v1, v1, [I
 
     const/16 v7, 0xc2
 
-    aput v7, v0, v4
+    aput v7, v1, v4
 
-    invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->updateConfigItem([I)V
+    .line 29
+    invoke-virtual {p0, v1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->updateConfigItem([I)V
 
     :cond_a
-    const-string v0, "flash change"
+    new-array v1, v4, [Ljava/lang/Object;
 
-    new-array v7, v4, [Ljava/lang/Object;
+    const-string v7, "flash change"
 
-    invoke-static {v1, v0, v7}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 30
+    invoke-static {v0, v7, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {}, Lv8/z;->impl()Ljava/util/Optional;
+    .line 31
+    invoke-static {}, Ld/d/a/m7/g/c0;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/top/s;
+    new-instance v1, Ld/d/b/x5/a/b/b/m/g0;
 
-    invoke-direct {v1, v3, v5, v6}, Lcom/android/camera2/compat/theme/custom/mm/top/s;-><init>(Ljava/lang/String;Ljava/lang/String;Z)V
+    invoke-direct {v1, v3, v5, v6}, Ld/d/b/x5/a/b/b/m/g0;-><init>(Ljava/lang/String;Ljava/lang/String;Z)V
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    invoke-static {}, Lcom/android/camera/a6;->u2()Z
+    .line 32
+    invoke-static {}, Ld/d/a/z5;->k2()Z
 
     move-result v0
 
@@ -7293,56 +8917,63 @@
 
     if-eqz p1, :cond_b
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/top/t;
+    .line 33
+    new-instance v0, Ld/d/b/x5/a/b/b/m/p0;
 
-    invoke-direct {v0, p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/t;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Landroid/view/View;)V
+    invoke-direct {v0, p0, p1}, Ld/d/b/x5/a/b/b/m/p0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Landroid/view/View;)V
 
     const-wide/16 v6, 0x190
 
     invoke-virtual {p1, v0, v6, v7}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
 
+    .line 34
     :cond_b
-    invoke-static {}, Lv8/y2;->impl2()Lv8/y2;
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl2()Ld/d/a/m7/g/a3;
 
     move-result-object p1
 
     if-eqz p1, :cond_e
 
+    .line 35
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v2, v0}, Lj2/h;->p(I)I
+    invoke-virtual {v2, v0}, Ld/d/a/l6/e/j/p;->o(I)I
 
     move-result v0
 
     const-string v1, "flash"
 
-    invoke-interface {p1, v1, v4, v0}, Lv8/y2;->alertTopBarOperationTip(Ljava/lang/String;II)V
+    invoke-interface {p1, v1, v4, v0}, Ld/d/a/m7/g/a3;->alertTopBarOperationTip(Ljava/lang/String;II)V
 
+    .line 36
     invoke-virtual {p0, v5}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->recheckFlashFrontAdjust(Ljava/lang/String;)V
 
     goto :goto_1
 
+    .line 37
     :cond_c
-    invoke-virtual {v2}, Lj2/h;->getDisableReasonString()I
+    invoke-virtual {v2}, Ld/d/a/l6/e/j/p;->getDisableReasonString()I
 
     move-result p1
 
     if-eqz p1, :cond_d
 
+    .line 38
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p0
 
-    invoke-static {p0, p1}, Lcom/android/camera/q5;->c(Landroid/content/Context;I)V
+    invoke-static {p0, p1}, Ld/d/a/x5;->c(Landroid/content/Context;I)V
 
     :cond_d
-    const-string p0, "ignore click flash for disable update"
+    new-array p0, v4, [Ljava/lang/Object;
 
-    new-array p1, v4, [Ljava/lang/Object;
+    const-string p1, "FragmentTopConfig"
 
-    const-string v0, "FragmentTopConfig"
+    const-string v0, "ignore click flash for disable update"
 
-    invoke-static {v0, p0, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 39
+    invoke-static {p1, v0, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :cond_e
     :goto_1
@@ -7351,28 +8982,40 @@
 
 .method public onHdrClick(Landroid/view/View;)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
     const-string v0, "FragmentMainTopBar"
 
     const-string v1, "onHdrClick"
 
+    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lg2/b;->g()Lj2/b1;
+    .line 2
+    invoke-static {}, Ld/d/a/l6/b;->g()Ld/d/a/l6/e/j/a1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lj2/b1;->O()Lj2/j;
+    .line 3
+    invoke-virtual {v0}, Ld/d/a/l6/e/j/a1;->O()Ld/d/a/l6/e/j/r;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/camera/data/data/b;->isEmpty()Z
+    .line 4
+    invoke-virtual {v1}, Ld/d/a/l6/e/b;->isEmpty()Z
 
     move-result v2
 
     if-nez v2, :cond_2
 
-    invoke-virtual {v1}, Lj2/j;->getItems()Ljava/util/List;
+    invoke-virtual {v1}, Ld/d/a/l6/e/j/r;->getItems()Ljava/util/List;
 
     move-result-object v2
 
@@ -7387,27 +9030,31 @@
     goto :goto_0
 
     :cond_0
-    const-string v2, "hdr_out_button"
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    const-string v3, "attr_feature_name"
 
-    const-string v4, "attr_feature_name"
+    const-string v4, "hdr_out_button"
 
-    invoke-static {v4, v2, v3}, Lk9/d;->a(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;)V
+    .line 5
+    invoke-static {v3, v4, v2}, Ld/d/a/v7/i;->a(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 6
     iget v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v1, v2}, Lj2/j;->d(I)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Ld/d/a/l6/e/j/r;->d(I)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 7
     iget v3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v1, v3, v2}, Lj2/j;->setComponentValue(ILjava/lang/String;)V
+    invoke-virtual {v1, v3, v2}, Ld/d/a/l6/e/j/r;->setComponentValue(ILjava/lang/String;)V
 
+    .line 8
     iget v3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v0, v3, v2}, Lj2/b1;->j0(ILjava/lang/String;)Z
+    invoke-virtual {v0, v3, v2}, Ld/d/a/l6/e/j/a1;->j0(ILjava/lang/String;)Z
 
     move-result v0
 
@@ -7423,30 +9070,34 @@
 
     aput v4, v0, v3
 
+    .line 9
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->updateConfigItem([I)V
 
+    .line 10
     :cond_1
-    invoke-static {}, Lv8/z;->impl()Ljava/util/Optional;
+    invoke-static {}, Ld/d/a/m7/g/c0;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v3, Lcom/android/camera2/compat/theme/custom/mm/top/w;
+    new-instance v3, Ld/d/b/x5/a/b/b/m/j0;
 
-    invoke-direct {v3, v2}, Lcom/android/camera2/compat/theme/custom/mm/top/w;-><init>(Ljava/lang/String;)V
+    invoke-direct {v3, v2}, Ld/d/b/x5/a/b/b/m/j0;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0, v3}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    invoke-static {}, Lv8/y2;->impl()Ljava/util/Optional;
+    .line 11
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v2, Lcom/android/camera2/compat/theme/custom/mm/top/x;
+    new-instance v2, Ld/d/b/x5/a/b/b/m/q0;
 
-    invoke-direct {v2, p0, v1}, Lcom/android/camera2/compat/theme/custom/mm/top/x;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Lj2/j;)V
+    invoke-direct {v2, p0, v1}, Ld/d/b/x5/a/b/b/m/q0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Ld/d/a/l6/e/j/r;)V
 
     invoke-virtual {v0, v2}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    invoke-static {}, Lcom/android/camera/a6;->u2()Z
+    .line 12
+    invoke-static {}, Ld/d/a/z5;->k2()Z
 
     move-result v0
 
@@ -7454,9 +9105,10 @@
 
     if-eqz p1, :cond_2
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/top/y;
+    .line 13
+    new-instance v0, Ld/d/b/x5/a/b/b/m/z;
 
-    invoke-direct {v0, p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/y;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Landroid/view/View;)V
+    invoke-direct {v0, p0, p1}, Ld/d/b/x5/a/b/b/m/z;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Landroid/view/View;)V
 
     const-wide/16 v1, 0x190
 
@@ -7469,22 +9121,33 @@
 
 .method public onMacroClick(Landroid/view/View;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
     const-string p1, "FragmentMainTopBar"
 
     const-string v0, "onMacroClick"
 
+    .line 1
     invoke-static {p1, v0}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    .line 2
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lm2/h1;->g0()Lm2/s0;
+    invoke-virtual {p1}, Ld/d/a/l6/e/m/g1;->Y()Ld/d/a/l6/e/m/v0;
 
     move-result-object p1
 
-    invoke-static {}, Lv8/z;->impl2()Lv8/z;
+    .line 3
+    invoke-static {}, Ld/d/a/m7/g/c0;->impl2()Ld/d/a/m7/g/c0;
 
     move-result-object v0
 
@@ -7492,51 +9155,57 @@
 
     const/16 v1, 0xff
 
-    invoke-interface {v0, v1}, Lv8/z;->b4(I)V
+    .line 4
+    invoke-interface {v0, v1}, Ld/d/a/m7/g/c0;->X3(I)V
 
+    .line 5
     :cond_0
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-static {v0}, Lcom/android/camera/v2;->A4(I)Z
+    invoke-static {v0}, Ld/d/a/d4;->y4(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f140c22
+    const v0, 0x7f130b9c
 
     goto :goto_0
 
     :cond_1
-    const v0, 0x7f140c21
+    const v0, 0x7f130b9b
 
     :goto_0
     if-eqz p1, :cond_2
 
+    .line 6
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {p1, p0}, Lm2/s0;->l(I)Z
+    invoke-virtual {p1, p0}, Ld/d/a/l6/e/m/v0;->l(I)Z
 
     move-result p0
 
     if-eqz p0, :cond_2
 
-    invoke-virtual {p1}, Lm2/s0;->j()I
+    .line 7
+    invoke-virtual {p1}, Ld/d/a/l6/e/m/v0;->j()I
 
     move-result v0
 
+    .line 8
     :cond_2
-    invoke-static {}, Lv8/y2;->impl2()Lv8/y2;
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl2()Ld/d/a/m7/g/a3;
 
     move-result-object p0
 
     if-eqz p0, :cond_3
 
-    const-string p1, "macro"
+    const/4 p1, 0x0
 
-    const/4 v1, 0x0
+    const-string v1, "macro"
 
-    invoke-interface {p0, p1, v1, v0}, Lv8/y2;->alertTopBarOperationTip(Ljava/lang/String;II)V
+    .line 9
+    invoke-interface {p0, v1, p1, v0}, Ld/d/a/m7/g/a3;->alertTopBarOperationTip(Ljava/lang/String;II)V
 
     :cond_3
     return-void
@@ -7544,27 +9213,39 @@
 
 .method public onMiLiveVideoQualityClick(Landroid/view/View;)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
-    invoke-static {}, Lg2/b;->i()Lk2/g;
+    .line 1
+    invoke-static {}, Ld/d/a/l6/b;->i()Ld/d/a/l6/e/k/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lk2/g;->x()Lk2/e;
+    invoke-virtual {v0}, Ld/d/a/l6/e/k/d;->u()Ld/d/a/l6/e/k/b;
 
     move-result-object v0
 
+    .line 2
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/data/data/b;->getComponentValue(I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ld/d/a/l6/e/b;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 3
     iget v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v0, v2}, Lk2/e;->b(I)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Ld/d/a/l6/e/k/b;->b(I)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 4
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -7589,6 +9270,7 @@
 
     invoke-static {v3, v2}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -7597,8 +9279,9 @@
 
     return-void
 
+    .line 6
     :cond_0
-    invoke-static {}, Lv8/z;->impl2()Lv8/z;
+    invoke-static {}, Ld/d/a/m7/g/c0;->impl2()Ld/d/a/m7/g/c0;
 
     move-result-object v1
 
@@ -7606,10 +9289,12 @@
 
     const/16 v2, 0xbb
 
-    invoke-interface {v1, v2, v0}, Lv8/z;->u1(ILjava/lang/String;)V
+    .line 7
+    invoke-interface {v1, v2, v0}, Ld/d/a/m7/g/c0;->w1(ILjava/lang/String;)V
 
+    .line 8
     :cond_1
-    invoke-static {}, Lcom/android/camera/a6;->u2()Z
+    invoke-static {}, Ld/d/a/z5;->k2()Z
 
     move-result v0
 
@@ -7617,9 +9302,10 @@
 
     if-eqz p1, :cond_2
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/top/h0;
+    .line 9
+    new-instance v0, Ld/d/b/x5/a/b/b/m/n0;
 
-    invoke-direct {v0, p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/h0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Landroid/view/View;)V
+    invoke-direct {v0, p0, p1}, Ld/d/b/x5/a/b/b/m/n0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Landroid/view/View;)V
 
     const-wide/16 v1, 0x190
 
@@ -7631,28 +9317,39 @@
 
 .method public onRawClick(Landroid/view/View;)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "view"
+        }
+    .end annotation
 
     const-string p1, "FragmentMainTopBar"
 
     const-string v0, "onRawClick"
 
+    .line 1
     invoke-static {p1, v0}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lg2/b;->g()Lj2/b1;
+    .line 2
+    invoke-static {}, Ld/d/a/l6/b;->g()Ld/d/a/l6/e/j/a1;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lj2/b1;->C()Lj2/r;
+    invoke-virtual {p1}, Ld/d/a/l6/e/j/a1;->C()Ld/d/a/l6/e/j/z;
 
     move-result-object p1
 
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {p1, p0}, Lj2/r;->f(I)Z
+    invoke-virtual {p1, p0}, Ld/d/a/l6/e/j/z;->f(I)Z
 
     move-result p0
 
-    invoke-static {}, Lv8/z;->impl2()Lv8/z;
+    .line 3
+    invoke-static {}, Ld/d/a/m7/g/c0;->impl2()Ld/d/a/m7/g/c0;
 
     move-result-object p1
 
@@ -7660,15 +9357,18 @@
 
     const/16 v0, 0xed
 
-    invoke-interface {p1, v0}, Lv8/z;->b4(I)V
+    .line 4
+    invoke-interface {p1, v0}, Ld/d/a/m7/g/c0;->X3(I)V
 
+    .line 5
     :cond_0
-    invoke-static {}, Lv8/y2;->impl2()Lv8/y2;
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl2()Ld/d/a/m7/g/a3;
 
     move-result-object p1
 
     if-eqz p1, :cond_3
 
+    .line 6
     invoke-static {}, Lcom/android/camera2/compat/theme/MiThemeCompat;->getOperationNewTopMenu()Lcom/android/camera2/compat/theme/common/MiThemeOperationNewTopMenuInterface;
 
     move-result-object v0
@@ -7677,7 +9377,7 @@
 
     move-result v0
 
-    const v1, 0x7f140c25
+    const v1, 0x7f130b9f
 
     const/4 v2, 0x0
 
@@ -7687,15 +9387,17 @@
 
     if-eqz p0, :cond_1
 
-    const v1, 0x7f140c31
+    const v1, 0x7f130bab
 
+    .line 7
     :cond_1
-    invoke-interface {p1, v3, v2, v1}, Lv8/y2;->alertTopBarOperationTip(Ljava/lang/String;II)V
+    invoke-interface {p1, v3, v2, v1}, Ld/d/a/m7/g/a3;->alertTopBarOperationTip(Ljava/lang/String;II)V
 
     goto :goto_0
 
+    .line 8
     :cond_2
-    invoke-interface {p1, v3, v2, v1}, Lv8/y2;->alertTopBarOperationTip(Ljava/lang/String;II)V
+    invoke-interface {p1, v3, v2, v1}, Ld/d/a/m7/g/a3;->alertTopBarOperationTip(Ljava/lang/String;II)V
 
     :cond_3
     :goto_0
@@ -7704,32 +9406,44 @@
 
 .method public onSlowMotionVideoFpsClick(Landroid/view/View;)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
     const-string v0, "FragmentMainTopBar"
 
     const-string v1, "onSlowMotionVideoFpsClick"
 
+    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lg2/b;->g()Lj2/b1;
+    .line 2
+    invoke-static {}, Ld/d/a/l6/b;->g()Ld/d/a/l6/e/j/a1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lj2/b1;->D()Lj2/s;
+    invoke-virtual {v0}, Ld/d/a/l6/e/j/a1;->D()Ld/d/a/l6/e/j/a0;
 
     move-result-object v0
 
+    .line 3
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v0, v1}, Lj2/s;->b(I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ld/d/a/l6/e/j/a0;->b(I)Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_3
 
+    .line 4
     iget v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v0, v2}, Lj2/s;->getComponentValue(I)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Ld/d/a/l6/e/j/a0;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -7741,12 +9455,14 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     iget v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v0, v2, v1}, Lcom/android/camera/data/data/b;->setComponentValue(ILjava/lang/String;)V
+    invoke-virtual {v0, v2, v1}, Ld/d/a/l6/e/b;->setComponentValue(ILjava/lang/String;)V
 
-    invoke-static {}, Lv8/y2;->impl2()Lv8/y2;
+    .line 6
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl2()Ld/d/a/m7/g/a3;
 
     move-result-object v1
 
@@ -7762,27 +9478,31 @@
 
     aput v4, v2, v3
 
-    invoke-interface {v1, v2}, Lv8/y2;->updateConfigItem([I)V
+    .line 7
+    invoke-interface {v1, v2}, Ld/d/a/m7/g/a3;->updateConfigItem([I)V
 
+    .line 8
     :cond_1
-    invoke-static {}, Lv8/z;->impl2()Lv8/z;
+    invoke-static {}, Ld/d/a/m7/g/c0;->impl2()Ld/d/a/m7/g/c0;
 
     move-result-object v1
 
     if-eqz v1, :cond_2
 
-    iget v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
+    const/16 v2, 0xcc
 
-    invoke-virtual {v0, v2}, Lj2/s;->getComponentValue(I)Ljava/lang/String;
+    .line 9
+    iget v3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
+
+    invoke-virtual {v0, v3}, Ld/d/a/l6/e/j/a0;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v0
 
-    const/16 v2, 0xcc
+    invoke-interface {v1, v2, v0}, Ld/d/a/m7/g/c0;->w1(ILjava/lang/String;)V
 
-    invoke-interface {v1, v2, v0}, Lv8/z;->u1(ILjava/lang/String;)V
-
+    .line 10
     :cond_2
-    invoke-static {}, Lcom/android/camera/a6;->u2()Z
+    invoke-static {}, Ld/d/a/z5;->k2()Z
 
     move-result v0
 
@@ -7790,9 +9510,10 @@
 
     if-eqz p1, :cond_3
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/top/l0;
+    .line 11
+    new-instance v0, Ld/d/b/x5/a/b/b/m/u;
 
-    invoke-direct {v0, p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/l0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Landroid/view/View;)V
+    invoke-direct {v0, p0, p1}, Ld/d/b/x5/a/b/b/m/u;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Landroid/view/View;)V
 
     const-wide/16 v1, 0x190
 
@@ -7805,32 +9526,44 @@
 
 .method public onSlowMotionVideoQualityClick(Landroid/view/View;)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
     const-string v0, "FragmentMainTopBar"
 
     const-string v1, "onSlowMotionVideoQualityClick"
 
+    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lg2/b;->g()Lj2/b1;
+    .line 2
+    invoke-static {}, Ld/d/a/l6/b;->g()Ld/d/a/l6/e/j/a1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lj2/b1;->E()Lj2/t;
+    invoke-virtual {v0}, Ld/d/a/l6/e/j/a1;->E()Ld/d/a/l6/e/j/b0;
 
     move-result-object v0
 
+    .line 3
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v0, v1}, Lj2/t;->b(I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ld/d/a/l6/e/j/b0;->b(I)Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_3
 
+    .line 4
     iget v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v0, v2}, Lj2/t;->getComponentValue(I)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Ld/d/a/l6/e/j/b0;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -7842,12 +9575,14 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     iget v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v0, v2, v1}, Lcom/android/camera/data/data/b;->setComponentValue(ILjava/lang/String;)V
+    invoke-virtual {v0, v2, v1}, Ld/d/a/l6/e/b;->setComponentValue(ILjava/lang/String;)V
 
-    invoke-static {}, Lv8/y2;->impl2()Lv8/y2;
+    .line 6
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl2()Ld/d/a/m7/g/a3;
 
     move-result-object v1
 
@@ -7863,25 +9598,29 @@
 
     aput v2, v3, v4
 
-    invoke-interface {v1, v3}, Lv8/y2;->updateConfigItem([I)V
+    .line 7
+    invoke-interface {v1, v3}, Ld/d/a/m7/g/a3;->updateConfigItem([I)V
 
+    .line 8
     :cond_1
-    invoke-static {}, Lv8/z;->impl2()Lv8/z;
+    invoke-static {}, Ld/d/a/m7/g/c0;->impl2()Ld/d/a/m7/g/c0;
 
     move-result-object v1
 
     if-eqz v1, :cond_2
 
+    .line 9
     iget v3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v0, v3}, Lj2/t;->getComponentValue(I)Ljava/lang/String;
+    invoke-virtual {v0, v3}, Ld/d/a/l6/e/j/b0;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {v1, v2, v0}, Lv8/z;->u1(ILjava/lang/String;)V
+    invoke-interface {v1, v2, v0}, Ld/d/a/m7/g/c0;->w1(ILjava/lang/String;)V
 
+    .line 10
     :cond_2
-    invoke-static {}, Lcom/android/camera/a6;->u2()Z
+    invoke-static {}, Ld/d/a/z5;->k2()Z
 
     move-result v0
 
@@ -7889,9 +9628,10 @@
 
     if-eqz p1, :cond_3
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/top/g0;
+    .line 11
+    new-instance v0, Ld/d/b/x5/a/b/b/m/d0;
 
-    invoke-direct {v0, p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/g0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Landroid/view/View;)V
+    invoke-direct {v0, p0, p1}, Ld/d/b/x5/a/b/b/m/d0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Landroid/view/View;)V
 
     const-wide/16 v1, 0x190
 
@@ -7905,19 +9645,23 @@
 .method public onStop()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mExtraMenuHideAnimator:Landroid/animation/ValueAnimator;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->removeAllListeners()V
 
     const/4 v0, 0x0
 
+    .line 3
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mExtraMenuHideAnimator:Landroid/animation/ValueAnimator;
 
     :cond_0
     const/4 v0, 0x0
 
+    .line 4
     iput-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mIsShowTopLyingDirectHint:Z
 
     return-void
@@ -7925,22 +9669,33 @@
 
 .method public onTimerClick(Landroid/view/View;)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "view"
+        }
+    .end annotation
 
     const-string p1, "FragmentMainTopBar"
 
     const-string v0, "onTimerClick"
 
+    .line 1
     invoke-static {p1, v0}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    .line 2
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lm2/h1;->o0()Lm2/d1;
+    invoke-virtual {p1}, Ld/d/a/l6/e/m/g1;->g0()Ld/d/a/l6/e/m/d1;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lm2/d1;->f()Z
+    .line 3
+    invoke-virtual {p1}, Ld/d/a/l6/e/m/d1;->f()Z
 
     move-result v0
 
@@ -7952,15 +9707,17 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {p1, v0}, Lm2/d1;->b(I)Ljava/lang/String;
+    invoke-virtual {p1, v0}, Ld/d/a/l6/e/m/d1;->b(I)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 5
     iget v4, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {p1, v4}, Lcom/android/camera/data/data/b;->getComponentValue(I)Ljava/lang/String;
+    invoke-virtual {p1, v4}, Ld/d/a/l6/e/b;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -7972,18 +9729,20 @@
 
     return-void
 
+    .line 6
     :cond_0
     iget v4, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {p1, v4, v0}, Lcom/android/camera/data/data/b;->setComponentValue(ILjava/lang/String;)V
+    invoke-virtual {p1, v4, v0}, Ld/d/a/l6/e/b;->setComponentValue(ILjava/lang/String;)V
 
-    invoke-static {}, Lv8/z;->impl()Ljava/util/Optional;
+    .line 7
+    invoke-static {}, Ld/d/a/m7/g/c0;->impl()Ljava/util/Optional;
 
     move-result-object p1
 
-    new-instance v4, Lcom/android/camera2/compat/theme/custom/mm/top/j0;
+    new-instance v4, Ld/d/b/x5/a/b/b/m/e0;
 
-    invoke-direct {v4, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/j0;-><init>(Ljava/lang/String;)V
+    invoke-direct {v4, v0}, Ld/d/b/x5/a/b/b/m/e0;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {p1, v4}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -7991,18 +9750,18 @@
 
     aput v1, p1, v3
 
+    .line 8
     invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->updateConfigItem([I)V
 
     goto :goto_0
 
+    .line 9
     :cond_1
-    invoke-static {}, Lv8/z;->impl()Ljava/util/Optional;
+    invoke-static {}, Ld/d/a/m7/g/c0;->impl()Ljava/util/Optional;
 
     move-result-object p1
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/top/k0;
-
-    invoke-direct {v0}, Lcom/android/camera2/compat/theme/custom/mm/top/k0;-><init>()V
+    sget-object v0, Ld/d/b/x5/a/b/b/m/w0;->c:Ld/d/b/x5/a/b/b/m/w0;
 
     invoke-virtual {p1, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -8010,13 +9769,15 @@
 
     aput v1, p1, v3
 
+    .line 10
     invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->updateConfigItem([I)V
 
-    const-string p1, "timer"
+    const p1, 0x7f130ba2
 
-    const v0, 0x7f140c28
+    const-string v0, "timer"
 
-    invoke-virtual {p0, p1, v3, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->alertTopBarOperationTip(Ljava/lang/String;II)V
+    .line 11
+    invoke-virtual {p0, v0, v3, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->alertTopBarOperationTip(Ljava/lang/String;II)V
 
     :goto_0
     return-void
@@ -8024,11 +9785,20 @@
 
 .method public onTopAnimClick(Landroid/view/View;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
     const-string p0, "FragmentMainTopBar"
 
     const-string p1, "onTopAnimClick"
 
+    .line 1
     invoke-static {p0, p1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -8036,27 +9806,39 @@
 
 .method public onVideoFpsClick(Landroid/view/View;)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
-    invoke-static {}, Lg2/b;->g()Lj2/b1;
+    .line 1
+    invoke-static {}, Ld/d/a/l6/b;->g()Ld/d/a/l6/e/j/a1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lj2/b1;->K()Lj2/x;
+    invoke-virtual {v0}, Ld/d/a/l6/e/j/a1;->K()Ld/d/a/l6/e/j/f0;
 
     move-result-object v0
 
+    .line 2
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v0, v1}, Lj2/x;->getComponentValue(I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ld/d/a/l6/e/j/f0;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 3
     iget v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v0, v2}, Lj2/x;->d(I)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Ld/d/a/l6/e/j/f0;->d(I)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 4
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -8081,6 +9863,7 @@
 
     invoke-static {v4, v3}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -8089,24 +9872,25 @@
 
     return-void
 
+    .line 6
     :cond_0
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-static {}, Lg2/b;->g()Lj2/b1;
+    invoke-static {}, Ld/d/a/l6/b;->g()Ld/d/a/l6/e/j/a1;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lj2/b1;->L()Lj2/y;
+    invoke-virtual {v3}, Ld/d/a/l6/e/j/a1;->L()Ld/d/a/l6/e/j/g0;
 
     move-result-object v3
 
     iget v4, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v3, v4}, Lj2/y;->getComponentValue(I)Ljava/lang/String;
+    invoke-virtual {v3, v4}, Ld/d/a/l6/e/j/g0;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v1, v3, v2}, Lcom/android/camera/v2;->q7(ILjava/lang/String;Ljava/lang/String;)Z
+    invoke-static {v1, v3, v2}, Ld/d/a/d4;->n7(ILjava/lang/String;Ljava/lang/String;)Z
 
     move-result v1
 
@@ -8116,26 +9900,32 @@
 
     const/16 v1, 0xa2
 
-    invoke-static {v3, v1}, Lcom/android/camera/v2;->x9(ZI)V
+    .line 7
+    invoke-static {v3, v1}, Ld/d/a/d4;->t9(ZI)V
 
+    .line 8
     :cond_1
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v0, v1, v2}, Lj2/x;->setComponentValue(ILjava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Ld/d/a/l6/e/j/f0;->setComponentValue(ILjava/lang/String;)V
 
+    .line 9
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v0, v1}, Lj2/x;->e(I)Ljava/lang/String;
+    .line 10
+    invoke-virtual {v0, v1}, Ld/d/a/l6/e/j/f0;->e(I)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "click"
+    const-string v1, "attr_video_fps"
 
-    const-string v4, "attr_video_fps"
+    const-string v4, "click"
 
-    invoke-static {v4, v0, v1}, Lk9/d;->a(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;)V
+    .line 11
+    invoke-static {v1, v0, v4}, Ld/d/a/v7/i;->a(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {}, Lv8/y2;->impl2()Lv8/y2;
+    .line 12
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl2()Ld/d/a/m7/g/a3;
 
     move-result-object v0
 
@@ -8149,20 +9939,23 @@
 
     aput v4, v1, v3
 
-    invoke-interface {v0, v1}, Lv8/y2;->updateConfigItem([I)V
+    .line 13
+    invoke-interface {v0, v1}, Ld/d/a/m7/g/a3;->updateConfigItem([I)V
 
+    .line 14
     :cond_2
-    invoke-static {}, Lv8/z;->impl()Ljava/util/Optional;
+    invoke-static {}, Ld/d/a/m7/g/c0;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/top/m0;
+    new-instance v1, Ld/d/b/x5/a/b/b/m/f0;
 
-    invoke-direct {v1, v2}, Lcom/android/camera2/compat/theme/custom/mm/top/m0;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Ld/d/b/x5/a/b/b/m/f0;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    invoke-static {}, Lcom/android/camera/a6;->u2()Z
+    .line 15
+    invoke-static {}, Ld/d/a/z5;->k2()Z
 
     move-result v0
 
@@ -8170,9 +9963,10 @@
 
     if-eqz p1, :cond_3
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/top/n0;
+    .line 16
+    new-instance v0, Ld/d/b/x5/a/b/b/m/l0;
 
-    invoke-direct {v0, p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/n0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Landroid/view/View;)V
+    invoke-direct {v0, p0, p1}, Ld/d/b/x5/a/b/b/m/l0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Landroid/view/View;)V
 
     const-wide/16 v1, 0x190
 
@@ -8184,27 +9978,39 @@
 
 .method public onVideoQualityClick(Landroid/view/View;)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
-    invoke-static {}, Lg2/b;->g()Lj2/b1;
+    .line 1
+    invoke-static {}, Ld/d/a/l6/b;->g()Ld/d/a/l6/e/j/a1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lj2/b1;->L()Lj2/y;
+    invoke-virtual {v0}, Ld/d/a/l6/e/j/a1;->L()Ld/d/a/l6/e/j/g0;
 
     move-result-object v0
 
+    .line 2
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v0, v1}, Lj2/y;->getComponentValue(I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ld/d/a/l6/e/j/g0;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 3
     iget v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v0, v2}, Lj2/y;->d(I)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Ld/d/a/l6/e/j/g0;->d(I)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 4
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -8229,6 +10035,7 @@
 
     invoke-static {v4, v3}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -8237,24 +10044,25 @@
 
     return-void
 
+    .line 6
     :cond_0
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-static {}, Lg2/b;->g()Lj2/b1;
+    invoke-static {}, Ld/d/a/l6/b;->g()Ld/d/a/l6/e/j/a1;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lj2/b1;->K()Lj2/x;
+    invoke-virtual {v3}, Ld/d/a/l6/e/j/a1;->K()Ld/d/a/l6/e/j/f0;
 
     move-result-object v3
 
     iget v4, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v3, v4}, Lj2/x;->getComponentValue(I)Ljava/lang/String;
+    invoke-virtual {v3, v4}, Ld/d/a/l6/e/j/f0;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v1, v2, v3}, Lcom/android/camera/v2;->q7(ILjava/lang/String;Ljava/lang/String;)Z
+    invoke-static {v1, v2, v3}, Ld/d/a/d4;->n7(ILjava/lang/String;Ljava/lang/String;)Z
 
     move-result v1
 
@@ -8264,26 +10072,32 @@
 
     const/16 v1, 0xa2
 
-    invoke-static {v3, v1}, Lcom/android/camera/v2;->x9(ZI)V
+    .line 7
+    invoke-static {v3, v1}, Ld/d/a/d4;->t9(ZI)V
 
+    .line 8
     :cond_1
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v0, v1, v2}, Lj2/y;->setComponentValue(ILjava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Ld/d/a/l6/e/j/g0;->setComponentValue(ILjava/lang/String;)V
 
+    .line 9
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
-    invoke-virtual {v0, v1}, Lj2/y;->e(I)Ljava/lang/String;
+    .line 10
+    invoke-virtual {v0, v1}, Ld/d/a/l6/e/j/g0;->e(I)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "click"
+    const-string v1, "attr_video_quality"
 
-    const-string v4, "attr_video_quality"
+    const-string v4, "click"
 
-    invoke-static {v4, v0, v1}, Lk9/d;->a(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;)V
+    .line 11
+    invoke-static {v1, v0, v4}, Ld/d/a/v7/i;->a(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {}, Lv8/y2;->impl2()Lv8/y2;
+    .line 12
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl2()Ld/d/a/m7/g/a3;
 
     move-result-object v0
 
@@ -8297,20 +10111,23 @@
 
     aput v4, v1, v3
 
-    invoke-interface {v0, v1}, Lv8/y2;->updateConfigItem([I)V
+    .line 13
+    invoke-interface {v0, v1}, Ld/d/a/m7/g/a3;->updateConfigItem([I)V
 
+    .line 14
     :cond_2
-    invoke-static {}, Lv8/z;->impl()Ljava/util/Optional;
+    invoke-static {}, Ld/d/a/m7/g/c0;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/top/z;
+    new-instance v1, Ld/d/b/x5/a/b/b/m/y;
 
-    invoke-direct {v1, v2}, Lcom/android/camera2/compat/theme/custom/mm/top/z;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Ld/d/b/x5/a/b/b/m/y;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    invoke-static {}, Lcom/android/camera/a6;->u2()Z
+    .line 15
+    invoke-static {}, Ld/d/a/z5;->k2()Z
 
     move-result v0
 
@@ -8318,9 +10135,10 @@
 
     if-eqz p1, :cond_3
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/top/a0;
+    .line 16
+    new-instance v0, Ld/d/b/x5/a/b/b/m/i0;
 
-    invoke-direct {v0, p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/a0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Landroid/view/View;)V
+    invoke-direct {v0, p0, p1}, Ld/d/b/x5/a/b/b/m/i0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;Landroid/view/View;)V
 
     const-wide/16 v1, 0x190
 
@@ -8332,6 +10150,19 @@
 
 .method public provideAnimateElement(ILjava/util/List;I)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "newMode",
+            "animateInElements",
+            "resetType"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -8341,6 +10172,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -8369,11 +10201,12 @@
 
     invoke-static {v3, v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/camera/fragment/BaseFragment;->getAppController()Lcom/android/camera/l;
+    invoke-virtual {v0}, Lcom/android/camera/fragment/BaseFragment;->getAppController()Ld/d/a/n3;
 
     move-result-object v0
 
@@ -8381,14 +10214,13 @@
 
     move-result-object v0
 
-    new-instance v2, La6/t0;
-
-    invoke-direct {v2}, La6/t0;-><init>()V
+    sget-object v2, Ld/d/b/x5/a/b/b/m/a1;->a:Ld/d/b/x5/a/b/b/m/a1;
 
     invoke-virtual {v0, v2}, Ljava/util/Optional;->map(Ljava/util/function/Function;)Ljava/util/Optional;
 
     move-result-object v0
 
+    .line 3
     invoke-virtual {v0}, Ljava/util/Optional;->isPresent()Z
 
     move-result v2
@@ -8397,20 +10229,21 @@
 
     return-void
 
+    .line 4
     :cond_0
-    invoke-static {}, Lg2/b;->j()Lq2/a;
+    invoke-static {}, Ld/d/a/l6/b;->j()Ld/d/a/l6/f/h;
 
     move-result-object v2
 
-    const-class v3, Lrh/x;
+    const-class v3, Ld/o/v/a/x;
 
-    invoke-virtual {v2, v3}, Lq2/a;->c(Ljava/lang/Class;)Lq2/d;
+    invoke-virtual {v2, v3}, Ld/d/a/l6/f/h;->c(Ljava/lang/Class;)Ld/d/a/l6/f/l;
 
     move-result-object v2
 
-    check-cast v2, Lrh/x;
+    check-cast v2, Ld/o/v/a/x;
 
-    invoke-virtual {v2}, Lrh/x;->u()Z
+    invoke-virtual {v2}, Ld/o/v/a/x;->u()Z
 
     move-result v2
 
@@ -8418,6 +10251,7 @@
 
     return-void
 
+    .line 5
     :cond_1
     iget v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
@@ -8429,6 +10263,7 @@
 
     if-ne p1, v3, :cond_3
 
+    .line 6
     :cond_2
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->clearTopAlertView()V
 
@@ -8449,28 +10284,33 @@
     :goto_0
     if-eqz v4, :cond_5
 
+    .line 7
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->enableAllDisabledMenuItem()V
 
+    .line 8
     :cond_5
     iget v5, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
     if-eq p1, v5, :cond_6
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lid/b;->z7()Z
+    invoke-virtual {v5}, Ld/k/a/b;->n7()Z
 
     move-result v5
 
     if-eqz v5, :cond_6
 
+    .line 9
     iput-boolean v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mIsShowRecommendLandscapeTips:Z
 
+    .line 10
     :cond_6
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
+    .line 11
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object v5
@@ -8483,6 +10323,7 @@
 
     if-ne p3, v3, :cond_8
 
+    .line 12
     :cond_7
     iput-boolean v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mIsShowTopLyingDirectHint:Z
 
@@ -8498,31 +10339,37 @@
     :cond_9
     const/4 v3, 0x7
 
+    .line 13
     :cond_a
     invoke-virtual {p0, v3}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->onBackEvent(I)Z
 
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    .line 14
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lm2/h1;->C0()Laa/p;
+    invoke-virtual {v3}, Ld/d/a/l6/e/m/g1;->u0()Ld/d/a/d8/n2/f/p;
 
     move-result-object v3
 
-    invoke-direct {p0, v3, p2, p1, p3}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->configTopCoverBackground(Laa/p;Ljava/util/List;II)V
+    .line 15
+    invoke-direct {p0, v3, p2, p1, p3}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->configTopCoverBackground(Ld/d/a/d8/n2/f/p;Ljava/util/List;II)V
 
+    .line 16
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v3
 
     if-eqz v3, :cond_b
 
+    .line 17
     invoke-virtual {v3, p1, p2, p3}, Lcom/android/camera/fragment/top/FragmentTopAlert;->provideAnimateElement(ILjava/util/List;I)V
 
+    .line 18
     :cond_b
     iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTopConfigMenu:Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBarLayout;
 
-    invoke-virtual {p2}, Landroid/view/View;->getVisibility()I
+    invoke-virtual {p2}, Landroid/widget/RelativeLayout;->getVisibility()I
 
     move-result p2
 
@@ -8530,6 +10377,7 @@
 
     if-eqz v4, :cond_c
 
+    .line 19
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object p2
@@ -8538,6 +10386,7 @@
 
     invoke-virtual {p2, v2, v1, v3}, Lcom/android/camera/fragment/BaseFragment;->animateViews(IZLandroid/view/View;)V
 
+    .line 20
     :cond_c
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
@@ -8547,10 +10396,12 @@
 
     move-result p2
 
-    invoke-static {}, Ly2/b;->O0()Z
+    .line 21
+    invoke-static {}, Ld/d/a/n6/b;->O0()Z
 
     move-result v2
 
+    .line 22
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object v3
@@ -8565,43 +10416,51 @@
 
     const/16 p2, 0x5a
 
+    .line 23
     :cond_d
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mStartTopBarRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
     if-eqz v2, :cond_e
 
+    .line 24
     invoke-virtual {v2, p2}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;->setDegree(I)V
 
+    .line 25
     :cond_e
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mEndTopBarRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
     if-eqz v2, :cond_f
 
+    .line 26
     invoke-virtual {v2, p2}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;->setDegree(I)V
 
+    .line 27
     :cond_f
-    invoke-static {}, Lv8/i3;->impl2()Lv8/i3;
+    invoke-static {}, Ld/d/a/m7/g/g3;->impl2()Ld/d/a/m7/g/g3;
 
     move-result-object p2
 
+    .line 28
     iget-boolean v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mIsVideoCastIntent:Z
 
     if-eqz v2, :cond_11
 
     if-eqz p2, :cond_11
 
-    invoke-interface {p2}, Lv8/i3;->d2()Z
+    .line 29
+    invoke-interface {p2}, Ld/d/a/m7/g/g3;->g2()Z
 
     move-result v2
 
     if-nez v2, :cond_10
 
-    invoke-interface {p2}, Lv8/i3;->W8()Z
+    invoke-interface {p2}, Ld/d/a/m7/g/g3;->K8()Z
 
     move-result p2
 
     if-eqz p2, :cond_11
 
+    .line 30
     :cond_10
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
@@ -8620,35 +10479,43 @@
 
     if-ne p2, v1, :cond_13
 
+    .line 31
     iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mStartTopBarAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
     if-eqz p2, :cond_12
 
+    .line 32
     invoke-virtual {p2}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->resetData()V
 
+    .line 33
     :cond_12
     iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mEndTopBarAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
     if-eqz p2, :cond_13
 
+    .line 34
     invoke-virtual {p2}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->resetData()V
 
+    .line 35
     :cond_13
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lm2/h1;->p0()Lj2/y0;
+    invoke-virtual {p2}, Ld/d/a/l6/e/m/g1;->h0()Ld/d/a/l6/e/j/x0;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lj2/y0;->l()V
+    .line 36
+    invoke-virtual {p2}, Ld/d/a/l6/e/j/x0;->l()V
 
+    .line 37
     invoke-direct {p0, p1, v0, p3}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->updateTopBarData(ILjava/util/Optional;I)V
 
+    .line 38
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTopConfigMenu:Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBarLayout;
 
-    invoke-static {}, Ly2/b;->C()I
+    invoke-static {}, Ld/d/a/n6/b;->C()I
 
     move-result p2
 
@@ -8661,6 +10528,17 @@
 
 .method public provideRotateItem(Ljava/util/List;I)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "pendingRotateItems",
+            "degree"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -8670,25 +10548,31 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
     const/16 v1, 0xa4
 
     if-ne v0, v1, :cond_2
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mStartTopBarAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->resetData()V
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mEndTopBarAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
     if-eqz v0, :cond_1
 
+    .line 5
     invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->resetData()V
 
+    .line 6
     :cond_1
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentMode:I
 
@@ -8700,6 +10584,7 @@
 
     goto :goto_2
 
+    .line 7
     :cond_2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mStartTopBarRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
@@ -8717,12 +10602,14 @@
 
     if-nez v0, :cond_3
 
+    .line 8
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mStartTopBarRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
     invoke-virtual {v0, p2}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;->setDegree(I)V
 
     move v0, v1
 
+    .line 9
     :goto_0
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mStartTopBarRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
@@ -8732,6 +10619,7 @@
 
     if-ge v0, v2, :cond_3
 
+    .line 10
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mStartTopBarRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
     invoke-virtual {v2, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
@@ -8744,6 +10632,7 @@
 
     goto :goto_0
 
+    .line 11
     :cond_3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mEndTopBarRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
@@ -8759,10 +10648,12 @@
 
     if-nez v0, :cond_4
 
+    .line 12
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mEndTopBarRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
     invoke-virtual {v0, p2}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;->setDegree(I)V
 
+    .line 13
     :goto_1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mEndTopBarRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
@@ -8772,6 +10663,7 @@
 
     if-ge v1, v0, :cond_4
 
+    .line 14
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mEndTopBarRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
@@ -8784,11 +10676,13 @@
 
     goto :goto_1
 
+    .line 15
     :cond_4
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mMultiSnapNum:Landroid/widget/TextView;
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 16
     :goto_2
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
@@ -8796,26 +10690,45 @@
 
     if-eqz p0, :cond_5
 
+    .line 17
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/fragment/top/FragmentTopAlert;->provideRotateItem(Ljava/util/List;I)V
 
     :cond_5
     return-void
 .end method
 
+.method public synthetic q0(Landroid/view/View;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$onMiLiveVideoQualityClick$10(Landroid/view/View;)V
+
+    return-void
+.end method
+
 .method public reInitAlert(Z)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "anim"
+        }
+    .end annotation
 
-    invoke-static {}, Lcom/android/camera/v2;->h4()Z
+    .line 1
+    invoke-static {}, Ld/d/a/d4;->f4()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    .line 2
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lm2/h1;->x0()Z
+    invoke-virtual {v0}, Ld/d/a/l6/e/m/g1;->p0()Z
 
     move-result v0
 
@@ -8823,13 +10736,15 @@
 
     return-void
 
+    .line 3
     :cond_0
-    invoke-static {}, Leg/i;->j()Z
+    invoke-static {}, Ld/o/f/u/k;->c()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 4
     invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->reInitAlertAction(Z)V
 
     :cond_1
@@ -8838,30 +10753,42 @@
 
 .method public recheckFlashFrontAdjust(Ljava/lang/String;)V
     .locals 2
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isSupportFrontSoftLightAdjust"
         type = 0x2
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "flashComponentValue"
+        }
+    .end annotation
+
     const-string v0, "107"
 
+    .line 1
     invoke-static {p1, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    invoke-static {}, Lv8/p;->impl()Ljava/util/Optional;
+    .line 2
+    invoke-static {}, Ld/d/a/m7/g/s;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/top/u;
+    new-instance v1, Ld/d/b/x5/a/b/b/m/k0;
 
-    invoke-direct {v1, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/u;-><init>(Z)V
+    invoke-direct {v1, p1}, Ld/d/b/x5/a/b/b/m/k0;-><init>(Z)V
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
     const/4 v0, 0x0
 
+    .line 3
     invoke-virtual {p0, p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->alertFlashFrontAdjustSwitchLayout(ZZ)V
 
     return-void
@@ -8876,18 +10803,21 @@
 .method public refreshHistogramStatsView()V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {v0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->refreshHistogramStatsView()V
 
     :cond_0
@@ -8908,7 +10838,16 @@
 
 .method public removeExtraMenu(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "callFrom"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->onBackEvent(I)Z
 
     return-void
@@ -8917,12 +10856,14 @@
 .method public resetTipsWidth()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->checkTipsWidth()V
 
     :cond_0
@@ -8931,6 +10872,14 @@
 
 .method public reverseExpandTopBar(Z)Z
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "anim"
+        }
+    .end annotation
 
     const/4 p0, 0x0
 
@@ -8939,7 +10888,16 @@
 
 .method public setAiSceneImageLevel(I)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x10
+        }
+        names = {
+            "modeIndex"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mCurrentAiSceneLevel:I
 
     const/4 p1, 0x1
@@ -8952,6 +10910,7 @@
 
     aput v1, p1, v0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->updateConfigItem([I)V
 
     return-void
@@ -8959,19 +10918,30 @@
 
 .method public setAlertAnim(Z)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isAnim"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {v0, p1}, Lcom/android/camera/fragment/top/FragmentTopAlert;->setAlertAnim(Z)V
 
     :cond_0
@@ -8980,15 +10950,26 @@
 
 .method public setCalculateTime(I)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "time"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
 
+    .line 2
     instance-of v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;
 
     if-eqz v0, :cond_0
 
+    .line 3
     check-cast p0, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;
 
     invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;->updateCalculateTime(I)V
@@ -8999,15 +10980,26 @@
 
 .method public setClickEnable(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "enable"
+        }
+    .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mEnableClick:Z
 
+    .line 2
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->setClickEnable(Z)V
 
     :cond_0
@@ -9017,6 +11009,7 @@
 .method public setConfigMenuResetWhenRestartmode()V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTopConfigMenu:Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBarLayout;
 
     const/4 v0, -0x1
@@ -9025,18 +11018,28 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->setTag(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 .method public setMenuIndicatorState(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "state"
+        }
+    .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mMenuIndicatorView:Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;->setState(I)V
 
     :cond_0
@@ -9045,12 +11048,22 @@
 
 .method public setMenuIndicatorVisibility(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "visibility"
+        }
+    .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mMenuIndicatorView:Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
+    .line 2
+    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     :cond_0
     return-void
@@ -9058,17 +11071,28 @@
 
 .method public setMishotLeftTipsVisibility(Z)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isShown"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     instance-of v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;
 
     if-eqz v0, :cond_0
 
+    .line 3
     check-cast p0, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;
 
     invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;->showMishotLeftTips(Z)V
@@ -9079,17 +11103,28 @@
 
 .method public setMishotTopRightVisibility(Z)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isShown"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     instance-of v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;
 
     if-eqz v0, :cond_0
 
+    .line 3
     check-cast p0, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;
 
     invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;->showRightPart(Z)V
@@ -9100,6 +11135,14 @@
 
 .method public setRecordingTimeState(I)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "state"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -9111,6 +11154,16 @@
 
 .method public setRecordingTimeState(IZ)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "state",
+            "hideTimeLabel"
+        }
+    .end annotation
 
     .line 2
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
@@ -9134,13 +11187,23 @@
 
 .method public setShow(Z)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "show"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
@@ -9153,7 +11216,18 @@
 
 .method public setTipsState(Ljava/lang/String;Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "state"
+        }
+    .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTipsState:Ljava/util/Map;
 
     invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -9167,18 +11241,29 @@
 
 .method public setVolumeValue([F)V
     .locals 0
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isSupportAudioMapMove"
         type = 0x0
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "valueArray"
+        }
+    .end annotation
+
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/top/FragmentTopAlert;->setAudioMapMoveVolumeValue([F)V
 
     :cond_0
@@ -9188,6 +11273,7 @@
 .method public showConfigMenu()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object v0
@@ -9198,6 +11284,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getFragment()Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;
 
     move-result-object v0
@@ -9208,21 +11295,23 @@
 
     invoke-virtual {v0, v1, v1, p0}, Lcom/android/camera/fragment/BaseFragment;->animateViews(IZLandroid/view/View;)V
 
-    invoke-static {}, Lu8/e;->i()Lu8/e;
+    .line 3
+    invoke-static {}, Ld/d/a/m7/d;->i()Ld/d/a/m7/d;
 
     move-result-object p0
 
-    const-class v0, Lv8/k0;
+    const-class v0, Ld/d/a/m7/g/n0;
 
-    invoke-virtual {p0, v0}, Lu8/e;->a(Ljava/lang/Class;)Lu8/a;
+    invoke-virtual {p0, v0}, Ld/d/a/m7/d;->a(Ljava/lang/Class;)Ld/d/a/m7/a;
 
     move-result-object p0
 
-    check-cast p0, Lv8/k0;
+    check-cast p0, Ld/d/a/m7/g/n0;
 
     if-eqz p0, :cond_0
 
-    invoke-interface {p0}, Lv8/k0;->showExtraTopConfig()V
+    .line 4
+    invoke-interface {p0}, Ld/d/a/m7/g/n0;->showExtraTopConfig()V
 
     :cond_0
     return-void
@@ -9236,11 +11325,19 @@
 
 .method public startLiveShotAnimation()V
     .locals 0
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isSupportLiveShot"
         type = 0x0
     .end annotation
+
+    return-void
+.end method
+
+.method public synthetic u0(Landroid/view/View;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$onSlowMotionVideoFpsClick$9(Landroid/view/View;)V
 
     return-void
 .end method
@@ -9254,18 +11351,21 @@
 .method public updateAudioMapUI()V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {v0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->updateAudioMapUI()V
 
     :cond_0
@@ -9274,7 +11374,16 @@
 
 .method public varargs updateConfigItem([I)V
     .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "configItems"
+        }
+    .end annotation
 
+    .line 1
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -9286,6 +11395,7 @@
 
     aget v3, p1, v2
 
+    .line 2
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -9306,10 +11416,12 @@
 
     invoke-static {v6, v4, v5}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 3
     iget-object v4, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mStartTopBarAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
     if-eqz v4, :cond_0
 
+    .line 4
     invoke-virtual {v4, v3}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->notifyTopBarItemChanged(I)Z
 
     move-result v4
@@ -9318,11 +11430,13 @@
 
     goto :goto_1
 
+    .line 5
     :cond_0
     iget-object v4, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mEndTopBarAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
     if-eqz v4, :cond_1
 
+    .line 6
     invoke-virtual {v4, v3}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->notifyTopBarItemChanged(I)Z
 
     move-result v4
@@ -9331,28 +11445,32 @@
 
     goto :goto_1
 
+    .line 7
     :cond_1
-    invoke-static {}, Lu8/e;->i()Lu8/e;
+    invoke-static {}, Ld/d/a/m7/d;->i()Ld/d/a/m7/d;
 
     move-result-object v4
 
-    const-class v5, Lv8/k0;
+    const-class v5, Ld/d/a/m7/g/n0;
 
-    invoke-virtual {v4, v5}, Lu8/e;->a(Ljava/lang/Class;)Lu8/a;
+    invoke-virtual {v4, v5}, Ld/d/a/m7/d;->a(Ljava/lang/Class;)Ld/d/a/m7/a;
 
     move-result-object v4
 
-    check-cast v4, Lv8/k0;
+    check-cast v4, Ld/d/a/m7/g/n0;
 
     if-eqz v4, :cond_2
 
-    invoke-interface {v4, p1}, Lv8/k0;->updateExtraConfigItem([I)V
+    .line 8
+    invoke-interface {v4, p1}, Ld/d/a/m7/g/n0;->updateExtraConfigItem([I)V
 
+    .line 9
     :cond_2
     iget-object v4, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mFragmentMiShotTopAlert:Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;
 
     if-eqz v4, :cond_3
 
+    .line 10
     invoke-virtual {v4, v3}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentMiShotTopAlert;->updateConfigItem(I)V
 
     :cond_3
@@ -9367,13 +11485,23 @@
 
 .method public updateEndGravityTip(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "needPadding"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/top/FragmentTopAlert;->initEndGravityTipLayout(Z)V
 
     :cond_0
@@ -9382,13 +11510,25 @@
 
 .method public updateFastmotionProRecordingTime(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "first",
+            "second"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/fragment/top/FragmentTopAlert;->updateFastmotionProRecordingTime(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
@@ -9397,19 +11537,30 @@
 
 .method public updateHistogramStatsData([I)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "y"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {v0, p1}, Lcom/android/camera/fragment/top/FragmentTopAlert;->updateHistogramStatsData([I)V
 
     :cond_0
@@ -9419,18 +11570,21 @@
 .method public updateHistogramUI()V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {v0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->updateHistogramUI()V
 
     :cond_0
@@ -9439,16 +11593,29 @@
 
 .method public updateLyingDirectHint(ZZ)V
     .locals 0
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "supportLyingDirectHint"
         type = 0x0
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "show",
+            "refrensh"
+        }
+    .end annotation
+
     if-nez p2, :cond_0
 
+    .line 1
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mIsShowTopLyingDirectHint:Z
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isExtraMenuShowing()Z
 
@@ -9458,6 +11625,7 @@
 
     return-void
 
+    .line 3
     :cond_1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
@@ -9465,12 +11633,14 @@
 
     if-eqz p1, :cond_2
 
+    .line 4
     invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result p2
 
     if-eqz p2, :cond_2
 
+    .line 5
     iget-boolean p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mIsShowTopLyingDirectHint:Z
 
     invoke-virtual {p1, p0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->updateLyingDirectHint(Z)V
@@ -9481,18 +11651,29 @@
 
 .method public updateProVideoRecordingSimpleView(Z)V
     .locals 0
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "supportProVideo"
         type = 0x0
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "show"
+        }
+    .end annotation
+
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/top/FragmentTopAlert;->updateProVideoRecordingSimpleView(Z)V
 
     :cond_0
@@ -9501,13 +11682,23 @@
 
 .method public updateRecordingTime(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/top/FragmentTopAlert;->updateRecordingTime(Ljava/lang/String;)V
 
     :cond_0
@@ -9516,13 +11707,23 @@
 
 .method public updateRecordingTimeStyle(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "showIcon"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/top/FragmentTopAlert;->updateRecordingTimeStyle(Z)V
 
     :cond_0
@@ -9532,18 +11733,21 @@
 .method public updateTopAlertLayout()V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->getTopAlert()Lcom/android/camera/fragment/top/FragmentTopAlert;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->isTopAlertShowing(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {v0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->updateTopAlertLayout()V
 
     :cond_0
@@ -9556,18 +11760,31 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "v",
+            "savedInstanceState"
+        }
+    .end annotation
 
+    .line 1
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mStartTopBarRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->invalidateItemDecorations()V
 
+    .line 2
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mEndTopBarRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->invalidateItemDecorations()V
 
+    .line 3
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTopConfigMenu:Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBarLayout;
 
-    invoke-static {}, Ly2/b;->C()I
+    invoke-static {}, Ld/d/a/n6/b;->C()I
 
     move-result p2
 
@@ -9575,15 +11792,17 @@
 
     invoke-virtual {p1, p2, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBarLayout;->updateLayout(II)V
 
-    invoke-static {}, Ly2/b;->m0()I
+    .line 4
+    invoke-static {}, Ld/d/a/n6/b;->m0()I
 
     move-result p1
 
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTopBackgroundHeight:I
 
+    .line 5
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTopBackgroundView:Lcom/android/camera/ui/ShapeBackGroundView;
 
-    invoke-static {}, Ly2/b;->q()I
+    invoke-static {}, Ld/d/a/n6/b;->q()I
 
     move-result p2
 
@@ -9591,36 +11810,49 @@
 
     invoke-virtual {p1, p2, v0}, Lcom/android/camera/ui/ShapeBackGroundView;->n(II)V
 
+    .line 6
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTopBackgroundView:Lcom/android/camera/ui/ShapeBackGroundView;
 
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {p1}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p1
 
     check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
 
+    .line 7
     iget p2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTopBackgroundHeight:I
 
     iput p2, p1, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
-    invoke-static {}, Ly2/b;->k()Z
+    .line 8
+    invoke-static {}, Ld/d/a/n6/b;->k()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
+    .line 9
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->mTopBackgroundView:Lcom/android/camera/ui/ShapeBackGroundView;
 
     const/4 p2, 0x1
 
-    invoke-static {}, Ly2/b;->r()I
+    invoke-static {}, Ld/d/a/n6/b;->r()I
 
     move-result v0
 
     invoke-virtual {p1, p2, v0}, Lcom/android/camera/ui/ShapeBackGroundView;->u(ZI)V
 
+    .line 10
     :cond_0
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->refreshMenuIndicatorBackgroundColor()V
+
+    return-void
+.end method
+
+.method public synthetic w0(Landroid/view/View;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/MainTopBar;->lambda$onSlowMotionVideoQualityClick$8(Landroid/view/View;)V
 
     return-void
 .end method

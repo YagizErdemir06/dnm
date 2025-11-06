@@ -1,4 +1,4 @@
-.class Lmiuix/animation/utils/LogUtils$1;
+.class public Lmiuix/animation/utils/LogUtils$1;
 .super Landroid/os/Handler;
 .source "SourceFile"
 
@@ -18,6 +18,7 @@
 .method public constructor <init>(Landroid/os/Looper;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -32,10 +33,12 @@
         .end annotation
     .end param
 
+    .line 1
     iget p0, p1, Landroid/os/Message;->what:I
 
     if-nez p0, :cond_0
 
+    .line 2
     invoke-static {}, Lmiuix/animation/utils/LogUtils;->access$000()Ljava/util/Map;
 
     move-result-object p0
@@ -75,6 +78,7 @@
     :cond_0
     const/4 p0, 0x0
 
+    .line 3
     iput-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     return-void

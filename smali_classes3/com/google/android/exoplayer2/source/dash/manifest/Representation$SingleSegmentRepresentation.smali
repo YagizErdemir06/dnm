@@ -88,12 +88,14 @@
 
     move-object/from16 v8, p8
 
+    .line 1
     invoke-direct/range {v0 .. v9}, Lcom/google/android/exoplayer2/source/dash/manifest/Representation;-><init>(JLcom/google/android/exoplayer2/Format;Ljava/util/List;Lcom/google/android/exoplayer2/source/dash/manifest/SegmentBase;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lcom/google/android/exoplayer2/source/dash/manifest/Representation$1;)V
 
     const/4 v0, 0x0
 
     move-object v1, p4
 
+    .line 2
     invoke-interface {p4, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -108,6 +110,7 @@
 
     iput-object v0, v10, Lcom/google/android/exoplayer2/source/dash/manifest/Representation$SingleSegmentRepresentation;->uri:Landroid/net/Uri;
 
+    .line 3
     invoke-virtual/range {p5 .. p5}, Lcom/google/android/exoplayer2/source/dash/manifest/SegmentBase$SingleSegmentBase;->getIndex()Lcom/google/android/exoplayer2/source/dash/manifest/RangedUri;
 
     move-result-object v0
@@ -116,10 +119,12 @@
 
     move-object/from16 v1, p9
 
+    .line 4
     iput-object v1, v10, Lcom/google/android/exoplayer2/source/dash/manifest/Representation$SingleSegmentRepresentation;->cacheKey:Ljava/lang/String;
 
     move-wide/from16 v1, p10
 
+    .line 5
     iput-wide v1, v10, Lcom/google/android/exoplayer2/source/dash/manifest/Representation$SingleSegmentRepresentation;->contentLength:J
 
     if-eqz v0, :cond_0
@@ -128,6 +133,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     new-instance v0, Lcom/google/android/exoplayer2/source/dash/manifest/SingleSegmentIndex;
 
@@ -176,15 +182,16 @@
         }
     .end annotation
 
+    .line 1
     new-instance v6, Lcom/google/android/exoplayer2/source/dash/manifest/RangedUri;
 
-    const/4 v1, 0x0
-
-    sub-long v2, p6, p4
+    sub-long v0, p6, p4
 
     const-wide/16 v7, 0x1
 
-    add-long v4, v2, v7
+    add-long v4, v0, v7
+
+    const/4 v1, 0x0
 
     move-object v0, v6
 
@@ -192,15 +199,16 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/google/android/exoplayer2/source/dash/manifest/RangedUri;-><init>(Ljava/lang/String;JJ)V
 
+    .line 2
     new-instance v14, Lcom/google/android/exoplayer2/source/dash/manifest/SegmentBase$SingleSegmentBase;
-
-    const-wide/16 v2, 0x1
-
-    const-wide/16 v4, 0x0
 
     sub-long v0, p10, p8
 
     add-long v8, v0, v7
+
+    const-wide/16 v2, 0x1
+
+    const-wide/16 v4, 0x0
 
     move-object v0, v14
 
@@ -210,6 +218,7 @@
 
     invoke-direct/range {v0 .. v9}, Lcom/google/android/exoplayer2/source/dash/manifest/SegmentBase$SingleSegmentBase;-><init>(Lcom/google/android/exoplayer2/source/dash/manifest/RangedUri;JJJJ)V
 
+    .line 3
     new-instance v0, Lcom/google/android/exoplayer2/source/dash/manifest/BaseUrl;
 
     move-object/from16 v1, p3
@@ -220,12 +229,15 @@
 
     move-result-object v13
 
+    .line 4
     new-instance v0, Lcom/google/android/exoplayer2/source/dash/manifest/Representation$SingleSegmentRepresentation;
 
+    .line 5
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
 
     move-result-object v16
 
+    .line 6
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
 
     move-result-object v17
@@ -254,6 +266,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/dash/manifest/Representation$SingleSegmentRepresentation;->cacheKey:Ljava/lang/String;
 
     return-object p0
@@ -264,6 +277,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/dash/manifest/Representation$SingleSegmentRepresentation;->segmentIndex:Lcom/google/android/exoplayer2/source/dash/manifest/SingleSegmentIndex;
 
     return-object p0
@@ -274,6 +288,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/dash/manifest/Representation$SingleSegmentRepresentation;->indexUri:Lcom/google/android/exoplayer2/source/dash/manifest/RangedUri;
 
     return-object p0

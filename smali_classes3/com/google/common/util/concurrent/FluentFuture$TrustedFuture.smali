@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/util/concurrent/FluentFuture$TrustedFuture;
+.class public abstract Lcom/google/common/util/concurrent/FluentFuture$TrustedFuture;
 .super Lcom/google/common/util/concurrent/FluentFuture;
 .source "SourceFile"
 
@@ -33,6 +33,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/util/concurrent/FluentFuture;-><init>()V
 
     return-void
@@ -43,6 +44,7 @@
 .method public final addListener(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/google/common/util/concurrent/AbstractFuture;->addListener(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
     return-void
@@ -53,6 +55,7 @@
     .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/util/concurrent/AbstractFuture;->cancel(Z)Z
 
     move-result p0
@@ -124,6 +127,7 @@
 .method public final isCancelled()Z
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/util/concurrent/AbstractFuture;->isCancelled()Z
 
     move-result p0
@@ -134,6 +138,7 @@
 .method public final isDone()Z
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/util/concurrent/AbstractFuture;->isDone()Z
 
     move-result p0

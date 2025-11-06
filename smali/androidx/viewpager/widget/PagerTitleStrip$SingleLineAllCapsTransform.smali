@@ -1,4 +1,4 @@
-.class Landroidx/viewpager/widget/PagerTitleStrip$SingleLineAllCapsTransform;
+.class public Landroidx/viewpager/widget/PagerTitleStrip$SingleLineAllCapsTransform;
 .super Landroid/text/method/SingleLineTransformationMethod;
 .source "SourceFile"
 
@@ -22,8 +22,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroid/text/method/SingleLineTransformationMethod;-><init>()V
 
+    .line 2
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -44,12 +46,14 @@
 .method public getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
     .locals 0
 
-    invoke-super {p0, p1, p2}, Landroid/text/method/ReplacementTransformationMethod;->getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
+    .line 1
+    invoke-super {p0, p1, p2}, Landroid/text/method/SingleLineTransformationMethod;->getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
+    .line 2
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object p1

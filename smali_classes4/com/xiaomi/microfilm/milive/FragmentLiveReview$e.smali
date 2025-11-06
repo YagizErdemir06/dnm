@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->n()V
+    value = Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->o()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,14 +18,23 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+.field public final synthetic c:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$e;->a:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+    .line 1
+    iput-object p1, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$e;->c:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,12 +45,21 @@
 # virtual methods
 .method public onDismiss(Landroid/content/DialogInterface;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "dialog"
+        }
+    .end annotation
 
-    iget-object p0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$e;->a:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$e;->c:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
 
     const/4 p1, 0x0
 
-    invoke-static {p0, p1}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->zi(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;Lmiuix/appcompat/app/AlertDialog;)Lmiuix/appcompat/app/AlertDialog;
+    invoke-static {p0, p1}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->Sd(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;Lmiuix/appcompat/app/AlertDialog;)Lmiuix/appcompat/app/AlertDialog;
 
     return-void
 .end method

@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/FilteredKeySetMultimap;
+.class public final Lcom/google/common/collect/FilteredKeySetMultimap;
 .super Lcom/google/common/collect/FilteredKeyMultimap;
 .source "SourceFile"
 
@@ -47,6 +47,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/common/collect/FilteredKeyMultimap;-><init>(Lcom/google/common/collect/Multimap;Lcom/google/common/base/Predicate;)V
 
     return-void

@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ImmutableEnumSet$EnumSerializedForm;
+.class public Lcom/google/common/collect/ImmutableEnumSet$EnumSerializedForm;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -32,7 +32,7 @@
 
 
 # instance fields
-.field final delegate:Ljava/util/EnumSet;
+.field public final delegate:Ljava/util/EnumSet;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/EnumSet<",
@@ -53,8 +53,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/ImmutableEnumSet$EnumSerializedForm;->delegate:Ljava/util/EnumSet;
 
     return-void
@@ -65,6 +67,7 @@
 .method public readResolve()Ljava/lang/Object;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ImmutableEnumSet;
 
     iget-object p0, p0, Lcom/google/common/collect/ImmutableEnumSet$EnumSerializedForm;->delegate:Ljava/util/EnumSet;

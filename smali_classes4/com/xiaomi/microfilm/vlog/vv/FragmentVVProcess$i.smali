@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;->n()V
+    value = Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;->o()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,22 +18,35 @@
 
 
 # instance fields
-.field public final synthetic a:Z
+.field public final synthetic c:Z
 
-.field public final synthetic b:Z
+.field public final synthetic d:Z
 
-.field public final synthetic c:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;
+.field public final synthetic f:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;ZZ)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$formWorkspace",
+            "val$inPreview"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess$i;->c:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;
+    .line 1
+    iput-object p1, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess$i;->f:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;
 
-    iput-boolean p2, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess$i;->a:Z
+    iput-boolean p2, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess$i;->c:Z
 
-    iput-boolean p3, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess$i;->b:Z
+    iput-boolean p3, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess$i;->d:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,7 +57,16 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
+    .line 1
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -53,13 +75,13 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess$i;->c:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;
+    iget-object v0, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess$i;->f:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;
 
-    invoke-static {v0}, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;->li(Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;)Landroid/widget/CheckBox;
+    invoke-static {v0}, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;->uc(Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;)Landroid/widget/CheckBox;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/CompoundButton;->isChecked()Z
+    invoke-virtual {v0}, Landroid/widget/CheckBox;->isChecked()Z
 
     move-result v0
 
@@ -73,17 +95,19 @@
 
     invoke-static {v0, p1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-boolean p1, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess$i;->a:Z
+    .line 2
+    iget-boolean p1, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess$i;->c:Z
 
-    iget-boolean v0, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess$i;->b:Z
+    iget-boolean v0, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess$i;->d:Z
 
-    iget-object v1, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess$i;->c:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;
+    iget-object v1, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess$i;->f:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;
 
-    invoke-static {v1}, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;->mi(Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;)Landroid/view/ViewGroup;
+    .line 3
+    invoke-static {v1}, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;->xc(Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;)Landroid/view/ViewGroup;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->getVisibility()I
 
     move-result v1
 
@@ -99,25 +123,29 @@
     move v1, v2
 
     :goto_0
-    iget-object v3, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess$i;->c:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;
+    iget-object v3, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess$i;->f:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;
 
-    invoke-static {v3}, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;->li(Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;)Landroid/widget/CheckBox;
+    .line 4
+    invoke-static {v3}, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;->uc(Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;)Landroid/widget/CheckBox;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Landroid/widget/CompoundButton;->isChecked()Z
+    invoke-virtual {v3}, Landroid/widget/CheckBox;->isChecked()Z
 
     move-result v3
 
-    invoke-static {p1, v0, v1, v3}, Lk9/a;->G3(ZZZZ)V
+    .line 5
+    invoke-static {p1, v0, v1, v3}, Ld/d/a/v7/f;->C3(ZZZZ)V
 
-    iget-object p1, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess$i;->c:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;
+    .line 6
+    iget-object p1, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess$i;->f:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;
 
-    invoke-virtual {p1, v2}, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;->Oi(Z)V
+    invoke-virtual {p1, v2}, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;->ih(Z)V
 
-    iget-object p0, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess$i;->c:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;
+    .line 7
+    iget-object p0, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess$i;->f:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;
 
-    invoke-static {p0}, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;->ki(Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;)Z
+    invoke-static {p0}, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;->qc(Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;)Z
 
     return-void
 .end method

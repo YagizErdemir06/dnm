@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher$NetworkCallback;
+.class public final Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher$NetworkCallback;
 .super Landroid/net/ConnectivityManager$NetworkCallback;
 .source "SourceFile"
 
@@ -23,7 +23,7 @@
 
 .field private receivedCapabilitiesChange:Z
 
-.field final synthetic this$0:Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher;
+.field public final synthetic this$0:Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher;
 
 
 # direct methods
@@ -47,25 +47,10 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher$NetworkCallback;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher$NetworkCallback;->lambda$postCheckRequirements$0()V
-
-    return-void
-.end method
-
-.method public static synthetic b(Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher$NetworkCallback;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher$NetworkCallback;->lambda$postRecheckNotMetNetworkRequirements$1()V
-
-    return-void
-.end method
-
 .method private synthetic lambda$postCheckRequirements$0()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher$NetworkCallback;->this$0:Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher;->access$400(Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher;)Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher$NetworkCallback;
@@ -74,6 +59,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher$NetworkCallback;->this$0:Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher;->access$200(Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher;)V
@@ -85,6 +71,7 @@
 .method private synthetic lambda$postRecheckNotMetNetworkRequirements$1()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher$NetworkCallback;->this$0:Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher;->access$400(Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher;)Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher$NetworkCallback;
@@ -93,6 +80,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher$NetworkCallback;->this$0:Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher;->access$500(Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher;)V
@@ -104,15 +92,16 @@
 .method private postCheckRequirements()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher$NetworkCallback;->this$0:Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher;->access$300(Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher;)Landroid/os/Handler;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/scheduler/b;
+    new-instance v1, Ld/j/a/b/u2/a;
 
-    invoke-direct {v1, p0}, Lcom/google/android/exoplayer2/scheduler/b;-><init>(Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher$NetworkCallback;)V
+    invoke-direct {v1, p0}, Ld/j/a/b/u2/a;-><init>(Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher$NetworkCallback;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -122,15 +111,16 @@
 .method private postRecheckNotMetNetworkRequirements()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher$NetworkCallback;->this$0:Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher;->access$300(Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher;)Landroid/os/Handler;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/scheduler/a;
+    new-instance v1, Ld/j/a/b/u2/b;
 
-    invoke-direct {v1, p0}, Lcom/google/android/exoplayer2/scheduler/a;-><init>(Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher$NetworkCallback;)V
+    invoke-direct {v1, p0}, Ld/j/a/b/u2/b;-><init>(Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher$NetworkCallback;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -139,9 +129,26 @@
 
 
 # virtual methods
+.method public synthetic a()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher$NetworkCallback;->lambda$postCheckRequirements$0()V
+
+    return-void
+.end method
+
+.method public synthetic b()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher$NetworkCallback;->lambda$postRecheckNotMetNetworkRequirements$1()V
+
+    return-void
+.end method
+
 .method public onAvailable(Landroid/net/Network;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher$NetworkCallback;->postCheckRequirements()V
 
     return-void
@@ -152,6 +159,7 @@
 
     if-nez p2, :cond_0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher$NetworkCallback;->postRecheckNotMetNetworkRequirements()V
 
     :cond_0
@@ -163,10 +171,12 @@
 
     const/16 p1, 0x10
 
+    .line 1
     invoke-virtual {p2, p1}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
 
     move-result p1
 
+    .line 2
     iget-boolean p2, p0, Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher$NetworkCallback;->receivedCapabilitiesChange:Z
 
     if-eqz p2, :cond_1
@@ -180,6 +190,7 @@
     :cond_0
     if-eqz p1, :cond_2
 
+    .line 3
     invoke-direct {p0}, Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher$NetworkCallback;->postRecheckNotMetNetworkRequirements()V
 
     goto :goto_1
@@ -188,10 +199,13 @@
     :goto_0
     const/4 p2, 0x1
 
+    .line 4
     iput-boolean p2, p0, Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher$NetworkCallback;->receivedCapabilitiesChange:Z
 
+    .line 5
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher$NetworkCallback;->networkValidated:Z
 
+    .line 6
     invoke-direct {p0}, Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher$NetworkCallback;->postCheckRequirements()V
 
     :cond_2
@@ -202,6 +216,7 @@
 .method public onLost(Landroid/net/Network;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher$NetworkCallback;->postCheckRequirements()V
 
     return-void

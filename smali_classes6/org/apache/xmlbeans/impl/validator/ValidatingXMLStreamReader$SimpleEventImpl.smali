@@ -1,4 +1,4 @@
-.class final Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$SimpleEventImpl;
+.class public final Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$SimpleEventImpl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -47,6 +47,7 @@
 .method public static synthetic access$600(Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$SimpleEventImpl;Ljavax/xml/stream/XMLStreamReader;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$SimpleEventImpl;->setXMLStreamReader(Ljavax/xml/stream/XMLStreamReader;)V
 
     return-void
@@ -55,6 +56,7 @@
 .method public static synthetic access$802(Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$SimpleEventImpl;Ljavax/xml/namespace/QName;)Ljavax/xml/namespace/QName;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$SimpleEventImpl;->_qname:Ljavax/xml/namespace/QName;
 
     return-object p1
@@ -63,6 +65,7 @@
 .method public static synthetic access$902(Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$SimpleEventImpl;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$SimpleEventImpl;->_text:Ljava/lang/String;
 
     return-object p1
@@ -71,6 +74,7 @@
 .method private setXMLStreamReader(Ljavax/xml/stream/XMLStreamReader;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$SimpleEventImpl;->_xmlStream:Ljavax/xml/stream/XMLStreamReader;
 
     return-void
@@ -81,6 +85,7 @@
 .method public getLocation()Ljavax/xml/stream/Location;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$SimpleEventImpl;->_xmlStream:Ljavax/xml/stream/XMLStreamReader;
 
     invoke-interface {p0}, Ljavax/xml/stream/XMLStreamReader;->getLocation()Ljavax/xml/stream/Location;
@@ -101,6 +106,7 @@
 .method public getName()Ljavax/xml/namespace/QName;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$SimpleEventImpl;->_qname:Ljavax/xml/namespace/QName;
 
     return-object p0
@@ -109,6 +115,7 @@
 .method public getNamespaceForPrefix(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$SimpleEventImpl;->_xmlStream:Ljavax/xml/stream/XMLStreamReader;
 
     invoke-interface {p0, p1}, Ljavax/xml/stream/XMLStreamReader;->getNamespaceURI(Ljava/lang/String;)Ljava/lang/String;

@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/MapMakerInternalMap$1;
+.class public Lcom/google/common/collect/MapMakerInternalMap$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -32,6 +32,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -69,6 +70,7 @@
 .method public bridge synthetic copyFor(Ljava/lang/ref/ReferenceQueue;Lcom/google/common/collect/MapMakerInternalMap$InternalEntry;)Lcom/google/common/collect/MapMakerInternalMap$WeakValueReference;
     .locals 0
 
+    .line 1
     check-cast p2, Lcom/google/common/collect/MapMakerInternalMap$DummyInternalEntry;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/MapMakerInternalMap$1;->copyFor(Ljava/lang/ref/ReferenceQueue;Lcom/google/common/collect/MapMakerInternalMap$DummyInternalEntry;)Lcom/google/common/collect/MapMakerInternalMap$WeakValueReference;
@@ -97,6 +99,7 @@
 .method public bridge synthetic getEntry()Lcom/google/common/collect/MapMakerInternalMap$InternalEntry;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/MapMakerInternalMap$1;->getEntry()Lcom/google/common/collect/MapMakerInternalMap$DummyInternalEntry;
 
     move-result-object p0

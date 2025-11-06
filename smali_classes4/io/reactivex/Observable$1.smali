@@ -1,4 +1,4 @@
-.class synthetic Lio/reactivex/Observable$1;
+.class public synthetic Lio/reactivex/Observable$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$io$reactivex$BackpressureStrategy:[I
+.field public static final synthetic $SwitchMap$io$reactivex$BackpressureStrategy:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Lio/reactivex/BackpressureStrategy;->values()[Lio/reactivex/BackpressureStrategy;
 
     move-result-object v0

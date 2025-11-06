@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/collect/AbstractSetMultimap;
+.class public abstract Lcom/google/common/collect/AbstractSetMultimap;
 .super Lcom/google/common/collect/AbstractMapBasedMultimap;
 .source "SourceFile"
 
@@ -45,6 +45,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/AbstractMapBasedMultimap;-><init>(Ljava/util/Map;)V
 
     return-void
@@ -64,6 +65,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractMultimap;->asMap()Ljava/util/Map;
 
     move-result-object p0
@@ -74,6 +76,7 @@
 .method public bridge synthetic createCollection()Ljava/util/Collection;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractSetMultimap;->createCollection()Ljava/util/Set;
 
     move-result-object p0
@@ -159,6 +162,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/AbstractMultimap;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -224,6 +228,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/google/common/collect/AbstractMapBasedMultimap;->put(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -337,6 +342,7 @@
         }
     .end annotation
 
+    .line 1
     check-cast p1, Ljava/util/Set;
 
     invoke-static {p1}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
@@ -362,6 +368,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedSet;
 
     check-cast p2, Ljava/util/Set;

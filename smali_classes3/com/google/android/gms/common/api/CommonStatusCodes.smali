@@ -67,6 +67,7 @@
 
     packed-switch p0, :pswitch_data_0
 
+    .line 1
     :pswitch_0
     new-instance v0, Ljava/lang/StringBuilder;
 

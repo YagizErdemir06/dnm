@@ -58,9 +58,8 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/google/android/exoplayer2/extractor/ts/c;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/extractor/ts/c;-><init>()V
+    .line 1
+    sget-object v0, Ld/j/a/b/q2/k/c;->a:Ld/j/a/b/q2/k/c;
 
     sput-object v0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->FACTORY:Lcom/google/android/exoplayer2/extractor/ExtractorsFactory;
 
@@ -145,16 +144,6 @@
     return-void
 .end method
 
-.method public static synthetic a()[Lcom/google/android/exoplayer2/extractor/Extractor;
-    .locals 1
-
-    invoke-static {}, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->lambda$static$0()[Lcom/google/android/exoplayer2/extractor/Extractor;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method private calculateAverageFrameSize(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)V
     .locals 9
     .annotation system Ldalvik/annotation/Throws;
@@ -163,6 +152,7 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->hasCalculatedAverageFrameSize:Z
 
     if-eqz v0, :cond_0
@@ -172,10 +162,13 @@
     :cond_0
     const/4 v0, -0x1
 
+    .line 2
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->averageFrameSize:I
 
+    .line 3
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
 
+    .line 4
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
     move-result-wide v1
@@ -186,6 +179,7 @@
 
     if-nez v1, :cond_1
 
+    .line 5
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->peekId3Header(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)I
 
     :cond_1
@@ -196,31 +190,37 @@
     :cond_2
     const/4 v5, 0x1
 
+    .line 6
     :try_start_0
     iget-object v6, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
+    .line 7
     invoke-virtual {v6}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
     move-result-object v6
 
     const/4 v7, 0x2
 
+    .line 8
     invoke-interface {p1, v6, v1, v7, v5}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->peekFully([BIIZ)Z
 
     move-result v6
 
     if-eqz v6, :cond_7
 
+    .line 9
     iget-object v6, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v6, v1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
+    .line 10
     iget-object v6, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v6}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedShort()I
 
     move-result v6
 
+    .line 11
     invoke-static {v6}, Lcom/google/android/exoplayer2/extractor/ts/AdtsReader;->isAdtsSyncWord(I)Z
 
     move-result v6
@@ -229,15 +229,18 @@
 
     goto :goto_2
 
+    .line 12
     :cond_3
     iget-object v6, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
+    .line 13
     invoke-virtual {v6}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
     move-result-object v6
 
     const/4 v7, 0x4
 
+    .line 14
     invoke-interface {p1, v6, v1, v7, v5}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->peekFully([BIIZ)Z
 
     move-result v6
@@ -246,6 +249,7 @@
 
     goto :goto_1
 
+    .line 15
     :cond_4
     iget-object v6, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->scratchBits:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
@@ -253,6 +257,7 @@
 
     invoke-virtual {v6, v7}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->setPosition(I)V
 
+    .line 16
     iget-object v6, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->scratchBits:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/16 v7, 0xd
@@ -280,6 +285,7 @@
     :cond_5
     add-int/lit8 v6, v6, -0x6
 
+    .line 17
     invoke-interface {p1, v6, v5}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->advancePeekPosition(IZ)Z
 
     move-result v6
@@ -289,6 +295,7 @@
     :goto_0
     goto :goto_1
 
+    .line 18
     :cond_6
     iput-boolean v5, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->hasCalculatedAverageFrameSize:Z
 
@@ -296,6 +303,7 @@
 
     const/4 v6, 0x0
 
+    .line 19
     invoke-static {v1, v6}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedContainer(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
     move-result-object v1
@@ -309,6 +317,7 @@
     :goto_1
     move v1, v2
 
+    .line 20
     :goto_2
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
 
@@ -316,6 +325,7 @@
 
     int-to-long v0, v1
 
+    .line 21
     div-long/2addr v3, v0
 
     long-to-int p1, v3
@@ -324,9 +334,11 @@
 
     goto :goto_3
 
+    .line 22
     :cond_8
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->averageFrameSize:I
 
+    .line 23
     :goto_3
     iput-boolean v5, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->hasCalculatedAverageFrameSize:Z
 
@@ -346,6 +358,7 @@
 
     mul-long/2addr v0, v2
 
+    .line 1
     div-long/2addr v0, p1
 
     long-to-int p0, v0
@@ -356,6 +369,7 @@
 .method private getConstantBitrateSeekMap(JZ)Lcom/google/android/exoplayer2/extractor/SeekMap;
     .locals 11
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->averageFrameSize:I
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->reader:Lcom/google/android/exoplayer2/extractor/ts/AdtsReader;
@@ -368,6 +382,7 @@
 
     move-result v8
 
+    .line 2
     new-instance v0, Lcom/google/android/exoplayer2/extractor/ConstantBitrateSeekMap;
 
     iget-wide v6, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->firstFramePosition:J
@@ -385,13 +400,14 @@
     return-object v0
 .end method
 
-.method private static synthetic lambda$static$0()[Lcom/google/android/exoplayer2/extractor/Extractor;
+.method public static synthetic lambda$static$0()[Lcom/google/android/exoplayer2/extractor/Extractor;
     .locals 3
 
     const/4 v0, 0x1
 
     new-array v0, v0, [Lcom/google/android/exoplayer2/extractor/Extractor;
 
+    .line 1
     new-instance v1, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;
 
     invoke-direct {v1}, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;-><init>()V
@@ -411,12 +427,14 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->hasOutputSeekMap:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->flags:I
 
@@ -444,8 +462,10 @@
 
     if-eqz v0, :cond_2
 
+    .line 3
     iget-object v5, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->reader:Lcom/google/android/exoplayer2/extractor/ts/AdtsReader;
 
+    .line 4
     invoke-virtual {v5}, Lcom/google/android/exoplayer2/extractor/ts/AdtsReader;->getSampleDurationUs()J
 
     move-result-wide v5
@@ -461,6 +481,7 @@
     :cond_2
     if-eqz v0, :cond_4
 
+    .line 5
     iget-object p3, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->reader:Lcom/google/android/exoplayer2/extractor/ts/AdtsReader;
 
     invoke-virtual {p3}, Lcom/google/android/exoplayer2/extractor/ts/AdtsReader;->getSampleDurationUs()J
@@ -471,6 +492,7 @@
 
     if-eqz p3, :cond_4
 
+    .line 6
     iget-object p3, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->extractorOutput:Lcom/google/android/exoplayer2/extractor/ExtractorOutput;
 
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->flags:I
@@ -481,15 +503,18 @@
 
     move v2, v1
 
+    .line 7
     :cond_3
     invoke-direct {p0, p1, p2, v2}, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->getConstantBitrateSeekMap(JZ)Lcom/google/android/exoplayer2/extractor/SeekMap;
 
     move-result-object p1
 
+    .line 8
     invoke-interface {p3, p1}, Lcom/google/android/exoplayer2/extractor/ExtractorOutput;->seekMap(Lcom/google/android/exoplayer2/extractor/SeekMap;)V
 
     goto :goto_1
 
+    .line 9
     :cond_4
     iget-object p1, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->extractorOutput:Lcom/google/android/exoplayer2/extractor/ExtractorOutput;
 
@@ -499,6 +524,7 @@
 
     invoke-interface {p1, p2}, Lcom/google/android/exoplayer2/extractor/ExtractorOutput;->seekMap(Lcom/google/android/exoplayer2/extractor/SeekMap;)V
 
+    .line 10
     :goto_1
     iput-boolean v1, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->hasOutputSeekMap:Z
 
@@ -517,6 +543,7 @@
 
     move v1, v0
 
+    .line 1
     :goto_0
     iget-object v2, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
@@ -528,10 +555,12 @@
 
     invoke-interface {p1, v2, v0, v3}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->peekFully([BII)V
 
+    .line 2
     iget-object v2, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v2, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
+    .line 3
     iget-object v2, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedInt24()I
@@ -542,10 +571,13 @@
 
     if-eq v2, v3, :cond_1
 
+    .line 4
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
 
+    .line 5
     invoke-interface {p1, v1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->advancePeekPosition(I)V
 
+    .line 6
     iget-wide v2, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->firstFramePosition:J
 
     const-wide/16 v4, -0x1
@@ -556,11 +588,13 @@
 
     int-to-long v2, v1
 
+    .line 7
     iput-wide v2, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->firstFramePosition:J
 
     :cond_0
     return v1
 
+    .line 8
     :cond_1
     iget-object v2, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
@@ -568,6 +602,7 @@
 
     invoke-virtual {v2, v3}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
+    .line 9
     iget-object v2, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readSynchSafeInt()I
@@ -578,6 +613,7 @@
 
     add-int/2addr v1, v3
 
+    .line 10
     invoke-interface {p1, v2}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->advancePeekPosition(I)V
 
     goto :goto_0
@@ -588,8 +624,10 @@
 .method public init(Lcom/google/android/exoplayer2/extractor/ExtractorOutput;)V
     .locals 3
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->extractorOutput:Lcom/google/android/exoplayer2/extractor/ExtractorOutput;
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->reader:Lcom/google/android/exoplayer2/extractor/ts/AdtsReader;
 
     new-instance v0, Lcom/google/android/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;
@@ -602,6 +640,7 @@
 
     invoke-virtual {p0, p1, v0}, Lcom/google/android/exoplayer2/extractor/ts/AdtsReader;->createTracks(Lcom/google/android/exoplayer2/extractor/ExtractorOutput;Lcom/google/android/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;)V
 
+    .line 3
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorOutput;->endTracks()V
 
     return-void
@@ -615,14 +654,17 @@
         }
     .end annotation
 
+    .line 1
     iget-object p2, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->extractorOutput:Lcom/google/android/exoplayer2/extractor/ExtractorOutput;
 
     invoke-static {p2}, Lcom/google/android/exoplayer2/util/Assertions;->checkStateNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getLength()J
 
     move-result-wide v0
 
+    .line 3
     iget p2, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->flags:I
 
     and-int/lit8 v2, p2, 0x2
@@ -657,8 +699,10 @@
     :goto_1
     if-eqz p2, :cond_2
 
+    .line 4
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->calculateAverageFrameSize(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)V
 
+    .line 5
     :cond_2
     iget-object p2, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->packetBuffer:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
@@ -683,6 +727,7 @@
     :cond_3
     move v2, v4
 
+    .line 6
     :goto_2
     invoke-direct {p0, v0, v1, v2}, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->maybeOutputSeekMap(JZ)V
 
@@ -690,19 +735,23 @@
 
     return p2
 
+    .line 7
     :cond_4
     iget-object p2, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->packetBuffer:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {p2, v4}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
+    .line 8
     iget-object p2, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->packetBuffer:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {p2, p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setLimit(I)V
 
+    .line 9
     iget-boolean p1, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->startedPacket:Z
 
     if-nez p1, :cond_5
 
+    .line 10
     iget-object p1, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->reader:Lcom/google/android/exoplayer2/extractor/ts/AdtsReader;
 
     iget-wide v0, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->firstSampleTimestampUs:J
@@ -711,8 +760,10 @@
 
     invoke-virtual {p1, v0, v1, p2}, Lcom/google/android/exoplayer2/extractor/ts/AdtsReader;->packetStarted(JI)V
 
+    .line 11
     iput-boolean v3, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->startedPacket:Z
 
+    .line 12
     :cond_5
     iget-object p1, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->reader:Lcom/google/android/exoplayer2/extractor/ts/AdtsReader;
 
@@ -734,12 +785,15 @@
 
     const/4 p1, 0x0
 
+    .line 1
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->startedPacket:Z
 
+    .line 2
     iget-object p1, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->reader:Lcom/google/android/exoplayer2/extractor/ts/AdtsReader;
 
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/extractor/ts/AdtsReader;->seek()V
 
+    .line 3
     iput-wide p3, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->firstSampleTimestampUs:J
 
     return-void
@@ -753,6 +807,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->peekId3Header(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)I
 
     move-result v0
@@ -765,6 +820,7 @@
 
     move v4, v2
 
+    .line 2
     :cond_0
     iget-object v5, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
@@ -776,16 +832,19 @@
 
     invoke-interface {p1, v5, v1, v6}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->peekFully([BII)V
 
+    .line 3
     iget-object v5, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v5, v1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
+    .line 4
     iget-object v5, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v5}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedShort()I
 
     move-result v5
 
+    .line 5
     invoke-static {v5}, Lcom/google/android/exoplayer2/extractor/ts/AdtsReader;->isAdtsSyncWord(I)Z
 
     move-result v5
@@ -794,8 +853,10 @@
 
     add-int/lit8 v3, v3, 0x1
 
+    .line 6
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
 
+    .line 7
     invoke-interface {p1, v3}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->advancePeekPosition(I)V
 
     :goto_0
@@ -820,6 +881,7 @@
 
     return v5
 
+    .line 8
     :cond_2
     iget-object v5, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
@@ -829,12 +891,14 @@
 
     invoke-interface {p1, v5, v1, v6}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->peekFully([BII)V
 
+    .line 9
     iget-object v5, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->scratchBits:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/16 v6, 0xe
 
     invoke-virtual {v5, v6}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->setPosition(I)V
 
+    .line 10
     iget-object v5, p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;->scratchBits:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/16 v6, 0xd
@@ -849,8 +913,10 @@
 
     add-int/lit8 v3, v3, 0x1
 
+    .line 11
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
 
+    .line 12
     invoke-interface {p1, v3}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->advancePeekPosition(I)V
 
     goto :goto_0
@@ -858,6 +924,7 @@
     :cond_3
     add-int/lit8 v6, v5, -0x6
 
+    .line 13
     invoke-interface {p1, v6}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->advancePeekPosition(I)V
 
     add-int/2addr v4, v5

@@ -1,4 +1,4 @@
-.class final Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor$4;
+.class public final Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor$4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic val$handler:Landroid/os/Handler;
+.field public final synthetic val$handler:Landroid/os/Handler;
 
 
 # direct methods
@@ -33,6 +33,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor$4;->val$handler:Landroid/os/Handler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,6 +54,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor$4;->val$handler:Landroid/os/Handler;
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z

@@ -26,7 +26,7 @@
 
 .field private static final SAMPLE_RATE:I = 0xac44
 
-.field private static final TAG:Ljava/lang/String; = "MediaAudioEncoder"
+.field private static final TAG:Ljava/lang/String;
 
 
 # instance fields
@@ -37,10 +37,20 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
+    const-class v0, Lcom/faceunity/pta_helper/video/MediaAudioEncoder;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/faceunity/pta_helper/video/MediaAudioEncoder;->TAG:Ljava/lang/String;
+
     const/4 v0, 0x5
 
     new-array v0, v0, [I
 
+    .line 2
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/faceunity/pta_helper/video/MediaAudioEncoder;->AUDIO_SOURCES:[I
@@ -62,10 +72,12 @@
 .method public constructor <init>(Lcom/faceunity/pta_helper/video/MediaMuxerWrapper;Lcom/faceunity/pta_helper/video/MediaEncoder$MediaEncoderListener;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/faceunity/pta_helper/video/MediaEncoder;-><init>(Lcom/faceunity/pta_helper/video/MediaMuxerWrapper;Lcom/faceunity/pta_helper/video/MediaEncoder$MediaEncoderListener;)V
 
     const/4 p1, 0x0
 
+    .line 2
     iput-object p1, p0, Lcom/faceunity/pta_helper/video/MediaAudioEncoder;->mAudioThread:Lcom/faceunity/pta_helper/video/MediaAudioEncoder$AudioThread;
 
     return-void
@@ -74,6 +86,7 @@
 .method public static synthetic access$100()[I
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/faceunity/pta_helper/video/MediaAudioEncoder;->AUDIO_SOURCES:[I
 
     return-object v0
@@ -82,6 +95,7 @@
 .method public static synthetic access$200()Ljava/lang/String;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/faceunity/pta_helper/video/MediaAudioEncoder;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -90,6 +104,7 @@
 .method private static final selectAudioCodec(Ljava/lang/String;)Landroid/media/MediaCodecInfo;
     .locals 7
 
+    .line 1
     invoke-static {}, Landroid/media/MediaCodecList;->getCodecCount()I
 
     move-result v0
@@ -101,10 +116,12 @@
     :goto_0
     if-ge v2, v0, :cond_3
 
+    .line 2
     invoke-static {v2}, Landroid/media/MediaCodecList;->getCodecInfoAt(I)Landroid/media/MediaCodecInfo;
 
     move-result-object v3
 
+    .line 3
     invoke-virtual {v3}, Landroid/media/MediaCodecInfo;->isEncoder()Z
 
     move-result v4
@@ -113,6 +130,7 @@
 
     goto :goto_2
 
+    .line 4
     :cond_0
     invoke-virtual {v3}, Landroid/media/MediaCodecInfo;->getSupportedTypes()[Ljava/lang/String;
 
@@ -120,11 +138,13 @@
 
     move v5, v1
 
+    .line 5
     :goto_1
     array-length v6, v4
 
     if-ge v5, v6, :cond_2
 
+    .line 6
     aget-object v6, v4, v5
 
     invoke-virtual {v6, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -165,22 +185,26 @@
 
     const/4 v0, -0x1
 
+    .line 1
     iput v0, p0, Lcom/faceunity/pta_helper/video/MediaEncoder;->mTrackIndex:I
 
     const/4 v0, 0x0
 
+    .line 2
     iput-boolean v0, p0, Lcom/faceunity/pta_helper/video/MediaEncoder;->mIsEOS:Z
 
     iput-boolean v0, p0, Lcom/faceunity/pta_helper/video/MediaEncoder;->mMuxerStarted:Z
 
     const-string v0, "audio/mp4a-latm"
 
+    .line 3
     invoke-static {v0}, Lcom/faceunity/pta_helper/video/MediaAudioEncoder;->selectAudioCodec(Ljava/lang/String;)Landroid/media/MediaCodecInfo;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
+    .line 4
     sget-object p0, Lcom/faceunity/pta_helper/video/MediaAudioEncoder;->TAG:Ljava/lang/String;
 
     const-string v0, "Unable to find an appropriate codec for audio/mp4a-latm"
@@ -194,32 +218,38 @@
 
     const/4 v2, 0x1
 
+    .line 5
     invoke-static {v0, v1, v2}, Landroid/media/MediaFormat;->createAudioFormat(Ljava/lang/String;II)Landroid/media/MediaFormat;
 
     move-result-object v1
 
-    const-string v3, "aac-profile"
+    const/4 v3, 0x2
 
-    const/4 v4, 0x2
+    const-string v4, "aac-profile"
 
-    invoke-virtual {v1, v3, v4}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
+    .line 6
+    invoke-virtual {v1, v4, v3}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
 
-    const-string v3, "channel-mask"
+    const/16 v3, 0x10
 
-    const/16 v4, 0x10
+    const-string v4, "channel-mask"
 
-    invoke-virtual {v1, v3, v4}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
+    .line 7
+    invoke-virtual {v1, v4, v3}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
 
-    const-string v3, "bitrate"
+    const v3, 0xfa00
 
-    const v4, 0xfa00
+    const-string v4, "bitrate"
 
-    invoke-virtual {v1, v3, v4}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
+    .line 8
+    invoke-virtual {v1, v4, v3}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
 
     const-string v3, "channel-count"
 
+    .line 9
     invoke-virtual {v1, v3, v2}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
 
+    .line 10
     invoke-static {v0}, Landroid/media/MediaCodec;->createEncoderByType(Ljava/lang/String;)Landroid/media/MediaCodec;
 
     move-result-object v0
@@ -228,16 +258,20 @@
 
     const/4 v3, 0x0
 
+    .line 11
     invoke-virtual {v0, v1, v3, v3, v2}, Landroid/media/MediaCodec;->configure(Landroid/media/MediaFormat;Landroid/view/Surface;Landroid/media/MediaCrypto;I)V
 
+    .line 12
     iget-object v0, p0, Lcom/faceunity/pta_helper/video/MediaEncoder;->mMediaCodec:Landroid/media/MediaCodec;
 
     invoke-virtual {v0}, Landroid/media/MediaCodec;->start()V
 
+    .line 13
     iget-object v0, p0, Lcom/faceunity/pta_helper/video/MediaEncoder;->mListener:Lcom/faceunity/pta_helper/video/MediaEncoder$MediaEncoderListener;
 
     if-eqz v0, :cond_1
 
+    .line 14
     :try_start_0
     invoke-interface {v0, p0}, Lcom/faceunity/pta_helper/video/MediaEncoder$MediaEncoderListener;->onPrepared(Lcom/faceunity/pta_helper/video/MediaEncoder;)V
     :try_end_0
@@ -248,6 +282,7 @@
     :catch_0
     move-exception p0
 
+    .line 15
     sget-object v0, Lcom/faceunity/pta_helper/video/MediaAudioEncoder;->TAG:Ljava/lang/String;
 
     const-string v1, "prepare:"
@@ -264,8 +299,10 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Lcom/faceunity/pta_helper/video/MediaAudioEncoder;->mAudioThread:Lcom/faceunity/pta_helper/video/MediaAudioEncoder$AudioThread;
 
+    .line 2
     invoke-super {p0}, Lcom/faceunity/pta_helper/video/MediaEncoder;->release()V
 
     return-void
@@ -274,12 +311,15 @@
 .method public startRecording()V
     .locals 2
 
+    .line 1
     invoke-super {p0}, Lcom/faceunity/pta_helper/video/MediaEncoder;->startRecording()V
 
+    .line 2
     iget-object v0, p0, Lcom/faceunity/pta_helper/video/MediaAudioEncoder;->mAudioThread:Lcom/faceunity/pta_helper/video/MediaAudioEncoder$AudioThread;
 
     if-nez v0, :cond_0
 
+    .line 3
     new-instance v0, Lcom/faceunity/pta_helper/video/MediaAudioEncoder$AudioThread;
 
     const/4 v1, 0x0
@@ -288,6 +328,7 @@
 
     iput-object v0, p0, Lcom/faceunity/pta_helper/video/MediaAudioEncoder;->mAudioThread:Lcom/faceunity/pta_helper/video/MediaAudioEncoder$AudioThread;
 
+    .line 4
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     :cond_0

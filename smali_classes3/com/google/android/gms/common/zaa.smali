@@ -42,6 +42,7 @@
 
     const/4 p0, 0x0
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/gms/tasks/Tasks;->forResult(Ljava/lang/Object;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object p0

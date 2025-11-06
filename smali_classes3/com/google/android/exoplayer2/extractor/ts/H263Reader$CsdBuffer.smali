@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/extractor/ts/H263Reader$CsdBuffer;
+.class public final Lcom/google/android/exoplayer2/extractor/ts/H263Reader$CsdBuffer;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -48,6 +48,7 @@
 
     new-array v0, v0, [B
 
+    .line 1
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$CsdBuffer;->START_CODE:[B
@@ -67,8 +68,10 @@
 .method public constructor <init>(I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-array p1, p1, [B
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$CsdBuffer;->data:[B
@@ -81,6 +84,7 @@
 .method public onData([BII)V
     .locals 4
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$CsdBuffer;->isFilling:Z
 
     if-nez v0, :cond_0
@@ -90,6 +94,7 @@
     :cond_0
     sub-int/2addr p3, p2
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$CsdBuffer;->data:[B
 
     array-length v1, v0
@@ -104,12 +109,14 @@
 
     mul-int/lit8 v2, v2, 0x2
 
+    .line 3
     invoke-static {v0, v2}, Ljava/util/Arrays;->copyOf([BI)[B
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$CsdBuffer;->data:[B
 
+    .line 4
     :cond_1
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$CsdBuffer;->data:[B
 
@@ -117,6 +124,7 @@
 
     invoke-static {p1, p2, v0, v1, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 5
     iget p1, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$CsdBuffer;->length:I
 
     add-int/2addr p1, p3
@@ -129,6 +137,7 @@
 .method public onStartCode(II)Z
     .locals 8
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$CsdBuffer;->state:I
 
     const/4 v1, 0x0
@@ -163,6 +172,7 @@
 
     if-ne p1, v3, :cond_9
 
+    .line 2
     :cond_0
     iget p1, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$CsdBuffer;->length:I
 
@@ -170,10 +180,12 @@
 
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$CsdBuffer;->length:I
 
+    .line 3
     iput-boolean v1, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$CsdBuffer;->isFilling:Z
 
     return v2
 
+    .line 4
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -188,17 +200,21 @@
 
     if-eq p1, p2, :cond_3
 
+    .line 5
     invoke-static {v6, v5}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 6
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$CsdBuffer;->reset()V
 
     goto :goto_0
 
+    .line 7
     :cond_3
     iget p1, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$CsdBuffer;->length:I
 
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$CsdBuffer;->volStartPosition:I
 
+    .line 8
     iput v4, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$CsdBuffer;->state:I
 
     goto :goto_0
@@ -208,12 +224,15 @@
 
     if-le p1, p2, :cond_5
 
+    .line 9
     invoke-static {v6, v5}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 10
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$CsdBuffer;->reset()V
 
     goto :goto_0
 
+    .line 11
     :cond_5
     iput v7, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$CsdBuffer;->state:I
 
@@ -222,12 +241,15 @@
     :cond_6
     if-eq p1, v3, :cond_7
 
+    .line 12
     invoke-static {v6, v5}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 13
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$CsdBuffer;->reset()V
 
     goto :goto_0
 
+    .line 14
     :cond_7
     iput v4, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$CsdBuffer;->state:I
 
@@ -238,10 +260,13 @@
 
     if-ne p1, p2, :cond_9
 
+    .line 15
     iput v2, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$CsdBuffer;->state:I
 
+    .line 16
     iput-boolean v2, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$CsdBuffer;->isFilling:Z
 
+    .line 17
     :cond_9
     :goto_0
     sget-object p1, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$CsdBuffer;->START_CODE:[B
@@ -258,10 +283,13 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$CsdBuffer;->isFilling:Z
 
+    .line 2
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$CsdBuffer;->length:I
 
+    .line 3
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/ts/H263Reader$CsdBuffer;->state:I
 
     return-void

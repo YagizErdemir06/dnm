@@ -14,20 +14,22 @@
 
 
 # instance fields
-.field public final a:I
+.field private final a:I
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 2
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lid/b;->A4()Z
+    invoke-virtual {v0}, Ld/k/a/b;->p4()Z
 
     move-result v0
 
@@ -51,6 +53,7 @@
 .method public getItemCount()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera/dualvideo/user_guide/DualVideoAdapter;->a:I
 
     return p0
@@ -58,6 +61,14 @@
 
 .method public getItemViewType(I)I
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "position"
+        }
+    .end annotation
 
     return p1
 .end method
@@ -68,7 +79,18 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "holder",
+            "position"
+        }
+    .end annotation
 
+    .line 1
     check-cast p1, Lcom/android/camera/fragment/CommonRecyclerViewHolder;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/dualvideo/user_guide/DualVideoAdapter;->onBindViewHolder(Lcom/android/camera/fragment/CommonRecyclerViewHolder;I)V
@@ -82,6 +104,16 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "holder",
+            "position"
+        }
+    .end annotation
 
     return-void
 .end method
@@ -93,6 +125,17 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "parent",
+            "viewType"
+        }
     .end annotation
 
     .line 1
@@ -112,9 +155,20 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "parent",
+            "viewType"
+        }
+    .end annotation
+
     const/4 v0, 0x1
 
-    const v1, 0x7f0b032a
+    const v1, 0x7f0b02e1
 
     const/4 v2, 0x0
 
@@ -136,11 +190,11 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v4, 0x7f140443
+    const v4, 0x7f13042c
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -159,7 +213,7 @@
     move-result-object v1
 
     .line 3
-    invoke-virtual {p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -180,7 +234,7 @@
     move-result-object v3
 
     .line 4
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
@@ -188,13 +242,13 @@
 
     move-result-object v4
 
-    const v5, 0x7f0e0067
+    const v5, 0x7f0e0058
 
     invoke-virtual {v4, v5, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p1
 
-    const v2, 0x7f0b05e7
+    const v2, 0x7f0b0535
 
     .line 5
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -205,7 +259,7 @@
 
     invoke-virtual {v2, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v2, 0x7f0b05e9
+    const v2, 0x7f0b0537
 
     .line 6
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -216,7 +270,7 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v2, 0x7f0b05e8
+    const v2, 0x7f0b0536
 
     .line 7
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -227,7 +281,7 @@
 
     invoke-virtual {v2, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v1, 0x7f0b05ea
+    const v1, 0x7f0b0538
 
     .line 8
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -242,7 +296,7 @@
 
     .line 9
     :cond_1
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -250,18 +304,18 @@
 
     move-result-object v3
 
-    const v4, 0x7f0e0064
+    const v4, 0x7f0e0055
 
     invoke-virtual {v3, v4, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p1
 
     .line 10
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lid/b;->A4()Z
+    invoke-virtual {v2}, Ld/k/a/b;->p4()Z
 
     move-result v2
 
@@ -274,7 +328,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f140445
+    const v2, 0x7f13042e
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
@@ -288,7 +342,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f140444
+    const v2, 0x7f13042d
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
@@ -296,7 +350,7 @@
 
     .line 13
     :cond_3
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -304,18 +358,18 @@
 
     move-result-object v3
 
-    const v4, 0x7f0e0066
+    const v4, 0x7f0e0057
 
     invoke-virtual {v3, v4, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p1
 
     .line 14
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lid/b;->A4()Z
+    invoke-virtual {v2}, Ld/k/a/b;->p4()Z
 
     move-result v2
 
@@ -328,7 +382,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f140441
+    const v2, 0x7f13042a
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
@@ -342,7 +396,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f140440
+    const v2, 0x7f130429
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
@@ -350,7 +404,7 @@
 
     .line 17
     :cond_5
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -358,18 +412,18 @@
 
     move-result-object v3
 
-    const v4, 0x7f0e0065
+    const v4, 0x7f0e0056
 
     invoke-virtual {v3, v4, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p1
 
     .line 18
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lid/b;->A4()Z
+    invoke-virtual {v2}, Ld/k/a/b;->p4()Z
 
     move-result v2
 
@@ -382,7 +436,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f14043e
+    const v2, 0x7f130427
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
@@ -396,7 +450,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f14043d
+    const v2, 0x7f130426
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
@@ -426,7 +480,7 @@
     const p2, 0x425a28f6    # 54.54f
 
     .line 23
-    invoke-static {p2}, Lcom/android/camera/a6;->e0(F)I
+    invoke-static {p2}, Ld/d/a/z5;->W(F)I
 
     move-result p2
 

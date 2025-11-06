@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/extractor/jpeg/StartOffsetExtractorInput;
+.class public final Lcom/google/android/exoplayer2/extractor/jpeg/StartOffsetExtractorInput;
 .super Lcom/google/android/exoplayer2/extractor/ForwardingExtractorInput;
 .source "SourceFile"
 
@@ -11,8 +11,10 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/extractor/ExtractorInput;J)V
     .locals 2
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/extractor/ForwardingExtractorInput;-><init>(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)V
 
+    .line 2
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
     move-result-wide v0
@@ -31,6 +33,7 @@
     :goto_0
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 3
     iput-wide p2, p0, Lcom/google/android/exoplayer2/extractor/jpeg/StartOffsetExtractorInput;->startOffset:J
 
     return-void
@@ -41,6 +44,7 @@
 .method public getLength()J
     .locals 4
 
+    .line 1
     invoke-super {p0}, Lcom/google/android/exoplayer2/extractor/ForwardingExtractorInput;->getLength()J
 
     move-result-wide v0
@@ -55,6 +59,7 @@
 .method public getPeekPosition()J
     .locals 4
 
+    .line 1
     invoke-super {p0}, Lcom/google/android/exoplayer2/extractor/ForwardingExtractorInput;->getPeekPosition()J
 
     move-result-wide v0
@@ -69,6 +74,7 @@
 .method public getPosition()J
     .locals 4
 
+    .line 1
     invoke-super {p0}, Lcom/google/android/exoplayer2/extractor/ForwardingExtractorInput;->getPosition()J
 
     move-result-wide v0
@@ -96,6 +102,7 @@
         }
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/extractor/jpeg/StartOffsetExtractorInput;->startOffset:J
 
     add-long/2addr p1, v0

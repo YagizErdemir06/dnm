@@ -15,14 +15,15 @@
 
 
 # instance fields
-.field public final synthetic a:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+.field public final synthetic c:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/appcompat/internal/app/widget/ActionBarContainer;)V
     .locals 0
 
-    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContainer$a;->a:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    .line 1
+    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContainer$a;->c:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
@@ -34,17 +35,19 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContainer$a;->a:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    .line 1
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContainer$a;->c:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
     const/16 v0, 0x8
 
     invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setVisibility(I)V
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContainer$a;->a:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    .line 2
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContainer$a;->c:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
     const/4 p1, 0x0
 
-    invoke-static {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->e(Lmiuix/appcompat/internal/app/widget/ActionBarContainer;Landroid/animation/Animator;)Landroid/animation/Animator;
+    invoke-static {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->b(Lmiuix/appcompat/internal/app/widget/ActionBarContainer;Landroid/animation/Animator;)Landroid/animation/Animator;
 
     return-void
 .end method

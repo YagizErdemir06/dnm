@@ -1,4 +1,4 @@
-.class final Lcom/faceunity/core/media/video/FUVideoRecordHelper$mMediaEncoderListener$1$onPrepared$1;
+.class public final Lcom/faceunity/core/media/video/FUVideoRecordHelper$mMediaEncoderListener$1$onPrepared$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -20,12 +20,17 @@
     value = "SMAP\nFUVideoRecordHelper.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FUVideoRecordHelper.kt\ncom/faceunity/core/media/video/FUVideoRecordHelper$mMediaEncoderListener$1$onPrepared$1\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,254:1\n1#2:255\n*E\n"
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
         "\u0000\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0003\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0001\u0010\u0002"
     }
     d2 = {
-        "Lnm/l2;",
+        "Lh/l2;",
         "run",
         "()V",
         "<anonymous>"
@@ -40,9 +45,9 @@
 
 
 # instance fields
-.field final synthetic $encoder:Lcom/faceunity/core/media/video/encoder/MediaEncoder;
+.field public final synthetic $encoder:Lcom/faceunity/core/media/video/encoder/MediaEncoder;
 
-.field final synthetic this$0:Lcom/faceunity/core/media/video/FUVideoRecordHelper$mMediaEncoderListener$1;
+.field public final synthetic this$0:Lcom/faceunity/core/media/video/FUVideoRecordHelper$mMediaEncoderListener$1;
 
 
 # direct methods
@@ -63,6 +68,7 @@
 .method public final run()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper$mMediaEncoderListener$1$onPrepared$1;->$encoder:Lcom/faceunity/core/media/video/encoder/MediaEncoder;
 
     check-cast v0, Lcom/faceunity/core/media/video/encoder/MediaVideoEncoder;
@@ -73,6 +79,7 @@
 
     invoke-virtual {v0, v1}, Lcom/faceunity/core/media/video/encoder/MediaVideoEncoder;->setEglContext(Landroid/opengl/EGLContext;)V
 
+    .line 2
     iget-object v0, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper$mMediaEncoderListener$1$onPrepared$1;->this$0:Lcom/faceunity/core/media/video/FUVideoRecordHelper$mMediaEncoderListener$1;
 
     iget-object v0, v0, Lcom/faceunity/core/media/video/FUVideoRecordHelper$mMediaEncoderListener$1;->this$0:Lcom/faceunity/core/media/video/FUVideoRecordHelper;
@@ -94,12 +101,13 @@
 
     invoke-static {v1, v2}, Lcom/faceunity/core/media/video/FUVideoRecordHelper;->access$setMVideoEncoder$p(Lcom/faceunity/core/media/video/FUVideoRecordHelper;Lcom/faceunity/core/media/video/encoder/MediaVideoEncoder;)V
 
-    sget-object v1, Lnm/l2;->a:Lnm/l2;
+    sget-object v1, Lh/l2;->a:Lh/l2;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     monitor-exit v0
 
+    .line 3
     iget-object p0, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper$mMediaEncoderListener$1$onPrepared$1;->this$0:Lcom/faceunity/core/media/video/FUVideoRecordHelper$mMediaEncoderListener$1;
 
     iget-object p0, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper$mMediaEncoderListener$1;->this$0:Lcom/faceunity/core/media/video/FUVideoRecordHelper;
@@ -118,6 +126,7 @@
     :catchall_0
     move-exception p0
 
+    .line 4
     monitor-exit v0
 
     throw p0

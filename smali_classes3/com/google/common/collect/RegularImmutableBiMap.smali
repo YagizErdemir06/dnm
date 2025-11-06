@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/RegularImmutableBiMap;
+.class public final Lcom/google/common/collect/RegularImmutableBiMap;
 .super Lcom/google/common/collect/ImmutableBiMap;
 .source "SourceFile"
 
@@ -26,7 +26,7 @@
 
 
 # static fields
-.field static final EMPTY:Lcom/google/common/collect/RegularImmutableBiMap;
+.field public static final EMPTY:Lcom/google/common/collect/RegularImmutableBiMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/RegularImmutableBiMap<",
@@ -39,7 +39,7 @@
 
 
 # instance fields
-.field final transient alternatingKeysAndValues:[Ljava/lang/Object;
+.field public final transient alternatingKeysAndValues:[Ljava/lang/Object;
     .annotation build Lcom/google/common/annotations/VisibleForTesting;
     .end annotation
 .end field
@@ -67,6 +67,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/RegularImmutableBiMap;
 
     invoke-direct {v0}, Lcom/google/common/collect/RegularImmutableBiMap;-><init>()V
@@ -216,6 +217,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/RegularImmutableMap$EntrySet;
 
     iget-object v1, p0, Lcom/google/common/collect/RegularImmutableBiMap;->alternatingKeysAndValues:[Ljava/lang/Object;
@@ -239,6 +241,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/RegularImmutableMap$KeysOrValuesAsList;
 
     iget-object v1, p0, Lcom/google/common/collect/RegularImmutableBiMap;->alternatingKeysAndValues:[Ljava/lang/Object;
@@ -249,6 +252,7 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/google/common/collect/RegularImmutableMap$KeysOrValuesAsList;-><init>([Ljava/lang/Object;II)V
 
+    .line 2
     new-instance v1, Lcom/google/common/collect/RegularImmutableMap$KeySet;
 
     invoke-direct {v1, p0, v0}, Lcom/google/common/collect/RegularImmutableMap$KeySet;-><init>(Lcom/google/common/collect/ImmutableMap;Lcom/google/common/collect/ImmutableList;)V
@@ -273,6 +277,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/RegularImmutableBiMap;->keyHashTable:Ljava/lang/Object;
 
     iget-object v1, p0, Lcom/google/common/collect/RegularImmutableBiMap;->alternatingKeysAndValues:[Ljava/lang/Object;
@@ -281,6 +286,7 @@
 
     iget p0, p0, Lcom/google/common/collect/RegularImmutableBiMap;->keyOffset:I
 
+    .line 2
     invoke-static {v0, v1, v2, p0, p1}, Lcom/google/common/collect/RegularImmutableMap;->get(Ljava/lang/Object;[Ljava/lang/Object;IILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -331,6 +337,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/collect/RegularImmutableBiMap;->size:I
 
     return p0

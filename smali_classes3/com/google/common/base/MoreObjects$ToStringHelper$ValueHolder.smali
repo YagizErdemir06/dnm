@@ -1,4 +1,4 @@
-.class Lcom/google/common/base/MoreObjects$ToStringHelper$ValueHolder;
+.class public Lcom/google/common/base/MoreObjects$ToStringHelper$ValueHolder;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field name:Ljava/lang/String;
+.field public name:Ljava/lang/String;
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 .end field
 
-.field next:Lcom/google/common/base/MoreObjects$ToStringHelper$ValueHolder;
+.field public next:Lcom/google/common/base/MoreObjects$ToStringHelper$ValueHolder;
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 .end field
 
-.field value:Ljava/lang/Object;
+.field public value:Ljava/lang/Object;
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 .end field

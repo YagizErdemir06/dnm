@@ -19,9 +19,10 @@
 
 
 # direct methods
-.method public constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,6 +42,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/media/browse/MediaBrowser$MediaItem;->getDescription()Landroid/media/MediaDescription;
 
     move-result-object p0
@@ -62,6 +64,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/media/browse/MediaBrowser$MediaItem;->getFlags()I
 
     move-result p0

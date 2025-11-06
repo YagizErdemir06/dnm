@@ -16,6 +16,7 @@
 .method private constructor <init>(Lcom/google/android/gms/internal/mlkit_vision_common/zziw;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance p2, Lcom/google/android/gms/internal/mlkit_vision_common/zzky;
@@ -34,6 +35,7 @@
 .method public static zze(Lcom/google/android/gms/internal/mlkit_vision_common/zziw;)Lcom/google/android/gms/internal/mlkit_vision_common/zzmb;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_common/zzmk;
 
     const/4 v1, 0x0
@@ -48,6 +50,7 @@
 .method public final zza(Lcom/google/android/gms/internal/mlkit_vision_common/zziv;)Lcom/google/android/gms/internal/mlkit_vision_common/zzmb;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_common/zzmk;->zza:Lcom/google/android/gms/internal/mlkit_vision_common/zziw;
 
     invoke-virtual {v0, p1}, Lcom/google/android/gms/internal/mlkit_vision_common/zziw;->zzc(Lcom/google/android/gms/internal/mlkit_vision_common/zziv;)Lcom/google/android/gms/internal/mlkit_vision_common/zziw;
@@ -66,6 +69,7 @@
 .method public final zzc()Ljava/lang/String;
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_common/zzmk;->zza:Lcom/google/android/gms/internal/mlkit_vision_common/zziw;
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_common/zziw;->zzf()Lcom/google/android/gms/internal/mlkit_vision_common/zziy;
@@ -92,6 +96,7 @@
 
     move-result-object p0
 
+    .line 2
     invoke-static {p0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -111,6 +116,7 @@
 
     xor-int/lit8 p2, p1, 0x1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_common/zzmk;->zzb:Lcom/google/android/gms/internal/mlkit_vision_common/zzky;
 
     const/4 v1, 0x1
@@ -133,6 +139,7 @@
 
     iget-object p2, p0, Lcom/google/android/gms/internal/mlkit_vision_common/zzmk;->zzb:Lcom/google/android/gms/internal/mlkit_vision_common/zzky;
 
+    .line 2
     sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     invoke-virtual {p2, v0}, Lcom/google/android/gms/internal/mlkit_vision_common/zzky;->zze(Ljava/lang/Boolean;)Lcom/google/android/gms/internal/mlkit_vision_common/zzky;
@@ -141,12 +148,14 @@
 
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_common/zzmk;->zzb:Lcom/google/android/gms/internal/mlkit_vision_common/zzky;
 
+    .line 3
     invoke-virtual {v0}, Lcom/google/android/gms/internal/mlkit_vision_common/zzky;->zzm()Lcom/google/android/gms/internal/mlkit_vision_common/zzla;
 
     move-result-object v0
 
     invoke-virtual {p2, v0}, Lcom/google/android/gms/internal/mlkit_vision_common/zziw;->zze(Lcom/google/android/gms/internal/mlkit_vision_common/zzla;)Lcom/google/android/gms/internal/mlkit_vision_common/zziw;
 
+    .line 4
     :try_start_0
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_vision_common/zzmw;->zza()Lcom/google/android/gms/internal/mlkit_vision_common/zzmw;
 
@@ -158,6 +167,7 @@
 
     move-result-object p0
 
+    .line 5
     new-instance p1, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;
 
     invoke-direct {p1}, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;-><init>()V
@@ -182,6 +192,7 @@
 
     const-string p1, "utf-8"
 
+    .line 6
     invoke-virtual {p0, p1}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
 
     move-result-object p0
@@ -195,14 +206,18 @@
 
     move-result-object p0
 
+    .line 7
     new-instance p1, Lcom/google/android/gms/internal/mlkit_vision_common/zzam;
 
     invoke-direct {p1}, Lcom/google/android/gms/internal/mlkit_vision_common/zzam;-><init>()V
 
+    .line 8
     sget-object p2, Lcom/google/android/gms/internal/mlkit_vision_common/zzhe;->zza:Lcom/google/firebase/encoders/config/Configurator;
 
+    .line 9
     invoke-interface {p2, p1}, Lcom/google/firebase/encoders/config/Configurator;->configure(Lcom/google/firebase/encoders/config/EncoderConfig;)V
 
+    .line 10
     invoke-virtual {p1}, Lcom/google/android/gms/internal/mlkit_vision_common/zzam;->zza()Lcom/google/android/gms/internal/mlkit_vision_common/zzan;
 
     move-result-object p1
@@ -222,6 +237,7 @@
 
     const-string p2, "Failed to covert logging to UTF-8 byte array"
 
+    .line 11
     invoke-direct {p1, p2, p0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     throw p1

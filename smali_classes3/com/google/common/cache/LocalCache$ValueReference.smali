@@ -1,4 +1,4 @@
-.class interface abstract Lcom/google/common/cache/LocalCache$ValueReference;
+.class public interface abstract Lcom/google/common/cache/LocalCache$ValueReference;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

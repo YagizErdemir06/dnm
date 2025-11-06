@@ -116,12 +116,14 @@
 .method public createPeriod(Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;Lcom/google/android/exoplayer2/upstream/Allocator;J)Lcom/google/android/exoplayer2/source/MediaPeriod;
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/source/LoopingMediaSource;->loopCount:I
 
     const v1, 0x7fffffff
 
     if-ne v0, v1, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/LoopingMediaSource;->maskingMediaSource:Lcom/google/android/exoplayer2/source/MaskingMediaSource;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/google/android/exoplayer2/source/MaskingMediaSource;->createPeriod(Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;Lcom/google/android/exoplayer2/upstream/Allocator;J)Lcom/google/android/exoplayer2/source/MaskingMediaPeriod;
@@ -130,6 +132,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     iget-object v0, p1, Lcom/google/android/exoplayer2/source/MediaPeriodId;->periodUid:Ljava/lang/Object;
 
@@ -137,20 +140,25 @@
 
     move-result-object v0
 
+    .line 4
     invoke-virtual {p1, v0}, Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;->copyWithPeriodUid(Ljava/lang/Object;)Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;
 
     move-result-object v0
 
+    .line 5
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/LoopingMediaSource;->childMediaPeriodIdToMediaPeriodId:Ljava/util/Map;
 
     invoke-interface {v1, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 6
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/LoopingMediaSource;->maskingMediaSource:Lcom/google/android/exoplayer2/source/MaskingMediaSource;
 
+    .line 7
     invoke-virtual {p1, v0, p2, p3, p4}, Lcom/google/android/exoplayer2/source/MaskingMediaSource;->createPeriod(Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;Lcom/google/android/exoplayer2/upstream/Allocator;J)Lcom/google/android/exoplayer2/source/MaskingMediaPeriod;
 
     move-result-object p1
 
+    .line 8
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/LoopingMediaSource;->mediaPeriodToChildMediaPeriodId:Ljava/util/Map;
 
     invoke-interface {p0, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -163,12 +171,14 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/source/LoopingMediaSource;->loopCount:I
 
     const v1, 0x7fffffff
 
     if-eq v0, v1, :cond_0
 
+    .line 2
     new-instance v0, Lcom/google/android/exoplayer2/source/LoopingMediaSource$LoopingTimeline;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/LoopingMediaSource;->maskingMediaSource:Lcom/google/android/exoplayer2/source/MaskingMediaSource;
@@ -183,6 +193,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     new-instance v0, Lcom/google/android/exoplayer2/source/LoopingMediaSource$InfinitelyLoopingTimeline;
 
@@ -201,6 +212,7 @@
 .method public getMediaItem()Lcom/google/android/exoplayer2/MediaItem;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/LoopingMediaSource;->maskingMediaSource:Lcom/google/android/exoplayer2/source/MaskingMediaSource;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/source/MaskingMediaSource;->getMediaItem()Lcom/google/android/exoplayer2/MediaItem;
@@ -310,13 +322,15 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/android/exoplayer2/source/CompositeMediaSource;->prepareSourceInternal(Lcom/google/android/exoplayer2/upstream/TransferListener;)V
 
-    const/4 p1, 0x0
+    .line 2
+    iget-object p1, p0, Lcom/google/android/exoplayer2/source/LoopingMediaSource;->maskingMediaSource:Lcom/google/android/exoplayer2/source/MaskingMediaSource;
 
-    iget-object v0, p0, Lcom/google/android/exoplayer2/source/LoopingMediaSource;->maskingMediaSource:Lcom/google/android/exoplayer2/source/MaskingMediaSource;
+    const/4 v0, 0x0
 
-    invoke-virtual {p0, p1, v0}, Lcom/google/android/exoplayer2/source/CompositeMediaSource;->prepareChildSource(Ljava/lang/Object;Lcom/google/android/exoplayer2/source/MediaSource;)V
+    invoke-virtual {p0, v0, p1}, Lcom/google/android/exoplayer2/source/CompositeMediaSource;->prepareChildSource(Ljava/lang/Object;Lcom/google/android/exoplayer2/source/MediaSource;)V
 
     return-void
 .end method
@@ -324,10 +338,12 @@
 .method public releasePeriod(Lcom/google/android/exoplayer2/source/MediaPeriod;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/LoopingMediaSource;->maskingMediaSource:Lcom/google/android/exoplayer2/source/MaskingMediaSource;
 
     invoke-virtual {v0, p1}, Lcom/google/android/exoplayer2/source/MaskingMediaSource;->releasePeriod(Lcom/google/android/exoplayer2/source/MediaPeriod;)V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/LoopingMediaSource;->mediaPeriodToChildMediaPeriodId:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -338,6 +354,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/LoopingMediaSource;->childMediaPeriodIdToMediaPeriodId:Ljava/util/Map;
 
     invoke-interface {p0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;

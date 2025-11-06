@@ -1,13 +1,22 @@
 .class public Lcom/android/camera2/compat/theme/custom/cv/folme/FolmeAlphaInOnSubscribeCV;
-.super Lcom/android/camera/animation/folme/a;
+.super Ld/d/a/f6/i/a;
 .source "SourceFile"
 
 
 # direct methods
 .method public constructor <init>(Landroid/view/View;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "aniView"
+        }
+    .end annotation
 
-    invoke-direct {p0, p1}, Lcom/android/camera/animation/folme/a;-><init>(Landroid/view/View;)V
+    .line 1
+    invoke-direct {p0, p1}, Ld/d/a/f6/i/a;-><init>(Landroid/view/View;)V
 
     return-void
 .end method
@@ -17,7 +26,8 @@
 .method public getAnimConfig()Lmiuix/animation/base/AnimConfig;
     .locals 3
 
-    invoke-super {p0}, Lcom/android/camera/animation/folme/d;->getAnimConfig()Lmiuix/animation/base/AnimConfig;
+    .line 1
+    invoke-super {p0}, Ld/d/a/f6/i/d;->getAnimConfig()Lmiuix/animation/base/AnimConfig;
 
     move-result-object p0
 
@@ -33,6 +43,7 @@
 
     const/4 v1, 0x6
 
+    .line 2
     invoke-virtual {p0, v1, v0}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
 
     return-object p0

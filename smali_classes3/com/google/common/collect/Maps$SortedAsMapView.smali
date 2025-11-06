@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Maps$SortedAsMapView;
+.class public Lcom/google/common/collect/Maps$SortedAsMapView;
 .super Lcom/google/common/collect/Maps$AsMapView;
 .source "SourceFile"
 
@@ -44,6 +44,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/common/collect/Maps$AsMapView;-><init>(Ljava/util/Set;Lcom/google/common/base/Function;)V
 
     return-void
@@ -95,6 +96,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$SortedAsMapView;->backingSet()Ljava/util/SortedSet;
 
     move-result-object p0
@@ -117,6 +119,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$SortedAsMapView;->backingSet()Ljava/util/SortedSet;
 
     move-result-object p0
@@ -142,6 +145,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$SortedAsMapView;->backingSet()Ljava/util/SortedSet;
 
     move-result-object v0
@@ -169,6 +173,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$SortedAsMapView;->backingSet()Ljava/util/SortedSet;
 
     move-result-object p0
@@ -191,6 +196,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$SortedAsMapView;->backingSet()Ljava/util/SortedSet;
 
     move-result-object p0
@@ -220,6 +226,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$SortedAsMapView;->backingSet()Ljava/util/SortedSet;
 
     move-result-object v0
@@ -251,6 +258,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$SortedAsMapView;->backingSet()Ljava/util/SortedSet;
 
     move-result-object v0

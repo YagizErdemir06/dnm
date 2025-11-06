@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Maps$NavigableKeySet;
+.class public Lcom/google/common/collect/Maps$NavigableKeySet;
 .super Lcom/google/common/collect/Maps$SortedKeySet;
 .source "SourceFile"
 
@@ -45,6 +45,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/Maps$SortedKeySet;-><init>(Ljava/util/SortedMap;)V
 
     return-void
@@ -67,6 +68,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$NavigableKeySet;->map()Ljava/util/NavigableMap;
 
     move-result-object p0
@@ -88,6 +90,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$NavigableKeySet;->descendingSet()Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -109,6 +112,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$NavigableKeySet;->map()Ljava/util/NavigableMap;
 
     move-result-object p0
@@ -135,6 +139,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$NavigableKeySet;->map()Ljava/util/NavigableMap;
 
     move-result-object p0
@@ -215,6 +220,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$NavigableKeySet;->map()Ljava/util/NavigableMap;
 
     move-result-object p0
@@ -241,6 +247,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$NavigableKeySet;->map()Ljava/util/NavigableMap;
 
     move-result-object p0
@@ -303,6 +310,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$NavigableKeySet;->map()Ljava/util/NavigableMap;
 
     move-result-object p0
@@ -329,6 +337,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$NavigableKeySet;->map()Ljava/util/NavigableMap;
 
     move-result-object p0

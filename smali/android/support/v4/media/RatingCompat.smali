@@ -33,37 +33,38 @@
     .end annotation
 .end field
 
-.field public static final d:Ljava/lang/String; = "Rating"
+.field private static final c:Ljava/lang/String; = "Rating"
 
-.field public static final e:I = 0x0
+.field public static final d:I = 0x0
 
 .field public static final f:I = 0x1
 
 .field public static final g:I = 0x2
 
-.field public static final h:I = 0x3
+.field public static final j:I = 0x3
 
-.field public static final i:I = 0x4
+.field public static final m:I = 0x4
 
-.field public static final j:I = 0x5
+.field public static final n:I = 0x5
 
-.field public static final k:I = 0x6
+.field public static final p:I = 0x6
 
-.field public static final l:F = -1.0f
+.field private static final s:F = -1.0f
 
 
 # instance fields
-.field public final a:I
+.field private final t:I
 
-.field public final b:F
+.field private final u:F
 
-.field public c:Ljava/lang/Object;
+.field private w:Ljava/lang/Object;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Landroid/support/v4/media/RatingCompat$a;
 
     invoke-direct {v0}, Landroid/support/v4/media/RatingCompat$a;-><init>()V
@@ -86,16 +87,19 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Landroid/support/v4/media/RatingCompat;->a:I
+    .line 2
+    iput p1, p0, Landroid/support/v4/media/RatingCompat;->t:I
 
-    iput p2, p0, Landroid/support/v4/media/RatingCompat;->b:F
+    .line 3
+    iput p2, p0, Landroid/support/v4/media/RatingCompat;->u:F
 
     return-void
 .end method
 
-.method public static b(Ljava/lang/Object;)Landroid/support/v4/media/RatingCompat;
+.method public static a(Ljava/lang/Object;)Landroid/support/v4/media/RatingCompat;
     .locals 4
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -110,6 +114,14 @@
 
     if-eqz p0, :cond_1
 
+    .line 1
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v2, 0x13
+
+    if-lt v1, v2, :cond_1
+
+    .line 2
     move-object v1, p0
 
     check-cast v1, Landroid/media/Rating;
@@ -118,6 +130,7 @@
 
     move-result v2
 
+    .line 3
     invoke-static {v1}, Landroid/support/v4/media/RatingCompat$b;->e(Landroid/media/Rating;)Z
 
     move-result v3
@@ -128,57 +141,65 @@
 
     return-object v0
 
+    .line 4
     :pswitch_0
     invoke-static {v1}, Landroid/support/v4/media/RatingCompat$b;->a(Landroid/media/Rating;)F
 
     move-result v0
 
-    invoke-static {v0}, Landroid/support/v4/media/RatingCompat;->k(F)Landroid/support/v4/media/RatingCompat;
+    .line 5
+    invoke-static {v0}, Landroid/support/v4/media/RatingCompat;->j(F)Landroid/support/v4/media/RatingCompat;
 
     move-result-object v0
 
     goto :goto_0
 
+    .line 6
     :pswitch_1
     invoke-static {v1}, Landroid/support/v4/media/RatingCompat$b;->c(Landroid/media/Rating;)F
 
     move-result v0
 
-    invoke-static {v2, v0}, Landroid/support/v4/media/RatingCompat;->l(IF)Landroid/support/v4/media/RatingCompat;
+    .line 7
+    invoke-static {v2, v0}, Landroid/support/v4/media/RatingCompat;->k(IF)Landroid/support/v4/media/RatingCompat;
 
     move-result-object v0
 
     goto :goto_0
 
+    .line 8
     :pswitch_2
     invoke-static {v1}, Landroid/support/v4/media/RatingCompat$b;->f(Landroid/media/Rating;)Z
 
     move-result v0
 
-    invoke-static {v0}, Landroid/support/v4/media/RatingCompat;->m(Z)Landroid/support/v4/media/RatingCompat;
+    invoke-static {v0}, Landroid/support/v4/media/RatingCompat;->l(Z)Landroid/support/v4/media/RatingCompat;
 
     move-result-object v0
 
     goto :goto_0
 
+    .line 9
     :pswitch_3
     invoke-static {v1}, Landroid/support/v4/media/RatingCompat$b;->d(Landroid/media/Rating;)Z
 
     move-result v0
 
-    invoke-static {v0}, Landroid/support/v4/media/RatingCompat;->j(Z)Landroid/support/v4/media/RatingCompat;
+    invoke-static {v0}, Landroid/support/v4/media/RatingCompat;->i(Z)Landroid/support/v4/media/RatingCompat;
 
     move-result-object v0
 
     goto :goto_0
 
+    .line 10
     :cond_0
-    invoke-static {v2}, Landroid/support/v4/media/RatingCompat;->n(I)Landroid/support/v4/media/RatingCompat;
+    invoke-static {v2}, Landroid/support/v4/media/RatingCompat;->m(I)Landroid/support/v4/media/RatingCompat;
 
     move-result-object v0
 
+    .line 11
     :goto_0
-    iput-object p0, v0, Landroid/support/v4/media/RatingCompat;->c:Ljava/lang/Object;
+    iput-object p0, v0, Landroid/support/v4/media/RatingCompat;->w:Ljava/lang/Object;
 
     :cond_1
     return-object v0
@@ -196,7 +217,7 @@
     .end packed-switch
 .end method
 
-.method public static j(Z)Landroid/support/v4/media/RatingCompat;
+.method public static i(Z)Landroid/support/v4/media/RatingCompat;
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -207,6 +228,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Landroid/support/v4/media/RatingCompat;
 
     if-eqz p0, :cond_0
@@ -226,7 +248,7 @@
     return-object v0
 .end method
 
-.method public static k(F)Landroid/support/v4/media/RatingCompat;
+.method public static j(F)Landroid/support/v4/media/RatingCompat;
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -251,6 +273,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     new-instance v0, Landroid/support/v4/media/RatingCompat;
 
@@ -266,6 +289,7 @@
 
     const-string v0, "Invalid percentage-based rating value"
 
+    .line 2
     invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0
@@ -273,7 +297,7 @@
     return-object p0
 .end method
 
-.method public static l(IF)Landroid/support/v4/media/RatingCompat;
+.method public static k(IF)Landroid/support/v4/media/RatingCompat;
     .locals 4
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -302,6 +326,7 @@
 
     if-eq p0, v0, :cond_0
 
+    .line 1
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -350,6 +375,7 @@
 
     goto :goto_1
 
+    .line 2
     :cond_3
     new-instance v0, Landroid/support/v4/media/RatingCompat;
 
@@ -361,12 +387,13 @@
     :goto_1
     const-string p0, "Trying to set out of range star-based rating"
 
+    .line 3
     invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v1
 .end method
 
-.method public static m(Z)Landroid/support/v4/media/RatingCompat;
+.method public static l(Z)Landroid/support/v4/media/RatingCompat;
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -377,6 +404,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Landroid/support/v4/media/RatingCompat;
 
     if-eqz p0, :cond_0
@@ -396,7 +424,7 @@
     return-object v0
 .end method
 
-.method public static n(I)Landroid/support/v4/media/RatingCompat;
+.method public static m(I)Landroid/support/v4/media/RatingCompat;
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -413,6 +441,7 @@
 
     return-object p0
 
+    .line 1
     :pswitch_0
     new-instance v0, Landroid/support/v4/media/RatingCompat;
 
@@ -437,16 +466,17 @@
 
 
 # virtual methods
-.method public c()F
+.method public b()F
     .locals 2
 
-    iget v0, p0, Landroid/support/v4/media/RatingCompat;->a:I
+    .line 1
+    iget v0, p0, Landroid/support/v4/media/RatingCompat;->t:I
 
     const/4 v1, 0x6
 
     if-ne v0, v1, :cond_1
 
-    invoke-virtual {p0}, Landroid/support/v4/media/RatingCompat;->h()Z
+    invoke-virtual {p0}, Landroid/support/v4/media/RatingCompat;->g()Z
 
     move-result v0
 
@@ -454,8 +484,9 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
-    iget p0, p0, Landroid/support/v4/media/RatingCompat;->b:F
+    iget p0, p0, Landroid/support/v4/media/RatingCompat;->u:F
 
     return p0
 
@@ -466,20 +497,29 @@
     return p0
 .end method
 
-.method public d()Ljava/lang/Object;
+.method public c()Ljava/lang/Object;
     .locals 2
 
-    iget-object v0, p0, Landroid/support/v4/media/RatingCompat;->c:Ljava/lang/Object;
+    .line 1
+    iget-object v0, p0, Landroid/support/v4/media/RatingCompat;->w:Ljava/lang/Object;
 
     if-nez v0, :cond_1
 
-    invoke-virtual {p0}, Landroid/support/v4/media/RatingCompat;->h()Z
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x13
+
+    if-lt v0, v1, :cond_1
+
+    .line 2
+    invoke-virtual {p0}, Landroid/support/v4/media/RatingCompat;->g()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget v0, p0, Landroid/support/v4/media/RatingCompat;->a:I
+    .line 3
+    iget v0, p0, Landroid/support/v4/media/RatingCompat;->t:I
 
     packed-switch v0, :pswitch_data_0
 
@@ -487,8 +527,9 @@
 
     return-object p0
 
+    .line 4
     :pswitch_0
-    invoke-virtual {p0}, Landroid/support/v4/media/RatingCompat;->c()F
+    invoke-virtual {p0}, Landroid/support/v4/media/RatingCompat;->b()F
 
     move-result v0
 
@@ -496,25 +537,28 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/v4/media/RatingCompat;->c:Ljava/lang/Object;
+    iput-object v0, p0, Landroid/support/v4/media/RatingCompat;->w:Ljava/lang/Object;
 
     goto :goto_0
 
+    .line 5
     :pswitch_1
-    invoke-virtual {p0}, Landroid/support/v4/media/RatingCompat;->f()F
+    invoke-virtual {p0}, Landroid/support/v4/media/RatingCompat;->e()F
 
     move-result v1
 
+    .line 6
     invoke-static {v0, v1}, Landroid/support/v4/media/RatingCompat$b;->i(IF)Landroid/media/Rating;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/v4/media/RatingCompat;->c:Ljava/lang/Object;
+    iput-object v0, p0, Landroid/support/v4/media/RatingCompat;->w:Ljava/lang/Object;
 
     goto :goto_0
 
+    .line 7
     :pswitch_2
-    invoke-virtual {p0}, Landroid/support/v4/media/RatingCompat;->i()Z
+    invoke-virtual {p0}, Landroid/support/v4/media/RatingCompat;->h()Z
 
     move-result v0
 
@@ -522,12 +566,13 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/v4/media/RatingCompat;->c:Ljava/lang/Object;
+    iput-object v0, p0, Landroid/support/v4/media/RatingCompat;->w:Ljava/lang/Object;
 
     goto :goto_0
 
+    .line 8
     :pswitch_3
-    invoke-virtual {p0}, Landroid/support/v4/media/RatingCompat;->g()Z
+    invoke-virtual {p0}, Landroid/support/v4/media/RatingCompat;->f()Z
 
     move-result v0
 
@@ -535,22 +580,24 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/v4/media/RatingCompat;->c:Ljava/lang/Object;
+    iput-object v0, p0, Landroid/support/v4/media/RatingCompat;->w:Ljava/lang/Object;
 
     goto :goto_0
 
+    .line 9
     :cond_0
-    iget v0, p0, Landroid/support/v4/media/RatingCompat;->a:I
+    iget v0, p0, Landroid/support/v4/media/RatingCompat;->t:I
 
     invoke-static {v0}, Landroid/support/v4/media/RatingCompat$b;->k(I)Landroid/media/Rating;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/v4/media/RatingCompat;->c:Ljava/lang/Object;
+    iput-object v0, p0, Landroid/support/v4/media/RatingCompat;->w:Ljava/lang/Object;
 
+    .line 10
     :cond_1
     :goto_0
-    iget-object p0, p0, Landroid/support/v4/media/RatingCompat;->c:Ljava/lang/Object;
+    iget-object p0, p0, Landroid/support/v4/media/RatingCompat;->w:Ljava/lang/Object;
 
     return-object p0
 
@@ -565,26 +612,29 @@
     .end packed-switch
 .end method
 
+.method public d()I
+    .locals 0
+
+    .line 1
+    iget p0, p0, Landroid/support/v4/media/RatingCompat;->t:I
+
+    return p0
+.end method
+
 .method public describeContents()I
     .locals 0
 
-    iget p0, p0, Landroid/support/v4/media/RatingCompat;->a:I
+    .line 1
+    iget p0, p0, Landroid/support/v4/media/RatingCompat;->t:I
 
     return p0
 .end method
 
-.method public e()I
-    .locals 0
-
-    iget p0, p0, Landroid/support/v4/media/RatingCompat;->a:I
-
-    return p0
-.end method
-
-.method public f()F
+.method public e()F
     .locals 2
 
-    iget v0, p0, Landroid/support/v4/media/RatingCompat;->a:I
+    .line 1
+    iget v0, p0, Landroid/support/v4/media/RatingCompat;->t:I
 
     const/4 v1, 0x3
 
@@ -600,14 +650,16 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
-    invoke-virtual {p0}, Landroid/support/v4/media/RatingCompat;->h()Z
+    invoke-virtual {p0}, Landroid/support/v4/media/RatingCompat;->g()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    iget p0, p0, Landroid/support/v4/media/RatingCompat;->b:F
+    .line 3
+    iget p0, p0, Landroid/support/v4/media/RatingCompat;->u:F
 
     return p0
 
@@ -618,10 +670,11 @@
     return p0
 .end method
 
-.method public g()Z
+.method public f()Z
     .locals 3
 
-    iget v0, p0, Landroid/support/v4/media/RatingCompat;->a:I
+    .line 1
+    iget v0, p0, Landroid/support/v4/media/RatingCompat;->t:I
 
     const/4 v1, 0x0
 
@@ -631,8 +684,9 @@
 
     return v1
 
+    .line 2
     :cond_0
-    iget p0, p0, Landroid/support/v4/media/RatingCompat;->b:F
+    iget p0, p0, Landroid/support/v4/media/RatingCompat;->u:F
 
     const/high16 v0, 0x3f800000    # 1.0f
 
@@ -646,10 +700,11 @@
     return v1
 .end method
 
-.method public h()Z
+.method public g()Z
     .locals 1
 
-    iget p0, p0, Landroid/support/v4/media/RatingCompat;->b:F
+    .line 1
+    iget p0, p0, Landroid/support/v4/media/RatingCompat;->u:F
 
     const/4 v0, 0x0
 
@@ -668,21 +723,23 @@
     return p0
 .end method
 
-.method public i()Z
+.method public h()Z
     .locals 3
 
-    iget v0, p0, Landroid/support/v4/media/RatingCompat;->a:I
+    .line 1
+    iget v0, p0, Landroid/support/v4/media/RatingCompat;->t:I
 
-    const/4 v1, 0x2
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const/4 v2, 0x2
 
-    if-eq v0, v1, :cond_0
+    if-eq v0, v2, :cond_0
 
-    return v2
+    return v1
 
+    .line 2
     :cond_0
-    iget p0, p0, Landroid/support/v4/media/RatingCompat;->b:F
+    iget p0, p0, Landroid/support/v4/media/RatingCompat;->u:F
 
     const/high16 v0, 0x3f800000    # 1.0f
 
@@ -690,15 +747,16 @@
 
     if-nez p0, :cond_1
 
-    const/4 v2, 0x1
+    const/4 v1, 0x1
 
     :cond_1
-    return v2
+    return v1
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -707,7 +765,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Landroid/support/v4/media/RatingCompat;->a:I
+    iget v1, p0, Landroid/support/v4/media/RatingCompat;->t:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -715,7 +773,8 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget p0, p0, Landroid/support/v4/media/RatingCompat;->b:F
+    .line 2
+    iget p0, p0, Landroid/support/v4/media/RatingCompat;->u:F
 
     const/4 v1, 0x0
 
@@ -755,11 +814,13 @@
         }
     .end annotation
 
-    iget p2, p0, Landroid/support/v4/media/RatingCompat;->a:I
+    .line 1
+    iget p2, p0, Landroid/support/v4/media/RatingCompat;->t:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget p0, p0, Landroid/support/v4/media/RatingCompat;->b:F
+    .line 2
+    iget p0, p0, Landroid/support/v4/media/RatingCompat;->u:F
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeFloat(F)V
 

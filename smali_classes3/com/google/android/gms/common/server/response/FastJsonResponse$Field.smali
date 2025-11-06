@@ -43,35 +43,35 @@
 
 
 # instance fields
-.field protected final zaa:I
+.field public final zaa:I
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         getter = "getTypeIn"
         id = 0x2
     .end annotation
 .end field
 
-.field protected final zab:Z
+.field public final zab:Z
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         getter = "isTypeInArray"
         id = 0x3
     .end annotation
 .end field
 
-.field protected final zac:I
+.field public final zac:I
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         getter = "getTypeOut"
         id = 0x4
     .end annotation
 .end field
 
-.field protected final zad:Z
+.field public final zad:Z
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         getter = "isTypeOutArray"
         id = 0x5
     .end annotation
 .end field
 
-.field protected final zae:Ljava/lang/String;
+.field public final zae:Ljava/lang/String;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -81,19 +81,19 @@
     .end annotation
 .end field
 
-.field protected final zaf:I
+.field public final zaf:I
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         getter = "getSafeParcelableFieldId"
         id = 0x7
     .end annotation
 .end field
 
-.field protected final zag:Ljava/lang/Class;
+.field public final zag:Ljava/lang/Class;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field protected final zah:Ljava/lang/String;
+.field public final zah:Ljava/lang/String;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -331,6 +331,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v9, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;
 
     const/16 v1, 0x8
@@ -380,6 +381,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v9, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;
 
     const/4 v1, 0x6
@@ -435,6 +437,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v9, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;
 
     const/16 v1, 0xb
@@ -493,6 +496,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v9, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;
 
     const/16 v1, 0xb
@@ -542,6 +546,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v9, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;
 
     const/4 v1, 0x4
@@ -591,6 +596,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v9, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;
 
     const/4 v1, 0x3
@@ -643,6 +649,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v9, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;
 
     const/4 v1, 0x0
@@ -692,6 +699,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v9, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;
 
     const/4 v1, 0x2
@@ -741,6 +749,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v9, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;
 
     const/4 v1, 0x7
@@ -795,6 +804,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v9, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;
 
     const/16 v1, 0xa
@@ -847,6 +857,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v9, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;
 
     const/4 v1, 0x7
@@ -899,10 +910,12 @@
         }
     .end annotation
 
+    .line 1
     new-instance v9, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;
 
     invoke-interface {p2}, Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;->zaa()I
 
+    .line 2
     invoke-interface {p2}, Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;->zab()I
 
     const/4 v1, 0x7
@@ -953,12 +966,14 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/gms/common/internal/Objects;->toStringHelper(Ljava/lang/Object;)Lcom/google/android/gms/common/internal/Objects$ToStringHelper;
 
     move-result-object v0
 
     iget v1, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zai:I
 
+    .line 2
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -971,6 +986,7 @@
 
     iget v1, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zaa:I
 
+    .line 3
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -983,6 +999,7 @@
 
     iget-boolean v1, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zab:Z
 
+    .line 4
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
@@ -995,6 +1012,7 @@
 
     iget v1, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zac:I
 
+    .line 5
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -1007,6 +1025,7 @@
 
     iget-boolean v1, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zad:Z
 
+    .line 6
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
@@ -1017,16 +1036,18 @@
 
     move-result-object v0
 
-    const-string v1, "outputFieldName"
+    iget-object v1, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zae:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zae:Ljava/lang/String;
+    const-string v2, "outputFieldName"
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/android/gms/common/internal/Objects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/common/internal/Objects$ToStringHelper;
+    .line 7
+    invoke-virtual {v0, v2, v1}, Lcom/google/android/gms/common/internal/Objects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/common/internal/Objects$ToStringHelper;
 
     move-result-object v0
 
     iget v1, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zaf:I
 
+    .line 8
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -1037,13 +1058,14 @@
 
     move-result-object v0
 
-    const-string v1, "concreteTypeName"
-
     invoke-virtual {p0}, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zag()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/android/gms/common/internal/Objects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/common/internal/Objects$ToStringHelper;
+    const-string v2, "concreteTypeName"
+
+    .line 9
+    invoke-virtual {v0, v2, v1}, Lcom/google/android/gms/common/internal/Objects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/common/internal/Objects$ToStringHelper;
 
     move-result-object v0
 
@@ -1051,11 +1073,12 @@
 
     if-eqz v1, :cond_0
 
-    const-string v2, "concreteType.class"
-
+    .line 10
     invoke-virtual {v1}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
     move-result-object v1
+
+    const-string v2, "concreteType.class"
 
     invoke-virtual {v0, v2, v1}, Lcom/google/android/gms/common/internal/Objects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/common/internal/Objects$ToStringHelper;
 
@@ -1064,6 +1087,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 11
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p0
@@ -1076,6 +1100,7 @@
 
     invoke-virtual {v0, v1, p0}, Lcom/google/android/gms/common/internal/Objects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/common/internal/Objects$ToStringHelper;
 
+    .line 12
     :cond_1
     invoke-virtual {v0}, Lcom/google/android/gms/common/internal/Objects$ToStringHelper;->toString()Ljava/lang/String;
 
@@ -1091,39 +1116,45 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->beginObjectHeader(Landroid/os/Parcel;)I
 
     move-result v0
 
-    const/4 v1, 0x1
+    iget v1, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zai:I
 
-    iget v2, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zai:I
+    const/4 v2, 0x1
 
-    invoke-static {p1, v1, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
+    .line 2
+    invoke-static {p1, v2, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
-    const/4 v1, 0x2
+    iget v1, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zaa:I
 
-    iget v2, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zaa:I
+    const/4 v2, 0x2
 
-    invoke-static {p1, v1, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
+    .line 3
+    invoke-static {p1, v2, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
-    const/4 v1, 0x3
+    iget-boolean v1, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zab:Z
 
-    iget-boolean v2, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zab:Z
+    const/4 v2, 0x3
 
-    invoke-static {p1, v1, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeBoolean(Landroid/os/Parcel;IZ)V
+    .line 4
+    invoke-static {p1, v2, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeBoolean(Landroid/os/Parcel;IZ)V
 
-    const/4 v1, 0x4
+    iget v1, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zac:I
 
-    iget v2, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zac:I
+    const/4 v2, 0x4
 
-    invoke-static {p1, v1, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
+    .line 5
+    invoke-static {p1, v2, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
-    const/4 v1, 0x5
+    iget-boolean v1, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zad:Z
 
-    iget-boolean v2, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zad:Z
+    const/4 v2, 0x5
 
-    invoke-static {p1, v1, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeBoolean(Landroid/os/Parcel;IZ)V
+    .line 6
+    invoke-static {p1, v2, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeBoolean(Landroid/os/Parcel;IZ)V
 
     iget-object v1, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zae:Ljava/lang/String;
 
@@ -1131,32 +1162,39 @@
 
     const/4 v3, 0x0
 
+    .line 7
     invoke-static {p1, v2, v1, v3}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeString(Landroid/os/Parcel;ILjava/lang/String;Z)V
 
-    const/4 v1, 0x7
-
+    .line 8
     invoke-virtual {p0}, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->getSafeParcelableFieldId()I
 
-    move-result v2
+    move-result v1
 
-    invoke-static {p1, v1, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
+    const/4 v2, 0x7
 
-    const/16 v1, 0x8
+    .line 9
+    invoke-static {p1, v2, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
     invoke-virtual {p0}, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zag()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-static {p1, v1, v2, v3}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeString(Landroid/os/Parcel;ILjava/lang/String;Z)V
+    const/16 v2, 0x8
 
-    const/16 v1, 0x9
+    .line 10
+    invoke-static {p1, v2, v1, v3}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeString(Landroid/os/Parcel;ILjava/lang/String;Z)V
 
+    .line 11
     invoke-virtual {p0}, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zaa()Lcom/google/android/gms/common/server/converter/zaa;
 
     move-result-object p0
 
+    const/16 v1, 0x9
+
+    .line 12
     invoke-static {p1, v1, p0, p2, v3}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeParcelable(Landroid/os/Parcel;ILandroid/os/Parcelable;IZ)V
 
+    .line 13
     invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->finishObjectHeader(Landroid/os/Parcel;I)V
 
     return-void
@@ -1167,6 +1205,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zak:Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;
 
     if-nez p0, :cond_0
@@ -1188,6 +1227,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     new-instance v10, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;
 
     iget v1, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zai:I
@@ -1229,6 +1269,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zag:Ljava/lang/Class;
 
     invoke-static {v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1241,14 +1282,17 @@
 
     iget-object v0, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zah:Ljava/lang/String;
 
+    .line 2
     invoke-static {v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iget-object v0, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zaj:Lcom/google/android/gms/common/server/response/zan;
 
     const-string v1, "The field mapping dictionary must be set if the concrete type is a SafeParcelResponse object."
 
+    .line 3
     invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     new-instance v0, Lcom/google/android/gms/common/server/response/SafeParcelResponse;
 
     iget-object v1, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zaj:Lcom/google/android/gms/common/server/response/zan;
@@ -1259,6 +1303,7 @@
 
     return-object v0
 
+    .line 5
     :cond_0
     invoke-virtual {v0}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
@@ -1278,12 +1323,14 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zak:Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;
 
     invoke-static {v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iget-object p0, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zak:Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;
 
+    .line 2
     invoke-interface {p0, p1}, Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;->zac(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1304,12 +1351,14 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zak:Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;
 
     invoke-static {v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iget-object p0, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zak:Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;
 
+    .line 2
     invoke-interface {p0, p1}, Lcom/google/android/gms/common/server/response/FastJsonResponse$FieldConverter;->zad(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1337,18 +1386,21 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zah:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iget-object v0, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zaj:Lcom/google/android/gms/common/server/response/zan;
 
+    .line 2
     invoke-static {v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iget-object v0, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zaj:Lcom/google/android/gms/common/server/response/zan;
 
     iget-object p0, p0, Lcom/google/android/gms/common/server/response/FastJsonResponse$Field;->zah:Ljava/lang/String;
 
+    .line 3
     invoke-virtual {v0, p0}, Lcom/google/android/gms/common/server/response/zan;->zab(Ljava/lang/String;)Ljava/util/Map;
 
     move-result-object p0

@@ -61,7 +61,7 @@
 
 
 # virtual methods
-.method public g(Landroidx/media/MediaSessionManager$RemoteUserInfo;)V
+.method public i(Landroidx/media/MediaSessionManager$RemoteUserInfo;)V
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -75,17 +75,20 @@
     return-void
 .end method
 
-.method public final l()Landroidx/media/MediaSessionManager$RemoteUserInfo;
+.method public final o()Landroidx/media/MediaSessionManager$RemoteUserInfo;
     .locals 1
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroid/support/v4/media/session/MediaSessionCompat$f;->a:Landroid/media/session/MediaSession;
 
+    .line 2
     invoke-virtual {p0}, Landroid/media/session/MediaSession;->getCurrentControllerInfo()Landroid/media/session/MediaSessionManager$RemoteUserInfo;
 
     move-result-object p0
 
+    .line 3
     new-instance v0, Landroidx/media/MediaSessionManager$RemoteUserInfo;
 
     invoke-direct {v0, p0}, Landroidx/media/MediaSessionManager$RemoteUserInfo;-><init>(Landroid/media/session/MediaSessionManager$RemoteUserInfo;)V

@@ -46,37 +46,38 @@
 .method public static constructor <clinit>()V
     .locals 13
 
+    .line 1
     new-instance v0, Lcom/xiaomi/milab/videosdk/utils/TextAnim$Type;
 
-    const/4 v1, -0x1
+    const-string v1, "OTHER"
 
-    const-string v2, "OTHER"
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    const/4 v3, -0x1
 
-    invoke-direct {v0, v2, v3, v1}, Lcom/xiaomi/milab/videosdk/utils/TextAnim$Type;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/xiaomi/milab/videosdk/utils/TextAnim$Type;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/xiaomi/milab/videosdk/utils/TextAnim$Type;->OTHER:Lcom/xiaomi/milab/videosdk/utils/TextAnim$Type;
 
     new-instance v1, Lcom/xiaomi/milab/videosdk/utils/TextAnim$Type;
 
-    const-string v2, "TEXT"
+    const-string v3, "TEXT"
 
     const/4 v4, 0x1
 
-    invoke-direct {v1, v2, v4, v3}, Lcom/xiaomi/milab/videosdk/utils/TextAnim$Type;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v1, v3, v4, v2}, Lcom/xiaomi/milab/videosdk/utils/TextAnim$Type;-><init>(Ljava/lang/String;II)V
 
     sput-object v1, Lcom/xiaomi/milab/videosdk/utils/TextAnim$Type;->TEXT:Lcom/xiaomi/milab/videosdk/utils/TextAnim$Type;
 
-    new-instance v2, Lcom/xiaomi/milab/videosdk/utils/TextAnim$Type;
+    new-instance v3, Lcom/xiaomi/milab/videosdk/utils/TextAnim$Type;
 
     const-string v5, "LINE"
 
     const/4 v6, 0x2
 
-    invoke-direct {v2, v5, v6, v4}, Lcom/xiaomi/milab/videosdk/utils/TextAnim$Type;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v3, v5, v6, v4}, Lcom/xiaomi/milab/videosdk/utils/TextAnim$Type;-><init>(Ljava/lang/String;II)V
 
-    sput-object v2, Lcom/xiaomi/milab/videosdk/utils/TextAnim$Type;->LINE:Lcom/xiaomi/milab/videosdk/utils/TextAnim$Type;
+    sput-object v3, Lcom/xiaomi/milab/videosdk/utils/TextAnim$Type;->LINE:Lcom/xiaomi/milab/videosdk/utils/TextAnim$Type;
 
     new-instance v5, Lcom/xiaomi/milab/videosdk/utils/TextAnim$Type;
 
@@ -112,11 +113,11 @@
 
     new-array v11, v11, [Lcom/xiaomi/milab/videosdk/utils/TextAnim$Type;
 
-    aput-object v0, v11, v3
+    aput-object v0, v11, v2
 
     aput-object v1, v11, v4
 
-    aput-object v2, v11, v6
+    aput-object v3, v11, v6
 
     aput-object v5, v11, v8
 
@@ -124,6 +125,7 @@
 
     aput-object v9, v11, v12
 
+    .line 2
     sput-object v11, Lcom/xiaomi/milab/videosdk/utils/TextAnim$Type;->$VALUES:[Lcom/xiaomi/milab/videosdk/utils/TextAnim$Type;
 
     return-void
@@ -150,8 +152,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 2
     iput p3, p0, Lcom/xiaomi/milab/videosdk/utils/TextAnim$Type;->value:I
 
     return-void
@@ -248,6 +252,7 @@
 .method public static values()[Lcom/xiaomi/milab/videosdk/utils/TextAnim$Type;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/milab/videosdk/utils/TextAnim$Type;->$VALUES:[Lcom/xiaomi/milab/videosdk/utils/TextAnim$Type;
 
     invoke-virtual {v0}, [Lcom/xiaomi/milab/videosdk/utils/TextAnim$Type;->clone()Ljava/lang/Object;
@@ -264,6 +269,7 @@
 .method public getValue()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/milab/videosdk/utils/TextAnim$Type;->value:I
 
     return p0

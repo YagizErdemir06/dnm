@@ -17,12 +17,14 @@
 
     new-array v1, v0, [F
 
+    .line 1
     fill-array-data v1, :array_0
 
     sput-object v1, Lcom/xiaomi/mediacodec/TexTransformUtil;->TEX_COORDS:[F
 
     new-array v0, v0, [F
 
+    .line 2
     fill-array-data v0, :array_1
 
     sput-object v0, Lcom/xiaomi/mediacodec/TexTransformUtil;->VERTEX_COORDS:[F
@@ -59,6 +61,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -67,6 +70,7 @@
 .method public static createFloatBuffer([F)Ljava/nio/FloatBuffer;
     .locals 2
 
+    .line 1
     array-length v0, p0
 
     mul-int/lit8 v0, v0, 0x4
@@ -75,20 +79,24 @@
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
+    .line 3
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
 
     move-result-object v0
 
+    .line 4
     invoke-virtual {v0, p0}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
 
     const/4 p0, 0x0
 
+    .line 5
     invoke-virtual {v0, p0}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
 
     return-object v0
@@ -241,6 +249,7 @@
 .method public static getTexCoords()[F
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/mediacodec/TexTransformUtil;->TEX_COORDS:[F
 
     return-object v0
@@ -298,6 +307,7 @@
 .method public static getVertexCoords()[F
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/mediacodec/TexTransformUtil;->VERTEX_COORDS:[F
 
     return-object v0

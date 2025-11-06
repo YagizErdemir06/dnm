@@ -1,4 +1,4 @@
-.class abstract Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbg;
+.class public abstract Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -42,6 +42,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     instance-of v0, p1, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcq;
 
@@ -52,9 +53,11 @@
     :goto_0
     return p0
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcq;
 
+    .line 3
     invoke-interface {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcq;->zzn()Ljava/util/Map;
 
     move-result-object p0
@@ -73,6 +76,7 @@
 .method public final hashCode()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbg;->zzn()Ljava/util/Map;
 
     move-result-object p0
@@ -87,6 +91,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbg;->zzn()Ljava/util/Map;
 
     move-result-object p0
@@ -115,6 +120,7 @@
 .method public final zzn()Ljava/util/Map;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbg;->zzb:Ljava/util/Map;
 
     if-nez v0, :cond_0
@@ -132,6 +138,7 @@
 .method public final zzo()Ljava/util/Set;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbg;->zza:Ljava/util/Set;
 
     if-nez v0, :cond_0

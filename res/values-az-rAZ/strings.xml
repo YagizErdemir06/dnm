@@ -205,7 +205,6 @@
     <string name="accessibility_video_capture_button">Video qeyd edərkən şəkil çəkmək üçün düymə</string>
     <string name="accessibility_video_pause_button">Video qeydi durduruldu</string>
     <string name="accessibility_video_resume_button">Video qeydi davam etdirilir</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">Möhür bağlıdır</string>
     <string name="accessibility_watermark_image_on">Möhür açıqdır</string>
     <string name="accessibility_watermark_text">Möhür tənzimləmə panelini açın</string>
@@ -213,16 +212,6 @@
     <string name="accessibility_zoom_button">Yaxınlaşdırma rejimi</string>
     <string name="actionbar_button_up_description">Geri</string>
     <string name="afternoon">Günortadan sonra</string>
-    <string name="agent_flip_tbc">Daxili ekranda davam edin</string>
-    <string name="agent_function_max">Maksimum dəyərə tənzimləndi</string>
-    <string name="agent_function_min">Minimum dəyərə tənzimləndi</string>
-    <string name="agent_workspace_mode_not_supported">Bu xüsusiyyət dəstəklənmir</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"Bu funksiya dəstəklənmir.
- Əvəzinə Foto rejimi açıldı."</string>
-    <string name="agent_workspace_on">Fotoşəkil çəkmək üçün təyin edilmiş parametrlər \"%1$s\"</string>
-    <string name="agent_workspace_tbc">Səhnəni öyrənir</string>
-    <string name="agent_workspace_tbc_use_default">"Səhnəni öyrənir…
- Kamera parametrləri ilkin olaraq təyin edilmişdir"</string>
     <string name="ai_agra_fort">Agra Fort</string>
     <string name="ai_amber_fort">Amer Sarayı</string>
     <string name="ai_baby">Körpə</string>
@@ -781,7 +770,6 @@ avtomatik tərtib edin və artırın"</string>
     <string name="download_hint_cn">"Looks like your device isn't connected to WLAN. Use %1$s MB of mobile data to download items now?"</string>
     <string name="download_hint_wifi">Deyəsən, cihazınız Wi-Fi şəbəkəsinə qoşulmayıb. Elementləri indi endirmək üçün %1$s MB mobil trafik istifadə edilsin?</string>
     <string name="download_in_progress">Endirilir…</string>
-    <string name="download_network_error">Endirmək mümkün olmadı. Şəbəkə parametrlərinizi yoxlayın.</string>
     <string name="download_title">Trafik istifadəsi xəbərdarlığı</string>
     <string name="download_waiting">Gözlənilir…</string>
     <string name="dual_camera_lens_covered_toast">Linza örtülüdür.</string>
@@ -1260,7 +1248,6 @@ Daha yaxşı effekt üçün kamera obyektivini təmizləyin."</string>
     <string name="miuix_appcompat_delete_description">Sil</string>
     <string name="miuix_appcompat_deselect_all">Bütün seçimi ləğv et</string>
     <string name="miuix_appcompat_deselect_all_description">Bütün seçimi ləğv et</string>
-    <string name="miuix_appcompat_edit">Düzəliş et</string>
     <string name="miuix_appcompat_search_action_mode_cancel">Ləğv et</string>
     <string name="miuix_appcompat_search_input_description">Axtar</string>
     <string name="miuix_appcompat_select_all">Hamısını seç</string>
@@ -2199,7 +2186,6 @@ və insanları önə çıxarır."</string>
     <string name="time_picker_label_hour">S</string>
     <string name="time_picker_label_minute">D</string>
     <string name="time_stamp_date_format">dd.MM.yyyy</string>
-    <string name="time_stamp_date_format_minute">dd.MM.yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">Çəkilişdən əvvəl və ya çəkərkən istənilən vaxt arxa planı dondurub və aça bilərsiniz.</string>
     <string name="timefreeze_guide_tip3">Mövzunuzdan çərçivənin mərkəzində qalmasını istəyin.</string>
     <string name="timefreeze_guide_tip4">Trafiki dayandırın.</string>
@@ -2237,7 +2223,7 @@ və insanları önə çıxarır."</string>
     <string name="tip_flash_screen_light_on">Yumuşaq flaş: Açıq</string>
     <string name="tip_flash_soft_light_off">Yumuşaq flaş: Söndür</string>
     <string name="tip_flash_soft_light_torch">Yumuşaq flaş: Fənər rejimi</string>
-    <string name="tip_flash_torch">Flaş: Fənər</string>
+    <string name="tip_flash_torch">Flaş: Həmişə açıq</string>
     <string name="tip_friend_mode_connect_when_24GHz">Önizləmə keyfiyyətini artırmaq üçün %s GHz əlaqəsindən istifadə edin</string>
     <string name="tip_friend_mode_display_device_name_connect">Paylaşılan önizləmə</string>
     <string name="tip_friend_mode_display_device_name_disconnect">Digər cihaz bu sessiyanı tərk etdi</string>

@@ -44,9 +44,7 @@
     .locals 1
 
     .line 1
-    new-instance v0, Landroidx/window/layout/e;
-
-    invoke-direct {v0}, Landroidx/window/layout/e;-><init>()V
+    sget-object v0, Ld/j/a/b/t2/n;->c:Ld/j/a/b/t2/n;
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/exoplayer2/offline/ProgressiveDownloader;-><init>(Lcom/google/android/exoplayer2/MediaItem;Lcom/google/android/exoplayer2/upstream/cache/CacheDataSource$Factory;Ljava/util/concurrent/Executor;)V
 
@@ -118,9 +116,9 @@
     iput-object p3, p0, Lcom/google/android/exoplayer2/offline/ProgressiveDownloader;->dataSource:Lcom/google/android/exoplayer2/upstream/cache/CacheDataSource;
 
     .line 11
-    new-instance v0, Lcom/google/android/exoplayer2/offline/n;
+    new-instance v0, Ld/j/a/b/t2/o;
 
-    invoke-direct {v0, p0}, Lcom/google/android/exoplayer2/offline/n;-><init>(Lcom/google/android/exoplayer2/offline/ProgressiveDownloader;)V
+    invoke-direct {v0, p0}, Ld/j/a/b/t2/o;-><init>(Lcom/google/android/exoplayer2/offline/ProgressiveDownloader;)V
 
     .line 12
     new-instance v1, Lcom/google/android/exoplayer2/upstream/cache/CacheWriter;
@@ -152,6 +150,7 @@
 .method public static synthetic access$000(Lcom/google/android/exoplayer2/offline/ProgressiveDownloader;)Lcom/google/android/exoplayer2/upstream/cache/CacheWriter;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/offline/ProgressiveDownloader;->cacheWriter:Lcom/google/android/exoplayer2/upstream/cache/CacheWriter;
 
     return-object p0
@@ -160,6 +159,7 @@
 .method private onProgress(JJJ)V
     .locals 6
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/offline/ProgressiveDownloader;->progressListener:Lcom/google/android/exoplayer2/offline/Downloader$ProgressListener;
 
     if-nez v0, :cond_0
@@ -205,6 +205,7 @@
 
     move-wide v3, p3
 
+    .line 2
     invoke-interface/range {v0 .. v5}, Lcom/google/android/exoplayer2/offline/Downloader$ProgressListener;->onProgress(JJF)V
 
     return-void
@@ -217,12 +218,15 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/offline/ProgressiveDownloader;->isCanceled:Z
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/offline/ProgressiveDownloader;->downloadRunnable:Lcom/google/android/exoplayer2/util/RunnableFutureTask;
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/RunnableFutureTask;->cancel(Z)Z
 
     :cond_0
@@ -242,20 +246,24 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/offline/ProgressiveDownloader;->progressListener:Lcom/google/android/exoplayer2/offline/Downloader$ProgressListener;
 
+    .line 2
     new-instance p1, Lcom/google/android/exoplayer2/offline/ProgressiveDownloader$1;
 
     invoke-direct {p1, p0}, Lcom/google/android/exoplayer2/offline/ProgressiveDownloader$1;-><init>(Lcom/google/android/exoplayer2/offline/ProgressiveDownloader;)V
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/offline/ProgressiveDownloader;->downloadRunnable:Lcom/google/android/exoplayer2/util/RunnableFutureTask;
 
+    .line 3
     iget-object p1, p0, Lcom/google/android/exoplayer2/offline/ProgressiveDownloader;->priorityTaskManager:Lcom/google/android/exoplayer2/util/PriorityTaskManager;
 
     const/16 v0, -0x3e8
 
     if-eqz p1, :cond_0
 
+    .line 4
     invoke-virtual {p1, v0}, Lcom/google/android/exoplayer2/util/PriorityTaskManager;->add(I)V
 
     :cond_0
@@ -264,17 +272,21 @@
     :goto_0
     if-nez p1, :cond_5
 
+    .line 5
     :try_start_0
     iget-boolean v1, p0, Lcom/google/android/exoplayer2/offline/ProgressiveDownloader;->isCanceled:Z
 
     if-nez v1, :cond_5
 
+    .line 6
     iget-object v1, p0, Lcom/google/android/exoplayer2/offline/ProgressiveDownloader;->priorityTaskManager:Lcom/google/android/exoplayer2/util/PriorityTaskManager;
 
     if-eqz v1, :cond_1
 
+    .line 7
     invoke-virtual {v1, v0}, Lcom/google/android/exoplayer2/util/PriorityTaskManager;->proceed(I)V
 
+    .line 8
     :cond_1
     iget-object v1, p0, Lcom/google/android/exoplayer2/offline/ProgressiveDownloader;->executor:Ljava/util/concurrent/Executor;
 
@@ -284,6 +296,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 9
     :try_start_1
     iget-object v1, p0, Lcom/google/android/exoplayer2/offline/ProgressiveDownloader;->downloadRunnable:Lcom/google/android/exoplayer2/util/RunnableFutureTask;
 
@@ -299,8 +312,9 @@
     :catch_0
     move-exception v1
 
+    .line 10
     :try_start_2
-    invoke-virtual {v1}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    invoke-virtual {v1}, Ljava/util/concurrent/ExecutionException;->getCause()Ljava/lang/Throwable;
 
     move-result-object v1
 
@@ -310,21 +324,25 @@
 
     check-cast v1, Ljava/lang/Throwable;
 
+    .line 11
     instance-of v2, v1, Lcom/google/android/exoplayer2/util/PriorityTaskManager$PriorityTooLowException;
 
     if-eqz v2, :cond_2
 
     goto :goto_0
 
+    .line 12
     :cond_2
     instance-of v2, v1, Ljava/io/IOException;
 
     if-nez v2, :cond_3
 
+    .line 13
     invoke-static {v1}, Lcom/google/android/exoplayer2/util/Util;->sneakyThrow(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
+    .line 14
     :cond_3
     check-cast v1, Ljava/io/IOException;
 
@@ -335,28 +353,35 @@
     :catchall_0
     move-exception p1
 
+    .line 15
     iget-object v1, p0, Lcom/google/android/exoplayer2/offline/ProgressiveDownloader;->downloadRunnable:Lcom/google/android/exoplayer2/util/RunnableFutureTask;
 
     invoke-virtual {v1}, Lcom/google/android/exoplayer2/util/RunnableFutureTask;->blockUntilFinished()V
 
+    .line 16
     iget-object p0, p0, Lcom/google/android/exoplayer2/offline/ProgressiveDownloader;->priorityTaskManager:Lcom/google/android/exoplayer2/util/PriorityTaskManager;
 
     if-eqz p0, :cond_4
 
+    .line 17
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/PriorityTaskManager;->remove(I)V
 
+    .line 18
     :cond_4
     throw p1
 
+    .line 19
     :cond_5
     iget-object p1, p0, Lcom/google/android/exoplayer2/offline/ProgressiveDownloader;->downloadRunnable:Lcom/google/android/exoplayer2/util/RunnableFutureTask;
 
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/RunnableFutureTask;->blockUntilFinished()V
 
+    .line 20
     iget-object p0, p0, Lcom/google/android/exoplayer2/offline/ProgressiveDownloader;->priorityTaskManager:Lcom/google/android/exoplayer2/util/PriorityTaskManager;
 
     if-eqz p0, :cond_6
 
+    .line 21
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/PriorityTaskManager;->remove(I)V
 
     :cond_6
@@ -366,6 +391,7 @@
 .method public remove()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/offline/ProgressiveDownloader;->dataSource:Lcom/google/android/exoplayer2/upstream/cache/CacheDataSource;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/upstream/cache/CacheDataSource;->getCache()Lcom/google/android/exoplayer2/upstream/cache/Cache;

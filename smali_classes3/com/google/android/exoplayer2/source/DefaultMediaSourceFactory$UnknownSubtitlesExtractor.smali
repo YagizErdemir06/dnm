@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/DefaultMediaSourceFactory$UnknownSubtitlesExtractor;
+.class public final Lcom/google/android/exoplayer2/source/DefaultMediaSourceFactory$UnknownSubtitlesExtractor;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -25,8 +25,10 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/Format;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/DefaultMediaSourceFactory$UnknownSubtitlesExtractor;->format:Lcom/google/android/exoplayer2/Format;
 
     return-void
@@ -41,10 +43,12 @@
 
     const/4 v1, 0x3
 
+    .line 1
     invoke-interface {p1, v0, v1}, Lcom/google/android/exoplayer2/extractor/ExtractorOutput;->track(II)Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     move-result-object v0
 
+    .line 2
     new-instance v1, Lcom/google/android/exoplayer2/extractor/SeekMap$Unseekable;
 
     const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
@@ -53,16 +57,20 @@
 
     invoke-interface {p1, v1}, Lcom/google/android/exoplayer2/extractor/ExtractorOutput;->seekMap(Lcom/google/android/exoplayer2/extractor/SeekMap;)V
 
+    .line 3
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorOutput;->endTracks()V
 
+    .line 4
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/DefaultMediaSourceFactory$UnknownSubtitlesExtractor;->format:Lcom/google/android/exoplayer2/Format;
 
+    .line 5
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/Format;->buildUpon()Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p1
 
     const-string v1, "text/x-unknown"
 
+    .line 6
     invoke-virtual {p1, v1}, Lcom/google/android/exoplayer2/Format$Builder;->setSampleMimeType(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p1
@@ -71,14 +79,17 @@
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
+    .line 7
     invoke-virtual {p1, p0}, Lcom/google/android/exoplayer2/Format$Builder;->setCodecs(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 8
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Format$Builder;->build()Lcom/google/android/exoplayer2/Format;
 
     move-result-object p0
 
+    .line 9
     invoke-interface {v0, p0}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->format(Lcom/google/android/exoplayer2/Format;)V
 
     return-void
@@ -94,6 +105,7 @@
 
     const p0, 0x7fffffff
 
+    .line 1
     invoke-interface {p1, p0}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->skip(I)I
 
     move-result p0

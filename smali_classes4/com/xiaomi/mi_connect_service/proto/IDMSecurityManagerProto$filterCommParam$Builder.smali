@@ -55,8 +55,10 @@
 .method public clearCommType()Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$filterCommParam$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$filterCommParam;
@@ -69,8 +71,10 @@
 .method public clearPid()Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$filterCommParam$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$filterCommParam;
@@ -83,8 +87,10 @@
 .method public clearUid()Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$filterCommParam$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$filterCommParam;
@@ -97,6 +103,7 @@
 .method public getCommType()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$filterCommParam;
@@ -111,6 +118,7 @@
 .method public getPid()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$filterCommParam;
@@ -125,6 +133,7 @@
 .method public getUid()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast p0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$filterCommParam;
@@ -139,8 +148,10 @@
 .method public setCommType(I)Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$filterCommParam$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$filterCommParam;
@@ -153,8 +164,10 @@
 .method public setPid(I)Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$filterCommParam$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$filterCommParam;
@@ -167,8 +180,10 @@
 .method public setUid(I)Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$filterCommParam$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/mi_connect_service/proto/IDMSecurityManagerProto$filterCommParam;

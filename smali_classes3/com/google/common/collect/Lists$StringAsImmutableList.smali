@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/Lists$StringAsImmutableList;
+.class public final Lcom/google/common/collect/Lists$StringAsImmutableList;
 .super Lcom/google/common/collect/ImmutableList;
 .source "SourceFile"
 
@@ -30,8 +30,10 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableList;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/Lists$StringAsImmutableList;->string:Ljava/lang/String;
 
     return-void
@@ -81,6 +83,7 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Ljava/lang/Character;
 
     if-eqz v0, :cond_0
@@ -121,6 +124,7 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Ljava/lang/Character;
 
     if-eqz v0, :cond_0
@@ -149,6 +153,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Lists$StringAsImmutableList;->string:Ljava/lang/String;
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I

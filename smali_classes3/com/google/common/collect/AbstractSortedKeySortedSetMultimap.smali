@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/collect/AbstractSortedKeySortedSetMultimap;
+.class public abstract Lcom/google/common/collect/AbstractSortedKeySortedSetMultimap;
 .super Lcom/google/common/collect/AbstractSortedSetMultimap;
 .source "SourceFile"
 
@@ -36,6 +36,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/AbstractSortedSetMultimap;-><init>(Ljava/util/Map;)V
 
     return-void
@@ -119,6 +120,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap;->createMaybeNavigableKeySet()Ljava/util/Set;
 
     move-result-object p0

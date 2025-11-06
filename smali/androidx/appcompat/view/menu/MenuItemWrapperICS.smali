@@ -25,7 +25,7 @@
 
 
 # static fields
-.field static final LOG_TAG:Ljava/lang/String; = "MenuItemWrapper"
+.field public static final LOG_TAG:Ljava/lang/String; = "MenuItemWrapper"
 
 
 # instance fields
@@ -38,14 +38,17 @@
 .method public constructor <init>(Landroid/content/Context;Landroidx/core/internal/view/SupportMenuItem;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/appcompat/view/menu/BaseMenuWrapper;-><init>(Landroid/content/Context;)V
 
     if-eqz p2, :cond_0
 
+    .line 2
     iput-object p2, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     return-void
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -61,6 +64,7 @@
 .method public collapseActionView()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {p0}, Landroidx/core/internal/view/SupportMenuItem;->collapseActionView()Z
@@ -73,6 +77,7 @@
 .method public expandActionView()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {p0}, Landroidx/core/internal/view/SupportMenuItem;->expandActionView()Z
@@ -85,16 +90,19 @@
 .method public getActionProvider()Landroid/view/ActionProvider;
     .locals 1
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {p0}, Landroidx/core/internal/view/SupportMenuItem;->getSupportActionProvider()Landroidx/core/view/ActionProvider;
 
     move-result-object p0
 
+    .line 2
     instance-of v0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS$ActionProviderWrapper;
 
     if-eqz v0, :cond_0
 
+    .line 3
     check-cast p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS$ActionProviderWrapper;
 
     iget-object p0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS$ActionProviderWrapper;->mInner:Landroid/view/ActionProvider;
@@ -110,16 +118,19 @@
 .method public getActionView()Landroid/view/View;
     .locals 1
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {p0}, Landroidx/core/internal/view/SupportMenuItem;->getActionView()Landroid/view/View;
 
     move-result-object p0
 
+    .line 2
     instance-of v0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS$CollapsibleActionViewWrapper;
 
     if-eqz v0, :cond_0
 
+    .line 3
     check-cast p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS$CollapsibleActionViewWrapper;
 
     invoke-virtual {p0}, Landroidx/appcompat/view/menu/MenuItemWrapperICS$CollapsibleActionViewWrapper;->getWrappedView()Landroid/view/View;
@@ -133,6 +144,7 @@
 .method public getAlphabeticModifiers()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {p0}, Landroidx/core/internal/view/SupportMenuItem;->getAlphabeticModifiers()I
@@ -145,6 +157,7 @@
 .method public getAlphabeticShortcut()C
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {p0}, Landroid/view/MenuItem;->getAlphabeticShortcut()C
@@ -157,6 +170,7 @@
 .method public getContentDescription()Ljava/lang/CharSequence;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {p0}, Landroidx/core/internal/view/SupportMenuItem;->getContentDescription()Ljava/lang/CharSequence;
@@ -169,6 +183,7 @@
 .method public getGroupId()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {p0}, Landroid/view/MenuItem;->getGroupId()I
@@ -181,6 +196,7 @@
 .method public getIcon()Landroid/graphics/drawable/Drawable;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {p0}, Landroid/view/MenuItem;->getIcon()Landroid/graphics/drawable/Drawable;
@@ -193,6 +209,7 @@
 .method public getIconTintList()Landroid/content/res/ColorStateList;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {p0}, Landroidx/core/internal/view/SupportMenuItem;->getIconTintList()Landroid/content/res/ColorStateList;
@@ -205,6 +222,7 @@
 .method public getIconTintMode()Landroid/graphics/PorterDuff$Mode;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {p0}, Landroidx/core/internal/view/SupportMenuItem;->getIconTintMode()Landroid/graphics/PorterDuff$Mode;
@@ -217,6 +235,7 @@
 .method public getIntent()Landroid/content/Intent;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {p0}, Landroid/view/MenuItem;->getIntent()Landroid/content/Intent;
@@ -229,6 +248,7 @@
 .method public getItemId()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {p0}, Landroid/view/MenuItem;->getItemId()I
@@ -241,6 +261,7 @@
 .method public getMenuInfo()Landroid/view/ContextMenu$ContextMenuInfo;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {p0}, Landroid/view/MenuItem;->getMenuInfo()Landroid/view/ContextMenu$ContextMenuInfo;
@@ -253,6 +274,7 @@
 .method public getNumericModifiers()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {p0}, Landroidx/core/internal/view/SupportMenuItem;->getNumericModifiers()I
@@ -265,6 +287,7 @@
 .method public getNumericShortcut()C
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {p0}, Landroid/view/MenuItem;->getNumericShortcut()C
@@ -277,6 +300,7 @@
 .method public getOrder()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {p0}, Landroid/view/MenuItem;->getOrder()I
@@ -289,6 +313,7 @@
 .method public getSubMenu()Landroid/view/SubMenu;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {v0}, Landroid/view/MenuItem;->getSubMenu()Landroid/view/SubMenu;
@@ -305,6 +330,7 @@
 .method public getTitle()Ljava/lang/CharSequence;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {p0}, Landroid/view/MenuItem;->getTitle()Ljava/lang/CharSequence;
@@ -317,6 +343,7 @@
 .method public getTitleCondensed()Ljava/lang/CharSequence;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {p0}, Landroid/view/MenuItem;->getTitleCondensed()Ljava/lang/CharSequence;
@@ -329,6 +356,7 @@
 .method public getTooltipText()Ljava/lang/CharSequence;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {p0}, Landroidx/core/internal/view/SupportMenuItem;->getTooltipText()Ljava/lang/CharSequence;
@@ -341,6 +369,7 @@
 .method public hasSubMenu()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {p0}, Landroid/view/MenuItem;->hasSubMenu()Z
@@ -353,6 +382,7 @@
 .method public isActionViewExpanded()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {p0}, Landroidx/core/internal/view/SupportMenuItem;->isActionViewExpanded()Z
@@ -365,6 +395,7 @@
 .method public isCheckable()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {p0}, Landroid/view/MenuItem;->isCheckable()Z
@@ -377,6 +408,7 @@
 .method public isChecked()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {p0}, Landroid/view/MenuItem;->isChecked()Z
@@ -389,6 +421,7 @@
 .method public isEnabled()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {p0}, Landroid/view/MenuItem;->isEnabled()Z
@@ -401,6 +434,7 @@
 .method public isVisible()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {p0}, Landroid/view/MenuItem;->isVisible()Z
@@ -413,22 +447,42 @@
 .method public setActionProvider(Landroid/view/ActionProvider;)Landroid/view/MenuItem;
     .locals 2
 
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x10
+
+    if-lt v0, v1, :cond_0
+
+    .line 2
     new-instance v0, Landroidx/appcompat/view/menu/MenuItemWrapperICS$ActionProviderWrapperJB;
 
     iget-object v1, p0, Landroidx/appcompat/view/menu/BaseMenuWrapper;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, p0, v1, p1}, Landroidx/appcompat/view/menu/MenuItemWrapperICS$ActionProviderWrapperJB;-><init>(Landroidx/appcompat/view/menu/MenuItemWrapperICS;Landroid/content/Context;Landroid/view/ActionProvider;)V
 
-    iget-object v1, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
-
-    if-eqz p1, :cond_0
-
     goto :goto_0
 
+    .line 3
     :cond_0
+    new-instance v0, Landroidx/appcompat/view/menu/MenuItemWrapperICS$ActionProviderWrapper;
+
+    iget-object v1, p0, Landroidx/appcompat/view/menu/BaseMenuWrapper;->mContext:Landroid/content/Context;
+
+    invoke-direct {v0, p0, v1, p1}, Landroidx/appcompat/view/menu/MenuItemWrapperICS$ActionProviderWrapper;-><init>(Landroidx/appcompat/view/menu/MenuItemWrapperICS;Landroid/content/Context;Landroid/view/ActionProvider;)V
+
+    .line 4
+    :goto_0
+    iget-object v1, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
+
+    if-eqz p1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
     const/4 v0, 0x0
 
-    :goto_0
+    :goto_1
     invoke-interface {v1, v0}, Landroidx/core/internal/view/SupportMenuItem;->setSupportActionProvider(Landroidx/core/view/ActionProvider;)Landroidx/core/internal/view/SupportMenuItem;
 
     return-object p0
@@ -516,6 +570,7 @@
 .method public setCheckable(Z)Landroid/view/MenuItem;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {v0, p1}, Landroid/view/MenuItem;->setCheckable(Z)Landroid/view/MenuItem;
@@ -526,6 +581,7 @@
 .method public setChecked(Z)Landroid/view/MenuItem;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {v0, p1}, Landroid/view/MenuItem;->setChecked(Z)Landroid/view/MenuItem;
@@ -536,6 +592,7 @@
 .method public setContentDescription(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {v0, p1}, Landroidx/core/internal/view/SupportMenuItem;->setContentDescription(Ljava/lang/CharSequence;)Landroidx/core/internal/view/SupportMenuItem;
@@ -546,6 +603,7 @@
 .method public setEnabled(Z)Landroid/view/MenuItem;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {v0, p1}, Landroid/view/MenuItem;->setEnabled(Z)Landroid/view/MenuItem;
@@ -556,6 +614,7 @@
 .method public setExclusiveCheckable(Z)V
     .locals 6
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mSetExclusiveCheckableMethod:Ljava/lang/reflect/Method;
 
@@ -565,13 +624,14 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
 
-    const-string/jumbo v3, "setExclusiveCheckable"
+    const-string v3, "setExclusiveCheckable"
 
     new-array v4, v2, [Ljava/lang/Class;
 
@@ -579,12 +639,14 @@
 
     aput-object v5, v4, v1
 
+    .line 3
     invoke-virtual {v0, v3, v4}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mSetExclusiveCheckableMethod:Ljava/lang/reflect/Method;
 
+    .line 4
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mSetExclusiveCheckableMethod:Ljava/lang/reflect/Method;
 
@@ -611,6 +673,7 @@
 
     const-string v0, "Error while calling setExclusiveCheckable"
 
+    .line 5
     invoke-static {p1, v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -642,6 +705,7 @@
 .method public setIconTintList(Landroid/content/res/ColorStateList;)Landroid/view/MenuItem;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {v0, p1}, Landroidx/core/internal/view/SupportMenuItem;->setIconTintList(Landroid/content/res/ColorStateList;)Landroid/view/MenuItem;
@@ -652,6 +716,7 @@
 .method public setIconTintMode(Landroid/graphics/PorterDuff$Mode;)Landroid/view/MenuItem;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {v0, p1}, Landroidx/core/internal/view/SupportMenuItem;->setIconTintMode(Landroid/graphics/PorterDuff$Mode;)Landroid/view/MenuItem;
@@ -662,6 +727,7 @@
 .method public setIntent(Landroid/content/Intent;)Landroid/view/MenuItem;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {v0, p1}, Landroid/view/MenuItem;->setIntent(Landroid/content/Intent;)Landroid/view/MenuItem;
@@ -694,10 +760,12 @@
 .method public setOnActionExpandListener(Landroid/view/MenuItem$OnActionExpandListener;)Landroid/view/MenuItem;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     if-eqz p1, :cond_0
 
+    .line 2
     new-instance v1, Landroidx/appcompat/view/menu/MenuItemWrapperICS$OnActionExpandListenerWrapper;
 
     invoke-direct {v1, p0, p1}, Landroidx/appcompat/view/menu/MenuItemWrapperICS$OnActionExpandListenerWrapper;-><init>(Landroidx/appcompat/view/menu/MenuItemWrapperICS;Landroid/view/MenuItem$OnActionExpandListener;)V
@@ -707,6 +775,7 @@
     :cond_0
     const/4 v1, 0x0
 
+    .line 3
     :goto_0
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setOnActionExpandListener(Landroid/view/MenuItem$OnActionExpandListener;)Landroid/view/MenuItem;
 
@@ -716,10 +785,12 @@
 .method public setOnMenuItemClickListener(Landroid/view/MenuItem$OnMenuItemClickListener;)Landroid/view/MenuItem;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     if-eqz p1, :cond_0
 
+    .line 2
     new-instance v1, Landroidx/appcompat/view/menu/MenuItemWrapperICS$OnMenuItemClickListenerWrapper;
 
     invoke-direct {v1, p0, p1}, Landroidx/appcompat/view/menu/MenuItemWrapperICS$OnMenuItemClickListenerWrapper;-><init>(Landroidx/appcompat/view/menu/MenuItemWrapperICS;Landroid/view/MenuItem$OnMenuItemClickListener;)V
@@ -729,6 +800,7 @@
     :cond_0
     const/4 v1, 0x0
 
+    .line 3
     :goto_0
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setOnMenuItemClickListener(Landroid/view/MenuItem$OnMenuItemClickListener;)Landroid/view/MenuItem;
 
@@ -760,6 +832,7 @@
 .method public setShowAsAction(I)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {p0, p1}, Landroidx/core/internal/view/SupportMenuItem;->setShowAsAction(I)V
@@ -770,6 +843,7 @@
 .method public setShowAsActionFlags(I)Landroid/view/MenuItem;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {v0, p1}, Landroidx/core/internal/view/SupportMenuItem;->setShowAsActionFlags(I)Landroid/view/MenuItem;
@@ -802,6 +876,7 @@
 .method public setTitleCondensed(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {v0, p1}, Landroid/view/MenuItem;->setTitleCondensed(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
@@ -812,6 +887,7 @@
 .method public setTooltipText(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {v0, p1}, Landroidx/core/internal/view/SupportMenuItem;->setTooltipText(Ljava/lang/CharSequence;)Landroidx/core/internal/view/SupportMenuItem;
@@ -822,6 +898,7 @@
 .method public setVisible(Z)Landroid/view/MenuItem;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/menu/MenuItemWrapperICS;->mWrappedObject:Landroidx/core/internal/view/SupportMenuItem;
 
     invoke-interface {p0, p1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;

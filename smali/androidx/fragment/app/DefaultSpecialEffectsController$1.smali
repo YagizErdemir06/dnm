@@ -1,4 +1,4 @@
-.class Landroidx/fragment/app/DefaultSpecialEffectsController$1;
+.class public Landroidx/fragment/app/DefaultSpecialEffectsController$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,17 +18,18 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/fragment/app/DefaultSpecialEffectsController;
+.field public final synthetic this$0:Landroidx/fragment/app/DefaultSpecialEffectsController;
 
-.field final synthetic val$awaitingContainerChanges:Ljava/util/List;
+.field public final synthetic val$awaitingContainerChanges:Ljava/util/List;
 
-.field final synthetic val$operation:Landroidx/fragment/app/SpecialEffectsController$Operation;
+.field public final synthetic val$operation:Landroidx/fragment/app/SpecialEffectsController$Operation;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/fragment/app/DefaultSpecialEffectsController;Ljava/util/List;Landroidx/fragment/app/SpecialEffectsController$Operation;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$1;->this$0:Landroidx/fragment/app/DefaultSpecialEffectsController;
 
     iput-object p2, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$1;->val$awaitingContainerChanges:Ljava/util/List;
@@ -45,6 +46,7 @@
 .method public run()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$1;->val$awaitingContainerChanges:Ljava/util/List;
 
     iget-object v1, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$1;->val$operation:Landroidx/fragment/app/SpecialEffectsController$Operation;
@@ -55,12 +57,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$1;->val$awaitingContainerChanges:Ljava/util/List;
 
     iget-object v1, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$1;->val$operation:Landroidx/fragment/app/SpecialEffectsController$Operation;
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
+    .line 3
     iget-object v0, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$1;->this$0:Landroidx/fragment/app/DefaultSpecialEffectsController;
 
     iget-object p0, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$1;->val$operation:Landroidx/fragment/app/SpecialEffectsController$Operation;

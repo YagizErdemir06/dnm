@@ -48,6 +48,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -247,7 +248,7 @@
     return-void
 .end method
 
-.method onDestroy()V
+.method public onDestroy()V
     .locals 0
 
     return-void
@@ -387,6 +388,7 @@
 
     return-void
 
+    .line 1
     :cond_0
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -404,6 +406,7 @@
 
     return-void
 
+    .line 1
     :cond_0
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -421,6 +424,7 @@
 
     return-void
 
+    .line 1
     :cond_0
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 

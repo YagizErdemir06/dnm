@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/api/internal/zabd;
+.class public final Lcom/google/android/gms/common/api/internal/zabd;
 .super Lcom/google/android/gms/common/api/internal/zabw;
 .source "SourceFile"
 
@@ -11,6 +11,7 @@
 .method public constructor <init>(Lcom/google/android/gms/common/api/internal/zabe;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/common/api/internal/zabw;-><init>()V
 
     new-instance v0, Ljava/lang/ref/WeakReference;
@@ -27,9 +28,10 @@
 .method public final zaa()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zabd;->zaa:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -39,6 +41,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     invoke-static {p0}, Lcom/google/android/gms/common/api/internal/zabe;->zai(Lcom/google/android/gms/common/api/internal/zabe;)V
 

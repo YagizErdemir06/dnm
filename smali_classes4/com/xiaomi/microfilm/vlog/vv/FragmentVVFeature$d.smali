@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature;->hi(Ljava/util/HashMap;)V
+    value = Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature;->Hc(Ljava/util/HashMap;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,14 +18,23 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature;
+.field public final synthetic c:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature$d;->a:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature;
+    .line 1
+    iput-object p1, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature$d;->c:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,11 +46,12 @@
 .method public run()V
     .locals 3
 
-    iget-object v0, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature$d;->a:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature;
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature$d;->c:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature;
 
-    iget-object v1, v0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature;->d:Lcom/android/camera/data/observeable/c;
+    iget-object v1, v0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature;->j:Ld/d/a/l6/f/m;
 
-    iget-object v0, v0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature;->c:Ljava/lang/String;
+    iget-object v0, v0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature;->g:Ljava/lang/String;
 
     const/16 v2, 0x17
 
@@ -49,15 +59,16 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v0, v2}, Lcom/android/camera/data/observeable/c;->n(Ljava/lang/String;Ljava/lang/Integer;)V
+    invoke-virtual {v1, v0, v2}, Ld/d/a/l6/f/m;->n(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    iget-object p0, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature$d;->a:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature;
+    .line 2
+    iget-object p0, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature$d;->c:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature;
 
-    iget-object v0, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature;->d:Lcom/android/camera/data/observeable/c;
+    iget-object v0, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature;->j:Ld/d/a/l6/f/m;
 
-    iget-object p0, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature;->c:Ljava/lang/String;
+    iget-object p0, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature;->g:Ljava/lang/String;
 
-    invoke-virtual {v0, p0}, Lcom/android/camera/data/observeable/c;->l(Ljava/lang/String;)V
+    invoke-virtual {v0, p0}, Ld/d/a/l6/f/m;->l(Ljava/lang/String;)V
 
     return-void
 .end method

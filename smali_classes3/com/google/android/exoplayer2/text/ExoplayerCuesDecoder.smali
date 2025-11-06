@@ -48,20 +48,24 @@
 .method public constructor <init>()V
     .locals 4
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Lcom/google/android/exoplayer2/text/CueDecoder;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/text/CueDecoder;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/text/ExoplayerCuesDecoder;->cueDecoder:Lcom/google/android/exoplayer2/text/CueDecoder;
 
+    .line 3
     new-instance v0, Lcom/google/android/exoplayer2/text/SubtitleInputBuffer;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/text/SubtitleInputBuffer;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/text/ExoplayerCuesDecoder;->inputBuffer:Lcom/google/android/exoplayer2/text/SubtitleInputBuffer;
 
+    .line 4
     new-instance v0, Ljava/util/ArrayDeque;
 
     invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
@@ -77,6 +81,7 @@
 
     if-ge v1, v2, :cond_0
 
+    .line 5
     iget-object v2, p0, Lcom/google/android/exoplayer2/text/ExoplayerCuesDecoder;->availableOutputBuffers:Ljava/util/Deque;
 
     new-instance v3, Lcom/google/android/exoplayer2/text/ExoplayerCuesDecoder$1;
@@ -89,6 +94,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     iput v0, p0, Lcom/google/android/exoplayer2/text/ExoplayerCuesDecoder;->inputBufferState:I
 
@@ -98,6 +104,7 @@
 .method public static synthetic access$000(Lcom/google/android/exoplayer2/text/ExoplayerCuesDecoder;Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/text/ExoplayerCuesDecoder;->releaseOutputBuffer(Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;)V
 
     return-void
@@ -106,19 +113,20 @@
 .method private releaseOutputBuffer(Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;)V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/ExoplayerCuesDecoder;->availableOutputBuffers:Ljava/util/Deque;
 
     invoke-interface {v0}, Ljava/util/Deque;->size()I
 
     move-result v0
 
-    const/4 v1, 0x2
+    const/4 v1, 0x1
 
-    const/4 v2, 0x1
+    const/4 v2, 0x2
 
-    if-ge v0, v1, :cond_0
+    if-ge v0, v2, :cond_0
 
-    move v0, v2
+    move v0, v1
 
     goto :goto_0
 
@@ -128,18 +136,21 @@
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/ExoplayerCuesDecoder;->availableOutputBuffers:Ljava/util/Deque;
 
     invoke-interface {v0, p1}, Ljava/util/Deque;->contains(Ljava/lang/Object;)Z
 
     move-result v0
 
-    xor-int/2addr v0, v2
+    xor-int/2addr v0, v1
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 3
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;->clear()V
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/ExoplayerCuesDecoder;->availableOutputBuffers:Ljava/util/Deque;
 
     invoke-interface {p0, p1}, Ljava/util/Deque;->addFirst(Ljava/lang/Object;)V
@@ -234,7 +245,7 @@
 
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/ExoplayerCuesDecoder;->availableOutputBuffers:Ljava/util/Deque;
 
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+    invoke-interface {v0}, Ljava/util/Deque;->isEmpty()Z
 
     move-result v0
 
@@ -350,18 +361,21 @@
 .method public flush()V
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/text/ExoplayerCuesDecoder;->released:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/ExoplayerCuesDecoder;->inputBuffer:Lcom/google/android/exoplayer2/text/SubtitleInputBuffer;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->clear()V
 
     const/4 v0, 0x0
 
+    .line 3
     iput v0, p0, Lcom/google/android/exoplayer2/text/ExoplayerCuesDecoder;->inputBufferState:I
 
     return-void
@@ -451,6 +465,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/text/ExoplayerCuesDecoder;->released:Z
 
     return-void

@@ -45,6 +45,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -55,6 +56,7 @@
 .method public getHairType()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget p0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProfileInfo;->hairType:I
 
     packed-switch p0, :pswitch_data_0
@@ -126,6 +128,7 @@
     :pswitch_c
     const-string p0, "\u5149\u5bf8\u5934"
 
+    .line 2
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -164,6 +167,7 @@
 .method public getHasFringe()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProfileInfo;->hasFringe:I
 
     if-nez p0, :cond_0
@@ -182,6 +186,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -248,6 +253,7 @@
 
     iget-object v1, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProfileInfo;->hairColor:[B
 
+    .line 2
     invoke-static {v1}, Ljava/util/Arrays;->toString([B)Ljava/lang/String;
 
     move-result-object v1
@@ -260,6 +266,7 @@
 
     iget-object v1, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProfileInfo;->skinColor:[B
 
+    .line 3
     invoke-static {v1}, Ljava/util/Arrays;->toString([B)Ljava/lang/String;
 
     move-result-object v1

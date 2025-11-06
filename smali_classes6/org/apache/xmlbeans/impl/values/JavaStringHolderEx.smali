@@ -11,6 +11,7 @@
 .method public constructor <init>(Lorg/apache/xmlbeans/SchemaType;Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/JavaStringHolder;-><init>()V
 
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/values/JavaStringHolderEx;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
@@ -25,6 +26,7 @@
 .method public static validateLexical(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/impl/common/ValidationContext;)V
     .locals 8
 
+    .line 1
     invoke-interface {p1, p0}, Lorg/apache/xmlbeans/SchemaType;->matchPatternFacet(Ljava/lang/String;)Z
 
     move-result v0
@@ -47,6 +49,7 @@
 
     aput-object p0, v0, v4
 
+    .line 2
     invoke-static {p1}, Lorg/apache/xmlbeans/impl/common/QNameHelper;->readable(Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object p0
@@ -59,6 +62,7 @@
 
     return-void
 
+    .line 3
     :cond_0
     invoke-interface {p1, v5}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
@@ -68,6 +72,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     check-cast v0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
 
     invoke-virtual {v0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->bigIntegerValue()Ljava/math/BigInteger;
@@ -78,6 +83,7 @@
 
     move-result v0
 
+    .line 5
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v7
@@ -88,6 +94,7 @@
 
     aput-object v1, v6, v5
 
+    .line 6
     new-instance v1, Ljava/lang/Integer;
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -116,6 +123,7 @@
 
     return-void
 
+    .line 7
     :cond_1
     invoke-interface {p1, v4}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
@@ -123,6 +131,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 8
     check-cast v0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
 
     invoke-virtual {v0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->bigIntegerValue()Ljava/math/BigInteger;
@@ -133,6 +142,7 @@
 
     move-result v0
 
+    .line 9
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v7
@@ -143,6 +153,7 @@
 
     aput-object v1, v6, v5
 
+    .line 10
     new-instance v1, Ljava/lang/Integer;
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -171,6 +182,7 @@
 
     return-void
 
+    .line 11
     :cond_2
     invoke-interface {p1, v3}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
@@ -178,6 +190,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 12
     check-cast v0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
 
     invoke-virtual {v0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->bigIntegerValue()Ljava/math/BigInteger;
@@ -188,6 +201,7 @@
 
     move-result v0
 
+    .line 13
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v7
@@ -198,6 +212,7 @@
 
     aput-object v1, v6, v5
 
+    .line 14
     new-instance v1, Ljava/lang/Integer;
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -226,6 +241,7 @@
 
     return-void
 
+    .line 15
     :cond_3
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaType;->getEnumerationValues()[Lorg/apache/xmlbeans/XmlAnySimpleType;
 
@@ -235,11 +251,13 @@
 
     move v6, v5
 
+    .line 16
     :goto_0
     array-length v7, v0
 
     if-ge v6, v7, :cond_5
 
+    .line 17
     aget-object v7, v0, v6
 
     invoke-interface {v7}, Lorg/apache/xmlbeans/XmlAnySimpleType;->getStringValue()Ljava/lang/String;
@@ -266,6 +284,7 @@
 
     aput-object p0, v0, v4
 
+    .line 18
     invoke-static {p1}, Lorg/apache/xmlbeans/impl/common/QNameHelper;->readable(Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object p0
@@ -285,6 +304,7 @@
 .method public get_wscanon_rule()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/JavaStringHolderEx;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object p0
@@ -299,6 +319,7 @@
 .method public is_defaultable_ws(Ljava/lang/String;)Z
     .locals 1
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaStringHolderEx;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
@@ -321,6 +342,7 @@
 .method public schemaType()Lorg/apache/xmlbeans/SchemaType;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaStringHolderEx;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     return-object p0
@@ -329,18 +351,21 @@
 .method public set_text(Ljava/lang/String;)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_validateOnSet()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/JavaStringHolderEx;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     sget-object v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_voorVc:Lorg/apache/xmlbeans/impl/common/ValidationContext;
 
     invoke-static {p1, v0, v1}, Lorg/apache/xmlbeans/impl/values/JavaStringHolderEx;->validateLexical(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/impl/common/ValidationContext;)V
 
+    .line 3
     :cond_0
     invoke-super {p0, p1}, Lorg/apache/xmlbeans/impl/values/JavaStringHolder;->set_text(Ljava/lang/String;)V
 
@@ -350,6 +375,7 @@
 .method public validate_simpleval(Ljava/lang/String;Lorg/apache/xmlbeans/impl/common/ValidationContext;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->stringValue()Ljava/lang/String;
 
     move-result-object p1

@@ -1,4 +1,4 @@
-.class Lcom/google/common/cache/LocalCache$WeakEntry;
+.class public Lcom/google/common/cache/LocalCache$WeakEntry;
 .super Ljava/lang/ref/WeakReference;
 .source "SourceFile"
 
@@ -32,9 +32,9 @@
 
 
 # instance fields
-.field final hash:I
+.field public final hash:I
 
-.field final next:Lcom/google/common/cache/ReferenceEntry;
+.field public final next:Lcom/google/common/cache/ReferenceEntry;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/cache/ReferenceEntry<",
@@ -46,7 +46,7 @@
     .end annotation
 .end field
 
-.field volatile valueReference:Lcom/google/common/cache/LocalCache$ValueReference;
+.field public volatile valueReference:Lcom/google/common/cache/LocalCache$ValueReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/cache/LocalCache$ValueReference<",
@@ -73,16 +73,20 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V
 
+    .line 2
     invoke-static {}, Lcom/google/common/cache/LocalCache;->unset()Lcom/google/common/cache/LocalCache$ValueReference;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/common/cache/LocalCache$WeakEntry;->valueReference:Lcom/google/common/cache/LocalCache$ValueReference;
 
+    .line 3
     iput p3, p0, Lcom/google/common/cache/LocalCache$WeakEntry;->hash:I
 
+    .line 4
     iput-object p4, p0, Lcom/google/common/cache/LocalCache$WeakEntry;->next:Lcom/google/common/cache/ReferenceEntry;
 
     return-void
@@ -93,6 +97,7 @@
 .method public getAccessTime()J
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -103,6 +108,7 @@
 .method public getHash()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/cache/LocalCache$WeakEntry;->hash:I
 
     return p0
@@ -116,7 +122,8 @@
         }
     .end annotation
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    .line 1
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -133,6 +140,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/cache/LocalCache$WeakEntry;->next:Lcom/google/common/cache/ReferenceEntry;
 
     return-object p0
@@ -148,6 +156,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -165,6 +174,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -182,6 +192,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -199,6 +210,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -216,6 +228,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/cache/LocalCache$WeakEntry;->valueReference:Lcom/google/common/cache/LocalCache$ValueReference;
 
     return-object p0
@@ -224,6 +237,7 @@
 .method public getWriteTime()J
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -234,6 +248,7 @@
 .method public setAccessTime(J)V
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -251,6 +266,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -268,6 +284,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -285,6 +302,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -302,6 +320,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -319,6 +338,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/cache/LocalCache$WeakEntry;->valueReference:Lcom/google/common/cache/LocalCache$ValueReference;
 
     return-void
@@ -327,6 +347,7 @@
 .method public setWriteTime(J)V
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V

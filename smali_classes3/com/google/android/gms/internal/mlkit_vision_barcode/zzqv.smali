@@ -37,6 +37,7 @@
 
     return p0
 
+    .line 1
     :cond_0
     instance-of v0, p1, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzqv;
 
@@ -46,11 +47,13 @@
 
     return p0
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzqv;
 
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzqv;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcd;
 
+    .line 3
     iget-object p1, p1, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzqv;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcd;
 
     invoke-static {p0, p1}, Lcom/google/android/gms/common/internal/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -67,9 +70,10 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    const/4 v1, 0x0
-
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzqv;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcd;
+
+    const/4 v1, 0x0
 
     aput-object p0, v0, v1
 

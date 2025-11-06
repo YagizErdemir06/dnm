@@ -48,26 +48,34 @@
 
     move-object/from16 v3, p4
 
+    .line 1
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     move-object/from16 v4, p1
 
+    .line 2
     iput-object v4, v0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->manifestLoaderErrorThrower:Lcom/google/android/exoplayer2/upstream/LoaderErrorThrower;
 
+    .line 3
     iput-object v1, v0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->manifest:Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest;
 
+    .line 4
     iput v2, v0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->streamElementIndex:I
 
+    .line 5
     iput-object v3, v0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->trackSelection:Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;
 
     move-object/from16 v4, p5
 
+    .line 6
     iput-object v4, v0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->dataSource:Lcom/google/android/exoplayer2/upstream/DataSource;
 
+    .line 7
     iget-object v4, v1, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest;->streamElements:[Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;
 
     aget-object v2, v4, v2
 
+    .line 8
     invoke-interface/range {p4 .. p4}, Lcom/google/android/exoplayer2/trackselection/TrackSelection;->length()I
 
     move-result v4
@@ -78,6 +86,7 @@
 
     const/4 v5, 0x0
 
+    .line 9
     :goto_0
     iget-object v6, v0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->chunkExtractors:[Lcom/google/android/exoplayer2/source/chunk/ChunkExtractor;
 
@@ -85,20 +94,24 @@
 
     if-ge v5, v6, :cond_2
 
+    .line 10
     invoke-interface {v3, v5}, Lcom/google/android/exoplayer2/trackselection/TrackSelection;->getIndexInTrackGroup(I)I
 
     move-result v8
 
+    .line 11
     iget-object v6, v2, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->formats:[Lcom/google/android/exoplayer2/Format;
 
     aget-object v6, v6, v8
 
+    .line 12
     iget-object v7, v6, Lcom/google/android/exoplayer2/Format;->drmInitData:Lcom/google/android/exoplayer2/drm/DrmInitData;
 
     const/4 v14, 0x0
 
     if-eqz v7, :cond_0
 
+    .line 13
     iget-object v7, v1, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest;->protectionElement:Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$ProtectionElement;
 
     invoke-static {v7}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -116,6 +129,7 @@
     :cond_0
     move-object/from16 v18, v14
 
+    .line 14
     :goto_1
     iget v9, v2, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->type:I
 
@@ -132,6 +146,7 @@
     :cond_1
     const/16 v19, 0x0
 
+    .line 15
     :goto_2
     new-instance v15, Lcom/google/android/exoplayer2/extractor/mp4/Track;
 
@@ -159,6 +174,7 @@
 
     invoke-direct/range {v7 .. v21}, Lcom/google/android/exoplayer2/extractor/mp4/Track;-><init>(IIJJJLcom/google/android/exoplayer2/Format;I[Lcom/google/android/exoplayer2/extractor/mp4/TrackEncryptionBox;I[J[J)V
 
+    .line 16
     new-instance v4, Lcom/google/android/exoplayer2/extractor/mp4/FragmentedMp4Extractor;
 
     const/4 v5, 0x3
@@ -169,6 +185,7 @@
 
     invoke-direct {v4, v5, v8, v7}, Lcom/google/android/exoplayer2/extractor/mp4/FragmentedMp4Extractor;-><init>(ILcom/google/android/exoplayer2/util/TimestampAdjuster;Lcom/google/android/exoplayer2/extractor/mp4/Track;)V
 
+    .line 17
     iget-object v5, v0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->chunkExtractors:[Lcom/google/android/exoplayer2/source/chunk/ChunkExtractor;
 
     new-instance v7, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;
@@ -212,6 +229,7 @@
 
     move-object/from16 v19, p12
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/upstream/DataSpec;
 
     move-object v2, v0
@@ -220,15 +238,16 @@
 
     invoke-direct {v0, v12}, Lcom/google/android/exoplayer2/upstream/DataSpec;-><init>(Landroid/net/Uri;)V
 
+    .line 2
     new-instance v20, Lcom/google/android/exoplayer2/source/chunk/ContainerMediaChunk;
 
     move-object/from16 v0, v20
 
+    move/from16 v12, p3
+
+    int-to-long v14, v12
+
     const-wide v12, -0x7fffffffffffffffL    # -4.9E-324
-
-    move/from16 v14, p3
-
-    int-to-long v14, v14
 
     const/16 v16, 0x1
 
@@ -240,6 +259,7 @@
 .method private resolveTimeToLiveEdgeUs(J)J
     .locals 5
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->manifest:Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest;
 
     iget-boolean v1, v0, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest;->isLive:Z
@@ -250,6 +270,7 @@
 
     return-wide p0
 
+    .line 2
     :cond_0
     iget-object v0, v0, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest;->streamElements:[Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;
 
@@ -257,14 +278,17 @@
 
     aget-object p0, v0, p0
 
+    .line 3
     iget v0, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->chunkCount:I
 
     add-int/lit8 v0, v0, -0x1
 
+    .line 4
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->getStartTimeUs(I)J
 
     move-result-wide v1
 
+    .line 5
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->getChunkDurationUs(I)J
 
     move-result-wide v3
@@ -281,6 +305,7 @@
 .method public getAdjustedSeekPositionUs(JLcom/google/android/exoplayer2/SeekParameters;)J
     .locals 8
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->manifest:Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest;
 
     iget-object v0, v0, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest;->streamElements:[Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;
@@ -289,10 +314,12 @@
 
     aget-object p0, v0, p0
 
+    .line 2
     invoke-virtual {p0, p1, p2}, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->getChunkIndex(J)I
 
     move-result v0
 
+    .line 3
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->getStartTimeUs(I)J
 
     move-result-wide v4
@@ -301,6 +328,7 @@
 
     if-gez v1, :cond_0
 
+    .line 4
     iget v1, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->chunkCount:I
 
     add-int/lit8 v1, v1, -0x1
@@ -309,6 +337,7 @@
 
     add-int/lit8 v0, v0, 0x1
 
+    .line 5
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->getStartTimeUs(I)J
 
     move-result-wide v0
@@ -325,6 +354,7 @@
 
     move-wide v2, p1
 
+    .line 6
     invoke-virtual/range {v1 .. v7}, Lcom/google/android/exoplayer2/SeekParameters;->resolveSeekPositionUs(JJJ)J
 
     move-result-wide p0
@@ -352,12 +382,14 @@
 
     move-object/from16 v3, p6
 
+    .line 1
     iget-object v4, v0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->fatalError:Ljava/io/IOException;
 
     if-eqz v4, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     iget-object v4, v0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->manifest:Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest;
 
@@ -367,10 +399,12 @@
 
     aget-object v5, v5, v6
 
+    .line 3
     iget v6, v5, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->chunkCount:I
 
     if-nez v6, :cond_1
 
+    .line 4
     iget-boolean v0, v4, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest;->isLive:Z
 
     xor-int/lit8 v0, v0, 0x1
@@ -379,6 +413,7 @@
 
     return-void
 
+    .line 5
     :cond_1
     invoke-interface/range {p5 .. p5}, Ljava/util/List;->isEmpty()Z
 
@@ -386,6 +421,7 @@
 
     if-eqz v4, :cond_2
 
+    .line 6
     invoke-virtual {v5, v1, v2}, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->getChunkIndex(J)I
 
     move-result v4
@@ -394,6 +430,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_2
     invoke-interface/range {p5 .. p5}, Ljava/util/List;->size()I
 
@@ -423,6 +460,7 @@
 
     if-gez v4, :cond_3
 
+    .line 8
     new-instance v1, Lcom/google/android/exoplayer2/source/BehindLiveWindowException;
 
     invoke-direct {v1}, Lcom/google/android/exoplayer2/source/BehindLiveWindowException;-><init>()V
@@ -431,12 +469,14 @@
 
     return-void
 
+    .line 9
     :cond_3
     :goto_0
     iget v6, v5, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->chunkCount:I
 
     if-lt v4, v6, :cond_4
 
+    .line 10
     iget-object v0, v0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->manifest:Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest;
 
     iget-boolean v0, v0, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest;->isLive:Z
@@ -450,10 +490,12 @@
     :cond_4
     sub-long v9, v1, p1
 
+    .line 11
     invoke-direct/range {p0 .. p2}, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->resolveTimeToLiveEdgeUs(J)J
 
     move-result-wide v11
 
+    .line 12
     iget-object v6, v0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->trackSelection:Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;
 
     invoke-interface {v6}, Lcom/google/android/exoplayer2/trackselection/TrackSelection;->length()I
@@ -467,12 +509,14 @@
     :goto_1
     if-ge v7, v6, :cond_5
 
+    .line 13
     iget-object v8, v0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->trackSelection:Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;
 
     invoke-interface {v8, v7}, Lcom/google/android/exoplayer2/trackselection/TrackSelection;->getIndexInTrackGroup(I)I
 
     move-result v8
 
+    .line 14
     new-instance v13, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource$StreamElementIterator;
 
     invoke-direct {v13, v5, v8, v4}, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource$StreamElementIterator;-><init>(Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;II)V
@@ -483,6 +527,7 @@
 
     goto :goto_1
 
+    .line 15
     :cond_5
     iget-object v6, v0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->trackSelection:Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;
 
@@ -492,16 +537,19 @@
 
     invoke-interface/range {v6 .. v14}, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;->updateSelectedTrack(JJJLjava/util/List;[Lcom/google/android/exoplayer2/source/chunk/MediaChunkIterator;)V
 
+    .line 16
     invoke-virtual {v5, v4}, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->getStartTimeUs(I)J
 
     move-result-wide v19
 
+    .line 17
     invoke-virtual {v5, v4}, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->getChunkDurationUs(I)J
 
     move-result-wide v6
 
     add-long v21, v19, v6
 
+    .line 18
     invoke-interface/range {p5 .. p5}, Ljava/util/List;->isEmpty()Z
 
     move-result v6
@@ -516,32 +564,39 @@
     :goto_2
     move-wide/from16 v23, v1
 
+    .line 19
     iget v1, v0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->currentManifestChunkOffset:I
 
     add-int v18, v4, v1
 
+    .line 20
     iget-object v1, v0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->trackSelection:Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;
 
     invoke-interface {v1}, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;->getSelectedIndex()I
 
     move-result v1
 
+    .line 21
     iget-object v2, v0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->chunkExtractors:[Lcom/google/android/exoplayer2/source/chunk/ChunkExtractor;
 
     aget-object v27, v2, v1
 
+    .line 22
     iget-object v2, v0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->trackSelection:Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;
 
     invoke-interface {v2, v1}, Lcom/google/android/exoplayer2/trackselection/TrackSelection;->getIndexInTrackGroup(I)I
 
     move-result v1
 
+    .line 23
     invoke-virtual {v5, v1, v4}, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->buildRequestUri(II)Landroid/net/Uri;
 
     move-result-object v17
 
+    .line 24
     iget-object v1, v0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->trackSelection:Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;
 
+    .line 25
     invoke-interface {v1}, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;->getSelectedFormat()Lcom/google/android/exoplayer2/Format;
 
     move-result-object v15
@@ -550,18 +605,21 @@
 
     iget-object v2, v0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->trackSelection:Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;
 
+    .line 26
     invoke-interface {v2}, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;->getSelectionReason()I
 
     move-result v25
 
     iget-object v0, v0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->trackSelection:Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;
 
+    .line 27
     invoke-interface {v0}, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;->getSelectionData()Ljava/lang/Object;
 
     move-result-object v26
 
     move-object/from16 v16, v1
 
+    .line 28
     invoke-static/range {v15 .. v27}, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->newMediaChunk(Lcom/google/android/exoplayer2/Format;Lcom/google/android/exoplayer2/upstream/DataSource;Landroid/net/Uri;IJJJILjava/lang/Object;Lcom/google/android/exoplayer2/source/chunk/ChunkExtractor;)Lcom/google/android/exoplayer2/source/chunk/MediaChunk;
 
     move-result-object v0
@@ -583,6 +641,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->fatalError:Ljava/io/IOException;
 
     if-nez v0, :cond_1
@@ -599,6 +658,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->trackSelection:Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;
 
@@ -608,6 +668,7 @@
 
     return p0
 
+    .line 3
     :cond_1
     :goto_0
     invoke-interface {p3}, Ljava/util/List;->size()I
@@ -625,16 +686,19 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->fatalError:Ljava/io/IOException;
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->manifestLoaderErrorThrower:Lcom/google/android/exoplayer2/upstream/LoaderErrorThrower;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/upstream/LoaderErrorThrower;->maybeThrowError()V
 
     return-void
 
+    .line 3
     :cond_0
     throw v0
 .end method
@@ -648,12 +712,15 @@
 .method public onChunkLoadError(Lcom/google/android/exoplayer2/source/chunk/Chunk;ZLcom/google/android/exoplayer2/upstream/LoadErrorHandlingPolicy$LoadErrorInfo;Lcom/google/android/exoplayer2/upstream/LoadErrorHandlingPolicy;)Z
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->trackSelection:Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;
 
+    .line 2
     invoke-static {v0}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionUtil;->createFallbackOptions(Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;)Lcom/google/android/exoplayer2/upstream/LoadErrorHandlingPolicy$FallbackOptions;
 
     move-result-object v0
 
+    .line 3
     invoke-interface {p4, v0, p3}, Lcom/google/android/exoplayer2/upstream/LoadErrorHandlingPolicy;->getFallbackSelectionFor(Lcom/google/android/exoplayer2/upstream/LoadErrorHandlingPolicy$FallbackOptions;Lcom/google/android/exoplayer2/upstream/LoadErrorHandlingPolicy$LoadErrorInfo;)Lcom/google/android/exoplayer2/upstream/LoadErrorHandlingPolicy$FallbackSelection;
 
     move-result-object p3
@@ -662,6 +729,7 @@
 
     if-eqz p3, :cond_0
 
+    .line 4
     iget p2, p3, Lcom/google/android/exoplayer2/upstream/LoadErrorHandlingPolicy$FallbackSelection;->type:I
 
     const/4 p4, 0x2
@@ -672,12 +740,14 @@
 
     iget-object p1, p1, Lcom/google/android/exoplayer2/source/chunk/Chunk;->trackFormat:Lcom/google/android/exoplayer2/Format;
 
+    .line 5
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/trackselection/TrackSelection;->indexOf(Lcom/google/android/exoplayer2/Format;)I
 
     move-result p1
 
     iget-wide p2, p3, Lcom/google/android/exoplayer2/upstream/LoadErrorHandlingPolicy$FallbackSelection;->exclusionDurationMs:J
 
+    .line 6
     invoke-interface {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;->blacklist(IJ)Z
 
     move-result p0
@@ -698,6 +768,7 @@
 .method public release()V
     .locals 3
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->chunkExtractors:[Lcom/google/android/exoplayer2/source/chunk/ChunkExtractor;
 
     array-length v0, p0
@@ -709,6 +780,7 @@
 
     aget-object v2, p0, v1
 
+    .line 2
     invoke-interface {v2}, Lcom/google/android/exoplayer2/source/chunk/ChunkExtractor;->release()V
 
     add-int/lit8 v1, v1, 0x1
@@ -732,6 +804,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->fatalError:Ljava/io/IOException;
 
     if-eqz v0, :cond_0
@@ -740,6 +813,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->trackSelection:Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;
 
@@ -753,6 +827,7 @@
 .method public updateManifest(Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest;)V
     .locals 8
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->manifest:Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest;
 
     iget-object v0, v0, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest;->streamElements:[Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;
@@ -761,14 +836,17 @@
 
     aget-object v0, v0, v1
 
+    .line 2
     iget v2, v0, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->chunkCount:I
 
+    .line 3
     iget-object v3, p1, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest;->streamElements:[Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;
 
     aget-object v1, v3, v1
 
     if-eqz v2, :cond_2
 
+    .line 4
     iget v3, v1, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->chunkCount:I
 
     if-nez v3, :cond_0
@@ -778,10 +856,12 @@
     :cond_0
     add-int/lit8 v3, v2, -0x1
 
+    .line 5
     invoke-virtual {v0, v3}, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->getStartTimeUs(I)J
 
     move-result-wide v4
 
+    .line 6
     invoke-virtual {v0, v3}, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->getChunkDurationUs(I)J
 
     move-result-wide v6
@@ -790,6 +870,7 @@
 
     const/4 v3, 0x0
 
+    .line 7
     invoke-virtual {v1, v3}, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->getStartTimeUs(I)J
 
     move-result-wide v6
@@ -798,6 +879,7 @@
 
     if-gtz v1, :cond_1
 
+    .line 8
     iget v0, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->currentManifestChunkOffset:I
 
     add-int/2addr v0, v2
@@ -806,6 +888,7 @@
 
     goto :goto_1
 
+    .line 9
     :cond_1
     iget v1, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->currentManifestChunkOffset:I
 
@@ -819,6 +902,7 @@
 
     goto :goto_1
 
+    .line 10
     :cond_2
     :goto_0
     iget v0, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->currentManifestChunkOffset:I
@@ -827,6 +911,7 @@
 
     iput v0, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->currentManifestChunkOffset:I
 
+    .line 11
     :goto_1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->manifest:Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest;
 
@@ -836,6 +921,7 @@
 .method public updateTrackSelection(Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;->trackSelection:Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;
 
     return-void

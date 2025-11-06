@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/mediacodec/AsynchronousMediaCodecBufferEnqueuer$MessageParams;
+.class public Lcom/google/android/exoplayer2/mediacodec/AsynchronousMediaCodecBufferEnqueuer$MessageParams;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -32,8 +32,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Landroid/media/MediaCodec$CryptoInfo;
 
     invoke-direct {v0}, Landroid/media/MediaCodec$CryptoInfo;-><init>()V
@@ -48,14 +50,19 @@
 .method public setQueueParams(IIIJI)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/mediacodec/AsynchronousMediaCodecBufferEnqueuer$MessageParams;->index:I
 
+    .line 2
     iput p2, p0, Lcom/google/android/exoplayer2/mediacodec/AsynchronousMediaCodecBufferEnqueuer$MessageParams;->offset:I
 
+    .line 3
     iput p3, p0, Lcom/google/android/exoplayer2/mediacodec/AsynchronousMediaCodecBufferEnqueuer$MessageParams;->size:I
 
+    .line 4
     iput-wide p4, p0, Lcom/google/android/exoplayer2/mediacodec/AsynchronousMediaCodecBufferEnqueuer$MessageParams;->presentationTimeUs:J
 
+    .line 5
     iput p6, p0, Lcom/google/android/exoplayer2/mediacodec/AsynchronousMediaCodecBufferEnqueuer$MessageParams;->flags:I
 
     return-void

@@ -1,4 +1,4 @@
-.class Lcom/android/camera2/compat/theme/custom/mm/mimoji/MimojiBgAdapterMM$BgViewViewHolder;
+.class public Lcom/android/camera2/compat/theme/custom/mm/mimoji/MimojiBgAdapterMM$BgViewViewHolder;
 .super Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerViewHolder;
 .source "SourceFile"
 
@@ -16,7 +16,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerViewHolder<",
-        "Lsh/b;",
+        "Ld/o/v/a/z/b;",
         ">;"
     }
 .end annotation
@@ -29,7 +29,7 @@
 
 .field private mSelectItemView:Landroid/widget/ImageView;
 
-.field final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/mimoji/MimojiBgAdapterMM;
+.field public final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/mimoji/MimojiBgAdapterMM;
 
 
 # direct methods
@@ -39,23 +39,38 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x0
+        }
+        names = {
+            "this$0",
+            "itemView"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/mimoji/MimojiBgAdapterMM$BgViewViewHolder;->this$0:Lcom/android/camera2/compat/theme/custom/mm/mimoji/MimojiBgAdapterMM;
 
+    .line 2
     invoke-direct {p0, p2}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerViewHolder;-><init>(Landroid/view/View;)V
 
-    invoke-static {p2}, Lz1/f;->o(Landroid/view/View;)V
+    .line 3
+    invoke-static {p2}, Ld/d/a/f6/f;->o(Landroid/view/View;)V
 
-    const p1, 0x7f0b0499
+    const p1, 0x7f0b0425
 
+    .line 4
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/mimoji/MimojiBgAdapterMM$BgViewViewHolder;->mItemChangeBg:Landroid/view/View;
 
-    const p1, 0x7f0b049a
+    const p1, 0x7f0b0426
 
+    .line 5
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -64,8 +79,9 @@
 
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/mimoji/MimojiBgAdapterMM$BgViewViewHolder;->imageView:Landroid/widget/ImageView;
 
-    const p1, 0x7f0b049b
+    const p1, 0x7f0b0427
 
+    .line 6
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -86,28 +102,28 @@
 
     new-array v0, v0, [Landroid/view/View;
 
-    const/4 v1, 0x0
-
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
+
+    const/4 v1, 0x0
 
     aput-object p0, v0, v1
 
     return-object v0
 .end method
 
-.method public bridge synthetic setData(Ljava/lang/Object;I)V
-    .locals 0
-
-    .line 1
-    check-cast p1, Lsh/b;
-
-    invoke-virtual {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/mimoji/MimojiBgAdapterMM$BgViewViewHolder;->setData(Lsh/b;I)V
-
-    return-void
-.end method
-
-.method public setData(Lsh/b;I)V
+.method public setData(Ld/o/v/a/z/b;I)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "data",
+            "position"
+        }
+    .end annotation
 
     .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/mimoji/MimojiBgAdapterMM$BgViewViewHolder;->this$0:Lcom/android/camera2/compat/theme/custom/mm/mimoji/MimojiBgAdapterMM;
@@ -126,7 +142,7 @@
 
     move-object v1, p1
 
-    invoke-virtual/range {v0 .. v5}, Lcom/android/camera2/compat/theme/custom/mm/mimoji/MimojiBgAdapterMM;->initMimojiBgColor(Lsh/b;Landroid/content/Context;Landroid/view/View;Landroid/view/View;Landroid/widget/ImageView;)V
+    invoke-virtual/range {v0 .. v5}, Lcom/android/camera2/compat/theme/custom/mm/mimoji/MimojiBgAdapterMM;->initMimojiBgColor(Ld/o/v/a/z/b;Landroid/content/Context;Landroid/view/View;Landroid/view/View;Landroid/widget/ImageView;)V
 
     .line 3
     iget-object p2, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -135,7 +151,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1}, Lsh/b;->e()I
+    invoke-virtual {p1}, Ld/o/v/a/z/b;->d()I
 
     move-result v0
 
@@ -146,14 +162,14 @@
     .line 4
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/mimoji/MimojiBgAdapterMM$BgViewViewHolder;->imageView:Landroid/widget/ImageView;
 
-    invoke-virtual {p1}, Lsh/b;->n()Z
+    invoke-virtual {p1}, Ld/o/v/a/z/b;->l()Z
 
     move-result v1
 
-    invoke-static {v0, v1}, Lcom/android/camera/a6;->T(Landroid/view/View;Z)V
+    invoke-static {v0, v1}, Ld/d/a/z5;->L(Landroid/view/View;Z)V
 
     .line 5
-    invoke-virtual {p1}, Lsh/b;->n()Z
+    invoke-virtual {p1}, Ld/o/v/a/z/b;->l()Z
 
     move-result p1
 
@@ -164,22 +180,22 @@
     .line 6
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/mimoji/MimojiBgAdapterMM$BgViewViewHolder;->mSelectItemView:Landroid/widget/ImageView;
 
-    invoke-static {}, Lf2/a;->e()Lf2/a;
+    invoke-static {}, Ld/d/a/k6/c;->e()Ld/d/a/k6/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lf2/a;->c()Z
+    invoke-virtual {v1}, Ld/d/a/k6/c;->c()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f080224
+    const v1, 0x7f080208
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f080220
+    const v1, 0x7f080204
 
     :goto_0
     invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -187,7 +203,7 @@
     .line 7
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/mimoji/MimojiBgAdapterMM$BgViewViewHolder;->mSelectItemView:Landroid/widget/ImageView;
 
-    invoke-static {p1, v0, v0}, Lcom/android/camera/a6;->Y4(Landroid/view/View;ZZ)V
+    invoke-static {p1, v0, v0}, Ld/d/a/z5;->K4(Landroid/view/View;ZZ)V
 
     .line 8
     new-instance p1, Ljava/lang/StringBuilder;
@@ -202,11 +218,11 @@
 
     iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/mimoji/MimojiBgAdapterMM$BgViewViewHolder;->imageView:Landroid/widget/ImageView;
 
-    invoke-virtual {p2}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p2}, Landroid/widget/ImageView;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
 
-    const v0, 0x7f1400d4
+    const v0, 0x7f1300d3
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -226,13 +242,34 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p1, v1, v0}, Lcom/android/camera/a6;->Y4(Landroid/view/View;ZZ)V
+    invoke-static {p1, v1, v0}, Ld/d/a/z5;->K4(Landroid/view/View;ZZ)V
 
     .line 10
     :goto_1
     iget-object p0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {p0, p2}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public bridge synthetic setData(Ljava/lang/Object;I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "data",
+            "position"
+        }
+    .end annotation
+
+    .line 1
+    check-cast p1, Ld/o/v/a/z/b;
+
+    invoke-virtual {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/mimoji/MimojiBgAdapterMM$BgViewViewHolder;->setData(Ld/o/v/a/z/b;I)V
 
     return-void
 .end method

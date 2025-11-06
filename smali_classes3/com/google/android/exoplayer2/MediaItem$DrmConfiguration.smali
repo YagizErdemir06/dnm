@@ -245,6 +245,7 @@
 .method public static synthetic access$600(Lcom/google/android/exoplayer2/MediaItem$DrmConfiguration;)[B
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/MediaItem$DrmConfiguration;->keySetId:[B
 
     return-object p0
@@ -255,6 +256,7 @@
 .method public buildUpon()Lcom/google/android/exoplayer2/MediaItem$DrmConfiguration$Builder;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/MediaItem$DrmConfiguration$Builder;
 
     const/4 v1, 0x0
@@ -277,6 +279,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/android/exoplayer2/MediaItem$DrmConfiguration;
 
@@ -286,9 +289,11 @@
 
     return v2
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/MediaItem$DrmConfiguration;
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/MediaItem$DrmConfiguration;->scheme:Ljava/util/UUID;
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/MediaItem$DrmConfiguration;->scheme:Ljava/util/UUID;
@@ -303,6 +308,7 @@
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/MediaItem$DrmConfiguration;->licenseUri:Landroid/net/Uri;
 
+    .line 4
     invoke-static {v1, v3}, Lcom/google/android/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
@@ -313,6 +319,7 @@
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/MediaItem$DrmConfiguration;->licenseRequestHeaders:Lcom/google/common/collect/ImmutableMap;
 
+    .line 5
     invoke-static {v1, v3}, Lcom/google/android/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
@@ -341,6 +348,7 @@
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/MediaItem$DrmConfiguration;->forcedSessionTrackTypes:Lcom/google/common/collect/ImmutableList;
 
+    .line 6
     invoke-virtual {v1, v3}, Lcom/google/common/collect/ImmutableList;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -351,6 +359,7 @@
 
     iget-object p1, p1, Lcom/google/android/exoplayer2/MediaItem$DrmConfiguration;->keySetId:[B
 
+    .line 7
     invoke-static {p0, p1}, Ljava/util/Arrays;->equals([B[B)Z
 
     move-result p0
@@ -371,6 +380,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/MediaItem$DrmConfiguration;->keySetId:[B
 
     if-eqz p0, :cond_0
@@ -393,6 +403,7 @@
 .method public hashCode()I
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/MediaItem$DrmConfiguration;->scheme:Ljava/util/UUID;
 
     invoke-virtual {v0}, Ljava/util/UUID;->hashCode()I
@@ -401,6 +412,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/MediaItem$DrmConfiguration;->licenseUri:Landroid/net/Uri;
 
     if-eqz v1, :cond_0
@@ -419,6 +431,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/MediaItem$DrmConfiguration;->licenseRequestHeaders:Lcom/google/common/collect/ImmutableMap;
 
     invoke-virtual {v1}, Lcom/google/common/collect/ImmutableMap;->hashCode()I
@@ -429,24 +442,28 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 4
     iget-boolean v1, p0, Lcom/google/android/exoplayer2/MediaItem$DrmConfiguration;->multiSession:Z
 
     add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 5
     iget-boolean v1, p0, Lcom/google/android/exoplayer2/MediaItem$DrmConfiguration;->forceDefaultLicenseUri:Z
 
     add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 6
     iget-boolean v1, p0, Lcom/google/android/exoplayer2/MediaItem$DrmConfiguration;->playClearContentWithoutKey:Z
 
     add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 7
     iget-object v1, p0, Lcom/google/android/exoplayer2/MediaItem$DrmConfiguration;->forcedSessionTrackTypes:Lcom/google/common/collect/ImmutableList;
 
     invoke-virtual {v1}, Lcom/google/common/collect/ImmutableList;->hashCode()I
@@ -457,6 +474,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 8
     iget-object p0, p0, Lcom/google/android/exoplayer2/MediaItem$DrmConfiguration;->keySetId:[B
 
     invoke-static {p0}, Ljava/util/Arrays;->hashCode([B)I

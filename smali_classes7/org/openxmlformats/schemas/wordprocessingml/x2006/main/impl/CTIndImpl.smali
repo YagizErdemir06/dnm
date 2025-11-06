@@ -30,67 +30,67 @@
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "left"
+    const-string v1, "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
 
-    const-string v2, "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+    const-string v2, "left"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTIndImpl;->LEFT$0:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "leftChars"
+    const-string v2, "leftChars"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTIndImpl;->LEFTCHARS$2:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "right"
+    const-string v2, "right"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTIndImpl;->RIGHT$4:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "rightChars"
+    const-string v2, "rightChars"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTIndImpl;->RIGHTCHARS$6:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "hanging"
+    const-string v2, "hanging"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTIndImpl;->HANGING$8:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "hangingChars"
+    const-string v2, "hangingChars"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTIndImpl;->HANGINGCHARS$10:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "firstLine"
+    const-string v2, "firstLine"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTIndImpl;->FIRSTLINE$12:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "firstLineChars"
+    const-string v2, "firstLineChars"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTIndImpl;->FIRSTLINECHARS$14:Ljavax/xml/namespace/QName;
 
@@ -133,9 +133,9 @@
 
     if-nez p0, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    monitor-exit v0
 
     return-object p0
 
@@ -184,9 +184,9 @@
 
     if-nez p0, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    monitor-exit v0
 
     return-object p0
 
@@ -235,9 +235,9 @@
 
     if-nez p0, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    monitor-exit v0
 
     return-object p0
 
@@ -286,9 +286,9 @@
 
     if-nez p0, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    monitor-exit v0
 
     return-object p0
 
@@ -337,9 +337,9 @@
 
     if-nez p0, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    monitor-exit v0
 
     return-object p0
 
@@ -388,9 +388,9 @@
 
     if-nez p0, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    monitor-exit v0
 
     return-object p0
 
@@ -439,9 +439,9 @@
 
     if-nez p0, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    monitor-exit v0
 
     return-object p0
 
@@ -490,9 +490,9 @@
 
     if-nez p0, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    monitor-exit v0
 
     return-object p0
 

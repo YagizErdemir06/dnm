@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/server/response/zag;
+.class public final Lcom/google/android/gms/common/server/response/zag;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -29,6 +29,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1, p2}, Lcom/google/android/gms/common/server/response/FastParser;->zag(Lcom/google/android/gms/common/server/response/FastParser;Ljava/io/BufferedReader;)Ljava/math/BigInteger;
 
     move-result-object p0

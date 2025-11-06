@@ -159,12 +159,14 @@
 
     move-object/from16 v0, p0
 
+    .line 1
     iget-object v1, v0, Lcom/google/android/exoplayer2/upstream/DataSpec$Builder;->uri:Landroid/net/Uri;
 
     const-string v2, "The uri must be set."
 
     invoke-static {v1, v2}, Lcom/google/android/exoplayer2/util/Assertions;->checkStateNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     new-instance v1, Lcom/google/android/exoplayer2/upstream/DataSpec;
 
     iget-object v4, v0, Lcom/google/android/exoplayer2/upstream/DataSpec$Builder;->uri:Landroid/net/Uri;
@@ -205,6 +207,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/upstream/DataSpec$Builder;->customData:Ljava/lang/Object;
 
     return-object p0
@@ -213,6 +216,7 @@
 .method public setFlags(I)Lcom/google/android/exoplayer2/upstream/DataSpec$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/upstream/DataSpec$Builder;->flags:I
 
     return-object p0
@@ -225,6 +229,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/upstream/DataSpec$Builder;->httpBody:[B
 
     return-object p0
@@ -233,6 +238,7 @@
 .method public setHttpMethod(I)Lcom/google/android/exoplayer2/upstream/DataSpec$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/upstream/DataSpec$Builder;->httpMethod:I
 
     return-object p0
@@ -251,6 +257,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/upstream/DataSpec$Builder;->httpRequestHeaders:Ljava/util/Map;
 
     return-object p0
@@ -263,6 +270,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/upstream/DataSpec$Builder;->key:Ljava/lang/String;
 
     return-object p0
@@ -271,6 +279,7 @@
 .method public setLength(J)Lcom/google/android/exoplayer2/upstream/DataSpec$Builder;
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lcom/google/android/exoplayer2/upstream/DataSpec$Builder;->length:J
 
     return-object p0
@@ -279,6 +288,7 @@
 .method public setPosition(J)Lcom/google/android/exoplayer2/upstream/DataSpec$Builder;
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lcom/google/android/exoplayer2/upstream/DataSpec$Builder;->position:J
 
     return-object p0
@@ -309,6 +319,7 @@
 .method public setUriPositionOffset(J)Lcom/google/android/exoplayer2/upstream/DataSpec$Builder;
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lcom/google/android/exoplayer2/upstream/DataSpec$Builder;->uriPositionOffset:J
 
     return-object p0

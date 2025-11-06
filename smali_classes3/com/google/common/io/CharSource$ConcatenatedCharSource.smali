@@ -1,4 +1,4 @@
-.class final Lcom/google/common/io/CharSource$ConcatenatedCharSource;
+.class public final Lcom/google/common/io/CharSource$ConcatenatedCharSource;
 .super Lcom/google/common/io/CharSource;
 .source "SourceFile"
 
@@ -40,8 +40,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/io/CharSource;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -63,6 +65,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/io/CharSource$ConcatenatedCharSource;->sources:Ljava/lang/Iterable;
 
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -82,6 +85,7 @@
 
     check-cast v0, Lcom/google/common/io/CharSource;
 
+    .line 2
     invoke-virtual {v0}, Lcom/google/common/io/CharSource;->isEmpty()Z
 
     move-result v0
@@ -106,6 +110,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/io/CharSource$ConcatenatedCharSource;->sources:Ljava/lang/Iterable;
 
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -127,6 +132,7 @@
 
     check-cast v2, Lcom/google/common/io/CharSource;
 
+    .line 2
     invoke-virtual {v2}, Lcom/google/common/io/CharSource;->length()J
 
     move-result-wide v2
@@ -150,6 +156,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/io/CharSource$ConcatenatedCharSource;->sources:Ljava/lang/Iterable;
 
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -171,22 +178,26 @@
 
     check-cast v2, Lcom/google/common/io/CharSource;
 
+    .line 2
     invoke-virtual {v2}, Lcom/google/common/io/CharSource;->lengthIfKnown()Lcom/google/common/base/Optional;
 
     move-result-object v2
 
+    .line 3
     invoke-virtual {v2}, Lcom/google/common/base/Optional;->isPresent()Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
+    .line 4
     invoke-static {}, Lcom/google/common/base/Optional;->absent()Lcom/google/common/base/Optional;
 
     move-result-object p0
 
     return-object p0
 
+    .line 5
     :cond_0
     invoke-virtual {v2}, Lcom/google/common/base/Optional;->get()Ljava/lang/Object;
 
@@ -202,6 +213,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_1
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -222,6 +234,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/io/MultiReader;
 
     iget-object p0, p0, Lcom/google/common/io/CharSource$ConcatenatedCharSource;->sources:Ljava/lang/Iterable;
@@ -238,6 +251,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/io/CharSource$ConcatenatedCharSource;->sources:Ljava/lang/Iterable;
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

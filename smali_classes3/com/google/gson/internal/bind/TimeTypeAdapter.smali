@@ -25,6 +25,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/gson/internal/bind/TimeTypeAdapter$1;
 
     invoke-direct {v0}, Lcom/google/gson/internal/bind/TimeTypeAdapter$1;-><init>()V
@@ -37,8 +38,10 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/gson/TypeAdapter;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v1, "hh:mm:ss a"
@@ -93,12 +96,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    const/4 p1, 0x0
+
     .line 4
     monitor-exit p0
 
-    const/4 p0, 0x0
-
-    return-object p0
+    return-object p1
 
     .line 5
     :cond_0

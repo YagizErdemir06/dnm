@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/tasks/zzk;
+.class public final Lcom/google/android/gms/tasks/zzk;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field final synthetic zza:Lcom/google/android/gms/tasks/Task;
+.field public final synthetic zza:Lcom/google/android/gms/tasks/Task;
 
-.field final synthetic zzb:Lcom/google/android/gms/tasks/zzl;
+.field public final synthetic zzb:Lcom/google/android/gms/tasks/zzl;
 
 
 # direct methods
@@ -30,6 +30,7 @@
 .method public final run()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/tasks/zzk;->zzb:Lcom/google/android/gms/tasks/zzl;
 
     invoke-static {v0}, Lcom/google/android/gms/tasks/zzl;->zzb(Lcom/google/android/gms/tasks/zzl;)Ljava/lang/Object;
@@ -65,6 +66,7 @@
 
     invoke-interface {v1, p0}, Lcom/google/android/gms/tasks/OnFailureListener;->onFailure(Ljava/lang/Exception;)V
 
+    .line 2
     :cond_0
     monitor-exit v0
 

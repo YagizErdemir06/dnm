@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/MapMakerInternalMap$StrongKeyStrongValueEntry;
+.class public final Lcom/google/common/collect/MapMakerInternalMap$StrongKeyStrongValueEntry;
 .super Lcom/google/common/collect/MapMakerInternalMap$AbstractStrongKeyEntry;
 .source "SourceFile"
 
@@ -69,10 +69,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/google/common/collect/MapMakerInternalMap$AbstractStrongKeyEntry;-><init>(Ljava/lang/Object;ILcom/google/common/collect/MapMakerInternalMap$InternalEntry;)V
 
     const/4 p1, 0x0
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/MapMakerInternalMap$StrongKeyStrongValueEntry;->value:Ljava/lang/Object;
 
     return-void
@@ -92,6 +94,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/MapMakerInternalMap$StrongKeyStrongValueEntry;
 
     iget-object v1, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractStrongKeyEntry;->key:Ljava/lang/Object;
@@ -100,6 +103,7 @@
 
     invoke-direct {v0, v1, v2, p1}, Lcom/google/common/collect/MapMakerInternalMap$StrongKeyStrongValueEntry;-><init>(Ljava/lang/Object;ILcom/google/common/collect/MapMakerInternalMap$StrongKeyStrongValueEntry;)V
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/MapMakerInternalMap$StrongKeyStrongValueEntry;->value:Ljava/lang/Object;
 
     iput-object p0, v0, Lcom/google/common/collect/MapMakerInternalMap$StrongKeyStrongValueEntry;->value:Ljava/lang/Object;
@@ -118,6 +122,7 @@
     .annotation runtime Lorg/checkerframework/checker/nullness/compatqual/NullableDecl;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/MapMakerInternalMap$StrongKeyStrongValueEntry;->value:Ljava/lang/Object;
 
     return-object p0
@@ -131,6 +136,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/MapMakerInternalMap$StrongKeyStrongValueEntry;->value:Ljava/lang/Object;
 
     return-void

@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Range$LowerBoundFn;
+.class public Lcom/google/common/collect/Range$LowerBoundFn;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -28,13 +28,14 @@
 
 
 # static fields
-.field static final INSTANCE:Lcom/google/common/collect/Range$LowerBoundFn;
+.field public static final INSTANCE:Lcom/google/common/collect/Range$LowerBoundFn;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/Range$LowerBoundFn;
 
     invoke-direct {v0}, Lcom/google/common/collect/Range$LowerBoundFn;-><init>()V
@@ -47,6 +48,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

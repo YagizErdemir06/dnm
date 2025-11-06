@@ -31,7 +31,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/reflect/TypeToken;
+.field public final synthetic this$0:Lcom/google/common/reflect/TypeToken;
 
 .field private transient types:Lcom/google/common/collect/ImmutableSet;
     .annotation system Ldalvik/annotation/Signature;
@@ -51,6 +51,7 @@
 .method public constructor <init>(Lcom/google/common/reflect/TypeToken;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/reflect/TypeToken$TypeSet;->this$0:Lcom/google/common/reflect/TypeToken;
 
     invoke-direct {p0}, Lcom/google/common/collect/ForwardingSet;-><init>()V
@@ -70,6 +71,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/reflect/TypeToken$ClassSet;
 
     iget-object p0, p0, Lcom/google/common/reflect/TypeToken$TypeSet;->this$0:Lcom/google/common/reflect/TypeToken;
@@ -162,6 +164,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/reflect/TypeToken$InterfaceSet;
 
     iget-object v1, p0, Lcom/google/common/reflect/TypeToken$TypeSet;->this$0:Lcom/google/common/reflect/TypeToken;
@@ -182,10 +185,12 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/common/reflect/TypeToken$TypeCollector;->FOR_RAW_TYPE:Lcom/google/common/reflect/TypeToken$TypeCollector;
 
     iget-object p0, p0, Lcom/google/common/reflect/TypeToken$TypeSet;->this$0:Lcom/google/common/reflect/TypeToken;
 
+    .line 2
     invoke-static {p0}, Lcom/google/common/reflect/TypeToken;->access$300(Lcom/google/common/reflect/TypeToken;)Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p0
@@ -194,6 +199,7 @@
 
     move-result-object p0
 
+    .line 3
     invoke-static {p0}, Lcom/google/common/collect/ImmutableSet;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p0

@@ -48,35 +48,50 @@
 # direct methods
 .method public constructor <init>(Z)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "remoteControlAllowed"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mPlayerMap:Ljava/util/Map;
 
+    .line 3
     new-instance v1, Ljava/util/LinkedHashMap;
 
     invoke-direct {v1}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mLabelMap:Ljava/util/Map;
 
+    .line 4
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mRemoteControlAllowed:Z
 
+    .line 5
     new-instance p1, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter$RequestHandler;
 
     invoke-direct {p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter$RequestHandler;-><init>(Ljava/util/Map;)V
 
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mRequestHandler:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter$RequestHandler;
 
+    .line 6
     new-instance p1, Ljava/beans/PropertyChangeSupport;
 
     invoke-direct {p1, p0}, Ljava/beans/PropertyChangeSupport;-><init>(Ljava/lang/Object;)V
 
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mPropertyChangeSupport:Ljava/beans/PropertyChangeSupport;
 
+    .line 7
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->initDevices()V
 
     return-void
@@ -85,6 +100,7 @@
 .method private startRecordingAll()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mPlayerMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -109,18 +125,21 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
+    .line 2
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
+    .line 3
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;
 
+    .line 4
     invoke-virtual {v1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->isRecoding()Z
 
     move-result v1
@@ -133,6 +152,7 @@
 
     if-nez v1, :cond_0
 
+    .line 5
     invoke-virtual {p0, v2}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->startRecording(Ljava/lang/String;)V
 
     goto :goto_0
@@ -144,6 +164,7 @@
 .method private stopRecordingAll()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mPlayerMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -168,18 +189,21 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
+    .line 2
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
+    .line 3
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;
 
+    .line 4
     invoke-virtual {v1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->isRecoding()Z
 
     move-result v1
@@ -192,6 +216,7 @@
 
     if-nez v1, :cond_0
 
+    .line 5
     invoke-virtual {p0, v2}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->stopRecording(Ljava/lang/String;)V
 
     goto :goto_0
@@ -204,7 +229,16 @@
 # virtual methods
 .method public addPropertyChangeListener(Ljava/beans/PropertyChangeListener;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "listener"
+        }
+    .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mPropertyChangeSupport:Ljava/beans/PropertyChangeSupport;
 
     invoke-virtual {p0, p1}, Ljava/beans/PropertyChangeSupport;->addPropertyChangeListener(Ljava/beans/PropertyChangeListener;)V
@@ -214,7 +248,16 @@
 
 .method public findIndexByIp(Ljava/lang/String;)I
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "ip"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mLabelMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -241,12 +284,14 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
+    .line 2
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
+    .line 3
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mPlayerMap:Ljava/util/Map;
 
     invoke-interface {v3, v2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -255,6 +300,7 @@
 
     if-eqz v3, :cond_0
 
+    .line 4
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -275,6 +321,15 @@
 
 .method public forEachStreamTextureView(Ljava/util/function/Consumer;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "consumer"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -284,6 +339,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mLabelMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -308,12 +364,14 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
+    .line 2
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
+    .line 3
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mPlayerMap:Ljava/util/Map;
 
     invoke-interface {v2, v1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -322,6 +380,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 4
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mPlayerMap:Ljava/util/Map;
 
     invoke-interface {v2, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -332,6 +391,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 5
     invoke-interface {p1, v1}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
     goto :goto_0
@@ -346,15 +406,17 @@
         value = {
             "()",
             "Ljava/util/Set<",
-            "Lm3/c;",
+            "Ld/d/a/o6/c/c;",
             ">;"
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
+    .line 2
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mLabelMap:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -379,12 +441,14 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
+    .line 3
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
+    .line 4
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mPlayerMap:Ljava/util/Map;
 
     invoke-interface {v3, v2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -393,6 +457,7 @@
 
     if-eqz v3, :cond_0
 
+    .line 5
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mPlayerMap:Ljava/util/Map;
 
     invoke-interface {v3, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -403,13 +468,14 @@
 
     if-eqz v3, :cond_0
 
-    new-instance v4, Lm3/c;
+    .line 6
+    new-instance v4, Ld/d/a/o6/c/c;
 
     invoke-virtual {v3}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->getLabel()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-direct {v4, v2, v3}, Lm3/c;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v4, v2, v3}, Ld/d/a/o6/c/c;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-interface {v0, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
@@ -422,6 +488,7 @@
 .method public getFirstIpOrNull()Ljava/lang/String;
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mLabelMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -445,12 +512,14 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
+    .line 2
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
+    .line 3
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mPlayerMap:Ljava/util/Map;
 
     invoke-interface {v2, v1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -480,6 +549,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mLabelMap:Ljava/util/Map;
 
     return-object p0
@@ -488,6 +558,7 @@
 .method public getLastIpOrNull()Ljava/lang/String;
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mLabelMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -514,12 +585,14 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
+    .line 2
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
+    .line 3
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mPlayerMap:Ljava/util/Map;
 
     invoke-interface {v3, v2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -548,6 +621,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mPlayerMap:Ljava/util/Map;
 
     return-object p0
@@ -556,6 +630,7 @@
 .method public hasPendingOperations()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mRequestHandler:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter$RequestHandler;
 
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter$RequestHandler;->hasPendingRequests()Z
@@ -568,6 +643,7 @@
 .method public initDevices()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mLabelMap:Ljava/util/Map;
 
     const-string v1, "A"
@@ -576,18 +652,21 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mLabelMap:Ljava/util/Map;
 
     const-string v1, "B"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mLabelMap:Ljava/util/Map;
 
     const-string v1, "C"
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mLabelMap:Ljava/util/Map;
 
     const-string v0, "D"
@@ -600,6 +679,7 @@
 .method public isRemoteAllInRecordingState()Z
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mPlayerMap:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -623,18 +703,21 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
+    .line 2
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;
 
+    .line 3
     invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->isRecoding()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
+    .line 4
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -670,6 +753,7 @@
 .method public isRemoteAllInStandbyState()Z
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mPlayerMap:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -693,18 +777,21 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
+    .line 2
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;
 
+    .line 3
     invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->isRecoding()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 4
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -740,6 +827,7 @@
 .method public isRemoteControlAllowed()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mRemoteControlAllowed:Z
 
     return p0
@@ -747,7 +835,16 @@
 
 .method public isRemoteInRecordingState(Ljava/lang/String;)Z
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "ip"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -758,6 +855,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mPlayerMap:Ljava/util/Map;
 
@@ -771,6 +869,7 @@
 
     return v1
 
+    .line 3
     :cond_1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->isRecoding()Z
 
@@ -782,10 +881,12 @@
 .method public release()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mRequestHandler:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter$RequestHandler;
 
     invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter$RequestHandler;->removeAllPendingRequest()V
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mPlayerMap:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -810,21 +911,25 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
+    .line 3
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;
 
-    invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->getPlayer()Lve/g;
+    .line 4
+    invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->getPlayer()Ld/o/f/f/f;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lve/g;->C()V
+    .line 5
+    invoke-virtual {v0}, Ld/o/f/f/f;->B()V
 
-    invoke-virtual {v0}, Lve/g;->q()V
+    .line 6
+    invoke-virtual {v0}, Ld/o/f/f/f;->p()V
 
     goto :goto_0
 
@@ -834,7 +939,16 @@
 
 .method public removePropertyChangeListener(Ljava/beans/PropertyChangeListener;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "listener"
+        }
+    .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mPropertyChangeSupport:Ljava/beans/PropertyChangeSupport;
 
     invoke-virtual {p0, p1}, Ljava/beans/PropertyChangeSupport;->removePropertyChangeListener(Ljava/beans/PropertyChangeListener;)V
@@ -844,7 +958,18 @@
 
 .method public startOrStopRecording(ILjava/lang/String;)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "layoutType",
+            "currentIp"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -869,6 +994,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->hasPendingOperations()Z
 
     move-result v0
@@ -877,6 +1003,7 @@
 
     const-string p0, "startOrStopRecording: waiting"
 
+    .line 3
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -892,14 +1019,17 @@
 
     if-ne p1, v3, :cond_2
 
+    .line 4
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->isRemoteAllInStandbyState()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
+    .line 5
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->startRecordingAll()V
 
+    .line 6
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->getDeviceList()Ljava/util/Set;
 
     move-result-object p0
@@ -908,13 +1038,15 @@
 
     move-result p0
 
-    invoke-static {p0, v0}, Lk9/a;->W1(II)V
+    invoke-static {p0, v0}, Ld/d/a/v7/f;->S1(II)V
 
     goto :goto_0
 
+    .line 7
     :cond_1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->stopRecordingAll()V
 
+    .line 8
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->getDeviceList()Ljava/util/Set;
 
     move-result-object p0
@@ -923,13 +1055,14 @@
 
     move-result p0
 
-    invoke-static {v2, v1, p0}, Lk9/a;->X1(Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-static {v2, v1, p0}, Ld/d/a/v7/f;->T1(Ljava/lang/String;Ljava/lang/String;I)V
 
     goto :goto_0
 
     :cond_2
     if-eqz p2, :cond_6
 
+    .line 9
     invoke-virtual {p2}, Ljava/lang/String;->isEmpty()Z
 
     move-result p1
@@ -938,6 +1071,7 @@
 
     goto :goto_0
 
+    .line 10
     :cond_3
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mPlayerMap:Ljava/util/Map;
 
@@ -951,6 +1085,7 @@
 
     return-void
 
+    .line 11
     :cond_4
     invoke-virtual {p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->isRecoding()Z
 
@@ -958,16 +1093,20 @@
 
     if-eqz p1, :cond_5
 
+    .line 12
     invoke-virtual {p0, p2}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->stopRecording(Ljava/lang/String;)V
 
-    invoke-static {v2, v1, v3}, Lk9/a;->X1(Ljava/lang/String;Ljava/lang/String;I)V
+    .line 13
+    invoke-static {v2, v1, v3}, Ld/d/a/v7/f;->T1(Ljava/lang/String;Ljava/lang/String;I)V
 
     goto :goto_0
 
+    .line 14
     :cond_5
     invoke-virtual {p0, p2}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->startRecording(Ljava/lang/String;)V
 
-    invoke-static {v3, v0}, Lk9/a;->W1(II)V
+    .line 15
+    invoke-static {v3, v0}, Ld/d/a/v7/f;->S1(II)V
 
     :cond_6
     :goto_0
@@ -976,7 +1115,16 @@
 
 .method public startRecording(Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "ip"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mRequestHandler:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter$RequestHandler;
 
     const/4 v1, 0x0
@@ -985,8 +1133,10 @@
 
     move-result-object p1
 
+    .line 2
     iput v1, p1, Landroid/os/Message;->arg1:I
 
+    .line 3
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mRequestHandler:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter$RequestHandler;
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
@@ -996,7 +1146,16 @@
 
 .method public stopRecording(Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "ip"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mRequestHandler:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter$RequestHandler;
 
     const/4 v1, 0x1
@@ -1007,8 +1166,10 @@
 
     const/4 v0, 0x0
 
+    .line 2
     iput v0, p1, Landroid/os/Message;->arg1:I
 
+    .line 3
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter;->mRequestHandler:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicAdapter$RequestHandler;
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z

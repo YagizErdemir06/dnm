@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$PlayerListener;
+.class public Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$PlayerListener;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/android/exoplayer2/ui/PlayerNotificationManager;
+.field public final synthetic this$0:Lcom/google/android/exoplayer2/ui/PlayerNotificationManager;
 
 
 # direct methods
@@ -51,6 +51,7 @@
 
     new-array p1, p1, [I
 
+    .line 1
     fill-array-data p1, :array_0
 
     invoke-virtual {p2, p1}, Lcom/google/android/exoplayer2/Player$Events;->containsAny([I)Z
@@ -59,6 +60,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$PlayerListener;->this$0:Lcom/google/android/exoplayer2/ui/PlayerNotificationManager;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager;->access$400(Lcom/google/android/exoplayer2/ui/PlayerNotificationManager;)V

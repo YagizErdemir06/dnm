@@ -20,15 +20,15 @@
     .end annotation
 .end field
 
-.field private final mItalic:Z
+.field private mItalic:Z
 
-.field private final mResourceId:I
+.field private mResourceId:I
 
-.field private final mTtcIndex:I
+.field private mTtcIndex:I
 
-.field private final mVariationSettings:Ljava/lang/String;
+.field private mVariationSettings:Ljava/lang/String;
 
-.field private final mWeight:I
+.field private mWeight:I
 
 
 # direct methods
@@ -43,18 +43,25 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->mFileName:Ljava/lang/String;
 
+    .line 3
     iput p2, p0, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->mWeight:I
 
+    .line 4
     iput-boolean p3, p0, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->mItalic:Z
 
+    .line 5
     iput-object p4, p0, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->mVariationSettings:Ljava/lang/String;
 
+    .line 6
     iput p5, p0, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->mTtcIndex:I
 
+    .line 7
     iput p6, p0, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->mResourceId:I
 
     return-void
@@ -67,6 +74,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->mFileName:Ljava/lang/String;
 
     return-object p0
@@ -75,6 +83,7 @@
 .method public getResourceId()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->mResourceId:I
 
     return p0
@@ -83,6 +92,7 @@
 .method public getTtcIndex()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->mTtcIndex:I
 
     return p0
@@ -93,6 +103,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->mVariationSettings:Ljava/lang/String;
 
     return-object p0
@@ -101,6 +112,7 @@
 .method public getWeight()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->mWeight:I
 
     return p0
@@ -109,6 +121,7 @@
 .method public isItalic()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Landroidx/core/content/res/FontResourcesParserCompat$FontFileResourceEntry;->mItalic:Z
 
     return p0

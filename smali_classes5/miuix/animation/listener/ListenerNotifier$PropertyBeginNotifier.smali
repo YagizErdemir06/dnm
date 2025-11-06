@@ -1,4 +1,4 @@
-.class Lmiuix/animation/listener/ListenerNotifier$PropertyBeginNotifier;
+.class public Lmiuix/animation/listener/ListenerNotifier$PropertyBeginNotifier;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -21,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,6 +44,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p2, p1, p3}, Lmiuix/animation/listener/TransitionListener;->onBegin(Ljava/lang/Object;Ljava/util/Collection;)V
 
     return-void

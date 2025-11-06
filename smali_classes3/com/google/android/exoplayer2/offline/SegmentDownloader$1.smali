@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/offline/SegmentDownloader$1;
+.class public Lcom/google/android/exoplayer2/offline/SegmentDownloader$1;
 .super Lcom/google/android/exoplayer2/util/RunnableFutureTask;
 .source "SourceFile"
 
@@ -24,17 +24,18 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/android/exoplayer2/offline/SegmentDownloader;
+.field public final synthetic this$0:Lcom/google/android/exoplayer2/offline/SegmentDownloader;
 
-.field final synthetic val$dataSource:Lcom/google/android/exoplayer2/upstream/DataSource;
+.field public final synthetic val$dataSource:Lcom/google/android/exoplayer2/upstream/DataSource;
 
-.field final synthetic val$dataSpec:Lcom/google/android/exoplayer2/upstream/DataSpec;
+.field public final synthetic val$dataSpec:Lcom/google/android/exoplayer2/upstream/DataSpec;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/exoplayer2/offline/SegmentDownloader;Lcom/google/android/exoplayer2/upstream/DataSource;Lcom/google/android/exoplayer2/upstream/DataSpec;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/offline/SegmentDownloader$1;->this$0:Lcom/google/android/exoplayer2/offline/SegmentDownloader;
 
     iput-object p2, p0, Lcom/google/android/exoplayer2/offline/SegmentDownloader$1;->val$dataSource:Lcom/google/android/exoplayer2/upstream/DataSource;

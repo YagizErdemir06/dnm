@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/math/ToDoubleRounder;
+.class public abstract Lcom/google/common/math/ToDoubleRounder;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,6 +26,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -53,16 +54,20 @@
 
     const-string v0, "x"
 
+    .line 1
     invoke-static {p1, v0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v0, "mode"
 
+    .line 2
     invoke-static {p2, v0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     invoke-virtual {p0, p1}, Lcom/google/common/math/ToDoubleRounder;->roundToDoubleArbitrarily(Ljava/lang/Number;)D
 
     move-result-wide v0
 
+    .line 4
     invoke-static {v0, v1}, Ljava/lang/Double;->isInfinite(D)Z
 
     move-result v2
@@ -73,9 +78,10 @@
 
     if-eqz v2, :cond_2
 
+    .line 5
     sget-object v2, Lcom/google/common/math/ToDoubleRounder$1;->$SwitchMap$java$math$RoundingMode:[I
 
-    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {p2}, Ljava/math/RoundingMode;->ordinal()I
 
     move-result v7
 
@@ -87,6 +93,7 @@
 
     goto :goto_1
 
+    .line 6
     :pswitch_0
     new-instance p0, Ljava/lang/ArithmeticException;
 
@@ -144,6 +151,7 @@
     :cond_1
     return-wide v3
 
+    .line 7
     :pswitch_4
     invoke-virtual {p0, p1}, Lcom/google/common/math/ToDoubleRounder;->sign(Ljava/lang/Number;)I
 
@@ -155,6 +163,7 @@
 
     return-wide p0
 
+    .line 8
     :cond_2
     :goto_1
     sget-object v2, Ljava/math/RoundingMode;->UNNECESSARY:Ljava/math/RoundingMode;
@@ -163,6 +172,7 @@
 
     move-result-object v2
 
+    .line 9
     move-object v7, p1
 
     check-cast v7, Ljava/lang/Comparable;
@@ -171,9 +181,10 @@
 
     move-result v7
 
+    .line 10
     sget-object v8, Lcom/google/common/math/ToDoubleRounder$1;->$SwitchMap$java$math$RoundingMode:[I
 
-    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {p2}, Ljava/math/RoundingMode;->ordinal()I
 
     move-result v9
 
@@ -183,6 +194,7 @@
 
     packed-switch v9, :pswitch_data_1
 
+    .line 11
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0, v10}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
@@ -199,11 +211,13 @@
     :cond_3
     const/4 p0, 0x0
 
+    .line 12
     :goto_2
     invoke-static {p0}, Lcom/google/common/math/MathPreconditions;->checkRoundingUnnecessary(Z)V
 
     return-wide v0
 
+    .line 13
     :pswitch_6
     invoke-virtual {p0, p1}, Lcom/google/common/math/ToDoubleRounder;->sign(Ljava/lang/Number;)I
 
@@ -215,6 +229,7 @@
 
     goto :goto_3
 
+    .line 14
     :cond_4
     invoke-static {v0, v1}, Ljava/lang/Math;->nextUp(D)D
 
@@ -228,6 +243,7 @@
 
     goto :goto_4
 
+    .line 15
     :cond_6
     invoke-static {v0, v1}, Lcom/google/common/math/DoubleUtils;->nextDown(D)D
 
@@ -241,6 +257,7 @@
 
     goto :goto_5
 
+    .line 16
     :cond_7
     invoke-static {v0, v1}, Ljava/lang/Math;->nextUp(D)D
 
@@ -254,6 +271,7 @@
 
     goto :goto_6
 
+    .line 17
     :cond_8
     invoke-static {v0, v1}, Lcom/google/common/math/DoubleUtils;->nextDown(D)D
 
@@ -265,6 +283,7 @@
     :pswitch_9
     if-ltz v7, :cond_a
 
+    .line 18
     invoke-static {v0, v1}, Ljava/lang/Math;->nextUp(D)D
 
     move-result-wide v3
@@ -275,6 +294,7 @@
 
     return-wide v0
 
+    .line 19
     :cond_9
     sget-object v5, Ljava/math/RoundingMode;->CEILING:Ljava/math/RoundingMode;
 
@@ -284,6 +304,7 @@
 
     goto :goto_7
 
+    .line 20
     :cond_a
     invoke-static {v0, v1}, Lcom/google/common/math/DoubleUtils;->nextDown(D)D
 
@@ -295,6 +316,7 @@
 
     return-wide v0
 
+    .line 21
     :cond_b
     sget-object v3, Ljava/math/RoundingMode;->FLOOR:Ljava/math/RoundingMode;
 
@@ -312,15 +334,18 @@
 
     move-wide v0, v11
 
+    .line 22
     :goto_7
     invoke-virtual {p0, p1, v2}, Lcom/google/common/math/ToDoubleRounder;->minus(Ljava/lang/Number;Ljava/lang/Number;)Ljava/lang/Number;
 
     move-result-object v2
 
+    .line 23
     invoke-virtual {p0, v5, p1}, Lcom/google/common/math/ToDoubleRounder;->minus(Ljava/lang/Number;Ljava/lang/Number;)Ljava/lang/Number;
 
     move-result-object v5
 
+    .line 24
     check-cast v2, Ljava/lang/Comparable;
 
     invoke-interface {v2, v5}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
@@ -336,8 +361,9 @@
 
     return-wide v3
 
+    .line 25
     :cond_d
-    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {p2}, Ljava/math/RoundingMode;->ordinal()I
 
     move-result p2
 
@@ -355,6 +381,7 @@
 
     if-ne p2, v2, :cond_f
 
+    .line 26
     invoke-virtual {p0, p1}, Lcom/google/common/math/ToDoubleRounder;->sign(Ljava/lang/Number;)I
 
     move-result p0
@@ -366,6 +393,7 @@
     :cond_e
     return-wide v0
 
+    .line 27
     :cond_f
     new-instance p0, Ljava/lang/AssertionError;
 
@@ -373,6 +401,7 @@
 
     throw p0
 
+    .line 28
     :cond_10
     invoke-virtual {p0, p1}, Lcom/google/common/math/ToDoubleRounder;->sign(Ljava/lang/Number;)I
 
@@ -388,6 +417,7 @@
     :goto_8
     return-wide v0
 
+    .line 29
     :cond_12
     invoke-static {v0, v1}, Ljava/lang/Double;->doubleToRawLongBits(D)J
 
@@ -411,6 +441,7 @@
     :goto_9
     return-wide v0
 
+    .line 30
     :pswitch_a
     invoke-virtual {p0, p1}, Lcom/google/common/math/ToDoubleRounder;->sign(Ljava/lang/Number;)I
 
@@ -422,6 +453,7 @@
 
     goto :goto_a
 
+    .line 31
     :cond_14
     invoke-static {v0, v1}, Lcom/google/common/math/DoubleUtils;->nextDown(D)D
 
@@ -435,6 +467,7 @@
 
     goto :goto_b
 
+    .line 32
     :cond_16
     invoke-static {v0, v1}, Ljava/lang/Math;->nextUp(D)D
 

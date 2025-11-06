@@ -1,4 +1,4 @@
-.class abstract Lcom/google/android/exoplayer2/text/cea/CeaDecoder;
+.class public abstract Lcom/google/android/exoplayer2/text/cea/CeaDecoder;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -66,8 +66,10 @@
 .method public constructor <init>()V
     .locals 5
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/ArrayDeque;
 
     invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
@@ -83,6 +85,7 @@
 
     if-ge v1, v2, :cond_0
 
+    .line 3
     iget-object v2, p0, Lcom/google/android/exoplayer2/text/cea/CeaDecoder;->availableInputBuffers:Ljava/util/ArrayDeque;
 
     new-instance v3, Lcom/google/android/exoplayer2/text/cea/CeaDecoder$CeaInputBuffer;
@@ -97,6 +100,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     new-instance v1, Ljava/util/ArrayDeque;
 
@@ -109,13 +113,14 @@
 
     if-ge v0, v1, :cond_1
 
+    .line 5
     iget-object v1, p0, Lcom/google/android/exoplayer2/text/cea/CeaDecoder;->availableOutputBuffers:Ljava/util/ArrayDeque;
 
     new-instance v2, Lcom/google/android/exoplayer2/text/cea/CeaDecoder$CeaOutputBuffer;
 
-    new-instance v3, Lcom/google/android/exoplayer2/text/cea/b;
+    new-instance v3, Ld/j/a/b/w2/c/b;
 
-    invoke-direct {v3, p0}, Lcom/google/android/exoplayer2/text/cea/b;-><init>(Lcom/google/android/exoplayer2/text/cea/CeaDecoder;)V
+    invoke-direct {v3, p0}, Ld/j/a/b/w2/c/b;-><init>(Lcom/google/android/exoplayer2/text/cea/CeaDecoder;)V
 
     invoke-direct {v2, v3}, Lcom/google/android/exoplayer2/text/cea/CeaDecoder$CeaOutputBuffer;-><init>(Lcom/google/android/exoplayer2/decoder/DecoderOutputBuffer$Owner;)V
 
@@ -125,6 +130,7 @@
 
     goto :goto_1
 
+    .line 6
     :cond_1
     new-instance v0, Ljava/util/PriorityQueue;
 
@@ -138,8 +144,10 @@
 .method private releaseInputBuffer(Lcom/google/android/exoplayer2/text/cea/CeaDecoder$CeaInputBuffer;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->clear()V
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/CeaDecoder;->availableInputBuffers:Ljava/util/ArrayDeque;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
@@ -257,7 +265,7 @@
     :goto_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/CeaDecoder;->queuedInputBuffers:Ljava/util/PriorityQueue;
 
-    invoke-virtual {v0}, Ljava/util/AbstractCollection;->isEmpty()Z
+    invoke-virtual {v0}, Ljava/util/PriorityQueue;->isEmpty()Z
 
     move-result v0
 
@@ -412,19 +420,23 @@
 
     const-wide/16 v0, 0x0
 
+    .line 1
     iput-wide v0, p0, Lcom/google/android/exoplayer2/text/cea/CeaDecoder;->queuedInputBufferCount:J
 
+    .line 2
     iput-wide v0, p0, Lcom/google/android/exoplayer2/text/cea/CeaDecoder;->playbackPositionUs:J
 
+    .line 3
     :goto_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/CeaDecoder;->queuedInputBuffers:Ljava/util/PriorityQueue;
 
-    invoke-virtual {v0}, Ljava/util/AbstractCollection;->isEmpty()Z
+    invoke-virtual {v0}, Ljava/util/PriorityQueue;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 4
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/CeaDecoder;->queuedInputBuffers:Ljava/util/PriorityQueue;
 
     invoke-virtual {v0}, Ljava/util/PriorityQueue;->poll()Ljava/lang/Object;
@@ -443,15 +455,18 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/CeaDecoder;->dequeuedInputBuffer:Lcom/google/android/exoplayer2/text/cea/CeaDecoder$CeaInputBuffer;
 
     if-eqz v0, :cond_1
 
+    .line 6
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/text/cea/CeaDecoder;->releaseInputBuffer(Lcom/google/android/exoplayer2/text/cea/CeaDecoder$CeaInputBuffer;)V
 
     const/4 v0, 0x0
 
+    .line 7
     iput-object v0, p0, Lcom/google/android/exoplayer2/text/cea/CeaDecoder;->dequeuedInputBuffer:Lcom/google/android/exoplayer2/text/cea/CeaDecoder$CeaInputBuffer;
 
     :cond_1
@@ -463,6 +478,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/CeaDecoder;->availableOutputBuffers:Ljava/util/ArrayDeque;
 
     invoke-virtual {p0}, Ljava/util/ArrayDeque;->pollFirst()Ljava/lang/Object;
@@ -480,6 +496,7 @@
 .method public final getPositionUs()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/text/cea/CeaDecoder;->playbackPositionUs:J
 
     return-wide v0
@@ -577,8 +594,10 @@
 .method public releaseOutputBuffer(Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;->clear()V
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/CeaDecoder;->availableOutputBuffers:Ljava/util/ArrayDeque;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
@@ -589,6 +608,7 @@
 .method public setPositionUs(J)V
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lcom/google/android/exoplayer2/text/cea/CeaDecoder;->playbackPositionUs:J
 
     return-void

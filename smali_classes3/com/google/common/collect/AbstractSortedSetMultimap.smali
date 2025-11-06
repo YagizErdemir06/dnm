@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/collect/AbstractSortedSetMultimap;
+.class public abstract Lcom/google/common/collect/AbstractSortedSetMultimap;
 .super Lcom/google/common/collect/AbstractSetMultimap;
 .source "SourceFile"
 
@@ -45,6 +45,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/AbstractSetMultimap;-><init>(Ljava/util/Map;)V
 
     return-void
@@ -64,6 +65,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractSetMultimap;->asMap()Ljava/util/Map;
 
     move-result-object p0
@@ -387,6 +389,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap;->values()Ljava/util/Collection;
 
     move-result-object p0
@@ -410,12 +413,14 @@
         }
     .end annotation
 
+    .line 1
     instance-of v0, p2, Ljava/util/NavigableSet;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedNavigableSet;
 
     check-cast p2, Ljava/util/NavigableSet;
@@ -424,6 +429,7 @@
 
     return-object v0
 
+    .line 3
     :cond_0
     new-instance v0, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedSortedSet;
 

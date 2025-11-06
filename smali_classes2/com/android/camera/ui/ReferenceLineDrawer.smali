@@ -4,51 +4,51 @@
 
 
 # static fields
-.field public static final r:Ljava/lang/String; = "ReferenceLineDrawer"
+.field public static final c:Ljava/lang/String; = "ReferenceLineDrawer"
 
-.field public static final s:I = 0x1
+.field private static final d:I = 0x1
 
-.field public static t:F = 2.0f
+.field public static f:F = 2.0f
 
-.field public static u:F = 0.0f
+.field public static g:F = 0.0f
 
-.field public static v:F = 3.0f
+.field public static j:F = 3.0f
 
 
 # instance fields
-.field public a:I
+.field private C1:F
 
-.field public b:I
+.field private C2:Landroid/graphics/Paint;
 
-.field public c:Z
+.field private K0:Landroid/graphics/Paint;
 
-.field public d:Z
+.field private K1:Z
 
-.field public e:I
+.field private K2:Lcom/android/camera/ui/GradienterDrawer$b;
 
-.field public f:I
+.field private K8:I
 
-.field public g:I
+.field private k0:I
 
-.field public h:I
+.field private k1:Landroid/graphics/Paint;
 
-.field public i:Landroid/graphics/Paint;
+.field private m:I
 
-.field public j:Landroid/graphics/Paint;
+.field private n:I
 
-.field public k:Landroid/graphics/Paint;
+.field private p:Z
 
-.field public l:F
+.field private s:Z
 
-.field public m:Z
+.field private t:I
 
-.field public n:Landroid/graphics/Paint;
+.field private u:I
 
-.field public o:Landroid/graphics/Paint;
+.field private v1:Landroid/graphics/Paint;
 
-.field public p:Lcom/android/camera/ui/GradienterDrawer$b;
+.field private v2:Landroid/graphics/Paint;
 
-.field public q:I
+.field private w:I
 
 
 # direct methods
@@ -60,6 +60,14 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     .line 1
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
@@ -67,53 +75,53 @@
     const/4 v0, 0x1
 
     .line 2
-    iput v0, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->a:I
+    iput v0, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->m:I
 
     .line 3
-    iput v0, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->b:I
+    iput v0, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:I
 
     .line 4
-    iput-boolean v0, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->c:Z
+    iput-boolean v0, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->p:Z
 
     .line 5
-    iput-boolean v0, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->d:Z
+    iput-boolean v0, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->s:Z
 
     const v0, 0x70ffffff
 
     .line 6
-    iput v0, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->e:I
+    iput v0, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->t:I
 
     const v0, 0x4dffffff    # 5.3687088E8f
 
     .line 7
-    iput v0, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->f:I
+    iput v0, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->u:I
 
     const/high16 v0, 0x26000000
 
     .line 8
-    iput v0, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->g:I
+    iput v0, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->w:I
 
     const v0, -0x66000001
 
     .line 9
-    iput v0, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->h:I
+    iput v0, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->k0:I
 
     const/4 v0, 0x0
 
     .line 10
-    iput v0, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->l:F
+    iput v0, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->C1:F
 
     .line 11
-    sget-object v0, Lcom/android/camera/ui/GradienterDrawer$b;->a:Lcom/android/camera/ui/GradienterDrawer$b;
+    sget-object v0, Lcom/android/camera/ui/GradienterDrawer$b;->c:Lcom/android/camera/ui/GradienterDrawer$b;
 
-    iput-object v0, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->p:Lcom/android/camera/ui/GradienterDrawer$b;
+    iput-object v0, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->K2:Lcom/android/camera/ui/GradienterDrawer$b;
 
     .line 12
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const v0, 0x7f070d38
+    const v0, 0x7f070aab
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -121,14 +129,14 @@
 
     int-to-float p0, p0
 
-    sput p0, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    sput p0, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     .line 13
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const v0, 0x7f070d3a
+    const v0, 0x7f070aad
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -136,14 +144,14 @@
 
     int-to-float p0, p0
 
-    sput p0, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sput p0, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     .line 14
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const p1, 0x7f070d39
+    const p1, 0x7f070aac
 
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -151,13 +159,23 @@
 
     int-to-float p0, p0
 
-    sput p0, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sput p0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     .line 29
     invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -165,53 +183,53 @@
     const/4 p2, 0x1
 
     .line 30
-    iput p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->a:I
+    iput p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->m:I
 
     .line 31
-    iput p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->b:I
+    iput p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:I
 
     .line 32
-    iput-boolean p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->c:Z
+    iput-boolean p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->p:Z
 
     .line 33
-    iput-boolean p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->d:Z
+    iput-boolean p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->s:Z
 
     const p2, 0x70ffffff
 
     .line 34
-    iput p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->e:I
+    iput p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->t:I
 
     const p2, 0x4dffffff    # 5.3687088E8f
 
     .line 35
-    iput p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->f:I
+    iput p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->u:I
 
     const/high16 p2, 0x26000000
 
     .line 36
-    iput p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->g:I
+    iput p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->w:I
 
     const p2, -0x66000001
 
     .line 37
-    iput p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->h:I
+    iput p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->k0:I
 
     const/4 p2, 0x0
 
     .line 38
-    iput p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->l:F
+    iput p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->C1:F
 
     .line 39
-    sget-object p2, Lcom/android/camera/ui/GradienterDrawer$b;->a:Lcom/android/camera/ui/GradienterDrawer$b;
+    sget-object p2, Lcom/android/camera/ui/GradienterDrawer$b;->c:Lcom/android/camera/ui/GradienterDrawer$b;
 
-    iput-object p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->p:Lcom/android/camera/ui/GradienterDrawer$b;
+    iput-object p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->K2:Lcom/android/camera/ui/GradienterDrawer$b;
 
     .line 40
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const p2, 0x7f070d38
+    const p2, 0x7f070aab
 
     invoke-virtual {p0, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -219,14 +237,14 @@
 
     int-to-float p0, p0
 
-    sput p0, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    sput p0, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     .line 41
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const p2, 0x7f070d3a
+    const p2, 0x7f070aad
 
     invoke-virtual {p0, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -234,14 +252,14 @@
 
     int-to-float p0, p0
 
-    sput p0, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sput p0, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     .line 42
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const p1, 0x7f070d39
+    const p1, 0x7f070aac
 
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -249,13 +267,25 @@
 
     int-to-float p0, p0
 
-    sput p0, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sput p0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyle"
+        }
+    .end annotation
 
     .line 15
     invoke-direct {p0, p1, p2, p3}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -263,53 +293,53 @@
     const/4 p2, 0x1
 
     .line 16
-    iput p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->a:I
+    iput p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->m:I
 
     .line 17
-    iput p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->b:I
+    iput p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:I
 
     .line 18
-    iput-boolean p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->c:Z
+    iput-boolean p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->p:Z
 
     .line 19
-    iput-boolean p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->d:Z
+    iput-boolean p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->s:Z
 
     const p2, 0x70ffffff
 
     .line 20
-    iput p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->e:I
+    iput p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->t:I
 
     const p2, 0x4dffffff    # 5.3687088E8f
 
     .line 21
-    iput p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->f:I
+    iput p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->u:I
 
     const/high16 p2, 0x26000000
 
     .line 22
-    iput p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->g:I
+    iput p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->w:I
 
     const p2, -0x66000001
 
     .line 23
-    iput p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->h:I
+    iput p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->k0:I
 
     const/4 p2, 0x0
 
     .line 24
-    iput p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->l:F
+    iput p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->C1:F
 
     .line 25
-    sget-object p2, Lcom/android/camera/ui/GradienterDrawer$b;->a:Lcom/android/camera/ui/GradienterDrawer$b;
+    sget-object p2, Lcom/android/camera/ui/GradienterDrawer$b;->c:Lcom/android/camera/ui/GradienterDrawer$b;
 
-    iput-object p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->p:Lcom/android/camera/ui/GradienterDrawer$b;
+    iput-object p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->K2:Lcom/android/camera/ui/GradienterDrawer$b;
 
     .line 26
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const p2, 0x7f070d38
+    const p2, 0x7f070aab
 
     invoke-virtual {p0, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -317,14 +347,14 @@
 
     int-to-float p0, p0
 
-    sput p0, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    sput p0, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     .line 27
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const p2, 0x7f070d3a
+    const p2, 0x7f070aad
 
     invoke-virtual {p0, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -332,14 +362,14 @@
 
     int-to-float p0, p0
 
-    sput p0, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sput p0, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     .line 28
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const p1, 0x7f070d39
+    const p1, 0x7f070aac
 
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -347,103 +377,25 @@
 
     int-to-float p0, p0
 
-    sput p0, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sput p0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     return-void
 .end method
 
-.method public static b()Z
-    .locals 3
-
-    invoke-static {}, Lg2/b;->h()Ll2/g;
-
-    move-result-object v0
-
-    const-string v1, "pref_camera_referenceline_type_key"
-
-    const-string v2, "jiugongge"
-
-    invoke-virtual {v0, v1, v2}, Lcom/android/camera/data/data/g;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "golden_section"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public static c()Z
-    .locals 3
-
-    invoke-static {}, Lg2/b;->h()Ll2/g;
-
-    move-result-object v0
-
-    const-string v1, "pref_camera_referenceline_type_key"
-
-    const-string v2, "jiugongge"
-
-    invoke-virtual {v0, v1, v2}, Lcom/android/camera/data/data/g;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "left_golden_spiral"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_0
-
-    return v2
-
-    :cond_0
-    const-string v1, "right_golden_spiral"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    return v2
-
-    :cond_1
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method private getUiStyle()I
-    .locals 0
-
-    iget p0, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->q:I
-
-    return p0
-.end method
-
-
-# virtual methods
-.method public final a(Landroid/graphics/Canvas;)V
+.method private a(Landroid/graphics/Canvas;)V
     .locals 25
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "canvas"
+        }
+    .end annotation
 
     move-object/from16 v0, p0
 
+    .line 1
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWidth()I
 
     move-result v1
@@ -464,8 +416,9 @@
 
     move v4, v2
 
+    .line 2
     :goto_0
-    iget v5, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->a:I
+    iget v5, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->m:I
 
     const/4 v6, 0x2
 
@@ -477,13 +430,14 @@
 
     if-ge v4, v5, :cond_4
 
-    iget-boolean v5, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->m:Z
+    .line 3
+    iget-boolean v5, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K1:Z
 
     if-eqz v5, :cond_0
 
-    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->p:Lcom/android/camera/ui/GradienterDrawer$b;
+    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K2:Lcom/android/camera/ui/GradienterDrawer$b;
 
-    sget-object v11, Lcom/android/camera/ui/GradienterDrawer$b;->e:Lcom/android/camera/ui/GradienterDrawer$b;
+    sget-object v11, Lcom/android/camera/ui/GradienterDrawer$b;->j:Lcom/android/camera/ui/GradienterDrawer$b;
 
     if-ne v10, v11, :cond_0
 
@@ -491,25 +445,27 @@
 
     mul-float v5, v1, v8
 
-    sget v6, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    .line 4
+    sget v6, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float v11, v5, v6
 
     const/high16 v12, 0x3f800000    # 1.0f
 
-    sget v6, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v6, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float v13, v5, v6
 
     mul-float v14, v3, v8
 
-    iget-object v15, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v15, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v10, p1
 
     invoke-virtual/range {v10 .. v15}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v6, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    .line 5
+    sget v6, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float v11, v5, v6
 
@@ -517,13 +473,13 @@
 
     add-float v12, v7, v9
 
-    sget v6, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v6, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float v13, v5, v6
 
     sub-float v14, v3, v9
 
-    iget-object v15, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v15, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     invoke-virtual/range {v10 .. v15}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
@@ -532,9 +488,10 @@
     :cond_0
     if-eqz v5, :cond_1
 
-    iget-object v5, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->p:Lcom/android/camera/ui/GradienterDrawer$b;
+    .line 6
+    iget-object v5, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K2:Lcom/android/camera/ui/GradienterDrawer$b;
 
-    sget-object v10, Lcom/android/camera/ui/GradienterDrawer$b;->d:Lcom/android/camera/ui/GradienterDrawer$b;
+    sget-object v10, Lcom/android/camera/ui/GradienterDrawer$b;->g:Lcom/android/camera/ui/GradienterDrawer$b;
 
     if-ne v5, v10, :cond_1
 
@@ -542,25 +499,27 @@
 
     mul-float v5, v1, v7
 
-    sget v6, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    .line 7
+    sget v6, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float v11, v5, v6
 
     const/high16 v12, 0x3f800000    # 1.0f
 
-    sget v6, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v6, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float v13, v5, v6
 
     mul-float v14, v3, v8
 
-    iget-object v15, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v15, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v10, p1
 
     invoke-virtual/range {v10 .. v15}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v6, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    .line 8
+    sget v6, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float v11, v5, v6
 
@@ -568,13 +527,13 @@
 
     add-float v12, v7, v9
 
-    sget v6, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v6, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float v13, v5, v6
 
     sub-float v14, v3, v9
 
-    iget-object v15, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v15, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     invoke-virtual/range {v10 .. v15}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
@@ -585,19 +544,20 @@
 
     mul-float/2addr v8, v1
 
-    sget v5, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    .line 9
+    sget v5, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float v11, v8, v5
 
     const/high16 v12, 0x3f800000    # 1.0f
 
-    sget v5, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v5, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float v13, v8, v5
 
     sub-float v14, v3, v9
 
-    iget-object v15, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v15, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v10, p1
 
@@ -610,19 +570,20 @@
 
     mul-float/2addr v7, v1
 
-    sget v5, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    .line 10
+    sget v5, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float v11, v7, v5
 
     const/high16 v12, 0x3f800000    # 1.0f
 
-    sget v5, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v5, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float v13, v7, v5
 
     sub-float v14, v3, v9
 
-    iget-object v15, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v15, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v10, p1
 
@@ -634,8 +595,9 @@
 
     goto/16 :goto_0
 
+    .line 11
     :cond_4
-    iget-boolean v4, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->d:Z
+    iget-boolean v4, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->s:Z
 
     xor-int/2addr v4, v2
 
@@ -643,8 +605,9 @@
 
     move v10, v5
 
+    .line 12
     :goto_2
-    iget v11, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->b:I
+    iget v11, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:I
 
     if-gt v10, v11, :cond_c
 
@@ -655,25 +618,27 @@
     :cond_5
     if-nez v10, :cond_6
 
-    iget-boolean v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->c:Z
+    .line 13
+    iget-boolean v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->p:Z
 
     if-nez v12, :cond_7
 
     :cond_6
     if-ne v10, v11, :cond_b
 
-    iget-boolean v11, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->d:Z
+    iget-boolean v11, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->s:Z
 
     if-eqz v11, :cond_b
 
+    .line 14
     :cond_7
-    iget-boolean v11, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->m:Z
+    iget-boolean v11, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K1:Z
 
     if-eqz v11, :cond_8
 
-    iget-object v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->p:Lcom/android/camera/ui/GradienterDrawer$b;
+    iget-object v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K2:Lcom/android/camera/ui/GradienterDrawer$b;
 
-    sget-object v13, Lcom/android/camera/ui/GradienterDrawer$b;->c:Lcom/android/camera/ui/GradienterDrawer$b;
+    sget-object v13, Lcom/android/camera/ui/GradienterDrawer$b;->f:Lcom/android/camera/ui/GradienterDrawer$b;
 
     if-ne v12, v13, :cond_8
 
@@ -683,7 +648,8 @@
 
     mul-float v12, v3, v8
 
-    sget v13, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    .line 15
+    sget v13, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float v13, v12, v13
 
@@ -691,13 +657,13 @@
 
     mul-float v17, v1, v8
 
-    sget v13, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v13, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float/2addr v13, v12
 
     sub-float v18, v13, v9
 
-    iget-object v13, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v13, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v14, p1
 
@@ -711,7 +677,8 @@
 
     add-float v15, v13, v11
 
-    sget v13, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    .line 16
+    sget v13, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float v13, v12, v13
 
@@ -719,13 +686,13 @@
 
     sub-float v17, v1, v11
 
-    sget v11, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v11, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float/2addr v12, v11
 
     sub-float v18, v12, v9
 
-    iget-object v11, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v11, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v19, v11
 
@@ -736,9 +703,10 @@
     :cond_8
     if-eqz v11, :cond_9
 
-    iget-object v11, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->p:Lcom/android/camera/ui/GradienterDrawer$b;
+    .line 17
+    iget-object v11, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K2:Lcom/android/camera/ui/GradienterDrawer$b;
 
-    sget-object v12, Lcom/android/camera/ui/GradienterDrawer$b;->b:Lcom/android/camera/ui/GradienterDrawer$b;
+    sget-object v12, Lcom/android/camera/ui/GradienterDrawer$b;->d:Lcom/android/camera/ui/GradienterDrawer$b;
 
     if-ne v11, v12, :cond_9
 
@@ -748,17 +716,18 @@
 
     mul-float v12, v3, v7
 
-    sget v13, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    .line 18
+    sget v13, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float v15, v12, v13
 
     mul-float v16, v1, v8
 
-    sget v13, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v13, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float v17, v12, v13
 
-    iget-object v14, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v14, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v13, p1
 
@@ -772,17 +741,18 @@
 
     add-float v15, v13, v11
 
-    sget v13, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    .line 19
+    sget v13, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float v16, v12, v13
 
     sub-float v17, v1, v11
 
-    sget v11, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v11, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float v18, v12, v11
 
-    iget-object v11, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v11, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v14, p1
 
@@ -799,7 +769,8 @@
 
     mul-float v12, v3, v8
 
-    sget v13, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    .line 20
+    sget v13, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float v13, v12, v13
 
@@ -807,13 +778,13 @@
 
     sub-float v22, v1, v11
 
-    sget v13, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v13, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float/2addr v12, v13
 
     sub-float v23, v12, v9
 
-    iget-object v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v19, p1
 
@@ -832,17 +803,18 @@
 
     mul-float v11, v3, v7
 
-    sget v12, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    .line 21
+    sget v12, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float v15, v11, v12
 
     sub-float v16, v1, v14
 
-    sget v12, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v12, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float v17, v11, v12
 
-    iget-object v11, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v11, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v13, p1
 
@@ -859,18 +831,20 @@
     :cond_c
     move v10, v2
 
+    .line 22
     :goto_4
-    iget v11, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->a:I
+    iget v11, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->m:I
 
     if-ge v10, v11, :cond_11
 
-    iget-boolean v11, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->m:Z
+    .line 23
+    iget-boolean v11, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K1:Z
 
     if-eqz v11, :cond_d
 
-    iget-object v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->p:Lcom/android/camera/ui/GradienterDrawer$b;
+    iget-object v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K2:Lcom/android/camera/ui/GradienterDrawer$b;
 
-    sget-object v13, Lcom/android/camera/ui/GradienterDrawer$b;->e:Lcom/android/camera/ui/GradienterDrawer$b;
+    sget-object v13, Lcom/android/camera/ui/GradienterDrawer$b;->j:Lcom/android/camera/ui/GradienterDrawer$b;
 
     if-ne v12, v13, :cond_d
 
@@ -880,13 +854,14 @@
 
     const/high16 v16, 0x3f800000    # 1.0f
 
-    sget v12, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 24
+    sget v12, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     add-float v17, v11, v12
 
     mul-float v18, v3, v8
 
-    iget-object v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->i:Landroid/graphics/Paint;
+    iget-object v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K0:Landroid/graphics/Paint;
 
     move-object/from16 v14, p1
 
@@ -900,13 +875,14 @@
 
     add-float v16, v12, v9
 
-    sget v12, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 25
+    sget v12, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     add-float v17, v11, v12
 
     sub-float v18, v3, v9
 
-    iget-object v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->i:Landroid/graphics/Paint;
+    iget-object v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K0:Landroid/graphics/Paint;
 
     move-object/from16 v19, v12
 
@@ -917,9 +893,10 @@
     :cond_d
     if-eqz v11, :cond_e
 
-    iget-object v11, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->p:Lcom/android/camera/ui/GradienterDrawer$b;
+    .line 26
+    iget-object v11, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K2:Lcom/android/camera/ui/GradienterDrawer$b;
 
-    sget-object v12, Lcom/android/camera/ui/GradienterDrawer$b;->d:Lcom/android/camera/ui/GradienterDrawer$b;
+    sget-object v12, Lcom/android/camera/ui/GradienterDrawer$b;->g:Lcom/android/camera/ui/GradienterDrawer$b;
 
     if-ne v11, v12, :cond_e
 
@@ -929,13 +906,14 @@
 
     const/high16 v15, 0x3f800000    # 1.0f
 
-    sget v12, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 27
+    sget v12, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     add-float v16, v11, v12
 
     mul-float v17, v3, v8
 
-    iget-object v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->i:Landroid/graphics/Paint;
+    iget-object v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K0:Landroid/graphics/Paint;
 
     move-object/from16 v13, p1
 
@@ -949,13 +927,14 @@
 
     add-float v15, v12, v9
 
-    sget v12, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 28
+    sget v12, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     add-float v16, v11, v12
 
     sub-float v17, v3, v9
 
-    iget-object v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->i:Landroid/graphics/Paint;
+    iget-object v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K0:Landroid/graphics/Paint;
 
     move-object/from16 v18, v12
 
@@ -970,13 +949,14 @@
 
     const/high16 v20, 0x3f800000    # 1.0f
 
-    sget v11, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 29
+    sget v11, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     add-float v21, v19, v11
 
     sub-float v22, v3, v9
 
-    iget-object v11, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->i:Landroid/graphics/Paint;
+    iget-object v11, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K0:Landroid/graphics/Paint;
 
     move-object/from16 v18, p1
 
@@ -993,13 +973,14 @@
 
     const/high16 v14, 0x3f800000    # 1.0f
 
-    sget v11, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 30
+    sget v11, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     add-float v15, v13, v11
 
     sub-float v16, v3, v9
 
-    iget-object v11, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->i:Landroid/graphics/Paint;
+    iget-object v11, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K0:Landroid/graphics/Paint;
 
     move-object/from16 v12, p1
 
@@ -1013,9 +994,10 @@
 
     goto/16 :goto_4
 
+    .line 31
     :cond_11
     :goto_6
-    iget v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->b:I
+    iget v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:I
 
     if-gt v5, v10, :cond_19
 
@@ -1026,25 +1008,27 @@
     :cond_12
     if-nez v5, :cond_13
 
-    iget-boolean v11, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->c:Z
+    .line 32
+    iget-boolean v11, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->p:Z
 
     if-nez v11, :cond_14
 
     :cond_13
     if-ne v5, v10, :cond_18
 
-    iget-boolean v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->d:Z
+    iget-boolean v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->s:Z
 
     if-eqz v10, :cond_18
 
+    .line 33
     :cond_14
-    iget-boolean v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->m:Z
+    iget-boolean v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K1:Z
 
     if-eqz v10, :cond_15
 
-    iget-object v11, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->p:Lcom/android/camera/ui/GradienterDrawer$b;
+    iget-object v11, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K2:Lcom/android/camera/ui/GradienterDrawer$b;
 
-    sget-object v12, Lcom/android/camera/ui/GradienterDrawer$b;->c:Lcom/android/camera/ui/GradienterDrawer$b;
+    sget-object v12, Lcom/android/camera/ui/GradienterDrawer$b;->f:Lcom/android/camera/ui/GradienterDrawer$b;
 
     if-ne v11, v12, :cond_15
 
@@ -1058,13 +1042,14 @@
 
     mul-float v16, v1, v8
 
-    sget v12, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 34
+    sget v12, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     add-float/2addr v12, v11
 
     sub-float v17, v12, v9
 
-    iget-object v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->i:Landroid/graphics/Paint;
+    iget-object v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K0:Landroid/graphics/Paint;
 
     move-object/from16 v13, p1
 
@@ -1082,13 +1067,14 @@
 
     sub-float v15, v1, v10
 
-    sget v10, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 35
+    sget v10, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     add-float/2addr v11, v10
 
     sub-float v16, v11, v9
 
-    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->i:Landroid/graphics/Paint;
+    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K0:Landroid/graphics/Paint;
 
     move-object/from16 v12, p1
 
@@ -1103,9 +1089,10 @@
     :cond_15
     if-eqz v10, :cond_16
 
-    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->p:Lcom/android/camera/ui/GradienterDrawer$b;
+    .line 36
+    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K2:Lcom/android/camera/ui/GradienterDrawer$b;
 
-    sget-object v11, Lcom/android/camera/ui/GradienterDrawer$b;->b:Lcom/android/camera/ui/GradienterDrawer$b;
+    sget-object v11, Lcom/android/camera/ui/GradienterDrawer$b;->d:Lcom/android/camera/ui/GradienterDrawer$b;
 
     if-ne v10, v11, :cond_16
 
@@ -1117,11 +1104,12 @@
 
     mul-float v15, v1, v8
 
-    sget v11, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 37
+    sget v11, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     add-float v16, v18, v11
 
-    iget-object v11, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->i:Landroid/graphics/Paint;
+    iget-object v11, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K0:Landroid/graphics/Paint;
 
     move-object/from16 v12, p1
 
@@ -1139,11 +1127,12 @@
 
     sub-float v14, v1, v10
 
-    sget v10, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 38
+    sget v10, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     add-float v15, v18, v10
 
-    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->i:Landroid/graphics/Paint;
+    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K0:Landroid/graphics/Paint;
 
     move-object/from16 v11, p1
 
@@ -1166,13 +1155,14 @@
 
     sub-float v22, v1, v10
 
-    sget v12, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 39
+    sget v12, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     add-float/2addr v11, v12
 
     sub-float v23, v11, v9
 
-    iget-object v11, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->i:Landroid/graphics/Paint;
+    iget-object v11, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K0:Landroid/graphics/Paint;
 
     move-object/from16 v19, p1
 
@@ -1193,11 +1183,12 @@
 
     sub-float v15, v1, v13
 
-    sget v10, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 40
+    sget v10, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     add-float v16, v14, v10
 
-    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->i:Landroid/graphics/Paint;
+    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K0:Landroid/graphics/Paint;
 
     move-object/from16 v12, p1
 
@@ -1215,11 +1206,102 @@
     return-void
 .end method
 
-.method public final d(Landroid/graphics/Canvas;)V
+.method public static b()Z
+    .locals 3
+
+    .line 1
+    invoke-static {}, Ld/d/a/l6/b;->h()Ld/d/a/l6/e/l/g;
+
+    move-result-object v0
+
+    const-string v1, "pref_camera_referenceline_type_key"
+
+    const-string v2, "jiugongge"
+
+    invoke-virtual {v0, v1, v2}, Ld/d/a/l6/e/f;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "golden_section"
+
+    .line 2
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public static c()Z
+    .locals 3
+
+    .line 1
+    invoke-static {}, Ld/d/a/l6/b;->h()Ld/d/a/l6/e/l/g;
+
+    move-result-object v0
+
+    const-string v1, "pref_camera_referenceline_type_key"
+
+    const-string v2, "jiugongge"
+
+    invoke-virtual {v0, v1, v2}, Ld/d/a/l6/e/f;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "left_golden_spiral"
+
+    .line 2
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_0
+
+    return v2
+
+    :cond_0
+    const-string v1, "right_golden_spiral"
+
+    .line 3
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    return v2
+
+    :cond_1
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method private d(Landroid/graphics/Canvas;)V
     .locals 19
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "canvas"
+        }
+    .end annotation
 
     move-object/from16 v0, p0
 
+    .line 1
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWidth()I
 
     move-result v1
@@ -1240,8 +1322,9 @@
 
     move v4, v2
 
+    .line 2
     :goto_0
-    iget v5, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->a:I
+    iget v5, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->m:I
 
     const/4 v6, 0x2
 
@@ -1257,7 +1340,8 @@
 
     div-float v9, v8, v9
 
-    sget v10, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    .line 3
+    sget v10, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float/2addr v9, v10
 
@@ -1265,17 +1349,19 @@
 
     div-float/2addr v8, v5
 
-    sget v5, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    .line 4
+    sget v5, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float/2addr v5, v8
 
-    iget-boolean v8, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->m:Z
+    .line 5
+    iget-boolean v8, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K1:Z
 
     if-eqz v8, :cond_0
 
-    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->p:Lcom/android/camera/ui/GradienterDrawer$b;
+    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K2:Lcom/android/camera/ui/GradienterDrawer$b;
 
-    sget-object v11, Lcom/android/camera/ui/GradienterDrawer$b;->d:Lcom/android/camera/ui/GradienterDrawer$b;
+    sget-object v11, Lcom/android/camera/ui/GradienterDrawer$b;->g:Lcom/android/camera/ui/GradienterDrawer$b;
 
     if-ne v10, v11, :cond_0
 
@@ -1283,13 +1369,14 @@
 
     const/high16 v13, 0x3f800000    # 1.0f
 
-    iget v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->b:I
+    .line 6
+    iget v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:I
 
     int-to-float v6, v6
 
     div-float v15, v3, v6
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v11, p1
 
@@ -1301,7 +1388,8 @@
 
     invoke-virtual/range {v11 .. v16}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    iget v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->b:I
+    .line 7
+    iget v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:I
 
     int-to-float v8, v6
 
@@ -1317,7 +1405,7 @@
 
     sub-float v15, v3, v7
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v16, v6
 
@@ -1328,9 +1416,10 @@
     :cond_0
     if-eqz v8, :cond_1
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->p:Lcom/android/camera/ui/GradienterDrawer$b;
+    .line 8
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K2:Lcom/android/camera/ui/GradienterDrawer$b;
 
-    sget-object v8, Lcom/android/camera/ui/GradienterDrawer$b;->e:Lcom/android/camera/ui/GradienterDrawer$b;
+    sget-object v8, Lcom/android/camera/ui/GradienterDrawer$b;->j:Lcom/android/camera/ui/GradienterDrawer$b;
 
     if-ne v6, v8, :cond_1
 
@@ -1338,13 +1427,14 @@
 
     const/high16 v13, 0x3f800000    # 1.0f
 
-    iget v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->b:I
+    .line 9
+    iget v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:I
 
     int-to-float v6, v6
 
     div-float v15, v3, v6
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v11, p1
 
@@ -1356,7 +1446,8 @@
 
     invoke-virtual/range {v11 .. v16}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    iget v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->b:I
+    .line 10
+    iget v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:I
 
     int-to-float v8, v6
 
@@ -1372,7 +1463,7 @@
 
     sub-float v15, v3, v7
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v16, v6
 
@@ -1385,7 +1476,8 @@
 
     sub-float v15, v3, v7
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    .line 11
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v11, p1
 
@@ -1402,8 +1494,9 @@
 
     goto/16 :goto_0
 
+    .line 12
     :cond_2
-    iget-boolean v4, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->d:Z
+    iget-boolean v4, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->s:Z
 
     xor-int/2addr v4, v2
 
@@ -1411,8 +1504,9 @@
 
     move v8, v5
 
+    .line 13
     :goto_2
-    iget v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->b:I
+    iget v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:I
 
     if-gt v8, v9, :cond_9
 
@@ -1423,14 +1517,15 @@
     :cond_3
     if-nez v8, :cond_4
 
-    iget-boolean v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->c:Z
+    .line 14
+    iget-boolean v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->p:Z
 
     if-nez v10, :cond_5
 
     :cond_4
     if-ne v8, v9, :cond_8
 
-    iget-boolean v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->d:Z
+    iget-boolean v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->s:Z
 
     if-eqz v10, :cond_8
 
@@ -1443,7 +1538,8 @@
 
     div-float v11, v10, v11
 
-    sget v12, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    .line 15
+    sget v12, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float/2addr v11, v12
 
@@ -1451,17 +1547,19 @@
 
     div-float/2addr v10, v9
 
-    sget v9, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    .line 16
+    sget v9, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float/2addr v9, v10
 
-    iget-boolean v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->m:Z
+    .line 17
+    iget-boolean v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K1:Z
 
     if-eqz v10, :cond_6
 
-    iget-object v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->p:Lcom/android/camera/ui/GradienterDrawer$b;
+    iget-object v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K2:Lcom/android/camera/ui/GradienterDrawer$b;
 
-    sget-object v13, Lcom/android/camera/ui/GradienterDrawer$b;->c:Lcom/android/camera/ui/GradienterDrawer$b;
+    sget-object v13, Lcom/android/camera/ui/GradienterDrawer$b;->f:Lcom/android/camera/ui/GradienterDrawer$b;
 
     if-ne v12, v13, :cond_6
 
@@ -1469,13 +1567,14 @@
 
     int-to-float v10, v4
 
-    iget v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->a:I
+    .line 18
+    iget v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->m:I
 
     int-to-float v12, v12
 
     div-float v16, v1, v12
 
-    iget-object v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v13, p1
 
@@ -1489,7 +1588,8 @@
 
     invoke-virtual/range {v13 .. v18}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    iget v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->a:I
+    .line 19
+    iget v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->m:I
 
     int-to-float v13, v12
 
@@ -1505,7 +1605,7 @@
 
     sub-float v16, v1, v10
 
-    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v13, p1
 
@@ -1518,9 +1618,10 @@
     :cond_6
     if-eqz v10, :cond_7
 
-    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->p:Lcom/android/camera/ui/GradienterDrawer$b;
+    .line 20
+    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K2:Lcom/android/camera/ui/GradienterDrawer$b;
 
-    sget-object v12, Lcom/android/camera/ui/GradienterDrawer$b;->b:Lcom/android/camera/ui/GradienterDrawer$b;
+    sget-object v12, Lcom/android/camera/ui/GradienterDrawer$b;->d:Lcom/android/camera/ui/GradienterDrawer$b;
 
     if-ne v10, v12, :cond_7
 
@@ -1528,13 +1629,14 @@
 
     int-to-float v10, v4
 
-    iget v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->a:I
+    .line 21
+    iget v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->m:I
 
     int-to-float v12, v12
 
     div-float v16, v1, v12
 
-    iget-object v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v13, p1
 
@@ -1548,7 +1650,8 @@
 
     invoke-virtual/range {v13 .. v18}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    iget v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->a:I
+    .line 22
+    iget v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->m:I
 
     int-to-float v13, v12
 
@@ -1564,7 +1667,7 @@
 
     sub-float v16, v1, v10
 
-    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v13, p1
 
@@ -1579,7 +1682,8 @@
 
     sub-float v16, v1, v14
 
-    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    .line 23
+    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v13, p1
 
@@ -1600,8 +1704,9 @@
     :cond_9
     move v8, v2
 
+    .line 24
     :goto_4
-    iget v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->a:I
+    iget v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->m:I
 
     if-ge v8, v9, :cond_c
 
@@ -1617,17 +1722,19 @@
 
     div-float/2addr v10, v9
 
-    sget v9, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 25
+    sget v9, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     add-float/2addr v9, v10
 
-    iget-boolean v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->m:Z
+    .line 26
+    iget-boolean v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K1:Z
 
     if-eqz v10, :cond_a
 
-    iget-object v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->p:Lcom/android/camera/ui/GradienterDrawer$b;
+    iget-object v12, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K2:Lcom/android/camera/ui/GradienterDrawer$b;
 
-    sget-object v13, Lcom/android/camera/ui/GradienterDrawer$b;->e:Lcom/android/camera/ui/GradienterDrawer$b;
+    sget-object v13, Lcom/android/camera/ui/GradienterDrawer$b;->j:Lcom/android/camera/ui/GradienterDrawer$b;
 
     if-ne v12, v13, :cond_a
 
@@ -1635,13 +1742,14 @@
 
     const/high16 v14, 0x3f800000    # 1.0f
 
-    iget v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->b:I
+    .line 27
+    iget v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:I
 
     int-to-float v10, v10
 
     div-float v16, v3, v10
 
-    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->i:Landroid/graphics/Paint;
+    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K0:Landroid/graphics/Paint;
 
     move-object/from16 v12, p1
 
@@ -1653,7 +1761,8 @@
 
     invoke-virtual/range {v12 .. v17}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    iget v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->b:I
+    .line 28
+    iget v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:I
 
     int-to-float v12, v10
 
@@ -1669,7 +1778,7 @@
 
     sub-float v16, v3, v7
 
-    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->i:Landroid/graphics/Paint;
+    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K0:Landroid/graphics/Paint;
 
     move-object/from16 v12, p1
 
@@ -1682,9 +1791,10 @@
     :cond_a
     if-eqz v10, :cond_b
 
-    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->p:Lcom/android/camera/ui/GradienterDrawer$b;
+    .line 29
+    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K2:Lcom/android/camera/ui/GradienterDrawer$b;
 
-    sget-object v12, Lcom/android/camera/ui/GradienterDrawer$b;->d:Lcom/android/camera/ui/GradienterDrawer$b;
+    sget-object v12, Lcom/android/camera/ui/GradienterDrawer$b;->g:Lcom/android/camera/ui/GradienterDrawer$b;
 
     if-ne v10, v12, :cond_b
 
@@ -1692,13 +1802,14 @@
 
     const/high16 v14, 0x3f800000    # 1.0f
 
-    iget v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->b:I
+    .line 30
+    iget v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:I
 
     int-to-float v10, v10
 
     div-float v16, v3, v10
 
-    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->i:Landroid/graphics/Paint;
+    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K0:Landroid/graphics/Paint;
 
     move-object/from16 v12, p1
 
@@ -1710,7 +1821,8 @@
 
     invoke-virtual/range {v12 .. v17}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    iget v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->b:I
+    .line 31
+    iget v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:I
 
     int-to-float v12, v10
 
@@ -1726,7 +1838,7 @@
 
     sub-float v16, v3, v7
 
-    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->i:Landroid/graphics/Paint;
+    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K0:Landroid/graphics/Paint;
 
     move-object/from16 v12, p1
 
@@ -1741,7 +1853,8 @@
 
     sub-float v16, v3, v7
 
-    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->i:Landroid/graphics/Paint;
+    .line 32
+    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K0:Landroid/graphics/Paint;
 
     move-object/from16 v12, p1
 
@@ -1758,9 +1871,10 @@
 
     goto/16 :goto_4
 
+    .line 33
     :cond_c
     :goto_6
-    iget v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->b:I
+    iget v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:I
 
     if-gt v5, v7, :cond_13
 
@@ -1776,7 +1890,8 @@
 
     div-float/2addr v8, v10
 
-    sget v10, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 34
+    sget v10, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     add-float/2addr v8, v10
 
@@ -1787,25 +1902,27 @@
     :cond_d
     if-nez v5, :cond_e
 
-    iget-boolean v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->c:Z
+    .line 35
+    iget-boolean v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->p:Z
 
     if-nez v10, :cond_f
 
     :cond_e
     if-ne v5, v7, :cond_12
 
-    iget-boolean v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->d:Z
+    iget-boolean v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->s:Z
 
     if-eqz v7, :cond_12
 
+    .line 36
     :cond_f
-    iget-boolean v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->m:Z
+    iget-boolean v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K1:Z
 
     if-eqz v7, :cond_10
 
-    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->p:Lcom/android/camera/ui/GradienterDrawer$b;
+    iget-object v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K2:Lcom/android/camera/ui/GradienterDrawer$b;
 
-    sget-object v11, Lcom/android/camera/ui/GradienterDrawer$b;->c:Lcom/android/camera/ui/GradienterDrawer$b;
+    sget-object v11, Lcom/android/camera/ui/GradienterDrawer$b;->f:Lcom/android/camera/ui/GradienterDrawer$b;
 
     if-ne v10, v11, :cond_10
 
@@ -1813,13 +1930,14 @@
 
     int-to-float v7, v4
 
-    iget v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->a:I
+    .line 37
+    iget v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->m:I
 
     int-to-float v10, v10
 
     div-float v13, v1, v10
 
-    iget-object v15, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->i:Landroid/graphics/Paint;
+    iget-object v15, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K0:Landroid/graphics/Paint;
 
     move-object/from16 v10, p1
 
@@ -1831,7 +1949,8 @@
 
     invoke-virtual/range {v10 .. v15}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    iget v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->a:I
+    .line 38
+    iget v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->m:I
 
     int-to-float v11, v10
 
@@ -1847,7 +1966,7 @@
 
     sub-float v13, v1, v7
 
-    iget-object v15, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->i:Landroid/graphics/Paint;
+    iget-object v15, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K0:Landroid/graphics/Paint;
 
     move-object/from16 v10, p1
 
@@ -1858,9 +1977,10 @@
     :cond_10
     if-eqz v7, :cond_11
 
-    iget-object v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->p:Lcom/android/camera/ui/GradienterDrawer$b;
+    .line 39
+    iget-object v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K2:Lcom/android/camera/ui/GradienterDrawer$b;
 
-    sget-object v10, Lcom/android/camera/ui/GradienterDrawer$b;->b:Lcom/android/camera/ui/GradienterDrawer$b;
+    sget-object v10, Lcom/android/camera/ui/GradienterDrawer$b;->d:Lcom/android/camera/ui/GradienterDrawer$b;
 
     if-ne v7, v10, :cond_11
 
@@ -1868,13 +1988,14 @@
 
     int-to-float v7, v4
 
-    iget v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->a:I
+    .line 40
+    iget v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->m:I
 
     int-to-float v10, v10
 
     div-float v13, v1, v10
 
-    iget-object v15, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->i:Landroid/graphics/Paint;
+    iget-object v15, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K0:Landroid/graphics/Paint;
 
     move-object/from16 v10, p1
 
@@ -1886,7 +2007,8 @@
 
     invoke-virtual/range {v10 .. v15}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    iget v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->a:I
+    .line 41
+    iget v10, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->m:I
 
     int-to-float v11, v10
 
@@ -1902,7 +2024,7 @@
 
     sub-float v13, v1, v7
 
-    iget-object v15, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->i:Landroid/graphics/Paint;
+    iget-object v15, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K0:Landroid/graphics/Paint;
 
     move-object/from16 v10, p1
 
@@ -1915,7 +2037,8 @@
 
     sub-float v13, v1, v11
 
-    iget-object v15, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->i:Landroid/graphics/Paint;
+    .line 42
+    iget-object v15, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->K0:Landroid/graphics/Paint;
 
     move-object/from16 v10, p1
 
@@ -1935,8 +2058,18 @@
     return-void
 .end method
 
-.method public final e(Landroid/graphics/Canvas;I)V
+.method private e(Landroid/graphics/Canvas;I)V
     .locals 44
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "canvas",
+            "rotate"
+        }
+    .end annotation
 
     move-object/from16 v0, p0
 
@@ -1944,6 +2077,7 @@
 
     move/from16 v1, p2
 
+    .line 1
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWidth()I
 
     move-result v2
@@ -1951,21 +2085,24 @@
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getHeight()I
 
     move-result v3
-
-    const/16 v4, 0x5a
 
     const/4 v11, 0x0
 
+    const/16 v4, 0x5a
+
     if-ne v1, v4, :cond_0
 
+    .line 2
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getHeight()I
 
     move-result v2
 
+    .line 3
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWidth()I
 
     move-result v3
 
+    .line 4
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getHeight()I
 
     move-result v4
@@ -1978,6 +2115,7 @@
 
     int-to-float v1, v1
 
+    .line 5
     invoke-virtual {v10, v1}, Landroid/graphics/Canvas;->rotate(F)V
 
     goto :goto_0
@@ -1987,6 +2125,7 @@
 
     if-ne v1, v4, :cond_1
 
+    .line 6
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWidth()I
 
     move-result v4
@@ -2005,6 +2144,7 @@
 
     int-to-float v1, v1
 
+    .line 7
     invoke-virtual {v10, v1}, Landroid/graphics/Canvas;->rotate(F)V
 
     goto :goto_0
@@ -2014,14 +2154,17 @@
 
     if-ne v1, v4, :cond_2
 
+    .line 8
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getHeight()I
 
     move-result v2
 
+    .line 9
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWidth()I
 
     move-result v3
 
+    .line 10
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWidth()I
 
     move-result v4
@@ -2034,8 +2177,10 @@
 
     int-to-float v1, v1
 
+    .line 11
     invoke-virtual {v10, v1}, Landroid/graphics/Canvas;->rotate(F)V
 
+    .line 12
     :cond_2
     :goto_0
     invoke-direct/range {p0 .. p0}, Lcom/android/camera/ui/ReferenceLineDrawer;->getUiStyle()I
@@ -2149,8 +2294,9 @@
 
     move v12, v11
 
+    .line 13
     :goto_2
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v28
 
@@ -2174,7 +2320,7 @@
 
     const/4 v8, 0x0
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -2186,7 +2332,8 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 14
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v28
 
@@ -2218,7 +2365,7 @@
 
     const/high16 v6, 0x43340000    # 180.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -2230,13 +2377,14 @@
 
     mul-float v23, v23, v29
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    .line 15
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     add-float v1, v23, v1
 
     add-float v2, v1, v12
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v28
 
@@ -2252,7 +2400,7 @@
 
     const/high16 v6, 0x43870000    # 270.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -2272,7 +2420,8 @@
 
     sub-float v34, v1, v14
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 16
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v28
 
@@ -2286,7 +2435,7 @@
 
     const/4 v6, 0x0
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -2316,7 +2465,8 @@
 
     const/high16 v6, 0x42b40000    # 90.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    .line 17
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -2350,7 +2500,8 @@
 
     const/high16 v6, 0x43340000    # 180.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    .line 18
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -2380,7 +2531,8 @@
 
     const/high16 v6, 0x43870000    # 270.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    .line 19
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -2414,7 +2566,8 @@
 
     const/4 v6, 0x0
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    .line 20
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -2440,7 +2593,8 @@
 
     mul-float v15, v15, v29
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 21
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     add-float/2addr v1, v15
 
@@ -2448,7 +2602,7 @@
 
     const/high16 v6, 0x42b40000    # 90.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -2458,7 +2612,8 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 22
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v28
 
@@ -2478,23 +2633,24 @@
 
     sub-float v1, v35, v1
 
-    sget v5, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v5, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float/2addr v5, v1
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 23
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v28
 
     sub-float v2, v22, v2
 
-    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float/2addr v2, v3
 
@@ -2504,7 +2660,7 @@
 
     sub-float v1, v22, v1
 
-    sget v4, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v4, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float/2addr v1, v4
 
@@ -2512,7 +2668,7 @@
 
     add-float v4, v1, v12
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -2522,13 +2678,14 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    .line 24
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     add-float v2, v22, v1
 
     add-float/2addr v2, v12
 
-    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v4, v3, v28
 
@@ -2548,13 +2705,13 @@
 
     sub-float v3, v38, v3
 
-    sget v6, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v6, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float/2addr v3, v6
 
     sub-float v6, v3, v1
 
-    iget-object v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -2568,7 +2725,8 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 25
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v28
 
@@ -2580,13 +2738,13 @@
 
     sub-float v1, v19, v1
 
-    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float/2addr v1, v3
 
     add-float v4, v1, v12
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -2596,7 +2754,8 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 26
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v28
 
@@ -2606,11 +2765,11 @@
 
     sub-float v1, v43, v1
 
-    sget v2, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v2, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float v5, v1, v2
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -2620,7 +2779,8 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 27
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v28
 
@@ -2632,7 +2792,7 @@
 
     const/high16 v7, 0x42b40000    # 90.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -2644,7 +2804,8 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 28
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v28
 
@@ -2660,7 +2821,7 @@
 
     const/high16 v6, 0x43340000    # 180.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -2670,13 +2831,14 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    .line 29
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     add-float v23, v23, v1
 
     add-float v2, v23, v12
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v28
 
@@ -2686,7 +2848,7 @@
 
     const/high16 v6, 0x43870000    # 270.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -2694,7 +2856,8 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 30
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v28
 
@@ -2704,7 +2867,7 @@
 
     const/4 v6, 0x0
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -2718,7 +2881,8 @@
 
     const/high16 v6, 0x42b40000    # 90.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    .line 31
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move/from16 v2, v36
 
@@ -2730,7 +2894,8 @@
 
     const/high16 v6, 0x43340000    # 180.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    .line 32
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move/from16 v3, v38
 
@@ -2742,7 +2907,8 @@
 
     const/high16 v6, 0x43870000    # 270.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    .line 33
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move/from16 v2, v20
 
@@ -2754,7 +2920,8 @@
 
     const/4 v6, 0x0
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    .line 34
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move/from16 v2, v18
 
@@ -2768,7 +2935,8 @@
 
     const/high16 v6, 0x42b40000    # 90.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    .line 35
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move/from16 v2, v16
 
@@ -2776,7 +2944,8 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 36
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v28
 
@@ -2796,13 +2965,14 @@
 
     add-float v5, v35, v1
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 37
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v28
 
@@ -2816,7 +2986,7 @@
 
     add-float v4, v1, v12
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -2826,13 +2996,14 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    .line 38
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     add-float v22, v22, v1
 
     add-float v2, v22, v12
 
-    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v4, v3, v28
 
@@ -2850,7 +3021,7 @@
 
     add-float v6, v38, v3
 
-    iget-object v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
+    iget-object v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -2864,7 +3035,8 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 39
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v28
 
@@ -2878,7 +3050,7 @@
 
     add-float v4, v1, v12
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -2888,7 +3060,8 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 40
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v28
 
@@ -2904,7 +3077,7 @@
 
     add-float v4, v43, v1
 
-    iget-object v5, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
+    iget-object v5, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
 
     move-object/from16 v0, p1
 
@@ -2977,7 +3150,8 @@
 
     add-float v18, v16, v14
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 41
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v28
 
@@ -2991,7 +3165,7 @@
 
     const/4 v8, 0x0
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -3003,7 +3177,8 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 42
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v28
 
@@ -3025,7 +3200,7 @@
 
     const/high16 v6, 0x43340000    # 180.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -3043,7 +3218,8 @@
 
     add-float v20, v2, v14
 
-    sget v2, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 43
+    sget v2, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v2, v28
 
@@ -3059,7 +3235,7 @@
 
     const/high16 v6, 0x43870000    # 270.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -3097,7 +3273,8 @@
 
     const/4 v6, 0x0
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    .line 44
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -3137,7 +3314,8 @@
 
     const/high16 v6, 0x42b40000    # 90.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    .line 45
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -3183,7 +3361,8 @@
 
     const/high16 v6, 0x43340000    # 180.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    .line 46
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -3235,7 +3414,8 @@
 
     const/high16 v6, 0x43870000    # 270.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    .line 47
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -3281,7 +3461,8 @@
 
     const/4 v6, 0x0
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    .line 48
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -3329,7 +3510,8 @@
 
     const/high16 v6, 0x42b40000    # 90.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    .line 49
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -3341,7 +3523,8 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 50
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v28
 
@@ -3355,13 +3538,13 @@
 
     sub-float v1, v16, v1
 
-    sget v2, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v2, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float/2addr v1, v2
 
     add-float v5, v1, v13
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -3369,13 +3552,14 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 51
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v28
 
     sub-float v2, v31, v2
 
-    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float/2addr v2, v3
 
@@ -3389,7 +3573,7 @@
 
     sub-float v1, v31, v1
 
-    sget v5, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v5, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float/2addr v1, v5
 
@@ -3399,7 +3583,7 @@
 
     add-float v6, v1, v13
 
-    iget-object v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -3413,7 +3597,8 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 52
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     add-float v2, v31, v1
 
@@ -3427,13 +3612,13 @@
 
     sub-float v1, v35, v1
 
-    sget v4, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v4, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float/2addr v1, v4
 
     add-float v5, v1, v13
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -3441,7 +3626,8 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 53
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v28
 
@@ -3455,11 +3641,11 @@
 
     sub-float v1, v30, v1
 
-    sget v4, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v4, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float/2addr v4, v1
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -3467,7 +3653,8 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 54
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     add-float v2, v31, v1
 
@@ -3481,13 +3668,13 @@
 
     sub-float v1, v41, v1
 
-    sget v4, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v4, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float/2addr v1, v4
 
     add-float v5, v1, v13
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -3495,13 +3682,14 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 55
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v28
 
     sub-float/2addr v12, v1
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     add-float/2addr v12, v1
 
@@ -3511,7 +3699,7 @@
 
     const/high16 v7, 0x42b40000    # 90.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -3523,7 +3711,8 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 56
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v28
 
@@ -3531,7 +3720,7 @@
 
     add-float v3, v1, v13
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float v19, v19, v1
 
@@ -3539,7 +3728,7 @@
 
     const/high16 v6, 0x43340000    # 180.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -3547,7 +3736,8 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 57
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v28
 
@@ -3555,7 +3745,7 @@
 
     add-float v3, v1, v13
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float v26, v26, v1
 
@@ -3563,7 +3753,7 @@
 
     const/high16 v6, 0x43870000    # 270.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -3575,7 +3765,8 @@
 
     const/4 v6, 0x0
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    .line 58
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move/from16 v2, v22
 
@@ -3587,7 +3778,8 @@
 
     const/high16 v6, 0x42b40000    # 90.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    .line 59
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move/from16 v2, v31
 
@@ -3599,7 +3791,8 @@
 
     const/high16 v6, 0x43340000    # 180.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    .line 60
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move/from16 v3, v36
 
@@ -3611,7 +3804,8 @@
 
     const/high16 v6, 0x43870000    # 270.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    .line 61
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move/from16 v2, v38
 
@@ -3623,7 +3817,8 @@
 
     const/4 v6, 0x0
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    .line 62
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move/from16 v2, v29
 
@@ -3635,7 +3830,8 @@
 
     const/high16 v6, 0x42b40000    # 90.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    .line 63
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move/from16 v2, v33
 
@@ -3645,7 +3841,8 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 64
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v28
 
@@ -3661,7 +3858,7 @@
 
     add-float v5, v1, v13
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -3669,7 +3866,8 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 65
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v28
 
@@ -3679,7 +3877,7 @@
 
     add-float/2addr v3, v11
 
-    sget v4, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sget v4, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     add-float/2addr v3, v4
 
@@ -3697,7 +3895,7 @@
 
     add-float v6, v16, v13
 
-    iget-object v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
+    iget-object v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -3709,7 +3907,8 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 66
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v28
 
@@ -3731,13 +3930,14 @@
 
     add-float v5, v1, v13
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 67
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v28
 
@@ -3753,7 +3953,7 @@
 
     add-float v4, v30, v1
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -3761,7 +3961,8 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 68
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v28
 
@@ -3783,7 +3984,7 @@
 
     add-float v5, v41, v13
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
 
     move-object/from16 v0, p1
 
@@ -3801,9 +4002,10 @@
 
     goto/16 :goto_6
 
+    .line 69
     :cond_a
     :goto_5
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v28
 
@@ -3825,7 +4027,7 @@
 
     const/4 v8, 0x0
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -3837,7 +4039,8 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 70
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v28
 
@@ -3865,7 +4068,7 @@
 
     const/high16 v6, 0x43340000    # 180.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -3879,11 +4082,12 @@
 
     add-float v23, v23, v11
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    .line 71
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     add-float v2, v23, v1
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v28
 
@@ -3899,7 +4103,7 @@
 
     const/high16 v6, 0x43870000    # 270.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -3919,7 +4123,8 @@
 
     sub-float v35, v1, v14
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 72
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v28
 
@@ -3931,7 +4136,7 @@
 
     const/4 v6, 0x0
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -3961,7 +4166,8 @@
 
     const/high16 v6, 0x42b40000    # 90.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    .line 73
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -3993,7 +4199,8 @@
 
     const/high16 v6, 0x43340000    # 180.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    .line 74
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -4021,7 +4228,8 @@
 
     const/high16 v6, 0x43870000    # 270.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    .line 75
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -4049,7 +4257,8 @@
 
     const/4 v6, 0x0
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    .line 76
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -4077,7 +4286,8 @@
 
     const/high16 v6, 0x42b40000    # 90.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    .line 77
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -4089,7 +4299,8 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 78
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v28
 
@@ -4099,7 +4310,7 @@
 
     sub-float v3, v36, v3
 
-    sget v4, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sget v4, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float/2addr v3, v4
 
@@ -4109,13 +4320,13 @@
 
     sub-float v1, v36, v1
 
-    sget v6, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v6, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float/2addr v1, v6
 
     sub-float v6, v1, v4
 
-    iget-object v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -4127,13 +4338,14 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 79
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v28
 
     sub-float v2, v22, v2
 
-    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float/2addr v2, v3
 
@@ -4141,7 +4353,7 @@
 
     sub-float v1, v22, v1
 
-    sget v4, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v4, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float/2addr v1, v4
 
@@ -4149,7 +4361,7 @@
 
     sub-float v5, v36, v3
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -4157,11 +4369,12 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    .line 80
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     add-float v2, v22, v1
 
-    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v4, v3, v28
 
@@ -4181,13 +4394,13 @@
 
     sub-float v3, v30, v3
 
-    sget v6, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v6, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float/2addr v3, v6
 
     sub-float v6, v3, v1
 
-    iget-object v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -4201,13 +4414,14 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 81
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v28
 
     sub-float v2, v19, v2
 
-    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     add-float v3, v30, v3
 
@@ -4215,11 +4429,11 @@
 
     sub-float v1, v19, v1
 
-    sget v4, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v4, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float/2addr v4, v1
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -4227,7 +4441,8 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 82
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v28
 
@@ -4237,11 +4452,11 @@
 
     sub-float v1, v17, v1
 
-    sget v2, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v2, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float v5, v1, v2
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -4251,7 +4466,8 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 83
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v28
 
@@ -4263,7 +4479,7 @@
 
     const/high16 v7, 0x42b40000    # 90.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -4275,7 +4491,8 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 84
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v28
 
@@ -4289,7 +4506,7 @@
 
     const/high16 v6, 0x43340000    # 180.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -4299,11 +4516,12 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    .line 85
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     add-float v2, v23, v1
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v28
 
@@ -4313,7 +4531,7 @@
 
     const/high16 v6, 0x43870000    # 270.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -4321,7 +4539,8 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 86
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v28
 
@@ -4331,7 +4550,7 @@
 
     const/4 v6, 0x0
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -4345,7 +4564,8 @@
 
     const/high16 v6, 0x42b40000    # 90.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    .line 87
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move/from16 v2, v22
 
@@ -4357,7 +4577,8 @@
 
     const/high16 v6, 0x43340000    # 180.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    .line 88
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move/from16 v3, v30
 
@@ -4369,7 +4590,8 @@
 
     const/high16 v6, 0x43870000    # 270.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    .line 89
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move/from16 v2, v20
 
@@ -4381,7 +4603,8 @@
 
     const/4 v6, 0x0
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    .line 90
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move/from16 v2, v18
 
@@ -4393,7 +4616,8 @@
 
     const/high16 v6, 0x42b40000    # 90.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    .line 91
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move/from16 v2, v16
 
@@ -4403,7 +4627,8 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 92
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v28
 
@@ -4421,19 +4646,20 @@
 
     add-float v5, v36, v1
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 93
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v28
 
     sub-float v2, v22, v2
 
-    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     add-float v4, v33, v3
 
@@ -4443,7 +4669,7 @@
 
     sub-float v6, v36, v3
 
-    iget-object v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
+    iget-object v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -4457,11 +4683,12 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    .line 94
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     add-float v2, v22, v1
 
-    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v4, v3, v28
 
@@ -4477,7 +4704,7 @@
 
     add-float v6, v30, v3
 
-    iget-object v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
+    iget-object v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -4491,13 +4718,14 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 95
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v28
 
     sub-float v2, v19, v2
 
-    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     add-float v3, v30, v3
 
@@ -4505,7 +4733,7 @@
 
     add-float v4, v19, v1
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -4513,7 +4741,8 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 96
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v28
 
@@ -4527,7 +4756,7 @@
 
     add-float v4, v17, v1
 
-    iget-object v5, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
+    iget-object v5, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
 
     move-object/from16 v0, p1
 
@@ -4540,8 +4769,18 @@
     return-void
 .end method
 
-.method public final f(Landroid/graphics/Canvas;I)V
+.method private f(Landroid/graphics/Canvas;I)V
     .locals 45
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "canvas",
+            "rotate"
+        }
+    .end annotation
 
     move-object/from16 v0, p0
 
@@ -4549,10 +4788,12 @@
 
     move/from16 v1, p2
 
+    .line 1
     invoke-direct/range {p0 .. p0}, Lcom/android/camera/ui/ReferenceLineDrawer;->getUiStyle()I
 
     move-result v2
 
+    .line 2
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWidth()I
 
     move-result v3
@@ -4560,21 +4801,24 @@
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getHeight()I
 
     move-result v4
-
-    const/16 v5, 0x5a
 
     const/4 v11, 0x0
 
+    const/16 v5, 0x5a
+
     if-ne v1, v5, :cond_0
 
+    .line 3
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getHeight()I
 
     move-result v3
 
+    .line 4
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWidth()I
 
     move-result v4
 
+    .line 5
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getHeight()I
 
     move-result v5
@@ -4587,6 +4831,7 @@
 
     int-to-float v1, v1
 
+    .line 6
     invoke-virtual {v10, v1}, Landroid/graphics/Canvas;->rotate(F)V
 
     goto :goto_0
@@ -4596,6 +4841,7 @@
 
     if-ne v1, v5, :cond_1
 
+    .line 7
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWidth()I
 
     move-result v5
@@ -4614,6 +4860,7 @@
 
     int-to-float v1, v1
 
+    .line 8
     invoke-virtual {v10, v1}, Landroid/graphics/Canvas;->rotate(F)V
 
     goto :goto_0
@@ -4623,14 +4870,17 @@
 
     if-ne v1, v5, :cond_2
 
+    .line 9
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getHeight()I
 
     move-result v3
 
+    .line 10
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWidth()I
 
     move-result v4
 
+    .line 11
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWidth()I
 
     move-result v5
@@ -4643,6 +4893,7 @@
 
     int-to-float v1, v1
 
+    .line 12
     invoke-virtual {v10, v1}, Landroid/graphics/Canvas;->rotate(F)V
 
     :cond_2
@@ -4767,7 +5018,8 @@
 
     sub-float v32, v1, v14
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 13
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v29
 
@@ -4783,7 +5035,7 @@
 
     const/4 v8, 0x0
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -4797,7 +5049,8 @@
 
     mul-float v26, v26, v30
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 14
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v29
 
@@ -4825,7 +5078,7 @@
 
     const/high16 v6, 0x43870000    # 270.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -4835,7 +5088,8 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 15
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v29
 
@@ -4845,7 +5099,7 @@
 
     mul-float v25, v25, v30
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float v1, v25, v1
 
@@ -4859,7 +5113,7 @@
 
     const/high16 v6, 0x43340000    # 180.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -4867,7 +5121,8 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 16
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v29
 
@@ -4893,7 +5148,7 @@
 
     const/high16 v6, 0x42b40000    # 90.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -4923,7 +5178,8 @@
 
     const/4 v6, 0x0
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    .line 17
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -4957,7 +5213,8 @@
 
     const/high16 v6, 0x43870000    # 270.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    .line 18
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -4987,7 +5244,8 @@
 
     const/high16 v6, 0x43340000    # 180.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    .line 19
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -5021,7 +5279,8 @@
 
     const/high16 v6, 0x42b40000    # 90.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    .line 20
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -5051,7 +5310,8 @@
 
     const/4 v6, 0x0
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    .line 21
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -5063,13 +5323,14 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 22
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v29
 
     sub-float v2, v34, v2
 
-    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     add-float v4, v2, v3
 
@@ -5085,7 +5346,7 @@
 
     add-float v6, v1, v3
 
-    iget-object v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -5101,7 +5362,8 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 23
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v29
 
@@ -5113,13 +5375,13 @@
 
     sub-float v1, v21, v1
 
-    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float/2addr v1, v3
 
     add-float v4, v1, v12
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -5129,7 +5391,8 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 24
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     add-float v2, v1, v11
 
@@ -5139,7 +5402,7 @@
 
     sub-float v3, v37, v3
 
-    sget v4, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sget v4, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float/2addr v3, v4
 
@@ -5147,13 +5410,13 @@
 
     sub-float v1, v37, v1
 
-    sget v5, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v5, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float/2addr v1, v5
 
     sub-float v5, v1, v4
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -5161,13 +5424,14 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 25
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v29
 
     sub-float v2, v19, v2
 
-    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float/2addr v2, v3
 
@@ -5177,7 +5441,7 @@
 
     sub-float v1, v19, v1
 
-    sget v4, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v4, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float/2addr v1, v4
 
@@ -5185,7 +5449,7 @@
 
     add-float v4, v1, v12
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -5195,7 +5459,8 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 26
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v29
 
@@ -5205,11 +5470,11 @@
 
     sub-float v1, v42, v1
 
-    sget v2, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v2, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float v5, v1, v2
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -5219,7 +5484,8 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 27
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v29
 
@@ -5231,7 +5497,7 @@
 
     const/high16 v7, 0x42b40000    # 90.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -5245,7 +5511,8 @@
 
     sub-float v1, v11, v19
 
-    sget v2, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 28
+    sget v2, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v3, v2, v29
 
@@ -5261,7 +5528,7 @@
 
     const/high16 v6, 0x43870000    # 270.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -5273,7 +5540,8 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 29
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v29
 
@@ -5281,7 +5549,7 @@
 
     add-float v2, v1, v12
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float v25, v25, v1
 
@@ -5289,7 +5557,7 @@
 
     const/high16 v6, 0x43340000    # 180.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -5297,7 +5565,8 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 30
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v29
 
@@ -5307,7 +5576,7 @@
 
     const/high16 v6, 0x42b40000    # 90.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -5321,7 +5590,8 @@
 
     const/4 v6, 0x0
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    .line 31
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move/from16 v2, v23
 
@@ -5333,7 +5603,8 @@
 
     const/high16 v6, 0x43870000    # 270.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    .line 32
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move/from16 v2, v20
 
@@ -5345,7 +5616,8 @@
 
     const/high16 v6, 0x43340000    # 180.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    .line 33
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move/from16 v2, v39
 
@@ -5357,7 +5629,8 @@
 
     const/high16 v6, 0x42b40000    # 90.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    .line 34
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move/from16 v3, v41
 
@@ -5369,7 +5642,8 @@
 
     const/4 v6, 0x0
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    .line 35
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move/from16 v2, v16
 
@@ -5379,7 +5653,8 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 36
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v29
 
@@ -5395,7 +5670,7 @@
 
     add-float v5, v34, v1
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -5403,7 +5678,8 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 37
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v29
 
@@ -5417,7 +5693,7 @@
 
     add-float v4, v21, v12
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -5427,7 +5703,8 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 38
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v29
 
@@ -5443,7 +5720,7 @@
 
     add-float v5, v37, v1
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -5451,7 +5728,8 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 39
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v29
 
@@ -5469,7 +5747,7 @@
 
     add-float v4, v1, v12
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -5477,7 +5755,8 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 40
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v29
 
@@ -5493,7 +5772,7 @@
 
     add-float v4, v42, v1
 
-    iget-object v5, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
+    iget-object v5, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
 
     move-object/from16 v0, p1
 
@@ -5570,7 +5849,8 @@
 
     add-float v21, v20, v14
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 41
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v29
 
@@ -5584,7 +5864,7 @@
 
     const/4 v8, 0x0
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -5606,7 +5886,8 @@
 
     add-float v17, v1, v14
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 42
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v29
 
@@ -5622,7 +5903,7 @@
 
     const/high16 v6, 0x43870000    # 270.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -5644,7 +5925,8 @@
 
     add-float v23, v1, v14
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 43
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v29
 
@@ -5676,7 +5958,7 @@
 
     const/high16 v6, 0x43340000    # 180.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -5712,7 +5994,8 @@
 
     const/high16 v6, 0x42b40000    # 90.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    .line 44
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -5756,7 +6039,8 @@
 
     const/4 v6, 0x0
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    .line 45
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -5804,7 +6088,8 @@
 
     const/high16 v6, 0x43870000    # 270.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    .line 46
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -5856,7 +6141,8 @@
 
     const/high16 v6, 0x43340000    # 180.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    .line 47
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -5904,7 +6190,8 @@
 
     const/high16 v6, 0x42b40000    # 90.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    .line 48
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -5958,7 +6245,8 @@
 
     const/4 v6, 0x0
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    .line 49
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -5970,13 +6258,14 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 50
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v29
 
     sub-float v2, v20, v2
 
-    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float/2addr v2, v3
 
@@ -5986,7 +6275,7 @@
 
     sub-float v1, v20, v1
 
-    sget v2, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v2, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float/2addr v1, v2
 
@@ -5994,7 +6283,7 @@
 
     add-float v5, v1, v13
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -6006,13 +6295,14 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 51
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v29
 
     sub-float v2, v18, v2
 
-    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float/2addr v2, v3
 
@@ -6024,7 +6314,7 @@
 
     sub-float v1, v18, v1
 
-    sget v5, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v5, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float/2addr v1, v5
 
@@ -6034,7 +6324,7 @@
 
     add-float v6, v1, v13
 
-    iget-object v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -6048,7 +6338,8 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 52
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v29
 
@@ -6060,7 +6351,7 @@
 
     add-float/2addr v3, v13
 
-    sget v4, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sget v4, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float v4, v18, v4
 
@@ -6068,25 +6359,26 @@
 
     sub-float v1, v33, v1
 
-    sget v5, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v5, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float/2addr v1, v5
 
     add-float v5, v1, v13
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 53
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v29
 
     sub-float v2, v36, v2
 
-    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float/2addr v2, v3
 
@@ -6098,13 +6390,13 @@
 
     sub-float v1, v36, v1
 
-    sget v5, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v5, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float/2addr v1, v5
 
     sub-float v5, v1, v3
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -6116,11 +6408,12 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    .line 54
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     add-float v2, v36, v1
 
-    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v4, v3, v29
 
@@ -6134,7 +6427,7 @@
 
     sub-float v3, v41, v3
 
-    sget v5, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v5, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float/2addr v3, v5
 
@@ -6142,7 +6435,7 @@
 
     add-float v5, v3, v13
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -6152,13 +6445,14 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 55
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v29
 
     sub-float/2addr v12, v1
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     add-float/2addr v12, v1
 
@@ -6168,7 +6462,7 @@
 
     const/high16 v7, 0x42b40000    # 90.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -6180,7 +6474,8 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 56
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v29
 
@@ -6190,7 +6485,7 @@
 
     const/high16 v6, 0x43870000    # 270.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -6200,7 +6495,8 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 57
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v29
 
@@ -6208,7 +6504,7 @@
 
     add-float v3, v1, v13
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float v30, v30, v1
 
@@ -6216,7 +6512,7 @@
 
     const/high16 v6, 0x43340000    # 180.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -6228,7 +6524,8 @@
 
     const/high16 v6, 0x42b40000    # 90.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    .line 58
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move/from16 v3, v24
 
@@ -6240,7 +6537,8 @@
 
     const/4 v6, 0x0
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    .line 59
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move/from16 v2, v27
 
@@ -6252,7 +6550,8 @@
 
     const/high16 v6, 0x43870000    # 270.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    .line 60
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move/from16 v2, v32
 
@@ -6264,7 +6563,8 @@
 
     const/high16 v6, 0x43340000    # 180.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    .line 61
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move/from16 v2, v36
 
@@ -6276,7 +6576,8 @@
 
     const/high16 v6, 0x42b40000    # 90.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    .line 62
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move/from16 v3, v39
 
@@ -6288,7 +6589,8 @@
 
     const/4 v6, 0x0
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    .line 63
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move/from16 v2, v43
 
@@ -6298,7 +6600,8 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 64
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v29
 
@@ -6316,7 +6619,7 @@
 
     add-float v5, v1, v13
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -6324,7 +6627,8 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 65
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v29
 
@@ -6344,13 +6648,14 @@
 
     add-float v5, v20, v13
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 66
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v29
 
@@ -6372,13 +6677,14 @@
 
     add-float v5, v1, v13
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 67
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v29
 
@@ -6394,7 +6700,7 @@
 
     add-float v4, v36, v1
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -6402,7 +6708,8 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 68
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v29
 
@@ -6420,7 +6727,7 @@
 
     add-float v4, v41, v13
 
-    iget-object v5, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
+    iget-object v5, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
 
     move-object/from16 v0, p1
 
@@ -6442,7 +6749,8 @@
 
     sub-float v15, v11, v14
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 69
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v29
 
@@ -6460,7 +6768,7 @@
 
     const/4 v8, 0x0
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -6476,7 +6784,8 @@
 
     add-float v26, v26, v11
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 70
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v29
 
@@ -6500,7 +6809,7 @@
 
     const/high16 v6, 0x43870000    # 270.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -6510,7 +6819,8 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 71
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v29
 
@@ -6522,7 +6832,7 @@
 
     add-float v25, v25, v11
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float v4, v25, v1
 
@@ -6534,7 +6844,7 @@
 
     const/high16 v6, 0x43340000    # 180.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -6542,7 +6852,8 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 72
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v29
 
@@ -6562,7 +6873,7 @@
 
     const/high16 v6, 0x42b40000    # 90.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -6590,7 +6901,8 @@
 
     const/4 v6, 0x0
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    .line 73
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -6624,7 +6936,8 @@
 
     const/high16 v6, 0x43870000    # 270.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    .line 74
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -6652,7 +6965,8 @@
 
     const/high16 v6, 0x43340000    # 180.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    .line 75
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -6680,7 +6994,8 @@
 
     const/high16 v6, 0x42b40000    # 90.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    .line 76
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -6706,7 +7021,8 @@
 
     const/4 v6, 0x0
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
+    .line 77
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -6718,13 +7034,14 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 78
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v29
 
     sub-float v2, v33, v2
 
-    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float v4, v2, v3
 
@@ -6738,13 +7055,13 @@
 
     sub-float v1, v33, v1
 
-    sget v2, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v2, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float/2addr v1, v2
 
     sub-float v6, v1, v3
 
-    iget-object v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -6760,7 +7077,8 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 79
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v29
 
@@ -6770,11 +7088,11 @@
 
     sub-float v1, v21, v1
 
-    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float v4, v1, v3
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -6784,7 +7102,8 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 80
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     add-float v2, v11, v1
 
@@ -6792,7 +7111,7 @@
 
     sub-float v3, v35, v3
 
-    sget v4, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sget v4, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float/2addr v3, v4
 
@@ -6800,13 +7119,13 @@
 
     sub-float v1, v35, v1
 
-    sget v5, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v5, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float/2addr v1, v5
 
     sub-float v5, v1, v4
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -6814,13 +7133,14 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 81
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v29
 
     sub-float v2, v37, v2
 
-    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     add-float v3, v35, v3
 
@@ -6828,11 +7148,11 @@
 
     sub-float v1, v37, v1
 
-    sget v4, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v4, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float/2addr v4, v1
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -6840,11 +7160,12 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    .line 82
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     add-float v2, v37, v1
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v3, v1, v29
 
@@ -6854,11 +7175,11 @@
 
     sub-float v1, v27, v1
 
-    sget v4, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
+    sget v4, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
 
     add-float v5, v1, v4
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -6866,7 +7187,8 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 83
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v29
 
@@ -6878,7 +7200,7 @@
 
     const/high16 v7, 0x42b40000    # 90.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -6894,7 +7216,8 @@
 
     add-float/2addr v1, v11
 
-    sget v2, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 84
+    sget v2, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v3, v2, v29
 
@@ -6908,7 +7231,7 @@
 
     const/high16 v6, 0x43870000    # 270.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -6920,7 +7243,8 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 85
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v29
 
@@ -6928,13 +7252,13 @@
 
     add-float v2, v1, v11
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float v4, v25, v1
 
     const/high16 v6, 0x43340000    # 180.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -6942,7 +7266,8 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 86
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v1, v1, v29
 
@@ -6952,7 +7277,7 @@
 
     const/high16 v6, 0x42b40000    # 90.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -6966,7 +7291,8 @@
 
     const/4 v6, 0x0
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    .line 87
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move/from16 v2, v23
 
@@ -6978,7 +7304,8 @@
 
     const/high16 v6, 0x43870000    # 270.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    .line 88
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move/from16 v2, v20
 
@@ -6990,7 +7317,8 @@
 
     const/high16 v6, 0x43340000    # 180.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    .line 89
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move/from16 v2, v37
 
@@ -7002,7 +7330,8 @@
 
     const/high16 v6, 0x42b40000    # 90.0f
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    .line 90
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move/from16 v3, v39
 
@@ -7014,7 +7343,8 @@
 
     const/4 v6, 0x0
 
-    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
+    .line 91
+    iget-object v9, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
 
     move/from16 v2, v16
 
@@ -7024,7 +7354,8 @@
 
     invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 92
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v29
 
@@ -7038,7 +7369,7 @@
 
     add-float v5, v33, v1
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -7046,13 +7377,14 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 93
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v29
 
     sub-float v2, v21, v2
 
-    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sget v3, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     add-float v4, v26, v3
 
@@ -7062,7 +7394,7 @@
 
     sub-float v6, v33, v3
 
-    iget-object v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
+    iget-object v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -7076,7 +7408,8 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 94
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v29
 
@@ -7086,7 +7419,7 @@
 
     sub-float v3, v35, v3
 
-    sget v4, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sget v4, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float/2addr v3, v4
 
@@ -7098,7 +7431,7 @@
 
     sub-float v6, v1, v4
 
-    iget-object v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
+    iget-object v7, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -7110,7 +7443,8 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 95
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v29
 
@@ -7120,7 +7454,7 @@
 
     add-float v4, v37, v1
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
@@ -7130,7 +7464,8 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
+    .line 96
+    sget v1, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
 
     div-float v2, v1, v29
 
@@ -7140,7 +7475,7 @@
 
     sub-float v3, v27, v3
 
-    sget v4, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
+    sget v4, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
 
     sub-float v4, v21, v4
 
@@ -7148,7 +7483,7 @@
 
     add-float v5, v27, v1
 
-    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
 
     move-object/from16 v0, p1
 
@@ -7169,184 +7504,36 @@
     return-void
 .end method
 
-.method public g(II)V
-    .locals 1
+.method private getUiStyle()I
+    .locals 0
 
-    const/4 v0, 0x1
+    .line 1
+    iget p0, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->K8:I
 
-    invoke-static {p2, v0}, Ljava/lang/Math;->max(II)I
-
-    move-result p2
-
-    iput p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->a:I
-
-    invoke-static {p1, v0}, Ljava/lang/Math;->max(II)I
-
-    move-result p1
-
-    iput p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->b:I
-
-    new-instance p1, Landroid/graphics/Paint;
-
-    invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
-
-    iput-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->i:Landroid/graphics/Paint;
-
-    new-instance p1, Landroid/graphics/Paint;
-
-    invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
-
-    iput-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
-
-    new-instance p1, Landroid/graphics/Paint;
-
-    invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
-
-    iput-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
-
-    iget-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->i:Landroid/graphics/Paint;
-
-    const/high16 p2, 0x3f800000    # 1.0f
-
-    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
-
-    iget-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
-
-    iget-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
-
-    iget-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->i:Landroid/graphics/Paint;
-
-    sget-object p2, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
-
-    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
-
-    iget-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
-
-    sget-object p2, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
-
-    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
-
-    iget-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
-
-    sget-object p2, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
-
-    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
-
-    iget-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->i:Landroid/graphics/Paint;
-
-    iget p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->e:I
-
-    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setColor(I)V
-
-    iget-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->j:Landroid/graphics/Paint;
-
-    iget p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->g:I
-
-    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setColor(I)V
-
-    iget-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->k:Landroid/graphics/Paint;
-
-    iget p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->f:I
-
-    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setColor(I)V
-
-    new-instance p1, Landroid/graphics/Paint;
-
-    invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
-
-    iput-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
-
-    sget-object p2, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
-
-    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
-
-    iget-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setAntiAlias(Z)V
-
-    iget-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
-
-    iget p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->h:I
-
-    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setColor(I)V
-
-    iget-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:Landroid/graphics/Paint;
-
-    sget p2, Lcom/android/camera/ui/ReferenceLineDrawer;->t:F
-
-    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
-
-    new-instance p1, Landroid/graphics/Paint;
-
-    invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
-
-    iput-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
-
-    sget-object p2, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
-
-    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
-
-    iget-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setAntiAlias(Z)V
-
-    iget-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
-
-    iget p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->g:I
-
-    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setColor(I)V
-
-    iget-object p0, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->o:Landroid/graphics/Paint;
-
-    sget p1, Lcom/android/camera/ui/ReferenceLineDrawer;->u:F
-
-    sget p2, Lcom/android/camera/ui/ReferenceLineDrawer;->v:F
-
-    add-float/2addr p1, p2
-
-    invoke-virtual {p0, p1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
-
-    return-void
+    return p0
 .end method
 
-.method public h(ZZ)V
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->c:Z
-
-    if-ne v0, p1, :cond_0
-
-    iget-boolean v0, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->d:Z
-
-    if-eq v0, p2, :cond_1
-
-    :cond_0
-    iput-boolean p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->c:Z
-
-    iput-boolean p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->d:Z
-
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final i(Landroid/graphics/Canvas;)V
+.method private i(Landroid/graphics/Canvas;)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "canvas"
+        }
+    .end annotation
 
-    invoke-static {}, Lcom/android/camera/effect/b;->getInstance()Lcom/android/camera/effect/b;
+    .line 1
+    invoke-static {}, Ld/d/a/q6/b;->getInstance()Ld/d/a/q6/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/camera/effect/b;->getDeviceRotation()F
+    invoke-virtual {v0}, Ld/d/a/q6/b;->getDeviceRotation()F
 
     move-result v0
 
-    iput v0, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->l:F
+    iput v0, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->C1:F
 
     const/high16 v1, 0x42340000    # 45.0f
 
@@ -7360,7 +7547,8 @@
 
     if-gez v1, :cond_0
 
-    sget-object v0, Lcom/android/camera/ui/GradienterDrawer$b;->e:Lcom/android/camera/ui/GradienterDrawer$b;
+    .line 2
+    sget-object v0, Lcom/android/camera/ui/GradienterDrawer$b;->j:Lcom/android/camera/ui/GradienterDrawer$b;
 
     goto :goto_0
 
@@ -7375,7 +7563,8 @@
 
     if-gez v1, :cond_1
 
-    sget-object v0, Lcom/android/camera/ui/GradienterDrawer$b;->b:Lcom/android/camera/ui/GradienterDrawer$b;
+    .line 3
+    sget-object v0, Lcom/android/camera/ui/GradienterDrawer$b;->d:Lcom/android/camera/ui/GradienterDrawer$b;
 
     goto :goto_0
 
@@ -7390,22 +7579,27 @@
 
     if-gez v0, :cond_2
 
-    sget-object v0, Lcom/android/camera/ui/GradienterDrawer$b;->d:Lcom/android/camera/ui/GradienterDrawer$b;
+    .line 4
+    sget-object v0, Lcom/android/camera/ui/GradienterDrawer$b;->g:Lcom/android/camera/ui/GradienterDrawer$b;
 
     goto :goto_0
 
+    .line 5
     :cond_2
-    sget-object v0, Lcom/android/camera/ui/GradienterDrawer$b;->c:Lcom/android/camera/ui/GradienterDrawer$b;
+    sget-object v0, Lcom/android/camera/ui/GradienterDrawer$b;->f:Lcom/android/camera/ui/GradienterDrawer$b;
 
+    .line 6
     :goto_0
-    iget-object v1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->p:Lcom/android/camera/ui/GradienterDrawer$b;
+    iget-object v1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->K2:Lcom/android/camera/ui/GradienterDrawer$b;
 
     if-eq v0, v1, :cond_3
 
-    iput-object v0, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->p:Lcom/android/camera/ui/GradienterDrawer$b;
+    .line 7
+    iput-object v0, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->K2:Lcom/android/camera/ui/GradienterDrawer$b;
 
+    .line 8
     :cond_3
-    invoke-static {}, Lg2/b;->h()Ll2/g;
+    invoke-static {}, Ld/d/a/l6/b;->h()Ld/d/a/l6/e/l/g;
 
     move-result-object v0
 
@@ -7413,132 +7607,142 @@
 
     const-string v2, "jiugongge"
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/camera/data/data/g;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Ld/d/a/l6/e/f;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 9
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
     check-cast v1, Landroid/app/Activity;
 
-    invoke-static {v1}, Lcom/android/camera/a6;->S0(Landroid/app/Activity;)I
+    invoke-static {v1}, Ld/d/a/z5;->J0(Landroid/app/Activity;)I
 
     move-result v1
 
+    .line 10
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
+    const/4 v3, -0x1
+
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    move-result v3
+    move-result v4
 
-    const-string v4, "golden_section"
+    const-string v5, "golden_section"
 
-    const/4 v5, -0x1
-
-    sparse-switch v3, :sswitch_data_0
+    sparse-switch v4, :sswitch_data_0
 
     goto :goto_1
 
     :sswitch_0
-    const-string v3, "left_golden_spiral"
+    const-string v4, "left_golden_spiral"
 
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v4
 
-    if-nez v3, :cond_4
+    if-nez v4, :cond_4
 
     goto :goto_1
 
     :cond_4
-    const/4 v5, 0x3
+    const/4 v3, 0x3
 
     goto :goto_1
 
     :sswitch_1
-    const-string v3, "right_golden_spiral"
+    const-string v4, "right_golden_spiral"
 
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v4
 
-    if-nez v3, :cond_5
+    if-nez v4, :cond_5
 
     goto :goto_1
 
     :cond_5
-    const/4 v5, 0x2
+    const/4 v3, 0x2
 
     goto :goto_1
 
     :sswitch_2
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v4
 
-    if-nez v3, :cond_6
+    if-nez v4, :cond_6
 
     goto :goto_1
 
     :cond_6
-    const/4 v5, 0x1
+    const/4 v3, 0x1
 
     goto :goto_1
 
     :sswitch_3
-    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v4
 
-    if-nez v3, :cond_7
+    if-nez v4, :cond_7
 
     goto :goto_1
 
     :cond_7
-    const/4 v5, 0x0
+    const/4 v3, 0x0
 
     :goto_1
-    packed-switch v5, :pswitch_data_0
+    packed-switch v3, :pswitch_data_0
 
     goto :goto_2
 
+    .line 11
     :pswitch_0
-    invoke-virtual {p0, p1, v1}, Lcom/android/camera/ui/ReferenceLineDrawer;->e(Landroid/graphics/Canvas;I)V
+    invoke-direct {p0, p1, v1}, Lcom/android/camera/ui/ReferenceLineDrawer;->e(Landroid/graphics/Canvas;I)V
 
     goto :goto_2
 
+    .line 12
     :pswitch_1
-    invoke-virtual {p0, p1, v1}, Lcom/android/camera/ui/ReferenceLineDrawer;->f(Landroid/graphics/Canvas;I)V
+    invoke-direct {p0, p1, v1}, Lcom/android/camera/ui/ReferenceLineDrawer;->f(Landroid/graphics/Canvas;I)V
 
     goto :goto_2
 
+    .line 13
     :pswitch_2
-    invoke-virtual {p0, p1}, Lcom/android/camera/ui/ReferenceLineDrawer;->d(Landroid/graphics/Canvas;)V
+    invoke-direct {p0, p1}, Lcom/android/camera/ui/ReferenceLineDrawer;->d(Landroid/graphics/Canvas;)V
 
     goto :goto_2
 
+    .line 14
     :pswitch_3
-    invoke-virtual {p0, p1}, Lcom/android/camera/ui/ReferenceLineDrawer;->a(Landroid/graphics/Canvas;)V
+    invoke-direct {p0, p1}, Lcom/android/camera/ui/ReferenceLineDrawer;->a(Landroid/graphics/Canvas;)V
 
+    .line 15
     :goto_2
-    iget-boolean p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->m:Z
+    iget-boolean p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->K1:Z
 
     if-eqz p1, :cond_9
 
+    .line 16
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-nez p1, :cond_8
 
-    invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 17
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_9
 
+    .line 18
     :cond_8
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
@@ -7562,11 +7766,237 @@
     .end packed-switch
 .end method
 
+
+# virtual methods
+.method public g(II)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "row",
+            "column"
+        }
+    .end annotation
+
+    const/4 v0, 0x1
+
+    .line 1
+    invoke-static {p2, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result p2
+
+    iput p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->m:I
+
+    .line 2
+    invoke-static {p1, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->n:I
+
+    .line 3
+    new-instance p1, Landroid/graphics/Paint;
+
+    invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
+
+    iput-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->K0:Landroid/graphics/Paint;
+
+    .line 4
+    new-instance p1, Landroid/graphics/Paint;
+
+    invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
+
+    iput-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
+
+    .line 5
+    new-instance p1, Landroid/graphics/Paint;
+
+    invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
+
+    iput-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
+
+    .line 6
+    iget-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->K0:Landroid/graphics/Paint;
+
+    const/high16 p2, 0x3f800000    # 1.0f
+
+    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+
+    .line 7
+    iget-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+
+    .line 8
+    iget-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+
+    .line 9
+    iget-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->K0:Landroid/graphics/Paint;
+
+    sget-object p2, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
+
+    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+
+    .line 10
+    iget-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
+
+    sget-object p2, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
+
+    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+
+    .line 11
+    iget-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
+
+    sget-object p2, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
+
+    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+
+    .line 12
+    iget-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->K0:Landroid/graphics/Paint;
+
+    iget p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->t:I
+
+    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setColor(I)V
+
+    .line 13
+    iget-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->k1:Landroid/graphics/Paint;
+
+    iget p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->w:I
+
+    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setColor(I)V
+
+    .line 14
+    iget-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->v1:Landroid/graphics/Paint;
+
+    iget p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->u:I
+
+    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setColor(I)V
+
+    .line 15
+    new-instance p1, Landroid/graphics/Paint;
+
+    invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
+
+    iput-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
+
+    .line 16
+    sget-object p2, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
+
+    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+
+    .line 17
+    iget-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setAntiAlias(Z)V
+
+    .line 18
+    iget-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
+
+    iget p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->k0:I
+
+    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setColor(I)V
+
+    .line 19
+    iget-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->v2:Landroid/graphics/Paint;
+
+    sget p2, Lcom/android/camera/ui/ReferenceLineDrawer;->f:F
+
+    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+
+    .line 20
+    new-instance p1, Landroid/graphics/Paint;
+
+    invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
+
+    iput-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
+
+    .line 21
+    sget-object p2, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
+
+    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+
+    .line 22
+    iget-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setAntiAlias(Z)V
+
+    .line 23
+    iget-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
+
+    iget p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->w:I
+
+    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setColor(I)V
+
+    .line 24
+    iget-object p0, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->C2:Landroid/graphics/Paint;
+
+    sget p1, Lcom/android/camera/ui/ReferenceLineDrawer;->g:F
+
+    sget p2, Lcom/android/camera/ui/ReferenceLineDrawer;->j:F
+
+    add-float/2addr p1, p2
+
+    invoke-virtual {p0, p1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+
+    return-void
+.end method
+
+.method public h(ZZ)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "top",
+            "bottom"
+        }
+    .end annotation
+
+    .line 1
+    iget-boolean v0, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->p:Z
+
+    if-ne v0, p1, :cond_0
+
+    iget-boolean v0, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->s:Z
+
+    if-eq v0, p2, :cond_1
+
+    .line 2
+    :cond_0
+    iput-boolean p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->p:Z
+
+    .line 3
+    iput-boolean p2, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->s:Z
+
+    .line 4
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    :cond_1
+    return-void
+.end method
+
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "canvas"
+        }
+    .end annotation
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/ui/ReferenceLineDrawer;->i(Landroid/graphics/Canvas;)V
+    .line 1
+    invoke-direct {p0, p1}, Lcom/android/camera/ui/ReferenceLineDrawer;->i(Landroid/graphics/Canvas;)V
 
+    .line 2
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
     return-void
@@ -7574,14 +8004,26 @@
 
 .method public onVisibilityChanged(Landroid/view/View;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "changedView",
+            "visibility"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroid/view/View;->onVisibilityChanged(Landroid/view/View;I)V
 
     if-nez p2, :cond_0
 
-    sget-object p1, Lcom/android/camera/ui/GradienterDrawer$b;->a:Lcom/android/camera/ui/GradienterDrawer$b;
+    .line 2
+    sget-object p1, Lcom/android/camera/ui/GradienterDrawer$b;->c:Lcom/android/camera/ui/GradienterDrawer$b;
 
-    iput-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->p:Lcom/android/camera/ui/GradienterDrawer$b;
+    iput-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->K2:Lcom/android/camera/ui/GradienterDrawer$b;
 
     :cond_0
     return-void
@@ -7589,19 +8031,31 @@
 
 .method public setGradienterEnabled(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "gradienterEnabled"
+        }
+    .end annotation
 
-    iput-boolean p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->m:Z
+    .line 1
+    iput-boolean p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->K1:Z
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    sget-object p1, Lcom/android/camera/ui/GradienterDrawer$b;->a:Lcom/android/camera/ui/GradienterDrawer$b;
+    .line 3
+    sget-object p1, Lcom/android/camera/ui/GradienterDrawer$b;->c:Lcom/android/camera/ui/GradienterDrawer$b;
 
-    iput-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->p:Lcom/android/camera/ui/GradienterDrawer$b;
+    iput-object p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->K2:Lcom/android/camera/ui/GradienterDrawer$b;
 
+    .line 4
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     :cond_0
@@ -7610,16 +8064,34 @@
 
 .method public setLineColor(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "lineColor"
+        }
+    .end annotation
 
-    iput p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->e:I
+    .line 1
+    iput p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->t:I
 
     return-void
 .end method
 
 .method public setTargetUiStyle(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "uiStyle"
+        }
+    .end annotation
 
-    iput p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->q:I
+    .line 1
+    iput p1, p0, Lcom/android/camera/ui/ReferenceLineDrawer;->K8:I
 
     return-void
 .end method

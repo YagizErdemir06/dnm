@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/extractor/ogg/FlacReader;
+.class public final Lcom/google/android/exoplayer2/extractor/ogg/FlacReader;
 .super Lcom/google/android/exoplayer2/extractor/ogg/StreamReader;
 .source "SourceFile"
 
@@ -33,6 +33,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/extractor/ogg/StreamReader;-><init>()V
 
     return-void
@@ -41,6 +42,7 @@
 .method private getFlacFrameBlockSize(Lcom/google/android/exoplayer2/util/ParsableByteArray;)I
     .locals 2
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
     move-result-object p0
@@ -63,11 +65,14 @@
 
     if-ne p0, v1, :cond_1
 
+    .line 2
     :cond_0
     invoke-virtual {p1, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
+    .line 3
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUtf8EncodedLong()J
 
+    .line 4
     :cond_1
     invoke-static {p1, p0}, Lcom/google/android/exoplayer2/extractor/FlacFrameReader;->readFrameBlockSizeSamplesFromKey(Lcom/google/android/exoplayer2/util/ParsableByteArray;I)I
 
@@ -75,6 +80,7 @@
 
     const/4 v0, 0x0
 
+    .line 5
     invoke-virtual {p1, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     return p0
@@ -85,6 +91,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     aget-byte p0, p0, v0
 
     const/4 v1, -0x1
@@ -100,6 +107,7 @@
 .method public static verifyBitstreamType(Lcom/google/android/exoplayer2/util/ParsableByteArray;)Z
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
     move-result v0
@@ -108,6 +116,7 @@
 
     if-lt v0, v1, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v0
@@ -116,6 +125,7 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedInt()J
 
     move-result-wide v0
@@ -142,6 +152,7 @@
 .method public preparePayload(Lcom/google/android/exoplayer2/util/ParsableByteArray;)J
     .locals 1
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
     move-result-object v0
@@ -156,6 +167,7 @@
 
     return-wide p0
 
+    .line 2
     :cond_0
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/extractor/ogg/FlacReader;->getFlacFrameBlockSize(Lcom/google/android/exoplayer2/util/ParsableByteArray;)I
 
@@ -175,26 +187,31 @@
         result = false
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
     move-result-object v0
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/ogg/FlacReader;->streamMetadata:Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;
 
     const/4 v2, 0x1
 
     if-nez v1, :cond_0
 
+    .line 3
     new-instance p2, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;
 
     const/16 p3, 0x11
 
     invoke-direct {p2, v0, p3}, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;-><init>([BI)V
 
+    .line 4
     iput-object p2, p0, Lcom/google/android/exoplayer2/extractor/ogg/FlacReader;->streamMetadata:Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;
 
     const/16 p0, 0x9
 
+    .line 5
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->limit()I
 
     move-result p1
@@ -205,6 +222,7 @@
 
     const/4 p1, 0x0
 
+    .line 6
     invoke-virtual {p2, p0, p1}, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;->getFormat([BLcom/google/android/exoplayer2/metadata/Metadata;)Lcom/google/android/exoplayer2/Format;
 
     move-result-object p0
@@ -216,6 +234,7 @@
     :cond_0
     const/4 v3, 0x0
 
+    .line 7
     aget-byte v4, v0, v3
 
     and-int/lit8 v4, v4, 0x7f
@@ -224,16 +243,20 @@
 
     if-ne v4, v5, :cond_1
 
+    .line 8
     invoke-static {p1}, Lcom/google/android/exoplayer2/extractor/FlacMetadataReader;->readSeekTableMetadataBlock(Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata$SeekTable;
 
     move-result-object p1
 
+    .line 9
     invoke-virtual {v1, p1}, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;->copyWithSeekTable(Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata$SeekTable;)Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;
 
     move-result-object p2
 
+    .line 10
     iput-object p2, p0, Lcom/google/android/exoplayer2/extractor/ogg/FlacReader;->streamMetadata:Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;
 
+    .line 11
     new-instance p3, Lcom/google/android/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;
 
     invoke-direct {p3, p2, p1}, Lcom/google/android/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;-><init>(Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata$SeekTable;)V
@@ -242,6 +265,7 @@
 
     return v2
 
+    .line 12
     :cond_1
     invoke-static {v0}, Lcom/google/android/exoplayer2/extractor/ogg/FlacReader;->isAudioPacket([B)Z
 
@@ -249,16 +273,20 @@
 
     if-eqz p1, :cond_3
 
+    .line 13
     iget-object p1, p0, Lcom/google/android/exoplayer2/extractor/ogg/FlacReader;->flacOggSeeker:Lcom/google/android/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;
 
     if-eqz p1, :cond_2
 
+    .line 14
     invoke-virtual {p1, p2, p3}, Lcom/google/android/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->setFirstFrameOffset(J)V
 
+    .line 15
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/ogg/FlacReader;->flacOggSeeker:Lcom/google/android/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;
 
     iput-object p0, p4, Lcom/google/android/exoplayer2/extractor/ogg/StreamReader$SetupData;->oggSeeker:Lcom/google/android/exoplayer2/extractor/ogg/OggSeeker;
 
+    .line 16
     :cond_2
     iget-object p0, p4, Lcom/google/android/exoplayer2/extractor/ogg/StreamReader$SetupData;->format:Lcom/google/android/exoplayer2/Format;
 
@@ -273,14 +301,17 @@
 .method public reset(Z)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/android/exoplayer2/extractor/ogg/StreamReader;->reset(Z)V
 
     if-eqz p1, :cond_0
 
     const/4 p1, 0x0
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/extractor/ogg/FlacReader;->streamMetadata:Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;
 
+    .line 3
     iput-object p1, p0, Lcom/google/android/exoplayer2/extractor/ogg/FlacReader;->flacOggSeeker:Lcom/google/android/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;
 
     :cond_0

@@ -39,6 +39,7 @@
 .method public getModel()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/dtd/ElementDecl;->model:Ljava/lang/String;
 
     return-object p0
@@ -47,6 +48,7 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/dtd/ElementDecl;->name:Ljava/lang/String;
 
     return-object p0
@@ -55,6 +57,7 @@
 .method public setModel(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/dtd/ElementDecl;->model:Ljava/lang/String;
 
     return-void
@@ -63,6 +66,7 @@
 .method public setName(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/dtd/ElementDecl;->name:Ljava/lang/String;
 
     return-void
@@ -71,6 +75,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V

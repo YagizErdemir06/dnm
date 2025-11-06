@@ -117,12 +117,14 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p3, p0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {p3, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -143,6 +145,7 @@
 
     move-result-wide p1
 
+    .line 3
     :cond_0
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -167,24 +170,29 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
+    .line 2
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/dash/BaseUrlExclusionList;->excludedServiceLocations:Ljava/util/Map;
 
     invoke-static {v0, v1, v2}, Lcom/google/android/exoplayer2/source/dash/BaseUrlExclusionList;->removeExpiredExclusions(JLjava/util/Map;)V
 
+    .line 3
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/dash/BaseUrlExclusionList;->excludedPriorities:Ljava/util/Map;
 
     invoke-static {v0, v1, v2}, Lcom/google/android/exoplayer2/source/dash/BaseUrlExclusionList;->removeExpiredExclusions(JLjava/util/Map;)V
 
+    .line 4
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v1, 0x0
 
+    .line 5
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -192,12 +200,14 @@
 
     if-ge v1, v2, :cond_1
 
+    .line 6
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/google/android/exoplayer2/source/dash/manifest/BaseUrl;
 
+    .line 7
     iget-object v3, p0, Lcom/google/android/exoplayer2/source/dash/BaseUrlExclusionList;->excludedServiceLocations:Ljava/util/Map;
 
     iget-object v4, v2, Lcom/google/android/exoplayer2/source/dash/manifest/BaseUrl;->serviceLocation:Ljava/lang/String;
@@ -212,6 +222,7 @@
 
     iget v4, v2, Lcom/google/android/exoplayer2/source/dash/manifest/BaseUrl;->priority:I
 
+    .line 8
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -222,6 +233,7 @@
 
     if-nez v3, :cond_0
 
+    .line 9
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_0
@@ -236,6 +248,7 @@
 .method private static compareBaseUrl(Lcom/google/android/exoplayer2/source/dash/manifest/BaseUrl;Lcom/google/android/exoplayer2/source/dash/manifest/BaseUrl;)I
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/source/dash/manifest/BaseUrl;->priority:I
 
     iget v1, p1, Lcom/google/android/exoplayer2/source/dash/manifest/BaseUrl;->priority:I
@@ -248,6 +261,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/dash/manifest/BaseUrl;->serviceLocation:Ljava/lang/String;
 
@@ -272,12 +286,14 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     const/4 v1, 0x0
 
+    .line 2
     :goto_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -285,6 +301,7 @@
 
     if-ge v1, v2, :cond_0
 
+    .line 3
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -303,6 +320,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-interface {v0}, Ljava/util/Set;->size()I
 
@@ -325,10 +343,12 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 2
     invoke-interface {p2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v1
@@ -351,6 +371,7 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
+    .line 3
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
@@ -365,6 +386,7 @@
 
     if-gtz v3, :cond_0
 
+    .line 4
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -376,6 +398,7 @@
     :cond_1
     const/4 p0, 0x0
 
+    .line 5
     :goto_1
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -383,6 +406,7 @@
 
     if-ge p0, p1, :cond_2
 
+    .line 6
     invoke-interface {v0, p0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -415,6 +439,7 @@
 
     move v2, v1
 
+    .line 1
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -422,6 +447,7 @@
 
     if-ge v1, v3, :cond_0
 
+    .line 2
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -436,6 +462,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/dash/BaseUrlExclusionList;->random:Ljava/util/Random;
 
@@ -445,6 +472,7 @@
 
     move v1, v0
 
+    .line 4
     :goto_1
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -452,12 +480,14 @@
 
     if-ge v0, v2, :cond_2
 
+    .line 5
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/google/android/exoplayer2/source/dash/manifest/BaseUrl;
 
+    .line 6
     iget v3, v2, Lcom/google/android/exoplayer2/source/dash/manifest/BaseUrl;->weight:I
 
     add-int/2addr v1, v3
@@ -471,6 +501,7 @@
 
     goto :goto_1
 
+    .line 7
     :cond_2
     invoke-static {p1}, Lcom/google/common/collect/Iterables;->getLast(Ljava/lang/Iterable;)Ljava/lang/Object;
 
@@ -486,24 +517,28 @@
 .method public exclude(Lcom/google/android/exoplayer2/source/dash/manifest/BaseUrl;J)V
     .locals 2
 
+    .line 1
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
     add-long/2addr v0, p2
 
+    .line 2
     iget-object p2, p1, Lcom/google/android/exoplayer2/source/dash/manifest/BaseUrl;->serviceLocation:Ljava/lang/String;
 
     iget-object p3, p0, Lcom/google/android/exoplayer2/source/dash/BaseUrlExclusionList;->excludedServiceLocations:Ljava/util/Map;
 
     invoke-static {p2, v0, v1, p3}, Lcom/google/android/exoplayer2/source/dash/BaseUrlExclusionList;->addExclusion(Ljava/lang/Object;JLjava/util/Map;)V
 
+    .line 3
     iget p1, p1, Lcom/google/android/exoplayer2/source/dash/manifest/BaseUrl;->priority:I
 
     const/high16 p2, -0x80000000
 
     if-eq p1, p2, :cond_0
 
+    .line 4
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -527,16 +562,19 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/source/dash/BaseUrlExclusionList;->applyExclusions(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p0
 
     const/4 p1, 0x0
 
+    .line 3
     :goto_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -544,6 +582,7 @@
 
     if-ge p1, v1, :cond_0
 
+    .line 4
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -562,6 +601,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-interface {v0}, Ljava/util/Set;->size()I
 
@@ -573,14 +613,17 @@
 .method public reset()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/dash/BaseUrlExclusionList;->excludedServiceLocations:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/dash/BaseUrlExclusionList;->excludedPriorities:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/dash/BaseUrlExclusionList;->selectionsTaken:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->clear()V
@@ -603,10 +646,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/source/dash/BaseUrlExclusionList;->applyExclusions(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p1
 
+    .line 2
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -617,6 +662,7 @@
 
     const/4 p0, 0x0
 
+    .line 3
     invoke-static {p1, p0}, Lcom/google/common/collect/Iterables;->getFirst(Ljava/lang/Iterable;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -625,19 +671,20 @@
 
     return-object p0
 
+    .line 4
     :cond_0
-    new-instance v0, Lcom/google/android/exoplayer2/source/dash/a;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/source/dash/a;-><init>()V
+    sget-object v0, Ld/j/a/b/v2/z/a;->c:Ld/j/a/b/v2/z/a;
 
     invoke-static {p1, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
+    .line 5
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v1, 0x0
 
+    .line 6
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -648,6 +695,7 @@
 
     move v3, v1
 
+    .line 7
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -655,16 +703,19 @@
 
     if-ge v3, v4, :cond_2
 
+    .line 8
     invoke-interface {p1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Lcom/google/android/exoplayer2/source/dash/manifest/BaseUrl;
 
+    .line 9
     iget v5, v4, Lcom/google/android/exoplayer2/source/dash/manifest/BaseUrl;->priority:I
 
     if-eq v2, v5, :cond_1
 
+    .line 10
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v2
@@ -673,6 +724,7 @@
 
     if-ne v2, v3, :cond_2
 
+    .line 11
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -681,6 +733,7 @@
 
     return-object p0
 
+    .line 12
     :cond_1
     new-instance v5, Landroid/util/Pair;
 
@@ -700,6 +753,7 @@
 
     goto :goto_0
 
+    .line 13
     :cond_2
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/dash/BaseUrlExclusionList;->selectionsTaken:Ljava/util/Map;
 
@@ -711,6 +765,7 @@
 
     if-nez v2, :cond_3
 
+    .line 14
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v2
@@ -723,6 +778,7 @@
 
     move-result-object v2
 
+    .line 15
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/dash/BaseUrlExclusionList;->selectionsTaken:Ljava/util/Map;
 
     invoke-interface {p0, v0, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;

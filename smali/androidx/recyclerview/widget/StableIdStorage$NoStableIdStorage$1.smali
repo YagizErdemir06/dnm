@@ -1,4 +1,4 @@
-.class Landroidx/recyclerview/widget/StableIdStorage$NoStableIdStorage$1;
+.class public Landroidx/recyclerview/widget/StableIdStorage$NoStableIdStorage$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/recyclerview/widget/StableIdStorage$NoStableIdStorage;
+.field public final synthetic this$0:Landroidx/recyclerview/widget/StableIdStorage$NoStableIdStorage;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/recyclerview/widget/StableIdStorage$NoStableIdStorage;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/recyclerview/widget/StableIdStorage$NoStableIdStorage$1;->this$0:Landroidx/recyclerview/widget/StableIdStorage$NoStableIdStorage;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

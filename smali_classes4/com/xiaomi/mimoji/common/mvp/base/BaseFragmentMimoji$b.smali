@@ -18,22 +18,32 @@
 
 
 # instance fields
-.field public a:Z
+.field public c:Z
 
-.field public final synthetic b:Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji;
+.field public final synthetic d:Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji$b;->b:Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji;
+    .line 1
+    iput-object p1, p0, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji$b;->d:Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
-    iput-boolean p1, p0, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji$b;->a:Z
+    .line 2
+    iput-boolean p1, p0, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji$b;->c:Z
 
     return-void
 .end method
@@ -43,6 +53,7 @@
 .method public a()Z
     .locals 4
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -51,7 +62,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji$b;->a:Z
+    iget-boolean v1, p0, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji$b;->c:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -67,7 +78,8 @@
 
     invoke-static {v3, v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-boolean v0, p0, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji$b;->a:Z
+    .line 2
+    iget-boolean v0, p0, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji$b;->c:Z
 
     const/4 v2, 0x1
 
@@ -75,8 +87,9 @@
 
     return v2
 
+    .line 3
     :cond_0
-    iput-boolean v2, p0, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji$b;->a:Z
+    iput-boolean v2, p0, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji$b;->c:Z
 
     return v1
 .end method
@@ -84,7 +97,8 @@
 .method public run()V
     .locals 2
 
-    iget-boolean p0, p0, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji$b;->a:Z
+    .line 1
+    iget-boolean p0, p0, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji$b;->c:Z
 
     if-eqz p0, :cond_0
 
@@ -99,13 +113,15 @@
 
     const-string v1, "showExitConfirm onClick positive"
 
+    .line 2
     invoke-static {v0, v1, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     const/4 p0, 0x0
 
     const-string v0, "mimoji_play_exit"
 
-    invoke-static {p0, v0}, Lk9/a;->Z1(Ljava/lang/String;Ljava/lang/String;)V
+    .line 3
+    invoke-static {p0, v0}, Ld/d/a/v7/f;->V1(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

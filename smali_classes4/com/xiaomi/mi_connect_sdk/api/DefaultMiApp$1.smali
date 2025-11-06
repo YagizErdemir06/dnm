@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;
+.class public Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;
 .super Lcom/xiaomi/mi_connect_service/IMiConnectCallback$Stub;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;
+.field public final synthetic this$0:Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;->this$0:Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;
 
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/IMiConnectCallback$Stub;-><init>()V
@@ -34,6 +35,7 @@
 .method public onAdvertisingResult(II)V
     .locals 2
 
+    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->START_ADVERTISING_SUCCESS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     invoke-virtual {v0}, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->getCode()I
@@ -42,12 +44,14 @@
 
     if-ne p2, v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;->this$0:Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->access$002(Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;Z)Z
 
+    .line 3
     :cond_0
     sget-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->STOP_ADVERTISING_SUCCESS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
@@ -57,12 +61,14 @@
 
     if-ne p2, v0, :cond_1
 
+    .line 4
     iget-object v0, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;->this$0:Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->access$002(Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;Z)Z
 
+    .line 5
     :cond_1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;->this$0:Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;
 
@@ -82,6 +88,7 @@
 .method public onConnectionInitiated(IILjava/lang/String;[B[B)V
     .locals 9
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;->this$0:Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;
 
     invoke-static {v0}, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->access$100(Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;)Landroid/os/Handler;
@@ -114,6 +121,7 @@
 .method public onConnectionResult(IILjava/lang/String;I)V
     .locals 8
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;->this$0:Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;
 
     invoke-static {v0}, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->access$100(Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;)Landroid/os/Handler;
@@ -144,6 +152,7 @@
 .method public onDisconnection(II)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;->this$0:Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;
 
     invoke-static {v0}, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->access$100(Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;)Landroid/os/Handler;
@@ -162,6 +171,7 @@
 .method public onDiscoveryResult(II)V
     .locals 2
 
+    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->START_DISCOVERY_SUCCESS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     invoke-virtual {v0}, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->getCode()I
@@ -170,12 +180,14 @@
 
     if-ne p2, v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;->this$0:Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->access$202(Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;Z)Z
 
+    .line 3
     :cond_0
     sget-object v0, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->STOP_DISCOVERY_SUCCESS:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
@@ -185,12 +197,14 @@
 
     if-ne p2, v0, :cond_1
 
+    .line 4
     iget-object v0, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;->this$0:Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->access$202(Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;Z)Z
 
+    .line 5
     :cond_1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;->this$0:Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;
 
@@ -214,8 +228,10 @@
 
     const-string v1, "onEndpointFound: manager"
 
+    .line 1
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     iget-object v0, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;->this$0:Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;
 
     invoke-static {v0}, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->access$100(Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;)Landroid/os/Handler;
@@ -255,8 +271,10 @@
 
     const-string v1, "onEndpointLost: manager"
 
+    .line 1
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     iget-object v0, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;->this$0:Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;
 
     invoke-static {v0}, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->access$100(Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;)Landroid/os/Handler;
@@ -275,6 +293,7 @@
 .method public onPayloadReceived(II[B)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;->this$0:Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;
 
     invoke-static {v0}, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->access$100(Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;)Landroid/os/Handler;
@@ -293,6 +312,7 @@
 .method public onPayloadSentResult(III)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;->this$0:Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;
 
     invoke-static {v0}, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;->access$100(Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;)Landroid/os/Handler;

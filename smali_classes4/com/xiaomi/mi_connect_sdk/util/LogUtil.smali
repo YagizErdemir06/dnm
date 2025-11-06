@@ -17,6 +17,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -135,6 +136,7 @@
 .method private static varargs formatString(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
     .locals 1
 
+    .line 1
     array-length v0, p1
 
     if-nez v0, :cond_0
@@ -208,6 +210,7 @@
 .method public static setDebug(Z)V
     .locals 0
 
+    .line 1
     sput-boolean p0, Lcom/xiaomi/mi_connect_sdk/util/LogUtil;->sIsDebug:Z
 
     return-void

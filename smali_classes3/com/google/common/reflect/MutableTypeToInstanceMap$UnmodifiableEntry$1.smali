@@ -1,4 +1,4 @@
-.class Lcom/google/common/reflect/MutableTypeToInstanceMap$UnmodifiableEntry$1;
+.class public Lcom/google/common/reflect/MutableTypeToInstanceMap$UnmodifiableEntry$1;
 .super Lcom/google/common/collect/ForwardingSet;
 .source "SourceFile"
 
@@ -23,13 +23,14 @@
 
 
 # instance fields
-.field final synthetic val$entries:Ljava/util/Set;
+.field public final synthetic val$entries:Ljava/util/Set;
 
 
 # direct methods
 .method public constructor <init>(Ljava/util/Set;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/reflect/MutableTypeToInstanceMap$UnmodifiableEntry$1;->val$entries:Ljava/util/Set;
 
     invoke-direct {p0}, Lcom/google/common/collect/ForwardingSet;-><init>()V
@@ -89,6 +90,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/ForwardingCollection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0

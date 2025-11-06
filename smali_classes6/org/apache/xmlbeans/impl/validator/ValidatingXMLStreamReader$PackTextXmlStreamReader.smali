@@ -1,4 +1,4 @@
-.class Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$PackTextXmlStreamReader;
+.class public Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$PackTextXmlStreamReader;
 .super Ljavax/xml/stream/util/StreamReaderDelegate;
 .source "SourceFile"
 
@@ -18,7 +18,7 @@
 
 
 # static fields
-.field static final synthetic $assertionsDisabled:Z
+.field public static final synthetic $assertionsDisabled:Z
 
 
 # instance fields
@@ -33,6 +33,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader;->class$org$apache$xmlbeans$impl$validator$ValidatingXMLStreamReader:Ljava/lang/Class;
 
     if-nez v0, :cond_0
@@ -86,12 +87,14 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0}, Ljavax/xml/stream/util/StreamReaderDelegate;->hasText()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$PackTextXmlStreamReader;->_buffer:Ljava/lang/StringBuffer;
 
     invoke-super {p0}, Ljavax/xml/stream/util/StreamReaderDelegate;->getText()Ljava/lang/String;
@@ -103,8 +106,10 @@
     :cond_0
     const/4 v0, 0x1
 
+    .line 3
     iput-boolean v0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$PackTextXmlStreamReader;->_hasBufferedText:Z
 
+    .line 4
     :cond_1
     :goto_0
     invoke-virtual {p0}, Ljavax/xml/stream/util/StreamReaderDelegate;->hasNext()Z
@@ -113,6 +118,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 5
     invoke-super {p0}, Ljavax/xml/stream/util/StreamReaderDelegate;->next()I
 
     move-result v0
@@ -135,6 +141,7 @@
 
     return-void
 
+    .line 6
     :cond_2
     invoke-super {p0}, Ljavax/xml/stream/util/StreamReaderDelegate;->hasText()Z
 
@@ -142,6 +149,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 7
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$PackTextXmlStreamReader;->_buffer:Ljava/lang/StringBuffer;
 
     invoke-super {p0}, Ljavax/xml/stream/util/StreamReaderDelegate;->getText()Ljava/lang/String;
@@ -159,6 +167,7 @@
 .method private clearBuffer()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$PackTextXmlStreamReader;->_buffer:Ljava/lang/StringBuffer;
 
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->length()I
@@ -169,6 +178,7 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/lang/StringBuffer;->delete(II)Ljava/lang/StringBuffer;
 
+    .line 2
     iput-boolean v2, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$PackTextXmlStreamReader;->_hasBufferedText:Z
 
     return-void
@@ -179,14 +189,17 @@
 .method public getEventType()I
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$PackTextXmlStreamReader;->_hasBufferedText:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$PackTextXmlStreamReader;->_textEventType:I
 
     return p0
 
+    .line 3
     :cond_0
     invoke-super {p0}, Ljavax/xml/stream/util/StreamReaderDelegate;->getEventType()I
 
@@ -198,6 +211,7 @@
 .method public getText()Ljava/lang/String;
     .locals 1
 
+    .line 1
     sget-boolean v0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$PackTextXmlStreamReader;->$assertionsDisabled:Z
 
     if-nez v0, :cond_1
@@ -215,6 +229,7 @@
 
     throw p0
 
+    .line 2
     :cond_1
     :goto_0
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$PackTextXmlStreamReader;->_buffer:Ljava/lang/StringBuffer;
@@ -299,6 +314,7 @@
 .method public getTextLength()I
     .locals 1
 
+    .line 1
     sget-boolean v0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$PackTextXmlStreamReader;->$assertionsDisabled:Z
 
     if-nez v0, :cond_1
@@ -316,6 +332,7 @@
 
     throw p0
 
+    .line 2
     :cond_1
     :goto_0
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$PackTextXmlStreamReader;->_buffer:Ljava/lang/StringBuffer;
@@ -330,6 +347,7 @@
 .method public getTextStart()I
     .locals 1
 
+    .line 1
     sget-boolean v0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$PackTextXmlStreamReader;->$assertionsDisabled:Z
 
     if-nez v0, :cond_1
@@ -357,6 +375,7 @@
 .method public hasText()Z
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$PackTextXmlStreamReader;->_hasBufferedText:Z
 
     if-eqz v0, :cond_0
@@ -365,6 +384,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     invoke-super {p0}, Ljavax/xml/stream/util/StreamReaderDelegate;->hasText()Z
 
@@ -376,12 +396,15 @@
 .method public init(Ljavax/xml/stream/XMLStreamReader;)V
     .locals 1
 
+    .line 1
     invoke-virtual {p0, p1}, Ljavax/xml/stream/util/StreamReaderDelegate;->setParent(Ljavax/xml/stream/XMLStreamReader;)V
 
     const/4 p1, 0x0
 
+    .line 2
     iput-boolean p1, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$PackTextXmlStreamReader;->_hasBufferedText:Z
 
+    .line 3
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$PackTextXmlStreamReader;->_buffer:Ljava/lang/StringBuffer;
 
     invoke-virtual {p0}, Ljava/lang/StringBuffer;->length()I
@@ -396,6 +419,7 @@
 .method public isWhiteSpace()Z
     .locals 1
 
+    .line 1
     sget-boolean v0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$PackTextXmlStreamReader;->$assertionsDisabled:Z
 
     if-nez v0, :cond_1
@@ -413,6 +437,7 @@
 
     throw p0
 
+    .line 2
     :cond_1
     :goto_0
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$PackTextXmlStreamReader;->_buffer:Ljava/lang/StringBuffer;
@@ -432,18 +457,22 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$PackTextXmlStreamReader;->_hasBufferedText:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$PackTextXmlStreamReader;->clearBuffer()V
 
+    .line 3
     invoke-super {p0}, Ljavax/xml/stream/util/StreamReaderDelegate;->getEventType()I
 
     move-result p0
 
     return p0
 
+    .line 4
     :cond_0
     invoke-super {p0}, Ljavax/xml/stream/util/StreamReaderDelegate;->next()I
 
@@ -461,9 +490,11 @@
 
     if-ne v0, v1, :cond_2
 
+    .line 5
     :cond_1
     iput v0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$PackTextXmlStreamReader;->_textEventType:I
 
+    .line 6
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader$PackTextXmlStreamReader;->bufferText()V
 
     :cond_2

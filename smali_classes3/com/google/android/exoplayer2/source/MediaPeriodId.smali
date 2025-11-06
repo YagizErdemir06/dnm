@@ -153,6 +153,7 @@
 .method public copyWithPeriodUid(Ljava/lang/Object;)Lcom/google/android/exoplayer2/source/MediaPeriodId;
     .locals 8
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/MediaPeriodId;->periodUid:Ljava/lang/Object;
 
     invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -163,6 +164,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     new-instance v0, Lcom/google/android/exoplayer2/source/MediaPeriodId;
 
@@ -189,6 +191,7 @@
 .method public copyWithWindowSequenceNumber(J)Lcom/google/android/exoplayer2/source/MediaPeriodId;
     .locals 8
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/MediaPeriodId;->windowSequenceNumber:J
 
     cmp-long v0, v0, p1
@@ -197,6 +200,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     new-instance v0, Lcom/google/android/exoplayer2/source/MediaPeriodId;
 
@@ -233,6 +237,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/android/exoplayer2/source/MediaPeriodId;
 
@@ -242,9 +247,11 @@
 
     return v2
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/source/MediaPeriodId;
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/MediaPeriodId;->periodUid:Ljava/lang/Object;
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/source/MediaPeriodId;->periodUid:Ljava/lang/Object;
@@ -293,6 +300,7 @@
 .method public hashCode()I
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/MediaPeriodId;->periodUid:Ljava/lang/Object;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -305,18 +313,21 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
+    .line 2
     iget v0, p0, Lcom/google/android/exoplayer2/source/MediaPeriodId;->adGroupIndex:I
 
     add-int/2addr v1, v0
 
     mul-int/lit8 v1, v1, 0x1f
 
+    .line 3
     iget v0, p0, Lcom/google/android/exoplayer2/source/MediaPeriodId;->adIndexInAdGroup:I
 
     add-int/2addr v1, v0
 
     mul-int/lit8 v1, v1, 0x1f
 
+    .line 4
     iget-wide v2, p0, Lcom/google/android/exoplayer2/source/MediaPeriodId;->windowSequenceNumber:J
 
     long-to-int v0, v2
@@ -325,6 +336,7 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
+    .line 5
     iget p0, p0, Lcom/google/android/exoplayer2/source/MediaPeriodId;->nextAdGroupIndex:I
 
     add-int/2addr v1, p0
@@ -335,6 +347,7 @@
 .method public isAd()Z
     .locals 1
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/source/MediaPeriodId;->adGroupIndex:I
 
     const/4 v0, -0x1

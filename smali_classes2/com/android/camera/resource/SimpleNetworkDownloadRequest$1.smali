@@ -1,4 +1,4 @@
-.class Lcom/android/camera/resource/SimpleNetworkDownloadRequest$1;
+.class public Lcom/android/camera/resource/SimpleNetworkDownloadRequest$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,17 +18,30 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/camera/resource/SimpleNetworkDownloadRequest;
+.field public final synthetic this$0:Lcom/android/camera/resource/SimpleNetworkDownloadRequest;
 
-.field final synthetic val$listener:Lcom/android/camera/resource/ResponseListener;
+.field public final synthetic val$listener:Lcom/android/camera/resource/ResponseListener;
 
-.field final synthetic val$t:Ljava/lang/Object;
+.field public final synthetic val$t:Ljava/lang/Object;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera/resource/SimpleNetworkDownloadRequest;Lcom/android/camera/resource/ResponseListener;Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$listener",
+            "val$t"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/resource/SimpleNetworkDownloadRequest$1;->this$0:Lcom/android/camera/resource/SimpleNetworkDownloadRequest;
 
     iput-object p2, p0, Lcom/android/camera/resource/SimpleNetworkDownloadRequest$1;->val$listener:Lcom/android/camera/resource/ResponseListener;
@@ -44,9 +57,21 @@
 # virtual methods
 .method public onFailure(Lokhttp3/Call;Ljava/io/IOException;)V
     .locals 3
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "call",
+            "e"
+        }
+    .end annotation
+
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -69,7 +94,8 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 2
+    invoke-virtual {p2}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object p1
 
@@ -85,13 +111,16 @@
 
     const-string v2, "DownloadRequest"
 
+    .line 3
     invoke-static {v2, p1, v1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 4
     iget-object p0, p0, Lcom/android/camera/resource/SimpleNetworkDownloadRequest$1;->val$listener:Lcom/android/camera/resource/ResponseListener;
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 5
+    invoke-virtual {p2}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object p1
 
@@ -103,7 +132,18 @@
 
 .method public onResponse(Lokhttp3/Call;Lokhttp3/Response;)V
     .locals 13
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "call",
+            "response"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -134,6 +174,7 @@
 
     invoke-static {v4, v0, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     new-instance v0, Ljava/io/File;
 
     iget-object v3, p0, Lcom/android/camera/resource/SimpleNetworkDownloadRequest$1;->this$0:Lcom/android/camera/resource/SimpleNetworkDownloadRequest;
@@ -144,20 +185,24 @@
 
     invoke-direct {v0, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
+    .line 3
     invoke-virtual {v0}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
+    .line 5
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
+    .line 6
     :cond_0
     :try_start_0
     invoke-virtual {p2}, Lokhttp3/Response;->body()Lokhttp3/ResponseBody;
@@ -170,6 +215,7 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 7
     :try_start_1
     iget-object v3, p0, Lcom/android/camera/resource/SimpleNetworkDownloadRequest$1;->this$0:Lcom/android/camera/resource/SimpleNetworkDownloadRequest;
 
@@ -196,6 +242,7 @@
     :try_start_2
     new-array v6, v5, [B
 
+    .line 8
     invoke-virtual {p2}, Lokhttp3/Response;->body()Lokhttp3/ResponseBody;
 
     move-result-object v7
@@ -206,6 +253,7 @@
 
     const-wide/16 v9, 0x0
 
+    .line 9
     :cond_1
     :goto_0
     invoke-virtual {v0, v6, v2, v5}, Ljava/io/InputStream;->read([BII)I
@@ -216,18 +264,22 @@
 
     if-eq v11, v12, :cond_3
 
+    .line 10
     invoke-virtual {v3, v6, v2, v11}, Ljava/io/OutputStream;->write([BII)V
 
     int-to-long v11, v11
 
     add-long/2addr v9, v11
 
+    .line 11
     iget-object v11, p0, Lcom/android/camera/resource/SimpleNetworkDownloadRequest$1;->val$listener:Lcom/android/camera/resource/ResponseListener;
 
     if-eqz v11, :cond_2
 
+    .line 12
     invoke-interface {v11, v9, v10, v7, v8}, Lcom/android/camera/resource/ResponseListener;->onResponseProgress(JJ)V
 
+    .line 13
     :cond_2
     iget-object v11, p0, Lcom/android/camera/resource/SimpleNetworkDownloadRequest$1;->this$0:Lcom/android/camera/resource/SimpleNetworkDownloadRequest;
 
@@ -237,6 +289,7 @@
 
     if-eqz v11, :cond_1
 
+    .line 14
     iget-object v11, p0, Lcom/android/camera/resource/SimpleNetworkDownloadRequest$1;->this$0:Lcom/android/camera/resource/SimpleNetworkDownloadRequest;
 
     invoke-static {v11}, Lcom/android/camera/resource/SimpleNetworkDownloadRequest;->access$100(Lcom/android/camera/resource/SimpleNetworkDownloadRequest;)Lio/reactivex/ObservableEmitter;
@@ -251,6 +304,7 @@
 
     goto :goto_0
 
+    .line 15
     :cond_3
     iget-object v5, p0, Lcom/android/camera/resource/SimpleNetworkDownloadRequest$1;->this$0:Lcom/android/camera/resource/SimpleNetworkDownloadRequest;
 
@@ -260,6 +314,7 @@
 
     if-eqz v5, :cond_4
 
+    .line 16
     iget-object v5, p0, Lcom/android/camera/resource/SimpleNetworkDownloadRequest$1;->this$0:Lcom/android/camera/resource/SimpleNetworkDownloadRequest;
 
     invoke-static {v5}, Lcom/android/camera/resource/SimpleNetworkDownloadRequest;->access$100(Lcom/android/camera/resource/SimpleNetworkDownloadRequest;)Lio/reactivex/ObservableEmitter;
@@ -272,6 +327,7 @@
 
     invoke-interface {v5, v6}, Lio/reactivex/Emitter;->onNext(Ljava/lang/Object;)V
 
+    .line 17
     iget-object v5, p0, Lcom/android/camera/resource/SimpleNetworkDownloadRequest$1;->this$0:Lcom/android/camera/resource/SimpleNetworkDownloadRequest;
 
     invoke-static {v5}, Lcom/android/camera/resource/SimpleNetworkDownloadRequest;->access$100(Lcom/android/camera/resource/SimpleNetworkDownloadRequest;)Lio/reactivex/ObservableEmitter;
@@ -280,6 +336,7 @@
 
     invoke-interface {v5}, Lio/reactivex/Emitter;->onComplete()V
 
+    .line 18
     :cond_4
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -311,6 +368,7 @@
 
     if-eqz v3, :cond_5
 
+    .line 19
     :try_start_3
     invoke-virtual {v3}, Ljava/io/OutputStream;->close()V
     :try_end_3
@@ -329,6 +387,7 @@
 
     if-eqz v3, :cond_6
 
+    .line 20
     :try_start_5
     invoke-virtual {v3}, Ljava/io/OutputStream;->close()V
     :try_end_5
@@ -375,6 +434,7 @@
     :catch_0
     move-exception v0
 
+    .line 21
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -395,7 +455,8 @@
 
     invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 22
+    invoke-virtual {v0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object p1
 
@@ -407,8 +468,10 @@
 
     new-array v1, v2, [Ljava/lang/Object;
 
+    .line 23
     invoke-static {v4, p1, v1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 24
     new-instance p1, Ljava/io/File;
 
     iget-object v1, p0, Lcom/android/camera/resource/SimpleNetworkDownloadRequest$1;->this$0:Lcom/android/camera/resource/SimpleNetworkDownloadRequest;
@@ -419,14 +482,17 @@
 
     invoke-direct {p1, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
+    .line 25
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result v1
 
     if-eqz v1, :cond_8
 
+    .line 26
     invoke-virtual {p1}, Ljava/io/File;->delete()Z
 
+    .line 27
     :cond_8
     iget-object p1, p0, Lcom/android/camera/resource/SimpleNetworkDownloadRequest$1;->val$listener:Lcom/android/camera/resource/ResponseListener;
 
@@ -434,12 +500,14 @@
 
     const/4 v1, 0x3
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 28
+    invoke-virtual {v0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-interface {p1, v1, v0, p2}, Lcom/android/camera/resource/ResponseListener;->onResponseError(ILjava/lang/String;Ljava/lang/Object;)V
 
+    .line 29
     :cond_9
     iget-object p1, p0, Lcom/android/camera/resource/SimpleNetworkDownloadRequest$1;->this$0:Lcom/android/camera/resource/SimpleNetworkDownloadRequest;
 
@@ -449,6 +517,7 @@
 
     if-eqz p1, :cond_a
 
+    .line 30
     iget-object p1, p0, Lcom/android/camera/resource/SimpleNetworkDownloadRequest$1;->this$0:Lcom/android/camera/resource/SimpleNetworkDownloadRequest;
 
     invoke-static {p1}, Lcom/android/camera/resource/SimpleNetworkDownloadRequest;->access$100(Lcom/android/camera/resource/SimpleNetworkDownloadRequest;)Lio/reactivex/ObservableEmitter;
@@ -457,18 +526,21 @@
 
     invoke-interface {p1}, Lio/reactivex/Emitter;->onComplete()V
 
+    .line 31
     :cond_a
     :goto_3
     iget-object p1, p0, Lcom/android/camera/resource/SimpleNetworkDownloadRequest$1;->val$listener:Lcom/android/camera/resource/ResponseListener;
 
     if-eqz p1, :cond_b
 
+    .line 32
     iget-object p1, p0, Lcom/android/camera/resource/SimpleNetworkDownloadRequest$1;->this$0:Lcom/android/camera/resource/SimpleNetworkDownloadRequest;
 
     const/4 p2, 0x0
 
     invoke-static {p1, p2}, Lcom/android/camera/resource/SimpleNetworkDownloadRequest;->access$202(Lcom/android/camera/resource/SimpleNetworkDownloadRequest;Lokhttp3/Call;)Lokhttp3/Call;
 
+    .line 33
     iget-object p1, p0, Lcom/android/camera/resource/SimpleNetworkDownloadRequest$1;->val$listener:Lcom/android/camera/resource/ResponseListener;
 
     iget-object p0, p0, Lcom/android/camera/resource/SimpleNetworkDownloadRequest$1;->val$t:Ljava/lang/Object;

@@ -27,25 +27,26 @@
 
 
 # instance fields
-.field public a:Ljava/lang/String;
+.field public c:Ljava/lang/String;
 
-.field public b:I
+.field public d:I
 
-.field public c:F
+.field public f:F
 
-.field public d:Z
+.field public g:Z
 
-.field public e:Ljava/lang/String;
+.field public j:Ljava/lang/String;
 
-.field public f:I
+.field public m:I
 
-.field public g:I
+.field public n:I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/airbnb/lottie/LottieAnimationView$f$a;
 
     invoke-direct {v0}, Lcom/airbnb/lottie/LottieAnimationView$f$a;-><init>()V
@@ -55,7 +56,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcel;)V
+.method private constructor <init>(Landroid/os/Parcel;)V
     .locals 2
 
     .line 3
@@ -66,14 +67,14 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/airbnb/lottie/LottieAnimationView$f;->a:Ljava/lang/String;
+    iput-object v0, p0, Lcom/airbnb/lottie/LottieAnimationView$f;->c:Ljava/lang/String;
 
     .line 5
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
-    iput v0, p0, Lcom/airbnb/lottie/LottieAnimationView$f;->c:F
+    iput v0, p0, Lcom/airbnb/lottie/LottieAnimationView$f;->f:F
 
     .line 6
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -90,28 +91,28 @@
     const/4 v1, 0x0
 
     :goto_0
-    iput-boolean v1, p0, Lcom/airbnb/lottie/LottieAnimationView$f;->d:Z
+    iput-boolean v1, p0, Lcom/airbnb/lottie/LottieAnimationView$f;->g:Z
 
     .line 7
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/airbnb/lottie/LottieAnimationView$f;->e:Ljava/lang/String;
+    iput-object v0, p0, Lcom/airbnb/lottie/LottieAnimationView$f;->j:Ljava/lang/String;
 
     .line 8
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    iput v0, p0, Lcom/airbnb/lottie/LottieAnimationView$f;->f:I
+    iput v0, p0, Lcom/airbnb/lottie/LottieAnimationView$f;->m:I
 
     .line 9
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
-    iput p1, p0, Lcom/airbnb/lottie/LottieAnimationView$f;->g:I
+    iput p1, p0, Lcom/airbnb/lottie/LottieAnimationView$f;->n:I
 
     return-void
 .end method
@@ -139,29 +140,36 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    iget-object p2, p0, Lcom/airbnb/lottie/LottieAnimationView$f;->a:Ljava/lang/String;
+    .line 2
+    iget-object p2, p0, Lcom/airbnb/lottie/LottieAnimationView$f;->c:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    iget p2, p0, Lcom/airbnb/lottie/LottieAnimationView$f;->c:F
+    .line 3
+    iget p2, p0, Lcom/airbnb/lottie/LottieAnimationView$f;->f:F
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    iget-boolean p2, p0, Lcom/airbnb/lottie/LottieAnimationView$f;->d:Z
+    .line 4
+    iget-boolean p2, p0, Lcom/airbnb/lottie/LottieAnimationView$f;->g:Z
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget-object p2, p0, Lcom/airbnb/lottie/LottieAnimationView$f;->e:Ljava/lang/String;
+    .line 5
+    iget-object p2, p0, Lcom/airbnb/lottie/LottieAnimationView$f;->j:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    iget p2, p0, Lcom/airbnb/lottie/LottieAnimationView$f;->f:I
+    .line 6
+    iget p2, p0, Lcom/airbnb/lottie/LottieAnimationView$f;->m:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget p0, p0, Lcom/airbnb/lottie/LottieAnimationView$f;->g:I
+    .line 7
+    iget p0, p0, Lcom/airbnb/lottie/LottieAnimationView$f;->n:I
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
 

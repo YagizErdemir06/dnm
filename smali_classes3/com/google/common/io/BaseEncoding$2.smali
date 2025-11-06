@@ -1,4 +1,4 @@
-.class Lcom/google/common/io/BaseEncoding$2;
+.class public Lcom/google/common/io/BaseEncoding$2;
 .super Lcom/google/common/io/ByteSource;
 .source "SourceFile"
 
@@ -15,15 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/io/BaseEncoding;
+.field public final synthetic this$0:Lcom/google/common/io/BaseEncoding;
 
-.field final synthetic val$encodedSource:Lcom/google/common/io/CharSource;
+.field public final synthetic val$encodedSource:Lcom/google/common/io/CharSource;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/io/BaseEncoding;Lcom/google/common/io/CharSource;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/io/BaseEncoding$2;->this$0:Lcom/google/common/io/BaseEncoding;
 
     iput-object p2, p0, Lcom/google/common/io/BaseEncoding$2;->val$encodedSource:Lcom/google/common/io/CharSource;
@@ -43,6 +44,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/io/BaseEncoding$2;->this$0:Lcom/google/common/io/BaseEncoding;
 
     iget-object p0, p0, Lcom/google/common/io/BaseEncoding$2;->val$encodedSource:Lcom/google/common/io/CharSource;

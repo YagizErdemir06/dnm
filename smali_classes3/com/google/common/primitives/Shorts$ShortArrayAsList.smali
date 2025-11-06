@@ -1,4 +1,4 @@
-.class Lcom/google/common/primitives/Shorts$ShortArrayAsList;
+.class public Lcom/google/common/primitives/Shorts$ShortArrayAsList;
 .super Ljava/util/AbstractList;
 .source "SourceFile"
 
@@ -36,11 +36,11 @@
 
 
 # instance fields
-.field final array:[S
+.field public final array:[S
 
-.field final end:I
+.field public final end:I
 
-.field final start:I
+.field public final start:I
 
 
 # direct methods
@@ -84,6 +84,7 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Ljava/lang/Short;
 
     if-eqz v0, :cond_0
@@ -132,17 +133,21 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/common/primitives/Shorts$ShortArrayAsList;
 
     if-eqz v1, :cond_4
 
+    .line 2
     check-cast p1, Lcom/google/common/primitives/Shorts$ShortArrayAsList;
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/common/primitives/Shorts$ShortArrayAsList;->size()I
 
     move-result v1
 
+    .line 4
     invoke-virtual {p1}, Lcom/google/common/primitives/Shorts$ShortArrayAsList;->size()I
 
     move-result v2
@@ -159,6 +164,7 @@
     :goto_0
     if-ge v2, v1, :cond_3
 
+    .line 5
     iget-object v4, p0, Lcom/google/common/primitives/Shorts$ShortArrayAsList;->array:[S
 
     iget v5, p0, Lcom/google/common/primitives/Shorts$ShortArrayAsList;->start:I
@@ -187,6 +193,7 @@
     :cond_3
     return v0
 
+    .line 6
     :cond_4
     invoke-super {p0, p1}, Ljava/util/AbstractList;->equals(Ljava/lang/Object;)Z
 
@@ -235,6 +242,7 @@
 .method public hashCode()I
     .locals 3
 
+    .line 1
     iget v0, p0, Lcom/google/common/primitives/Shorts$ShortArrayAsList;->start:I
 
     const/4 v1, 0x1
@@ -246,6 +254,7 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
+    .line 2
     iget-object v2, p0, Lcom/google/common/primitives/Shorts$ShortArrayAsList;->array:[S
 
     aget-short v2, v2, v0
@@ -271,10 +280,12 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Ljava/lang/Short;
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/primitives/Shorts$ShortArrayAsList;->array:[S
 
     check-cast p1, Ljava/lang/Short;
@@ -293,6 +304,7 @@
 
     if-ltz p1, :cond_0
 
+    .line 3
     iget p0, p0, Lcom/google/common/primitives/Shorts$ShortArrayAsList;->start:I
 
     sub-int/2addr p1, p0
@@ -320,10 +332,12 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Ljava/lang/Short;
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/primitives/Shorts$ShortArrayAsList;->array:[S
 
     check-cast p1, Ljava/lang/Short;
@@ -342,6 +356,7 @@
 
     if-ltz p1, :cond_0
 
+    .line 3
     iget p0, p0, Lcom/google/common/primitives/Shorts$ShortArrayAsList;->start:I
 
     sub-int/2addr p1, p0
@@ -412,6 +427,7 @@
 .method public size()I
     .locals 1
 
+    .line 1
     iget v0, p0, Lcom/google/common/primitives/Shorts$ShortArrayAsList;->end:I
 
     iget p0, p0, Lcom/google/common/primitives/Shorts$ShortArrayAsList;->start:I
@@ -432,20 +448,24 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/primitives/Shorts$ShortArrayAsList;->size()I
 
     move-result v0
 
+    .line 2
     invoke-static {p1, p2, v0}, Lcom/google/common/base/Preconditions;->checkPositionIndexes(III)V
 
     if-ne p1, p2, :cond_0
 
+    .line 3
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p0
 
     return-object p0
 
+    .line 4
     :cond_0
     new-instance v0, Lcom/google/common/primitives/Shorts$ShortArrayAsList;
 
@@ -465,6 +485,7 @@
 .method public toShortArray()[S
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/primitives/Shorts$ShortArrayAsList;->array:[S
 
     iget v1, p0, Lcom/google/common/primitives/Shorts$ShortArrayAsList;->start:I
@@ -481,6 +502,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Lcom/google/common/primitives/Shorts$ShortArrayAsList;->size()I
@@ -493,6 +515,7 @@
 
     const/16 v1, 0x5b
 
+    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lcom/google/common/primitives/Shorts$ShortArrayAsList;->array:[S
@@ -503,6 +526,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
+    .line 3
     iget v1, p0, Lcom/google/common/primitives/Shorts$ShortArrayAsList;->start:I
 
     :goto_0
@@ -514,6 +538,7 @@
 
     const-string v2, ", "
 
+    .line 4
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v2, p0, Lcom/google/common/primitives/Shorts$ShortArrayAsList;->array:[S
@@ -527,6 +552,7 @@
     :cond_0
     const/16 p0, 0x5d
 
+    .line 5
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;

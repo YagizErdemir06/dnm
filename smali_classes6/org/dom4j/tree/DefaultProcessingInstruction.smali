@@ -43,6 +43,7 @@
 .method public getParent()Lorg/dom4j/Element;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/DefaultProcessingInstruction;->parent:Lorg/dom4j/Element;
 
     return-object p0
@@ -59,6 +60,7 @@
 .method public setParent(Lorg/dom4j/Element;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/tree/DefaultProcessingInstruction;->parent:Lorg/dom4j/Element;
 
     return-void
@@ -67,6 +69,7 @@
 .method public setTarget(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/tree/FlyweightProcessingInstruction;->target:Ljava/lang/String;
 
     return-void
@@ -75,8 +78,10 @@
 .method public setText(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/tree/FlyweightProcessingInstruction;->text:Ljava/lang/String;
 
+    .line 2
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/AbstractProcessingInstruction;->parseValues(Ljava/lang/String;)Ljava/util/Map;
 
     move-result-object p1
@@ -89,6 +94,7 @@
 .method public setValue(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/FlyweightProcessingInstruction;->values:Ljava/util/Map;
 
     invoke-interface {p0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -99,8 +105,10 @@
 .method public setValues(Ljava/util/Map;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/tree/FlyweightProcessingInstruction;->values:Ljava/util/Map;
 
+    .line 2
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/AbstractProcessingInstruction;->toString(Ljava/util/Map;)Ljava/lang/String;
 
     move-result-object p1

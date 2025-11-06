@@ -34,8 +34,6 @@
         .annotation build Landroidx/annotation/DrawableRes;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
 .end method
 
 .method public abstract getTintListForDrawableRes(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
@@ -47,13 +45,9 @@
         .annotation build Landroidx/annotation/DrawableRes;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
 .end method
 
 .method public abstract getTintModeForDrawableRes(I)Landroid/graphics/PorterDuff$Mode;
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
 .end method
 
 .method public abstract tintDrawable(Landroid/content/Context;ILandroid/graphics/drawable/Drawable;)Z

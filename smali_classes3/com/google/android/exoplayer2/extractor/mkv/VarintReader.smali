@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/extractor/mkv/VarintReader;
+.class public final Lcom/google/android/exoplayer2/extractor/mkv/VarintReader;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,6 +27,7 @@
 
     new-array v0, v0, [J
 
+    .line 1
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/google/android/exoplayer2/extractor/mkv/VarintReader;->VARINT_LENGTH_MASKS:[J
@@ -49,12 +50,14 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x8
 
     new-array v0, v0, [B
 
+    .line 2
     iput-object v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/VarintReader;->scratch:[B
 
     return-void
@@ -65,6 +68,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     aget-byte v0, p0, v0
 
     int-to-long v0, v0
@@ -75,6 +79,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 2
     sget-object p2, Lcom/google/android/exoplayer2/extractor/mkv/VarintReader;->VARINT_LENGTH_MASKS:[J
 
     add-int/lit8 v4, p1, -0x1
@@ -95,6 +100,7 @@
 
     shl-long/2addr v0, v4
 
+    .line 3
     aget-byte v4, p0, p2
 
     int-to-long v4, v4
@@ -116,6 +122,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     sget-object v1, Lcom/google/android/exoplayer2/extractor/mkv/VarintReader;->VARINT_LENGTH_MASKS:[J
 
@@ -123,6 +130,7 @@
 
     if-ge v0, v2, :cond_1
 
+    .line 2
     aget-wide v1, v1, v0
 
     int-to-long v3, p0
@@ -156,6 +164,7 @@
 .method public getLastLength()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/extractor/mkv/VarintReader;->length:I
 
     return p0
@@ -169,6 +178,7 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/VarintReader;->state:I
 
     const/4 v1, 0x0
@@ -177,6 +187,7 @@
 
     if-nez v0, :cond_2
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/VarintReader;->scratch:[B
 
     invoke-interface {p1, v0, v1, v2, p2}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->readFully([BIIZ)Z
@@ -189,6 +200,7 @@
 
     return-wide p0
 
+    .line 3
     :cond_0
     iget-object p2, p0, Lcom/google/android/exoplayer2/extractor/mkv/VarintReader;->scratch:[B
 
@@ -196,6 +208,7 @@
 
     and-int/lit16 p2, p2, 0xff
 
+    .line 4
     invoke-static {p2}, Lcom/google/android/exoplayer2/extractor/mkv/VarintReader;->parseUnsignedVarintLength(I)I
 
     move-result p2
@@ -206,10 +219,12 @@
 
     if-eq p2, v0, :cond_1
 
+    .line 5
     iput v2, p0, Lcom/google/android/exoplayer2/extractor/mkv/VarintReader;->state:I
 
     goto :goto_0
 
+    .line 6
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -219,12 +234,14 @@
 
     throw p0
 
+    .line 7
     :cond_2
     :goto_0
     iget p2, p0, Lcom/google/android/exoplayer2/extractor/mkv/VarintReader;->length:I
 
     if-le p2, p4, :cond_3
 
+    .line 8
     iput v1, p0, Lcom/google/android/exoplayer2/extractor/mkv/VarintReader;->state:I
 
     const-wide/16 p0, -0x2
@@ -234,15 +251,18 @@
     :cond_3
     if-eq p2, v2, :cond_4
 
+    .line 9
     iget-object p4, p0, Lcom/google/android/exoplayer2/extractor/mkv/VarintReader;->scratch:[B
 
     sub-int/2addr p2, v2
 
     invoke-interface {p1, p4, v2, p2}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->readFully([BII)V
 
+    .line 10
     :cond_4
     iput v1, p0, Lcom/google/android/exoplayer2/extractor/mkv/VarintReader;->state:I
 
+    .line 11
     iget-object p1, p0, Lcom/google/android/exoplayer2/extractor/mkv/VarintReader;->scratch:[B
 
     iget p0, p0, Lcom/google/android/exoplayer2/extractor/mkv/VarintReader;->length:I
@@ -259,8 +279,10 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/VarintReader;->state:I
 
+    .line 2
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/VarintReader;->length:I
 
     return-void

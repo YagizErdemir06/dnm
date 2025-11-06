@@ -24,6 +24,7 @@
 
     const-string v0, "line.separator"
 
+    .line 1
     invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -36,6 +37,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,14 +46,17 @@
 .method private static nestedToString(Ljava/lang/Throwable;)Ljava/lang/String;
     .locals 2
 
+    .line 1
     instance-of v0, p0, Ljava/lang/reflect/InvocationTargetException;
 
     if-eqz v0, :cond_0
 
+    .line 2
     move-object v0, p0
 
     check-cast v0, Ljava/lang/reflect/InvocationTargetException;
 
+    .line 3
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -94,6 +99,7 @@
 
     return-object p0
 
+    .line 4
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
@@ -155,18 +161,21 @@
 .method public static toString(Lorg/apache/xmlbeans/xml/stream/utils/NestedThrowable;)Ljava/lang/String;
     .locals 2
 
+    .line 1
     invoke-interface {p0}, Lorg/apache/xmlbeans/xml/stream/utils/NestedThrowable;->getNested()Ljava/lang/Throwable;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-interface {p0}, Lorg/apache/xmlbeans/xml/stream/utils/NestedThrowable;->superToString()Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance v1, Ljava/lang/StringBuffer;
 

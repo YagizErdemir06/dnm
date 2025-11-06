@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/app/ActionBarDrawerToggle$ToolbarCompatDelegate;
+.class public Landroidx/appcompat/app/ActionBarDrawerToggle$ToolbarCompatDelegate;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,27 +18,31 @@
 
 
 # instance fields
-.field final mDefaultContentDescription:Ljava/lang/CharSequence;
+.field public final mDefaultContentDescription:Ljava/lang/CharSequence;
 
-.field final mDefaultUpIndicator:Landroid/graphics/drawable/Drawable;
+.field public final mDefaultUpIndicator:Landroid/graphics/drawable/Drawable;
 
-.field final mToolbar:Landroidx/appcompat/widget/Toolbar;
+.field public final mToolbar:Landroidx/appcompat/widget/Toolbar;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/appcompat/widget/Toolbar;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/appcompat/app/ActionBarDrawerToggle$ToolbarCompatDelegate;->mToolbar:Landroidx/appcompat/widget/Toolbar;
 
+    .line 3
     invoke-virtual {p1}, Landroidx/appcompat/widget/Toolbar;->getNavigationIcon()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/appcompat/app/ActionBarDrawerToggle$ToolbarCompatDelegate;->mDefaultUpIndicator:Landroid/graphics/drawable/Drawable;
 
+    .line 4
     invoke-virtual {p1}, Landroidx/appcompat/widget/Toolbar;->getNavigationContentDescription()Ljava/lang/CharSequence;
 
     move-result-object p1
@@ -53,9 +57,10 @@
 .method public getActionBarThemedContext()Landroid/content/Context;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/app/ActionBarDrawerToggle$ToolbarCompatDelegate;->mToolbar:Landroidx/appcompat/widget/Toolbar;
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object p0
 
@@ -65,6 +70,7 @@
 .method public getThemeUpIndicator()Landroid/graphics/drawable/Drawable;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/app/ActionBarDrawerToggle$ToolbarCompatDelegate;->mDefaultUpIndicator:Landroid/graphics/drawable/Drawable;
 
     return-object p0
@@ -87,6 +93,7 @@
 
     if-nez p1, :cond_0
 
+    .line 1
     iget-object p1, p0, Landroidx/appcompat/app/ActionBarDrawerToggle$ToolbarCompatDelegate;->mToolbar:Landroidx/appcompat/widget/Toolbar;
 
     iget-object p0, p0, Landroidx/appcompat/app/ActionBarDrawerToggle$ToolbarCompatDelegate;->mDefaultContentDescription:Ljava/lang/CharSequence;
@@ -95,6 +102,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Landroidx/appcompat/app/ActionBarDrawerToggle$ToolbarCompatDelegate;->mToolbar:Landroidx/appcompat/widget/Toolbar;
 
@@ -111,10 +119,12 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/app/ActionBarDrawerToggle$ToolbarCompatDelegate;->mToolbar:Landroidx/appcompat/widget/Toolbar;
 
     invoke-virtual {v0, p1}, Landroidx/appcompat/widget/Toolbar;->setNavigationIcon(Landroid/graphics/drawable/Drawable;)V
 
+    .line 2
     invoke-virtual {p0, p2}, Landroidx/appcompat/app/ActionBarDrawerToggle$ToolbarCompatDelegate;->setActionBarDescription(I)V
 
     return-void

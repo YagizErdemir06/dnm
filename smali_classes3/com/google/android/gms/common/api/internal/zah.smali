@@ -13,6 +13,7 @@
 
     const/4 v0, 0x4
 
+    .line 1
     invoke-direct {p0, v0, p2}, Lcom/google/android/gms/common/api/internal/zad;-><init>(ILcom/google/android/gms/tasks/TaskCompletionSource;)V
 
     iput-object p1, p0, Lcom/google/android/gms/common/api/internal/zah;->zab:Lcom/google/android/gms/common/api/internal/ListenerHolder$ListenerKey;
@@ -25,6 +26,7 @@
 .method public final zaa(Lcom/google/android/gms/common/api/internal/zabq;)Z
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/gms/common/api/internal/zabq;->zah()Ljava/util/Map;
 
     move-result-object p1
@@ -41,6 +43,7 @@
 
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zaci;->zaa:Lcom/google/android/gms/common/api/internal/RegisterListenerMethod;
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/internal/RegisterListenerMethod;->zab()Z
 
     move-result p0
@@ -62,6 +65,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/gms/common/api/internal/zabq;->zah()Ljava/util/Map;
 
     move-result-object p1
@@ -83,6 +87,7 @@
     :cond_0
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zaci;->zaa:Lcom/google/android/gms/common/api/internal/RegisterListenerMethod;
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/internal/RegisterListenerMethod;->getRequiredFeatures()[Lcom/google/android/gms/common/Feature;
 
     move-result-object p0
@@ -98,6 +103,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/gms/common/api/internal/zabq;->zah()Ljava/util/Map;
 
     move-result-object v0
@@ -120,10 +126,12 @@
 
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zad;->zaa:Lcom/google/android/gms/tasks/TaskCompletionSource;
 
+    .line 2
     invoke-virtual {v1, p1, p0}, Lcom/google/android/gms/common/api/internal/UnregisterListenerMethod;->unregisterListener(Lcom/google/android/gms/common/api/Api$AnyClient;Lcom/google/android/gms/tasks/TaskCompletionSource;)V
 
     iget-object p0, v0, Lcom/google/android/gms/common/api/internal/zaci;->zaa:Lcom/google/android/gms/common/api/internal/RegisterListenerMethod;
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/internal/RegisterListenerMethod;->clearListener()V
 
     return-void
@@ -131,6 +139,7 @@
     :cond_0
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zad;->zaa:Lcom/google/android/gms/tasks/TaskCompletionSource;
 
+    .line 4
     sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     invoke-virtual {p0, p1}, Lcom/google/android/gms/tasks/TaskCompletionSource;->trySetResult(Ljava/lang/Object;)Z

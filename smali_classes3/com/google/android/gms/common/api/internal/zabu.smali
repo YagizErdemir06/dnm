@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/api/internal/zabu;
+.class public final Lcom/google/android/gms/common/api/internal/zabu;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -8,7 +8,7 @@
 
 
 # instance fields
-.field final synthetic zaa:Lcom/google/android/gms/common/api/internal/GoogleApiManager;
+.field public final synthetic zaa:Lcom/google/android/gms/common/api/internal/GoogleApiManager;
 
 .field private final zab:Lcom/google/android/gms/common/api/Api$Client;
 
@@ -91,6 +91,7 @@
     .annotation build Landroidx/annotation/WorkerThread;
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/gms/common/api/internal/zabu;->zaf:Z
 
     if-eqz v0, :cond_0
@@ -118,6 +119,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabu;->zaa:Lcom/google/android/gms/common/api/internal/GoogleApiManager;
 
     invoke-static {v0}, Lcom/google/android/gms/common/api/internal/GoogleApiManager;->zaf(Lcom/google/android/gms/common/api/internal/GoogleApiManager;)Landroid/os/Handler;
@@ -138,6 +140,7 @@
     .annotation build Landroidx/annotation/WorkerThread;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabu;->zaa:Lcom/google/android/gms/common/api/internal/GoogleApiManager;
 
     invoke-static {v0}, Lcom/google/android/gms/common/api/internal/GoogleApiManager;->zat(Lcom/google/android/gms/common/api/internal/GoogleApiManager;)Ljava/util/Map;
@@ -154,6 +157,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/google/android/gms/common/api/internal/zabq;->zas(Lcom/google/android/gms/common/ConnectionResult;)V
 
     :cond_0
@@ -179,15 +183,18 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     iput-object p1, p0, Lcom/google/android/gms/common/api/internal/zabu;->zad:Lcom/google/android/gms/common/internal/IAccountAccessor;
 
     iput-object p2, p0, Lcom/google/android/gms/common/api/internal/zabu;->zae:Ljava/util/Set;
 
+    .line 2
     invoke-direct {p0}, Lcom/google/android/gms/common/api/internal/zabu;->zag()V
 
     return-void
 
+    .line 3
     :cond_1
     :goto_0
     new-instance p1, Ljava/lang/Exception;
@@ -200,6 +207,7 @@
 
     invoke-static {p2, v0, p1}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 4
     new-instance p1, Lcom/google/android/gms/common/ConnectionResult;
 
     const/4 p2, 0x4

@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/MapMakerInternalMap$WeakKeyDummyValueEntry$Helper;
+.class public final Lcom/google/common/collect/MapMakerInternalMap$WeakKeyDummyValueEntry$Helper;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -48,6 +48,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/MapMakerInternalMap$WeakKeyDummyValueEntry$Helper;
 
     invoke-direct {v0}, Lcom/google/common/collect/MapMakerInternalMap$WeakKeyDummyValueEntry$Helper;-><init>()V
@@ -60,6 +61,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -77,6 +79,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/common/collect/MapMakerInternalMap$WeakKeyDummyValueEntry$Helper;->INSTANCE:Lcom/google/common/collect/MapMakerInternalMap$WeakKeyDummyValueEntry$Helper;
 
     return-object v0
@@ -152,6 +155,7 @@
 .method public keyStrength()Lcom/google/common/collect/MapMakerInternalMap$Strength;
     .locals 0
 
+    .line 1
     sget-object p0, Lcom/google/common/collect/MapMakerInternalMap$Strength;->WEAK:Lcom/google/common/collect/MapMakerInternalMap$Strength;
 
     return-object p0
@@ -245,6 +249,7 @@
 .method public bridge synthetic setValue(Lcom/google/common/collect/MapMakerInternalMap$Segment;Lcom/google/common/collect/MapMakerInternalMap$InternalEntry;Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/google/common/collect/MapMakerInternalMap$WeakKeyDummyValueSegment;
 
     check-cast p2, Lcom/google/common/collect/MapMakerInternalMap$WeakKeyDummyValueEntry;
@@ -276,6 +281,7 @@
 .method public valueStrength()Lcom/google/common/collect/MapMakerInternalMap$Strength;
     .locals 0
 
+    .line 1
     sget-object p0, Lcom/google/common/collect/MapMakerInternalMap$Strength;->STRONG:Lcom/google/common/collect/MapMakerInternalMap$Strength;
 
     return-object p0

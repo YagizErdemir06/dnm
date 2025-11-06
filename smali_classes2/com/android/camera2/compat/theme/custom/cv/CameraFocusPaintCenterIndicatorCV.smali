@@ -1,13 +1,22 @@
 .class public Lcom/android/camera2/compat/theme/custom/cv/CameraFocusPaintCenterIndicatorCV;
-.super Ly9/q;
+.super Ld/d/a/d8/n2/d/u;
 .source "SourceFile"
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
-    invoke-direct {p0, p1}, Ly9/q;-><init>(Landroid/content/Context;)V
+    .line 1
+    invoke-direct {p0, p1}, Ld/d/a/d8/n2/d/u;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -16,20 +25,31 @@
 # virtual methods
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "canvas"
+        }
+    .end annotation
 
-    iget v0, p0, Lcom/android/camera/ui/drawable/b;->mMiddleX:F
+    .line 1
+    iget v0, p0, Ld/d/a/d8/n2/b;->mMiddleX:F
 
-    iget v1, p0, Lcom/android/camera/ui/drawable/b;->mMiddleY:F
+    iget v1, p0, Ld/d/a/d8/n2/b;->mMiddleY:F
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    iget v0, p0, Lcom/android/camera/ui/drawable/b;->mRotatingDegree:F
+    .line 2
+    iget v0, p0, Ld/d/a/d8/n2/b;->mRotatingDegree:F
 
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->rotate(F)V
 
-    iget-object v0, p0, Ly9/q;->indicatorState:Ly9/z;
+    .line 3
+    iget-object v0, p0, Ld/d/a/d8/n2/d/u;->indicatorState:Ld/d/a/d8/n2/d/z;
 
-    iget v0, v0, Ly9/z;->a:I
+    iget v0, v0, Ld/d/a/d8/n2/d/z;->a:I
 
     const/4 v1, 0x2
 
@@ -45,23 +65,26 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
-    iget-object v0, p0, Lcom/android/camera/ui/drawable/b;->mPaint:Landroid/graphics/Paint;
+    iget-object v0, p0, Ld/d/a/d8/n2/b;->mPaint:Landroid/graphics/Paint;
 
-    iget v1, p0, Lcom/android/camera/ui/drawable/b;->mCurrentAlpha:I
+    iget v1, p0, Ld/d/a/d8/n2/b;->mCurrentAlpha:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    invoke-virtual {p0, p1}, Ly9/q;->drawCenterLock(Landroid/graphics/Canvas;)V
+    .line 5
+    invoke-virtual {p0, p1}, Ld/d/a/d8/n2/d/u;->drawCenterLock(Landroid/graphics/Canvas;)V
 
     goto :goto_0
 
+    .line 6
     :cond_1
-    invoke-static {}, Lg2/b;->h()Ll2/g;
+    invoke-static {}, Ld/d/a/l6/b;->h()Ld/d/a/l6/e/l/g;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ll2/g;->D()I
+    invoke-virtual {v0}, Ld/d/a/l6/e/l/g;->A()I
 
     move-result v0
 
@@ -71,20 +94,23 @@
 
     return-void
 
+    .line 7
     :cond_2
-    iget-object v0, p0, Ly9/q;->mSunPaint:Landroid/graphics/Paint;
+    iget-object v0, p0, Ld/d/a/d8/n2/d/u;->mSunPaint:Landroid/graphics/Paint;
 
-    iget v1, p0, Lcom/android/camera/ui/drawable/b;->mCurrentColor:I
+    iget v1, p0, Ld/d/a/d8/n2/b;->mCurrentColor:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    iget-object v0, p0, Ly9/q;->mSunPaint:Landroid/graphics/Paint;
+    .line 8
+    iget-object v0, p0, Ld/d/a/d8/n2/d/u;->mSunPaint:Landroid/graphics/Paint;
 
-    iget v1, p0, Lcom/android/camera/ui/drawable/b;->mCurrentAlpha:I
+    iget v1, p0, Ld/d/a/d8/n2/b;->mCurrentAlpha:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    iget-object v0, p0, Ly9/q;->mSunBitmap:Landroid/graphics/Bitmap;
+    .line 9
+    iget-object v0, p0, Ld/d/a/d8/n2/d/u;->mSunBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_4
 
@@ -96,10 +122,12 @@
 
     goto :goto_0
 
+    .line 10
     :cond_3
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    iget-object v0, p0, Ly9/q;->mSunBitmap:Landroid/graphics/Bitmap;
+    .line 11
+    iget-object v0, p0, Ld/d/a/d8/n2/d/u;->mSunBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -109,7 +137,7 @@
 
     int-to-float v0, v0
 
-    iget v1, p0, Lcom/android/camera/ui/drawable/b;->mCurrentWidthPercent:F
+    iget v1, p0, Ld/d/a/d8/n2/b;->mCurrentWidthPercent:F
 
     mul-float/2addr v0, v1
 
@@ -117,7 +145,7 @@
 
     div-float/2addr v0, v1
 
-    iget-object v2, p0, Ly9/q;->mSunBitmap:Landroid/graphics/Bitmap;
+    iget-object v2, p0, Ld/d/a/d8/n2/d/u;->mSunBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -127,7 +155,7 @@
 
     int-to-float v2, v2
 
-    iget v3, p0, Lcom/android/camera/ui/drawable/b;->mCurrentWidthPercent:F
+    iget v3, p0, Ld/d/a/d8/n2/b;->mCurrentWidthPercent:F
 
     mul-float/2addr v2, v3
 
@@ -135,18 +163,21 @@
 
     invoke-virtual {p1, v0, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    iget v0, p0, Lcom/android/camera/ui/drawable/b;->mCurrentWidthPercent:F
+    .line 12
+    iget v0, p0, Ld/d/a/d8/n2/b;->mCurrentWidthPercent:F
 
     invoke-virtual {p1, v0, v0}, Landroid/graphics/Canvas;->scale(FF)V
 
-    iget-object v0, p0, Ly9/q;->mSunBitmap:Landroid/graphics/Bitmap;
+    .line 13
+    iget-object v0, p0, Ld/d/a/d8/n2/d/u;->mSunBitmap:Landroid/graphics/Bitmap;
 
-    iget-object p0, p0, Ly9/q;->mSunPaint:Landroid/graphics/Paint;
+    iget-object p0, p0, Ld/d/a/d8/n2/d/u;->mSunPaint:Landroid/graphics/Paint;
 
     const/4 v1, 0x0
 
     invoke-virtual {p1, v0, v1, v1, p0}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
+    .line 14
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     :cond_4

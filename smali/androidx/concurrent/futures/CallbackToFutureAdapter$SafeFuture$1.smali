@@ -1,4 +1,4 @@
-.class Landroidx/concurrent/futures/CallbackToFutureAdapter$SafeFuture$1;
+.class public Landroidx/concurrent/futures/CallbackToFutureAdapter$SafeFuture$1;
 .super Landroidx/concurrent/futures/AbstractResolvableFuture;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/concurrent/futures/CallbackToFutureAdapter$SafeFuture;
+.field public final synthetic this$0:Landroidx/concurrent/futures/CallbackToFutureAdapter$SafeFuture;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/concurrent/futures/CallbackToFutureAdapter$SafeFuture;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/concurrent/futures/CallbackToFutureAdapter$SafeFuture$1;->this$0:Landroidx/concurrent/futures/CallbackToFutureAdapter$SafeFuture;
 
     invoke-direct {p0}, Landroidx/concurrent/futures/AbstractResolvableFuture;-><init>()V
@@ -41,11 +42,12 @@
 .method public pendingToString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-object p0, p0, Landroidx/concurrent/futures/CallbackToFutureAdapter$SafeFuture$1;->this$0:Landroidx/concurrent/futures/CallbackToFutureAdapter$SafeFuture;
 
     iget-object p0, p0, Landroidx/concurrent/futures/CallbackToFutureAdapter$SafeFuture;->completerWeakReference:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -57,12 +59,13 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "tag=["
+    const-string v1, "tag=["
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

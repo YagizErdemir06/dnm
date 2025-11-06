@@ -34,6 +34,7 @@
 .method private final zab()Lcom/google/android/gms/common/api/internal/zau;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zat;->zac:Lcom/google/android/gms/common/api/internal/zau;
 
     const-string v1, "Callbacks must be attached to a ClientConnectionHelper instance before connecting the client."
@@ -54,6 +55,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/common/api/internal/zat;->zab()Lcom/google/android/gms/common/api/internal/zau;
 
     move-result-object p0
@@ -70,6 +72,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/common/api/internal/zat;->zab()Lcom/google/android/gms/common/api/internal/zau;
 
     move-result-object v0
@@ -86,6 +89,7 @@
 .method public final onConnectionSuspended(I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/common/api/internal/zat;->zab()Lcom/google/android/gms/common/api/internal/zau;
 
     move-result-object p0

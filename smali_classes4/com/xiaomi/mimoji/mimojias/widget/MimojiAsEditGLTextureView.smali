@@ -15,41 +15,41 @@
 
 
 # static fields
-.field public static final C1:I = 0xc8
+.field private static final Q8:Ljava/lang/String; = "MimojiAsEditGLTextureView"
 
-.field public static final K0:Ljava/lang/String; = "MimojiAsEditGLTextureView"
+.field public static final R8:I = 0x4
 
-.field public static K1:[F = null
+.field public static final S8:I = 0x5
 
-.field public static final V1:Z = false
+.field public static final T8:I = 0x6
 
-.field public static final k1:I = 0x4
+.field public static final U8:I = 0xc8
 
-.field public static final p1:I = 0x5
+.field public static final V8:I = 0xc8
 
-.field public static final q1:I = 0x6
+.field private static W8:[F = null
 
-.field public static final v1:I = 0xc8
+.field private static final X8:Z = false
 
 
 # instance fields
-.field public final C:Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView$b;
+.field private final Y8:Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView$b;
 
-.field public D:I
+.field private Z8:I
 
-.field public F:J
+.field private a9:J
 
-.field public G:Lcom/arcsoft/avatar2/AvatarEngine;
+.field private b9:Lcom/arcsoft/avatar2/AvatarEngine;
 
-.field public H:I
+.field private c9:I
 
-.field public I:Landroid/os/Handler;
+.field private d9:Landroid/os/Handler;
 
-.field public J:Z
+.field private e9:Z
 
-.field public K:Z
+.field private f9:Z
 
-.field public k0:Z
+.field private g9:Z
 
 
 # direct methods
@@ -60,9 +60,10 @@
 
     new-array v0, v0, [F
 
+    .line 1
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->K1:[F
+    sput-object v0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->W8:[F
 
     return-void
 
@@ -79,6 +80,14 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -90,6 +99,16 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     .line 2
     invoke-direct {p0, p1, p2}, Lcom/android/camera/ui/GLTextureView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -101,31 +120,31 @@
 
     invoke-direct {p1, p0, p2}, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView$b;-><init>(Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView$a;)V
 
-    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->C:Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView$b;
+    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->Y8:Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView$b;
 
     const/4 p2, 0x0
 
     .line 4
-    iput p2, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->D:I
+    iput p2, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->Z8:I
 
     const-wide/16 v0, 0x0
 
     .line 5
-    iput-wide v0, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->F:J
+    iput-wide v0, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->a9:J
 
     const/16 v0, 0x5a
 
     .line 6
-    iput v0, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->H:I
+    iput v0, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->c9:I
 
     .line 7
-    iput-boolean p2, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->J:Z
+    iput-boolean p2, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->e9:Z
 
     .line 8
-    iput-boolean p2, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->K:Z
+    iput-boolean p2, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->f9:Z
 
     .line 9
-    iput-boolean p2, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->k0:Z
+    iput-boolean p2, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->g9:Z
 
     const/4 v0, 0x3
 
@@ -149,6 +168,94 @@
     return-void
 .end method
 
+.method private t()V
+    .locals 7
+
+    .line 1
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v0
+
+    .line 2
+    iget-wide v2, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->a9:J
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v4, v2, v4
+
+    if-nez v4, :cond_0
+
+    .line 3
+    iput-wide v0, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->a9:J
+
+    goto :goto_0
+
+    :cond_0
+    sub-long v2, v0, v2
+
+    const-wide/32 v4, 0x3b9aca00
+
+    cmp-long v2, v2, v4
+
+    if-lez v2, :cond_1
+
+    .line 4
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "fps: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v3, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->Z8:I
+
+    int-to-double v3, v3
+
+    const-wide v5, 0x41cdcd6500000000L    # 1.0E9
+
+    mul-double/2addr v3, v5
+
+    iget-wide v5, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->a9:J
+
+    sub-long v5, v0, v5
+
+    long-to-double v5, v5
+
+    div-double/2addr v3, v5
+
+    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    new-array v4, v3, [Ljava/lang/Object;
+
+    const-string v5, "MimojiAsEditGLTextureView"
+
+    invoke-static {v5, v2, v4}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 5
+    iput-wide v0, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->a9:J
+
+    .line 6
+    iput v3, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->Z8:I
+
+    .line 7
+    :cond_1
+    :goto_0
+    iget v0, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->Z8:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->Z8:I
+
+    return-void
+.end method
+
 
 # virtual methods
 .method public n()V
@@ -156,14 +263,18 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, v0}, Lcom/android/camera/ui/GLTextureView;->setPreserveEGLContextOnPause(Z)V
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->G:Lcom/arcsoft/avatar2/AvatarEngine;
+    .line 2
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->b9:Lcom/arcsoft/avatar2/AvatarEngine;
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {v0}, Lcom/arcsoft/avatar2/AvatarEngine;->releaseRender()V
 
+    .line 4
     :cond_0
     invoke-super {p0}, Lcom/android/camera/ui/GLTextureView;->n()V
 
@@ -172,62 +283,79 @@
 
 .method public onDrawFrame(Ljavax/microedition/khronos/opengles/GL10;)V
     .locals 11
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "gl10"
+        }
+    .end annotation
 
     const p1, 0x3da88ce7    # 0.0823f
 
     const/high16 v0, 0x3f800000    # 1.0f
 
+    .line 1
     invoke-static {p1, p1, p1, v0}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
 
     const/16 p1, 0xb71
 
+    .line 2
     invoke-static {p1}, Landroid/opengl/GLES20;->glEnable(I)V
 
     const/16 p1, 0x4100
 
+    .line 3
     invoke-static {p1}, Landroid/opengl/GLES20;->glClear(I)V
 
-    iget-boolean p1, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->J:Z
+    .line 4
+    iget-boolean p1, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->e9:Z
 
     if-eqz p1, :cond_0
 
     return-void
 
+    .line 5
     :cond_0
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/TextureView;->getWidth()I
 
     move-result v2
 
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+    .line 6
+    invoke-virtual {p0}, Landroid/view/TextureView;->getHeight()I
 
     move-result v3
 
-    invoke-static {}, Lji/a;->n()Lji/a;
+    .line 7
+    invoke-static {}, Ld/o/v/c/e/a/a;->n()Ld/o/v/c/e/a/a;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lji/a;->e()Lcom/arcsoft/avatar2/AvatarEngine;
+    invoke-virtual {p1}, Ld/o/v/c/e/a/a;->e()Lcom/arcsoft/avatar2/AvatarEngine;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->G:Lcom/arcsoft/avatar2/AvatarEngine;
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->b9:Lcom/arcsoft/avatar2/AvatarEngine;
 
     const/4 p1, 0x0
 
     if-nez v0, :cond_1
 
-    const-string p0, "onDrawFrame mAvatar  null"
+    new-array p0, p1, [Ljava/lang/Object;
 
-    new-array p1, p1, [Ljava/lang/Object;
+    const-string p1, "MimojiAsEditGLTextureView"
 
-    const-string v0, "MimojiAsEditGLTextureView"
+    const-string v0, "onDrawFrame mAvatar  null"
 
-    invoke-static {v0, p0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 8
+    invoke-static {p1, v0, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
+    .line 9
     :cond_1
-    iget v1, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->H:I
+    iget v1, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->c9:I
 
     const/4 v4, 0x0
 
@@ -237,17 +365,20 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/arcsoft/avatar2/AvatarEngine;->avatarRender(IIIIZ[I)V
 
-    iget-boolean v0, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->k0:Z
+    .line 10
+    iget-boolean v0, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->g9:Z
 
     if-eqz v0, :cond_2
 
-    iput-boolean p1, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->k0:Z
+    .line 11
+    iput-boolean p1, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->g9:Z
 
     const p1, 0x27100
 
     new-array p1, p1, [B
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->G:Lcom/arcsoft/avatar2/AvatarEngine;
+    .line 12
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->b9:Lcom/arcsoft/avatar2/AvatarEngine;
 
     const/16 v1, 0xf4
 
@@ -263,7 +394,7 @@
 
     const/16 v8, 0x320
 
-    sget-object v9, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->K1:[F
+    sget-object v9, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->W8:[F
 
     const/high16 v10, 0x3f800000    # 1.0f
 
@@ -271,21 +402,26 @@
 
     invoke-virtual/range {v0 .. v10}, Lcom/arcsoft/avatar2/AvatarEngine;->renderThumb(IIII[BIII[FF)I
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->I:Landroid/os/Handler;
+    .line 13
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->d9:Landroid/os/Handler;
 
     if-eqz v0, :cond_2
 
+    .line 14
     invoke-virtual {v0}, Landroid/os/Handler;->obtainMessage()Landroid/os/Message;
 
     move-result-object v0
 
     const/4 v1, 0x4
 
+    .line 15
     iput v1, v0, Landroid/os/Message;->what:I
 
+    .line 16
     iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->I:Landroid/os/Handler;
+    .line 17
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->d9:Landroid/os/Handler;
 
     invoke-virtual {p0, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
@@ -295,9 +431,22 @@
 
 .method public onSurfaceChanged(Ljavax/microedition/khronos/opengles/GL10;II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "gl10",
+            "width",
+            "height"
+        }
+    .end annotation
 
     const/4 p0, 0x0
 
+    .line 1
     invoke-static {p0, p0, p2, p3}, Landroid/opengl/GLES20;->glViewport(IIII)V
 
     return-void
@@ -305,11 +454,22 @@
 
 .method public onSurfaceCreated(Ljavax/microedition/khronos/opengles/GL10;Ljavax/microedition/khronos/egl/EGLConfig;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "gl10",
+            "eglConfig"
+        }
+    .end annotation
 
     const/4 p0, 0x0
 
     const/high16 p1, 0x3f800000    # 1.0f
 
+    .line 1
     invoke-static {p0, p0, p0, p1}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
 
     return-void
@@ -317,23 +477,50 @@
 
 .method public s(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "rotation"
+        }
+    .end annotation
 
-    iput p1, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->H:I
+    .line 1
+    iput p1, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->c9:I
 
     return-void
 .end method
 
 .method public setHandler(Landroid/os/Handler;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "handler"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->I:Landroid/os/Handler;
+    .line 1
+    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->d9:Landroid/os/Handler;
 
     return-void
 .end method
 
 .method public setIsStopRenderForce(Z)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mIsStopRenderForce"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -356,12 +543,14 @@
 
     invoke-static {v2, v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iput-boolean p1, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->K:Z
+    .line 2
+    iput-boolean p1, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->f9:Z
 
     if-eqz p1, :cond_0
 
     const/4 p1, 0x1
 
+    .line 3
     invoke-virtual {p0, p1}, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->setStopRender(Z)V
 
     :cond_0
@@ -370,28 +559,48 @@
 
 .method public setSaveConfigThum(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mSaveConfigThum"
+        }
+    .end annotation
 
-    iput-boolean p1, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->k0:Z
+    .line 1
+    iput-boolean p1, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->g9:Z
 
     return-void
 .end method
 
 .method public setStopRender(Z)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isStop"
+        }
+    .end annotation
 
-    iget-boolean v0, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->K:Z
+    .line 1
+    iget-boolean v0, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->f9:Z
 
     if-eqz v0, :cond_0
 
     const/4 p1, 0x1
 
+    .line 2
     :cond_0
-    iget-boolean v0, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->J:Z
+    iget-boolean v0, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->e9:Z
 
     if-ne v0, p1, :cond_1
 
     return-void
 
+    .line 3
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -415,88 +624,8 @@
 
     invoke-static {v2, v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iput-boolean p1, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->J:Z
-
-    return-void
-.end method
-
-.method public final t()V
-    .locals 7
-
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
-
-    move-result-wide v0
-
-    iget-wide v2, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->F:J
-
-    const-wide/16 v4, 0x0
-
-    cmp-long v4, v2, v4
-
-    if-nez v4, :cond_0
-
-    iput-wide v0, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->F:J
-
-    goto :goto_0
-
-    :cond_0
-    sub-long v2, v0, v2
-
-    const-wide/32 v4, 0x3b9aca00
-
-    cmp-long v2, v2, v4
-
-    if-lez v2, :cond_1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "fps: "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v3, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->D:I
-
-    int-to-double v3, v3
-
-    const-wide v5, 0x41cdcd6500000000L    # 1.0E9
-
-    mul-double/2addr v3, v5
-
-    iget-wide v5, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->F:J
-
-    sub-long v5, v0, v5
-
-    long-to-double v5, v5
-
-    div-double/2addr v3, v5
-
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    const/4 v3, 0x0
-
-    new-array v4, v3, [Ljava/lang/Object;
-
-    const-string v5, "MimojiAsEditGLTextureView"
-
-    invoke-static {v5, v2, v4}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iput-wide v0, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->F:J
-
-    iput v3, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->D:I
-
-    :cond_1
-    :goto_0
-    iget v0, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->D:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->D:I
+    .line 4
+    iput-boolean p1, p0, Lcom/xiaomi/mimoji/mimojias/widget/MimojiAsEditGLTextureView;->e9:Z
 
     return-void
 .end method

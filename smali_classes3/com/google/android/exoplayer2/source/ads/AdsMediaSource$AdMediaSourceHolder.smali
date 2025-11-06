@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/ads/AdsMediaSource$AdMediaSourceHolder;
+.class public final Lcom/google/android/exoplayer2/source/ads/AdsMediaSource$AdMediaSourceHolder;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -31,7 +31,7 @@
 
 .field private final id:Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;
 
-.field final synthetic this$0:Lcom/google/android/exoplayer2/source/ads/AdsMediaSource;
+.field public final synthetic this$0:Lcom/google/android/exoplayer2/source/ads/AdsMediaSource;
 
 .field private timeline:Lcom/google/android/exoplayer2/Timeline;
 
@@ -40,12 +40,15 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/source/ads/AdsMediaSource;Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/ads/AdsMediaSource$AdMediaSourceHolder;->this$0:Lcom/google/android/exoplayer2/source/ads/AdsMediaSource;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p2, p0, Lcom/google/android/exoplayer2/source/ads/AdsMediaSource$AdMediaSourceHolder;->id:Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;
 
+    .line 3
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -60,20 +63,25 @@
 .method public createMediaPeriod(Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;Lcom/google/android/exoplayer2/upstream/Allocator;J)Lcom/google/android/exoplayer2/source/MediaPeriod;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/source/MaskingMediaPeriod;
 
     invoke-direct {v0, p1, p2, p3, p4}, Lcom/google/android/exoplayer2/source/MaskingMediaPeriod;-><init>(Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;Lcom/google/android/exoplayer2/upstream/Allocator;J)V
 
+    .line 2
     iget-object p2, p0, Lcom/google/android/exoplayer2/source/ads/AdsMediaSource$AdMediaSourceHolder;->activeMediaPeriods:Ljava/util/List;
 
     invoke-interface {p2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 3
     iget-object p2, p0, Lcom/google/android/exoplayer2/source/ads/AdsMediaSource$AdMediaSourceHolder;->adMediaSource:Lcom/google/android/exoplayer2/source/MediaSource;
 
     if-eqz p2, :cond_0
 
+    .line 4
     invoke-virtual {v0, p2}, Lcom/google/android/exoplayer2/source/MaskingMediaPeriod;->setMediaSource(Lcom/google/android/exoplayer2/source/MediaSource;)V
 
+    .line 5
     new-instance p2, Lcom/google/android/exoplayer2/source/ads/AdsMediaSource$AdPrepareListener;
 
     iget-object p3, p0, Lcom/google/android/exoplayer2/source/ads/AdsMediaSource$AdMediaSourceHolder;->this$0:Lcom/google/android/exoplayer2/source/ads/AdsMediaSource;
@@ -90,6 +98,7 @@
 
     invoke-virtual {v0, p2}, Lcom/google/android/exoplayer2/source/MaskingMediaPeriod;->setPrepareListener(Lcom/google/android/exoplayer2/source/MaskingMediaPeriod$PrepareListener;)V
 
+    .line 6
     :cond_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ads/AdsMediaSource$AdMediaSourceHolder;->timeline:Lcom/google/android/exoplayer2/Timeline;
 
@@ -97,16 +106,19 @@
 
     const/4 p2, 0x0
 
+    .line 7
     invoke-virtual {p0, p2}, Lcom/google/android/exoplayer2/Timeline;->getUidOfPeriod(I)Ljava/lang/Object;
 
     move-result-object p0
 
+    .line 8
     new-instance p2, Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;
 
     iget-wide p3, p1, Lcom/google/android/exoplayer2/source/MediaPeriodId;->windowSequenceNumber:J
 
     invoke-direct {p2, p0, p3, p4}, Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;-><init>(Ljava/lang/Object;J)V
 
+    .line 9
     invoke-virtual {v0, p2}, Lcom/google/android/exoplayer2/source/MaskingMediaPeriod;->createPeriod(Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;)V
 
     :cond_1
@@ -116,6 +128,7 @@
 .method public getDurationUs()J
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ads/AdsMediaSource$AdMediaSourceHolder;->timeline:Lcom/google/android/exoplayer2/Timeline;
 
     if-nez v0, :cond_0
@@ -125,13 +138,14 @@
     goto :goto_0
 
     :cond_0
+    const/4 v1, 0x0
+
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ads/AdsMediaSource$AdMediaSourceHolder;->this$0:Lcom/google/android/exoplayer2/source/ads/AdsMediaSource;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/source/ads/AdsMediaSource;->access$600(Lcom/google/android/exoplayer2/source/ads/AdsMediaSource;)Lcom/google/android/exoplayer2/Timeline$Period;
 
     move-result-object p0
-
-    const/4 v1, 0x0
 
     invoke-virtual {v0, v1, p0}, Lcom/google/android/exoplayer2/Timeline;->getPeriod(ILcom/google/android/exoplayer2/Timeline$Period;)Lcom/google/android/exoplayer2/Timeline$Period;
 
@@ -148,6 +162,7 @@
 .method public handleSourceInfoRefresh(Lcom/google/android/exoplayer2/Timeline;)V
     .locals 6
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/Timeline;->getPeriodCount()I
 
     move-result v0
@@ -166,14 +181,17 @@
     :goto_0
     invoke-static {v2}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ads/AdsMediaSource$AdMediaSourceHolder;->timeline:Lcom/google/android/exoplayer2/Timeline;
 
     if-nez v0, :cond_1
 
+    .line 3
     invoke-virtual {p1, v1}, Lcom/google/android/exoplayer2/Timeline;->getUidOfPeriod(I)Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 4
     :goto_1
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/ads/AdsMediaSource$AdMediaSourceHolder;->activeMediaPeriods:Ljava/util/List;
 
@@ -183,6 +201,7 @@
 
     if-ge v1, v2, :cond_1
 
+    .line 5
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/ads/AdsMediaSource$AdMediaSourceHolder;->activeMediaPeriods:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -191,6 +210,7 @@
 
     check-cast v2, Lcom/google/android/exoplayer2/source/MaskingMediaPeriod;
 
+    .line 6
     new-instance v3, Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;
 
     iget-object v4, v2, Lcom/google/android/exoplayer2/source/MaskingMediaPeriod;->id:Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;
@@ -199,12 +219,14 @@
 
     invoke-direct {v3, v0, v4, v5}, Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;-><init>(Ljava/lang/Object;J)V
 
+    .line 7
     invoke-virtual {v2, v3}, Lcom/google/android/exoplayer2/source/MaskingMediaPeriod;->createPeriod(Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;)V
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
+    .line 8
     :cond_1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/ads/AdsMediaSource$AdMediaSourceHolder;->timeline:Lcom/google/android/exoplayer2/Timeline;
 
@@ -214,6 +236,7 @@
 .method public hasMediaSource()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ads/AdsMediaSource$AdMediaSourceHolder;->adMediaSource:Lcom/google/android/exoplayer2/source/MediaSource;
 
     if-eqz p0, :cond_0
@@ -232,12 +255,15 @@
 .method public initializeWithMediaSource(Lcom/google/android/exoplayer2/source/MediaSource;Landroid/net/Uri;)V
     .locals 4
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/ads/AdsMediaSource$AdMediaSourceHolder;->adMediaSource:Lcom/google/android/exoplayer2/source/MediaSource;
 
+    .line 2
     iput-object p2, p0, Lcom/google/android/exoplayer2/source/ads/AdsMediaSource$AdMediaSourceHolder;->adUri:Landroid/net/Uri;
 
     const/4 v0, 0x0
 
+    .line 3
     :goto_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/ads/AdsMediaSource$AdMediaSourceHolder;->activeMediaPeriods:Ljava/util/List;
 
@@ -247,6 +273,7 @@
 
     if-ge v0, v1, :cond_0
 
+    .line 4
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/ads/AdsMediaSource$AdMediaSourceHolder;->activeMediaPeriods:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -255,8 +282,10 @@
 
     check-cast v1, Lcom/google/android/exoplayer2/source/MaskingMediaPeriod;
 
+    .line 5
     invoke-virtual {v1, p1}, Lcom/google/android/exoplayer2/source/MaskingMediaPeriod;->setMediaSource(Lcom/google/android/exoplayer2/source/MediaSource;)V
 
+    .line 6
     new-instance v2, Lcom/google/android/exoplayer2/source/ads/AdsMediaSource$AdPrepareListener;
 
     iget-object v3, p0, Lcom/google/android/exoplayer2/source/ads/AdsMediaSource$AdMediaSourceHolder;->this$0:Lcom/google/android/exoplayer2/source/ads/AdsMediaSource;
@@ -269,6 +298,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_0
     iget-object p2, p0, Lcom/google/android/exoplayer2/source/ads/AdsMediaSource$AdMediaSourceHolder;->this$0:Lcom/google/android/exoplayer2/source/ads/AdsMediaSource;
 
@@ -282,6 +312,7 @@
 .method public isInactive()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ads/AdsMediaSource$AdMediaSourceHolder;->activeMediaPeriods:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
@@ -294,12 +325,14 @@
 .method public release()V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/source/ads/AdsMediaSource$AdMediaSourceHolder;->hasMediaSource()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ads/AdsMediaSource$AdMediaSourceHolder;->this$0:Lcom/google/android/exoplayer2/source/ads/AdsMediaSource;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ads/AdsMediaSource$AdMediaSourceHolder;->id:Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;
@@ -313,10 +346,12 @@
 .method public releaseMediaPeriod(Lcom/google/android/exoplayer2/source/MaskingMediaPeriod;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ads/AdsMediaSource$AdMediaSourceHolder;->activeMediaPeriods:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/source/MaskingMediaPeriod;->releasePeriod()V
 
     return-void

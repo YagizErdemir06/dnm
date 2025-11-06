@@ -1,4 +1,4 @@
-.class Landroidx/recyclerview/widget/ItemTouchHelper$3;
+.class public Landroidx/recyclerview/widget/ItemTouchHelper$3;
 .super Landroidx/recyclerview/widget/ItemTouchHelper$RecoverAnimation;
 .source "SourceFile"
 
@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/recyclerview/widget/ItemTouchHelper;
+.field public final synthetic this$0:Landroidx/recyclerview/widget/ItemTouchHelper;
 
-.field final synthetic val$prevSelected:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
+.field public final synthetic val$prevSelected:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
-.field final synthetic val$swipeDir:I
+.field public final synthetic val$swipeDir:I
 
 
 # direct methods
@@ -30,6 +30,7 @@
 
     move-object v1, p1
 
+    .line 1
     iput-object v1, v0, Landroidx/recyclerview/widget/ItemTouchHelper$3;->this$0:Landroidx/recyclerview/widget/ItemTouchHelper;
 
     move/from16 v1, p9
@@ -64,19 +65,23 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
+    .line 1
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/ItemTouchHelper$RecoverAnimation;->onAnimationEnd(Landroid/animation/Animator;)V
 
+    .line 2
     iget-boolean p1, p0, Landroidx/recyclerview/widget/ItemTouchHelper$RecoverAnimation;->mOverridden:Z
 
     if-eqz p1, :cond_0
 
     return-void
 
+    .line 3
     :cond_0
     iget p1, p0, Landroidx/recyclerview/widget/ItemTouchHelper$3;->val$swipeDir:I
 
     if-gtz p1, :cond_1
 
+    .line 4
     iget-object p1, p0, Landroidx/recyclerview/widget/ItemTouchHelper$3;->this$0:Landroidx/recyclerview/widget/ItemTouchHelper;
 
     iget-object v0, p1, Landroidx/recyclerview/widget/ItemTouchHelper;->mCallback:Landroidx/recyclerview/widget/ItemTouchHelper$Callback;
@@ -89,6 +94,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     iget-object p1, p0, Landroidx/recyclerview/widget/ItemTouchHelper$3;->this$0:Landroidx/recyclerview/widget/ItemTouchHelper;
 
@@ -102,16 +108,20 @@
 
     const/4 p1, 0x1
 
+    .line 6
     iput-boolean p1, p0, Landroidx/recyclerview/widget/ItemTouchHelper$RecoverAnimation;->mIsPendingCleanup:Z
 
+    .line 7
     iget p1, p0, Landroidx/recyclerview/widget/ItemTouchHelper$3;->val$swipeDir:I
 
     if-lez p1, :cond_2
 
+    .line 8
     iget-object v0, p0, Landroidx/recyclerview/widget/ItemTouchHelper$3;->this$0:Landroidx/recyclerview/widget/ItemTouchHelper;
 
     invoke-virtual {v0, p0, p1}, Landroidx/recyclerview/widget/ItemTouchHelper;->postDispatchSwipe(Landroidx/recyclerview/widget/ItemTouchHelper$RecoverAnimation;I)V
 
+    .line 9
     :cond_2
     :goto_0
     iget-object p1, p0, Landroidx/recyclerview/widget/ItemTouchHelper$3;->this$0:Landroidx/recyclerview/widget/ItemTouchHelper;
@@ -124,6 +134,7 @@
 
     if-ne v0, p0, :cond_3
 
+    .line 10
     invoke-virtual {p1, p0}, Landroidx/recyclerview/widget/ItemTouchHelper;->removeChildDrawingOrderCallbackIfNecessary(Landroid/view/View;)V
 
     :cond_3

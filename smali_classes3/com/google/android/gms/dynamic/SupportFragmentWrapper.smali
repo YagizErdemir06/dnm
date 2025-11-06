@@ -16,6 +16,7 @@
 .method private constructor <init>(Landroidx/fragment/app/Fragment;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/dynamic/IFragmentWrapper$Stub;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/gms/dynamic/SupportFragmentWrapper;->zza:Landroidx/fragment/app/Fragment;
@@ -37,6 +38,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/dynamic/SupportFragmentWrapper;
 
     invoke-direct {v0, p0}, Lcom/google/android/gms/dynamic/SupportFragmentWrapper;-><init>(Landroidx/fragment/app/Fragment;)V
@@ -54,6 +56,7 @@
 .method public final zzA()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/dynamic/SupportFragmentWrapper;->zza:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isVisible()Z
@@ -66,6 +69,7 @@
 .method public final zzb()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/dynamic/SupportFragmentWrapper;->zza:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getId()I
@@ -78,6 +82,7 @@
 .method public final zzc()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/dynamic/SupportFragmentWrapper;->zza:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getTargetRequestCode()I
@@ -92,6 +97,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/dynamic/SupportFragmentWrapper;->zza:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -106,6 +112,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/dynamic/SupportFragmentWrapper;->zza:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getParentFragment()Landroidx/fragment/app/Fragment;
@@ -124,6 +131,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/dynamic/SupportFragmentWrapper;->zza:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getTargetFragment()Landroidx/fragment/app/Fragment;
@@ -142,12 +150,14 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/dynamic/SupportFragmentWrapper;->zza:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p0
 
+    .line 2
     invoke-static {p0}, Lcom/google/android/gms/dynamic/ObjectWrapper;->wrap(Ljava/lang/Object;)Lcom/google/android/gms/dynamic/IObjectWrapper;
 
     move-result-object p0
@@ -160,12 +170,14 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/dynamic/SupportFragmentWrapper;->zza:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
+    .line 2
     invoke-static {p0}, Lcom/google/android/gms/dynamic/ObjectWrapper;->wrap(Ljava/lang/Object;)Lcom/google/android/gms/dynamic/IObjectWrapper;
 
     move-result-object p0
@@ -178,12 +190,14 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/dynamic/SupportFragmentWrapper;->zza:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getView()Landroid/view/View;
 
     move-result-object p0
 
+    .line 2
     invoke-static {p0}, Lcom/google/android/gms/dynamic/ObjectWrapper;->wrap(Ljava/lang/Object;)Lcom/google/android/gms/dynamic/IObjectWrapper;
 
     move-result-object p0
@@ -196,6 +210,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/dynamic/SupportFragmentWrapper;->zza:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getTag()Ljava/lang/String;
@@ -212,6 +227,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/gms/dynamic/ObjectWrapper;->unwrap(Lcom/google/android/gms/dynamic/IObjectWrapper;)Ljava/lang/Object;
 
     move-result-object p1
@@ -220,6 +236,7 @@
 
     iget-object p0, p0, Lcom/google/android/gms/dynamic/SupportFragmentWrapper;->zza:Landroidx/fragment/app/Fragment;
 
+    .line 2
     invoke-static {p1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     invoke-virtual {p0, p1}, Landroidx/fragment/app/Fragment;->registerForContextMenu(Landroid/view/View;)V
@@ -230,6 +247,7 @@
 .method public final zzl(Z)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/dynamic/SupportFragmentWrapper;->zza:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {p0, p1}, Landroidx/fragment/app/Fragment;->setHasOptionsMenu(Z)V
@@ -240,6 +258,7 @@
 .method public final zzm(Z)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/dynamic/SupportFragmentWrapper;->zza:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {p0, p1}, Landroidx/fragment/app/Fragment;->setMenuVisibility(Z)V
@@ -250,6 +269,7 @@
 .method public final zzn(Z)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/dynamic/SupportFragmentWrapper;->zza:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {p0, p1}, Landroidx/fragment/app/Fragment;->setRetainInstance(Z)V
@@ -260,6 +280,7 @@
 .method public final zzo(Z)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/dynamic/SupportFragmentWrapper;->zza:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {p0, p1}, Landroidx/fragment/app/Fragment;->setUserVisibleHint(Z)V
@@ -274,6 +295,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/dynamic/SupportFragmentWrapper;->zza:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {p0, p1}, Landroidx/fragment/app/Fragment;->startActivity(Landroid/content/Intent;)V
@@ -288,6 +310,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/dynamic/SupportFragmentWrapper;->zza:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {p0, p1, p2}, Landroidx/fragment/app/Fragment;->startActivityForResult(Landroid/content/Intent;I)V
@@ -302,6 +325,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/gms/dynamic/ObjectWrapper;->unwrap(Lcom/google/android/gms/dynamic/IObjectWrapper;)Ljava/lang/Object;
 
     move-result-object p1
@@ -310,6 +334,7 @@
 
     iget-object p0, p0, Lcom/google/android/gms/dynamic/SupportFragmentWrapper;->zza:Landroidx/fragment/app/Fragment;
 
+    .line 2
     invoke-static {p1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     invoke-virtual {p0, p1}, Landroidx/fragment/app/Fragment;->unregisterForContextMenu(Landroid/view/View;)V
@@ -320,6 +345,7 @@
 .method public final zzs()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/dynamic/SupportFragmentWrapper;->zza:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getRetainInstance()Z
@@ -332,6 +358,7 @@
 .method public final zzt()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/dynamic/SupportFragmentWrapper;->zza:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getUserVisibleHint()Z
@@ -344,6 +371,7 @@
 .method public final zzu()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/dynamic/SupportFragmentWrapper;->zza:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
@@ -356,6 +384,7 @@
 .method public final zzv()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/dynamic/SupportFragmentWrapper;->zza:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isDetached()Z
@@ -368,6 +397,7 @@
 .method public final zzw()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/dynamic/SupportFragmentWrapper;->zza:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isHidden()Z
@@ -380,6 +410,7 @@
 .method public final zzx()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/dynamic/SupportFragmentWrapper;->zza:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isInLayout()Z
@@ -392,6 +423,7 @@
 .method public final zzy()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/dynamic/SupportFragmentWrapper;->zza:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isRemoving()Z
@@ -404,6 +436,7 @@
 .method public final zzz()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/dynamic/SupportFragmentWrapper;->zza:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isResumed()Z

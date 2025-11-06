@@ -21,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,6 +41,7 @@
 .method public bridge synthetic next()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/faceunity/pta_helper/gif/GifImageIterator;->next()Lcom/faceunity/pta_helper/gif/GifImage;
 
     move-result-object p0
@@ -50,6 +52,7 @@
 .method public remove()V
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V

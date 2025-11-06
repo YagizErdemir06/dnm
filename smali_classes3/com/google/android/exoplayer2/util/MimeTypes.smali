@@ -216,6 +216,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -224,6 +225,7 @@
 
     const-string v0, "^mp4a\\.([a-zA-Z0-9]{2})(?:\\.([0-9]{1,2}))?$"
 
+    .line 2
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -236,6 +238,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -259,22 +262,23 @@
     return v0
 
     :cond_0
+    const/4 v1, -0x1
+
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
-    move-result v1
+    move-result v2
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    const/4 v3, -0x1
-
-    sparse-switch v1, :sswitch_data_0
+    sparse-switch v2, :sswitch_data_0
 
     goto/16 :goto_0
 
     :sswitch_0
-    const-string v1, "audio/g711-mlaw"
+    const-string v2, "audio/g711-mlaw"
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -283,14 +287,14 @@
     goto/16 :goto_0
 
     :cond_1
-    const/16 v3, 0xa
+    const/16 v1, 0xa
 
     goto/16 :goto_0
 
     :sswitch_1
-    const-string v1, "audio/g711-alaw"
+    const-string v2, "audio/g711-alaw"
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -299,14 +303,14 @@
     goto/16 :goto_0
 
     :cond_2
-    const/16 v3, 0x9
+    const/16 v1, 0x9
 
     goto/16 :goto_0
 
     :sswitch_2
-    const-string v1, "audio/mpeg"
+    const-string v2, "audio/mpeg"
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -315,14 +319,14 @@
     goto/16 :goto_0
 
     :cond_3
-    const/16 v3, 0x8
+    const/16 v1, 0x8
 
     goto/16 :goto_0
 
     :sswitch_3
-    const-string v1, "audio/flac"
+    const-string v2, "audio/flac"
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -331,14 +335,14 @@
     goto :goto_0
 
     :cond_4
-    const/4 v3, 0x7
+    const/4 v1, 0x7
 
     goto :goto_0
 
     :sswitch_4
-    const-string v1, "audio/eac3"
+    const-string v2, "audio/eac3"
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -347,14 +351,14 @@
     goto :goto_0
 
     :cond_5
-    const/4 v3, 0x6
+    const/4 v1, 0x6
 
     goto :goto_0
 
     :sswitch_5
-    const-string v1, "audio/raw"
+    const-string v2, "audio/raw"
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -363,14 +367,14 @@
     goto :goto_0
 
     :cond_6
-    const/4 v3, 0x5
+    const/4 v1, 0x5
 
     goto :goto_0
 
     :sswitch_6
-    const-string v1, "audio/ac3"
+    const-string v2, "audio/ac3"
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -379,14 +383,14 @@
     goto :goto_0
 
     :cond_7
-    const/4 v3, 0x4
+    const/4 v1, 0x4
 
     goto :goto_0
 
     :sswitch_7
-    const-string v1, "audio/mp4a-latm"
+    const-string v2, "audio/mp4a-latm"
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -395,14 +399,14 @@
     goto :goto_0
 
     :cond_8
-    const/4 v3, 0x3
+    const/4 v1, 0x3
 
     goto :goto_0
 
     :sswitch_8
-    const-string v1, "audio/mpeg-L2"
+    const-string v2, "audio/mpeg-L2"
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -411,14 +415,14 @@
     goto :goto_0
 
     :cond_9
-    const/4 v3, 0x2
+    const/4 v1, 0x2
 
     goto :goto_0
 
     :sswitch_9
-    const-string v1, "audio/mpeg-L1"
+    const-string v2, "audio/mpeg-L1"
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -427,14 +431,14 @@
     goto :goto_0
 
     :cond_a
-    move v3, v2
+    move v1, v3
 
     goto :goto_0
 
     :sswitch_a
-    const-string v1, "audio/eac3-joc"
+    const-string v2, "audio/eac3-joc"
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -443,10 +447,10 @@
     goto :goto_0
 
     :cond_b
-    move v3, v0
+    move v1, v0
 
     :goto_0
-    packed-switch v3, :pswitch_data_0
+    packed-switch v1, :pswitch_data_0
 
     return v0
 
@@ -455,6 +459,7 @@
 
     return v0
 
+    .line 2
     :cond_c
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/MimeTypes;->getObjectTypeFromMp4aRFC6381CodecString(Ljava/lang/String;)Lcom/google/android/exoplayer2/util/MimeTypes$Mp4aObjectType;
 
@@ -464,6 +469,7 @@
 
     return v0
 
+    .line 3
     :cond_d
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/MimeTypes$Mp4aObjectType;->getEncoding()I
 
@@ -475,13 +481,13 @@
 
     if-eq p0, p1, :cond_e
 
-    move v0, v2
+    move v0, v3
 
     :cond_e
     return v0
 
     :pswitch_1
-    return v2
+    return v3
 
     nop
 
@@ -523,6 +529,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/android/exoplayer2/util/MimeTypes;->getCodecsCorrespondingToMimeType(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -555,11 +562,13 @@
 
     return-object v0
 
+    .line 1
     :cond_0
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Util;->splitCodecs(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
+    .line 2
     array-length v1, p0
 
     const/4 v2, 0x0
@@ -569,12 +578,14 @@
 
     aget-object v3, p0, v2
 
+    .line 3
     invoke-static {v3}, Lcom/google/android/exoplayer2/util/MimeTypes;->getMediaMimeType(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     if-eqz v3, :cond_1
 
+    .line 4
     invoke-static {v3}, Lcom/google/android/exoplayer2/util/MimeTypes;->isAudio(Ljava/lang/String;)Z
 
     move-result v4
@@ -613,15 +624,18 @@
 
     goto :goto_1
 
+    .line 1
     :cond_0
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Util;->splitCodecs(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
+    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 3
     array-length v2, p0
 
     const/4 v3, 0x0
@@ -631,6 +645,7 @@
 
     aget-object v4, p0, v3
 
+    .line 4
     invoke-static {v4}, Lcom/google/android/exoplayer2/util/MimeTypes;->getMediaMimeType(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
@@ -641,6 +656,7 @@
 
     if-eqz v5, :cond_2
 
+    .line 5
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
 
     move-result v5
@@ -649,8 +665,10 @@
 
     const-string v5, ","
 
+    .line 6
     invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 7
     :cond_1
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -659,6 +677,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_3
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
 
@@ -680,6 +699,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/util/MimeTypes;->customMimeTypes:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -691,6 +711,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 2
     sget-object v2, Lcom/google/android/exoplayer2/util/MimeTypes;->customMimeTypes:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -699,6 +720,7 @@
 
     check-cast v2, Lcom/google/android/exoplayer2/util/MimeTypes$CustomMimeType;
 
+    .line 3
     iget-object v3, v2, Lcom/google/android/exoplayer2/util/MimeTypes$CustomMimeType;->codecPrefix:Ljava/lang/String;
 
     invoke-virtual {p0, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -707,6 +729,7 @@
 
     if-eqz v3, :cond_0
 
+    .line 4
     iget-object p0, v2, Lcom/google/android/exoplayer2/util/MimeTypes$CustomMimeType;->mimeType:Ljava/lang/String;
 
     return-object p0
@@ -729,6 +752,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -927,6 +951,7 @@
 
     return v5
 
+    .line 2
     :cond_9
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/MimeTypes;->getObjectTypeFromMp4aRFC6381CodecString(Ljava/lang/String;)Lcom/google/android/exoplayer2/util/MimeTypes$Mp4aObjectType;
 
@@ -936,6 +961,7 @@
 
     return v5
 
+    .line 3
     :cond_a
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/MimeTypes$Mp4aObjectType;->getEncoding()I
 
@@ -993,6 +1019,7 @@
 
     return-object v0
 
+    .line 1
     :cond_0
     invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -1004,6 +1031,7 @@
 
     const-string v1, "avc1"
 
+    .line 2
     invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -1023,6 +1051,7 @@
     :cond_1
     const-string v1, "hev1"
 
+    .line 3
     invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -1042,6 +1071,7 @@
     :cond_2
     const-string v1, "dvav"
 
+    .line 4
     invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -1050,6 +1080,7 @@
 
     const-string v1, "dva1"
 
+    .line 5
     invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -1058,6 +1089,7 @@
 
     const-string v1, "dvhe"
 
+    .line 6
     invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -1066,6 +1098,7 @@
 
     const-string v1, "dvh1"
 
+    .line 7
     invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -1077,6 +1110,7 @@
     :cond_3
     const-string v1, "av01"
 
+    .line 8
     invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -1090,6 +1124,7 @@
     :cond_4
     const-string v1, "vp9"
 
+    .line 9
     invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -1109,6 +1144,7 @@
     :cond_5
     const-string v1, "vp8"
 
+    .line 10
     invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -1128,6 +1164,7 @@
     :cond_6
     const-string v1, "mp4a"
 
+    .line 11
     invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -1136,18 +1173,21 @@
 
     const-string v1, "mp4a."
 
+    .line 12
     invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_7
 
+    .line 13
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/MimeTypes;->getObjectTypeFromMp4aRFC6381CodecString(Ljava/lang/String;)Lcom/google/android/exoplayer2/util/MimeTypes$Mp4aObjectType;
 
     move-result-object p0
 
     if-eqz p0, :cond_7
 
+    .line 14
     iget p0, p0, Lcom/google/android/exoplayer2/util/MimeTypes$Mp4aObjectType;->objectTypeIndication:I
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/MimeTypes;->getMimeTypeFromMp4ObjectType(I)Ljava/lang/String;
@@ -1165,6 +1205,7 @@
     :cond_9
     const-string v0, "mha1"
 
+    .line 15
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -1178,6 +1219,7 @@
     :cond_a
     const-string v0, "mhm1"
 
+    .line 16
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -1191,6 +1233,7 @@
     :cond_b
     const-string v0, "ac-3"
 
+    .line 17
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -1210,6 +1253,7 @@
     :cond_c
     const-string v0, "ec-3"
 
+    .line 18
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -1229,6 +1273,7 @@
     :cond_d
     const-string v0, "ec+3"
 
+    .line 19
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -1242,6 +1287,7 @@
     :cond_e
     const-string v0, "ac-4"
 
+    .line 20
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -1261,6 +1307,7 @@
     :cond_f
     const-string v0, "dtsc"
 
+    .line 21
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -1274,6 +1321,7 @@
     :cond_10
     const-string v0, "dtse"
 
+    .line 22
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -1287,6 +1335,7 @@
     :cond_11
     const-string v0, "dtsh"
 
+    .line 23
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -1306,6 +1355,7 @@
     :cond_12
     const-string v0, "dtsx"
 
+    .line 24
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -1319,6 +1369,7 @@
     :cond_13
     const-string v0, "opus"
 
+    .line 25
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -1332,6 +1383,7 @@
     :cond_14
     const-string v0, "vorbis"
 
+    .line 26
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -1345,6 +1397,7 @@
     :cond_15
     const-string v0, "flac"
 
+    .line 27
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -1358,6 +1411,7 @@
     :cond_16
     const-string v0, "stpp"
 
+    .line 28
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -1371,6 +1425,7 @@
     :cond_17
     const-string v0, "wvtt"
 
+    .line 29
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -1384,6 +1439,7 @@
     :cond_18
     const-string v0, "cea708"
 
+    .line 30
     invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1397,6 +1453,7 @@
     :cond_19
     const-string v0, "eia608"
 
+    .line 31
     invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1413,6 +1470,7 @@
 
     goto :goto_0
 
+    .line 32
     :cond_1a
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/MimeTypes;->getCustomMimeTypeForCodec(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1632,19 +1690,21 @@
 .end method
 
 .method public static getObjectTypeFromMp4aRFC6381CodecString(Ljava/lang/String;)Lcom/google/android/exoplayer2/util/MimeTypes$Mp4aObjectType;
-    .locals 3
+    .locals 4
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/util/MimeTypes;->MP4A_RFC_6381_CODEC_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object p0
 
+    .line 2
     invoke-virtual {p0}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v0
@@ -1658,6 +1718,7 @@
     :cond_0
     const/4 v0, 0x1
 
+    .line 3
     invoke-virtual {p0, v0}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v0
@@ -1670,34 +1731,37 @@
 
     const/4 v2, 0x2
 
+    .line 4
     invoke-virtual {p0, v2}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object p0
 
-    const/16 v2, 0x10
+    const/4 v2, 0x0
 
+    const/16 v3, 0x10
+
+    .line 5
     :try_start_0
-    invoke-static {v0, v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
+    invoke-static {v0, v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
 
     move-result v0
 
     if-eqz p0, :cond_1
 
+    .line 6
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    move-result p0
+    move-result v2
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
-
+    .line 7
     :cond_1
-    const/4 p0, 0x0
+    new-instance p0, Lcom/google/android/exoplayer2/util/MimeTypes$Mp4aObjectType;
 
-    :goto_0
-    new-instance v1, Lcom/google/android/exoplayer2/util/MimeTypes$Mp4aObjectType;
+    invoke-direct {p0, v0, v2}, Lcom/google/android/exoplayer2/util/MimeTypes$Mp4aObjectType;-><init>(II)V
 
-    invoke-direct {v1, v0, p0}, Lcom/google/android/exoplayer2/util/MimeTypes$Mp4aObjectType;-><init>(II)V
+    return-object p0
 
     :catch_0
     return-object v1
@@ -1718,11 +1782,13 @@
 
     return-object v0
 
+    .line 1
     :cond_0
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Util;->splitCodecs(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
+    .line 2
     array-length v1, p0
 
     const/4 v2, 0x0
@@ -1732,12 +1798,14 @@
 
     aget-object v3, p0, v2
 
+    .line 3
     invoke-static {v3}, Lcom/google/android/exoplayer2/util/MimeTypes;->getMediaMimeType(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     if-eqz v3, :cond_1
 
+    .line 4
     invoke-static {v3}, Lcom/google/android/exoplayer2/util/MimeTypes;->isText(Ljava/lang/String;)Z
 
     move-result v4
@@ -1773,6 +1841,7 @@
     :cond_0
     const/16 v1, 0x2f
 
+    .line 1
     invoke-virtual {p0, v1}, Ljava/lang/String;->indexOf(I)I
 
     move-result v1
@@ -1786,6 +1855,7 @@
     :cond_1
     const/4 v0, 0x0
 
+    .line 2
     invoke-virtual {p0, v0, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0
@@ -1800,6 +1870,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1810,6 +1881,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/MimeTypes;->isAudio(Ljava/lang/String;)Z
 
@@ -1821,6 +1893,7 @@
 
     return p0
 
+    .line 3
     :cond_1
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/MimeTypes;->isVideo(Ljava/lang/String;)Z
 
@@ -1832,6 +1905,7 @@
 
     return p0
 
+    .line 4
     :cond_2
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/MimeTypes;->isText(Ljava/lang/String;)Z
 
@@ -1843,6 +1917,7 @@
 
     return p0
 
+    .line 5
     :cond_3
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/MimeTypes;->isImage(Ljava/lang/String;)Z
 
@@ -1857,6 +1932,7 @@
     :cond_4
     const-string v0, "application/id3"
 
+    .line 6
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -1865,6 +1941,7 @@
 
     const-string v0, "application/x-emsg"
 
+    .line 7
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -1873,6 +1950,7 @@
 
     const-string v0, "application/x-scte35"
 
+    .line 8
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -1884,6 +1962,7 @@
     :cond_5
     const-string v0, "application/x-camera-motion"
 
+    .line 9
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -1894,6 +1973,7 @@
 
     return p0
 
+    .line 10
     :cond_6
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/MimeTypes;->getTrackTypeForCustomMimeType(Ljava/lang/String;)I
 
@@ -1911,6 +1991,7 @@
 .method private static getTrackTypeForCustomMimeType(Ljava/lang/String;)I
     .locals 4
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/util/MimeTypes;->customMimeTypes:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -1922,6 +2003,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 2
     sget-object v2, Lcom/google/android/exoplayer2/util/MimeTypes;->customMimeTypes:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1930,6 +2012,7 @@
 
     check-cast v2, Lcom/google/android/exoplayer2/util/MimeTypes$CustomMimeType;
 
+    .line 3
     iget-object v3, v2, Lcom/google/android/exoplayer2/util/MimeTypes$CustomMimeType;->mimeType:Ljava/lang/String;
 
     invoke-virtual {p0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1938,6 +2021,7 @@
 
     if-eqz v3, :cond_0
 
+    .line 4
     iget p0, v2, Lcom/google/android/exoplayer2/util/MimeTypes$CustomMimeType;->trackType:I
 
     return p0
@@ -1956,6 +2040,7 @@
 .method public static getTrackTypeOfCodec(Ljava/lang/String;)I
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/MimeTypes;->getMediaMimeType(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -1982,11 +2067,13 @@
 
     return-object v0
 
+    .line 1
     :cond_0
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Util;->splitCodecs(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
+    .line 2
     array-length v1, p0
 
     const/4 v2, 0x0
@@ -1996,12 +2083,14 @@
 
     aget-object v3, p0, v2
 
+    .line 3
     invoke-static {v3}, Lcom/google/android/exoplayer2/util/MimeTypes;->getMediaMimeType(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     if-eqz v3, :cond_1
 
+    .line 4
     invoke-static {v3}, Lcom/google/android/exoplayer2/util/MimeTypes;->isVideo(Ljava/lang/String;)Z
 
     move-result v4
@@ -2026,11 +2115,12 @@
         .end annotation
     .end param
 
-    const-string v0, "audio"
-
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/MimeTypes;->getTopLevelType(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
+
+    const-string v0, "audio"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2046,11 +2136,12 @@
         .end annotation
     .end param
 
-    const-string v0, "image"
-
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/MimeTypes;->getTopLevelType(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
+
+    const-string v0, "image"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2075,6 +2166,7 @@
     :cond_0
     const-string v1, "video/webm"
 
+    .line 1
     invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -2083,6 +2175,7 @@
 
     const-string v1, "audio/webm"
 
+    .line 2
     invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -2091,6 +2184,7 @@
 
     const-string v1, "application/webm"
 
+    .line 3
     invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -2099,6 +2193,7 @@
 
     const-string v1, "video/x-matroska"
 
+    .line 4
     invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -2107,6 +2202,7 @@
 
     const-string v1, "audio/x-matroska"
 
+    .line 5
     invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -2115,6 +2211,7 @@
 
     const-string v1, "application/x-matroska"
 
+    .line 6
     invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p0
@@ -2135,13 +2232,14 @@
         .end annotation
     .end param
 
-    const-string v0, "text"
-
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/MimeTypes;->getTopLevelType(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const-string v1, "text"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2149,6 +2247,7 @@
 
     const-string v0, "application/cea-608"
 
+    .line 2
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -2157,6 +2256,7 @@
 
     const-string v0, "application/cea-708"
 
+    .line 3
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -2165,6 +2265,7 @@
 
     const-string v0, "application/x-mp4-cea-608"
 
+    .line 4
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -2173,6 +2274,7 @@
 
     const-string v0, "application/x-subrip"
 
+    .line 5
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -2181,6 +2283,7 @@
 
     const-string v0, "application/ttml+xml"
 
+    .line 6
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -2189,6 +2292,7 @@
 
     const-string v0, "application/x-quicktime-tx3g"
 
+    .line 7
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -2197,6 +2301,7 @@
 
     const-string v0, "application/x-mp4-vtt"
 
+    .line 8
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -2205,6 +2310,7 @@
 
     const-string v0, "application/x-rawcc"
 
+    .line 9
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -2213,6 +2319,7 @@
 
     const-string v0, "application/vobsub"
 
+    .line 10
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -2221,6 +2328,7 @@
 
     const-string v0, "application/pgs"
 
+    .line 11
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -2229,6 +2337,7 @@
 
     const-string v0, "application/dvbsubs"
 
+    .line 12
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -2257,11 +2366,12 @@
         .end annotation
     .end param
 
-    const-string v0, "video"
-
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/MimeTypes;->getTopLevelType(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
+
+    const-string v0, "video"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2273,6 +2383,7 @@
 .method public static normalizeMimeType(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -2371,10 +2482,12 @@
 .method public static registerCustomMimeType(Ljava/lang/String;Ljava/lang/String;I)V
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/util/MimeTypes$CustomMimeType;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/google/android/exoplayer2/util/MimeTypes$CustomMimeType;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
 
+    .line 2
     sget-object p1, Lcom/google/android/exoplayer2/util/MimeTypes;->customMimeTypes:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
@@ -2386,6 +2499,7 @@
     :goto_0
     if-ge p2, p1, :cond_1
 
+    .line 3
     sget-object v1, Lcom/google/android/exoplayer2/util/MimeTypes;->customMimeTypes:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2402,6 +2516,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 4
     invoke-virtual {v1, p2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     goto :goto_1
@@ -2411,6 +2526,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     :goto_1
     sget-object p0, Lcom/google/android/exoplayer2/util/MimeTypes;->customMimeTypes:Ljava/util/ArrayList;

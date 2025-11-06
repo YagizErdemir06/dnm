@@ -44,6 +44,7 @@
 .method public static constructor <clinit>()V
     .locals 11
 
+    .line 1
     new-instance v0, Lcom/bumptech/glide/request/RequestCoordinator$RequestState;
 
     const-string v1, "RUNNING"
@@ -54,6 +55,7 @@
 
     sput-object v0, Lcom/bumptech/glide/request/RequestCoordinator$RequestState;->RUNNING:Lcom/bumptech/glide/request/RequestCoordinator$RequestState;
 
+    .line 2
     new-instance v1, Lcom/bumptech/glide/request/RequestCoordinator$RequestState;
 
     const-string v3, "PAUSED"
@@ -64,6 +66,7 @@
 
     sput-object v1, Lcom/bumptech/glide/request/RequestCoordinator$RequestState;->PAUSED:Lcom/bumptech/glide/request/RequestCoordinator$RequestState;
 
+    .line 3
     new-instance v3, Lcom/bumptech/glide/request/RequestCoordinator$RequestState;
 
     const-string v5, "CLEARED"
@@ -74,6 +77,7 @@
 
     sput-object v3, Lcom/bumptech/glide/request/RequestCoordinator$RequestState;->CLEARED:Lcom/bumptech/glide/request/RequestCoordinator$RequestState;
 
+    .line 4
     new-instance v5, Lcom/bumptech/glide/request/RequestCoordinator$RequestState;
 
     const-string v7, "SUCCESS"
@@ -84,6 +88,7 @@
 
     sput-object v5, Lcom/bumptech/glide/request/RequestCoordinator$RequestState;->SUCCESS:Lcom/bumptech/glide/request/RequestCoordinator$RequestState;
 
+    .line 5
     new-instance v7, Lcom/bumptech/glide/request/RequestCoordinator$RequestState;
 
     const-string v9, "FAILED"
@@ -108,6 +113,7 @@
 
     aput-object v7, v9, v10
 
+    .line 6
     sput-object v9, Lcom/bumptech/glide/request/RequestCoordinator$RequestState;->$VALUES:[Lcom/bumptech/glide/request/RequestCoordinator$RequestState;
 
     return-void
@@ -121,8 +127,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 2
     iput-boolean p3, p0, Lcom/bumptech/glide/request/RequestCoordinator$RequestState;->isComplete:Z
 
     return-void
@@ -131,6 +139,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/bumptech/glide/request/RequestCoordinator$RequestState;
     .locals 1
 
+    .line 1
     const-class v0, Lcom/bumptech/glide/request/RequestCoordinator$RequestState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -145,6 +154,7 @@
 .method public static values()[Lcom/bumptech/glide/request/RequestCoordinator$RequestState;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/bumptech/glide/request/RequestCoordinator$RequestState;->$VALUES:[Lcom/bumptech/glide/request/RequestCoordinator$RequestState;
 
     invoke-virtual {v0}, [Lcom/bumptech/glide/request/RequestCoordinator$RequestState;->clone()Ljava/lang/Object;
@@ -161,6 +171,7 @@
 .method public isComplete()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/bumptech/glide/request/RequestCoordinator$RequestState;->isComplete:Z
 
     return p0

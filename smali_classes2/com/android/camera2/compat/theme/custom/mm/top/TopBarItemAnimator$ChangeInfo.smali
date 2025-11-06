@@ -1,4 +1,4 @@
-.class Lcom/android/camera2/compat/theme/custom/mm/top/TopBarItemAnimator$ChangeInfo;
+.class public Lcom/android/camera2/compat/theme/custom/mm/top/TopBarItemAnimator$ChangeInfo;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -31,6 +31,16 @@
 # direct methods
 .method private constructor <init>(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "oldHolder",
+            "newHolder"
+        }
+    .end annotation
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,6 +56,24 @@
 
 .method public constructor <init>(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;IIII)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "oldHolder",
+            "newHolder",
+            "fromX",
+            "fromY",
+            "toX",
+            "toY"
+        }
+    .end annotation
 
     .line 4
     invoke-direct {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarItemAnimator$ChangeInfo;-><init>(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
@@ -70,6 +98,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

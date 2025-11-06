@@ -15,5 +15,19 @@
 
 
 # virtual methods
-.method public abstract onExpandValueChange(Lcom/android/camera/data/data/b;Ljava/lang/String;Ljava/lang/String;I)V
+.method public abstract onExpandValueChange(Ld/d/a/l6/e/b;Ljava/lang/String;Ljava/lang/String;I)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "componentData",
+            "oldValue",
+            "newValue",
+            "configItem"
+        }
+    .end annotation
 .end method

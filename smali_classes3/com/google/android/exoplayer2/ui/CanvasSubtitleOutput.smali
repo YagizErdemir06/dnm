@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/ui/CanvasSubtitleOutput;
+.class public final Lcom/google/android/exoplayer2/ui/CanvasSubtitleOutput;
 .super Landroid/view/View;
 .source "SourceFile"
 
@@ -98,28 +98,33 @@
 .method private static repositionVerticalCue(Lcom/google/android/exoplayer2/text/Cue;)Lcom/google/android/exoplayer2/text/Cue;
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/text/Cue;->buildUpon()Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     move-result-object v0
 
     const v1, -0x800001
 
+    .line 2
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/text/Cue$Builder;->setPosition(F)Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     move-result-object v0
 
     const/high16 v1, -0x80000000
 
+    .line 3
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/text/Cue$Builder;->setPositionAnchor(I)Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
+    .line 4
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/text/Cue$Builder;->setTextAlignment(Landroid/text/Layout$Alignment;)Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     move-result-object v0
 
+    .line 5
     iget v1, p0, Lcom/google/android/exoplayer2/text/Cue;->lineType:I
 
     const/4 v2, 0x0
@@ -128,6 +133,7 @@
 
     if-nez v1, :cond_0
 
+    .line 6
     iget v1, p0, Lcom/google/android/exoplayer2/text/Cue;->line:F
 
     sub-float/2addr v3, v1
@@ -136,6 +142,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_0
     iget v1, p0, Lcom/google/android/exoplayer2/text/Cue;->line:F
 
@@ -147,6 +154,7 @@
 
     invoke-virtual {v0, v1, v3}, Lcom/google/android/exoplayer2/text/Cue$Builder;->setLine(FI)Lcom/google/android/exoplayer2/text/Cue$Builder;
 
+    .line 8
     :goto_0
     iget p0, p0, Lcom/google/android/exoplayer2/text/Cue;->lineAnchor:I
 
@@ -158,14 +166,17 @@
 
     goto :goto_1
 
+    .line 9
     :cond_1
     invoke-virtual {v0, v2}, Lcom/google/android/exoplayer2/text/Cue$Builder;->setLineAnchor(I)Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     goto :goto_1
 
+    .line 10
     :cond_2
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/text/Cue$Builder;->setLineAnchor(I)Lcom/google/android/exoplayer2/text/Cue$Builder;
 
+    .line 11
     :goto_1
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/text/Cue$Builder;->build()Lcom/google/android/exoplayer2/text/Cue;
 
@@ -181,8 +192,10 @@
 
     move-object/from16 v0, p0
 
+    .line 1
     iget-object v1, v0, Lcom/google/android/exoplayer2/ui/CanvasSubtitleOutput;->cues:Ljava/util/List;
 
+    .line 2
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
     move-result v2
@@ -191,19 +204,23 @@
 
     return-void
 
+    .line 3
     :cond_0
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getHeight()I
 
     move-result v2
 
+    .line 4
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getPaddingLeft()I
 
     move-result v14
 
+    .line 5
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getPaddingTop()I
 
     move-result v15
 
+    .line 6
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWidth()I
 
     move-result v3
@@ -214,6 +231,7 @@
 
     sub-int v13, v3, v4
 
+    .line 7
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getPaddingBottom()I
 
     move-result v3
@@ -229,10 +247,12 @@
     :cond_1
     sub-int v11, v12, v15
 
+    .line 8
     iget v3, v0, Lcom/google/android/exoplayer2/ui/CanvasSubtitleOutput;->textSizeType:I
 
     iget v4, v0, Lcom/google/android/exoplayer2/ui/CanvasSubtitleOutput;->textSize:F
 
+    .line 9
     invoke-static {v3, v4, v2, v11}, Lcom/google/android/exoplayer2/ui/SubtitleViewUtils;->resolveTextSize(IFII)F
 
     move-result v16
@@ -245,6 +265,7 @@
 
     return-void
 
+    .line 10
     :cond_2
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -257,18 +278,21 @@
     :goto_0
     if-ge v9, v10, :cond_4
 
+    .line 11
     invoke-interface {v1, v9}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/google/android/exoplayer2/text/Cue;
 
+    .line 12
     iget v4, v3, Lcom/google/android/exoplayer2/text/Cue;->verticalType:I
 
     const/high16 v5, -0x80000000
 
     if-eq v4, v5, :cond_3
 
+    .line 13
     invoke-static {v3}, Lcom/google/android/exoplayer2/ui/CanvasSubtitleOutput;->repositionVerticalCue(Lcom/google/android/exoplayer2/text/Cue;)Lcom/google/android/exoplayer2/text/Cue;
 
     move-result-object v3
@@ -276,14 +300,17 @@
     :cond_3
     move-object v4, v3
 
+    .line 14
     iget v3, v4, Lcom/google/android/exoplayer2/text/Cue;->textSizeType:I
 
     iget v5, v4, Lcom/google/android/exoplayer2/text/Cue;->textSize:F
 
+    .line 15
     invoke-static {v3, v5, v2, v11}, Lcom/google/android/exoplayer2/ui/SubtitleViewUtils;->resolveTextSize(IFII)F
 
     move-result v7
 
+    .line 16
     iget-object v3, v0, Lcom/google/android/exoplayer2/ui/CanvasSubtitleOutput;->painters:Ljava/util/List;
 
     invoke-interface {v3, v9}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -292,6 +319,7 @@
 
     check-cast v3, Lcom/google/android/exoplayer2/ui/SubtitlePainter;
 
+    .line 17
     iget-object v5, v0, Lcom/google/android/exoplayer2/ui/CanvasSubtitleOutput;->style:Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;
 
     iget v8, v0, Lcom/google/android/exoplayer2/ui/CanvasSubtitleOutput;->bottomPaddingFraction:F
@@ -350,16 +378,22 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/ui/CanvasSubtitleOutput;->cues:Ljava/util/List;
 
+    .line 2
     iput-object p2, p0, Lcom/google/android/exoplayer2/ui/CanvasSubtitleOutput;->style:Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;
 
+    .line 3
     iput p3, p0, Lcom/google/android/exoplayer2/ui/CanvasSubtitleOutput;->textSize:F
 
+    .line 4
     iput p4, p0, Lcom/google/android/exoplayer2/ui/CanvasSubtitleOutput;->textSizeType:I
 
+    .line 5
     iput p5, p0, Lcom/google/android/exoplayer2/ui/CanvasSubtitleOutput;->bottomPaddingFraction:F
 
+    .line 6
     :goto_0
     iget-object p2, p0, Lcom/google/android/exoplayer2/ui/CanvasSubtitleOutput;->painters:Ljava/util/List;
 
@@ -373,6 +407,7 @@
 
     if-ge p2, p3, :cond_0
 
+    .line 7
     iget-object p2, p0, Lcom/google/android/exoplayer2/ui/CanvasSubtitleOutput;->painters:Ljava/util/List;
 
     new-instance p3, Lcom/google/android/exoplayer2/ui/SubtitlePainter;
@@ -387,6 +422,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 

@@ -7,5 +7,5 @@
 
 
 # annotations
-.annotation runtime Lmm/d;
+.annotation runtime Lg/a/d;
 .end annotation

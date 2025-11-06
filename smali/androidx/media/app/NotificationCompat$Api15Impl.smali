@@ -1,4 +1,4 @@
-.class Landroidx/media/app/NotificationCompat$Api15Impl;
+.class public Landroidx/media/app/NotificationCompat$Api15Impl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,6 +46,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroid/widget/RemoteViews;->setContentDescription(ILjava/lang/CharSequence;)V
 
     return-void

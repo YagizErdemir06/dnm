@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field value:F
+.field public value:F
 
 
 # direct methods
@@ -16,7 +16,12 @@
     .line 3
     invoke-direct {p0, v0}, Landroidx/constraintlayout/core/parser/CLElement;-><init>([C)V
 
+    const/high16 v0, 0x7fc00000    # Float.NaN
+
     .line 4
+    iput v0, p0, Landroidx/constraintlayout/core/parser/CLNumber;->value:F
+
+    .line 5
     iput p1, p0, Landroidx/constraintlayout/core/parser/CLNumber;->value:F
 
     return-void
@@ -39,6 +44,7 @@
 .method public static allocate([C)Landroidx/constraintlayout/core/parser/CLElement;
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/constraintlayout/core/parser/CLNumber;
 
     invoke-direct {v0, p0}, Landroidx/constraintlayout/core/parser/CLNumber;-><init>([C)V
@@ -51,6 +57,7 @@
 .method public getFloat()F
     .locals 1
 
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/core/parser/CLNumber;->value:F
 
     invoke-static {v0}, Ljava/lang/Float;->isNaN(F)Z
@@ -59,6 +66,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Landroidx/constraintlayout/core/parser/CLElement;->content()Ljava/lang/String;
 
     move-result-object v0
@@ -69,6 +77,7 @@
 
     iput v0, p0, Landroidx/constraintlayout/core/parser/CLNumber;->value:F
 
+    .line 3
     :cond_0
     iget p0, p0, Landroidx/constraintlayout/core/parser/CLNumber;->value:F
 
@@ -78,6 +87,7 @@
 .method public getInt()I
     .locals 1
 
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/core/parser/CLNumber;->value:F
 
     invoke-static {v0}, Ljava/lang/Float;->isNaN(F)Z
@@ -86,6 +96,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Landroidx/constraintlayout/core/parser/CLElement;->content()Ljava/lang/String;
 
     move-result-object v0
@@ -98,6 +109,7 @@
 
     iput v0, p0, Landroidx/constraintlayout/core/parser/CLNumber;->value:F
 
+    .line 3
     :cond_0
     iget p0, p0, Landroidx/constraintlayout/core/parser/CLNumber;->value:F
 
@@ -109,6 +121,7 @@
 .method public isInt()Z
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Landroidx/constraintlayout/core/parser/CLNumber;->getFloat()F
 
     move-result p0
@@ -135,6 +148,7 @@
 .method public putValue(F)V
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/core/parser/CLNumber;->value:F
 
     return-void
@@ -143,12 +157,15 @@
 .method public toFormattedJSON(II)Ljava/lang/String;
     .locals 1
 
+    .line 1
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 2
     invoke-virtual {p0, p2, p1}, Landroidx/constraintlayout/core/parser/CLElement;->addIndent(Ljava/lang/StringBuilder;I)V
 
+    .line 3
     invoke-virtual {p0}, Landroidx/constraintlayout/core/parser/CLNumber;->getFloat()F
 
     move-result p0
@@ -161,13 +178,16 @@
 
     if-nez v0, :cond_0
 
+    .line 4
     invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
+    .line 6
     :goto_0
     invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -179,6 +199,7 @@
 .method public toJSON()Ljava/lang/String;
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Landroidx/constraintlayout/core/parser/CLNumber;->getFloat()F
 
     move-result p0
@@ -193,6 +214,7 @@
 
     if-nez v1, :cond_0
 
+    .line 2
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -207,6 +229,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 

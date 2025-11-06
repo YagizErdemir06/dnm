@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/extractor/mp4/AtomParsers$StszSampleSizeBox;
+.class public final Lcom/google/android/exoplayer2/extractor/mp4/AtomParsers$StszSampleSizeBox;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -29,20 +29,25 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/extractor/mp4/Atom$LeafAtom;Lcom/google/android/exoplayer2/Format;)V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iget-object p1, p1, Lcom/google/android/exoplayer2/extractor/mp4/Atom$LeafAtom;->data:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/extractor/mp4/AtomParsers$StszSampleSizeBox;->data:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     const/16 v0, 0xc
 
+    .line 3
     invoke-virtual {p1, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
+    .line 4
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedIntToInt()I
 
     move-result v0
 
+    .line 5
     iget-object v1, p2, Lcom/google/android/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
     const-string v2, "audio/raw"
@@ -53,6 +58,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 6
     iget v1, p2, Lcom/google/android/exoplayer2/Format;->pcmEncoding:I
 
     iget p2, p2, Lcom/google/android/exoplayer2/Format;->channelCount:I
@@ -63,10 +69,12 @@
 
     if-eqz v0, :cond_0
 
+    .line 7
     rem-int v1, v0, p2
 
     if-eqz v1, :cond_1
 
+    .line 8
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -99,9 +107,11 @@
 
     const/4 v0, -0x1
 
+    .line 9
     :cond_2
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/AtomParsers$StszSampleSizeBox;->fixedSampleSize:I
 
+    .line 10
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedIntToInt()I
 
     move-result p1
@@ -116,6 +126,7 @@
 .method public getFixedSampleSize()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/extractor/mp4/AtomParsers$StszSampleSizeBox;->fixedSampleSize:I
 
     return p0
@@ -124,6 +135,7 @@
 .method public getSampleCount()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/extractor/mp4/AtomParsers$StszSampleSizeBox;->sampleCount:I
 
     return p0
@@ -132,6 +144,7 @@
 .method public readNextSampleSize()I
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/AtomParsers$StszSampleSizeBox;->fixedSampleSize:I
 
     const/4 v1, -0x1

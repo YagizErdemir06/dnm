@@ -59,12 +59,14 @@
 .method public getDocument()Lorg/dom4j/Document;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Ljavax/xml/transform/sax/SAXSource;->getInputSource()Lorg/xml/sax/InputSource;
 
     move-result-object p0
 
     check-cast p0, Lorg/dom4j/io/DocumentInputSource;
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/io/DocumentInputSource;->getDocument()Lorg/dom4j/Document;
 
     move-result-object p0
@@ -75,6 +77,7 @@
 .method public getXMLReader()Lorg/xml/sax/XMLReader;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/DocumentSource;->xmlReader:Lorg/xml/sax/XMLReader;
 
     return-object p0
@@ -83,6 +86,7 @@
 .method public setDocument(Lorg/dom4j/Document;)V
     .locals 1
 
+    .line 1
     new-instance v0, Lorg/dom4j/io/DocumentInputSource;
 
     invoke-direct {v0, p1}, Lorg/dom4j/io/DocumentInputSource;-><init>(Lorg/dom4j/Document;)V
@@ -100,16 +104,19 @@
         }
     .end annotation
 
+    .line 1
     instance-of v0, p1, Lorg/dom4j/io/DocumentInputSource;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lorg/dom4j/io/DocumentInputSource;
 
     invoke-super {p0, p1}, Ljavax/xml/transform/sax/SAXSource;->setInputSource(Lorg/xml/sax/InputSource;)V
 
     return-void
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -126,48 +133,58 @@
         }
     .end annotation
 
+    .line 1
     instance-of v0, p1, Lorg/dom4j/io/SAXWriter;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lorg/dom4j/io/SAXWriter;
 
     iput-object p1, p0, Lorg/dom4j/io/DocumentSource;->xmlReader:Lorg/xml/sax/XMLReader;
 
     goto :goto_1
 
+    .line 3
     :cond_0
     instance-of v0, p1, Lorg/xml/sax/XMLFilter;
 
     if-eqz v0, :cond_2
 
+    .line 4
     check-cast p1, Lorg/xml/sax/XMLFilter;
 
+    .line 5
     :goto_0
     invoke-interface {p1}, Lorg/xml/sax/XMLFilter;->getParent()Lorg/xml/sax/XMLReader;
 
     move-result-object v0
 
+    .line 6
     instance-of v1, v0, Lorg/xml/sax/XMLFilter;
 
     if-eqz v1, :cond_1
 
+    .line 7
     move-object p1, v0
 
     check-cast p1, Lorg/xml/sax/XMLFilter;
 
     goto :goto_0
 
+    .line 8
     :cond_1
     iget-object v0, p0, Lorg/dom4j/io/DocumentSource;->xmlReader:Lorg/xml/sax/XMLReader;
 
     invoke-interface {p1, v0}, Lorg/xml/sax/XMLFilter;->setParent(Lorg/xml/sax/XMLReader;)V
 
+    .line 9
     iput-object p1, p0, Lorg/dom4j/io/DocumentSource;->xmlReader:Lorg/xml/sax/XMLReader;
 
     :goto_1
     return-void
 
+    .line 10
     :cond_2
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 

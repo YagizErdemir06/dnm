@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/milab/videosdk/message/LooperHandler$InnerHandler;
+.class public Lcom/xiaomi/milab/videosdk/message/LooperHandler$InnerHandler;
 .super Landroid/os/Handler;
 .source "SourceFile"
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/xiaomi/milab/videosdk/message/LooperHandler;
+.field public final synthetic this$0:Lcom/xiaomi/milab/videosdk/message/LooperHandler;
 
 
 # direct methods
@@ -32,8 +32,10 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/milab/videosdk/message/LooperHandler$InnerHandler;->this$0:Lcom/xiaomi/milab/videosdk/message/LooperHandler;
 
+    .line 2
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -52,6 +54,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/LooperHandler$InnerHandler;->this$0:Lcom/xiaomi/milab/videosdk/message/LooperHandler;
 
     invoke-static {p0}, Lcom/xiaomi/milab/videosdk/message/LooperHandler;->access$000(Lcom/xiaomi/milab/videosdk/message/LooperHandler;)Lcom/xiaomi/milab/videosdk/message/DefaultHandler;

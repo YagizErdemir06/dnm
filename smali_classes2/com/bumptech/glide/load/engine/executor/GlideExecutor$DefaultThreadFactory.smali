@@ -1,4 +1,4 @@
-.class final Lcom/bumptech/glide/load/engine/executor/GlideExecutor$DefaultThreadFactory;
+.class public final Lcom/bumptech/glide/load/engine/executor/GlideExecutor$DefaultThreadFactory;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -24,23 +24,27 @@
 # instance fields
 .field private final name:Ljava/lang/String;
 
-.field final preventNetworkOperations:Z
+.field public final preventNetworkOperations:Z
 
 .field private threadNum:I
 
-.field final uncaughtThrowableStrategy:Lcom/bumptech/glide/load/engine/executor/GlideExecutor$UncaughtThrowableStrategy;
+.field public final uncaughtThrowableStrategy:Lcom/bumptech/glide/load/engine/executor/GlideExecutor$UncaughtThrowableStrategy;
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Lcom/bumptech/glide/load/engine/executor/GlideExecutor$UncaughtThrowableStrategy;Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$DefaultThreadFactory;->name:Ljava/lang/String;
 
+    .line 3
     iput-object p2, p0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$DefaultThreadFactory;->uncaughtThrowableStrategy:Lcom/bumptech/glide/load/engine/executor/GlideExecutor$UncaughtThrowableStrategy;
 
+    .line 4
     iput-boolean p3, p0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$DefaultThreadFactory;->preventNetworkOperations:Z
 
     return-void
@@ -57,6 +61,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     new-instance v0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$DefaultThreadFactory$1;
 
@@ -86,6 +91,7 @@
 
     invoke-direct {v0, p0, p1, v1}, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$DefaultThreadFactory$1;-><init>(Lcom/bumptech/glide/load/engine/executor/GlideExecutor$DefaultThreadFactory;Ljava/lang/Runnable;Ljava/lang/String;)V
 
+    .line 2
     iget p1, p0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$DefaultThreadFactory;->threadNum:I
 
     add-int/lit8 p1, p1, 0x1
@@ -94,6 +100,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     monitor-exit p0
 
     return-object v0

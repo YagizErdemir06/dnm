@@ -1,4 +1,4 @@
-.class final Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;
+.class public final Landroidx/core/content/res/GradientColorInflaterCompat$ColorStops;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field final mColors:[I
+.field public final mColors:[I
 
-.field final mOffsets:[F
+.field public final mOffsets:[F
 
 
 # direct methods

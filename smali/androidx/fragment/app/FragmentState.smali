@@ -1,4 +1,4 @@
-.class final Landroidx/fragment/app/FragmentState;
+.class public final Landroidx/fragment/app/FragmentState;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,37 +27,38 @@
 
 
 # instance fields
-.field final mArguments:Landroid/os/Bundle;
+.field public final mArguments:Landroid/os/Bundle;
 
-.field final mClassName:Ljava/lang/String;
+.field public final mClassName:Ljava/lang/String;
 
-.field final mContainerId:I
+.field public final mContainerId:I
 
-.field final mDetached:Z
+.field public final mDetached:Z
 
-.field final mFragmentId:I
+.field public final mFragmentId:I
 
-.field final mFromLayout:Z
+.field public final mFromLayout:Z
 
-.field final mHidden:Z
+.field public final mHidden:Z
 
-.field final mMaxLifecycleState:I
+.field public final mMaxLifecycleState:I
 
-.field final mRemoving:Z
+.field public final mRemoving:Z
 
-.field final mRetainInstance:Z
+.field public final mRetainInstance:Z
 
-.field mSavedFragmentState:Landroid/os/Bundle;
+.field public mSavedFragmentState:Landroid/os/Bundle;
 
-.field final mTag:Ljava/lang/String;
+.field public final mTag:Ljava/lang/String;
 
-.field final mWho:Ljava/lang/String;
+.field public final mWho:Ljava/lang/String;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/fragment/app/FragmentState$1;
 
     invoke-direct {v0}, Landroidx/fragment/app/FragmentState$1;-><init>()V
@@ -313,6 +314,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x80
@@ -321,32 +323,40 @@
 
     const-string v1, "FragmentState{"
 
+    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 3
     iget-object v1, p0, Landroidx/fragment/app/FragmentState;->mClassName:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, " ("
 
+    .line 4
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 5
     iget-object v1, p0, Landroidx/fragment/app/FragmentState;->mWho:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, ")}:"
 
+    .line 6
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 7
     iget-boolean v1, p0, Landroidx/fragment/app/FragmentState;->mFromLayout:Z
 
     if-eqz v1, :cond_0
 
     const-string v1, " fromLayout"
 
+    .line 8
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 9
     :cond_0
     iget v1, p0, Landroidx/fragment/app/FragmentState;->mContainerId:I
 
@@ -354,8 +364,10 @@
 
     const-string v1, " id=0x"
 
+    .line 10
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 11
     iget v1, p0, Landroidx/fragment/app/FragmentState;->mContainerId:I
 
     invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
@@ -364,6 +376,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 12
     :cond_1
     iget-object v1, p0, Landroidx/fragment/app/FragmentState;->mTag:Ljava/lang/String;
 
@@ -377,12 +390,15 @@
 
     const-string v1, " tag="
 
+    .line 13
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 14
     iget-object v1, p0, Landroidx/fragment/app/FragmentState;->mTag:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 15
     :cond_2
     iget-boolean v1, p0, Landroidx/fragment/app/FragmentState;->mRetainInstance:Z
 
@@ -390,8 +406,10 @@
 
     const-string v1, " retainInstance"
 
+    .line 16
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 17
     :cond_3
     iget-boolean v1, p0, Landroidx/fragment/app/FragmentState;->mRemoving:Z
 
@@ -399,8 +417,10 @@
 
     const-string v1, " removing"
 
+    .line 18
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 19
     :cond_4
     iget-boolean v1, p0, Landroidx/fragment/app/FragmentState;->mDetached:Z
 
@@ -408,8 +428,10 @@
 
     const-string v1, " detached"
 
+    .line 20
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 21
     :cond_5
     iget-boolean p0, p0, Landroidx/fragment/app/FragmentState;->mHidden:Z
 
@@ -417,8 +439,10 @@
 
     const-string p0, " hidden"
 
+    .line 22
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 23
     :cond_6
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -430,54 +454,67 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
+    .line 1
     iget-object p2, p0, Landroidx/fragment/app/FragmentState;->mClassName:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 2
     iget-object p2, p0, Landroidx/fragment/app/FragmentState;->mWho:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 3
     iget-boolean p2, p0, Landroidx/fragment/app/FragmentState;->mFromLayout:Z
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 4
     iget p2, p0, Landroidx/fragment/app/FragmentState;->mFragmentId:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 5
     iget p2, p0, Landroidx/fragment/app/FragmentState;->mContainerId:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 6
     iget-object p2, p0, Landroidx/fragment/app/FragmentState;->mTag:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 7
     iget-boolean p2, p0, Landroidx/fragment/app/FragmentState;->mRetainInstance:Z
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 8
     iget-boolean p2, p0, Landroidx/fragment/app/FragmentState;->mRemoving:Z
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 9
     iget-boolean p2, p0, Landroidx/fragment/app/FragmentState;->mDetached:Z
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 10
     iget-object p2, p0, Landroidx/fragment/app/FragmentState;->mArguments:Landroid/os/Bundle;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
+    .line 11
     iget-boolean p2, p0, Landroidx/fragment/app/FragmentState;->mHidden:Z
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 12
     iget-object p2, p0, Landroidx/fragment/app/FragmentState;->mSavedFragmentState:Landroid/os/Bundle;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
+    .line 13
     iget p0, p0, Landroidx/fragment/app/FragmentState;->mMaxLifecycleState:I
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V

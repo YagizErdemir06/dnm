@@ -4,13 +4,13 @@
 
 
 # static fields
-.field public static c:Ljava/lang/String; = "MediaComposeFile"
+.field private static a:Ljava/lang/String; = "MediaComposeFile"
 
 
 # instance fields
-.field public a:Lcom/xiaomi/magicvideosky/MediaEffectGraph;
+.field private b:Lcom/xiaomi/magicvideosky/MediaEffectGraph;
 
-.field public b:J
+.field private c:J
 
 
 # direct methods
@@ -23,9 +23,11 @@
 .method public constructor <init>(Lcom/xiaomi/magicvideosky/MediaEffectGraph;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/xiaomi/magicvideosky/MediaComposeFile;->a:Lcom/xiaomi/magicvideosky/MediaEffectGraph;
+    .line 2
+    iput-object p1, p0, Lcom/xiaomi/magicvideosky/MediaComposeFile;->b:Lcom/xiaomi/magicvideosky/MediaEffectGraph;
 
     return-void
 .end method
@@ -50,7 +52,8 @@
 .method public a()V
     .locals 4
 
-    sget-object v0, Lcom/xiaomi/magicvideosky/MediaComposeFile;->c:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/magicvideosky/MediaComposeFile;->a:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -60,7 +63,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaComposeFile;->b:J
+    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaComposeFile;->c:J
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -70,6 +73,7 @@
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {}, Lcom/xiaomi/magicvideosky/MediaComposeFile;->BeginComposeJni()V
 
     return-void
@@ -78,7 +82,8 @@
 .method public b()V
     .locals 4
 
-    sget-object v0, Lcom/xiaomi/magicvideosky/MediaComposeFile;->c:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/magicvideosky/MediaComposeFile;->a:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -88,7 +93,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaComposeFile;->b:J
+    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaComposeFile;->c:J
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -98,6 +103,7 @@
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {}, Lcom/xiaomi/magicvideosky/MediaComposeFile;->CancelComposeJni()V
 
     return-void
@@ -106,11 +112,13 @@
 .method public c(IIIILcom/xiaomi/magicvideosky/EffectNotifier;)Z
     .locals 7
 
-    iget-object v0, p0, Lcom/xiaomi/magicvideosky/MediaComposeFile;->a:Lcom/xiaomi/magicvideosky/MediaEffectGraph;
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/magicvideosky/MediaComposeFile;->b:Lcom/xiaomi/magicvideosky/MediaEffectGraph;
 
     if-nez v0, :cond_0
 
-    sget-object p0, Lcom/xiaomi/magicvideosky/MediaComposeFile;->c:Ljava/lang/String;
+    .line 2
+    sget-object p0, Lcom/xiaomi/magicvideosky/MediaComposeFile;->a:Ljava/lang/String;
 
     const-string p1, "effect graph is null, failed!"
 
@@ -120,6 +128,7 @@
 
     return p0
 
+    .line 3
     :cond_0
     invoke-virtual {v0}, Lcom/xiaomi/magicvideosky/MediaEffectGraph;->j()J
 
@@ -137,7 +146,8 @@
 
     invoke-static/range {v0 .. v6}, Lcom/xiaomi/magicvideosky/MediaComposeFile;->ConstructMediaComposeFileJni(JIIIILcom/xiaomi/magicvideosky/EffectNotifier;)Z
 
-    sget-object p1, Lcom/xiaomi/magicvideosky/MediaComposeFile;->c:Ljava/lang/String;
+    .line 4
+    sget-object p1, Lcom/xiaomi/magicvideosky/MediaComposeFile;->a:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -147,7 +157,7 @@
 
     invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide p3, p0, Lcom/xiaomi/magicvideosky/MediaComposeFile;->b:J
+    iget-wide p3, p0, Lcom/xiaomi/magicvideosky/MediaComposeFile;->c:J
 
     invoke-virtual {p2, p3, p4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -165,7 +175,8 @@
 .method public d()V
     .locals 4
 
-    sget-object v0, Lcom/xiaomi/magicvideosky/MediaComposeFile;->c:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/magicvideosky/MediaComposeFile;->a:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -175,7 +186,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaComposeFile;->b:J
+    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaComposeFile;->c:J
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -185,6 +196,7 @@
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {}, Lcom/xiaomi/magicvideosky/MediaComposeFile;->DestructMediaComposeFileJni()V
 
     return-void
@@ -193,7 +205,8 @@
 .method public e(Ljava/lang/String;)V
     .locals 2
 
-    sget-object p0, Lcom/xiaomi/magicvideosky/MediaComposeFile;->c:Ljava/lang/String;
+    .line 1
+    sget-object p0, Lcom/xiaomi/magicvideosky/MediaComposeFile;->a:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -211,6 +224,7 @@
 
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {p1}, Lcom/xiaomi/magicvideosky/MediaComposeFile;->SetComposeFileNameJni(Ljava/lang/String;)V
 
     return-void
@@ -219,7 +233,8 @@
 .method public f(Lcom/xiaomi/magicvideosky/MediaEffectGraph;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/xiaomi/magicvideosky/MediaComposeFile;->a:Lcom/xiaomi/magicvideosky/MediaEffectGraph;
+    .line 1
+    iput-object p1, p0, Lcom/xiaomi/magicvideosky/MediaComposeFile;->b:Lcom/xiaomi/magicvideosky/MediaEffectGraph;
 
     return-void
 .end method

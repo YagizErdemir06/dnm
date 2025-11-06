@@ -33,6 +33,7 @@
         .end annotation
     .end param
 
+    .line 1
     new-instance v0, Lcom/google/mlkit/common/internal/model/AutoValue_ModelUtils_ModelLoggingInfo;
 
     invoke-static {p2}, Lcom/google/android/gms/internal/mlkit_common/zzag;->zzb(Ljava/lang/String;)Ljava/lang/String;

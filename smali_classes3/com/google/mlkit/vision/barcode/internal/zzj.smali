@@ -1,4 +1,4 @@
-.class interface abstract Lcom/google/mlkit/vision/barcode/internal/zzj;
+.class public interface abstract Lcom/google/mlkit/vision/barcode/internal/zzj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

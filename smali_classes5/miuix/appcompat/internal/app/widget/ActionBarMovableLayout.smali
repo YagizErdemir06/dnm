@@ -4,66 +4,75 @@
 
 
 # static fields
-.field public static final la:Ljava/lang/String; = "ActionBarMovableLayout"
+.field private static final b9:Ljava/lang/String;
 
-.field public static final ma:Z = false
+.field private static final c9:Z = false
 
-.field public static final na:I = -0x1
+.field public static final d9:I = -0x1
 
-.field public static final oa:I = 0x0
+.field public static final e9:I = 0x0
 
-.field public static final pa:I = 0x1
+.field public static final f9:I = 0x1
 
-.field public static final qa:I = 0x320
+.field public static final g9:I = 0x320
 
 
 # instance fields
-.field public R9:Ldr/d;
+.field private A9:Landroid/view/VelocityTracker;
 
-.field public S9:I
+.field private B9:Lmiuix/appcompat/app/ActionBar$b;
 
-.field public T9:Z
+.field private h9:Landroid/view/View;
 
-.field public U9:F
+.field private i9:Landroid/widget/OverScroller;
 
-.field public V9:F
+.field private j9:I
 
-.field public W9:I
+.field private k9:Z
 
-.field public X9:I
+.field private l9:F
 
-.field public final Y9:I
+.field private m9:F
 
-.field public final Z9:I
+.field private n9:I
 
-.field public final aa:I
+.field private o9:I
 
-.field public ba:I
+.field private final p9:I
 
-.field public ca:I
+.field private final q9:I
 
-.field public da:I
+.field private final r9:I
 
-.field public ea:I
+.field private s9:I
 
-.field public fa:I
+.field private t9:I
 
-.field public ga:Z
+.field private u9:I
 
-.field public ha:Z
+.field private v9:I
 
-.field public ia:Z
+.field private w9:I
 
-.field public ja:Landroid/view/VelocityTracker;
+.field private x9:Z
 
-.field public ka:Lmiuix/appcompat/app/ActionBar$b;
+.field private y9:Z
 
-.field public q9:Landroid/view/View;
+.field private z9:Z
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 0
+    .locals 1
+
+    .line 1
+    const-class v0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->b9:Ljava/lang/String;
 
     return-void
 .end method
@@ -71,27 +80,34 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 4
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->X9:I
+    .line 2
+    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->o9:I
 
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ba:I
+    .line 3
+    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->s9:I
 
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->da:I
+    .line 4
+    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->u9:I
 
     const/16 v1, 0x8
 
-    iput v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->fa:I
+    .line 5
+    iput v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->w9:I
 
     const/4 v1, 0x1
 
-    iput-boolean v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ha:Z
+    .line 6
+    iput-boolean v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->y9:Z
 
-    sget-object v1, Lso/b$r;->ActionBarMovableLayout:[I
+    .line 7
+    sget-object v1, Lk/b/b$r;->ActionBarMovableLayout:[I
 
-    sget v2, Lso/b$d;->actionBarMovableLayoutStyle:I
+    sget v2, Lk/b/b$d;->actionBarMovableLayoutStyle:I
 
     const/4 v3, 0x0
 
@@ -99,262 +115,84 @@
 
     move-result-object p2
 
-    invoke-static {}, Lnq/f;->a()Z
+    .line 8
+    invoke-static {}, Lk/l/c/e;->a()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    sget v1, Lso/b$r;->ActionBarMovableLayout_overScrollRange:I
+    .line 9
+    sget v1, Lk/b/b$r;->ActionBarMovableLayout_overScrollRange:I
 
     invoke-virtual {p2, v1, v3}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v1
 
-    iput v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ca:I
+    iput v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->t9:I
 
+    .line 10
     :cond_0
-    sget v1, Lso/b$r;->ActionBarMovableLayout_scrollRange:I
+    sget v1, Lk/b/b$r;->ActionBarMovableLayout_scrollRange:I
 
     invoke-virtual {p2, v1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v1
 
-    iput v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ba:I
+    iput v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->s9:I
 
-    sget v1, Lso/b$r;->ActionBarMovableLayout_scrollStart:I
+    .line 11
+    sget v1, Lk/b/b$r;->ActionBarMovableLayout_scrollStart:I
 
     invoke-virtual {p2, v1, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v0
 
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->da:I
+    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->u9:I
 
+    .line 12
     invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
     move-result-object v0
 
+    .line 13
     invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
 
     move-result v1
 
-    iput v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->Y9:I
+    iput v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->p9:I
 
-    new-instance v1, Ldr/d;
+    .line 14
+    new-instance v1, Landroid/widget/OverScroller;
 
-    invoke-direct {v1, p1}, Ldr/d;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, p1}, Landroid/widget/OverScroller;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->R9:Ldr/d;
+    iput-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->i9:Landroid/widget/OverScroller;
 
+    .line 15
     invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledMinimumFlingVelocity()I
 
     move-result p1
 
-    iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->Z9:I
+    iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->q9:I
 
+    .line 16
     invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledMaximumFlingVelocity()I
 
     move-result p1
 
-    iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->aa:I
+    iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->r9:I
 
-    invoke-virtual {p0, v3}, Landroid/view/View;->setOverScrollMode(I)V
+    .line 17
+    invoke-virtual {p0, v3}, Landroid/widget/FrameLayout;->setOverScrollMode(I)V
 
+    .line 18
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public b0(F)V
-    .locals 1
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->j0(F)F
-
-    move-result p1
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->d:Landroid/view/View;
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setTranslationY(F)V
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->d0()V
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->q9:Landroid/view/View;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setTranslationY(F)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public c0()I
-    .locals 3
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ja:Landroid/view/VelocityTracker;
-
-    iget v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->aa:I
-
-    int-to-float v1, v1
-
-    const/16 v2, 0x3e8
-
-    invoke-virtual {v0, v2, v1}, Landroid/view/VelocityTracker;->computeCurrentVelocity(IF)V
-
-    iget p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->S9:I
-
-    invoke-virtual {v0, p0}, Landroid/view/VelocityTracker;->getYVelocity(I)F
-
-    move-result p0
-
-    float-to-int p0, p0
-
-    return p0
-.end method
-
-.method public computeScroll()V
-    .locals 12
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->R9:Ldr/d;
-
-    invoke-virtual {v0}, Ldr/d;->b()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->W9:I
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->R9:Ldr/d;
-
-    invoke-virtual {v1}, Ldr/d;->k()I
-
-    move-result v1
-
-    if-eq v0, v1, :cond_0
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->getScrollRange()I
-
-    move-result v8
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->getOverScrollDistance()I
-
-    move-result v10
-
-    const/4 v3, 0x0
-
-    sub-int v4, v1, v0
-
-    const/4 v5, 0x0
-
-    iget v6, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->W9:I
-
-    const/4 v7, 0x0
-
-    const/4 v9, 0x0
-
-    const/4 v11, 0x1
-
-    move-object v2, p0
-
-    invoke-virtual/range {v2 .. v11}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->overScrollBy(IIIIIIIIZ)Z
-
-    :cond_0
-    invoke-static {p0}, Ldr/a;->a(Landroid/view/View;)V
-
-    goto :goto_0
-
-    :cond_1
-    iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ia:Z
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->q0()V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ia:Z
-
-    :cond_2
-    :goto_0
-    return-void
-.end method
-
-.method public computeVerticalScrollExtent()I
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public computeVerticalScrollRange()I
-    .locals 0
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->getScrollRange()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public d0()V
-    .locals 1
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->b:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->getTabContainer()Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->q9:Landroid/view/View;
-
-    return-void
-.end method
-
-.method public e0(I)V
-    .locals 11
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->getOverScrollDistance()I
-
-    move-result v10
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->getScrollRange()I
-
-    move-result v8
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->R9:Ldr/d;
-
-    const/4 v1, 0x0
-
-    iget v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->W9:I
-
-    const/4 v3, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    const/4 v9, 0x0
-
-    move v4, p1
-
-    invoke-virtual/range {v0 .. v10}, Ldr/d;->e(IIIIIIIIII)V
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ia:Z
-
-    invoke-virtual {p0}, Landroid/view/View;->postInvalidate()V
-
-    return-void
-.end method
-
-.method public final f0(Landroid/view/View;II)Z
+.method private D(Landroid/view/View;II)Z
     .locals 6
 
     const/4 v0, 0x0
@@ -363,6 +201,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getY()F
 
@@ -370,12 +209,14 @@
 
     float-to-int v1, v1
 
+    .line 2
     invoke-virtual {p1}, Landroid/view/View;->getX()F
 
     move-result v2
 
     float-to-int v2, v2
 
+    .line 3
     invoke-virtual {p1}, Landroid/view/View;->getY()F
 
     move-result v3
@@ -390,6 +231,7 @@
 
     float-to-int v3, v3
 
+    .line 4
     invoke-virtual {p1}, Landroid/view/View;->getX()F
 
     move-result v4
@@ -404,13 +246,15 @@
 
     float-to-int v4, v4
 
-    iget-object v5, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->q9:Landroid/view/View;
+    .line 5
+    iget-object v5, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->h9:Landroid/view/View;
 
     if-ne p1, v5, :cond_1
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->b:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    .line 6
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->f:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
-    invoke-virtual {p0}, Landroid/view/View;->getTop()I
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getTop()I
 
     move-result p0
 
@@ -433,21 +277,24 @@
     return v0
 .end method
 
-.method public final g0()V
+.method private E()V
     .locals 1
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ja:Landroid/view/VelocityTracker;
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->A9:Landroid/view/VelocityTracker;
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
 
     move-result-object v0
 
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ja:Landroid/view/VelocityTracker;
+    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->A9:Landroid/view/VelocityTracker;
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-virtual {v0}, Landroid/view/VelocityTracker;->clear()V
 
@@ -455,77 +302,48 @@
     return-void
 .end method
 
-.method public getOverScrollDistance()I
+.method private F()V
     .locals 1
 
-    invoke-static {}, Lnq/f;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ca:I
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    return p0
-.end method
-
-.method public getScrollRange()I
-    .locals 0
-
-    iget p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ba:I
-
-    return p0
-.end method
-
-.method public getScrollStart()I
-    .locals 0
-
-    iget p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ea:I
-
-    return p0
-.end method
-
-.method public final h0()V
-    .locals 1
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ja:Landroid/view/VelocityTracker;
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->A9:Landroid/view/VelocityTracker;
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
 
     move-result-object v0
 
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ja:Landroid/view/VelocityTracker;
+    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->A9:Landroid/view/VelocityTracker;
 
     :cond_0
     return-void
 .end method
 
-.method public final i0()Z
+.method private G()Z
     .locals 2
 
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->d0()V
+    .line 1
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->B()V
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->q9:Landroid/view/View;
+    .line 2
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->h9:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
 
     move-result v0
 
-    iget v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->fa:I
+    .line 4
+    iget v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->w9:I
 
     if-eq v0, v1, :cond_0
 
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->fa:I
+    .line 5
+    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->w9:I
 
     const/4 p0, 0x1
 
@@ -538,10 +356,184 @@
     return p0
 .end method
 
-.method public j0(F)F
+.method private L(Landroid/view/MotionEvent;)V
+    .locals 3
+
+    .line 1
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v0
+
+    const v1, 0xff00
+
+    and-int/2addr v0, v1
+
+    shr-int/lit8 v0, v0, 0x8
+
+    .line 2
+    invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getPointerId(I)I
+
+    move-result v1
+
+    .line 3
+    iget v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->j9:I
+
+    if-ne v1, v2, :cond_1
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 4
+    :goto_0
+    invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getY(I)F
+
+    move-result v1
+
+    float-to-int v1, v1
+
+    int-to-float v1, v1
+
+    iput v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->l9:F
+
+    .line 5
+    invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getPointerId(I)I
+
+    move-result p1
+
+    iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->j9:I
+
+    .line 6
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->A9:Landroid/view/VelocityTracker;
+
+    if-eqz p0, :cond_1
+
+    .line 7
+    invoke-virtual {p0}, Landroid/view/VelocityTracker;->clear()V
+
+    :cond_1
+    return-void
+.end method
+
+.method private M()V
     .locals 1
 
-    iget v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ca:I
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->A9:Landroid/view/VelocityTracker;
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-virtual {v0}, Landroid/view/VelocityTracker;->recycle()V
+
+    const/4 v0, 0x0
+
+    .line 3
+    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->A9:Landroid/view/VelocityTracker;
+
+    :cond_0
+    return-void
+.end method
+
+
+# virtual methods
+.method public A()I
+    .locals 3
+
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->A9:Landroid/view/VelocityTracker;
+
+    .line 2
+    iget v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->r9:I
+
+    int-to-float v1, v1
+
+    const/16 v2, 0x3e8
+
+    invoke-virtual {v0, v2, v1}, Landroid/view/VelocityTracker;->computeCurrentVelocity(IF)V
+
+    .line 3
+    iget p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->j9:I
+
+    invoke-virtual {v0, p0}, Landroid/view/VelocityTracker;->getYVelocity(I)F
+
+    move-result p0
+
+    float-to-int p0, p0
+
+    return p0
+.end method
+
+.method public B()V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->f:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->getTabContainer()Landroid/view/View;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->h9:Landroid/view/View;
+
+    return-void
+.end method
+
+.method public C(I)V
+    .locals 11
+
+    .line 1
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->getOverScrollDistance()I
+
+    move-result v10
+
+    .line 2
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->getScrollRange()I
+
+    move-result v8
+
+    .line 3
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->i9:Landroid/widget/OverScroller;
+
+    iget v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->n9:I
+
+    const/4 v1, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v9, 0x0
+
+    move v4, p1
+
+    invoke-virtual/range {v0 .. v10}, Landroid/widget/OverScroller;->fling(IIIIIIIIII)V
+
+    const/4 p1, 0x1
+
+    .line 4
+    iput-boolean p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->z9:Z
+
+    .line 5
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->postInvalidate()V
+
+    return-void
+.end method
+
+.method public H(F)F
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->t9:I
 
     neg-int v0, v0
 
@@ -549,21 +541,23 @@
 
     add-float/2addr v0, p1
 
-    iget p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ba:I
+    iget p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->s9:I
 
     int-to-float p1, p1
 
     sub-float/2addr v0, p1
 
-    iget p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ea:I
+    iget p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->v9:I
 
     int-to-float p1, p1
 
     sub-float/2addr v0, p1
 
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->d0()V
+    .line 2
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->B()V
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->q9:Landroid/view/View;
+    .line 3
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->h9:Landroid/view/View;
 
     if-eqz p1, :cond_0
 
@@ -573,7 +567,8 @@
 
     if-nez p1, :cond_0
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->q9:Landroid/view/View;
+    .line 4
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->h9:Landroid/view/View;
 
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
@@ -587,18 +582,21 @@
     return v0
 .end method
 
-.method public k0(F)V
+.method public I(F)V
     .locals 2
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->b0(F)V
+    .line 1
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->z(F)V
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ka:Lmiuix/appcompat/app/ActionBar$b;
+    .line 2
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->B9:Lmiuix/appcompat/app/ActionBar$b;
 
     if-eqz v0, :cond_0
 
-    iget v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->X9:I
+    .line 3
+    iget v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->o9:I
 
-    iget p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ba:I
+    iget p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->s9:I
 
     int-to-float p0, p0
 
@@ -610,47 +608,435 @@
     return-void
 .end method
 
-.method public l0()V
+.method public J()V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ka:Lmiuix/appcompat/app/ActionBar$b;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->B9:Lmiuix/appcompat/app/ActionBar$b;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0}, Lmiuix/appcompat/app/ActionBar$b;->d()V
 
     :cond_0
     return-void
 .end method
 
-.method public m0()V
+.method public K()V
     .locals 1
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->X9:I
+    .line 1
+    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->o9:I
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ka:Lmiuix/appcompat/app/ActionBar$b;
+    .line 2
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->B9:Lmiuix/appcompat/app/ActionBar$b;
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-interface {p0}, Lmiuix/appcompat/app/ActionBar$b;->c()V
 
     :cond_0
     return-void
 .end method
 
+.method public N(Landroid/view/MotionEvent;)Z
+    .locals 9
+
+    .line 1
+    iget v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->j9:I
+
+    const/4 v1, -0x1
+
+    const/4 v2, 0x0
+
+    if-ne v0, v1, :cond_0
+
+    return v2
+
+    .line 2
+    :cond_0
+    invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->findPointerIndex(I)I
+
+    move-result v0
+
+    if-ne v0, v1, :cond_1
+
+    .line 3
+    sget-object p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->b9:Ljava/lang/String;
+
+    const-string p1, "invalid pointer index"
+
+    invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v2
+
+    .line 4
+    :cond_1
+    invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getX(I)F
+
+    move-result v1
+
+    .line 5
+    invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getY(I)F
+
+    move-result p1
+
+    .line 6
+    iget v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->l9:F
+
+    sub-float v0, p1, v0
+
+    float-to-int v0, v0
+
+    .line 7
+    invoke-static {v0}, Ljava/lang/Math;->abs(I)I
+
+    move-result v3
+
+    .line 8
+    iget v4, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->m9:F
+
+    sub-float v4, v1, v4
+
+    invoke-static {v4}, Ljava/lang/Math;->abs(F)F
+
+    move-result v4
+
+    float-to-int v4, v4
+
+    .line 9
+    iget-object v5, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->g:Landroid/view/View;
+
+    float-to-int v6, v1
+
+    float-to-int v7, p1
+
+    invoke-direct {p0, v5, v6, v7}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->D(Landroid/view/View;II)Z
+
+    move-result v5
+
+    .line 10
+    iget-object v8, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->h9:Landroid/view/View;
+
+    invoke-direct {p0, v8, v6, v7}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->D(Landroid/view/View;II)Z
+
+    move-result v6
+
+    const/4 v7, 0x1
+
+    if-nez v5, :cond_3
+
+    if-eqz v6, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move v5, v2
+
+    goto :goto_1
+
+    :cond_3
+    :goto_0
+    move v5, v7
+
+    :goto_1
+    if-eqz v5, :cond_7
+
+    .line 11
+    iget v5, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->p9:I
+
+    if-le v3, v5, :cond_7
+
+    if-le v3, v4, :cond_7
+
+    .line 12
+    iget v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->n9:I
+
+    if-nez v3, :cond_5
+
+    if-gez v0, :cond_4
+
+    goto :goto_2
+
+    .line 13
+    :cond_4
+    iget-object v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->B9:Lmiuix/appcompat/app/ActionBar$b;
+
+    if-eqz v3, :cond_6
+
+    invoke-interface {v3}, Lmiuix/appcompat/app/ActionBar$b;->b()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_6
+
+    goto :goto_2
+
+    :cond_5
+    if-lez v0, :cond_6
+
+    .line 14
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->getOverScrollDistance()I
+
+    move-result v4
+
+    if-lt v3, v4, :cond_6
+
+    iget-object v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->B9:Lmiuix/appcompat/app/ActionBar$b;
+
+    if-eqz v3, :cond_6
+
+    .line 15
+    invoke-interface {v3}, Lmiuix/appcompat/app/ActionBar$b;->b()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_6
+
+    goto :goto_2
+
+    :cond_6
+    move v3, v7
+
+    goto :goto_3
+
+    :cond_7
+    :goto_2
+    move v3, v2
+
+    :goto_3
+    if-eqz v3, :cond_9
+
+    .line 16
+    iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->l9:F
+
+    .line 17
+    iput v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->m9:F
+
+    if-lez v0, :cond_8
+
+    move v2, v7
+
+    .line 18
+    :cond_8
+    iput v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->o9:I
+
+    .line 19
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_9
+
+    .line 20
+    invoke-interface {p0, v7}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
+
+    :cond_9
+    return v3
+.end method
+
+.method public O()V
+    .locals 7
+
+    .line 1
+    iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->y9:Z
+
+    if-eqz v0, :cond_1
+
+    .line 2
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->getScrollRange()I
+
+    move-result v0
+
+    .line 3
+    iget v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->n9:I
+
+    div-int/lit8 v1, v0, 0x2
+
+    if-le v3, v1, :cond_0
+
+    sub-int/2addr v0, v3
+
+    goto :goto_0
+
+    :cond_0
+    neg-int v0, v3
+
+    :goto_0
+    move v5, v0
+
+    .line 4
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->i9:Landroid/widget/OverScroller;
+
+    const/4 v2, 0x0
+
+    const/4 v4, 0x0
+
+    const/16 v6, 0x320
+
+    invoke-virtual/range {v1 .. v6}, Landroid/widget/OverScroller;->startScroll(IIIII)V
+
+    .line 5
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->postInvalidateOnAnimation()V
+
+    :cond_1
+    return-void
+.end method
+
+.method public computeScroll()V
+    .locals 12
+
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->i9:Landroid/widget/OverScroller;
+
+    invoke-virtual {v0}, Landroid/widget/OverScroller;->computeScrollOffset()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 2
+    iget v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->n9:I
+
+    .line 3
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->i9:Landroid/widget/OverScroller;
+
+    invoke-virtual {v1}, Landroid/widget/OverScroller;->getCurrY()I
+
+    move-result v1
+
+    if-eq v0, v1, :cond_0
+
+    .line 4
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->getScrollRange()I
+
+    move-result v8
+
+    .line 5
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->getOverScrollDistance()I
+
+    move-result v10
+
+    const/4 v3, 0x0
+
+    sub-int v4, v1, v0
+
+    const/4 v5, 0x0
+
+    .line 6
+    iget v6, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->n9:I
+
+    const/4 v7, 0x0
+
+    const/4 v9, 0x0
+
+    const/4 v11, 0x1
+
+    move-object v2, p0
+
+    invoke-virtual/range {v2 .. v11}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->overScrollBy(IIIIIIIIZ)Z
+
+    .line 7
+    :cond_0
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->postInvalidateOnAnimation()V
+
+    goto :goto_0
+
+    .line 8
+    :cond_1
+    iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->z9:Z
+
+    if-eqz v0, :cond_2
+
+    .line 9
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->O()V
+
+    const/4 v0, 0x0
+
+    .line 10
+    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->z9:Z
+
+    :cond_2
+    :goto_0
+    return-void
+.end method
+
+.method public computeVerticalScrollExtent()I
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public computeVerticalScrollRange()I
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->getScrollRange()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public getOverScrollDistance()I
+    .locals 1
+
+    .line 1
+    invoke-static {}, Lk/l/c/e;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->t9:I
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+.end method
+
+.method public getScrollRange()I
+    .locals 0
+
+    .line 1
+    iget p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->s9:I
+
+    return p0
+.end method
+
+.method public getScrollStart()I
+    .locals 0
+
+    .line 1
+    iget p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->v9:I
+
+    return p0
+.end method
+
 .method public measureChildWithMargins(Landroid/view/View;IIII)V
     .locals 3
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->d:Landroid/view/View;
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->g:Landroid/view/View;
 
     if-eq p1, v0, :cond_0
 
-    invoke-super/range {p0 .. p5}, Landroid/view/ViewGroup;->measureChildWithMargins(Landroid/view/View;IIII)V
+    .line 2
+    invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->measureChildWithMargins(Landroid/view/View;IIII)V
 
     return-void
 
+    .line 3
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -658,19 +1044,22 @@
 
     check-cast p5, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->a:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    .line 4
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->d:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
+    .line 5
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getPaddingLeft()I
 
     move-result v1
 
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
+    .line 6
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getPaddingRight()I
 
     move-result v2
 
@@ -688,15 +1077,18 @@
 
     iget p3, p5, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
 
-    invoke-static {p2, v1, p3}, Landroid/view/ViewGroup;->getChildMeasureSpec(III)I
+    .line 7
+    invoke-static {p2, v1, p3}, Landroid/widget/FrameLayout;->getChildMeasureSpec(III)I
 
     move-result p2
 
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
+    .line 8
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getPaddingTop()I
 
     move-result p3
 
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
+    .line 9
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getPaddingBottom()I
 
     move-result v1
 
@@ -706,9 +1098,9 @@
 
     add-int/2addr p3, v1
 
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->a:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->d:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
-    invoke-virtual {v1}, Landroid/view/View;->getMeasuredHeight()I
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->getMeasuredHeight()I
 
     move-result v1
 
@@ -718,6 +1110,7 @@
 
     add-int/2addr p3, v0
 
+    .line 10
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->getScrollRange()I
 
     move-result v0
@@ -730,98 +1123,27 @@
 
     sub-int/2addr p3, v0
 
-    iget p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ea:I
+    iget p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->v9:I
 
     sub-int/2addr p3, p0
 
     iget p0, p5, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
-    invoke-static {p4, p3, p0}, Landroid/view/ViewGroup;->getChildMeasureSpec(III)I
+    .line 11
+    invoke-static {p4, p3, p0}, Landroid/widget/FrameLayout;->getChildMeasureSpec(III)I
 
     move-result p0
 
+    .line 12
     invoke-virtual {p1, p2, p0}, Landroid/view/View;->measure(II)V
 
-    return-void
-.end method
-
-.method public final n0(Landroid/view/MotionEvent;)V
-    .locals 3
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result v0
-
-    const v1, 0xff00
-
-    and-int/2addr v0, v1
-
-    shr-int/lit8 v0, v0, 0x8
-
-    invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getPointerId(I)I
-
-    move-result v1
-
-    iget v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->S9:I
-
-    if-ne v1, v2, :cond_1
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getY(I)F
-
-    move-result v1
-
-    float-to-int v1, v1
-
-    int-to-float v1, v1
-
-    iput v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->U9:F
-
-    invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getPointerId(I)I
-
-    move-result p1
-
-    iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->S9:I
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ja:Landroid/view/VelocityTracker;
-
-    if-eqz p0, :cond_1
-
-    invoke-virtual {p0}, Landroid/view/VelocityTracker;->clear()V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final o0()V
-    .locals 1
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ja:Landroid/view/VelocityTracker;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/VelocityTracker;->recycle()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ja:Landroid/view/VelocityTracker;
-
-    :cond_0
     return-void
 .end method
 
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 5
 
+    .line 1
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->getContentMask()Landroid/view/View;
 
     move-result-object v0
@@ -830,6 +1152,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
 
     move-result v0
@@ -838,6 +1161,7 @@
 
     return v1
 
+    .line 3
     :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -849,7 +1173,8 @@
 
     if-ne v0, v2, :cond_1
 
-    iget-boolean v4, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->T9:Z
+    .line 4
+    iget-boolean v4, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->k9:Z
 
     if-eqz v4, :cond_1
 
@@ -874,75 +1199,92 @@
 
     goto :goto_0
 
+    .line 5
     :cond_2
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->n0(Landroid/view/MotionEvent;)V
+    invoke-direct {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->L(Landroid/view/MotionEvent;)V
 
     goto :goto_0
 
+    .line 6
     :cond_3
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->p0(Landroid/view/MotionEvent;)Z
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->N(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
-    iput-boolean v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->T9:Z
+    .line 7
+    iput-boolean v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->k9:Z
 
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->h0()V
+    .line 8
+    invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->F()V
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ja:Landroid/view/VelocityTracker;
+    .line 9
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->A9:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->l0()V
+    .line 10
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->J()V
 
     goto :goto_0
 
+    .line 11
     :cond_4
-    iput-boolean v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->T9:Z
+    iput-boolean v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->k9:Z
 
     const/4 p1, -0x1
 
-    iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->S9:I
+    .line 12
+    iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->j9:I
 
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->o0()V
+    .line 13
+    invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->M()V
 
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->m0()V
+    .line 14
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->K()V
 
     goto :goto_0
 
+    .line 15
     :cond_5
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v0
 
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->U9:F
+    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->l9:F
 
+    .line 16
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
 
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->V9:F
+    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->m9:F
 
+    .line 17
     invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->getPointerId(I)I
 
     move-result v0
 
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->S9:I
+    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->j9:I
 
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->g0()V
+    .line 18
+    invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->E()V
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ja:Landroid/view/VelocityTracker;
+    .line 19
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->A9:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->R9:Ldr/d;
+    .line 20
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->i9:Landroid/widget/OverScroller;
 
-    invoke-virtual {p1, v3}, Ldr/d;->f(Z)V
+    invoke-virtual {p1, v3}, Landroid/widget/OverScroller;->forceFinished(Z)V
 
+    .line 21
     :cond_6
     :goto_0
-    iget-boolean p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->T9:Z
+    iget-boolean p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->k9:Z
 
     return p0
 .end method
@@ -950,15 +1292,17 @@
 .method public onLayout(ZIIII)V
     .locals 0
 
+    .line 1
     invoke-super/range {p0 .. p5}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->onLayout(ZIIII)V
 
-    iget-boolean p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ga:Z
+    .line 2
+    iget-boolean p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->x9:Z
 
     const/4 p2, 0x1
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->i0()Z
+    invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->G()Z
 
     move-result p1
 
@@ -975,34 +1319,40 @@
     :goto_0
     move p1, p2
 
+    .line 3
     :goto_1
-    iget-boolean p3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ga:Z
+    iget-boolean p3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->x9:Z
 
     if-nez p3, :cond_3
 
-    iget p3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->da:I
+    .line 4
+    iget p3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->u9:I
 
     if-gez p3, :cond_2
 
-    iget p3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ba:I
+    .line 5
+    iget p3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->s9:I
 
-    iput p3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->da:I
+    iput p3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->u9:I
 
+    .line 6
     :cond_2
-    iget p3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->da:I
+    iget p3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->u9:I
 
-    iput p3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->W9:I
+    iput p3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->n9:I
 
-    iput-boolean p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ga:Z
+    .line 7
+    iput-boolean p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->x9:Z
 
     :cond_3
     if-eqz p1, :cond_4
 
-    iget p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->W9:I
+    .line 8
+    iget p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->n9:I
 
     int-to-float p1, p1
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->b0(F)V
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->z(F)V
 
     :cond_4
     return-void
@@ -1013,29 +1363,34 @@
 
     int-to-float p1, p2
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->k0(F)V
+    .line 1
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->I(F)V
 
-    iput p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->W9:I
+    .line 2
+    iput p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->n9:I
 
     if-nez p2, :cond_0
 
     if-eqz p4, :cond_0
 
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->c0()I
+    .line 3
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->A()I
 
     move-result p1
 
+    .line 4
     invoke-static {p1}, Ljava/lang/Math;->abs(I)I
 
     move-result p2
 
-    iget p3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->Z9:I
+    iget p3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->q9:I
 
     mul-int/lit8 p3, p3, 0x2
 
     if-le p2, p3, :cond_0
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ka:Lmiuix/appcompat/app/ActionBar$b;
+    .line 5
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->B9:Lmiuix/appcompat/app/ActionBar$b;
 
     if-eqz p0, :cond_0
 
@@ -1049,6 +1404,7 @@
 
     const/16 p2, 0x1f4
 
+    .line 6
     invoke-interface {p0, p1, p2}, Lmiuix/appcompat/app/ActionBar$b;->a(FI)V
 
     :cond_0
@@ -1062,12 +1418,15 @@
 
     move-object/from16 v11, p1
 
-    invoke-virtual/range {p0 .. p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->h0()V
+    .line 1
+    invoke-direct/range {p0 .. p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->F()V
 
-    iget-object v0, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ja:Landroid/view/VelocityTracker;
+    .line 2
+    iget-object v0, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->A9:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0, v11}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
+    .line 3
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -1102,10 +1461,12 @@
 
     goto/16 :goto_0
 
+    .line 4
     :cond_0
-    invoke-virtual/range {p0 .. p1}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->n0(Landroid/view/MotionEvent;)V
+    invoke-direct/range {p0 .. p1}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->L(Landroid/view/MotionEvent;)V
 
-    iget v0, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->S9:I
+    .line 5
+    iget v0, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->j9:I
 
     invoke-virtual {v11, v0}, Landroid/view/MotionEvent;->findPointerIndex(I)I
 
@@ -1119,15 +1480,17 @@
 
     int-to-float v0, v0
 
-    iput v0, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->U9:F
+    iput v0, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->l9:F
 
     goto/16 :goto_0
 
+    .line 6
     :cond_1
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result v0
 
+    .line 7
     invoke-virtual {v11, v0}, Landroid/view/MotionEvent;->getY(I)F
 
     move-result v1
@@ -1136,22 +1499,25 @@
 
     int-to-float v1, v1
 
-    iput v1, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->U9:F
+    iput v1, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->l9:F
 
+    .line 8
     invoke-virtual {v11, v0}, Landroid/view/MotionEvent;->getPointerId(I)I
 
     move-result v0
 
-    iput v0, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->S9:I
+    iput v0, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->j9:I
 
     goto/16 :goto_0
 
+    .line 9
     :cond_2
-    iget-boolean v0, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->T9:Z
+    iget-boolean v0, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->k9:Z
 
     if-eqz v0, :cond_5
 
-    iget v0, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->S9:I
+    .line 10
+    iget v0, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->j9:I
 
     invoke-virtual {v11, v0}, Landroid/view/MotionEvent;->findPointerIndex(I)I
 
@@ -1161,21 +1527,25 @@
 
     return v13
 
+    .line 11
     :cond_3
     invoke-virtual {v11, v0}, Landroid/view/MotionEvent;->getY(I)F
 
     move-result v15
 
-    iget v0, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->U9:F
+    .line 12
+    iget v0, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->l9:F
 
     sub-float v0, v15, v0
 
     float-to-int v2, v0
 
+    .line 13
     invoke-virtual/range {p0 .. p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->getScrollRange()I
 
     move-result v6
 
+    .line 14
     invoke-virtual/range {p0 .. p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->getOverScrollDistance()I
 
     move-result v8
@@ -1184,7 +1554,8 @@
 
     const/4 v3, 0x0
 
-    iget v4, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->W9:I
+    .line 15
+    iget v4, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->n9:I
 
     const/4 v5, 0x0
 
@@ -1198,83 +1569,103 @@
 
     move-result v0
 
-    iput v15, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->U9:F
+    .line 16
+    iput v15, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->l9:F
 
     if-eqz v0, :cond_a
 
-    iget v0, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->W9:I
+    .line 17
+    iget v0, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->n9:I
 
     if-nez v0, :cond_4
 
-    iput-boolean v13, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->T9:Z
+    .line 18
+    iput-boolean v13, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->k9:Z
 
-    iput v14, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->S9:I
+    .line 19
+    iput v14, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->j9:I
 
+    .line 20
     invoke-virtual {v11, v13}, Landroid/view/MotionEvent;->setAction(I)V
 
-    invoke-virtual/range {p0 .. p1}, Landroid/view/View;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
+    .line 21
+    invoke-virtual/range {p0 .. p1}, Landroid/widget/FrameLayout;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
+    .line 22
     :cond_4
-    iget-object v0, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ja:Landroid/view/VelocityTracker;
+    iget-object v0, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->A9:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0}, Landroid/view/VelocityTracker;->clear()V
 
     goto :goto_0
 
+    .line 23
     :cond_5
-    invoke-virtual/range {p0 .. p1}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->p0(Landroid/view/MotionEvent;)Z
+    invoke-virtual/range {p0 .. p1}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->N(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
     if-eqz v0, :cond_a
 
-    iput-boolean v12, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->T9:Z
+    .line 24
+    iput-boolean v12, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->k9:Z
 
-    invoke-virtual/range {p0 .. p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->h0()V
+    .line 25
+    invoke-direct/range {p0 .. p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->F()V
 
-    iget-object v0, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ja:Landroid/view/VelocityTracker;
+    .line 26
+    iget-object v0, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->A9:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0, v11}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
-    invoke-virtual/range {p0 .. p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->l0()V
+    .line 27
+    invoke-virtual/range {p0 .. p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->J()V
 
     goto :goto_0
 
+    .line 28
     :cond_6
-    iget-boolean v0, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->T9:Z
+    iget-boolean v0, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->k9:Z
 
     if-eqz v0, :cond_a
 
-    iput-boolean v13, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->T9:Z
+    .line 29
+    iput-boolean v13, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->k9:Z
 
-    iput v14, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->S9:I
+    .line 30
+    iput v14, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->j9:I
 
-    invoke-virtual/range {p0 .. p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->c0()I
+    .line 31
+    invoke-virtual/range {p0 .. p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->A()I
 
     move-result v0
 
+    .line 32
     invoke-static {v0}, Ljava/lang/Math;->abs(I)I
 
     move-result v1
 
-    iget v2, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->Z9:I
+    iget v2, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->q9:I
 
     if-le v1, v2, :cond_7
 
-    invoke-virtual {v10, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->e0(I)V
+    .line 33
+    invoke-virtual {v10, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->C(I)V
 
     goto :goto_0
 
+    .line 34
     :cond_7
     invoke-virtual/range {p0 .. p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->getScrollRange()I
 
     move-result v9
 
-    iget-object v3, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->R9:Ldr/d;
+    .line 35
+    iget-object v3, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->i9:Landroid/widget/OverScroller;
 
     const/4 v4, 0x0
 
-    iget v5, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->W9:I
+    iget v5, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->n9:I
 
     const/4 v6, 0x0
 
@@ -1282,33 +1673,37 @@
 
     const/4 v8, 0x0
 
-    invoke-virtual/range {v3 .. v9}, Ldr/d;->C(IIIIII)Z
+    invoke-virtual/range {v3 .. v9}, Landroid/widget/OverScroller;->springBack(IIIIII)Z
 
     move-result v0
 
     if-eqz v0, :cond_8
 
-    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->invalidate()V
+    .line 36
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     goto :goto_0
 
+    .line 37
     :cond_8
-    invoke-virtual/range {p0 .. p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->q0()V
+    invoke-virtual/range {p0 .. p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->O()V
 
     goto :goto_0
 
+    .line 38
     :cond_9
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v0
 
-    iput v0, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->U9:F
+    iput v0, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->l9:F
 
+    .line 39
     invoke-virtual {v11, v13}, Landroid/view/MotionEvent;->getPointerId(I)I
 
     move-result v0
 
-    iput v0, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->S9:I
+    iput v0, v10, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->j9:I
 
     :cond_a
     :goto_0
@@ -1318,10 +1713,12 @@
 .method public overScrollBy(IIIIIIIIZ)Z
     .locals 0
 
-    invoke-virtual {p0}, Landroid/view/View;->getOverScrollMode()I
+    .line 1
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getOverScrollMode()I
 
     move-result p1
 
+    .line 2
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->computeVerticalScrollRange()I
 
     move-result p3
@@ -1387,229 +1784,11 @@
     :cond_5
     move p7, p9
 
+    .line 3
     :goto_3
     invoke-virtual {p0, p9, p4, p9, p7}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->onOverScrolled(IIZZ)V
 
     return p7
-.end method
-
-.method public p0(Landroid/view/MotionEvent;)Z
-    .locals 9
-
-    iget v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->S9:I
-
-    const/4 v1, 0x0
-
-    const/4 v2, -0x1
-
-    if-ne v0, v2, :cond_0
-
-    return v1
-
-    :cond_0
-    invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->findPointerIndex(I)I
-
-    move-result v0
-
-    if-ne v0, v2, :cond_1
-
-    sget-object p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->la:Ljava/lang/String;
-
-    const-string p1, "invalid pointer index"
-
-    invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    return v1
-
-    :cond_1
-    invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getX(I)F
-
-    move-result v2
-
-    invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getY(I)F
-
-    move-result p1
-
-    iget v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->U9:F
-
-    sub-float v0, p1, v0
-
-    float-to-int v0, v0
-
-    invoke-static {v0}, Ljava/lang/Math;->abs(I)I
-
-    move-result v3
-
-    iget v4, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->V9:F
-
-    sub-float v4, v2, v4
-
-    invoke-static {v4}, Ljava/lang/Math;->abs(F)F
-
-    move-result v4
-
-    float-to-int v4, v4
-
-    iget-object v5, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->d:Landroid/view/View;
-
-    float-to-int v6, v2
-
-    float-to-int v7, p1
-
-    invoke-virtual {p0, v5, v6, v7}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->f0(Landroid/view/View;II)Z
-
-    move-result v5
-
-    iget-object v8, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->q9:Landroid/view/View;
-
-    invoke-virtual {p0, v8, v6, v7}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->f0(Landroid/view/View;II)Z
-
-    move-result v6
-
-    const/4 v7, 0x1
-
-    if-nez v5, :cond_3
-
-    if-eqz v6, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    move v5, v1
-
-    goto :goto_1
-
-    :cond_3
-    :goto_0
-    move v5, v7
-
-    :goto_1
-    if-eqz v5, :cond_7
-
-    iget v5, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->Y9:I
-
-    if-le v3, v5, :cond_7
-
-    if-le v3, v4, :cond_7
-
-    iget v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->W9:I
-
-    if-nez v3, :cond_5
-
-    if-gez v0, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    iget-object v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ka:Lmiuix/appcompat/app/ActionBar$b;
-
-    if-eqz v3, :cond_6
-
-    invoke-interface {v3}, Lmiuix/appcompat/app/ActionBar$b;->b()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_6
-
-    goto :goto_2
-
-    :cond_5
-    if-lez v0, :cond_6
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->getOverScrollDistance()I
-
-    move-result v4
-
-    if-lt v3, v4, :cond_6
-
-    iget-object v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ka:Lmiuix/appcompat/app/ActionBar$b;
-
-    if-eqz v3, :cond_6
-
-    invoke-interface {v3}, Lmiuix/appcompat/app/ActionBar$b;->b()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_6
-
-    goto :goto_2
-
-    :cond_6
-    move v3, v7
-
-    goto :goto_3
-
-    :cond_7
-    :goto_2
-    move v3, v1
-
-    :goto_3
-    if-eqz v3, :cond_9
-
-    iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->U9:F
-
-    iput v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->V9:F
-
-    if-lez v0, :cond_8
-
-    move v1, v7
-
-    :cond_8
-    iput v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->X9:I
-
-    invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_9
-
-    invoke-interface {p0, v7}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
-
-    :cond_9
-    return v3
-.end method
-
-.method public q0()V
-    .locals 7
-
-    iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ha:Z
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->getScrollRange()I
-
-    move-result v0
-
-    iget v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->W9:I
-
-    div-int/lit8 v1, v0, 0x2
-
-    if-le v3, v1, :cond_0
-
-    sub-int/2addr v0, v3
-
-    goto :goto_0
-
-    :cond_0
-    neg-int v0, v3
-
-    :goto_0
-    move v5, v0
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->R9:Ldr/d;
-
-    const/4 v2, 0x0
-
-    const/4 v4, 0x0
-
-    const/16 v6, 0x320
-
-    invoke-virtual/range {v1 .. v6}, Ldr/d;->E(IIIII)V
-
-    invoke-static {p0}, Ldr/a;->a(Landroid/view/View;)V
-
-    :cond_1
-    return-void
 .end method
 
 .method public requestDisallowInterceptTouchEvent(Z)V
@@ -1621,7 +1800,8 @@
 .method public setInitialMotionY(I)V
     .locals 0
 
-    iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->da:I
+    .line 1
+    iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->u9:I
 
     return-void
 .end method
@@ -1629,11 +1809,13 @@
 .method public setMotionY(I)V
     .locals 0
 
-    iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->W9:I
+    .line 1
+    iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->n9:I
 
     int-to-float p1, p1
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->k0(F)V
+    .line 2
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->I(F)V
 
     return-void
 .end method
@@ -1641,7 +1823,8 @@
 .method public setOnScrollListener(Lmiuix/appcompat/app/ActionBar$b;)V
     .locals 0
 
-    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ka:Lmiuix/appcompat/app/ActionBar$b;
+    .line 1
+    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->B9:Lmiuix/appcompat/app/ActionBar$b;
 
     return-void
 .end method
@@ -1649,13 +1832,15 @@
 .method public setOverScrollDistance(I)V
     .locals 1
 
-    invoke-static {}, Lnq/f;->a()Z
+    .line 1
+    invoke-static {}, Lk/l/c/e;->a()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ca:I
+    .line 2
+    iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->t9:I
 
     :cond_0
     return-void
@@ -1664,7 +1849,8 @@
 .method public setScrollRange(I)V
     .locals 0
 
-    iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ba:I
+    .line 1
+    iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->s9:I
 
     return-void
 .end method
@@ -1672,7 +1858,8 @@
 .method public setScrollStart(I)V
     .locals 0
 
-    iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ea:I
+    .line 1
+    iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->v9:I
 
     return-void
 .end method
@@ -1680,7 +1867,36 @@
 .method public setSpringBackEnabled(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->ha:Z
+    .line 1
+    iput-boolean p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->y9:Z
 
+    return-void
+.end method
+
+.method public z(F)V
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->H(F)F
+
+    move-result p1
+
+    .line 2
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->g:Landroid/view/View;
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setTranslationY(F)V
+
+    .line 3
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->B()V
+
+    .line 4
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarMovableLayout;->h9:Landroid/view/View;
+
+    if-eqz p0, :cond_0
+
+    .line 5
+    invoke-virtual {p0, p1}, Landroid/view/View;->setTranslationY(F)V
+
+    :cond_0
     return-void
 .end method

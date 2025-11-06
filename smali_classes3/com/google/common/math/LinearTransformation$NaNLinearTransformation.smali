@@ -1,4 +1,4 @@
-.class final Lcom/google/common/math/LinearTransformation$NaNLinearTransformation;
+.class public final Lcom/google/common/math/LinearTransformation$NaNLinearTransformation;
 .super Lcom/google/common/math/LinearTransformation;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # static fields
-.field static final INSTANCE:Lcom/google/common/math/LinearTransformation$NaNLinearTransformation;
+.field public static final INSTANCE:Lcom/google/common/math/LinearTransformation$NaNLinearTransformation;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/math/LinearTransformation$NaNLinearTransformation;
 
     invoke-direct {v0}, Lcom/google/common/math/LinearTransformation$NaNLinearTransformation;-><init>()V
@@ -34,6 +35,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/math/LinearTransformation;-><init>()V
 
     return-void

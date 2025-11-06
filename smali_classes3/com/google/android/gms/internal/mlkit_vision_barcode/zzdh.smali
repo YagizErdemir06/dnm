@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdh;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdh;
 .super Ljava/io/OutputStream;
 .source "SourceFile"
 
@@ -11,6 +11,7 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
 
     const-wide/16 v0, 0x0

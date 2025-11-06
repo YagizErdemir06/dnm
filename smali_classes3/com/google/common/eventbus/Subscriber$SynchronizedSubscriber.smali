@@ -1,4 +1,4 @@
-.class final Lcom/google/common/eventbus/Subscriber$SynchronizedSubscriber;
+.class public final Lcom/google/common/eventbus/Subscriber$SynchronizedSubscriber;
 .super Lcom/google/common/eventbus/Subscriber;
 .source "SourceFile"
 
@@ -48,11 +48,14 @@
         }
     .end annotation
 
+    .line 1
     monitor-enter p0
 
+    .line 2
     :try_start_0
     invoke-super {p0, p1}, Lcom/google/common/eventbus/Subscriber;->invokeSubscriberMethod(Ljava/lang/Object;)V
 
+    .line 3
     monitor-exit p0
 
     return-void

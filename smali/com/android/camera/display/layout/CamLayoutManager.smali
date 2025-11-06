@@ -3,8 +3,8 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lz2/h$d;
-.implements Lcom/android/camera/z4$m;
+.implements Ld/d/a/n6/f/k$d;
+.implements Ld/d/a/m5$m;
 .implements Lcom/android/camera/display/manager/IExtraModuleManager;
 
 
@@ -23,7 +23,7 @@
 .method public abstract d()Z
 .end method
 
-.method public abstract getLayout()Lcom/android/camera/display/layout/g;
+.method public abstract getLayout()Ld/d/a/n6/i/n;
 .end method
 
 .method public abstract updateLayout()Z

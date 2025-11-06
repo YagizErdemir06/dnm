@@ -14,21 +14,21 @@
 
 .field private mIsShrinkAnimRunning:Z
 
-.field mRadius:I
+.field public mRadius:I
 
-.field mRow:I
+.field public mRow:I
 
-.field mRowHeight:I
+.field public mRowHeight:I
 
 .field private mSettingRowHeight:I
 
-.field mTopHorizontalOffset:I
+.field public mTopHorizontalOffset:I
 
-.field mTopVerticalOffset:I
+.field public mTopVerticalOffset:I
 
-.field mTotalHeight:I
+.field public mTotalHeight:I
 
-.field mTotalWidth:I
+.field public mTotalWidth:I
 
 .field private mTranslationX:F
 
@@ -36,7 +36,16 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
     .end annotation
 
     const/4 v0, 0x0
@@ -53,6 +62,16 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     .line 2
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -68,6 +87,7 @@
 .method public static synthetic access$000(Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->updateUI()V
 
     return-void
@@ -76,6 +96,7 @@
 .method public static synthetic access$102(Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;Z)Z
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mIsExpendAnimRunning:Z
 
     return p1
@@ -84,6 +105,7 @@
 .method public static synthetic access$202(Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;Z)Z
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mIsShrinkAnimRunning:Z
 
     return p1
@@ -91,24 +113,36 @@
 
 .method private addItemInAnimator(Landroid/view/View;I)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "view",
+            "position"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0, p2}, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->isDisableColorItem(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     move-object v0, p1
 
     check-cast v0, Lcom/android/camera2/compat/theme/custom/mm/top/LabelItemViewMM;
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object v1
 
-    const v2, 0x7f0608d6
+    const v2, 0x7f06046e
 
-    invoke-virtual {v1, v2}, Lf2/e;->b(I)I
+    invoke-virtual {v1, v2}, Ld/d/a/k6/f;->b(I)I
 
     move-result v1
 
@@ -116,23 +150,25 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     move-object v0, p1
 
     check-cast v0, Lcom/android/camera2/compat/theme/custom/mm/top/LabelItemViewMM;
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object v1
 
-    const v2, 0x7f0608d0
+    const v2, 0x7f060468
 
-    invoke-virtual {v1, v2}, Lf2/e;->b(I)I
+    invoke-virtual {v1, v2}, Ld/d/a/k6/f;->b(I)I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Lcom/android/camera2/compat/theme/custom/mm/top/LabelItemViewMM;->setColorAndRefresh(I)V
 
+    .line 4
     :goto_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopExpandAdapterMM;
 
@@ -142,16 +178,19 @@
 
     if-ne p2, v0, :cond_2
 
+    .line 5
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->isSelectOnColorItem()Z
 
     move-result p2
 
     if-nez p2, :cond_1
 
-    invoke-static {}, Lf2/f;->j()I
+    .line 6
+    invoke-static {}, Ld/d/a/k6/g;->j()I
 
     move-result p2
 
+    .line 7
     move-object v0, p1
 
     check-cast v0, Lcom/android/camera2/compat/theme/custom/mm/top/LabelItemViewMM;
@@ -160,12 +199,13 @@
 
     goto :goto_1
 
+    .line 8
     :cond_1
     move-object p2, p1
 
     check-cast p2, Lcom/android/camera2/compat/theme/custom/mm/top/LabelItemViewMM;
 
-    invoke-static {}, Lf2/f;->j()I
+    invoke-static {}, Ld/d/a/k6/g;->j()I
 
     move-result v0
 
@@ -181,15 +221,18 @@
 
     aput-object p1, p2, v0
 
+    .line 9
     invoke-static {p2}, Lmiuix/animation/Folme;->clean([Ljava/lang/Object;)V
 
+    .line 10
     invoke-virtual {p1}, Landroid/view/View;->clearAnimation()V
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    .line 11
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
     move-result-object p2
 
-    invoke-static {p2}, Lcom/android/camera/a6;->R2(Landroid/content/Context;)Z
+    invoke-static {p2}, Ld/d/a/z5;->G2(Landroid/content/Context;)Z
 
     move-result p2
 
@@ -221,6 +264,7 @@
 
     iput p2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mTranslationX:F
 
+    .line 12
     new-instance p2, Landroid/view/animation/TranslateAnimation;
 
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mTranslationX:F
@@ -229,50 +273,61 @@
 
     invoke-direct {p2, v1, v2, v2, v2}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    new-instance v1, Lps/m;
+    .line 13
+    new-instance v1, Lk/j0/k/l;
 
-    invoke-direct {v1}, Lps/m;-><init>()V
+    invoke-direct {v1}, Lk/j0/k/l;-><init>()V
 
-    invoke-virtual {p2, v1}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
+    invoke-virtual {p2, v1}, Landroid/view/animation/TranslateAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
     const-wide/16 v3, 0x14a
 
-    invoke-virtual {p2, v3, v4}, Landroid/view/animation/Animation;->setDuration(J)V
+    .line 14
+    invoke-virtual {p2, v3, v4}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
 
+    .line 15
     invoke-virtual {p1}, Landroid/view/View;->isEnabled()Z
 
     move-result v1
 
+    .line 16
     new-instance v3, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM$2;
 
     invoke-direct {v3, p0, p1, v1}, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM$2;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;Landroid/view/View;Z)V
 
-    invoke-virtual {p2, v3}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
+    invoke-virtual {p2, v3}, Landroid/view/animation/TranslateAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
+    .line 17
     new-instance p0, Landroid/view/animation/AlphaAnimation;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-direct {p0, v2, v1}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    new-instance v1, Lps/s;
+    .line 18
+    new-instance v1, Lk/j0/k/r;
 
-    invoke-direct {v1}, Lps/s;-><init>()V
+    invoke-direct {v1}, Lk/j0/k/r;-><init>()V
 
-    invoke-virtual {p0, v1}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
+    invoke-virtual {p0, v1}, Landroid/view/animation/AlphaAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
     const-wide/16 v1, 0xc8
 
-    invoke-virtual {p0, v1, v2}, Landroid/view/animation/Animation;->setDuration(J)V
+    .line 19
+    invoke-virtual {p0, v1, v2}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
 
+    .line 20
     new-instance v1, Landroid/view/animation/AnimationSet;
 
     invoke-direct {v1, v0}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
+    .line 21
     invoke-virtual {v1, p0}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
+    .line 22
     invoke-virtual {v1, p2}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
+    .line 23
     invoke-virtual {p1, v1}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
     return-void
@@ -280,6 +335,18 @@
 
 .method private addItemOutAnimator(Landroid/view/View;ILjava/lang/Runnable;)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "view",
+            "position",
+            "animatorEnd"
+        }
+    .end annotation
 
     const/4 p2, 0x1
 
@@ -289,10 +356,13 @@
 
     aput-object p1, p2, v0
 
+    .line 1
     invoke-static {p2}, Lmiuix/animation/Folme;->clean([Ljava/lang/Object;)V
 
+    .line 2
     invoke-virtual {p1}, Landroid/view/View;->clearAnimation()V
 
+    .line 3
     new-instance p2, Landroid/view/animation/TranslateAnimation;
 
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mTranslationX:F
@@ -303,46 +373,56 @@
 
     invoke-direct {p2, v2, v1, v2, v2}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    new-instance v1, Lps/m;
+    .line 4
+    new-instance v1, Lk/j0/k/l;
 
-    invoke-direct {v1}, Lps/m;-><init>()V
+    invoke-direct {v1}, Lk/j0/k/l;-><init>()V
 
-    invoke-virtual {p2, v1}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
+    invoke-virtual {p2, v1}, Landroid/view/animation/TranslateAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
     const-wide/16 v3, 0x14a
 
-    invoke-virtual {p2, v3, v4}, Landroid/view/animation/Animation;->setDuration(J)V
+    .line 5
+    invoke-virtual {p2, v3, v4}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
 
+    .line 6
     new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM$3;
 
     invoke-direct {v1, p0, p1, p3}, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM$3;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;Landroid/view/View;Ljava/lang/Runnable;)V
 
-    invoke-virtual {p2, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
+    invoke-virtual {p2, v1}, Landroid/view/animation/TranslateAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
+    .line 7
     new-instance p0, Landroid/view/animation/AlphaAnimation;
 
     const/high16 p3, 0x3f800000    # 1.0f
 
     invoke-direct {p0, p3, v2}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    new-instance p3, Lps/s;
+    .line 8
+    new-instance p3, Lk/j0/k/r;
 
-    invoke-direct {p3}, Lps/s;-><init>()V
+    invoke-direct {p3}, Lk/j0/k/r;-><init>()V
 
-    invoke-virtual {p0, p3}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
+    invoke-virtual {p0, p3}, Landroid/view/animation/AlphaAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
     const-wide/16 v1, 0xc8
 
-    invoke-virtual {p0, v1, v2}, Landroid/view/animation/Animation;->setDuration(J)V
+    .line 9
+    invoke-virtual {p0, v1, v2}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
 
+    .line 10
     new-instance p3, Landroid/view/animation/AnimationSet;
 
     invoke-direct {p3, v0}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
+    .line 11
     invoke-virtual {p3, p0}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
+    .line 12
     invoke-virtual {p3, p2}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
+    .line 13
     invoke-virtual {p1, p3}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
     return-void
@@ -351,12 +431,15 @@
 .method private initView()V
     .locals 6
 
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->removeAllViews()V
+    .line 1
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->removeAllViews()V
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setWillNotDraw(Z)V
+    .line 2
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->setWillNotDraw(Z)V
 
+    .line 3
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopExpandAdapterMM;
 
     invoke-virtual {v1}, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpandAdapterMM;->getCount()I
@@ -368,44 +451,53 @@
     :goto_0
     if-ge v2, v1, :cond_0
 
+    .line 4
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopExpandAdapterMM;
 
     invoke-virtual {v3, p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpandAdapterMM;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/android/camera/fragment/CommonRecyclerViewHolder;
 
     move-result-object v3
 
+    .line 5
     iget-object v4, v3, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
+    .line 6
     iget-object v5, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopExpandAdapterMM;
 
     invoke-virtual {v5, v3, v2}, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpandAdapterMM;->onBindViewHolder(Lcom/android/camera/fragment/CommonRecyclerViewHolder;I)V
 
+    .line 7
     invoke-virtual {v4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v3
 
     check-cast v3, Landroid/widget/LinearLayout$LayoutParams;
 
+    .line 8
     move-object v5, v4
 
     check-cast v5, Lcom/android/camera2/compat/theme/custom/mm/top/LabelItemViewMM;
 
     invoke-virtual {v5, v3, v2, v1}, Lcom/android/camera2/compat/theme/custom/mm/top/LabelItemViewMM;->setNewLayoutParams(Landroid/widget/LinearLayout$LayoutParams;II)V
 
+    .line 9
     invoke-virtual {v4, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     const/4 v3, 0x4
 
+    .line 10
     invoke-virtual {v4, v3}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {p0, v4}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    .line 11
+    invoke-virtual {p0, v4}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 12
     :cond_0
-    invoke-virtual {p0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v0
 
@@ -415,27 +507,39 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    .line 13
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->invalidate()V
 
     return-void
 .end method
 
 .method private isDisableColorItem(I)Z
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "position"
+        }
+    .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopExpandAdapterMM;
 
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpandAdapterMM;->getDatas()Ljava/util/List;
 
     move-result-object p0
 
+    .line 2
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Lcom/android/camera/data/data/c;
+    check-cast p0, Ld/d/a/l6/e/c;
 
-    iget-boolean p0, p0, Lcom/android/camera/data/data/c;->q:Z
+    .line 3
+    iget-boolean p0, p0, Ld/d/a/l6/e/c;->t:Z
 
     return p0
 .end method
@@ -443,23 +547,27 @@
 .method private isSelectOnColorItem()Z
     .locals 5
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopExpandAdapterMM;
 
     if-eqz v0, :cond_5
 
-    invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpandAdapterMM;->getComponentData()Lcom/android/camera/data/data/b;
+    .line 2
+    invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpandAdapterMM;->getComponentData()Ld/d/a/l6/e/b;
 
     move-result-object v0
 
     if-eqz v0, :cond_5
 
+    .line 3
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopExpandAdapterMM;
 
-    invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpandAdapterMM;->getSelectComponentDataItem()Lcom/android/camera/data/data/c;
+    invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpandAdapterMM;->getSelectComponentDataItem()Ld/d/a/l6/e/c;
 
     move-result-object p0
 
-    instance-of v1, v0, Lj2/j;
+    .line 4
+    instance-of v1, v0, Ld/d/a/l6/e/j/r;
 
     const-string v2, "normal"
 
@@ -467,7 +575,8 @@
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lcom/android/camera/data/data/c;->n:Ljava/lang/String;
+    .line 5
+    iget-object v1, p0, Ld/d/a/l6/e/c;->q:Ljava/lang/String;
 
     const-string v4, "on"
 
@@ -477,8 +586,9 @@
 
     if-nez v1, :cond_0
 
-    iget-object v1, p0, Lcom/android/camera/data/data/c;->n:Ljava/lang/String;
+    iget-object v1, p0, Ld/d/a/l6/e/c;->q:Ljava/lang/String;
 
+    .line 6
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -488,12 +598,14 @@
     :cond_0
     return v3
 
+    .line 7
     :cond_1
-    instance-of v1, v0, Lj2/h;
+    instance-of v1, v0, Ld/d/a/l6/e/j/p;
 
     if-eqz v1, :cond_3
 
-    iget-object v1, p0, Lcom/android/camera/data/data/c;->n:Ljava/lang/String;
+    .line 8
+    iget-object v1, p0, Ld/d/a/l6/e/c;->q:Ljava/lang/String;
 
     const-string v4, "1"
 
@@ -503,40 +615,44 @@
 
     if-nez v1, :cond_2
 
-    iget-object v1, p0, Lcom/android/camera/data/data/c;->n:Ljava/lang/String;
+    iget-object v1, p0, Ld/d/a/l6/e/c;->q:Ljava/lang/String;
 
     const-string v4, "2"
 
+    .line 9
     invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    iget-object v1, p0, Lcom/android/camera/data/data/c;->n:Ljava/lang/String;
+    iget-object v1, p0, Ld/d/a/l6/e/c;->q:Ljava/lang/String;
 
     const-string v4, "101"
 
+    .line 10
     invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    iget-object v1, p0, Lcom/android/camera/data/data/c;->n:Ljava/lang/String;
+    iget-object v1, p0, Ld/d/a/l6/e/c;->q:Ljava/lang/String;
 
     const-string v4, "104"
 
+    .line 11
     invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    iget-object v1, p0, Lcom/android/camera/data/data/c;->n:Ljava/lang/String;
+    iget-object v1, p0, Ld/d/a/l6/e/c;->q:Ljava/lang/String;
 
     const-string v4, "107"
 
+    .line 12
     invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -546,16 +662,18 @@
     :cond_2
     return v3
 
+    .line 13
     :cond_3
-    instance-of v1, v0, Lm2/g0;
+    instance-of v1, v0, Ld/d/a/l6/e/m/k0;
 
     if-eqz v1, :cond_4
 
-    const-string v1, "off"
+    .line 14
+    iget-object v1, p0, Ld/d/a/l6/e/c;->q:Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/android/camera/data/data/c;->n:Ljava/lang/String;
+    const-string v4, "off"
 
-    invoke-static {v1, v4}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+    invoke-static {v4, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
 
@@ -563,12 +681,14 @@
 
     return v3
 
+    .line 15
     :cond_4
-    instance-of v0, v0, Lm2/c;
+    instance-of v0, v0, Ld/d/a/l6/e/m/y;
 
     if-eqz v0, :cond_5
 
-    iget-object p0, p0, Lcom/android/camera/data/data/c;->n:Ljava/lang/String;
+    .line 16
+    iget-object p0, p0, Ld/d/a/l6/e/c;->q:Ljava/lang/String;
 
     invoke-static {v2, p0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
@@ -589,27 +709,32 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v1
 
     if-ge v0, v1, :cond_1
 
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    .line 2
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
+    .line 3
     iget v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mDegree:I
 
     int-to-float v2, v2
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setRotation(F)V
 
+    .line 4
     iget-boolean v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mAnimEnable:Z
 
     if-eqz v2, :cond_0
 
+    .line 5
     invoke-direct {p0, v1, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->addItemInAnimator(Landroid/view/View;I)V
 
     :cond_0
@@ -625,13 +750,26 @@
 # virtual methods
 .method public initWidthHeight(II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "totalHeight",
+            "totalWeight"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mTotalHeight:I
 
+    .line 2
     iput p2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mTotalWidth:I
 
     const/16 p1, 0x14
 
+    .line 3
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mRadius:I
 
     return-void
@@ -640,6 +778,7 @@
 .method public isExpendAnimRunning()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mIsExpendAnimRunning:Z
 
     return p0
@@ -648,6 +787,7 @@
 .method public isShrinkAnimRunning()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mIsShrinkAnimRunning:Z
 
     return p0
@@ -655,27 +795,34 @@
 
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 10
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "canvas"
+        }
+    .end annotation
 
+    .line 1
     new-instance v8, Landroid/graphics/Paint;
 
     invoke-direct {v8}, Landroid/graphics/Paint;-><init>()V
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    .line 2
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object v0
 
-    const v1, 0x7f0608d8
+    const v1, 0x7f060470
 
-    invoke-virtual {v0, v1}, Lf2/e;->b(I)I
+    invoke-virtual {v0, v1}, Ld/d/a/k6/f;->b(I)I
 
     move-result v0
 
     invoke-virtual {v8, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
+    .line 3
     invoke-virtual {p1}, Landroid/graphics/Canvas;->getWidth()I
 
     move-result v0
@@ -688,6 +835,10 @@
 
     int-to-float v5, v0
 
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
     const/4 v6, 0x0
 
     const/16 v7, 0x1f
@@ -698,19 +849,18 @@
 
     move-result v9
 
-    const/4 v1, 0x0
-
+    .line 4
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mTopVerticalOffset:I
 
     int-to-float v2, v0
 
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mTotalWidth:I
 
-    iget v3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mTopHorizontalOffset:I
+    iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mTopHorizontalOffset:I
 
-    mul-int/lit8 v3, v3, 0x2
+    mul-int/lit8 v1, v1, 0x2
 
-    sub-int/2addr v0, v3
+    sub-int/2addr v0, v1
 
     int-to-float v3, v0
 
@@ -724,12 +874,15 @@
 
     int-to-float v6, v0
 
+    const/4 v1, 0x0
+
     move-object v0, p1
 
     move-object v7, v8
 
     invoke-virtual/range {v0 .. v7}, Landroid/graphics/Canvas;->drawRoundRect(FFFFFFLandroid/graphics/Paint;)V
 
+    .line 5
     new-instance v0, Landroid/graphics/PorterDuffXfermode;
 
     sget-object v1, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
@@ -740,8 +893,10 @@
 
     const/4 v0, 0x0
 
+    .line 6
     invoke-virtual {v8, v0}, Landroid/graphics/Paint;->setAlpha(I)V
 
+    .line 7
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mTopVerticalOffset:I
 
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mSettingRowHeight:I
@@ -778,6 +933,7 @@
 
     add-float v4, v0, v1
 
+    .line 8
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mTotalWidth:I
 
     int-to-float v0, v0
@@ -800,14 +956,18 @@
 
     move-object v0, p1
 
+    .line 9
     invoke-virtual/range {v0 .. v7}, Landroid/graphics/Canvas;->drawRoundRect(FFFFFFLandroid/graphics/Paint;)V
 
     const/4 v0, 0x0
 
+    .line 10
     invoke-virtual {v8, v0}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
+    .line 11
     invoke-virtual {p1, v9}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
+    .line 12
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->onDraw(Landroid/graphics/Canvas;)V
 
     return-void
@@ -815,6 +975,17 @@
 
 .method public provideRotateItem(Ljava/util/List;I)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "pendingRotateItems",
+            "degree"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -826,14 +997,16 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v1
 
     if-ge v0, v1, :cond_0
 
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    .line 2
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -843,6 +1016,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iput p2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mDegree:I
 
@@ -851,6 +1025,16 @@
 
 .method public revertExpendView(ZLjava/lang/Runnable;)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "anim",
+            "animatorEnd"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -858,27 +1042,32 @@
 
     if-eqz p2, :cond_0
 
+    .line 1
     invoke-interface {p2}, Ljava/lang/Runnable;->run()V
 
+    .line 2
     :cond_0
-    invoke-virtual {p0, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     :cond_1
     const/4 v1, 0x0
 
+    .line 3
     :goto_0
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v2
 
     if-ge v1, v2, :cond_4
 
-    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    .line 4
+    invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
     if-eqz p1, :cond_3
 
+    .line 5
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopExpandAdapterMM;
 
     invoke-virtual {v3}, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpandAdapterMM;->getSelectPosition()I
@@ -887,10 +1076,12 @@
 
     if-ne v3, v1, :cond_2
 
+    .line 6
     invoke-direct {p0, v2, v1, p2}, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->addItemOutAnimator(Landroid/view/View;ILjava/lang/Runnable;)V
 
     goto :goto_1
 
+    .line 7
     :cond_2
     invoke-direct {p0, v2, v1, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->addItemOutAnimator(Landroid/view/View;ILjava/lang/Runnable;)V
 
@@ -899,6 +1090,7 @@
     :cond_3
     const/4 v3, 0x4
 
+    .line 8
     invoke-virtual {v2, v3}, Landroid/view/View;->setVisibility(I)V
 
     :goto_1
@@ -912,9 +1104,19 @@
 
 .method public setAdapter(Lcom/android/camera2/compat/theme/custom/mm/top/TopExpandAdapterMM;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "adapter"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopExpandAdapterMM;
 
+    .line 2
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->initView()V
 
     return-void
@@ -922,9 +1124,19 @@
 
 .method public setAnimEnable(Z)V
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isAnimEnabel"
+        }
+    .end annotation
+
+    .line 1
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mAnimEnable:Z
 
     return-void
@@ -932,7 +1144,16 @@
 
 .method public setRotation(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "degree"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mDegree:I
 
     return-void
@@ -940,15 +1161,36 @@
 
 .method public setTopExpendViewSize(IIIII)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "topVerticalOffset",
+            "settingRowHeight",
+            "topHorizontalOffset",
+            "rowHeight",
+            "row"
+        }
+    .end annotation
 
+    .line 1
     iput p3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mTopHorizontalOffset:I
 
+    .line 2
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mTopVerticalOffset:I
 
+    .line 3
     iput p4, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mRowHeight:I
 
+    .line 4
     iput p2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mSettingRowHeight:I
 
+    .line 5
     iput p5, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mRow:I
 
     return-void
@@ -959,17 +1201,20 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v1
 
     if-ge v0, v1, :cond_1
 
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    .line 2
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
+    .line 3
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopExpandAdapterMM;
 
     invoke-virtual {v2}, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpandAdapterMM;->getSelectPosition()I
@@ -978,11 +1223,12 @@
 
     if-ne v2, v0, :cond_0
 
+    .line 4
     move-object v2, v1
 
     check-cast v2, Lcom/android/camera2/compat/theme/custom/mm/top/LabelItemViewMM;
 
-    invoke-static {}, Lf2/f;->j()I
+    invoke-static {}, Ld/d/a/k6/g;->j()I
 
     move-result v3
 
@@ -990,23 +1236,25 @@
 
     goto :goto_1
 
+    .line 5
     :cond_0
     move-object v2, v1
 
     check-cast v2, Lcom/android/camera2/compat/theme/custom/mm/top/LabelItemViewMM;
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object v3
 
-    const v4, 0x7f0608d2
+    const v4, 0x7f06046a
 
-    invoke-virtual {v3, v4}, Lf2/e;->b(I)I
+    invoke-virtual {v3, v4}, Ld/d/a/k6/f;->b(I)I
 
     move-result v3
 
     invoke-virtual {v2, v3}, Lcom/android/camera2/compat/theme/custom/mm/top/LabelItemViewMM;->setColorAndRefresh(I)V
 
+    .line 6
     :goto_1
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopExpandAdapterMM;
 
@@ -1018,21 +1266,22 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/android/camera/data/data/c;
+    check-cast v2, Ld/d/a/l6/e/c;
 
+    .line 7
     check-cast v1, Lcom/android/camera2/compat/theme/custom/mm/top/LabelItemViewMM;
 
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->mAdapter:Lcom/android/camera2/compat/theme/custom/mm/top/TopExpandAdapterMM;
 
-    invoke-virtual {v3}, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpandAdapterMM;->getComponentData()Lcom/android/camera/data/data/b;
+    invoke-virtual {v3}, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpandAdapterMM;->getComponentData()Ld/d/a/l6/e/b;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/android/camera/data/data/b;->isShowText()Z
+    invoke-virtual {v3}, Ld/d/a/l6/e/b;->isShowText()Z
 
     move-result v3
 
-    invoke-virtual {v1, v3, v2}, Lcom/android/camera2/compat/theme/custom/mm/top/LabelItemViewMM;->initView(ZLcom/android/camera/data/data/c;)V
+    invoke-virtual {v1, v3, v2}, Lcom/android/camera2/compat/theme/custom/mm/top/LabelItemViewMM;->initView(ZLd/d/a/l6/e/c;)V
 
     add-int/lit8 v0, v0, 0x1
 

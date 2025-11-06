@@ -69,6 +69,7 @@
 
     return v1
 
+    .line 1
     :cond_1
     instance-of v2, p1, Lcom/google/mlkit/common/model/LocalModel;
 
@@ -76,6 +77,7 @@
 
     return v0
 
+    .line 2
     :cond_2
     check-cast p1, Lcom/google/mlkit/common/model/LocalModel;
 
@@ -83,6 +85,7 @@
 
     iget-object v3, p1, Lcom/google/mlkit/common/model/LocalModel;->zza:Ljava/lang/String;
 
+    .line 3
     invoke-static {v2, v3}, Lcom/google/android/gms/common/internal/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -93,6 +96,7 @@
 
     iget-object v3, p1, Lcom/google/mlkit/common/model/LocalModel;->zzb:Ljava/lang/String;
 
+    .line 4
     invoke-static {v2, v3}, Lcom/google/android/gms/common/internal/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -103,6 +107,7 @@
 
     iget-object v3, p1, Lcom/google/mlkit/common/model/LocalModel;->zzc:Landroid/net/Uri;
 
+    .line 5
     invoke-static {v2, v3}, Lcom/google/android/gms/common/internal/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -167,23 +172,24 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    .line 1
+    iget-object v1, p0, Lcom/google/mlkit/common/model/LocalModel;->zza:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/google/mlkit/common/model/LocalModel;->zza:Ljava/lang/String;
+    const/4 v2, 0x0
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/4 v1, 0x1
+    iget-object v1, p0, Lcom/google/mlkit/common/model/LocalModel;->zzb:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/google/mlkit/common/model/LocalModel;->zzb:Ljava/lang/String;
+    const/4 v2, 0x1
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/4 v1, 0x2
+    iget-object v1, p0, Lcom/google/mlkit/common/model/LocalModel;->zzc:Landroid/net/Uri;
 
-    iget-object v2, p0, Lcom/google/mlkit/common/model/LocalModel;->zzc:Landroid/net/Uri;
+    const/4 v2, 0x2
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
     iget-boolean p0, p0, Lcom/google/mlkit/common/model/LocalModel;->zzd:Z
 
@@ -217,34 +223,40 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/gms/internal/mlkit_common/zzaa;->zza(Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzz;
 
     move-result-object v0
 
-    const-string v1, "absoluteFilePath"
+    iget-object v1, p0, Lcom/google/mlkit/common/model/LocalModel;->zza:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/google/mlkit/common/model/LocalModel;->zza:Ljava/lang/String;
+    const-string v2, "absoluteFilePath"
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/android/gms/internal/mlkit_common/zzz;->zza(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzz;
+    .line 2
+    invoke-virtual {v0, v2, v1}, Lcom/google/android/gms/internal/mlkit_common/zzz;->zza(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzz;
 
-    const-string v1, "assetFilePath"
+    iget-object v1, p0, Lcom/google/mlkit/common/model/LocalModel;->zzb:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/google/mlkit/common/model/LocalModel;->zzb:Ljava/lang/String;
+    const-string v2, "assetFilePath"
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/android/gms/internal/mlkit_common/zzz;->zza(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzz;
+    .line 3
+    invoke-virtual {v0, v2, v1}, Lcom/google/android/gms/internal/mlkit_common/zzz;->zza(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzz;
 
-    const-string v1, "uri"
+    iget-object v1, p0, Lcom/google/mlkit/common/model/LocalModel;->zzc:Landroid/net/Uri;
 
-    iget-object v2, p0, Lcom/google/mlkit/common/model/LocalModel;->zzc:Landroid/net/Uri;
+    const-string v2, "uri"
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/android/gms/internal/mlkit_common/zzz;->zza(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzz;
-
-    const-string v1, "isManifestFile"
+    .line 4
+    invoke-virtual {v0, v2, v1}, Lcom/google/android/gms/internal/mlkit_common/zzz;->zza(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzz;
 
     iget-boolean p0, p0, Lcom/google/mlkit/common/model/LocalModel;->zzd:Z
 
+    const-string v1, "isManifestFile"
+
+    .line 5
     invoke-virtual {v0, v1, p0}, Lcom/google/android/gms/internal/mlkit_common/zzz;->zzb(Ljava/lang/String;Z)Lcom/google/android/gms/internal/mlkit_common/zzz;
 
+    .line 6
     invoke-virtual {v0}, Lcom/google/android/gms/internal/mlkit_common/zzz;->toString()Ljava/lang/String;
 
     move-result-object p0

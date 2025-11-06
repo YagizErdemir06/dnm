@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode/zzap;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode/zzap;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,6 +15,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     const-class v0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzap;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;

@@ -1,4 +1,4 @@
-.class Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView$2;
+.class public Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView$2;
 .super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
 
@@ -15,13 +15,22 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;
+.field public final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -33,9 +42,19 @@
 # virtual methods
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationCancel(Landroid/animation/Animator;)V
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;
 
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/MenuIndicatorView;->update()V

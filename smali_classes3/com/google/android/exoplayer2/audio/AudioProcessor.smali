@@ -22,6 +22,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0

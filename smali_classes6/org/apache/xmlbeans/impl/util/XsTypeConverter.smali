@@ -4,7 +4,7 @@
 
 
 # static fields
-.field static final synthetic $assertionsDisabled:Z
+.field public static final synthetic $assertionsDisabled:Z
 
 .field private static final DECIMAL__ZERO:Ljava/math/BigDecimal;
 
@@ -18,13 +18,14 @@
 
 .field private static final POS_INF_LEX:Ljava/lang/String; = "INF"
 
-.field static synthetic class$org$apache$xmlbeans$impl$util$XsTypeConverter:Ljava/lang/Class;
+.field public static synthetic class$org$apache$xmlbeans$impl$util$XsTypeConverter:Ljava/lang/Class;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/util/XsTypeConverter;->class$org$apache$xmlbeans$impl$util$XsTypeConverter:Ljava/lang/Class;
 
     if-nez v0, :cond_0
@@ -42,6 +43,7 @@
 
     sput-boolean v0, Lorg/apache/xmlbeans/impl/util/XsTypeConverter;->$assertionsDisabled:Z
 
+    .line 2
     new-instance v0, Ljava/math/BigDecimal;
 
     const-wide/16 v1, 0x0
@@ -56,6 +58,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -64,6 +67,7 @@
 .method public static synthetic class$(Ljava/lang/String;)Ljava/lang/Class;
     .locals 1
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -80,7 +84,7 @@
 
     invoke-direct {v0}, Ljava/lang/NoClassDefFoundError;-><init>()V
 
-    invoke-virtual {v0, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v0, p0}, Ljava/lang/NoClassDefFoundError;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -151,6 +155,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result p0
@@ -163,6 +168,7 @@
 
     if-lez p0, :cond_0
 
+    .line 2
     new-instance p0, Ljava/lang/StringBuffer;
 
     invoke-direct {p0}, Ljava/lang/StringBuffer;-><init>()V
@@ -188,6 +194,7 @@
 .method public static lexBase64Binary(Ljava/lang/CharSequence;)[B
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -204,6 +211,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     new-instance p0, Lorg/apache/xmlbeans/impl/common/InvalidLexicalValueException;
 
@@ -377,7 +385,7 @@
     move-exception p0
 
     .line 8
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/RuntimeException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
 
@@ -454,10 +462,12 @@
 
     const/16 v0, 0xe
 
+    .line 1
     invoke-static {p0, v0}, Lorg/apache/xmlbeans/impl/util/XsTypeConverter;->getGDateValue(Ljava/lang/CharSequence;I)Lorg/apache/xmlbeans/GDateSpecification;
 
     move-result-object p0
 
+    .line 2
     invoke-interface {p0}, Lorg/apache/xmlbeans/GDateSpecification;->getCalendar()Lorg/apache/xmlbeans/XmlCalendar;
 
     move-result-object p0
@@ -914,7 +924,7 @@
     move-exception p0
 
     .line 3
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/IllegalArgumentException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
 
@@ -939,6 +949,7 @@
 .method public static lexHexBinary(Ljava/lang/CharSequence;)[B
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -955,6 +966,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     new-instance p0, Lorg/apache/xmlbeans/impl/common/InvalidLexicalValueException;
 
@@ -1375,7 +1387,7 @@
     move-exception p2
 
     .line 12
-    invoke-virtual {p2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/lang/RuntimeException;->getMessage()Ljava/lang/String;
 
     move-result-object p2
 
@@ -1492,6 +1504,7 @@
 
     const/16 v1, 0x7f
 
+    .line 1
     invoke-static {p0, v0, v1}, Lorg/apache/xmlbeans/impl/util/XsTypeConverter;->parseIntXsdNumber(Ljava/lang/CharSequence;II)I
 
     move-result p0
@@ -1508,6 +1521,7 @@
 
     const v1, 0x7fffffff
 
+    .line 1
     invoke-static {p0, v0, v1}, Lorg/apache/xmlbeans/impl/util/XsTypeConverter;->parseIntXsdNumber(Ljava/lang/CharSequence;II)I
 
     move-result p0
@@ -1518,6 +1532,7 @@
 .method private static parseIntXsdNumber(Ljava/lang/CharSequence;II)I
     .locals 10
 
+    .line 1
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
@@ -1532,19 +1547,24 @@
 
     const/4 v4, 0x0
 
+    .line 2
     invoke-interface {p0, v4}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v5
 
     const/16 v6, 0x2d
 
-    const/16 v7, 0xa
+    const/4 v7, -0x1
+
+    const/16 v8, 0xa
 
     if-ne v5, v6, :cond_0
 
+    .line 3
     div-int/lit8 p2, p1, 0xa
 
-    rem-int/2addr p1, v7
+    .line 4
+    rem-int/2addr p1, v8
 
     neg-int p1, p1
 
@@ -1555,31 +1575,33 @@
     :cond_0
     const/16 p1, 0x2b
 
-    const/4 v6, -0x1
-
     if-ne v5, p1, :cond_1
 
+    .line 5
     div-int/lit8 p1, p2, 0xa
 
     neg-int p1, p1
 
-    rem-int/2addr p2, v7
+    .line 6
+    rem-int/2addr p2, v8
 
     move v5, v3
 
     goto :goto_0
 
+    .line 7
     :cond_1
     div-int/lit8 p1, p2, 0xa
 
     neg-int p1, p1
 
-    rem-int/2addr p2, v7
+    .line 8
+    rem-int/2addr p2, v8
 
     move v5, v4
 
     :goto_0
-    move v3, v6
+    move v3, v7
 
     move v9, p2
 
@@ -1591,37 +1613,40 @@
     move v6, v4
 
     :goto_2
-    sub-int v8, v0, v5
+    sub-int v7, v0, v5
 
-    if-ge v4, v8, :cond_5
+    if-ge v4, v7, :cond_5
 
-    add-int v8, v4, v5
+    add-int v7, v4, v5
 
-    invoke-interface {p0, v8}, Ljava/lang/CharSequence;->charAt(I)C
+    .line 9
+    invoke-interface {p0, v7}, Ljava/lang/CharSequence;->charAt(I)C
 
-    move-result v8
+    move-result v7
 
-    invoke-static {v8, v7}, Ljava/lang/Character;->digit(CI)I
+    .line 10
+    invoke-static {v7, v8}, Ljava/lang/Character;->digit(CI)I
 
-    move-result v8
+    move-result v7
 
-    if-ltz v8, :cond_4
+    if-ltz v7, :cond_4
 
     if-lt v6, p2, :cond_3
 
     if-ne v6, p2, :cond_2
 
-    if-gt v8, p1, :cond_3
+    if-gt v7, p1, :cond_3
 
     :cond_2
     mul-int/lit8 v6, v6, 0xa
 
-    sub-int/2addr v6, v8
+    sub-int/2addr v6, v7
 
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
+    .line 11
     :cond_3
     new-instance p1, Ljava/lang/NumberFormatException;
 
@@ -1647,6 +1672,7 @@
 
     throw p1
 
+    .line 12
     :cond_4
     new-instance p1, Ljava/lang/NumberFormatException;
 
@@ -1677,6 +1703,7 @@
 
     return v3
 
+    .line 13
     :cond_6
     new-instance p1, Ljava/lang/NumberFormatException;
 
@@ -1710,6 +1737,7 @@
 
     const/16 v1, 0x7fff
 
+    .line 1
     invoke-static {p0, v0, v1}, Lorg/apache/xmlbeans/impl/util/XsTypeConverter;->parseIntXsdNumber(Ljava/lang/CharSequence;II)I
 
     move-result p0
@@ -1722,10 +1750,12 @@
 .method public static printBase64Binary([B)Ljava/lang/CharSequence;
     .locals 1
 
+    .line 1
     invoke-static {p0}, Lorg/apache/xmlbeans/impl/util/Base64;->encode([B)[B
 
     move-result-object p0
 
+    .line 2
     new-instance v0, Ljava/lang/String;
 
     invoke-direct {v0, p0}, Ljava/lang/String;-><init>([B)V
@@ -1752,6 +1782,7 @@
 .method public static printByte(B)Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Ljava/lang/Byte;->toString(B)Ljava/lang/String;
 
     move-result-object p0
@@ -1840,6 +1871,7 @@
 .method public static printDecimal(Ljava/math/BigDecimal;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Ljava/math/BigDecimal;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -1882,6 +1914,7 @@
 
     return-object p0
 
+    .line 1
     :cond_2
     invoke-static {p0, p1}, Ljava/lang/Double;->toString(D)Ljava/lang/String;
 
@@ -1925,6 +1958,7 @@
 
     return-object p0
 
+    .line 1
     :cond_2
     invoke-static {p0}, Ljava/lang/Float;->toString(F)Ljava/lang/String;
 
@@ -1936,6 +1970,7 @@
 .method public static printGDate(Lorg/apache/xmlbeans/GDate;Ljava/util/Collection;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/GDate;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -1946,6 +1981,7 @@
 .method public static printHexBinary([B)Ljava/lang/CharSequence;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lorg/apache/xmlbeans/impl/util/HexBin;->bytesToString([B)Ljava/lang/String;
 
     move-result-object p0
@@ -1956,6 +1992,7 @@
 .method public static printInt(I)Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -1966,6 +2003,7 @@
 .method public static printInteger(Ljava/math/BigInteger;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Ljava/math/BigInteger;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -1976,6 +2014,7 @@
 .method public static printLong(J)Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-static {p0, p1}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
     move-result-object p0
@@ -1986,10 +2025,12 @@
 .method public static printQName(Ljavax/xml/namespace/QName;Ljavax/xml/namespace/NamespaceContext;Ljava/util/Collection;)Ljava/lang/String;
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Ljavax/xml/namespace/QName;->getNamespaceURI()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 2
     sget-boolean v1, Lorg/apache/xmlbeans/impl/util/XsTypeConverter;->$assertionsDisabled:Z
 
     if-nez v1, :cond_1
@@ -2005,6 +2046,7 @@
 
     throw p0
 
+    .line 3
     :cond_1
     :goto_0
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -2013,12 +2055,14 @@
 
     if-lez v1, :cond_2
 
+    .line 4
     invoke-interface {p1, v0}, Ljavax/xml/namespace/NamespaceContext;->getPrefix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     if-nez p1, :cond_3
 
+    .line 5
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -2033,6 +2077,7 @@
 
     move-result-object v1
 
+    .line 6
     invoke-static {v1}, Lorg/apache/xmlbeans/XmlError;->forMessage(Ljava/lang/String;)Lorg/apache/xmlbeans/XmlError;
 
     move-result-object v1
@@ -2044,6 +2089,7 @@
     :cond_2
     const/4 p1, 0x0
 
+    .line 7
     :cond_3
     :goto_1
     invoke-virtual {p0}, Ljavax/xml/namespace/QName;->getLocalPart()Ljava/lang/String;
@@ -2060,6 +2106,7 @@
 .method public static printShort(S)Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Ljava/lang/Short;->toString(S)Ljava/lang/String;
 
     move-result-object p0
@@ -2078,6 +2125,7 @@
 
     const/16 v0, 0xf
 
+    .line 1
     invoke-static {p0, v0}, Lorg/apache/xmlbeans/impl/util/XsTypeConverter;->printDateTime(Ljava/util/Calendar;I)Ljava/lang/String;
 
     move-result-object p0
@@ -2088,6 +2136,7 @@
 .method private static trimInitialPlus(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -2106,6 +2155,7 @@
 
     const/4 v0, 0x1
 
+    .line 2
     invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p0
@@ -2117,12 +2167,14 @@
 .method private static trimTrailingZeros(Ljava/lang/String;)Ljava/lang/String;
     .locals 5
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
     add-int/lit8 v0, v0, -0x1
 
+    .line 2
     invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
@@ -2133,6 +2185,7 @@
 
     const/16 v1, 0x2e
 
+    .line 3
     invoke-virtual {p0, v1}, Ljava/lang/String;->lastIndexOf(I)I
 
     move-result v1
@@ -2144,6 +2197,7 @@
 
     if-le v0, v1, :cond_1
 
+    .line 4
     invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v4
@@ -2152,6 +2206,7 @@
 
     add-int/lit8 v0, v0, 0x1
 
+    .line 5
     invoke-virtual {p0, v3, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0
@@ -2163,6 +2218,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_1
     invoke-virtual {p0, v3, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 

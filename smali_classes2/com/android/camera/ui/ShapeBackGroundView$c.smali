@@ -32,7 +32,24 @@
 # direct methods
 .method public constructor <init>(Lcom/android/camera/ui/ShapeBackGroundView;IIII)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010,
+            0x1010,
+            0x1010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$oldTopMargin",
+            "val$newTopMargin",
+            "val$oldHeight",
+            "val$height"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/ui/ShapeBackGroundView$c;->e:Lcom/android/camera/ui/ShapeBackGroundView;
 
     iput p2, p0, Lcom/android/camera/ui/ShapeBackGroundView$c;->a:I
@@ -52,7 +69,16 @@
 # virtual methods
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -63,6 +89,7 @@
 
     move-result p1
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera/ui/ShapeBackGroundView$c;->e:Lcom/android/camera/ui/ShapeBackGroundView;
 
     iget v1, p0, Lcom/android/camera/ui/ShapeBackGroundView$c;->a:I
@@ -83,6 +110,7 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/ui/ShapeBackGroundView;->b(Lcom/android/camera/ui/ShapeBackGroundView;I)I
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera/ui/ShapeBackGroundView$c;->e:Lcom/android/camera/ui/ShapeBackGroundView;
 
     iget v1, p0, Lcom/android/camera/ui/ShapeBackGroundView$c;->c:I
@@ -103,9 +131,10 @@
 
     invoke-static {v0, p1}, Lcom/android/camera/ui/ShapeBackGroundView;->d(Lcom/android/camera/ui/ShapeBackGroundView;I)I
 
+    .line 4
     iget-object p0, p0, Lcom/android/camera/ui/ShapeBackGroundView$c;->e:Lcom/android/camera/ui/ShapeBackGroundView;
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     return-void
 .end method

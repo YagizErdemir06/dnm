@@ -1,4 +1,4 @@
-.class Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable$1;
+.class public Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable$1;
 .super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
 
@@ -15,17 +15,30 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;
+.field public final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;
 
-.field final synthetic val$delay:I
+.field public final synthetic val$delay:I
 
-.field final synthetic val$strikethroughCallable:Lcom/android/camera2/compat/theme/custom/mm/top/IStrikethrough$IStrikethroughCallable;
+.field public final synthetic val$strikethroughCallable:Lcom/android/camera2/compat/theme/custom/mm/top/IStrikethrough$IStrikethroughCallable;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;Lcom/android/camera2/compat/theme/custom/mm/top/IStrikethrough$IStrikethroughCallable;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$strikethroughCallable",
+            "val$delay"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable$1;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;
 
     iput-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable$1;->val$strikethroughCallable:Lcom/android/camera2/compat/theme/custom/mm/top/IStrikethrough$IStrikethroughCallable;
@@ -41,15 +54,27 @@
 # virtual methods
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationCancel(Landroid/animation/Animator;)V
 
+    .line 2
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable$1;->val$strikethroughCallable:Lcom/android/camera2/compat/theme/custom/mm/top/IStrikethrough$IStrikethroughCallable;
 
     if-eqz p1, :cond_0
 
+    .line 3
     invoke-interface {p1}, Lcom/android/camera2/compat/theme/custom/mm/top/IStrikethrough$IStrikethroughCallable;->onShowEnd()V
 
+    .line 4
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable$1;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;
 
     invoke-static {p1}, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->access$100(Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;)F
@@ -58,6 +83,7 @@
 
     invoke-static {p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->access$002(Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;F)F
 
+    .line 5
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable$1;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;
 
     invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->access$300(Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;)F
@@ -72,17 +98,29 @@
 
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
 
+    .line 2
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable$1;->val$strikethroughCallable:Lcom/android/camera2/compat/theme/custom/mm/top/IStrikethrough$IStrikethroughCallable;
 
     if-eqz p1, :cond_1
 
+    .line 3
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable$1;->val$delay:I
 
     if-lez v0, :cond_0
 
+    .line 4
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable$1;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;
 
     invoke-static {p1}, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->access$400(Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;)Landroid/os/Handler;
@@ -93,9 +131,9 @@
 
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/top/b1;
+    new-instance v1, Ld/d/b/x5/a/b/b/m/a;
 
-    invoke-direct {v1, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/b1;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/IStrikethrough$IStrikethroughCallable;)V
+    invoke-direct {v1, v0}, Ld/d/b/x5/a/b/b/m/a;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/IStrikethrough$IStrikethroughCallable;)V
 
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable$1;->val$delay:I
 
@@ -105,6 +143,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-interface {p1}, Lcom/android/camera2/compat/theme/custom/mm/top/IStrikethrough$IStrikethroughCallable;->onShowEnd()V
 
@@ -115,9 +154,19 @@
 
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable$1;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;
 
     invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;->access$500(Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughDrawable;)Landroid/view/View;

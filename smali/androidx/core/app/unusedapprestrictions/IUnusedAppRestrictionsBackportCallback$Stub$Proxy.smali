@@ -1,4 +1,4 @@
-.class Landroidx/core/app/unusedapprestrictions/IUnusedAppRestrictionsBackportCallback$Stub$Proxy;
+.class public Landroidx/core/app/unusedapprestrictions/IUnusedAppRestrictionsBackportCallback$Stub$Proxy;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -29,8 +29,10 @@
 .method public constructor <init>(Landroid/os/IBinder;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/core/app/unusedapprestrictions/IUnusedAppRestrictionsBackportCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-void
@@ -41,6 +43,7 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/app/unusedapprestrictions/IUnusedAppRestrictionsBackportCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object p0
@@ -62,6 +65,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
@@ -69,6 +73,7 @@
     :try_start_0
     const-string v1, "androidx.core.app.unusedapprestrictions.IUnusedAppRestrictionsBackportCallback"
 
+    .line 2
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
     const/4 v1, 0x0
@@ -84,6 +89,7 @@
     :cond_0
     move v3, v1
 
+    .line 3
     :goto_0
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInt(I)V
 
@@ -91,9 +97,11 @@
 
     move v1, v2
 
+    .line 4
     :cond_1
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 5
     iget-object p0, p0, Landroidx/core/app/unusedapprestrictions/IUnusedAppRestrictionsBackportCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v1, 0x0
@@ -104,12 +112,14 @@
 
     if-nez p0, :cond_2
 
+    .line 6
     invoke-static {}, Landroidx/core/app/unusedapprestrictions/IUnusedAppRestrictionsBackportCallback$Stub;->getDefaultImpl()Landroidx/core/app/unusedapprestrictions/IUnusedAppRestrictionsBackportCallback;
 
     move-result-object p0
 
     if-eqz p0, :cond_2
 
+    .line 7
     invoke-static {}, Landroidx/core/app/unusedapprestrictions/IUnusedAppRestrictionsBackportCallback$Stub;->getDefaultImpl()Landroidx/core/app/unusedapprestrictions/IUnusedAppRestrictionsBackportCallback;
 
     move-result-object p0
@@ -118,6 +128,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 8
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -132,5 +143,6 @@
 
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 9
     throw p0
 .end method

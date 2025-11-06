@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/graph/EndpointPairIterator;
+.class public abstract Lcom/google/common/graph/EndpointPairIterator;
 .super Lcom/google/common/collect/AbstractIterator;
 .source "SourceFile"
 
@@ -36,7 +36,7 @@
     .end annotation
 .end field
 
-.field node:Ljava/lang/Object;
+.field public node:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TN;"
@@ -56,7 +56,7 @@
     .end annotation
 .end field
 
-.field successorIterator:Ljava/util/Iterator;
+.field public successorIterator:Ljava/util/Iterator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Iterator<",
@@ -136,6 +136,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Lcom/google/common/graph/BaseGraph;->isDirected()Z
 
     move-result v0
@@ -164,6 +165,7 @@
 .method public final advance()Z
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/graph/EndpointPairIterator;->successorIterator:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -176,6 +178,7 @@
 
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/graph/EndpointPairIterator;->nodeIterator:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -188,6 +191,7 @@
 
     return p0
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/google/common/graph/EndpointPairIterator;->nodeIterator:Ljava/util/Iterator;
 
@@ -197,6 +201,7 @@
 
     iput-object v0, p0, Lcom/google/common/graph/EndpointPairIterator;->node:Ljava/lang/Object;
 
+    .line 4
     iget-object v2, p0, Lcom/google/common/graph/EndpointPairIterator;->graph:Lcom/google/common/graph/BaseGraph;
 
     invoke-interface {v2, v0}, Lcom/google/common/graph/BaseGraph;->successors(Ljava/lang/Object;)Ljava/util/Set;

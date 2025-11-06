@@ -1,4 +1,4 @@
-.class final Landroidx/core/view/WindowInsetsCompat$TypeImpl30;
+.class public final Landroidx/core/view/WindowInsetsCompat$TypeImpl30;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,11 +31,11 @@
 .method public static toPlatformType(I)I
     .locals 4
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
-    const/4 v1, 0x1
+    const/4 v1, 0x0
 
-    move v2, v1
+    move v2, v0
 
     :goto_0
     const/16 v3, 0x100
@@ -45,7 +46,7 @@
 
     if-eqz v3, :cond_8
 
-    if-eq v2, v1, :cond_7
+    if-eq v2, v0, :cond_7
 
     const/4 v3, 0x2
 
@@ -77,62 +78,70 @@
 
     goto :goto_2
 
+    .line 1
     :cond_0
-    invoke-static {}, Landroidx/core/view/j1;->a()I
+    invoke-static {}, Landroid/view/WindowInsets$Type;->displayCutout()I
 
     move-result v3
 
     goto :goto_1
 
+    .line 2
     :cond_1
-    invoke-static {}, Landroidx/core/view/i1;->a()I
+    invoke-static {}, Landroid/view/WindowInsets$Type;->tappableElement()I
 
     move-result v3
 
     goto :goto_1
 
+    .line 3
     :cond_2
-    invoke-static {}, Landroidx/core/view/h1;->a()I
+    invoke-static {}, Landroid/view/WindowInsets$Type;->mandatorySystemGestures()I
 
     move-result v3
 
     goto :goto_1
 
+    .line 4
     :cond_3
-    invoke-static {}, Landroidx/core/view/g1;->a()I
+    invoke-static {}, Landroid/view/WindowInsets$Type;->systemGestures()I
 
     move-result v3
 
     goto :goto_1
 
+    .line 5
     :cond_4
-    invoke-static {}, Landroidx/core/view/f1;->a()I
+    invoke-static {}, Landroid/view/WindowInsets$Type;->ime()I
 
     move-result v3
 
     goto :goto_1
 
+    .line 6
     :cond_5
-    invoke-static {}, Landroidx/core/view/e1;->a()I
+    invoke-static {}, Landroid/view/WindowInsets$Type;->captionBar()I
 
     move-result v3
 
     goto :goto_1
 
+    .line 7
     :cond_6
-    invoke-static {}, Landroidx/core/view/d1;->a()I
+    invoke-static {}, Landroid/view/WindowInsets$Type;->navigationBars()I
 
     move-result v3
 
     goto :goto_1
 
+    .line 8
     :cond_7
-    invoke-static {}, Landroidx/core/view/c1;->a()I
+    invoke-static {}, Landroid/view/WindowInsets$Type;->statusBars()I
 
     move-result v3
 
     :goto_1
-    or-int/2addr v0, v3
+    or-int/2addr v1, v3
 
     :cond_8
     :goto_2
@@ -141,5 +150,5 @@
     goto :goto_0
 
     :cond_9
-    return v0
+    return v1
 .end method

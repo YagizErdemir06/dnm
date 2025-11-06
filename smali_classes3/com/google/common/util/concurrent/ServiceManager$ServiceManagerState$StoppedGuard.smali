@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState$StoppedGuard;
+.class public final Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState$StoppedGuard;
 .super Lcom/google/common/util/concurrent/Monitor$Guard;
 .source "SourceFile"
 
@@ -15,15 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;
+.field public final synthetic this$0:Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState$StoppedGuard;->this$0:Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;
 
+    .line 2
     iget-object p1, p1, Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;->monitor:Lcom/google/common/util/concurrent/Monitor;
 
     invoke-direct {p0, p1}, Lcom/google/common/util/concurrent/Monitor$Guard;-><init>(Lcom/google/common/util/concurrent/Monitor;)V
@@ -39,6 +41,7 @@
         value = "ServiceManagerState.this.monitor"
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState$StoppedGuard;->this$0:Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;
 
     iget-object v0, v0, Lcom/google/common/util/concurrent/ServiceManager$ServiceManagerState;->states:Lcom/google/common/collect/Multiset;

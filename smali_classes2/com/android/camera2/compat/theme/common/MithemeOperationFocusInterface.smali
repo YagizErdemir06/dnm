@@ -4,12 +4,21 @@
 
 
 # virtual methods
-.method public getCameraFocusPaintCenterIndicator(Landroid/content/Context;)Ly9/q;
+.method public getCameraFocusPaintCenterIndicator(Landroid/content/Context;)Ld/d/a/d8/n2/d/u;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
-    new-instance p0, Ly9/q;
+    .line 1
+    new-instance p0, Ld/d/a/d8/n2/d/u;
 
-    invoke-direct {p0, p1}, Ly9/q;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Ld/d/a/d8/n2/d/u;-><init>(Landroid/content/Context;)V
 
     return-object p0
 .end method
@@ -22,8 +31,18 @@
     return p0
 .end method
 
-.method public setCenterFlag(Ly9/q;Z)V
+.method public setCenterFlag(Ld/d/a/d8/n2/d/u;Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "focusCenterIndicator",
+            "isCombo"
+        }
+    .end annotation
 
     if-eqz p2, :cond_0
 
@@ -34,14 +53,25 @@
     :cond_0
     const/4 p0, 0x2
 
+    .line 1
     :goto_0
-    invoke-virtual {p1, p0}, Ly9/q;->setCenterFlag(I)V
+    invoke-virtual {p1, p0}, Ld/d/a/d8/n2/d/u;->setCenterFlag(I)V
 
     return-void
 .end method
 
-.method public setIndicatorBitmapSun(Ly9/q;Landroid/graphics/Bitmap;)V
+.method public setIndicatorBitmapSun(Ld/d/a/d8/n2/d/u;Landroid/graphics/Bitmap;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "focusCenterIndicator",
+            "exposureBitmap"
+        }
+    .end annotation
 
     return-void
 .end method

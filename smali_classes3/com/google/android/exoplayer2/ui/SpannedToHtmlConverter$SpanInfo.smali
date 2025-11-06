@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$SpanInfo;
+.class public final Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$SpanInfo;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -50,15 +50,13 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/google/android/exoplayer2/ui/f;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/ui/f;-><init>()V
+    .line 1
+    sget-object v0, Ld/j/a/b/y2/f;->c:Ld/j/a/b/y2/f;
 
     sput-object v0, Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$SpanInfo;->FOR_OPENING_TAGS:Ljava/util/Comparator;
 
-    new-instance v0, Lcom/google/android/exoplayer2/ui/g;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/ui/g;-><init>()V
+    .line 2
+    sget-object v0, Ld/j/a/b/y2/g;->c:Ld/j/a/b/y2/g;
 
     sput-object v0, Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$SpanInfo;->FOR_CLOSING_TAGS:Ljava/util/Comparator;
 
@@ -95,19 +93,10 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$SpanInfo;Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$SpanInfo;)I
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$SpanInfo;->lambda$static$0(Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$SpanInfo;Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$SpanInfo;)I
-
-    move-result p0
-
-    return p0
-.end method
-
 .method public static synthetic access$200()Ljava/util/Comparator;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$SpanInfo;->FOR_CLOSING_TAGS:Ljava/util/Comparator;
 
     return-object v0
@@ -116,24 +105,16 @@
 .method public static synthetic access$400()Ljava/util/Comparator;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$SpanInfo;->FOR_OPENING_TAGS:Ljava/util/Comparator;
 
     return-object v0
 .end method
 
-.method public static synthetic b(Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$SpanInfo;Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$SpanInfo;)I
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$SpanInfo;->lambda$static$1(Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$SpanInfo;Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$SpanInfo;)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method private static synthetic lambda$static$0(Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$SpanInfo;Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$SpanInfo;)I
+.method public static synthetic lambda$static$0(Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$SpanInfo;Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$SpanInfo;)I
     .locals 2
 
+    .line 1
     iget v0, p1, Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$SpanInfo;->end:I
 
     iget v1, p0, Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$SpanInfo;->end:I
@@ -146,6 +127,7 @@
 
     return v0
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$SpanInfo;->openingTag:Ljava/lang/String;
 
@@ -159,6 +141,7 @@
 
     return v0
 
+    .line 3
     :cond_1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$SpanInfo;->closingTag:Ljava/lang/String;
 
@@ -171,9 +154,10 @@
     return p0
 .end method
 
-.method private static synthetic lambda$static$1(Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$SpanInfo;Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$SpanInfo;)I
+.method public static synthetic lambda$static$1(Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$SpanInfo;Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$SpanInfo;)I
     .locals 2
 
+    .line 1
     iget v0, p1, Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$SpanInfo;->start:I
 
     iget v1, p0, Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$SpanInfo;->start:I
@@ -186,6 +170,7 @@
 
     return v0
 
+    .line 2
     :cond_0
     iget-object v0, p1, Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$SpanInfo;->openingTag:Ljava/lang/String;
 
@@ -199,6 +184,7 @@
 
     return v0
 
+    .line 3
     :cond_1
     iget-object p1, p1, Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$SpanInfo;->closingTag:Ljava/lang/String;
 

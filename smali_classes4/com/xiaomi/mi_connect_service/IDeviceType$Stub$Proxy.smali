@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/mi_connect_service/IDeviceType$Stub$Proxy;
+.class public Lcom/xiaomi/mi_connect_service/IDeviceType$Stub$Proxy;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -29,8 +29,10 @@
 .method public constructor <init>(Landroid/os/IBinder;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/xiaomi/mi_connect_service/IDeviceType$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-void
@@ -41,6 +43,7 @@
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IDeviceType$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object p0

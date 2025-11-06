@@ -12,19 +12,22 @@
 
 
 # instance fields
-.field final mRegistry:Lcom/google/android/play/core/splitinstall/SplitInstallListenerRegistry;
+.field public final mRegistry:Lcom/google/android/play/core/splitinstall/SplitInstallListenerRegistry;
 
-.field final sessionState:Lcom/google/android/play/core/splitinstall/SplitInstallSessionState;
+.field public final sessionState:Lcom/google/android/play/core/splitinstall/SplitInstallSessionState;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/play/core/splitinstall/SplitInstallListenerRegistry;Lcom/google/android/play/core/splitinstall/SplitInstallSessionState;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/play/core/splitinstall/SplitSessionStatusChanger;->mRegistry:Lcom/google/android/play/core/splitinstall/SplitInstallListenerRegistry;
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/play/core/splitinstall/SplitSessionStatusChanger;->sessionState:Lcom/google/android/play/core/splitinstall/SplitInstallSessionState;
 
     return-void

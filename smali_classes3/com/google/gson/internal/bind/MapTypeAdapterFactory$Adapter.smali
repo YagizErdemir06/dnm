@@ -1,4 +1,4 @@
-.class final Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;
+.class public final Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;
 .super Lcom/google/gson/TypeAdapter;
 .source "SourceFile"
 
@@ -48,7 +48,7 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Lcom/google/gson/internal/bind/MapTypeAdapterFactory;
+.field public final synthetic this$0:Lcom/google/gson/internal/bind/MapTypeAdapterFactory;
 
 .field private final valueTypeAdapter:Lcom/google/gson/TypeAdapter;
     .annotation system Ldalvik/annotation/Signature;
@@ -80,22 +80,26 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;->this$0:Lcom/google/gson/internal/bind/MapTypeAdapterFactory;
 
     invoke-direct {p0}, Lcom/google/gson/TypeAdapter;-><init>()V
 
+    .line 2
     new-instance p1, Lcom/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper;
 
     invoke-direct {p1, p2, p4, p3}, Lcom/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper;-><init>(Lcom/google/gson/Gson;Lcom/google/gson/TypeAdapter;Ljava/lang/reflect/Type;)V
 
     iput-object p1, p0, Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;->keyTypeAdapter:Lcom/google/gson/TypeAdapter;
 
+    .line 3
     new-instance p1, Lcom/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper;
 
     invoke-direct {p1, p2, p6, p5}, Lcom/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper;-><init>(Lcom/google/gson/Gson;Lcom/google/gson/TypeAdapter;Ljava/lang/reflect/Type;)V
 
     iput-object p1, p0, Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;->valueTypeAdapter:Lcom/google/gson/TypeAdapter;
 
+    .line 4
     iput-object p7, p0, Lcom/google/gson/internal/bind/MapTypeAdapterFactory$Adapter;->constructor:Lcom/google/gson/internal/ObjectConstructor;
 
     return-void
@@ -104,22 +108,26 @@
 .method private keyToString(Lcom/google/gson/JsonElement;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->isJsonPrimitive()Z
 
     move-result p0
 
     if-eqz p0, :cond_3
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->getAsJsonPrimitive()Lcom/google/gson/JsonPrimitive;
 
     move-result-object p0
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/gson/JsonPrimitive;->isNumber()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/gson/JsonPrimitive;->getAsNumber()Ljava/lang/Number;
 
     move-result-object p0
@@ -130,6 +138,7 @@
 
     return-object p0
 
+    .line 5
     :cond_0
     invoke-virtual {p0}, Lcom/google/gson/JsonPrimitive;->isBoolean()Z
 
@@ -137,6 +146,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 6
     invoke-virtual {p0}, Lcom/google/gson/JsonPrimitive;->getAsBoolean()Z
 
     move-result p0
@@ -147,6 +157,7 @@
 
     return-object p0
 
+    .line 7
     :cond_1
     invoke-virtual {p0}, Lcom/google/gson/JsonPrimitive;->isString()Z
 
@@ -154,12 +165,14 @@
 
     if-eqz p1, :cond_2
 
+    .line 8
     invoke-virtual {p0}, Lcom/google/gson/JsonPrimitive;->getAsString()Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
+    .line 9
     :cond_2
     new-instance p0, Ljava/lang/AssertionError;
 
@@ -167,6 +180,7 @@
 
     throw p0
 
+    .line 10
     :cond_3
     invoke-virtual {p1}, Lcom/google/gson/JsonElement;->isJsonNull()Z
 
@@ -178,6 +192,7 @@
 
     return-object p0
 
+    .line 11
     :cond_4
     new-instance p0, Ljava/lang/AssertionError;
 

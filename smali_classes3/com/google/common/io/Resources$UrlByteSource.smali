@@ -1,4 +1,4 @@
-.class final Lcom/google/common/io/Resources$UrlByteSource;
+.class public final Lcom/google/common/io/Resources$UrlByteSource;
 .super Lcom/google/common/io/ByteSource;
 .source "SourceFile"
 
@@ -56,6 +56,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/io/Resources$UrlByteSource;->url:Ljava/net/URL;
 
     invoke-virtual {p0}, Ljava/net/URL;->openStream()Ljava/io/InputStream;
@@ -68,6 +69,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/io/Resources$UrlByteSource;->url:Ljava/net/URL;
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

@@ -88,6 +88,7 @@
 .method public getAcceleration(FF)F
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/animation/physics/FlingAnimation;->mFlingForce:Lmiuix/animation/physics/FlingAnimation$DragForce;
 
     invoke-virtual {p0, p1, p2}, Lmiuix/animation/physics/FlingAnimation$DragForce;->getAcceleration(FF)F
@@ -100,6 +101,7 @@
 .method public getFriction()F
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/animation/physics/FlingAnimation;->mFlingForce:Lmiuix/animation/physics/FlingAnimation$DragForce;
 
     invoke-virtual {p0}, Lmiuix/animation/physics/FlingAnimation$DragForce;->getFrictionScalar()F
@@ -112,6 +114,7 @@
 .method public isAtEquilibrium(FF)Z
     .locals 1
 
+    .line 1
     iget v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mMaxValue:F
 
     cmpl-float v0, p1, v0
@@ -126,6 +129,7 @@
 
     iget-object p0, p0, Lmiuix/animation/physics/FlingAnimation;->mFlingForce:Lmiuix/animation/physics/FlingAnimation$DragForce;
 
+    .line 2
     invoke-virtual {p0, p1, p2}, Lmiuix/animation/physics/FlingAnimation$DragForce;->isAtEquilibrium(FF)Z
 
     move-result p0
@@ -156,12 +160,14 @@
 
     if-lez v0, :cond_0
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/physics/FlingAnimation;->mFlingForce:Lmiuix/animation/physics/FlingAnimation$DragForce;
 
     invoke-virtual {v0, p1}, Lmiuix/animation/physics/FlingAnimation$DragForce;->setFrictionScalar(F)V
 
     return-object p0
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -235,6 +241,7 @@
 .method public setValueThreshold(F)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/animation/physics/FlingAnimation;->mFlingForce:Lmiuix/animation/physics/FlingAnimation$DragForce;
 
     invoke-virtual {p0, p1}, Lmiuix/animation/physics/FlingAnimation$DragForce;->setValueThreshold(F)V
@@ -245,6 +252,7 @@
 .method public updateValueAndVelocity(J)Z
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/physics/FlingAnimation;->mFlingForce:Lmiuix/animation/physics/FlingAnimation$DragForce;
 
     iget v1, p0, Lmiuix/animation/physics/DynamicAnimation;->mValue:F
@@ -255,14 +263,17 @@
 
     move-result-object p1
 
+    .line 2
     iget p2, p1, Lmiuix/animation/physics/DynamicAnimation$MassState;->mValue:F
 
     iput p2, p0, Lmiuix/animation/physics/DynamicAnimation;->mValue:F
 
+    .line 3
     iget p1, p1, Lmiuix/animation/physics/DynamicAnimation$MassState;->mVelocity:F
 
     iput p1, p0, Lmiuix/animation/physics/DynamicAnimation;->mVelocity:F
 
+    .line 4
     iget v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mMinValue:F
 
     cmpg-float v1, p2, v0
@@ -271,10 +282,12 @@
 
     if-gez v1, :cond_0
 
+    .line 5
     iput v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mValue:F
 
     return v2
 
+    .line 6
     :cond_0
     iget v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mMaxValue:F
 
@@ -282,10 +295,12 @@
 
     if-lez v1, :cond_1
 
+    .line 7
     iput v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mValue:F
 
     return v2
 
+    .line 8
     :cond_1
     invoke-virtual {p0, p2, p1}, Lmiuix/animation/physics/FlingAnimation;->isAtEquilibrium(FF)Z
 

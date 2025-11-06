@@ -4,9 +4,9 @@
 
 
 # static fields
-.field static final synthetic $assertionsDisabled:Z
+.field public static final synthetic $assertionsDisabled:Z
 
-.field static synthetic class$org$apache$xmlbeans$impl$values$XmlComplexContentImpl:Ljava/lang/Class;
+.field public static synthetic class$org$apache$xmlbeans$impl$values$XmlComplexContentImpl:Ljava/lang/Class;
 
 
 # instance fields
@@ -14,9 +14,10 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/values/XmlComplexContentImpl;->class$org$apache$xmlbeans$impl$values$XmlComplexContentImpl:Ljava/lang/Class;
 
     if-nez v0, :cond_0
@@ -40,22 +41,26 @@
 .method public constructor <init>(Lorg/apache/xmlbeans/SchemaType;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;-><init>()V
 
+    .line 2
     check-cast p1, Lorg/apache/xmlbeans/impl/schema/SchemaTypeImpl;
 
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/values/XmlComplexContentImpl;->_schemaType:Lorg/apache/xmlbeans/impl/schema/SchemaTypeImpl;
 
     const/4 p1, 0x1
 
+    .line 3
     invoke-virtual {p0, p1, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->initComplexType(ZZ)V
 
     return-void
 .end method
 
-.method static synthetic class$(Ljava/lang/String;)Ljava/lang/Class;
+.method public static synthetic class$(Ljava/lang/String;)Ljava/lang/Class;
     .locals 1
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -72,7 +77,7 @@
 
     invoke-direct {v0}, Ljava/lang/NoClassDefFoundError;-><init>()V
 
-    invoke-virtual {v0, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v0, p0}, Ljava/lang/NoClassDefFoundError;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -3356,6 +3361,7 @@
 .method public equal_to(Lorg/apache/xmlbeans/XmlObject;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlComplexContentImpl;->_schemaType:Lorg/apache/xmlbeans/impl/schema/SchemaTypeImpl;
 
     invoke-interface {p1}, Lorg/apache/xmlbeans/XmlObject;->schemaType()Lorg/apache/xmlbeans/SchemaType;
@@ -3381,6 +3387,7 @@
 .method public get_default_attribute_text(Ljavax/xml/namespace/QName;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_default_attribute_text(Ljavax/xml/namespace/QName;)Ljava/lang/String;
 
     move-result-object p0
@@ -3391,6 +3398,7 @@
 .method public get_default_element_text(Ljavax/xml/namespace/QName;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlComplexContentImpl;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object p0
@@ -3405,6 +3413,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     invoke-interface {p0}, Lorg/apache/xmlbeans/SchemaProperty;->getDefaultText()Ljava/lang/String;
 
@@ -3416,6 +3425,7 @@
 .method public get_elementflags(Ljavax/xml/namespace/QName;)I
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlComplexContentImpl;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object p0
@@ -3430,6 +3440,7 @@
 
     return p1
 
+    .line 2
     :cond_0
     invoke-interface {p0}, Lorg/apache/xmlbeans/SchemaProperty;->hasDefault()I
 
@@ -3453,6 +3464,7 @@
 
     goto :goto_3
 
+    .line 3
     :cond_1
     invoke-interface {p0}, Lorg/apache/xmlbeans/SchemaProperty;->hasDefault()I
 
@@ -3510,6 +3522,7 @@
 .method public is_child_element_order_sensitive()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlComplexContentImpl;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object p0
@@ -3524,6 +3537,7 @@
 .method public new_visitor()Lorg/apache/xmlbeans/impl/values/TypeStoreVisitor;
     .locals 1
 
+    .line 1
     new-instance v0, Lorg/apache/xmlbeans/impl/schema/SchemaTypeVisitorImpl;
 
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlComplexContentImpl;->_schemaType:Lorg/apache/xmlbeans/impl/schema/SchemaTypeImpl;
@@ -3540,6 +3554,7 @@
 .method public schemaType()Lorg/apache/xmlbeans/SchemaType;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlComplexContentImpl;->_schemaType:Lorg/apache/xmlbeans/impl/schema/SchemaTypeImpl;
 
     return-object p0
@@ -3548,6 +3563,7 @@
 .method public final set_String(Ljava/lang/String;)V
     .locals 2
 
+    .line 1
     sget-boolean v0, Lorg/apache/xmlbeans/impl/values/XmlComplexContentImpl;->$assertionsDisabled:Z
 
     if-nez v0, :cond_1
@@ -3571,6 +3587,7 @@
 
     throw p0
 
+    .line 2
     :cond_1
     :goto_0
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/XmlComplexContentImpl;->_schemaType:Lorg/apache/xmlbeans/impl/schema/SchemaTypeImpl;
@@ -3593,6 +3610,7 @@
 
     goto :goto_1
 
+    .line 3
     :cond_2
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -3616,6 +3634,7 @@
 
     throw p1
 
+    .line 4
     :cond_3
     :goto_1
     invoke-super {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_String(Ljava/lang/String;)V
@@ -3632,6 +3651,7 @@
 .method public set_text(Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     sget-boolean p1, Lorg/apache/xmlbeans/impl/values/XmlComplexContentImpl;->$assertionsDisabled:Z
 
     if-nez p1, :cond_1
@@ -3823,6 +3843,7 @@
 .method public value_hash_code()I
     .locals 1
 
+    .line 1
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string v0, "Complex types cannot be used as hash keys"

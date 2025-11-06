@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Iterables$8;
+.class public Lcom/google/common/collect/Iterables$8;
 .super Lcom/google/common/collect/FluentIterable;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic val$iterable:Ljava/lang/Iterable;
+.field public final synthetic val$iterable:Ljava/lang/Iterable;
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/Iterable;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/Iterables$8;->val$iterable:Ljava/lang/Iterable;
 
     invoke-direct {p0}, Lcom/google/common/collect/FluentIterable;-><init>()V
@@ -48,12 +49,14 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Iterables$8;->val$iterable:Ljava/lang/Iterable;
 
     instance-of v0, p0, Ljava/util/Queue;
 
     if-eqz v0, :cond_0
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/ConsumingQueueIterator;
 
     check-cast p0, Ljava/util/Queue;
@@ -62,6 +65,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 

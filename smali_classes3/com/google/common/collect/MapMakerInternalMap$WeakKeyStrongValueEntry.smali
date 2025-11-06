@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/MapMakerInternalMap$WeakKeyStrongValueEntry;
+.class public final Lcom/google/common/collect/MapMakerInternalMap$WeakKeyStrongValueEntry;
 .super Lcom/google/common/collect/MapMakerInternalMap$AbstractWeakKeyEntry;
 .source "SourceFile"
 
@@ -71,10 +71,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/common/collect/MapMakerInternalMap$AbstractWeakKeyEntry;-><init>(Ljava/lang/ref/ReferenceQueue;Ljava/lang/Object;ILcom/google/common/collect/MapMakerInternalMap$InternalEntry;)V
 
     const/4 p1, 0x0
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/MapMakerInternalMap$WeakKeyStrongValueEntry;->value:Ljava/lang/Object;
 
     return-void
@@ -96,8 +98,10 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/MapMakerInternalMap$WeakKeyStrongValueEntry;
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/MapMakerInternalMap$AbstractWeakKeyEntry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -106,6 +110,7 @@
 
     invoke-direct {v0, p1, v1, v2, p2}, Lcom/google/common/collect/MapMakerInternalMap$WeakKeyStrongValueEntry;-><init>(Ljava/lang/ref/ReferenceQueue;Ljava/lang/Object;ILcom/google/common/collect/MapMakerInternalMap$WeakKeyStrongValueEntry;)V
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/collect/MapMakerInternalMap$WeakKeyStrongValueEntry;->value:Ljava/lang/Object;
 
     invoke-virtual {v0, p0}, Lcom/google/common/collect/MapMakerInternalMap$WeakKeyStrongValueEntry;->setValue(Ljava/lang/Object;)V
@@ -124,6 +129,7 @@
     .annotation runtime Lorg/checkerframework/checker/nullness/compatqual/NullableDecl;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/MapMakerInternalMap$WeakKeyStrongValueEntry;->value:Ljava/lang/Object;
 
     return-object p0
@@ -137,6 +143,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/MapMakerInternalMap$WeakKeyStrongValueEntry;->value:Ljava/lang/Object;
 
     return-void

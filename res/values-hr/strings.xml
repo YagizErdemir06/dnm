@@ -232,7 +232,6 @@
     <string name="accessibility_video_capture_button">Gumb za snimanje fotografija tijekom snimanja videozapisa</string>
     <string name="accessibility_video_pause_button">Pauzirano snimanje videozapisa</string>
     <string name="accessibility_video_resume_button">Nastavak snimanja videozapisa</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">Vodeni žig je isključen</string>
     <string name="accessibility_watermark_image_on">Vodeni žig je uključen</string>
     <string name="accessibility_watermark_text">Otvorite panel za podešavanje vodenog žiga</string>
@@ -240,16 +239,6 @@
     <string name="accessibility_zoom_button">Zoom način</string>
     <string name="actionbar_button_up_description">Natrag</string>
     <string name="afternoon">Popodne</string>
-    <string name="agent_flip_tbc">Nastavite na unutarnjem zaslonu</string>
-    <string name="agent_function_max">Podešeno na maksimalnu vrijednost</string>
-    <string name="agent_function_min">Podešeno na minimalnu vrijednost</string>
-    <string name="agent_workspace_mode_not_supported">Ova značajka nije podržana</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"Ova značajka nije podržana.
-Umjesto toga je otvoren foto način."</string>
-    <string name="agent_workspace_on">Postavljeni parametri za fotografiranje \"%1$s\"</string>
-    <string name="agent_workspace_tbc">Proučavanje scene</string>
-    <string name="agent_workspace_tbc_use_default">"Proučavanje scene…
-Parametri fotoaparata postavljeni kao zadani"</string>
     <string name="ai_agra_fort">Utvrda Agra</string>
     <string name="ai_amber_fort">Jantarna palača</string>
     <string name="ai_baby">Dijete</string>
@@ -476,7 +465,6 @@ i automatski podesite preference"</string>
     <string name="bluetooth_headset_permission_des">Za određivanje statusa veze Bluetooth slušalica i snimanje zvuka pomoću mikrofona slušalica</string>
     <string name="bluetooth_permission_not_ask_again">Dopustite ovoj aplikaciji da se poveže s uređajima u blizini u Postavkama kako biste se mogli povezati s Bluetooth slušalicama.</string>
     <string name="bokeh_use_hint">Efekat dubine</string>
-    <string name="bottomsheet_action_expand_halfway">Proširi donju polovicu</string>
     <string name="burst_shoot_exit_button_text">Isključi brzo snimanje</string>
     <string name="button_fisheye_camera_title">Riblje oko</string>
     <string name="button_front_camera_title">Napravi selfie</string>
@@ -517,8 +505,6 @@ i automatski podesite preference"</string>
     <string name="ccc_temperature_warning_msg">Vaš je uređaj pregrijan. Kamera će biti zatvorena %d sekundi. Fotografije ili videozapisi automatski se spremaju.</string>
     <string name="ccc_temperature_warning_title">Uređaj je pregrijan</string>
     <string name="center_mark">Oznaka centra</string>
-    <string name="character_counter_content_description">Uneseno znakova: %1$d od %2$d</string>
-    <string name="character_counter_overflowed_content_description">Premašeno je ograničenje broja znakova: %1$d od %2$d</string>
     <string name="cinemaster_cancel">Otkaži</string>
     <string name="cinemaster_confirm">Izlaz</string>
     <string name="cinemaster_connect_exit_message">Izaći iz postavki više fotoaparata sada?</string>
@@ -537,7 +523,6 @@ i automatski podesite preference"</string>
     <string name="cinemaster_toast_monitor_disconnect">Monitor isključen iz postavljanja više fotoaparata</string>
     <string name="cinemaster_toast_monitor_play_error">Fotoaparat %s isključen iz postavljanja više fotoaparata zbog pogreške</string>
     <string name="cinemaster_wifi_24g_tips">Prebacite se na %s GHz mrežu za povećanje stabilnosti feeda monitora</string>
-    <string name="clear_text_end_icon_content_description">Brisanje teksta</string>
     <string name="clearable_edittext_clear_description">Očisti</string>
     <string name="clone_adjust">Prilagodi</string>
     <string name="clone_copy_mode">Zamrzni kadar</string>
@@ -793,7 +778,7 @@ Preporučujemo povezivanje na %s GHz Wi-Fi mreže koje podržavaju standard šes
     <string name="document_mode_use_hint_text_body">"Stavi u liniju i poboljšaj
 skenirane dokumente automatski"</string>
     <string name="document_mode_use_hint_text_title">Skeniraj dokumente</string>
-    <string name="document_origin">Izvorno</string>
+    <string name="document_origin">Original</string>
     <string name="document_strengthen">Poboljšano</string>
     <string name="dolly_zoom_capture_tip1">Stavite svoj subjekt u okvir</string>
     <string name="dolly_zoom_capture_tip2">Držite svoj subjekt u središtu i ravnomjerno odmičite uređaj</string>
@@ -831,7 +816,6 @@ skenirane dokumente automatski"</string>
     <string name="download_hint_cn">Čini se da Vaš uređaj nije spojen na WLAN. Koristiti %1$s MB mobilnih podataka za preuzimanje stavki sada?</string>
     <string name="download_hint_wifi">Čini se da Vaš uređaj nije spojen na Wi-Fi. Koristiti %1$s MB mobilnih podataka za preuzimanje stavki sada?</string>
     <string name="download_in_progress">Preuzimanje…</string>
-    <string name="download_network_error">Nije bilo moguće preuzeti. Provjerite svoje mrežne postavke.</string>
     <string name="download_title">Upozorenje korištenja podataka</string>
     <string name="download_waiting">Na čekanju…</string>
     <string name="dual_camera_lens_covered_toast">Objektiv je pokriven.</string>
@@ -882,7 +866,6 @@ Snimanje dual telefona omogućuje Vam da se povežete na drugi uređaj u blizini
     <string name="eras_ad">Po Kr.</string>
     <string name="eras_bc">Pr. Kr.</string>
     <string name="error_fail_to_start_audio_capture">Nije moguće pokrenuti snimanje zvuka</string>
-    <string name="error_icon_content_description">Pogreška</string>
     <string name="esp_tip">Pregled vanjskog zaslona</string>
     <string name="evening">Popodne</string>
     <string name="exo_controls_cc_disabled_description">Omogući titlove</string>
@@ -937,7 +920,6 @@ Snimanje dual telefona omogućuje Vam da se povežete na drugi uređaj u blizini
     <string name="exo_track_surround_7_point_1">7.1-kanalni okružujući zvuk</string>
     <string name="exo_track_unknown">Nepoznato</string>
     <string name="expand_button_title">Napredno</string>
-    <string name="exposed_dropdown_menu_content_description">Prikaži padajući izbornik</string>
     <string name="exposure_mode_adjust_title">ExposureMode</string>
     <string name="eye_light">Sjaj očiju</string>
     <string name="eye_light_angel">Anđeo</string>
@@ -1094,7 +1076,6 @@ i zatim izraditi snimku na kojoj svi izgledaju najbolje."</string>
     <string name="hint_subtitle_prompt">Sada možete diktirati titlove</string>
     <string name="histogram_summary_tip">Prikaži povratnu informaciju izloženosti u stvarnom vremenu</string>
     <string name="hunt_dual_water_mark">Vodeni žig Dvostrukog fotoaparata biti će dodan automatski.</string>
-    <string name="icon_content_description">Ikona dijaloga</string>
     <string name="id_card_mode_hint_back">Učitaj stražnju stranu ID-a</string>
     <string name="id_card_mode_hint_front">Učitaj prednju stranu ID-ja</string>
     <string name="id_card_mode_use_hint_text_body">"Stavite obje strane Vašeg ID dokumenta na jednu sliku.
@@ -1105,7 +1086,6 @@ Bežično ispišite kopiju na A4 papir."</string>
     <string name="invisible_mode_dialog_summary">Trenutno nije moguće koristiti fotoaparat. Isključite anonimni način u Postavkama kako biste mogli koristiti fotoaparat.</string>
     <string name="invisible_mode_dialog_title">Sada ste u anonimnom načinu</string>
     <string name="invisible_mode_dialog_to_close">Postavke</string>
-    <string name="item_view_role_description">Kartica</string>
     <string name="kaleidoscope_fragment_tab_name">Klajdoskop</string>
     <string name="lens_dirty_detected_content">"Izgleda da je objektiv vaše kamere prljav.
 Očistite objektiv radi boljeg učinka."</string>
@@ -1228,18 +1208,6 @@ Očistite objektiv radi boljeg učinka."</string>
     <string name="manually_raw_tip">Nije moguće koristiti zoom sa RAW formatom</string>
     <string name="manually_ultra_raw_tip">Zumiranje nije moguće sa Ultra RAW</string>
     <string name="masterfilter_description_title">Filmski filteri</string>
-    <string name="material_clock_toggle_content_description">Odaberite prijepodne ili poslijepodne</string>
-    <string name="material_hour_selection">Odaberite sat</string>
-    <string name="material_hour_suffix">%1$s h</string>
-    <string name="material_minute_selection">Odaberite minute</string>
-    <string name="material_minute_suffix">%1$s min</string>
-    <string name="material_timepicker_am">AM</string>
-    <string name="material_timepicker_clock_mode_description">Prijeđite na način rada sata da biste unijeli vrijeme.</string>
-    <string name="material_timepicker_hour">Sat</string>
-    <string name="material_timepicker_minute">Minuta</string>
-    <string name="material_timepicker_pm">PM</string>
-    <string name="material_timepicker_select_time">Odabir vremena</string>
-    <string name="material_timepicker_text_input_mode_description">Prijeđite na način unosa teksta da biste unijeli vrijeme.</string>
     <string name="message_snap_double_confirm">Dugi pritisak na tipku za glasnoću sada aktivira NFC. Zamijeniti ovu značajku?</string>
     <string name="midnight">Noć</string>
     <string name="mimoji_app_name">Fun Cam</string>
@@ -1378,7 +1346,6 @@ Očistite objektiv radi boljeg učinka."</string>
     <string name="miuix_appcompat_delete_description">Izbriši</string>
     <string name="miuix_appcompat_deselect_all">Poništi sve</string>
     <string name="miuix_appcompat_deselect_all_description">Poništi sve</string>
-    <string name="miuix_appcompat_edit">Uredi</string>
     <string name="miuix_appcompat_search_action_mode_cancel">Odustani</string>
     <string name="miuix_appcompat_search_input_description">Traži</string>
     <string name="miuix_appcompat_select_all">Odaberi sve</string>
@@ -1486,42 +1453,6 @@ Očistite objektiv radi boljeg učinka."</string>
     <string name="msg_bubble_doc4_first_use">Dodirnite za otkrivanje teksta</string>
     <string name="msg_toast_doc4_recognition_failed">Došlo je do greške. Pokušajte ponovno.</string>
     <string name="msg_toast_doc4_text_not_found">Ne mogu otkriti tekst</string>
-    <string name="mtrl_badge_numberless_content_description">Nova obavijest</string>
-    <string name="mtrl_chip_close_icon_content_description">Ukloni %1$s</string>
-    <string name="mtrl_exceed_max_badge_number_content_description">Više od %1$d novih obavijesti</string>
-    <string name="mtrl_picker_a11y_next_month">Prijelaz na sljedeći mjesec</string>
-    <string name="mtrl_picker_a11y_prev_month">Pomicanje na prethodni mjesec</string>
-    <string name="mtrl_picker_announce_current_selection">Trenutačan odabir: %1$s</string>
-    <string name="mtrl_picker_cancel">Odustani</string>
-    <string name="mtrl_picker_confirm">U redu</string>
-    <string name="mtrl_picker_date_header_selected">%1$s</string>
-    <string name="mtrl_picker_date_header_title">Odaberite datum</string>
-    <string name="mtrl_picker_date_header_unselected">Odabrani datum</string>
-    <string name="mtrl_picker_day_of_week_column_header">Stupac s danima: %1$s</string>
-    <string name="mtrl_picker_invalid_format">Nevažeći format.</string>
-    <string name="mtrl_picker_invalid_format_example">Primjer: %1$s</string>
-    <string name="mtrl_picker_invalid_format_use">Koristi format: %1$s</string>
-    <string name="mtrl_picker_invalid_range">Raspon nije važeći.</string>
-    <string name="mtrl_picker_navigate_to_year_description">Prijelaz na godinu %1$s</string>
-    <string name="mtrl_picker_out_of_range">Izvan raspona: %1$s</string>
-    <string name="mtrl_picker_range_header_only_end_selected">Datum početka – %1$s</string>
-    <string name="mtrl_picker_range_header_only_start_selected">%1$s – datum završetka</string>
-    <string name="mtrl_picker_range_header_selected">%1$s – %2$s</string>
-    <string name="mtrl_picker_range_header_title">Odaberite raspon</string>
-    <string name="mtrl_picker_range_header_unselected">Datum početka – datum završetka</string>
-    <string name="mtrl_picker_save">Spremi</string>
-    <string name="mtrl_picker_text_input_date_hint">Datum</string>
-    <string name="mtrl_picker_text_input_date_range_end_hint">Datum završetka</string>
-    <string name="mtrl_picker_text_input_date_range_start_hint">Datum početka</string>
-    <string name="mtrl_picker_text_input_day_abbr">d</string>
-    <string name="mtrl_picker_text_input_month_abbr">m</string>
-    <string name="mtrl_picker_text_input_year_abbr">g</string>
-    <string name="mtrl_picker_toggle_to_calendar_input_mode">Prijelaz na način unosa u Kalendaru</string>
-    <string name="mtrl_picker_toggle_to_day_selection">Dodirnite za prijelaz na odabir dana</string>
-    <string name="mtrl_picker_toggle_to_text_input_mode">Prijelaz na način unosa teksta</string>
-    <string name="mtrl_picker_toggle_to_year_selection">Dodirnite za prijelaz na odabir godine</string>
-    <string name="mtrl_timepicker_cancel">Odustani</string>
-    <string name="mtrl_timepicker_confirm">U redu</string>
     <string name="multi_window_mode_not_supported">Fotoaparat ne može biti korišten u višeprozornom načinu</string>
     <string name="network_access_user_notice_agree">Slažem se</string>
     <string name="network_access_user_notice_message_live_video">&lt;Data>Fotoaparat se mora povezati s internetom za pružanje efekata, glazbe i ostalih funkcija za kratke videozapise.&lt;br/>&lt;br/>Dodirom na \"Slažem se\" u nastavku prihvaćate naš&lt;a href =%1$s>Korisnički ugovor&lt;/a> i &lt;a href =%2$s>Pravila o privatnosti&lt;/a>, i omogućava Fotoaparatu da se poveže s internetom.&lt;/Data></string>
@@ -1616,7 +1547,6 @@ Ultra RAW slike spremaju %d bita podataka čuvajući još više detalja."</strin
     <string name="parameter_wb_title">Balans bijele</string>
     <string name="parameter_zoom_slider_description">Povucite slajder zooma vodoravno kako biste glatko promijenili Vašu snimku iz udaljenog snimka do krupnog plana.</string>
     <string name="parameter_zoom_slider_title">Zoom</string>
-    <string name="password_toggle_content_description">Prikaži zaporku</string>
     <string name="path_settings">Aplikacije sustava/Fotoaparat/Postavke</string>
     <string name="photo_assistance_tips_title">Savjeti uživo</string>
     <string name="pic_flaw_blink_more">Čini se da je netko unutar okvira zatvorio oči</string>
@@ -2355,11 +2285,10 @@ Držite subjekat oštrim dok zamutite pozadinu."</string>
     <string name="time_freeze_clipbox_tint">Zamrzni</string>
     <string name="time_freeze_description_title">Zamrzavanje vremena</string>
     <string name="time_lapse_error">Ne mogu koristiti ovu veličinu videa za time-lapse snimanja</string>
-    <string name="time_picker_dialog_title">Postavite vrijeme</string>
+    <string name="time_picker_dialog_title">Postavi vrijeme</string>
     <string name="time_picker_label_hour">H</string>
     <string name="time_picker_label_minute">M</string>
     <string name="time_stamp_date_format">d. M. yyyy.</string>
-    <string name="time_stamp_date_format_minute">d. M. yyyy. HH:mm</string>
     <string name="timefreeze_guide_tip2">Možete zamrzavati i odmrzavati pozadinu kada god želite prije ili tokom snimanja.</string>
     <string name="timefreeze_guide_tip3">Zamolite svoj subjekt da bude u središtu okvira.</string>
     <string name="timefreeze_guide_tip4">Zaustavite promet.</string>
@@ -2397,7 +2326,7 @@ Držite subjekat oštrim dok zamutite pozadinu."</string>
     <string name="tip_flash_screen_light_on">Meka bljeskalica: Uključeno</string>
     <string name="tip_flash_soft_light_off">Meka bljeskalica: Isključeno</string>
     <string name="tip_flash_soft_light_torch">Meka bljeskalica: Način bljeskalice</string>
-    <string name="tip_flash_torch">Bljesak: Bljeskalica</string>
+    <string name="tip_flash_torch">Bljeskalica: uvijek uključeno</string>
     <string name="tip_friend_mode_connect_when_24GHz">Koristite %s GHz vezu za poboljšanje kvalitete pregleda</string>
     <string name="tip_friend_mode_display_device_name_connect">Dijeljeni pregled</string>
     <string name="tip_friend_mode_display_device_name_disconnect">Drugi uređaj je napustio ovu sesiju</string>

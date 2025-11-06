@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/AbstractMapBasedMultiset$1;
+.class public Lcom/google/common/collect/AbstractMapBasedMultiset$1;
 .super Lcom/google/common/collect/AbstractMapBasedMultiset$Itr;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/AbstractMapBasedMultiset;
+.field public final synthetic this$0:Lcom/google/common/collect/AbstractMapBasedMultiset;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/AbstractMapBasedMultiset;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/AbstractMapBasedMultiset$1;->this$0:Lcom/google/common/collect/AbstractMapBasedMultiset;
 
     invoke-direct {p0, p1}, Lcom/google/common/collect/AbstractMapBasedMultiset$Itr;-><init>(Lcom/google/common/collect/AbstractMapBasedMultiset;)V
@@ -49,6 +50,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/AbstractMapBasedMultiset$1;->this$0:Lcom/google/common/collect/AbstractMapBasedMultiset;
 
     iget-object p0, p0, Lcom/google/common/collect/AbstractMapBasedMultiset;->backingMap:Lcom/google/common/collect/ObjectCountHashMap;

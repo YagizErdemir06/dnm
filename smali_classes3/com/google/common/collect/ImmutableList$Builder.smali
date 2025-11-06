@@ -245,6 +245,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p1, Lcom/google/common/collect/ImmutableCollection$ArrayBasedBuilder;->contents:[Ljava/lang/Object;
 
     iget p1, p1, Lcom/google/common/collect/ImmutableCollection$ArrayBasedBuilder;->size:I

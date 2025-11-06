@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/tasks/zzu;
+.class public final Lcom/google/android/gms/tasks/zzu;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -14,6 +14,7 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Lcom/google/android/gms/internal/tasks/zza;
@@ -38,6 +39,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/tasks/zzu;->zza:Landroid/os/Handler;
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z

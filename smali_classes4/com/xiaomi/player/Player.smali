@@ -12,15 +12,15 @@
 
 
 # static fields
-.field public static d:Ljava/lang/String; = "Player"
+.field private static a:Ljava/lang/String; = "Player"
 
 
 # instance fields
-.field public a:J
+.field private b:J
 
-.field public b:Ljava/lang/String;
+.field private c:Ljava/lang/String;
 
-.field public c:Lsl/a;
+.field private d:Ld/o/f0/a/a;
 
 
 # direct methods
@@ -33,19 +33,23 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/xiaomi/player/Player;->a:J
+    .line 2
+    iput-wide v0, p0, Lcom/xiaomi/player/Player;->b:J
 
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/xiaomi/player/Player;->b:Ljava/lang/String;
+    .line 3
+    iput-object v0, p0, Lcom/xiaomi/player/Player;->c:Ljava/lang/String;
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/xiaomi/player/Player;->c:Lsl/a;
+    .line 4
+    iput-object v0, p0, Lcom/xiaomi/player/Player;->d:Ld/o/f0/a/a;
 
     return-void
 .end method
@@ -56,6 +60,7 @@
 .method public static I0()Ljava/lang/String;
     .locals 1
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/player/Player;->versionJni()Ljava/lang/String;
 
     move-result-object v0
@@ -141,12 +146,14 @@
 .method public static m(Ljava/lang/String;)I
     .locals 2
 
-    sget-object v0, Lcom/xiaomi/player/Player;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/player/Player;->a:Ljava/lang/String;
 
     const-string v1, "cancel compressing MP4 files"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {p0}, Lcom/xiaomi/player/Player;->cancelCompressingMP4FileJni(Ljava/lang/String;)I
 
     move-result p0
@@ -160,12 +167,14 @@
 .method public static n(Ljava/lang/String;Ljava/lang/String;J)I
     .locals 2
 
-    sget-object v0, Lcom/xiaomi/player/Player;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/player/Player;->a:Ljava/lang/String;
 
     const-string v1, "compress MP4 files"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {p0, p1, p2, p3}, Lcom/xiaomi/player/Player;->compressMP4FileJni(Ljava/lang/String;Ljava/lang/String;J)I
 
     move-result p0
@@ -304,12 +313,14 @@
 .method public A()J
     .locals 2
 
-    sget-object v0, Lcom/xiaomi/player/Player;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/player/Player;->a:Ljava/lang/String;
 
     const-string v1, "get audio transfer"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-direct {p0}, Lcom/xiaomi/player/Player;->getAudioTransferJni()J
 
     move-result-wide v0
@@ -320,8 +331,10 @@
 .method public A0(Ljava/lang/String;Ljava/lang/String;Z)Z
     .locals 0
 
-    iput-object p1, p0, Lcom/xiaomi/player/Player;->b:Ljava/lang/String;
+    .line 1
+    iput-object p1, p0, Lcom/xiaomi/player/Player;->c:Ljava/lang/String;
 
+    .line 2
     invoke-direct {p0, p1, p2, p3}, Lcom/xiaomi/player/Player;->startJni(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result p0
@@ -332,6 +345,7 @@
 .method public B()J
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/player/Player;->getCurrentAudioTimestampJni()J
 
     move-result-wide v0
@@ -342,8 +356,10 @@
 .method public B0(Ljava/lang/String;Ljava/lang/String;ZJ)Z
     .locals 0
 
-    iput-object p1, p0, Lcom/xiaomi/player/Player;->b:Ljava/lang/String;
+    .line 1
+    iput-object p1, p0, Lcom/xiaomi/player/Player;->c:Ljava/lang/String;
 
+    .line 2
     invoke-direct/range {p0 .. p5}, Lcom/xiaomi/player/Player;->startWithTimeJni(Ljava/lang/String;Ljava/lang/String;ZJ)Z
 
     move-result p0
@@ -354,6 +370,7 @@
 .method public C()J
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/player/Player;->getCurrentCachePositionJni()J
 
     move-result-wide v0
@@ -364,6 +381,7 @@
 .method public C0(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/player/Player;->startCacheUriJni(Ljava/lang/String;)V
 
     return-void
@@ -372,12 +390,14 @@
 .method public D()J
     .locals 2
 
-    sget-object v0, Lcom/xiaomi/player/Player;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/player/Player;->a:Ljava/lang/String;
 
     const-string v1, "get stream ID"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-direct {p0}, Lcom/xiaomi/player/Player;->getStreamIdJni()J
 
     move-result-wide v0
@@ -388,6 +408,7 @@
 .method public D0()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/player/Player;->startCacheUriAllJni()V
 
     return-void
@@ -396,6 +417,7 @@
 .method public E()J
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/player/Player;->getTimestampOfCurrentVideoFrameJni()J
 
     move-result-wide v0
@@ -406,6 +428,7 @@
 .method public E0(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/player/Player;->startCacheUriOtherJni(Ljava/lang/String;)V
 
     return-void
@@ -414,6 +437,7 @@
 .method public F()Z
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/player/Player;->isPausedJni()Z
 
     move-result p0
@@ -424,6 +448,7 @@
 .method public F0()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/player/Player;->stopJni()V
 
     return-void
@@ -432,6 +457,7 @@
 .method public G()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/player/Player;->muteAudioJni()V
 
     return-void
@@ -440,6 +466,7 @@
 .method public G0()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/player/Player;->unMuteAudioJni()V
 
     return-void
@@ -448,15 +475,17 @@
 .method public H()V
     .locals 2
 
-    sget-object v0, Lcom/xiaomi/player/Player;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/player/Player;->a:Ljava/lang/String;
 
     const-string v1, "callback:onAudioRenderingStart"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object p0, p0, Lcom/xiaomi/player/Player;->c:Lsl/a;
+    .line 2
+    iget-object p0, p0, Lcom/xiaomi/player/Player;->d:Ld/o/f0/a/a;
 
-    invoke-interface {p0}, Lsl/a;->onAudioRenderingStart()V
+    invoke-interface {p0}, Ld/o/f0/a/a;->onAudioRenderingStart()V
 
     return-void
 .end method
@@ -464,6 +493,7 @@
 .method public H0([Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/player/Player;->updateCacheUriJni([Ljava/lang/String;)V
 
     return-void
@@ -472,15 +502,17 @@
 .method public I()V
     .locals 2
 
-    sget-object v0, Lcom/xiaomi/player/Player;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/player/Player;->a:Ljava/lang/String;
 
     const-string v1, "callback:onFirstPacketRecved"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object p0, p0, Lcom/xiaomi/player/Player;->c:Lsl/a;
+    .line 2
+    iget-object p0, p0, Lcom/xiaomi/player/Player;->d:Ld/o/f0/a/a;
 
-    invoke-interface {p0}, Lsl/a;->onFirstPacketRecved()V
+    invoke-interface {p0}, Ld/o/f0/a/a;->onFirstPacketRecved()V
 
     return-void
 .end method
@@ -488,7 +520,8 @@
 .method public J(I)V
     .locals 3
 
-    sget-object v0, Lcom/xiaomi/player/Player;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/player/Player;->a:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -506,13 +539,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object p0, p0, Lcom/xiaomi/player/Player;->c:Lsl/a;
+    .line 2
+    iget-object p0, p0, Lcom/xiaomi/player/Player;->d:Ld/o/f0/a/a;
 
-    invoke-static {p1}, Ltl/a;->b(I)Ltl/a;
+    invoke-static {p1}, Ld/o/f0/b/a;->b(I)Ld/o/f0/b/a;
 
     move-result-object p1
 
-    invoke-interface {p0, p1}, Lsl/a;->a(Ltl/a;)V
+    invoke-interface {p0, p1}, Ld/o/f0/a/a;->a(Ld/o/f0/b/a;)V
 
     return-void
 .end method
@@ -520,6 +554,7 @@
 .method public J0()Lcom/xiaomi/player/datastruct/VideoSize;
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/player/Player;->videoSizeJni()Lcom/xiaomi/player/datastruct/VideoSize;
 
     move-result-object p0
@@ -530,15 +565,17 @@
 .method public K()V
     .locals 2
 
-    sget-object v0, Lcom/xiaomi/player/Player;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/player/Player;->a:Ljava/lang/String;
 
     const-string v1, "callback:onPlayerPaused"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object p0, p0, Lcom/xiaomi/player/Player;->c:Lsl/a;
+    .line 2
+    iget-object p0, p0, Lcom/xiaomi/player/Player;->d:Ld/o/f0/a/a;
 
-    invoke-interface {p0}, Lsl/a;->onPlayerPaused()V
+    invoke-interface {p0}, Ld/o/f0/a/a;->onPlayerPaused()V
 
     return-void
 .end method
@@ -546,15 +583,17 @@
 .method public L()V
     .locals 2
 
-    sget-object v0, Lcom/xiaomi/player/Player;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/player/Player;->a:Ljava/lang/String;
 
     const-string v1, "callback:onPlayerResumed"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object p0, p0, Lcom/xiaomi/player/Player;->c:Lsl/a;
+    .line 2
+    iget-object p0, p0, Lcom/xiaomi/player/Player;->d:Ld/o/f0/a/a;
 
-    invoke-interface {p0}, Lsl/a;->onPlayerResumed()V
+    invoke-interface {p0}, Ld/o/f0/a/a;->onPlayerResumed()V
 
     return-void
 .end method
@@ -562,15 +601,17 @@
 .method public M()V
     .locals 2
 
-    sget-object v0, Lcom/xiaomi/player/Player;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/player/Player;->a:Ljava/lang/String;
 
     const-string v1, "callback:onPlayerStarted"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object p0, p0, Lcom/xiaomi/player/Player;->c:Lsl/a;
+    .line 2
+    iget-object p0, p0, Lcom/xiaomi/player/Player;->d:Ld/o/f0/a/a;
 
-    invoke-interface {p0}, Lsl/a;->onPlayerStarted()V
+    invoke-interface {p0}, Ld/o/f0/a/a;->onPlayerStarted()V
 
     return-void
 .end method
@@ -578,15 +619,17 @@
 .method public N()V
     .locals 2
 
-    sget-object v0, Lcom/xiaomi/player/Player;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/player/Player;->a:Ljava/lang/String;
 
     const-string v1, "callback:onPlayerStoped"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object p0, p0, Lcom/xiaomi/player/Player;->c:Lsl/a;
+    .line 2
+    iget-object p0, p0, Lcom/xiaomi/player/Player;->d:Ld/o/f0/a/a;
 
-    invoke-interface {p0}, Lsl/a;->onPlayerStoped()V
+    invoke-interface {p0}, Ld/o/f0/a/a;->onPlayerStoped()V
 
     return-void
 .end method
@@ -594,15 +637,17 @@
 .method public O()V
     .locals 2
 
-    sget-object v0, Lcom/xiaomi/player/Player;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/player/Player;->a:Ljava/lang/String;
 
     const-string v1, "callback:onSeekCompleted"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object p0, p0, Lcom/xiaomi/player/Player;->c:Lsl/a;
+    .line 2
+    iget-object p0, p0, Lcom/xiaomi/player/Player;->d:Ld/o/f0/a/a;
 
-    invoke-interface {p0}, Lsl/a;->onSeekCompleted()V
+    invoke-interface {p0}, Ld/o/f0/a/a;->onSeekCompleted()V
 
     return-void
 .end method
@@ -610,15 +655,17 @@
 .method public P()V
     .locals 2
 
-    sget-object v0, Lcom/xiaomi/player/Player;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/player/Player;->a:Ljava/lang/String;
 
     const-string v1, "callback:onStartBuffering"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object p0, p0, Lcom/xiaomi/player/Player;->c:Lsl/a;
+    .line 2
+    iget-object p0, p0, Lcom/xiaomi/player/Player;->d:Ld/o/f0/a/a;
 
-    invoke-interface {p0}, Lsl/a;->onStartBuffering()V
+    invoke-interface {p0}, Ld/o/f0/a/a;->onStartBuffering()V
 
     return-void
 .end method
@@ -626,15 +673,17 @@
 .method public Q()V
     .locals 2
 
-    sget-object v0, Lcom/xiaomi/player/Player;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/player/Player;->a:Ljava/lang/String;
 
     const-string v1, "callback:onStartPlaying"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object p0, p0, Lcom/xiaomi/player/Player;->c:Lsl/a;
+    .line 2
+    iget-object p0, p0, Lcom/xiaomi/player/Player;->d:Ld/o/f0/a/a;
 
-    invoke-interface {p0}, Lsl/a;->onStartPlaying()V
+    invoke-interface {p0}, Ld/o/f0/a/a;->onStartPlaying()V
 
     return-void
 .end method
@@ -642,7 +691,8 @@
 .method public R(J)V
     .locals 3
 
-    sget-object v0, Lcom/xiaomi/player/Player;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/player/Player;->a:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -664,9 +714,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object p0, p0, Lcom/xiaomi/player/Player;->c:Lsl/a;
+    .line 2
+    iget-object p0, p0, Lcom/xiaomi/player/Player;->d:Ld/o/f0/a/a;
 
-    invoke-interface {p0, p1, p2}, Lsl/a;->onStartWithTimeInvalid(J)V
+    invoke-interface {p0, p1, p2}, Ld/o/f0/a/a;->onStartWithTimeInvalid(J)V
 
     return-void
 .end method
@@ -674,15 +725,17 @@
 .method public S()V
     .locals 2
 
-    sget-object v0, Lcom/xiaomi/player/Player;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/player/Player;->a:Ljava/lang/String;
 
     const-string v1, "callback:onStreamEOF"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object p0, p0, Lcom/xiaomi/player/Player;->c:Lsl/a;
+    .line 2
+    iget-object p0, p0, Lcom/xiaomi/player/Player;->d:Ld/o/f0/a/a;
 
-    invoke-interface {p0}, Lsl/a;->onStreamEOF()V
+    invoke-interface {p0}, Ld/o/f0/a/a;->onStreamEOF()V
 
     return-void
 .end method
@@ -690,15 +743,17 @@
 .method public T()V
     .locals 2
 
-    sget-object v0, Lcom/xiaomi/player/Player;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/player/Player;->a:Ljava/lang/String;
 
     const-string v1, "callback:onVideoRenderingStart"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object p0, p0, Lcom/xiaomi/player/Player;->c:Lsl/a;
+    .line 2
+    iget-object p0, p0, Lcom/xiaomi/player/Player;->d:Ld/o/f0/a/a;
 
-    invoke-interface {p0}, Lsl/a;->onVideoRenderingStart()V
+    invoke-interface {p0}, Ld/o/f0/a/a;->onVideoRenderingStart()V
 
     return-void
 .end method
@@ -706,12 +761,14 @@
 .method public U(II)V
     .locals 2
 
-    sget-object v0, Lcom/xiaomi/player/Player;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/player/Player;->a:Ljava/lang/String;
 
     const-string v1, "callback:onVideoSizeChanged"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     new-instance v0, Lcom/xiaomi/player/datastruct/VideoSize;
 
     const/4 v1, 0x0
@@ -720,15 +777,18 @@
 
     int-to-float p1, p1
 
+    .line 3
     iput p1, v0, Lcom/xiaomi/player/datastruct/VideoSize;->b:F
 
     int-to-float p1, p2
 
+    .line 4
     iput p1, v0, Lcom/xiaomi/player/datastruct/VideoSize;->a:F
 
-    iget-object p0, p0, Lcom/xiaomi/player/Player;->c:Lsl/a;
+    .line 5
+    iget-object p0, p0, Lcom/xiaomi/player/Player;->d:Ld/o/f0/a/a;
 
-    invoke-interface {p0, v0}, Lsl/a;->b(Lcom/xiaomi/player/datastruct/VideoSize;)V
+    invoke-interface {p0, v0}, Ld/o/f0/a/a;->b(Lcom/xiaomi/player/datastruct/VideoSize;)V
 
     return-void
 .end method
@@ -736,6 +796,7 @@
 .method public V()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/player/Player;->pauseJni()V
 
     return-void
@@ -744,6 +805,7 @@
 .method public W(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/player/Player;->pauseCacheThreadOtherJni(Ljava/lang/String;)V
 
     return-void
@@ -752,6 +814,7 @@
 .method public X(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/player/Player;->pauseCacheThreadUriJni(Ljava/lang/String;)V
 
     return-void
@@ -760,19 +823,21 @@
 .method public Y()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/player/Player;->pauseCacheThreadUriAllJni()V
 
     return-void
 .end method
 
-.method public Z()Ltl/c;
+.method public Z()Ld/o/f0/b/c;
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/player/Player;->playbackStateJni()I
 
     move-result p0
 
-    invoke-static {p0}, Ltl/c;->a(I)Ltl/c;
+    invoke-static {p0}, Ld/o/f0/b/c;->a(I)Ld/o/f0/b/c;
 
     move-result-object p0
 
@@ -782,6 +847,7 @@
 .method public a()J
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/player/Player;->GetCurrentStreamPositionJni()J
 
     move-result-wide v0
@@ -792,6 +858,7 @@
 .method public a0()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/player/Player;->redrawJni()V
 
     return-void
@@ -800,6 +867,7 @@
 .method public b(I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/player/Player;->addFlashFilterJni(I)V
 
     return-void
@@ -808,8 +876,10 @@
 .method public b0(Ljava/lang/String;Z)Z
     .locals 0
 
-    iput-object p1, p0, Lcom/xiaomi/player/Player;->b:Ljava/lang/String;
+    .line 1
+    iput-object p1, p0, Lcom/xiaomi/player/Player;->c:Ljava/lang/String;
 
+    .line 2
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/player/Player;->reloadJni(Ljava/lang/String;Z)Z
 
     move-result p0
@@ -820,6 +890,7 @@
 .method public c()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/player/Player;->addGrayscaleFilterJni()V
 
     return-void
@@ -828,6 +899,7 @@
 .method public c0(J)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/player/Player;->removeRecordingSessionJni(J)V
 
     return-void
@@ -836,6 +908,7 @@
 .method public d()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/player/Player;->addMotionFlowFilterJni()V
 
     return-void
@@ -844,6 +917,7 @@
 .method public d0()Z
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/player/Player;->resumeJni()Z
 
     move-result p0
@@ -854,14 +928,16 @@
 .method public e(Ljava/lang/String;FFFF)V
     .locals 0
 
+    .line 1
     invoke-direct/range {p0 .. p5}, Lcom/xiaomi/player/Player;->addPngMixFilterJni(Ljava/lang/String;FFFF)V
 
     return-void
 .end method
 
-.method public e0(JLtl/e;)Z
+.method public e0(JLd/o/f0/b/e;)Z
     .locals 0
 
+    .line 1
     invoke-virtual {p3}, Ljava/lang/Enum;->ordinal()I
 
     move-result p3
@@ -894,6 +970,7 @@
 .method public f(J)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/player/Player;->addRecordingSessionJni(J)V
 
     return-void
@@ -902,6 +979,7 @@
 .method public f0(J)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/player/Player;->setAllFileSizeJni(J)V
 
     return-void
@@ -910,6 +988,7 @@
 .method public g()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/player/Player;->addShakeFilterJni()V
 
     return-void
@@ -926,6 +1005,7 @@
 
     return-void
 
+    .line 1
     :cond_0
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/player/Player;->setBufferTimeMaxJni(J)V
 
@@ -935,6 +1015,7 @@
 .method public h()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/player/Player;->addSlowDownFilterJni()V
 
     return-void
@@ -943,6 +1024,7 @@
 .method public h0(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/player/Player;->setCachePathJni(Ljava/lang/String;)V
 
     return-void
@@ -951,6 +1033,7 @@
 .method public i()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/player/Player;->addSobelEdgeDetectionFilterJni()V
 
     return-void
@@ -959,6 +1042,7 @@
 .method public i0(J)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/player/Player;->setCacheSizeJni(J)V
 
     return-void
@@ -967,6 +1051,7 @@
 .method public j()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/player/Player;->addSoulFilterJni()V
 
     return-void
@@ -975,6 +1060,7 @@
 .method public j0(J)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/player/Player;->setCacheSpeedJni(J)V
 
     return-void
@@ -983,14 +1069,16 @@
 .method public k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/xiaomi/player/Player;->addVideoMapFilterJni(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public k0(Ltl/b;)V
+.method public k0(Ld/o/f0/b/b;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
     move-result p1
@@ -1003,6 +1091,7 @@
 .method public l()J
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/player/Player;->bufferTimeMaxJni()J
 
     move-result-wide v0
@@ -1013,6 +1102,7 @@
 .method public l0(Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/player/Player;->setFrameLoopJni(Z)V
 
     return-void
@@ -1021,6 +1111,7 @@
 .method public m0(Lcom/xiaomi/player/Player$a;II)V
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Lcom/xiaomi/player/Player$a;->a()I
 
     move-result p1
@@ -1033,22 +1124,26 @@
 .method public n0([Ljava/lang/String;[Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/player/Player;->setIpListJni([Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public o(Ljava/lang/String;Lsl/a;Ltl/f;J)V
+.method public o(Ljava/lang/String;Ld/o/f0/a/a;Ld/o/f0/b/f;J)V
     .locals 2
 
-    sget-object v0, Lcom/xiaomi/player/Player;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/player/Player;->a:Ljava/lang/String;
 
     const-string v1, "constructPlayer"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iput-object p2, p0, Lcom/xiaomi/player/Player;->c:Lsl/a;
+    .line 2
+    iput-object p2, p0, Lcom/xiaomi/player/Player;->d:Ld/o/f0/a/a;
 
+    .line 3
     invoke-virtual {p3}, Ljava/lang/Enum;->ordinal()I
 
     move-result p2
@@ -1057,7 +1152,7 @@
 
     move-result-wide p1
 
-    iput-wide p1, p0, Lcom/xiaomi/player/Player;->a:J
+    iput-wide p1, p0, Lcom/xiaomi/player/Player;->b:J
 
     return-void
 .end method
@@ -1065,6 +1160,7 @@
 .method public o0(J)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/xiaomi/player/Player;->setMaxDownloadBufferTimeJni(J)V
 
     return-void
@@ -1073,6 +1169,7 @@
 .method public p()J
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/player/Player;->currentPlaybackTimeJni()J
 
     move-result-wide v0
@@ -1083,6 +1180,7 @@
 .method public p0(Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/player/Player;->setResolveDnsJni(Z)V
 
     return-void
@@ -1091,6 +1189,7 @@
 .method public q()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/player/Player;->debugReportJni()Ljava/lang/String;
 
     move-result-object p0
@@ -1101,6 +1200,7 @@
 .method public q0(Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/player/Player;->setSpeakerJni(Z)V
 
     return-void
@@ -1109,7 +1209,8 @@
 .method public r()V
     .locals 2
 
-    sget-object v0, Lcom/xiaomi/player/Player;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/player/Player;->a:Ljava/lang/String;
 
     const-string v1, "destructPlayer"
 
@@ -1117,15 +1218,19 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/xiaomi/player/Player;->x0(Landroid/view/Surface;)V
 
+    .line 3
     invoke-direct {p0}, Lcom/xiaomi/player/Player;->destructPlayerJni()V
 
-    iput-object v0, p0, Lcom/xiaomi/player/Player;->c:Lsl/a;
+    .line 4
+    iput-object v0, p0, Lcom/xiaomi/player/Player;->d:Ld/o/f0/a/a;
 
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/xiaomi/player/Player;->a:J
+    .line 5
+    iput-wide v0, p0, Lcom/xiaomi/player/Player;->b:J
 
     return-void
 .end method
@@ -1133,6 +1238,7 @@
 .method public r0(F)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/player/Player;->setSpeakerVolumeJni(F)V
 
     return-void
@@ -1141,6 +1247,7 @@
 .method public s()J
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/player/Player;->durationJni()J
 
     move-result-wide v0
@@ -1151,6 +1258,7 @@
 .method public s0(D)Z
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/player/Player;->setSpeedRatioJni(D)Z
 
     move-result p0
@@ -1167,6 +1275,7 @@
 .method public t(F)Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/xiaomi/player/Player;->editorPlayerSetVolumeInnerJni(F)Z
 
     move-result p0
@@ -1177,6 +1286,7 @@
 .method public t0(J)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/xiaomi/player/Player;->setSpeedUpThresholdJni(J)V
 
     return-void
@@ -1185,6 +1295,7 @@
 .method public u(F)Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/xiaomi/player/Player;->editorPlayerSetVolumeExternalMp3Jni(F)Z
 
     move-result p0
@@ -1195,6 +1306,7 @@
 .method public u0(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/player/Player;->setUserIdandClienIpJni(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -1203,8 +1315,10 @@
 .method public v(Ljava/lang/String;Ljava/lang/String;JJ)Z
     .locals 0
 
-    iput-object p1, p0, Lcom/xiaomi/player/Player;->b:Ljava/lang/String;
+    .line 1
+    iput-object p1, p0, Lcom/xiaomi/player/Player;->c:Ljava/lang/String;
 
+    .line 2
     invoke-virtual/range {p0 .. p6}, Lcom/xiaomi/player/Player;->editorPlayerStartJni(Ljava/lang/String;Ljava/lang/String;JJ)Z
 
     move-result p0
@@ -1215,6 +1329,7 @@
 .method public v0(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/player/Player;->setVideoFilterJni(Ljava/lang/String;)V
 
     return-void
@@ -1223,6 +1338,7 @@
 .method public w(ZI)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/xiaomi/player/Player;->enableEqWithModeJni(ZI)V
 
     return-void
@@ -1231,6 +1347,7 @@
 .method public w0(F)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/player/Player;->setVideoFilterIntensityJni(F)V
 
     return-void
@@ -1239,6 +1356,7 @@
 .method public x(Z)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/xiaomi/player/Player;->enableExtremeLargeVolumeJni(Z)V
 
     return-void
@@ -1247,6 +1365,7 @@
 .method public x0(Landroid/view/Surface;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/player/Player;->setVideoSurfaceJni(Landroid/view/Surface;)V
 
     return-void
@@ -1255,6 +1374,7 @@
 .method public y(Z)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/xiaomi/player/Player;->enableFixedVolumeJni(Z)V
 
     return-void
@@ -1263,6 +1383,7 @@
 .method public y0(Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/player/Player;->setWifiStatusJni(Z)V
 
     return-void
@@ -1271,6 +1392,7 @@
 .method public z(Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/player/Player;->enableVideoFilterJni(Z)V
 
     return-void
@@ -1279,6 +1401,7 @@
 .method public z0(FFFFF)V
     .locals 0
 
+    .line 1
     invoke-direct/range {p0 .. p5}, Lcom/xiaomi/player/Player;->shiftUpJni(FFFFF)V
 
     return-void

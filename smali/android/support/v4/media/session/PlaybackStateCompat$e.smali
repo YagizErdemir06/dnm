@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field private final a:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -25,25 +25,25 @@
     .end annotation
 .end field
 
-.field public b:I
+.field private b:I
 
-.field public c:J
+.field private c:J
 
-.field public d:J
+.field private d:J
 
-.field public e:F
+.field private e:F
 
-.field public f:J
+.field private f:J
 
-.field public g:I
+.field private g:I
 
-.field public h:Ljava/lang/CharSequence;
+.field private h:Ljava/lang/CharSequence;
 
-.field public i:J
+.field private i:J
 
-.field public j:J
+.field private j:J
 
-.field public k:Landroid/os/Bundle;
+.field private k:Landroid/os/Bundle;
 
 
 # direct methods
@@ -95,47 +95,47 @@
     iput-wide v1, p0, Landroid/support/v4/media/session/PlaybackStateCompat$e;->j:J
 
     .line 7
-    iget v1, p1, Landroid/support/v4/media/session/PlaybackStateCompat;->a:I
+    iget v1, p1, Landroid/support/v4/media/session/PlaybackStateCompat;->w9:I
 
     iput v1, p0, Landroid/support/v4/media/session/PlaybackStateCompat$e;->b:I
 
     .line 8
-    iget-wide v1, p1, Landroid/support/v4/media/session/PlaybackStateCompat;->b:J
+    iget-wide v1, p1, Landroid/support/v4/media/session/PlaybackStateCompat;->x9:J
 
     iput-wide v1, p0, Landroid/support/v4/media/session/PlaybackStateCompat$e;->c:J
 
     .line 9
-    iget v1, p1, Landroid/support/v4/media/session/PlaybackStateCompat;->d:F
+    iget v1, p1, Landroid/support/v4/media/session/PlaybackStateCompat;->z9:F
 
     iput v1, p0, Landroid/support/v4/media/session/PlaybackStateCompat$e;->e:F
 
     .line 10
-    iget-wide v1, p1, Landroid/support/v4/media/session/PlaybackStateCompat;->h:J
+    iget-wide v1, p1, Landroid/support/v4/media/session/PlaybackStateCompat;->D9:J
 
     iput-wide v1, p0, Landroid/support/v4/media/session/PlaybackStateCompat$e;->i:J
 
     .line 11
-    iget-wide v1, p1, Landroid/support/v4/media/session/PlaybackStateCompat;->c:J
+    iget-wide v1, p1, Landroid/support/v4/media/session/PlaybackStateCompat;->y9:J
 
     iput-wide v1, p0, Landroid/support/v4/media/session/PlaybackStateCompat$e;->d:J
 
     .line 12
-    iget-wide v1, p1, Landroid/support/v4/media/session/PlaybackStateCompat;->e:J
+    iget-wide v1, p1, Landroid/support/v4/media/session/PlaybackStateCompat;->A9:J
 
     iput-wide v1, p0, Landroid/support/v4/media/session/PlaybackStateCompat$e;->f:J
 
     .line 13
-    iget v1, p1, Landroid/support/v4/media/session/PlaybackStateCompat;->f:I
+    iget v1, p1, Landroid/support/v4/media/session/PlaybackStateCompat;->B9:I
 
     iput v1, p0, Landroid/support/v4/media/session/PlaybackStateCompat$e;->g:I
 
     .line 14
-    iget-object v1, p1, Landroid/support/v4/media/session/PlaybackStateCompat;->g:Ljava/lang/CharSequence;
+    iget-object v1, p1, Landroid/support/v4/media/session/PlaybackStateCompat;->C9:Ljava/lang/CharSequence;
 
     iput-object v1, p0, Landroid/support/v4/media/session/PlaybackStateCompat$e;->h:Ljava/lang/CharSequence;
 
     .line 15
-    iget-object v1, p1, Landroid/support/v4/media/session/PlaybackStateCompat;->i:Ljava/util/List;
+    iget-object v1, p1, Landroid/support/v4/media/session/PlaybackStateCompat;->E9:Ljava/util/List;
 
     if-eqz v1, :cond_0
 
@@ -144,12 +144,12 @@
 
     .line 17
     :cond_0
-    iget-wide v0, p1, Landroid/support/v4/media/session/PlaybackStateCompat;->j:J
+    iget-wide v0, p1, Landroid/support/v4/media/session/PlaybackStateCompat;->F9:J
 
     iput-wide v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat$e;->j:J
 
     .line 18
-    iget-object p1, p1, Landroid/support/v4/media/session/PlaybackStateCompat;->k:Landroid/os/Bundle;
+    iget-object p1, p1, Landroid/support/v4/media/session/PlaybackStateCompat;->G9:Landroid/os/Bundle;
 
     iput-object p1, p0, Landroid/support/v4/media/session/PlaybackStateCompat$e;->k:Landroid/os/Bundle;
 
@@ -171,12 +171,14 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat$e;->a:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-object p0
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -202,6 +204,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction;
 
     const/4 v1, 0x0
@@ -220,6 +223,7 @@
 
     move-object/from16 v0, p0
 
+    .line 1
     new-instance v18, Landroid/support/v4/media/session/PlaybackStateCompat;
 
     move-object/from16 v1, v18
@@ -274,6 +278,7 @@
         }
     .end annotation
 
+    .line 1
     iput-wide p1, p0, Landroid/support/v4/media/session/PlaybackStateCompat$e;->f:J
 
     return-object p0
@@ -290,6 +295,7 @@
         }
     .end annotation
 
+    .line 1
     iput-wide p1, p0, Landroid/support/v4/media/session/PlaybackStateCompat$e;->j:J
 
     return-object p0
@@ -306,6 +312,7 @@
         }
     .end annotation
 
+    .line 1
     iput-wide p1, p0, Landroid/support/v4/media/session/PlaybackStateCompat$e;->d:J
 
     return-object p0
@@ -324,8 +331,10 @@
         }
     .end annotation
 
+    .line 1
     iput p1, p0, Landroid/support/v4/media/session/PlaybackStateCompat$e;->g:I
 
+    .line 2
     iput-object p2, p0, Landroid/support/v4/media/session/PlaybackStateCompat$e;->h:Ljava/lang/CharSequence;
 
     return-object p0
@@ -345,6 +354,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroid/support/v4/media/session/PlaybackStateCompat$e;->h:Ljava/lang/CharSequence;
 
     return-object p0
@@ -361,6 +371,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroid/support/v4/media/session/PlaybackStateCompat$e;->k:Landroid/os/Bundle;
 
     return-object p0
@@ -381,6 +392,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v5
@@ -417,12 +429,16 @@
         }
     .end annotation
 
+    .line 1
     iput p1, p0, Landroid/support/v4/media/session/PlaybackStateCompat$e;->b:I
 
+    .line 2
     iput-wide p2, p0, Landroid/support/v4/media/session/PlaybackStateCompat$e;->c:J
 
+    .line 3
     iput-wide p5, p0, Landroid/support/v4/media/session/PlaybackStateCompat$e;->i:J
 
+    .line 4
     iput p4, p0, Landroid/support/v4/media/session/PlaybackStateCompat$e;->e:F
 
     return-object p0

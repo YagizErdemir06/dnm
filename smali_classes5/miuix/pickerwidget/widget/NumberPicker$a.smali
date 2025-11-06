@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnFocusChangeListener;
+.implements Landroid/view/View$OnHoverListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lmiuix/pickerwidget/widget/NumberPicker;->L()V
+    value = Lmiuix/pickerwidget/widget/NumberPicker;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,14 +18,15 @@
 
 
 # instance fields
-.field public final synthetic a:Lmiuix/pickerwidget/widget/NumberPicker;
+.field public final synthetic c:Lmiuix/pickerwidget/widget/NumberPicker;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/pickerwidget/widget/NumberPicker;)V
     .locals 0
 
-    iput-object p1, p0, Lmiuix/pickerwidget/widget/NumberPicker$a;->a:Lmiuix/pickerwidget/widget/NumberPicker;
+    .line 1
+    iput-object p1, p0, Lmiuix/pickerwidget/widget/NumberPicker$a;->c:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -34,36 +35,76 @@
 
 
 # virtual methods
-.method public onFocusChange(Landroid/view/View;Z)V
+.method public onHover(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 1
 
-    if-eqz p2, :cond_0
+    .line 1
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getActionMasked()I
 
-    iget-object p0, p0, Lmiuix/pickerwidget/widget/NumberPicker$a;->a:Lmiuix/pickerwidget/widget/NumberPicker;
+    move-result p1
 
-    invoke-static {p0}, Lmiuix/pickerwidget/widget/NumberPicker;->a(Lmiuix/pickerwidget/widget/NumberPicker;)Landroid/widget/EditText;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/widget/EditText;->selectAll()V
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p2, p0, Lmiuix/pickerwidget/widget/NumberPicker$a;->a:Lmiuix/pickerwidget/widget/NumberPicker;
-
-    invoke-static {p2}, Lmiuix/pickerwidget/widget/NumberPicker;->a(Lmiuix/pickerwidget/widget/NumberPicker;)Landroid/widget/EditText;
-
-    move-result-object p2
+    const/16 p2, 0x9
 
     const/4 v0, 0x0
 
-    invoke-virtual {p2, v0, v0}, Landroid/widget/EditText;->setSelection(II)V
+    if-eq p1, p2, :cond_1
 
-    iget-object p0, p0, Lmiuix/pickerwidget/widget/NumberPicker$a;->a:Lmiuix/pickerwidget/widget/NumberPicker;
+    const/16 p2, 0xa
 
-    invoke-static {p0, p1}, Lmiuix/pickerwidget/widget/NumberPicker;->p(Lmiuix/pickerwidget/widget/NumberPicker;Landroid/view/View;)V
+    if-eq p1, p2, :cond_0
+
+    goto :goto_0
+
+    .line 2
+    :cond_0
+    iget-object p1, p0, Lmiuix/pickerwidget/widget/NumberPicker$a;->c:Lmiuix/pickerwidget/widget/NumberPicker;
+
+    invoke-static {p1, v0}, Lmiuix/pickerwidget/widget/NumberPicker;->b(Lmiuix/pickerwidget/widget/NumberPicker;Z)Z
+
+    .line 3
+    iget-object p0, p0, Lmiuix/pickerwidget/widget/NumberPicker$a;->c:Lmiuix/pickerwidget/widget/NumberPicker;
+
+    invoke-static {p0}, Lmiuix/pickerwidget/widget/NumberPicker;->p(Lmiuix/pickerwidget/widget/NumberPicker;)Lmiuix/animation/IHoverStyle;
+
+    move-result-object p0
+
+    sget-object p1, Lmiuix/animation/IHoverStyle$HoverEffect;->NORMAL:Lmiuix/animation/IHoverStyle$HoverEffect;
+
+    invoke-interface {p0, p1}, Lmiuix/animation/IHoverStyle;->setEffect(Lmiuix/animation/IHoverStyle$HoverEffect;)Lmiuix/animation/IHoverStyle;
+
+    move-result-object p0
+
+    new-array p1, v0, [Lmiuix/animation/base/AnimConfig;
+
+    invoke-interface {p0, p1}, Lmiuix/animation/IHoverStyle;->hoverExit([Lmiuix/animation/base/AnimConfig;)V
+
+    goto :goto_0
+
+    .line 4
+    :cond_1
+    iget-object p1, p0, Lmiuix/pickerwidget/widget/NumberPicker$a;->c:Lmiuix/pickerwidget/widget/NumberPicker;
+
+    const/4 p2, 0x1
+
+    invoke-static {p1, p2}, Lmiuix/pickerwidget/widget/NumberPicker;->b(Lmiuix/pickerwidget/widget/NumberPicker;Z)Z
+
+    .line 5
+    iget-object p0, p0, Lmiuix/pickerwidget/widget/NumberPicker$a;->c:Lmiuix/pickerwidget/widget/NumberPicker;
+
+    invoke-static {p0}, Lmiuix/pickerwidget/widget/NumberPicker;->p(Lmiuix/pickerwidget/widget/NumberPicker;)Lmiuix/animation/IHoverStyle;
+
+    move-result-object p0
+
+    sget-object p1, Lmiuix/animation/IHoverStyle$HoverEffect;->NORMAL:Lmiuix/animation/IHoverStyle$HoverEffect;
+
+    invoke-interface {p0, p1}, Lmiuix/animation/IHoverStyle;->setEffect(Lmiuix/animation/IHoverStyle$HoverEffect;)Lmiuix/animation/IHoverStyle;
+
+    move-result-object p0
+
+    new-array p1, v0, [Lmiuix/animation/base/AnimConfig;
+
+    invoke-interface {p0, p1}, Lmiuix/animation/IHoverStyle;->hoverEnter([Lmiuix/animation/base/AnimConfig;)V
 
     :goto_0
-    return-void
+    return v0
 .end method

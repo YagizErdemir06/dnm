@@ -22,6 +22,7 @@
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;->values()[Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;
 
     move-result-object v0
@@ -33,7 +34,7 @@
     sput-object v0, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$e;->a:[I
 
     :try_start_0
-    sget-object v1, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;->b:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;
+    sget-object v1, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;->d:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -49,7 +50,7 @@
     :try_start_1
     sget-object v0, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$e;->a:[I
 
-    sget-object v1, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;->c:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;
+    sget-object v1, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;->f:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 

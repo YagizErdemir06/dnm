@@ -76,6 +76,7 @@
 .method public getDurationUs()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/extractor/SeekMap$Unseekable;->durationUs:J
 
     return-wide v0
@@ -84,6 +85,7 @@
 .method public getSeekPoints(J)Lcom/google/android/exoplayer2/extractor/SeekMap$SeekPoints;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/SeekMap$Unseekable;->startSeekPoints:Lcom/google/android/exoplayer2/extractor/SeekMap$SeekPoints;
 
     return-object p0

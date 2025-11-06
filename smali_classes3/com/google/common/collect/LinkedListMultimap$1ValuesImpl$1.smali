@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/LinkedListMultimap$1ValuesImpl$1;
+.class public Lcom/google/common/collect/LinkedListMultimap$1ValuesImpl$1;
 .super Lcom/google/common/collect/TransformedListIterator;
 .source "SourceFile"
 
@@ -23,13 +23,14 @@
 
 
 # instance fields
-.field final synthetic val$nodeItr:Lcom/google/common/collect/LinkedListMultimap$NodeIterator;
+.field public final synthetic val$nodeItr:Lcom/google/common/collect/LinkedListMultimap$NodeIterator;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/LinkedListMultimap$1ValuesImpl;Ljava/util/ListIterator;Lcom/google/common/collect/LinkedListMultimap$NodeIterator;)V
     .locals 0
 
+    .line 1
     iput-object p3, p0, Lcom/google/common/collect/LinkedListMultimap$1ValuesImpl$1;->val$nodeItr:Lcom/google/common/collect/LinkedListMultimap$NodeIterator;
 
     invoke-direct {p0, p2}, Lcom/google/common/collect/TransformedListIterator;-><init>(Ljava/util/ListIterator;)V
@@ -51,6 +52,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/LinkedListMultimap$1ValuesImpl$1;->val$nodeItr:Lcom/google/common/collect/LinkedListMultimap$NodeIterator;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/LinkedListMultimap$NodeIterator;->setValue(Ljava/lang/Object;)V

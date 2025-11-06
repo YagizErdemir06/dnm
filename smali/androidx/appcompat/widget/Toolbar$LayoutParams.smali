@@ -15,15 +15,15 @@
 
 
 # static fields
-.field static final CUSTOM:I = 0x0
+.field public static final CUSTOM:I = 0x0
 
-.field static final EXPANDED:I = 0x2
+.field public static final EXPANDED:I = 0x2
 
-.field static final SYSTEM:I = 0x1
+.field public static final SYSTEM:I = 0x1
 
 
 # instance fields
-.field mViewType:I
+.field public mViewType:I
 
 
 # direct methods
@@ -163,18 +163,22 @@
 .method public copyMarginsFromCompat(Landroid/view/ViewGroup$MarginLayoutParams;)V
     .locals 1
 
+    .line 1
     iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
+    .line 2
     iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
+    .line 3
     iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
+    .line 4
     iget p1, p1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
     iput p1, p0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I

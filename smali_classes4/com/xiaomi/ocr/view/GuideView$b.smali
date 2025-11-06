@@ -15,5 +15,13 @@
 
 
 # virtual methods
-.method public abstract K0(Ljava/lang/String;)V
+.method public abstract w0(Ljava/lang/String;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "selectedText"
+        }
+    .end annotation
 .end method

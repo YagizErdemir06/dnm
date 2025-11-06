@@ -23,12 +23,14 @@
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_common/zzg;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Lcom/google/android/gms/internal/mlkit_common/zzg;-><init>(Lcom/google/android/gms/internal/mlkit_common/zzf;)V
 
+    .line 2
     invoke-virtual {v0}, Lcom/google/android/gms/internal/mlkit_common/zzg;->zzb()Lcom/google/android/gms/internal/mlkit_common/zzg;
 
     invoke-virtual {v0}, Lcom/google/android/gms/internal/mlkit_common/zzg;->zzd()Lcom/google/android/gms/internal/mlkit_common/zzi;
@@ -39,8 +41,10 @@
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_common/zzg;
 
+    .line 3
     invoke-direct {v0, v1}, Lcom/google/android/gms/internal/mlkit_common/zzg;-><init>(Lcom/google/android/gms/internal/mlkit_common/zzf;)V
 
+    .line 4
     invoke-virtual {v0}, Lcom/google/android/gms/internal/mlkit_common/zzg;->zzb()Lcom/google/android/gms/internal/mlkit_common/zzg;
 
     new-instance v2, Lcom/google/android/gms/internal/mlkit_common/zze;
@@ -57,8 +61,10 @@
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_common/zzg;
 
+    .line 5
     invoke-direct {v0, v1}, Lcom/google/android/gms/internal/mlkit_common/zzg;-><init>(Lcom/google/android/gms/internal/mlkit_common/zzf;)V
 
+    .line 6
     invoke-virtual {v0}, Lcom/google/android/gms/internal/mlkit_common/zzg;->zzc()Lcom/google/android/gms/internal/mlkit_common/zzg;
 
     invoke-virtual {v0}, Lcom/google/android/gms/internal/mlkit_common/zzg;->zzd()Lcom/google/android/gms/internal/mlkit_common/zzi;
@@ -107,6 +113,7 @@
 .method public static bridge synthetic zzc(Lcom/google/android/gms/internal/mlkit_common/zzi;Landroid/content/Context;Lcom/google/android/gms/internal/mlkit_common/zzr;)I
     .locals 5
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_common/zzi;->zzf:Lcom/google/android/gms/internal/mlkit_common/zzar;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -122,10 +129,12 @@
 
     move-result-object v3
 
+    .line 2
     check-cast v3, Lcom/google/android/gms/internal/mlkit_common/zzs;
 
     iget-boolean v4, p0, Lcom/google/android/gms/internal/mlkit_common/zzi;->zzd:Z
 
+    .line 3
     invoke-virtual {v3, p1, p2, v4}, Lcom/google/android/gms/internal/mlkit_common/zzs;->zza(Landroid/content/Context;Lcom/google/android/gms/internal/mlkit_common/zzr;Z)I
 
     move-result v3

@@ -4,29 +4,45 @@
 
 
 # instance fields
-.field public final a:F
+.field private C1:I
 
-.field public final b:F
+.field private C2:I
 
-.field public final c:F
+.field private K0:I
 
-.field public final d:F
+.field private K1:I
 
-.field public final e:F
+.field private final c:F
 
-.field public final f:F
+.field private final d:F
 
-.field public g:Landroid/graphics/Paint;
+.field private final f:F
 
-.field public h:Landroid/graphics/Paint;
+.field private final g:F
 
-.field public i:Landroid/graphics/Paint;
+.field private final j:F
 
-.field public j:Lcom/android/camera/data/data/b;
+.field private k0:I
 
-.field public k:Ljava/lang/String;
+.field private k1:I
 
-.field public l:Landroid/util/Range;
+.field private final m:F
+
+.field private n:Landroid/graphics/Paint;
+
+.field private p:Landroid/graphics/Paint;
+
+.field private s:Landroid/graphics/Paint;
+
+.field public t:Ld/d/a/l6/e/b;
+
+.field private u:Ljava/lang/String;
+
+.field private v1:I
+
+.field private v2:I
+
+.field private w:Landroid/util/Range;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/Range<",
@@ -36,26 +52,18 @@
     .end annotation
 .end field
 
-.field public m:I
-
-.field public n:I
-
-.field public o:I
-
-.field public p:I
-
-.field public q:I
-
-.field public r:I
-
-.field public s:I
-
-.field public t:I
-
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     .line 1
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
@@ -63,46 +71,46 @@
     const/high16 v0, 0x442f0000    # 700.0f
 
     .line 2
-    iput v0, p0, Lcom/android/camera/ui/DepthFieldView;->a:F
+    iput v0, p0, Lcom/android/camera/ui/DepthFieldView;->c:F
 
     const/high16 v0, 0x43960000    # 300.0f
 
     .line 3
-    iput v0, p0, Lcom/android/camera/ui/DepthFieldView;->b:F
+    iput v0, p0, Lcom/android/camera/ui/DepthFieldView;->d:F
 
     const/high16 v0, 0x43480000    # 200.0f
 
     .line 4
-    iput v0, p0, Lcom/android/camera/ui/DepthFieldView;->c:F
+    iput v0, p0, Lcom/android/camera/ui/DepthFieldView;->f:F
 
     const/high16 v0, 0x42f00000    # 120.0f
 
     .line 5
-    iput v0, p0, Lcom/android/camera/ui/DepthFieldView;->d:F
+    iput v0, p0, Lcom/android/camera/ui/DepthFieldView;->g:F
 
     const/high16 v0, 0x42700000    # 60.0f
 
     .line 6
-    iput v0, p0, Lcom/android/camera/ui/DepthFieldView;->e:F
+    iput v0, p0, Lcom/android/camera/ui/DepthFieldView;->j:F
 
     const/high16 v0, 0x41700000    # 15.0f
 
     .line 7
-    iput v0, p0, Lcom/android/camera/ui/DepthFieldView;->f:F
+    iput v0, p0, Lcom/android/camera/ui/DepthFieldView;->m:F
 
     const/4 v0, 0x0
 
     .line 8
-    iput-object v0, p0, Lcom/android/camera/ui/DepthFieldView;->j:Lcom/android/camera/data/data/b;
+    iput-object v0, p0, Lcom/android/camera/ui/DepthFieldView;->t:Ld/d/a/l6/e/b;
 
     .line 9
-    iput-object v0, p0, Lcom/android/camera/ui/DepthFieldView;->k:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/camera/ui/DepthFieldView;->u:Ljava/lang/String;
 
     .line 10
-    iput-object v0, p0, Lcom/android/camera/ui/DepthFieldView;->l:Landroid/util/Range;
+    iput-object v0, p0, Lcom/android/camera/ui/DepthFieldView;->w:Landroid/util/Range;
 
     .line 11
-    invoke-virtual {p0, p1}, Lcom/android/camera/ui/DepthFieldView;->b(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/android/camera/ui/DepthFieldView;->b(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -113,6 +121,16 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     .line 12
     invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -120,46 +138,46 @@
     const/high16 p2, 0x442f0000    # 700.0f
 
     .line 13
-    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->a:F
+    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->c:F
 
     const/high16 p2, 0x43960000    # 300.0f
 
     .line 14
-    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->b:F
+    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->d:F
 
     const/high16 p2, 0x43480000    # 200.0f
 
     .line 15
-    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->c:F
+    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->f:F
 
     const/high16 p2, 0x42f00000    # 120.0f
 
     .line 16
-    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->d:F
+    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->g:F
 
     const/high16 p2, 0x42700000    # 60.0f
 
     .line 17
-    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->e:F
+    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->j:F
 
     const/high16 p2, 0x41700000    # 15.0f
 
     .line 18
-    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->f:F
+    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->m:F
 
     const/4 p2, 0x0
 
     .line 19
-    iput-object p2, p0, Lcom/android/camera/ui/DepthFieldView;->j:Lcom/android/camera/data/data/b;
+    iput-object p2, p0, Lcom/android/camera/ui/DepthFieldView;->t:Ld/d/a/l6/e/b;
 
     .line 20
-    iput-object p2, p0, Lcom/android/camera/ui/DepthFieldView;->k:Ljava/lang/String;
+    iput-object p2, p0, Lcom/android/camera/ui/DepthFieldView;->u:Ljava/lang/String;
 
     .line 21
-    iput-object p2, p0, Lcom/android/camera/ui/DepthFieldView;->l:Landroid/util/Range;
+    iput-object p2, p0, Lcom/android/camera/ui/DepthFieldView;->w:Landroid/util/Range;
 
     .line 22
-    invoke-virtual {p0, p1}, Lcom/android/camera/ui/DepthFieldView;->b(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/android/camera/ui/DepthFieldView;->b(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -170,6 +188,18 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr"
+        }
+    .end annotation
 
     .line 23
     invoke-direct {p0, p1, p2, p3}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -177,46 +207,46 @@
     const/high16 p2, 0x442f0000    # 700.0f
 
     .line 24
-    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->a:F
+    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->c:F
 
     const/high16 p2, 0x43960000    # 300.0f
 
     .line 25
-    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->b:F
+    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->d:F
 
     const/high16 p2, 0x43480000    # 200.0f
 
     .line 26
-    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->c:F
+    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->f:F
 
     const/high16 p2, 0x42f00000    # 120.0f
 
     .line 27
-    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->d:F
+    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->g:F
 
     const/high16 p2, 0x42700000    # 60.0f
 
     .line 28
-    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->e:F
+    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->j:F
 
     const/high16 p2, 0x41700000    # 15.0f
 
     .line 29
-    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->f:F
+    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->m:F
 
     const/4 p2, 0x0
 
     .line 30
-    iput-object p2, p0, Lcom/android/camera/ui/DepthFieldView;->j:Lcom/android/camera/data/data/b;
+    iput-object p2, p0, Lcom/android/camera/ui/DepthFieldView;->t:Ld/d/a/l6/e/b;
 
     .line 31
-    iput-object p2, p0, Lcom/android/camera/ui/DepthFieldView;->k:Ljava/lang/String;
+    iput-object p2, p0, Lcom/android/camera/ui/DepthFieldView;->u:Ljava/lang/String;
 
     .line 32
-    iput-object p2, p0, Lcom/android/camera/ui/DepthFieldView;->l:Landroid/util/Range;
+    iput-object p2, p0, Lcom/android/camera/ui/DepthFieldView;->w:Landroid/util/Range;
 
     .line 33
-    invoke-virtual {p0, p1}, Lcom/android/camera/ui/DepthFieldView;->b(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/android/camera/ui/DepthFieldView;->b(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -227,6 +257,20 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr",
+            "defStyleRes"
+        }
+    .end annotation
 
     .line 34
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
@@ -234,54 +278,60 @@
     const/high16 p2, 0x442f0000    # 700.0f
 
     .line 35
-    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->a:F
+    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->c:F
 
     const/high16 p2, 0x43960000    # 300.0f
 
     .line 36
-    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->b:F
+    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->d:F
 
     const/high16 p2, 0x43480000    # 200.0f
 
     .line 37
-    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->c:F
+    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->f:F
 
     const/high16 p2, 0x42f00000    # 120.0f
 
     .line 38
-    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->d:F
+    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->g:F
 
     const/high16 p2, 0x42700000    # 60.0f
 
     .line 39
-    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->e:F
+    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->j:F
 
     const/high16 p2, 0x41700000    # 15.0f
 
     .line 40
-    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->f:F
+    iput p2, p0, Lcom/android/camera/ui/DepthFieldView;->m:F
 
     const/4 p2, 0x0
 
     .line 41
-    iput-object p2, p0, Lcom/android/camera/ui/DepthFieldView;->j:Lcom/android/camera/data/data/b;
+    iput-object p2, p0, Lcom/android/camera/ui/DepthFieldView;->t:Ld/d/a/l6/e/b;
 
     .line 42
-    iput-object p2, p0, Lcom/android/camera/ui/DepthFieldView;->k:Ljava/lang/String;
+    iput-object p2, p0, Lcom/android/camera/ui/DepthFieldView;->u:Ljava/lang/String;
 
     .line 43
-    iput-object p2, p0, Lcom/android/camera/ui/DepthFieldView;->l:Landroid/util/Range;
+    iput-object p2, p0, Lcom/android/camera/ui/DepthFieldView;->w:Landroid/util/Range;
 
     .line 44
-    invoke-virtual {p0, p1}, Lcom/android/camera/ui/DepthFieldView;->b(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/android/camera/ui/DepthFieldView;->b(Landroid/content/Context;)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(I)I
+.method private a(I)I
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "depthField"
+        }
+    .end annotation
 
     int-to-float p1, p1
 
@@ -291,15 +341,16 @@
 
     if-gtz v1, :cond_0
 
-    iget v1, p0, Lcom/android/camera/ui/DepthFieldView;->p:I
+    .line 1
+    iget v1, p0, Lcom/android/camera/ui/DepthFieldView;->v1:I
 
-    iget v2, p0, Lcom/android/camera/ui/DepthFieldView;->o:I
+    iget v2, p0, Lcom/android/camera/ui/DepthFieldView;->k1:I
 
     add-int/2addr v2, v1
 
     int-to-float v2, v2
 
-    iget p0, p0, Lcom/android/camera/ui/DepthFieldView;->m:I
+    iget p0, p0, Lcom/android/camera/ui/DepthFieldView;->k0:I
 
     sub-int/2addr p0, v1
 
@@ -326,15 +377,16 @@
 
     if-gtz v2, :cond_1
 
-    iget v2, p0, Lcom/android/camera/ui/DepthFieldView;->q:I
+    .line 2
+    iget v2, p0, Lcom/android/camera/ui/DepthFieldView;->C1:I
 
-    iget v3, p0, Lcom/android/camera/ui/DepthFieldView;->o:I
+    iget v3, p0, Lcom/android/camera/ui/DepthFieldView;->k1:I
 
     add-int/2addr v3, v2
 
     int-to-float v3, v3
 
-    iget p0, p0, Lcom/android/camera/ui/DepthFieldView;->p:I
+    iget p0, p0, Lcom/android/camera/ui/DepthFieldView;->v1:I
 
     sub-int/2addr p0, v2
 
@@ -359,15 +411,16 @@
 
     if-gtz v1, :cond_2
 
-    iget v1, p0, Lcom/android/camera/ui/DepthFieldView;->r:I
+    .line 3
+    iget v1, p0, Lcom/android/camera/ui/DepthFieldView;->K1:I
 
-    iget v2, p0, Lcom/android/camera/ui/DepthFieldView;->o:I
+    iget v2, p0, Lcom/android/camera/ui/DepthFieldView;->k1:I
 
     add-int/2addr v2, v1
 
     int-to-float v2, v2
 
-    iget p0, p0, Lcom/android/camera/ui/DepthFieldView;->q:I
+    iget p0, p0, Lcom/android/camera/ui/DepthFieldView;->C1:I
 
     sub-int/2addr p0, v1
 
@@ -394,15 +447,16 @@
 
     if-gtz v1, :cond_3
 
-    iget v1, p0, Lcom/android/camera/ui/DepthFieldView;->s:I
+    .line 4
+    iget v1, p0, Lcom/android/camera/ui/DepthFieldView;->v2:I
 
-    iget v2, p0, Lcom/android/camera/ui/DepthFieldView;->o:I
+    iget v2, p0, Lcom/android/camera/ui/DepthFieldView;->k1:I
 
     add-int/2addr v2, v1
 
     int-to-float v2, v2
 
-    iget p0, p0, Lcom/android/camera/ui/DepthFieldView;->r:I
+    iget p0, p0, Lcom/android/camera/ui/DepthFieldView;->K1:I
 
     sub-int/2addr p0, v1
 
@@ -429,7 +483,8 @@
 
     if-gez v1, :cond_4
 
-    iget p0, p0, Lcom/android/camera/ui/DepthFieldView;->m:I
+    .line 5
+    iget p0, p0, Lcom/android/camera/ui/DepthFieldView;->k0:I
 
     mul-int/lit8 v1, p0, 0x1
 
@@ -455,27 +510,103 @@
 
     return p0
 
+    .line 6
     :cond_4
-    iget p0, p0, Lcom/android/camera/ui/DepthFieldView;->o:I
+    iget p0, p0, Lcom/android/camera/ui/DepthFieldView;->k1:I
 
     return p0
 .end method
 
-.method public final b(Landroid/content/Context;)V
+.method private b(Landroid/content/Context;)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f07033f
+    const v1, 0x7f070339
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
-    iput v0, p0, Lcom/android/camera/ui/DepthFieldView;->m:I
+    iput v0, p0, Lcom/android/camera/ui/DepthFieldView;->k0:I
 
+    .line 2
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f07033b
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/android/camera/ui/DepthFieldView;->K0:I
+
+    .line 3
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f07033a
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/android/camera/ui/DepthFieldView;->k1:I
+
+    .line 4
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f070344
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/android/camera/ui/DepthFieldView;->v1:I
+
+    .line 5
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f070343
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/android/camera/ui/DepthFieldView;->C1:I
+
+    .line 6
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f070342
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/android/camera/ui/DepthFieldView;->K1:I
+
+    .line 7
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -486,99 +617,44 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/android/camera/ui/DepthFieldView;->n:I
+    iput v0, p0, Lcom/android/camera/ui/DepthFieldView;->v2:I
 
+    .line 8
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f070340
+    const v1, 0x7f070346
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
-    iput v0, p0, Lcom/android/camera/ui/DepthFieldView;->o:I
+    iput v0, p0, Lcom/android/camera/ui/DepthFieldView;->C2:I
 
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f07034a
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/android/camera/ui/DepthFieldView;->p:I
-
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f070349
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/android/camera/ui/DepthFieldView;->q:I
-
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f070348
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/android/camera/ui/DepthFieldView;->r:I
-
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f070347
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/android/camera/ui/DepthFieldView;->s:I
-
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f07034c
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/android/camera/ui/DepthFieldView;->t:I
-
+    .line 9
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lcom/android/camera/ui/DepthFieldView;->g:Landroid/graphics/Paint;
+    iput-object v0, p0, Lcom/android/camera/ui/DepthFieldView;->n:Landroid/graphics/Paint;
 
     const/4 v1, 0x1
 
+    .line 10
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    iget-object v0, p0, Lcom/android/camera/ui/DepthFieldView;->g:Landroid/graphics/Paint;
+    .line 11
+    iget-object v0, p0, Lcom/android/camera/ui/DepthFieldView;->n:Landroid/graphics/Paint;
 
     sget-object v2, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    iget-object v0, p0, Lcom/android/camera/ui/DepthFieldView;->g:Landroid/graphics/Paint;
+    .line 12
+    iget-object v0, p0, Lcom/android/camera/ui/DepthFieldView;->n:Landroid/graphics/Paint;
 
-    iget v2, p0, Lcom/android/camera/ui/DepthFieldView;->o:I
+    iget v2, p0, Lcom/android/camera/ui/DepthFieldView;->k1:I
 
     int-to-float v2, v2
 
@@ -588,9 +664,10 @@
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    iget-object v0, p0, Lcom/android/camera/ui/DepthFieldView;->g:Landroid/graphics/Paint;
+    .line 13
+    iget-object v0, p0, Lcom/android/camera/ui/DepthFieldView;->n:Landroid/graphics/Paint;
 
-    const v2, 0x7f060922
+    const v2, 0x7f0604b8
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getColor(I)I
 
@@ -598,15 +675,18 @@
 
     invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 14
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lcom/android/camera/ui/DepthFieldView;->h:Landroid/graphics/Paint;
+    iput-object v0, p0, Lcom/android/camera/ui/DepthFieldView;->p:Landroid/graphics/Paint;
 
+    .line 15
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    iget-object v0, p0, Lcom/android/camera/ui/DepthFieldView;->h:Landroid/graphics/Paint;
+    .line 16
+    iget-object v0, p0, Lcom/android/camera/ui/DepthFieldView;->p:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getColor(I)I
 
@@ -614,17 +694,20 @@
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 17
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lcom/android/camera/ui/DepthFieldView;->i:Landroid/graphics/Paint;
+    iput-object v0, p0, Lcom/android/camera/ui/DepthFieldView;->s:Landroid/graphics/Paint;
 
+    .line 18
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    iget-object v0, p0, Lcom/android/camera/ui/DepthFieldView;->i:Landroid/graphics/Paint;
+    .line 19
+    iget-object v0, p0, Lcom/android/camera/ui/DepthFieldView;->s:Landroid/graphics/Paint;
 
-    const v1, 0x7f0600cb
+    const v1, 0x7f0600ce
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getColor(I)I
 
@@ -632,53 +715,39 @@
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    invoke-static {}, Lg2/b;->g()Lj2/b1;
+    .line 20
+    invoke-static {}, Ld/d/a/l6/b;->g()Ld/d/a/l6/e/j/a1;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lj2/b1;->F()Lm2/a;
+    .line 21
+    invoke-virtual {p1}, Ld/d/a/l6/e/j/a1;->F()Ld/d/a/l6/e/m/w;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/android/camera/ui/DepthFieldView;->j:Lcom/android/camera/data/data/b;
+    iput-object p1, p0, Lcom/android/camera/ui/DepthFieldView;->t:Ld/d/a/l6/e/b;
 
     const/16 v0, 0xe1
 
-    invoke-virtual {p1, v0}, Lcom/android/camera/data/data/b;->getComponentValue(I)Ljava/lang/String;
+    .line 22
+    invoke-virtual {p1, v0}, Ld/d/a/l6/e/b;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/android/camera/ui/DepthFieldView;->k:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/camera/ui/DepthFieldView;->u:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public c()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/android/camera/ui/DepthFieldView;->j:Lcom/android/camera/data/data/b;
-
-    const/16 v1, 0xe1
-
-    invoke-virtual {v0, v1}, Lcom/android/camera/data/data/b;->getComponentValue(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/android/camera/ui/DepthFieldView;->k:Ljava/lang/String;
-
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
-    return-void
-.end method
-
-.method public final d()V
+.method private d()V
     .locals 7
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 1
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lid/b;->G1()Ljava/util/List;
+    invoke-virtual {v0}, Ld/k/a/b;->C1()Ljava/util/List;
 
     move-result-object v0
 
@@ -686,31 +755,32 @@
 
     return-void
 
+    .line 2
     :cond_0
-    iget-object v1, p0, Lcom/android/camera/ui/DepthFieldView;->k:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/camera/ui/DepthFieldView;->u:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
+    const/4 v2, -0x1
+
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    move-result v2
+    move-result v3
 
-    const/4 v3, 0x2
+    const/4 v4, 0x2
 
-    const/4 v4, 0x1
+    const/4 v5, 0x1
 
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
-    const/4 v6, -0x1
-
-    sparse-switch v2, :sswitch_data_0
+    sparse-switch v3, :sswitch_data_0
 
     goto :goto_0
 
     :sswitch_0
-    const-string v2, "1.2"
+    const-string v3, "1.2"
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -719,14 +789,14 @@
     goto :goto_0
 
     :cond_1
-    move v6, v3
+    move v2, v4
 
     goto :goto_0
 
     :sswitch_1
-    const-string v2, "0.6"
+    const-string v3, "0.6"
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -735,14 +805,14 @@
     goto :goto_0
 
     :cond_2
-    move v6, v4
+    move v2, v5
 
     goto :goto_0
 
     :sswitch_2
-    const-string v2, "5"
+    const-string v3, "5"
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -751,17 +821,18 @@
     goto :goto_0
 
     :cond_3
-    move v6, v5
+    move v2, v6
 
     :goto_0
-    packed-switch v6, :pswitch_data_0
+    packed-switch v2, :pswitch_data_0
 
-    move v1, v5
+    move v1, v6
 
     goto :goto_2
 
+    .line 3
     :pswitch_0
-    invoke-interface {v0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v0, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -775,9 +846,10 @@
 
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
-    move-result v5
+    move-result v6
 
-    invoke-interface {v0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    .line 4
+    invoke-interface {v0, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -794,14 +866,15 @@
     move-result v0
 
     :goto_1
-    move v1, v5
+    move v1, v6
 
-    move v5, v0
+    move v6, v0
 
     goto :goto_2
 
+    .line 5
     :pswitch_1
-    invoke-interface {v0, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v0, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -817,7 +890,8 @@
 
     move-result v1
 
-    invoke-interface {v0, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    .line 6
+    invoke-interface {v0, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -831,12 +905,13 @@
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    move-result v5
+    move-result v6
 
     goto :goto_2
 
+    .line 7
     :pswitch_2
-    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -850,9 +925,10 @@
 
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
-    move-result v5
+    move-result v6
 
-    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    .line 8
+    invoke-interface {v0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -870,10 +946,11 @@
 
     goto :goto_1
 
+    .line 9
     :goto_2
     new-instance v0, Landroid/util/Range;
 
-    invoke-virtual {p0, v5}, Lcom/android/camera/ui/DepthFieldView;->a(I)I
+    invoke-direct {p0, v6}, Lcom/android/camera/ui/DepthFieldView;->a(I)I
 
     move-result v2
 
@@ -881,7 +958,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p0, v1}, Lcom/android/camera/ui/DepthFieldView;->a(I)I
+    invoke-direct {p0, v1}, Lcom/android/camera/ui/DepthFieldView;->a(I)I
 
     move-result v1
 
@@ -891,7 +968,7 @@
 
     invoke-direct {v0, v2, v1}, Landroid/util/Range;-><init>(Ljava/lang/Comparable;Ljava/lang/Comparable;)V
 
-    iput-object v0, p0, Lcom/android/camera/ui/DepthFieldView;->l:Landroid/util/Range;
+    iput-object v0, p0, Lcom/android/camera/ui/DepthFieldView;->w:Landroid/util/Range;
 
     return-void
 
@@ -910,32 +987,66 @@
     .end packed-switch
 .end method
 
+
+# virtual methods
+.method public c()V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/ui/DepthFieldView;->t:Ld/d/a/l6/e/b;
+
+    const/16 v1, 0xe1
+
+    invoke-virtual {v0, v1}, Ld/d/a/l6/e/b;->getComponentValue(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/camera/ui/DepthFieldView;->u:Ljava/lang/String;
+
+    .line 2
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    return-void
+.end method
+
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 9
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "canvas"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/DepthFieldView;->d()V
+    .line 2
+    invoke-direct {p0}, Lcom/android/camera/ui/DepthFieldView;->d()V
 
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    iget v0, p0, Lcom/android/camera/ui/DepthFieldView;->n:I
-
-    int-to-float v3, v0
-
-    iget v0, p0, Lcom/android/camera/ui/DepthFieldView;->m:I
+    .line 3
+    iget v0, p0, Lcom/android/camera/ui/DepthFieldView;->K0:I
 
     int-to-float v4, v0
 
-    iget-object v5, p0, Lcom/android/camera/ui/DepthFieldView;->g:Landroid/graphics/Paint;
+    iget v0, p0, Lcom/android/camera/ui/DepthFieldView;->k0:I
 
-    move-object v0, p1
+    int-to-float v5, v0
 
-    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
+    iget-object v6, p0, Lcom/android/camera/ui/DepthFieldView;->n:Landroid/graphics/Paint;
 
-    iget-object v0, p0, Lcom/android/camera/ui/DepthFieldView;->l:Landroid/util/Range;
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    move-object v1, p1
+
+    invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
+
+    .line 4
+    iget-object v0, p0, Lcom/android/camera/ui/DepthFieldView;->w:Landroid/util/Range;
 
     invoke-virtual {v0}, Landroid/util/Range;->getLower()Ljava/lang/Comparable;
 
@@ -947,7 +1058,8 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcom/android/camera/ui/DepthFieldView;->l:Landroid/util/Range;
+    .line 5
+    iget-object v1, p0, Lcom/android/camera/ui/DepthFieldView;->w:Landroid/util/Range;
 
     invoke-virtual {v1}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
 
@@ -959,13 +1071,14 @@
 
     move-result v1
 
-    iget v2, p0, Lcom/android/camera/ui/DepthFieldView;->o:I
+    .line 6
+    iget v2, p0, Lcom/android/camera/ui/DepthFieldView;->k1:I
 
     int-to-float v4, v2
 
     int-to-float v5, v0
 
-    iget v0, p0, Lcom/android/camera/ui/DepthFieldView;->n:I
+    iget v0, p0, Lcom/android/camera/ui/DepthFieldView;->K0:I
 
     int-to-float v0, v0
 
@@ -975,13 +1088,14 @@
 
     int-to-float v7, v1
 
-    iget-object v8, p0, Lcom/android/camera/ui/DepthFieldView;->i:Landroid/graphics/Paint;
+    iget-object v8, p0, Lcom/android/camera/ui/DepthFieldView;->s:Landroid/graphics/Paint;
 
     move-object v3, p1
 
     invoke-virtual/range {v3 .. v8}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    iget-object v0, p0, Lcom/android/camera/ui/DepthFieldView;->k:Ljava/lang/String;
+    .line 7
+    iget-object v0, p0, Lcom/android/camera/ui/DepthFieldView;->u:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
@@ -1048,29 +1162,33 @@
 
     goto :goto_1
 
+    .line 8
     :pswitch_0
-    iget v2, p0, Lcom/android/camera/ui/DepthFieldView;->q:I
+    iget v2, p0, Lcom/android/camera/ui/DepthFieldView;->C1:I
 
     goto :goto_1
 
+    .line 9
     :pswitch_1
-    iget v2, p0, Lcom/android/camera/ui/DepthFieldView;->p:I
+    iget v2, p0, Lcom/android/camera/ui/DepthFieldView;->v1:I
 
     goto :goto_1
 
+    .line 10
     :pswitch_2
-    iget v2, p0, Lcom/android/camera/ui/DepthFieldView;->t:I
+    iget v2, p0, Lcom/android/camera/ui/DepthFieldView;->C2:I
 
     :goto_1
     const/4 v4, 0x0
 
     int-to-float v5, v2
 
-    iget v0, p0, Lcom/android/camera/ui/DepthFieldView;->n:I
+    .line 11
+    iget v0, p0, Lcom/android/camera/ui/DepthFieldView;->K0:I
 
     int-to-float v6, v0
 
-    iget v0, p0, Lcom/android/camera/ui/DepthFieldView;->o:I
+    iget v0, p0, Lcom/android/camera/ui/DepthFieldView;->k1:I
 
     int-to-float v0, v0
 
@@ -1080,7 +1198,7 @@
 
     add-float v7, v5, v0
 
-    iget-object v8, p0, Lcom/android/camera/ui/DepthFieldView;->h:Landroid/graphics/Paint;
+    iget-object v8, p0, Lcom/android/camera/ui/DepthFieldView;->p:Landroid/graphics/Paint;
 
     move-object v3, p1
 

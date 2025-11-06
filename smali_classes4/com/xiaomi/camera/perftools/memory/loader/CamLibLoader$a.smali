@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field private final a:Ljava/lang/String;
 
-.field public b:I
+.field private b:I
 
-.field public c:J
+.field private c:J
 
-.field public final d:Ljava/util/concurrent/locks/ReentrantLock;
+.field private final d:Ljava/util/concurrent/locks/ReentrantLock;
 
 
 # direct methods

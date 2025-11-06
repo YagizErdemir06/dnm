@@ -84,10 +84,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0}, Ljava/net/URI;->getRawQuery()Ljava/lang/String;
 
     move-result-object p0
@@ -102,6 +104,7 @@
 
     new-instance v0, Ljava/util/HashMap;
 
+    .line 3
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const/16 v1, 0x3d
@@ -136,6 +139,7 @@
 
     move-result-object p0
 
+    .line 4
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -149,10 +153,12 @@
 
     check-cast v2, Ljava/lang/String;
 
+    .line 5
     invoke-virtual {v1, v2}, Lcom/google/android/gms/internal/common/zzx;->zzf(Ljava/lang/CharSequence;)Ljava/util/List;
 
     move-result-object v2
 
+    .line 6
     invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
 
     move-result v3
@@ -169,6 +175,7 @@
 
     const/4 v3, 0x0
 
+    .line 7
     invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -179,6 +186,7 @@
 
     move-result-object v3
 
+    .line 8
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v5
@@ -187,6 +195,7 @@
 
     const/4 v4, 0x1
 
+    .line 9
     invoke-interface {v2, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -202,16 +211,19 @@
     :cond_0
     const/4 v2, 0x0
 
+    .line 10
     :goto_1
     invoke-interface {v0, v3, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
+    .line 11
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     const-string p1, "bad parameter"
 
+    .line 12
     invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p0
@@ -227,6 +239,7 @@
 
     const-string p1, "ISO-8859-1"
 
+    .line 1
     :cond_0
     :try_start_0
     invoke-static {p0, p1}, Ljava/net/URLDecoder;->decode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -242,6 +255,7 @@
 
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
+    .line 2
     invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/Throwable;)V
 
     throw p1

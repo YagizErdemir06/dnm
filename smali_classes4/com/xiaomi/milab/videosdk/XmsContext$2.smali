@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/milab/videosdk/XmsContext$2;
+.class public Lcom/xiaomi/milab/videosdk/XmsContext$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,13 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/xiaomi/milab/videosdk/XmsContext;
+.field public final synthetic this$0:Lcom/xiaomi/milab/videosdk/XmsContext;
 
-.field final synthetic val$fps:I
+.field public final synthetic val$fps:I
 
-.field final synthetic val$textureView:Lcom/xiaomi/milab/videosdk/XmsTextureView;
+.field public final synthetic val$textureView:Lcom/xiaomi/milab/videosdk/XmsTextureView;
 
-.field final synthetic val$xmsTimeline:Lcom/xiaomi/milab/videosdk/XmsTimeline;
+.field public final synthetic val$xmsTimeline:Lcom/xiaomi/milab/videosdk/XmsTimeline;
 
 
 # direct methods
@@ -45,6 +45,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/milab/videosdk/XmsContext$2;->this$0:Lcom/xiaomi/milab/videosdk/XmsContext;
 
     iput-object p2, p0, Lcom/xiaomi/milab/videosdk/XmsContext$2;->val$textureView:Lcom/xiaomi/milab/videosdk/XmsTextureView;
@@ -75,6 +76,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/xiaomi/milab/videosdk/XmsContext;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -99,6 +101,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     iget-object v0, p0, Lcom/xiaomi/milab/videosdk/XmsContext$2;->this$0:Lcom/xiaomi/milab/videosdk/XmsContext;
 
     invoke-static {v0}, Lcom/xiaomi/milab/videosdk/XmsContext;->access$100(Lcom/xiaomi/milab/videosdk/XmsContext;)Z
@@ -107,57 +110,70 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     new-instance v0, Landroid/view/Surface;
 
     invoke-direct {v0, p1}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
 
+    .line 4
     iget-object p1, p0, Lcom/xiaomi/milab/videosdk/XmsContext$2;->this$0:Lcom/xiaomi/milab/videosdk/XmsContext;
 
     invoke-static {p1, v0}, Lcom/xiaomi/milab/videosdk/XmsContext;->access$002(Lcom/xiaomi/milab/videosdk/XmsContext;Landroid/view/Surface;)Landroid/view/Surface;
 
+    .line 5
     iget-object p1, p0, Lcom/xiaomi/milab/videosdk/XmsContext$2;->val$textureView:Lcom/xiaomi/milab/videosdk/XmsTextureView;
 
     invoke-virtual {p1, v0}, Lcom/xiaomi/milab/videosdk/XmsTextureView;->setSurface(Landroid/view/Surface;)V
 
+    .line 6
     iget-object p1, p0, Lcom/xiaomi/milab/videosdk/XmsContext$2;->val$xmsTimeline:Lcom/xiaomi/milab/videosdk/XmsTimeline;
 
     invoke-virtual {p1, v0, p2, p3}, Lcom/xiaomi/milab/videosdk/XmsTimeline;->surfaceChanged(Landroid/view/Surface;II)V
 
+    .line 7
     iget-object p1, p0, Lcom/xiaomi/milab/videosdk/XmsContext$2;->this$0:Lcom/xiaomi/milab/videosdk/XmsContext;
 
     invoke-static {p1, p2}, Lcom/xiaomi/milab/videosdk/XmsContext;->access$202(Lcom/xiaomi/milab/videosdk/XmsContext;I)I
 
+    .line 8
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/XmsContext$2;->this$0:Lcom/xiaomi/milab/videosdk/XmsContext;
 
     invoke-static {p0, p3}, Lcom/xiaomi/milab/videosdk/XmsContext;->access$302(Lcom/xiaomi/milab/videosdk/XmsContext;I)I
 
     goto :goto_0
 
+    .line 9
     :cond_0
     new-instance v0, Landroid/view/Surface;
 
     invoke-direct {v0, p1}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
 
+    .line 10
     iget-object p1, p0, Lcom/xiaomi/milab/videosdk/XmsContext$2;->this$0:Lcom/xiaomi/milab/videosdk/XmsContext;
 
     invoke-static {p1, v0}, Lcom/xiaomi/milab/videosdk/XmsContext;->access$002(Lcom/xiaomi/milab/videosdk/XmsContext;Landroid/view/Surface;)Landroid/view/Surface;
 
+    .line 11
     iget-object p1, p0, Lcom/xiaomi/milab/videosdk/XmsContext$2;->val$textureView:Lcom/xiaomi/milab/videosdk/XmsTextureView;
 
     invoke-virtual {p1, v0}, Lcom/xiaomi/milab/videosdk/XmsTextureView;->setSurface(Landroid/view/Surface;)V
 
+    .line 12
     iget-object p1, p0, Lcom/xiaomi/milab/videosdk/XmsContext$2;->val$xmsTimeline:Lcom/xiaomi/milab/videosdk/XmsTimeline;
 
     invoke-virtual {p1, v0}, Lcom/xiaomi/milab/videosdk/XmsTimeline;->attachSurface(Landroid/view/Surface;)V
 
+    .line 13
     iget-object p1, p0, Lcom/xiaomi/milab/videosdk/XmsContext$2;->this$0:Lcom/xiaomi/milab/videosdk/XmsContext;
 
     invoke-static {p1, p2}, Lcom/xiaomi/milab/videosdk/XmsContext;->access$202(Lcom/xiaomi/milab/videosdk/XmsContext;I)I
 
+    .line 14
     iget-object p1, p0, Lcom/xiaomi/milab/videosdk/XmsContext$2;->this$0:Lcom/xiaomi/milab/videosdk/XmsContext;
 
     invoke-static {p1, p3}, Lcom/xiaomi/milab/videosdk/XmsContext;->access$302(Lcom/xiaomi/milab/videosdk/XmsContext;I)I
 
+    .line 15
     iget-object p1, p0, Lcom/xiaomi/milab/videosdk/XmsContext$2;->val$xmsTimeline:Lcom/xiaomi/milab/videosdk/XmsTimeline;
 
     iget v0, p0, Lcom/xiaomi/milab/videosdk/XmsContext$2;->val$fps:I
@@ -166,10 +182,12 @@
 
     invoke-virtual {p1, p2, p3, v0, v1}, Lcom/xiaomi/milab/videosdk/XmsTimeline;->setProfile(IID)V
 
+    .line 16
     iget-object p1, p0, Lcom/xiaomi/milab/videosdk/XmsContext$2;->this$0:Lcom/xiaomi/milab/videosdk/XmsContext;
 
     invoke-virtual {p1}, Lcom/xiaomi/milab/videosdk/XmsContext;->initContext()V
 
+    .line 17
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/XmsContext$2;->this$0:Lcom/xiaomi/milab/videosdk/XmsContext;
 
     const/4 p1, 0x1
@@ -211,6 +229,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/xiaomi/milab/videosdk/XmsContext;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -235,18 +254,22 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     new-instance v0, Landroid/view/Surface;
 
     invoke-direct {v0, p1}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
 
+    .line 3
     iget-object p1, p0, Lcom/xiaomi/milab/videosdk/XmsContext$2;->this$0:Lcom/xiaomi/milab/videosdk/XmsContext;
 
     invoke-static {p1, v0}, Lcom/xiaomi/milab/videosdk/XmsContext;->access$002(Lcom/xiaomi/milab/videosdk/XmsContext;Landroid/view/Surface;)Landroid/view/Surface;
 
+    .line 4
     iget-object p1, p0, Lcom/xiaomi/milab/videosdk/XmsContext$2;->val$textureView:Lcom/xiaomi/milab/videosdk/XmsTextureView;
 
     invoke-virtual {p1, v0}, Lcom/xiaomi/milab/videosdk/XmsTextureView;->setSurface(Landroid/view/Surface;)V
 
+    .line 5
     iget-object p1, p0, Lcom/xiaomi/milab/videosdk/XmsContext$2;->val$xmsTimeline:Lcom/xiaomi/milab/videosdk/XmsTimeline;
 
     iget-object v0, p0, Lcom/xiaomi/milab/videosdk/XmsContext$2;->val$textureView:Lcom/xiaomi/milab/videosdk/XmsTextureView;
@@ -257,10 +280,12 @@
 
     invoke-virtual {p1, v0, p2, p3}, Lcom/xiaomi/milab/videosdk/XmsTimeline;->surfaceChanged(Landroid/view/Surface;II)V
 
+    .line 6
     iget-object p1, p0, Lcom/xiaomi/milab/videosdk/XmsContext$2;->this$0:Lcom/xiaomi/milab/videosdk/XmsContext;
 
     invoke-static {p1, p2}, Lcom/xiaomi/milab/videosdk/XmsContext;->access$202(Lcom/xiaomi/milab/videosdk/XmsContext;I)I
 
+    .line 7
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/XmsContext$2;->this$0:Lcom/xiaomi/milab/videosdk/XmsContext;
 
     invoke-static {p0, p3}, Lcom/xiaomi/milab/videosdk/XmsContext;->access$302(Lcom/xiaomi/milab/videosdk/XmsContext;I)I

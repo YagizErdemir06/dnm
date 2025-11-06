@@ -28,6 +28,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lorg/dom4j/rule/pattern/NodeTypePattern;
 
     const/4 v1, 0x2
@@ -36,6 +37,7 @@
 
     sput-object v0, Lorg/dom4j/rule/pattern/NodeTypePattern;->ANY_ATTRIBUTE:Lorg/dom4j/rule/pattern/NodeTypePattern;
 
+    .line 2
     new-instance v0, Lorg/dom4j/rule/pattern/NodeTypePattern;
 
     const/16 v1, 0x8
@@ -44,6 +46,7 @@
 
     sput-object v0, Lorg/dom4j/rule/pattern/NodeTypePattern;->ANY_COMMENT:Lorg/dom4j/rule/pattern/NodeTypePattern;
 
+    .line 3
     new-instance v0, Lorg/dom4j/rule/pattern/NodeTypePattern;
 
     const/16 v1, 0x9
@@ -52,6 +55,7 @@
 
     sput-object v0, Lorg/dom4j/rule/pattern/NodeTypePattern;->ANY_DOCUMENT:Lorg/dom4j/rule/pattern/NodeTypePattern;
 
+    .line 4
     new-instance v0, Lorg/dom4j/rule/pattern/NodeTypePattern;
 
     const/4 v1, 0x1
@@ -60,6 +64,7 @@
 
     sput-object v0, Lorg/dom4j/rule/pattern/NodeTypePattern;->ANY_ELEMENT:Lorg/dom4j/rule/pattern/NodeTypePattern;
 
+    .line 5
     new-instance v0, Lorg/dom4j/rule/pattern/NodeTypePattern;
 
     const/4 v1, 0x7
@@ -68,6 +73,7 @@
 
     sput-object v0, Lorg/dom4j/rule/pattern/NodeTypePattern;->ANY_PROCESSING_INSTRUCTION:Lorg/dom4j/rule/pattern/NodeTypePattern;
 
+    .line 6
     new-instance v0, Lorg/dom4j/rule/pattern/NodeTypePattern;
 
     const/4 v1, 0x3
@@ -82,8 +88,10 @@
 .method public constructor <init>(S)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-short p1, p0, Lorg/dom4j/rule/pattern/NodeTypePattern;->nodeType:S
 
     return-void
@@ -94,6 +102,7 @@
 .method public getMatchType()S
     .locals 0
 
+    .line 1
     iget-short p0, p0, Lorg/dom4j/rule/pattern/NodeTypePattern;->nodeType:S
 
     return p0
@@ -126,6 +135,7 @@
 .method public matches(Lorg/dom4j/Node;)Z
     .locals 0
 
+    .line 1
     invoke-interface {p1}, Lorg/dom4j/Node;->getNodeType()S
 
     move-result p1

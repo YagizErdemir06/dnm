@@ -39,11 +39,11 @@
 
     move-result-object v0
 
-    const v1, 0x7fffffff
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const v2, 0x7fffffff
 
-    invoke-direct {p0, p1, v2, v0, v1}, Lcom/google/common/base/Splitter;-><init>(Lcom/google/common/base/Splitter$Strategy;ZLcom/google/common/base/CharMatcher;I)V
+    invoke-direct {p0, p1, v1, v0, v2}, Lcom/google/common/base/Splitter;-><init>(Lcom/google/common/base/Splitter$Strategy;ZLcom/google/common/base/CharMatcher;I)V
 
     return-void
 .end method
@@ -72,6 +72,7 @@
 .method public static synthetic access$000(Lcom/google/common/base/Splitter;Ljava/lang/CharSequence;)Ljava/util/Iterator;
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/base/Splitter;->splittingIterator(Ljava/lang/CharSequence;)Ljava/util/Iterator;
 
     move-result-object p0
@@ -82,6 +83,7 @@
 .method public static synthetic access$200(Lcom/google/common/base/Splitter;)Lcom/google/common/base/CharMatcher;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/Splitter;->trimmer:Lcom/google/common/base/CharMatcher;
 
     return-object p0
@@ -90,6 +92,7 @@
 .method public static synthetic access$300(Lcom/google/common/base/Splitter;)Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/common/base/Splitter;->omitEmptyStrings:Z
 
     return p0
@@ -98,6 +101,7 @@
 .method public static synthetic access$400(Lcom/google/common/base/Splitter;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/base/Splitter;->limit:I
 
     return p0
@@ -118,8 +122,10 @@
     :goto_0
     const-string v1, "The length may not be less than 1"
 
+    .line 1
     invoke-static {v0, v1}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 2
     new-instance v0, Lcom/google/common/base/Splitter;
 
     new-instance v1, Lcom/google/common/base/Splitter$4;
@@ -276,6 +282,7 @@
     .annotation build Lcom/google/common/annotations/GwtIncompatible;
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/base/Platform;->compilePattern(Ljava/lang/String;)Lcom/google/common/base/CommonPattern;
 
     move-result-object p0
@@ -300,6 +307,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/base/Splitter;->strategy:Lcom/google/common/base/Splitter$Strategy;
 
     invoke-interface {v0, p0, p1}, Lcom/google/common/base/Splitter$Strategy;->iterator(Lcom/google/common/base/Splitter;Ljava/lang/CharSequence;)Ljava/util/Iterator;
@@ -326,8 +334,10 @@
     :goto_0
     const-string v1, "must be greater than zero: %s"
 
+    .line 1
     invoke-static {v0, v1, p1}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;I)V
 
+    .line 2
     new-instance v0, Lcom/google/common/base/Splitter;
 
     iget-object v1, p0, Lcom/google/common/base/Splitter;->strategy:Lcom/google/common/base/Splitter$Strategy;
@@ -344,6 +354,7 @@
 .method public omitEmptyStrings()Lcom/google/common/base/Splitter;
     .locals 4
 
+    .line 1
     new-instance v0, Lcom/google/common/base/Splitter;
 
     iget-object v1, p0, Lcom/google/common/base/Splitter;->strategy:Lcom/google/common/base/Splitter$Strategy;
@@ -372,8 +383,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lcom/google/common/base/Splitter$5;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/base/Splitter$5;-><init>(Lcom/google/common/base/Splitter;Ljava/lang/CharSequence;)V
@@ -394,16 +407,20 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/common/base/Splitter;->splittingIterator(Ljava/lang/CharSequence;)Ljava/util/Iterator;
 
     move-result-object p0
 
+    .line 3
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 4
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -411,6 +428,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 5
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -421,6 +439,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-static {p1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 

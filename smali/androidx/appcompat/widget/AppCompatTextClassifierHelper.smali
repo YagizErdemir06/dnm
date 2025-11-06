@@ -1,14 +1,6 @@
-.class final Landroidx/appcompat/widget/AppCompatTextClassifierHelper;
+.class public final Landroidx/appcompat/widget/AppCompatTextClassifierHelper;
 .super Ljava/lang/Object;
 .source "SourceFile"
-
-
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Landroidx/appcompat/widget/AppCompatTextClassifierHelper$Api26Impl;
-    }
-.end annotation
 
 
 # instance fields
@@ -31,8 +23,10 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -55,19 +49,43 @@
         api = 0x1a
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatTextClassifierHelper;->mTextClassifier:Landroid/view/textclassifier/TextClassifier;
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
+    .line 2
     iget-object p0, p0, Landroidx/appcompat/widget/AppCompatTextClassifierHelper;->mTextView:Landroid/widget/TextView;
 
-    invoke-static {p0}, Landroidx/appcompat/widget/AppCompatTextClassifierHelper$Api26Impl;->getTextClassifier(Landroid/widget/TextView;)Landroid/view/textclassifier/TextClassifier;
+    .line 3
+    invoke-virtual {p0}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    const-class v0, Landroid/view/textclassifier/TextClassificationManager;
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/view/textclassifier/TextClassificationManager;
+
+    if-eqz p0, :cond_0
+
+    .line 4
+    invoke-virtual {p0}, Landroid/view/textclassifier/TextClassificationManager;->getTextClassifier()Landroid/view/textclassifier/TextClassifier;
 
     move-result-object p0
 
     return-object p0
 
+    .line 5
     :cond_0
+    sget-object p0, Landroid/view/textclassifier/TextClassifier;->NO_OP:Landroid/view/textclassifier/TextClassifier;
+
+    return-object p0
+
+    :cond_1
     return-object v0
 .end method
 
@@ -81,6 +99,7 @@
         api = 0x1a
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/widget/AppCompatTextClassifierHelper;->mTextClassifier:Landroid/view/textclassifier/TextClassifier;
 
     return-void

@@ -11,6 +11,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,6 +20,7 @@
 .method public static delApp(Lcom/xiaomi/mi_connect_sdk/api/MiApp;I)V
     .locals 0
 
+    .line 1
     check-cast p0, Lcom/xiaomi/mi_connect_sdk/api/InnerMiApp;
 
     invoke-interface {p0, p1}, Lcom/xiaomi/mi_connect_sdk/api/InnerMiApp;->destroy(I)V
@@ -29,6 +31,7 @@
 .method public static newApp(Landroid/content/Context;Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;I)Lcom/xiaomi/mi_connect_sdk/api/MiApp;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;-><init>(Landroid/content/Context;Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;I)V

@@ -1,4 +1,4 @@
-.class abstract Lcom/google/android/gms/common/internal/service/zaf;
+.class public abstract Lcom/google/android/gms/common/internal/service/zaf;
 .super Lcom/google/android/gms/common/internal/service/zag;
 .source "SourceFile"
 
@@ -7,6 +7,7 @@
 .method public constructor <init>(Lcom/google/android/gms/common/api/GoogleApiClient;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/gms/common/internal/service/zag;-><init>(Lcom/google/android/gms/common/api/GoogleApiClient;)V
 
     return-void

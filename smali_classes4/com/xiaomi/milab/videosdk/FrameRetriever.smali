@@ -15,12 +15,15 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
+    .line 2
     iput-wide v0, p0, Lcom/xiaomi/milab/videosdk/FrameRetriever;->m_C_Handler:J
 
+    .line 3
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/FrameRetriever;->nativeCreate()J
 
     move-result-wide v0
@@ -35,6 +38,7 @@
 .method public getBitrate()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/FrameRetriever;->m_C_Handler:J
 
     invoke-virtual {p0, v0, v1}, Lcom/xiaomi/milab/videosdk/FrameRetriever;->nativeGetBitrate(J)J
@@ -47,6 +51,7 @@
 .method public getDataSource()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/FrameRetriever;->m_C_Handler:J
 
     invoke-virtual {p0, v0, v1}, Lcom/xiaomi/milab/videosdk/FrameRetriever;->nativeGetDataSource(J)Ljava/lang/String;
@@ -59,6 +64,7 @@
 .method public getDuration()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/FrameRetriever;->m_C_Handler:J
 
     invoke-virtual {p0, v0, v1}, Lcom/xiaomi/milab/videosdk/FrameRetriever;->nativeGetDuration(J)J
@@ -71,6 +77,7 @@
 .method public getFPS()F
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/FrameRetriever;->m_C_Handler:J
 
     invoke-virtual {p0, v0, v1}, Lcom/xiaomi/milab/videosdk/FrameRetriever;->nativeGetFPS(J)F
@@ -83,6 +90,7 @@
 .method public getHeight()I
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/FrameRetriever;->m_C_Handler:J
 
     invoke-virtual {p0, v0, v1}, Lcom/xiaomi/milab/videosdk/FrameRetriever;->nativeGetHeight(J)I
@@ -95,19 +103,21 @@
 .method public getNextFrame()Landroid/graphics/Bitmap;
     .locals 8
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/FrameRetriever;->m_C_Handler:J
 
     invoke-virtual {p0, v0, v1}, Lcom/xiaomi/milab/videosdk/FrameRetriever;->nativeGetNextFrame(J)[I
 
     move-result-object v2
 
-    const/4 v3, 0x0
-
+    .line 2
     iget v5, p0, Lcom/xiaomi/milab/videosdk/FrameRetriever;->mWidth:I
 
     iget v6, p0, Lcom/xiaomi/milab/videosdk/FrameRetriever;->mHeight:I
 
     sget-object v7, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+
+    const/4 v3, 0x0
 
     move v4, v5
 
@@ -121,6 +131,7 @@
 .method public getWidth()I
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/FrameRetriever;->m_C_Handler:J
 
     invoke-virtual {p0, v0, v1}, Lcom/xiaomi/milab/videosdk/FrameRetriever;->nativeGetWidth(J)I
@@ -289,6 +300,7 @@
 .method public release()V
     .locals 5
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/FrameRetriever;->m_C_Handler:J
 
     const-wide/16 v2, 0x0
@@ -297,12 +309,15 @@
 
     if-eqz v4, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0, v1}, Lcom/xiaomi/milab/videosdk/FrameRetriever;->nativeRelease(J)V
 
+    .line 3
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/FrameRetriever;->m_C_Handler:J
 
     invoke-virtual {p0, v0, v1}, Lcom/xiaomi/milab/videosdk/FrameRetriever;->nativeDestroy(J)V
 
+    .line 4
     iput-wide v2, p0, Lcom/xiaomi/milab/videosdk/FrameRetriever;->m_C_Handler:J
 
     :cond_0
@@ -320,6 +335,7 @@
         }
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/FrameRetriever;->m_C_Handler:J
 
     invoke-virtual {p0, v0, v1, p1}, Lcom/xiaomi/milab/videosdk/FrameRetriever;->nativeSetAccurate(JZ)V
@@ -338,6 +354,7 @@
         }
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/FrameRetriever;->m_C_Handler:J
 
     invoke-virtual {p0, v0, v1, p1}, Lcom/xiaomi/milab/videosdk/FrameRetriever;->nativeSetDataSource(JLjava/lang/String;)I
@@ -358,6 +375,7 @@
         }
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/FrameRetriever;->m_C_Handler:J
 
     invoke-virtual {p0, v0, v1, p1, p2}, Lcom/xiaomi/milab/videosdk/FrameRetriever;->nativeSetFrameAtTime(JJ)Z
@@ -380,10 +398,13 @@
         }
     .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/milab/videosdk/FrameRetriever;->mWidth:I
 
+    .line 2
     iput p2, p0, Lcom/xiaomi/milab/videosdk/FrameRetriever;->mHeight:I
 
+    .line 3
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/FrameRetriever;->m_C_Handler:J
 
     invoke-virtual {p0, v0, v1, p1, p2}, Lcom/xiaomi/milab/videosdk/FrameRetriever;->nativeSetSize(JII)V

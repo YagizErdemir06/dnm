@@ -1,9 +1,6 @@
-.class public Lmiuix/appcompat/widget/Spinner$j;
+.class public interface abstract Lmiuix/appcompat/widget/Spinner$j;
 .super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lyo/a$b;
 
 
 # annotations
@@ -12,46 +9,53 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x609
     name = "j"
 .end annotation
 
 
-# instance fields
-.field public a:Lmiuix/appcompat/widget/Spinner;
-
-
-# direct methods
-.method public constructor <init>(Lmiuix/appcompat/widget/Spinner;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lmiuix/appcompat/widget/Spinner$j;->a:Lmiuix/appcompat/widget/Spinner;
-
-    return-void
+# virtual methods
+.method public abstract c(IIFF)V
 .end method
 
+.method public abstract dismiss()V
+.end method
 
-# virtual methods
-.method public a(I)Z
-    .locals 0
+.method public abstract getBackground()Landroid/graphics/drawable/Drawable;
+.end method
 
-    iget-object p0, p0, Lmiuix/appcompat/widget/Spinner$j;->a:Lmiuix/appcompat/widget/Spinner;
+.method public abstract getHintText()Ljava/lang/CharSequence;
+.end method
 
-    invoke-virtual {p0}, Landroid/widget/AdapterView;->getSelectedItemPosition()I
+.method public abstract getHorizontalOffset()I
+.end method
 
-    move-result p0
+.method public abstract getHorizontalOriginalOffset()I
+.end method
 
-    if-ne p0, p1, :cond_0
+.method public abstract getVerticalOffset()I
+.end method
 
-    const/4 p0, 0x1
+.method public abstract isShowing()Z
+.end method
 
-    goto :goto_0
+.method public abstract setAdapter(Landroid/widget/ListAdapter;)V
+.end method
 
-    :cond_0
-    const/4 p0, 0x0
+.method public abstract setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+.end method
 
-    :goto_0
-    return p0
+.method public abstract setHorizontalOffset(I)V
+.end method
+
+.method public abstract setHorizontalOriginalOffset(I)V
+.end method
+
+.method public abstract setPromptText(Ljava/lang/CharSequence;)V
+.end method
+
+.method public abstract setVerticalOffset(I)V
+.end method
+
+.method public abstract show(II)V
 .end method

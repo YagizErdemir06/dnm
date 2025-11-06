@@ -38,6 +38,7 @@
 .method public static constructor <clinit>()V
     .locals 16
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_common/zzii;
 
     const-string v1, "UNKNOWN_FORMAT"
@@ -54,6 +55,7 @@
 
     const/4 v4, 0x1
 
+    .line 2
     invoke-direct {v1, v3, v4, v4}, Lcom/google/android/gms/internal/mlkit_vision_common/zzii;-><init>(Ljava/lang/String;II)V
 
     sput-object v1, Lcom/google/android/gms/internal/mlkit_vision_common/zzii;->zzb:Lcom/google/android/gms/internal/mlkit_vision_common/zzii;
@@ -64,6 +66,7 @@
 
     const/4 v6, 0x2
 
+    .line 3
     invoke-direct {v3, v5, v6, v6}, Lcom/google/android/gms/internal/mlkit_vision_common/zzii;-><init>(Ljava/lang/String;II)V
 
     sput-object v3, Lcom/google/android/gms/internal/mlkit_vision_common/zzii;->zzc:Lcom/google/android/gms/internal/mlkit_vision_common/zzii;
@@ -74,6 +77,7 @@
 
     const/4 v8, 0x3
 
+    .line 4
     invoke-direct {v5, v7, v8, v8}, Lcom/google/android/gms/internal/mlkit_vision_common/zzii;-><init>(Ljava/lang/String;II)V
 
     sput-object v5, Lcom/google/android/gms/internal/mlkit_vision_common/zzii;->zzd:Lcom/google/android/gms/internal/mlkit_vision_common/zzii;
@@ -86,6 +90,7 @@
 
     const/4 v11, 0x7
 
+    .line 5
     invoke-direct {v7, v9, v10, v11}, Lcom/google/android/gms/internal/mlkit_vision_common/zzii;-><init>(Ljava/lang/String;II)V
 
     sput-object v7, Lcom/google/android/gms/internal/mlkit_vision_common/zzii;->zze:Lcom/google/android/gms/internal/mlkit_vision_common/zzii;
@@ -98,6 +103,7 @@
 
     const/16 v14, 0x8
 
+    .line 6
     invoke-direct {v9, v12, v13, v14}, Lcom/google/android/gms/internal/mlkit_vision_common/zzii;-><init>(Ljava/lang/String;II)V
 
     sput-object v9, Lcom/google/android/gms/internal/mlkit_vision_common/zzii;->zzf:Lcom/google/android/gms/internal/mlkit_vision_common/zzii;
@@ -108,6 +114,7 @@
 
     const/4 v8, 0x6
 
+    .line 7
     invoke-direct {v12, v15, v8, v10}, Lcom/google/android/gms/internal/mlkit_vision_common/zzii;-><init>(Ljava/lang/String;II)V
 
     sput-object v12, Lcom/google/android/gms/internal/mlkit_vision_common/zzii;->zzg:Lcom/google/android/gms/internal/mlkit_vision_common/zzii;
@@ -116,6 +123,7 @@
 
     const-string v10, "CM_SAMPLE_BUFFER_REF"
 
+    .line 8
     invoke-direct {v15, v10, v11, v13}, Lcom/google/android/gms/internal/mlkit_vision_common/zzii;-><init>(Ljava/lang/String;II)V
 
     sput-object v15, Lcom/google/android/gms/internal/mlkit_vision_common/zzii;->zzh:Lcom/google/android/gms/internal/mlkit_vision_common/zzii;
@@ -124,6 +132,7 @@
 
     const-string v11, "UI_IMAGE"
 
+    .line 9
     invoke-direct {v10, v11, v14, v8}, Lcom/google/android/gms/internal/mlkit_vision_common/zzii;-><init>(Ljava/lang/String;II)V
 
     sput-object v10, Lcom/google/android/gms/internal/mlkit_vision_common/zzii;->zzi:Lcom/google/android/gms/internal/mlkit_vision_common/zzii;
@@ -134,6 +143,7 @@
 
     const/16 v8, 0x9
 
+    .line 10
     invoke-direct {v11, v14, v8, v8}, Lcom/google/android/gms/internal/mlkit_vision_common/zzii;-><init>(Ljava/lang/String;II)V
 
     sput-object v11, Lcom/google/android/gms/internal/mlkit_vision_common/zzii;->zzj:Lcom/google/android/gms/internal/mlkit_vision_common/zzii;
@@ -180,6 +190,7 @@
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     iput p3, p0, Lcom/google/android/gms/internal/mlkit_vision_common/zzii;->zzl:I
@@ -190,6 +201,7 @@
 .method public static values()[Lcom/google/android/gms/internal/mlkit_vision_common/zzii;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/internal/mlkit_vision_common/zzii;->zzk:[Lcom/google/android/gms/internal/mlkit_vision_common/zzii;
 
     invoke-virtual {v0}, [Lcom/google/android/gms/internal/mlkit_vision_common/zzii;->clone()Ljava/lang/Object;

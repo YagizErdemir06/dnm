@@ -46,6 +46,7 @@
 .method public getDocument()Lorg/dom4j/Document;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/DocumentResult;->contentHandler:Lorg/dom4j/io/SAXContentHandler;
 
     invoke-virtual {p0}, Lorg/dom4j/io/SAXContentHandler;->getDocument()Lorg/dom4j/Document;
@@ -58,14 +59,17 @@
 .method public setHandler(Lorg/xml/sax/ContentHandler;)V
     .locals 1
 
+    .line 1
     instance-of v0, p1, Lorg/dom4j/io/SAXContentHandler;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lorg/dom4j/io/SAXContentHandler;
 
     iput-object p1, p0, Lorg/dom4j/io/DocumentResult;->contentHandler:Lorg/dom4j/io/SAXContentHandler;
 
+    .line 3
     invoke-super {p0, p1}, Ljavax/xml/transform/sax/SAXResult;->setHandler(Lorg/xml/sax/ContentHandler;)V
 
     :cond_0
@@ -75,14 +79,17 @@
 .method public setLexicalHandler(Lorg/xml/sax/ext/LexicalHandler;)V
     .locals 1
 
+    .line 1
     instance-of v0, p1, Lorg/dom4j/io/SAXContentHandler;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lorg/dom4j/io/SAXContentHandler;
 
     iput-object p1, p0, Lorg/dom4j/io/DocumentResult;->contentHandler:Lorg/dom4j/io/SAXContentHandler;
 
+    .line 3
     invoke-super {p0, p1}, Ljavax/xml/transform/sax/SAXResult;->setLexicalHandler(Lorg/xml/sax/ext/LexicalHandler;)V
 
     :cond_0

@@ -15,16 +15,17 @@
 
 
 # instance fields
-.field public a:Z
+.field private c:Z
 
-.field public final synthetic b:Lmiuix/popupwidget/internal/widget/GuidePopupView;
+.field public final synthetic d:Lmiuix/popupwidget/internal/widget/GuidePopupView;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/popupwidget/internal/widget/GuidePopupView;)V
     .locals 0
 
-    iput-object p1, p0, Lmiuix/popupwidget/internal/widget/GuidePopupView$a;->b:Lmiuix/popupwidget/internal/widget/GuidePopupView;
+    .line 1
+    iput-object p1, p0, Lmiuix/popupwidget/internal/widget/GuidePopupView$a;->d:Lmiuix/popupwidget/internal/widget/GuidePopupView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
@@ -38,7 +39,8 @@
 
     const/4 p1, 0x1
 
-    iput-boolean p1, p0, Lmiuix/popupwidget/internal/widget/GuidePopupView$a;->a:Z
+    .line 1
+    iput-boolean p1, p0, Lmiuix/popupwidget/internal/widget/GuidePopupView$a;->c:Z
 
     return-void
 .end method
@@ -46,14 +48,16 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 0
 
-    iget-boolean p1, p0, Lmiuix/popupwidget/internal/widget/GuidePopupView$a;->a:Z
+    .line 1
+    iget-boolean p1, p0, Lmiuix/popupwidget/internal/widget/GuidePopupView$a;->c:Z
 
     if-eqz p1, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
-    iget-object p0, p0, Lmiuix/popupwidget/internal/widget/GuidePopupView$a;->b:Lmiuix/popupwidget/internal/widget/GuidePopupView;
+    iget-object p0, p0, Lmiuix/popupwidget/internal/widget/GuidePopupView$a;->d:Lmiuix/popupwidget/internal/widget/GuidePopupView;
 
     const/4 p1, 0x0
 
@@ -67,7 +71,8 @@
 
     const/4 p1, 0x0
 
-    iput-boolean p1, p0, Lmiuix/popupwidget/internal/widget/GuidePopupView$a;->a:Z
+    .line 1
+    iput-boolean p1, p0, Lmiuix/popupwidget/internal/widget/GuidePopupView$a;->c:Z
 
     return-void
 .end method

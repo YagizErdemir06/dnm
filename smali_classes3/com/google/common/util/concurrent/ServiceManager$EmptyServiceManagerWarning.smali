@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/ServiceManager$EmptyServiceManagerWarning;
+.class public final Lcom/google/common/util/concurrent/ServiceManager$EmptyServiceManagerWarning;
 .super Ljava/lang/Throwable;
 .source "SourceFile"
 

@@ -45,16 +45,20 @@
 .method public recreate(Lcom/faceunity/toolbox/program/core/FUEglCore;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/toolbox/program/core/FUWindowSurface;->mSurface:Landroid/view/Surface;
 
     if-eqz v0, :cond_0
 
+    .line 2
     iput-object p1, p0, Lcom/faceunity/toolbox/program/core/FUEglSurfaceBase;->mEglCore:Lcom/faceunity/toolbox/program/core/FUEglCore;
 
+    .line 3
     invoke-virtual {p0, v0}, Lcom/faceunity/toolbox/program/core/FUEglSurfaceBase;->createWindowSurface(Ljava/lang/Object;)V
 
     return-void
 
+    .line 4
     :cond_0
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -68,21 +72,26 @@
 .method public release()V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/faceunity/toolbox/program/core/FUEglSurfaceBase;->releaseEglSurface()V
 
+    .line 2
     iget-object v0, p0, Lcom/faceunity/toolbox/program/core/FUWindowSurface;->mSurface:Landroid/view/Surface;
 
     if-eqz v0, :cond_1
 
+    .line 3
     iget-boolean v1, p0, Lcom/faceunity/toolbox/program/core/FUWindowSurface;->mReleaseSurface:Z
 
     if-eqz v1, :cond_0
 
+    .line 4
     invoke-virtual {v0}, Landroid/view/Surface;->release()V
 
     :cond_0
     const/4 v0, 0x0
 
+    .line 5
     iput-object v0, p0, Lcom/faceunity/toolbox/program/core/FUWindowSurface;->mSurface:Landroid/view/Surface;
 
     :cond_1

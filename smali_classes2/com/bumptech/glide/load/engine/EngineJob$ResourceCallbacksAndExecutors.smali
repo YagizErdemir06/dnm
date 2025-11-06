@@ -1,4 +1,4 @@
-.class final Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;
+.class public final Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -77,6 +77,7 @@
 .method private static defaultCallbackAndExecutor(Lcom/bumptech/glide/request/ResourceCallback;)Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbackAndExecutor;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbackAndExecutor;
 
     invoke-static {}, Lcom/bumptech/glide/util/Executors;->directExecutor()Ljava/util/concurrent/Executor;
@@ -93,6 +94,7 @@
 .method public add(Lcom/bumptech/glide/request/ResourceCallback;Ljava/util/concurrent/Executor;)V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;->callbacksAndExecutors:Ljava/util/List;
 
     new-instance v0, Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbackAndExecutor;
@@ -107,6 +109,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;->callbacksAndExecutors:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->clear()V
@@ -117,6 +120,7 @@
 .method public contains(Lcom/bumptech/glide/request/ResourceCallback;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;->callbacksAndExecutors:Ljava/util/List;
 
     invoke-static {p1}, Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;->defaultCallbackAndExecutor(Lcom/bumptech/glide/request/ResourceCallback;)Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbackAndExecutor;
@@ -133,6 +137,7 @@
 .method public copy()Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;
 
     new-instance v1, Ljava/util/ArrayList;
@@ -149,6 +154,7 @@
 .method public isEmpty()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;->callbacksAndExecutors:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
@@ -172,6 +178,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;->callbacksAndExecutors:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -184,6 +191,7 @@
 .method public remove(Lcom/bumptech/glide/request/ResourceCallback;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;->callbacksAndExecutors:Ljava/util/List;
 
     invoke-static {p1}, Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;->defaultCallbackAndExecutor(Lcom/bumptech/glide/request/ResourceCallback;)Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbackAndExecutor;
@@ -198,6 +206,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/EngineJob$ResourceCallbacksAndExecutors;->callbacksAndExecutors:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->size()I

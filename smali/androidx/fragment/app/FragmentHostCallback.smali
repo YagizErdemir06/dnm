@@ -25,7 +25,7 @@
     .end annotation
 .end field
 
-.field final mFragmentManager:Landroidx/fragment/app/FragmentManager;
+.field public final mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
 .field private final mHandler:Landroid/os/Handler;
     .annotation build Landroidx/annotation/NonNull;
@@ -144,31 +144,34 @@
 
 
 # virtual methods
-.method getActivity()Landroid/app/Activity;
+.method public getActivity()Landroid/app/Activity;
     .locals 0
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/fragment/app/FragmentHostCallback;->mActivity:Landroid/app/Activity;
 
     return-object p0
 .end method
 
-.method getContext()Landroid/content/Context;
+.method public getContext()Landroid/content/Context;
     .locals 0
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/fragment/app/FragmentHostCallback;->mContext:Landroid/content/Context;
 
     return-object p0
 .end method
 
-.method getHandler()Landroid/os/Handler;
+.method public getHandler()Landroid/os/Handler;
     .locals 0
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/fragment/app/FragmentHostCallback;->mHandler:Landroid/os/Handler;
 
     return-object p0
@@ -222,6 +225,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/fragment/app/FragmentHostCallback;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
@@ -234,6 +238,7 @@
 .method public onGetWindowAnimations()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/fragment/app/FragmentHostCallback;->mWindowAnimations:I
 
     return p0
@@ -395,6 +400,7 @@
 
     move-object v0, p0
 
+    .line 1
     iget-object v1, v0, Landroidx/fragment/app/FragmentHostCallback;->mActivity:Landroid/app/Activity;
 
     move-object v2, p2
@@ -415,6 +421,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 

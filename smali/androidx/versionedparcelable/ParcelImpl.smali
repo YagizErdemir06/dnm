@@ -40,6 +40,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/versionedparcelable/ParcelImpl$1;
 
     invoke-direct {v0}, Landroidx/versionedparcelable/ParcelImpl$1;-><init>()V
@@ -101,6 +102,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/versionedparcelable/ParcelImpl;->mParcel:Landroidx/versionedparcelable/VersionedParcelable;
 
     return-object p0
@@ -109,10 +111,12 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
+    .line 1
     new-instance p2, Landroidx/versionedparcelable/VersionedParcelParcel;
 
     invoke-direct {p2, p1}, Landroidx/versionedparcelable/VersionedParcelParcel;-><init>(Landroid/os/Parcel;)V
 
+    .line 2
     iget-object p0, p0, Landroidx/versionedparcelable/ParcelImpl;->mParcel:Landroidx/versionedparcelable/VersionedParcelable;
 
     invoke-virtual {p2, p0}, Landroidx/versionedparcelable/VersionedParcel;->writeVersionedParcelable(Landroidx/versionedparcelable/VersionedParcelable;)V

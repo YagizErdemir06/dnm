@@ -1,4 +1,4 @@
-.class Landroidx/constraintlayout/motion/widget/MotionLayout$MyTracker;
+.class public Landroidx/constraintlayout/motion/widget/MotionLayout$MyTracker;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field tracker:Landroid/view/VelocityTracker;
+.field public tracker:Landroid/view/VelocityTracker;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/constraintlayout/motion/widget/MotionLayout$MyTracker;
 
     invoke-direct {v0}, Landroidx/constraintlayout/motion/widget/MotionLayout$MyTracker;-><init>()V
@@ -41,6 +42,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,6 +51,7 @@
 .method public static obtain()Landroidx/constraintlayout/motion/widget/MotionLayout$MyTracker;
     .locals 2
 
+    .line 1
     sget-object v0, Landroidx/constraintlayout/motion/widget/MotionLayout$MyTracker;->me:Landroidx/constraintlayout/motion/widget/MotionLayout$MyTracker;
 
     invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
@@ -57,6 +60,7 @@
 
     iput-object v1, v0, Landroidx/constraintlayout/motion/widget/MotionLayout$MyTracker;->tracker:Landroid/view/VelocityTracker;
 
+    .line 2
     sget-object v0, Landroidx/constraintlayout/motion/widget/MotionLayout$MyTracker;->me:Landroidx/constraintlayout/motion/widget/MotionLayout$MyTracker;
 
     return-object v0
@@ -75,10 +79,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/motion/widget/MotionLayout$MyTracker;->tracker:Landroid/view/VelocityTracker;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
     :cond_0
@@ -88,10 +94,12 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/motion/widget/MotionLayout$MyTracker;->tracker:Landroid/view/VelocityTracker;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/VelocityTracker;->clear()V
 
     :cond_0
@@ -249,14 +257,17 @@
 .method public recycle()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/motion/widget/MotionLayout$MyTracker;->tracker:Landroid/view/VelocityTracker;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Landroid/view/VelocityTracker;->recycle()V
 
     const/4 v0, 0x0
 
+    .line 3
     iput-object v0, p0, Landroidx/constraintlayout/motion/widget/MotionLayout$MyTracker;->tracker:Landroid/view/VelocityTracker;
 
     :cond_0

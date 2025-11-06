@@ -77,14 +77,16 @@
 
     if-nez p1, :cond_3
 
+    .line 1
     :cond_0
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
+    invoke-virtual {p0}, Landroid/widget/ListView;->getPaddingLeft()I
 
     move-result v0
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
+    .line 2
+    invoke-virtual {p0}, Landroid/widget/ListView;->getPaddingTop()I
 
     move-result p1
 
@@ -93,14 +95,16 @@
     :cond_1
     iget p1, p0, Landroidx/appcompat/app/AlertController$RecycleListView;->mPaddingTopNoTitle:I
 
+    .line 3
     :goto_0
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
+    invoke-virtual {p0}, Landroid/widget/ListView;->getPaddingRight()I
 
     move-result v1
 
     if-eqz p2, :cond_2
 
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
+    .line 4
+    invoke-virtual {p0}, Landroid/widget/ListView;->getPaddingBottom()I
 
     move-result p2
 
@@ -109,8 +113,9 @@
     :cond_2
     iget p2, p0, Landroidx/appcompat/app/AlertController$RecycleListView;->mPaddingBottomNoButtons:I
 
+    .line 5
     :goto_1
-    invoke-virtual {p0, v0, p1, v1, p2}, Landroid/view/View;->setPadding(IIII)V
+    invoke-virtual {p0, v0, p1, v1, p2}, Landroid/widget/ListView;->setPadding(IIII)V
 
     :cond_3
     return-void

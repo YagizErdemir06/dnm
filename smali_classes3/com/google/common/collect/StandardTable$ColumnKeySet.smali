@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/StandardTable$ColumnKeySet;
+.class public Lcom/google/common/collect/StandardTable$ColumnKeySet;
 .super Lcom/google/common/collect/StandardTable$TableSet;
 .source "SourceFile"
 
@@ -22,7 +22,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/StandardTable;
+.field public final synthetic this$0:Lcom/google/common/collect/StandardTable;
 
 
 # direct methods
@@ -57,6 +57,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/StandardTable$ColumnKeySet;->this$0:Lcom/google/common/collect/StandardTable;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/StandardTable;->containsColumn(Ljava/lang/Object;)Z
@@ -76,6 +77,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/StandardTable$ColumnKeySet;->this$0:Lcom/google/common/collect/StandardTable;
 
     invoke-virtual {p0}, Lcom/google/common/collect/StandardTable;->createColumnKeyIterator()Ljava/util/Iterator;
@@ -98,6 +100,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     iget-object p0, p0, Lcom/google/common/collect/StandardTable$ColumnKeySet;->this$0:Lcom/google/common/collect/StandardTable;
 
@@ -111,20 +114,23 @@
 
     move-result-object p0
 
+    .line 2
     :cond_1
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_2
 
+    .line 3
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/Map;
 
+    .line 4
     invoke-interface {v1}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v2
@@ -135,20 +141,21 @@
 
     if-eqz v2, :cond_1
 
+    const/4 v0, 0x1
+
+    .line 5
     invoke-interface {v1}, Ljava/util/Map;->isEmpty()Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_2
+    if-eqz v1, :cond_1
 
+    .line 6
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V
-
-    :cond_2
-    const/4 v0, 0x1
 
     goto :goto_0
 
-    :cond_3
+    :cond_2
     return v0
 .end method
 
@@ -162,8 +169,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/StandardTable$ColumnKeySet;->this$0:Lcom/google/common/collect/StandardTable;
 
     iget-object p0, p0, Lcom/google/common/collect/StandardTable;->backingMap:Ljava/util/Map;
@@ -178,20 +187,23 @@
 
     const/4 v0, 0x0
 
+    .line 3
     :cond_0
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_1
 
+    .line 4
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/Map;
 
+    .line 5
     invoke-interface {v1}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v2
@@ -206,20 +218,21 @@
 
     if-eqz v2, :cond_0
 
+    const/4 v0, 0x1
+
+    .line 6
     invoke-interface {v1}, Ljava/util/Map;->isEmpty()Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_1
+    if-eqz v1, :cond_0
 
+    .line 7
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V
-
-    :cond_1
-    const/4 v0, 0x1
 
     goto :goto_0
 
-    :cond_2
+    :cond_1
     return v0
 .end method
 
@@ -233,8 +246,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/StandardTable$ColumnKeySet;->this$0:Lcom/google/common/collect/StandardTable;
 
     iget-object p0, p0, Lcom/google/common/collect/StandardTable;->backingMap:Ljava/util/Map;
@@ -249,20 +264,23 @@
 
     const/4 v0, 0x0
 
+    .line 3
     :cond_0
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_1
 
+    .line 4
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/Map;
 
+    .line 5
     invoke-interface {v1}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v2
@@ -273,26 +291,28 @@
 
     if-eqz v2, :cond_0
 
+    const/4 v0, 0x1
+
+    .line 6
     invoke-interface {v1}, Ljava/util/Map;->isEmpty()Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_1
+    if-eqz v1, :cond_0
 
+    .line 7
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V
-
-    :cond_1
-    const/4 v0, 0x1
 
     goto :goto_0
 
-    :cond_2
+    :cond_1
     return v0
 .end method
 
 .method public size()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/StandardTable$ColumnKeySet;->iterator()Ljava/util/Iterator;
 
     move-result-object p0

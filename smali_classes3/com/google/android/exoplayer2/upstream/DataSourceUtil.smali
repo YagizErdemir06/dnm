@@ -7,6 +7,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,6 +22,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 1
     :try_start_0
     invoke-interface {p0}, Lcom/google/android/exoplayer2/upstream/DataSource;->close()V
     :try_end_0
@@ -39,6 +41,7 @@
         }
     .end annotation
 
+    .line 1
     new-array v0, p1, [B
 
     const/4 v1, 0x0
@@ -48,6 +51,7 @@
 
     sub-int v2, p1, v1
 
+    .line 2
     invoke-interface {p0, v0, v1, v2}, Lcom/google/android/exoplayer2/upstream/DataReader;->read([BII)I
 
     move-result v2
@@ -60,6 +64,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -113,10 +118,12 @@
 
     if-eq v1, v3, :cond_2
 
+    .line 1
     array-length v1, v0
 
     if-ne v2, v1, :cond_1
 
+    .line 2
     array-length v1, v0
 
     mul-int/lit8 v1, v1, 0x2
@@ -125,6 +132,7 @@
 
     move-result-object v0
 
+    .line 3
     :cond_1
     array-length v1, v0
 
@@ -140,6 +148,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_2
     invoke-static {v0, v2}, Ljava/util/Arrays;->copyOf([BI)[B
 

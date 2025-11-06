@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/internal/zah;
+.class public final Lcom/google/android/gms/common/internal/zah;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field final synthetic zaa:Lcom/google/android/gms/common/api/internal/ConnectionCallbacks;
+.field public final synthetic zaa:Lcom/google/android/gms/common/api/internal/ConnectionCallbacks;
 
 
 # direct methods
@@ -30,6 +30,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/internal/zah;->zaa:Lcom/google/android/gms/common/api/internal/ConnectionCallbacks;
 
     invoke-interface {p0, p1}, Lcom/google/android/gms/common/api/internal/ConnectionCallbacks;->onConnected(Landroid/os/Bundle;)V
@@ -40,6 +41,7 @@
 .method public final onConnectionSuspended(I)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/internal/zah;->zaa:Lcom/google/android/gms/common/api/internal/ConnectionCallbacks;
 
     invoke-interface {p0, p1}, Lcom/google/android/gms/common/api/internal/ConnectionCallbacks;->onConnectionSuspended(I)V

@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/ref/WeakReference;
+.field private final a:Ljava/lang/ref/WeakReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference<",
@@ -29,9 +29,19 @@
 # direct methods
 .method public constructor <init>(Lcom/android/camera/snap/SnapService;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "service"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -45,10 +55,19 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "msg"
+        }
+    .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera/snap/SnapService$b;->a:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -60,6 +79,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget p1, p1, Landroid/os/Message;->what:I
 
@@ -78,10 +98,13 @@
 
     const-string v1, "stop service"
 
+    .line 3
     invoke-static {v0, v1, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {p0}, Lcom/android/camera/snap/SnapService;->b(Lcom/android/camera/snap/SnapService;)V
+    .line 4
+    invoke-static {p0}, Lcom/android/camera/snap/SnapService;->a(Lcom/android/camera/snap/SnapService;)V
 
+    .line 5
     invoke-virtual {p0}, Landroid/app/Service;->stopSelf()V
 
     :cond_2

@@ -1,4 +1,4 @@
-.class Landroidx/viewpager2/widget/ViewPager2$4;
+.class public Landroidx/viewpager2/widget/ViewPager2$4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/viewpager2/widget/ViewPager2;
+.field public final synthetic this$0:Landroidx/viewpager2/widget/ViewPager2;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/viewpager2/widget/ViewPager2;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/viewpager2/widget/ViewPager2$4;->this$0:Landroidx/viewpager2/widget/ViewPager2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +42,14 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p0
 
     check-cast p0, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
 
+    .line 2
     iget p1, p0, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
 
     const/4 v0, -0x1
@@ -59,6 +62,7 @@
 
     return-void
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 

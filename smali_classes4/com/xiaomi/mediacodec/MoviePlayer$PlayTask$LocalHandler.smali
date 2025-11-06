@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask$LocalHandler;
+.class public Lcom/xiaomi/mediacodec/MoviePlayer$PlayTask$LocalHandler;
 .super Landroid/os/Handler;
 .source "SourceFile"
 
@@ -38,6 +38,7 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
+    .line 1
     iget p0, p1, Landroid/os/Message;->what:I
 
     if-eqz p0, :cond_1
@@ -46,14 +47,17 @@
 
     if-ne p0, v0, :cond_0
 
+    .line 2
     iget-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p0, Lcom/xiaomi/mediacodec/MoviePlayer$PlayerFeedback;
 
+    .line 3
     invoke-interface {p0, v0}, Lcom/xiaomi/mediacodec/MoviePlayer$PlayerFeedback;->playbackStopped(I)V
 
     goto :goto_0
 
+    .line 4
     :cond_0
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -75,6 +79,7 @@
 
     throw p1
 
+    .line 5
     :cond_1
     iget-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -82,6 +87,7 @@
 
     const/4 p1, 0x0
 
+    .line 6
     invoke-interface {p0, p1}, Lcom/xiaomi/mediacodec/MoviePlayer$PlayerFeedback;->playbackStopped(I)V
 
     :goto_0

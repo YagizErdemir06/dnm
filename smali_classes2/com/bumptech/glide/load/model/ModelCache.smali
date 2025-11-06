@@ -71,6 +71,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/model/ModelCache;->cache:Lcom/bumptech/glide/util/LruCache;
 
     invoke-virtual {p0}, Lcom/bumptech/glide/util/LruCache;->clearMemory()V
@@ -89,16 +90,19 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1, p2, p3}, Lcom/bumptech/glide/load/model/ModelCache$ModelKey;->get(Ljava/lang/Object;II)Lcom/bumptech/glide/load/model/ModelCache$ModelKey;
 
     move-result-object p1
 
+    .line 2
     iget-object p0, p0, Lcom/bumptech/glide/load/model/ModelCache;->cache:Lcom/bumptech/glide/util/LruCache;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/util/LruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
+    .line 3
     invoke-virtual {p1}, Lcom/bumptech/glide/load/model/ModelCache$ModelKey;->release()V
 
     return-object p0
@@ -112,10 +116,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1, p2, p3}, Lcom/bumptech/glide/load/model/ModelCache$ModelKey;->get(Ljava/lang/Object;II)Lcom/bumptech/glide/load/model/ModelCache$ModelKey;
 
     move-result-object p1
 
+    .line 2
     iget-object p0, p0, Lcom/bumptech/glide/load/model/ModelCache;->cache:Lcom/bumptech/glide/util/LruCache;
 
     invoke-virtual {p0, p1, p4}, Lcom/bumptech/glide/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;

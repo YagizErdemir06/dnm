@@ -32,10 +32,10 @@
 
 .field private mDegree:I
 
-.field private onRecyclerItemClickListener:Ldi/b;
+.field private onRecyclerItemClickListener:Ld/o/v/a/g0/c/b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ldi/b<",
+            "Ld/o/v/a/g0/c/b<",
             "TT;>;"
         }
     .end annotation
@@ -56,6 +56,15 @@
 
 .method public constructor <init>(Ljava/util/List;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mDataList"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -77,31 +86,43 @@
 # virtual methods
 .method public declared-synchronized addData(Ljava/lang/Object;)V
     .locals 2
+    .annotation build Ld/d/a/x6/d;
+        ignore = false
+        key = "isSupportMimoji2"
+        type = 0x0
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "data"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)V"
         }
     .end annotation
 
-    .annotation build Lh7/d;
-        ignore = false
-        key = "isSupportMimoji2"
-        type = 0x0
-    .end annotation
-
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->mDataList:Ljava/util/List;
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->mDataList:Ljava/util/List;
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->mDataList:Ljava/util/List;
 
@@ -109,6 +130,7 @@
 
     move-result v0
 
+    .line 4
     iget-object v1, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->mDataList:Ljava/util/List;
 
     invoke-interface {v1, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -117,10 +139,12 @@
 
     if-eqz p1, :cond_1
 
+    .line 5
     invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemInserted(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 6
     :cond_1
     monitor-exit p0
 
@@ -146,6 +170,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->mDataList:Ljava/util/List;
     :try_end_0
@@ -166,6 +191,7 @@
 .method public getDegree()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->mDegree:I
 
     return p0
@@ -174,6 +200,7 @@
 .method public getItemCount()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->mDataList:Ljava/util/List;
 
     if-nez p0, :cond_0
@@ -193,13 +220,30 @@
 
 .method public getItemViewType(I)I
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "position"
+        }
+    .end annotation
 
     return p1
 .end method
 
 .method public isAvailablePosion(I)Z
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mPosition"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->getDataList()Ljava/util/List;
 
     move-result-object v0
@@ -231,6 +275,16 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "mBaseRecyclerViewHolder",
+            "i"
+        }
+    .end annotation
 
     .line 1
     check-cast p1, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerViewHolder;
@@ -250,6 +304,18 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000,
+            0x1000
+        }
+        names = {
+            "mBaseRecyclerViewHolder",
+            "position",
+            "payloads"
+        }
+    .end annotation
 
     .line 2
     check-cast p1, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerViewHolder;
@@ -265,6 +331,16 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "mBaseRecyclerViewHolder",
+            "i"
+        }
+    .end annotation
 
     return-void
 .end method
@@ -279,6 +355,19 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "mBaseRecyclerViewHolder",
+            "position",
+            "payloads"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -317,14 +406,14 @@
 
     if-nez v0, :cond_1
 
-    const-string v2, "data null error"
+    new-array v2, v1, [Ljava/lang/Object;
 
-    new-array v3, v1, [Ljava/lang/Object;
+    const-string v3, "BaseRecyclerAdapter"
 
-    const-string v4, "BaseRecyclerAdapter"
+    const-string v4, "data null error"
 
     .line 5
-    invoke-static {v4, v2, v3}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v2}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 6
     :cond_1
@@ -372,17 +461,17 @@
     .line 10
     iget-object p3, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p3}, Lz1/f;->v(Landroid/view/View;)V
+    invoke-static {p3}, Ld/d/a/f6/f;->v(Landroid/view/View;)V
 
     .line 11
-    iget-object p0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->onRecyclerItemClickListener:Ldi/b;
+    iget-object p0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->onRecyclerItemClickListener:Ld/o/v/a/g0/c/b;
 
     if-eqz p0, :cond_3
 
     .line 12
     iget-object p3, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-virtual {p1, p0, v0, p2, p3}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerViewHolder;->setClickListener(Ldi/b;Ljava/lang/Object;ILandroid/view/View;)V
+    invoke-virtual {p1, p0, v0, p2, p3}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerViewHolder;->setClickListener(Ld/o/v/a/g0/c/b;Ljava/lang/Object;ILandroid/view/View;)V
 
     :cond_3
     :goto_1
@@ -394,6 +483,17 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "viewGroup",
+            "i"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -414,6 +514,17 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "viewGroup",
+            "i"
+        }
+    .end annotation
+
     .line 1
     invoke-virtual {p0, p1, p2}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerViewHolder;
 
@@ -431,6 +542,17 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "viewGroup",
+            "i"
+        }
+    .end annotation
+
     .line 2
     invoke-virtual {p0, p1, p2}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->onCreateBaseRecyclerViewHolder(Landroid/view/ViewGroup;I)Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerViewHolder;
 
@@ -441,6 +563,15 @@
 
 .method public declared-synchronized setDataList(Ljava/util/List;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mDdataList"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -451,13 +582,16 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iput-object p1, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->mDataList:Ljava/util/List;
 
+    .line 2
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     monitor-exit p0
 
     return-void
@@ -470,24 +604,43 @@
     throw p1
 .end method
 
-.method public setOnRecyclerItemClickListener(Ldi/b;)V
+.method public setOnRecyclerItemClickListener(Ld/o/v/a/g0/c/b;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "onRecyclerItemClickListener"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ldi/b<",
+            "Ld/o/v/a/g0/c/b<",
             "TT;>;)V"
         }
     .end annotation
 
-    iput-object p1, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->onRecyclerItemClickListener:Ldi/b;
+    .line 1
+    iput-object p1, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->onRecyclerItemClickListener:Ld/o/v/a/g0/c/b;
 
     return-void
 .end method
 
 .method public setRotation(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "degree"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->mDegree:I
 
     return-void
@@ -495,20 +648,32 @@
 
 .method public declared-synchronized updateData(ILjava/lang/Object;)V
     .locals 1
+    .annotation build Ld/d/a/x6/d;
+        ignore = false
+        key = "isSupportMimoji2"
+        type = 0x0
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "position",
+            "data"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(ITT;)V"
         }
     .end annotation
 
-    .annotation build Lh7/d;
-        ignore = false
-        key = "isSupportMimoji2"
-        type = 0x0
-    .end annotation
-
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->mDataList:Ljava/util/List;
 
@@ -516,10 +681,12 @@
 
     if-nez p1, :cond_0
 
+    .line 2
     invoke-virtual {p0, p2}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->addData(Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     :cond_0
     monitor-exit p0
 
@@ -528,6 +695,7 @@
     :cond_1
     if-ltz p1, :cond_4
 
+    .line 4
     :try_start_1
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -537,6 +705,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_2
     iget-object v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->mDataList:Ljava/util/List;
 
@@ -546,28 +715,34 @@
 
     if-ne p1, v0, :cond_3
 
+    .line 6
     invoke-virtual {p0, p2}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->addData(Ljava/lang/Object;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 7
     monitor-exit p0
 
     return-void
 
+    .line 8
     :cond_3
     :try_start_2
     iget-object v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->mDataList:Ljava/util/List;
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
+    .line 9
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemChanged(I)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 10
     monitor-exit p0
 
     return-void
 
+    .line 11
     :cond_4
     :goto_0
     monitor-exit p0

@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl$VoiceRecordListener;
+.class public Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl$VoiceRecordListener;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;
+.field public final synthetic this$0:Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl$VoiceRecordListener;->this$0:Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,12 +44,14 @@
 .method public onRecordCreateError()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl$VoiceRecordListener;->this$0:Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;->access$502(Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;Z)Z
 
+    .line 2
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl$VoiceRecordListener;->this$0:Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;->access$000(Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -57,6 +60,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object p0, p0, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl$VoiceRecordListener;->this$0:Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;
 
     invoke-static {p0}, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;->access$000(Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -72,6 +76,7 @@
 .method public onRecordRelease()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl$VoiceRecordListener;->this$0:Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;->access$000(Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -80,6 +85,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl$VoiceRecordListener;->this$0:Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;
 
     invoke-static {p0}, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;->access$000(Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -95,6 +101,7 @@
 .method public onRecording([BI)V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl$VoiceRecordListener;->this$0:Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;->access$300(Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;)Z
@@ -103,12 +110,15 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     new-array v0, p2, [B
 
     const/4 v1, 0x0
 
+    .line 3
     invoke-static {p1, v1, v0, v1, p2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 4
     iget-object p1, p0, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl$VoiceRecordListener;->this$0:Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;
 
     invoke-static {p1}, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;->access$400(Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;)Landroid/os/Handler;
@@ -121,18 +131,23 @@
 
     move-result-object p1
 
+    .line 5
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
     const-string v2, "data"
 
+    .line 6
     invoke-virtual {v1, v2, v0}, Landroid/os/Bundle;->putByteArray(Ljava/lang/String;[B)V
 
+    .line 7
     invoke-virtual {p1, v1}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
+    .line 8
     iput p2, p1, Landroid/os/Message;->arg1:I
 
+    .line 9
     iget-object p0, p0, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl$VoiceRecordListener;->this$0:Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;
 
     invoke-static {p0}, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;->access$400(Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;)Landroid/os/Handler;
@@ -148,6 +163,7 @@
 .method public onRecordingEnd()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl$VoiceRecordListener;->this$0:Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;->access$100(Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;)Z
@@ -156,6 +172,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl$VoiceRecordListener;->this$0:Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;
 
     invoke-static {p0}, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;->access$200(Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;)Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;
@@ -171,12 +188,14 @@
 .method public onRecordingFailed()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl$VoiceRecordListener;->this$0:Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;->access$502(Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;Z)Z
 
+    .line 2
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl$VoiceRecordListener;->this$0:Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;->access$000(Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -185,6 +204,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object p0, p0, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl$VoiceRecordListener;->this$0:Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;
 
     invoke-static {p0}, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;->access$000(Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -200,6 +220,7 @@
 .method public onRecordingStart()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl$VoiceRecordListener;->this$0:Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;->access$000(Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -208,6 +229,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl$VoiceRecordListener;->this$0:Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;->access$000(Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;)Lcom/xiaomi/asr/engine/WVPListener;
@@ -216,6 +238,7 @@
 
     invoke-interface {v0}, Lcom/xiaomi/asr/engine/WVPListener;->onStartAudio()V
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl$VoiceRecordListener;->this$0:Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;
 
@@ -225,6 +248,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     iget-object p0, p0, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl$VoiceRecordListener;->this$0:Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;
 
     invoke-static {p0}, Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;->access$200(Lcom/xiaomi/asr/engine/impl/MultiWakeupEngineImpl;)Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;

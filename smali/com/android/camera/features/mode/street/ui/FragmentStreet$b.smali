@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field public a:I
+.field private a:I
 
-.field public b:Ljava/util/List;
+.field private b:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -33,6 +33,19 @@
 # direct methods
 .method public constructor <init>(Lcom/android/camera/features/mode/street/ui/FragmentStreet;ILjava/util/List;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x0,
+            0x0
+        }
+        names = {
+            "this$0",
+            "degree",
+            "images"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -42,14 +55,17 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$b;->c:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p2, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$b;->a:I
 
     if-ltz p2, :cond_0
 
+    .line 3
     rem-int/lit16 p2, p2, 0x168
 
     goto :goto_0
@@ -62,8 +78,10 @@
     :goto_0
     iput p2, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$b;->a:I
 
+    .line 4
     iput-object p3, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$b;->b:Ljava/util/List;
 
+    .line 5
     invoke-interface {p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -81,11 +99,12 @@
 
     check-cast p2, Landroid/widget/ImageView;
 
+    .line 6
     iget p3, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$b;->a:I
 
     int-to-float p3, p3
 
-    invoke-virtual {p2, p3}, Landroid/view/View;->setRotation(F)V
+    invoke-virtual {p2, p3}, Landroid/widget/ImageView;->setRotation(F)V
 
     goto :goto_1
 
@@ -93,17 +112,10 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/android/camera/features/mode/street/ui/FragmentStreet$b;Landroid/animation/ValueAnimator;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera/features/mode/street/ui/FragmentStreet$b;->d(Landroid/animation/ValueAnimator;)V
-
-    return-void
-.end method
-
-.method private synthetic d(Landroid/animation/ValueAnimator;)V
+.method private synthetic c(Landroid/animation/ValueAnimator;)V
     .locals 2
 
+    .line 1
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -114,8 +126,10 @@
 
     move-result p1
 
+    .line 2
     iput p1, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$b;->a:I
 
+    .line 3
     iget-object p1, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$b;->b:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -135,6 +149,7 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
+    .line 4
     iget v1, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$b;->a:I
 
     int-to-float v1, v1
@@ -149,13 +164,22 @@
 
 
 # virtual methods
-.method public b(I)V
+.method public a(I)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "newDegree"
+        }
+    .end annotation
 
     const/16 v0, 0x168
 
     if-ltz p1, :cond_0
 
+    .line 1
     rem-int/2addr p1, v0
 
     goto :goto_0
@@ -165,6 +189,7 @@
 
     add-int/2addr p1, v0
 
+    .line 2
     :goto_0
     iget v1, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$b;->a:I
 
@@ -229,26 +254,40 @@
     :goto_3
     move v3, v0
 
+    .line 3
     :goto_4
-    invoke-virtual {p0, v1, v3}, Lcom/android/camera/features/mode/street/ui/FragmentStreet$b;->c(II)Landroid/animation/ValueAnimator;
+    invoke-virtual {p0, v1, v3}, Lcom/android/camera/features/mode/street/ui/FragmentStreet$b;->b(II)Landroid/animation/ValueAnimator;
 
     move-result-object v0
 
-    new-instance v1, Lt5/h;
+    .line 4
+    new-instance v1, Ld/d/a/t6/b/a0/o/e;
 
-    invoke-direct {v1, p0}, Lt5/h;-><init>(Lcom/android/camera/features/mode/street/ui/FragmentStreet$b;)V
+    invoke-direct {v1, p0}, Ld/d/a/t6/b/a0/o/e;-><init>(Lcom/android/camera/features/mode/street/ui/FragmentStreet$b;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
+    .line 5
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
+    .line 6
     iput p1, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$b;->a:I
 
     return-void
 .end method
 
-.method public c(II)Landroid/animation/ValueAnimator;
+.method public b(II)Landroid/animation/ValueAnimator;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "start",
+            "end"
+        }
+    .end annotation
 
     const/4 p0, 0x2
 
@@ -262,21 +301,33 @@
 
     aput p2, p0, p1
 
+    .line 1
     invoke-static {p0}, Landroid/animation/ValueAnimator;->ofInt([I)Landroid/animation/ValueAnimator;
 
     move-result-object p0
 
-    new-instance p1, Lps/s;
+    .line 2
+    new-instance p1, Lk/j0/k/r;
 
-    invoke-direct {p1}, Lps/s;-><init>()V
+    invoke-direct {p1}, Lk/j0/k/r;-><init>()V
 
     invoke-virtual {p0, p1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
+    .line 3
     invoke-virtual {p0}, Landroid/animation/ValueAnimator;->removeAllUpdateListeners()V
 
     const-wide/16 p1, 0xc8
 
+    .line 4
     invoke-virtual {p0, p1, p2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     return-object p0
+.end method
+
+.method public synthetic d(Landroid/animation/ValueAnimator;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera/features/mode/street/ui/FragmentStreet$b;->c(Landroid/animation/ValueAnimator;)V
+
+    return-void
 .end method

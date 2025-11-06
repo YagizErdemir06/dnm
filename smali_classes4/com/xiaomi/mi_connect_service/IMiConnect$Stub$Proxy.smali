@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;
+.class public Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -29,8 +29,10 @@
 .method public constructor <init>(Landroid/os/IBinder;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-void
@@ -46,10 +48,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -57,12 +61,16 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 6
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x2c
@@ -75,12 +83,14 @@
 
     if-nez p0, :cond_0
 
+    .line 7
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -91,24 +101,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 9
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 10
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
 
+    .line 11
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
+    .line 12
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 14
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
@@ -116,10 +132,13 @@
     :catchall_0
     move-exception p0
 
+    .line 15
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     throw p0
 .end method
 
@@ -131,10 +150,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -142,12 +163,16 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 6
     invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
 
     const/4 v2, 0x0
@@ -161,9 +186,11 @@
     :cond_0
     move v3, v2
 
+    .line 7
     :goto_0
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 8
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x8
@@ -174,12 +201,14 @@
 
     if-nez p0, :cond_1
 
+    .line 9
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
+    .line 10
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -188,20 +217,25 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 11
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 12
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
 
+    .line 13
     :cond_1
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 14
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 15
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -209,10 +243,13 @@
     :catchall_0
     move-exception p0
 
+    .line 16
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 18
     throw p0
 .end method
 
@@ -224,10 +261,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -235,12 +274,16 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 6
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x2b
@@ -253,12 +296,14 @@
 
     if-nez p0, :cond_0
 
+    .line 7
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -269,24 +314,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 9
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 10
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
 
+    .line 11
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
+    .line 12
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 14
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
@@ -294,16 +345,20 @@
     :catchall_0
     move-exception p0
 
+    .line 15
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     throw p0
 .end method
 
 .method public asBinder()Landroid/os/IBinder;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object p0
@@ -317,10 +372,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -328,12 +385,16 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 6
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x28
@@ -346,12 +407,14 @@
 
     if-nez p0, :cond_0
 
+    .line 7
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -362,24 +425,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 9
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 10
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
 
+    .line 11
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
+    .line 12
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 14
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
@@ -387,10 +456,13 @@
     :catchall_0
     move-exception p0
 
+    .line 15
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     throw p0
 .end method
 
@@ -402,10 +474,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -413,12 +487,16 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 6
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x29
@@ -431,12 +509,14 @@
 
     if-nez p0, :cond_0
 
+    .line 7
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -447,24 +527,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 9
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 10
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
 
+    .line 11
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
+    .line 12
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 14
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
@@ -472,10 +558,13 @@
     :catchall_0
     move-exception p0
 
+    .line 15
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     throw p0
 .end method
 
@@ -487,10 +576,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -498,14 +589,19 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 6
     invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 7
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x33
@@ -518,12 +614,14 @@
 
     if-nez p0, :cond_0
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 9
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -532,20 +630,25 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 10
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 11
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
 
+    .line 12
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 14
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -553,10 +656,13 @@
     :catchall_0
     move-exception p0
 
+    .line 15
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     throw p0
 .end method
 
@@ -568,10 +674,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -579,12 +687,16 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 6
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x18
@@ -597,12 +709,14 @@
 
     if-nez p0, :cond_0
 
+    .line 7
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -613,24 +727,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 9
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 10
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
 
+    .line 11
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
+    .line 12
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 14
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
@@ -638,10 +758,13 @@
     :catchall_0
     move-exception p0
 
+    .line 15
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     throw p0
 .end method
 
@@ -653,10 +776,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -664,12 +789,16 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 6
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x1c
@@ -682,12 +811,14 @@
 
     if-nez p0, :cond_0
 
+    .line 7
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -698,24 +829,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 9
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 10
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
 
+    .line 11
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
+    .line 12
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 14
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
@@ -723,10 +860,13 @@
     :catchall_0
     move-exception p0
 
+    .line 15
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     throw p0
 .end method
 
@@ -738,10 +878,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -749,14 +891,18 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
     if-eqz p3, :cond_0
 
+    .line 6
     invoke-interface {p3}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
 
     move-result-object v2
@@ -769,6 +915,7 @@
     :goto_0
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
+    .line 7
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x11
@@ -781,12 +928,14 @@
 
     if-nez p0, :cond_1
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
+    .line 9
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -797,24 +946,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 10
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 11
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
 
+    .line 12
     :cond_1
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 14
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 15
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
@@ -822,10 +977,13 @@
     :catchall_0
     move-exception p0
 
+    .line 16
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 18
     throw p0
 .end method
 
@@ -837,10 +995,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -848,12 +1008,16 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 6
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x30
@@ -866,12 +1030,14 @@
 
     if-nez p0, :cond_0
 
+    .line 7
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -880,20 +1046,25 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 9
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 10
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
 
+    .line 11
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 12
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 13
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -901,10 +1072,13 @@
     :catchall_0
     move-exception p0
 
+    .line 14
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 15
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     throw p0
 .end method
 
@@ -916,10 +1090,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -927,12 +1103,16 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 6
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0xc
@@ -945,12 +1125,14 @@
 
     if-nez p0, :cond_0
 
+    .line 7
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -959,20 +1141,25 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 9
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 10
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
 
+    .line 11
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 12
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 13
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -980,10 +1167,13 @@
     :catchall_0
     move-exception p0
 
+    .line 14
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 15
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     throw p0
 .end method
 
@@ -995,10 +1185,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -1006,12 +1198,16 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 6
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x12
@@ -1024,12 +1220,14 @@
 
     if-nez p0, :cond_0
 
+    .line 7
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -1040,24 +1238,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 9
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 10
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
 
+    .line 11
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
+    .line 12
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 14
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
@@ -1065,10 +1269,13 @@
     :catchall_0
     move-exception p0
 
+    .line 15
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     throw p0
 .end method
 
@@ -1080,10 +1287,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -1091,8 +1300,10 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x20
@@ -1105,12 +1316,14 @@
 
     if-nez p0, :cond_0
 
+    .line 5
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 6
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -1121,24 +1334,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 7
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 8
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-object p0
 
+    .line 9
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
+    .line 10
     invoke-virtual {v1}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 11
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 12
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-object p0
@@ -1146,10 +1365,13 @@
     :catchall_0
     move-exception p0
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 14
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 15
     throw p0
 .end method
 
@@ -1161,10 +1383,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -1172,14 +1396,19 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 6
     invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 7
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0xa
@@ -1192,12 +1421,14 @@
 
     if-nez p0, :cond_0
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 9
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -1206,20 +1437,25 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 10
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 11
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
 
+    .line 12
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 14
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -1227,10 +1463,13 @@
     :catchall_0
     move-exception p0
 
+    .line 15
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     throw p0
 .end method
 
@@ -1242,10 +1481,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -1253,12 +1494,16 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 6
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x27
@@ -1271,12 +1516,14 @@
 
     if-nez p0, :cond_0
 
+    .line 7
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -1287,24 +1534,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 9
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 10
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
 
+    .line 11
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
+    .line 12
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 14
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
@@ -1312,10 +1565,13 @@
     :catchall_0
     move-exception p0
 
+    .line 15
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     throw p0
 .end method
 
@@ -1327,10 +1583,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -1338,12 +1596,16 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 6
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x1d
@@ -1356,12 +1618,14 @@
 
     if-nez p0, :cond_0
 
+    .line 7
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -1372,24 +1636,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 9
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 10
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
 
+    .line 11
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
+    .line 12
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 14
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
@@ -1397,10 +1667,13 @@
     :catchall_0
     move-exception p0
 
+    .line 15
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     throw p0
 .end method
 
@@ -1412,10 +1685,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -1423,8 +1698,10 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0xd
@@ -1437,12 +1714,14 @@
 
     if-nez p0, :cond_0
 
+    .line 5
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 6
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -1453,24 +1732,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 7
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 8
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-object p0
 
+    .line 9
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
+    .line 10
     invoke-virtual {v1}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 11
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 12
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-object p0
@@ -1478,10 +1763,13 @@
     :catchall_0
     move-exception p0
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 14
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 15
     throw p0
 .end method
 
@@ -1501,10 +1789,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -1512,8 +1802,10 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x6
@@ -1526,12 +1818,14 @@
 
     if-nez p0, :cond_0
 
+    .line 5
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 6
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -1542,24 +1836,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 7
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 8
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
 
+    .line 9
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
+    .line 10
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 11
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 12
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
@@ -1567,10 +1867,13 @@
     :catchall_0
     move-exception p0
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 14
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 15
     throw p0
 .end method
 
@@ -1582,10 +1885,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -1593,12 +1898,16 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 6
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x2a
@@ -1611,12 +1920,14 @@
 
     if-nez p0, :cond_0
 
+    .line 7
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -1627,24 +1938,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 9
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 10
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
 
+    .line 11
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
+    .line 12
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 14
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
@@ -1652,10 +1969,13 @@
     :catchall_0
     move-exception p0
 
+    .line 15
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     throw p0
 .end method
 
@@ -1667,10 +1987,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -1678,12 +2000,16 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 6
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x2f
@@ -1696,12 +2022,14 @@
 
     if-nez p0, :cond_0
 
+    .line 7
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -1710,20 +2038,25 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 9
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 10
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
 
+    .line 11
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 12
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 13
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -1731,10 +2064,13 @@
     :catchall_0
     move-exception p0
 
+    .line 14
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 15
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     throw p0
 .end method
 
@@ -1746,10 +2082,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -1757,16 +2095,22 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 6
     invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 7
     invoke-virtual {v0, p4}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 8
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0xf
@@ -1779,12 +2123,14 @@
 
     if-nez p0, :cond_0
 
+    .line 9
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 10
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -1795,24 +2141,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 11
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 12
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
 
+    .line 13
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
+    .line 14
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 15
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
@@ -1820,10 +2172,13 @@
     :catchall_0
     move-exception p0
 
+    .line 17
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 18
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 19
     throw p0
 .end method
 
@@ -1835,10 +2190,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -1846,12 +2203,16 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 6
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x31
@@ -1864,12 +2225,14 @@
 
     if-nez p0, :cond_0
 
+    .line 7
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -1878,20 +2241,25 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 9
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 10
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
 
+    .line 11
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 12
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 13
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -1899,10 +2267,13 @@
     :catchall_0
     move-exception p0
 
+    .line 14
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 15
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     throw p0
 .end method
 
@@ -1914,10 +2285,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -1925,14 +2298,18 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
     if-eqz p3, :cond_0
 
+    .line 6
     invoke-interface {p3}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
 
     move-result-object v2
@@ -1945,6 +2322,7 @@
     :goto_0
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
+    .line 7
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x13
@@ -1957,12 +2335,14 @@
 
     if-nez p0, :cond_1
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
+    .line 9
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -1973,24 +2353,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 10
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 11
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-object p0
 
+    .line 12
     :cond_1
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 14
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 15
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-object p0
@@ -1998,10 +2384,13 @@
     :catchall_0
     move-exception p0
 
+    .line 16
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 18
     throw p0
 .end method
 
@@ -2013,10 +2402,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -2024,14 +2415,18 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
     if-eqz p3, :cond_0
 
+    .line 6
     invoke-interface {p3}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
 
     move-result-object v2
@@ -2044,6 +2439,7 @@
     :goto_0
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
+    .line 7
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x19
@@ -2056,12 +2452,14 @@
 
     if-nez p0, :cond_1
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
+    .line 9
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -2072,24 +2470,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 10
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 11
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
 
+    .line 12
     :cond_1
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 14
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 15
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
@@ -2097,10 +2501,13 @@
     :catchall_0
     move-exception p0
 
+    .line 16
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 18
     throw p0
 .end method
 
@@ -2112,10 +2519,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -2123,10 +2532,12 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
     if-eqz p1, :cond_0
 
+    .line 4
     invoke-interface {p1}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
 
     move-result-object v2
@@ -2139,6 +2550,7 @@
     :goto_0
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
+    .line 5
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x24
@@ -2151,12 +2563,14 @@
 
     if-nez p0, :cond_1
 
+    .line 6
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
+    .line 7
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -2167,24 +2581,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 8
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 9
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
 
+    .line 10
     :cond_1
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
+    .line 11
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 12
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 13
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
@@ -2192,10 +2612,13 @@
     :catchall_0
     move-exception p0
 
+    .line 14
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 15
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     throw p0
 .end method
 
@@ -2207,10 +2630,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -2218,14 +2643,19 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 6
     invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 7
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x9
@@ -2238,12 +2668,14 @@
 
     if-nez p0, :cond_0
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 9
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -2252,20 +2684,25 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 10
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 11
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
 
+    .line 12
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 14
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -2273,10 +2710,13 @@
     :catchall_0
     move-exception p0
 
+    .line 15
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     throw p0
 .end method
 
@@ -2288,10 +2728,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -2299,12 +2741,16 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 6
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x14
@@ -2317,12 +2763,14 @@
 
     if-nez p0, :cond_0
 
+    .line 7
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -2333,24 +2781,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 9
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 10
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-object p0
 
+    .line 11
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
+    .line 12
     invoke-virtual {v1}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 14
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-object p0
@@ -2358,10 +2812,13 @@
     :catchall_0
     move-exception p0
 
+    .line 15
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     throw p0
 .end method
 
@@ -2373,10 +2830,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -2384,14 +2843,19 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 6
     invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 7
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x7
@@ -2404,12 +2868,14 @@
 
     if-nez p0, :cond_0
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 9
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -2418,20 +2884,25 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 10
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 11
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
 
+    .line 12
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 14
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -2439,10 +2910,13 @@
     :catchall_0
     move-exception p0
 
+    .line 15
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     throw p0
 .end method
 
@@ -2454,10 +2928,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -2465,12 +2941,16 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 6
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x1b
@@ -2483,12 +2963,14 @@
 
     if-nez p0, :cond_0
 
+    .line 7
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -2499,24 +2981,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 9
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 10
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
 
+    .line 11
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
+    .line 12
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 14
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
@@ -2524,10 +3012,13 @@
     :catchall_0
     move-exception p0
 
+    .line 15
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     throw p0
 .end method
 
@@ -2539,10 +3030,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -2550,16 +3043,22 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 6
     invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 7
     invoke-virtual {v0, p4}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 8
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0xb
@@ -2572,12 +3071,14 @@
 
     if-nez p0, :cond_0
 
+    .line 9
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 10
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -2586,20 +3087,25 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 11
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 12
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
 
+    .line 13
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 14
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 15
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -2607,10 +3113,13 @@
     :catchall_0
     move-exception p0
 
+    .line 16
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 18
     throw p0
 .end method
 
@@ -2622,10 +3131,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -2633,14 +3144,19 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 6
     invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 7
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x34
@@ -2653,12 +3169,14 @@
 
     if-nez p0, :cond_0
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 9
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -2667,20 +3185,25 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 10
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 11
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
 
+    .line 12
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 14
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -2688,10 +3211,13 @@
     :catchall_0
     move-exception p0
 
+    .line 15
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     throw p0
 .end method
 
@@ -2703,10 +3229,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -2714,14 +3242,18 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     if-eqz p3, :cond_0
 
+    .line 6
     invoke-interface {p3}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
 
     move-result-object v2
@@ -2734,6 +3266,7 @@
     :goto_0
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
+    .line 7
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x1
@@ -2746,12 +3279,14 @@
 
     if-nez p0, :cond_1
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
+    .line 9
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -2760,20 +3295,25 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 10
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 11
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
 
+    .line 12
     :cond_1
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 14
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -2781,10 +3321,13 @@
     :catchall_0
     move-exception p0
 
+    .line 15
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     throw p0
 .end method
 
@@ -2796,10 +3339,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -2807,12 +3352,16 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 6
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x16
@@ -2825,12 +3374,14 @@
 
     if-nez p0, :cond_0
 
+    .line 7
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -2841,24 +3392,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 9
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 10
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
 
+    .line 11
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
+    .line 12
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 14
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
@@ -2866,10 +3423,13 @@
     :catchall_0
     move-exception p0
 
+    .line 15
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     throw p0
 .end method
 
@@ -2881,10 +3441,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -2892,14 +3454,18 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     if-eqz p3, :cond_0
 
+    .line 6
     invoke-interface {p3}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
 
     move-result-object v2
@@ -2912,6 +3478,7 @@
     :goto_0
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
+    .line 7
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0xe
@@ -2924,12 +3491,14 @@
 
     if-nez p0, :cond_1
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
+    .line 9
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -2940,24 +3509,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 10
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 11
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
 
+    .line 12
     :cond_1
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 14
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 15
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
@@ -2965,10 +3540,13 @@
     :catchall_0
     move-exception p0
 
+    .line 16
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 18
     throw p0
 .end method
 
@@ -2980,10 +3558,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -2991,18 +3571,25 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 6
     invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 7
     invoke-virtual {v0, p4}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 8
     invoke-virtual {v0, p5}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 9
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x2
@@ -3015,12 +3602,14 @@
 
     if-nez p0, :cond_0
 
+    .line 10
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 11
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object v2
@@ -3039,20 +3628,25 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 12
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 13
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
 
+    .line 14
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 15
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -3060,10 +3654,13 @@
     :catchall_0
     move-exception p0
 
+    .line 17
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 18
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 19
     throw p0
 .end method
 
@@ -3075,10 +3672,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -3086,12 +3685,16 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 6
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x1a
@@ -3104,12 +3707,14 @@
 
     if-nez p0, :cond_0
 
+    .line 7
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -3120,24 +3725,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 9
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 10
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-object p0
 
+    .line 11
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
+    .line 12
     invoke-virtual {v1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 14
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-object p0
@@ -3145,10 +3756,13 @@
     :catchall_0
     move-exception p0
 
+    .line 15
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     throw p0
 .end method
 
@@ -3160,10 +3774,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -3171,18 +3787,25 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 6
     invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 7
     invoke-virtual {v0, p4}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 8
     invoke-virtual {v0, p5}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 9
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x4
@@ -3195,12 +3818,14 @@
 
     if-nez p0, :cond_0
 
+    .line 10
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 11
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object v2
@@ -3219,20 +3844,25 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 12
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 13
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
 
+    .line 14
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 15
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -3240,10 +3870,13 @@
     :catchall_0
     move-exception p0
 
+    .line 17
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 18
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 19
     throw p0
 .end method
 
@@ -3255,10 +3888,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -3266,12 +3901,16 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 6
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x15
@@ -3284,12 +3923,14 @@
 
     if-nez p0, :cond_0
 
+    .line 7
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -3300,24 +3941,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 9
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 10
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
 
+    .line 11
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
+    .line 12
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 14
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
@@ -3325,10 +3972,13 @@
     :catchall_0
     move-exception p0
 
+    .line 15
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     throw p0
 .end method
 
@@ -3340,10 +3990,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -3351,20 +4003,28 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 6
     invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 7
     invoke-virtual {v0, p4}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 8
     invoke-virtual {v0, p5}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 9
     invoke-virtual {v0, p6}, Landroid/os/Parcel;->writeIntArray([I)V
 
+    .line 10
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x1f
@@ -3377,12 +4037,14 @@
 
     if-nez p0, :cond_0
 
+    .line 11
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 12
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object v2
@@ -3403,20 +4065,25 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 14
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
 
+    .line 15
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 16
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -3424,10 +4091,13 @@
     :catchall_0
     move-exception p0
 
+    .line 18
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 19
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 20
     throw p0
 .end method
 
@@ -3439,10 +4109,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -3450,12 +4122,16 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 6
     invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
 
     const/4 v2, 0x0
@@ -3469,11 +4145,13 @@
     :cond_0
     move v3, v2
 
+    .line 7
     :goto_0
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeInt(I)V
 
     if-eqz p5, :cond_1
 
+    .line 8
     invoke-interface {p5}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
 
     move-result-object v3
@@ -3486,6 +4164,7 @@
     :goto_1
     invoke-virtual {v0, v3}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
+    .line 9
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v3, 0x25
@@ -3496,12 +4175,14 @@
 
     if-nez p0, :cond_2
 
+    .line 10
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_2
 
+    .line 11
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object v2
@@ -3522,24 +4203,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 12
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 13
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-wide p0
 
+    .line 14
     :cond_2
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
+    .line 15
     invoke-virtual {v1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 16
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-wide p0
@@ -3547,10 +4234,13 @@
     :catchall_0
     move-exception p0
 
+    .line 18
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 19
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 20
     throw p0
 .end method
 
@@ -3562,10 +4252,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -3573,12 +4265,15 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
     if-eqz p2, :cond_0
 
+    .line 5
     invoke-interface {p2}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
 
     move-result-object v2
@@ -3591,8 +4286,10 @@
     :goto_0
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
+    .line 6
     invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 7
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x23
@@ -3605,12 +4302,14 @@
 
     if-nez p0, :cond_1
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
+    .line 9
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -3621,24 +4320,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 10
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 11
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
 
+    .line 12
     :cond_1
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 14
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 15
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
@@ -3646,10 +4351,13 @@
     :catchall_0
     move-exception p0
 
+    .line 16
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 18
     throw p0
 .end method
 
@@ -3661,10 +4369,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -3672,10 +4382,13 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 5
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x3
@@ -3688,12 +4401,14 @@
 
     if-nez p0, :cond_0
 
+    .line 6
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 7
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -3702,20 +4417,25 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 8
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 9
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
 
+    .line 10
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 11
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 12
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -3723,10 +4443,13 @@
     :catchall_0
     move-exception p0
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 14
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 15
     throw p0
 .end method
 
@@ -3738,10 +4461,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -3749,12 +4474,16 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 6
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x22
@@ -3767,12 +4496,14 @@
 
     if-nez p0, :cond_0
 
+    .line 7
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -3783,24 +4514,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 9
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 10
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
 
+    .line 11
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
+    .line 12
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 14
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
@@ -3808,10 +4545,13 @@
     :catchall_0
     move-exception p0
 
+    .line 15
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     throw p0
 .end method
 
@@ -3823,10 +4563,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -3834,10 +4576,13 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 5
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x5
@@ -3850,12 +4595,14 @@
 
     if-nez p0, :cond_0
 
+    .line 6
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 7
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -3864,20 +4611,25 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 8
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 9
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
 
+    .line 10
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 11
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 12
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -3885,10 +4637,13 @@
     :catchall_0
     move-exception p0
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 14
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 15
     throw p0
 .end method
 
@@ -3900,10 +4655,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -3911,12 +4668,16 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 6
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x21
@@ -3929,12 +4690,14 @@
 
     if-nez p0, :cond_0
 
+    .line 7
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -3945,24 +4708,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 9
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 10
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
 
+    .line 11
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
+    .line 12
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 14
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
@@ -3970,10 +4739,13 @@
     :catchall_0
     move-exception p0
 
+    .line 15
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     throw p0
 .end method
 
@@ -3985,10 +4757,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -3996,10 +4770,13 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1, p2}, Landroid/os/Parcel;->writeLong(J)V
 
+    .line 5
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x26
@@ -4012,12 +4789,14 @@
 
     if-nez p0, :cond_0
 
+    .line 6
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 7
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -4026,20 +4805,25 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 8
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 9
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
 
+    .line 10
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 11
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 12
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -4047,10 +4831,13 @@
     :catchall_0
     move-exception p0
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 14
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 15
     throw p0
 .end method
 
@@ -4062,10 +4849,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -4073,16 +4862,21 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 6
     invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     if-eqz p4, :cond_0
 
+    .line 7
     invoke-interface {p4}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
 
     move-result-object v2
@@ -4095,6 +4889,7 @@
     :goto_0
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
+    .line 8
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x10
@@ -4107,12 +4902,14 @@
 
     if-nez p0, :cond_1
 
+    .line 9
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
+    .line 10
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -4123,24 +4920,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 11
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 12
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
 
+    .line 13
     :cond_1
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
+    .line 14
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 15
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
@@ -4148,10 +4951,13 @@
     :catchall_0
     move-exception p0
 
+    .line 17
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 18
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 19
     throw p0
 .end method
 
@@ -4163,10 +4969,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -4174,12 +4982,16 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 6
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x2e
@@ -4192,12 +5004,14 @@
 
     if-nez p0, :cond_0
 
+    .line 7
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -4206,20 +5020,25 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 9
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 10
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
 
+    .line 11
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 12
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 13
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -4227,10 +5046,13 @@
     :catchall_0
     move-exception p0
 
+    .line 14
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 15
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     throw p0
 .end method
 
@@ -4242,10 +5064,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -4253,10 +5077,13 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 5
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x17
@@ -4269,12 +5096,14 @@
 
     if-nez p0, :cond_0
 
+    .line 6
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 7
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -4285,24 +5114,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 8
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 9
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
 
+    .line 10
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
+    .line 11
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 12
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 13
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
@@ -4310,10 +5145,13 @@
     :catchall_0
     move-exception p0
 
+    .line 14
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 15
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     throw p0
 .end method
 
@@ -4325,10 +5163,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -4336,10 +5176,13 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 5
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x1e
@@ -4352,12 +5195,14 @@
 
     if-nez p0, :cond_0
 
+    .line 6
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 7
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -4368,24 +5213,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 8
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 9
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
 
+    .line 10
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
+    .line 11
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 12
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 13
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
@@ -4393,10 +5244,13 @@
     :catchall_0
     move-exception p0
 
+    .line 14
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 15
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     throw p0
 .end method
 
@@ -4408,10 +5262,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -4419,18 +5275,25 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 6
     invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 7
     invoke-virtual {v0, p4}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 8
     invoke-virtual {v0, p5}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 9
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x2d
@@ -4443,12 +5306,14 @@
 
     if-nez p0, :cond_0
 
+    .line 10
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 11
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object v2
@@ -4469,24 +5334,30 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 12
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 13
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
 
+    .line 14
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
 
+    .line 15
     invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
     move-result p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 16
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return p0
@@ -4494,10 +5365,13 @@
     :catchall_0
     move-exception p0
 
+    .line 18
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 19
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 20
     throw p0
 .end method
 
@@ -4509,10 +5383,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
@@ -4520,14 +5396,19 @@
     :try_start_0
     const-string v2, "com.xiaomi.mi_connect_service.IMiConnect"
 
+    .line 3
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 6
     invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeByteArray([B)V
 
+    .line 7
     iget-object p0, p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/16 v2, 0x32
@@ -4540,12 +5421,14 @@
 
     if-nez p0, :cond_0
 
+    .line 8
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 9
     invoke-static {}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     move-result-object p0
@@ -4554,20 +5437,25 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 10
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 11
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
 
+    .line 12
     :cond_0
     :try_start_1
     invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 13
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 14
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
     return-void
@@ -4575,9 +5463,12 @@
     :catchall_0
     move-exception p0
 
+    .line 15
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
+    .line 16
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 17
     throw p0
 .end method

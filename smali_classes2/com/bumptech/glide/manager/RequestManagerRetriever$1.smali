@@ -1,4 +1,4 @@
-.class final Lcom/bumptech/glide/manager/RequestManagerRetriever$1;
+.class public final Lcom/bumptech/glide/manager/RequestManagerRetriever$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -21,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,6 +50,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     new-instance p0, Lcom/bumptech/glide/RequestManager;
 
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/bumptech/glide/RequestManager;-><init>(Lcom/bumptech/glide/Glide;Lcom/bumptech/glide/manager/Lifecycle;Lcom/bumptech/glide/manager/RequestManagerTreeNode;Landroid/content/Context;)V

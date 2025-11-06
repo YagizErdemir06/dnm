@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzq;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzq;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

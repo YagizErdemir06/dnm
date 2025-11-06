@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/ImmutableSetMultimap$SetFieldSettersHolder;
+.class public final Lcom/google/common/collect/ImmutableSetMultimap$SetFieldSettersHolder;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,7 +18,7 @@
 
 
 # static fields
-.field static final EMPTY_SET_FIELD_SETTER:Lcom/google/common/collect/Serialization$FieldSetter;
+.field public static final EMPTY_SET_FIELD_SETTER:Lcom/google/common/collect/Serialization$FieldSetter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/Serialization$FieldSetter<",
@@ -33,10 +33,12 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     const-class v0, Lcom/google/common/collect/ImmutableSetMultimap;
 
     const-string v1, "emptySet"
 
+    .line 2
     invoke-static {v0, v1}, Lcom/google/common/collect/Serialization;->getFieldSetter(Ljava/lang/Class;Ljava/lang/String;)Lcom/google/common/collect/Serialization$FieldSetter;
 
     move-result-object v0
@@ -49,6 +51,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -1,4 +1,4 @@
-.class Lorg/apache/xmlbeans/impl/values/JavaQNameHolder$PrettyNamespaceManager;
+.class public Lorg/apache/xmlbeans/impl/values/JavaQNameHolder$PrettyNamespaceManager;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -41,6 +41,7 @@
 .method public find_prefix_for_nsuri(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lorg/apache/xmlbeans/impl/common/QNameHelper;->suggestPrefix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -51,6 +52,7 @@
 .method public getNamespaceForPrefix(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string p1, "Should not be called"

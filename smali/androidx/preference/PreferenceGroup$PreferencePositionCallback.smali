@@ -16,15 +16,7 @@
 
 # virtual methods
 .method public abstract getPreferenceAdapterPosition(Landroidx/preference/Preference;)I
-    .param p1    # Landroidx/preference/Preference;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 .end method
 
 .method public abstract getPreferenceAdapterPosition(Ljava/lang/String;)I
-    .param p1    # Ljava/lang/String;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 .end method

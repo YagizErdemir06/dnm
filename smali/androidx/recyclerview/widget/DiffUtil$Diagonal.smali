@@ -1,4 +1,4 @@
-.class Landroidx/recyclerview/widget/DiffUtil$Diagonal;
+.class public Landroidx/recyclerview/widget/DiffUtil$Diagonal;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,12 +26,16 @@
 .method public constructor <init>(III)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Landroidx/recyclerview/widget/DiffUtil$Diagonal;->x:I
 
+    .line 3
     iput p2, p0, Landroidx/recyclerview/widget/DiffUtil$Diagonal;->y:I
 
+    .line 4
     iput p3, p0, Landroidx/recyclerview/widget/DiffUtil$Diagonal;->size:I
 
     return-void
@@ -42,6 +46,7 @@
 .method public endX()I
     .locals 1
 
+    .line 1
     iget v0, p0, Landroidx/recyclerview/widget/DiffUtil$Diagonal;->x:I
 
     iget p0, p0, Landroidx/recyclerview/widget/DiffUtil$Diagonal;->size:I
@@ -54,6 +59,7 @@
 .method public endY()I
     .locals 1
 
+    .line 1
     iget v0, p0, Landroidx/recyclerview/widget/DiffUtil$Diagonal;->y:I
 
     iget p0, p0, Landroidx/recyclerview/widget/DiffUtil$Diagonal;->size:I

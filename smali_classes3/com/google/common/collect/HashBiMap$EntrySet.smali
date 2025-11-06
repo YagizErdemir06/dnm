@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/HashBiMap$EntrySet;
+.class public final Lcom/google/common/collect/HashBiMap$EntrySet;
 .super Lcom/google/common/collect/HashBiMap$View;
 .source "SourceFile"
 
@@ -24,15 +24,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/HashBiMap;
+.field public final synthetic this$0:Lcom/google/common/collect/HashBiMap;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/HashBiMap;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/HashBiMap$EntrySet;->this$0:Lcom/google/common/collect/HashBiMap;
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/common/collect/HashBiMap$View;-><init>(Lcom/google/common/collect/HashBiMap;)V
 
     return-void
@@ -47,22 +49,27 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Ljava/util/Map$Entry;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Ljava/util/Map$Entry;
 
+    .line 3
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 4
     invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
+    .line 5
     iget-object v2, p0, Lcom/google/common/collect/HashBiMap$EntrySet;->this$0:Lcom/google/common/collect/HashBiMap;
 
     invoke-virtual {v2, v0}, Lcom/google/common/collect/HashBiMap;->findEntryByKey(Ljava/lang/Object;)I
@@ -73,6 +80,7 @@
 
     if-eq v0, v2, :cond_0
 
+    .line 6
     iget-object p0, p0, Lcom/google/common/collect/HashBiMap$EntrySet;->this$0:Lcom/google/common/collect/HashBiMap;
 
     iget-object p0, p0, Lcom/google/common/collect/HashBiMap;->values:[Ljava/lang/Object;
@@ -131,24 +139,30 @@
     .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
+    .line 1
     instance-of v0, p1, Ljava/util/Map$Entry;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Ljava/util/Map$Entry;
 
+    .line 3
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 4
     invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
+    .line 5
     invoke-static {v0}, Lcom/google/common/collect/Hashing;->smearedHash(Ljava/lang/Object;)I
 
     move-result v1
 
+    .line 6
     iget-object v2, p0, Lcom/google/common/collect/HashBiMap$EntrySet;->this$0:Lcom/google/common/collect/HashBiMap;
 
     invoke-virtual {v2, v0, v1}, Lcom/google/common/collect/HashBiMap;->findEntryByKey(Ljava/lang/Object;I)I
@@ -159,6 +173,7 @@
 
     if-eq v0, v2, :cond_0
 
+    .line 7
     iget-object v2, p0, Lcom/google/common/collect/HashBiMap$EntrySet;->this$0:Lcom/google/common/collect/HashBiMap;
 
     iget-object v2, v2, Lcom/google/common/collect/HashBiMap;->values:[Ljava/lang/Object;
@@ -171,6 +186,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 8
     iget-object p0, p0, Lcom/google/common/collect/HashBiMap$EntrySet;->this$0:Lcom/google/common/collect/HashBiMap;
 
     invoke-virtual {p0, v0, v1}, Lcom/google/common/collect/HashBiMap;->removeEntryKeyHashKnown(II)V

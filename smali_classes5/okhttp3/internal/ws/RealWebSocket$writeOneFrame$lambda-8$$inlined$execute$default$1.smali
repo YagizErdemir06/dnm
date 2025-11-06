@@ -17,7 +17,7 @@
     value = "SMAP\nTaskQueue.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TaskQueue.kt\nokhttp3/internal/concurrent/TaskQueue$execute$1\n+ 2 RealWebSocket.kt\nokhttp3/internal/ws/RealWebSocket\n*L\n1#1,218:1\n513#2,2:219\n*E\n"
 .end annotation
 
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
     d1 = {
         "\u0000\u0011\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0000*\u0001\u0000\u0008\n\u0018\u00002\u00020\u0001J\u0008\u0010\u0002\u001a\u00020\u0003H\u0016\u00a8\u0006\u0004\u00b8\u0006\u0000"
     }
@@ -39,11 +39,11 @@
 
 
 # instance fields
-.field final synthetic $cancelable:Z
+.field public final synthetic $cancelable:Z
 
-.field final synthetic $name:Ljava/lang/String;
+.field public final synthetic $name:Ljava/lang/String;
 
-.field final synthetic this$0:Lokhttp3/internal/ws/RealWebSocket;
+.field public final synthetic this$0:Lokhttp3/internal/ws/RealWebSocket;
 
 
 # direct methods
@@ -56,6 +56,7 @@
 
     iput-object p3, p0, Lokhttp3/internal/ws/RealWebSocket$writeOneFrame$lambda-8$$inlined$execute$default$1;->this$0:Lokhttp3/internal/ws/RealWebSocket;
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lokhttp3/internal/concurrent/Task;-><init>(Ljava/lang/String;Z)V
 
     return-void
@@ -66,6 +67,7 @@
 .method public runOnce()J
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lokhttp3/internal/ws/RealWebSocket$writeOneFrame$lambda-8$$inlined$execute$default$1;->this$0:Lokhttp3/internal/ws/RealWebSocket;
 
     invoke-virtual {p0}, Lokhttp3/internal/ws/RealWebSocket;->cancel()V

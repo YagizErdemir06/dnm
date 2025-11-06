@@ -30,7 +30,7 @@
 
 .field private mEndOfDecoder:Z
 
-.field mFrameCallback:Lcom/xiaomi/mediacodec/MoviePlayer$FrameCallback;
+.field public mFrameCallback:Lcom/xiaomi/mediacodec/MoviePlayer$FrameCallback;
 
 .field private volatile mIsPause:Z
 
@@ -68,7 +68,7 @@
 
 .field private mWrittenPresentationTimeUs:J
 
-.field maudioTrack:I
+.field public maudioTrack:I
 
 .field private final semp:Ljava/util/concurrent/Semaphore;
 
@@ -533,10 +533,12 @@
 
     move-object/from16 v11, p3
 
+    .line 1
     invoke-virtual/range {p3 .. p3}, Landroid/media/MediaCodec;->getInputBuffers()[Ljava/nio/ByteBuffer;
 
     move-result-object v12
 
+    .line 2
     iget-wide v4, v1, Lcom/xiaomi/mediacodec/MoviePlayer;->mSeekPosMS:J
 
     const-wide/16 v13, 0x3e8
@@ -560,25 +562,30 @@
 
     if-nez v18, :cond_1b
 
+    .line 3
     iget-boolean v6, v1, Lcom/xiaomi/mediacodec/MoviePlayer;->mIsStopRequested:Z
 
     if-eqz v6, :cond_0
 
     const-string v2, "Stop requested"
 
+    .line 4
     invoke-static {v2}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
     goto/16 :goto_e
 
+    .line 5
     :cond_0
     iget-boolean v6, v1, Lcom/xiaomi/mediacodec/MoviePlayer;->mIsPause:Z
 
     if-eqz v6, :cond_1
 
+    .line 6
     iget-object v6, v1, Lcom/xiaomi/mediacodec/MoviePlayer;->mWaitEvent:Ljava/lang/Object;
 
     monitor-enter v6
 
+    .line 7
     :try_start_0
     iget-object v0, v1, Lcom/xiaomi/mediacodec/MoviePlayer;->mWaitEvent:Ljava/lang/Object;
 
@@ -599,6 +606,7 @@
     :catch_0
     move-exception v0
 
+    .line 8
     :try_start_1
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -616,6 +624,7 @@
 
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
+    .line 9
     :goto_1
     monitor-exit v6
 
@@ -628,11 +637,13 @@
 
     throw v0
 
+    .line 10
     :cond_1
     iget-boolean v6, v1, Lcom/xiaomi/mediacodec/MoviePlayer;->mSeeking:Z
 
     if-eqz v6, :cond_2
 
+    .line 11
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -659,6 +670,7 @@
 
     invoke-static {v6}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
+    .line 12
     iget-wide v6, v1, Lcom/xiaomi/mediacodec/MoviePlayer;->mSeekPosMS:J
 
     mul-long/2addr v6, v13
@@ -667,21 +679,26 @@
 
     invoke-virtual {v2, v6, v7, v8}, Landroid/media/MediaExtractor;->seekTo(JI)V
 
+    .line 13
     iput-boolean v15, v1, Lcom/xiaomi/mediacodec/MoviePlayer;->mSeeking:Z
 
+    .line 14
     :cond_2
     invoke-virtual/range {p1 .. p1}, Landroid/media/MediaExtractor;->getSampleTrackIndex()I
 
     move-result v6
 
+    .line 15
     iget v7, v1, Lcom/xiaomi/mediacodec/MoviePlayer;->maudioTrack:I
 
     if-ne v6, v7, :cond_4
 
+    .line 16
     new-instance v6, Lcom/xiaomi/mediacodec/MoviePlayer$MediaFrame;
 
     invoke-direct {v6, v1}, Lcom/xiaomi/mediacodec/MoviePlayer$MediaFrame;-><init>(Lcom/xiaomi/mediacodec/MoviePlayer;)V
 
+    .line 17
     iget v7, v1, Lcom/xiaomi/mediacodec/MoviePlayer;->mMaxAudioSize:I
 
     invoke-static {v7}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
@@ -690,12 +707,14 @@
 
     iput-object v7, v6, Lcom/xiaomi/mediacodec/MoviePlayer$MediaFrame;->buffer:Ljava/nio/ByteBuffer;
 
+    .line 18
     invoke-virtual {v2, v7, v15}, Landroid/media/MediaExtractor;->readSampleData(Ljava/nio/ByteBuffer;I)I
 
     move-result v22
 
     if-lez v22, :cond_4
 
+    .line 19
     invoke-virtual/range {p1 .. p1}, Landroid/media/MediaExtractor;->getSampleTrackIndex()I
 
     move-result v7
@@ -704,10 +723,12 @@
 
     if-ne v7, v8, :cond_4
 
+    .line 20
     iget-boolean v0, v1, Lcom/xiaomi/mediacodec/MoviePlayer;->mVideoOnly:Z
 
     if-nez v0, :cond_3
 
+    .line 21
     new-instance v0, Landroid/media/MediaCodec$BufferInfo;
 
     invoke-direct {v0}, Landroid/media/MediaCodec$BufferInfo;-><init>()V
@@ -716,6 +737,7 @@
 
     const/16 v21, 0x0
 
+    .line 22
     invoke-virtual/range {p1 .. p1}, Landroid/media/MediaExtractor;->getSampleTime()J
 
     move-result-wide v23
@@ -728,10 +750,12 @@
 
     invoke-virtual/range {v20 .. v25}, Landroid/media/MediaCodec$BufferInfo;->set(IIJI)V
 
+    .line 23
     iget-object v0, v1, Lcom/xiaomi/mediacodec/MoviePlayer;->mFrameCallback:Lcom/xiaomi/mediacodec/MoviePlayer$FrameCallback;
 
     invoke-interface {v0, v6}, Lcom/xiaomi/mediacodec/MoviePlayer$FrameCallback;->onAudioFrame(Lcom/xiaomi/mediacodec/MoviePlayer$MediaFrame;)V
 
+    .line 24
     :cond_3
     invoke-virtual/range {p1 .. p1}, Landroid/media/MediaExtractor;->advance()Z
 
@@ -744,6 +768,7 @@
 
     if-nez v19, :cond_a
 
+    .line 25
     invoke-virtual {v11, v8, v9}, Landroid/media/MediaCodec;->dequeueInputBuffer(J)I
 
     move-result v10
@@ -754,6 +779,7 @@
 
     if-nez v20, :cond_5
 
+    .line 26
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v4
@@ -761,22 +787,27 @@
     :cond_5
     move-wide/from16 v20, v4
 
+    .line 27
     aget-object v4, v12, v10
 
+    .line 28
     invoke-virtual {v2, v4, v15}, Landroid/media/MediaExtractor;->readSampleData(Ljava/nio/ByteBuffer;I)I
 
     move-result v22
 
+    .line 29
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     if-ltz v22, :cond_9
 
+    .line 30
     iget-boolean v4, v1, Lcom/xiaomi/mediacodec/MoviePlayer;->mIsStopRequested:Z
 
     if-eqz v4, :cond_6
 
     goto :goto_3
 
+    .line 31
     :cond_6
     invoke-virtual/range {p1 .. p1}, Landroid/media/MediaExtractor;->getSampleTrackIndex()I
 
@@ -786,6 +817,7 @@
 
     const-string v4, "MoviePlayer"
 
+    .line 32
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -812,17 +844,20 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 33
     :cond_7
     invoke-virtual/range {p1 .. p1}, Landroid/media/MediaExtractor;->getSampleTime()J
 
     move-result-wide v8
 
+    .line 34
     iget-wide v4, v1, Lcom/xiaomi/mediacodec/MoviePlayer;->mStartTime:J
 
     cmp-long v4, v4, v6
 
     if-nez v4, :cond_8
 
+    .line 35
     iput-wide v8, v1, Lcom/xiaomi/mediacodec/MoviePlayer;->mStartTime:J
 
     :cond_8
@@ -844,8 +879,10 @@
 
     move/from16 v10, v26
 
+    .line 36
     invoke-virtual/range {v4 .. v10}, Landroid/media/MediaCodec;->queueInputBuffer(IIIJI)V
 
+    .line 37
     invoke-virtual/range {p1 .. p1}, Landroid/media/MediaExtractor;->advance()Z
 
     goto :goto_4
@@ -868,10 +905,12 @@
 
     move/from16 v10, v19
 
+    .line 38
     invoke-virtual/range {v4 .. v10}, Landroid/media/MediaCodec;->queueInputBuffer(IIIJI)V
 
     const-string v4, "sent input EOS"
 
+    .line 39
     invoke-static {v4}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
     move/from16 v19, v0
@@ -887,6 +926,7 @@
     :goto_5
     if-nez v18, :cond_1a
 
+    .line 40
     iget-object v6, v1, Lcom/xiaomi/mediacodec/MoviePlayer;->mBufferInfo:Landroid/media/MediaCodec$BufferInfo;
 
     invoke-virtual {v11, v6, v13, v14}, Landroid/media/MediaCodec;->dequeueOutputBuffer(Landroid/media/MediaCodec$BufferInfo;J)I
@@ -899,6 +939,7 @@
 
     const-string v0, "no output from decoder available"
 
+    .line 41
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
     goto/16 :goto_d
@@ -915,10 +956,12 @@
 
     if-ne v6, v7, :cond_12
 
+    .line 42
     invoke-virtual/range {p3 .. p3}, Landroid/media/MediaCodec;->getOutputFormat()Landroid/media/MediaFormat;
 
     move-result-object v0
 
+    .line 43
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -939,6 +982,7 @@
 
     invoke-static {v6}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
+    .line 44
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -957,6 +1001,7 @@
 
     const-string v6, "crop-top"
 
+    .line 45
     invoke-virtual {v0, v6}, Landroid/media/MediaFormat;->containsKey(Ljava/lang/String;)Z
 
     move-result v6
@@ -965,10 +1010,12 @@
 
     const-string v6, "crop-top"
 
+    .line 46
     invoke-virtual {v0, v6}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;)I
 
     move-result v6
 
+    .line 47
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -995,6 +1042,7 @@
     :goto_6
     const-string v6, "crop-bottom"
 
+    .line 48
     invoke-virtual {v0, v6}, Landroid/media/MediaFormat;->containsKey(Ljava/lang/String;)Z
 
     move-result v6
@@ -1003,10 +1051,12 @@
 
     const-string v6, "crop-bottom"
 
+    .line 49
     invoke-virtual {v0, v6}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;)I
 
     move-result v6
 
+    .line 50
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1033,6 +1083,7 @@
     :goto_7
     const-string v6, "crop-left"
 
+    .line 51
     invoke-virtual {v0, v6}, Landroid/media/MediaFormat;->containsKey(Ljava/lang/String;)Z
 
     move-result v6
@@ -1041,10 +1092,12 @@
 
     const-string v6, "crop-left"
 
+    .line 52
     invoke-virtual {v0, v6}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;)I
 
     move-result v6
 
+    .line 53
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1071,6 +1124,7 @@
     :goto_8
     const-string v6, "crop-right"
 
+    .line 54
     invoke-virtual {v0, v6}, Landroid/media/MediaFormat;->containsKey(Ljava/lang/String;)Z
 
     move-result v6
@@ -1079,10 +1133,12 @@
 
     const-string v6, "crop-right"
 
+    .line 55
     invoke-virtual {v0, v6}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;)I
 
     move-result v6
 
+    .line 56
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1109,16 +1165,19 @@
     :goto_9
     const-string v6, "width"
 
+    .line 57
     invoke-virtual {v0, v6}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;)I
 
     move-result v6
 
     const-string v7, "height"
 
+    .line 58
     invoke-virtual {v0, v7}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;)I
 
     move-result v7
 
+    .line 59
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -1143,6 +1202,7 @@
 
     const-string v8, "color-format"
 
+    .line 60
     invoke-virtual {v0, v8}, Landroid/media/MediaFormat;->containsKey(Ljava/lang/String;)Z
 
     move-result v8
@@ -1151,8 +1211,10 @@
 
     const-string v8, "color-format"
 
+    .line 61
     invoke-virtual {v0, v8}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;)I
 
+    .line 62
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -1178,16 +1240,19 @@
     :cond_11
     const-string v8, "stride"
 
+    .line 63
     invoke-virtual {v0, v8}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;)I
 
     move-result v8
 
     const-string v9, "slice-height"
 
+    .line 64
     invoke-virtual {v0, v9}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;)I
 
     move-result v0
 
+    .line 65
     iget-object v9, v1, Lcom/xiaomi/mediacodec/MoviePlayer;->mFrameCallback:Lcom/xiaomi/mediacodec/MoviePlayer$FrameCallback;
 
     move-object/from16 v20, v9
@@ -1198,6 +1263,7 @@
 
     invoke-interface/range {v20 .. v26}, Lcom/xiaomi/mediacodec/MoviePlayer$FrameCallback;->onVideoCrop(IIIIII)V
 
+    .line 66
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1231,10 +1297,12 @@
 
     if-eqz v9, :cond_13
 
+    .line 67
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v7
 
+    .line 68
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -1265,6 +1333,7 @@
 
     const-wide/16 v4, 0x0
 
+    .line 69
     :cond_13
     iget-object v7, v1, Lcom/xiaomi/mediacodec/MoviePlayer;->mBufferInfo:Landroid/media/MediaCodec$BufferInfo;
 
@@ -1276,23 +1345,28 @@
 
     const-string v7, "output EOS"
 
+    .line 70
     invoke-static {v7}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
+    .line 71
     iget-boolean v7, v1, Lcom/xiaomi/mediacodec/MoviePlayer;->mLoop:Z
 
     if-nez v7, :cond_14
 
+    .line 72
     iget-object v7, v1, Lcom/xiaomi/mediacodec/MoviePlayer;->mFrameCallback:Lcom/xiaomi/mediacodec/MoviePlayer$FrameCallback;
 
     invoke-interface {v7}, Lcom/xiaomi/mediacodec/MoviePlayer$FrameCallback;->onDecoderFinished()V
 
     const-string v7, "output EOS onDecoderFinished!"
 
+    .line 73
     invoke-static {v7}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
     :cond_14
     move/from16 v18, v0
 
+    .line 74
     :cond_15
     iget-object v7, v1, Lcom/xiaomi/mediacodec/MoviePlayer;->mBufferInfo:Landroid/media/MediaCodec$BufferInfo;
 
@@ -1300,6 +1374,7 @@
 
     iput-wide v8, v1, Lcom/xiaomi/mediacodec/MoviePlayer;->mWrittenPresentationTimeUs:J
 
+    .line 75
     iget v7, v7, Landroid/media/MediaCodec$BufferInfo;->size:I
 
     if-eqz v7, :cond_16
@@ -1309,11 +1384,14 @@
     :cond_16
     move v0, v15
 
+    .line 76
     :goto_a
     invoke-virtual {v11, v6, v0}, Landroid/media/MediaCodec;->releaseOutputBuffer(IZ)V
 
+    .line 77
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
+    .line 78
     iget-wide v6, v1, Lcom/xiaomi/mediacodec/MoviePlayer;->mOutputFrames:J
 
     const-wide/16 v8, 0x1
@@ -1322,6 +1400,7 @@
 
     iput-wide v6, v1, Lcom/xiaomi/mediacodec/MoviePlayer;->mOutputFrames:J
 
+    .line 79
     iget-object v0, v1, Lcom/xiaomi/mediacodec/MoviePlayer;->mFrameCallback:Lcom/xiaomi/mediacodec/MoviePlayer$FrameCallback;
 
     iget-wide v6, v1, Lcom/xiaomi/mediacodec/MoviePlayer;->mDurationUs:J
@@ -1350,6 +1429,7 @@
 
     invoke-interface {v0, v6}, Lcom/xiaomi/mediacodec/MoviePlayer$FrameCallback;->onVideoFrame(I)V
 
+    .line 80
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1386,6 +1466,7 @@
 
     if-nez v18, :cond_18
 
+    .line 81
     :try_start_2
     iget-object v0, v1, Lcom/xiaomi/mediacodec/MoviePlayer;->semp:Ljava/util/concurrent/Semaphore;
 
@@ -1398,8 +1479,10 @@
     :catch_1
     const-string v0, "semp faild!"
 
+    .line 82
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
+    .line 83
     :cond_18
     :goto_c
     iget-boolean v0, v1, Lcom/xiaomi/mediacodec/MoviePlayer;->mLoop:Z
@@ -1408,16 +1491,20 @@
 
     const-string v0, "Reached EOS, looping"
 
+    .line 84
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
     const/4 v0, 0x2
 
     const-wide/16 v6, 0x0
 
+    .line 85
     invoke-virtual {v2, v6, v7, v0}, Landroid/media/MediaExtractor;->seekTo(JI)V
 
+    .line 86
     invoke-virtual/range {p3 .. p3}, Landroid/media/MediaCodec;->flush()V
 
+    .line 87
     invoke-interface/range {p4 .. p4}, Lcom/xiaomi/mediacodec/MoviePlayer$FrameCallback;->loopReset()V
 
     move/from16 v18, v15
@@ -1426,6 +1513,7 @@
 
     goto :goto_d
 
+    .line 88
     :cond_19
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -1453,12 +1541,14 @@
 
     goto/16 :goto_0
 
+    .line 89
     :cond_1b
     :goto_e
     iput-boolean v0, v1, Lcom/xiaomi/mediacodec/MoviePlayer;->mEndOfDecoder:Z
 
     const-string v0, " end of decoder "
 
+    .line 90
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
     return-void
@@ -1472,10 +1562,12 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Landroid/media/MediaMetadataRetriever;
 
     invoke-direct {v0}, Landroid/media/MediaMetadataRetriever;-><init>()V
 
+    .line 2
     iget-object v1, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->mSourceFile:Ljava/io/File;
 
     invoke-virtual {v1}, Ljava/io/File;->toString()Ljava/lang/String;
@@ -1484,14 +1576,23 @@
 
     invoke-virtual {v0, v1}, Landroid/media/MediaMetadataRetriever;->setDataSource(Ljava/lang/String;)V
 
+    .line 3
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v2, 0x13
+
+    if-lt v1, v2, :cond_0
+
     const/16 v1, 0x17
 
+    .line 4
     invoke-virtual {v0, v1}, Landroid/media/MediaMetadataRetriever;->extractMetadata(I)Ljava/lang/String;
 
     move-result-object v1
 
     sput-object v1, Lcom/xiaomi/mediacodec/GlUtil;->locationString:Ljava/lang/String;
 
+    .line 5
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1510,10 +1611,12 @@
 
     invoke-static {v1}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
+    .line 6
     sget-object v1, Lcom/xiaomi/mediacodec/GlUtil;->locationString:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
+    .line 7
     invoke-virtual {p0, v1}, Lcom/xiaomi/mediacodec/MoviePlayer;->ISO6709LocationParser(Ljava/lang/String;)[F
 
     move-result-object v1
@@ -1522,6 +1625,7 @@
 
     if-nez v1, :cond_0
 
+    .line 8
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1543,6 +1647,7 @@
     :cond_0
     const/16 v1, 0x9
 
+    .line 9
     :try_start_0
     invoke-virtual {v0, v1}, Landroid/media/MediaMetadataRetriever;->extractMetadata(I)Ljava/lang/String;
 
@@ -1565,8 +1670,10 @@
     :catch_0
     const-wide/16 v1, -0x1
 
+    .line 10
     iput-wide v1, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->mDurationUs:J
 
+    .line 11
     :goto_0
     iget-object v1, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->mFrameCallback:Lcom/xiaomi/mediacodec/MoviePlayer$FrameCallback;
 
@@ -1574,8 +1681,10 @@
 
     invoke-interface {v1, v2, v3}, Lcom/xiaomi/mediacodec/MoviePlayer$FrameCallback;->onStreamDuration(J)V
 
+    .line 12
     invoke-virtual {v0}, Landroid/media/MediaMetadataRetriever;->release()V
 
+    .line 13
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1710,6 +1819,7 @@
 
     const-string p0, "([+\\-][0-9.]+)([+\\-][0-9.]+)"
 
+    .line 1
     invoke-static {p0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object p0
@@ -1720,11 +1830,13 @@
 
     return-object v0
 
+    .line 2
     :cond_0
     invoke-virtual {p0, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object p0
 
+    .line 3
     invoke-virtual {p0}, Ljava/util/regex/Matcher;->find()Z
 
     move-result p1
@@ -1741,19 +1853,23 @@
 
     const/4 p1, 0x1
 
+    .line 4
     invoke-virtual {p0, p1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 5
     invoke-virtual {p0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 6
     :try_start_0
     invoke-static {v2}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result v2
 
+    .line 7
     invoke-static {p0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result p0
@@ -1780,8 +1896,10 @@
 
     const-string v0, "MoviePlayer frameReceived: semp.release() "
 
+    .line 1
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
+    .line 2
     iget-object p0, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->semp:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {p0}, Ljava/util/concurrent/Semaphore;->release()V
@@ -1792,6 +1910,7 @@
 .method public getAudioFromate()Landroid/media/MediaFormat;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->mAudioFromate:Landroid/media/MediaFormat;
 
     return-object p0
@@ -1800,22 +1919,26 @@
 .method public getOneFrame()V
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->mEndOfDecoder:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->mWaitEvent:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 3
     :try_start_0
     iget-object p0, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->mWaitEvent:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
+    .line 4
     monitor-exit v0
 
     return-void
@@ -1833,6 +1956,7 @@
 .method public getVideoDuration()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->mDurationUs:J
 
     return-wide v0
@@ -1841,6 +1965,7 @@
 .method public getVideoFromate()Landroid/media/MediaFormat;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->mVideoFromate:Landroid/media/MediaFormat;
 
     return-object p0
@@ -1849,6 +1974,7 @@
 .method public getVideoHeight()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->mVideoHeight:I
 
     return p0
@@ -1857,6 +1983,7 @@
 .method public getVideoWidth()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->mVideoWidth:I
 
     return p0
@@ -1872,6 +1999,7 @@
 
     const-string v0, "find exception at mPlayer stop:"
 
+    .line 1
     iget-object v1, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->mSourceFile:Ljava/io/File;
 
     invoke-virtual {v1}, Ljava/io/File;->canRead()Z
@@ -1882,6 +2010,7 @@
 
     const/4 v1, 0x0
 
+    .line 2
     :try_start_0
     new-instance v2, Landroid/media/MediaExtractor;
 
@@ -1890,6 +2019,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_3
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
+    .line 3
     :try_start_1
     iget-object v3, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->mSourceFile:Ljava/io/File;
 
@@ -1899,6 +2029,7 @@
 
     invoke-virtual {v2, v3}, Landroid/media/MediaExtractor;->setDataSource(Ljava/lang/String;)V
 
+    .line 4
     invoke-static {v2}, Lcom/xiaomi/mediacodec/MoviePlayer;->selectTrack(Landroid/media/MediaExtractor;)I
 
     move-result v3
@@ -1907,6 +2038,7 @@
 
     const-string v4, "audio"
 
+    .line 5
     invoke-static {v2, v4}, Lcom/xiaomi/mediacodec/MoviePlayer;->selectTrack(Landroid/media/MediaExtractor;Ljava/lang/String;)I
 
     move-result v4
@@ -1922,17 +2054,20 @@
 
     if-eq v4, v5, :cond_0
 
+    .line 6
     :try_start_2
     invoke-virtual {v2, v4}, Landroid/media/MediaExtractor;->getTrackFormat(I)Landroid/media/MediaFormat;
 
     move-result-object v4
 
+    .line 7
     invoke-virtual {v4, v6}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;)I
 
     move-result v4
 
     iput v4, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->mMaxAudioSize:I
 
+    .line 8
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1951,17 +2086,21 @@
 
     invoke-static {v4}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
+    .line 9
     iget v4, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->maudioTrack:I
 
     invoke-virtual {v2, v4}, Landroid/media/MediaExtractor;->selectTrack(I)V
 
+    .line 10
     :cond_0
     invoke-virtual {v2, v3}, Landroid/media/MediaExtractor;->selectTrack(I)V
 
+    .line 11
     invoke-virtual {v2, v3}, Landroid/media/MediaExtractor;->getTrackFormat(I)Landroid/media/MediaFormat;
 
     move-result-object v4
 
+    .line 12
     invoke-virtual {v4, v6}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;)I
 
     move-result v5
@@ -1970,10 +2109,12 @@
 
     const-string v5, "mime"
 
+    .line 13
     invoke-virtual {v4, v5}, Landroid/media/MediaFormat;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
+    .line 14
     invoke-static {v5}, Landroid/media/MediaCodec;->createDecoderByType(Ljava/lang/String;)Landroid/media/MediaCodec;
 
     move-result-object v5
@@ -1981,6 +2122,7 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 15
     :try_start_3
     iget-object v6, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->mOutputSurface:Landroid/view/Surface;
 
@@ -1988,8 +2130,10 @@
 
     invoke-virtual {v5, v4, v6, v1, v7}, Landroid/media/MediaCodec;->configure(Landroid/media/MediaFormat;Landroid/view/Surface;Landroid/media/MediaCrypto;I)V
 
+    .line 16
     invoke-virtual {v5}, Landroid/media/MediaCodec;->start()V
 
+    .line 17
     iget-object v4, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->mFrameCallback:Lcom/xiaomi/mediacodec/MoviePlayer$FrameCallback;
 
     invoke-direct {p0, v2, v3, v5, v4}, Lcom/xiaomi/mediacodec/MoviePlayer;->doExtract(Landroid/media/MediaExtractor;ILandroid/media/MediaCodec;Lcom/xiaomi/mediacodec/MoviePlayer$FrameCallback;)V
@@ -1997,19 +2141,25 @@
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
+    .line 18
     :try_start_4
     invoke-virtual {v5}, Landroid/media/MediaCodec;->flush()V
 
+    .line 19
     invoke-virtual {v5}, Landroid/media/MediaCodec;->stop()V
 
+    .line 20
     invoke-virtual {v5}, Landroid/media/MediaCodec;->release()V
 
+    .line 21
     iget-object v3, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->mOutputSurface:Landroid/view/Surface;
 
     invoke-virtual {v3}, Landroid/view/Surface;->release()V
 
+    .line 22
     iput-object v1, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->mOutputSurface:Landroid/view/Surface;
 
+    .line 23
     invoke-virtual {v2}, Landroid/media/MediaExtractor;->release()V
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
@@ -2019,6 +2169,7 @@
     :catch_0
     move-exception p0
 
+    .line 24
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2033,6 +2184,7 @@
 
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
+    .line 25
     throw p0
 
     :catch_1
@@ -2040,6 +2192,7 @@
 
     goto :goto_0
 
+    .line 26
     :cond_1
     :try_start_5
     new-instance v3, Ljava/lang/RuntimeException;
@@ -2097,6 +2250,7 @@
 
     move-object v5, v2
 
+    .line 27
     :goto_0
     :try_start_6
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2115,6 +2269,7 @@
 
     invoke-static {v4}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
+    .line 28
     throw v3
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
@@ -2125,17 +2280,22 @@
     :goto_1
     if-eqz v5, :cond_2
 
+    .line 29
     :try_start_7
     invoke-virtual {v5}, Landroid/media/MediaCodec;->flush()V
 
+    .line 30
     invoke-virtual {v5}, Landroid/media/MediaCodec;->stop()V
 
+    .line 31
     invoke-virtual {v5}, Landroid/media/MediaCodec;->release()V
 
+    .line 32
     iget-object v4, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->mOutputSurface:Landroid/view/Surface;
 
     invoke-virtual {v4}, Landroid/view/Surface;->release()V
 
+    .line 33
     iput-object v1, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->mOutputSurface:Landroid/view/Surface;
 
     goto :goto_2
@@ -2149,12 +2309,14 @@
     :goto_2
     if-eqz v2, :cond_3
 
+    .line 34
     invoke-virtual {v2}, Landroid/media/MediaExtractor;->release()V
     :try_end_7
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_4
 
     goto :goto_4
 
+    .line 35
     :goto_3
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2170,12 +2332,14 @@
 
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
+    .line 36
     throw p0
 
     :cond_3
     :goto_4
     throw v3
 
+    .line 37
     :cond_4
     new-instance v0, Ljava/io/FileNotFoundException;
 
@@ -2205,10 +2369,12 @@
 
     const-string v0, "MoviePlayer requestPause! "
 
+    .line 1
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
+    .line 2
     iput-boolean v0, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->mIsPause:Z
 
     return-void
@@ -2219,21 +2385,26 @@
 
     const-string v0, "MoviePlayer requestResume! "
 
+    .line 1
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-boolean v0, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->mIsPause:Z
 
+    .line 3
     iget-object v0, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->mWaitEvent:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 4
     :try_start_0
     iget-object p0, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->mWaitEvent:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
+    .line 5
     monitor-exit v0
 
     return-void
@@ -2253,18 +2424,22 @@
 
     const-string v0, "MoviePlayer requestStop! "
 
+    .line 1
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
+    .line 2
     iput-boolean v0, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->mIsStopRequested:Z
 
+    .line 3
     iget-object p0, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->semp:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {p0}, Ljava/util/concurrent/Semaphore;->release()V
 
     const-string p0, "MoviePlayer requestStop: semp.release() "
 
+    .line 4
     invoke-static {p0}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
     return-void
@@ -2273,6 +2448,7 @@
 .method public seekTo(JI)Z
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2295,16 +2471,19 @@
 
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
+    .line 2
     iput-wide p1, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->mSeekPosMS:J
 
     const/4 p1, 0x1
 
+    .line 3
     iput-boolean p1, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->mSeeking:Z
 
     const/4 p2, 0x2
 
     if-nez p3, :cond_0
 
+    .line 4
     iput p2, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->mSeekMode:I
 
     goto :goto_0
@@ -2314,6 +2493,7 @@
 
     const/4 p2, 0x0
 
+    .line 5
     iput p2, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->mSeekMode:I
 
     :cond_1
@@ -2324,6 +2504,7 @@
 .method public setLoopMode(Z)V
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2340,6 +2521,7 @@
 
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
+    .line 2
     iput-boolean p1, p0, Lcom/xiaomi/mediacodec/MoviePlayer;->mLoop:Z
 
     return-void

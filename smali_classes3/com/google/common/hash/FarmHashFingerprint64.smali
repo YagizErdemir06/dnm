@@ -1,4 +1,4 @@
-.class final Lcom/google/common/hash/FarmHashFingerprint64;
+.class public final Lcom/google/common/hash/FarmHashFingerprint64;
 .super Lcom/google/common/hash/AbstractNonStreamingHashFunction;
 .source "SourceFile"
 
@@ -9,7 +9,7 @@
 
 
 # static fields
-.field static final FARMHASH_FINGERPRINT_64:Lcom/google/common/hash/HashFunction;
+.field public static final FARMHASH_FINGERPRINT_64:Lcom/google/common/hash/HashFunction;
 
 .field private static final K0:J = -0x3c5a37a36834ced9L
 
@@ -22,6 +22,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/hash/FarmHashFingerprint64;
 
     invoke-direct {v0}, Lcom/google/common/hash/FarmHashFingerprint64;-><init>()V
@@ -34,6 +35,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/hash/AbstractNonStreamingHashFunction;-><init>()V
 
     return-void
@@ -52,12 +54,14 @@
 
     if-gt p2, v0, :cond_0
 
+    .line 1
     invoke-static {p0, p1, p2}, Lcom/google/common/hash/FarmHashFingerprint64;->hashLength0to16([BII)J
 
     move-result-wide p0
 
     return-wide p0
 
+    .line 2
     :cond_0
     invoke-static {p0, p1, p2}, Lcom/google/common/hash/FarmHashFingerprint64;->hashLength17to32([BII)J
 
@@ -70,12 +74,14 @@
 
     if-gt p2, v0, :cond_2
 
+    .line 3
     invoke-static {p0, p1, p2}, Lcom/google/common/hash/FarmHashFingerprint64;->hashLength33To64([BII)J
 
     move-result-wide p0
 
     return-wide p0
 
+    .line 4
     :cond_2
     invoke-static {p0, p1, p2}, Lcom/google/common/hash/FarmHashFingerprint64;->hashLength65Plus([BII)J
 
@@ -87,34 +93,37 @@
 .method private static hashLength0to16([BII)J
     .locals 12
 
-    const-wide v0, -0x651e95c4d06fbfb1L    # -3.35749372464804E-179
+    const/16 v0, 0x8
 
-    const/16 v2, 0x8
+    const-wide v1, -0x651e95c4d06fbfb1L    # -3.35749372464804E-179
 
-    if-lt p2, v2, :cond_0
+    if-lt p2, v0, :cond_0
 
     mul-int/lit8 v3, p2, 0x2
 
     int-to-long v3, v3
 
-    add-long v9, v3, v0
+    add-long v9, v3, v1
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/common/hash/LittleEndianByteArray;->load64([BI)J
 
     move-result-wide v3
 
-    add-long/2addr v3, v0
+    add-long/2addr v3, v1
 
     add-int/2addr p1, p2
 
-    sub-int/2addr p1, v2
+    sub-int/2addr p1, v0
 
+    .line 2
     invoke-static {p0, p1}, Lcom/google/common/hash/LittleEndianByteArray;->load64([BI)J
 
     move-result-wide p0
 
     const/16 p2, 0x25
 
+    .line 3
     invoke-static {p0, p1, p2}, Ljava/lang/Long;->rotateRight(JI)J
 
     move-result-wide v0
@@ -125,6 +134,7 @@
 
     const/16 p2, 0x19
 
+    .line 4
     invoke-static {v3, v4, p2}, Ljava/lang/Long;->rotateRight(JI)J
 
     move-result-wide v0
@@ -133,6 +143,7 @@
 
     mul-long v7, v0, v9
 
+    .line 5
     invoke-static/range {v5 .. v10}, Lcom/google/common/hash/FarmHashFingerprint64;->hashLength16(JJJ)J
 
     move-result-wide p0
@@ -144,12 +155,13 @@
 
     if-lt p2, v3, :cond_1
 
-    mul-int/lit8 v2, p2, 0x2
+    mul-int/lit8 v0, p2, 0x2
 
-    int-to-long v4, v2
+    int-to-long v4, v0
 
-    add-long v10, v4, v0
+    add-long v10, v4, v1
 
+    .line 6
     invoke-static {p0, p1}, Lcom/google/common/hash/LittleEndianByteArray;->load32([BI)I
 
     move-result v0
@@ -172,6 +184,7 @@
 
     sub-int/2addr p1, v3
 
+    .line 7
     invoke-static {p0, p1}, Lcom/google/common/hash/LittleEndianByteArray;->load32([BI)I
 
     move-result p0
@@ -189,27 +202,30 @@
     :cond_1
     if-lez p2, :cond_2
 
+    .line 8
     aget-byte v3, p0, p1
 
     shr-int/lit8 v4, p2, 0x1
 
     add-int/2addr v4, p1
 
+    .line 9
     aget-byte v4, p0, v4
 
     add-int/lit8 v5, p2, -0x1
 
     add-int/2addr p1, v5
 
+    .line 10
     aget-byte p0, p0, p1
 
     and-int/lit16 p1, v3, 0xff
 
     and-int/lit16 v3, v4, 0xff
 
-    shl-int/lit8 v2, v3, 0x8
+    shl-int/lit8 v0, v3, 0x8
 
-    add-int/2addr p1, v2
+    add-int/2addr p1, v0
 
     and-int/lit16 p0, p0, 0xff
 
@@ -219,26 +235,27 @@
 
     int-to-long p0, p1
 
-    mul-long/2addr p0, v0
+    mul-long/2addr p0, v1
 
-    int-to-long v2, p2
+    int-to-long v3, p2
 
-    const-wide v4, -0x3c5a37a36834ced9L    # -7.848031385787155E17
+    const-wide v5, -0x3c5a37a36834ced9L    # -7.848031385787155E17
 
-    mul-long/2addr v2, v4
+    mul-long/2addr v3, v5
 
-    xor-long/2addr p0, v2
+    xor-long/2addr p0, v3
 
+    .line 11
     invoke-static {p0, p1}, Lcom/google/common/hash/FarmHashFingerprint64;->shiftMix(J)J
 
     move-result-wide p0
 
-    mul-long/2addr p0, v0
+    mul-long/2addr p0, v1
 
     return-wide p0
 
     :cond_2
-    return-wide v0
+    return-wide v1
 .end method
 
 .method private static hashLength16(JJJ)J
@@ -280,6 +297,7 @@
 
     add-long v9, v1, v3
 
+    .line 1
     invoke-static/range {p0 .. p1}, Lcom/google/common/hash/LittleEndianByteArray;->load64([BI)J
 
     move-result-wide v1
@@ -290,6 +308,7 @@
 
     add-int/lit8 v5, p1, 0x8
 
+    .line 2
     invoke-static {v0, v5}, Lcom/google/common/hash/LittleEndianByteArray;->load64([BI)J
 
     move-result-wide v5
@@ -298,6 +317,7 @@
 
     add-int/lit8 v8, v7, -0x8
 
+    .line 3
     invoke-static {v0, v8}, Lcom/google/common/hash/LittleEndianByteArray;->load64([BI)J
 
     move-result-wide v11
@@ -306,6 +326,7 @@
 
     add-int/lit8 v7, v7, -0x10
 
+    .line 4
     invoke-static {v0, v7}, Lcom/google/common/hash/LittleEndianByteArray;->load64([BI)J
 
     move-result-wide v7
@@ -316,6 +337,7 @@
 
     const/16 v0, 0x2b
 
+    .line 5
     invoke-static {v13, v14, v0}, Ljava/lang/Long;->rotateRight(JI)J
 
     move-result-wide v13
@@ -346,6 +368,7 @@
 
     move-wide v7, v0
 
+    .line 6
     invoke-static/range {v5 .. v10}, Lcom/google/common/hash/FarmHashFingerprint64;->hashLength16(JJJ)J
 
     move-result-wide v0
@@ -366,6 +389,7 @@
 
     add-long/2addr v1, v3
 
+    .line 1
     invoke-static/range {p0 .. p1}, Lcom/google/common/hash/LittleEndianByteArray;->load64([BI)J
 
     move-result-wide v5
@@ -374,6 +398,7 @@
 
     add-int/lit8 v5, p1, 0x8
 
+    .line 2
     invoke-static {v0, v5}, Lcom/google/common/hash/LittleEndianByteArray;->load64([BI)J
 
     move-result-wide v5
@@ -382,6 +407,7 @@
 
     add-int/lit8 v7, v13, -0x8
 
+    .line 3
     invoke-static {v0, v7}, Lcom/google/common/hash/LittleEndianByteArray;->load64([BI)J
 
     move-result-wide v7
@@ -390,6 +416,7 @@
 
     add-int/lit8 v9, v13, -0x10
 
+    .line 4
     invoke-static {v0, v9}, Lcom/google/common/hash/LittleEndianByteArray;->load64([BI)J
 
     move-result-wide v9
@@ -400,6 +427,7 @@
 
     const/16 v3, 0x2b
 
+    .line 5
     invoke-static {v14, v15, v3}, Ljava/lang/Long;->rotateRight(JI)J
 
     move-result-wide v14
@@ -420,6 +448,7 @@
 
     const/16 v9, 0x12
 
+    .line 6
     invoke-static {v5, v6, v9}, Ljava/lang/Long;->rotateRight(JI)J
 
     move-result-wide v5
@@ -438,6 +467,7 @@
 
     add-int/lit8 v7, p1, 0x10
 
+    .line 7
     invoke-static {v0, v7}, Lcom/google/common/hash/LittleEndianByteArray;->load64([BI)J
 
     move-result-wide v7
@@ -446,12 +476,14 @@
 
     add-int/lit8 v9, p1, 0x18
 
+    .line 8
     invoke-static {v0, v9}, Lcom/google/common/hash/LittleEndianByteArray;->load64([BI)J
 
     move-result-wide v9
 
     add-int/lit8 v4, v13, -0x20
 
+    .line 9
     invoke-static {v0, v4}, Lcom/google/common/hash/LittleEndianByteArray;->load64([BI)J
 
     move-result-wide v16
@@ -462,6 +494,7 @@
 
     add-int/lit8 v13, v13, -0x18
 
+    .line 10
     invoke-static {v0, v13}, Lcom/google/common/hash/LittleEndianByteArray;->load64([BI)J
 
     move-result-wide v16
@@ -474,6 +507,7 @@
 
     add-long v0, v7, v9
 
+    .line 11
     invoke-static {v0, v1, v3}, Ljava/lang/Long;->rotateRight(JI)J
 
     move-result-wide v0
@@ -502,6 +536,7 @@
 
     move-wide/from16 v9, v16
 
+    .line 12
     invoke-static/range {v5 .. v10}, Lcom/google/common/hash/FarmHashFingerprint64;->hashLength16(JJJ)J
 
     move-result-wide v0
@@ -516,6 +551,7 @@
 
     const-wide v0, -0x6e6c7825ddf69423L    # -5.27643297140616E-224
 
+    .line 1
     invoke-static {v0, v1}, Lcom/google/common/hash/FarmHashFingerprint64;->shiftMix(J)J
 
     move-result-wide v0
@@ -530,42 +566,45 @@
 
     new-array v9, v2, [J
 
-    const-wide v2, 0x1529cba0ca458ffL
-
+    .line 2
     invoke-static/range {p0 .. p1}, Lcom/google/common/hash/LittleEndianByteArray;->load64([BI)J
 
-    move-result-wide v4
+    move-result-wide v2
 
-    add-long/2addr v2, v4
+    const-wide v4, 0x1529cba0ca458ffL
+
+    add-long/2addr v4, v2
 
     const/4 v10, 0x1
 
-    add-int/lit8 v4, p2, -0x1
+    add-int/lit8 v2, p2, -0x1
 
-    div-int/lit8 v5, v4, 0x40
+    .line 3
+    div-int/lit8 v3, v2, 0x40
 
-    mul-int/lit8 v5, v5, 0x40
+    mul-int/lit8 v3, v3, 0x40
 
-    add-int v11, p1, v5
+    add-int v11, p1, v3
 
-    and-int/lit8 v12, v4, 0x3f
+    and-int/lit8 v12, v2, 0x3f
 
-    add-int v4, v11, v12
+    add-int v2, v11, v12
 
-    add-int/lit8 v13, v4, -0x3f
+    add-int/lit8 v13, v2, -0x3f
 
-    const-wide v4, 0x226bb95b4e64b6d4L    # 7.104748899679321E-143
+    const-wide v2, 0x226bb95b4e64b6d4L    # 7.104748899679321E-143
 
     move/from16 v14, p1
 
     :goto_0
-    add-long/2addr v2, v4
+    add-long/2addr v4, v2
 
     const/4 v15, 0x0
 
+    .line 4
     aget-wide v16, v8, v15
 
-    add-long v2, v2, v16
+    add-long v4, v4, v16
 
     add-int/lit8 v6, v14, 0x8
 
@@ -573,21 +612,22 @@
 
     move-result-wide v16
 
-    add-long v2, v2, v16
+    add-long v4, v4, v16
 
     const/16 v6, 0x25
 
-    invoke-static {v2, v3, v6}, Ljava/lang/Long;->rotateRight(JI)J
+    invoke-static {v4, v5, v6}, Ljava/lang/Long;->rotateRight(JI)J
 
-    move-result-wide v2
+    move-result-wide v4
 
     const-wide v16, -0x4b6d499041670d8dL    # -1.9079014105469082E-55
 
-    mul-long v2, v2, v16
+    mul-long v4, v4, v16
 
+    .line 5
     aget-wide v18, v8, v10
 
-    add-long v4, v4, v18
+    add-long v2, v2, v18
 
     add-int/lit8 v6, v14, 0x30
 
@@ -595,21 +635,23 @@
 
     move-result-wide v18
 
-    add-long v4, v4, v18
+    add-long v2, v2, v18
 
     const/16 v6, 0x2a
 
-    invoke-static {v4, v5, v6}, Ljava/lang/Long;->rotateRight(JI)J
+    invoke-static {v2, v3, v6}, Ljava/lang/Long;->rotateRight(JI)J
 
-    move-result-wide v4
+    move-result-wide v2
 
-    mul-long v4, v4, v16
+    mul-long v2, v2, v16
 
+    .line 6
     aget-wide v18, v9, v10
 
-    xor-long v18, v2, v18
+    xor-long v18, v4, v18
 
-    aget-wide v2, v8, v15
+    .line 7
+    aget-wide v4, v8, v15
 
     add-int/lit8 v6, v14, 0x28
 
@@ -617,10 +659,11 @@
 
     move-result-wide v20
 
-    add-long v2, v2, v20
+    add-long v4, v4, v20
 
-    add-long v20, v4, v2
+    add-long v20, v2, v4
 
+    .line 8
     aget-wide v2, v9, v15
 
     add-long/2addr v0, v2
@@ -633,6 +676,7 @@
 
     mul-long v22, v0, v16
 
+    .line 9
     aget-wide v0, v8, v10
 
     mul-long v2, v0, v16
@@ -651,6 +695,7 @@
 
     add-int/lit8 v1, v14, 0x20
 
+    .line 10
     aget-wide v2, v9, v10
 
     add-long v2, v22, v2
@@ -681,6 +726,7 @@
 
     add-long v16, v0, v16
 
+    .line 11
     aget-wide v0, v9, v15
 
     int-to-long v2, v12
@@ -689,13 +735,19 @@
 
     aput-wide v0, v9, v15
 
-    aget-wide v2, v8, v15
+    .line 12
+    aget-wide v0, v8, v15
 
-    add-long/2addr v2, v0
+    aget-wide v2, v9, v15
 
-    aput-wide v2, v8, v15
+    add-long/2addr v0, v2
 
+    aput-wide v0, v8, v15
+
+    .line 13
     aget-wide v0, v9, v15
+
+    aget-wide v2, v8, v15
 
     add-long/2addr v0, v2
 
@@ -703,6 +755,7 @@
 
     add-long v22, v22, v20
 
+    .line 14
     aget-wide v0, v8, v15
 
     add-long v22, v22, v0
@@ -723,6 +776,7 @@
 
     mul-long v0, v0, v16
 
+    .line 15
     aget-wide v2, v8, v10
 
     add-long v20, v20, v2
@@ -743,6 +797,7 @@
 
     mul-long v2, v2, v16
 
+    .line 16
     aget-wide v4, v9, v10
 
     const-wide/16 v11, 0x9
@@ -751,6 +806,7 @@
 
     xor-long v20, v0, v4
 
+    .line 17
     aget-wide v0, v8, v15
 
     mul-long/2addr v0, v11
@@ -765,6 +821,7 @@
 
     add-long v11, v2, v0
 
+    .line 18
     aget-wide v0, v9, v15
 
     add-long v0, v18, v0
@@ -777,6 +834,7 @@
 
     mul-long v18, v0, v16
 
+    .line 19
     aget-wide v0, v8, v10
 
     mul-long v2, v0, v16
@@ -795,6 +853,7 @@
 
     add-int/lit8 v1, v13, 0x20
 
+    .line 20
     aget-wide v2, v9, v10
 
     add-long v2, v18, v2
@@ -811,12 +870,14 @@
 
     invoke-static/range {v0 .. v6}, Lcom/google/common/hash/FarmHashFingerprint64;->weakHashLength32WithSeeds([BIJJ[J)V
 
+    .line 21
     aget-wide v2, v8, v15
 
     aget-wide v4, v9, v15
 
     move-wide/from16 v6, v16
 
+    .line 22
     invoke-static/range {v2 .. v7}, Lcom/google/common/hash/FarmHashFingerprint64;->hashLength16(JJJ)J
 
     move-result-wide v0
@@ -837,6 +898,7 @@
 
     aget-wide v4, v9, v10
 
+    .line 23
     invoke-static/range {v2 .. v7}, Lcom/google/common/hash/FarmHashFingerprint64;->hashLength16(JJJ)J
 
     move-result-wide v2
@@ -845,6 +907,7 @@
 
     move-wide v2, v0
 
+    .line 24
     invoke-static/range {v2 .. v7}, Lcom/google/common/hash/FarmHashFingerprint64;->hashLength16(JJJ)J
 
     move-result-wide v0
@@ -854,9 +917,9 @@
     :cond_0
     move-wide/from16 v0, v18
 
-    move-wide/from16 v4, v20
+    move-wide/from16 v2, v20
 
-    move-wide/from16 v2, v22
+    move-wide/from16 v4, v22
 
     goto/16 :goto_0
 .end method
@@ -876,24 +939,28 @@
 .method private static weakHashLength32WithSeeds([BIJJ[J)V
     .locals 6
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/common/hash/LittleEndianByteArray;->load64([BI)J
 
     move-result-wide v0
 
     add-int/lit8 v2, p1, 0x8
 
+    .line 2
     invoke-static {p0, v2}, Lcom/google/common/hash/LittleEndianByteArray;->load64([BI)J
 
     move-result-wide v2
 
     add-int/lit8 v4, p1, 0x10
 
+    .line 3
     invoke-static {p0, v4}, Lcom/google/common/hash/LittleEndianByteArray;->load64([BI)J
 
     move-result-wide v4
 
     add-int/lit8 p1, p1, 0x18
 
+    .line 4
     invoke-static {p0, p1}, Lcom/google/common/hash/LittleEndianByteArray;->load64([BI)J
 
     move-result-wide p0
@@ -906,6 +973,7 @@
 
     const/16 v0, 0x15
 
+    .line 5
     invoke-static {p4, p5, v0}, Ljava/lang/Long;->rotateRight(JI)J
 
     move-result-wide p4
@@ -916,22 +984,25 @@
 
     const/16 v0, 0x2c
 
+    .line 6
     invoke-static {v2, v3, v0}, Ljava/lang/Long;->rotateRight(JI)J
 
     move-result-wide v0
 
     add-long/2addr p4, v0
 
-    const/4 v0, 0x0
-
     add-long/2addr v2, p0
 
-    aput-wide v2, p6, v0
+    const/4 p0, 0x0
 
-    const/4 p0, 0x1
+    .line 7
+    aput-wide v2, p6, p0
 
     add-long/2addr p4, p2
 
+    const/4 p0, 0x1
+
+    .line 8
     aput-wide p4, p6, p0
 
     return-void
@@ -952,10 +1023,12 @@
 
     add-int p0, p2, p3
 
+    .line 1
     array-length v0, p1
 
     invoke-static {p2, p0, v0}, Lcom/google/common/base/Preconditions;->checkPositionIndexes(III)V
 
+    .line 2
     invoke-static {p1, p2, p3}, Lcom/google/common/hash/FarmHashFingerprint64;->fingerprint([BII)J
 
     move-result-wide p0

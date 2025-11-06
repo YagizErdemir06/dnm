@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/TreeRangeSet$AsRanges;
+.class public final Lcom/google/common/collect/TreeRangeSet$AsRanges;
 .super Lcom/google/common/collect/ForwardingCollection;
 .source "SourceFile"
 
@@ -29,7 +29,7 @@
 
 
 # instance fields
-.field final delegate:Ljava/util/Collection;
+.field public final delegate:Ljava/util/Collection;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Collection<",
@@ -52,8 +52,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ForwardingCollection;-><init>()V
 
+    .line 2
     iput-object p2, p0, Lcom/google/common/collect/TreeRangeSet$AsRanges;->delegate:Ljava/util/Collection;
 
     return-void
@@ -96,6 +98,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/common/collect/Sets;->equalsImpl(Ljava/util/Set;Ljava/lang/Object;)Z
 
     move-result p0
@@ -106,6 +109,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/collect/Sets;->hashCodeImpl(Ljava/util/Set;)I
 
     move-result p0

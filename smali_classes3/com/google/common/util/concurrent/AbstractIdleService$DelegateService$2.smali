@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/AbstractIdleService$DelegateService$2;
+.class public Lcom/google/common/util/concurrent/AbstractIdleService$DelegateService$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/google/common/util/concurrent/AbstractIdleService$DelegateService;
+.field public final synthetic this$1:Lcom/google/common/util/concurrent/AbstractIdleService$DelegateService;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/util/concurrent/AbstractIdleService$DelegateService;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/AbstractIdleService$DelegateService$2;->this$1:Lcom/google/common/util/concurrent/AbstractIdleService$DelegateService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,6 +38,7 @@
 .method public run()V
     .locals 1
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/common/util/concurrent/AbstractIdleService$DelegateService$2;->this$1:Lcom/google/common/util/concurrent/AbstractIdleService$DelegateService;
 
@@ -44,6 +46,7 @@
 
     invoke-virtual {v0}, Lcom/google/common/util/concurrent/AbstractIdleService;->shutDown()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/util/concurrent/AbstractIdleService$DelegateService$2;->this$1:Lcom/google/common/util/concurrent/AbstractIdleService$DelegateService;
 
     invoke-virtual {v0}, Lcom/google/common/util/concurrent/AbstractService;->notifyStopped()V
@@ -55,6 +58,7 @@
     :catchall_0
     move-exception v0
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/util/concurrent/AbstractIdleService$DelegateService$2;->this$1:Lcom/google/common/util/concurrent/AbstractIdleService$DelegateService;
 
     invoke-virtual {p0, v0}, Lcom/google/common/util/concurrent/AbstractService;->notifyFailed(Ljava/lang/Throwable;)V

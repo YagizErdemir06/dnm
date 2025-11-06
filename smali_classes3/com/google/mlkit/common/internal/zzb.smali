@@ -36,6 +36,7 @@
 .method public final create(Lcom/google/firebase/components/ComponentContainer;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     new-instance p0, Lcom/google/mlkit/common/sdkinternal/MlKitThreadPool;
 
     invoke-direct {p0}, Lcom/google/mlkit/common/sdkinternal/MlKitThreadPool;-><init>()V

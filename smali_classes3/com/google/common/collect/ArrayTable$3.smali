@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ArrayTable$3;
+.class public Lcom/google/common/collect/ArrayTable$3;
 .super Lcom/google/common/collect/AbstractIndexedListIterator;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/ArrayTable;
+.field public final synthetic this$0:Lcom/google/common/collect/ArrayTable;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/ArrayTable;I)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/ArrayTable$3;->this$0:Lcom/google/common/collect/ArrayTable;
 
     invoke-direct {p0, p2}, Lcom/google/common/collect/AbstractIndexedListIterator;-><init>(I)V
@@ -49,6 +50,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ArrayTable$3;->this$0:Lcom/google/common/collect/ArrayTable;
 
     invoke-static {p0, p1}, Lcom/google/common/collect/ArrayTable;->access$800(Lcom/google/common/collect/ArrayTable;I)Ljava/lang/Object;

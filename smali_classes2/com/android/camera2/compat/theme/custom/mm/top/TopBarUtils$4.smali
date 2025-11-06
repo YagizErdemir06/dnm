@@ -1,14 +1,14 @@
-.class Lcom/android/camera2/compat/theme/custom/mm/top/TopBarUtils$4;
+.class public Lcom/android/camera2/compat/theme/custom/mm/top/TopBarUtils$4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lw6/p2$d;
+.implements Ld/d/a/u6/a5/q/k4$d;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera2/compat/theme/custom/mm/top/TopBarUtils;->getSlowQualityItemBuilder()Lw6/p2$b;
+    value = Lcom/android/camera2/compat/theme/custom/mm/top/TopBarUtils;->getSlowQualityItemBuilder()Ld/d/a/u6/a5/q/k4$b;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -21,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,30 +29,41 @@
 
 
 # virtual methods
-.method public updateResource(I)Lw6/l4;
+.method public updateResource(I)Ld/d/a/u6/a5/q/m4;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "newMode"
+        }
+    .end annotation
 
-    invoke-static {}, Lg2/b;->g()Lj2/b1;
+    .line 1
+    invoke-static {}, Ld/d/a/l6/b;->g()Ld/d/a/l6/e/j/a1;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lj2/b1;->E()Lj2/t;
+    invoke-virtual {p0}, Ld/d/a/l6/e/j/a1;->E()Ld/d/a/l6/e/j/b0;
 
     move-result-object p0
 
-    invoke-static {}, Lg2/b;->g()Lj2/b1;
+    .line 2
+    invoke-static {}, Ld/d/a/l6/b;->g()Ld/d/a/l6/e/j/a1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lj2/b1;->D()Lj2/s;
+    invoke-virtual {v0}, Ld/d/a/l6/e/j/a1;->D()Ld/d/a/l6/e/j/a0;
 
     move-result-object v0
 
+    .line 3
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0, p1}, Lj2/t;->c(I)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Ld/d/a/l6/e/j/b0;->c(I)Ljava/lang/String;
 
     move-result-object p0
 
@@ -61,7 +73,7 @@
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Lj2/s;->c(I)Ljava/lang/String;
+    invoke-virtual {v0, p1}, Ld/d/a/l6/e/j/a0;->c(I)Ljava/lang/String;
 
     move-result-object p0
 
@@ -71,15 +83,18 @@
 
     move-result-object p0
 
-    new-instance p1, Lw6/l4$b;
+    .line 4
+    new-instance p1, Ld/d/a/u6/a5/q/m4$b;
 
-    invoke-direct {p1}, Lw6/l4$b;-><init>()V
+    invoke-direct {p1}, Ld/d/a/u6/a5/q/m4$b;-><init>()V
 
-    invoke-virtual {p1, p0}, Lw6/l4$b;->j(Ljava/lang/String;)Lw6/l4$b;
+    .line 5
+    invoke-virtual {p1, p0}, Ld/d/a/u6/a5/q/m4$b;->j(Ljava/lang/String;)Ld/d/a/u6/a5/q/m4$b;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lw6/l4$b;->a()Lw6/l4;
+    .line 6
+    invoke-virtual {p0}, Ld/d/a/u6/a5/q/m4$b;->a()Ld/d/a/u6/a5/q/m4;
 
     move-result-object p0
 

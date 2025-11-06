@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$AudioTrackInfo;
+.class public final Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$AudioTrackInfo;
 .super Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo;
 .source "SourceFile"
 
@@ -85,10 +85,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo;-><init>(ILcom/google/android/exoplayer2/source/TrackGroup;I)V
 
+    .line 2
     iput-object p4, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$AudioTrackInfo;->parameters:Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
 
+    .line 3
     iget-object p1, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo;->format:Lcom/google/android/exoplayer2/Format;
 
     iget-object p1, p1, Lcom/google/android/exoplayer2/Format;->language:Ljava/lang/String;
@@ -101,6 +104,7 @@
 
     const/4 p1, 0x0
 
+    .line 4
     invoke-static {p5, p1}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->isSupported(IZ)Z
 
     move-result p2
@@ -109,6 +113,7 @@
 
     move p2, p1
 
+    .line 5
     :goto_0
     iget-object p3, p4, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->preferredAudioLanguages:Lcom/google/common/collect/ImmutableList;
 
@@ -120,16 +125,19 @@
 
     if-ge p2, p3, :cond_1
 
+    .line 6
     iget-object p3, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo;->format:Lcom/google/android/exoplayer2/Format;
 
     iget-object v1, p4, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->preferredAudioLanguages:Lcom/google/common/collect/ImmutableList;
 
+    .line 7
     invoke-interface {v1, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
+    .line 8
     invoke-static {p3, v1, p1}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->getFormatLanguageScore(Lcom/google/android/exoplayer2/Format;Ljava/lang/String;Z)I
 
     move-result p3
@@ -148,23 +156,28 @@
 
     move p2, v0
 
+    .line 9
     :goto_1
     iput p2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$AudioTrackInfo;->preferredLanguageIndex:I
 
+    .line 10
     iput p3, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$AudioTrackInfo;->preferredLanguageScore:I
 
+    .line 11
     iget-object p2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo;->format:Lcom/google/android/exoplayer2/Format;
 
     iget p2, p2, Lcom/google/android/exoplayer2/Format;->roleFlags:I
 
     iget p3, p4, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->preferredAudioRoleFlags:I
 
+    .line 12
     invoke-static {p2, p3}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->access$2100(II)I
 
     move-result p2
 
     iput p2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$AudioTrackInfo;->preferredRoleFlagsScore:I
 
+    .line 13
     iget-object p2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo;->format:Lcom/google/android/exoplayer2/Format;
 
     iget p3, p2, Lcom/google/android/exoplayer2/Format;->roleFlags:I
@@ -191,6 +204,7 @@
     :goto_3
     iput-boolean p3, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$AudioTrackInfo;->hasMainOrNoRoleFlag:Z
 
+    .line 14
     iget p3, p2, Lcom/google/android/exoplayer2/Format;->selectionFlags:I
 
     and-int/2addr p3, v1
@@ -207,14 +221,17 @@
     :goto_4
     iput-boolean p3, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$AudioTrackInfo;->isDefaultSelectionFlag:Z
 
+    .line 15
     iget p3, p2, Lcom/google/android/exoplayer2/Format;->channelCount:I
 
     iput p3, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$AudioTrackInfo;->channelCount:I
 
+    .line 16
     iget v2, p2, Lcom/google/android/exoplayer2/Format;->sampleRate:I
 
     iput v2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$AudioTrackInfo;->sampleRate:I
 
+    .line 17
     iget v2, p2, Lcom/google/android/exoplayer2/Format;->bitrate:I
 
     iput v2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$AudioTrackInfo;->bitrate:I
@@ -223,6 +240,7 @@
 
     if-eq v2, v3, :cond_5
 
+    .line 18
     iget v4, p4, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->maxAudioBitrate:I
 
     if-gt v2, v4, :cond_7
@@ -234,6 +252,7 @@
 
     if-gt p3, v2, :cond_7
 
+    .line 19
     :cond_6
     invoke-interface {p7, p2}, Lcom/google/common/base/Predicate;->apply(Ljava/lang/Object;)Z
 
@@ -251,21 +270,25 @@
     :goto_5
     iput-boolean p2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$AudioTrackInfo;->isWithinConstraints:Z
 
+    .line 20
     invoke-static {}, Lcom/google/android/exoplayer2/util/Util;->getSystemLanguageCodes()[Ljava/lang/String;
 
     move-result-object p2
 
     move p3, p1
 
+    .line 21
     :goto_6
     array-length p7, p2
 
     if-ge p3, p7, :cond_9
 
+    .line 22
     iget-object p7, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo;->format:Lcom/google/android/exoplayer2/Format;
 
     aget-object v2, p2, p3
 
+    .line 23
     invoke-static {p7, v2, p1}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->getFormatLanguageScore(Lcom/google/android/exoplayer2/Format;Ljava/lang/String;Z)I
 
     move-result p7
@@ -284,13 +307,16 @@
 
     move p3, v0
 
+    .line 24
     :goto_7
     iput p3, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$AudioTrackInfo;->localeLanguageMatchIndex:I
 
+    .line 25
     iput p7, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$AudioTrackInfo;->localeLanguageScore:I
 
     move p2, p1
 
+    .line 26
     :goto_8
     iget-object p3, p4, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->preferredAudioMimeTypes:Lcom/google/common/collect/ImmutableList;
 
@@ -300,6 +326,7 @@
 
     if-ge p2, p3, :cond_b
 
+    .line 27
     iget-object p3, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo;->format:Lcom/google/android/exoplayer2/Format;
 
     iget-object p3, p3, Lcom/google/android/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
@@ -308,6 +335,7 @@
 
     iget-object p7, p4, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->preferredAudioMimeTypes:Lcom/google/common/collect/ImmutableList;
 
+    .line 28
     invoke-interface {p7, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p7
@@ -327,10 +355,12 @@
 
     goto :goto_8
 
+    .line 29
     :cond_b
     :goto_9
     iput v0, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$AudioTrackInfo;->preferredMimeTypeMatchIndex:I
 
+    .line 30
     invoke-static {p5}, Lcom/google/android/exoplayer2/RendererCapabilities;->getDecoderSupport(I)I
 
     move-result p2
@@ -349,6 +379,7 @@
     :goto_a
     iput-boolean p2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$AudioTrackInfo;->usesPrimaryDecoder:Z
 
+    .line 31
     invoke-static {p5}, Lcom/google/android/exoplayer2/RendererCapabilities;->getHardwareAccelerationSupport(I)I
 
     move-result p2
@@ -362,6 +393,7 @@
     :cond_d
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$AudioTrackInfo;->usesHardwareAcceleration:Z
 
+    .line 32
     invoke-direct {p0, p5, p6}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$AudioTrackInfo;->evaluateSelectionEligibility(IZ)I
 
     move-result p1
@@ -385,6 +417,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0}, Ljava/util/Collections;->max(Ljava/util/Collection;)Ljava/lang/Object;
 
     move-result-object p0
@@ -421,6 +454,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->builder()Lcom/google/common/collect/ImmutableList$Builder;
 
     move-result-object v0
@@ -429,11 +463,13 @@
 
     move-object v10, p1
 
+    .line 2
     :goto_0
     iget v2, v10, Lcom/google/android/exoplayer2/source/TrackGroup;->length:I
 
     if-ge v1, v2, :cond_0
 
+    .line 3
     new-instance v11, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$AudioTrackInfo;
 
     aget v7, p3, v1
@@ -460,6 +496,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-virtual {v0}, Lcom/google/common/collect/ImmutableList$Builder;->build()Lcom/google/common/collect/ImmutableList;
 
@@ -471,6 +508,7 @@
 .method private evaluateSelectionEligibility(IZ)I
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$AudioTrackInfo;->parameters:Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
 
     iget-boolean v0, v0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->exceedRendererCapabilitiesIfNecessary:Z
@@ -485,6 +523,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$AudioTrackInfo;->isWithinConstraints:Z
 
@@ -498,6 +537,7 @@
 
     return v1
 
+    .line 3
     :cond_1
     invoke-static {p1, v1}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->isSupported(IZ)Z
 
@@ -885,6 +925,7 @@
 .method public getSelectionEligibility()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$AudioTrackInfo;->selectionEligibility:I
 
     return p0

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/play/core/splitcompat/SplitLoadSessionTask;
+.class public final Lcom/google/android/play/core/splitcompat/SplitLoadSessionTask;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -35,10 +35,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/play/core/splitcompat/SplitLoadSessionTask;->splitFileIntents:Ljava/util/List;
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/play/core/splitcompat/SplitLoadSessionTask;->changer:Lcom/google/android/play/core/splitinstall/SplitSessionStatusChanger;
 
     return-void
@@ -49,6 +52,7 @@
 .method public onCompleted()V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/play/core/splitcompat/SplitLoadSessionTask;->changer:Lcom/google/android/play/core/splitinstall/SplitSessionStatusChanger;
 
     const/4 v0, 0x5
@@ -61,6 +65,7 @@
 .method public onFailed(I)V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/play/core/splitcompat/SplitLoadSessionTask;->changer:Lcom/google/android/play/core/splitinstall/SplitSessionStatusChanger;
 
     const/4 v0, 0x6
@@ -73,16 +78,19 @@
 .method public run()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/play/core/splitcompat/SplitLoadSessionTask;->splitFileIntents:Ljava/util/List;
 
     if-nez v0, :cond_0
 
     const/16 v0, -0x64
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/google/android/play/core/splitcompat/SplitLoadSessionTask;->onFailed(I)V
 
     return-void
 
+    .line 3
     :cond_0
     invoke-static {}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadManagerService;->getInstance()Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadManager;
 
@@ -90,12 +98,14 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     iget-object v1, p0, Lcom/google/android/play/core/splitcompat/SplitLoadSessionTask;->splitFileIntents:Ljava/util/List;
 
     invoke-virtual {v0, v1, p0}, Lcom/iqiyi/android/qigsaw/core/splitload/SplitLoadManager;->createSplitLoadTask(Ljava/util/List;Lcom/iqiyi/android/qigsaw/core/splitload/listener/OnSplitLoadListener;)Ljava/lang/Runnable;
 
     move-result-object p0
 
+    .line 5
     invoke-interface {p0}, Ljava/lang/Runnable;->run()V
 
     :cond_1

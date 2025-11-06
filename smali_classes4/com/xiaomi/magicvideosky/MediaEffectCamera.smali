@@ -4,15 +4,15 @@
 
 
 # static fields
-.field public static d:Ljava/lang/String; = "MediaEffectCamera"
+.field private static a:Ljava/lang/String; = "MediaEffectCamera"
 
 
 # instance fields
-.field public a:J
+.field private b:J
 
-.field public b:J
+.field private c:J
 
-.field public c:Lcom/xiaomi/magicvideosky/EffectCameraNotifier;
+.field public d:Lcom/xiaomi/magicvideosky/EffectCameraNotifier;
 
 
 # direct methods
@@ -25,9 +25,11 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->d:Ljava/lang/String;
+    .line 2
+    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:Ljava/lang/String;
 
     const-string v1, "construct MediaEffectCamera"
 
@@ -35,11 +37,13 @@
 
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:J
+    .line 3
+    iput-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->c:Lcom/xiaomi/magicvideosky/EffectCameraNotifier;
+    .line 4
+    iput-object v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->d:Lcom/xiaomi/magicvideosky/EffectCameraNotifier;
 
     return-void
 .end method
@@ -125,6 +129,7 @@
 .method public static j(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-static {p0, p1}, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->InitSegmentJni(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -133,6 +138,7 @@
 .method public static z()Ljava/lang/String;
     .locals 1
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->VersionJni()Ljava/lang/String;
 
     move-result-object v0
@@ -145,15 +151,17 @@
 .method public a()Z
     .locals 4
 
-    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:Ljava/lang/String;
 
     const-string v1, "BindRender"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:J
+    .line 2
+    iget-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
 
-    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
+    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->c:J
 
     invoke-static {v0, v1, v2, v3}, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->BindRenderJni(JJ)Z
 
@@ -165,7 +173,8 @@
 .method public b()V
     .locals 4
 
-    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -175,7 +184,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:J
+    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -185,7 +194,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:J
+    .line 2
+    iget-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
 
     invoke-static {v0, v1}, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->CancelRecordingJni(J)V
 
@@ -195,7 +205,8 @@
 .method public c(IIIILcom/xiaomi/magicvideosky/EffectCameraNotifier;)V
     .locals 6
 
-    iput-object p5, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->c:Lcom/xiaomi/magicvideosky/EffectCameraNotifier;
+    .line 1
+    iput-object p5, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->d:Lcom/xiaomi/magicvideosky/EffectCameraNotifier;
 
     const/4 v0, 0x0
 
@@ -209,13 +220,15 @@
 
     move-object v5, p5
 
+    .line 2
     invoke-static/range {v0 .. v5}, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->ConstructMediaEffectCameraJni(Ljavax/microedition/khronos/egl/EGLContext;IIIILcom/xiaomi/magicvideosky/EffectCameraNotifier;)J
 
     move-result-wide p1
 
-    iput-wide p1, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:J
+    iput-wide p1, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
 
-    sget-object p1, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->d:Ljava/lang/String;
+    .line 3
+    sget-object p1, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -225,7 +238,7 @@
 
     invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide p3, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:J
+    iget-wide p3, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
 
     invoke-virtual {p2, p3, p4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -241,17 +254,19 @@
 .method public d()V
     .locals 2
 
-    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:Ljava/lang/String;
 
     const-string v1, "construct ConstructRender"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {}, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->ConstructRenderJni()J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
+    iput-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->c:J
 
     return-void
 .end method
@@ -259,7 +274,8 @@
 .method public e()V
     .locals 4
 
-    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -269,7 +285,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:J
+    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -279,17 +295,20 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:J
+    .line 2
+    iget-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
 
     invoke-static {v0, v1}, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->DestructMediaEffectCameraJni(J)V
 
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:J
+    .line 3
+    iput-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->c:Lcom/xiaomi/magicvideosky/EffectCameraNotifier;
+    .line 4
+    iput-object v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->d:Lcom/xiaomi/magicvideosky/EffectCameraNotifier;
 
     return-void
 .end method
@@ -297,19 +316,22 @@
 .method public f()V
     .locals 2
 
-    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:Ljava/lang/String;
 
     const-string v1, "construct DestructRender"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
+    .line 2
+    iget-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->c:J
 
     invoke-static {v0, v1}, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->DestructRenderJni(J)V
 
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
+    .line 3
+    iput-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->c:J
 
     return-void
 .end method
@@ -317,7 +339,8 @@
 .method public g(Z)V
     .locals 3
 
-    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -335,29 +358,32 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:J
+    .line 2
+    iget-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
 
     invoke-static {v0, v1, p1}, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->EnableSegAlgorithmsJni(JZ)V
 
     return-void
 .end method
 
-.method public h()Lwg/c;
+.method public h()Ld/o/n/c;
     .locals 2
 
-    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:Ljava/lang/String;
 
     const-string v1, "GetRecordingStatus "
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:J
+    .line 2
+    iget-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
 
     invoke-static {v0, v1}, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->GetRecordingStatusJni(J)I
 
     move-result p0
 
-    invoke-static {p0}, Lwg/c;->a(I)Lwg/c;
+    invoke-static {p0}, Ld/o/n/c;->a(I)Ld/o/n/c;
 
     move-result-object p0
 
@@ -367,13 +393,15 @@
 .method public i(IIII)V
     .locals 8
 
-    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:Ljava/lang/String;
 
     const-string v1, "construct InitRender"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
+    .line 2
+    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->c:J
 
     move v4, p1
 
@@ -391,7 +419,8 @@
 .method public k(JII)V
     .locals 8
 
-    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -401,7 +430,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:J
+    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -411,7 +440,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:J
+    .line 2
+    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
 
     move-wide v4, p1
 
@@ -427,7 +457,8 @@
 .method public l()V
     .locals 4
 
-    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -437,7 +468,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:J
+    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -447,7 +478,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:J
+    .line 2
+    iget-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
 
     invoke-static {v0, v1}, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->PauseRecordingJni(J)V
 
@@ -457,7 +489,8 @@
 .method public m(Landroid/media/Image;[F)V
     .locals 13
 
-    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -467,7 +500,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:J
+    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -477,19 +510,22 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-virtual {p1}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
+    .line 3
     aget-object v2, v0, v1
 
     invoke-virtual {v2}, Landroid/media/Image$Plane;->getRowStride()I
 
     move-result v9
 
-    iget-wide v3, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:J
+    .line 4
+    iget-wide v3, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
 
     aget-object p0, v0, v1
 
@@ -531,13 +567,15 @@
 .method public n()V
     .locals 2
 
-    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:Ljava/lang/String;
 
     const-string v1, "construct RenderFrame"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
+    .line 2
+    iget-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->c:J
 
     invoke-static {v0, v1}, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->RenderFrameJni(J)V
 
@@ -547,13 +585,15 @@
 .method public o()V
     .locals 2
 
-    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:Ljava/lang/String;
 
     const-string v1, "construct RenderRelease"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
+    .line 2
+    iget-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->c:J
 
     invoke-static {v0, v1}, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->RenderReleaseJni(J)V
 
@@ -563,7 +603,8 @@
 .method public p()V
     .locals 4
 
-    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -573,7 +614,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:J
+    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -583,7 +624,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:J
+    .line 2
+    iget-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
 
     invoke-static {v0, v1}, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->ResumeRecordingJni(J)V
 
@@ -593,7 +635,8 @@
 .method public q(I)V
     .locals 3
 
-    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -611,7 +654,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:J
+    .line 2
+    iget-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
 
     invoke-static {v0, v1, p1}, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->SetCameraIdJni(JI)V
 
@@ -621,12 +665,14 @@
 .method public r()V
     .locals 1
 
-    sget-object p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->d:Ljava/lang/String;
+    .line 1
+    sget-object p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:Ljava/lang/String;
 
     const-string v0, "SetCurrentGLContext"
 
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {}, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->SetCurrentGLContextJni()V
 
     return-void
@@ -635,7 +681,8 @@
 .method public s(Ljava/lang/String;)Z
     .locals 2
 
-    sget-object p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->d:Ljava/lang/String;
+    .line 1
+    sget-object p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -653,6 +700,7 @@
 
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {p1}, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->SetEncoderTypeJni(Ljava/lang/String;)Z
 
     move-result p0
@@ -663,7 +711,8 @@
 .method public t(I)V
     .locals 3
 
-    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -681,7 +730,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:J
+    .line 2
+    iget-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
 
     invoke-static {v0, v1, p1}, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->SetOrientationJni(JI)V
 
@@ -704,12 +754,14 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     invoke-interface {p1}, Ljava/util/Map;->size()I
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 2
     invoke-interface {p1}, Ljava/util/Map;->size()I
 
     move-result v1
@@ -718,6 +770,7 @@
 
     new-array v1, v1, [Ljava/lang/String;
 
+    .line 3
     invoke-interface {p1}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v2
@@ -739,7 +792,8 @@
 
     check-cast v3, Ljava/lang/String;
 
-    sget-object v4, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->d:Ljava/lang/String;
+    .line 4
+    sget-object v4, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -775,6 +829,7 @@
 
     mul-int/lit8 v4, v0, 0x2
 
+    .line 5
     invoke-virtual {v3}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v5
@@ -783,6 +838,7 @@
 
     add-int/lit8 v4, v4, 0x1
 
+    .line 6
     invoke-interface {p1, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
@@ -795,8 +851,9 @@
 
     goto :goto_0
 
+    .line 7
     :cond_0
-    sget-object p1, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->d:Ljava/lang/String;
+    sget-object p1, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:Ljava/lang/String;
 
     const-string v1, "Param Map: <null, null>"
 
@@ -804,8 +861,9 @@
 
     new-array v1, v0, [Ljava/lang/String;
 
+    .line 8
     :cond_1
-    iget-wide p0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:J
+    iget-wide p0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
 
     invoke-static {p0, p1, v1}, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->SetParamsJni(J[Ljava/lang/String;)Z
 
@@ -817,7 +875,8 @@
 .method public v()V
     .locals 4
 
-    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -827,7 +886,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:J
+    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -837,7 +896,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:J
+    .line 2
+    iget-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
 
     invoke-static {v0, v1}, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->StartPreviewRecordJni(J)V
 
@@ -847,7 +907,8 @@
 .method public w(Ljava/lang/String;JJ)V
     .locals 9
 
-    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -857,7 +918,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:J
+    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -873,7 +934,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:J
+    .line 2
+    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
 
     move-object v4, p1
 
@@ -889,7 +951,8 @@
 .method public x()V
     .locals 4
 
-    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -899,7 +962,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:J
+    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -909,7 +972,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:J
+    .line 2
+    iget-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
 
     invoke-static {v0, v1}, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->StopPreviewRecordJni(J)V
 
@@ -919,7 +983,8 @@
 .method public y()V
     .locals 4
 
-    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->d:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -929,7 +994,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:J
+    iget-wide v2, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -939,7 +1004,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->a:J
+    .line 2
+    iget-wide v0, p0, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->b:J
 
     invoke-static {v0, v1}, Lcom/xiaomi/magicvideosky/MediaEffectCamera;->StopRecordingJni(J)V
 

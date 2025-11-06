@@ -40,12 +40,6 @@
     <plurals name="accessibility_vv_duartion">
         <item quantity="other">录制时间%d秒</item>
     </plurals>
-    <plurals name="accessibility_watermark_characters_inputted">
-        <item quantity="other">已输入%d字符</item>
-    </plurals>
-    <plurals name="accessibility_watermark_characters_max">
-        <item quantity="other">最多可输入%d字符</item>
-    </plurals>
     <plurals name="cinemaster_toast_camera_overflow">
         <item quantity="other">同一网络下最多支持接入%d台摄像机</item>
     </plurals>
@@ -88,10 +82,6 @@
     <plurals name="miuix_appcompat_items_selected">
         <item quantity="other">已选择%d项</item>
         <item quantity="one">已选择%d项</item>
-    </plurals>
-    <plurals name="mtrl_badge_content_description">
-        <item quantity="other">%d 条新通知</item>
-        <item quantity="one">%d 条新通知</item>
     </plurals>
     <plurals name="number_unit_seconds_split">
         <item quantity="other">%dS</item>

@@ -1,4 +1,4 @@
-.class interface abstract Lcom/google/common/collect/MapMakerInternalMap$StrongValueEntry;
+.class public interface abstract Lcom/google/common/collect/MapMakerInternalMap$StrongValueEntry;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/ForwardingSortedMultiset;
+.field public final synthetic this$0:Lcom/google/common/collect/ForwardingSortedMultiset;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/ForwardingSortedMultiset;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/ForwardingSortedMultiset$StandardDescendingMultiset;->this$0:Lcom/google/common/collect/ForwardingSortedMultiset;
 
     invoke-direct {p0}, Lcom/google/common/collect/DescendingMultiset;-><init>()V
@@ -48,6 +49,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ForwardingSortedMultiset$StandardDescendingMultiset;->this$0:Lcom/google/common/collect/ForwardingSortedMultiset;
 
     return-object p0

@@ -1,4 +1,4 @@
-.class final Lcom/google/common/hash/Murmur3_32HashFunction$Murmur3_32Hasher;
+.class public final Lcom/google/common/hash/Murmur3_32HashFunction$Murmur3_32Hasher;
 .super Lcom/google/common/hash/AbstractHasher;
 .source "SourceFile"
 
@@ -33,14 +33,18 @@
 .method public constructor <init>(I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/hash/AbstractHasher;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/google/common/hash/Murmur3_32HashFunction$Murmur3_32Hasher;->h1:I
 
     const/4 p1, 0x0
 
+    .line 3
     iput p1, p0, Lcom/google/common/hash/Murmur3_32HashFunction$Murmur3_32Hasher;->length:I
 
+    .line 4
     iput-boolean p1, p0, Lcom/google/common/hash/Murmur3_32HashFunction$Murmur3_32Hasher;->isDone:Z
 
     return-void
@@ -49,6 +53,7 @@
 .method private update(IJ)V
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/hash/Murmur3_32HashFunction$Murmur3_32Hasher;->buffer:J
 
     const-wide v2, 0xffffffffL
@@ -67,8 +72,10 @@
 
     add-int/2addr v2, v0
 
+    .line 2
     iput v2, p0, Lcom/google/common/hash/Murmur3_32HashFunction$Murmur3_32Hasher;->shift:I
 
+    .line 3
     iget v0, p0, Lcom/google/common/hash/Murmur3_32HashFunction$Murmur3_32Hasher;->length:I
 
     add-int/2addr v0, p1
@@ -79,6 +86,7 @@
 
     if-lt v2, p1, :cond_0
 
+    .line 4
     iget v0, p0, Lcom/google/common/hash/Murmur3_32HashFunction$Murmur3_32Hasher;->h1:I
 
     long-to-int p2, p2
@@ -93,12 +101,14 @@
 
     iput p2, p0, Lcom/google/common/hash/Murmur3_32HashFunction$Murmur3_32Hasher;->h1:I
 
+    .line 5
     iget-wide p2, p0, Lcom/google/common/hash/Murmur3_32HashFunction$Murmur3_32Hasher;->buffer:J
 
     ushr-long/2addr p2, p1
 
     iput-wide p2, p0, Lcom/google/common/hash/Murmur3_32HashFunction$Murmur3_32Hasher;->buffer:J
 
+    .line 6
     iget p2, p0, Lcom/google/common/hash/Murmur3_32HashFunction$Murmur3_32Hasher;->shift:I
 
     sub-int/2addr p2, p1
@@ -114,6 +124,7 @@
 .method public hash()Lcom/google/common/hash/HashCode;
     .locals 3
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/common/hash/Murmur3_32HashFunction$Murmur3_32Hasher;->isDone:Z
 
     const/4 v1, 0x1
@@ -122,8 +133,10 @@
 
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
+    .line 2
     iput-boolean v1, p0, Lcom/google/common/hash/Murmur3_32HashFunction$Murmur3_32Hasher;->isDone:Z
 
+    .line 3
     iget v0, p0, Lcom/google/common/hash/Murmur3_32HashFunction$Murmur3_32Hasher;->h1:I
 
     iget-wide v1, p0, Lcom/google/common/hash/Murmur3_32HashFunction$Murmur3_32Hasher;->buffer:J
@@ -138,6 +151,7 @@
 
     iput v0, p0, Lcom/google/common/hash/Murmur3_32HashFunction$Murmur3_32Hasher;->h1:I
 
+    .line 4
     iget p0, p0, Lcom/google/common/hash/Murmur3_32HashFunction$Murmur3_32Hasher;->length:I
 
     invoke-static {v0, p0}, Lcom/google/common/hash/Murmur3_32HashFunction;->access$600(II)Lcom/google/common/hash/HashCode;
@@ -188,7 +202,7 @@
 
     .line 8
     :goto_0
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v1
 
@@ -208,7 +222,7 @@
     .line 10
     :cond_0
     :goto_1
-    invoke-virtual {p1}, Ljava/nio/Buffer;->hasRemaining()Z
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->hasRemaining()Z
 
     move-result v1
 
@@ -306,14 +320,14 @@
 .end method
 
 .method public putChar(C)Lcom/google/common/hash/Hasher;
-    .locals 3
+    .locals 2
 
-    const/4 v0, 0x2
+    int-to-long v0, p1
 
-    int-to-long v1, p1
+    const/4 p1, 0x2
 
     .line 2
-    invoke-direct {p0, v0, v1, v2}, Lcom/google/common/hash/Murmur3_32HashFunction$Murmur3_32Hasher;->update(IJ)V
+    invoke-direct {p0, p1, v0, v1}, Lcom/google/common/hash/Murmur3_32HashFunction$Murmur3_32Hasher;->update(IJ)V
 
     return-object p0
 .end method
@@ -330,14 +344,14 @@
 .end method
 
 .method public putInt(I)Lcom/google/common/hash/Hasher;
-    .locals 3
+    .locals 2
 
-    const/4 v0, 0x4
+    int-to-long v0, p1
 
-    int-to-long v1, p1
+    const/4 p1, 0x4
 
     .line 2
-    invoke-direct {p0, v0, v1, v2}, Lcom/google/common/hash/Murmur3_32HashFunction$Murmur3_32Hasher;->update(IJ)V
+    invoke-direct {p0, p1, v0, v1}, Lcom/google/common/hash/Murmur3_32HashFunction$Murmur3_32Hasher;->update(IJ)V
 
     return-object p0
 .end method

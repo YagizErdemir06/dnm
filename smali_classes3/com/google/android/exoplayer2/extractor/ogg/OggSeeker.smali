@@ -1,4 +1,4 @@
-.class interface abstract Lcom/google/android/exoplayer2/extractor/ogg/OggSeeker;
+.class public interface abstract Lcom/google/android/exoplayer2/extractor/ogg/OggSeeker;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

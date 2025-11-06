@@ -74,12 +74,12 @@
 
     iget-object v5, p1, Lcom/google/android/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
-    const/4 v7, 0x0
-
     .line 2
     invoke-static {p4}, Lcom/google/android/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;->buildCustomDiagnosticInfo(I)Ljava/lang/String;
 
     move-result-object v8
+
+    const/4 v7, 0x0
 
     const/4 v9, 0x0
 
@@ -205,6 +205,7 @@
 .method public static synthetic access$000(Lcom/google/android/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;Lcom/google/android/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;)Lcom/google/android/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;->copyWithFallbackException(Lcom/google/android/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;)Lcom/google/android/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;
 
     move-result-object p0
@@ -224,6 +225,7 @@
     :cond_0
     const-string v0, ""
 
+    .line 1
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -235,6 +237,7 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 2
     invoke-static {p0}, Ljava/lang/Math;->abs(I)I
 
     move-result p0
@@ -253,13 +256,16 @@
     .annotation build Landroidx/annotation/CheckResult;
     .end annotation
 
+    .line 1
     new-instance v8, Lcom/google/android/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 2
+    invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    .line 3
+    invoke-virtual {p0}, Ljava/lang/Exception;->getCause()Ljava/lang/Throwable;
 
     move-result-object v2
 
@@ -293,10 +299,12 @@
         value = 0x15
     .end annotation
 
+    .line 1
     instance-of v0, p0, Landroid/media/MediaCodec$CodecException;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Landroid/media/MediaCodec$CodecException;
 
     invoke-virtual {p0}, Landroid/media/MediaCodec$CodecException;->getDiagnosticInfo()Ljava/lang/String;

@@ -1,4 +1,4 @@
-.class Landroidx/print/PrintHelper$1;
+.class public Landroidx/print/PrintHelper$1;
 .super Landroid/os/AsyncTask;
 .source "SourceFile"
 
@@ -25,27 +25,28 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/print/PrintHelper;
+.field public final synthetic this$0:Landroidx/print/PrintHelper;
 
-.field final synthetic val$attributes:Landroid/print/PrintAttributes;
+.field public final synthetic val$attributes:Landroid/print/PrintAttributes;
 
-.field final synthetic val$bitmap:Landroid/graphics/Bitmap;
+.field public final synthetic val$bitmap:Landroid/graphics/Bitmap;
 
-.field final synthetic val$cancellationSignal:Landroid/os/CancellationSignal;
+.field public final synthetic val$cancellationSignal:Landroid/os/CancellationSignal;
 
-.field final synthetic val$fileDescriptor:Landroid/os/ParcelFileDescriptor;
+.field public final synthetic val$fileDescriptor:Landroid/os/ParcelFileDescriptor;
 
-.field final synthetic val$fittingMode:I
+.field public final synthetic val$fittingMode:I
 
-.field final synthetic val$pdfAttributes:Landroid/print/PrintAttributes;
+.field public final synthetic val$pdfAttributes:Landroid/print/PrintAttributes;
 
-.field final synthetic val$writeResultCallback:Landroid/print/PrintDocumentAdapter$WriteResultCallback;
+.field public final synthetic val$writeResultCallback:Landroid/print/PrintDocumentAdapter$WriteResultCallback;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/print/PrintHelper;Landroid/os/CancellationSignal;Landroid/print/PrintAttributes;Landroid/graphics/Bitmap;Landroid/print/PrintAttributes;ILandroid/os/ParcelFileDescriptor;Landroid/print/PrintDocumentAdapter$WriteResultCallback;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/print/PrintHelper$1;->this$0:Landroidx/print/PrintHelper;
 
     iput-object p2, p0, Landroidx/print/PrintHelper$1;->val$cancellationSignal:Landroid/os/CancellationSignal;
@@ -199,10 +200,10 @@
     invoke-direct {v6, v7}, Landroid/graphics/RectF;-><init>(Landroid/graphics/Rect;)V
 
     .line 14
-    invoke-virtual {v5, v2}, Landroid/graphics/pdf/PdfDocument;->finishPage(Landroid/graphics/pdf/PdfDocument$Page;)V
+    invoke-virtual {v5, v2}, Landroid/print/pdf/PrintedPdfDocument;->finishPage(Landroid/graphics/pdf/PdfDocument$Page;)V
 
     .line 15
-    invoke-virtual {v5}, Landroid/graphics/pdf/PdfDocument;->close()V
+    invoke-virtual {v5}, Landroid/print/pdf/PrintedPdfDocument;->close()V
 
     move-object v2, v6
 
@@ -251,7 +252,7 @@
     invoke-virtual {v2, v1, v5, v0}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Matrix;Landroid/graphics/Paint;)V
 
     .line 21
-    invoke-virtual {p1, v3}, Landroid/graphics/pdf/PdfDocument;->finishPage(Landroid/graphics/pdf/PdfDocument$Page;)V
+    invoke-virtual {p1, v3}, Landroid/print/pdf/PrintedPdfDocument;->finishPage(Landroid/graphics/pdf/PdfDocument$Page;)V
 
     .line 22
     iget-object v2, p0, Landroidx/print/PrintHelper$1;->val$cancellationSignal:Landroid/os/CancellationSignal;
@@ -266,7 +267,7 @@
 
     .line 23
     :try_start_2
-    invoke-virtual {p1}, Landroid/graphics/pdf/PdfDocument;->close()V
+    invoke-virtual {p1}, Landroid/print/pdf/PrintedPdfDocument;->close()V
 
     .line 24
     iget-object p1, p0, Landroidx/print/PrintHelper$1;->val$fileDescriptor:Landroid/os/ParcelFileDescriptor;
@@ -313,13 +314,13 @@
     invoke-direct {v2, v3}, Ljava/io/FileOutputStream;-><init>(Ljava/io/FileDescriptor;)V
 
     .line 30
-    invoke-virtual {p1, v2}, Landroid/graphics/pdf/PdfDocument;->writeTo(Ljava/io/OutputStream;)V
+    invoke-virtual {p1, v2}, Landroid/print/pdf/PrintedPdfDocument;->writeTo(Ljava/io/OutputStream;)V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
     .line 31
     :try_start_6
-    invoke-virtual {p1}, Landroid/graphics/pdf/PdfDocument;->close()V
+    invoke-virtual {p1}, Landroid/print/pdf/PrintedPdfDocument;->close()V
 
     .line 32
     iget-object p1, p0, Landroidx/print/PrintHelper$1;->val$fileDescriptor:Landroid/os/ParcelFileDescriptor;
@@ -353,7 +354,7 @@
     move-exception v0
 
     .line 36
-    invoke-virtual {p1}, Landroid/graphics/pdf/PdfDocument;->close()V
+    invoke-virtual {p1}, Landroid/print/pdf/PrintedPdfDocument;->close()V
 
     .line 37
     iget-object p1, p0, Landroidx/print/PrintHelper$1;->val$fileDescriptor:Landroid/os/ParcelFileDescriptor;

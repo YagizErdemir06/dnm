@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/TimeoutFuture$TimeoutFutureException;
+.class public final Lcom/google/common/util/concurrent/TimeoutFuture$TimeoutFutureException;
 .super Ljava/util/concurrent/TimeoutException;
 .source "SourceFile"
 
@@ -45,10 +45,12 @@
     :try_start_0
     new-array v0, v0, [Ljava/lang/StackTraceElement;
 
-    invoke-virtual {p0, v0}, Ljava/lang/Throwable;->setStackTrace([Ljava/lang/StackTraceElement;)V
+    .line 1
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/TimeoutException;->setStackTrace([Ljava/lang/StackTraceElement;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     monitor-exit p0
 
     return-object p0

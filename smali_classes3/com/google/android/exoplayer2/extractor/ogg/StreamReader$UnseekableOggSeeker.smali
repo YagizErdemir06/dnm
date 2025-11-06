@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/extractor/ogg/StreamReader$UnseekableOggSeeker;
+.class public final Lcom/google/android/exoplayer2/extractor/ogg/StreamReader$UnseekableOggSeeker;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -41,6 +41,7 @@
 .method public createSeekMap()Lcom/google/android/exoplayer2/extractor/SeekMap;
     .locals 2
 
+    .line 1
     new-instance p0, Lcom/google/android/exoplayer2/extractor/SeekMap$Unseekable;
 
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324

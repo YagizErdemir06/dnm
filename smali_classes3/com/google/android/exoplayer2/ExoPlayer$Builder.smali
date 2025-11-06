@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field analyticsCollectorFunction:Lcom/google/common/base/Function;
+.field public analyticsCollectorFunction:Lcom/google/common/base/Function;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/base/Function<",
@@ -26,9 +26,9 @@
     .end annotation
 .end field
 
-.field audioAttributes:Lcom/google/android/exoplayer2/audio/AudioAttributes;
+.field public audioAttributes:Lcom/google/android/exoplayer2/audio/AudioAttributes;
 
-.field bandwidthMeterSupplier:Lcom/google/common/base/Supplier;
+.field public bandwidthMeterSupplier:Lcom/google/common/base/Supplier;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/base/Supplier<",
@@ -38,23 +38,23 @@
     .end annotation
 .end field
 
-.field buildCalled:Z
+.field public buildCalled:Z
 
-.field clock:Lcom/google/android/exoplayer2/util/Clock;
+.field public clock:Lcom/google/android/exoplayer2/util/Clock;
 
-.field final context:Landroid/content/Context;
+.field public final context:Landroid/content/Context;
 
-.field detachSurfaceTimeoutMs:J
+.field public detachSurfaceTimeoutMs:J
 
-.field foregroundModeTimeoutMs:J
+.field public foregroundModeTimeoutMs:J
 
-.field handleAudioBecomingNoisy:Z
+.field public handleAudioBecomingNoisy:Z
 
-.field handleAudioFocus:Z
+.field public handleAudioFocus:Z
 
-.field livePlaybackSpeedControl:Lcom/google/android/exoplayer2/LivePlaybackSpeedControl;
+.field public livePlaybackSpeedControl:Lcom/google/android/exoplayer2/LivePlaybackSpeedControl;
 
-.field loadControlSupplier:Lcom/google/common/base/Supplier;
+.field public loadControlSupplier:Lcom/google/common/base/Supplier;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/base/Supplier<",
@@ -64,9 +64,9 @@
     .end annotation
 .end field
 
-.field looper:Landroid/os/Looper;
+.field public looper:Landroid/os/Looper;
 
-.field mediaSourceFactorySupplier:Lcom/google/common/base/Supplier;
+.field public mediaSourceFactorySupplier:Lcom/google/common/base/Supplier;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/base/Supplier<",
@@ -76,16 +76,16 @@
     .end annotation
 .end field
 
-.field pauseAtEndOfMediaItems:Z
+.field public pauseAtEndOfMediaItems:Z
 
-.field priorityTaskManager:Lcom/google/android/exoplayer2/util/PriorityTaskManager;
+.field public priorityTaskManager:Lcom/google/android/exoplayer2/util/PriorityTaskManager;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field releaseTimeoutMs:J
+.field public releaseTimeoutMs:J
 
-.field renderersFactorySupplier:Lcom/google/common/base/Supplier;
+.field public renderersFactorySupplier:Lcom/google/common/base/Supplier;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/base/Supplier<",
@@ -95,15 +95,15 @@
     .end annotation
 .end field
 
-.field seekBackIncrementMs:J
+.field public seekBackIncrementMs:J
 
-.field seekForwardIncrementMs:J
+.field public seekForwardIncrementMs:J
 
-.field seekParameters:Lcom/google/android/exoplayer2/SeekParameters;
+.field public seekParameters:Lcom/google/android/exoplayer2/SeekParameters;
 
-.field skipSilenceEnabled:Z
+.field public skipSilenceEnabled:Z
 
-.field trackSelectorSupplier:Lcom/google/common/base/Supplier;
+.field public trackSelectorSupplier:Lcom/google/common/base/Supplier;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/base/Supplier<",
@@ -113,15 +113,15 @@
     .end annotation
 .end field
 
-.field useLazyPreparation:Z
+.field public useLazyPreparation:Z
 
-.field usePlatformDiagnostics:Z
+.field public usePlatformDiagnostics:Z
 
-.field videoChangeFrameRateStrategy:I
+.field public videoChangeFrameRateStrategy:I
 
-.field videoScalingMode:I
+.field public videoScalingMode:I
 
-.field wakeMode:I
+.field public wakeMode:I
 
 
 # direct methods
@@ -129,13 +129,13 @@
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/google/android/exoplayer2/c0;
+    new-instance v0, Ld/j/a/b/m;
 
-    invoke-direct {v0, p1}, Lcom/google/android/exoplayer2/c0;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Ld/j/a/b/m;-><init>(Landroid/content/Context;)V
 
-    new-instance v1, Lcom/google/android/exoplayer2/f;
+    new-instance v1, Ld/j/a/b/s;
 
-    invoke-direct {v1, p1}, Lcom/google/android/exoplayer2/f;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, p1}, Ld/j/a/b/s;-><init>(Landroid/content/Context;)V
 
     invoke-direct {p0, p1, v0, v1}, Lcom/google/android/exoplayer2/ExoPlayer$Builder;-><init>(Landroid/content/Context;Lcom/google/common/base/Supplier;Lcom/google/common/base/Supplier;)V
 
@@ -146,13 +146,13 @@
     .locals 1
 
     .line 2
-    new-instance v0, Lcom/google/android/exoplayer2/l;
+    new-instance v0, Ld/j/a/b/x;
 
-    invoke-direct {v0, p2}, Lcom/google/android/exoplayer2/l;-><init>(Lcom/google/android/exoplayer2/RenderersFactory;)V
+    invoke-direct {v0, p2}, Ld/j/a/b/x;-><init>(Lcom/google/android/exoplayer2/RenderersFactory;)V
 
-    new-instance p2, Lcom/google/android/exoplayer2/m;
+    new-instance p2, Ld/j/a/b/g;
 
-    invoke-direct {p2, p1}, Lcom/google/android/exoplayer2/m;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Ld/j/a/b/g;-><init>(Landroid/content/Context;)V
 
     invoke-direct {p0, p1, v0, p2}, Lcom/google/android/exoplayer2/ExoPlayer$Builder;-><init>(Landroid/content/Context;Lcom/google/common/base/Supplier;Lcom/google/common/base/Supplier;)V
 
@@ -163,13 +163,13 @@
     .locals 1
 
     .line 4
-    new-instance v0, Lcom/google/android/exoplayer2/j;
+    new-instance v0, Ld/j/a/b/e;
 
-    invoke-direct {v0, p2}, Lcom/google/android/exoplayer2/j;-><init>(Lcom/google/android/exoplayer2/RenderersFactory;)V
+    invoke-direct {v0, p2}, Ld/j/a/b/e;-><init>(Lcom/google/android/exoplayer2/RenderersFactory;)V
 
-    new-instance p2, Lcom/google/android/exoplayer2/k;
+    new-instance p2, Ld/j/a/b/k;
 
-    invoke-direct {p2, p3}, Lcom/google/android/exoplayer2/k;-><init>(Lcom/google/android/exoplayer2/source/MediaSource$Factory;)V
+    invoke-direct {p2, p3}, Ld/j/a/b/k;-><init>(Lcom/google/android/exoplayer2/source/MediaSource$Factory;)V
 
     invoke-direct {p0, p1, v0, p2}, Lcom/google/android/exoplayer2/ExoPlayer$Builder;-><init>(Landroid/content/Context;Lcom/google/common/base/Supplier;Lcom/google/common/base/Supplier;)V
 
@@ -180,29 +180,29 @@
     .locals 8
 
     .line 5
-    new-instance v2, Lcom/google/android/exoplayer2/n;
+    new-instance v2, Ld/j/a/b/q;
 
-    invoke-direct {v2, p2}, Lcom/google/android/exoplayer2/n;-><init>(Lcom/google/android/exoplayer2/RenderersFactory;)V
+    invoke-direct {v2, p2}, Ld/j/a/b/q;-><init>(Lcom/google/android/exoplayer2/RenderersFactory;)V
 
-    new-instance v3, Lcom/google/android/exoplayer2/o;
+    new-instance v3, Ld/j/a/b/o;
 
-    invoke-direct {v3, p3}, Lcom/google/android/exoplayer2/o;-><init>(Lcom/google/android/exoplayer2/source/MediaSource$Factory;)V
+    invoke-direct {v3, p3}, Ld/j/a/b/o;-><init>(Lcom/google/android/exoplayer2/source/MediaSource$Factory;)V
 
-    new-instance v4, Lcom/google/android/exoplayer2/q;
+    new-instance v4, Ld/j/a/b/t;
 
-    invoke-direct {v4, p4}, Lcom/google/android/exoplayer2/q;-><init>(Lcom/google/android/exoplayer2/trackselection/TrackSelector;)V
+    invoke-direct {v4, p4}, Ld/j/a/b/t;-><init>(Lcom/google/android/exoplayer2/trackselection/TrackSelector;)V
 
-    new-instance v5, Lcom/google/android/exoplayer2/s;
+    new-instance v5, Ld/j/a/b/j;
 
-    invoke-direct {v5, p5}, Lcom/google/android/exoplayer2/s;-><init>(Lcom/google/android/exoplayer2/LoadControl;)V
+    invoke-direct {v5, p5}, Ld/j/a/b/j;-><init>(Lcom/google/android/exoplayer2/LoadControl;)V
 
-    new-instance v6, Lcom/google/android/exoplayer2/t;
+    new-instance v6, Ld/j/a/b/w;
 
-    invoke-direct {v6, p6}, Lcom/google/android/exoplayer2/t;-><init>(Lcom/google/android/exoplayer2/upstream/BandwidthMeter;)V
+    invoke-direct {v6, p6}, Ld/j/a/b/w;-><init>(Lcom/google/android/exoplayer2/upstream/BandwidthMeter;)V
 
-    new-instance v7, Lcom/google/android/exoplayer2/u;
+    new-instance v7, Ld/j/a/b/f;
 
-    invoke-direct {v7, p7}, Lcom/google/android/exoplayer2/u;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsCollector;)V
+    invoke-direct {v7, p7}, Ld/j/a/b/f;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsCollector;)V
 
     move-object v0, p0
 
@@ -217,13 +217,13 @@
     .locals 2
 
     .line 3
-    new-instance v0, Lcom/google/android/exoplayer2/h;
+    new-instance v0, Ld/j/a/b/r;
 
-    invoke-direct {v0, p1}, Lcom/google/android/exoplayer2/h;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Ld/j/a/b/r;-><init>(Landroid/content/Context;)V
 
-    new-instance v1, Lcom/google/android/exoplayer2/i;
+    new-instance v1, Ld/j/a/b/z;
 
-    invoke-direct {v1, p2}, Lcom/google/android/exoplayer2/i;-><init>(Lcom/google/android/exoplayer2/source/MediaSource$Factory;)V
+    invoke-direct {v1, p2}, Ld/j/a/b/z;-><init>(Lcom/google/android/exoplayer2/source/MediaSource$Factory;)V
 
     invoke-direct {p0, p1, v0, v1}, Lcom/google/android/exoplayer2/ExoPlayer$Builder;-><init>(Landroid/content/Context;Lcom/google/common/base/Supplier;Lcom/google/common/base/Supplier;)V
 
@@ -246,21 +246,17 @@
     .end annotation
 
     .line 6
-    new-instance v4, Lcom/google/android/exoplayer2/y;
+    new-instance v4, Ld/j/a/b/p;
 
-    invoke-direct {v4, p1}, Lcom/google/android/exoplayer2/y;-><init>(Landroid/content/Context;)V
+    invoke-direct {v4, p1}, Ld/j/a/b/p;-><init>(Landroid/content/Context;)V
 
-    new-instance v5, Lcom/google/android/exoplayer2/z;
+    sget-object v5, Ld/j/a/b/a;->c:Ld/j/a/b/a;
 
-    invoke-direct {v5}, Lcom/google/android/exoplayer2/z;-><init>()V
+    new-instance v6, Ld/j/a/b/i;
 
-    new-instance v6, Lcom/google/android/exoplayer2/a0;
+    invoke-direct {v6, p1}, Ld/j/a/b/i;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {v6, p1}, Lcom/google/android/exoplayer2/a0;-><init>(Landroid/content/Context;)V
-
-    new-instance v7, Lcom/google/android/exoplayer2/b0;
-
-    invoke-direct {v7}, Lcom/google/android/exoplayer2/b0;-><init>()V
+    sget-object v7, Ld/j/a/b/k2;->c:Ld/j/a/b/k2;
 
     move-object v0, p0
 
@@ -402,129 +398,10 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/google/android/exoplayer2/RenderersFactory;)Lcom/google/android/exoplayer2/RenderersFactory;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->lambda$new$6(Lcom/google/android/exoplayer2/RenderersFactory;)Lcom/google/android/exoplayer2/RenderersFactory;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic b(Lcom/google/android/exoplayer2/analytics/AnalyticsCollector;Lcom/google/android/exoplayer2/util/Clock;)Lcom/google/android/exoplayer2/analytics/AnalyticsCollector;
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->lambda$new$13(Lcom/google/android/exoplayer2/analytics/AnalyticsCollector;Lcom/google/android/exoplayer2/util/Clock;)Lcom/google/android/exoplayer2/analytics/AnalyticsCollector;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic c(Landroid/content/Context;)Lcom/google/android/exoplayer2/source/MediaSource$Factory;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->lambda$new$3(Landroid/content/Context;)Lcom/google/android/exoplayer2/source/MediaSource$Factory;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic d(Lcom/google/android/exoplayer2/source/MediaSource$Factory;)Lcom/google/android/exoplayer2/source/MediaSource$Factory;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->lambda$setMediaSourceFactory$17(Lcom/google/android/exoplayer2/source/MediaSource$Factory;)Lcom/google/android/exoplayer2/source/MediaSource$Factory;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic e(Landroid/content/Context;)Lcom/google/android/exoplayer2/upstream/BandwidthMeter;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->lambda$new$15(Landroid/content/Context;)Lcom/google/android/exoplayer2/upstream/BandwidthMeter;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic f(Lcom/google/android/exoplayer2/LoadControl;)Lcom/google/android/exoplayer2/LoadControl;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->lambda$new$11(Lcom/google/android/exoplayer2/LoadControl;)Lcom/google/android/exoplayer2/LoadControl;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic g(Lcom/google/android/exoplayer2/source/MediaSource$Factory;)Lcom/google/android/exoplayer2/source/MediaSource$Factory;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->lambda$new$7(Lcom/google/android/exoplayer2/source/MediaSource$Factory;)Lcom/google/android/exoplayer2/source/MediaSource$Factory;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic h(Lcom/google/android/exoplayer2/trackselection/TrackSelector;)Lcom/google/android/exoplayer2/trackselection/TrackSelector;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->lambda$setTrackSelector$18(Lcom/google/android/exoplayer2/trackselection/TrackSelector;)Lcom/google/android/exoplayer2/trackselection/TrackSelector;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic i(Landroid/content/Context;)Lcom/google/android/exoplayer2/RenderersFactory;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->lambda$new$0(Landroid/content/Context;)Lcom/google/android/exoplayer2/RenderersFactory;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic j(Lcom/google/android/exoplayer2/RenderersFactory;)Lcom/google/android/exoplayer2/RenderersFactory;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->lambda$setRenderersFactory$16(Lcom/google/android/exoplayer2/RenderersFactory;)Lcom/google/android/exoplayer2/RenderersFactory;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic k(Lcom/google/android/exoplayer2/source/MediaSource$Factory;)Lcom/google/android/exoplayer2/source/MediaSource$Factory;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->lambda$new$9(Lcom/google/android/exoplayer2/source/MediaSource$Factory;)Lcom/google/android/exoplayer2/source/MediaSource$Factory;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic l(Landroid/content/Context;)Lcom/google/android/exoplayer2/trackselection/TrackSelector;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->lambda$new$14(Landroid/content/Context;)Lcom/google/android/exoplayer2/trackselection/TrackSelector;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method private static synthetic lambda$new$0(Landroid/content/Context;)Lcom/google/android/exoplayer2/RenderersFactory;
+.method public static synthetic lambda$new$0(Landroid/content/Context;)Lcom/google/android/exoplayer2/RenderersFactory;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/DefaultRenderersFactory;
 
     invoke-direct {v0, p0}, Lcom/google/android/exoplayer2/DefaultRenderersFactory;-><init>(Landroid/content/Context;)V
@@ -532,9 +409,10 @@
     return-object v0
 .end method
 
-.method private static synthetic lambda$new$1(Landroid/content/Context;)Lcom/google/android/exoplayer2/source/MediaSource$Factory;
+.method public static synthetic lambda$new$1(Landroid/content/Context;)Lcom/google/android/exoplayer2/source/MediaSource$Factory;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/source/DefaultMediaSourceFactory;
 
     new-instance v1, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;
@@ -546,33 +424,34 @@
     return-object v0
 .end method
 
-.method private static synthetic lambda$new$10(Lcom/google/android/exoplayer2/trackselection/TrackSelector;)Lcom/google/android/exoplayer2/trackselection/TrackSelector;
+.method public static synthetic lambda$new$10(Lcom/google/android/exoplayer2/trackselection/TrackSelector;)Lcom/google/android/exoplayer2/trackselection/TrackSelector;
     .locals 0
 
     return-object p0
 .end method
 
-.method private static synthetic lambda$new$11(Lcom/google/android/exoplayer2/LoadControl;)Lcom/google/android/exoplayer2/LoadControl;
+.method public static synthetic lambda$new$11(Lcom/google/android/exoplayer2/LoadControl;)Lcom/google/android/exoplayer2/LoadControl;
     .locals 0
 
     return-object p0
 .end method
 
-.method private static synthetic lambda$new$12(Lcom/google/android/exoplayer2/upstream/BandwidthMeter;)Lcom/google/android/exoplayer2/upstream/BandwidthMeter;
+.method public static synthetic lambda$new$12(Lcom/google/android/exoplayer2/upstream/BandwidthMeter;)Lcom/google/android/exoplayer2/upstream/BandwidthMeter;
     .locals 0
 
     return-object p0
 .end method
 
-.method private static synthetic lambda$new$13(Lcom/google/android/exoplayer2/analytics/AnalyticsCollector;Lcom/google/android/exoplayer2/util/Clock;)Lcom/google/android/exoplayer2/analytics/AnalyticsCollector;
+.method public static synthetic lambda$new$13(Lcom/google/android/exoplayer2/analytics/AnalyticsCollector;Lcom/google/android/exoplayer2/util/Clock;)Lcom/google/android/exoplayer2/analytics/AnalyticsCollector;
     .locals 0
 
     return-object p0
 .end method
 
-.method private static synthetic lambda$new$14(Landroid/content/Context;)Lcom/google/android/exoplayer2/trackselection/TrackSelector;
+.method public static synthetic lambda$new$14(Landroid/content/Context;)Lcom/google/android/exoplayer2/trackselection/TrackSelector;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;
 
     invoke-direct {v0, p0}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;-><init>(Landroid/content/Context;)V
@@ -580,9 +459,10 @@
     return-object v0
 .end method
 
-.method private static synthetic lambda$new$15(Landroid/content/Context;)Lcom/google/android/exoplayer2/upstream/BandwidthMeter;
+.method public static synthetic lambda$new$15(Landroid/content/Context;)Lcom/google/android/exoplayer2/upstream/BandwidthMeter;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->getSingletonInstance(Landroid/content/Context;)Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;
 
     move-result-object p0
@@ -590,15 +470,16 @@
     return-object p0
 .end method
 
-.method private static synthetic lambda$new$2(Lcom/google/android/exoplayer2/RenderersFactory;)Lcom/google/android/exoplayer2/RenderersFactory;
+.method public static synthetic lambda$new$2(Lcom/google/android/exoplayer2/RenderersFactory;)Lcom/google/android/exoplayer2/RenderersFactory;
     .locals 0
 
     return-object p0
 .end method
 
-.method private static synthetic lambda$new$3(Landroid/content/Context;)Lcom/google/android/exoplayer2/source/MediaSource$Factory;
+.method public static synthetic lambda$new$3(Landroid/content/Context;)Lcom/google/android/exoplayer2/source/MediaSource$Factory;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/source/DefaultMediaSourceFactory;
 
     new-instance v1, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;
@@ -610,9 +491,10 @@
     return-object v0
 .end method
 
-.method private static synthetic lambda$new$4(Landroid/content/Context;)Lcom/google/android/exoplayer2/RenderersFactory;
+.method public static synthetic lambda$new$4(Landroid/content/Context;)Lcom/google/android/exoplayer2/RenderersFactory;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/DefaultRenderersFactory;
 
     invoke-direct {v0, p0}, Lcom/google/android/exoplayer2/DefaultRenderersFactory;-><init>(Landroid/content/Context;)V
@@ -620,168 +502,68 @@
     return-object v0
 .end method
 
-.method private static synthetic lambda$new$5(Lcom/google/android/exoplayer2/source/MediaSource$Factory;)Lcom/google/android/exoplayer2/source/MediaSource$Factory;
+.method public static synthetic lambda$new$5(Lcom/google/android/exoplayer2/source/MediaSource$Factory;)Lcom/google/android/exoplayer2/source/MediaSource$Factory;
     .locals 0
 
     return-object p0
 .end method
 
-.method private static synthetic lambda$new$6(Lcom/google/android/exoplayer2/RenderersFactory;)Lcom/google/android/exoplayer2/RenderersFactory;
+.method public static synthetic lambda$new$6(Lcom/google/android/exoplayer2/RenderersFactory;)Lcom/google/android/exoplayer2/RenderersFactory;
     .locals 0
 
     return-object p0
 .end method
 
-.method private static synthetic lambda$new$7(Lcom/google/android/exoplayer2/source/MediaSource$Factory;)Lcom/google/android/exoplayer2/source/MediaSource$Factory;
+.method public static synthetic lambda$new$7(Lcom/google/android/exoplayer2/source/MediaSource$Factory;)Lcom/google/android/exoplayer2/source/MediaSource$Factory;
     .locals 0
 
     return-object p0
 .end method
 
-.method private static synthetic lambda$new$8(Lcom/google/android/exoplayer2/RenderersFactory;)Lcom/google/android/exoplayer2/RenderersFactory;
+.method public static synthetic lambda$new$8(Lcom/google/android/exoplayer2/RenderersFactory;)Lcom/google/android/exoplayer2/RenderersFactory;
     .locals 0
 
     return-object p0
 .end method
 
-.method private static synthetic lambda$new$9(Lcom/google/android/exoplayer2/source/MediaSource$Factory;)Lcom/google/android/exoplayer2/source/MediaSource$Factory;
+.method public static synthetic lambda$new$9(Lcom/google/android/exoplayer2/source/MediaSource$Factory;)Lcom/google/android/exoplayer2/source/MediaSource$Factory;
     .locals 0
 
     return-object p0
 .end method
 
-.method private static synthetic lambda$setAnalyticsCollector$21(Lcom/google/android/exoplayer2/analytics/AnalyticsCollector;Lcom/google/android/exoplayer2/util/Clock;)Lcom/google/android/exoplayer2/analytics/AnalyticsCollector;
+.method public static synthetic lambda$setAnalyticsCollector$21(Lcom/google/android/exoplayer2/analytics/AnalyticsCollector;Lcom/google/android/exoplayer2/util/Clock;)Lcom/google/android/exoplayer2/analytics/AnalyticsCollector;
     .locals 0
 
     return-object p0
 .end method
 
-.method private static synthetic lambda$setBandwidthMeter$20(Lcom/google/android/exoplayer2/upstream/BandwidthMeter;)Lcom/google/android/exoplayer2/upstream/BandwidthMeter;
+.method public static synthetic lambda$setBandwidthMeter$20(Lcom/google/android/exoplayer2/upstream/BandwidthMeter;)Lcom/google/android/exoplayer2/upstream/BandwidthMeter;
     .locals 0
 
     return-object p0
 .end method
 
-.method private static synthetic lambda$setLoadControl$19(Lcom/google/android/exoplayer2/LoadControl;)Lcom/google/android/exoplayer2/LoadControl;
+.method public static synthetic lambda$setLoadControl$19(Lcom/google/android/exoplayer2/LoadControl;)Lcom/google/android/exoplayer2/LoadControl;
     .locals 0
 
     return-object p0
 .end method
 
-.method private static synthetic lambda$setMediaSourceFactory$17(Lcom/google/android/exoplayer2/source/MediaSource$Factory;)Lcom/google/android/exoplayer2/source/MediaSource$Factory;
+.method public static synthetic lambda$setMediaSourceFactory$17(Lcom/google/android/exoplayer2/source/MediaSource$Factory;)Lcom/google/android/exoplayer2/source/MediaSource$Factory;
     .locals 0
 
     return-object p0
 .end method
 
-.method private static synthetic lambda$setRenderersFactory$16(Lcom/google/android/exoplayer2/RenderersFactory;)Lcom/google/android/exoplayer2/RenderersFactory;
+.method public static synthetic lambda$setRenderersFactory$16(Lcom/google/android/exoplayer2/RenderersFactory;)Lcom/google/android/exoplayer2/RenderersFactory;
     .locals 0
 
     return-object p0
 .end method
 
-.method private static synthetic lambda$setTrackSelector$18(Lcom/google/android/exoplayer2/trackselection/TrackSelector;)Lcom/google/android/exoplayer2/trackselection/TrackSelector;
+.method public static synthetic lambda$setTrackSelector$18(Lcom/google/android/exoplayer2/trackselection/TrackSelector;)Lcom/google/android/exoplayer2/trackselection/TrackSelector;
     .locals 0
-
-    return-object p0
-.end method
-
-.method public static synthetic m(Lcom/google/android/exoplayer2/RenderersFactory;)Lcom/google/android/exoplayer2/RenderersFactory;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->lambda$new$8(Lcom/google/android/exoplayer2/RenderersFactory;)Lcom/google/android/exoplayer2/RenderersFactory;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic n(Landroid/content/Context;)Lcom/google/android/exoplayer2/RenderersFactory;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->lambda$new$4(Landroid/content/Context;)Lcom/google/android/exoplayer2/RenderersFactory;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic o(Landroid/content/Context;)Lcom/google/android/exoplayer2/source/MediaSource$Factory;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->lambda$new$1(Landroid/content/Context;)Lcom/google/android/exoplayer2/source/MediaSource$Factory;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic p(Lcom/google/android/exoplayer2/trackselection/TrackSelector;)Lcom/google/android/exoplayer2/trackselection/TrackSelector;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->lambda$new$10(Lcom/google/android/exoplayer2/trackselection/TrackSelector;)Lcom/google/android/exoplayer2/trackselection/TrackSelector;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic q(Lcom/google/android/exoplayer2/upstream/BandwidthMeter;)Lcom/google/android/exoplayer2/upstream/BandwidthMeter;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->lambda$setBandwidthMeter$20(Lcom/google/android/exoplayer2/upstream/BandwidthMeter;)Lcom/google/android/exoplayer2/upstream/BandwidthMeter;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic r(Lcom/google/android/exoplayer2/analytics/AnalyticsCollector;Lcom/google/android/exoplayer2/util/Clock;)Lcom/google/android/exoplayer2/analytics/AnalyticsCollector;
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->lambda$setAnalyticsCollector$21(Lcom/google/android/exoplayer2/analytics/AnalyticsCollector;Lcom/google/android/exoplayer2/util/Clock;)Lcom/google/android/exoplayer2/analytics/AnalyticsCollector;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic s(Lcom/google/android/exoplayer2/upstream/BandwidthMeter;)Lcom/google/android/exoplayer2/upstream/BandwidthMeter;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->lambda$new$12(Lcom/google/android/exoplayer2/upstream/BandwidthMeter;)Lcom/google/android/exoplayer2/upstream/BandwidthMeter;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic t(Lcom/google/android/exoplayer2/RenderersFactory;)Lcom/google/android/exoplayer2/RenderersFactory;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->lambda$new$2(Lcom/google/android/exoplayer2/RenderersFactory;)Lcom/google/android/exoplayer2/RenderersFactory;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic u(Lcom/google/android/exoplayer2/LoadControl;)Lcom/google/android/exoplayer2/LoadControl;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->lambda$setLoadControl$19(Lcom/google/android/exoplayer2/LoadControl;)Lcom/google/android/exoplayer2/LoadControl;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic v(Lcom/google/android/exoplayer2/source/MediaSource$Factory;)Lcom/google/android/exoplayer2/source/MediaSource$Factory;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->lambda$new$5(Lcom/google/android/exoplayer2/source/MediaSource$Factory;)Lcom/google/android/exoplayer2/source/MediaSource$Factory;
-
-    move-result-object p0
 
     return-object p0
 .end method
@@ -791,6 +573,7 @@
 .method public build()Lcom/google/android/exoplayer2/ExoPlayer;
     .locals 2
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->buildCalled:Z
 
     const/4 v1, 0x1
@@ -799,8 +582,10 @@
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iput-boolean v1, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->buildCalled:Z
 
+    .line 3
     new-instance v0, Lcom/google/android/exoplayer2/ExoPlayerImpl;
 
     const/4 v1, 0x0
@@ -813,6 +598,7 @@
 .method public buildSimpleExoPlayer()Lcom/google/android/exoplayer2/SimpleExoPlayer;
     .locals 2
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->buildCalled:Z
 
     const/4 v1, 0x1
@@ -821,8 +607,10 @@
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iput-boolean v1, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->buildCalled:Z
 
+    .line 3
     new-instance v0, Lcom/google/android/exoplayer2/SimpleExoPlayer;
 
     invoke-direct {v0, p0}, Lcom/google/android/exoplayer2/SimpleExoPlayer;-><init>(Lcom/google/android/exoplayer2/ExoPlayer$Builder;)V
@@ -833,12 +621,14 @@
 .method public experimentalSetForegroundModeTimeoutMs(J)Lcom/google/android/exoplayer2/ExoPlayer$Builder;
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->buildCalled:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iput-wide p1, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->foregroundModeTimeoutMs:J
 
     return-object p0
@@ -847,15 +637,17 @@
 .method public setAnalyticsCollector(Lcom/google/android/exoplayer2/analytics/AnalyticsCollector;)Lcom/google/android/exoplayer2/ExoPlayer$Builder;
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->buildCalled:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
-    new-instance v0, Lcom/google/android/exoplayer2/p;
+    .line 2
+    new-instance v0, Ld/j/a/b/v;
 
-    invoke-direct {v0, p1}, Lcom/google/android/exoplayer2/p;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsCollector;)V
+    invoke-direct {v0, p1}, Ld/j/a/b/v;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsCollector;)V
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->analyticsCollectorFunction:Lcom/google/common/base/Function;
 
@@ -865,14 +657,17 @@
 .method public setAudioAttributes(Lcom/google/android/exoplayer2/audio/AudioAttributes;Z)Lcom/google/android/exoplayer2/ExoPlayer$Builder;
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->buildCalled:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->audioAttributes:Lcom/google/android/exoplayer2/audio/AudioAttributes;
 
+    .line 3
     iput-boolean p2, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->handleAudioFocus:Z
 
     return-object p0
@@ -881,15 +676,17 @@
 .method public setBandwidthMeter(Lcom/google/android/exoplayer2/upstream/BandwidthMeter;)Lcom/google/android/exoplayer2/ExoPlayer$Builder;
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->buildCalled:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
-    new-instance v0, Lcom/google/android/exoplayer2/v;
+    .line 2
+    new-instance v0, Ld/j/a/b/u;
 
-    invoke-direct {v0, p1}, Lcom/google/android/exoplayer2/v;-><init>(Lcom/google/android/exoplayer2/upstream/BandwidthMeter;)V
+    invoke-direct {v0, p1}, Ld/j/a/b/u;-><init>(Lcom/google/android/exoplayer2/upstream/BandwidthMeter;)V
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->bandwidthMeterSupplier:Lcom/google/common/base/Supplier;
 
@@ -901,12 +698,14 @@
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->buildCalled:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->clock:Lcom/google/android/exoplayer2/util/Clock;
 
     return-object p0
@@ -915,12 +714,14 @@
 .method public setDetachSurfaceTimeoutMs(J)Lcom/google/android/exoplayer2/ExoPlayer$Builder;
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->buildCalled:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iput-wide p1, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->detachSurfaceTimeoutMs:J
 
     return-object p0
@@ -929,12 +730,14 @@
 .method public setHandleAudioBecomingNoisy(Z)Lcom/google/android/exoplayer2/ExoPlayer$Builder;
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->buildCalled:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->handleAudioBecomingNoisy:Z
 
     return-object p0
@@ -943,12 +746,14 @@
 .method public setLivePlaybackSpeedControl(Lcom/google/android/exoplayer2/LivePlaybackSpeedControl;)Lcom/google/android/exoplayer2/ExoPlayer$Builder;
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->buildCalled:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->livePlaybackSpeedControl:Lcom/google/android/exoplayer2/LivePlaybackSpeedControl;
 
     return-object p0
@@ -957,15 +762,17 @@
 .method public setLoadControl(Lcom/google/android/exoplayer2/LoadControl;)Lcom/google/android/exoplayer2/ExoPlayer$Builder;
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->buildCalled:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
-    new-instance v0, Lcom/google/android/exoplayer2/x;
+    .line 2
+    new-instance v0, Ld/j/a/b/y;
 
-    invoke-direct {v0, p1}, Lcom/google/android/exoplayer2/x;-><init>(Lcom/google/android/exoplayer2/LoadControl;)V
+    invoke-direct {v0, p1}, Ld/j/a/b/y;-><init>(Lcom/google/android/exoplayer2/LoadControl;)V
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->loadControlSupplier:Lcom/google/common/base/Supplier;
 
@@ -975,12 +782,14 @@
 .method public setLooper(Landroid/os/Looper;)Lcom/google/android/exoplayer2/ExoPlayer$Builder;
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->buildCalled:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->looper:Landroid/os/Looper;
 
     return-object p0
@@ -989,15 +798,17 @@
 .method public setMediaSourceFactory(Lcom/google/android/exoplayer2/source/MediaSource$Factory;)Lcom/google/android/exoplayer2/ExoPlayer$Builder;
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->buildCalled:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
-    new-instance v0, Lcom/google/android/exoplayer2/w;
+    .line 2
+    new-instance v0, Ld/j/a/b/h;
 
-    invoke-direct {v0, p1}, Lcom/google/android/exoplayer2/w;-><init>(Lcom/google/android/exoplayer2/source/MediaSource$Factory;)V
+    invoke-direct {v0, p1}, Ld/j/a/b/h;-><init>(Lcom/google/android/exoplayer2/source/MediaSource$Factory;)V
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->mediaSourceFactorySupplier:Lcom/google/common/base/Supplier;
 
@@ -1007,12 +818,14 @@
 .method public setPauseAtEndOfMediaItems(Z)Lcom/google/android/exoplayer2/ExoPlayer$Builder;
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->buildCalled:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->pauseAtEndOfMediaItems:Z
 
     return-object p0
@@ -1025,12 +838,14 @@
         .end annotation
     .end param
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->buildCalled:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->priorityTaskManager:Lcom/google/android/exoplayer2/util/PriorityTaskManager;
 
     return-object p0
@@ -1039,12 +854,14 @@
 .method public setReleaseTimeoutMs(J)Lcom/google/android/exoplayer2/ExoPlayer$Builder;
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->buildCalled:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iput-wide p1, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->releaseTimeoutMs:J
 
     return-object p0
@@ -1053,15 +870,17 @@
 .method public setRenderersFactory(Lcom/google/android/exoplayer2/RenderersFactory;)Lcom/google/android/exoplayer2/ExoPlayer$Builder;
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->buildCalled:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
-    new-instance v0, Lcom/google/android/exoplayer2/g;
+    .line 2
+    new-instance v0, Ld/j/a/b/n;
 
-    invoke-direct {v0, p1}, Lcom/google/android/exoplayer2/g;-><init>(Lcom/google/android/exoplayer2/RenderersFactory;)V
+    invoke-direct {v0, p1}, Ld/j/a/b/n;-><init>(Lcom/google/android/exoplayer2/RenderersFactory;)V
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->renderersFactorySupplier:Lcom/google/common/base/Supplier;
 
@@ -1091,15 +910,18 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 2
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->buildCalled:Z
 
     xor-int/2addr v0, v1
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 3
     iput-wide p1, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->seekBackIncrementMs:J
 
     return-object p0
@@ -1128,15 +950,18 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 2
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->buildCalled:Z
 
     xor-int/2addr v0, v1
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 3
     iput-wide p1, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->seekForwardIncrementMs:J
 
     return-object p0
@@ -1145,12 +970,14 @@
 .method public setSeekParameters(Lcom/google/android/exoplayer2/SeekParameters;)Lcom/google/android/exoplayer2/ExoPlayer$Builder;
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->buildCalled:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->seekParameters:Lcom/google/android/exoplayer2/SeekParameters;
 
     return-object p0
@@ -1159,12 +986,14 @@
 .method public setSkipSilenceEnabled(Z)Lcom/google/android/exoplayer2/ExoPlayer$Builder;
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->buildCalled:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->skipSilenceEnabled:Z
 
     return-object p0
@@ -1173,15 +1002,17 @@
 .method public setTrackSelector(Lcom/google/android/exoplayer2/trackselection/TrackSelector;)Lcom/google/android/exoplayer2/ExoPlayer$Builder;
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->buildCalled:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
-    new-instance v0, Lcom/google/android/exoplayer2/e;
+    .line 2
+    new-instance v0, Ld/j/a/b/l;
 
-    invoke-direct {v0, p1}, Lcom/google/android/exoplayer2/e;-><init>(Lcom/google/android/exoplayer2/trackselection/TrackSelector;)V
+    invoke-direct {v0, p1}, Ld/j/a/b/l;-><init>(Lcom/google/android/exoplayer2/trackselection/TrackSelector;)V
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->trackSelectorSupplier:Lcom/google/common/base/Supplier;
 
@@ -1191,12 +1022,14 @@
 .method public setUseLazyPreparation(Z)Lcom/google/android/exoplayer2/ExoPlayer$Builder;
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->buildCalled:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->useLazyPreparation:Z
 
     return-object p0
@@ -1205,12 +1038,14 @@
 .method public setUsePlatformDiagnostics(Z)Lcom/google/android/exoplayer2/ExoPlayer$Builder;
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->buildCalled:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->usePlatformDiagnostics:Z
 
     return-object p0
@@ -1219,12 +1054,14 @@
 .method public setVideoChangeFrameRateStrategy(I)Lcom/google/android/exoplayer2/ExoPlayer$Builder;
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->buildCalled:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->videoChangeFrameRateStrategy:I
 
     return-object p0
@@ -1233,12 +1070,14 @@
 .method public setVideoScalingMode(I)Lcom/google/android/exoplayer2/ExoPlayer$Builder;
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->buildCalled:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->videoScalingMode:I
 
     return-object p0
@@ -1247,12 +1086,14 @@
 .method public setWakeMode(I)Lcom/google/android/exoplayer2/ExoPlayer$Builder;
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->buildCalled:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/ExoPlayer$Builder;->wakeMode:I
 
     return-object p0

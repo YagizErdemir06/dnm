@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$NotificationBroadcastReceiver;
+.class public Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$NotificationBroadcastReceiver;
 .super Landroid/content/BroadcastReceiver;
 .source "SourceFile"
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/android/exoplayer2/ui/PlayerNotificationManager;
+.field public final synthetic this$0:Lcom/google/android/exoplayer2/ui/PlayerNotificationManager;
 
 
 # direct methods
@@ -44,6 +44,7 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
+    .line 1
     iget-object p1, p0, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$NotificationBroadcastReceiver;->this$0:Lcom/google/android/exoplayer2/ui/PlayerNotificationManager;
 
     invoke-static {p1}, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager;->access$500(Lcom/google/android/exoplayer2/ui/PlayerNotificationManager;)Lcom/google/android/exoplayer2/Player;
@@ -52,8 +53,10 @@
 
     if-eqz p1, :cond_b
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$NotificationBroadcastReceiver;->this$0:Lcom/google/android/exoplayer2/ui/PlayerNotificationManager;
 
+    .line 3
     invoke-static {v0}, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager;->access$600(Lcom/google/android/exoplayer2/ui/PlayerNotificationManager;)Z
 
     move-result v0
@@ -62,6 +65,7 @@
 
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$NotificationBroadcastReceiver;->this$0:Lcom/google/android/exoplayer2/ui/PlayerNotificationManager;
 
+    .line 4
     invoke-static {v0}, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager;->access$700(Lcom/google/android/exoplayer2/ui/PlayerNotificationManager;)I
 
     move-result v0
@@ -82,6 +86,7 @@
 
     goto/16 :goto_1
 
+    .line 5
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -89,6 +94,7 @@
 
     const-string v1, "com.google.android.exoplayer.play"
 
+    .line 6
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -97,16 +103,19 @@
 
     if-eqz v1, :cond_3
 
+    .line 7
     invoke-interface {p1}, Lcom/google/android/exoplayer2/Player;->getPlaybackState()I
 
     move-result p0
 
     if-ne p0, v2, :cond_1
 
+    .line 8
     invoke-interface {p1}, Lcom/google/android/exoplayer2/Player;->prepare()V
 
     goto :goto_0
 
+    .line 9
     :cond_1
     invoke-interface {p1}, Lcom/google/android/exoplayer2/Player;->getPlaybackState()I
 
@@ -116,12 +125,14 @@
 
     if-ne p0, p2, :cond_2
 
+    .line 10
     invoke-interface {p1}, Lcom/google/android/exoplayer2/Player;->getCurrentMediaItemIndex()I
 
     move-result p0
 
     invoke-interface {p1, p0}, Lcom/google/android/exoplayer2/Player;->seekToDefaultPosition(I)V
 
+    .line 11
     :cond_2
     :goto_0
     invoke-interface {p1}, Lcom/google/android/exoplayer2/Player;->play()V
@@ -131,12 +142,14 @@
     :cond_3
     const-string v1, "com.google.android.exoplayer.pause"
 
+    .line 12
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
+    .line 13
     invoke-interface {p1}, Lcom/google/android/exoplayer2/Player;->pause()V
 
     goto/16 :goto_1
@@ -144,12 +157,14 @@
     :cond_4
     const-string v1, "com.google.android.exoplayer.prev"
 
+    .line 14
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_5
 
+    .line 15
     invoke-interface {p1}, Lcom/google/android/exoplayer2/Player;->seekToPrevious()V
 
     goto :goto_1
@@ -157,12 +172,14 @@
     :cond_5
     const-string v1, "com.google.android.exoplayer.rewind"
 
+    .line 16
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_6
 
+    .line 17
     invoke-interface {p1}, Lcom/google/android/exoplayer2/Player;->seekBack()V
 
     goto :goto_1
@@ -170,12 +187,14 @@
     :cond_6
     const-string v1, "com.google.android.exoplayer.ffwd"
 
+    .line 18
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_7
 
+    .line 19
     invoke-interface {p1}, Lcom/google/android/exoplayer2/Player;->seekForward()V
 
     goto :goto_1
@@ -183,12 +202,14 @@
     :cond_7
     const-string v1, "com.google.android.exoplayer.next"
 
+    .line 20
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_8
 
+    .line 21
     invoke-interface {p1}, Lcom/google/android/exoplayer2/Player;->seekToNext()V
 
     goto :goto_1
@@ -196,12 +217,14 @@
     :cond_8
     const-string v1, "com.google.android.exoplayer.stop"
 
+    .line 22
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_9
 
+    .line 23
     invoke-interface {p1, v2}, Lcom/google/android/exoplayer2/Player;->stop(Z)V
 
     goto :goto_1
@@ -209,12 +232,14 @@
     :cond_9
     const-string v1, "com.google.android.exoplayer.dismiss"
 
+    .line 24
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_a
 
+    .line 25
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$NotificationBroadcastReceiver;->this$0:Lcom/google/android/exoplayer2/ui/PlayerNotificationManager;
 
     invoke-static {p0, v2}, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager;->access$800(Lcom/google/android/exoplayer2/ui/PlayerNotificationManager;Z)V
@@ -224,8 +249,10 @@
     :cond_a
     if-eqz v0, :cond_b
 
+    .line 26
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$NotificationBroadcastReceiver;->this$0:Lcom/google/android/exoplayer2/ui/PlayerNotificationManager;
 
+    .line 27
     invoke-static {v1}, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager;->access$900(Lcom/google/android/exoplayer2/ui/PlayerNotificationManager;)Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$CustomActionReceiver;
 
     move-result-object v1
@@ -234,6 +261,7 @@
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$NotificationBroadcastReceiver;->this$0:Lcom/google/android/exoplayer2/ui/PlayerNotificationManager;
 
+    .line 28
     invoke-static {v1}, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager;->access$1000(Lcom/google/android/exoplayer2/ui/PlayerNotificationManager;)Ljava/util/Map;
 
     move-result-object v1
@@ -244,6 +272,7 @@
 
     if-eqz v1, :cond_b
 
+    .line 29
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$NotificationBroadcastReceiver;->this$0:Lcom/google/android/exoplayer2/ui/PlayerNotificationManager;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager;->access$900(Lcom/google/android/exoplayer2/ui/PlayerNotificationManager;)Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$CustomActionReceiver;

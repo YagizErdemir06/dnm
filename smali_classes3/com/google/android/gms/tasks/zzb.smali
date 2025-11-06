@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/tasks/zzb;
+.class public final Lcom/google/android/gms/tasks/zzb;
 .super Lcom/google/android/gms/tasks/CancellationToken;
 .source "SourceFile"
 
@@ -27,6 +27,7 @@
 .method public final isCancellationRequested()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/tasks/zzb;->zza:Lcom/google/android/gms/tasks/zzw;
 
     invoke-virtual {p0}, Lcom/google/android/gms/tasks/zzw;->isComplete()Z
@@ -43,6 +44,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/tasks/zzb;->zza:Lcom/google/android/gms/tasks/zzw;
 
     new-instance v1, Lcom/google/android/gms/tasks/zza;
@@ -59,6 +61,7 @@
 .method public final zza()V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/tasks/zzb;->zza:Lcom/google/android/gms/tasks/zzw;
 
     const/4 v0, 0x0

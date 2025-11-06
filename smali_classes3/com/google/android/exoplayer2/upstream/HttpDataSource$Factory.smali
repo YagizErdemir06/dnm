@@ -21,6 +21,7 @@
 .method public bridge synthetic createDataSource()Lcom/google/android/exoplayer2/upstream/DataSource;
     .locals 0
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/upstream/HttpDataSource$Factory;->createDataSource()Lcom/google/android/exoplayer2/upstream/HttpDataSource;
 
     move-result-object p0

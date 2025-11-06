@@ -1,4 +1,4 @@
-.class abstract Lcom/google/android/gms/internal/mlkit_vision_barcode/zzco;
+.class public abstract Lcom/google/android/gms/internal/mlkit_vision_barcode/zzco;
 .super Ljava/util/AbstractMap;
 .source "SourceFile"
 
@@ -24,6 +24,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/util/AbstractMap;-><init>()V
 
     return-void
@@ -34,6 +35,7 @@
 .method public final entrySet()Ljava/util/Set;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzco;->zza:Ljava/util/Set;
 
     if-nez v0, :cond_0
@@ -51,6 +53,7 @@
 .method public keySet()Ljava/util/Set;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzco;->zzb:Ljava/util/Set;
 
     if-nez v0, :cond_0
@@ -68,6 +71,7 @@
 .method public final values()Ljava/util/Collection;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzco;->zzc:Ljava/util/Collection;
 
     if-nez v0, :cond_0

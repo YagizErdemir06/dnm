@@ -20,6 +20,7 @@
 .method public final bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 5
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->validateObjectHeader(Landroid/os/Parcel;)I
 
     move-result p0
@@ -28,6 +29,7 @@
 
     move-object v1, v0
 
+    .line 2
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
@@ -35,10 +37,12 @@
 
     if-ge v2, p0, :cond_2
 
+    .line 3
     invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->readHeader(Landroid/os/Parcel;)I
 
     move-result v2
 
+    .line 4
     invoke-static {v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->getFieldId(I)I
 
     move-result v3
@@ -51,10 +55,12 @@
 
     if-eq v3, v4, :cond_0
 
+    .line 5
     invoke-static {p1, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->skipUnknownField(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-static {p1, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->createString(Landroid/os/Parcel;I)Ljava/lang/String;
 
@@ -62,6 +68,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_1
     invoke-static {p1, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->createString(Landroid/os/Parcel;I)Ljava/lang/String;
 
@@ -69,9 +76,11 @@
 
     goto :goto_0
 
+    .line 8
     :cond_2
     invoke-static {p1, p0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->ensureAtEnd(Landroid/os/Parcel;I)V
 
+    .line 9
     new-instance p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzo;
 
     invoke-direct {p0, v0, v1}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzo;-><init>(Ljava/lang/String;Ljava/lang/String;)V
@@ -82,6 +91,7 @@
 .method public final synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
+    .line 1
     new-array p0, p1, [Lcom/google/android/gms/internal/mlkit_vision_barcode/zzo;
 
     return-object p0

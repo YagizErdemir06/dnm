@@ -9,7 +9,7 @@
 # instance fields
 .field private _schemaType:Lorg/apache/xmlbeans/SchemaType;
 
-.field _textvalue:Ljava/lang/String;
+.field public _textvalue:Ljava/lang/String;
 
 
 # direct methods
@@ -58,6 +58,7 @@
 .method public compute_text(Lorg/apache/xmlbeans/impl/values/NamespaceManager;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlAnySimpleTypeImpl;->_textvalue:Ljava/lang/String;
 
     return-object p0
@@ -66,6 +67,7 @@
 .method public equal_to(Lorg/apache/xmlbeans/XmlObject;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlAnySimpleTypeImpl;->_textvalue:Ljava/lang/String;
 
     check-cast p1, Lorg/apache/xmlbeans/XmlAnySimpleType;
@@ -92,6 +94,7 @@
 .method public schemaType()Lorg/apache/xmlbeans/SchemaType;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlAnySimpleTypeImpl;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     return-object p0
@@ -102,6 +105,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Lorg/apache/xmlbeans/impl/values/XmlAnySimpleTypeImpl;->_textvalue:Ljava/lang/String;
 
     return-void
@@ -110,6 +114,7 @@
 .method public set_text(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/values/XmlAnySimpleTypeImpl;->_textvalue:Ljava/lang/String;
 
     return-void
@@ -118,6 +123,7 @@
 .method public value_hash_code()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlAnySimpleTypeImpl;->_textvalue:Ljava/lang/String;
 
     if-nez p0, :cond_0

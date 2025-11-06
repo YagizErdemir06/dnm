@@ -21,18 +21,25 @@
     }
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000\u0017\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003*\u0001\u0000\u0008\n\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00020\u0001J\u0012\u0010\u0005\u001a\u00020\u00042\u0008\u0010\u0003\u001a\u0004\u0018\u00010\u0002H\u0016J\n\u0010\u0006\u001a\u0004\u0018\u00010\u0002H\u0016\u00a8\u0006\u0007"
+        "\u0000\u0017\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005*\u0001\u0000\u0008\n\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00020\u0001J\u0019\u0010\u0005\u001a\u00020\u00042\u0008\u0010\u0003\u001a\u0004\u0018\u00010\u0002H\u0016\u00a2\u0006\u0004\u0008\u0005\u0010\u0006J\u0011\u0010\u0007\u001a\u0004\u0018\u00010\u0002H\u0016\u00a2\u0006\u0004\u0008\u0007\u0010\u0008\u00a8\u0006\t"
     }
     d2 = {
         "com/xiaomi/idm/api/IDMBase$sendBlockTasks$1",
         "Ljava/util/concurrent/ConcurrentLinkedDeque;",
         "Lcom/xiaomi/idm/task/SendBlockTask;",
         "e",
-        "Lnm/l2;",
+        "Lh/l2;",
         "addFirst",
+        "(Lcom/xiaomi/idm/task/SendBlockTask;)V",
         "pollLast",
+        "()Lcom/xiaomi/idm/task/SendBlockTask;",
         "IDMSdk_release"
     }
     k = 0x1
@@ -45,7 +52,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/xiaomi/idm/api/IDMBase;
+.field public final synthetic this$0:Lcom/xiaomi/idm/api/IDMBase;
 
 
 # direct methods
@@ -54,6 +61,7 @@
 
     iput-object p1, p0, Lcom/xiaomi/idm/api/IDMBase$sendBlockTasks$1;->this$0:Lcom/xiaomi/idm/api/IDMBase;
 
+    .line 1
     invoke-direct {p0}, Ljava/util/concurrent/ConcurrentLinkedDeque;-><init>()V
 
     return-void
@@ -64,7 +72,7 @@
 .method public addFirst(Lcom/xiaomi/idm/task/SendBlockTask;)V
     .locals 1
     .param p1    # Lcom/xiaomi/idm/task/SendBlockTask;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
 
@@ -97,14 +105,14 @@
 
     move-result p0
 
-    const-string p1, "sendBlock memory usage = "
-
     .line 5
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
 
-    invoke-static {p1, p0}, Lkotlin/jvm/internal/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
+    const-string p1, "sendBlock memory usage = "
+
+    invoke-static {p1, p0}, Lh/d3/x/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -175,6 +183,7 @@
 .method public bridge getSize()I
     .locals 0
 
+    .line 1
     invoke-super {p0}, Ljava/util/concurrent/ConcurrentLinkedDeque;->size()I
 
     move-result p0
@@ -184,7 +193,7 @@
 
 .method public pollLast()Lcom/xiaomi/idm/task/SendBlockTask;
     .locals 3
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
     .line 2
@@ -218,14 +227,14 @@
 
     move-result p0
 
-    const-string v1, "sendBlock memory usage = "
-
     .line 4
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lkotlin/jvm/internal/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
+    const-string v1, "sendBlock memory usage = "
+
+    invoke-static {v1, p0}, Lh/d3/x/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -296,6 +305,7 @@
 .method public final bridge size()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBase$sendBlockTasks$1;->getSize()I
 
     move-result p0

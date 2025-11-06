@@ -27,10 +27,12 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput v0, p0, Lcom/android/camera/resource/BaseResourceItem;->currentLoadState:I
 
     return-void
@@ -39,11 +41,20 @@
 
 # virtual methods
 .method public abstract fillDetailData(Lorg/json/JSONObject;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "jsonObject"
+        }
+    .end annotation
 .end method
 
 .method public getCurrentState()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera/resource/BaseResourceItem;->currentLoadState:I
 
     return p0
@@ -52,6 +63,7 @@
 .method public getDownloadUrl()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera/resource/BaseResourceItem;->uri:Ljava/lang/String;
 
     return-object p0
@@ -61,14 +73,43 @@
 .end method
 
 .method public abstract onDecompressFailed(Ljava/lang/String;Ljava/lang/String;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "localRequestFilePath",
+            "folder"
+        }
+    .end annotation
 .end method
 
 .method public abstract onDecompressFinished(Ljava/lang/String;Z)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "folder",
+            "upToDate"
+        }
+    .end annotation
 .end method
 
 .method public onUpToDate(Ljava/lang/String;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "folder"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -87,30 +128,68 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Ly7/m6;->m(Ljava/lang/String;)V
+    .line 2
+    invoke-static {p0}, Ld/d/a/d7/m8/b/z9;->m(Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method public abstract parseSummaryData(Lorg/json/JSONObject;I)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "jsonObject",
+            "index"
+        }
+    .end annotation
 .end method
 
 .method public setState(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "newState"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/android/camera/resource/BaseResourceItem;->currentLoadState:I
 
     return-void
 .end method
 
 .method public abstract simpleVerification(Ljava/lang/String;)Z
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "folder"
+        }
+    .end annotation
 .end method
 
 .method public versionVerification(Ljava/lang/String;)Z
     .locals 3
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "folder"
+        }
+    .end annotation
+
+    .line 1
     new-instance v0, Ljava/io/File;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -131,6 +210,7 @@
 
     invoke-direct {v0, p1, p0}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 2
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result p0

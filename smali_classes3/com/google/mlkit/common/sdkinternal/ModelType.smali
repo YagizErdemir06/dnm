@@ -88,6 +88,7 @@
 .method public static constructor <clinit>()V
     .locals 16
 
+    .line 1
     new-instance v0, Lcom/google/mlkit/common/sdkinternal/ModelType;
 
     const-string v1, "UNKNOWN"
@@ -104,6 +105,7 @@
 
     const/4 v4, 0x1
 
+    .line 2
     invoke-direct {v1, v3, v4}, Lcom/google/mlkit/common/sdkinternal/ModelType;-><init>(Ljava/lang/String;I)V
 
     sput-object v1, Lcom/google/mlkit/common/sdkinternal/ModelType;->BASE:Lcom/google/mlkit/common/sdkinternal/ModelType;
@@ -114,6 +116,7 @@
 
     const/4 v6, 0x2
 
+    .line 3
     invoke-direct {v3, v5, v6}, Lcom/google/mlkit/common/sdkinternal/ModelType;-><init>(Ljava/lang/String;I)V
 
     sput-object v3, Lcom/google/mlkit/common/sdkinternal/ModelType;->TRANSLATE:Lcom/google/mlkit/common/sdkinternal/ModelType;
@@ -124,6 +127,7 @@
 
     const/4 v8, 0x3
 
+    .line 4
     invoke-direct {v5, v7, v8}, Lcom/google/mlkit/common/sdkinternal/ModelType;-><init>(Ljava/lang/String;I)V
 
     sput-object v5, Lcom/google/mlkit/common/sdkinternal/ModelType;->ENTITY_EXTRACTION:Lcom/google/mlkit/common/sdkinternal/ModelType;
@@ -134,6 +138,7 @@
 
     const/4 v10, 0x4
 
+    .line 5
     invoke-direct {v7, v9, v10}, Lcom/google/mlkit/common/sdkinternal/ModelType;-><init>(Ljava/lang/String;I)V
 
     sput-object v7, Lcom/google/mlkit/common/sdkinternal/ModelType;->CUSTOM:Lcom/google/mlkit/common/sdkinternal/ModelType;
@@ -144,6 +149,7 @@
 
     const/4 v12, 0x5
 
+    .line 6
     invoke-direct {v9, v11, v12}, Lcom/google/mlkit/common/sdkinternal/ModelType;-><init>(Ljava/lang/String;I)V
 
     sput-object v9, Lcom/google/mlkit/common/sdkinternal/ModelType;->DIGITAL_INK:Lcom/google/mlkit/common/sdkinternal/ModelType;
@@ -154,6 +160,7 @@
 
     const/4 v14, 0x6
 
+    .line 7
     invoke-direct {v11, v13, v14}, Lcom/google/mlkit/common/sdkinternal/ModelType;-><init>(Ljava/lang/String;I)V
 
     sput-object v11, Lcom/google/mlkit/common/sdkinternal/ModelType;->TOXICITY_DETECTION:Lcom/google/mlkit/common/sdkinternal/ModelType;
@@ -164,6 +171,7 @@
 
     const/4 v14, 0x7
 
+    .line 8
     invoke-direct {v13, v15, v14}, Lcom/google/mlkit/common/sdkinternal/ModelType;-><init>(Ljava/lang/String;I)V
 
     sput-object v13, Lcom/google/mlkit/common/sdkinternal/ModelType;->IMAGE_CAPTIONING:Lcom/google/mlkit/common/sdkinternal/ModelType;
@@ -198,6 +206,7 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -208,6 +217,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/mlkit/common/sdkinternal/ModelType;->zza:[Lcom/google/mlkit/common/sdkinternal/ModelType;
 
     invoke-virtual {v0}, [Lcom/google/mlkit/common/sdkinternal/ModelType;->clone()Ljava/lang/Object;

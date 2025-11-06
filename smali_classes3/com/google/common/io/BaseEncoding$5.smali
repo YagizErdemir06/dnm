@@ -1,4 +1,4 @@
-.class Lcom/google/common/io/BaseEncoding$5;
+.class public Lcom/google/common/io/BaseEncoding$5;
 .super Ljava/io/Writer;
 .source "SourceFile"
 
@@ -15,15 +15,16 @@
 
 
 # instance fields
-.field final synthetic val$delegate:Ljava/io/Writer;
+.field public final synthetic val$delegate:Ljava/io/Writer;
 
-.field final synthetic val$separatingAppendable:Ljava/lang/Appendable;
+.field public final synthetic val$separatingAppendable:Ljava/lang/Appendable;
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/Appendable;Ljava/io/Writer;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/io/BaseEncoding$5;->val$separatingAppendable:Ljava/lang/Appendable;
 
     iput-object p2, p0, Lcom/google/common/io/BaseEncoding$5;->val$delegate:Ljava/io/Writer;
@@ -43,6 +44,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/io/BaseEncoding$5;->val$delegate:Ljava/io/Writer;
 
     invoke-virtual {p0}, Ljava/io/Writer;->close()V
@@ -58,6 +60,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/io/BaseEncoding$5;->val$delegate:Ljava/io/Writer;
 
     invoke-virtual {p0}, Ljava/io/Writer;->flush()V

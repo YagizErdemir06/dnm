@@ -25,17 +25,21 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-nez p1, :cond_0
 
     const-string p1, ""
 
+    .line 2
     :cond_0
     iput-object p1, p0, Lcom/bumptech/glide/signature/MediaStoreSignature;->mimeType:Ljava/lang/String;
 
+    .line 3
     iput-wide p2, p0, Lcom/bumptech/glide/signature/MediaStoreSignature;->dateModified:J
 
+    .line 4
     iput p4, p0, Lcom/bumptech/glide/signature/MediaStoreSignature;->orientation:I
 
     return-void
@@ -57,6 +61,7 @@
 
     if-eqz p1, :cond_5
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -69,9 +74,11 @@
 
     goto :goto_0
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/bumptech/glide/signature/MediaStoreSignature;
 
+    .line 3
     iget-wide v2, p0, Lcom/bumptech/glide/signature/MediaStoreSignature;->dateModified:J
 
     iget-wide v4, p1, Lcom/bumptech/glide/signature/MediaStoreSignature;->dateModified:J
@@ -82,6 +89,7 @@
 
     return v1
 
+    .line 4
     :cond_2
     iget v2, p0, Lcom/bumptech/glide/signature/MediaStoreSignature;->orientation:I
 
@@ -91,6 +99,7 @@
 
     return v1
 
+    .line 5
     :cond_3
     iget-object p0, p0, Lcom/bumptech/glide/signature/MediaStoreSignature;->mimeType:Ljava/lang/String;
 
@@ -115,6 +124,7 @@
 .method public hashCode()I
     .locals 5
 
+    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/signature/MediaStoreSignature;->mimeType:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -123,6 +133,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 2
     iget-wide v1, p0, Lcom/bumptech/glide/signature/MediaStoreSignature;->dateModified:J
 
     const/16 v3, 0x20
@@ -137,6 +148,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 3
     iget p0, p0, Lcom/bumptech/glide/signature/MediaStoreSignature;->orientation:I
 
     add-int/2addr v0, p0
@@ -153,6 +165,7 @@
 
     const/16 v0, 0xc
 
+    .line 1
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
@@ -173,8 +186,10 @@
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p1, v0}, Ljava/security/MessageDigest;->update([B)V
 
+    .line 3
     iget-object p0, p0, Lcom/bumptech/glide/signature/MediaStoreSignature;->mimeType:Ljava/lang/String;
 
     sget-object v0, Lcom/bumptech/glide/load/Key;->CHARSET:Ljava/nio/charset/Charset;

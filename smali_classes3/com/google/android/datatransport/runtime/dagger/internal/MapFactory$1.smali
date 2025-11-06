@@ -1,4 +1,4 @@
-.class synthetic Lcom/google/android/datatransport/runtime/dagger/internal/MapFactory$1;
+.class public synthetic Lcom/google/android/datatransport/runtime/dagger/internal/MapFactory$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

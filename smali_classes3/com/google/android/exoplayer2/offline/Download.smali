@@ -39,7 +39,7 @@
 
 .field public final failureReason:I
 
-.field final progress:Lcom/google/android/exoplayer2/offline/DownloadProgress;
+.field public final progress:Lcom/google/android/exoplayer2/offline/DownloadProgress;
 
 .field public final request:Lcom/google/android/exoplayer2/offline/DownloadRequest;
 
@@ -180,6 +180,7 @@
 .method public getBytesDownloaded()J
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/offline/Download;->progress:Lcom/google/android/exoplayer2/offline/DownloadProgress;
 
     iget-wide v0, p0, Lcom/google/android/exoplayer2/offline/DownloadProgress;->bytesDownloaded:J
@@ -190,6 +191,7 @@
 .method public getPercentDownloaded()F
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/offline/Download;->progress:Lcom/google/android/exoplayer2/offline/DownloadProgress;
 
     iget p0, p0, Lcom/google/android/exoplayer2/offline/DownloadProgress;->percentDownloaded:F
@@ -200,6 +202,7 @@
 .method public isTerminalState()Z
     .locals 1
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/offline/Download;->state:I
 
     const/4 v0, 0x3

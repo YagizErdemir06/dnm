@@ -53,20 +53,24 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
+    .line 2
     iput v0, p0, Lcom/arcsoft/avatar2/BackgroundInfo;->l:I
 
     const/4 v0, 0x2
 
     new-array v1, v0, [I
 
+    .line 3
     iput-object v1, p0, Lcom/arcsoft/avatar2/BackgroundInfo;->m:[I
 
     new-array v0, v0, [I
 
+    .line 4
     iput-object v0, p0, Lcom/arcsoft/avatar2/BackgroundInfo;->n:[I
 
     return-void
@@ -133,6 +137,7 @@
 .method public getBackGroundPath(I)Ljava/lang/String;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/BackgroundInfo;->i:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_1
@@ -145,6 +150,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/arcsoft/avatar2/BackgroundInfo;->i:Ljava/util/ArrayList;
 
@@ -166,6 +172,7 @@
 .method public getCount()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/arcsoft/avatar2/BackgroundInfo;->k:I
 
     return p0
@@ -174,6 +181,7 @@
 .method public getCrop16_9_XY()[I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/arcsoft/avatar2/BackgroundInfo;->n:[I
 
     return-object p0
@@ -182,6 +190,7 @@
 .method public getCrop4_3_XY()[I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/arcsoft/avatar2/BackgroundInfo;->m:[I
 
     return-object p0
@@ -190,6 +199,7 @@
 .method public getDelayMillis()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/arcsoft/avatar2/BackgroundInfo;->h:I
 
     return p0
@@ -198,6 +208,7 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/arcsoft/avatar2/BackgroundInfo;->j:Ljava/lang/String;
 
     return-object p0
@@ -206,6 +217,7 @@
 .method public getResolutionMode()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/arcsoft/avatar2/BackgroundInfo;->l:I
 
     return p0
@@ -214,6 +226,7 @@
 .method public setCount(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/arcsoft/avatar2/BackgroundInfo;->k:I
 
     return-void
@@ -222,6 +235,7 @@
 .method public setCrop16_9_XY(Ljava/lang/String;)V
     .locals 3
 
+    .line 1
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -233,17 +247,20 @@
     :cond_0
     const-string v0, ","
 
+    .line 2
     invoke-virtual {p1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p1
 
     const/4 v0, 0x0
 
+    .line 3
     :goto_0
     array-length v1, p1
 
     if-ge v0, v1, :cond_1
 
+    .line 4
     iget-object v1, p0, Lcom/arcsoft/avatar2/BackgroundInfo;->n:[I
 
     aget-object v2, p1, v0
@@ -265,6 +282,7 @@
 .method public setCrop4_3_XY(Ljava/lang/String;)V
     .locals 3
 
+    .line 1
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -276,17 +294,20 @@
     :cond_0
     const-string v0, ","
 
+    .line 2
     invoke-virtual {p1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p1
 
     const/4 v0, 0x0
 
+    .line 3
     :goto_0
     array-length v1, p1
 
     if-ge v0, v1, :cond_1
 
+    .line 4
     iget-object v1, p0, Lcom/arcsoft/avatar2/BackgroundInfo;->m:[I
 
     aget-object v2, p1, v0
@@ -308,6 +329,7 @@
 .method public setDelayMillis(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/arcsoft/avatar2/BackgroundInfo;->h:I
 
     return-void
@@ -316,6 +338,7 @@
 .method public setName(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/BackgroundInfo;->j:Ljava/lang/String;
 
     return-void
@@ -324,6 +347,7 @@
 .method public setResolutionMode(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/arcsoft/avatar2/BackgroundInfo;->l:I
 
     return-void
@@ -340,6 +364,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/BackgroundInfo;->i:Ljava/util/ArrayList;
 
     return-void

@@ -4,13 +4,14 @@
 
 
 # static fields
-.field protected static transient singleton:Lorg/dom4j/util/IndexedDocumentFactory;
+.field public static transient singleton:Lorg/dom4j/util/IndexedDocumentFactory;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lorg/dom4j/util/IndexedDocumentFactory;
 
     invoke-direct {v0}, Lorg/dom4j/util/IndexedDocumentFactory;-><init>()V
@@ -23,6 +24,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/dom4j/DocumentFactory;-><init>()V
 
     return-void
@@ -31,6 +33,7 @@
 .method public static getInstance()Lorg/dom4j/DocumentFactory;
     .locals 1
 
+    .line 1
     sget-object v0, Lorg/dom4j/util/IndexedDocumentFactory;->singleton:Lorg/dom4j/util/IndexedDocumentFactory;
 
     return-object v0

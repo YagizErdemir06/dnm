@@ -1,4 +1,4 @@
-.class Landroidx/viewpager2/widget/ViewPager2$SavedState;
+.class public Landroidx/viewpager2/widget/ViewPager2$SavedState;
 .super Landroid/view/View$BaseSavedState;
 .source "SourceFile"
 
@@ -27,17 +27,18 @@
 
 
 # instance fields
-.field mAdapterState:Landroid/os/Parcelable;
+.field public mAdapterState:Landroid/os/Parcelable;
 
-.field mCurrentItem:I
+.field public mCurrentItem:I
 
-.field mRecyclerViewId:I
+.field public mRecyclerViewId:I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/viewpager2/widget/ViewPager2$SavedState$1;
 
     invoke-direct {v0}, Landroidx/viewpager2/widget/ViewPager2$SavedState$1;-><init>()V
@@ -88,18 +89,21 @@
 .method private readValues(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 1
 
+    .line 1
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroidx/viewpager2/widget/ViewPager2$SavedState;->mRecyclerViewId:I
 
+    .line 2
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroidx/viewpager2/widget/ViewPager2$SavedState;->mCurrentItem:I
 
+    .line 3
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
     move-result-object p1
@@ -114,16 +118,20 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
+    .line 2
     iget v0, p0, Landroidx/viewpager2/widget/ViewPager2$SavedState;->mRecyclerViewId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 3
     iget v0, p0, Landroidx/viewpager2/widget/ViewPager2$SavedState;->mCurrentItem:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 4
     iget-object p0, p0, Landroidx/viewpager2/widget/ViewPager2$SavedState;->mAdapterState:Landroid/os/Parcelable;
 
     invoke-virtual {p1, p0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V

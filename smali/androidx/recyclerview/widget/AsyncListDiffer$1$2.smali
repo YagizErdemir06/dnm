@@ -1,4 +1,4 @@
-.class Landroidx/recyclerview/widget/AsyncListDiffer$1$2;
+.class public Landroidx/recyclerview/widget/AsyncListDiffer$1$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,15 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$1:Landroidx/recyclerview/widget/AsyncListDiffer$1;
+.field public final synthetic this$1:Landroidx/recyclerview/widget/AsyncListDiffer$1;
 
-.field final synthetic val$result:Landroidx/recyclerview/widget/DiffUtil$DiffResult;
+.field public final synthetic val$result:Landroidx/recyclerview/widget/DiffUtil$DiffResult;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/recyclerview/widget/AsyncListDiffer$1;Landroidx/recyclerview/widget/DiffUtil$DiffResult;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/recyclerview/widget/AsyncListDiffer$1$2;->this$1:Landroidx/recyclerview/widget/AsyncListDiffer$1;
 
     iput-object p2, p0, Landroidx/recyclerview/widget/AsyncListDiffer$1$2;->val$result:Landroidx/recyclerview/widget/DiffUtil$DiffResult;
@@ -41,6 +42,7 @@
 .method public run()V
     .locals 4
 
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/AsyncListDiffer$1$2;->this$1:Landroidx/recyclerview/widget/AsyncListDiffer$1;
 
     iget-object v1, v0, Landroidx/recyclerview/widget/AsyncListDiffer$1;->this$0:Landroidx/recyclerview/widget/AsyncListDiffer;
@@ -51,6 +53,7 @@
 
     if-ne v2, v3, :cond_0
 
+    .line 2
     iget-object v2, v0, Landroidx/recyclerview/widget/AsyncListDiffer$1;->val$newList:Ljava/util/List;
 
     iget-object p0, p0, Landroidx/recyclerview/widget/AsyncListDiffer$1$2;->val$result:Landroidx/recyclerview/widget/DiffUtil$DiffResult;

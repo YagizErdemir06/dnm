@@ -232,7 +232,6 @@
     <string name="accessibility_video_capture_button">Nuotraukų įamžinimo mygtukas, vaizdo įrašų filmavimo metu</string>
     <string name="accessibility_video_pause_button">Vaizdo įrašymas pristabdytas</string>
     <string name="accessibility_video_resume_button">Vaizdo įrašymas tęsiamas</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">Vandenženklis išjungtas</string>
     <string name="accessibility_watermark_image_on">Vandenženklis įjungtas</string>
     <string name="accessibility_watermark_text">Atidarykite vandenženklių reguliavimo panelę</string>
@@ -240,16 +239,6 @@
     <string name="accessibility_zoom_button">Priartinimo režimas</string>
     <string name="actionbar_button_up_description">Grįžti</string>
     <string name="afternoon">Popietė</string>
-    <string name="agent_flip_tbc">Tęsti vidiniame lange</string>
-    <string name="agent_function_max">Sureguliuota iki maksimalios vertės</string>
-    <string name="agent_function_min">Sureguliuota iki minimalios vertės</string>
-    <string name="agent_workspace_mode_not_supported">Ši funkcija nepalaikoma</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"Ši funkcija nepalaikoma.
-Vietoj to atidarytas nuotraukų režimas."</string>
-    <string name="agent_workspace_on">Nustatyti parametrai fotografuojant „%1$s“</string>
-    <string name="agent_workspace_tbc">Studijų aplinka</string>
-    <string name="agent_workspace_tbc_use_default">"Studijų aplinka…
-Nustatyti numatytieji kameros parametrai"</string>
     <string name="ai_agra_fort">Agros fortas</string>
     <string name="ai_amber_fort">Gintaro rūmai</string>
     <string name="ai_baby">Kūdikis</string>
@@ -476,7 +465,6 @@ ir automatiškai derinti parinktis"</string>
     <string name="bluetooth_headset_permission_des">„Bluetooth“ ausinių ryšio būsenos nustatymas ir garso įrašymas naudojant ausinių mikrofoną</string>
     <string name="bluetooth_permission_not_ask_again">Parametruose leiskite šiai programai prisijungti prie įrenginių netoliese, kad ji galėtų prisijungti prie „Bluetooth“ ausinių.</string>
     <string name="bokeh_use_hint">Gilumo efektas</string>
-    <string name="bottomsheet_action_expand_halfway">Išskleisti iki pusės</string>
     <string name="burst_shoot_exit_button_text">Išjungti serijinį fotografavimą</string>
     <string name="button_fisheye_camera_title">Žuvies akis</string>
     <string name="button_front_camera_title">Fotografuoti asmenukę</string>
@@ -517,8 +505,6 @@ ir automatiškai derinti parinktis"</string>
     <string name="ccc_temperature_warning_msg">Jūsų įrenginys – perkaitęs. Fotoaparatas išsijungs po %d sekundžių. Jūsų nuotraukos arba vaizdo įrašai bus išsaugoti automatiškai.</string>
     <string name="ccc_temperature_warning_title">Įrenginys perkaito</string>
     <string name="center_mark">Centrinė žymė</string>
-    <string name="character_counter_content_description">Įvesta simbolių: %1$d iš %2$d</string>
-    <string name="character_counter_overflowed_content_description">Viršytas simbolių skaičius: %1$d iš %2$d</string>
     <string name="cinemaster_cancel">Atšaukti</string>
     <string name="cinemaster_confirm">Išeiti</string>
     <string name="cinemaster_connect_exit_message">Dabar išeiti iš kelių kamerų sąrankos?</string>
@@ -537,7 +523,6 @@ ir automatiškai derinti parinktis"</string>
     <string name="cinemaster_toast_monitor_disconnect">Monitorius atjungtas iš kelių kamerų sąrankos</string>
     <string name="cinemaster_toast_monitor_play_error">Kamera %s dėl įvykusios klaidos atjungta iš kelių kamerų sąrankos</string>
     <string name="cinemaster_wifi_24g_tips">Perjunkite į %s GHz tinklą, kad padidintumėte monitoriaus maitinimo tiekimo stabilumą</string>
-    <string name="clear_text_end_icon_content_description">Išvalyti tekstą</string>
     <string name="clearable_edittext_clear_description">Išvalyti</string>
     <string name="clone_adjust">Derinti</string>
     <string name="clone_copy_mode">Fiksuotas kadras</string>
@@ -831,7 +816,6 @@ nuskaitytus dokumentus automatiškai"</string>
     <string name="download_hint_cn">Panašu, kad jūsų įrenginys nėra prijungtas prie „WLAN“. Elementų atsiuntimui naudoti %1$s MB mobiliųjų duomenų?</string>
     <string name="download_hint_wifi">Panašu, kad jūsų įrenginys nėra prijungtas prie „Wi-Fi“. Elementų atsiuntimui naudoti %1$s MB mobiliųjų duomenų?</string>
     <string name="download_in_progress">Atsiunčiama…</string>
-    <string name="download_network_error">Nepavyko atsiųsti. Patikrinkite tinklo parametrus.</string>
     <string name="download_title">Duomenų naudojimo įspėjimas</string>
     <string name="download_waiting">Laukiama …</string>
     <string name="dual_camera_lens_covered_toast">Uždengtas objektyvas.</string>
@@ -882,7 +866,6 @@ Dviejų telefonų įrašymas taip pat leidžia prisijungti prie kito netoliese e
     <string name="eras_ad">m.e.</string>
     <string name="eras_bc">Pr. Kr.</string>
     <string name="error_fail_to_start_audio_capture">Nepavyko pradėti garso įrašymo</string>
-    <string name="error_icon_content_description">Klaida</string>
     <string name="esp_tip">Išorinio ekrano peržiūra</string>
     <string name="evening">Popietė</string>
     <string name="exo_controls_cc_disabled_description">Įgalinti subtitrus</string>
@@ -936,8 +919,7 @@ Dviejų telefonų įrašymas taip pat leidžia prisijungti prie kito netoliese e
     <string name="exo_track_surround_5_point_1">5.1 erdvinis garsas</string>
     <string name="exo_track_surround_7_point_1">7.1 erdvinis garsas</string>
     <string name="exo_track_unknown">Nežinomas</string>
-    <string name="expand_button_title">Išplėstiniai</string>
-    <string name="exposed_dropdown_menu_content_description">Rodyti išskleidžiamąjį meniu</string>
+    <string name="expand_button_title">Išplėstinė</string>
     <string name="exposure_mode_adjust_title">Išlaikymo būsena</string>
     <string name="eye_light">Akių žibėjimas</string>
     <string name="eye_light_angel">Angelas</string>
@@ -1094,7 +1076,6 @@ jei apversite telefoną"</string>
     <string name="hint_subtitle_prompt">Dabar galite diktuoti subtitrus</string>
     <string name="histogram_summary_tip">Rodyti išlaikymo atsiliepimus realiu laiku</string>
     <string name="hunt_dual_water_mark">Dvigubos kameros vandenženklis bus pridėtas automatiškai.</string>
-    <string name="icon_content_description">Dialogo lango piktograma</string>
     <string name="id_card_mode_hint_back">Nuskaitykite galinę ID pusę</string>
     <string name="id_card_mode_hint_front">Nuskaitykite priekinę ID pusę</string>
     <string name="id_card_mode_use_hint_text_body">"Sujunkite abi ID puses į vieną vaizdą.
@@ -1105,7 +1086,6 @@ Atspausdinkite kopiją bevieliu būdu ant A4 popieriaus."</string>
     <string name="invisible_mode_dialog_summary">Dabar negalite naudoti kameros. Išjunkite nežinomo asmens būseną nustatymuose ir tuomet galėsite naudotis kamera.</string>
     <string name="invisible_mode_dialog_title">Esate neatpažįstamo asmens būsenoje</string>
     <string name="invisible_mode_dialog_to_close">Nustatymai</string>
-    <string name="item_view_role_description">Skirtukas</string>
     <string name="kaleidoscope_fragment_tab_name">Kaleidoskopas</string>
     <string name="lens_dirty_detected_content">"Atrodo, kad jūsų fotoaparato lęšis yra nešvarus.
 Siekdami geresnio rezultato, nuvalykite lęšį."</string>
@@ -1228,18 +1208,6 @@ Siekdami geresnio rezultato, nuvalykite lęšį."</string>
     <string name="manually_raw_tip">Negalima naudoti priartinimo taikant RAW formatą</string>
     <string name="manually_ultra_raw_tip">Negalima naudotis priartinimu, kai įjungtas „Ultra“ RAW</string>
     <string name="masterfilter_description_title">Filmų filtrai</string>
-    <string name="material_clock_toggle_content_description">Pasirinkite „iki pietų“ arba „po pietų“</string>
-    <string name="material_hour_selection">Pasirinkite valandą</string>
-    <string name="material_hour_suffix">%1$s val.</string>
-    <string name="material_minute_selection">Pasirinkite minutes</string>
-    <string name="material_minute_suffix">%1$s min.</string>
-    <string name="material_timepicker_am">AM</string>
-    <string name="material_timepicker_clock_mode_description">Laiko įvestį pateikti perjungus į laikrodžio režimą.</string>
-    <string name="material_timepicker_hour">Valanda</string>
-    <string name="material_timepicker_minute">Minutė</string>
-    <string name="material_timepicker_pm">PM</string>
-    <string name="material_timepicker_select_time">Pasirinkite laiką</string>
-    <string name="material_timepicker_text_input_mode_description">Laiko įvestį pateikti perjungus į teksto įvesties režimą.</string>
     <string name="message_snap_double_confirm">Ilgas garsumo mygtuko nuspaudimas paleidžia NFC. Pakeisti šią funkciją?</string>
     <string name="midnight">Naktis</string>
     <string name="mimoji_app_name">Fun Cam</string>
@@ -1378,7 +1346,6 @@ Siekdami geresnio rezultato, nuvalykite lęšį."</string>
     <string name="miuix_appcompat_delete_description">Trinti</string>
     <string name="miuix_appcompat_deselect_all">Atžymėti viską</string>
     <string name="miuix_appcompat_deselect_all_description">Atžymėti viską</string>
-    <string name="miuix_appcompat_edit">Redaguoti</string>
     <string name="miuix_appcompat_search_action_mode_cancel">Atšaukti</string>
     <string name="miuix_appcompat_search_input_description">Ieškoti</string>
     <string name="miuix_appcompat_select_all">Žymėti viską</string>
@@ -1486,42 +1453,6 @@ Siekdami geresnio rezultato, nuvalykite lęšį."</string>
     <string name="msg_bubble_doc4_first_use">Bakstelėkite norėdami atpažinti tekstą</string>
     <string name="msg_toast_doc4_recognition_failed">Įvyko klaida. Bandykite dar kartą.</string>
     <string name="msg_toast_doc4_text_not_found">Nepavyko aptikti teksto</string>
-    <string name="mtrl_badge_numberless_content_description">Naujas pranešimas</string>
-    <string name="mtrl_chip_close_icon_content_description">Pašalinti %1$s</string>
-    <string name="mtrl_exceed_max_badge_number_content_description">Naujų pranešimų: daugiau nei %1$d</string>
-    <string name="mtrl_picker_a11y_next_month">Pakeisti į kitą mėnesį</string>
-    <string name="mtrl_picker_a11y_prev_month">Pakeisti į ankstesnį mėnesį</string>
-    <string name="mtrl_picker_announce_current_selection">Dabartinis pasirinkimas: %1$s</string>
-    <string name="mtrl_picker_cancel">Atšaukti</string>
-    <string name="mtrl_picker_confirm">Gerai</string>
-    <string name="mtrl_picker_date_header_selected">%1$s</string>
-    <string name="mtrl_picker_date_header_title">Pasirinkite datą</string>
-    <string name="mtrl_picker_date_header_unselected">Pasirinkta data</string>
-    <string name="mtrl_picker_day_of_week_column_header">Dienų stulpelis: %1$s</string>
-    <string name="mtrl_picker_invalid_format">Netinkamas formatas.</string>
-    <string name="mtrl_picker_invalid_format_example">Pavyzdys: %1$s</string>
-    <string name="mtrl_picker_invalid_format_use">Naudoti: %1$s</string>
-    <string name="mtrl_picker_invalid_range">Netinkamas diapazonas.</string>
-    <string name="mtrl_picker_navigate_to_year_description">Eiti į %1$s metus</string>
-    <string name="mtrl_picker_out_of_range">Nepatenka į diapazoną: %1$s</string>
-    <string name="mtrl_picker_range_header_only_end_selected">Pradžios data–%1$s</string>
-    <string name="mtrl_picker_range_header_only_start_selected">%1$s–pabaigos data</string>
-    <string name="mtrl_picker_range_header_selected">%1$s–%2$s</string>
-    <string name="mtrl_picker_range_header_title">Pasirinkite diapazoną</string>
-    <string name="mtrl_picker_range_header_unselected">Pradžios data–pabaigos data</string>
-    <string name="mtrl_picker_save">Išsaugoti</string>
-    <string name="mtrl_picker_text_input_date_hint">Data</string>
-    <string name="mtrl_picker_text_input_date_range_end_hint">Pabaigos data</string>
-    <string name="mtrl_picker_text_input_date_range_start_hint">Pradžios data</string>
-    <string name="mtrl_picker_text_input_day_abbr">d</string>
-    <string name="mtrl_picker_text_input_month_abbr">m</string>
-    <string name="mtrl_picker_text_input_year_abbr">y</string>
-    <string name="mtrl_picker_toggle_to_calendar_input_mode">Perjungti į kalendoriaus įvesties režimą</string>
-    <string name="mtrl_picker_toggle_to_day_selection">Palieskite, kad perjungtumėte į dienos pasirinkimą</string>
-    <string name="mtrl_picker_toggle_to_text_input_mode">Perjungti į teksto įvesties režimą</string>
-    <string name="mtrl_picker_toggle_to_year_selection">Palieskite, kad perjungtumėte į metų pasirinkimą</string>
-    <string name="mtrl_timepicker_cancel">Atšaukti</string>
-    <string name="mtrl_timepicker_confirm">Gerai</string>
     <string name="multi_window_mode_not_supported">Fotoaparatas nebus naudojamas keleto langų režime</string>
     <string name="network_access_user_notice_agree">Sutikti</string>
     <string name="network_access_user_notice_message_live_video">&lt;Data>Efektų, muzikos ir kitų trumpų vaizdo įrašų funkcijų teikimui, „Fotoaparatui“ reikalinga interneto prieiga.&lt;br/>&lt;br/>Bakstelėdami \"Sutinku\" žemiau, Jūs sutinkate su mūsų &lt;a href =%1$s>naudotojo sutartimi&lt;/a>, &lt;a href =%2$s>privatumo politika&lt;/a> ir leidžiate „Fotoaparatui“ prisijungti prie interneto.&lt;/Data></string>
@@ -1616,7 +1547,6 @@ Siekdami geresnio rezultato, nuvalykite lęšį."</string>
     <string name="parameter_wb_title">Baltos balansas</string>
     <string name="parameter_zoom_slider_description">Vilkite mastelio slankiklį horizontaliai, kad sklandžiai perjungtumėte tolimą kadrą į artimą.</string>
     <string name="parameter_zoom_slider_title">Mastelis</string>
-    <string name="password_toggle_content_description">Rodyti slaptažodį</string>
     <string name="path_settings">Sisteminės programos/Fotoaparatas/Parametrai</string>
     <string name="photo_assistance_tips_title">Patarimai gyvai</string>
     <string name="pic_flaw_blink_more">Atrodo, kad kažkuris nuotraukoje esantis asmuo yra užmerktomis akimis</string>
@@ -2359,7 +2289,6 @@ Leiskite subjektui išryškėti, o fonui išblukti."</string>
     <string name="time_picker_label_hour">V</string>
     <string name="time_picker_label_minute">M</string>
     <string name="time_stamp_date_format">yyyy-MM-dd</string>
-    <string name="time_stamp_date_format_minute">yyyy-MM-dd HH:mm</string>
     <string name="timefreeze_guide_tip2">Galite bet kuriuo filmavimo metu užfiksuoti ir panaikinti fono fiksavimą.</string>
     <string name="timefreeze_guide_tip3">Paprašykite subjekto, kad liktų rėmelio centre.</string>
     <string name="timefreeze_guide_tip4">Sustabdykite eismą.</string>
@@ -2397,7 +2326,7 @@ Leiskite subjektui išryškėti, o fonui išblukti."</string>
     <string name="tip_flash_screen_light_on">Priekinė blykstė: įjungta</string>
     <string name="tip_flash_soft_light_off">Švelnus blykėjimas: išjungtas</string>
     <string name="tip_flash_soft_light_torch">Švelnus blykėjimas: žibintuvėlio būsena</string>
-    <string name="tip_flash_torch">Blykstė: žibintuvėlis</string>
+    <string name="tip_flash_torch">Blykstė: visuomet įjungta</string>
     <string name="tip_friend_mode_connect_when_24GHz">Norėdami pagerinti peržiūros kokybę, naudokite %s GHz jungtį</string>
     <string name="tip_friend_mode_display_device_name_connect">Bendrinama peržiūra</string>
     <string name="tip_friend_mode_display_device_name_disconnect">Kitas įrenginys paliko šią sesiją</string>

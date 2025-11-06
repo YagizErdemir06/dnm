@@ -9,21 +9,30 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 4
+    .locals 7
 
-    const-wide/high16 v0, 0x4024000000000000L    # 10.0
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const-wide/high16 v2, 0x4018000000000000L    # 6.0
+    const-wide/high16 v1, 0x3ff0000000000000L    # 1.0
 
-    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->pow(DD)D
+    const/16 v3, 0x11
 
-    move-result-wide v0
+    if-lt v0, v3, :cond_0
 
-    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
+    const-wide/high16 v3, 0x4024000000000000L    # 10.0
 
-    div-double/2addr v2, v0
+    const-wide/high16 v5, 0x4018000000000000L    # 6.0
 
-    sput-wide v2, Lcom/bumptech/glide/util/LogTime;->MILLIS_MULTIPLIER:D
+    .line 2
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v3
+
+    div-double/2addr v1, v3
+
+    :cond_0
+    sput-wide v1, Lcom/bumptech/glide/util/LogTime;->MILLIS_MULTIPLIER:D
 
     return-void
 .end method
@@ -31,6 +40,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,6 +49,7 @@
 .method public static getElapsedMillis(J)D
     .locals 2
 
+    .line 1
     invoke-static {}, Lcom/bumptech/glide/util/LogTime;->getLogTime()J
 
     move-result-wide v0
@@ -60,7 +71,23 @@
         value = 0x11
     .end annotation
 
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x11
+
+    if-lt v0, v1, :cond_0
+
+    .line 2
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    .line 3
+    :cond_0
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 

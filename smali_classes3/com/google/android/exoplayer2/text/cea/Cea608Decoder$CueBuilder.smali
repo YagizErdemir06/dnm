@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;
+.class public final Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -64,28 +64,34 @@
 .method public constructor <init>(II)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->cueStyles:Ljava/util/List;
 
+    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->rolledUpCaptions:Ljava/util/List;
 
+    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->captionStringBuilder:Ljava/lang/StringBuilder;
 
+    .line 5
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->reset(I)V
 
+    .line 6
     iput p2, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->captionRowCount:I
 
     return-void
@@ -94,6 +100,7 @@
 .method public static synthetic access$002(Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;I)I
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->tabOffset:I
 
     return p1
@@ -102,6 +109,7 @@
 .method public static synthetic access$100(Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->row:I
 
     return p0
@@ -110,6 +118,7 @@
 .method public static synthetic access$102(Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;I)I
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->row:I
 
     return p1
@@ -118,6 +127,7 @@
 .method public static synthetic access$202(Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;I)I
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->indent:I
 
     return p1
@@ -126,21 +136,29 @@
 .method private buildCurrentLine()Landroid/text/SpannableString;
     .locals 15
 
+    .line 1
     new-instance v0, Landroid/text/SpannableStringBuilder;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->captionStringBuilder:Ljava/lang/StringBuilder;
 
     invoke-direct {v0, v1}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
+    .line 2
     invoke-virtual {v0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v1
 
-    const/4 v2, -0x1
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    const/4 v3, -0x1
 
-    move v5, v2
+    move v4, v2
+
+    move v7, v4
+
+    move v10, v7
+
+    move v5, v3
 
     move v6, v5
 
@@ -148,12 +166,7 @@
 
     move v9, v8
 
-    move v4, v3
-
-    move v7, v4
-
-    move v10, v7
-
+    .line 3
     :cond_0
     :goto_0
     iget-object v11, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->cueStyles:Ljava/util/List;
@@ -164,6 +177,7 @@
 
     if-ge v4, v11, :cond_a
 
+    .line 4
     iget-object v11, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->cueStyles:Ljava/util/List;
 
     invoke-interface {v11, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -172,8 +186,10 @@
 
     check-cast v11, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder$CueStyle;
 
+    .line 5
     iget-boolean v12, v11, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder$CueStyle;->underline:Z
 
+    .line 6
     iget v13, v11, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder$CueStyle;->style:I
 
     const/16 v14, 0x8
@@ -189,13 +205,14 @@
     goto :goto_1
 
     :cond_1
-    move v14, v3
+    move v14, v2
 
     :goto_1
     if-ne v13, v10, :cond_2
 
     goto :goto_2
 
+    .line 7
     :cond_2
     invoke-static {}, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder;->access$300()[I
 
@@ -206,11 +223,13 @@
     :goto_2
     move v10, v14
 
+    .line 8
     :cond_3
     iget v11, v11, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder$CueStyle;->start:I
 
     add-int/lit8 v4, v4, 0x1
 
+    .line 9
     iget-object v13, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->cueStyles:Ljava/util/List;
 
     invoke-interface {v13}, Ljava/util/List;->size()I
@@ -240,18 +259,19 @@
     goto :goto_0
 
     :cond_5
-    if-eq v5, v2, :cond_6
+    if-eq v5, v3, :cond_6
 
     if-nez v12, :cond_6
 
+    .line 10
     invoke-static {v0, v5, v11}, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->setUnderlineSpan(Landroid/text/SpannableStringBuilder;II)V
 
-    move v5, v2
+    move v5, v3
 
     goto :goto_4
 
     :cond_6
-    if-ne v5, v2, :cond_7
+    if-ne v5, v3, :cond_7
 
     if-eqz v12, :cond_7
 
@@ -259,18 +279,19 @@
 
     :cond_7
     :goto_4
-    if-eq v6, v2, :cond_8
+    if-eq v6, v3, :cond_8
 
     if-nez v10, :cond_8
 
+    .line 11
     invoke-static {v0, v6, v11}, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->setItalicSpan(Landroid/text/SpannableStringBuilder;II)V
 
-    move v6, v2
+    move v6, v3
 
     goto :goto_5
 
     :cond_8
-    if-ne v6, v2, :cond_9
+    if-ne v6, v3, :cond_9
 
     if-eqz v10, :cond_9
 
@@ -280,6 +301,7 @@
     :goto_5
     if-eq v9, v8, :cond_0
 
+    .line 12
     invoke-static {v0, v7, v11, v8}, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->setColorSpan(Landroid/text/SpannableStringBuilder;III)V
 
     move v8, v9
@@ -289,24 +311,28 @@
     goto :goto_0
 
     :cond_a
-    if-eq v5, v2, :cond_b
+    if-eq v5, v3, :cond_b
 
     if-eq v5, v1, :cond_b
 
+    .line 13
     invoke-static {v0, v5, v1}, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->setUnderlineSpan(Landroid/text/SpannableStringBuilder;II)V
 
     :cond_b
-    if-eq v6, v2, :cond_c
+    if-eq v6, v3, :cond_c
 
     if-eq v6, v1, :cond_c
 
+    .line 14
     invoke-static {v0, v6, v1}, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->setItalicSpan(Landroid/text/SpannableStringBuilder;II)V
 
     :cond_c
     if-eq v7, v1, :cond_d
 
+    .line 15
     invoke-static {v0, v7, v1, v8}, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->setColorSpan(Landroid/text/SpannableStringBuilder;III)V
 
+    .line 16
     :cond_d
     new-instance p0, Landroid/text/SpannableString;
 
@@ -324,6 +350,7 @@
 
     return-void
 
+    .line 1
     :cond_0
     new-instance v0, Landroid/text/style/ForegroundColorSpan;
 
@@ -339,6 +366,7 @@
 .method private static setItalicSpan(Landroid/text/SpannableStringBuilder;II)V
     .locals 2
 
+    .line 1
     new-instance v0, Landroid/text/style/StyleSpan;
 
     const/4 v1, 0x2
@@ -355,6 +383,7 @@
 .method private static setUnderlineSpan(Landroid/text/SpannableStringBuilder;II)V
     .locals 2
 
+    .line 1
     new-instance v0, Landroid/text/style/UnderlineSpan;
 
     invoke-direct {v0}, Landroid/text/style/UnderlineSpan;-><init>()V
@@ -371,6 +400,7 @@
 .method public append(C)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->captionStringBuilder:Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
@@ -381,6 +411,7 @@
 
     if-ge v0, v1, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->captionStringBuilder:Ljava/lang/StringBuilder;
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
@@ -392,6 +423,7 @@
 .method public backspace()V
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->captionStringBuilder:Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
@@ -400,12 +432,14 @@
 
     if-lez v0, :cond_0
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->captionStringBuilder:Ljava/lang/StringBuilder;
 
     add-int/lit8 v2, v0, -0x1
 
     invoke-virtual {v1, v2, v0}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->cueStyles:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -417,6 +451,7 @@
     :goto_0
     if-ltz v1, :cond_0
 
+    .line 4
     iget-object v2, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->cueStyles:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -425,12 +460,14 @@
 
     check-cast v2, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder$CueStyle;
 
+    .line 5
     iget v3, v2, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder$CueStyle;->start:I
 
     if-ne v3, v0, :cond_0
 
     add-int/lit8 v3, v3, -0x1
 
+    .line 6
     iput v3, v2, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder$CueStyle;->start:I
 
     add-int/lit8 v1, v1, -0x1
@@ -446,6 +483,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->indent:I
 
     iget v1, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->tabOffset:I
@@ -454,6 +492,7 @@
 
     rsub-int/lit8 v1, v0, 0x20
 
+    .line 2
     new-instance v2, Landroid/text/SpannableStringBuilder;
 
     invoke-direct {v2}, Landroid/text/SpannableStringBuilder;-><init>()V
@@ -462,6 +501,7 @@
 
     move v4, v3
 
+    .line 3
     :goto_0
     iget-object v5, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->rolledUpCaptions:Ljava/util/List;
 
@@ -471,6 +511,7 @@
 
     if-ge v4, v5, :cond_0
 
+    .line 4
     iget-object v5, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->rolledUpCaptions:Ljava/util/List;
 
     invoke-interface {v5, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -487,12 +528,14 @@
 
     const/16 v5, 0xa
 
+    .line 5
     invoke-virtual {v2, v5}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
 
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->buildCurrentLine()Landroid/text/SpannableString;
 
@@ -504,6 +547,7 @@
 
     invoke-virtual {v2, v4}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
+    .line 7
     invoke-virtual {v2}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v4
@@ -514,6 +558,7 @@
 
     return-object p0
 
+    .line 8
     :cond_1
     invoke-virtual {v2}, Landroid/text/SpannableStringBuilder;->length()I
 
@@ -533,11 +578,13 @@
 
     goto :goto_1
 
+    .line 9
     :cond_2
     iget p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->captionMode:I
 
     if-ne p1, v6, :cond_4
 
+    .line 10
     invoke-static {v4}, Ljava/lang/Math;->abs(I)I
 
     move-result p1
@@ -553,6 +600,7 @@
 
     goto :goto_1
 
+    .line 11
     :cond_4
     iget p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->captionMode:I
 
@@ -597,6 +645,7 @@
     :cond_7
     const/high16 v0, 0x3f000000    # 0.5f
 
+    .line 12
     :goto_3
     iget v1, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->row:I
 
@@ -610,6 +659,7 @@
 
     goto :goto_4
 
+    .line 13
     :cond_8
     iget v3, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->captionMode:I
 
@@ -621,36 +671,43 @@
 
     sub-int/2addr v1, p0
 
+    .line 14
     :cond_9
     :goto_4
     new-instance p0, Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/Cue$Builder;-><init>()V
 
+    .line 15
     invoke-virtual {p0, v2}, Lcom/google/android/exoplayer2/text/Cue$Builder;->setText(Ljava/lang/CharSequence;)Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     move-result-object p0
 
     sget-object v2, Landroid/text/Layout$Alignment;->ALIGN_NORMAL:Landroid/text/Layout$Alignment;
 
+    .line 16
     invoke-virtual {p0, v2}, Lcom/google/android/exoplayer2/text/Cue$Builder;->setTextAlignment(Landroid/text/Layout$Alignment;)Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     move-result-object p0
 
     int-to-float v1, v1
 
+    .line 17
     invoke-virtual {p0, v1, v7}, Lcom/google/android/exoplayer2/text/Cue$Builder;->setLine(FI)Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     move-result-object p0
 
+    .line 18
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/text/Cue$Builder;->setPosition(F)Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     move-result-object p0
 
+    .line 19
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/text/Cue$Builder;->setPositionAnchor(I)Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     move-result-object p0
 
+    .line 20
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/text/Cue$Builder;->build()Lcom/google/android/exoplayer2/text/Cue;
 
     move-result-object p0
@@ -661,6 +718,7 @@
 .method public isEmpty()Z
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->cueStyles:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
@@ -671,6 +729,7 @@
 
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->rolledUpCaptions:Ljava/util/List;
 
+    .line 2
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
@@ -679,6 +738,7 @@
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->captionStringBuilder:Ljava/lang/StringBuilder;
 
+    .line 3
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->length()I
 
     move-result p0
@@ -699,16 +759,20 @@
 .method public reset(I)V
     .locals 1
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->captionMode:I
 
+    .line 2
     iget-object p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->cueStyles:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->clear()V
 
+    .line 3
     iget-object p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->rolledUpCaptions:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->clear()V
 
+    .line 4
     iget-object p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->captionStringBuilder:Ljava/lang/StringBuilder;
 
     const/4 v0, 0x0
@@ -717,10 +781,13 @@
 
     const/16 p1, 0xf
 
+    .line 5
     iput p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->row:I
 
+    .line 6
     iput v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->indent:I
 
+    .line 7
     iput v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->tabOffset:I
 
     return-void
@@ -729,6 +796,7 @@
 .method public rollUp()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->rolledUpCaptions:Ljava/util/List;
 
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->buildCurrentLine()Landroid/text/SpannableString;
@@ -737,16 +805,19 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->captionStringBuilder:Ljava/lang/StringBuilder;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->setLength(I)V
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->cueStyles:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
+    .line 4
     iget v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->captionRowCount:I
 
     iget v2, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->row:I
@@ -755,6 +826,7 @@
 
     move-result v0
 
+    .line 5
     :goto_0
     iget-object v2, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->rolledUpCaptions:Ljava/util/List;
 
@@ -764,6 +836,7 @@
 
     if-lt v2, v0, :cond_0
 
+    .line 6
     iget-object v2, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->rolledUpCaptions:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
@@ -777,6 +850,7 @@
 .method public setCaptionMode(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->captionMode:I
 
     return-void
@@ -785,6 +859,7 @@
 .method public setCaptionRowCount(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->captionRowCount:I
 
     return-void
@@ -793,6 +868,7 @@
 .method public setStyle(IZ)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder;->cueStyles:Ljava/util/List;
 
     new-instance v1, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder$CueStyle;

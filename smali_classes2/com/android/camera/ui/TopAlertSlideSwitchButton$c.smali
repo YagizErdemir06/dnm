@@ -15,8 +15,18 @@
 
 
 # virtual methods
-.method public abstract a(ILjava/lang/String;)V
+.method public abstract X()Z
 .end method
 
-.method public abstract g()Z
+.method public abstract a(ILjava/lang/String;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "parentKey",
+            "child"
+        }
+    .end annotation
 .end method

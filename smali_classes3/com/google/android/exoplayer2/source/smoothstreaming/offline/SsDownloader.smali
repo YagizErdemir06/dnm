@@ -39,9 +39,7 @@
     .locals 1
 
     .line 1
-    new-instance v0, Landroidx/window/layout/e;
-
-    invoke-direct {v0}, Landroidx/window/layout/e;-><init>()V
+    sget-object v0, Ld/j/a/b/v2/c0/b/a;->c:Ld/j/a/b/v2/c0/b/a;
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/exoplayer2/source/smoothstreaming/offline/SsDownloader;-><init>(Lcom/google/android/exoplayer2/MediaItem;Lcom/google/android/exoplayer2/upstream/cache/CacheDataSource$Factory;Ljava/util/concurrent/Executor;)V
 

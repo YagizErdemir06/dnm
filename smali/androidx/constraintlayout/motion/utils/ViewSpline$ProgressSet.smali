@@ -1,4 +1,4 @@
-.class Landroidx/constraintlayout/motion/utils/ViewSpline$ProgressSet;
+.class public Landroidx/constraintlayout/motion/utils/ViewSpline$ProgressSet;
 .super Landroidx/constraintlayout/motion/utils/ViewSpline;
 .source "SourceFile"
 
@@ -15,17 +15,19 @@
 
 
 # instance fields
-.field mNoMethod:Z
+.field public mNoMethod:Z
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Landroidx/constraintlayout/motion/utils/ViewSpline;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-boolean v0, p0, Landroidx/constraintlayout/motion/utils/ViewSpline$ProgressSet;->mNoMethod:Z
 
     return-void
@@ -34,7 +36,7 @@
 
 # virtual methods
 .method public setProperty(Landroid/view/View;F)V
-    .locals 8
+    .locals 9
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0,
@@ -50,10 +52,12 @@
 
     const-string v1, "ViewSpline"
 
+    .line 1
     instance-of v2, p1, Landroidx/constraintlayout/motion/widget/MotionLayout;
 
     if-eqz v2, :cond_0
 
+    .line 2
     check-cast p1, Landroidx/constraintlayout/motion/widget/MotionLayout;
 
     invoke-virtual {p0, p2}, Landroidx/constraintlayout/core/motion/utils/SplineSet;->get(F)F
@@ -64,6 +68,7 @@
 
     goto :goto_1
 
+    .line 3
     :cond_0
     iget-boolean v2, p0, Landroidx/constraintlayout/motion/utils/ViewSpline$ProgressSet;->mNoMethod:Z
 
@@ -74,40 +79,43 @@
     :cond_1
     const/4 v2, 0x0
 
-    const/4 v3, 0x1
+    const/4 v3, 0x0
 
+    const/4 v4, 0x1
+
+    .line 4
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v4
+    move-result-object v5
 
-    const-string/jumbo v5, "setProgress"
+    const-string v6, "setProgress"
 
-    new-array v6, v3, [Ljava/lang/Class;
+    new-array v7, v4, [Ljava/lang/Class;
 
-    sget-object v7, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
+    sget-object v8, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
-    aput-object v7, v6, v2
+    aput-object v8, v7, v3
 
-    invoke-virtual {v4, v5, v6}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    invoke-virtual {v5, v6, v7}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    move-result-object v4
+    move-result-object v2
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
+    .line 5
     :catch_0
-    iput-boolean v3, p0, Landroidx/constraintlayout/motion/utils/ViewSpline$ProgressSet;->mNoMethod:Z
-
-    const/4 v4, 0x0
+    iput-boolean v4, p0, Landroidx/constraintlayout/motion/utils/ViewSpline$ProgressSet;->mNoMethod:Z
 
     :goto_0
-    if-eqz v4, :cond_2
+    if-eqz v2, :cond_2
 
     :try_start_1
-    new-array v3, v3, [Ljava/lang/Object;
+    new-array v4, v4, [Ljava/lang/Object;
 
+    .line 6
     invoke-virtual {p0, p2}, Landroidx/constraintlayout/core/motion/utils/SplineSet;->get(F)F
 
     move-result p0
@@ -116,9 +124,9 @@
 
     move-result-object p0
 
-    aput-object p0, v3, v2
+    aput-object p0, v4, v3
 
-    invoke-virtual {v4, p1, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, p1, v4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_1
     .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_2
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_1 .. :try_end_1} :catch_1
@@ -128,6 +136,7 @@
     :catch_1
     move-exception p0
 
+    .line 7
     invoke-static {v1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_1
@@ -135,6 +144,7 @@
     :catch_2
     move-exception p0
 
+    .line 8
     invoke-static {v1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_2

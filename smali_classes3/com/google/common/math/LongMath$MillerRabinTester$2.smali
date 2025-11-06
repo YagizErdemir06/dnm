@@ -1,4 +1,4 @@
-.class final enum Lcom/google/common/math/LongMath$MillerRabinTester$2;
+.class public final enum Lcom/google/common/math/LongMath$MillerRabinTester$2;
 .super Lcom/google/common/math/LongMath$MillerRabinTester;
 .source "SourceFile"
 
@@ -20,6 +20,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, p2, v0}, Lcom/google/common/math/LongMath$MillerRabinTester;-><init>(Ljava/lang/String;ILcom/google/common/math/LongMath$1;)V
 
     return-void
@@ -47,6 +48,7 @@
 
     const/16 p0, 0x20
 
+    .line 1
     :cond_0
     invoke-static {p1, p2}, Ljava/lang/Long;->numberOfLeadingZeros(J)I
 
@@ -58,6 +60,7 @@
 
     shl-long/2addr p1, v0
 
+    .line 2
     invoke-static {p1, p2, p3, p4}, Lcom/google/common/primitives/UnsignedLongs;->remainder(JJ)J
 
     move-result-wide p1
@@ -92,6 +95,7 @@
 
     mul-long v13, v2, v7
 
+    .line 1
     invoke-direct {p0, v13, v14, v5, v6}, Lcom/google/common/math/LongMath$MillerRabinTester$2;->times2ToThe32Mod(JJ)J
 
     move-result-wide v13
@@ -106,6 +110,7 @@
 
     if-gez v1, :cond_0
 
+    .line 2
     invoke-static {v13, v14, v5, v6}, Lcom/google/common/primitives/UnsignedLongs;->remainder(JJ)J
 
     move-result-wide v13
@@ -115,12 +120,14 @@
 
     add-long/2addr v13, v7
 
+    .line 3
     invoke-direct {p0, v13, v14, v5, v6}, Lcom/google/common/math/LongMath$MillerRabinTester$2;->times2ToThe32Mod(JJ)J
 
     move-result-wide v1
 
     mul-long/2addr v11, v9
 
+    .line 4
     invoke-static {v11, v12, v5, v6}, Lcom/google/common/primitives/UnsignedLongs;->remainder(JJ)J
 
     move-result-wide v3
@@ -149,6 +156,7 @@
 
     mul-long v2, v0, v0
 
+    .line 1
     invoke-direct {p0, v2, v3, p3, p4}, Lcom/google/common/math/LongMath$MillerRabinTester$2;->times2ToThe32Mod(JJ)J
 
     move-result-wide v2
@@ -165,6 +173,7 @@
 
     if-gez v4, :cond_0
 
+    .line 2
     invoke-static {v0, v1, p3, p4}, Lcom/google/common/primitives/UnsignedLongs;->remainder(JJ)J
 
     move-result-wide v0
@@ -172,12 +181,14 @@
     :cond_0
     add-long/2addr v2, v0
 
+    .line 3
     invoke-direct {p0, v2, v3, p3, p4}, Lcom/google/common/math/LongMath$MillerRabinTester$2;->times2ToThe32Mod(JJ)J
 
     move-result-wide v5
 
     mul-long/2addr p1, p1
 
+    .line 4
     invoke-static {p1, p2, p3, p4}, Lcom/google/common/primitives/UnsignedLongs;->remainder(JJ)J
 
     move-result-wide v7

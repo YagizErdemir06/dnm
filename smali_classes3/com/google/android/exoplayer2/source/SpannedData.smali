@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/SpannedData;
+.class public final Lcom/google/android/exoplayer2/source/SpannedData;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -41,9 +41,7 @@
     .locals 1
 
     .line 1
-    new-instance v0, Lcom/google/android/exoplayer2/source/u;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/source/u;-><init>()V
+    sget-object v0, Ld/j/a/b/v2/u;->a:Ld/j/a/b/v2/u;
 
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/source/SpannedData;-><init>(Lcom/google/android/exoplayer2/util/Consumer;)V
 
@@ -81,15 +79,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/source/SpannedData;->lambda$new$0(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method private static synthetic lambda$new$0(Ljava/lang/Object;)V
+.method public static synthetic lambda$new$0(Ljava/lang/Object;)V
     .locals 0
 
     return-void
@@ -105,16 +95,18 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/source/SpannedData;->memoizedReadIndex:I
 
-    const/4 v1, -0x1
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
-    const/4 v3, 0x1
+    const/4 v3, -0x1
 
-    if-ne v0, v1, :cond_1
+    if-ne v0, v3, :cond_1
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/SpannedData;->spans:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
@@ -123,18 +115,20 @@
 
     if-nez v0, :cond_0
 
-    move v0, v3
+    move v0, v2
 
     goto :goto_0
 
     :cond_0
-    move v0, v2
+    move v0, v1
 
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
-    iput v2, p0, Lcom/google/android/exoplayer2/source/SpannedData;->memoizedReadIndex:I
+    .line 3
+    iput v1, p0, Lcom/google/android/exoplayer2/source/SpannedData;->memoizedReadIndex:I
 
+    .line 4
     :cond_1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/SpannedData;->spans:Landroid/util/SparseArray;
 
@@ -144,43 +138,47 @@
 
     if-lez v0, :cond_3
 
+    .line 5
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/SpannedData;->spans:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
 
-    move-result v1
+    move-result v3
 
-    sub-int/2addr v1, v3
+    sub-int/2addr v3, v2
 
-    invoke-virtual {v0, v1}, Landroid/util/SparseArray;->keyAt(I)I
+    invoke-virtual {v0, v3}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v0
 
     if-lt p1, v0, :cond_2
 
-    move v2, v3
+    move v1, v2
 
+    .line 6
     :cond_2
-    invoke-static {v2}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
+    invoke-static {v1}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
     if-ne v0, p1, :cond_3
 
+    .line 7
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/SpannedData;->removeCallback:Lcom/google/android/exoplayer2/util/Consumer;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/SpannedData;->spans:Landroid/util/SparseArray;
 
     invoke-virtual {v1}, Landroid/util/SparseArray;->size()I
 
-    move-result v2
+    move-result v3
 
-    sub-int/2addr v2, v3
+    sub-int/2addr v3, v2
 
-    invoke-virtual {v1, v2}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
+    invoke-virtual {v1, v3}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Lcom/google/android/exoplayer2/util/Consumer;->accept(Ljava/lang/Object;)V
 
+    .line 8
     :cond_3
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/SpannedData;->spans:Landroid/util/SparseArray;
 
@@ -194,6 +192,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/SpannedData;->spans:Landroid/util/SparseArray;
 
@@ -203,6 +202,7 @@
 
     if-ge v0, v1, :cond_0
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/SpannedData;->removeCallback:Lcom/google/android/exoplayer2/util/Consumer;
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/SpannedData;->spans:Landroid/util/SparseArray;
@@ -220,8 +220,10 @@
     :cond_0
     const/4 v0, -0x1
 
+    .line 3
     iput v0, p0, Lcom/google/android/exoplayer2/source/SpannedData;->memoizedReadIndex:I
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/SpannedData;->spans:Landroid/util/SparseArray;
 
     invoke-virtual {p0}, Landroid/util/SparseArray;->clear()V
@@ -232,6 +234,7 @@
 .method public discardFrom(I)V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/SpannedData;->spans:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
@@ -251,6 +254,7 @@
 
     if-ge p1, v1, :cond_0
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/SpannedData;->removeCallback:Lcom/google/android/exoplayer2/util/Consumer;
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/SpannedData;->spans:Landroid/util/SparseArray;
@@ -261,6 +265,7 @@
 
     invoke-interface {v1, v2}, Lcom/google/android/exoplayer2/util/Consumer;->accept(Ljava/lang/Object;)V
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/SpannedData;->spans:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v0}, Landroid/util/SparseArray;->removeAt(I)V
@@ -269,6 +274,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/SpannedData;->spans:Landroid/util/SparseArray;
 
@@ -308,6 +314,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/SpannedData;->spans:Landroid/util/SparseArray;
 
@@ -329,6 +336,7 @@
 
     if-lt p1, v1, :cond_1
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/SpannedData;->removeCallback:Lcom/google/android/exoplayer2/util/Consumer;
 
     iget-object v3, p0, Lcom/google/android/exoplayer2/source/SpannedData;->spans:Landroid/util/SparseArray;
@@ -339,16 +347,19 @@
 
     invoke-interface {v1, v3}, Lcom/google/android/exoplayer2/util/Consumer;->accept(Ljava/lang/Object;)V
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/SpannedData;->spans:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v0}, Landroid/util/SparseArray;->removeAt(I)V
 
+    .line 4
     iget v0, p0, Lcom/google/android/exoplayer2/source/SpannedData;->memoizedReadIndex:I
 
     if-lez v0, :cond_0
 
     add-int/lit8 v0, v0, -0x1
 
+    .line 5
     iput v0, p0, Lcom/google/android/exoplayer2/source/SpannedData;->memoizedReadIndex:I
 
     :cond_0
@@ -368,6 +379,7 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/source/SpannedData;->memoizedReadIndex:I
 
     const/4 v1, -0x1
@@ -376,8 +388,10 @@
 
     const/4 v0, 0x0
 
+    .line 2
     iput v0, p0, Lcom/google/android/exoplayer2/source/SpannedData;->memoizedReadIndex:I
 
+    .line 3
     :cond_0
     :goto_0
     iget v0, p0, Lcom/google/android/exoplayer2/source/SpannedData;->memoizedReadIndex:I
@@ -392,6 +406,7 @@
 
     if-ge p1, v0, :cond_1
 
+    .line 4
     iget v0, p0, Lcom/google/android/exoplayer2/source/SpannedData;->memoizedReadIndex:I
 
     add-int/lit8 v0, v0, -0x1
@@ -400,6 +415,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     :goto_1
     iget v0, p0, Lcom/google/android/exoplayer2/source/SpannedData;->memoizedReadIndex:I
@@ -426,6 +442,7 @@
 
     if-lt p1, v0, :cond_2
 
+    .line 6
     iget v0, p0, Lcom/google/android/exoplayer2/source/SpannedData;->memoizedReadIndex:I
 
     add-int/lit8 v0, v0, 0x1
@@ -434,6 +451,7 @@
 
     goto :goto_1
 
+    .line 7
     :cond_2
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/SpannedData;->spans:Landroid/util/SparseArray;
 
@@ -454,6 +472,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/SpannedData;->spans:Landroid/util/SparseArray;
 
     invoke-virtual {p0}, Landroid/util/SparseArray;->size()I
@@ -472,6 +491,7 @@
 .method public isEmpty()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/SpannedData;->spans:Landroid/util/SparseArray;
 
     invoke-virtual {p0}, Landroid/util/SparseArray;->size()I

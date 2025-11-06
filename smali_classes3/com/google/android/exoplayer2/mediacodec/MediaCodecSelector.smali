@@ -11,9 +11,8 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/google/android/exoplayer2/mediacodec/f;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/mediacodec/f;-><init>()V
+    .line 1
+    sget-object v0, Ld/j/a/b/r2/j;->a:Ld/j/a/b/r2/j;
 
     sput-object v0, Lcom/google/android/exoplayer2/mediacodec/MediaCodecSelector;->DEFAULT:Lcom/google/android/exoplayer2/mediacodec/MediaCodecSelector;
 

@@ -1,4 +1,4 @@
-.class final Lcom/google/common/eventbus/Dispatcher$ImmediateDispatcher;
+.class public final Lcom/google/common/eventbus/Dispatcher$ImmediateDispatcher;
 .super Lcom/google/common/eventbus/Dispatcher;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/eventbus/Dispatcher$ImmediateDispatcher;
 
     invoke-direct {v0}, Lcom/google/common/eventbus/Dispatcher$ImmediateDispatcher;-><init>()V
@@ -34,6 +35,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/eventbus/Dispatcher;-><init>()V
 
     return-void
@@ -42,6 +44,7 @@
 .method public static synthetic access$200()Lcom/google/common/eventbus/Dispatcher$ImmediateDispatcher;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/common/eventbus/Dispatcher$ImmediateDispatcher;->INSTANCE:Lcom/google/common/eventbus/Dispatcher$ImmediateDispatcher;
 
     return-object v0
@@ -61,8 +64,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     :goto_0
     invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -70,6 +75,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object p0

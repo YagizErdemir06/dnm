@@ -15,9 +15,9 @@
 
 
 # static fields
-.field static final synthetic $assertionsDisabled:Z
+.field public static final synthetic $assertionsDisabled:Z
 
-.field static synthetic class$org$apache$xmlbeans$impl$validator$ValidatingXMLInputStream:Ljava/lang/Class;
+.field public static synthetic class$org$apache$xmlbeans$impl$validator$ValidatingXMLInputStream:Ljava/lang/Class;
 
 
 # instance fields
@@ -48,6 +48,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream;->class$org$apache$xmlbeans$impl$validator$ValidatingXMLInputStream:Ljava/lang/Class;
 
     if-nez v0, :cond_0
@@ -76,22 +77,27 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/common/GenericXmlInputStream;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
     iput-object v0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream;->_text:Ljava/lang/StringBuffer;
 
+    .line 3
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream;->_source:Lorg/apache/xmlbeans/xml/stream/XMLInputStream;
 
+    .line 4
     invoke-static {p4}, Lorg/apache/xmlbeans/XmlOptions;->maskNull(Lorg/apache/xmlbeans/XmlOptions;)Lorg/apache/xmlbeans/XmlOptions;
 
     move-result-object v5
 
     const-string p4, "DOCUMENT_TYPE"
 
+    .line 5
     invoke-virtual {v5, p4}, Lorg/apache/xmlbeans/XmlOptions;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p4
@@ -108,20 +114,24 @@
     :goto_0
     if-nez p3, :cond_2
 
+    .line 6
     sget-object p3, Lorg/apache/xmlbeans/impl/schema/BuiltinSchemaTypeSystem;->ST_ANY_TYPE:Lorg/apache/xmlbeans/impl/schema/SchemaTypeImpl;
 
+    .line 7
     invoke-interface {p1}, Lorg/apache/xmlbeans/xml/stream/XMLInputStream;->getSubStream()Lorg/apache/xmlbeans/xml/stream/XMLInputStream;
 
     move-result-object p1
 
     const/4 p4, 0x2
 
+    .line 8
     invoke-interface {p1, p4}, Lorg/apache/xmlbeans/xml/stream/XMLInputStream;->skip(I)Z
 
     move-result p4
 
     if-eqz p4, :cond_1
 
+    .line 9
     invoke-interface {p1}, Lorg/apache/xmlbeans/xml/stream/XMLInputStream;->next()Lorg/apache/xmlbeans/xml/stream/XMLEvent;
 
     move-result-object p4
@@ -142,12 +152,14 @@
 
     move-object p3, p4
 
+    .line 10
     :cond_1
     invoke-interface {p1}, Lorg/apache/xmlbeans/xml/stream/XMLInputStream;->close()V
 
     :cond_2
     move-object v2, p3
 
+    .line 11
     new-instance p1, Lorg/apache/xmlbeans/impl/validator/Validator;
 
     const/4 v3, 0x0
@@ -168,6 +180,7 @@
 
     const/4 p1, 0x1
 
+    .line 12
     invoke-direct {p0, p1}, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream;->nextEvent(I)V
 
     return-void
@@ -176,6 +189,7 @@
 .method public static synthetic access$100(Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream;)Lorg/apache/xmlbeans/XMLStreamValidationException;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream;->_exception:Lorg/apache/xmlbeans/XMLStreamValidationException;
 
     return-object p0
@@ -184,6 +198,7 @@
 .method public static synthetic access$102(Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream;Lorg/apache/xmlbeans/XMLStreamValidationException;)Lorg/apache/xmlbeans/XMLStreamValidationException;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream;->_exception:Lorg/apache/xmlbeans/XMLStreamValidationException;
 
     return-object p1
@@ -192,6 +207,7 @@
 .method public static synthetic class$(Ljava/lang/String;)Ljava/lang/Class;
     .locals 1
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -208,7 +224,7 @@
 
     invoke-direct {v0}, Ljava/lang/NoClassDefFoundError;-><init>()V
 
-    invoke-virtual {v0, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v0, p0}, Ljava/lang/NoClassDefFoundError;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -218,15 +234,16 @@
 .method private clearText()V
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream;->_text:Ljava/lang/StringBuffer;
-
-    const/4 v0, 0x0
 
     invoke-virtual {p0}, Ljava/lang/StringBuffer;->length()I
 
-    move-result v1
+    move-result v0
 
-    invoke-virtual {p0, v0, v1}, Ljava/lang/StringBuffer;->delete(II)Ljava/lang/StringBuffer;
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v1, v0}, Ljava/lang/StringBuffer;->delete(II)Ljava/lang/StringBuffer;
 
     return-void
 .end method
@@ -239,6 +256,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream;->_text:Ljava/lang/StringBuffer;
 
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->length()I
@@ -249,8 +267,10 @@
 
     const/4 v0, 0x3
 
+    .line 2
     invoke-direct {p0, v0}, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream;->nextEvent(I)V
 
+    .line 3
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream;->clearText()V
 
     :cond_0
@@ -309,6 +329,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :try_start_0
     iget-object v1, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream;->_source:Lorg/apache/xmlbeans/xml/stream/XMLInputStream;
 
@@ -324,6 +345,7 @@
 
     return-object v0
 
+    .line 2
     :cond_0
     new-instance v2, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream$1;
 
@@ -348,6 +370,7 @@
 .method public getName()Ljavax/xml/namespace/QName;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream;->_name:Lorg/apache/xmlbeans/xml/stream/XMLName;
 
     invoke-static {p0}, Lorg/apache/xmlbeans/impl/common/XMLNameHelper;->getQName(Lorg/apache/xmlbeans/xml/stream/XMLName;)Ljavax/xml/namespace/QName;
@@ -360,6 +383,7 @@
 .method public getNamespaceForPrefix(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream;->_startElement:Lorg/apache/xmlbeans/xml/stream/StartElement;
 
     const/4 v0, 0x0
@@ -368,6 +392,7 @@
 
     return-object v0
 
+    .line 2
     :cond_0
     invoke-interface {p0}, Lorg/apache/xmlbeans/xml/stream/StartElement;->getNamespaceMap()Ljava/util/Map;
 
@@ -377,6 +402,7 @@
 
     return-object v0
 
+    .line 3
     :cond_1
     invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -420,6 +446,7 @@
 .method public getXsiLoc()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream;->_xsiLoc:Ljava/lang/String;
 
     return-object p0
@@ -428,6 +455,7 @@
 .method public getXsiNil()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream;->_xsiNil:Ljava/lang/String;
 
     return-object p0
@@ -436,6 +464,7 @@
 .method public getXsiNoLoc()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream;->_xsiNoLoc:Ljava/lang/String;
 
     return-object p0
@@ -444,6 +473,7 @@
 .method public getXsiType()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream;->_xsiType:Ljava/lang/String;
 
     return-object p0
@@ -802,6 +832,7 @@
 
     move v1, v0
 
+    .line 1
     :goto_0
     iget-object v2, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream;->_text:Ljava/lang/StringBuffer;
 
@@ -811,6 +842,7 @@
 
     if-ge v1, v2, :cond_1
 
+    .line 2
     iget-object v2, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream;->_text:Ljava/lang/StringBuffer;
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuffer;->charAt(I)C

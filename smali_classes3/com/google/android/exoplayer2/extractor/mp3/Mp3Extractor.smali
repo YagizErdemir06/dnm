@@ -93,15 +93,13 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/google/android/exoplayer2/extractor/mp3/a;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/extractor/mp3/a;-><init>()V
+    .line 1
+    sget-object v0, Ld/j/a/b/q2/h/a;->a:Ld/j/a/b/q2/h/a;
 
     sput-object v0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->FACTORY:Lcom/google/android/exoplayer2/extractor/ExtractorsFactory;
 
-    new-instance v0, Lcom/google/android/exoplayer2/extractor/mp3/b;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/extractor/mp3/b;-><init>()V
+    .line 2
+    sget-object v0, Ld/j/a/b/q2/h/b;->a:Ld/j/a/b/q2/h/b;
 
     sput-object v0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->REQUIRED_ID3_FRAME_PREDICATE:Lcom/google/android/exoplayer2/metadata/id3/Id3Decoder$FramePredicate;
 
@@ -197,16 +195,6 @@
     return-void
 .end method
 
-.method public static synthetic a()[Lcom/google/android/exoplayer2/extractor/Extractor;
-    .locals 1
-
-    invoke-static {}, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->lambda$static$0()[Lcom/google/android/exoplayer2/extractor/Extractor;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method private assertInitialized()V
     .locals 1
     .annotation runtime Lorg/checkerframework/checker/nullness/qual/EnsuresNonNull;
@@ -216,25 +204,17 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->realTrackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkStateNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->extractorOutput:Lcom/google/android/exoplayer2/extractor/ExtractorOutput;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Util;->castNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
-.end method
-
-.method public static synthetic b(IIIII)Z
-    .locals 0
-
-    invoke-static {p0, p1, p2, p3, p4}, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->lambda$static$1(IIIII)Z
-
-    move-result p0
-
-    return p0
 .end method
 
 .method private computeSeeker(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)Lcom/google/android/exoplayer2/extractor/mp3/Seeker;
@@ -245,10 +225,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->maybeReadSeekFrame(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)Lcom/google/android/exoplayer2/extractor/mp3/Seeker;
 
     move-result-object v0
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->metadata:Lcom/google/android/exoplayer2/metadata/Metadata;
 
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPosition()J
@@ -259,10 +241,12 @@
 
     move-result-object v1
 
+    .line 3
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->disableSeeking:Z
 
     if-eqz v2, :cond_0
 
+    .line 4
     new-instance p0, Lcom/google/android/exoplayer2/extractor/mp3/Seeker$UnseekableSeeker;
 
     invoke-direct {p0}, Lcom/google/android/exoplayer2/extractor/mp3/Seeker$UnseekableSeeker;-><init>()V
@@ -270,18 +254,25 @@
     return-object p0
 
     :cond_0
-    iget v2, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->flags:I
+    const/4 v2, 0x0
 
-    and-int/lit8 v2, v2, 0x4
+    .line 5
+    iget v3, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->flags:I
 
-    if-eqz v2, :cond_3
+    and-int/lit8 v3, v3, 0x4
+
+    if-eqz v3, :cond_3
+
+    const-wide/16 v2, -0x1
 
     if-eqz v1, :cond_1
 
+    .line 6
     invoke-interface {v1}, Lcom/google/android/exoplayer2/extractor/SeekMap;->getDurationUs()J
 
     move-result-wide v2
 
+    .line 7
     invoke-interface {v1}, Lcom/google/android/exoplayer2/extractor/mp3/Seeker;->getDataEndPosition()J
 
     move-result-wide v0
@@ -296,30 +287,35 @@
     :cond_1
     if-eqz v0, :cond_2
 
+    .line 8
     invoke-interface {v0}, Lcom/google/android/exoplayer2/extractor/SeekMap;->getDurationUs()J
 
     move-result-wide v2
 
+    .line 9
     invoke-interface {v0}, Lcom/google/android/exoplayer2/extractor/mp3/Seeker;->getDataEndPosition()J
 
     move-result-wide v0
 
     goto :goto_0
 
+    .line 10
     :cond_2
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->metadata:Lcom/google/android/exoplayer2/metadata/Metadata;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->getId3TlenUs(Lcom/google/android/exoplayer2/metadata/Metadata;)J
 
-    move-result-wide v2
+    move-result-wide v0
 
-    const-wide/16 v0, -0x1
+    move-wide v5, v0
 
-    goto :goto_0
+    move-wide v9, v2
 
+    .line 11
     :goto_1
     new-instance v0, Lcom/google/android/exoplayer2/extractor/mp3/IndexSeeker;
 
+    .line 12
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
     move-result-wide v7
@@ -343,13 +339,14 @@
     goto :goto_2
 
     :cond_5
-    const/4 v0, 0x0
+    move-object v0, v2
 
     :goto_2
     const/4 v1, 0x1
 
     if-eqz v0, :cond_6
 
+    .line 13
     invoke-interface {v0}, Lcom/google/android/exoplayer2/extractor/SeekMap;->isSeekable()Z
 
     move-result v2
@@ -362,6 +359,7 @@
 
     if-eqz v2, :cond_8
 
+    .line 14
     :cond_6
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->flags:I
 
@@ -374,6 +372,7 @@
     :cond_7
     const/4 v1, 0x0
 
+    .line 15
     :goto_3
     invoke-direct {p0, p1, v1}, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->getConstantBitrateSeeker(Lcom/google/android/exoplayer2/extractor/ExtractorInput;Z)Lcom/google/android/exoplayer2/extractor/mp3/Seeker;
 
@@ -386,6 +385,7 @@
 .method private computeTimeUs(J)J
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->basisTimeUs:J
 
     const-wide/32 v2, 0xf4240
@@ -413,22 +413,25 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
     move-result-object v0
 
-    const/4 v1, 0x4
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const/4 v2, 0x4
 
-    invoke-interface {p1, v0, v2, v1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->peekFully([BII)V
+    invoke-interface {p1, v0, v1, v2}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->peekFully([BII)V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
-    invoke-virtual {v0, v2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
+    invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->synchronizedHeader:Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
@@ -439,8 +442,10 @@
 
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;->setForHeaderData(I)Z
 
+    .line 4
     new-instance v0, Lcom/google/android/exoplayer2/extractor/mp3/ConstantBitrateSeeker;
 
+    .line 5
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getLength()J
 
     move-result-wide v3
@@ -469,6 +474,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/metadata/Metadata;->length()I
 
     move-result v0
@@ -478,10 +484,12 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 2
     invoke-virtual {p0, v1}, Lcom/google/android/exoplayer2/metadata/Metadata;->get(I)Lcom/google/android/exoplayer2/metadata/Metadata$Entry;
 
     move-result-object v2
 
+    .line 3
     instance-of v3, v2, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;
 
     if-eqz v3, :cond_0
@@ -492,12 +500,14 @@
 
     const-string v4, "TLEN"
 
+    .line 4
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
+    .line 5
     iget-object p0, v2, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;->value:Ljava/lang/String;
 
     invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
@@ -524,6 +534,7 @@
 .method private static getSeekFrameHeader(Lcom/google/android/exoplayer2/util/ParsableByteArray;I)I
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->limit()I
 
     move-result v0
@@ -532,8 +543,10 @@
 
     if-lt v0, v1, :cond_1
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result p1
@@ -549,6 +562,7 @@
     :cond_0
     return p1
 
+    .line 4
     :cond_1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->limit()I
 
@@ -560,8 +574,10 @@
 
     const/16 p1, 0x24
 
+    .line 5
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
+    .line 6
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result p0
@@ -606,13 +622,14 @@
     return p0
 .end method
 
-.method private static synthetic lambda$static$0()[Lcom/google/android/exoplayer2/extractor/Extractor;
+.method public static synthetic lambda$static$0()[Lcom/google/android/exoplayer2/extractor/Extractor;
     .locals 3
 
     const/4 v0, 0x1
 
     new-array v0, v0, [Lcom/google/android/exoplayer2/extractor/Extractor;
 
+    .line 1
     new-instance v1, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;
 
     invoke-direct {v1}, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;-><init>()V
@@ -624,29 +641,29 @@
     return-object v0
 .end method
 
-.method private static synthetic lambda$static$1(IIIII)Z
+.method public static synthetic lambda$static$1(IIIII)Z
     .locals 3
 
-    const/16 v0, 0x43
+    const/4 v0, 0x2
 
-    const/4 v1, 0x2
+    const/16 v1, 0x4d
 
-    const/16 v2, 0x4d
+    const/16 v2, 0x43
 
-    if-ne p1, v0, :cond_0
+    if-ne p1, v2, :cond_0
 
-    const/16 v0, 0x4f
+    const/16 v2, 0x4f
 
-    if-ne p2, v0, :cond_0
+    if-ne p2, v2, :cond_0
 
-    if-ne p3, v2, :cond_0
+    if-ne p3, v1, :cond_0
 
-    if-eq p4, v2, :cond_1
+    if-eq p4, v1, :cond_1
 
-    if-eq p0, v1, :cond_1
+    if-eq p0, v0, :cond_1
 
     :cond_0
-    if-ne p1, v2, :cond_2
+    if-ne p1, v1, :cond_2
 
     const/16 p1, 0x4c
 
@@ -658,7 +675,7 @@
 
     if-eq p4, p1, :cond_1
 
-    if-ne p0, v1, :cond_2
+    if-ne p0, v0, :cond_2
 
     :cond_1
     const/4 p0, 0x1
@@ -683,6 +700,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/metadata/Metadata;->length()I
 
     move-result v0
@@ -692,14 +710,17 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 2
     invoke-virtual {p0, v1}, Lcom/google/android/exoplayer2/metadata/Metadata;->get(I)Lcom/google/android/exoplayer2/metadata/Metadata$Entry;
 
     move-result-object v2
 
+    .line 3
     instance-of v3, v2, Lcom/google/android/exoplayer2/metadata/id3/MlltFrame;
 
     if-eqz v3, :cond_0
 
+    .line 4
     check-cast v2, Lcom/google/android/exoplayer2/metadata/id3/MlltFrame;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->getId3TlenUs(Lcom/google/android/exoplayer2/metadata/Metadata;)J
@@ -734,6 +755,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v5, Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->synchronizedHeader:Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;
@@ -742,6 +764,7 @@
 
     invoke-direct {v5, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;-><init>(I)V
 
+    .line 2
     invoke-virtual {v5}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
     move-result-object v0
@@ -754,6 +777,7 @@
 
     invoke-interface {p1, v0, v6, v1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->peekFully([BII)V
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->synchronizedHeader:Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;
 
     iget v1, v0, Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;->version:I
@@ -766,6 +790,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 4
     iget v0, v0, Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;->channels:I
 
     if-eq v0, v2, :cond_2
@@ -774,6 +799,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     iget v0, v0, Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;->channels:I
 
@@ -788,6 +814,7 @@
     :goto_0
     move v7, v3
 
+    .line 6
     invoke-static {v5, v7}, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->getSeekFrameHeader(Lcom/google/android/exoplayer2/util/ParsableByteArray;I)I
 
     move-result v8
@@ -807,6 +834,7 @@
 
     if-ne v8, v0, :cond_4
 
+    .line 7
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getLength()J
 
     move-result-wide v0
@@ -821,6 +849,7 @@
 
     move-result-object v0
 
+    .line 8
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->synchronizedHeader:Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;
 
     iget p0, p0, Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;->frameSize:I
@@ -830,12 +859,14 @@
     goto :goto_2
 
     :cond_4
-    invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
-
     const/4 v0, 0x0
+
+    .line 9
+    invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
 
     goto :goto_2
 
+    .line 10
     :cond_5
     :goto_1
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getLength()J
@@ -854,6 +885,7 @@
 
     if-eqz v0, :cond_6
 
+    .line 11
     iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->gaplessInfoHolder:Lcom/google/android/exoplayer2/extractor/GaplessInfoHolder;
 
     invoke-virtual {v1}, Lcom/google/android/exoplayer2/extractor/GaplessInfoHolder;->hasGaplessInfo()Z
@@ -862,12 +894,15 @@
 
     if-nez v1, :cond_6
 
+    .line 12
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
 
     add-int/lit16 v7, v7, 0x8d
 
+    .line 13
     invoke-interface {p1, v7}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->advancePeekPosition(I)V
 
+    .line 14
     iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
@@ -878,10 +913,12 @@
 
     invoke-interface {p1, v1, v6, v2}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->peekFully([BII)V
 
+    .line 15
     iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v1, v6}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
+    .line 16
     iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->gaplessInfoHolder:Lcom/google/android/exoplayer2/extractor/GaplessInfoHolder;
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
@@ -892,6 +929,7 @@
 
     invoke-virtual {v1, v2}, Lcom/google/android/exoplayer2/extractor/GaplessInfoHolder;->setFromXingHeaderValue(I)Z
 
+    .line 17
     :cond_6
     iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->synchronizedHeader:Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;
 
@@ -901,6 +939,7 @@
 
     if-eqz v0, :cond_7
 
+    .line 18
     invoke-interface {v0}, Lcom/google/android/exoplayer2/extractor/SeekMap;->isSeekable()Z
 
     move-result v1
@@ -909,6 +948,7 @@
 
     if-ne v8, v9, :cond_7
 
+    .line 19
     invoke-direct {p0, p1, v6}, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->getConstantBitrateSeeker(Lcom/google/android/exoplayer2/extractor/ExtractorInput;Z)Lcom/google/android/exoplayer2/extractor/mp3/Seeker;
 
     move-result-object p0
@@ -928,12 +968,14 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->seeker:Lcom/google/android/exoplayer2/extractor/mp3/Seeker;
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {v0}, Lcom/google/android/exoplayer2/extractor/mp3/Seeker;->getDataEndPosition()J
 
     move-result-wide v2
@@ -944,6 +986,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPeekPosition()J
 
     move-result-wide v4
@@ -958,10 +1001,12 @@
 
     return v1
 
+    .line 4
     :cond_0
     :try_start_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
     move-result-object p0
@@ -970,6 +1015,7 @@
 
     const/4 v2, 0x4
 
+    .line 6
     invoke-interface {p1, p0, v0, v2, v1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->peekFully([BIIZ)Z
 
     move-result p0
@@ -999,12 +1045,14 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->synchronizedHeaderData:I
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
+    .line 2
     :try_start_0
     invoke-direct {p0, p1, v0}, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->synchronize(Lcom/google/android/exoplayer2/extractor/ExtractorInput;Z)Z
     :try_end_0
@@ -1017,22 +1065,26 @@
 
     return p0
 
+    .line 3
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->seeker:Lcom/google/android/exoplayer2/extractor/mp3/Seeker;
 
     if-nez v0, :cond_2
 
+    .line 4
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->computeSeeker(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)Lcom/google/android/exoplayer2/extractor/mp3/Seeker;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->seeker:Lcom/google/android/exoplayer2/extractor/mp3/Seeker;
 
+    .line 5
     iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->extractorOutput:Lcom/google/android/exoplayer2/extractor/ExtractorOutput;
 
     invoke-interface {v1, v0}, Lcom/google/android/exoplayer2/extractor/ExtractorOutput;->seekMap(Lcom/google/android/exoplayer2/extractor/SeekMap;)V
 
+    .line 6
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->currentTrackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     new-instance v1, Lcom/google/android/exoplayer2/Format$Builder;
@@ -1043,12 +1095,14 @@
 
     iget-object v2, v2, Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;->mimeType:Ljava/lang/String;
 
+    .line 7
     invoke-virtual {v1, v2}, Lcom/google/android/exoplayer2/Format$Builder;->setSampleMimeType(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v1
 
     const/16 v2, 0x1000
 
+    .line 8
     invoke-virtual {v1, v2}, Lcom/google/android/exoplayer2/Format$Builder;->setMaxInputSize(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v1
@@ -1057,6 +1111,7 @@
 
     iget v2, v2, Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;->channels:I
 
+    .line 9
     invoke-virtual {v1, v2}, Lcom/google/android/exoplayer2/Format$Builder;->setChannelCount(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v1
@@ -1065,6 +1120,7 @@
 
     iget v2, v2, Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;->sampleRate:I
 
+    .line 10
     invoke-virtual {v1, v2}, Lcom/google/android/exoplayer2/Format$Builder;->setSampleRate(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v1
@@ -1073,6 +1129,7 @@
 
     iget v2, v2, Lcom/google/android/exoplayer2/extractor/GaplessInfoHolder;->encoderDelay:I
 
+    .line 11
     invoke-virtual {v1, v2}, Lcom/google/android/exoplayer2/Format$Builder;->setEncoderDelay(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v1
@@ -1081,10 +1138,12 @@
 
     iget v2, v2, Lcom/google/android/exoplayer2/extractor/GaplessInfoHolder;->encoderPadding:I
 
+    .line 12
     invoke-virtual {v1, v2}, Lcom/google/android/exoplayer2/Format$Builder;->setEncoderPadding(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v1
 
+    .line 13
     iget v2, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->flags:I
 
     and-int/lit8 v2, v2, 0x8
@@ -1103,12 +1162,15 @@
 
     move-result-object v1
 
+    .line 14
     invoke-virtual {v1}, Lcom/google/android/exoplayer2/Format$Builder;->build()Lcom/google/android/exoplayer2/Format;
 
     move-result-object v1
 
+    .line 15
     invoke-interface {v0, v1}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->format(Lcom/google/android/exoplayer2/Format;)V
 
+    .line 16
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
     move-result-wide v0
@@ -1117,6 +1179,7 @@
 
     goto :goto_2
 
+    .line 17
     :cond_2
     iget-wide v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->firstSamplePosition:J
 
@@ -1126,10 +1189,12 @@
 
     if-eqz v0, :cond_3
 
+    .line 18
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
     move-result-wide v0
 
+    .line 19
     iget-wide v2, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->firstSamplePosition:J
 
     cmp-long v4, v0, v2
@@ -1140,8 +1205,10 @@
 
     long-to-int v0, v2
 
+    .line 20
     invoke-interface {p1, v0}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->skipFully(I)V
 
+    .line 21
     :cond_3
     :goto_2
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->readSample(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)I
@@ -1166,6 +1233,7 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->sampleBytesRemaining:I
 
     const/4 v1, 0x1
@@ -1176,8 +1244,10 @@
 
     if-nez v0, :cond_4
 
+    .line 2
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
 
+    .line 3
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->peekEndOfStreamOrHeader(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)Z
 
     move-result v0
@@ -1186,17 +1256,20 @@
 
     return v2
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v0, v3}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
+    .line 5
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v0
 
+    .line 6
     iget v4, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->synchronizedHeaderData:I
 
     int-to-long v4, v4
@@ -1207,6 +1280,7 @@
 
     if-eqz v4, :cond_3
 
+    .line 7
     invoke-static {v0}, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->getFrameSize(I)I
 
     move-result v4
@@ -1215,11 +1289,13 @@
 
     goto :goto_0
 
+    .line 8
     :cond_1
     iget-object v4, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->synchronizedHeader:Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;
 
     invoke-virtual {v4, v0}, Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;->setForHeaderData(I)Z
 
+    .line 9
     iget-wide v4, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->basisTimeUs:J
 
     const-wide v6, -0x7fffffffffffffffL    # -4.9E-324
@@ -1228,6 +1304,7 @@
 
     if-nez v0, :cond_2
 
+    .line 10
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->seeker:Lcom/google/android/exoplayer2/extractor/mp3/Seeker;
 
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPosition()J
@@ -1240,12 +1317,14 @@
 
     iput-wide v4, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->basisTimeUs:J
 
+    .line 11
     iget-wide v4, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->forcedFirstSampleTimestampUs:J
 
     cmp-long v0, v4, v6
 
     if-eqz v0, :cond_2
 
+    .line 12
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->seeker:Lcom/google/android/exoplayer2/extractor/mp3/Seeker;
 
     const-wide/16 v4, 0x0
@@ -1254,6 +1333,7 @@
 
     move-result-wide v4
 
+    .line 13
     iget-wide v6, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->basisTimeUs:J
 
     iget-wide v8, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->forcedFirstSampleTimestampUs:J
@@ -1264,6 +1344,7 @@
 
     iput-wide v6, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->basisTimeUs:J
 
+    .line 14
     :cond_2
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->synchronizedHeader:Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;
 
@@ -1271,14 +1352,17 @@
 
     iput v4, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->sampleBytesRemaining:I
 
+    .line 15
     iget-object v4, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->seeker:Lcom/google/android/exoplayer2/extractor/mp3/Seeker;
 
     instance-of v5, v4, Lcom/google/android/exoplayer2/extractor/mp3/IndexSeeker;
 
     if-eqz v5, :cond_4
 
+    .line 16
     check-cast v4, Lcom/google/android/exoplayer2/extractor/mp3/IndexSeeker;
 
+    .line 17
     iget-wide v5, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->samplesRead:J
 
     iget v0, v0, Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;->samplesPerFrame:I
@@ -1287,10 +1371,12 @@
 
     add-long/2addr v5, v7
 
+    .line 18
     invoke-direct {p0, v5, v6}, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->computeTimeUs(J)J
 
     move-result-wide v5
 
+    .line 19
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
     move-result-wide v7
@@ -1303,8 +1389,10 @@
 
     add-long/2addr v7, v9
 
+    .line 20
     invoke-virtual {v4, v5, v6, v7, v8}, Lcom/google/android/exoplayer2/extractor/mp3/IndexSeeker;->maybeAddSeekPoint(JJ)V
 
+    .line 21
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->isSeekInProgress:Z
 
     if-eqz v0, :cond_4
@@ -1317,22 +1405,27 @@
 
     if-eqz v0, :cond_4
 
+    .line 22
     iput-boolean v3, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->isSeekInProgress:Z
 
+    .line 23
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->realTrackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->currentTrackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     goto :goto_1
 
+    .line 24
     :cond_3
     :goto_0
     invoke-interface {p1, v1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->skipFully(I)V
 
+    .line 25
     iput v3, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->synchronizedHeaderData:I
 
     return v3
 
+    .line 26
     :cond_4
     :goto_1
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->currentTrackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
@@ -1347,6 +1440,7 @@
 
     return v2
 
+    .line 27
     :cond_5
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->sampleBytesRemaining:I
 
@@ -1358,11 +1452,13 @@
 
     return v3
 
+    .line 28
     :cond_6
     iget-object v4, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->currentTrackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     iget-wide v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->samplesRead:J
 
+    .line 29
     invoke-direct {p0, v0, v1}, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->computeTimeUs(J)J
 
     move-result-wide v5
@@ -1377,8 +1473,10 @@
 
     const/4 v10, 0x0
 
+    .line 30
     invoke-interface/range {v4 .. v10}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->sampleMetadata(JIIILcom/google/android/exoplayer2/extractor/TrackOutput$CryptoData;)V
 
+    .line 31
     iget-wide v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->samplesRead:J
 
     iget-object p1, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->synchronizedHeader:Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;
@@ -1391,6 +1489,7 @@
 
     iput-wide v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->samplesRead:J
 
+    .line 32
     iput v3, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->sampleBytesRemaining:I
 
     return v3
@@ -1413,9 +1512,11 @@
     :cond_0
     const/high16 v0, 0x20000
 
+    .line 1
     :goto_0
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
 
+    .line 2
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
     move-result-wide v1
@@ -1432,6 +1533,7 @@
 
     if-nez v1, :cond_5
 
+    .line 3
     iget v1, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->flags:I
 
     and-int/lit8 v1, v1, 0x8
@@ -1452,9 +1554,11 @@
 
     goto :goto_2
 
+    .line 4
     :cond_2
     sget-object v1, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->REQUIRED_ID3_FRAME_PREDICATE:Lcom/google/android/exoplayer2/metadata/id3/Id3Decoder$FramePredicate;
 
+    .line 5
     :goto_2
     iget-object v5, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->id3Peeker:Lcom/google/android/exoplayer2/extractor/Id3Peeker;
 
@@ -1466,10 +1570,12 @@
 
     if-eqz v1, :cond_3
 
+    .line 6
     iget-object v5, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->gaplessInfoHolder:Lcom/google/android/exoplayer2/extractor/GaplessInfoHolder;
 
     invoke-virtual {v5, v1}, Lcom/google/android/exoplayer2/extractor/GaplessInfoHolder;->setFromMetadata(Lcom/google/android/exoplayer2/metadata/Metadata;)Z
 
+    .line 7
     :cond_3
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPeekPosition()J
 
@@ -1479,6 +1585,7 @@
 
     if-nez p2, :cond_4
 
+    .line 8
     invoke-interface {p1, v1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->skipFully(I)V
 
     :cond_4
@@ -1496,6 +1603,7 @@
 
     move v7, v6
 
+    .line 9
     :goto_4
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->peekEndOfStreamOrHeader(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)Z
 
@@ -1507,6 +1615,7 @@
 
     goto :goto_6
 
+    .line 10
     :cond_6
     new-instance p0, Ljava/io/EOFException;
 
@@ -1514,11 +1623,13 @@
 
     throw p0
 
+    .line 11
     :cond_7
     iget-object v8, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v8, v4}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
+    .line 12
     iget-object v8, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v8}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
@@ -1529,12 +1640,14 @@
 
     int-to-long v9, v5
 
+    .line 13
     invoke-static {v8, v9, v10}, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->headersMatch(IJ)Z
 
     move-result v9
 
     if-eqz v9, :cond_9
 
+    .line 14
     :cond_8
     invoke-static {v8}, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->getFrameSize(I)I
 
@@ -1556,6 +1669,7 @@
     :cond_a
     const-string p0, "Searched too many bytes."
 
+    .line 15
     invoke-static {p0, v2}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedContainer(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
     move-result-object p0
@@ -1565,14 +1679,17 @@
     :cond_b
     if-eqz p2, :cond_c
 
+    .line 16
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
 
     add-int v6, v1, v5
 
+    .line 17
     invoke-interface {p1, v6}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->advancePeekPosition(I)V
 
     goto :goto_5
 
+    .line 18
     :cond_c
     invoke-interface {p1, v3}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->skipFully(I)V
 
@@ -1590,6 +1707,7 @@
 
     if-ne v6, v3, :cond_e
 
+    .line 19
     iget-object v5, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->synchronizedHeader:Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;
 
     invoke-virtual {v5, v8}, Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;->setForHeaderData(I)Z
@@ -1608,13 +1726,16 @@
 
     add-int/2addr v1, v7
 
+    .line 20
     invoke-interface {p1, v1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->skipFully(I)V
 
     goto :goto_7
 
+    .line 21
     :cond_f
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
 
+    .line 22
     :goto_7
     iput v5, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->synchronizedHeaderData:I
 
@@ -1624,6 +1745,7 @@
     :goto_8
     add-int/lit8 v9, v9, -0x4
 
+    .line 23
     invoke-interface {p1, v9}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->advancePeekPosition(I)V
 
     goto :goto_4
@@ -1636,6 +1758,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->disableSeeking:Z
 
     return-void
@@ -1644,20 +1767,24 @@
 .method public init(Lcom/google/android/exoplayer2/extractor/ExtractorOutput;)V
     .locals 2
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->extractorOutput:Lcom/google/android/exoplayer2/extractor/ExtractorOutput;
 
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
+    .line 2
     invoke-interface {p1, v0, v1}, Lcom/google/android/exoplayer2/extractor/ExtractorOutput;->track(II)Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->realTrackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
+    .line 3
     iput-object p1, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->currentTrackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->extractorOutput:Lcom/google/android/exoplayer2/extractor/ExtractorOutput;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/extractor/ExtractorOutput;->endTracks()V
@@ -1673,8 +1800,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->assertInitialized()V
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->readInternal(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)I
 
     move-result p1
@@ -1683,18 +1812,21 @@
 
     if-ne p1, p2, :cond_0
 
+    .line 3
     iget-object p2, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->seeker:Lcom/google/android/exoplayer2/extractor/mp3/Seeker;
 
     instance-of p2, p2, Lcom/google/android/exoplayer2/extractor/mp3/IndexSeeker;
 
     if-eqz p2, :cond_0
 
+    .line 4
     iget-wide v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->samplesRead:J
 
     invoke-direct {p0, v0, v1}, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->computeTimeUs(J)J
 
     move-result-wide v0
 
+    .line 5
     iget-object p2, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->seeker:Lcom/google/android/exoplayer2/extractor/mp3/Seeker;
 
     invoke-interface {p2}, Lcom/google/android/exoplayer2/extractor/SeekMap;->getDurationUs()J
@@ -1705,12 +1837,14 @@
 
     if-eqz p2, :cond_0
 
+    .line 6
     iget-object p2, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->seeker:Lcom/google/android/exoplayer2/extractor/mp3/Seeker;
 
     check-cast p2, Lcom/google/android/exoplayer2/extractor/mp3/IndexSeeker;
 
     invoke-virtual {p2, v0, v1}, Lcom/google/android/exoplayer2/extractor/mp3/IndexSeeker;->setDurationUs(J)V
 
+    .line 7
     iget-object p2, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->extractorOutput:Lcom/google/android/exoplayer2/extractor/ExtractorOutput;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->seeker:Lcom/google/android/exoplayer2/extractor/mp3/Seeker;
@@ -1732,20 +1866,26 @@
 
     const/4 p1, 0x0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->synchronizedHeaderData:I
 
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 2
     iput-wide v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->basisTimeUs:J
 
     const-wide/16 v0, 0x0
 
+    .line 3
     iput-wide v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->samplesRead:J
 
+    .line 4
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->sampleBytesRemaining:I
 
+    .line 5
     iput-wide p3, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->seekTimeUs:J
 
+    .line 6
     iget-object p1, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->seeker:Lcom/google/android/exoplayer2/extractor/mp3/Seeker;
 
     instance-of p2, p1, Lcom/google/android/exoplayer2/extractor/mp3/IndexSeeker;
@@ -1762,8 +1902,10 @@
 
     const/4 p1, 0x1
 
+    .line 7
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->isSeekInProgress:Z
 
+    .line 8
     iget-object p1, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->skippingTrackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->currentTrackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
@@ -1782,6 +1924,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-direct {p0, p1, v0}, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->synchronize(Lcom/google/android/exoplayer2/extractor/ExtractorInput;Z)Z
 
     move-result p0

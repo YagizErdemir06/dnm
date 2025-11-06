@@ -1,4 +1,4 @@
-.class Landroidx/core/os/ProcessCompat$Api17Impl;
+.class public Landroidx/core/os/ProcessCompat$Api17Impl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -30,6 +30,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -42,6 +43,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -57,6 +59,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     :try_start_0
     sget-object v1, Landroidx/core/os/ProcessCompat$Api17Impl;->sResolvedLock:Ljava/lang/Object;
 
@@ -64,6 +67,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 2
     :try_start_1
     sget-boolean v2, Landroidx/core/os/ProcessCompat$Api17Impl;->sResolved:Z
 
@@ -71,8 +75,10 @@
 
     if-nez v2, :cond_0
 
+    .line 3
     sput-boolean v0, Landroidx/core/os/ProcessCompat$Api17Impl;->sResolved:Z
 
+    .line 4
     const-class v2, Landroid/os/UserHandle;
 
     const-string v4, "isApp"
@@ -89,27 +95,30 @@
 
     sput-object v2, Landroidx/core/os/ProcessCompat$Api17Impl;->sMethodUserHandleIsAppMethod:Ljava/lang/reflect/Method;
 
+    .line 5
     :cond_0
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 6
     :try_start_2
     sget-object v1, Landroidx/core/os/ProcessCompat$Api17Impl;->sMethodUserHandleIsAppMethod:Ljava/lang/reflect/Method;
 
     if-eqz v1, :cond_2
 
-    new-array v2, v0, [Ljava/lang/Object;
+    const/4 v2, 0x0
 
+    new-array v4, v0, [Ljava/lang/Object;
+
+    .line 7
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
 
-    aput-object p0, v2, v3
+    aput-object p0, v4, v3
 
-    const/4 p0, 0x0
-
-    invoke-virtual {v1, p0, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v2, v4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -117,12 +126,9 @@
 
     if-eqz p0, :cond_1
 
-    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
+    goto :goto_0
 
-    move-result p0
-
-    return p0
-
+    .line 8
     :cond_1
     new-instance p0, Ljava/lang/NullPointerException;
 
@@ -135,6 +141,7 @@
     :catchall_0
     move-exception p0
 
+    .line 9
     :try_start_3
     monitor-exit v1
     :try_end_3
@@ -148,8 +155,10 @@
     :catch_0
     move-exception p0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 10
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_2
+    :goto_0
     return v0
 .end method

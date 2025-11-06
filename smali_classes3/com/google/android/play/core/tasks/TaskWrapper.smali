@@ -35,8 +35,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Lcom/google/android/play/core/tasks/TaskImpl;
 
     invoke-direct {v0}, Lcom/google/android/play/core/tasks/TaskImpl;-><init>()V
@@ -58,6 +60,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/play/core/tasks/TaskWrapper;->mTask:Lcom/google/android/play/core/tasks/TaskImpl;
 
     return-object p0
@@ -66,6 +69,7 @@
 .method public final setException(Ljava/lang/Exception;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/play/core/tasks/TaskWrapper;->mTask:Lcom/google/android/play/core/tasks/TaskImpl;
 
     invoke-virtual {p0, p1}, Lcom/google/android/play/core/tasks/TaskImpl;->setException(Ljava/lang/Exception;)Z
@@ -83,6 +87,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/play/core/tasks/TaskWrapper;->mTask:Lcom/google/android/play/core/tasks/TaskImpl;
 
     invoke-virtual {p0, p1}, Lcom/google/android/play/core/tasks/TaskImpl;->setResult(Ljava/lang/Object;)Z

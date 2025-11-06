@@ -1,4 +1,4 @@
-.class Lmiuix/animation/internal/ThreadPoolUtil$2;
+.class public Lmiuix/animation/internal/ThreadPoolUtil$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,19 +18,21 @@
 
 
 # instance fields
-.field final threadNumber:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public final threadNumber:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field final synthetic val$factoryName:Ljava/lang/String;
+.field public final synthetic val$factoryName:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     iput-object p1, p0, Lmiuix/animation/internal/ThreadPoolUtil$2;->val$factoryName:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v0, 0x1
@@ -51,7 +53,8 @@
         .end annotation
     .end param
 
-    new-instance v0, Lmiuix/animation/internal/ThreadPoolUtil$2$1;
+    .line 1
+    new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -65,19 +68,25 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lmiuix/animation/internal/ThreadPoolUtil$2;->threadNumber:Ljava/util/concurrent/atomic/AtomicInteger;
+    iget-object p0, p0, Lmiuix/animation/internal/ThreadPoolUtil$2;->threadNumber:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+    .line 2
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
-    move-result v2
+    move-result p0
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-direct {v0, p0, p1, v1}, Lmiuix/animation/internal/ThreadPoolUtil$2$1;-><init>(Lmiuix/animation/internal/ThreadPoolUtil$2;Ljava/lang/Runnable;Ljava/lang/String;)V
+    invoke-direct {v0, p1, p0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
+
+    const/4 p0, 0x5
+
+    .line 3
+    invoke-virtual {v0, p0}, Ljava/lang/Thread;->setPriority(I)V
 
     return-object v0
 .end method

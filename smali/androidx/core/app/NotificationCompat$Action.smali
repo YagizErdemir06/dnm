@@ -24,9 +24,9 @@
 
 
 # static fields
-.field static final EXTRA_SEMANTIC_ACTION:Ljava/lang/String; = "android.support.action.semanticAction"
+.field public static final EXTRA_SEMANTIC_ACTION:Ljava/lang/String; = "android.support.action.semanticAction"
 
-.field static final EXTRA_SHOWS_USER_INTERFACE:Ljava/lang/String; = "android.support.action.showsUserInterface"
+.field public static final EXTRA_SHOWS_USER_INTERFACE:Ljava/lang/String; = "android.support.action.showsUserInterface"
 
 .field public static final SEMANTIC_ACTION_ARCHIVE:I = 0x5
 
@@ -61,11 +61,9 @@
 
 .field private mAllowGeneratedReplies:Z
 
-.field private mAuthenticationRequired:Z
-
 .field private final mDataOnlyRemoteInputs:[Landroidx/core/app/RemoteInput;
 
-.field final mExtras:Landroid/os/Bundle;
+.field public final mExtras:Landroid/os/Bundle;
 
 .field private mIcon:Landroidx/core/graphics/drawable/IconCompat;
     .annotation build Landroidx/annotation/Nullable;
@@ -78,7 +76,7 @@
 
 .field private final mSemanticAction:I
 
-.field mShowsUserInterface:Z
+.field public mShowsUserInterface:Z
 
 .field public title:Ljava/lang/CharSequence;
 
@@ -115,8 +113,8 @@
     return-void
 .end method
 
-.method public constructor <init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroidx/core/app/RemoteInput;[Landroidx/core/app/RemoteInput;ZIZZZ)V
-    .locals 14
+.method public constructor <init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroidx/core/app/RemoteInput;[Landroidx/core/app/RemoteInput;ZIZZ)V
+    .locals 13
     .param p2    # Ljava/lang/CharSequence;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
@@ -159,7 +157,7 @@
 
     move-object v2, p0
 
-    move-object/from16 v4, p2
+    move-object v4, p2
 
     move-object/from16 v5, p3
 
@@ -177,15 +175,13 @@
 
     move/from16 v12, p10
 
-    move/from16 v13, p11
-
-    invoke-direct/range {v2 .. v13}, Landroidx/core/app/NotificationCompat$Action;-><init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroidx/core/app/RemoteInput;[Landroidx/core/app/RemoteInput;ZIZZZ)V
+    invoke-direct/range {v2 .. v12}, Landroidx/core/app/NotificationCompat$Action;-><init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroidx/core/app/RemoteInput;[Landroidx/core/app/RemoteInput;ZIZZ)V
 
     return-void
 .end method
 
 .method public constructor <init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
-    .locals 12
+    .locals 11
     .param p1    # Landroidx/core/graphics/drawable/IconCompat;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
@@ -216,8 +212,6 @@
 
     const/4 v10, 0x0
 
-    const/4 v11, 0x0
-
     move-object v0, p0
 
     move-object v1, p1
@@ -226,12 +220,12 @@
 
     move-object v3, p3
 
-    invoke-direct/range {v0 .. v11}, Landroidx/core/app/NotificationCompat$Action;-><init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroidx/core/app/RemoteInput;[Landroidx/core/app/RemoteInput;ZIZZZ)V
+    invoke-direct/range {v0 .. v10}, Landroidx/core/app/NotificationCompat$Action;-><init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroidx/core/app/RemoteInput;[Landroidx/core/app/RemoteInput;ZIZZ)V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroidx/core/app/RemoteInput;[Landroidx/core/app/RemoteInput;ZIZZZ)V
+.method public constructor <init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroidx/core/app/RemoteInput;[Landroidx/core/app/RemoteInput;ZIZZ)V
     .locals 2
     .param p1    # Landroidx/core/graphics/drawable/IconCompat;
         .annotation build Landroidx/annotation/Nullable;
@@ -329,9 +323,6 @@
     .line 17
     iput-boolean p10, p0, Landroidx/core/app/NotificationCompat$Action;->mIsContextual:Z
 
-    .line 18
-    iput-boolean p11, p0, Landroidx/core/app/NotificationCompat$Action;->mAuthenticationRequired:Z
-
     return-void
 .end method
 
@@ -342,6 +333,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/app/NotificationCompat$Action;->actionIntent:Landroid/app/PendingIntent;
 
     return-object p0
@@ -350,6 +342,7 @@
 .method public getAllowGeneratedReplies()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Landroidx/core/app/NotificationCompat$Action;->mAllowGeneratedReplies:Z
 
     return p0
@@ -360,6 +353,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/app/NotificationCompat$Action;->mDataOnlyRemoteInputs:[Landroidx/core/app/RemoteInput;
 
     return-object p0
@@ -370,6 +364,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/app/NotificationCompat$Action;->mExtras:Landroid/os/Bundle;
 
     return-object p0
@@ -380,6 +375,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget p0, p0, Landroidx/core/app/NotificationCompat$Action;->icon:I
 
     return p0
@@ -390,6 +386,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/core/app/NotificationCompat$Action;->mIcon:Landroidx/core/graphics/drawable/IconCompat;
 
     if-nez v0, :cond_0
@@ -402,12 +399,14 @@
 
     const-string v2, ""
 
+    .line 2
     invoke-static {v1, v2, v0}, Landroidx/core/graphics/drawable/IconCompat;->createWithResource(Landroid/content/res/Resources;Ljava/lang/String;I)Landroidx/core/graphics/drawable/IconCompat;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/core/app/NotificationCompat$Action;->mIcon:Landroidx/core/graphics/drawable/IconCompat;
 
+    .line 3
     :cond_0
     iget-object p0, p0, Landroidx/core/app/NotificationCompat$Action;->mIcon:Landroidx/core/graphics/drawable/IconCompat;
 
@@ -419,6 +418,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/app/NotificationCompat$Action;->mRemoteInputs:[Landroidx/core/app/RemoteInput;
 
     return-object p0
@@ -427,6 +427,7 @@
 .method public getSemanticAction()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/core/app/NotificationCompat$Action;->mSemanticAction:I
 
     return p0
@@ -435,6 +436,7 @@
 .method public getShowsUserInterface()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Landroidx/core/app/NotificationCompat$Action;->mShowsUserInterface:Z
 
     return p0
@@ -445,22 +447,16 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/app/NotificationCompat$Action;->title:Ljava/lang/CharSequence;
 
     return-object p0
 .end method
 
-.method public isAuthenticationRequired()Z
-    .locals 0
-
-    iget-boolean p0, p0, Landroidx/core/app/NotificationCompat$Action;->mAuthenticationRequired:Z
-
-    return p0
-.end method
-
 .method public isContextual()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Landroidx/core/app/NotificationCompat$Action;->mIsContextual:Z
 
     return p0

@@ -70,10 +70,12 @@
 
     new-instance p1, Landroid/graphics/Rect;
 
+    .line 1
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/odml/image/MlImage;->zzc:Landroid/graphics/Rect;
 
+    .line 2
     invoke-virtual {p1, p3}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     iput p6, p0, Lcom/google/android/odml/image/MlImage;->zzd:I
@@ -90,6 +92,7 @@
 .method public static synthetic zzb(Lcom/google/android/odml/image/MlImage;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/odml/image/MlImage;->zzd()V
 
     return-void
@@ -121,6 +124,7 @@
 
     const/16 v2, 0x44
 
+    .line 1
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
     const-string v2, "Rotation value "
@@ -190,6 +194,7 @@
 
     iget-object v0, p0, Lcom/google/android/odml/image/MlImage;->zza:Lcom/google/android/odml/image/zzg;
 
+    .line 1
     invoke-interface {v0}, Lcom/google/android/odml/image/zzg;->zzc()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -227,6 +232,7 @@
 
     iget-object p0, p0, Lcom/google/android/odml/image/MlImage;->zza:Lcom/google/android/odml/image/zzg;
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/odml/image/zzg;->zzb()Lcom/google/android/odml/image/ImageProperties;
 
     move-result-object p0
@@ -255,6 +261,7 @@
 
     const/4 v1, 0x0
 
+    .line 1
     invoke-direct {v0, p0, v1}, Lcom/google/android/odml/image/MlImage$Internal;-><init>(Lcom/google/android/odml/image/MlImage;Lcom/google/android/odml/image/zzj;)V
 
     return-object v0

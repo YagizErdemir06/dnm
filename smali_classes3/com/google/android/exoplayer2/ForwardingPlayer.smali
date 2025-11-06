@@ -22,8 +22,10 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/Player;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     return-void
@@ -34,6 +36,7 @@
 .method public addListener(Lcom/google/android/exoplayer2/Player$Listener;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     new-instance v1, Lcom/google/android/exoplayer2/ForwardingPlayer$ForwardingListener;
@@ -108,6 +111,7 @@
 .method public canAdvertiseSession()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->canAdvertiseSession()Z
@@ -120,6 +124,7 @@
 .method public clearMediaItems()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->clearMediaItems()V
@@ -160,6 +165,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/Player;->clearVideoSurfaceHolder(Landroid/view/SurfaceHolder;)V
@@ -174,6 +180,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/Player;->clearVideoSurfaceView(Landroid/view/SurfaceView;)V
@@ -188,6 +195,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/Player;->clearVideoTextureView(Landroid/view/TextureView;)V
@@ -198,6 +206,7 @@
 .method public decreaseDeviceVolume()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->decreaseDeviceVolume()V
@@ -208,6 +217,7 @@
 .method public getApplicationLooper()Landroid/os/Looper;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getApplicationLooper()Landroid/os/Looper;
@@ -220,6 +230,7 @@
 .method public getAudioAttributes()Lcom/google/android/exoplayer2/audio/AudioAttributes;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getAudioAttributes()Lcom/google/android/exoplayer2/audio/AudioAttributes;
@@ -232,6 +243,7 @@
 .method public getAvailableCommands()Lcom/google/android/exoplayer2/Player$Commands;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getAvailableCommands()Lcom/google/android/exoplayer2/Player$Commands;
@@ -244,6 +256,7 @@
 .method public getBufferedPercentage()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getBufferedPercentage()I
@@ -256,6 +269,7 @@
 .method public getBufferedPosition()J
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getBufferedPosition()J
@@ -268,6 +282,7 @@
 .method public getContentBufferedPosition()J
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getContentBufferedPosition()J
@@ -280,6 +295,7 @@
 .method public getContentDuration()J
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getContentDuration()J
@@ -292,6 +308,7 @@
 .method public getContentPosition()J
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getContentPosition()J
@@ -304,6 +321,7 @@
 .method public getCurrentAdGroupIndex()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentAdGroupIndex()I
@@ -316,6 +334,7 @@
 .method public getCurrentAdIndexInAdGroup()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentAdIndexInAdGroup()I
@@ -328,6 +347,7 @@
 .method public getCurrentCues()Lcom/google/android/exoplayer2/text/CueGroup;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentCues()Lcom/google/android/exoplayer2/text/CueGroup;
@@ -340,6 +360,7 @@
 .method public getCurrentLiveOffset()J
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentLiveOffset()J
@@ -354,6 +375,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentManifest()Ljava/lang/Object;
@@ -368,6 +390,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentMediaItem()Lcom/google/android/exoplayer2/MediaItem;
@@ -380,6 +403,7 @@
 .method public getCurrentMediaItemIndex()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentMediaItemIndex()I
@@ -392,6 +416,7 @@
 .method public getCurrentPeriodIndex()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentPeriodIndex()I
@@ -404,6 +429,7 @@
 .method public getCurrentPosition()J
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentPosition()J
@@ -416,6 +442,7 @@
 .method public getCurrentTimeline()Lcom/google/android/exoplayer2/Timeline;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentTimeline()Lcom/google/android/exoplayer2/Timeline;
@@ -428,6 +455,7 @@
 .method public getCurrentTracks()Lcom/google/android/exoplayer2/Tracks;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentTracks()Lcom/google/android/exoplayer2/Tracks;
@@ -442,6 +470,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentWindowIndex()I
@@ -454,6 +483,7 @@
 .method public getDeviceInfo()Lcom/google/android/exoplayer2/DeviceInfo;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getDeviceInfo()Lcom/google/android/exoplayer2/DeviceInfo;
@@ -466,6 +496,7 @@
 .method public getDeviceVolume()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getDeviceVolume()I
@@ -478,6 +509,7 @@
 .method public getDuration()J
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getDuration()J
@@ -490,6 +522,7 @@
 .method public getMaxSeekToPreviousPosition()J
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getMaxSeekToPreviousPosition()J
@@ -502,6 +535,7 @@
 .method public getMediaItemAt(I)Lcom/google/android/exoplayer2/MediaItem;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/Player;->getMediaItemAt(I)Lcom/google/android/exoplayer2/MediaItem;
@@ -514,6 +548,7 @@
 .method public getMediaItemCount()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getMediaItemCount()I
@@ -526,6 +561,7 @@
 .method public getMediaMetadata()Lcom/google/android/exoplayer2/MediaMetadata;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getMediaMetadata()Lcom/google/android/exoplayer2/MediaMetadata;
@@ -538,6 +574,7 @@
 .method public getNextMediaItemIndex()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getNextMediaItemIndex()I
@@ -552,6 +589,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getNextWindowIndex()I
@@ -564,6 +602,7 @@
 .method public getPlayWhenReady()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getPlayWhenReady()Z
@@ -576,6 +615,7 @@
 .method public getPlaybackParameters()Lcom/google/android/exoplayer2/PlaybackParameters;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getPlaybackParameters()Lcom/google/android/exoplayer2/PlaybackParameters;
@@ -588,6 +628,7 @@
 .method public getPlaybackState()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getPlaybackState()I
@@ -600,6 +641,7 @@
 .method public getPlaybackSuppressionReason()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getPlaybackSuppressionReason()I
@@ -614,6 +656,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getPlayerError()Lcom/google/android/exoplayer2/PlaybackException;
@@ -626,6 +669,7 @@
 .method public getPlaylistMetadata()Lcom/google/android/exoplayer2/MediaMetadata;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getPlaylistMetadata()Lcom/google/android/exoplayer2/MediaMetadata;
@@ -638,6 +682,7 @@
 .method public getPreviousMediaItemIndex()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getPreviousMediaItemIndex()I
@@ -652,6 +697,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getPreviousWindowIndex()I
@@ -664,6 +710,7 @@
 .method public getRepeatMode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getRepeatMode()I
@@ -676,6 +723,7 @@
 .method public getSeekBackIncrement()J
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getSeekBackIncrement()J
@@ -688,6 +736,7 @@
 .method public getSeekForwardIncrement()J
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getSeekForwardIncrement()J
@@ -700,6 +749,7 @@
 .method public getShuffleModeEnabled()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getShuffleModeEnabled()Z
@@ -712,6 +762,7 @@
 .method public getTotalBufferedDuration()J
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getTotalBufferedDuration()J
@@ -724,6 +775,7 @@
 .method public getTrackSelectionParameters()Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getTrackSelectionParameters()Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;
@@ -736,6 +788,7 @@
 .method public getVideoSize()Lcom/google/android/exoplayer2/video/VideoSize;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getVideoSize()Lcom/google/android/exoplayer2/video/VideoSize;
@@ -748,6 +801,7 @@
 .method public getVolume()F
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getVolume()F
@@ -760,6 +814,7 @@
 .method public getWrappedPlayer()Lcom/google/android/exoplayer2/Player;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     return-object p0
@@ -770,6 +825,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->hasNext()Z
@@ -782,6 +838,7 @@
 .method public hasNextMediaItem()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->hasNextMediaItem()Z
@@ -796,6 +853,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->hasNextWindow()Z
@@ -810,6 +868,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->hasPrevious()Z
@@ -822,6 +881,7 @@
 .method public hasPreviousMediaItem()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->hasPreviousMediaItem()Z
@@ -836,6 +896,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->hasPreviousWindow()Z
@@ -848,6 +909,7 @@
 .method public increaseDeviceVolume()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->increaseDeviceVolume()V
@@ -858,6 +920,7 @@
 .method public isCommandAvailable(I)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/Player;->isCommandAvailable(I)Z
@@ -870,6 +933,7 @@
 .method public isCurrentMediaItemDynamic()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->isCurrentMediaItemDynamic()Z
@@ -882,6 +946,7 @@
 .method public isCurrentMediaItemLive()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->isCurrentMediaItemLive()Z
@@ -894,6 +959,7 @@
 .method public isCurrentMediaItemSeekable()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->isCurrentMediaItemSeekable()Z
@@ -908,6 +974,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->isCurrentWindowDynamic()Z
@@ -922,6 +989,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->isCurrentWindowLive()Z
@@ -936,6 +1004,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->isCurrentWindowSeekable()Z
@@ -948,6 +1017,7 @@
 .method public isDeviceMuted()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->isDeviceMuted()Z
@@ -960,6 +1030,7 @@
 .method public isLoading()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->isLoading()Z
@@ -972,6 +1043,7 @@
 .method public isPlaying()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->isPlaying()Z
@@ -984,6 +1056,7 @@
 .method public isPlayingAd()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->isPlayingAd()Z
@@ -996,6 +1069,7 @@
 .method public moveMediaItem(II)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0, p1, p2}, Lcom/google/android/exoplayer2/Player;->moveMediaItem(II)V
@@ -1006,6 +1080,7 @@
 .method public moveMediaItems(III)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/Player;->moveMediaItems(III)V
@@ -1018,6 +1093,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->next()V
@@ -1028,6 +1104,7 @@
 .method public pause()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->pause()V
@@ -1038,6 +1115,7 @@
 .method public play()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->play()V
@@ -1048,6 +1126,7 @@
 .method public prepare()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->prepare()V
@@ -1060,6 +1139,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->previous()V
@@ -1070,6 +1150,7 @@
 .method public release()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->release()V
@@ -1080,6 +1161,7 @@
 .method public removeListener(Lcom/google/android/exoplayer2/Player$Listener;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     new-instance v1, Lcom/google/android/exoplayer2/ForwardingPlayer$ForwardingListener;
@@ -1094,6 +1176,7 @@
 .method public removeMediaItem(I)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/Player;->removeMediaItem(I)V
@@ -1104,6 +1187,7 @@
 .method public removeMediaItems(II)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0, p1, p2}, Lcom/google/android/exoplayer2/Player;->removeMediaItems(II)V
@@ -1114,6 +1198,7 @@
 .method public seekBack()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->seekBack()V
@@ -1124,6 +1209,7 @@
 .method public seekForward()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->seekForward()V
@@ -1178,6 +1264,7 @@
 .method public seekToNext()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->seekToNext()V
@@ -1188,6 +1275,7 @@
 .method public seekToNextMediaItem()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->seekToNextMediaItem()V
@@ -1200,6 +1288,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->seekToNextWindow()V
@@ -1210,6 +1299,7 @@
 .method public seekToPrevious()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->seekToPrevious()V
@@ -1220,6 +1310,7 @@
 .method public seekToPreviousMediaItem()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->seekToPreviousMediaItem()V
@@ -1232,6 +1323,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->seekToPreviousWindow()V
@@ -1242,6 +1334,7 @@
 .method public setDeviceMuted(Z)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/Player;->setDeviceMuted(Z)V
@@ -1252,6 +1345,7 @@
 .method public setDeviceVolume(I)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/Player;->setDeviceVolume(I)V
@@ -1352,6 +1446,7 @@
 .method public setPlayWhenReady(Z)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/Player;->setPlayWhenReady(Z)V
@@ -1362,6 +1457,7 @@
 .method public setPlaybackParameters(Lcom/google/android/exoplayer2/PlaybackParameters;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/Player;->setPlaybackParameters(Lcom/google/android/exoplayer2/PlaybackParameters;)V
@@ -1372,6 +1468,7 @@
 .method public setPlaybackSpeed(F)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/Player;->setPlaybackSpeed(F)V
@@ -1382,6 +1479,7 @@
 .method public setPlaylistMetadata(Lcom/google/android/exoplayer2/MediaMetadata;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/Player;->setPlaylistMetadata(Lcom/google/android/exoplayer2/MediaMetadata;)V
@@ -1392,6 +1490,7 @@
 .method public setRepeatMode(I)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/Player;->setRepeatMode(I)V
@@ -1402,6 +1501,7 @@
 .method public setShuffleModeEnabled(Z)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/Player;->setShuffleModeEnabled(Z)V
@@ -1412,6 +1512,7 @@
 .method public setTrackSelectionParameters(Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/Player;->setTrackSelectionParameters(Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;)V
@@ -1426,6 +1527,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/Player;->setVideoSurface(Landroid/view/Surface;)V
@@ -1440,6 +1542,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/Player;->setVideoSurfaceHolder(Landroid/view/SurfaceHolder;)V
@@ -1454,6 +1557,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/Player;->setVideoSurfaceView(Landroid/view/SurfaceView;)V
@@ -1468,6 +1572,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/Player;->setVideoTextureView(Landroid/view/TextureView;)V
@@ -1478,6 +1583,7 @@
 .method public setVolume(F)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ForwardingPlayer;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/Player;->setVolume(F)V

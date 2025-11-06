@@ -1,11 +1,11 @@
 .class public Lcom/android/camera/module/FunModule$b;
-.super Lz7/k;
+.super Ld/d/a/d7/n8/a/k;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/module/FunModule;->Gi(Lcom/android/camera/module/loader/base/StartControl;)V
+    value = Lcom/android/camera/module/FunModule;->Sh(Lcom/android/camera/module/loader/base/StartControl;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,25 @@
 
 
 # instance fields
-.field public final synthetic k:Lcom/android/camera/module/FunModule;
+.field public final synthetic u:Lcom/android/camera/module/FunModule;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera/module/FunModule;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera/module/FunModule$b;->k:Lcom/android/camera/module/FunModule;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/module/FunModule$b;->u:Lcom/android/camera/module/FunModule;
 
-    invoke-direct {p0}, Lz7/k;-><init>()V
+    invoke-direct {p0}, Ld/d/a/d7/n8/a/k;-><init>()V
 
     return-void
 .end method
@@ -34,23 +43,26 @@
 .method public a()V
     .locals 1
 
-    invoke-static {}, Lz8/e;->impl2()Lz8/e;
+    .line 1
+    invoke-static {}, Ld/d/a/m7/g/t3/e;->impl2()Ld/d/a/m7/g/t3/e;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lz8/e;->s()Z
+    .line 2
+    invoke-interface {v0}, Ld/d/a/m7/g/t3/e;->t()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lcom/android/camera/module/FunModule$b;->k:Lcom/android/camera/module/FunModule;
+    .line 3
+    iget-object p0, p0, Lcom/android/camera/module/FunModule$b;->u:Lcom/android/camera/module/FunModule;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lq7/i0;->X(Z)V
+    invoke-virtual {p0, v0}, Ld/d/a/d7/p7;->Y(Z)V
 
     :cond_0
     return-void

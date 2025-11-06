@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/TreeTraverser$4;
+.class public Lcom/google/common/collect/TreeTraverser$4;
 .super Lcom/google/common/collect/FluentIterable;
 .source "SourceFile"
 
@@ -22,15 +22,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/TreeTraverser;
+.field public final synthetic this$0:Lcom/google/common/collect/TreeTraverser;
 
-.field final synthetic val$root:Ljava/lang/Object;
+.field public final synthetic val$root:Ljava/lang/Object;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/TreeTraverser;Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/TreeTraverser$4;->this$0:Lcom/google/common/collect/TreeTraverser;
 
     iput-object p2, p0, Lcom/google/common/collect/TreeTraverser$4;->val$root:Ljava/lang/Object;

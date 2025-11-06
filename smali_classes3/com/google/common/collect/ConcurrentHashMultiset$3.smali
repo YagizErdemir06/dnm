@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ConcurrentHashMultiset$3;
+.class public Lcom/google/common/collect/ConcurrentHashMultiset$3;
 .super Lcom/google/common/collect/ForwardingIterator;
 .source "SourceFile"
 
@@ -35,15 +35,16 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Lcom/google/common/collect/ConcurrentHashMultiset;
+.field public final synthetic this$0:Lcom/google/common/collect/ConcurrentHashMultiset;
 
-.field final synthetic val$readOnlyIterator:Ljava/util/Iterator;
+.field public final synthetic val$readOnlyIterator:Ljava/util/Iterator;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/ConcurrentHashMultiset;Ljava/util/Iterator;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/ConcurrentHashMultiset$3;->this$0:Lcom/google/common/collect/ConcurrentHashMultiset;
 
     iput-object p2, p0, Lcom/google/common/collect/ConcurrentHashMultiset$3;->val$readOnlyIterator:Ljava/util/Iterator;
@@ -119,6 +120,7 @@
 .method public remove()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/ConcurrentHashMultiset$3;->last:Lcom/google/common/collect/Multiset$Entry;
 
     const/4 v1, 0x0
@@ -137,6 +139,7 @@
 
     invoke-static {v0, v2}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/Object;)V
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/ConcurrentHashMultiset$3;->this$0:Lcom/google/common/collect/ConcurrentHashMultiset;
 
     iget-object v2, p0, Lcom/google/common/collect/ConcurrentHashMultiset$3;->last:Lcom/google/common/collect/Multiset$Entry;
@@ -149,6 +152,7 @@
 
     const/4 v0, 0x0
 
+    .line 3
     iput-object v0, p0, Lcom/google/common/collect/ConcurrentHashMultiset$3;->last:Lcom/google/common/collect/Multiset$Entry;
 
     return-void

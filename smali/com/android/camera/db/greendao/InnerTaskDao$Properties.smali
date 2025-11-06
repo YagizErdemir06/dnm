@@ -28,11 +28,12 @@
 .method public static constructor <clinit>()V
     .locals 13
 
+    .line 1
     new-instance v6, Lorg/greenrobot/greendao/Property;
 
-    const/4 v1, 0x0
-
     const-class v2, Ljava/lang/Long;
+
+    const/4 v1, 0x0
 
     const-string v3, "id"
 
@@ -46,11 +47,12 @@
 
     sput-object v6, Lcom/android/camera/db/greendao/InnerTaskDao$Properties;->a:Lorg/greenrobot/greendao/Property;
 
+    .line 2
     new-instance v0, Lorg/greenrobot/greendao/Property;
 
-    const/4 v8, 0x1
-
     const-class v9, Ljava/lang/String;
+
+    const/4 v8, 0x1
 
     const-string v10, "path"
 
@@ -64,17 +66,18 @@
 
     sput-object v0, Lcom/android/camera/db/greendao/InnerTaskDao$Properties;->b:Lorg/greenrobot/greendao/Property;
 
+    .line 3
     new-instance v0, Lorg/greenrobot/greendao/Property;
-
-    const/4 v2, 0x2
 
     sget-object v3, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
 
-    const-string/jumbo v4, "startTime"
+    const/4 v2, 0x2
+
+    const-string v4, "startTime"
 
     const/4 v5, 0x0
 
-    const-string/jumbo v6, "start_time"
+    const-string v6, "start_time"
 
     move-object v1, v0
 
@@ -82,11 +85,12 @@
 
     sput-object v0, Lcom/android/camera/db/greendao/InnerTaskDao$Properties;->c:Lorg/greenrobot/greendao/Property;
 
+    .line 4
     new-instance v0, Lorg/greenrobot/greendao/Property;
 
-    const/4 v8, 0x3
-
     const-class v9, Ljava/lang/String;
+
+    const/4 v8, 0x3
 
     const-string v10, "applicationId"
 
@@ -104,6 +108,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

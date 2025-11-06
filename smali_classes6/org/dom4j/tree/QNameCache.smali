@@ -6,9 +6,9 @@
 # instance fields
 .field private documentFactory:Lorg/dom4j/DocumentFactory;
 
-.field protected namespaceCache:Ljava/util/Map;
+.field public namespaceCache:Ljava/util/Map;
 
-.field protected noNamespaceCache:Ljava/util/Map;
+.field public noNamespaceCache:Ljava/util/Map;
 
 
 # direct methods
@@ -82,6 +82,7 @@
 .method public createMap()Ljava/util/Map;
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/util/HashMap;
 
     invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
@@ -310,17 +311,22 @@
 .method public getNamespaceCache(Lorg/dom4j/Namespace;)Ljava/util/Map;
     .locals 1
 
+    .line 1
     sget-object v0, Lorg/dom4j/Namespace;->NO_NAMESPACE:Lorg/dom4j/Namespace;
 
     if-ne p1, v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lorg/dom4j/tree/QNameCache;->noNamespaceCache:Ljava/util/Map;
 
     return-object p0
 
     :cond_0
+    const/4 v0, 0x0
+
     if-eqz p1, :cond_1
 
+    .line 3
     iget-object v0, p0, Lorg/dom4j/tree/QNameCache;->namespaceCache:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -329,18 +335,15 @@
 
     check-cast v0, Ljava/util/Map;
 
-    goto :goto_0
-
     :cond_1
-    const/4 v0, 0x0
-
-    :goto_0
     if-nez v0, :cond_2
 
+    .line 4
     invoke-virtual {p0}, Lorg/dom4j/tree/QNameCache;->createMap()Ljava/util/Map;
 
     move-result-object v0
 
+    .line 5
     iget-object p0, p0, Lorg/dom4j/tree/QNameCache;->namespaceCache:Ljava/util/Map;
 
     invoke-interface {p0, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -352,10 +355,12 @@
 .method public getQNames()Ljava/util/List;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 2
     iget-object v1, p0, Lorg/dom4j/tree/QNameCache;->noNamespaceCache:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -364,6 +369,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
+    .line 3
     iget-object p0, p0, Lorg/dom4j/tree/QNameCache;->namespaceCache:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -381,12 +387,14 @@
 
     if-eqz v1, :cond_0
 
+    .line 4
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/Map;
 
+    .line 5
     invoke-interface {v1}, Ljava/util/Map;->values()Ljava/util/Collection;
 
     move-result-object v1
@@ -402,6 +410,7 @@
 .method public intern(Lorg/dom4j/QName;)Lorg/dom4j/QName;
     .locals 2
 
+    .line 1
     invoke-virtual {p1}, Lorg/dom4j/QName;->getName()Ljava/lang/String;
 
     move-result-object v0

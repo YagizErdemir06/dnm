@@ -4,9 +4,9 @@
 
 
 # static fields
-.field protected static final EMPTY_ITERATOR:Ljava/util/Iterator;
+.field public static final EMPTY_ITERATOR:Ljava/util/Iterator;
 
-.field protected static final EMPTY_LIST:Ljava/util/List;
+.field public static final EMPTY_LIST:Ljava/util/List;
 
 
 # instance fields
@@ -24,13 +24,15 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
     sput-object v0, Lorg/dom4j/tree/DefaultDocument;->EMPTY_LIST:Ljava/util/List;
 
+    .line 2
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -165,6 +167,7 @@
 .method public addDocType(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/dom4j/Document;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/DefaultDocument;->getDocumentFactory()Lorg/dom4j/DocumentFactory;
 
     move-result-object v0
@@ -291,12 +294,15 @@
 .method public clearContent()V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractBranch;->contentRemoved()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Lorg/dom4j/tree/DefaultDocument;->content:Ljava/util/List;
 
+    .line 3
     iput-object v0, p0, Lorg/dom4j/tree/DefaultDocument;->rootElement:Lorg/dom4j/Element;
 
     return-void
@@ -305,6 +311,7 @@
 .method public clone()Ljava/lang/Object;
     .locals 2
 
+    .line 1
     invoke-super {p0}, Lorg/dom4j/tree/AbstractNode;->clone()Ljava/lang/Object;
 
     move-result-object v0
@@ -313,10 +320,13 @@
 
     const/4 v1, 0x0
 
+    .line 2
     iput-object v1, v0, Lorg/dom4j/tree/DefaultDocument;->rootElement:Lorg/dom4j/Element;
 
+    .line 3
     iput-object v1, v0, Lorg/dom4j/tree/DefaultDocument;->content:Ljava/util/List;
 
+    .line 4
     invoke-virtual {v0, p0}, Lorg/dom4j/tree/AbstractBranch;->appendContent(Lorg/dom4j/Branch;)V
 
     return-object v0
@@ -325,22 +335,27 @@
 .method public contentList()Ljava/util/List;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/tree/DefaultDocument;->content:Ljava/util/List;
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractBranch;->createContentList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/dom4j/tree/DefaultDocument;->content:Ljava/util/List;
 
+    .line 3
     iget-object v1, p0, Lorg/dom4j/tree/DefaultDocument;->rootElement:Lorg/dom4j/Element;
 
     if-eqz v1, :cond_0
 
+    .line 4
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 5
     :cond_0
     iget-object p0, p0, Lorg/dom4j/tree/DefaultDocument;->content:Ljava/util/List;
 
@@ -350,6 +365,7 @@
 .method public getDocType()Lorg/dom4j/DocumentType;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/DefaultDocument;->docType:Lorg/dom4j/DocumentType;
 
     return-object p0
@@ -358,6 +374,7 @@
 .method public getDocumentFactory()Lorg/dom4j/DocumentFactory;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/DefaultDocument;->documentFactory:Lorg/dom4j/DocumentFactory;
 
     return-object p0
@@ -366,6 +383,7 @@
 .method public getEntityResolver()Lorg/xml/sax/EntityResolver;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/DefaultDocument;->entityResolver:Lorg/xml/sax/EntityResolver;
 
     return-object p0
@@ -374,6 +392,7 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/DefaultDocument;->name:Ljava/lang/String;
 
     return-object p0
@@ -382,6 +401,7 @@
 .method public getRootElement()Lorg/dom4j/Element;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/DefaultDocument;->rootElement:Lorg/dom4j/Element;
 
     return-object p0
@@ -390,6 +410,7 @@
 .method public getXMLEncoding()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/AbstractDocument;->encoding:Ljava/lang/String;
 
     return-object p0
@@ -398,10 +419,12 @@
 .method public processingInstruction(Ljava/lang/String;)Lorg/dom4j/ProcessingInstruction;
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/DefaultDocument;->contentList()Ljava/util/List;
 
     move-result-object p0
 
+    .line 2
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -411,16 +434,20 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 3
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
+    .line 4
     instance-of v3, v2, Lorg/dom4j/ProcessingInstruction;
 
     if-eqz v3, :cond_0
 
+    .line 5
     check-cast v2, Lorg/dom4j/ProcessingInstruction;
 
+    .line 6
     invoke-interface {v2}, Lorg/dom4j/Node;->getName()Ljava/lang/String;
 
     move-result-object v3
@@ -551,14 +578,17 @@
 .method public removeNode(Lorg/dom4j/Node;)Z
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/tree/DefaultDocument;->rootElement:Lorg/dom4j/Element;
 
     if-ne p1, v0, :cond_0
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Lorg/dom4j/tree/DefaultDocument;->rootElement:Lorg/dom4j/Element;
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Lorg/dom4j/tree/DefaultDocument;->contentList()Ljava/util/List;
 
@@ -570,6 +600,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/AbstractDocument;->childRemoved(Lorg/dom4j/Node;)V
 
     const/4 p0, 0x1
@@ -585,10 +616,12 @@
 .method public removeProcessingInstruction(Ljava/lang/String;)Z
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/DefaultDocument;->contentList()Ljava/util/List;
 
     move-result-object p0
 
+    .line 2
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -600,16 +633,20 @@
 
     if-eqz v0, :cond_1
 
+    .line 3
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 4
     instance-of v1, v0, Lorg/dom4j/ProcessingInstruction;
 
     if-eqz v1, :cond_0
 
+    .line 5
     check-cast v0, Lorg/dom4j/ProcessingInstruction;
 
+    .line 6
     invoke-interface {v0}, Lorg/dom4j/Node;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -620,6 +657,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 7
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V
 
     const/4 p0, 0x1
@@ -635,8 +673,10 @@
 .method public rootElementAdded(Lorg/dom4j/Element;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/tree/DefaultDocument;->rootElement:Lorg/dom4j/Element;
 
+    .line 2
     invoke-interface {p1, p0}, Lorg/dom4j/Node;->setDocument(Lorg/dom4j/Document;)V
 
     return-void
@@ -647,14 +687,18 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Lorg/dom4j/tree/DefaultDocument;->rootElement:Lorg/dom4j/Element;
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractBranch;->contentRemoved()V
 
+    .line 3
     instance-of v1, p1, Lorg/dom4j/tree/ContentListFacade;
 
     if-eqz v1, :cond_0
 
+    .line 4
     check-cast p1, Lorg/dom4j/tree/ContentListFacade;
 
     invoke-virtual {p1}, Lorg/dom4j/tree/ContentListFacade;->getBackingList()Ljava/util/List;
@@ -664,15 +708,18 @@
     :cond_0
     if-nez p1, :cond_1
 
+    .line 5
     iput-object v0, p0, Lorg/dom4j/tree/DefaultDocument;->content:Ljava/util/List;
 
     goto :goto_2
 
+    .line 6
     :cond_1
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
 
+    .line 7
     invoke-virtual {p0, v0}, Lorg/dom4j/tree/AbstractBranch;->createContentList(I)Ljava/util/List;
 
     move-result-object v1
@@ -682,16 +729,20 @@
     :goto_0
     if-ge v2, v0, :cond_6
 
+    .line 8
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
+    .line 9
     instance-of v4, v3, Lorg/dom4j/Node;
 
     if-eqz v4, :cond_5
 
+    .line 10
     check-cast v3, Lorg/dom4j/Node;
 
+    .line 11
     invoke-interface {v3}, Lorg/dom4j/Node;->getDocument()Lorg/dom4j/Document;
 
     move-result-object v4
@@ -700,21 +751,25 @@
 
     if-eq v4, p0, :cond_2
 
+    .line 12
     invoke-interface {v3}, Lorg/dom4j/Node;->clone()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lorg/dom4j/Node;
 
+    .line 13
     :cond_2
     instance-of v4, v3, Lorg/dom4j/Element;
 
     if-eqz v4, :cond_4
 
+    .line 14
     iget-object v4, p0, Lorg/dom4j/tree/DefaultDocument;->rootElement:Lorg/dom4j/Element;
 
     if-nez v4, :cond_3
 
+    .line 15
     move-object v4, v3
 
     check-cast v4, Lorg/dom4j/Element;
@@ -723,6 +778,7 @@
 
     goto :goto_1
 
+    .line 16
     :cond_3
     new-instance p0, Lorg/dom4j/IllegalAddException;
 
@@ -744,10 +800,12 @@
 
     throw p0
 
+    .line 17
     :cond_4
     :goto_1
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 18
     invoke-virtual {p0, v3}, Lorg/dom4j/tree/AbstractDocument;->childAdded(Lorg/dom4j/Node;)V
 
     :cond_5
@@ -755,6 +813,7 @@
 
     goto :goto_0
 
+    .line 19
     :cond_6
     iput-object v1, p0, Lorg/dom4j/tree/DefaultDocument;->content:Ljava/util/List;
 
@@ -765,6 +824,7 @@
 .method public setDocType(Lorg/dom4j/DocumentType;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/tree/DefaultDocument;->docType:Lorg/dom4j/DocumentType;
 
     return-void
@@ -773,6 +833,7 @@
 .method public setDocumentFactory(Lorg/dom4j/DocumentFactory;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/tree/DefaultDocument;->documentFactory:Lorg/dom4j/DocumentFactory;
 
     return-void
@@ -781,6 +842,7 @@
 .method public setEntityResolver(Lorg/xml/sax/EntityResolver;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/tree/DefaultDocument;->entityResolver:Lorg/xml/sax/EntityResolver;
 
     return-void
@@ -789,6 +851,7 @@
 .method public setName(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/tree/DefaultDocument;->name:Ljava/lang/String;
 
     return-void

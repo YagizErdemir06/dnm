@@ -4,9 +4,14 @@
 
 
 # annotations
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000&\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0007\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u000b\u001a\u00020\n\u00a2\u0006\u0004\u0008\u000f\u0010\u0010J\u001e\u0010\u0008\u001a\u00020\u00072\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0006\u001a\u00020\u0004J\u0006\u0010\t\u001a\u00020\u0007R\u0017\u0010\u000b\u001a\u00020\n8\u0006\u00a2\u0006\u000c\n\u0004\u0008\u000b\u0010\u000c\u001a\u0004\u0008\r\u0010\u000e\u00a8\u0006\u0011"
+        "\u0000&\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0007\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\r\u001a\u00020\u000c\u00a2\u0006\u0004\u0008\u0011\u0010\u0012J%\u0010\u0008\u001a\u00020\u00072\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0006\u001a\u00020\u0004\u00a2\u0006\u0004\u0008\u0008\u0010\tJ\r\u0010\n\u001a\u00020\u0007\u00a2\u0006\u0004\u0008\n\u0010\u000bR\u0019\u0010\r\u001a\u00020\u000c8\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\r\u0010\u000e\u001a\u0004\u0008\u000f\u0010\u0010\u00a8\u0006\u0013"
     }
     d2 = {
         "Lcom/faceunity/core/model/prop/bgSegCustom/BgSegCustom;",
@@ -16,9 +21,11 @@
         "",
         "width",
         "height",
-        "Lnm/l2;",
+        "Lh/l2;",
         "createBgSegment",
+        "([BII)V",
         "removeBgSegment",
+        "()V",
         "Lcom/faceunity/core/entity/FUBundleData;",
         "controlBundle",
         "Lcom/faceunity/core/entity/FUBundleData;",
@@ -39,7 +46,7 @@
 
 # instance fields
 .field private final controlBundle:Lcom/faceunity/core/entity/FUBundleData;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -48,14 +55,15 @@
 .method public constructor <init>(Lcom/faceunity/core/entity/FUBundleData;)V
     .locals 1
     .param p1    # Lcom/faceunity/core/entity/FUBundleData;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "controlBundle"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/faceunity/core/model/prop/Prop;-><init>(Lcom/faceunity/core/entity/FUBundleData;)V
 
     iput-object p1, p0, Lcom/faceunity/core/model/prop/bgSegCustom/BgSegCustom;->controlBundle:Lcom/faceunity/core/entity/FUBundleData;
@@ -68,16 +76,17 @@
 .method public final createBgSegment([BII)V
     .locals 1
     .param p1    # [B
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "rgba"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "tex_bg_seg"
 
+    .line 1
     invoke-virtual {p0, v0, p1, p2, p3}, Lcom/faceunity/core/model/prop/Prop;->createTexForItem(Ljava/lang/String;[BII)V
 
     return-void
@@ -85,9 +94,10 @@
 
 .method public final getControlBundle()Lcom/faceunity/core/entity/FUBundleData;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/model/prop/bgSegCustom/BgSegCustom;->controlBundle:Lcom/faceunity/core/entity/FUBundleData;
 
     return-object p0
@@ -98,6 +108,7 @@
 
     const-string v0, "tex_bg_seg"
 
+    .line 1
     invoke-virtual {p0, v0}, Lcom/faceunity/core/model/prop/Prop;->deleteTexForItem(Ljava/lang/String;)V
 
     return-void

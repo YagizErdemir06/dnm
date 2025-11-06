@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/tasks/zzs;
+.class public final Lcom/google/android/gms/tasks/zzs;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field final synthetic zza:Lcom/google/android/gms/tasks/TaskCompletionSource;
+.field public final synthetic zza:Lcom/google/android/gms/tasks/TaskCompletionSource;
 
 
 # direct methods
@@ -26,6 +26,7 @@
 .method public final onCanceled()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/tasks/zzs;->zza:Lcom/google/android/gms/tasks/TaskCompletionSource;
 
     invoke-static {p0}, Lcom/google/android/gms/tasks/TaskCompletionSource;->zza(Lcom/google/android/gms/tasks/TaskCompletionSource;)Lcom/google/android/gms/tasks/zzw;

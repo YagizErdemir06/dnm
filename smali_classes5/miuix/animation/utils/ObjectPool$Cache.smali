@@ -1,4 +1,4 @@
-.class Lmiuix/animation/utils/ObjectPool$Cache;
+.class public Lmiuix/animation/utils/ObjectPool$Cache;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final mCacheRecord:Ljava/util/concurrent/ConcurrentHashMap;
+.field public final mCacheRecord:Ljava/util/concurrent/ConcurrentHashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/ConcurrentHashMap<",
@@ -26,9 +26,7 @@
     .end annotation
 .end field
 
-.field mPendingShrink:Z
-
-.field final pool:Ljava/util/concurrent/ConcurrentLinkedQueue;
+.field public final pool:Ljava/util/concurrent/ConcurrentLinkedQueue;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/ConcurrentLinkedQueue<",
@@ -38,7 +36,7 @@
     .end annotation
 .end field
 
-.field final shrinkTask:Ljava/lang/Runnable;
+.field public final shrinkTask:Ljava/lang/Runnable;
 
 
 # direct methods
@@ -62,12 +60,7 @@
 
     iput-object v0, p0, Lmiuix/animation/utils/ObjectPool$Cache;->mCacheRecord:Ljava/util/concurrent/ConcurrentHashMap;
 
-    const/4 v0, 0x0
-
     .line 4
-    iput-boolean v0, p0, Lmiuix/animation/utils/ObjectPool$Cache;->mPendingShrink:Z
-
-    .line 5
     new-instance v0, Lmiuix/animation/utils/ObjectPool$Cache$1;
 
     invoke-direct {v0, p0}, Lmiuix/animation/utils/ObjectPool$Cache$1;-><init>(Lmiuix/animation/utils/ObjectPool$Cache;)V
@@ -80,7 +73,7 @@
 .method public synthetic constructor <init>(Lmiuix/animation/utils/ObjectPool$1;)V
     .locals 0
 
-    .line 6
+    .line 5
     invoke-direct {p0}, Lmiuix/animation/utils/ObjectPool$Cache;-><init>()V
 
     return-void
@@ -102,6 +95,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/utils/ObjectPool$Cache;->pool:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->poll()Ljava/lang/Object;
@@ -110,6 +104,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lmiuix/animation/utils/ObjectPool$Cache;->mCacheRecord:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {v0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
@@ -127,6 +122,7 @@
     :cond_0
     if-eqz p1, :cond_1
 
+    .line 3
     invoke-static {p1, p2}, Lmiuix/animation/utils/ObjectPool;->access$000(Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -136,16 +132,13 @@
     return-object v0
 .end method
 
-.method public releaseObject(Landroid/os/Handler;Ljava/lang/Object;)V
+.method public releaseObject(Ljava/lang/Object;)V
     .locals 3
-    .param p1    # Landroid/os/Handler;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/utils/ObjectPool$Cache;->mCacheRecord:Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-static {p2}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+    invoke-static {p1}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
 
@@ -163,40 +156,36 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lmiuix/animation/utils/ObjectPool$Cache;->pool:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
-    invoke-virtual {v0, p2}, Ljava/util/concurrent/ConcurrentLinkedQueue;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentLinkedQueue;->add(Ljava/lang/Object;)Z
 
-    const/4 p2, 0x0
+    .line 3
+    invoke-static {}, Lmiuix/animation/utils/ObjectPool;->getMainHandler()Landroid/os/Handler;
 
-    if-eqz p1, :cond_2
+    move-result-object p1
 
-    iget-boolean v0, p0, Lmiuix/animation/utils/ObjectPool$Cache;->mPendingShrink:Z
+    if-eqz p1, :cond_1
 
-    if-eqz v0, :cond_1
-
+    .line 4
     iget-object v0, p0, Lmiuix/animation/utils/ObjectPool$Cache;->shrinkTask:Ljava/lang/Runnable;
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    iput-boolean p2, p0, Lmiuix/animation/utils/ObjectPool$Cache;->mPendingShrink:Z
+    .line 5
+    iget-object v0, p0, Lmiuix/animation/utils/ObjectPool$Cache;->pool:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
-    :cond_1
-    iget-object p2, p0, Lmiuix/animation/utils/ObjectPool$Cache;->pool:Ljava/util/concurrent/ConcurrentLinkedQueue;
+    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->size()I
 
-    invoke-virtual {p2}, Ljava/util/concurrent/ConcurrentLinkedQueue;->size()I
+    move-result v0
 
-    move-result p2
+    const/16 v1, 0xa
 
-    const/16 v0, 0xa
+    if-le v0, v1, :cond_2
 
-    if-le p2, v0, :cond_3
-
-    const/4 p2, 0x1
-
-    iput-boolean p2, p0, Lmiuix/animation/utils/ObjectPool$Cache;->mPendingShrink:Z
-
+    .line 6
     iget-object p0, p0, Lmiuix/animation/utils/ObjectPool$Cache;->shrinkTask:Ljava/lang/Runnable;
 
     const-wide/16 v0, 0x1388
@@ -205,36 +194,36 @@
 
     goto :goto_0
 
-    :cond_2
-    iput-boolean p2, p0, Lmiuix/animation/utils/ObjectPool$Cache;->mPendingShrink:Z
-
+    .line 7
+    :cond_1
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string p2, "ObjectPool.releaseObject handler is null! looper: "
+    const-string v0, "ObjectPool.releaseObject handler is null! looper: "
 
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
-    move-result-object p2
+    move-result-object v0
 
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    const-string p2, "miuix_anim"
+    const-string v0, "miuix_anim"
 
-    invoke-static {p2, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 8
     iget-object p0, p0, Lmiuix/animation/utils/ObjectPool$Cache;->shrinkTask:Ljava/lang/Runnable;
 
     invoke-interface {p0}, Ljava/lang/Runnable;->run()V
 
-    :cond_3
+    :cond_2
     :goto_0
     return-void
 .end method
@@ -242,6 +231,7 @@
 .method public shrink()V
     .locals 2
 
+    .line 1
     :goto_0
     iget-object v0, p0, Lmiuix/animation/utils/ObjectPool$Cache;->pool:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
@@ -253,6 +243,7 @@
 
     if-le v0, v1, :cond_1
 
+    .line 2
     iget-object v0, p0, Lmiuix/animation/utils/ObjectPool$Cache;->pool:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->poll()Ljava/lang/Object;
@@ -263,6 +254,7 @@
 
     goto :goto_1
 
+    .line 3
     :cond_0
     iget-object v1, p0, Lmiuix/animation/utils/ObjectPool$Cache;->mCacheRecord:Ljava/util/concurrent/ConcurrentHashMap;
 

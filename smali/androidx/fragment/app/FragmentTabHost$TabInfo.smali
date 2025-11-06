@@ -1,4 +1,4 @@
-.class final Landroidx/fragment/app/FragmentTabHost$TabInfo;
+.class public final Landroidx/fragment/app/FragmentTabHost$TabInfo;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,12 +15,12 @@
 
 
 # instance fields
-.field final args:Landroid/os/Bundle;
+.field public final args:Landroid/os/Bundle;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field final clss:Ljava/lang/Class;
+.field public final clss:Ljava/lang/Class;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -32,9 +32,9 @@
     .end annotation
 .end field
 
-.field fragment:Landroidx/fragment/app/Fragment;
+.field public fragment:Landroidx/fragment/app/Fragment;
 
-.field final tag:Ljava/lang/String;
+.field public final tag:Ljava/lang/String;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
@@ -66,12 +66,16 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/fragment/app/FragmentTabHost$TabInfo;->tag:Ljava/lang/String;
 
+    .line 3
     iput-object p2, p0, Landroidx/fragment/app/FragmentTabHost$TabInfo;->clss:Ljava/lang/Class;
 
+    .line 4
     iput-object p3, p0, Landroidx/fragment/app/FragmentTabHost$TabInfo;->args:Landroid/os/Bundle;
 
     return-void

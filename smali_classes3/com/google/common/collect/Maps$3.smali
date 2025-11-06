@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Maps$3;
+.class public Lcom/google/common/collect/Maps$3;
 .super Lcom/google/common/collect/TransformedIterator;
 .source "SourceFile"
 
@@ -24,13 +24,14 @@
 
 
 # instance fields
-.field final synthetic val$function:Lcom/google/common/base/Function;
+.field public final synthetic val$function:Lcom/google/common/base/Function;
 
 
 # direct methods
 .method public constructor <init>(Ljava/util/Iterator;Lcom/google/common/base/Function;)V
     .locals 0
 
+    .line 1
     iput-object p2, p0, Lcom/google/common/collect/Maps$3;->val$function:Lcom/google/common/base/Function;
 
     invoke-direct {p0, p1}, Lcom/google/common/collect/TransformedIterator;-><init>(Ljava/util/Iterator;)V

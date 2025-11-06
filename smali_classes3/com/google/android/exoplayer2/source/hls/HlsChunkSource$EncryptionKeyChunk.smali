@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/hls/HlsChunkSource$EncryptionKeyChunk;
+.class public final Lcom/google/android/exoplayer2/source/hls/HlsChunkSource$EncryptionKeyChunk;
 .super Lcom/google/android/exoplayer2/source/chunk/DataChunk;
 .source "SourceFile"
 
@@ -42,6 +42,7 @@
 
     move-object v7, p6
 
+    .line 1
     invoke-direct/range {v0 .. v7}, Lcom/google/android/exoplayer2/source/chunk/DataChunk;-><init>(Lcom/google/android/exoplayer2/upstream/DataSource;Lcom/google/android/exoplayer2/upstream/DataSpec;ILcom/google/android/exoplayer2/Format;ILjava/lang/Object;[B)V
 
     return-void
@@ -52,6 +53,7 @@
 .method public consume([BI)V
     .locals 0
 
+    .line 1
     invoke-static {p1, p2}, Ljava/util/Arrays;->copyOf([BI)[B
 
     move-result-object p1
@@ -66,6 +68,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/hls/HlsChunkSource$EncryptionKeyChunk;->result:[B
 
     return-object p0

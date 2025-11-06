@@ -1,4 +1,4 @@
-.class Lcom/bumptech/glide/load/data/mediastore/ThumbnailStreamOpener;
+.class public Lcom/bumptech/glide/load/data/mediastore/ThumbnailStreamOpener;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -33,6 +33,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/bumptech/glide/load/data/mediastore/FileService;
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/data/mediastore/FileService;-><init>()V
@@ -125,6 +126,7 @@
 
     const/4 v1, 0x0
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/bumptech/glide/load/data/mediastore/ThumbnailStreamOpener;->query:Lcom/bumptech/glide/load/data/mediastore/ThumbnailQuery;
 
@@ -137,6 +139,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 2
     :try_start_1
     invoke-interface {p0}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -146,6 +149,7 @@
 
     const/4 v2, 0x0
 
+    .line 3
     invoke-interface {p0, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -153,6 +157,7 @@
     .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    .line 4
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
     return-object p1
@@ -183,6 +188,7 @@
     :goto_0
     const/4 v3, 0x3
 
+    .line 5
     :try_start_2
     invoke-static {v0, v3}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
@@ -190,6 +196,7 @@
 
     if-eqz v3, :cond_2
 
+    .line 6
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -211,6 +218,7 @@
     :cond_2
     if-eqz p0, :cond_3
 
+    .line 7
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
     :cond_3
@@ -226,6 +234,7 @@
 
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
+    .line 8
     :cond_4
     throw p1
 .end method
@@ -233,6 +242,7 @@
 .method private isValid(Ljava/io/File;)Z
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/load/data/mediastore/ThumbnailStreamOpener;->service:Lcom/bumptech/glide/load/data/mediastore/FileService;
 
     invoke-virtual {v0, p1}, Lcom/bumptech/glide/load/data/mediastore/FileService;->exists(Ljava/io/File;)Z
@@ -241,13 +251,13 @@
 
     if-eqz v0, :cond_0
 
+    const-wide/16 v0, 0x0
+
     iget-object p0, p0, Lcom/bumptech/glide/load/data/mediastore/ThumbnailStreamOpener;->service:Lcom/bumptech/glide/load/data/mediastore/FileService;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/data/mediastore/FileService;->length(Ljava/io/File;)J
 
     move-result-wide p0
-
-    const-wide/16 v0, 0x0
 
     cmp-long p0, v0, p0
 
@@ -273,6 +283,7 @@
 
     const/4 v1, 0x0
 
+    .line 1
     :try_start_0
     iget-object v2, p0, Lcom/bumptech/glide/load/data/mediastore/ThumbnailStreamOpener;->contentResolver:Landroid/content/ContentResolver;
 
@@ -280,6 +291,7 @@
 
     move-result-object v1
 
+    .line 2
     iget-object v2, p0, Lcom/bumptech/glide/load/data/mediastore/ThumbnailStreamOpener;->parsers:Ljava/util/List;
 
     iget-object p0, p0, Lcom/bumptech/glide/load/data/mediastore/ThumbnailStreamOpener;->byteArrayPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;
@@ -294,6 +306,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 3
     :try_start_1
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_1
@@ -313,6 +326,7 @@
 
     const/4 v2, 0x3
 
+    .line 4
     :try_start_2
     invoke-static {v0, v2}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
@@ -320,6 +334,7 @@
 
     if-eqz v2, :cond_1
 
+    .line 5
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -341,6 +356,7 @@
     :cond_1
     if-eqz v1, :cond_2
 
+    .line 6
     :try_start_3
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_3
@@ -360,6 +376,7 @@
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_3
 
+    .line 7
     :catch_3
     :cond_3
     throw p0
@@ -373,10 +390,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/bumptech/glide/load/data/mediastore/ThumbnailStreamOpener;->getPath(Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 2
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -387,6 +406,7 @@
 
     return-object v2
 
+    .line 3
     :cond_0
     iget-object v1, p0, Lcom/bumptech/glide/load/data/mediastore/ThumbnailStreamOpener;->service:Lcom/bumptech/glide/load/data/mediastore/FileService;
 
@@ -394,6 +414,7 @@
 
     move-result-object v0
 
+    .line 4
     invoke-direct {p0, v0}, Lcom/bumptech/glide/load/data/mediastore/ThumbnailStreamOpener;->isValid(Ljava/io/File;)Z
 
     move-result v1
@@ -402,11 +423,13 @@
 
     return-object v2
 
+    .line 5
     :cond_1
     invoke-static {v0}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object v0
 
+    .line 6
     :try_start_0
     iget-object p0, p0, Lcom/bumptech/glide/load/data/mediastore/ThumbnailStreamOpener;->contentResolver:Landroid/content/ContentResolver;
 
@@ -421,6 +444,7 @@
     :catch_0
     move-exception p0
 
+    .line 7
     new-instance v1, Ljava/io/FileNotFoundException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -445,7 +469,8 @@
 
     invoke-direct {v1, p1}, Ljava/io/FileNotFoundException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    .line 8
+    invoke-virtual {v1, p0}, Ljava/io/FileNotFoundException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     move-result-object p0
 

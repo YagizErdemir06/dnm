@@ -15,6 +15,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/milab/videosdk/XmsTransition;-><init>(Lcom/xiaomi/milab/videosdk/XmsTrack;)V
 
     return-void
@@ -58,6 +59,7 @@
 .method public getAttchClipIndex()I
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsVideoTransition;->isNULL()Z
 
     move-result v0
@@ -68,6 +70,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -81,6 +84,7 @@
 .method public getDurtion()J
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsVideoTransition;->isNULL()Z
 
     move-result v0
@@ -91,6 +95,7 @@
 
     return-wide v0
 
+    .line 2
     :cond_0
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -104,6 +109,7 @@
 .method public getGetName()Ljava/lang/String;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsVideoTransition;->isNULL()Z
 
     move-result v0
@@ -114,6 +120,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -127,6 +134,7 @@
 .method public isNULL()Z
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     const-wide/16 v2, 0x0

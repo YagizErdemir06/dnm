@@ -33,6 +33,7 @@
 
     const-string v0, "FUP2AHelper"
 
+    .line 1
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     return-void
@@ -41,6 +42,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/pta_helper/encode/SequenceFrame;-><init>()V
 
     return-void
@@ -68,6 +70,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/faceunity/pta_helper/encode/SequenceFrame;->init(Ljava/lang/String;III)Z
 
     move-result p0
@@ -78,6 +81,7 @@
 .method public setDither(I)Z
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/faceunity/pta_helper/encode/SequenceFrame;->encoder:J
 
     invoke-direct {p0, v0, v1, p1}, Lcom/faceunity/pta_helper/encode/EncoderGIF;->setDither(JI)Z
@@ -90,6 +94,7 @@
 .method public setEncoder(I)Z
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/faceunity/pta_helper/encode/SequenceFrame;->encoder:J
 
     invoke-direct {p0, v0, v1, p1}, Lcom/faceunity/pta_helper/encode/EncoderGIF;->setEncoder(JI)Z
@@ -102,6 +107,7 @@
 .method public setImageSizeToComputeColorTable(II)Z
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/faceunity/pta_helper/encode/SequenceFrame;->encoder:J
 
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/faceunity/pta_helper/encode/EncoderGIF;->setImageSizeToComputeColorTable(JII)Z
@@ -114,6 +120,7 @@
 .method public setSample(I)Z
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/faceunity/pta_helper/encode/SequenceFrame;->encoder:J
 
     invoke-direct {p0, v0, v1, p1}, Lcom/faceunity/pta_helper/encode/EncoderGIF;->setSample(JI)Z
@@ -126,6 +133,7 @@
 .method public setThreadCount(I)Z
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/faceunity/pta_helper/encode/SequenceFrame;->encoder:J
 
     invoke-direct {p0, v0, v1, p1}, Lcom/faceunity/pta_helper/encode/EncoderGIF;->setThreadCount(JI)Z

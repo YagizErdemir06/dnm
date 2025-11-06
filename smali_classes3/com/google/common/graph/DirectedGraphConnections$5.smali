@@ -1,4 +1,4 @@
-.class Lcom/google/common/graph/DirectedGraphConnections$5;
+.class public Lcom/google/common/graph/DirectedGraphConnections$5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -28,13 +28,14 @@
 
 
 # instance fields
-.field final synthetic val$thisNode:Ljava/lang/Object;
+.field public final synthetic val$thisNode:Ljava/lang/Object;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/graph/DirectedGraphConnections;Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     iput-object p2, p0, Lcom/google/common/graph/DirectedGraphConnections$5;->val$thisNode:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

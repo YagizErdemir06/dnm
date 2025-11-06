@@ -89,24 +89,32 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
+    .line 2
     iput v0, p0, Lcom/bumptech/glide/ListPreloader;->lastFirstVisible:I
 
     const/4 v0, 0x1
 
+    .line 3
     iput-boolean v0, p0, Lcom/bumptech/glide/ListPreloader;->isIncreasing:Z
 
+    .line 4
     iput-object p1, p0, Lcom/bumptech/glide/ListPreloader;->requestManager:Lcom/bumptech/glide/RequestManager;
 
+    .line 5
     iput-object p2, p0, Lcom/bumptech/glide/ListPreloader;->preloadModelProvider:Lcom/bumptech/glide/ListPreloader$PreloadModelProvider;
 
+    .line 6
     iput-object p3, p0, Lcom/bumptech/glide/ListPreloader;->preloadDimensionProvider:Lcom/bumptech/glide/ListPreloader$PreloadSizeProvider;
 
+    .line 7
     iput p4, p0, Lcom/bumptech/glide/ListPreloader;->maxPreload:I
 
+    .line 8
     new-instance p1, Lcom/bumptech/glide/ListPreloader$PreloadTargetQueue;
 
     add-int/2addr p4, v0
@@ -125,17 +133,19 @@
 
     move v1, v0
 
+    .line 1
     :goto_0
     iget-object v2, p0, Lcom/bumptech/glide/ListPreloader;->preloadTargetQueue:Lcom/bumptech/glide/ListPreloader$PreloadTargetQueue;
 
     iget-object v2, v2, Lcom/bumptech/glide/ListPreloader$PreloadTargetQueue;->queue:Ljava/util/Queue;
 
-    invoke-interface {v2}, Ljava/util/Collection;->size()I
+    invoke-interface {v2}, Ljava/util/Queue;->size()I
 
     move-result v2
 
     if-ge v1, v2, :cond_0
 
+    .line 2
     iget-object v2, p0, Lcom/bumptech/glide/ListPreloader;->requestManager:Lcom/bumptech/glide/RequestManager;
 
     iget-object v3, p0, Lcom/bumptech/glide/ListPreloader;->preloadTargetQueue:Lcom/bumptech/glide/ListPreloader$PreloadTargetQueue;
@@ -299,6 +309,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -310,6 +321,7 @@
     :goto_0
     if-ge p3, v0, :cond_1
 
+    .line 2
     invoke-interface {p1, p3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -326,6 +338,7 @@
     :goto_1
     if-ltz v0, :cond_1
 
+    .line 3
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p3
@@ -356,6 +369,7 @@
 
     return-void
 
+    .line 1
     :cond_0
     iget-object v0, p0, Lcom/bumptech/glide/ListPreloader;->preloadDimensionProvider:Lcom/bumptech/glide/ListPreloader$PreloadSizeProvider;
 
@@ -367,9 +381,11 @@
 
     return-void
 
+    .line 2
     :cond_1
     iget-object p3, p0, Lcom/bumptech/glide/ListPreloader;->preloadModelProvider:Lcom/bumptech/glide/ListPreloader$PreloadModelProvider;
 
+    .line 3
     invoke-interface {p3, p1}, Lcom/bumptech/glide/ListPreloader$PreloadModelProvider;->getPreloadRequestBuilder(Ljava/lang/Object;)Lcom/bumptech/glide/RequestBuilder;
 
     move-result-object p1
@@ -378,6 +394,7 @@
 
     return-void
 
+    .line 4
     :cond_2
     iget-object p0, p0, Lcom/bumptech/glide/ListPreloader;->preloadTargetQueue:Lcom/bumptech/glide/ListPreloader$PreloadTargetQueue;
 
@@ -403,8 +420,10 @@
 .method public onScroll(Landroid/widget/AbsListView;III)V
     .locals 0
 
+    .line 1
     iput p4, p0, Lcom/bumptech/glide/ListPreloader;->totalItemCount:I
 
+    .line 2
     iget p1, p0, Lcom/bumptech/glide/ListPreloader;->lastFirstVisible:I
 
     if-le p2, p1, :cond_0
@@ -413,6 +432,7 @@
 
     const/4 p1, 0x1
 
+    .line 3
     invoke-direct {p0, p3, p1}, Lcom/bumptech/glide/ListPreloader;->preload(IZ)V
 
     goto :goto_0
@@ -422,8 +442,10 @@
 
     const/4 p1, 0x0
 
+    .line 4
     invoke-direct {p0, p2, p1}, Lcom/bumptech/glide/ListPreloader;->preload(IZ)V
 
+    .line 5
     :cond_1
     :goto_0
     iput p2, p0, Lcom/bumptech/glide/ListPreloader;->lastFirstVisible:I

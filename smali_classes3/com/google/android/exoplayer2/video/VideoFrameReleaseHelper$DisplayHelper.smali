@@ -1,4 +1,4 @@
-.class interface abstract Lcom/google/android/exoplayer2/video/VideoFrameReleaseHelper$DisplayHelper;
+.class public interface abstract Lcom/google/android/exoplayer2/video/VideoFrameReleaseHelper$DisplayHelper;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

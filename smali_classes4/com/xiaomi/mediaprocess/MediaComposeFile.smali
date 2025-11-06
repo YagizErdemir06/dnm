@@ -4,13 +4,13 @@
 
 
 # static fields
-.field public static c:Ljava/lang/String; = "MediaComposeFile"
+.field private static a:Ljava/lang/String; = "MediaComposeFile"
 
 
 # instance fields
-.field public a:Lcom/xiaomi/mediaprocess/MediaEffectGraph;
+.field private b:Lcom/xiaomi/mediaprocess/MediaEffectGraph;
 
-.field public b:J
+.field private c:J
 
 
 # direct methods
@@ -23,9 +23,11 @@
 .method public constructor <init>(Lcom/xiaomi/mediaprocess/MediaEffectGraph;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->a:Lcom/xiaomi/mediaprocess/MediaEffectGraph;
+    .line 2
+    iput-object p1, p0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->b:Lcom/xiaomi/mediaprocess/MediaEffectGraph;
 
     return-void
 .end method
@@ -56,7 +58,8 @@
 .method public a()V
     .locals 4
 
-    sget-object v0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->c:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->a:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -66,7 +69,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v2, p0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->b:J
+    iget-wide v2, p0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->c:J
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -76,6 +79,7 @@
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {}, Lcom/xiaomi/mediaprocess/MediaComposeFile;->BeginComposeFileJni()V
 
     return-void
@@ -84,7 +88,8 @@
 .method public b()V
     .locals 4
 
-    sget-object v0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->c:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->a:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -94,7 +99,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v2, p0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->b:J
+    iget-wide v2, p0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->c:J
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -104,6 +109,7 @@
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {}, Lcom/xiaomi/mediaprocess/MediaComposeFile;->CancelComposeFileJni()V
 
     return-void
@@ -112,11 +118,13 @@
 .method public c(IIII)Z
     .locals 6
 
-    iget-object v0, p0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->a:Lcom/xiaomi/mediaprocess/MediaEffectGraph;
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->b:Lcom/xiaomi/mediaprocess/MediaEffectGraph;
 
     if-nez v0, :cond_0
 
-    sget-object p0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->c:Ljava/lang/String;
+    .line 2
+    sget-object p0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->a:Ljava/lang/String;
 
     const-string p1, "effect graph is null, failed!"
 
@@ -126,6 +134,7 @@
 
     return p0
 
+    .line 3
     :cond_0
     invoke-virtual {v0}, Lcom/xiaomi/mediaprocess/MediaEffectGraph;->j()J
 
@@ -141,7 +150,8 @@
 
     invoke-static/range {v0 .. v5}, Lcom/xiaomi/mediaprocess/MediaComposeFile;->ConstructMediaComposeFileJni(JIIII)Z
 
-    sget-object p1, Lcom/xiaomi/mediaprocess/MediaComposeFile;->c:Ljava/lang/String;
+    .line 4
+    sget-object p1, Lcom/xiaomi/mediaprocess/MediaComposeFile;->a:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -151,7 +161,7 @@
 
     invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide p3, p0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->b:J
+    iget-wide p3, p0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->c:J
 
     invoke-virtual {p2, p3, p4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -169,7 +179,8 @@
 .method public d()V
     .locals 4
 
-    sget-object v0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->c:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->a:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -179,7 +190,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v2, p0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->b:J
+    iget-wide v2, p0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->c:J
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -189,6 +200,7 @@
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {}, Lcom/xiaomi/mediaprocess/MediaComposeFile;->DestructMediaComposeFileJni()V
 
     return-void
@@ -199,10 +211,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     invoke-static {p1}, Lcom/xiaomi/mediaprocess/MediaComposeFile;->SetComposeFileFdJni(Ljava/io/FileDescriptor;)V
 
     return-void
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -216,7 +230,8 @@
 .method public f(Ljava/lang/String;)V
     .locals 2
 
-    sget-object p0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->c:Ljava/lang/String;
+    .line 1
+    sget-object p0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->a:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -234,6 +249,7 @@
 
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {p1}, Lcom/xiaomi/mediaprocess/MediaComposeFile;->SetComposeFileNameJni(Ljava/lang/String;)V
 
     return-void
@@ -242,7 +258,8 @@
 .method public g(Lcom/xiaomi/mediaprocess/EffectNotifier;)V
     .locals 4
 
-    sget-object v0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->c:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->a:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -252,7 +269,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v2, p0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->b:J
+    iget-wide v2, p0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->c:J
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -262,6 +279,7 @@
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {p1}, Lcom/xiaomi/mediaprocess/MediaComposeFile;->SetComposeNotifyJni(Lcom/xiaomi/mediaprocess/EffectNotifier;)V
 
     return-void
@@ -270,7 +288,8 @@
 .method public h(Lcom/xiaomi/mediaprocess/MediaEffectGraph;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->a:Lcom/xiaomi/mediaprocess/MediaEffectGraph;
+    .line 1
+    iput-object p1, p0, Lcom/xiaomi/mediaprocess/MediaComposeFile;->b:Lcom/xiaomi/mediaprocess/MediaEffectGraph;
 
     return-void
 .end method

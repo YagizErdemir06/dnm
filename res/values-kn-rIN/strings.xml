@@ -205,7 +205,6 @@
     <string name="accessibility_video_capture_button">ವೀಡಿಯೊ ಮಾಡುವಾಗ ಫೋಟೋ ತೆಗೆಯಲು ಬಟನ್‌</string>
     <string name="accessibility_video_pause_button">ವೀಡಿಯೊ ರೆಕಾರ್ಡಿಂಗ್‌ ವಿರಾಮಗೊಂಡಿದೆ</string>
     <string name="accessibility_video_resume_button">ವೀಡಿಯೊ ರೆಕಾರ್ಡಿಂಗ್‌ ಮರುಪ್ರಾರಂಭಗೊಂಡಿದೆ</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">ವಾಟರ್‌ಮಾರ್ಕ್ ಆಫ್‌ ಆಗಿದೆ</string>
     <string name="accessibility_watermark_image_on">ವಾಟರ್‌ಮಾರ್ಕ್ ಆನ್ ಆಗಿದೆ</string>
     <string name="accessibility_watermark_text">ವಾಟರ್‌ಮಾರ್ಕ್‌ ಅಡ್ಜಸ್ಟ್‌ಮೆಂಟ್‌ ಪ್ಯಾನೆಲ್‌ ತೆರೆಯಿರಿ</string>
@@ -213,16 +212,6 @@
     <string name="accessibility_zoom_button">ಝೂಮ್‌ ಮೋಡ್‌</string>
     <string name="actionbar_button_up_description">ಹಿಂದೆ</string>
     <string name="afternoon">ಅಪರಾಹ್ನ</string>
-    <string name="agent_flip_tbc">ಒಳ ಸ್ಕ್ರೀನ್‌ನಲ್ಲಿ ಮುಂದುವರಿಸಿ</string>
-    <string name="agent_function_max">ಗರಿಷ್ಠ ಮೌಲ್ಯಕ್ಕೆ ಹೊಂದಿಸಲಾಗಿದೆ</string>
-    <string name="agent_function_min">ಕನಿಷ್ಠ ಮೌಲ್ಯಕ್ಕೆ ಹೊಂದಿಸಲಾಗಿದೆ</string>
-    <string name="agent_workspace_mode_not_supported">ಈ ಫೀಚರ್‌ಗೆ ಬೆಂಬಲವಿಲ್ಲ</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"ಈ ಫೀಚರ್‌ಗೆ ಬೆಂಬಲವಿಲ್ಲ.
-ಬದಲಿಗೆ ಫೋಟೋ ಮೋಡ್‌ ಅನ್ನು ತೆರೆದಿದೆ."</string>
-    <string name="agent_workspace_on">\"%1$s\" ಫೋಟೋಗ್ರಾಫಿಂಗ್‌ಗೆ ಮಾನದಂಡಗಳನ್ನು ಹೊಂದಿಸಲಾಗಿದೆ</string>
-    <string name="agent_workspace_tbc">ದೃಶ್ಯವನ್ನು ವಿಶ್ಲೇಷಿಸುತ್ತಿದೆ</string>
-    <string name="agent_workspace_tbc_use_default">"ದೃಶ್ಯ ವಿಶ್ಲೇಷಿಸುತ್ತಿದೆ…
-ಕ್ಯಾಮರಾ ಮಾನದಂಡಗಳನ್ನು ಡೀಫಾಲ್ಟ್‌ ಆಗಿ ಹೊಂದಿಸಲಾಗಿದೆ"</string>
     <string name="ai_agra_fort">ಆಗ್ರಾ ಕೋಟೆ</string>
     <string name="ai_amber_fort">ಅಂಬರ್ ಪ್ಯಾಲೇಸ್‌</string>
     <string name="ai_baby">ಮಗು</string>
@@ -781,7 +770,6 @@
     <string name="download_hint_cn">"Looks like your device isn't connected to WLAN. Use %1$s MB of mobile data to download items now?"</string>
     <string name="download_hint_wifi">ನಿಮ್ಮ ಡಿವೈಸ್‌ ವೈ-ಫೈಗೆ ಕನೆಕ್ಟ್‌ ಆದಂತೆ ಕಾಣಿಸುತ್ತಿಲ್ಲ. ಐಟಂಗಳನ್ನು ಡೌನ್‌ಲೋಡ್‌ ಮಾಡಲು %1$s MB ಯಷ್ಟು ಮೊಬೈಲ್‌ ಡೇಟಾ ಬಳಸಬೇಕೇ?</string>
     <string name="download_in_progress">ಡೌನ್‌ಲೋಡ್‌ ಆಗುತ್ತಿದೆ…</string>
-    <string name="download_network_error">ಡೌನ್‌ಲೋಡ್ ಆಗುತ್ತಿಲ್ಲ. ನೆಟ್‌ವರ್ಕ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಪರಿಶೀಲಿಸಿ.</string>
     <string name="download_title">ಡೇಟಾ ಬಳಕೆ ಎಚ್ಚರಿಕೆ</string>
     <string name="download_waiting">ಬಾಕಿ…</string>
     <string name="dual_camera_lens_covered_toast">ಲೆನ್ಸ್ ಕವರ್ ಆಗಿದೆ.</string>
@@ -1260,7 +1248,6 @@
     <string name="miuix_appcompat_delete_description">ಅಳಿಸು</string>
     <string name="miuix_appcompat_deselect_all">ಎಲ್ಲಾ ಆಯ್ಕೆ ರದ್ದುಮಾಡಿ</string>
     <string name="miuix_appcompat_deselect_all_description">ಎಲ್ಲಾ ಆಯ್ಕೆ ರದ್ದುಮಾಡಿ</string>
-    <string name="miuix_appcompat_edit">ಎಡಿಟ್</string>
     <string name="miuix_appcompat_search_action_mode_cancel">ರದ್ದು</string>
     <string name="miuix_appcompat_search_input_description">ಹುಡುಕಿ</string>
     <string name="miuix_appcompat_select_all">ಎಲ್ಲಾ ಆಯ್ಕೆಮಾಡು</string>
@@ -2199,7 +2186,6 @@
     <string name="time_picker_label_hour">ಗಂ</string>
     <string name="time_picker_label_minute">ನಿ</string>
     <string name="time_stamp_date_format">dd/MM/yyyy</string>
-    <string name="time_stamp_date_format_minute">dd/MM/yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">ನೀವು ಶೂಟಿಂಗ್‌ ಮಾಡುವ ಮುನ್ನ ಅಥವಾ ಮಾಡುವಾಗ ಹಿನ್ನೆಲೆಯನ್ನು ಫ್ರೀಜ್‌ ಮತ್ತು ಅನ್‌ಫ್ರೀಜ್ ಮಾಡಿ.</string>
     <string name="timefreeze_guide_tip3">ಎದುರು ಇರುವವರು ಫ್ರೇಮ್‌ ಒಳಗೇ ಇರುವಂತೆ ಕೇಳಿಕೊಳ್ಳಿ.</string>
     <string name="timefreeze_guide_tip4">ಟ್ರಾಫಿಕ್‌ ನಿಲ್ಲುವಂತೆ ಮಾಡಿ.</string>
@@ -2220,7 +2206,7 @@
     <string name="tip_beauty_mode_title1">ಪೋರ್ಟೇಟ್‌ ಶೈಲಿ: ಫ್ರೆಶ್‌</string>
     <string name="tip_beauty_mode_title2">ಪೋರ್ಟೇಟ್‌ ಶೈಲಿ: ಫಿಲ್ಮ್‌</string>
     <string name="tip_cvtype_title1">ಶೈಲಿ: Leica ಅಥೆಂಟಿಕ್‌</string>
-    <string name="tip_cvtype_title2">ಶೈಲಿ: Leica Vibrant</string>
+    <string name="tip_cvtype_title2">ಶೈಲಿ: ಲೇಖಾ ವೈಬ್ರೆಂಟ್‌</string>
     <string name="tip_eis_off">ಸ್ಥಿರ ವೀಡಿಯೊ: ಆಫ್</string>
     <string name="tip_eis_pro_off">ಸ್ಥಿರ ವೀಡಿಯೊ PRO: ಆಫ್</string>
     <string name="tip_flash_auto">ಫ್ಲ್ಯಾಶ್‌: ಸ್ವಯಂ</string>
@@ -2237,7 +2223,7 @@
     <string name="tip_flash_screen_light_on">ಸಾಫ್ಟ್‌ ಫ್ಲ್ಯಾಶ್‌: ಆನ್‌</string>
     <string name="tip_flash_soft_light_off">ಸಾಫ್ಟ್‌ ಫ್ಲ್ಯಾಶ್‌: ಆಫ್‌</string>
     <string name="tip_flash_soft_light_torch">ಸಾಫ್ಟ್‌ ಫ್ಲ್ಯಾಶ್‌: ಫ್ಲ್ಯಾಶ್‌ಲೈಟ್ ಮೋಡ್‌</string>
-    <string name="tip_flash_torch">ಫ್ಲ್ಯಾಶ್‌: ಫ್ಲ್ಯಾಶ್‌ಲೈಟ್‌</string>
+    <string name="tip_flash_torch">ಫ್ಲ್ಯಾಶ್‌: ಯಾವಾಗಲೂ ಆನ್‌</string>
     <string name="tip_friend_mode_connect_when_24GHz">ಮುನ್ನೋಟ ಗುಣಮಟ್ಟ ಬೂಸ್ಟ್‌ ಮಾಡಲು %s GHz ಕನೆಕ್ಷನ್‌ ಬಳಸಿ</string>
     <string name="tip_friend_mode_display_device_name_connect">ಹಂಚಿತ ಮುನ್ನೋಟ</string>
     <string name="tip_friend_mode_display_device_name_disconnect">ಮತ್ತೊಂದು ಡಿವೈಸ್‌ ಈ ಸೆಶನ್‌ನಿಂದ ನಿರ್ಗಮಿಸಿದೆ</string>

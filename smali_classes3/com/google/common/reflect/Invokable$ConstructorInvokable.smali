@@ -1,4 +1,4 @@
-.class Lcom/google/common/reflect/Invokable$ConstructorInvokable;
+.class public Lcom/google/common/reflect/Invokable$ConstructorInvokable;
 .super Lcom/google/common/reflect/Invokable;
 .source "SourceFile"
 
@@ -25,7 +25,7 @@
 
 
 # instance fields
-.field final constructor:Ljava/lang/reflect/Constructor;
+.field public final constructor:Ljava/lang/reflect/Constructor;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/reflect/Constructor<",
@@ -46,8 +46,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/reflect/Invokable;-><init>(Ljava/lang/reflect/AccessibleObject;)V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/reflect/Invokable$ConstructorInvokable;->constructor:Ljava/lang/reflect/Constructor;
 
     return-void
@@ -56,12 +58,14 @@
 .method private mayNeedHiddenThis()Z
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/Invokable$ConstructorInvokable;->constructor:Ljava/lang/reflect/Constructor;
 
     invoke-virtual {p0}, Ljava/lang/reflect/Constructor;->getDeclaringClass()Ljava/lang/Class;
 
     move-result-object p0
 
+    .line 2
     invoke-virtual {p0}, Ljava/lang/Class;->getEnclosingConstructor()Ljava/lang/reflect/Constructor;
 
     move-result-object v0
@@ -72,6 +76,7 @@
 
     return v1
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Class;->getEnclosingMethod()Ljava/lang/reflect/Method;
 
@@ -79,6 +84,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     invoke-virtual {v0}, Ljava/lang/reflect/Method;->getModifiers()I
 
     move-result p0
@@ -91,6 +97,7 @@
 
     return p0
 
+    .line 5
     :cond_1
     invoke-virtual {p0}, Ljava/lang/Class;->getEnclosingClass()Ljava/lang/Class;
 
@@ -98,6 +105,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 6
     invoke-virtual {p0}, Ljava/lang/Class;->getModifiers()I
 
     move-result p0
@@ -122,6 +130,7 @@
 .method public getGenericExceptionTypes()[Ljava/lang/reflect/Type;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/Invokable$ConstructorInvokable;->constructor:Ljava/lang/reflect/Constructor;
 
     invoke-virtual {p0}, Ljava/lang/reflect/Constructor;->getGenericExceptionTypes()[Ljava/lang/reflect/Type;
@@ -134,12 +143,14 @@
 .method public getGenericParameterTypes()[Ljava/lang/reflect/Type;
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/reflect/Invokable$ConstructorInvokable;->constructor:Ljava/lang/reflect/Constructor;
 
     invoke-virtual {v0}, Ljava/lang/reflect/Constructor;->getGenericParameterTypes()[Ljava/lang/reflect/Type;
 
     move-result-object v0
 
+    .line 2
     array-length v1, v0
 
     if-lez v1, :cond_0
@@ -150,12 +161,14 @@
 
     if-eqz v1, :cond_0
 
+    .line 3
     iget-object v1, p0, Lcom/google/common/reflect/Invokable$ConstructorInvokable;->constructor:Ljava/lang/reflect/Constructor;
 
     invoke-virtual {v1}, Ljava/lang/reflect/Constructor;->getParameterTypes()[Ljava/lang/Class;
 
     move-result-object v1
 
+    .line 4
     array-length v2, v0
 
     array-length v3, v1
@@ -166,6 +179,7 @@
 
     aget-object v1, v1, v2
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/common/reflect/Invokable;->getDeclaringClass()Ljava/lang/Class;
 
     move-result-object p0
@@ -178,6 +192,7 @@
 
     const/4 p0, 0x1
 
+    .line 6
     array-length v1, v0
 
     invoke-static {v0, p0, v1}, Ljava/util/Arrays;->copyOfRange([Ljava/lang/Object;II)[Ljava/lang/Object;
@@ -195,18 +210,22 @@
 .method public getGenericReturnType()Ljava/lang/reflect/Type;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/reflect/Invokable;->getDeclaringClass()Ljava/lang/Class;
 
     move-result-object p0
 
+    .line 2
     invoke-virtual {p0}, Ljava/lang/Class;->getTypeParameters()[Ljava/lang/reflect/TypeVariable;
 
     move-result-object v0
 
+    .line 3
     array-length v1, v0
 
     if-lez v1, :cond_0
 
+    .line 4
     invoke-static {p0, v0}, Lcom/google/common/reflect/Types;->newParameterizedType(Ljava/lang/Class;[Ljava/lang/reflect/Type;)Ljava/lang/reflect/ParameterizedType;
 
     move-result-object p0
@@ -218,6 +237,7 @@
 .method public final getParameterAnnotations()[[Ljava/lang/annotation/Annotation;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/Invokable$ConstructorInvokable;->constructor:Ljava/lang/reflect/Constructor;
 
     invoke-virtual {p0}, Ljava/lang/reflect/Constructor;->getParameterAnnotations()[[Ljava/lang/annotation/Annotation;
@@ -237,6 +257,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/reflect/Invokable;->getDeclaringClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -245,12 +266,14 @@
 
     move-result-object v0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/reflect/Invokable$ConstructorInvokable;->constructor:Ljava/lang/reflect/Constructor;
 
     invoke-virtual {p0}, Ljava/lang/reflect/Constructor;->getTypeParameters()[Ljava/lang/reflect/TypeVariable;
 
     move-result-object p0
 
+    .line 3
     array-length v1, v0
 
     array-length v2, p0
@@ -259,12 +282,14 @@
 
     new-array v1, v1, [Ljava/lang/reflect/TypeVariable;
 
+    .line 4
     array-length v2, v0
 
     const/4 v3, 0x0
 
     invoke-static {v0, v3, v1, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 5
     array-length v0, v0
 
     array-length v2, p0
@@ -287,6 +312,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     iget-object p1, p0, Lcom/google/common/reflect/Invokable$ConstructorInvokable;->constructor:Ljava/lang/reflect/Constructor;
 
@@ -301,6 +327,7 @@
     :catch_0
     move-exception p1
 
+    .line 2
     new-instance p2, Ljava/lang/RuntimeException;
 
     iget-object p0, p0, Lcom/google/common/reflect/Invokable$ConstructorInvokable;->constructor:Ljava/lang/reflect/Constructor;
@@ -345,6 +372,7 @@
 .method public final isVarArgs()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/Invokable$ConstructorInvokable;->constructor:Ljava/lang/reflect/Constructor;
 
     invoke-virtual {p0}, Ljava/lang/reflect/Constructor;->isVarArgs()Z

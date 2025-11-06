@@ -15,6 +15,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,6 +32,7 @@
         .end annotation
     .end param
 
+    .line 1
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -42,6 +44,7 @@
 
     aget-object v3, p0, v2
 
+    .line 2
     invoke-static {p1, v3}, Ljava/util/Arrays;->equals([B[B)Z
 
     move-result v3
@@ -67,6 +70,7 @@
     :try_start_0
     const-string v0, "SHA256"
 
+    .line 1
     invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v0
@@ -82,6 +86,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Device doesn\'t support SHA256 cert checking"
@@ -98,15 +103,31 @@
         .end annotation
     .end param
 
-    invoke-static {p0}, Landroidx/core/content/pm/PackageInfoCompat$Api28Impl;->getLongVersionCode(Landroid/content/pm/PackageInfo;)J
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1c
+
+    if-lt v0, v1, :cond_0
+
+    .line 2
+    invoke-virtual {p0}, Landroid/content/pm/PackageInfo;->getLongVersionCode()J
 
     move-result-wide v0
+
+    return-wide v0
+
+    .line 3
+    :cond_0
+    iget p0, p0, Landroid/content/pm/PackageInfo;->versionCode:I
+
+    int-to-long v0, p0
 
     return-wide v0
 .end method
 
 .method public static getSignatures(Landroid/content/pm/PackageManager;Ljava/lang/String;)Ljava/util/List;
-    .locals 1
+    .locals 2
     .param p0    # Landroid/content/pm/PackageManager;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -136,41 +157,68 @@
         }
     .end annotation
 
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1c
+
+    if-lt v0, v1, :cond_1
+
     const/high16 v0, 0x8000000
 
+    .line 2
     invoke-virtual {p0, p1, v0}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
     move-result-object p0
 
+    .line 3
     iget-object p0, p0, Landroid/content/pm/PackageInfo;->signingInfo:Landroid/content/pm/SigningInfo;
 
+    .line 4
     invoke-static {p0}, Landroidx/core/content/pm/PackageInfoCompat$Api28Impl;->hasMultipleSigners(Landroid/content/pm/SigningInfo;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
+    .line 5
     invoke-static {p0}, Landroidx/core/content/pm/PackageInfoCompat$Api28Impl;->getApkContentsSigners(Landroid/content/pm/SigningInfo;)[Landroid/content/pm/Signature;
 
     move-result-object p0
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-static {p0}, Landroidx/core/content/pm/PackageInfoCompat$Api28Impl;->getSigningCertificateHistory(Landroid/content/pm/SigningInfo;)[Landroid/content/pm/Signature;
 
     move-result-object p0
 
-    :goto_0
-    if-nez p0, :cond_1
+    goto :goto_0
 
+    :cond_1
+    const/16 v0, 0x40
+
+    .line 7
+    invoke-virtual {p0, p1, v0}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+
+    move-result-object p0
+
+    .line 8
+    iget-object p0, p0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
+
+    :goto_0
+    if-nez p0, :cond_2
+
+    .line 9
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p0
 
     return-object p0
 
-    :cond_1
+    .line 10
+    :cond_2
     invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
@@ -214,6 +262,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p2}, Ljava/util/Map;->isEmpty()Z
 
     move-result v0
@@ -224,11 +273,13 @@
 
     return v1
 
+    .line 2
     :cond_0
     invoke-interface {p2}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v0
 
+    .line 3
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -253,6 +304,7 @@
 
     if-eqz v3, :cond_4
 
+    .line 4
     invoke-interface {p2, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
@@ -261,6 +313,7 @@
 
     if-eqz v3, :cond_3
 
+    .line 5
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
     move-result v6
@@ -271,6 +324,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -296,6 +350,7 @@
 
     throw p0
 
+    .line 7
     :cond_3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -317,6 +372,7 @@
 
     throw p0
 
+    .line 8
     :cond_4
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -338,6 +394,7 @@
 
     throw p0
 
+    .line 9
     :cond_5
     invoke-static {p0, p1}, Landroidx/core/content/pm/PackageInfoCompat;->getSignatures(Landroid/content/pm/PackageManager;Ljava/lang/String;)Ljava/util/List;
 
@@ -345,6 +402,14 @@
 
     if-nez p3, :cond_8
 
+    .line 10
+    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v6, 0x1c
+
+    if-lt v3, v6, :cond_8
+
+    .line 11
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p3
@@ -362,12 +427,14 @@
 
     check-cast v0, [B
 
+    .line 12
     invoke-interface {p2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/Integer;
 
+    .line 13
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
     move-result v2
@@ -383,13 +450,15 @@
     :cond_7
     return v5
 
+    .line 14
     :cond_8
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result p0
 
-    if-eqz p0, :cond_f
+    if-eqz p0, :cond_e
 
+    .line 15
     invoke-interface {p2}, Ljava/util/Map;->size()I
 
     move-result p0
@@ -398,10 +467,11 @@
 
     move-result p1
 
-    if-gt p0, p1, :cond_f
+    if-gt p0, p1, :cond_e
 
     if-eqz p3, :cond_9
 
+    .line 16
     invoke-interface {p2}, Ljava/util/Map;->size()I
 
     move-result p0
@@ -414,6 +484,7 @@
 
     goto/16 :goto_2
 
+    .line 17
     :cond_9
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -423,24 +494,29 @@
 
     move-result p0
 
+    const/4 p1, 0x0
+
     if-eqz p0, :cond_a
 
+    .line 18
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result p0
 
-    new-array p0, p0, [[B
+    new-array p1, p0, [[B
 
-    move p1, v1
+    move p0, v1
 
+    .line 19
     :goto_1
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result p3
 
-    if-ge p1, p3, :cond_b
+    if-ge p0, p3, :cond_a
 
-    invoke-interface {v2, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    .line 20
+    invoke-interface {v2, p0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p3
 
@@ -454,55 +530,57 @@
 
     move-result-object p3
 
-    aput-object p3, p0, p1
+    aput-object p3, p1, p0
 
-    add-int/lit8 p1, p1, 0x1
+    add-int/lit8 p0, p0, 0x1
 
     goto :goto_1
 
+    .line 21
     :cond_a
-    const/4 p0, 0x0
-
-    :cond_b
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result p3
 
-    if-eqz p3, :cond_f
+    if-eqz p3, :cond_e
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, [B
+    check-cast p0, [B
 
-    invoke-interface {p2, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 22
+    invoke-interface {p2, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
 
     check-cast p2, Ljava/lang/Integer;
 
+    .line 23
     invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
     move-result p3
 
-    if-eqz p3, :cond_d
+    if-eqz p3, :cond_c
 
-    if-ne p3, v5, :cond_c
+    if-ne p3, v5, :cond_b
 
-    invoke-static {p0, p1}, Landroidx/core/content/pm/PackageInfoCompat;->byteArrayContains([[B[B)Z
+    .line 24
+    invoke-static {p1, p0}, Landroidx/core/content/pm/PackageInfoCompat;->byteArrayContains([[B[B)Z
 
     move-result p0
 
-    if-nez p0, :cond_e
+    if-nez p0, :cond_d
 
     return v1
 
-    :cond_c
+    .line 25
+    :cond_b
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -521,23 +599,25 @@
 
     throw p0
 
-    :cond_d
-    new-instance p0, Landroid/content/pm/Signature;
+    .line 26
+    :cond_c
+    new-instance p1, Landroid/content/pm/Signature;
 
-    invoke-direct {p0, p1}, Landroid/content/pm/Signature;-><init>([B)V
+    invoke-direct {p1, p0}, Landroid/content/pm/Signature;-><init>([B)V
 
-    invoke-interface {v2, p0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+    .line 27
+    invoke-interface {v2, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result p0
 
-    if-nez p0, :cond_e
+    if-nez p0, :cond_d
 
     return v1
 
-    :cond_e
+    :cond_d
     return v5
 
-    :cond_f
+    :cond_e
     :goto_2
     return v1
 .end method

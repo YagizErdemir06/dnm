@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/view/menu/SubMenuWrapperICS;
+.class public Landroidx/appcompat/view/menu/SubMenuWrapperICS;
 .super Landroidx/appcompat/view/menu/MenuWrapperICS;
 .source "SourceFile"
 
@@ -22,8 +22,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroidx/core/internal/view/SupportSubMenu;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Landroidx/appcompat/view/menu/MenuWrapperICS;-><init>(Landroid/content/Context;Landroidx/core/internal/view/SupportMenu;)V
 
+    .line 2
     iput-object p2, p0, Landroidx/appcompat/view/menu/SubMenuWrapperICS;->mSubMenu:Landroidx/core/internal/view/SupportSubMenu;
 
     return-void
@@ -34,6 +36,7 @@
 .method public clearHeader()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/menu/SubMenuWrapperICS;->mSubMenu:Landroidx/core/internal/view/SupportSubMenu;
 
     invoke-interface {p0}, Landroid/view/SubMenu;->clearHeader()V
@@ -44,6 +47,7 @@
 .method public getItem()Landroid/view/MenuItem;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/view/menu/SubMenuWrapperICS;->mSubMenu:Landroidx/core/internal/view/SupportSubMenu;
 
     invoke-interface {v0}, Landroid/view/SubMenu;->getItem()Landroid/view/MenuItem;
@@ -104,6 +108,7 @@
 .method public setHeaderView(Landroid/view/View;)Landroid/view/SubMenu;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/view/menu/SubMenuWrapperICS;->mSubMenu:Landroidx/core/internal/view/SupportSubMenu;
 
     invoke-interface {v0, p1}, Landroid/view/SubMenu;->setHeaderView(Landroid/view/View;)Landroid/view/SubMenu;

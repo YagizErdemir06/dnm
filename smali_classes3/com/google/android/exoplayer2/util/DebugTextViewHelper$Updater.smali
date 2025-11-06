@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/util/DebugTextViewHelper$Updater;
+.class public final Lcom/google/android/exoplayer2/util/DebugTextViewHelper$Updater;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -19,7 +19,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/android/exoplayer2/util/DebugTextViewHelper;
+.field public final synthetic this$0:Lcom/google/android/exoplayer2/util/DebugTextViewHelper;
 
 
 # direct methods
@@ -48,6 +48,7 @@
 .method public onPlayWhenReadyChanged(ZI)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/DebugTextViewHelper$Updater;->this$0:Lcom/google/android/exoplayer2/util/DebugTextViewHelper;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/DebugTextViewHelper;->updateAndPost()V
@@ -58,6 +59,7 @@
 .method public onPlaybackStateChanged(I)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/DebugTextViewHelper$Updater;->this$0:Lcom/google/android/exoplayer2/util/DebugTextViewHelper;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/DebugTextViewHelper;->updateAndPost()V
@@ -68,6 +70,7 @@
 .method public onPositionDiscontinuity(Lcom/google/android/exoplayer2/Player$PositionInfo;Lcom/google/android/exoplayer2/Player$PositionInfo;I)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/DebugTextViewHelper$Updater;->this$0:Lcom/google/android/exoplayer2/util/DebugTextViewHelper;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/DebugTextViewHelper;->updateAndPost()V
@@ -78,6 +81,7 @@
 .method public run()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/DebugTextViewHelper$Updater;->this$0:Lcom/google/android/exoplayer2/util/DebugTextViewHelper;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/DebugTextViewHelper;->updateAndPost()V

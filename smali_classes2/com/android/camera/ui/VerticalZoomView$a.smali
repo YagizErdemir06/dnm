@@ -32,7 +32,24 @@
 # direct methods
 .method public constructor <init>(Lcom/android/camera/ui/VerticalZoomView;ZFFI)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010,
+            0x1010,
+            0x1010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$isUseTime",
+            "val$currentValue",
+            "val$targetValue",
+            "val$action"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/ui/VerticalZoomView$a;->e:Lcom/android/camera/ui/VerticalZoomView;
 
     iput-boolean p2, p0, Lcom/android/camera/ui/VerticalZoomView$a;->a:Z
@@ -52,7 +69,16 @@
 # virtual methods
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -63,6 +89,7 @@
 
     move-result p1
 
+    .line 2
     iget-boolean v0, p0, Lcom/android/camera/ui/VerticalZoomView$a;->a:Z
 
     if-eqz v0, :cond_0
@@ -77,8 +104,9 @@
 
     move-result p1
 
+    .line 3
     :cond_0
-    invoke-static {p1}, Lwa/a;->x(F)F
+    invoke-static {p1}, Ld/d/a/k8/y;->w(F)F
 
     move-result v0
 
@@ -94,7 +122,8 @@
 
     if-ltz v0, :cond_2
 
-    invoke-static {p1}, Lwa/a;->x(F)F
+    .line 4
+    invoke-static {p1}, Ld/d/a/k8/y;->w(F)F
 
     move-result v0
 
@@ -112,20 +141,22 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     iget-object v0, p0, Lcom/android/camera/ui/VerticalZoomView$a;->e:Lcom/android/camera/ui/VerticalZoomView;
 
-    iget-object v0, v0, Lcom/android/camera/ui/d;->mOnPositionZoomSelectListener:Lcom/android/camera/ui/d$c;
+    iget-object v0, v0, Ld/d/a/d8/o1;->mOnPositionZoomSelectListener:Ld/d/a/d8/o1$c;
 
     if-eqz v0, :cond_2
 
+    .line 6
     invoke-static {p1}, Ljava/lang/String;->valueOf(F)Ljava/lang/String;
 
     move-result-object p1
 
     iget p0, p0, Lcom/android/camera/ui/VerticalZoomView$a;->d:I
 
-    invoke-interface {v0, p1, p0}, Lcom/android/camera/ui/d$c;->onChangeValue(Ljava/lang/String;I)V
+    invoke-interface {v0, p1, p0}, Ld/d/a/d8/o1$c;->onChangeValue(Ljava/lang/String;I)V
 
     :cond_2
     :goto_0

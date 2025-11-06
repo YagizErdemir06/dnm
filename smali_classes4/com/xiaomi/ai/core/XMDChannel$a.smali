@@ -18,20 +18,20 @@
 
 
 # instance fields
-.field public a:J
+.field private c:J
 
-.field public final synthetic b:Lcom/xiaomi/ai/core/XMDChannel;
+.field public final synthetic d:Lcom/xiaomi/ai/core/XMDChannel;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/ai/core/XMDChannel;J)V
     .locals 0
 
-    iput-object p1, p0, Lcom/xiaomi/ai/core/XMDChannel$a;->b:Lcom/xiaomi/ai/core/XMDChannel;
+    iput-object p1, p0, Lcom/xiaomi/ai/core/XMDChannel$a;->d:Lcom/xiaomi/ai/core/XMDChannel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p2, p0, Lcom/xiaomi/ai/core/XMDChannel$a;->a:J
+    iput-wide p2, p0, Lcom/xiaomi/ai/core/XMDChannel$a;->c:J
 
     return-void
 .end method
@@ -41,7 +41,7 @@
 .method public run()V
     .locals 4
 
-    iget-wide v0, p0, Lcom/xiaomi/ai/core/XMDChannel$a;->a:J
+    iget-wide v0, p0, Lcom/xiaomi/ai/core/XMDChannel$a;->c:J
 
     const-wide/16 v2, 0x0
 
@@ -57,7 +57,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lcom/xiaomi/ai/core/XMDChannel$a;->a:J
+    iget-wide v1, p0, Lcom/xiaomi/ai/core/XMDChannel$a;->c:J
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -67,11 +67,11 @@
 
     const-string v1, "XMDChannel"
 
-    invoke-static {v1, v0}, Lme/a;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Ld/o/b/g/a;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/xiaomi/ai/core/XMDChannel$a;->b:Lcom/xiaomi/ai/core/XMDChannel;
+    iget-object v0, p0, Lcom/xiaomi/ai/core/XMDChannel$a;->d:Lcom/xiaomi/ai/core/XMDChannel;
 
-    iget-wide v1, p0, Lcom/xiaomi/ai/core/XMDChannel$a;->a:J
+    iget-wide v1, p0, Lcom/xiaomi/ai/core/XMDChannel$a;->c:J
 
     invoke-static {v0, v1, v2}, Lcom/xiaomi/ai/core/XMDChannel;->K(Lcom/xiaomi/ai/core/XMDChannel;J)Z
 

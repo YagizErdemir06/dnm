@@ -3,8 +3,8 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lv8/t0;
-.implements Lv8/z0;
+.implements Ld/d/a/m7/g/w0;
+.implements Ld/d/a/m7/g/c1;
 .implements Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$ICallBack;
 .implements Landroid/view/View$OnClickListener;
 
@@ -14,7 +14,7 @@
 
 .field private static final SHOT_TRANSIT_DELAY_TIME:I = 0x7530
 
-.field private static final TAG:Ljava/lang/String; = "FragmentFriendHost"
+.field private static final TAG:Ljava/lang/String;
 
 .field private static final TOP_ALERT_TIME:J = 0x1388L
 
@@ -37,7 +37,16 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 0
+    .locals 1
+
+    .line 1
+    const-class v0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->TAG:Ljava/lang/String;
 
     return-void
 .end method
@@ -45,8 +54,10 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/BaseFragment;-><init>()V
 
+    .line 2
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -60,97 +71,18 @@
     return-void
 .end method
 
-.method public static synthetic Gh(Ljava/lang/String;Lv8/z;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->lambda$onRemoteCallTimerChanged$7(Ljava/lang/String;Lv8/z;)V
-
-    return-void
-.end method
-
-.method public static synthetic Hh(Lv8/z;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->lambda$notifyAfterFrameAvailable$0(Lv8/z;)V
-
-    return-void
-.end method
-
-.method public static synthetic Xh(Lv8/b1;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->lambda$removeFragment$9(Lv8/b1;)V
-
-    return-void
-.end method
-
-.method public static synthetic Zh(Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->lambda$tryStopFriendProcess$1()V
-
-    return-void
-.end method
-
-.method public static synthetic ai(Lv8/z;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->lambda$onFriendModeConnectSuccess$13(Lv8/z;)V
-
-    return-void
-.end method
-
-.method public static synthetic bi(Lv8/z;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->lambda$onFriendModeConnectSuccess$16(Lv8/z;)V
-
-    return-void
-.end method
-
-.method public static synthetic ci(Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->lambda$showInviteDialog$10()V
-
-    return-void
-.end method
-
-.method public static synthetic di(Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;ILv8/w2;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->lambda$onRemoteCallCapture$5(ILv8/w2;)V
-
-    return-void
-.end method
-
-.method public static synthetic ei(Lv8/y2;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->lambda$onRemoteCallTimerChanged$8(Lv8/y2;)V
-
-    return-void
-.end method
-
-.method public static synthetic fi(Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->lambda$isTransitQueueFull$4()V
-
-    return-void
-.end method
-
 .method private getModule()Ljava/util/Optional;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
             "Ljava/util/Optional<",
-            "Lq7/v4;",
+            "Ld/d/a/d7/z7;",
             ">;"
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p0
@@ -161,9 +93,7 @@
 
     move-result-object p0
 
-    new-instance v0, Ly7/m8;
-
-    invoke-direct {v0}, Ly7/m8;-><init>()V
+    sget-object v0, Ld/d/b/x5/a/b/b/j/x;->a:Ld/d/b/x5/a/b/b/j/x;
 
     invoke-virtual {p0, v0}, Ljava/util/Optional;->map(Ljava/util/function/Function;)Ljava/util/Optional;
 
@@ -172,16 +102,18 @@
     return-object p0
 .end method
 
-.method private getStreamingController()Lcom/android/camera/f5;
+.method private getStreamingController()Ld/d/a/r5;
     .locals 0
 
-    invoke-virtual {p0}, Lcom/android/camera/fragment/BaseFragment;->getAppController()Lcom/android/camera/l;
+    .line 1
+    invoke-virtual {p0}, Lcom/android/camera/fragment/BaseFragment;->getAppController()Ld/d/a/n3;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    invoke-interface {p0}, Lcom/android/camera/l;->j2()Lcom/android/camera/f5;
+    .line 2
+    invoke-interface {p0}, Ld/d/a/n3;->M0()Ld/d/a/r5;
 
     move-result-object p0
 
@@ -193,60 +125,22 @@
     return-object p0
 .end method
 
-.method public static synthetic gi(Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->lambda$showInviteDialog$11()V
-
-    return-void
-.end method
-
-.method public static synthetic hi(Ljava/lang/String;Lv8/y2;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->lambda$showNetworkTips$19(Ljava/lang/String;Lv8/y2;)V
-
-    return-void
-.end method
-
-.method public static synthetic ii(Lm2/d1;Lv8/b1;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->lambda$loadTimerFragment$17(Lm2/d1;Lv8/b1;)V
-
-    return-void
-.end method
-
-.method public static synthetic ji(Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;ILv8/w2;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->lambda$callRemoteOnShutterButtonClick$3(ILv8/w2;)V
-
-    return-void
-.end method
-
-.method public static synthetic ki(Lv8/y2;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->lambda$onFriendModeConnectSuccess$15(Lv8/y2;)V
-
-    return-void
-.end method
-
-.method private synthetic lambda$callRemoteOnShutterButtonClick$3(ILv8/w2;)V
+.method private synthetic lambda$callRemoteOnShutterButtonClick$3(ILd/d/a/m7/g/y2;)V
     .locals 1
 
     const/16 v0, 0x64
 
     if-ne p1, v0, :cond_0
 
-    invoke-static {}, Lcom/android/camera/v2;->h4()Z
+    .line 1
+    invoke-static {}, Ld/d/a/d4;->f4()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/android/camera/v2;->Q()I
+    .line 2
+    invoke-static {}, Ld/d/a/d4;->P()I
 
     move-result p1
 
@@ -268,10 +162,12 @@
     :cond_1
     const/16 p1, 0xbe
 
-    invoke-interface {p2, p1}, Lv8/w2;->j8(I)I
+    .line 3
+    invoke-interface {p2, p1}, Ld/d/a/m7/g/y2;->Y7(I)I
 
     move-result p1
 
+    .line 4
     :cond_2
     :goto_0
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendWizard:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
@@ -290,12 +186,14 @@
 .method private synthetic lambda$isTransitQueueFull$4()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mTransitMemoryManager:Lcom/android/camera2/compat/theme/custom/mm/friend/TransitMemoryManager;
 
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/TransitMemoryManager;->clear()V
@@ -303,99 +201,111 @@
     return-void
 .end method
 
-.method private static synthetic lambda$loadTimerFragment$17(Lm2/d1;Lv8/b1;)V
+.method public static synthetic lambda$loadTimerFragment$17(Ld/d/a/l6/e/m/d1;Ld/d/a/m7/g/e1;)V
     .locals 4
 
-    new-instance v0, Lm6/x;
+    .line 1
+    new-instance v0, Ld/d/a/u6/w4/c0;
 
-    invoke-direct {v0}, Lm6/x;-><init>()V
+    invoke-direct {v0}, Ld/d/a/u6/w4/c0;-><init>()V
 
-    const v1, 0xffffff9
+    const/16 v1, 0x14
 
-    const/16 v2, 0x9
+    const v2, 0xffffff9
 
-    const/16 v3, 0x14
+    const/16 v3, 0x9
 
-    invoke-virtual {v0, v3, v1, v2}, Lm6/x;->d(III)Lm6/u;
+    .line 2
+    invoke-virtual {v0, v1, v2, v3}, Ld/d/a/u6/w4/c0;->b(III)Ld/d/a/u6/w4/b0;
 
-    invoke-static {p0}, Lm6/k;->l(Lcom/android/camera/data/data/b;)Lm6/k;
+    .line 3
+    invoke-static {p0}, Ld/d/a/u6/w4/y;->e(Ld/d/a/l6/e/b;)Ld/d/a/u6/w4/y;
 
     move-result-object p0
 
-    invoke-virtual {v0, p0}, Lm6/x;->j(Lm6/y;)V
+    invoke-virtual {v0, p0}, Ld/d/a/u6/w4/c0;->h(Ld/d/a/u6/w4/d0;)V
 
-    invoke-interface {p1, v0}, Lv8/b1;->cb(Lm6/x;)V
+    .line 4
+    invoke-interface {p1, v0}, Ld/d/a/m7/g/e1;->O9(Ld/d/a/u6/w4/c0;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$notifyAfterFrameAvailable$0(Lv8/z;)V
+.method public static synthetic lambda$notifyAfterFrameAvailable$0(Ld/d/a/m7/g/c0;)V
     .locals 2
 
     const/16 v0, 0xd2
 
     const-string v1, "4x3"
 
-    invoke-interface {p0, v0, v1}, Lv8/z;->u1(ILjava/lang/String;)V
+    .line 1
+    invoke-interface {p0, v0, v1}, Ld/d/a/m7/g/c0;->w1(ILjava/lang/String;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onFriendModeConnectSuccess$13(Lv8/z;)V
+.method public static synthetic lambda$onFriendModeConnectSuccess$13(Ld/d/a/m7/g/c0;)V
     .locals 1
 
     const/4 v0, 0x3
 
-    invoke-interface {p0, v0}, Lv8/z;->E7(I)V
+    .line 1
+    invoke-interface {p0, v0}, Ld/d/a/m7/g/c0;->t7(I)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onFriendModeConnectSuccess$14(Lv8/z;)V
+.method public static synthetic lambda$onFriendModeConnectSuccess$14(Ld/d/a/m7/g/c0;)V
     .locals 1
 
     const/4 v0, 0x3
 
-    invoke-interface {p0, v0}, Lv8/z;->t9(I)V
+    .line 1
+    invoke-interface {p0, v0}, Ld/d/a/m7/g/c0;->e9(I)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onFriendModeConnectSuccess$15(Lv8/y2;)V
+.method public static synthetic lambda$onFriendModeConnectSuccess$15(Ld/d/a/m7/g/a3;)V
     .locals 1
 
-    sget-object v0, Lj2/d1;->c1:[I
+    .line 1
+    sget-object v0, Ld/d/a/l6/e/j/c1;->c1:[I
 
-    invoke-interface {p0, v0}, Lv8/y2;->updateConfigItem([I)V
+    invoke-interface {p0, v0}, Ld/d/a/m7/g/a3;->updateConfigItem([I)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onFriendModeConnectSuccess$16(Lv8/z;)V
+.method public static synthetic lambda$onFriendModeConnectSuccess$16(Ld/d/a/m7/g/c0;)V
     .locals 2
 
     const/16 v0, 0xd2
 
     const-string v1, "4x3"
 
-    invoke-interface {p0, v0, v1}, Lv8/z;->u1(ILjava/lang/String;)V
+    .line 1
+    invoke-interface {p0, v0, v1}, Ld/d/a/m7/g/c0;->w1(ILjava/lang/String;)V
 
     return-void
 .end method
 
-.method private synthetic lambda$onRemoteCallCapture$5(ILv8/w2;)V
+.method private synthetic lambda$onRemoteCallCapture$5(ILd/d/a/m7/g/y2;)V
     .locals 0
 
-    invoke-interface {p2, p1}, Lv8/w2;->wf(I)V
+    .line 1
+    invoke-interface {p2, p1}, Ld/d/a/m7/g/y2;->jf(I)V
 
     if-eqz p1, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendWizard:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     if-eqz p0, :cond_0
 
     const/16 p2, 0xad
 
+    .line 3
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p1
@@ -406,25 +316,27 @@
     return-void
 .end method
 
-.method private static synthetic lambda$onRemoteCallCapture$6(Lv8/q;)V
+.method public static synthetic lambda$onRemoteCallCapture$6(Ld/d/a/m7/g/t;)V
     .locals 1
 
     const/16 v0, 0xb4
 
-    invoke-interface {p0, v0}, Lv8/q;->B(I)Z
+    .line 1
+    invoke-interface {p0, v0}, Ld/d/a/m7/g/t;->C(I)Z
 
     return-void
 .end method
 
-.method private static synthetic lambda$onRemoteCallTimerChanged$7(Ljava/lang/String;Lv8/z;)V
+.method public static synthetic lambda$onRemoteCallTimerChanged$7(Ljava/lang/String;Ld/d/a/m7/g/c0;)V
     .locals 0
 
-    invoke-interface {p1, p0}, Lv8/z;->fe(Ljava/lang/String;)V
+    .line 1
+    invoke-interface {p1, p0}, Ld/d/a/m7/g/c0;->Qd(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onRemoteCallTimerChanged$8(Lv8/y2;)V
+.method public static synthetic lambda$onRemoteCallTimerChanged$8(Ld/d/a/m7/g/a3;)V
     .locals 3
 
     const/4 v0, 0x1
@@ -437,7 +349,8 @@
 
     aput v2, v0, v1
 
-    invoke-interface {p0, v0}, Lv8/y2;->updateConfigItem([I)V
+    .line 1
+    invoke-interface {p0, v0}, Ld/d/a/m7/g/a3;->updateConfigItem([I)V
 
     return-void
 .end method
@@ -445,35 +358,41 @@
 .method private synthetic lambda$onStartError$18()V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendHostView:Landroid/widget/ImageView;
 
     if-eqz p0, :cond_0
 
     const/16 v0, 0x8
 
+    .line 2
     invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setVisibility(I)V
 
     :cond_0
     return-void
 .end method
 
-.method private static synthetic lambda$removeFragment$9(Lv8/b1;)V
+.method public static synthetic lambda$removeFragment$9(Ld/d/a/m7/g/e1;)V
     .locals 4
 
-    new-instance v0, Lm6/x;
+    .line 1
+    new-instance v0, Ld/d/a/u6/w4/c0;
 
-    invoke-direct {v0}, Lm6/x;-><init>()V
+    invoke-direct {v0}, Ld/d/a/u6/w4/c0;-><init>()V
 
-    const/4 v1, -0x4
+    const/16 v1, 0x16
 
-    const/16 v2, 0xc
+    const/4 v2, -0x4
 
-    const/16 v3, 0x16
+    const/16 v3, 0xc
 
-    invoke-virtual {v0, v3, v1, v2}, Lm6/x;->d(III)Lm6/u;
+    .line 2
+    invoke-virtual {v0, v1, v2, v3}, Ld/d/a/u6/w4/c0;->b(III)Ld/d/a/u6/w4/b0;
 
-    invoke-interface {p0, v0}, Lv8/b1;->cb(Lm6/x;)V
+    .line 3
+    invoke-interface {p0, v0}, Ld/d/a/m7/g/e1;->O9(Ld/d/a/u6/w4/c0;)V
 
+    .line 4
     sget-object p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->TAG:Ljava/lang/String;
 
     const/4 v0, 0x0
@@ -490,10 +409,12 @@
 .method private synthetic lambda$showInviteDialog$10()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendWizard:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->sendAcceptMsg()V
 
     :cond_0
@@ -503,10 +424,12 @@
 .method private synthetic lambda$showInviteDialog$11()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendWizard:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->sendRejectMsg()V
 
     :cond_0
@@ -516,24 +439,27 @@
 .method private synthetic lambda$showInviteDialog$12(Landroid/content/DialogInterface;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendWizard:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->sendRejectMsg()V
 
     :cond_0
     return-void
 .end method
 
-.method private static synthetic lambda$showNetworkTips$19(Ljava/lang/String;Lv8/y2;)V
+.method public static synthetic lambda$showNetworkTips$19(Ljava/lang/String;Ld/d/a/m7/g/a3;)V
     .locals 3
 
     const/4 v0, 0x0
 
     const-wide/16 v1, 0x1388
 
-    invoke-interface {p1, v0, p0, v1, v2}, Lv8/y2;->alertAiDetectTipHint(ILjava/lang/String;J)V
+    .line 1
+    invoke-interface {p1, v0, p0, v1, v2}, Ld/d/a/m7/g/a3;->alertAiDetectTipHint(ILjava/lang/String;J)V
 
     return-void
 .end method
@@ -541,34 +467,42 @@
 .method private synthetic lambda$tryStopFriendProcess$1()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendWizard:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->sendLeave()V
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendWizard:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->stopFriendShotService()V
 
+    .line 4
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendWizard:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->stopTcpChannel()V
 
+    .line 5
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendWizard:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->release()V
 
+    .line 6
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->stopStreaming()V
 
+    .line 7
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->stopFriendProcess()V
 
     const-string p0, "master"
 
     const-string v0, "click_exit_final"
 
-    invoke-static {p0, v0}, Lk9/a;->m1(Ljava/lang/String;Ljava/lang/String;)V
+    .line 8
+    invoke-static {p0, v0}, Ld/d/a/v7/f;->i1(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -578,15 +512,8 @@
 
     const/4 p1, 0x0
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mCancelDialog:Lmiuix/appcompat/app/AlertDialog;
-
-    return-void
-.end method
-
-.method public static synthetic li(Lv8/z;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->lambda$onFriendModeConnectSuccess$14(Lv8/z;)V
 
     return-void
 .end method
@@ -594,17 +521,18 @@
 .method private loadTimerFragment()V
     .locals 2
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 1
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lid/b;->M5()Z
+    invoke-virtual {p0}, Ld/k/a/b;->A5()Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    invoke-static {}, Lv8/x2;->impl()Ljava/util/Optional;
+    invoke-static {}, Ld/d/a/m7/g/z2;->impl()Ljava/util/Optional;
 
     move-result-object p0
 
@@ -614,21 +542,23 @@
 
     if-nez p0, :cond_0
 
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    .line 2
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lm2/h1;->o0()Lm2/d1;
+    invoke-virtual {p0}, Ld/d/a/l6/e/m/g1;->g0()Ld/d/a/l6/e/m/d1;
 
     move-result-object p0
 
-    invoke-static {}, Lv8/b1;->impl()Ljava/util/Optional;
+    .line 3
+    invoke-static {}, Ld/d/a/m7/g/e1;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lfb/j;
+    new-instance v1, Ld/d/b/x5/a/b/b/j/m;
 
-    invoke-direct {v1, p0}, Lfb/j;-><init>(Lm2/d1;)V
+    invoke-direct {v1, p0}, Ld/d/b/x5/a/b/b/j/m;-><init>(Ld/d/a/l6/e/m/d1;)V
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -636,43 +566,22 @@
     return-void
 .end method
 
-.method public static synthetic mi(Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->lambda$onStartError$18()V
-
-    return-void
-.end method
-
-.method public static synthetic ni(Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;Landroid/content/DialogInterface;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->lambda$tryStopFriendProcess$2(Landroid/content/DialogInterface;)V
-
-    return-void
-.end method
-
-.method public static synthetic oi(Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;Landroid/content/DialogInterface;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->lambda$showInviteDialog$12(Landroid/content/DialogInterface;)V
-
-    return-void
-.end method
-
 .method private onFriendDisplayAcceptInvite()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->stopClient()V
 
-    invoke-static {}, Lg2/b;->h()Ll2/g;
+    .line 2
+    invoke-static {}, Ld/d/a/l6/b;->h()Ld/d/a/l6/e/l/g;
 
     move-result-object v0
 
     const/16 v1, 0xe2
 
-    invoke-virtual {v0, v1}, Ll2/g;->H0(I)V
+    invoke-virtual {v0, v1}, Ld/d/a/l6/e/l/g;->C0(I)V
 
+    .line 3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireContext()Landroid/content/Context;
 
     move-result-object p0
@@ -685,30 +594,43 @@
 
     const/16 v1, 0x8
 
+    .line 4
     invoke-virtual {v0, v1}, Lcom/android/camera/module/loader/base/StartControl;->setResetType(I)Lcom/android/camera/module/loader/base/StartControl;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
+    .line 5
     invoke-virtual {v0, v1}, Lcom/android/camera/module/loader/base/StartControl;->setNeedBlurAnimation(Z)Lcom/android/camera/module/loader/base/StartControl;
 
     move-result-object v0
 
     const/4 v1, 0x2
 
+    .line 6
     invoke-virtual {v0, v1}, Lcom/android/camera/module/loader/base/StartControl;->setViewConfigType(I)Lcom/android/camera/module/loader/base/StartControl;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/Camera;->M3(Lcom/android/camera/module/loader/base/StartControl;)V
+    .line 7
+    invoke-virtual {p0, v0}, Lcom/android/camera/Camera;->B2(Lcom/android/camera/module/loader/base/StartControl;)V
 
     return-void
 .end method
 
 .method private onRemoteCallCapture(Ljava/lang/String;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "time"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -719,14 +641,16 @@
 
     return-void
 
+    .line 2
     :cond_0
-    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->z2()Lq7/v4;
+    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->N1()Ld/d/a/d7/z7;
 
     move-result-object v0
 
     if-eqz v0, :cond_7
 
-    invoke-interface {v0}, Lq7/v4;->U()I
+    .line 3
+    invoke-interface {v0}, Ld/d/a/d7/z7;->U()I
 
     move-result v1
 
@@ -736,6 +660,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mTransitMemoryManager:Lcom/android/camera2/compat/theme/custom/mm/friend/TransitMemoryManager;
 
@@ -745,6 +670,7 @@
 
     if-eqz v1, :cond_3
 
+    .line 5
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendWizard:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     if-eqz p0, :cond_2
@@ -753,27 +679,29 @@
 
     const-string v0, ""
 
+    .line 6
     invoke-virtual {p0, p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->sendExtendMsg(ILjava/lang/String;)V
 
     :cond_2
     return-void
 
+    .line 7
     :cond_3
-    invoke-interface {v0}, Lq7/v4;->x4()Lr7/l;
+    invoke-interface {v0}, Ld/d/a/d7/z7;->s4()Ld/d/a/d7/i8/r;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lr7/l;->g()Z
+    invoke-interface {v1}, Ld/d/a/d7/i8/r;->c()Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
-    invoke-interface {v0}, Lq7/v4;->Ah()Lr7/m;
+    invoke-interface {v0}, Ld/d/a/d7/z7;->ch()Ld/d/a/d7/i8/s;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lr7/m;->L()Z
+    invoke-interface {v1}, Ld/d/a/d7/i8/s;->i1()Z
 
     move-result v1
 
@@ -781,12 +709,13 @@
 
     return-void
 
+    .line 8
     :cond_4
-    invoke-interface {v0}, Lq7/v4;->Ah()Lr7/m;
+    invoke-interface {v0}, Ld/d/a/d7/z7;->ch()Ld/d/a/d7/i8/s;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lr7/m;->s()I
+    invoke-interface {v1}, Ld/d/a/d7/i8/s;->P0()I
 
     move-result v1
 
@@ -796,22 +725,26 @@
 
     return-void
 
+    .line 9
     :cond_5
-    check-cast v0, Ll4/c0;
+    check-cast v0, Ld/d/a/t6/b/i/c0;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lq7/l2;->lp(Z)V
+    invoke-virtual {v0, v1}, Ld/d/a/d7/q7;->ho(Z)V
 
+    .line 10
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->loadTimerFragment()V
 
+    .line 11
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p1
 
     if-eqz p1, :cond_6
 
-    invoke-static {}, Lv8/x2;->impl()Ljava/util/Optional;
+    .line 12
+    invoke-static {}, Ld/d/a/m7/g/z2;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
@@ -823,24 +756,24 @@
 
     return-void
 
+    .line 13
     :cond_6
-    invoke-static {}, Lv8/w2;->impl()Ljava/util/Optional;
+    invoke-static {}, Ld/d/a/m7/g/y2;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lfb/h;
+    new-instance v1, Ld/d/b/x5/a/b/b/j/h;
 
-    invoke-direct {v1, p0, p1}, Lfb/h;-><init>(Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;I)V
+    invoke-direct {v1, p0, p1}, Ld/d/b/x5/a/b/b/j/h;-><init>(Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;I)V
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    invoke-static {}, Lv8/q;->impl()Ljava/util/Optional;
+    .line 14
+    invoke-static {}, Ld/d/a/m7/g/t;->impl()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance p1, Lfb/i;
-
-    invoke-direct {p1}, Lfb/i;-><init>()V
+    sget-object p1, Ld/d/b/x5/a/b/b/j/t;->c:Ld/d/b/x5/a/b/b/j/t;
 
     invoke-virtual {p0, p1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -852,23 +785,23 @@
 .method private onRemoteCallStopTimer()V
     .locals 1
 
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    .line 1
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lm2/h1;->d1()Z
+    invoke-virtual {p0}, Ld/d/a/l6/e/m/g1;->S0()Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    invoke-static {}, Lv8/w2;->impl()Ljava/util/Optional;
+    .line 2
+    invoke-static {}, Ld/d/a/m7/g/y2;->impl()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance v0, Lcom/android/camera/fragment/m3;
-
-    invoke-direct {v0}, Lcom/android/camera/fragment/m3;-><init>()V
+    sget-object v0, Ld/d/b/x5/a/b/b/j/v;->c:Ld/d/b/x5/a/b/b/j/v;
 
     invoke-virtual {p0, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -878,34 +811,34 @@
 
 .method private onRemoteCallTimerChanged(Ljava/lang/String;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
 
-    invoke-static {}, Lv8/z;->impl()Ljava/util/Optional;
+    .line 1
+    invoke-static {}, Ld/d/a/m7/g/c0;->impl()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance v0, Lfb/a;
+    new-instance v0, Ld/d/b/x5/a/b/b/j/a;
 
-    invoke-direct {v0, p1}, Lfb/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Ld/d/b/x5/a/b/b/j/a;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {p0, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    invoke-static {}, Lv8/y2;->impl()Ljava/util/Optional;
+    .line 2
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance p1, Lfb/l;
-
-    invoke-direct {p1}, Lfb/l;-><init>()V
+    sget-object p1, Ld/d/b/x5/a/b/b/j/i;->c:Ld/d/b/x5/a/b/b/j/i;
 
     invoke-virtual {p0, p1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
-
-    return-void
-.end method
-
-.method public static synthetic pi(Lv8/q;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->lambda$onRemoteCallCapture$6(Lv8/q;)V
 
     return-void
 .end method
@@ -913,13 +846,12 @@
 .method private removeFragment()V
     .locals 1
 
-    invoke-static {}, Lv8/b1;->impl()Ljava/util/Optional;
+    .line 1
+    invoke-static {}, Ld/d/a/m7/g/e1;->impl()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance v0, Lfb/n;
-
-    invoke-direct {v0}, Lfb/n;-><init>()V
+    sget-object v0, Ld/d/b/x5/a/b/b/j/c;->c:Ld/d/b/x5/a/b/b/j/c;
 
     invoke-virtual {p0, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -928,65 +860,81 @@
 
 .method private showInviteDialog(Ljava/lang/String;)V
     .locals 13
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "deviceName"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mInviteAlertDialog:Lmiuix/appcompat/app/AlertDialog;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
 
     const/4 v0, 0x0
 
+    .line 3
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mInviteAlertDialog:Lmiuix/appcompat/app/AlertDialog;
 
+    .line 4
     :cond_0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v1
 
-    const v0, 0x7f140542
+    const v0, 0x7f130526
 
+    .line 5
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    const/4 v0, 0x1
+    const v0, 0x7f13050b
 
-    new-array v0, v0, [Ljava/lang/Object;
+    const/4 v3, 0x1
 
-    const/4 v3, 0x0
+    new-array v3, v3, [Ljava/lang/Object;
 
-    aput-object p1, v0, v3
+    const/4 v4, 0x0
 
-    const p1, 0x7f140527
+    aput-object p1, v3, v4
 
-    invoke-virtual {p0, p1, v0}, Landroidx/fragment/app/Fragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    .line 6
+    invoke-virtual {p0, v0, v3}, Landroidx/fragment/app/Fragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
-    const p1, 0x7f1403eb
+    const p1, 0x7f1303d5
 
+    .line 7
     invoke-virtual {p0, p1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    new-instance v5, Lfb/o;
+    new-instance v5, Ld/d/b/x5/a/b/b/j/g;
 
-    invoke-direct {v5, p0}, Lfb/o;-><init>(Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;)V
+    invoke-direct {v5, p0}, Ld/d/b/x5/a/b/b/j/g;-><init>(Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;)V
 
     const/4 v6, 0x0
 
     const/4 v7, 0x0
 
-    const p1, 0x7f1403f3
+    const p1, 0x7f1303dd
 
+    .line 8
     invoke-virtual {p0, p1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
-    new-instance v9, Lfb/p;
+    new-instance v9, Ld/d/b/x5/a/b/b/j/k;
 
-    invoke-direct {v9, p0}, Lfb/p;-><init>(Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;)V
+    invoke-direct {v9, p0}, Ld/d/b/x5/a/b/b/j/k;-><init>(Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;)V
 
     const/4 v10, 0x0
 
@@ -994,15 +942,17 @@
 
     const/4 v12, 0x0
 
-    invoke-static/range {v1 .. v12}, Lcom/android/camera/y4;->F(Landroid/content/Context;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;ZLjava/lang/Runnable;)Lmiuix/appcompat/app/AlertDialog;
+    .line 9
+    invoke-static/range {v1 .. v12}, Ld/d/a/l5;->v(Landroid/content/Context;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;ZLjava/lang/Runnable;)Lmiuix/appcompat/app/AlertDialog;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mInviteAlertDialog:Lmiuix/appcompat/app/AlertDialog;
 
-    new-instance v0, Lfb/q;
+    .line 10
+    new-instance v0, Ld/d/b/x5/a/b/b/j/s;
 
-    invoke-direct {v0, p0}, Lfb/q;-><init>(Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;)V
+    invoke-direct {v0, p0}, Ld/d/b/x5/a/b/b/j/s;-><init>(Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;)V
 
     invoke-virtual {p1, v0}, Landroid/app/Dialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
@@ -1012,6 +962,7 @@
 .method private showNetworkTips()V
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -1020,23 +971,25 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0}, Lwf/b;->e(Landroid/content/Context;)Z
+    .line 2
+    invoke-static {v0}, Ld/o/f/r/k/a;->e(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lm2/h1;->Q0()Z
+    invoke-static {}, Ld/d/a/l6/e/m/g1;->F0()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const v0, 0x7f140c11
+    const v0, 0x7f130b8b
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1056,23 +1009,26 @@
 
     move-result-object p0
 
-    invoke-static {}, Lv8/y2;->impl()Ljava/util/Optional;
+    .line 4
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lfb/k;
+    new-instance v1, Ld/d/b/x5/a/b/b/j/l;
 
-    invoke-direct {v1, p0}, Lfb/k;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, p0}, Ld/d/b/x5/a/b/b/j/l;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    invoke-static {v2}, Lm2/h1;->u1(Z)V
+    .line 5
+    invoke-static {v2}, Ld/d/a/l6/e/m/g1;->c1(Z)V
 
     const-string p0, "master"
 
     const-string v0, "tips_change_to_5g"
 
-    invoke-static {p0, v0}, Lk9/a;->m1(Ljava/lang/String;Ljava/lang/String;)V
+    .line 6
+    invoke-static {p0, v0}, Ld/d/a/v7/f;->i1(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -1081,23 +1037,29 @@
 .method private stopClient()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendWizard:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->stopFriendShotService()V
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendWizard:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->stopClientChannel()V
 
+    .line 4
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendWizard:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->release()V
 
+    .line 5
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->stopStreaming()V
 
+    .line 6
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->stopFriendProcess()V
 
     return-void
@@ -1106,6 +1068,7 @@
 .method private stopFriendProcess()V
     .locals 3
 
+    .line 1
     sget-object v0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -1116,39 +1079,44 @@
 
     invoke-static {v0, v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mExitConfirm:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mTransitMemoryManager:Lcom/android/camera2/compat/theme/custom/mm/friend/TransitMemoryManager;
 
     invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/TransitMemoryManager;->clear()V
 
+    .line 4
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendHostView:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_1
 
     const/16 v1, 0x8
 
+    .line 5
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     :cond_1
     const/4 v0, 0x1
 
+    .line 6
     iput-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mExitConfirm:Z
 
+    .line 7
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->removeFragment()V
 
+    .line 8
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->getModule()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/c0;
-
-    invoke-direct {v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/c0;-><init>()V
+    sget-object v0, Ld/d/b/x5/a/b/b/j/y;->c:Ld/d/b/x5/a/b/b/j/y;
 
     invoke-virtual {p0, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -1157,19 +1125,58 @@
 
 
 # virtual methods
+.method public synthetic Fb()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->lambda$onStartError$18()V
+
+    return-void
+.end method
+
+.method public synthetic Mb()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->lambda$showInviteDialog$10()V
+
+    return-void
+.end method
+
+.method public synthetic Yb()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->lambda$showInviteDialog$11()V
+
+    return-void
+.end method
+
 .method public callRemoteOnCaptureResult(Landroid/net/Uri;ZLjava/lang/String;Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "uri",
+            "isHeic",
+            "title",
+            "isPreview"
+        }
+    .end annotation
 
     if-eqz p4, :cond_0
 
     return-void
 
+    .line 1
     :cond_0
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object p4
 
-    invoke-virtual {p4}, Lid/b;->e3()Z
+    invoke-virtual {p4}, Ld/k/a/b;->X2()Z
 
     move-result p4
 
@@ -1177,6 +1184,7 @@
 
     return-void
 
+    .line 2
     :cond_1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
@@ -1186,8 +1194,9 @@
 
     return-void
 
+    .line 3
     :cond_2
-    invoke-static {}, Luf/t0;->F()Luf/t0;
+    invoke-static {}, Ld/o/f/r/i/x0;->l()Ld/o/f/r/i/x0;
 
     move-result-object p4
 
@@ -1195,14 +1204,23 @@
 
     move-result-object p0
 
-    invoke-virtual {p4, p0, p1, p2, p3}, Luf/t0;->u0(Landroid/content/Context;Landroid/net/Uri;ZLjava/lang/String;)V
+    invoke-virtual {p4, p0, p1, p2, p3}, Ld/o/f/r/i/x0;->r0(Landroid/content/Context;Landroid/net/Uri;ZLjava/lang/String;)V
 
     return-void
 .end method
 
 .method public callRemoteOnCenterMarkChanged(Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "nextValue"
+        }
+    .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mExitConfirm:Z
 
     if-nez v0, :cond_1
@@ -1215,6 +1233,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendWizard:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
@@ -1222,6 +1241,7 @@
 
     const/16 v0, 0xa6
 
+    .line 3
     invoke-virtual {p0, v0, p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->sendExtendMsg(ILjava/lang/String;)V
 
     :cond_1
@@ -1231,7 +1251,16 @@
 
 .method public callRemoteOnGradienterChanged(Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "nextValue"
+        }
+    .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mExitConfirm:Z
 
     if-nez v0, :cond_1
@@ -1244,6 +1273,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendWizard:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
@@ -1251,6 +1281,7 @@
 
     const/16 v0, 0xa5
 
+    .line 3
     invoke-virtual {p0, v0, p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->sendExtendMsg(ILjava/lang/String;)V
 
     :cond_1
@@ -1260,7 +1291,16 @@
 
 .method public callRemoteOnPrepareNormalCapture(Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "newJpegRotation"
+        }
+    .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mExitConfirm:Z
 
     if-nez v0, :cond_1
@@ -1273,6 +1313,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendWizard:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
@@ -1280,6 +1321,7 @@
 
     const/16 v0, 0xa9
 
+    .line 3
     invoke-virtual {p0, v0, p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->sendExtendMsg(ILjava/lang/String;)V
 
     :cond_1
@@ -1289,7 +1331,16 @@
 
 .method public callRemoteOnRatioChanged(Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "newRatio"
+        }
+    .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mExitConfirm:Z
 
     if-nez v0, :cond_1
@@ -1302,31 +1353,37 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendWizard:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     if-eqz v0, :cond_1
 
-    invoke-static {}, Lc8/g;->a0()Lc8/g;
+    .line 3
+    invoke-static {}, Ld/d/a/d7/o8/b/r;->R()Ld/d/a/d7/o8/b/r;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lc8/g;->A()Lya/f;
+    invoke-virtual {v0}, Ld/d/a/d7/o8/b/r;->w()Ld/d/b/g4;
 
     move-result-object v0
 
-    invoke-static {v0}, Lya/g;->h8(Lya/f;)Z
+    invoke-static {v0}, Ld/d/b/h4;->f8(Ld/d/b/g4;)Z
 
     move-result v0
 
+    .line 4
     new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;
 
     invoke-direct {v1}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;-><init>()V
 
+    .line 5
     invoke-virtual {v1, v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->setSupportedRealSquare(Z)V
 
+    .line 6
     invoke-virtual {v1, p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->setRatio(Ljava/lang/String;)V
 
+    .line 7
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendWizard:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     const/16 p1, 0xaf
@@ -1344,7 +1401,16 @@
 
 .method public callRemoteOnReferenceChanged(Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "nextValue"
+        }
+    .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mExitConfirm:Z
 
     if-nez v0, :cond_1
@@ -1357,11 +1423,13 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendWizard:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     if-eqz p0, :cond_1
 
+    .line 3
     invoke-virtual {p0, v1, p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->sendExtendMsg(ILjava/lang/String;)V
 
     :cond_1
@@ -1371,7 +1439,16 @@
 
 .method public callRemoteOnReferenceTypeChanged(Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "nextValue"
+        }
+    .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mExitConfirm:Z
 
     if-nez v0, :cond_1
@@ -1384,6 +1461,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendWizard:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
@@ -1391,6 +1469,7 @@
 
     const/16 v0, 0xa4
 
+    .line 3
     invoke-virtual {p0, v0, p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->sendExtendMsg(ILjava/lang/String;)V
 
     :cond_1
@@ -1400,7 +1479,16 @@
 
 .method public callRemoteOnShutterButtonClick(I)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mode"
+        }
+    .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mExitConfirm:Z
 
     if-nez v0, :cond_1
@@ -1413,17 +1501,20 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendWizard:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     if-eqz v0, :cond_1
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mTransitMemoryManager:Lcom/android/camera2/compat/theme/custom/mm/friend/TransitMemoryManager;
 
     invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/TransitMemoryManager;->addTransitMemory()I
 
     move-result v0
 
+    .line 4
     sget-object v1, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1446,13 +1537,14 @@
 
     invoke-static {v1, v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {}, Lv8/w2;->impl()Ljava/util/Optional;
+    .line 5
+    invoke-static {}, Ld/d/a/m7/g/y2;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lfb/g;
+    new-instance v1, Ld/d/b/x5/a/b/b/j/n;
 
-    invoke-direct {v1, p0, p1}, Lfb/g;-><init>(Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;I)V
+    invoke-direct {v1, p0, p1}, Ld/d/b/x5/a/b/b/j/n;-><init>(Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;I)V
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -1464,6 +1556,7 @@
 .method public callRemoteOnStopTimer()V
     .locals 4
 
+    .line 1
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mExitConfirm:Z
 
     if-nez v0, :cond_1
@@ -1476,6 +1569,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mTransitMemoryManager:Lcom/android/camera2/compat/theme/custom/mm/friend/TransitMemoryManager;
 
@@ -1483,12 +1577,14 @@
 
     move-result v0
 
+    .line 3
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
+    .line 4
     sget-object v1, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1511,6 +1607,7 @@
 
     invoke-static {v1, v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 5
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendWizard:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     if-eqz p0, :cond_1
@@ -1519,6 +1616,7 @@
 
     const-string v1, ""
 
+    .line 6
     invoke-virtual {p0, v0, v1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->sendExtendMsg(ILjava/lang/String;)V
 
     :cond_1
@@ -1528,7 +1626,16 @@
 
 .method public callRemoteOnTimerChanged(Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "nextValue"
+        }
+    .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mExitConfirm:Z
 
     if-nez v0, :cond_1
@@ -1541,6 +1648,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendWizard:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
@@ -1548,6 +1656,7 @@
 
     const/16 v0, 0xa2
 
+    .line 3
     invoke-virtual {p0, v0, p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->sendExtendMsg(ILjava/lang/String;)V
 
     :cond_1
@@ -1557,7 +1666,16 @@
 
 .method public callRemoteOnZoomRatioChanged(F)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "zoomRatio"
+        }
+    .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mExitConfirm:Z
 
     if-nez v0, :cond_1
@@ -1570,6 +1688,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendWizard:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
@@ -1577,6 +1696,7 @@
 
     const/16 v0, 0xa1
 
+    .line 3
     invoke-static {p1}, Ljava/lang/String;->valueOf(F)Ljava/lang/String;
 
     move-result-object p1
@@ -1585,6 +1705,14 @@
 
     :cond_1
     :goto_0
+    return-void
+.end method
+
+.method public synthetic gc(Landroid/content/DialogInterface;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->lambda$showInviteDialog$12(Landroid/content/DialogInterface;)V
+
     return-void
 .end method
 
@@ -1599,7 +1727,7 @@
 .method public getLayoutResourceId()I
     .locals 0
 
-    const p0, 0x7f0e00e6
+    const p0, 0x7f0e00d7
 
     return p0
 .end method
@@ -1607,6 +1735,7 @@
 .method public getTransitQueueValue()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mTransitMemoryManager:Lcom/android/camera2/compat/theme/custom/mm/friend/TransitMemoryManager;
 
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/TransitMemoryManager;->getTransitQueueValue()I
@@ -1618,9 +1747,18 @@
 
 .method public initView(Landroid/view/View;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
-    const v0, 0x7f0b0365
+    const v0, 0x7f0b0313
 
+    .line 1
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -1629,12 +1767,14 @@
 
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendHostView:Landroid/widget/ImageView;
 
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    .line 2
+    invoke-virtual {p1}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p1
 
     check-cast p1, Landroid/widget/FrameLayout$LayoutParams;
 
+    .line 3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1643,7 +1783,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0704e0
+    const v1, 0x7f0704b4
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -1653,20 +1793,24 @@
 
     iput v0, p1, Landroid/widget/FrameLayout$LayoutParams;->rightMargin:I
 
-    invoke-static {}, Ly2/b;->n0()I
+    .line 4
+    invoke-static {}, Ld/d/a/n6/b;->n0()I
 
     move-result v0
 
     iput v0, p1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
+    .line 5
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendHostView:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
+    .line 6
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendHostView:Landroid/widget/ImageView;
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p1, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    .line 7
     new-instance p1, Lcom/android/camera2/compat/theme/custom/mm/friend/TransitMemoryManager;
 
     invoke-direct {p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/TransitMemoryManager;-><init>()V
@@ -1679,6 +1823,7 @@
 .method public isTransitQueueFull()Z
     .locals 5
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mTransitMemoryManager:Lcom/android/camera2/compat/theme/custom/mm/friend/TransitMemoryManager;
 
     if-nez v0, :cond_0
@@ -1687,6 +1832,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/TransitMemoryManager;->isTransitQueueFull()Z
 
@@ -1694,19 +1840,21 @@
 
     if-eqz v0, :cond_1
 
+    .line 3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v1
 
-    const v2, 0x7f14053c
+    const v2, 0x7f130520
 
-    invoke-static {v1, v2}, Lcom/android/camera/q5;->c(Landroid/content/Context;I)V
+    invoke-static {v1, v2}, Ld/d/a/x5;->c(Landroid/content/Context;I)V
 
+    .line 4
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mHandler:Landroid/os/Handler;
 
-    new-instance v2, Lfb/d;
+    new-instance v2, Ld/d/b/x5/a/b/b/j/j;
 
-    invoke-direct {v2, p0}, Lfb/d;-><init>(Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;)V
+    invoke-direct {v2, p0}, Ld/d/b/x5/a/b/b/j/j;-><init>(Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;)V
 
     const-wide/16 v3, 0x7530
 
@@ -1716,22 +1864,41 @@
 
     const-string v1, "tips_picture_transmission"
 
-    invoke-static {p0, v1}, Lk9/a;->m1(Ljava/lang/String;Ljava/lang/String;)V
+    .line 5
+    invoke-static {p0, v1}, Ld/d/a/v7/f;->i1(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     return v0
 .end method
 
+.method public synthetic nb(ILd/d/a/m7/g/y2;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->lambda$callRemoteOnShutterButtonClick$3(ILd/d/a/m7/g/y2;)V
+
+    return-void
+.end method
+
 .method public notifyAfterFrameAvailable(I)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "arrivedType"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->notifyAfterFrameAvailable(I)V
 
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    .line 2
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lm2/h1;->G0()I
+    invoke-virtual {p1}, Ld/d/a/l6/e/m/g1;->x0()I
 
     move-result p1
 
@@ -1755,6 +1922,7 @@
 
     if-eq p1, v1, :cond_1
 
+    .line 3
     sget-object p1, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -1772,24 +1940,24 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
-    invoke-static {}, Luf/t0;->F()Luf/t0;
+    invoke-static {}, Ld/o/f/r/i/x0;->l()Ld/o/f/r/i/x0;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Luf/t0;->H()Z
+    invoke-virtual {p1}, Ld/o/f/r/i/x0;->n()Z
 
     move-result p1
 
     if-eqz p1, :cond_3
 
-    invoke-static {}, Lv8/z;->impl()Ljava/util/Optional;
+    .line 5
+    invoke-static {}, Ld/d/a/m7/g/c0;->impl()Ljava/util/Optional;
 
     move-result-object p1
 
-    new-instance v1, Lfb/r;
-
-    invoke-direct {v1}, Lfb/r;-><init>()V
+    sget-object v1, Ld/d/b/x5/a/b/b/j/b;->c:Ld/d/b/x5/a/b/b/j/b;
 
     invoke-virtual {p1, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -1798,10 +1966,12 @@
     :cond_2
     const-string v0, "16x9"
 
+    .line 6
     :cond_3
     :goto_0
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->callRemoteOnRatioChanged(Ljava/lang/String;)V
 
+    .line 7
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->loadTimerFragment()V
 
     return-void
@@ -1809,7 +1979,18 @@
 
 .method public notifyDataChanged(II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "dataChangeType",
+            "currentMode"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/android/camera/fragment/BaseFragment;->notifyDataChanged(II)V
 
     return-void
@@ -1817,6 +1998,19 @@
 
 .method public notifyThemeChanged(ILjava/util/List;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "newMode",
+            "animateInElements",
+            "themeChangeType"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -1826,25 +2020,29 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2, p3}, Lcom/android/camera/fragment/BaseFragment;->notifyThemeChanged(ILjava/util/List;I)V
 
-    invoke-static {}, Lf2/a;->e()Lf2/a;
+    .line 2
+    invoke-static {}, Ld/d/a/k6/c;->e()Ld/d/a/k6/c;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lf2/a;->c()Z
+    invoke-virtual {p1}, Ld/d/a/k6/c;->c()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
+    .line 3
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendHostView:Landroid/widget/ImageView;
 
-    const p2, 0x7f080ee9
+    const p2, 0x7f080eb3
 
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    .line 4
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object p1
 
@@ -1852,14 +2050,15 @@
 
     const p2, 0x7f060076
 
-    invoke-virtual {p1, p0, p2}, Lf2/e;->p(Landroid/widget/ImageView;I)V
+    invoke-virtual {p1, p0, p2}, Ld/d/a/k6/f;->p(Landroid/widget/ImageView;I)V
 
     goto :goto_0
 
+    .line 5
     :cond_0
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendHostView:Landroid/widget/ImageView;
 
-    const p1, 0x7f080eea
+    const p1, 0x7f080eb4
 
     invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -1873,9 +2072,19 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->onAttach(Landroid/content/Context;)V
 
+    .line 2
     sget-object v0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -1886,6 +2095,7 @@
 
     invoke-static {v0, v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 3
     new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     check-cast p1, Lcom/android/camera/ActivityBase;
@@ -1894,8 +2104,10 @@
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendWizard:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
+    .line 4
     invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->onAttach()V
 
+    .line 5
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->startFriendProcess()V
 
     return-void
@@ -1903,7 +2115,16 @@
 
 .method public onBackEvent(I)Z
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "callingFrom"
+        }
+    .end annotation
 
+    .line 1
     sget-object v0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1930,23 +2151,23 @@
 
     if-ne p1, v0, :cond_1
 
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    .line 2
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lm2/h1;->d1()Z
+    invoke-virtual {p1}, Ld/d/a/l6/e/m/g1;->S0()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    invoke-static {}, Lv8/w2;->impl()Ljava/util/Optional;
+    .line 3
+    invoke-static {}, Ld/d/a/m7/g/y2;->impl()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance p1, Lcom/android/camera/fragment/m3;
-
-    invoke-direct {p1}, Lcom/android/camera/fragment/m3;-><init>()V
+    sget-object p1, Ld/d/b/x5/a/b/b/j/v;->c:Ld/d/b/x5/a/b/b/j/v;
 
     invoke-virtual {p0, p1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -1957,8 +2178,10 @@
 
     const-string v0, "click_back_exit"
 
-    invoke-static {p1, v0}, Lk9/a;->m1(Ljava/lang/String;Ljava/lang/String;)V
+    .line 4
+    invoke-static {p1, v0}, Ld/d/a/v7/f;->i1(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->tryStopFriendProcess()Z
 
     move-result p0
@@ -1971,17 +2194,27 @@
 
 .method public onClick(Landroid/view/View;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result p1
 
-    const v0, 0x7f0b0365
+    const v0, 0x7f0b0313
 
     if-eq p1, v0, :cond_0
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->tryStopFriendProcess()Z
 
@@ -1989,7 +2222,8 @@
 
     const-string p1, "click_exit"
 
-    invoke-static {p0, p1}, Lk9/a;->m1(Ljava/lang/String;Ljava/lang/String;)V
+    .line 3
+    invoke-static {p0, p1}, Ld/d/a/v7/f;->i1(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -1998,8 +2232,10 @@
 .method public onDestroy()V
     .locals 3
 
+    .line 1
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroy()V
 
+    .line 2
     sget-object v0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -2010,10 +2246,12 @@
 
     invoke-static {v0, v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 3
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendWizard:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     if-eqz p0, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->stopFriendShotService()V
 
     :cond_0
@@ -2023,8 +2261,10 @@
 .method public onDetach()V
     .locals 3
 
+    .line 1
     invoke-super {p0}, Lcom/android/camera/fragment/BaseFragment;->onDetach()V
 
+    .line 2
     sget-object v0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -2035,10 +2275,12 @@
 
     invoke-static {v0, v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 3
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendWizard:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     if-eqz p0, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->onDetach()V
 
     :cond_0
@@ -2047,7 +2289,18 @@
 
 .method public onExtendMsgFromRemoteReceived(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "ip",
+            "message"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result p1
@@ -2066,6 +2319,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     :try_start_0
     new-instance p1, Lorg/json/JSONObject;
@@ -2074,12 +2328,14 @@
 
     const-string p2, "type"
 
+    .line 3
     invoke-virtual {p1, p2}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
 
     move-result p2
 
     const-string v0, "content"
 
+    .line 4
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -2098,16 +2354,19 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->onRemoteCallStopTimer()V
 
     goto :goto_0
 
+    .line 6
     :cond_2
     invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->onRemoteCallTimerChanged(Ljava/lang/String;)V
 
     goto :goto_0
 
+    .line 7
     :cond_3
     invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->onRemoteCallCapture(Ljava/lang/String;)V
     :try_end_0
@@ -2118,6 +2377,7 @@
     :catch_0
     move-exception p0
 
+    .line 8
     sget-object p1, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -2148,10 +2408,12 @@
 .method public onFriendModeCancel()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->stopFriendProcess()V
 
     const-string p0, "It\'s over before it starts"
 
+    .line 2
     invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/utils/FriendModeUtils;->showDebugToast(Ljava/lang/String;)V
 
     return-void
@@ -2159,7 +2421,16 @@
 
 .method public onFriendModeConnectSuccess(Ljava/lang/String;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "ip"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result p1
@@ -2172,117 +2443,120 @@
 
     if-eqz p1, :cond_3
 
+    .line 2
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendHostView:Landroid/widget/ImageView;
 
     if-eqz p1, :cond_0
 
     const/4 v0, 0x0
 
+    .line 3
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
 
+    .line 4
     :cond_0
-    invoke-static {}, Lv8/g3;->impl()Ljava/util/Optional;
+    invoke-static {}, Ld/d/a/m7/g/e3;->impl()Ljava/util/Optional;
 
     move-result-object p1
 
-    new-instance v0, Ll4/g1;
-
-    invoke-direct {v0}, Ll4/g1;-><init>()V
+    sget-object v0, Ld/d/b/x5/a/b/b/j/u;->c:Ld/d/b/x5/a/b/b/j/u;
 
     invoke-virtual {p1, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
+    .line 5
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->loadTimerFragment()V
 
-    invoke-static {}, Lcom/android/camera/v2;->w4()Z
+    .line 6
+    invoke-static {}, Ld/d/a/d4;->u4()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    invoke-static {}, Lv8/z;->impl()Ljava/util/Optional;
+    .line 7
+    invoke-static {}, Ld/d/a/m7/g/c0;->impl()Ljava/util/Optional;
 
     move-result-object p1
 
-    new-instance v0, Lfb/s;
-
-    invoke-direct {v0}, Lfb/s;-><init>()V
+    sget-object v0, Ld/d/b/x5/a/b/b/j/e;->c:Ld/d/b/x5/a/b/b/j/e;
 
     invoke-virtual {p1, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
     goto :goto_0
 
+    .line 8
     :cond_1
-    invoke-static {}, Lcom/android/camera/v2;->u6()Z
+    invoke-static {}, Ld/d/a/d4;->s6()Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    invoke-static {}, Lv8/z;->impl()Ljava/util/Optional;
+    .line 9
+    invoke-static {}, Ld/d/a/m7/g/c0;->impl()Ljava/util/Optional;
 
     move-result-object p1
 
-    new-instance v0, Lfb/t;
-
-    invoke-direct {v0}, Lfb/t;-><init>()V
+    sget-object v0, Ld/d/b/x5/a/b/b/j/p;->c:Ld/d/b/x5/a/b/b/j/p;
 
     invoke-virtual {p1, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
     goto :goto_0
 
+    .line 10
     :cond_2
-    invoke-static {}, Lv8/y2;->impl()Ljava/util/Optional;
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl()Ljava/util/Optional;
 
     move-result-object p1
 
-    new-instance v0, Lfb/b;
-
-    invoke-direct {v0}, Lfb/b;-><init>()V
+    sget-object v0, Ld/d/b/x5/a/b/b/j/o;->c:Ld/d/b/x5/a/b/b/j/o;
 
     invoke-virtual {p1, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
+    .line 11
     :goto_0
-    invoke-static {}, Lv8/z;->impl()Ljava/util/Optional;
+    invoke-static {}, Ld/d/a/m7/g/c0;->impl()Ljava/util/Optional;
 
     move-result-object p1
 
-    new-instance v0, Lfb/c;
-
-    invoke-direct {v0}, Lfb/c;-><init>()V
+    sget-object v0, Ld/d/b/x5/a/b/b/j/f;->c:Ld/d/b/x5/a/b/b/j/f;
 
     invoke-virtual {p1, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    invoke-static {}, Lv8/k;->impl()Ljava/util/Optional;
+    .line 12
+    invoke-static {}, Ld/d/a/m7/g/o;->impl()Ljava/util/Optional;
 
     move-result-object p1
 
-    new-instance v0, Ls5/f;
-
-    invoke-direct {v0}, Ls5/f;-><init>()V
+    sget-object v0, Ld/d/b/x5/a/b/b/j/z;->c:Ld/d/b/x5/a/b/b/j/z;
 
     invoke-virtual {p1, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
+    .line 13
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
 
-    const v0, 0x7f140c38
+    const v0, 0x7f130bb2
 
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/android/camera/q5;->f(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Ld/d/a/x5;->f(Landroid/content/Context;Ljava/lang/String;)V
 
+    .line 14
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->startStreaming()V
 
+    .line 15
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->showNetworkTips()V
 
     const-string p0, "master"
 
     const-string p1, "connect_success"
 
-    invoke-static {p0, p1}, Lk9/a;->m1(Ljava/lang/String;Ljava/lang/String;)V
+    .line 16
+    invoke-static {p0, p1}, Ld/d/a/v7/f;->i1(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3
     return-void
@@ -2291,6 +2565,7 @@
 .method public onFriendModeServerReceiveCancelConnect()V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result v0
@@ -2303,14 +2578,17 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mInviteAlertDialog:Lmiuix/appcompat/app/AlertDialog;
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
 
     const/4 v0, 0x0
 
+    .line 4
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mInviteAlertDialog:Lmiuix/appcompat/app/AlertDialog;
 
     :cond_0
@@ -2319,7 +2597,16 @@
 
 .method public onFriendModeServerReceiveConnect(Ljava/lang/String;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "deviceName"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result v0
@@ -2332,6 +2619,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->showInviteDialog(Ljava/lang/String;)V
 
     :cond_0
@@ -2341,8 +2629,10 @@
 .method public onPause()V
     .locals 3
 
+    .line 1
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onPause()V
 
+    .line 2
     sget-object v0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -2353,6 +2643,7 @@
 
     invoke-static {v0, v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -2363,18 +2654,22 @@
 
     return-void
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mCancelDialog:Lmiuix/appcompat/app/AlertDialog;
 
     if-eqz v0, :cond_1
 
+    .line 5
     invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
 
+    .line 6
     :cond_1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendWizard:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     if-eqz p0, :cond_2
 
+    .line 7
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->onPause()V
 
     :cond_2
@@ -2384,23 +2679,27 @@
 .method public onRemoteCancel()V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->stopFriendProcess()V
 
+    .line 3
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->stopStreaming()V
 
+    .line 4
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p0
 
-    const v0, 0x7f140c15
+    const v0, 0x7f130b8f
 
-    invoke-static {p0, v0}, Lcom/android/camera/q5;->c(Landroid/content/Context;I)V
+    invoke-static {p0, v0}, Ld/d/a/x5;->c(Landroid/content/Context;I)V
 
     :cond_0
     return-void
@@ -2411,15 +2710,17 @@
 
     const-string v0, "other device error"
 
+    .line 1
     invoke-static {v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/utils/FriendModeUtils;->showDebugToast(Ljava/lang/String;)V
 
+    .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p0
 
-    const v0, 0x7f140777
+    const v0, 0x7f1306f6
 
-    invoke-static {p0, v0}, Lcom/android/camera/q5;->c(Landroid/content/Context;I)V
+    invoke-static {p0, v0}, Ld/d/a/x5;->c(Landroid/content/Context;I)V
 
     return-void
 .end method
@@ -2427,14 +2728,17 @@
 .method public onRemoteServerClose()V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->stopStreaming()V
 
+    .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->onRemoteCancel()V
 
     :cond_0
@@ -2444,8 +2748,10 @@
 .method public onResume()V
     .locals 4
 
+    .line 1
     invoke-super {p0}, Lcom/android/camera/fragment/BaseFragment;->onResume()V
 
+    .line 2
     sget-object v0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -2456,25 +2762,29 @@
 
     invoke-static {v0, v3, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {}, Luf/t0;->F()Luf/t0;
+    .line 3
+    invoke-static {}, Ld/o/f/r/i/x0;->l()Ld/o/f/r/i/x0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Luf/t0;->H()Z
+    invoke-virtual {v0}, Ld/o/f/r/i/x0;->n()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 4
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendHostView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
+    .line 5
     :cond_0
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendWizard:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     if-eqz p0, :cond_1
 
+    .line 6
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->onResume()V
 
     :cond_1
@@ -2484,6 +2794,7 @@
 .method public onServerTimeOut()V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result v0
@@ -2496,16 +2807,19 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
-    const v1, 0x7f140c14
+    const v1, 0x7f130b8e
 
-    invoke-static {v0, v1}, Lcom/android/camera/q5;->c(Landroid/content/Context;I)V
+    invoke-static {v0, v1}, Ld/d/a/x5;->c(Landroid/content/Context;I)V
 
+    .line 3
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->stopFriendProcess()V
 
+    .line 4
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->stopStreaming()V
 
     :cond_0
@@ -2514,7 +2828,16 @@
 
 .method public onStartError(Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeError;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "error"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result v0
@@ -2527,6 +2850,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 2
     sget-object v0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2537,7 +2861,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v2
 
@@ -2553,6 +2877,7 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 3
     invoke-virtual {p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeError;->getErrorType()I
 
     move-result v0
@@ -2563,10 +2888,12 @@
 
     const-string p0, "IDM error"
 
+    .line 4
     invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/utils/FriendModeUtils;->showDebugToast(Ljava/lang/String;)V
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-virtual {p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeError;->getErrorType()I
 
@@ -2578,15 +2905,17 @@
 
     const-string p1, "Socket error"
 
+    .line 6
     invoke-static {p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/utils/FriendModeUtils;->showDebugToast(Ljava/lang/String;)V
 
+    .line 7
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
 
-    new-instance v0, Lfb/m;
+    new-instance v0, Ld/d/b/x5/a/b/b/j/q;
 
-    invoke-direct {v0, p0}, Lfb/m;-><init>(Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;)V
+    invoke-direct {v0, p0}, Ld/d/b/x5/a/b/b/j/q;-><init>(Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;)V
 
     invoke-virtual {p1, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
@@ -2597,7 +2926,18 @@
 
 .method public onStreamStart(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "ip",
+            "param"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result v0
@@ -2610,10 +2950,13 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {p1}, Lcom/android/camera/v2;->B8(Ljava/lang/String;)V
+    .line 2
+    invoke-static {p1}, Ld/d/a/d4;->x8(Ljava/lang/String;)V
 
-    invoke-static {p2}, Lcom/android/camera/v2;->C8(Ljava/lang/String;)V
+    .line 3
+    invoke-static {p2}, Ld/d/a/d4;->y8(Ljava/lang/String;)V
 
+    .line 4
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->onFriendDisplayAcceptInvite()V
 
     :cond_0
@@ -2623,12 +2966,14 @@
 .method public onSucceedCaptureCallBackFromRemote()V
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 2
     sget-object v0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -2639,12 +2984,15 @@
 
     invoke-static {v0, v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mTransitMemoryManager:Lcom/android/camera2/compat/theme/custom/mm/friend/TransitMemoryManager;
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/TransitMemoryManager;->reduceTransitMemory()I
 
+    .line 5
     :cond_0
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mHandler:Landroid/os/Handler;
 
@@ -2658,6 +3006,19 @@
 
 .method public provideAnimateElement(ILjava/util/List;I)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "newMode",
+            "animateInElements",
+            "resetType"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -2667,48 +3028,50 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2, p3}, Lcom/android/camera/fragment/BaseFragment;->provideAnimateElement(ILjava/util/List;I)V
 
-    const/4 p2, 0x0
+    const/16 p2, 0x8
 
-    const/16 v0, 0x8
+    const/4 v0, 0x0
 
-    if-ne p3, v0, :cond_2
+    if-ne p3, p2, :cond_2
 
+    .line 2
     sget-object v1, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->TAG:Ljava/lang/String;
 
-    const-string v2, "provideAnimateElement: RESET_TYPE_SWITCH_MODE"
+    new-array v2, v0, [Ljava/lang/Object;
 
-    new-array v3, p2, [Ljava/lang/Object;
+    const-string v3, "provideAnimateElement: RESET_TYPE_SWITCH_MODE"
 
-    invoke-static {v1, v2, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v3, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {}, Luf/t0;->F()Luf/t0;
+    .line 3
+    invoke-static {}, Ld/o/f/r/i/x0;->l()Ld/o/f/r/i/x0;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Luf/t0;->H()Z
+    invoke-virtual {v1}, Ld/o/f/r/i/x0;->n()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
+    .line 4
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendHostView:Landroid/widget/ImageView;
 
     const/16 p3, 0xa3
 
     if-ne p1, p3, :cond_0
 
-    goto :goto_0
-
-    :cond_0
     move p2, v0
 
-    :goto_0
+    :cond_0
     invoke-virtual {p0, p2}, Landroid/widget/ImageView;->setVisibility(I)V
 
     return-void
 
+    .line 5
     :cond_1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->stopClient()V
 
@@ -2717,14 +3080,16 @@
 
     if-ne p3, p1, :cond_3
 
+    .line 6
     sget-object p1, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->TAG:Ljava/lang/String;
+
+    new-array p2, v0, [Ljava/lang/Object;
 
     const-string p3, "provideAnimateElement: RESET_TYPE_TIME_OUT"
 
-    new-array p2, p2, [Ljava/lang/Object;
-
     invoke-static {p1, p3, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 7
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->stopClient()V
 
     :cond_3
@@ -2733,6 +3098,17 @@
 
 .method public provideRotateItem(Ljava/util/List;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "pendingRotateItems",
+            "newDegree"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2742,35 +3118,74 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/android/camera/fragment/BaseFragment;->provideRotateItem(Ljava/util/List;I)V
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendHostView:Landroid/widget/ImageView;
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-interface {p1, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_0
     return-void
 .end method
 
-.method public register(Lu8/d;)V
+.method public synthetic qb()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->lambda$isTransitQueueFull$4()V
+
+    return-void
+.end method
+
+.method public synthetic qc()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->lambda$tryStopFriendProcess$1()V
+
+    return-void
+.end method
+
+.method public register(Ld/d/a/m7/c;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "modeCoordinator"
+        }
+    .end annotation
 
-    invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->register(Lu8/d;)V
+    .line 1
+    invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->register(Ld/d/a/m7/c;)V
 
-    invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->registerBackStack(Lu8/d;Lv8/z0;)V
+    .line 2
+    invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->registerBackStack(Ld/d/a/m7/c;Ld/d/a/m7/g/c1;)V
 
-    const-class v0, Lv8/t0;
+    .line 3
+    const-class v0, Ld/d/a/m7/g/w0;
 
-    invoke-interface {p1, v0, p0}, Lu8/d;->d(Ljava/lang/Class;Lu8/a;)V
+    invoke-interface {p1, v0, p0}, Ld/d/a/m7/c;->b(Ljava/lang/Class;Ld/d/a/m7/a;)V
 
     return-void
 .end method
 
 .method public showOrHideFriendHostSign(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isShow"
+        }
+    .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendHostView:Landroid/widget/ImageView;
 
     if-eqz p0, :cond_1
@@ -2784,6 +3199,7 @@
     :cond_0
     const/16 p1, 0x8
 
+    .line 2
     :goto_0
     invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setVisibility(I)V
 
@@ -2794,6 +3210,7 @@
 .method public startFriendProcess()V
     .locals 4
 
+    .line 1
     sget-object v0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -2804,42 +3221,44 @@
 
     invoke-static {v0, v3, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     iput-boolean v1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mExitConfirm:Z
 
-    invoke-static {}, Luf/t0;->F()Luf/t0;
+    .line 3
+    invoke-static {}, Ld/o/f/r/i/x0;->l()Ld/o/f/r/i/x0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Luf/t0;->H()Z
+    invoke-virtual {v0}, Ld/o/f/r/i/x0;->n()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-static {}, Luf/t0;->F()Luf/t0;
+    invoke-static {}, Ld/o/f/r/i/x0;->l()Ld/o/f/r/i/x0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Luf/t0;->I()Z
+    invoke-virtual {v0}, Ld/o/f/r/i/x0;->o()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 4
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mFriendWizard:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->startFriendShotService()V
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->getModule()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/b0;
-
-    invoke-direct {v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/b0;-><init>()V
+    sget-object v0, Ld/d/b/x5/a/b/b/j/w;->c:Ld/d/b/x5/a/b/b/j/w;
 
     invoke-virtual {p0, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -2850,12 +3269,14 @@
 .method public startStreaming()V
     .locals 3
 
-    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->getStreamingController()Lcom/android/camera/f5;
+    .line 1
+    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->getStreamingController()Ld/d/a/r5;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     sget-object v0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -2868,7 +3289,8 @@
 
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/f5;->z(Z)V
+    .line 3
+    invoke-virtual {p0, v0}, Ld/d/a/r5;->z(Z)V
 
     :cond_0
     return-void
@@ -2877,12 +3299,14 @@
 .method public stopStreaming()V
     .locals 3
 
-    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->getStreamingController()Lcom/android/camera/f5;
+    .line 1
+    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->getStreamingController()Ld/d/a/r5;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     sget-object v0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -2893,7 +3317,8 @@
 
     invoke-static {v0, v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-virtual {p0}, Lcom/android/camera/f5;->A()V
+    .line 3
+    invoke-virtual {p0}, Ld/d/a/r5;->A()V
 
     :cond_0
     return-void
@@ -2902,6 +3327,7 @@
 .method public tryStopFriendProcess()Z
     .locals 11
 
+    .line 1
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mExitConfirm:Z
 
     const/4 v1, 0x0
@@ -2910,6 +3336,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
@@ -2919,6 +3346,7 @@
 
     return v1
 
+    .line 3
     :cond_1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mCancelDialog:Lmiuix/appcompat/app/AlertDialog;
 
@@ -2926,58 +3354,64 @@
 
     return v1
 
+    .line 4
     :cond_2
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f140525
+    const v1, 0x7f130509
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
+    .line 5
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f140526
+    const v1, 0x7f13050a
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    const v0, 0x7f14065d
+    const v0, 0x7f13061f
 
+    .line 6
     invoke-virtual {v2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
-    new-instance v6, Lfb/e;
+    new-instance v6, Ld/d/b/x5/a/b/b/j/d;
 
-    invoke-direct {v6, p0}, Lfb/e;-><init>(Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;)V
+    invoke-direct {v6, p0}, Ld/d/b/x5/a/b/b/j/d;-><init>(Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;)V
 
     const/4 v7, 0x0
 
     const/4 v8, 0x0
 
-    const v0, 0x7f140b4c
+    const v0, 0x7f130ac7
 
+    .line 7
     invoke-virtual {v2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v9
 
     const/4 v10, 0x0
 
-    invoke-static/range {v2 .. v10}, Lcom/android/camera/y4;->E(Landroid/content/Context;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;)Lmiuix/appcompat/app/AlertDialog;
+    .line 8
+    invoke-static/range {v2 .. v10}, Ld/d/a/l5;->u(Landroid/content/Context;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;)Lmiuix/appcompat/app/AlertDialog;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->mCancelDialog:Lmiuix/appcompat/app/AlertDialog;
 
-    new-instance v1, Lfb/f;
+    .line 9
+    new-instance v1, Ld/d/b/x5/a/b/b/j/r;
 
-    invoke-direct {v1, p0}, Lfb/f;-><init>(Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;)V
+    invoke-direct {v1, p0}, Ld/d/b/x5/a/b/b/j/r;-><init>(Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;)V
 
     invoke-virtual {v0, v1}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
@@ -2986,16 +3420,35 @@
     return p0
 .end method
 
-.method public unRegister(Lu8/d;)V
+.method public synthetic uc(Landroid/content/DialogInterface;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->lambda$tryStopFriendProcess$2(Landroid/content/DialogInterface;)V
+
+    return-void
+.end method
+
+.method public unRegister(Ld/d/a/m7/c;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "modeCoordinator"
+        }
+    .end annotation
 
-    invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->unRegister(Lu8/d;)V
+    .line 1
+    invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->unRegister(Ld/d/a/m7/c;)V
 
-    const-class v0, Lv8/t0;
+    .line 2
+    const-class v0, Ld/d/a/m7/g/w0;
 
-    invoke-interface {p1, v0, p0}, Lu8/d;->c(Ljava/lang/Class;Lu8/a;)V
+    invoke-interface {p1, v0, p0}, Ld/d/a/m7/c;->d(Ljava/lang/Class;Ld/d/a/m7/a;)V
 
-    invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->unRegisterBackStack(Lu8/d;Lv8/z0;)V
+    .line 3
+    invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->unRegisterBackStack(Ld/d/a/m7/c;Ld/d/a/m7/g/c1;)V
 
     return-void
 .end method
@@ -3006,8 +3459,27 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "v",
+            "savedInstanceState"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/android/camera/fragment/AbstractFragment;->updateView(Landroid/view/View;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public synthetic wb(ILd/d/a/m7/g/y2;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/friend/FragmentFriendHost;->lambda$onRemoteCallCapture$5(ILd/d/a/m7/g/y2;)V
 
     return-void
 .end method

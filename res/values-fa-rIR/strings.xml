@@ -205,7 +205,6 @@
     <string name="accessibility_video_capture_button">دکمه عکس‌برداری هنگام تصویربرداری</string>
     <string name="accessibility_video_pause_button">ضبط ویدئو مکث شد</string>
     <string name="accessibility_video_resume_button">ضبط ویدئو ادامه داده شد</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">نشان خاموش است</string>
     <string name="accessibility_watermark_image_on">نشان روشن است</string>
     <string name="accessibility_watermark_text">باز کردن صفحه تنظیم نشان</string>
@@ -213,16 +212,6 @@
     <string name="accessibility_zoom_button">حالت بزرگ‌نمایی</string>
     <string name="actionbar_button_up_description">بازگشت</string>
     <string name="afternoon">بعد از ظهر</string>
-    <string name="agent_flip_tbc">در نمایشگر درونی ادامه دهید</string>
-    <string name="agent_function_max">به بیشترین مقدار تنظیم شد</string>
-    <string name="agent_function_min">به کمترین مقدار تنظیم شد</string>
-    <string name="agent_workspace_mode_not_supported">این ویژگی پشتیبانی نمی‌شود</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"از این ویژگی پشتیبانی نمی‌شود
-حالت عکس به جای آن باز شد."</string>
-    <string name="agent_workspace_on">پارامترها برای عکاسی از «%1$s» تنظیم شده‌اند</string>
-    <string name="agent_workspace_tbc">یادگیری صحنه</string>
-    <string name="agent_workspace_tbc_use_default">"درحال یادگیری صحنه…
-پارامترهای دوربین روی پیش‌فرض تنظیم شدند"</string>
     <string name="ai_agra_fort">قلعه آگرا</string>
     <string name="ai_amber_fort">قلعه عامر</string>
     <string name="ai_baby">کودک</string>
@@ -781,7 +770,6 @@
     <string name="download_hint_cn">"Looks like your device isn't connected to WLAN. Use %1$s MB of mobile data to download items now?"</string>
     <string name="download_hint_wifi">به نظر می‌رسد دستگاه شما به Wi-Fi متصل نیست. %1$s مگابایت از اینترنت همراه برای دانلود موارد استفاده شود؟</string>
     <string name="download_in_progress">در حال دانلود…</string>
-    <string name="download_network_error">دانلود نشد. تنظیمات شبکه خود را بررسی کنید.</string>
     <string name="download_title">هشدار مصرف اینترنت همراه</string>
     <string name="download_waiting">در حال بررسی…</string>
     <string name="dual_camera_lens_covered_toast">لنز پوشانده شده است.</string>
@@ -905,7 +893,7 @@
     <string name="fmt_time_12hour_minute_second_millis">h:mm:ss.S</string>
     <string name="fmt_time_12hour_minute_second_millis_pm">h:mm:ss.S a</string>
     <string name="fmt_time_12hour_minute_second_pm">h:mm:ss a</string>
-    <string name="fmt_time_12hour_pm">ah</string>
+    <string name="fmt_time_12hour_pm">h a</string>
     <string name="fmt_time_24hour">"H 'o''clock'"</string>
     <string name="fmt_time_24hour_minute">H:mm</string>
     <string name="fmt_time_24hour_minute_second">H:mm:ss</string>
@@ -1260,7 +1248,6 @@
     <string name="miuix_appcompat_delete_description">حذف</string>
     <string name="miuix_appcompat_deselect_all">لغو انتخاب همه</string>
     <string name="miuix_appcompat_deselect_all_description">لغو انتخاب همه</string>
-    <string name="miuix_appcompat_edit">ویرایش</string>
     <string name="miuix_appcompat_search_action_mode_cancel">لغو</string>
     <string name="miuix_appcompat_search_input_description">جستجو</string>
     <string name="miuix_appcompat_select_all">انتخاب همه</string>
@@ -2199,7 +2186,6 @@
     <string name="time_picker_label_hour">ساعت</string>
     <string name="time_picker_label_minute">دقیقه</string>
     <string name="time_stamp_date_format">dd/MM/yyyy</string>
-    <string name="time_stamp_date_format_minute">dd/MM/yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">می‌توانید پس‌زمینه را در هر زمان، پیش یا در حین عکس‌برداری بی‌حرکت کرده و یا آزاد کنید.</string>
     <string name="timefreeze_guide_tip3">از سوژه خود بخواهید در مرکز قاب بماند.</string>
     <string name="timefreeze_guide_tip4">ترافیک را متوقف کنید.</string>
@@ -2237,7 +2223,7 @@
     <string name="tip_flash_screen_light_on">فلاش نرم: روشن</string>
     <string name="tip_flash_soft_light_off">فلاش نرم: خاموش</string>
     <string name="tip_flash_soft_light_torch">فلاش نرم: حالت چراغ قوه</string>
-    <string name="tip_flash_torch">فلاش: چراغ قوه</string>
+    <string name="tip_flash_torch">فلاش: همیشه روشن</string>
     <string name="tip_friend_mode_connect_when_24GHz">برای افزایش کیفیت پیش‌نمایش از یک اتصال %s گیگاهرتزی استفاده کنید</string>
     <string name="tip_friend_mode_display_device_name_connect">پیش‌نمایش اشتراک‌گذاری شده</string>
     <string name="tip_friend_mode_display_device_name_disconnect">دستگاه مقابل این بخش را ترک کرد</string>

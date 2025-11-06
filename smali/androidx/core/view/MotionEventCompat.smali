@@ -275,6 +275,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -285,6 +286,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/MotionEvent;->findPointerIndex(I)I
 
     move-result p0
@@ -297,6 +299,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result p0
@@ -309,6 +312,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result p0
@@ -347,6 +351,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/MotionEvent;->getButtonState()I
 
     move-result p0
@@ -359,6 +364,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/MotionEvent;->getPointerCount()I
 
     move-result p0
@@ -371,6 +377,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/MotionEvent;->getPointerId(I)I
 
     move-result p0
@@ -383,6 +390,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/MotionEvent;->getSource()I
 
     move-result p0
@@ -395,6 +403,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/MotionEvent;->getX(I)F
 
     move-result p0
@@ -407,6 +416,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/MotionEvent;->getY(I)F
 
     move-result p0
@@ -416,11 +426,8 @@
 
 .method public static isFromSource(Landroid/view/MotionEvent;I)Z
     .locals 0
-    .param p0    # Landroid/view/MotionEvent;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/MotionEvent;->getSource()I
 
     move-result p0

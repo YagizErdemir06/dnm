@@ -123,7 +123,7 @@
     const/4 p3, 0x0
 
     .line 5
-    invoke-virtual {p0, p3}, Landroid/view/View;->setSaveFromParentEnabled(Z)V
+    invoke-virtual {p0, p3}, Landroid/widget/LinearLayout;->setSaveFromParentEnabled(Z)V
 
     .line 6
     invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
@@ -170,7 +170,7 @@
     .line 12
     new-instance v2, Lcom/google/android/exoplayer2/ui/DefaultTrackNameProvider;
 
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -204,21 +204,21 @@
     iput-object v3, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->disableView:Landroid/widget/CheckedTextView;
 
     .line 16
-    invoke-virtual {v3, v1}, Landroid/view/View;->setBackgroundResource(I)V
+    invoke-virtual {v3, v1}, Landroid/widget/CheckedTextView;->setBackgroundResource(I)V
 
     .line 17
     sget v4, Lcom/google/android/exoplayer2/ui/R$string;->exo_track_selection_none:I
 
-    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(I)V
+    invoke-virtual {v3, v4}, Landroid/widget/CheckedTextView;->setText(I)V
 
     .line 18
-    invoke-virtual {v3, p3}, Landroid/view/View;->setEnabled(Z)V
+    invoke-virtual {v3, p3}, Landroid/widget/CheckedTextView;->setEnabled(Z)V
 
     .line 19
-    invoke-virtual {v3, p2}, Landroid/view/View;->setFocusable(Z)V
+    invoke-virtual {v3, p2}, Landroid/widget/CheckedTextView;->setFocusable(Z)V
 
     .line 20
-    invoke-virtual {v3, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v3, v0}, Landroid/widget/CheckedTextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     const/16 v4, 0x8
 
@@ -226,7 +226,7 @@
     invoke-virtual {v3, v4}, Landroid/widget/CheckedTextView;->setVisibility(I)V
 
     .line 22
-    invoke-virtual {p0, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    invoke-virtual {p0, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     .line 23
     sget v3, Lcom/google/android/exoplayer2/ui/R$layout;->exo_list_divider:I
@@ -235,7 +235,7 @@
 
     move-result-object v3
 
-    invoke-virtual {p0, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    invoke-virtual {p0, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     .line 24
     invoke-virtual {p1, v2, p0, p3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
@@ -247,41 +247,32 @@
     iput-object p1, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->defaultView:Landroid/widget/CheckedTextView;
 
     .line 25
-    invoke-virtual {p1, v1}, Landroid/view/View;->setBackgroundResource(I)V
+    invoke-virtual {p1, v1}, Landroid/widget/CheckedTextView;->setBackgroundResource(I)V
 
     .line 26
     sget v1, Lcom/google/android/exoplayer2/ui/R$string;->exo_track_selection_auto:I
 
-    invoke-virtual {p1, v1}, Landroid/widget/TextView;->setText(I)V
+    invoke-virtual {p1, v1}, Landroid/widget/CheckedTextView;->setText(I)V
 
     .line 27
-    invoke-virtual {p1, p3}, Landroid/view/View;->setEnabled(Z)V
+    invoke-virtual {p1, p3}, Landroid/widget/CheckedTextView;->setEnabled(Z)V
 
     .line 28
-    invoke-virtual {p1, p2}, Landroid/view/View;->setFocusable(Z)V
+    invoke-virtual {p1, p2}, Landroid/widget/CheckedTextView;->setFocusable(Z)V
 
     .line 29
-    invoke-virtual {p1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p1, v0}, Landroid/widget/CheckedTextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 30
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     return-void
-.end method
-
-.method public static synthetic a(Ljava/util/Comparator;Lcom/google/android/exoplayer2/ui/TrackSelectionView$TrackInfo;Lcom/google/android/exoplayer2/ui/TrackSelectionView$TrackInfo;)I
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->lambda$init$0(Ljava/util/Comparator;Lcom/google/android/exoplayer2/ui/TrackSelectionView$TrackInfo;Lcom/google/android/exoplayer2/ui/TrackSelectionView$TrackInfo;)I
-
-    move-result p0
-
-    return p0
 .end method
 
 .method public static synthetic access$100(Lcom/google/android/exoplayer2/ui/TrackSelectionView;Landroid/view/View;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->onClick(Landroid/view/View;)V
 
     return-void
@@ -306,12 +297,14 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const/4 v1, 0x0
 
+    .line 2
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -319,12 +312,14 @@
 
     if-ge v1, v2, :cond_2
 
+    .line 3
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/google/android/exoplayer2/Tracks$Group;
 
+    .line 4
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/Tracks$Group;->getMediaTrackGroup()Lcom/google/android/exoplayer2/source/TrackGroup;
 
     move-result-object v2
@@ -339,12 +334,14 @@
 
     if-nez p2, :cond_0
 
+    .line 5
     invoke-virtual {v0}, Ljava/util/HashMap;->isEmpty()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
+    .line 6
     :cond_0
     iget-object v3, v2, Lcom/google/android/exoplayer2/trackselection/TrackSelectionOverride;->mediaTrackGroup:Lcom/google/android/exoplayer2/source/TrackGroup;
 
@@ -359,9 +356,10 @@
     return-object v0
 .end method
 
-.method private static synthetic lambda$init$0(Ljava/util/Comparator;Lcom/google/android/exoplayer2/ui/TrackSelectionView$TrackInfo;Lcom/google/android/exoplayer2/ui/TrackSelectionView$TrackInfo;)I
+.method public static synthetic lambda$init$0(Ljava/util/Comparator;Lcom/google/android/exoplayer2/ui/TrackSelectionView$TrackInfo;Lcom/google/android/exoplayer2/ui/TrackSelectionView$TrackInfo;)I
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/ui/TrackSelectionView$TrackInfo;->getFormat()Lcom/google/android/exoplayer2/Format;
 
     move-result-object p1
@@ -380,33 +378,41 @@
 .method private onClick(Landroid/view/View;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->disableView:Landroid/widget/CheckedTextView;
 
     if-ne p1, v0, :cond_0
 
+    .line 2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->onDisableViewClicked()V
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->defaultView:Landroid/widget/CheckedTextView;
 
     if-ne p1, v0, :cond_1
 
+    .line 4
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->onDefaultViewClicked()V
 
     goto :goto_0
 
+    .line 5
     :cond_1
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->onTrackViewClicked(Landroid/view/View;)V
 
+    .line 6
     :goto_0
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->updateViewStates()V
 
+    .line 7
     iget-object p1, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->listener:Lcom/google/android/exoplayer2/ui/TrackSelectionView$TrackSelectionListener;
 
     if-eqz p1, :cond_2
 
+    .line 8
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->getIsDisabled()Z
 
     move-result v0
@@ -426,8 +432,10 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->isDisabled:Z
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->overrides:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->clear()V
@@ -440,8 +448,10 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->isDisabled:Z
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->overrides:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->clear()V
@@ -454,8 +464,10 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->isDisabled:Z
 
+    .line 2
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v1
@@ -466,14 +478,17 @@
 
     check-cast v1, Lcom/google/android/exoplayer2/ui/TrackSelectionView$TrackInfo;
 
+    .line 3
     iget-object v2, v1, Lcom/google/android/exoplayer2/ui/TrackSelectionView$TrackInfo;->trackGroup:Lcom/google/android/exoplayer2/Tracks$Group;
 
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/Tracks$Group;->getMediaTrackGroup()Lcom/google/android/exoplayer2/source/TrackGroup;
 
     move-result-object v2
 
+    .line 4
     iget v3, v1, Lcom/google/android/exoplayer2/ui/TrackSelectionView$TrackInfo;->trackIndex:I
 
+    .line 5
     iget-object v4, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->overrides:Ljava/util/Map;
 
     invoke-interface {v4, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -484,6 +499,7 @@
 
     if-nez v4, :cond_1
 
+    .line 6
     iget-boolean p1, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->allowMultipleOverrides:Z
 
     if-nez p1, :cond_0
@@ -496,15 +512,18 @@
 
     if-lez p1, :cond_0
 
+    .line 7
     iget-object p1, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->overrides:Ljava/util/Map;
 
     invoke-interface {p1}, Ljava/util/Map;->clear()V
 
+    .line 8
     :cond_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->overrides:Ljava/util/Map;
 
     new-instance p1, Lcom/google/android/exoplayer2/trackselection/TrackSelectionOverride;
 
+    .line 9
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -515,10 +534,12 @@
 
     invoke-direct {p1, v2, v0}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionOverride;-><init>(Lcom/google/android/exoplayer2/source/TrackGroup;Ljava/util/List;)V
 
+    .line 10
     invoke-interface {p0, v2, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
+    .line 11
     :cond_1
     new-instance v5, Ljava/util/ArrayList;
 
@@ -526,12 +547,14 @@
 
     invoke-direct {v5, v4}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
+    .line 12
     check-cast p1, Landroid/widget/CheckedTextView;
 
     invoke-virtual {p1}, Landroid/widget/CheckedTextView;->isChecked()Z
 
     move-result p1
 
+    .line 13
     iget-object v1, v1, Lcom/google/android/exoplayer2/ui/TrackSelectionView$TrackInfo;->trackGroup:Lcom/google/android/exoplayer2/Tracks$Group;
 
     invoke-direct {p0, v1}, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->shouldEnableAdaptiveSelection(Lcom/google/android/exoplayer2/Tracks$Group;)Z
@@ -540,6 +563,7 @@
 
     if-nez v1, :cond_2
 
+    .line 14
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->shouldEnableMultiGroupSelection()Z
 
     move-result v4
@@ -554,24 +578,28 @@
 
     if-eqz v0, :cond_5
 
+    .line 15
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
     invoke-virtual {v5, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
+    .line 16
     invoke-virtual {v5}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result p1
 
     if-eqz p1, :cond_4
 
+    .line 17
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->overrides:Ljava/util/Map;
 
     invoke-interface {p0, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
+    .line 18
     :cond_4
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->overrides:Ljava/util/Map;
 
@@ -588,12 +616,14 @@
 
     if-eqz v1, :cond_6
 
+    .line 19
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
     invoke-virtual {v5, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 20
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->overrides:Ljava/util/Map;
 
     new-instance p1, Lcom/google/android/exoplayer2/trackselection/TrackSelectionOverride;
@@ -604,11 +634,13 @@
 
     goto :goto_0
 
+    .line 21
     :cond_6
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->overrides:Ljava/util/Map;
 
     new-instance p1, Lcom/google/android/exoplayer2/trackselection/TrackSelectionOverride;
 
+    .line 22
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -619,6 +651,7 @@
 
     invoke-direct {p1, v2, v0}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionOverride;-><init>(Lcom/google/android/exoplayer2/source/TrackGroup;Ljava/util/List;)V
 
+    .line 23
     invoke-interface {p0, v2, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_7
@@ -629,6 +662,7 @@
 .method private shouldEnableAdaptiveSelection(Lcom/google/android/exoplayer2/Tracks$Group;)Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->allowAdaptiveSelections:Z
 
     if-eqz p0, :cond_0
@@ -651,9 +685,12 @@
 .end method
 
 .method private shouldEnableMultiGroupSelection()Z
-    .locals 1
+    .locals 2
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->allowMultipleOverrides:Z
+
+    const/4 v1, 0x1
 
     if-eqz v0, :cond_0
 
@@ -663,28 +700,28 @@
 
     move-result p0
 
-    const/4 v0, 0x1
-
-    if-le p0, v0, :cond_0
+    if-le p0, v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
     :goto_0
-    return v0
+    return v1
 .end method
 
 .method private updateViewStates()V
     .locals 7
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->disableView:Landroid/widget/CheckedTextView;
 
     iget-boolean v1, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->isDisabled:Z
 
     invoke-virtual {v0, v1}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->defaultView:Landroid/widget/CheckedTextView;
 
     iget-boolean v1, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->isDisabled:Z
@@ -713,6 +750,7 @@
 
     move v0, v2
 
+    .line 3
     :goto_1
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->trackViews:[[Landroid/widget/CheckedTextView;
 
@@ -720,6 +758,7 @@
 
     if-ge v0, v1, :cond_3
 
+    .line 4
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->overrides:Ljava/util/Map;
 
     iget-object v3, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->trackGroups:Ljava/util/List;
@@ -742,20 +781,24 @@
 
     move v3, v2
 
+    .line 5
     :goto_2
     iget-object v4, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->trackViews:[[Landroid/widget/CheckedTextView;
 
-    aget-object v4, v4, v0
+    aget-object v5, v4, v0
 
-    array-length v5, v4
+    array-length v5, v5
 
     if-ge v3, v5, :cond_2
 
     if-eqz v1, :cond_1
 
+    .line 6
+    aget-object v4, v4, v0
+
     aget-object v4, v4, v3
 
-    invoke-virtual {v4}, Landroid/view/View;->getTag()Ljava/lang/Object;
+    invoke-virtual {v4}, Landroid/widget/CheckedTextView;->getTag()Ljava/lang/Object;
 
     move-result-object v4
 
@@ -765,6 +808,7 @@
 
     check-cast v4, Lcom/google/android/exoplayer2/ui/TrackSelectionView$TrackInfo;
 
+    .line 7
     iget-object v5, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->trackViews:[[Landroid/widget/CheckedTextView;
 
     aget-object v5, v5, v0
@@ -787,7 +831,10 @@
 
     goto :goto_3
 
+    .line 8
     :cond_1
+    aget-object v4, v4, v0
+
     aget-object v4, v4, v3
 
     invoke-virtual {v4, v2}, Landroid/widget/CheckedTextView;->setChecked(Z)V
@@ -809,7 +856,8 @@
 .method private updateViews()V
     .locals 12
 
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+    .line 1
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
 
@@ -822,12 +870,14 @@
 
     if-lt v0, v2, :cond_0
 
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->removeViewAt(I)V
+    .line 2
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->removeViewAt(I)V
 
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->trackGroups:Ljava/util/List;
 
@@ -839,25 +889,30 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->disableView:Landroid/widget/CheckedTextView;
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setEnabled(Z)V
+    invoke-virtual {v0, v2}, Landroid/widget/CheckedTextView;->setEnabled(Z)V
 
+    .line 5
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->defaultView:Landroid/widget/CheckedTextView;
 
-    invoke-virtual {p0, v2}, Landroid/view/View;->setEnabled(Z)V
+    invoke-virtual {p0, v2}, Landroid/widget/CheckedTextView;->setEnabled(Z)V
 
     return-void
 
+    .line 6
     :cond_1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->disableView:Landroid/widget/CheckedTextView;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Landroid/widget/CheckedTextView;->setEnabled(Z)V
 
+    .line 7
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->defaultView:Landroid/widget/CheckedTextView;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Landroid/widget/CheckedTextView;->setEnabled(Z)V
 
+    .line 8
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->trackGroups:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -868,12 +923,14 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->trackViews:[[Landroid/widget/CheckedTextView;
 
+    .line 9
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->shouldEnableMultiGroupSelection()Z
 
     move-result v0
 
     move v3, v2
 
+    .line 10
     :goto_1
     iget-object v4, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->trackGroups:Ljava/util/List;
 
@@ -883,6 +940,7 @@
 
     if-ge v3, v4, :cond_9
 
+    .line 11
     iget-object v4, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->trackGroups:Ljava/util/List;
 
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -891,10 +949,12 @@
 
     check-cast v4, Lcom/google/android/exoplayer2/Tracks$Group;
 
+    .line 12
     invoke-direct {p0, v4}, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->shouldEnableAdaptiveSelection(Lcom/google/android/exoplayer2/Tracks$Group;)Z
 
     move-result v5
 
+    .line 13
     iget-object v6, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->trackViews:[[Landroid/widget/CheckedTextView;
 
     iget v7, v4, Lcom/google/android/exoplayer2/Tracks$Group;->length:I
@@ -903,15 +963,18 @@
 
     aput-object v8, v6, v3
 
+    .line 14
     new-array v6, v7, [Lcom/google/android/exoplayer2/ui/TrackSelectionView$TrackInfo;
 
     move v8, v2
 
+    .line 15
     :goto_2
     iget v9, v4, Lcom/google/android/exoplayer2/Tracks$Group;->length:I
 
     if-ge v8, v9, :cond_2
 
+    .line 16
     new-instance v9, Lcom/google/android/exoplayer2/ui/TrackSelectionView$TrackInfo;
 
     invoke-direct {v9, v4, v8}, Lcom/google/android/exoplayer2/ui/TrackSelectionView$TrackInfo;-><init>(Lcom/google/android/exoplayer2/Tracks$Group;I)V
@@ -922,11 +985,13 @@
 
     goto :goto_2
 
+    .line 17
     :cond_2
     iget-object v8, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->trackInfoComparator:Ljava/util/Comparator;
 
     if-eqz v8, :cond_3
 
+    .line 18
     invoke-static {v6, v8}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
 
     :cond_3
@@ -937,6 +1002,7 @@
 
     if-nez v8, :cond_4
 
+    .line 19
     iget-object v9, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->inflater:Landroid/view/LayoutInflater;
 
     sget v10, Lcom/google/android/exoplayer2/ui/R$layout;->exo_list_divider:I
@@ -945,7 +1011,7 @@
 
     move-result-object v9
 
-    invoke-virtual {p0, v9}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    invoke-virtual {p0, v9}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     :cond_4
     if-nez v5, :cond_6
@@ -963,19 +1029,23 @@
     :goto_4
     const v9, 0x1090010
 
+    .line 20
     :goto_5
     iget-object v10, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->inflater:Landroid/view/LayoutInflater;
 
+    .line 21
     invoke-virtual {v10, v9, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v9
 
     check-cast v9, Landroid/widget/CheckedTextView;
 
+    .line 22
     iget v10, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->selectableItemBackgroundResourceId:I
 
-    invoke-virtual {v9, v10}, Landroid/view/View;->setBackgroundResource(I)V
+    invoke-virtual {v9, v10}, Landroid/widget/CheckedTextView;->setBackgroundResource(I)V
 
+    .line 23
     iget-object v10, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->trackNameProvider:Lcom/google/android/exoplayer2/ui/TrackNameProvider;
 
     aget-object v11, v6, v8
@@ -988,31 +1058,38 @@
 
     move-result-object v10
 
-    invoke-virtual {v9, v10}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v9, v10}, Landroid/widget/CheckedTextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 24
     aget-object v10, v6, v8
 
-    invoke-virtual {v9, v10}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+    invoke-virtual {v9, v10}, Landroid/widget/CheckedTextView;->setTag(Ljava/lang/Object;)V
 
+    .line 25
     invoke-virtual {v4, v8}, Lcom/google/android/exoplayer2/Tracks$Group;->isTrackSupported(I)Z
 
     move-result v10
 
     if-eqz v10, :cond_7
 
-    invoke-virtual {v9, v1}, Landroid/view/View;->setFocusable(Z)V
+    .line 26
+    invoke-virtual {v9, v1}, Landroid/widget/CheckedTextView;->setFocusable(Z)V
 
+    .line 27
     iget-object v10, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->componentListener:Lcom/google/android/exoplayer2/ui/TrackSelectionView$ComponentListener;
 
-    invoke-virtual {v9, v10}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v9, v10}, Landroid/widget/CheckedTextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     goto :goto_6
 
+    .line 28
     :cond_7
-    invoke-virtual {v9, v2}, Landroid/view/View;->setFocusable(Z)V
+    invoke-virtual {v9, v2}, Landroid/widget/CheckedTextView;->setFocusable(Z)V
 
-    invoke-virtual {v9, v2}, Landroid/view/View;->setEnabled(Z)V
+    .line 29
+    invoke-virtual {v9, v2}, Landroid/widget/CheckedTextView;->setEnabled(Z)V
 
+    .line 30
     :goto_6
     iget-object v10, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->trackViews:[[Landroid/widget/CheckedTextView;
 
@@ -1020,7 +1097,8 @@
 
     aput-object v9, v10, v8
 
-    invoke-virtual {p0, v9}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    .line 31
+    invoke-virtual {p0, v9}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     add-int/lit8 v8, v8, 0x1
 
@@ -1031,6 +1109,7 @@
 
     goto/16 :goto_1
 
+    .line 32
     :cond_9
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->updateViewStates()V
 
@@ -1042,6 +1121,7 @@
 .method public getIsDisabled()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->isDisabled:Z
 
     return p0
@@ -1059,6 +1139,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->overrides:Ljava/util/Map;
 
     return-object p0
@@ -1092,6 +1173,7 @@
         }
     .end annotation
 
+    .line 1
     iput-boolean p2, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->isDisabled:Z
 
     if-nez p4, :cond_0
@@ -1100,28 +1182,34 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
-    new-instance p2, Lcom/google/android/exoplayer2/ui/h0;
+    new-instance p2, Ld/j/a/b/y2/g0;
 
-    invoke-direct {p2, p4}, Lcom/google/android/exoplayer2/ui/h0;-><init>(Ljava/util/Comparator;)V
+    invoke-direct {p2, p4}, Ld/j/a/b/y2/g0;-><init>(Ljava/util/Comparator;)V
 
     :goto_0
     iput-object p2, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->trackInfoComparator:Ljava/util/Comparator;
 
+    .line 3
     iput-object p5, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->listener:Lcom/google/android/exoplayer2/ui/TrackSelectionView$TrackSelectionListener;
 
+    .line 4
     iget-object p2, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->trackGroups:Ljava/util/List;
 
     invoke-interface {p2}, Ljava/util/List;->clear()V
 
+    .line 5
     iget-object p2, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->trackGroups:Ljava/util/List;
 
     invoke-interface {p2, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
+    .line 6
     iget-object p2, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->overrides:Ljava/util/Map;
 
     invoke-interface {p2}, Ljava/util/Map;->clear()V
 
+    .line 7
     iget-object p2, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->overrides:Ljava/util/Map;
 
     iget-boolean p4, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->allowMultipleOverrides:Z
@@ -1132,6 +1220,7 @@
 
     invoke-interface {p2, p1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
+    .line 8
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->updateViews()V
 
     return-void
@@ -1140,12 +1229,15 @@
 .method public setAllowAdaptiveSelections(Z)V
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->allowAdaptiveSelections:Z
 
     if-eq v0, p1, :cond_0
 
+    .line 2
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->allowAdaptiveSelections:Z
 
+    .line 3
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->updateViews()V
 
     :cond_0
@@ -1155,14 +1247,17 @@
 .method public setAllowMultipleOverrides(Z)V
     .locals 2
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->allowMultipleOverrides:Z
 
     if-eq v0, p1, :cond_1
 
+    .line 2
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->allowMultipleOverrides:Z
 
     if-nez p1, :cond_0
 
+    .line 3
     iget-object p1, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->overrides:Ljava/util/Map;
 
     invoke-interface {p1}, Ljava/util/Map;->size()I
@@ -1173,24 +1268,29 @@
 
     if-le p1, v0, :cond_0
 
+    .line 4
     iget-object p1, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->overrides:Ljava/util/Map;
 
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->trackGroups:Ljava/util/List;
 
     const/4 v1, 0x0
 
+    .line 5
     invoke-static {p1, v0, v1}, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->filterOverrides(Ljava/util/Map;Ljava/util/List;Z)Ljava/util/Map;
 
     move-result-object p1
 
+    .line 6
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->overrides:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
+    .line 7
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->overrides:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
+    .line 8
     :cond_0
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->updateViews()V
 
@@ -1201,6 +1301,7 @@
 .method public setShowDisableOption(Z)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->disableView:Landroid/widget/CheckedTextView;
 
     if-eqz p1, :cond_0
@@ -1221,6 +1322,7 @@
 .method public setTrackNameProvider(Lcom/google/android/exoplayer2/ui/TrackNameProvider;)V
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -1229,6 +1331,7 @@
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->trackNameProvider:Lcom/google/android/exoplayer2/ui/TrackNameProvider;
 
+    .line 2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->updateViews()V
 
     return-void

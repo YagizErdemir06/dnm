@@ -16,122 +16,270 @@
 
 
 # static fields
-.field public static final f:Ljava/lang/String; = "SnapService"
+.field private static final c:Ljava/lang/String; = "SnapService"
 
-.field public static final g:I = 0x1388
+.field public static final d:I = 0x1388
 
-.field public static final h:I = 0x65
+.field public static final f:I = 0x65
 
-.field public static i:Z
+.field private static g:Z
 
 
 # instance fields
-.field public final a:Lcom/android/camera/snap/SnapService$b;
+.field private final j:Lcom/android/camera/snap/SnapService$b;
 
-.field public b:Z
+.field private m:Z
 
-.field public c:Landroid/os/PowerManager$WakeLock;
+.field private n:Landroid/os/PowerManager$WakeLock;
 
-.field public d:Landroid/content/BroadcastReceiver;
+.field private p:Landroid/content/BroadcastReceiver;
 
-.field public e:Lcom/android/camera/k5$c;
+.field private s:Ld/d/a/u5$c;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
+    .line 2
     new-instance v0, Lcom/android/camera/snap/SnapService$b;
 
     invoke-direct {v0, p0}, Lcom/android/camera/snap/SnapService$b;-><init>(Lcom/android/camera/snap/SnapService;)V
 
-    iput-object v0, p0, Lcom/android/camera/snap/SnapService;->a:Lcom/android/camera/snap/SnapService$b;
+    iput-object v0, p0, Lcom/android/camera/snap/SnapService;->j:Lcom/android/camera/snap/SnapService$b;
 
+    .line 3
     new-instance v0, Lcom/android/camera/snap/SnapService$a;
 
     invoke-direct {v0, p0}, Lcom/android/camera/snap/SnapService$a;-><init>(Lcom/android/camera/snap/SnapService;)V
 
-    iput-object v0, p0, Lcom/android/camera/snap/SnapService;->d:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/camera/snap/SnapService;->p:Landroid/content/BroadcastReceiver;
 
-    new-instance v0, Lj9/c;
+    .line 4
+    sget-object v0, Ld/d/a/u7/a;->a:Ld/d/a/u7/a;
 
-    invoke-direct {v0}, Lj9/c;-><init>()V
-
-    iput-object v0, p0, Lcom/android/camera/snap/SnapService;->e:Lcom/android/camera/k5$c;
-
-    return-void
-.end method
-
-.method public static synthetic a(I)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera/snap/SnapService;->e(I)V
+    iput-object v0, p0, Lcom/android/camera/snap/SnapService;->s:Ld/d/a/u5$c;
 
     return-void
 .end method
 
-.method public static synthetic b(Lcom/android/camera/snap/SnapService;)V
+.method public static synthetic a(Lcom/android/camera/snap/SnapService;)V
     .locals 0
 
-    invoke-virtual {p0}, Lcom/android/camera/snap/SnapService;->d()V
+    .line 1
+    invoke-direct {p0}, Lcom/android/camera/snap/SnapService;->c()V
 
     return-void
 .end method
 
-.method public static synthetic e(I)V
-    .locals 0
+.method private c()V
+    .locals 1
 
-    invoke-static {}, Lcom/android/camera/k5;->h()Lcom/android/camera/k5;
+    .line 1
+    invoke-direct {p0}, Lcom/android/camera/snap/SnapService;->i()V
+
+    .line 2
+    iget-object p0, p0, Lcom/android/camera/snap/SnapService;->j:Lcom/android/camera/snap/SnapService$b;
+
+    const/16 v0, 0x65
+
+    invoke-virtual {p0, v0}, Landroid/os/Handler;->removeMessages(I)V
+
+    .line 3
+    invoke-static {}, Ld/d/a/u7/d;->l()Ld/d/a/u7/d;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/camera/k5;->u()Z
+    invoke-virtual {p0}, Ld/d/a/u7/d;->k()V
+
+    return-void
+.end method
+
+.method public static synthetic d(I)V
+    .locals 0
+
+    .line 1
+    invoke-static {}, Ld/d/a/u5;->f()Ld/d/a/u5;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ld/d/a/u5;->u()Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    invoke-static {}, Lj9/d;->l()Lj9/d;
+    .line 2
+    invoke-static {}, Ld/d/a/u7/d;->l()Ld/d/a/u7/d;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lj9/d;->p()Z
+    invoke-virtual {p0}, Ld/d/a/u7/d;->p()Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    invoke-static {}, Lj9/d;->l()Lj9/d;
+    .line 3
+    invoke-static {}, Ld/d/a/u7/d;->l()Ld/d/a/u7/d;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lj9/d;->s()V
+    invoke-virtual {p0}, Ld/d/a/u7/d;->s()V
 
     :cond_0
     return-void
 .end method
 
-.method public static h(Z)V
+.method private e()V
+    .locals 3
+
+    .line 1
+    iget-boolean v0, p0, Lcom/android/camera/snap/SnapService;->m:Z
+
+    if-nez v0, :cond_0
+
+    .line 2
+    new-instance v0, Landroid/content/IntentFilter;
+
+    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
+
+    const-string v1, "android.intent.action.SCREEN_ON"
+
+    .line 3
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    const-string v1, "android.intent.action.KEYCODE_POWER_UP"
+
+    .line 4
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    .line 5
+    iget-object v1, p0, Lcom/android/camera/snap/SnapService;->p:Landroid/content/BroadcastReceiver;
+
+    .line 6
+    invoke-static {}, Ld/d/a/a7/a/b/a;->s()I
+
+    move-result v2
+
+    .line 7
+    invoke-virtual {p0, v1, v0, v2}, Landroid/app/Service;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;I)Landroid/content/Intent;
+
+    const/4 v0, 0x1
+
+    .line 8
+    iput-boolean v0, p0, Lcom/android/camera/snap/SnapService;->m:Z
+
+    :cond_0
+    return-void
+.end method
+
+.method private f()V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/snap/SnapService;->n:Landroid/os/PowerManager$WakeLock;
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
+
+    const/4 v0, 0x0
+
+    .line 3
+    iput-object v0, p0, Lcom/android/camera/snap/SnapService;->n:Landroid/os/PowerManager$WakeLock;
+
+    const/4 p0, 0x0
+
+    new-array p0, p0, [Ljava/lang/Object;
+
+    const-string v0, "SnapService"
+
+    const-string v1, "release wakelock"
+
+    .line 4
+    invoke-static {v0, v1, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public static g(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "screenOn"
+        }
+    .end annotation
 
-    sput-boolean p0, Lcom/android/camera/snap/SnapService;->i:Z
+    .line 1
+    sput-boolean p0, Lcom/android/camera/snap/SnapService;->g:Z
 
+    return-void
+.end method
+
+.method private h()V
+    .locals 4
+
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/snap/SnapService;->j:Lcom/android/camera/snap/SnapService$b;
+
+    const/16 v1, 0x65
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
+
+    .line 2
+    iget-object p0, p0, Lcom/android/camera/snap/SnapService;->j:Lcom/android/camera/snap/SnapService$b;
+
+    const-wide/16 v2, 0x1388
+
+    invoke-virtual {p0, v1, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
+
+    return-void
+.end method
+
+.method private i()V
+    .locals 1
+
+    .line 1
+    iget-boolean v0, p0, Lcom/android/camera/snap/SnapService;->m:Z
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/snap/SnapService;->p:Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {p0, v0}, Landroid/app/Service;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+
+    const/4 v0, 0x0
+
+    .line 3
+    iput-boolean v0, p0, Lcom/android/camera/snap/SnapService;->m:Z
+
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public c()V
+.method public b()V
     .locals 3
 
-    iget-object v0, p0, Lcom/android/camera/snap/SnapService;->c:Landroid/os/PowerManager$WakeLock;
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/snap/SnapService;->n:Landroid/os/PowerManager$WakeLock;
 
     if-nez v0, :cond_0
 
     const-string v0, "power"
 
+    .line 2
     invoke-virtual {p0, v0}, Landroid/app/Service;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -142,12 +290,14 @@
 
     const-string v2, "SnapService"
 
+    .line 3
     invoke-virtual {v0, v1, v2}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/camera/snap/SnapService;->c:Landroid/os/PowerManager$WakeLock;
+    iput-object v0, p0, Lcom/android/camera/snap/SnapService;->n:Landroid/os/PowerManager$WakeLock;
 
+    .line 4
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
     const/4 p0, 0x0
@@ -156,126 +306,8 @@
 
     const-string v0, "acquire wakelock"
 
+    .line 5
     invoke-static {v2, v0, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final d()V
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/android/camera/snap/SnapService;->j()V
-
-    iget-object p0, p0, Lcom/android/camera/snap/SnapService;->a:Lcom/android/camera/snap/SnapService$b;
-
-    const/16 v0, 0x65
-
-    invoke-virtual {p0, v0}, Landroid/os/Handler;->removeMessages(I)V
-
-    invoke-static {}, Lj9/d;->l()Lj9/d;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lj9/d;->k()V
-
-    return-void
-.end method
-
-.method public final f()V
-    .locals 3
-
-    iget-boolean v0, p0, Lcom/android/camera/snap/SnapService;->b:Z
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Landroid/content/IntentFilter;
-
-    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
-
-    const-string v1, "android.intent.action.SCREEN_ON"
-
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    const-string v1, "android.intent.action.KEYCODE_POWER_UP"
-
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcom/android/camera/snap/SnapService;->d:Landroid/content/BroadcastReceiver;
-
-    invoke-static {}, Lm7/a;->s()I
-
-    move-result v2
-
-    invoke-virtual {p0, v1, v0, v2}, Landroid/app/Service;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;I)Landroid/content/Intent;
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/android/camera/snap/SnapService;->b:Z
-
-    :cond_0
-    return-void
-.end method
-
-.method public final g()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/android/camera/snap/SnapService;->c:Landroid/os/PowerManager$WakeLock;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/android/camera/snap/SnapService;->c:Landroid/os/PowerManager$WakeLock;
-
-    const/4 p0, 0x0
-
-    new-array p0, p0, [Ljava/lang/Object;
-
-    const-string v0, "SnapService"
-
-    const-string v1, "release wakelock"
-
-    invoke-static {v0, v1, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final i()V
-    .locals 4
-
-    iget-object v0, p0, Lcom/android/camera/snap/SnapService;->a:Lcom/android/camera/snap/SnapService$b;
-
-    const/16 v1, 0x65
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
-
-    iget-object p0, p0, Lcom/android/camera/snap/SnapService;->a:Lcom/android/camera/snap/SnapService$b;
-
-    const-wide/16 v2, 0x1388
-
-    invoke-virtual {p0, v1, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
-
-    return-void
-.end method
-
-.method public final j()V
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/android/camera/snap/SnapService;->b:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/android/camera/snap/SnapService;->d:Landroid/content/BroadcastReceiver;
-
-    invoke-virtual {p0, v0}, Landroid/app/Service;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/android/camera/snap/SnapService;->b:Z
 
     :cond_0
     return-void
@@ -283,6 +315,14 @@
 
 .method public onBind(Landroid/content/Intent;)Landroid/os/IBinder;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "intent"
+        }
+    .end annotation
 
     const/4 p0, 0x0
 
@@ -292,11 +332,14 @@
 .method public onCreate()V
     .locals 4
 
+    .line 1
     invoke-super {p0}, Landroid/app/Service;->onCreate()V
 
-    invoke-virtual {p0}, Lcom/android/camera/snap/SnapService;->c()V
+    .line 2
+    invoke-virtual {p0}, Lcom/android/camera/snap/SnapService;->b()V
 
-    invoke-static {}, Lcom/android/camera/k5;->h()Lcom/android/camera/k5;
+    .line 3
+    invoke-static {}, Ld/d/a/u5;->f()Ld/d/a/u5;
 
     move-result-object v0
 
@@ -304,18 +347,20 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/k5;->m(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Ld/d/a/u5;->m(Landroid/content/Context;)V
 
+    .line 4
     invoke-virtual {p0}, Landroid/app/Service;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f140282
+    const v1, 0x7f13026e
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 5
     new-instance v1, Landroid/app/NotificationChannel;
 
     const-string v2, "MiuiCamera"
@@ -326,30 +371,37 @@
 
     const/4 v0, 0x0
 
+    .line 6
     invoke-virtual {v1, v0}, Landroid/app/NotificationChannel;->enableLights(Z)V
 
+    .line 7
     invoke-virtual {v1, v0}, Landroid/app/NotificationChannel;->setShowBadge(Z)V
 
     const-string v0, "notification"
 
+    .line 8
     invoke-virtual {p0, v0}, Landroid/app/Service;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/app/NotificationManager;
 
+    .line 9
     invoke-virtual {v0, v1}, Landroid/app/NotificationManager;->createNotificationChannel(Landroid/app/NotificationChannel;)V
 
+    .line 10
     new-instance v0, Landroid/app/Notification$Builder;
 
     invoke-direct {v0, p0, v2}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     const-string v1, "camera snap service"
 
+    .line 11
     invoke-virtual {v0, v1}, Landroid/app/Notification$Builder;->setTicker(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
     move-result-object v0
 
+    .line 12
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
@@ -358,10 +410,12 @@
 
     move-result-object v0
 
+    .line 13
     invoke-virtual {v0}, Landroid/app/Notification$Builder;->build()Landroid/app/Notification;
 
     move-result-object v0
 
+    .line 14
     invoke-virtual {p0, v3, v0}, Landroid/app/Service;->startForeground(ILandroid/app/Notification;)V
 
     return-void
@@ -372,31 +426,49 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-virtual {p0, v0}, Landroid/app/Service;->stopForeground(Z)V
 
+    .line 2
     invoke-super {p0}, Landroid/app/Service;->onDestroy()V
 
-    invoke-static {}, Lcom/android/camera/k5;->h()Lcom/android/camera/k5;
+    .line 3
+    invoke-static {}, Ld/d/a/u5;->f()Ld/d/a/u5;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/camera/k5;->v()V
+    invoke-virtual {v0}, Ld/d/a/u5;->v()V
 
-    invoke-static {}, Lcom/android/camera/k5;->h()Lcom/android/camera/k5;
+    .line 4
+    invoke-static {}, Ld/d/a/u5;->f()Ld/d/a/u5;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/camera/k5;->n()V
+    invoke-virtual {v0}, Ld/d/a/u5;->n()V
 
-    invoke-virtual {p0}, Lcom/android/camera/snap/SnapService;->d()V
+    .line 5
+    invoke-direct {p0}, Lcom/android/camera/snap/SnapService;->c()V
 
-    invoke-virtual {p0}, Lcom/android/camera/snap/SnapService;->g()V
+    .line 6
+    invoke-direct {p0}, Lcom/android/camera/snap/SnapService;->f()V
 
     return-void
 .end method
 
 .method public onStartCommand(Landroid/content/Intent;II)I
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "intent",
+            "flags",
+            "startId"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -406,23 +478,27 @@
 
     const-string v3, "start service"
 
+    .line 1
     invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {p0}, Ll9/x;->H(Landroid/content/Context;)V
+    .line 2
+    invoke-static {p0}, Ld/d/a/w7/z;->F(Landroid/content/Context;)V
 
-    invoke-virtual {p0}, Lcom/android/camera/snap/SnapService;->i()V
+    .line 3
+    invoke-direct {p0}, Lcom/android/camera/snap/SnapService;->h()V
 
-    sget-boolean v1, Lcom/android/camera/snap/SnapService;->i:Z
+    .line 4
+    sget-boolean v1, Lcom/android/camera/snap/SnapService;->g:Z
 
     if-nez v1, :cond_2
 
     if-eqz p1, :cond_2
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lid/b;->Z8()Z
+    invoke-virtual {v1}, Ld/k/a/b;->N8()Z
 
     move-result v1
 
@@ -430,20 +506,22 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
-    invoke-static {}, Lj9/d;->l()Lj9/d;
+    invoke-static {}, Ld/d/a/u7/d;->l()Ld/d/a/u7/d;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/camera/snap/SnapService;->a:Lcom/android/camera/snap/SnapService$b;
+    iget-object v2, p0, Lcom/android/camera/snap/SnapService;->j:Lcom/android/camera/snap/SnapService$b;
 
-    invoke-virtual {v1, p0, v2}, Lj9/d;->n(Landroid/content/Context;Landroid/os/Handler;)Z
+    invoke-virtual {v1, p0, v2}, Ld/d/a/u7/d;->n(Landroid/content/Context;Landroid/os/Handler;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    invoke-static {}, Lj9/d;->l()Lj9/d;
+    .line 6
+    invoke-static {}, Ld/d/a/u7/d;->l()Ld/d/a/u7/d;
 
     move-result-object v1
 
@@ -455,37 +533,44 @@
 
     const-string v3, "key_action"
 
+    .line 7
     invoke-virtual {p1, v3, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
-    const-string v3, "key_event_time"
+    const-wide/16 v3, 0x0
 
-    const-wide/16 v4, 0x0
+    const-string v5, "key_event_time"
 
-    invoke-virtual {p1, v3, v4, v5}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
+    .line 8
+    invoke-virtual {p1, v5, v3, v4}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
 
     move-result-wide v3
 
-    invoke-virtual {v1, v2, v0, v3, v4}, Lj9/d;->m(IIJ)V
+    .line 9
+    invoke-virtual {v1, v2, v0, v3, v4}, Ld/d/a/u7/d;->m(IIJ)V
 
-    invoke-virtual {p0}, Lcom/android/camera/snap/SnapService;->f()V
+    .line 10
+    invoke-direct {p0}, Lcom/android/camera/snap/SnapService;->e()V
 
+    .line 11
     :cond_1
-    invoke-static {}, Lcom/android/camera/k5;->h()Lcom/android/camera/k5;
+    invoke-static {}, Ld/d/a/u5;->f()Ld/d/a/u5;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/camera/snap/SnapService;->e:Lcom/android/camera/k5$c;
+    iget-object v1, p0, Lcom/android/camera/snap/SnapService;->s:Ld/d/a/u5$c;
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/k5;->q(Lcom/android/camera/k5$c;)V
+    invoke-virtual {v0, v1}, Ld/d/a/u5;->q(Ld/d/a/u5$c;)V
 
+    .line 12
     invoke-super {p0, p1, p2, p3}, Landroid/app/Service;->onStartCommand(Landroid/content/Intent;II)I
 
     move-result p0
 
     return p0
 
+    .line 13
     :cond_2
     :goto_0
     invoke-super {p0, p1, p2, p3}, Landroid/app/Service;->onStartCommand(Landroid/content/Intent;II)I

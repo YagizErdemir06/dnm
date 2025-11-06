@@ -13,17 +13,23 @@
     name = null
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000\u0017\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003*\u0001\u0000\u0008\n\u0018\u00002\u00020\u0001J\u0010\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0016J\u0010\u0010\u0006\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0016\u00a8\u0006\u0007"
+        "\u0000\u0017\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004*\u0001\u0000\u0008\n\u0018\u00002\u00020\u0001J\u0017\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0016\u00a2\u0006\u0004\u0008\u0005\u0010\u0006J\u0017\u0010\u0007\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0016\u00a2\u0006\u0004\u0008\u0007\u0010\u0006\u00a8\u0006\u0008"
     }
     d2 = {
         "com/faceunity/core/camera/impl/FUCamera2Impl$mCameraCaptureSessionStateCallback$1",
         "Landroid/hardware/camera2/CameraCaptureSession$StateCallback;",
         "Landroid/hardware/camera2/CameraCaptureSession;",
         "session",
-        "Lnm/l2;",
+        "Lh/l2;",
         "onConfigureFailed",
+        "(Landroid/hardware/camera2/CameraCaptureSession;)V",
         "onConfigured",
         "lib_core_release"
     }
@@ -37,18 +43,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/faceunity/core/camera/impl/FUCamera2Impl;
+.field public final synthetic this$0:Lcom/faceunity/core/camera/impl/FUCamera2Impl;
 
 
 # direct methods
 .method public constructor <init>(Lcom/faceunity/core/camera/impl/FUCamera2Impl;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/core/camera/impl/FUCamera2Impl$mCameraCaptureSessionStateCallback$1;->this$0:Lcom/faceunity/core/camera/impl/FUCamera2Impl;
 
     invoke-direct {p0}, Landroid/hardware/camera2/CameraCaptureSession$StateCallback;-><init>()V
@@ -61,14 +63,15 @@
 .method public onConfigureFailed(Landroid/hardware/camera2/CameraCaptureSession;)V
     .locals 1
     .param p1    # Landroid/hardware/camera2/CameraCaptureSession;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "session"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/camera/impl/FUCamera2Impl$mCameraCaptureSessionStateCallback$1;->this$0:Lcom/faceunity/core/camera/impl/FUCamera2Impl;
 
     const/4 p1, 0x0
@@ -81,14 +84,15 @@
 .method public onConfigured(Landroid/hardware/camera2/CameraCaptureSession;)V
     .locals 2
     .param p1    # Landroid/hardware/camera2/CameraCaptureSession;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "session"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/camera/impl/FUCamera2Impl$mCameraCaptureSessionStateCallback$1;->this$0:Lcom/faceunity/core/camera/impl/FUCamera2Impl;
 
     invoke-static {v0}, Lcom/faceunity/core/camera/impl/FUCamera2Impl;->access$getMIsNeedStopPreviewing$p(Lcom/faceunity/core/camera/impl/FUCamera2Impl;)Z
@@ -99,19 +103,21 @@
 
     return-void
 
+    .line 2
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/faceunity/core/camera/impl/FUCamera2Impl$mCameraCaptureSessionStateCallback$1;->this$0:Lcom/faceunity/core/camera/impl/FUCamera2Impl;
 
     invoke-static {v0, p1}, Lcom/faceunity/core/camera/impl/FUCamera2Impl;->access$setMCameraCaptureSession$p(Lcom/faceunity/core/camera/impl/FUCamera2Impl;Landroid/hardware/camera2/CameraCaptureSession;)V
 
+    .line 3
     iget-object v0, p0, Lcom/faceunity/core/camera/impl/FUCamera2Impl$mCameraCaptureSessionStateCallback$1;->this$0:Lcom/faceunity/core/camera/impl/FUCamera2Impl;
 
     invoke-static {v0}, Lcom/faceunity/core/camera/impl/FUCamera2Impl;->access$getMCaptureRequestBuilder$p(Lcom/faceunity/core/camera/impl/FUCamera2Impl;)Landroid/hardware/camera2/CaptureRequest$Builder;
 
     move-result-object v0
 
-    invoke-static {v0}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {v0}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     invoke-virtual {v0}, Landroid/hardware/camera2/CaptureRequest$Builder;->build()Landroid/hardware/camera2/CaptureRequest;
 
@@ -134,7 +140,8 @@
     :catch_0
     move-exception p0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 4
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
     return-void

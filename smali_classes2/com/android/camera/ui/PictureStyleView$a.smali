@@ -15,11 +15,19 @@
 
 
 # virtual methods
-.method public abstract Uf()Z
+.method public abstract H0()V
 .end method
 
-.method public abstract Z1()V
+.method public abstract aa()Z
 .end method
 
-.method public abstract z7(I)V
+.method public abstract l4(I)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "position"
+        }
+    .end annotation
 .end method

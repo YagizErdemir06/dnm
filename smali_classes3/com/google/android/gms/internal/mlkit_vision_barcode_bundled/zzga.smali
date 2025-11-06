@@ -1,20 +1,21 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzga;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzga;
 .super Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcu;
 .source "SourceFile"
 
 
 # instance fields
-.field final zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzge;
+.field public final zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzge;
 
-.field zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcw;
+.field public zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcw;
 
-.field final synthetic zzc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgg;
+.field public final synthetic zzc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgg;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgg;)V
     .locals 2
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzga;->zzc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgg;
 
     invoke-direct {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcu;-><init>()V
@@ -27,6 +28,7 @@
 
     iput-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzga;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzge;
 
+    .line 2
     invoke-direct {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzga;->zzb()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcw;
 
     move-result-object p1
@@ -39,6 +41,7 @@
 .method private final zzb()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcw;
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzga;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzge;
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzge;->hasNext()Z
@@ -85,22 +88,26 @@
 .method public final zza()B
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzga;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcw;
 
     if-eqz v0, :cond_1
 
+    .line 2
     invoke-interface {v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcw;->zza()B
 
     move-result v0
 
     iget-object v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzga;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcw;
 
+    .line 3
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
+    .line 4
     invoke-direct {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzga;->zzb()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcw;
 
     move-result-object v1
@@ -110,6 +117,7 @@
     :cond_0
     return v0
 
+    .line 5
     :cond_1
     new-instance p0, Ljava/util/NoSuchElementException;
 

@@ -15,27 +15,28 @@
 
 
 # instance fields
-.field public a:Ljava/lang/String;
+.field private a:Ljava/lang/String;
 
-.field public b:Ljava/lang/CharSequence;
+.field private b:Ljava/lang/CharSequence;
 
-.field public c:Ljava/lang/CharSequence;
+.field private c:Ljava/lang/CharSequence;
 
-.field public d:Ljava/lang/CharSequence;
+.field private d:Ljava/lang/CharSequence;
 
-.field public e:Landroid/graphics/Bitmap;
+.field private e:Landroid/graphics/Bitmap;
 
-.field public f:Landroid/net/Uri;
+.field private f:Landroid/net/Uri;
 
-.field public g:Landroid/os/Bundle;
+.field private g:Landroid/os/Bundle;
 
-.field public h:Landroid/net/Uri;
+.field private h:Landroid/net/Uri;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,6 +47,7 @@
 .method public a()Landroid/support/v4/media/MediaDescriptionCompat;
     .locals 10
 
+    .line 1
     new-instance v9, Landroid/support/v4/media/MediaDescriptionCompat;
 
     iget-object v1, p0, Landroid/support/v4/media/MediaDescriptionCompat$d;->a:Ljava/lang/String;
@@ -86,6 +88,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroid/support/v4/media/MediaDescriptionCompat$d;->d:Ljava/lang/CharSequence;
 
     return-object p0
@@ -106,6 +109,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroid/support/v4/media/MediaDescriptionCompat$d;->g:Landroid/os/Bundle;
 
     return-object p0
@@ -126,6 +130,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroid/support/v4/media/MediaDescriptionCompat$d;->e:Landroid/graphics/Bitmap;
 
     return-object p0
@@ -146,6 +151,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroid/support/v4/media/MediaDescriptionCompat$d;->f:Landroid/net/Uri;
 
     return-object p0
@@ -166,6 +172,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroid/support/v4/media/MediaDescriptionCompat$d;->a:Ljava/lang/String;
 
     return-object p0
@@ -186,6 +193,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroid/support/v4/media/MediaDescriptionCompat$d;->h:Landroid/net/Uri;
 
     return-object p0
@@ -206,6 +214,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroid/support/v4/media/MediaDescriptionCompat$d;->c:Ljava/lang/CharSequence;
 
     return-object p0
@@ -226,6 +235,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroid/support/v4/media/MediaDescriptionCompat$d;->b:Ljava/lang/CharSequence;
 
     return-object p0

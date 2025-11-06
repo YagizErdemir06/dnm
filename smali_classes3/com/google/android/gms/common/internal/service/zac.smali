@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/internal/service/zac;
+.class public final Lcom/google/android/gms/common/internal/service/zac;
 .super Lcom/google/android/gms/common/internal/service/zaf;
 .source "SourceFile"
 
@@ -7,6 +7,7 @@
 .method public constructor <init>(Lcom/google/android/gms/common/internal/service/zae;Lcom/google/android/gms/common/api/GoogleApiClient;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p2}, Lcom/google/android/gms/common/internal/service/zaf;-><init>(Lcom/google/android/gms/common/api/GoogleApiClient;)V
 
     return-void
@@ -22,8 +23,10 @@
         }
     .end annotation
 
+    .line 1
     check-cast p1, Lcom/google/android/gms/common/internal/service/zah;
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/android/gms/common/internal/BaseGmsClient;->getService()Landroid/os/IInterface;
 
     move-result-object p1

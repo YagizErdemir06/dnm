@@ -173,6 +173,7 @@
 .method public getAdaptationSetIndex(I)I
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/dash/manifest/Period;->adaptationSets:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -184,6 +185,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 2
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/dash/manifest/Period;->adaptationSets:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;

@@ -145,6 +145,7 @@
 .method public final zzd(Ljava/lang/Integer;)Lcom/google/android/gms/internal/mlkit_vision_barcode/zzpx;
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     const/16 p1, 0xa

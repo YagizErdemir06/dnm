@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static a:Ljava/lang/String; = "MediaEffect"
+.field private static a:Ljava/lang/String; = "MediaEffect"
 
 
 # direct methods
@@ -17,6 +17,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,9 +38,10 @@
 .method public static native SetParamsForEffectJni(IJ[Ljava/lang/String;)Z
 .end method
 
-.method public static a(Lbh/a;)J
+.method public static a(Ld/o/r/a;)J
     .locals 5
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v0
@@ -48,6 +50,7 @@
 
     move-result-wide v0
 
+    .line 2
     sget-object v2, Lcom/xiaomi/mediaprocess/MediaEffect;->a:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -78,8 +81,10 @@
 .method public static b(J)V
     .locals 3
 
+    .line 1
     invoke-static {p0, p1}, Lcom/xiaomi/mediaprocess/MediaEffect;->DestoryEffectJni(J)V
 
+    .line 2
     sget-object v0, Lcom/xiaomi/mediaprocess/MediaEffect;->a:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -104,12 +109,14 @@
 .method public static c(JLcom/xiaomi/mediaprocess/EffectCoverNotifier;)V
     .locals 2
 
+    .line 1
     sget-object v0, Lcom/xiaomi/mediaprocess/MediaEffect;->a:Ljava/lang/String;
 
     const-string v1, "set EffectCoverCallback"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {p0, p1, p2}, Lcom/xiaomi/mediaprocess/MediaEffect;->SetCoverCallbackJni(JLcom/xiaomi/mediaprocess/EffectCoverNotifier;)V
 
     return-void
@@ -127,6 +134,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/xiaomi/mediaprocess/MediaEffect;->a:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -149,12 +157,14 @@
 
     if-eqz p2, :cond_0
 
+    .line 2
     invoke-interface {p2}, Ljava/util/Map;->size()I
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 3
     invoke-interface {p2}, Ljava/util/Map;->size()I
 
     move-result v1
@@ -163,6 +173,7 @@
 
     new-array v1, v1, [Ljava/lang/String;
 
+    .line 4
     invoke-interface {p2}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v2
@@ -184,6 +195,7 @@
 
     check-cast v3, Ljava/lang/String;
 
+    .line 5
     sget-object v4, Lcom/xiaomi/mediaprocess/MediaEffect;->a:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -220,6 +232,7 @@
 
     mul-int/lit8 v4, v0, 0x2
 
+    .line 6
     invoke-virtual {v3}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v5
@@ -228,6 +241,7 @@
 
     add-int/lit8 v4, v4, 0x1
 
+    .line 7
     invoke-interface {p2, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
@@ -240,6 +254,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_0
     sget-object p2, Lcom/xiaomi/mediaprocess/MediaEffect;->a:Ljava/lang/String;
 
@@ -249,6 +264,7 @@
 
     new-array v1, v0, [Ljava/lang/String;
 
+    .line 9
     :cond_1
     invoke-static {p0, p1, v1}, Lcom/xiaomi/mediaprocess/MediaEffect;->SetParamsForAudioTrackJni(J[Ljava/lang/String;)Z
 
@@ -257,12 +273,12 @@
     return p0
 .end method
 
-.method public static e(Lbh/a;JLjava/util/Map;)Z
+.method public static e(Ld/o/r/a;JLjava/util/Map;)Z
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lbh/a;",
+            "Ld/o/r/a;",
             "J",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
@@ -271,6 +287,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/xiaomi/mediaprocess/MediaEffect;->a:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -299,12 +316,14 @@
 
     if-eqz p3, :cond_0
 
+    .line 2
     invoke-interface {p3}, Ljava/util/Map;->size()I
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 3
     invoke-interface {p3}, Ljava/util/Map;->size()I
 
     move-result v1
@@ -313,6 +332,7 @@
 
     new-array v1, v1, [Ljava/lang/String;
 
+    .line 4
     invoke-interface {p3}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v2
@@ -334,6 +354,7 @@
 
     check-cast v3, Ljava/lang/String;
 
+    .line 5
     sget-object v4, Lcom/xiaomi/mediaprocess/MediaEffect;->a:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -370,6 +391,7 @@
 
     mul-int/lit8 v4, v0, 0x2
 
+    .line 6
     invoke-virtual {v3}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v5
@@ -378,6 +400,7 @@
 
     add-int/lit8 v4, v4, 0x1
 
+    .line 7
     invoke-interface {p3, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
@@ -390,6 +413,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_0
     sget-object p3, Lcom/xiaomi/mediaprocess/MediaEffect;->a:Ljava/lang/String;
 
@@ -399,6 +423,7 @@
 
     new-array v1, v0, [Ljava/lang/String;
 
+    .line 9
     :cond_1
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 

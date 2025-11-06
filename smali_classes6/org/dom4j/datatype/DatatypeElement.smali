@@ -43,8 +43,10 @@
 .method public addText(Ljava/lang/String;)Lorg/dom4j/Element;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/dom4j/datatype/DatatypeElement;->validate(Ljava/lang/String;)V
 
+    .line 2
     invoke-super {p0, p1}, Lorg/dom4j/tree/AbstractElement;->addText(Ljava/lang/String;)Lorg/dom4j/Element;
 
     move-result-object p0
@@ -57,8 +59,10 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Lorg/dom4j/datatype/DatatypeElement;->data:Ljava/lang/Object;
 
+    .line 2
     invoke-super {p0, p1}, Lorg/dom4j/tree/AbstractElement;->childAdded(Lorg/dom4j/Node;)V
 
     return-void
@@ -69,8 +73,10 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Lorg/dom4j/datatype/DatatypeElement;->data:Ljava/lang/Object;
 
+    .line 2
     invoke-super {p0, p1}, Lorg/dom4j/tree/AbstractElement;->childRemoved(Lorg/dom4j/Node;)V
 
     return-void
@@ -87,28 +93,33 @@
 .method public getData()Ljava/lang/Object;
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/datatype/DatatypeElement;->data:Ljava/lang/Object;
 
     if-nez v0, :cond_1
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractBranch;->getTextTrim()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
+    .line 3
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v1
 
     if-lez v1, :cond_1
 
+    .line 4
     iget-object v1, p0, Lorg/dom4j/datatype/DatatypeElement;->datatype:Lcom/sun/msv/datatype/xsd/XSDatatype;
 
     instance-of v2, v1, Lcom/sun/msv/datatype/DatabindableDatatype;
 
     if-eqz v2, :cond_0
 
+    .line 5
     invoke-interface {v1, v0, p0}, Lcom/sun/msv/datatype/DatabindableDatatype;->createJavaObject(Ljava/lang/String;Lorg/relaxng/datatype/ValidationContext;)Ljava/lang/Object;
 
     move-result-object v0
@@ -117,6 +128,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-interface {v1, v0, p0}, Lcom/sun/msv/datatype/xsd/XSDatatype;->createValue(Ljava/lang/String;Lorg/relaxng/datatype/ValidationContext;)Ljava/lang/Object;
 
@@ -124,6 +136,7 @@
 
     iput-object v0, p0, Lorg/dom4j/datatype/DatatypeElement;->data:Ljava/lang/Object;
 
+    .line 7
     :cond_1
     :goto_0
     iget-object p0, p0, Lorg/dom4j/datatype/DatatypeElement;->data:Ljava/lang/Object;
@@ -134,12 +147,14 @@
 .method public getNamespacePrefix(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/DefaultElement;->getNamespaceForURI(Ljava/lang/String;)Lorg/dom4j/Namespace;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/Namespace;->getPrefix()Ljava/lang/String;
 
     move-result-object p0
@@ -156,6 +171,7 @@
 .method public getXSDatatype()Lcom/sun/msv/datatype/xsd/XSDatatype;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/datatype/DatatypeElement;->datatype:Lcom/sun/msv/datatype/xsd/XSDatatype;
 
     return-object p0
@@ -180,12 +196,14 @@
 .method public resolveNamespacePrefix(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/DefaultElement;->getNamespaceForPrefix(Ljava/lang/String;)Lorg/dom4j/Namespace;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/Namespace;->getURI()Ljava/lang/String;
 
     move-result-object p0
@@ -201,16 +219,20 @@
 .method public setData(Ljava/lang/Object;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/datatype/DatatypeElement;->datatype:Lcom/sun/msv/datatype/xsd/XSDatatype;
 
     invoke-interface {v0, p1, p0}, Lcom/sun/msv/datatype/xsd/XSDatatype;->convertToLexicalValue(Ljava/lang/Object;Lcom/sun/msv/datatype/SerializationContext;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0, v0}, Lorg/dom4j/datatype/DatatypeElement;->validate(Ljava/lang/String;)V
 
+    .line 3
     iput-object p1, p0, Lorg/dom4j/datatype/DatatypeElement;->data:Ljava/lang/Object;
 
+    .line 4
     invoke-virtual {p0, v0}, Lorg/dom4j/datatype/DatatypeElement;->setText(Ljava/lang/String;)V
 
     return-void
@@ -219,8 +241,10 @@
 .method public setText(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/dom4j/datatype/DatatypeElement;->validate(Ljava/lang/String;)V
 
+    .line 2
     invoke-super {p0, p1}, Lorg/dom4j/tree/AbstractElement;->setText(Ljava/lang/String;)V
 
     return-void
@@ -229,6 +253,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -298,6 +323,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lorg/dom4j/datatype/DatatypeElement;->datatype:Lcom/sun/msv/datatype/xsd/XSDatatype;
 
@@ -310,6 +336,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     invoke-virtual {p0}, Lorg/relaxng/datatype/DatatypeException;->getMessage()Ljava/lang/String;

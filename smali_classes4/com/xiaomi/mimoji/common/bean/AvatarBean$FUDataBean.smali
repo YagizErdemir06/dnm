@@ -1,5 +1,5 @@
 .class public Lcom/xiaomi/mimoji/common/bean/AvatarBean$FUDataBean;
-.super Lsh/e;
+.super Ld/o/v/a/z/e;
 .source "SourceFile"
 
 
@@ -43,7 +43,8 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lsh/e;-><init>()V
+    .line 1
+    invoke-direct {p0}, Ld/o/v/a/z/e;-><init>()V
 
     return-void
 .end method
@@ -53,6 +54,7 @@
 .method public getAvatarIconUrl()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mimoji/common/bean/AvatarBean$FUDataBean;->avatarIconUrl:Ljava/lang/String;
 
     return-object p0
@@ -61,6 +63,7 @@
 .method public getIconUrl()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mimoji/common/bean/AvatarBean$FUDataBean;->iconUrl:Ljava/lang/String;
 
     return-object p0
@@ -69,6 +72,7 @@
 .method public getItemVersion()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mimoji/common/bean/AvatarBean$FUDataBean;->itemVersion:Ljava/lang/String;
 
     return-object p0
@@ -77,6 +81,7 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mimoji/common/bean/AvatarBean$FUDataBean;->name:Ljava/lang/String;
 
     return-object p0
@@ -85,6 +90,7 @@
 .method public getUuId()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mimoji/common/bean/AvatarBean$FUDataBean;->uuId:Ljava/lang/String;
 
     return-object p0
@@ -93,6 +99,7 @@
 .method public isDownloadState()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/mimoji/common/bean/AvatarBean$FUDataBean;->downloadState:Z
 
     return p0
@@ -101,6 +108,7 @@
 .method public isPrefab()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/mimoji/common/bean/AvatarBean$FUDataBean;->isPrefab:Z
 
     return p0
@@ -108,7 +116,16 @@
 
 .method public setDownloadState(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "downloadState"
+        }
+    .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/mimoji/common/bean/AvatarBean$FUDataBean;->downloadState:Z
 
     return-void
@@ -116,7 +133,16 @@
 
 .method public setName(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "name"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mimoji/common/bean/AvatarBean$FUDataBean;->name:Ljava/lang/String;
 
     return-void
@@ -124,7 +150,16 @@
 
 .method public setPrefab(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "prefab"
+        }
+    .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/mimoji/common/bean/AvatarBean$FUDataBean;->isPrefab:Z
 
     return-void
@@ -132,7 +167,16 @@
 
 .method public setUuId(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "uuId"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mimoji/common/bean/AvatarBean$FUDataBean;->uuId:Ljava/lang/String;
 
     return-void

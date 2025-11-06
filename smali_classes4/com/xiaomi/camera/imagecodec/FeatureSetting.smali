@@ -28,6 +28,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/xiaomi/camera/imagecodec/FeatureSetting$1;
 
     invoke-direct {v0}, Lcom/xiaomi/camera/imagecodec/FeatureSetting$1;-><init>()V
@@ -106,6 +107,7 @@
 .method public getFrameCount()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/camera/imagecodec/FeatureSetting;->mFrameCount:I
 
     return p0
@@ -114,6 +116,7 @@
 .method public getTuningIndexes()[J
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/FeatureSetting;->mTuningIndexes:[J
 
     return-object p0
@@ -122,6 +125,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -140,6 +144,7 @@
 
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/FeatureSetting;->mTuningIndexes:[J
 
+    .line 2
     invoke-static {p0}, Ljava/util/Arrays;->toString([J)Ljava/lang/String;
 
     move-result-object p0
@@ -170,10 +175,12 @@
         }
     .end annotation
 
+    .line 1
     iget p2, p0, Lcom/xiaomi/camera/imagecodec/FeatureSetting;->mFrameCount:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 2
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/FeatureSetting;->mTuningIndexes:[J
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeLongArray([J)V

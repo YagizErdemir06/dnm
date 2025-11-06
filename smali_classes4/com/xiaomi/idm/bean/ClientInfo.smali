@@ -11,8 +11,10 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/xiaomi/idm/bean/ClientInfo;->clientId:Ljava/lang/String;
 
     return-void
@@ -23,6 +25,7 @@
 .method public getClientId()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/bean/ClientInfo;->clientId:Ljava/lang/String;
 
     return-object p0
@@ -31,6 +34,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

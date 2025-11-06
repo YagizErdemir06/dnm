@@ -55,8 +55,10 @@
 .method public clearCode()Lcom/xiaomi/idm/compat/proto/IPCParam$OnOobInfoCreatedResult$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/compat/proto/IPCParam$OnOobInfoCreatedResult;
@@ -69,8 +71,10 @@
 .method public clearHead()Lcom/xiaomi/idm/compat/proto/IPCParam$OnOobInfoCreatedResult$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/compat/proto/IPCParam$OnOobInfoCreatedResult;
@@ -83,8 +87,10 @@
 .method public clearOobInfo()Lcom/xiaomi/idm/compat/proto/IPCParam$OnOobInfoCreatedResult$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/compat/proto/IPCParam$OnOobInfoCreatedResult;
@@ -97,6 +103,7 @@
 .method public getCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast p0, Lcom/xiaomi/idm/compat/proto/IPCParam$OnOobInfoCreatedResult;
@@ -111,6 +118,7 @@
 .method public getHead()Lcom/xiaomi/idm/compat/proto/IPCParam$TransHead;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast p0, Lcom/xiaomi/idm/compat/proto/IPCParam$OnOobInfoCreatedResult;
@@ -125,6 +133,7 @@
 .method public getOobInfo()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast p0, Lcom/xiaomi/idm/compat/proto/IPCParam$OnOobInfoCreatedResult;
@@ -139,6 +148,7 @@
 .method public getOobInfoBytes()Lcom/google/protobuf/ByteString;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast p0, Lcom/xiaomi/idm/compat/proto/IPCParam$OnOobInfoCreatedResult;
@@ -153,6 +163,7 @@
 .method public hasHead()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast p0, Lcom/xiaomi/idm/compat/proto/IPCParam$OnOobInfoCreatedResult;
@@ -167,8 +178,10 @@
 .method public mergeHead(Lcom/xiaomi/idm/compat/proto/IPCParam$TransHead;)Lcom/xiaomi/idm/compat/proto/IPCParam$OnOobInfoCreatedResult$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/compat/proto/IPCParam$OnOobInfoCreatedResult;
@@ -181,8 +194,10 @@
 .method public setCode(I)Lcom/xiaomi/idm/compat/proto/IPCParam$OnOobInfoCreatedResult$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/compat/proto/IPCParam$OnOobInfoCreatedResult;
@@ -233,8 +248,10 @@
 .method public setOobInfo(Ljava/lang/String;)Lcom/xiaomi/idm/compat/proto/IPCParam$OnOobInfoCreatedResult$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/compat/proto/IPCParam$OnOobInfoCreatedResult;
@@ -247,8 +264,10 @@
 .method public setOobInfoBytes(Lcom/google/protobuf/ByteString;)Lcom/xiaomi/idm/compat/proto/IPCParam$OnOobInfoCreatedResult$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/compat/proto/IPCParam$OnOobInfoCreatedResult;

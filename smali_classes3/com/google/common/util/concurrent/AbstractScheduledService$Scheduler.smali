@@ -36,6 +36,7 @@
 .method public static newFixedDelaySchedule(JJLjava/util/concurrent/TimeUnit;)Lcom/google/common/util/concurrent/AbstractScheduledService$Scheduler;
     .locals 8
 
+    .line 1
     invoke-static {p4}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     const-wide/16 v0, 0x0
@@ -54,8 +55,10 @@
     :goto_0
     const-string v1, "delay must be > 0, found %s"
 
+    .line 2
     invoke-static {v0, v1, p2, p3}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;J)V
 
+    .line 3
     new-instance v0, Lcom/google/common/util/concurrent/AbstractScheduledService$Scheduler$1;
 
     move-object v2, v0
@@ -74,6 +77,7 @@
 .method public static newFixedRateSchedule(JJLjava/util/concurrent/TimeUnit;)Lcom/google/common/util/concurrent/AbstractScheduledService$Scheduler;
     .locals 8
 
+    .line 1
     invoke-static {p4}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     const-wide/16 v0, 0x0
@@ -92,8 +96,10 @@
     :goto_0
     const-string v1, "period must be > 0, found %s"
 
+    .line 2
     invoke-static {v0, v1, p2, p3}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;J)V
 
+    .line 3
     new-instance v0, Lcom/google/common/util/concurrent/AbstractScheduledService$Scheduler$2;
 
     move-object v2, v0

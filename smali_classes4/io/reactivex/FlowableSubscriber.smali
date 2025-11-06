@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkv/c;
+.implements Ln/e/c;
 
 
 # annotations
@@ -13,7 +13,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lkv/c<",
+        "Ln/e/c<",
         "TT;>;"
     }
 .end annotation
@@ -23,8 +23,8 @@
 
 
 # virtual methods
-.method public abstract onSubscribe(Lkv/d;)V
-    .param p1    # Lkv/d;
+.method public abstract onSubscribe(Ln/e/d;)V
+    .param p1    # Ln/e/d;
         .annotation build Lio/reactivex/annotations/NonNull;
         .end annotation
     .end param

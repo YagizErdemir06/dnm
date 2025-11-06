@@ -3,57 +3,39 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/android/camera/ui/c1;
+.implements Ld/d/a/d8/z1;
 
 
 # static fields
-.field public static final r:Z
+.field private static final c:Z
 
-.field public static final s:Ljava/lang/String; = "TrackFocusView"
+.field private static final d:Ljava/lang/String; = "TrackFocusView"
 
-.field public static final t:I = 0x9
+.field private static final f:I = 0x9
 
-.field public static final u:I = 0x10
+.field private static final g:I = 0x10
 
-.field public static final v:I = 0x1
+.field private static final j:I = 0x1
 
-.field public static final w:I = 0x2
+.field private static final m:I = 0x2
 
-.field public static final x:I = 0x3
+.field private static final n:I = 0x3
 
 
 # instance fields
-.field public a:Lu9/y;
+.field private C1:Landroid/graphics/Rect;
 
-.field public b:Z
+.field private C2:Ld/d/a/b8/v;
 
-.field public c:Landroid/graphics/Rect;
+.field private K0:Ld/d/a/c4;
 
-.field public d:Landroid/graphics/Matrix;
+.field private K1:Landroid/graphics/Rect;
 
-.field public e:Landroid/graphics/Matrix;
+.field private K2:Ld/d/a/b8/z;
 
-.field public f:Landroid/graphics/Matrix;
+.field private K8:Ld/d/a/b8/q;
 
-.field public g:Lcom/android/camera/t2;
-
-.field public h:I
-
-.field public i:I
-
-.field public j:Landroid/graphics/Rect;
-
-.field public k:Landroid/graphics/Rect;
-
-.field public l:Landroid/graphics/RectF;
-
-.field public m:Lu9/h;
-
-.field public n:Lu9/z;
-
-.field public o:Lu9/a;
-
-.field public final p:Landroid/os/Handler;
+.field private final L8:Landroid/os/Handler;
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "HandlerLeak"
@@ -61,18 +43,38 @@
     .end annotation
 .end field
 
-.field public q:Lmiuix/animation/property/ViewProperty;
+.field public M8:Lmiuix/animation/property/ViewProperty;
+
+.field private k0:Landroid/graphics/Matrix;
+
+.field public k1:I
+
+.field private p:Ld/d/a/b8/y;
+
+.field private s:Z
+
+.field private t:Landroid/graphics/Rect;
+
+.field private u:Landroid/graphics/Matrix;
+
+.field public v1:I
+
+.field private v2:Landroid/graphics/RectF;
+
+.field private w:Landroid/graphics/Matrix;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
-    sget-boolean v0, Lcom/android/camera/a6;->T0:Z
+    .line 1
+    sget-boolean v0, Ld/d/a/z5;->O0:Z
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/android/camera/a6;->A2()Z
+    .line 2
+    invoke-static {}, Ld/d/a/z5;->q2()Z
 
     move-result v0
 
@@ -86,14 +88,23 @@
     const/4 v0, 0x0
 
     :goto_0
-    sput-boolean v0, Lcom/android/camera/trackfocus/TrackFocusView;->r:Z
+    sput-boolean v0, Lcom/android/camera/trackfocus/TrackFocusView;->c:Z
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
     .end annotation
 
     .line 1
@@ -104,42 +115,42 @@
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    iput-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->d:Landroid/graphics/Matrix;
+    iput-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->u:Landroid/graphics/Matrix;
 
     .line 3
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    iput-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->e:Landroid/graphics/Matrix;
+    iput-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->w:Landroid/graphics/Matrix;
 
     .line 4
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    iput-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->f:Landroid/graphics/Matrix;
+    iput-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->k0:Landroid/graphics/Matrix;
 
     .line 5
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->j:Landroid/graphics/Rect;
+    iput-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->C1:Landroid/graphics/Rect;
 
     .line 6
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->k:Landroid/graphics/Rect;
+    iput-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->K1:Landroid/graphics/Rect;
 
     .line 7
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
-    iput-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->l:Landroid/graphics/RectF;
+    iput-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->v2:Landroid/graphics/RectF;
 
     .line 8
     new-instance v0, Lcom/android/camera/trackfocus/TrackFocusView$a;
@@ -151,7 +162,7 @@
 
     invoke-direct {v0, p0, v1}, Lcom/android/camera/trackfocus/TrackFocusView$a;-><init>(Lcom/android/camera/trackfocus/TrackFocusView;Landroid/os/Looper;)V
 
-    iput-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->p:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->L8:Landroid/os/Handler;
 
     .line 10
     new-instance v0, Lcom/android/camera/trackfocus/TrackFocusView$b;
@@ -160,10 +171,10 @@
 
     invoke-direct {v0, p0, v1}, Lcom/android/camera/trackfocus/TrackFocusView$b;-><init>(Lcom/android/camera/trackfocus/TrackFocusView;Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->q:Lmiuix/animation/property/ViewProperty;
+    iput-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->M8:Lmiuix/animation/property/ViewProperty;
 
     .line 11
-    invoke-virtual {p0, p1}, Lcom/android/camera/trackfocus/TrackFocusView;->f(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/android/camera/trackfocus/TrackFocusView;->f(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -174,6 +185,16 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     .line 12
     invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -183,42 +204,42 @@
 
     invoke-direct {p2}, Landroid/graphics/Matrix;-><init>()V
 
-    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->d:Landroid/graphics/Matrix;
+    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->u:Landroid/graphics/Matrix;
 
     .line 14
     new-instance p2, Landroid/graphics/Matrix;
 
     invoke-direct {p2}, Landroid/graphics/Matrix;-><init>()V
 
-    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->e:Landroid/graphics/Matrix;
+    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->w:Landroid/graphics/Matrix;
 
     .line 15
     new-instance p2, Landroid/graphics/Matrix;
 
     invoke-direct {p2}, Landroid/graphics/Matrix;-><init>()V
 
-    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->f:Landroid/graphics/Matrix;
+    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->k0:Landroid/graphics/Matrix;
 
     .line 16
     new-instance p2, Landroid/graphics/Rect;
 
     invoke-direct {p2}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->j:Landroid/graphics/Rect;
+    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->C1:Landroid/graphics/Rect;
 
     .line 17
     new-instance p2, Landroid/graphics/Rect;
 
     invoke-direct {p2}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->k:Landroid/graphics/Rect;
+    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->K1:Landroid/graphics/Rect;
 
     .line 18
     new-instance p2, Landroid/graphics/RectF;
 
     invoke-direct {p2}, Landroid/graphics/RectF;-><init>()V
 
-    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->l:Landroid/graphics/RectF;
+    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->v2:Landroid/graphics/RectF;
 
     .line 19
     new-instance p2, Lcom/android/camera/trackfocus/TrackFocusView$a;
@@ -230,7 +251,7 @@
 
     invoke-direct {p2, p0, v0}, Lcom/android/camera/trackfocus/TrackFocusView$a;-><init>(Lcom/android/camera/trackfocus/TrackFocusView;Landroid/os/Looper;)V
 
-    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->p:Landroid/os/Handler;
+    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->L8:Landroid/os/Handler;
 
     .line 21
     new-instance p2, Lcom/android/camera/trackfocus/TrackFocusView$b;
@@ -239,10 +260,10 @@
 
     invoke-direct {p2, p0, v0}, Lcom/android/camera/trackfocus/TrackFocusView$b;-><init>(Lcom/android/camera/trackfocus/TrackFocusView;Ljava/lang/String;)V
 
-    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->q:Lmiuix/animation/property/ViewProperty;
+    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->M8:Lmiuix/animation/property/ViewProperty;
 
     .line 22
-    invoke-virtual {p0, p1}, Lcom/android/camera/trackfocus/TrackFocusView;->f(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/android/camera/trackfocus/TrackFocusView;->f(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -253,7 +274,20 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr"
+        }
     .end annotation
 
     .line 23
@@ -264,42 +298,42 @@
 
     invoke-direct {p2}, Landroid/graphics/Matrix;-><init>()V
 
-    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->d:Landroid/graphics/Matrix;
+    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->u:Landroid/graphics/Matrix;
 
     .line 25
     new-instance p2, Landroid/graphics/Matrix;
 
     invoke-direct {p2}, Landroid/graphics/Matrix;-><init>()V
 
-    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->e:Landroid/graphics/Matrix;
+    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->w:Landroid/graphics/Matrix;
 
     .line 26
     new-instance p2, Landroid/graphics/Matrix;
 
     invoke-direct {p2}, Landroid/graphics/Matrix;-><init>()V
 
-    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->f:Landroid/graphics/Matrix;
+    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->k0:Landroid/graphics/Matrix;
 
     .line 27
     new-instance p2, Landroid/graphics/Rect;
 
     invoke-direct {p2}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->j:Landroid/graphics/Rect;
+    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->C1:Landroid/graphics/Rect;
 
     .line 28
     new-instance p2, Landroid/graphics/Rect;
 
     invoke-direct {p2}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->k:Landroid/graphics/Rect;
+    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->K1:Landroid/graphics/Rect;
 
     .line 29
     new-instance p2, Landroid/graphics/RectF;
 
     invoke-direct {p2}, Landroid/graphics/RectF;-><init>()V
 
-    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->l:Landroid/graphics/RectF;
+    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->v2:Landroid/graphics/RectF;
 
     .line 30
     new-instance p2, Lcom/android/camera/trackfocus/TrackFocusView$a;
@@ -311,7 +345,7 @@
 
     invoke-direct {p2, p0, p3}, Lcom/android/camera/trackfocus/TrackFocusView$a;-><init>(Lcom/android/camera/trackfocus/TrackFocusView;Landroid/os/Looper;)V
 
-    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->p:Landroid/os/Handler;
+    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->L8:Landroid/os/Handler;
 
     .line 32
     new-instance p2, Lcom/android/camera/trackfocus/TrackFocusView$b;
@@ -320,92 +354,44 @@
 
     invoke-direct {p2, p0, p3}, Lcom/android/camera/trackfocus/TrackFocusView$b;-><init>(Lcom/android/camera/trackfocus/TrackFocusView;Ljava/lang/String;)V
 
-    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->q:Lmiuix/animation/property/ViewProperty;
+    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->M8:Lmiuix/animation/property/ViewProperty;
 
     .line 33
-    invoke-virtual {p0, p1}, Lcom/android/camera/trackfocus/TrackFocusView;->f(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/android/camera/trackfocus/TrackFocusView;->f(Landroid/content/Context;)V
 
     return-void
 .end method
 
-.method public static synthetic a(Lcom/android/camera/trackfocus/TrackFocusView;)Lu9/z;
+.method public static synthetic a(Lcom/android/camera/trackfocus/TrackFocusView;)Ld/d/a/b8/z;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->n:Lu9/z;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->K2:Ld/d/a/b8/z;
 
     return-object p0
 .end method
 
-.method public static synthetic b(Lcom/android/camera/trackfocus/TrackFocusView;)Lu9/h;
+.method public static synthetic b(Lcom/android/camera/trackfocus/TrackFocusView;)Ld/d/a/b8/v;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->m:Lu9/h;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->C2:Ld/d/a/b8/v;
 
     return-object p0
 .end method
 
-
-# virtual methods
-.method public c()V
-    .locals 3
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->a:Lu9/y;
-
-    const/4 v0, 0x0
-
-    new-array v0, v0, [Ljava/lang/Object;
-
-    const-string v1, "TrackFocusView"
-
-    const-string v2, "clear"
-
-    invoke-static {v1, v2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
-
-    move-result-object v0
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    if-ne v0, v1, :cond_0
-
-    const/16 v0, 0x8
-
-    invoke-virtual {p0, v0}, Lcom/android/camera/trackfocus/TrackFocusView;->setVisibility(I)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Landroid/view/View;->postInvalidate()V
-
-    :goto_0
-    return-void
-.end method
-
-.method public d(IZ)V
-    .locals 0
-
-    iput p1, p0, Lcom/android/camera/trackfocus/TrackFocusView;->i:I
-
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
-    return-void
-.end method
-
-.method public final e()V
+.method private e()V
     .locals 2
 
-    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->p:Landroid/os/Handler;
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->L8:Landroid/os/Handler;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    iget-object p0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->p:Landroid/os/Handler;
+    .line 2
+    iget-object p0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->L8:Landroid/os/Handler;
 
     const/4 v0, 0x3
 
@@ -414,46 +400,59 @@
     return-void
 .end method
 
-.method public final f(Landroid/content/Context;)V
+.method private f(Landroid/content/Context;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
+    .line 1
     move-object v0, p1
 
     check-cast v0, Lcom/android/camera/ActivityBase;
 
-    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->W()Lcom/android/camera/t2;
+    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->S()Ld/d/a/c4;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->g:Lcom/android/camera/t2;
+    iput-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->K0:Ld/d/a/c4;
 
-    new-instance v0, Lu9/h;
+    .line 2
+    new-instance v0, Ld/d/a/b8/v;
 
-    invoke-direct {v0, p1}, Lu9/h;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Ld/d/a/b8/v;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->m:Lu9/h;
+    iput-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->C2:Ld/d/a/b8/v;
 
-    new-instance v0, Lu9/z;
+    .line 3
+    new-instance v0, Ld/d/a/b8/z;
 
-    invoke-direct {v0, p1}, Lu9/z;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Ld/d/a/b8/z;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->n:Lu9/z;
+    iput-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->K2:Ld/d/a/b8/z;
 
     return-void
 .end method
 
-.method public final g()Z
+.method private g()Z
     .locals 2
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
-    iget-object p0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->a:Lu9/y;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->p:Ld/d/a/b8/y;
 
     const/4 v0, 0x0
 
     if-eqz p0, :cond_1
 
-    invoke-virtual {p0}, Lu9/y;->b()I
+    .line 2
+    invoke-virtual {p0}, Ld/d/a/b8/y;->b()I
 
     move-result p0
 
@@ -472,18 +471,16 @@
     return v0
 .end method
 
-.method public getDrawable()Lu9/h;
-    .locals 0
-    .annotation build Lh7/c;
-    .end annotation
-
-    iget-object p0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->m:Lu9/h;
-
-    return-object p0
-.end method
-
-.method public final h(I)[B
+.method private h(I)[B
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "bitArray"
+        }
+    .end annotation
 
     const/16 p0, 0x10
 
@@ -500,6 +497,7 @@
 
     int-to-byte v2, v2
 
+    .line 1
     aput-byte v2, v0, v1
 
     add-int/lit8 v1, v1, 0x1
@@ -510,12 +508,13 @@
     return-object v0
 .end method
 
-.method public final i()Z
-    .locals 10
+.method private i()Z
+    .locals 11
 
-    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->a:Lu9/y;
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->p:Ld/d/a/b8/y;
 
-    invoke-virtual {v0}, Lu9/y;->c()[I
+    invoke-virtual {v0}, Ld/d/a/b8/y;->c()[I
 
     move-result-object v0
 
@@ -523,146 +522,476 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     array-length v2, v0
 
     const/16 v3, 0x9
 
     if-lt v2, v3, :cond_0
 
-    iget-object v2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->k:Landroid/graphics/Rect;
+    .line 3
+    iget-object v2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->K1:Landroid/graphics/Rect;
+
+    aget v3, v0, v1
+
+    const/4 v4, 0x1
+
+    aget v5, v0, v4
 
     aget v1, v0, v1
 
-    const/4 v3, 0x1
-
-    aget v4, v0, v3
-
-    const/4 v5, 0x2
-
-    aget v5, v0, v5
-
-    add-int/2addr v5, v1
-
-    const/4 v6, 0x3
+    const/4 v6, 0x2
 
     aget v6, v0, v6
 
-    add-int/2addr v6, v4
+    add-int/2addr v1, v6
 
-    invoke-virtual {v2, v1, v4, v5, v6}, Landroid/graphics/Rect;->set(IIII)V
+    aget v6, v0, v4
 
-    iget-object v1, p0, Lcom/android/camera/trackfocus/TrackFocusView;->k:Landroid/graphics/Rect;
+    const/4 v7, 0x3
 
-    invoke-virtual {p0, v1, v1}, Lcom/android/camera/trackfocus/TrackFocusView;->n(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
+    aget v7, v0, v7
 
-    iget-object v4, p0, Lcom/android/camera/trackfocus/TrackFocusView;->n:Lu9/z;
+    add-int/2addr v6, v7
 
-    iget-object v5, p0, Lcom/android/camera/trackfocus/TrackFocusView;->k:Landroid/graphics/Rect;
+    invoke-virtual {v2, v3, v5, v1, v6}, Landroid/graphics/Rect;->set(IIII)V
+
+    .line 4
+    iget-object v1, p0, Lcom/android/camera/trackfocus/TrackFocusView;->K1:Landroid/graphics/Rect;
+
+    invoke-direct {p0, v1, v1}, Lcom/android/camera/trackfocus/TrackFocusView;->n(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
+
+    .line 5
+    iget-object v5, p0, Lcom/android/camera/trackfocus/TrackFocusView;->K2:Ld/d/a/b8/z;
+
+    iget-object v6, p0, Lcom/android/camera/trackfocus/TrackFocusView;->K1:Landroid/graphics/Rect;
 
     const/4 v1, 0x4
 
-    aget v6, v0, v1
+    aget v7, v0, v1
 
     const/4 v1, 0x5
 
-    aget v7, v0, v1
+    aget v8, v0, v1
 
     const/4 v1, 0x6
 
-    aget v8, v0, v1
+    aget v9, v0, v1
 
     const/4 v1, 0x7
 
     aget v0, v0, v1
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/trackfocus/TrackFocusView;->h(I)[B
+    invoke-direct {p0, v0}, Lcom/android/camera/trackfocus/TrackFocusView;->h(I)[B
 
-    move-result-object v9
+    move-result-object v10
 
-    invoke-virtual/range {v4 .. v9}, Lu9/z;->e(Landroid/graphics/Rect;III[B)V
+    invoke-virtual/range {v5 .. v10}, Ld/d/a/b8/z;->e(Landroid/graphics/Rect;III[B)V
 
-    return v3
+    return v4
 
     :cond_0
     return v1
 .end method
 
-.method public final j()V
+.method private j()V
     .locals 10
 
-    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->e:Landroid/graphics/Matrix;
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->w:Landroid/graphics/Matrix;
 
     invoke-virtual {v0}, Landroid/graphics/Matrix;->reset()V
 
-    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->d:Landroid/graphics/Matrix;
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->u:Landroid/graphics/Matrix;
 
     invoke-virtual {v0}, Landroid/graphics/Matrix;->reset()V
 
-    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->f:Landroid/graphics/Matrix;
+    .line 3
+    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->k0:Landroid/graphics/Matrix;
 
     invoke-virtual {v0}, Landroid/graphics/Matrix;->reset()V
 
-    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->e:Landroid/graphics/Matrix;
+    .line 4
+    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->w:Landroid/graphics/Matrix;
 
-    iget-object v1, p0, Lcom/android/camera/trackfocus/TrackFocusView;->c:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/android/camera/trackfocus/TrackFocusView;->t:Landroid/graphics/Rect;
 
-    iget-object v2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->a:Lu9/y;
+    iget-object v2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->p:Ld/d/a/b8/y;
 
-    invoke-virtual {v2}, Lu9/y;->e()F
+    invoke-virtual {v2}, Ld/d/a/b8/y;->e()F
 
     move-result v2
 
-    invoke-static {v0, v1, v2}, Lcom/android/camera/a6;->r4(Landroid/graphics/Matrix;Landroid/graphics/Rect;F)V
+    invoke-static {v0, v1, v2}, Ld/d/a/z5;->d4(Landroid/graphics/Matrix;Landroid/graphics/Rect;F)V
 
-    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->g:Lcom/android/camera/t2;
+    .line 5
+    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->K0:Ld/d/a/c4;
 
-    invoke-virtual {v0}, Lcom/android/camera/g5;->k()I
+    invoke-virtual {v0}, Ld/d/a/s5;->k()I
 
     move-result v5
 
-    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->g:Lcom/android/camera/t2;
+    .line 6
+    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->K0:Ld/d/a/c4;
 
-    invoke-virtual {v0}, Lcom/android/camera/g5;->n()I
+    invoke-virtual {v0}, Ld/d/a/s5;->n()I
 
     move-result v4
 
-    iget-object v1, p0, Lcom/android/camera/trackfocus/TrackFocusView;->d:Landroid/graphics/Matrix;
+    .line 7
+    iget-object v1, p0, Lcom/android/camera/trackfocus/TrackFocusView;->u:Landroid/graphics/Matrix;
 
-    const/4 v2, 0x0
-
-    iget v3, p0, Lcom/android/camera/trackfocus/TrackFocusView;->h:I
+    iget v3, p0, Lcom/android/camera/trackfocus/TrackFocusView;->k1:I
 
     div-int/lit8 v6, v4, 0x2
 
     div-int/lit8 v7, v5, 0x2
 
-    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->c:Landroid/graphics/Rect;
+    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->t:Landroid/graphics/Rect;
 
+    .line 8
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result v8
 
-    iget-object p0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->c:Landroid/graphics/Rect;
+    iget-object p0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->t:Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Landroid/graphics/Rect;->height()I
 
     move-result v9
 
-    invoke-static/range {v1 .. v9}, Lcom/android/camera/a6;->d4(Landroid/graphics/Matrix;ZIIIIIII)V
+    const/4 v2, 0x0
+
+    .line 9
+    invoke-static/range {v1 .. v9}, Ld/d/a/z5;->Q3(Landroid/graphics/Matrix;ZIIIIIII)V
 
     return-void
 .end method
 
-.method public k(Lu9/y;Landroid/graphics/Rect;)V
-    .locals 4
+.method private l()V
+    .locals 2
 
-    iget-boolean v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->b:Z
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->L8:Landroid/os/Handler;
+
+    const/4 v1, 0x2
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
+
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->L8:Landroid/os/Handler;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
+
+    .line 3
+    iget-object p0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->L8:Landroid/os/Handler;
+
+    invoke-virtual {p0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    return-void
+.end method
+
+.method private m()V
+    .locals 10
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-virtual {p0, v0}, Lcom/android/camera/trackfocus/TrackFocusView;->setVisibility(I)V
+
+    .line 2
+    new-instance v1, Lmiuix/animation/controller/AnimState;
+
+    sget-object v2, Lmiuix/animation/IVisibleStyle$VisibleType;->HIDE:Lmiuix/animation/IVisibleStyle$VisibleType;
+
+    invoke-direct {v1, v2}, Lmiuix/animation/controller/AnimState;-><init>(Ljava/lang/Object;)V
+
+    iget-object v3, p0, Lcom/android/camera/trackfocus/TrackFocusView;->M8:Lmiuix/animation/property/ViewProperty;
+
+    const-wide/high16 v4, -0x3fb7000000000000L    # -50.0
+
+    .line 3
+    invoke-virtual {v1, v3, v4, v5}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
+
+    move-result-object v1
+
+    .line 4
+    new-instance v3, Lmiuix/animation/controller/AnimState;
+
+    sget-object v4, Lmiuix/animation/IVisibleStyle$VisibleType;->SHOW:Lmiuix/animation/IVisibleStyle$VisibleType;
+
+    invoke-direct {v3, v4}, Lmiuix/animation/controller/AnimState;-><init>(Ljava/lang/Object;)V
+
+    iget-object v5, p0, Lcom/android/camera/trackfocus/TrackFocusView;->M8:Lmiuix/animation/property/ViewProperty;
+
+    const-wide/16 v6, 0x0
+
+    .line 5
+    invoke-virtual {v3, v5, v6, v7}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
+
+    move-result-object v3
+
+    .line 6
+    new-instance v5, Lmiuix/animation/controller/AnimState;
+
+    invoke-direct {v5, v2}, Lmiuix/animation/controller/AnimState;-><init>(Ljava/lang/Object;)V
+
+    sget-object v2, Lmiuix/animation/property/ViewProperty;->ALPHA:Lmiuix/animation/property/ViewProperty;
+
+    const-wide/high16 v8, 0x3ff0000000000000L    # 1.0
+
+    .line 7
+    invoke-virtual {v5, v2, v8, v9}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
+
+    move-result-object v5
+
+    .line 8
+    new-instance v8, Lmiuix/animation/controller/AnimState;
+
+    invoke-direct {v8, v4}, Lmiuix/animation/controller/AnimState;-><init>(Ljava/lang/Object;)V
+
+    .line 9
+    invoke-virtual {v8, v2, v6, v7}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
+
+    move-result-object v2
+
+    const/4 v4, 0x1
+
+    new-array v6, v4, [Landroid/view/View;
+
+    aput-object p0, v6, v0
+
+    .line 10
+    invoke-static {v6}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Lmiuix/animation/IFolme;->state()Lmiuix/animation/IStateStyle;
+
+    move-result-object p0
+
+    new-array v6, v4, [Lmiuix/animation/base/AnimConfig;
+
+    new-instance v7, Lmiuix/animation/base/AnimConfig;
+
+    invoke-direct {v7}, Lmiuix/animation/base/AnimConfig;-><init>()V
+
+    new-array v8, v4, [F
+
+    const/high16 v9, 0x43480000    # 200.0f
+
+    aput v9, v8, v0
+
+    const/4 v9, 0x6
+
+    .line 11
+    invoke-virtual {v7, v9, v8}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
+
+    move-result-object v7
+
+    aput-object v7, v6, v0
+
+    invoke-interface {p0, v5, v2, v6}, Lmiuix/animation/IStateStyle;->fromTo(Ljava/lang/Object;Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
+
+    move-result-object p0
+
+    new-array v2, v4, [Lmiuix/animation/base/AnimConfig;
+
+    new-instance v4, Lmiuix/animation/base/AnimConfig;
+
+    invoke-direct {v4}, Lmiuix/animation/base/AnimConfig;-><init>()V
+
+    const/4 v5, 0x2
+
+    new-array v5, v5, [F
+
+    fill-array-data v5, :array_0
+
+    const/4 v6, -0x2
+
+    .line 12
+    invoke-virtual {v4, v6, v5}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
+
+    move-result-object v4
+
+    aput-object v4, v2, v0
+
+    invoke-interface {p0, v1, v3, v2}, Lmiuix/animation/IStateStyle;->fromTo(Ljava/lang/Object;Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
+
+    return-void
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x3f666666    # 0.9f
+        0x3e99999a    # 0.3f
+    .end array-data
+.end method
+
+.method private n(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "requestRect",
+            "resultRect"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->v2:Landroid/graphics/RectF;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
+
+    .line 2
+    iget-object p1, p0, Lcom/android/camera/trackfocus/TrackFocusView;->w:Landroid/graphics/Matrix;
+
+    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->v2:Landroid/graphics/RectF;
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
+
+    .line 3
+    iget-object p1, p0, Lcom/android/camera/trackfocus/TrackFocusView;->u:Landroid/graphics/Matrix;
+
+    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->v2:Landroid/graphics/RectF;
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
+
+    .line 4
+    iget-object p0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->v2:Landroid/graphics/RectF;
+
+    iget p1, p0, Landroid/graphics/RectF;->left:F
+
+    float-to-int p1, p1
+
+    iget v0, p0, Landroid/graphics/RectF;->top:F
+
+    float-to-int v0, v0
+
+    iget v1, p0, Landroid/graphics/RectF;->right:F
+
+    float-to-int v1, v1
+
+    iget p0, p0, Landroid/graphics/RectF;->bottom:F
+
+    float-to-int p0, p0
+
+    invoke-virtual {p2, p1, v0, v1, p0}, Landroid/graphics/Rect;->set(IIII)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public c()V
+    .locals 3
+
+    const/4 v0, 0x0
+
+    .line 1
+    iput-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->p:Ld/d/a/b8/y;
+
+    const/4 v0, 0x0
+
+    new-array v0, v0, [Ljava/lang/Object;
+
+    const-string v1, "TrackFocusView"
+
+    const-string v2, "clear"
+
+    .line 2
+    invoke-static {v1, v2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 3
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    if-ne v0, v1, :cond_0
+
+    const/16 v0, 0x8
+
+    .line 4
+    invoke-virtual {p0, v0}, Lcom/android/camera/trackfocus/TrackFocusView;->setVisibility(I)V
+
+    goto :goto_0
+
+    .line 5
+    :cond_0
+    invoke-virtual {p0}, Landroid/view/View;->postInvalidate()V
+
+    :goto_0
+    return-void
+.end method
+
+.method public d(IZ)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "orientation",
+            "animation"
+        }
+    .end annotation
+
+    .line 1
+    iput p1, p0, Lcom/android/camera/trackfocus/TrackFocusView;->v1:I
+
+    .line 2
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    return-void
+.end method
+
+.method public getDrawable()Ld/d/a/b8/v;
+    .locals 0
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->C2:Ld/d/a/b8/v;
+
+    return-object p0
+.end method
+
+.method public k(Ld/d/a/b8/y;Landroid/graphics/Rect;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "trackResult",
+            "activeArraySize"
+        }
+    .end annotation
+
+    .line 1
+    iget-boolean v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->s:Z
 
     if-nez v0, :cond_4
 
     if-eqz p1, :cond_4
 
-    invoke-virtual {p1}, Lu9/y;->i()Z
+    .line 2
+    invoke-virtual {p1}, Ld/d/a/b8/y;->i()Z
 
     move-result v0
 
@@ -674,10 +1003,12 @@
 
     const/16 v0, 0x8
 
+    .line 3
     invoke-virtual {p0, v0}, Lcom/android/camera/trackfocus/TrackFocusView;->setVisibility(I)V
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
 
@@ -685,6 +1016,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 5
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -703,37 +1035,44 @@
 
     invoke-static {v1, v0, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 6
     invoke-virtual {p0, v2}, Lcom/android/camera/trackfocus/TrackFocusView;->setVisibility(I)V
 
+    .line 7
     :cond_1
     :goto_0
-    invoke-virtual {p1}, Lu9/y;->c()[I
+    invoke-virtual {p1}, Ld/d/a/b8/y;->c()[I
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->n:Lu9/z;
+    .line 8
+    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->K2:Ld/d/a/b8/z;
 
-    invoke-virtual {v0}, Lu9/z;->b()Z
+    invoke-virtual {v0}, Ld/d/a/b8/z;->b()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    const-string v0, "setTrackResult consume refresh"
+    new-array v0, v2, [Ljava/lang/Object;
 
-    new-array v3, v2, [Ljava/lang/Object;
+    const-string v3, "setTrackResult consume refresh"
 
-    invoke-static {v1, v0, v3}, Lcom/android/camera/log/LogC;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 9
+    invoke-static {v1, v3, v0}, Lcom/android/camera/log/LogC;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-virtual {p0}, Lcom/android/camera/trackfocus/TrackFocusView;->l()V
+    .line 10
+    invoke-direct {p0}, Lcom/android/camera/trackfocus/TrackFocusView;->l()V
 
     goto :goto_1
 
+    .line 11
     :cond_2
-    invoke-virtual {p0}, Lcom/android/camera/trackfocus/TrackFocusView;->e()V
+    invoke-direct {p0}, Lcom/android/camera/trackfocus/TrackFocusView;->e()V
 
+    .line 12
     :cond_3
     :goto_1
     new-instance v0, Ljava/lang/StringBuilder;
@@ -760,293 +1099,126 @@
 
     invoke-static {v1, v0, v2}, Lcom/android/camera/log/LogC;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iput-object p1, p0, Lcom/android/camera/trackfocus/TrackFocusView;->a:Lu9/y;
+    .line 13
+    iput-object p1, p0, Lcom/android/camera/trackfocus/TrackFocusView;->p:Ld/d/a/b8/y;
 
-    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->c:Landroid/graphics/Rect;
+    .line 14
+    iput-object p2, p0, Lcom/android/camera/trackfocus/TrackFocusView;->t:Landroid/graphics/Rect;
 
-    invoke-virtual {p0}, Lcom/android/camera/trackfocus/TrackFocusView;->j()V
+    .line 15
+    invoke-direct {p0}, Lcom/android/camera/trackfocus/TrackFocusView;->j()V
 
+    .line 16
     invoke-virtual {p0}, Landroid/view/View;->postInvalidate()V
 
     goto :goto_2
 
+    .line 17
     :cond_4
-    invoke-virtual {p0}, Lcom/android/camera/trackfocus/TrackFocusView;->e()V
+    invoke-direct {p0}, Lcom/android/camera/trackfocus/TrackFocusView;->e()V
 
     :goto_2
     return-void
 .end method
 
-.method public final l()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->p:Landroid/os/Handler;
-
-    const/4 v1, 0x2
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
-
-    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->p:Landroid/os/Handler;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
-
-    iget-object p0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->p:Landroid/os/Handler;
-
-    invoke-virtual {p0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
-
-    return-void
-.end method
-
-.method public final m()V
-    .locals 10
-    .annotation build Lh7/c;
-    .end annotation
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lcom/android/camera/trackfocus/TrackFocusView;->setVisibility(I)V
-
-    new-instance v1, Lmiuix/animation/controller/AnimState;
-
-    sget-object v2, Lmiuix/animation/IVisibleStyle$VisibleType;->HIDE:Lmiuix/animation/IVisibleStyle$VisibleType;
-
-    invoke-direct {v1, v2}, Lmiuix/animation/controller/AnimState;-><init>(Ljava/lang/Object;)V
-
-    iget-object v3, p0, Lcom/android/camera/trackfocus/TrackFocusView;->q:Lmiuix/animation/property/ViewProperty;
-
-    const-wide/high16 v4, -0x3fb7000000000000L    # -50.0
-
-    invoke-virtual {v1, v3, v4, v5}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
-
-    move-result-object v1
-
-    new-instance v3, Lmiuix/animation/controller/AnimState;
-
-    sget-object v4, Lmiuix/animation/IVisibleStyle$VisibleType;->SHOW:Lmiuix/animation/IVisibleStyle$VisibleType;
-
-    invoke-direct {v3, v4}, Lmiuix/animation/controller/AnimState;-><init>(Ljava/lang/Object;)V
-
-    iget-object v5, p0, Lcom/android/camera/trackfocus/TrackFocusView;->q:Lmiuix/animation/property/ViewProperty;
-
-    const-wide/16 v6, 0x0
-
-    invoke-virtual {v3, v5, v6, v7}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
-
-    move-result-object v3
-
-    new-instance v5, Lmiuix/animation/controller/AnimState;
-
-    invoke-direct {v5, v2}, Lmiuix/animation/controller/AnimState;-><init>(Ljava/lang/Object;)V
-
-    sget-object v2, Lmiuix/animation/property/ViewProperty;->ALPHA:Lmiuix/animation/property/ViewProperty;
-
-    const-wide/high16 v8, 0x3ff0000000000000L    # 1.0
-
-    invoke-virtual {v5, v2, v8, v9}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
-
-    move-result-object v5
-
-    new-instance v8, Lmiuix/animation/controller/AnimState;
-
-    invoke-direct {v8, v4}, Lmiuix/animation/controller/AnimState;-><init>(Ljava/lang/Object;)V
-
-    invoke-virtual {v8, v2, v6, v7}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
-
-    move-result-object v2
-
-    const/4 v4, 0x1
-
-    new-array v6, v4, [Landroid/view/View;
-
-    aput-object p0, v6, v0
-
-    invoke-static {v6}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Lmiuix/animation/IFolme;->state()Lmiuix/animation/IStateStyle;
-
-    move-result-object p0
-
-    new-array v6, v4, [Lmiuix/animation/base/AnimConfig;
-
-    new-instance v7, Lmiuix/animation/base/AnimConfig;
-
-    invoke-direct {v7}, Lmiuix/animation/base/AnimConfig;-><init>()V
-
-    new-array v8, v4, [F
-
-    const/high16 v9, 0x43480000    # 200.0f
-
-    aput v9, v8, v0
-
-    const/4 v9, 0x6
-
-    invoke-virtual {v7, v9, v8}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
-
-    move-result-object v7
-
-    aput-object v7, v6, v0
-
-    invoke-interface {p0, v5, v2, v6}, Lmiuix/animation/IStateStyle;->fromTo(Ljava/lang/Object;Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
-
-    move-result-object p0
-
-    new-array v2, v4, [Lmiuix/animation/base/AnimConfig;
-
-    new-instance v4, Lmiuix/animation/base/AnimConfig;
-
-    invoke-direct {v4}, Lmiuix/animation/base/AnimConfig;-><init>()V
-
-    const/4 v5, 0x2
-
-    new-array v5, v5, [F
-
-    fill-array-data v5, :array_0
-
-    const/4 v6, -0x2
-
-    invoke-virtual {v4, v6, v5}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
-
-    move-result-object v4
-
-    aput-object v4, v2, v0
-
-    invoke-interface {p0, v1, v3, v2}, Lmiuix/animation/IStateStyle;->fromTo(Ljava/lang/Object;Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
-
-    return-void
-
-    nop
-
-    :array_0
-    .array-data 4
-        0x3f666666    # 0.9f
-        0x3e99999a    # 0.3f
-    .end array-data
-.end method
-
-.method public final n(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
-    .locals 2
-
-    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->l:Landroid/graphics/RectF;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
-
-    iget-object p1, p0, Lcom/android/camera/trackfocus/TrackFocusView;->e:Landroid/graphics/Matrix;
-
-    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->l:Landroid/graphics/RectF;
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
-
-    iget-object p1, p0, Lcom/android/camera/trackfocus/TrackFocusView;->d:Landroid/graphics/Matrix;
-
-    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->l:Landroid/graphics/RectF;
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
-
-    iget-object p0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->l:Landroid/graphics/RectF;
-
-    iget p1, p0, Landroid/graphics/RectF;->left:F
-
-    float-to-int p1, p1
-
-    iget v0, p0, Landroid/graphics/RectF;->top:F
-
-    float-to-int v0, v0
-
-    iget v1, p0, Landroid/graphics/RectF;->right:F
-
-    float-to-int v1, v1
-
-    iget p0, p0, Landroid/graphics/RectF;->bottom:F
-
-    float-to-int p0, p0
-
-    invoke-virtual {p2, p1, v0, v1, p0}, Landroid/graphics/Rect;->set(IIII)V
-
-    return-void
-.end method
-
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "canvas"
+        }
+    .end annotation
 
-    iget-boolean v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->b:Z
+    .line 1
+    iget-boolean v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->s:Z
 
     if-nez v0, :cond_3
 
-    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->a:Lu9/y;
+    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->p:Ld/d/a/b8/y;
 
     if-nez v0, :cond_0
 
     goto :goto_1
 
+    .line 2
     :cond_0
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->a:Lu9/y;
+    .line 3
+    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->p:Ld/d/a/b8/y;
 
-    invoke-virtual {v0}, Lu9/y;->a()Landroid/graphics/Rect;
+    invoke-virtual {v0}, Ld/d/a/b8/y;->a()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/camera/trackfocus/TrackFocusView;->j:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/android/camera/trackfocus/TrackFocusView;->C1:Landroid/graphics/Rect;
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/camera/trackfocus/TrackFocusView;->n(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
+    invoke-direct {p0, v0, v1}, Lcom/android/camera/trackfocus/TrackFocusView;->n(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
 
-    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->a:Lu9/y;
+    .line 4
+    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->p:Ld/d/a/b8/y;
 
-    invoke-virtual {v0}, Lu9/y;->c()[I
+    invoke-virtual {v0}, Ld/d/a/b8/y;->c()[I
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Lcom/android/camera/trackfocus/TrackFocusView;->i()Z
+    .line 5
+    invoke-direct {p0}, Lcom/android/camera/trackfocus/TrackFocusView;->i()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->n:Lu9/z;
+    .line 6
+    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->K2:Ld/d/a/b8/z;
 
-    invoke-virtual {v0, p1}, Lu9/z;->draw(Landroid/graphics/Canvas;)V
+    invoke-virtual {v0, p1}, Ld/d/a/b8/z;->draw(Landroid/graphics/Canvas;)V
 
     goto :goto_0
 
+    .line 7
     :cond_1
-    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->m:Lu9/h;
+    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->C2:Ld/d/a/b8/v;
 
-    iget-object v1, p0, Lcom/android/camera/trackfocus/TrackFocusView;->a:Lu9/y;
+    iget-object v1, p0, Lcom/android/camera/trackfocus/TrackFocusView;->p:Ld/d/a/b8/y;
 
-    invoke-virtual {v1}, Lu9/y;->g()Z
+    invoke-virtual {v1}, Ld/d/a/b8/y;->g()Z
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lu9/h;->e(Z)V
+    invoke-virtual {v0, v1}, Ld/d/a/b8/v;->e(Z)V
 
-    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->m:Lu9/h;
+    .line 8
+    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->C2:Ld/d/a/b8/v;
 
-    iget-object v1, p0, Lcom/android/camera/trackfocus/TrackFocusView;->j:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/android/camera/trackfocus/TrackFocusView;->C1:Landroid/graphics/Rect;
 
-    invoke-virtual {v0, v1}, Lu9/h;->f(Landroid/graphics/Rect;)V
+    invoke-virtual {v0, v1}, Ld/d/a/b8/v;->f(Landroid/graphics/Rect;)V
 
-    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->m:Lu9/h;
+    .line 9
+    iget-object v0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->C2:Ld/d/a/b8/v;
 
-    invoke-virtual {v0, p1}, Lu9/h;->draw(Landroid/graphics/Canvas;)V
+    invoke-virtual {v0, p1}, Ld/d/a/b8/v;->draw(Landroid/graphics/Canvas;)V
 
+    .line 10
     :cond_2
     :goto_0
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    iget-object p1, p0, Lcom/android/camera/trackfocus/TrackFocusView;->o:Lu9/a;
+    .line 11
+    iget-object p1, p0, Lcom/android/camera/trackfocus/TrackFocusView;->K8:Ld/d/a/b8/q;
 
     if-eqz p1, :cond_3
 
-    iget-object p0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->a:Lu9/y;
+    .line 12
+    iget-object p0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->p:Ld/d/a/b8/y;
 
-    invoke-virtual {p1, p0}, Lu9/a;->d(Lu9/y;)V
+    invoke-virtual {p1, p0}, Ld/d/a/b8/q;->d(Ld/d/a/b8/y;)V
 
     :cond_3
     :goto_1
@@ -1055,37 +1227,81 @@
 
 .method public onSizeChanged(IIII)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "w",
+            "h",
+            "oldw",
+            "oldh"
+        }
+    .end annotation
 
-    iget-object p0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->n:Lu9/z;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/trackfocus/TrackFocusView;->K2:Ld/d/a/b8/z;
 
-    invoke-virtual {p0, p1, p2}, Lu9/z;->d(II)V
+    invoke-virtual {p0, p1, p2}, Ld/d/a/b8/z;->d(II)V
 
     return-void
 .end method
 
 .method public setCameraDisplayOrientation(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "orientation"
+        }
+    .end annotation
 
-    iput p1, p0, Lcom/android/camera/trackfocus/TrackFocusView;->h:I
+    .line 1
+    iput p1, p0, Lcom/android/camera/trackfocus/TrackFocusView;->k1:I
 
     return-void
 .end method
 
-.method public setCameraTrackInfo(Lu9/a;)V
+.method public setCameraTrackInfo(Ld/d/a/b8/q;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "trackInfo"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera/trackfocus/TrackFocusView;->o:Lu9/a;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/trackfocus/TrackFocusView;->K8:Ld/d/a/b8/q;
 
     return-void
 .end method
 
 .method public setSkipDraw(Z)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "enable"
+        }
+    .end annotation
 
-    iput-boolean p1, p0, Lcom/android/camera/trackfocus/TrackFocusView;->b:Z
+    .line 1
+    iput-boolean p1, p0, Lcom/android/camera/trackfocus/TrackFocusView;->s:Z
 
+    .line 2
     invoke-virtual {p0}, Lcom/android/camera/trackfocus/TrackFocusView;->c()V
 
+    .line 3
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1113,13 +1329,23 @@
 
 .method public setVisibility(I)V
     .locals 3
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isSupportOCR"
         type = 0x0
     .end annotation
 
-    invoke-static {}, Lcom/android/camera/v2;->Z4()Z
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "visibility"
+        }
+    .end annotation
+
+    .line 1
+    invoke-static {}, Ld/d/a/d4;->X4()Z
 
     move-result v0
 
@@ -1135,6 +1361,7 @@
 
     if-nez p1, :cond_0
 
+    .line 2
     invoke-static {}, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->getInstance()Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;
 
     move-result-object v1
@@ -1143,6 +1370,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-static {}, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->getInstance()Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;
 
@@ -1152,6 +1380,7 @@
 
     invoke-virtual {v1, v0, v2}, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->removeFocusType(IZ)V
 
+    .line 4
     :cond_1
     :goto_0
     invoke-super {p0, p1}, Landroid/view/View;->setVisibility(I)V

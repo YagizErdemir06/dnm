@@ -36,6 +36,7 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     new-instance v9, Lcom/google/mlkit/vision/barcode/common/Barcode$CalendarDateTime;
 
@@ -69,6 +70,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/vision/barcode/internal/zzm;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;
 
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;->zze:[Landroid/graphics/Point;
@@ -90,30 +92,36 @@
     :goto_0
     iget-object v5, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;->zze:[Landroid/graphics/Point;
 
+    .line 2
     array-length v6, v5
 
     if-ge v0, v6, :cond_0
 
+    .line 3
     aget-object v5, v5, v0
 
+    .line 4
     iget v6, v5, Landroid/graphics/Point;->x:I
 
     invoke-static {v3, v6}, Ljava/lang/Math;->min(II)I
 
     move-result v3
 
+    .line 5
     iget v6, v5, Landroid/graphics/Point;->x:I
 
     invoke-static {v1, v6}, Ljava/lang/Math;->max(II)I
 
     move-result v1
 
+    .line 6
     iget v6, v5, Landroid/graphics/Point;->y:I
 
     invoke-static {v4, v6}, Ljava/lang/Math;->min(II)I
 
     move-result v4
 
+    .line 7
     iget v5, v5, Landroid/graphics/Point;->y:I
 
     invoke-static {v2, v5}, Ljava/lang/Math;->max(II)I
@@ -127,6 +135,7 @@
     :cond_0
     new-instance p0, Landroid/graphics/Rect;
 
+    .line 8
     invoke-direct {p0, v3, v4, v1, v2}, Landroid/graphics/Rect;-><init>(IIII)V
 
     return-object p0
@@ -142,6 +151,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/vision/barcode/internal/zzm;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;
 
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;->zzl:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzg;
@@ -152,6 +162,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     new-instance v8, Lcom/google/mlkit/vision/barcode/common/Barcode$CalendarEvent;
 
@@ -167,12 +178,14 @@
 
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzg;->zzf:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzf;
 
+    .line 3
     invoke-static {v0}, Lcom/google/mlkit/vision/barcode/internal/zzm;->zza(Lcom/google/android/gms/internal/mlkit_vision_barcode/zzf;)Lcom/google/mlkit/vision/barcode/common/Barcode$CalendarDateTime;
 
     move-result-object v6
 
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzg;->zzg:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzf;
 
+    .line 4
     invoke-static {p0}, Lcom/google/mlkit/vision/barcode/internal/zzm;->zza(Lcom/google/android/gms/internal/mlkit_vision_barcode/zzf;)Lcom/google/mlkit/vision/barcode/common/Barcode$CalendarDateTime;
 
     move-result-object v7
@@ -191,6 +204,7 @@
 
     move-object/from16 v0, p0
 
+    .line 1
     iget-object v0, v0, Lcom/google/mlkit/vision/barcode/internal/zzm;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;
 
     iget-object v0, v0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;->zzm:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzh;
@@ -201,6 +215,7 @@
 
     return-object v1
 
+    .line 2
     :cond_0
     new-instance v10, Lcom/google/mlkit/vision/barcode/common/Barcode$ContactInfo;
 
@@ -210,6 +225,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_1
     new-instance v1, Lcom/google/mlkit/vision/barcode/common/Barcode$PersonName;
 
@@ -240,6 +256,7 @@
     :goto_0
     move-object v3, v1
 
+    .line 4
     iget-object v4, v0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzh;->zzb:Ljava/lang/String;
 
     iget-object v5, v0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzh;->zzc:Ljava/lang/String;
@@ -248,6 +265,7 @@
 
     new-instance v6, Ljava/util/ArrayList;
 
+    .line 5
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v2, 0x0
@@ -261,10 +279,12 @@
 
     if-ge v7, v8, :cond_3
 
+    .line 6
     aget-object v8, v1, v7
 
     if-eqz v8, :cond_2
 
+    .line 7
     new-instance v9, Lcom/google/mlkit/vision/barcode/common/Barcode$Phone;
 
     iget-object v11, v8, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzm;->zzb:Ljava/lang/String;
@@ -285,6 +305,7 @@
 
     new-instance v7, Ljava/util/ArrayList;
 
+    .line 8
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
     if-eqz v1, :cond_5
@@ -296,10 +317,12 @@
 
     if-ge v8, v9, :cond_5
 
+    .line 9
     aget-object v9, v1, v8
 
     if-eqz v9, :cond_4
 
+    .line 10
     new-instance v11, Lcom/google/mlkit/vision/barcode/common/Barcode$Email;
 
     iget v12, v9, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzj;->zza:I
@@ -324,15 +347,18 @@
 
     if-eqz v1, :cond_6
 
+    .line 11
     invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
     goto :goto_3
 
+    .line 12
     :cond_6
     new-instance v1, Ljava/util/ArrayList;
 
+    .line 13
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     :goto_3
@@ -342,6 +368,7 @@
 
     new-instance v9, Ljava/util/ArrayList;
 
+    .line 14
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
     if-eqz v0, :cond_8
@@ -351,10 +378,12 @@
 
     if-ge v2, v1, :cond_8
 
+    .line 15
     aget-object v1, v0, v2
 
     if-eqz v1, :cond_7
 
+    .line 16
     new-instance v11, Lcom/google/mlkit/vision/barcode/common/Barcode$Address;
 
     iget v12, v1, Lcom/google/android/gms/internal/mlkit_vision_barcode/zze;->zza:I
@@ -373,6 +402,7 @@
     :cond_8
     move-object v2, v10
 
+    .line 17
     invoke-direct/range {v2 .. v9}, Lcom/google/mlkit/vision/barcode/common/Barcode$ContactInfo;-><init>(Lcom/google/mlkit/vision/barcode/common/Barcode$PersonName;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
 
     return-object v10
@@ -383,6 +413,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/vision/barcode/internal/zzm;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;
 
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;->zze:[Landroid/graphics/Point;
@@ -395,6 +426,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/vision/barcode/internal/zzm;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;
 
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;->zzc:Ljava/lang/String;
@@ -409,6 +441,7 @@
 
     move-object/from16 v0, p0
 
+    .line 1
     iget-object v0, v0, Lcom/google/mlkit/vision/barcode/internal/zzm;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;
 
     iget-object v0, v0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;->zzn:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzi;
@@ -419,6 +452,7 @@
 
     return-object v0
 
+    .line 2
     :cond_0
     new-instance v16, Lcom/google/mlkit/vision/barcode/common/Barcode$DriverLicense;
 
@@ -462,12 +496,14 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/vision/barcode/internal/zzm;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;
 
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;->zzf:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzj;
 
     if-eqz p0, :cond_0
 
+    .line 2
     new-instance v0, Lcom/google/mlkit/vision/barcode/common/Barcode$Email;
 
     iget v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzj;->zza:I
@@ -491,6 +527,7 @@
 .method public final getFormat()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/vision/barcode/internal/zzm;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;
 
     iget p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;->zza:I
@@ -503,12 +540,14 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/vision/barcode/internal/zzm;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;
 
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;->zzk:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzk;
 
     if-eqz p0, :cond_0
 
+    .line 2
     new-instance v0, Lcom/google/mlkit/vision/barcode/common/Barcode$GeoPoint;
 
     iget-wide v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzk;->zza:D
@@ -530,12 +569,14 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/vision/barcode/internal/zzm;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;
 
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;->zzg:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzm;
 
     if-eqz p0, :cond_0
 
+    .line 2
     new-instance v0, Lcom/google/mlkit/vision/barcode/common/Barcode$Phone;
 
     iget-object v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzm;->zzb:Ljava/lang/String;
@@ -557,6 +598,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/vision/barcode/internal/zzm;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;
 
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;->zzo:[B
@@ -569,6 +611,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/vision/barcode/internal/zzm;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;
 
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;->zzb:Ljava/lang/String;
@@ -581,12 +624,14 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/vision/barcode/internal/zzm;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;
 
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;->zzh:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzn;
 
     if-eqz p0, :cond_0
 
+    .line 2
     new-instance v0, Lcom/google/mlkit/vision/barcode/common/Barcode$Sms;
 
     iget-object v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzn;->zza:Ljava/lang/String;
@@ -608,12 +653,14 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/vision/barcode/internal/zzm;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;
 
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;->zzj:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzo;
 
     if-eqz p0, :cond_0
 
+    .line 2
     new-instance v0, Lcom/google/mlkit/vision/barcode/common/Barcode$UrlBookmark;
 
     iget-object v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzo;->zza:Ljava/lang/String;
@@ -633,6 +680,7 @@
 .method public final getValueType()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/vision/barcode/internal/zzm;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;
 
     iget p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;->zzd:I
@@ -645,12 +693,14 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/vision/barcode/internal/zzm;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;
 
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzq;->zzi:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzp;
 
     if-eqz p0, :cond_0
 
+    .line 2
     new-instance v0, Lcom/google/mlkit/vision/barcode/common/Barcode$WiFi;
 
     iget-object v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzp;->zza:Ljava/lang/String;

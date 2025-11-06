@@ -16,12 +16,15 @@
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
+    .line 2
     iput-boolean v0, p0, Lorg/dom4j/tree/SingleIterator;->first:Z
 
+    .line 3
     iput-object p1, p0, Lorg/dom4j/tree/SingleIterator;->object:Ljava/lang/Object;
 
     return-void
@@ -32,6 +35,7 @@
 .method public hasNext()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/dom4j/tree/SingleIterator;->first:Z
 
     return p0
@@ -40,14 +44,17 @@
 .method public next()Ljava/lang/Object;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/tree/SingleIterator;->object:Ljava/lang/Object;
 
     const/4 v1, 0x0
 
+    .line 2
     iput-object v1, p0, Lorg/dom4j/tree/SingleIterator;->object:Ljava/lang/Object;
 
     const/4 v1, 0x0
 
+    .line 3
     iput-boolean v1, p0, Lorg/dom4j/tree/SingleIterator;->first:Z
 
     return-object v0
@@ -56,6 +63,7 @@
 .method public remove()V
     .locals 1
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string v0, "remove() is not supported by this iterator"

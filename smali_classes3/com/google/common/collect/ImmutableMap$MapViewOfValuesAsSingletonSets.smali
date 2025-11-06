@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/ImmutableMap$MapViewOfValuesAsSingletonSets;
+.class public final Lcom/google/common/collect/ImmutableMap$MapViewOfValuesAsSingletonSets;
 .super Lcom/google/common/collect/ImmutableMap$IteratorBasedImmutableMap;
 .source "SourceFile"
 
@@ -24,7 +24,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/ImmutableMap;
+.field public final synthetic this$0:Lcom/google/common/collect/ImmutableMap;
 
 
 # direct methods
@@ -57,6 +57,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMap$MapViewOfValuesAsSingletonSets;->this$0:Lcom/google/common/collect/ImmutableMap;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableMap;->containsKey(Ljava/lang/Object;)Z
@@ -76,6 +77,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMap$MapViewOfValuesAsSingletonSets;->this$0:Lcom/google/common/collect/ImmutableMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMap;->keySet()Lcom/google/common/collect/ImmutableSet;
@@ -98,6 +100,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/ImmutableMap$MapViewOfValuesAsSingletonSets;->this$0:Lcom/google/common/collect/ImmutableMap;
 
     invoke-virtual {v0}, Lcom/google/common/collect/ImmutableMap;->entrySet()Lcom/google/common/collect/ImmutableSet;
@@ -108,6 +111,7 @@
 
     move-result-object v0
 
+    .line 2
     new-instance v1, Lcom/google/common/collect/ImmutableMap$MapViewOfValuesAsSingletonSets$1;
 
     invoke-direct {v1, p0, v0}, Lcom/google/common/collect/ImmutableMap$MapViewOfValuesAsSingletonSets$1;-><init>(Lcom/google/common/collect/ImmutableMap$MapViewOfValuesAsSingletonSets;Ljava/util/Iterator;)V
@@ -177,6 +181,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMap$MapViewOfValuesAsSingletonSets;->this$0:Lcom/google/common/collect/ImmutableMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMap;->hashCode()I
@@ -189,6 +194,7 @@
 .method public isHashCodeFast()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMap$MapViewOfValuesAsSingletonSets;->this$0:Lcom/google/common/collect/ImmutableMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMap;->isHashCodeFast()Z
@@ -201,6 +207,7 @@
 .method public isPartialView()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMap$MapViewOfValuesAsSingletonSets;->this$0:Lcom/google/common/collect/ImmutableMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMap;->isPartialView()Z
@@ -213,6 +220,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMap$MapViewOfValuesAsSingletonSets;->this$0:Lcom/google/common/collect/ImmutableMap;
 
     invoke-interface {p0}, Ljava/util/Map;->size()I

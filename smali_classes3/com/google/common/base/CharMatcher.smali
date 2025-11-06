@@ -65,6 +65,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -73,6 +74,7 @@
 .method public static synthetic access$100(C)Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/base/CharMatcher;->showCharacter(C)Ljava/lang/String;
 
     move-result-object p0
@@ -83,6 +85,7 @@
 .method public static any()Lcom/google/common/base/CharMatcher;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/common/base/CharMatcher$Any;->INSTANCE:Lcom/google/common/base/CharMatcher$Any;
 
     return-object v0
@@ -91,6 +94,7 @@
 .method public static anyOf(Ljava/lang/CharSequence;)Lcom/google/common/base/CharMatcher;
     .locals 4
 
+    .line 1
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
@@ -107,12 +111,14 @@
 
     if-eq v0, v3, :cond_0
 
+    .line 2
     new-instance v0, Lcom/google/common/base/CharMatcher$AnyOf;
 
     invoke-direct {v0, p0}, Lcom/google/common/base/CharMatcher$AnyOf;-><init>(Ljava/lang/CharSequence;)V
 
     return-object v0
 
+    .line 3
     :cond_0
     invoke-interface {p0, v1}, Ljava/lang/CharSequence;->charAt(I)C
 
@@ -128,6 +134,7 @@
 
     return-object p0
 
+    .line 4
     :cond_1
     invoke-interface {p0, v1}, Ljava/lang/CharSequence;->charAt(I)C
 
@@ -139,6 +146,7 @@
 
     return-object p0
 
+    .line 5
     :cond_2
     invoke-static {}, Lcom/google/common/base/CharMatcher;->none()Lcom/google/common/base/CharMatcher;
 
@@ -150,6 +158,7 @@
 .method public static ascii()Lcom/google/common/base/CharMatcher;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/common/base/CharMatcher$Ascii;->INSTANCE:Lcom/google/common/base/CharMatcher$Ascii;
 
     return-object v0
@@ -158,6 +167,7 @@
 .method public static breakingWhitespace()Lcom/google/common/base/CharMatcher;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/common/base/CharMatcher$BreakingWhitespace;->INSTANCE:Lcom/google/common/base/CharMatcher;
 
     return-object v0
@@ -168,6 +178,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/common/base/CharMatcher$Digit;->INSTANCE:Lcom/google/common/base/CharMatcher$Digit;
 
     return-object v0
@@ -179,10 +190,12 @@
     :goto_0
     if-ge p2, p3, :cond_2
 
+    .line 1
     invoke-interface {p1, p2}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/google/common/base/CharMatcher;->matches(C)Z
 
     move-result v1
@@ -191,12 +204,14 @@
 
     if-nez p6, :cond_1
 
+    .line 3
     invoke-virtual {p5, p4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     const/4 p6, 0x1
 
     goto :goto_1
 
+    .line 4
     :cond_0
     invoke-virtual {p5, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
@@ -208,6 +223,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_2
     invoke-virtual {p5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -229,6 +245,7 @@
         }
     .end annotation
 
+    .line 1
     instance-of v0, p0, Lcom/google/common/base/CharMatcher;
 
     if-eqz v0, :cond_0
@@ -251,6 +268,7 @@
 .method public static inRange(CC)Lcom/google/common/base/CharMatcher;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/base/CharMatcher$InRange;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/base/CharMatcher$InRange;-><init>(CC)V
@@ -263,6 +281,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/common/base/CharMatcher$Invisible;->INSTANCE:Lcom/google/common/base/CharMatcher$Invisible;
 
     return-object v0
@@ -271,6 +290,7 @@
 .method public static is(C)Lcom/google/common/base/CharMatcher;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/base/CharMatcher$Is;
 
     invoke-direct {v0, p0}, Lcom/google/common/base/CharMatcher$Is;-><init>(C)V
@@ -281,6 +301,7 @@
 .method private static isEither(CC)Lcom/google/common/base/CharMatcher$IsEither;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/base/CharMatcher$IsEither;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/base/CharMatcher$IsEither;-><init>(CC)V
@@ -291,6 +312,7 @@
 .method public static isNot(C)Lcom/google/common/base/CharMatcher;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/base/CharMatcher$IsNot;
 
     invoke-direct {v0, p0}, Lcom/google/common/base/CharMatcher$IsNot;-><init>(C)V
@@ -329,6 +351,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/common/base/CharMatcher$JavaDigit;->INSTANCE:Lcom/google/common/base/CharMatcher$JavaDigit;
 
     return-object v0
@@ -337,6 +360,7 @@
 .method public static javaIsoControl()Lcom/google/common/base/CharMatcher;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/common/base/CharMatcher$JavaIsoControl;->INSTANCE:Lcom/google/common/base/CharMatcher$JavaIsoControl;
 
     return-object v0
@@ -347,6 +371,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/common/base/CharMatcher$JavaLetter;->INSTANCE:Lcom/google/common/base/CharMatcher$JavaLetter;
 
     return-object v0
@@ -357,6 +382,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/common/base/CharMatcher$JavaLetterOrDigit;->INSTANCE:Lcom/google/common/base/CharMatcher$JavaLetterOrDigit;
 
     return-object v0
@@ -367,6 +393,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/common/base/CharMatcher$JavaLowerCase;->INSTANCE:Lcom/google/common/base/CharMatcher$JavaLowerCase;
 
     return-object v0
@@ -377,6 +404,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/common/base/CharMatcher$JavaUpperCase;->INSTANCE:Lcom/google/common/base/CharMatcher$JavaUpperCase;
 
     return-object v0
@@ -385,6 +413,7 @@
 .method public static none()Lcom/google/common/base/CharMatcher;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/common/base/CharMatcher$None;->INSTANCE:Lcom/google/common/base/CharMatcher$None;
 
     return-object v0
@@ -393,6 +422,7 @@
 .method public static noneOf(Ljava/lang/CharSequence;)Lcom/google/common/base/CharMatcher;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/base/CharMatcher;->anyOf(Ljava/lang/CharSequence;)Lcom/google/common/base/CharMatcher;
 
     move-result-object p0
@@ -421,6 +451,7 @@
 
     if-eq p0, v1, :cond_1
 
+    .line 1
     invoke-virtual {p1}, Ljava/util/BitSet;->length()I
 
     move-result v0
@@ -431,12 +462,14 @@
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-static {p1, p2}, Lcom/google/common/base/SmallCharMatcher;->from(Ljava/util/BitSet;Ljava/lang/String;)Lcom/google/common/base/CharMatcher;
 
     move-result-object p0
 
     goto :goto_0
 
+    .line 3
     :cond_0
     new-instance p0, Lcom/google/common/base/CharMatcher$BitSetMatcher;
 
@@ -447,6 +480,7 @@
     :goto_0
     return-object p0
 
+    .line 4
     :cond_1
     invoke-virtual {p1, v0}, Ljava/util/BitSet;->nextSetBit(I)I
 
@@ -456,18 +490,21 @@
 
     add-int/lit8 p2, p0, 0x1
 
+    .line 5
     invoke-virtual {p1, p2}, Ljava/util/BitSet;->nextSetBit(I)I
 
     move-result p1
 
     int-to-char p1, p1
 
+    .line 6
     invoke-static {p0, p1}, Lcom/google/common/base/CharMatcher;->isEither(CC)Lcom/google/common/base/CharMatcher$IsEither;
 
     move-result-object p0
 
     return-object p0
 
+    .line 7
     :cond_2
     invoke-virtual {p1, v0}, Ljava/util/BitSet;->nextSetBit(I)I
 
@@ -481,6 +518,7 @@
 
     return-object p0
 
+    .line 8
     :cond_3
     invoke-static {}, Lcom/google/common/base/CharMatcher;->none()Lcom/google/common/base/CharMatcher;
 
@@ -496,6 +534,7 @@
 
     new-array v0, v0, [C
 
+    .line 1
     fill-array-data v0, :array_0
 
     const/4 v1, 0x0
@@ -511,6 +550,7 @@
 
     const-string v5, "0123456789ABCDEF"
 
+    .line 2
     invoke-virtual {v5, v4}, Ljava/lang/String;->charAt(I)C
 
     move-result v4
@@ -525,6 +565,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-static {v0}, Ljava/lang/String;->copyValueOf([C)Ljava/lang/String;
 
@@ -548,6 +589,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/common/base/CharMatcher$SingleWidth;->INSTANCE:Lcom/google/common/base/CharMatcher$SingleWidth;
 
     return-object v0
@@ -556,6 +598,7 @@
 .method public static whitespace()Lcom/google/common/base/CharMatcher;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/common/base/CharMatcher$Whitespace;->INSTANCE:Lcom/google/common/base/CharMatcher$Whitespace;
 
     return-object v0
@@ -566,6 +609,7 @@
 .method public and(Lcom/google/common/base/CharMatcher;)Lcom/google/common/base/CharMatcher;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/base/CharMatcher$And;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/base/CharMatcher$And;-><init>(Lcom/google/common/base/CharMatcher;Lcom/google/common/base/CharMatcher;)V
@@ -608,6 +652,7 @@
 .method public collapseFrom(Ljava/lang/CharSequence;C)Ljava/lang/String;
     .locals 7
 
+    .line 1
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result v3
@@ -619,10 +664,12 @@
     :goto_0
     if-ge v1, v3, :cond_3
 
+    .line 2
     invoke-interface {p1, v1}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v2
 
+    .line 3
     invoke-virtual {p0, v2}, Lcom/google/common/base/CharMatcher;->matches(C)Z
 
     move-result v4
@@ -637,6 +684,7 @@
 
     add-int/lit8 v2, v1, 0x1
 
+    .line 4
     invoke-interface {p1, v2}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v2
@@ -652,6 +700,7 @@
 
     goto :goto_1
 
+    .line 5
     :cond_1
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -671,6 +720,7 @@
 
     move v4, p2
 
+    .line 6
     invoke-direct/range {v0 .. v6}, Lcom/google/common/base/CharMatcher;->finishCollapseFrom(Ljava/lang/CharSequence;IICLjava/lang/StringBuilder;Z)Ljava/lang/String;
 
     move-result-object p0
@@ -683,6 +733,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_3
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
@@ -698,6 +749,7 @@
 
     move v1, v0
 
+    .line 1
     :goto_0
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
@@ -705,6 +757,7 @@
 
     if-ge v0, v2, :cond_1
 
+    .line 2
     invoke-interface {p1, v0}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v2
@@ -780,6 +833,7 @@
 .method public lastIndexIn(Ljava/lang/CharSequence;)I
     .locals 2
 
+    .line 1
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
@@ -789,6 +843,7 @@
     :goto_0
     if-ltz v0, :cond_1
 
+    .line 2
     invoke-interface {p1, v0}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v1
@@ -818,6 +873,7 @@
 .method public matchesAllOf(Ljava/lang/CharSequence;)Z
     .locals 3
 
+    .line 1
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
@@ -829,6 +885,7 @@
     :goto_0
     if-ltz v0, :cond_1
 
+    .line 2
     invoke-interface {p1, v0}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v2
@@ -855,6 +912,7 @@
 .method public matchesAnyOf(Ljava/lang/CharSequence;)Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/base/CharMatcher;->matchesNoneOf(Ljava/lang/CharSequence;)Z
 
     move-result p0
@@ -867,6 +925,7 @@
 .method public matchesNoneOf(Ljava/lang/CharSequence;)Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/base/CharMatcher;->indexIn(Ljava/lang/CharSequence;)I
 
     move-result p0
@@ -889,6 +948,7 @@
 .method public negate()Lcom/google/common/base/CharMatcher;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/base/CharMatcher$Negated;
 
     invoke-direct {v0, p0}, Lcom/google/common/base/CharMatcher$Negated;-><init>(Lcom/google/common/base/CharMatcher;)V
@@ -899,6 +959,7 @@
 .method public or(Lcom/google/common/base/CharMatcher;)Lcom/google/common/base/CharMatcher;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/base/CharMatcher$Or;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/base/CharMatcher$Or;-><init>(Lcom/google/common/base/CharMatcher;Lcom/google/common/base/CharMatcher;)V
@@ -909,6 +970,7 @@
 .method public precomputed()Lcom/google/common/base/CharMatcher;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/base/Platform;->precomputeCharMatcher(Lcom/google/common/base/CharMatcher;)Lcom/google/common/base/CharMatcher;
 
     move-result-object p0
@@ -921,12 +983,15 @@
     .annotation build Lcom/google/common/annotations/GwtIncompatible;
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/BitSet;
 
     invoke-direct {v0}, Ljava/util/BitSet;-><init>()V
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/google/common/base/CharMatcher;->setBits(Ljava/util/BitSet;)V
 
+    .line 3
     invoke-virtual {v0}, Ljava/util/BitSet;->cardinality()I
 
     move-result v1
@@ -937,6 +1002,7 @@
 
     if-gt v2, v3, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/common/base/CharMatcher;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -950,71 +1016,80 @@
     :cond_0
     const/4 v2, 0x0
 
+    .line 5
     invoke-virtual {v0, v2, v3}, Ljava/util/BitSet;->flip(II)V
 
     sub-int/2addr v3, v1
 
+    const-string v1, ".negate()"
+
+    .line 6
     invoke-virtual {p0}, Lcom/google/common/base/CharMatcher;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v4
 
-    const-string v4, ".negate()"
-
-    invoke-virtual {v1, v4}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    .line 7
+    invoke-virtual {v4, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v5
 
     if-eqz v5, :cond_1
 
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
+    .line 8
+    invoke-virtual {v4}, Ljava/lang/String;->length()I
 
-    move-result v4
+    move-result v1
 
-    add-int/lit8 v4, v4, -0x9
+    add-int/lit8 v1, v1, -0x9
 
-    invoke-virtual {v1, v2, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    invoke-virtual {v4, v2, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
     goto :goto_0
 
+    .line 9
     :cond_1
-    invoke-virtual {v4}, Ljava/lang/String;->length()I
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    invoke-virtual {v1, v4}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v4, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
     goto :goto_0
 
     :cond_2
-    new-instance v2, Ljava/lang/String;
+    new-instance v1, Ljava/lang/String;
 
-    invoke-direct {v2, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v4}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
+    .line 10
     :goto_0
-    new-instance v4, Lcom/google/common/base/CharMatcher$1;
+    new-instance v2, Lcom/google/common/base/CharMatcher$1;
 
-    invoke-static {v3, v0, v2}, Lcom/google/common/base/CharMatcher;->precomputedPositive(ILjava/util/BitSet;Ljava/lang/String;)Lcom/google/common/base/CharMatcher;
+    .line 11
+    invoke-static {v3, v0, v1}, Lcom/google/common/base/CharMatcher;->precomputedPositive(ILjava/util/BitSet;Ljava/lang/String;)Lcom/google/common/base/CharMatcher;
 
     move-result-object v0
 
-    invoke-direct {v4, p0, v0, v1}, Lcom/google/common/base/CharMatcher$1;-><init>(Lcom/google/common/base/CharMatcher;Lcom/google/common/base/CharMatcher;Ljava/lang/String;)V
+    invoke-direct {v2, p0, v0, v4}, Lcom/google/common/base/CharMatcher$1;-><init>(Lcom/google/common/base/CharMatcher;Lcom/google/common/base/CharMatcher;Ljava/lang/String;)V
 
-    return-object v4
+    return-object v2
 .end method
 
 .method public removeFrom(Ljava/lang/CharSequence;)Ljava/lang/String;
     .locals 5
 
+    .line 1
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/google/common/base/CharMatcher;->indexIn(Ljava/lang/CharSequence;)I
 
     move-result v0
@@ -1025,6 +1100,7 @@
 
     return-object p1
 
+    .line 3
     :cond_0
     invoke-virtual {p1}, Ljava/lang/String;->toCharArray()[C
 
@@ -1037,11 +1113,13 @@
     :goto_0
     add-int/2addr v0, v1
 
+    .line 4
     :goto_1
     array-length v3, p1
 
     if-ne v0, v3, :cond_1
 
+    .line 5
     new-instance p0, Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -1052,6 +1130,7 @@
 
     return-object p0
 
+    .line 6
     :cond_1
     aget-char v3, p1, v0
 
@@ -1068,6 +1147,7 @@
     :cond_2
     sub-int v3, v0, v2
 
+    .line 7
     aget-char v4, p1, v0
 
     aput-char v4, p1, v3
@@ -1236,6 +1316,7 @@
 .method public retainFrom(Ljava/lang/CharSequence;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/base/CharMatcher;->negate()Lcom/google/common/base/CharMatcher;
 
     move-result-object p0
@@ -1259,12 +1340,14 @@
 
     int-to-char v1, v0
 
+    .line 1
     invoke-virtual {p0, v1}, Lcom/google/common/base/CharMatcher;->matches(C)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 2
     invoke-virtual {p1, v0}, Ljava/util/BitSet;->set(I)V
 
     :cond_0
@@ -1279,6 +1362,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -1289,6 +1373,7 @@
 .method public trimAndCollapseFrom(Ljava/lang/CharSequence;C)Ljava/lang/String;
     .locals 10
 
+    .line 1
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
@@ -1302,6 +1387,7 @@
     :goto_0
     if-ge v5, v0, :cond_0
 
+    .line 2
     invoke-interface {p1, v5}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v2
@@ -1322,6 +1408,7 @@
     :goto_1
     if-le v0, v5, :cond_1
 
+    .line 3
     invoke-interface {p1, v0}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v2
@@ -1341,6 +1428,7 @@
 
     if-ne v0, v1, :cond_2
 
+    .line 4
     invoke-virtual {p0, p1, p2}, Lcom/google/common/base/CharMatcher;->collapseFrom(Ljava/lang/CharSequence;C)Ljava/lang/String;
 
     move-result-object p0
@@ -1350,6 +1438,7 @@
     :cond_2
     add-int/lit8 v6, v0, 0x1
 
+    .line 5
     new-instance v8, Ljava/lang/StringBuilder;
 
     sub-int v0, v6, v5
@@ -1375,6 +1464,7 @@
 .method public trimFrom(Ljava/lang/CharSequence;)Ljava/lang/String;
     .locals 3
 
+    .line 1
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
@@ -1384,6 +1474,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 2
     invoke-interface {p1, v1}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v2
@@ -1408,6 +1499,7 @@
     :goto_2
     if-le v0, v1, :cond_3
 
+    .line 3
     invoke-interface {p1, v0}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v2
@@ -1429,6 +1521,7 @@
     :goto_3
     add-int/lit8 v0, v0, 0x1
 
+    .line 4
     invoke-interface {p1, v1, v0}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
     move-result-object p0
@@ -1443,6 +1536,7 @@
 .method public trimLeadingFrom(Ljava/lang/CharSequence;)Ljava/lang/String;
     .locals 3
 
+    .line 1
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
@@ -1452,6 +1546,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 2
     invoke-interface {p1, v1}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v2
@@ -1462,6 +1557,7 @@
 
     if-nez v2, :cond_0
 
+    .line 3
     invoke-interface {p1, v1, v0}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
     move-result-object p0
@@ -1486,6 +1582,7 @@
 .method public trimTrailingFrom(Ljava/lang/CharSequence;)Ljava/lang/String;
     .locals 2
 
+    .line 1
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
@@ -1495,6 +1592,7 @@
     :goto_0
     if-ltz v0, :cond_1
 
+    .line 2
     invoke-interface {p1, v0}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v1
@@ -1509,6 +1607,7 @@
 
     add-int/lit8 v0, v0, 0x1
 
+    .line 3
     invoke-interface {p1, p0, v0}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
     move-result-object p0

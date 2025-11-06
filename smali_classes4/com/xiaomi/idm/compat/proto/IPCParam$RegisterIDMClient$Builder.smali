@@ -55,8 +55,10 @@
 .method public clearIdentify()Lcom/xiaomi/idm/compat/proto/IPCParam$RegisterIDMClient$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/compat/proto/IPCParam$RegisterIDMClient;
@@ -69,8 +71,10 @@
 .method public clearSdkVersion()Lcom/xiaomi/idm/compat/proto/IPCParam$RegisterIDMClient$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/compat/proto/IPCParam$RegisterIDMClient;
@@ -83,6 +87,7 @@
 .method public getIdentify()Lcom/xiaomi/idm/compat/proto/IPCParam$IdentifyParam;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast p0, Lcom/xiaomi/idm/compat/proto/IPCParam$RegisterIDMClient;
@@ -97,6 +102,7 @@
 .method public getSdkVersion()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast p0, Lcom/xiaomi/idm/compat/proto/IPCParam$RegisterIDMClient;
@@ -111,6 +117,7 @@
 .method public hasIdentify()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast p0, Lcom/xiaomi/idm/compat/proto/IPCParam$RegisterIDMClient;
@@ -125,8 +132,10 @@
 .method public mergeIdentify(Lcom/xiaomi/idm/compat/proto/IPCParam$IdentifyParam;)Lcom/xiaomi/idm/compat/proto/IPCParam$RegisterIDMClient$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/compat/proto/IPCParam$RegisterIDMClient;
@@ -177,8 +186,10 @@
 .method public setSdkVersion(I)Lcom/xiaomi/idm/compat/proto/IPCParam$RegisterIDMClient$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/compat/proto/IPCParam$RegisterIDMClient;

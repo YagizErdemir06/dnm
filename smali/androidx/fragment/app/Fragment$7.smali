@@ -1,4 +1,4 @@
-.class Landroidx/fragment/app/Fragment$7;
+.class public Landroidx/fragment/app/Fragment$7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -28,15 +28,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/fragment/app/Fragment;
+.field public final synthetic this$0:Landroidx/fragment/app/Fragment;
 
-.field final synthetic val$registry:Landroidx/activity/result/ActivityResultRegistry;
+.field public final synthetic val$registry:Landroidx/activity/result/ActivityResultRegistry;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/fragment/app/Fragment;Landroidx/activity/result/ActivityResultRegistry;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/fragment/app/Fragment$7;->this$0:Landroidx/fragment/app/Fragment;
 
     iput-object p2, p0, Landroidx/fragment/app/Fragment$7;->val$registry:Landroidx/activity/result/ActivityResultRegistry;

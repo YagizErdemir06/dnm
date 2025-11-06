@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ArrayTable$ArrayMap$1;
+.class public Lcom/google/common/collect/ArrayTable$ArrayMap$1;
 .super Lcom/google/common/collect/AbstractMapEntry;
 .source "SourceFile"
 
@@ -22,15 +22,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/ArrayTable$ArrayMap;
+.field public final synthetic this$0:Lcom/google/common/collect/ArrayTable$ArrayMap;
 
-.field final synthetic val$index:I
+.field public final synthetic val$index:I
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/ArrayTable$ArrayMap;I)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/ArrayTable$ArrayMap$1;->this$0:Lcom/google/common/collect/ArrayTable$ArrayMap;
 
     iput p2, p0, Lcom/google/common/collect/ArrayTable$ArrayMap$1;->val$index:I
@@ -50,6 +51,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/ArrayTable$ArrayMap$1;->this$0:Lcom/google/common/collect/ArrayTable$ArrayMap;
 
     iget p0, p0, Lcom/google/common/collect/ArrayTable$ArrayMap$1;->val$index:I
@@ -72,6 +74,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/ArrayTable$ArrayMap$1;->this$0:Lcom/google/common/collect/ArrayTable$ArrayMap;
 
     iget p0, p0, Lcom/google/common/collect/ArrayTable$ArrayMap$1;->val$index:I
@@ -98,6 +101,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/ArrayTable$ArrayMap$1;->this$0:Lcom/google/common/collect/ArrayTable$ArrayMap;
 
     iget p0, p0, Lcom/google/common/collect/ArrayTable$ArrayMap$1;->val$index:I

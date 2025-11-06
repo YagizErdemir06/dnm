@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/text/tx3g/Tx3gSubtitle;
+.class public final Lcom/google/android/exoplayer2/text/tx3g/Tx3gSubtitle;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,6 +26,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gSubtitle;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/text/tx3g/Tx3gSubtitle;-><init>()V
@@ -86,6 +87,7 @@
 
     if-ltz p1, :cond_0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gSubtitle;->cues:Ljava/util/List;
 
     goto :goto_0
@@ -111,6 +113,7 @@
     :cond_0
     const/4 p0, 0x0
 
+    .line 1
     :goto_0
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 

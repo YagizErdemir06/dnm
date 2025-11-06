@@ -7,15 +7,17 @@
 
 
 # instance fields
-.field protected text:Ljava/lang/String;
+.field public text:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/dom4j/tree/AbstractComment;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lorg/dom4j/tree/FlyweightComment;->text:Ljava/lang/String;
 
     return-void
@@ -26,6 +28,7 @@
 .method public createXPathResult(Lorg/dom4j/Element;)Lorg/dom4j/Node;
     .locals 1
 
+    .line 1
     new-instance v0, Lorg/dom4j/tree/DefaultComment;
 
     invoke-virtual {p0}, Lorg/dom4j/tree/FlyweightComment;->getText()Ljava/lang/String;
@@ -40,6 +43,7 @@
 .method public getText()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/FlyweightComment;->text:Ljava/lang/String;
 
     return-object p0

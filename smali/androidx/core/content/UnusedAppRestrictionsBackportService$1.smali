@@ -1,4 +1,4 @@
-.class Landroidx/core/content/UnusedAppRestrictionsBackportService$1;
+.class public Landroidx/core/content/UnusedAppRestrictionsBackportService$1;
 .super Landroidx/core/app/unusedapprestrictions/IUnusedAppRestrictionsBackportService$Stub;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/core/content/UnusedAppRestrictionsBackportService;
+.field public final synthetic this$0:Landroidx/core/content/UnusedAppRestrictionsBackportService;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/core/content/UnusedAppRestrictionsBackportService;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/core/content/UnusedAppRestrictionsBackportService$1;->this$0:Landroidx/core/content/UnusedAppRestrictionsBackportService;
 
     invoke-direct {p0}, Landroidx/core/app/unusedapprestrictions/IUnusedAppRestrictionsBackportService$Stub;-><init>()V
@@ -47,11 +48,13 @@
 
     return-void
 
+    .line 1
     :cond_0
     new-instance v0, Landroidx/core/content/UnusedAppRestrictionsBackportCallback;
 
     invoke-direct {v0, p1}, Landroidx/core/content/UnusedAppRestrictionsBackportCallback;-><init>(Landroidx/core/app/unusedapprestrictions/IUnusedAppRestrictionsBackportCallback;)V
 
+    .line 2
     iget-object p0, p0, Landroidx/core/content/UnusedAppRestrictionsBackportService$1;->this$0:Landroidx/core/content/UnusedAppRestrictionsBackportService;
 
     invoke-virtual {p0, v0}, Landroidx/core/content/UnusedAppRestrictionsBackportService;->isPermissionRevocationEnabled(Landroidx/core/content/UnusedAppRestrictionsBackportCallback;)V

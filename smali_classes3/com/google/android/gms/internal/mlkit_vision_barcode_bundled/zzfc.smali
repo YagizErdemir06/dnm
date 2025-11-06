@@ -1,4 +1,4 @@
-.class abstract Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfc;
+.class public abstract Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -13,6 +13,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzey;
 
     const/4 v1, 0x0

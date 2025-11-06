@@ -30,6 +30,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ForwardingCollection;-><init>()V
 
     return-void
@@ -49,6 +50,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingList;->delegate()Ljava/util/List;
 
     move-result-object p0
@@ -71,6 +73,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingList;->delegate()Ljava/util/List;
 
     move-result-object p0
@@ -123,6 +126,7 @@
 
     if-eq p1, p0, :cond_1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingList;->delegate()Ljava/util/List;
 
     move-result-object p0
@@ -159,6 +163,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingList;->delegate()Ljava/util/List;
 
     move-result-object p0
@@ -173,6 +178,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingList;->delegate()Ljava/util/List;
 
     move-result-object p0
@@ -191,6 +197,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingList;->delegate()Ljava/util/List;
 
     move-result-object p0
@@ -209,6 +216,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingList;->delegate()Ljava/util/List;
 
     move-result-object p0
@@ -278,6 +286,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingList;->delegate()Ljava/util/List;
 
     move-result-object p0
@@ -307,6 +316,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingList;->delegate()Ljava/util/List;
 
     move-result-object p0
@@ -330,6 +340,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingCollection;->size()I
 
     move-result v0
@@ -351,6 +362,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0, p1, p2}, Lcom/google/common/collect/Lists;->addAllImpl(Ljava/util/List;ILjava/lang/Iterable;)Z
 
     move-result p0
@@ -367,6 +379,7 @@
     .annotation build Lcom/google/common/annotations/Beta;
     .end annotation
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/common/collect/Lists;->equalsImpl(Ljava/util/List;Ljava/lang/Object;)Z
 
     move-result p0
@@ -379,6 +392,7 @@
     .annotation build Lcom/google/common/annotations/Beta;
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/collect/Lists;->hashCodeImpl(Ljava/util/List;)I
 
     move-result p0
@@ -393,6 +407,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/common/collect/Lists;->indexOfImpl(Ljava/util/List;Ljava/lang/Object;)I
 
     move-result p0
@@ -410,6 +425,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingList;->listIterator()Ljava/util/ListIterator;
 
     move-result-object p0
@@ -424,6 +440,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/common/collect/Lists;->lastIndexOfImpl(Ljava/util/List;Ljava/lang/Object;)I
 
     move-result p0
@@ -485,6 +502,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0, p1, p2}, Lcom/google/common/collect/Lists;->subListImpl(Ljava/util/List;II)Ljava/util/List;
 
     move-result-object p0
@@ -502,6 +520,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingList;->delegate()Ljava/util/List;
 
     move-result-object p0

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$OtherTrackScore;
+.class public final Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$OtherTrackScore;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -36,8 +36,10 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/Format;I)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iget p1, p1, Lcom/google/android/exoplayer2/Format;->selectionFlags:I
 
     const/4 v0, 0x1
@@ -56,6 +58,7 @@
     :goto_0
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$OtherTrackScore;->isDefault:Z
 
+    .line 3
     invoke-static {p2, v1}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->isSupported(IZ)Z
 
     move-result p1

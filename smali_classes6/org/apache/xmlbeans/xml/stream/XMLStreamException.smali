@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field protected th:Ljava/lang/Throwable;
+.field public th:Ljava/lang/Throwable;
 
 
 # direct methods
@@ -58,16 +58,19 @@
 .method public getMessage()Ljava/lang/String;
     .locals 1
 
-    invoke-super {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 1
+    invoke-super {p0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lorg/apache/xmlbeans/xml/stream/XMLStreamException;->th:Ljava/lang/Throwable;
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -81,6 +84,7 @@
 .method public getNested()Ljava/lang/Throwable;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/xml/stream/XMLStreamException;->th:Ljava/lang/Throwable;
 
     return-object p0
@@ -89,6 +93,7 @@
 .method public getNestedException()Ljava/lang/Throwable;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/xml/stream/XMLStreamException;->getNested()Ljava/lang/Throwable;
 
     move-result-object p0
@@ -129,7 +134,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0, p1}, Ljava/lang/Throwable;->printStackTrace(Ljava/io/PrintStream;)V
+    invoke-super {p0, p1}, Ljava/io/IOException;->printStackTrace(Ljava/io/PrintStream;)V
 
     return-void
 .end method
@@ -138,7 +143,7 @@
     .locals 0
 
     .line 2
-    invoke-super {p0, p1}, Ljava/lang/Throwable;->printStackTrace(Ljava/io/PrintWriter;)V
+    invoke-super {p0, p1}, Ljava/io/IOException;->printStackTrace(Ljava/io/PrintWriter;)V
 
     return-void
 .end method
@@ -146,7 +151,8 @@
 .method public superToString()Ljava/lang/String;
     .locals 0
 
-    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    .line 1
+    invoke-super {p0}, Ljava/io/IOException;->toString()Ljava/lang/String;
 
     move-result-object p0
 
@@ -156,6 +162,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lorg/apache/xmlbeans/xml/stream/utils/NestedThrowable$Util;->toString(Lorg/apache/xmlbeans/xml/stream/utils/NestedThrowable;)Ljava/lang/String;
 
     move-result-object p0

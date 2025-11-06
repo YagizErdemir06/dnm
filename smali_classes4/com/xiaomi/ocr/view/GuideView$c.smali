@@ -4,6 +4,9 @@
 
 
 # annotations
+.annotation build Ld/d/a/x6/c;
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Lcom/xiaomi/ocr/view/GuideView;
 .end annotation
@@ -11,9 +14,6 @@
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x19
     name = "c"
-.end annotation
-
-.annotation build Lh7/c;
 .end annotation
 
 
@@ -29,6 +29,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

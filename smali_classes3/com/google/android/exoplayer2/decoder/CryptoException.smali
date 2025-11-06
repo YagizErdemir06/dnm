@@ -11,8 +11,10 @@
 .method public constructor <init>(ILjava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/decoder/CryptoException;->errorCode:I
 
     return-void

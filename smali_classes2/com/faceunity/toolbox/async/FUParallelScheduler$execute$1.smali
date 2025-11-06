@@ -1,4 +1,4 @@
-.class final Lcom/faceunity/toolbox/async/FUParallelScheduler$execute$1;
+.class public final Lcom/faceunity/toolbox/async/FUParallelScheduler$execute$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -16,12 +16,17 @@
     name = null
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
         "\u0000\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0003\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0001\u0010\u0002"
     }
     d2 = {
-        "Lnm/l2;",
+        "Lh/l2;",
         "run",
         "()V",
         "<anonymous>"
@@ -36,9 +41,9 @@
 
 
 # instance fields
-.field final synthetic $backgroundTask:Ljava/lang/Runnable;
+.field public final synthetic $backgroundTask:Ljava/lang/Runnable;
 
-.field final synthetic $frontTask:Ljava/lang/Runnable;
+.field public final synthetic $frontTask:Ljava/lang/Runnable;
 
 
 # direct methods
@@ -59,10 +64,12 @@
 .method public final run()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/toolbox/async/FUParallelScheduler$execute$1;->$backgroundTask:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
+    .line 2
     sget-object v0, Lcom/faceunity/toolbox/async/FUSchedulerAbs;->Companion:Lcom/faceunity/toolbox/async/FUSchedulerAbs$Companion;
 
     invoke-virtual {v0}, Lcom/faceunity/toolbox/async/FUSchedulerAbs$Companion;->getMHandler()Landroid/os/Handler;

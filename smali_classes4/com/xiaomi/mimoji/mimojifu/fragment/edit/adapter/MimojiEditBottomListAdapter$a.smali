@@ -15,5 +15,19 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/xiaomi/mimoji/mimojifu/bean/b;ZII)Z
+.method public abstract a(Ld/o/v/d/a/b;ZII)Z
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "data",
+            "isThumbnil",
+            "row",
+            "column"
+        }
+    .end annotation
 .end method

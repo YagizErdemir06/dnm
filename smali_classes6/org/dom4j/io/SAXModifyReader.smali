@@ -1,4 +1,4 @@
-.class Lorg/dom4j/io/SAXModifyReader;
+.class public Lorg/dom4j/io/SAXModifyReader;
 .super Lorg/dom4j/io/SAXReader;
 .source "SourceFile"
 
@@ -97,6 +97,7 @@
 .method public createContentHandler(Lorg/xml/sax/XMLReader;)Lorg/dom4j/io/SAXContentHandler;
     .locals 2
 
+    .line 1
     new-instance p1, Lorg/dom4j/io/SAXModifyContentHandler;
 
     invoke-virtual {p0}, Lorg/dom4j/io/SAXReader;->getDocumentFactory()Lorg/dom4j/DocumentFactory;
@@ -109,6 +110,7 @@
 
     invoke-direct {p1, v0, v1}, Lorg/dom4j/io/SAXModifyContentHandler;-><init>(Lorg/dom4j/DocumentFactory;Lorg/dom4j/ElementHandler;)V
 
+    .line 2
     iget-object p0, p0, Lorg/dom4j/io/SAXModifyReader;->xmlWriter:Lorg/dom4j/io/XMLWriter;
 
     invoke-virtual {p1, p0}, Lorg/dom4j/io/SAXModifyContentHandler;->setXMLWriter(Lorg/dom4j/io/XMLWriter;)V
@@ -119,6 +121,7 @@
 .method public getXMLWriter()Lorg/dom4j/io/XMLWriter;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/SAXModifyReader;->xmlWriter:Lorg/dom4j/io/XMLWriter;
 
     return-object p0
@@ -127,6 +130,7 @@
 .method public isPruneElements()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/dom4j/io/SAXModifyReader;->pruneElements:Z
 
     return p0
@@ -135,6 +139,7 @@
 .method public setPruneElements(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lorg/dom4j/io/SAXModifyReader;->pruneElements:Z
 
     return-void
@@ -143,6 +148,7 @@
 .method public setXMLWriter(Lorg/dom4j/io/XMLWriter;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/io/SAXModifyReader;->xmlWriter:Lorg/dom4j/io/XMLWriter;
 
     return-void

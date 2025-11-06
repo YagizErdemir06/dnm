@@ -40,7 +40,7 @@
     .end annotation
 .end field
 
-.field final suppressor:Lcom/google/common/io/Closer$Suppressor;
+.field public final suppressor:Lcom/google/common/io/Closer$Suppressor;
     .annotation build Lcom/google/common/annotations/VisibleForTesting;
     .end annotation
 .end field
@@ -55,12 +55,14 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     invoke-static {}, Lcom/google/common/io/Closer$SuppressingSuppressor;->tryCreate()Lcom/google/common/io/Closer$SuppressingSuppressor;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
+    .line 2
     sget-object v0, Lcom/google/common/io/Closer$LoggingSuppressor;->INSTANCE:Lcom/google/common/io/Closer$LoggingSuppressor;
 
     :cond_0
@@ -74,8 +76,10 @@
     .annotation build Lcom/google/common/annotations/VisibleForTesting;
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/ArrayDeque;
 
     const/4 v1, 0x4
@@ -84,6 +88,7 @@
 
     iput-object v0, p0, Lcom/google/common/io/Closer;->stack:Ljava/util/Deque;
 
+    .line 3
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -98,6 +103,7 @@
 .method public static create()Lcom/google/common/io/Closer;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/common/io/Closer;
 
     sget-object v1, Lcom/google/common/io/Closer;->SUPPRESSOR:Lcom/google/common/io/Closer$Suppressor;
@@ -117,17 +123,20 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/io/Closer;->thrown:Ljava/lang/Throwable;
 
+    .line 2
     :goto_0
     iget-object v1, p0, Lcom/google/common/io/Closer;->stack:Ljava/util/Deque;
 
-    invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
+    invoke-interface {v1}, Ljava/util/Deque;->isEmpty()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
+    .line 3
     iget-object v1, p0, Lcom/google/common/io/Closer;->stack:Ljava/util/Deque;
 
     invoke-interface {v1}, Ljava/util/Deque;->removeFirst()Ljava/lang/Object;
@@ -136,6 +145,7 @@
 
     check-cast v1, Ljava/io/Closeable;
 
+    .line 4
     :try_start_0
     invoke-interface {v1}, Ljava/io/Closeable;->close()V
     :try_end_0
@@ -152,6 +162,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     iget-object v3, p0, Lcom/google/common/io/Closer;->suppressor:Lcom/google/common/io/Closer$Suppressor;
 
@@ -159,6 +170,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_1
     iget-object p0, p0, Lcom/google/common/io/Closer;->thrown:Ljava/lang/Throwable;
 
@@ -168,11 +180,13 @@
 
     goto :goto_1
 
+    .line 7
     :cond_2
     const-class p0, Ljava/io/IOException;
 
     invoke-static {v0, p0}, Lcom/google/common/base/Throwables;->propagateIfPossible(Ljava/lang/Throwable;Ljava/lang/Class;)V
 
+    .line 8
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
@@ -206,6 +220,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/io/Closer;->stack:Ljava/util/Deque;
 
     invoke-interface {p0, p1}, Ljava/util/Deque;->addFirst(Ljava/lang/Object;)V

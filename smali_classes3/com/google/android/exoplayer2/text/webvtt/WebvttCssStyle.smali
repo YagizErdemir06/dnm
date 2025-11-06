@@ -88,46 +88,61 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, ""
 
+    .line 2
     iput-object v0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->targetId:Ljava/lang/String;
 
+    .line 3
     iput-object v0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->targetTag:Ljava/lang/String;
 
+    .line 4
     invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->targetClasses:Ljava/util/Set;
 
+    .line 5
     iput-object v0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->targetVoice:Ljava/lang/String;
 
     const/4 v0, 0x0
 
+    .line 6
     iput-object v0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->fontFamily:Ljava/lang/String;
 
     const/4 v0, 0x0
 
+    .line 7
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->hasFontColor:Z
 
+    .line 8
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->hasBackgroundColor:Z
 
     const/4 v1, -0x1
 
+    .line 9
     iput v1, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->linethrough:I
 
+    .line 10
     iput v1, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->underline:I
 
+    .line 11
     iput v1, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->bold:I
 
+    .line 12
     iput v1, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->italic:I
 
+    .line 13
     iput v1, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->fontSizeUnit:I
 
+    .line 14
     iput v1, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->rubyPosition:I
 
+    .line 15
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->combineUpright:Z
 
     return-void
@@ -140,6 +155,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
@@ -152,6 +168,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -174,14 +191,17 @@
 .method public getBackgroundColor()I
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->hasBackgroundColor:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget p0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->backgroundColor:I
 
     return p0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -195,6 +215,7 @@
 .method public getCombineUpright()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->combineUpright:Z
 
     return p0
@@ -203,14 +224,17 @@
 .method public getFontColor()I
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->hasFontColor:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget p0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->fontColor:I
 
     return p0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -226,6 +250,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->fontFamily:Ljava/lang/String;
 
     return-object p0
@@ -234,6 +259,7 @@
 .method public getFontSize()F
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->fontSize:F
 
     return p0
@@ -242,6 +268,7 @@
 .method public getFontSizeUnit()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->fontSizeUnit:I
 
     return p0
@@ -250,6 +277,7 @@
 .method public getRubyPosition()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->rubyPosition:I
 
     return p0
@@ -282,6 +310,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->targetId:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
@@ -292,6 +321,7 @@
 
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->targetTag:Ljava/lang/String;
 
+    .line 2
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
@@ -300,6 +330,7 @@
 
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->targetClasses:Ljava/util/Set;
 
+    .line 3
     invoke-interface {v0}, Ljava/util/Set;->isEmpty()Z
 
     move-result v0
@@ -308,18 +339,21 @@
 
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->targetVoice:Ljava/lang/String;
 
+    .line 4
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 5
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p0
 
     return p0
 
+    .line 6
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->targetId:Ljava/lang/String;
 
@@ -331,6 +365,7 @@
 
     move-result p1
 
+    .line 7
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->targetTag:Ljava/lang/String;
 
     const/4 v1, 0x2
@@ -339,6 +374,7 @@
 
     move-result p1
 
+    .line 8
     iget-object p2, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->targetVoice:Ljava/lang/String;
 
     const/4 v0, 0x4
@@ -351,6 +387,7 @@
 
     if-eq p1, p2, :cond_2
 
+    .line 9
     iget-object p2, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->targetClasses:Ljava/util/Set;
 
     invoke-interface {p3, p2}, Ljava/util/Set;->containsAll(Ljava/util/Collection;)Z
@@ -361,6 +398,7 @@
 
     goto :goto_0
 
+    .line 10
     :cond_1
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->targetClasses:Ljava/util/Set;
 
@@ -382,6 +420,7 @@
 .method public getStyle()I
     .locals 3
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->bold:I
 
     const/4 v1, -0x1
@@ -408,6 +447,7 @@
     :cond_1
     move v0, v1
 
+    .line 2
     :goto_0
     iget p0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->italic:I
 
@@ -424,6 +464,7 @@
 .method public hasBackgroundColor()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->hasBackgroundColor:Z
 
     return p0
@@ -432,6 +473,7 @@
 .method public hasFontColor()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->hasFontColor:Z
 
     return p0
@@ -440,6 +482,7 @@
 .method public isLinethrough()Z
     .locals 1
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->linethrough:I
 
     const/4 v0, 0x1
@@ -458,6 +501,7 @@
 .method public isUnderline()Z
     .locals 1
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->underline:I
 
     const/4 v0, 0x1
@@ -476,10 +520,12 @@
 .method public setBackgroundColor(I)Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->backgroundColor:I
 
     const/4 p1, 0x1
 
+    .line 2
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->hasBackgroundColor:Z
 
     return-object p0
@@ -488,6 +534,7 @@
 .method public setBold(Z)Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->bold:I
 
     return-object p0
@@ -496,6 +543,7 @@
 .method public setCombineUpright(Z)Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->combineUpright:Z
 
     return-object p0
@@ -504,10 +552,12 @@
 .method public setFontColor(I)Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->fontColor:I
 
     const/4 p1, 0x1
 
+    .line 2
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->hasFontColor:Z
 
     return-object p0
@@ -526,6 +576,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     invoke-static {p1}, Lcom/google/common/base/Ascii;->toLowerCase(Ljava/lang/String;)Ljava/lang/String;
 
@@ -540,6 +591,7 @@
 .method public setFontSize(F)Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->fontSize:F
 
     return-object p0
@@ -548,6 +600,7 @@
 .method public setFontSizeUnit(I)Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->fontSizeUnit:I
 
     return-object p0
@@ -556,6 +609,7 @@
 .method public setItalic(Z)Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->italic:I
 
     return-object p0
@@ -564,6 +618,7 @@
 .method public setLinethrough(Z)Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->linethrough:I
 
     return-object p0
@@ -572,6 +627,7 @@
 .method public setRubyPosition(I)Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->rubyPosition:I
 
     return-object p0
@@ -580,6 +636,7 @@
 .method public setTargetClasses([Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/util/HashSet;
 
     invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
@@ -596,6 +653,7 @@
 .method public setTargetId(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->targetId:Ljava/lang/String;
 
     return-void
@@ -604,6 +662,7 @@
 .method public setTargetTagName(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->targetTag:Ljava/lang/String;
 
     return-void
@@ -612,6 +671,7 @@
 .method public setTargetVoice(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->targetVoice:Ljava/lang/String;
 
     return-void
@@ -620,6 +680,7 @@
 .method public setUnderline(Z)Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->underline:I
 
     return-object p0

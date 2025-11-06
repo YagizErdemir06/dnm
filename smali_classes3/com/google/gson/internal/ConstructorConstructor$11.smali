@@ -1,4 +1,4 @@
-.class Lcom/google/gson/internal/ConstructorConstructor$11;
+.class public Lcom/google/gson/internal/ConstructorConstructor$11;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,13 +26,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/gson/internal/ConstructorConstructor;
+.field public final synthetic this$0:Lcom/google/gson/internal/ConstructorConstructor;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/gson/internal/ConstructorConstructor;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/gson/internal/ConstructorConstructor$11;->this$0:Lcom/google/gson/internal/ConstructorConstructor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,6 +51,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Lcom/google/gson/internal/LinkedTreeMap;
 
     invoke-direct {p0}, Lcom/google/gson/internal/LinkedTreeMap;-><init>()V

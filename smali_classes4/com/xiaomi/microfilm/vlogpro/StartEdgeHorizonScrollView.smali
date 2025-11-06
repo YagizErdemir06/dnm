@@ -4,19 +4,28 @@
 
 
 # instance fields
-.field public a:Z
+.field private c:Z
 
-.field public b:Landroid/graphics/Paint;
+.field private d:Landroid/graphics/Paint;
 
-.field public c:I
+.field private f:I
 
-.field public d:Z
+.field private g:Z
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
     .end annotation
 
     .line 1
@@ -34,6 +43,16 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     .line 3
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -50,7 +69,20 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr"
+        }
     .end annotation
 
     .line 5
@@ -67,15 +99,18 @@
 .method public a()V
     .locals 1
 
-    iget-boolean v0, p0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->d:Z
+    .line 1
+    iget-boolean v0, p0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->g:Z
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->d:Z
+    .line 2
+    iput-boolean v0, p0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->g:Z
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    .line 3
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     :cond_0
     return-void
@@ -84,45 +119,51 @@
 .method public b()V
     .locals 10
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    .line 1
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/camera/a6;->R2(Landroid/content/Context;)Z
+    invoke-static {v0}, Ld/d/a/z5;->G2(Landroid/content/Context;)Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->a:Z
+    iput-boolean v0, p0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->c:Z
 
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    .line 2
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f070f93
+    const v1, 0x7f070cf4
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
-    iput v0, p0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->c:I
+    iput v0, p0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->f:I
 
+    .line 3
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->b:Landroid/graphics/Paint;
+    iput-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->d:Landroid/graphics/Paint;
 
     const/4 v1, 0x1
 
+    .line 4
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->b:Landroid/graphics/Paint;
+    .line 5
+    iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->d:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->b:Landroid/graphics/Paint;
+    .line 6
+    iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->d:Landroid/graphics/Paint;
 
     new-instance v1, Landroid/graphics/PorterDuffXfermode;
 
@@ -132,17 +173,12 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->b:Landroid/graphics/Paint;
+    .line 7
+    iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->d:Landroid/graphics/Paint;
 
     new-instance v9, Landroid/graphics/LinearGradient;
 
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    iget v1, p0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->c:I
+    iget v1, p0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->f:I
 
     int-to-float v5, v1
 
@@ -158,6 +194,12 @@
 
     sget-object v8, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
 
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
     move-object v1, v9
 
     invoke-direct/range {v1 .. v8}, Landroid/graphics/LinearGradient;-><init>(FFFF[I[FLandroid/graphics/Shader$TileMode;)V
@@ -166,7 +208,8 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setFocusable(Z)V
+    .line 8
+    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setFocusable(Z)V
 
     return-void
 
@@ -187,10 +230,11 @@
 
 .method public c()Z
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
-    iget-boolean p0, p0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->d:Z
+    .line 1
+    iget-boolean p0, p0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->g:Z
 
     return p0
 .end method
@@ -198,15 +242,18 @@
 .method public d()V
     .locals 1
 
-    iget-boolean v0, p0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->d:Z
+    .line 1
+    iget-boolean v0, p0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->g:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->d:Z
+    .line 2
+    iput-boolean v0, p0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->g:Z
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    .line 3
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     :cond_0
     return-void
@@ -214,23 +261,34 @@
 
 .method public drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
     .locals 12
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "canvas",
+            "child",
+            "drawingTime"
+        }
+    .end annotation
 
     move-object v0, p0
 
     move-object v8, p1
 
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+    .line 1
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getWidth()I
 
     move-result v9
 
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+    .line 2
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getHeight()I
 
     move-result v10
 
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
+    .line 3
     invoke-virtual {p2}, Landroid/view/View;->getWidth()I
 
     move-result v1
@@ -242,6 +300,10 @@
     int-to-float v4, v1
 
     int-to-float v11, v10
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
 
     const/4 v6, 0x0
 
@@ -255,11 +317,13 @@
 
     move-result v6
 
-    invoke-super/range {p0 .. p4}, Landroid/view/ViewGroup;->drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
+    .line 4
+    invoke-super/range {p0 .. p4}, Landroid/widget/FrameLayout;->drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
 
     move-result v7
 
-    iget-boolean v1, v0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->d:Z
+    .line 5
+    iget-boolean v1, v0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->g:Z
 
     const/4 v2, 0x0
 
@@ -267,8 +331,9 @@
 
     return v2
 
+    .line 6
     :cond_0
-    iget-boolean v1, v0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->a:Z
+    iget-boolean v1, v0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->c:Z
 
     const/4 v3, 0x0
 
@@ -308,17 +373,20 @@
 
     div-float/2addr v5, v2
 
+    .line 7
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v9
 
-    invoke-static {}, Ly2/b;->M0()Z
+    .line 8
+    invoke-static {}, Ld/d/a/n6/b;->M0()Z
 
     move-result v2
 
     if-nez v2, :cond_3
 
-    iget-boolean v2, v0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->a:Z
+    .line 9
+    iget-boolean v2, v0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->c:Z
 
     if-eqz v2, :cond_2
 
@@ -332,6 +400,7 @@
     :goto_1
     invoke-virtual {p1, v2, v4, v11}, Landroid/graphics/Canvas;->rotate(FFF)V
 
+    .line 10
     invoke-virtual {p1, v3, v5}, Landroid/graphics/Canvas;->translate(FF)V
 
     sub-float v2, v3, v5
@@ -340,11 +409,12 @@
 
     add-float v4, v1, v5
 
-    iget v1, v0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->c:I
+    .line 11
+    iget v1, v0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->f:I
 
     int-to-float v5, v1
 
-    iget-object v10, v0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->b:Landroid/graphics/Paint;
+    iget-object v10, v0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->d:Landroid/graphics/Paint;
 
     move-object v0, p1
 
@@ -367,25 +437,28 @@
 
     const/4 v2, 0x0
 
+    .line 12
     invoke-virtual {p2}, Landroid/view/View;->getWidth()I
 
     move-result v3
 
     int-to-float v3, v3
 
-    iget v4, v0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->c:I
+    iget v4, v0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->f:I
 
     int-to-float v4, v4
 
-    iget-object v5, v0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->b:Landroid/graphics/Paint;
+    iget-object v5, v0, Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;->d:Landroid/graphics/Paint;
 
     move-object v0, p1
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
+    .line 13
     :goto_2
     invoke-virtual {p1, v9}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
+    .line 14
     invoke-virtual {p1, v6}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
     return v7

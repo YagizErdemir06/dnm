@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/MoreExecutors$3;
+.class public Lcom/google/common/util/concurrent/MoreExecutors$3;
 .super Lcom/google/common/util/concurrent/WrappingExecutorService;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic val$nameSupplier:Lcom/google/common/base/Supplier;
+.field public final synthetic val$nameSupplier:Lcom/google/common/base/Supplier;
 
 
 # direct methods
 .method public constructor <init>(Ljava/util/concurrent/ExecutorService;Lcom/google/common/base/Supplier;)V
     .locals 0
 
+    .line 1
     iput-object p2, p0, Lcom/google/common/util/concurrent/MoreExecutors$3;->val$nameSupplier:Lcom/google/common/base/Supplier;
 
     invoke-direct {p0, p1}, Lcom/google/common/util/concurrent/WrappingExecutorService;-><init>(Ljava/util/concurrent/ExecutorService;)V

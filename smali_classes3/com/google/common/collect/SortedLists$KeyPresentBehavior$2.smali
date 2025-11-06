@@ -1,4 +1,4 @@
-.class final enum Lcom/google/common/collect/SortedLists$KeyPresentBehavior$2;
+.class public final enum Lcom/google/common/collect/SortedLists$KeyPresentBehavior$2;
 .super Lcom/google/common/collect/SortedLists$KeyPresentBehavior;
 .source "SourceFile"
 
@@ -20,6 +20,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, p2, v0}, Lcom/google/common/collect/SortedLists$KeyPresentBehavior;-><init>(Ljava/lang/String;ILcom/google/common/collect/SortedLists$1;)V
 
     return-void
@@ -45,6 +46,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p3}, Ljava/util/List;->size()I
 
     move-result p0
@@ -60,6 +62,7 @@
 
     ushr-int/lit8 v0, v0, 0x1
 
+    .line 2
     invoke-interface {p3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1

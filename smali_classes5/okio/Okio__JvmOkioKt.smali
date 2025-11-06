@@ -1,58 +1,79 @@
-.class final synthetic Lokio/Okio__JvmOkioKt;
+.class public final synthetic Lokio/Okio__JvmOkioKt;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # annotations
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000\u0088\u0001\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0011\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u001a\n\u0010\u0008\u001a\u00020\t*\u00020\n\u001a\n\u0010\u000b\u001a\u00020\u000c*\u00020\r\u001a\u0012\u0010\u000e\u001a\u00020\u000f*\u00020\t2\u0006\u0010\u0010\u001a\u00020\u0011\u001a\u0012\u0010\u0012\u001a\u00020\u0013*\u00020\u00142\u0006\u0010\u0010\u001a\u00020\u0011\u001a\u0012\u0010\u0015\u001a\u00020\u0016*\u00020\t2\u0006\u0010\u0017\u001a\u00020\u0018\u001a\u0012\u0010\u0015\u001a\u00020\u0016*\u00020\t2\u0006\u0010\u0019\u001a\u00020\u001a\u001a\u0012\u0010\u001b\u001a\u00020\u001c*\u00020\u00142\u0006\u0010\u0017\u001a\u00020\u0018\u001a\u0012\u0010\u001b\u001a\u00020\u001c*\u00020\u00142\u0006\u0010\u0019\u001a\u00020\u001a\u001a\u0012\u0010\u001d\u001a\u00020\u000c*\u00020\u000c2\u0006\u0010\u001e\u001a\u00020\u001f\u001a\u0016\u0010 \u001a\u00020\t*\u00020\n2\u0008\u0008\u0002\u0010!\u001a\u00020\u0004H\u0007\u001a\n\u0010 \u001a\u00020\t*\u00020\"\u001a\n\u0010 \u001a\u00020\t*\u00020#\u001a%\u0010 \u001a\u00020\t*\u00020$2\u0012\u0010%\u001a\n\u0012\u0006\u0008\u0001\u0012\u00020\'0&\"\u00020\'H\u0007\u00a2\u0006\u0002\u0010(\u001a\n\u0010)\u001a\u00020\u0014*\u00020\n\u001a\n\u0010)\u001a\u00020\u0014*\u00020*\u001a\n\u0010)\u001a\u00020\u0014*\u00020#\u001a%\u0010)\u001a\u00020\u0014*\u00020$2\u0012\u0010%\u001a\n\u0012\u0006\u0008\u0001\u0012\u00020\'0&\"\u00020\'H\u0007\u00a2\u0006\u0002\u0010+\"\u0016\u0010\u0000\u001a\n \u0002*\u0004\u0018\u00010\u00010\u0001X\u0082\u0004\u00a2\u0006\u0002\n\u0000\"\u001c\u0010\u0003\u001a\u00020\u0004*\u00060\u0005j\u0002`\u00068@X\u0080\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u0003\u0010\u0007\u00a8\u0006,"
+        "\u0000\u0098\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0010\u0011\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u001a\u0011\u0010\u0002\u001a\u00020\u0001*\u00020\u0000\u00a2\u0006\u0004\u0008\u0002\u0010\u0003\u001a\u0011\u0010\u0006\u001a\u00020\u0005*\u00020\u0004\u00a2\u0006\u0004\u0008\u0006\u0010\u0007\u001a\u0011\u0010\u0002\u001a\u00020\u0001*\u00020\u0008\u00a2\u0006\u0004\u0008\u0002\u0010\t\u001a\u0011\u0010\u0006\u001a\u00020\u0005*\u00020\u0008\u00a2\u0006\u0004\u0008\u0006\u0010\n\u001a\u001d\u0010\u0002\u001a\u00020\u0001*\u00020\u000b2\u0008\u0008\u0002\u0010\r\u001a\u00020\u000cH\u0007\u00a2\u0006\u0004\u0008\u0002\u0010\u000e\u001a\u0011\u0010\u000f\u001a\u00020\u0001*\u00020\u000b\u00a2\u0006\u0004\u0008\u000f\u0010\u0010\u001a\u0011\u0010\u0006\u001a\u00020\u0005*\u00020\u000b\u00a2\u0006\u0004\u0008\u0006\u0010\u0011\u001a\'\u0010\u0002\u001a\u00020\u0001*\u00020\u00122\u0012\u0010\u0015\u001a\n\u0012\u0006\u0008\u0001\u0012\u00020\u00140\u0013\"\u00020\u0014H\u0007\u00a2\u0006\u0004\u0008\u0002\u0010\u0016\u001a\'\u0010\u0006\u001a\u00020\u0005*\u00020\u00122\u0012\u0010\u0015\u001a\n\u0012\u0006\u0008\u0001\u0012\u00020\u00140\u0013\"\u00020\u0014H\u0007\u00a2\u0006\u0004\u0008\u0006\u0010\u0017\u001a\u0019\u0010\u001b\u001a\u00020\u001a*\u00020\u00012\u0006\u0010\u0019\u001a\u00020\u0018\u00a2\u0006\u0004\u0008\u001b\u0010\u001c\u001a\u0019\u0010\u001e\u001a\u00020\u001d*\u00020\u00052\u0006\u0010\u0019\u001a\u00020\u0018\u00a2\u0006\u0004\u0008\u001e\u0010\u001f\u001a\u0019\u0010#\u001a\u00020\"*\u00020\u00012\u0006\u0010!\u001a\u00020 \u00a2\u0006\u0004\u0008#\u0010$\u001a\u0019\u0010&\u001a\u00020%*\u00020\u00052\u0006\u0010!\u001a\u00020 \u00a2\u0006\u0004\u0008&\u0010\'\u001a\u0019\u0010#\u001a\u00020\"*\u00020\u00012\u0006\u0010)\u001a\u00020(\u00a2\u0006\u0004\u0008#\u0010*\u001a\u0019\u0010&\u001a\u00020%*\u00020\u00052\u0006\u0010)\u001a\u00020(\u00a2\u0006\u0004\u0008&\u0010+\u001a\u0019\u0010/\u001a\u00020,*\u00020,2\u0006\u0010.\u001a\u00020-\u00a2\u0006\u0004\u0008/\u00100\u001a\u0011\u00102\u001a\u00020,*\u000201\u00a2\u0006\u0004\u00082\u00103\"\u001e\u00106\u001a\n 5*\u0004\u0018\u000104048\u0002@\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u00086\u00107\"\u001e\u0010:\u001a\u00020\u000c*\u000608j\u0002`98@@\u0000X\u0080\u0004\u00a2\u0006\u0006\u001a\u0004\u0008:\u0010;\u00a8\u0006<"
     }
     d2 = {
-        "logger",
-        "Ljava/util/logging/Logger;",
-        "kotlin.jvm.PlatformType",
-        "isAndroidGetsocknameError",
-        "",
-        "Ljava/lang/AssertionError;",
-        "Lkotlin/AssertionError;",
-        "(Ljava/lang/AssertionError;)Z",
-        "appendingSink",
-        "Lokio/Sink;",
-        "Ljava/io/File;",
-        "asResourceFileSystem",
-        "Lokio/FileSystem;",
-        "Ljava/lang/ClassLoader;",
-        "cipherSink",
-        "Lokio/CipherSink;",
-        "cipher",
-        "Ljavax/crypto/Cipher;",
-        "cipherSource",
-        "Lokio/CipherSource;",
-        "Lokio/Source;",
-        "hashingSink",
-        "Lokio/HashingSink;",
-        "digest",
-        "Ljava/security/MessageDigest;",
-        "mac",
-        "Ljavax/crypto/Mac;",
-        "hashingSource",
-        "Lokio/HashingSource;",
-        "openZip",
-        "zipPath",
-        "Lokio/Path;",
-        "sink",
-        "append",
         "Ljava/io/OutputStream;",
+        "Lokio/Sink;",
+        "sink",
+        "(Ljava/io/OutputStream;)Lokio/Sink;",
+        "Ljava/io/InputStream;",
+        "Lokio/Source;",
+        "source",
+        "(Ljava/io/InputStream;)Lokio/Source;",
         "Ljava/net/Socket;",
+        "(Ljava/net/Socket;)Lokio/Sink;",
+        "(Ljava/net/Socket;)Lokio/Source;",
+        "Ljava/io/File;",
+        "",
+        "append",
+        "(Ljava/io/File;Z)Lokio/Sink;",
+        "appendingSink",
+        "(Ljava/io/File;)Lokio/Sink;",
+        "(Ljava/io/File;)Lokio/Source;",
         "Ljava/nio/file/Path;",
-        "options",
         "",
         "Ljava/nio/file/OpenOption;",
+        "options",
         "(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Lokio/Sink;",
-        "source",
-        "Ljava/io/InputStream;",
         "(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Lokio/Source;",
+        "Ljavax/crypto/Cipher;",
+        "cipher",
+        "Lokio/CipherSink;",
+        "cipherSink",
+        "(Lokio/Sink;Ljavax/crypto/Cipher;)Lokio/CipherSink;",
+        "Lokio/CipherSource;",
+        "cipherSource",
+        "(Lokio/Source;Ljavax/crypto/Cipher;)Lokio/CipherSource;",
+        "Ljavax/crypto/Mac;",
+        "mac",
+        "Lokio/HashingSink;",
+        "hashingSink",
+        "(Lokio/Sink;Ljavax/crypto/Mac;)Lokio/HashingSink;",
+        "Lokio/HashingSource;",
+        "hashingSource",
+        "(Lokio/Source;Ljavax/crypto/Mac;)Lokio/HashingSource;",
+        "Ljava/security/MessageDigest;",
+        "digest",
+        "(Lokio/Sink;Ljava/security/MessageDigest;)Lokio/HashingSink;",
+        "(Lokio/Source;Ljava/security/MessageDigest;)Lokio/HashingSource;",
+        "Lokio/FileSystem;",
+        "Lokio/Path;",
+        "zipPath",
+        "openZip",
+        "(Lokio/FileSystem;Lokio/Path;)Lokio/FileSystem;",
+        "Ljava/lang/ClassLoader;",
+        "asResourceFileSystem",
+        "(Ljava/lang/ClassLoader;)Lokio/FileSystem;",
+        "Ljava/util/logging/Logger;",
+        "kotlin.jvm.PlatformType",
+        "logger",
+        "Ljava/util/logging/Logger;",
+        "Ljava/lang/AssertionError;",
+        "Lkotlin/AssertionError;",
+        "isAndroidGetsocknameError",
+        "(Ljava/lang/AssertionError;)Z",
         "okio"
     }
     k = 0x5
@@ -61,7 +82,6 @@
         0x5,
         0x1
     }
-    xi = 0x30
     xs = "okio/Okio"
 .end annotation
 
@@ -76,6 +96,7 @@
 
     const-string v0, "okio.Okio"
 
+    .line 1
     invoke-static {v0}, Ljava/util/logging/Logger;->getLogger(Ljava/lang/String;)Ljava/util/logging/Logger;
 
     move-result-object v0
@@ -88,6 +109,7 @@
 .method public static final synthetic access$getLogger$p()Ljava/util/logging/Logger;
     .locals 1
 
+    .line 1
     sget-object v0, Lokio/Okio__JvmOkioKt;->logger:Ljava/util/logging/Logger;
 
     return-object v0
@@ -96,7 +118,7 @@
 .method public static final appendingSink(Ljava/io/File;)Lokio/Sink;
     .locals 2
     .param p0    # Ljava/io/File;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -105,13 +127,14 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     new-instance v0, Ljava/io/FileOutputStream;
 
     const/4 v1, 0x1
@@ -128,16 +151,17 @@
 .method public static final asResourceFileSystem(Ljava/lang/ClassLoader;)Lokio/FileSystem;
     .locals 2
     .param p0    # Ljava/lang/ClassLoader;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     new-instance v0, Lokio/internal/ResourceFileSystem;
 
     const/4 v1, 0x1
@@ -150,24 +174,25 @@
 .method public static final cipherSink(Lokio/Sink;Ljavax/crypto/Cipher;)Lokio/CipherSink;
     .locals 1
     .param p0    # Lokio/Sink;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p1    # Ljavax/crypto/Cipher;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "cipher"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     new-instance v0, Lokio/CipherSink;
 
     invoke-static {p0}, Lokio/Okio;->buffer(Lokio/Sink;)Lokio/BufferedSink;
@@ -182,24 +207,25 @@
 .method public static final cipherSource(Lokio/Source;Ljavax/crypto/Cipher;)Lokio/CipherSource;
     .locals 1
     .param p0    # Lokio/Source;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p1    # Ljavax/crypto/Cipher;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "cipher"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     new-instance v0, Lokio/CipherSource;
 
     invoke-static {p0}, Lokio/Okio;->buffer(Lokio/Source;)Lokio/BufferedSource;
@@ -214,23 +240,23 @@
 .method public static final hashingSink(Lokio/Sink;Ljava/security/MessageDigest;)Lokio/HashingSink;
     .locals 1
     .param p0    # Lokio/Sink;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p1    # Ljava/security/MessageDigest;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "digest"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     new-instance v0, Lokio/HashingSink;
@@ -243,23 +269,23 @@
 .method public static final hashingSink(Lokio/Sink;Ljavax/crypto/Mac;)Lokio/HashingSink;
     .locals 1
     .param p0    # Lokio/Sink;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p1    # Ljavax/crypto/Mac;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "mac"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     new-instance v0, Lokio/HashingSink;
@@ -272,23 +298,23 @@
 .method public static final hashingSource(Lokio/Source;Ljava/security/MessageDigest;)Lokio/HashingSource;
     .locals 1
     .param p0    # Lokio/Source;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p1    # Ljava/security/MessageDigest;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "digest"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     new-instance v0, Lokio/HashingSource;
@@ -301,23 +327,23 @@
 .method public static final hashingSource(Lokio/Source;Ljavax/crypto/Mac;)Lokio/HashingSource;
     .locals 1
     .param p0    # Lokio/Source;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p1    # Ljavax/crypto/Mac;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "mac"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     new-instance v0, Lokio/HashingSource;
@@ -330,15 +356,16 @@
 .method public static final isAndroidGetsocknameError(Ljava/lang/AssertionError;)Z
     .locals 4
     .param p0    # Ljava/lang/AssertionError;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    .line 1
+    invoke-virtual {p0}, Ljava/lang/AssertionError;->getCause()Ljava/lang/Throwable;
 
     move-result-object v0
 
@@ -346,7 +373,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/AssertionError;->getMessage()Ljava/lang/String;
 
     move-result-object p0
 
@@ -363,7 +390,7 @@
 
     const-string v3, "getsockname failed"
 
-    invoke-static {p0, v3, v1, v0, v2}, Lxn/c0;->V2(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZILjava/lang/Object;)Z
+    invoke-static {p0, v3, v1, v0, v2}, Lh/m3/c0;->V2(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZILjava/lang/Object;)Z
 
     move-result p0
 
@@ -379,11 +406,11 @@
 .method public static final openZip(Lokio/FileSystem;Lokio/Path;)Lokio/FileSystem;
     .locals 2
     .param p0    # Lokio/FileSystem;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p1    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -392,22 +419,23 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "zipPath"
+    const-string/jumbo v0, "zipPath"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
     const/4 v1, 0x4
 
-    invoke-static {p1, p0, v0, v1, v0}, Lokio/internal/ZipKt;->openZip$default(Lokio/Path;Lokio/FileSystem;Ljn/l;ILjava/lang/Object;)Lokio/ZipFileSystem;
+    .line 1
+    invoke-static {p1, p0, v0, v1, v0}, Lokio/internal/ZipKt;->openZip$default(Lokio/Path;Lokio/FileSystem;Lh/d3/w/l;ILjava/lang/Object;)Lokio/ZipFileSystem;
 
     move-result-object p0
 
@@ -417,7 +445,7 @@
 .method public static final sink(Ljava/io/File;)Lokio/Sink;
     .locals 3
     .param p0    # Ljava/io/File;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -426,23 +454,23 @@
         }
     .end annotation
 
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    invoke-static {p0, v2, v0, v1}, Lokio/Okio;->sink$default(Ljava/io/File;ZILjava/lang/Object;)Lokio/Sink;
+    invoke-static {p0, v0, v1, v2}, Lokio/Okio;->sink$default(Ljava/io/File;ZILjava/lang/Object;)Lokio/Sink;
 
     move-result-object p0
 
@@ -452,7 +480,7 @@
 .method public static final sink(Ljava/io/File;Z)Lokio/Sink;
     .locals 1
     .param p0    # Ljava/io/File;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -461,15 +489,15 @@
         }
     .end annotation
 
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     new-instance v0, Ljava/io/FileOutputStream;
@@ -486,15 +514,15 @@
 .method public static final sink(Ljava/io/OutputStream;)Lokio/Sink;
     .locals 2
     .param p0    # Ljava/io/OutputStream;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     new-instance v0, Lokio/OutputStreamSink;
@@ -511,7 +539,7 @@
 .method public static final sink(Ljava/net/Socket;)Lokio/Sink;
     .locals 3
     .param p0    # Ljava/net/Socket;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -520,12 +548,12 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     new-instance v0, Lokio/SocketAsyncTimeout;
@@ -541,7 +569,7 @@
 
     const-string v2, "getOutputStream()"
 
-    invoke-static {p0, v2}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v2}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v1, p0, v0}, Lokio/OutputStreamSink;-><init>(Ljava/io/OutputStream;Lokio/Timeout;)V
 
@@ -556,11 +584,11 @@
 .method public static final varargs sink(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Lokio/Sink;
     .locals 1
     .param p0    # Ljava/nio/file/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p1    # [Ljava/nio/file/OpenOption;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -569,7 +597,7 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     .annotation build Lorg/codehaus/mojo/animal_sniffer/IgnoreJRERequirement;
@@ -577,11 +605,11 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "options"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
     array-length v0, p1
@@ -598,7 +626,7 @@
 
     const-string p1, "newOutputStream(this, *options)"
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p0}, Lokio/Okio;->sink(Ljava/io/OutputStream;)Lokio/Sink;
 
@@ -621,6 +649,7 @@
 
     const/4 p1, 0x0
 
+    .line 1
     :cond_0
     invoke-static {p0, p1}, Lokio/Okio;->sink(Ljava/io/File;Z)Lokio/Sink;
 
@@ -632,7 +661,7 @@
 .method public static final source(Ljava/io/File;)Lokio/Source;
     .locals 2
     .param p0    # Ljava/io/File;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -641,12 +670,12 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     new-instance v0, Lokio/InputStreamSource;
@@ -665,15 +694,15 @@
 .method public static final source(Ljava/io/InputStream;)Lokio/Source;
     .locals 2
     .param p0    # Ljava/io/InputStream;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     new-instance v0, Lokio/InputStreamSource;
@@ -690,7 +719,7 @@
 .method public static final source(Ljava/net/Socket;)Lokio/Source;
     .locals 3
     .param p0    # Ljava/net/Socket;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -699,12 +728,12 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     new-instance v0, Lokio/SocketAsyncTimeout;
@@ -720,7 +749,7 @@
 
     const-string v2, "getInputStream()"
 
-    invoke-static {p0, v2}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v2}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v1, p0, v0}, Lokio/InputStreamSource;-><init>(Ljava/io/InputStream;Lokio/Timeout;)V
 
@@ -735,11 +764,11 @@
 .method public static final varargs source(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Lokio/Source;
     .locals 1
     .param p0    # Ljava/nio/file/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p1    # [Ljava/nio/file/OpenOption;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Throws;
@@ -748,7 +777,7 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     .annotation build Lorg/codehaus/mojo/animal_sniffer/IgnoreJRERequirement;
@@ -756,11 +785,11 @@
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "options"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
     array-length v0, p1
@@ -777,7 +806,7 @@
 
     const-string p1, "newInputStream(this, *options)"
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p0}, Lokio/Okio;->source(Ljava/io/InputStream;)Lokio/Source;
 

@@ -1,4 +1,4 @@
-.class final Lio/reactivex/android/schedulers/AndroidSchedulers$MainHolder;
+.class public final Lio/reactivex/android/schedulers/AndroidSchedulers$MainHolder;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # static fields
-.field static final DEFAULT:Lio/reactivex/Scheduler;
+.field public static final DEFAULT:Lio/reactivex/Scheduler;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Lio/reactivex/android/schedulers/HandlerScheduler;
 
     new-instance v1, Landroid/os/Handler;
@@ -42,6 +43,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

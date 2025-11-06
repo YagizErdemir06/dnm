@@ -1,4 +1,4 @@
-.class interface abstract Lcom/google/android/exoplayer2/MediaSourceInfoHolder;
+.class public interface abstract Lcom/google/android/exoplayer2/MediaSourceInfoHolder;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

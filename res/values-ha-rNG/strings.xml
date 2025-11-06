@@ -205,7 +205,6 @@
     <string name="accessibility_video_capture_button">Maballin daukar hotuna yayin da ake daukar bidiyoyi</string>
     <string name="accessibility_video_pause_button">Ya dakatar da rikodi</string>
     <string name="accessibility_video_resume_button">Ya soma rikodi</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">Makin ruwa na kashe</string>
     <string name="accessibility_watermark_image_on">Makin ruwa na kunne</string>
     <string name="accessibility_watermark_text">Buɗe fanel din daidaita makin ruwa</string>
@@ -213,16 +212,6 @@
     <string name="accessibility_zoom_button">Yanayain zukowa</string>
     <string name="actionbar_button_up_description">Baya</string>
     <string name="afternoon">Yamma</string>
-    <string name="agent_flip_tbc">Ci gaba akan allon ciki</string>
-    <string name="agent_function_max">Daidaita zuwa iyakar ƙima</string>
-    <string name="agent_function_min">Daidaita zuwa mafi ƙarancin daraja</string>
-    <string name="agent_workspace_mode_not_supported">Wannan siffa bai ko riga ya zauna daidai</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"Bai dace da wannan fasalin ba.
-Yanayin Hoto a maimakon haka."</string>
-    <string name="agent_workspace_on">An saita sigogi don daukar hoto \"%1$s\"</string>
-    <string name="agent_workspace_tbc">Fagen karatu</string>
-    <string name="agent_workspace_tbc_use_default">"Fagen karatu…
-An saita sigogin kyamara azaman na asali"</string>
     <string name="ai_agra_fort">Agra Fort</string>
     <string name="ai_amber_fort">Amber Palace</string>
     <string name="ai_baby">Jariri</string>
@@ -781,7 +770,6 @@ takardun da aka yi sikani da kansa"</string>
     <string name="download_hint_cn">Da alama ba a haɗa ku da Wi-Fi ba. Yi amfani da %1$s MB na bayanan mobayil don sauke abubuwa yanzu ?</string>
     <string name="download_hint_wifi">Da alama ba a haɗa ku da Wi-Fi ba. Yi amfani da %1$s MB na bayanan mobayil don sauke abubuwa yanzu ?</string>
     <string name="download_in_progress">Saukewa…</string>
-    <string name="download_network_error">Ya kasa saukewa. Binciki saittunan sadarwarka.</string>
     <string name="download_title">Gargadin amfani da bayanan mobayil</string>
     <string name="download_waiting">Yana jira…</string>
     <string name="dual_camera_lens_covered_toast">An rufe gilashin madubin.</string>
@@ -1259,7 +1247,6 @@ Goge madubi don sakamako mafi kyau."</string>
     <string name="miuix_appcompat_delete_description">Share</string>
     <string name="miuix_appcompat_deselect_all">Cire zabi ma duka</string>
     <string name="miuix_appcompat_deselect_all_description">Cire zabi ma duka</string>
-    <string name="miuix_appcompat_edit">Gyara</string>
     <string name="miuix_appcompat_search_action_mode_cancel">Soke</string>
     <string name="miuix_appcompat_search_input_description">Binciken</string>
     <string name="miuix_appcompat_select_all">Zabi duka</string>
@@ -1917,7 +1904,6 @@ kuma na fito da mutane zuwa gaba."</string>
     <string name="pref_super_night_se_desc">Gano ƙananan yanayin rage fitila yayin amfani da yanayin Hoto da yanayin ganau don inganta ingancin hoto ta atomatik</string>
     <string name="pref_super_night_se_summary">Gano yanayin rage fitila kuma inganta ƙimar hoto da kansa</string>
     <string name="pref_super_night_se_title">Yanayin dare na oto</string>
-    <string name="pref_switch_camera_heic_image_desc">Tsarin hoto mafi inganci wanda ke adana sararin ajiya. Yana goyan bayan Yanayin Ultra HD, amma baya goyan bayan Daukar kyamara na hanzari cire makin ruwa na yau da kullun, da wasu manhajar ɓangare na uku. ​</string>
     <string name="pref_true_colour_video_mode_description">"Yi rikodin bidiyoyi tare da Dolby Vision don ɗaukar cikakken bayanai na abun kama da rayuw, launuka masu ban sha'awa, da kala mai ban mamaki (wannan fasalin bazai dace da manhajar wata bangare ba)"</string>
     <string name="pref_true_colour_video_mode_introduction">"Kwarewar gani mai ban sha'awa, cikakkun bayanai masu kama da rayuwa, da ban mamaki"</string>
     <string name="pref_true_colour_video_mode_setting_dec">"Ɗauki cikakkun bayanai masu kama da rayuwa, launuka masu ban sha'awa, da ban mamaki a cikin Bidiyo da hanyoyin Yanayin Pro. Bai dace da sa hankali na bin sawun motsi da ɓoye H.264 ba. Wannan fasalin bazai dace da wasu manhaja ɓangare na uku ba."</string>
@@ -2198,7 +2184,6 @@ kuma na fito da mutane zuwa gaba."</string>
     <string name="time_picker_label_hour">Awa</string>
     <string name="time_picker_label_minute">Min</string>
     <string name="time_stamp_date_format">dd/MM/yyyy</string>
-    <string name="time_stamp_date_format_minute">dd/MM/yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">Kuna iya daskarewa da cire daskara bango a kowane lokaci kafin ko yayin dauka.</string>
     <string name="timefreeze_guide_tip3">Tambayi abun ku ya zauna a tsakiyar firem.</string>
     <string name="timefreeze_guide_tip4">Tsayar da tirafik.</string>
@@ -2236,7 +2221,7 @@ kuma na fito da mutane zuwa gaba."</string>
     <string name="tip_flash_screen_light_on">Karamin filash: Kashe</string>
     <string name="tip_flash_soft_light_off">Filash mai laushi: Kashe</string>
     <string name="tip_flash_soft_light_torch">Filash mai laushi: Yanayin Fitilan filash</string>
-    <string name="tip_flash_torch">Filash: Fitilan filash</string>
+    <string name="tip_flash_torch">Filash: Kullum a kunne</string>
     <string name="tip_friend_mode_connect_when_24GHz">Yi amfani da hadi na %s GHz don kara ingancin dubin fako</string>
     <string name="tip_friend_mode_display_device_name_connect">Duban farko da aka raba</string>
     <string name="tip_friend_mode_display_device_name_disconnect">"Wata na'urar ta bar wannan sashen"</string>

@@ -16,8 +16,10 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;-><init>()V
 
+    .line 2
     invoke-direct {p0}, Lcom/xiaomi/milab/videosdk/MediaTranscode;->creatMediaTranscode()J
 
     move-result-wide v0
@@ -129,6 +131,7 @@
         }
     .end annotation
 
+    .line 1
     iget-wide v1, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     move-object v0, p0
@@ -151,6 +154,7 @@
 .method public release()V
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     invoke-direct {p0, v0, v1}, Lcom/xiaomi/milab/videosdk/MediaTranscode;->release(J)V
@@ -169,6 +173,7 @@
         }
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     invoke-direct {p0, v0, v1, p1}, Lcom/xiaomi/milab/videosdk/MediaTranscode;->setConfig(JI)V
@@ -187,6 +192,7 @@
         }
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     invoke-direct {p0, v0, v1, p1}, Lcom/xiaomi/milab/videosdk/MediaTranscode;->setPreferSoftDecoder(JZ)V
@@ -205,6 +211,7 @@
         }
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     invoke-direct {p0, v0, v1, p1}, Lcom/xiaomi/milab/videosdk/MediaTranscode;->setThumbBitmap(JLandroid/graphics/Bitmap;)V
@@ -215,6 +222,7 @@
 .method public stop()I
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     invoke-direct {p0, v0, v1}, Lcom/xiaomi/milab/videosdk/MediaTranscode;->stop(J)I

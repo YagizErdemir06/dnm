@@ -1,4 +1,4 @@
-.class Lorg/dom4j/tree/ConcurrentReaderHashMap$Values;
+.class public Lorg/dom4j/tree/ConcurrentReaderHashMap$Values;
 .super Ljava/util/AbstractCollection;
 .source "SourceFile"
 
@@ -44,6 +44,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/ConcurrentReaderHashMap$Values;->this$0:Lorg/dom4j/tree/ConcurrentReaderHashMap;
 
     invoke-virtual {p0}, Lorg/dom4j/tree/ConcurrentReaderHashMap;->clear()V
@@ -54,6 +55,7 @@
 .method public contains(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/ConcurrentReaderHashMap$Values;->this$0:Lorg/dom4j/tree/ConcurrentReaderHashMap;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/ConcurrentReaderHashMap;->containsValue(Ljava/lang/Object;)Z
@@ -66,6 +68,7 @@
 .method public iterator()Ljava/util/Iterator;
     .locals 1
 
+    .line 1
     new-instance v0, Lorg/dom4j/tree/ConcurrentReaderHashMap$ValueIterator;
 
     iget-object p0, p0, Lorg/dom4j/tree/ConcurrentReaderHashMap$Values;->this$0:Lorg/dom4j/tree/ConcurrentReaderHashMap;
@@ -78,6 +81,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/ConcurrentReaderHashMap$Values;->this$0:Lorg/dom4j/tree/ConcurrentReaderHashMap;
 
     invoke-virtual {p0}, Lorg/dom4j/tree/ConcurrentReaderHashMap;->size()I

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhb;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,17 +7,18 @@
 
 
 # instance fields
-.field final zza:Ljava/util/ListIterator;
+.field public final zza:Ljava/util/ListIterator;
 
-.field final synthetic zzb:I
+.field public final synthetic zzb:I
 
-.field final synthetic zzc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhd;
+.field public final synthetic zzc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhd;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhd;I)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhb;->zzc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhd;
 
     iput p2, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhb;->zzb:I
@@ -42,10 +43,12 @@
 .method public final synthetic add(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/String;
 
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
     throw p0
@@ -54,6 +57,7 @@
 .method public final hasNext()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhb;->zza:Ljava/util/ListIterator;
 
     invoke-interface {p0}, Ljava/util/ListIterator;->hasNext()Z
@@ -66,6 +70,7 @@
 .method public final hasPrevious()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhb;->zza:Ljava/util/ListIterator;
 
     invoke-interface {p0}, Ljava/util/ListIterator;->hasPrevious()Z
@@ -78,6 +83,7 @@
 .method public final bridge synthetic next()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhb;->zza:Ljava/util/ListIterator;
 
     invoke-interface {p0}, Ljava/util/ListIterator;->next()Ljava/lang/Object;
@@ -92,6 +98,7 @@
 .method public final nextIndex()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhb;->zza:Ljava/util/ListIterator;
 
     invoke-interface {p0}, Ljava/util/ListIterator;->nextIndex()I
@@ -104,6 +111,7 @@
 .method public final bridge synthetic previous()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhb;->zza:Ljava/util/ListIterator;
 
     invoke-interface {p0}, Ljava/util/ListIterator;->previous()Ljava/lang/Object;
@@ -118,6 +126,7 @@
 .method public final previousIndex()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhb;->zza:Ljava/util/ListIterator;
 
     invoke-interface {p0}, Ljava/util/ListIterator;->previousIndex()I
@@ -130,6 +139,7 @@
 .method public final remove()V
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -140,10 +150,12 @@
 .method public final synthetic set(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/String;
 
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
     throw p0

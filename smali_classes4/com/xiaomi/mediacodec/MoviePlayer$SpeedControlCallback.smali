@@ -34,13 +34,14 @@
 
 .field private mPrevPresentUsec:J
 
-.field final synthetic this$0:Lcom/xiaomi/mediacodec/MoviePlayer;
+.field public final synthetic this$0:Lcom/xiaomi/mediacodec/MoviePlayer;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/mediacodec/MoviePlayer;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mediacodec/MoviePlayer$SpeedControlCallback;->this$0:Lcom/xiaomi/mediacodec/MoviePlayer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -55,6 +56,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/xiaomi/mediacodec/MoviePlayer$SpeedControlCallback;->mLoopReset:Z
 
     return-void
@@ -105,6 +107,7 @@
 .method public preRender(J)V
     .locals 9
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/mediacodec/MoviePlayer$SpeedControlCallback;->mPrevMonoUsec:J
 
     const-wide/16 v2, 0x0
@@ -115,6 +118,7 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v0
@@ -123,10 +127,12 @@
 
     iput-wide v0, p0, Lcom/xiaomi/mediacodec/MoviePlayer$SpeedControlCallback;->mPrevMonoUsec:J
 
+    .line 3
     iput-wide p1, p0, Lcom/xiaomi/mediacodec/MoviePlayer$SpeedControlCallback;->mPrevPresentUsec:J
 
     goto/16 :goto_4
 
+    .line 4
     :cond_0
     iget-boolean v0, p0, Lcom/xiaomi/mediacodec/MoviePlayer$SpeedControlCallback;->mLoopReset:Z
 
@@ -136,12 +142,15 @@
 
     sub-long v0, p1, v0
 
+    .line 5
     iput-wide v0, p0, Lcom/xiaomi/mediacodec/MoviePlayer$SpeedControlCallback;->mPrevPresentUsec:J
 
     const/4 v0, 0x0
 
+    .line 6
     iput-boolean v0, p0, Lcom/xiaomi/mediacodec/MoviePlayer$SpeedControlCallback;->mLoopReset:Z
 
+    .line 7
     :cond_1
     iget-wide v0, p0, Lcom/xiaomi/mediacodec/MoviePlayer$SpeedControlCallback;->mFixedFrameDurationUsec:J
 
@@ -151,6 +160,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_2
     iget-wide v0, p0, Lcom/xiaomi/mediacodec/MoviePlayer$SpeedControlCallback;->mPrevPresentUsec:J
 
@@ -165,6 +175,7 @@
 
     const-string p2, "Weird, video times went backward"
 
+    .line 9
     invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_2
@@ -174,6 +185,7 @@
 
     const-string p1, "Warning: current frame and previous frame had same timestamp"
 
+    .line 10
     invoke-static {p1}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
     goto :goto_1
@@ -185,6 +197,7 @@
 
     if-lez p1, :cond_5
 
+    .line 11
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -217,11 +230,13 @@
     :goto_1
     move-wide v2, v0
 
+    .line 12
     :goto_2
     iget-wide p1, p0, Lcom/xiaomi/mediacodec/MoviePlayer$SpeedControlCallback;->mPrevMonoUsec:J
 
     add-long/2addr p1, v2
 
+    .line 13
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v0
@@ -247,6 +262,7 @@
 
     move-wide v0, v6
 
+    .line 14
     :cond_6
     :try_start_0
     div-long v6, v0, v4
@@ -261,6 +277,7 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 15
     :catch_0
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
@@ -270,6 +287,7 @@
 
     goto :goto_3
 
+    .line 16
     :cond_7
     iget-wide p1, p0, Lcom/xiaomi/mediacodec/MoviePlayer$SpeedControlCallback;->mPrevMonoUsec:J
 
@@ -277,6 +295,7 @@
 
     iput-wide p1, p0, Lcom/xiaomi/mediacodec/MoviePlayer$SpeedControlCallback;->mPrevMonoUsec:J
 
+    .line 17
     iget-wide p1, p0, Lcom/xiaomi/mediacodec/MoviePlayer$SpeedControlCallback;->mPrevPresentUsec:J
 
     add-long/2addr p1, v2
@@ -290,13 +309,14 @@
 .method public setFixedPlaybackRate(I)V
     .locals 4
 
-    const-wide/32 v0, 0xf4240
+    int-to-long v0, p1
 
-    int-to-long v2, p1
+    const-wide/32 v2, 0xf4240
 
-    div-long/2addr v0, v2
+    .line 1
+    div-long/2addr v2, v0
 
-    iput-wide v0, p0, Lcom/xiaomi/mediacodec/MoviePlayer$SpeedControlCallback;->mFixedFrameDurationUsec:J
+    iput-wide v2, p0, Lcom/xiaomi/mediacodec/MoviePlayer$SpeedControlCallback;->mFixedFrameDurationUsec:J
 
     return-void
 .end method

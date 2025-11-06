@@ -38,32 +38,44 @@
 .method public constructor <init>()V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput v0, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->isSegmentation:I
 
+    .line 3
     iput v0, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->imgHeight:I
 
+    .line 4
     iput v0, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->imgWidth:I
 
+    .line 5
     iput v0, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->imgStride:I
 
+    .line 6
     iput v0, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->rotateAngle:I
 
+    .line 7
     iput v0, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->imgFormat:I
 
     const-wide/16 v1, 0x0
 
+    .line 8
     iput-wide v1, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->bufferSize:J
 
+    .line 9
     iput v0, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->left:I
 
+    .line 10
     iput v0, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->top:I
 
+    .line 11
     iput v0, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->width:I
 
+    .line 12
     iput v0, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->height:I
 
     return-void
@@ -74,6 +86,7 @@
 .method public getBufferData()[B
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->bufferData:[B
 
     return-object p0
@@ -82,6 +95,7 @@
 .method public getBufferSize()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->bufferSize:J
 
     return-wide v0
@@ -90,6 +104,7 @@
 .method public getHeight()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->height:I
 
     return p0
@@ -98,6 +113,7 @@
 .method public getImgFormat()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->imgFormat:I
 
     return p0
@@ -106,6 +122,7 @@
 .method public getImgHeight()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->imgHeight:I
 
     return p0
@@ -114,6 +131,7 @@
 .method public getImgStride()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->imgStride:I
 
     return p0
@@ -122,6 +140,7 @@
 .method public getImgWidth()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->imgWidth:I
 
     return p0
@@ -130,6 +149,7 @@
 .method public getIsSegmentation()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->isSegmentation:I
 
     return p0
@@ -138,6 +158,7 @@
 .method public getLeft()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->left:I
 
     return p0
@@ -146,6 +167,7 @@
 .method public getRotateAngle()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->rotateAngle:I
 
     return p0
@@ -154,6 +176,7 @@
 .method public getTop()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->top:I
 
     return p0
@@ -162,6 +185,7 @@
 .method public getWidth()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->width:I
 
     return p0
@@ -169,7 +193,16 @@
 
 .method public setBufferData([B)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "bufferData"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->bufferData:[B
 
     return-void
@@ -177,7 +210,16 @@
 
 .method public setBufferSize(J)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "bufferSize"
+        }
+    .end annotation
 
+    .line 1
     iput-wide p1, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->bufferSize:J
 
     return-void
@@ -185,7 +227,16 @@
 
 .method public setHeight(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "height"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->height:I
 
     return-void
@@ -193,7 +244,16 @@
 
 .method public setImgFormat(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "imgFormat"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->imgFormat:I
 
     return-void
@@ -201,7 +261,16 @@
 
 .method public setImgHeight(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "imgHeight"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->imgHeight:I
 
     return-void
@@ -209,7 +278,16 @@
 
 .method public setImgStride(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "imgStride"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->imgStride:I
 
     return-void
@@ -217,7 +295,16 @@
 
 .method public setImgWidth(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "imgWidth"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->imgWidth:I
 
     return-void
@@ -225,7 +312,16 @@
 
 .method public setIsSegmentation(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isSegmentation"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->isSegmentation:I
 
     return-void
@@ -233,7 +329,16 @@
 
 .method public setLeft(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "left"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->left:I
 
     return-void
@@ -241,7 +346,16 @@
 
 .method public setRotateAngle(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "rotateAngle"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->rotateAngle:I
 
     return-void
@@ -249,7 +363,16 @@
 
 .method public setTop(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "top"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->top:I
 
     return-void
@@ -257,7 +380,16 @@
 
 .method public setWidth(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "width"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/android/camera/saliencychecker/data/SaliencyProcessOutputObject;->width:I
 
     return-void
@@ -266,6 +398,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

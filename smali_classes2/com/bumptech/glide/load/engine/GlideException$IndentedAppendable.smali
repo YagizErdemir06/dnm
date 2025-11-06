@@ -1,4 +1,4 @@
-.class final Lcom/bumptech/glide/load/engine/GlideException$IndentedAppendable;
+.class public final Lcom/bumptech/glide/load/engine/GlideException$IndentedAppendable;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -33,12 +33,15 @@
 .method public constructor <init>(Ljava/lang/Appendable;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
+    .line 2
     iput-boolean v0, p0, Lcom/bumptech/glide/load/engine/GlideException$IndentedAppendable;->printedNewLine:Z
 
+    .line 3
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/GlideException$IndentedAppendable;->appendable:Ljava/lang/Appendable;
 
     return-void

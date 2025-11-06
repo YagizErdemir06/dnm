@@ -1,4 +1,4 @@
-.class Lcom/google/common/escape/Escapers$Builder$1;
+.class public Lcom/google/common/escape/Escapers$Builder$1;
 .super Lcom/google/common/escape/ArrayBasedCharEscaper;
 .source "SourceFile"
 
@@ -20,17 +20,19 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Lcom/google/common/escape/Escapers$Builder;
+.field public final synthetic this$0:Lcom/google/common/escape/Escapers$Builder;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/escape/Escapers$Builder;Ljava/util/Map;CC)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/escape/Escapers$Builder$1;->this$0:Lcom/google/common/escape/Escapers$Builder;
 
     invoke-direct {p0, p2, p3, p4}, Lcom/google/common/escape/ArrayBasedCharEscaper;-><init>(Ljava/util/Map;CC)V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/escape/Escapers$Builder;->access$100(Lcom/google/common/escape/Escapers$Builder;)Ljava/lang/String;
 
     move-result-object p2
@@ -63,6 +65,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/escape/Escapers$Builder$1;->replacementChars:[C
 
     return-object p0

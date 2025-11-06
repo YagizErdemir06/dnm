@@ -1,4 +1,4 @@
-.class Lcom/google/common/reflect/TypeToken$TypeCollector$1;
+.class public Lcom/google/common/reflect/TypeToken$TypeCollector$1;
 .super Lcom/google/common/reflect/TypeToken$TypeCollector;
 .source "SourceFile"
 
@@ -28,6 +28,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/google/common/reflect/TypeToken$TypeCollector;-><init>(Lcom/google/common/reflect/TypeToken$1;)V
 
     return-void

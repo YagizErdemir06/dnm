@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/hash/AbstractHasher;
+.class public abstract Lcom/google/common/hash/AbstractHasher;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -66,20 +67,20 @@
 
     move-result v1
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v2
 
     add-int/2addr v1, v2
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v2
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/google/common/hash/AbstractHasher;->putBytes([BII)Lcom/google/common/hash/Hasher;
 
     .line 9
-    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v0
 
@@ -89,7 +90,7 @@
 
     .line 10
     :cond_0
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v0
 
@@ -369,6 +370,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p2, p1, p0}, Lcom/google/common/hash/Funnel;->funnel(Ljava/lang/Object;Lcom/google/common/hash/PrimitiveSink;)V
 
     return-object p0

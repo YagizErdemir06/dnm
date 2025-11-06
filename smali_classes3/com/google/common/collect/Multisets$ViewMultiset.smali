@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/collect/Multisets$ViewMultiset;
+.class public abstract Lcom/google/common/collect/Multisets$ViewMultiset;
 .super Lcom/google/common/collect/AbstractMultiset;
 .source "SourceFile"
 
@@ -48,6 +48,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMultiset;->elementSet()Ljava/util/Set;
 
     move-result-object p0
@@ -60,6 +61,7 @@
 .method public distinctElements()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMultiset;->elementSet()Ljava/util/Set;
 
     move-result-object p0
@@ -81,6 +83,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/collect/Multisets;->iteratorImpl(Lcom/google/common/collect/Multiset;)Ljava/util/Iterator;
 
     move-result-object p0
@@ -91,6 +94,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/collect/Multisets;->linearTimeSizeImpl(Lcom/google/common/collect/Multiset;)I
 
     move-result p0

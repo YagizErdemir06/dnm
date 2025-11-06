@@ -18,14 +18,23 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/xiaomi/mimoji/gif/GifEditLayout;
+.field public final synthetic c:Lcom/xiaomi/mimoji/gif/GifEditLayout;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/mimoji/gif/GifEditLayout;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/xiaomi/mimoji/gif/GifEditLayout$a;->a:Lcom/xiaomi/mimoji/gif/GifEditLayout;
+    .line 1
+    iput-object p1, p0, Lcom/xiaomi/mimoji/gif/GifEditLayout$a;->c:Lcom/xiaomi/mimoji/gif/GifEditLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,11 +45,25 @@
 # virtual methods
 .method public onEditorAction(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "v",
+            "actionId",
+            "event"
+        }
     .end annotation
 
     if-eqz p3, :cond_1
 
+    .line 1
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result p0
@@ -49,6 +72,7 @@
 
     if-eq p0, p1, :cond_0
 
+    .line 2
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result p0

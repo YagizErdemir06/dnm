@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/MapMakerInternalMap$EntryIterator;
+.class public final Lcom/google/common/collect/MapMakerInternalMap$EntryIterator;
 .super Lcom/google/common/collect/MapMakerInternalMap$HashIterator;
 .source "SourceFile"
 
@@ -27,6 +27,7 @@
 .method public constructor <init>(Lcom/google/common/collect/MapMakerInternalMap;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/MapMakerInternalMap$HashIterator;-><init>(Lcom/google/common/collect/MapMakerInternalMap;)V
 
     return-void

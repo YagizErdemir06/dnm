@@ -86,12 +86,15 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
     iput-object v0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->extensions:Ljava/util/List;
 
+    .line 3
     sget-object v0, Ljava/util/Collections;->EMPTY_SET:Ljava/util/Set;
 
     iput-object v0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->mdefNamespaces:Ljava/util/Set;
@@ -104,6 +107,7 @@
 .method public getBaseDir()Ljava/io/File;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->baseDir:Ljava/io/File;
 
     return-object p0
@@ -112,6 +116,7 @@
 .method public getCatalogFile()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->catalogFile:Ljava/lang/String;
 
     return-object p0
@@ -120,6 +125,7 @@
 .method public getClassesDir()Ljava/io/File;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->classesDir:Ljava/io/File;
 
     return-object p0
@@ -128,6 +134,7 @@
 .method public getClasspath()[Ljava/io/File;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->classpath:[Ljava/io/File;
 
     return-object p0
@@ -136,6 +143,7 @@
 .method public getCompiler()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->compiler:Ljava/lang/String;
 
     return-object p0
@@ -144,6 +152,7 @@
 .method public getConfigFiles()[Ljava/io/File;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->configFiles:[Ljava/io/File;
 
     return-object p0
@@ -152,6 +161,7 @@
 .method public getEntityResolver()Lorg/xml/sax/EntityResolver;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->entityResolver:Lorg/xml/sax/EntityResolver;
 
     return-object p0
@@ -160,6 +170,7 @@
 .method public getErrorListener()Ljava/util/Collection;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->errorListener:Ljava/util/Collection;
 
     return-object p0
@@ -168,6 +179,7 @@
 .method public getExtensions()Ljava/util/List;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->extensions:Ljava/util/List;
 
     return-object p0
@@ -184,6 +196,7 @@
 .method public getJavaFiles()[Ljava/io/File;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->javaFiles:[Ljava/io/File;
 
     return-object p0
@@ -192,6 +205,7 @@
 .method public getJavaSource()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->javasource:Ljava/lang/String;
 
     return-object p0
@@ -200,6 +214,7 @@
 .method public getMdefNamespaces()Ljava/util/Set;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->mdefNamespaces:Ljava/util/Set;
 
     return-object p0
@@ -208,6 +223,7 @@
 .method public getMemoryInitialSize()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->memoryInitialSize:Ljava/lang/String;
 
     return-object p0
@@ -216,6 +232,7 @@
 .method public getMemoryMaximumSize()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->memoryMaximumSize:Ljava/lang/String;
 
     return-object p0
@@ -224,6 +241,7 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->name:Ljava/lang/String;
 
     return-object p0
@@ -232,6 +250,7 @@
 .method public getOutputJar()Ljava/io/File;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->outputJar:Ljava/io/File;
 
     return-object p0
@@ -240,6 +259,7 @@
 .method public getRepackage()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->repackage:Ljava/lang/String;
 
     return-object p0
@@ -248,6 +268,7 @@
 .method public getSchemaCodePrinter()Lorg/apache/xmlbeans/SchemaCodePrinter;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->schemaCodePrinter:Lorg/apache/xmlbeans/SchemaCodePrinter;
 
     return-object p0
@@ -256,6 +277,7 @@
 .method public getSrcDir()Ljava/io/File;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->srcDir:Ljava/io/File;
 
     return-object p0
@@ -264,6 +286,7 @@
 .method public getUrlFiles()[Ljava/net/URL;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->urlFiles:[Ljava/net/URL;
 
     return-object p0
@@ -272,6 +295,7 @@
 .method public getWsdlFiles()[Ljava/io/File;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->wsdlFiles:[Ljava/io/File;
 
     return-object p0
@@ -280,6 +304,7 @@
 .method public getXsdFiles()[Ljava/io/File;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->xsdFiles:[Ljava/io/File;
 
     return-object p0
@@ -288,6 +313,7 @@
 .method public isDebug()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->debug:Z
 
     return p0
@@ -296,6 +322,7 @@
 .method public isDownload()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->download:Z
 
     return p0
@@ -304,6 +331,7 @@
 .method public isIncrementalSrcGen()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->incrementalSrcGen:Z
 
     return p0
@@ -312,6 +340,7 @@
 .method public isNoAnn()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->noAnn:Z
 
     return p0
@@ -320,6 +349,7 @@
 .method public isNoExt()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->noExt:Z
 
     return p0
@@ -328,6 +358,7 @@
 .method public isNoPvr()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->noPvr:Z
 
     return p0
@@ -336,6 +367,7 @@
 .method public isNoUpa()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->noUpa:Z
 
     return p0
@@ -344,6 +376,7 @@
 .method public isNoVDoc()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->noVDoc:Z
 
     return p0
@@ -352,6 +385,7 @@
 .method public isNojavac()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->nojavac:Z
 
     return p0
@@ -360,6 +394,7 @@
 .method public isQuiet()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->quiet:Z
 
     return p0
@@ -368,6 +403,7 @@
 .method public isVerbose()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->verbose:Z
 
     return p0
@@ -376,6 +412,7 @@
 .method public setBaseDir(Ljava/io/File;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->baseDir:Ljava/io/File;
 
     return-void
@@ -384,6 +421,7 @@
 .method public setCatalogFile(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->catalogFile:Ljava/lang/String;
 
     return-void
@@ -392,6 +430,7 @@
 .method public setClassesDir(Ljava/io/File;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->classesDir:Ljava/io/File;
 
     return-void
@@ -400,6 +439,7 @@
 .method public setClasspath([Ljava/io/File;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->classpath:[Ljava/io/File;
 
     return-void
@@ -408,6 +448,7 @@
 .method public setCompiler(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->compiler:Ljava/lang/String;
 
     return-void
@@ -416,6 +457,7 @@
 .method public setConfigFiles([Ljava/io/File;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->configFiles:[Ljava/io/File;
 
     return-void
@@ -424,6 +466,7 @@
 .method public setDebug(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->debug:Z
 
     return-void
@@ -432,6 +475,7 @@
 .method public setDownload(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->download:Z
 
     return-void
@@ -440,6 +484,7 @@
 .method public setEntityResolver(Lorg/xml/sax/EntityResolver;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->entityResolver:Lorg/xml/sax/EntityResolver;
 
     return-void
@@ -448,6 +493,7 @@
 .method public setErrorListener(Ljava/util/Collection;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->errorListener:Ljava/util/Collection;
 
     return-void
@@ -456,6 +502,7 @@
 .method public setExtensions(Ljava/util/List;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->extensions:Ljava/util/List;
 
     return-void
@@ -464,6 +511,7 @@
 .method public setIncrementalSrcGen(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->incrementalSrcGen:Z
 
     return-void
@@ -478,6 +526,7 @@
 .method public setJavaFiles([Ljava/io/File;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->javaFiles:[Ljava/io/File;
 
     return-void
@@ -486,6 +535,7 @@
 .method public setJavaSource(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->javasource:Ljava/lang/String;
 
     return-void
@@ -494,6 +544,7 @@
 .method public setMdefNamespaces(Ljava/util/Set;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->mdefNamespaces:Ljava/util/Set;
 
     return-void
@@ -502,6 +553,7 @@
 .method public setMemoryInitialSize(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->memoryInitialSize:Ljava/lang/String;
 
     return-void
@@ -510,6 +562,7 @@
 .method public setMemoryMaximumSize(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->memoryMaximumSize:Ljava/lang/String;
 
     return-void
@@ -518,6 +571,7 @@
 .method public setName(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->name:Ljava/lang/String;
 
     return-void
@@ -526,6 +580,7 @@
 .method public setNoAnn(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->noAnn:Z
 
     return-void
@@ -534,6 +589,7 @@
 .method public setNoExt(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->noExt:Z
 
     return-void
@@ -542,6 +598,7 @@
 .method public setNoPvr(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->noPvr:Z
 
     return-void
@@ -550,6 +607,7 @@
 .method public setNoUpa(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->noUpa:Z
 
     return-void
@@ -558,6 +616,7 @@
 .method public setNoVDoc(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->noVDoc:Z
 
     return-void
@@ -566,6 +625,7 @@
 .method public setNojavac(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->nojavac:Z
 
     return-void
@@ -574,6 +634,7 @@
 .method public setOutputJar(Ljava/io/File;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->outputJar:Ljava/io/File;
 
     return-void
@@ -582,6 +643,7 @@
 .method public setQuiet(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->quiet:Z
 
     return-void
@@ -590,6 +652,7 @@
 .method public setRepackage(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->repackage:Ljava/lang/String;
 
     return-void
@@ -598,6 +661,7 @@
 .method public setSchemaCodePrinter(Lorg/apache/xmlbeans/SchemaCodePrinter;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->schemaCodePrinter:Lorg/apache/xmlbeans/SchemaCodePrinter;
 
     return-void
@@ -606,6 +670,7 @@
 .method public setSrcDir(Ljava/io/File;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->srcDir:Ljava/io/File;
 
     return-void
@@ -614,6 +679,7 @@
 .method public setUrlFiles([Ljava/net/URL;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->urlFiles:[Ljava/net/URL;
 
     return-void
@@ -622,6 +688,7 @@
 .method public setVerbose(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->verbose:Z
 
     return-void
@@ -630,6 +697,7 @@
 .method public setWsdlFiles([Ljava/io/File;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->wsdlFiles:[Ljava/io/File;
 
     return-void
@@ -638,6 +706,7 @@
 .method public setXsdFiles([Ljava/io/File;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->xsdFiles:[Ljava/io/File;
 
     return-void

@@ -16,9 +16,14 @@
     name = null
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000#\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003*\u0001\u0000\u0008\n\u0018\u00002\u00020\u0001J\u0018\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0005\u001a\u00020\u0004H\u0016J\u0010\u0010\n\u001a\u00020\u00062\u0006\u0010\t\u001a\u00020\u0008H\u0016\u00a8\u0006\u000b"
+        "\u0000%\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004*\u0001\u0000\u0008\n\u0018\u00002\u00020\u0001J\u001f\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0005\u001a\u00020\u0004H\u0016\u00a2\u0006\u0004\u0008\u0007\u0010\u0008J\u0017\u0010\u000b\u001a\u00020\u00062\u0006\u0010\n\u001a\u00020\tH\u0016\u00a2\u0006\u0004\u0008\u000b\u0010\u000c\u00a8\u0006\r"
     }
     d2 = {
         "com/faceunity/core/renderer/impl/FUCustomSuperRenderer$mSensorEventListener$1",
@@ -27,11 +32,13 @@
         "sensor",
         "",
         "accuracy",
-        "Lnm/l2;",
+        "Lh/l2;",
         "onAccuracyChanged",
+        "(Landroid/hardware/Sensor;I)V",
         "Landroid/hardware/SensorEvent;",
         "event",
         "onSensorChanged",
+        "(Landroid/hardware/SensorEvent;)V",
         "lib_core_release"
     }
     k = 0x1
@@ -44,18 +51,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/faceunity/core/renderer/impl/FUCustomSuperRenderer;
+.field public final synthetic this$0:Lcom/faceunity/core/renderer/impl/FUCustomSuperRenderer;
 
 
 # direct methods
 .method public constructor <init>(Lcom/faceunity/core/renderer/impl/FUCustomSuperRenderer;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/core/renderer/impl/FUCustomSuperRenderer$mSensorEventListener$1;->this$0:Lcom/faceunity/core/renderer/impl/FUCustomSuperRenderer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -68,13 +71,13 @@
 .method public onAccuracyChanged(Landroid/hardware/Sensor;I)V
     .locals 0
     .param p1    # Landroid/hardware/Sensor;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string p0, "sensor"
 
-    invoke-static {p1, p0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -82,19 +85,20 @@
 .method public onSensorChanged(Landroid/hardware/SensorEvent;)V
     .locals 4
     .param p1    # Landroid/hardware/SensorEvent;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "event"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-object v0, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
 
     const-string v1, "event.sensor"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/hardware/Sensor;->getType()I
 
@@ -104,14 +108,17 @@
 
     if-ne v0, v1, :cond_4
 
+    .line 2
     iget-object p1, p1, Landroid/hardware/SensorEvent;->values:[F
 
     const/4 v0, 0x0
 
     aget v2, p1, v0
 
+    .line 3
     aget p1, p1, v1
 
+    .line 4
     invoke-static {v2}, Ljava/lang/Math;->abs(F)F
 
     move-result v1
@@ -132,6 +139,7 @@
 
     if-lez v1, :cond_4
 
+    .line 5
     :cond_0
     iget-object p0, p0, Lcom/faceunity/core/renderer/impl/FUCustomSuperRenderer$mSensorEventListener$1;->this$0:Lcom/faceunity/core/renderer/impl/FUCustomSuperRenderer;
 

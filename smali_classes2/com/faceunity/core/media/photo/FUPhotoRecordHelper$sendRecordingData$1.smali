@@ -1,4 +1,4 @@
-.class final Lcom/faceunity/core/media/photo/FUPhotoRecordHelper$sendRecordingData$1;
+.class public final Lcom/faceunity/core/media/photo/FUPhotoRecordHelper$sendRecordingData$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -16,12 +16,17 @@
     name = null
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
         "\u0000\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0003\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0001\u0010\u0002"
     }
     d2 = {
-        "Lnm/l2;",
+        "Lh/l2;",
         "run",
         "()V",
         "<anonymous>"
@@ -36,11 +41,11 @@
 
 
 # instance fields
-.field final synthetic $buffer:Ljava/nio/ByteBuffer;
+.field public final synthetic $buffer:Ljava/nio/ByteBuffer;
 
-.field final synthetic $recordData:Lcom/faceunity/core/media/photo/FUPhotoRecordHelper$RecordData;
+.field public final synthetic $recordData:Lcom/faceunity/core/media/photo/FUPhotoRecordHelper$RecordData;
 
-.field final synthetic this$0:Lcom/faceunity/core/media/photo/FUPhotoRecordHelper;
+.field public final synthetic this$0:Lcom/faceunity/core/media/photo/FUPhotoRecordHelper;
 
 
 # direct methods
@@ -63,6 +68,7 @@
 .method public final run()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/media/photo/FUPhotoRecordHelper$sendRecordingData$1;->this$0:Lcom/faceunity/core/media/photo/FUPhotoRecordHelper;
 
     iget-object v1, p0, Lcom/faceunity/core/media/photo/FUPhotoRecordHelper$sendRecordingData$1;->$recordData:Lcom/faceunity/core/media/photo/FUPhotoRecordHelper$RecordData;
@@ -71,7 +77,7 @@
 
     const-string v2, "buffer"
 
-    invoke-static {p0, v2}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v2}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, v1, p0}, Lcom/faceunity/core/media/photo/FUPhotoRecordHelper;->access$getBitmapFromBuffer(Lcom/faceunity/core/media/photo/FUPhotoRecordHelper;Lcom/faceunity/core/media/photo/FUPhotoRecordHelper$RecordData;Ljava/nio/ByteBuffer;)V
 

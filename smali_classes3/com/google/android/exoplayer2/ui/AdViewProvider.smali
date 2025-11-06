@@ -15,6 +15,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
 
     move-result-object p0

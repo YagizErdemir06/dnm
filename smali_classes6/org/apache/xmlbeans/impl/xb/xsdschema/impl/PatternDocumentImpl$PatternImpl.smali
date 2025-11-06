@@ -21,6 +21,7 @@
 .method public constructor <init>(Lorg/apache/xmlbeans/SchemaType;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lorg/apache/xmlbeans/impl/xb/xsdschema/impl/NoFixedFacetImpl;-><init>(Lorg/apache/xmlbeans/SchemaType;)V
 
     return-void

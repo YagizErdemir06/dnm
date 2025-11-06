@@ -16,13 +16,12 @@
 
 .field private static final sSingleThread:Ljava/util/concurrent/Executor;
 
-.field public static sThreadPriority:I
-
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 11
 
+    .line 1
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v0
@@ -37,6 +36,7 @@
 
     add-int/lit8 v1, v1, 0x1
 
+    .line 2
     sput v1, Lmiuix/animation/internal/ThreadPoolUtil;->MAX_SPLIT_COUNT:I
 
     const/4 v2, 0x4
@@ -47,6 +47,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     div-int/lit8 v0, v0, 0x2
 
@@ -57,10 +58,7 @@
 
     sput v3, Lmiuix/animation/internal/ThreadPoolUtil;->KEEP_POOL_SIZE:I
 
-    const/4 v0, -0x2
-
-    sput v0, Lmiuix/animation/internal/ThreadPoolUtil;->sThreadPriority:I
-
+    .line 4
     new-instance v0, Ljava/util/concurrent/ThreadPoolExecutor;
 
     add-int/lit8 v4, v1, 0x3
@@ -69,14 +67,13 @@
 
     sget-object v7, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    new-instance v8, Ljava/util/concurrent/ArrayBlockingQueue;
+    new-instance v8, Ljava/util/concurrent/SynchronousQueue;
 
-    const/16 v1, 0x64
-
-    invoke-direct {v8, v1}, Ljava/util/concurrent/ArrayBlockingQueue;-><init>(I)V
+    invoke-direct {v8}, Ljava/util/concurrent/SynchronousQueue;-><init>()V
 
     const-string v1, "AnimThread"
 
+    .line 5
     invoke-static {v1}, Lmiuix/animation/internal/ThreadPoolUtil;->getThreadFactory(Ljava/lang/String;)Ljava/util/concurrent/ThreadFactory;
 
     move-result-object v9
@@ -93,6 +90,7 @@
 
     const-string v0, "WorkThread"
 
+    .line 6
     invoke-static {v0}, Lmiuix/animation/internal/ThreadPoolUtil;->getThreadFactory(Ljava/lang/String;)Ljava/util/concurrent/ThreadFactory;
 
     move-result-object v0
@@ -109,6 +107,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -117,53 +116,55 @@
 .method public static synthetic access$000()Ljava/util/concurrent/Executor;
     .locals 1
 
+    .line 1
     sget-object v0, Lmiuix/animation/internal/ThreadPoolUtil;->sSingleThread:Ljava/util/concurrent/Executor;
 
     return-object v0
 .end method
 
 .method public static getSplitCount(I[I)V
-    .locals 5
+    .locals 4
 
-    sget v0, Lmiuix/animation/internal/AnimTask;->MAX_SUB_THREAD_TASK_SIZE:I
+    .line 1
+    div-int/lit16 v0, p0, 0xfa0
 
-    div-int v1, p0, v0
+    const/4 v1, 0x1
 
-    const/4 v2, 0x1
+    .line 2
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
 
-    add-int/2addr v1, v2
+    move-result v0
 
-    sget v3, Lmiuix/animation/internal/ThreadPoolUtil;->MAX_SPLIT_COUNT:I
+    .line 3
+    sget v2, Lmiuix/animation/internal/ThreadPoolUtil;->MAX_SPLIT_COUNT:I
 
-    if-le v1, v3, :cond_0
+    if-le v0, v2, :cond_0
 
-    move v1, v3
+    move v0, v2
 
     :cond_0
-    if-le v1, v2, :cond_1
-
     int-to-float p0, p0
 
-    add-int/lit8 v0, v1, -0x1
+    int-to-float v2, v0
 
-    int-to-float v0, v0
+    div-float/2addr p0, v2
 
-    div-float/2addr p0, v0
+    float-to-double v2, p0
 
-    float-to-double v3, p0
+    .line 4
+    invoke-static {v2, v3}, Ljava/lang/Math;->ceil(D)D
 
-    invoke-static {v3, v4}, Ljava/lang/Math;->ceil(D)D
+    move-result-wide v2
 
-    move-result-wide v3
+    double-to-int p0, v2
 
-    double-to-int v0, v3
+    const/4 v2, 0x0
 
-    :cond_1
-    const/4 p0, 0x0
-
-    aput v1, p1, p0
-
+    .line 5
     aput v0, p1, v2
+
+    .line 6
+    aput p0, p1, v1
 
     return-void
 .end method
@@ -171,6 +172,7 @@
 .method private static getThreadFactory(Ljava/lang/String;)Ljava/util/concurrent/ThreadFactory;
     .locals 1
 
+    .line 1
     new-instance v0, Lmiuix/animation/internal/ThreadPoolUtil$2;
 
     invoke-direct {v0, p0}, Lmiuix/animation/internal/ThreadPoolUtil$2;-><init>(Ljava/lang/String;)V
@@ -181,17 +183,10 @@
 .method public static post(Ljava/lang/Runnable;)V
     .locals 1
 
+    .line 1
     sget-object v0, Lmiuix/animation/internal/ThreadPoolUtil;->sCacheThread:Ljava/util/concurrent/ThreadPoolExecutor;
 
     invoke-virtual {v0, p0}, Ljava/util/concurrent/ThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public static setThreadPriority(I)V
-    .locals 0
-
-    sput p0, Lmiuix/animation/internal/ThreadPoolUtil;->sThreadPriority:I
 
     return-void
 .end method

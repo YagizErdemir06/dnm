@@ -1,4 +1,4 @@
-.class Lcom/google/common/base/Predicates$OrPredicate;
+.class public Lcom/google/common/base/Predicates$OrPredicate;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -96,6 +96,7 @@
 
     move v1, v0
 
+    .line 1
     :goto_0
     iget-object v2, p0, Lcom/google/common/base/Predicates$OrPredicate;->components:Ljava/util/List;
 
@@ -105,6 +106,7 @@
 
     if-ge v1, v2, :cond_1
 
+    .line 2
     iget-object v2, p0, Lcom/google/common/base/Predicates$OrPredicate;->components:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -139,12 +141,15 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/common/base/Predicates$OrPredicate;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/common/base/Predicates$OrPredicate;
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/base/Predicates$OrPredicate;->components:Ljava/util/List;
 
     iget-object p1, p1, Lcom/google/common/base/Predicates$OrPredicate;->components:Ljava/util/List;
@@ -164,6 +169,7 @@
 .method public hashCode()I
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/Predicates$OrPredicate;->components:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->hashCode()I
@@ -180,9 +186,10 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "or"
-
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/Predicates$OrPredicate;->components:Ljava/util/List;
+
+    const-string v0, "or"
 
     invoke-static {v0, p0}, Lcom/google/common/base/Predicates;->access$800(Ljava/lang/String;Ljava/lang/Iterable;)Ljava/lang/String;
 

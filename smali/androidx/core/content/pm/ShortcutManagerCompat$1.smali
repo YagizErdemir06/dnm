@@ -1,4 +1,4 @@
-.class Landroidx/core/content/pm/ShortcutManagerCompat$1;
+.class public Landroidx/core/content/pm/ShortcutManagerCompat$1;
 .super Landroid/content/BroadcastReceiver;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic val$callback:Landroid/content/IntentSender;
+.field public final synthetic val$callback:Landroid/content/IntentSender;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/IntentSender;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/core/content/pm/ShortcutManagerCompat$1;->val$callback:Landroid/content/IntentSender;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -34,6 +35,7 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 6
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroidx/core/content/pm/ShortcutManagerCompat$1;->val$callback:Landroid/content/IntentSender;
 

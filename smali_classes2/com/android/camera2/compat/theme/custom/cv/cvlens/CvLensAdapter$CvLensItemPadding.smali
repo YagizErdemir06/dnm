@@ -15,17 +15,26 @@
 
 
 # instance fields
-.field protected mIsRTL:Z
+.field public mIsRTL:Z
 
-.field protected marginStart:I
+.field public marginStart:I
 
-.field protected padding:I
+.field public padding:I
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
     .end annotation
 
     const/4 v0, 0x0
@@ -38,6 +47,16 @@
 
 .method public constructor <init>(Landroid/content/Context;I)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "marginStart"
+        }
+    .end annotation
 
     .line 2
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;-><init>()V
@@ -54,7 +73,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0701aa
+    const v1, 0x7f0701a6
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -63,7 +82,7 @@
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/cv/cvlens/CvLensAdapter$CvLensItemPadding;->padding:I
 
     .line 5
-    invoke-static {p1}, Lcom/android/camera/a6;->R2(Landroid/content/Context;)Z
+    invoke-static {p1}, Ld/d/a/z5;->G2(Landroid/content/Context;)Z
 
     move-result p1
 
@@ -80,17 +99,34 @@
 # virtual methods
 .method public getItemOffsets(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "outRect",
+            "view",
+            "parent",
+            "state"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p3, p2}, Landroidx/recyclerview/widget/RecyclerView;->getChildAdapterPosition(Landroid/view/View;)I
 
     move-result p2
 
+    .line 2
     iget-boolean p3, p0, Lcom/android/camera2/compat/theme/custom/cv/cvlens/CvLensAdapter$CvLensItemPadding;->mIsRTL:Z
 
     const/4 p4, 0x0
 
     if-eqz p3, :cond_1
 
+    .line 3
     iget p3, p0, Lcom/android/camera2/compat/theme/custom/cv/cvlens/CvLensAdapter$CvLensItemPadding;->padding:I
 
     if-nez p2, :cond_0
@@ -112,6 +148,7 @@
     :cond_1
     if-nez p2, :cond_2
 
+    .line 4
     iget p2, p0, Lcom/android/camera2/compat/theme/custom/cv/cvlens/CvLensAdapter$CvLensItemPadding;->marginStart:I
 
     iget p3, p0, Lcom/android/camera2/compat/theme/custom/cv/cvlens/CvLensAdapter$CvLensItemPadding;->padding:I

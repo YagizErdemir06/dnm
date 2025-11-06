@@ -1,4 +1,4 @@
-.class Landroidx/core/view/WindowInsetsControllerCompat$Impl;
+.class public Landroidx/core/view/WindowInsetsControllerCompat$Impl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

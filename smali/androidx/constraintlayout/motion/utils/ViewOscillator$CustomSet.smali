@@ -1,4 +1,4 @@
-.class Landroidx/constraintlayout/motion/utils/ViewOscillator$CustomSet;
+.class public Landroidx/constraintlayout/motion/utils/ViewOscillator$CustomSet;
 .super Landroidx/constraintlayout/motion/utils/ViewOscillator;
 .source "SourceFile"
 
@@ -15,21 +15,23 @@
 
 
 # instance fields
-.field protected mCustom:Landroidx/constraintlayout/widget/ConstraintAttribute;
+.field public mCustom:Landroidx/constraintlayout/widget/ConstraintAttribute;
 
-.field value:[F
+.field public value:[F
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Landroidx/constraintlayout/motion/utils/ViewOscillator;-><init>()V
 
     const/4 v0, 0x1
 
     new-array v0, v0, [F
 
+    .line 2
     iput-object v0, p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$CustomSet;->value:[F
 
     return-void
@@ -48,6 +50,7 @@
         }
     .end annotation
 
+    .line 1
     check-cast p1, Landroidx/constraintlayout/widget/ConstraintAttribute;
 
     iput-object p1, p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$CustomSet;->mCustom:Landroidx/constraintlayout/widget/ConstraintAttribute;
@@ -68,16 +71,18 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$CustomSet;->value:[F
-
-    const/4 v1, 0x0
 
     invoke-virtual {p0, p2}, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;->get(F)F
 
     move-result p2
 
+    const/4 v1, 0x0
+
     aput p2, v0, v1
 
+    .line 2
     iget-object p2, p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$CustomSet;->mCustom:Landroidx/constraintlayout/widget/ConstraintAttribute;
 
     iget-object p0, p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$CustomSet;->value:[F

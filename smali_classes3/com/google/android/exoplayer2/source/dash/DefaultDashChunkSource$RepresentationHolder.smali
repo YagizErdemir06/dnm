@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final chunkExtractor:Lcom/google/android/exoplayer2/source/chunk/ChunkExtractor;
+.field public final chunkExtractor:Lcom/google/android/exoplayer2/source/chunk/ChunkExtractor;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -46,18 +46,25 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->periodDurationUs:J
 
+    .line 3
     iput-object p3, p0, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->representation:Lcom/google/android/exoplayer2/source/dash/manifest/Representation;
 
+    .line 4
     iput-object p4, p0, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->selectedBaseUrl:Lcom/google/android/exoplayer2/source/dash/manifest/BaseUrl;
 
+    .line 5
     iput-wide p6, p0, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->segmentNumShift:J
 
+    .line 6
     iput-object p5, p0, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->chunkExtractor:Lcom/google/android/exoplayer2/source/chunk/ChunkExtractor;
 
+    .line 7
     iput-object p8, p0, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->segmentIndex:Lcom/google/android/exoplayer2/source/dash/DashSegmentIndex;
 
     return-void
@@ -66,6 +73,7 @@
 .method public static synthetic access$000(Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;)J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->periodDurationUs:J
 
     return-wide v0
@@ -88,18 +96,21 @@
 
     move-wide/from16 v1, p1
 
+    .line 1
     iget-object v3, v0, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->representation:Lcom/google/android/exoplayer2/source/dash/manifest/Representation;
 
     invoke-virtual {v3}, Lcom/google/android/exoplayer2/source/dash/manifest/Representation;->getIndex()Lcom/google/android/exoplayer2/source/dash/DashSegmentIndex;
 
     move-result-object v8
 
+    .line 2
     invoke-virtual/range {p3 .. p3}, Lcom/google/android/exoplayer2/source/dash/manifest/Representation;->getIndex()Lcom/google/android/exoplayer2/source/dash/DashSegmentIndex;
 
     move-result-object v9
 
     if-nez v8, :cond_0
 
+    .line 3
     new-instance v9, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;
 
     iget-object v4, v0, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->selectedBaseUrl:Lcom/google/android/exoplayer2/source/dash/manifest/BaseUrl;
@@ -118,6 +129,7 @@
 
     return-object v9
 
+    .line 4
     :cond_0
     invoke-interface {v8}, Lcom/google/android/exoplayer2/source/dash/DashSegmentIndex;->isExplicit()Z
 
@@ -125,6 +137,7 @@
 
     if-nez v3, :cond_1
 
+    .line 5
     new-instance v10, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;
 
     iget-object v4, v0, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->selectedBaseUrl:Lcom/google/android/exoplayer2/source/dash/manifest/BaseUrl;
@@ -145,6 +158,7 @@
 
     return-object v10
 
+    .line 6
     :cond_1
     invoke-interface {v8, v1, v2}, Lcom/google/android/exoplayer2/source/dash/DashSegmentIndex;->getSegmentCount(J)J
 
@@ -156,6 +170,7 @@
 
     if-nez v5, :cond_2
 
+    .line 7
     new-instance v10, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;
 
     iget-object v4, v0, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->selectedBaseUrl:Lcom/google/android/exoplayer2/source/dash/manifest/BaseUrl;
@@ -176,11 +191,13 @@
 
     return-object v10
 
+    .line 8
     :cond_2
     invoke-interface {v8}, Lcom/google/android/exoplayer2/source/dash/DashSegmentIndex;->getFirstSegmentNum()J
 
     move-result-wide v5
 
+    .line 9
     invoke-interface {v8, v5, v6}, Lcom/google/android/exoplayer2/source/dash/DashSegmentIndex;->getTimeUs(J)J
 
     move-result-wide v10
@@ -191,28 +208,33 @@
 
     sub-long/2addr v3, v12
 
+    .line 10
     invoke-interface {v8, v3, v4}, Lcom/google/android/exoplayer2/source/dash/DashSegmentIndex;->getTimeUs(J)J
 
     move-result-wide v14
 
+    .line 11
     invoke-interface {v8, v3, v4, v1, v2}, Lcom/google/android/exoplayer2/source/dash/DashSegmentIndex;->getDurationUs(JJ)J
 
     move-result-wide v16
 
     add-long v14, v14, v16
 
+    .line 12
     invoke-interface {v9}, Lcom/google/android/exoplayer2/source/dash/DashSegmentIndex;->getFirstSegmentNum()J
 
     move-result-wide v12
 
     move-object/from16 v18, v8
 
+    .line 13
     invoke-interface {v9, v12, v13}, Lcom/google/android/exoplayer2/source/dash/DashSegmentIndex;->getTimeUs(J)J
 
     move-result-wide v7
 
     move-wide/from16 v19, v5
 
+    .line 14
     iget-wide v5, v0, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->segmentNumShift:J
 
     cmp-long v14, v14, v7
@@ -240,6 +262,7 @@
 
     if-gez v3, :cond_4
 
+    .line 15
     invoke-interface {v9, v10, v11, v1, v2}, Lcom/google/android/exoplayer2/source/dash/DashSegmentIndex;->getSegmentNum(JJ)J
 
     move-result-wide v3
@@ -253,12 +276,14 @@
     :cond_4
     move-object/from16 v3, v18
 
+    .line 16
     invoke-interface {v3, v7, v8, v1, v2}, Lcom/google/android/exoplayer2/source/dash/DashSegmentIndex;->getSegmentNum(JJ)J
 
     move-result-wide v3
 
     goto :goto_0
 
+    .line 17
     :goto_2
     new-instance v10, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;
 
@@ -278,6 +303,7 @@
 
     return-object v10
 
+    .line 18
     :cond_5
     new-instance v0, Lcom/google/android/exoplayer2/source/BehindLiveWindowException;
 
@@ -291,6 +317,7 @@
     .annotation build Landroidx/annotation/CheckResult;
     .end annotation
 
+    .line 1
     new-instance v9, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;
 
     iget-wide v1, p0, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->periodDurationUs:J
@@ -317,6 +344,7 @@
     .annotation build Landroidx/annotation/CheckResult;
     .end annotation
 
+    .line 1
     new-instance v9, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;
 
     iget-wide v1, p0, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->periodDurationUs:J
@@ -341,6 +369,7 @@
 .method public getFirstAvailableSegmentNum(J)J
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->segmentIndex:Lcom/google/android/exoplayer2/source/dash/DashSegmentIndex;
 
     iget-wide v1, p0, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->periodDurationUs:J
@@ -359,6 +388,7 @@
 .method public getFirstSegmentNum()J
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->segmentIndex:Lcom/google/android/exoplayer2/source/dash/DashSegmentIndex;
 
     invoke-interface {v0}, Lcom/google/android/exoplayer2/source/dash/DashSegmentIndex;->getFirstSegmentNum()J
@@ -375,6 +405,7 @@
 .method public getLastAvailableSegmentNum(J)J
     .locals 5
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->getFirstAvailableSegmentNum(J)J
 
     move-result-wide v0
@@ -383,6 +414,7 @@
 
     iget-wide v3, p0, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->periodDurationUs:J
 
+    .line 2
     invoke-interface {v2, v3, v4, p1, p2}, Lcom/google/android/exoplayer2/source/dash/DashSegmentIndex;->getAvailableSegmentCount(JJ)J
 
     move-result-wide p0
@@ -399,6 +431,7 @@
 .method public getSegmentCount()J
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->segmentIndex:Lcom/google/android/exoplayer2/source/dash/DashSegmentIndex;
 
     iget-wide v1, p0, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->periodDurationUs:J
@@ -413,6 +446,7 @@
 .method public getSegmentEndTimeUs(J)J
     .locals 5
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->getSegmentStartTimeUs(J)J
 
     move-result-wide v0
@@ -425,6 +459,7 @@
 
     iget-wide v3, p0, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->periodDurationUs:J
 
+    .line 2
     invoke-interface {v2, p1, p2, v3, v4}, Lcom/google/android/exoplayer2/source/dash/DashSegmentIndex;->getDurationUs(JJ)J
 
     move-result-wide p0
@@ -437,6 +472,7 @@
 .method public getSegmentNum(J)J
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->segmentIndex:Lcom/google/android/exoplayer2/source/dash/DashSegmentIndex;
 
     iget-wide v1, p0, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->periodDurationUs:J
@@ -455,6 +491,7 @@
 .method public getSegmentStartTimeUs(J)J
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->segmentIndex:Lcom/google/android/exoplayer2/source/dash/DashSegmentIndex;
 
     iget-wide v1, p0, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->segmentNumShift:J
@@ -471,6 +508,7 @@
 .method public getSegmentUrl(J)Lcom/google/android/exoplayer2/source/dash/manifest/RangedUri;
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->segmentIndex:Lcom/google/android/exoplayer2/source/dash/DashSegmentIndex;
 
     iget-wide v1, p0, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->segmentNumShift:J
@@ -487,6 +525,7 @@
 .method public isSegmentAvailableAtFullNetworkSpeed(JJ)Z
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->segmentIndex:Lcom/google/android/exoplayer2/source/dash/DashSegmentIndex;
 
     invoke-interface {v0}, Lcom/google/android/exoplayer2/source/dash/DashSegmentIndex;->isExplicit()Z
@@ -506,6 +545,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 2
     invoke-virtual {p0, p1, p2}, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->getSegmentEndTimeUs(J)J
 
     move-result-wide p0

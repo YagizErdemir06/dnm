@@ -142,6 +142,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/text/Cue$Builder;-><init>()V
@@ -158,9 +159,8 @@
 
     sput-object v0, Lcom/google/android/exoplayer2/text/Cue;->EMPTY:Lcom/google/android/exoplayer2/text/Cue;
 
-    new-instance v0, Lcom/google/android/exoplayer2/text/a;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/text/a;-><init>()V
+    .line 2
+    sget-object v0, Ld/j/a/b/w2/a;->a:Ld/j/a/b/w2/a;
 
     sput-object v0, Lcom/google/android/exoplayer2/text/Cue;->CREATOR:Lcom/google/android/exoplayer2/Bundleable$Creator;
 
@@ -524,12 +524,14 @@
 .method private static final fromBundle(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/text/Cue;
     .locals 5
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/text/Cue$Builder;-><init>()V
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-static {v1}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -540,11 +542,13 @@
 
     if-eqz v2, :cond_0
 
+    .line 3
     invoke-virtual {v0, v2}, Lcom/google/android/exoplayer2/text/Cue$Builder;->setText(Ljava/lang/CharSequence;)Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     :cond_0
     const/4 v2, 0x1
 
+    .line 4
     invoke-static {v2}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -557,11 +561,13 @@
 
     if-eqz v2, :cond_1
 
+    .line 5
     invoke-virtual {v0, v2}, Lcom/google/android/exoplayer2/text/Cue$Builder;->setTextAlignment(Landroid/text/Layout$Alignment;)Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     :cond_1
     const/4 v2, 0x2
 
+    .line 6
     invoke-static {v2}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -574,11 +580,13 @@
 
     if-eqz v2, :cond_2
 
+    .line 7
     invoke-virtual {v0, v2}, Lcom/google/android/exoplayer2/text/Cue$Builder;->setMultiRowAlignment(Landroid/text/Layout$Alignment;)Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     :cond_2
     const/4 v2, 0x3
 
+    .line 8
     invoke-static {v2}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -591,11 +599,13 @@
 
     if-eqz v2, :cond_3
 
+    .line 9
     invoke-virtual {v0, v2}, Lcom/google/android/exoplayer2/text/Cue$Builder;->setBitmap(Landroid/graphics/Bitmap;)Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     :cond_3
     const/4 v2, 0x4
 
+    .line 10
     invoke-static {v2}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v3
@@ -608,6 +618,7 @@
 
     const/4 v3, 0x5
 
+    .line 11
     invoke-static {v3}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v4
@@ -618,6 +629,7 @@
 
     if-eqz v4, :cond_4
 
+    .line 12
     invoke-static {v2}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -634,11 +646,13 @@
 
     move-result v3
 
+    .line 13
     invoke-virtual {v0, v2, v3}, Lcom/google/android/exoplayer2/text/Cue$Builder;->setLine(FI)Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     :cond_4
     const/4 v2, 0x6
 
+    .line 14
     invoke-static {v2}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v3
@@ -649,6 +663,7 @@
 
     if-eqz v3, :cond_5
 
+    .line 15
     invoke-static {v2}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -662,6 +677,7 @@
     :cond_5
     const/4 v2, 0x7
 
+    .line 16
     invoke-static {v2}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v3
@@ -672,6 +688,7 @@
 
     if-eqz v3, :cond_6
 
+    .line 17
     invoke-static {v2}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -685,6 +702,7 @@
     :cond_6
     const/16 v2, 0x8
 
+    .line 18
     invoke-static {v2}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v3
@@ -695,6 +713,7 @@
 
     if-eqz v3, :cond_7
 
+    .line 19
     invoke-static {v2}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -708,6 +727,7 @@
     :cond_7
     const/16 v2, 0xa
 
+    .line 20
     invoke-static {v2}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v3
@@ -720,6 +740,7 @@
 
     const/16 v3, 0x9
 
+    .line 21
     invoke-static {v3}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v4
@@ -730,6 +751,7 @@
 
     if-eqz v4, :cond_8
 
+    .line 22
     invoke-static {v2}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -738,6 +760,7 @@
 
     move-result v2
 
+    .line 23
     invoke-static {v3}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v3
@@ -746,11 +769,13 @@
 
     move-result v3
 
+    .line 24
     invoke-virtual {v0, v2, v3}, Lcom/google/android/exoplayer2/text/Cue$Builder;->setTextSize(FI)Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     :cond_8
     const/16 v2, 0xb
 
+    .line 25
     invoke-static {v2}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v3
@@ -761,6 +786,7 @@
 
     if-eqz v3, :cond_9
 
+    .line 26
     invoke-static {v2}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -774,6 +800,7 @@
     :cond_9
     const/16 v2, 0xc
 
+    .line 27
     invoke-static {v2}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v3
@@ -784,6 +811,7 @@
 
     if-eqz v3, :cond_a
 
+    .line 28
     invoke-static {v2}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -797,6 +825,7 @@
     :cond_a
     const/16 v2, 0xd
 
+    .line 29
     invoke-static {v2}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v3
@@ -807,6 +836,7 @@
 
     if-eqz v3, :cond_b
 
+    .line 30
     invoke-static {v2}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -820,6 +850,7 @@
     :cond_b
     const/16 v2, 0xe
 
+    .line 31
     invoke-static {v2}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -830,11 +861,13 @@
 
     if-nez v1, :cond_c
 
+    .line 32
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/text/Cue$Builder;->clearWindowColor()Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     :cond_c
     const/16 v1, 0xf
 
+    .line 33
     invoke-static {v1}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -845,6 +878,7 @@
 
     if-eqz v2, :cond_d
 
+    .line 34
     invoke-static {v1}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -858,6 +892,7 @@
     :cond_d
     const/16 v1, 0x10
 
+    .line 35
     invoke-static {v1}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -868,6 +903,7 @@
 
     if-eqz v2, :cond_e
 
+    .line 36
     invoke-static {v1}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -878,6 +914,7 @@
 
     invoke-virtual {v0, p0}, Lcom/google/android/exoplayer2/text/Cue$Builder;->setShearDegrees(F)Lcom/google/android/exoplayer2/text/Cue$Builder;
 
+    .line 37
     :cond_e
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/text/Cue$Builder;->build()Lcom/google/android/exoplayer2/text/Cue;
 
@@ -891,6 +928,7 @@
 
     const/16 v0, 0x24
 
+    .line 1
     invoke-static {p0, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
     move-result-object p0
@@ -903,6 +941,7 @@
 .method public buildUpon()Lcom/google/android/exoplayer2/text/Cue$Builder;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     const/4 v1, 0x0
@@ -930,6 +969,7 @@
 
     if-eqz p1, :cond_4
 
+    .line 1
     const-class v2, Lcom/google/android/exoplayer2/text/Cue;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -940,9 +980,11 @@
 
     goto/16 :goto_2
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/text/Cue;
 
+    .line 3
     iget-object v2, p0, Lcom/google/android/exoplayer2/text/Cue;->text:Ljava/lang/CharSequence;
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/text/Cue;->text:Ljava/lang/CharSequence;
@@ -980,6 +1022,7 @@
 
     if-eqz v3, :cond_3
 
+    .line 4
     invoke-virtual {v2, v3}, Landroid/graphics/Bitmap;->sameAs(Landroid/graphics/Bitmap;)Z
 
     move-result v2
@@ -1097,32 +1140,34 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    .line 1
+    iget-object v1, p0, Lcom/google/android/exoplayer2/text/Cue;->text:Ljava/lang/CharSequence;
 
-    iget-object v2, p0, Lcom/google/android/exoplayer2/text/Cue;->text:Ljava/lang/CharSequence;
+    const/4 v2, 0x0
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/4 v1, 0x1
+    iget-object v1, p0, Lcom/google/android/exoplayer2/text/Cue;->textAlignment:Landroid/text/Layout$Alignment;
 
-    iget-object v2, p0, Lcom/google/android/exoplayer2/text/Cue;->textAlignment:Landroid/text/Layout$Alignment;
+    const/4 v2, 0x1
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/4 v1, 0x2
+    iget-object v1, p0, Lcom/google/android/exoplayer2/text/Cue;->multiRowAlignment:Landroid/text/Layout$Alignment;
 
-    iget-object v2, p0, Lcom/google/android/exoplayer2/text/Cue;->multiRowAlignment:Landroid/text/Layout$Alignment;
+    const/4 v2, 0x2
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/4 v1, 0x3
+    iget-object v1, p0, Lcom/google/android/exoplayer2/text/Cue;->bitmap:Landroid/graphics/Bitmap;
 
-    iget-object v2, p0, Lcom/google/android/exoplayer2/text/Cue;->bitmap:Landroid/graphics/Bitmap;
+    const/4 v2, 0x3
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
     iget v1, p0, Lcom/google/android/exoplayer2/text/Cue;->line:F
 
+    .line 2
     invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v1
@@ -1133,6 +1178,7 @@
 
     iget v1, p0, Lcom/google/android/exoplayer2/text/Cue;->lineType:I
 
+    .line 3
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -1143,6 +1189,7 @@
 
     iget v1, p0, Lcom/google/android/exoplayer2/text/Cue;->lineAnchor:I
 
+    .line 4
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -1153,6 +1200,7 @@
 
     iget v1, p0, Lcom/google/android/exoplayer2/text/Cue;->position:F
 
+    .line 5
     invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v1
@@ -1163,6 +1211,7 @@
 
     iget v1, p0, Lcom/google/android/exoplayer2/text/Cue;->positionAnchor:I
 
+    .line 6
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -1173,6 +1222,7 @@
 
     iget v1, p0, Lcom/google/android/exoplayer2/text/Cue;->size:F
 
+    .line 7
     invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v1
@@ -1183,6 +1233,7 @@
 
     iget v1, p0, Lcom/google/android/exoplayer2/text/Cue;->bitmapHeight:F
 
+    .line 8
     invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v1
@@ -1193,6 +1244,7 @@
 
     iget-boolean v1, p0, Lcom/google/android/exoplayer2/text/Cue;->windowColorSet:Z
 
+    .line 9
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
@@ -1203,6 +1255,7 @@
 
     iget v1, p0, Lcom/google/android/exoplayer2/text/Cue;->windowColor:I
 
+    .line 10
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -1213,6 +1266,7 @@
 
     iget v1, p0, Lcom/google/android/exoplayer2/text/Cue;->textSizeType:I
 
+    .line 11
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -1223,6 +1277,7 @@
 
     iget v1, p0, Lcom/google/android/exoplayer2/text/Cue;->textSize:F
 
+    .line 12
     invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v1
@@ -1233,6 +1288,7 @@
 
     iget v1, p0, Lcom/google/android/exoplayer2/text/Cue;->verticalType:I
 
+    .line 13
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -1243,6 +1299,7 @@
 
     iget p0, p0, Lcom/google/android/exoplayer2/text/Cue;->shearDegrees:F
 
+    .line 14
     invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object p0
@@ -1251,6 +1308,7 @@
 
     aput-object p0, v0, v1
 
+    .line 15
     invoke-static {v0}, Lcom/google/common/base/Objects;->hashCode([Ljava/lang/Object;)I
 
     move-result p0
@@ -1261,12 +1319,14 @@
 .method public toBundle()Landroid/os/Bundle;
     .locals 3
 
+    .line 1
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-static {v1}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1277,6 +1337,7 @@
 
     const/4 v1, 0x1
 
+    .line 3
     invoke-static {v1}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1287,6 +1348,7 @@
 
     const/4 v1, 0x2
 
+    .line 4
     invoke-static {v1}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1297,6 +1359,7 @@
 
     const/4 v1, 0x3
 
+    .line 5
     invoke-static {v1}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1307,6 +1370,7 @@
 
     const/4 v1, 0x4
 
+    .line 6
     invoke-static {v1}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1317,6 +1381,7 @@
 
     const/4 v1, 0x5
 
+    .line 7
     invoke-static {v1}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1327,6 +1392,7 @@
 
     const/4 v1, 0x6
 
+    .line 8
     invoke-static {v1}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1337,6 +1403,7 @@
 
     const/4 v1, 0x7
 
+    .line 9
     invoke-static {v1}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1347,6 +1414,7 @@
 
     const/16 v1, 0x8
 
+    .line 10
     invoke-static {v1}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1357,6 +1425,7 @@
 
     const/16 v1, 0x9
 
+    .line 11
     invoke-static {v1}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1367,6 +1436,7 @@
 
     const/16 v1, 0xa
 
+    .line 12
     invoke-static {v1}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1377,6 +1447,7 @@
 
     const/16 v1, 0xb
 
+    .line 13
     invoke-static {v1}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1387,6 +1458,7 @@
 
     const/16 v1, 0xc
 
+    .line 14
     invoke-static {v1}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1397,6 +1469,7 @@
 
     const/16 v1, 0xe
 
+    .line 15
     invoke-static {v1}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1407,6 +1480,7 @@
 
     const/16 v1, 0xd
 
+    .line 16
     invoke-static {v1}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1417,6 +1491,7 @@
 
     const/16 v1, 0xf
 
+    .line 17
     invoke-static {v1}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1427,6 +1502,7 @@
 
     const/16 v1, 0x10
 
+    .line 18
     invoke-static {v1}, Lcom/google/android/exoplayer2/text/Cue;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1

@@ -60,6 +60,7 @@
 .method public getVolumeControlStream()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/media/AudioAttributesImplApi21;->mAudioAttributes:Landroid/media/AudioAttributes;
 
     invoke-virtual {p0}, Landroid/media/AudioAttributes;->getVolumeControlStream()I

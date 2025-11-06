@@ -22,7 +22,7 @@
 
 
 # instance fields
-.field final typeVariable:Ljava/lang/reflect/TypeVariable;
+.field public final typeVariable:Ljava/lang/reflect/TypeVariable;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/reflect/TypeVariable<",
@@ -36,18 +36,22 @@
 .method public constructor <init>()V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/reflect/TypeCapture;-><init>()V
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/reflect/TypeCapture;->capture()Ljava/lang/reflect/Type;
 
     move-result-object v0
 
+    .line 3
     instance-of v1, v0, Ljava/lang/reflect/TypeVariable;
 
     const-string v2, "%s should be a type variable."
 
     invoke-static {v1, v2, v0}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;Ljava/lang/Object;)V
 
+    .line 4
     check-cast v0, Ljava/lang/reflect/TypeVariable;
 
     iput-object v0, p0, Lcom/google/common/reflect/TypeParameter;->typeVariable:Ljava/lang/reflect/TypeVariable;
@@ -64,12 +68,15 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/common/reflect/TypeParameter;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/common/reflect/TypeParameter;
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/reflect/TypeParameter;->typeVariable:Ljava/lang/reflect/TypeVariable;
 
     iget-object p1, p1, Lcom/google/common/reflect/TypeParameter;->typeVariable:Ljava/lang/reflect/TypeVariable;
@@ -89,6 +96,7 @@
 .method public final hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/TypeParameter;->typeVariable:Ljava/lang/reflect/TypeVariable;
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
@@ -101,6 +109,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/TypeParameter;->typeVariable:Ljava/lang/reflect/TypeVariable;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;

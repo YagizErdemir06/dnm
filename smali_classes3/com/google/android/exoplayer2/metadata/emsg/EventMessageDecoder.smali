@@ -7,6 +7,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/metadata/SimpleMetadataDecoder;-><init>()V
 
     return-void
@@ -30,7 +31,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p2}, Ljava/nio/Buffer;->limit()I
+    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result p2
 

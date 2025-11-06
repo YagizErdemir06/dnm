@@ -15,22 +15,24 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/arcsoft/avatar2/provider/AvatarContentProvider;
+.field public final synthetic a:Lcom/arcsoft/avatar2/provider/AvatarContentProvider;
 
 
 # direct methods
 .method public constructor <init>(Lcom/arcsoft/avatar2/provider/AvatarContentProvider;Landroid/content/Context;)V
     .locals 2
 
+    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/provider/AvatarContentProvider$DBHelper;->a:Lcom/arcsoft/avatar2/provider/AvatarContentProvider;
 
-    const/4 p1, 0x0
+    const-string p1, "_arc_avatar.db"
 
-    const/4 v0, 0x2
+    const/4 v0, 0x0
 
-    const-string v1, "_arc_avatar.db"
+    const/4 v1, 0x2
 
-    invoke-direct {p0, p2, v1, p1, v0}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
+    .line 2
+    invoke-direct {p0, p2, p1, v0, v1}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
 
     return-void
 .end method
@@ -42,6 +44,7 @@
 
     const-string p0, "CREATE TABLE avatar_db (_id integer primary key autoincrement,thumbnail BLOB,config_path TEXT);"
 
+    .line 1
     invoke-virtual {p1, p0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     return-void
@@ -52,8 +55,10 @@
 
     const-string p2, "DROP TABLE IF EXISTS avatar_db"
 
+    .line 1
     invoke-virtual {p1, p2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/arcsoft/avatar2/provider/AvatarContentProvider$DBHelper;->onCreate(Landroid/database/sqlite/SQLiteDatabase;)V
 
     return-void

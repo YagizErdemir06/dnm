@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/FilteredEntryMultimap$AsMap$1EntrySetImpl;
+.class public Lcom/google/common/collect/FilteredEntryMultimap$AsMap$1EntrySetImpl;
 .super Lcom/google/common/collect/Maps$EntrySet;
 .source "SourceFile"
 
@@ -24,13 +24,14 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/google/common/collect/FilteredEntryMultimap$AsMap;
+.field public final synthetic this$1:Lcom/google/common/collect/FilteredEntryMultimap$AsMap;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/FilteredEntryMultimap$AsMap;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/FilteredEntryMultimap$AsMap$1EntrySetImpl;->this$1:Lcom/google/common/collect/FilteredEntryMultimap$AsMap;
 
     invoke-direct {p0}, Lcom/google/common/collect/Maps$EntrySet;-><init>()V
@@ -53,6 +54,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/FilteredEntryMultimap$AsMap$1EntrySetImpl$1;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/FilteredEntryMultimap$AsMap$1EntrySetImpl$1;-><init>(Lcom/google/common/collect/FilteredEntryMultimap$AsMap$1EntrySetImpl;)V
@@ -72,6 +74,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/FilteredEntryMultimap$AsMap$1EntrySetImpl;->this$1:Lcom/google/common/collect/FilteredEntryMultimap$AsMap;
 
     return-object p0
@@ -87,6 +90,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/FilteredEntryMultimap$AsMap$1EntrySetImpl;->this$1:Lcom/google/common/collect/FilteredEntryMultimap$AsMap;
 
     iget-object p0, p0, Lcom/google/common/collect/FilteredEntryMultimap$AsMap;->this$0:Lcom/google/common/collect/FilteredEntryMultimap;
@@ -112,6 +116,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/FilteredEntryMultimap$AsMap$1EntrySetImpl;->this$1:Lcom/google/common/collect/FilteredEntryMultimap$AsMap;
 
     iget-object p0, p0, Lcom/google/common/collect/FilteredEntryMultimap$AsMap;->this$0:Lcom/google/common/collect/FilteredEntryMultimap;
@@ -134,6 +139,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/FilteredEntryMultimap$AsMap$1EntrySetImpl;->iterator()Ljava/util/Iterator;
 
     move-result-object p0

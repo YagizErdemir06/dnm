@@ -1,4 +1,4 @@
-.class Landroidx/core/content/pm/ShortcutManagerCompat$Api25Impl;
+.class public Landroidx/core/content/pm/ShortcutManagerCompat$Api25Impl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,6 +44,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -65,16 +67,19 @@
 
     check-cast v2, Landroid/content/pm/ShortcutInfo;
 
+    .line 2
     invoke-virtual {v2}, Landroid/content/pm/ShortcutInfo;->getRank()I
 
     move-result v3
 
     if-le v3, v0, :cond_0
 
+    .line 3
     invoke-virtual {v2}, Landroid/content/pm/ShortcutInfo;->getId()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 4
     invoke-virtual {v2}, Landroid/content/pm/ShortcutInfo;->getRank()I
 
     move-result v1

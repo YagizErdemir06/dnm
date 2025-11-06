@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field public a:Ljava/lang/ref/WeakReference;
+.field private c:Ljava/lang/ref/WeakReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference<",
@@ -33,13 +33,15 @@
 .method public constructor <init>(Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$b;->a:Ljava/lang/ref/WeakReference;
+    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$b;->c:Ljava/lang/ref/WeakReference;
 
     return-void
 .end method
@@ -49,11 +51,12 @@
 .method public onClick(Landroid/view/View;)V
     .locals 5
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$b;->a:Ljava/lang/ref/WeakReference;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$b;->c:Ljava/lang/ref/WeakReference;
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -69,20 +72,23 @@
 
     return-void
 
+    .line 2
     :cond_1
     move-object v0, p1
 
     check-cast v0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$TabView;
 
+    .line 3
     invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$TabView;->getTab()Landroidx/appcompat/app/ActionBar$Tab;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroidx/appcompat/app/ActionBar$Tab;->select()V
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->f:Landroid/widget/LinearLayout;
+    .line 4
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->s:Landroid/widget/LinearLayout;
 
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
+    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
 
@@ -93,9 +99,10 @@
     :goto_1
     if-ge v2, v0, :cond_3
 
-    iget-object v3, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->f:Landroid/widget/LinearLayout;
+    .line 5
+    iget-object v3, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->s:Landroid/widget/LinearLayout;
 
-    invoke-virtual {v3, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v3, v2}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
@@ -108,6 +115,7 @@
     :cond_2
     move v4, v1
 
+    .line 6
     :goto_2
     invoke-virtual {v3, v4}, Landroid/view/View;->setSelected(Z)V
 

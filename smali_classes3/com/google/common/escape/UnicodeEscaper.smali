@@ -22,6 +22,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/escape/Escaper;-><init>()V
 
     return-void
@@ -30,12 +31,14 @@
 .method public static codePointAt(Ljava/lang/CharSequence;II)I
     .locals 7
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     if-ge p1, p2, :cond_5
 
     add-int/lit8 v0, p1, 0x1
 
+    .line 2
     invoke-interface {p0, p1}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result p1
@@ -69,23 +72,27 @@
 
     return p0
 
+    .line 3
     :cond_1
     invoke-interface {p0, v0}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result p2
 
+    .line 4
     invoke-static {p2}, Ljava/lang/Character;->isLowSurrogate(C)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
+    .line 5
     invoke-static {p1, p2}, Ljava/lang/Character;->toCodePoint(CC)I
 
     move-result p0
 
     return p0
 
+    .line 6
     :cond_2
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -131,6 +138,7 @@
 
     throw p1
 
+    .line 7
     :cond_3
     new-instance p2, Ljava/lang/IllegalArgumentException;
 
@@ -182,6 +190,7 @@
     :goto_0
     return p1
 
+    .line 8
     :cond_5
     new-instance p0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -197,17 +206,20 @@
 
     if-ltz p2, :cond_1
 
+    .line 1
     new-array p2, p2, [C
 
     if-lez p1, :cond_0
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-static {p0, v0, p2, v0, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     :cond_0
     return-object p2
 
+    .line 3
     :cond_1
     new-instance p0, Ljava/lang/AssertionError;
 
@@ -223,14 +235,17 @@
 .method public escape(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
 
     const/4 v1, 0x0
 
+    .line 3
     invoke-virtual {p0, p1, v1, v0}, Lcom/google/common/escape/UnicodeEscaper;->nextEscapeIndex(Ljava/lang/CharSequence;II)I
 
     move-result v1
@@ -239,6 +254,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-virtual {p0, p1, v1}, Lcom/google/common/escape/UnicodeEscaper;->escapeSlow(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -256,10 +272,12 @@
 .method public final escapeSlow(Ljava/lang/String;I)Ljava/lang/String;
     .locals 11
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
 
+    .line 2
     invoke-static {}, Lcom/google/common/escape/Platform;->charBufferFromThreadLocal()[C
 
     move-result-object v1
@@ -273,16 +291,19 @@
     :goto_0
     if-ge p2, v0, :cond_6
 
+    .line 3
     invoke-static {p1, p2, v0}, Lcom/google/common/escape/UnicodeEscaper;->codePointAt(Ljava/lang/CharSequence;II)I
 
     move-result v5
 
     if-ltz v5, :cond_5
 
+    .line 4
     invoke-virtual {p0, v5}, Lcom/google/common/escape/UnicodeEscaper;->escape(I)[C
 
     move-result-object v6
 
+    .line 5
     invoke-static {v5}, Ljava/lang/Character;->isSupplementaryCodePoint(I)Z
 
     move-result v5
@@ -305,10 +326,12 @@
 
     add-int v8, v4, v7
 
+    .line 6
     array-length v9, v6
 
     add-int/2addr v9, v8
 
+    .line 7
     array-length v10, v1
 
     if-ge v10, v9, :cond_1
@@ -319,6 +342,7 @@
 
     add-int/lit8 v9, v9, 0x20
 
+    .line 8
     invoke-static {v1, v4, v9}, Lcom/google/common/escape/UnicodeEscaper;->growBuffer([CII)[C
 
     move-result-object v1
@@ -326,19 +350,23 @@
     :cond_1
     if-lez v7, :cond_2
 
+    .line 9
     invoke-virtual {p1, v3, p2, v1, v4}, Ljava/lang/String;->getChars(II[CI)V
 
     move v4, v8
 
+    .line 10
     :cond_2
     array-length p2, v6
 
     if-lez p2, :cond_3
 
+    .line 11
     array-length p2, v6
 
     invoke-static {v6, v2, v1, v4, p2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 12
     array-length p2, v6
 
     add-int/2addr v4, p2
@@ -346,6 +374,7 @@
     :cond_3
     move v3, v5
 
+    .line 13
     :cond_4
     invoke-virtual {p0, p1, v5, v0}, Lcom/google/common/escape/UnicodeEscaper;->nextEscapeIndex(Ljava/lang/CharSequence;II)I
 
@@ -353,6 +382,7 @@
 
     goto :goto_0
 
+    .line 14
     :cond_5
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -369,21 +399,25 @@
 
     add-int/2addr p0, v4
 
+    .line 15
     array-length p2, v1
 
     if-ge p2, p0, :cond_7
 
+    .line 16
     invoke-static {v1, v4, p0}, Lcom/google/common/escape/UnicodeEscaper;->growBuffer([CII)[C
 
     move-result-object p2
 
     move-object v1, p2
 
+    .line 17
     :cond_7
     invoke-virtual {p1, v3, v0, v1, v4}, Ljava/lang/String;->getChars(II[CI)V
 
     move v4, p0
 
+    .line 18
     :cond_8
     new-instance p0, Ljava/lang/String;
 
@@ -398,12 +432,14 @@
     :goto_0
     if-ge p2, p3, :cond_2
 
+    .line 1
     invoke-static {p1, p2, p3}, Lcom/google/common/escape/UnicodeEscaper;->codePointAt(Ljava/lang/CharSequence;II)I
 
     move-result v0
 
     if-ltz v0, :cond_2
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/google/common/escape/UnicodeEscaper;->escape(I)[C
 
     move-result-object v1
@@ -412,6 +448,7 @@
 
     goto :goto_2
 
+    .line 3
     :cond_0
     invoke-static {v0}, Ljava/lang/Character;->isSupplementaryCodePoint(I)Z
 

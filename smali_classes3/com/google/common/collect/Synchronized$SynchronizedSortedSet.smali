@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Synchronized$SynchronizedSortedSet;
+.class public Lcom/google/common/collect/Synchronized$SynchronizedSortedSet;
 .super Lcom/google/common/collect/Synchronized$SynchronizedSet;
 .source "SourceFile"
 
@@ -50,6 +50,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/common/collect/Synchronized$SynchronizedSet;-><init>(Ljava/util/Set;Ljava/lang/Object;)V
 
     return-void
@@ -70,10 +71,12 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Synchronized$SynchronizedObject;->mutex:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lcom/google/common/collect/Synchronized$SynchronizedSortedSet;->delegate()Ljava/util/SortedSet;
 
@@ -90,6 +93,7 @@
     :catchall_0
     move-exception p0
 
+    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -97,7 +101,7 @@
     throw p0
 .end method
 
-.method bridge synthetic delegate()Ljava/lang/Object;
+.method public bridge synthetic delegate()Ljava/lang/Object;
     .locals 0
 
     .line 1
@@ -108,7 +112,7 @@
     return-object p0
 .end method
 
-.method bridge synthetic delegate()Ljava/util/Collection;
+.method public bridge synthetic delegate()Ljava/util/Collection;
     .locals 0
 
     .line 2
@@ -119,7 +123,7 @@
     return-object p0
 .end method
 
-.method bridge synthetic delegate()Ljava/util/Set;
+.method public bridge synthetic delegate()Ljava/util/Set;
     .locals 0
 
     .line 3
@@ -158,10 +162,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Synchronized$SynchronizedObject;->mutex:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lcom/google/common/collect/Synchronized$SynchronizedSortedSet;->delegate()Ljava/util/SortedSet;
 
@@ -178,6 +184,7 @@
     :catchall_0
     move-exception p0
 
+    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -195,10 +202,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Synchronized$SynchronizedObject;->mutex:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lcom/google/common/collect/Synchronized$SynchronizedSortedSet;->delegate()Ljava/util/SortedSet;
 
@@ -221,6 +230,7 @@
     :catchall_0
     move-exception p0
 
+    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -236,10 +246,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Synchronized$SynchronizedObject;->mutex:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lcom/google/common/collect/Synchronized$SynchronizedSortedSet;->delegate()Ljava/util/SortedSet;
 
@@ -256,6 +268,7 @@
     :catchall_0
     move-exception p0
 
+    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -273,10 +286,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Synchronized$SynchronizedObject;->mutex:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lcom/google/common/collect/Synchronized$SynchronizedSortedSet;->delegate()Ljava/util/SortedSet;
 
@@ -299,6 +314,7 @@
     :catchall_0
     move-exception p0
 
+    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -316,10 +332,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Synchronized$SynchronizedObject;->mutex:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lcom/google/common/collect/Synchronized$SynchronizedSortedSet;->delegate()Ljava/util/SortedSet;
 
@@ -342,6 +360,7 @@
     :catchall_0
     move-exception p0
 
+    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

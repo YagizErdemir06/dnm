@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/offline/ProgressiveDownloader$1;
+.class public Lcom/google/android/exoplayer2/offline/ProgressiveDownloader$1;
 .super Lcom/google/android/exoplayer2/util/RunnableFutureTask;
 .source "SourceFile"
 
@@ -24,13 +24,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/android/exoplayer2/offline/ProgressiveDownloader;
+.field public final synthetic this$0:Lcom/google/android/exoplayer2/offline/ProgressiveDownloader;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/exoplayer2/offline/ProgressiveDownloader;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/offline/ProgressiveDownloader$1;->this$0:Lcom/google/android/exoplayer2/offline/ProgressiveDownloader;
 
     invoke-direct {p0}, Lcom/google/android/exoplayer2/util/RunnableFutureTask;-><init>()V
@@ -43,6 +44,7 @@
 .method public cancelWork()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/offline/ProgressiveDownloader$1;->this$0:Lcom/google/android/exoplayer2/offline/ProgressiveDownloader;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/offline/ProgressiveDownloader;->access$000(Lcom/google/android/exoplayer2/offline/ProgressiveDownloader;)Lcom/google/android/exoplayer2/upstream/cache/CacheWriter;

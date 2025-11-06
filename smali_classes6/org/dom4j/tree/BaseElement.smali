@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field protected attributes:Ljava/util/List;
+.field public attributes:Ljava/util/List;
 
-.field protected content:Ljava/util/List;
+.field public content:Ljava/util/List;
 
 .field private parentBranch:Lorg/dom4j/Branch;
 
@@ -115,6 +115,7 @@
 .method public clearContent()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/BaseElement;->contentList()Ljava/util/List;
 
     move-result-object p0
@@ -127,16 +128,19 @@
 .method public contentList()Ljava/util/List;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/tree/BaseElement;->content:Ljava/util/List;
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractBranch;->createContentList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/dom4j/tree/BaseElement;->content:Ljava/util/List;
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lorg/dom4j/tree/BaseElement;->content:Ljava/util/List;
 
@@ -146,23 +150,28 @@
 .method public getDocument()Lorg/dom4j/Document;
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/BaseElement;->parentBranch:Lorg/dom4j/Branch;
 
     instance-of v0, p0, Lorg/dom4j/Document;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Lorg/dom4j/Document;
 
     return-object p0
 
+    .line 3
     :cond_0
     instance-of v0, p0, Lorg/dom4j/Element;
 
     if-eqz v0, :cond_1
 
+    .line 4
     check-cast p0, Lorg/dom4j/Element;
 
+    .line 5
     invoke-interface {p0}, Lorg/dom4j/Node;->getDocument()Lorg/dom4j/Document;
 
     move-result-object p0
@@ -178,12 +187,14 @@
 .method public getParent()Lorg/dom4j/Element;
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/BaseElement;->parentBranch:Lorg/dom4j/Branch;
 
     instance-of v0, p0, Lorg/dom4j/Element;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Lorg/dom4j/Element;
 
     goto :goto_0
@@ -198,6 +209,7 @@
 .method public getQName()Lorg/dom4j/QName;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/BaseElement;->qname:Lorg/dom4j/QName;
 
     return-object p0
@@ -206,6 +218,7 @@
 .method public setAttributeList(Ljava/util/List;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/tree/BaseElement;->attributes:Ljava/util/List;
 
     return-void
@@ -214,12 +227,15 @@
 .method public setAttributes(Ljava/util/List;)V
     .locals 1
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/tree/BaseElement;->attributes:Ljava/util/List;
 
+    .line 2
     instance-of v0, p1, Lorg/dom4j/tree/ContentListFacade;
 
     if-eqz v0, :cond_0
 
+    .line 3
     check-cast p1, Lorg/dom4j/tree/ContentListFacade;
 
     invoke-virtual {p1}, Lorg/dom4j/tree/ContentListFacade;->getBackingList()Ljava/util/List;
@@ -235,12 +251,15 @@
 .method public setContent(Ljava/util/List;)V
     .locals 1
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/tree/BaseElement;->content:Ljava/util/List;
 
+    .line 2
     instance-of v0, p1, Lorg/dom4j/tree/ContentListFacade;
 
     if-eqz v0, :cond_0
 
+    .line 3
     check-cast p1, Lorg/dom4j/tree/ContentListFacade;
 
     invoke-virtual {p1}, Lorg/dom4j/tree/ContentListFacade;->getBackingList()Ljava/util/List;
@@ -256,6 +275,7 @@
 .method public setDocument(Lorg/dom4j/Document;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/tree/BaseElement;->parentBranch:Lorg/dom4j/Branch;
 
     instance-of v0, v0, Lorg/dom4j/Document;
@@ -264,6 +284,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 2
     :cond_0
     iput-object p1, p0, Lorg/dom4j/tree/BaseElement;->parentBranch:Lorg/dom4j/Branch;
 
@@ -274,6 +295,7 @@
 .method public setParent(Lorg/dom4j/Element;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/tree/BaseElement;->parentBranch:Lorg/dom4j/Branch;
 
     instance-of v0, v0, Lorg/dom4j/Element;
@@ -282,6 +304,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 2
     :cond_0
     iput-object p1, p0, Lorg/dom4j/tree/BaseElement;->parentBranch:Lorg/dom4j/Branch;
 
@@ -292,6 +315,7 @@
 .method public setQName(Lorg/dom4j/QName;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/tree/BaseElement;->qname:Lorg/dom4j/QName;
 
     return-void

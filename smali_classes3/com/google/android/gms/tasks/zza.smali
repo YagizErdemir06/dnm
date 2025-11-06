@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/tasks/zza;
+.class public final Lcom/google/android/gms/tasks/zza;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field final synthetic zza:Lcom/google/android/gms/tasks/OnTokenCanceledListener;
+.field public final synthetic zza:Lcom/google/android/gms/tasks/OnTokenCanceledListener;
 
 
 # direct methods
@@ -26,10 +26,12 @@
 .method public final bridge synthetic onSuccess(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Void;
 
     iget-object p0, p0, Lcom/google/android/gms/tasks/zza;->zza:Lcom/google/android/gms/tasks/OnTokenCanceledListener;
 
+    .line 2
     invoke-interface {p0}, Lcom/google/android/gms/tasks/OnTokenCanceledListener;->onCanceled()V
 
     return-void

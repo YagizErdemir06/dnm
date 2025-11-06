@@ -155,6 +155,7 @@
 .method public clone()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     :try_start_0
     invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
@@ -169,7 +170,8 @@
     :catch_0
     move-exception p0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 2
+    invoke-virtual {p0}, Ljava/lang/CloneNotSupportedException;->printStackTrace()V
 
     const/4 p0, 0x0
 
@@ -180,6 +182,7 @@
 .method public getHeight()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;->height:I
 
     return p0
@@ -188,6 +191,7 @@
 .method public getPixelFormat()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;->pixelFormat:I
 
     return p0
@@ -196,6 +200,7 @@
 .method public getRGBA8888()[B
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;->RGBA8888:[B
 
     return-object p0
@@ -204,6 +209,7 @@
 .method public getRowStride()[I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;->rowStride:[I
 
     return-object p0
@@ -212,6 +218,7 @@
 .method public getVuData()[B
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;->vuData:[B
 
     return-object p0
@@ -220,6 +227,7 @@
 .method public getWidth()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;->width:I
 
     return p0
@@ -228,6 +236,7 @@
 .method public getYData()[B
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;->yData:[B
 
     return-object p0
@@ -236,6 +245,7 @@
 .method public setHeight(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;->height:I
 
     return-void
@@ -244,6 +254,7 @@
 .method public setPixelFormat(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;->pixelFormat:I
 
     return-void
@@ -252,6 +263,7 @@
 .method public setRGBA8888([B)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;->RGBA8888:[B
 
     return-void
@@ -272,6 +284,7 @@
 
     aput p1, v0, v1
 
+    .line 1
     iput-object v0, p0, Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;->rowStride:[I
 
     return-void
@@ -280,6 +293,7 @@
 .method public setVuData([B)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;->vuData:[B
 
     return-void
@@ -288,6 +302,7 @@
 .method public setWidth(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;->width:I
 
     return-void
@@ -296,6 +311,7 @@
 .method public setYData([B)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;->yData:[B
 
     return-void

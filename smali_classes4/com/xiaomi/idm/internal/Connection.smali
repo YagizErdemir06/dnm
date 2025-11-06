@@ -4,56 +4,68 @@
 
 
 # annotations
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000*\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u0012\n\u0002\u0010\u0008\n\u0002\u0008\u0008\n\u0002\u0010\t\n\u0002\u0008\u000b\u0008\u0080\u0008\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004J\t\u0010\'\u001a\u00020\u0003H\u00c6\u0003J\u0013\u0010(\u001a\u00020\u00002\u0008\u0008\u0002\u0010\u0002\u001a\u00020\u0003H\u00c6\u0001J\u0013\u0010)\u001a\u00020\u00062\u0008\u0010*\u001a\u0004\u0018\u00010\u0001H\u00d6\u0003J\t\u0010+\u001a\u00020\u0019H\u00d6\u0001J\t\u0010,\u001a\u00020\u0003H\u00d6\u0001R\u001a\u0010\u0005\u001a\u00020\u0006X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0007\u0010\u0008\"\u0004\u0008\t\u0010\nR\u001a\u0010\u000b\u001a\u00020\u0006X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u000c\u0010\u0008\"\u0004\u0008\r\u0010\nR\u001a\u0010\u000e\u001a\u00020\u0006X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u000f\u0010\u0008\"\u0004\u0008\u0010\u0010\nR\u001a\u0010\u0011\u001a\u00020\u0006X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0012\u0010\u0008\"\u0004\u0008\u0013\u0010\nR\u0011\u0010\u0014\u001a\u00020\u00068F\u00a2\u0006\u0006\u001a\u0004\u0008\u0015\u0010\u0008R\u0011\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0016\u0010\u0017R\u001a\u0010\u0018\u001a\u00020\u0019X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u001a\u0010\u001b\"\u0004\u0008\u001c\u0010\u001dR\u001a\u0010\u001e\u001a\u00020\u0019X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u001f\u0010\u001b\"\u0004\u0008 \u0010\u001dR\u001a\u0010!\u001a\u00020\"X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008#\u0010$\"\u0004\u0008%\u0010&\u00a8\u0006-"
+        "\u0000(\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0006\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0002\u0008\u001a\n\u0002\u0010\t\n\u0002\u0008\u000c\u0008\u0080\u0008\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0005\u001a\u00020\u0002\u00a2\u0006\u0004\u00082\u00103J\u0010\u0010\u0003\u001a\u00020\u0002H\u00c6\u0003\u00a2\u0006\u0004\u0008\u0003\u0010\u0004J\u001a\u0010\u0006\u001a\u00020\u00002\u0008\u0008\u0002\u0010\u0005\u001a\u00020\u0002H\u00c6\u0001\u00a2\u0006\u0004\u0008\u0006\u0010\u0007J\u0010\u0010\u0008\u001a\u00020\u0002H\u00d6\u0001\u00a2\u0006\u0004\u0008\u0008\u0010\u0004J\u0010\u0010\n\u001a\u00020\tH\u00d6\u0001\u00a2\u0006\u0004\u0008\n\u0010\u000bJ\u001a\u0010\u000e\u001a\u00020\r2\u0008\u0010\u000c\u001a\u0004\u0018\u00010\u0001H\u00d6\u0003\u00a2\u0006\u0004\u0008\u000e\u0010\u000fR\"\u0010\u0010\u001a\u00020\t8\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0010\u0010\u0011\u001a\u0004\u0008\u0012\u0010\u000b\"\u0004\u0008\u0013\u0010\u0014R\"\u0010\u0015\u001a\u00020\r8\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0015\u0010\u0016\u001a\u0004\u0008\u0017\u0010\u0018\"\u0004\u0008\u0019\u0010\u001aR\"\u0010\u001b\u001a\u00020\r8\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u001b\u0010\u0016\u001a\u0004\u0008\u001c\u0010\u0018\"\u0004\u0008\u001d\u0010\u001aR\u0013\u0010\u001f\u001a\u00020\r8F@\u0006\u00a2\u0006\u0006\u001a\u0004\u0008\u001e\u0010\u0018R\"\u0010 \u001a\u00020\r8\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008 \u0010\u0016\u001a\u0004\u0008!\u0010\u0018\"\u0004\u0008\"\u0010\u001aR\"\u0010#\u001a\u00020\r8\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008#\u0010\u0016\u001a\u0004\u0008$\u0010\u0018\"\u0004\u0008%\u0010\u001aR\u0019\u0010\u0005\u001a\u00020\u00028\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0005\u0010&\u001a\u0004\u0008\'\u0010\u0004R\"\u0010)\u001a\u00020(8\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008)\u0010*\u001a\u0004\u0008+\u0010,\"\u0004\u0008-\u0010.R\"\u0010/\u001a\u00020\t8\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008/\u0010\u0011\u001a\u0004\u00080\u0010\u000b\"\u0004\u00081\u0010\u0014\u00a8\u00064"
     }
     d2 = {
         "Lcom/xiaomi/idm/internal/Connection;",
         "",
+        "",
+        "component1",
+        "()Ljava/lang/String;",
         "connectionId",
+        "copy",
+        "(Ljava/lang/String;)Lcom/xiaomi/idm/internal/Connection;",
+        "toString",
         "",
-        "(Ljava/lang/String;)V",
-        "advanceChannelConnected",
+        "hashCode",
+        "()I",
+        "other",
         "",
-        "getAdvanceChannelConnected",
+        "equals",
+        "(Ljava/lang/Object;)Z",
+        "sendBlockSizePerPacket",
+        "I",
+        "getSendBlockSizePerPacket",
+        "setSendBlockSizePerPacket",
+        "(I)V",
+        "autoChannelConnected",
+        "Z",
+        "getAutoChannelConnected",
         "()Z",
-        "setAdvanceChannelConnected",
+        "setAutoChannelConnected",
         "(Z)V",
         "advancedDirectChannelConnected",
         "getAdvancedDirectChannelConnected",
         "setAdvancedDirectChannelConnected",
-        "autoChannelConnected",
-        "getAutoChannelConnected",
-        "setAutoChannelConnected",
+        "getConnected",
+        "connected",
+        "advanceChannelConnected",
+        "getAdvanceChannelConnected",
+        "setAdvanceChannelConnected",
         "basicChannelConnected",
         "getBasicChannelConnected",
         "setBasicChannelConnected",
-        "connected",
-        "getConnected",
+        "Ljava/lang/String;",
         "getConnectionId",
-        "()Ljava/lang/String;",
-        "sendBlockMaxParallelTaskNumber",
         "",
-        "getSendBlockMaxParallelTaskNumber",
-        "()I",
-        "setSendBlockMaxParallelTaskNumber",
-        "(I)V",
-        "sendBlockSizePerPacket",
-        "getSendBlockSizePerPacket",
-        "setSendBlockSizePerPacket",
         "sendBlockTimeout",
-        "",
+        "J",
         "getSendBlockTimeout",
         "()J",
         "setSendBlockTimeout",
         "(J)V",
-        "component1",
-        "copy",
-        "equals",
-        "other",
-        "hashCode",
-        "toString",
+        "sendBlockMaxParallelTaskNumber",
+        "getSendBlockMaxParallelTaskNumber",
+        "setSendBlockMaxParallelTaskNumber",
+        "<init>",
+        "(Ljava/lang/String;)V",
         "IDMSdk_release"
     }
     k = 0x1
@@ -62,7 +74,6 @@
         0x5,
         0x1
     }
-    xi = 0x30
 .end annotation
 
 
@@ -76,7 +87,7 @@
 .field private volatile basicChannelConnected:Z
 
 .field private final connectionId:Ljava/lang/String;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -91,28 +102,33 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 2
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "connectionId"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/xiaomi/idm/internal/Connection;->connectionId:Ljava/lang/String;
 
     const-wide/16 v0, 0x2710
 
+    .line 3
     iput-wide v0, p0, Lcom/xiaomi/idm/internal/Connection;->sendBlockTimeout:J
 
     const/16 p1, 0x14
 
+    .line 4
     iput p1, p0, Lcom/xiaomi/idm/internal/Connection;->sendBlockMaxParallelTaskNumber:I
 
     const/16 p1, 0x1f40
 
+    .line 5
     iput p1, p0, Lcom/xiaomi/idm/internal/Connection;->sendBlockSizePerPacket:I
 
     return-void
@@ -139,7 +155,7 @@
 # virtual methods
 .method public final component1()Ljava/lang/String;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     iget-object p0, p0, Lcom/xiaomi/idm/internal/Connection;->connectionId:Ljava/lang/String;
@@ -150,15 +166,15 @@
 .method public final copy(Ljava/lang/String;)Lcom/xiaomi/idm/internal/Connection;
     .locals 0
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string p0, "connectionId"
 
-    invoke-static {p1, p0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p0, Lcom/xiaomi/idm/internal/Connection;
 
@@ -170,7 +186,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
     .param p1    # Ljava/lang/Object;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
 
@@ -196,7 +212,7 @@
 
     iget-object p1, p1, Lcom/xiaomi/idm/internal/Connection;->connectionId:Ljava/lang/String;
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, p1}, Lh/d3/x/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -211,6 +227,7 @@
 .method public final getAdvanceChannelConnected()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/idm/internal/Connection;->advanceChannelConnected:Z
 
     return p0
@@ -219,6 +236,7 @@
 .method public final getAdvancedDirectChannelConnected()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/idm/internal/Connection;->advancedDirectChannelConnected:Z
 
     return p0
@@ -227,6 +245,7 @@
 .method public final getAutoChannelConnected()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/idm/internal/Connection;->autoChannelConnected:Z
 
     return p0
@@ -235,6 +254,7 @@
 .method public final getBasicChannelConnected()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/idm/internal/Connection;->basicChannelConnected:Z
 
     return p0
@@ -243,6 +263,7 @@
 .method public final getConnected()Z
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/idm/internal/Connection;->autoChannelConnected:Z
 
     if-nez v0, :cond_1
@@ -276,9 +297,10 @@
 
 .method public final getConnectionId()Ljava/lang/String;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/internal/Connection;->connectionId:Ljava/lang/String;
 
     return-object p0
@@ -287,6 +309,7 @@
 .method public final getSendBlockMaxParallelTaskNumber()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/idm/internal/Connection;->sendBlockMaxParallelTaskNumber:I
 
     return p0
@@ -295,6 +318,7 @@
 .method public final getSendBlockSizePerPacket()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/idm/internal/Connection;->sendBlockSizePerPacket:I
 
     return p0
@@ -303,6 +327,7 @@
 .method public final getSendBlockTimeout()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/idm/internal/Connection;->sendBlockTimeout:J
 
     return-wide v0
@@ -323,6 +348,7 @@
 .method public final setAdvanceChannelConnected(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/idm/internal/Connection;->advanceChannelConnected:Z
 
     return-void
@@ -331,6 +357,7 @@
 .method public final setAdvancedDirectChannelConnected(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/idm/internal/Connection;->advancedDirectChannelConnected:Z
 
     return-void
@@ -339,6 +366,7 @@
 .method public final setAutoChannelConnected(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/idm/internal/Connection;->autoChannelConnected:Z
 
     return-void
@@ -347,6 +375,7 @@
 .method public final setBasicChannelConnected(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/idm/internal/Connection;->basicChannelConnected:Z
 
     return-void
@@ -355,6 +384,7 @@
 .method public final setSendBlockMaxParallelTaskNumber(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/idm/internal/Connection;->sendBlockMaxParallelTaskNumber:I
 
     return-void
@@ -363,6 +393,7 @@
 .method public final setSendBlockSizePerPacket(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/idm/internal/Connection;->sendBlockSizePerPacket:I
 
     return-void
@@ -371,6 +402,7 @@
 .method public final setSendBlockTimeout(J)V
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lcom/xiaomi/idm/internal/Connection;->sendBlockTimeout:J
 
     return-void
@@ -378,7 +410,7 @@
 
 .method public toString()Ljava/lang/String;
     .locals 2
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     new-instance v0, Ljava/lang/StringBuilder;

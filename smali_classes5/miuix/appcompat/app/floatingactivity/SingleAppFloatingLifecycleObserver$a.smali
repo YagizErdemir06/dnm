@@ -32,10 +32,12 @@
 .method public constructor <init>(Lmiuix/appcompat/app/floatingactivity/SingleAppFloatingLifecycleObserver;Lmiuix/appcompat/app/AppCompatActivity;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/appcompat/app/floatingactivity/SingleAppFloatingLifecycleObserver$a;->b:Lmiuix/appcompat/app/floatingactivity/SingleAppFloatingLifecycleObserver;
 
     invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
 
+    .line 2
     new-instance p1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -50,11 +52,13 @@
 .method public onComplete(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lmiuix/animation/listener/TransitionListener;->onComplete(Ljava/lang/Object;)V
 
+    .line 2
     iget-object p0, p0, Lmiuix/appcompat/app/floatingactivity/SingleAppFloatingLifecycleObserver$a;->a:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -62,25 +66,29 @@
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {p0}, Landroid/app/Activity;->isDestroyed()Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    invoke-static {}, Luo/b;->q()Luo/b;
+    .line 4
+    invoke-static {}, Lk/b/d/s/c;->q()Lk/b/d/s/c;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Luo/b;->r()Landroid/view/View;
+    .line 5
+    invoke-virtual {p1}, Lk/b/d/s/c;->r()Landroid/view/View;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p0}, Lmiuix/appcompat/app/AppCompatActivity;->z9()Landroid/view/View;
+    .line 6
+    invoke-virtual {p0}, Lmiuix/appcompat/app/AppCompatActivity;->N5()Landroid/view/View;
 
     move-result-object p0
 

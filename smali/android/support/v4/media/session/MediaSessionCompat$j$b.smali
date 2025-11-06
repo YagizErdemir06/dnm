@@ -38,12 +38,16 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$j$b;->a:Ljava/lang/String;
 
+    .line 3
     iput-object p2, p0, Landroid/support/v4/media/session/MediaSessionCompat$j$b;->b:Landroid/os/Bundle;
 
+    .line 4
     iput-object p3, p0, Landroid/support/v4/media/session/MediaSessionCompat$j$b;->c:Landroid/os/ResultReceiver;
 
     return-void

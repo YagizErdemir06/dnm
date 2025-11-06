@@ -1,4 +1,4 @@
-.class Landroidx/exifinterface/media/ExifInterface$1;
+.class public Landroidx/exifinterface/media/ExifInterface$1;
 .super Landroid/media/MediaDataSource;
 .source "SourceFile"
 
@@ -15,17 +15,18 @@
 
 
 # instance fields
-.field mPosition:J
+.field public mPosition:J
 
-.field final synthetic this$0:Landroidx/exifinterface/media/ExifInterface;
+.field public final synthetic this$0:Landroidx/exifinterface/media/ExifInterface;
 
-.field final synthetic val$in:Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataInputStream;
+.field public final synthetic val$in:Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataInputStream;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/exifinterface/media/ExifInterface;Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataInputStream;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/exifinterface/media/ExifInterface$1;->this$0:Landroidx/exifinterface/media/ExifInterface;
 
     iput-object p2, p0, Landroidx/exifinterface/media/ExifInterface$1;->val$in:Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataInputStream;
@@ -86,6 +87,7 @@
 
     return v3
 
+    .line 1
     :cond_1
     :try_start_0
     iget-wide v4, p0, Landroidx/exifinterface/media/ExifInterface$1;->mPosition:J
@@ -98,6 +100,7 @@
 
     if-ltz v0, :cond_2
 
+    .line 2
     iget-object v0, p0, Landroidx/exifinterface/media/ExifInterface$1;->val$in:Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataInputStream;
 
     invoke-virtual {v0}, Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataInputStream;->available()I
@@ -114,13 +117,16 @@
 
     return v3
 
+    .line 3
     :cond_2
     iget-object v0, p0, Landroidx/exifinterface/media/ExifInterface$1;->val$in:Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataInputStream;
 
     invoke-virtual {v0, p1, p2}, Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataInputStream;->seek(J)V
 
+    .line 4
     iput-wide p1, p0, Landroidx/exifinterface/media/ExifInterface$1;->mPosition:J
 
+    .line 5
     :cond_3
     iget-object p1, p0, Landroidx/exifinterface/media/ExifInterface$1;->val$in:Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataInputStream;
 
@@ -130,12 +136,14 @@
 
     if-le p5, p1, :cond_4
 
+    .line 6
     iget-object p1, p0, Landroidx/exifinterface/media/ExifInterface$1;->val$in:Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataInputStream;
 
     invoke-virtual {p1}, Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataInputStream;->available()I
 
     move-result p5
 
+    .line 7
     :cond_4
     iget-object p1, p0, Landroidx/exifinterface/media/ExifInterface$1;->val$in:Landroidx/exifinterface/media/ExifInterface$ByteOrderedDataInputStream;
 
@@ -145,6 +153,7 @@
 
     if-ltz p1, :cond_5
 
+    .line 8
     iget-wide p2, p0, Landroidx/exifinterface/media/ExifInterface$1;->mPosition:J
 
     int-to-long p4, p1
@@ -161,6 +170,7 @@
     :cond_5
     const-wide/16 p1, -0x1
 
+    .line 9
     iput-wide p1, p0, Landroidx/exifinterface/media/ExifInterface$1;->mPosition:J
 
     return v3

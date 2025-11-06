@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/RegularImmutableTable$CellSet;
+.class public final Lcom/google/common/collect/RegularImmutableTable$CellSet;
 .super Lcom/google/common/collect/IndexedImmutableSet;
 .source "SourceFile"
 
@@ -23,7 +23,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/RegularImmutableTable;
+.field public final synthetic this$0:Lcom/google/common/collect/RegularImmutableTable;
 
 
 # direct methods
@@ -56,14 +56,17 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/common/collect/Table$Cell;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/common/collect/Table$Cell;
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/collect/RegularImmutableTable$CellSet;->this$0:Lcom/google/common/collect/RegularImmutableTable;
 
     invoke-interface {p1}, Lcom/google/common/collect/Table$Cell;->getRowKey()Ljava/lang/Object;
@@ -80,6 +83,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 4
     invoke-interface {p1}, Lcom/google/common/collect/Table$Cell;->getValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -138,6 +142,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/RegularImmutableTable$CellSet;->this$0:Lcom/google/common/collect/RegularImmutableTable;
 
     invoke-interface {p0}, Lcom/google/common/collect/Table;->size()I

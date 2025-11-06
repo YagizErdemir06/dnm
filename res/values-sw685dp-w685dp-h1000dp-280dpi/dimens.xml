@@ -88,6 +88,7 @@
     <dimen name="pad_second_panel_middle_line_margin_left_portrait">126.44998dip</dimen>
     <dimen name="plane_entrance_margin_hor">5.0dip</dimen>
     <dimen name="popup_layout_padding">1.7999878dip</dimen>
+    <item type="dimen" name="preference_item_padding_start">@dimen/miuix_preference_item_padding_start</item>
     <dimen name="previewlist_width">392.6953dip</dimen>
     <dimen name="pro_view_zoom_view_slider_height">215.26999dip</dimen>
     <dimen name="right_tip_description_tip_top">13.454498dip</dimen>

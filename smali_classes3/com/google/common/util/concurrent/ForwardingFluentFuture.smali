@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/ForwardingFluentFuture;
+.class public final Lcom/google/common/util/concurrent/ForwardingFluentFuture;
 .super Lcom/google/common/util/concurrent/FluentFuture;
 .source "SourceFile"
 
@@ -43,8 +43,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/util/concurrent/FluentFuture;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -61,6 +63,7 @@
 .method public addListener(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/ForwardingFluentFuture;->delegate:Lcom/google/common/util/concurrent/ListenableFuture;
 
     invoke-interface {p0, p1, p2}, Lcom/google/common/util/concurrent/ListenableFuture;->addListener(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
@@ -71,6 +74,7 @@
 .method public cancel(Z)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/ForwardingFluentFuture;->delegate:Lcom/google/common/util/concurrent/ListenableFuture;
 
     invoke-interface {p0, p1}, Ljava/util/concurrent/Future;->cancel(Z)Z
@@ -142,6 +146,7 @@
 .method public isCancelled()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/ForwardingFluentFuture;->delegate:Lcom/google/common/util/concurrent/ListenableFuture;
 
     invoke-interface {p0}, Ljava/util/concurrent/Future;->isCancelled()Z
@@ -154,6 +159,7 @@
 .method public isDone()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/ForwardingFluentFuture;->delegate:Lcom/google/common/util/concurrent/ListenableFuture;
 
     invoke-interface {p0}, Ljava/util/concurrent/Future;->isDone()Z
@@ -166,6 +172,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/ForwardingFluentFuture;->delegate:Lcom/google/common/util/concurrent/ListenableFuture;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;

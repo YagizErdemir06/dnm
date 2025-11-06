@@ -1,22 +1,24 @@
-.class abstract Landroidx/constraintlayout/motion/widget/KeyPositionBase;
+.class public abstract Landroidx/constraintlayout/motion/widget/KeyPositionBase;
 .super Landroidx/constraintlayout/motion/widget/Key;
 .source "SourceFile"
 
 
 # static fields
-.field protected static final SELECTION_SLOPE:F = 20.0f
+.field public static final SELECTION_SLOPE:F = 20.0f
 
 
 # instance fields
-.field mCurveFit:I
+.field public mCurveFit:I
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Landroidx/constraintlayout/motion/widget/Key;-><init>()V
 
+    .line 2
     sget v0, Landroidx/constraintlayout/motion/widget/Key;->UNSET:I
 
     iput v0, p0, Landroidx/constraintlayout/motion/widget/KeyPositionBase;->mCurveFit:I

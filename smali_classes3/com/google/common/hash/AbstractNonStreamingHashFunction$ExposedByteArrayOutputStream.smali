@@ -1,4 +1,4 @@
-.class final Lcom/google/common/hash/AbstractNonStreamingHashFunction$ExposedByteArrayOutputStream;
+.class public final Lcom/google/common/hash/AbstractNonStreamingHashFunction$ExposedByteArrayOutputStream;
 .super Ljava/io/ByteArrayOutputStream;
 .source "SourceFile"
 
@@ -18,6 +18,7 @@
 .method public constructor <init>(I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Ljava/io/ByteArrayOutputStream;-><init>(I)V
 
     return-void
@@ -28,6 +29,7 @@
 .method public byteArray()[B
     .locals 0
 
+    .line 1
     iget-object p0, p0, Ljava/io/ByteArrayOutputStream;->buf:[B
 
     return-object p0
@@ -36,6 +38,7 @@
 .method public length()I
     .locals 0
 
+    .line 1
     iget p0, p0, Ljava/io/ByteArrayOutputStream;->count:I
 
     return p0
@@ -44,10 +47,12 @@
 .method public write(Ljava/nio/ByteBuffer;)V
     .locals 5
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+    .line 1
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v0
 
+    .line 2
     iget v1, p0, Ljava/io/ByteArrayOutputStream;->count:I
 
     add-int v2, v1, v0
@@ -60,12 +65,14 @@
 
     add-int/2addr v1, v0
 
+    .line 3
     invoke-static {v3, v1}, Ljava/util/Arrays;->copyOf([BI)[B
 
     move-result-object v1
 
     iput-object v1, p0, Ljava/io/ByteArrayOutputStream;->buf:[B
 
+    .line 4
     :cond_0
     iget-object v1, p0, Ljava/io/ByteArrayOutputStream;->buf:[B
 
@@ -73,6 +80,7 @@
 
     invoke-virtual {p1, v1, v2, v0}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
+    .line 5
     iget p1, p0, Ljava/io/ByteArrayOutputStream;->count:I
 
     add-int/2addr p1, v0

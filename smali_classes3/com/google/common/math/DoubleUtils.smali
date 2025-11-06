@@ -1,4 +1,4 @@
-.class final Lcom/google/common/math/DoubleUtils;
+.class public final Lcom/google/common/math/DoubleUtils;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -12,28 +12,29 @@
 
 
 # static fields
-.field static final EXPONENT_BIAS:I = 0x3ff
+.field public static final EXPONENT_BIAS:I = 0x3ff
 
-.field static final EXPONENT_MASK:J = 0x7ff0000000000000L
+.field public static final EXPONENT_MASK:J = 0x7ff0000000000000L
 
-.field static final IMPLICIT_BIT:J = 0x10000000000000L
+.field public static final IMPLICIT_BIT:J = 0x10000000000000L
 
-.field static final ONE_BITS:J = 0x3ff0000000000000L
+.field public static final ONE_BITS:J = 0x3ff0000000000000L
     .annotation build Lcom/google/common/annotations/VisibleForTesting;
     .end annotation
 .end field
 
-.field static final SIGNIFICAND_BITS:I = 0x34
+.field public static final SIGNIFICAND_BITS:I = 0x34
 
-.field static final SIGNIFICAND_MASK:J = 0xfffffffffffffL
+.field public static final SIGNIFICAND_MASK:J = 0xfffffffffffffL
 
-.field static final SIGN_MASK:J = -0x8000000000000000L
+.field public static final SIGN_MASK:J = -0x8000000000000000L
 
 
 # direct methods
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,10 +43,12 @@
 .method public static bigToDouble(Ljava/math/BigInteger;)D
     .locals 13
 
+    .line 1
     invoke-virtual {p0}, Ljava/math/BigInteger;->abs()Ljava/math/BigInteger;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Ljava/math/BigInteger;->bitLength()I
 
     move-result v1
@@ -58,6 +61,7 @@
 
     if-ge v1, v3, :cond_0
 
+    .line 3
     invoke-virtual {p0}, Ljava/math/BigInteger;->longValue()J
 
     move-result-wide v0
@@ -71,6 +75,7 @@
 
     if-le v1, v3, :cond_1
 
+    .line 4
     invoke-virtual {p0}, Ljava/math/BigInteger;->signum()I
 
     move-result p0
@@ -88,6 +93,7 @@
 
     sub-int/2addr v4, v2
 
+    .line 5
     invoke-virtual {v0, v4}, Ljava/math/BigInteger;->shiftRight(I)Ljava/math/BigInteger;
 
     move-result-object v5
@@ -118,6 +124,7 @@
 
     if-nez v5, :cond_3
 
+    .line 6
     invoke-virtual {v0}, Ljava/math/BigInteger;->getLowestSetBit()I
 
     move-result v0
@@ -146,6 +153,7 @@
 
     add-long/2addr v0, v7
 
+    .line 7
     invoke-virtual {p0}, Ljava/math/BigInteger;->signum()I
 
     move-result p0
@@ -158,6 +166,7 @@
 
     or-long/2addr v0, v2
 
+    .line 8
     invoke-static {v0, v1}, Ljava/lang/Double;->longBitsToDouble(J)D
 
     move-result-wide v0
@@ -168,6 +177,7 @@
 .method public static ensureNonNegative(D)D
     .locals 2
 
+    .line 1
     invoke-static {p0, p1}, Ljava/lang/Double;->isNaN(D)Z
 
     move-result v0
@@ -178,6 +188,7 @@
 
     const-wide/16 v0, 0x0
 
+    .line 2
     invoke-static {p0, p1, v0, v1}, Ljava/lang/Math;->max(DD)D
 
     move-result-wide p0
@@ -188,6 +199,7 @@
 .method public static getSignificand(D)J
     .locals 3
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/common/math/DoubleUtils;->isFinite(D)Z
 
     move-result v0
@@ -196,10 +208,12 @@
 
     invoke-static {v0, v1}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 2
     invoke-static {p0, p1}, Ljava/lang/Math;->getExponent(D)I
 
     move-result v0
 
+    .line 3
     invoke-static {p0, p1}, Ljava/lang/Double;->doubleToRawLongBits(D)J
 
     move-result-wide p0
@@ -230,6 +244,7 @@
 .method public static isFinite(D)Z
     .locals 0
 
+    .line 1
     invoke-static {p0, p1}, Ljava/lang/Math;->getExponent(D)I
 
     move-result p0
@@ -252,6 +267,7 @@
 .method public static isNormal(D)Z
     .locals 0
 
+    .line 1
     invoke-static {p0, p1}, Ljava/lang/Math;->getExponent(D)I
 
     move-result p0
@@ -276,6 +292,7 @@
 
     neg-double p0, p0
 
+    .line 1
     invoke-static {p0, p1}, Ljava/lang/Math;->nextUp(D)D
 
     move-result-wide p0
@@ -288,6 +305,7 @@
 .method public static scaleNormalize(D)D
     .locals 2
 
+    .line 1
     invoke-static {p0, p1}, Ljava/lang/Double;->doubleToRawLongBits(D)J
 
     move-result-wide p0
@@ -300,6 +318,7 @@
 
     or-long/2addr p0, v0
 
+    .line 2
     invoke-static {p0, p1}, Ljava/lang/Double;->longBitsToDouble(J)D
 
     move-result-wide p0

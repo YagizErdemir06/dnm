@@ -50,6 +50,17 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x10
+        }
+        names = {
+            "map",
+            "modelClass"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -62,10 +73,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera/resource/BaseObservableRequest;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/android/camera/resource/SimpleMultiJsonInfoRequest;->mFileMap:Ljava/util/LinkedHashMap;
 
+    .line 3
     iput-object p2, p0, Lcom/android/camera/resource/SimpleMultiJsonInfoRequest;->mModelClass:Ljava/lang/Class;
 
     return-void
@@ -73,7 +87,16 @@
 
 .method private convertStreamToString(Ljava/io/InputStream;)Ljava/lang/String;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "is"
+        }
+    .end annotation
 
+    .line 1
     new-instance p0, Ljava/util/Scanner;
 
     invoke-direct {p0, p1}, Ljava/util/Scanner;-><init>(Ljava/io/InputStream;)V
@@ -84,6 +107,7 @@
 
     move-result-object p0
 
+    .line 2
     invoke-virtual {p0}, Ljava/util/Scanner;->hasNext()Z
 
     move-result p1
@@ -105,12 +129,26 @@
 
 .method private decompressNativeResource(Landroid/content/Context;Lcom/android/camera/resource/BaseResourceItem;Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "resourceItem",
+            "resourceOutputFolder"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
+    .line 1
     iget-object p0, p2, Lcom/android/camera/resource/BaseResourceItem;->uri:Ljava/lang/String;
 
     const-string v0, "assets://"
@@ -125,8 +163,10 @@
 
     const v1, 0x8000
 
-    invoke-static {p1, p0, p3, v1}, Lcom/android/camera/a6;->a5(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)V
+    .line 2
+    invoke-static {p1, p0, p3, v1}, Ld/d/a/z5;->M4(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;I)V
 
+    .line 3
     invoke-virtual {p2, p3, v0}, Lcom/android/camera/resource/BaseResourceItem;->onDecompressFinished(Ljava/lang/String;Z)V
 
     return-void
@@ -134,7 +174,18 @@
 
 .method private getAssetCache(Ljava/lang/String;Landroid/content/Context;)Ljava/lang/String;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "assetName",
+            "context"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -145,6 +196,7 @@
 
     return-object v1
 
+    .line 2
     :cond_0
     invoke-virtual {p2}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
@@ -154,6 +206,7 @@
 
     move-result-object p2
 
+    .line 3
     :try_start_0
     invoke-virtual {p2, p1}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
 
@@ -163,6 +216,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 4
     :try_start_1
     invoke-direct {p0, p1}, Lcom/android/camera/resource/SimpleMultiJsonInfoRequest;->convertStreamToString(Ljava/io/InputStream;)Ljava/lang/String;
 
@@ -175,6 +229,7 @@
     :catchall_0
     move-exception p0
 
+    .line 5
     :try_start_2
     invoke-virtual {p1}, Ljava/io/InputStream;->close()V
     :try_end_2
@@ -195,6 +250,7 @@
     :goto_1
     if-eqz p1, :cond_2
 
+    .line 6
     invoke-virtual {p1}, Ljava/io/InputStream;->close()V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
@@ -206,6 +262,7 @@
 
     const-string p1, "SimpleMultiJsonInfoRequest"
 
+    .line 7
     invoke-static {p1, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_2
@@ -217,6 +274,19 @@
 # virtual methods
 .method public decompressResource(Landroid/content/Context;Lcom/android/camera/resource/BaseResourceList;Ljava/lang/String;)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "resourceList",
+            "parentFolder"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -233,10 +303,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p2}, Lcom/android/camera/resource/BaseResourceList;->getResourceList()Ljava/util/List;
 
     move-result-object p2
 
+    .line 2
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -255,8 +327,10 @@
 
     check-cast v0, Lcom/android/camera/resource/BaseResourceItem;
 
+    .line 3
     iget-object v1, v0, Lcom/android/camera/resource/BaseResourceItem;->uri:Ljava/lang/String;
 
+    .line 4
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -275,16 +349,19 @@
 
     move-result-object v2
 
+    .line 5
     invoke-virtual {v0, v2}, Lcom/android/camera/resource/BaseResourceItem;->simpleVerification(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
+    .line 6
     invoke-virtual {v0, v2}, Lcom/android/camera/resource/BaseResourceItem;->versionVerification(Ljava/lang/String;)Z
 
     move-result v3
 
+    .line 7
     invoke-virtual {v0, v2, v3}, Lcom/android/camera/resource/BaseResourceItem;->onDecompressFinished(Ljava/lang/String;Z)V
 
     if-eqz v3, :cond_1
@@ -294,12 +371,14 @@
     :cond_1
     const-string v3, "assets://"
 
+    .line 8
     invoke-virtual {v1, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 9
     invoke-direct {p0, p1, v0, v2}, Lcom/android/camera/resource/SimpleMultiJsonInfoRequest;->decompressNativeResource(Landroid/content/Context;Lcom/android/camera/resource/BaseResourceItem;Ljava/lang/String;)V
 
     goto :goto_0
@@ -311,6 +390,7 @@
 .method public getWorkThread()Lio/reactivex/Scheduler;
     .locals 0
 
+    .line 1
     invoke-static {}, Lio/reactivex/schedulers/Schedulers;->io()Lio/reactivex/Scheduler;
 
     move-result-object p0
@@ -320,6 +400,17 @@
 
 .method public scheduleRequest(Lcom/android/camera/resource/ResponseListener;Lcom/android/camera/resource/BaseResourceList;)V
     .locals 10
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "listener",
+            "resourceList"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -390,7 +481,7 @@
     check-cast v3, Ljava/lang/String;
 
     .line 7
-    invoke-static {}, Lcom/android/camera/CameraAppImpl;->o()Landroid/content/Context;
+    invoke-static {}, Lcom/android/camera/CameraAppImpl;->d()Landroid/content/Context;
 
     move-result-object v7
 
@@ -419,7 +510,7 @@
 
     .line 12
     :try_start_1
-    invoke-static {v3}, Ly7/m6;->F(Ljava/lang/String;)Z
+    invoke-static {v3}, Ld/d/a/d7/m8/b/z9;->F(Ljava/lang/String;)Z
 
     .line 13
     invoke-virtual {p0, v7, v5, v3}, Lcom/android/camera/resource/SimpleMultiJsonInfoRequest;->decompressResource(Landroid/content/Context;Lcom/android/camera/resource/BaseResourceList;Ljava/lang/String;)V
@@ -482,7 +573,7 @@
     const/4 p2, 0x3
 
     .line 19
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
 
@@ -513,7 +604,7 @@
     invoke-static {v8, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 22
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p0
 
@@ -530,6 +621,16 @@
 
 .method public bridge synthetic scheduleRequest(Lcom/android/camera/resource/ResponseListener;Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "listener",
+            "resourceList"
+        }
+    .end annotation
 
     .line 1
     check-cast p2, Lcom/android/camera/resource/BaseResourceList;

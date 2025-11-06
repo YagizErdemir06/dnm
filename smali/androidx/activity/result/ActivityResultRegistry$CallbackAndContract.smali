@@ -1,4 +1,4 @@
-.class Landroidx/activity/result/ActivityResultRegistry$CallbackAndContract;
+.class public Landroidx/activity/result/ActivityResultRegistry$CallbackAndContract;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -24,7 +24,7 @@
 
 
 # instance fields
-.field final mCallback:Landroidx/activity/result/ActivityResultCallback;
+.field public final mCallback:Landroidx/activity/result/ActivityResultCallback;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/activity/result/ActivityResultCallback<",
@@ -33,7 +33,7 @@
     .end annotation
 .end field
 
-.field final mContract:Landroidx/activity/result/contract/ActivityResultContract;
+.field public final mContract:Landroidx/activity/result/contract/ActivityResultContract;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/activity/result/contract/ActivityResultContract<",
@@ -56,10 +56,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/activity/result/ActivityResultRegistry$CallbackAndContract;->mCallback:Landroidx/activity/result/ActivityResultCallback;
 
+    .line 3
     iput-object p2, p0, Landroidx/activity/result/ActivityResultRegistry$CallbackAndContract;->mContract:Landroidx/activity/result/contract/ActivityResultContract;
 
     return-void

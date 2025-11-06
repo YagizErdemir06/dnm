@@ -1,4 +1,4 @@
-.class Lcom/google/common/eventbus/Dispatcher$PerThreadQueuedDispatcher$2;
+.class public Lcom/google/common/eventbus/Dispatcher$PerThreadQueuedDispatcher$2;
 .super Ljava/lang/ThreadLocal;
 .source "SourceFile"
 
@@ -26,6 +26,7 @@
 .method public constructor <init>(Lcom/google/common/eventbus/Dispatcher$PerThreadQueuedDispatcher;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
 
     return-void

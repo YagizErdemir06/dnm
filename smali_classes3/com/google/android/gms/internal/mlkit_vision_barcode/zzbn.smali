@@ -1,16 +1,17 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbn;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbn;
 .super Ljava/util/AbstractSet;
 .source "SourceFile"
 
 
 # instance fields
-.field final synthetic zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;
+.field public final synthetic zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbn;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;
 
     invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
@@ -23,6 +24,7 @@
 .method public final clear()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbn;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;->clear()V
@@ -37,6 +39,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbn;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;
 
     invoke-virtual {v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;->zzj()Ljava/util/Map;
@@ -45,6 +48,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -55,6 +59,7 @@
 
     return p0
 
+    .line 3
     :cond_0
     instance-of v0, p1, Ljava/util/Map$Entry;
 
@@ -62,10 +67,12 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     check-cast p1, Ljava/util/Map$Entry;
 
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbn;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;
 
+    .line 5
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -82,10 +89,13 @@
 
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;->zzc:[Ljava/lang/Object;
 
+    .line 6
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 7
     aget-object p0, p0, v0
 
+    .line 8
     invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -107,6 +117,7 @@
 .method public final iterator()Ljava/util/Iterator;
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbn;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;->zzj()Ljava/util/Map;
@@ -115,6 +126,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -128,6 +140,7 @@
     :cond_0
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbl;
 
+    .line 3
     invoke-direct {v0, p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbl;-><init>(Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;)V
 
     move-object p0, v0
@@ -143,6 +156,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbn;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;
 
     invoke-virtual {v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;->zzj()Ljava/util/Map;
@@ -151,6 +165,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -161,6 +176,7 @@
 
     return p0
 
+    .line 3
     :cond_0
     instance-of v0, p1, Ljava/util/Map$Entry;
 
@@ -168,6 +184,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 4
     check-cast p1, Ljava/util/Map$Entry;
 
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbn;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;
@@ -185,16 +202,19 @@
 
     move-result v0
 
+    .line 5
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v3
 
+    .line 6
     invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v4
 
     iget-object p1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbn;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;
 
+    .line 7
     invoke-static {p1}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;->zzh(Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;)Ljava/lang/Object;
 
     move-result-object v6
@@ -203,18 +223,22 @@
 
     iget-object v7, p1, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;->zza:[I
 
+    .line 8
     invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     iget-object v8, p1, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;->zzb:[Ljava/lang/Object;
 
+    .line 9
     invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     iget-object v9, p1, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;->zzc:[Ljava/lang/Object;
 
+    .line 10
     invoke-virtual {v9}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move v5, v0
 
+    .line 11
     invoke-static/range {v3 .. v9}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbu;->zzb(Ljava/lang/Object;Ljava/lang/Object;ILjava/lang/Object;[I[Ljava/lang/Object;[Ljava/lang/Object;)I
 
     move-result p1
@@ -228,6 +252,7 @@
     :cond_2
     iget-object v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbn;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;
 
+    .line 12
     invoke-virtual {v1, p1, v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;->zzn(II)V
 
     iget-object p1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbn;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;
@@ -238,10 +263,12 @@
 
     add-int/2addr v0, v2
 
+    .line 13
     invoke-static {p1, v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;->zzk(Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;I)V
 
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbn;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;
 
+    .line 14
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;->zzl()V
 
     const/4 p0, 0x1
@@ -255,6 +282,7 @@
 .method public final size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbn;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;->size()I

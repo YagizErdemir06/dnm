@@ -1,4 +1,4 @@
-.class Lcom/google/common/graph/MapIteratorCache;
+.class public Lcom/google/common/graph/MapIteratorCache;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -53,8 +53,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -69,6 +71,7 @@
 .method public static synthetic access$000(Lcom/google/common/graph/MapIteratorCache;)Ljava/util/Map;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/MapIteratorCache;->backingMap:Ljava/util/Map;
 
     return-object p0
@@ -77,6 +80,7 @@
 .method public static synthetic access$102(Lcom/google/common/graph/MapIteratorCache;Ljava/util/Map$Entry;)Ljava/util/Map$Entry;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/graph/MapIteratorCache;->cacheEntry:Ljava/util/Map$Entry;
 
     return-object p1
@@ -87,8 +91,10 @@
 .method public final clear()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/MapIteratorCache;->clearCache()V
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/graph/MapIteratorCache;->backingMap:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->clear()V
@@ -101,6 +107,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Lcom/google/common/graph/MapIteratorCache;->cacheEntry:Ljava/util/Map$Entry;
 
     return-void
@@ -113,6 +120,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/graph/MapIteratorCache;->getIfCached(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -155,14 +163,17 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/google/common/graph/MapIteratorCache;->getIfCached(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
+    .line 3
     invoke-virtual {p0, p1}, Lcom/google/common/graph/MapIteratorCache;->getWithoutCaching(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -190,16 +201,19 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/MapIteratorCache;->cacheEntry:Ljava/util/Map$Entry;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
 
     if-ne v0, p1, :cond_0
 
+    .line 3
     invoke-interface {p0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -225,8 +239,10 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/graph/MapIteratorCache;->backingMap:Ljava/util/Map;
 
     invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -250,12 +266,16 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/common/graph/MapIteratorCache;->clearCache()V
 
+    .line 4
     iget-object p0, p0, Lcom/google/common/graph/MapIteratorCache;->backingMap:Ljava/util/Map;
 
     invoke-interface {p0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -281,10 +301,13 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/graph/MapIteratorCache;->clearCache()V
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/graph/MapIteratorCache;->backingMap:Ljava/util/Map;
 
     invoke-interface {p0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -304,6 +327,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/graph/MapIteratorCache$1;
 
     invoke-direct {v0, p0}, Lcom/google/common/graph/MapIteratorCache$1;-><init>(Lcom/google/common/graph/MapIteratorCache;)V

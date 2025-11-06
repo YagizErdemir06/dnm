@@ -232,7 +232,6 @@
     <string name="accessibility_video_capture_button">वीडियो शूट करते समय फ़ोटो खींचने के लिए बटन</string>
     <string name="accessibility_video_pause_button">वीडियो रिकॉर्ड करना रोका गया</string>
     <string name="accessibility_video_resume_button">वीडियो रिकॉर्ड करना फिर से शुरू किया गया</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">वॉटरमार्क बंद है</string>
     <string name="accessibility_watermark_image_on">वॉटरमार्क चालू है</string>
     <string name="accessibility_watermark_text">वाटरमार्क एडजस्टमेंट पैनल खोलें</string>
@@ -240,16 +239,6 @@
     <string name="accessibility_zoom_button">ज़ूम मोड</string>
     <string name="actionbar_button_up_description">वापस</string>
     <string name="afternoon">दोपहर</string>
-    <string name="agent_flip_tbc">अंदरूनी स्क्रीन पर जारी रखें</string>
-    <string name="agent_function_max">अधिकतम मूल्य पर एडजस्ट किया गया</string>
-    <string name="agent_function_min">न्यूनतम मूल्य पर एडजस्ट किया गया</string>
-    <string name="agent_workspace_mode_not_supported">यह फ़ीचर समर्थित नहीं है</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"यह फ़ीचर समर्थित नहीं है.
-इसकी जगह फ़ोटो मोड खोला गया."</string>
-    <string name="agent_workspace_on">\"%1$s\" की फ़ोटोग्राफ़ी के लिए सेट किए गए पैरामीटर</string>
-    <string name="agent_workspace_tbc">अध्ययन दृश्य</string>
-    <string name="agent_workspace_tbc_use_default">"अध्ययन दृश्य…
-कैमरा पैरामीटर डिफ़ॉल्ट के रूप में सेट किए गए"</string>
     <string name="ai_agra_fort">आगरा का किला</string>
     <string name="ai_amber_fort">अंबर पैलेस</string>
     <string name="ai_baby">बच्चा</string>
@@ -476,7 +465,6 @@
     <string name="bluetooth_headset_permission_des">ब्लूटूथ इयरफ़ोन की कनेक्शन स्थिति निर्धारित करने और इयरफ़ोन के माइक्रोफ़ोन का उपयोग करके ऑडियो रिकॉर्ड करने के लिए</string>
     <string name="bluetooth_permission_not_ask_again">ब्लूटूथ ईयरफ़ोन्स से कनेक्ट कर पाने के लिए इस ऐप्प को सेटिंग्स में आस-पास मौजूद डिवाइस से कनेक्ट करने की अनुमति दें.</string>
     <string name="bokeh_use_hint">गहराई प्रभाव</string>
-    <string name="bottomsheet_action_expand_halfway">पूरी तरह बड़ा करें</string>
     <string name="burst_shoot_exit_button_text">बर्स्ट शूट बंद करें</string>
     <string name="button_fisheye_camera_title">फ़िशआई</string>
     <string name="button_front_camera_title">सेल्फी बनाएं</string>
@@ -517,8 +505,6 @@
     <string name="ccc_temperature_warning_msg">आपका डिवाइस बहुत ज़्यादा गर्म हो गया है. कैमरा %d सेकंड में बंद हो जाएगा. आपकी फ़ोटो या वीडियो अपने आप सेव कर ली जाएंंगी.</string>
     <string name="ccc_temperature_warning_title">डिवाइस बहुत ज़्यादा गर्म हो गया है</string>
     <string name="center_mark">बीच में होने का निशान</string>
-    <string name="character_counter_content_description">%2$d वर्णों में से %1$d वर्ण दर्ज किए गए</string>
-    <string name="character_counter_overflowed_content_description">अभी %1$d वर्ण हैं जबकि %2$d से ज़्यादा नहीं होने चाहिए</string>
     <string name="cinemaster_cancel">रद्द करें</string>
     <string name="cinemaster_confirm">बाहर निकलें</string>
     <string name="cinemaster_connect_exit_message">मल्टीकैम सेटअप से अभी बाहर निकलें?</string>
@@ -537,7 +523,6 @@
     <string name="cinemaster_toast_monitor_disconnect">मॉनीटर मल्टीकैम सेटअप से डिस्कनेक्ट हो गया है</string>
     <string name="cinemaster_toast_monitor_play_error">किसी त्रुटि की वजह से कैमरा %s मल्टीकैम सेटअप से डिस्कनेक्ट हो गया है</string>
     <string name="cinemaster_wifi_24g_tips">मॉनिटर फ़ीड की स्थिरता बढ़ाने के लिए %s GHz नेटवर्क में स्विच करें</string>
-    <string name="clear_text_end_icon_content_description">टेक्स्ट मिटाएं</string>
     <string name="clearable_edittext_clear_description">मिटाएं</string>
     <string name="clone_adjust">एडजस्ट करें</string>
     <string name="clone_copy_mode">फ्रेम फ्रीज़ करें</string>
@@ -831,7 +816,6 @@
     <string name="download_hint_cn">ऐसा लगता है कि आपने अपने डिवाइस को WLAN से कनेक्ट नहीं किया है. आइटमों को डाउनलोड करने के लिए, %1$s MB मोबाइल डेटा का इस्तेमाल करें?</string>
     <string name="download_hint_wifi">ऐसा लगता है कि आपने अपने डिवाइस को वाई-फ़ाई से कनेक्ट नहीं किया है. आइटमों को डाउनलोड करने के लिए, %1$s MB मोबाइल डेटा का इस्तेमाल करें?</string>
     <string name="download_in_progress">डाउनलोड कर रहा है…</string>
-    <string name="download_network_error">डाउनलोड नहीं किया जा सका. अपनी नेटवर्क सेटिंग्स जांचे.</string>
     <string name="download_title">डेटा उपयोग की चेतावनी</string>
     <string name="download_waiting">लंबित…</string>
     <string name="dual_camera_lens_covered_toast">लेंंस कवर किया हुआ है.</string>
@@ -882,7 +866,6 @@
     <string name="eras_ad">CE</string>
     <string name="eras_bc">BCE</string>
     <string name="error_fail_to_start_audio_capture">ऑडियो कैप्चर प्रारंभ नहीं कर सका</string>
-    <string name="error_icon_content_description">गड़बड़ी</string>
     <string name="esp_tip">बाहरी डिस्पले प्रीव्यू</string>
     <string name="evening">दोपहर</string>
     <string name="exo_controls_cc_disabled_description">सबटाइटल चालू करें</string>
@@ -937,7 +920,6 @@
     <string name="exo_track_surround_7_point_1">7.1 सराउंड साउंड</string>
     <string name="exo_track_unknown">अज्ञात</string>
     <string name="expand_button_title">बेहतर सेटिंग</string>
-    <string name="exposed_dropdown_menu_content_description">ड्रॉपडाउन मेन्यू दिखाएं</string>
     <string name="exposure_mode_adjust_title">एक्सपोज़र मोड</string>
     <string name="eye_light">आई स्पार्कल</string>
     <string name="eye_light_angel">फरिश्ता</string>
@@ -1096,7 +1078,6 @@
     <string name="hint_subtitle_prompt">आप सबटाइटल अब बोलकर लिख सकते हैंं</string>
     <string name="histogram_summary_tip">रीयल-टाइम एक्सपोज़र फ़ीडबैक दिखाएं</string>
     <string name="hunt_dual_water_mark">ड्युअल कैमरा वाटरमार्क स्वत: जोड़ा जाएगा.</string>
-    <string name="icon_content_description">डायलॉग का आइकॉन</string>
     <string name="id_card_mode_hint_back">अपनी आईडी के पीछे के हिस्से को स्कैन करें</string>
     <string name="id_card_mode_hint_front">अपनी आईडी के सामने के हिस्से को स्कैन करें</string>
     <string name="id_card_mode_use_hint_text_body">"एक छवि में अपनी आईडी के दोनों किनारों को मिलाएं.
@@ -1107,7 +1088,6 @@
     <string name="invisible_mode_dialog_summary">अभी कैमरा इस्तेमाल नहीं किया जा सकता. कैमरे का इस्तेमाल करने के लिए, सेटिंग्स में गुप्त मोड को बंद करें.</string>
     <string name="invisible_mode_dialog_title">आप गुप्त मोड में हैं</string>
     <string name="invisible_mode_dialog_to_close">सेटिंग्स</string>
-    <string name="item_view_role_description">टैब</string>
     <string name="kaleidoscope_fragment_tab_name">कलाइडस्कोप</string>
     <string name="lens_dirty_detected_content">"ऐसा लगता है कि आपके कैमरे का लेंस गंदा हो गया है.
 बेहतर ईफ़ेक्ट के लिए लेंस साफ करें."</string>
@@ -1230,18 +1210,6 @@
     <string name="manually_raw_tip">ज़ूम का उपयोग RAW फ़ॉर्मेट के साथ नहीं किया जा सकता</string>
     <string name="manually_ultra_raw_tip">अल्ट्रा RAW के साथ ज़ूम का उपयोग नहीं किया जा सकता</string>
     <string name="masterfilter_description_title">फ़िल्म फिल्टर</string>
-    <string name="material_clock_toggle_content_description">AM या PM चुनें</string>
-    <string name="material_hour_selection">घंटा चुनें</string>
-    <string name="material_hour_suffix">%1$s बजे</string>
-    <string name="material_minute_selection">मिनट चुनें</string>
-    <string name="material_minute_suffix">%1$s मिनट</string>
-    <string name="material_timepicker_am">पूर्वाह्न</string>
-    <string name="material_timepicker_clock_mode_description">समय इनपुट के लिए घड़ी मोड पर जाएं.</string>
-    <string name="material_timepicker_hour">घंटा</string>
-    <string name="material_timepicker_minute">मिनट</string>
-    <string name="material_timepicker_pm">अपराह्न</string>
-    <string name="material_timepicker_select_time">समय चुनें</string>
-    <string name="material_timepicker_text_input_mode_description">समय इनपुट के लिए लेख इनपुट मोड पर जाएं.</string>
     <string name="message_snap_double_confirm">वॉल्यूम बटन को देरतक दबाए रखने पर अभी NFC ट्रिगर होता है. इस फ़ीचर को बदलें?</string>
     <string name="midnight">रात</string>
     <string name="mimoji_app_name">Fun Cam</string>
@@ -1380,7 +1348,6 @@
     <string name="miuix_appcompat_delete_description">हटाएं</string>
     <string name="miuix_appcompat_deselect_all">सभी अचयनित करें</string>
     <string name="miuix_appcompat_deselect_all_description">सभी अचयनित करें</string>
-    <string name="miuix_appcompat_edit">संपादित करें</string>
     <string name="miuix_appcompat_search_action_mode_cancel">रद्द करें</string>
     <string name="miuix_appcompat_search_input_description">ऑनलाइन वीडियो खोजें</string>
     <string name="miuix_appcompat_select_all">सभी का चयन करें</string>
@@ -1488,42 +1455,6 @@
     <string name="msg_bubble_doc4_first_use">टेक्स्ट को पहचानने के लिए टैप करें</string>
     <string name="msg_toast_doc4_recognition_failed">कोई त्रुटि आई है. फिर से कोशिश करें.</string>
     <string name="msg_toast_doc4_text_not_found">टेक्स्ट नहीं मिला</string>
-    <string name="mtrl_badge_numberless_content_description">नई सूचना</string>
-    <string name="mtrl_chip_close_icon_content_description">%1$s हटाएं</string>
-    <string name="mtrl_exceed_max_badge_number_content_description">%1$d से ज़्यादा नई सूचनाएं</string>
-    <string name="mtrl_picker_a11y_next_month">अगले महीने पर जाएं</string>
-    <string name="mtrl_picker_a11y_prev_month">पिछले महीने पर जाएं</string>
-    <string name="mtrl_picker_announce_current_selection">फ़िलहाल, यह चुना गया है: %1$s</string>
-    <string name="mtrl_picker_cancel">रद्द करें</string>
-    <string name="mtrl_picker_confirm">ठीक है</string>
-    <string name="mtrl_picker_date_header_selected">%1$s</string>
-    <string name="mtrl_picker_date_header_title">तारीख चुनें</string>
-    <string name="mtrl_picker_date_header_unselected">चुनी गई तारीख</string>
-    <string name="mtrl_picker_day_of_week_column_header">दिनों का कॉलम: %1$s</string>
-    <string name="mtrl_picker_invalid_format">गलत फ़ॉर्मैट.</string>
-    <string name="mtrl_picker_invalid_format_example">उदाहरण: %1$s</string>
-    <string name="mtrl_picker_invalid_format_use">%1$s का इस्तेमाल करें</string>
-    <string name="mtrl_picker_invalid_range">तारीखों की अमान्य सीमा.</string>
-    <string name="mtrl_picker_navigate_to_year_description">साल %1$s पर जाएं</string>
-    <string name="mtrl_picker_out_of_range">तारीख की मान्य सीमा से बाहर: %1$s</string>
-    <string name="mtrl_picker_range_header_only_end_selected">शुरू होने की तारीख – %1$s</string>
-    <string name="mtrl_picker_range_header_only_start_selected">%1$s – खत्म होने की तारीख</string>
-    <string name="mtrl_picker_range_header_selected">%1$s – %2$s</string>
-    <string name="mtrl_picker_range_header_title">रेंज चुनें</string>
-    <string name="mtrl_picker_range_header_unselected">शुरू होने की तारीख – खत्म होने की तारीख</string>
-    <string name="mtrl_picker_save">सेव करें</string>
-    <string name="mtrl_picker_text_input_date_hint">तारीख</string>
-    <string name="mtrl_picker_text_input_date_range_end_hint">खत्म होने की तारीख</string>
-    <string name="mtrl_picker_text_input_date_range_start_hint">शुरू होने की तारीख</string>
-    <string name="mtrl_picker_text_input_day_abbr">d</string>
-    <string name="mtrl_picker_text_input_month_abbr">m</string>
-    <string name="mtrl_picker_text_input_year_abbr">y</string>
-    <string name="mtrl_picker_toggle_to_calendar_input_mode">कैलेंडर के इनपुट मोड पर स्विच करें</string>
-    <string name="mtrl_picker_toggle_to_day_selection">"'दिन चुनना' पर स्विच करने के लिए टैप करें"</string>
-    <string name="mtrl_picker_toggle_to_text_input_mode">टेक्स्ट के इनपुट मोड पर स्विच करें</string>
-    <string name="mtrl_picker_toggle_to_year_selection">"'साल चुनना' पर स्विच करने के लिए टैप करें"</string>
-    <string name="mtrl_timepicker_cancel">रद्द करें</string>
-    <string name="mtrl_timepicker_confirm">ठीक है</string>
     <string name="multi_window_mode_not_supported">मल्टी-विंडो मोड में कैमरा का उपयोग नहीं किया जा सकता</string>
     <string name="network_access_user_notice_agree">सहमत हूं</string>
     <string name="network_access_user_notice_message_live_video">&lt;Data>शॉर्ट वीडियो के लिए ईफ़ेक्ट्स, संगीत और अन्य फ़ीचर मुहैया कराने के लिए कैमरा को इंटरनेट से कनेक्ट करने की ज़रूरत है.&lt;br/>&lt;br/>नीचे \"सहमत\" पर टैप करके, आप हमारे &lt;a href =%1$s>उपयोगकर्ता अनुबंध&lt;/a> और &lt;a href =%2$s>गोपनीयता नीति&lt;/a> से सहमत होते हैं और कैमरा को इंटरनेट से कनेक्ट करने की अनुमति देते हैं.&lt;/Data></string>
@@ -1618,7 +1549,6 @@
     <string name="parameter_wb_title">श्वेत संतुलन</string>
     <string name="parameter_zoom_slider_description">अपने शॉट को सुचारू रूप से लंबे शॉट से क्लोज़-अप में बदलने के लिए ज़ूम स्लाइडर को क्षैतिज दिशा में ड्रैग करें.</string>
     <string name="parameter_zoom_slider_title">ज़ूम</string>
-    <string name="password_toggle_content_description">पासवर्ड दिखाएं</string>
     <string name="path_settings">सिस्टम ऐप्स/कैमरा/सेटिंग्स</string>
     <string name="photo_assistance_tips_title">लाइव टिप्स</string>
     <string name="pic_flaw_blink_more">ऐसा लगता है कि फ़्रेम में मौजूद किसी व्यक्ति ने अपनी आँखें बंद कर ली हैं</string>
@@ -2361,7 +2291,6 @@
     <string name="time_picker_label_hour">घं</string>
     <string name="time_picker_label_minute">मि</string>
     <string name="time_stamp_date_format">dd/MM/yyyy</string>
-    <string name="time_stamp_date_format_minute">dd/MM/yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">आप शूटिंग से पहले या दौरान किसी भी समय बैकग्राउंड को फ्रीज़ और अनफ्रीज़ कर सकते हैं.</string>
     <string name="timefreeze_guide_tip3">अपने विषय को फ्रेम के केंद्र में रहने के लिए कहें.</string>
     <string name="timefreeze_guide_tip4">ट्रैफिक रोक दें.</string>
@@ -2381,8 +2310,8 @@
     <string name="tip_ai_off">AI कैमरा: बंद</string>
     <string name="tip_beauty_mode_title1">पोर्ट्रेट शैली: ताज़ा</string>
     <string name="tip_beauty_mode_title2">पोर्ट्रेट शैली: फ़िल्म</string>
-    <string name="tip_cvtype_title1">शैली: Leica ऑथेंटिक</string>
-    <string name="tip_cvtype_title2">शैली: Leica वाइब्रेंट</string>
+    <string name="tip_cvtype_title1">शैली: लीका ऑथेंटिक</string>
+    <string name="tip_cvtype_title2">शैली: लीका वाइब्रेंट</string>
     <string name="tip_eis_off">स्थिर वीडियो: बंद</string>
     <string name="tip_eis_pro_off">स्थिर वीडियो प्रो: बंद</string>
     <string name="tip_flash_auto">फ़्लैश: ऑटो</string>
@@ -2399,7 +2328,7 @@
     <string name="tip_flash_screen_light_on">सॉफ़्ट फ़्लैश: चालू</string>
     <string name="tip_flash_soft_light_off">सॉफ़्ट फ़्लैश: बंद</string>
     <string name="tip_flash_soft_light_torch">सॉफ़्ट फ़्लैश: फ़्लैशलाइट मोड</string>
-    <string name="tip_flash_torch">फ़्लैश: फ़्लैशलाइट</string>
+    <string name="tip_flash_torch">फ़्लैश: हमेशा चालू</string>
     <string name="tip_friend_mode_connect_when_24GHz">प्रीव्यू की क्वालिटी को बेहतर करने के लिए %s GHz कनेक्शन का इस्तेमाल करें</string>
     <string name="tip_friend_mode_display_device_name_connect">शेयर किया गया प्रीव्यू</string>
     <string name="tip_friend_mode_display_device_name_disconnect">दूसरे डिवाइस ने इस सेशन को छोड़ दिया है</string>

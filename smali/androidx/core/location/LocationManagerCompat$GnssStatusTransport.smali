@@ -1,4 +1,4 @@
-.class Landroidx/core/location/LocationManagerCompat$GnssStatusTransport;
+.class public Landroidx/core/location/LocationManagerCompat$GnssStatusTransport;
 .super Landroid/location/GnssStatus$Callback;
 .source "SourceFile"
 
@@ -19,13 +19,14 @@
 
 
 # instance fields
-.field final mCallback:Landroidx/core/location/GnssStatusCompat$Callback;
+.field public final mCallback:Landroidx/core/location/GnssStatusCompat$Callback;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/core/location/GnssStatusCompat$Callback;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Landroid/location/GnssStatus$Callback;-><init>()V
 
     if-eqz p1, :cond_0
@@ -40,8 +41,10 @@
     :goto_0
     const-string v1, "invalid null callback"
 
+    .line 2
     invoke-static {v0, v1}, Landroidx/core/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 3
     iput-object p1, p0, Landroidx/core/location/LocationManagerCompat$GnssStatusTransport;->mCallback:Landroidx/core/location/GnssStatusCompat$Callback;
 
     return-void
@@ -52,6 +55,7 @@
 .method public onFirstFix(I)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/location/LocationManagerCompat$GnssStatusTransport;->mCallback:Landroidx/core/location/GnssStatusCompat$Callback;
 
     invoke-virtual {p0, p1}, Landroidx/core/location/GnssStatusCompat$Callback;->onFirstFix(I)V
@@ -62,6 +66,7 @@
 .method public onSatelliteStatusChanged(Landroid/location/GnssStatus;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/location/LocationManagerCompat$GnssStatusTransport;->mCallback:Landroidx/core/location/GnssStatusCompat$Callback;
 
     invoke-static {p1}, Landroidx/core/location/GnssStatusCompat;->wrap(Landroid/location/GnssStatus;)Landroidx/core/location/GnssStatusCompat;
@@ -76,6 +81,7 @@
 .method public onStarted()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/location/LocationManagerCompat$GnssStatusTransport;->mCallback:Landroidx/core/location/GnssStatusCompat$Callback;
 
     invoke-virtual {p0}, Landroidx/core/location/GnssStatusCompat$Callback;->onStarted()V
@@ -86,6 +92,7 @@
 .method public onStopped()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/location/LocationManagerCompat$GnssStatusTransport;->mCallback:Landroidx/core/location/GnssStatusCompat$Callback;
 
     invoke-virtual {p0}, Landroidx/core/location/GnssStatusCompat$Callback;->onStopped()V

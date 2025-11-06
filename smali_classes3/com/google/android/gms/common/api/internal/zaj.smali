@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/api/internal/zaj;
+.class public final Lcom/google/android/gms/common/api/internal/zaj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -16,7 +16,7 @@
     .end annotation
 .end field
 
-.field final synthetic zad:Lcom/google/android/gms/common/api/internal/zak;
+.field public final synthetic zad:Lcom/google/android/gms/common/api/internal/zak;
 
 
 # direct methods
@@ -49,6 +49,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -67,6 +68,7 @@
 
     iget p0, p0, Lcom/google/android/gms/common/api/internal/zaj;->zaa:I
 
+    .line 2
     invoke-virtual {v0, p1, p0}, Lcom/google/android/gms/common/api/internal/zap;->zah(Lcom/google/android/gms/common/ConnectionResult;I)V
 
     return-void

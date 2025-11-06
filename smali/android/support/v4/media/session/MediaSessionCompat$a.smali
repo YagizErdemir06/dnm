@@ -30,6 +30,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$a;->f:Landroid/support/v4/media/session/MediaSessionCompat;
 
     invoke-direct {p0}, Landroid/support/v4/media/session/MediaSessionCompat$b;-><init>()V

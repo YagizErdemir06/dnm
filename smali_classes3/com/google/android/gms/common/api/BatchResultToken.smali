@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field protected final mId:I
+.field public final mId:I
 
 
 # direct methods

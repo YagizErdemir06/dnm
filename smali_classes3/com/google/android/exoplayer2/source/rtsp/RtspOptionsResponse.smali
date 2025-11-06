@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/rtsp/RtspOptionsResponse;
+.class public final Lcom/google/android/exoplayer2/source/rtsp/RtspOptionsResponse;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -29,10 +29,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspOptionsResponse;->status:I
 
+    .line 3
     invoke-static {p2}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object p1

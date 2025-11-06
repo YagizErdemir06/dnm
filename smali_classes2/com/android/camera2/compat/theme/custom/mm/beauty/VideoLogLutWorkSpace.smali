@@ -1,12 +1,12 @@
 .class public Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkSpace;
-.super Lcom/xiaomi/microfilm/vlog/vv/t;
+.super Ld/o/t/f/c/x;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/xiaomi/microfilm/vlog/vv/t<",
+        "Ld/o/t/f/c/x<",
         "Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;",
         ">;"
     }
@@ -31,11 +31,12 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Ly7/m6;->j:Ljava/lang/String;
+    sget-object v1, Ld/d/a/d7/m8/b/z9;->j:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -55,7 +56,8 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lcom/xiaomi/microfilm/vlog/vv/t;-><init>()V
+    .line 1
+    invoke-direct {p0}, Ld/o/t/f/c/x;-><init>()V
 
     return-void
 .end method
@@ -64,9 +66,17 @@
 # virtual methods
 .method public add(Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "videoLogLutWorkspaceItem"
+        }
+    .end annotation
 
     .line 2
-    iget-object p0, p0, Lcom/xiaomi/microfilm/vlog/vv/t;->mItemList:Ljava/util/List;
+    iget-object p0, p0, Ld/o/t/f/c/x;->mItemList:Ljava/util/List;
 
     const/4 v0, 0x2
 
@@ -77,6 +87,14 @@
 
 .method public bridge synthetic add(Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "videoLogLutWorkspaceItem"
+        }
+    .end annotation
 
     .line 1
     check-cast p1, Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;
@@ -88,12 +106,13 @@
 
 .method public checkVersion()V
     .locals 5
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
     const-string p0, "VideoLogLutWorkSpace"
 
-    invoke-static {}, Lcom/android/camera/v2;->D0()Ljava/lang/String;
+    .line 1
+    invoke-static {}, Ld/d/a/d4;->C0()Ljava/lang/String;
 
     move-result-object v0
 
@@ -105,11 +124,13 @@
 
     if-nez v0, :cond_0
 
-    invoke-static {v1}, Lcom/android/camera/v2;->M8(Ljava/lang/String;)V
+    .line 2
+    invoke-static {v1}, Ld/d/a/d4;->I8(Ljava/lang/String;)V
 
+    .line 3
     new-instance v0, Ljava/io/File;
 
-    invoke-static {}, Lcom/android/camera/CameraAppImpl;->o()Landroid/content/Context;
+    invoke-static {}, Lcom/android/camera/CameraAppImpl;->d()Landroid/content/Context;
 
     move-result-object v1
 
@@ -123,12 +144,14 @@
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 5
     new-instance v1, Ljava/io/File;
 
     sget-object v2, Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkSpace;->LUT_ROOT_DIR:Ljava/lang/String;
@@ -142,14 +165,17 @@
 
     new-array v4, v2, [Ljava/lang/Object;
 
+    .line 6
     invoke-static {p0, v3, v4}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {v0, v1}, Ly7/m6;->h(Ljava/io/File;Ljava/io/File;)V
+    .line 7
+    invoke-static {v0, v1}, Ld/d/a/d7/m8/b/z9;->h(Ljava/io/File;Ljava/io/File;)V
 
     const-string v1, "checkVersion copy old lut X:"
 
     new-array v3, v2, [Ljava/lang/Object;
 
+    .line 8
     invoke-static {p0, v1, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -157,17 +183,20 @@
     goto :goto_0
 
     :catch_0
-    const-string v1, "checkVersion copy old lut failed"
+    new-array v1, v2, [Ljava/lang/Object;
 
-    new-array v3, v2, [Ljava/lang/Object;
+    const-string v3, "checkVersion copy old lut failed"
 
-    invoke-static {p0, v1, v3}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 9
+    invoke-static {p0, v3, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 10
     :goto_0
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     move-result v0
 
+    .line 11
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -192,8 +221,17 @@
 
 .method public contains(Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;)Z
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "targetItem"
+        }
+    .end annotation
 
-    iget-object p0, p0, Lcom/xiaomi/microfilm/vlog/vv/t;->mItemList:Ljava/util/List;
+    .line 1
+    iget-object p0, p0, Ld/o/t/f/c/x;->mItemList:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -212,6 +250,7 @@
 
     check-cast v0, Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;
 
+    .line 2
     invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;->getLutType()I
 
     move-result v1
@@ -220,6 +259,7 @@
 
     if-ne v1, v2, :cond_0
 
+    .line 3
     invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;->getCube()Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem$Cube;
 
     move-result-object v1
@@ -230,6 +270,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 4
     invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;->getCube()Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem$Cube;
 
     move-result-object v0
@@ -267,31 +308,37 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {v0}, Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;->createDefault(I)Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
+    .line 2
     invoke-static {v1}, Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;->createDefault(I)Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;
 
     move-result-object v1
 
     const/16 v2, 0x2c5
 
+    .line 3
     invoke-static {v2}, Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;->createDefault(I)Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/xiaomi/microfilm/vlog/vv/t;->mItemList:Ljava/util/List;
+    .line 4
+    iget-object v3, p0, Ld/o/t/f/c/x;->mItemList:Ljava/util/List;
 
     invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lcom/xiaomi/microfilm/vlog/vv/t;->mItemList:Ljava/util/List;
+    .line 5
+    iget-object v0, p0, Ld/o/t/f/c/x;->mItemList:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    iget-object p0, p0, Lcom/xiaomi/microfilm/vlog/vv/t;->mItemList:Ljava/util/List;
+    .line 6
+    iget-object p0, p0, Ld/o/t/f/c/x;->mItemList:Ljava/util/List;
 
     invoke-interface {p0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -300,8 +347,17 @@
 
 .method public getItem(I)Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "index"
+        }
+    .end annotation
 
-    iget-object p0, p0, Lcom/xiaomi/microfilm/vlog/vv/t;->mItemList:Ljava/util/List;
+    .line 1
+    iget-object p0, p0, Ld/o/t/f/c/x;->mItemList:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -315,6 +371,7 @@
 .method public getWorkspaceDir()Ljava/lang/String;
     .locals 0
 
+    .line 1
     sget-object p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkSpace;->LUT_ROOT_DIR:Ljava/lang/String;
 
     return-object p0
@@ -322,9 +379,17 @@
 
 .method public remove(Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "videoLogLutWorkspaceItem"
+        }
+    .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/xiaomi/microfilm/vlog/vv/t;->mItemList:Ljava/util/List;
+    iget-object v0, p0, Ld/o/t/f/c/x;->mItemList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -359,7 +424,7 @@
     if-eqz v1, :cond_0
 
     .line 4
-    iget-object p0, p0, Lcom/xiaomi/microfilm/vlog/vv/t;->mItemList:Ljava/util/List;
+    iget-object p0, p0, Ld/o/t/f/c/x;->mItemList:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
@@ -372,6 +437,14 @@
 
 .method public bridge synthetic remove(Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "videoLogLutWorkspaceItem"
+        }
+    .end annotation
 
     .line 1
     check-cast p1, Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;
@@ -383,10 +456,19 @@
 
 .method public removeIndex(I)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "index"
+        }
+    .end annotation
 
     if-ltz p1, :cond_1
 
-    iget-object v0, p0, Lcom/xiaomi/microfilm/vlog/vv/t;->mItemList:Ljava/util/List;
+    .line 1
+    iget-object v0, p0, Ld/o/t/f/c/x;->mItemList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -396,8 +478,9 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
-    iget-object v0, p0, Lcom/xiaomi/microfilm/vlog/vv/t;->mItemList:Ljava/util/List;
+    iget-object v0, p0, Ld/o/t/f/c/x;->mItemList:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -405,10 +488,12 @@
 
     check-cast v0, Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;
 
-    iget-object p0, p0, Lcom/xiaomi/microfilm/vlog/vv/t;->mItemList:Ljava/util/List;
+    .line 3
+    iget-object p0, p0, Ld/o/t/f/c/x;->mItemList:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
+    .line 4
     invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;->removeSelf()V
 
     :cond_1
@@ -416,171 +501,191 @@
     return-void
 .end method
 
-.method public restoreWorkspace(I)Z
-    .locals 8
+.method public restoreWorkspace()Z
+    .locals 9
 
-    iget-object p1, p0, Lcom/xiaomi/microfilm/vlog/vv/t;->mItemList:Ljava/util/List;
+    .line 1
+    iget-object v0, p0, Ld/o/t/f/c/x;->mItemList:Ljava/util/List;
 
-    invoke-interface {p1}, Ljava/util/List;->clear()V
+    invoke-interface {v0}, Ljava/util/List;->clear()V
 
+    .line 2
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkSpace;->createDefaultItem()V
 
-    new-instance p1, Ljava/io/File;
+    .line 3
+    new-instance v0, Ljava/io/File;
 
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkSpace;->getWorkspaceDir()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-direct {p1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    new-instance v0, Ljava/util/ArrayList;
+    .line 4
+    new-instance v1, Ljava/util/ArrayList;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
+    .line 5
     :try_start_0
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkSpace;->checkVersion()V
 
-    invoke-virtual {p1}, Ljava/io/File;->listFiles()[Ljava/io/File;
+    .line 6
+    invoke-virtual {v0}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
-    move-result-object p1
+    move-result-object v0
 
-    if-eqz p1, :cond_4
+    if-eqz v0, :cond_4
 
-    array-length v3, p1
+    .line 7
+    array-length v4, v0
 
-    if-gtz v3, :cond_0
+    if-gtz v4, :cond_0
 
     goto :goto_3
 
+    .line 8
     :cond_0
-    array-length v3, p1
+    array-length v4, v0
 
-    move v4, v1
+    move v5, v2
 
     :goto_0
-    if-ge v4, v3, :cond_5
+    if-ge v5, v4, :cond_5
 
-    aget-object v5, p1, v4
+    aget-object v6, v0, v5
 
-    invoke-virtual {v5}, Ljava/io/File;->isDirectory()Z
+    .line 9
+    invoke-virtual {v6}, Ljava/io/File;->isDirectory()Z
 
-    move-result v6
+    move-result v7
 
-    if-eqz v6, :cond_3
+    if-eqz v7, :cond_3
 
-    invoke-virtual {v5}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-static {v6}, Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;->createItem(Ljava/lang/String;)Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;->getCube()Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem$Cube;
+    .line 10
+    invoke-virtual {v6}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v7
 
-    if-eqz v7, :cond_2
-
-    invoke-virtual {v6}, Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;->getCube()Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem$Cube;
+    invoke-static {v7}, Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;->createItem(Ljava/lang/String;)Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;
 
     move-result-object v7
 
-    invoke-virtual {v7}, Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem$Cube;->getCubeId()Ljava/lang/String;
+    .line 11
+    invoke-virtual {v7}, Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;->getCube()Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem$Cube;
 
-    move-result-object v7
+    move-result-object v8
 
-    if-nez v7, :cond_1
+    if-eqz v8, :cond_2
+
+    invoke-virtual {v7}, Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;->getCube()Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem$Cube;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem$Cube;->getCubeId()Ljava/lang/String;
+
+    move-result-object v8
+
+    if-nez v8, :cond_1
 
     goto :goto_1
 
+    .line 12
     :cond_1
-    invoke-interface {v0, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v1, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
 
+    .line 13
     :cond_2
     :goto_1
-    invoke-static {v5}, Ly7/m6;->p(Ljava/io/File;)Z
+    invoke-static {v6}, Ld/d/a/d7/m8/b/z9;->p(Ljava/io/File;)Z
 
     goto :goto_2
 
+    .line 14
     :cond_3
-    invoke-static {v5}, Ly7/m6;->p(Ljava/io/File;)Z
+    invoke-static {v6}, Ld/d/a/d7/m8/b/z9;->p(Ljava/io/File;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :goto_2
-    add-int/lit8 v4, v4, 0x1
+    add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
     :cond_4
     :goto_3
-    return v2
+    return v3
 
     :catch_0
-    const-string p1, "restoreWorkspace failed!"
+    new-array v0, v2, [Ljava/lang/Object;
 
-    new-array v1, v1, [Ljava/lang/Object;
+    const-string v2, "VideoLogLutWorkSpace"
 
-    const-string v3, "VideoLogLutWorkSpace"
+    const-string v4, "restoreWorkspace failed!"
 
-    invoke-static {v3, p1, v1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 15
+    invoke-static {v2, v4, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 16
     :cond_5
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_4
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_7
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;
-
-    iget-object v1, p0, Lcom/xiaomi/microfilm/vlog/vv/t;->mItemList:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    :goto_4
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    const/16 v3, 0x21
+    if-eqz v1, :cond_7
 
-    if-le v1, v3, :cond_6
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    new-instance v1, Ljava/io/File;
+    move-result-object v1
 
-    invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;->getFolderPath()Ljava/lang/String;
+    check-cast v1, Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;
 
-    move-result-object v0
+    .line 17
+    iget-object v2, p0, Ld/o/t/f/c/x;->mItemList:Ljava/util/List;
 
-    invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    invoke-interface {v2}, Ljava/util/List;->size()I
 
-    invoke-static {v1}, Ly7/m6;->p(Ljava/io/File;)Z
+    move-result v2
+
+    const/16 v4, 0x21
+
+    if-le v2, v4, :cond_6
+
+    .line 18
+    new-instance v2, Ljava/io/File;
+
+    invoke-virtual {v1}, Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;->getFolderPath()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v2, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    .line 19
+    invoke-static {v2}, Ld/d/a/d7/m8/b/z9;->p(Ljava/io/File;)Z
 
     goto :goto_4
 
+    .line 20
     :cond_6
-    iget-object v1, p0, Lcom/xiaomi/microfilm/vlog/vv/t;->mItemList:Ljava/util/List;
+    iget-object v2, p0, Ld/o/t/f/c/x;->mItemList:Ljava/util/List;
 
-    const/4 v3, 0x2
+    const/4 v4, 0x2
 
-    invoke-interface {v1, v3, v0}, Ljava/util/List;->add(ILjava/lang/Object;)V
+    invoke-interface {v2, v4, v1}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
     goto :goto_4
 
     :cond_7
-    return v2
+    return v3
 .end method

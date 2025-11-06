@@ -40,6 +40,7 @@
 
     const-string p1, "com.google.android.gms.vision.barcode"
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/android/gms/internal/mlkit_vision_common/zzi;->zza(Ljava/lang/Object;Ljava/lang/Object;)V
 
     const/4 v0, 0x2
@@ -56,6 +57,7 @@
 
     const/4 p1, 0x0
 
+    .line 2
     invoke-static {p0, v0, p1}, Lcom/google/android/gms/internal/mlkit_vision_common/zzz;->zzg(I[Ljava/lang/Object;Lcom/google/android/gms/internal/mlkit_vision_common/zzq;)Lcom/google/android/gms/internal/mlkit_vision_common/zzz;
 
     move-result-object p0
@@ -70,6 +72,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -84,6 +87,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/mlkit_vision_common/zzr;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -107,6 +111,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_common/zzr;->zzb()Lcom/google/android/gms/internal/mlkit_vision_common/zzl;
 
     move-result-object p0
@@ -121,6 +126,7 @@
 .method public final bridge synthetic entrySet()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_common/zzr;->zzf()Lcom/google/android/gms/internal/mlkit_vision_common/zzs;
 
     move-result-object p0
@@ -141,6 +147,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     instance-of v0, p1, Ljava/util/Map;
 
@@ -151,9 +158,11 @@
     :goto_0
     return p0
 
+    .line 2
     :cond_1
     check-cast p1, Ljava/util/Map;
 
+    .line 3
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -191,6 +200,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/mlkit_vision_common/zzr;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -206,6 +216,7 @@
 .method public final hashCode()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_common/zzr;->zzf()Lcom/google/android/gms/internal/mlkit_vision_common/zzs;
 
     move-result-object p0
@@ -239,6 +250,7 @@
 .method public final bridge synthetic keySet()Ljava/util/Set;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_common/zzr;->zzb:Lcom/google/android/gms/internal/mlkit_vision_common/zzs;
 
     if-nez v0, :cond_0
@@ -261,6 +273,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -273,6 +286,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -292,6 +306,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -302,6 +317,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
+    .line 1
     invoke-interface {p0}, Ljava/util/Map;->size()I
 
     move-result v0
@@ -328,8 +344,10 @@
 
     const/16 v0, 0x7b
 
+    .line 2
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 3
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -357,8 +375,10 @@
 
     const-string v0, ", "
 
+    .line 4
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 5
     :cond_0
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -383,6 +403,7 @@
     :cond_1
     const/16 p0, 0x7d
 
+    .line 6
     invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -391,11 +412,13 @@
 
     return-object p0
 
+    .line 7
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    .line 8
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v2, "size cannot be negative but was: "
@@ -416,6 +439,7 @@
 .method public final bridge synthetic values()Ljava/util/Collection;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_common/zzr;->zzb()Lcom/google/android/gms/internal/mlkit_vision_common/zzl;
 
     move-result-object p0
@@ -429,6 +453,7 @@
 .method public final zzb()Lcom/google/android/gms/internal/mlkit_vision_common/zzl;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_common/zzr;->zzc:Lcom/google/android/gms/internal/mlkit_vision_common/zzl;
 
     if-nez v0, :cond_0
@@ -452,6 +477,7 @@
 .method public final zzf()Lcom/google/android/gms/internal/mlkit_vision_common/zzs;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_common/zzr;->zza:Lcom/google/android/gms/internal/mlkit_vision_common/zzs;
 
     if-nez v0, :cond_0

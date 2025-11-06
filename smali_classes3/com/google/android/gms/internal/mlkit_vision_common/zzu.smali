@@ -1,14 +1,14 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_common/zzu;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_common/zzu;
 .super Lcom/google/android/gms/internal/mlkit_vision_common/zzp;
 .source "SourceFile"
 
 
 # static fields
-.field static final zza:Lcom/google/android/gms/internal/mlkit_vision_common/zzp;
+.field public static final zza:Lcom/google/android/gms/internal/mlkit_vision_common/zzp;
 
 
 # instance fields
-.field final transient zzb:[Ljava/lang/Object;
+.field public final transient zzb:[Ljava/lang/Object;
 
 .field private final transient zzc:I
 
@@ -17,6 +17,7 @@
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_common/zzu;
 
     const/4 v1, 0x0
@@ -33,6 +34,7 @@
 .method public constructor <init>([Ljava/lang/Object;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/internal/mlkit_vision_common/zzp;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/gms/internal/mlkit_vision_common/zzu;->zzb:[Ljava/lang/Object;
@@ -47,6 +49,7 @@
 .method public final get(I)Ljava/lang/Object;
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/android/gms/internal/mlkit_vision_common/zzu;->zzc:I
 
     const-string v1, "index"
@@ -55,6 +58,7 @@
 
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_common/zzu;->zzb:[Ljava/lang/Object;
 
+    .line 2
     aget-object p0, p0, p1
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -73,13 +77,14 @@
 .method public final zza([Ljava/lang/Object;I)I
     .locals 2
 
+    .line 1
     iget-object p2, p0, Lcom/google/android/gms/internal/mlkit_vision_common/zzu;->zzb:[Ljava/lang/Object;
 
-    const/4 v0, 0x0
+    iget v0, p0, Lcom/google/android/gms/internal/mlkit_vision_common/zzu;->zzc:I
 
-    iget v1, p0, Lcom/google/android/gms/internal/mlkit_vision_common/zzu;->zzc:I
+    const/4 v1, 0x0
 
-    invoke-static {p2, v0, p1, v0, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-static {p2, v1, p1, v1, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     iget p0, p0, Lcom/google/android/gms/internal/mlkit_vision_common/zzu;->zzc:I
 

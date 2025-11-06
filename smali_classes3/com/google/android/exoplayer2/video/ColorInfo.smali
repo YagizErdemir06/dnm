@@ -45,9 +45,8 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/google/android/exoplayer2/video/a;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/video/a;-><init>()V
+    .line 1
+    sget-object v0, Ld/j/a/b/b3/a;->a:Ld/j/a/b/b3/a;
 
     sput-object v0, Lcom/google/android/exoplayer2/video/ColorInfo;->CREATOR:Lcom/google/android/exoplayer2/Bundleable$Creator;
 
@@ -61,27 +60,22 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/video/ColorInfo;->colorSpace:I
 
+    .line 3
     iput p2, p0, Lcom/google/android/exoplayer2/video/ColorInfo;->colorRange:I
 
+    .line 4
     iput p3, p0, Lcom/google/android/exoplayer2/video/ColorInfo;->colorTransfer:I
 
+    .line 5
     iput-object p4, p0, Lcom/google/android/exoplayer2/video/ColorInfo;->hdrStaticInfo:[B
 
     return-void
-.end method
-
-.method public static synthetic a(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/video/ColorInfo;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/video/ColorInfo;->lambda$static$0(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/video/ColorInfo;
-
-    move-result-object p0
-
-    return-object p0
 .end method
 
 .method public static isoColorPrimariesToColorSpace(I)I
@@ -175,6 +169,7 @@
 
     const/16 v0, 0x24
 
+    .line 1
     invoke-static {p0, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
     move-result-object p0
@@ -182,13 +177,15 @@
     return-object p0
 .end method
 
-.method private static synthetic lambda$static$0(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/video/ColorInfo;
+.method public static synthetic lambda$static$0(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/video/ColorInfo;
     .locals 5
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/video/ColorInfo;
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-static {v1}, Lcom/google/android/exoplayer2/video/ColorInfo;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -201,6 +198,7 @@
 
     const/4 v3, 0x1
 
+    .line 3
     invoke-static {v3}, Lcom/google/android/exoplayer2/video/ColorInfo;->keyForField(I)Ljava/lang/String;
 
     move-result-object v3
@@ -211,6 +209,7 @@
 
     const/4 v4, 0x2
 
+    .line 4
     invoke-static {v4}, Lcom/google/android/exoplayer2/video/ColorInfo;->keyForField(I)Ljava/lang/String;
 
     move-result-object v4
@@ -221,6 +220,7 @@
 
     const/4 v4, 0x3
 
+    .line 5
     invoke-static {v4}, Lcom/google/android/exoplayer2/video/ColorInfo;->keyForField(I)Ljava/lang/String;
 
     move-result-object v4
@@ -254,6 +254,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 1
     const-class v2, Lcom/google/android/exoplayer2/video/ColorInfo;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -264,9 +265,11 @@
 
     goto :goto_1
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/video/ColorInfo;
 
+    .line 3
     iget v2, p0, Lcom/google/android/exoplayer2/video/ColorInfo;->colorSpace:I
 
     iget v3, p1, Lcom/google/android/exoplayer2/video/ColorInfo;->colorSpace:I
@@ -289,6 +292,7 @@
 
     iget-object p1, p1, Lcom/google/android/exoplayer2/video/ColorInfo;->hdrStaticInfo:[B
 
+    .line 4
     invoke-static {p0, p1}, Ljava/util/Arrays;->equals([B[B)Z
 
     move-result p0
@@ -311,30 +315,35 @@
 .method public hashCode()I
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/video/ColorInfo;->hashCode:I
 
     if-nez v0, :cond_0
 
     const/16 v0, 0x20f
 
+    .line 2
     iget v1, p0, Lcom/google/android/exoplayer2/video/ColorInfo;->colorSpace:I
 
     add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 3
     iget v1, p0, Lcom/google/android/exoplayer2/video/ColorInfo;->colorRange:I
 
     add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 4
     iget v1, p0, Lcom/google/android/exoplayer2/video/ColorInfo;->colorTransfer:I
 
     add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 5
     iget-object v1, p0, Lcom/google/android/exoplayer2/video/ColorInfo;->hdrStaticInfo:[B
 
     invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
@@ -343,8 +352,10 @@
 
     add-int/2addr v0, v1
 
+    .line 6
     iput v0, p0, Lcom/google/android/exoplayer2/video/ColorInfo;->hashCode:I
 
+    .line 7
     :cond_0
     iget p0, p0, Lcom/google/android/exoplayer2/video/ColorInfo;->hashCode:I
 
@@ -354,12 +365,14 @@
 .method public toBundle()Landroid/os/Bundle;
     .locals 3
 
+    .line 1
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-static {v1}, Lcom/google/android/exoplayer2/video/ColorInfo;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -370,6 +383,7 @@
 
     const/4 v1, 0x1
 
+    .line 3
     invoke-static {v1}, Lcom/google/android/exoplayer2/video/ColorInfo;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -380,6 +394,7 @@
 
     const/4 v1, 0x2
 
+    .line 4
     invoke-static {v1}, Lcom/google/android/exoplayer2/video/ColorInfo;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -390,6 +405,7 @@
 
     const/4 v1, 0x3
 
+    .line 5
     invoke-static {v1}, Lcom/google/android/exoplayer2/video/ColorInfo;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -404,6 +420,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

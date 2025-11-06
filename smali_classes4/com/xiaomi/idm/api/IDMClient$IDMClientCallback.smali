@@ -18,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,6 +45,7 @@
 
     const-string p2, "onMiIdentityChanged, newIdHash = [%s], subChangeType = [%s]"
 
+    .line 1
     invoke-static {p1, p2, p0}, Lcom/xiaomi/idm/util/LogUtil;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
@@ -52,6 +54,7 @@
 .method public onBlockReceived(Ljava/lang/String;[B)V
     .locals 1
 
+    .line 1
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -92,11 +95,12 @@
 
     new-array p0, p0, [Ljava/lang/Object;
 
-    const/4 v0, 0x0
-
+    .line 1
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
+
+    const/4 v0, 0x0
 
     aput-object p1, p0, v0
 
@@ -116,6 +120,7 @@
 
     new-array p0, p0, [Ljava/lang/Object;
 
+    .line 1
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/IDMService;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -124,11 +129,11 @@
 
     aput-object v0, p0, v1
 
-    const/4 v0, 0x1
-
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/IDMService;->getServiceId()Ljava/lang/String;
 
     move-result-object p1
+
+    const/4 v0, 0x1
 
     aput-object p1, p0, v0
 
@@ -136,6 +141,7 @@
 
     const-string v0, "onInvitationAccepted, service name = [%s]\nserviceId = [%s]"
 
+    .line 2
     invoke-static {p1, v0, p0}, Lcom/xiaomi/idm/util/LogUtil;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
@@ -148,11 +154,12 @@
 
     new-array p0, p0, [Ljava/lang/Object;
 
-    const/4 v0, 0x0
-
+    .line 1
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
+
+    const/4 v0, 0x0
 
     aput-object p1, p0, v0
 
@@ -164,6 +171,7 @@
 
     const-string p2, "onInviteConnection, code = [%d], inviteStr = [%s]"
 
+    .line 2
     invoke-static {p1, p2, p0}, Lcom/xiaomi/idm/util/LogUtil;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
@@ -180,6 +188,7 @@
 
     const-string v0, "onRpcChannelConnected: No Impl"
 
+    .line 1
     invoke-static {p1, v0, p0}, Lcom/xiaomi/idm/util/LogUtil;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
@@ -196,6 +205,7 @@
 
     const-string v0, "onRpcChannelDisconnected: No Impl"
 
+    .line 1
     invoke-static {p1, v0, p0}, Lcom/xiaomi/idm/util/LogUtil;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
@@ -214,6 +224,7 @@
 
     new-array p0, p0, [Ljava/lang/Object;
 
+    .line 1
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/IDMService;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -222,11 +233,11 @@
 
     aput-object v0, p0, v1
 
-    const/4 v0, 0x1
-
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/IDMService;->getServiceId()Ljava/lang/String;
 
     move-result-object p1
+
+    const/4 v0, 0x1
 
     aput-object p1, p0, v0
 
@@ -234,6 +245,7 @@
 
     const-string v0, "onServiceLost, service name = [%s]\nserviceId = [%s]"
 
+    .line 2
     invoke-static {p1, v0, p0}, Lcom/xiaomi/idm/util/LogUtil;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void

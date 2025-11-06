@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;
+.class public final Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -165,18 +165,22 @@
 .method public constructor <init>(ZLcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->keepHistory:Z
 
     const/16 v0, 0x10
 
     new-array v0, v0, [J
 
+    .line 3
     iput-object v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->playbackStateDurationsMs:[J
 
     if-eqz p1, :cond_0
 
+    .line 4
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -193,6 +197,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 5
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -209,6 +214,7 @@
 
     if-eqz p1, :cond_2
 
+    .line 6
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -225,6 +231,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 7
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -241,6 +248,7 @@
 
     if-eqz p1, :cond_4
 
+    .line 8
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -257,6 +265,7 @@
 
     if-eqz p1, :cond_5
 
+    .line 9
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -273,18 +282,23 @@
 
     const/4 p1, 0x0
 
+    .line 10
     iput p1, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->currentPlaybackState:I
 
+    .line 11
     iget-wide v0, p2, Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;->realtimeMs:J
 
     iput-wide v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->currentPlaybackStateStartTimeMs:J
 
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 12
     iput-wide v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->firstReportedTimeMs:J
 
+    .line 13
     iput-wide v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->maxRebufferTimeMs:J
 
+    .line 14
     iget-object p2, p2, Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;->mediaPeriodId:Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;
 
     if-eqz p2, :cond_6
@@ -302,16 +316,20 @@
 
     const-wide/16 p1, -0x1
 
+    .line 15
     iput-wide p1, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->initialAudioFormatBitrate:J
 
+    .line 16
     iput-wide p1, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->initialVideoFormatBitrate:J
 
     const/4 p1, -0x1
 
+    .line 17
     iput p1, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->initialVideoFormatHeight:I
 
     const/high16 p1, 0x3f800000    # 1.0f
 
+    .line 18
     iput p1, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->currentPlaybackSpeed:F
 
     return-void
@@ -320,6 +338,7 @@
 .method private guessMediaTimeBasedOnElapsedRealtime(J)[J
     .locals 7
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->mediaTimeHistory:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -338,14 +357,17 @@
 
     const/4 v1, 0x0
 
+    .line 2
     aget-wide v3, v0, v1
 
+    .line 3
     aget-wide v5, v0, v2
 
     sub-long v3, p1, v3
 
     long-to-float v0, v3
 
+    .line 4
     iget p0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->currentPlaybackSpeed:F
 
     mul-float/2addr v0, p0
@@ -502,6 +524,7 @@
 .method private maybeRecordAudioFormatTime(J)V
     .locals 7
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->currentPlaybackState:I
 
     const/4 v1, 0x3
@@ -518,6 +541,7 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 2
     iget-wide v1, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->lastAudioFormatStartTimeMs:J
 
     sub-long v1, p1, v1
@@ -530,12 +554,14 @@
 
     float-to-long v1, v1
 
+    .line 3
     iget-wide v3, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->audioFormatTimeMs:J
 
     add-long/2addr v3, v1
 
     iput-wide v3, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->audioFormatTimeMs:J
 
+    .line 4
     iget-wide v3, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->audioFormatBitrateTimeProduct:J
 
     int-to-long v5, v0
@@ -546,6 +572,7 @@
 
     iput-wide v3, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->audioFormatBitrateTimeProduct:J
 
+    .line 5
     :cond_0
     iput-wide p1, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->lastAudioFormatStartTimeMs:J
 
@@ -555,6 +582,7 @@
 .method private maybeRecordVideoFormatTime(J)V
     .locals 9
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->currentPlaybackState:I
 
     const/4 v1, 0x3
@@ -565,6 +593,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 2
     iget-wide v1, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->lastVideoFormatStartTimeMs:J
 
     sub-long v1, p1, v1
@@ -577,18 +606,21 @@
 
     float-to-long v1, v1
 
+    .line 3
     iget v3, v0, Lcom/google/android/exoplayer2/Format;->height:I
 
     const/4 v4, -0x1
 
     if-eq v3, v4, :cond_0
 
+    .line 4
     iget-wide v5, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->videoFormatHeightTimeMs:J
 
     add-long/2addr v5, v1
 
     iput-wide v5, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->videoFormatHeightTimeMs:J
 
+    .line 5
     iget-wide v5, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->videoFormatHeightTimeProduct:J
 
     int-to-long v7, v3
@@ -599,17 +631,20 @@
 
     iput-wide v5, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->videoFormatHeightTimeProduct:J
 
+    .line 6
     :cond_0
     iget v0, v0, Lcom/google/android/exoplayer2/Format;->bitrate:I
 
     if-eq v0, v4, :cond_1
 
+    .line 7
     iget-wide v3, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->videoFormatBitrateTimeMs:J
 
     add-long/2addr v3, v1
 
     iput-wide v3, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->videoFormatBitrateTimeMs:J
 
+    .line 8
     iget-wide v3, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->videoFormatBitrateTimeProduct:J
 
     int-to-long v5, v0
@@ -620,6 +655,7 @@
 
     iput-wide v3, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->videoFormatBitrateTimeProduct:J
 
+    .line 9
     :cond_1
     iput-wide p1, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->lastVideoFormatStartTimeMs:J
 
@@ -633,6 +669,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->currentAudioFormat:Lcom/google/android/exoplayer2/Format;
 
     invoke-static {v0, p2}, Lcom/google/android/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -643,6 +680,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-wide v0, p1, Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;->realtimeMs:J
 
@@ -650,6 +688,7 @@
 
     if-eqz p2, :cond_1
 
+    .line 3
     iget-wide v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->initialAudioFormatBitrate:J
 
     const-wide/16 v2, -0x1
@@ -666,15 +705,19 @@
 
     int-to-long v0, v0
 
+    .line 4
     iput-wide v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->initialAudioFormatBitrate:J
 
+    .line 5
     :cond_1
     iput-object p2, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->currentAudioFormat:Lcom/google/android/exoplayer2/Format;
 
+    .line 6
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->keepHistory:Z
 
     if-eqz v0, :cond_2
 
+    .line 7
     iget-object p0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->audioFormatHistory:Ljava/util/List;
 
     new-instance v0, Lcom/google/android/exoplayer2/analytics/PlaybackStats$EventTimeAndFormat;
@@ -690,6 +733,7 @@
 .method private maybeUpdateMaxRebufferTimeMs(J)V
     .locals 4
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->currentPlaybackState:I
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->isRebufferingState(I)Z
@@ -698,10 +742,12 @@
 
     if-eqz v0, :cond_1
 
+    .line 2
     iget-wide v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->lastRebufferStartTimeMs:J
 
     sub-long/2addr p1, v0
 
+    .line 3
     iget-wide v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->maxRebufferTimeMs:J
 
     const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
@@ -714,6 +760,7 @@
 
     if-lez v0, :cond_1
 
+    .line 4
     :cond_0
     iput-wide p1, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->maxRebufferTimeMs:J
 
@@ -724,12 +771,14 @@
 .method private maybeUpdateMediaTimeHistory(JJ)V
     .locals 9
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->keepHistory:Z
 
     if-nez v0, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     iget v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->currentPlaybackState:I
 
@@ -751,6 +800,7 @@
 
     return-void
 
+    .line 3
     :cond_1
     iget-object v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->mediaTimeHistory:Ljava/util/List;
 
@@ -760,6 +810,7 @@
 
     if-nez v0, :cond_2
 
+    .line 4
     iget-object v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->mediaTimeHistory:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -780,6 +831,7 @@
 
     if-eqz v7, :cond_2
 
+    .line 5
     iget-object v7, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->mediaTimeHistory:Ljava/util/List;
 
     new-array v8, v3, [J
@@ -795,6 +847,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 6
     iget-object p0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->mediaTimeHistory:Ljava/util/List;
 
     new-array v0, v3, [J
@@ -807,6 +860,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_3
     iget-object p3, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->mediaTimeHistory:Ljava/util/List;
 
@@ -816,6 +870,7 @@
 
     if-nez p3, :cond_4
 
+    .line 8
     iget-object p3, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->mediaTimeHistory:Ljava/util/List;
 
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->guessMediaTimeBasedOnElapsedRealtime(J)[J
@@ -836,6 +891,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->currentVideoFormat:Lcom/google/android/exoplayer2/Format;
 
     invoke-static {v0, p2}, Lcom/google/android/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -846,6 +902,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-wide v0, p1, Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;->realtimeMs:J
 
@@ -853,6 +910,7 @@
 
     if-eqz p2, :cond_2
 
+    .line 3
     iget v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->initialVideoFormatHeight:I
 
     const/4 v1, -0x1
@@ -863,8 +921,10 @@
 
     if-eq v0, v1, :cond_1
 
+    .line 4
     iput v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->initialVideoFormatHeight:I
 
+    .line 5
     :cond_1
     iget-wide v2, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->initialVideoFormatBitrate:J
 
@@ -880,15 +940,19 @@
 
     int-to-long v0, v0
 
+    .line 6
     iput-wide v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->initialVideoFormatBitrate:J
 
+    .line 7
     :cond_2
     iput-object p2, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->currentVideoFormat:Lcom/google/android/exoplayer2/Format;
 
+    .line 8
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->keepHistory:Z
 
     if-eqz v0, :cond_3
 
+    .line 9
     iget-object p0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->videoFormatHistory:Ljava/util/List;
 
     new-instance v0, Lcom/google/android/exoplayer2/analytics/PlaybackStats$EventTimeAndFormat;
@@ -904,10 +968,12 @@
 .method private resolveNewPlaybackState(Lcom/google/android/exoplayer2/Player;)I
     .locals 5
 
+    .line 1
     invoke-interface {p1}, Lcom/google/android/exoplayer2/Player;->getPlaybackState()I
 
     move-result v0
 
+    .line 2
     iget-boolean v1, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->isSeeking:Z
 
     if-eqz v1, :cond_0
@@ -920,6 +986,7 @@
 
     return p0
 
+    .line 3
     :cond_0
     iget-boolean v1, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->hasFatalError:Z
 
@@ -929,15 +996,18 @@
 
     return p0
 
+    .line 4
     :cond_1
     iget-boolean v1, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->isForeground:Z
 
     if-nez v1, :cond_2
 
+    .line 5
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->startedLoading:Z
 
     return p0
 
+    .line 6
     :cond_2
     iget-boolean v1, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->isInterruptedByAd:Z
 
@@ -963,6 +1033,7 @@
 
     if-ne v0, v4, :cond_9
 
+    .line 7
     iget p0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->currentPlaybackState:I
 
     if-eqz p0, :cond_8
@@ -975,6 +1046,7 @@
 
     goto :goto_1
 
+    .line 8
     :cond_5
     invoke-interface {p1}, Lcom/google/android/exoplayer2/Player;->getPlayWhenReady()Z
 
@@ -986,6 +1058,7 @@
 
     return p0
 
+    .line 9
     :cond_6
     invoke-interface {p1}, Lcom/google/android/exoplayer2/Player;->getPlaybackSuppressionReason()I
 
@@ -1012,6 +1085,7 @@
 
     if-ne v0, v2, :cond_c
 
+    .line 10
     invoke-interface {p1}, Lcom/google/android/exoplayer2/Player;->getPlayWhenReady()Z
 
     move-result p0
@@ -1020,6 +1094,7 @@
 
     return v1
 
+    .line 11
     :cond_a
     invoke-interface {p1}, Lcom/google/android/exoplayer2/Player;->getPlaybackSuppressionReason()I
 
@@ -1035,6 +1110,7 @@
     :cond_c
     if-ne v0, v3, :cond_d
 
+    .line 12
     iget p1, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->currentPlaybackState:I
 
     if-eqz p1, :cond_d
@@ -1043,6 +1119,7 @@
 
     return p0
 
+    .line 13
     :cond_d
     iget p0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->currentPlaybackState:I
 
@@ -1052,6 +1129,7 @@
 .method private updatePlaybackState(ILcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;)V
     .locals 10
 
+    .line 1
     iget-wide v0, p2, Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;->realtimeMs:J
 
     iget-wide v2, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->currentPlaybackStateStartTimeMs:J
@@ -1074,12 +1152,14 @@
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 2
     iget-wide v3, p2, Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;->realtimeMs:J
 
     iget-wide v5, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->currentPlaybackStateStartTimeMs:J
 
     sub-long v5, v3, v5
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->playbackStateDurationsMs:[J
 
     iget v7, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->currentPlaybackState:I
@@ -1090,6 +1170,7 @@
 
     aput-wide v8, v0, v7
 
+    .line 4
     iget-wide v5, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->firstReportedTimeMs:J
 
     const-wide v8, -0x7fffffffffffffffL    # -4.9E-324
@@ -1098,8 +1179,10 @@
 
     if-nez v0, :cond_1
 
+    .line 5
     iput-wide v3, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->firstReportedTimeMs:J
 
+    .line 6
     :cond_1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->isJoinTimeInvalid:Z
 
@@ -1111,6 +1194,7 @@
 
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->isJoinTimeInvalid:Z
 
+    .line 7
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->hasBeenReady:Z
 
     invoke-static {p1}, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->isReadyState(I)Z
@@ -1121,6 +1205,7 @@
 
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->hasBeenReady:Z
 
+    .line 8
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->hasEnded:Z
 
     const/16 v3, 0xb
@@ -1134,6 +1219,7 @@
 
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->hasEnded:Z
 
+    .line 9
     iget v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->currentPlaybackState:I
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->isPausedState(I)Z
@@ -1148,6 +1234,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 10
     iget v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->pauseCount:I
 
     add-int/2addr v0, v2
@@ -1159,12 +1246,14 @@
 
     if-ne p1, v0, :cond_4
 
+    .line 11
     iget v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->seekCount:I
 
     add-int/2addr v0, v2
 
     iput v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->seekCount:I
 
+    .line 12
     :cond_4
     iget v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->currentPlaybackState:I
 
@@ -1180,16 +1269,19 @@
 
     if-eqz v0, :cond_5
 
+    .line 13
     iget v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->rebufferCount:I
 
     add-int/2addr v0, v2
 
     iput v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->rebufferCount:I
 
+    .line 14
     iget-wide v0, p2, Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;->realtimeMs:J
 
     iput-wide v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->lastRebufferStartTimeMs:J
 
+    .line 15
     :cond_5
     iget v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->currentPlaybackState:I
 
@@ -1207,27 +1299,33 @@
 
     if-ne p1, v1, :cond_6
 
+    .line 16
     iget v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->pauseBufferCount:I
 
     add-int/2addr v0, v2
 
     iput v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->pauseBufferCount:I
 
+    .line 17
     :cond_6
     iget-wide v0, p2, Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;->realtimeMs:J
 
     invoke-direct {p0, v0, v1}, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->maybeUpdateMaxRebufferTimeMs(J)V
 
+    .line 18
     iput p1, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->currentPlaybackState:I
 
+    .line 19
     iget-wide v0, p2, Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;->realtimeMs:J
 
     iput-wide v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->currentPlaybackStateStartTimeMs:J
 
+    .line 20
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->keepHistory:Z
 
     if-eqz v0, :cond_7
 
+    .line 21
     iget-object p0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->playbackStateHistory:Ljava/util/List;
 
     new-instance v0, Lcom/google/android/exoplayer2/analytics/PlaybackStats$EventTimeAndPlaybackState;
@@ -1247,26 +1345,32 @@
 
     move-object/from16 v0, p0
 
+    .line 1
     iget-object v1, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->playbackStateDurationsMs:[J
 
+    .line 2
     iget-object v2, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->mediaTimeHistory:Ljava/util/List;
 
     const-wide/16 v3, 0x0
 
     if-nez p1, :cond_1
 
+    .line 3
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v1
 
+    .line 4
     iget-object v5, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->playbackStateDurationsMs:[J
 
     const/16 v6, 0x10
 
+    .line 5
     invoke-static {v5, v6}, Ljava/util/Arrays;->copyOf([JI)[J
 
     move-result-object v5
 
+    .line 6
     iget-wide v6, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->currentPlaybackStateStartTimeMs:J
 
     sub-long v6, v1, v6
@@ -1275,6 +1379,7 @@
 
     move-result-wide v6
 
+    .line 7
     iget v8, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->currentPlaybackState:I
 
     aget-wide v9, v5, v8
@@ -1283,18 +1388,23 @@
 
     aput-wide v9, v5, v8
 
+    .line 8
     invoke-direct {v0, v1, v2}, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->maybeUpdateMaxRebufferTimeMs(J)V
 
+    .line 9
     invoke-direct {v0, v1, v2}, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->maybeRecordVideoFormatTime(J)V
 
+    .line 10
     invoke-direct {v0, v1, v2}, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->maybeRecordAudioFormatTime(J)V
 
+    .line 11
     new-instance v6, Ljava/util/ArrayList;
 
     iget-object v7, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->mediaTimeHistory:Ljava/util/List;
 
     invoke-direct {v6, v7}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
+    .line 12
     iget-boolean v7, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->keepHistory:Z
 
     if-eqz v7, :cond_0
@@ -1305,6 +1415,7 @@
 
     if-ne v7, v8, :cond_0
 
+    .line 13
     invoke-direct {v0, v1, v2}, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->guessMediaTimeBasedOnElapsedRealtime(J)[J
 
     move-result-object v1
@@ -1323,6 +1434,7 @@
 
     move-object v11, v2
 
+    .line 14
     :goto_0
     iget-boolean v1, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->isJoinTimeInvalid:Z
 
@@ -1355,11 +1467,13 @@
     :cond_4
     const/4 v6, 0x2
 
+    .line 15
     aget-wide v6, v9, v6
 
     :goto_3
     move-wide/from16 v18, v6
 
+    .line 16
     aget-wide v6, v9, v5
 
     cmp-long v3, v6, v3
@@ -1376,6 +1490,7 @@
     :goto_4
     if-eqz p1, :cond_6
 
+    .line 17
     iget-object v3, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->videoFormatHistory:Ljava/util/List;
 
     goto :goto_5
@@ -1392,6 +1507,7 @@
 
     if-eqz p1, :cond_7
 
+    .line 18
     iget-object v3, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->audioFormatHistory:Ljava/util/List;
 
     goto :goto_6
@@ -1406,10 +1522,12 @@
     :goto_6
     move-object/from16 v29, v3
 
+    .line 19
     new-instance v3, Lcom/google/android/exoplayer2/analytics/PlaybackStats;
 
     if-eqz p1, :cond_8
 
+    .line 20
     iget-object v4, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->playbackStateHistory:Ljava/util/List;
 
     goto :goto_7
@@ -1426,16 +1544,20 @@
 
     iget-wide v12, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->firstReportedTimeMs:J
 
+    .line 21
     iget-boolean v14, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->isForeground:Z
 
+    .line 22
     iget-boolean v4, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->hasBeenReady:Z
 
     xor-int/lit8 v15, v4, 0x1
 
+    .line 23
     iget-boolean v4, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->hasEnded:Z
 
     xor-int/lit8 v20, v1, 0x1
 
+    .line 24
     iget v1, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->pauseCount:I
 
     iget v6, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->pauseBufferCount:I
@@ -1448,6 +1570,7 @@
 
     iget-wide v5, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->maxRebufferTimeMs:J
 
+    .line 25
     iget-boolean v8, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->isAd:Z
 
     move/from16 v25, v8
@@ -1478,6 +1601,7 @@
 
     move-wide/from16 v38, v8
 
+    .line 26
     iget v8, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->initialVideoFormatHeight:I
 
     const/4 v9, -0x1
@@ -1493,6 +1617,7 @@
     :cond_9
     const/16 v42, 0x1
 
+    .line 27
     :goto_8
     iget-wide v8, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->initialVideoFormatBitrate:J
 
@@ -1511,6 +1636,7 @@
     :cond_a
     const/16 v45, 0x1
 
+    .line 28
     :goto_9
     iget-wide v8, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->initialAudioFormatBitrate:J
 
@@ -1544,6 +1670,7 @@
 
     move-wide/from16 v55, v8
 
+    .line 29
     iget v8, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->fatalErrorCount:I
 
     if-lez v8, :cond_c
@@ -1682,12 +1809,15 @@
 
     if-eqz v11, :cond_0
 
+    .line 1
     iget-wide v13, v1, Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;->realtimeMs:J
 
     invoke-direct {p0, v13, v14, v2, v3}, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->maybeUpdateMediaTimeHistory(JJ)V
 
+    .line 2
     iput-boolean v12, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->isSeeking:Z
 
+    .line 3
     :cond_0
     invoke-interface/range {p1 .. p1}, Lcom/google/android/exoplayer2/Player;->getPlaybackState()I
 
@@ -1699,8 +1829,10 @@
 
     if-eq v2, v3, :cond_1
 
+    .line 4
     iput-boolean v11, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->isSeeking:Z
 
+    .line 5
     :cond_1
     invoke-interface/range {p1 .. p1}, Lcom/google/android/exoplayer2/Player;->getPlaybackState()I
 
@@ -1714,24 +1846,29 @@
 
     if-eqz p6, :cond_3
 
+    .line 6
     :cond_2
     iput-boolean v11, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->isInterruptedByAd:Z
 
     :cond_3
     if-eqz v4, :cond_4
 
+    .line 7
     iput-boolean v12, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->hasFatalError:Z
 
+    .line 8
     iget v2, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->fatalErrorCount:I
 
     add-int/2addr v2, v12
 
     iput v2, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->fatalErrorCount:I
 
+    .line 9
     iget-boolean v2, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->keepHistory:Z
 
     if-eqz v2, :cond_5
 
+    .line 10
     iget-object v2, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->fatalErrorHistory:Ljava/util/List;
 
     new-instance v11, Lcom/google/android/exoplayer2/analytics/PlaybackStats$EventTimeAndException;
@@ -1742,6 +1879,7 @@
 
     goto :goto_0
 
+    .line 11
     :cond_4
     invoke-interface/range {p1 .. p1}, Lcom/google/android/exoplayer2/Player;->getPlayerError()Lcom/google/android/exoplayer2/PlaybackException;
 
@@ -1749,8 +1887,10 @@
 
     if-nez v2, :cond_5
 
+    .line 12
     iput-boolean v11, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->hasFatalError:Z
 
+    .line 13
     :cond_5
     :goto_0
     iget-boolean v2, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->isForeground:Z
@@ -1761,10 +1901,12 @@
 
     if-nez v2, :cond_7
 
+    .line 14
     invoke-interface/range {p1 .. p1}, Lcom/google/android/exoplayer2/Player;->getCurrentTracks()Lcom/google/android/exoplayer2/Tracks;
 
     move-result-object v2
 
+    .line 15
     invoke-virtual {v2, v3}, Lcom/google/android/exoplayer2/Tracks;->isTypeSelected(I)Z
 
     move-result v3
@@ -1773,8 +1915,10 @@
 
     if-nez v3, :cond_6
 
+    .line 16
     invoke-direct {p0, v1, v4}, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->maybeUpdateVideoFormat(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Format;)V
 
+    .line 17
     :cond_6
     invoke-virtual {v2, v12}, Lcom/google/android/exoplayer2/Tracks;->isTypeSelected(I)Z
 
@@ -1782,18 +1926,22 @@
 
     if-nez v2, :cond_7
 
+    .line 18
     invoke-direct {p0, v1, v4}, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->maybeUpdateAudioFormat(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Format;)V
 
     :cond_7
     if-eqz v6, :cond_8
 
+    .line 19
     invoke-direct {p0, v1, v6}, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->maybeUpdateVideoFormat(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Format;)V
 
     :cond_8
     if-eqz v7, :cond_9
 
+    .line 20
     invoke-direct {p0, v1, v7}, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->maybeUpdateAudioFormat(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Format;)V
 
+    .line 21
     :cond_9
     iget-object v2, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->currentVideoFormat:Lcom/google/android/exoplayer2/Format;
 
@@ -1807,36 +1955,43 @@
 
     if-eqz v8, :cond_a
 
+    .line 22
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/Format;->buildUpon()Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v2
 
     iget v3, v8, Lcom/google/android/exoplayer2/video/VideoSize;->width:I
 
+    .line 23
     invoke-virtual {v2, v3}, Lcom/google/android/exoplayer2/Format$Builder;->setWidth(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v2
 
     iget v3, v8, Lcom/google/android/exoplayer2/video/VideoSize;->height:I
 
+    .line 24
     invoke-virtual {v2, v3}, Lcom/google/android/exoplayer2/Format$Builder;->setHeight(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v2
 
+    .line 25
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/Format$Builder;->build()Lcom/google/android/exoplayer2/Format;
 
     move-result-object v2
 
+    .line 26
     invoke-direct {p0, v1, v2}, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->maybeUpdateVideoFormat(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Format;)V
 
     :cond_a
     if-eqz p9, :cond_b
 
+    .line 27
     iput-boolean v12, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->startedLoading:Z
 
     :cond_b
     if-eqz p8, :cond_c
 
+    .line 28
     iget-wide v2, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->audioUnderruns:J
 
     const-wide/16 v6, 0x1
@@ -1845,6 +2000,7 @@
 
     iput-wide v2, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->audioUnderruns:J
 
+    .line 29
     :cond_c
     iget-wide v2, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->droppedFrames:J
 
@@ -1856,12 +2012,14 @@
 
     iput-wide v2, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->droppedFrames:J
 
+    .line 30
     iget-wide v2, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->bandwidthTimeMs:J
 
     add-long v2, v2, p12
 
     iput-wide v2, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->bandwidthTimeMs:J
 
+    .line 31
     iget-wide v2, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->bandwidthBytes:J
 
     add-long v2, v2, p14
@@ -1870,16 +2028,19 @@
 
     if-eqz v5, :cond_d
 
+    .line 32
     iget v2, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->nonFatalErrorCount:I
 
     add-int/2addr v2, v12
 
     iput v2, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->nonFatalErrorCount:I
 
+    .line 33
     iget-boolean v2, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->keepHistory:Z
 
     if-eqz v2, :cond_d
 
+    .line 34
     iget-object v2, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->nonFatalErrorHistory:Ljava/util/List;
 
     new-instance v3, Lcom/google/android/exoplayer2/analytics/PlaybackStats$EventTimeAndException;
@@ -1888,17 +2049,20 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 35
     :cond_d
     invoke-direct/range {p0 .. p1}, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->resolveNewPlaybackState(Lcom/google/android/exoplayer2/Player;)I
 
     move-result v2
 
+    .line 36
     invoke-interface/range {p1 .. p1}, Lcom/google/android/exoplayer2/Player;->getPlaybackParameters()Lcom/google/android/exoplayer2/PlaybackParameters;
 
     move-result-object v3
 
     iget v3, v3, Lcom/google/android/exoplayer2/PlaybackParameters;->speed:F
 
+    .line 37
     iget v4, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->currentPlaybackState:I
 
     if-ne v4, v2, :cond_e
@@ -1909,31 +2073,39 @@
 
     if-eqz v4, :cond_10
 
+    .line 38
     :cond_e
     iget-wide v4, v1, Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;->realtimeMs:J
 
     if-eqz p3, :cond_f
 
+    .line 39
     iget-wide v9, v1, Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;->eventPlaybackPositionMs:J
 
+    .line 40
     :cond_f
     invoke-direct {p0, v4, v5, v9, v10}, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->maybeUpdateMediaTimeHistory(JJ)V
 
+    .line 41
     iget-wide v4, v1, Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;->realtimeMs:J
 
     invoke-direct {p0, v4, v5}, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->maybeRecordVideoFormatTime(J)V
 
+    .line 42
     iget-wide v4, v1, Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;->realtimeMs:J
 
     invoke-direct {p0, v4, v5}, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->maybeRecordAudioFormatTime(J)V
 
+    .line 43
     :cond_10
     iput v3, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->currentPlaybackSpeed:F
 
+    .line 44
     iget v3, v0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->currentPlaybackState:I
 
     if-eq v3, v2, :cond_11
 
+    .line 45
     invoke-direct {p0, v2, v1}, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->updatePlaybackState(ILcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;)V
 
     :cond_11
@@ -1943,6 +2115,7 @@
 .method public onFinished(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ZJ)V
     .locals 4
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->currentPlaybackState:I
 
     const/16 v1, 0xb
@@ -1956,20 +2129,24 @@
     :cond_0
     const/16 v1, 0xf
 
+    .line 2
     :cond_1
     :goto_0
     iget-wide v2, p1, Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;->realtimeMs:J
 
     invoke-direct {p0, v2, v3, p3, p4}, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->maybeUpdateMediaTimeHistory(JJ)V
 
+    .line 3
     iget-wide p2, p1, Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;->realtimeMs:J
 
     invoke-direct {p0, p2, p3}, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->maybeRecordVideoFormatTime(J)V
 
+    .line 4
     iget-wide p2, p1, Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;->realtimeMs:J
 
     invoke-direct {p0, p2, p3}, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->maybeRecordAudioFormatTime(J)V
 
+    .line 5
     invoke-direct {p0, v1, p1}, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->updatePlaybackState(ILcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;)V
 
     return-void
@@ -1980,6 +2157,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->isForeground:Z
 
     return-void
@@ -1990,10 +2168,12 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->isInterruptedByAd:Z
 
     const/4 v0, 0x0
 
+    .line 2
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/analytics/PlaybackStatsListener$PlaybackStatsTracker;->isSeeking:Z
 
     return-void

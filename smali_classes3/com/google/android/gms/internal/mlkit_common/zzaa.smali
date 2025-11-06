@@ -7,6 +7,7 @@
 .method public static zza(Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzz;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p0
@@ -27,6 +28,7 @@
 .method public static zzb(Ljava/lang/String;)Lcom/google/android/gms/internal/mlkit_common/zzz;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_common/zzz;
 
     const/4 v1, 0x0

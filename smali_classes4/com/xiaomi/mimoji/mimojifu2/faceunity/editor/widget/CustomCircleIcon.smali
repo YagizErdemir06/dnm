@@ -4,20 +4,28 @@
 
 
 # instance fields
-.field public a:Landroid/graphics/Paint;
+.field public c:Landroid/graphics/Paint;
 
-.field public b:Landroid/graphics/Paint;
+.field public d:Landroid/graphics/Paint;
 
-.field public c:I
+.field private f:I
 
-.field public d:I
+.field private g:I
 
-.field public e:Ljava/lang/Boolean;
+.field private j:Ljava/lang/Boolean;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     .line 1
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
@@ -25,7 +33,7 @@
     .line 2
     sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->e:Ljava/lang/Boolean;
+    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->j:Ljava/lang/Boolean;
 
     return-void
 .end method
@@ -36,6 +44,16 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     .line 3
     invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -43,10 +61,10 @@
     .line 4
     sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->e:Ljava/lang/Boolean;
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->j:Ljava/lang/Boolean;
 
     .line 5
-    invoke-virtual {p0, p1, p2}, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->a(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->a(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
 .end method
@@ -57,6 +75,18 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr"
+        }
+    .end annotation
 
     .line 6
     invoke-direct {p0, p1, p2, p3}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -64,20 +94,29 @@
     .line 7
     sget-object p3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    iput-object p3, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->e:Ljava/lang/Boolean;
+    iput-object p3, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->j:Ljava/lang/Boolean;
 
     .line 8
-    invoke-virtual {p0, p1, p2}, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->a(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->a(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(Landroid/content/Context;Landroid/util/AttributeSet;)V
+.method private a(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
-    sget-object v0, Lcom/android/camera/n4$u;->CircleImageView:[I
+    .line 1
+    sget-object v0, Ld/d/a/k5$u;->CircleImageView:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -85,7 +124,8 @@
 
     const p2, 0x418d5c29    # 17.67f
 
-    invoke-static {p2}, Lcom/android/camera/a6;->e0(F)I
+    .line 2
+    invoke-static {p2}, Ld/d/a/z5;->W(F)I
 
     move-result p2
 
@@ -95,11 +135,12 @@
 
     move-result p2
 
-    iput p2, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->c:I
+    iput p2, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->f:I
 
     const p2, 0x41b2a3d7    # 22.33f
 
-    invoke-static {p2}, Lcom/android/camera/a6;->e0(F)I
+    .line 3
+    invoke-static {p2}, Ld/d/a/z5;->W(F)I
 
     move-result p2
 
@@ -109,43 +150,51 @@
 
     move-result p2
 
-    iput p2, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->d:I
+    iput p2, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->g:I
 
+    .line 4
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
+    .line 5
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->a:Landroid/graphics/Paint;
+    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->c:Landroid/graphics/Paint;
 
+    .line 6
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->b:Landroid/graphics/Paint;
+    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->d:Landroid/graphics/Paint;
 
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->a:Landroid/graphics/Paint;
+    .line 7
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->c:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->a:Landroid/graphics/Paint;
+    .line 8
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->c:Landroid/graphics/Paint;
 
     sget-object p2, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->b:Landroid/graphics/Paint;
+    .line 9
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->d:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->b:Landroid/graphics/Paint;
+    .line 10
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->d:Landroid/graphics/Paint;
 
     const/high16 p2, 0x40c00000    # 6.0f
 
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->b:Landroid/graphics/Paint;
+    .line 11
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->d:Landroid/graphics/Paint;
 
     sget-object p1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
@@ -154,6 +203,8 @@
     return-void
 .end method
 
+
+# virtual methods
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 4
     .annotation build Landroid/annotation/SuppressLint;
@@ -162,33 +213,49 @@
         }
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "canvas"
+        }
+    .end annotation
+
+    .line 1
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v0
 
+    .line 3
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v1
 
+    .line 4
     div-int/lit8 v0, v0, 0x2
 
+    .line 5
     div-int/lit8 v1, v1, 0x2
 
     int-to-float v0, v0
 
     int-to-float v1, v1
 
-    iget v2, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->c:I
+    .line 6
+    iget v2, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->f:I
 
     int-to-float v2, v2
 
-    iget-object v3, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->a:Landroid/graphics/Paint;
+    iget-object v3, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->c:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->e:Ljava/lang/Boolean;
+    .line 7
+    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->j:Ljava/lang/Boolean;
 
     invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -196,11 +263,12 @@
 
     if-eqz v2, :cond_0
 
-    iget v2, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->d:I
+    .line 8
+    iget v2, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->g:I
 
     int-to-float v2, v2
 
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->b:Landroid/graphics/Paint;
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->d:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1, v2, p0}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
@@ -211,6 +279,7 @@
 .method public performClick()Z
     .locals 0
 
+    .line 1
     invoke-super {p0}, Landroid/view/View;->performClick()Z
 
     move-result p0
@@ -220,15 +289,26 @@
 
 .method public setColor(I)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "color"
+        }
+    .end annotation
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->a:Landroid/graphics/Paint;
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->c:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->b:Landroid/graphics/Paint;
+    .line 2
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->d:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 3
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     return-void
@@ -236,14 +316,24 @@
 
 .method public setSelected(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "selected"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroid/view/View;->setSelected(Z)V
 
+    .line 2
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->e:Ljava/lang/Boolean;
+    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu2/faceunity/editor/widget/CustomCircleIcon;->j:Ljava/lang/Boolean;
 
     return-void
 .end method

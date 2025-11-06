@@ -1,4 +1,4 @@
-.class final Landroidx/concurrent/futures/AbstractResolvableFuture$SetFuture;
+.class public final Landroidx/concurrent/futures/AbstractResolvableFuture$SetFuture;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -28,7 +28,7 @@
 
 
 # instance fields
-.field final future:Lcom/google/common/util/concurrent/ListenableFuture;
+.field public final future:Lcom/google/common/util/concurrent/ListenableFuture;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/util/concurrent/ListenableFuture<",
@@ -37,7 +37,7 @@
     .end annotation
 .end field
 
-.field final owner:Landroidx/concurrent/futures/AbstractResolvableFuture;
+.field public final owner:Landroidx/concurrent/futures/AbstractResolvableFuture;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/concurrent/futures/AbstractResolvableFuture<",
@@ -60,10 +60,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/concurrent/futures/AbstractResolvableFuture$SetFuture;->owner:Landroidx/concurrent/futures/AbstractResolvableFuture;
 
+    .line 3
     iput-object p2, p0, Landroidx/concurrent/futures/AbstractResolvableFuture$SetFuture;->future:Lcom/google/common/util/concurrent/ListenableFuture;
 
     return-void
@@ -74,6 +77,7 @@
 .method public run()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Landroidx/concurrent/futures/AbstractResolvableFuture$SetFuture;->owner:Landroidx/concurrent/futures/AbstractResolvableFuture;
 
     iget-object v0, v0, Landroidx/concurrent/futures/AbstractResolvableFuture;->value:Ljava/lang/Object;
@@ -82,6 +86,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-object v0, p0, Landroidx/concurrent/futures/AbstractResolvableFuture$SetFuture;->future:Lcom/google/common/util/concurrent/ListenableFuture;
 
@@ -89,6 +94,7 @@
 
     move-result-object v0
 
+    .line 3
     sget-object v1, Landroidx/concurrent/futures/AbstractResolvableFuture;->ATOMIC_HELPER:Landroidx/concurrent/futures/AbstractResolvableFuture$AtomicHelper;
 
     iget-object v2, p0, Landroidx/concurrent/futures/AbstractResolvableFuture$SetFuture;->owner:Landroidx/concurrent/futures/AbstractResolvableFuture;
@@ -99,6 +105,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     iget-object p0, p0, Landroidx/concurrent/futures/AbstractResolvableFuture$SetFuture;->owner:Landroidx/concurrent/futures/AbstractResolvableFuture;
 
     invoke-static {p0}, Landroidx/concurrent/futures/AbstractResolvableFuture;->complete(Landroidx/concurrent/futures/AbstractResolvableFuture;)V

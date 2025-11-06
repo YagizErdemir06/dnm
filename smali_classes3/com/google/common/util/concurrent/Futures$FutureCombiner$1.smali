@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/Futures$FutureCombiner$1;
+.class public Lcom/google/common/util/concurrent/Futures$FutureCombiner$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,13 +27,14 @@
 
 
 # instance fields
-.field final synthetic val$combiner:Ljava/lang/Runnable;
+.field public final synthetic val$combiner:Ljava/lang/Runnable;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/util/concurrent/Futures$FutureCombiner;Ljava/lang/Runnable;)V
     .locals 0
 
+    .line 1
     iput-object p2, p0, Lcom/google/common/util/concurrent/Futures$FutureCombiner$1;->val$combiner:Ljava/lang/Runnable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

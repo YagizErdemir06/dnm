@@ -1,4 +1,4 @@
-.class final Lcom/faceunity/core/camera/impl/FUCamera2Impl$chooseOptimalSize$comparator$1;
+.class public final Lcom/faceunity/core/camera/impl/FUCamera2Impl$chooseOptimalSize$comparator$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -28,23 +28,24 @@
     }
 .end annotation
 
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
     bv = {
         0x1,
         0x0,
         0x3
     }
     d1 = {
-        "\u0000\u0010\n\u0000\n\u0002\u0010\u0008\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0000\u001a\u00020\u00012\u000e\u0010\u0002\u001a\n \u0004*\u0004\u0018\u00010\u00030\u00032\u000e\u0010\u0005\u001a\n \u0004*\u0004\u0018\u00010\u00030\u0003H\n\u00a2\u0006\u0002\u0008\u0006"
+        "\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0008\n\u0002\u0008\u0003\u0010\u0007\u001a\u00020\u00042\u000e\u0010\u0002\u001a\n \u0001*\u0004\u0018\u00010\u00000\u00002\u000e\u0010\u0003\u001a\n \u0001*\u0004\u0018\u00010\u00000\u0000H\n\u00a2\u0006\u0004\u0008\u0005\u0010\u0006"
     }
     d2 = {
-        "<anonymous>",
-        "",
-        "lhs",
         "Landroid/util/Size;",
         "kotlin.jvm.PlatformType",
+        "lhs",
         "rhs",
-        "compare"
+        "",
+        "compare",
+        "(Landroid/util/Size;Landroid/util/Size;)I",
+        "<anonymous>"
     }
     k = 0x3
     mv = {
@@ -88,7 +89,7 @@
     const-string p0, "lhs"
 
     .line 2
-    invoke-static {p1, p0}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
 
@@ -106,7 +107,7 @@
 
     const-string p0, "rhs"
 
-    invoke-static {p2, p0}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p0}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/util/Size;->getWidth()I
 

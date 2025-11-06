@@ -23,21 +23,22 @@
 
 
 # static fields
-.field public static final enum a:Lcom/android/camera/ui/ToggleSwitch$e;
-
-.field public static final enum b:Lcom/android/camera/ui/ToggleSwitch$e;
-
 .field public static final enum c:Lcom/android/camera/ui/ToggleSwitch$e;
 
 .field public static final enum d:Lcom/android/camera/ui/ToggleSwitch$e;
 
-.field public static final synthetic e:[Lcom/android/camera/ui/ToggleSwitch$e;
+.field public static final enum f:Lcom/android/camera/ui/ToggleSwitch$e;
+
+.field public static final enum g:Lcom/android/camera/ui/ToggleSwitch$e;
+
+.field private static final synthetic j:[Lcom/android/camera/ui/ToggleSwitch$e;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 9
 
+    .line 1
     new-instance v0, Lcom/android/camera/ui/ToggleSwitch$e;
 
     const-string v1, "SWITCHING_ANIM_OFF"
@@ -46,7 +47,7 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/camera/ui/ToggleSwitch$e;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/camera/ui/ToggleSwitch$e;->a:Lcom/android/camera/ui/ToggleSwitch$e;
+    sput-object v0, Lcom/android/camera/ui/ToggleSwitch$e;->c:Lcom/android/camera/ui/ToggleSwitch$e;
 
     new-instance v1, Lcom/android/camera/ui/ToggleSwitch$e;
 
@@ -56,7 +57,7 @@
 
     invoke-direct {v1, v3, v4}, Lcom/android/camera/ui/ToggleSwitch$e;-><init>(Ljava/lang/String;I)V
 
-    sput-object v1, Lcom/android/camera/ui/ToggleSwitch$e;->b:Lcom/android/camera/ui/ToggleSwitch$e;
+    sput-object v1, Lcom/android/camera/ui/ToggleSwitch$e;->d:Lcom/android/camera/ui/ToggleSwitch$e;
 
     new-instance v3, Lcom/android/camera/ui/ToggleSwitch$e;
 
@@ -66,7 +67,7 @@
 
     invoke-direct {v3, v5, v6}, Lcom/android/camera/ui/ToggleSwitch$e;-><init>(Ljava/lang/String;I)V
 
-    sput-object v3, Lcom/android/camera/ui/ToggleSwitch$e;->c:Lcom/android/camera/ui/ToggleSwitch$e;
+    sput-object v3, Lcom/android/camera/ui/ToggleSwitch$e;->f:Lcom/android/camera/ui/ToggleSwitch$e;
 
     new-instance v5, Lcom/android/camera/ui/ToggleSwitch$e;
 
@@ -76,7 +77,7 @@
 
     invoke-direct {v5, v7, v8}, Lcom/android/camera/ui/ToggleSwitch$e;-><init>(Ljava/lang/String;I)V
 
-    sput-object v5, Lcom/android/camera/ui/ToggleSwitch$e;->d:Lcom/android/camera/ui/ToggleSwitch$e;
+    sput-object v5, Lcom/android/camera/ui/ToggleSwitch$e;->g:Lcom/android/camera/ui/ToggleSwitch$e;
 
     const/4 v7, 0x4
 
@@ -90,19 +91,26 @@
 
     aput-object v5, v7, v8
 
-    sput-object v7, Lcom/android/camera/ui/ToggleSwitch$e;->e:[Lcom/android/camera/ui/ToggleSwitch$e;
+    .line 2
+    sput-object v7, Lcom/android/camera/ui/ToggleSwitch$e;->j:[Lcom/android/camera/ui/ToggleSwitch$e;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;I)V
+.method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "$enum$name",
+            "$enum$ordinal"
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -110,7 +118,16 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/android/camera/ui/ToggleSwitch$e;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8000
+        }
+        names = {
+            "name"
+        }
+    .end annotation
 
+    .line 1
     const-class v0, Lcom/android/camera/ui/ToggleSwitch$e;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -125,7 +142,8 @@
 .method public static values()[Lcom/android/camera/ui/ToggleSwitch$e;
     .locals 1
 
-    sget-object v0, Lcom/android/camera/ui/ToggleSwitch$e;->e:[Lcom/android/camera/ui/ToggleSwitch$e;
+    .line 1
+    sget-object v0, Lcom/android/camera/ui/ToggleSwitch$e;->j:[Lcom/android/camera/ui/ToggleSwitch$e;
 
     invoke-virtual {v0}, [Lcom/android/camera/ui/ToggleSwitch$e;->clone()Ljava/lang/Object;
 

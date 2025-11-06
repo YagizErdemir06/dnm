@@ -7,6 +7,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -63,6 +64,7 @@
 
     return p0
 
+    .line 1
     :cond_0
     new-instance p0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -76,6 +78,7 @@
     .annotation runtime Lorg/checkerframework/dataflow/qual/Pure;
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -88,6 +91,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -192,7 +196,7 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object p0
 .end method

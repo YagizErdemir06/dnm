@@ -7,6 +7,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -121,6 +122,7 @@
 
     const-string v0, "XML_EVENT"
 
+    .line 1
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -134,6 +136,7 @@
     :cond_0
     const-string v0, "START_ELEMENT"
 
+    .line 2
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -147,6 +150,7 @@
     :cond_1
     const-string v0, "END_ELEMENT"
 
+    .line 3
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -160,6 +164,7 @@
     :cond_2
     const-string v0, "PROCESSING_INSTRUCTION"
 
+    .line 4
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -173,6 +178,7 @@
     :cond_3
     const-string v0, "CHARACTER_DATA"
 
+    .line 5
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -186,6 +192,7 @@
     :cond_4
     const-string v0, "COMMENT"
 
+    .line 6
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -199,6 +206,7 @@
     :cond_5
     const-string v0, "SPACE"
 
+    .line 7
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -212,6 +220,7 @@
     :cond_6
     const-string v0, "NULL_ELEMENT"
 
+    .line 8
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -225,6 +234,7 @@
     :cond_7
     const-string v0, "START_DOCUMENT"
 
+    .line 9
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -238,6 +248,7 @@
     :cond_8
     const-string v0, "END_DOCUMENT"
 
+    .line 10
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -251,6 +262,7 @@
     :cond_9
     const-string v0, "START_PREFIX_MAPPING"
 
+    .line 11
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -264,6 +276,7 @@
     :cond_a
     const-string v0, "CHANGE_PREFIX_MAPPING"
 
+    .line 12
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -277,6 +290,7 @@
     :cond_b
     const-string v0, "ENTITY_REFERENCE"
 
+    .line 13
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -290,6 +304,7 @@
     :cond_c
     const-string v0, "END_PREFIX_MAPPING"
 
+    .line 14
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0

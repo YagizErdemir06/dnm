@@ -34,14 +34,17 @@
 .method public createHashCode()I
     .locals 1
 
+    .line 1
     invoke-super {p0}, Lorg/dom4j/Namespace;->createHashCode()I
 
     move-result v0
 
+    .line 2
     iget-object p0, p0, Lorg/dom4j/tree/DefaultNamespace;->parent:Lorg/dom4j/Element;
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
     move-result p0
@@ -55,20 +58,24 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
 
+    .line 1
     instance-of v0, p1, Lorg/dom4j/tree/DefaultNamespace;
 
     if-eqz v0, :cond_0
 
+    .line 2
     move-object v0, p1
 
     check-cast v0, Lorg/dom4j/tree/DefaultNamespace;
 
+    .line 3
     iget-object v0, v0, Lorg/dom4j/tree/DefaultNamespace;->parent:Lorg/dom4j/Element;
 
     iget-object v1, p0, Lorg/dom4j/tree/DefaultNamespace;->parent:Lorg/dom4j/Element;
 
     if-ne v0, v1, :cond_0
 
+    .line 4
     invoke-super {p0, p1}, Lorg/dom4j/Namespace;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -84,6 +91,7 @@
 .method public getParent()Lorg/dom4j/Element;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/DefaultNamespace;->parent:Lorg/dom4j/Element;
 
     return-object p0
@@ -92,6 +100,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lorg/dom4j/Namespace;->hashCode()I
 
     move-result p0
@@ -110,6 +119,7 @@
 .method public setParent(Lorg/dom4j/Element;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/tree/DefaultNamespace;->parent:Lorg/dom4j/Element;
 
     return-void

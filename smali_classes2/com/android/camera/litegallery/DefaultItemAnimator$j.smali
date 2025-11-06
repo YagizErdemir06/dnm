@@ -29,17 +29,39 @@
 # direct methods
 .method public constructor <init>(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;IIII)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "holder",
+            "fromX",
+            "fromY",
+            "toX",
+            "toY"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$j;->a:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
+    .line 3
     iput p2, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$j;->b:I
 
+    .line 4
     iput p3, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$j;->c:I
 
+    .line 5
     iput p4, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$j;->d:I
 
+    .line 6
     iput p5, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$j;->e:I
 
     return-void

@@ -6,40 +6,32 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lmiuix/appcompat/internal/app/widget/ActionBarImpl$h;,
+        Lmiuix/appcompat/internal/app/widget/ActionBarImpl$e;,
         Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
     }
 .end annotation
 
 
 # static fields
-.field public static final j0:I = 0x0
+.field private static final h:I = 0x0
 
-.field public static final k0:I = 0x1
+.field private static final i:I = 0x1
 
-.field public static final l0:I = -0x1
+.field private static final j:I = -0x1
 
-.field public static final m0:Z = true
+.field public static final k:Z = true
 
-.field public static n0:Landroidx/appcompat/app/ActionBar$TabListener; = null
-
-.field public static final o0:Ljava/lang/Integer;
-
-.field public static final p0:I = -0x1
+.field private static l:Landroidx/appcompat/app/ActionBar$TabListener;
 
 
 # instance fields
-.field public final A:Ljava/util/HashSet;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/HashSet<",
-            "Lqp/a;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private A:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
-.field public B:Ljava/util/ArrayList;
+.field private B:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+.field private C:Lk/b/e/b/a/h;
+
+.field private D:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -49,17 +41,17 @@
     .end annotation
 .end field
 
-.field public C:Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
+.field private E:Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
 
-.field public D:Z
+.field private F:Z
 
-.field public E:Landroidx/fragment/app/FragmentManager;
+.field private G:Landroidx/fragment/app/FragmentManager;
 
-.field public F:I
+.field private H:I
 
-.field public G:Z
+.field private I:Z
 
-.field public H:Ljava/util/ArrayList;
+.field private J:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -69,360 +61,214 @@
     .end annotation
 .end field
 
-.field public I:I
+.field private K:I
 
-.field public J:I
+.field private L:I
 
-.field public K:Z
+.field private M:Z
 
-.field public L:Z
+.field private N:Z
 
-.field public M:Z
+.field private O:Z
 
-.field public N:Z
+.field private P:Z
 
-.field public O:Z
+.field private Q:Z
 
-.field public P:Z
+.field private R:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
-.field public Q:Ljp/b;
+.field private S:Lk/b/e/e/b$a;
 
-.field public R:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+.field private T:Lmiuix/animation/IStateStyle;
 
-.field public S:Ldp/b$a;
+.field private U:Lmiuix/animation/IStateStyle;
 
-.field public T:Lmiuix/animation/IStateStyle;
+.field private V:I
 
-.field public U:Z
+.field private W:Z
 
-.field public V:Lmiuix/animation/IStateStyle;
+.field private X:I
 
-.field public W:I
+.field public m:Landroid/view/ActionMode;
 
-.field public X:Z
+.field private n:Landroid/content/Context;
 
-.field public Y:I
+.field private o:Landroid/content/Context;
 
-.field public Z:Lxo/c;
+.field private p:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
 
-.field public a0:I
+.field private q:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
-.field public b0:Landroid/graphics/Rect;
+.field private r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
-.field public c0:I
+.field private s:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
-.field public d0:I
+.field private t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
-.field public e0:I
+.field private u:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
 
-.field public f0:I
+.field private v:Landroid/view/View;
 
-.field public g0:I
+.field private w:Landroid/view/View$OnClickListener;
 
-.field public h:Landroid/view/ActionMode;
+.field private x:Lk/b/e/b/a/g;
 
-.field public h0:F
+.field private y:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
-.field public i:Landroid/content/Context;
-
-.field public final i0:Lmiuix/animation/listener/TransitionListener;
-
-.field public j:Landroid/content/Context;
-
-.field public k:I
-
-.field public l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-.field public m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-.field public n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-.field public o:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
-
-.field public p:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-.field public q:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
-
-.field public r:Landroid/view/View;
-
-.field public s:Landroid/view/View$OnClickListener;
-
-.field public t:Lmiuix/appcompat/internal/app/widget/t;
-
-.field public u:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-.field public v:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-.field public w:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-.field public x:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-.field public y:Lmiuix/appcompat/internal/app/widget/u;
-
-.field public final z:Ljava/util/HashMap;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/HashMap<",
-            "Landroid/view/View;",
-            "Ljava/lang/Integer;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private z:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$a;
 
     invoke-direct {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$a;-><init>()V
 
-    sput-object v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n0:Landroidx/appcompat/app/ActionBar$TabListener;
-
-    const/4 v0, -0x1
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    sput-object v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o0:Ljava/lang/Integer;
+    sput-object v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Landroidx/appcompat/app/ActionBar$TabListener;
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/app/Dialog;Landroid/view/ViewGroup;)V
-    .locals 3
-
-    .line 48
-    invoke-direct {p0}, Lmiuix/appcompat/app/ActionBar;-><init>()V
-
-    .line 49
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Ljava/util/HashMap;
-
-    .line 50
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->A:Ljava/util/HashSet;
-
-    .line 51
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Ljava/util/ArrayList;
-
-    const/4 v0, 0x0
-
-    .line 52
-    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->D:Z
-
-    const/4 v1, -0x1
-
-    .line 53
-    iput v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->F:I
-
-    .line 54
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->H:Ljava/util/ArrayList;
-
-    .line 55
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->J:I
-
-    const/4 v2, 0x1
-
-    .line 56
-    iput-boolean v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->O:Z
-
-    .line 57
-    new-instance v2, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$b;
-
-    invoke-direct {v2, p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$b;-><init>(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)V
-
-    iput-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->S:Ldp/b$a;
-
-    .line 58
-    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->U:Z
-
-    .line 59
-    iput v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->a0:I
-
-    .line 60
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->c0:I
-
-    .line 61
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->d0:I
-
-    .line 62
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->e0:I
-
-    .line 63
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->f0:I
-
-    .line 64
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->g0:I
-
-    const/4 v0, 0x0
-
-    .line 65
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->h0:F
-
-    .line 66
-    new-instance v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$g;
-
-    invoke-direct {v0, p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$g;-><init>(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)V
-
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i0:Lmiuix/animation/listener/TransitionListener;
-
-    .line 67
-    invoke-virtual {p1}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i:Landroid/content/Context;
-
-    .line 68
-    invoke-virtual {p0, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z1(Landroid/view/ViewGroup;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroidx/fragment/app/Fragment;)V
-    .locals 3
-
-    .line 24
-    invoke-direct {p0}, Lmiuix/appcompat/app/ActionBar;-><init>()V
-
-    .line 25
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Ljava/util/HashMap;
+    .locals 2
 
     .line 26
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->A:Ljava/util/HashSet;
+    invoke-direct {p0}, Lmiuix/appcompat/app/ActionBar;-><init>()V
 
     .line 27
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Ljava/util/ArrayList;
+    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->D:Ljava/util/ArrayList;
 
     const/4 v0, 0x0
 
     .line 28
-    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->D:Z
+    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->F:Z
 
     const/4 v1, -0x1
 
     .line 29
-    iput v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->F:I
+    iput v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->H:I
 
     .line 30
-    new-instance v2, Ljava/util/ArrayList;
+    new-instance v1, Ljava/util/ArrayList;
 
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->H:Ljava/util/ArrayList;
+    iput-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->J:Ljava/util/ArrayList;
 
     .line 31
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->J:I
+    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->L:I
 
-    const/4 v2, 0x1
+    const/4 v0, 0x1
 
     .line 32
-    iput-boolean v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->O:Z
+    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->P:Z
 
     .line 33
-    new-instance v2, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$b;
+    new-instance v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$b;
 
-    invoke-direct {v2, p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$b;-><init>(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)V
+    invoke-direct {v0, p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$b;-><init>(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)V
 
-    iput-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->S:Ldp/b$a;
+    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->S:Lk/b/e/e/b$a;
 
     .line 34
-    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->U:Z
+    invoke-virtual {p1}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Landroid/content/Context;
 
     .line 35
-    iput v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->a0:I
+    invoke-virtual {p0, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z0(Landroid/view/ViewGroup;)V
 
-    .line 36
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->c0:I
+    return-void
+.end method
 
-    .line 37
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->d0:I
+.method public constructor <init>(Landroidx/fragment/app/Fragment;)V
+    .locals 2
 
-    .line 38
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->e0:I
+    .line 13
+    invoke-direct {p0}, Lmiuix/appcompat/app/ActionBar;-><init>()V
 
-    .line 39
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->f0:I
+    .line 14
+    new-instance v0, Ljava/util/ArrayList;
 
-    .line 40
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->g0:I
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->D:Ljava/util/ArrayList;
 
     const/4 v0, 0x0
 
-    .line 41
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->h0:F
+    .line 15
+    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->F:Z
 
-    .line 42
-    new-instance v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$g;
+    const/4 v1, -0x1
 
-    invoke-direct {v0, p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$g;-><init>(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)V
+    .line 16
+    iput v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->H:I
 
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i0:Lmiuix/animation/listener/TransitionListener;
+    .line 17
+    new-instance v1, Ljava/util/ArrayList;
 
-    .line 43
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->J:Ljava/util/ArrayList;
+
+    .line 18
+    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->L:I
+
+    const/4 v0, 0x1
+
+    .line 19
+    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->P:Z
+
+    .line 20
+    new-instance v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$b;
+
+    invoke-direct {v0, p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$b;-><init>(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)V
+
+    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->S:Lk/b/e/e/b$a;
+
+    .line 21
     move-object v0, p1
 
-    check-cast v0, Lmiuix/appcompat/app/a0;
+    check-cast v0, Lk/b/d/o;
 
-    invoke-interface {v0}, Lmiuix/appcompat/app/a0;->vc()Landroid/content/Context;
+    invoke-interface {v0}, Lk/b/d/o;->u7()Landroid/content/Context;
 
     move-result-object v0
 
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i:Landroid/content/Context;
+    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Landroid/content/Context;
 
-    .line 44
+    .line 22
     invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getChildFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
 
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->E:Landroidx/fragment/app/FragmentManager;
+    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->G:Landroidx/fragment/app/FragmentManager;
 
-    .line 45
+    .line 23
     invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getView()Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z1(Landroid/view/ViewGroup;)V
+    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z0(Landroid/view/ViewGroup;)V
 
-    .line 46
+    .line 24
     invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
 
-    .line 47
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    .line 25
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     if-eqz p1, :cond_0
 
@@ -442,112 +288,65 @@
 .end method
 
 .method public constructor <init>(Lmiuix/appcompat/app/AppCompatActivity;Landroid/view/ViewGroup;)V
-    .locals 3
+    .locals 2
 
     .line 1
     invoke-direct {p0}, Lmiuix/appcompat/app/ActionBar;-><init>()V
 
     .line 2
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Ljava/util/HashMap;
-
-    .line 3
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->A:Ljava/util/HashSet;
-
-    .line 4
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Ljava/util/ArrayList;
+    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->D:Ljava/util/ArrayList;
 
     const/4 v0, 0x0
 
-    .line 5
-    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->D:Z
+    .line 3
+    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->F:Z
 
     const/4 v1, -0x1
 
+    .line 4
+    iput v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->H:I
+
+    .line 5
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->J:Ljava/util/ArrayList;
+
     .line 6
-    iput v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->F:I
+    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->L:I
+
+    const/4 v0, 0x1
 
     .line 7
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->H:Ljava/util/ArrayList;
+    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->P:Z
 
     .line 8
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->J:I
+    new-instance v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$b;
 
-    const/4 v2, 0x1
+    invoke-direct {v0, p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$b;-><init>(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)V
+
+    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->S:Lk/b/e/e/b$a;
 
     .line 9
-    iput-boolean v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->O:Z
+    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Landroid/content/Context;
 
     .line 10
-    new-instance v2, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$b;
-
-    invoke-direct {v2, p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$b;-><init>(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)V
-
-    iput-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->S:Ldp/b$a;
-
-    .line 11
-    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->U:Z
-
-    .line 12
-    iput v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->a0:I
-
-    .line 13
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->c0:I
-
-    .line 14
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->d0:I
-
-    .line 15
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->e0:I
-
-    .line 16
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->f0:I
-
-    .line 17
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->g0:I
-
-    const/4 v0, 0x0
-
-    .line 18
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->h0:F
-
-    .line 19
-    new-instance v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$g;
-
-    invoke-direct {v0, p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$g;-><init>(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)V
-
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i0:Lmiuix/animation/listener/TransitionListener;
-
-    .line 20
-    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i:Landroid/content/Context;
-
-    .line 21
     invoke-virtual {p1}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
 
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->E:Landroidx/fragment/app/FragmentManager;
+    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->G:Landroidx/fragment/app/FragmentManager;
 
-    .line 22
-    invoke-virtual {p0, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z1(Landroid/view/ViewGroup;)V
+    .line 11
+    invoke-virtual {p0, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z0(Landroid/view/ViewGroup;)V
 
-    .line 23
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    .line 12
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {p1}, Landroid/app/Activity;->getTitle()Ljava/lang/CharSequence;
 
@@ -558,283 +357,619 @@
     return-void
 .end method
 
-.method public static synthetic H0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;IFII)V
-    .locals 0
+.method private I0()V
+    .locals 4
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->I1(IFII)V
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
+
+    move-result v0
+
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->R:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+
+    .line 2
+    invoke-virtual {v1}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    const/4 v2, 0x0
+
+    .line 3
+    invoke-static {v0, v2, v1}, Landroid/view/ViewGroup;->getChildMeasureSpec(III)I
+
+    move-result v0
+
+    .line 4
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+
+    invoke-virtual {v1}, Landroid/widget/FrameLayout;->getMeasuredHeight()I
+
+    move-result v1
+
+    iget-object v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->R:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+
+    .line 5
+    invoke-virtual {v3}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    .line 6
+    invoke-static {v1, v2, v3}, Landroid/view/ViewGroup;->getChildMeasureSpec(III)I
+
+    move-result v1
+
+    .line 7
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->R:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+
+    invoke-virtual {p0, v0, v1}, Landroid/widget/FrameLayout;->measure(II)V
 
     return-void
 .end method
 
-.method public static synthetic I0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)V
-    .locals 0
+.method private L0(ZLjava/lang/String;Lmiuix/animation/controller/AnimState;Lmiuix/animation/controller/AnimState;)Lmiuix/animation/IStateStyle;
+    .locals 9
 
-    invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->J1()V
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->q:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
-    return-void
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getHeight()I
+
+    move-result v0
+
+    const-wide/16 v1, 0x0
+
+    const/4 v3, 0x2
+
+    const/4 v4, -0x2
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x1
+
+    if-eqz p1, :cond_2
+
+    .line 2
+    new-instance p1, Lmiuix/animation/base/AnimConfig;
+
+    invoke-direct {p1}, Lmiuix/animation/base/AnimConfig;-><init>()V
+
+    new-array v0, v3, [F
+
+    .line 3
+    fill-array-data v0, :array_0
+
+    invoke-static {v4, v0}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lmiuix/animation/base/AnimConfig;->setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;)Lmiuix/animation/base/AnimConfig;
+
+    if-nez p4, :cond_0
+
+    .line 4
+    new-instance p4, Lmiuix/animation/controller/AnimState;
+
+    invoke-direct {p4, p2}, Lmiuix/animation/controller/AnimState;-><init>(Ljava/lang/Object;)V
+
+    sget-object v0, Lmiuix/animation/property/ViewProperty;->TRANSLATION_Y:Lmiuix/animation/property/ViewProperty;
+
+    .line 5
+    invoke-virtual {p4, v0, v1, v2}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
+
+    move-result-object p4
+
+    sget-object v0, Lmiuix/animation/property/ViewProperty;->ALPHA:Lmiuix/animation/property/ViewProperty;
+
+    const-wide/high16 v1, 0x3ff0000000000000L    # 1.0
+
+    .line 6
+    invoke-virtual {p4, v0, v1, v2}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
+
+    move-result-object p4
+
+    :cond_0
+    new-array v0, v6, [Landroid/view/View;
+
+    .line 7
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->q:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    aput-object p0, v0, v5
+
+    invoke-static {v0}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Lmiuix/animation/IFolme;->state()Lmiuix/animation/IStateStyle;
+
+    move-result-object p0
+
+    if-eqz p3, :cond_1
+
+    .line 8
+    invoke-virtual {p3, p2}, Lmiuix/animation/controller/AnimState;->setTag(Ljava/lang/Object;)V
+
+    .line 9
+    invoke-interface {p0, p3}, Lmiuix/animation/IStateStyle;->setTo(Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
+
+    move-result-object p0
+
+    :cond_1
+    new-array p2, v6, [Lmiuix/animation/base/AnimConfig;
+
+    aput-object p1, p2, v5
+
+    .line 10
+    invoke-interface {p0, p4, p2}, Lmiuix/animation/IStateStyle;->to(Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
+
+    move-result-object p0
+
+    goto :goto_0
+
+    .line 11
+    :cond_2
+    new-instance p1, Lmiuix/animation/base/AnimConfig;
+
+    invoke-direct {p1}, Lmiuix/animation/base/AnimConfig;-><init>()V
+
+    new-array v3, v3, [F
+
+    .line 12
+    fill-array-data v3, :array_1
+
+    invoke-static {v4, v3}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
+
+    move-result-object v3
+
+    invoke-virtual {p1, v3}, Lmiuix/animation/base/AnimConfig;->setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;)Lmiuix/animation/base/AnimConfig;
+
+    new-array v3, v6, [Lmiuix/animation/listener/TransitionListener;
+
+    .line 13
+    new-instance v4, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$e;
+
+    iget-object v7, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->q:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    invoke-direct {v4, v7, p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$e;-><init>(Landroid/view/View;Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)V
+
+    aput-object v4, v3, v5
+
+    invoke-virtual {p1, v3}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
+
+    if-nez p4, :cond_3
+
+    .line 14
+    new-instance p4, Lmiuix/animation/controller/AnimState;
+
+    invoke-direct {p4, p2}, Lmiuix/animation/controller/AnimState;-><init>(Ljava/lang/Object;)V
+
+    sget-object v3, Lmiuix/animation/property/ViewProperty;->TRANSLATION_Y:Lmiuix/animation/property/ViewProperty;
+
+    neg-int v0, v0
+
+    add-int/lit8 v0, v0, -0x64
+
+    int-to-double v7, v0
+
+    .line 15
+    invoke-virtual {p4, v3, v7, v8}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
+
+    move-result-object p4
+
+    sget-object v0, Lmiuix/animation/property/ViewProperty;->ALPHA:Lmiuix/animation/property/ViewProperty;
+
+    .line 16
+    invoke-virtual {p4, v0, v1, v2}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
+
+    move-result-object p4
+
+    :cond_3
+    new-array v0, v6, [Landroid/view/View;
+
+    .line 17
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->q:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    aput-object p0, v0, v5
+
+    invoke-static {v0}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Lmiuix/animation/IFolme;->state()Lmiuix/animation/IStateStyle;
+
+    move-result-object p0
+
+    if-eqz p3, :cond_4
+
+    .line 18
+    invoke-virtual {p3, p2}, Lmiuix/animation/controller/AnimState;->setTag(Ljava/lang/Object;)V
+
+    .line 19
+    invoke-interface {p0, p3}, Lmiuix/animation/IStateStyle;->setTo(Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
+
+    move-result-object p0
+
+    :cond_4
+    new-array p2, v6, [Lmiuix/animation/base/AnimConfig;
+
+    aput-object p1, p2, v5
+
+    .line 20
+    invoke-interface {p0, p4, p2}, Lmiuix/animation/IStateStyle;->to(Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
+
+    move-result-object p0
+
+    :goto_0
+    return-object p0
+
+    :array_0
+    .array-data 4
+        0x3f666666    # 0.9f
+        0x3e800000    # 0.25f
+    .end array-data
+
+    :array_1
+    .array-data 4
+        0x3f800000    # 1.0f
+        0x3eb33333    # 0.35f
+    .end array-data
 .end method
 
-.method private synthetic I1(IFII)V
-    .locals 0
+.method private M0(ZLjava/lang/String;Lmiuix/animation/controller/AnimState;)Lmiuix/animation/IStateStyle;
+    .locals 9
 
-    iput p3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->f0:I
+    .line 1
+    invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x0()I
 
-    iput p4, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->g0:I
+    move-result v0
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    const-wide/16 v1, 0x0
 
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+    const/4 v3, 0x2
 
-    move-result p1
+    const/4 v4, -0x2
 
-    int-to-float p1, p1
+    const/4 v5, 0x0
 
-    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    const/4 v6, 0x1
 
-    invoke-virtual {p2}, Landroid/view/View;->getTranslationY()F
+    if-eqz p1, :cond_1
 
-    move-result p2
+    .line 2
+    new-instance p1, Lmiuix/animation/base/AnimConfig;
 
-    add-float/2addr p1, p2
+    invoke-direct {p1}, Lmiuix/animation/base/AnimConfig;-><init>()V
 
-    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    new-array v0, v3, [F
 
-    invoke-virtual {p2}, Landroid/view/View;->getHeight()I
+    .line 3
+    fill-array-data v0, :array_0
 
-    move-result p2
+    invoke-static {v4, v0}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
 
-    int-to-float p2, p2
+    move-result-object v0
 
-    div-float/2addr p1, p2
+    invoke-virtual {p1, v0}, Lmiuix/animation/base/AnimConfig;->setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;)Lmiuix/animation/base/AnimConfig;
 
-    iget p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->h0:F
+    .line 4
+    new-instance v0, Lmiuix/animation/controller/AnimState;
 
-    const/4 p3, 0x0
+    invoke-direct {v0, p2}, Lmiuix/animation/controller/AnimState;-><init>(Ljava/lang/Object;)V
 
-    cmpl-float p3, p2, p3
+    sget-object v3, Lmiuix/animation/property/ViewProperty;->TRANSLATION_Y:Lmiuix/animation/property/ViewProperty;
+
+    .line 5
+    invoke-virtual {v0, v3, v1, v2}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
+
+    move-result-object v0
+
+    sget-object v1, Lmiuix/animation/property/ViewProperty;->ALPHA:Lmiuix/animation/property/ViewProperty;
+
+    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
+
+    .line 6
+    invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
+
+    move-result-object v0
+
+    new-array v1, v6, [Landroid/view/View;
+
+    .line 7
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    aput-object p0, v1, v5
+
+    invoke-static {v1}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Lmiuix/animation/IFolme;->state()Lmiuix/animation/IStateStyle;
+
+    move-result-object p0
 
     if-eqz p3, :cond_0
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    .line 8
+    invoke-virtual {p3, p2}, Lmiuix/animation/controller/AnimState;->setTag(Ljava/lang/Object;)V
 
-    invoke-virtual {p1}, Landroid/view/View;->getTranslationY()F
+    .line 9
+    invoke-interface {p0, p3}, Lmiuix/animation/IStateStyle;->setTo(Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
-    move-result p1
-
-    sub-float/2addr p2, p1
-
-    iget p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->h0:F
-
-    div-float p1, p2, p1
+    move-result-object p0
 
     :cond_0
-    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    new-array p2, v6, [Lmiuix/animation/base/AnimConfig;
 
-    invoke-virtual {p2}, Landroid/view/View;->getHeight()I
+    aput-object p1, p2, v5
 
-    move-result p2
+    .line 10
+    invoke-interface {p0, v0, p2}, Lmiuix/animation/IStateStyle;->to(Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
 
-    if-nez p2, :cond_1
+    move-result-object p0
 
-    const/high16 p1, 0x3f800000    # 1.0f
+    goto :goto_0
 
+    .line 11
     :cond_1
-    iget p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->f0:I
+    new-instance p1, Lmiuix/animation/base/AnimConfig;
 
-    int-to-float p2, p2
+    invoke-direct {p1}, Lmiuix/animation/base/AnimConfig;-><init>()V
 
-    mul-float/2addr p2, p1
+    new-array v3, v3, [F
 
-    float-to-int p2, p2
+    .line 12
+    fill-array-data v3, :array_1
 
-    iput p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->d0:I
+    invoke-static {v4, v3}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
 
-    iget p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->g0:I
+    move-result-object v3
 
-    int-to-float p2, p2
+    invoke-virtual {p1, v3}, Lmiuix/animation/base/AnimConfig;->setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;)Lmiuix/animation/base/AnimConfig;
 
-    mul-float/2addr p2, p1
+    new-array v3, v6, [Lmiuix/animation/listener/TransitionListener;
 
-    float-to-int p1, p2
+    .line 13
+    new-instance v4, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$e;
 
-    iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->e0:I
+    iget-object v7, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
-    return-void
+    invoke-direct {v4, v7, p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$e;-><init>(Landroid/view/View;Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)V
+
+    aput-object v4, v3, v5
+
+    invoke-virtual {p1, v3}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
+
+    .line 14
+    new-instance v3, Lmiuix/animation/controller/AnimState;
+
+    invoke-direct {v3, p2}, Lmiuix/animation/controller/AnimState;-><init>(Ljava/lang/Object;)V
+
+    sget-object v4, Lmiuix/animation/property/ViewProperty;->TRANSLATION_Y:Lmiuix/animation/property/ViewProperty;
+
+    add-int/lit8 v0, v0, 0x64
+
+    int-to-double v7, v0
+
+    .line 15
+    invoke-virtual {v3, v4, v7, v8}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
+
+    move-result-object v0
+
+    sget-object v3, Lmiuix/animation/property/ViewProperty;->ALPHA:Lmiuix/animation/property/ViewProperty;
+
+    .line 16
+    invoke-virtual {v0, v3, v1, v2}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
+
+    move-result-object v0
+
+    new-array v1, v6, [Landroid/view/View;
+
+    .line 17
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    aput-object p0, v1, v5
+
+    invoke-static {v1}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Lmiuix/animation/IFolme;->state()Lmiuix/animation/IStateStyle;
+
+    move-result-object p0
+
+    if-eqz p3, :cond_2
+
+    .line 18
+    invoke-virtual {p3, p2}, Lmiuix/animation/controller/AnimState;->setTag(Ljava/lang/Object;)V
+
+    .line 19
+    invoke-interface {p0, p3}, Lmiuix/animation/IStateStyle;->setTo(Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
+
+    move-result-object p0
+
+    :cond_2
+    new-array p2, v6, [Lmiuix/animation/base/AnimConfig;
+
+    aput-object p1, p2, v5
+
+    .line 20
+    invoke-interface {p0, v0, p2}, Lmiuix/animation/IStateStyle;->to(Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
+
+    move-result-object p0
+
+    :goto_0
+    return-object p0
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x3f666666    # 0.9f
+        0x3e800000    # 0.25f
+    .end array-data
+
+    :array_1
+    .array-data 4
+        0x3f800000    # 1.0f
+        0x3eb33333    # 0.35f
+    .end array-data
 .end method
 
-.method public static synthetic J0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;I)I
-    .locals 0
-
-    iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->e0:I
-
-    return p1
-.end method
-
-.method private synthetic J1()V
+.method private N0(Z)V
     .locals 2
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getChildCount()I
 
-    invoke-virtual {p0, v0, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->f1(Lmiuix/appcompat/internal/app/widget/ActionBarView;Lmiuix/appcompat/internal/app/widget/ActionBarContextView;)V
+    move-result v0
 
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_1
+
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v0
+
+    instance-of v0, v0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+
+    if-eqz v0, :cond_1
+
+    .line 2
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v0
+
+    .line 3
+    check-cast v0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+
+    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->u:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+
+    .line 4
+    invoke-virtual {v0}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->C()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->v:Landroid/view/View;
+
+    if-eqz v0, :cond_1
+
+    if-eqz p1, :cond_0
+
+    .line 5
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->w:Landroid/view/View$OnClickListener;
+
+    invoke-virtual {p1, p0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->m(Landroid/view/View$OnClickListener;)Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->b()Landroid/animation/Animator;
+
+    move-result-object p0
+
+    .line 6
+    invoke-virtual {p0}, Landroid/animation/Animator;->start()V
+
+    goto :goto_0
+
+    .line 7
+    :cond_0
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->m(Landroid/view/View$OnClickListener;)Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->a()Landroid/animation/Animator;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/animation/Animator;->start()V
+
+    :cond_1
+    :goto_0
     return-void
 .end method
 
-.method public static synthetic K0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)I
-    .locals 0
+.method private P0(ZLmiuix/animation/controller/AnimState;)V
+    .locals 3
 
-    iget p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->g0:I
+    .line 1
+    iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->M:Z
 
-    return p0
-.end method
+    iget-boolean v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->N:Z
 
-.method public static synthetic L0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;I)I
-    .locals 0
+    iget-boolean v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->O:Z
 
-    iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->d0:I
+    invoke-static {v0, v1, v2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->checkShowingFlags(ZZZ)Z
 
-    return p1
-.end method
+    move-result v0
 
-.method public static synthetic M0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)I
-    .locals 0
+    if-eqz v0, :cond_0
 
-    iget p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->f0:I
+    .line 2
+    iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->P:Z
 
-    return p0
-.end method
+    if-nez v0, :cond_1
 
-.method public static synthetic N0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;Z)Z
-    .locals 0
+    const/4 v0, 0x1
 
-    iput-boolean p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->U:Z
+    .line 3
+    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->P:Z
 
-    return p1
-.end method
+    .line 4
+    invoke-direct {p0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r0(ZLmiuix/animation/controller/AnimState;)V
 
-.method public static synthetic O0()Landroidx/appcompat/app/ActionBar$TabListener;
-    .locals 1
+    goto :goto_0
 
-    sget-object v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n0:Landroidx/appcompat/app/ActionBar$TabListener;
+    .line 5
+    :cond_0
+    iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->P:Z
 
-    return-object v0
-.end method
+    if-eqz v0, :cond_1
 
-.method public static synthetic P0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-    .locals 0
+    const/4 v0, 0x0
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->u:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+    .line 6
+    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->P:Z
 
-    return-object p0
-.end method
+    .line 7
+    invoke-direct {p0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->q0(ZLmiuix/animation/controller/AnimState;)V
 
-.method public static synthetic Q0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->v:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    return-object p0
-.end method
-
-.method public static synthetic R0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->w:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    return-object p0
-.end method
-
-.method public static synthetic S0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    return-object p0
-.end method
-
-.method public static synthetic T0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->q:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
-
-    return-object p0
-.end method
-
-.method public static synthetic U0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Landroid/content/Context;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i:Landroid/content/Context;
-
-    return-object p0
-.end method
-
-.method public static synthetic V0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->O:Z
-
-    return p0
-.end method
-
-.method public static synthetic W0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    return-object p0
-.end method
-
-.method public static synthetic X0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->K:Z
-
-    return p0
-.end method
-
-.method public static synthetic Y0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;Z)Z
-    .locals 0
-
-    iput-boolean p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->K:Z
-
-    return p1
-.end method
-
-.method public static synthetic Z0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ActionBarView;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    return-object p0
-.end method
-
-.method public static synthetic a1(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
-
-    return-object p0
-.end method
-
-.method public static synthetic b1(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;Lmiuix/appcompat/internal/app/widget/ActionBarView;Lmiuix/appcompat/internal/app/widget/ActionBarContextView;)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->f1(Lmiuix/appcompat/internal/app/widget/ActionBarView;Lmiuix/appcompat/internal/app/widget/ActionBarContextView;)V
-
+    :cond_1
+    :goto_0
     return-void
 .end method
 
-.method public static synthetic c1(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)F
+.method public static synthetic c0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Z
     .locals 0
 
-    iget p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->h0:F
+    .line 1
+    iget-boolean p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->P:Z
 
     return p0
 .end method
 
-.method public static checkShowingFlags(ZZZ)Z
+.method private static checkShowingFlags(ZZZ)Z
     .locals 1
 
     const/4 v0, 0x1
@@ -860,28 +995,886 @@
     return p0
 .end method
 
-.method public static synthetic d1(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+.method private cleanupTabs()V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->E:Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    .line 2
+    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->selectTab(Landroidx/appcompat/app/ActionBar$Tab;)V
+
+    .line 3
+    :cond_0
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->D:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+
+    .line 4
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    if-eqz v0, :cond_1
+
+    .line 5
+    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->k()V
+
+    .line 6
+    :cond_1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    if-eqz v0, :cond_2
+
+    .line 7
+    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->k()V
+
+    .line 8
+    :cond_2
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->A:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    if-eqz v0, :cond_3
+
+    .line 9
+    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->k()V
+
+    .line 10
+    :cond_3
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    if-eqz v0, :cond_4
+
+    .line 11
+    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->k()V
+
+    :cond_4
+    const/4 v0, -0x1
+
+    .line 12
+    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->H:I
+
+    return-void
+.end method
+
+.method private configureTab(Landroidx/appcompat/app/ActionBar$Tab;I)V
+    .locals 1
+
+    .line 1
+    check-cast p1, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
+
+    .line 2
+    invoke-virtual {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->getCallback()Landroidx/appcompat/app/ActionBar$TabListener;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    .line 3
+    invoke-virtual {p1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->setPosition(I)V
+
+    .line 4
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->D:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p2, p1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+
+    .line 5
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->D:Ljava/util/ArrayList;
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+
+    move-result p1
+
+    :goto_0
+    add-int/lit8 p2, p2, 0x1
+
+    if-ge p2, p1, :cond_0
+
+    .line 6
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->D:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
+
+    invoke-virtual {v0, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->setPosition(I)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
+    .line 7
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "Action Bar Tab must have a Callback"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static synthetic d0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->u:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
 
     return-object p0
 .end method
 
-.method public static o1(Landroid/view/View;)Lmiuix/appcompat/internal/app/widget/ActionBarImpl;
-    .locals 2
+.method private doHide(Z)V
+    .locals 1
 
-    :goto_0
     const/4 v0, 0x0
 
+    .line 1
+    invoke-direct {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->q0(ZLmiuix/animation/controller/AnimState;)V
+
+    return-void
+.end method
+
+.method private doShow(Z)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-direct {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r0(ZLmiuix/animation/controller/AnimState;)V
+
+    return-void
+.end method
+
+.method public static synthetic e0()Landroidx/appcompat/app/ActionBar$TabListener;
+    .locals 1
+
+    .line 1
+    sget-object v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Landroidx/appcompat/app/ActionBar$TabListener;
+
+    return-object v0
+.end method
+
+.method private ensureTabsExist()V
+    .locals 5
+
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->u0()V
+
+    return-void
+
+    .line 3
+    :cond_0
+    new-instance v0, Lk/b/e/b/a/i;
+
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Landroid/content/Context;
+
+    invoke-direct {v0, v1}, Lk/b/e/b/a/i;-><init>(Landroid/content/Context;)V
+
+    .line 4
+    new-instance v1, Lk/b/e/b/a/k;
+
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Landroid/content/Context;
+
+    invoke-direct {v1, v2}, Lk/b/e/b/a/k;-><init>(Landroid/content/Context;)V
+
+    .line 5
+    new-instance v2, Lk/b/e/b/a/m;
+
+    iget-object v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Landroid/content/Context;
+
+    invoke-direct {v2, v3}, Lk/b/e/b/a/m;-><init>(Landroid/content/Context;)V
+
+    .line 6
+    new-instance v3, Lk/b/e/b/a/n;
+
+    iget-object v4, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Landroid/content/Context;
+
+    invoke-direct {v3, v4}, Lk/b/e/b/a/n;-><init>(Landroid/content/Context;)V
+
+    const/4 v4, 0x0
+
+    .line 7
+    invoke-virtual {v0, v4}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
+
+    .line 8
+    invoke-virtual {v1, v4}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
+
+    .line 9
+    invoke-virtual {v2, v4}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
+
+    .line 10
+    invoke-virtual {v3, v4}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
+
+    .line 11
+    iget-object v4, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {v4, v0, v1, v2, v3}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->r1(Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;)V
+
+    const/4 v4, 0x1
+
+    .line 12
+    invoke-virtual {v0, v4}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->setEmbeded(Z)V
+
+    .line 13
+    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    .line 14
+    iput-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    .line 15
+    iput-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->A:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    .line 16
+    iput-object v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    return-void
+.end method
+
+.method public static synthetic f0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    return-object p0
+.end method
+
+.method public static synthetic g0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    return-object p0
+.end method
+
+.method public static synthetic h0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    return-object p0
+.end method
+
+.method public static synthetic i0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->A:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    return-object p0
+.end method
+
+.method public static synthetic j0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    return-object p0
+.end method
+
+.method public static synthetic k0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Landroid/content/Context;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method private l0()V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+
+    sget v1, Lk/b/b$j;->content_mask_vs:I
+
+    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/ViewStub;
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-virtual {v0}, Landroid/view/ViewStub;->inflate()Landroid/view/View;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 3
+    :cond_0
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+
+    sget v1, Lk/b/b$j;->content_mask:I
+
+    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    .line 4
+    :goto_0
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+
+    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->setContentMask(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method private m0(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
+    .locals 1
+
+    .line 1
+    instance-of v0, p1, Lk/j0/i$a;
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    new-instance v0, Lk/b/e/e/d;
+
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Landroid/content/Context;
+
+    invoke-direct {v0, p0, p1}, Lk/b/e/e/d;-><init>(Landroid/content/Context;Landroid/view/ActionMode$Callback;)V
+
+    goto :goto_0
+
+    .line 3
+    :cond_0
+    new-instance v0, Lk/b/e/e/c;
+
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Landroid/content/Context;
+
+    invoke-direct {v0, p0, p1}, Lk/b/e/e/c;-><init>(Landroid/content/Context;Landroid/view/ActionMode$Callback;)V
+
+    :goto_0
+    return-object v0
+.end method
+
+.method private o0(ZZ)V
+    .locals 3
+
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+
+    sget v1, Lk/b/b$j;->split_action_bar_vs:I
+
+    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/ViewStub;
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-virtual {v0}, Landroid/view/ViewStub;->inflate()Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    goto :goto_0
+
+    .line 3
+    :cond_0
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+
+    sget v1, Lk/b/b$j;->split_action_bar:I
+
+    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    :goto_0
+    if-eqz v0, :cond_2
+
+    .line 4
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {v1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setSplitView(Lmiuix/appcompat/internal/app/widget/ActionBarContainer;)V
+
+    .line 5
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {v1, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setSplitActionBar(Z)V
+
+    .line 6
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {v1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setSplitWhenNarrow(Z)V
+
+    .line 7
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+
+    sget v2, Lk/b/b$j;->action_context_bar_vs:I
+
+    invoke-virtual {v1, v2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/ViewStub;
+
+    if-eqz v1, :cond_1
+
+    .line 8
+    invoke-virtual {v1}, Landroid/view/ViewStub;->inflate()Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+
+    iput-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->s:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+
+    goto :goto_1
+
+    .line 9
+    :cond_1
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+
+    sget v2, Lk/b/b$j;->action_context_bar:I
+
+    invoke-virtual {v1, v2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+
+    iput-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->s:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+
+    .line 10
+    :goto_1
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->s:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+
+    if-eqz v1, :cond_2
+
+    .line 11
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->q:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    invoke-virtual {v2, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setActionBarContextView(Lmiuix/appcompat/internal/app/widget/ActionBarContextView;)V
+
+    .line 12
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->s:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+
+    invoke-virtual {v1, v2}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->setActionBarContextView(Lmiuix/appcompat/internal/app/widget/ActionBarContextView;)V
+
+    .line 13
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->s:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+
+    invoke-virtual {v1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->setSplitView(Lmiuix/appcompat/internal/app/widget/ActionBarContainer;)V
+
+    .line 14
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->s:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+
+    invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->setSplitActionBar(Z)V
+
+    .line 15
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->s:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+
+    invoke-virtual {p0, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->setSplitWhenNarrow(Z)V
+
+    :cond_2
+    return-void
+.end method
+
+.method private q0(ZLmiuix/animation/controller/AnimState;)V
+    .locals 6
+
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->T:Lmiuix/animation/IStateStyle;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-interface {v0}, Lmiuix/animation/IStateStyle;->getCurrentState()Lmiuix/animation/controller/AnimState;
+
+    move-result-object v0
+
+    .line 3
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->T:Lmiuix/animation/IStateStyle;
+
+    invoke-interface {v2}, Lmiuix/animation/ICancelableStyle;->cancel()V
+
+    goto :goto_0
+
+    :cond_0
+    move-object v0, v1
+
+    .line 4
+    :goto_0
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->H0()Z
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    if-nez v2, :cond_2
+
+    if-eqz p1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    move p1, v3
+
+    goto :goto_2
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    :goto_2
+    const/16 v2, 0x8
+
+    const/4 v4, 0x0
+
+    if-eqz p1, :cond_3
+
+    const-string v5, "HideActionBar"
+
+    .line 5
+    invoke-direct {p0, v3, v5, v0, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->L0(ZLjava/lang/String;Lmiuix/animation/controller/AnimState;Lmiuix/animation/controller/AnimState;)Lmiuix/animation/IStateStyle;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->T:Lmiuix/animation/IStateStyle;
+
+    goto :goto_3
+
+    .line 6
+    :cond_3
+    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->q:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    invoke-virtual {p2}, Landroid/widget/FrameLayout;->getHeight()I
+
+    move-result v0
+
+    neg-int v0, v0
+
+    int-to-float v0, v0
+
+    invoke-virtual {p2, v0}, Landroid/widget/FrameLayout;->setTranslationY(F)V
+
+    .line 7
+    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->q:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    invoke-virtual {p2, v4}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setAlpha(F)V
+
+    .line 8
+    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->q:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    invoke-virtual {p2, v2}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setVisibility(I)V
+
+    .line 9
+    :goto_3
+    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    if-eqz p2, :cond_6
+
+    .line 10
+    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->U:Lmiuix/animation/IStateStyle;
+
+    if-eqz p2, :cond_4
+
+    .line 11
+    invoke-interface {p2}, Lmiuix/animation/IStateStyle;->getCurrentState()Lmiuix/animation/controller/AnimState;
+
+    move-result-object v1
+
+    .line 12
+    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->U:Lmiuix/animation/IStateStyle;
+
+    invoke-interface {p2}, Lmiuix/animation/ICancelableStyle;->cancel()V
+
+    :cond_4
+    if-eqz p1, :cond_5
+
+    const-string p1, "SpliterHide"
+
+    .line 13
+    invoke-direct {p0, v3, p1, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->M0(ZLjava/lang/String;Lmiuix/animation/controller/AnimState;)Lmiuix/animation/IStateStyle;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->U:Lmiuix/animation/IStateStyle;
+
+    goto :goto_4
+
+    .line 14
+    :cond_5
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x0()I
+
+    move-result p2
+
+    int-to-float p2, p2
+
+    invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->setTranslationY(F)V
+
+    .line 15
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    invoke-virtual {p1, v4}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setAlpha(F)V
+
+    .line 16
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    invoke-virtual {p1, v2}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setVisibility(I)V
+
+    .line 17
+    :goto_4
+    invoke-direct {p0, v3}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->N0(Z)V
+
+    :cond_6
+    return-void
+.end method
+
+.method private r0(ZLmiuix/animation/controller/AnimState;)V
+    .locals 7
+
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->T:Lmiuix/animation/IStateStyle;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-interface {v0}, Lmiuix/animation/IStateStyle;->getCurrentState()Lmiuix/animation/controller/AnimState;
+
+    move-result-object v0
+
+    .line 3
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->T:Lmiuix/animation/IStateStyle;
+
+    invoke-interface {v2}, Lmiuix/animation/ICancelableStyle;->cancel()V
+
+    goto :goto_0
+
+    :cond_0
+    move-object v0, v1
+
+    .line 4
+    :goto_0
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->H0()Z
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    if-nez v2, :cond_2
+
+    if-eqz p1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    move p1, v3
+
+    goto :goto_2
+
+    :cond_2
+    :goto_1
+    move p1, v4
+
+    .line 5
+    :goto_2
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->q:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    iget-object v5, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Landroid/view/ActionMode;
+
+    instance-of v5, v5, Lk/j0/i;
+
+    if-eqz v5, :cond_3
+
+    const/16 v5, 0x8
+
+    goto :goto_3
+
+    :cond_3
+    move v5, v3
+
+    :goto_3
+    invoke-virtual {v2, v5}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setVisibility(I)V
+
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    const/4 v5, 0x0
+
+    if-eqz p1, :cond_4
+
+    const-string v6, "ShowActionBar"
+
+    .line 6
+    invoke-direct {p0, v4, v6, v0, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->L0(ZLjava/lang/String;Lmiuix/animation/controller/AnimState;Lmiuix/animation/controller/AnimState;)Lmiuix/animation/IStateStyle;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->T:Lmiuix/animation/IStateStyle;
+
+    goto :goto_4
+
+    .line 7
+    :cond_4
+    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->q:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    invoke-virtual {p2, v5}, Landroid/widget/FrameLayout;->setTranslationY(F)V
+
+    .line 8
+    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->q:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    invoke-virtual {p2, v2}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setAlpha(F)V
+
+    .line 9
+    :goto_4
+    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    if-eqz p2, :cond_8
+
+    .line 10
+    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->U:Lmiuix/animation/IStateStyle;
+
+    if-eqz p2, :cond_5
+
+    .line 11
+    invoke-interface {p2}, Lmiuix/animation/IStateStyle;->getCurrentState()Lmiuix/animation/controller/AnimState;
+
+    move-result-object v1
+
+    .line 12
+    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->U:Lmiuix/animation/IStateStyle;
+
+    invoke-interface {p2}, Lmiuix/animation/ICancelableStyle;->cancel()V
+
+    .line 13
+    :cond_5
+    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    invoke-virtual {p2, v3}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setVisibility(I)V
+
+    if-eqz p1, :cond_6
+
+    const-string p1, "SpliterShow"
+
+    .line 14
+    invoke-direct {p0, v4, p1, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->M0(ZLjava/lang/String;Lmiuix/animation/controller/AnimState;)Lmiuix/animation/IStateStyle;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->U:Lmiuix/animation/IStateStyle;
+
+    .line 15
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->W0()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_7
+
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    invoke-virtual {p1}, Landroid/widget/FrameLayout;->getChildCount()I
+
+    move-result p1
+
+    if-lez p1, :cond_7
+
+    .line 16
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    invoke-virtual {p1, v3}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_7
+
+    .line 17
+    instance-of p2, p1, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+
+    if-eqz p2, :cond_7
+
+    .line 18
+    move-object p2, p1
+
+    check-cast p2, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+
+    invoke-virtual {p2}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->C()Z
+
+    move-result p2
+
+    xor-int/2addr p2, v4
+
+    if-eqz p2, :cond_7
+
+    .line 19
+    check-cast p1, Lk/b/e/e/f/m/e;
+
+    invoke-virtual {p1}, Landroid/widget/LinearLayout;->startLayoutAnimation()V
+
+    goto :goto_5
+
+    .line 20
+    :cond_6
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    invoke-virtual {p1, v5}, Landroid/widget/FrameLayout;->setTranslationY(F)V
+
+    .line 21
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    invoke-virtual {p1, v2}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setAlpha(F)V
+
+    .line 22
+    :cond_7
+    :goto_5
+    invoke-direct {p0, v4}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->N0(Z)V
+
+    :cond_8
+    return-void
+.end method
+
+.method public static s0(Landroid/view/View;)Lmiuix/appcompat/internal/app/widget/ActionBarImpl;
+    .locals 2
+
+    const/4 v0, 0x0
+
+    :goto_0
     if-eqz p0, :cond_2
 
+    .line 1
     instance-of v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
 
     if-eqz v1, :cond_0
 
+    .line 2
     check-cast p0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
 
+    .line 3
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->getActionBar()Lmiuix/appcompat/app/ActionBar;
 
     move-result-object p0
@@ -892,6 +1885,7 @@
 
     goto :goto_1
 
+    .line 4
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
@@ -901,6 +1895,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 5
     invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object p0
@@ -919,5005 +1914,171 @@
     return-object v0
 .end method
 
-
-# virtual methods
-.method public A(I)Landroid/view/View;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->q(I)Landroid/view/View;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public A0(Lmiuix/animation/controller/AnimState;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->C0(ZLmiuix/animation/controller/AnimState;)V
-
-    return-void
-.end method
-
-.method public A1(Landroidx/appcompat/app/ActionBar$Tab;)V
-    .locals 1
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->getTabCount()I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-virtual {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->D1(Landroidx/appcompat/app/ActionBar$Tab;Z)V
-
-    return-void
-.end method
-
-.method public B()I
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/t;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/t;->j()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public B0(Z)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->C0(ZLmiuix/animation/controller/AnimState;)V
-
-    return-void
-.end method
-
-.method public B1(Landroidx/appcompat/app/ActionBar$Tab;I)V
-    .locals 1
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->getTabCount()I
-
-    move-result v0
-
-    if-ne p2, v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-virtual {p0, p1, p2, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->C1(Landroidx/appcompat/app/ActionBar$Tab;IZ)V
-
-    return-void
-.end method
-
-.method public C(Lmiuix/animation/controller/AnimState;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->E(ZLmiuix/animation/controller/AnimState;)V
-
-    return-void
-.end method
-
-.method public C0(ZLmiuix/animation/controller/AnimState;)V
-    .locals 1
-
-    iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->L:Z
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->L:Z
-
-    invoke-virtual {p0, v0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->Z1(ZZLmiuix/animation/controller/AnimState;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public C1(Landroidx/appcompat/app/ActionBar$Tab;IZ)V
-    .locals 1
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->ensureTabsExist()V
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->u:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    invoke-virtual {v0, p1, p2, p3}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->b(Landroidx/appcompat/app/ActionBar$Tab;IZ)V
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->v:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    invoke-virtual {v0, p1, p2, p3}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->b(Landroidx/appcompat/app/ActionBar$Tab;IZ)V
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->w:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    invoke-virtual {v0, p1, p2, p3}, Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;->t(Landroidx/appcompat/app/ActionBar$Tab;IZ)Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView$SecondaryTabView;
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    invoke-virtual {v0, p1, p2, p3}, Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;->t(Landroidx/appcompat/app/ActionBar$Tab;IZ)Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView$SecondaryTabView;
-
-    invoke-virtual {p0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->configureTab(Landroidx/appcompat/app/ActionBar$Tab;I)V
-
-    if-eqz p3, :cond_0
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->selectTab(Landroidx/appcompat/app/ActionBar$Tab;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public D(Z)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->E(ZLmiuix/animation/controller/AnimState;)V
-
-    return-void
-.end method
-
-.method public D0(Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public D1(Landroidx/appcompat/app/ActionBar$Tab;Z)V
-    .locals 1
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->ensureTabsExist()V
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->u:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    invoke-virtual {v0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->d(Landroidx/appcompat/app/ActionBar$Tab;Z)V
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->v:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    invoke-virtual {v0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->d(Landroidx/appcompat/app/ActionBar$Tab;Z)V
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->w:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    invoke-virtual {v0, p1, p2}, Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;->u(Landroidx/appcompat/app/ActionBar$Tab;Z)Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView$SecondaryTabView;
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    invoke-virtual {v0, p1, p2}, Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;->u(Landroidx/appcompat/app/ActionBar$Tab;Z)Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView$SecondaryTabView;
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    invoke-virtual {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->configureTab(Landroidx/appcompat/app/ActionBar$Tab;I)V
-
-    if-eqz p2, :cond_0
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->selectTab(Landroidx/appcompat/app/ActionBar$Tab;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public E(ZLmiuix/animation/controller/AnimState;)V
-    .locals 1
-
-    iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->L:Z
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->L:Z
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->Z1(ZZLmiuix/animation/controller/AnimState;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public E0(ZZ)V
-    .locals 1
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->y1()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    if-eqz p1, :cond_0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    invoke-virtual {p0, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->M(Z)V
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    invoke-virtual {p0, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->u(Z)V
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method public E1()V
-    .locals 0
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->cleanupTabs()V
-
-    return-void
-.end method
-
-.method public F()Z
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/t;
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    return p0
-.end method
-
-.method public F0(Landroid/view/View;)V
-    .locals 1
-
-    instance-of v0, p1, Lqp/a;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->A:Ljava/util/HashSet;
-
-    check-cast p1, Lqp/a;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :goto_0
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Ljava/util/HashMap;
-
-    invoke-virtual {p1}, Ljava/util/HashMap;->size()I
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->A:Ljava/util/HashSet;
-
-    invoke-virtual {p1}, Ljava/util/HashSet;->size()I
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setActionBarCoordinateListener(Lmiuix/appcompat/internal/app/widget/f;)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public F1(Landroidx/appcompat/app/ActionBar$Tab;)V
-    .locals 0
-
-    invoke-virtual {p1}, Landroidx/appcompat/app/ActionBar$Tab;->getPosition()I
-
-    move-result p1
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->G1(I)V
-
-    return-void
-.end method
-
-.method public G()Z
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->u()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public G0(Landroid/view/View;)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->X(Landroid/view/View;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public G1(I)V
-    .locals 5
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->u:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->C:Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->getPosition()I
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_1
-    iget v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->F:I
-
-    :goto_0
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->u:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    invoke-virtual {v1, p1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->l(I)V
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->v:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    invoke-virtual {v1, p1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->l(I)V
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->w:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    invoke-virtual {v1, p1}, Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;->z(I)V
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    invoke-virtual {v1, p1}, Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;->z(I)V
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
-
-    const/4 v2, -0x1
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v1, v2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->setPosition(I)V
-
-    :cond_2
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    move v3, p1
-
-    :goto_1
-    if-ge v3, v1, :cond_3
-
-    iget-object v4, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Ljava/util/ArrayList;
-
-    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
-
-    invoke-virtual {v4, v3}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->setPosition(I)V
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_1
-
-    :cond_3
-    if-ne v0, p1, :cond_5
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    const/4 p1, 0x0
-
-    goto :goto_2
-
-    :cond_4
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Ljava/util/ArrayList;
-
-    const/4 v1, 0x0
-
-    add-int/lit8 p1, p1, -0x1
-
-    invoke-static {v1, p1}, Ljava/lang/Math;->max(II)I
-
-    move-result p1
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroidx/appcompat/app/ActionBar$Tab;
-
-    :goto_2
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->selectTab(Landroidx/appcompat/app/ActionBar$Tab;)V
-
-    :cond_5
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Ljava/util/ArrayList;
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_6
-
-    iput v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->F:I
-
-    :cond_6
-    return-void
-.end method
-
-.method public H(Landroid/view/View;)V
-    .locals 2
-
-    if-nez p1, :cond_0
-
-    const-string p0, "miuix-appcompat"
-
-    const-string p1, "warning!! the view is null on registerCoordinateScrollView!!"
-
-    invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-
-    :cond_0
-    instance-of v0, p1, Lqp/a;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->A:Ljava/util/HashSet;
-
-    check-cast p1, Lqp/a;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->b0:Landroid/graphics/Rect;
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {p1, v0}, Lqp/a;->H(Landroid/graphics/Rect;)V
-
-    goto :goto_1
-
-    :cond_1
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Ljava/util/HashMap;
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->b0:Landroid/graphics/Rect;
-
-    if-eqz v1, :cond_2
-
-    iget v1, v1, Landroid/graphics/Rect;->top:I
-
-    goto :goto_0
-
-    :cond_2
-    sget-object v1, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o0:Ljava/lang/Integer;
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    :goto_0
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->b0:Landroid/graphics/Rect;
-
-    if-eqz v0, :cond_3
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Ljava/util/HashMap;
-
-    iget v0, v0, Landroid/graphics/Rect;->top:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->b0:Landroid/graphics/Rect;
-
-    iget v0, v0, Landroid/graphics/Rect;->top:I
-
-    invoke-virtual {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n1(Landroid/view/View;I)V
-
-    :cond_3
-    :goto_1
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    invoke-virtual {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->getActionBarCoordinateListener()Lmiuix/appcompat/internal/app/widget/f;
-
-    move-result-object p1
-
-    if-nez p1, :cond_4
-
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->g1()Lmiuix/appcompat/internal/app/widget/f;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p0}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setActionBarCoordinateListener(Lmiuix/appcompat/internal/app/widget/f;)V
-
-    :cond_4
-    return-void
-.end method
-
-.method public H1()Z
-    .locals 0
-
-    iget-boolean p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->P:Z
-
-    return p0
-.end method
-
-.method public I(Landroid/view/View;)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->P(Landroid/view/View;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public J(Lmiuix/appcompat/app/d;)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->I(Lmiuix/appcompat/app/d;)V
-
-    return-void
-.end method
-
-.method public K()V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/t;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/t;->k()V
-
-    return-void
-.end method
-
-.method public final K1()V
+.method private setHasEmbeddedTabs(Z)V
     .locals 4
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+    .line 1
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->q:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
+    const/4 v0, 0x0
 
-    move-result v0
+    invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setTabContainer(Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;)V
 
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->R:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+    .line 2
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
-    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
-    move-result-object v1
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
-    iget v1, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->A:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
-    const/4 v2, 0x0
+    iget-object v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
-    invoke-static {v0, v2, v1}, Landroid/view/ViewGroup;->getChildMeasureSpec(III)I
+    invoke-virtual {p1, v0, v1, v2, v3}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->r1(Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;)V
 
-    move-result v0
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    invoke-virtual {v1}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v1
-
-    iget-object v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->R:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
-
-    invoke-virtual {v3}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    invoke-static {v1, v2, v3}, Landroid/view/ViewGroup;->getChildMeasureSpec(III)I
-
-    move-result v1
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->R:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
-
-    invoke-virtual {p0, v0, v1}, Landroid/view/View;->measure(II)V
-
-    return-void
-.end method
-
-.method public L(Landroidx/appcompat/app/ActionBar$Tab;)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/t;->n(Landroidx/appcompat/app/ActionBar$Tab;)V
-
-    return-void
-.end method
-
-.method public L1(Z)V
-    .locals 1
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setIsMiuixFloating(Z)V
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->R:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->J()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public M(Landroidx/fragment/app/Fragment;)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/t;->l(Landroidx/fragment/app/Fragment;)V
-
-    return-void
-.end method
-
-.method public M1(Ljava/lang/Boolean;)V
-    .locals 2
-    .param p1    # Ljava/lang/Boolean;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->getDisplayOptions()I
-
-    move-result v0
-
-    const v1, 0x8000
-
-    and-int/2addr v0, v1
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setActionBarBlur(Ljava/lang/Boolean;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public N(Ljava/lang/String;)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/t;->o(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public N1(Ljp/b;)V
-    .locals 1
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->Q:Ljp/b;
-
-    if-eq v0, p1, :cond_1
-
-    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->Q:Ljp/b;
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setExtraPaddingPolicy(Ljp/b;)V
-
-    :cond_0
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->R:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
-
-    if-eqz p1, :cond_1
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->Q:Ljp/b;
-
-    invoke-virtual {p1, p0}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->setExtraPaddingPolicy(Ljp/b;)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public O(I)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/t;->m(I)V
-
-    return-void
-.end method
-
-.method public O1(Ljava/lang/Boolean;)V
-    .locals 1
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->getDisplayOptions()I
-
-    move-result v0
-
-    and-int/lit16 v0, v0, 0x4000
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setSplitActionBarBlur(Ljava/lang/Boolean;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public P(Lmiuix/appcompat/app/ActionBar$a;)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/t;->p(Lmiuix/appcompat/app/ActionBar$a;)V
-
-    return-void
-.end method
-
-.method public P1(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
-    .locals 3
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->h:Landroid/view/ActionMode;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/ActionMode;->finish()V
-
-    :cond_0
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->h1(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/u;
-
-    instance-of v2, v1, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
-
-    if-eqz v2, :cond_1
-
-    instance-of v2, v0, Ldp/h;
-
-    if-nez v2, :cond_2
-
-    :cond_1
-    instance-of v2, v1, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
-
-    if-eqz v2, :cond_3
-
-    instance-of v2, v0, Ldp/f;
-
-    if-eqz v2, :cond_3
-
-    :cond_2
-    invoke-interface {v1}, Lmiuix/appcompat/internal/app/widget/u;->f()V
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/u;
-
-    invoke-interface {v1}, Lmiuix/appcompat/internal/app/widget/u;->h()V
-
-    :cond_3
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i1(Landroid/view/ActionMode$Callback;)Lmiuix/appcompat/internal/app/widget/u;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/u;
-
-    if-eqz p1, :cond_8
-
-    instance-of v1, v0, Ldp/b;
-
-    if-eqz v1, :cond_7
-
-    move-object v1, v0
-
-    check-cast v1, Ldp/b;
-
-    invoke-virtual {v1, p1}, Ldp/b;->v(Lmiuix/appcompat/internal/app/widget/u;)V
-
-    instance-of p1, v1, Ldp/h;
-
-    if-eqz p1, :cond_4
-
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    invoke-virtual {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->getBaseInnerInsets()Landroid/graphics/Rect;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_4
-
-    move-object v2, v1
-
-    check-cast v2, Ldp/h;
-
-    invoke-virtual {v2, p1}, Ldp/h;->w(Landroid/graphics/Rect;)V
-
-    :cond_4
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->S:Ldp/b$a;
-
-    invoke-virtual {v1, p1}, Ldp/b;->u(Ldp/b$a;)V
-
-    invoke-virtual {v1}, Ldp/b;->t()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_7
-
-    invoke-virtual {v0}, Landroid/view/ActionMode;->invalidate()V
-
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/u;
-
-    invoke-interface {p1, v0}, Lmiuix/appcompat/internal/app/widget/u;->i(Landroid/view/ActionMode;)V
-
-    const/4 p1, 0x1
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->animateToMode(Z)V
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    if-eqz v1, :cond_5
-
-    iget v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->I:I
-
-    if-ne v2, p1, :cond_5
-
-    invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
-
-    move-result p1
-
-    if-eqz p1, :cond_5
-
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setVisibility(I)V
-
-    :cond_5
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/u;
-
-    instance-of v1, p1, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
-
-    if-eqz v1, :cond_6
-
-    check-cast p1, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
-
-    const/16 v1, 0x20
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->sendAccessibilityEvent(I)V
-
-    :cond_6
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->h:Landroid/view/ActionMode;
-
-    return-object v0
-
-    :cond_7
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_8
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "not set windowSplitActionBar true in activity style!"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public Q(Ljava/lang/String;ILjava/lang/Class;Landroid/os/Bundle;Z)V
-    .locals 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "I",
-            "Ljava/lang/Class<",
-            "+",
-            "Landroidx/fragment/app/Fragment;",
-            ">;",
-            "Landroid/os/Bundle;",
-            "Z)V"
-        }
-    .end annotation
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/t;
-
-    move-object v1, p1
-
-    move v2, p2
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    move v5, p5
-
-    invoke-virtual/range {v0 .. v5}, Lmiuix/appcompat/internal/app/widget/t;->q(Ljava/lang/String;ILjava/lang/Class;Landroid/os/Bundle;Z)V
-
-    return-void
-.end method
-
-.method public final Q1(ZLjava/lang/String;Lmiuix/animation/controller/AnimState;Lmiuix/animation/controller/AnimState;)Lmiuix/animation/IStateStyle;
-    .locals 15
-
-    move-object v0, p0
-
-    move-object/from16 v1, p2
-
-    iget-object v2, v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    invoke-virtual {v2}, Landroid/view/View;->getHeight()I
-
-    move-result v2
-
-    const/4 v3, 0x0
-
-    if-nez v2, :cond_0
-
-    iget-object v2, v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    invoke-virtual {v2}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result v2
-
-    iget-object v4, v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    invoke-virtual {v4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/view/ViewGroup$LayoutParams;->width:I
-
-    invoke-static {v2, v3, v4}, Landroid/view/ViewGroup;->getChildMeasureSpec(III)I
-
-    move-result v2
-
-    iget-object v4, v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    invoke-virtual {v4}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v4
-
-    iget-object v5, v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    invoke-virtual {v5}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v5
-
-    iget v5, v5, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    invoke-static {v4, v3, v5}, Landroid/view/ViewGroup;->getChildMeasureSpec(III)I
-
-    move-result v4
-
-    iget-object v5, v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    invoke-virtual {v5, v2, v4}, Landroid/view/View;->measure(II)V
-
-    iget-object v5, v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    iget-object v6, v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
-
-    invoke-virtual {p0, v5, v6}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->f1(Lmiuix/appcompat/internal/app/widget/ActionBarView;Lmiuix/appcompat/internal/app/widget/ActionBarContextView;)V
-
-    iget-object v5, v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    invoke-virtual {v5, v2, v4}, Landroid/view/View;->measure(II)V
-
-    iget-object v2, v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    invoke-virtual {v2}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v2
-
-    :cond_0
-    neg-int v2, v2
-
-    int-to-float v4, v2
-
-    iput v4, v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->h0:F
-
-    new-instance v4, Lmiuix/animation/base/AnimConfig;
-
-    invoke-direct {v4}, Lmiuix/animation/base/AnimConfig;-><init>()V
-
-    const/4 v5, 0x1
-
-    new-array v6, v5, [Lmiuix/animation/listener/TransitionListener;
-
-    iget-object v7, v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i0:Lmiuix/animation/listener/TransitionListener;
-
-    aput-object v7, v6, v3
-
-    invoke-virtual {v4, v6}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
-
-    const-wide/high16 v6, 0x3ff0000000000000L    # 1.0
-
-    const/4 v8, 0x2
-
-    const/4 v9, -0x2
-
-    const-wide/16 v10, 0x0
-
-    if-eqz p1, :cond_2
-
-    new-array v8, v8, [F
-
-    fill-array-data v8, :array_0
-
-    invoke-static {v9, v8}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
-
-    move-result-object v8
-
-    invoke-virtual {v4, v8}, Lmiuix/animation/base/AnimConfig;->setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;)Lmiuix/animation/base/AnimConfig;
-
-    if-nez p4, :cond_1
-
-    new-instance v8, Lmiuix/animation/controller/AnimState;
-
-    invoke-direct {v8, v1}, Lmiuix/animation/controller/AnimState;-><init>(Ljava/lang/Object;)V
-
-    sget-object v9, Lmiuix/animation/property/ViewProperty;->TRANSLATION_Y:Lmiuix/animation/property/ViewProperty;
-
-    invoke-virtual {v8, v9, v10, v11}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
-
-    move-result-object v8
-
-    sget-object v9, Lmiuix/animation/property/ViewProperty;->ALPHA:Lmiuix/animation/property/ViewProperty;
-
-    invoke-virtual {v8, v9, v6, v7}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
-
-    move-result-object v6
-
-    goto :goto_0
-
-    :cond_1
-    move-object/from16 v6, p4
-
-    :goto_0
-    if-nez p3, :cond_5
-
-    if-nez p4, :cond_5
-
-    new-instance v7, Lmiuix/animation/controller/AnimState;
-
-    invoke-direct {v7, v1}, Lmiuix/animation/controller/AnimState;-><init>(Ljava/lang/Object;)V
-
-    sget-object v8, Lmiuix/animation/property/ViewProperty;->TRANSLATION_Y:Lmiuix/animation/property/ViewProperty;
-
-    int-to-double v12, v2
-
-    invoke-virtual {v7, v8, v12, v13}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
-
-    move-result-object v2
-
-    sget-object v7, Lmiuix/animation/property/ViewProperty;->ALPHA:Lmiuix/animation/property/ViewProperty;
-
-    invoke-virtual {v2, v7, v10, v11}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
-
-    move-result-object v2
-
-    goto :goto_2
-
-    :cond_2
-    new-array v8, v8, [F
-
-    fill-array-data v8, :array_1
-
-    invoke-static {v9, v8}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
-
-    move-result-object v8
-
-    invoke-virtual {v4, v8}, Lmiuix/animation/base/AnimConfig;->setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;)Lmiuix/animation/base/AnimConfig;
-
-    new-array v8, v5, [Lmiuix/animation/listener/TransitionListener;
-
-    new-instance v9, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$h;
-
-    iget-object v12, v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    invoke-direct {v9, v12, p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$h;-><init>(Landroid/view/View;Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)V
-
-    aput-object v9, v8, v3
-
-    invoke-virtual {v4, v8}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
-
-    if-nez p4, :cond_3
-
-    new-instance v8, Lmiuix/animation/controller/AnimState;
-
-    invoke-direct {v8, v1}, Lmiuix/animation/controller/AnimState;-><init>(Ljava/lang/Object;)V
-
-    sget-object v9, Lmiuix/animation/property/ViewProperty;->TRANSLATION_Y:Lmiuix/animation/property/ViewProperty;
-
-    int-to-double v12, v2
-
-    invoke-virtual {v8, v9, v12, v13}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
-
-    move-result-object v2
-
-    sget-object v8, Lmiuix/animation/property/ViewProperty;->ALPHA:Lmiuix/animation/property/ViewProperty;
-
-    invoke-virtual {v2, v8, v10, v11}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
-
-    move-result-object v2
-
-    goto :goto_1
-
-    :cond_3
-    move-object/from16 v2, p4
-
-    :goto_1
-    if-nez p3, :cond_4
-
-    if-nez p4, :cond_4
-
-    new-instance v8, Lmiuix/animation/controller/AnimState;
-
-    invoke-direct {v8, v1}, Lmiuix/animation/controller/AnimState;-><init>(Ljava/lang/Object;)V
-
-    sget-object v9, Lmiuix/animation/property/ViewProperty;->TRANSLATION_Y:Lmiuix/animation/property/ViewProperty;
-
-    invoke-virtual {v8, v9, v10, v11}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
-
-    move-result-object v8
-
-    sget-object v9, Lmiuix/animation/property/ViewProperty;->ALPHA:Lmiuix/animation/property/ViewProperty;
-
-    invoke-virtual {v8, v9, v6, v7}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
-
-    move-result-object v6
-
-    move-object v14, v6
-
-    move-object v6, v2
-
-    move-object v2, v14
-
-    goto :goto_2
-
-    :cond_4
-    move-object v6, v2
-
-    :cond_5
-    move-object/from16 v2, p3
-
-    :goto_2
-    new-array v7, v5, [Landroid/view/View;
-
-    iget-object v8, v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    aput-object v8, v7, v3
-
-    invoke-static {v7}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
-
-    move-result-object v7
-
-    invoke-interface {v7}, Lmiuix/animation/IFolme;->state()Lmiuix/animation/IStateStyle;
-
-    move-result-object v7
-
-    if-eqz v2, :cond_6
-
-    invoke-virtual {v2, v1}, Lmiuix/animation/controller/AnimState;->setTag(Ljava/lang/Object;)V
-
-    invoke-interface {v7, v2}, Lmiuix/animation/IStateStyle;->setTo(Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
-
-    move-result-object v7
-
-    :cond_6
-    new-array v1, v5, [Lmiuix/animation/base/AnimConfig;
-
-    aput-object v4, v1, v3
-
-    invoke-interface {v7, v6, v1}, Lmiuix/animation/IStateStyle;->to(Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
-
-    iput-boolean v5, v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->U:Z
-
-    return-object v7
-
-    nop
-
-    :array_0
-    .array-data 4
-        0x3f666666    # 0.9f
-        0x3e800000    # 0.25f
-    .end array-data
-
-    :array_1
-    .array-data 4
-        0x3f800000    # 1.0f
-        0x3eb33333    # 0.35f
-    .end array-data
-.end method
-
-.method public R(Landroid/view/View;)V
-    .locals 3
-
-    instance-of v0, p1, Lqp/a;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->A:Ljava/util/HashSet;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {p0, p1, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n1(Landroid/view/View;I)V
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Ljava/util/HashMap;
-
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->b0:Landroid/graphics/Rect;
-
-    if-eqz v2, :cond_1
-
-    iget v2, v2, Landroid/graphics/Rect;->top:I
-
-    goto :goto_0
-
-    :cond_1
-    sget-object v2, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o0:Ljava/lang/Integer;
-
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    :goto_0
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, p1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->b0:Landroid/graphics/Rect;
-
-    if-eqz v0, :cond_2
-
-    iget v1, v0, Landroid/graphics/Rect;->top:I
-
-    :cond_2
-    invoke-virtual {p0, p1, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n1(Landroid/view/View;I)V
-
-    :cond_3
-    :goto_1
-    return-void
-.end method
-
-.method public final R1(ZLjava/lang/String;Lmiuix/animation/controller/AnimState;)Lmiuix/animation/IStateStyle;
-    .locals 9
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->v1()I
-
-    move-result v0
-
-    const-wide/16 v1, 0x0
-
-    const/4 v3, 0x2
-
-    const/4 v4, -0x2
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x1
-
-    if-eqz p1, :cond_1
-
-    new-instance p1, Lmiuix/animation/base/AnimConfig;
-
-    invoke-direct {p1}, Lmiuix/animation/base/AnimConfig;-><init>()V
-
-    new-array v0, v3, [F
-
-    fill-array-data v0, :array_0
-
-    invoke-static {v4, v0}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lmiuix/animation/base/AnimConfig;->setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;)Lmiuix/animation/base/AnimConfig;
-
-    new-instance v0, Lmiuix/animation/controller/AnimState;
-
-    invoke-direct {v0, p2}, Lmiuix/animation/controller/AnimState;-><init>(Ljava/lang/Object;)V
-
-    sget-object v3, Lmiuix/animation/property/ViewProperty;->TRANSLATION_Y:Lmiuix/animation/property/ViewProperty;
-
-    invoke-virtual {v0, v3, v1, v2}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
-
-    move-result-object v0
-
-    sget-object v1, Lmiuix/animation/property/ViewProperty;->ALPHA:Lmiuix/animation/property/ViewProperty;
-
-    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
-
-    invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
-
-    move-result-object v0
-
-    new-array v1, v6, [Landroid/view/View;
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    aput-object p0, v1, v5
-
-    invoke-static {v1}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Lmiuix/animation/IFolme;->state()Lmiuix/animation/IStateStyle;
-
-    move-result-object p0
-
-    if-eqz p3, :cond_0
-
-    invoke-virtual {p3, p2}, Lmiuix/animation/controller/AnimState;->setTag(Ljava/lang/Object;)V
-
-    invoke-interface {p0, p3}, Lmiuix/animation/IStateStyle;->setTo(Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
-
-    move-result-object p0
-
-    :cond_0
-    new-array p2, v6, [Lmiuix/animation/base/AnimConfig;
-
-    aput-object p1, p2, v5
-
-    invoke-interface {p0, v0, p2}, Lmiuix/animation/IStateStyle;->to(Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
-
-    move-result-object p0
-
-    goto :goto_0
-
-    :cond_1
-    new-instance p1, Lmiuix/animation/base/AnimConfig;
-
-    invoke-direct {p1}, Lmiuix/animation/base/AnimConfig;-><init>()V
-
-    new-array v3, v3, [F
-
-    fill-array-data v3, :array_1
-
-    invoke-static {v4, v3}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
-
-    move-result-object v3
-
-    invoke-virtual {p1, v3}, Lmiuix/animation/base/AnimConfig;->setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;)Lmiuix/animation/base/AnimConfig;
-
-    new-array v3, v6, [Lmiuix/animation/listener/TransitionListener;
-
-    new-instance v4, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$h;
-
-    iget-object v7, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    invoke-direct {v4, v7, p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$h;-><init>(Landroid/view/View;Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)V
-
-    aput-object v4, v3, v5
-
-    invoke-virtual {p1, v3}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
-
-    new-instance v3, Lmiuix/animation/controller/AnimState;
-
-    invoke-direct {v3, p2}, Lmiuix/animation/controller/AnimState;-><init>(Ljava/lang/Object;)V
-
-    sget-object v4, Lmiuix/animation/property/ViewProperty;->TRANSLATION_Y:Lmiuix/animation/property/ViewProperty;
-
-    add-int/lit8 v0, v0, 0x64
-
-    int-to-double v7, v0
-
-    invoke-virtual {v3, v4, v7, v8}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
-
-    move-result-object v0
-
-    sget-object v3, Lmiuix/animation/property/ViewProperty;->ALPHA:Lmiuix/animation/property/ViewProperty;
-
-    invoke-virtual {v0, v3, v1, v2}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
-
-    move-result-object v0
-
-    new-array v1, v6, [Landroid/view/View;
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    aput-object p0, v1, v5
-
-    invoke-static {v1}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Lmiuix/animation/IFolme;->state()Lmiuix/animation/IStateStyle;
-
-    move-result-object p0
-
-    if-eqz p3, :cond_2
-
-    invoke-virtual {p3, p2}, Lmiuix/animation/controller/AnimState;->setTag(Ljava/lang/Object;)V
-
-    invoke-interface {p0, p3}, Lmiuix/animation/IStateStyle;->setTo(Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
-
-    move-result-object p0
-
-    :cond_2
-    new-array p2, v6, [Lmiuix/animation/base/AnimConfig;
-
-    aput-object p1, p2, v5
-
-    invoke-interface {p0, v0, p2}, Lmiuix/animation/IStateStyle;->to(Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
-
-    move-result-object p0
-
-    :goto_0
-    return-object p0
-
-    nop
-
-    :array_0
-    .array-data 4
-        0x3f666666    # 0.9f
-        0x3e800000    # 0.25f
-    .end array-data
-
-    :array_1
-    .array-data 4
-        0x3f800000    # 1.0f
-        0x3eb33333    # 0.35f
-    .end array-data
-.end method
-
-.method public S(Ljava/util/Map;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/Map<",
-            "Ljava/lang/Integer;",
-            "Ljava/lang/Boolean;",
-            ">;)V"
-        }
-    .end annotation
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->s1()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->v1()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->X1(Ljava/util/Map;)V
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method public S1(Z)V
-    .locals 1
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->getThemedContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lmp/j;->f(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->R:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->R(Z)V
-
-    :cond_1
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->O(Z)V
-
-    return-void
-.end method
-
-.method public T(Ljava/util/Map;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/Map<",
-            "Ljava/lang/Integer;",
-            "[",
-            "Ljava/lang/Boolean;",
-            ">;)V"
-        }
-    .end annotation
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->s1()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->v1()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->Y1(Ljava/util/Map;)V
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method public T1(Landroid/graphics/Rect;)V
-    .locals 5
-
-    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->b0:Landroid/graphics/Rect;
-
-    iget v0, p1, Landroid/graphics/Rect;->top:I
-
-    iget v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->c0:I
-
-    sub-int v1, v0, v1
-
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->c0:I
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->A:Ljava/util/HashSet;
-
-    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lqp/a;
-
-    invoke-interface {v2, p1}, Lqp/a;->H(Landroid/graphics/Rect;)V
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Ljava/util/HashMap;
-
-    invoke-virtual {p1}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :cond_1
-    :goto_1
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/View;
-
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Ljava/util/HashMap;
-
-    invoke-virtual {v2, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Integer;
-
-    if-nez v2, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    if-eqz v1, :cond_1
-
-    sget-object v3, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o0:Ljava/lang/Integer;
-
-    invoke-virtual {v2, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    const/4 v4, 0x0
-
-    if-eqz v3, :cond_3
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    goto :goto_2
-
-    :cond_3
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v3
-
-    if-nez v3, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    :goto_2
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    add-int/2addr v2, v1
-
-    invoke-static {v4, v2}, Ljava/lang/Math;->max(II)I
-
-    move-result v2
-
-    iget-object v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Ljava/util/HashMap;
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v0, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {p0, v0, v2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n1(Landroid/view/View;I)V
-
-    goto :goto_1
-
-    :cond_5
-    return-void
-.end method
-
-.method public U(Landroidx/appcompat/app/ActionBar$Tab;Z)V
-    .locals 5
-
-    iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->D:Z
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    iput-boolean v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->D:Z
-
-    return-void
-
-    :cond_0
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->D:Z
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i:Landroid/content/Context;
-
-    instance-of v2, v0, Landroid/app/Activity;
-
-    if-eqz v2, :cond_2
-
-    check-cast v0, Landroid/app/Activity;
-
-    invoke-virtual {v0}, Landroid/app/Activity;->isDestroyed()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i:Landroid/content/Context;
-
-    check-cast v0, Landroid/app/Activity;
-
-    invoke-virtual {v0}, Landroid/app/Activity;->isFinishing()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    :cond_1
-    return-void
-
-    :cond_2
+    .line 3
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->getNavigationMode()I
 
-    move-result v0
+    move-result p1
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
 
     const/4 v2, 0x2
 
-    const/4 v3, -0x1
+    if-ne p1, v2, :cond_0
 
-    if-eq v0, v2, :cond_4
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p1}, Landroidx/appcompat/app/ActionBar$Tab;->getPosition()I
-
-    move-result v3
-
-    :cond_3
-    iput v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->F:I
-
-    return-void
-
-    :cond_4
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->E:Landroidx/fragment/app/FragmentManager;
-
-    invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->beginTransaction()Landroidx/fragment/app/FragmentTransaction;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroidx/fragment/app/FragmentTransaction;->disallowAddToBackStack()Landroidx/fragment/app/FragmentTransaction;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->C:Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
-
-    if-ne v2, p1, :cond_5
-
-    if-eqz v2, :cond_b
-
-    invoke-virtual {v2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->getCallback()Landroidx/appcompat/app/ActionBar$TabListener;
-
-    move-result-object p2
-
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->C:Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
-
-    invoke-interface {p2, v2, v0}, Landroidx/appcompat/app/ActionBar$TabListener;->onTabReselected(Landroidx/appcompat/app/ActionBar$Tab;Landroidx/fragment/app/FragmentTransaction;)V
-
-    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->u:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    invoke-virtual {p1}, Landroidx/appcompat/app/ActionBar$Tab;->getPosition()I
-
-    move-result v2
-
-    invoke-virtual {p2, v2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->e(I)V
-
-    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->v:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    invoke-virtual {p1}, Landroidx/appcompat/app/ActionBar$Tab;->getPosition()I
-
-    move-result v2
-
-    invoke-virtual {p2, v2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->e(I)V
-
-    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->w:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    invoke-virtual {p1}, Landroidx/appcompat/app/ActionBar$Tab;->getPosition()I
-
-    move-result v2
-
-    invoke-virtual {p2, v2}, Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;->v(I)V
-
-    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    invoke-virtual {p1}, Landroidx/appcompat/app/ActionBar$Tab;->getPosition()I
-
-    move-result p1
-
-    invoke-virtual {p2, p1}, Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;->v(I)V
-
-    goto :goto_3
-
-    :cond_5
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->u:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    if-eqz p1, :cond_6
-
-    invoke-virtual {p1}, Landroidx/appcompat/app/ActionBar$Tab;->getPosition()I
-
-    move-result v4
-
-    goto :goto_0
-
-    :cond_6
-    move v4, v3
-
-    :goto_0
-    invoke-virtual {v2, v4, p2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->q(IZ)V
-
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->v:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    if-eqz p1, :cond_7
-
-    invoke-virtual {p1}, Landroidx/appcompat/app/ActionBar$Tab;->getPosition()I
-
-    move-result v4
-
-    goto :goto_1
-
-    :cond_7
-    move v4, v3
-
-    :goto_1
-    invoke-virtual {v2, v4, p2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->q(IZ)V
-
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->w:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    if-eqz p1, :cond_8
-
-    invoke-virtual {p1}, Landroidx/appcompat/app/ActionBar$Tab;->getPosition()I
-
-    move-result v4
-
-    goto :goto_2
-
-    :cond_8
-    move v4, v3
-
-    :goto_2
-    invoke-virtual {v2, v4}, Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;->setTabSelected(I)V
-
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    if-eqz p1, :cond_9
-
-    invoke-virtual {p1}, Landroidx/appcompat/app/ActionBar$Tab;->getPosition()I
-
-    move-result v3
-
-    :cond_9
-    invoke-virtual {v2, v3}, Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;->setTabSelected(I)V
-
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->C:Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
-
-    if-eqz v2, :cond_a
-
-    invoke-virtual {v2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->getCallback()Landroidx/appcompat/app/ActionBar$TabListener;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->C:Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
-
-    invoke-interface {v2, v3, v0}, Landroidx/appcompat/app/ActionBar$TabListener;->onTabUnselected(Landroidx/appcompat/app/ActionBar$Tab;Landroidx/fragment/app/FragmentTransaction;)V
-
-    :cond_a
-    check-cast p1, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
-
-    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->C:Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
-
-    if-eqz p1, :cond_b
-
-    iput-boolean p2, p1, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->i:Z
-
-    invoke-virtual {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->getCallback()Landroidx/appcompat/app/ActionBar$TabListener;
-
-    move-result-object p1
-
-    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->C:Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
-
-    invoke-interface {p1, p2, v0}, Landroidx/appcompat/app/ActionBar$TabListener;->onTabSelected(Landroidx/appcompat/app/ActionBar$Tab;Landroidx/fragment/app/FragmentTransaction;)V
-
-    :cond_b
-    :goto_3
-    invoke-virtual {v0}, Landroidx/fragment/app/FragmentTransaction;->isEmpty()Z
-
-    move-result p1
-
-    if-nez p1, :cond_c
-
-    invoke-virtual {v0}, Landroidx/fragment/app/FragmentTransaction;->commit()I
-
-    :cond_c
-    iput-boolean v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->D:Z
-
-    return-void
-.end method
-
-.method public final U1(Z)V
-    .locals 2
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result v0
-
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_1
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v0
-
-    instance-of v0, v0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
-
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->q:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
-
-    invoke-virtual {v0}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->G()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Landroid/view/View;
-
-    if-eqz v0, :cond_1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->s:Landroid/view/View$OnClickListener;
-
-    invoke-virtual {p1, p0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->v(Landroid/view/View$OnClickListener;)Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->b()Landroid/animation/Animator;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/animation/Animator;->start()V
+    move p1, v0
 
     goto :goto_0
 
     :cond_0
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+    move p1, v1
 
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->v(Landroid/view/View$OnClickListener;)Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;->a()Landroid/animation/Animator;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/animation/Animator;->start()V
-
-    :cond_1
+    .line 4
     :goto_0
-    return-void
-.end method
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
-.method public V(Lxo/c;)V
-    .locals 1
-
-    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->Z:Lxo/c;
-
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    new-instance v0, Lmiuix/appcompat/internal/app/widget/g;
-
-    invoke-direct {v0, p0}, Lmiuix/appcompat/internal/app/widget/g;-><init>(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)V
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-.end method
-
-.method public V1()V
-    .locals 5
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Ljava/util/HashMap;
-
-    invoke-virtual {v0}, Ljava/util/HashMap;->size()I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->A:Ljava/util/HashSet;
-
-    invoke-virtual {v0}, Ljava/util/HashSet;->size()I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setActionBarCoordinateListener(Lmiuix/appcompat/internal/app/widget/f;)V
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Ljava/util/HashMap;
-
-    invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/view/View;
-
-    invoke-virtual {p0, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->u1(Landroid/view/View;)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    invoke-virtual {p0, v1, v2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n1(Landroid/view/View;I)V
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->A:Ljava/util/HashSet;
-
-    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lqp/a;
-
-    check-cast v1, Landroid/view/View;
-
-    instance-of v2, v1, Lqp/b;
+    const/16 v3, 0x8
 
     if-eqz v2, :cond_2
 
-    move-object v2, v1
-
-    check-cast v2, Lqp/b;
-
-    iget v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->d0:I
-
-    iget v4, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->e0:I
-
-    invoke-interface {v2, v3, v4}, Lqp/b;->c(II)V
-
-    :cond_2
-    const/4 v2, 0x0
-
-    invoke-virtual {p0, v1, v2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n1(Landroid/view/View;I)V
-
-    goto :goto_1
-
-    :cond_3
-    return-void
-.end method
-
-.method public W(I)V
-    .locals 1
-
-    iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->a0:I
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/b;->setActionMenuItemLimit(I)V
-
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/u;
-
-    instance-of v0, p1, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
-
-    iget p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->a0:I
-
-    invoke-virtual {p1, p0}, Lmiuix/appcompat/internal/app/widget/b;->setActionMenuItemLimit(I)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public W1(I)V
-    .locals 1
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->ensureTabsExist()V
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->u:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->t(I)V
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->v:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->t(I)V
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->w:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;->G(I)V
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;->G(I)V
-
-    return-void
-.end method
-
-.method public X(Z)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->setActionModeAnim(Z)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public X1(Landroid/view/View;I)I
-    .locals 3
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->u1(Landroid/view/View;)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    if-le v1, p2, :cond_0
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Ljava/util/HashMap;
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v1, p1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {p0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n1(Landroid/view/View;I)V
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result p0
-
-    sub-int/2addr p0, p2
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    return p0
-.end method
-
-.method public Y(I)V
-    .locals 2
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setUserSetEndActionMenuItemLimit(Z)V
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setEndActionMenuItemLimit(I)V
-
-    return-void
-.end method
-
-.method public Y1(Landroid/view/View;I)I
-    .locals 8
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Ljava/util/HashMap;
-
-    invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    :cond_0
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/view/View;
-
-    invoke-virtual {p0, v3}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->u1(Landroid/view/View;)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
-
-    move-result v4
-
-    sub-int v5, v4, p2
-
-    iget-object v6, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->b0:Landroid/graphics/Rect;
-
-    if-nez v6, :cond_1
-
-    move v6, v1
-
-    goto :goto_1
-
-    :cond_1
-    iget v6, v6, Landroid/graphics/Rect;->top:I
-
-    :goto_1
-    invoke-static {v5, v6}, Ljava/lang/Math;->min(II)I
-
-    move-result v5
-
-    if-ge v4, v5, :cond_0
-
-    iget-object v6, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Ljava/util/HashMap;
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    invoke-virtual {v6, v3, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {p0, v3, v5}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n1(Landroid/view/View;I)V
-
-    if-ne p1, v3, :cond_0
-
-    sub-int v2, v4, v5
-
-    goto :goto_0
-
-    :cond_2
-    return v2
-.end method
-
-.method public Z(Landroid/view/View;)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setEndView(Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method public final Z1(ZZLmiuix/animation/controller/AnimState;)V
-    .locals 3
-
-    iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->L:Z
-
-    iget-boolean v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->M:Z
-
-    iget-boolean v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->N:Z
-
-    invoke-static {v0, v1, v2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->checkShowingFlags(ZZZ)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->O:Z
-
-    if-nez v0, :cond_1
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->O:Z
-
-    invoke-virtual {p0, p1, p2, p3}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m1(ZZLmiuix/animation/controller/AnimState;)V
-
-    goto :goto_0
-
-    :cond_0
-    iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->O:Z
-
-    if-eqz v0, :cond_1
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->O:Z
-
-    invoke-virtual {p0, p1, p2, p3}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l1(ZZLmiuix/animation/controller/AnimState;)V
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method public a(Lmiuix/appcompat/app/d;)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->p(Lmiuix/appcompat/app/d;)V
-
-    return-void
-.end method
-
-.method public a0(I)V
-    .locals 1
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/b;->setExpandStateByUser(I)V
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setExpandState(I)V
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/b;->setExpandStateByUser(I)V
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->setExpandState(I)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public addOnMenuVisibilityListener(Landroidx/appcompat/app/ActionBar$OnMenuVisibilityListener;)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->H:Ljava/util/ArrayList;
-
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-void
-.end method
-
-.method public addTab(Landroidx/appcompat/app/ActionBar$Tab;)V
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v0
-
-    invoke-virtual {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->addTab(Landroidx/appcompat/app/ActionBar$Tab;Z)V
-
-    return-void
-.end method
-
-.method public addTab(Landroidx/appcompat/app/ActionBar$Tab;I)V
-    .locals 1
-
-    .line 5
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v0
-
-    invoke-virtual {p0, p1, p2, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->addTab(Landroidx/appcompat/app/ActionBar$Tab;IZ)V
-
-    return-void
-.end method
-
-.method public addTab(Landroidx/appcompat/app/ActionBar$Tab;IZ)V
-    .locals 1
-
-    .line 6
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->F()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 7
-    invoke-virtual {p0, p1, p2, p3}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->C1(Landroidx/appcompat/app/ActionBar$Tab;IZ)V
-
-    return-void
-
-    .line 8
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "Cannot add tab directly in fragment view pager mode!\n Please using addFragmentTab()."
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public addTab(Landroidx/appcompat/app/ActionBar$Tab;Z)V
-    .locals 1
-
-    .line 2
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->F()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 3
-    invoke-virtual {p0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->D1(Landroidx/appcompat/app/ActionBar$Tab;Z)V
-
-    return-void
-
-    .line 4
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "Cannot add tab directly in fragment view pager mode!\n Please using addFragmentTab()."
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public animateToMode(Z)V
-    .locals 2
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->showForActionMode()V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->hideForActionMode()V
-
-    :goto_0
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/u;
-
-    invoke-interface {v0, p1}, Lmiuix/appcompat/internal/app/widget/u;->c(Z)V
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->u:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->z1()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->r1()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->u:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    xor-int/lit8 v1, p1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->v:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    xor-int/lit8 v1, p1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->w:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    xor-int/lit8 v1, p1, 0x1
-
-    invoke-virtual {v0, v1}, Lmiuix/miuixbasewidget/widget/FilterSortView2;->setEnabled(Z)V
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    xor-int/lit8 p1, p1, 0x1
-
-    invoke-virtual {p0, p1}, Lmiuix/miuixbasewidget/widget/FilterSortView2;->setEnabled(Z)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public b(I)V
-    .locals 1
-
-    const/4 v0, 0x2
-
-    invoke-virtual {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->c(II)V
-
-    return-void
-.end method
-
-.method public b0(IZ)V
-    .locals 2
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/b;->setExpandStateByUser(I)V
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p1, p2, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->K(IZZ)V
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/b;->setExpandStateByUser(I)V
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
-
-    invoke-virtual {p0, p1, p2, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->K(IZZ)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public c(II)V
-    .locals 1
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->s1()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->y0(II)V
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method public c0(IZZ)V
-    .locals 1
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/b;->setExpandStateByUser(I)V
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {v0, p1, p2, p3}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->K(IZZ)V
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/b;->setExpandStateByUser(I)V
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
-
-    invoke-virtual {p0, p1, p2, p3}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->K(IZZ)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final cleanupTabs()V
-    .locals 1
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->C:Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->selectTab(Landroidx/appcompat/app/ActionBar$Tab;)V
-
-    :cond_0
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->u:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->k()V
-
-    :cond_1
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->v:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->k()V
-
-    :cond_2
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->w:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;->y()V
-
-    :cond_3
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    if-eqz v0, :cond_4
-
-    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;->y()V
-
-    :cond_4
-    const/4 v0, -0x1
-
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->F:I
-
-    return-void
-.end method
-
-.method public final configureTab(Landroidx/appcompat/app/ActionBar$Tab;I)V
-    .locals 1
-
-    check-cast p1, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
-
-    invoke-virtual {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->getCallback()Landroidx/appcompat/app/ActionBar$TabListener;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->setPosition(I)V
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p2, p1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
-
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Ljava/util/ArrayList;
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
-
-    move-result p1
-
-    :goto_0
-    add-int/lit8 p2, p2, 0x1
-
-    if-ge p2, p1, :cond_0
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
-
-    invoke-virtual {v0, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->setPosition(I)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "Action Bar Tab must have a Callback"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public d(Landroid/view/MenuItem;)V
-    .locals 1
-
-    const/4 v0, 0x2
-
-    invoke-virtual {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->e(Landroid/view/MenuItem;I)V
-
-    return-void
-.end method
-
-.method public d0(II)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->v:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    invoke-virtual {p0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->r(II)V
-
-    return-void
-.end method
-
-.method public final doHide(Z)V
-    .locals 2
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, p1, v0, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l1(ZZLmiuix/animation/controller/AnimState;)V
-
-    return-void
-.end method
-
-.method public final doShow(Z)V
-    .locals 2
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, p1, v0, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m1(ZZLmiuix/animation/controller/AnimState;)V
-
-    return-void
-.end method
-
-.method public e(Landroid/view/MenuItem;I)V
-    .locals 1
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->s1()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->z0(Landroid/view/MenuItem;I)V
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method public e0(IZ)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/t;
-
-    invoke-virtual {p0, p1, p2}, Lmiuix/appcompat/internal/app/widget/t;->r(IZ)V
-
-    return-void
-.end method
-
-.method public final e1()V
-    .locals 2
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    sget v1, Lso/b$j;->content_mask_vs:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/ViewStub;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/ViewStub;->inflate()Landroid/view/View;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    sget v1, Lso/b$j;->content_mask:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    :goto_0
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->setContentMask(Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method public final ensureTabsExist()V
-    .locals 5
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->u:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->L0()V
-
-    return-void
-
-    :cond_0
-    new-instance v0, Lmiuix/appcompat/internal/app/widget/v;
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i:Landroid/content/Context;
-
-    invoke-direct {v0, v1}, Lmiuix/appcompat/internal/app/widget/v;-><init>(Landroid/content/Context;)V
-
-    new-instance v1, Lmiuix/appcompat/internal/app/widget/x;
-
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i:Landroid/content/Context;
-
-    invoke-direct {v1, v2}, Lmiuix/appcompat/internal/app/widget/x;-><init>(Landroid/content/Context;)V
-
-    new-instance v2, Lmiuix/appcompat/internal/app/widget/z;
-
-    iget-object v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i:Landroid/content/Context;
-
-    invoke-direct {v2, v3}, Lmiuix/appcompat/internal/app/widget/z;-><init>(Landroid/content/Context;)V
-
-    new-instance v3, Lmiuix/appcompat/internal/app/widget/a0;
-
-    iget-object v4, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i:Landroid/content/Context;
-
-    invoke-direct {v3, v4}, Lmiuix/appcompat/internal/app/widget/a0;-><init>(Landroid/content/Context;)V
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {v2, v4}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {v3, v4}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v4, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {v4, v0, v1, v2, v3}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->c2(Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;)V
-
-    const/4 v4, 0x1
-
-    invoke-virtual {v0, v4}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->setEmbeded(Z)V
-
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->u:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    iput-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->v:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    iput-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->w:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    iput-object v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    return-void
-.end method
-
-.method public f()V
-    .locals 1
-
-    const/4 v0, 0x2
-
-    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->g(I)V
-
-    return-void
-.end method
-
-.method public f0(Landroidx/fragment/app/FragmentActivity;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->g0(Landroidx/fragment/app/FragmentActivity;Z)V
-
-    return-void
-.end method
-
-.method public final f1(Lmiuix/appcompat/internal/app/widget/ActionBarView;Lmiuix/appcompat/internal/app/widget/ActionBarContextView;)V
-    .locals 5
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->Z:Lxo/c;
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r()I
-
-    move-result v0
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->Z:Lxo/c;
-
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    iget-object v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0, v2, v3}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r1(Lmiuix/appcompat/internal/app/widget/ActionBarContainer;Lmiuix/appcompat/internal/app/widget/ActionBarView;)Lxo/b;
-
-    move-result-object v2
-
-    invoke-interface {v1, p0, v2}, Lxo/c;->config(Lmiuix/appcompat/app/ActionBar;Lxo/b;)Lxo/a;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    if-eqz p1, :cond_6
-
-    if-eqz v1, :cond_6
-
-    invoke-virtual {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->v()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    iget-boolean v4, v1, Lxo/a;->a:Z
-
-    if-eqz v4, :cond_4
-
-    :cond_1
-    invoke-virtual {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->u()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_2
-
-    iget-boolean v4, v1, Lxo/a;->c:Z
-
-    if-nez v4, :cond_3
-
-    :cond_2
-    iget v4, v1, Lxo/a;->b:I
-
-    invoke-virtual {p1, v4, v2, v3}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->K(IZZ)V
-
-    :cond_3
-    iget-boolean v4, v1, Lxo/a;->c:Z
-
-    invoke-virtual {p1, v4}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setResizable(Z)V
-
-    :cond_4
-    invoke-virtual {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->B1()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_5
-
-    iget-boolean v4, v1, Lxo/a;->d:Z
-
-    if-eqz v4, :cond_6
-
-    :cond_5
-    iget v4, v1, Lxo/a;->e:I
-
-    invoke-virtual {p1, v4}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setEndActionMenuItemLimit(I)V
-
-    :cond_6
-    if-eqz p2, :cond_a
-
-    if-eqz v1, :cond_a
-
-    invoke-virtual {p2}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->v()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_7
-
-    iget-boolean p1, v1, Lxo/a;->a:Z
-
-    if-eqz p1, :cond_a
-
-    :cond_7
-    invoke-virtual {p2}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->u()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_8
-
-    iget-boolean p1, v1, Lxo/a;->c:Z
-
-    if-nez p1, :cond_9
-
-    :cond_8
-    iget p1, v1, Lxo/a;->b:I
-
-    invoke-virtual {p2, p1, v2, v3}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->K(IZZ)V
-
-    :cond_9
-    iget-boolean p1, v1, Lxo/a;->c:Z
-
-    invoke-virtual {p2, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->setResizable(Z)V
-
-    :cond_a
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r()I
-
-    move-result p1
-
-    iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->W:I
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->G()Z
-
-    move-result p1
-
-    iput-boolean p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->X:Z
-
-    iget p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->W:I
-
-    if-ne p1, v3, :cond_d
-
-    if-eq v0, p1, :cond_d
-
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->b0:Landroid/graphics/Rect;
-
-    if-eqz p1, :cond_d
-
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Ljava/util/HashMap;
-
-    invoke-virtual {p1}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_b
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/view/View;
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Ljava/util/HashMap;
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->b0:Landroid/graphics/Rect;
-
-    iget v1, v1, Landroid/graphics/Rect;->top:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, p2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
-
-    :cond_b
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->A:Ljava/util/HashSet;
-
-    invoke-virtual {p1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_1
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_c
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lqp/a;
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->b0:Landroid/graphics/Rect;
-
-    invoke-interface {p2, v0}, Lqp/a;->H(Landroid/graphics/Rect;)V
-
-    goto :goto_1
-
-    :cond_c
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    if-eqz p0, :cond_d
-
-    invoke-virtual {p0, v2}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setActionBarBlurByNestedScrolled(Z)V
-
-    :cond_d
-    return-void
-.end method
-
-.method public g(I)V
-    .locals 1
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->s1()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->A0(I)V
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method public g0(Landroidx/fragment/app/FragmentActivity;Z)V
-    .locals 2
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->F()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->removeAllTabs()V
-
-    const/4 v0, 0x2
-
-    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->setNavigationMode(I)V
-
-    new-instance v0, Lmiuix/appcompat/internal/app/widget/t;
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->E:Landroidx/fragment/app/FragmentManager;
-
-    invoke-virtual {p1}, Landroidx/activity/ComponentActivity;->getLifecycle()Landroidx/lifecycle/Lifecycle;
-
-    move-result-object p1
-
-    invoke-direct {v0, p0, v1, p1, p2}, Lmiuix/appcompat/internal/app/widget/t;-><init>(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;Landroidx/fragment/app/FragmentManager;Landroidx/lifecycle/Lifecycle;Z)V
-
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/t;
-
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->u:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->j(Lmiuix/appcompat/app/ActionBar$a;)V
-
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->v:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->j(Lmiuix/appcompat/app/ActionBar$a;)V
-
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->w:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->j(Lmiuix/appcompat/app/ActionBar$a;)V
-
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->j(Lmiuix/appcompat/app/ActionBar$a;)V
-
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
     if-eqz p1, :cond_1
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->j(Lmiuix/appcompat/app/ActionBar$a;)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public g1()Lmiuix/appcompat/internal/app/widget/f;
-    .locals 1
-
-    new-instance v0, Lmiuix/appcompat/internal/app/widget/h;
-
-    invoke-direct {v0, p0}, Lmiuix/appcompat/internal/app/widget/h;-><init>(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)V
-
-    return-object v0
-.end method
-
-.method public getCustomView()Landroid/view/View;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getCustomNavigationView()Landroid/view/View;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public getDisplayOptions()I
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getDisplayOptions()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public getHeight()I
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public getNavigationItemCount()I
-    .locals 3
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getNavigationMode()I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    if-eq v0, v1, :cond_1
-
-    const/4 v1, 0x2
-
-    if-eq v0, v1, :cond_0
-
-    return v2
-
-    :cond_0
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
-
-    move-result p0
-
-    return p0
-
-    :cond_1
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getDropdownAdapter()Landroid/widget/SpinnerAdapter;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_2
-
-    invoke-interface {p0}, Landroid/widget/Adapter;->getCount()I
-
-    move-result v2
-
-    :cond_2
-    return v2
-.end method
-
-.method public getNavigationMode()I
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getNavigationMode()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public getSelectedNavigationIndex()I
-    .locals 3
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getNavigationMode()I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-eq v0, v1, :cond_2
-
-    const/4 v1, 0x2
-
-    const/4 v2, -0x1
-
-    if-eq v0, v1, :cond_0
-
-    return v2
-
-    :cond_0
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->C:Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
-
-    if-eqz p0, :cond_1
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->getPosition()I
-
-    move-result v2
-
-    :cond_1
-    return v2
-
-    :cond_2
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getDropdownSelectedPosition()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public getSelectedTab()Landroidx/appcompat/app/ActionBar$Tab;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->C:Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
-
-    return-object p0
-.end method
-
-.method public getSubtitle()Ljava/lang/CharSequence;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getSubtitle()Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public getTabAt(I)Landroidx/appcompat/app/ActionBar$Tab;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Ljava/util/ArrayList;
-
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroidx/appcompat/app/ActionBar$Tab;
-
-    return-object p0
-.end method
-
-.method public getTabCount()I
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public getThemedContext()Landroid/content/Context;
-    .locals 4
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->j:Landroid/content/Context;
-
-    if-nez v0, :cond_1
-
-    new-instance v0, Landroid/util/TypedValue;
-
-    invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
-
-    move-result-object v1
-
-    const v2, 0x1010397
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v1, v2, v0, v3}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
-
-    iget v0, v0, Landroid/util/TypedValue;->resourceId:I
-
-    if-eqz v0, :cond_0
-
-    new-instance v1, Landroid/view/ContextThemeWrapper;
-
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i:Landroid/content/Context;
-
-    invoke-direct {v1, v2, v0}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
-
-    iput-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->j:Landroid/content/Context;
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i:Landroid/content/Context;
-
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->j:Landroid/content/Context;
-
-    :cond_1
-    :goto_0
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->j:Landroid/content/Context;
-
-    return-object p0
-.end method
-
-.method public getTitle()Ljava/lang/CharSequence;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getTitle()Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public h(Ljava/lang/String;Landroidx/appcompat/app/ActionBar$Tab;ILjava/lang/Class;Landroid/os/Bundle;Z)I
-    .locals 7
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "Landroidx/appcompat/app/ActionBar$Tab;",
-            "I",
-            "Ljava/lang/Class<",
-            "+",
-            "Landroidx/fragment/app/Fragment;",
-            ">;",
-            "Landroid/os/Bundle;",
-            "Z)I"
-        }
-    .end annotation
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/t;
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move v3, p3
-
-    move-object v4, p4
-
-    move-object v5, p5
-
-    move v6, p6
-
-    invoke-virtual/range {v0 .. v6}, Lmiuix/appcompat/internal/app/widget/t;->e(Ljava/lang/String;Landroidx/appcompat/app/ActionBar$Tab;ILjava/lang/Class;Landroid/os/Bundle;Z)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public h0(I)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setProgress(I)V
-
-    return-void
-.end method
-
-.method public final h1(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
-    .locals 1
-
-    instance-of v0, p1, Lmiuix/view/n$b;
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ldp/h;
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i:Landroid/content/Context;
-
-    invoke-direct {v0, p0, p1}, Ldp/h;-><init>(Landroid/content/Context;Landroid/view/ActionMode$Callback;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Ldp/f;
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i:Landroid/content/Context;
-
-    invoke-direct {v0, p0, p1}, Ldp/f;-><init>(Landroid/content/Context;Landroid/view/ActionMode$Callback;)V
-
-    :goto_0
-    return-object v0
-.end method
-
-.method public hide()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->C(Lmiuix/animation/controller/AnimState;)V
-
-    return-void
-.end method
-
-.method public hideForActionMode()V
-    .locals 4
-
-    iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->N:Z
-
-    if-eqz v0, :cond_2
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->N:Z
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->getDisplayOptions()I
-
-    move-result v2
-
-    const v3, 0x8000
-
-    and-int/2addr v2, v3
-
-    if-eqz v2, :cond_0
-
-    const/4 v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    move v2, v0
-
-    :goto_0
-    invoke-virtual {v1, v2}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->L1(Z)V
-
-    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->updateVisibility(Z)V
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/u;
-
-    instance-of v0, v0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
-
-    if-eqz v0, :cond_1
-
-    iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->X:Z
-
-    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l0(Z)V
+    .line 5
+    invoke-virtual {v2, v1}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
 
     goto :goto_1
 
+    .line 6
     :cond_1
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    invoke-virtual {v2, v3}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
 
-    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->r()V
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/u;
-
-    check-cast v0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
-
-    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->u()Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->X:Z
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/u;
-
-    check-cast v0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
-
-    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->getExpandState()I
-
-    move-result v0
-
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->W:I
-
-    iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->X:Z
-
-    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l0(Z)V
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    iget v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->W:I
-
-    invoke-virtual {v0, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setExpandState(I)V
-
+    .line 7
     :goto_1
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
-    iget p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->Y:I
+    invoke-virtual {v2, v0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->setEmbeded(Z)V
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->setImportantForAccessibility(I)V
-
+    .line 8
     :cond_2
-    return-void
-.end method
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
-.method public i(Ljava/lang/String;Landroidx/appcompat/app/ActionBar$Tab;Ljava/lang/Class;Landroid/os/Bundle;Z)I
-    .locals 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "Landroidx/appcompat/app/ActionBar$Tab;",
-            "Ljava/lang/Class<",
-            "+",
-            "Landroidx/fragment/app/Fragment;",
-            ">;",
-            "Landroid/os/Bundle;",
-            "Z)I"
-        }
-    .end annotation
+    if-eqz v2, :cond_4
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/t;
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    move v5, p5
-
-    invoke-virtual/range {v0 .. v5}, Lmiuix/appcompat/internal/app/widget/t;->f(Ljava/lang/String;Landroidx/appcompat/app/ActionBar$Tab;Ljava/lang/Class;Landroid/os/Bundle;Z)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public i0(Z)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setProgressBarIndeterminate(Z)V
-
-    return-void
-.end method
-
-.method public i1(Landroid/view/ActionMode$Callback;)Lmiuix/appcompat/internal/app/widget/u;
-    .locals 1
-
-    instance-of p1, p1, Lmiuix/view/n$b;
-
-    if-eqz p1, :cond_2
-
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->R:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
-
-    if-nez p1, :cond_0
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->k1()Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->R:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->Q:Ljp/b;
-
-    invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->setExtraPaddingPolicy(Ljp/b;)V
-
-    :cond_0
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->R:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
-
-    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v0
-
-    if-eq p1, v0, :cond_1
-
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->R:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
-
-    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    :cond_1
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->K1()V
-
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->R:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->a(Lmiuix/view/a;)V
-
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->R:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
-
-    goto :goto_0
-
-    :cond_2
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
-
-    if-eqz p1, :cond_4
-
-    :goto_0
-    instance-of v0, p1, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
-
-    if-eqz v0, :cond_3
-
-    iget p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->a0:I
-
-    const/4 v0, -0x1
-
-    if-eq p0, v0, :cond_3
-
-    move-object v0, p1
-
-    check-cast v0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
-
-    invoke-virtual {v0, p0}, Lmiuix/appcompat/internal/app/widget/b;->setActionMenuItemLimit(I)V
-
-    :cond_3
-    return-object p1
-
-    :cond_4
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "not set windowSplitActionBar true in activity style!"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public isShowing()Z
-    .locals 0
-
-    iget-boolean p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->O:Z
-
-    return p0
-.end method
-
-.method public j(Lmiuix/appcompat/app/ActionBar$a;)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/t;->g(Lmiuix/appcompat/app/ActionBar$a;)V
-
-    return-void
-.end method
-
-.method public j0(Z)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setProgressBarIndeterminateVisibility(Z)V
-
-    return-void
-.end method
-
-.method public final j1(ZZ)V
-    .locals 3
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    sget v1, Lso/b$j;->split_action_bar_vs:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/ViewStub;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/ViewStub;->inflate()Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    sget v1, Lso/b$j;->split_action_bar:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    :goto_0
-    if-eqz v0, :cond_2
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {v1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setSplitView(Lmiuix/appcompat/internal/app/widget/ActionBarContainer;)V
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {v1, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setSplitActionBar(Z)V
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {v1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setSplitWhenNarrow(Z)V
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    sget v2, Lso/b$j;->action_context_bar_vs:I
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/view/ViewStub;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Landroid/view/ViewStub;->inflate()Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
-
-    iput-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
-
-    goto :goto_1
-
-    :cond_1
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    sget v2, Lso/b$j;->action_context_bar:I
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
-
-    iput-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
-
-    :goto_1
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
-
-    if-eqz v1, :cond_2
-
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    invoke-virtual {v2, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setActionBarContextView(Lmiuix/appcompat/internal/app/widget/ActionBarContextView;)V
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
-
-    invoke-virtual {v1, v2}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->setActionBarContextView(Lmiuix/appcompat/internal/app/widget/ActionBarContextView;)V
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
-
-    invoke-virtual {v1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->setSplitView(Lmiuix/appcompat/internal/app/widget/ActionBarContainer;)V
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
-
-    invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->setSplitActionBar(Z)V
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
-
-    invoke-virtual {p0, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->setSplitWhenNarrow(Z)V
-
-    :cond_2
-    return-void
-.end method
-
-.method public k(I)V
-    .locals 1
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->s1()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->M0(I)V
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method public k0(Z)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setProgressBarVisibility(Z)V
-
-    return-void
-.end method
-
-.method public k1()Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
-    .locals 4
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->getThemedContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object v0
-
-    sget v1, Lso/b$m;->miuix_appcompat_search_action_mode_view:I
-
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    invoke-virtual {v0, v1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->setOverlayModeView(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)V
-
-    new-instance v1, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$f;
-
-    invoke-direct {v1, p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$f;-><init>(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)V
-
-    invoke-virtual {v0, v1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->setOnBackClickListener(Landroid/view/View$OnClickListener;)V
-
-    return-object v0
-.end method
-
-.method public l(Landroid/view/MenuItem;)V
-    .locals 1
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->s1()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->N0(Landroid/view/MenuItem;)V
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method public l0(Z)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setResizable(Z)V
-
-    return-void
-.end method
-
-.method public final l1(ZZLmiuix/animation/controller/AnimState;)V
-    .locals 3
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->T:Lmiuix/animation/IStateStyle;
-
-    if-eqz v0, :cond_0
-
-    iget-boolean v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->U:Z
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Lmiuix/animation/IStateStyle;->getCurrentState()Lmiuix/animation/controller/AnimState;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->T:Lmiuix/animation/IStateStyle;
-
-    invoke-interface {v1}, Lmiuix/animation/ICancelableStyle;->cancel()V
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->H1()Z
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    if-eqz p1, :cond_2
-
-    :cond_1
-    if-eqz p2, :cond_2
-
-    const/4 p1, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    move p1, v2
-
-    :goto_1
     if-eqz p1, :cond_3
 
-    const-string p1, "HideActionBar"
+    .line 9
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
-    invoke-virtual {p0, v2, p1, v0, p3}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->Q1(ZLjava/lang/String;Lmiuix/animation/controller/AnimState;Lmiuix/animation/controller/AnimState;)Lmiuix/animation/IStateStyle;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->T:Lmiuix/animation/IStateStyle;
+    invoke-virtual {v2, v1}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
 
     goto :goto_2
 
+    .line 10
     :cond_3
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+    invoke-virtual {v2, v3}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
 
-    move-result p2
-
-    neg-int p2, p2
-
-    int-to-float p2, p2
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setTranslationY(F)V
-
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setAlpha(F)V
-
-    iput v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->e0:I
-
-    iput v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->d0:I
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    const/16 p1, 0x8
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setVisibility(I)V
-
+    .line 11
     :goto_2
-    return-void
-.end method
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
-.method public m()V
-    .locals 1
+    invoke-virtual {v2, v0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->setEmbeded(Z)V
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    .line 12
+    :cond_4
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->A:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
-    if-eqz v0, :cond_1
+    if-eqz v2, :cond_6
 
-    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->s1()Z
+    if-eqz p1, :cond_5
 
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->O0()V
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method public m0(II)V
-    .locals 1
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->w:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    invoke-virtual {v0, p1, p2}, Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;->D(II)V
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    invoke-virtual {p0, p1, p2}, Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;->D(II)V
-
-    return-void
-.end method
-
-.method public final m1(ZZLmiuix/animation/controller/AnimState;)V
-    .locals 4
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->T:Lmiuix/animation/IStateStyle;
-
-    if-eqz v0, :cond_0
-
-    iget-boolean v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->U:Z
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Lmiuix/animation/IStateStyle;->getCurrentState()Lmiuix/animation/controller/AnimState;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->T:Lmiuix/animation/IStateStyle;
-
-    invoke-interface {v1}, Lmiuix/animation/ICancelableStyle;->cancel()V
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->H1()Z
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    if-nez v1, :cond_1
-
-    if-eqz p1, :cond_2
-
-    :cond_1
-    if-eqz p2, :cond_2
-
-    move p1, v2
-
-    goto :goto_1
-
-    :cond_2
-    move p1, v3
-
-    :goto_1
-    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->h:Landroid/view/ActionMode;
-
-    instance-of p2, p2, Lmiuix/view/n;
-
-    if-eqz p2, :cond_4
-
-    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    invoke-virtual {v1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->F()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    const/4 v1, 0x4
-
-    goto :goto_2
-
-    :cond_3
-    const/16 v1, 0x8
-
-    :goto_2
-    invoke-virtual {p2, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setVisibility(I)V
+    .line 13
+    invoke-virtual {v2, v1}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
 
     goto :goto_3
 
-    :cond_4
-    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    .line 14
+    :cond_5
+    invoke-virtual {v2, v3}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
 
-    invoke-virtual {p2, v3}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setVisibility(I)V
-
+    .line 15
     :goto_3
-    if-eqz p1, :cond_5
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->A:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
-    const-string p1, "ShowActionBar"
+    invoke-virtual {v2, v0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->setEmbeded(Z)V
 
-    invoke-virtual {p0, v2, p1, v0, p3}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->Q1(ZLjava/lang/String;Lmiuix/animation/controller/AnimState;Lmiuix/animation/controller/AnimState;)Lmiuix/animation/IStateStyle;
+    .line 16
+    :cond_6
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
-    move-result-object p1
+    if-eqz v2, :cond_8
 
-    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->T:Lmiuix/animation/IStateStyle;
+    if-eqz p1, :cond_7
+
+    .line 17
+    invoke-virtual {v2, v1}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
 
     goto :goto_4
 
-    :cond_5
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    .line 18
+    :cond_7
+    invoke-virtual {v2, v3}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
 
-    const/4 p2, 0x0
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setTranslationY(F)V
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    const/high16 p1, 0x3f800000    # 1.0f
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setAlpha(F)V
-
+    .line 19
     :goto_4
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->setEmbeded(Z)V
+
+    .line 20
+    :cond_8
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {p0, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setCollapsable(Z)V
+
     return-void
 .end method
 
-.method public n()Lxo/c;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->Z:Lxo/c;
-
-    return-object p0
-.end method
-
-.method public n0(III)V
+.method private updateVisibility(Z)V
     .locals 1
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->w:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    invoke-virtual {v0, p1, p2, p3}, Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;->E(III)V
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    invoke-virtual {p0, p1, p2, p3}, Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;->E(III)V
-
-    return-void
-.end method
-
-.method public final n1(Landroid/view/View;I)V
-    .locals 2
-
-    invoke-virtual {p1}, Landroid/view/View;->getTop()I
-
-    move-result v0
-
-    iget p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->d0:I
-
-    add-int v1, p0, p2
-
-    if-eq v0, v1, :cond_0
-
-    const/4 v1, 0x0
-
-    invoke-static {v1, p0}, Ljava/lang/Math;->max(II)I
-
-    move-result p0
-
-    add-int/2addr p0, p2
-
-    sub-int/2addr p0, v0
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->offsetTopAndBottom(I)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public newTab()Landroidx/appcompat/app/ActionBar$Tab;
-    .locals 1
-
-    new-instance v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
-
-    invoke-direct {v0, p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;-><init>(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)V
-
-    return-object v0
-.end method
-
-.method public o()Landroid/view/View;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    return-object p0
-.end method
-
-.method public o0(Landroid/view/View;)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setStartView(Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method public onConfigurationChanged(Landroid/content/res/Configuration;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->K:Z
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i:Landroid/content/Context;
-
-    invoke-static {v0, p1}, Lmp/d;->j(Landroid/content/Context;Landroid/content/res/Configuration;)Lmp/s;
-
-    move-result-object v0
-
-    iget v0, v0, Lmp/s;->g:I
-
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->k:I
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i:Landroid/content/Context;
-
-    invoke-static {v0}, Ldp/a;->b(Landroid/content/Context;)Ldp/a;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ldp/a;->g()Z
-
-    move-result v0
-
-    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->setHasEmbeddedTabs(Z)V
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->R:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/View;->isAttachedToWindow()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->R:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->onConfigurationChanged(Landroid/content/res/Configuration;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public onDestroy()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public p()Lap/c;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getCollapseTitle()Lap/c;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public p0(Landroid/view/View$OnClickListener;)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setSubTitleClickListener(Landroid/view/View$OnClickListener;)V
-
-    return-void
-.end method
-
-.method public p1()Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    return-object p0
-.end method
-
-.method public q()Landroid/view/View;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getEndView()Landroid/view/View;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public q0(IZ)V
-    .locals 1
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->w:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    invoke-virtual {v0, p1, p2}, Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;->B(IZ)V
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    invoke-virtual {p0, p1, p2}, Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;->B(IZ)V
-
-    return-void
-.end method
-
-.method public q1()Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    return-object p0
-.end method
-
-.method public r()I
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getExpandState()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public r0(IZ)V
-    .locals 1
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->u:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    invoke-virtual {v0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->n(IZ)V
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->v:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    invoke-virtual {v0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->n(IZ)V
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->w:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    invoke-virtual {v0, p1, p2}, Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;->A(IZ)V
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    invoke-virtual {p0, p1, p2}, Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;->A(IZ)V
-
-    return-void
-.end method
-
-.method public final r1(Lmiuix/appcompat/internal/app/widget/ActionBarContainer;Lmiuix/appcompat/internal/app/widget/ActionBarView;)Lxo/b;
-    .locals 4
-
-    new-instance v0, Lxo/b;
-
-    invoke-direct {v0}, Lxo/b;-><init>()V
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    invoke-virtual {v1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->getDeviceType()I
-
-    move-result v1
-
-    iput v1, v0, Lxo/b;->a:I
-
-    iget v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->k:I
-
-    iput v1, v0, Lxo/b;->b:I
-
-    if-eqz p1, :cond_1
-
-    if-eqz p2, :cond_1
-
-    invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lmp/d;->n(Landroid/content/Context;)Landroid/graphics/Point;
-
-    move-result-object v2
-
-    iget v3, v2, Landroid/graphics/Point;->x:I
-
-    iput v3, v0, Lxo/b;->c:I
-
-    iget v2, v2, Landroid/graphics/Point;->y:I
-
-    iput v2, v0, Lxo/b;->e:I
-
-    int-to-float v2, v3
-
-    invoke-static {v1, v2}, Lmp/k;->v(FF)I
-
-    move-result v2
-
-    iput v2, v0, Lxo/b;->d:I
-
-    iget v2, v0, Lxo/b;->e:I
-
-    int-to-float v2, v2
-
-    invoke-static {v1, v2}, Lmp/k;->v(FF)I
-
-    move-result v2
-
-    iput v2, v0, Lxo/b;->f:I
-
-    invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result p1
-
-    iput p1, v0, Lxo/b;->g:I
-
-    if-nez p1, :cond_0
-
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result p1
-
-    iput p1, v0, Lxo/b;->g:I
-
-    :cond_0
-    iget p1, v0, Lxo/b;->g:I
-
-    int-to-float p1, p1
-
-    invoke-static {v1, p1}, Lmp/k;->v(FF)I
-
-    move-result p1
-
-    iput p1, v0, Lxo/b;->i:I
-
-    invoke-virtual {p2}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result p1
-
-    iput p1, v0, Lxo/b;->h:I
-
-    int-to-float p1, p1
-
-    invoke-static {v1, p1}, Lmp/k;->v(FF)I
-
-    move-result p1
-
-    iput p1, v0, Lxo/b;->j:I
-
-    invoke-virtual {p2}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->v()Z
-
-    move-result p1
-
-    iput-boolean p1, v0, Lxo/b;->k:Z
-
-    invoke-virtual {p2}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getExpandState()I
-
-    move-result p1
-
-    iput p1, v0, Lxo/b;->l:I
-
-    invoke-virtual {p2}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->u()Z
-
-    move-result p1
-
-    iput-boolean p1, v0, Lxo/b;->m:Z
-
-    invoke-virtual {p2}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->B1()Z
-
-    move-result p1
-
-    iput-boolean p1, v0, Lxo/b;->n:Z
-
-    invoke-virtual {p2}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getEndActionMenuItemLimit()I
-
-    move-result p1
-
-    iput p1, v0, Lxo/b;->o:I
-
-    :cond_1
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i:Landroid/content/Context;
-
-    instance-of p1, p0, Lmiuix/appcompat/app/AppCompatActivity;
-
-    if-eqz p1, :cond_2
-
-    check-cast p0, Lmiuix/appcompat/app/AppCompatActivity;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/app/AppCompatActivity;->c1()Z
-
-    move-result p0
-
-    iput-boolean p0, v0, Lxo/b;->p:Z
-
-    :cond_2
-    return-object v0
-.end method
-
-.method public removeAllTabs()V
-    .locals 1
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->F()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->E1()V
-
-    return-void
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string v0, "Cannot add tab directly in fragment view pager mode!\n Please using addFragmentTab()."
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public removeOnMenuVisibilityListener(Landroidx/appcompat/app/ActionBar$OnMenuVisibilityListener;)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->H:Ljava/util/ArrayList;
-
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    return-void
-.end method
-
-.method public removeTab(Landroidx/appcompat/app/ActionBar$Tab;)V
-    .locals 1
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->F()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->F1(Landroidx/appcompat/app/ActionBar$Tab;)V
-
-    return-void
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "Cannot add tab directly in fragment view pager mode!\n Please using addFragmentTab()."
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public removeTabAt(I)V
-    .locals 1
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->F()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->G1(I)V
-
-    return-void
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "Cannot add tab directly in fragment view pager mode!\n Please using addFragmentTab()."
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public s()Lap/e;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getExpandTitle()Lap/e;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public s0(IIIIII)V
-    .locals 8
 
     const/4 v0, 0x0
 
-    if-eqz p3, :cond_0
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i:Landroid/content/Context;
-
-    invoke-virtual {v1, p3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p3
-
-    move-object v4, p3
-
-    goto :goto_0
-
-    :cond_0
-    move-object v4, v0
-
-    :goto_0
-    if-eqz p4, :cond_1
-
-    iget-object p3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i:Landroid/content/Context;
-
-    invoke-virtual {p3, p4}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p3
-
-    move-object v5, p3
-
-    goto :goto_1
-
-    :cond_1
-    move-object v5, v0
-
-    :goto_1
-    if-eqz p5, :cond_2
-
-    iget-object p3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i:Landroid/content/Context;
-
-    invoke-virtual {p3, p5}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p3
-
-    move-object v6, p3
-
-    goto :goto_2
-
-    :cond_2
-    move-object v6, v0
-
-    :goto_2
-    if-eqz p6, :cond_3
-
-    iget-object p3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i:Landroid/content/Context;
-
-    invoke-virtual {p3, p6}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    :cond_3
-    move-object v7, v0
-
-    move-object v1, p0
-
-    move v2, p1
-
-    move v3, p2
-
-    invoke-virtual/range {v1 .. v7}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t0(IILandroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    .line 1
+    invoke-direct {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->P0(ZLmiuix/animation/controller/AnimState;)V
 
     return-void
 .end method
 
-.method public final s1()I
+.method private v0()I
     .locals 5
 
+    .line 1
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->getDisplayOptions()I
 
     move-result v0
@@ -5939,6 +2100,7 @@
     :cond_0
     move v0, v3
 
+    .line 2
     :goto_0
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->getDisplayOptions()I
 
@@ -5974,21 +2136,2358 @@
     return p0
 .end method
 
+.method private x0()I
+    .locals 3
+
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getHeight()I
+
+    move-result v0
+
+    .line 2
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    invoke-virtual {v1}, Landroid/widget/FrameLayout;->getChildCount()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_0
+
+    .line 3
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v1}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    .line 4
+    instance-of v1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+
+    if-eqz v1, :cond_0
+
+    .line 5
+    check-cast p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+
+    .line 6
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->C()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 7
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->getCollapsedHeight()I
+
+    move-result v0
+
+    :cond_0
+    return v0
+.end method
+
+
+# virtual methods
+.method public A(Z)V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->s:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+
+    if-eqz p0, :cond_0
+
+    .line 2
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->setActionModeAnim(Z)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public A0(Landroidx/appcompat/app/ActionBar$Tab;)V
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->getTabCount()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-virtual {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->D0(Landroidx/appcompat/app/ActionBar$Tab;Z)V
+
+    return-void
+.end method
+
+.method public B(Landroid/view/View;)V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setEndView(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public B0(Landroidx/appcompat/app/ActionBar$Tab;I)V
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->getTabCount()I
+
+    move-result v0
+
+    if-ne p2, v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-virtual {p0, p1, p2, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->C0(Landroidx/appcompat/app/ActionBar$Tab;IZ)V
+
+    return-void
+.end method
+
+.method public C(I)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {v0, p1}, Lk/b/e/b/a/f;->setExpandStateByUser(I)V
+
+    .line 2
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setExpandState(I)V
+
+    .line 3
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->s:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+
+    if-eqz v0, :cond_0
+
+    .line 4
+    invoke-virtual {v0, p1}, Lk/b/e/b/a/f;->setExpandStateByUser(I)V
+
+    .line 5
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->s:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->setExpandState(I)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public C0(Landroidx/appcompat/app/ActionBar$Tab;IZ)V
+    .locals 1
+
+    .line 1
+    invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->ensureTabsExist()V
+
+    .line 2
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {v0, p1, p2, p3}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->c(Landroidx/appcompat/app/ActionBar$Tab;IZ)V
+
+    .line 3
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {v0, p1, p2, p3}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->c(Landroidx/appcompat/app/ActionBar$Tab;IZ)V
+
+    .line 4
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->A:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {v0, p1, p2, p3}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->c(Landroidx/appcompat/app/ActionBar$Tab;IZ)V
+
+    .line 5
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {v0, p1, p2, p3}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->c(Landroidx/appcompat/app/ActionBar$Tab;IZ)V
+
+    .line 6
+    invoke-direct {p0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->configureTab(Landroidx/appcompat/app/ActionBar$Tab;I)V
+
+    if-eqz p3, :cond_0
+
+    .line 7
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->selectTab(Landroidx/appcompat/app/ActionBar$Tab;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public D(IZ)V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {v0, p1}, Lk/b/e/b/a/f;->setExpandStateByUser(I)V
+
+    .line 2
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, p1, p2, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->I(IZZ)V
+
+    .line 3
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->s:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+
+    if-eqz v0, :cond_0
+
+    .line 4
+    invoke-virtual {v0, p1}, Lk/b/e/b/a/f;->setExpandStateByUser(I)V
+
+    .line 5
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->s:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+
+    invoke-virtual {p0, p1, p2, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->I(IZZ)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public D0(Landroidx/appcompat/app/ActionBar$Tab;Z)V
+    .locals 1
+
+    .line 1
+    invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->ensureTabsExist()V
+
+    .line 2
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {v0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->d(Landroidx/appcompat/app/ActionBar$Tab;Z)V
+
+    .line 3
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {v0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->d(Landroidx/appcompat/app/ActionBar$Tab;Z)V
+
+    .line 4
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->A:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {v0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->d(Landroidx/appcompat/app/ActionBar$Tab;Z)V
+
+    .line 5
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {v0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->d(Landroidx/appcompat/app/ActionBar$Tab;Z)V
+
+    .line 6
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->D:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    invoke-direct {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->configureTab(Landroidx/appcompat/app/ActionBar$Tab;I)V
+
+    if-eqz p2, :cond_0
+
+    .line 7
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->selectTab(Landroidx/appcompat/app/ActionBar$Tab;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public E(IZZ)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {v0, p1}, Lk/b/e/b/a/f;->setExpandStateByUser(I)V
+
+    .line 2
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {v0, p1, p2, p3}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->I(IZZ)V
+
+    .line 3
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->s:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+
+    if-eqz v0, :cond_0
+
+    .line 4
+    invoke-virtual {v0, p1}, Lk/b/e/b/a/f;->setExpandStateByUser(I)V
+
+    .line 5
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->s:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+
+    invoke-virtual {p0, p1, p2, p3}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->I(IZZ)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public E0()V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->cleanupTabs()V
+
+    return-void
+.end method
+
+.method public F(II)V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {p0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->r(II)V
+
+    return-void
+.end method
+
+.method public F0(Landroidx/appcompat/app/ActionBar$Tab;)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p1}, Landroidx/appcompat/app/ActionBar$Tab;->getPosition()I
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->G0(I)V
+
+    return-void
+.end method
+
+.method public G(IZ)V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lk/b/e/b/a/g;
+
+    invoke-virtual {p0, p1, p2}, Lk/b/e/b/a/g;->r(IZ)V
+
+    return-void
+.end method
+
+.method public G0(I)V
+    .locals 4
+
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 2
+    :cond_0
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->E:Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
+
+    if-eqz v0, :cond_1
+
+    .line 3
+    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->getPosition()I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_1
+    iget v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->H:I
+
+    .line 4
+    :goto_0
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {v1, p1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->l(I)V
+
+    .line 5
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {v1, p1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->l(I)V
+
+    .line 6
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->A:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {v1, p1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->l(I)V
+
+    .line 7
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {v1, p1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->l(I)V
+
+    .line 8
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->D:Ljava/util/ArrayList;
+
+    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
+
+    if-eqz v1, :cond_2
+
+    const/4 v2, -0x1
+
+    .line 9
+    invoke-virtual {v1, v2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->setPosition(I)V
+
+    .line 10
+    :cond_2
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->D:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    move v2, p1
+
+    :goto_1
+    if-ge v2, v1, :cond_3
+
+    .line 11
+    iget-object v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->D:Ljava/util/ArrayList;
+
+    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
+
+    invoke-virtual {v3, v2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->setPosition(I)V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_1
+
+    :cond_3
+    if-ne v0, p1, :cond_5
+
+    .line 12
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->D:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    const/4 p1, 0x0
+
+    goto :goto_2
+
+    .line 13
+    :cond_4
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->D:Ljava/util/ArrayList;
+
+    const/4 v1, 0x0
+
+    add-int/lit8 p1, p1, -0x1
+
+    invoke-static {v1, p1}, Ljava/lang/Math;->max(II)I
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroidx/appcompat/app/ActionBar$Tab;
+
+    .line 14
+    :goto_2
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->selectTab(Landroidx/appcompat/app/ActionBar$Tab;)V
+
+    :cond_5
+    return-void
+.end method
+
+.method public H(Landroidx/fragment/app/FragmentActivity;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    .line 1
+    invoke-virtual {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->I(Landroidx/fragment/app/FragmentActivity;Z)V
+
+    return-void
+.end method
+
+.method public H0()Z
+    .locals 0
+
+    .line 1
+    iget-boolean p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->Q:Z
+
+    return p0
+.end method
+
+.method public I(Landroidx/fragment/app/FragmentActivity;Z)V
+    .locals 2
+
+    .line 1
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    .line 2
+    :cond_0
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->removeAllTabs()V
+
+    const/4 v0, 0x2
+
+    .line 3
+    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->setNavigationMode(I)V
+
+    .line 4
+    new-instance v0, Lk/b/e/b/a/g;
+
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->G:Landroidx/fragment/app/FragmentManager;
+
+    invoke-virtual {p1}, Landroidx/activity/ComponentActivity;->getLifecycle()Landroidx/lifecycle/Lifecycle;
+
+    move-result-object p1
+
+    invoke-direct {v0, p0, v1, p1, p2}, Lk/b/e/b/a/g;-><init>(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;Landroidx/fragment/app/FragmentManager;Landroidx/lifecycle/Lifecycle;Z)V
+
+    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lk/b/e/b/a/g;
+
+    .line 5
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->d(Lmiuix/appcompat/app/ActionBar$a;)V
+
+    .line 6
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->d(Lmiuix/appcompat/app/ActionBar$a;)V
+
+    .line 7
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->A:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->d(Lmiuix/appcompat/app/ActionBar$a;)V
+
+    .line 8
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->d(Lmiuix/appcompat/app/ActionBar$a;)V
+
+    .line 9
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    if-eqz p1, :cond_1
+
+    .line 10
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->d(Lmiuix/appcompat/app/ActionBar$a;)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public J(I)V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setProgress(I)V
+
+    return-void
+.end method
+
+.method public J0(Z)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->q:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setIsMiuixFloating(Z)V
+
+    .line 2
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->R:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+
+    if-eqz p0, :cond_0
+
+    .line 3
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->U(Z)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public K(Z)V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setProgressBarIndeterminate(Z)V
+
+    return-void
+.end method
+
+.method public K0(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
+    .locals 3
+
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Landroid/view/ActionMode;
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-virtual {v0}, Landroid/view/ActionMode;->finish()V
+
+    .line 3
+    :cond_0
+    invoke-direct {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m0(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
+
+    move-result-object v0
+
+    .line 4
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->C:Lk/b/e/b/a/h;
+
+    instance-of v2, v1, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+
+    if-eqz v2, :cond_1
+
+    instance-of v2, v0, Lk/b/e/e/d;
+
+    if-nez v2, :cond_2
+
+    :cond_1
+    instance-of v2, v1, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+
+    if-eqz v2, :cond_3
+
+    instance-of v2, v0, Lk/b/e/e/c;
+
+    if-eqz v2, :cond_3
+
+    .line 5
+    :cond_2
+    invoke-interface {v1}, Lk/b/e/b/a/h;->f()V
+
+    .line 6
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->C:Lk/b/e/b/a/h;
+
+    invoke-interface {v1}, Lk/b/e/b/a/h;->h()V
+
+    .line 7
+    :cond_3
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n0(Landroid/view/ActionMode$Callback;)Lk/b/e/b/a/h;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->C:Lk/b/e/b/a/h;
+
+    if-eqz p1, :cond_7
+
+    .line 8
+    instance-of v1, v0, Lk/b/e/e/b;
+
+    if-eqz v1, :cond_6
+
+    .line 9
+    move-object v1, v0
+
+    check-cast v1, Lk/b/e/e/b;
+
+    .line 10
+    invoke-virtual {v1, p1}, Lk/b/e/e/b;->t(Lk/b/e/b/a/h;)V
+
+    .line 11
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->S:Lk/b/e/e/b$a;
+
+    invoke-virtual {v1, p1}, Lk/b/e/e/b;->s(Lk/b/e/e/b$a;)V
+
+    .line 12
+    invoke-virtual {v1}, Lk/b/e/e/b;->r()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_6
+
+    .line 13
+    invoke-virtual {v0}, Landroid/view/ActionMode;->invalidate()V
+
+    .line 14
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->C:Lk/b/e/b/a/h;
+
+    invoke-interface {p1, v0}, Lk/b/e/b/a/h;->k(Landroid/view/ActionMode;)V
+
+    const/4 p1, 0x1
+
+    .line 15
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->animateToMode(Z)V
+
+    .line 16
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    if-eqz v1, :cond_4
+
+    iget v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->K:I
+
+    if-ne v2, p1, :cond_4
+
+    .line 17
+    invoke-virtual {v1}, Landroid/widget/FrameLayout;->getVisibility()I
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    .line 18
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setVisibility(I)V
+
+    .line 19
+    :cond_4
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->C:Lk/b/e/b/a/h;
+
+    instance-of v1, p1, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+
+    if-eqz v1, :cond_5
+
+    .line 20
+    check-cast p1, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+
+    const/16 v1, 0x20
+
+    .line 21
+    invoke-virtual {p1, v1}, Landroid/view/ViewGroup;->sendAccessibilityEvent(I)V
+
+    .line 22
+    :cond_5
+    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Landroid/view/ActionMode;
+
+    return-object v0
+
+    :cond_6
+    const/4 p0, 0x0
+
+    return-object p0
+
+    .line 23
+    :cond_7
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "not set windowSplitActionBar true in activity style!"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public L(Z)V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setProgressBarIndeterminateVisibility(Z)V
+
+    return-void
+.end method
+
+.method public M(Z)V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setProgressBarVisibility(Z)V
+
+    return-void
+.end method
+
+.method public N(Z)V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setResizable(Z)V
+
+    return-void
+.end method
+
+.method public O(II)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->A:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {v0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->r(II)V
+
+    .line 2
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {p0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->r(II)V
+
+    return-void
+.end method
+
+.method public O0(I)V
+    .locals 1
+
+    .line 1
+    invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->ensureTabsExist()V
+
+    .line 2
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->t(I)V
+
+    .line 3
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->t(I)V
+
+    .line 4
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->A:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->t(I)V
+
+    .line 5
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->t(I)V
+
+    return-void
+.end method
+
+.method public P(Landroid/view/View;)V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setStartView(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public Q(Landroid/view/View$OnClickListener;)V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setSubTitleClickListener(Landroid/view/View$OnClickListener;)V
+
+    return-void
+.end method
+
+.method public R(IZ)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {v0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->n(IZ)V
+
+    .line 2
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {v0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->n(IZ)V
+
+    .line 3
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->A:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {v0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->n(IZ)V
+
+    .line 4
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {p0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->n(IZ)V
+
+    return-void
+.end method
+
+.method public S(IIIIII)V
+    .locals 8
+
+    const/4 v0, 0x0
+
+    if-eqz p3, :cond_0
+
+    .line 1
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Landroid/content/Context;
+
+    invoke-virtual {v1, p3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p3
+
+    move-object v4, p3
+
+    goto :goto_0
+
+    :cond_0
+    move-object v4, v0
+
+    :goto_0
+    if-eqz p4, :cond_1
+
+    .line 2
+    iget-object p3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Landroid/content/Context;
+
+    invoke-virtual {p3, p4}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p3
+
+    move-object v5, p3
+
+    goto :goto_1
+
+    :cond_1
+    move-object v5, v0
+
+    :goto_1
+    if-eqz p5, :cond_2
+
+    .line 3
+    iget-object p3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Landroid/content/Context;
+
+    invoke-virtual {p3, p5}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p3
+
+    move-object v6, p3
+
+    goto :goto_2
+
+    :cond_2
+    move-object v6, v0
+
+    :goto_2
+    if-eqz p6, :cond_3
+
+    .line 4
+    iget-object p3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Landroid/content/Context;
+
+    invoke-virtual {p3, p6}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    :cond_3
+    move-object v7, v0
+
+    move-object v1, p0
+
+    move v2, p1
+
+    move v3, p2
+
+    .line 5
+    invoke-virtual/range {v1 .. v7}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->T(IILandroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+.end method
+
+.method public T(IILandroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    .locals 11
+
+    move-object v0, p0
+
+    .line 1
+    iget-object v1, v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    move v2, p1
+
+    move v3, p2
+
+    move-object v4, p3
+
+    move-object v5, p4
+
+    move-object/from16 v6, p5
+
+    move-object/from16 v7, p6
+
+    invoke-virtual/range {v1 .. v7}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->o(IILandroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+
+    .line 2
+    iget-object v2, v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    move v3, p1
+
+    move v4, p2
+
+    move-object v5, p3
+
+    move-object v6, p4
+
+    move-object/from16 v7, p5
+
+    move-object/from16 v8, p6
+
+    invoke-virtual/range {v2 .. v8}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->o(IILandroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+
+    .line 3
+    iget-object v3, v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->A:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    move v4, p1
+
+    move v5, p2
+
+    move-object v6, p3
+
+    move-object v7, p4
+
+    move-object/from16 v8, p5
+
+    move-object/from16 v9, p6
+
+    invoke-virtual/range {v3 .. v9}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->o(IILandroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+
+    .line 4
+    iget-object v4, v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    move v5, p1
+
+    move v6, p2
+
+    move-object v7, p3
+
+    move-object v8, p4
+
+    move-object/from16 v9, p5
+
+    move-object/from16 v10, p6
+
+    invoke-virtual/range {v4 .. v10}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->o(IILandroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+.end method
+
+.method public U(II)V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {p0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->r(II)V
+
+    return-void
+.end method
+
+.method public V(Z)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->setHasEmbeddedTabs(Z)V
+
+    return-void
+.end method
+
+.method public W(Z)V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setTitleClickable(Z)V
+
+    return-void
+.end method
+
+.method public X(Landroid/view/View;)V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lk/b/e/b/a/g;
+
+    invoke-virtual {p0, p1}, Lk/b/e/b/a/g;->s(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public Y(I)V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lk/b/e/b/a/g;
+
+    invoke-virtual {p0, p1}, Lk/b/e/b/a/g;->t(I)V
+
+    return-void
+.end method
+
+.method public Z(Lmiuix/animation/controller/AnimState;)V
+    .locals 1
+
+    .line 1
+    iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->M:Z
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    .line 2
+    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->M:Z
+
+    .line 3
+    invoke-direct {p0, v0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->P0(ZLmiuix/animation/controller/AnimState;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public a(Landroid/view/View;)V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+
+    if-eqz p0, :cond_0
+
+    .line 2
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->f(Landroid/view/View;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public a0(Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public addOnMenuVisibilityListener(Landroidx/appcompat/app/ActionBar$OnMenuVisibilityListener;)V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->J:Ljava/util/ArrayList;
+
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public addTab(Landroidx/appcompat/app/ActionBar$Tab;)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->D:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v0
+
+    invoke-virtual {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->addTab(Landroidx/appcompat/app/ActionBar$Tab;Z)V
+
+    return-void
+.end method
+
+.method public addTab(Landroidx/appcompat/app/ActionBar$Tab;I)V
+    .locals 1
+
+    .line 5
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->D:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v0
+
+    invoke-virtual {p0, p1, p2, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->addTab(Landroidx/appcompat/app/ActionBar$Tab;IZ)V
+
+    return-void
+.end method
+
+.method public addTab(Landroidx/appcompat/app/ActionBar$Tab;IZ)V
+    .locals 1
+
+    .line 6
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 7
+    invoke-virtual {p0, p1, p2, p3}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->C0(Landroidx/appcompat/app/ActionBar$Tab;IZ)V
+
+    return-void
+
+    .line 8
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "Cannot add tab directly in fragment view pager mode!\n Please using addFragmentTab()."
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public addTab(Landroidx/appcompat/app/ActionBar$Tab;Z)V
+    .locals 1
+
+    .line 2
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 3
+    invoke-virtual {p0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->D0(Landroidx/appcompat/app/ActionBar$Tab;Z)V
+
+    return-void
+
+    .line 4
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "Cannot add tab directly in fragment view pager mode!\n Please using addFragmentTab()."
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public animateToMode(Z)V
+    .locals 2
+
+    if-eqz p1, :cond_0
+
+    .line 1
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->showForActionMode()V
+
+    goto :goto_0
+
+    .line 2
+    :cond_0
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->hideForActionMode()V
+
+    .line 3
+    :goto_0
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->C:Lk/b/e/b/a/h;
+
+    invoke-interface {v0, p1}, Lk/b/e/b/a/h;->c(Z)V
+
+    .line 4
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->X0()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->T0()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 5
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    xor-int/lit8 v1, p1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/widget/HorizontalScrollView;->setEnabled(Z)V
+
+    .line 6
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    xor-int/lit8 v1, p1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/widget/HorizontalScrollView;->setEnabled(Z)V
+
+    .line 7
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->A:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    xor-int/lit8 v1, p1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/widget/HorizontalScrollView;->setEnabled(Z)V
+
+    .line 8
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    xor-int/lit8 p1, p1, 0x1
+
+    invoke-virtual {p0, p1}, Landroid/widget/HorizontalScrollView;->setEnabled(Z)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public b(Ljava/lang/String;Landroidx/appcompat/app/ActionBar$Tab;ILjava/lang/Class;Landroid/os/Bundle;Z)I
+    .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Landroidx/appcompat/app/ActionBar$Tab;",
+            "I",
+            "Ljava/lang/Class<",
+            "+",
+            "Landroidx/fragment/app/Fragment;",
+            ">;",
+            "Landroid/os/Bundle;",
+            "Z)I"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lk/b/e/b/a/g;
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move v3, p3
+
+    move-object v4, p4
+
+    move-object v5, p5
+
+    move v6, p6
+
+    invoke-virtual/range {v0 .. v6}, Lk/b/e/b/a/g;->e(Ljava/lang/String;Landroidx/appcompat/app/ActionBar$Tab;ILjava/lang/Class;Landroid/os/Bundle;Z)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public b0(ZZ)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->W0()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    if-eqz p1, :cond_0
+
+    .line 2
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    invoke-virtual {p0, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->x(Z)V
+
+    goto :goto_0
+
+    .line 3
+    :cond_0
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    invoke-virtual {p0, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->f(Z)V
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
+.method public c(Ljava/lang/String;Landroidx/appcompat/app/ActionBar$Tab;Ljava/lang/Class;Landroid/os/Bundle;Z)I
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Landroidx/appcompat/app/ActionBar$Tab;",
+            "Ljava/lang/Class<",
+            "+",
+            "Landroidx/fragment/app/Fragment;",
+            ">;",
+            "Landroid/os/Bundle;",
+            "Z)I"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lk/b/e/b/a/g;
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    move-object v4, p4
+
+    move v5, p5
+
+    invoke-virtual/range {v0 .. v5}, Lk/b/e/b/a/g;->f(Ljava/lang/String;Landroidx/appcompat/app/ActionBar$Tab;Ljava/lang/Class;Landroid/os/Bundle;Z)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public d(Lmiuix/appcompat/app/ActionBar$a;)V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lk/b/e/b/a/g;
+
+    invoke-virtual {p0, p1}, Lk/b/e/b/a/g;->g(Lmiuix/appcompat/app/ActionBar$a;)V
+
+    return-void
+.end method
+
+.method public e()Lk/b/d/j;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getActionBarTransitionListener()Lk/b/d/j;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public f()Landroid/view/View;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getEndView()Landroid/view/View;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public g()I
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getExpandState()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public getCustomView()Landroid/view/View;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getCustomNavigationView()Landroid/view/View;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public getDisplayOptions()I
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getDisplayOptions()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public getHeight()I
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->q:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getHeight()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public getNavigationItemCount()I
+    .locals 3
+
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getNavigationMode()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    if-eq v0, v1, :cond_1
+
+    const/4 v1, 0x2
+
+    if-eq v0, v1, :cond_0
+
+    return v2
+
+    .line 2
+    :cond_0
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->D:Ljava/util/ArrayList;
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
+
+    move-result p0
+
+    return p0
+
+    .line 3
+    :cond_1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getDropdownAdapter()Landroid/widget/SpinnerAdapter;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_2
+
+    .line 4
+    invoke-interface {p0}, Landroid/widget/SpinnerAdapter;->getCount()I
+
+    move-result v2
+
+    :cond_2
+    return v2
+.end method
+
+.method public getNavigationMode()I
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getNavigationMode()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public getSelectedNavigationIndex()I
+    .locals 3
+
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getNavigationMode()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_2
+
+    const/4 v1, 0x2
+
+    const/4 v2, -0x1
+
+    if-eq v0, v1, :cond_0
+
+    return v2
+
+    .line 2
+    :cond_0
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->E:Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
+
+    if-eqz p0, :cond_1
+
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->getPosition()I
+
+    move-result v2
+
+    :cond_1
+    return v2
+
+    .line 3
+    :cond_2
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getDropdownSelectedPosition()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public getSelectedTab()Landroidx/appcompat/app/ActionBar$Tab;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->E:Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
+
+    return-object p0
+.end method
+
+.method public getSubtitle()Ljava/lang/CharSequence;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getSubtitle()Ljava/lang/CharSequence;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public getTabAt(I)Landroidx/appcompat/app/ActionBar$Tab;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->D:Ljava/util/ArrayList;
+
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroidx/appcompat/app/ActionBar$Tab;
+
+    return-object p0
+.end method
+
+.method public getTabCount()I
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->D:Ljava/util/ArrayList;
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public getThemedContext()Landroid/content/Context;
+    .locals 4
+
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o:Landroid/content/Context;
+
+    if-nez v0, :cond_1
+
+    .line 2
+    new-instance v0, Landroid/util/TypedValue;
+
+    invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
+
+    .line 3
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+
+    move-result-object v1
+
+    const v2, 0x1010397
+
+    const/4 v3, 0x1
+
+    .line 4
+    invoke-virtual {v1, v2, v0, v3}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
+
+    .line 5
+    iget v0, v0, Landroid/util/TypedValue;->resourceId:I
+
+    if-eqz v0, :cond_0
+
+    .line 6
+    new-instance v1, Landroid/view/ContextThemeWrapper;
+
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Landroid/content/Context;
+
+    invoke-direct {v1, v2, v0}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
+
+    iput-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o:Landroid/content/Context;
+
+    goto :goto_0
+
+    .line 7
+    :cond_0
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Landroid/content/Context;
+
+    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o:Landroid/content/Context;
+
+    .line 8
+    :cond_1
+    :goto_0
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method public getTitle()Ljava/lang/CharSequence;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getTitle()Ljava/lang/CharSequence;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public h(I)Landroidx/fragment/app/Fragment;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lk/b/e/b/a/g;
+
+    invoke-virtual {p0, p1}, Lk/b/e/b/a/g;->h(I)Landroidx/fragment/app/Fragment;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public hide()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n(Lmiuix/animation/controller/AnimState;)V
+
+    return-void
+.end method
+
+.method public hideForActionMode()V
+    .locals 4
+
+    .line 1
+    iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->O:Z
+
+    if-eqz v0, :cond_2
+
+    const/4 v0, 0x0
+
+    .line 2
+    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->O:Z
+
+    .line 3
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->getDisplayOptions()I
+
+    move-result v2
+
+    const v3, 0x8000
+
+    and-int/2addr v2, v3
+
+    const/4 v3, 0x1
+
+    if-eqz v2, :cond_0
+
+    move v2, v3
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v0
+
+    :goto_0
+    invoke-virtual {v1, v2}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->i1(Z)V
+
+    .line 4
+    invoke-direct {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->updateVisibility(Z)V
+
+    .line 5
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->C:Lk/b/e/b/a/h;
+
+    instance-of v1, v0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+
+    if-eqz v1, :cond_1
+
+    .line 6
+    iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->W:Z
+
+    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->N(Z)V
+
+    .line 7
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    iget v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->V:I
+
+    invoke-virtual {v0, v1, v3, v3}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->I(IZZ)V
+
+    goto :goto_1
+
+    .line 8
+    :cond_1
+    check-cast v0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+
+    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->u()Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->W:Z
+
+    .line 9
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->C:Lk/b/e/b/a/h;
+
+    check-cast v0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+
+    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->getExpandState()I
+
+    move-result v0
+
+    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->V:I
+
+    .line 10
+    iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->W:Z
+
+    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->N(Z)V
+
+    .line 11
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    iget v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->V:I
+
+    invoke-virtual {v0, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setExpandState(I)V
+
+    .line 12
+    :goto_1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    iget p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->X:I
+
+    invoke-virtual {v0, p0}, Landroid/view/ViewGroup;->setImportantForAccessibility(I)V
+
+    :cond_2
+    return-void
+.end method
+
+.method public i()I
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lk/b/e/b/a/g;
+
+    invoke-virtual {p0}, Lk/b/e/b/a/g;->i()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public isShowing()Z
+    .locals 0
+
+    .line 1
+    iget-boolean p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->P:Z
+
+    return p0
+.end method
+
+.method public j()Landroid/view/View;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getStartView()Landroid/view/View;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public k(I)Landroid/view/View;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->o(I)Landroid/view/View;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public l(I)Landroid/view/View;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->p(I)Landroid/view/View;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public m()I
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lk/b/e/b/a/g;
+
+    invoke-virtual {p0}, Lk/b/e/b/a/g;->j()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public n(Lmiuix/animation/controller/AnimState;)V
+    .locals 1
+
+    .line 1
+    iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->M:Z
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 2
+    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->M:Z
+
+    const/4 v0, 0x0
+
+    .line 3
+    invoke-direct {p0, v0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->P0(ZLmiuix/animation/controller/AnimState;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public n0(Landroid/view/ActionMode$Callback;)Lk/b/e/b/a/h;
+    .locals 1
+
+    .line 1
+    instance-of p1, p1, Lk/j0/i$a;
+
+    if-eqz p1, :cond_3
+
+    .line 2
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->R:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+
+    if-nez p1, :cond_0
+
+    .line 3
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p0()Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->R:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+
+    .line 4
+    :cond_0
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+
+    invoke-virtual {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->getBaseInnerInsets()Landroid/graphics/Rect;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    .line 5
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->R:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+
+    iget p1, p1, Landroid/graphics/Rect;->top:I
+
+    invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->setStatusBarPaddingTop(I)V
+
+    .line 6
+    :cond_1
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->R:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    if-eq p1, v0, :cond_2
+
+    .line 7
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->R:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+
+    invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
+
+    .line 8
+    :cond_2
+    invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->I0()V
+
+    .line 9
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->R:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->a(Lk/j0/a;)V
+
+    .line 10
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->R:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+
+    goto :goto_0
+
+    .line 11
+    :cond_3
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->s:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+
+    if-eqz p0, :cond_4
+
+    :goto_0
+    return-object p0
+
+    .line 12
+    :cond_4
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "not set windowSplitActionBar true in activity style!"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public newTab()Landroidx/appcompat/app/ActionBar$Tab;
+    .locals 1
+
+    .line 1
+    new-instance v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
+
+    invoke-direct {v0, p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;-><init>(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)V
+
+    return-object v0
+.end method
+
+.method public o()Z
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lk/b/e/b/a/g;
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+.end method
+
+.method public onConfigurationChanged(Landroid/content/res/Configuration;)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Landroid/content/Context;
+
+    invoke-static {v0}, Lk/b/e/e/a;->b(Landroid/content/Context;)Lk/b/e/e/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lk/b/e/e/a;->g()Z
+
+    move-result v0
+
+    invoke-direct {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->setHasEmbeddedTabs(Z)V
+
+    .line 2
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->R:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->isAttachedToWindow()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 3
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->R:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+
+    invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+
+    .line 4
+    :cond_0
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {p1}, Lk/b/e/b/a/f;->r()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const/4 p1, 0x0
+
+    .line 5
+    iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->V:I
+
+    .line 6
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->B1()V
+
+    :cond_1
+    return-void
+.end method
+
+.method public p()Z
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->u()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public p0()Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+    .locals 4
+
+    .line 1
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->getThemedContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object v0
+
+    .line 2
+    sget v1, Lk/b/b$m;->miuix_appcompat_search_action_mode_view:I
+
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+
+    .line 3
+    new-instance v1, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$d;
+
+    invoke-direct {v1, p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$d;-><init>(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)V
+
+    invoke-virtual {v0, v1}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->setOnBackClickListener(Landroid/view/View$OnClickListener;)V
+
+    return-object v0
+.end method
+
+.method public q()V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lk/b/e/b/a/g;
+
+    invoke-virtual {p0}, Lk/b/e/b/a/g;->k()V
+
+    return-void
+.end method
+
+.method public r(Landroid/view/View;)V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+
+    if-eqz p0, :cond_0
+
+    .line 2
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->x(Landroid/view/View;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public removeAllTabs()V
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 2
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->E0()V
+
+    return-void
+
+    .line 3
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Cannot add tab directly in fragment view pager mode!\n Please using addFragmentTab()."
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public removeOnMenuVisibilityListener(Landroidx/appcompat/app/ActionBar$OnMenuVisibilityListener;)V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->J:Ljava/util/ArrayList;
+
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public removeTab(Landroidx/appcompat/app/ActionBar$Tab;)V
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 2
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->F0(Landroidx/appcompat/app/ActionBar$Tab;)V
+
+    return-void
+
+    .line 3
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "Cannot add tab directly in fragment view pager mode!\n Please using addFragmentTab()."
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public removeTabAt(I)V
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 2
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->G0(I)V
+
+    return-void
+
+    .line 3
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "Cannot add tab directly in fragment view pager mode!\n Please using addFragmentTab()."
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public s(Landroidx/appcompat/app/ActionBar$Tab;)V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lk/b/e/b/a/g;
+
+    invoke-virtual {p0, p1}, Lk/b/e/b/a/g;->n(Landroidx/appcompat/app/ActionBar$Tab;)V
+
+    return-void
+.end method
+
 .method public selectTab(Landroidx/appcompat/app/ActionBar$Tab;)V
     .locals 1
 
     const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->U(Landroidx/appcompat/app/ActionBar$Tab;Z)V
+    .line 1
+    invoke-virtual {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y(Landroidx/appcompat/app/ActionBar$Tab;Z)V
 
     return-void
 .end method
 
 .method public setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-    .locals 0
+    .locals 2
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    .line 1
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->getDisplayOptions()I
 
+    move-result v0
+
+    const v1, 0x8000
+
+    and-int/2addr v0, v1
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 2
+    :goto_0
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->q:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    if-eqz v0, :cond_1
+
+    const/4 p1, 0x0
+
+    :cond_1
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setPrimaryBackground(Landroid/graphics/drawable/Drawable;)V
 
     return-void
@@ -6006,7 +4505,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     const/4 v2, 0x0
 
@@ -6025,7 +4524,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setCustomNavigationView(Landroid/view/View;)V
 
@@ -6039,7 +4538,7 @@
     invoke-virtual {p1, p2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 3
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setCustomNavigationView(Landroid/view/View;)V
 
@@ -6047,28 +4546,31 @@
 .end method
 
 .method public setDisplayHomeAsUpEnabled(Z)V
-    .locals 2
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->s1()I
-
-    move-result v0
-
-    const/4 v1, 0x4
+    .locals 1
 
     if-eqz p1, :cond_0
 
-    move p1, v1
+    .line 1
+    invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->v0()I
+
+    move-result p1
+
+    or-int/lit8 p1, p1, 0x4
 
     goto :goto_0
 
     :cond_0
     const/4 p1, 0x0
 
+    .line 2
     :goto_0
-    or-int/2addr p1, v0
+    invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->v0()I
 
-    or-int/2addr v0, v1
+    move-result v0
 
+    or-int/lit8 v0, v0, 0x4
+
+    .line 3
     invoke-virtual {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->setDisplayOptions(II)V
 
     return-void
@@ -6083,24 +4585,24 @@
 
     if-eqz v0, :cond_0
 
-    .line 9
-    iput-boolean v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->G:Z
+    .line 11
+    iput-boolean v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->I:Z
 
-    .line 10
+    .line 12
     :cond_0
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setDisplayOptions(I)V
 
-    .line 11
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    .line 13
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getDisplayOptions()I
 
     move-result v0
 
-    .line 12
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    .line 14
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->q:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
     const/4 v3, 0x0
 
@@ -6119,38 +4621,44 @@
     :cond_1
     move v0, v3
 
-    .line 13
+    .line 15
     :goto_0
-    invoke-virtual {v2, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setEnableBlur(Z)V
+    invoke-virtual {v2, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->w(Z)Z
 
-    .line 14
     :cond_2
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    if-eqz p0, :cond_4
-
     and-int/lit16 p1, p1, 0x4000
 
     if-eqz p1, :cond_3
 
+    .line 16
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    if-eqz p1, :cond_3
+
+    .line 17
+    invoke-virtual {p1, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->w(Z)Z
+
     goto :goto_1
 
+    .line 18
     :cond_3
-    move v1, v3
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
-    .line 15
-    :goto_1
-    invoke-virtual {p0, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setEnableBlur(Z)V
+    if-eqz p0, :cond_4
+
+    .line 19
+    invoke-virtual {p0, v3}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->w(Z)Z
 
     :cond_4
+    :goto_1
     return-void
 .end method
 
 .method public setDisplayOptions(II)V
-    .locals 3
+    .locals 4
 
     .line 1
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getDisplayOptions()I
 
@@ -6163,116 +4671,124 @@
     if-eqz v1, :cond_0
 
     .line 2
-    iput-boolean v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->G:Z
+    iput-boolean v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->I:Z
 
     .line 3
     :cond_0
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
-    and-int/2addr p1, p2
+    and-int v3, p1, p2
 
     not-int p2, p2
 
     and-int/2addr p2, v0
 
-    or-int/2addr p1, p2
+    or-int/2addr p2, v3
 
-    invoke-virtual {v1, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setDisplayOptions(I)V
+    invoke-virtual {v1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setDisplayOptions(I)V
 
     .line 4
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
-    invoke-virtual {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getDisplayOptions()I
+    invoke-virtual {p2}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getDisplayOptions()I
 
-    move-result p1
+    move-result p2
 
     .line 5
-    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->q:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    if-eqz p2, :cond_2
+    if-eqz v0, :cond_2
 
-    const v1, 0x8000
+    const v3, 0x8000
 
-    and-int/2addr v1, p1
+    and-int/2addr p2, v3
 
-    if-eqz v1, :cond_1
+    if-eqz p2, :cond_1
 
-    move v1, v2
+    move p2, v2
 
     goto :goto_0
 
     :cond_1
-    move v1, v0
+    move p2, v1
 
     .line 6
     :goto_0
-    invoke-virtual {p2, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setEnableBlur(Z)V
+    invoke-virtual {v0, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->w(Z)Z
 
-    .line 7
     :cond_2
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    if-eqz p0, :cond_4
-
     and-int/lit16 p1, p1, 0x4000
 
     if-eqz p1, :cond_3
 
-    goto :goto_1
+    .line 7
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
-    :cond_3
-    move v2, v0
+    if-eqz p1, :cond_3
 
     .line 8
-    :goto_1
-    invoke-virtual {p0, v2}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setEnableBlur(Z)V
+    invoke-virtual {p1, v2}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->w(Z)Z
+
+    goto :goto_1
+
+    .line 9
+    :cond_3
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    if-eqz p0, :cond_4
+
+    .line 10
+    invoke-virtual {p0, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->w(Z)Z
 
     :cond_4
+    :goto_1
     return-void
 .end method
 
 .method public setDisplayShowCustomEnabled(Z)V
-    .locals 2
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->s1()I
-
-    move-result v0
-
-    const/16 v1, 0x10
+    .locals 1
 
     if-eqz p1, :cond_0
 
-    move p1, v1
+    .line 1
+    invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->v0()I
+
+    move-result p1
+
+    or-int/lit8 p1, p1, 0x10
 
     goto :goto_0
 
     :cond_0
     const/4 p1, 0x0
 
+    .line 2
     :goto_0
-    or-int/2addr p1, v0
+    invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->v0()I
 
-    or-int/2addr v0, v1
+    move-result v0
 
+    or-int/lit8 v0, v0, 0x10
+
+    .line 3
     invoke-virtual {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->setDisplayOptions(II)V
 
     return-void
 .end method
 
 .method public setDisplayShowHomeEnabled(Z)V
-    .locals 2
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->s1()I
-
-    move-result v0
-
-    const/4 v1, 0x2
+    .locals 1
 
     if-eqz p1, :cond_0
 
-    move p1, v1
+    .line 1
+    invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->v0()I
+
+    move-result p1
+
+    or-int/lit8 p1, p1, 0x2
 
     goto :goto_0
 
@@ -6280,9 +4796,11 @@
     const/4 p1, 0x0
 
     :goto_0
-    or-int/2addr p1, v0
+    invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->v0()I
 
-    or-int/2addr v0, v1
+    move-result v0
+
+    or-int/lit8 v0, v0, 0x2
 
     invoke-virtual {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->setDisplayOptions(II)V
 
@@ -6290,28 +4808,31 @@
 .end method
 
 .method public setDisplayShowTitleEnabled(Z)V
-    .locals 2
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->s1()I
-
-    move-result v0
-
-    const/16 v1, 0x8
+    .locals 1
 
     if-eqz p1, :cond_0
 
-    move p1, v1
+    .line 1
+    invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->v0()I
+
+    move-result p1
+
+    or-int/lit8 p1, p1, 0x8
 
     goto :goto_0
 
     :cond_0
     const/4 p1, 0x0
 
+    .line 2
     :goto_0
-    or-int/2addr p1, v0
+    invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->v0()I
 
-    or-int/2addr v0, v1
+    move-result v0
 
+    or-int/lit8 v0, v0, 0x8
+
+    .line 3
     invoke-virtual {p0, p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->setDisplayOptions(II)V
 
     return-void
@@ -6320,11 +4841,24 @@
 .method public setDisplayUseLogoEnabled(Z)V
     .locals 1
 
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->s1()I
+    if-eqz p1, :cond_0
+
+    .line 1
+    invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->v0()I
+
+    move-result p1
+
+    or-int/lit8 p1, p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->v0()I
 
     move-result v0
-
-    or-int/2addr p1, v0
 
     or-int/lit8 v0, v0, 0x1
 
@@ -6333,128 +4867,11 @@
     return-void
 .end method
 
-.method public final setHasEmbeddedTabs(Z)V
-    .locals 4
-
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setTabContainer(Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;)V
-
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->u:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->v:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->w:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    iget-object v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    invoke-virtual {p1, v0, v1, v2, v3}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->c2(Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;)V
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->getNavigationMode()I
-
-    move-result p1
-
-    const/4 v0, 0x2
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    if-ne p1, v0, :cond_0
-
-    move p1, v1
-
-    goto :goto_0
-
-    :cond_0
-    move p1, v2
-
-    :goto_0
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->u:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    const/16 v3, 0x8
-
-    if-eqz v0, :cond_2
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
-
-    :goto_1
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->u:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    invoke-virtual {v0, v1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->setEmbeded(Z)V
-
-    :cond_2
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->v:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    if-eqz v0, :cond_4
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
-
-    goto :goto_2
-
-    :cond_3
-    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
-
-    :goto_2
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->v:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    invoke-virtual {v0, v1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->setEmbeded(Z)V
-
-    :cond_4
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->w:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    if-eqz v0, :cond_6
-
-    if-eqz p1, :cond_5
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
-
-    goto :goto_3
-
-    :cond_5
-    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_6
-    :goto_3
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    if-eqz v0, :cond_8
-
-    if-eqz p1, :cond_7
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
-
-    goto :goto_4
-
-    :cond_7
-    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_8
-    :goto_4
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0, v2}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setCollapsable(Z)V
-
-    return-void
-.end method
-
 .method public setHomeButtonEnabled(Z)V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setHomeButtonEnabled(Z)V
 
@@ -6465,7 +4882,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setIcon(I)V
 
@@ -6476,7 +4893,7 @@
     .locals 0
 
     .line 2
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
@@ -6486,11 +4903,13 @@
 .method public setListNavigationCallbacks(Landroid/widget/SpinnerAdapter;Landroidx/appcompat/app/ActionBar$OnNavigationListener;)V
     .locals 1
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setDropdownAdapter(Landroid/widget/SpinnerAdapter;)V
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    .line 2
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {p0, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setCallback(Landroidx/appcompat/app/ActionBar$OnNavigationListener;)V
 
@@ -6501,7 +4920,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setLogo(I)V
 
@@ -6512,7 +4931,7 @@
     .locals 0
 
     .line 2
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setLogo(Landroid/graphics/drawable/Drawable;)V
 
@@ -6522,7 +4941,8 @@
 .method public setNavigationMode(I)V
     .locals 3
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getNavigationMode()I
 
@@ -6534,37 +4954,44 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->getSelectedNavigationIndex()I
 
     move-result v0
 
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->F:I
+    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->H:I
 
     const/4 v0, 0x0
 
+    .line 3
     invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->selectTab(Landroidx/appcompat/app/ActionBar$Tab;)V
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->u:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+    .line 4
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
     const/16 v2, 0x8
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->v:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+    .line 5
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->w:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
+    .line 6
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->A:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
+    .line 7
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
 
+    .line 8
     :goto_0
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setNavigationMode(I)V
 
@@ -6574,38 +5001,47 @@
 
     goto :goto_1
 
+    .line 9
     :cond_1
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->ensureTabsExist()V
+    invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->ensureTabsExist()V
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->u:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+    .line 10
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {p1, v0}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->v:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+    .line 11
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {p1, v0}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->w:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
+    .line 12
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->A:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {p1, v0}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
+    .line 13
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {p1, v0}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
 
-    iget p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->F:I
+    .line 14
+    iget p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->H:I
 
     const/4 v1, -0x1
 
     if-eq p1, v1, :cond_2
 
+    .line 15
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->setSelectedNavigationItem(I)V
 
-    iput v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->F:I
+    .line 16
+    iput v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->H:I
 
+    .line 17
     :cond_2
     :goto_1
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setCollapsable(Z)V
 
@@ -6615,7 +5051,8 @@
 .method public setSelectedNavigationItem(I)V
     .locals 2
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getNavigationMode()I
 
@@ -6629,7 +5066,8 @@
 
     if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Ljava/util/ArrayList;
+    .line 2
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->D:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -6641,6 +5079,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -6650,8 +5089,9 @@
 
     throw p0
 
+    .line 4
     :cond_1
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setDropdownSelectedPosition(I)V
 
@@ -6667,10 +5107,12 @@
         }
     .end annotation
 
-    iput-boolean p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->P:Z
+    .line 1
+    iput-boolean p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->Q:Z
 
     if-nez p1, :cond_1
 
+    .line 2
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->isShowing()Z
 
     move-result p1
@@ -6679,12 +5121,14 @@
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->doShow(Z)V
+    .line 3
+    invoke-direct {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->doShow(Z)V
 
     goto :goto_0
 
+    .line 4
     :cond_0
-    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->doHide(Z)V
+    invoke-direct {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->doHide(Z)V
 
     :cond_1
     :goto_0
@@ -6692,47 +5136,78 @@
 .end method
 
 .method public setSplitBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-    .locals 2
+    .locals 4
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    .line 1
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->getDisplayOptions()I
 
-    if-eqz v0, :cond_1
+    move-result v0
 
-    const/4 v0, 0x0
+    and-int/lit16 v0, v0, 0x4000
 
-    :goto_0
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    const/4 v1, 0x0
 
-    invoke-virtual {v1}, Landroid/view/ViewGroup;->getChildCount()I
+    if-eqz v0, :cond_0
 
-    move-result v1
-
-    if-ge v0, v1, :cond_1
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v1
-
-    instance-of v1, v1, Lmiuix/appcompat/internal/view/menu/action/b;
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
-
-    :cond_0
-    add-int/lit8 v0, v0, 0x1
+    const/4 v0, 0x1
 
     goto :goto_0
 
+    :cond_0
+    move v0, v1
+
+    .line 2
+    :goto_0
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    if-eqz v2, :cond_3
+
+    .line 3
+    :goto_1
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    invoke-virtual {v2}, Landroid/widget/FrameLayout;->getChildCount()I
+
+    move-result v2
+
+    if-ge v1, v2, :cond_3
+
+    .line 4
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    invoke-virtual {v2, v1}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v2
+
+    instance-of v2, v2, Lk/b/e/e/f/m/e;
+
+    if-eqz v2, :cond_2
+
+    .line 5
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    invoke-virtual {v2, v1}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v2
+
+    if-eqz v0, :cond_1
+
+    const/4 v3, 0x0
+
+    goto :goto_2
+
     :cond_1
+    move-object v3, p1
+
+    :goto_2
+    invoke-virtual {v2, v3}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_2
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
+
+    :cond_3
     return-void
 .end method
 
@@ -6740,7 +5215,7 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i:Landroid/content/Context;
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -6755,7 +5230,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setSubtitle(Ljava/lang/CharSequence;)V
 
@@ -6766,7 +5241,7 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i:Landroid/content/Context;
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -6781,7 +5256,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setTitle(Ljava/lang/CharSequence;)V
 
@@ -6793,7 +5268,8 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->A0(Lmiuix/animation/controller/AnimState;)V
+    .line 1
+    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->Z(Lmiuix/animation/controller/AnimState;)V
 
     return-void
 .end method
@@ -6801,82 +5277,94 @@
 .method public showForActionMode()V
     .locals 5
 
-    iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->N:Z
+    .line 1
+    iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->O:Z
 
     if-nez v0, :cond_2
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->N:Z
+    .line 2
+    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->O:Z
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->updateVisibility(Z)V
+    .line 3
+    invoke-direct {p0, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->updateVisibility(Z)V
 
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r()I
-
-    move-result v2
-
-    iput v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->W:I
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->G()Z
+    .line 4
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->g()I
 
     move-result v2
 
-    iput-boolean v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->X:Z
+    iput v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->V:I
 
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/u;
+    .line 5
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p()Z
 
-    instance-of v2, v2, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+    move-result v2
 
-    if-eqz v2, :cond_0
+    iput-boolean v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->W:Z
 
-    invoke-virtual {p0, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l0(Z)V
+    .line 6
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->C:Lk/b/e/b/a/h;
+
+    instance-of v3, v2, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+
+    if-eqz v3, :cond_0
+
+    .line 7
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    invoke-virtual {v2, v1, v0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->I(IZZ)V
+
+    .line 8
+    invoke-virtual {p0, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->N(Z)V
 
     goto :goto_0
 
+    .line 9
     :cond_0
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    invoke-virtual {v2}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->N()V
-
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/u;
-
     check-cast v2, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
-    iget v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->W:I
+    iget v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->V:I
 
     invoke-virtual {v2, v3}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->setExpandState(I)V
 
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/u;
+    .line 10
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->C:Lk/b/e/b/a/h;
 
     check-cast v2, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
-    iget-boolean v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->X:Z
+    iget-boolean v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->W:Z
 
     invoke-virtual {v2, v3}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->setResizable(Z)V
 
+    .line 11
     :goto_0
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
-    invoke-virtual {v2}, Landroid/view/View;->getImportantForAccessibility()I
+    invoke-virtual {v2}, Landroid/view/ViewGroup;->getImportantForAccessibility()I
 
     move-result v2
 
-    iput v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->Y:I
+    iput v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->X:I
 
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    .line 12
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     const/4 v3, 0x4
 
-    invoke-virtual {v2, v3}, Landroid/view/View;->setImportantForAccessibility(I)V
+    invoke-virtual {v2, v3}, Landroid/view/ViewGroup;->setImportantForAccessibility(I)V
 
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    .line 13
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
-    iget-object v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/u;
+    iget-object v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->C:Lk/b/e/b/a/h;
 
     instance-of v3, v3, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
+    .line 14
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->getDisplayOptions()I
 
     move-result p0
@@ -6892,474 +5380,522 @@
     :cond_1
     move v0, v1
 
+    .line 15
     :goto_1
-    invoke-virtual {v2, v3, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->M1(ZZ)V
+    invoke-virtual {v2, v3, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->j1(ZZ)V
 
     :cond_2
     return-void
 .end method
 
-.method public t()I
+.method public t(Landroidx/fragment/app/Fragment;)V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lk/b/e/b/a/g;
 
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->getExpandedHeight()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public t0(IILandroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
-    .locals 11
-
-    move-object v0, p0
-
-    iget-object v1, v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->u:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    move v2, p1
-
-    move v3, p2
-
-    move-object v4, p3
-
-    move-object v5, p4
-
-    move-object/from16 v6, p5
-
-    move-object/from16 v7, p6
-
-    invoke-virtual/range {v1 .. v7}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->o(IILandroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
-
-    iget-object v2, v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->v:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    move v3, p1
-
-    move v4, p2
-
-    move-object v5, p3
-
-    move-object v6, p4
-
-    move-object/from16 v7, p5
-
-    move-object/from16 v8, p6
-
-    invoke-virtual/range {v2 .. v8}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->o(IILandroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
-
-    iget-object v3, v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->w:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    move v4, p1
-
-    move v5, p2
-
-    move-object v6, p3
-
-    move-object v7, p4
-
-    move-object/from16 v8, p5
-
-    move-object/from16 v9, p6
-
-    invoke-virtual/range {v3 .. v9}, Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;->C(IILandroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
-
-    iget-object v4, v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
-
-    move v5, p1
-
-    move v6, p2
-
-    move-object v7, p3
-
-    move-object v8, p4
-
-    move-object/from16 v9, p5
-
-    move-object/from16 v10, p6
-
-    invoke-virtual/range {v4 .. v10}, Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;->C(IILandroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0, p1}, Lk/b/e/b/a/g;->l(Landroidx/fragment/app/Fragment;)V
 
     return-void
 .end method
 
-.method public t1()Landroid/view/View;
-    .locals 1
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    if-eqz p0, :cond_0
-
-    const v0, 0x1020002
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public u(I)Landroidx/fragment/app/Fragment;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/t;->h(I)Landroidx/fragment/app/Fragment;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public u0(II)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->u:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
-
-    invoke-virtual {p0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->r(II)V
-
-    return-void
-.end method
-
-.method public final u1(Landroid/view/View;)Ljava/lang/Integer;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Ljava/util/HashMap;
-
-    invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Integer;
-
-    sget-object p1, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o0:Ljava/lang/Integer;
-
-    invoke-static {p0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
-
-    move-result p0
-
-    :goto_0
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final updateVisibility(Z)V
-    .locals 2
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, p1, v0, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->Z1(ZZLmiuix/animation/controller/AnimState;)V
-
-    return-void
-.end method
-
-.method public v()I
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/t;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/t;->i()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public v0(Z)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->setHasEmbeddedTabs(Z)V
-
-    return-void
-.end method
-
-.method public final v1()I
+.method public t0()I
     .locals 3
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+    move v1, v0
 
-    move-result v0
+    .line 1
+    :goto_0
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->q:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    invoke-virtual {v2}, Landroid/widget/FrameLayout;->getChildCount()I
 
-    invoke-virtual {v1}, Landroid/view/ViewGroup;->getChildCount()I
+    move-result v2
 
-    move-result v1
+    if-ge v1, v2, :cond_2
 
-    const/4 v2, 0x1
+    .line 2
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->q:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
-    if-ne v1, v2, :cond_1
+    invoke-virtual {v2, v1}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    move-result-object v2
 
-    const/4 v1, 0x0
+    instance-of v2, v2, Lk/d/c/a;
 
-    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    if-eqz v2, :cond_1
+
+    .line 3
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->q:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    invoke-virtual {p0, v1}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object p0
 
-    if-eqz p0, :cond_1
+    check-cast p0, Lk/d/c/a;
 
-    instance-of v1, p0, Lmiuix/appcompat/internal/view/menu/action/ResponsiveActionMenuView;
-
-    if-eqz v1, :cond_0
-
-    check-cast p0, Lmiuix/appcompat/internal/view/menu/action/ResponsiveActionMenuView;
-
-    goto :goto_0
-
-    :cond_0
-    instance-of v1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
-
-    if-eqz v1, :cond_1
-
-    check-cast p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->G()Z
+    .line 4
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getVisibility()I
 
     move-result v1
 
-    if-nez v1, :cond_1
+    if-nez v1, :cond_0
 
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->getCollapsedHeight()I
+    .line 5
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getHeight()I
 
-    move-result v0
+    move-result p0
+
+    return p0
+
+    :cond_0
+    return v0
 
     :cond_1
-    :goto_0
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_2
     return v0
 .end method
 
-.method public w()Ljava/util/Map;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/Map<",
-            "Ljava/lang/Integer;",
-            "Ljava/lang/Boolean;",
-            ">;"
-        }
-    .end annotation
+.method public u(Ljava/lang/String;)V
+    .locals 0
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lk/b/e/b/a/g;
 
-    if-eqz v0, :cond_1
+    invoke-virtual {p0, p1}, Lk/b/e/b/a/g;->o(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->s1()Z
+    return-void
+.end method
 
-    move-result v0
+.method public u0()Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+    .locals 0
 
-    if-eqz v0, :cond_1
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    return-object p0
+.end method
 
-    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->v1()Z
+.method public v(I)V
+    .locals 0
 
-    move-result v0
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lk/b/e/b/a/g;
 
-    if-nez v0, :cond_0
+    invoke-virtual {p0, p1}, Lk/b/e/b/a/g;->m(I)V
+
+    return-void
+.end method
+
+.method public w(Lmiuix/appcompat/app/ActionBar$a;)V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lk/b/e/b/a/g;
+
+    invoke-virtual {p0, p1}, Lk/b/e/b/a/g;->p(Lmiuix/appcompat/app/ActionBar$a;)V
+
+    return-void
+.end method
+
+.method public w0()I
+    .locals 5
+
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    .line 1
+    :goto_0
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    invoke-virtual {v2}, Landroid/widget/FrameLayout;->getChildCount()I
+
+    move-result v2
+
+    if-ge v1, v2, :cond_3
+
+    .line 2
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    invoke-virtual {v2, v1}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_2
+
+    .line 3
+    instance-of v3, v2, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+
+    if-eqz v3, :cond_2
+
+    .line 4
+    check-cast v2, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+
+    move v3, v0
+
+    .line 5
+    :goto_1
+    invoke-virtual {v2}, Landroid/widget/LinearLayout;->getChildCount()I
+
+    move-result v4
+
+    if-ge v3, v4, :cond_2
+
+    .line 6
+    invoke-virtual {v2, v3}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v4
+
+    instance-of v4, v4, Lk/d/c/a;
+
+    if-eqz v4, :cond_1
+
+    .line 7
+    invoke-virtual {v2, v3}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
+
+    move-result-object p0
+
+    check-cast p0, Lk/d/c/a;
+
+    .line 8
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getVisibility()I
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 9
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getHeight()I
+
+    move-result p0
+
+    return p0
+
+    :cond_0
+    return v0
+
+    :cond_1
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    :cond_0
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getHyperMenuPrimaryCheckedData()Ljava/util/Map;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x0
-
-    return-object p0
+    :cond_3
+    return v0
 .end method
 
-.method public w0(Z)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setTitleClickable(Z)V
-
-    return-void
-.end method
-
-.method public w1(Landroid/view/View;)I
-    .locals 1
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->u1(Landroid/view/View;)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, -0x1
-
-    return p0
-.end method
-
-.method public x()Ljava/util/Map;
-    .locals 1
+.method public x(Ljava/lang/String;ILjava/lang/Class;Landroid/os/Bundle;Z)V
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "()",
-            "Ljava/util/Map<",
-            "Ljava/lang/Integer;",
-            "[",
-            "Ljava/lang/Boolean;",
-            ">;"
+            "(",
+            "Ljava/lang/String;",
+            "I",
+            "Ljava/lang/Class<",
+            "+",
+            "Landroidx/fragment/app/Fragment;",
+            ">;",
+            "Landroid/os/Bundle;",
+            "Z)V"
         }
     .end annotation
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->x:Lk/b/e/b/a/g;
 
-    if-eqz v0, :cond_1
+    move-object v1, p1
 
-    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->s1()Z
+    move v2, p2
+
+    move-object v3, p3
+
+    move-object v4, p4
+
+    move v5, p5
+
+    invoke-virtual/range {v0 .. v5}, Lk/b/e/b/a/g;->q(Ljava/lang/String;ILjava/lang/Class;Landroid/os/Bundle;Z)V
+
+    return-void
+.end method
+
+.method public y(Landroidx/appcompat/app/ActionBar$Tab;Z)V
+    .locals 5
+
+    .line 1
+    iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->F:Z
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    iput-boolean v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->F:Z
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x1
+
+    .line 3
+    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->F:Z
+
+    .line 4
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Landroid/content/Context;
+
+    instance-of v2, v0, Landroid/app/Activity;
+
+    if-eqz v2, :cond_2
+
+    .line 5
+    check-cast v0, Landroid/app/Activity;
+
+    invoke-virtual {v0}, Landroid/app/Activity;->isDestroyed()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-nez v0, :cond_1
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Landroid/content/Context;
 
-    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->v1()Z
+    check-cast v0, Landroid/app/Activity;
+
+    invoke-virtual {v0}, Landroid/app/Activity;->isFinishing()Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_2
+
+    :cond_1
+    return-void
+
+    .line 6
+    :cond_2
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->getNavigationMode()I
+
+    move-result v0
+
+    const/4 v2, 0x2
+
+    const/4 v3, -0x1
+
+    if-eq v0, v2, :cond_4
+
+    if-eqz p1, :cond_3
+
+    .line 7
+    invoke-virtual {p1}, Landroidx/appcompat/app/ActionBar$Tab;->getPosition()I
+
+    move-result v3
+
+    .line 8
+    :cond_3
+    iput v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->H:I
+
+    return-void
+
+    .line 9
+    :cond_4
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->G:Landroidx/fragment/app/FragmentManager;
+
+    invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->beginTransaction()Landroidx/fragment/app/FragmentTransaction;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroidx/fragment/app/FragmentTransaction;->disallowAddToBackStack()Landroidx/fragment/app/FragmentTransaction;
+
+    move-result-object v0
+
+    .line 10
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->E:Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
+
+    if-ne v2, p1, :cond_5
+
+    if-eqz v2, :cond_b
+
+    .line 11
+    invoke-virtual {v2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->getCallback()Landroidx/appcompat/app/ActionBar$TabListener;
+
+    move-result-object p2
+
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->E:Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
+
+    invoke-interface {p2, v2, v0}, Landroidx/appcompat/app/ActionBar$TabListener;->onTabReselected(Landroidx/appcompat/app/ActionBar$Tab;Landroidx/fragment/app/FragmentTransaction;)V
+
+    .line 12
+    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {p1}, Landroidx/appcompat/app/ActionBar$Tab;->getPosition()I
+
+    move-result v2
+
+    invoke-virtual {p2, v2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->e(I)V
+
+    .line 13
+    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {p1}, Landroidx/appcompat/app/ActionBar$Tab;->getPosition()I
+
+    move-result v2
+
+    invoke-virtual {p2, v2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->e(I)V
+
+    .line 14
+    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->A:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {p1}, Landroidx/appcompat/app/ActionBar$Tab;->getPosition()I
+
+    move-result v2
+
+    invoke-virtual {p2, v2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->e(I)V
+
+    .line 15
+    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    invoke-virtual {p1}, Landroidx/appcompat/app/ActionBar$Tab;->getPosition()I
+
+    move-result p1
+
+    invoke-virtual {p2, p1}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->e(I)V
+
+    goto :goto_3
+
+    .line 16
+    :cond_5
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    if-eqz p1, :cond_6
+
+    .line 17
+    invoke-virtual {p1}, Landroidx/appcompat/app/ActionBar$Tab;->getPosition()I
+
+    move-result v4
 
     goto :goto_0
 
-    :cond_0
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    :cond_6
+    move v4, v3
 
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getHyperMenuSecondaryCheckedData()Ljava/util/Map;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_1
+    .line 18
     :goto_0
-    const/4 p0, 0x0
+    invoke-virtual {v2, v4, p2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->q(IZ)V
 
-    return-object p0
-.end method
+    .line 19
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->z:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
-.method public x0(Landroid/view/View;)V
-    .locals 0
+    if-eqz p1, :cond_7
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/t;
+    .line 20
+    invoke-virtual {p1}, Landroidx/appcompat/app/ActionBar$Tab;->getPosition()I
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/t;->s(Landroid/view/View;)V
+    move-result v4
+
+    goto :goto_1
+
+    :cond_7
+    move v4, v3
+
+    .line 21
+    :goto_1
+    invoke-virtual {v2, v4, p2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->q(IZ)V
+
+    .line 22
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->A:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    if-eqz p1, :cond_8
+
+    .line 23
+    invoke-virtual {p1}, Landroidx/appcompat/app/ActionBar$Tab;->getPosition()I
+
+    move-result v4
+
+    goto :goto_2
+
+    :cond_8
+    move v4, v3
+
+    .line 24
+    :goto_2
+    invoke-virtual {v2, v4, p2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->q(IZ)V
+
+    .line 25
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->B:Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+
+    if-eqz p1, :cond_9
+
+    .line 26
+    invoke-virtual {p1}, Landroidx/appcompat/app/ActionBar$Tab;->getPosition()I
+
+    move-result v3
+
+    .line 27
+    :cond_9
+    invoke-virtual {v2, v3, p2}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->q(IZ)V
+
+    .line 28
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->E:Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
+
+    if-eqz v2, :cond_a
+
+    .line 29
+    invoke-virtual {v2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->getCallback()Landroidx/appcompat/app/ActionBar$TabListener;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->E:Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
+
+    invoke-interface {v2, v3, v0}, Landroidx/appcompat/app/ActionBar$TabListener;->onTabUnselected(Landroidx/appcompat/app/ActionBar$Tab;Landroidx/fragment/app/FragmentTransaction;)V
+
+    .line 30
+    :cond_a
+    check-cast p1, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
+
+    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->E:Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
+
+    if-eqz p1, :cond_b
+
+    .line 31
+    iput-boolean p2, p1, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->i:Z
+
+    .line 32
+    invoke-virtual {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->getCallback()Landroidx/appcompat/app/ActionBar$TabListener;
+
+    move-result-object p1
+
+    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->E:Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
+
+    invoke-interface {p1, p2, v0}, Landroidx/appcompat/app/ActionBar$TabListener;->onTabSelected(Landroidx/appcompat/app/ActionBar$Tab;Landroidx/fragment/app/FragmentTransaction;)V
+
+    .line 33
+    :cond_b
+    :goto_3
+    invoke-virtual {v0}, Landroidx/fragment/app/FragmentTransaction;->isEmpty()Z
+
+    move-result p1
+
+    if-nez p1, :cond_c
+
+    .line 34
+    invoke-virtual {v0}, Landroidx/fragment/app/FragmentTransaction;->commit()I
+
+    .line 35
+    :cond_c
+    iput-boolean v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->F:Z
 
     return-void
 .end method
 
-.method public x1()I
-    .locals 1
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->h:Landroid/view/ActionMode;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->y:Lmiuix/appcompat/internal/app/widget/u;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lmiuix/appcompat/internal/app/widget/u;->getViewHeight()I
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->r1()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getCollapsedHeight()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public y()Landroid/view/View;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getStartView()Landroid/view/View;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public y0(Z)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/t;->t(Z)V
-
-    return-void
-.end method
-
-.method public y1()Z
+.method public y0()Z
     .locals 0
 
     const/4 p0, 0x0
@@ -7367,29 +5903,18 @@
     return p0
 .end method
 
-.method public z(I)Landroid/view/View;
+.method public z(Lk/b/d/j;)V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->p(I)Landroid/view/View;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public z0(I)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/t;->u(I)V
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setActionBarTransitionListener(Lk/b/d/j;)V
 
     return-void
 .end method
 
-.method public z1(Landroid/view/ViewGroup;)V
+.method public z0(Landroid/view/ViewGroup;)V
     .locals 4
     .param p1    # Landroid/view/ViewGroup;
         .annotation build Landroidx/annotation/Nullable;
@@ -7400,155 +5925,105 @@
 
     return-void
 
+    .line 1
     :cond_0
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i:Landroid/content/Context;
-
-    sget v1, Lso/b$d;->actionBarStrategy:I
-
-    invoke-static {v0, v1}, Lnq/e;->l(Landroid/content/Context;I)Landroid/util/TypedValue;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_1
-
-    :try_start_0
-    iget-object v0, v0, Landroid/util/TypedValue;->string:Ljava/lang/CharSequence;
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v0
-
-    new-array v2, v1, [Ljava/lang/Class;
-
-    invoke-virtual {v0, v2}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
-
-    move-result-object v0
-
-    new-array v2, v1, [Ljava/lang/Object;
-
-    invoke-virtual {v0, v2}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lxo/c;
-
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->Z:Lxo/c;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :cond_1
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i:Landroid/content/Context;
-
-    invoke-static {v0}, Lmp/d;->i(Landroid/content/Context;)Lmp/s;
-
-    move-result-object v0
-
-    iget v0, v0, Lmp/s;->g:I
-
-    iput v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->k:I
-
     move-object v0, p1
 
     check-cast v0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
 
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
 
+    .line 2
     invoke-virtual {v0, p0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->setActionBar(Lmiuix/appcompat/app/ActionBar;)V
 
-    sget v0, Lso/b$j;->action_bar:I
+    .line 3
+    sget v0, Lk/b/b$j;->action_bar:I
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
-    if-eqz v0, :cond_2
+    .line 4
+    sget v0, Lk/b/b$j;->action_context_bar:I
 
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->Q:Ljp/b;
-
-    if-eqz v2, :cond_2
-
-    invoke-virtual {v0, v2}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setExtraPaddingPolicy(Ljp/b;)V
-
-    :cond_2
-    sget v0, Lso/b$j;->action_context_bar:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    .line 5
+    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->s:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
-    sget v0, Lso/b$j;->action_bar_container:I
+    .line 6
+    sget v0, Lk/b/b$j;->action_bar_container:I
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    sget v0, Lso/b$j;->split_action_bar:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->q:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
-    sget v0, Lso/b$j;->content_mask:I
+    .line 7
+    sget v0, Lk/b/b$j;->split_action_bar:I
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+
+    .line 8
+    sget v0, Lk/b/b$j;->content_mask:I
+
+    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
-    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Landroid/view/View;
+    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->v:Landroid/view/View;
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_1
 
+    .line 9
     new-instance p1, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$c;
 
     invoke-direct {p1, p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$c;-><init>(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)V
 
-    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->s:Landroid/view/View$OnClickListener;
+    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->w:Landroid/view/View$OnClickListener;
 
-    :cond_3
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    .line 10
+    :cond_1
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
-    if-nez p1, :cond_5
+    if-nez p1, :cond_3
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->o:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->s:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_3
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->q:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_2
 
     goto :goto_0
 
-    :cond_4
+    .line 11
+    :cond_2
     new-instance p1, Ljava/lang/IllegalStateException;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 12
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p0
@@ -7571,15 +6046,18 @@
 
     throw p1
 
-    :cond_5
+    .line 13
+    :cond_3
     :goto_0
-    invoke-virtual {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->y1()Z
+    invoke-virtual {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->W0()Z
 
     move-result p1
 
-    iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->I:I
+    .line 14
+    iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->K:I
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    .line 15
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->r:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-virtual {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->getDisplayOptions()I
 
@@ -7587,154 +6065,54 @@
 
     and-int/lit8 p1, p1, 0x4
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    if-eqz p1, :cond_6
+    const/4 v1, 0x1
 
-    move p1, v0
+    if-eqz p1, :cond_4
+
+    move p1, v1
 
     goto :goto_1
 
-    :cond_6
-    move p1, v1
+    :cond_4
+    move p1, v0
 
     :goto_1
-    if-eqz p1, :cond_7
+    if-eqz p1, :cond_5
 
-    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->G:Z
+    .line 16
+    iput-boolean v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->I:Z
 
-    :cond_7
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i:Landroid/content/Context;
+    .line 17
+    :cond_5
+    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->n:Landroid/content/Context;
 
-    invoke-static {v2}, Ldp/a;->b(Landroid/content/Context;)Ldp/a;
+    invoke-static {v2}, Lk/b/e/e/a;->b(Landroid/content/Context;)Lk/b/e/e/a;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Ldp/a;->a()Z
+    .line 18
+    invoke-virtual {v2}, Lk/b/e/e/a;->a()Z
 
     move-result v3
 
-    if-nez v3, :cond_9
+    if-nez v3, :cond_6
 
-    if-eqz p1, :cond_8
+    if-eqz p1, :cond_7
 
-    goto :goto_2
-
-    :cond_8
-    move p1, v1
-
-    goto :goto_3
-
-    :cond_9
-    :goto_2
-    move p1, v0
-
-    :goto_3
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->setHomeButtonEnabled(Z)V
-
-    invoke-virtual {v2}, Ldp/a;->g()Z
-
-    move-result p1
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->setHasEmbeddedTabs(Z)V
-
-    invoke-static {}, Lmp/j;->g()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_a
-
-    invoke-static {}, Lnq/h;->a()Z
-
-    move-result p1
-
-    if-nez p1, :cond_a
-
-    goto :goto_4
-
-    :cond_a
+    :cond_6
     move v0, v1
 
-    :goto_4
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->m:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
+    :cond_7
+    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->setHomeButtonEnabled(Z)V
 
-    if-eqz p1, :cond_b
-
-    invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setSupportBlur(Z)V
-
-    :cond_b
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->p:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
-
-    if-eqz p1, :cond_c
-
-    invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setSupportBlur(Z)V
-
-    :cond_c
-    if-eqz v0, :cond_f
-
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i:Landroid/content/Context;
-
-    sget v0, Lso/b$d;->bgBlurOptions:I
-
-    invoke-static {p1, v0, v1}, Lnq/e;->k(Landroid/content/Context;II)I
+    .line 19
+    invoke-virtual {v2}, Lk/b/e/e/a;->g()Z
 
     move-result p1
 
-    if-eqz p1, :cond_f
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->getDisplayOptions()I
-
-    move-result v0
-
-    and-int/lit8 v1, p1, 0x1
-
-    if-eqz v1, :cond_d
-
-    const v1, 0x8000
-
-    or-int/2addr v0, v1
-
-    :cond_d
-    and-int/lit8 p1, p1, 0x2
-
-    if-eqz p1, :cond_e
-
-    or-int/lit16 v0, v0, 0x4000
-
-    :cond_e
-    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->setDisplayOptions(I)V
-
-    :cond_f
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->Z:Lxo/c;
-
-    if-nez p1, :cond_10
-
-    new-instance p1, Lmiuix/appcompat/app/strategy/CommonActionBarStrategy;
-
-    invoke-direct {p1}, Lmiuix/appcompat/app/strategy/CommonActionBarStrategy;-><init>()V
-
-    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->Z:Lxo/c;
-
-    :cond_10
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
-
-    move-result-object p1
-
-    new-instance v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$d;
-
-    invoke-direct {v0, p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$d;-><init>(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)V
-
-    invoke-virtual {p1, v0}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
-
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    new-instance v0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$e;
-
-    invoke-direct {v0, p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$e;-><init>(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)V
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+    invoke-direct {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->setHasEmbeddedTabs(Z)V
 
     return-void
 .end method

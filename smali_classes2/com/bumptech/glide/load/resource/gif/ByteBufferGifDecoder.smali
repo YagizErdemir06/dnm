@@ -57,12 +57,14 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/bumptech/glide/load/resource/gif/ByteBufferGifDecoder$GifDecoderFactory;
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/resource/gif/ByteBufferGifDecoder$GifDecoderFactory;-><init>()V
 
     sput-object v0, Lcom/bumptech/glide/load/resource/gif/ByteBufferGifDecoder;->GIF_DECODER_FACTORY:Lcom/bumptech/glide/load/resource/gif/ByteBufferGifDecoder$GifDecoderFactory;
 
+    .line 2
     new-instance v0, Lcom/bumptech/glide/load/resource/gif/ByteBufferGifDecoder$GifHeaderParserPool;
 
     invoke-direct {v0}, Lcom/bumptech/glide/load/resource/gif/ByteBufferGifDecoder$GifHeaderParserPool;-><init>()V
@@ -448,6 +450,7 @@
 .method private static getSampleSize(Lcom/bumptech/glide/gifdecoder/GifHeader;II)I
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Lcom/bumptech/glide/gifdecoder/GifHeader;->getHeight()I
 
     move-result v0
@@ -470,6 +473,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-static {v0}, Ljava/lang/Integer;->highestOneBit(I)I
 
@@ -478,6 +482,7 @@
     :goto_0
     const/4 v1, 0x1
 
+    .line 3
     invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
 
     move-result v0
@@ -486,6 +491,7 @@
 
     const-string v3, "BufferGifDecoder"
 
+    .line 4
     invoke-static {v3, v2}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v2
@@ -494,6 +500,7 @@
 
     if-le v0, v1, :cond_1
 
+    .line 5
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -520,6 +527,7 @@
 
     invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 6
     invoke-virtual {p0}, Lcom/bumptech/glide/gifdecoder/GifHeader;->getWidth()I
 
     move-result p2
@@ -528,6 +536,7 @@
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 7
     invoke-virtual {p0}, Lcom/bumptech/glide/gifdecoder/GifHeader;->getHeight()I
 
     move-result p0
@@ -542,6 +551,7 @@
 
     move-result-object p0
 
+    .line 8
     invoke-static {v3, p0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1

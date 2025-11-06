@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ImmutableMapValues$SerializedForm;
+.class public Lcom/google/common/collect/ImmutableMapValues$SerializedForm;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -35,7 +35,7 @@
 
 
 # instance fields
-.field final map:Lcom/google/common/collect/ImmutableMap;
+.field public final map:Lcom/google/common/collect/ImmutableMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/ImmutableMap<",
@@ -56,8 +56,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/ImmutableMapValues$SerializedForm;->map:Lcom/google/common/collect/ImmutableMap;
 
     return-void
@@ -68,6 +70,7 @@
 .method public readResolve()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMapValues$SerializedForm;->map:Lcom/google/common/collect/ImmutableMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMap;->values()Lcom/google/common/collect/ImmutableCollection;

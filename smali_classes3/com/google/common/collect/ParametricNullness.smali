@@ -1,4 +1,4 @@
-.class interface abstract annotation Lcom/google/common/collect/ParametricNullness;
+.class public interface abstract annotation Lcom/google/common/collect/ParametricNullness;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

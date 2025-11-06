@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedSortedSet;
+.class public Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedSortedSet;
 .super Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection;
 .source "SourceFile"
 
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/AbstractMapBasedMultimap;
+.field public final synthetic this$0:Lcom/google/common/collect/AbstractMapBasedMultimap;
 
 
 # direct methods
@@ -51,8 +51,10 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedSortedSet;->this$0:Lcom/google/common/collect/AbstractMapBasedMultimap;
 
+    .line 2
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection;-><init>(Lcom/google/common/collect/AbstractMapBasedMultimap;Ljava/lang/Object;Ljava/util/Collection;Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection;)V
 
     return-void
@@ -73,6 +75,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedSortedSet;->getSortedSetDelegate()Ljava/util/SortedSet;
 
     move-result-object p0
@@ -95,8 +98,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection;->refreshIfEmpty()V
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedSortedSet;->getSortedSetDelegate()Ljava/util/SortedSet;
 
     move-result-object p0
@@ -118,6 +123,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection;->getDelegate()Ljava/util/Collection;
 
     move-result-object p0
@@ -141,16 +147,20 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection;->refreshIfEmpty()V
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedSortedSet;
 
     iget-object v1, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedSortedSet;->this$0:Lcom/google/common/collect/AbstractMapBasedMultimap;
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection;->getKey()Ljava/lang/Object;
 
     move-result-object v2
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedSortedSet;->getSortedSetDelegate()Ljava/util/SortedSet;
 
     move-result-object v3
@@ -159,6 +169,7 @@
 
     move-result-object p1
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection;->getAncestor()Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection;
 
     move-result-object v3
@@ -189,8 +200,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection;->refreshIfEmpty()V
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedSortedSet;->getSortedSetDelegate()Ljava/util/SortedSet;
 
     move-result-object p0
@@ -220,16 +233,20 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection;->refreshIfEmpty()V
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedSortedSet;
 
     iget-object v1, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedSortedSet;->this$0:Lcom/google/common/collect/AbstractMapBasedMultimap;
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection;->getKey()Ljava/lang/Object;
 
     move-result-object v2
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedSortedSet;->getSortedSetDelegate()Ljava/util/SortedSet;
 
     move-result-object v3
@@ -238,6 +255,7 @@
 
     move-result-object p1
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection;->getAncestor()Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection;
 
     move-result-object p2
@@ -271,16 +289,20 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection;->refreshIfEmpty()V
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedSortedSet;
 
     iget-object v1, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedSortedSet;->this$0:Lcom/google/common/collect/AbstractMapBasedMultimap;
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection;->getKey()Ljava/lang/Object;
 
     move-result-object v2
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedSortedSet;->getSortedSetDelegate()Ljava/util/SortedSet;
 
     move-result-object v3
@@ -289,6 +311,7 @@
 
     move-result-object p1
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection;->getAncestor()Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection;
 
     move-result-object v3

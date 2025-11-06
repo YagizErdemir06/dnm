@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/rtsp/SessionDescriptionParser;
+.class public final Lcom/google/android/exoplayer2/source/rtsp/SessionDescriptionParser;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -47,6 +47,7 @@
 
     const-string v0, "([a-z])=\\s?(.+)"
 
+    .line 1
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -55,6 +56,7 @@
 
     const-string v0, "([\\x21\\x23-\\x27\\x2a\\x2b\\x2d\\x2e\\x30-\\x39\\x41-\\x5a\\x5e-\\x7e]+)(?::(.*))?"
 
+    .line 2
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -63,6 +65,7 @@
 
     const-string v0, "(\\S+)\\s(\\S+)\\s(\\S+)\\s(\\S+)"
 
+    .line 3
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -75,6 +78,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -88,6 +92,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/source/rtsp/MediaDescription$Builder;->build()Lcom/google/android/exoplayer2/source/rtsp/MediaDescription;
 
@@ -105,6 +110,7 @@
 
     const/4 p1, 0x0
 
+    .line 2
     invoke-static {p1, p0}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedManifest(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
     move-result-object p0
@@ -113,17 +119,19 @@
 .end method
 
 .method public static parse(Ljava/lang/String;)Lcom/google/android/exoplayer2/source/rtsp/SessionDescription;
-    .locals 12
+    .locals 13
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/google/android/exoplayer2/ParserException;
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/source/rtsp/SessionDescription$Builder;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/source/rtsp/SessionDescription$Builder;-><init>()V
 
+    .line 2
     invoke-static {p0}, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil;->splitRtspMessageBody(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
@@ -134,9 +142,9 @@
 
     const/4 v3, 0x0
 
-    move-object v5, v2
+    move v4, v2
 
-    move v4, v3
+    move-object v5, v3
 
     :goto_0
     if-ge v4, v1, :cond_c
@@ -145,14 +153,16 @@
 
     const-string v7, ""
 
+    .line 3
     invoke-virtual {v7, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v7
 
     if-eqz v7, :cond_0
 
-    goto/16 :goto_4
+    goto/16 :goto_3
 
+    .line 4
     :cond_0
     sget-object v7, Lcom/google/android/exoplayer2/source/rtsp/SessionDescriptionParser;->SDP_LINE_PATTERN:Ljava/util/regex/Pattern;
 
@@ -160,6 +170,7 @@
 
     move-result-object v7
 
+    .line 5
     invoke-virtual {v7}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v8
@@ -168,6 +179,7 @@
 
     const/4 v8, 0x1
 
+    .line 6
     invoke-virtual {v7, v8}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v9
@@ -180,6 +192,7 @@
 
     const/4 v10, 0x2
 
+    .line 7
     invoke-virtual {v7, v10}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v7
@@ -190,231 +203,232 @@
 
     check-cast v7, Ljava/lang/String;
 
+    const/4 v11, -0x1
+
+    .line 8
     invoke-virtual {v9}, Ljava/lang/String;->hashCode()I
 
-    move-result v11
+    move-result v12
 
-    packed-switch v11, :pswitch_data_0
+    packed-switch v12, :pswitch_data_0
 
     :pswitch_0
     goto/16 :goto_1
 
     :pswitch_1
-    const-string v11, "z"
+    const-string v12, "z"
 
-    invoke-virtual {v9, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v9, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
 
     if-eqz v9, :cond_1
 
-    const/16 v9, 0xe
+    const/16 v11, 0xe
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
     :pswitch_2
-    const-string v11, "v"
+    const-string v12, "v"
 
-    invoke-virtual {v9, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v9, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
 
     if-eqz v9, :cond_1
 
-    move v9, v3
+    move v11, v2
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
     :pswitch_3
-    const-string v11, "u"
+    const-string v12, "u"
 
-    invoke-virtual {v9, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v9, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
 
     if-eqz v9, :cond_1
 
-    const/4 v9, 0x4
+    const/4 v11, 0x4
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
     :pswitch_4
-    const-string v11, "t"
+    const-string v12, "t"
 
-    invoke-virtual {v9, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v9, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
 
     if-eqz v9, :cond_1
 
-    const/16 v9, 0x9
+    const/16 v11, 0x9
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
     :pswitch_5
-    const-string v11, "s"
+    const-string v12, "s"
 
-    invoke-virtual {v9, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v9, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
 
     if-eqz v9, :cond_1
 
-    move v9, v10
+    move v11, v10
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
     :pswitch_6
-    const-string v11, "r"
+    const-string v12, "r"
 
-    invoke-virtual {v9, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v9, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
 
     if-eqz v9, :cond_1
 
-    const/16 v9, 0xd
+    const/16 v11, 0xd
 
-    goto :goto_2
+    goto :goto_1
 
     :pswitch_7
-    const-string v11, "p"
+    const-string v12, "p"
 
-    invoke-virtual {v9, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v9, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
 
     if-eqz v9, :cond_1
 
-    const/4 v9, 0x6
+    const/4 v11, 0x6
 
-    goto :goto_2
+    goto :goto_1
 
     :pswitch_8
-    const-string v11, "o"
+    const-string v12, "o"
 
-    invoke-virtual {v9, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v9, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
 
     if-eqz v9, :cond_1
 
-    move v9, v8
+    move v11, v8
 
-    goto :goto_2
+    goto :goto_1
 
     :pswitch_9
-    const-string v11, "m"
+    const-string v12, "m"
 
-    invoke-virtual {v9, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v9, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
 
     if-eqz v9, :cond_1
 
-    const/16 v9, 0xc
+    const/16 v11, 0xc
 
-    goto :goto_2
+    goto :goto_1
 
     :pswitch_a
-    const-string v11, "k"
+    const-string v12, "k"
 
-    invoke-virtual {v9, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v9, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
 
     if-eqz v9, :cond_1
 
-    const/16 v9, 0xa
+    const/16 v11, 0xa
 
-    goto :goto_2
+    goto :goto_1
 
     :pswitch_b
-    const-string v11, "i"
+    const-string v12, "i"
 
-    invoke-virtual {v9, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v9, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
 
     if-eqz v9, :cond_1
 
-    const/4 v9, 0x3
+    const/4 v11, 0x3
 
-    goto :goto_2
+    goto :goto_1
 
     :pswitch_c
-    const-string v11, "e"
+    const-string v12, "e"
 
-    invoke-virtual {v9, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v9, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
 
     if-eqz v9, :cond_1
 
-    const/4 v9, 0x5
+    const/4 v11, 0x5
 
-    goto :goto_2
+    goto :goto_1
 
     :pswitch_d
-    const-string v11, "c"
+    const-string v12, "c"
 
-    invoke-virtual {v9, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v9, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
 
     if-eqz v9, :cond_1
 
-    const/4 v9, 0x7
+    const/4 v11, 0x7
 
-    goto :goto_2
+    goto :goto_1
 
     :pswitch_e
-    const-string v11, "b"
+    const-string v12, "b"
 
-    invoke-virtual {v9, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v9, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
 
     if-eqz v9, :cond_1
 
-    const/16 v9, 0x8
+    const/16 v11, 0x8
 
-    goto :goto_2
+    goto :goto_1
 
     :pswitch_f
-    const-string v11, "a"
+    const-string v12, "a"
 
-    invoke-virtual {v9, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v9, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
 
     if-eqz v9, :cond_1
 
-    const/16 v9, 0xb
-
-    goto :goto_2
+    const/16 v11, 0xb
 
     :cond_1
     :goto_1
-    const/4 v9, -0x1
+    packed-switch v11, :pswitch_data_1
 
-    :goto_2
-    packed-switch v9, :pswitch_data_1
-
-    goto/16 :goto_4
+    goto/16 :goto_3
 
     :pswitch_10
     if-eqz v5, :cond_2
 
+    .line 9
     invoke-static {v0, v5}, Lcom/google/android/exoplayer2/source/rtsp/SessionDescriptionParser;->addMediaDescriptionToSession(Lcom/google/android/exoplayer2/source/rtsp/SessionDescription$Builder;Lcom/google/android/exoplayer2/source/rtsp/MediaDescription$Builder;)V
 
+    .line 10
     :cond_2
     invoke-static {v7}, Lcom/google/android/exoplayer2/source/rtsp/SessionDescriptionParser;->parseMediaDescriptionLine(Ljava/lang/String;)Lcom/google/android/exoplayer2/source/rtsp/MediaDescription$Builder;
 
     move-result-object v5
 
-    goto/16 :goto_4
+    goto/16 :goto_3
 
+    .line 11
     :pswitch_11
     sget-object v9, Lcom/google/android/exoplayer2/source/rtsp/SessionDescriptionParser;->ATTRIBUTE_PATTERN:Ljava/util/regex/Pattern;
 
@@ -422,12 +436,14 @@
 
     move-result-object v7
 
+    .line 12
     invoke-virtual {v7}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v9
 
     if-eqz v9, :cond_4
 
+    .line 13
     invoke-virtual {v7, v8}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v6
@@ -438,6 +454,7 @@
 
     check-cast v6, Ljava/lang/String;
 
+    .line 14
     invoke-virtual {v7, v10}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v7
@@ -448,15 +465,18 @@
 
     if-nez v5, :cond_3
 
+    .line 15
     invoke-virtual {v0, v6, v7}, Lcom/google/android/exoplayer2/source/rtsp/SessionDescription$Builder;->addAttribute(Ljava/lang/String;Ljava/lang/String;)Lcom/google/android/exoplayer2/source/rtsp/SessionDescription$Builder;
 
-    goto/16 :goto_4
+    goto/16 :goto_3
 
+    .line 16
     :cond_3
     invoke-virtual {v5, v6, v7}, Lcom/google/android/exoplayer2/source/rtsp/MediaDescription$Builder;->addAttribute(Ljava/lang/String;Ljava/lang/String;)Lcom/google/android/exoplayer2/source/rtsp/MediaDescription$Builder;
 
-    goto/16 :goto_4
+    goto/16 :goto_3
 
+    .line 17
     :cond_4
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -472,7 +492,7 @@
 
     move-result-object p0
 
-    invoke-static {p0, v2}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedManifest(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
+    invoke-static {p0, v3}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedManifest(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
     move-result-object p0
 
@@ -481,41 +501,47 @@
     :pswitch_12
     if-nez v5, :cond_5
 
+    .line 18
     invoke-virtual {v0, v7}, Lcom/google/android/exoplayer2/source/rtsp/SessionDescription$Builder;->setKey(Ljava/lang/String;)Lcom/google/android/exoplayer2/source/rtsp/SessionDescription$Builder;
 
-    goto/16 :goto_4
+    goto/16 :goto_3
 
+    .line 19
     :cond_5
     invoke-virtual {v5, v7}, Lcom/google/android/exoplayer2/source/rtsp/MediaDescription$Builder;->setKey(Ljava/lang/String;)Lcom/google/android/exoplayer2/source/rtsp/MediaDescription$Builder;
 
-    goto/16 :goto_4
+    goto/16 :goto_3
 
+    .line 20
     :pswitch_13
     invoke-virtual {v0, v7}, Lcom/google/android/exoplayer2/source/rtsp/SessionDescription$Builder;->setTiming(Ljava/lang/String;)Lcom/google/android/exoplayer2/source/rtsp/SessionDescription$Builder;
 
-    goto/16 :goto_4
+    goto/16 :goto_3
 
     :pswitch_14
     const-string v6, ":\\s?"
 
+    .line 21
     invoke-static {v7, v6}, Lcom/google/android/exoplayer2/util/Util;->split(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v6
 
+    .line 22
     array-length v7, v6
 
     if-ne v7, v10, :cond_6
 
     move v7, v8
 
-    goto :goto_3
+    goto :goto_2
 
     :cond_6
-    move v7, v3
+    move v7, v2
 
-    :goto_3
+    :goto_2
     invoke-static {v7}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 23
     aget-object v6, v6, v8
 
     invoke-static {v6}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -526,39 +552,46 @@
 
     mul-int/lit16 v6, v6, 0x3e8
 
+    .line 24
     invoke-virtual {v0, v6}, Lcom/google/android/exoplayer2/source/rtsp/SessionDescription$Builder;->setBitrate(I)Lcom/google/android/exoplayer2/source/rtsp/SessionDescription$Builder;
 
-    goto :goto_4
+    goto :goto_3
 
     :cond_7
     mul-int/lit16 v6, v6, 0x3e8
 
+    .line 25
     invoke-virtual {v5, v6}, Lcom/google/android/exoplayer2/source/rtsp/MediaDescription$Builder;->setBitrate(I)Lcom/google/android/exoplayer2/source/rtsp/MediaDescription$Builder;
 
-    goto :goto_4
+    goto :goto_3
 
     :pswitch_15
     if-nez v5, :cond_8
 
+    .line 26
     invoke-virtual {v0, v7}, Lcom/google/android/exoplayer2/source/rtsp/SessionDescription$Builder;->setConnection(Ljava/lang/String;)Lcom/google/android/exoplayer2/source/rtsp/SessionDescription$Builder;
 
-    goto :goto_4
+    goto :goto_3
 
+    .line 27
     :cond_8
     invoke-virtual {v5, v7}, Lcom/google/android/exoplayer2/source/rtsp/MediaDescription$Builder;->setConnection(Ljava/lang/String;)Lcom/google/android/exoplayer2/source/rtsp/MediaDescription$Builder;
 
-    goto :goto_4
+    goto :goto_3
 
+    .line 28
     :pswitch_16
     invoke-virtual {v0, v7}, Lcom/google/android/exoplayer2/source/rtsp/SessionDescription$Builder;->setPhoneNumber(Ljava/lang/String;)Lcom/google/android/exoplayer2/source/rtsp/SessionDescription$Builder;
 
-    goto :goto_4
+    goto :goto_3
 
+    .line 29
     :pswitch_17
     invoke-virtual {v0, v7}, Lcom/google/android/exoplayer2/source/rtsp/SessionDescription$Builder;->setEmailAddress(Ljava/lang/String;)Lcom/google/android/exoplayer2/source/rtsp/SessionDescription$Builder;
 
-    goto :goto_4
+    goto :goto_3
 
+    .line 30
     :pswitch_18
     invoke-static {v7}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -566,63 +599,71 @@
 
     invoke-virtual {v0, v6}, Lcom/google/android/exoplayer2/source/rtsp/SessionDescription$Builder;->setUri(Landroid/net/Uri;)Lcom/google/android/exoplayer2/source/rtsp/SessionDescription$Builder;
 
-    goto :goto_4
+    goto :goto_3
 
     :pswitch_19
     if-nez v5, :cond_9
 
+    .line 31
     invoke-virtual {v0, v7}, Lcom/google/android/exoplayer2/source/rtsp/SessionDescription$Builder;->setSessionInfo(Ljava/lang/String;)Lcom/google/android/exoplayer2/source/rtsp/SessionDescription$Builder;
 
-    goto :goto_4
+    goto :goto_3
 
+    .line 32
     :cond_9
     invoke-virtual {v5, v7}, Lcom/google/android/exoplayer2/source/rtsp/MediaDescription$Builder;->setMediaTitle(Ljava/lang/String;)Lcom/google/android/exoplayer2/source/rtsp/MediaDescription$Builder;
 
-    goto :goto_4
+    goto :goto_3
 
+    .line 33
     :pswitch_1a
     invoke-virtual {v0, v7}, Lcom/google/android/exoplayer2/source/rtsp/SessionDescription$Builder;->setSessionName(Ljava/lang/String;)Lcom/google/android/exoplayer2/source/rtsp/SessionDescription$Builder;
 
-    goto :goto_4
+    goto :goto_3
 
+    .line 34
     :pswitch_1b
     invoke-virtual {v0, v7}, Lcom/google/android/exoplayer2/source/rtsp/SessionDescription$Builder;->setOrigin(Ljava/lang/String;)Lcom/google/android/exoplayer2/source/rtsp/SessionDescription$Builder;
 
-    goto :goto_4
+    goto :goto_3
 
     :pswitch_1c
     const-string v6, "0"
 
+    .line 35
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v6
 
     if-eqz v6, :cond_a
 
-    goto :goto_4
+    goto :goto_3
 
     :cond_a
     new-array p0, v8, [Ljava/lang/Object;
 
-    aput-object v7, p0, v3
+    aput-object v7, p0, v2
 
     const-string v0, "SDP version %s is not supported."
 
+    .line 36
     invoke-static {v0, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-static {p0, v2}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedManifest(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
+    .line 37
+    invoke-static {p0, v3}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedManifest(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
     move-result-object p0
 
     throw p0
 
-    :goto_4
+    :goto_3
     add-int/lit8 v4, v4, 0x1
 
     goto/16 :goto_0
 
+    .line 38
     :cond_b
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -638,7 +679,7 @@
 
     move-result-object p0
 
-    invoke-static {p0, v2}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedManifest(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
+    invoke-static {p0, v3}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedManifest(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
     move-result-object p0
 
@@ -647,8 +688,10 @@
     :cond_c
     if-eqz v5, :cond_d
 
+    .line 39
     invoke-static {v0, v5}, Lcom/google/android/exoplayer2/source/rtsp/SessionDescriptionParser;->addMediaDescriptionToSession(Lcom/google/android/exoplayer2/source/rtsp/SessionDescription$Builder;Lcom/google/android/exoplayer2/source/rtsp/MediaDescription$Builder;)V
 
+    .line 40
     :cond_d
     :try_start_0
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/source/rtsp/SessionDescription$Builder;->build()Lcom/google/android/exoplayer2/source/rtsp/SessionDescription;
@@ -663,11 +706,14 @@
     :catch_0
     move-exception p0
 
-    invoke-static {v2, p0}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedManifest(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
+    .line 41
+    invoke-static {v3, p0}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedManifest(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
     move-result-object p0
 
     throw p0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x61
@@ -725,12 +771,14 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/source/rtsp/SessionDescriptionParser;->MEDIA_DESCRIPTION_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v1
@@ -741,6 +789,7 @@
 
     const/4 v1, 0x1
 
+    .line 3
     invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v1
@@ -753,6 +802,7 @@
 
     const/4 v3, 0x2
 
+    .line 4
     invoke-virtual {v0, v3}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v3
@@ -765,6 +815,7 @@
 
     const/4 v4, 0x3
 
+    .line 5
     invoke-virtual {v0, v4}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v4
@@ -777,6 +828,7 @@
 
     const/4 v5, 0x4
 
+    .line 6
     invoke-virtual {v0, v5}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v0
@@ -787,13 +839,16 @@
 
     check-cast v0, Ljava/lang/String;
 
+    .line 7
     :try_start_0
     new-instance v5, Lcom/google/android/exoplayer2/source/rtsp/MediaDescription$Builder;
 
+    .line 8
     invoke-static {v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v3
 
+    .line 9
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v0
@@ -807,6 +862,7 @@
     :catch_0
     move-exception v0
 
+    .line 10
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -825,6 +881,7 @@
 
     throw p0
 
+    .line 11
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 

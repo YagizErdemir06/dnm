@@ -21,14 +21,17 @@
 .method public constructor <init>(Z)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     iput-object v0, p0, Landroidx/activity/OnBackPressedCallback;->mCancellables:Ljava/util/concurrent/CopyOnWriteArrayList;
 
+    .line 3
     iput-boolean p1, p0, Landroidx/activity/OnBackPressedCallback;->mEnabled:Z
 
     return-void
@@ -43,6 +46,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Landroidx/activity/OnBackPressedCallback;->mCancellables:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
@@ -60,6 +64,7 @@
     .annotation build Landroidx/annotation/MainThread;
     .end annotation
 
+    .line 1
     iget-boolean p0, p0, Landroidx/activity/OnBackPressedCallback;->mEnabled:Z
 
     return p0
@@ -70,6 +75,7 @@
     .annotation build Landroidx/annotation/MainThread;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/activity/OnBackPressedCallback;->mCancellables:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -89,6 +95,7 @@
 
     check-cast v0, Landroidx/activity/Cancellable;
 
+    .line 2
     invoke-interface {v0}, Landroidx/activity/Cancellable;->cancel()V
 
     goto :goto_0
@@ -104,6 +111,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Landroidx/activity/OnBackPressedCallback;->mCancellables:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
@@ -116,6 +124,7 @@
     .annotation build Landroidx/annotation/MainThread;
     .end annotation
 
+    .line 1
     iput-boolean p1, p0, Landroidx/activity/OnBackPressedCallback;->mEnabled:Z
 
     return-void

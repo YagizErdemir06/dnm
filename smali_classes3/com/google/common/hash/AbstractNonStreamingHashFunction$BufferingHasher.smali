@@ -1,4 +1,4 @@
-.class final Lcom/google/common/hash/AbstractNonStreamingHashFunction$BufferingHasher;
+.class public final Lcom/google/common/hash/AbstractNonStreamingHashFunction$BufferingHasher;
 .super Lcom/google/common/hash/AbstractHasher;
 .source "SourceFile"
 
@@ -15,19 +15,21 @@
 
 
 # instance fields
-.field final stream:Lcom/google/common/hash/AbstractNonStreamingHashFunction$ExposedByteArrayOutputStream;
+.field public final stream:Lcom/google/common/hash/AbstractNonStreamingHashFunction$ExposedByteArrayOutputStream;
 
-.field final synthetic this$0:Lcom/google/common/hash/AbstractNonStreamingHashFunction;
+.field public final synthetic this$0:Lcom/google/common/hash/AbstractNonStreamingHashFunction;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/hash/AbstractNonStreamingHashFunction;I)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/hash/AbstractNonStreamingHashFunction$BufferingHasher;->this$0:Lcom/google/common/hash/AbstractNonStreamingHashFunction;
 
     invoke-direct {p0}, Lcom/google/common/hash/AbstractHasher;-><init>()V
 
+    .line 2
     new-instance p1, Lcom/google/common/hash/AbstractNonStreamingHashFunction$ExposedByteArrayOutputStream;
 
     invoke-direct {p1, p2}, Lcom/google/common/hash/AbstractNonStreamingHashFunction$ExposedByteArrayOutputStream;-><init>(I)V
@@ -42,6 +44,7 @@
 .method public hash()Lcom/google/common/hash/HashCode;
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/hash/AbstractNonStreamingHashFunction$BufferingHasher;->this$0:Lcom/google/common/hash/AbstractNonStreamingHashFunction;
 
     iget-object v1, p0, Lcom/google/common/hash/AbstractNonStreamingHashFunction$BufferingHasher;->stream:Lcom/google/common/hash/AbstractNonStreamingHashFunction$ExposedByteArrayOutputStream;
@@ -71,7 +74,7 @@
     .line 2
     iget-object v0, p0, Lcom/google/common/hash/AbstractNonStreamingHashFunction$BufferingHasher;->stream:Lcom/google/common/hash/AbstractNonStreamingHashFunction$ExposedByteArrayOutputStream;
 
-    invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write(I)V
+    invoke-virtual {v0, p1}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
     return-object p0
 .end method
@@ -104,7 +107,7 @@
     .line 3
     iget-object v0, p0, Lcom/google/common/hash/AbstractNonStreamingHashFunction$BufferingHasher;->stream:Lcom/google/common/hash/AbstractNonStreamingHashFunction$ExposedByteArrayOutputStream;
 
-    invoke-virtual {v0, p1, p2, p3}, Ljava/io/OutputStream;->write([BII)V
+    invoke-virtual {v0, p1, p2, p3}, Ljava/io/ByteArrayOutputStream;->write([BII)V
 
     return-object p0
 .end method

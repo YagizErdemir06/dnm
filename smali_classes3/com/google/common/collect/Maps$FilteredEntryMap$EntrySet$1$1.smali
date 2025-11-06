@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Maps$FilteredEntryMap$EntrySet$1$1;
+.class public Lcom/google/common/collect/Maps$FilteredEntryMap$EntrySet$1$1;
 .super Lcom/google/common/collect/ForwardingMapEntry;
 .source "SourceFile"
 
@@ -22,15 +22,16 @@
 
 
 # instance fields
-.field final synthetic this$2:Lcom/google/common/collect/Maps$FilteredEntryMap$EntrySet$1;
+.field public final synthetic this$2:Lcom/google/common/collect/Maps$FilteredEntryMap$EntrySet$1;
 
-.field final synthetic val$entry:Ljava/util/Map$Entry;
+.field public final synthetic val$entry:Ljava/util/Map$Entry;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/Maps$FilteredEntryMap$EntrySet$1;Ljava/util/Map$Entry;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/Maps$FilteredEntryMap$EntrySet$1$1;->this$2:Lcom/google/common/collect/Maps$FilteredEntryMap$EntrySet$1;
 
     iput-object p2, p0, Lcom/google/common/collect/Maps$FilteredEntryMap$EntrySet$1$1;->val$entry:Ljava/util/Map$Entry;
@@ -84,6 +85,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Maps$FilteredEntryMap$EntrySet$1$1;->this$2:Lcom/google/common/collect/Maps$FilteredEntryMap$EntrySet$1;
 
     iget-object v0, v0, Lcom/google/common/collect/Maps$FilteredEntryMap$EntrySet$1;->this$1:Lcom/google/common/collect/Maps$FilteredEntryMap$EntrySet;
@@ -100,6 +102,7 @@
 
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
 
+    .line 2
     invoke-super {p0, p1}, Lcom/google/common/collect/ForwardingMapEntry;->setValue(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0

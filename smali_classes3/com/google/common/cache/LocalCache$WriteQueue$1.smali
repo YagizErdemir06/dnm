@@ -1,4 +1,4 @@
-.class Lcom/google/common/cache/LocalCache$WriteQueue$1;
+.class public Lcom/google/common/cache/LocalCache$WriteQueue$1;
 .super Lcom/google/common/cache/LocalCache$AbstractReferenceEntry;
 .source "SourceFile"
 
@@ -22,7 +22,7 @@
 
 
 # instance fields
-.field nextWrite:Lcom/google/common/cache/ReferenceEntry;
+.field public nextWrite:Lcom/google/common/cache/ReferenceEntry;
     .annotation build Lcom/google/j2objc/annotations/Weak;
     .end annotation
 
@@ -34,7 +34,7 @@
     .end annotation
 .end field
 
-.field previousWrite:Lcom/google/common/cache/ReferenceEntry;
+.field public previousWrite:Lcom/google/common/cache/ReferenceEntry;
     .annotation build Lcom/google/j2objc/annotations/Weak;
     .end annotation
 
@@ -51,10 +51,13 @@
 .method public constructor <init>(Lcom/google/common/cache/LocalCache$WriteQueue;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/cache/LocalCache$AbstractReferenceEntry;-><init>()V
 
+    .line 2
     iput-object p0, p0, Lcom/google/common/cache/LocalCache$WriteQueue$1;->nextWrite:Lcom/google/common/cache/ReferenceEntry;
 
+    .line 3
     iput-object p0, p0, Lcom/google/common/cache/LocalCache$WriteQueue$1;->previousWrite:Lcom/google/common/cache/ReferenceEntry;
 
     return-void
@@ -72,6 +75,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/cache/LocalCache$WriteQueue$1;->nextWrite:Lcom/google/common/cache/ReferenceEntry;
 
     return-object p0
@@ -87,6 +91,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/cache/LocalCache$WriteQueue$1;->previousWrite:Lcom/google/common/cache/ReferenceEntry;
 
     return-object p0
@@ -110,6 +115,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/cache/LocalCache$WriteQueue$1;->nextWrite:Lcom/google/common/cache/ReferenceEntry;
 
     return-void
@@ -125,6 +131,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/cache/LocalCache$WriteQueue$1;->previousWrite:Lcom/google/common/cache/ReferenceEntry;
 
     return-void

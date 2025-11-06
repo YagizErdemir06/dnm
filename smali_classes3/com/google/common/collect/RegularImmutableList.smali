@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/RegularImmutableList;
+.class public Lcom/google/common/collect/RegularImmutableList;
 .super Lcom/google/common/collect/ImmutableList;
 .source "SourceFile"
 
@@ -24,7 +24,7 @@
 
 
 # static fields
-.field static final EMPTY:Lcom/google/common/collect/ImmutableList;
+.field public static final EMPTY:Lcom/google/common/collect/ImmutableList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/ImmutableList<",
@@ -36,7 +36,7 @@
 
 
 # instance fields
-.field final transient array:[Ljava/lang/Object;
+.field public final transient array:[Ljava/lang/Object;
     .annotation build Lcom/google/common/annotations/VisibleForTesting;
     .end annotation
 .end field
@@ -48,6 +48,7 @@
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/RegularImmutableList;
 
     const/4 v1, 0x0
@@ -64,10 +65,13 @@
 .method public constructor <init>([Ljava/lang/Object;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableList;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/RegularImmutableList;->array:[Ljava/lang/Object;
 
+    .line 3
     iput p2, p0, Lcom/google/common/collect/RegularImmutableList;->size:I
 
     return-void
@@ -78,14 +82,16 @@
 .method public copyIntoArray([Ljava/lang/Object;I)I
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/RegularImmutableList;->array:[Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    iget v1, p0, Lcom/google/common/collect/RegularImmutableList;->size:I
 
-    iget v2, p0, Lcom/google/common/collect/RegularImmutableList;->size:I
+    const/4 v2, 0x0
 
-    invoke-static {v0, v1, p1, p2, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-static {v0, v2, p1, p2, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 2
     iget p0, p0, Lcom/google/common/collect/RegularImmutableList;->size:I
 
     add-int/2addr p2, p0
@@ -101,10 +107,12 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/common/collect/RegularImmutableList;->size:I
 
     invoke-static {p1, v0}, Lcom/google/common/base/Preconditions;->checkElementIndex(II)I
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/RegularImmutableList;->array:[Ljava/lang/Object;
 
     aget-object p0, p0, p1
@@ -117,6 +125,7 @@
 .method public internalArray()[Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/RegularImmutableList;->array:[Ljava/lang/Object;
 
     return-object p0
@@ -125,6 +134,7 @@
 .method public internalArrayEnd()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/collect/RegularImmutableList;->size:I
 
     return p0
@@ -149,6 +159,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/collect/RegularImmutableList;->size:I
 
     return p0

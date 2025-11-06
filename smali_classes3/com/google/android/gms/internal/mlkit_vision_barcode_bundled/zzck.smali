@@ -21,7 +21,7 @@
 
 
 # instance fields
-.field protected zzb:I
+.field public zzb:I
 
 
 # direct methods
@@ -50,6 +50,7 @@
 .method public final zzC()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;
     .locals 4
 
+    .line 1
     :try_start_0
     invoke-interface {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfo;->zzE()I
 
@@ -57,20 +58,25 @@
 
     sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;
 
+    .line 2
     new-array v1, v0, [B
 
     const/4 v2, 0x0
 
+    .line 3
     invoke-static {v1, v2, v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdj;->zzA([BII)Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdj;
 
     move-result-object v0
 
+    .line 4
     invoke-interface {p0, v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfo;->zzaa(Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdj;)V
 
+    .line 5
     invoke-virtual {v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdj;->zzB()V
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcy;
 
+    .line 6
     invoke-direct {v0, v1}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcy;-><init>([B)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -86,6 +92,7 @@
 
     new-instance v1, Ljava/lang/RuntimeException;
 
+    .line 7
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p0
@@ -108,6 +115,7 @@
 
     move-result-object p0
 
+    .line 8
     invoke-direct {v1, p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     throw v1

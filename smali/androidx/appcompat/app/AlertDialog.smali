@@ -15,13 +15,13 @@
 
 
 # static fields
-.field static final LAYOUT_HINT_NONE:I = 0x0
+.field public static final LAYOUT_HINT_NONE:I = 0x0
 
-.field static final LAYOUT_HINT_SIDE:I = 0x1
+.field public static final LAYOUT_HINT_SIDE:I = 0x1
 
 
 # instance fields
-.field final mAlert:Landroidx/appcompat/app/AlertController;
+.field public final mAlert:Landroidx/appcompat/app/AlertController;
 
 
 # direct methods
@@ -122,11 +122,13 @@
 
     return p1
 
+    .line 1
     :cond_0
     new-instance p1, Landroid/util/TypedValue;
 
     invoke-direct {p1}, Landroid/util/TypedValue;-><init>()V
 
+    .line 2
     invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object p0
@@ -135,6 +137,7 @@
 
     invoke-virtual {p0, v0, p1, v1}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
 
+    .line 3
     iget p0, p1, Landroid/util/TypedValue;->resourceId:I
 
     return p0
@@ -145,6 +148,7 @@
 .method public getButton(I)Landroid/widget/Button;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/app/AlertDialog;->mAlert:Landroidx/appcompat/app/AlertController;
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AlertController;->getButton(I)Landroid/widget/Button;
@@ -157,6 +161,7 @@
 .method public getListView()Landroid/widget/ListView;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/app/AlertDialog;->mAlert:Landroidx/appcompat/app/AlertController;
 
     invoke-virtual {p0}, Landroidx/appcompat/app/AlertController;->getListView()Landroid/widget/ListView;
@@ -169,8 +174,10 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Landroidx/appcompat/app/AppCompatDialog;->onCreate(Landroid/os/Bundle;)V
 
+    .line 2
     iget-object p0, p0, Landroidx/appcompat/app/AlertDialog;->mAlert:Landroidx/appcompat/app/AlertController;
 
     invoke-virtual {p0}, Landroidx/appcompat/app/AlertController;->installContent()V
@@ -181,6 +188,7 @@
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/app/AlertDialog;->mAlert:Landroidx/appcompat/app/AlertController;
 
     invoke-virtual {v0, p1, p2}, Landroidx/appcompat/app/AlertController;->onKeyDown(ILandroid/view/KeyEvent;)Z
@@ -193,6 +201,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/app/Dialog;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
@@ -204,6 +213,7 @@
 .method public onKeyUp(ILandroid/view/KeyEvent;)Z
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/app/AlertDialog;->mAlert:Landroidx/appcompat/app/AlertController;
 
     invoke-virtual {v0, p1, p2}, Landroidx/appcompat/app/AlertController;->onKeyUp(ILandroid/view/KeyEvent;)Z
@@ -216,6 +226,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/app/Dialog;->onKeyUp(ILandroid/view/KeyEvent;)Z
 
@@ -295,6 +306,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/app/AlertDialog;->mAlert:Landroidx/appcompat/app/AlertController;
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AlertController;->setButtonPanelLayoutHint(I)V
@@ -305,6 +317,7 @@
 .method public setCustomTitle(Landroid/view/View;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/app/AlertDialog;->mAlert:Landroidx/appcompat/app/AlertController;
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AlertController;->setCustomTitle(Landroid/view/View;)V
@@ -337,10 +350,12 @@
 .method public setIconAttribute(I)V
     .locals 3
 
+    .line 1
     new-instance v0, Landroid/util/TypedValue;
 
     invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
 
+    .line 2
     invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -353,6 +368,7 @@
 
     invoke-virtual {v1, p1, v0, v2}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
 
+    .line 3
     iget-object p0, p0, Landroidx/appcompat/app/AlertDialog;->mAlert:Landroidx/appcompat/app/AlertController;
 
     iget p1, v0, Landroid/util/TypedValue;->resourceId:I
@@ -365,6 +381,7 @@
 .method public setMessage(Ljava/lang/CharSequence;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/app/AlertDialog;->mAlert:Landroidx/appcompat/app/AlertController;
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AlertController;->setMessage(Ljava/lang/CharSequence;)V
@@ -375,8 +392,10 @@
 .method public setTitle(Ljava/lang/CharSequence;)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Landroidx/appcompat/app/AppCompatDialog;->setTitle(Ljava/lang/CharSequence;)V
 
+    .line 2
     iget-object p0, p0, Landroidx/appcompat/app/AlertDialog;->mAlert:Landroidx/appcompat/app/AlertController;
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AlertController;->setTitle(Ljava/lang/CharSequence;)V

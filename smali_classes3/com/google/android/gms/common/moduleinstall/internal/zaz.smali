@@ -21,6 +21,7 @@
 
     move-object v6, p5
 
+    .line 1
     invoke-direct/range {v0 .. v6}, Lcom/google/android/gms/common/internal/GmsClient;-><init>(Landroid/content/Context;Landroid/os/Looper;ILcom/google/android/gms/common/internal/ClientSettings;Lcom/google/android/gms/common/api/internal/ConnectionCallbacks;Lcom/google/android/gms/common/api/internal/OnConnectionFailedListener;)V
 
     return-void
@@ -42,14 +43,17 @@
     :cond_0
     const-string p0, "com.google.android.gms.common.moduleinstall.internal.IModuleInstallService"
 
+    .line 1
     invoke-interface {p1, p0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object p0
 
+    .line 2
     instance-of v0, p0, Lcom/google/android/gms/common/moduleinstall/internal/zaf;
 
     if-eqz v0, :cond_1
 
+    .line 3
     check-cast p0, Lcom/google/android/gms/common/moduleinstall/internal/zaf;
 
     goto :goto_0
@@ -66,6 +70,7 @@
 .method public final getApiFeatures()[Lcom/google/android/gms/common/Feature;
     .locals 0
 
+    .line 1
     sget-object p0, Lcom/google/android/gms/internal/base/zav;->zab:[Lcom/google/android/gms/common/Feature;
 
     return-object p0

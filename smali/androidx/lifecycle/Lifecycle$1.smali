@@ -1,4 +1,4 @@
-.class synthetic Landroidx/lifecycle/Lifecycle$1;
+.class public synthetic Landroidx/lifecycle/Lifecycle$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,15 +15,16 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$androidx$lifecycle$Lifecycle$Event:[I
+.field public static final synthetic $SwitchMap$androidx$lifecycle$Lifecycle$Event:[I
 
-.field static final synthetic $SwitchMap$androidx$lifecycle$Lifecycle$State:[I
+.field public static final synthetic $SwitchMap$androidx$lifecycle$Lifecycle$State:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 8
 
+    .line 1
     invoke-static {}, Landroidx/lifecycle/Lifecycle$Event;->values()[Landroidx/lifecycle/Lifecycle$Event;
 
     move-result-object v0
@@ -143,6 +144,7 @@
     :try_end_6
     .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
 
+    .line 2
     :catch_6
     invoke-static {}, Landroidx/lifecycle/Lifecycle$State;->values()[Landroidx/lifecycle/Lifecycle$State;
 

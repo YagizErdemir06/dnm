@@ -8,7 +8,7 @@
 
 .field public static final KEY_TYPE:I = 0x1
 
-.field static final NAME:Ljava/lang/String; = "KeyAttribute"
+.field public static final NAME:Ljava/lang/String; = "KeyAttribute"
 
 .field private static final TAG:Ljava/lang/String; = "KeyAttributes"
 
@@ -53,50 +53,69 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Landroidx/constraintlayout/core/motion/key/MotionKey;-><init>()V
 
     const/4 v0, -0x1
 
+    .line 2
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mCurveFit:I
 
     const/4 v0, 0x0
 
+    .line 3
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mVisibility:I
 
     const/high16 v0, 0x7fc00000    # Float.NaN
 
+    .line 4
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mAlpha:F
 
+    .line 5
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mElevation:F
 
+    .line 6
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mRotation:F
 
+    .line 7
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mRotationX:F
 
+    .line 8
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mRotationY:F
 
+    .line 9
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mPivotX:F
 
+    .line 10
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mPivotY:F
 
+    .line 11
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mTransitionPathRotate:F
 
+    .line 12
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mScaleX:F
 
+    .line 13
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mScaleY:F
 
+    .line 14
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mTranslationX:F
 
+    .line 15
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mTranslationY:F
 
+    .line 16
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mTranslationZ:F
 
+    .line 17
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mProgress:F
 
     const/4 v0, 0x1
 
+    .line 18
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mType:I
 
+    .line 19
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -119,76 +138,91 @@
 
     return p0
 
+    .line 1
     :pswitch_0
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mTransitionPathRotate:F
 
     return p0
 
+    .line 2
     :pswitch_1
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mProgress:F
 
     return p0
 
+    .line 3
     :pswitch_2
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mPivotY:F
 
     return p0
 
+    .line 4
     :pswitch_3
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mPivotX:F
 
     return p0
 
+    .line 5
     :pswitch_4
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mScaleY:F
 
     return p0
 
+    .line 6
     :pswitch_5
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mScaleX:F
 
     return p0
 
+    .line 7
     :pswitch_6
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mRotation:F
 
     return p0
 
+    .line 8
     :pswitch_7
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mRotationY:F
 
     return p0
 
+    .line 9
     :pswitch_8
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mRotationX:F
 
     return p0
 
+    .line 10
     :pswitch_9
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mElevation:F
 
     return p0
 
+    .line 11
     :pswitch_a
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mTranslationZ:F
 
     return p0
 
+    .line 12
     :pswitch_b
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mTranslationY:F
 
     return p0
 
+    .line 13
     :pswitch_c
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mTranslationX:F
 
     return p0
 
+    .line 14
     :pswitch_d
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mAlpha:F
 
     return p0
 
+    .line 15
     :cond_0
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mFramePosition:I
 
@@ -229,6 +263,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
     move-result-object v0
@@ -251,6 +286,7 @@
 
     check-cast v1, Ljava/lang/String;
 
+    .line 2
     invoke-virtual {p1, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
@@ -264,6 +300,7 @@
     :cond_1
     const-string v3, "CUSTOM"
 
+    .line 3
     invoke-virtual {v1, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v3
@@ -272,10 +309,12 @@
 
     if-eqz v3, :cond_2
 
+    .line 4
     invoke-virtual {v1, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 5
     iget-object v3, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mCustom:Ljava/util/HashMap;
 
     invoke-virtual {v3, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -286,6 +325,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 6
     check-cast v2, Landroidx/constraintlayout/core/motion/utils/SplineSet$CustomSpline;
 
     iget v3, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mFramePosition:I
@@ -295,27 +335,28 @@
     goto :goto_0
 
     :cond_2
+    const/4 v3, -0x1
+
+    .line 7
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    move-result v3
+    move-result v5
 
-    const/4 v5, -0x1
-
-    sparse-switch v3, :sswitch_data_0
+    sparse-switch v5, :sswitch_data_0
 
     :goto_1
-    move v4, v5
+    move v4, v3
 
     goto/16 :goto_2
 
     :sswitch_0
-    const-string v3, "pathRotate"
+    const-string v4, "pathRotate"
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v4
 
-    if-nez v3, :cond_3
+    if-nez v4, :cond_3
 
     goto :goto_1
 
@@ -325,13 +366,13 @@
     goto/16 :goto_2
 
     :sswitch_1
-    const-string v3, "alpha"
+    const-string v4, "alpha"
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v4
 
-    if-nez v3, :cond_4
+    if-nez v4, :cond_4
 
     goto :goto_1
 
@@ -341,13 +382,13 @@
     goto/16 :goto_2
 
     :sswitch_2
-    const-string v3, "elevation"
+    const-string v4, "elevation"
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v4
 
-    if-nez v3, :cond_5
+    if-nez v4, :cond_5
 
     goto :goto_1
 
@@ -357,13 +398,13 @@
     goto/16 :goto_2
 
     :sswitch_3
-    const-string/jumbo v3, "scaleY"
+    const-string v4, "scaleY"
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v4
 
-    if-nez v3, :cond_6
+    if-nez v4, :cond_6
 
     goto :goto_1
 
@@ -373,13 +414,13 @@
     goto/16 :goto_2
 
     :sswitch_4
-    const-string/jumbo v3, "scaleX"
+    const-string v4, "scaleX"
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v4
 
-    if-nez v3, :cond_7
+    if-nez v4, :cond_7
 
     goto :goto_1
 
@@ -389,13 +430,13 @@
     goto/16 :goto_2
 
     :sswitch_5
-    const-string v3, "pivotY"
+    const-string v4, "pivotY"
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v4
 
-    if-nez v3, :cond_8
+    if-nez v4, :cond_8
 
     goto :goto_1
 
@@ -405,24 +446,24 @@
     goto :goto_2
 
     :sswitch_6
-    const-string v3, "pivotX"
+    const-string v5, "pivotX"
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v5
 
-    if-nez v3, :cond_10
+    if-nez v5, :cond_10
 
     goto :goto_1
 
     :sswitch_7
-    const-string/jumbo v3, "progress"
+    const-string v4, "progress"
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v4
 
-    if-nez v3, :cond_9
+    if-nez v4, :cond_9
 
     goto :goto_1
 
@@ -432,13 +473,13 @@
     goto :goto_2
 
     :sswitch_8
-    const-string/jumbo v3, "translationZ"
+    const-string/jumbo v4, "translationZ"
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v4
 
-    if-nez v3, :cond_a
+    if-nez v4, :cond_a
 
     goto :goto_1
 
@@ -448,13 +489,13 @@
     goto :goto_2
 
     :sswitch_9
-    const-string/jumbo v3, "translationY"
+    const-string/jumbo v4, "translationY"
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v4
 
-    if-nez v3, :cond_b
+    if-nez v4, :cond_b
 
     goto :goto_1
 
@@ -464,13 +505,13 @@
     goto :goto_2
 
     :sswitch_a
-    const-string/jumbo v3, "translationX"
+    const-string/jumbo v4, "translationX"
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v4
 
-    if-nez v3, :cond_c
+    if-nez v4, :cond_c
 
     goto/16 :goto_1
 
@@ -480,13 +521,13 @@
     goto :goto_2
 
     :sswitch_b
-    const-string/jumbo v3, "rotationZ"
+    const-string v4, "rotationZ"
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v4
 
-    if-nez v3, :cond_d
+    if-nez v4, :cond_d
 
     goto/16 :goto_1
 
@@ -496,13 +537,13 @@
     goto :goto_2
 
     :sswitch_c
-    const-string/jumbo v3, "rotationY"
+    const-string v4, "rotationY"
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v4
 
-    if-nez v3, :cond_e
+    if-nez v4, :cond_e
 
     goto/16 :goto_1
 
@@ -512,13 +553,13 @@
     goto :goto_2
 
     :sswitch_d
-    const-string/jumbo v3, "rotationX"
+    const-string v4, "rotationX"
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v4
 
-    if-nez v3, :cond_f
+    if-nez v4, :cond_f
 
     goto/16 :goto_1
 
@@ -529,6 +570,7 @@
     :goto_2
     packed-switch v4, :pswitch_data_0
 
+    .line 8
     sget-object v2, Ljava/lang/System;->err:Ljava/io/PrintStream;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -549,6 +591,7 @@
 
     goto/16 :goto_0
 
+    .line 9
     :pswitch_0
     iget v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mTransitionPathRotate:F
 
@@ -558,6 +601,7 @@
 
     if-nez v1, :cond_0
 
+    .line 10
     iget v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mFramePosition:I
 
     iget v3, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mTransitionPathRotate:F
@@ -566,6 +610,7 @@
 
     goto/16 :goto_0
 
+    .line 11
     :pswitch_1
     iget v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mAlpha:F
 
@@ -575,6 +620,7 @@
 
     if-nez v1, :cond_0
 
+    .line 12
     iget v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mFramePosition:I
 
     iget v3, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mAlpha:F
@@ -583,6 +629,7 @@
 
     goto/16 :goto_0
 
+    .line 13
     :pswitch_2
     iget v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mElevation:F
 
@@ -592,6 +639,7 @@
 
     if-nez v1, :cond_0
 
+    .line 14
     iget v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mFramePosition:I
 
     iget v3, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mElevation:F
@@ -600,6 +648,7 @@
 
     goto/16 :goto_0
 
+    .line 15
     :pswitch_3
     iget v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mScaleY:F
 
@@ -609,6 +658,7 @@
 
     if-nez v1, :cond_0
 
+    .line 16
     iget v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mFramePosition:I
 
     iget v3, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mScaleY:F
@@ -617,6 +667,7 @@
 
     goto/16 :goto_0
 
+    .line 17
     :pswitch_4
     iget v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mScaleX:F
 
@@ -626,6 +677,7 @@
 
     if-nez v1, :cond_0
 
+    .line 18
     iget v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mFramePosition:I
 
     iget v3, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mScaleX:F
@@ -634,6 +686,7 @@
 
     goto/16 :goto_0
 
+    .line 19
     :pswitch_5
     iget v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mRotationY:F
 
@@ -643,6 +696,7 @@
 
     if-nez v1, :cond_0
 
+    .line 20
     iget v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mFramePosition:I
 
     iget v3, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mPivotY:F
@@ -651,6 +705,7 @@
 
     goto/16 :goto_0
 
+    .line 21
     :pswitch_6
     iget v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mRotationX:F
 
@@ -660,6 +715,7 @@
 
     if-nez v1, :cond_0
 
+    .line 22
     iget v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mFramePosition:I
 
     iget v3, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mPivotX:F
@@ -668,6 +724,7 @@
 
     goto/16 :goto_0
 
+    .line 23
     :pswitch_7
     iget v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mProgress:F
 
@@ -677,6 +734,7 @@
 
     if-nez v1, :cond_0
 
+    .line 24
     iget v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mFramePosition:I
 
     iget v3, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mProgress:F
@@ -685,6 +743,7 @@
 
     goto/16 :goto_0
 
+    .line 25
     :pswitch_8
     iget v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mTranslationZ:F
 
@@ -694,6 +753,7 @@
 
     if-nez v1, :cond_0
 
+    .line 26
     iget v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mFramePosition:I
 
     iget v3, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mTranslationZ:F
@@ -702,6 +762,7 @@
 
     goto/16 :goto_0
 
+    .line 27
     :pswitch_9
     iget v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mTranslationY:F
 
@@ -711,6 +772,7 @@
 
     if-nez v1, :cond_0
 
+    .line 28
     iget v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mFramePosition:I
 
     iget v3, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mTranslationY:F
@@ -719,6 +781,7 @@
 
     goto/16 :goto_0
 
+    .line 29
     :pswitch_a
     iget v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mTranslationX:F
 
@@ -728,6 +791,7 @@
 
     if-nez v1, :cond_0
 
+    .line 30
     iget v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mFramePosition:I
 
     iget v3, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mTranslationX:F
@@ -736,6 +800,7 @@
 
     goto/16 :goto_0
 
+    .line 31
     :pswitch_b
     iget v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mRotation:F
 
@@ -745,6 +810,7 @@
 
     if-nez v1, :cond_0
 
+    .line 32
     iget v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mFramePosition:I
 
     iget v3, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mRotation:F
@@ -753,6 +819,7 @@
 
     goto/16 :goto_0
 
+    .line 33
     :pswitch_c
     iget v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mRotationY:F
 
@@ -762,6 +829,7 @@
 
     if-nez v1, :cond_0
 
+    .line 34
     iget v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mFramePosition:I
 
     iget v3, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mRotationY:F
@@ -770,6 +838,7 @@
 
     goto/16 :goto_0
 
+    .line 35
     :pswitch_d
     iget v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mRotationX:F
 
@@ -779,6 +848,7 @@
 
     if-nez v1, :cond_0
 
+    .line 36
     iget v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mFramePosition:I
 
     iget v3, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mRotationX:F
@@ -843,6 +913,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->clone()Landroidx/constraintlayout/core/motion/key/MotionKey;
 
     move-result-object p0
@@ -861,6 +932,7 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mAlpha:F
 
     invoke-static {v0}, Ljava/lang/Float;->isNaN(F)Z
@@ -871,8 +943,10 @@
 
     const-string v0, "alpha"
 
+    .line 2
     invoke-virtual {p1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    .line 3
     :cond_0
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mElevation:F
 
@@ -884,8 +958,10 @@
 
     const-string v0, "elevation"
 
+    .line 4
     invoke-virtual {p1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    .line 5
     :cond_1
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mRotation:F
 
@@ -895,10 +971,12 @@
 
     if-nez v0, :cond_2
 
-    const-string/jumbo v0, "rotationZ"
+    const-string v0, "rotationZ"
 
+    .line 6
     invoke-virtual {p1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    .line 7
     :cond_2
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mRotationX:F
 
@@ -908,10 +986,12 @@
 
     if-nez v0, :cond_3
 
-    const-string/jumbo v0, "rotationX"
+    const-string v0, "rotationX"
 
+    .line 8
     invoke-virtual {p1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    .line 9
     :cond_3
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mRotationY:F
 
@@ -921,10 +1001,12 @@
 
     if-nez v0, :cond_4
 
-    const-string/jumbo v0, "rotationY"
+    const-string v0, "rotationY"
 
+    .line 10
     invoke-virtual {p1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    .line 11
     :cond_4
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mPivotX:F
 
@@ -936,8 +1018,10 @@
 
     const-string v0, "pivotX"
 
+    .line 12
     invoke-virtual {p1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    .line 13
     :cond_5
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mPivotY:F
 
@@ -949,8 +1033,10 @@
 
     const-string v0, "pivotY"
 
+    .line 14
     invoke-virtual {p1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    .line 15
     :cond_6
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mTranslationX:F
 
@@ -962,8 +1048,10 @@
 
     const-string/jumbo v0, "translationX"
 
+    .line 16
     invoke-virtual {p1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    .line 17
     :cond_7
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mTranslationY:F
 
@@ -975,8 +1063,10 @@
 
     const-string/jumbo v0, "translationY"
 
+    .line 18
     invoke-virtual {p1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    .line 19
     :cond_8
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mTranslationZ:F
 
@@ -988,8 +1078,10 @@
 
     const-string/jumbo v0, "translationZ"
 
+    .line 20
     invoke-virtual {p1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    .line 21
     :cond_9
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mTransitionPathRotate:F
 
@@ -1001,8 +1093,10 @@
 
     const-string v0, "pathRotate"
 
+    .line 22
     invoke-virtual {p1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    .line 23
     :cond_a
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mScaleX:F
 
@@ -1012,10 +1106,12 @@
 
     if-nez v0, :cond_b
 
-    const-string/jumbo v0, "scaleX"
+    const-string v0, "scaleX"
 
+    .line 24
     invoke-virtual {p1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    .line 25
     :cond_b
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mScaleY:F
 
@@ -1025,10 +1121,12 @@
 
     if-nez v0, :cond_c
 
-    const-string/jumbo v0, "scaleY"
+    const-string v0, "scaleY"
 
+    .line 26
     invoke-virtual {p1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    .line 27
     :cond_c
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mProgress:F
 
@@ -1038,10 +1136,12 @@
 
     if-nez v0, :cond_d
 
-    const-string/jumbo v0, "progress"
+    const-string v0, "progress"
 
+    .line 28
     invoke-virtual {p1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    .line 29
     :cond_d
     iget-object v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mCustom:Ljava/util/HashMap;
 
@@ -1051,6 +1151,7 @@
 
     if-lez v0, :cond_e
 
+    .line 30
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mCustom:Ljava/util/HashMap;
 
     invoke-virtual {p0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
@@ -1074,6 +1175,7 @@
 
     check-cast v0, Ljava/lang/String;
 
+    .line 31
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1099,6 +1201,7 @@
 .method public getCurveFit()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mCurveFit:I
 
     return p0
@@ -1107,6 +1210,7 @@
 .method public getId(Ljava/lang/String;)I
     .locals 0
 
+    .line 1
     invoke-static {p1}, Landroidx/constraintlayout/core/motion/utils/TypedValues$AttributesType;->getId(Ljava/lang/String;)I
 
     move-result p0
@@ -1117,12 +1221,15 @@
 .method public printAttributes()V
     .locals 6
 
+    .line 1
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
+    .line 2
     invoke-virtual {p0, v0}, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->getAttributeNames(Ljava/util/HashSet;)V
 
+    .line 3
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1151,23 +1258,27 @@
 
     new-array v2, v1, [Ljava/lang/String;
 
-    invoke-virtual {v0, v2}, Ljava/util/AbstractCollection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    .line 4
+    invoke-virtual {v0, v2}, Ljava/util/HashSet;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [Ljava/lang/String;
 
+    .line 5
     :goto_0
     array-length v2, v0
 
     if-ge v1, v2, :cond_0
 
+    .line 6
     aget-object v2, v0, v1
 
     invoke-static {v2}, Landroidx/constraintlayout/core/motion/utils/TypedValues$AttributesType;->getId(Ljava/lang/String;)I
 
     move-result v2
 
+    .line 7
     sget-object v3, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1214,6 +1325,7 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mAlpha:F
 
     invoke-static {v0}, Ljava/lang/Float;->isNaN(F)Z
@@ -1222,6 +1334,7 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mCurveFit:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1232,6 +1345,7 @@
 
     invoke-virtual {p1, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     :cond_0
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mElevation:F
 
@@ -1241,6 +1355,7 @@
 
     if-nez v0, :cond_1
 
+    .line 4
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mCurveFit:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1251,6 +1366,7 @@
 
     invoke-virtual {p1, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 5
     :cond_1
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mRotation:F
 
@@ -1260,16 +1376,18 @@
 
     if-nez v0, :cond_2
 
+    .line 6
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mCurveFit:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    const-string/jumbo v1, "rotationZ"
+    const-string v1, "rotationZ"
 
     invoke-virtual {p1, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 7
     :cond_2
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mRotationX:F
 
@@ -1279,16 +1397,18 @@
 
     if-nez v0, :cond_3
 
+    .line 8
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mCurveFit:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    const-string/jumbo v1, "rotationX"
+    const-string v1, "rotationX"
 
     invoke-virtual {p1, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 9
     :cond_3
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mRotationY:F
 
@@ -1298,16 +1418,18 @@
 
     if-nez v0, :cond_4
 
+    .line 10
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mCurveFit:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    const-string/jumbo v1, "rotationY"
+    const-string v1, "rotationY"
 
     invoke-virtual {p1, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 11
     :cond_4
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mPivotX:F
 
@@ -1317,6 +1439,7 @@
 
     if-nez v0, :cond_5
 
+    .line 12
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mCurveFit:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1327,6 +1450,7 @@
 
     invoke-virtual {p1, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 13
     :cond_5
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mPivotY:F
 
@@ -1336,6 +1460,7 @@
 
     if-nez v0, :cond_6
 
+    .line 14
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mCurveFit:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1346,6 +1471,7 @@
 
     invoke-virtual {p1, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 15
     :cond_6
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mTranslationX:F
 
@@ -1355,6 +1481,7 @@
 
     if-nez v0, :cond_7
 
+    .line 16
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mCurveFit:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1365,6 +1492,7 @@
 
     invoke-virtual {p1, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 17
     :cond_7
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mTranslationY:F
 
@@ -1374,6 +1502,7 @@
 
     if-nez v0, :cond_8
 
+    .line 18
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mCurveFit:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1384,6 +1513,7 @@
 
     invoke-virtual {p1, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 19
     :cond_8
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mTranslationZ:F
 
@@ -1393,6 +1523,7 @@
 
     if-nez v0, :cond_9
 
+    .line 20
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mCurveFit:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1403,6 +1534,7 @@
 
     invoke-virtual {p1, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 21
     :cond_9
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mTransitionPathRotate:F
 
@@ -1412,6 +1544,7 @@
 
     if-nez v0, :cond_a
 
+    .line 22
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mCurveFit:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1422,6 +1555,7 @@
 
     invoke-virtual {p1, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 23
     :cond_a
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mScaleX:F
 
@@ -1431,16 +1565,18 @@
 
     if-nez v0, :cond_b
 
+    .line 24
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mCurveFit:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    const-string/jumbo v1, "scaleX"
+    const-string v1, "scaleX"
 
     invoke-virtual {p1, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 25
     :cond_b
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mScaleY:F
 
@@ -1450,16 +1586,18 @@
 
     if-nez v0, :cond_c
 
+    .line 26
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mCurveFit:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    const-string/jumbo v1, "scaleY"
+    const-string v1, "scaleY"
 
     invoke-virtual {p1, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 27
     :cond_c
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mProgress:F
 
@@ -1469,16 +1607,18 @@
 
     if-nez v0, :cond_d
 
+    .line 28
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyAttributes;->mCurveFit:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    const-string/jumbo v1, "progress"
+    const-string v1, "progress"
 
     invoke-virtual {p1, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 29
     :cond_d
     iget-object v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mCustom:Ljava/util/HashMap;
 
@@ -1488,6 +1628,7 @@
 
     if-lez v0, :cond_e
 
+    .line 30
     iget-object v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mCustom:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
@@ -1511,6 +1652,7 @@
 
     check-cast v1, Ljava/lang/String;
 
+    .line 31
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V

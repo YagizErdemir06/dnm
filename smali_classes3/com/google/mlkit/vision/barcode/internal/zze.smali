@@ -27,6 +27,7 @@
 .method public final zza()Lcom/google/mlkit/vision/barcode/internal/BarcodeScannerImpl;
     .locals 1
 
+    .line 1
     invoke-static {}, Lcom/google/mlkit/vision/barcode/internal/BarcodeScannerImpl;->zzd()Lcom/google/mlkit/vision/barcode/BarcodeScannerOptions;
 
     move-result-object v0
@@ -45,10 +46,12 @@
         .end annotation
     .end param
 
+    .line 1
     new-instance v0, Lcom/google/mlkit/vision/barcode/internal/BarcodeScannerImpl;
 
     iget-object v1, p0, Lcom/google/mlkit/vision/barcode/internal/zze;->zza:Lcom/google/mlkit/vision/barcode/internal/zzf;
 
+    .line 2
     invoke-virtual {v1, p1}, Lcom/google/mlkit/common/sdkinternal/LazyInstanceMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -57,6 +60,7 @@
 
     iget-object p0, p0, Lcom/google/mlkit/vision/barcode/internal/zze;->zzb:Lcom/google/mlkit/common/sdkinternal/ExecutorSelector;
 
+    .line 3
     invoke-virtual {p1}, Lcom/google/mlkit/vision/barcode/BarcodeScannerOptions;->zzb()Ljava/util/concurrent/Executor;
 
     move-result-object v2
@@ -65,10 +69,12 @@
 
     move-result-object p0
 
+    .line 4
     invoke-static {}, Lcom/google/mlkit/vision/barcode/internal/zzb;->zzd()Ljava/lang/String;
 
     move-result-object v2
 
+    .line 5
     invoke-static {v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrw;->zzb(Ljava/lang/String;)Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrl;
 
     move-result-object v2

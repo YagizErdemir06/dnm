@@ -1,4 +1,4 @@
-.class interface abstract Lcom/google/common/util/concurrent/AbstractFuture$Trusted;
+.class public interface abstract Lcom/google/common/util/concurrent/AbstractFuture$Trusted;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

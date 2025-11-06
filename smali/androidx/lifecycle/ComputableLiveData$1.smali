@@ -1,4 +1,4 @@
-.class Landroidx/lifecycle/ComputableLiveData$1;
+.class public Landroidx/lifecycle/ComputableLiveData$1;
 .super Landroidx/lifecycle/LiveData;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/lifecycle/ComputableLiveData;
+.field public final synthetic this$0:Landroidx/lifecycle/ComputableLiveData;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/lifecycle/ComputableLiveData;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/lifecycle/ComputableLiveData$1;->this$0:Landroidx/lifecycle/ComputableLiveData;
 
     invoke-direct {p0}, Landroidx/lifecycle/LiveData;-><init>()V
@@ -41,6 +42,7 @@
 .method public onActive()V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Landroidx/lifecycle/ComputableLiveData$1;->this$0:Landroidx/lifecycle/ComputableLiveData;
 
     iget-object v0, p0, Landroidx/lifecycle/ComputableLiveData;->mExecutor:Ljava/util/concurrent/Executor;

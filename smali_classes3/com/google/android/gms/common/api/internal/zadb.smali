@@ -1,10 +1,10 @@
-.class final Lcom/google/android/gms/common/api/internal/zadb;
+.class public final Lcom/google/android/gms/common/api/internal/zadb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field final synthetic zaa:Lcom/google/android/gms/common/api/internal/zadc;
+.field public final synthetic zaa:Lcom/google/android/gms/common/api/internal/zadc;
 
 
 # direct methods

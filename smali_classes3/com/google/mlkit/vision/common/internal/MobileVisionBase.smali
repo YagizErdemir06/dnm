@@ -42,9 +42,10 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/common/internal/GmsLogger;
 
     const-string v1, "MobileVisionBase"
@@ -83,6 +84,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -95,6 +97,7 @@
 
     iput-object p1, p0, Lcom/google/mlkit/vision/common/internal/MobileVisionBase;->zzd:Lcom/google/mlkit/common/sdkinternal/MLTask;
 
+    .line 2
     new-instance v0, Lcom/google/android/gms/tasks/CancellationTokenSource;
 
     invoke-direct {v0}, Lcom/google/android/gms/tasks/CancellationTokenSource;-><init>()V
@@ -103,10 +106,12 @@
 
     iput-object p2, p0, Lcom/google/mlkit/vision/common/internal/MobileVisionBase;->zzf:Ljava/util/concurrent/Executor;
 
+    .line 3
     invoke-virtual {p1}, Lcom/google/mlkit/common/sdkinternal/ModelResource;->pin()V
 
     sget-object v1, Lcom/google/mlkit/vision/common/internal/zzb;->zza:Lcom/google/mlkit/vision/common/internal/zzb;
 
+    .line 4
     invoke-virtual {v0}, Lcom/google/android/gms/tasks/CancellationTokenSource;->getToken()Lcom/google/android/gms/tasks/CancellationToken;
 
     move-result-object v0
@@ -117,6 +122,7 @@
 
     sget-object p2, Lcom/google/mlkit/vision/common/internal/zzc;->zza:Lcom/google/mlkit/vision/common/internal/zzc;
 
+    .line 5
     invoke-virtual {p1, p2}, Lcom/google/android/gms/tasks/Task;->addOnFailureListener(Lcom/google/android/gms/tasks/OnFailureListener;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object p1
@@ -129,6 +135,7 @@
 .method public static synthetic zzc(Ljava/lang/Exception;)V
     .locals 3
 
+    .line 1
     sget-object v0, Lcom/google/mlkit/vision/common/internal/MobileVisionBase;->zzb:Lcom/google/android/gms/common/internal/GmsLogger;
 
     const-string v1, "MobileVisionBase"
@@ -153,6 +160,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/mlkit/vision/common/internal/MobileVisionBase;->zzc:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -166,12 +174,14 @@
 
     iget-object v0, p0, Lcom/google/mlkit/vision/common/internal/MobileVisionBase;->zze:Lcom/google/android/gms/tasks/CancellationTokenSource;
 
+    .line 2
     invoke-virtual {v0}, Lcom/google/android/gms/tasks/CancellationTokenSource;->cancel()V
 
     iget-object v0, p0, Lcom/google/mlkit/vision/common/internal/MobileVisionBase;->zzd:Lcom/google/mlkit/common/sdkinternal/MLTask;
 
     iget-object v1, p0, Lcom/google/mlkit/vision/common/internal/MobileVisionBase;->zzf:Ljava/util/concurrent/Executor;
 
+    .line 3
     invoke-virtual {v0, v1}, Lcom/google/mlkit/common/sdkinternal/ModelResource;->unpin(Ljava/util/concurrent/Executor;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -212,6 +222,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/mlkit/vision/common/internal/MobileVisionBase;->zzc:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -225,12 +236,14 @@
 
     iget-object v0, p0, Lcom/google/mlkit/vision/common/internal/MobileVisionBase;->zze:Lcom/google/android/gms/tasks/CancellationTokenSource;
 
+    .line 2
     invoke-virtual {v0}, Lcom/google/android/gms/tasks/CancellationTokenSource;->cancel()V
 
     iget-object v0, p0, Lcom/google/mlkit/vision/common/internal/MobileVisionBase;->zzd:Lcom/google/mlkit/common/sdkinternal/MLTask;
 
     iget-object v1, p0, Lcom/google/mlkit/vision/common/internal/MobileVisionBase;->zzf:Ljava/util/concurrent/Executor;
 
+    .line 3
     invoke-virtual {v0, v1}, Lcom/google/mlkit/common/sdkinternal/ModelResource;->unpinWithTask(Ljava/util/concurrent/Executor;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object v0
@@ -244,6 +257,7 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 4
     :try_start_1
     invoke-static {v0}, Lcom/google/android/gms/tasks/Tasks;->forResult(Ljava/lang/Object;)Lcom/google/android/gms/tasks/Task;
 
@@ -719,41 +733,43 @@
 .end method
 
 .method public final synthetic zza(Lcom/google/mlkit/vision/common/InputImage;)Ljava/lang/Object;
-    .locals 5
+    .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
         }
     .end annotation
 
-    const-class v0, Ljava/lang/Throwable;
+    const-string v0, "detectorTaskWithResource#run"
 
-    const-string v1, "detectorTaskWithResource#run"
+    .line 1
+    invoke-static {v0}, Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;->zze(Ljava/lang/String;)Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;
 
-    invoke-static {v1}, Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;->zze(Ljava/lang/String;)Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;
+    move-result-object v0
 
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;->zzb()Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;->zzb()Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;
 
     :try_start_0
     iget-object p0, p0, Lcom/google/mlkit/vision/common/internal/MobileVisionBase;->zzd:Lcom/google/mlkit/common/sdkinternal/MLTask;
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/google/mlkit/common/sdkinternal/MLTask;->run(Lcom/google/mlkit/common/sdkinternal/MLTaskInput;)Ljava/lang/Object;
 
     move-result-object p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v1}, Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;->close()V
+    .line 3
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;->close()V
 
     return-object p0
 
     :catchall_0
     move-exception p0
 
+    .line 4
     :try_start_1
-    invoke-virtual {v1}, Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;->close()V
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;->close()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
@@ -763,28 +779,34 @@
     move-exception p1
 
     :try_start_2
+    const-class v0, Ljava/lang/Throwable;
+
     const-string v1, "addSuppressed"
 
     const/4 v2, 0x1
 
     new-array v3, v2, [Ljava/lang/Class;
 
-    const/4 v4, 0x0
+    const-class v4, Ljava/lang/Throwable;
 
-    aput-object v0, v3, v4
+    const/4 v5, 0x0
 
+    aput-object v4, v3, v5
+
+    .line 5
     invoke-virtual {v0, v1, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
 
     new-array v1, v2, [Ljava/lang/Object;
 
-    aput-object p1, v1, v4
+    aput-object p1, v1, v5
 
     invoke-virtual {v0, p0, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
+    .line 6
     :catch_0
     :goto_0
     throw p0
@@ -798,28 +820,32 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/mlkit/vision/common/internal/CommonConvertUtils;->convertMlImagetoInputImage(Lcom/google/android/odml/image/MlImage;)Lcom/google/mlkit/vision/common/InputImage;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/mlkit/vision/common/internal/MobileVisionBase;->zzd:Lcom/google/mlkit/common/sdkinternal/MLTask;
 
+    .line 3
     invoke-virtual {p0, p1}, Lcom/google/mlkit/common/sdkinternal/MLTask;->run(Lcom/google/mlkit/common/sdkinternal/MLTaskInput;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 
+    .line 4
     :cond_0
     new-instance p0, Lcom/google/mlkit/common/MlKitException;
 
-    const-string p1, "Current type of MlImage is not supported."
+    const/16 p1, 0xd
 
-    const/16 v0, 0xd
+    const-string v0, "Current type of MlImage is not supported."
 
-    invoke-direct {p0, p1, v0}, Lcom/google/mlkit/common/MlKitException;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0, v0, p1}, Lcom/google/mlkit/common/MlKitException;-><init>(Ljava/lang/String;I)V
 
     throw p0
 .end method

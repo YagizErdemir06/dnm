@@ -7,6 +7,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -93,18 +94,20 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/source/dash/manifest/Period;->getAdaptationSetIndex(I)I
 
     move-result p1
 
-    const/4 v0, -0x1
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    const/4 v1, -0x1
 
-    if-ne p1, v0, :cond_0
+    if-ne p1, v1, :cond_0
 
-    return-object v1
+    return-object v0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/dash/manifest/Period;->adaptationSets:Ljava/util/List;
 
@@ -116,6 +119,7 @@
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/dash/manifest/AdaptationSet;->representations:Ljava/util/List;
 
+    .line 3
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
     move-result p1
@@ -131,12 +135,12 @@
 
     move-result-object p0
 
-    move-object v1, p0
+    move-object v0, p0
 
-    check-cast v1, Lcom/google/android/exoplayer2/source/dash/manifest/Representation;
+    check-cast v0, Lcom/google/android/exoplayer2/source/dash/manifest/Representation;
 
     :goto_0
-    return-object v1
+    return-object v0
 .end method
 
 .method public static loadChunkIndex(Lcom/google/android/exoplayer2/upstream/DataSource;ILcom/google/android/exoplayer2/source/dash/manifest/Representation;)Lcom/google/android/exoplayer2/extractor/ChunkIndex;
@@ -231,6 +235,7 @@
 
     const/4 v0, 0x2
 
+    .line 1
     invoke-static {p1, v0}, Lcom/google/android/exoplayer2/source/dash/DashUtil;->getFirstRepresentation(Lcom/google/android/exoplayer2/source/dash/manifest/Period;I)Lcom/google/android/exoplayer2/source/dash/manifest/Representation;
 
     move-result-object v1
@@ -239,6 +244,7 @@
 
     const/4 v0, 0x1
 
+    .line 2
     invoke-static {p1, v0}, Lcom/google/android/exoplayer2/source/dash/DashUtil;->getFirstRepresentation(Lcom/google/android/exoplayer2/source/dash/manifest/Period;I)Lcom/google/android/exoplayer2/source/dash/manifest/Representation;
 
     move-result-object v1
@@ -249,9 +255,11 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     iget-object p1, v1, Lcom/google/android/exoplayer2/source/dash/manifest/Representation;->format:Lcom/google/android/exoplayer2/Format;
 
+    .line 4
     invoke-static {p0, v0, v1}, Lcom/google/android/exoplayer2/source/dash/DashUtil;->loadSampleFormat(Lcom/google/android/exoplayer2/upstream/DataSource;ILcom/google/android/exoplayer2/source/dash/manifest/Representation;)Lcom/google/android/exoplayer2/Format;
 
     move-result-object p0
@@ -260,6 +268,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/Format;->withManifestFormatInfo(Lcom/google/android/exoplayer2/Format;)Lcom/google/android/exoplayer2/Format;
 
@@ -410,6 +419,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/source/dash/manifest/DashManifestParser;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/source/dash/manifest/DashManifestParser;-><init>()V
@@ -515,12 +525,14 @@
 .method private static newChunkExtractor(ILcom/google/android/exoplayer2/Format;)Lcom/google/android/exoplayer2/source/chunk/ChunkExtractor;
     .locals 2
 
+    .line 1
     iget-object v0, p1, Lcom/google/android/exoplayer2/Format;->containerMimeType:Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
     const-string v1, "video/webm"
 
+    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -529,6 +541,7 @@
 
     const-string v1, "audio/webm"
 
+    .line 3
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -546,6 +559,7 @@
     :goto_0
     if-eqz v0, :cond_2
 
+    .line 4
     new-instance v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor;-><init>()V
@@ -557,6 +571,7 @@
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/extractor/mp4/FragmentedMp4Extractor;-><init>()V
 
+    .line 5
     :goto_1
     new-instance v1, Lcom/google/android/exoplayer2/source/chunk/BundledChunkExtractor;
 
@@ -568,6 +583,7 @@
 .method public static resolveCacheKey(Lcom/google/android/exoplayer2/source/dash/manifest/Representation;Lcom/google/android/exoplayer2/source/dash/manifest/RangedUri;)Ljava/lang/String;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/source/dash/manifest/Representation;->getCacheKey()Ljava/lang/String;
 
     move-result-object v0
@@ -576,6 +592,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/dash/manifest/Representation;->baseUrls:Lcom/google/common/collect/ImmutableList;
 

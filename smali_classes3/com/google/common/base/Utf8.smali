@@ -19,6 +19,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,6 +28,7 @@
 .method public static encodedLength(Ljava/lang/CharSequence;)I
     .locals 5
 
+    .line 1
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
@@ -36,6 +38,7 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
+    .line 2
     invoke-interface {p0, v1}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v2
@@ -54,6 +57,7 @@
     :goto_1
     if-ge v1, v0, :cond_2
 
+    .line 3
     invoke-interface {p0, v1}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v3
@@ -72,6 +76,7 @@
 
     goto :goto_1
 
+    .line 4
     :cond_1
     invoke-static {p0, v1}, Lcom/google/common/base/Utf8;->encodedLengthGeneral(Ljava/lang/CharSequence;I)I
 
@@ -84,6 +89,7 @@
 
     return v2
 
+    .line 5
     :cond_3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -93,19 +99,19 @@
 
     add-long/2addr v0, v2
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    const/16 v2, 0x36
 
-    const/16 v3, 0x36
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    const-string v3, "UTF-8 length does not fit in int: "
+    const-string v2, "UTF-8 length does not fit in int: "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -117,6 +123,7 @@
 .method private static encodedLengthGeneral(Ljava/lang/CharSequence;I)I
     .locals 4
 
+    .line 1
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
@@ -126,6 +133,7 @@
     :goto_0
     if-ge p1, v0, :cond_3
 
+    .line 2
     invoke-interface {p0, p1}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v2
@@ -153,6 +161,7 @@
 
     if-gt v2, v3, :cond_2
 
+    .line 3
     invoke-static {p0, p1}, Ljava/lang/Character;->codePointAt(Ljava/lang/CharSequence;I)I
 
     move-result v3
@@ -163,6 +172,7 @@
 
     goto :goto_1
 
+    .line 4
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -249,6 +259,7 @@
     :cond_1
     add-int/lit8 v0, p1, 0x1
 
+    .line 1
     aget-byte p1, p0, p1
 
     if-gez p1, :cond_c
@@ -272,6 +283,7 @@
 
     add-int/lit8 p1, v0, 0x1
 
+    .line 2
     aget-byte v0, p0, v0
 
     if-le v0, v2, :cond_0
@@ -290,6 +302,7 @@
 
     return v3
 
+    .line 3
     :cond_5
     aget-byte v0, p0, v0
 
@@ -311,6 +324,7 @@
     :cond_7
     add-int/lit8 p1, v4, 0x1
 
+    .line 4
     aget-byte v0, p0, v4
 
     if-le v0, v2, :cond_0
@@ -328,6 +342,7 @@
     :cond_a
     add-int/lit8 v1, v0, 0x1
 
+    .line 5
     aget-byte v0, p0, v0
 
     if-gt v0, v2, :cond_b
@@ -344,6 +359,7 @@
 
     add-int/lit8 p1, v1, 0x1
 
+    .line 6
     aget-byte v0, p0, v1
 
     if-gt v0, v2, :cond_b
@@ -366,6 +382,7 @@
 .method private static unpairedSurrogateMsg(I)Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x27

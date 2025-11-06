@@ -10,7 +10,7 @@
     }
 .end annotation
 
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
     d1 = {
         "\u0000 \n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0015\n\u0002\u0010\u000e\n\u0002\u0008\u0002\u0008\u0086\u0008\u0018\u0000 \u001c2\u00020\u0001:\u0001\u001cBE\u0012\u0008\u0008\u0002\u0010\u0002\u001a\u00020\u0003\u0012\n\u0008\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u0005\u0012\u0008\u0008\u0002\u0010\u0006\u001a\u00020\u0003\u0012\n\u0008\u0002\u0010\u0007\u001a\u0004\u0018\u00010\u0005\u0012\u0008\u0008\u0002\u0010\u0008\u001a\u00020\u0003\u0012\u0008\u0008\u0002\u0010\t\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\nJ\t\u0010\u000c\u001a\u00020\u0003H\u00c6\u0003J\u0010\u0010\r\u001a\u0004\u0018\u00010\u0005H\u00c6\u0003\u00a2\u0006\u0002\u0010\u000eJ\t\u0010\u000f\u001a\u00020\u0003H\u00c6\u0003J\u0010\u0010\u0010\u001a\u0004\u0018\u00010\u0005H\u00c6\u0003\u00a2\u0006\u0002\u0010\u000eJ\t\u0010\u0011\u001a\u00020\u0003H\u00c6\u0003J\t\u0010\u0012\u001a\u00020\u0003H\u00c6\u0003JN\u0010\u0013\u001a\u00020\u00002\u0008\u0008\u0002\u0010\u0002\u001a\u00020\u00032\n\u0008\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u00052\u0008\u0008\u0002\u0010\u0006\u001a\u00020\u00032\n\u0008\u0002\u0010\u0007\u001a\u0004\u0018\u00010\u00052\u0008\u0008\u0002\u0010\u0008\u001a\u00020\u00032\u0008\u0008\u0002\u0010\t\u001a\u00020\u0003H\u00c6\u0001\u00a2\u0006\u0002\u0010\u0014J\u0013\u0010\u0015\u001a\u00020\u00032\u0008\u0010\u0016\u001a\u0004\u0018\u00010\u0001H\u00d6\u0003J\t\u0010\u0017\u001a\u00020\u0005H\u00d6\u0001J\u000e\u0010\u0018\u001a\u00020\u00032\u0006\u0010\u0019\u001a\u00020\u0003J\t\u0010\u001a\u001a\u00020\u001bH\u00d6\u0001R\u0014\u0010\u0004\u001a\u0004\u0018\u00010\u00058\u0006X\u0087\u0004\u00a2\u0006\u0004\n\u0002\u0010\u000bR\u0010\u0010\u0006\u001a\u00020\u00038\u0006X\u0087\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0002\u001a\u00020\u00038\u0006X\u0087\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u0007\u001a\u0004\u0018\u00010\u00058\u0006X\u0087\u0004\u00a2\u0006\u0004\n\u0002\u0010\u000bR\u0010\u0010\u0008\u001a\u00020\u00038\u0006X\u0087\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\t\u001a\u00020\u00038\u0006X\u0087\u0004\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u001d"
     }
@@ -58,50 +58,50 @@
 
 # static fields
 .field public static final Companion:Lokhttp3/internal/ws/WebSocketExtensions$Companion;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field private static final HEADER_WEB_SOCKET_EXTENSION:Ljava/lang/String; = "Sec-WebSocket-Extensions"
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 
 # instance fields
 .field public final clientMaxWindowBits:Ljava/lang/Integer;
-    .annotation build Lin/e;
+    .annotation build Lh/d3/e;
     .end annotation
 
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 .end field
 
 .field public final clientNoContextTakeover:Z
-    .annotation build Lin/e;
+    .annotation build Lh/d3/e;
     .end annotation
 .end field
 
 .field public final perMessageDeflate:Z
-    .annotation build Lin/e;
+    .annotation build Lh/d3/e;
     .end annotation
 .end field
 
 .field public final serverMaxWindowBits:Ljava/lang/Integer;
-    .annotation build Lin/e;
+    .annotation build Lh/d3/e;
     .end annotation
 
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 .end field
 
 .field public final serverNoContextTakeover:Z
-    .annotation build Lin/e;
+    .annotation build Lh/d3/e;
     .end annotation
 .end field
 
 .field public final unknownValues:Z
-    .annotation build Lin/e;
+    .annotation build Lh/d3/e;
     .end annotation
 .end field
 
@@ -114,7 +114,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lokhttp3/internal/ws/WebSocketExtensions$Companion;-><init>(Lkotlin/jvm/internal/w;)V
+    invoke-direct {v0, v1}, Lokhttp3/internal/ws/WebSocketExtensions$Companion;-><init>(Lh/d3/x/w;)V
 
     sput-object v0, Lokhttp3/internal/ws/WebSocketExtensions;->Companion:Lokhttp3/internal/ws/WebSocketExtensions$Companion;
 
@@ -142,7 +142,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v8}, Lokhttp3/internal/ws/WebSocketExtensions;-><init>(ZLjava/lang/Integer;ZLjava/lang/Integer;ZZILkotlin/jvm/internal/w;)V
+    invoke-direct/range {v0 .. v8}, Lokhttp3/internal/ws/WebSocketExtensions;-><init>(ZLjava/lang/Integer;ZLjava/lang/Integer;ZZILh/d3/x/w;)V
 
     return-void
 .end method
@@ -150,11 +150,11 @@
 .method public constructor <init>(ZLjava/lang/Integer;ZLjava/lang/Integer;ZZ)V
     .locals 0
     .param p2    # Ljava/lang/Integer;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
     .param p4    # Ljava/lang/Integer;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
 
@@ -182,7 +182,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(ZLjava/lang/Integer;ZLjava/lang/Integer;ZZILkotlin/jvm/internal/w;)V
+.method public synthetic constructor <init>(ZLjava/lang/Integer;ZLjava/lang/Integer;ZZILh/d3/x/w;)V
     .locals 2
 
     and-int/lit8 p8, p7, 0x1
@@ -325,7 +325,7 @@
 
 .method public final component2()Ljava/lang/Integer;
     .locals 0
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
     iget-object p0, p0, Lokhttp3/internal/ws/WebSocketExtensions;->clientMaxWindowBits:Ljava/lang/Integer;
@@ -343,7 +343,7 @@
 
 .method public final component4()Ljava/lang/Integer;
     .locals 0
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
     iget-object p0, p0, Lokhttp3/internal/ws/WebSocketExtensions;->serverMaxWindowBits:Ljava/lang/Integer;
@@ -370,14 +370,14 @@
 .method public final copy(ZLjava/lang/Integer;ZLjava/lang/Integer;ZZ)Lokhttp3/internal/ws/WebSocketExtensions;
     .locals 7
     .param p2    # Ljava/lang/Integer;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
     .param p4    # Ljava/lang/Integer;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     new-instance p0, Lokhttp3/internal/ws/WebSocketExtensions;
@@ -404,7 +404,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
     .param p1    # Ljava/lang/Object;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
 
@@ -439,7 +439,7 @@
 
     iget-object v3, p1, Lokhttp3/internal/ws/WebSocketExtensions;->clientMaxWindowBits:Ljava/lang/Integer;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lh/d3/x/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -461,7 +461,7 @@
 
     iget-object v3, p1, Lokhttp3/internal/ws/WebSocketExtensions;->serverMaxWindowBits:Ljava/lang/Integer;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lh/d3/x/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -583,10 +583,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     iget-boolean p0, p0, Lokhttp3/internal/ws/WebSocketExtensions;->clientNoContextTakeover:Z
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-boolean p0, p0, Lokhttp3/internal/ws/WebSocketExtensions;->serverNoContextTakeover:Z
 
@@ -596,7 +598,7 @@
 
 .method public toString()Ljava/lang/String;
     .locals 2
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     new-instance v0, Ljava/lang/StringBuilder;

@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/AbstractIdleService$ThreadNameSupplier;
+.class public final Lcom/google/common/util/concurrent/AbstractIdleService$ThreadNameSupplier;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/util/concurrent/AbstractIdleService;
+.field public final synthetic this$0:Lcom/google/common/util/concurrent/AbstractIdleService;
 
 
 # direct methods

@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/FilteredMultimapValues;
+.class public final Lcom/google/common/collect/FilteredMultimapValues;
 .super Ljava/util/AbstractCollection;
 .source "SourceFile"
 
@@ -48,8 +48,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -66,6 +68,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/FilteredMultimapValues;->multimap:Lcom/google/common/collect/FilteredMultimap;
 
     invoke-interface {p0}, Lcom/google/common/collect/Multimap;->clear()V
@@ -80,6 +83,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/FilteredMultimapValues;->multimap:Lcom/google/common/collect/FilteredMultimap;
 
     invoke-interface {p0, p1}, Lcom/google/common/collect/Multimap;->containsValue(Ljava/lang/Object;)Z
@@ -99,6 +103,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/FilteredMultimapValues;->multimap:Lcom/google/common/collect/FilteredMultimap;
 
     invoke-interface {p0}, Lcom/google/common/collect/Multimap;->entries()Ljava/util/Collection;
@@ -123,12 +128,14 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/FilteredMultimapValues;->multimap:Lcom/google/common/collect/FilteredMultimap;
 
     invoke-interface {v0}, Lcom/google/common/collect/FilteredMultimap;->entryPredicate()Lcom/google/common/base/Predicate;
 
     move-result-object v0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/FilteredMultimapValues;->multimap:Lcom/google/common/collect/FilteredMultimap;
 
     invoke-interface {p0}, Lcom/google/common/collect/FilteredMultimap;->unfiltered()Lcom/google/common/collect/Multimap;
@@ -143,6 +150,7 @@
 
     move-result-object p0
 
+    .line 3
     :cond_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -150,12 +158,14 @@
 
     if-eqz v1, :cond_1
 
+    .line 4
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/Map$Entry;
 
+    .line 5
     invoke-interface {v0, v1}, Lcom/google/common/base/Predicate;->apply(Ljava/lang/Object;)Z
 
     move-result v2
@@ -172,6 +182,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 6
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V
 
     const/4 p0, 0x1
@@ -194,8 +205,10 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/FilteredMultimapValues;->multimap:Lcom/google/common/collect/FilteredMultimap;
 
+    .line 2
     invoke-interface {v0}, Lcom/google/common/collect/FilteredMultimap;->unfiltered()Lcom/google/common/collect/Multimap;
 
     move-result-object v0
@@ -206,6 +219,7 @@
 
     iget-object p0, p0, Lcom/google/common/collect/FilteredMultimapValues;->multimap:Lcom/google/common/collect/FilteredMultimap;
 
+    .line 3
     invoke-interface {p0}, Lcom/google/common/collect/FilteredMultimap;->entryPredicate()Lcom/google/common/base/Predicate;
 
     move-result-object p0
@@ -218,10 +232,12 @@
 
     move-result-object p1
 
+    .line 4
     invoke-static {p0, p1}, Lcom/google/common/base/Predicates;->and(Lcom/google/common/base/Predicate;Lcom/google/common/base/Predicate;)Lcom/google/common/base/Predicate;
 
     move-result-object p0
 
+    .line 5
     invoke-static {v0, p0}, Lcom/google/common/collect/Iterables;->removeIf(Ljava/lang/Iterable;Lcom/google/common/base/Predicate;)Z
 
     move-result p0
@@ -239,8 +255,10 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/FilteredMultimapValues;->multimap:Lcom/google/common/collect/FilteredMultimap;
 
+    .line 2
     invoke-interface {v0}, Lcom/google/common/collect/FilteredMultimap;->unfiltered()Lcom/google/common/collect/Multimap;
 
     move-result-object v0
@@ -251,10 +269,12 @@
 
     iget-object p0, p0, Lcom/google/common/collect/FilteredMultimapValues;->multimap:Lcom/google/common/collect/FilteredMultimap;
 
+    .line 3
     invoke-interface {p0}, Lcom/google/common/collect/FilteredMultimap;->entryPredicate()Lcom/google/common/base/Predicate;
 
     move-result-object p0
 
+    .line 4
     invoke-static {p1}, Lcom/google/common/base/Predicates;->in(Ljava/util/Collection;)Lcom/google/common/base/Predicate;
 
     move-result-object p1
@@ -267,10 +287,12 @@
 
     move-result-object p1
 
+    .line 5
     invoke-static {p0, p1}, Lcom/google/common/base/Predicates;->and(Lcom/google/common/base/Predicate;Lcom/google/common/base/Predicate;)Lcom/google/common/base/Predicate;
 
     move-result-object p0
 
+    .line 6
     invoke-static {v0, p0}, Lcom/google/common/collect/Iterables;->removeIf(Ljava/lang/Iterable;Lcom/google/common/base/Predicate;)Z
 
     move-result p0
@@ -281,6 +303,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/FilteredMultimapValues;->multimap:Lcom/google/common/collect/FilteredMultimap;
 
     invoke-interface {p0}, Lcom/google/common/collect/Multimap;->size()I

@@ -15,14 +15,54 @@
 
 
 # virtual methods
-.method public abstract Y4(Landroid/graphics/Rect;)V
+.method public abstract B3(II)Landroid/graphics/Rect;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "srcRotation",
+            "dstRotation"
+        }
+    .end annotation
 .end method
 
-.method public abstract Z1(Landroid/graphics/Rect;FLz1/c$a$b;)V
+.method public abstract X(II)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "width",
+            "height"
+        }
+    .end annotation
 .end method
 
-.method public abstract h0(II)V
+.method public abstract l0(Landroid/graphics/Rect;FLd/d/a/f6/c$a$b;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "value",
+            "fraction",
+            "changing"
+        }
+    .end annotation
 .end method
 
-.method public abstract o5(II)Landroid/graphics/Rect;
+.method public abstract z3(Landroid/graphics/Rect;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "rect"
+        }
+    .end annotation
 .end method

@@ -13,7 +13,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter<",
-        "Lsh/b;",
+        "Ld/o/v/a/z/b;",
         ">;"
     }
 .end annotation
@@ -26,19 +26,30 @@
 # direct methods
 .method public constructor <init>(Ljava/util/List;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mDdataList"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
-            "Lsh/b;",
+            "Ld/o/v/a/z/b;",
             ">;)V"
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;-><init>(Ljava/util/List;)V
 
     const/4 p1, -0x1
 
+    .line 2
     iput p1, p0, Lcom/xiaomi/mimoji/common/fragment/bottomlist/adapter/MimojiBgAdapter;->mLastSelectedPosition:I
 
     return-void
@@ -46,24 +57,43 @@
 
 
 # virtual methods
-.method public initMimojiBgColor(Lsh/b;Landroid/content/Context;Landroid/view/View;Landroid/view/View;Landroid/widget/ImageView;)V
+.method public initMimojiBgColor(Ld/o/v/a/z/b;Landroid/content/Context;Landroid/view/View;Landroid/view/View;Landroid/widget/ImageView;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "data",
+            "context",
+            "bgView",
+            "itemView",
+            "imageView"
+        }
+    .end annotation
 
-    invoke-virtual {p1}, Lsh/b;->i()I
+    .line 1
+    invoke-virtual {p1}, Ld/o/v/a/z/b;->i()I
 
     move-result p0
 
     if-lez p0, :cond_0
 
-    const p0, 0x7f0608e2
+    const p0, 0x7f06047a
 
+    .line 2
     invoke-virtual {p3, p0}, Landroid/view/View;->setBackgroundResource(I)V
 
+    .line 3
     invoke-static {p2}, Lcom/bumptech/glide/Glide;->with(Landroid/content/Context;)Lcom/bumptech/glide/RequestManager;
 
     move-result-object p0
 
-    invoke-virtual {p1}, Lsh/b;->i()I
+    invoke-virtual {p1}, Ld/o/v/a/z/b;->i()I
 
     move-result p1
 
@@ -81,6 +111,7 @@
 
     invoke-direct {p1, p2}, Lcom/bumptech/glide/load/resource/bitmap/RoundedCorners;-><init>(I)V
 
+    .line 4
     invoke-static {p1}, Lcom/bumptech/glide/request/RequestOptions;->bitmapTransform(Lcom/bumptech/glide/load/Transformation;)Lcom/bumptech/glide/request/RequestOptions;
 
     move-result-object p1
@@ -89,10 +120,12 @@
 
     move-result-object p0
 
+    .line 5
     invoke-virtual {p0, p5}, Lcom/bumptech/glide/RequestBuilder;->into(Landroid/widget/ImageView;)Lcom/bumptech/glide/request/target/ViewTarget;
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-virtual {p4}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -102,7 +135,7 @@
 
     move-result-object p0
 
-    const p1, 0x7f080122
+    const p1, 0x7f08010b
 
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -110,8 +143,9 @@
 
     invoke-virtual {p3, p0}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    const p0, 0x7f0805de
+    const p0, 0x7f0805da
 
+    .line 7
     invoke-virtual {p5, p0}, Landroid/widget/ImageView;->setImageResource(I)V
 
     :goto_0
@@ -124,18 +158,30 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "viewGroup",
+            "i"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             "I)",
             "Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerViewHolder<",
-            "Lsh/b;",
+            "Ld/o/v/a/z/b;",
             ">;"
         }
     .end annotation
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    .line 1
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object p2
 
@@ -143,7 +189,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0e011a
+    const v0, 0x7f0e010b
 
     const/4 v1, 0x0
 
@@ -151,6 +197,7 @@
 
     move-result-object p1
 
+    .line 2
     new-instance p2, Lcom/xiaomi/mimoji/common/fragment/bottomlist/adapter/MimojiBgAdapter$a;
 
     invoke-direct {p2, p0, p1}, Lcom/xiaomi/mimoji/common/fragment/bottomlist/adapter/MimojiBgAdapter$a;-><init>(Lcom/xiaomi/mimoji/common/fragment/bottomlist/adapter/MimojiBgAdapter;Landroid/view/View;)V
@@ -160,7 +207,16 @@
 
 .method public setSelectState(I)Z
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "positon"
+        }
+    .end annotation
 
+    .line 1
     iget v0, p0, Lcom/xiaomi/mimoji/common/fragment/bottomlist/adapter/MimojiBgAdapter;->mLastSelectedPosition:I
 
     const/4 v1, 0x0
@@ -175,6 +231,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     iget v0, p0, Lcom/xiaomi/mimoji/common/fragment/bottomlist/adapter/MimojiBgAdapter;->mLastSelectedPosition:I
 
@@ -182,6 +239,7 @@
 
     if-eq v0, v2, :cond_1
 
+    .line 3
     invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->getDataList()Ljava/util/List;
 
     move-result-object v0
@@ -192,16 +250,18 @@
 
     move-result-object v0
 
-    check-cast v0, Lsh/b;
+    check-cast v0, Ld/o/v/a/z/b;
 
-    invoke-virtual {v0, v1}, Lsh/b;->A(Z)V
+    invoke-virtual {v0, v1}, Ld/o/v/a/z/b;->y(Z)V
 
+    .line 4
     iget v0, p0, Lcom/xiaomi/mimoji/common/fragment/bottomlist/adapter/MimojiBgAdapter;->mLastSelectedPosition:I
 
     sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     invoke-virtual {p0, v0, v1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemChanged(ILjava/lang/Object;)V
 
+    .line 5
     :cond_1
     invoke-virtual {p0, p1}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->isAvailablePosion(I)Z
 
@@ -211,6 +271,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 6
     invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->getDataList()Ljava/util/List;
 
     move-result-object v0
@@ -219,14 +280,16 @@
 
     move-result-object v0
 
-    check-cast v0, Lsh/b;
+    check-cast v0, Ld/o/v/a/z/b;
 
-    invoke-virtual {v0, v1}, Lsh/b;->A(Z)V
+    invoke-virtual {v0, v1}, Ld/o/v/a/z/b;->y(Z)V
 
+    .line 7
     sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     invoke-virtual {p0, p1, v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemChanged(ILjava/lang/Object;)V
 
+    .line 8
     iput p1, p0, Lcom/xiaomi/mimoji/common/fragment/bottomlist/adapter/MimojiBgAdapter;->mLastSelectedPosition:I
 
     :cond_2

@@ -7,19 +7,20 @@
 
 
 # static fields
-.field protected static final EMPTY_ENUMERATION:Ljava/util/Enumeration;
+.field public static final EMPTY_ENUMERATION:Ljava/util/Enumeration;
 
 
 # instance fields
 .field private parent:Ljavax/swing/tree/TreeNode;
 
-.field protected xmlNode:Lorg/dom4j/Node;
+.field public xmlNode:Lorg/dom4j/Node;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lorg/dom4j/swing/LeafTreeNode$1;
 
     invoke-direct {v0}, Lorg/dom4j/swing/LeafTreeNode$1;-><init>()V
@@ -70,6 +71,7 @@
 .method public children()Ljava/util/Enumeration;
     .locals 0
 
+    .line 1
     sget-object p0, Lorg/dom4j/swing/LeafTreeNode;->EMPTY_ENUMERATION:Ljava/util/Enumeration;
 
     return-object p0
@@ -110,6 +112,7 @@
 .method public getParent()Ljavax/swing/tree/TreeNode;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/swing/LeafTreeNode;->parent:Ljavax/swing/tree/TreeNode;
 
     return-object p0
@@ -118,6 +121,7 @@
 .method public getXmlNode()Lorg/dom4j/Node;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/swing/LeafTreeNode;->xmlNode:Lorg/dom4j/Node;
 
     return-object p0
@@ -134,6 +138,7 @@
 .method public setParent(Lorg/dom4j/swing/LeafTreeNode;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/swing/LeafTreeNode;->parent:Ljavax/swing/tree/TreeNode;
 
     return-void
@@ -142,6 +147,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/swing/LeafTreeNode;->xmlNode:Lorg/dom4j/Node;
 
     invoke-interface {p0}, Lorg/dom4j/Node;->getText()Ljava/lang/String;
@@ -150,6 +156,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object p0

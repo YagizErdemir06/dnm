@@ -178,6 +178,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/graph/EndpointPair$Ordered;
 
     const/4 v1, 0x0
@@ -199,6 +200,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/graph/EndpointPair$Unordered;
 
     const/4 v1, 0x0
@@ -218,6 +220,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/graph/EndpointPair;->nodeU:Ljava/lang/Object;
 
     invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -226,10 +229,12 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/graph/EndpointPair;->nodeV:Ljava/lang/Object;
 
     return-object p0
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/google/common/graph/EndpointPair;->nodeV:Ljava/lang/Object;
 
@@ -239,10 +244,12 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     iget-object p0, p0, Lcom/google/common/graph/EndpointPair;->nodeU:Ljava/lang/Object;
 
     return-object p0
 
+    .line 5
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -318,16 +325,16 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    const/4 v1, 0x0
-
     .line 2
-    iget-object v2, p0, Lcom/google/common/graph/EndpointPair;->nodeU:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/google/common/graph/EndpointPair;->nodeU:Ljava/lang/Object;
 
-    aput-object v2, v0, v1
+    const/4 v2, 0x0
 
-    const/4 v1, 0x1
+    aput-object v1, v0, v2
 
     iget-object p0, p0, Lcom/google/common/graph/EndpointPair;->nodeV:Ljava/lang/Object;
+
+    const/4 v1, 0x1
 
     aput-object p0, v0, v1
 
@@ -357,6 +364,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/EndpointPair;->nodeU:Ljava/lang/Object;
 
     return-object p0
@@ -370,6 +378,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/EndpointPair;->nodeV:Ljava/lang/Object;
 
     return-object p0

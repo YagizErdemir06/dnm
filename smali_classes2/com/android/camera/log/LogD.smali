@@ -13,6 +13,7 @@
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -31,6 +32,7 @@
 
     sput-object v0, Lcom/android/camera/log/LogD;->DEBUG:Ljava/lang/String;
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -53,6 +55,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -61,6 +64,7 @@
 .method public static d(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
+    .line 1
     sget-object v0, Lcom/android/camera/log/LogD;->DEBUG:Ljava/lang/String;
 
     const/4 v1, 0x3
@@ -71,6 +75,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-static {p0}, Lcom/android/camera/log/LogD;->getTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -88,6 +93,7 @@
 .method private static getMsg(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -108,6 +114,7 @@
 .method private static getTag(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -128,6 +135,7 @@
 .method public static v(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
+    .line 1
     sget-object v0, Lcom/android/camera/log/LogD;->DEBUG:Ljava/lang/String;
 
     const/4 v1, 0x2
@@ -138,6 +146,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-static {p0}, Lcom/android/camera/log/LogD;->getTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0

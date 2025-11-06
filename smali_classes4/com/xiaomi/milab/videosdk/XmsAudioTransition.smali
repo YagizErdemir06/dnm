@@ -15,6 +15,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/milab/videosdk/XmsTransition;-><init>(Lcom/xiaomi/milab/videosdk/XmsTrack;)V
 
     return-void
@@ -25,6 +26,7 @@
 .method public isNULL()Z
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     const-wide/16 v2, 0x0

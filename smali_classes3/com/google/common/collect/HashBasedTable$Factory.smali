@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/HashBasedTable$Factory;
+.class public Lcom/google/common/collect/HashBasedTable$Factory;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -38,15 +38,17 @@
 
 
 # instance fields
-.field final expectedSize:I
+.field public final expectedSize:I
 
 
 # direct methods
 .method public constructor <init>(I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/google/common/collect/HashBasedTable$Factory;->expectedSize:I
 
     return-void

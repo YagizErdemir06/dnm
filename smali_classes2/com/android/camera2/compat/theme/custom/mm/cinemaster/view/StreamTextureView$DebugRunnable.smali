@@ -1,4 +1,4 @@
-.class Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView$DebugRunnable;
+.class public Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView$DebugRunnable;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,12 +18,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;
+.field public final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;
 
 
 # direct methods
 .method private constructor <init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView$DebugRunnable;->this$0:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;
@@ -47,16 +55,18 @@
 .method public run()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView$DebugRunnable;->this$0:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;
 
-    invoke-static {v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->access$100(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;)Lve/g;
+    invoke-static {v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->access$100(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;)Ld/o/f/f/f;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lve/g;->h()Ljava/lang/String;
+    invoke-virtual {v0}, Ld/o/f/f/f;->g()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 2
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView$DebugRunnable;->this$0:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;
 
     invoke-static {v1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->access$200(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;)Landroid/widget/TextView;
@@ -65,6 +75,7 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView$DebugRunnable;->this$0:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;
 
     invoke-static {v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->access$200(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;)Landroid/widget/TextView;
@@ -73,8 +84,9 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
+    .line 4
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView$DebugRunnable;->this$0:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;
 
     invoke-static {v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->access$300(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;)Z
@@ -83,6 +95,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 5
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView$DebugRunnable;->this$0:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;
 
     invoke-static {v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->access$200(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;)Landroid/widget/TextView;
@@ -91,10 +104,11 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setRotation(F)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setRotation(F)V
 
     goto :goto_0
 
+    .line 6
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView$DebugRunnable;->this$0:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;
 
@@ -104,8 +118,9 @@
 
     const/high16 v1, 0x42b40000    # 90.0f
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setRotation(F)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setRotation(F)V
 
+    .line 7
     :goto_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView$DebugRunnable;->this$0:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;
 

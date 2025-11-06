@@ -24,9 +24,9 @@
 
 
 # instance fields
-.field allowsParallelEdges:Z
+.field public allowsParallelEdges:Z
 
-.field edgeOrder:Lcom/google/common/graph/ElementOrder;
+.field public edgeOrder:Lcom/google/common/graph/ElementOrder;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/graph/ElementOrder<",
@@ -35,7 +35,7 @@
     .end annotation
 .end field
 
-.field expectedEdgeCount:Lcom/google/common/base/Optional;
+.field public expectedEdgeCount:Lcom/google/common/base/Optional;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/base/Optional<",
@@ -50,18 +50,22 @@
 .method private constructor <init>(Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/graph/AbstractGraphBuilder;-><init>(Z)V
 
     const/4 p1, 0x0
 
+    .line 2
     iput-boolean p1, p0, Lcom/google/common/graph/NetworkBuilder;->allowsParallelEdges:Z
 
+    .line 3
     invoke-static {}, Lcom/google/common/graph/ElementOrder;->insertion()Lcom/google/common/graph/ElementOrder;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/common/graph/NetworkBuilder;->edgeOrder:Lcom/google/common/graph/ElementOrder;
 
+    .line 4
     invoke-static {}, Lcom/google/common/base/Optional;->absent()Lcom/google/common/base/Optional;
 
     move-result-object p1
@@ -96,6 +100,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/graph/NetworkBuilder;
 
     const/4 v1, 0x1
@@ -121,6 +126,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/graph/NetworkBuilder;
 
     invoke-interface {p0}, Lcom/google/common/graph/Network;->isDirected()Z
@@ -129,6 +135,7 @@
 
     invoke-direct {v0, v1}, Lcom/google/common/graph/NetworkBuilder;-><init>(Z)V
 
+    .line 2
     invoke-interface {p0}, Lcom/google/common/graph/Network;->allowsParallelEdges()Z
 
     move-result v1
@@ -137,6 +144,7 @@
 
     move-result-object v0
 
+    .line 3
     invoke-interface {p0}, Lcom/google/common/graph/Network;->allowsSelfLoops()Z
 
     move-result v1
@@ -145,6 +153,7 @@
 
     move-result-object v0
 
+    .line 4
     invoke-interface {p0}, Lcom/google/common/graph/Network;->nodeOrder()Lcom/google/common/graph/ElementOrder;
 
     move-result-object v1
@@ -153,6 +162,7 @@
 
     move-result-object v0
 
+    .line 5
     invoke-interface {p0}, Lcom/google/common/graph/Network;->edgeOrder()Lcom/google/common/graph/ElementOrder;
 
     move-result-object p0
@@ -176,6 +186,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/graph/NetworkBuilder;
 
     const/4 v1, 0x0
@@ -197,6 +208,7 @@
         }
     .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lcom/google/common/graph/NetworkBuilder;->allowsParallelEdges:Z
 
     return-object p0
@@ -212,6 +224,7 @@
         }
     .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lcom/google/common/graph/AbstractGraphBuilder;->allowsSelfLoops:Z
 
     return-object p0
@@ -227,6 +240,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/graph/StandardMutableNetwork;
 
     invoke-direct {v0, p0}, Lcom/google/common/graph/StandardMutableNetwork;-><init>(Lcom/google/common/graph/NetworkBuilder;)V
@@ -246,10 +260,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/graph/NetworkBuilder;->cast()Lcom/google/common/graph/NetworkBuilder;
 
     move-result-object p0
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -271,6 +287,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/graph/Graphs;->checkNonNegative(I)I
 
     move-result p1
@@ -298,6 +315,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/graph/Graphs;->checkNonNegative(I)I
 
     move-result p1
@@ -325,10 +343,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/graph/NetworkBuilder;->cast()Lcom/google/common/graph/NetworkBuilder;
 
     move-result-object p0
 
+    .line 2
     new-instance v0, Lcom/google/common/graph/ImmutableNetwork$Builder;
 
     invoke-direct {v0, p0}, Lcom/google/common/graph/ImmutableNetwork$Builder;-><init>(Lcom/google/common/graph/NetworkBuilder;)V
@@ -348,10 +368,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/graph/NetworkBuilder;->cast()Lcom/google/common/graph/NetworkBuilder;
 
     move-result-object p0
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1

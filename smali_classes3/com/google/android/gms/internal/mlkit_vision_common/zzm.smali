@@ -9,6 +9,7 @@
 
     const/4 v0, 0x4
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/google/android/gms/internal/mlkit_vision_common/zzj;-><init>(I)V
 
     return-void
@@ -19,6 +20,7 @@
 .method public final zzb(Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_vision_common/zzm;
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/android/gms/internal/mlkit_vision_common/zzj;->zza(Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_vision_common/zzj;
 
     return-object p0
@@ -29,6 +31,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/gms/internal/mlkit_vision_common/zzj;->zzc:Z
 
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_common/zzj;->zza:[Ljava/lang/Object;

@@ -1,16 +1,17 @@
-.class final Lcom/google/android/gms/common/api/internal/zaan;
+.class public final Lcom/google/android/gms/common/api/internal/zaan;
 .super Lcom/google/android/gms/common/api/internal/zabg;
 .source "SourceFile"
 
 
 # instance fields
-.field final synthetic zaa:Lcom/google/android/gms/common/internal/BaseGmsClient$ConnectionProgressReportCallbacks;
+.field public final synthetic zaa:Lcom/google/android/gms/common/internal/BaseGmsClient$ConnectionProgressReportCallbacks;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/gms/common/api/internal/zaao;Lcom/google/android/gms/common/api/internal/zabf;Lcom/google/android/gms/common/internal/BaseGmsClient$ConnectionProgressReportCallbacks;)V
     .locals 0
 
+    .line 1
     iput-object p3, p0, Lcom/google/android/gms/common/api/internal/zaan;->zaa:Lcom/google/android/gms/common/internal/BaseGmsClient$ConnectionProgressReportCallbacks;
 
     invoke-direct {p0, p2}, Lcom/google/android/gms/common/api/internal/zabg;-><init>(Lcom/google/android/gms/common/api/internal/zabf;)V
@@ -26,6 +27,7 @@
         value = "mLock"
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zaan;->zaa:Lcom/google/android/gms/common/internal/BaseGmsClient$ConnectionProgressReportCallbacks;
 
     new-instance v0, Lcom/google/android/gms/common/ConnectionResult;

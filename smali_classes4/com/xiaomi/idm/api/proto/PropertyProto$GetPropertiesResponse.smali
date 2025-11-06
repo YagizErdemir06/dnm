@@ -65,12 +65,15 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;
 
     invoke-direct {v0}, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;-><init>()V
 
+    .line 2
     sput-object v0, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;
 
+    .line 3
     const-class v1, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;
 
     invoke-static {v1, v0}, Lcom/google/protobuf/GeneratedMessageLite;->registerDefaultInstance(Ljava/lang/Class;Lcom/google/protobuf/GeneratedMessageLite;)V
@@ -81,8 +84,10 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageLite;-><init>()V
 
+    .line 2
     invoke-static {}, Lcom/google/protobuf/GeneratedMessageLite;->emptyProtobufList()Lcom/google/protobuf/Internal$ProtobufList;
 
     move-result-object v0
@@ -95,6 +100,7 @@
 .method public static synthetic access$1000(Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;Ljava/lang/Iterable;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;->addAllPropertyNode(Ljava/lang/Iterable;)V
 
     return-void
@@ -103,6 +109,7 @@
 .method public static synthetic access$1100(Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;->clearPropertyNode()V
 
     return-void
@@ -111,6 +118,7 @@
 .method public static synthetic access$1200(Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;->removePropertyNode(I)V
 
     return-void
@@ -119,6 +127,7 @@
 .method public static synthetic access$600()Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;
 
     return-object v0
@@ -127,6 +136,7 @@
 .method public static synthetic access$700(Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;ILcom/xiaomi/idm/api/proto/PropertyProto$PropertyNode;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;->setPropertyNode(ILcom/xiaomi/idm/api/proto/PropertyProto$PropertyNode;)V
 
     return-void
@@ -135,6 +145,7 @@
 .method public static synthetic access$800(Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;Lcom/xiaomi/idm/api/proto/PropertyProto$PropertyNode;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;->addPropertyNode(Lcom/xiaomi/idm/api/proto/PropertyProto$PropertyNode;)V
 
     return-void
@@ -143,6 +154,7 @@
 .method public static synthetic access$900(Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;ILcom/xiaomi/idm/api/proto/PropertyProto$PropertyNode;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;->addPropertyNode(ILcom/xiaomi/idm/api/proto/PropertyProto$PropertyNode;)V
 
     return-void
@@ -160,8 +172,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;->ensurePropertyNodeIsMutable()V
 
+    .line 2
     iget-object p0, p0, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;->propertyNode_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-static {p1, p0}, Lcom/google/protobuf/AbstractMessageLite;->addAll(Ljava/lang/Iterable;Ljava/util/List;)V
@@ -206,6 +220,7 @@
 .method private clearPropertyNode()V
     .locals 1
 
+    .line 1
     invoke-static {}, Lcom/google/protobuf/GeneratedMessageLite;->emptyProtobufList()Lcom/google/protobuf/Internal$ProtobufList;
 
     move-result-object v0
@@ -218,14 +233,17 @@
 .method private ensurePropertyNodeIsMutable()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;->propertyNode_:Lcom/google/protobuf/Internal$ProtobufList;
 
+    .line 2
     invoke-interface {v0}, Lcom/google/protobuf/Internal$ProtobufList;->isModifiable()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
+    .line 3
     invoke-static {v0}, Lcom/google/protobuf/GeneratedMessageLite;->mutableCopy(Lcom/google/protobuf/Internal$ProtobufList;)Lcom/google/protobuf/Internal$ProtobufList;
 
     move-result-object v0
@@ -239,6 +257,7 @@
 .method public static getDefaultInstance()Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;
 
     return-object v0
@@ -525,6 +544,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;
 
     invoke-virtual {v0}, Lcom/google/protobuf/GeneratedMessageLite;->getParserForType()Lcom/google/protobuf/Parser;
@@ -537,8 +557,10 @@
 .method private removePropertyNode(I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;->ensurePropertyNodeIsMutable()V
 
+    .line 2
     iget-object p0, p0, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;->propertyNode_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-interface {p0, p1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
@@ -549,10 +571,13 @@
 .method private setPropertyNode(ILcom/xiaomi/idm/api/proto/PropertyProto$PropertyNode;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 2
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;->ensurePropertyNodeIsMutable()V
 
+    .line 3
     iget-object p0, p0, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;->propertyNode_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-interface {p0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
@@ -565,6 +590,7 @@
 .method public final dynamicMethod(Lcom/google/protobuf/GeneratedMessageLite$MethodToInvoke;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     sget-object p0, Lcom/xiaomi/idm/api/proto/PropertyProto$1;->$SwitchMap$com$google$protobuf$GeneratedMessageLite$MethodToInvoke:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
@@ -579,6 +605,7 @@
 
     packed-switch p0, :pswitch_data_0
 
+    .line 2
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -588,6 +615,7 @@
     :pswitch_0
     return-object p2
 
+    .line 3
     :pswitch_1
     invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
@@ -595,28 +623,34 @@
 
     return-object p0
 
+    .line 4
     :pswitch_2
     sget-object p0, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;->PARSER:Lcom/google/protobuf/Parser;
 
     if-nez p0, :cond_1
 
+    .line 5
     const-class p1, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;
 
     monitor-enter p1
 
+    .line 6
     :try_start_0
     sget-object p0, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;->PARSER:Lcom/google/protobuf/Parser;
 
     if-nez p0, :cond_0
 
+    .line 7
     new-instance p0, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;
 
     sget-object p2, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;
 
     invoke-direct {p0, p2}, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;-><init>(Lcom/google/protobuf/GeneratedMessageLite;)V
 
+    .line 8
     sput-object p0, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;->PARSER:Lcom/google/protobuf/Parser;
 
+    .line 9
     :cond_0
     monitor-exit p1
 
@@ -635,6 +669,7 @@
     :goto_0
     return-object p0
 
+    .line 10
     :pswitch_3
     sget-object p0, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;
 
@@ -651,12 +686,14 @@
 
     aput-object p3, p0, p2
 
+    .line 11
     const-class p2, Lcom/xiaomi/idm/api/proto/PropertyProto$PropertyNode;
 
     aput-object p2, p0, p1
 
     const-string p1, "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b"
 
+    .line 12
     sget-object p2, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;
 
     invoke-static {p2, p1, p0}, Lcom/google/protobuf/GeneratedMessageLite;->newMessageInfo(Lcom/google/protobuf/MessageLite;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
@@ -665,6 +702,7 @@
 
     return-object p0
 
+    .line 13
     :pswitch_5
     new-instance p0, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse$Builder;
 
@@ -672,6 +710,7 @@
 
     return-object p0
 
+    .line 14
     :pswitch_6
     new-instance p0, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;
 
@@ -696,6 +735,7 @@
 .method public getPropertyNode(I)Lcom/xiaomi/idm/api/proto/PropertyProto$PropertyNode;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;->propertyNode_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -710,6 +750,7 @@
 .method public getPropertyNodeCount()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;->propertyNode_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-interface {p0}, Ljava/util/List;->size()I
@@ -730,6 +771,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;->propertyNode_:Lcom/google/protobuf/Internal$ProtobufList;
 
     return-object p0
@@ -738,6 +780,7 @@
 .method public getPropertyNodeOrBuilder(I)Lcom/xiaomi/idm/api/proto/PropertyProto$PropertyNodeOrBuilder;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;->propertyNode_:Lcom/google/protobuf/Internal$ProtobufList;
 
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -761,6 +804,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/proto/PropertyProto$GetPropertiesResponse;->propertyNode_:Lcom/google/protobuf/Internal$ProtobufList;
 
     return-object p0

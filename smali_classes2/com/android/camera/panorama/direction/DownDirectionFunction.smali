@@ -6,11 +6,31 @@
 # direct methods
 .method public constructor <init>(IIIIFI)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "inputWidth",
+            "inputHeight",
+            "maxWidth",
+            "maxHeight",
+            "scale",
+            "angle"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct/range {p0 .. p6}, Lcom/android/camera/panorama/direction/DirectionFunction;-><init>(IIIIFI)V
 
     const/4 p1, 0x3
 
+    .line 2
     iput p1, p0, Lcom/android/camera/panorama/direction/DirectionFunction;->mDirection:I
 
     return-void
@@ -28,9 +48,10 @@
 
 .method public getPreviewSize()Landroid/util/Size;
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera/panorama/direction/DirectionFunction;->getVerticalPreviewSize()Landroid/util/Size;
 
     move-result-object p0

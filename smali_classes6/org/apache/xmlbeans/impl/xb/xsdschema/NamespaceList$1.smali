@@ -1,24 +1,25 @@
-.class synthetic Lorg/apache/xmlbeans/impl/xb/xsdschema/NamespaceList$1;
+.class public synthetic Lorg/apache/xmlbeans/impl/xb/xsdschema/NamespaceList$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field static synthetic class$org$apache$xmlbeans$impl$xb$xsdschema$NamespaceList:Ljava/lang/Class;
+.field public static synthetic class$org$apache$xmlbeans$impl$xb$xsdschema$NamespaceList:Ljava/lang/Class;
 
-.field static synthetic class$org$apache$xmlbeans$impl$xb$xsdschema$NamespaceList$Member:Ljava/lang/Class;
+.field public static synthetic class$org$apache$xmlbeans$impl$xb$xsdschema$NamespaceList$Member:Ljava/lang/Class;
 
-.field static synthetic class$org$apache$xmlbeans$impl$xb$xsdschema$NamespaceList$Member2:Ljava/lang/Class;
+.field public static synthetic class$org$apache$xmlbeans$impl$xb$xsdschema$NamespaceList$Member2:Ljava/lang/Class;
 
-.field static synthetic class$org$apache$xmlbeans$impl$xb$xsdschema$NamespaceList$Member2$Item:Ljava/lang/Class;
+.field public static synthetic class$org$apache$xmlbeans$impl$xb$xsdschema$NamespaceList$Member2$Item:Ljava/lang/Class;
 
-.field static synthetic class$org$apache$xmlbeans$impl$xb$xsdschema$NamespaceList$Member2$Item$Member:Ljava/lang/Class;
+.field public static synthetic class$org$apache$xmlbeans$impl$xb$xsdschema$NamespaceList$Member2$Item$Member:Ljava/lang/Class;
 
 
 # direct methods
 .method public static synthetic class$(Ljava/lang/String;)Ljava/lang/Class;
     .locals 1
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -35,7 +36,7 @@
 
     invoke-direct {v0}, Ljava/lang/NoClassDefFoundError;-><init>()V
 
-    invoke-virtual {v0, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v0, p0}, Ljava/lang/NoClassDefFoundError;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     move-result-object p0
 

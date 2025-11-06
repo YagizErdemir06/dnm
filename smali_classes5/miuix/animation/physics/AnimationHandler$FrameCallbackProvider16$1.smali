@@ -1,4 +1,4 @@
-.class Lmiuix/animation/physics/AnimationHandler$FrameCallbackProvider16$1;
+.class public Lmiuix/animation/physics/AnimationHandler$FrameCallbackProvider16$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lmiuix/animation/physics/AnimationHandler$FrameCallbackProvider16;
+.field public final synthetic this$0:Lmiuix/animation/physics/AnimationHandler$FrameCallbackProvider16;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/animation/physics/AnimationHandler$FrameCallbackProvider16;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/animation/physics/AnimationHandler$FrameCallbackProvider16$1;->this$0:Lmiuix/animation/physics/AnimationHandler$FrameCallbackProvider16;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,11 +38,12 @@
 .method public doFrame(J)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/animation/physics/AnimationHandler$FrameCallbackProvider16$1;->this$0:Lmiuix/animation/physics/AnimationHandler$FrameCallbackProvider16;
 
     iget-object p0, p0, Lmiuix/animation/physics/AnimationHandler$AnimationFrameCallbackProvider;->mDispatcher:Lmiuix/animation/physics/AnimationHandler$AnimationCallbackDispatcher;
 
-    invoke-virtual {p0, p1, p2}, Lmiuix/animation/physics/AnimationHandler$AnimationCallbackDispatcher;->dispatchAnimationFrame(J)V
+    invoke-virtual {p0}, Lmiuix/animation/physics/AnimationHandler$AnimationCallbackDispatcher;->dispatchAnimationFrame()V
 
     return-void
 .end method

@@ -205,7 +205,6 @@
     <string name="accessibility_video_capture_button">ប៊ូតុងសម្រាប់ថតរូបពេលកំពុងថតវីដេអូ</string>
     <string name="accessibility_video_pause_button">ផ្អាកការថតវីដេអូ</string>
     <string name="accessibility_video_resume_button">បន្តការថតវីដេអូ</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">ស្នាមទឹកសម្គាល់ត្រូវបានបិទដំណើរការ</string>
     <string name="accessibility_watermark_image_on">ស្នាមទឹកសម្គាល់ត្រូវបានបើកដំណើរការ</string>
     <string name="accessibility_watermark_text">បើកផ្ទាំងកែតម្រូវស្នាមទឹកសម្គាល់</string>
@@ -213,16 +212,6 @@
     <string name="accessibility_zoom_button">ម៉ូដហ្ស៊ូម</string>
     <string name="actionbar_button_up_description">ថយក្រោយ</string>
     <string name="afternoon">ពេលរសៀល</string>
-    <string name="agent_flip_tbc">បន្តនៅលើអេក្រង់ខាងក្នុង</string>
-    <string name="agent_function_max">កែទៅតម្លៃអតិបរមា</string>
-    <string name="agent_function_min">កែទៅតម្លៃអប្បបរមា</string>
-    <string name="agent_workspace_mode_not_supported">មុខងារនេះមិនអាចប្រើបានទេ</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"មុខងារនេះមិនអាចប្រើបានទេ។
-បានបើកមុខងាររូបថតជំនួសវិញ។"</string>
-    <string name="agent_workspace_on">ប៉ារ៉ាម៉ែត្រកំណត់សម្រាប់ការថតរូប \"%1$s\"</string>
-    <string name="agent_workspace_tbc">ទិដ្ឋភាពការសិក្សា</string>
-    <string name="agent_workspace_tbc_use_default">"ទិដ្ឋភាពការសិក្សា…
-កំណត់ប៉ារ៉ាម៉ែត្រកាមេរ៉ាជាលំនាំដើម"</string>
     <string name="ai_agra_fort">បន្ទាយអាក្រា</string>
     <string name="ai_amber_fort">វិមាន Amber</string>
     <string name="ai_baby">ទារក</string>
@@ -781,7 +770,6 @@
     <string name="download_hint_cn">"Looks like your device isn't connected to WLAN. Use %1$s MB of mobile data to download items now?"</string>
     <string name="download_hint_wifi">ឧបករណ៍របស់អ្នកដូចជាមិនត្រូវបានតភ្ជាប់ទៅ Wi-Fi ទេ។ ប្រើទិន្នន័យចល័ត %1$s MB ដើម្បីទាញយកធាតុទាំងនោះឥឡូវនេះឬ?</string>
     <string name="download_in_progress">កំពុងទាញយក…</string>
-    <string name="download_network_error">មិនអាចទាញយកបានទេ។ សូមពិនិត្យសំណុំកំណត់បណ្តាញរបស់អ្នក។</string>
     <string name="download_title">ការព្រមានអំពីការប្រើប្រាស់ទិន្នន័យ</string>
     <string name="download_waiting">កំពុងរង់ចាំ…</string>
     <string name="dual_camera_lens_covered_toast">កញ្ចក់ត្រូវបានគ្របដណ្តប់។</string>
@@ -1015,7 +1003,7 @@
     <string name="lighting_hint_too_far">យកកាមេរ៉ាដាក់ឱ្យជិត</string>
     <string name="lighting_hint_usage">"អ្នកអាចប្រើបែបផែនភ្លើងបំភ្លឺ 
  របៀបបញ្ឈរ"</string>
-    <string name="lighting_lanshan">ស្រអាប់</string>
+    <string name="lighting_lanshan">Decadence</string>
     <string name="lighting_movie_light_effect_title">បែបផែនភាពយន្ត</string>
     <string name="lighting_neon">ណេអុង</string>
     <string name="lighting_nostalgia">អារម្មណ៍ពីមុន</string>
@@ -1260,7 +1248,6 @@
     <string name="miuix_appcompat_delete_description">លុប</string>
     <string name="miuix_appcompat_deselect_all">ដកការជ្រើសរើសទាំងអស់</string>
     <string name="miuix_appcompat_deselect_all_description">លែងជ្រើស​​ទាំងអស់</string>
-    <string name="miuix_appcompat_edit">កែសម្រួល</string>
     <string name="miuix_appcompat_search_action_mode_cancel">បោះបង់</string>
     <string name="miuix_appcompat_search_input_description">ស្វែងរក</string>
     <string name="miuix_appcompat_select_all">ជ្រើសរើសទាំងអស់</string>
@@ -2199,7 +2186,6 @@
     <string name="time_picker_label_hour">ម៉ោង</string>
     <string name="time_picker_label_minute">នាទី</string>
     <string name="time_stamp_date_format">dd/MM/yyyy</string>
-    <string name="time_stamp_date_format_minute">dd/MM/yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">អ្នកអាចបង្កកនិងលែងបង្កកផ្ទៃខាងក្រោយនៅពេលណាមួយមុនពេលឬពេលកំពុងថត។</string>
     <string name="timefreeze_guide_tip3">សូមឱ្យកម្មវត្ថុរបស់អ្នកស្ថិតនៅចំកណ្តាលស៊ុម</string>
     <string name="timefreeze_guide_tip4">អាចបញ្ឈប់ចលនាបាន</string>
@@ -2237,7 +2223,7 @@
     <string name="tip_flash_screen_light_on">ភ្លើង flash ខាងមុខ៖ បើក</string>
     <string name="tip_flash_soft_light_off">ភ្លើង flash ខាងមុខ៖ បិទ</string>
     <string name="tip_flash_soft_light_torch">ភ្លើង flash ខាងមុខ៖ ម៉ូដពិល</string>
-    <string name="tip_flash_torch">ពិល៖ ពន្លឺពិល</string>
+    <string name="tip_flash_torch">ភ្លើង Flash៖ បើកជានិច្ច</string>
     <string name="tip_friend_mode_connect_when_24GHz">ប្រើ%s GHz ការតភ្ជាប់ដើម្បីបង្កើនគុណភាពការបង្ហាញជាមុន</string>
     <string name="tip_friend_mode_display_device_name_connect">បានចែករំលែកការចាក់បញ្ចាំង</string>
     <string name="tip_friend_mode_display_device_name_disconnect">ឧបករណ៍ផ្សេងទៀតបានចាកចេញពីវគ្គនេះហើយ</string>

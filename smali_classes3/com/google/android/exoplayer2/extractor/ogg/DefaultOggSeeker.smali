@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;
+.class public final Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -62,6 +62,7 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/extractor/ogg/StreamReader;JJJJZ)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
@@ -83,13 +84,17 @@
     :cond_0
     move v0, v1
 
+    .line 2
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 3
     iput-object p1, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->streamReader:Lcom/google/android/exoplayer2/extractor/ogg/StreamReader;
 
+    .line 4
     iput-wide p2, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->payloadStartPosition:J
 
+    .line 5
     iput-wide p4, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->payloadEndPosition:J
 
     sub-long/2addr p4, p2
@@ -102,19 +107,23 @@
 
     goto :goto_1
 
+    .line 6
     :cond_1
     iput v1, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->state:I
 
     goto :goto_2
 
+    .line 7
     :cond_2
     :goto_1
     iput-wide p8, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->totalGranules:J
 
     const/4 p1, 0x4
 
+    .line 8
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->state:I
 
+    .line 9
     :goto_2
     new-instance p1, Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;
 
@@ -128,6 +137,7 @@
 .method public static synthetic access$100(Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;)Lcom/google/android/exoplayer2/extractor/ogg/StreamReader;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->streamReader:Lcom/google/android/exoplayer2/extractor/ogg/StreamReader;
 
     return-object p0
@@ -136,6 +146,7 @@
 .method public static synthetic access$200(Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;)J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->payloadStartPosition:J
 
     return-wide v0
@@ -144,6 +155,7 @@
 .method public static synthetic access$300(Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;)J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->payloadEndPosition:J
 
     return-wide v0
@@ -152,6 +164,7 @@
 .method public static synthetic access$400(Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;)J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->totalGranules:J
 
     return-wide v0
@@ -169,6 +182,7 @@
 
     move-object/from16 v1, p1
 
+    .line 1
     iget-wide v2, v0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->start:J
 
     iget-wide v4, v0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->end:J
@@ -181,11 +195,13 @@
 
     return-wide v3
 
+    .line 2
     :cond_0
     invoke-interface/range {p1 .. p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
     move-result-wide v5
 
+    .line 3
     iget-object v2, v0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->pageHeader:Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;
 
     iget-wide v7, v0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->end:J
@@ -196,6 +212,7 @@
 
     if-nez v2, :cond_2
 
+    .line 4
     iget-wide v0, v0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->start:J
 
     cmp-long v2, v0, v5
@@ -204,6 +221,7 @@
 
     return-wide v0
 
+    .line 5
     :cond_1
     new-instance v0, Ljava/io/IOException;
 
@@ -213,6 +231,7 @@
 
     throw v0
 
+    .line 6
     :cond_2
     iget-object v2, v0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->pageHeader:Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;
 
@@ -220,8 +239,10 @@
 
     invoke-virtual {v2, v1, v7}, Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;->populate(Lcom/google/android/exoplayer2/extractor/ExtractorInput;Z)Z
 
+    .line 7
     invoke-interface/range {p1 .. p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
 
+    .line 8
     iget-wide v7, v0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->targetGranule:J
 
     iget-object v2, v0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->pageHeader:Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;
@@ -230,6 +251,7 @@
 
     sub-long/2addr v7, v9
 
+    .line 9
     iget v11, v2, Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;->headerSize:I
 
     iget v2, v2, Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;->bodySize:I
@@ -255,12 +277,15 @@
 
     if-gez v2, :cond_4
 
+    .line 10
     iput-wide v5, v0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->end:J
 
+    .line 11
     iput-wide v9, v0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->endGranule:J
 
     goto :goto_0
 
+    .line 12
     :cond_4
     invoke-interface/range {p1 .. p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
@@ -272,12 +297,14 @@
 
     iput-wide v3, v0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->start:J
 
+    .line 13
     iget-object v3, v0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->pageHeader:Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;
 
     iget-wide v3, v3, Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;->granulePosition:J
 
     iput-wide v3, v0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->startGranule:J
 
+    .line 14
     :goto_0
     iget-wide v3, v0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->end:J
 
@@ -291,6 +318,7 @@
 
     if-gez v3, :cond_5
 
+    .line 15
     iput-wide v5, v0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->end:J
 
     return-wide v5
@@ -312,6 +340,7 @@
     :goto_1
     mul-long/2addr v3, v9
 
+    .line 16
     invoke-interface/range {p1 .. p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
     move-result-wide v1
@@ -338,6 +367,7 @@
 
     sub-long v13, v3, v5
 
+    .line 17
     invoke-static/range {v9 .. v14}, Lcom/google/android/exoplayer2/util/Util;->constrainValue(JJJ)J
 
     move-result-wide v0
@@ -353,17 +383,20 @@
         }
     .end annotation
 
+    .line 1
     :goto_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->pageHeader:Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;
 
     invoke-virtual {v0, p1}, Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;->skipToNextPage(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)Z
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->pageHeader:Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, p1, v1}, Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;->populate(Lcom/google/android/exoplayer2/extractor/ExtractorInput;Z)Z
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->pageHeader:Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;
 
     iget-wide v1, v0, Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;->granulePosition:J
@@ -374,10 +407,12 @@
 
     if-lez v1, :cond_0
 
+    .line 4
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
 
     return-void
 
+    .line 5
     :cond_0
     iget v1, v0, Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;->headerSize:I
 
@@ -387,12 +422,14 @@
 
     invoke-interface {p1, v1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->skipFully(I)V
 
+    .line 6
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->start:J
 
+    .line 7
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->pageHeader:Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;
 
     iget-wide v0, v0, Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;->granulePosition:J
@@ -451,6 +488,7 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->state:I
 
     const/4 v1, 0x1
@@ -475,6 +513,7 @@
 
     return-wide v3
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -482,6 +521,7 @@
 
     throw p0
 
+    .line 3
     :cond_1
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->getNextSeekPosition(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)J
 
@@ -493,14 +533,18 @@
 
     return-wide v0
 
+    .line 4
     :cond_2
     iput v5, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->state:I
 
+    .line 5
     :cond_3
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->skipToPageOfTargetGranule(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)V
 
+    .line 6
     iput v2, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->state:I
 
+    .line 7
     iget-wide p0, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->startGranule:J
 
     const-wide/16 v0, 0x2
@@ -511,6 +555,7 @@
 
     return-wide p0
 
+    .line 8
     :cond_4
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
@@ -518,8 +563,10 @@
 
     iput-wide v3, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->positionBeforeSeekToEnd:J
 
+    .line 9
     iput v1, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->state:I
 
+    .line 10
     iget-wide v0, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->payloadEndPosition:J
 
     const-wide/32 v5, 0xff1b
@@ -532,6 +579,7 @@
 
     return-wide v0
 
+    .line 11
     :cond_5
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->readGranuleOfLastPage(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)J
 
@@ -539,8 +587,10 @@
 
     iput-wide v0, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->totalGranules:J
 
+    .line 12
     iput v2, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->state:I
 
+    .line 13
     iget-wide p0, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->positionBeforeSeekToEnd:J
 
     return-wide p0
@@ -557,10 +607,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->pageHeader:Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;->reset()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->pageHeader:Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;
 
     invoke-virtual {v0, p1}, Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;->skipToNextPage(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)Z
@@ -569,12 +621,14 @@
 
     if-eqz v0, :cond_2
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->pageHeader:Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, p1, v1}, Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;->populate(Lcom/google/android/exoplayer2/extractor/ExtractorInput;Z)Z
 
+    .line 4
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->pageHeader:Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;
 
     iget v1, v0, Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;->headerSize:I
@@ -585,10 +639,12 @@
 
     invoke-interface {p1, v1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->skipFully(I)V
 
+    .line 5
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->pageHeader:Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;
 
     iget-wide v0, v0, Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;->granulePosition:J
 
+    .line 6
     :goto_0
     iget-object v2, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->pageHeader:Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;
 
@@ -600,12 +656,14 @@
 
     if-eq v3, v4, :cond_1
 
+    .line 7
     invoke-virtual {v2, p1}, Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;->skipToNextPage(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
+    .line 8
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
     move-result-wide v2
@@ -616,6 +674,7 @@
 
     if-gez v2, :cond_1
 
+    .line 9
     iget-object v2, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->pageHeader:Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;
 
     const/4 v3, 0x1
@@ -626,6 +685,7 @@
 
     if-eqz v2, :cond_1
 
+    .line 10
     iget-object v2, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->pageHeader:Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;
 
     iget v3, v2, Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;->headerSize:I
@@ -642,6 +702,7 @@
 
     goto :goto_1
 
+    .line 11
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->pageHeader:Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;
 
@@ -653,6 +714,7 @@
     :goto_1
     return-wide v0
 
+    .line 12
     :cond_2
     new-instance p0, Ljava/io/EOFException;
 
@@ -662,19 +724,20 @@
 .end method
 
 .method public startSeek(J)V
-    .locals 6
+    .locals 10
 
-    const-wide/16 v2, 0x0
-
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->totalGranules:J
 
-    const-wide/16 v4, 0x1
+    const-wide/16 v2, 0x1
 
-    sub-long v4, v0, v4
+    sub-long v8, v0, v2
 
-    move-wide v0, p1
+    const-wide/16 v6, 0x0
 
-    invoke-static/range {v0 .. v5}, Lcom/google/android/exoplayer2/util/Util;->constrainValue(JJJ)J
+    move-wide v4, p1
+
+    invoke-static/range {v4 .. v9}, Lcom/google/android/exoplayer2/util/Util;->constrainValue(JJJ)J
 
     move-result-wide p1
 
@@ -682,20 +745,25 @@
 
     const/4 p1, 0x2
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->state:I
 
+    .line 3
     iget-wide p1, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->payloadStartPosition:J
 
     iput-wide p1, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->start:J
 
+    .line 4
     iget-wide p1, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->payloadEndPosition:J
 
     iput-wide p1, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->end:J
 
     const-wide/16 p1, 0x0
 
+    .line 5
     iput-wide p1, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->startGranule:J
 
+    .line 6
     iget-wide p1, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->totalGranules:J
 
     iput-wide p1, p0, Lcom/google/android/exoplayer2/extractor/ogg/DefaultOggSeeker;->endGranule:J

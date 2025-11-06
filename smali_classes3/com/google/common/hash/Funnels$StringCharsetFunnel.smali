@@ -1,4 +1,4 @@
-.class Lcom/google/common/hash/Funnels$StringCharsetFunnel;
+.class public Lcom/google/common/hash/Funnels$StringCharsetFunnel;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -42,8 +42,10 @@
 .method public constructor <init>(Ljava/nio/charset/Charset;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -64,12 +66,15 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/common/hash/Funnels$StringCharsetFunnel;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/common/hash/Funnels$StringCharsetFunnel;
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/hash/Funnels$StringCharsetFunnel;->charset:Ljava/nio/charset/Charset;
 
     iget-object p1, p1, Lcom/google/common/hash/Funnels$StringCharsetFunnel;->charset:Ljava/nio/charset/Charset;
@@ -111,6 +116,7 @@
 .method public hashCode()I
     .locals 1
 
+    .line 1
     const-class v0, Lcom/google/common/hash/Funnels$StringCharsetFunnel;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -131,6 +137,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/hash/Funnels$StringCharsetFunnel;->charset:Ljava/nio/charset/Charset;
 
     invoke-virtual {p0}, Ljava/nio/charset/Charset;->name()Ljava/lang/String;
@@ -171,6 +178,7 @@
 .method public writeReplace()Ljava/lang/Object;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/hash/Funnels$StringCharsetFunnel$SerializedForm;
 
     iget-object p0, p0, Lcom/google/common/hash/Funnels$StringCharsetFunnel;->charset:Ljava/nio/charset/Charset;

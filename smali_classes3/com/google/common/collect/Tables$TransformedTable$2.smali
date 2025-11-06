@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Tables$TransformedTable$2;
+.class public Lcom/google/common/collect/Tables$TransformedTable$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -29,13 +29,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/Tables$TransformedTable;
+.field public final synthetic this$0:Lcom/google/common/collect/Tables$TransformedTable;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/Tables$TransformedTable;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/Tables$TransformedTable$2;->this$0:Lcom/google/common/collect/Tables$TransformedTable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

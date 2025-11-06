@@ -30,6 +30,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/xiaomi/milab/videosdk/utils/UiThreadExecutor$1;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -40,6 +41,7 @@
 
     sput-object v0, Lcom/xiaomi/milab/videosdk/utils/UiThreadExecutor;->HANDLER:Landroid/os/Handler;
 
+    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -52,6 +54,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -60,6 +63,7 @@
 .method public static synthetic access$000(Lcom/xiaomi/milab/videosdk/utils/UiThreadExecutor$Token;)V
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/xiaomi/milab/videosdk/utils/UiThreadExecutor;->decrementToken(Lcom/xiaomi/milab/videosdk/utils/UiThreadExecutor$Token;)V
 
     return-void
@@ -76,10 +80,12 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/xiaomi/milab/videosdk/utils/UiThreadExecutor;->TOKENS:Ljava/util/Map;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-interface {v0, p0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -87,6 +93,7 @@
 
     check-cast p0, Lcom/xiaomi/milab/videosdk/utils/UiThreadExecutor$Token;
 
+    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -95,6 +102,7 @@
 
     return-void
 
+    .line 4
     :cond_0
     sget-object v0, Lcom/xiaomi/milab/videosdk/utils/UiThreadExecutor;->HANDLER:Landroid/os/Handler;
 
@@ -105,6 +113,7 @@
     :catchall_0
     move-exception p0
 
+    .line 5
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -124,10 +133,12 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/xiaomi/milab/videosdk/utils/UiThreadExecutor;->TOKENS:Ljava/util/Map;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget v1, p0, Lcom/xiaomi/milab/videosdk/utils/UiThreadExecutor$Token;->runnablesCount:I
 
@@ -137,8 +148,10 @@
 
     if-nez v1, :cond_0
 
+    .line 3
     iget-object v1, p0, Lcom/xiaomi/milab/videosdk/utils/UiThreadExecutor$Token;->id:Ljava/lang/String;
 
+    .line 4
     invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
@@ -147,8 +160,10 @@
 
     if-eq v2, p0, :cond_0
 
+    .line 5
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 6
     :cond_0
     monitor-exit v0
 
@@ -175,10 +190,12 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/xiaomi/milab/videosdk/utils/UiThreadExecutor;->TOKENS:Ljava/util/Map;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -188,14 +205,17 @@
 
     if-nez v1, :cond_0
 
+    .line 3
     new-instance v1, Lcom/xiaomi/milab/videosdk/utils/UiThreadExecutor$Token;
 
     const/4 v2, 0x0
 
     invoke-direct {v1, p0, v2}, Lcom/xiaomi/milab/videosdk/utils/UiThreadExecutor$Token;-><init>(Ljava/lang/String;Lcom/xiaomi/milab/videosdk/utils/UiThreadExecutor$1;)V
 
+    .line 4
     invoke-interface {v0, p0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 5
     :cond_0
     iget p0, v1, Lcom/xiaomi/milab/videosdk/utils/UiThreadExecutor$Token;->runnablesCount:I
 
@@ -203,6 +223,7 @@
 
     iput p0, v1, Lcom/xiaomi/milab/videosdk/utils/UiThreadExecutor$Token;->runnablesCount:I
 
+    .line 6
     monitor-exit v0
 
     return-object v1
@@ -210,6 +231,7 @@
     :catchall_0
     move-exception p0
 
+    .line 7
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -234,18 +256,21 @@
 
     const-string v0, ""
 
+    .line 1
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     sget-object p0, Lcom/xiaomi/milab/videosdk/utils/UiThreadExecutor;->HANDLER:Landroid/os/Handler;
 
     invoke-virtual {p0, p1, p2, p3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     return-void
 
+    .line 3
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -253,6 +278,7 @@
 
     add-long/2addr v0, p2
 
+    .line 4
     sget-object p2, Lcom/xiaomi/milab/videosdk/utils/UiThreadExecutor;->HANDLER:Landroid/os/Handler;
 
     invoke-static {p0}, Lcom/xiaomi/milab/videosdk/utils/UiThreadExecutor;->nextToken(Ljava/lang/String;)Lcom/xiaomi/milab/videosdk/utils/UiThreadExecutor$Token;

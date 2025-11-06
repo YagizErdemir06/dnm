@@ -1,4 +1,4 @@
-.class Landroidx/core/view/WindowInsetsCompat$BuilderImpl20;
+.class public Landroidx/core/view/WindowInsetsCompat$BuilderImpl20;
 .super Landroidx/core/view/WindowInsetsCompat$BuilderImpl;
 .source "SourceFile"
 
@@ -90,20 +90,22 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     sget-boolean v0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl20;->sConsumedFieldFetched:Z
 
-    const-class v1, Landroid/view/WindowInsets;
+    const/4 v1, 0x1
 
-    const/4 v2, 0x1
-
-    const-string v3, "WindowInsetsCompat"
+    const-string v2, "WindowInsetsCompat"
 
     if-nez v0, :cond_0
 
+    .line 2
     :try_start_0
-    const-string v0, "CONSUMED"
+    const-class v0, Landroid/view/WindowInsets;
 
-    invoke-virtual {v1, v0}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+    const-string v3, "CONSUMED"
+
+    invoke-virtual {v0, v3}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
 
@@ -116,22 +118,26 @@
     :catch_0
     move-exception v0
 
-    const-string v4, "Could not retrieve WindowInsets.CONSUMED field"
+    const-string v3, "Could not retrieve WindowInsets.CONSUMED field"
 
-    invoke-static {v3, v4, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    .line 3
+    invoke-static {v2, v3, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 4
     :goto_0
-    sput-boolean v2, Landroidx/core/view/WindowInsetsCompat$BuilderImpl20;->sConsumedFieldFetched:Z
+    sput-boolean v1, Landroidx/core/view/WindowInsetsCompat$BuilderImpl20;->sConsumedFieldFetched:Z
 
+    .line 5
     :cond_0
     sget-object v0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl20;->sConsumedField:Ljava/lang/reflect/Field;
 
-    const/4 v4, 0x0
+    const/4 v3, 0x0
 
     if-eqz v0, :cond_1
 
+    .line 6
     :try_start_1
-    invoke-virtual {v0, v4}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v3}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -139,36 +145,42 @@
 
     if-eqz v0, :cond_1
 
-    new-instance v5, Landroid/view/WindowInsets;
+    .line 7
+    new-instance v4, Landroid/view/WindowInsets;
 
-    invoke-direct {v5, v0}, Landroid/view/WindowInsets;-><init>(Landroid/view/WindowInsets;)V
+    invoke-direct {v4, v0}, Landroid/view/WindowInsets;-><init>(Landroid/view/WindowInsets;)V
     :try_end_1
     .catch Ljava/lang/ReflectiveOperationException; {:try_start_1 .. :try_end_1} :catch_1
 
-    return-object v5
+    return-object v4
 
     :catch_1
     move-exception v0
 
-    const-string v5, "Could not get value from WindowInsets.CONSUMED field"
+    const-string v4, "Could not get value from WindowInsets.CONSUMED field"
 
-    invoke-static {v3, v5, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    .line 8
+    invoke-static {v2, v4, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 9
     :cond_1
     sget-boolean v0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl20;->sConstructorFetched:Z
 
-    const/4 v5, 0x0
+    const/4 v4, 0x0
 
     if-nez v0, :cond_2
 
+    .line 10
     :try_start_2
-    new-array v0, v2, [Ljava/lang/Class;
+    const-class v0, Landroid/view/WindowInsets;
+
+    new-array v5, v1, [Ljava/lang/Class;
 
     const-class v6, Landroid/graphics/Rect;
 
-    aput-object v6, v0, v5
+    aput-object v6, v5, v4
 
-    invoke-virtual {v1, v0}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+    invoke-virtual {v0, v5}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object v0
 
@@ -181,26 +193,30 @@
     :catch_2
     move-exception v0
 
-    const-string v1, "Could not retrieve WindowInsets(Rect) constructor"
+    const-string v5, "Could not retrieve WindowInsets(Rect) constructor"
 
-    invoke-static {v3, v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    .line 11
+    invoke-static {v2, v5, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 12
     :goto_1
-    sput-boolean v2, Landroidx/core/view/WindowInsetsCompat$BuilderImpl20;->sConstructorFetched:Z
+    sput-boolean v1, Landroidx/core/view/WindowInsetsCompat$BuilderImpl20;->sConstructorFetched:Z
 
+    .line 13
     :cond_2
     sget-object v0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl20;->sConstructor:Ljava/lang/reflect/Constructor;
 
     if-eqz v0, :cond_3
 
     :try_start_3
-    new-array v1, v2, [Ljava/lang/Object;
+    new-array v1, v1, [Ljava/lang/Object;
 
-    new-instance v2, Landroid/graphics/Rect;
+    .line 14
+    new-instance v5, Landroid/graphics/Rect;
 
-    invoke-direct {v2}, Landroid/graphics/Rect;-><init>()V
+    invoke-direct {v5}, Landroid/graphics/Rect;-><init>()V
 
-    aput-object v2, v1, v5
+    aput-object v5, v1, v4
 
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -217,10 +233,11 @@
 
     const-string v1, "Could not invoke WindowInsets(Rect) constructor"
 
-    invoke-static {v3, v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    .line 15
+    invoke-static {v2, v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_3
-    return-object v4
+    return-object v3
 .end method
 
 
@@ -230,18 +247,22 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroidx/core/view/WindowInsetsCompat$BuilderImpl;->applyInsetTypes()V
 
+    .line 2
     iget-object v0, p0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl20;->mPlatformInsets:Landroid/view/WindowInsets;
 
     invoke-static {v0}, Landroidx/core/view/WindowInsetsCompat;->toWindowInsetsCompat(Landroid/view/WindowInsets;)Landroidx/core/view/WindowInsetsCompat;
 
     move-result-object v0
 
+    .line 3
     iget-object v1, p0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl;->mInsetsTypeMask:[Landroidx/core/graphics/Insets;
 
     invoke-virtual {v0, v1}, Landroidx/core/view/WindowInsetsCompat;->setOverriddenInsets([Landroidx/core/graphics/Insets;)V
 
+    .line 4
     iget-object p0, p0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl20;->mStableInsets:Landroidx/core/graphics/Insets;
 
     invoke-virtual {v0, p0}, Landroidx/core/view/WindowInsetsCompat;->setStableInsets(Landroidx/core/graphics/Insets;)V
@@ -256,6 +277,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl20;->mStableInsets:Landroidx/core/graphics/Insets;
 
     return-void
@@ -268,10 +290,12 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl20;->mPlatformInsets:Landroid/view/WindowInsets;
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget v1, p1, Landroidx/core/graphics/Insets;->left:I
 
     iget v2, p1, Landroidx/core/graphics/Insets;->top:I

@@ -74,8 +74,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/MultimapBuilder$4;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/MultimapBuilder$4;-><init>(Ljava/lang/Class;)V
@@ -245,10 +247,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/MultimapBuilder;->build()Lcom/google/common/collect/Multimap;
 
     move-result-object p0
 
+    .line 2
     invoke-interface {p0, p1}, Lcom/google/common/collect/Multimap;->putAll(Lcom/google/common/collect/Multimap;)Z
 
     return-object p0

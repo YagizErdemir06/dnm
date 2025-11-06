@@ -22,7 +22,7 @@
     }
 .end annotation
 
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
     bv = {
         0x1,
         0x0,
@@ -52,17 +52,19 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v0
 
     const-string v1, "ItemBlendNodeBlendTime0"
 
-    invoke-virtual {p0, v1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -115,6 +117,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/avatar/avatar/AnimationGraph$mGraphParamsMap$1;->getEntries()Ljava/util/Set;
 
     move-result-object p0
@@ -158,6 +161,7 @@
 .method public bridge getEntries()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -168,6 +172,7 @@
 .method public bridge getKeys()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
     move-result-object p0
@@ -209,6 +214,7 @@
 .method public bridge getSize()I
     .locals 0
 
+    .line 1
     invoke-super {p0}, Ljava/util/HashMap;->size()I
 
     move-result p0
@@ -219,6 +225,7 @@
 .method public bridge getValues()Ljava/util/Collection;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
     move-result-object p0
@@ -237,6 +244,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/avatar/avatar/AnimationGraph$mGraphParamsMap$1;->getKeys()Ljava/util/Set;
 
     move-result-object p0
@@ -315,6 +323,7 @@
 .method public final bridge size()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/avatar/avatar/AnimationGraph$mGraphParamsMap$1;->getSize()I
 
     move-result p0
@@ -333,6 +342,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/avatar/avatar/AnimationGraph$mGraphParamsMap$1;->getValues()Ljava/util/Collection;
 
     move-result-object p0

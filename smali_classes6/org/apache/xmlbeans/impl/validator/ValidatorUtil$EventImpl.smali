@@ -1,4 +1,4 @@
-.class Lorg/apache/xmlbeans/impl/validator/ValidatorUtil$EventImpl;
+.class public Lorg/apache/xmlbeans/impl/validator/ValidatorUtil$EventImpl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,19 +18,22 @@
 
 
 # instance fields
-.field _prefixResolver:Lorg/apache/xmlbeans/impl/common/PrefixResolver;
+.field public _prefixResolver:Lorg/apache/xmlbeans/impl/common/PrefixResolver;
 
-.field _text:Ljava/lang/String;
+.field public _text:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>(Lorg/apache/xmlbeans/impl/common/PrefixResolver;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/validator/ValidatorUtil$EventImpl;->_prefixResolver:Lorg/apache/xmlbeans/impl/common/PrefixResolver;
 
+    .line 3
     iput-object p2, p0, Lorg/apache/xmlbeans/impl/validator/ValidatorUtil$EventImpl;->_text:Ljava/lang/String;
 
     return-void
@@ -65,6 +68,7 @@
 .method public getNamespaceForPrefix(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatorUtil$EventImpl;->_prefixResolver:Lorg/apache/xmlbeans/impl/common/PrefixResolver;
 
     invoke-interface {p0, p1}, Lorg/apache/xmlbeans/impl/common/PrefixResolver;->getNamespaceForPrefix(Ljava/lang/String;)Ljava/lang/String;

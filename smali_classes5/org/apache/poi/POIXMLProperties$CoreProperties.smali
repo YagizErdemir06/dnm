@@ -17,7 +17,7 @@
 # instance fields
 .field private part:Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;
 
-.field final synthetic this$0:Lorg/apache/poi/POIXMLProperties;
+.field public final synthetic this$0:Lorg/apache/poi/POIXMLProperties;
 
 
 # direct methods
@@ -49,6 +49,7 @@
 .method public getCategory()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLProperties$CoreProperties;->part:Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;
 
     invoke-virtual {p0}, Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;->getCategoryProperty()Lorg/apache/poi/openxml4j/util/Nullable;
@@ -67,6 +68,7 @@
 .method public getContentStatus()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLProperties$CoreProperties;->part:Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;
 
     invoke-virtual {p0}, Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;->getContentStatusProperty()Lorg/apache/poi/openxml4j/util/Nullable;
@@ -85,6 +87,7 @@
 .method public getContentType()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLProperties$CoreProperties;->part:Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;
 
     invoke-virtual {p0}, Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;->getContentTypeProperty()Lorg/apache/poi/openxml4j/util/Nullable;
@@ -103,6 +106,7 @@
 .method public getCreated()Ljava/util/Date;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLProperties$CoreProperties;->part:Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;
 
     invoke-virtual {p0}, Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;->getCreatedProperty()Lorg/apache/poi/openxml4j/util/Nullable;
@@ -121,6 +125,7 @@
 .method public getCreator()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLProperties$CoreProperties;->part:Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;
 
     invoke-virtual {p0}, Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;->getCreatorProperty()Lorg/apache/poi/openxml4j/util/Nullable;
@@ -139,6 +144,7 @@
 .method public getDescription()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLProperties$CoreProperties;->part:Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;
 
     invoke-virtual {p0}, Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;->getDescriptionProperty()Lorg/apache/poi/openxml4j/util/Nullable;
@@ -157,6 +163,7 @@
 .method public getIdentifier()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLProperties$CoreProperties;->part:Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;
 
     invoke-virtual {p0}, Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;->getIdentifierProperty()Lorg/apache/poi/openxml4j/util/Nullable;
@@ -175,6 +182,7 @@
 .method public getKeywords()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLProperties$CoreProperties;->part:Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;
 
     invoke-virtual {p0}, Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;->getKeywordsProperty()Lorg/apache/poi/openxml4j/util/Nullable;
@@ -193,6 +201,7 @@
 .method public getLastPrinted()Ljava/util/Date;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLProperties$CoreProperties;->part:Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;
 
     invoke-virtual {p0}, Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;->getLastPrintedProperty()Lorg/apache/poi/openxml4j/util/Nullable;
@@ -211,6 +220,7 @@
 .method public getModified()Ljava/util/Date;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLProperties$CoreProperties;->part:Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;
 
     invoke-virtual {p0}, Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;->getModifiedProperty()Lorg/apache/poi/openxml4j/util/Nullable;
@@ -229,6 +239,7 @@
 .method public getRevision()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLProperties$CoreProperties;->part:Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;
 
     invoke-virtual {p0}, Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;->getRevisionProperty()Lorg/apache/poi/openxml4j/util/Nullable;
@@ -247,6 +258,7 @@
 .method public getSubject()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLProperties$CoreProperties;->part:Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;
 
     invoke-virtual {p0}, Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;->getSubjectProperty()Lorg/apache/poi/openxml4j/util/Nullable;
@@ -265,6 +277,7 @@
 .method public getTitle()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLProperties$CoreProperties;->part:Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;
 
     invoke-virtual {p0}, Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;->getTitleProperty()Lorg/apache/poi/openxml4j/util/Nullable;
@@ -283,6 +296,7 @@
 .method public getUnderlyingProperties()Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLProperties$CoreProperties;->part:Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;
 
     return-object p0
@@ -291,6 +305,7 @@
 .method public setCategory(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLProperties$CoreProperties;->part:Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;
 
     invoke-virtual {p0, p1}, Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;->setCategoryProperty(Ljava/lang/String;)V
@@ -301,6 +316,7 @@
 .method public setContentStatus(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLProperties$CoreProperties;->part:Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;
 
     invoke-virtual {p0, p1}, Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;->setContentStatusProperty(Ljava/lang/String;)V
@@ -311,6 +327,7 @@
 .method public setContentType(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLProperties$CoreProperties;->part:Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;
 
     invoke-virtual {p0, p1}, Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;->setContentTypeProperty(Ljava/lang/String;)V
@@ -351,6 +368,7 @@
 .method public setCreator(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLProperties$CoreProperties;->part:Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;
 
     invoke-virtual {p0, p1}, Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;->setCreatorProperty(Ljava/lang/String;)V
@@ -361,6 +379,7 @@
 .method public setDescription(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLProperties$CoreProperties;->part:Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;
 
     invoke-virtual {p0, p1}, Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;->setDescriptionProperty(Ljava/lang/String;)V
@@ -371,6 +390,7 @@
 .method public setIdentifier(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLProperties$CoreProperties;->part:Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;
 
     invoke-virtual {p0, p1}, Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;->setIdentifierProperty(Ljava/lang/String;)V
@@ -381,6 +401,7 @@
 .method public setKeywords(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLProperties$CoreProperties;->part:Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;
 
     invoke-virtual {p0, p1}, Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;->setKeywordsProperty(Ljava/lang/String;)V
@@ -451,9 +472,11 @@
 .method public setRevision(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     :try_start_0
     invoke-static {p1}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
 
+    .line 2
     iget-object p0, p0, Lorg/apache/poi/POIXMLProperties$CoreProperties;->part:Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;
 
     invoke-virtual {p0, p1}, Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;->setRevisionProperty(Ljava/lang/String;)V
@@ -467,6 +490,7 @@
 .method public setSubjectProperty(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLProperties$CoreProperties;->part:Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;
 
     invoke-virtual {p0, p1}, Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;->setSubjectProperty(Ljava/lang/String;)V
@@ -477,6 +501,7 @@
 .method public setTitle(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLProperties$CoreProperties;->part:Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;
 
     invoke-virtual {p0, p1}, Lorg/apache/poi/openxml4j/opc/internal/PackagePropertiesPart;->setTitleProperty(Ljava/lang/String;)V

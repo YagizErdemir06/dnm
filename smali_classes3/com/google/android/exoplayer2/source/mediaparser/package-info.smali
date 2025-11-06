@@ -1,4 +1,4 @@
-.class interface abstract synthetic Lcom/google/android/exoplayer2/source/mediaparser/package-info;
+.class public interface abstract synthetic Lcom/google/android/exoplayer2/source/mediaparser/package-info;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

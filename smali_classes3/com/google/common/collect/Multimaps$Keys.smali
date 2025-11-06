@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Multimaps$Keys;
+.class public Lcom/google/common/collect/Multimaps$Keys;
 .super Lcom/google/common/collect/AbstractMultiset;
 .source "SourceFile"
 
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field final multimap:Lcom/google/common/collect/Multimap;
+.field public final multimap:Lcom/google/common/collect/Multimap;
     .annotation build Lcom/google/j2objc/annotations/Weak;
     .end annotation
 
@@ -51,8 +51,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/AbstractMultiset;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/Multimaps$Keys;->multimap:Lcom/google/common/collect/Multimap;
 
     return-void
@@ -63,6 +65,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Multimaps$Keys;->multimap:Lcom/google/common/collect/Multimap;
 
     invoke-interface {p0}, Lcom/google/common/collect/Multimap;->clear()V
@@ -77,6 +80,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Multimaps$Keys;->multimap:Lcom/google/common/collect/Multimap;
 
     invoke-interface {p0, p1}, Lcom/google/common/collect/Multimap;->containsKey(Ljava/lang/Object;)Z
@@ -93,6 +97,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Multimaps$Keys;->multimap:Lcom/google/common/collect/Multimap;
 
     invoke-interface {p0}, Lcom/google/common/collect/Multimap;->asMap()Ljava/util/Map;
@@ -111,6 +116,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-interface {p0}, Ljava/util/Collection;->size()I
 
@@ -123,6 +129,7 @@
 .method public distinctElements()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Multimaps$Keys;->multimap:Lcom/google/common/collect/Multimap;
 
     invoke-interface {p0}, Lcom/google/common/collect/Multimap;->asMap()Ljava/util/Map;
@@ -146,6 +153,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/AssertionError;
 
     const-string v0, "should never be called"
@@ -165,6 +173,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Multimaps$Keys;->multimap:Lcom/google/common/collect/Multimap;
 
     invoke-interface {p0}, Lcom/google/common/collect/Multimap;->keySet()Ljava/util/Set;
@@ -185,10 +194,12 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/Multimaps$Keys$1;
 
     iget-object v1, p0, Lcom/google/common/collect/Multimaps$Keys;->multimap:Lcom/google/common/collect/Multimap;
 
+    .line 2
     invoke-interface {v1}, Lcom/google/common/collect/Multimap;->asMap()Ljava/util/Map;
 
     move-result-object v1
@@ -216,6 +227,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Multimaps$Keys;->multimap:Lcom/google/common/collect/Multimap;
 
     invoke-interface {p0}, Lcom/google/common/collect/Multimap;->entries()Ljava/util/Collection;
@@ -242,16 +254,19 @@
 
     const-string v0, "occurrences"
 
+    .line 1
     invoke-static {p2, v0}, Lcom/google/common/collect/CollectPreconditions;->checkNonnegative(ILjava/lang/String;)I
 
     if-nez p2, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/google/common/collect/Multimaps$Keys;->count(Ljava/lang/Object;)I
 
     move-result p0
 
     return p0
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lcom/google/common/collect/Multimaps$Keys;->multimap:Lcom/google/common/collect/Multimap;
 
@@ -271,6 +286,7 @@
 
     return p1
 
+    .line 4
     :cond_1
     invoke-interface {p0}, Ljava/util/Collection;->size()I
 
@@ -278,10 +294,12 @@
 
     if-lt p2, v0, :cond_2
 
+    .line 5
     invoke-interface {p0}, Ljava/util/Collection;->clear()V
 
     goto :goto_1
 
+    .line 6
     :cond_2
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -290,8 +308,10 @@
     :goto_0
     if-ge p1, p2, :cond_3
 
+    .line 7
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
+    .line 8
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V
 
     add-int/lit8 p1, p1, 0x1
@@ -306,6 +326,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Multimaps$Keys;->multimap:Lcom/google/common/collect/Multimap;
 
     invoke-interface {p0}, Lcom/google/common/collect/Multimap;->size()I

@@ -1,4 +1,4 @@
-.class Landroidx/core/view/WindowInsetsAnimationControllerCompat$Impl30;
+.class public Landroidx/core/view/WindowInsetsAnimationControllerCompat$Impl30;
 .super Landroidx/core/view/WindowInsetsAnimationControllerCompat$Impl;
 .source "SourceFile"
 
@@ -30,8 +30,10 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Landroidx/core/view/WindowInsetsAnimationControllerCompat$Impl;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/core/view/WindowInsetsAnimationControllerCompat$Impl30;->mController:Landroid/view/WindowInsetsAnimationController;
 
     return-void
@@ -42,9 +44,10 @@
 .method public finish(Z)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/WindowInsetsAnimationControllerCompat$Impl30;->mController:Landroid/view/WindowInsetsAnimationController;
 
-    invoke-static {p0, p1}, Landroidx/core/view/u0;->a(Landroid/view/WindowInsetsAnimationController;Z)V
+    invoke-interface {p0, p1}, Landroid/view/WindowInsetsAnimationController;->finish(Z)V
 
     return-void
 .end method
@@ -52,9 +55,10 @@
 .method public getCurrentAlpha()F
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/WindowInsetsAnimationControllerCompat$Impl30;->mController:Landroid/view/WindowInsetsAnimationController;
 
-    invoke-static {p0}, Landroidx/core/view/r0;->a(Landroid/view/WindowInsetsAnimationController;)F
+    invoke-interface {p0}, Landroid/view/WindowInsetsAnimationController;->getCurrentAlpha()F
 
     move-result p0
 
@@ -64,9 +68,10 @@
 .method public getCurrentFraction()F
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/WindowInsetsAnimationControllerCompat$Impl30;->mController:Landroid/view/WindowInsetsAnimationController;
 
-    invoke-static {p0}, Landroidx/core/view/q0;->a(Landroid/view/WindowInsetsAnimationController;)F
+    invoke-interface {p0}, Landroid/view/WindowInsetsAnimationController;->getCurrentFraction()F
 
     move-result p0
 
@@ -78,9 +83,10 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/WindowInsetsAnimationControllerCompat$Impl30;->mController:Landroid/view/WindowInsetsAnimationController;
 
-    invoke-static {p0}, Landroidx/core/view/k0;->a(Landroid/view/WindowInsetsAnimationController;)Landroid/graphics/Insets;
+    invoke-interface {p0}, Landroid/view/WindowInsetsAnimationController;->getCurrentInsets()Landroid/graphics/Insets;
 
     move-result-object p0
 
@@ -96,9 +102,10 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/WindowInsetsAnimationControllerCompat$Impl30;->mController:Landroid/view/WindowInsetsAnimationController;
 
-    invoke-static {p0}, Landroidx/core/view/m0;->a(Landroid/view/WindowInsetsAnimationController;)Landroid/graphics/Insets;
+    invoke-interface {p0}, Landroid/view/WindowInsetsAnimationController;->getHiddenStateInsets()Landroid/graphics/Insets;
 
     move-result-object p0
 
@@ -114,9 +121,10 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/WindowInsetsAnimationControllerCompat$Impl30;->mController:Landroid/view/WindowInsetsAnimationController;
 
-    invoke-static {p0}, Landroidx/core/view/o0;->a(Landroid/view/WindowInsetsAnimationController;)Landroid/graphics/Insets;
+    invoke-interface {p0}, Landroid/view/WindowInsetsAnimationController;->getShownStateInsets()Landroid/graphics/Insets;
 
     move-result-object p0
 
@@ -129,15 +137,11 @@
 
 .method public getTypes()I
     .locals 0
-    .annotation build Landroid/annotation/SuppressLint;
-        value = {
-            "WrongConstant"
-        }
-    .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/WindowInsetsAnimationControllerCompat$Impl30;->mController:Landroid/view/WindowInsetsAnimationController;
 
-    invoke-static {p0}, Landroidx/core/view/p0;->a(Landroid/view/WindowInsetsAnimationController;)I
+    invoke-interface {p0}, Landroid/view/WindowInsetsAnimationController;->getTypes()I
 
     move-result p0
 
@@ -147,9 +151,10 @@
 .method public isCancelled()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/WindowInsetsAnimationControllerCompat$Impl30;->mController:Landroid/view/WindowInsetsAnimationController;
 
-    invoke-static {p0}, Landroidx/core/view/l0;->a(Landroid/view/WindowInsetsAnimationController;)Z
+    invoke-interface {p0}, Landroid/view/WindowInsetsAnimationController;->isCancelled()Z
 
     move-result p0
 
@@ -159,9 +164,10 @@
 .method public isFinished()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/WindowInsetsAnimationControllerCompat$Impl30;->mController:Landroid/view/WindowInsetsAnimationController;
 
-    invoke-static {p0}, Landroidx/core/view/n0;->a(Landroid/view/WindowInsetsAnimationController;)Z
+    invoke-interface {p0}, Landroid/view/WindowInsetsAnimationController;->isFinished()Z
 
     move-result p0
 
@@ -171,9 +177,10 @@
 .method public isReady()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/WindowInsetsAnimationControllerCompat$Impl30;->mController:Landroid/view/WindowInsetsAnimationController;
 
-    invoke-static {p0}, Landroidx/core/view/t0;->a(Landroid/view/WindowInsetsAnimationController;)Z
+    invoke-interface {p0}, Landroid/view/WindowInsetsAnimationController;->isReady()Z
 
     move-result p0
 
@@ -187,6 +194,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/WindowInsetsAnimationControllerCompat$Impl30;->mController:Landroid/view/WindowInsetsAnimationController;
 
     if-nez p1, :cond_0
@@ -201,7 +209,7 @@
     move-result-object p1
 
     :goto_0
-    invoke-static {p0, p1, p2, p3}, Landroidx/core/view/s0;->a(Landroid/view/WindowInsetsAnimationController;Landroid/graphics/Insets;FF)V
+    invoke-interface {p0, p1, p2, p3}, Landroid/view/WindowInsetsAnimationController;->setInsetsAndAlpha(Landroid/graphics/Insets;FF)V
 
     return-void
 .end method

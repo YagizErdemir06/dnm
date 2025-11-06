@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ImmutableSortedSet$SerializedForm;
+.class public Lcom/google/common/collect/ImmutableSortedSet$SerializedForm;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -32,7 +32,7 @@
 
 
 # instance fields
-.field final comparator:Ljava/util/Comparator;
+.field public final comparator:Ljava/util/Comparator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Comparator<",
@@ -41,7 +41,7 @@
     .end annotation
 .end field
 
-.field final elements:[Ljava/lang/Object;
+.field public final elements:[Ljava/lang/Object;
 
 
 # direct methods
@@ -57,10 +57,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/ImmutableSortedSet$SerializedForm;->comparator:Ljava/util/Comparator;
 
+    .line 3
     iput-object p2, p0, Lcom/google/common/collect/ImmutableSortedSet$SerializedForm;->elements:[Ljava/lang/Object;
 
     return-void
@@ -71,6 +74,7 @@
 .method public readResolve()Ljava/lang/Object;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ImmutableSortedSet$Builder;
 
     iget-object v1, p0, Lcom/google/common/collect/ImmutableSortedSet$SerializedForm;->comparator:Ljava/util/Comparator;

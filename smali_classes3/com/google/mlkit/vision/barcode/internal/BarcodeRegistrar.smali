@@ -31,6 +31,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     const-class p0, Lcom/google/mlkit/vision/barcode/internal/zzf;
 
     invoke-static {p0}, Lcom/google/firebase/components/Component;->builder(Ljava/lang/Class;)Lcom/google/firebase/components/Component$Builder;
@@ -39,6 +40,7 @@
 
     const-class v1, Lcom/google/mlkit/common/sdkinternal/MlKitContext;
 
+    .line 2
     invoke-static {v1}, Lcom/google/firebase/components/Dependency;->required(Ljava/lang/Class;)Lcom/google/firebase/components/Dependency;
 
     move-result-object v1
@@ -49,20 +51,24 @@
 
     sget-object v1, Lcom/google/mlkit/vision/barcode/internal/zzc;->zza:Lcom/google/mlkit/vision/barcode/internal/zzc;
 
+    .line 3
     invoke-virtual {v0, v1}, Lcom/google/firebase/components/Component$Builder;->factory(Lcom/google/firebase/components/ComponentFactory;)Lcom/google/firebase/components/Component$Builder;
 
     move-result-object v0
 
+    .line 4
     invoke-virtual {v0}, Lcom/google/firebase/components/Component$Builder;->build()Lcom/google/firebase/components/Component;
 
     move-result-object v0
 
     const-class v1, Lcom/google/mlkit/vision/barcode/internal/zze;
 
+    .line 5
     invoke-static {v1}, Lcom/google/firebase/components/Component;->builder(Ljava/lang/Class;)Lcom/google/firebase/components/Component$Builder;
 
     move-result-object v1
 
+    .line 6
     invoke-static {p0}, Lcom/google/firebase/components/Dependency;->required(Ljava/lang/Class;)Lcom/google/firebase/components/Dependency;
 
     move-result-object p0
@@ -73,6 +79,7 @@
 
     const-class v1, Lcom/google/mlkit/common/sdkinternal/ExecutorSelector;
 
+    .line 7
     invoke-static {v1}, Lcom/google/firebase/components/Dependency;->required(Ljava/lang/Class;)Lcom/google/firebase/components/Dependency;
 
     move-result-object v1
@@ -83,14 +90,17 @@
 
     sget-object v1, Lcom/google/mlkit/vision/barcode/internal/zzd;->zza:Lcom/google/mlkit/vision/barcode/internal/zzd;
 
+    .line 8
     invoke-virtual {p0, v1}, Lcom/google/firebase/components/Component$Builder;->factory(Lcom/google/firebase/components/ComponentFactory;)Lcom/google/firebase/components/Component$Builder;
 
     move-result-object p0
 
+    .line 9
     invoke-virtual {p0}, Lcom/google/firebase/components/Component$Builder;->build()Lcom/google/firebase/components/Component;
 
     move-result-object p0
 
+    .line 10
     invoke-static {v0, p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcd;->zzh(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcd;
 
     move-result-object p0

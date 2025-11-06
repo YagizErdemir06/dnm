@@ -172,6 +172,7 @@
 .method public buildUpon()Lcom/google/android/exoplayer2/MediaItem$SubtitleConfiguration$Builder;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/MediaItem$SubtitleConfiguration$Builder;
 
     const/4 v1, 0x0
@@ -194,6 +195,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/android/exoplayer2/MediaItem$SubtitleConfiguration;
 
@@ -203,9 +205,11 @@
 
     return v2
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/MediaItem$SubtitleConfiguration;
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/MediaItem$SubtitleConfiguration;->uri:Landroid/net/Uri;
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/MediaItem$SubtitleConfiguration;->uri:Landroid/net/Uri;
@@ -220,6 +224,7 @@
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/MediaItem$SubtitleConfiguration;->mimeType:Ljava/lang/String;
 
+    .line 4
     invoke-static {v1, v3}, Lcom/google/android/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
@@ -230,6 +235,7 @@
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/MediaItem$SubtitleConfiguration;->language:Ljava/lang/String;
 
+    .line 5
     invoke-static {v1, v3}, Lcom/google/android/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
@@ -252,6 +258,7 @@
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/MediaItem$SubtitleConfiguration;->label:Ljava/lang/String;
 
+    .line 6
     invoke-static {v1, v3}, Lcom/google/android/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
@@ -262,6 +269,7 @@
 
     iget-object p1, p1, Lcom/google/android/exoplayer2/MediaItem$SubtitleConfiguration;->id:Ljava/lang/String;
 
+    .line 7
     invoke-static {p0, p1}, Lcom/google/android/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -280,6 +288,7 @@
 .method public hashCode()I
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/MediaItem$SubtitleConfiguration;->uri:Landroid/net/Uri;
 
     invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
@@ -288,6 +297,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/MediaItem$SubtitleConfiguration;->mimeType:Ljava/lang/String;
 
     const/4 v2, 0x0
@@ -308,6 +318,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/MediaItem$SubtitleConfiguration;->language:Ljava/lang/String;
 
     if-nez v1, :cond_1
@@ -326,18 +337,21 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 4
     iget v1, p0, Lcom/google/android/exoplayer2/MediaItem$SubtitleConfiguration;->selectionFlags:I
 
     add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 5
     iget v1, p0, Lcom/google/android/exoplayer2/MediaItem$SubtitleConfiguration;->roleFlags:I
 
     add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 6
     iget-object v1, p0, Lcom/google/android/exoplayer2/MediaItem$SubtitleConfiguration;->label:Ljava/lang/String;
 
     if-nez v1, :cond_2
@@ -356,6 +370,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 7
     iget-object p0, p0, Lcom/google/android/exoplayer2/MediaItem$SubtitleConfiguration;->id:Ljava/lang/String;
 
     if-nez p0, :cond_3

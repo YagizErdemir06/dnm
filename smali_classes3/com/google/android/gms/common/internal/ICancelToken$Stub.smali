@@ -23,6 +23,7 @@
 
     const-string v0, "com.google.android.gms.common.internal.ICancelToken"
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/google/android/gms/internal/common/zzb;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -46,14 +47,17 @@
     :cond_0
     const-string v0, "com.google.android.gms.common.internal.ICancelToken"
 
+    .line 1
     invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0
 
+    .line 2
     instance-of v1, v0, Lcom/google/android/gms/common/internal/ICancelToken;
 
     if-eqz v1, :cond_1
 
+    .line 3
     check-cast v0, Lcom/google/android/gms/common/internal/ICancelToken;
 
     return-object v0
@@ -88,6 +92,7 @@
 
     if-ne p1, p2, :cond_0
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/gms/common/internal/ICancelToken;->cancel()V
 
     const/4 p0, 0x1

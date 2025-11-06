@@ -12,6 +12,7 @@
 
     const-string v0, "com.google.mlkit.vision.barcode.aidls.IBarcodeScannerCreator"
 
+    .line 1
     invoke-direct {p0, p1, v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zza;-><init>(Landroid/os/IBinder;Ljava/lang/String;)V
 
     return-void

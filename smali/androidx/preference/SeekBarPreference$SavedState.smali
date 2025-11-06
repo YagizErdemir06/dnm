@@ -1,4 +1,4 @@
-.class Landroidx/preference/SeekBarPreference$SavedState;
+.class public Landroidx/preference/SeekBarPreference$SavedState;
 .super Landroidx/preference/Preference$BaseSavedState;
 .source "SourceFile"
 
@@ -27,17 +27,18 @@
 
 
 # instance fields
-.field mMax:I
+.field public mMax:I
 
-.field mMin:I
+.field public mMin:I
 
-.field mSeekBarValue:I
+.field public mSeekBarValue:I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/preference/SeekBarPreference$SavedState$1;
 
     invoke-direct {v0}, Landroidx/preference/SeekBarPreference$SavedState$1;-><init>()V
@@ -91,16 +92,20 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroid/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
+    .line 2
     iget p2, p0, Landroidx/preference/SeekBarPreference$SavedState;->mSeekBarValue:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 3
     iget p2, p0, Landroidx/preference/SeekBarPreference$SavedState;->mMin:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 4
     iget p0, p0, Landroidx/preference/SeekBarPreference$SavedState;->mMax:I
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V

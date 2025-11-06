@@ -15,6 +15,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/gms/common/api/AvailabilityException;->zaa:Landroidx/collection/ArrayMap;
@@ -201,12 +202,14 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iget-object v1, p0, Lcom/google/android/gms/common/api/AvailabilityException;->zaa:Landroidx/collection/ArrayMap;
 
+    .line 2
     invoke-virtual {v1}, Landroidx/collection/ArrayMap;->keySet()Ljava/util/Set;
 
     move-result-object v1
@@ -234,6 +237,7 @@
 
     iget-object v5, p0, Lcom/google/android/gms/common/api/AvailabilityException;->zaa:Landroidx/collection/ArrayMap;
 
+    .line 3
     invoke-virtual {v5, v4}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v5
@@ -246,6 +250,7 @@
 
     check-cast v5, Lcom/google/android/gms/common/ConnectionResult;
 
+    .line 4
     invoke-virtual {v5}, Lcom/google/android/gms/common/ConnectionResult;->isSuccess()Z
 
     move-result v6
@@ -254,6 +259,7 @@
 
     and-int/2addr v3, v6
 
+    .line 5
     invoke-virtual {v4}, Lcom/google/android/gms/common/api/internal/ApiKey;->zaa()Ljava/lang/String;
 
     move-result-object v4
@@ -285,12 +291,14 @@
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
+    .line 6
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
     if-eqz v3, :cond_1
 
     const-string v1, "None of the queried APIs are available. "
 
+    .line 7
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
@@ -298,11 +306,13 @@
     :cond_1
     const-string v1, "Some of the queried APIs are unavailable. "
 
+    .line 8
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :goto_1
     const-string v1, "; "
 
+    .line 9
     invoke-static {v1, v0}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
 
     move-result-object v0

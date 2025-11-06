@@ -18,15 +18,16 @@
 
 .field private static final MAP_COMPATIBILITY_CONFIG_URIS:Ljava/util/Map;
 
-.field static synthetic class$org$apache$xmlbeans$SchemaTypeSystem:Ljava/lang/Class;
+.field public static synthetic class$org$apache$xmlbeans$SchemaTypeSystem:Ljava/lang/Class;
 
-.field static synthetic class$org$apache$xmlbeans$impl$xb$xsdschema$SchemaDocument:Ljava/lang/Class;
+.field public static synthetic class$org$apache$xmlbeans$impl$xb$xsdschema$SchemaDocument:Ljava/lang/Class;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -37,6 +38,7 @@
 
     const-string v2, "http://xml.apache.org/xmlbeans/2004/02/xbean/config"
 
+    .line 2
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
@@ -45,6 +47,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -53,6 +56,7 @@
 .method private static addSchema(Ljava/lang/String;Lorg/apache/xmlbeans/impl/xb/xsdschema/SchemaDocument;Lorg/apache/xmlbeans/impl/common/XmlErrorWatcher;ZLjava/util/List;)V
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -69,6 +73,7 @@
 
     invoke-static {p2, p0}, Lorg/apache/xmlbeans/impl/schema/StscState;->addInfo(Ljava/util/Collection;Ljava/lang/String;)V
 
+    .line 2
     new-instance p0, Lorg/apache/xmlbeans/XmlOptions;
 
     invoke-direct {p0}, Lorg/apache/xmlbeans/XmlOptions;-><init>()V
@@ -79,8 +84,10 @@
 
     if-eqz p3, :cond_0
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/XmlOptions;->setValidateTreatLaxAsSkip()Lorg/apache/xmlbeans/XmlOptions;
 
+    .line 4
     :cond_0
     invoke-interface {p1, p0}, Lorg/apache/xmlbeans/XmlObject;->validate(Lorg/apache/xmlbeans/XmlOptions;)Z
 
@@ -88,6 +95,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 5
     invoke-interface {p1}, Lorg/apache/xmlbeans/impl/xb/xsdschema/SchemaDocument;->getSchema()Lorg/apache/xmlbeans/impl/xb/xsdschema/SchemaDocument$Schema;
 
     move-result-object p0
@@ -99,8 +107,9 @@
 .end method
 
 .method private static addWsdlSchemas(Ljava/lang/String;Lorg/apache/xmlbeans/impl/xb/substwsdl/DefinitionsDocument;Lorg/apache/xmlbeans/impl/common/XmlErrorWatcher;ZLjava/util/List;)V
-    .locals 10
+    .locals 9
 
+    .line 1
     invoke-static {p1}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler;->wsdlContainsEncoded(Lorg/apache/xmlbeans/XmlObject;)Z
 
     move-result v0
@@ -111,6 +120,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -129,6 +139,7 @@
 
     invoke-static {p2, v0, v1, p1}, Lorg/apache/xmlbeans/impl/schema/StscState;->addWarning(Ljava/util/Collection;Ljava/lang/String;ILorg/apache/xmlbeans/XmlObject;)V
 
+    .line 3
     :cond_0
     new-instance v0, Ljava/lang/StringBuffer;
 
@@ -146,6 +157,7 @@
 
     invoke-static {p2, v0}, Lorg/apache/xmlbeans/impl/schema/StscState;->addInfo(Ljava/util/Collection;Ljava/lang/String;)V
 
+    .line 4
     new-instance v0, Lorg/apache/xmlbeans/XmlOptions;
 
     invoke-direct {v0}, Lorg/apache/xmlbeans/XmlOptions;-><init>()V
@@ -156,8 +168,10 @@
 
     if-eqz p3, :cond_1
 
+    .line 5
     invoke-virtual {v0}, Lorg/apache/xmlbeans/XmlOptions;->setValidateTreatLaxAsSkip()Lorg/apache/xmlbeans/XmlOptions;
 
+    .line 6
     :cond_1
     invoke-interface {p1}, Lorg/apache/xmlbeans/impl/xb/substwsdl/DefinitionsDocument;->getDefinitions()Lorg/apache/xmlbeans/impl/xb/substwsdl/DefinitionsDocument$Definitions;
 
@@ -173,11 +187,13 @@
 
     move v5, v4
 
+    .line 7
     :goto_0
     array-length v6, p3
 
     if-ge v4, v6, :cond_5
 
+    .line 8
     aget-object v6, p3, v4
 
     const-string v7, "declare namespace xs=\"http://www.w3.org/2001/XMLSchema\" xs:schema"
@@ -186,10 +202,12 @@
 
     move-result-object v6
 
+    .line 9
     array-length v7, v6
 
     if-nez v7, :cond_2
 
+    .line 10
     new-instance v6, Ljava/lang/StringBuffer;
 
     invoke-direct {v6}, Ljava/lang/StringBuffer;-><init>()V
@@ -213,16 +231,20 @@
     :cond_2
     move v7, v3
 
+    .line 11
     :goto_1
     array-length v8, v6
 
     if-ge v7, v8, :cond_4
 
+    .line 12
     aget-object v8, v6, v7
 
-    instance-of v9, v8, Lorg/apache/xmlbeans/impl/xb/xsdschema/SchemaDocument$Schema;
+    instance-of v8, v8, Lorg/apache/xmlbeans/impl/xb/xsdschema/SchemaDocument$Schema;
 
-    if-eqz v9, :cond_3
+    if-eqz v8, :cond_3
+
+    aget-object v8, v6, v7
 
     invoke-interface {v8, v0}, Lorg/apache/xmlbeans/XmlObject;->validate(Lorg/apache/xmlbeans/XmlOptions;)Z
 
@@ -232,6 +254,7 @@
 
     add-int/lit8 v5, v5, 0x1
 
+    .line 13
     aget-object v8, v6, v7
 
     invoke-interface {p4, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -247,6 +270,7 @@
 
     goto :goto_0
 
+    .line 14
     :cond_5
     new-instance p1, Ljava/lang/StringBuffer;
 
@@ -276,6 +300,7 @@
 .method public static synthetic class$(Ljava/lang/String;)Ljava/lang/Class;
     .locals 1
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -292,7 +317,7 @@
 
     invoke-direct {v0}, Ljava/lang/NoClassDefFoundError;-><init>()V
 
-    invoke-virtual {v0, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v0, p0}, Ljava/lang/NoClassDefFoundError;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -302,124 +327,154 @@
 .method public static compile(Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;)Z
     .locals 47
 
+    .line 1
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->getBaseDir()Ljava/io/File;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->getXsdFiles()[Ljava/io/File;
 
     move-result-object v2
 
+    .line 3
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->getWsdlFiles()[Ljava/io/File;
 
     move-result-object v3
 
+    .line 4
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->getUrlFiles()[Ljava/net/URL;
 
     move-result-object v4
 
+    .line 5
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->getJavaFiles()[Ljava/io/File;
 
     move-result-object v22
 
+    .line 6
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->getConfigFiles()[Ljava/io/File;
 
     move-result-object v5
 
+    .line 7
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->getClasspath()[Ljava/io/File;
 
     move-result-object v15
 
+    .line 8
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->getOutputJar()Ljava/io/File;
 
     move-result-object v14
 
+    .line 9
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->getName()Ljava/lang/String;
 
     move-result-object v1
 
+    .line 10
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->getSrcDir()Ljava/io/File;
 
     move-result-object v13
 
+    .line 11
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->getClassesDir()Ljava/io/File;
 
     move-result-object v12
 
+    .line 12
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->getCompiler()Ljava/lang/String;
 
     move-result-object v23
 
+    .line 13
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->getJavaSource()Ljava/lang/String;
 
     move-result-object v11
 
+    .line 14
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->getMemoryInitialSize()Ljava/lang/String;
 
     move-result-object v24
 
+    .line 15
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->getMemoryMaximumSize()Ljava/lang/String;
 
     move-result-object v25
 
+    .line 16
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->isNojavac()Z
 
     move-result v26
 
+    .line 17
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->isDebug()Z
 
     move-result v27
 
+    .line 18
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->isVerbose()Z
 
     move-result v28
 
+    .line 19
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->isQuiet()Z
 
     move-result v29
 
+    .line 20
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->isDownload()Z
 
     move-result v8
 
+    .line 21
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->isNoUpa()Z
 
     move-result v9
 
+    .line 22
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->isNoPvr()Z
 
     move-result v10
 
+    .line 23
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->isNoAnn()Z
 
     move-result v16
 
+    .line 24
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->isNoVDoc()Z
 
     move-result v19
 
+    .line 25
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->isNoExt()Z
 
     move-result v20
 
+    .line 26
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->isIncrementalSrcGen()Z
 
     move-result v30
 
+    .line 27
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->getErrorListener()Ljava/util/Collection;
 
     move-result-object v6
 
+    .line 28
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->getRepackage()Ljava/lang/String;
 
     move-result-object v7
 
     if-eqz v7, :cond_1
 
+    .line 29
     sget-object v17, Lorg/apache/xmlbeans/impl/schema/SchemaTypeSystemImpl;->METADATA_PACKAGE_GEN:Ljava/lang/String;
 
     sput-object v17, Lorg/apache/xmlbeans/impl/schema/SchemaTypeLoaderImpl;->METADATA_PACKAGE_LOAD:Ljava/lang/String;
 
+    .line 30
     sget-object v17, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler;->class$org$apache$xmlbeans$SchemaTypeSystem:Ljava/lang/Class;
 
     if-nez v17, :cond_0
@@ -445,17 +500,19 @@
 
     move-object/from16 v31, v14
 
-    new-instance v14, Llv/c;
+    .line 31
+    new-instance v14, Lo/c;
 
-    invoke-direct {v14, v7}, Llv/c;-><init>(Ljava/lang/String;)V
+    invoke-direct {v14, v7}, Lo/c;-><init>(Ljava/lang/String;)V
 
     move-object/from16 v32, v7
 
+    .line 32
     new-instance v7, Ljava/lang/StringBuffer;
 
     invoke-direct {v7, v11}, Ljava/lang/StringBuffer;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v14, v7}, Llv/c;->e(Ljava/lang/StringBuffer;)Ljava/lang/StringBuffer;
+    invoke-virtual {v14, v7}, Lo/c;->e(Ljava/lang/StringBuffer;)Ljava/lang/StringBuffer;
 
     move-result-object v7
 
@@ -475,6 +532,7 @@
 
     sput-object v7, Lorg/apache/xmlbeans/impl/schema/SchemaTypeSystemImpl;->METADATA_PACKAGE_GEN:Ljava/lang/String;
 
+    .line 33
     sget-object v7, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v10, Ljava/lang/StringBuffer;
@@ -520,19 +578,23 @@
 
     move-object/from16 v31, v14
 
+    .line 34
     :goto_0
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->getSchemaCodePrinter()Lorg/apache/xmlbeans/SchemaCodePrinter;
 
     move-result-object v14
 
+    .line 35
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->getExtensions()Ljava/util/List;
 
     move-result-object v11
 
+    .line 36
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->getMdefNamespaces()Ljava/util/Set;
 
     move-result-object v34
 
+    .line 37
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->getEntityResolver()Lorg/xml/sax/EntityResolver;
 
     move-result-object v7
@@ -561,12 +623,14 @@
 
     if-eqz v12, :cond_12
 
+    .line 38
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v36
 
     if-nez v0, :cond_3
 
+    .line 39
     new-instance v0, Ljava/io/File;
 
     const-string v7, "user.dir"
@@ -577,6 +641,7 @@
 
     invoke-direct {v0, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
+    .line 40
     :cond_3
     new-instance v38, Ljava/util/HashMap;
 
@@ -586,6 +651,7 @@
 
     if-eqz v15, :cond_4
 
+    .line 41
     new-instance v7, Lorg/apache/xmlbeans/impl/schema/PathResourceLoader;
 
     invoke-direct {v7, v15}, Lorg/apache/xmlbeans/impl/schema/PathResourceLoader;-><init>([Ljava/io/File;)V
@@ -597,6 +663,7 @@
     :cond_4
     move-object/from16 v40, v39
 
+    .line 42
     :goto_2
     new-instance v7, Ljava/lang/StringBuffer;
 
@@ -622,6 +689,7 @@
 
     move-result-object v18
 
+    .line 43
     new-instance v10, Lorg/apache/xmlbeans/impl/common/XmlErrorWatcher;
 
     move-object/from16 v17, v10
@@ -668,16 +736,19 @@
 
     move-object/from16 v20, v31
 
+    .line 44
     invoke-static/range {v1 .. v21}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler;->loadTypeSystem(Ljava/lang/String;[Ljava/io/File;[Ljava/io/File;[Ljava/net/URL;[Ljava/io/File;[Ljava/io/File;Lorg/apache/xmlbeans/ResourceLoader;ZZZZZZLjava/util/Set;Ljava/io/File;Ljava/util/Map;Ljava/util/Collection;Ljava/io/File;Lorg/xml/sax/EntityResolver;[Ljava/io/File;Ljava/lang/String;)Lorg/apache/xmlbeans/SchemaTypeSystem;
 
     move-result-object v1
 
+    .line 45
     invoke-virtual/range {v32 .. v32}, Lorg/apache/xmlbeans/impl/common/XmlErrorWatcher;->hasError()Z
 
     move-result v0
 
     xor-int/lit8 v0, v0, 0x1
 
+    .line 46
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -688,6 +759,7 @@
 
     if-nez v29, :cond_5
 
+    .line 47
     sget-object v5, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v6, Ljava/lang/StringBuffer;
@@ -719,6 +791,7 @@
 
     if-eqz v1, :cond_e
 
+    .line 48
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -731,13 +804,15 @@
 
     goto :goto_3
 
+    .line 49
     :cond_6
-    new-instance v6, Llv/c;
+    new-instance v6, Lo/c;
 
-    invoke-direct {v6, v5}, Llv/c;-><init>(Ljava/lang/String;)V
+    invoke-direct {v6, v5}, Lo/c;-><init>(Ljava/lang/String;)V
 
     move-object v9, v6
 
+    .line 50
     :goto_3
     new-instance v5, Lorg/apache/xmlbeans/impl/util/FilerImpl;
 
@@ -751,8 +826,9 @@
 
     move/from16 v11, v30
 
-    invoke-direct/range {v6 .. v11}, Lorg/apache/xmlbeans/impl/util/FilerImpl;-><init>(Ljava/io/File;Ljava/io/File;Llv/c;ZZ)V
+    invoke-direct/range {v6 .. v11}, Lorg/apache/xmlbeans/impl/util/FilerImpl;-><init>(Ljava/io/File;Ljava/io/File;Lo/c;ZZ)V
 
+    .line 51
     new-instance v6, Lorg/apache/xmlbeans/XmlOptions;
 
     invoke-direct {v6}, Lorg/apache/xmlbeans/XmlOptions;-><init>()V
@@ -761,6 +837,7 @@
 
     if-eqz v7, :cond_7
 
+    .line 52
     invoke-virtual {v6, v7}, Lorg/apache/xmlbeans/XmlOptions;->setSchemaCodePrinter(Lorg/apache/xmlbeans/SchemaCodePrinter;)Lorg/apache/xmlbeans/XmlOptions;
 
     :cond_7
@@ -768,11 +845,14 @@
 
     if-eqz v11, :cond_8
 
+    .line 53
     invoke-virtual {v6, v11}, Lorg/apache/xmlbeans/XmlOptions;->setGenerateJavaVersion(Ljava/lang/String;)Lorg/apache/xmlbeans/XmlOptions;
 
+    .line 54
     :cond_8
     invoke-interface {v1, v5}, Lorg/apache/xmlbeans/SchemaTypeSystem;->save(Lorg/apache/xmlbeans/Filer;)V
 
+    .line 55
     invoke-static {v1, v5, v6}, Lorg/apache/xmlbeans/impl/schema/SchemaTypeSystemCompiler;->generateTypes(Lorg/apache/xmlbeans/SchemaTypeSystem;Lorg/apache/xmlbeans/Filer;Lorg/apache/xmlbeans/XmlOptions;)Z
 
     move-result v6
@@ -781,6 +861,7 @@
 
     if-eqz v30, :cond_9
 
+    .line 56
     new-instance v6, Ljava/util/HashSet;
 
     invoke-virtual {v5}, Lorg/apache/xmlbeans/impl/util/FilerImpl;->getSourceFiles()Ljava/util/List;
@@ -796,12 +877,14 @@
     :cond_9
     if-eqz v0, :cond_a
 
+    .line 57
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v6
 
     if-nez v29, :cond_a
 
+    .line 58
     sget-object v8, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v9, Ljava/lang/StringBuffer;
@@ -833,16 +916,19 @@
 
     if-nez v26, :cond_e
 
+    .line 59
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
+    .line 60
     invoke-virtual {v5}, Lorg/apache/xmlbeans/impl/util/FilerImpl;->getSourceFiles()Ljava/util/List;
 
     move-result-object v6
 
     if-eqz v22, :cond_b
 
+    .line 61
     invoke-static/range {v22 .. v22}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v5
@@ -866,6 +952,7 @@
 
     move/from16 v15, v28
 
+    .line 62
     invoke-static/range {v6 .. v15}, Lorg/apache/xmlbeans/impl/tool/CodeGenUtil;->externalCompile(Ljava/util/List;Ljava/io/File;[Ljava/io/File;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)Z
 
     move-result v5
@@ -876,6 +963,7 @@
 
     move v0, v6
 
+    .line 63
     :cond_c
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -883,12 +971,14 @@
 
     if-eqz v0, :cond_d
 
+    .line 64
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->isQuiet()Z
 
     move-result v5
 
     if-nez v5, :cond_d
 
+    .line 65
     sget-object v5, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v9, Ljava/lang/StringBuffer;
@@ -922,6 +1012,7 @@
 
     if-eqz v2, :cond_e
 
+    .line 66
     :try_start_0
     new-instance v3, Lorg/apache/xmlbeans/impl/common/JarHelper;
 
@@ -948,6 +1039,7 @@
 
     move-object/from16 v4, v43
 
+    .line 67
     :goto_4
     sget-object v3, Ljava/lang/System;->err:Ljava/io/PrintStream;
 
@@ -972,12 +1064,14 @@
     :goto_5
     if-eqz v0, :cond_f
 
+    .line 68
     invoke-virtual/range {p0 .. p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->isQuiet()Z
 
     move-result v3
 
     if-nez v3, :cond_f
 
+    .line 69
     sget-object v3, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v5, Ljava/lang/StringBuffer;
@@ -1007,6 +1101,7 @@
 
     if-nez v29, :cond_10
 
+    .line 70
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v2, "BUILD FAILED"
@@ -1018,16 +1113,19 @@
     :cond_10
     move-object/from16 v2, v42
 
+    .line 71
     invoke-static {v2, v1, v4}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler;->runExtensions(Ljava/util/List;Lorg/apache/xmlbeans/SchemaTypeSystem;Ljava/io/File;)V
 
     :goto_7
     if-eqz v40, :cond_11
 
+    .line 72
     invoke-interface/range {v40 .. v40}, Lorg/apache/xmlbeans/ResourceLoader;->close()V
 
     :cond_11
     return v0
 
+    .line 73
     :cond_12
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1061,18 +1159,22 @@
 
     const-string v10, "wsdl"
 
+    .line 1
     new-instance v11, Lorg/apache/xmlbeans/impl/common/XmlErrorWatcher;
 
     move-object/from16 v0, p16
 
     invoke-direct {v11, v0}, Lorg/apache/xmlbeans/impl/common/XmlErrorWatcher;-><init>(Ljava/util/Collection;)V
 
+    .line 2
     invoke-static {}, Lorg/apache/xmlbeans/impl/schema/StscState;->start()Lorg/apache/xmlbeans/impl/schema/StscState;
 
     move-result-object v0
 
+    .line 3
     invoke-virtual {v0, v11}, Lorg/apache/xmlbeans/impl/schema/StscState;->setErrorListener(Ljava/util/Collection;)V
 
+    .line 4
     sget-object v0, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler;->class$org$apache$xmlbeans$impl$xb$xsdschema$SchemaDocument:Ljava/lang/Class;
 
     if-nez v0, :cond_0
@@ -1094,6 +1196,7 @@
 
     move-result-object v12
 
+    .line 5
     new-instance v13, Ljava/util/ArrayList;
 
     invoke-direct {v13}, Ljava/util/ArrayList;-><init>()V
@@ -1106,22 +1209,28 @@
 
     const/4 v8, 0x0
 
+    .line 6
     :goto_0
     array-length v0, v1
 
     if-ge v8, v0, :cond_2
 
+    .line 7
     :try_start_0
     new-instance v0, Lorg/apache/xmlbeans/XmlOptions;
 
     invoke-direct {v0}, Lorg/apache/xmlbeans/XmlOptions;-><init>()V
 
+    .line 8
     invoke-virtual {v0}, Lorg/apache/xmlbeans/XmlOptions;->setLoadLineNumbers()Lorg/apache/xmlbeans/XmlOptions;
 
+    .line 9
     invoke-virtual {v0}, Lorg/apache/xmlbeans/XmlOptions;->setLoadMessageDigest()Lorg/apache/xmlbeans/XmlOptions;
 
+    .line 10
     invoke-virtual {v0, v7}, Lorg/apache/xmlbeans/XmlOptions;->setEntityResolver(Lorg/xml/sax/EntityResolver;)Lorg/apache/xmlbeans/XmlOptions;
 
+    .line 11
     aget-object v6, v1, v8
     :try_end_0
     .catch Lorg/apache/xmlbeans/XmlException; {:try_start_0 .. :try_end_0} :catch_3
@@ -1136,6 +1245,7 @@
 
     move-result-object v0
 
+    .line 12
     instance-of v6, v0, Lorg/apache/xmlbeans/impl/xb/xsdschema/SchemaDocument;
 
     if-nez v6, :cond_1
@@ -1144,6 +1254,7 @@
 
     new-array v9, v6, [Ljava/lang/Object;
 
+    .line 13
     aget-object v6, v1, v8
 
     const/16 v17, 0x0
@@ -1160,6 +1271,7 @@
 
     goto :goto_3
 
+    .line 14
     :cond_1
     aget-object v6, v1, v8
 
@@ -1202,13 +1314,14 @@
 
     aput-object v6, v9, v17
 
+    .line 15
     aget-object v6, v1, v8
 
     const/16 v16, 0x1
 
     aput-object v6, v9, v16
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1227,6 +1340,7 @@
 
     move-object/from16 v18, v9
 
+    .line 16
     :goto_2
     invoke-virtual {v0}, Lorg/apache/xmlbeans/XmlException;->getError()Lorg/apache/xmlbeans/XmlError;
 
@@ -1254,26 +1368,32 @@
 
     const/4 v8, 0x0
 
+    .line 17
     :goto_4
     array-length v0, v2
 
     if-ge v8, v0, :cond_4
 
+    .line 18
     :try_start_2
     new-instance v0, Lorg/apache/xmlbeans/XmlOptions;
 
     invoke-direct {v0}, Lorg/apache/xmlbeans/XmlOptions;-><init>()V
 
+    .line 19
     invoke-virtual {v0}, Lorg/apache/xmlbeans/XmlOptions;->setLoadLineNumbers()Lorg/apache/xmlbeans/XmlOptions;
 
+    .line 20
     invoke-static {v6, v1}, Ljava/util/Collections;->singletonMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
 
     move-result-object v9
 
     invoke-virtual {v0, v9}, Lorg/apache/xmlbeans/XmlOptions;->setLoadSubstituteNamespaces(Ljava/util/Map;)Lorg/apache/xmlbeans/XmlOptions;
 
+    .line 21
     invoke-virtual {v0, v7}, Lorg/apache/xmlbeans/XmlOptions;->setEntityResolver(Lorg/xml/sax/EntityResolver;)Lorg/apache/xmlbeans/XmlOptions;
 
+    .line 22
     aget-object v9, v2, v8
 
     const/4 v4, 0x0
@@ -1282,6 +1402,7 @@
 
     move-result-object v0
 
+    .line 23
     instance-of v4, v0, Lorg/apache/xmlbeans/impl/xb/substwsdl/DefinitionsDocument;
 
     if-nez v4, :cond_3
@@ -1290,6 +1411,7 @@
 
     new-array v9, v4, [Ljava/lang/Object;
 
+    .line 24
     aget-object v4, v2, v8
 
     const/16 v17, 0x0
@@ -1304,6 +1426,7 @@
 
     goto :goto_5
 
+    .line 25
     :cond_3
     aget-object v4, v2, v8
 
@@ -1331,13 +1454,14 @@
 
     aput-object v10, v9, v4
 
+    .line 26
     aget-object v4, v2, v8
 
     const/16 v16, 0x1
 
     aput-object v4, v9, v16
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1354,6 +1478,7 @@
     :catch_5
     move-exception v0
 
+    .line 27
     invoke-virtual {v0}, Lorg/apache/xmlbeans/XmlException;->getError()Lorg/apache/xmlbeans/XmlError;
 
     move-result-object v0
@@ -1372,26 +1497,32 @@
 
     const/4 v2, 0x0
 
+    .line 28
     :goto_6
     array-length v0, v3
 
     if-ge v2, v0, :cond_7
 
+    .line 29
     :try_start_3
     new-instance v0, Lorg/apache/xmlbeans/XmlOptions;
 
     invoke-direct {v0}, Lorg/apache/xmlbeans/XmlOptions;-><init>()V
 
+    .line 30
     invoke-virtual {v0}, Lorg/apache/xmlbeans/XmlOptions;->setLoadLineNumbers()Lorg/apache/xmlbeans/XmlOptions;
 
+    .line 31
     invoke-static {v6, v1}, Ljava/util/Collections;->singletonMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
 
     move-result-object v4
 
     invoke-virtual {v0, v4}, Lorg/apache/xmlbeans/XmlOptions;->setLoadSubstituteNamespaces(Ljava/util/Map;)Lorg/apache/xmlbeans/XmlOptions;
 
+    .line 32
     invoke-virtual {v0, v7}, Lorg/apache/xmlbeans/XmlOptions;->setEntityResolver(Lorg/xml/sax/EntityResolver;)Lorg/apache/xmlbeans/XmlOptions;
 
+    .line 33
     aget-object v4, v3, v2
 
     const/4 v8, 0x0
@@ -1400,10 +1531,12 @@
 
     move-result-object v0
 
+    .line 34
     instance-of v4, v0, Lorg/apache/xmlbeans/impl/xb/substwsdl/DefinitionsDocument;
 
     if-eqz v4, :cond_5
 
+    .line 35
     aget-object v4, v3, v2
 
     invoke-virtual {v4}, Ljava/net/URL;->toString()Ljava/lang/String;
@@ -1416,11 +1549,13 @@
 
     goto :goto_7
 
+    .line 36
     :cond_5
     instance-of v4, v0, Lorg/apache/xmlbeans/impl/xb/xsdschema/SchemaDocument;
 
     if-eqz v4, :cond_6
 
+    .line 37
     aget-object v4, v3, v2
 
     invoke-virtual {v4}, Ljava/net/URL;->toString()Ljava/lang/String;
@@ -1438,6 +1573,7 @@
 
     new-array v8, v4, [Ljava/lang/Object;
 
+    .line 38
     aget-object v4, v3, v2
 
     const/4 v9, 0x0
@@ -1470,13 +1606,14 @@
 
     aput-object v4, v8, v9
 
+    .line 39
     aget-object v4, v3, v2
 
     const/4 v9, 0x1
 
     aput-object v4, v8, v9
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1493,6 +1630,7 @@
     :catch_7
     move-exception v0
 
+    .line 40
     invoke-virtual {v0}, Lorg/apache/xmlbeans/XmlException;->getError()Lorg/apache/xmlbeans/XmlError;
 
     move-result-object v0
@@ -1504,6 +1642,7 @@
 
     goto :goto_6
 
+    .line 41
     :cond_7
     invoke-virtual {v13}, Ljava/util/ArrayList;->size()I
 
@@ -1519,6 +1658,7 @@
 
     check-cast v1, [Lorg/apache/xmlbeans/impl/xb/xsdschema/SchemaDocument$Schema;
 
+    .line 42
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
@@ -1529,6 +1669,7 @@
 
     if-eqz p12, :cond_8
 
+    .line 43
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v4, "Pre/Post and Interface extensions will be ignored."
@@ -1538,11 +1679,13 @@
     :cond_8
     const/4 v4, 0x0
 
+    .line 44
     :goto_8
     array-length v0, v3
 
     if-ge v4, v0, :cond_b
 
+    .line 45
     :try_start_4
     new-instance v0, Lorg/apache/xmlbeans/XmlOptions;
 
@@ -1550,14 +1693,18 @@
 
     const-string v5, "LOAD_LINE_NUMBERS"
 
+    .line 46
     invoke-virtual {v0, v5}, Lorg/apache/xmlbeans/XmlOptions;->put(Ljava/lang/Object;)V
 
+    .line 47
     invoke-virtual {v0, v7}, Lorg/apache/xmlbeans/XmlOptions;->setEntityResolver(Lorg/xml/sax/EntityResolver;)Lorg/apache/xmlbeans/XmlOptions;
 
+    .line 48
     sget-object v5, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler;->MAP_COMPATIBILITY_CONFIG_URIS:Ljava/util/Map;
 
     invoke-virtual {v0, v5}, Lorg/apache/xmlbeans/XmlOptions;->setLoadSubstituteNamespaces(Ljava/util/Map;)Lorg/apache/xmlbeans/XmlOptions;
 
+    .line 49
     aget-object v5, v3, v4
 
     const/4 v6, 0x0
@@ -1566,6 +1713,7 @@
 
     move-result-object v0
 
+    .line 50
     instance-of v5, v0, Lorg/apache/xmlbeans/impl/xb/xmlconfig/ConfigDocument;
     :try_end_4
     .catch Lorg/apache/xmlbeans/XmlException; {:try_start_4 .. :try_end_4} :catch_c
@@ -1581,6 +1729,7 @@
     .catch Lorg/apache/xmlbeans/XmlException; {:try_start_5 .. :try_end_5} :catch_9
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_b
 
+    .line 51
     :try_start_6
     aget-object v5, v3, v4
     :try_end_6
@@ -1623,6 +1772,7 @@
 
     goto :goto_c
 
+    .line 52
     :cond_9
     new-instance v5, Ljava/lang/StringBuffer;
 
@@ -1642,6 +1792,7 @@
 
     invoke-static {v11, v5}, Lorg/apache/xmlbeans/impl/schema/StscState;->addInfo(Ljava/util/Collection;Ljava/lang/String;)V
 
+    .line 53
     new-instance v5, Lorg/apache/xmlbeans/XmlOptions;
 
     invoke-direct {v5}, Lorg/apache/xmlbeans/XmlOptions;-><init>()V
@@ -1656,12 +1807,14 @@
 
     if-eqz v5, :cond_a
 
+    .line 54
     check-cast v0, Lorg/apache/xmlbeans/impl/xb/xmlconfig/ConfigDocument;
 
     invoke-interface {v0}, Lorg/apache/xmlbeans/impl/xb/xmlconfig/ConfigDocument;->getConfig()Lorg/apache/xmlbeans/impl/xb/xmlconfig/ConfigDocument$Config;
 
     move-result-object v0
 
+    .line 55
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_8
     .catch Lorg/apache/xmlbeans/XmlException; {:try_start_8 .. :try_end_8} :catch_c
@@ -1677,6 +1830,7 @@
     .catch Lorg/apache/xmlbeans/XmlException; {:try_start_9 .. :try_end_9} :catch_a
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_b
 
+    .line 56
     :try_start_a
     invoke-interface {v0, v6}, Lorg/apache/xmlbeans/impl/xb/xmlconfig/ConfigDocument$Config;->setExtensionArray([Lorg/apache/xmlbeans/impl/xb/xmlconfig/Extensionconfig;)V
     :try_end_a
@@ -1713,13 +1867,14 @@
 
     aput-object v18, v6, v8
 
+    .line 57
     aget-object v9, v3, v4
 
     const/4 v10, 0x1
 
     aput-object v9, v6, v10
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1743,6 +1898,7 @@
     :goto_b
     const/4 v9, 0x2
 
+    .line 58
     :goto_c
     invoke-virtual {v0}, Lorg/apache/xmlbeans/XmlException;->getError()Lorg/apache/xmlbeans/XmlError;
 
@@ -1755,6 +1911,7 @@
 
     goto/16 :goto_8
 
+    .line 59
     :cond_b
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
@@ -1772,12 +1929,14 @@
 
     const/4 v3, 0x0
 
+    .line 60
     invoke-static {v3, v2, v3}, Lorg/apache/xmlbeans/impl/schema/SchemaTypeLoaderImpl;->build([Lorg/apache/xmlbeans/SchemaTypeLoader;Lorg/apache/xmlbeans/ResourceLoader;Ljava/lang/ClassLoader;)Lorg/apache/xmlbeans/SchemaTypeLoader;
 
     move-result-object v2
 
     if-eqz p14, :cond_c
 
+    .line 61
     invoke-virtual/range {p14 .. p14}, Ljava/io/File;->toURI()Ljava/net/URI;
 
     move-result-object v8
@@ -1787,6 +1946,7 @@
     :cond_c
     move-object v8, v3
 
+    .line 62
     :goto_e
     new-instance v3, Lorg/apache/xmlbeans/XmlOptions;
 
@@ -1794,21 +1954,25 @@
 
     if-eqz p7, :cond_d
 
+    .line 63
     invoke-virtual {v3}, Lorg/apache/xmlbeans/XmlOptions;->setCompileDownloadUrls()Lorg/apache/xmlbeans/XmlOptions;
 
     :cond_d
     if-eqz p8, :cond_e
 
+    .line 64
     invoke-virtual {v3}, Lorg/apache/xmlbeans/XmlOptions;->setCompileNoUpaRule()Lorg/apache/xmlbeans/XmlOptions;
 
     :cond_e
     if-eqz p9, :cond_f
 
+    .line 65
     invoke-virtual {v3}, Lorg/apache/xmlbeans/XmlOptions;->setCompileNoPvrRule()Lorg/apache/xmlbeans/XmlOptions;
 
     :cond_f
     if-eqz p10, :cond_10
 
+    .line 66
     invoke-virtual {v3}, Lorg/apache/xmlbeans/XmlOptions;->setCompileNoAnnotations()Lorg/apache/xmlbeans/XmlOptions;
 
     :cond_10
@@ -1816,19 +1980,24 @@
 
     if-eqz v4, :cond_11
 
+    .line 67
     invoke-virtual {v3, v4}, Lorg/apache/xmlbeans/XmlOptions;->setCompileMdefNamespaces(Ljava/util/Set;)Lorg/apache/xmlbeans/XmlOptions;
 
+    .line 68
     :cond_11
     invoke-virtual {v3}, Lorg/apache/xmlbeans/XmlOptions;->setCompileNoValidation()Lorg/apache/xmlbeans/XmlOptions;
 
+    .line 69
     invoke-virtual {v3, v7}, Lorg/apache/xmlbeans/XmlOptions;->setEntityResolver(Lorg/xml/sax/EntityResolver;)Lorg/apache/xmlbeans/XmlOptions;
 
     move-object/from16 v4, p20
 
     if-eqz v4, :cond_12
 
+    .line 70
     invoke-virtual {v3, v4}, Lorg/apache/xmlbeans/XmlOptions;->setGenerateJavaVersion(Ljava/lang/String;)Lorg/apache/xmlbeans/XmlOptions;
 
+    .line 71
     :cond_12
     new-instance v4, Lorg/apache/xmlbeans/impl/schema/SchemaTypeSystemCompiler$Parameters;
 
@@ -1836,40 +2005,51 @@
 
     move-object/from16 v5, p0
 
+    .line 72
     invoke-virtual {v4, v5}, Lorg/apache/xmlbeans/impl/schema/SchemaTypeSystemCompiler$Parameters;->setName(Ljava/lang/String;)V
 
+    .line 73
     invoke-virtual {v4, v1}, Lorg/apache/xmlbeans/impl/schema/SchemaTypeSystemCompiler$Parameters;->setSchemas([Lorg/apache/xmlbeans/impl/xb/xsdschema/SchemaDocument$Schema;)V
 
     move-object/from16 v1, p5
 
     move-object/from16 v5, p19
 
+    .line 74
     invoke-static {v0, v1, v5}, Lorg/apache/xmlbeans/impl/config/BindingConfigImpl;->forConfigDocuments([Lorg/apache/xmlbeans/impl/xb/xmlconfig/ConfigDocument$Config;[Ljava/io/File;[Ljava/io/File;)Lorg/apache/xmlbeans/BindingConfig;
 
     move-result-object v0
 
     invoke-virtual {v4, v0}, Lorg/apache/xmlbeans/impl/schema/SchemaTypeSystemCompiler$Parameters;->setConfig(Lorg/apache/xmlbeans/BindingConfig;)V
 
+    .line 75
     invoke-virtual {v4, v2}, Lorg/apache/xmlbeans/impl/schema/SchemaTypeSystemCompiler$Parameters;->setLinkTo(Lorg/apache/xmlbeans/SchemaTypeLoader;)V
 
+    .line 76
     invoke-virtual {v4, v3}, Lorg/apache/xmlbeans/impl/schema/SchemaTypeSystemCompiler$Parameters;->setOptions(Lorg/apache/xmlbeans/XmlOptions;)V
 
+    .line 77
     invoke-virtual {v4, v11}, Lorg/apache/xmlbeans/impl/schema/SchemaTypeSystemCompiler$Parameters;->setErrorListener(Ljava/util/Collection;)V
 
     const/4 v1, 0x1
 
+    .line 78
     invoke-virtual {v4, v1}, Lorg/apache/xmlbeans/impl/schema/SchemaTypeSystemCompiler$Parameters;->setJavaize(Z)V
 
+    .line 79
     invoke-virtual {v4, v8}, Lorg/apache/xmlbeans/impl/schema/SchemaTypeSystemCompiler$Parameters;->setBaseURI(Ljava/net/URI;)V
 
     move-object/from16 v1, p15
 
+    .line 80
     invoke-virtual {v4, v1}, Lorg/apache/xmlbeans/impl/schema/SchemaTypeSystemCompiler$Parameters;->setSourcesToCopyMap(Ljava/util/Map;)V
 
     move-object/from16 v1, p17
 
+    .line 81
     invoke-virtual {v4, v1}, Lorg/apache/xmlbeans/impl/schema/SchemaTypeSystemCompiler$Parameters;->setSchemasDir(Ljava/io/File;)V
 
+    .line 82
     invoke-static {v4}, Lorg/apache/xmlbeans/impl/schema/SchemaTypeSystemCompiler;->compile(Lorg/apache/xmlbeans/impl/schema/SchemaTypeSystemCompiler$Parameters;)Lorg/apache/xmlbeans/SchemaTypeSystem;
 
     move-result-object v0
@@ -1882,18 +2062,22 @@
 
     move-object/from16 v0, p0
 
+    .line 1
     array-length v1, v0
 
     const/4 v2, 0x0
 
     if-nez v1, :cond_0
 
+    .line 2
     invoke-static {}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler;->printUsage()V
 
+    .line 3
     invoke-static {v2}, Ljava/lang/System;->exit(I)V
 
     return-void
 
+    .line 4
     :cond_0
     new-instance v1, Ljava/util/HashSet;
 
@@ -1901,68 +2085,84 @@
 
     const-string v3, "h"
 
+    .line 5
     invoke-interface {v1, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v4, "help"
 
+    .line 6
     invoke-interface {v1, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v5, "usage"
 
+    .line 7
     invoke-interface {v1, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v6, "license"
 
+    .line 8
     invoke-interface {v1, v6}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v7, "quiet"
 
+    .line 9
     invoke-interface {v1, v7}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v8, "verbose"
 
+    .line 10
     invoke-interface {v1, v8}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v9, "version"
 
+    .line 11
     invoke-interface {v1, v9}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v10, "dl"
 
+    .line 12
     invoke-interface {v1, v10}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v11, "noupa"
 
+    .line 13
     invoke-interface {v1, v11}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v12, "nopvr"
 
+    .line 14
     invoke-interface {v1, v12}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v13, "noann"
 
+    .line 15
     invoke-interface {v1, v13}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v14, "novdoc"
 
+    .line 16
     invoke-interface {v1, v14}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v15, "noext"
 
+    .line 17
     invoke-interface {v1, v15}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v2, "srconly"
 
+    .line 18
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     move-object/from16 v16, v2
 
     const-string v2, "debug"
 
+    .line 19
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     move-object/from16 v17, v2
 
+    .line 20
     new-instance v2, Ljava/util/HashSet;
 
     invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
@@ -1971,80 +2171,98 @@
 
     const-string v15, "out"
 
+    .line 21
     invoke-interface {v2, v15}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     move-object/from16 v19, v14
 
     const-string v14, "name"
 
+    .line 22
     invoke-interface {v2, v14}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v14, "src"
 
+    .line 23
     invoke-interface {v2, v14}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     move-object/from16 v20, v14
 
     const-string v14, "d"
 
+    .line 24
     invoke-interface {v2, v14}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v14, "cp"
 
+    .line 25
     invoke-interface {v2, v14}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v14, "compiler"
 
+    .line 26
     invoke-interface {v2, v14}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v14, "javasource"
 
+    .line 27
     invoke-interface {v2, v14}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v14, "jar"
 
+    .line 28
     invoke-interface {v2, v14}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v14, "ms"
 
+    .line 29
     invoke-interface {v2, v14}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v14, "mx"
 
+    .line 30
     invoke-interface {v2, v14}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v14, "repackage"
 
+    .line 31
     invoke-interface {v2, v14}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v14, "schemaCodePrinter"
 
+    .line 32
     invoke-interface {v2, v14}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v14, "extension"
 
+    .line 33
     invoke-interface {v2, v14}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     move-object/from16 v21, v14
 
     const-string v14, "extensionParms"
 
+    .line 34
     invoke-interface {v2, v14}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     move-object/from16 v22, v14
 
     const-string v14, "allowmdef"
 
+    .line 35
     invoke-interface {v2, v14}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v14, "catalog"
 
+    .line 36
     invoke-interface {v2, v14}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 37
     new-instance v14, Lorg/apache/xmlbeans/impl/tool/CommandLine;
 
     invoke-direct {v14, v0, v1, v2}, Lorg/apache/xmlbeans/impl/tool/CommandLine;-><init>([Ljava/lang/String;Ljava/util/Collection;Ljava/util/Collection;)V
 
+    .line 38
     invoke-virtual {v14, v3}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -2065,22 +2283,26 @@
 
     goto/16 :goto_1b
 
+    .line 39
     :cond_1
     invoke-virtual {v14}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getBadOpts()[Ljava/lang/String;
 
     move-result-object v0
 
+    .line 40
     array-length v1, v0
 
     if-lez v1, :cond_3
 
     const/4 v1, 0x0
 
+    .line 41
     :goto_0
     array-length v2, v0
 
     if-ge v1, v2, :cond_2
 
+    .line 42
     sget-object v2, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v3, Ljava/lang/StringBuffer;
@@ -2105,11 +2327,13 @@
 
     goto :goto_0
 
+    .line 43
     :cond_2
     invoke-static {}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler;->printUsage()V
 
     const/4 v1, 0x0
 
+    .line 44
     invoke-static {v1}, Ljava/lang/System;->exit(I)V
 
     return-void
@@ -2117,18 +2341,22 @@
     :cond_3
     const/4 v1, 0x0
 
+    .line 45
     invoke-virtual {v14, v6}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_4
 
+    .line 46
     invoke-static {}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->printLicense()V
 
+    .line 47
     invoke-static {v1}, Ljava/lang/System;->exit(I)V
 
     return-void
 
+    .line 48
     :cond_4
     invoke-virtual {v14, v9}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2136,15 +2364,19 @@
 
     if-eqz v0, :cond_5
 
+    .line 49
     invoke-static {}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->printVersion()V
 
+    .line 50
     invoke-static {v1}, Ljava/lang/System;->exit(I)V
 
     return-void
 
+    .line 51
     :cond_5
     invoke-virtual {v14}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->args()[Ljava/lang/String;
 
+    .line 52
     invoke-virtual {v14, v8}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -2158,6 +2390,7 @@
     :cond_6
     const/4 v2, 0x0
 
+    .line 53
     :goto_1
     invoke-virtual {v14, v7}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2185,8 +2418,10 @@
     :goto_3
     if-eqz v2, :cond_9
 
+    .line 54
     invoke-static {}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->printVersion()V
 
+    .line 55
     :cond_9
     invoke-virtual {v14, v15}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2194,18 +2429,21 @@
 
     const-string v0, "repackage"
 
+    .line 56
     invoke-virtual {v14, v0}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     const-string v0, "schemaCodePrinter"
 
+    .line 57
     invoke-virtual {v14, v0}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_a
 
+    .line 58
     :try_start_0
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -2221,6 +2459,7 @@
 
     goto :goto_4
 
+    .line 59
     :catch_0
     sget-object v7, Ljava/lang/System;->err:Ljava/io/PrintStream;
 
@@ -2250,10 +2489,12 @@
     :goto_4
     const-string v0, "name"
 
+    .line 60
     invoke-virtual {v14, v0}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
+    .line 61
     invoke-virtual {v14, v10}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -2267,6 +2508,7 @@
     :cond_b
     const/4 v9, 0x0
 
+    .line 62
     :goto_5
     invoke-virtual {v14, v11}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2281,6 +2523,7 @@
     :cond_c
     const/4 v10, 0x0
 
+    .line 63
     :goto_6
     invoke-virtual {v14, v12}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2295,6 +2538,7 @@
     :cond_d
     const/4 v11, 0x0
 
+    .line 64
     :goto_7
     invoke-virtual {v14, v13}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2313,6 +2557,7 @@
 
     const/4 v12, 0x0
 
+    .line 65
     :goto_8
     invoke-virtual {v14, v0}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2331,6 +2576,7 @@
 
     const/4 v13, 0x0
 
+    .line 66
     :goto_9
     invoke-virtual {v14, v0}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2349,6 +2595,7 @@
 
     const/4 v15, 0x0
 
+    .line 67
     :goto_a
     invoke-virtual {v14, v0}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2367,6 +2614,7 @@
 
     const/4 v6, 0x0
 
+    .line 68
     :goto_b
     invoke-virtual {v14, v0}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2384,12 +2632,14 @@
     :goto_c
     const-string v0, "allowmdef"
 
+    .line 69
     invoke-virtual {v14, v0}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     if-nez v0, :cond_13
 
+    .line 70
     sget-object v0, Ljava/util/Collections;->EMPTY_SET:Ljava/util/Set;
 
     move-object v1, v0
@@ -2412,12 +2662,14 @@
     :goto_d
     move-object/from16 v17, v7
 
+    .line 71
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
     move-object/from16 v0, v21
 
+    .line 72
     invoke-virtual {v14, v0}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v18
@@ -2426,6 +2678,7 @@
 
     move-object/from16 v18, v1
 
+    .line 73
     :try_start_1
     new-instance v1, Lorg/apache/xmlbeans/impl/tool/Extension;
 
@@ -2435,6 +2688,7 @@
 
     move-object/from16 v19, v5
 
+    .line 74
     :try_start_2
     invoke-virtual {v14, v0}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2466,6 +2720,7 @@
 
     invoke-virtual {v1, v5}, Lorg/apache/xmlbeans/impl/tool/Extension;->setClassName(Ljava/lang/Class;)V
 
+    .line 75
     invoke-interface {v7, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_4
     .catch Ljava/lang/ClassNotFoundException; {:try_start_4 .. :try_end_4} :catch_4
@@ -2485,6 +2740,7 @@
 
     move/from16 v24, v15
 
+    .line 76
     :catch_4
     :goto_e
     sget-object v1, Ljava/lang/System;->err:Ljava/io/PrintStream;
@@ -2515,6 +2771,7 @@
 
     const/4 v1, 0x1
 
+    .line 77
     invoke-static {v1}, Ljava/lang/System;->exit(I)V
 
     goto :goto_f
@@ -2528,6 +2785,7 @@
 
     move/from16 v24, v15
 
+    .line 78
     :goto_f
     invoke-interface {v7}, Ljava/util/List;->size()I
 
@@ -2537,6 +2795,7 @@
 
     move-object/from16 v0, v22
 
+    .line 79
     invoke-virtual {v14, v0}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -2545,12 +2804,14 @@
 
     const/4 v1, 0x0
 
+    .line 80
     invoke-interface {v7, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Lorg/apache/xmlbeans/impl/tool/Extension;
 
+    .line 81
     new-instance v1, Ljava/util/StringTokenizer;
 
     invoke-virtual {v14, v0}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
@@ -2561,6 +2822,7 @@
 
     invoke-direct {v1, v0, v13}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 82
     :goto_10
     invoke-virtual {v1}, Ljava/util/StringTokenizer;->hasMoreTokens()Z
 
@@ -2568,18 +2830,21 @@
 
     if-eqz v0, :cond_16
 
+    .line 83
     invoke-virtual {v1}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v0
 
     const/16 v13, 0x3d
 
+    .line 84
     invoke-virtual {v0, v13}, Ljava/lang/String;->indexOf(I)I
 
     move-result v13
 
     if-gez v13, :cond_15
 
+    .line 85
     sget-object v15, Ljava/lang/System;->err:Ljava/io/PrintStream;
 
     move-object/from16 v22, v1
@@ -2590,6 +2855,7 @@
 
     const/4 v1, 0x1
 
+    .line 86
     invoke-static {v1}, Ljava/lang/System;->exit(I)V
 
     goto :goto_11
@@ -2600,22 +2866,27 @@
     :goto_11
     const/4 v1, 0x0
 
+    .line 87
     invoke-virtual {v0, v1, v13}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v15
 
     add-int/lit8 v13, v13, 0x1
 
+    .line 88
     invoke-virtual {v0, v13}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 89
     invoke-virtual {v5}, Lorg/apache/xmlbeans/impl/tool/Extension;->createParam()Lorg/apache/xmlbeans/impl/tool/Extension$Param;
 
     move-result-object v1
 
+    .line 90
     invoke-virtual {v1, v15}, Lorg/apache/xmlbeans/impl/tool/Extension$Param;->setName(Ljava/lang/String;)V
 
+    .line 91
     invoke-virtual {v1, v0}, Lorg/apache/xmlbeans/impl/tool/Extension$Param;->setValue(Ljava/lang/String;)V
 
     move-object/from16 v1, v22
@@ -2625,12 +2896,14 @@
     :cond_16
     const-string v0, "d"
 
+    .line 92
     invoke-virtual {v14, v0}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_17
 
+    .line 93
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -2644,6 +2917,7 @@
 
     const/4 v1, 0x0
 
+    .line 94
     :goto_12
     invoke-virtual {v14, v5}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2651,6 +2925,7 @@
 
     if-eqz v0, :cond_18
 
+    .line 95
     new-instance v13, Ljava/io/File;
 
     invoke-direct {v13, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -2683,6 +2958,7 @@
 
     goto :goto_15
 
+    .line 96
     :cond_1b
     :goto_14
     :try_start_5
@@ -2703,6 +2979,7 @@
 
     move-object v15, v0
 
+    .line 97
     sget-object v0, Ljava/lang/System;->err:Ljava/io/PrintStream;
 
     move-object/from16 v20, v7
@@ -2727,6 +3004,7 @@
 
     const/4 v7, 0x1
 
+    .line 98
     invoke-static {v7}, Ljava/lang/System;->exit(I)V
 
     :goto_15
@@ -2744,6 +3022,7 @@
     :cond_1c
     if-eqz v4, :cond_1d
 
+    .line 99
     new-instance v7, Ljava/io/File;
 
     invoke-direct {v7, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -2756,6 +3035,7 @@
     :goto_17
     if-nez v13, :cond_1e
 
+    .line 100
     invoke-static {v0, v5}, Lorg/apache/xmlbeans/impl/common/IOUtil;->createDir(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v13
@@ -2765,6 +3045,7 @@
 
     const-string v1, "classes"
 
+    .line 101
     invoke-static {v0, v1}, Lorg/apache/xmlbeans/impl/common/IOUtil;->createDir(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v1
@@ -2772,29 +3053,34 @@
     :cond_1f
     const-string v4, "cp"
 
+    .line 102
     invoke-virtual {v14, v4}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     if-eqz v4, :cond_21
 
+    .line 103
     sget-object v5, Ljava/io/File;->pathSeparator:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v4
 
+    .line 104
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v12, 0x0
 
+    .line 105
     :goto_18
     array-length v15, v4
 
     if-ge v12, v15, :cond_20
 
+    .line 106
     new-instance v15, Ljava/io/File;
 
     move-object/from16 v25, v0
@@ -2814,6 +3100,7 @@
     :cond_20
     move-object/from16 v25, v0
 
+    .line 107
     invoke-interface {v5}, Ljava/util/List;->size()I
 
     move-result v0
@@ -2831,6 +3118,7 @@
     :cond_21
     move-object/from16 v25, v0
 
+    .line 108
     invoke-static {}, Lorg/apache/xmlbeans/impl/tool/CodeGenUtil;->systemClasspath()[Ljava/io/File;
 
     move-result-object v0
@@ -2838,18 +3126,21 @@
     :goto_19
     const-string v4, "javasource"
 
+    .line 109
     invoke-virtual {v14, v4}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     const-string v5, "compiler"
 
+    .line 110
     invoke-virtual {v14, v5}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     const-string v12, "jar"
 
+    .line 111
     invoke-virtual {v14, v12}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v12
@@ -2858,6 +3149,7 @@
 
     if-eqz v12, :cond_22
 
+    .line 112
     sget-object v12, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v15, "The \'jar\' option is no longer supported."
@@ -2867,12 +3159,14 @@
     :cond_22
     const-string v12, "ms"
 
+    .line 113
     invoke-virtual {v14, v12}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v12
 
     const-string v15, "mx"
 
+    .line 114
     invoke-virtual {v14, v15}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v15
@@ -2881,6 +3175,7 @@
 
     const-string v11, ".xsd"
 
+    .line 115
     invoke-virtual {v14, v11}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->filesEndingWith(Ljava/lang/String;)[Ljava/io/File;
 
     move-result-object v11
@@ -2889,6 +3184,7 @@
 
     const-string v10, ".wsdl"
 
+    .line 116
     invoke-virtual {v14, v10}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->filesEndingWith(Ljava/lang/String;)[Ljava/io/File;
 
     move-result-object v10
@@ -2897,6 +3193,7 @@
 
     const-string v9, ".java"
 
+    .line 117
     invoke-virtual {v14, v9}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->filesEndingWith(Ljava/lang/String;)[Ljava/io/File;
 
     move-result-object v9
@@ -2905,18 +3202,21 @@
 
     const-string v3, ".xsdconfig"
 
+    .line 118
     invoke-virtual {v14, v3}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->filesEndingWith(Ljava/lang/String;)[Ljava/io/File;
 
     move-result-object v3
 
     move/from16 v30, v6
 
+    .line 119
     invoke-virtual {v14}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getURLs()[Ljava/net/URL;
 
     move-result-object v6
 
     move-object/from16 v31, v15
 
+    .line 120
     array-length v15, v11
 
     move-object/from16 v32, v12
@@ -2931,6 +3231,7 @@
 
     if-nez v15, :cond_23
 
+    .line 121
     sget-object v12, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v15, "Could not find any xsd or wsdl files to process."
@@ -2939,8 +3240,10 @@
 
     const/4 v12, 0x0
 
+    .line 122
     invoke-static {v12}, Ljava/lang/System;->exit(I)V
 
+    .line 123
     :cond_23
     invoke-virtual {v14}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getBaseDir()Ljava/io/File;
 
@@ -2954,6 +3257,7 @@
 
     goto :goto_1a
 
+    .line 124
     :cond_24
     invoke-virtual {v12}, Ljava/io/File;->toURI()Ljava/net/URI;
 
@@ -2961,6 +3265,7 @@
 
     move-object/from16 p0, v4
 
+    .line 125
     :goto_1a
     new-instance v4, Lorg/apache/xmlbeans/impl/common/XmlErrorPrinter;
 
@@ -2968,114 +3273,149 @@
 
     const-string v15, "catalog"
 
+    .line 126
     invoke-virtual {v14, v15}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v14
 
+    .line 127
     new-instance v15, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;
 
     invoke-direct {v15}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;-><init>()V
 
+    .line 128
     invoke-virtual {v15, v12}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->setBaseDir(Ljava/io/File;)V
 
+    .line 129
     invoke-virtual {v15, v11}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->setXsdFiles([Ljava/io/File;)V
 
+    .line 130
     invoke-virtual {v15, v10}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->setWsdlFiles([Ljava/io/File;)V
 
+    .line 131
     invoke-virtual {v15, v9}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->setJavaFiles([Ljava/io/File;)V
 
+    .line 132
     invoke-virtual {v15, v3}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->setConfigFiles([Ljava/io/File;)V
 
+    .line 133
     invoke-virtual {v15, v6}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->setUrlFiles([Ljava/net/URL;)V
 
+    .line 134
     invoke-virtual {v15, v0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->setClasspath([Ljava/io/File;)V
 
+    .line 135
     invoke-virtual {v15, v7}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->setOutputJar(Ljava/io/File;)V
 
+    .line 136
     invoke-virtual {v15, v8}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->setName(Ljava/lang/String;)V
 
+    .line 137
     invoke-virtual {v15, v13}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->setSrcDir(Ljava/io/File;)V
 
+    .line 138
     invoke-virtual {v15, v1}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->setClassesDir(Ljava/io/File;)V
 
+    .line 139
     invoke-virtual {v15, v5}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->setCompiler(Ljava/lang/String;)V
 
     move-object/from16 v0, p0
 
+    .line 140
     invoke-virtual {v15, v0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->setJavaSource(Ljava/lang/String;)V
 
     move-object/from16 v0, v32
 
+    .line 141
     invoke-virtual {v15, v0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->setMemoryInitialSize(Ljava/lang/String;)V
 
     move-object/from16 v0, v31
 
+    .line 142
     invoke-virtual {v15, v0}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->setMemoryMaximumSize(Ljava/lang/String;)V
 
     move/from16 v1, v30
 
+    .line 143
     invoke-virtual {v15, v1}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->setNojavac(Z)V
 
     move/from16 v1, v29
 
+    .line 144
     invoke-virtual {v15, v1}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->setQuiet(Z)V
 
+    .line 145
     invoke-virtual {v15, v2}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->setVerbose(Z)V
 
     move/from16 v1, v28
 
+    .line 146
     invoke-virtual {v15, v1}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->setDownload(Z)V
 
     move/from16 v1, v27
 
+    .line 147
     invoke-virtual {v15, v1}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->setNoUpa(Z)V
 
     move/from16 v1, v26
 
+    .line 148
     invoke-virtual {v15, v1}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->setNoPvr(Z)V
 
     move/from16 v1, v22
 
+    .line 149
     invoke-virtual {v15, v1}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->setNoAnn(Z)V
 
     move/from16 v1, v21
 
+    .line 150
     invoke-virtual {v15, v1}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->setNoVDoc(Z)V
 
     move/from16 v1, v24
 
+    .line 151
     invoke-virtual {v15, v1}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->setNoExt(Z)V
 
     move/from16 v1, v23
 
+    .line 152
     invoke-virtual {v15, v1}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->setDebug(Z)V
 
+    .line 153
     invoke-virtual {v15, v4}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->setErrorListener(Ljava/util/Collection;)V
 
     move-object/from16 v1, v19
 
+    .line 154
     invoke-virtual {v15, v1}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->setRepackage(Ljava/lang/String;)V
 
     move-object/from16 v1, v20
 
+    .line 155
     invoke-virtual {v15, v1}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->setExtensions(Ljava/util/List;)V
 
     move-object/from16 v1, v18
 
+    .line 156
     invoke-virtual {v15, v1}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->setMdefNamespaces(Ljava/util/Set;)V
 
+    .line 157
     invoke-virtual {v15, v14}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->setCatalogFile(Ljava/lang/String;)V
 
     move-object/from16 v6, v17
 
+    .line 158
     invoke-virtual {v15, v6}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;->setSchemaCodePrinter(Lorg/apache/xmlbeans/SchemaCodePrinter;)V
 
+    .line 159
     invoke-static {v15}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler;->compile(Lorg/apache/xmlbeans/impl/tool/SchemaCompiler$Parameters;)Z
 
     move-result v0
 
     if-eqz v25, :cond_25
 
+    .line 160
     invoke-static/range {v25 .. v25}, Lorg/apache/xmlbeans/impl/tool/SchemaCodeGenerator;->tryHardToDelete(Ljava/io/File;)V
 
     :cond_25
@@ -3083,11 +3423,13 @@
 
     const/4 v1, 0x1
 
+    .line 161
     invoke-static {v1}, Ljava/lang/System;->exit(I)V
 
     :cond_26
     const/4 v1, 0x0
 
+    .line 162
     invoke-static {v1}, Ljava/lang/System;->exit(I)V
 
     return-void
@@ -3096,8 +3438,10 @@
     :goto_1b
     const/4 v1, 0x0
 
+    .line 163
     invoke-static {}, Lorg/apache/xmlbeans/impl/tool/SchemaCompiler;->printUsage()V
 
+    .line 164
     invoke-static {v1}, Ljava/lang/System;->exit(I)V
 
     return-void
@@ -3106,102 +3450,119 @@
 .method public static printUsage()V
     .locals 4
 
+    .line 1
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "Compiles a schema into XML Bean classes and metadata."
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 2
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "Usage: scomp [opts] [dirs]* [schema.xsd]* [service.wsdl]* [config.xsdconfig]*"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 3
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "Options include:"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 4
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "    -cp [a;b;c] - classpath"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 5
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "    -d [dir] - target binary directory for .class and .xsb files"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 6
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "    -src [dir] - target directory for generated .java files"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 7
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "    -srconly - do not compile .java files or jar the output."
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 8
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "    -out [xmltypes.jar] - the name of the output jar"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 9
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "    -dl - permit network downloads for imports and includes (default is off)"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 10
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "    -noupa - do not enforce the unique particle attribution rule"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 11
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "    -nopvr - do not enforce the particle valid (restriction) rule"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 12
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "    -noann - ignore annotations"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 13
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "    -novdoc - do not validate contents of <documentation>"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 14
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "    -noext - ignore all extension (Pre/Post and Interface) found in .xsdconfig files"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 15
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "    -compiler - path to external java compiler"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 16
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "    -javasource [version] - generate java source compatible for a Java version (1.4 or 1.5)"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 17
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v1, Ljava/lang/StringBuffer;
@@ -3226,6 +3587,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 18
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v1, Ljava/lang/StringBuffer;
@@ -3248,48 +3610,56 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 19
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "    -debug - compile with debug symbols"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 20
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "    -quiet - print fewer informational messages"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 21
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "    -verbose - print more informational messages"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 22
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "    -version - prints version information"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 23
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "    -license - prints license information"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 24
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "    -allowmdef \"[ns] [ns] [ns]\" - ignores multiple defs in given namespaces (use ##local for no-namespace)"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 25
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "    -catalog [file] -  catalog file for org.apache.xml.resolver.tools.CatalogResolver. (Note: needs resolver.jar from http://xml.apache.org/commons/components/resolver/index.html)"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 26
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     invoke-virtual {v0}, Ljava/io/PrintStream;->println()V
@@ -3304,16 +3674,19 @@
 
     if-eqz p0, :cond_1
 
+    .line 1
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v1
 
     if-lez v1, :cond_1
 
+    .line 2
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
+    .line 3
     :try_start_0
     invoke-virtual {p2}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
 
@@ -3323,6 +3696,7 @@
 
     goto :goto_0
 
+    .line 4
     :catch_0
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
@@ -3330,10 +3704,12 @@
 
     invoke-virtual {v1, v2}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {p2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object p2
 
+    .line 6
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -3341,12 +3717,14 @@
 
     if-eqz v1, :cond_1
 
+    .line 7
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lorg/apache/xmlbeans/impl/tool/Extension;
 
+    .line 8
     :try_start_1
     invoke-virtual {v1}, Lorg/apache/xmlbeans/impl/tool/Extension;->getClassName()Ljava/lang/Class;
 
@@ -3361,6 +3739,7 @@
     .catch Ljava/lang/InstantiationException; {:try_start_1 .. :try_end_1} :catch_2
     .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_1
 
+    .line 9
     sget-object v3, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v4, Ljava/lang/StringBuffer;
@@ -3383,10 +3762,12 @@
 
     invoke-virtual {v3, v4}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 10
     new-instance v3, Ljava/util/HashMap;
 
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
+    .line 11
     invoke-virtual {v1}, Lorg/apache/xmlbeans/impl/tool/Extension;->getParams()Ljava/util/List;
 
     move-result-object v1
@@ -3395,6 +3776,7 @@
 
     move-result-object v1
 
+    .line 12
     :goto_1
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -3402,12 +3784,14 @@
 
     if-eqz v4, :cond_0
 
+    .line 13
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Lorg/apache/xmlbeans/impl/tool/Extension$Param;
 
+    .line 14
     invoke-virtual {v4}, Lorg/apache/xmlbeans/impl/tool/Extension$Param;->getName()Ljava/lang/String;
 
     move-result-object v5
@@ -3423,12 +3807,15 @@
     :cond_0
     const-string v1, "classesDir"
 
+    .line 15
     invoke-interface {v3, v1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 16
     invoke-interface {v2, p1, v3}, Lorg/apache/xmlbeans/impl/tool/SchemaCompilerExtension;->schemaCompilerExtension(Lorg/apache/xmlbeans/SchemaTypeSystem;Ljava/util/Map;)V
 
     goto :goto_0
 
+    .line 17
     :catch_1
     sget-object p0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
@@ -3456,12 +3843,14 @@
 
     invoke-virtual {p0, p1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 18
     sget-object p0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     invoke-virtual {p0, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
     goto :goto_2
 
+    .line 19
     :catch_2
     sget-object p0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
@@ -3489,6 +3878,7 @@
 
     invoke-virtual {p0, p1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 20
     sget-object p0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     invoke-virtual {p0, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
@@ -3503,6 +3893,7 @@
 
     const-string v0, "declare namespace soap=\'http://schemas.xmlsoap.org/wsdl/soap/\' .//soap:body/@use|.//soap:header/@use|.//soap:fault/@use"
 
+    .line 1
     invoke-interface {p0, v0}, Lorg/apache/xmlbeans/XmlObject;->selectPath(Ljava/lang/String;)[Lorg/apache/xmlbeans/XmlObject;
 
     move-result-object p0
@@ -3511,11 +3902,13 @@
 
     move v1, v0
 
+    .line 2
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_1
 
+    .line 3
     aget-object v2, p0, v1
 
     check-cast v2, Lorg/apache/xmlbeans/SimpleValue;

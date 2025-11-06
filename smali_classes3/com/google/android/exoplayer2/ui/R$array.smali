@@ -15,7 +15,7 @@
 
 
 # static fields
-.field public static final exo_controls_playback_speeds:I = 0x7f03001a
+.field public static final exo_controls_playback_speeds:I = 0x7f030018
 
 
 # direct methods

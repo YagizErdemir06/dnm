@@ -97,9 +97,9 @@
 
 .field public dimensionRatio:Ljava/lang/String;
 
-.field dimensionRatioSide:I
+.field public dimensionRatioSide:I
 
-.field dimensionRatioValue:F
+.field public dimensionRatioValue:F
 
 .field public editorAbsoluteX:I
 
@@ -131,7 +131,7 @@
 
 .field public guidelineUseRtl:Z
 
-.field heightSet:Z
+.field public heightSet:Z
 
 .field public helped:Z
 
@@ -139,17 +139,17 @@
 
 .field public horizontalChainStyle:I
 
-.field horizontalDimensionFixed:Z
+.field public horizontalDimensionFixed:Z
 
 .field public horizontalWeight:F
 
-.field isGuideline:Z
+.field public isGuideline:Z
 
-.field isHelper:Z
+.field public isHelper:Z
 
-.field isInPlaceholder:Z
+.field public isInPlaceholder:Z
 
-.field isVirtualGroup:Z
+.field public isVirtualGroup:Z
 
 .field public leftToLeft:I
 
@@ -171,29 +171,29 @@
 
 .field public matchConstraintPercentWidth:F
 
-.field needsBaseline:Z
+.field public needsBaseline:Z
 
 .field public orientation:I
 
-.field resolveGoneLeftMargin:I
+.field public resolveGoneLeftMargin:I
 
-.field resolveGoneRightMargin:I
+.field public resolveGoneRightMargin:I
 
-.field resolvedGuideBegin:I
+.field public resolvedGuideBegin:I
 
-.field resolvedGuideEnd:I
+.field public resolvedGuideEnd:I
 
-.field resolvedGuidePercent:F
+.field public resolvedGuidePercent:F
 
-.field resolvedHorizontalBias:F
+.field public resolvedHorizontalBias:F
 
-.field resolvedLeftToLeft:I
+.field public resolvedLeftToLeft:I
 
-.field resolvedLeftToRight:I
+.field public resolvedLeftToRight:I
 
-.field resolvedRightToLeft:I
+.field public resolvedRightToLeft:I
 
-.field resolvedRightToRight:I
+.field public resolvedRightToRight:I
 
 .field public rightToLeft:I
 
@@ -211,13 +211,13 @@
 
 .field public verticalChainStyle:I
 
-.field verticalDimensionFixed:Z
+.field public verticalDimensionFixed:Z
 
 .field public verticalWeight:F
 
-.field widget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
+.field public widget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
-.field widthSet:Z
+.field public widthSet:Z
 
 .field public wrapBehaviorInParent:I
 
@@ -2603,6 +2603,7 @@
 .method public getConstraintTag()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->constraintTag:Ljava/lang/String;
 
     return-object p0
@@ -2611,6 +2612,7 @@
 .method public getConstraintWidget()Landroidx/constraintlayout/core/widgets/ConstraintWidget;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->widget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     return-object p0
@@ -2619,10 +2621,12 @@
 .method public reset()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->widget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->reset()V
 
     :cond_0
@@ -2644,60 +2648,87 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
+    .line 2
     iget v1, p0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
+    .line 3
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    const/16 v5, 0x11
+
+    if-lt v2, v5, :cond_0
+
+    .line 4
     invoke-super {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;->resolveLayoutDirection(I)V
 
+    .line 5
     invoke-virtual {p0}, Landroid/view/ViewGroup$MarginLayoutParams;->getLayoutDirection()I
 
     move-result p1
 
-    const/4 v2, 0x0
+    if-ne v4, p1, :cond_0
 
-    const/4 v3, 0x1
-
-    if-ne v3, p1, :cond_0
-
-    move p1, v3
+    move p1, v4
 
     goto :goto_0
 
     :cond_0
-    move p1, v2
+    move p1, v3
 
     :goto_0
-    const/4 v4, -0x1
+    const/4 v2, -0x1
 
-    iput v4, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedRightToLeft:I
+    .line 6
+    iput v2, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedRightToLeft:I
 
-    iput v4, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedRightToRight:I
+    .line 7
+    iput v2, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedRightToRight:I
 
-    iput v4, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedLeftToLeft:I
+    .line 8
+    iput v2, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedLeftToLeft:I
 
-    iput v4, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedLeftToRight:I
+    .line 9
+    iput v2, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedLeftToRight:I
 
+    .line 10
+    iput v2, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolveGoneLeftMargin:I
+
+    .line 11
+    iput v2, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolveGoneRightMargin:I
+
+    .line 12
     iget v5, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->goneLeftMargin:I
 
     iput v5, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolveGoneLeftMargin:I
 
+    .line 13
     iget v5, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->goneRightMargin:I
 
     iput v5, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolveGoneRightMargin:I
 
+    .line 14
     iget v5, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->horizontalBias:F
 
     iput v5, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedHorizontalBias:F
 
+    .line 15
     iget v6, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->guideBegin:I
 
     iput v6, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedGuideBegin:I
 
+    .line 16
     iget v7, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->guideEnd:I
 
     iput v7, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedGuideEnd:I
 
+    .line 17
     iget v8, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->guidePercent:F
 
     iput v8, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedGuidePercent:F
@@ -2706,241 +2737,293 @@
 
     if-eqz p1, :cond_a
 
+    .line 18
     iget p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->startToEnd:I
 
-    if-eq p1, v4, :cond_1
+    if-eq p1, v2, :cond_1
 
+    .line 19
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedRightToLeft:I
 
     :goto_1
-    move v2, v3
+    move v3, v4
 
     goto :goto_2
 
+    .line 20
     :cond_1
     iget p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->startToStart:I
 
-    if-eq p1, v4, :cond_2
+    if-eq p1, v2, :cond_2
 
+    .line 21
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedRightToRight:I
 
     goto :goto_1
 
+    .line 22
     :cond_2
     :goto_2
     iget p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->endToStart:I
 
-    if-eq p1, v4, :cond_3
+    if-eq p1, v2, :cond_3
 
+    .line 23
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedLeftToRight:I
 
-    move v2, v3
+    move v3, v4
 
+    .line 24
     :cond_3
     iget p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->endToEnd:I
 
-    if-eq p1, v4, :cond_4
+    if-eq p1, v2, :cond_4
 
+    .line 25
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedLeftToLeft:I
 
-    move v2, v3
+    move v3, v4
 
+    .line 26
     :cond_4
     iget p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->goneStartMargin:I
 
     if-eq p1, v9, :cond_5
 
+    .line 27
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolveGoneRightMargin:I
 
+    .line 28
     :cond_5
     iget p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->goneEndMargin:I
 
     if-eq p1, v9, :cond_6
 
+    .line 29
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolveGoneLeftMargin:I
 
     :cond_6
     const/high16 p1, 0x3f800000    # 1.0f
 
-    if-eqz v2, :cond_7
+    if-eqz v3, :cond_7
 
-    sub-float v2, p1, v5
+    sub-float v3, p1, v5
 
-    iput v2, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedHorizontalBias:F
+    .line 30
+    iput v3, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedHorizontalBias:F
 
+    .line 31
     :cond_7
-    iget-boolean v2, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->isGuideline:Z
+    iget-boolean v3, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->isGuideline:Z
 
-    if-eqz v2, :cond_10
+    if-eqz v3, :cond_10
 
-    iget v2, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->orientation:I
+    iget v3, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->orientation:I
 
-    if-ne v2, v3, :cond_10
+    if-ne v3, v4, :cond_10
 
-    iget-boolean v2, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->guidelineUseRtl:Z
+    iget-boolean v3, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->guidelineUseRtl:Z
 
-    if-eqz v2, :cond_10
+    if-eqz v3, :cond_10
 
-    const/high16 v2, -0x40800000    # -1.0f
+    const/high16 v3, -0x40800000    # -1.0f
 
-    cmpl-float v3, v8, v2
+    cmpl-float v4, v8, v3
 
-    if-eqz v3, :cond_8
+    if-eqz v4, :cond_8
 
     sub-float/2addr p1, v8
 
+    .line 32
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedGuidePercent:F
 
-    iput v4, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedGuideBegin:I
+    .line 33
+    iput v2, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedGuideBegin:I
 
-    iput v4, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedGuideEnd:I
+    .line 34
+    iput v2, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedGuideEnd:I
 
     goto :goto_3
 
     :cond_8
-    if-eq v6, v4, :cond_9
+    if-eq v6, v2, :cond_9
 
+    .line 35
     iput v6, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedGuideEnd:I
 
-    iput v4, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedGuideBegin:I
+    .line 36
+    iput v2, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedGuideBegin:I
 
-    iput v2, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedGuidePercent:F
+    .line 37
+    iput v3, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedGuidePercent:F
 
     goto :goto_3
 
     :cond_9
-    if-eq v7, v4, :cond_10
+    if-eq v7, v2, :cond_10
 
+    .line 38
     iput v7, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedGuideBegin:I
 
-    iput v4, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedGuideEnd:I
+    .line 39
+    iput v2, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedGuideEnd:I
 
-    iput v2, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedGuidePercent:F
+    .line 40
+    iput v3, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedGuidePercent:F
 
     goto :goto_3
 
+    .line 41
     :cond_a
     iget p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->startToEnd:I
 
-    if-eq p1, v4, :cond_b
+    if-eq p1, v2, :cond_b
 
+    .line 42
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedLeftToRight:I
 
+    .line 43
     :cond_b
     iget p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->startToStart:I
 
-    if-eq p1, v4, :cond_c
+    if-eq p1, v2, :cond_c
 
+    .line 44
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedLeftToLeft:I
 
+    .line 45
     :cond_c
     iget p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->endToStart:I
 
-    if-eq p1, v4, :cond_d
+    if-eq p1, v2, :cond_d
 
+    .line 46
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedRightToLeft:I
 
+    .line 47
     :cond_d
     iget p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->endToEnd:I
 
-    if-eq p1, v4, :cond_e
+    if-eq p1, v2, :cond_e
 
+    .line 48
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedRightToRight:I
 
+    .line 49
     :cond_e
     iget p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->goneStartMargin:I
 
     if-eq p1, v9, :cond_f
 
+    .line 50
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolveGoneLeftMargin:I
 
+    .line 51
     :cond_f
     iget p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->goneEndMargin:I
 
     if-eq p1, v9, :cond_10
 
+    .line 52
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolveGoneRightMargin:I
 
+    .line 53
     :cond_10
     :goto_3
     iget p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->endToStart:I
 
-    if-ne p1, v4, :cond_14
+    if-ne p1, v2, :cond_14
 
     iget p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->endToEnd:I
 
-    if-ne p1, v4, :cond_14
+    if-ne p1, v2, :cond_14
 
     iget p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->startToStart:I
 
-    if-ne p1, v4, :cond_14
+    if-ne p1, v2, :cond_14
 
     iget p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->startToEnd:I
 
-    if-ne p1, v4, :cond_14
+    if-ne p1, v2, :cond_14
 
+    .line 54
     iget p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->rightToLeft:I
 
-    if-eq p1, v4, :cond_11
+    if-eq p1, v2, :cond_11
 
+    .line 55
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedRightToLeft:I
 
+    .line 56
     iget p1, p0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
     if-gtz p1, :cond_12
 
     if-lez v1, :cond_12
 
+    .line 57
     iput v1, p0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
     goto :goto_4
 
+    .line 58
     :cond_11
     iget p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->rightToRight:I
 
-    if-eq p1, v4, :cond_12
+    if-eq p1, v2, :cond_12
 
+    .line 59
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedRightToRight:I
 
+    .line 60
     iget p1, p0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
     if-gtz p1, :cond_12
 
     if-lez v1, :cond_12
 
+    .line 61
     iput v1, p0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
+    .line 62
     :cond_12
     :goto_4
     iget p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->leftToLeft:I
 
-    if-eq p1, v4, :cond_13
+    if-eq p1, v2, :cond_13
 
+    .line 63
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedLeftToLeft:I
 
+    .line 64
     iget p1, p0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
     if-gtz p1, :cond_14
 
     if-lez v0, :cond_14
 
+    .line 65
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
     goto :goto_5
 
+    .line 66
     :cond_13
     iget p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->leftToRight:I
 
-    if-eq p1, v4, :cond_14
+    if-eq p1, v2, :cond_14
 
+    .line 67
     iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->resolvedLeftToRight:I
 
+    .line 68
     iget p1, p0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
     if-gtz p1, :cond_14
 
     if-lez v0, :cond_14
 
+    .line 69
     iput v0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
     :cond_14
@@ -2959,6 +3042,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->widget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     invoke-virtual {p0, p1}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->setDebugName(Ljava/lang/String;)V
@@ -2971,14 +3055,18 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-boolean v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->isGuideline:Z
 
     const/4 v1, 0x1
 
+    .line 2
     iput-boolean v1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->horizontalDimensionFixed:Z
 
+    .line 3
     iput-boolean v1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->verticalDimensionFixed:Z
 
+    .line 4
     iget v2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
 
     const/4 v3, -0x2
@@ -2989,14 +3077,18 @@
 
     if-eqz v4, :cond_0
 
+    .line 5
     iput-boolean v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->horizontalDimensionFixed:Z
 
+    .line 6
     iget v4, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->matchConstraintDefaultWidth:I
 
     if-nez v4, :cond_0
 
+    .line 7
     iput v1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->matchConstraintDefaultWidth:I
 
+    .line 8
     :cond_0
     iget v4, p0, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
@@ -3006,12 +3098,15 @@
 
     if-eqz v5, :cond_1
 
+    .line 9
     iput-boolean v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->verticalDimensionFixed:Z
 
+    .line 10
     iget v5, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->matchConstraintDefaultHeight:I
 
     if-nez v5, :cond_1
 
+    .line 11
     iput v1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->matchConstraintDefaultHeight:I
 
     :cond_1
@@ -3021,17 +3116,21 @@
 
     if-ne v2, v5, :cond_3
 
+    .line 12
     :cond_2
     iput-boolean v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->horizontalDimensionFixed:Z
 
     if-nez v2, :cond_3
 
+    .line 13
     iget v2, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->matchConstraintDefaultWidth:I
 
     if-ne v2, v1, :cond_3
 
+    .line 14
     iput v3, p0, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
 
+    .line 15
     iput-boolean v1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->constrainedWidth:Z
 
     :cond_3
@@ -3039,19 +3138,24 @@
 
     if-ne v4, v5, :cond_5
 
+    .line 16
     :cond_4
     iput-boolean v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->verticalDimensionFixed:Z
 
     if-nez v4, :cond_5
 
+    .line 17
     iget v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->matchConstraintDefaultHeight:I
 
     if-ne v0, v1, :cond_5
 
+    .line 18
     iput v3, p0, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
+    .line 19
     iput-boolean v1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->constrainedHeight:Z
 
+    .line 20
     :cond_5
     iget v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->guidePercent:F
 
@@ -3069,25 +3173,31 @@
 
     if-eq v0, v5, :cond_8
 
+    .line 21
     :cond_6
     iput-boolean v1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->isGuideline:Z
 
+    .line 22
     iput-boolean v1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->horizontalDimensionFixed:Z
 
+    .line 23
     iput-boolean v1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->verticalDimensionFixed:Z
 
+    .line 24
     iget-object v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->widget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     instance-of v0, v0, Landroidx/constraintlayout/core/widgets/Guideline;
 
     if-nez v0, :cond_7
 
+    .line 25
     new-instance v0, Landroidx/constraintlayout/core/widgets/Guideline;
 
     invoke-direct {v0}, Landroidx/constraintlayout/core/widgets/Guideline;-><init>()V
 
     iput-object v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->widget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
+    .line 26
     :cond_7
     iget-object v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->widget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 

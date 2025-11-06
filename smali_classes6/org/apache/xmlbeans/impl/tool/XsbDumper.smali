@@ -12,7 +12,7 @@
 
 
 # static fields
-.field static final synthetic $assertionsDisabled:Z
+.field public static final synthetic $assertionsDisabled:Z
 
 .field public static final DATA_BABE:I = -0x25854542
 
@@ -38,37 +38,37 @@
 
 .field public static final FILETYPE_SCHEMATYPE:I = 0x2
 
-.field static final FLAG_ABSTRACT:I = 0x40000
+.field public static final FLAG_ABSTRACT:I = 0x40000
 
-.field static final FLAG_ATTRIBUTE_TYPE:I = 0x80000
+.field public static final FLAG_ATTRIBUTE_TYPE:I = 0x80000
 
-.field static final FLAG_BLOCK_EXT:I = 0x1000
+.field public static final FLAG_BLOCK_EXT:I = 0x1000
 
-.field static final FLAG_BLOCK_REST:I = 0x2000
+.field public static final FLAG_BLOCK_REST:I = 0x2000
 
-.field static final FLAG_BOUNDED:I = 0x8
+.field public static final FLAG_BOUNDED:I = 0x8
 
-.field static final FLAG_COMPILED:I = 0x800
+.field public static final FLAG_COMPILED:I = 0x800
 
-.field static final FLAG_DOCUMENT_TYPE:I = 0x2
+.field public static final FLAG_DOCUMENT_TYPE:I = 0x2
 
-.field static final FLAG_FINAL_EXT:I = 0x4000
+.field public static final FLAG_FINAL_EXT:I = 0x4000
 
-.field static final FLAG_FINAL_LIST:I = 0x20000
+.field public static final FLAG_FINAL_LIST:I = 0x20000
 
-.field static final FLAG_FINAL_REST:I = 0x8000
+.field public static final FLAG_FINAL_REST:I = 0x8000
 
-.field static final FLAG_FINAL_UNION:I = 0x10000
+.field public static final FLAG_FINAL_UNION:I = 0x10000
 
-.field static final FLAG_FINITE:I = 0x10
+.field public static final FLAG_FINITE:I = 0x10
 
-.field static final FLAG_HAS_PATTERN:I = 0x100
+.field public static final FLAG_HAS_PATTERN:I = 0x100
 
-.field static final FLAG_NUMERIC:I = 0x20
+.field public static final FLAG_NUMERIC:I = 0x20
 
-.field static final FLAG_ORDERED:I = 0x4
+.field public static final FLAG_ORDERED:I = 0x4
 
-.field static final FLAG_ORDER_SENSITIVE:I = 0x200
+.field public static final FLAG_ORDER_SENSITIVE:I = 0x200
 
 .field public static final FLAG_PART_ABSTRACT:I = 0x80
 
@@ -96,21 +96,21 @@
 
 .field public static final FLAG_PROP_JAVASINGLETON:I = 0x2
 
-.field static final FLAG_SIMPLE_TYPE:I = 0x1
+.field public static final FLAG_SIMPLE_TYPE:I = 0x1
 
-.field static final FLAG_STRINGENUM:I = 0x40
+.field public static final FLAG_STRINGENUM:I = 0x40
 
-.field static final FLAG_TOTAL_ORDER:I = 0x400
+.field public static final FLAG_TOTAL_ORDER:I = 0x400
 
-.field static final FLAG_UNION_OF_LISTS:I = 0x80
+.field public static final FLAG_UNION_OF_LISTS:I = 0x80
 
 .field public static final MAJOR_VERSION:I = 0x2
 
 .field public static final MINOR_VERSION:I = 0x18
 
-.field static final SINGLE_ZERO_BYTE:[B
+.field public static final SINGLE_ZERO_BYTE:[B
 
-.field static synthetic class$org$apache$xmlbeans$impl$tool$XsbDumper:Ljava/lang/Class;
+.field public static synthetic class$org$apache$xmlbeans$impl$tool$XsbDumper:Ljava/lang/Class;
 
 .field private static final prettyOptions:Lorg/apache/xmlbeans/XmlOptions;
 
@@ -118,7 +118,7 @@
 # instance fields
 .field private _indent:Ljava/lang/String;
 
-.field _input:Ljava/io/DataInputStream;
+.field public _input:Ljava/io/DataInputStream;
 
 .field private _majorver:I
 
@@ -128,13 +128,14 @@
 
 .field private _releaseno:I
 
-.field _stringPool:Lorg/apache/xmlbeans/impl/tool/XsbDumper$StringPool;
+.field public _stringPool:Lorg/apache/xmlbeans/impl/tool/XsbDumper$StringPool;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->class$org$apache$xmlbeans$impl$tool$XsbDumper:Ljava/lang/Class;
 
     if-nez v0, :cond_0
@@ -152,6 +153,7 @@
 
     sput-boolean v0, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->$assertionsDisabled:Z
 
+    .line 2
     new-instance v1, Lorg/apache/xmlbeans/XmlOptions;
 
     invoke-direct {v1}, Lorg/apache/xmlbeans/XmlOptions;-><init>()V
@@ -168,6 +170,7 @@
 
     aput-byte v1, v0, v1
 
+    .line 3
     sput-object v0, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->SINGLE_ZERO_BYTE:[B
 
     return-void
@@ -176,16 +179,20 @@
 .method private constructor <init>(Ljava/io/InputStream;Ljava/lang/String;Ljava/io/PrintStream;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/io/DataInputStream;
 
     invoke-direct {v0, p1}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
 
     iput-object v0, p0, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->_input:Ljava/io/DataInputStream;
 
+    .line 3
     iput-object p2, p0, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->_indent:Ljava/lang/String;
 
+    .line 4
     iput-object p3, p0, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->_out:Ljava/io/PrintStream;
 
     return-void
@@ -204,6 +211,7 @@
 
     if-eq p0, v0, :cond_0
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -255,6 +263,7 @@
 
     if-eq p0, v0, :cond_0
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -300,6 +309,7 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     invoke-virtual {p0}, Ljava/math/BigInteger;->toString()Ljava/lang/String;
 
@@ -311,6 +321,7 @@
 .method public static synthetic class$(Ljava/lang/String;)Ljava/lang/Class;
     .locals 1
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -327,7 +338,7 @@
 
     invoke-direct {v0}, Ljava/lang/NoClassDefFoundError;-><init>()V
 
-    invoke-virtual {v0, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v0, p0}, Ljava/lang/NoClassDefFoundError;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -353,6 +364,7 @@
 
     if-eq p0, v0, :cond_0
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -411,6 +423,7 @@
 
     if-eq p0, v0, :cond_0
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -569,7 +582,7 @@
     .line 10
     sget-object p1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/io/FileNotFoundException;->toString()Ljava/lang/String;
 
     move-result-object p0
 
@@ -590,12 +603,12 @@
 .method public static dump(Ljava/io/InputStream;)V
     .locals 2
 
-    const-string v0, ""
-
     .line 12
-    sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
+    sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
-    invoke-static {p0, v0, v1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dump(Ljava/io/InputStream;Ljava/lang/String;Ljava/io/PrintStream;)V
+    const-string v1, ""
+
+    invoke-static {p0, v1, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dump(Ljava/io/InputStream;Ljava/lang/String;Ljava/io/PrintStream;)V
 
     return-void
 .end method
@@ -628,15 +641,18 @@
 .method public static dumpZip(Ljava/io/File;)V
     .locals 4
 
+    .line 1
     :try_start_0
     new-instance v0, Ljava/util/zip/ZipFile;
 
     invoke-direct {v0, p0}, Ljava/util/zip/ZipFile;-><init>(Ljava/io/File;)V
 
+    .line 2
     invoke-virtual {v0}, Ljava/util/zip/ZipFile;->entries()Ljava/util/Enumeration;
 
     move-result-object p0
 
+    .line 3
     :cond_0
     :goto_0
     invoke-interface {p0}, Ljava/util/Enumeration;->hasMoreElements()Z
@@ -645,12 +661,14 @@
 
     if-eqz v1, :cond_1
 
+    .line 4
     invoke-interface {p0}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/zip/ZipEntry;
 
+    .line 5
     invoke-virtual {v1}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 
     move-result-object v2
@@ -663,6 +681,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 6
     sget-object v2, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     invoke-virtual {v1}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
@@ -671,6 +690,7 @@
 
     invoke-virtual {v2, v3}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 7
     invoke-virtual {v0, v1}, Ljava/util/zip/ZipFile;->getInputStream(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;
 
     move-result-object v1
@@ -679,6 +699,7 @@
 
     invoke-static {v1, v2}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dump(Ljava/io/InputStream;Ljava/lang/String;)V
 
+    .line 8
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     invoke-virtual {v1}, Ljava/io/PrintStream;->println()V
@@ -690,9 +711,10 @@
     :catch_0
     move-exception p0
 
+    .line 9
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/io/IOException;->toString()Ljava/lang/String;
 
     move-result-object p0
 
@@ -707,6 +729,7 @@
 
     packed-switch p0, :pswitch_data_0
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -779,6 +802,7 @@
 .method public static hex32String(I)Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -791,6 +815,7 @@
 
     packed-switch p0, :pswitch_data_0
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -939,24 +964,29 @@
 .method public static main([Ljava/lang/String;)V
     .locals 3
 
+    .line 1
     array-length v0, p0
 
     const/4 v1, 0x0
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-static {}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->printUsage()V
 
+    .line 3
     invoke-static {v1}, Ljava/lang/System;->exit(I)V
 
     return-void
 
+    .line 4
     :cond_0
     :goto_0
     array-length v0, p0
 
     if-ge v1, v0, :cond_1
 
+    .line 5
     new-instance v0, Ljava/io/File;
 
     aget-object v2, p0, v1
@@ -998,6 +1028,7 @@
 
     if-eq p0, v0, :cond_0
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -1047,6 +1078,7 @@
 .method public static particleflagsString(I)Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -1057,6 +1089,7 @@
 
     const-string v1, "FLAG_PART_SKIPPABLE | "
 
+    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_0
@@ -1066,6 +1099,7 @@
 
     const-string v1, "FLAG_PART_FIXED | "
 
+    .line 3
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_1
@@ -1075,6 +1109,7 @@
 
     const-string v1, "FLAG_PART_NILLABLE | "
 
+    .line 4
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_2
@@ -1084,6 +1119,7 @@
 
     const-string v1, "FLAG_PART_BLOCKEXT | "
 
+    .line 5
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_3
@@ -1093,6 +1129,7 @@
 
     const-string v1, "FLAG_PART_BLOCKREST | "
 
+    .line 6
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_4
@@ -1102,6 +1139,7 @@
 
     const-string v1, "FLAG_PART_BLOCKSUBST | "
 
+    .line 7
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_5
@@ -1111,6 +1149,7 @@
 
     const-string v1, "FLAG_PART_ABSTRACT | "
 
+    .line 8
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_6
@@ -1120,6 +1159,7 @@
 
     const-string v1, "FLAG_PART_FINALEXT | "
 
+    .line 9
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_7
@@ -1129,8 +1169,10 @@
 
     const-string p0, "FLAG_PART_FINALREST | "
 
+    .line 10
     invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    .line 11
     :cond_8
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->length()I
 
@@ -1143,15 +1185,16 @@
     invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_9
+    const/4 p0, 0x0
+
+    .line 12
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->length()I
 
-    move-result p0
+    move-result v1
 
-    add-int/lit8 p0, p0, -0x3
+    add-int/lit8 v1, v1, -0x3
 
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1, p0}, Ljava/lang/StringBuffer;->substring(II)Ljava/lang/String;
+    invoke-virtual {v0, p0, v1}, Ljava/lang/StringBuffer;->substring(II)Ljava/lang/String;
 
     move-result-object p0
 
@@ -1161,36 +1204,42 @@
 .method public static printUsage()V
     .locals 2
 
+    .line 1
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "Prints the contents of an XSB file in human-readable form."
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 2
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "An XSB file contains schema meta information needed to "
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 3
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "perform tasks such as binding and validation."
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 4
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "Usage: dumpxsb myfile.xsb"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 5
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "    myfile.xsb - Path to an XSB file."
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 6
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     invoke-virtual {v0}, Ljava/io/PrintStream;->println()V
@@ -1201,6 +1250,7 @@
 .method public static propertyflagsString(I)Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -1211,6 +1261,7 @@
 
     const-string v1, "FLAG_PROP_ISATTR | "
 
+    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_0
@@ -1220,6 +1271,7 @@
 
     const-string v1, "FLAG_PROP_JAVASINGLETON | "
 
+    .line 3
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_1
@@ -1229,6 +1281,7 @@
 
     const-string v1, "FLAG_PROP_JAVAOPTIONAL | "
 
+    .line 4
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_2
@@ -1238,8 +1291,10 @@
 
     const-string p0, "FLAG_PROP_JAVAARRAY | "
 
+    .line 5
     invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    .line 6
     :cond_3
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->length()I
 
@@ -1252,15 +1307,16 @@
     invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_4
+    const/4 p0, 0x0
+
+    .line 7
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->length()I
 
-    move-result p0
+    move-result v1
 
-    add-int/lit8 p0, p0, -0x3
+    add-int/lit8 v1, v1, -0x3
 
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1, p0}, Ljava/lang/StringBuffer;->substring(II)Ljava/lang/String;
+    invoke-virtual {v0, p0, v1}, Ljava/lang/StringBuffer;->substring(II)Ljava/lang/String;
 
     move-result-object p0
 
@@ -1270,6 +1326,7 @@
 .method public static qnameSetString(Lorg/apache/xmlbeans/QNameSet;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/QNameSet;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -1286,6 +1343,7 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     invoke-virtual {p0}, Ljavax/xml/namespace/QName;->getNamespaceURI()Ljava/lang/String;
 
@@ -1293,6 +1351,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -1319,6 +1378,7 @@
 
     return-object p0
 
+    .line 3
     :cond_1
     invoke-virtual {p0}, Ljavax/xml/namespace/QName;->getLocalPart()Ljava/lang/String;
 
@@ -1342,6 +1402,7 @@
 
     if-eq p0, v0, :cond_0
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -1381,6 +1442,7 @@
 .method public static typeflagsString(I)Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -1391,6 +1453,7 @@
 
     const-string v1, "FLAG_SIMPLE_TYPE | "
 
+    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_0
@@ -1400,6 +1463,7 @@
 
     const-string v1, "FLAG_DOCUMENT_TYPE | "
 
+    .line 3
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_1
@@ -1411,6 +1475,7 @@
 
     const-string v1, "FLAG_ATTRIBUTE_TYPE | "
 
+    .line 4
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_2
@@ -1420,6 +1485,7 @@
 
     const-string v1, "FLAG_ORDERED | "
 
+    .line 5
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_3
@@ -1429,6 +1495,7 @@
 
     const-string v1, "FLAG_BOUNDED | "
 
+    .line 6
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_4
@@ -1438,6 +1505,7 @@
 
     const-string v1, "FLAG_FINITE | "
 
+    .line 7
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_5
@@ -1447,6 +1515,7 @@
 
     const-string v1, "FLAG_NUMERIC | "
 
+    .line 8
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_6
@@ -1456,6 +1525,7 @@
 
     const-string v1, "FLAG_STRINGENUM | "
 
+    .line 9
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_7
@@ -1465,6 +1535,7 @@
 
     const-string v1, "FLAG_UNION_OF_LISTS | "
 
+    .line 10
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_8
@@ -1474,6 +1545,7 @@
 
     const-string v1, "FLAG_HAS_PATTERN | "
 
+    .line 11
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_9
@@ -1483,6 +1555,7 @@
 
     const-string v1, "FLAG_TOTAL_ORDER | "
 
+    .line 12
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_a
@@ -1492,6 +1565,7 @@
 
     const-string v1, "FLAG_COMPILED | "
 
+    .line 13
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_b
@@ -1501,6 +1575,7 @@
 
     const-string v1, "FLAG_BLOCK_EXT | "
 
+    .line 14
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_c
@@ -1510,6 +1585,7 @@
 
     const-string v1, "FLAG_BLOCK_REST | "
 
+    .line 15
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_d
@@ -1519,6 +1595,7 @@
 
     const-string v1, "FLAG_FINAL_EXT | "
 
+    .line 16
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_e
@@ -1530,6 +1607,7 @@
 
     const-string v1, "FLAG_FINAL_REST | "
 
+    .line 17
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_f
@@ -1541,6 +1619,7 @@
 
     const-string v1, "FLAG_FINAL_UNION | "
 
+    .line 18
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_10
@@ -1552,6 +1631,7 @@
 
     const-string v1, "FLAG_FINAL_LIST | "
 
+    .line 19
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_11
@@ -1563,8 +1643,10 @@
 
     const-string p0, "FLAG_ABSTRACT | "
 
+    .line 20
     invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    .line 21
     :cond_12
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->length()I
 
@@ -1577,15 +1659,16 @@
     invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_13
+    const/4 p0, 0x0
+
+    .line 22
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->length()I
 
-    move-result p0
+    move-result v1
 
-    add-int/lit8 p0, p0, -0x3
+    add-int/lit8 v1, v1, -0x3
 
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1, p0}, Ljava/lang/StringBuffer;->substring(II)Ljava/lang/String;
+    invoke-virtual {v0, p0, v1}, Ljava/lang/StringBuffer;->substring(II)Ljava/lang/String;
 
     move-result-object p0
 
@@ -1609,6 +1692,7 @@
 
     if-eq p0, v0, :cond_0
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -1661,6 +1745,7 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     new-instance p0, Ljava/lang/StringBuffer;
 
@@ -1692,6 +1777,7 @@
 .method public atLeast(III)Z
     .locals 3
 
+    .line 1
     iget v0, p0, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->_majorver:I
 
     const/4 v1, 0x1
@@ -1707,6 +1793,7 @@
 
     return v2
 
+    .line 2
     :cond_1
     iget p1, p0, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->_minorver:I
 
@@ -1719,6 +1806,7 @@
 
     return v2
 
+    .line 3
     :cond_3
     iget p0, p0, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->_releaseno:I
 
@@ -1736,6 +1824,7 @@
 .method public atMost(III)Z
     .locals 3
 
+    .line 1
     iget v0, p0, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->_majorver:I
 
     const/4 v1, 0x0
@@ -1751,6 +1840,7 @@
 
     return v2
 
+    .line 2
     :cond_1
     iget p1, p0, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->_minorver:I
 
@@ -1763,6 +1853,7 @@
 
     return v2
 
+    .line 3
     :cond_3
     iget p0, p0, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->_releaseno:I
 
@@ -1787,6 +1878,7 @@
 
     if-eq p1, p0, :cond_0
 
+    .line 1
     new-instance p0, Ljava/lang/StringBuffer;
 
     invoke-direct {p0}, Ljava/lang/StringBuffer;-><init>()V
@@ -1826,6 +1918,7 @@
 .method public dumpAll()V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpHeader()I
 
     move-result v0
@@ -1836,41 +1929,49 @@
 
     goto :goto_0
 
+    .line 2
     :pswitch_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpAttributeGroupData()V
 
     goto :goto_0
 
+    .line 3
     :pswitch_1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpModelGroupData()V
 
     goto :goto_0
 
+    .line 4
     :pswitch_2
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpPointerData()V
 
     goto :goto_0
 
+    .line 5
     :pswitch_3
     invoke-virtual {p0, v1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpAttributeData(Z)V
 
     goto :goto_0
 
+    .line 6
     :pswitch_4
     invoke-virtual {p0, v1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpParticleData(Z)V
 
     goto :goto_0
 
+    .line 7
     :pswitch_5
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpTypeFileData()V
 
     goto :goto_0
 
+    .line 8
     :pswitch_6
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpIndexData()V
 
     return-void
 
+    .line 9
     :goto_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readEnd()V
 
@@ -1899,6 +2000,7 @@
 
     const/4 v2, 0x0
 
+    .line 1
     invoke-virtual {p0, v0, v1, v2}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->atLeast(III)Z
 
     move-result v1
@@ -1907,6 +2009,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readInt()I
 
@@ -1921,14 +2024,17 @@
     :cond_1
     const-string v3, "Annotation"
 
+    .line 3
     invoke-virtual {p0, v3}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->indent()V
 
     const-string v3, "):"
 
     if-lez v1, :cond_4
 
+    .line 5
     new-instance v4, Ljava/lang/StringBuffer;
 
     invoke-direct {v4}, Ljava/lang/StringBuffer;-><init>()V
@@ -1947,6 +2053,7 @@
 
     invoke-virtual {p0, v4}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 6
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->indent()V
 
     move v4, v2
@@ -1956,6 +2063,7 @@
 
     const/16 v5, 0x18
 
+    .line 7
     invoke-virtual {p0, v0, v5, v2}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->atLeast(III)Z
 
     move-result v5
@@ -1966,6 +2074,7 @@
 
     if-eqz v5, :cond_2
 
+    .line 8
     new-instance v5, Ljava/lang/StringBuffer;
 
     invoke-direct {v5}, Ljava/lang/StringBuffer;-><init>()V
@@ -2008,6 +2117,7 @@
 
     goto :goto_1
 
+    .line 9
     :cond_2
     new-instance v5, Ljava/lang/StringBuffer;
 
@@ -2044,6 +2154,7 @@
 
     goto :goto_0
 
+    .line 10
     :cond_3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->outdent()V
 
@@ -2054,6 +2165,7 @@
     :cond_4
     const/4 v0, 0x1
 
+    .line 11
     :goto_2
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readInt()I
 
@@ -2061,6 +2173,7 @@
 
     if-lez v1, :cond_6
 
+    .line 12
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -2079,6 +2192,7 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 13
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->indent()V
 
     move v0, v2
@@ -2086,6 +2200,7 @@
     :goto_3
     if-ge v0, v1, :cond_5
 
+    .line 14
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readString()Ljava/lang/String;
 
     move-result-object v4
@@ -2096,11 +2211,13 @@
 
     goto :goto_3
 
+    .line 15
     :cond_5
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->outdent()V
 
     move v0, v2
 
+    .line 16
     :cond_6
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readInt()I
 
@@ -2108,6 +2225,7 @@
 
     if-lez v1, :cond_8
 
+    .line 17
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -2126,6 +2244,7 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 18
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->indent()V
 
     move v0, v2
@@ -2133,6 +2252,7 @@
     :goto_4
     if-ge v0, v1, :cond_7
 
+    .line 19
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readString()Ljava/lang/String;
 
     move-result-object v3
@@ -2143,6 +2263,7 @@
 
     goto :goto_4
 
+    .line 20
     :cond_7
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->outdent()V
 
@@ -2156,8 +2277,10 @@
 
     const-string v0, "<empty>"
 
+    .line 21
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 22
     :cond_9
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->outdent()V
 
@@ -2167,12 +2290,14 @@
 .method public dumpAnnotations()V
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readInt()I
 
     move-result v0
 
     if-lez v0, :cond_1
 
+    .line 2
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -2193,6 +2318,7 @@
 
     invoke-virtual {p0, v1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->indent()V
 
     const/4 v1, 0x0
@@ -2200,12 +2326,14 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpAnnotation()V
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->outdent()V
 
@@ -2216,6 +2344,7 @@
 .method public dumpAttributeData(Z)V
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -2240,6 +2369,7 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -2260,6 +2390,7 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 3
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -2284,6 +2415,7 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 4
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -2304,18 +2436,20 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
-    const/16 v0, 0x10
+    const/4 v0, 0x2
 
-    const/4 v1, 0x0
+    const/16 v1, 0x10
 
-    const/4 v2, 0x2
+    const/4 v2, 0x0
 
-    invoke-virtual {p0, v2, v0, v1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->atLeast(III)Z
+    .line 5
+    invoke-virtual {p0, v0, v1, v2}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->atLeast(III)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 6
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -2336,6 +2470,7 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 7
     :cond_0
     new-instance v0, Ljava/lang/StringBuffer;
 
@@ -2357,6 +2492,7 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 8
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -2381,10 +2517,12 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 9
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpAnnotation()V
 
     if-eqz p1, :cond_1
 
+    .line 10
     new-instance p1, Ljava/lang/StringBuffer;
 
     invoke-direct {p1}, Ljava/lang/StringBuffer;-><init>()V
@@ -2412,6 +2550,7 @@
 .method public dumpAttributeGroupData()V
     .locals 4
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -2436,6 +2575,7 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -2456,6 +2596,7 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 3
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -2482,12 +2623,14 @@
 
     const/4 v2, 0x0
 
+    .line 4
     invoke-virtual {p0, v0, v1, v2}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->atLeast(III)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 5
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -2511,12 +2654,14 @@
     :cond_0
     const/16 v1, 0xf
 
+    .line 6
     invoke-virtual {p0, v0, v1, v2}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->atLeast(III)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
+    .line 7
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -2540,20 +2685,25 @@
     :cond_1
     const-string v1, "Attribute Group Xml: "
 
+    .line 8
     invoke-virtual {p0, v1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 9
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpXml()V
 
+    .line 10
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpAnnotation()V
 
     const/16 v1, 0x15
 
+    .line 11
     invoke-virtual {p0, v0, v1, v2}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->atLeast(III)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
+    .line 12
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -2581,10 +2731,12 @@
 .method public dumpClassnameIndex(Ljava/lang/String;)V
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
     move-result v0
 
+    .line 2
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -2607,6 +2759,7 @@
 
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->indent()V
 
     const/4 p1, 0x0
@@ -2614,6 +2767,7 @@
     :goto_0
     if-ge p1, v0, :cond_0
 
+    .line 4
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -2644,6 +2798,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->outdent()V
 
@@ -2653,10 +2808,12 @@
 .method public dumpHeader()I
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readInt()I
 
     move-result v0
 
+    .line 2
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -2677,18 +2834,20 @@
 
     invoke-virtual {p0, v1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
-    const v1, -0x25854542
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const v2, -0x25854542
 
-    if-eq v0, v1, :cond_0
+    if-eq v0, v2, :cond_0
 
     const-string v0, "Wrong magic cookie."
 
+    .line 3
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
-    return v2
+    return v1
 
+    .line 4
     :cond_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
@@ -2696,6 +2855,7 @@
 
     iput v0, p0, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->_majorver:I
 
+    .line 5
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
     move-result v0
@@ -2704,20 +2864,23 @@
 
     const/16 v0, 0x12
 
-    const/4 v1, 0x2
+    const/4 v2, 0x2
 
-    invoke-virtual {p0, v1, v0, v2}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->atLeast(III)Z
+    .line 6
+    invoke-virtual {p0, v2, v0, v1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->atLeast(III)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 7
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
     move-result v0
 
     iput v0, p0, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->_releaseno:I
 
+    .line 8
     :cond_1
     new-instance v0, Ljava/lang/StringBuffer;
 
@@ -2737,6 +2900,7 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 9
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -2755,6 +2919,7 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 10
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -2773,23 +2938,26 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 11
     iget v0, p0, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->_majorver:I
 
-    if-ne v0, v1, :cond_3
+    if-ne v0, v2, :cond_3
 
     iget v0, p0, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->_minorver:I
 
-    const/16 v1, 0x18
+    const/16 v2, 0x18
 
-    if-le v0, v1, :cond_2
+    if-le v0, v2, :cond_2
 
     goto :goto_0
 
+    .line 12
     :cond_2
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
     move-result v0
 
+    .line 13
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -2810,12 +2978,14 @@
 
     invoke-virtual {p0, v1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 14
     new-instance v1, Lorg/apache/xmlbeans/impl/tool/XsbDumper$StringPool;
 
     invoke-direct {v1, p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper$StringPool;-><init>(Lorg/apache/xmlbeans/impl/tool/XsbDumper;)V
 
     iput-object v1, p0, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->_stringPool:Lorg/apache/xmlbeans/impl/tool/XsbDumper$StringPool;
 
+    .line 15
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->_input:Ljava/io/DataInputStream;
 
     invoke-virtual {v1, p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper$StringPool;->readFrom(Ljava/io/DataInputStream;)V
@@ -2826,18 +2996,21 @@
     :goto_0
     const-string v0, "Incompatible version."
 
+    .line 16
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
-    return v2
+    return v1
 .end method
 
 .method public dumpIndexData()V
     .locals 6
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
     move-result v0
 
+    .line 2
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -2858,6 +3031,7 @@
 
     invoke-virtual {p0, v1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->indent()V
 
     const/4 v1, 0x0
@@ -2867,14 +3041,17 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readString()Ljava/lang/String;
 
     move-result-object v3
 
+    .line 5
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
     move-result v4
 
+    .line 6
     new-instance v5, Ljava/lang/StringBuffer;
 
     invoke-direct {v5}, Ljava/lang/StringBuffer;-><init>()V
@@ -2905,53 +3082,65 @@
 
     goto :goto_0
 
+    .line 7
     :cond_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->outdent()V
 
     const-string v0, "Global elements"
 
+    .line 8
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpQNameMap(Ljava/lang/String;)V
 
     const-string v0, "Global attributes"
 
+    .line 9
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpQNameMap(Ljava/lang/String;)V
 
     const-string v0, "Model groups"
 
+    .line 10
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpQNameMap(Ljava/lang/String;)V
 
     const-string v0, "Attribute groups"
 
+    .line 11
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpQNameMap(Ljava/lang/String;)V
 
     const-string v0, "Identity constraints"
 
+    .line 12
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpQNameMap(Ljava/lang/String;)V
 
     const-string v0, "Global types"
 
+    .line 13
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpQNameMap(Ljava/lang/String;)V
 
     const-string v0, "Document types"
 
+    .line 14
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpQNameMap(Ljava/lang/String;)V
 
     const-string v0, "Attribute types"
 
+    .line 15
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpQNameMap(Ljava/lang/String;)V
 
     const-string v0, "All types by classname"
 
+    .line 16
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpClassnameIndex(Ljava/lang/String;)V
 
     const-string v0, "Defined namespaces"
 
+    .line 17
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpStringArray(Ljava/lang/String;)V
 
     const/16 v0, 0xf
 
     const/4 v2, 0x2
 
+    .line 18
     invoke-virtual {p0, v2, v0, v1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->atLeast(III)Z
 
     move-result v0
@@ -2960,27 +3149,33 @@
 
     const-string v0, "Redefined global types"
 
+    .line 19
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpQNameMap(Ljava/lang/String;)V
 
     const-string v0, "Redfined model groups"
 
+    .line 20
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpQNameMap(Ljava/lang/String;)V
 
     const-string v0, "Redfined attribute groups"
 
+    .line 21
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpQNameMap(Ljava/lang/String;)V
 
     :cond_1
     const/16 v0, 0x13
 
+    .line 22
     invoke-virtual {p0, v2, v0, v1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->atLeast(III)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
+    .line 23
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpAnnotations()V
 
+    .line 24
     :cond_2
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readEnd()V
 
@@ -2990,6 +3185,7 @@
 .method public dumpModelGroupData()V
     .locals 5
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -3014,6 +3210,7 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -3034,6 +3231,7 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 3
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -3060,12 +3258,14 @@
 
     const/4 v2, 0x0
 
+    .line 4
     invoke-virtual {p0, v0, v1, v2}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->atLeast(III)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
+    .line 5
     new-instance v3, Ljava/lang/StringBuffer;
 
     invoke-direct {v3}, Ljava/lang/StringBuffer;-><init>()V
@@ -3086,6 +3286,7 @@
 
     invoke-virtual {p0, v3}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 6
     :cond_0
     invoke-virtual {p0, v0, v1, v2}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->atLeast(III)Z
 
@@ -3093,6 +3294,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 7
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -3116,12 +3318,14 @@
     :cond_1
     const/16 v1, 0xf
 
+    .line 8
     invoke-virtual {p0, v0, v1, v2}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->atLeast(III)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
+    .line 9
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -3145,20 +3349,25 @@
     :cond_2
     const-string v1, "Model Group Xml: "
 
+    .line 10
     invoke-virtual {p0, v1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 11
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpXml()V
 
+    .line 12
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpAnnotation()V
 
     const/16 v1, 0x15
 
+    .line 13
     invoke-virtual {p0, v0, v1, v2}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->atLeast(III)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
+    .line 14
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -3186,10 +3395,12 @@
 .method public dumpParticleArray(Ljava/lang/String;)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
     move-result v0
 
+    .line 2
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -3212,6 +3423,7 @@
 
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->indent()V
 
     const/4 p1, 0x0
@@ -3221,12 +3433,14 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
+    .line 4
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpParticleData(Z)V
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->outdent()V
 
@@ -3236,10 +3450,12 @@
 .method public dumpParticleData(Z)V
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
     move-result v0
 
+    .line 2
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -3260,12 +3476,15 @@
 
     invoke-virtual {p0, v1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->indent()V
 
+    .line 4
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
     move-result v1
 
+    .line 5
     new-instance v2, Ljava/lang/StringBuffer;
 
     invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
@@ -3286,6 +3505,7 @@
 
     invoke-virtual {p0, v1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 6
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -3310,6 +3530,7 @@
 
     invoke-virtual {p0, v1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 7
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -3334,6 +3555,7 @@
 
     invoke-virtual {p0, v1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 8
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -3380,10 +3602,12 @@
 
     const-string p1, "Unrecognized schema particle type"
 
+    .line 9
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->error(Ljava/lang/String;)V
 
     goto/16 :goto_2
 
+    .line 10
     :cond_0
     new-instance p1, Ljava/lang/StringBuffer;
 
@@ -3409,6 +3633,7 @@
 
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 11
     new-instance p1, Ljava/lang/StringBuffer;
 
     invoke-direct {p1}, Ljava/lang/StringBuffer;-><init>()V
@@ -3435,6 +3660,7 @@
 
     goto/16 :goto_2
 
+    .line 12
     :cond_1
     new-instance v0, Ljava/lang/StringBuffer;
 
@@ -3460,6 +3686,7 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 13
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -3480,6 +3707,7 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 14
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -3504,12 +3732,14 @@
 
     const/4 v2, 0x0
 
+    .line 15
     invoke-virtual {p0, v1, v0, v2}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->atLeast(III)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
+    .line 16
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -3530,6 +3760,7 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 17
     :cond_2
     new-instance v0, Ljava/lang/StringBuffer;
 
@@ -3555,18 +3786,21 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 18
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpAnnotation()V
 
     if-eqz p1, :cond_5
 
     const/16 v0, 0x11
 
+    .line 19
     invoke-virtual {p0, v1, v0, v2}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->atLeast(III)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
+    .line 20
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -3587,11 +3821,13 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 21
     :cond_3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
     move-result v0
 
+    .line 22
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -3612,6 +3848,7 @@
 
     invoke-virtual {p0, v1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 23
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->indent()V
 
     move v1, v2
@@ -3619,6 +3856,7 @@
     :goto_0
     if-ge v1, v0, :cond_4
 
+    .line 24
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readQName()Ljavax/xml/namespace/QName;
 
     move-result-object v3
@@ -3633,14 +3871,17 @@
 
     goto :goto_0
 
+    .line 25
     :cond_4
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->outdent()V
 
+    .line 26
     :cond_5
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
     move-result v0
 
+    .line 27
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -3661,11 +3902,13 @@
 
     invoke-virtual {p0, v1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 28
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->indent()V
 
     :goto_1
     if-ge v2, v0, :cond_6
 
+    .line 29
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readHandle()Ljava/lang/String;
 
     move-result-object v1
@@ -3676,11 +3919,13 @@
 
     goto :goto_1
 
+    .line 30
     :cond_6
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->outdent()V
 
     if-eqz p1, :cond_8
 
+    .line 31
     new-instance p1, Ljava/lang/StringBuffer;
 
     invoke-direct {p1}, Ljava/lang/StringBuffer;-><init>()V
@@ -3706,8 +3951,10 @@
     :cond_7
     const-string p1, "Particle children"
 
+    .line 32
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpParticleArray(Ljava/lang/String;)V
 
+    .line 33
     :cond_8
     :goto_2
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->outdent()V
@@ -3718,6 +3965,7 @@
 .method public dumpPointerData()V
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -3746,10 +3994,13 @@
 
     const-string v0, "Property"
 
+    .line 1
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 2
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->indent()V
 
+    .line 3
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -3774,6 +4025,7 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 4
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -3794,10 +4046,12 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
     move-result v0
 
+    .line 6
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -3818,6 +4072,7 @@
 
     invoke-virtual {p0, v1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 7
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -3838,6 +4093,7 @@
 
     invoke-virtual {p0, v1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 8
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -3862,6 +4118,7 @@
 
     invoke-virtual {p0, v1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 9
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -3886,6 +4143,7 @@
 
     invoke-virtual {p0, v1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 10
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -3910,6 +4168,7 @@
 
     invoke-virtual {p0, v1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 11
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -3934,6 +4193,7 @@
 
     invoke-virtual {p0, v1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 12
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -3958,6 +4218,7 @@
 
     invoke-virtual {p0, v1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 13
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -3978,6 +4239,7 @@
 
     invoke-virtual {p0, v1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 14
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -3998,6 +4260,7 @@
 
     invoke-virtual {p0, v1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 15
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -4022,6 +4285,7 @@
 
     invoke-virtual {p0, v1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 16
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -4048,12 +4312,14 @@
 
     const/4 v3, 0x0
 
+    .line 17
     invoke-virtual {p0, v1, v2, v3}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->atMost(III)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
+    .line 18
     new-instance v2, Ljava/lang/StringBuffer;
 
     invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
@@ -4081,12 +4347,14 @@
     :cond_0
     const/16 v2, 0x10
 
+    .line 19
     invoke-virtual {p0, v1, v2, v3}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->atLeast(III)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
+    .line 20
     new-instance v2, Ljava/lang/StringBuffer;
 
     invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
@@ -4114,16 +4382,19 @@
 
     const/16 v0, 0x11
 
+    .line 21
     invoke-virtual {p0, v1, v0, v3}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->atLeast(III)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
+    .line 22
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
     move-result v0
 
+    .line 23
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -4147,6 +4418,7 @@
     :goto_0
     if-ge v3, v0, :cond_2
 
+    .line 24
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -4171,6 +4443,7 @@
 
     goto :goto_0
 
+    .line 25
     :cond_2
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->outdent()V
 
@@ -4180,10 +4453,12 @@
 .method public dumpQNameMap(Ljava/lang/String;)V
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
     move-result v0
 
+    .line 2
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -4206,6 +4481,7 @@
 
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->indent()V
 
     const/4 p1, 0x0
@@ -4213,6 +4489,7 @@
     :goto_0
     if-ge p1, v0, :cond_0
 
+    .line 4
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -4247,6 +4524,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->outdent()V
 
@@ -4256,10 +4534,12 @@
 .method public dumpStringArray(Ljava/lang/String;)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
     move-result v0
 
+    .line 2
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -4282,6 +4562,7 @@
 
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->indent()V
 
     const/4 p1, 0x0
@@ -4289,6 +4570,7 @@
     :goto_0
     if-ge p1, v0, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readString()Ljava/lang/String;
 
     move-result-object v1
@@ -4299,6 +4581,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->outdent()V
 
@@ -4308,10 +4591,12 @@
 .method public dumpTypeArray(Ljava/lang/String;)V
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
     move-result v0
 
+    .line 2
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -4334,6 +4619,7 @@
 
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->indent()V
 
     const/4 p1, 0x0
@@ -4341,6 +4627,7 @@
     :goto_0
     if-ge p1, v0, :cond_0
 
+    .line 4
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -4367,6 +4654,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->outdent()V
 
@@ -4376,6 +4664,7 @@
 .method public dumpTypeFileData()V
     .locals 11
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -4400,6 +4689,7 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -4420,6 +4710,7 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 3
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -4440,6 +4731,7 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 4
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -4460,6 +4752,7 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 5
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -4484,18 +4777,23 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 6
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpAnnotation()V
 
     const-string v0, "Container field:"
 
+    .line 7
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 8
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->indent()V
 
+    .line 9
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
     move-result v0
 
+    .line 10
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -4532,6 +4830,7 @@
 
     goto :goto_0
 
+    .line 11
     :cond_0
     new-instance v0, Ljava/lang/StringBuffer;
 
@@ -4553,6 +4852,7 @@
 
     goto :goto_0
 
+    .line 12
     :cond_1
     new-instance v0, Ljava/lang/StringBuffer;
 
@@ -4574,6 +4874,7 @@
 
     goto :goto_0
 
+    .line 13
     :cond_2
     new-instance v0, Ljava/lang/StringBuffer;
 
@@ -4595,9 +4896,11 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 14
     :goto_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->outdent()V
 
+    .line 15
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -4618,6 +4921,7 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 16
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -4640,8 +4944,10 @@
 
     const-string v0, "Anonymous types"
 
+    .line 17
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpTypeArray(Ljava/lang/String;)V
 
+    .line 18
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -4662,10 +4968,12 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 19
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readInt()I
 
     move-result v0
 
+    .line 20
     new-instance v4, Ljava/lang/StringBuffer;
 
     invoke-direct {v4}, Ljava/lang/StringBuffer;-><init>()V
@@ -4704,10 +5012,12 @@
 
     if-eqz v4, :cond_9
 
+    .line 21
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
     move-result v7
 
+    .line 22
     new-instance v8, Ljava/lang/StringBuffer;
 
     invoke-direct {v8}, Ljava/lang/StringBuffer;-><init>()V
@@ -4730,12 +5040,14 @@
 
     const/16 v8, 0x17
 
+    .line 23
     invoke-virtual {p0, v2, v8, v5}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->atLeast(III)Z
 
     move-result v8
 
     if-eqz v8, :cond_4
 
+    .line 24
     new-instance v8, Ljava/lang/StringBuffer;
 
     invoke-direct {v8}, Ljava/lang/StringBuffer;-><init>()V
@@ -4756,11 +5068,13 @@
 
     invoke-virtual {p0, v8}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 25
     :cond_4
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
     move-result v8
 
+    .line 26
     new-instance v9, Ljava/lang/StringBuffer;
 
     invoke-direct {v9}, Ljava/lang/StringBuffer;-><init>()V
@@ -4779,6 +5093,7 @@
 
     invoke-virtual {p0, v9}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 27
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->indent()V
 
     move v9, v5
@@ -4786,12 +5101,14 @@
     :goto_2
     if-ge v9, v8, :cond_5
 
+    .line 28
     invoke-virtual {p0, v5}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpAttributeData(Z)V
 
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_2
 
+    .line 29
     :cond_5
     new-instance v8, Ljava/lang/StringBuffer;
 
@@ -4817,6 +5134,7 @@
 
     invoke-virtual {p0, v8}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 30
     new-instance v8, Ljava/lang/StringBuffer;
 
     invoke-direct {v8}, Ljava/lang/StringBuffer;-><init>()V
@@ -4841,12 +5159,15 @@
 
     invoke-virtual {p0, v8}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 31
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->outdent()V
 
+    .line 32
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
     move-result v8
 
+    .line 33
     new-instance v9, Ljava/lang/StringBuffer;
 
     invoke-direct {v9}, Ljava/lang/StringBuffer;-><init>()V
@@ -4865,6 +5186,7 @@
 
     invoke-virtual {p0, v9}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 34
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->indent()V
 
     move v9, v5
@@ -4872,12 +5194,14 @@
     :goto_3
     if-ge v9, v8, :cond_6
 
+    .line 35
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpPropertyData()V
 
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_3
 
+    .line 36
     :cond_6
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->outdent()V
 
@@ -4887,6 +5211,7 @@
 
     if-ne v7, v8, :cond_a
 
+    .line 37
     :cond_7
     new-instance v8, Ljava/lang/StringBuffer;
 
@@ -4910,12 +5235,15 @@
 
     const-string v8, "Content model"
 
+    .line 38
     invoke-virtual {p0, v8}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpParticleArray(Ljava/lang/String;)V
 
+    .line 39
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
     move-result v8
 
+    .line 40
     new-instance v9, Ljava/lang/StringBuffer;
 
     invoke-direct {v9}, Ljava/lang/StringBuffer;-><init>()V
@@ -4934,6 +5262,7 @@
 
     invoke-virtual {p0, v9}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 41
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->indent()V
 
     move v9, v5
@@ -4941,12 +5270,14 @@
     :goto_4
     if-ge v9, v8, :cond_8
 
+    .line 42
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpPropertyData()V
 
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_4
 
+    .line 43
     :cond_8
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->outdent()V
 
@@ -4961,11 +5292,13 @@
 
     if-ne v7, v2, :cond_15
 
+    .line 44
     :cond_b
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
     move-result v4
 
+    .line 45
     new-instance v7, Ljava/lang/StringBuffer;
 
     invoke-direct {v7}, Ljava/lang/StringBuffer;-><init>()V
@@ -4997,11 +5330,13 @@
     :cond_c
     move v0, v5
 
+    .line 46
     :goto_6
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
     move-result v7
 
+    .line 47
     new-instance v8, Ljava/lang/StringBuffer;
 
     invoke-direct {v8}, Ljava/lang/StringBuffer;-><init>()V
@@ -5020,6 +5355,7 @@
 
     invoke-virtual {p0, v8}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 48
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->indent()V
 
     move v8, v5
@@ -5027,6 +5363,7 @@
     :goto_7
     if-ge v8, v7, :cond_d
 
+    .line 49
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
     move-result v9
@@ -5037,6 +5374,7 @@
 
     invoke-virtual {p0, v9}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 50
     new-instance v9, Ljava/lang/StringBuffer;
 
     invoke-direct {v9}, Ljava/lang/StringBuffer;-><init>()V
@@ -5057,6 +5395,7 @@
 
     invoke-virtual {p0, v9}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 51
     new-instance v9, Ljava/lang/StringBuffer;
 
     invoke-direct {v9}, Ljava/lang/StringBuffer;-><init>()V
@@ -5081,9 +5420,11 @@
 
     goto :goto_7
 
+    .line 52
     :cond_d
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->outdent()V
 
+    .line 53
     new-instance v7, Ljava/lang/StringBuffer;
 
     invoke-direct {v7}, Ljava/lang/StringBuffer;-><init>()V
@@ -5108,10 +5449,12 @@
 
     invoke-virtual {p0, v7}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 54
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
     move-result v7
 
+    .line 55
     new-instance v8, Ljava/lang/StringBuffer;
 
     invoke-direct {v8}, Ljava/lang/StringBuffer;-><init>()V
@@ -5130,6 +5473,7 @@
 
     invoke-virtual {p0, v8}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 56
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->indent()V
 
     move v8, v5
@@ -5137,6 +5481,7 @@
     :goto_8
     if-ge v8, v7, :cond_e
 
+    .line 57
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readString()Ljava/lang/String;
 
     move-result-object v9
@@ -5147,13 +5492,16 @@
 
     goto :goto_8
 
+    .line 58
     :cond_e
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->outdent()V
 
+    .line 59
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
     move-result v7
 
+    .line 60
     new-instance v8, Ljava/lang/StringBuffer;
 
     invoke-direct {v8}, Ljava/lang/StringBuffer;-><init>()V
@@ -5172,6 +5520,7 @@
 
     invoke-virtual {p0, v8}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 61
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->indent()V
 
     move v8, v5
@@ -5179,6 +5528,7 @@
     :goto_9
     if-ge v8, v7, :cond_f
 
+    .line 62
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readXmlValueObject()Ljava/lang/String;
 
     move-result-object v9
@@ -5189,9 +5539,11 @@
 
     goto :goto_9
 
+    .line 63
     :cond_f
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->outdent()V
 
+    .line 64
     new-instance v7, Ljava/lang/StringBuffer;
 
     invoke-direct {v7}, Ljava/lang/StringBuffer;-><init>()V
@@ -5214,10 +5566,12 @@
 
     if-eqz v0, :cond_11
 
+    .line 65
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
     move-result v0
 
+    .line 66
     new-instance v7, Ljava/lang/StringBuffer;
 
     invoke-direct {v7}, Ljava/lang/StringBuffer;-><init>()V
@@ -5236,11 +5590,13 @@
 
     invoke-virtual {p0, v6}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 67
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->indent()V
 
     :goto_a
     if-ge v5, v0, :cond_10
 
+    .line 68
     new-instance v6, Ljava/lang/StringBuffer;
 
     invoke-direct {v6}, Ljava/lang/StringBuffer;-><init>()V
@@ -5285,6 +5641,7 @@
 
     goto :goto_a
 
+    .line 69
     :cond_10
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->outdent()V
 
@@ -5297,10 +5654,12 @@
 
     const-string v0, "Unknown simple type variety"
 
+    .line 70
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->error(Ljava/lang/String;)V
 
     goto :goto_b
 
+    .line 71
     :cond_12
     new-instance v0, Ljava/lang/StringBuffer;
 
@@ -5327,10 +5686,12 @@
     :cond_13
     const-string v0, "Union members"
 
+    .line 72
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->dumpTypeArray(Ljava/lang/String;)V
 
     goto :goto_b
 
+    .line 73
     :cond_14
     new-instance v0, Ljava/lang/StringBuffer;
 
@@ -5352,6 +5713,7 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 74
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -5372,6 +5734,7 @@
 
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 75
     :cond_15
     :goto_b
     new-instance v0, Ljava/lang/StringBuffer;
@@ -5400,10 +5763,12 @@
 .method public dumpXml()V
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readString()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 2
     :try_start_0
     invoke-static {v0}, Lorg/apache/xmlbeans/XmlObject$Factory;->parse(Ljava/lang/String;)Lorg/apache/xmlbeans/XmlObject;
 
@@ -5424,8 +5789,10 @@
     :catch_0
     const-string v1, "!!!!!! BAD XML !!!!!"
 
+    .line 3
     invoke-virtual {p0, v1}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->emit(Ljava/lang/String;)V
 
     :goto_0
@@ -5478,7 +5845,7 @@
     .line 1
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->_out:Ljava/io/PrintStream;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -5488,13 +5855,13 @@
 
     new-instance p0, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {p0, p1}, Ljava/lang/IllegalStateException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     throw p0
 .end method
@@ -5521,6 +5888,7 @@
 
     packed-switch p1, :pswitch_data_0
 
+    .line 1
     new-instance p0, Ljava/lang/StringBuffer;
 
     invoke-direct {p0}, Ljava/lang/StringBuffer;-><init>()V
@@ -5605,6 +5973,7 @@
 .method public flush()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->_out:Ljava/io/PrintStream;
 
     invoke-virtual {p0}, Ljava/io/PrintStream;->flush()V
@@ -5615,6 +5984,7 @@
 .method public indent()V
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -5639,6 +6009,7 @@
 .method public outdent()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->_indent:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -5661,10 +6032,12 @@
 .method public readBigInteger()Ljava/math/BigInteger;
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readByteArray()[B
 
     move-result-object p0
 
+    .line 2
     array-length v0, p0
 
     if-nez v0, :cond_0
@@ -5673,6 +6046,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     array-length v0, p0
 
@@ -5686,10 +6060,12 @@
 
     if-nez v0, :cond_1
 
+    .line 4
     sget-object p0, Ljava/math/BigInteger;->ZERO:Ljava/math/BigInteger;
 
     return-object p0
 
+    .line 5
     :cond_1
     array-length v0, p0
 
@@ -5699,10 +6075,12 @@
 
     if-ne v0, v2, :cond_2
 
+    .line 6
     sget-object p0, Ljava/math/BigInteger;->ONE:Ljava/math/BigInteger;
 
     return-object p0
 
+    .line 7
     :cond_2
     new-instance v0, Ljava/math/BigInteger;
 
@@ -5714,6 +6092,7 @@
 .method public readByteArray()[B
     .locals 2
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->_input:Ljava/io/DataInputStream;
 
@@ -5721,8 +6100,10 @@
 
     move-result v0
 
+    .line 2
     new-array v0, v0, [B
 
+    .line 3
     iget-object v1, p0, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->_input:Ljava/io/DataInputStream;
 
     invoke-virtual {v1, v0}, Ljava/io/DataInputStream;->readFully([B)V
@@ -5734,6 +6115,7 @@
     :catch_0
     move-exception v0
 
+    .line 4
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->error(Ljava/lang/Exception;)V
 
     const/4 p0, 0x0
@@ -5744,6 +6126,7 @@
 .method public readDouble()D
     .locals 2
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->_input:Ljava/io/DataInputStream;
 
@@ -5758,6 +6141,7 @@
     :catch_0
     move-exception v0
 
+    .line 2
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->error(Ljava/lang/Exception;)V
 
     const-wide/16 v0, 0x0
@@ -5768,18 +6152,21 @@
 .method public readEnd()V
     .locals 1
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->_input:Ljava/io/DataInputStream;
 
-    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
+    invoke-virtual {v0}, Ljava/io/DataInputStream;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     :catch_0
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->_input:Ljava/io/DataInputStream;
 
+    .line 3
     iput-object v0, p0, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->_stringPool:Lorg/apache/xmlbeans/impl/tool/XsbDumper$StringPool;
 
     return-void
@@ -5788,6 +6175,7 @@
 .method public readHandle()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readString()Ljava/lang/String;
 
     move-result-object p0
@@ -5798,6 +6186,7 @@
 .method public readInt()I
     .locals 1
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->_input:Ljava/io/DataInputStream;
 
@@ -5812,6 +6201,7 @@
     :catch_0
     move-exception v0
 
+    .line 2
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->error(Ljava/lang/Exception;)V
 
     const/4 p0, 0x0
@@ -5822,10 +6212,12 @@
 .method public readQName()Ljavax/xml/namespace/QName;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readString()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readString()Ljava/lang/String;
 
     move-result-object p0
@@ -5836,6 +6228,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance v1, Ljavax/xml/namespace/QName;
 
@@ -5847,14 +6240,17 @@
 .method public readQNameSet()Lorg/apache/xmlbeans/QNameSet;
     .locals 7
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
     move-result v0
 
+    .line 2
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
     move-result v2
@@ -5866,6 +6262,7 @@
     :goto_0
     if-ge v4, v2, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readString()Ljava/lang/String;
 
     move-result-object v5
@@ -5876,11 +6273,13 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     new-instance v2, Ljava/util/HashSet;
 
     invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
 
+    .line 6
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
     move-result v4
@@ -5890,6 +6289,7 @@
     :goto_1
     if-ge v5, v4, :cond_1
 
+    .line 7
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readQName()Ljavax/xml/namespace/QName;
 
     move-result-object v6
@@ -5900,11 +6300,13 @@
 
     goto :goto_1
 
+    .line 8
     :cond_1
     new-instance v4, Ljava/util/HashSet;
 
     invoke-direct {v4}, Ljava/util/HashSet;-><init>()V
 
+    .line 9
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
     move-result v5
@@ -5912,6 +6314,7 @@
     :goto_2
     if-ge v3, v5, :cond_2
 
+    .line 10
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readQName()Ljavax/xml/namespace/QName;
 
     move-result-object v6
@@ -5929,12 +6332,14 @@
 
     if-ne v0, v3, :cond_3
 
+    .line 11
     invoke-static {v1, p0, v2, v4}, Lorg/apache/xmlbeans/QNameSet;->forSets(Ljava/util/Set;Ljava/util/Set;Ljava/util/Set;Ljava/util/Set;)Lorg/apache/xmlbeans/QNameSet;
 
     move-result-object p0
 
     return-object p0
 
+    .line 12
     :cond_3
     invoke-static {p0, v1, v4, v2}, Lorg/apache/xmlbeans/QNameSet;->forSets(Ljava/util/Set;Ljava/util/Set;Ljava/util/Set;Ljava/util/Set;)Lorg/apache/xmlbeans/QNameSet;
 
@@ -5946,10 +6351,12 @@
 .method public readSOAPArrayType()Lorg/apache/xmlbeans/soap/SOAPArrayType;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readQName()Ljavax/xml/namespace/QName;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readString()Ljava/lang/String;
 
     move-result-object p0
@@ -5960,6 +6367,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance v1, Lorg/apache/xmlbeans/soap/SOAPArrayType;
 
@@ -5971,6 +6379,7 @@
 .method public readShort()I
     .locals 1
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->_input:Ljava/io/DataInputStream;
 
@@ -5985,6 +6394,7 @@
     :catch_0
     move-exception v0
 
+    .line 2
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->error(Ljava/lang/Exception;)V
 
     const/4 p0, 0x0
@@ -5995,6 +6405,7 @@
 .method public readString()Ljava/lang/String;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->_stringPool:Lorg/apache/xmlbeans/impl/tool/XsbDumper$StringPool;
 
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
@@ -6011,6 +6422,7 @@
 .method public readType()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readHandle()Ljava/lang/String;
 
     move-result-object p0
@@ -6021,6 +6433,7 @@
 .method public readXmlValueObject()Ljava/lang/String;
     .locals 5
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readType()Ljava/lang/String;
 
     move-result-object v0
@@ -6031,6 +6444,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readShort()I
 
@@ -6040,6 +6454,7 @@
 
     packed-switch v1, :pswitch_data_0
 
+    .line 3
     sget-boolean p0, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->$assertionsDisabled:Z
 
     if-eqz p0, :cond_1
@@ -6053,6 +6468,7 @@
 
     throw p0
 
+    .line 4
     :pswitch_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readDouble()D
 
@@ -6064,6 +6480,7 @@
 
     goto :goto_1
 
+    .line 5
     :pswitch_1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readQName()Ljavax/xml/namespace/QName;
 
@@ -6075,6 +6492,7 @@
 
     goto :goto_1
 
+    .line 6
     :pswitch_2
     new-instance v2, Ljava/lang/String;
 
@@ -6088,6 +6506,7 @@
 
     invoke-direct {v2, p0}, Ljava/lang/String;-><init>([B)V
 
+    .line 7
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result p0
@@ -6096,6 +6515,7 @@
 
     if-le p0, v3, :cond_2
 
+    .line 8
     new-instance p0, Ljava/lang/StringBuffer;
 
     invoke-direct {p0}, Ljava/lang/StringBuffer;-><init>()V
@@ -6125,6 +6545,7 @@
 
     goto :goto_1
 
+    .line 9
     :pswitch_3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XsbDumper;->readString()Ljava/lang/String;
 
@@ -6136,6 +6557,7 @@
     :goto_0
     const-string p0, "nil"
 
+    .line 10
     :goto_1
     new-instance v2, Ljava/lang/StringBuffer;
 
@@ -6207,6 +6629,7 @@
 
     if-eq p1, p0, :cond_0
 
+    .line 1
     new-instance p0, Ljava/lang/StringBuffer;
 
     invoke-direct {p0}, Ljava/lang/StringBuffer;-><init>()V

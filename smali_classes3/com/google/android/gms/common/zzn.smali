@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/zzn;
+.class public final Lcom/google/android/gms/common/zzn;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -9,13 +9,13 @@
 
 
 # static fields
-.field static final zza:Lcom/google/android/gms/common/zzl;
+.field public static final zza:Lcom/google/android/gms/common/zzl;
 
-.field static final zzb:Lcom/google/android/gms/common/zzl;
+.field public static final zzb:Lcom/google/android/gms/common/zzl;
 
-.field static final zzc:Lcom/google/android/gms/common/zzl;
+.field public static final zzc:Lcom/google/android/gms/common/zzl;
 
-.field static final zzd:Lcom/google/android/gms/common/zzl;
+.field public static final zzd:Lcom/google/android/gms/common/zzl;
 
 .field private static volatile zze:Lcom/google/android/gms/common/internal/zzaf;
 
@@ -28,10 +28,12 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/common/zzf;
 
     const-string v1, "0\u0082\u0005\u00c80\u0082\u0003\u00b0\u00a0\u0003\u0002\u0001\u0002\u0002\u0014\u0010\u008ae\u0008s\u00f9/\u008eQ\u00ed"
 
+    .line 2
     invoke-static {v1}, Lcom/google/android/gms/common/zzj;->zze(Ljava/lang/String;)[B
 
     move-result-object v1
@@ -44,6 +46,7 @@
 
     const-string v1, "0\u0082\u0006\u00040\u0082\u0003\u00ec\u00a0\u0003\u0002\u0001\u0002\u0002\u0014\u0003\u00a3\u00b2\u00ad\u00d7\u00e1r\u00cak\u00ec"
 
+    .line 3
     invoke-static {v1}, Lcom/google/android/gms/common/zzj;->zze(Ljava/lang/String;)[B
 
     move-result-object v1
@@ -56,6 +59,7 @@
 
     const-string v1, "0\u0082\u0004C0\u0082\u0003+\u00a0\u0003\u0002\u0001\u0002\u0002\t\u0000\u00c2\u00e0\u0087FdJ0\u008d0"
 
+    .line 4
     invoke-static {v1}, Lcom/google/android/gms/common/zzj;->zze(Ljava/lang/String;)[B
 
     move-result-object v1
@@ -68,6 +72,7 @@
 
     const-string v1, "0\u0082\u0004\u00a80\u0082\u0003\u0090\u00a0\u0003\u0002\u0001\u0002\u0002\t\u0000\u00d5\u0085\u00b8l}\u00d3N\u00f50"
 
+    .line 5
     invoke-static {v1}, Lcom/google/android/gms/common/zzj;->zze(Ljava/lang/String;)[B
 
     move-result-object v1
@@ -88,10 +93,12 @@
 .method public static zza(Ljava/lang/String;Lcom/google/android/gms/common/zzj;ZZ)Lcom/google/android/gms/common/zzx;
     .locals 1
 
+    .line 1
     invoke-static {}, Landroid/os/StrictMode;->allowThreadDiskReads()Landroid/os/StrictMode$ThreadPolicy;
 
     move-result-object v0
 
+    .line 2
     :try_start_0
     invoke-static {p0, p1, p2, p3}, Lcom/google/android/gms/common/zzn;->zzh(Ljava/lang/String;Lcom/google/android/gms/common/zzj;ZZ)Lcom/google/android/gms/common/zzx;
 
@@ -99,6 +106,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
     return-object p0
@@ -108,6 +116,7 @@
 
     invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
+    .line 4
     throw p0
 .end method
 
@@ -118,6 +127,7 @@
 
     const/4 p3, 0x1
 
+    .line 1
     invoke-static {p0, p1, p2, p2, p3}, Lcom/google/android/gms/common/zzn;->zzi(Ljava/lang/String;ZZZZ)Lcom/google/android/gms/common/zzx;
 
     move-result-object p0
@@ -130,6 +140,7 @@
 
     const/4 p2, 0x0
 
+    .line 1
     invoke-static {p0, p1, p2, p2, p2}, Lcom/google/android/gms/common/zzn;->zzi(Ljava/lang/String;ZZZZ)Lcom/google/android/gms/common/zzx;
 
     move-result-object p0
@@ -151,6 +162,7 @@
 
     if-nez p0, :cond_0
 
+    .line 1
     invoke-static {p1, p2, v0, v1}, Lcom/google/android/gms/common/zzn;->zzh(Ljava/lang/String;Lcom/google/android/gms/common/zzj;ZZ)Lcom/google/android/gms/common/zzx;
 
     move-result-object v2
@@ -187,11 +199,14 @@
 
     const-string p1, "SHA-256"
 
+    .line 2
     invoke-static {p1}, Lcom/google/android/gms/common/util/AndroidUtilsLight;->zza(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object p1
 
     invoke-static {p1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v0, 0x2
 
     invoke-virtual {p2}, Lcom/google/android/gms/common/zzj;->zzf()[B
 
@@ -201,16 +216,16 @@
 
     move-result-object p1
 
+    .line 3
     invoke-static {p1}, Lcom/google/android/gms/common/util/Hex;->bytesToStringLowercase([B)Ljava/lang/String;
 
     move-result-object p1
 
-    const/4 p2, 0x2
-
-    aput-object p1, v3, p2
+    aput-object p1, v3, v0
 
     const/4 p1, 0x3
 
+    .line 4
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -225,6 +240,7 @@
 
     const-string p0, "%s: pkg=%s, sha256=%s, atk=%s, ver=%s"
 
+    .line 5
     invoke-static {p0, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -239,6 +255,7 @@
 
     monitor-enter v0
 
+    .line 1
     :try_start_0
     sget-object v1, Lcom/google/android/gms/common/zzn;->zzg:Landroid/content/Context;
 
@@ -269,6 +286,7 @@
 
     const-string v1, "GoogleCertificates has been initialized already"
 
+    .line 2
     invoke-static {p0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -288,15 +306,18 @@
 .method public static zzf()Z
     .locals 4
 
+    .line 1
     invoke-static {}, Landroid/os/StrictMode;->allowThreadDiskReads()Landroid/os/StrictMode$ThreadPolicy;
 
     move-result-object v0
 
+    .line 2
     :try_start_0
     invoke-static {}, Lcom/google/android/gms/common/zzn;->zzj()V
 
     sget-object v1, Lcom/google/android/gms/common/zzn;->zze:Lcom/google/android/gms/common/internal/zzaf;
 
+    .line 3
     invoke-interface {v1}, Lcom/google/android/gms/common/internal/zzaf;->zzg()Z
 
     move-result v1
@@ -305,6 +326,7 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
     invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
     return v1
@@ -322,10 +344,12 @@
 
     const-string v3, "Failed to get Google certificates from remote"
 
+    .line 5
     invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 6
     invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
     const/4 v0, 0x0
@@ -335,21 +359,25 @@
     :goto_0
     invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
+    .line 7
     throw v1
 .end method
 
 .method public static zzg()Z
     .locals 4
 
+    .line 1
     invoke-static {}, Landroid/os/StrictMode;->allowThreadDiskReads()Landroid/os/StrictMode$ThreadPolicy;
 
     move-result-object v0
 
+    .line 2
     :try_start_0
     invoke-static {}, Lcom/google/android/gms/common/zzn;->zzj()V
 
     sget-object v1, Lcom/google/android/gms/common/zzn;->zze:Lcom/google/android/gms/common/internal/zzaf;
 
+    .line 3
     invoke-interface {v1}, Lcom/google/android/gms/common/internal/zzaf;->zzi()Z
 
     move-result v1
@@ -358,6 +386,7 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
     invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
     return v1
@@ -375,10 +404,12 @@
 
     const-string v3, "Failed to get Google certificates from remote"
 
+    .line 5
     invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 6
     invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
     const/4 v0, 0x0
@@ -388,6 +419,7 @@
     :goto_0
     invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
+    .line 7
     throw v1
 .end method
 
@@ -398,6 +430,7 @@
 
     const-string v1, "GoogleCertificates"
 
+    .line 1
     :try_start_0
     invoke-static {}, Lcom/google/android/gms/common/zzn;->zzj()V
     :try_end_0
@@ -405,6 +438,7 @@
 
     sget-object v2, Lcom/google/android/gms/common/zzn;->zzg:Landroid/content/Context;
 
+    .line 2
     invoke-static {v2}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     new-instance v2, Lcom/google/android/gms/common/zzs;
@@ -416,6 +450,7 @@
 
     sget-object v3, Lcom/google/android/gms/common/zzn;->zzg:Landroid/content/Context;
 
+    .line 3
     invoke-virtual {v3}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v3
@@ -424,6 +459,7 @@
 
     move-result-object v3
 
+    .line 4
     invoke-interface {p3, v2, v3}, Lcom/google/android/gms/common/internal/zzaf;->zzh(Lcom/google/android/gms/common/zzs;Lcom/google/android/gms/dynamic/IObjectWrapper;)Z
 
     move-result p3
@@ -454,6 +490,7 @@
     :catch_0
     move-exception p0
 
+    .line 5
     invoke-static {v1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const-string p1, "module call"
@@ -467,9 +504,11 @@
     :catch_1
     move-exception p0
 
+    .line 6
     invoke-static {v1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 7
+    invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p1
 
@@ -497,6 +536,7 @@
 
     const-string p3, "GoogleCertificates"
 
+    .line 1
     invoke-static {}, Landroid/os/StrictMode;->allowThreadDiskReads()Landroid/os/StrictMode$ThreadPolicy;
 
     move-result-object v0
@@ -504,10 +544,12 @@
     :try_start_0
     sget-object v1, Lcom/google/android/gms/common/zzn;->zzg:Landroid/content/Context;
 
+    .line 2
     invoke-static {v1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     :try_start_1
     invoke-static {}, Lcom/google/android/gms/common/zzn;->zzj()V
     :try_end_1
@@ -521,6 +563,7 @@
 
     sget-object v2, Lcom/google/android/gms/common/zzn;->zzg:Landroid/content/Context;
 
+    .line 4
     invoke-static {v2}, Lcom/google/android/gms/dynamic/ObjectWrapper;->wrap(Ljava/lang/Object;)Lcom/google/android/gms/dynamic/IObjectWrapper;
 
     move-result-object v6
@@ -542,15 +585,18 @@
     :try_start_3
     sget-object p0, Lcom/google/android/gms/common/zzn;->zze:Lcom/google/android/gms/common/internal/zzaf;
 
+    .line 5
     invoke-interface {p0, v1}, Lcom/google/android/gms/common/internal/zzaf;->zze(Lcom/google/android/gms/common/zzo;)Lcom/google/android/gms/common/zzq;
 
     move-result-object p0
 
     goto :goto_0
 
+    .line 6
     :cond_0
     sget-object p0, Lcom/google/android/gms/common/zzn;->zze:Lcom/google/android/gms/common/internal/zzaf;
 
+    .line 7
     invoke-interface {p0, v1}, Lcom/google/android/gms/common/internal/zzaf;->zzf(Lcom/google/android/gms/common/zzo;)Lcom/google/android/gms/common/zzq;
 
     move-result-object p0
@@ -558,6 +604,7 @@
     .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
+    .line 8
     :goto_0
     :try_start_4
     invoke-virtual {p0}, Lcom/google/android/gms/common/zzq;->zzb()Z
@@ -566,6 +613,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 9
     invoke-virtual {p0}, Lcom/google/android/gms/common/zzq;->zzc()I
 
     move-result p0
@@ -576,11 +624,13 @@
 
     goto :goto_2
 
+    .line 10
     :cond_1
     invoke-virtual {p0}, Lcom/google/android/gms/common/zzq;->zza()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 11
     invoke-virtual {p0}, Lcom/google/android/gms/common/zzq;->zzd()I
 
     move-result p2
@@ -589,6 +639,7 @@
 
     if-ne p2, p3, :cond_2
 
+    .line 12
     new-instance p2, Landroid/content/pm/PackageManager$NameNotFoundException;
 
     invoke-direct {p2}, Landroid/content/pm/PackageManager$NameNotFoundException;-><init>()V
@@ -605,6 +656,7 @@
 
     move-object p1, p3
 
+    .line 13
     :cond_3
     invoke-virtual {p0}, Lcom/google/android/gms/common/zzq;->zzc()I
 
@@ -623,6 +675,7 @@
     :catch_0
     move-exception p0
 
+    .line 14
     invoke-static {p3, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const-string p1, "module call"
@@ -636,11 +689,13 @@
     :catch_1
     move-exception p0
 
+    .line 15
     invoke-static {p3, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const-string p1, "module init: "
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 16
+    invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p2
 
@@ -658,6 +713,7 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
+    .line 17
     :goto_2
     invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
@@ -668,6 +724,7 @@
 
     invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
+    .line 18
     throw p0
 .end method
 
@@ -679,6 +736,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/common/zzn;->zze:Lcom/google/android/gms/common/internal/zzaf;
 
     if-eqz v0, :cond_0
@@ -692,6 +750,7 @@
 
     sget-object v0, Lcom/google/android/gms/common/zzn;->zzf:Ljava/lang/Object;
 
+    .line 2
     monitor-enter v0
 
     :try_start_0
@@ -701,26 +760,31 @@
 
     sget-object v1, Lcom/google/android/gms/common/zzn;->zzg:Landroid/content/Context;
 
+    .line 3
     sget-object v2, Lcom/google/android/gms/dynamite/DynamiteModule;->PREFER_HIGHEST_OR_LOCAL_VERSION_NO_FORCE_STAGING:Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy;
 
     const-string v3, "com.google.android.gms.googlecertificates"
 
+    .line 4
     invoke-static {v1, v2, v3}, Lcom/google/android/gms/dynamite/DynamiteModule;->load(Landroid/content/Context;Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy;Ljava/lang/String;)Lcom/google/android/gms/dynamite/DynamiteModule;
 
     move-result-object v1
 
     const-string v2, "com.google.android.gms.common.GoogleCertificatesImpl"
 
+    .line 5
     invoke-virtual {v1, v2}, Lcom/google/android/gms/dynamite/DynamiteModule;->instantiate(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v1
 
+    .line 6
     invoke-static {v1}, Lcom/google/android/gms/common/internal/zzae;->zzb(Landroid/os/IBinder;)Lcom/google/android/gms/common/internal/zzaf;
 
     move-result-object v1
 
     sput-object v1, Lcom/google/android/gms/common/zzn;->zze:Lcom/google/android/gms/common/internal/zzaf;
 
+    .line 7
     :cond_1
     monitor-exit v0
 

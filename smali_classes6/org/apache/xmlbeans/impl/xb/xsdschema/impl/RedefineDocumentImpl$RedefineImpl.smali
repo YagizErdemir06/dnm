@@ -37,63 +37,70 @@
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "annotation"
+    const-string v1, "http://www.w3.org/2001/XMLSchema"
 
-    const-string v2, "http://www.w3.org/2001/XMLSchema"
+    const-string v2, "annotation"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/apache/xmlbeans/impl/xb/xsdschema/impl/RedefineDocumentImpl$RedefineImpl;->ANNOTATION$0:Ljavax/xml/namespace/QName;
 
+    .line 2
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "simpleType"
+    const-string v2, "simpleType"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/apache/xmlbeans/impl/xb/xsdschema/impl/RedefineDocumentImpl$RedefineImpl;->SIMPLETYPE$2:Ljavax/xml/namespace/QName;
 
+    .line 3
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "complexType"
+    const-string v2, "complexType"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/apache/xmlbeans/impl/xb/xsdschema/impl/RedefineDocumentImpl$RedefineImpl;->COMPLEXTYPE$4:Ljavax/xml/namespace/QName;
 
+    .line 4
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "group"
+    const-string v2, "group"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/apache/xmlbeans/impl/xb/xsdschema/impl/RedefineDocumentImpl$RedefineImpl;->GROUP$6:Ljavax/xml/namespace/QName;
 
+    .line 5
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "attributeGroup"
+    const-string v2, "attributeGroup"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/apache/xmlbeans/impl/xb/xsdschema/impl/RedefineDocumentImpl$RedefineImpl;->ATTRIBUTEGROUP$8:Ljavax/xml/namespace/QName;
 
+    .line 6
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "schemaLocation"
+    const-string v1, ""
 
-    const-string v2, ""
+    const-string v2, "schemaLocation"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/apache/xmlbeans/impl/xb/xsdschema/impl/RedefineDocumentImpl$RedefineImpl;->SCHEMALOCATION$10:Ljavax/xml/namespace/QName;
 
+    .line 7
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "id"
+    const-string v2, "id"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/apache/xmlbeans/impl/xb/xsdschema/impl/RedefineDocumentImpl$RedefineImpl;->ID$12:Ljavax/xml/namespace/QName;
 
@@ -103,6 +110,7 @@
 .method public constructor <init>(Lorg/apache/xmlbeans/SchemaType;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lorg/apache/xmlbeans/impl/xb/xsdschema/impl/OpenAttrsImpl;-><init>(Lorg/apache/xmlbeans/SchemaType;)V
 
     return-void
@@ -113,15 +121,18 @@
 .method public addNewAnnotation()Lorg/apache/xmlbeans/impl/xb/xsdschema/AnnotationDocument$Annotation;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -134,6 +145,7 @@
 
     check-cast p0, Lorg/apache/xmlbeans/impl/xb/xsdschema/AnnotationDocument$Annotation;
 
+    .line 4
     monitor-exit v0
 
     return-object p0
@@ -141,6 +153,7 @@
     :catchall_0
     move-exception p0
 
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -151,15 +164,18 @@
 .method public addNewAttributeGroup()Lorg/apache/xmlbeans/impl/xb/xsdschema/NamedAttributeGroup;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -172,6 +188,7 @@
 
     check-cast p0, Lorg/apache/xmlbeans/impl/xb/xsdschema/NamedAttributeGroup;
 
+    .line 4
     monitor-exit v0
 
     return-object p0
@@ -179,6 +196,7 @@
     :catchall_0
     move-exception p0
 
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -189,15 +207,18 @@
 .method public addNewComplexType()Lorg/apache/xmlbeans/impl/xb/xsdschema/TopLevelComplexType;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -210,6 +231,7 @@
 
     check-cast p0, Lorg/apache/xmlbeans/impl/xb/xsdschema/TopLevelComplexType;
 
+    .line 4
     monitor-exit v0
 
     return-object p0
@@ -217,6 +239,7 @@
     :catchall_0
     move-exception p0
 
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -227,15 +250,18 @@
 .method public addNewGroup()Lorg/apache/xmlbeans/impl/xb/xsdschema/NamedGroup;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -248,6 +274,7 @@
 
     check-cast p0, Lorg/apache/xmlbeans/impl/xb/xsdschema/NamedGroup;
 
+    .line 4
     monitor-exit v0
 
     return-object p0
@@ -255,6 +282,7 @@
     :catchall_0
     move-exception p0
 
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -265,15 +293,18 @@
 .method public addNewSimpleType()Lorg/apache/xmlbeans/impl/xb/xsdschema/TopLevelSimpleType;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -286,6 +317,7 @@
 
     check-cast p0, Lorg/apache/xmlbeans/impl/xb/xsdschema/TopLevelSimpleType;
 
+    .line 4
     monitor-exit v0
 
     return-object p0
@@ -293,6 +325,7 @@
     :catchall_0
     move-exception p0
 
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -731,15 +764,18 @@
 .method public getId()Ljava/lang/String;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -754,12 +790,14 @@
 
     if-nez p0, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    .line 4
+    monitor-exit v0
 
     return-object p0
 
+    .line 5
     :cond_0
     invoke-interface {p0}, Lorg/apache/xmlbeans/SimpleValue;->getStringValue()Ljava/lang/String;
 
@@ -772,6 +810,7 @@
     :catchall_0
     move-exception p0
 
+    .line 6
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -782,15 +821,18 @@
 .method public getSchemaLocation()Ljava/lang/String;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -805,12 +847,14 @@
 
     if-nez p0, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    .line 4
+    monitor-exit v0
 
     return-object p0
 
+    .line 5
     :cond_0
     invoke-interface {p0}, Lorg/apache/xmlbeans/SimpleValue;->getStringValue()Ljava/lang/String;
 
@@ -823,6 +867,7 @@
     :catchall_0
     move-exception p0
 
+    .line 6
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -940,15 +985,18 @@
 .method public insertNewAnnotation(I)Lorg/apache/xmlbeans/impl/xb/xsdschema/AnnotationDocument$Annotation;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -961,6 +1009,7 @@
 
     check-cast p0, Lorg/apache/xmlbeans/impl/xb/xsdschema/AnnotationDocument$Annotation;
 
+    .line 4
     monitor-exit v0
 
     return-object p0
@@ -968,6 +1017,7 @@
     :catchall_0
     move-exception p0
 
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -978,15 +1028,18 @@
 .method public insertNewAttributeGroup(I)Lorg/apache/xmlbeans/impl/xb/xsdschema/NamedAttributeGroup;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -999,6 +1052,7 @@
 
     check-cast p0, Lorg/apache/xmlbeans/impl/xb/xsdschema/NamedAttributeGroup;
 
+    .line 4
     monitor-exit v0
 
     return-object p0
@@ -1006,6 +1060,7 @@
     :catchall_0
     move-exception p0
 
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1016,15 +1071,18 @@
 .method public insertNewComplexType(I)Lorg/apache/xmlbeans/impl/xb/xsdschema/TopLevelComplexType;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -1037,6 +1095,7 @@
 
     check-cast p0, Lorg/apache/xmlbeans/impl/xb/xsdschema/TopLevelComplexType;
 
+    .line 4
     monitor-exit v0
 
     return-object p0
@@ -1044,6 +1103,7 @@
     :catchall_0
     move-exception p0
 
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1054,15 +1114,18 @@
 .method public insertNewGroup(I)Lorg/apache/xmlbeans/impl/xb/xsdschema/NamedGroup;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -1075,6 +1138,7 @@
 
     check-cast p0, Lorg/apache/xmlbeans/impl/xb/xsdschema/NamedGroup;
 
+    .line 4
     monitor-exit v0
 
     return-object p0
@@ -1082,6 +1146,7 @@
     :catchall_0
     move-exception p0
 
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1092,15 +1157,18 @@
 .method public insertNewSimpleType(I)Lorg/apache/xmlbeans/impl/xb/xsdschema/TopLevelSimpleType;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -1113,6 +1181,7 @@
 
     check-cast p0, Lorg/apache/xmlbeans/impl/xb/xsdschema/TopLevelSimpleType;
 
+    .line 4
     monitor-exit v0
 
     return-object p0
@@ -1120,6 +1189,7 @@
     :catchall_0
     move-exception p0
 
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1130,15 +1200,18 @@
 .method public isSetId()Z
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -1166,6 +1239,7 @@
     :catchall_0
     move-exception p0
 
+    .line 4
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1176,15 +1250,18 @@
 .method public removeAnnotation(I)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -1193,6 +1270,7 @@
 
     invoke-interface {p0, v1, p1}, Lorg/apache/xmlbeans/impl/values/TypeStore;->remove_element(Ljavax/xml/namespace/QName;I)V
 
+    .line 4
     monitor-exit v0
 
     return-void
@@ -1210,15 +1288,18 @@
 .method public removeAttributeGroup(I)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -1227,6 +1308,7 @@
 
     invoke-interface {p0, v1, p1}, Lorg/apache/xmlbeans/impl/values/TypeStore;->remove_element(Ljavax/xml/namespace/QName;I)V
 
+    .line 4
     monitor-exit v0
 
     return-void
@@ -1244,15 +1326,18 @@
 .method public removeComplexType(I)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -1261,6 +1346,7 @@
 
     invoke-interface {p0, v1, p1}, Lorg/apache/xmlbeans/impl/values/TypeStore;->remove_element(Ljavax/xml/namespace/QName;I)V
 
+    .line 4
     monitor-exit v0
 
     return-void
@@ -1278,15 +1364,18 @@
 .method public removeGroup(I)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -1295,6 +1384,7 @@
 
     invoke-interface {p0, v1, p1}, Lorg/apache/xmlbeans/impl/values/TypeStore;->remove_element(Ljavax/xml/namespace/QName;I)V
 
+    .line 4
     monitor-exit v0
 
     return-void
@@ -1312,15 +1402,18 @@
 .method public removeSimpleType(I)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -1329,6 +1422,7 @@
 
     invoke-interface {p0, v1, p1}, Lorg/apache/xmlbeans/impl/values/TypeStore;->remove_element(Ljavax/xml/namespace/QName;I)V
 
+    .line 4
     monitor-exit v0
 
     return-void
@@ -1706,15 +1800,18 @@
 .method public setId(Ljava/lang/String;)V
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object v1
@@ -1729,6 +1826,7 @@
 
     if-nez v1, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -1741,9 +1839,11 @@
 
     check-cast v1, Lorg/apache/xmlbeans/SimpleValue;
 
+    .line 5
     :cond_0
     invoke-interface {v1, p1}, Lorg/apache/xmlbeans/SimpleValue;->setStringValue(Ljava/lang/String;)V
 
+    .line 6
     monitor-exit v0
 
     return-void
@@ -1761,15 +1861,18 @@
 .method public setSchemaLocation(Ljava/lang/String;)V
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object v1
@@ -1784,6 +1887,7 @@
 
     if-nez v1, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -1796,9 +1900,11 @@
 
     check-cast v1, Lorg/apache/xmlbeans/SimpleValue;
 
+    .line 5
     :cond_0
     invoke-interface {v1, p1}, Lorg/apache/xmlbeans/SimpleValue;->setStringValue(Ljava/lang/String;)V
 
+    .line 6
     monitor-exit v0
 
     return-void
@@ -1906,15 +2012,18 @@
 .method public sizeOfAnnotationArray()I
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -1932,6 +2041,7 @@
     :catchall_0
     move-exception p0
 
+    .line 4
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1942,15 +2052,18 @@
 .method public sizeOfAttributeGroupArray()I
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -1968,6 +2081,7 @@
     :catchall_0
     move-exception p0
 
+    .line 4
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1978,15 +2092,18 @@
 .method public sizeOfComplexTypeArray()I
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -2004,6 +2121,7 @@
     :catchall_0
     move-exception p0
 
+    .line 4
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2014,15 +2132,18 @@
 .method public sizeOfGroupArray()I
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -2040,6 +2161,7 @@
     :catchall_0
     move-exception p0
 
+    .line 4
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2050,15 +2172,18 @@
 .method public sizeOfSimpleTypeArray()I
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -2076,6 +2201,7 @@
     :catchall_0
     move-exception p0
 
+    .line 4
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2086,15 +2212,18 @@
 .method public unsetId()V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -2103,6 +2232,7 @@
 
     invoke-interface {p0, v1}, Lorg/apache/xmlbeans/impl/values/TypeStore;->remove_attribute(Ljavax/xml/namespace/QName;)V
 
+    .line 4
     monitor-exit v0
 
     return-void
@@ -2120,15 +2250,18 @@
 .method public xgetId()Lorg/apache/xmlbeans/XmlID;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -2141,6 +2274,7 @@
 
     check-cast p0, Lorg/apache/xmlbeans/XmlID;
 
+    .line 4
     monitor-exit v0
 
     return-object p0
@@ -2148,6 +2282,7 @@
     :catchall_0
     move-exception p0
 
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2158,15 +2293,18 @@
 .method public xgetSchemaLocation()Lorg/apache/xmlbeans/XmlAnyURI;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -2179,6 +2317,7 @@
 
     check-cast p0, Lorg/apache/xmlbeans/XmlAnyURI;
 
+    .line 4
     monitor-exit v0
 
     return-object p0
@@ -2186,6 +2325,7 @@
     :catchall_0
     move-exception p0
 
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2196,15 +2336,18 @@
 .method public xsetId(Lorg/apache/xmlbeans/XmlID;)V
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object v1
@@ -2219,6 +2362,7 @@
 
     if-nez v1, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -2231,9 +2375,11 @@
 
     check-cast v1, Lorg/apache/xmlbeans/XmlID;
 
+    .line 5
     :cond_0
     invoke-interface {v1, p1}, Lorg/apache/xmlbeans/XmlObject;->set(Lorg/apache/xmlbeans/XmlObject;)Lorg/apache/xmlbeans/XmlObject;
 
+    .line 6
     monitor-exit v0
 
     return-void
@@ -2251,15 +2397,18 @@
 .method public xsetSchemaLocation(Lorg/apache/xmlbeans/XmlAnyURI;)V
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object v1
@@ -2274,6 +2423,7 @@
 
     if-nez v1, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -2286,9 +2436,11 @@
 
     check-cast v1, Lorg/apache/xmlbeans/XmlAnyURI;
 
+    .line 5
     :cond_0
     invoke-interface {v1, p1}, Lorg/apache/xmlbeans/XmlObject;->set(Lorg/apache/xmlbeans/XmlObject;)Lorg/apache/xmlbeans/XmlObject;
 
+    .line 6
     monitor-exit v0
 
     return-void

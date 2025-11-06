@@ -1,4 +1,4 @@
-.class Landroidx/core/location/LocationCompat$Api26Impl;
+.class public Landroidx/core/location/LocationCompat$Api26Impl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,6 +33,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/location/Location;->getBearingAccuracyDegrees()F
 
     move-result p0
@@ -44,6 +46,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/location/Location;->getSpeedAccuracyMetersPerSecond()F
 
     move-result p0
@@ -56,6 +59,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/location/Location;->getVerticalAccuracyMeters()F
 
     move-result p0
@@ -68,6 +72,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/location/Location;->hasBearingAccuracy()Z
 
     move-result p0
@@ -80,6 +85,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/location/Location;->hasSpeedAccuracy()Z
 
     move-result p0
@@ -92,6 +98,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/location/Location;->hasVerticalAccuracy()Z
 
     move-result p0
@@ -104,6 +111,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/location/Location;->setBearingAccuracyDegrees(F)V
 
     return-void
@@ -114,6 +122,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/location/Location;->setSpeedAccuracyMetersPerSecond(F)V
 
     return-void
@@ -124,6 +133,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/location/Location;->setVerticalAccuracyMeters(F)V
 
     return-void

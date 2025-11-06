@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/MapMakerInternalMap$StrongKeyDummyValueSegment;
+.class public final Lcom/google/common/collect/MapMakerInternalMap$StrongKeyDummyValueSegment;
 .super Lcom/google/common/collect/MapMakerInternalMap$Segment;
 .source "SourceFile"
 
@@ -45,6 +45,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/google/common/collect/MapMakerInternalMap$Segment;-><init>(Lcom/google/common/collect/MapMakerInternalMap;II)V
 
     return-void
@@ -86,6 +87,7 @@
 .method public bridge synthetic self()Lcom/google/common/collect/MapMakerInternalMap$Segment;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/MapMakerInternalMap$StrongKeyDummyValueSegment;->self()Lcom/google/common/collect/MapMakerInternalMap$StrongKeyDummyValueSegment;
 
     move-result-object p0

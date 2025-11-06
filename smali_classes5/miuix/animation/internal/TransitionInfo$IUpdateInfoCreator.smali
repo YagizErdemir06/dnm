@@ -16,6 +16,4 @@
 
 # virtual methods
 .method public abstract getUpdateInfo(Lmiuix/animation/property/FloatProperty;)Lmiuix/animation/listener/UpdateInfo;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
 .end method

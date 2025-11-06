@@ -1,9 +1,9 @@
-.class final Lokio/internal/ResourceFileSystem$roots$2;
-.super Lkotlin/jvm/internal/n0;
+.class public final Lokio/internal/ResourceFileSystem$roots$2;
+.super Lh/d3/x/n0;
 .source "SourceFile"
 
 # interfaces
-.implements Ljn/a;
+.implements Lh/d3/w/a;
 
 
 # annotations
@@ -18,11 +18,11 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lkotlin/jvm/internal/n0;",
-        "Ljn/a<",
+        "Lh/d3/x/n0;",
+        "Lh/d3/w/a<",
         "Ljava/util/List<",
         "+",
-        "Lnm/u0<",
+        "Lh/u0<",
         "+",
         "Lokio/FileSystem;",
         "+",
@@ -31,16 +31,22 @@
     }
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000\u0012\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\u0010\u0004\u001a\u0014\u0012\u0010\u0012\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00030\u00010\u0000H\n"
+        "\u0000\u0014\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0010\u0004\u001a\u0014\u0012\u0010\u0012\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00030\u00010\u0000H\n\u00a2\u0006\u0004\u0008\u0004\u0010\u0005"
     }
     d2 = {
         "",
-        "Lnm/u0;",
+        "Lh/u0;",
         "Lokio/FileSystem;",
         "Lokio/Path;",
-        "<anonymous>"
+        "<anonymous>",
+        "()Ljava/util/List;"
     }
     k = 0x3
     mv = {
@@ -52,7 +58,7 @@
 
 
 # instance fields
-.field final synthetic $classLoader:Ljava/lang/ClassLoader;
+.field public final synthetic $classLoader:Ljava/lang/ClassLoader;
 
 
 # direct methods
@@ -63,7 +69,7 @@
 
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Lkotlin/jvm/internal/n0;-><init>(I)V
+    invoke-direct {p0, p1}, Lh/d3/x/n0;-><init>(I)V
 
     return-void
 .end method
@@ -87,14 +93,14 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lnm/u0<",
+            "Lh/u0<",
             "Lokio/FileSystem;",
             "Lokio/Path;",
             ">;>;"
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     .line 2

@@ -26,20 +26,25 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpPcmReader;->payloadFormat:Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;
 
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 3
     iput-wide v0, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpPcmReader;->firstReceivedTimestamp:J
 
     const-wide/16 v0, 0x0
 
+    .line 4
     iput-wide v0, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpPcmReader;->startTimeOffsetUs:J
 
     const/4 p1, -0x1
 
+    .line 5
     iput p1, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpPcmReader;->previousSequenceNumber:I
 
     return-void
@@ -50,10 +55,11 @@
 
     sub-long v0, p2, p4
 
-    const-wide/32 v2, 0xf4240
-
     int-to-long v4, p6
 
+    const-wide/32 v2, 0xf4240
+
+    .line 1
     invoke-static/range {v0 .. v5}, Lcom/google/android/exoplayer2/util/Util;->scaleLargeTimestamp(JJJ)J
 
     move-result-wide p2
@@ -72,16 +78,19 @@
 
     move/from16 v1, p4
 
+    .line 1
     iget-object v2, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpPcmReader;->trackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     invoke-static {v2}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget v2, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpPcmReader;->previousSequenceNumber:I
 
     const/4 v3, -0x1
 
     if-eq v2, v3, :cond_0
 
+    .line 3
     invoke-static {v2}, Lcom/google/android/exoplayer2/source/rtsp/RtpPacket;->getNextSequenceNumber(I)I
 
     move-result v2
@@ -94,6 +103,7 @@
 
     const/4 v4, 0x0
 
+    .line 4
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -110,14 +120,17 @@
 
     const-string v2, "Received RTP packet with unexpected sequence number. Expected: %d; received: %d."
 
+    .line 5
     invoke-static {v2, v3}, Lcom/google/android/exoplayer2/util/Util;->formatInvariant(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "RtpPcmReader"
 
+    .line 6
     invoke-static {v3, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 7
     :cond_0
     iget-wide v4, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpPcmReader;->startTimeOffsetUs:J
 
@@ -129,20 +142,24 @@
 
     move-wide/from16 v6, p2
 
+    .line 8
     invoke-static/range {v4 .. v10}, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpPcmReader;->toSampleUs(JJJI)J
 
     move-result-wide v12
 
+    .line 9
     invoke-virtual/range {p1 .. p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
     move-result v15
 
+    .line 10
     iget-object v2, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpPcmReader;->trackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     move-object/from16 v3, p1
 
     invoke-interface {v2, v3, v15}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->sampleData(Lcom/google/android/exoplayer2/util/ParsableByteArray;I)V
 
+    .line 11
     iget-object v11, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpPcmReader;->trackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     const/4 v14, 0x1
@@ -153,6 +170,7 @@
 
     invoke-interface/range {v11 .. v17}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->sampleMetadata(JIIILcom/google/android/exoplayer2/extractor/TrackOutput$CryptoData;)V
 
+    .line 12
     iput v1, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpPcmReader;->previousSequenceNumber:I
 
     return-void
@@ -163,12 +181,14 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-interface {p1, p2, v0}, Lcom/google/android/exoplayer2/extractor/ExtractorOutput;->track(II)Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpPcmReader;->trackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpPcmReader;->payloadFormat:Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;->format:Lcom/google/android/exoplayer2/Format;
@@ -181,6 +201,7 @@
 .method public onReceivingFirstPacket(JI)V
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpPcmReader;->firstReceivedTimestamp:J
 
     return-void
@@ -189,8 +210,10 @@
 .method public seek(JJ)V
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpPcmReader;->firstReceivedTimestamp:J
 
+    .line 2
     iput-wide p3, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpPcmReader;->startTimeOffsetUs:J
 
     return-void

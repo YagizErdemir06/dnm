@@ -1,4 +1,4 @@
-.class final Lcom/bumptech/glide/load/resource/bitmap/DrawableToBitmapConverter$1;
+.class public final Lcom/bumptech/glide/load/resource/bitmap/DrawableToBitmapConverter$1;
 .super Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPoolAdapter;
 .source "SourceFile"
 
@@ -18,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPoolAdapter;-><init>()V
 
     return-void

@@ -4,7 +4,7 @@
 
 
 # static fields
-.field static final zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdo;
+.field public static final zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdo;
 
 .field public static final synthetic zzb:I = 0x0
 
@@ -19,6 +19,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdo;
 
     const/4 v1, 0x1
@@ -74,6 +75,7 @@
 .method public final zzb(Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfo;I)Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeb;
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdo;->zzd:Ljava/util/Map;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdn;

@@ -1,4 +1,4 @@
-.class Lcom/google/common/base/Converter$1;
+.class public Lcom/google/common/base/Converter$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,15 +26,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/base/Converter;
+.field public final synthetic this$0:Lcom/google/common/base/Converter;
 
-.field final synthetic val$fromIterable:Ljava/lang/Iterable;
+.field public final synthetic val$fromIterable:Ljava/lang/Iterable;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/base/Converter;Ljava/lang/Iterable;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/base/Converter$1;->this$0:Lcom/google/common/base/Converter;
 
     iput-object p2, p0, Lcom/google/common/base/Converter$1;->val$fromIterable:Ljava/lang/Iterable;
@@ -56,6 +57,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/base/Converter$1$1;
 
     invoke-direct {v0, p0}, Lcom/google/common/base/Converter$1$1;-><init>(Lcom/google/common/base/Converter$1;)V

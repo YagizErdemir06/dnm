@@ -15,5 +15,19 @@
 
 
 # virtual methods
-.method public abstract bd(FFFF)V
+.method public abstract O7(FFFF)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "left",
+            "top",
+            "right",
+            "bottom"
+        }
+    .end annotation
 .end method

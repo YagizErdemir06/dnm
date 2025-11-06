@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/camera/imagecodec/impl/SoftwareCodecReprocessor$JobHandler;
+.class public Lcom/xiaomi/camera/imagecodec/impl/SoftwareCodecReprocessor$JobHandler;
 .super Landroid/os/Handler;
 .source "SourceFile"
 
@@ -21,7 +21,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/xiaomi/camera/imagecodec/impl/SoftwareCodecReprocessor;
+.field public final synthetic this$0:Lcom/xiaomi/camera/imagecodec/impl/SoftwareCodecReprocessor;
 
 
 # direct methods
@@ -38,8 +38,10 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/imagecodec/impl/SoftwareCodecReprocessor$JobHandler;->this$0:Lcom/xiaomi/camera/imagecodec/impl/SoftwareCodecReprocessor;
 
+    .line 2
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -58,6 +60,7 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
@@ -68,10 +71,12 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 2
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-static {}, Lcom/xiaomi/camera/imagecodec/impl/SoftwareCodecReprocessor;->access$100()Ljava/lang/String;
 
@@ -81,12 +86,14 @@
 
     invoke-static {p1, v0}, Lcom/xiaomi/engine/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 4
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/impl/SoftwareCodecReprocessor$JobHandler;->this$0:Lcom/xiaomi/camera/imagecodec/impl/SoftwareCodecReprocessor;
 
     invoke-static {p0}, Lcom/xiaomi/camera/imagecodec/impl/SoftwareCodecReprocessor;->access$400(Lcom/xiaomi/camera/imagecodec/impl/SoftwareCodecReprocessor;)V
 
     goto :goto_0
 
+    .line 5
     :cond_1
     invoke-static {}, Lcom/xiaomi/camera/imagecodec/impl/SoftwareCodecReprocessor;->access$100()Ljava/lang/String;
 
@@ -96,6 +103,7 @@
 
     invoke-static {p1, v0}, Lcom/xiaomi/engine/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 6
     iget-object p1, p0, Lcom/xiaomi/camera/imagecodec/impl/SoftwareCodecReprocessor$JobHandler;->this$0:Lcom/xiaomi/camera/imagecodec/impl/SoftwareCodecReprocessor;
 
     invoke-static {p1}, Lcom/xiaomi/camera/imagecodec/impl/SoftwareCodecReprocessor;->access$200(Lcom/xiaomi/camera/imagecodec/impl/SoftwareCodecReprocessor;)Z
@@ -104,6 +112,7 @@
 
     if-eqz p1, :cond_2
 
+    .line 7
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/impl/SoftwareCodecReprocessor$JobHandler;->this$0:Lcom/xiaomi/camera/imagecodec/impl/SoftwareCodecReprocessor;
 
     invoke-static {p0}, Lcom/xiaomi/camera/imagecodec/impl/SoftwareCodecReprocessor;->access$300(Lcom/xiaomi/camera/imagecodec/impl/SoftwareCodecReprocessor;)V

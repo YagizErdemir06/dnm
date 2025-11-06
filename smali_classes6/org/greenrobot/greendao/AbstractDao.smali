@@ -17,11 +17,11 @@
 
 
 # instance fields
-.field protected final config:Lorg/greenrobot/greendao/internal/DaoConfig;
+.field public final config:Lorg/greenrobot/greendao/internal/DaoConfig;
 
-.field protected final db:Lorg/greenrobot/greendao/database/Database;
+.field public final db:Lorg/greenrobot/greendao/database/Database;
 
-.field protected final identityScope:Lorg/greenrobot/greendao/identityscope/IdentityScope;
+.field public final identityScope:Lorg/greenrobot/greendao/identityscope/IdentityScope;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lorg/greenrobot/greendao/identityscope/IdentityScope<",
@@ -30,7 +30,7 @@
     .end annotation
 .end field
 
-.field protected final identityScopeLong:Lorg/greenrobot/greendao/identityscope/IdentityScopeLong;
+.field public final identityScopeLong:Lorg/greenrobot/greendao/identityscope/IdentityScopeLong;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lorg/greenrobot/greendao/identityscope/IdentityScopeLong<",
@@ -39,18 +39,26 @@
     .end annotation
 .end field
 
-.field protected final isStandardSQLite:Z
+.field public final isStandardSQLite:Z
 
-.field protected final pkOrdinal:I
+.field public final pkOrdinal:I
 
-.field protected final session:Lorg/greenrobot/greendao/AbstractDaoSession;
+.field public final session:Lorg/greenrobot/greendao/AbstractDaoSession;
 
-.field protected final statements:Lorg/greenrobot/greendao/internal/TableStatements;
+.field public final statements:Lorg/greenrobot/greendao/internal/TableStatements;
 
 
 # direct methods
 .method public constructor <init>(Lorg/greenrobot/greendao/internal/DaoConfig;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "config"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -62,6 +70,16 @@
 
 .method public constructor <init>(Lorg/greenrobot/greendao/internal/DaoConfig;Lorg/greenrobot/greendao/AbstractDaoSession;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "config",
+            "daoSession"
+        }
+    .end annotation
 
     .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -137,6 +155,17 @@
 
 .method private deleteByKeyInsideSynchronized(Ljava/lang/Object;Lorg/greenrobot/greendao/database/DatabaseStatement;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "key",
+            "stmt"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TK;",
@@ -145,12 +174,14 @@
         }
     .end annotation
 
+    .line 1
     instance-of p0, p1, Ljava/lang/Long;
 
     const/4 v0, 0x1
 
     if-eqz p0, :cond_0
 
+    .line 2
     check-cast p1, Ljava/lang/Long;
 
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
@@ -164,17 +195,20 @@
     :cond_0
     if-eqz p1, :cond_1
 
+    .line 3
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p0
 
     invoke-interface {p2, v0, p0}, Lorg/greenrobot/greendao/database/DatabaseStatement;->bindString(ILjava/lang/String;)V
 
+    .line 4
     :goto_0
     invoke-interface {p2}, Lorg/greenrobot/greendao/database/DatabaseStatement;->execute()V
 
     return-void
 
+    .line 5
     :cond_1
     new-instance p0, Lorg/greenrobot/greendao/DaoException;
 
@@ -187,6 +221,17 @@
 
 .method private deleteInTxInternal(Ljava/lang/Iterable;Ljava/lang/Iterable;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "entities",
+            "keys"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -197,30 +242,37 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lorg/greenrobot/greendao/AbstractDao;->assertSinglePk()V
 
+    .line 2
     iget-object v0, p0, Lorg/greenrobot/greendao/AbstractDao;->statements:Lorg/greenrobot/greendao/internal/TableStatements;
 
     invoke-virtual {v0}, Lorg/greenrobot/greendao/internal/TableStatements;->getDeleteStatement()Lorg/greenrobot/greendao/database/DatabaseStatement;
 
     move-result-object v0
 
+    .line 3
     iget-object v1, p0, Lorg/greenrobot/greendao/AbstractDao;->db:Lorg/greenrobot/greendao/database/Database;
 
     invoke-interface {v1}, Lorg/greenrobot/greendao/database/Database;->beginTransaction()V
 
+    .line 4
     :try_start_0
     monitor-enter v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
+    .line 5
     :try_start_1
     iget-object v1, p0, Lorg/greenrobot/greendao/AbstractDao;->identityScope:Lorg/greenrobot/greendao/identityscope/IdentityScope;
 
     if-eqz v1, :cond_0
 
+    .line 6
     invoke-interface {v1}, Lorg/greenrobot/greendao/identityscope/IdentityScope;->lock()V
 
+    .line 7
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
@@ -235,6 +287,7 @@
     :goto_0
     if-eqz p1, :cond_2
 
+    .line 8
     :try_start_2
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -252,14 +305,17 @@
 
     move-result-object v2
 
+    .line 9
     invoke-virtual {p0, v2}, Lorg/greenrobot/greendao/AbstractDao;->getKeyVerified(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
+    .line 10
     invoke-direct {p0, v2, v0}, Lorg/greenrobot/greendao/AbstractDao;->deleteByKeyInsideSynchronized(Ljava/lang/Object;Lorg/greenrobot/greendao/database/DatabaseStatement;)V
 
     if-eqz v1, :cond_1
 
+    .line 11
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
@@ -272,6 +328,7 @@
     :cond_2
     if-eqz p2, :cond_5
 
+    .line 12
     invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -288,39 +345,48 @@
 
     move-result-object p2
 
+    .line 13
     invoke-direct {p0, p2, v0}, Lorg/greenrobot/greendao/AbstractDao;->deleteByKeyInsideSynchronized(Ljava/lang/Object;Lorg/greenrobot/greendao/database/DatabaseStatement;)V
 
     if-eqz v1, :cond_3
 
+    .line 14
     invoke-interface {v1, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     goto :goto_2
 
+    .line 15
     :goto_3
     :try_start_3
     iget-object p2, p0, Lorg/greenrobot/greendao/AbstractDao;->identityScope:Lorg/greenrobot/greendao/identityscope/IdentityScope;
 
     if-eqz p2, :cond_4
 
+    .line 16
     invoke-interface {p2}, Lorg/greenrobot/greendao/identityscope/IdentityScope;->unlock()V
 
+    .line 17
     :cond_4
     throw p1
 
+    .line 18
     :cond_5
     iget-object p1, p0, Lorg/greenrobot/greendao/AbstractDao;->identityScope:Lorg/greenrobot/greendao/identityscope/IdentityScope;
 
     if-eqz p1, :cond_6
 
+    .line 19
     invoke-interface {p1}, Lorg/greenrobot/greendao/identityscope/IdentityScope;->unlock()V
 
+    .line 20
     :cond_6
     monitor-exit v0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
+    .line 21
     :try_start_4
     iget-object p1, p0, Lorg/greenrobot/greendao/AbstractDao;->db:Lorg/greenrobot/greendao/database/Database;
 
@@ -328,14 +394,17 @@
 
     if-eqz v1, :cond_7
 
+    .line 22
     iget-object p1, p0, Lorg/greenrobot/greendao/AbstractDao;->identityScope:Lorg/greenrobot/greendao/identityscope/IdentityScope;
 
     if-eqz p1, :cond_7
 
+    .line 23
     invoke-interface {p1, v1}, Lorg/greenrobot/greendao/identityscope/IdentityScope;->remove(Ljava/lang/Iterable;)V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
+    .line 24
     :cond_7
     iget-object p0, p0, Lorg/greenrobot/greendao/AbstractDao;->db:Lorg/greenrobot/greendao/database/Database;
 
@@ -346,6 +415,7 @@
     :catchall_1
     move-exception p1
 
+    .line 25
     :try_start_5
     monitor-exit v0
     :try_end_5
@@ -359,15 +429,30 @@
     :catchall_2
     move-exception p1
 
+    .line 26
     iget-object p0, p0, Lorg/greenrobot/greendao/AbstractDao;->db:Lorg/greenrobot/greendao/database/Database;
 
     invoke-interface {p0}, Lorg/greenrobot/greendao/database/Database;->endTransaction()V
 
+    .line 27
     throw p1
 .end method
 
 .method private executeInsert(Ljava/lang/Object;Lorg/greenrobot/greendao/database/DatabaseStatement;Z)J
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "entity",
+            "stmt",
+            "setKeyAndAttach"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;",
@@ -376,6 +461,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/greenrobot/greendao/AbstractDao;->db:Lorg/greenrobot/greendao/database/Database;
 
     invoke-interface {v0}, Lorg/greenrobot/greendao/database/Database;->isDbLockedByCurrentThread()Z
@@ -384,28 +470,33 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-direct {p0, p1, p2}, Lorg/greenrobot/greendao/AbstractDao;->insertInsideTx(Ljava/lang/Object;Lorg/greenrobot/greendao/database/DatabaseStatement;)J
 
     move-result-wide v0
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lorg/greenrobot/greendao/AbstractDao;->db:Lorg/greenrobot/greendao/database/Database;
 
     invoke-interface {v0}, Lorg/greenrobot/greendao/database/Database;->beginTransaction()V
 
+    .line 4
     :try_start_0
     invoke-direct {p0, p1, p2}, Lorg/greenrobot/greendao/AbstractDao;->insertInsideTx(Ljava/lang/Object;Lorg/greenrobot/greendao/database/DatabaseStatement;)J
 
     move-result-wide v0
 
+    .line 5
     iget-object p2, p0, Lorg/greenrobot/greendao/AbstractDao;->db:Lorg/greenrobot/greendao/database/Database;
 
     invoke-interface {p2}, Lorg/greenrobot/greendao/database/Database;->setTransactionSuccessful()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 6
     iget-object p2, p0, Lorg/greenrobot/greendao/AbstractDao;->db:Lorg/greenrobot/greendao/database/Database;
 
     invoke-interface {p2}, Lorg/greenrobot/greendao/database/Database;->endTransaction()V
@@ -415,6 +506,7 @@
 
     const/4 p2, 0x1
 
+    .line 7
     invoke-virtual {p0, p1, v0, v1, p2}, Lorg/greenrobot/greendao/AbstractDao;->updateKeyAfterInsertAndAttach(Ljava/lang/Object;JZ)V
 
     :cond_1
@@ -423,15 +515,30 @@
     :catchall_0
     move-exception p1
 
+    .line 8
     iget-object p0, p0, Lorg/greenrobot/greendao/AbstractDao;->db:Lorg/greenrobot/greendao/database/Database;
 
     invoke-interface {p0}, Lorg/greenrobot/greendao/database/Database;->endTransaction()V
 
+    .line 9
     throw p1
 .end method
 
 .method private executeInsertInTx(Lorg/greenrobot/greendao/database/DatabaseStatement;Ljava/lang/Iterable;Z)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "stmt",
+            "entities",
+            "setPrimaryKey"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -441,24 +548,29 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/greenrobot/greendao/AbstractDao;->db:Lorg/greenrobot/greendao/database/Database;
 
     invoke-interface {v0}, Lorg/greenrobot/greendao/database/Database;->beginTransaction()V
 
+    .line 2
     :try_start_0
     monitor-enter p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
+    .line 3
     :try_start_1
     iget-object v0, p0, Lorg/greenrobot/greendao/AbstractDao;->identityScope:Lorg/greenrobot/greendao/identityscope/IdentityScope;
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-interface {v0}, Lorg/greenrobot/greendao/identityscope/IdentityScope;->lock()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    .line 5
     :cond_0
     :try_start_2
     iget-boolean v0, p0, Lorg/greenrobot/greendao/AbstractDao;->isStandardSQLite:Z
@@ -467,12 +579,14 @@
 
     if-eqz v0, :cond_2
 
+    .line 6
     invoke-interface {p1}, Lorg/greenrobot/greendao/database/DatabaseStatement;->getRawStatement()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/database/sqlite/SQLiteStatement;
 
+    .line 7
     invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -488,23 +602,28 @@
 
     move-result-object v2
 
+    .line 8
     invoke-virtual {p0, v0, v2}, Lorg/greenrobot/greendao/AbstractDao;->bindValues(Landroid/database/sqlite/SQLiteStatement;Ljava/lang/Object;)V
 
     if-eqz p3, :cond_1
 
+    .line 9
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteStatement;->executeInsert()J
 
     move-result-wide v3
 
+    .line 10
     invoke-virtual {p0, v2, v3, v4, v1}, Lorg/greenrobot/greendao/AbstractDao;->updateKeyAfterInsertAndAttach(Ljava/lang/Object;JZ)V
 
     goto :goto_0
 
+    .line 11
     :cond_1
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteStatement;->execute()V
 
     goto :goto_0
 
+    .line 12
     :cond_2
     invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -521,18 +640,22 @@
 
     move-result-object v0
 
+    .line 13
     invoke-virtual {p0, p1, v0}, Lorg/greenrobot/greendao/AbstractDao;->bindValues(Lorg/greenrobot/greendao/database/DatabaseStatement;Ljava/lang/Object;)V
 
     if-eqz p3, :cond_3
 
+    .line 14
     invoke-interface {p1}, Lorg/greenrobot/greendao/database/DatabaseStatement;->executeInsert()J
 
     move-result-wide v2
 
+    .line 15
     invoke-virtual {p0, v0, v2, v3, v1}, Lorg/greenrobot/greendao/AbstractDao;->updateKeyAfterInsertAndAttach(Ljava/lang/Object;JZ)V
 
     goto :goto_1
 
+    .line 16
     :cond_3
     invoke-interface {p1}, Lorg/greenrobot/greendao/database/DatabaseStatement;->execute()V
     :try_end_2
@@ -540,19 +663,23 @@
 
     goto :goto_1
 
+    .line 17
     :cond_4
     :try_start_3
     iget-object p2, p0, Lorg/greenrobot/greendao/AbstractDao;->identityScope:Lorg/greenrobot/greendao/identityscope/IdentityScope;
 
     if-eqz p2, :cond_5
 
+    .line 18
     invoke-interface {p2}, Lorg/greenrobot/greendao/identityscope/IdentityScope;->unlock()V
 
+    .line 19
     :cond_5
     monitor-exit p1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
+    .line 20
     :try_start_4
     iget-object p1, p0, Lorg/greenrobot/greendao/AbstractDao;->db:Lorg/greenrobot/greendao/database/Database;
 
@@ -560,6 +687,7 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
+    .line 21
     iget-object p0, p0, Lorg/greenrobot/greendao/AbstractDao;->db:Lorg/greenrobot/greendao/database/Database;
 
     invoke-interface {p0}, Lorg/greenrobot/greendao/database/Database;->endTransaction()V
@@ -569,19 +697,23 @@
     :catchall_0
     move-exception p2
 
+    .line 22
     :try_start_5
     iget-object p3, p0, Lorg/greenrobot/greendao/AbstractDao;->identityScope:Lorg/greenrobot/greendao/identityscope/IdentityScope;
 
     if-eqz p3, :cond_6
 
+    .line 23
     invoke-interface {p3}, Lorg/greenrobot/greendao/identityscope/IdentityScope;->unlock()V
 
+    .line 24
     :cond_6
     throw p2
 
     :catchall_1
     move-exception p2
 
+    .line 25
     monitor-exit p1
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
@@ -594,15 +726,28 @@
     :catchall_2
     move-exception p1
 
+    .line 26
     iget-object p0, p0, Lorg/greenrobot/greendao/AbstractDao;->db:Lorg/greenrobot/greendao/database/Database;
 
     invoke-interface {p0}, Lorg/greenrobot/greendao/database/Database;->endTransaction()V
 
+    .line 27
     throw p1
 .end method
 
 .method private insertInsideTx(Ljava/lang/Object;Lorg/greenrobot/greendao/database/DatabaseStatement;)J
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "entity",
+            "stmt"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;",
@@ -611,21 +756,26 @@
         }
     .end annotation
 
+    .line 1
     monitor-enter p2
 
+    .line 2
     :try_start_0
     iget-boolean v0, p0, Lorg/greenrobot/greendao/AbstractDao;->isStandardSQLite:Z
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-interface {p2}, Lorg/greenrobot/greendao/database/DatabaseStatement;->getRawStatement()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/database/sqlite/SQLiteStatement;
 
+    .line 4
     invoke-virtual {p0, v0, p1}, Lorg/greenrobot/greendao/AbstractDao;->bindValues(Landroid/database/sqlite/SQLiteStatement;Ljava/lang/Object;)V
 
+    .line 5
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteStatement;->executeInsert()J
 
     move-result-wide p0
@@ -634,9 +784,11 @@
 
     return-wide p0
 
+    .line 6
     :cond_0
     invoke-virtual {p0, p2, p1}, Lorg/greenrobot/greendao/AbstractDao;->bindValues(Lorg/greenrobot/greendao/database/DatabaseStatement;Ljava/lang/Object;)V
 
+    .line 7
     invoke-interface {p2}, Lorg/greenrobot/greendao/database/DatabaseStatement;->executeInsert()J
 
     move-result-wide p0
@@ -648,6 +800,7 @@
     :catchall_0
     move-exception p0
 
+    .line 8
     monitor-exit p2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -657,6 +810,19 @@
 
 .method private loadAllUnlockOnWindowBounds(Landroid/database/Cursor;Landroid/database/CursorWindow;Ljava/util/List;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "cursor",
+            "window",
+            "list"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -667,6 +833,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p2}, Landroid/database/CursorWindow;->getStartPosition()I
 
     move-result v0
@@ -681,6 +848,7 @@
 
     move v1, p2
 
+    .line 2
     :goto_0
     invoke-virtual {p0, p1, p2, p2}, Lorg/greenrobot/greendao/AbstractDao;->loadCurrent(Landroid/database/Cursor;IZ)Ljava/lang/Object;
 
@@ -692,6 +860,7 @@
 
     if-lt v1, v0, :cond_1
 
+    .line 3
     invoke-direct {p0, p1}, Lorg/greenrobot/greendao/AbstractDao;->moveToNextUnlocked(Landroid/database/Cursor;)Landroid/database/CursorWindow;
 
     move-result-object v0
@@ -700,6 +869,7 @@
 
     goto :goto_1
 
+    .line 4
     :cond_0
     invoke-virtual {v0}, Landroid/database/CursorWindow;->getStartPosition()I
 
@@ -715,6 +885,7 @@
 
     goto :goto_2
 
+    .line 5
     :cond_1
     invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -734,11 +905,21 @@
 
 .method private moveToNextUnlocked(Landroid/database/Cursor;)Landroid/database/CursorWindow;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "cursor"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/greenrobot/greendao/AbstractDao;->identityScope:Lorg/greenrobot/greendao/identityscope/IdentityScope;
 
     invoke-interface {v0}, Lorg/greenrobot/greendao/identityscope/IdentityScope;->unlock()V
 
+    .line 2
     :try_start_0
     invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -746,6 +927,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     check-cast p1, Landroid/database/CrossProcessCursor;
 
     invoke-interface {p1}, Landroid/database/CrossProcessCursor;->getWindow()Landroid/database/CursorWindow;
@@ -754,6 +936,8 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
+    :goto_0
     iget-object p0, p0, Lorg/greenrobot/greendao/AbstractDao;->identityScope:Lorg/greenrobot/greendao/identityscope/IdentityScope;
 
     invoke-interface {p0}, Lorg/greenrobot/greendao/identityscope/IdentityScope;->lock()V
@@ -761,13 +945,9 @@
     return-object p1
 
     :cond_0
-    iget-object p0, p0, Lorg/greenrobot/greendao/AbstractDao;->identityScope:Lorg/greenrobot/greendao/identityscope/IdentityScope;
+    const/4 p1, 0x0
 
-    invoke-interface {p0}, Lorg/greenrobot/greendao/identityscope/IdentityScope;->lock()V
-
-    const/4 p0, 0x0
-
-    return-object p0
+    goto :goto_0
 
     :catchall_0
     move-exception p1
@@ -776,6 +956,7 @@
 
     invoke-interface {p0}, Lorg/greenrobot/greendao/identityscope/IdentityScope;->lock()V
 
+    .line 5
     throw p1
 .end method
 
@@ -784,6 +965,7 @@
 .method public assertSinglePk()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lorg/greenrobot/greendao/AbstractDao;->config:Lorg/greenrobot/greendao/internal/DaoConfig;
 
     iget-object v0, v0, Lorg/greenrobot/greendao/internal/DaoConfig;->pkColumns:[Ljava/lang/String;
@@ -796,6 +978,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     new-instance v0, Lorg/greenrobot/greendao/DaoException;
 
@@ -830,6 +1013,15 @@
 
 .method public attachEntity(Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "entity"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)V"
@@ -841,14 +1033,29 @@
 
 .method public final attachEntity(Ljava/lang/Object;Ljava/lang/Object;Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "key",
+            "entity",
+            "lock"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TK;TT;Z)V"
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p2}, Lorg/greenrobot/greendao/AbstractDao;->attachEntity(Ljava/lang/Object;)V
 
+    .line 2
     iget-object p0, p0, Lorg/greenrobot/greendao/AbstractDao;->identityScope:Lorg/greenrobot/greendao/identityscope/IdentityScope;
 
     if-eqz p0, :cond_1
@@ -857,10 +1064,12 @@
 
     if-eqz p3, :cond_0
 
+    .line 3
     invoke-interface {p0, p1, p2}, Lorg/greenrobot/greendao/identityscope/IdentityScope;->put(Ljava/lang/Object;Ljava/lang/Object;)V
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-interface {p0, p1, p2}, Lorg/greenrobot/greendao/identityscope/IdentityScope;->putNoLock(Ljava/lang/Object;Ljava/lang/Object;)V
 
@@ -870,6 +1079,17 @@
 .end method
 
 .method public abstract bindValues(Landroid/database/sqlite/SQLiteStatement;Ljava/lang/Object;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "stmt",
+            "entity"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -880,6 +1100,17 @@
 .end method
 
 .method public abstract bindValues(Lorg/greenrobot/greendao/database/DatabaseStatement;Ljava/lang/Object;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "stmt",
+            "entity"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -892,6 +1123,7 @@
 .method public count()J
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lorg/greenrobot/greendao/AbstractDao;->statements:Lorg/greenrobot/greendao/internal/TableStatements;
 
     invoke-virtual {p0}, Lorg/greenrobot/greendao/internal/TableStatements;->getCountStatement()Lorg/greenrobot/greendao/database/DatabaseStatement;
@@ -907,18 +1139,30 @@
 
 .method public delete(Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "entity"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)V"
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lorg/greenrobot/greendao/AbstractDao;->assertSinglePk()V
 
+    .line 2
     invoke-virtual {p0, p1}, Lorg/greenrobot/greendao/AbstractDao;->getKeyVerified(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
+    .line 3
     invoke-virtual {p0, p1}, Lorg/greenrobot/greendao/AbstractDao;->deleteByKey(Ljava/lang/Object;)V
 
     return-void
@@ -927,6 +1171,7 @@
 .method public deleteAll()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lorg/greenrobot/greendao/AbstractDao;->db:Lorg/greenrobot/greendao/database/Database;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -953,10 +1198,12 @@
 
     invoke-interface {v0, v1}, Lorg/greenrobot/greendao/database/Database;->execSQL(Ljava/lang/String;)V
 
+    .line 2
     iget-object p0, p0, Lorg/greenrobot/greendao/AbstractDao;->identityScope:Lorg/greenrobot/greendao/identityscope/IdentityScope;
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-interface {p0}, Lorg/greenrobot/greendao/identityscope/IdentityScope;->clear()V
 
     :cond_0
@@ -965,20 +1212,32 @@
 
 .method public deleteByKey(Ljava/lang/Object;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "key"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TK;)V"
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lorg/greenrobot/greendao/AbstractDao;->assertSinglePk()V
 
+    .line 2
     iget-object v0, p0, Lorg/greenrobot/greendao/AbstractDao;->statements:Lorg/greenrobot/greendao/internal/TableStatements;
 
     invoke-virtual {v0}, Lorg/greenrobot/greendao/internal/TableStatements;->getDeleteStatement()Lorg/greenrobot/greendao/database/DatabaseStatement;
 
     move-result-object v0
 
+    .line 3
     iget-object v1, p0, Lorg/greenrobot/greendao/AbstractDao;->db:Lorg/greenrobot/greendao/database/Database;
 
     invoke-interface {v1}, Lorg/greenrobot/greendao/database/Database;->isDbLockedByCurrentThread()Z
@@ -987,11 +1246,14 @@
 
     if-eqz v1, :cond_0
 
+    .line 4
     monitor-enter v0
 
+    .line 5
     :try_start_0
     invoke-direct {p0, p1, v0}, Lorg/greenrobot/greendao/AbstractDao;->deleteByKeyInsideSynchronized(Ljava/lang/Object;Lorg/greenrobot/greendao/database/DatabaseStatement;)V
 
+    .line 6
     monitor-exit v0
 
     goto :goto_0
@@ -1005,23 +1267,28 @@
 
     throw p0
 
+    .line 7
     :cond_0
     iget-object v1, p0, Lorg/greenrobot/greendao/AbstractDao;->db:Lorg/greenrobot/greendao/database/Database;
 
     invoke-interface {v1}, Lorg/greenrobot/greendao/database/Database;->beginTransaction()V
 
+    .line 8
     :try_start_1
     monitor-enter v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
+    .line 9
     :try_start_2
     invoke-direct {p0, p1, v0}, Lorg/greenrobot/greendao/AbstractDao;->deleteByKeyInsideSynchronized(Ljava/lang/Object;Lorg/greenrobot/greendao/database/DatabaseStatement;)V
 
+    .line 10
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
+    .line 11
     :try_start_3
     iget-object v0, p0, Lorg/greenrobot/greendao/AbstractDao;->db:Lorg/greenrobot/greendao/database/Database;
 
@@ -1029,15 +1296,18 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
+    .line 12
     iget-object v0, p0, Lorg/greenrobot/greendao/AbstractDao;->db:Lorg/greenrobot/greendao/database/Database;
 
     invoke-interface {v0}, Lorg/greenrobot/greendao/database/Database;->endTransaction()V
 
+    .line 13
     :goto_0
     iget-object p0, p0, Lorg/greenrobot/greendao/AbstractDao;->identityScope:Lorg/greenrobot/greendao/identityscope/IdentityScope;
 
     if-eqz p0, :cond_1
 
+    .line 14
     invoke-interface {p0, p1}, Lorg/greenrobot/greendao/identityscope/IdentityScope;->remove(Ljava/lang/Object;)V
 
     :cond_1
@@ -1046,6 +1316,7 @@
     :catchall_1
     move-exception p1
 
+    .line 15
     :try_start_4
     monitor-exit v0
     :try_end_4
@@ -1059,15 +1330,26 @@
     :catchall_2
     move-exception p1
 
+    .line 16
     iget-object p0, p0, Lorg/greenrobot/greendao/AbstractDao;->db:Lorg/greenrobot/greendao/database/Database;
 
     invoke-interface {p0}, Lorg/greenrobot/greendao/database/Database;->endTransaction()V
 
+    .line 17
     throw p1
 .end method
 
 .method public deleteByKeyInTx(Ljava/lang/Iterable;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "keys"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1086,18 +1368,27 @@
 
 .method public varargs deleteByKeyInTx([Ljava/lang/Object;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "keys"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([TK;)V"
         }
     .end annotation
 
-    const/4 v0, 0x0
-
     .line 2
     invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
+
+    const/4 v0, 0x0
 
     invoke-direct {p0, v0, p1}, Lorg/greenrobot/greendao/AbstractDao;->deleteInTxInternal(Ljava/lang/Iterable;Ljava/lang/Iterable;)V
 
@@ -1106,6 +1397,15 @@
 
 .method public deleteInTx(Ljava/lang/Iterable;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "entities"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1124,6 +1424,15 @@
 
 .method public varargs deleteInTx([Ljava/lang/Object;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "entities"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([TT;)V"
@@ -1144,20 +1453,32 @@
 
 .method public detach(Ljava/lang/Object;)Z
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "entity"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)Z"
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/greenrobot/greendao/AbstractDao;->identityScope:Lorg/greenrobot/greendao/identityscope/IdentityScope;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Lorg/greenrobot/greendao/AbstractDao;->getKeyVerified(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 3
     iget-object p0, p0, Lorg/greenrobot/greendao/AbstractDao;->identityScope:Lorg/greenrobot/greendao/identityscope/IdentityScope;
 
     invoke-interface {p0, v0, p1}, Lorg/greenrobot/greendao/identityscope/IdentityScope;->detach(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -1175,10 +1496,12 @@
 .method public detachAll()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/greenrobot/greendao/AbstractDao;->identityScope:Lorg/greenrobot/greendao/identityscope/IdentityScope;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0}, Lorg/greenrobot/greendao/identityscope/IdentityScope;->clear()V
 
     :cond_0
@@ -1188,6 +1511,7 @@
 .method public getAllColumns()[Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/greenrobot/greendao/AbstractDao;->config:Lorg/greenrobot/greendao/internal/DaoConfig;
 
     iget-object p0, p0, Lorg/greenrobot/greendao/internal/DaoConfig;->allColumns:[Ljava/lang/String;
@@ -1198,12 +1522,22 @@
 .method public getDatabase()Lorg/greenrobot/greendao/database/Database;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/greenrobot/greendao/AbstractDao;->db:Lorg/greenrobot/greendao/database/Database;
 
     return-object p0
 .end method
 
 .method public abstract getKey(Ljava/lang/Object;)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "entity"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)TK;"
@@ -1213,29 +1547,34 @@
 
 .method public getKeyVerified(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "entity"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)TK;"
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/greenrobot/greendao/AbstractDao;->getKey(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
-    if-nez p0, :cond_1
+    if-nez p0, :cond_0
 
-    if-nez p1, :cond_0
+    const-string p0, "Entity may not be null"
 
-    new-instance p0, Ljava/lang/NullPointerException;
+    .line 2
+    invoke-static {p1, p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    const-string p1, "Entity may not be null"
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_0
+    .line 3
     new-instance p0, Lorg/greenrobot/greendao/DaoException;
 
     const-string p1, "Entity has no key"
@@ -1244,13 +1583,14 @@
 
     throw p0
 
-    :cond_1
+    :cond_0
     return-object p0
 .end method
 
 .method public getNonPkColumns()[Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/greenrobot/greendao/AbstractDao;->config:Lorg/greenrobot/greendao/internal/DaoConfig;
 
     iget-object p0, p0, Lorg/greenrobot/greendao/internal/DaoConfig;->nonPkColumns:[Ljava/lang/String;
@@ -1261,6 +1601,7 @@
 .method public getPkColumns()[Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/greenrobot/greendao/AbstractDao;->config:Lorg/greenrobot/greendao/internal/DaoConfig;
 
     iget-object p0, p0, Lorg/greenrobot/greendao/internal/DaoConfig;->pkColumns:[Ljava/lang/String;
@@ -1271,6 +1612,7 @@
 .method public getPkProperty()Lorg/greenrobot/greendao/Property;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/greenrobot/greendao/AbstractDao;->config:Lorg/greenrobot/greendao/internal/DaoConfig;
 
     iget-object p0, p0, Lorg/greenrobot/greendao/internal/DaoConfig;->pkProperty:Lorg/greenrobot/greendao/Property;
@@ -1281,6 +1623,7 @@
 .method public getProperties()[Lorg/greenrobot/greendao/Property;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/greenrobot/greendao/AbstractDao;->config:Lorg/greenrobot/greendao/internal/DaoConfig;
 
     iget-object p0, p0, Lorg/greenrobot/greendao/internal/DaoConfig;->properties:[Lorg/greenrobot/greendao/Property;
@@ -1291,6 +1634,7 @@
 .method public getSession()Lorg/greenrobot/greendao/AbstractDaoSession;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/greenrobot/greendao/AbstractDao;->session:Lorg/greenrobot/greendao/AbstractDaoSession;
 
     return-object p0
@@ -1299,6 +1643,7 @@
 .method public getStatements()Lorg/greenrobot/greendao/internal/TableStatements;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/greenrobot/greendao/AbstractDao;->config:Lorg/greenrobot/greendao/internal/DaoConfig;
 
     iget-object p0, p0, Lorg/greenrobot/greendao/internal/DaoConfig;->statements:Lorg/greenrobot/greendao/internal/TableStatements;
@@ -1309,6 +1654,7 @@
 .method public getTablename()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/greenrobot/greendao/AbstractDao;->config:Lorg/greenrobot/greendao/internal/DaoConfig;
 
     iget-object p0, p0, Lorg/greenrobot/greendao/internal/DaoConfig;->tablename:Ljava/lang/String;
@@ -1317,6 +1663,15 @@
 .end method
 
 .method public abstract hasKey(Ljava/lang/Object;)Z
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "entity"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)Z"
@@ -1326,12 +1681,22 @@
 
 .method public insert(Ljava/lang/Object;)J
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "entity"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)J"
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/greenrobot/greendao/AbstractDao;->statements:Lorg/greenrobot/greendao/internal/TableStatements;
 
     invoke-virtual {v0}, Lorg/greenrobot/greendao/internal/TableStatements;->getInsertStatement()Lorg/greenrobot/greendao/database/DatabaseStatement;
@@ -1349,6 +1714,15 @@
 
 .method public insertInTx(Ljava/lang/Iterable;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "entities"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1369,6 +1743,17 @@
 
 .method public insertInTx(Ljava/lang/Iterable;Z)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "entities",
+            "setPrimaryKey"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1392,6 +1777,15 @@
 
 .method public varargs insertInTx([Ljava/lang/Object;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "entities"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([TT;)V"
@@ -1414,12 +1808,22 @@
 
 .method public insertOrReplace(Ljava/lang/Object;)J
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "entity"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)J"
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/greenrobot/greendao/AbstractDao;->statements:Lorg/greenrobot/greendao/internal/TableStatements;
 
     invoke-virtual {v0}, Lorg/greenrobot/greendao/internal/TableStatements;->getInsertOrReplaceStatement()Lorg/greenrobot/greendao/database/DatabaseStatement;
@@ -1437,6 +1841,15 @@
 
 .method public insertOrReplaceInTx(Ljava/lang/Iterable;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "entities"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1457,6 +1870,17 @@
 
 .method public insertOrReplaceInTx(Ljava/lang/Iterable;Z)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "entities",
+            "setPrimaryKey"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1480,6 +1904,15 @@
 
 .method public varargs insertOrReplaceInTx([Ljava/lang/Object;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "entities"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([TT;)V"
@@ -1502,12 +1935,22 @@
 
 .method public insertWithoutSettingPk(Ljava/lang/Object;)J
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "entity"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)J"
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/greenrobot/greendao/AbstractDao;->statements:Lorg/greenrobot/greendao/internal/TableStatements;
 
     invoke-virtual {v0}, Lorg/greenrobot/greendao/internal/TableStatements;->getInsertOrReplaceStatement()Lorg/greenrobot/greendao/database/DatabaseStatement;
@@ -1528,12 +1971,22 @@
 
 .method public load(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "key"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TK;)TT;"
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lorg/greenrobot/greendao/AbstractDao;->assertSinglePk()V
 
     if-nez p1, :cond_0
@@ -1542,11 +1995,13 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lorg/greenrobot/greendao/AbstractDao;->identityScope:Lorg/greenrobot/greendao/identityscope/IdentityScope;
 
     if-eqz v0, :cond_1
 
+    .line 3
     invoke-interface {v0, p1}, Lorg/greenrobot/greendao/identityscope/IdentityScope;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -1555,6 +2010,7 @@
 
     return-object v0
 
+    .line 4
     :cond_1
     iget-object v0, p0, Lorg/greenrobot/greendao/AbstractDao;->statements:Lorg/greenrobot/greendao/internal/TableStatements;
 
@@ -1568,18 +2024,21 @@
 
     const/4 v2, 0x0
 
+    .line 5
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p1
 
     aput-object p1, v1, v2
 
+    .line 6
     iget-object p1, p0, Lorg/greenrobot/greendao/AbstractDao;->db:Lorg/greenrobot/greendao/database/Database;
 
     invoke-interface {p1, v0, v1}, Lorg/greenrobot/greendao/database/Database;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object p1
 
+    .line 7
     invoke-virtual {p0, p1}, Lorg/greenrobot/greendao/AbstractDao;->loadUniqueAndCloseCursor(Landroid/database/Cursor;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1597,6 +2056,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/greenrobot/greendao/AbstractDao;->db:Lorg/greenrobot/greendao/database/Database;
 
     iget-object v1, p0, Lorg/greenrobot/greendao/AbstractDao;->statements:Lorg/greenrobot/greendao/internal/TableStatements;
@@ -1611,6 +2071,7 @@
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0, v0}, Lorg/greenrobot/greendao/AbstractDao;->loadAllAndCloseCursor(Landroid/database/Cursor;)Ljava/util/List;
 
     move-result-object p0
@@ -1620,6 +2081,15 @@
 
 .method public loadAllAndCloseCursor(Landroid/database/Cursor;)Ljava/util/List;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "cursor"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1630,6 +2100,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     invoke-virtual {p0, p1}, Lorg/greenrobot/greendao/AbstractDao;->loadAllFromCursor(Landroid/database/Cursor;)Ljava/util/List;
 
@@ -1637,6 +2108,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
     return-object p0
@@ -1646,11 +2118,21 @@
 
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
+    .line 3
     throw p0
 .end method
 
 .method public loadAllFromCursor(Landroid/database/Cursor;)Ljava/util/List;
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "cursor"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1661,29 +2143,36 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Landroid/database/Cursor;->getCount()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    instance-of v2, p1, Landroid/database/CrossProcessCursor;
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    .line 4
+    instance-of v3, p1, Landroid/database/CrossProcessCursor;
 
-    if-eqz v2, :cond_2
+    const/4 v4, 0x0
 
+    if-eqz v3, :cond_2
+
+    .line 5
     move-object v2, p1
 
     check-cast v2, Landroid/database/CrossProcessCursor;
@@ -1692,132 +2181,151 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_2
 
+    .line 6
     invoke-virtual {v2}, Landroid/database/CursorWindow;->getNumRows()I
 
-    move-result v4
+    move-result v3
 
-    if-ne v4, v0, :cond_1
+    if-ne v3, v0, :cond_1
 
+    .line 7
     new-instance p1, Lorg/greenrobot/greendao/internal/FastCursor;
 
     invoke-direct {p1, v2}, Lorg/greenrobot/greendao/internal/FastCursor;-><init>(Landroid/database/CursorWindow;)V
 
-    const/4 v4, 0x1
+    const/4 v3, 0x1
 
-    goto :goto_1
+    goto :goto_0
 
+    .line 8
     :cond_1
-    new-instance v4, Ljava/lang/StringBuilder;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v5, "Window vs. result size: "
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v2}, Landroid/database/CursorWindow;->getNumRows()I
 
     move-result v5
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v5, "/"
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-static {v4}, Lorg/greenrobot/greendao/DaoLog;->d(Ljava/lang/String;)V
-
-    goto :goto_0
+    invoke-static {v3}, Lorg/greenrobot/greendao/DaoLog;->d(Ljava/lang/String;)V
 
     :cond_2
-    const/4 v2, 0x0
+    move v3, v4
 
-    :cond_3
+    .line 9
     :goto_0
-    move v4, v3
-
-    :goto_1
     invoke-interface {p1}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v5
 
-    if-eqz v5, :cond_7
+    if-eqz v5, :cond_6
 
+    .line 10
     iget-object v5, p0, Lorg/greenrobot/greendao/AbstractDao;->identityScope:Lorg/greenrobot/greendao/identityscope/IdentityScope;
 
-    if-eqz v5, :cond_4
+    if-eqz v5, :cond_3
 
+    .line 11
     invoke-interface {v5}, Lorg/greenrobot/greendao/identityscope/IdentityScope;->lock()V
 
+    .line 12
     iget-object v5, p0, Lorg/greenrobot/greendao/AbstractDao;->identityScope:Lorg/greenrobot/greendao/identityscope/IdentityScope;
 
     invoke-interface {v5, v0}, Lorg/greenrobot/greendao/identityscope/IdentityScope;->reserveRoom(I)V
 
-    :cond_4
-    if-nez v4, :cond_5
+    :cond_3
+    if-nez v3, :cond_4
 
-    if-eqz v2, :cond_5
+    if-eqz v2, :cond_4
 
+    .line 13
     :try_start_0
     iget-object v0, p0, Lorg/greenrobot/greendao/AbstractDao;->identityScope:Lorg/greenrobot/greendao/identityscope/IdentityScope;
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_4
 
+    .line 14
     invoke-direct {p0, p1, v2, v1}, Lorg/greenrobot/greendao/AbstractDao;->loadAllUnlockOnWindowBounds(Landroid/database/Cursor;Landroid/database/CursorWindow;Ljava/util/List;)V
 
-    goto :goto_2
+    goto :goto_1
 
-    :cond_5
-    invoke-virtual {p0, p1, v3, v3}, Lorg/greenrobot/greendao/AbstractDao;->loadCurrent(Landroid/database/Cursor;IZ)Ljava/lang/Object;
+    .line 15
+    :cond_4
+    invoke-virtual {p0, p1, v4, v4}, Lorg/greenrobot/greendao/AbstractDao;->loadCurrent(Landroid/database/Cursor;IZ)Ljava/lang/Object;
 
     move-result-object v0
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 16
     invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_4
 
-    :goto_2
-    iget-object p0, p0, Lorg/greenrobot/greendao/AbstractDao;->identityScope:Lorg/greenrobot/greendao/identityscope/IdentityScope;
-
-    if-eqz p0, :cond_7
-
-    invoke-interface {p0}, Lorg/greenrobot/greendao/identityscope/IdentityScope;->unlock()V
-
-    goto :goto_3
-
-    :catchall_0
-    move-exception p1
-
+    .line 17
+    :goto_1
     iget-object p0, p0, Lorg/greenrobot/greendao/AbstractDao;->identityScope:Lorg/greenrobot/greendao/identityscope/IdentityScope;
 
     if-eqz p0, :cond_6
 
+    .line 18
     invoke-interface {p0}, Lorg/greenrobot/greendao/identityscope/IdentityScope;->unlock()V
 
-    :cond_6
+    goto :goto_2
+
+    :catchall_0
+    move-exception p1
+
+    .line 19
+    iget-object p0, p0, Lorg/greenrobot/greendao/AbstractDao;->identityScope:Lorg/greenrobot/greendao/identityscope/IdentityScope;
+
+    if-eqz p0, :cond_5
+
+    .line 20
+    invoke-interface {p0}, Lorg/greenrobot/greendao/identityscope/IdentityScope;->unlock()V
+
+    .line 21
+    :cond_5
     throw p1
 
-    :cond_7
-    :goto_3
+    :cond_6
+    :goto_2
     return-object v1
 .end method
 
 .method public loadByRowId(J)Ljava/lang/Object;
-    .locals 2
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "rowId"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(J)TT;"
@@ -1828,14 +2336,16 @@
 
     new-array v0, v0, [Ljava/lang/String;
 
-    const/4 v1, 0x0
-
+    .line 1
     invoke-static {p1, p2}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
     move-result-object p1
 
-    aput-object p1, v0, v1
+    const/4 p2, 0x0
 
+    aput-object p1, v0, p2
+
+    .line 2
     iget-object p1, p0, Lorg/greenrobot/greendao/AbstractDao;->db:Lorg/greenrobot/greendao/database/Database;
 
     iget-object p2, p0, Lorg/greenrobot/greendao/AbstractDao;->statements:Lorg/greenrobot/greendao/internal/TableStatements;
@@ -1848,6 +2358,7 @@
 
     move-result-object p1
 
+    .line 3
     invoke-virtual {p0, p1}, Lorg/greenrobot/greendao/AbstractDao;->loadUniqueAndCloseCursor(Landroid/database/Cursor;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1857,6 +2368,19 @@
 
 .method public final loadCurrent(Landroid/database/Cursor;IZ)Ljava/lang/Object;
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "cursor",
+            "offset",
+            "lock"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1865,6 +2389,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/greenrobot/greendao/AbstractDao;->identityScopeLong:Lorg/greenrobot/greendao/identityscope/IdentityScopeLong;
 
     const/4 v1, 0x0
@@ -1873,6 +2398,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 2
     iget v0, p0, Lorg/greenrobot/greendao/AbstractDao;->pkOrdinal:I
 
     add-int/2addr v0, p2
@@ -1885,6 +2411,7 @@
 
     return-object v1
 
+    .line 3
     :cond_0
     iget v0, p0, Lorg/greenrobot/greendao/AbstractDao;->pkOrdinal:I
 
@@ -1894,6 +2421,7 @@
 
     move-result-wide v0
 
+    .line 4
     iget-object v2, p0, Lorg/greenrobot/greendao/AbstractDao;->identityScopeLong:Lorg/greenrobot/greendao/identityscope/IdentityScopeLong;
 
     if-eqz p3, :cond_1
@@ -1914,21 +2442,25 @@
 
     return-object v2
 
+    .line 5
     :cond_2
     invoke-virtual {p0, p1, p2}, Lorg/greenrobot/greendao/AbstractDao;->readEntity(Landroid/database/Cursor;I)Ljava/lang/Object;
 
     move-result-object p1
 
+    .line 6
     invoke-virtual {p0, p1}, Lorg/greenrobot/greendao/AbstractDao;->attachEntity(Ljava/lang/Object;)V
 
     if-eqz p3, :cond_3
 
+    .line 7
     iget-object p0, p0, Lorg/greenrobot/greendao/AbstractDao;->identityScopeLong:Lorg/greenrobot/greendao/identityscope/IdentityScopeLong;
 
     invoke-virtual {p0, v0, v1, p1}, Lorg/greenrobot/greendao/identityscope/IdentityScopeLong;->put2(JLjava/lang/Object;)V
 
     goto :goto_1
 
+    .line 8
     :cond_3
     iget-object p0, p0, Lorg/greenrobot/greendao/AbstractDao;->identityScopeLong:Lorg/greenrobot/greendao/identityscope/IdentityScopeLong;
 
@@ -1937,11 +2469,13 @@
     :goto_1
     return-object p1
 
+    .line 9
     :cond_4
     iget-object v0, p0, Lorg/greenrobot/greendao/AbstractDao;->identityScope:Lorg/greenrobot/greendao/identityscope/IdentityScope;
 
     if-eqz v0, :cond_8
 
+    .line 10
     invoke-virtual {p0, p1, p2}, Lorg/greenrobot/greendao/AbstractDao;->readKey(Landroid/database/Cursor;I)Ljava/lang/Object;
 
     move-result-object v0
@@ -1952,6 +2486,7 @@
 
     return-object v1
 
+    .line 11
     :cond_5
     iget-object v1, p0, Lorg/greenrobot/greendao/AbstractDao;->identityScope:Lorg/greenrobot/greendao/identityscope/IdentityScope;
 
@@ -1973,11 +2508,13 @@
 
     return-object v1
 
+    .line 12
     :cond_7
     invoke-virtual {p0, p1, p2}, Lorg/greenrobot/greendao/AbstractDao;->readEntity(Landroid/database/Cursor;I)Ljava/lang/Object;
 
     move-result-object p1
 
+    .line 13
     invoke-virtual {p0, v0, p1, p3}, Lorg/greenrobot/greendao/AbstractDao;->attachEntity(Ljava/lang/Object;Ljava/lang/Object;Z)V
 
     return-object p1
@@ -1985,6 +2522,7 @@
     :cond_8
     if-eqz p2, :cond_9
 
+    .line 14
     invoke-virtual {p0, p1, p2}, Lorg/greenrobot/greendao/AbstractDao;->readKey(Landroid/database/Cursor;I)Ljava/lang/Object;
 
     move-result-object p3
@@ -1993,11 +2531,13 @@
 
     return-object v1
 
+    .line 15
     :cond_9
     invoke-virtual {p0, p1, p2}, Lorg/greenrobot/greendao/AbstractDao;->readEntity(Landroid/database/Cursor;I)Ljava/lang/Object;
 
     move-result-object p1
 
+    .line 16
     invoke-virtual {p0, p1}, Lorg/greenrobot/greendao/AbstractDao;->attachEntity(Ljava/lang/Object;)V
 
     return-object p1
@@ -2005,6 +2545,19 @@
 
 .method public final loadCurrentOther(Lorg/greenrobot/greendao/AbstractDao;Landroid/database/Cursor;I)Ljava/lang/Object;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "dao",
+            "cursor",
+            "offset"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<O:",
@@ -2019,6 +2572,7 @@
 
     const/4 p0, 0x1
 
+    .line 1
     invoke-virtual {p1, p2, p3, p0}, Lorg/greenrobot/greendao/AbstractDao;->loadCurrent(Landroid/database/Cursor;IZ)Ljava/lang/Object;
 
     move-result-object p0
@@ -2028,6 +2582,15 @@
 
 .method public loadUnique(Landroid/database/Cursor;)Ljava/lang/Object;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "cursor"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2036,6 +2599,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v0
@@ -2046,6 +2610,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     invoke-interface {p1}, Landroid/database/Cursor;->isLast()Z
 
@@ -2057,12 +2622,14 @@
 
     const/4 v1, 0x1
 
+    .line 3
     invoke-virtual {p0, p1, v0, v1}, Lorg/greenrobot/greendao/AbstractDao;->loadCurrent(Landroid/database/Cursor;IZ)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 
+    .line 4
     :cond_1
     new-instance p0, Lorg/greenrobot/greendao/DaoException;
 
@@ -2091,6 +2658,15 @@
 
 .method public loadUniqueAndCloseCursor(Landroid/database/Cursor;)Ljava/lang/Object;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "cursor"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2099,6 +2675,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     invoke-virtual {p0, p1}, Lorg/greenrobot/greendao/AbstractDao;->loadUnique(Landroid/database/Cursor;)Ljava/lang/Object;
 
@@ -2106,6 +2683,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
     return-object p0
@@ -2115,14 +2693,36 @@
 
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
+    .line 3
     throw p0
 .end method
 
 .method public query([Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     .locals 9
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "columns",
+            "selection",
+            "selectionArgs",
+            "groupBy",
+            "having",
+            "orderBy",
+            "limit"
+        }
+    .end annotation
 
     move-object v0, p0
 
+    .line 1
     iget-object v1, v0, Lorg/greenrobot/greendao/AbstractDao;->db:Lorg/greenrobot/greendao/database/Database;
 
     iget-object v0, v0, Lorg/greenrobot/greendao/AbstractDao;->statements:Lorg/greenrobot/greendao/internal/TableStatements;
@@ -2166,6 +2766,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lorg/greenrobot/greendao/query/QueryBuilder;->internalCreate(Lorg/greenrobot/greendao/AbstractDao;)Lorg/greenrobot/greendao/query/QueryBuilder;
 
     move-result-object p0
@@ -2175,6 +2776,17 @@
 
 .method public varargs queryRaw(Ljava/lang/String;[Ljava/lang/String;)Ljava/util/List;
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "where",
+            "selectionArg"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2187,6 +2799,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/greenrobot/greendao/AbstractDao;->db:Lorg/greenrobot/greendao/database/Database;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2211,6 +2824,7 @@
 
     move-result-object p1
 
+    .line 2
     invoke-virtual {p0, p1}, Lorg/greenrobot/greendao/AbstractDao;->loadAllAndCloseCursor(Landroid/database/Cursor;)Ljava/util/List;
 
     move-result-object p0
@@ -2220,6 +2834,17 @@
 
 .method public varargs queryRawCreate(Ljava/lang/String;[Ljava/lang/Object;)Lorg/greenrobot/greendao/query/Query;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "where",
+            "selectionArg"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2232,10 +2857,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p2
 
+    .line 2
     invoke-virtual {p0, p1, p2}, Lorg/greenrobot/greendao/AbstractDao;->queryRawCreateListArgs(Ljava/lang/String;Ljava/util/Collection;)Lorg/greenrobot/greendao/query/Query;
 
     move-result-object p0
@@ -2245,6 +2872,17 @@
 
 .method public queryRawCreateListArgs(Ljava/lang/String;Ljava/util/Collection;)Lorg/greenrobot/greendao/query/Query;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "where",
+            "selectionArg"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2257,6 +2895,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2287,6 +2926,17 @@
 .end method
 
 .method public abstract readEntity(Landroid/database/Cursor;I)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "cursor",
+            "offset"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2297,6 +2947,19 @@
 .end method
 
 .method public abstract readEntity(Landroid/database/Cursor;Ljava/lang/Object;I)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "cursor",
+            "entity",
+            "offset"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2307,6 +2970,17 @@
 .end method
 
 .method public abstract readKey(Landroid/database/Cursor;I)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "cursor",
+            "offset"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2318,18 +2992,30 @@
 
 .method public refresh(Ljava/lang/Object;)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "entity"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)V"
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lorg/greenrobot/greendao/AbstractDao;->assertSinglePk()V
 
+    .line 2
     invoke-virtual {p0, p1}, Lorg/greenrobot/greendao/AbstractDao;->getKeyVerified(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 3
     iget-object v1, p0, Lorg/greenrobot/greendao/AbstractDao;->statements:Lorg/greenrobot/greendao/internal/TableStatements;
 
     invoke-virtual {v1}, Lorg/greenrobot/greendao/internal/TableStatements;->getSelectByKey()Ljava/lang/String;
@@ -2340,6 +3026,7 @@
 
     new-array v3, v2, [Ljava/lang/String;
 
+    .line 4
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v4
@@ -2348,12 +3035,14 @@
 
     aput-object v4, v3, v5
 
+    .line 5
     iget-object v4, p0, Lorg/greenrobot/greendao/AbstractDao;->db:Lorg/greenrobot/greendao/database/Database;
 
     invoke-interface {v4, v1, v3}, Lorg/greenrobot/greendao/database/Database;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v1
 
+    .line 6
     :try_start_0
     invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -2361,22 +3050,27 @@
 
     if-eqz v3, :cond_1
 
+    .line 7
     invoke-interface {v1}, Landroid/database/Cursor;->isLast()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
+    .line 8
     invoke-virtual {p0, v1, p1, v5}, Lorg/greenrobot/greendao/AbstractDao;->readEntity(Landroid/database/Cursor;Ljava/lang/Object;I)V
 
+    .line 9
     invoke-virtual {p0, v0, p1, v2}, Lorg/greenrobot/greendao/AbstractDao;->attachEntity(Ljava/lang/Object;Ljava/lang/Object;Z)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 10
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
     return-void
 
+    .line 11
     :cond_0
     :try_start_1
     new-instance p0, Lorg/greenrobot/greendao/DaoException;
@@ -2403,6 +3097,7 @@
 
     throw p0
 
+    .line 12
     :cond_1
     new-instance p0, Lorg/greenrobot/greendao/DaoException;
 
@@ -2439,29 +3134,43 @@
     :catchall_0
     move-exception p0
 
+    .line 13
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
+    .line 14
     throw p0
 .end method
 
 .method public save(Ljava/lang/Object;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "entity"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)V"
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/greenrobot/greendao/AbstractDao;->hasKey(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Lorg/greenrobot/greendao/AbstractDao;->update(Ljava/lang/Object;)V
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-virtual {p0, p1}, Lorg/greenrobot/greendao/AbstractDao;->insert(Ljava/lang/Object;)J
 
@@ -2471,6 +3180,15 @@
 
 .method public saveInTx(Ljava/lang/Iterable;)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "entities"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2622,6 +3340,15 @@
 
 .method public varargs saveInTx([Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "entities"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([TT;)V"
@@ -2640,20 +3367,32 @@
 
 .method public update(Ljava/lang/Object;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "entity"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)V"
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lorg/greenrobot/greendao/AbstractDao;->assertSinglePk()V
 
+    .line 2
     iget-object v0, p0, Lorg/greenrobot/greendao/AbstractDao;->statements:Lorg/greenrobot/greendao/internal/TableStatements;
 
     invoke-virtual {v0}, Lorg/greenrobot/greendao/internal/TableStatements;->getUpdateStatement()Lorg/greenrobot/greendao/database/DatabaseStatement;
 
     move-result-object v0
 
+    .line 3
     iget-object v1, p0, Lorg/greenrobot/greendao/AbstractDao;->db:Lorg/greenrobot/greendao/database/Database;
 
     invoke-interface {v1}, Lorg/greenrobot/greendao/database/Database;->isDbLockedByCurrentThread()Z
@@ -2664,13 +3403,16 @@
 
     if-eqz v1, :cond_1
 
+    .line 4
     monitor-enter v0
 
+    .line 5
     :try_start_0
     iget-boolean v1, p0, Lorg/greenrobot/greendao/AbstractDao;->isStandardSQLite:Z
 
     if-eqz v1, :cond_0
 
+    .line 6
     invoke-interface {v0}, Lorg/greenrobot/greendao/database/DatabaseStatement;->getRawStatement()Ljava/lang/Object;
 
     move-result-object v1
@@ -2681,9 +3423,11 @@
 
     goto :goto_0
 
+    .line 7
     :cond_0
     invoke-virtual {p0, p1, v0, v2}, Lorg/greenrobot/greendao/AbstractDao;->updateInsideSynchronized(Ljava/lang/Object;Lorg/greenrobot/greendao/database/DatabaseStatement;Z)V
 
+    .line 8
     :goto_0
     monitor-exit v0
 
@@ -2698,23 +3442,28 @@
 
     throw p0
 
+    .line 9
     :cond_1
     iget-object v1, p0, Lorg/greenrobot/greendao/AbstractDao;->db:Lorg/greenrobot/greendao/database/Database;
 
     invoke-interface {v1}, Lorg/greenrobot/greendao/database/Database;->beginTransaction()V
 
+    .line 10
     :try_start_1
     monitor-enter v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
+    .line 11
     :try_start_2
     invoke-virtual {p0, p1, v0, v2}, Lorg/greenrobot/greendao/AbstractDao;->updateInsideSynchronized(Ljava/lang/Object;Lorg/greenrobot/greendao/database/DatabaseStatement;Z)V
 
+    .line 12
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
+    .line 13
     :try_start_3
     iget-object p1, p0, Lorg/greenrobot/greendao/AbstractDao;->db:Lorg/greenrobot/greendao/database/Database;
 
@@ -2722,6 +3471,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
+    .line 14
     iget-object p0, p0, Lorg/greenrobot/greendao/AbstractDao;->db:Lorg/greenrobot/greendao/database/Database;
 
     invoke-interface {p0}, Lorg/greenrobot/greendao/database/Database;->endTransaction()V
@@ -2732,6 +3482,7 @@
     :catchall_1
     move-exception p1
 
+    .line 15
     :try_start_4
     monitor-exit v0
     :try_end_4
@@ -2745,15 +3496,26 @@
     :catchall_2
     move-exception p1
 
+    .line 16
     iget-object p0, p0, Lorg/greenrobot/greendao/AbstractDao;->db:Lorg/greenrobot/greendao/database/Database;
 
     invoke-interface {p0}, Lorg/greenrobot/greendao/database/Database;->endTransaction()V
 
+    .line 17
     throw p1
 .end method
 
 .method public updateInTx(Ljava/lang/Iterable;)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "entities"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2982,6 +3744,15 @@
 
 .method public varargs updateInTx([Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "entities"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([TT;)V"
@@ -3000,6 +3771,19 @@
 
 .method public updateInsideSynchronized(Ljava/lang/Object;Landroid/database/sqlite/SQLiteStatement;Z)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "entity",
+            "stmt",
+            "lock"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;",
@@ -3039,7 +3823,7 @@
 
     move-result-wide v2
 
-    invoke-virtual {p2, v0, v2, v3}, Landroid/database/sqlite/SQLiteProgram;->bindLong(IJ)V
+    invoke-virtual {p2, v0, v2, v3}, Landroid/database/sqlite/SQLiteStatement;->bindLong(IJ)V
 
     goto :goto_0
 
@@ -3051,7 +3835,7 @@
 
     move-result-object v2
 
-    invoke-virtual {p2, v0, v2}, Landroid/database/sqlite/SQLiteProgram;->bindString(ILjava/lang/String;)V
+    invoke-virtual {p2, v0, v2}, Landroid/database/sqlite/SQLiteStatement;->bindString(ILjava/lang/String;)V
 
     .line 16
     :goto_0
@@ -3075,6 +3859,19 @@
 
 .method public updateInsideSynchronized(Ljava/lang/Object;Lorg/greenrobot/greendao/database/DatabaseStatement;Z)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "entity",
+            "stmt",
+            "lock"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;",
@@ -3149,6 +3946,17 @@
 .end method
 
 .method public abstract updateKeyAfterInsert(Ljava/lang/Object;J)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "entity",
+            "rowId"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;J)TK;"
@@ -3158,6 +3966,19 @@
 
 .method public updateKeyAfterInsertAndAttach(Ljava/lang/Object;JZ)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "entity",
+            "rowId",
+            "lock"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;JZ)V"
@@ -3170,10 +3991,12 @@
 
     if-eqz v0, :cond_0
 
+    .line 1
     invoke-virtual {p0, p1, p2, p3}, Lorg/greenrobot/greendao/AbstractDao;->updateKeyAfterInsert(Ljava/lang/Object;J)Ljava/lang/Object;
 
     move-result-object p2
 
+    .line 2
     invoke-virtual {p0, p2, p1, p4}, Lorg/greenrobot/greendao/AbstractDao;->attachEntity(Ljava/lang/Object;Ljava/lang/Object;Z)V
 
     goto :goto_0
@@ -3181,6 +4004,7 @@
     :cond_0
     const-string p0, "Could not insert row (executeInsert returned -1)"
 
+    .line 3
     invoke-static {p0}, Lorg/greenrobot/greendao/DaoLog;->w(Ljava/lang/String;)V
 
     :goto_0

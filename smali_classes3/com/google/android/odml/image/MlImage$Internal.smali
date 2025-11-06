@@ -36,6 +36,7 @@
 
     iget-object p0, p0, Lcom/google/android/odml/image/MlImage$Internal;->zza:Lcom/google/android/odml/image/MlImage;
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/odml/image/MlImage;->zzb(Lcom/google/android/odml/image/MlImage;)V
 
     return-void

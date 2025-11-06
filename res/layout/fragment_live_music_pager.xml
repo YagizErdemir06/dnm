@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <miuix.nestedheader.widget.NestedScrollingLayout android:layout_width="fill_parent" android:layout_height="fill_parent" app:scrollableView="@id/music_recycler_view"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView android:textSize="@dimen/live_music_secondary_title_text_size" android:gravity="start|center" android:id="@id/secondary_title" android:layout_width="fill_parent" android:layout_height="@dimen/live_music_secondary_title_height" android:layout_marginHorizontal="@dimen/live_music_secondary_title_margin_horizontal" />
-    <miuix.recyclerview.widget.RecyclerView android:id="@id/music_recycler_view" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/live_music_secondary_title_height" />
+    <miuix.recyclerview.widget.RecyclerView android:id="@id/music_recycler_view" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
     <LinearLayout android:gravity="center" android:id="@id/music_updating_layout" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
         <ProgressBar android:layout_width="@dimen/music_hint_height" android:layout_height="@dimen/music_hint_height" android:indeterminateDrawable="@drawable/live_music_loading" style="?android:progressBarStyleLarge" />
         <TextView android:textColor="@color/day_night_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/live_sticker_updating" android:alpha="0.6" android:layout_marginStart="@dimen/music_update_text_left" />

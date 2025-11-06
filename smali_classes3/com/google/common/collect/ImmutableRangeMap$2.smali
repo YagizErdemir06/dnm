@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ImmutableRangeMap$2;
+.class public Lcom/google/common/collect/ImmutableRangeMap$2;
 .super Lcom/google/common/collect/ImmutableRangeMap;
 .source "SourceFile"
 
@@ -22,15 +22,16 @@
 
 
 # instance fields
-.field final synthetic val$outer:Lcom/google/common/collect/ImmutableRangeMap;
+.field public final synthetic val$outer:Lcom/google/common/collect/ImmutableRangeMap;
 
-.field final synthetic val$range:Lcom/google/common/collect/Range;
+.field public final synthetic val$range:Lcom/google/common/collect/Range;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/ImmutableRangeMap;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/Range;Lcom/google/common/collect/ImmutableRangeMap;)V
     .locals 0
 
+    .line 1
     iput-object p4, p0, Lcom/google/common/collect/ImmutableRangeMap$2;->val$range:Lcom/google/common/collect/Range;
 
     iput-object p5, p0, Lcom/google/common/collect/ImmutableRangeMap$2;->val$outer:Lcom/google/common/collect/ImmutableRangeMap;
@@ -45,6 +46,7 @@
 .method public bridge synthetic asDescendingMapOfRanges()Ljava/util/Map;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/ImmutableRangeMap;->asDescendingMapOfRanges()Lcom/google/common/collect/ImmutableMap;
 
     move-result-object p0
@@ -55,6 +57,7 @@
 .method public bridge synthetic asMapOfRanges()Ljava/util/Map;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/ImmutableRangeMap;->asMapOfRanges()Lcom/google/common/collect/ImmutableMap;
 
     move-result-object p0

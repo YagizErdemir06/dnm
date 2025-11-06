@@ -11,6 +11,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;-><init>()V
 
     return-void
@@ -21,6 +22,7 @@
 .method public compute_text(Lorg/apache/xmlbeans/impl/values/NamespaceManager;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaStringHolder;->_value:Ljava/lang/String;
 
     return-object p0
@@ -29,6 +31,7 @@
 .method public equal_to(Lorg/apache/xmlbeans/XmlObject;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaStringHolder;->_value:Ljava/lang/String;
 
     check-cast p1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
@@ -63,6 +66,7 @@
 .method public schemaType()Lorg/apache/xmlbeans/SchemaType;
     .locals 0
 
+    .line 1
     sget-object p0, Lorg/apache/xmlbeans/impl/schema/BuiltinSchemaTypeSystem;->ST_STRING:Lorg/apache/xmlbeans/impl/schema/SchemaTypeImpl;
 
     return-object p0
@@ -73,6 +77,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Lorg/apache/xmlbeans/impl/values/JavaStringHolder;->_value:Ljava/lang/String;
 
     return-void
@@ -81,6 +86,7 @@
 .method public set_text(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/values/JavaStringHolder;->_value:Ljava/lang/String;
 
     return-void
@@ -89,6 +95,7 @@
 .method public value_hash_code()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaStringHolder;->_value:Ljava/lang/String;
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I

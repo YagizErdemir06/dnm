@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/base/Splitter$SplittingIterator;
+.class public abstract Lcom/google/common/base/Splitter$SplittingIterator;
 .super Lcom/google/common/base/AbstractIterator;
 .source "SourceFile"
 
@@ -23,45 +23,51 @@
 
 
 # instance fields
-.field limit:I
+.field public limit:I
 
-.field offset:I
+.field public offset:I
 
-.field final omitEmptyStrings:Z
+.field public final omitEmptyStrings:Z
 
-.field final toSplit:Ljava/lang/CharSequence;
+.field public final toSplit:Ljava/lang/CharSequence;
 
-.field final trimmer:Lcom/google/common/base/CharMatcher;
+.field public final trimmer:Lcom/google/common/base/CharMatcher;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/base/Splitter;Ljava/lang/CharSequence;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/base/AbstractIterator;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput v0, p0, Lcom/google/common/base/Splitter$SplittingIterator;->offset:I
 
+    .line 3
     invoke-static {p1}, Lcom/google/common/base/Splitter;->access$200(Lcom/google/common/base/Splitter;)Lcom/google/common/base/CharMatcher;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/common/base/Splitter$SplittingIterator;->trimmer:Lcom/google/common/base/CharMatcher;
 
+    .line 4
     invoke-static {p1}, Lcom/google/common/base/Splitter;->access$300(Lcom/google/common/base/Splitter;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/google/common/base/Splitter$SplittingIterator;->omitEmptyStrings:Z
 
+    .line 5
     invoke-static {p1}, Lcom/google/common/base/Splitter;->access$400(Lcom/google/common/base/Splitter;)I
 
     move-result p1
 
     iput p1, p0, Lcom/google/common/base/Splitter$SplittingIterator;->limit:I
 
+    .line 6
     iput-object p2, p0, Lcom/google/common/base/Splitter$SplittingIterator;->toSplit:Ljava/lang/CharSequence;
 
     return-void

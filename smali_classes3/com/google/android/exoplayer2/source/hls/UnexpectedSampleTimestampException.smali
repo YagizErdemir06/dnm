@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/hls/UnexpectedSampleTimestampException;
+.class public final Lcom/google/android/exoplayer2/source/hls/UnexpectedSampleTimestampException;
 .super Ljava/io/IOException;
 .source "SourceFile"
 
@@ -15,6 +15,7 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/source/chunk/MediaChunk;JJ)V
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -23,6 +24,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 2
     invoke-static {p4, p5}, Lcom/google/android/exoplayer2/util/Util;->usToMs(J)J
 
     move-result-wide v1
@@ -53,12 +55,16 @@
 
     move-result-object v0
 
+    .line 3
     invoke-direct {p0, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
+    .line 4
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/hls/UnexpectedSampleTimestampException;->mediaChunk:Lcom/google/android/exoplayer2/source/chunk/MediaChunk;
 
+    .line 5
     iput-wide p2, p0, Lcom/google/android/exoplayer2/source/hls/UnexpectedSampleTimestampException;->lastAcceptedSampleTimeUs:J
 
+    .line 6
     iput-wide p4, p0, Lcom/google/android/exoplayer2/source/hls/UnexpectedSampleTimestampException;->rejectedSampleTimeUs:J
 
     return-void

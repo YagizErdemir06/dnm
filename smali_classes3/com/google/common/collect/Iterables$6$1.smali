@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Iterables$6$1;
+.class public Lcom/google/common/collect/Iterables$6$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,21 +26,23 @@
 
 
 # instance fields
-.field atStart:Z
+.field public atStart:Z
 
-.field final synthetic val$iterator:Ljava/util/Iterator;
+.field public final synthetic val$iterator:Ljava/util/Iterator;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/Iterables$6;Ljava/util/Iterator;)V
     .locals 0
 
+    .line 1
     iput-object p2, p0, Lcom/google/common/collect/Iterables$6$1;->val$iterator:Ljava/util/Iterator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x1
 
+    .line 2
     iput-boolean p1, p0, Lcom/google/common/collect/Iterables$6$1;->atStart:Z
 
     return-void
@@ -51,6 +53,7 @@
 .method public hasNext()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Iterables$6$1;->val$iterator:Ljava/util/Iterator;
 
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
@@ -71,6 +74,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Iterables$6$1;->val$iterator:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -79,6 +83,7 @@
 
     const/4 v1, 0x0
 
+    .line 2
     iput-boolean v1, p0, Lcom/google/common/collect/Iterables$6$1;->atStart:Z
 
     return-object v0
@@ -87,12 +92,14 @@
 .method public remove()V
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/common/collect/Iterables$6$1;->atStart:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/google/common/collect/CollectPreconditions;->checkRemove(Z)V
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/Iterables$6$1;->val$iterator:Ljava/util/Iterator;
 
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V

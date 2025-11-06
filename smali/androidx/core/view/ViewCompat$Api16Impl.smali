@@ -1,4 +1,4 @@
-.class Landroidx/core/view/ViewCompat$Api16Impl;
+.class public Landroidx/core/view/ViewCompat$Api16Impl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,6 +33,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getAccessibilityNodeProvider()Landroid/view/accessibility/AccessibilityNodeProvider;
 
     move-result-object p0
@@ -44,6 +46,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getFitsSystemWindows()Z
 
     move-result p0
@@ -56,6 +59,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getImportantForAccessibility()I
 
     move-result p0
@@ -68,6 +72,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getMinimumHeight()I
 
     move-result p0
@@ -80,6 +85,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getMinimumWidth()I
 
     move-result p0
@@ -92,6 +98,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getParentForAccessibility()Landroid/view/ViewParent;
 
     move-result-object p0
@@ -104,6 +111,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getWindowSystemUiVisibility()I
 
     move-result p0
@@ -116,6 +124,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->hasOverlappingRendering()Z
 
     move-result p0
@@ -128,6 +137,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->hasTransientState()Z
 
     move-result p0
@@ -140,6 +150,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroid/view/View;->performAccessibilityAction(ILandroid/os/Bundle;)Z
 
     move-result p0
@@ -174,6 +185,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/View;->postOnAnimation(Ljava/lang/Runnable;)V
 
     return-void
@@ -184,6 +196,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1, p2, p3}, Landroid/view/View;->postOnAnimationDelayed(Ljava/lang/Runnable;J)V
 
     return-void
@@ -194,6 +207,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
     return-void
@@ -204,6 +218,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->requestFitSystemWindows()V
 
     return-void
@@ -214,6 +229,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     return-void
@@ -224,6 +240,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/View;->setHasTransientState(Z)V
 
     return-void
@@ -234,6 +251,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/View;->setImportantForAccessibility(I)V
 
     return-void

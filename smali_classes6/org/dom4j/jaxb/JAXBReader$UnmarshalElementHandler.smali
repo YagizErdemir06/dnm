@@ -1,4 +1,4 @@
-.class Lorg/dom4j/jaxb/JAXBReader$UnmarshalElementHandler;
+.class public Lorg/dom4j/jaxb/JAXBReader$UnmarshalElementHandler;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -29,12 +29,15 @@
 .method public constructor <init>(Lorg/dom4j/jaxb/JAXBReader;Lorg/dom4j/jaxb/JAXBReader;Lorg/dom4j/jaxb/JAXBObjectHandler;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/dom4j/jaxb/JAXBReader$UnmarshalElementHandler;->this$0:Lorg/dom4j/jaxb/JAXBReader;
 
+    .line 2
     iput-object p2, p0, Lorg/dom4j/jaxb/JAXBReader$UnmarshalElementHandler;->jaxbReader:Lorg/dom4j/jaxb/JAXBReader;
 
+    .line 3
     iput-object p3, p0, Lorg/dom4j/jaxb/JAXBReader$UnmarshalElementHandler;->handler:Lorg/dom4j/jaxb/JAXBObjectHandler;
 
     return-void
@@ -45,17 +48,20 @@
 .method public onEnd(Lorg/dom4j/ElementPath;)V
     .locals 2
 
+    .line 1
     :try_start_0
     invoke-interface {p1}, Lorg/dom4j/ElementPath;->getCurrent()Lorg/dom4j/Element;
 
     move-result-object p1
 
+    .line 2
     iget-object v0, p0, Lorg/dom4j/jaxb/JAXBReader$UnmarshalElementHandler;->jaxbReader:Lorg/dom4j/jaxb/JAXBReader;
 
     invoke-virtual {v0, p1}, Lorg/dom4j/jaxb/JAXBSupport;->unmarshal(Lorg/dom4j/Element;)Ljavax/xml/bind/Element;
 
     move-result-object v0
 
+    .line 3
     iget-object v1, p0, Lorg/dom4j/jaxb/JAXBReader$UnmarshalElementHandler;->jaxbReader:Lorg/dom4j/jaxb/JAXBReader;
 
     invoke-virtual {v1}, Lorg/dom4j/jaxb/JAXBReader;->isPruneElements()Z
@@ -64,8 +70,10 @@
 
     if-eqz v1, :cond_0
 
+    .line 4
     invoke-interface {p1}, Lorg/dom4j/Node;->detach()Lorg/dom4j/Node;
 
+    .line 5
     :cond_0
     iget-object p0, p0, Lorg/dom4j/jaxb/JAXBReader$UnmarshalElementHandler;->handler:Lorg/dom4j/jaxb/JAXBObjectHandler;
 
@@ -78,6 +86,7 @@
     :catch_0
     move-exception p0
 
+    .line 6
     new-instance p1, Lorg/dom4j/jaxb/JAXBRuntimeException;
 
     invoke-direct {p1, p0}, Lorg/dom4j/jaxb/JAXBRuntimeException;-><init>(Ljava/lang/Throwable;)V

@@ -1,4 +1,4 @@
-.class final Lcom/google/common/primitives/UnsignedLongs$ParseOverflowDetection;
+.class public final Lcom/google/common/primitives/UnsignedLongs$ParseOverflowDetection;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,11 +15,11 @@
 
 
 # static fields
-.field static final maxSafeDigits:[I
+.field public static final maxSafeDigits:[I
 
-.field static final maxValueDivs:[J
+.field public static final maxValueDivs:[J
 
-.field static final maxValueMods:[I
+.field public static final maxValueMods:[I
 
 
 # direct methods
@@ -30,16 +30,20 @@
 
     new-array v1, v0, [J
 
+    .line 1
     sput-object v1, Lcom/google/common/primitives/UnsignedLongs$ParseOverflowDetection;->maxValueDivs:[J
 
     new-array v1, v0, [I
 
+    .line 2
     sput-object v1, Lcom/google/common/primitives/UnsignedLongs$ParseOverflowDetection;->maxValueMods:[I
 
     new-array v0, v0, [I
 
+    .line 3
     sput-object v0, Lcom/google/common/primitives/UnsignedLongs$ParseOverflowDetection;->maxSafeDigits:[I
 
+    .line 4
     new-instance v0, Ljava/math/BigInteger;
 
     const-string v1, "10000000000000000"
@@ -55,6 +59,7 @@
 
     if-gt v1, v2, :cond_0
 
+    .line 5
     sget-object v2, Lcom/google/common/primitives/UnsignedLongs$ParseOverflowDetection;->maxValueDivs:[J
 
     int-to-long v3, v1
@@ -67,6 +72,7 @@
 
     aput-wide v7, v2, v1
 
+    .line 6
     sget-object v2, Lcom/google/common/primitives/UnsignedLongs$ParseOverflowDetection;->maxValueMods:[I
 
     invoke-static {v5, v6, v3, v4}, Lcom/google/common/primitives/UnsignedLongs;->remainder(JJ)J
@@ -77,6 +83,7 @@
 
     aput v3, v2, v1
 
+    .line 7
     sget-object v2, Lcom/google/common/primitives/UnsignedLongs$ParseOverflowDetection;->maxSafeDigits:[I
 
     invoke-virtual {v0, v1}, Ljava/math/BigInteger;->toString(I)Ljava/lang/String;
@@ -102,13 +109,14 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 .method public static overflowInParse(JII)Z
-    .locals 5
+    .locals 6
 
     const-wide/16 v0, 0x0
 
@@ -118,25 +126,30 @@
 
     if-ltz v0, :cond_3
 
+    .line 1
     sget-object v0, Lcom/google/common/primitives/UnsignedLongs$ParseOverflowDetection;->maxValueDivs:[J
 
     aget-wide v2, v0, p3
 
-    cmp-long v0, p0, v2
+    cmp-long v2, p0, v2
 
-    const/4 v4, 0x0
+    const/4 v3, 0x0
 
-    if-gez v0, :cond_0
+    if-gez v2, :cond_0
 
-    return v4
+    return v3
 
+    .line 2
     :cond_0
-    cmp-long p0, p0, v2
+    aget-wide v4, v0, p3
+
+    cmp-long p0, p0, v4
 
     if-lez p0, :cond_1
 
     return v1
 
+    .line 3
     :cond_1
     sget-object p0, Lcom/google/common/primitives/UnsignedLongs$ParseOverflowDetection;->maxValueMods:[I
 
@@ -147,7 +160,7 @@
     goto :goto_0
 
     :cond_2
-    move v1, v4
+    move v1, v3
 
     :cond_3
     :goto_0

@@ -11,6 +11,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
@@ -34,6 +35,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/tasks/Task;->isComplete()Z
 
     move-result v0
@@ -44,10 +46,12 @@
 
     const-string v0, "DuplicateTaskCompletionException can only be created from completed Task."
 
+    .line 2
     invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/gms/tasks/Task;->getException()Ljava/lang/Exception;
 
@@ -59,6 +63,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     invoke-virtual {p0}, Lcom/google/android/gms/tasks/Task;->isSuccessful()Z
 
@@ -66,6 +71,7 @@
 
     if-eqz v1, :cond_2
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/android/gms/tasks/Task;->getResult()Ljava/lang/Object;
 
     move-result-object p0
@@ -82,6 +88,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_2
     invoke-virtual {p0}, Lcom/google/android/gms/tasks/Task;->isCanceled()Z
 
@@ -96,6 +103,7 @@
     :cond_3
     const-string p0, "unknown issue"
 
+    .line 7
     :goto_0
     new-instance v1, Lcom/google/android/gms/tasks/DuplicateTaskCompletionException;
 
@@ -105,6 +113,7 @@
 
     move-result-object p0
 
+    .line 8
     invoke-direct {v1, p0, v0}, Lcom/google/android/gms/tasks/DuplicateTaskCompletionException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-object v1

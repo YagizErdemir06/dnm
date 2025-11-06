@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/ClosingFuture$3;
+.class public Lcom/google/common/util/concurrent/ClosingFuture$3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,15 +26,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/util/concurrent/ClosingFuture;
+.field public final synthetic this$0:Lcom/google/common/util/concurrent/ClosingFuture;
 
-.field final synthetic val$callable:Lcom/google/common/util/concurrent/ClosingFuture$AsyncClosingCallable;
+.field public final synthetic val$callable:Lcom/google/common/util/concurrent/ClosingFuture$AsyncClosingCallable;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/util/concurrent/ClosingFuture;Lcom/google/common/util/concurrent/ClosingFuture$AsyncClosingCallable;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/ClosingFuture$3;->this$0:Lcom/google/common/util/concurrent/ClosingFuture;
 
     iput-object p2, p0, Lcom/google/common/util/concurrent/ClosingFuture$3;->val$callable:Lcom/google/common/util/concurrent/ClosingFuture$AsyncClosingCallable;
@@ -62,12 +63,14 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;-><init>(Lcom/google/common/util/concurrent/ClosingFuture$1;)V
 
+    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/google/common/util/concurrent/ClosingFuture$3;->val$callable:Lcom/google/common/util/concurrent/ClosingFuture$AsyncClosingCallable;
 
@@ -79,6 +82,7 @@
 
     move-result-object v1
 
+    .line 3
     iget-object v2, p0, Lcom/google/common/util/concurrent/ClosingFuture$3;->this$0:Lcom/google/common/util/concurrent/ClosingFuture;
 
     invoke-static {v2}, Lcom/google/common/util/concurrent/ClosingFuture;->access$200(Lcom/google/common/util/concurrent/ClosingFuture;)Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;
@@ -87,12 +91,14 @@
 
     invoke-static {v1, v2}, Lcom/google/common/util/concurrent/ClosingFuture;->access$1000(Lcom/google/common/util/concurrent/ClosingFuture;Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;)V
 
+    .line 4
     invoke-static {v1}, Lcom/google/common/util/concurrent/ClosingFuture;->access$000(Lcom/google/common/util/concurrent/ClosingFuture;)Lcom/google/common/util/concurrent/FluentFuture;
 
     move-result-object v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 5
     iget-object p0, p0, Lcom/google/common/util/concurrent/ClosingFuture$3;->this$0:Lcom/google/common/util/concurrent/ClosingFuture;
 
     invoke-static {p0}, Lcom/google/common/util/concurrent/ClosingFuture;->access$200(Lcom/google/common/util/concurrent/ClosingFuture;)Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;
@@ -122,12 +128,14 @@
 
     invoke-virtual {p0, v0, v2}, Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;->add(Ljava/io/Closeable;Ljava/util/concurrent/Executor;)V
 
+    .line 6
     throw v1
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/ClosingFuture$3;->val$callable:Lcom/google/common/util/concurrent/ClosingFuture$AsyncClosingCallable;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;

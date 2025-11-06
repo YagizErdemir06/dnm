@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/widget/ActivityChooserView$1;
+.class public Landroidx/appcompat/widget/ActivityChooserView$1;
 .super Landroid/database/DataSetObserver;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/appcompat/widget/ActivityChooserView;
+.field public final synthetic this$0:Landroidx/appcompat/widget/ActivityChooserView;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/appcompat/widget/ActivityChooserView;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/widget/ActivityChooserView$1;->this$0:Landroidx/appcompat/widget/ActivityChooserView;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
@@ -34,8 +35,10 @@
 .method public onChanged()V
     .locals 0
 
+    .line 1
     invoke-super {p0}, Landroid/database/DataSetObserver;->onChanged()V
 
+    .line 2
     iget-object p0, p0, Landroidx/appcompat/widget/ActivityChooserView$1;->this$0:Landroidx/appcompat/widget/ActivityChooserView;
 
     iget-object p0, p0, Landroidx/appcompat/widget/ActivityChooserView;->mAdapter:Landroidx/appcompat/widget/ActivityChooserView$ActivityChooserViewAdapter;
@@ -48,8 +51,10 @@
 .method public onInvalidated()V
     .locals 0
 
+    .line 1
     invoke-super {p0}, Landroid/database/DataSetObserver;->onInvalidated()V
 
+    .line 2
     iget-object p0, p0, Landroidx/appcompat/widget/ActivityChooserView$1;->this$0:Landroidx/appcompat/widget/ActivityChooserView;
 
     iget-object p0, p0, Landroidx/appcompat/widget/ActivityChooserView;->mAdapter:Landroidx/appcompat/widget/ActivityChooserView$ActivityChooserViewAdapter;

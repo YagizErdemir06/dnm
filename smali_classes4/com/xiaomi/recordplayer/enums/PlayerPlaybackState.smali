@@ -41,6 +41,7 @@
 .method public static constructor <clinit>()V
     .locals 16
 
+    .line 1
     new-instance v0, Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;
 
     const-string v1, "PlayerPlaybackStateIdle"
@@ -51,6 +52,7 @@
 
     sput-object v0, Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;->PlayerPlaybackStateIdle:Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;
 
+    .line 2
     new-instance v1, Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;
 
     const-string v3, "PlayerPlaybackStatePlaying"
@@ -61,6 +63,7 @@
 
     sput-object v1, Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;->PlayerPlaybackStatePlaying:Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;
 
+    .line 3
     new-instance v3, Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;
 
     const-string v5, "PlayerPlaybackStatePaused"
@@ -71,6 +74,7 @@
 
     sput-object v3, Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;->PlayerPlaybackStatePaused:Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;
 
+    .line 4
     new-instance v5, Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;
 
     const-string v7, "PlayerPlaybackStateResumed"
@@ -81,6 +85,7 @@
 
     sput-object v5, Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;->PlayerPlaybackStateResumed:Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;
 
+    .line 5
     new-instance v7, Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;
 
     const-string v9, "PlayerPlaybackStateStarted"
@@ -91,6 +96,7 @@
 
     sput-object v7, Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;->PlayerPlaybackStateStarted:Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;
 
+    .line 6
     new-instance v9, Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;
 
     const-string v11, "PlayerPlaybackStateStoped"
@@ -101,6 +107,7 @@
 
     sput-object v9, Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;->PlayerPlaybackStateStoped:Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;
 
+    .line 7
     new-instance v11, Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;
 
     const-string v13, "PlayerPlaybackStateBuffering"
@@ -111,6 +118,7 @@
 
     sput-object v11, Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;->PlayerPlaybackStateBuffering:Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;
 
+    .line 8
     new-instance v13, Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;
 
     const-string v15, "PlayerPlaybackStateEnded"
@@ -143,6 +151,7 @@
 
     aput-object v13, v15, v14
 
+    .line 9
     sput-object v15, Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;->$VALUES:[Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;
 
     return-void
@@ -156,8 +165,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 2
     iput p3, p0, Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;->nCode:I
 
     return-void
@@ -166,8 +177,10 @@
 .method public static int2enum(I)Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;
     .locals 6
 
+    .line 1
     sget-object v0, Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;->PlayerPlaybackStateIdle:Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;
 
+    .line 2
     invoke-static {}, Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;->values()[Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;
 
     move-result-object v1
@@ -181,6 +194,7 @@
 
     aget-object v4, v1, v3
 
+    .line 3
     invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
 
     move-result v5
@@ -201,6 +215,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;
     .locals 1
 
+    .line 1
     const-class v0, Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -215,6 +230,7 @@
 .method public static values()[Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;->$VALUES:[Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;
 
     invoke-virtual {v0}, [Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;->clone()Ljava/lang/Object;
@@ -231,6 +247,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/recordplayer/enums/PlayerPlaybackState;->nCode:I
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;

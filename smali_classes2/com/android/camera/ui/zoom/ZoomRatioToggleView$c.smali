@@ -18,14 +18,23 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/android/camera/ui/zoom/ZoomRatioToggleView;
+.field public final synthetic c:Lcom/android/camera/ui/zoom/ZoomRatioToggleView;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera/ui/zoom/ZoomRatioToggleView;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera/ui/zoom/ZoomRatioToggleView$c;->a:Lcom/android/camera/ui/zoom/ZoomRatioToggleView;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/ui/zoom/ZoomRatioToggleView$c;->c:Lcom/android/camera/ui/zoom/ZoomRatioToggleView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,13 +46,14 @@
 .method public run()V
     .locals 5
 
-    iget-object v0, p0, Lcom/android/camera/ui/zoom/ZoomRatioToggleView$c;->a:Lcom/android/camera/ui/zoom/ZoomRatioToggleView;
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/ui/zoom/ZoomRatioToggleView$c;->c:Lcom/android/camera/ui/zoom/ZoomRatioToggleView;
 
-    invoke-static {v0}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->c(Lcom/android/camera/ui/zoom/ZoomRatioToggleView;)F
+    invoke-static {v0}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->a(Lcom/android/camera/ui/zoom/ZoomRatioToggleView;)F
 
     move-result v0
 
-    invoke-static {v0}, Lwa/a;->x(F)F
+    invoke-static {v0}, Ld/d/a/k8/y;->w(F)F
 
     move-result v0
 
@@ -51,7 +61,8 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/android/camera/a6;->u2()Z
+    .line 2
+    invoke-static {}, Ld/d/a/z5;->k2()Z
 
     move-result v1
 
@@ -59,13 +70,14 @@
 
     const/4 v3, 0x1
 
-    const v4, 0x7f140087
+    const v4, 0x7f130086
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lcom/android/camera/ui/zoom/ZoomRatioToggleView$c;->a:Lcom/android/camera/ui/zoom/ZoomRatioToggleView;
+    .line 3
+    iget-object v1, p0, Lcom/android/camera/ui/zoom/ZoomRatioToggleView$c;->c:Lcom/android/camera/ui/zoom/ZoomRatioToggleView;
 
-    invoke-virtual {v1}, Landroid/view/View;->isShown()Z
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->isShown()Z
 
     move-result v1
 
@@ -73,33 +85,35 @@
 
     return-void
 
+    .line 4
     :cond_0
-    iget-object p0, p0, Lcom/android/camera/ui/zoom/ZoomRatioToggleView$c;->a:Lcom/android/camera/ui/zoom/ZoomRatioToggleView;
+    iget-object p0, p0, Lcom/android/camera/ui/zoom/ZoomRatioToggleView$c;->c:Lcom/android/camera/ui/zoom/ZoomRatioToggleView;
 
     new-array v1, v3, [Ljava/lang/Object;
 
     aput-object v0, v1, v2
 
-    invoke-static {p0, v4, v1}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->d(Lcom/android/camera/ui/zoom/ZoomRatioToggleView;I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p0, v4, v1}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->b(Lcom/android/camera/ui/zoom/ZoomRatioToggleView;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->announceForAccessibility(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->announceForAccessibility(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
+    .line 5
     :cond_1
-    iget-object p0, p0, Lcom/android/camera/ui/zoom/ZoomRatioToggleView$c;->a:Lcom/android/camera/ui/zoom/ZoomRatioToggleView;
+    iget-object p0, p0, Lcom/android/camera/ui/zoom/ZoomRatioToggleView$c;->c:Lcom/android/camera/ui/zoom/ZoomRatioToggleView;
 
     new-array v1, v3, [Ljava/lang/Object;
 
     aput-object v0, v1, v2
 
-    invoke-static {p0, v4, v1}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->d(Lcom/android/camera/ui/zoom/ZoomRatioToggleView;I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p0, v4, v1}, Lcom/android/camera/ui/zoom/ZoomRatioToggleView;->b(Lcom/android/camera/ui/zoom/ZoomRatioToggleView;I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->setContentDescription(Ljava/lang/CharSequence;)V
 
     :goto_0
     return-void

@@ -39,14 +39,14 @@
 .method public constructor <init>()V
     .locals 3
 
-    const/16 v0, 0x61a8
+    const/16 v0, 0x2710
 
-    const v1, 0x3f333333    # 0.7f
+    const/16 v1, 0x61a8
 
-    const/16 v2, 0x2710
+    const v2, 0x3f333333    # 0.7f
 
     .line 1
-    invoke-direct {p0, v2, v0, v0, v1}, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection$Factory;-><init>(IIIF)V
+    invoke-direct {p0, v0, v1, v1, v2}, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection$Factory;-><init>(IIIF)V
 
     return-void
 .end method
@@ -54,14 +54,14 @@
 .method public constructor <init>(IIIF)V
     .locals 9
 
+    .line 2
+    sget-object v8, Lcom/google/android/exoplayer2/util/Clock;->DEFAULT:Lcom/google/android/exoplayer2/util/Clock;
+
     const/16 v4, 0x4ff
 
     const/16 v5, 0x2cf
 
     const/high16 v7, 0x3f400000    # 0.75f
-
-    .line 2
-    sget-object v8, Lcom/google/android/exoplayer2/util/Clock;->DEFAULT:Lcom/google/android/exoplayer2/util/Clock;
 
     move-object v0, p0
 
@@ -108,10 +108,10 @@
 .method public constructor <init>(IIIIIF)V
     .locals 9
 
-    const/high16 v7, 0x3f400000    # 0.75f
-
     .line 3
     sget-object v8, Lcom/google/android/exoplayer2/util/Clock;->DEFAULT:Lcom/google/android/exoplayer2/util/Clock;
+
+    const/high16 v7, 0x3f400000    # 0.75f
 
     move-object v0, p0
 
@@ -194,6 +194,7 @@
 
     move-object/from16 v16, p5
 
+    .line 1
     new-instance v18, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;
 
     move-object/from16 v1, v18
@@ -230,10 +231,12 @@
 .method public final createTrackSelections([Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;Lcom/google/android/exoplayer2/upstream/BandwidthMeter;Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;Lcom/google/android/exoplayer2/Timeline;)[Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;
     .locals 9
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->access$000([Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object p3
 
+    .line 2
     array-length p4, p1
 
     new-array p4, p4, [Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;
@@ -242,15 +245,18 @@
 
     move v1, v0
 
+    .line 3
     :goto_0
     array-length v2, p1
 
     if-ge v1, v2, :cond_3
 
+    .line 4
     aget-object v2, p1, v1
 
     if-eqz v2, :cond_2
 
+    .line 5
     iget-object v5, v2, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;->tracks:[I
 
     array-length v3, v5
@@ -259,6 +265,7 @@
 
     goto :goto_2
 
+    .line 6
     :cond_0
     array-length v3, v5
 
@@ -266,6 +273,7 @@
 
     if-ne v3, v4, :cond_1
 
+    .line 7
     new-instance v3, Lcom/google/android/exoplayer2/trackselection/FixedTrackSelection;
 
     iget-object v4, v2, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;->group:Lcom/google/android/exoplayer2/source/TrackGroup;
@@ -278,11 +286,13 @@
 
     goto :goto_1
 
+    .line 8
     :cond_1
     iget-object v4, v2, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;->group:Lcom/google/android/exoplayer2/source/TrackGroup;
 
     iget v6, v2, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;->type:I
 
+    .line 9
     invoke-interface {p3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -295,6 +305,7 @@
 
     move-object v7, p2
 
+    .line 10
     invoke-virtual/range {v3 .. v8}, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection$Factory;->createAdaptiveTrackSelection(Lcom/google/android/exoplayer2/source/TrackGroup;[IILcom/google/android/exoplayer2/upstream/BandwidthMeter;Lcom/google/common/collect/ImmutableList;)Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;
 
     move-result-object v3

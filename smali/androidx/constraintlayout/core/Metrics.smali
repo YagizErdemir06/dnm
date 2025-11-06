@@ -103,8 +103,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -121,68 +123,100 @@
 
     const-wide/16 v0, 0x0
 
+    .line 1
     iput-wide v0, p0, Landroidx/constraintlayout/core/Metrics;->measures:J
 
+    .line 2
     iput-wide v0, p0, Landroidx/constraintlayout/core/Metrics;->widgets:J
 
+    .line 3
     iput-wide v0, p0, Landroidx/constraintlayout/core/Metrics;->additionalMeasures:J
 
+    .line 4
     iput-wide v0, p0, Landroidx/constraintlayout/core/Metrics;->resolutions:J
 
+    .line 5
     iput-wide v0, p0, Landroidx/constraintlayout/core/Metrics;->tableSizeIncrease:J
 
+    .line 6
     iput-wide v0, p0, Landroidx/constraintlayout/core/Metrics;->maxTableSize:J
 
+    .line 7
     iput-wide v0, p0, Landroidx/constraintlayout/core/Metrics;->lastTableSize:J
 
+    .line 8
     iput-wide v0, p0, Landroidx/constraintlayout/core/Metrics;->maxVariables:J
 
+    .line 9
     iput-wide v0, p0, Landroidx/constraintlayout/core/Metrics;->maxRows:J
 
+    .line 10
     iput-wide v0, p0, Landroidx/constraintlayout/core/Metrics;->minimize:J
 
+    .line 11
     iput-wide v0, p0, Landroidx/constraintlayout/core/Metrics;->minimizeGoal:J
 
+    .line 12
     iput-wide v0, p0, Landroidx/constraintlayout/core/Metrics;->constraints:J
 
+    .line 13
     iput-wide v0, p0, Landroidx/constraintlayout/core/Metrics;->simpleconstraints:J
 
+    .line 14
     iput-wide v0, p0, Landroidx/constraintlayout/core/Metrics;->optimize:J
 
+    .line 15
     iput-wide v0, p0, Landroidx/constraintlayout/core/Metrics;->iterations:J
 
+    .line 16
     iput-wide v0, p0, Landroidx/constraintlayout/core/Metrics;->pivots:J
 
+    .line 17
     iput-wide v0, p0, Landroidx/constraintlayout/core/Metrics;->bfs:J
 
+    .line 18
     iput-wide v0, p0, Landroidx/constraintlayout/core/Metrics;->variables:J
 
+    .line 19
     iput-wide v0, p0, Landroidx/constraintlayout/core/Metrics;->errors:J
 
+    .line 20
     iput-wide v0, p0, Landroidx/constraintlayout/core/Metrics;->slackvariables:J
 
+    .line 21
     iput-wide v0, p0, Landroidx/constraintlayout/core/Metrics;->extravariables:J
 
+    .line 22
     iput-wide v0, p0, Landroidx/constraintlayout/core/Metrics;->fullySolved:J
 
+    .line 23
     iput-wide v0, p0, Landroidx/constraintlayout/core/Metrics;->graphOptimizer:J
 
+    .line 24
     iput-wide v0, p0, Landroidx/constraintlayout/core/Metrics;->graphSolved:J
 
+    .line 25
     iput-wide v0, p0, Landroidx/constraintlayout/core/Metrics;->resolvedWidgets:J
 
+    .line 26
     iput-wide v0, p0, Landroidx/constraintlayout/core/Metrics;->oldresolvedWidgets:J
 
+    .line 27
     iput-wide v0, p0, Landroidx/constraintlayout/core/Metrics;->nonresolvedWidgets:J
 
+    .line 28
     iput-wide v0, p0, Landroidx/constraintlayout/core/Metrics;->centerConnectionResolved:J
 
+    .line 29
     iput-wide v0, p0, Landroidx/constraintlayout/core/Metrics;->matchConnectionResolved:J
 
+    .line 30
     iput-wide v0, p0, Landroidx/constraintlayout/core/Metrics;->chainConnectionResolved:J
 
+    .line 31
     iput-wide v0, p0, Landroidx/constraintlayout/core/Metrics;->barrierConnectionResolved:J
 
+    .line 32
     iget-object p0, p0, Landroidx/constraintlayout/core/Metrics;->problematicLayouts:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
@@ -193,6 +227,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

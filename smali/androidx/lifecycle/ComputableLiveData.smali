@@ -21,18 +21,18 @@
 
 
 # instance fields
-.field final mComputing:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final mComputing:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field final mExecutor:Ljava/util/concurrent/Executor;
+.field public final mExecutor:Ljava/util/concurrent/Executor;
 
-.field final mInvalid:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final mInvalid:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field final mInvalidationRunnable:Ljava/lang/Runnable;
+.field public final mInvalidationRunnable:Ljava/lang/Runnable;
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 .end field
 
-.field final mLiveData:Landroidx/lifecycle/LiveData;
+.field public final mLiveData:Landroidx/lifecycle/LiveData;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/lifecycle/LiveData<",
@@ -41,7 +41,7 @@
     .end annotation
 .end field
 
-.field final mRefreshRunnable:Ljava/lang/Runnable;
+.field public final mRefreshRunnable:Ljava/lang/Runnable;
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 .end field
@@ -142,6 +142,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/lifecycle/ComputableLiveData;->mLiveData:Landroidx/lifecycle/LiveData;
 
     return-object p0
@@ -150,6 +151,7 @@
 .method public invalidate()V
     .locals 1
 
+    .line 1
     invoke-static {}, Landroidx/arch/core/executor/ArchTaskExecutor;->getInstance()Landroidx/arch/core/executor/ArchTaskExecutor;
 
     move-result-object v0

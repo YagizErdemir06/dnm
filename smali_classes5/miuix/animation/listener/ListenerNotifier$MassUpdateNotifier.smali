@@ -1,4 +1,4 @@
-.class Lmiuix/animation/listener/ListenerNotifier$MassUpdateNotifier;
+.class public Lmiuix/animation/listener/ListenerNotifier$MassUpdateNotifier;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,7 +18,7 @@
 
 
 # static fields
-.field static final sEmptyList:Ljava/util/List;
+.field public static final sEmptyList:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -33,6 +33,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -45,6 +46,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -67,6 +69,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object p0, Lmiuix/animation/listener/ListenerNotifier$MassUpdateNotifier;->sEmptyList:Ljava/util/List;
 
     invoke-virtual {p2, p1, p0}, Lmiuix/animation/listener/TransitionListener;->onUpdate(Ljava/lang/Object;Ljava/util/Collection;)V

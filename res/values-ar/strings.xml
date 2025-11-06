@@ -7,7 +7,7 @@
     <string name="abc_activity_chooser_view_see_all">عرض الكل</string>
     <string name="abc_activitychooserview_choose_application">اختيار تطبيق</string>
     <string name="abc_capital_off">إيقاف</string>
-    <string name="abc_capital_on">مفعّلة</string>
+    <string name="abc_capital_on">تفعيل</string>
     <string name="abc_menu_alt_shortcut_label">Alt+</string>
     <string name="abc_menu_ctrl_shortcut_label">Ctrl+</string>
     <string name="abc_menu_delete_shortcut_label">حذف</string>
@@ -232,7 +232,6 @@
     <string name="accessibility_video_capture_button">زر لإلتقاط صورة أثناء تسجيل الفيديو</string>
     <string name="accessibility_video_pause_button">تم إيقاف تسجيل الفيديو مؤقتًا</string>
     <string name="accessibility_video_resume_button">تم استئناف تسجيل الفيديو</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">العلامة المائية متوقفة</string>
     <string name="accessibility_watermark_image_on">العلامة المائية مشغله</string>
     <string name="accessibility_watermark_text">فتح لوحة تعديل العلامة المائية</string>
@@ -240,16 +239,6 @@
     <string name="accessibility_zoom_button">وضع التكبير</string>
     <string name="actionbar_button_up_description">رجوع</string>
     <string name="afternoon">بعد الظهر</string>
-    <string name="agent_flip_tbc">متابعة على الشاشة الداخلية</string>
-    <string name="agent_function_max">تم التعديل إلى القيمة القصوى</string>
-    <string name="agent_function_min">تم التعديل إلى القيمة الدنيا</string>
-    <string name="agent_workspace_mode_not_supported">هذه الميزة غير مدعومة</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"هذه الميزة غير مدعومة.
-تم فتح وضع الصورة بدلاً من ذلك."</string>
-    <string name="agent_workspace_on">المعلمات المحددة لتصوير \"%1$s\"</string>
-    <string name="agent_workspace_tbc">جارٍ دراسة المشهد</string>
-    <string name="agent_workspace_tbc_use_default">"جارٍ دراسة المشهد…
-تم تعيين معلمات الكاميرا كإعداد افتراضي"</string>
     <string name="ai_agra_fort">قلعة اغرا</string>
     <string name="ai_amber_fort">حصن عامر</string>
     <string name="ai_baby">طفل</string>
@@ -476,7 +465,6 @@
     <string name="bluetooth_headset_permission_des">لتحديد حالة اتصال سماعات البلوتوث وتسجيل الصوت باستخدام ميكروفون السماعات</string>
     <string name="bluetooth_permission_not_ask_again">اسمح لهذا التطبيق بالاتصال بالأجهزة المجاورة في الإعدادات لتتمكن من الاتصال بسماعات الأذن البلوتوث.</string>
     <string name="bokeh_use_hint">تأثير العمق</string>
-    <string name="bottomsheet_action_expand_halfway">توسيع البطاقة السفلية</string>
     <string name="burst_shoot_exit_button_text">إيقاف تشغيل اللقطات المتتالية</string>
     <string name="button_fisheye_camera_title">عين السمكة</string>
     <string name="button_front_camera_title">اخذ سيلفي</string>
@@ -517,8 +505,6 @@
     <string name="ccc_temperature_warning_msg">الجهاز ساخن. سيتم إغلاق الكاميرا بعد %d ثواني وسيتم حفظ الصور والفيديوهات تلقائيًا.</string>
     <string name="ccc_temperature_warning_title">الجهاز ساخن</string>
     <string name="center_mark">علامة مركزية</string>
-    <string name="character_counter_content_description">تمّ إدخال %1$d حرف من إجمالي %2$d.</string>
-    <string name="character_counter_overflowed_content_description">تجاوز عدد الأحرف المسموح به %1$d من %2$d.</string>
     <string name="cinemaster_cancel">إلغاء</string>
     <string name="cinemaster_confirm">خروج</string>
     <string name="cinemaster_connect_exit_message">الخروج من إعداد متعدد الكاميرات؟</string>
@@ -537,7 +523,6 @@
     <string name="cinemaster_toast_monitor_disconnect">انقطع اتصال الشاشة بإعداد متعدد الكاميرات</string>
     <string name="cinemaster_toast_monitor_play_error">انقطع اتصال %s من إعداد متعدد الكاميرات بسبب خطأ ما</string>
     <string name="cinemaster_wifi_24g_tips">بدل إلى شبكة ذات نطاق %s جيجاهرتز لتحسين جودة استقرار الصورة</string>
-    <string name="clear_text_end_icon_content_description">محو النص</string>
     <string name="clearable_edittext_clear_description">مسح</string>
     <string name="clone_adjust">ضبط</string>
     <string name="clone_copy_mode">تجميد الإطار</string>
@@ -831,7 +816,6 @@
     <string name="download_hint_cn">"Looks like your device isn't connected to WLAN. Use %1$s MB of mobile data to download items now?"</string>
     <string name="download_hint_wifi">يبدو أن جهازك غير متصل بشبكة Wi-Fi. هل ترغب في استخدام %1$s ميجابايت من بيانات الهاتف لتنزيل العناصر الان؟</string>
     <string name="download_in_progress">جارٍ التنزيل…</string>
-    <string name="download_network_error">تعذر التنزيل. تحقق من إعدادات الشبكة.</string>
     <string name="download_title">تحذير استخدام البيانات</string>
     <string name="download_waiting">قيد الانتظار…</string>
     <string name="dual_camera_lens_covered_toast">العدسة مغطاة.</string>
@@ -882,7 +866,6 @@
     <string name="eras_ad">بعد الميلاد</string>
     <string name="eras_bc">قبل الميلاد</string>
     <string name="error_fail_to_start_audio_capture">تعذر بدء التسجيل الصوتي</string>
-    <string name="error_icon_content_description">خطأ</string>
     <string name="esp_tip">معاينة على الشاشة الخارجية</string>
     <string name="evening">عصر</string>
     <string name="exo_controls_cc_disabled_description">تفعيل الترجمة</string>
@@ -937,7 +920,6 @@
     <string name="exo_track_surround_7_point_1">صوت مجسّم 7.1</string>
     <string name="exo_track_unknown">غير معروف</string>
     <string name="expand_button_title">إعدادات متقدمة</string>
-    <string name="exposed_dropdown_menu_content_description">عرض القائمة المنسدلة</string>
     <string name="exposure_mode_adjust_title">ExposureMode</string>
     <string name="eye_light">لمعان العين</string>
     <string name="eye_light_angel">ملاك</string>
@@ -1094,7 +1076,6 @@
     <string name="hint_subtitle_prompt">يمكنك البدء في الترجمات الآن</string>
     <string name="histogram_summary_tip">عرض استجابة التعرض في الوقت الحقيقي</string>
     <string name="hunt_dual_water_mark">سيتم إضافة العلامة المائية للكاميرا المزدوجة تلقائيا.</string>
-    <string name="icon_content_description">رمز مربع الحوار</string>
     <string name="id_card_mode_hint_back">امسح الجانب الخلفي من هويتك الشخصية</string>
     <string name="id_card_mode_hint_front">امسح الجانب الأمامي من بطاقة هويتك</string>
     <string name="id_card_mode_use_hint_text_body">"ضع الجانب الأمامي والخلفي لبطاقة الهوية في صورة واحدة.
@@ -1105,7 +1086,6 @@
     <string name="invisible_mode_dialog_summary">لا يمكنك استخدام الكاميرا الآن. يرجى إيقاف تشغيل وضع التصفح المتخفي من الإعدادات لتتمكن من استخدامها.</string>
     <string name="invisible_mode_dialog_title">أنت في وضع التصفح المتخفي</string>
     <string name="invisible_mode_dialog_to_close">الإعدادات</string>
-    <string name="item_view_role_description">علامة تبويب</string>
     <string name="kaleidoscope_fragment_tab_name">المشكال</string>
     <string name="lens_dirty_detected_content">"يبدو أن عدسة الكاميرا غير نظيفة.
 قم بتنظيف العدسة لصور أفضل."</string>
@@ -1228,18 +1208,6 @@
     <string name="manually_raw_tip">لا يمكنك استخدام التكبير مع تنسيق RAW</string>
     <string name="manually_ultra_raw_tip">لا يمكن إستخدام التكبير أو التصغير مع Ultra RAW</string>
     <string name="masterfilter_description_title">فلاتر أفلام</string>
-    <string name="material_clock_toggle_content_description">يُرجى اختيار صباحًا أو مساءً.</string>
-    <string name="material_hour_selection">تحديد الساعة</string>
-    <string name="material_hour_suffix">الساعة %1$s</string>
-    <string name="material_minute_selection">تحديد الدقائق</string>
-    <string name="material_minute_suffix">%1$s دقيقة</string>
-    <string name="material_timepicker_am">صباحًا</string>
-    <string name="material_timepicker_clock_mode_description">يُرجى التبديل إلى وضع الساعة لإدخال الوقت.</string>
-    <string name="material_timepicker_hour">الساعة</string>
-    <string name="material_timepicker_minute">دقيقة</string>
-    <string name="material_timepicker_pm">مساءً</string>
-    <string name="material_timepicker_select_time">اختيار الوقت</string>
-    <string name="material_timepicker_text_input_mode_description">يُرجى التبديل إلى وضع إدخال النص لإدخال الوقت.</string>
     <string name="message_snap_double_confirm">إضغط ضغطة طويلة على زر مستوى الصوت لإستخدام NFC الآن. هل تريد إستبدال هذه الميزة؟</string>
     <string name="midnight">الليل</string>
     <string name="mimoji_app_name">Fun Cam</string>
@@ -1378,7 +1346,6 @@
     <string name="miuix_appcompat_delete_description">حذف</string>
     <string name="miuix_appcompat_deselect_all">الغاء تحديد الكل</string>
     <string name="miuix_appcompat_deselect_all_description">الغاء تحديد الكل</string>
-    <string name="miuix_appcompat_edit">تعديل</string>
     <string name="miuix_appcompat_search_action_mode_cancel">إلغاء</string>
     <string name="miuix_appcompat_search_input_description">بحث</string>
     <string name="miuix_appcompat_select_all">تحديد الكل</string>
@@ -1486,42 +1453,6 @@
     <string name="msg_bubble_doc4_first_use">انقر لاكتشاف نص</string>
     <string name="msg_toast_doc4_recognition_failed">حدث خطأ ما. حاول مجددا.</string>
     <string name="msg_toast_doc4_text_not_found">تعذر اكتشاف أي نص</string>
-    <string name="mtrl_badge_numberless_content_description">إشعار جديد</string>
-    <string name="mtrl_chip_close_icon_content_description">إزالة %1$s</string>
-    <string name="mtrl_exceed_max_badge_number_content_description">يبلغ عدد الإشعارات الجديدة أكثر من %1$d.</string>
-    <string name="mtrl_picker_a11y_next_month">التغيير إلى الشهر التالي</string>
-    <string name="mtrl_picker_a11y_prev_month">التغيير إلى الشهر السابق</string>
-    <string name="mtrl_picker_announce_current_selection">الاختيار الحالي: %1$s</string>
-    <string name="mtrl_picker_cancel">إلغاء</string>
-    <string name="mtrl_picker_confirm">حسنًا</string>
-    <string name="mtrl_picker_date_header_selected">%1$s</string>
-    <string name="mtrl_picker_date_header_title">يُرجى اختيار تاريخ.</string>
-    <string name="mtrl_picker_date_header_unselected">التاريخ المحدَّد</string>
-    <string name="mtrl_picker_day_of_week_column_header">عمود الأيام: %1$s</string>
-    <string name="mtrl_picker_invalid_format">التنسيق غير صالح</string>
-    <string name="mtrl_picker_invalid_format_example">مثال: %1$s</string>
-    <string name="mtrl_picker_invalid_format_use">استخدام: %1$s</string>
-    <string name="mtrl_picker_invalid_range">النطاق غير صالح</string>
-    <string name="mtrl_picker_navigate_to_year_description">التنقل إلى العام %1$s</string>
-    <string name="mtrl_picker_out_of_range">خارج النطاق: %1$s</string>
-    <string name="mtrl_picker_range_header_only_end_selected">تاريخ البدء – %1$s</string>
-    <string name="mtrl_picker_range_header_only_start_selected">%1$s – تاريخ الانتهاء</string>
-    <string name="mtrl_picker_range_header_selected">%1$s – %2$s</string>
-    <string name="mtrl_picker_range_header_title">يُرجى اختيار نطاق زمني.</string>
-    <string name="mtrl_picker_range_header_unselected">تاريخ البدء - تاريخ الانتهاء</string>
-    <string name="mtrl_picker_save">حفظ</string>
-    <string name="mtrl_picker_text_input_date_hint">التاريخ</string>
-    <string name="mtrl_picker_text_input_date_range_end_hint">تاريخ الانتهاء</string>
-    <string name="mtrl_picker_text_input_date_range_start_hint">تاريخ البدء</string>
-    <string name="mtrl_picker_text_input_day_abbr">ي</string>
-    <string name="mtrl_picker_text_input_month_abbr">ش</string>
-    <string name="mtrl_picker_text_input_year_abbr">س</string>
-    <string name="mtrl_picker_toggle_to_calendar_input_mode">التبديل إلى وضع \"الإدخال في التقويم\"</string>
-    <string name="mtrl_picker_toggle_to_day_selection">انقر للتبديل إلى اختيار يوم</string>
-    <string name="mtrl_picker_toggle_to_text_input_mode">التبديل إلى وضع \"إدخال النص\"</string>
-    <string name="mtrl_picker_toggle_to_year_selection">انقر للتبديل إلى اختيار عام</string>
-    <string name="mtrl_timepicker_cancel">إلغاء</string>
-    <string name="mtrl_timepicker_confirm">حسنًا</string>
     <string name="multi_window_mode_not_supported">لا يمكن استخدام الكاميرا في وضع النوافذ المتعددة</string>
     <string name="network_access_user_notice_agree">أوافق</string>
     <string name="network_access_user_notice_message_live_video">&lt;Data>تحتاج الكاميرا إلى الاتصال بالإنترنت لتوفير التأثيرات والموسيقى والميزات الأخرى لمقاطع الفيديو القصيرة.&lt;br/>&lt;br/>بالنقر على \"أوافق\" أدناه، فأنت توافق على &lt;a href =%1$s>اتفاقية المستخدم&lt;/a> و &lt;a href =%2$s>سياسة الخصوصية&lt;/a>، والسماح للكاميرا بالاتصال بالإنترنت.&lt;/Data></string>
@@ -1616,7 +1547,6 @@
     <string name="parameter_wb_title">توازن اللون الابيض</string>
     <string name="parameter_zoom_slider_description">اسحب شريط التكبير/التصغير لأعلى أو أسفل لتغيير لقطة تصويرك من لقطة بعيدة إلى قريبة.</string>
     <string name="parameter_zoom_slider_title">التكبير/التصغير</string>
-    <string name="password_toggle_content_description">عرض كلمة المرور</string>
     <string name="path_settings">تطبيقات النظام/الكاميرا/الإعدادات</string>
     <string name="photo_assistance_tips_title">نصائح مباشرة</string>
     <string name="pic_flaw_blink_more">يبدو أن شخص ما في الصورة قام بإغلاق عينه</string>
@@ -2074,7 +2004,6 @@
     <string name="pref_super_night_se_desc">اكتشاف بيئات الإضاءة المنخفضة أثناء استخدام وضع الصورة ووضع البورتريه لتحسين جودة الصورة تلقائيًا</string>
     <string name="pref_super_night_se_summary">اكتشاف بيئات الإضاءة المنخفضة وتحسين جودة الصورة تلقائيا</string>
     <string name="pref_super_night_se_title">وضع ليلي تلقائي</string>
-    <string name="pref_switch_camera_heic_image_desc">تعد تنسيقات الصور أكثر كفاءة وتوفر مساحة تخزين. تدعم هذه الميزة وضع Ultra HD، ولكنها لا تدعم التصوير الديناميكي وإزالة العلامات المائية العادية وبعض تطبيقات الطرف الثالث. تنسيق صور أكثر كفاءة وتوفير أكبر لمساحة التخزين. يدعم وضع Ultra HD. ولكن لا يدعم اللقطات الديناميكية وإزالة العلامات المائية العادية وبعض تطبيقات الجهات الخارجية.</string>
     <string name="pref_true_colour_video_mode_description">استخدم Dolby Vision لتسجيل فيديوهات نابضة بالحياة بألوان مذهلة وتباين مثالي (قد لا تكون هذه الميزة متوافقة مع بعض تطبيقات الجهات الخارجية)</string>
     <string name="pref_true_colour_video_mode_introduction">تجربة بصرية مذهلة وتفاصيل واقعية وتباين قوي</string>
     <string name="pref_true_colour_video_mode_setting_dec">التقط تفاصيل نابضة بالحياة وألوانًا مذهلة وتباينًا مذهلاً في وضعي الفيديو والبرو. تركيز تتبع الحركة وترميز H.264 غير مدعومين. قد لا تكون هذه الميزة متوافقة مع بعض تطبيقات الجهة الخارجية.</string>
@@ -2359,7 +2288,6 @@
     <string name="time_picker_label_hour">س</string>
     <string name="time_picker_label_minute">دق</string>
     <string name="time_stamp_date_format">dd/MM/yyyy</string>
-    <string name="time_stamp_date_format_minute">d/M/yyyy H:mm</string>
     <string name="timefreeze_guide_tip2">يمكنك تجميد الخلفية أو الغاء تجميدها في أي وقت قبل أو أثناء التصوير.</string>
     <string name="timefreeze_guide_tip3">اطلب من الشخص البقاء في وسط الإطار.</string>
     <string name="timefreeze_guide_tip4">أوقف حركة المرور.</string>
@@ -2379,8 +2307,8 @@
     <string name="tip_ai_off">كاميرا AI: متوقفة</string>
     <string name="tip_beauty_mode_title1">نوع البورتريه: منعش</string>
     <string name="tip_beauty_mode_title2">نوع البورتريه: فيلم</string>
-    <string name="tip_cvtype_title1">أسلوب التصوير: Leica كلاسيك</string>
-    <string name="tip_cvtype_title2">أسلوب التصوير: Leica حيوي</string>
+    <string name="tip_cvtype_title1">أسلوب التصوير: لايكا كلاسيك</string>
+    <string name="tip_cvtype_title2">أسلوب التصوير: لايكا حيوي</string>
     <string name="tip_eis_off">فيديو ثابت: متوقف</string>
     <string name="tip_eis_pro_off">فيديو ثابت برو: متوقف</string>
     <string name="tip_flash_auto">الفلاش: تلقائي</string>
@@ -2397,7 +2325,7 @@
     <string name="tip_flash_screen_light_on">الفلاش الأمامي: مشغل</string>
     <string name="tip_flash_soft_light_off">الفلاش الأمامي: متوقف</string>
     <string name="tip_flash_soft_light_torch">الفلاش الأمامي: وضع ضوء الفلاش</string>
-    <string name="tip_flash_torch">الفلاش: ضوء الفلاش</string>
+    <string name="tip_flash_torch">الفلاش: دائما مشغل</string>
     <string name="tip_friend_mode_connect_when_24GHz">استخدم اتصال %s جيجاهرتز لزيادة جودة المعاينة</string>
     <string name="tip_friend_mode_display_device_name_connect">شاشة المشاركة</string>
     <string name="tip_friend_mode_display_device_name_disconnect">قام الجهاز الآخر بمغادرة الجلسة</string>
@@ -2496,7 +2424,7 @@
     <string name="user_notice_identify_summary_format">قبل إستخدام الكاميرا، يجب عليك أن تقرأ وتوافق على <a href="http://www.miui.com/res/doc/eula.html?lang=ar_EG">اتفاقية المستخدم</a> وسياسة الخصوصية<a href="http://www.miui.com/res/doc/privacy.html?lang=ar_EG"> لدينا</a>. تحتاج الكاميرا ايضا الاتصال بالإنترنت للعمل بشكل طبيعي. موافق؟</string>
     <string name="user_notice_title">الأحكام والشروط</string>
     <string name="v7_preference_off">إيقاف</string>
-    <string name="v7_preference_on">مفعّلة</string>
+    <string name="v7_preference_on">تفعيل</string>
     <string name="video_beauty_hint_msg">إخفاء العيوب والحفاظ على واقعية كل التفاصيل</string>
     <string name="video_beauty_hint_title">تجميل جديد للفيديوهات</string>
     <string name="video_beauty_tip">تجميل للفيديو</string>

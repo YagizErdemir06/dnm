@@ -67,12 +67,14 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/Striped$5;
 
     invoke-direct {v0}, Lcom/google/common/util/concurrent/Striped$5;-><init>()V
 
     sput-object v0, Lcom/google/common/util/concurrent/Striped;->READ_WRITE_LOCK_SUPPLIER:Lcom/google/common/base/Supplier;
 
+    .line 2
     new-instance v0, Lcom/google/common/util/concurrent/Striped$6;
 
     invoke-direct {v0}, Lcom/google/common/util/concurrent/Striped$6;-><init>()V
@@ -103,6 +105,7 @@
 .method public static synthetic access$200(I)I
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/util/concurrent/Striped;->ceilToPowerOfTwo(I)I
 
     move-result p0
@@ -113,6 +116,7 @@
 .method public static synthetic access$300(I)I
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/util/concurrent/Striped;->smear(I)I
 
     move-result p0
@@ -123,6 +127,7 @@
 .method private static ceilToPowerOfTwo(I)I
     .locals 1
 
+    .line 1
     sget-object v0, Ljava/math/RoundingMode;->CEILING:Ljava/math/RoundingMode;
 
     invoke-static {p0, v0}, Lcom/google/common/math/IntMath;->log2(ILjava/math/RoundingMode;)I
@@ -154,6 +159,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/Striped$CompactStriped;
 
     const/4 v1, 0x0
@@ -185,12 +191,14 @@
 
     if-ge p0, v0, :cond_0
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/Striped$SmallLazyStriped;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/util/concurrent/Striped$SmallLazyStriped;-><init>(ILcom/google/common/base/Supplier;)V
 
     goto :goto_0
 
+    .line 2
     :cond_0
     new-instance v0, Lcom/google/common/util/concurrent/Striped$LargeLazyStriped;
 
@@ -211,6 +219,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/Striped$2;
 
     invoke-direct {v0}, Lcom/google/common/util/concurrent/Striped$2;-><init>()V
@@ -233,6 +242,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/common/util/concurrent/Striped;->WEAK_SAFE_READ_WRITE_LOCK_SUPPLIER:Lcom/google/common/base/Supplier;
 
     invoke-static {p0, v0}, Lcom/google/common/util/concurrent/Striped;->lazy(ILcom/google/common/base/Supplier;)Lcom/google/common/util/concurrent/Striped;
@@ -253,6 +263,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/Striped$4;
 
     invoke-direct {v0, p1}, Lcom/google/common/util/concurrent/Striped$4;-><init>(I)V
@@ -275,6 +286,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/Striped$1;
 
     invoke-direct {v0}, Lcom/google/common/util/concurrent/Striped$1;-><init>()V
@@ -297,6 +309,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/common/util/concurrent/Striped;->READ_WRITE_LOCK_SUPPLIER:Lcom/google/common/base/Supplier;
 
     invoke-static {p0, v0}, Lcom/google/common/util/concurrent/Striped;->custom(ILcom/google/common/base/Supplier;)Lcom/google/common/util/concurrent/Striped;
@@ -317,6 +330,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/Striped$3;
 
     invoke-direct {v0, p1}, Lcom/google/common/util/concurrent/Striped$3;-><init>(I)V
@@ -368,22 +382,26 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/collect/Lists;->newArrayList(Ljava/lang/Iterable;)Ljava/util/ArrayList;
 
     move-result-object p1
 
+    .line 2
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
 
     move-result-object p0
 
     return-object p0
 
+    .line 4
     :cond_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -395,6 +413,7 @@
 
     move v2, v1
 
+    .line 5
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -402,6 +421,7 @@
 
     if-ge v2, v3, :cond_1
 
+    .line 6
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -416,11 +436,14 @@
 
     goto :goto_0
 
+    .line 7
     :cond_1
     invoke-static {v0}, Ljava/util/Arrays;->sort([I)V
 
+    .line 8
     aget v2, v0, v1
 
+    .line 9
     invoke-virtual {p0, v2}, Lcom/google/common/util/concurrent/Striped;->getAt(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -429,6 +452,7 @@
 
     const/4 v1, 0x1
 
+    .line 10
     :goto_1
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -436,12 +460,14 @@
 
     if-ge v1, v3, :cond_3
 
+    .line 11
     aget v3, v0, v1
 
     if-ne v3, v2, :cond_2
 
     add-int/lit8 v3, v1, -0x1
 
+    .line 12
     invoke-interface {p1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -450,6 +476,7 @@
 
     goto :goto_2
 
+    .line 13
     :cond_2
     invoke-virtual {p0, v3}, Lcom/google/common/util/concurrent/Striped;->getAt(I)Ljava/lang/Object;
 
@@ -464,6 +491,7 @@
 
     goto :goto_1
 
+    .line 14
     :cond_3
     invoke-static {p1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 

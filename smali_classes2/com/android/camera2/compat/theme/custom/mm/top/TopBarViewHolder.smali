@@ -10,7 +10,16 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "itemView"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
     return-void
@@ -22,8 +31,17 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "parent"
+        }
+    .end annotation
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    .line 1
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -31,7 +49,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e02b4
+    const v1, 0x7f0e024f
 
     const/4 v2, 0x0
 
@@ -39,6 +57,7 @@
 
     move-result-object p0
 
+    .line 2
     new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughImageViewHolder;
 
     invoke-direct {v0, p0}, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughImageViewHolder;-><init>(Landroid/view/View;)V
@@ -52,8 +71,17 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "parent"
+        }
+    .end annotation
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    .line 1
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -61,7 +89,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e02b5
+    const v1, 0x7f0e0250
 
     const/4 v2, 0x0
 
@@ -69,6 +97,7 @@
 
     move-result-object p0
 
+    .line 2
     new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughTextViewHolder;
 
     invoke-direct {v0, p0}, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughTextViewHolder;-><init>(Landroid/view/View;)V
@@ -82,8 +111,17 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "parent"
+        }
+    .end annotation
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    .line 1
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -91,7 +129,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e02b6
+    const v1, 0x7f0e0251
 
     const/4 v2, 0x0
 
@@ -99,6 +137,7 @@
 
     move-result-object p0
 
+    .line 2
     new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/top/TimerBurstViewHolder;
 
     invoke-direct {v0, p0}, Lcom/android/camera2/compat/theme/custom/mm/top/TimerBurstViewHolder;-><init>(Landroid/view/View;)V
@@ -112,8 +151,17 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "parent"
+        }
+    .end annotation
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    .line 1
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -121,7 +169,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e02b7
+    const v1, 0x7f0e0252
 
     const/4 v2, 0x0
 
@@ -129,6 +177,7 @@
 
     move-result-object p0
 
+    .line 2
     new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/top/VideoQualityViewHolder;
 
     invoke-direct {v0, p0}, Lcom/android/camera2/compat/theme/custom/mm/top/VideoQualityViewHolder;-><init>(Landroid/view/View;)V
@@ -142,6 +191,16 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "parent",
+            "viewType"
+        }
+    .end annotation
 
     const/4 v0, 0x1
 
@@ -155,12 +214,14 @@
 
     if-eq p1, v0, :cond_0
 
+    .line 1
     invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;->createStrikethroughImageViewHolder(Landroid/view/ViewGroup;)Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughImageViewHolder;
 
     move-result-object p0
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;->createStrikethroughTextViewHolder(Landroid/view/ViewGroup;)Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughTextViewHolder;
 
@@ -168,6 +229,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_1
     invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;->createTimerBurstViewHolder(Landroid/view/ViewGroup;)Lcom/android/camera2/compat/theme/custom/mm/top/TimerBurstViewHolder;
 
@@ -175,6 +237,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_2
     invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;->createVideoQualityViewHolder(Landroid/view/ViewGroup;)Lcom/android/camera2/compat/theme/custom/mm/top/VideoQualityViewHolder;
 
@@ -186,8 +249,16 @@
 
 
 # virtual methods
-.method public updateView(Lw6/l4;)V
+.method public updateView(Ld/d/a/u6/a5/q/m4;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "topItemResource"
+        }
+    .end annotation
 
     return-void
 .end method

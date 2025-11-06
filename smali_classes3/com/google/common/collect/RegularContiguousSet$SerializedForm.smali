@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/RegularContiguousSet$SerializedForm;
+.class public final Lcom/google/common/collect/RegularContiguousSet$SerializedForm;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -31,7 +31,7 @@
 
 
 # instance fields
-.field final domain:Lcom/google/common/collect/DiscreteDomain;
+.field public final domain:Lcom/google/common/collect/DiscreteDomain;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/DiscreteDomain<",
@@ -40,7 +40,7 @@
     .end annotation
 .end field
 
-.field final range:Lcom/google/common/collect/Range;
+.field public final range:Lcom/google/common/collect/Range;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/Range<",
@@ -87,6 +87,7 @@
 .method private readResolve()Ljava/lang/Object;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/RegularContiguousSet;
 
     iget-object v1, p0, Lcom/google/common/collect/RegularContiguousSet$SerializedForm;->range:Lcom/google/common/collect/Range;

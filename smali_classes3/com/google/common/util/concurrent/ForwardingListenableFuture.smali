@@ -39,6 +39,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/util/concurrent/ForwardingFuture;-><init>()V
 
     return-void
@@ -49,6 +50,7 @@
 .method public addListener(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingListenableFuture;->delegate()Lcom/google/common/util/concurrent/ListenableFuture;
 
     move-result-object p0

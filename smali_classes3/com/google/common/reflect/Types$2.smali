@@ -1,4 +1,4 @@
-.class Lcom/google/common/reflect/Types$2;
+.class public Lcom/google/common/reflect/Types$2;
 .super Lcom/google/common/reflect/TypeVisitor;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic val$result:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final synthetic val$result:Ljava/util/concurrent/atomic/AtomicReference;
 
 
 # direct methods
 .method public constructor <init>(Ljava/util/concurrent/atomic/AtomicReference;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/reflect/Types$2;->val$result:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {p0}, Lcom/google/common/reflect/TypeVisitor;-><init>()V
@@ -41,6 +42,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/Types$2;->val$result:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {p1}, Ljava/lang/Class;->getComponentType()Ljava/lang/Class;
@@ -55,6 +57,7 @@
 .method public visitGenericArrayType(Ljava/lang/reflect/GenericArrayType;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/Types$2;->val$result:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-interface {p1}, Ljava/lang/reflect/GenericArrayType;->getGenericComponentType()Ljava/lang/reflect/Type;
@@ -76,6 +79,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/Types$2;->val$result:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-interface {p1}, Ljava/lang/reflect/TypeVariable;->getBounds()[Ljava/lang/reflect/Type;
@@ -94,6 +98,7 @@
 .method public visitWildcardType(Ljava/lang/reflect/WildcardType;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/Types$2;->val$result:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-interface {p1}, Ljava/lang/reflect/WildcardType;->getUpperBounds()[Ljava/lang/reflect/Type;

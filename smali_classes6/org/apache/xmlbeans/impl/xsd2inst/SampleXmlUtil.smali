@@ -28,7 +28,7 @@
 # instance fields
 .field private _nElements:I
 
-.field _picker:Ljava/util/Random;
+.field public _picker:Ljava/util/Random;
 
 .field private _soapEnc:Z
 
@@ -325,6 +325,7 @@
 
     const-string v142, "habenas"
 
+    .line 1
     filled-new-array/range {v0 .. v142}, [Ljava/lang/String;
 
     move-result-object v0
@@ -345,6 +346,7 @@
 
     const-string v7, "any"
 
+    .line 2
     filled-new-array/range {v1 .. v7}, [Ljava/lang/String;
 
     move-result-object v0
@@ -369,12 +371,14 @@
 
     const-string v9, "edu"
 
+    .line 3
     filled-new-array/range {v1 .. v9}, [Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->DNS2:[Ljava/lang/String;
 
+    .line 4
     new-instance v0, Ljavax/xml/namespace/QName;
 
     const-string v1, "href"
@@ -383,6 +387,7 @@
 
     sput-object v0, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->HREF:Ljavax/xml/namespace/QName;
 
+    .line 5
     new-instance v1, Ljavax/xml/namespace/QName;
 
     const-string v2, "id"
@@ -391,6 +396,7 @@
 
     sput-object v1, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->ID:Ljavax/xml/namespace/QName;
 
+    .line 6
     new-instance v2, Ljavax/xml/namespace/QName;
 
     const-string v3, "http://www.w3.org/2001/XMLSchema-instance"
@@ -401,24 +407,27 @@
 
     sput-object v2, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->XSI_TYPE:Ljavax/xml/namespace/QName;
 
+    .line 7
     new-instance v2, Ljavax/xml/namespace/QName;
 
-    const-string v3, "arrayType"
+    const-string v3, "http://schemas.xmlsoap.org/soap/encoding/"
 
-    const-string v4, "http://schemas.xmlsoap.org/soap/encoding/"
+    const-string v4, "arrayType"
 
-    invoke-direct {v2, v4, v3}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v2, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->ENC_ARRAYTYPE:Ljavax/xml/namespace/QName;
 
+    .line 8
     new-instance v2, Ljavax/xml/namespace/QName;
 
-    const-string v3, "offset"
+    const-string v4, "offset"
 
-    invoke-direct {v2, v4, v3}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v2, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->ENC_OFFSET:Ljavax/xml/namespace/QName;
 
+    .line 9
     new-instance v3, Ljava/util/HashSet;
 
     const/4 v4, 0x3
@@ -451,8 +460,10 @@
 .method private constructor <init>(Z)V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/Random;
 
     const-wide/16 v1, 0x1
@@ -461,12 +472,14 @@
 
     iput-object v0, p0, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->_picker:Ljava/util/Random;
 
+    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->_typeStack:Ljava/util/ArrayList;
 
+    .line 4
     iput-boolean p1, p0, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->_soapEnc:Z
 
     return-void
@@ -475,6 +488,7 @@
 .method private closestBuiltin(Lorg/apache/xmlbeans/SchemaType;)Lorg/apache/xmlbeans/SchemaType;
     .locals 0
 
+    .line 1
     :goto_0
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaType;->isBuiltinType()Z
 
@@ -482,6 +496,7 @@
 
     if-nez p0, :cond_0
 
+    .line 2
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaType;->getBaseType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object p1
@@ -497,6 +512,7 @@
 
     const/16 v0, 0x3a
 
+    .line 1
     invoke-virtual {p0, v0}, Ljava/lang/String;->lastIndexOf(I)I
 
     move-result v0
@@ -505,12 +521,14 @@
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-virtual {p0, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v1
 
     add-int/lit8 v0, v0, 0x1
 
+    .line 3
     invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p0
@@ -520,6 +538,7 @@
     :cond_0
     const-string v1, ""
 
+    .line 4
     :goto_0
     new-instance v0, Ljavax/xml/namespace/QName;
 
@@ -772,10 +791,12 @@
 .method private determineMinMaxForSample(Lorg/apache/xmlbeans/SchemaParticle;Lorg/apache/xmlbeans/XmlCursor;)I
     .locals 4
 
+    .line 1
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaParticle;->getIntMinOccurs()I
 
     move-result v0
 
+    .line 2
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaParticle;->getIntMaxOccurs()I
 
     move-result v1
@@ -789,6 +810,7 @@
 
     if-nez v0, :cond_1
 
+    .line 3
     iget p0, p0, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->_nElements:I
 
     const/16 v2, 0x3e8
@@ -802,6 +824,7 @@
     :cond_1
     move p0, v0
 
+    .line 4
     :goto_0
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaParticle;->getParticleType()I
 
@@ -813,6 +836,7 @@
 
     return p0
 
+    .line 5
     :cond_2
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaParticle;->getMaxOccurs()Ljava/math/BigInteger;
 
@@ -824,10 +848,12 @@
 
     const-string p1, "Zero or more repetitions:"
 
+    .line 6
     invoke-interface {p2, p1}, Lorg/apache/xmlbeans/XmlCursor;->insertComment(Ljava/lang/String;)V
 
     goto :goto_1
 
+    .line 7
     :cond_3
     new-instance p1, Ljava/lang/StringBuffer;
 
@@ -847,6 +873,7 @@
 
     goto :goto_1
 
+    .line 8
     :cond_4
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaParticle;->getIntMaxOccurs()I
 
@@ -854,6 +881,7 @@
 
     if-le v2, v1, :cond_5
 
+    .line 9
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -889,6 +917,7 @@
     :cond_5
     const-string p1, "Optional:"
 
+    .line 10
     invoke-interface {p2, p1}, Lorg/apache/xmlbeans/XmlCursor;->insertComment(Ljava/lang/String;)V
 
     :goto_1
@@ -898,6 +927,7 @@
 .method private formatDate(Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
     .locals 11
 
+    .line 1
     new-instance v0, Lorg/apache/xmlbeans/GDateBuilder;
 
     new-instance v1, Ljava/util/Date;
@@ -948,6 +978,7 @@
 
     invoke-direct {v0, v1}, Lorg/apache/xmlbeans/GDateBuilder;-><init>(Ljava/util/Date;)V
 
+    .line 2
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaType;->getPrimitiveType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object v1
@@ -956,24 +987,25 @@
 
     move-result v1
 
-    const/4 v2, 0x6
+    const/4 v2, 0x0
 
-    const/4 v3, 0x5
+    const/4 v3, 0x6
 
-    const/4 v4, 0x3
+    const/4 v4, 0x5
 
-    const/4 v5, 0x4
+    const/4 v5, 0x3
 
-    const/4 v6, 0x0
+    const/4 v6, 0x4
 
     packed-switch v1, :pswitch_data_0
 
-    move-object v1, v6
+    move-object v1, v2
 
     goto/16 :goto_9
 
+    .line 3
     :pswitch_0
-    invoke-interface {p1, v5}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
+    invoke-interface {p1, v6}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v1
 
@@ -981,6 +1013,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 4
     invoke-interface {v1}, Lorg/apache/xmlbeans/XmlGMonth;->getGDateValue()Lorg/apache/xmlbeans/GDate;
 
     move-result-object v1
@@ -988,77 +1021,86 @@
     goto :goto_0
 
     :cond_0
-    move-object v1, v6
+    move-object v1, v2
 
+    .line 5
     :goto_0
+    invoke-interface {p1, v5}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
+
+    move-result-object v5
+
+    check-cast v5, Lorg/apache/xmlbeans/XmlGMonth;
+
+    if-eqz v5, :cond_2
+
+    if-eqz v1, :cond_1
+
+    .line 6
+    invoke-interface {v5}, Lorg/apache/xmlbeans/XmlGMonth;->getGDateValue()Lorg/apache/xmlbeans/GDate;
+
+    move-result-object v6
+
+    invoke-virtual {v1, v6}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
+
+    move-result v6
+
+    if-gtz v6, :cond_2
+
+    .line 7
+    :cond_1
+    invoke-interface {v5}, Lorg/apache/xmlbeans/XmlGMonth;->getGDateValue()Lorg/apache/xmlbeans/GDate;
+
+    move-result-object v1
+
+    .line 8
+    :cond_2
     invoke-interface {p1, v4}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v4
 
     check-cast v4, Lorg/apache/xmlbeans/XmlGMonth;
 
-    if-eqz v4, :cond_2
+    if-eqz v4, :cond_3
 
-    if-eqz v1, :cond_1
-
+    .line 9
     invoke-interface {v4}, Lorg/apache/xmlbeans/XmlGMonth;->getGDateValue()Lorg/apache/xmlbeans/GDate;
 
-    move-result-object v5
+    move-result-object v2
 
-    invoke-virtual {v1, v5}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
-
-    move-result v5
-
-    if-gtz v5, :cond_2
-
-    :cond_1
-    invoke-interface {v4}, Lorg/apache/xmlbeans/XmlGMonth;->getGDateValue()Lorg/apache/xmlbeans/GDate;
-
-    move-result-object v1
-
-    :cond_2
+    .line 10
+    :cond_3
     invoke-interface {p1, v3}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v3
 
     check-cast v3, Lorg/apache/xmlbeans/XmlGMonth;
 
-    if-eqz v3, :cond_3
+    if-eqz v3, :cond_28
 
+    if-eqz v2, :cond_4
+
+    .line 11
     invoke-interface {v3}, Lorg/apache/xmlbeans/XmlGMonth;->getGDateValue()Lorg/apache/xmlbeans/GDate;
 
-    move-result-object v6
+    move-result-object v4
 
-    :cond_3
-    invoke-interface {p1, v2}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
+    invoke-virtual {v2, v4}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
+
+    move-result v4
+
+    if-ltz v4, :cond_28
+
+    .line 12
+    :cond_4
+    invoke-interface {v3}, Lorg/apache/xmlbeans/XmlGMonth;->getGDateValue()Lorg/apache/xmlbeans/GDate;
 
     move-result-object v2
 
-    check-cast v2, Lorg/apache/xmlbeans/XmlGMonth;
-
-    if-eqz v2, :cond_28
-
-    if-eqz v6, :cond_4
-
-    invoke-interface {v2}, Lorg/apache/xmlbeans/XmlGMonth;->getGDateValue()Lorg/apache/xmlbeans/GDate;
-
-    move-result-object v3
-
-    invoke-virtual {v6, v3}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
-
-    move-result v3
-
-    if-ltz v3, :cond_28
-
-    :cond_4
-    invoke-interface {v2}, Lorg/apache/xmlbeans/XmlGMonth;->getGDateValue()Lorg/apache/xmlbeans/GDate;
-
-    move-result-object v6
-
     goto/16 :goto_8
 
+    .line 13
     :pswitch_1
-    invoke-interface {p1, v5}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
+    invoke-interface {p1, v6}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v1
 
@@ -1066,6 +1108,7 @@
 
     if-eqz v1, :cond_5
 
+    .line 14
     invoke-interface {v1}, Lorg/apache/xmlbeans/XmlGDay;->getGDateValue()Lorg/apache/xmlbeans/GDate;
 
     move-result-object v1
@@ -1073,77 +1116,86 @@
     goto :goto_1
 
     :cond_5
-    move-object v1, v6
+    move-object v1, v2
 
+    .line 15
     :goto_1
+    invoke-interface {p1, v5}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
+
+    move-result-object v5
+
+    check-cast v5, Lorg/apache/xmlbeans/XmlGDay;
+
+    if-eqz v5, :cond_7
+
+    if-eqz v1, :cond_6
+
+    .line 16
+    invoke-interface {v5}, Lorg/apache/xmlbeans/XmlGDay;->getGDateValue()Lorg/apache/xmlbeans/GDate;
+
+    move-result-object v6
+
+    invoke-virtual {v1, v6}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
+
+    move-result v6
+
+    if-gtz v6, :cond_7
+
+    .line 17
+    :cond_6
+    invoke-interface {v5}, Lorg/apache/xmlbeans/XmlGDay;->getGDateValue()Lorg/apache/xmlbeans/GDate;
+
+    move-result-object v1
+
+    .line 18
+    :cond_7
     invoke-interface {p1, v4}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v4
 
     check-cast v4, Lorg/apache/xmlbeans/XmlGDay;
 
-    if-eqz v4, :cond_7
+    if-eqz v4, :cond_8
 
-    if-eqz v1, :cond_6
-
+    .line 19
     invoke-interface {v4}, Lorg/apache/xmlbeans/XmlGDay;->getGDateValue()Lorg/apache/xmlbeans/GDate;
 
-    move-result-object v5
+    move-result-object v2
 
-    invoke-virtual {v1, v5}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
-
-    move-result v5
-
-    if-gtz v5, :cond_7
-
-    :cond_6
-    invoke-interface {v4}, Lorg/apache/xmlbeans/XmlGDay;->getGDateValue()Lorg/apache/xmlbeans/GDate;
-
-    move-result-object v1
-
-    :cond_7
+    .line 20
+    :cond_8
     invoke-interface {p1, v3}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v3
 
     check-cast v3, Lorg/apache/xmlbeans/XmlGDay;
 
-    if-eqz v3, :cond_8
+    if-eqz v3, :cond_28
 
+    if-eqz v2, :cond_9
+
+    .line 21
     invoke-interface {v3}, Lorg/apache/xmlbeans/XmlGDay;->getGDateValue()Lorg/apache/xmlbeans/GDate;
 
-    move-result-object v6
+    move-result-object v4
 
-    :cond_8
-    invoke-interface {p1, v2}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
+    invoke-virtual {v2, v4}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
+
+    move-result v4
+
+    if-ltz v4, :cond_28
+
+    .line 22
+    :cond_9
+    invoke-interface {v3}, Lorg/apache/xmlbeans/XmlGDay;->getGDateValue()Lorg/apache/xmlbeans/GDate;
 
     move-result-object v2
 
-    check-cast v2, Lorg/apache/xmlbeans/XmlGDay;
-
-    if-eqz v2, :cond_28
-
-    if-eqz v6, :cond_9
-
-    invoke-interface {v2}, Lorg/apache/xmlbeans/XmlGDay;->getGDateValue()Lorg/apache/xmlbeans/GDate;
-
-    move-result-object v3
-
-    invoke-virtual {v6, v3}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
-
-    move-result v3
-
-    if-ltz v3, :cond_28
-
-    :cond_9
-    invoke-interface {v2}, Lorg/apache/xmlbeans/XmlGDay;->getGDateValue()Lorg/apache/xmlbeans/GDate;
-
-    move-result-object v6
-
     goto/16 :goto_8
 
+    .line 23
     :pswitch_2
-    invoke-interface {p1, v5}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
+    invoke-interface {p1, v6}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v1
 
@@ -1151,6 +1203,7 @@
 
     if-eqz v1, :cond_a
 
+    .line 24
     invoke-interface {v1}, Lorg/apache/xmlbeans/XmlGMonthDay;->getGDateValue()Lorg/apache/xmlbeans/GDate;
 
     move-result-object v1
@@ -1158,77 +1211,86 @@
     goto :goto_2
 
     :cond_a
-    move-object v1, v6
+    move-object v1, v2
 
+    .line 25
     :goto_2
+    invoke-interface {p1, v5}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
+
+    move-result-object v5
+
+    check-cast v5, Lorg/apache/xmlbeans/XmlGMonthDay;
+
+    if-eqz v5, :cond_c
+
+    if-eqz v1, :cond_b
+
+    .line 26
+    invoke-interface {v5}, Lorg/apache/xmlbeans/XmlGMonthDay;->getGDateValue()Lorg/apache/xmlbeans/GDate;
+
+    move-result-object v6
+
+    invoke-virtual {v1, v6}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
+
+    move-result v6
+
+    if-gtz v6, :cond_c
+
+    .line 27
+    :cond_b
+    invoke-interface {v5}, Lorg/apache/xmlbeans/XmlGMonthDay;->getGDateValue()Lorg/apache/xmlbeans/GDate;
+
+    move-result-object v1
+
+    .line 28
+    :cond_c
     invoke-interface {p1, v4}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v4
 
     check-cast v4, Lorg/apache/xmlbeans/XmlGMonthDay;
 
-    if-eqz v4, :cond_c
+    if-eqz v4, :cond_d
 
-    if-eqz v1, :cond_b
-
+    .line 29
     invoke-interface {v4}, Lorg/apache/xmlbeans/XmlGMonthDay;->getGDateValue()Lorg/apache/xmlbeans/GDate;
 
-    move-result-object v5
+    move-result-object v2
 
-    invoke-virtual {v1, v5}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
-
-    move-result v5
-
-    if-gtz v5, :cond_c
-
-    :cond_b
-    invoke-interface {v4}, Lorg/apache/xmlbeans/XmlGMonthDay;->getGDateValue()Lorg/apache/xmlbeans/GDate;
-
-    move-result-object v1
-
-    :cond_c
+    .line 30
+    :cond_d
     invoke-interface {p1, v3}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v3
 
     check-cast v3, Lorg/apache/xmlbeans/XmlGMonthDay;
 
-    if-eqz v3, :cond_d
+    if-eqz v3, :cond_28
 
+    if-eqz v2, :cond_e
+
+    .line 31
     invoke-interface {v3}, Lorg/apache/xmlbeans/XmlGMonthDay;->getGDateValue()Lorg/apache/xmlbeans/GDate;
 
-    move-result-object v6
+    move-result-object v4
 
-    :cond_d
-    invoke-interface {p1, v2}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
+    invoke-virtual {v2, v4}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
+
+    move-result v4
+
+    if-ltz v4, :cond_28
+
+    .line 32
+    :cond_e
+    invoke-interface {v3}, Lorg/apache/xmlbeans/XmlGMonthDay;->getGDateValue()Lorg/apache/xmlbeans/GDate;
 
     move-result-object v2
 
-    check-cast v2, Lorg/apache/xmlbeans/XmlGMonthDay;
-
-    if-eqz v2, :cond_28
-
-    if-eqz v6, :cond_e
-
-    invoke-interface {v2}, Lorg/apache/xmlbeans/XmlGMonthDay;->getGDateValue()Lorg/apache/xmlbeans/GDate;
-
-    move-result-object v3
-
-    invoke-virtual {v6, v3}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
-
-    move-result v3
-
-    if-ltz v3, :cond_28
-
-    :cond_e
-    invoke-interface {v2}, Lorg/apache/xmlbeans/XmlGMonthDay;->getGDateValue()Lorg/apache/xmlbeans/GDate;
-
-    move-result-object v6
-
     goto/16 :goto_8
 
+    .line 33
     :pswitch_3
-    invoke-interface {p1, v5}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
+    invoke-interface {p1, v6}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v1
 
@@ -1236,6 +1298,7 @@
 
     if-eqz v1, :cond_f
 
+    .line 34
     invoke-interface {v1}, Lorg/apache/xmlbeans/XmlGYear;->getGDateValue()Lorg/apache/xmlbeans/GDate;
 
     move-result-object v1
@@ -1243,77 +1306,86 @@
     goto :goto_3
 
     :cond_f
-    move-object v1, v6
+    move-object v1, v2
 
+    .line 35
     :goto_3
+    invoke-interface {p1, v5}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
+
+    move-result-object v5
+
+    check-cast v5, Lorg/apache/xmlbeans/XmlGYear;
+
+    if-eqz v5, :cond_11
+
+    if-eqz v1, :cond_10
+
+    .line 36
+    invoke-interface {v5}, Lorg/apache/xmlbeans/XmlGYear;->getGDateValue()Lorg/apache/xmlbeans/GDate;
+
+    move-result-object v6
+
+    invoke-virtual {v1, v6}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
+
+    move-result v6
+
+    if-gtz v6, :cond_11
+
+    .line 37
+    :cond_10
+    invoke-interface {v5}, Lorg/apache/xmlbeans/XmlGYear;->getGDateValue()Lorg/apache/xmlbeans/GDate;
+
+    move-result-object v1
+
+    .line 38
+    :cond_11
     invoke-interface {p1, v4}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v4
 
     check-cast v4, Lorg/apache/xmlbeans/XmlGYear;
 
-    if-eqz v4, :cond_11
+    if-eqz v4, :cond_12
 
-    if-eqz v1, :cond_10
-
+    .line 39
     invoke-interface {v4}, Lorg/apache/xmlbeans/XmlGYear;->getGDateValue()Lorg/apache/xmlbeans/GDate;
 
-    move-result-object v5
+    move-result-object v2
 
-    invoke-virtual {v1, v5}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
-
-    move-result v5
-
-    if-gtz v5, :cond_11
-
-    :cond_10
-    invoke-interface {v4}, Lorg/apache/xmlbeans/XmlGYear;->getGDateValue()Lorg/apache/xmlbeans/GDate;
-
-    move-result-object v1
-
-    :cond_11
+    .line 40
+    :cond_12
     invoke-interface {p1, v3}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v3
 
     check-cast v3, Lorg/apache/xmlbeans/XmlGYear;
 
-    if-eqz v3, :cond_12
+    if-eqz v3, :cond_28
 
+    if-eqz v2, :cond_13
+
+    .line 41
     invoke-interface {v3}, Lorg/apache/xmlbeans/XmlGYear;->getGDateValue()Lorg/apache/xmlbeans/GDate;
 
-    move-result-object v6
+    move-result-object v4
 
-    :cond_12
-    invoke-interface {p1, v2}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
+    invoke-virtual {v2, v4}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
+
+    move-result v4
+
+    if-ltz v4, :cond_28
+
+    .line 42
+    :cond_13
+    invoke-interface {v3}, Lorg/apache/xmlbeans/XmlGYear;->getGDateValue()Lorg/apache/xmlbeans/GDate;
 
     move-result-object v2
 
-    check-cast v2, Lorg/apache/xmlbeans/XmlGYear;
-
-    if-eqz v2, :cond_28
-
-    if-eqz v6, :cond_13
-
-    invoke-interface {v2}, Lorg/apache/xmlbeans/XmlGYear;->getGDateValue()Lorg/apache/xmlbeans/GDate;
-
-    move-result-object v3
-
-    invoke-virtual {v6, v3}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
-
-    move-result v3
-
-    if-ltz v3, :cond_28
-
-    :cond_13
-    invoke-interface {v2}, Lorg/apache/xmlbeans/XmlGYear;->getGDateValue()Lorg/apache/xmlbeans/GDate;
-
-    move-result-object v6
-
     goto/16 :goto_8
 
+    .line 43
     :pswitch_4
-    invoke-interface {p1, v5}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
+    invoke-interface {p1, v6}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v1
 
@@ -1321,6 +1393,7 @@
 
     if-eqz v1, :cond_14
 
+    .line 44
     invoke-interface {v1}, Lorg/apache/xmlbeans/XmlGYearMonth;->getGDateValue()Lorg/apache/xmlbeans/GDate;
 
     move-result-object v1
@@ -1328,77 +1401,86 @@
     goto :goto_4
 
     :cond_14
-    move-object v1, v6
+    move-object v1, v2
 
+    .line 45
     :goto_4
+    invoke-interface {p1, v5}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
+
+    move-result-object v5
+
+    check-cast v5, Lorg/apache/xmlbeans/XmlGYearMonth;
+
+    if-eqz v5, :cond_16
+
+    if-eqz v1, :cond_15
+
+    .line 46
+    invoke-interface {v5}, Lorg/apache/xmlbeans/XmlGYearMonth;->getGDateValue()Lorg/apache/xmlbeans/GDate;
+
+    move-result-object v6
+
+    invoke-virtual {v1, v6}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
+
+    move-result v6
+
+    if-gtz v6, :cond_16
+
+    .line 47
+    :cond_15
+    invoke-interface {v5}, Lorg/apache/xmlbeans/XmlGYearMonth;->getGDateValue()Lorg/apache/xmlbeans/GDate;
+
+    move-result-object v1
+
+    .line 48
+    :cond_16
     invoke-interface {p1, v4}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v4
 
     check-cast v4, Lorg/apache/xmlbeans/XmlGYearMonth;
 
-    if-eqz v4, :cond_16
+    if-eqz v4, :cond_17
 
-    if-eqz v1, :cond_15
-
+    .line 49
     invoke-interface {v4}, Lorg/apache/xmlbeans/XmlGYearMonth;->getGDateValue()Lorg/apache/xmlbeans/GDate;
 
-    move-result-object v5
+    move-result-object v2
 
-    invoke-virtual {v1, v5}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
-
-    move-result v5
-
-    if-gtz v5, :cond_16
-
-    :cond_15
-    invoke-interface {v4}, Lorg/apache/xmlbeans/XmlGYearMonth;->getGDateValue()Lorg/apache/xmlbeans/GDate;
-
-    move-result-object v1
-
-    :cond_16
+    .line 50
+    :cond_17
     invoke-interface {p1, v3}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v3
 
     check-cast v3, Lorg/apache/xmlbeans/XmlGYearMonth;
 
-    if-eqz v3, :cond_17
+    if-eqz v3, :cond_28
 
+    if-eqz v2, :cond_18
+
+    .line 51
     invoke-interface {v3}, Lorg/apache/xmlbeans/XmlGYearMonth;->getGDateValue()Lorg/apache/xmlbeans/GDate;
 
-    move-result-object v6
+    move-result-object v4
 
-    :cond_17
-    invoke-interface {p1, v2}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
+    invoke-virtual {v2, v4}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
+
+    move-result v4
+
+    if-ltz v4, :cond_28
+
+    .line 52
+    :cond_18
+    invoke-interface {v3}, Lorg/apache/xmlbeans/XmlGYearMonth;->getGDateValue()Lorg/apache/xmlbeans/GDate;
 
     move-result-object v2
 
-    check-cast v2, Lorg/apache/xmlbeans/XmlGYearMonth;
-
-    if-eqz v2, :cond_28
-
-    if-eqz v6, :cond_18
-
-    invoke-interface {v2}, Lorg/apache/xmlbeans/XmlGYearMonth;->getGDateValue()Lorg/apache/xmlbeans/GDate;
-
-    move-result-object v3
-
-    invoke-virtual {v6, v3}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
-
-    move-result v3
-
-    if-ltz v3, :cond_28
-
-    :cond_18
-    invoke-interface {v2}, Lorg/apache/xmlbeans/XmlGYearMonth;->getGDateValue()Lorg/apache/xmlbeans/GDate;
-
-    move-result-object v6
-
     goto/16 :goto_8
 
+    .line 53
     :pswitch_5
-    invoke-interface {p1, v5}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
+    invoke-interface {p1, v6}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v1
 
@@ -1406,6 +1488,7 @@
 
     if-eqz v1, :cond_19
 
+    .line 54
     invoke-interface {v1}, Lorg/apache/xmlbeans/XmlDate;->getGDateValue()Lorg/apache/xmlbeans/GDate;
 
     move-result-object v1
@@ -1413,77 +1496,86 @@
     goto :goto_5
 
     :cond_19
-    move-object v1, v6
+    move-object v1, v2
 
+    .line 55
     :goto_5
+    invoke-interface {p1, v5}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
+
+    move-result-object v5
+
+    check-cast v5, Lorg/apache/xmlbeans/XmlDate;
+
+    if-eqz v5, :cond_1b
+
+    if-eqz v1, :cond_1a
+
+    .line 56
+    invoke-interface {v5}, Lorg/apache/xmlbeans/XmlDate;->getGDateValue()Lorg/apache/xmlbeans/GDate;
+
+    move-result-object v6
+
+    invoke-virtual {v1, v6}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
+
+    move-result v6
+
+    if-gtz v6, :cond_1b
+
+    .line 57
+    :cond_1a
+    invoke-interface {v5}, Lorg/apache/xmlbeans/XmlDate;->getGDateValue()Lorg/apache/xmlbeans/GDate;
+
+    move-result-object v1
+
+    .line 58
+    :cond_1b
     invoke-interface {p1, v4}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v4
 
     check-cast v4, Lorg/apache/xmlbeans/XmlDate;
 
-    if-eqz v4, :cond_1b
+    if-eqz v4, :cond_1c
 
-    if-eqz v1, :cond_1a
-
+    .line 59
     invoke-interface {v4}, Lorg/apache/xmlbeans/XmlDate;->getGDateValue()Lorg/apache/xmlbeans/GDate;
 
-    move-result-object v5
+    move-result-object v2
 
-    invoke-virtual {v1, v5}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
-
-    move-result v5
-
-    if-gtz v5, :cond_1b
-
-    :cond_1a
-    invoke-interface {v4}, Lorg/apache/xmlbeans/XmlDate;->getGDateValue()Lorg/apache/xmlbeans/GDate;
-
-    move-result-object v1
-
-    :cond_1b
+    .line 60
+    :cond_1c
     invoke-interface {p1, v3}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v3
 
     check-cast v3, Lorg/apache/xmlbeans/XmlDate;
 
-    if-eqz v3, :cond_1c
+    if-eqz v3, :cond_28
 
+    if-eqz v2, :cond_1d
+
+    .line 61
     invoke-interface {v3}, Lorg/apache/xmlbeans/XmlDate;->getGDateValue()Lorg/apache/xmlbeans/GDate;
 
-    move-result-object v6
+    move-result-object v4
 
-    :cond_1c
-    invoke-interface {p1, v2}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
+    invoke-virtual {v2, v4}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
+
+    move-result v4
+
+    if-ltz v4, :cond_28
+
+    .line 62
+    :cond_1d
+    invoke-interface {v3}, Lorg/apache/xmlbeans/XmlDate;->getGDateValue()Lorg/apache/xmlbeans/GDate;
 
     move-result-object v2
 
-    check-cast v2, Lorg/apache/xmlbeans/XmlDate;
-
-    if-eqz v2, :cond_28
-
-    if-eqz v6, :cond_1d
-
-    invoke-interface {v2}, Lorg/apache/xmlbeans/XmlDate;->getGDateValue()Lorg/apache/xmlbeans/GDate;
-
-    move-result-object v3
-
-    invoke-virtual {v6, v3}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
-
-    move-result v3
-
-    if-ltz v3, :cond_28
-
-    :cond_1d
-    invoke-interface {v2}, Lorg/apache/xmlbeans/XmlDate;->getGDateValue()Lorg/apache/xmlbeans/GDate;
-
-    move-result-object v6
-
     goto/16 :goto_8
 
+    .line 63
     :pswitch_6
-    invoke-interface {p1, v5}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
+    invoke-interface {p1, v6}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v1
 
@@ -1491,6 +1583,7 @@
 
     if-eqz v1, :cond_1e
 
+    .line 64
     invoke-interface {v1}, Lorg/apache/xmlbeans/XmlTime;->getGDateValue()Lorg/apache/xmlbeans/GDate;
 
     move-result-object v1
@@ -1498,77 +1591,86 @@
     goto :goto_6
 
     :cond_1e
-    move-object v1, v6
+    move-object v1, v2
 
+    .line 65
     :goto_6
+    invoke-interface {p1, v5}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
+
+    move-result-object v5
+
+    check-cast v5, Lorg/apache/xmlbeans/XmlTime;
+
+    if-eqz v5, :cond_20
+
+    if-eqz v1, :cond_1f
+
+    .line 66
+    invoke-interface {v5}, Lorg/apache/xmlbeans/XmlTime;->getGDateValue()Lorg/apache/xmlbeans/GDate;
+
+    move-result-object v6
+
+    invoke-virtual {v1, v6}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
+
+    move-result v6
+
+    if-gtz v6, :cond_20
+
+    .line 67
+    :cond_1f
+    invoke-interface {v5}, Lorg/apache/xmlbeans/XmlTime;->getGDateValue()Lorg/apache/xmlbeans/GDate;
+
+    move-result-object v1
+
+    .line 68
+    :cond_20
     invoke-interface {p1, v4}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v4
 
     check-cast v4, Lorg/apache/xmlbeans/XmlTime;
 
-    if-eqz v4, :cond_20
+    if-eqz v4, :cond_21
 
-    if-eqz v1, :cond_1f
-
+    .line 69
     invoke-interface {v4}, Lorg/apache/xmlbeans/XmlTime;->getGDateValue()Lorg/apache/xmlbeans/GDate;
 
-    move-result-object v5
+    move-result-object v2
 
-    invoke-virtual {v1, v5}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
-
-    move-result v5
-
-    if-gtz v5, :cond_20
-
-    :cond_1f
-    invoke-interface {v4}, Lorg/apache/xmlbeans/XmlTime;->getGDateValue()Lorg/apache/xmlbeans/GDate;
-
-    move-result-object v1
-
-    :cond_20
+    .line 70
+    :cond_21
     invoke-interface {p1, v3}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v3
 
     check-cast v3, Lorg/apache/xmlbeans/XmlTime;
 
-    if-eqz v3, :cond_21
+    if-eqz v3, :cond_28
 
+    if-eqz v2, :cond_22
+
+    .line 71
     invoke-interface {v3}, Lorg/apache/xmlbeans/XmlTime;->getGDateValue()Lorg/apache/xmlbeans/GDate;
 
-    move-result-object v6
+    move-result-object v4
 
-    :cond_21
-    invoke-interface {p1, v2}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
+    invoke-virtual {v2, v4}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
+
+    move-result v4
+
+    if-ltz v4, :cond_28
+
+    .line 72
+    :cond_22
+    invoke-interface {v3}, Lorg/apache/xmlbeans/XmlTime;->getGDateValue()Lorg/apache/xmlbeans/GDate;
 
     move-result-object v2
 
-    check-cast v2, Lorg/apache/xmlbeans/XmlTime;
-
-    if-eqz v2, :cond_28
-
-    if-eqz v6, :cond_22
-
-    invoke-interface {v2}, Lorg/apache/xmlbeans/XmlTime;->getGDateValue()Lorg/apache/xmlbeans/GDate;
-
-    move-result-object v3
-
-    invoke-virtual {v6, v3}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
-
-    move-result v3
-
-    if-ltz v3, :cond_28
-
-    :cond_22
-    invoke-interface {v2}, Lorg/apache/xmlbeans/XmlTime;->getGDateValue()Lorg/apache/xmlbeans/GDate;
-
-    move-result-object v6
-
     goto :goto_8
 
+    .line 73
     :pswitch_7
-    invoke-interface {p1, v5}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
+    invoke-interface {p1, v6}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v1
 
@@ -1576,6 +1678,7 @@
 
     if-eqz v1, :cond_23
 
+    .line 74
     invoke-interface {v1}, Lorg/apache/xmlbeans/XmlDateTime;->getGDateValue()Lorg/apache/xmlbeans/GDate;
 
     move-result-object v1
@@ -1583,106 +1686,118 @@
     goto :goto_7
 
     :cond_23
-    move-object v1, v6
+    move-object v1, v2
 
+    .line 75
     :goto_7
+    invoke-interface {p1, v5}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
+
+    move-result-object v5
+
+    check-cast v5, Lorg/apache/xmlbeans/XmlDateTime;
+
+    if-eqz v5, :cond_25
+
+    if-eqz v1, :cond_24
+
+    .line 76
+    invoke-interface {v5}, Lorg/apache/xmlbeans/XmlDateTime;->getGDateValue()Lorg/apache/xmlbeans/GDate;
+
+    move-result-object v6
+
+    invoke-virtual {v1, v6}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
+
+    move-result v6
+
+    if-gtz v6, :cond_25
+
+    .line 77
+    :cond_24
+    invoke-interface {v5}, Lorg/apache/xmlbeans/XmlDateTime;->getGDateValue()Lorg/apache/xmlbeans/GDate;
+
+    move-result-object v1
+
+    .line 78
+    :cond_25
     invoke-interface {p1, v4}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v4
 
     check-cast v4, Lorg/apache/xmlbeans/XmlDateTime;
 
-    if-eqz v4, :cond_25
+    if-eqz v4, :cond_26
 
-    if-eqz v1, :cond_24
-
+    .line 79
     invoke-interface {v4}, Lorg/apache/xmlbeans/XmlDateTime;->getGDateValue()Lorg/apache/xmlbeans/GDate;
 
-    move-result-object v5
+    move-result-object v2
 
-    invoke-virtual {v1, v5}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
-
-    move-result v5
-
-    if-gtz v5, :cond_25
-
-    :cond_24
-    invoke-interface {v4}, Lorg/apache/xmlbeans/XmlDateTime;->getGDateValue()Lorg/apache/xmlbeans/GDate;
-
-    move-result-object v1
-
-    :cond_25
+    .line 80
+    :cond_26
     invoke-interface {p1, v3}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v3
 
     check-cast v3, Lorg/apache/xmlbeans/XmlDateTime;
 
-    if-eqz v3, :cond_26
+    if-eqz v3, :cond_28
 
+    if-eqz v2, :cond_27
+
+    .line 81
     invoke-interface {v3}, Lorg/apache/xmlbeans/XmlDateTime;->getGDateValue()Lorg/apache/xmlbeans/GDate;
 
-    move-result-object v6
+    move-result-object v4
 
-    :cond_26
-    invoke-interface {p1, v2}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
+    invoke-virtual {v2, v4}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
+
+    move-result v4
+
+    if-ltz v4, :cond_28
+
+    .line 82
+    :cond_27
+    invoke-interface {v3}, Lorg/apache/xmlbeans/XmlDateTime;->getGDateValue()Lorg/apache/xmlbeans/GDate;
 
     move-result-object v2
 
-    check-cast v2, Lorg/apache/xmlbeans/XmlDateTime;
-
-    if-eqz v2, :cond_28
-
-    if-eqz v6, :cond_27
-
-    invoke-interface {v2}, Lorg/apache/xmlbeans/XmlDateTime;->getGDateValue()Lorg/apache/xmlbeans/GDate;
-
-    move-result-object v3
-
-    invoke-virtual {v6, v3}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
-
-    move-result v3
-
-    if-ltz v3, :cond_28
-
-    :cond_27
-    invoke-interface {v2}, Lorg/apache/xmlbeans/XmlDateTime;->getGDateValue()Lorg/apache/xmlbeans/GDate;
-
-    move-result-object v6
-
     :cond_28
     :goto_8
-    move-object v10, v6
+    move-object v10, v2
 
-    move-object v6, v1
+    move-object v2, v1
 
     move-object v1, v10
 
     :goto_9
-    const/16 v2, 0x8
+    const/16 v3, 0x8
 
-    const/16 v3, 0xb
+    const/16 v4, 0xb
 
-    if-eqz v6, :cond_29
+    if-eqz v2, :cond_29
 
     if-nez v1, :cond_29
 
-    invoke-virtual {v6, v0}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
+    .line 83
+    invoke-virtual {v2, v0}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
 
     move-result v1
 
     if-ltz v1, :cond_2d
 
+    .line 84
     invoke-virtual {v0}, Lorg/apache/xmlbeans/GDateBuilder;->getCalendar()Lorg/apache/xmlbeans/XmlCalendar;
 
     move-result-object v0
 
-    invoke-direct {p0, v2}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->pick(I)I
+    .line 85
+    invoke-direct {p0, v3}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->pick(I)I
 
     move-result v1
 
-    invoke-virtual {v0, v3, v1}, Ljava/util/Calendar;->add(II)V
+    invoke-virtual {v0, v4, v1}, Ljava/util/Calendar;->add(II)V
 
+    .line 86
     new-instance v1, Lorg/apache/xmlbeans/GDateBuilder;
 
     invoke-direct {v1, v0}, Lorg/apache/xmlbeans/GDateBuilder;-><init>(Ljava/util/Calendar;)V
@@ -1693,28 +1808,32 @@
     goto/16 :goto_b
 
     :cond_29
-    if-nez v6, :cond_2a
+    if-nez v2, :cond_2a
 
     if-eqz v1, :cond_2a
 
+    .line 87
     invoke-virtual {v1, v0}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
 
     move-result v1
 
     if-gtz v1, :cond_2d
 
+    .line 88
     invoke-virtual {v0}, Lorg/apache/xmlbeans/GDateBuilder;->getCalendar()Lorg/apache/xmlbeans/XmlCalendar;
 
     move-result-object v0
 
-    invoke-direct {p0, v2}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->pick(I)I
+    .line 89
+    invoke-direct {p0, v3}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->pick(I)I
 
     move-result v1
 
     rsub-int/lit8 v1, v1, 0x0
 
-    invoke-virtual {v0, v3, v1}, Ljava/util/Calendar;->add(II)V
+    invoke-virtual {v0, v4, v1}, Ljava/util/Calendar;->add(II)V
 
+    .line 90
     new-instance v1, Lorg/apache/xmlbeans/GDateBuilder;
 
     invoke-direct {v1, v0}, Lorg/apache/xmlbeans/GDateBuilder;-><init>(Ljava/util/Calendar;)V
@@ -1722,81 +1841,97 @@
     goto :goto_a
 
     :cond_2a
-    if-eqz v6, :cond_2d
+    if-eqz v2, :cond_2d
 
     if-eqz v1, :cond_2d
 
-    invoke-virtual {v6, v0}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
+    .line 91
+    invoke-virtual {v2, v0}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
 
-    move-result v2
+    move-result v3
 
-    if-gez v2, :cond_2b
+    if-gez v3, :cond_2b
 
     invoke-virtual {v1, v0}, Lorg/apache/xmlbeans/GDate;->compareToGDate(Lorg/apache/xmlbeans/GDateSpecification;)I
 
-    move-result v2
+    move-result v3
 
-    if-gtz v2, :cond_2d
+    if-gtz v3, :cond_2d
 
+    .line 92
     :cond_2b
-    invoke-virtual {v6}, Lorg/apache/xmlbeans/GDate;->getCalendar()Lorg/apache/xmlbeans/XmlCalendar;
+    invoke-virtual {v2}, Lorg/apache/xmlbeans/GDate;->getCalendar()Lorg/apache/xmlbeans/XmlCalendar;
 
     move-result-object v0
 
+    .line 93
     invoke-virtual {v1}, Lorg/apache/xmlbeans/GDate;->getCalendar()Lorg/apache/xmlbeans/XmlCalendar;
 
     move-result-object v1
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v3, v2}, Ljava/util/Calendar;->add(II)V
+    .line 94
+    invoke-virtual {v0, v4, v2}, Ljava/util/Calendar;->add(II)V
 
+    .line 95
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->after(Ljava/lang/Object;)Z
 
-    move-result v4
+    move-result v3
 
-    if-eqz v4, :cond_2c
+    if-eqz v3, :cond_2c
 
-    const/4 v4, -0x1
+    const/4 v3, -0x1
 
-    invoke-virtual {v0, v3, v4}, Ljava/util/Calendar;->add(II)V
+    .line 96
+    invoke-virtual {v0, v4, v3}, Ljava/util/Calendar;->add(II)V
 
-    const/16 v3, 0xc
+    const/16 v4, 0xc
 
-    invoke-virtual {v0, v3, v2}, Ljava/util/Calendar;->add(II)V
+    .line 97
+    invoke-virtual {v0, v4, v2}, Ljava/util/Calendar;->add(II)V
 
-    invoke-virtual {v0, v1}, Ljava/util/Calendar;->after(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_2c
-
-    invoke-virtual {v0, v3, v4}, Ljava/util/Calendar;->add(II)V
-
-    const/16 v3, 0xd
-
-    invoke-virtual {v0, v3, v2}, Ljava/util/Calendar;->add(II)V
-
+    .line 98
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->after(Ljava/lang/Object;)Z
 
     move-result v5
 
     if-eqz v5, :cond_2c
 
-    invoke-virtual {v0, v3, v4}, Ljava/util/Calendar;->add(II)V
+    .line 99
+    invoke-virtual {v0, v4, v3}, Ljava/util/Calendar;->add(II)V
 
-    const/16 v3, 0xe
+    const/16 v4, 0xd
 
-    invoke-virtual {v0, v3, v2}, Ljava/util/Calendar;->add(II)V
+    .line 100
+    invoke-virtual {v0, v4, v2}, Ljava/util/Calendar;->add(II)V
 
+    .line 101
+    invoke-virtual {v0, v1}, Ljava/util/Calendar;->after(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2c
+
+    .line 102
+    invoke-virtual {v0, v4, v3}, Ljava/util/Calendar;->add(II)V
+
+    const/16 v4, 0xe
+
+    .line 103
+    invoke-virtual {v0, v4, v2}, Ljava/util/Calendar;->add(II)V
+
+    .line 104
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->after(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2c
 
-    invoke-virtual {v0, v3, v4}, Ljava/util/Calendar;->add(II)V
+    .line 105
+    invoke-virtual {v0, v4, v3}, Ljava/util/Calendar;->add(II)V
 
+    .line 106
     :cond_2c
     new-instance v1, Lorg/apache/xmlbeans/GDateBuilder;
 
@@ -1804,6 +1939,7 @@
 
     goto :goto_a
 
+    .line 107
     :cond_2d
     :goto_b
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaType;->getPrimitiveType()Lorg/apache/xmlbeans/SchemaType;
@@ -1818,14 +1954,17 @@
 
     const/4 p1, 0x2
 
+    .line 108
     invoke-direct {p0, p1}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->pick(I)I
 
     move-result p0
 
     if-nez p0, :cond_2e
 
+    .line 109
     invoke-virtual {v0}, Lorg/apache/xmlbeans/GDateBuilder;->clearTimeZone()V
 
+    .line 110
     :cond_2e
     invoke-virtual {v0}, Lorg/apache/xmlbeans/GDateBuilder;->toString()Ljava/lang/String;
 
@@ -1849,12 +1988,14 @@
 .method private formatDecimal(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
     .locals 11
 
+    .line 1
     new-instance p0, Ljava/math/BigDecimal;
 
     invoke-direct {p0, p1}, Ljava/math/BigDecimal;-><init>(Ljava/lang/String;)V
 
     const/4 p1, 0x4
 
+    .line 2
     invoke-interface {p2, p1}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object p1
@@ -1865,6 +2006,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 3
     invoke-interface {p1}, Lorg/apache/xmlbeans/XmlDecimal;->getBigDecimalValue()Ljava/math/BigDecimal;
 
     move-result-object p1
@@ -1877,6 +2019,7 @@
     :goto_0
     const/4 v1, 0x5
 
+    .line 4
     invoke-interface {p2, v1}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v1
@@ -1885,6 +2028,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 5
     invoke-interface {v1}, Lorg/apache/xmlbeans/XmlDecimal;->getBigDecimalValue()Ljava/math/BigDecimal;
 
     move-result-object v0
@@ -1892,6 +2036,7 @@
     :cond_1
     const/4 v1, 0x3
 
+    .line 6
     invoke-interface {p2, v1}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v1
@@ -1904,12 +2049,14 @@
 
     if-eqz v1, :cond_3
 
+    .line 7
     invoke-interface {v1}, Lorg/apache/xmlbeans/XmlDecimal;->getBigDecimalValue()Ljava/math/BigDecimal;
 
     move-result-object v1
 
     if-eqz p1, :cond_2
 
+    .line 8
     invoke-virtual {p1, v1}, Ljava/math/BigDecimal;->compareTo(Ljava/math/BigDecimal;)I
 
     move-result v4
@@ -1929,6 +2076,7 @@
     :goto_1
     const/4 v4, 0x6
 
+    .line 9
     invoke-interface {p2, v4}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v4
@@ -1937,12 +2085,14 @@
 
     if-eqz v4, :cond_5
 
+    .line 10
     invoke-interface {v4}, Lorg/apache/xmlbeans/XmlDecimal;->getBigDecimalValue()Ljava/math/BigDecimal;
 
     move-result-object v4
 
     if-eqz v0, :cond_4
 
+    .line 11
     invoke-virtual {v0, v4}, Ljava/math/BigDecimal;->compareTo(Ljava/math/BigDecimal;)I
 
     move-result v5
@@ -1962,6 +2112,7 @@
     :goto_2
     const/4 v5, 0x7
 
+    .line 12
     invoke-interface {p2, v5}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v5
@@ -1972,6 +2123,7 @@
 
     if-eqz v5, :cond_8
 
+    .line 13
     invoke-interface {v5}, Lorg/apache/xmlbeans/XmlDecimal;->getBigDecimalValue()Ljava/math/BigDecimal;
 
     move-result-object v5
@@ -1980,6 +2132,7 @@
 
     move-result v5
 
+    .line 14
     new-instance v7, Ljava/lang/StringBuffer;
 
     invoke-direct {v7, v5}, Ljava/lang/StringBuffer;-><init>(I)V
@@ -1991,12 +2144,14 @@
 
     const/16 v9, 0x39
 
+    .line 15
     invoke-virtual {v7, v9}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_3
 
+    .line 16
     :cond_6
     new-instance v8, Ljava/math/BigDecimal;
 
@@ -2008,6 +2163,7 @@
 
     if-eqz v0, :cond_7
 
+    .line 17
     invoke-virtual {v0, v8}, Ljava/math/BigDecimal;->compareTo(Ljava/math/BigDecimal;)I
 
     move-result v7
@@ -2018,6 +2174,7 @@
 
     move-object v0, v8
 
+    .line 18
     :cond_7
     invoke-virtual {v8}, Ljava/math/BigDecimal;->negate()Ljava/math/BigDecimal;
 
@@ -2025,6 +2182,7 @@
 
     if-eqz p1, :cond_9
 
+    .line 19
     invoke-virtual {p1, v7}, Ljava/math/BigDecimal;->compareTo(Ljava/math/BigDecimal;)I
 
     move-result v8
@@ -2048,6 +2206,7 @@
 
     goto :goto_5
 
+    .line 20
     :cond_a
     invoke-virtual {p0, p1}, Ljava/math/BigDecimal;->compareTo(Ljava/math/BigDecimal;)I
 
@@ -2060,6 +2219,7 @@
 
     goto :goto_6
 
+    .line 21
     :cond_b
     invoke-virtual {p0, v0}, Ljava/math/BigDecimal;->compareTo(Ljava/math/BigDecimal;)I
 
@@ -2104,6 +2264,7 @@
     :goto_a
     const/16 v9, 0x8
 
+    .line 22
     invoke-interface {p2, v9}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object p2
@@ -2114,12 +2275,14 @@
 
     if-nez p2, :cond_10
 
+    .line 23
     new-instance p2, Ljava/math/BigDecimal;
 
     invoke-direct {p2, v9, v10}, Ljava/math/BigDecimal;-><init>(D)V
 
     goto :goto_c
 
+    .line 24
     :cond_10
     invoke-interface {p2}, Lorg/apache/xmlbeans/XmlDecimal;->getBigDecimalValue()Ljava/math/BigDecimal;
 
@@ -2131,6 +2294,7 @@
 
     if-lez v6, :cond_12
 
+    .line 25
     new-instance p2, Ljava/lang/StringBuffer;
 
     const-string v9, "0."
@@ -2144,6 +2308,7 @@
 
     const/16 v10, 0x30
 
+    .line 26
     invoke-virtual {p2, v10}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
     add-int/lit8 v9, v9, 0x1
@@ -2153,8 +2318,10 @@
     :cond_11
     const/16 v9, 0x31
 
+    .line 27
     invoke-virtual {p2, v9}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
+    .line 28
     new-instance v9, Ljava/math/BigDecimal;
 
     invoke-virtual {p2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
@@ -2167,6 +2334,7 @@
 
     goto :goto_c
 
+    .line 29
     :cond_12
     new-instance p2, Ljava/math/BigDecimal;
 
@@ -2190,6 +2358,7 @@
 
     goto :goto_d
 
+    .line 30
     :cond_14
     invoke-virtual {v0, p2}, Ljava/math/BigDecimal;->subtract(Ljava/math/BigDecimal;)Ljava/math/BigDecimal;
 
@@ -2208,11 +2377,13 @@
 
     goto :goto_d
 
+    .line 31
     :cond_16
     invoke-virtual {p1, p2}, Ljava/math/BigDecimal;->add(Ljava/math/BigDecimal;)Ljava/math/BigDecimal;
 
     move-result-object p0
 
+    .line 32
     :cond_17
     :goto_d
     new-instance p1, Ljava/math/BigDecimal;
@@ -2225,6 +2396,7 @@
 
     move v0, v2
 
+    .line 33
     :goto_e
     invoke-virtual {p2}, Ljava/math/BigDecimal;->abs()Ljava/math/BigDecimal;
 
@@ -2236,6 +2408,7 @@
 
     if-ltz v1, :cond_18
 
+    .line 34
     invoke-virtual {p2, v3}, Ljava/math/BigDecimal;->movePointLeft(I)Ljava/math/BigDecimal;
 
     move-result-object p2
@@ -2251,6 +2424,7 @@
 
     sub-int/2addr v5, v0
 
+    .line 35
     invoke-static {v6, v5}, Ljava/lang/Math;->max(II)I
 
     move-result p1
@@ -2259,6 +2433,7 @@
 
     goto :goto_f
 
+    .line 36
     :cond_19
     invoke-virtual {p0, v6}, Ljava/math/BigDecimal;->setScale(I)Ljava/math/BigDecimal;
 
@@ -2267,8 +2442,10 @@
     :cond_1a
     if-nez v6, :cond_1b
 
+    .line 37
     invoke-virtual {p0, v2}, Ljava/math/BigDecimal;->setScale(I)Ljava/math/BigDecimal;
 
+    .line 38
     :cond_1b
     :goto_f
     invoke-virtual {p0}, Ljava/math/BigDecimal;->toString()Ljava/lang/String;
@@ -2283,6 +2460,7 @@
 
     const/4 v0, 0x4
 
+    .line 1
     invoke-interface {p1, v0}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v0
@@ -2293,6 +2471,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {v0}, Lorg/apache/xmlbeans/XmlDuration;->getGDurationValue()Lorg/apache/xmlbeans/GDuration;
 
     move-result-object v0
@@ -2305,6 +2484,7 @@
     :goto_0
     const/4 v2, 0x5
 
+    .line 3
     invoke-interface {p1, v2}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v2
@@ -2313,6 +2493,7 @@
 
     if-eqz v2, :cond_1
 
+    .line 4
     invoke-interface {v2}, Lorg/apache/xmlbeans/XmlDuration;->getGDurationValue()Lorg/apache/xmlbeans/GDuration;
 
     move-result-object v2
@@ -2325,6 +2506,7 @@
     :goto_1
     const/4 v3, 0x3
 
+    .line 5
     invoke-interface {p1, v3}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v3
@@ -2333,6 +2515,7 @@
 
     if-eqz v3, :cond_2
 
+    .line 6
     invoke-interface {v3}, Lorg/apache/xmlbeans/XmlDuration;->getGDurationValue()Lorg/apache/xmlbeans/GDuration;
 
     move-result-object v3
@@ -2345,6 +2528,7 @@
     :goto_2
     const/4 v4, 0x6
 
+    .line 7
     invoke-interface {p1, v4}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object p1
@@ -2353,10 +2537,12 @@
 
     if-eqz p1, :cond_3
 
+    .line 8
     invoke-interface {p1}, Lorg/apache/xmlbeans/XmlDuration;->getGDurationValue()Lorg/apache/xmlbeans/GDuration;
 
     move-result-object v1
 
+    .line 9
     :cond_3
     new-instance p1, Lorg/apache/xmlbeans/GDurationBuilder;
 
@@ -2364,6 +2550,7 @@
 
     const v4, 0xc3500
 
+    .line 10
     invoke-direct {p0, v4}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->pick(I)I
 
     move-result v4
@@ -2372,6 +2559,7 @@
 
     const/16 v4, 0x14
 
+    .line 11
     invoke-direct {p0, v4}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->pick(I)I
 
     move-result p0
@@ -2380,6 +2568,7 @@
 
     if-eqz v0, :cond_a
 
+    .line 12
     invoke-virtual {p1}, Lorg/apache/xmlbeans/GDurationBuilder;->getYear()I
 
     move-result p0
@@ -2390,12 +2579,14 @@
 
     if-ge p0, v4, :cond_4
 
+    .line 13
     invoke-virtual {v0}, Lorg/apache/xmlbeans/GDuration;->getYear()I
 
     move-result p0
 
     invoke-virtual {p1, p0}, Lorg/apache/xmlbeans/GDurationBuilder;->setYear(I)V
 
+    .line 14
     :cond_4
     invoke-virtual {p1}, Lorg/apache/xmlbeans/GDurationBuilder;->getMonth()I
 
@@ -2407,12 +2598,14 @@
 
     if-ge p0, v4, :cond_5
 
+    .line 15
     invoke-virtual {v0}, Lorg/apache/xmlbeans/GDuration;->getMonth()I
 
     move-result p0
 
     invoke-virtual {p1, p0}, Lorg/apache/xmlbeans/GDurationBuilder;->setMonth(I)V
 
+    .line 16
     :cond_5
     invoke-virtual {p1}, Lorg/apache/xmlbeans/GDurationBuilder;->getDay()I
 
@@ -2424,12 +2617,14 @@
 
     if-ge p0, v4, :cond_6
 
+    .line 17
     invoke-virtual {v0}, Lorg/apache/xmlbeans/GDuration;->getDay()I
 
     move-result p0
 
     invoke-virtual {p1, p0}, Lorg/apache/xmlbeans/GDurationBuilder;->setDay(I)V
 
+    .line 18
     :cond_6
     invoke-virtual {p1}, Lorg/apache/xmlbeans/GDurationBuilder;->getHour()I
 
@@ -2441,12 +2636,14 @@
 
     if-ge p0, v4, :cond_7
 
+    .line 19
     invoke-virtual {v0}, Lorg/apache/xmlbeans/GDuration;->getHour()I
 
     move-result p0
 
     invoke-virtual {p1, p0}, Lorg/apache/xmlbeans/GDurationBuilder;->setHour(I)V
 
+    .line 20
     :cond_7
     invoke-virtual {p1}, Lorg/apache/xmlbeans/GDurationBuilder;->getMinute()I
 
@@ -2458,12 +2655,14 @@
 
     if-ge p0, v4, :cond_8
 
+    .line 21
     invoke-virtual {v0}, Lorg/apache/xmlbeans/GDuration;->getMinute()I
 
     move-result p0
 
     invoke-virtual {p1, p0}, Lorg/apache/xmlbeans/GDurationBuilder;->setMinute(I)V
 
+    .line 22
     :cond_8
     invoke-virtual {p1}, Lorg/apache/xmlbeans/GDurationBuilder;->getSecond()I
 
@@ -2475,12 +2674,14 @@
 
     if-ge p0, v4, :cond_9
 
+    .line 23
     invoke-virtual {v0}, Lorg/apache/xmlbeans/GDuration;->getSecond()I
 
     move-result p0
 
     invoke-virtual {p1, p0}, Lorg/apache/xmlbeans/GDurationBuilder;->setSecond(I)V
 
+    .line 24
     :cond_9
     invoke-virtual {p1}, Lorg/apache/xmlbeans/GDurationBuilder;->getFraction()Ljava/math/BigDecimal;
 
@@ -2496,6 +2697,7 @@
 
     if-gez p0, :cond_a
 
+    .line 25
     invoke-virtual {v0}, Lorg/apache/xmlbeans/GDuration;->getFraction()Ljava/math/BigDecimal;
 
     move-result-object p0
@@ -2505,6 +2707,7 @@
     :cond_a
     if-eqz v2, :cond_11
 
+    .line 26
     invoke-virtual {p1}, Lorg/apache/xmlbeans/GDurationBuilder;->getYear()I
 
     move-result p0
@@ -2515,12 +2718,14 @@
 
     if-le p0, v0, :cond_b
 
+    .line 27
     invoke-virtual {v2}, Lorg/apache/xmlbeans/GDuration;->getYear()I
 
     move-result p0
 
     invoke-virtual {p1, p0}, Lorg/apache/xmlbeans/GDurationBuilder;->setYear(I)V
 
+    .line 28
     :cond_b
     invoke-virtual {p1}, Lorg/apache/xmlbeans/GDurationBuilder;->getMonth()I
 
@@ -2532,12 +2737,14 @@
 
     if-le p0, v0, :cond_c
 
+    .line 29
     invoke-virtual {v2}, Lorg/apache/xmlbeans/GDuration;->getMonth()I
 
     move-result p0
 
     invoke-virtual {p1, p0}, Lorg/apache/xmlbeans/GDurationBuilder;->setMonth(I)V
 
+    .line 30
     :cond_c
     invoke-virtual {p1}, Lorg/apache/xmlbeans/GDurationBuilder;->getDay()I
 
@@ -2549,12 +2756,14 @@
 
     if-le p0, v0, :cond_d
 
+    .line 31
     invoke-virtual {v2}, Lorg/apache/xmlbeans/GDuration;->getDay()I
 
     move-result p0
 
     invoke-virtual {p1, p0}, Lorg/apache/xmlbeans/GDurationBuilder;->setDay(I)V
 
+    .line 32
     :cond_d
     invoke-virtual {p1}, Lorg/apache/xmlbeans/GDurationBuilder;->getHour()I
 
@@ -2566,12 +2775,14 @@
 
     if-le p0, v0, :cond_e
 
+    .line 33
     invoke-virtual {v2}, Lorg/apache/xmlbeans/GDuration;->getHour()I
 
     move-result p0
 
     invoke-virtual {p1, p0}, Lorg/apache/xmlbeans/GDurationBuilder;->setHour(I)V
 
+    .line 34
     :cond_e
     invoke-virtual {p1}, Lorg/apache/xmlbeans/GDurationBuilder;->getMinute()I
 
@@ -2583,12 +2794,14 @@
 
     if-le p0, v0, :cond_f
 
+    .line 35
     invoke-virtual {v2}, Lorg/apache/xmlbeans/GDuration;->getMinute()I
 
     move-result p0
 
     invoke-virtual {p1, p0}, Lorg/apache/xmlbeans/GDurationBuilder;->setMinute(I)V
 
+    .line 36
     :cond_f
     invoke-virtual {p1}, Lorg/apache/xmlbeans/GDurationBuilder;->getSecond()I
 
@@ -2600,12 +2813,14 @@
 
     if-le p0, v0, :cond_10
 
+    .line 37
     invoke-virtual {v2}, Lorg/apache/xmlbeans/GDuration;->getSecond()I
 
     move-result p0
 
     invoke-virtual {p1, p0}, Lorg/apache/xmlbeans/GDurationBuilder;->setSecond(I)V
 
+    .line 38
     :cond_10
     invoke-virtual {p1}, Lorg/apache/xmlbeans/GDurationBuilder;->getFraction()Ljava/math/BigDecimal;
 
@@ -2621,6 +2836,7 @@
 
     if-lez p0, :cond_11
 
+    .line 39
     invoke-virtual {v2}, Lorg/apache/xmlbeans/GDuration;->getFraction()Ljava/math/BigDecimal;
 
     move-result-object p0
@@ -2630,6 +2846,7 @@
     :cond_11
     if-eqz v3, :cond_18
 
+    .line 40
     invoke-virtual {p1}, Lorg/apache/xmlbeans/GDurationBuilder;->getYear()I
 
     move-result p0
@@ -2640,6 +2857,7 @@
 
     if-gt p0, v0, :cond_12
 
+    .line 41
     invoke-virtual {v3}, Lorg/apache/xmlbeans/GDuration;->getYear()I
 
     move-result p0
@@ -2648,6 +2866,7 @@
 
     invoke-virtual {p1, p0}, Lorg/apache/xmlbeans/GDurationBuilder;->setYear(I)V
 
+    .line 42
     :cond_12
     invoke-virtual {p1}, Lorg/apache/xmlbeans/GDurationBuilder;->getMonth()I
 
@@ -2659,6 +2878,7 @@
 
     if-gt p0, v0, :cond_13
 
+    .line 43
     invoke-virtual {v3}, Lorg/apache/xmlbeans/GDuration;->getMonth()I
 
     move-result p0
@@ -2667,6 +2887,7 @@
 
     invoke-virtual {p1, p0}, Lorg/apache/xmlbeans/GDurationBuilder;->setMonth(I)V
 
+    .line 44
     :cond_13
     invoke-virtual {p1}, Lorg/apache/xmlbeans/GDurationBuilder;->getDay()I
 
@@ -2678,6 +2899,7 @@
 
     if-gt p0, v0, :cond_14
 
+    .line 45
     invoke-virtual {v3}, Lorg/apache/xmlbeans/GDuration;->getDay()I
 
     move-result p0
@@ -2686,6 +2908,7 @@
 
     invoke-virtual {p1, p0}, Lorg/apache/xmlbeans/GDurationBuilder;->setDay(I)V
 
+    .line 46
     :cond_14
     invoke-virtual {p1}, Lorg/apache/xmlbeans/GDurationBuilder;->getHour()I
 
@@ -2697,6 +2920,7 @@
 
     if-gt p0, v0, :cond_15
 
+    .line 47
     invoke-virtual {v3}, Lorg/apache/xmlbeans/GDuration;->getHour()I
 
     move-result p0
@@ -2705,6 +2929,7 @@
 
     invoke-virtual {p1, p0}, Lorg/apache/xmlbeans/GDurationBuilder;->setHour(I)V
 
+    .line 48
     :cond_15
     invoke-virtual {p1}, Lorg/apache/xmlbeans/GDurationBuilder;->getMinute()I
 
@@ -2716,6 +2941,7 @@
 
     if-gt p0, v0, :cond_16
 
+    .line 49
     invoke-virtual {v3}, Lorg/apache/xmlbeans/GDuration;->getMinute()I
 
     move-result p0
@@ -2724,6 +2950,7 @@
 
     invoke-virtual {p1, p0}, Lorg/apache/xmlbeans/GDurationBuilder;->setMinute(I)V
 
+    .line 50
     :cond_16
     invoke-virtual {p1}, Lorg/apache/xmlbeans/GDurationBuilder;->getSecond()I
 
@@ -2735,6 +2962,7 @@
 
     if-gt p0, v0, :cond_17
 
+    .line 51
     invoke-virtual {v3}, Lorg/apache/xmlbeans/GDuration;->getSecond()I
 
     move-result p0
@@ -2743,6 +2971,7 @@
 
     invoke-virtual {p1, p0}, Lorg/apache/xmlbeans/GDurationBuilder;->setSecond(I)V
 
+    .line 52
     :cond_17
     invoke-virtual {p1}, Lorg/apache/xmlbeans/GDurationBuilder;->getFraction()Ljava/math/BigDecimal;
 
@@ -2758,6 +2987,7 @@
 
     if-gtz p0, :cond_18
 
+    .line 53
     invoke-virtual {v3}, Lorg/apache/xmlbeans/GDuration;->getFraction()Ljava/math/BigDecimal;
 
     move-result-object p0
@@ -2777,6 +3007,7 @@
     :cond_18
     if-eqz v1, :cond_1f
 
+    .line 54
     invoke-virtual {p1}, Lorg/apache/xmlbeans/GDurationBuilder;->getYear()I
 
     move-result p0
@@ -2787,12 +3018,14 @@
 
     if-le p0, v0, :cond_19
 
+    .line 55
     invoke-virtual {v1}, Lorg/apache/xmlbeans/GDuration;->getYear()I
 
     move-result p0
 
     invoke-virtual {p1, p0}, Lorg/apache/xmlbeans/GDurationBuilder;->setYear(I)V
 
+    .line 56
     :cond_19
     invoke-virtual {p1}, Lorg/apache/xmlbeans/GDurationBuilder;->getMonth()I
 
@@ -2804,12 +3037,14 @@
 
     if-le p0, v0, :cond_1a
 
+    .line 57
     invoke-virtual {v1}, Lorg/apache/xmlbeans/GDuration;->getMonth()I
 
     move-result p0
 
     invoke-virtual {p1, p0}, Lorg/apache/xmlbeans/GDurationBuilder;->setMonth(I)V
 
+    .line 58
     :cond_1a
     invoke-virtual {p1}, Lorg/apache/xmlbeans/GDurationBuilder;->getDay()I
 
@@ -2821,12 +3056,14 @@
 
     if-le p0, v0, :cond_1b
 
+    .line 59
     invoke-virtual {v1}, Lorg/apache/xmlbeans/GDuration;->getDay()I
 
     move-result p0
 
     invoke-virtual {p1, p0}, Lorg/apache/xmlbeans/GDurationBuilder;->setDay(I)V
 
+    .line 60
     :cond_1b
     invoke-virtual {p1}, Lorg/apache/xmlbeans/GDurationBuilder;->getHour()I
 
@@ -2838,12 +3075,14 @@
 
     if-le p0, v0, :cond_1c
 
+    .line 61
     invoke-virtual {v1}, Lorg/apache/xmlbeans/GDuration;->getHour()I
 
     move-result p0
 
     invoke-virtual {p1, p0}, Lorg/apache/xmlbeans/GDurationBuilder;->setHour(I)V
 
+    .line 62
     :cond_1c
     invoke-virtual {p1}, Lorg/apache/xmlbeans/GDurationBuilder;->getMinute()I
 
@@ -2855,12 +3094,14 @@
 
     if-le p0, v0, :cond_1d
 
+    .line 63
     invoke-virtual {v1}, Lorg/apache/xmlbeans/GDuration;->getMinute()I
 
     move-result p0
 
     invoke-virtual {p1, p0}, Lorg/apache/xmlbeans/GDurationBuilder;->setMinute(I)V
 
+    .line 64
     :cond_1d
     invoke-virtual {p1}, Lorg/apache/xmlbeans/GDurationBuilder;->getSecond()I
 
@@ -2872,12 +3113,14 @@
 
     if-le p0, v0, :cond_1e
 
+    .line 65
     invoke-virtual {v1}, Lorg/apache/xmlbeans/GDuration;->getSecond()I
 
     move-result p0
 
     invoke-virtual {p1, p0}, Lorg/apache/xmlbeans/GDurationBuilder;->setSecond(I)V
 
+    .line 66
     :cond_1e
     invoke-virtual {p1}, Lorg/apache/xmlbeans/GDurationBuilder;->getFraction()Ljava/math/BigDecimal;
 
@@ -2893,15 +3136,18 @@
 
     if-lez p0, :cond_1f
 
+    .line 67
     invoke-virtual {v1}, Lorg/apache/xmlbeans/GDuration;->getFraction()Ljava/math/BigDecimal;
 
     move-result-object p0
 
     invoke-virtual {p1, p0}, Lorg/apache/xmlbeans/GDurationBuilder;->setFraction(Ljava/math/BigDecimal;)V
 
+    .line 68
     :cond_1f
     invoke-virtual {p1}, Lorg/apache/xmlbeans/GDurationBuilder;->normalize()V
 
+    .line 69
     invoke-virtual {p1}, Lorg/apache/xmlbeans/GDurationBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -2912,12 +3158,15 @@
 .method private static final formatQName(Lorg/apache/xmlbeans/XmlCursor;Ljavax/xml/namespace/QName;)Ljava/lang/String;
     .locals 1
 
+    .line 1
     invoke-interface {p0}, Lorg/apache/xmlbeans/XmlTokenSource;->newCursor()Lorg/apache/xmlbeans/XmlCursor;
 
     move-result-object p0
 
+    .line 2
     invoke-interface {p0}, Lorg/apache/xmlbeans/XmlCursor;->toParent()Z
 
+    .line 3
     invoke-virtual {p1}, Ljavax/xml/namespace/QName;->getNamespaceURI()Ljava/lang/String;
 
     move-result-object v0
@@ -2926,10 +3175,12 @@
 
     move-result-object v0
 
+    .line 4
     invoke-interface {p0}, Lorg/apache/xmlbeans/XmlCursor;->dispose()V
 
     if-eqz v0, :cond_1
 
+    .line 5
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result p0
@@ -2938,6 +3189,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     new-instance p0, Ljava/lang/StringBuffer;
 
@@ -2961,6 +3213,7 @@
 
     goto :goto_1
 
+    .line 7
     :cond_1
     :goto_0
     invoke-virtual {p1}, Ljavax/xml/namespace/QName;->getLocalPart()Ljava/lang/String;
@@ -2976,6 +3229,7 @@
 
     const/4 p0, 0x0
 
+    .line 1
     :try_start_0
     invoke-interface {p2, p0}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
@@ -2987,6 +3241,7 @@
 
     const/4 v0, 0x1
 
+    .line 2
     invoke-interface {p2, v0}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v0
@@ -2996,10 +3251,12 @@
     :cond_0
     if-eqz v0, :cond_1
 
+    .line 3
     invoke-interface {v0}, Lorg/apache/xmlbeans/SimpleValue;->getIntValue()I
 
     move-result v0
 
+    .line 4
     :goto_0
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -3007,6 +3264,7 @@
 
     if-ge v1, v0, :cond_1
 
+    .line 5
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -3021,6 +3279,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_1
     invoke-interface {p2, p0}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
@@ -3032,6 +3291,7 @@
 
     const/4 v0, 0x2
 
+    .line 7
     invoke-interface {p2, v0}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object p2
@@ -3043,16 +3303,19 @@
     :cond_2
     if-eqz v0, :cond_3
 
+    .line 8
     invoke-interface {v0}, Lorg/apache/xmlbeans/SimpleValue;->getIntValue()I
 
     move-result p2
 
+    .line 9
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
 
     if-le v0, p2, :cond_3
 
+    .line 10
     invoke-virtual {p1, p0, p2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p1
@@ -3067,6 +3330,7 @@
 .method private static getClosestName(Lorg/apache/xmlbeans/SchemaType;)Ljavax/xml/namespace/QName;
     .locals 1
 
+    .line 1
     :goto_0
     invoke-interface {p0}, Lorg/apache/xmlbeans/SchemaType;->getName()Ljavax/xml/namespace/QName;
 
@@ -3074,12 +3338,14 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-interface {p0}, Lorg/apache/xmlbeans/SchemaType;->getBaseType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object p0
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-interface {p0}, Lorg/apache/xmlbeans/SchemaType;->getName()Ljavax/xml/namespace/QName;
 
@@ -3091,6 +3357,7 @@
 .method private getItemNameOrType(Lorg/apache/xmlbeans/SchemaParticle;Lorg/apache/xmlbeans/XmlCursor;)Ljava/lang/String;
     .locals 1
 
+    .line 1
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaParticle;->getParticleType()I
 
     move-result p2
@@ -3099,6 +3366,7 @@
 
     if-ne p2, v0, :cond_0
 
+    .line 2
     new-instance p0, Ljava/lang/StringBuffer;
 
     invoke-direct {p0}, Ljava/lang/StringBuffer;-><init>()V
@@ -3127,6 +3395,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaParticle;->getParticleType()I
 
@@ -3145,6 +3414,7 @@
 
     const/4 p0, 0x0
 
+    .line 1
     :goto_0
     invoke-static {p1}, Ljava/lang/Math;->abs(I)I
 
@@ -3154,10 +3424,12 @@
 
     if-gez p1, :cond_0
 
+    .line 2
     invoke-interface {p2}, Lorg/apache/xmlbeans/XmlCursor;->toPrevToken()Lorg/apache/xmlbeans/XmlCursor$TokenType;
 
     goto :goto_1
 
+    .line 3
     :cond_0
     invoke-interface {p2}, Lorg/apache/xmlbeans/XmlCursor;->toNextToken()Lorg/apache/xmlbeans/XmlCursor$TokenType;
 
@@ -3263,6 +3535,7 @@
 .method private pickDigits(I)Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -3274,6 +3547,7 @@
 
     const/16 p1, 0xa
 
+    .line 2
     invoke-direct {p0, p1}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->pick(I)I
 
     move-result p1
@@ -3288,6 +3562,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -3301,6 +3576,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-interface {p1, v0}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v1
@@ -3309,6 +3585,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 2
     invoke-interface {v1}, Lorg/apache/xmlbeans/XmlInteger;->getBigIntegerValue()Ljava/math/BigInteger;
 
     move-result-object p0
@@ -3322,6 +3599,7 @@
     :cond_0
     const/4 v1, 0x1
 
+    .line 3
     invoke-interface {p1, v1}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v2
@@ -3330,6 +3608,7 @@
 
     const/4 v3, 0x2
 
+    .line 4
     invoke-interface {p1, v3}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object p1
@@ -3340,6 +3619,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     invoke-interface {v2}, Lorg/apache/xmlbeans/XmlInteger;->getBigIntegerValue()Ljava/math/BigInteger;
 
@@ -3356,6 +3636,7 @@
 
     goto :goto_1
 
+    .line 6
     :cond_2
     invoke-interface {p1}, Lorg/apache/xmlbeans/XmlInteger;->getBigIntegerValue()Ljava/math/BigInteger;
 
@@ -3390,6 +3671,7 @@
     :cond_5
     sub-int/2addr p1, v1
 
+    .line 7
     invoke-direct {p0, p1}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->pick(I)I
 
     move-result p0
@@ -3402,12 +3684,14 @@
 .method private printParticleType(I)Ljava/lang/String;
     .locals 1
 
+    .line 1
     new-instance p0, Ljava/lang/StringBuffer;
 
     invoke-direct {p0}, Ljava/lang/StringBuffer;-><init>()V
 
     const-string v0, "Schema Particle Type: "
 
+    .line 2
     invoke-virtual {p0, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     const/4 v0, 0x1
@@ -3432,6 +3716,7 @@
 
     const-string p1, "Schema Particle Type Unknown"
 
+    .line 3
     invoke-virtual {p0, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     goto :goto_0
@@ -3439,6 +3724,7 @@
     :cond_0
     const-string p1, "WILDCARD\n"
 
+    .line 4
     invoke-virtual {p0, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     goto :goto_0
@@ -3446,6 +3732,7 @@
     :cond_1
     const-string p1, "ELEMENT\n"
 
+    .line 5
     invoke-virtual {p0, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     goto :goto_0
@@ -3453,6 +3740,7 @@
     :cond_2
     const-string p1, "SEQUENCE\n"
 
+    .line 6
     invoke-virtual {p0, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     goto :goto_0
@@ -3460,6 +3748,7 @@
     :cond_3
     const-string p1, "CHOICE\n"
 
+    .line 7
     invoke-virtual {p0, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     goto :goto_0
@@ -3467,8 +3756,10 @@
     :cond_4
     const-string p1, "ALL\n"
 
+    .line 8
     invoke-virtual {p0, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    .line 9
     :goto_0
     invoke-virtual {p0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -3480,29 +3771,34 @@
 .method private processAll(Lorg/apache/xmlbeans/SchemaParticle;Lorg/apache/xmlbeans/XmlCursor;Z)V
     .locals 2
 
+    .line 1
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaParticle;->getParticleChildren()[Lorg/apache/xmlbeans/SchemaParticle;
 
     move-result-object p1
 
     const/4 v0, 0x0
 
+    .line 2
     :goto_0
     array-length v1, p1
 
     if-ge v0, v1, :cond_1
 
+    .line 3
     aget-object v1, p1, v0
 
     invoke-direct {p0, v1, p2, p3}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->processParticle(Lorg/apache/xmlbeans/SchemaParticle;Lorg/apache/xmlbeans/XmlCursor;Z)V
 
     if-eqz p3, :cond_0
 
+    .line 4
     array-length v1, p1
 
     add-int/lit8 v1, v1, -0x1
 
     if-ge v0, v1, :cond_0
 
+    .line 5
     sget-object v1, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->WORDS:[Ljava/lang/String;
 
     invoke-direct {p0, v1}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->pick([Ljava/lang/String;)Ljava/lang/String;
@@ -3523,16 +3819,19 @@
 .method private processAttributes(Lorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/XmlCursor;)V
     .locals 6
 
+    .line 1
     iget-boolean v0, p0, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->_soapEnc:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaType;->getName()Ljavax/xml/namespace/QName;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     sget-object v1, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->XSI_TYPE:Ljavax/xml/namespace/QName;
 
     invoke-static {p2, v0}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->formatQName(Lorg/apache/xmlbeans/XmlCursor;Ljavax/xml/namespace/QName;)Ljava/lang/String;
@@ -3541,6 +3840,7 @@
 
     invoke-interface {p2, v1, v0}, Lorg/apache/xmlbeans/XmlCursor;->insertAttributeWithValue(Ljavax/xml/namespace/QName;Ljava/lang/String;)V
 
+    .line 4
     :cond_0
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaType;->getAttributeProperties()[Lorg/apache/xmlbeans/SchemaProperty;
 
@@ -3548,17 +3848,21 @@
 
     const/4 v1, 0x0
 
+    .line 5
     :goto_0
     array-length v2, v0
 
     if-ge v1, v2, :cond_5
 
+    .line 6
     aget-object v2, v0, v1
 
+    .line 7
     iget-boolean v3, p0, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->_soapEnc:Z
 
     if-eqz v3, :cond_2
 
+    .line 8
     sget-object v3, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->SKIPPED_SOAP_ATTRS:Ljava/util/Set;
 
     invoke-interface {v2}, Lorg/apache/xmlbeans/SchemaProperty;->getName()Ljavax/xml/namespace/QName;
@@ -3573,6 +3877,7 @@
 
     goto :goto_1
 
+    .line 9
     :cond_1
     sget-object v3, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->ENC_ARRAYTYPE:Ljavax/xml/namespace/QName;
 
@@ -3586,6 +3891,7 @@
 
     if-eqz v3, :cond_2
 
+    .line 10
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaType;->getAttributeModel()Lorg/apache/xmlbeans/SchemaAttributeModel;
 
     move-result-object v3
@@ -3606,6 +3912,7 @@
 
     if-eqz v3, :cond_4
 
+    .line 11
     invoke-interface {v2}, Lorg/apache/xmlbeans/SchemaProperty;->getName()Ljavax/xml/namespace/QName;
 
     move-result-object v2
@@ -3638,11 +3945,13 @@
 
     goto :goto_1
 
+    .line 12
     :cond_2
     invoke-interface {v2}, Lorg/apache/xmlbeans/SchemaProperty;->getDefaultText()Ljava/lang/String;
 
     move-result-object v3
 
+    .line 13
     invoke-interface {v2}, Lorg/apache/xmlbeans/SchemaProperty;->getName()Ljavax/xml/namespace/QName;
 
     move-result-object v4
@@ -3673,10 +3982,12 @@
 .method private processChoice(Lorg/apache/xmlbeans/SchemaParticle;Lorg/apache/xmlbeans/XmlCursor;Z)V
     .locals 2
 
+    .line 1
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaParticle;->getParticleChildren()[Lorg/apache/xmlbeans/SchemaParticle;
 
     move-result-object p1
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -3705,11 +4016,13 @@
 
     const/4 v0, 0x0
 
+    .line 3
     :goto_0
     array-length v1, p1
 
     if-ge v0, v1, :cond_0
 
+    .line 4
     aget-object v1, p1, v0
 
     invoke-direct {p0, v1, p2, p3}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->processParticle(Lorg/apache/xmlbeans/SchemaParticle;Lorg/apache/xmlbeans/XmlCursor;Z)V
@@ -3725,12 +4038,15 @@
 .method private processElement(Lorg/apache/xmlbeans/SchemaParticle;Lorg/apache/xmlbeans/XmlCursor;Z)V
     .locals 1
 
+    .line 1
     check-cast p1, Lorg/apache/xmlbeans/SchemaLocalElement;
 
+    .line 2
     iget-boolean p3, p0, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->_soapEnc:Z
 
     if-eqz p3, :cond_0
 
+    .line 3
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaField;->getName()Ljavax/xml/namespace/QName;
 
     move-result-object p3
@@ -3743,6 +4059,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaField;->getName()Ljavax/xml/namespace/QName;
 
@@ -3762,6 +4079,7 @@
 
     invoke-interface {p2, p3, v0}, Lorg/apache/xmlbeans/XmlCursor;->insertElement(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 5
     :goto_0
     iget p3, p0, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->_nElements:I
 
@@ -3769,14 +4087,17 @@
 
     iput p3, p0, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->_nElements:I
 
+    .line 6
     invoke-interface {p2}, Lorg/apache/xmlbeans/XmlCursor;->toPrevToken()Lorg/apache/xmlbeans/XmlCursor$TokenType;
 
+    .line 7
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaField;->getType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object p1
 
     invoke-direct {p0, p1, p2}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->createSampleForType(Lorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/XmlCursor;)V
 
+    .line 8
     invoke-interface {p2}, Lorg/apache/xmlbeans/XmlCursor;->toNextToken()Lorg/apache/xmlbeans/XmlCursor$TokenType;
 
     return-void
@@ -3785,6 +4106,7 @@
 .method private processParticle(Lorg/apache/xmlbeans/SchemaParticle;Lorg/apache/xmlbeans/XmlCursor;Z)V
     .locals 3
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->determineMinMaxForSample(Lorg/apache/xmlbeans/SchemaParticle;Lorg/apache/xmlbeans/XmlCursor;)I
 
     move-result v0
@@ -3794,6 +4116,7 @@
 
     if-lez v0, :cond_5
 
+    .line 2
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaParticle;->getParticleType()I
 
     move-result v0
@@ -3820,26 +4143,31 @@
 
     goto :goto_1
 
+    .line 3
     :cond_0
     invoke-direct {p0, p1, p2, p3}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->processWildCard(Lorg/apache/xmlbeans/SchemaParticle;Lorg/apache/xmlbeans/XmlCursor;Z)V
 
     goto :goto_1
 
+    .line 4
     :cond_1
     invoke-direct {p0, p1, p2, p3}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->processElement(Lorg/apache/xmlbeans/SchemaParticle;Lorg/apache/xmlbeans/XmlCursor;Z)V
 
     goto :goto_1
 
+    .line 5
     :cond_2
     invoke-direct {p0, p1, p2, p3}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->processSequence(Lorg/apache/xmlbeans/SchemaParticle;Lorg/apache/xmlbeans/XmlCursor;Z)V
 
     goto :goto_1
 
+    .line 6
     :cond_3
     invoke-direct {p0, p1, p2, p3}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->processChoice(Lorg/apache/xmlbeans/SchemaParticle;Lorg/apache/xmlbeans/XmlCursor;Z)V
 
     goto :goto_1
 
+    .line 7
     :cond_4
     invoke-direct {p0, p1, p2, p3}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->processAll(Lorg/apache/xmlbeans/SchemaParticle;Lorg/apache/xmlbeans/XmlCursor;Z)V
 
@@ -3855,29 +4183,34 @@
 .method private processSequence(Lorg/apache/xmlbeans/SchemaParticle;Lorg/apache/xmlbeans/XmlCursor;Z)V
     .locals 2
 
+    .line 1
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaParticle;->getParticleChildren()[Lorg/apache/xmlbeans/SchemaParticle;
 
     move-result-object p1
 
     const/4 v0, 0x0
 
+    .line 2
     :goto_0
     array-length v1, p1
 
     if-ge v0, v1, :cond_1
 
+    .line 3
     aget-object v1, p1, v0
 
     invoke-direct {p0, v1, p2, p3}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->processParticle(Lorg/apache/xmlbeans/SchemaParticle;Lorg/apache/xmlbeans/XmlCursor;Z)V
 
     if-eqz p3, :cond_0
 
+    .line 4
     array-length v1, p1
 
     add-int/lit8 v1, v1, -0x1
 
     if-ge v0, v1, :cond_0
 
+    .line 5
     sget-object v1, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->WORDS:[Ljava/lang/String;
 
     invoke-direct {p0, v1}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->pick([Ljava/lang/String;)Ljava/lang/String;
@@ -3898,10 +4231,12 @@
 .method private processSimpleType(Lorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/XmlCursor;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->sampleDataForSimpleType(Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 2
     invoke-interface {p2, p0}, Lorg/apache/xmlbeans/XmlCursor;->insertChars(Ljava/lang/String;)V
 
     return-void
@@ -3912,10 +4247,12 @@
 
     const-string p0, "You may enter ANY elements at this point"
 
+    .line 1
     invoke-interface {p2, p0}, Lorg/apache/xmlbeans/XmlCursor;->insertComment(Ljava/lang/String;)V
 
     const-string p0, "AnyElement"
 
+    .line 2
     invoke-interface {p2, p0}, Lorg/apache/xmlbeans/XmlCursor;->insertElement(Ljava/lang/String;)V
 
     return-void
@@ -3924,6 +4261,7 @@
 .method private sampleDataForSimpleType(Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
     .locals 4
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/XmlObject;->type:Lorg/apache/xmlbeans/SchemaType;
 
     invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -3936,6 +4274,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     sget-object v0, Lorg/apache/xmlbeans/XmlAnySimpleType;->type:Lorg/apache/xmlbeans/SchemaType;
 
@@ -3949,6 +4288,7 @@
 
     return-object p0
 
+    .line 3
     :cond_1
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaType;->getSimpleVariety()I
 
@@ -3958,20 +4298,24 @@
 
     if-ne v0, v1, :cond_4
 
+    .line 4
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaType;->getListItemType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object v0
 
+    .line 5
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
+    .line 6
     invoke-direct {p0, p1}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->pickLength(Lorg/apache/xmlbeans/SchemaType;)I
 
     move-result p1
 
     if-lez p1, :cond_2
 
+    .line 7
     invoke-direct {p0, v0}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->sampleDataForSimpleType(Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object v2
@@ -3986,8 +4330,10 @@
 
     const/16 v3, 0x20
 
+    .line 8
     invoke-virtual {v1, v3}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
+    .line 9
     invoke-direct {p0, v0}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->sampleDataForSimpleType(Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object v3
@@ -3998,6 +4344,7 @@
 
     goto :goto_0
 
+    .line 10
     :cond_3
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -4005,6 +4352,7 @@
 
     return-object p0
 
+    .line 11
     :cond_4
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaType;->getSimpleVariety()I
 
@@ -4016,16 +4364,19 @@
 
     if-ne v0, v2, :cond_6
 
+    .line 12
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaType;->getUnionConstituentTypes()[Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object p1
 
+    .line 13
     array-length v0, p1
 
     if-nez v0, :cond_5
 
     return-object v1
 
+    .line 14
     :cond_5
     array-length v0, p1
 
@@ -4041,6 +4392,7 @@
 
     return-object p0
 
+    .line 15
     :cond_6
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaType;->getEnumerationValues()[Lorg/apache/xmlbeans/XmlAnySimpleType;
 
@@ -4048,10 +4400,12 @@
 
     if-eqz v0, :cond_7
 
+    .line 16
     array-length v3, v0
 
     if-lez v3, :cond_7
 
+    .line 17
     array-length p1, v0
 
     invoke-direct {p0, p1}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->pick(I)I
@@ -4066,6 +4420,7 @@
 
     return-object p0
 
+    .line 18
     :cond_7
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaType;->getPrimitiveType()Lorg/apache/xmlbeans/SchemaType;
 
@@ -4079,6 +4434,7 @@
 
     return-object v1
 
+    .line 19
     :pswitch_0
     invoke-direct {p0, p1}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->formatDate(Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
@@ -4086,6 +4442,7 @@
 
     return-object p0
 
+    .line 20
     :pswitch_1
     invoke-direct {p0, p1}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->formatDuration(Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
@@ -4093,6 +4450,7 @@
 
     return-object p0
 
+    .line 21
     :pswitch_2
     invoke-direct {p0, p1}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->closestBuiltin(Lorg/apache/xmlbeans/SchemaType;)Lorg/apache/xmlbeans/SchemaType;
 
@@ -4121,6 +4479,7 @@
     :cond_8
     const-string v2, "token"
 
+    .line 22
     :cond_9
     :goto_1
     invoke-direct {p0, v2, p1}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->formatToLength(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
@@ -4129,6 +4488,7 @@
 
     return-object p0
 
+    .line 23
     :pswitch_3
     invoke-direct {p0, p1}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->closestBuiltin(Lorg/apache/xmlbeans/SchemaType;)Lorg/apache/xmlbeans/SchemaType;
 
@@ -4142,6 +4502,7 @@
 
     const-string v0, "1000.00"
 
+    .line 24
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->formatDecimal(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object p0
@@ -4151,6 +4512,7 @@
     :pswitch_4
     const-string v0, "6"
 
+    .line 25
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->formatDecimal(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object p0
@@ -4160,6 +4522,7 @@
     :pswitch_5
     const-string v0, "5"
 
+    .line 26
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->formatDecimal(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object p0
@@ -4169,6 +4532,7 @@
     :pswitch_6
     const-string v0, "7"
 
+    .line 27
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->formatDecimal(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object p0
@@ -4178,6 +4542,7 @@
     :pswitch_7
     const-string v0, "11"
 
+    .line 28
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->formatDecimal(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object p0
@@ -4187,6 +4552,7 @@
     :pswitch_8
     const-string v0, "201"
 
+    .line 29
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->formatDecimal(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object p0
@@ -4196,6 +4562,7 @@
     :pswitch_9
     const-string v0, "200"
 
+    .line 30
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->formatDecimal(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object p0
@@ -4205,6 +4572,7 @@
     :pswitch_a
     const-string v0, "-201"
 
+    .line 31
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->formatDecimal(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object p0
@@ -4214,6 +4582,7 @@
     :pswitch_b
     const-string v0, "-200"
 
+    .line 32
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->formatDecimal(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object p0
@@ -4223,6 +4592,7 @@
     :pswitch_c
     const-string v0, "2"
 
+    .line 33
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->formatDecimal(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object p0
@@ -4232,6 +4602,7 @@
     :pswitch_d
     const-string v0, "1"
 
+    .line 34
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->formatDecimal(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object p0
@@ -4241,6 +4612,7 @@
     :pswitch_e
     const-string v0, "3"
 
+    .line 35
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->formatDecimal(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object p0
@@ -4250,6 +4622,7 @@
     :pswitch_f
     const-string v0, "10"
 
+    .line 36
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->formatDecimal(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object p0
@@ -4259,6 +4632,7 @@
     :pswitch_10
     const-string v0, "100"
 
+    .line 37
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->formatDecimal(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object p0
@@ -4278,6 +4652,7 @@
     :pswitch_13
     const-string v0, "notation"
 
+    .line 38
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->formatToLength(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object p0
@@ -4287,12 +4662,14 @@
     :pswitch_14
     const-string v0, "qname"
 
+    .line 39
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->formatToLength(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
+    .line 40
     :pswitch_15
     new-instance v0, Ljava/lang/StringBuffer;
 
@@ -4352,6 +4729,7 @@
 
     return-object p0
 
+    .line 41
     :pswitch_16
     sget-object v0, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->WORDS:[Ljava/lang/String;
 
@@ -4370,16 +4748,19 @@
     return-object p0
 
     :pswitch_17
+    const/4 v0, 0x0
+
+    .line 42
     :try_start_0
-    new-instance v0, Ljava/lang/String;
+    new-instance v1, Ljava/lang/String;
 
-    sget-object v1, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->WORDS:[Ljava/lang/String;
+    sget-object v2, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->WORDS:[Ljava/lang/String;
 
-    invoke-direct {p0, v1}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->pick([Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v2}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->pick([Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-direct {p0, v1, p1}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->formatToLength(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
+    invoke-direct {p0, v2, p1}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->formatToLength(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -4393,18 +4774,16 @@
 
     move-result-object p0
 
-    invoke-direct {v0, p0}, Ljava/lang/String;-><init>([B)V
+    invoke-direct {v1, p0}, Ljava/lang/String;-><init>([B)V
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_2
+    move-object v0, v1
 
     :catch_0
-    const/4 v0, 0x0
-
-    :goto_2
     return-object v0
 
+    .line 43
     :pswitch_18
     invoke-direct {p0, v2}, Lorg/apache/xmlbeans/impl/xsd2inst/SampleXmlUtil;->pick(I)I
 
@@ -4414,12 +4793,12 @@
 
     const-string p0, "true"
 
-    goto :goto_3
+    goto :goto_2
 
     :cond_a
     const-string p0, "false"
 
-    :goto_3
+    :goto_2
     return-object p0
 
     :pswitch_19

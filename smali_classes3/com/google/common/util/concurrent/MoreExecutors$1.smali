@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/MoreExecutors$1;
+.class public Lcom/google/common/util/concurrent/MoreExecutors$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,15 +18,16 @@
 
 
 # instance fields
-.field final synthetic val$future:Lcom/google/common/util/concurrent/ListenableFuture;
+.field public final synthetic val$future:Lcom/google/common/util/concurrent/ListenableFuture;
 
-.field final synthetic val$queue:Ljava/util/concurrent/BlockingQueue;
+.field public final synthetic val$queue:Ljava/util/concurrent/BlockingQueue;
 
 
 # direct methods
 .method public constructor <init>(Ljava/util/concurrent/BlockingQueue;Lcom/google/common/util/concurrent/ListenableFuture;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/MoreExecutors$1;->val$queue:Ljava/util/concurrent/BlockingQueue;
 
     iput-object p2, p0, Lcom/google/common/util/concurrent/MoreExecutors$1;->val$future:Lcom/google/common/util/concurrent/ListenableFuture;
@@ -41,6 +42,7 @@
 .method public run()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/util/concurrent/MoreExecutors$1;->val$queue:Ljava/util/concurrent/BlockingQueue;
 
     iget-object p0, p0, Lcom/google/common/util/concurrent/MoreExecutors$1;->val$future:Lcom/google/common/util/concurrent/ListenableFuture;

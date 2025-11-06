@@ -52,6 +52,7 @@
 .method public final zaa(Landroid/content/Context;I)I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/internal/zal;->zaa:Landroid/util/SparseIntArray;
 
     const/4 p1, -0x1
@@ -74,10 +75,13 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-static {p2}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     invoke-interface {p2}, Lcom/google/android/gms/common/api/Api$Client;->requiresGooglePlayServices()Z
 
     move-result v0
@@ -88,11 +92,13 @@
 
     return v1
 
+    .line 4
     :cond_0
     invoke-interface {p2}, Lcom/google/android/gms/common/api/Api$Client;->getMinApkVersion()I
 
     move-result p2
 
+    .line 5
     invoke-virtual {p0, p1, p2}, Lcom/google/android/gms/common/internal/zal;->zaa(Landroid/content/Context;I)I
 
     move-result v0
@@ -109,6 +115,7 @@
     :goto_0
     iget-object v3, p0, Lcom/google/android/gms/common/internal/zal;->zaa:Landroid/util/SparseIntArray;
 
+    .line 6
     invoke-virtual {v3}, Landroid/util/SparseIntArray;->size()I
 
     move-result v3
@@ -117,6 +124,7 @@
 
     iget-object v3, p0, Lcom/google/android/gms/common/internal/zal;->zaa:Landroid/util/SparseIntArray;
 
+    .line 7
     invoke-virtual {v3, v0}, Landroid/util/SparseIntArray;->keyAt(I)I
 
     move-result v3
@@ -125,6 +133,7 @@
 
     iget-object v4, p0, Lcom/google/android/gms/common/internal/zal;->zaa:Landroid/util/SparseIntArray;
 
+    .line 8
     invoke-virtual {v4, v3}, Landroid/util/SparseIntArray;->get(I)I
 
     move-result v3
@@ -146,6 +155,7 @@
 
     iget-object v0, p0, Lcom/google/android/gms/common/internal/zal;->zab:Lcom/google/android/gms/common/GoogleApiAvailabilityLight;
 
+    .line 9
     invoke-virtual {v0, p1, p2}, Lcom/google/android/gms/common/GoogleApiAvailabilityLight;->isGooglePlayServicesAvailable(Landroid/content/Context;I)I
 
     move-result p1
@@ -160,6 +170,7 @@
     :goto_2
     iget-object p0, p0, Lcom/google/android/gms/common/internal/zal;->zaa:Landroid/util/SparseIntArray;
 
+    .line 10
     invoke-virtual {p0, p2, v0}, Landroid/util/SparseIntArray;->put(II)V
 
     :goto_3
@@ -169,6 +180,7 @@
 .method public final zac()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/internal/zal;->zaa:Landroid/util/SparseIntArray;
 
     invoke-virtual {p0}, Landroid/util/SparseIntArray;->clear()V

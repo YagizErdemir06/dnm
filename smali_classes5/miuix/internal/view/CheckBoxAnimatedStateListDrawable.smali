@@ -1,5 +1,5 @@
 .class public Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;
-.super Lmiuix/internal/view/a;
+.super Lk/l/d/b;
 .source "SourceFile"
 
 
@@ -16,25 +16,25 @@
 
 
 # static fields
-.field public static final i:Ljava/lang/String; = "MiuixCheckbox"
+.field private static final f:Ljava/lang/String; = "MiuixCheckbox"
 
-.field public static final j:I = 0xff
+.field public static final g:I = 0xff
 
-.field public static final k:I = 0x4c
+.field public static final j:I = 0x4c
 
 
 # instance fields
-.field public c:Loq/c;
+.field private m:Lk/l/d/d;
 
-.field public d:F
+.field private n:F
 
-.field public e:F
+.field private p:F
 
-.field public f:Z
+.field private s:Z
 
-.field public g:Z
+.field private t:Z
 
-.field public h:Z
+.field private u:Z
 
 
 # direct methods
@@ -42,88 +42,167 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lmiuix/internal/view/a;-><init>()V
+    invoke-direct {p0}, Lk/l/d/b;-><init>()V
 
     const/high16 v0, 0x3f800000    # 1.0f
 
     .line 2
-    iput v0, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->d:F
+    iput v0, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->n:F
 
     .line 3
-    iput v0, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->e:F
+    iput v0, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->p:F
 
     const/4 v0, 0x0
 
     .line 4
-    iput-boolean v0, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->f:Z
+    iput-boolean v0, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->s:Z
 
     .line 5
-    iput-boolean v0, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->g:Z
+    iput-boolean v0, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->t:Z
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Lmiuix/internal/view/a$a;)V
+.method public constructor <init>(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Lk/l/d/b$a;)V
     .locals 11
 
     .line 6
-    invoke-direct {p0, p1, p2, p3}, Lmiuix/internal/view/a;-><init>(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Lmiuix/internal/view/a$a;)V
+    invoke-direct {p0, p1, p2, p3}, Lk/l/d/b;-><init>(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Lk/l/d/b$a;)V
 
     const/high16 p1, 0x3f800000    # 1.0f
 
     .line 7
-    iput p1, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->d:F
+    iput p1, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->n:F
 
     .line 8
-    iput p1, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->e:F
+    iput p1, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->p:F
 
     const/4 p1, 0x0
 
     .line 9
-    iput-boolean p1, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->f:Z
+    iput-boolean p1, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->s:Z
 
     .line 10
-    iput-boolean p1, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->g:Z
+    iput-boolean p1, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->t:Z
 
     .line 11
-    new-instance p1, Loq/c;
+    new-instance p1, Lk/l/d/d;
 
     invoke-virtual {p0}, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->e()Z
 
     move-result v2
 
-    iget v3, p3, Lmiuix/internal/view/a$a;->b:I
+    iget v3, p3, Lk/l/d/b$a;->b:I
 
-    iget v4, p3, Lmiuix/internal/view/a$a;->c:I
+    iget v4, p3, Lk/l/d/b$a;->c:I
 
-    iget v5, p3, Lmiuix/internal/view/a$a;->d:I
+    iget v5, p3, Lk/l/d/b$a;->d:I
 
-    iget v6, p3, Lmiuix/internal/view/a$a;->f:I
+    iget v6, p3, Lk/l/d/b$a;->f:I
 
-    iget v7, p3, Lmiuix/internal/view/a$a;->g:I
+    iget v7, p3, Lk/l/d/b$a;->g:I
 
-    iget v8, p3, Lmiuix/internal/view/a$a;->e:I
+    iget v8, p3, Lk/l/d/b$a;->e:I
 
-    iget v9, p3, Lmiuix/internal/view/a$a;->h:I
+    iget v9, p3, Lk/l/d/b$a;->h:I
 
-    iget v10, p3, Lmiuix/internal/view/a$a;->i:I
+    iget v10, p3, Lk/l/d/b$a;->i:I
 
     move-object v0, p1
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v10}, Loq/c;-><init>(Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;ZIIIIIIII)V
+    invoke-direct/range {v0 .. v10}, Lk/l/d/d;-><init>(Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;ZIIIIIIII)V
 
-    iput-object p1, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->c:Loq/c;
+    iput-object p1, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->m:Lk/l/d/d;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public a()Lmiuix/internal/view/a$a;
+.method private f(Landroid/content/res/TypedArray;IZ)Z
     .locals 0
 
+    .line 1
+    :try_start_0
+    invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+
+    move-result p0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return p0
+
+    :catch_0
+    move-exception p0
+
+    const-string p1, "MiuixCheckbox"
+
+    const-string p2, "try catch Exception insafeGetBoolean"
+
+    .line 2
+    invoke-static {p1, p2, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    return p3
+.end method
+
+.method private g(Landroid/content/res/TypedArray;II)I
+    .locals 0
+
+    .line 1
+    :try_start_0
+    invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getColor(II)I
+
+    move-result p0
+    :try_end_0
+    .catch Ljava/lang/UnsupportedOperationException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return p0
+
+    :catch_0
+    move-exception p0
+
+    const-string p1, "MiuixCheckbox"
+
+    const-string p2, "try catch UnsupportedOperationException insafeGetColor"
+
+    .line 2
+    invoke-static {p1, p2, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    return p3
+.end method
+
+.method private h(Landroid/content/res/TypedArray;II)I
+    .locals 0
+
+    .line 1
+    :try_start_0
+    invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    move-result p0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return p0
+
+    :catch_0
+    move-exception p0
+
+    const-string p1, "MiuixCheckbox"
+
+    const-string p2, "try catch Exception insafeGetInt"
+
+    .line 2
+    invoke-static {p1, p2, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    return p3
+.end method
+
+
+# virtual methods
+.method public a()Lk/l/d/b$a;
+    .locals 0
+
+    .line 1
     new-instance p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable$a;
 
     invoke-direct {p0}, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable$a;-><init>()V
@@ -134,245 +213,156 @@
 .method public applyTheme(Landroid/content/res/Resources$Theme;)V
     .locals 13
 
-    invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->applyTheme(Landroid/content/res/Resources$Theme;)V
+    .line 1
+    invoke-super {p0, p1}, Landroid/graphics/drawable/AnimatedStateListDrawable;->applyTheme(Landroid/content/res/Resources$Theme;)V
 
+    .line 2
     invoke-virtual {p0}, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->b()I
 
     move-result v0
 
-    sget-object v1, Lso/b$r;->CheckWidgetDrawable:[I
+    sget-object v1, Lk/b/b$r;->CheckWidgetDrawable:[I
 
     invoke-virtual {p1, v0, v1}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
 
-    move-result-object v0
-
-    new-instance v1, Landroid/util/TypedValue;
-
-    invoke-direct {v1}, Landroid/util/TypedValue;-><init>()V
-
-    const v2, 0x1010590
-
-    const/4 v3, 0x1
-
-    invoke-virtual {p1, v2, v1, v3}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
-
-    iget p1, v1, Landroid/util/TypedValue;->type:I
-
-    iget v1, v1, Landroid/util/TypedValue;->data:I
-
-    invoke-static {p1, v1}, Landroid/util/TypedValue;->coerceToString(II)Ljava/lang/String;
-
     move-result-object p1
 
-    const-string v1, "true"
+    .line 3
+    iget-object v0, p0, Lk/l/d/b;->d:Lk/l/d/b$a;
 
-    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    const-string v1, "#ffffff"
-
-    if-eqz p1, :cond_0
-
-    const-string v2, "#000000"
-
-    invoke-static {v2}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
-
-    move-result v2
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {v1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
-
-    move-result v2
-
-    :goto_0
-    iget-object v3, p0, Lmiuix/internal/view/a;->a:Lmiuix/internal/view/a$a;
-
-    sget v4, Lso/b$r;->CheckWidgetDrawable_checkwidget_disableBackgroundColor:I
-
-    invoke-virtual {p0, v0, v4, v2}, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->g(Landroid/content/res/TypedArray;II)I
-
-    move-result v4
-
-    iput v4, v3, Lmiuix/internal/view/a$a;->b:I
-
-    iget-object v3, p0, Lmiuix/internal/view/a;->a:Lmiuix/internal/view/a$a;
-
-    sget v4, Lso/b$r;->CheckWidgetDrawable_checkwidget_checkOnAlphaBackgroundColor:I
-
-    invoke-virtual {p0, v0, v4, v2}, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->g(Landroid/content/res/TypedArray;II)I
-
-    move-result v2
-
-    iput v2, v3, Lmiuix/internal/view/a$a;->c:I
-
-    if-eqz p1, :cond_1
-
-    const-string v2, "#3482FF"
-
-    goto :goto_1
-
-    :cond_1
-    const-string v2, "#277AF7"
-
-    :goto_1
-    invoke-static {v2}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
-
-    move-result v2
-
-    iget-object v3, p0, Lmiuix/internal/view/a;->a:Lmiuix/internal/view/a$a;
-
-    sget v4, Lso/b$r;->CheckWidgetDrawable_checkwidget_checkOnBackgroundColor:I
-
-    invoke-virtual {p0, v0, v4, v2}, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->g(Landroid/content/res/TypedArray;II)I
-
-    move-result v2
-
-    iput v2, v3, Lmiuix/internal/view/a$a;->d:I
-
-    invoke-static {v1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
-
-    move-result v1
-
-    iget-object v2, p0, Lmiuix/internal/view/a;->a:Lmiuix/internal/view/a$a;
-
-    sget v3, Lso/b$r;->CheckWidgetDrawable_checkwidget_strokeColor:I
-
-    invoke-virtual {p0, v0, v3, v1}, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->g(Landroid/content/res/TypedArray;II)I
-
-    move-result v1
-
-    iput v1, v2, Lmiuix/internal/view/a$a;->e:I
-
-    const/16 v1, 0xf
-
-    const/16 v2, 0x33
-
-    if-eqz p1, :cond_2
-
-    move v3, v1
-
-    goto :goto_2
-
-    :cond_2
-    move v3, v2
-
-    :goto_2
-    iget-object v4, p0, Lmiuix/internal/view/a;->a:Lmiuix/internal/view/a$a;
-
-    sget v5, Lso/b$r;->CheckWidgetDrawable_checkwidget_backgroundNormalAlpha:I
-
-    invoke-virtual {p0, v0, v5, v3}, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->h(Landroid/content/res/TypedArray;II)I
-
-    move-result v3
-
-    iput v3, v4, Lmiuix/internal/view/a$a;->f:I
-
-    if-eqz p1, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    move v1, v2
-
-    :goto_3
-    iget-object v2, p0, Lmiuix/internal/view/a;->a:Lmiuix/internal/view/a$a;
-
-    sget v3, Lso/b$r;->CheckWidgetDrawable_checkwidget_backgroundDisableAlpha:I
-
-    invoke-virtual {p0, v0, v3, v1}, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->h(Landroid/content/res/TypedArray;II)I
-
-    move-result v1
-
-    iput v1, v2, Lmiuix/internal/view/a$a;->g:I
-
-    const/16 v1, 0xff
+    sget v1, Lk/b/b$r;->CheckWidgetDrawable_checkwidget_disableBackgroundColor:I
 
     const/4 v2, 0x0
 
-    if-eqz p1, :cond_4
-
-    move v3, v1
-
-    goto :goto_4
-
-    :cond_4
-    move v3, v2
-
-    :goto_4
-    iget-object v4, p0, Lmiuix/internal/view/a;->a:Lmiuix/internal/view/a$a;
-
-    sget v5, Lso/b$r;->CheckWidgetDrawable_checkwidget_strokeNormalAlpha:I
-
-    invoke-virtual {p0, v0, v5, v3}, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->h(Landroid/content/res/TypedArray;II)I
-
-    move-result v3
-
-    iput v3, v4, Lmiuix/internal/view/a$a;->h:I
-
-    if-eqz p1, :cond_5
-
-    goto :goto_5
-
-    :cond_5
-    move v1, v2
-
-    :goto_5
-    iget-object p1, p0, Lmiuix/internal/view/a;->a:Lmiuix/internal/view/a$a;
-
-    sget v3, Lso/b$r;->CheckWidgetDrawable_checkwidget_strokeDisableAlpha:I
-
-    invoke-virtual {p0, v0, v3, v1}, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->h(Landroid/content/res/TypedArray;II)I
+    invoke-direct {p0, p1, v1, v2}, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->g(Landroid/content/res/TypedArray;II)I
 
     move-result v1
 
-    iput v1, p1, Lmiuix/internal/view/a$a;->i:I
+    iput v1, v0, Lk/l/d/b$a;->b:I
 
-    iget-object p1, p0, Lmiuix/internal/view/a;->a:Lmiuix/internal/view/a$a;
+    .line 4
+    iget-object v0, p0, Lk/l/d/b;->d:Lk/l/d/b$a;
 
-    sget v1, Lso/b$r;->CheckWidgetDrawable_checkwidget_touchAnimEnable:I
+    sget v1, Lk/b/b$r;->CheckWidgetDrawable_checkwidget_checkOnAlphaBackgroundColor:I
 
-    invoke-virtual {p0, v0, v1, v2}, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->f(Landroid/content/res/TypedArray;IZ)Z
+    invoke-direct {p0, p1, v1, v2}, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->g(Landroid/content/res/TypedArray;II)I
 
     move-result v1
 
-    iput-boolean v1, p1, Lmiuix/internal/view/a$a;->j:Z
+    iput v1, v0, Lk/l/d/b$a;->c:I
 
-    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
+    .line 5
+    iget-object v0, p0, Lk/l/d/b;->d:Lk/l/d/b$a;
 
-    new-instance p1, Loq/c;
+    sget v1, Lk/b/b$r;->CheckWidgetDrawable_checkwidget_checkOnBackgroundColor:I
+
+    invoke-direct {p0, p1, v1, v2}, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->g(Landroid/content/res/TypedArray;II)I
+
+    move-result v1
+
+    iput v1, v0, Lk/l/d/b$a;->d:I
+
+    .line 6
+    iget-object v0, p0, Lk/l/d/b;->d:Lk/l/d/b$a;
+
+    sget v1, Lk/b/b$r;->CheckWidgetDrawable_checkwidget_strokeColor:I
+
+    invoke-direct {p0, p1, v1, v2}, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->g(Landroid/content/res/TypedArray;II)I
+
+    move-result v1
+
+    iput v1, v0, Lk/l/d/b$a;->e:I
+
+    .line 7
+    iget-object v0, p0, Lk/l/d/b;->d:Lk/l/d/b$a;
+
+    sget v1, Lk/b/b$r;->CheckWidgetDrawable_checkwidget_backgroundNormalAlpha:I
+
+    invoke-direct {p0, p1, v1, v2}, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->h(Landroid/content/res/TypedArray;II)I
+
+    move-result v1
+
+    iput v1, v0, Lk/l/d/b$a;->f:I
+
+    .line 8
+    iget-object v0, p0, Lk/l/d/b;->d:Lk/l/d/b$a;
+
+    sget v1, Lk/b/b$r;->CheckWidgetDrawable_checkwidget_backgroundDisableAlpha:I
+
+    invoke-direct {p0, p1, v1, v2}, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->h(Landroid/content/res/TypedArray;II)I
+
+    move-result v1
+
+    iput v1, v0, Lk/l/d/b$a;->g:I
+
+    .line 9
+    iget-object v0, p0, Lk/l/d/b;->d:Lk/l/d/b$a;
+
+    sget v1, Lk/b/b$r;->CheckWidgetDrawable_checkwidget_strokeNormalAlpha:I
+
+    invoke-direct {p0, p1, v1, v2}, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->h(Landroid/content/res/TypedArray;II)I
+
+    move-result v1
+
+    iput v1, v0, Lk/l/d/b$a;->h:I
+
+    .line 10
+    iget-object v0, p0, Lk/l/d/b;->d:Lk/l/d/b$a;
+
+    sget v1, Lk/b/b$r;->CheckWidgetDrawable_checkwidget_strokeDisableAlpha:I
+
+    invoke-direct {p0, p1, v1, v2}, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->h(Landroid/content/res/TypedArray;II)I
+
+    move-result v1
+
+    iput v1, v0, Lk/l/d/b$a;->i:I
+
+    .line 11
+    iget-object v0, p0, Lk/l/d/b;->d:Lk/l/d/b$a;
+
+    sget v1, Lk/b/b$r;->CheckWidgetDrawable_checkwidget_touchAnimEnable:I
+
+    invoke-direct {p0, p1, v1, v2}, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->f(Landroid/content/res/TypedArray;IZ)Z
+
+    move-result v1
+
+    iput-boolean v1, v0, Lk/l/d/b$a;->j:Z
+
+    .line 12
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
+
+    .line 13
+    new-instance p1, Lk/l/d/d;
 
     invoke-virtual {p0}, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->e()Z
 
     move-result v4
 
-    iget-object v0, p0, Lmiuix/internal/view/a;->a:Lmiuix/internal/view/a$a;
+    iget-object v0, p0, Lk/l/d/b;->d:Lk/l/d/b$a;
 
-    iget v5, v0, Lmiuix/internal/view/a$a;->b:I
+    iget v5, v0, Lk/l/d/b$a;->b:I
 
-    iget v6, v0, Lmiuix/internal/view/a$a;->c:I
+    iget v6, v0, Lk/l/d/b$a;->c:I
 
-    iget v7, v0, Lmiuix/internal/view/a$a;->d:I
+    iget v7, v0, Lk/l/d/b$a;->d:I
 
-    iget v8, v0, Lmiuix/internal/view/a$a;->f:I
+    iget v8, v0, Lk/l/d/b$a;->f:I
 
-    iget v9, v0, Lmiuix/internal/view/a$a;->g:I
+    iget v9, v0, Lk/l/d/b$a;->g:I
 
-    iget v10, v0, Lmiuix/internal/view/a$a;->e:I
+    iget v10, v0, Lk/l/d/b$a;->e:I
 
-    iget v11, v0, Lmiuix/internal/view/a$a;->h:I
+    iget v11, v0, Lk/l/d/b$a;->h:I
 
-    iget v12, v0, Lmiuix/internal/view/a$a;->i:I
+    iget v12, v0, Lk/l/d/b$a;->i:I
 
     move-object v2, p1
 
     move-object v3, p0
 
-    invoke-direct/range {v2 .. v12}, Loq/c;-><init>(Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;ZIIIIIIII)V
+    invoke-direct/range {v2 .. v12}, Lk/l/d/d;-><init>(Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;ZIIIIIIII)V
 
-    iput-object p1, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->c:Loq/c;
+    iput-object p1, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->m:Lk/l/d/d;
 
     return-void
 .end method
@@ -380,7 +370,8 @@
 .method public b()I
     .locals 0
 
-    sget p0, Lso/b$q;->CheckWidgetDrawable_CheckBox:I
+    .line 1
+    sget p0, Lk/b/b$q;->CheckWidgetDrawable_CheckBox:I
 
     return p0
 .end method
@@ -388,7 +379,8 @@
 .method public c()F
     .locals 0
 
-    iget p0, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->e:F
+    .line 1
+    iget p0, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->p:F
 
     return p0
 .end method
@@ -396,7 +388,8 @@
 .method public d()F
     .locals 0
 
-    iget p0, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->d:F
+    .line 1
+    iget p0, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->n:F
 
     return p0
 .end method
@@ -404,38 +397,46 @@
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 5
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getCurrent()Landroid/graphics/drawable/Drawable;
+    .line 1
+    invoke-virtual {p0}, Landroid/graphics/drawable/AnimatedStateListDrawable;->getCurrent()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     instance-of v0, v0, Landroid/graphics/drawable/BitmapDrawable;
 
     if-eqz v0, :cond_0
 
-    invoke-super {p0, p1}, Landroid/graphics/drawable/DrawableContainer;->draw(Landroid/graphics/Canvas;)V
+    .line 3
+    invoke-super {p0, p1}, Landroid/graphics/drawable/AnimatedStateListDrawable;->draw(Landroid/graphics/Canvas;)V
 
     return-void
 
+    .line 4
     :cond_0
-    iget-object v0, p0, Lmiuix/internal/view/a;->a:Lmiuix/internal/view/a$a;
+    iget-object v0, p0, Lk/l/d/b;->d:Lk/l/d/b$a;
 
-    iget-boolean v0, v0, Lmiuix/internal/view/a$a;->j:Z
+    iget-boolean v0, v0, Lk/l/d/b$a;->j:Z
 
     if-nez v0, :cond_2
 
-    iget-object v0, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->c:Loq/c;
+    .line 5
+    iget-object v0, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->m:Lk/l/d/d;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0, p1}, Loq/c;->e(Landroid/graphics/Canvas;)V
+    .line 6
+    invoke-virtual {v0, p1}, Lk/l/d/d;->d(Landroid/graphics/Canvas;)V
 
+    .line 7
     :cond_1
-    invoke-super {p0, p1}, Landroid/graphics/drawable/DrawableContainer;->draw(Landroid/graphics/Canvas;)V
+    invoke-super {p0, p1}, Landroid/graphics/drawable/AnimatedStateListDrawable;->draw(Landroid/graphics/Canvas;)V
 
     return-void
 
+    .line 8
     :cond_2
     new-instance v0, Landroid/graphics/PaintFlagsDrawFilter;
 
@@ -445,44 +446,53 @@
 
     invoke-direct {v0, v1, v2}, Landroid/graphics/PaintFlagsDrawFilter;-><init>(II)V
 
+    .line 9
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->setDrawFilter(Landroid/graphics/DrawFilter;)V
 
-    iget-boolean v0, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->h:Z
+    .line 10
+    iget-boolean v0, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->u:Z
 
     if-eqz v0, :cond_4
 
-    iget-object v0, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->c:Loq/c;
+    .line 11
+    iget-object v0, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->m:Lk/l/d/d;
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {v0, p1}, Loq/c;->e(Landroid/graphics/Canvas;)V
+    .line 12
+    invoke-virtual {v0, p1}, Lk/l/d/d;->d(Landroid/graphics/Canvas;)V
 
     :cond_3
     const/high16 v0, 0x437f0000    # 255.0f
 
-    iget v1, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->e:F
+    .line 13
+    iget v1, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->p:F
 
     mul-float/2addr v1, v0
 
     float-to-int v0, v1
 
-    invoke-virtual {p0, v0}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
+    invoke-virtual {p0, v0}, Landroid/graphics/drawable/AnimatedStateListDrawable;->setAlpha(I)V
 
     goto :goto_0
 
     :cond_4
     const/16 v0, 0x4c
 
-    invoke-virtual {p0, v0}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
+    .line 14
+    invoke-virtual {p0, v0}, Landroid/graphics/drawable/AnimatedStateListDrawable;->setAlpha(I)V
 
+    .line 15
     :goto_0
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    .line 16
+    invoke-virtual {p0}, Landroid/graphics/drawable/AnimatedStateListDrawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    iget v1, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->d:F
+    .line 17
+    iget v1, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->n:F
 
     iget v3, v0, Landroid/graphics/Rect;->left:I
 
@@ -506,8 +516,10 @@
 
     invoke-virtual {p1, v1, v1, v3, v0}, Landroid/graphics/Canvas;->scale(FFFF)V
 
-    invoke-super {p0, p1}, Landroid/graphics/drawable/DrawableContainer;->draw(Landroid/graphics/Canvas;)V
+    .line 18
+    invoke-super {p0, p1}, Landroid/graphics/drawable/AnimatedStateListDrawable;->draw(Landroid/graphics/Canvas;)V
 
+    .line 19
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     return-void
@@ -521,86 +533,16 @@
     return p0
 .end method
 
-.method public final f(Landroid/content/res/TypedArray;IZ)Z
-    .locals 0
-
-    :try_start_0
-    invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
-
-    move-result p0
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    return p0
-
-    :catch_0
-    move-exception p0
-
-    const-string p1, "MiuixCheckbox"
-
-    const-string p2, "try catch Exception insafeGetBoolean"
-
-    invoke-static {p1, p2, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    return p3
-.end method
-
-.method public final g(Landroid/content/res/TypedArray;II)I
-    .locals 0
-
-    :try_start_0
-    invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getColor(II)I
-
-    move-result p0
-    :try_end_0
-    .catch Ljava/lang/UnsupportedOperationException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return p0
-
-    :catch_0
-    move-exception p0
-
-    const-string p1, "MiuixCheckbox"
-
-    const-string p2, "try catch UnsupportedOperationException insafeGetColor"
-
-    invoke-static {p1, p2, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    return p3
-.end method
-
-.method public final h(Landroid/content/res/TypedArray;II)I
-    .locals 0
-
-    :try_start_0
-    invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getInt(II)I
-
-    move-result p0
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    return p0
-
-    :catch_0
-    move-exception p0
-
-    const-string p1, "MiuixCheckbox"
-
-    const-string p2, "try catch Exception insafeGetInt"
-
-    invoke-static {p1, p2, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    return p3
-.end method
-
 .method public i(IIII)V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->c:Loq/c;
+    .line 1
+    iget-object p0, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->m:Lk/l/d/d;
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Loq/c;->i(IIII)V
+    .line 2
+    invoke-virtual {p0, p1, p2, p3, p4}, Lk/l/d/d;->i(IIII)V
 
     :cond_0
     return-void
@@ -609,11 +551,13 @@
 .method public j(Landroid/graphics/Rect;)V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->c:Loq/c;
+    .line 1
+    iget-object p0, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->m:Lk/l/d/d;
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0, p1}, Loq/c;->j(Landroid/graphics/Rect;)V
+    .line 2
+    invoke-virtual {p0, p1}, Lk/l/d/d;->j(Landroid/graphics/Rect;)V
 
     :cond_0
     return-void
@@ -622,7 +566,8 @@
 .method public k(F)V
     .locals 0
 
-    iput p1, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->e:F
+    .line 1
+    iput p1, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->p:F
 
     return-void
 .end method
@@ -630,7 +575,8 @@
 .method public l(F)V
     .locals 0
 
-    iput p1, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->d:F
+    .line 1
+    iput p1, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->n:F
 
     return-void
 .end method
@@ -638,15 +584,17 @@
 .method public m(Z)V
     .locals 1
 
-    iget-object v0, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->c:Loq/c;
+    .line 1
+    iget-object v0, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->m:Lk/l/d/d;
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lmiuix/internal/view/a;->a:Lmiuix/internal/view/a$a;
+    .line 2
+    iget-object p0, p0, Lk/l/d/b;->d:Lk/l/d/b$a;
 
-    iget-boolean p0, p0, Lmiuix/internal/view/a$a;->j:Z
+    iget-boolean p0, p0, Lk/l/d/b$a;->j:Z
 
-    invoke-virtual {v0, p1, p0}, Loq/c;->l(ZZ)V
+    invoke-virtual {v0, p1, p0}, Lk/l/d/d;->l(ZZ)V
 
     :cond_0
     return-void
@@ -655,15 +603,17 @@
 .method public n(Z)V
     .locals 1
 
-    iget-object v0, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->c:Loq/c;
+    .line 1
+    iget-object v0, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->m:Lk/l/d/d;
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lmiuix/internal/view/a;->a:Lmiuix/internal/view/a$a;
+    .line 2
+    iget-object p0, p0, Lk/l/d/b;->d:Lk/l/d/b$a;
 
-    iget-boolean p0, p0, Lmiuix/internal/view/a$a;->j:Z
+    iget-boolean p0, p0, Lk/l/d/b$a;->j:Z
 
-    invoke-virtual {v0, p1, p0}, Loq/c;->m(ZZ)V
+    invoke-virtual {v0, p1, p0}, Lk/l/d/d;->m(ZZ)V
 
     :cond_0
     return-void
@@ -672,13 +622,16 @@
 .method public o(ZZ)V
     .locals 1
 
-    iget-object v0, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->c:Loq/c;
+    .line 1
+    iget-object v0, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->m:Lk/l/d/d;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1, p2}, Loq/c;->n(ZZ)V
+    .line 2
+    invoke-virtual {v0, p1, p2}, Lk/l/d/d;->n(ZZ)V
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+    .line 3
+    invoke-virtual {p0}, Landroid/graphics/drawable/AnimatedStateListDrawable;->invalidateSelf()V
 
     :cond_0
     return-void
@@ -687,28 +640,33 @@
 .method public onStateChange([I)Z
     .locals 8
 
-    invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->onStateChange([I)Z
+    .line 1
+    invoke-super {p0, p1}, Landroid/graphics/drawable/AnimatedStateListDrawable;->onStateChange([I)Z
 
     move-result v0
 
-    iget-object v1, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->c:Loq/c;
+    .line 2
+    iget-object v1, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->m:Lk/l/d/d;
 
     if-nez v1, :cond_0
 
     return v0
 
+    .line 3
     :cond_0
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getCurrent()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0}, Landroid/graphics/drawable/AnimatedStateListDrawable;->getCurrent()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
+    .line 4
     instance-of v1, v1, Landroid/graphics/drawable/BitmapDrawable;
 
     if-eqz v1, :cond_1
 
-    invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->onStateChange([I)Z
+    .line 5
+    invoke-super {p0, p1}, Landroid/graphics/drawable/AnimatedStateListDrawable;->onStateChange([I)Z
 
     move-result p0
 
@@ -717,8 +675,10 @@
     :cond_1
     const/4 v1, 0x0
 
-    iput-boolean v1, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->h:Z
+    .line 6
+    iput-boolean v1, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->u:Z
 
+    .line 7
     array-length v2, p1
 
     move v3, v1
@@ -754,7 +714,8 @@
 
     if-ne v5, v6, :cond_4
 
-    iput-boolean v7, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->h:Z
+    .line 8
+    iput-boolean v7, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->u:Z
 
     :cond_4
     :goto_1
@@ -765,37 +726,44 @@
     :cond_5
     if-eqz v3, :cond_6
 
+    .line 9
     invoke-virtual {p0, v4}, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->m(Z)V
 
+    .line 10
     :cond_6
-    iget-boolean p1, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->f:Z
+    iget-boolean p1, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->s:Z
 
     if-nez p1, :cond_7
 
     if-nez v3, :cond_7
 
-    iget-boolean p1, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->h:Z
+    .line 11
+    iget-boolean p1, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->u:Z
 
     invoke-virtual {p0, v4, p1}, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->o(ZZ)V
 
     :cond_7
     if-nez v3, :cond_9
 
-    iget-boolean p1, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->f:Z
+    .line 12
+    iget-boolean p1, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->s:Z
 
     if-nez p1, :cond_8
 
-    iget-boolean p1, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->g:Z
+    iget-boolean p1, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->t:Z
 
     if-eq v4, p1, :cond_9
 
+    .line 13
     :cond_8
     invoke-virtual {p0, v4}, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->n(Z)V
 
+    .line 14
     :cond_9
-    iput-boolean v3, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->f:Z
+    iput-boolean v3, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->s:Z
 
-    iput-boolean v4, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->g:Z
+    .line 15
+    iput-boolean v4, p0, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->t:Z
 
     return v0
 .end method
@@ -804,7 +772,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0, p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/graphics/drawable/AnimatedStateListDrawable;->setBounds(IIII)V
 
     .line 2
     invoke-virtual {p0, p1, p2, p3, p4}, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->i(IIII)V
@@ -816,7 +784,7 @@
     .locals 0
 
     .line 3
-    invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
+    invoke-super {p0, p1}, Landroid/graphics/drawable/AnimatedStateListDrawable;->setBounds(Landroid/graphics/Rect;)V
 
     .line 4
     invoke-virtual {p0, p1}, Lmiuix/internal/view/CheckBoxAnimatedStateListDrawable;->j(Landroid/graphics/Rect;)V

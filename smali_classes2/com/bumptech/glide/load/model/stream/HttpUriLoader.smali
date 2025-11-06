@@ -53,6 +53,7 @@
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/util/HashSet;
 
     const-string v1, "http"
@@ -63,6 +64,7 @@
 
     move-result-object v1
 
+    .line 2
     invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
@@ -90,8 +92,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/bumptech/glide/load/model/stream/HttpUriLoader;->urlLoader:Lcom/bumptech/glide/load/model/ModelLoader;
 
     return-void

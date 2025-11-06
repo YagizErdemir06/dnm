@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/CycleDetectingLockFactory$CycleDetectingReentrantReadWriteLock;
+.class public final Lcom/google/common/util/concurrent/CycleDetectingLockFactory$CycleDetectingReentrantReadWriteLock;
 .super Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 .source "SourceFile"
 
@@ -72,6 +72,7 @@
 .method public getLockGraphNode()Lcom/google/common/util/concurrent/CycleDetectingLockFactory$LockGraphNode;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/CycleDetectingLockFactory$CycleDetectingReentrantReadWriteLock;->lockGraphNode:Lcom/google/common/util/concurrent/CycleDetectingLockFactory$LockGraphNode;
 
     return-object p0
@@ -80,6 +81,7 @@
 .method public isAcquiredByCurrentThread()Z
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->isWriteLockedByCurrentThread()Z
 
     move-result v0

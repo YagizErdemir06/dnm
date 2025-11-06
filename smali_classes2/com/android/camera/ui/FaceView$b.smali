@@ -1,5 +1,5 @@
 .class public Lcom/android/camera/ui/FaceView$b;
-.super Lps/m;
+.super Lk/j0/k/l;
 .source "SourceFile"
 
 
@@ -21,10 +21,19 @@
 # direct methods
 .method public constructor <init>(Lcom/android/camera/ui/FaceView;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/ui/FaceView$b;->a:Lcom/android/camera/ui/FaceView;
 
-    invoke-direct {p0}, Lps/m;-><init>()V
+    invoke-direct {p0}, Lk/j0/k/l;-><init>()V
 
     return-void
 .end method
@@ -32,15 +41,25 @@
 
 # virtual methods
 .method public getInterpolation(F)F
-    .locals 6
+    .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "t"
+        }
+    .end annotation
 
-    invoke-super {p0, p1}, Lps/m;->getInterpolation(F)F
+    .line 1
+    invoke-super {p0, p1}, Lk/j0/k/l;->getInterpolation(F)F
 
     move-result p1
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera/ui/FaceView$b;->a:Lcom/android/camera/ui/FaceView;
 
-    invoke-static {v0}, Lcom/android/camera/ui/FaceView;->m(Lcom/android/camera/ui/FaceView;)Landroid/graphics/Paint;
+    invoke-static {v0}, Lcom/android/camera/ui/FaceView;->j(Lcom/android/camera/ui/FaceView;)Landroid/graphics/Paint;
 
     move-result-object v0
 
@@ -56,22 +75,24 @@
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setAlpha(I)V
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera/ui/FaceView$b;->a:Lcom/android/camera/ui/FaceView;
 
-    invoke-static {v0}, Lcom/android/camera/ui/FaceView;->n(Lcom/android/camera/ui/FaceView;)Landroid/graphics/Paint;
+    invoke-static {v0}, Lcom/android/camera/ui/FaceView;->k(Lcom/android/camera/ui/FaceView;)Landroid/graphics/Paint;
 
     move-result-object v0
 
-    const-wide v2, 0x4043200000000000L    # 38.25
+    float-to-double v1, v1
 
-    float-to-double v4, v1
+    const-wide v3, 0x4043200000000000L    # 38.25
 
-    mul-double/2addr v4, v2
+    mul-double/2addr v1, v3
 
-    double-to-int v1, v4
+    double-to-int v1, v1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
+    .line 4
     iget-object p0, p0, Lcom/android/camera/ui/FaceView$b;->a:Lcom/android/camera/ui/FaceView;
 
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V

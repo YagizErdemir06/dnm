@@ -1,4 +1,4 @@
-.class abstract Landroidx/concurrent/futures/AbstractResolvableFuture$AtomicHelper;
+.class public abstract Landroidx/concurrent/futures/AbstractResolvableFuture$AtomicHelper;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

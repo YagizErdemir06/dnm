@@ -46,9 +46,9 @@
 
 .field public mFramePosition:I
 
-.field mTargetId:I
+.field public mTargetId:I
 
-.field mTargetString:Ljava/lang/String;
+.field public mTargetString:Ljava/lang/String;
 
 .field public mType:I
 
@@ -63,16 +63,20 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     sget v0, Landroidx/constraintlayout/core/motion/key/MotionKey;->UNSET:I
 
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mFramePosition:I
 
+    .line 3
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mTargetId:I
 
     const/4 v0, 0x0
 
+    .line 4
     iput-object v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mTargetString:Ljava/lang/String;
 
     return-void
@@ -103,6 +107,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroidx/constraintlayout/core/motion/key/MotionKey;->clone()Landroidx/constraintlayout/core/motion/key/MotionKey;
 
     move-result-object p0
@@ -113,18 +118,22 @@
 .method public copy(Landroidx/constraintlayout/core/motion/key/MotionKey;)Landroidx/constraintlayout/core/motion/key/MotionKey;
     .locals 1
 
+    .line 1
     iget v0, p1, Landroidx/constraintlayout/core/motion/key/MotionKey;->mFramePosition:I
 
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mFramePosition:I
 
+    .line 2
     iget v0, p1, Landroidx/constraintlayout/core/motion/key/MotionKey;->mTargetId:I
 
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mTargetId:I
 
+    .line 3
     iget-object v0, p1, Landroidx/constraintlayout/core/motion/key/MotionKey;->mTargetString:Ljava/lang/String;
 
     iput-object v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mTargetString:Ljava/lang/String;
 
+    .line 4
     iget p1, p1, Landroidx/constraintlayout/core/motion/key/MotionKey;->mType:I
 
     iput p1, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mType:I
@@ -146,6 +155,7 @@
 .method public getFramePosition()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mFramePosition:I
 
     return p0
@@ -154,6 +164,7 @@
 .method public matches(Ljava/lang/String;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mTargetString:Ljava/lang/String;
 
     if-eqz p0, :cond_1
@@ -162,6 +173,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-virtual {p1, p0}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
 
@@ -239,6 +251,7 @@
 .method public setFramePosition(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mFramePosition:I
 
     return-void
@@ -318,6 +331,7 @@
 .method public setViewId(I)Landroidx/constraintlayout/core/motion/key/MotionKey;
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mTargetId:I
 
     return-object p0
@@ -326,6 +340,7 @@
 .method public toBoolean(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 1
     instance-of p0, p1, Ljava/lang/Boolean;
 
     if-eqz p0, :cond_0
@@ -354,6 +369,7 @@
 .method public toFloat(Ljava/lang/Object;)F
     .locals 0
 
+    .line 1
     instance-of p0, p1, Ljava/lang/Float;
 
     if-eqz p0, :cond_0
@@ -382,6 +398,7 @@
 .method public toInt(Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     instance-of p0, p1, Ljava/lang/Integer;
 
     if-eqz p0, :cond_0

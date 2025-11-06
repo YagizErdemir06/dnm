@@ -40,6 +40,7 @@
 .method public static constructor <clinit>()V
     .locals 7
 
+    .line 1
     new-instance v0, Lcom/xiaomi/idm/bean/ConnParam$LinkRole;
 
     const-string v1, "MC_LINK_ROLE_NONE"
@@ -50,6 +51,7 @@
 
     sput-object v0, Lcom/xiaomi/idm/bean/ConnParam$LinkRole;->MC_LINK_ROLE_NONE:Lcom/xiaomi/idm/bean/ConnParam$LinkRole;
 
+    .line 2
     new-instance v1, Lcom/xiaomi/idm/bean/ConnParam$LinkRole;
 
     const-string v3, "MC_LINK_ROLE_INITIATOR"
@@ -60,6 +62,7 @@
 
     sput-object v1, Lcom/xiaomi/idm/bean/ConnParam$LinkRole;->MC_LINK_ROLE_INITIATOR:Lcom/xiaomi/idm/bean/ConnParam$LinkRole;
 
+    .line 3
     new-instance v3, Lcom/xiaomi/idm/bean/ConnParam$LinkRole;
 
     const-string v5, "MC_LINK_ROLE_RESPONDER"
@@ -80,6 +83,7 @@
 
     aput-object v3, v5, v6
 
+    .line 4
     sput-object v5, Lcom/xiaomi/idm/bean/ConnParam$LinkRole;->$VALUES:[Lcom/xiaomi/idm/bean/ConnParam$LinkRole;
 
     return-void
@@ -93,8 +97,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 2
     iput p3, p0, Lcom/xiaomi/idm/bean/ConnParam$LinkRole;->value:I
 
     return-void
@@ -103,6 +109,7 @@
 .method public static fromValue(I)Lcom/xiaomi/idm/bean/ConnParam$LinkRole;
     .locals 5
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/idm/bean/ConnParam$LinkRole;->values()[Lcom/xiaomi/idm/bean/ConnParam$LinkRole;
 
     move-result-object v0
@@ -116,6 +123,7 @@
 
     aget-object v3, v0, v2
 
+    .line 2
     iget v4, v3, Lcom/xiaomi/idm/bean/ConnParam$LinkRole;->value:I
 
     if-ne v4, p0, :cond_0
@@ -127,6 +135,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_1
     sget-object p0, Lcom/xiaomi/idm/bean/ConnParam$LinkRole;->MC_LINK_ROLE_NONE:Lcom/xiaomi/idm/bean/ConnParam$LinkRole;
 
@@ -136,6 +145,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/idm/bean/ConnParam$LinkRole;
     .locals 1
 
+    .line 1
     const-class v0, Lcom/xiaomi/idm/bean/ConnParam$LinkRole;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -150,6 +160,7 @@
 .method public static values()[Lcom/xiaomi/idm/bean/ConnParam$LinkRole;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/idm/bean/ConnParam$LinkRole;->$VALUES:[Lcom/xiaomi/idm/bean/ConnParam$LinkRole;
 
     invoke-virtual {v0}, [Lcom/xiaomi/idm/bean/ConnParam$LinkRole;->clone()Ljava/lang/Object;

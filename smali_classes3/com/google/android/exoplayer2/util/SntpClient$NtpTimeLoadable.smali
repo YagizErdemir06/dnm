@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/util/SntpClient$NtpTimeLoadable;
+.class public final Lcom/google/android/exoplayer2/util/SntpClient$NtpTimeLoadable;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -52,12 +52,14 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/android/exoplayer2/util/SntpClient;->access$100()Ljava/lang/Object;
 
     move-result-object p0
 
     monitor-enter p0
 
+    .line 2
     :try_start_0
     invoke-static {}, Lcom/google/android/exoplayer2/util/SntpClient;->access$200()Ljava/lang/Object;
 
@@ -67,6 +69,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
+    .line 3
     :try_start_1
     invoke-static {}, Lcom/google/android/exoplayer2/util/SntpClient;->access$300()Z
 
@@ -74,6 +77,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 4
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
@@ -85,17 +89,20 @@
 
     return-void
 
+    .line 5
     :cond_0
     :try_start_3
     monitor-exit v0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
+    .line 6
     :try_start_4
     invoke-static {}, Lcom/google/android/exoplayer2/util/SntpClient;->access$400()J
 
     move-result-wide v0
 
+    .line 7
     invoke-static {}, Lcom/google/android/exoplayer2/util/SntpClient;->access$200()Ljava/lang/Object;
 
     move-result-object v2
@@ -104,17 +111,21 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
+    .line 8
     :try_start_5
     invoke-static {v0, v1}, Lcom/google/android/exoplayer2/util/SntpClient;->access$502(J)J
 
     const/4 v0, 0x1
 
+    .line 9
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/SntpClient;->access$302(Z)Z
 
+    .line 10
     monitor-exit v2
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
+    .line 11
     :try_start_6
     monitor-exit p0
     :try_end_6
@@ -125,6 +136,7 @@
     :catchall_0
     move-exception v0
 
+    .line 12
     :try_start_7
     monitor-exit v2
     :try_end_7
@@ -138,6 +150,7 @@
     :catchall_1
     move-exception v1
 
+    .line 13
     :try_start_9
     monitor-exit v0
     :try_end_9
@@ -149,6 +162,7 @@
     :catchall_2
     move-exception v0
 
+    .line 14
     monitor-exit p0
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_2

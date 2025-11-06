@@ -1,4 +1,4 @@
-.class final Lcom/google/common/cache/LocalCache$ValueIterator;
+.class public final Lcom/google/common/cache/LocalCache$ValueIterator;
 .super Lcom/google/common/cache/LocalCache$HashIterator;
 .source "SourceFile"
 
@@ -25,6 +25,7 @@
 .method public constructor <init>(Lcom/google/common/cache/LocalCache;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/cache/LocalCache$HashIterator;-><init>(Lcom/google/common/cache/LocalCache;)V
 
     return-void
@@ -40,6 +41,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/cache/LocalCache$HashIterator;->nextEntry()Lcom/google/common/cache/LocalCache$WriteThroughEntry;
 
     move-result-object p0

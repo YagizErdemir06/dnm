@@ -14,9 +14,9 @@
 
 
 # static fields
-.field public static final a:Ljava/lang/String; = "ShaderManager"
+.field private static final a:Ljava/lang/String; = "ShaderManager"
 
-.field public static final b:Ljava/util/HashMap;
+.field private static final b:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashMap<",
@@ -32,6 +32,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/util/HashMap;
 
     const/16 v1, 0x32
@@ -42,6 +43,7 @@
 
     const-string v0, "render_engine"
 
+    .line 2
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     return-void
@@ -50,6 +52,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -61,7 +64,16 @@
         .annotation build Lcom/xiaomi/gl/ShaderManager$a;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "type"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -78,14 +90,16 @@
 
     const-string v1, "ShaderManager"
 
-    invoke-static {v1, v0}, Lzl/a;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Ld/o/g0/r0/a;->b(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 2
     invoke-static {p0}, Lcom/xiaomi/gl/ShaderManager;->e(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-static {p0}, Lcom/xiaomi/gl/ShaderManager;->d(I)I
 
     move-result v0
@@ -94,6 +108,7 @@
 
     if-le v0, v2, :cond_0
 
+    .line 4
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -108,23 +123,26 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lzl/a;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p0}, Ld/o/g0/r0/a;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 
     :cond_0
     const/4 v0, 0x0
 
+    .line 5
     invoke-static {v0}, Lcom/xiaomi/gl/ShaderManager;->getShaderByType(I)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 6
     invoke-static {p0}, Lcom/xiaomi/gl/ShaderManager;->getShaderByType(I)Ljava/lang/String;
 
     move-result-object v3
 
     const v4, 0x8b31
 
+    .line 7
     :try_start_0
     invoke-static {v4, v2}, Lcom/xiaomi/gl/ShaderManager;->b(ILjava/lang/String;)I
 
@@ -134,6 +152,7 @@
 
     const v4, 0x8b30
 
+    .line 8
     :try_start_1
     invoke-static {v4, v3}, Lcom/xiaomi/gl/ShaderManager;->b(ILjava/lang/String;)I
 
@@ -141,47 +160,59 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    .line 9
     :try_start_2
-    invoke-static {v1}, Lsg/h;->q(Ljava/lang/String;)I
+    invoke-static {v1}, Ld/o/k/h;->k(Ljava/lang/String;)I
 
     move-result v4
 
+    .line 10
     invoke-static {v4, v2}, Landroid/opengl/GLES20;->glAttachShader(II)V
 
+    .line 11
     invoke-static {v4, v3}, Landroid/opengl/GLES20;->glAttachShader(II)V
 
+    .line 12
     invoke-static {v4}, Landroid/opengl/GLES20;->glLinkProgram(I)V
 
     const/4 v5, 0x1
 
     new-array v5, v5, [I
 
+    .line 13
     invoke-static {v4, p0}, Lcom/xiaomi/gl/ShaderManager;->c(II)V
 
     const p0, 0x8b82
 
+    .line 14
     invoke-static {v4, p0, v5, v0}, Landroid/opengl/GLES20;->glGetProgramiv(II[II)V
 
+    .line 15
     aget p0, v5, v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     if-eqz p0, :cond_1
 
-    invoke-static {v2, v1}, Lsg/h;->A(ILjava/lang/String;)V
+    .line 16
+    invoke-static {v2, v1}, Ld/o/k/h;->u(ILjava/lang/String;)V
 
-    invoke-static {v3, v1}, Lsg/h;->A(ILjava/lang/String;)V
+    .line 17
+    invoke-static {v3, v1}, Ld/o/k/h;->u(ILjava/lang/String;)V
 
     return v4
 
+    .line 18
     :cond_1
     :try_start_3
     invoke-static {v4}, Landroid/opengl/GLES20;->glGetProgramInfoLog(I)Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-static {v4, v1}, Lsg/h;->w(ILjava/lang/String;)V
+    .line 19
+    invoke-static {v4, v1}, Ld/o/k/h;->q(ILjava/lang/String;)V
 
+    .line 20
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -224,11 +255,14 @@
 
     move v3, v0
 
+    .line 21
     :goto_1
-    invoke-static {v0, v1}, Lsg/h;->A(ILjava/lang/String;)V
+    invoke-static {v0, v1}, Ld/o/k/h;->u(ILjava/lang/String;)V
 
-    invoke-static {v3, v1}, Lsg/h;->A(ILjava/lang/String;)V
+    .line 22
+    invoke-static {v3, v1}, Ld/o/k/h;->u(ILjava/lang/String;)V
 
+    .line 23
     throw p0
 .end method
 
@@ -242,15 +276,28 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "shaderType",
+            "source"
+        }
+    .end annotation
 
     const-string v0, "ShaderManager"
 
-    invoke-static {p0, v0}, Lsg/h;->r(ILjava/lang/String;)I
+    .line 1
+    invoke-static {p0, v0}, Ld/o/k/h;->l(ILjava/lang/String;)I
 
     move-result v1
 
+    .line 2
     invoke-static {v1, p1}, Landroid/opengl/GLES20;->glShaderSource(ILjava/lang/String;)V
 
+    .line 3
     invoke-static {v1}, Landroid/opengl/GLES20;->glCompileShader(I)V
 
     const/4 p1, 0x1
@@ -261,21 +308,26 @@
 
     const/4 v3, 0x0
 
+    .line 4
     invoke-static {v1, v2, p1, v3}, Landroid/opengl/GLES20;->glGetShaderiv(II[II)V
 
+    .line 5
     aget p1, p1, v3
 
     if-eqz p1, :cond_0
 
     return v1
 
+    .line 6
     :cond_0
     invoke-static {v1}, Landroid/opengl/GLES20;->glGetShaderInfoLog(I)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {v1, v0}, Lsg/h;->A(ILjava/lang/String;)V
+    .line 7
+    invoke-static {v1, v0}, Ld/o/k/h;->u(ILjava/lang/String;)V
 
+    .line 8
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -303,21 +355,34 @@
     throw v0
 .end method
 
-.method public static c(II)V
+.method private static c(II)V
     .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "program",
+            "type"
+        }
+    .end annotation
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-static {v0}, Ljava/nio/IntBuffer;->allocate(I)Ljava/nio/IntBuffer;
 
     move-result-object v1
 
     const v2, 0x87fe
 
-    invoke-static {v2, v1}, Landroid/opengl/GLES20;->glGetIntegerv(ILjava/nio/IntBuffer;)V
+    .line 2
+    invoke-static {v2, v1}, Landroid/opengl/GLES30;->glGetIntegerv(ILjava/nio/IntBuffer;)V
 
     const/4 v2, 0x0
 
+    .line 3
     invoke-virtual {v1, v2}, Ljava/nio/IntBuffer;->get(I)I
 
     move-result v3
@@ -328,10 +393,12 @@
 
     const-string p0, " Current Device dose not support any binary formats "
 
-    invoke-static {v4, p0}, Lzl/a;->e(Ljava/lang/String;Ljava/lang/String;)V
+    .line 4
+    invoke-static {v4, p0}, Ld/o/g0/r0/a;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
+    .line 5
     :cond_0
     invoke-static {v0}, Ljava/nio/IntBuffer;->allocate(I)Ljava/nio/IntBuffer;
 
@@ -339,8 +406,10 @@
 
     const v3, 0x8741
 
-    invoke-static {p0, v3, v0}, Landroid/opengl/GLES20;->glGetProgramiv(IILjava/nio/IntBuffer;)V
+    .line 6
+    invoke-static {p0, v3, v0}, Landroid/opengl/GLES30;->glGetProgramiv(IILjava/nio/IntBuffer;)V
 
+    .line 7
     invoke-virtual {v0, v2}, Ljava/nio/IntBuffer;->get(I)I
 
     move-result v3
@@ -349,6 +418,7 @@
 
     move-result-object v3
 
+    .line 8
     invoke-virtual {v0, v2}, Ljava/nio/IntBuffer;->get(I)I
 
     move-result v5
@@ -357,6 +427,7 @@
 
     invoke-static {p0, v5, v6, v1, v3}, Landroid/opengl/GLES30;->glGetProgramBinary(IILjava/nio/IntBuffer;Ljava/nio/IntBuffer;Ljava/nio/Buffer;)V
 
+    .line 9
     sget-object p0, Lcom/xiaomi/gl/ShaderManager;->b:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -373,6 +444,7 @@
 
     invoke-virtual {p0, p1, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 10
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -401,22 +473,32 @@
 
     move-result-object p0
 
-    invoke-static {v4, p0}, Lzl/a;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, p0}, Ld/o/g0/r0/a;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public static d(I)I
+.method private static d(I)I
     .locals 8
     .param p0    # I
         .annotation build Lcom/xiaomi/gl/ShaderManager$a;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "type"
+        }
+    .end annotation
 
-    invoke-static {}, Landroid/opengl/GLES20;->glCreateProgram()I
+    .line 1
+    invoke-static {}, Landroid/opengl/GLES30;->glCreateProgram()I
 
     move-result v0
 
+    .line 2
     sget-object v1, Lcom/xiaomi/gl/ShaderManager;->b:Ljava/util/HashMap;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -435,6 +517,7 @@
 
     if-nez v2, :cond_0
 
+    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -453,8 +536,9 @@
 
     move-result-object v0
 
-    invoke-static {v4, v0}, Lzl/a;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Ld/o/g0/r0/a;->e(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 4
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -463,16 +547,19 @@
 
     return v3
 
+    .line 5
     :cond_0
     invoke-virtual {v2}, Lcom/xiaomi/gl/ShaderManager$b;->a()Ljava/nio/ByteBuffer;
 
     move-result-object v5
 
+    .line 6
     invoke-virtual {v2}, Lcom/xiaomi/gl/ShaderManager$b;->b()I
 
     move-result v2
 
-    invoke-virtual {v5}, Ljava/nio/Buffer;->capacity()I
+    .line 7
+    invoke-virtual {v5}, Ljava/nio/ByteBuffer;->capacity()I
 
     move-result v6
 
@@ -480,22 +567,26 @@
 
     const/4 v6, 0x1
 
+    .line 8
     invoke-static {v6}, Ljava/nio/IntBuffer;->allocate(I)Ljava/nio/IntBuffer;
 
     move-result-object v6
 
     const v7, 0x8b82
 
-    invoke-static {v0, v7, v6}, Landroid/opengl/GLES20;->glGetProgramiv(IILjava/nio/IntBuffer;)V
+    .line 9
+    invoke-static {v0, v7, v6}, Landroid/opengl/GLES30;->glGetProgramiv(IILjava/nio/IntBuffer;)V
 
     const/4 v7, 0x0
 
+    .line 10
     invoke-virtual {v6, v7}, Ljava/nio/IntBuffer;->get(I)I
 
     move-result v6
 
     if-nez v6, :cond_1
 
+    .line 11
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -514,10 +605,12 @@
 
     move-result-object v2
 
-    invoke-static {v4, v2}, Lzl/a;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v2}, Ld/o/g0/r0/a;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v0}, Landroid/opengl/GLES20;->glDeleteProgram(I)V
+    .line 12
+    invoke-static {v0}, Landroid/opengl/GLES30;->glDeleteProgram(I)V
 
+    .line 13
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -526,9 +619,11 @@
 
     return v3
 
+    .line 14
     :cond_1
-    invoke-static {v0}, Lsg/h;->h(I)V
+    invoke-static {v0}, Ld/o/k/h;->b(I)V
 
+    .line 15
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -543,7 +638,8 @@
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5}, Ljava/nio/Buffer;->capacity()I
+    .line 16
+    invoke-virtual {v5}, Ljava/nio/ByteBuffer;->capacity()I
 
     move-result p0
 
@@ -565,18 +661,28 @@
 
     move-result-object p0
 
-    invoke-static {v4, p0}, Lzl/a;->b(Ljava/lang/String;Ljava/lang/String;)V
+    .line 17
+    invoke-static {v4, p0}, Ld/o/g0/r0/a;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 .end method
 
-.method public static e(I)Z
+.method private static e(I)Z
     .locals 2
     .param p0    # I
         .annotation build Lcom/xiaomi/gl/ShaderManager$a;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "type"
+        }
+    .end annotation
 
+    .line 1
     sget-object v0, Lcom/xiaomi/gl/ShaderManager;->b:Ljava/util/HashMap;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -589,6 +695,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -605,7 +712,7 @@
 
     const-string v0, "ShaderManager"
 
-    invoke-static {v0, p0}, Lzl/a;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p0}, Ld/o/g0/r0/a;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p0, 0x1
 
@@ -622,4 +729,12 @@
         .annotation build Lcom/xiaomi/gl/ShaderManager$a;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "type"
+        }
+    .end annotation
 .end method

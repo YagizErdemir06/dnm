@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/io/LineBuffer;
+.class public abstract Lcom/google/common/io/LineBuffer;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -21,8 +21,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -43,6 +45,7 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/common/io/LineBuffer;->sawReturn:Z
 
     if-eqz v0, :cond_1
@@ -68,6 +71,7 @@
     :cond_2
     const-string v0, ""
 
+    .line 2
     :goto_0
     iget-object v1, p0, Lcom/google/common/io/LineBuffer;->line:Ljava/lang/StringBuilder;
 
@@ -77,6 +81,7 @@
 
     invoke-virtual {p0, v1, v0}, Lcom/google/common/io/LineBuffer;->handleLine(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -85,6 +90,7 @@
 
     const/4 v0, 0x0
 
+    .line 4
     iput-boolean v0, p0, Lcom/google/common/io/LineBuffer;->sawReturn:Z
 
     return p1
@@ -100,6 +106,7 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/common/io/LineBuffer;->sawReturn:Z
 
     const/4 v1, 0x0
@@ -112,6 +119,7 @@
 
     if-lez p3, :cond_1
 
+    .line 2
     aget-char v0, p1, p2
 
     if-ne v0, v2, :cond_0
@@ -145,6 +153,7 @@
     :goto_2
     if-ge v0, p2, :cond_6
 
+    .line 3
     aget-char v4, p1, v0
 
     if-eq v4, v2, :cond_4
@@ -155,6 +164,7 @@
 
     goto :goto_5
 
+    .line 4
     :cond_2
     iget-object v4, p0, Lcom/google/common/io/LineBuffer;->line:Ljava/lang/StringBuilder;
 
@@ -162,12 +172,14 @@
 
     invoke-virtual {v4, p1, p3, v5}, Ljava/lang/StringBuilder;->append([CII)Ljava/lang/StringBuilder;
 
+    .line 5
     iput-boolean v3, p0, Lcom/google/common/io/LineBuffer;->sawReturn:Z
 
     add-int/lit8 p3, v0, 0x1
 
     if-ge p3, p2, :cond_5
 
+    .line 6
     aget-char v4, p1, p3
 
     if-ne v4, v2, :cond_3
@@ -190,6 +202,7 @@
 
     goto :goto_4
 
+    .line 7
     :cond_4
     iget-object v4, p0, Lcom/google/common/io/LineBuffer;->line:Ljava/lang/StringBuilder;
 
@@ -197,6 +210,7 @@
 
     invoke-virtual {v4, p1, p3, v5}, Ljava/lang/StringBuilder;->append([CII)Ljava/lang/StringBuilder;
 
+    .line 8
     invoke-direct {p0, v3}, Lcom/google/common/io/LineBuffer;->finishLine(Z)Z
 
     :cond_5
@@ -208,6 +222,7 @@
 
     goto :goto_2
 
+    .line 9
     :cond_6
     iget-object p0, p0, Lcom/google/common/io/LineBuffer;->line:Ljava/lang/StringBuilder;
 
@@ -226,6 +241,7 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/common/io/LineBuffer;->sawReturn:Z
 
     if-nez v0, :cond_0
@@ -241,6 +257,7 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 2
     invoke-direct {p0, v0}, Lcom/google/common/io/LineBuffer;->finishLine(Z)Z
 
     :cond_1

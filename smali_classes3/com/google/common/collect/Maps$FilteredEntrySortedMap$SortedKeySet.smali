@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Maps$FilteredEntrySortedMap$SortedKeySet;
+.class public Lcom/google/common/collect/Maps$FilteredEntrySortedMap$SortedKeySet;
 .super Lcom/google/common/collect/Maps$FilteredEntryMap$KeySet;
 .source "SourceFile"
 
@@ -27,13 +27,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/Maps$FilteredEntrySortedMap;
+.field public final synthetic this$0:Lcom/google/common/collect/Maps$FilteredEntrySortedMap;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/Maps$FilteredEntrySortedMap;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/Maps$FilteredEntrySortedMap$SortedKeySet;->this$0:Lcom/google/common/collect/Maps$FilteredEntrySortedMap;
 
     invoke-direct {p0, p1}, Lcom/google/common/collect/Maps$FilteredEntryMap$KeySet;-><init>(Lcom/google/common/collect/Maps$FilteredEntryMap;)V
@@ -56,6 +57,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Maps$FilteredEntrySortedMap$SortedKeySet;->this$0:Lcom/google/common/collect/Maps$FilteredEntrySortedMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$FilteredEntrySortedMap;->sortedMap()Ljava/util/SortedMap;
@@ -80,6 +82,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Maps$FilteredEntrySortedMap$SortedKeySet;->this$0:Lcom/google/common/collect/Maps$FilteredEntrySortedMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$FilteredEntrySortedMap;->firstKey()Ljava/lang/Object;
@@ -103,6 +106,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Maps$FilteredEntrySortedMap$SortedKeySet;->this$0:Lcom/google/common/collect/Maps$FilteredEntrySortedMap;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/Maps$FilteredEntrySortedMap;->headMap(Ljava/lang/Object;)Ljava/util/SortedMap;
@@ -129,6 +133,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Maps$FilteredEntrySortedMap$SortedKeySet;->this$0:Lcom/google/common/collect/Maps$FilteredEntrySortedMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$FilteredEntrySortedMap;->lastKey()Ljava/lang/Object;
@@ -156,6 +161,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Maps$FilteredEntrySortedMap$SortedKeySet;->this$0:Lcom/google/common/collect/Maps$FilteredEntrySortedMap;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/Maps$FilteredEntrySortedMap;->subMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/SortedMap;
@@ -185,6 +191,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Maps$FilteredEntrySortedMap$SortedKeySet;->this$0:Lcom/google/common/collect/Maps$FilteredEntrySortedMap;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/Maps$FilteredEntrySortedMap;->tailMap(Ljava/lang/Object;)Ljava/util/SortedMap;

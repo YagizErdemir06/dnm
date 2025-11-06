@@ -92,16 +92,19 @@
 .method private getSAXModifyReader()Lorg/dom4j/io/SAXModifyReader;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/SAXModifier;->modifyReader:Lorg/dom4j/io/SAXModifyReader;
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Lorg/dom4j/io/SAXModifyReader;
 
     invoke-direct {v0}, Lorg/dom4j/io/SAXModifyReader;-><init>()V
 
     iput-object v0, p0, Lorg/dom4j/io/SAXModifier;->modifyReader:Lorg/dom4j/io/SAXModifyReader;
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lorg/dom4j/io/SAXModifier;->modifyReader:Lorg/dom4j/io/SAXModifyReader;
 
@@ -116,18 +119,21 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/SAXModifier;->xmlReader:Lorg/xml/sax/XMLReader;
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-static {v0}, Lorg/dom4j/io/SAXHelper;->createXMLReader(Z)Lorg/xml/sax/XMLReader;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/dom4j/io/SAXModifier;->xmlReader:Lorg/xml/sax/XMLReader;
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lorg/dom4j/io/SAXModifier;->xmlReader:Lorg/xml/sax/XMLReader;
 
@@ -142,17 +148,20 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     invoke-direct {p0}, Lorg/dom4j/io/SAXModifier;->getSAXModifyReader()Lorg/dom4j/io/SAXModifyReader;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/io/SAXModifier;->isPruneElements()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 3
     iget-object v1, p0, Lorg/dom4j/io/SAXModifier;->modifyReader:Lorg/dom4j/io/SAXModifyReader;
 
     new-instance v2, Lorg/dom4j/io/PruningDispatchHandler;
@@ -161,9 +170,11 @@
 
     invoke-virtual {v1, v2}, Lorg/dom4j/io/SAXReader;->setDispatchHandler(Lorg/dom4j/io/DispatchHandler;)V
 
+    .line 4
     :cond_0
     invoke-virtual {v0}, Lorg/dom4j/io/SAXReader;->resetHandlers()V
 
+    .line 5
     iget-object v1, p0, Lorg/dom4j/io/SAXModifier;->modifiers:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -174,6 +185,7 @@
 
     move-result-object v1
 
+    .line 6
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -181,12 +193,14 @@
 
     if-eqz v2, :cond_1
 
+    .line 7
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/util/Map$Entry;
 
+    .line 8
     new-instance v3, Lorg/dom4j/io/SAXModifyElementHandler;
 
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
@@ -197,6 +211,7 @@
 
     invoke-direct {v3, v4}, Lorg/dom4j/io/SAXModifyElementHandler;-><init>(Lorg/dom4j/io/ElementModifier;)V
 
+    .line 9
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -207,6 +222,7 @@
 
     goto :goto_0
 
+    .line 10
     :cond_1
     invoke-virtual {p0}, Lorg/dom4j/io/SAXModifier;->getXMLWriter()Lorg/dom4j/io/XMLWriter;
 
@@ -214,6 +230,7 @@
 
     invoke-virtual {v0, v1}, Lorg/dom4j/io/SAXModifyReader;->setXMLWriter(Lorg/dom4j/io/XMLWriter;)V
 
+    .line 11
     invoke-direct {p0}, Lorg/dom4j/io/SAXModifier;->getXMLReader()Lorg/xml/sax/XMLReader;
 
     move-result-object p0
@@ -227,6 +244,7 @@
     :catch_0
     move-exception p0
 
+    .line 12
     new-instance v0, Lorg/dom4j/DocumentException;
 
     invoke-virtual {p0}, Lorg/xml/sax/SAXException;->getMessage()Ljava/lang/String;
@@ -243,6 +261,7 @@
 .method public addModifier(Ljava/lang/String;Lorg/dom4j/io/ElementModifier;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/SAXModifier;->modifiers:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -253,6 +272,7 @@
 .method public getDocumentFactory()Lorg/dom4j/DocumentFactory;
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/dom4j/io/SAXModifier;->getSAXModifyReader()Lorg/dom4j/io/SAXModifyReader;
 
     move-result-object p0
@@ -267,6 +287,7 @@
 .method public getXMLWriter()Lorg/dom4j/io/XMLWriter;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/SAXModifier;->xmlWriter:Lorg/dom4j/io/XMLWriter;
 
     return-object p0
@@ -275,6 +296,7 @@
 .method public isPruneElements()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/dom4j/io/SAXModifier;->pruneElements:Z
 
     return p0
@@ -306,7 +328,7 @@
     move-exception p0
 
     .line 2
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    invoke-virtual {p0}, Ljava/lang/RuntimeException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -348,7 +370,7 @@
     move-exception p0
 
     .line 8
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    invoke-virtual {p0}, Ljava/lang/RuntimeException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -390,7 +412,7 @@
     move-exception p0
 
     .line 11
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    invoke-virtual {p0}, Ljava/lang/RuntimeException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -432,7 +454,7 @@
     move-exception p0
 
     .line 14
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    invoke-virtual {p0}, Ljava/lang/RuntimeException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -474,7 +496,7 @@
     move-exception p0
 
     .line 17
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    invoke-virtual {p0}, Ljava/lang/RuntimeException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -516,7 +538,7 @@
     move-exception p0
 
     .line 23
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    invoke-virtual {p0}, Ljava/lang/RuntimeException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -558,7 +580,7 @@
     move-exception p0
 
     .line 20
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    invoke-virtual {p0}, Ljava/lang/RuntimeException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -600,7 +622,7 @@
     move-exception p0
 
     .line 5
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    invoke-virtual {p0}, Ljava/lang/RuntimeException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -619,10 +641,12 @@
 .method public removeModifier(Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/SAXModifier;->modifiers:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-direct {p0}, Lorg/dom4j/io/SAXModifier;->getSAXModifyReader()Lorg/dom4j/io/SAXModifyReader;
 
     move-result-object p0
@@ -635,10 +659,12 @@
 .method public resetModifiers()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/SAXModifier;->modifiers:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
+    .line 2
     invoke-direct {p0}, Lorg/dom4j/io/SAXModifier;->getSAXModifyReader()Lorg/dom4j/io/SAXModifyReader;
 
     move-result-object p0
@@ -651,6 +677,7 @@
 .method public setDocumentFactory(Lorg/dom4j/DocumentFactory;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/dom4j/io/SAXModifier;->getSAXModifyReader()Lorg/dom4j/io/SAXModifyReader;
 
     move-result-object p0
@@ -663,6 +690,7 @@
 .method public setXMLWriter(Lorg/dom4j/io/XMLWriter;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/io/SAXModifier;->xmlWriter:Lorg/dom4j/io/XMLWriter;
 
     return-void

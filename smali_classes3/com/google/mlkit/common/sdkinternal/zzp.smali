@@ -40,6 +40,7 @@
 
     const-string v0, "Failed to check feature availability"
 
+    .line 1
     invoke-static {p0, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-void

@@ -1,4 +1,4 @@
-.class Lcom/google/android/datatransport/runtime/SafeLoggingExecutor$SafeLoggingRunnable;
+.class public Lcom/google/android/datatransport/runtime/SafeLoggingExecutor$SafeLoggingRunnable;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -25,8 +25,10 @@
 .method public constructor <init>(Ljava/lang/Runnable;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/SafeLoggingExecutor$SafeLoggingRunnable;->delegate:Ljava/lang/Runnable;
 
     return-void
@@ -37,6 +39,7 @@
 .method public run()V
     .locals 2
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/SafeLoggingExecutor$SafeLoggingRunnable;->delegate:Ljava/lang/Runnable;
 
@@ -53,6 +56,7 @@
 
     const-string v1, "Background execution failure."
 
+    .line 2
     invoke-static {v0, v1, p0}, Lcom/google/android/datatransport/runtime/logging/Logging;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0

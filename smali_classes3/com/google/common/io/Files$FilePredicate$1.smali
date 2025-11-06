@@ -1,4 +1,4 @@
-.class final enum Lcom/google/common/io/Files$FilePredicate$1;
+.class public final enum Lcom/google/common/io/Files$FilePredicate$1;
 .super Lcom/google/common/io/Files$FilePredicate;
 .source "SourceFile"
 
@@ -20,6 +20,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, p2, v0}, Lcom/google/common/io/Files$FilePredicate;-><init>(Ljava/lang/String;ILcom/google/common/io/Files$1;)V
 
     return-void

@@ -53,6 +53,7 @@
 
     const-string v19, "WhiteBalance"
 
+    .line 1
     filled-new-array/range {v0 .. v19}, [Ljava/lang/String;
 
     move-result-object v0
@@ -65,6 +66,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -85,8 +87,10 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
+    .line 2
     iget p0, p0, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
     const/4 v1, 0x1
@@ -95,11 +99,14 @@
 
     if-le p0, p1, :cond_2
 
+    .line 3
     :cond_0
     div-int/lit8 v2, v0, 0x2
 
+    .line 4
     div-int/lit8 v3, p0, 0x2
 
+    .line 5
     :goto_0
     div-int v4, v2, v1
 
@@ -116,6 +123,7 @@
     :cond_1
     mul-int/2addr p0, v0
 
+    .line 6
     div-int/2addr p0, v1
 
     int-to-long v2, p0
@@ -135,6 +143,7 @@
 
     const-wide/16 v4, 0x2
 
+    .line 7
     div-long/2addr v2, v4
 
     goto :goto_1
@@ -170,11 +179,13 @@
 
     return-object v0
 
+    .line 1
     :cond_0
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v1
 
+    .line 2
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v2
@@ -204,10 +215,12 @@
 
     move v7, p4
 
+    .line 3
     invoke-static/range {v3 .. v9}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
+    .line 4
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->isRecycled()Z
 
     move-result p2
@@ -216,6 +229,7 @@
 
     if-eqz p5, :cond_2
 
+    .line 5
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->recycle()V
 
     :cond_2
@@ -448,14 +462,17 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v0
 
+    .line 2
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v1
 
+    .line 3
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getOpacity()I
 
     move-result v2
@@ -468,22 +485,27 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     sget-object v2, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
 
+    .line 5
     :goto_0
     invoke-static {v0, v1, v2}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
+    .line 6
     new-instance v3, Landroid/graphics/Canvas;
 
     invoke-direct {v3, v2}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
     const/4 v4, 0x0
 
+    .line 7
     invoke-virtual {p0, v4, v4, v0, v1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
+    .line 8
     invoke-virtual {p0, v3}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     return-object v2
@@ -578,7 +600,7 @@
     move-exception p0
 
     .line 14
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    invoke-virtual {p0}, Ljava/lang/OutOfMemoryError;->printStackTrace()V
 
     :cond_1
     return-object v0
@@ -723,7 +745,7 @@
     move-exception p0
 
     .line 28
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    invoke-virtual {p0}, Ljava/lang/OutOfMemoryError;->printStackTrace()V
 
     :cond_3
     return-object v0
@@ -792,16 +814,20 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v0}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
     const/4 v1, 0x1
 
+    .line 2
     iput-boolean v1, v0, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
+    .line 3
     invoke-static {p0, v0}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
+    .line 4
     new-instance p0, Landroid/graphics/Point;
 
     iget v1, v0, Landroid/graphics/BitmapFactory$Options;->outWidth:I
@@ -859,7 +885,7 @@
     move-exception p0
 
     .line 5
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     :goto_0
     return-object v0
@@ -949,7 +975,7 @@
     move-exception p0
 
     .line 16
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     :goto_1
     return-object v0
@@ -1111,7 +1137,7 @@
     move-exception p0
 
     .line 19
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    invoke-virtual {p0}, Landroid/os/RemoteException;->printStackTrace()V
 
     :catch_1
     :cond_5
@@ -1207,7 +1233,7 @@
     move-exception p0
 
     .line 4
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     :goto_1
     return v0
@@ -1228,6 +1254,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :try_start_0
     new-instance v1, Landroid/media/ExifInterface;
 
@@ -1235,6 +1262,7 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 2
     sget-object p0, Lcom/xiaomi/milab/videosdk/utils/BitmapUtils;->EXIF_TAGS:[Ljava/lang/String;
 
     array-length v2, p0
@@ -1244,6 +1272,7 @@
 
     aget-object v3, p0, v0
 
+    .line 3
     invoke-virtual {v1, v3}, Landroid/media/ExifInterface;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -1262,7 +1291,8 @@
     :catch_0
     move-exception p0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 4
+    invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     return v0
 .end method
@@ -1420,10 +1450,6 @@
     .line 5
     invoke-virtual {v7, p1}, Landroid/graphics/Matrix;->postRotate(F)Z
 
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
     .line 6
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -1433,6 +1459,10 @@
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v6
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
 
     const/4 v8, 0x1
 
@@ -1476,7 +1506,7 @@
 .end method
 
 .method public static saveBitmap(Landroid/content/Context;Ljava/lang/String;Landroid/graphics/Bitmap;Z)V
-    .locals 4
+    .locals 5
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0,
@@ -1515,101 +1545,102 @@
 
     invoke-virtual {v1}, Ljava/io/File;->mkdirs()Z
 
-    .line 5
     :cond_0
-    :try_start_0
-    new-instance v1, Ljava/io/FileOutputStream;
+    const/4 v1, 0x0
 
-    invoke-direct {v1, v0}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    .line 5
+    :try_start_0
+    new-instance v2, Ljava/io/FileOutputStream;
+
+    invoke-direct {v2, v0}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-object v1, v2
 
     goto :goto_0
 
     :catch_0
-    move-exception v1
+    move-exception v2
 
     .line 6
-    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
-
-    const/4 v1, 0x0
+    invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
 
     :goto_0
-    const-string v2, ".png"
+    const/4 v2, 0x1
+
+    const-string v3, ".png"
 
     .line 7
-    invoke-virtual {p1, v2}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    invoke-virtual {p1, v3}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
-    move-result v2
+    move-result v3
 
-    const/16 v3, 0x1e
+    const/16 v4, 0x1e
 
-    if-eqz v2, :cond_1
+    if-eqz v3, :cond_1
 
     .line 8
-    sget-object v2, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
+    sget-object v3, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
 
-    invoke-virtual {p2, v2, v3, v1}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
+    invoke-virtual {p2, v3, v4, v1}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
     goto :goto_2
 
     :cond_1
-    const-string v2, ".jpeg"
+    const-string v3, ".jpeg"
 
     .line 9
-    invoke-virtual {p1, v2}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    invoke-virtual {p1, v3}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
-    move-result v2
+    move-result v3
 
-    if-nez v2, :cond_3
+    if-nez v3, :cond_3
 
-    const-string v2, ".jpg"
+    const-string v3, ".jpg"
 
-    invoke-virtual {p1, v2}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    invoke-virtual {p1, v3}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_2
+    if-eqz v3, :cond_2
 
     goto :goto_1
 
     :cond_2
-    const/4 p2, 0x0
+    const/4 v2, 0x0
 
-    goto :goto_3
+    goto :goto_2
 
     .line 10
     :cond_3
     :goto_1
-    sget-object v2, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
+    sget-object v3, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
-    invoke-virtual {p2, v2, v3, v1}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
-
-    :goto_2
-    const/4 p2, 0x1
+    invoke-virtual {p2, v3, v4, v1}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
     .line 11
-    :goto_3
+    :goto_2
     :try_start_1
-    invoke-virtual {v1}, Ljava/io/OutputStream;->flush()V
+    invoke-virtual {v1}, Ljava/io/FileOutputStream;->flush()V
 
     .line 12
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 
-    goto :goto_4
+    goto :goto_3
 
     :catch_1
-    move-exception v1
+    move-exception p2
 
     .line 13
-    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
+    invoke-virtual {p2}, Ljava/io/IOException;->printStackTrace()V
 
-    :goto_4
+    :goto_3
     if-eqz p3, :cond_4
 
-    if-eqz p2, :cond_4
+    if-eqz v2, :cond_4
 
     .line 14
     new-instance p2, Landroid/content/ContentValues;
@@ -1621,14 +1652,14 @@
     .line 15
     invoke-virtual {p2, p3, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string p1, "_display_name"
-
     .line 16
     invoke-virtual {v0}, Ljava/io/File;->getName()Ljava/lang/String;
 
-    move-result-object p3
+    move-result-object p1
 
-    invoke-virtual {p2, p1, p3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+    const-string p3, "_display_name"
+
+    invoke-virtual {p2, p3, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 17
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1679,14 +1710,18 @@
 
     invoke-virtual {v1}, Ljava/io/File;->mkdirs()Z
 
-    .line 21
     :cond_0
-    :try_start_0
-    new-instance v1, Ljava/io/FileOutputStream;
+    const/4 v1, 0x0
 
-    invoke-direct {v1, v0}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    .line 21
+    :try_start_0
+    new-instance v2, Ljava/io/FileOutputStream;
+
+    invoke-direct {v2, v0}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-object v1, v2
 
     goto :goto_0
 
@@ -1694,9 +1729,7 @@
     move-exception v0
 
     .line 22
-    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
-
-    const/4 v1, 0x0
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
     :goto_0
     const-string v0, ".png"
@@ -1745,7 +1778,7 @@
     :cond_3
     :goto_1
     :try_start_1
-    invoke-virtual {v1}, Ljava/io/OutputStream;->flush()V
+    invoke-virtual {v1}, Ljava/io/FileOutputStream;->flush()V
 
     .line 28
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
@@ -1758,7 +1791,7 @@
     move-exception p0
 
     .line 29
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     :goto_2
     return-void
@@ -1836,7 +1869,7 @@
 
     .line 37
     :try_start_2
-    invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
+    invoke-virtual {v1}, Ljava/io/BufferedOutputStream;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
 
@@ -1867,7 +1900,7 @@
     .line 38
     :goto_0
     :try_start_3
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    invoke-virtual {p0}, Ljava/io/FileNotFoundException;->printStackTrace()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
@@ -1875,7 +1908,7 @@
 
     .line 39
     :try_start_4
-    invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
+    invoke-virtual {v0}, Ljava/io/BufferedOutputStream;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
 
@@ -1888,7 +1921,7 @@
     if-eqz v0, :cond_1
 
     :try_start_5
-    invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
+    invoke-virtual {v0}, Ljava/io/BufferedOutputStream;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
 
@@ -1913,6 +1946,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :try_start_0
     new-instance v1, Landroid/media/ExifInterface;
 
@@ -1920,6 +1954,7 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
+    .line 2
     sget-object p0, Lcom/xiaomi/milab/videosdk/utils/BitmapUtils;->EXIF_TAGS:[Ljava/lang/String;
 
     array-length v2, p0
@@ -1931,12 +1966,14 @@
 
     aget-object v4, p0, v3
 
+    .line 3
     invoke-virtual {p1, v4}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
+    .line 4
     invoke-virtual {p1, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
@@ -1948,6 +1985,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     :try_start_1
     invoke-virtual {v1}, Landroid/media/ExifInterface;->saveAttributes()V
@@ -1961,14 +1999,16 @@
     :catch_0
     move-exception p0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 6
+    invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     return v0
 
     :catch_1
     move-exception p0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 7
+    invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     return v0
 .end method
@@ -1994,11 +2034,13 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v3
 
+    .line 2
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v4
@@ -2013,12 +2055,19 @@
 
     move-object v0, p0
 
+    .line 3
     invoke-static/range {v0 .. v6}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
+    .line 4
     invoke-virtual {p1, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    :cond_1
     return-object p1
 .end method
 
@@ -2056,7 +2105,7 @@
     const/4 p0, 0x1
 
     .line 5
-    invoke-virtual {v0, p0}, Landroid/view/View;->setDrawingCacheEnabled(Z)V
+    invoke-virtual {v0, p0}, Landroid/widget/TextView;->setDrawingCacheEnabled(Z)V
 
     const/4 p0, 0x0
 
@@ -2069,21 +2118,21 @@
 
     move-result v1
 
-    invoke-virtual {v0, p1, v1}, Landroid/view/View;->measure(II)V
+    invoke-virtual {v0, p1, v1}, Landroid/widget/TextView;->measure(II)V
 
     .line 7
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
+    invoke-virtual {v0}, Landroid/widget/TextView;->getMeasuredWidth()I
 
     move-result p1
 
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
+    invoke-virtual {v0}, Landroid/widget/TextView;->getMeasuredHeight()I
 
     move-result v1
 
-    invoke-virtual {v0, p0, p0, p1, v1}, Landroid/view/View;->layout(IIII)V
+    invoke-virtual {v0, p0, p0, p1, v1}, Landroid/widget/TextView;->layout(IIII)V
 
     .line 8
-    invoke-virtual {v0}, Landroid/view/View;->getDrawingCache()Landroid/graphics/Bitmap;
+    invoke-virtual {v0}, Landroid/widget/TextView;->getDrawingCache()Landroid/graphics/Bitmap;
 
     move-result-object p0
 
@@ -2092,7 +2141,7 @@
     move-result-object p0
 
     .line 9
-    invoke-virtual {v0}, Landroid/view/View;->destroyDrawingCache()V
+    invoke-virtual {v0}, Landroid/widget/TextView;->destroyDrawingCache()V
 
     return-object p0
 .end method
@@ -2152,12 +2201,12 @@
     invoke-direct/range {v0 .. v7}, Landroid/text/StaticLayout;-><init>(Ljava/lang/CharSequence;Landroid/text/TextPaint;ILandroid/text/Layout$Alignment;FFZ)V
 
     .line 13
-    invoke-virtual {p0}, Landroid/text/Layout;->getWidth()I
+    invoke-virtual {p0}, Landroid/text/StaticLayout;->getWidth()I
 
     move-result p1
 
     .line 14
-    invoke-virtual {p0}, Landroid/text/Layout;->getHeight()I
+    invoke-virtual {p0}, Landroid/text/StaticLayout;->getHeight()I
 
     move-result p2
 
@@ -2174,7 +2223,7 @@
     invoke-direct {p2, p1}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
     .line 17
-    invoke-virtual {p0, p2}, Landroid/text/Layout;->draw(Landroid/graphics/Canvas;)V
+    invoke-virtual {p0, p2}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
     return-object p1
 .end method
@@ -2202,11 +2251,13 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v3
 
+    .line 2
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v4
@@ -2223,6 +2274,7 @@
 
     div-float/2addr p2, v0
 
+    .line 3
     new-instance v5, Landroid/graphics/Matrix;
 
     invoke-direct {v5}, Landroid/graphics/Matrix;-><init>()V
@@ -2231,10 +2283,12 @@
 
     if-gez v0, :cond_1
 
+    .line 4
     invoke-virtual {v5, p1, p1}, Landroid/graphics/Matrix;->postScale(FF)Z
 
     goto :goto_0
 
+    .line 5
     :cond_1
     invoke-virtual {v5, p2, p2}, Landroid/graphics/Matrix;->postScale(FF)Z
 
@@ -2247,10 +2301,12 @@
 
     move-object v0, p0
 
+    .line 6
     invoke-static/range {v0 .. v6}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
+    .line 7
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->isRecycled()Z
 
     move-result p2
@@ -2259,6 +2315,7 @@
 
     if-eqz p3, :cond_2
 
+    .line 8
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->recycle()V
 
     :cond_2

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhm;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhm;
 .super Ljava/lang/IllegalArgumentException;
 .source "SourceFile"
 
@@ -7,6 +7,7 @@
 .method public constructor <init>(II)V
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

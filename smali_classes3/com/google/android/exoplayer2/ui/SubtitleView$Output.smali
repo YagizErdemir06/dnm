@@ -1,4 +1,4 @@
-.class interface abstract Lcom/google/android/exoplayer2/ui/SubtitleView$Output;
+.class public interface abstract Lcom/google/android/exoplayer2/ui/SubtitleView$Output;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

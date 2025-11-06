@@ -1,4 +1,4 @@
-.class final Lcom/google/common/base/CharMatcher$BitSetMatcher;
+.class public final Lcom/google/common/base/CharMatcher$BitSetMatcher;
 .super Lcom/google/common/base/CharMatcher$NamedFastMatcher;
 .source "SourceFile"
 
@@ -69,6 +69,7 @@
 .method public matches(C)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/CharMatcher$BitSetMatcher;->table:Ljava/util/BitSet;
 
     invoke-virtual {p0, p1}, Ljava/util/BitSet;->get(I)Z
@@ -81,6 +82,7 @@
 .method public setBits(Ljava/util/BitSet;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/CharMatcher$BitSetMatcher;->table:Ljava/util/BitSet;
 
     invoke-virtual {p1, p0}, Ljava/util/BitSet;->or(Ljava/util/BitSet;)V

@@ -9,29 +9,32 @@
 # static fields
 .field private static final DOCUMENT_FACTORY:Lorg/dom4j/DocumentFactory;
 
-.field protected static final EMPTY_ITERATOR:Ljava/util/Iterator;
+.field public static final EMPTY_ITERATOR:Ljava/util/Iterator;
 
-.field protected static final EMPTY_LIST:Ljava/util/List;
+.field public static final EMPTY_LIST:Ljava/util/List;
 
-.field protected static final USE_STRINGVALUE_SEPARATOR:Z = false
+.field public static final USE_STRINGVALUE_SEPARATOR:Z = false
 
-.field protected static final VERBOSE_TOSTRING:Z = false
+.field public static final VERBOSE_TOSTRING:Z = false
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     invoke-static {}, Lorg/dom4j/DocumentFactory;->getInstance()Lorg/dom4j/DocumentFactory;
 
     move-result-object v0
 
     sput-object v0, Lorg/dom4j/tree/AbstractElement;->DOCUMENT_FACTORY:Lorg/dom4j/DocumentFactory;
 
+    .line 2
     sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
     sput-object v0, Lorg/dom4j/tree/AbstractElement;->EMPTY_LIST:Ljava/util/List;
 
+    .line 3
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -44,6 +47,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/dom4j/tree/AbstractBranch;-><init>()V
 
     return-void
@@ -54,8 +58,10 @@
 .method public accept(Lorg/dom4j/Visitor;)V
     .locals 4
 
+    .line 1
     invoke-interface {p1, p0}, Lorg/dom4j/Visitor;->visit(Lorg/dom4j/Element;)V
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->attributeCount()I
 
     move-result v0
@@ -67,16 +73,19 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
+    .line 3
     invoke-virtual {p0, v2}, Lorg/dom4j/tree/AbstractElement;->attribute(I)Lorg/dom4j/Attribute;
 
     move-result-object v3
 
+    .line 4
     invoke-interface {p1, v3}, Lorg/dom4j/Visitor;->visit(Lorg/dom4j/Attribute;)V
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->nodeCount()I
 
@@ -85,10 +94,12 @@
     :goto_1
     if-ge v1, v0, :cond_1
 
+    .line 6
     invoke-virtual {p0, v1}, Lorg/dom4j/tree/AbstractElement;->node(I)Lorg/dom4j/Node;
 
     move-result-object v2
 
+    .line 7
     invoke-interface {v2, p1}, Lorg/dom4j/Node;->accept(Lorg/dom4j/Visitor;)V
 
     add-int/lit8 v1, v1, 0x1
@@ -492,6 +503,7 @@
 .method public addCDATA(Ljava/lang/String;)Lorg/dom4j/Element;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->getDocumentFactory()Lorg/dom4j/DocumentFactory;
 
     move-result-object v0
@@ -500,6 +512,7 @@
 
     move-result-object p1
 
+    .line 2
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/AbstractElement;->addNewNode(Lorg/dom4j/Node;)V
 
     return-object p0
@@ -508,6 +521,7 @@
 .method public addComment(Ljava/lang/String;)Lorg/dom4j/Element;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->getDocumentFactory()Lorg/dom4j/DocumentFactory;
 
     move-result-object v0
@@ -516,6 +530,7 @@
 
     move-result-object p1
 
+    .line 2
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/AbstractElement;->addNewNode(Lorg/dom4j/Node;)V
 
     return-object p0
@@ -524,12 +539,14 @@
 .method public addElement(Ljava/lang/String;)Lorg/dom4j/Element;
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->getDocumentFactory()Lorg/dom4j/DocumentFactory;
 
     move-result-object v0
 
     const-string v1, ":"
 
+    .line 2
     invoke-virtual {p1, v1}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v1
@@ -538,16 +555,19 @@
 
     const/4 v2, 0x0
 
+    .line 3
     invoke-virtual {p1, v2, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v2
 
     add-int/lit8 v1, v1, 0x1
 
+    .line 4
     invoke-virtual {p1, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 5
     invoke-virtual {p0, v2}, Lorg/dom4j/tree/AbstractElement;->getNamespaceForPrefix(Ljava/lang/String;)Lorg/dom4j/Namespace;
 
     move-result-object v3
@@ -556,6 +576,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     new-instance v0, Lorg/dom4j/IllegalAddException;
 
@@ -592,6 +613,7 @@
     :cond_1
     const-string v1, ""
 
+    .line 7
     invoke-virtual {p0, v1}, Lorg/dom4j/tree/AbstractElement;->getNamespaceForPrefix(Ljava/lang/String;)Lorg/dom4j/Namespace;
 
     move-result-object v3
@@ -601,21 +623,25 @@
     :goto_0
     if-eqz v3, :cond_2
 
+    .line 8
     invoke-virtual {v0, v1, v3}, Lorg/dom4j/DocumentFactory;->createQName(Ljava/lang/String;Lorg/dom4j/Namespace;)Lorg/dom4j/QName;
 
     move-result-object p1
 
+    .line 9
     invoke-virtual {v0, p1}, Lorg/dom4j/DocumentFactory;->createElement(Lorg/dom4j/QName;)Lorg/dom4j/Element;
 
     move-result-object p1
 
     goto :goto_1
 
+    .line 10
     :cond_2
     invoke-virtual {v0, p1}, Lorg/dom4j/DocumentFactory;->createElement(Ljava/lang/String;)Lorg/dom4j/Element;
 
     move-result-object p1
 
+    .line 11
     :goto_1
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/AbstractElement;->addNewNode(Lorg/dom4j/Node;)V
 
@@ -625,6 +651,7 @@
 .method public addEntity(Ljava/lang/String;Ljava/lang/String;)Lorg/dom4j/Element;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->getDocumentFactory()Lorg/dom4j/DocumentFactory;
 
     move-result-object v0
@@ -633,6 +660,7 @@
 
     move-result-object p1
 
+    .line 2
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/AbstractElement;->addNewNode(Lorg/dom4j/Node;)V
 
     return-object p0
@@ -641,6 +669,7 @@
 .method public addNamespace(Ljava/lang/String;Ljava/lang/String;)Lorg/dom4j/Element;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->getDocumentFactory()Lorg/dom4j/DocumentFactory;
 
     move-result-object v0
@@ -649,6 +678,7 @@
 
     move-result-object p1
 
+    .line 2
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/AbstractElement;->addNewNode(Lorg/dom4j/Node;)V
 
     return-object p0
@@ -827,6 +857,7 @@
 .method public addText(Ljava/lang/String;)Lorg/dom4j/Element;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->getDocumentFactory()Lorg/dom4j/DocumentFactory;
 
     move-result-object v0
@@ -835,6 +866,7 @@
 
     move-result-object p1
 
+    .line 2
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/AbstractElement;->addNewNode(Lorg/dom4j/Node;)V
 
     return-object p0
@@ -961,6 +993,7 @@
 .method public appendAttributes(Lorg/dom4j/Element;)V
     .locals 4
 
+    .line 1
     invoke-interface {p1}, Lorg/dom4j/Element;->attributeCount()I
 
     move-result v0
@@ -970,16 +1003,19 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 2
     invoke-interface {p1, v1}, Lorg/dom4j/Element;->attribute(I)Lorg/dom4j/Attribute;
 
     move-result-object v2
 
+    .line 3
     invoke-interface {v2}, Lorg/dom4j/Node;->supportsParent()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
+    .line 4
     invoke-interface {v2}, Lorg/dom4j/Attribute;->getQName()Lorg/dom4j/QName;
 
     move-result-object v3
@@ -992,6 +1028,7 @@
 
     goto :goto_1
 
+    .line 5
     :cond_0
     invoke-virtual {p0, v2}, Lorg/dom4j/tree/AbstractElement;->add(Lorg/dom4j/Attribute;)V
 
@@ -1007,11 +1044,13 @@
 .method public asXML()Ljava/lang/String;
     .locals 3
 
+    .line 1
     :try_start_0
     new-instance v0, Ljava/io/StringWriter;
 
     invoke-direct {v0}, Ljava/io/StringWriter;-><init>()V
 
+    .line 2
     new-instance v1, Lorg/dom4j/io/XMLWriter;
 
     new-instance v2, Lorg/dom4j/io/OutputFormat;
@@ -1020,10 +1059,13 @@
 
     invoke-direct {v1, v0, v2}, Lorg/dom4j/io/XMLWriter;-><init>(Ljava/io/Writer;Lorg/dom4j/io/OutputFormat;)V
 
+    .line 3
     invoke-virtual {v1, p0}, Lorg/dom4j/io/XMLWriter;->write(Lorg/dom4j/Element;)V
 
+    .line 4
     invoke-virtual {v1}, Lorg/dom4j/io/XMLWriter;->flush()V
 
+    .line 5
     invoke-virtual {v0}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -1035,6 +1077,7 @@
     :catch_0
     move-exception p0
 
+    .line 6
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuffer;
@@ -1045,7 +1088,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
 
@@ -1197,6 +1240,7 @@
 .method public attributeCount()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->attributeList()Ljava/util/List;
 
     move-result-object p0
@@ -1211,6 +1255,7 @@
 .method public attributeIterator()Ljava/util/Iterator;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->attributeList()Ljava/util/List;
 
     move-result-object p0
@@ -1309,6 +1354,7 @@
 .method public attributes()Ljava/util/List;
     .locals 2
 
+    .line 1
     new-instance v0, Lorg/dom4j/tree/ContentListFacade;
 
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->attributeList()Ljava/util/List;
@@ -1325,6 +1371,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     invoke-interface {p1, p0}, Lorg/dom4j/Node;->setParent(Lorg/dom4j/Element;)V
 
     :cond_0
@@ -1338,8 +1385,10 @@
 
     const/4 p0, 0x0
 
+    .line 1
     invoke-interface {p1, p0}, Lorg/dom4j/Node;->setParent(Lorg/dom4j/Element;)V
 
+    .line 2
     invoke-interface {p1, p0}, Lorg/dom4j/Node;->setDocument(Lorg/dom4j/Document;)V
 
     :cond_0
@@ -1458,6 +1507,7 @@
 .method public createSingleIterator(Ljava/lang/Object;)Ljava/util/Iterator;
     .locals 0
 
+    .line 1
     new-instance p0, Lorg/dom4j/tree/SingleIterator;
 
     invoke-direct {p0, p1}, Lorg/dom4j/tree/SingleIterator;-><init>(Ljava/lang/Object;)V
@@ -1468,14 +1518,17 @@
 .method public declaredNamespaces()Ljava/util/List;
     .locals 5
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractBranch;->createResultList()Lorg/dom4j/tree/BackedList;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractBranch;->contentList()Ljava/util/List;
 
     move-result-object p0
 
+    .line 3
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -1485,14 +1538,17 @@
     :goto_0
     if-ge v2, v1, :cond_1
 
+    .line 4
     invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
+    .line 5
     instance-of v4, v3, Lorg/dom4j/Namespace;
 
     if-eqz v4, :cond_0
 
+    .line 6
     invoke-virtual {v0, v3}, Lorg/dom4j/tree/BackedList;->addLocal(Ljava/lang/Object;)V
 
     :cond_0
@@ -1985,16 +2041,20 @@
 
     if-le p1, v0, :cond_0
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->attributeList()Ljava/util/List;
 
     move-result-object p0
 
+    .line 2
     instance-of v0, p0, Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
 
+    .line 3
     check-cast p0, Ljava/util/ArrayList;
 
+    .line 4
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->ensureCapacity(I)V
 
     :cond_0
@@ -2004,6 +2064,7 @@
 .method public getData()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractBranch;->getText()Ljava/lang/String;
 
     move-result-object p0
@@ -2014,12 +2075,14 @@
 .method public getDocumentFactory()Lorg/dom4j/DocumentFactory;
     .locals 0
 
+    .line 1
     invoke-interface {p0}, Lorg/dom4j/Element;->getQName()Lorg/dom4j/QName;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/QName;->getDocumentFactory()Lorg/dom4j/DocumentFactory;
 
     move-result-object p0
@@ -2028,6 +2091,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     sget-object p0, Lorg/dom4j/tree/AbstractElement;->DOCUMENT_FACTORY:Lorg/dom4j/DocumentFactory;
 
@@ -2037,6 +2101,7 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-interface {p0}, Lorg/dom4j/Element;->getQName()Lorg/dom4j/QName;
 
     move-result-object p0
@@ -2051,6 +2116,7 @@
 .method public getNamespace()Lorg/dom4j/Namespace;
     .locals 0
 
+    .line 1
     invoke-interface {p0}, Lorg/dom4j/Element;->getQName()Lorg/dom4j/QName;
 
     move-result-object p0
@@ -2069,6 +2135,7 @@
 
     const-string p1, ""
 
+    .line 1
     :cond_0
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->getNamespacePrefix()Ljava/lang/String;
 
@@ -2080,6 +2147,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->getNamespace()Lorg/dom4j/Namespace;
 
     move-result-object p0
@@ -2089,21 +2157,25 @@
     :cond_1
     const-string v0, "xml"
 
+    .line 3
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
+    .line 4
     sget-object p0, Lorg/dom4j/Namespace;->XML_NAMESPACE:Lorg/dom4j/Namespace;
 
     return-object p0
 
+    .line 5
     :cond_2
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractBranch;->contentList()Ljava/util/List;
 
     move-result-object v0
 
+    .line 6
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -2113,16 +2185,20 @@
     :goto_0
     if-ge v2, v1, :cond_4
 
+    .line 7
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
+    .line 8
     instance-of v4, v3, Lorg/dom4j/Namespace;
 
     if-eqz v4, :cond_3
 
+    .line 9
     check-cast v3, Lorg/dom4j/Namespace;
 
+    .line 10
     invoke-virtual {v3}, Lorg/dom4j/Namespace;->getPrefix()Ljava/lang/String;
 
     move-result-object v4
@@ -2140,6 +2216,7 @@
 
     goto :goto_0
 
+    .line 11
     :cond_4
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractNode;->getParent()Lorg/dom4j/Element;
 
@@ -2147,6 +2224,7 @@
 
     if-eqz p0, :cond_5
 
+    .line 12
     invoke-interface {p0, p1}, Lorg/dom4j/Element;->getNamespaceForPrefix(Ljava/lang/String;)Lorg/dom4j/Namespace;
 
     move-result-object p0
@@ -2155,6 +2233,7 @@
 
     return-object p0
 
+    .line 13
     :cond_5
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -2162,6 +2241,7 @@
 
     if-gtz p0, :cond_6
 
+    .line 14
     sget-object p0, Lorg/dom4j/Namespace;->NO_NAMESPACE:Lorg/dom4j/Namespace;
 
     return-object p0
@@ -2177,6 +2257,7 @@
 
     if-eqz p1, :cond_4
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -2185,6 +2266,7 @@
 
     goto :goto_1
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->getNamespaceURI()Ljava/lang/String;
 
@@ -2196,17 +2278,20 @@
 
     if-eqz v0, :cond_1
 
+    .line 3
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->getNamespace()Lorg/dom4j/Namespace;
 
     move-result-object p0
 
     return-object p0
 
+    .line 4
     :cond_1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractBranch;->contentList()Ljava/util/List;
 
     move-result-object p0
 
+    .line 5
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -2216,16 +2301,20 @@
     :goto_0
     if-ge v1, v0, :cond_3
 
+    .line 6
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
+    .line 7
     instance-of v3, v2, Lorg/dom4j/Namespace;
 
     if-eqz v3, :cond_2
 
+    .line 8
     check-cast v2, Lorg/dom4j/Namespace;
 
+    .line 9
     invoke-virtual {v2}, Lorg/dom4j/Namespace;->getURI()Ljava/lang/String;
 
     move-result-object v3
@@ -2248,6 +2337,7 @@
 
     return-object p0
 
+    .line 10
     :cond_4
     :goto_1
     sget-object p0, Lorg/dom4j/Namespace;->NO_NAMESPACE:Lorg/dom4j/Namespace;
@@ -2258,6 +2348,7 @@
 .method public getNamespacePrefix()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-interface {p0}, Lorg/dom4j/Element;->getQName()Lorg/dom4j/QName;
 
     move-result-object p0
@@ -2272,6 +2363,7 @@
 .method public getNamespaceURI()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-interface {p0}, Lorg/dom4j/Element;->getQName()Lorg/dom4j/QName;
 
     move-result-object p0
@@ -2286,14 +2378,17 @@
 .method public getNamespacesForURI(Ljava/lang/String;)Ljava/util/List;
     .locals 5
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractBranch;->createResultList()Lorg/dom4j/tree/BackedList;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractBranch;->contentList()Ljava/util/List;
 
     move-result-object p0
 
+    .line 3
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -2303,10 +2398,12 @@
     :goto_0
     if-ge v2, v1, :cond_1
 
+    .line 4
     invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
+    .line 5
     instance-of v4, v3, Lorg/dom4j/Namespace;
 
     if-eqz v4, :cond_0
@@ -2325,6 +2422,7 @@
 
     if-eqz v4, :cond_0
 
+    .line 6
     invoke-virtual {v0, v3}, Lorg/dom4j/tree/BackedList;->addLocal(Ljava/lang/Object;)V
 
     :cond_0
@@ -2353,6 +2451,7 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractNode;->getParent()Lorg/dom4j/Element;
 
@@ -2362,6 +2461,7 @@
 
     if-nez v0, :cond_1
 
+    .line 2
     new-instance p1, Ljava/lang/StringBuffer;
 
     invoke-direct {p1}, Ljava/lang/StringBuffer;-><init>()V
@@ -2383,12 +2483,14 @@
     :cond_1
     if-ne v0, p1, :cond_2
 
+    .line 3
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->getXPathNameStep()Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
+    .line 4
     :cond_2
     new-instance v2, Ljava/lang/StringBuffer;
 
@@ -2420,6 +2522,7 @@
 
     const-string v0, ":"
 
+    .line 1
     invoke-virtual {p1, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v0
@@ -2428,12 +2531,14 @@
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-virtual {p1, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v1
 
     add-int/lit8 v0, v0, 0x1
 
+    .line 3
     invoke-virtual {p1, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p1
@@ -2443,6 +2548,7 @@
     :cond_0
     const-string v1, ""
 
+    .line 4
     :goto_0
     invoke-virtual {p0, v1}, Lorg/dom4j/tree/AbstractElement;->getNamespaceForPrefix(Ljava/lang/String;)Lorg/dom4j/Namespace;
 
@@ -2450,6 +2556,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 5
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->getDocumentFactory()Lorg/dom4j/DocumentFactory;
 
     move-result-object p0
@@ -2460,6 +2567,7 @@
 
     return-object p0
 
+    .line 6
     :cond_1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->getDocumentFactory()Lorg/dom4j/DocumentFactory;
 
@@ -2475,6 +2583,7 @@
 .method public getQualifiedName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-interface {p0}, Lorg/dom4j/Element;->getQName()Lorg/dom4j/QName;
 
     move-result-object p0
@@ -2489,10 +2598,12 @@
 .method public getStringValue()Ljava/lang/String;
     .locals 6
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractBranch;->contentList()Ljava/util/List;
 
     move-result-object v0
 
+    .line 2
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -2505,6 +2616,7 @@
 
     if-ne v1, v3, :cond_0
 
+    .line 3
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -2515,6 +2627,7 @@
 
     return-object p0
 
+    .line 4
     :cond_0
     new-instance v3, Ljava/lang/StringBuffer;
 
@@ -2523,20 +2636,24 @@
     :goto_0
     if-ge v2, v1, :cond_2
 
+    .line 5
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
+    .line 6
     invoke-virtual {p0, v4}, Lorg/dom4j/tree/AbstractBranch;->getContentAsStringValue(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
+    .line 7
     invoke-virtual {v4}, Ljava/lang/String;->length()I
 
     move-result v5
 
     if-lez v5, :cond_1
 
+    .line 8
     invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_1
@@ -2544,6 +2661,7 @@
 
     goto :goto_0
 
+    .line 9
     :cond_2
     invoke-virtual {v3}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -2560,6 +2678,7 @@
 .method public getUniquePath(Lorg/dom4j/Element;)Ljava/lang/String;
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractNode;->getParent()Lorg/dom4j/Element;
 
     move-result-object v0
@@ -2568,6 +2687,7 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance p1, Ljava/lang/StringBuffer;
 
     invoke-direct {p1}, Ljava/lang/StringBuffer;-><init>()V
@@ -2586,6 +2706,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance v2, Ljava/lang/StringBuffer;
 
@@ -2593,14 +2714,17 @@
 
     if-eq v0, p1, :cond_1
 
+    .line 4
     invoke-interface {v0, p1}, Lorg/dom4j/Node;->getUniquePath(Lorg/dom4j/Element;)Ljava/lang/String;
 
     move-result-object p1
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    .line 5
     invoke-virtual {v2, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    .line 6
     :cond_1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->getXPathNameStep()Ljava/lang/String;
 
@@ -2608,6 +2732,7 @@
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    .line 7
     invoke-interface {p0}, Lorg/dom4j/Element;->getQName()Lorg/dom4j/QName;
 
     move-result-object p1
@@ -2616,6 +2741,7 @@
 
     move-result-object p1
 
+    .line 8
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -2624,6 +2750,7 @@
 
     if-le v0, v1, :cond_2
 
+    .line 9
     invoke-interface {p1, p0}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
 
     move-result p0
@@ -2632,10 +2759,12 @@
 
     const-string p1, "["
 
+    .line 10
     invoke-virtual {v2, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     add-int/2addr p0, v1
 
+    .line 11
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -2644,8 +2773,10 @@
 
     const-string p0, "]"
 
+    .line 12
     invoke-virtual {v2, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    .line 13
     :cond_2
     invoke-virtual {v2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -2657,12 +2788,14 @@
 .method public getXPathNameStep()Ljava/lang/String;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->getNamespaceURI()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
+    .line 2
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -2671,6 +2804,7 @@
 
     goto :goto_1
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->getNamespacePrefix()Ljava/lang/String;
 
@@ -2678,6 +2812,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 4
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -2686,6 +2821,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->getQualifiedName()Ljava/lang/String;
 
@@ -2693,6 +2829,7 @@
 
     return-object p0
 
+    .line 6
     :cond_2
     :goto_0
     new-instance v0, Ljava/lang/StringBuffer;
@@ -2719,6 +2856,7 @@
 
     return-object p0
 
+    .line 7
     :cond_3
     :goto_1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->getName()Ljava/lang/String;
@@ -2731,18 +2869,21 @@
 .method public getXPathResult(I)Lorg/dom4j/Node;
     .locals 1
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/AbstractElement;->node(I)Lorg/dom4j/Node;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
+    .line 2
     invoke-interface {p1}, Lorg/dom4j/Node;->supportsParent()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 3
     invoke-interface {p1, p0}, Lorg/dom4j/Node;->asXPathResult(Lorg/dom4j/Element;)Lorg/dom4j/Node;
 
     move-result-object p0
@@ -2756,6 +2897,7 @@
 .method public hasMixedContent()Z
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractBranch;->contentList()Ljava/util/List;
 
     move-result-object p0
@@ -2764,6 +2906,7 @@
 
     if-eqz p0, :cond_3
 
+    .line 2
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
@@ -2781,11 +2924,12 @@
     goto :goto_1
 
     :cond_0
+    const/4 v1, 0x0
+
+    .line 3
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
-
-    const/4 v1, 0x0
 
     :cond_1
     :goto_0
@@ -2795,10 +2939,12 @@
 
     if-eqz v2, :cond_3
 
+    .line 4
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
+    .line 5
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -2824,6 +2970,7 @@
 .method public indexOf(Lorg/dom4j/Node;)I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractBranch;->contentList()Ljava/util/List;
 
     move-result-object p0
@@ -2838,12 +2985,14 @@
 .method public isRootElement()Z
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractNode;->getDocument()Lorg/dom4j/Document;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {v0}, Lorg/dom4j/Document;->getRootElement()Lorg/dom4j/Element;
 
     move-result-object v0
@@ -2863,6 +3012,7 @@
 .method public isTextOnly()Z
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractBranch;->contentList()Ljava/util/List;
 
     move-result-object p0
@@ -2871,6 +3021,7 @@
 
     if-eqz p0, :cond_2
 
+    .line 2
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
@@ -2879,6 +3030,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2891,10 +3043,12 @@
 
     if-eqz v1, :cond_2
 
+    .line 4
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
+    .line 5
     instance-of v2, v1, Lorg/dom4j/CharacterData;
 
     if-nez v2, :cond_1
@@ -2919,10 +3073,12 @@
 
     if-ltz p1, :cond_2
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractBranch;->contentList()Ljava/util/List;
 
     move-result-object v1
 
+    .line 2
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v2
@@ -2931,6 +3087,7 @@
 
     return-object v0
 
+    .line 3
     :cond_0
     invoke-interface {v1, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -2938,14 +3095,17 @@
 
     if-eqz p1, :cond_2
 
+    .line 4
     instance-of v0, p1, Lorg/dom4j/Node;
 
     if-eqz v0, :cond_1
 
+    .line 5
     check-cast p1, Lorg/dom4j/Node;
 
     return-object p1
 
+    .line 6
     :cond_1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->getDocumentFactory()Lorg/dom4j/DocumentFactory;
 
@@ -2968,6 +3128,7 @@
 .method public nodeCount()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractBranch;->contentList()Ljava/util/List;
 
     move-result-object p0
@@ -2982,6 +3143,7 @@
 .method public nodeIterator()Ljava/util/Iterator;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractBranch;->contentList()Ljava/util/List;
 
     move-result-object p0
@@ -2996,6 +3158,7 @@
 .method public normalize()V
     .locals 6
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractBranch;->contentList()Ljava/util/List;
 
     move-result-object v0
@@ -3007,6 +3170,7 @@
     :goto_0
     move-object v3, v1
 
+    .line 2
     :goto_1
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -3014,30 +3178,36 @@
 
     if-ge v2, v4, :cond_5
 
+    .line 3
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Lorg/dom4j/Node;
 
+    .line 4
     instance-of v5, v4, Lorg/dom4j/Text;
 
     if-eqz v5, :cond_3
 
+    .line 5
     check-cast v4, Lorg/dom4j/Text;
 
     if-eqz v3, :cond_0
 
+    .line 6
     invoke-interface {v4}, Lorg/dom4j/Node;->getText()Ljava/lang/String;
 
     move-result-object v5
 
     invoke-interface {v3, v5}, Lorg/dom4j/CharacterData;->appendText(Ljava/lang/String;)V
 
+    .line 7
     invoke-virtual {p0, v4}, Lorg/dom4j/tree/AbstractElement;->remove(Lorg/dom4j/Text;)Z
 
     goto :goto_1
 
+    .line 8
     :cond_0
     invoke-interface {v4}, Lorg/dom4j/Node;->getText()Ljava/lang/String;
 
@@ -3045,6 +3215,7 @@
 
     if-eqz v5, :cond_2
 
+    .line 9
     invoke-virtual {v5}, Ljava/lang/String;->length()I
 
     move-result v5
@@ -3060,19 +3231,23 @@
 
     goto :goto_1
 
+    .line 10
     :cond_2
     :goto_2
     invoke-virtual {p0, v4}, Lorg/dom4j/tree/AbstractElement;->remove(Lorg/dom4j/Text;)Z
 
     goto :goto_1
 
+    .line 11
     :cond_3
     instance-of v3, v4, Lorg/dom4j/Element;
 
     if-eqz v3, :cond_4
 
+    .line 12
     check-cast v4, Lorg/dom4j/Element;
 
+    .line 13
     invoke-interface {v4}, Lorg/dom4j/Branch;->normalize()V
 
     :cond_4
@@ -3087,10 +3262,12 @@
 .method public processingInstruction(Ljava/lang/String;)Lorg/dom4j/ProcessingInstruction;
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractBranch;->contentList()Ljava/util/List;
 
     move-result-object p0
 
+    .line 2
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -3100,16 +3277,20 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 3
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
+    .line 4
     instance-of v3, v2, Lorg/dom4j/ProcessingInstruction;
 
     if-eqz v3, :cond_0
 
+    .line 5
     check-cast v2, Lorg/dom4j/ProcessingInstruction;
 
+    .line 6
     invoke-interface {v2}, Lorg/dom4j/Node;->getName()Ljava/lang/String;
 
     move-result-object v3
@@ -3484,6 +3665,7 @@
 .method public removeNode(Lorg/dom4j/Node;)Z
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractBranch;->contentList()Ljava/util/List;
 
     move-result-object v0
@@ -3494,6 +3676,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/AbstractElement;->childRemoved(Lorg/dom4j/Node;)V
 
     :cond_0
@@ -3503,10 +3686,12 @@
 .method public removeProcessingInstruction(Ljava/lang/String;)Z
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractBranch;->contentList()Ljava/util/List;
 
     move-result-object p0
 
+    .line 2
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -3518,16 +3703,20 @@
 
     if-eqz v0, :cond_1
 
+    .line 3
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 4
     instance-of v1, v0, Lorg/dom4j/ProcessingInstruction;
 
     if-eqz v1, :cond_0
 
+    .line 5
     check-cast v0, Lorg/dom4j/ProcessingInstruction;
 
+    .line 6
     invoke-interface {v0}, Lorg/dom4j/Node;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -3538,6 +3727,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 7
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V
 
     const/4 p0, 0x1
@@ -3571,12 +3761,14 @@
 .method public setAttributes(Lorg/xml/sax/Attributes;Lorg/dom4j/tree/NamespaceStack;Z)V
     .locals 9
 
+    .line 1
     invoke-interface {p1}, Lorg/xml/sax/Attributes;->getLength()I
 
     move-result v0
 
     if-lez v0, :cond_4
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->getDocumentFactory()Lorg/dom4j/DocumentFactory;
 
     move-result-object v1
@@ -3589,35 +3781,42 @@
 
     if-ne v0, v3, :cond_1
 
+    .line 3
     invoke-interface {p1, v4}, Lorg/xml/sax/Attributes;->getQName(I)Ljava/lang/String;
 
     move-result-object v0
 
     if-nez p3, :cond_0
 
+    .line 4
     invoke-virtual {v0, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p3
 
     if-nez p3, :cond_4
 
+    .line 5
     :cond_0
     invoke-interface {p1, v4}, Lorg/xml/sax/Attributes;->getURI(I)Ljava/lang/String;
 
     move-result-object p3
 
+    .line 6
     invoke-interface {p1, v4}, Lorg/xml/sax/Attributes;->getLocalName(I)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 7
     invoke-interface {p1, v4}, Lorg/xml/sax/Attributes;->getValue(I)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 8
     invoke-virtual {p2, p3, v2, v0}, Lorg/dom4j/tree/NamespaceStack;->getAttributeQName(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/dom4j/QName;
 
     move-result-object p2
 
+    .line 9
     invoke-virtual {v1, p0, p2, p1}, Lorg/dom4j/DocumentFactory;->createAttribute(Lorg/dom4j/Element;Lorg/dom4j/QName;Ljava/lang/String;)Lorg/dom4j/Attribute;
 
     move-result-object p1
@@ -3626,51 +3825,62 @@
 
     goto :goto_1
 
+    .line 10
     :cond_1
     invoke-virtual {p0, v0}, Lorg/dom4j/tree/AbstractElement;->attributeList(I)Ljava/util/List;
 
     move-result-object v3
 
+    .line 11
     invoke-interface {v3}, Ljava/util/List;->clear()V
 
     :goto_0
     if-ge v4, v0, :cond_4
 
+    .line 12
     invoke-interface {p1, v4}, Lorg/xml/sax/Attributes;->getQName(I)Ljava/lang/String;
 
     move-result-object v5
 
     if-nez p3, :cond_2
 
+    .line 13
     invoke-virtual {v5, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v6
 
     if-nez v6, :cond_3
 
+    .line 14
     :cond_2
     invoke-interface {p1, v4}, Lorg/xml/sax/Attributes;->getURI(I)Ljava/lang/String;
 
     move-result-object v6
 
+    .line 15
     invoke-interface {p1, v4}, Lorg/xml/sax/Attributes;->getLocalName(I)Ljava/lang/String;
 
     move-result-object v7
 
+    .line 16
     invoke-interface {p1, v4}, Lorg/xml/sax/Attributes;->getValue(I)Ljava/lang/String;
 
     move-result-object v8
 
+    .line 17
     invoke-virtual {p2, v6, v7, v5}, Lorg/dom4j/tree/NamespaceStack;->getAttributeQName(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/dom4j/QName;
 
     move-result-object v5
 
+    .line 18
     invoke-virtual {v1, p0, v5, v8}, Lorg/dom4j/DocumentFactory;->createAttribute(Lorg/dom4j/Element;Lorg/dom4j/QName;Ljava/lang/String;)Lorg/dom4j/Attribute;
 
     move-result-object v5
 
+    .line 19
     invoke-interface {v3, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 20
     invoke-virtual {p0, v5}, Lorg/dom4j/tree/AbstractElement;->childAdded(Lorg/dom4j/Node;)V
 
     :cond_3
@@ -3692,6 +3902,7 @@
 .method public setName(Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->getDocumentFactory()Lorg/dom4j/DocumentFactory;
 
     move-result-object v0
@@ -3708,6 +3919,7 @@
 .method public setNamespace(Lorg/dom4j/Namespace;)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->getDocumentFactory()Lorg/dom4j/DocumentFactory;
 
     move-result-object v0
@@ -3728,16 +3940,19 @@
 .method public setText(Ljava/lang/String;)V
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractBranch;->contentList()Ljava/util/List;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
+    .line 2
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
+    .line 3
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -3745,12 +3960,14 @@
 
     if-eqz v1, :cond_1
 
+    .line 4
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lorg/dom4j/Node;
 
+    .line 5
     invoke-interface {v1}, Lorg/dom4j/Node;->getNodeType()S
 
     move-result v1
@@ -3769,11 +3986,13 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-interface {v0}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
+    .line 7
     :cond_1
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/AbstractElement;->addText(Ljava/lang/String;)Lorg/dom4j/Element;
 
@@ -3783,6 +4002,7 @@
 .method public toString()Ljava/lang/String;
     .locals 6
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->getNamespaceURI()Ljava/lang/String;
 
     move-result-object v0
@@ -3795,12 +4015,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v4
 
     if-lez v4, :cond_0
 
+    .line 3
     new-instance v4, Ljava/lang/StringBuffer;
 
     invoke-direct {v4}, Ljava/lang/StringBuffer;-><init>()V
@@ -3841,6 +4063,7 @@
 
     return-object p0
 
+    .line 4
     :cond_0
     new-instance v0, Ljava/lang/StringBuffer;
 
@@ -3885,6 +4108,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lorg/dom4j/io/XMLWriter;
 
     new-instance v1, Lorg/dom4j/io/OutputFormat;
@@ -3893,6 +4117,7 @@
 
     invoke-direct {v0, p1, v1}, Lorg/dom4j/io/XMLWriter;-><init>(Ljava/io/Writer;Lorg/dom4j/io/OutputFormat;)V
 
+    .line 2
     invoke-virtual {v0, p0}, Lorg/dom4j/io/XMLWriter;->write(Lorg/dom4j/Element;)V
 
     return-void

@@ -1,5 +1,5 @@
 .class public Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;
-.super Lcom/android/camera/ui/d;
+.super Ld/d/a/d8/o1;
 .source "SourceFile"
 
 
@@ -16,7 +16,7 @@
 
 .field private mCurrentInterpolation:F
 
-.field protected mDrawAdapter:Lcom/android/camera/ui/d$b;
+.field public mDrawAdapter:Ld/d/a/d8/o1$b;
 
 .field private mIsAdsorb:Z
 
@@ -30,9 +30,9 @@
 
 .field private mMinX:F
 
-.field protected mOnPositionZoomSelectListener:Lcom/android/camera/ui/d$c;
+.field public mOnPositionZoomSelectListener:Ld/d/a/d8/o1$c;
 
-.field protected mOriginX:F
+.field public mOriginX:F
 
 .field private mPositionX:F
 
@@ -42,7 +42,7 @@
 
 .field private mSpline:Landroid/util/Spline;
 
-.field protected mTotalWidth:F
+.field public mTotalWidth:F
 
 .field private mTouchStartTime:F
 
@@ -52,7 +52,7 @@
 
 .field private mTouchState:I
 
-.field protected mTouchUpStateListener:Lcom/android/camera/ui/d$e;
+.field public mTouchUpStateListener:Ld/d/a/d8/o1$e;
 
 .field private mTouchX:F
 
@@ -62,6 +62,14 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -75,6 +83,16 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     const/4 v0, -0x1
 
@@ -86,9 +104,21 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr"
+        }
+    .end annotation
 
     .line 3
-    invoke-direct {p0, p1, p2, p3}, Lcom/android/camera/ui/d;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, Ld/d/a/d8/o1;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/4 p3, 0x1
 
@@ -131,6 +161,7 @@
 .method public static synthetic access$002(Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;F)F
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mPositionX:F
 
     return p1
@@ -139,6 +170,7 @@
 .method public static synthetic access$102(Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;Z)Z
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mIsAdsorb:Z
 
     return p1
@@ -147,6 +179,7 @@
 .method public static synthetic access$200(Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;)Landroid/animation/ValueAnimator;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mScrollAnimator:Landroid/animation/ValueAnimator;
 
     return-object p0
@@ -155,6 +188,7 @@
 .method public static synthetic access$300(Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;F)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->setPositionX(F)V
 
     return-void
@@ -163,6 +197,7 @@
 .method public static synthetic access$400(Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;)Landroid/util/Spline;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mPositiveSpline:Landroid/util/Spline;
 
     return-object p0
@@ -171,6 +206,7 @@
 .method public static synthetic access$500(Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;)Landroid/animation/ValueAnimator;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mValueAnimator:Landroid/animation/ValueAnimator;
 
     return-object p0
@@ -179,6 +215,7 @@
 .method public static synthetic access$602(Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;F)F
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mCurrentInterpolation:F
 
     return p1
@@ -187,6 +224,7 @@
 .method public static synthetic access$702(Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;I)I
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mCurrentAnimateFrom:I
 
     return p1
@@ -194,6 +232,16 @@
 
 .method private calculateLength(II)F
     .locals 19
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "fromIndex",
+            "toIndex"
+        }
+    .end annotation
 
     move-object/from16 v0, p0
 
@@ -201,6 +249,7 @@
 
     move/from16 v2, p2
 
+    .line 1
     iget v3, v0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mOriginX:F
 
     const/4 v4, 0x0
@@ -209,11 +258,13 @@
 
     return v4
 
+    .line 2
     :cond_0
-    iget-object v5, v0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Lcom/android/camera/ui/d$b;
+    iget-object v5, v0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Ld/d/a/d8/o1$b;
 
     if-eqz v5, :cond_c
 
+    .line 3
     iget-boolean v6, v0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mIsRLT:Z
 
     const/4 v7, 0x0
@@ -222,7 +273,8 @@
 
     if-eqz v6, :cond_1
 
-    invoke-virtual {v5}, Lcom/android/camera/ui/d$b;->getCount()I
+    .line 4
+    invoke-virtual {v5}, Ld/d/a/d8/o1$b;->getCount()I
 
     move-result v5
 
@@ -240,10 +292,11 @@
 
     goto :goto_1
 
+    .line 5
     :cond_2
-    iget-object v9, v0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Lcom/android/camera/ui/d$b;
+    iget-object v9, v0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Ld/d/a/d8/o1$b;
 
-    invoke-virtual {v9}, Lcom/android/camera/ui/d$b;->getCount()I
+    invoke-virtual {v9}, Ld/d/a/d8/o1$b;->getCount()I
 
     move-result v9
 
@@ -268,10 +321,11 @@
 
     move v10, v7
 
+    .line 6
     :goto_3
-    iget-object v14, v0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Lcom/android/camera/ui/d$b;
+    iget-object v14, v0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Ld/d/a/d8/o1$b;
 
-    invoke-virtual {v14}, Lcom/android/camera/ui/d$b;->getCount()I
+    invoke-virtual {v14}, Ld/d/a/d8/o1$b;->getCount()I
 
     move-result v14
 
@@ -300,6 +354,7 @@
     :cond_5
     move/from16 v16, v7
 
+    .line 7
     :goto_5
     invoke-virtual {v0, v14}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->getItemWidth(I)F
 
@@ -311,6 +366,7 @@
 
     if-eqz v15, :cond_6
 
+    .line 8
     iget v13, v0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mOriginX:F
 
     sub-float v13, v13, v18
@@ -332,6 +388,7 @@
 
     goto :goto_7
 
+    .line 9
     :cond_8
     invoke-direct {v0, v10}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->getItemGap(I)F
 
@@ -370,6 +427,7 @@
     :goto_9
     sub-float/2addr v4, v11
 
+    .line 10
     invoke-static {v4}, Ljava/lang/Math;->abs(F)F
 
     move-result v0
@@ -379,10 +437,19 @@
 
 .method private getItemGap(I)F
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "index"
+        }
+    .end annotation
 
-    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Lcom/android/camera/ui/d$b;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Ld/d/a/d8/o1$b;
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/ui/d$b;->measureGap(I)F
+    invoke-virtual {p0, p1}, Ld/d/a/d8/o1$b;->measureGap(I)F
 
     move-result p0
 
@@ -391,14 +458,23 @@
 
 .method private mapIndexToValue(I)F
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "index"
+        }
+    .end annotation
 
-    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Lcom/android/camera/ui/d$b;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Ld/d/a/d8/o1$b;
 
-    check-cast p0, Lcom/android/camera/fragment/manually/adapter/c;
+    check-cast p0, Ld/d/a/u6/x4/f0/c;
 
     int-to-float p1, p1
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/fragment/manually/adapter/c;->mapPositionToValue(F)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Ld/d/a/u6/x4/f0/c;->mapPositionToValue(F)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -413,7 +489,16 @@
 
 .method private mapPositionToValue(F)F
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "positionX"
+        }
+    .end annotation
 
+    .line 1
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mMaxX:F
 
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mMinX:F
@@ -426,10 +511,12 @@
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    invoke-static {p1, v0, v1}, Lcom/android/camera/a6;->z(FFF)F
+    .line 2
+    invoke-static {p1, v0, v1}, Ld/d/a/z5;->r(FFF)F
 
     move-result p1
 
+    .line 3
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mIsRLT:Z
 
     if-eqz v0, :cond_0
@@ -437,9 +524,9 @@
     sub-float p1, v1, p1
 
     :cond_0
-    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Lcom/android/camera/ui/d$b;
+    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Ld/d/a/d8/o1$b;
 
-    invoke-virtual {v0}, Lcom/android/camera/ui/d$b;->getCount()I
+    invoke-virtual {v0}, Ld/d/a/d8/o1$b;->getCount()I
 
     move-result v0
 
@@ -449,11 +536,12 @@
 
     mul-float/2addr p1, v0
 
-    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Lcom/android/camera/ui/d$b;
+    .line 4
+    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Ld/d/a/d8/o1$b;
 
-    check-cast p0, Lcom/android/camera/fragment/manually/adapter/c;
+    check-cast p0, Ld/d/a/u6/x4/f0/c;
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/fragment/manually/adapter/c;->mapPositionToValue(F)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Ld/d/a/u6/x4/f0/c;->mapPositionToValue(F)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -468,10 +556,19 @@
 
 .method private pointRatioToIndex(F)I
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "pointRatio"
+        }
+    .end annotation
 
-    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Lcom/android/camera/ui/d$b;
+    .line 1
+    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Ld/d/a/d8/o1$b;
 
-    invoke-virtual {v0}, Lcom/android/camera/ui/d$b;->getCount()I
+    invoke-virtual {v0}, Ld/d/a/d8/o1$b;->getCount()I
 
     move-result v0
 
@@ -485,9 +582,10 @@
 
     move-result p1
 
-    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Lcom/android/camera/ui/d$b;
+    .line 2
+    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Ld/d/a/d8/o1$b;
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/d$b;->getCount()I
+    invoke-virtual {p0}, Ld/d/a/d8/o1$b;->getCount()I
 
     move-result p0
 
@@ -495,7 +593,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0, p0}, Lcom/android/camera/a6;->A(III)I
+    invoke-static {p1, v0, p0}, Ld/d/a/z5;->s(III)I
 
     move-result p0
 
@@ -504,8 +602,19 @@
 
 .method private selectByIndex(II)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "index",
+            "action"
+        }
+    .end annotation
 
-    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mOnPositionZoomSelectListener:Lcom/android/camera/ui/d$c;
+    .line 1
+    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mOnPositionZoomSelectListener:Ld/d/a/d8/o1$c;
 
     if-eqz v0, :cond_0
 
@@ -513,7 +622,8 @@
 
     const/4 v1, 0x0
 
-    invoke-interface {v0, p0, p1, p2, v1}, Lcom/android/camera/ui/d$c;->onPositionSelect(Landroid/view/View;FII)V
+    .line 2
+    invoke-interface {v0, p0, p1, p2, v1}, Ld/d/a/d8/o1$c;->onPositionSelect(Landroid/view/View;FII)V
 
     :cond_0
     return-void
@@ -521,7 +631,18 @@
 
 .method private selectByPointX(FI)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "targetPositionX",
+            "action"
+        }
+    .end annotation
 
+    .line 1
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mMaxX:F
 
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mMinX:F
@@ -534,9 +655,14 @@
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    invoke-static {p1, v0, v1}, Lcom/android/camera/a6;->z(FFF)F
+    .line 2
+    invoke-static {p1, v0, v1}, Ld/d/a/z5;->r(FFF)F
 
-    iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mOnPositionZoomSelectListener:Lcom/android/camera/ui/d$c;
+    .line 3
+    iget-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mIsRLT:Z
+
+    .line 4
+    iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mOnPositionZoomSelectListener:Ld/d/a/d8/o1$c;
 
     if-eqz p1, :cond_0
 
@@ -544,7 +670,8 @@
 
     const/4 v1, 0x0
 
-    invoke-interface {p1, p0, v0, p2, v1}, Lcom/android/camera/ui/d$c;->onPositionSelect(Landroid/view/View;FII)V
+    .line 5
+    invoke-interface {p1, p0, v0, p2, v1}, Ld/d/a/d8/o1$c;->onPositionSelect(Landroid/view/View;FII)V
 
     :cond_0
     return-void
@@ -552,12 +679,21 @@
 
 .method private setPositionX(F)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "clamp"
+        }
+    .end annotation
 
+    .line 1
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mMinX:F
 
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mMaxX:F
 
-    invoke-static {p1, v0, v1}, Lcom/android/camera/a6;->z(FFF)F
+    invoke-static {p1, v0, v1}, Ld/d/a/z5;->r(FFF)F
 
     move-result p1
 
@@ -568,13 +704,23 @@
 
 .method private startScaleAnimator(Z)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isDown"
+        }
+    .end annotation
 
+    .line 1
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mTouchState:I
 
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_5
 
+    .line 2
     iget v2, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mCurrentAnimateFrom:I
 
     if-ne v0, v2, :cond_1
@@ -594,6 +740,7 @@
     :cond_0
     return-void
 
+    .line 3
     :cond_1
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mScrollAnimator:Landroid/animation/ValueAnimator;
 
@@ -605,19 +752,23 @@
 
     if-eqz v2, :cond_2
 
+    .line 4
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mScrollAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v2}, Landroid/animation/ValueAnimator;->cancel()V
 
+    .line 5
     :cond_2
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mCurrentAnimateFrom:I
 
+    .line 6
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mIsCurrentAnimateFromDown:Z
 
     new-array v1, v1, [F
 
     if-eqz p1, :cond_3
 
+    .line 7
     fill-array-data v1, :array_0
 
     invoke-static {v1}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
@@ -645,17 +796,19 @@
     :cond_4
     const-wide/16 v2, 0x190
 
+    .line 8
     :goto_1
     invoke-virtual {v1, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     move-result-object v1
 
-    new-instance v2, Lps/m;
+    new-instance v2, Lk/j0/k/l;
 
-    invoke-direct {v2}, Lps/m;-><init>()V
+    invoke-direct {v2}, Lk/j0/k/l;-><init>()V
 
     invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
+    .line 9
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mScrollAnimator:Landroid/animation/ValueAnimator;
 
     new-instance v2, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView$5;
@@ -664,6 +817,7 @@
 
     invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
+    .line 10
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mScrollAnimator:Landroid/animation/ValueAnimator;
 
     new-instance v2, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView$6;
@@ -672,6 +826,7 @@
 
     invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
+    .line 11
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mScrollAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p0}, Landroid/animation/ValueAnimator;->start()V
@@ -694,7 +849,20 @@
 
 .method private startScrollAnimator(FII)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "selectPointX",
+            "time",
+            "action"
+        }
+    .end annotation
 
+    .line 1
     iget p3, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mPositionX:F
 
     const/high16 v0, -0x40800000    # -1.0f
@@ -705,14 +873,18 @@
 
     if-nez p3, :cond_0
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->setPositionX(F)V
 
+    .line 3
     iput-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mIsAdsorb:Z
 
+    .line 4
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     return-void
 
+    .line 5
     :cond_0
     iget-object p3, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mScrollAnimator:Landroid/animation/ValueAnimator;
 
@@ -724,6 +896,7 @@
 
     if-eqz p3, :cond_1
 
+    .line 6
     iget-object p3, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mScrollAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p3}, Landroid/animation/ValueAnimator;->cancel()V
@@ -735,6 +908,7 @@
 
     const/4 v1, 0x0
 
+    .line 7
     iget v2, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mPositionX:F
 
     aput v2, p3, v1
@@ -749,16 +923,18 @@
 
     int-to-long v0, p2
 
+    .line 8
     invoke-virtual {p3, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     move-result-object p2
 
-    new-instance p3, Lps/m;
+    new-instance p3, Lk/j0/k/l;
 
-    invoke-direct {p3}, Lps/m;-><init>()V
+    invoke-direct {p3}, Lk/j0/k/l;-><init>()V
 
     invoke-virtual {p2, p3}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
+    .line 9
     iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mScrollAnimator:Landroid/animation/ValueAnimator;
 
     new-instance p3, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView$1;
@@ -767,6 +943,7 @@
 
     invoke-virtual {p2, p3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
+    .line 10
     iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mScrollAnimator:Landroid/animation/ValueAnimator;
 
     new-instance p3, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView$2;
@@ -775,6 +952,7 @@
 
     invoke-virtual {p2, p3}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
+    .line 11
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mScrollAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p0}, Landroid/animation/ValueAnimator;->start()V
@@ -784,13 +962,25 @@
 
 .method private startScrollAnimatorByIndex(II)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "index",
+            "action"
+        }
+    .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mIsRLT:Z
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mMaxX:F
 
     invoke-direct {p0, v1, p1}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->calculateLength(II)F
@@ -801,6 +991,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mMinX:F
 
@@ -810,18 +1001,22 @@
 
     add-float/2addr v0, v1
 
+    .line 4
     :goto_0
     invoke-direct {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->selectByIndex(II)V
 
-    iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mTouchUpStateListener:Lcom/android/camera/ui/d$e;
+    .line 5
+    iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mTouchUpStateListener:Ld/d/a/d8/o1$e;
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1, p2}, Lcom/android/camera/ui/d$e;->onTouchUpState(I)V
+    .line 6
+    invoke-interface {p1, p2}, Ld/d/a/d8/o1$e;->onTouchUpState(I)V
 
     :cond_1
     const/16 p1, 0xc8
 
+    .line 7
     invoke-direct {p0, v0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->startScrollAnimator(FII)V
 
     return-void
@@ -829,13 +1024,23 @@
 
 .method private startScrollIfNeeded(Landroid/view/MotionEvent;)Z
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x10
+        }
+        names = {
+            "event"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
 
     float-to-int v0, v0
 
+    .line 2
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result p1
@@ -844,6 +1049,7 @@
 
     int-to-float v0, v0
 
+    .line 3
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mTouchStartX:F
 
     const/high16 v2, 0x41200000    # 10.0f
@@ -887,10 +1093,12 @@
     :goto_0
     const/4 p1, 0x2
 
+    .line 4
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mTouchState:I
 
     const/4 p1, 0x1
 
+    .line 5
     invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->startScaleAnimator(Z)V
 
     return p1
@@ -898,7 +1106,28 @@
 
 .method private startValueAnimator(IFFFFZI)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "time",
+            "startTime",
+            "endTime",
+            "currentValue",
+            "targetValue",
+            "isUseTime",
+            "action"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mValueAnimator:Landroid/animation/ValueAnimator;
 
     if-eqz v0, :cond_0
@@ -909,6 +1138,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mValueAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
@@ -926,6 +1156,7 @@
 
     aput p3, v0, p2
 
+    .line 3
     invoke-static {v0}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
     move-result-object p2
@@ -934,6 +1165,7 @@
 
     int-to-long v0, p1
 
+    .line 4
     invoke-virtual {p2, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     move-result-object p1
@@ -944,6 +1176,7 @@
 
     invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
+    .line 5
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mValueAnimator:Landroid/animation/ValueAnimator;
 
     new-instance p2, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView$3;
@@ -964,6 +1197,7 @@
 
     invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
+    .line 6
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mValueAnimator:Landroid/animation/ValueAnimator;
 
     new-instance p2, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView$4;
@@ -972,6 +1206,7 @@
 
     invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
+    .line 7
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mValueAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p0}, Landroid/animation/ValueAnimator;->start()V
@@ -981,7 +1216,20 @@
 
 .method private toUpdateView(FZI)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "targetPositionX",
+            "isScroll",
+            "action"
+        }
+    .end annotation
 
+    .line 1
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mMaxX:F
 
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mMinX:F
@@ -994,24 +1242,28 @@
 
     const/high16 v2, 0x3f800000    # 1.0f
 
-    invoke-static {v0, v1, v2}, Lcom/android/camera/a6;->z(FFF)F
+    .line 2
+    invoke-static {v0, v1, v2}, Ld/d/a/z5;->r(FFF)F
 
     move-result v0
 
+    .line 3
     iget-boolean v1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mIsRLT:Z
 
     if-eqz v1, :cond_0
 
     sub-float v0, v2, v0
 
+    .line 4
     :cond_0
     invoke-direct {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->pointRatioToIndex(F)I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Lcom/android/camera/ui/d$b;
+    .line 5
+    iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Ld/d/a/d8/o1$b;
 
-    invoke-virtual {v1, v0}, Lcom/android/camera/ui/d$b;->isSingleValueLine(I)Z
+    invoke-virtual {v1, v0}, Ld/d/a/d8/o1$b;->isSingleValueLine(I)Z
 
     move-result v1
 
@@ -1019,18 +1271,22 @@
 
     if-eqz v1, :cond_1
 
+    .line 6
     invoke-direct {p0, v0, p3}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->selectByIndex(II)V
 
+    .line 7
     invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->setPositionX(F)V
 
     goto :goto_0
 
+    .line 8
     :cond_1
     invoke-direct {p0, p1, p3}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->selectByPointX(FI)V
 
     :goto_0
     const/4 p2, 0x0
 
+    .line 9
     invoke-direct {p0, p2}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->startScaleAnimator(Z)V
 
     goto :goto_2
@@ -1038,24 +1294,29 @@
     :cond_2
     if-eqz v1, :cond_3
 
+    .line 10
     invoke-direct {p0, v0, p3}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->selectByIndex(II)V
 
     goto :goto_1
 
+    .line 11
     :cond_3
     invoke-direct {p0, p1, p3}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->selectByPointX(FI)V
 
+    .line 12
     :goto_1
-    iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mTouchUpStateListener:Lcom/android/camera/ui/d$e;
+    iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mTouchUpStateListener:Ld/d/a/d8/o1$e;
 
     if-eqz p2, :cond_4
 
-    invoke-interface {p2, p3}, Lcom/android/camera/ui/d$e;->onTouchUpState(I)V
+    .line 13
+    invoke-interface {p2, p3}, Ld/d/a/d8/o1$e;->onTouchUpState(I)V
 
     :cond_4
     :goto_2
     const/16 p2, 0xc8
 
+    .line 14
     invoke-direct {p0, p1, p2, p3}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->startScrollAnimator(FII)V
 
     return-void
@@ -1063,20 +1324,30 @@
 
 
 # virtual methods
-.method public getDrawAdapter()Lcom/android/camera/ui/d$b;
+.method public getDrawAdapter()Ld/d/a/d8/o1$b;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Lcom/android/camera/ui/d$b;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Ld/d/a/d8/o1$b;
 
     return-object p0
 .end method
 
 .method public getItemWidth(I)F
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "index"
+        }
+    .end annotation
 
-    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Lcom/android/camera/ui/d$b;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Ld/d/a/d8/o1$b;
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/ui/d$b;->measureWidth(I)F
+    invoke-virtual {p0, p1}, Ld/d/a/d8/o1$b;->measureWidth(I)F
 
     move-result p0
 
@@ -1101,8 +1372,19 @@
 
 .method public init(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
-    invoke-static {p1}, Lcom/android/camera/a6;->R2(Landroid/content/Context;)Z
+    .line 1
+    invoke-static {p1}, Ld/d/a/z5;->G2(Landroid/content/Context;)Z
 
     move-result p1
 
@@ -1110,6 +1392,7 @@
 
     const/4 p1, 0x1
 
+    .line 2
     invoke-virtual {p0, p1}, Landroid/view/View;->setHorizontalFadingEdgeEnabled(Z)V
 
     return-void
@@ -1118,6 +1401,7 @@
 .method public isIdle()Z
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mTouchState:I
 
     if-nez p0, :cond_0
@@ -1135,17 +1419,27 @@
 
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 25
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "canvas"
+        }
+    .end annotation
 
     move-object/from16 v0, p0
 
     move-object/from16 v7, p1
 
-    iget-object v1, v0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Lcom/android/camera/ui/d$b;
+    .line 1
+    iget-object v1, v0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Ld/d/a/d8/o1$b;
 
     if-nez v1, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     iget v1, v0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mPositionX:F
 
@@ -1155,8 +1449,10 @@
 
     if-eqz v2, :cond_1
 
+    .line 3
     invoke-direct {v0, v1}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->setPositionX(F)V
 
+    .line 4
     :cond_1
     iget v1, v0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mOriginX:F
 
@@ -1171,6 +1467,7 @@
     :cond_2
     sub-float/2addr v1, v2
 
+    .line 5
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getHeight()I
 
     move-result v2
@@ -1179,15 +1476,17 @@
 
     int-to-float v9, v2
 
+    .line 6
     iget-boolean v2, v0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mIsRLT:Z
 
     const/4 v11, 0x1
 
     if-eqz v2, :cond_3
 
-    iget-object v3, v0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Lcom/android/camera/ui/d$b;
+    .line 7
+    iget-object v3, v0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Ld/d/a/d8/o1$b;
 
-    invoke-virtual {v3}, Lcom/android/camera/ui/d$b;->getCount()I
+    invoke-virtual {v3}, Ld/d/a/d8/o1$b;->getCount()I
 
     move-result v3
 
@@ -1207,10 +1506,11 @@
 
     goto :goto_1
 
+    .line 8
     :cond_4
-    iget-object v3, v0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Lcom/android/camera/ui/d$b;
+    iget-object v3, v0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Ld/d/a/d8/o1$b;
 
-    invoke-virtual {v3}, Lcom/android/camera/ui/d$b;->getCount()I
+    invoke-virtual {v3}, Ld/d/a/d8/o1$b;->getCount()I
 
     move-result v3
 
@@ -1228,6 +1528,7 @@
     :cond_5
     move v14, v11
 
+    .line 9
     :goto_2
     iget-boolean v2, v0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mIsAdsorb:Z
 
@@ -1249,10 +1550,11 @@
 
     const/4 v5, -0x1
 
+    .line 10
     :goto_3
-    iget-object v3, v0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Lcom/android/camera/ui/d$b;
+    iget-object v3, v0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Ld/d/a/d8/o1$b;
 
-    invoke-virtual {v3}, Lcom/android/camera/ui/d$b;->getCount()I
+    invoke-virtual {v3}, Ld/d/a/d8/o1$b;->getCount()I
 
     move-result v3
 
@@ -1281,6 +1583,7 @@
     :cond_7
     const/16 v20, 0x0
 
+    .line 11
     :goto_5
     invoke-virtual {v0, v3}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->getItemWidth(I)F
 
@@ -1299,6 +1602,7 @@
 
     goto :goto_6
 
+    .line 12
     :cond_9
     invoke-direct {v0, v3}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->getItemGap(I)F
 
@@ -1324,6 +1628,7 @@
     :goto_7
     if-eqz v18, :cond_e
 
+    .line 13
     iget v10, v0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mOriginX:F
 
     sub-float v10, v19, v10
@@ -1365,6 +1670,7 @@
 
     goto :goto_8
 
+    .line 14
     :cond_f
     invoke-direct {v0, v3}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->getItemGap(I)F
 
@@ -1383,6 +1689,7 @@
 
     goto :goto_3
 
+    .line 15
     :cond_10
     iget v1, v0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mOriginX:F
 
@@ -1428,10 +1735,11 @@
 
     const/4 v6, 0x0
 
+    .line 16
     :goto_c
-    iget-object v1, v0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Lcom/android/camera/ui/d$b;
+    iget-object v1, v0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Ld/d/a/d8/o1$b;
 
-    invoke-virtual {v1}, Lcom/android/camera/ui/d$b;->getCount()I
+    invoke-virtual {v1}, Ld/d/a/d8/o1$b;->getCount()I
 
     move-result v1
 
@@ -1450,6 +1758,7 @@
     :cond_14
     const/16 v17, 0x0
 
+    .line 17
     :goto_d
     invoke-virtual {v0, v4}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->getItemWidth(I)F
 
@@ -1463,6 +1772,7 @@
 
     if-ltz v1, :cond_15
 
+    .line 18
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWidth()I
 
     move-result v1
@@ -1479,11 +1789,14 @@
 
     if-eq v11, v6, :cond_15
 
+    .line 19
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
+    .line 20
     invoke-virtual {v7, v5, v9}, Landroid/graphics/Canvas;->translate(FF)V
 
-    iget-object v1, v0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Lcom/android/camera/ui/d$b;
+    .line 21
+    iget-object v1, v0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Ld/d/a/d8/o1$b;
 
     const/16 v18, 0x0
 
@@ -1511,8 +1824,9 @@
 
     move v6, v15
 
-    invoke-virtual/range {v1 .. v6}, Lcom/android/camera/ui/d$b;->draw(ILandroid/graphics/Canvas;ZIF)V
+    invoke-virtual/range {v1 .. v6}, Ld/d/a/d8/o1$b;->draw(ILandroid/graphics/Canvas;ZIF)V
 
+    .line 22
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->restore()V
 
     goto :goto_e
@@ -1533,6 +1847,7 @@
 
     goto :goto_f
 
+    .line 23
     :cond_16
     invoke-direct {v0, v8}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->getItemGap(I)F
 
@@ -1560,8 +1875,10 @@
 
     int-to-float v1, v1
 
+    .line 24
     iput v1, v0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mMaxX:F
 
+    .line 25
     iget v1, v0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mPositionX:F
 
     const/high16 v2, -0x40800000    # -1.0f
@@ -1570,13 +1887,16 @@
 
     if-eqz v1, :cond_18
 
+    .line 26
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
+    .line 27
     iget v1, v0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mOriginX:F
 
     invoke-virtual {v7, v1, v9}, Landroid/graphics/Canvas;->translate(FF)V
 
-    iget-object v1, v0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Lcom/android/camera/ui/d$b;
+    .line 28
+    iget-object v1, v0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Ld/d/a/d8/o1$b;
 
     const/4 v2, -0x1
 
@@ -1592,8 +1912,9 @@
 
     move-object/from16 v2, p1
 
-    invoke-virtual/range {v0 .. v5}, Lcom/android/camera/ui/d$b;->draw(ILandroid/graphics/Canvas;ZIF)V
+    invoke-virtual/range {v0 .. v5}, Ld/d/a/d8/o1$b;->draw(ILandroid/graphics/Canvas;ZIF)V
 
+    .line 29
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->restore()V
 
     :cond_18
@@ -1602,26 +1923,38 @@
 
 .method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "info"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroid/view/View;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
     const/4 v0, 0x1
 
+    .line 2
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setScrollable(Z)V
 
+    .line 3
     invoke-virtual {p0}, Landroid/view/View;->isEnabled()Z
 
     move-result v1
 
+    .line 4
     invoke-virtual {p0}, Landroid/view/View;->isEnabled()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Lcom/android/camera/ui/d$b;
+    iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Ld/d/a/d8/o1$b;
 
-    invoke-virtual {v1}, Lcom/android/camera/ui/d$b;->getCount()I
+    invoke-virtual {v1}, Ld/d/a/d8/o1$b;->getCount()I
 
     move-result v1
 
@@ -1629,33 +1962,39 @@
 
     if-lez v1, :cond_0
 
+    .line 5
     sget-object v0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_SCROLL_FORWARD:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
 
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->addAction(Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;)V
 
+    .line 6
     :cond_0
     sget-object v0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_SET_PROGRESS:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
 
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->addAction(Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;)V
 
-    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Lcom/android/camera/ui/d$b;
+    const/high16 v0, -0x40800000    # -1.0f
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/d$b;->getCount()I
+    .line 7
+    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Ld/d/a/d8/o1$b;
+
+    .line 8
+    invoke-virtual {p0}, Ld/d/a/d8/o1$b;->getCount()I
 
     move-result p0
 
     int-to-float p0, p0
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    int-to-float v1, v0
+    int-to-float v2, v1
 
-    const/high16 v2, -0x40800000    # -1.0f
-
-    invoke-static {v0, v2, p0, v1}, Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;->obtain(IFFF)Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;
+    .line 9
+    invoke-static {v1, v0, p0, v2}, Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;->obtain(IFFF)Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;
 
     move-result-object p0
 
+    .line 10
     invoke-virtual {p1, p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setRangeInfo(Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;)V
 
     return-void
@@ -1663,20 +2002,39 @@
 
 .method public onSizeChanged(IIII)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "w",
+            "h",
+            "oldw",
+            "oldh"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2, p3, p4}, Landroid/view/View;->onSizeChanged(IIII)V
 
+    .line 2
     new-instance p2, Landroid/graphics/Rect;
 
     invoke-direct {p2}, Landroid/graphics/Rect;-><init>()V
 
+    .line 3
     invoke-virtual {p0, p2}, Landroid/view/View;->getGlobalVisibleRect(Landroid/graphics/Rect;)Z
 
+    .line 4
     iget p3, p2, Landroid/graphics/Rect;->left:I
 
     if-ltz p3, :cond_0
 
-    invoke-static {}, Ly2/b;->q()I
+    .line 5
+    invoke-static {}, Ld/d/a/n6/b;->q()I
 
     move-result p1
 
@@ -1699,6 +2057,7 @@
 
     div-float/2addr p1, p2
 
+    .line 6
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mOriginX:F
 
     :goto_0
@@ -1707,8 +2066,17 @@
 
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "event"
+        }
+    .end annotation
 
-    invoke-super {p0, p1}, Lcom/android/camera/ui/d;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    .line 1
+    invoke-super {p0, p1}, Ld/d/a/d8/o1;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
@@ -1718,6 +2086,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -1741,24 +2110,29 @@
 
     goto/16 :goto_2
 
+    .line 3
     :cond_1
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mTouchState:I
 
     if-ne v0, v3, :cond_2
 
+    .line 4
     invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->startScrollIfNeeded(Landroid/view/MotionEvent;)Z
 
+    .line 5
     :cond_2
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mTouchState:I
 
     if-ne v0, v2, :cond_c
 
+    .line 6
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mPositionX:F
 
     cmpl-float v2, v0, v4
 
     if-nez v2, :cond_3
 
+    .line 7
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mLastPositionX:F
 
     iget v2, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mOriginX:F
@@ -1775,6 +2149,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_3
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -1790,17 +2165,21 @@
 
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mPositionX:F
 
+    .line 9
     :goto_0
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mPositionX:F
 
     invoke-direct {p0, v0, v5}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->selectByPointX(FI)V
 
+    .line 10
     iput-boolean v1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mIsAdsorb:Z
 
+    .line 11
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     goto/16 :goto_2
 
+    .line 12
     :cond_4
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -1826,15 +2205,18 @@
 
     if-eq v0, v2, :cond_5
 
+    .line 13
     iput v1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mTouchState:I
 
     return v3
 
+    .line 14
     :cond_5
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mTouchState:I
 
     if-ne v0, v2, :cond_6
 
+    .line 15
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mPositionX:F
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
@@ -1851,10 +2233,12 @@
 
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mPositionX:F
 
+    .line 16
     invoke-direct {p0, v0, v3, v5}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->toUpdateView(FZI)V
 
     goto :goto_1
 
+    .line 17
     :cond_6
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mPositionX:F
 
@@ -1862,6 +2246,7 @@
 
     if-nez v2, :cond_7
 
+    .line 18
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mLastPositionX:F
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
@@ -1878,6 +2263,7 @@
 
     goto :goto_1
 
+    .line 19
     :cond_7
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -1891,18 +2277,22 @@
 
     invoke-direct {p0, v0, v1, v5}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->toUpdateView(FZI)V
 
+    .line 20
     :goto_1
-    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mTouchUpStateListener:Lcom/android/camera/ui/d$e;
+    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mTouchUpStateListener:Ld/d/a/d8/o1$e;
 
     if-eqz v0, :cond_8
 
-    invoke-interface {v0, v5}, Lcom/android/camera/ui/d$e;->onTouchUpState(I)V
+    .line 21
+    invoke-interface {v0, v5}, Ld/d/a/d8/o1$e;->onTouchUpState(I)V
 
+    .line 22
     :cond_8
     iput v1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mTouchState:I
 
     goto :goto_2
 
+    .line 23
     :cond_9
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mValueAnimator:Landroid/animation/ValueAnimator;
 
@@ -1914,10 +2304,12 @@
 
     if-eqz v0, :cond_a
 
+    .line 24
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mValueAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
+    .line 25
     :cond_a
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mScrollAnimator:Landroid/animation/ValueAnimator;
 
@@ -1929,10 +2321,12 @@
 
     if-eqz v0, :cond_b
 
+    .line 26
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mScrollAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
+    .line 27
     :cond_b
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -1942,24 +2336,29 @@
 
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mTouchStartTime:F
 
+    .line 28
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mTouchStartX:F
 
+    .line 29
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v0
 
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mTouchStartY:F
 
+    .line 30
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mTouchState:I
 
     if-eq v0, v2, :cond_c
 
+    .line 31
     iput v3, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mTouchState:I
 
+    .line 32
     :cond_c
     :goto_2
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
@@ -1973,7 +2372,18 @@
 
 .method public performAccessibilityAction(ILandroid/os/Bundle;)Z
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "action",
+            "arguments"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->isEnabled()Z
 
     move-result v0
@@ -1984,6 +2394,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/view/View;->performAccessibilityAction(ILandroid/os/Bundle;)Z
 
@@ -2002,6 +2413,7 @@
 
     const/4 p1, -0x1
 
+    .line 3
     invoke-virtual {p0, p1, v1}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->setSelection(IZ)V
 
     goto :goto_0
@@ -2011,6 +2423,7 @@
 
     if-ne p1, p2, :cond_3
 
+    .line 4
     invoke-virtual {p0, v0, v1}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->setSelection(IZ)V
 
     :cond_3
@@ -2018,10 +2431,21 @@
     return v0
 .end method
 
-.method public setDrawAdapter(Lcom/android/camera/ui/d$b;I)V
+.method public setDrawAdapter(Ld/d/a/d8/o1$b;I)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "adapter",
+            "degree"
+        }
+    .end annotation
 
-    invoke-static {}, Lcom/android/camera/a6;->u2()Z
+    .line 1
+    invoke-static {}, Ld/d/a/z5;->k2()Z
 
     move-result v0
 
@@ -2029,26 +2453,31 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v1}, Landroid/view/View;->setClickable(Z)V
 
+    .line 3
     :cond_0
-    iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Lcom/android/camera/ui/d$b;
+    iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Ld/d/a/d8/o1$b;
 
+    .line 4
     invoke-virtual {p0, p2}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->setRotate(I)V
 
-    iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Lcom/android/camera/ui/d$b;
+    .line 5
+    iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Ld/d/a/d8/o1$b;
 
     if-eqz p1, :cond_1
 
+    .line 6
     iget p2, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mMinX:F
 
-    invoke-virtual {p1}, Lcom/android/camera/ui/d$b;->getCount()I
+    const/4 v0, 0x0
+
+    invoke-virtual {p1}, Ld/d/a/d8/o1$b;->getCount()I
 
     move-result p1
 
     sub-int/2addr p1, v1
-
-    const/4 v0, 0x0
 
     invoke-direct {p0, v0, p1}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->calculateLength(II)F
 
@@ -2058,63 +2487,111 @@
 
     iput p2, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mMaxX:F
 
+    .line 7
     :cond_1
     iget-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mIsRLT:Z
 
     if-eqz p1, :cond_2
 
+    .line 8
     iget p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mMaxX:F
 
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mPositionX:F
 
     goto :goto_0
 
+    .line 9
     :cond_2
     iget p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mMinX:F
 
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mPositionX:F
 
+    .line 10
     :goto_0
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     return-void
 .end method
 
-.method public setDrawAdapter(Lcom/android/camera/ui/d$b;IZ)V
+.method public setDrawAdapter(Ld/d/a/d8/o1$b;IZ)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "adapter",
+            "degree",
+            "s"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public setIndexButtonSelection(F)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "s"
+        }
+    .end annotation
 
     return-void
 .end method
 
-.method public setListener(Lcom/android/camera/ui/d$c;Lcom/android/camera/ui/d$e;)V
+.method public setListener(Ld/d/a/d8/o1$c;Ld/d/a/d8/o1$e;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "listener",
+            "touchStateListener"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mOnPositionZoomSelectListener:Lcom/android/camera/ui/d$c;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mOnPositionZoomSelectListener:Ld/d/a/d8/o1$c;
 
-    iput-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mTouchUpStateListener:Lcom/android/camera/ui/d$e;
+    .line 2
+    iput-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mTouchUpStateListener:Ld/d/a/d8/o1$e;
 
     return-void
 .end method
 
 .method public setRotate(I)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "degree"
+        }
+    .end annotation
 
-    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Lcom/android/camera/ui/d$b;
+    .line 1
+    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Ld/d/a/d8/o1$b;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/android/camera/ui/d$b;->setRotate(I)V
+    .line 2
+    invoke-virtual {v0, p1}, Ld/d/a/d8/o1$b;->setRotate(I)V
 
     const/4 p1, 0x1
 
+    .line 3
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mIsAdsorb:Z
 
+    .line 4
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     :cond_0
@@ -2123,9 +2600,17 @@
 
 .method public setSelection(F)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "position"
+        }
+    .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Lcom/android/camera/ui/d$b;
+    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Ld/d/a/d8/o1$b;
 
     if-nez v0, :cond_0
 
@@ -2135,12 +2620,12 @@
     const/4 v1, 0x0
 
     .line 2
-    invoke-virtual {v0, v1}, Lcom/android/camera/ui/d$b;->setCurrentValue(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ld/d/a/d8/o1$b;->setCurrentValue(Ljava/lang/String;)V
 
     .line 3
-    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Lcom/android/camera/ui/d$b;
+    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Ld/d/a/d8/o1$b;
 
-    invoke-virtual {v0}, Lcom/android/camera/ui/d$b;->getCount()I
+    invoke-virtual {v0}, Ld/d/a/d8/o1$b;->getCount()I
 
     move-result v0
 
@@ -2157,7 +2642,7 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Lcom/android/camera/ui/d$b;
+    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Ld/d/a/d8/o1$b;
 
     if-eqz v0, :cond_1
 
@@ -2211,9 +2696,19 @@
 
 .method public setSelection(IZ)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "index",
+            "disableCallBack"
+        }
+    .end annotation
 
     .line 9
-    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Lcom/android/camera/ui/d$b;
+    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Ld/d/a/d8/o1$b;
 
     if-nez v0, :cond_0
 
@@ -2221,7 +2716,7 @@
 
     .line 10
     :cond_0
-    invoke-virtual {v0}, Lcom/android/camera/ui/d$b;->getCount()I
+    invoke-virtual {v0}, Ld/d/a/d8/o1$b;->getCount()I
 
     move-result v0
 
@@ -2230,9 +2725,9 @@
     if-lt p1, v0, :cond_1
 
     .line 11
-    iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Lcom/android/camera/ui/d$b;
+    iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Ld/d/a/d8/o1$b;
 
-    invoke-virtual {p1}, Lcom/android/camera/ui/d$b;->getCount()I
+    invoke-virtual {p1}, Ld/d/a/d8/o1$b;->getCount()I
 
     move-result p1
 
@@ -2240,11 +2735,11 @@
 
     .line 12
     :cond_1
-    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Lcom/android/camera/ui/d$b;
+    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mDrawAdapter:Ld/d/a/d8/o1$b;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v2}, Lcom/android/camera/ui/d$b;->setCurrentValue(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Ld/d/a/d8/o1$b;->setCurrentValue(Ljava/lang/String;)V
 
     if-eqz p2, :cond_5
 
@@ -2324,19 +2819,37 @@
     return-void
 .end method
 
-.method public setTipsStatesChangesListener(Lcom/android/camera/ui/d$d;)V
+.method public setTipsStatesChangesListener(Ld/d/a/d8/o1$d;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "tipStateListener"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public setVisibility(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "visibility"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroid/view/View;->setVisibility(I)V
 
     if-eqz p1, :cond_2
 
+    .line 2
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mValueAnimator:Landroid/animation/ValueAnimator;
 
     if-eqz p1, :cond_0
@@ -2347,10 +2860,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 3
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mValueAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->cancel()V
 
+    .line 4
     :cond_0
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mScrollAnimator:Landroid/animation/ValueAnimator;
 
@@ -2362,6 +2877,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 5
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mScrollAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->cancel()V
@@ -2369,6 +2885,7 @@
     :cond_1
     const/4 p1, 0x0
 
+    .line 6
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->mTouchState:I
 
     :cond_2

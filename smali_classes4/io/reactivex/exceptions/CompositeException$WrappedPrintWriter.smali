@@ -1,4 +1,4 @@
-.class final Lio/reactivex/exceptions/CompositeException$WrappedPrintWriter;
+.class public final Lio/reactivex/exceptions/CompositeException$WrappedPrintWriter;
 .super Lio/reactivex/exceptions/CompositeException$PrintStreamOrWriter;
 .source "SourceFile"
 
@@ -22,8 +22,10 @@
 .method public constructor <init>(Ljava/io/PrintWriter;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lio/reactivex/exceptions/CompositeException$PrintStreamOrWriter;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lio/reactivex/exceptions/CompositeException$WrappedPrintWriter;->printWriter:Ljava/io/PrintWriter;
 
     return-void
@@ -34,6 +36,7 @@
 .method public println(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lio/reactivex/exceptions/CompositeException$WrappedPrintWriter;->printWriter:Ljava/io/PrintWriter;
 
     invoke-virtual {p0, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V

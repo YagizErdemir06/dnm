@@ -1,4 +1,4 @@
-.class Landroidx/core/graphics/TypefaceCompatBaseImpl$1;
+.class public Landroidx/core/graphics/TypefaceCompatBaseImpl$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,13 +27,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/core/graphics/TypefaceCompatBaseImpl;
+.field public final synthetic this$0:Landroidx/core/graphics/TypefaceCompatBaseImpl;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/core/graphics/TypefaceCompatBaseImpl;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/core/graphics/TypefaceCompatBaseImpl$1;->this$0:Landroidx/core/graphics/TypefaceCompatBaseImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

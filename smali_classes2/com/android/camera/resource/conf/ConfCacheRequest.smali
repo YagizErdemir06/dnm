@@ -7,7 +7,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/android/camera/resource/SimpleLocalJsonCacheRequest<",
-        "Li2/e;",
+        "Ld/d/a/l6/d/e;",
         ">;"
     }
 .end annotation
@@ -21,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera/resource/SimpleLocalJsonCacheRequest;-><init>()V
 
     return-void
@@ -30,22 +31,38 @@
 # virtual methods
 .method public bridge synthetic isCacheValid(Lcom/android/camera/resource/BaseResourceCacheable;)Z
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "resource"
+        }
+    .end annotation
 
     .line 1
-    check-cast p1, Li2/e;
+    check-cast p1, Ld/d/a/l6/d/e;
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/resource/conf/ConfCacheRequest;->isCacheValid(Li2/e;)Z
+    invoke-virtual {p0, p1}, Lcom/android/camera/resource/conf/ConfCacheRequest;->isCacheValid(Ld/d/a/l6/d/e;)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method public isCacheValid(Li2/e;)Z
+.method public isCacheValid(Ld/d/a/l6/d/e;)Z
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "resource"
+        }
+    .end annotation
 
     .line 2
-    invoke-static {}, Lcom/android/camera/CameraAppImpl;->o()Landroid/content/Context;
+    invoke-static {}, Lcom/android/camera/CameraAppImpl;->d()Landroid/content/Context;
 
     move-result-object v0
 
@@ -80,7 +97,7 @@
 
     sub-long/2addr v4, v2
 
-    invoke-virtual {p1}, Li2/e;->getCacheExpireTime()J
+    invoke-virtual {p1}, Ld/d/a/l6/d/e;->getCacheExpireTime()J
 
     move-result-wide p0
 
@@ -98,20 +115,36 @@
 
 .method public bridge synthetic processRestore(Lcom/android/camera/resource/BaseResourceCacheable;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "resource"
+        }
+    .end annotation
 
     .line 1
-    check-cast p1, Li2/e;
+    check-cast p1, Ld/d/a/l6/d/e;
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/resource/conf/ConfCacheRequest;->processRestore(Li2/e;)V
+    invoke-virtual {p0, p1}, Lcom/android/camera/resource/conf/ConfCacheRequest;->processRestore(Ld/d/a/l6/d/e;)V
 
     return-void
 .end method
 
-.method public processRestore(Li2/e;)V
+.method public processRestore(Ld/d/a/l6/d/e;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "resource"
+        }
+    .end annotation
 
     .line 2
-    invoke-static {}, Lcom/android/camera/CameraAppImpl;->o()Landroid/content/Context;
+    invoke-static {}, Lcom/android/camera/CameraAppImpl;->d()Landroid/content/Context;
 
     move-result-object v0
 
@@ -136,7 +169,7 @@
     invoke-direct {v0, p0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
     .line 6
-    invoke-virtual {p1, v0}, Li2/e;->q(Lorg/json/JSONObject;)V
+    invoke-virtual {p1, v0}, Ld/d/a/l6/d/e;->q(Lorg/json/JSONObject;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 

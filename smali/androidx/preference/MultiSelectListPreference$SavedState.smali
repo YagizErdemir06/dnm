@@ -1,4 +1,4 @@
-.class Landroidx/preference/MultiSelectListPreference$SavedState;
+.class public Landroidx/preference/MultiSelectListPreference$SavedState;
 .super Landroidx/preference/Preference$BaseSavedState;
 .source "SourceFile"
 
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field mValues:Ljava/util/Set;
+.field public mValues:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
@@ -42,6 +42,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/preference/MultiSelectListPreference$SavedState$1;
 
     invoke-direct {v0}, Landroidx/preference/MultiSelectListPreference$SavedState$1;-><init>()V
@@ -101,8 +102,10 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroid/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
+    .line 2
     iget-object p2, p0, Landroidx/preference/MultiSelectListPreference$SavedState;->mValues:Ljava/util/Set;
 
     invoke-interface {p2}, Ljava/util/Set;->size()I
@@ -111,6 +114,7 @@
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 3
     iget-object p0, p0, Landroidx/preference/MultiSelectListPreference$SavedState;->mValues:Ljava/util/Set;
 
     invoke-interface {p0}, Ljava/util/Set;->size()I

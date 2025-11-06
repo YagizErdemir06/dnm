@@ -4,7 +4,7 @@
 
 
 # static fields
-.field static final TAG:Ljava/lang/String; = "DocumentFile"
+.field public static final TAG:Ljava/lang/String; = "DocumentFile"
 
 
 # instance fields
@@ -22,8 +22,10 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/documentfile/provider/DocumentFile;->mParent:Landroidx/documentfile/provider/DocumentFile;
 
     return-void
@@ -38,6 +40,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     new-instance v0, Landroidx/documentfile/provider/RawDocumentFile;
 
     const/4 v1, 0x0
@@ -48,7 +51,7 @@
 .end method
 
 .method public static fromSingleUri(Landroid/content/Context;Landroid/net/Uri;)Landroidx/documentfile/provider/DocumentFile;
-    .locals 2
+    .locals 3
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -60,17 +63,28 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    new-instance v0, Landroidx/documentfile/provider/SingleDocumentFile;
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/4 v1, 0x0
+
+    const/16 v2, 0x13
+
+    if-lt v0, v2, :cond_0
+
+    .line 2
+    new-instance v0, Landroidx/documentfile/provider/SingleDocumentFile;
 
     invoke-direct {v0, v1, p0, p1}, Landroidx/documentfile/provider/SingleDocumentFile;-><init>(Landroidx/documentfile/provider/DocumentFile;Landroid/content/Context;Landroid/net/Uri;)V
 
     return-object v0
+
+    :cond_0
+    return-object v1
 .end method
 
 .method public static fromTreeUri(Landroid/content/Context;Landroid/net/Uri;)Landroidx/documentfile/provider/DocumentFile;
-    .locals 2
+    .locals 3
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -82,25 +96,38 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    new-instance v0, Landroidx/documentfile/provider/TreeDocumentFile;
-
-    invoke-static {p1}, Landroid/provider/DocumentsContract;->getTreeDocumentId(Landroid/net/Uri;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {p1, v1}, Landroid/provider/DocumentsContract;->buildDocumentUriUsingTree(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p1
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/4 v1, 0x0
+
+    const/16 v2, 0x15
+
+    if-lt v0, v2, :cond_0
+
+    .line 2
+    new-instance v0, Landroidx/documentfile/provider/TreeDocumentFile;
+
+    .line 3
+    invoke-static {p1}, Landroid/provider/DocumentsContract;->getTreeDocumentId(Landroid/net/Uri;)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 4
+    invoke-static {p1, v2}, Landroid/provider/DocumentsContract;->buildDocumentUriUsingTree(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p1
 
     invoke-direct {v0, v1, p0, p1}, Landroidx/documentfile/provider/TreeDocumentFile;-><init>(Landroidx/documentfile/provider/DocumentFile;Landroid/content/Context;Landroid/net/Uri;)V
 
     return-object v0
+
+    :cond_0
+    return-object v1
 .end method
 
 .method public static isDocumentUri(Landroid/content/Context;Landroid/net/Uri;)Z
-    .locals 0
+    .locals 2
     .param p0    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -110,9 +137,22 @@
         .end annotation
     .end param
 
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x13
+
+    if-lt v0, v1, :cond_0
+
+    .line 2
     invoke-static {p0, p1}, Landroid/provider/DocumentsContract;->isDocumentUri(Landroid/content/Context;Landroid/net/Uri;)Z
 
     move-result p0
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
 
     return p0
 .end method
@@ -162,6 +202,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroidx/documentfile/provider/DocumentFile;->listFiles()[Landroidx/documentfile/provider/DocumentFile;
 
     move-result-object p0
@@ -175,6 +216,7 @@
 
     aget-object v2, p0, v1
 
+    .line 2
     invoke-virtual {v2}, Landroidx/documentfile/provider/DocumentFile;->getName()Ljava/lang/String;
 
     move-result-object v3
@@ -208,6 +250,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/documentfile/provider/DocumentFile;->mParent:Landroidx/documentfile/provider/DocumentFile;
 
     return-object p0

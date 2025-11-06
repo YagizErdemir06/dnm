@@ -56,14 +56,6 @@
         <item quantity="other">Duração: %d segundos</item>
         <item quantity="one">Duração: %d segundo</item>
     </plurals>
-    <plurals name="accessibility_watermark_characters_inputted">
-        <item quantity="other">Introduziu %d caracteres.</item>
-        <item quantity="one">Introduziu %d caractere.</item>
-    </plurals>
-    <plurals name="accessibility_watermark_characters_max">
-        <item quantity="other">Introduza até %d caracteres.</item>
-        <item quantity="one">Introduza até %d caractere.</item>
-    </plurals>
     <plurals name="cinemaster_toast_camera_overflow">
         <item quantity="other">Pode ligar até %d câmaras à mesma rede</item>
         <item quantity="one">Pode ligar até %d câmara à mesma rede</item>
@@ -139,10 +131,6 @@
     <plurals name="miuix_appcompat_items_selected">
         <item quantity="other">%d itens selecionados</item>
         <item quantity="one">%d item selecionado</item>
-    </plurals>
-    <plurals name="mtrl_badge_content_description">
-        <item quantity="other">%d novas notificações</item>
-        <item quantity="one">%d nova notificação</item>
     </plurals>
     <plurals name="num_minutes_ago">
         <item quantity="other">%d minutos atrás</item>

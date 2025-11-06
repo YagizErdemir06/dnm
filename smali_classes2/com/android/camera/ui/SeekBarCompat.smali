@@ -5,7 +5,7 @@
 # interfaces
 .implements Landroid/widget/SeekBar$OnSeekBarChangeListener;
 .implements Landroid/view/View$OnTouchListener;
-.implements Lz1/h;
+.implements Ld/d/a/f6/h;
 
 
 # annotations
@@ -18,127 +18,146 @@
 
 
 # static fields
-.field public static final C2:I = 0x1
+.field private static final c:Ljava/lang/String; = "SeekBarCompat"
 
-.field public static final K1:Ljava/lang/String; = "SeekBarCompat"
+.field public static final d:I = 0x1
 
-.field public static final K2:I = 0x2
+.field public static final f:I = 0x2
 
-.field public static final V1:I = 0x1
+.field private static final g:I = 0x5
 
-.field public static final p2:I = 0x2
+.field private static final j:I = 0x0
 
-.field public static final q2:I = 0x5
+.field private static final m:I = 0x1
 
-.field public static final v2:I
+.field private static final n:I = 0x2
 
 
 # instance fields
-.field public A:Landroid/graphics/Rect;
+.field private C1:Landroid/graphics/Paint;
 
-.field public C:Lmiuix/animation/IFolme;
+.field private C2:Lcom/android/camera/ui/SeekBarCompat$d;
 
-.field public C1:Lmiuix/animation/property/ViewProperty;
+.field private K0:F
 
-.field public D:I
+.field private K1:Landroid/graphics/RectF;
 
-.field public F:I
+.field private K2:Landroid/graphics/Paint;
 
-.field public G:F
+.field private K8:Landroid/graphics/Paint;
 
-.field public H:Ljava/lang/String;
+.field private L8:Landroid/graphics/Paint;
 
-.field public I:F
+.field private M8:Landroid/graphics/Paint;
 
-.field public J:I
+.field private N8:F
 
-.field public K:Landroid/animation/ObjectAnimator;
+.field private O8:F
 
-.field public K0:Ljava/lang/Runnable;
+.field private P8:F
 
-.field public a:Landroid/graphics/Paint;
+.field private Q8:F
 
-.field public b:Landroid/graphics/Paint;
+.field private R8:F
 
-.field public c:I
+.field private S8:Ljava/lang/Object;
 
-.field public d:Z
+.field private T8:F
 
-.field public e:F
+.field private U8:I
 
-.field public f:F
+.field private V8:Z
 
-.field public g:F
+.field private W8:Landroid/graphics/Rect;
 
-.field public h:I
+.field private X8:Lmiuix/animation/IFolme;
 
-.field public i:F
+.field private Y8:I
 
-.field public j:Landroid/graphics/Paint;
+.field private Z8:I
 
-.field public k:Landroid/graphics/RectF;
+.field private a9:F
 
-.field public k0:Ljava/lang/Runnable;
+.field private b9:Ljava/lang/String;
 
-.field public k1:Z
+.field private c9:F
 
-.field public l:F
+.field private d9:I
 
-.field public m:Lcom/android/camera/ui/SeekBarCompat$d;
+.field private e9:Landroid/animation/ObjectAnimator;
 
-.field public n:Landroid/graphics/Paint;
+.field private f9:Ljava/lang/Runnable;
 
-.field public o:Landroid/graphics/Paint;
+.field private g9:Ljava/lang/Runnable;
 
-.field public p:Landroid/graphics/Paint;
+.field private h9:Z
 
-.field public p1:I
+.field private i9:I
 
-.field public q:Landroid/graphics/Paint;
+.field private j9:F
 
-.field public q1:F
+.field private k0:F
 
-.field public r:F
+.field private k1:I
 
-.field public s:F
+.field public k9:Lmiuix/animation/property/ViewProperty;
 
-.field public t:F
+.field public l9:Lmiuix/animation/property/ViewProperty;
 
-.field public u:F
+.field private p:Landroid/graphics/Paint;
 
-.field public v:F
+.field private s:Landroid/graphics/Paint;
 
-.field public v1:Lmiuix/animation/property/ViewProperty;
+.field private t:I
 
-.field public w:Ljava/lang/Object;
+.field private u:Z
 
-.field public x:F
+.field private v1:F
 
-.field public y:I
+.field private v2:F
 
-.field public z:Z
+.field private w:F
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
-    const/4 v0, -0x1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
+
+    const/4 v1, -0x1
 
     const/4 v2, 0x0
 
     .line 1
-    invoke-direct {p0, p1, v2, v0, v1}, Lcom/android/camera/ui/SeekBarCompat;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+    invoke-direct {p0, p1, v0, v1, v2}, Lcom/android/camera/ui/SeekBarCompat;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     const/4 v0, -0x1
 
@@ -152,7 +171,20 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 1
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr"
+        }
     .end annotation
 
     const/4 v0, 0x0
@@ -165,6 +197,20 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr",
+            "defStyleRes"
+        }
+    .end annotation
 
     .line 4
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/SeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
@@ -174,19 +220,19 @@
 
     invoke-direct {p3}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lcom/android/camera/ui/SeekBarCompat;->w:Ljava/lang/Object;
+    iput-object p3, p0, Lcom/android/camera/ui/SeekBarCompat;->S8:Ljava/lang/Object;
 
     const/4 p3, 0x0
 
     .line 6
-    iput p3, p0, Lcom/android/camera/ui/SeekBarCompat;->x:F
+    iput p3, p0, Lcom/android/camera/ui/SeekBarCompat;->T8:F
 
     .line 7
     new-instance p3, Landroid/graphics/Rect;
 
     invoke-direct {p3}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object p3, p0, Lcom/android/camera/ui/SeekBarCompat;->A:Landroid/graphics/Rect;
+    iput-object p3, p0, Lcom/android/camera/ui/SeekBarCompat;->W8:Landroid/graphics/Rect;
 
     .line 8
     new-instance p3, Lcom/android/camera/ui/SeekBarCompat$a;
@@ -195,7 +241,7 @@
 
     invoke-direct {p3, p0, p4}, Lcom/android/camera/ui/SeekBarCompat$a;-><init>(Lcom/android/camera/ui/SeekBarCompat;Ljava/lang/String;)V
 
-    iput-object p3, p0, Lcom/android/camera/ui/SeekBarCompat;->v1:Lmiuix/animation/property/ViewProperty;
+    iput-object p3, p0, Lcom/android/camera/ui/SeekBarCompat;->k9:Lmiuix/animation/property/ViewProperty;
 
     .line 9
     new-instance p3, Lcom/android/camera/ui/SeekBarCompat$b;
@@ -204,179 +250,64 @@
 
     invoke-direct {p3, p0, p4}, Lcom/android/camera/ui/SeekBarCompat$b;-><init>(Lcom/android/camera/ui/SeekBarCompat;Ljava/lang/String;)V
 
-    iput-object p3, p0, Lcom/android/camera/ui/SeekBarCompat;->C1:Lmiuix/animation/property/ViewProperty;
+    iput-object p3, p0, Lcom/android/camera/ui/SeekBarCompat;->l9:Lmiuix/animation/property/ViewProperty;
 
     .line 10
-    invoke-virtual {p0, p1, p2}, Lcom/android/camera/ui/SeekBarCompat;->j(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Lcom/android/camera/ui/SeekBarCompat;->i(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
 .end method
 
-.method public static synthetic a(Lcom/android/camera/ui/SeekBarCompat;)V
+.method public static synthetic a(Lcom/android/camera/ui/SeekBarCompat;)F
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/camera/ui/SeekBarCompat;->l()V
-
-    return-void
-.end method
-
-.method public static synthetic b(Lcom/android/camera/ui/SeekBarCompat;)F
-    .locals 0
-
-    iget p0, p0, Lcom/android/camera/ui/SeekBarCompat;->x:F
+    .line 1
+    iget p0, p0, Lcom/android/camera/ui/SeekBarCompat;->T8:F
 
     return p0
 .end method
 
-.method public static synthetic c(Lcom/android/camera/ui/SeekBarCompat;F)F
+.method public static synthetic b(Lcom/android/camera/ui/SeekBarCompat;F)F
     .locals 0
 
-    iput p1, p0, Lcom/android/camera/ui/SeekBarCompat;->x:F
+    .line 1
+    iput p1, p0, Lcom/android/camera/ui/SeekBarCompat;->T8:F
 
     return p1
 .end method
 
-.method public static synthetic d(Lcom/android/camera/ui/SeekBarCompat;)F
+.method public static synthetic c(Lcom/android/camera/ui/SeekBarCompat;)F
     .locals 0
 
-    iget p0, p0, Lcom/android/camera/ui/SeekBarCompat;->t:F
+    .line 1
+    iget p0, p0, Lcom/android/camera/ui/SeekBarCompat;->P8:F
 
     return p0
 .end method
 
-.method public static synthetic e(Lcom/android/camera/ui/SeekBarCompat;F)F
+.method public static synthetic d(Lcom/android/camera/ui/SeekBarCompat;F)F
     .locals 0
 
-    iput p1, p0, Lcom/android/camera/ui/SeekBarCompat;->t:F
+    .line 1
+    iput p1, p0, Lcom/android/camera/ui/SeekBarCompat;->P8:F
 
     return p1
 .end method
 
-.method public static synthetic f(Lcom/android/camera/ui/SeekBarCompat;Ljava/lang/CharSequence;)V
+.method public static synthetic e(Lcom/android/camera/ui/SeekBarCompat;Ljava/lang/CharSequence;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/ui/SeekBarCompat;->setAnnounceForAccessibility(Ljava/lang/CharSequence;)V
 
     return-void
 .end method
 
-.method private synthetic l()V
-    .locals 0
-
-    invoke-virtual {p0}, Lcom/android/camera/ui/SeekBarCompat;->g()V
-
-    iget-object p0, p0, Lcom/android/camera/ui/SeekBarCompat;->m:Lcom/android/camera/ui/SeekBarCompat$d;
-
-    if-eqz p0, :cond_0
-
-    invoke-interface {p0}, Lcom/android/camera/ui/SeekBarCompat$d;->a()V
-
-    :cond_0
-    return-void
-.end method
-
-.method private setAnnounceForAccessibility(Ljava/lang/CharSequence;)V
-    .locals 0
-    .annotation build Lh7/c;
-    .end annotation
-
-    invoke-super {p0, p1}, Landroid/view/View;->announceForAccessibility(Ljava/lang/CharSequence;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public announceForAccessibility(Ljava/lang/CharSequence;)V
-    .locals 3
-    .annotation build Lh7/c;
-    .end annotation
-
-    iget-object v0, p0, Lcom/android/camera/ui/SeekBarCompat;->k0:Ljava/lang/Runnable;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
-
-    :cond_0
-    new-instance v0, Lcom/android/camera/ui/SeekBarCompat$c;
-
-    invoke-direct {v0, p0, p1}, Lcom/android/camera/ui/SeekBarCompat$c;-><init>(Lcom/android/camera/ui/SeekBarCompat;Ljava/lang/CharSequence;)V
-
-    iput-object v0, p0, Lcom/android/camera/ui/SeekBarCompat;->k0:Ljava/lang/Runnable;
-
-    const-wide/16 v1, 0x1f4
-
-    invoke-virtual {p0, v0, v1, v2}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    return-void
-.end method
-
-.method public clean()V
+.method private f()V
     .locals 2
 
-    const/4 v0, 0x1
-
-    new-array v0, v0, [Lcom/android/camera/ui/SeekBarCompat;
-
-    const/4 v1, 0x0
-
-    aput-object p0, v0, v1
-
-    invoke-static {v0}, Lmiuix/animation/Folme;->clean([Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public dispatchTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 3
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget v0, p0, Lcom/android/camera/ui/SeekBarCompat;->F:I
-
-    and-int/lit8 v0, v0, 0x1
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
-
-    move-result v0
-
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
-
-    move-result v1
-
-    iget v2, p0, Lcom/android/camera/ui/SeekBarCompat;->h:I
-
-    sub-int/2addr v1, v2
-
-    int-to-float v1, v1
-
-    cmpg-float v0, v0, v1
-
-    if-gez v0, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_0
-    invoke-super {p0, p1}, Landroid/view/View;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final g()V
-    .locals 2
-
-    iget v0, p0, Lcom/android/camera/ui/SeekBarCompat;->F:I
+    .line 1
+    iget v0, p0, Lcom/android/camera/ui/SeekBarCompat;->Z8:I
 
     const/4 v1, 0x1
 
@@ -384,31 +315,39 @@
 
     if-eqz v0, :cond_0
 
-    iput v1, p0, Lcom/android/camera/ui/SeekBarCompat;->F:I
+    .line 2
+    iput v1, p0, Lcom/android/camera/ui/SeekBarCompat;->Z8:I
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/camera/ui/SeekBarCompat;->H:Ljava/lang/String;
+    .line 3
+    iput-object v0, p0, Lcom/android/camera/ui/SeekBarCompat;->b9:Ljava/lang/String;
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    .line 4
+    invoke-virtual {p0}, Landroid/widget/SeekBar;->invalidate()V
 
     :cond_0
     return-void
 .end method
 
-.method public getTouchRect()Landroid/graphics/Rect;
+.method private g(III)Z
     .locals 0
-
-    iget-object p0, p0, Lcom/android/camera/ui/SeekBarCompat;->A:Landroid/graphics/Rect;
-
-    return-object p0
-.end method
-
-.method public final h(III)Z
-    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "i",
+            "a",
+            "b"
+        }
+    .end annotation
 
     if-eq p2, p3, :cond_0
 
+    .line 1
     invoke-static {p2, p3}, Ljava/lang/Math;->min(II)I
 
     move-result p0
@@ -432,151 +371,32 @@
     return p0
 .end method
 
-.method public i(F)I
-    .locals 3
-
-    iget v0, p0, Lcom/android/camera/ui/SeekBarCompat;->v:F
-
-    const/4 v1, 0x0
-
-    cmpl-float v2, v0, v1
-
-    if-nez v2, :cond_0
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    :cond_0
-    iget v2, p0, Lcom/android/camera/ui/SeekBarCompat;->s:F
-
-    sub-float/2addr p1, v2
-
-    cmpg-float v1, p1, v1
-
-    if-gez v1, :cond_2
-
-    iget-boolean p1, p0, Lcom/android/camera/ui/SeekBarCompat;->d:Z
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getMax()I
-
-    move-result p1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getMin()I
-
-    move-result p1
-
-    goto :goto_0
-
-    :cond_2
-    cmpl-float v1, p1, v0
-
-    if-lez v1, :cond_4
-
-    iget-boolean p1, p0, Lcom/android/camera/ui/SeekBarCompat;->d:Z
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getMin()I
-
-    move-result p1
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getMax()I
-
-    move-result p1
-
-    goto :goto_0
-
-    :cond_4
-    div-float/2addr p1, v0
-
-    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getMax()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    mul-float/2addr p1, v0
-
-    invoke-static {p1}, Ljava/lang/Math;->round(F)I
-
-    move-result p1
-
-    iget-boolean v0, p0, Lcom/android/camera/ui/SeekBarCompat;->d:Z
-
-    if-eqz v0, :cond_5
-
-    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getMax()I
-
-    move-result v0
-
-    sub-int p1, v0, p1
-
-    :cond_5
-    :goto_0
-    iget-boolean v0, p0, Lcom/android/camera/ui/SeekBarCompat;->z:Z
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_6
-
-    iget v0, p0, Lcom/android/camera/ui/SeekBarCompat;->y:I
-
-    sub-int/2addr p1, v0
-
-    sub-int/2addr v1, v0
-
-    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getMax()I
-
-    move-result v0
-
-    iget p0, p0, Lcom/android/camera/ui/SeekBarCompat;->y:I
-
-    sub-int/2addr v0, p0
-
-    invoke-static {p1, v1, v0}, Lcom/android/camera/a6;->A(III)I
-
-    move-result p0
-
-    goto :goto_1
-
-    :cond_6
-    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getMax()I
-
-    move-result p0
-
-    invoke-static {p1, v1, p0}, Lcom/android/camera/a6;->A(III)I
-
-    move-result p0
-
-    :goto_1
-    return p0
-.end method
-
-.method public final j(Landroid/content/Context;Landroid/util/AttributeSet;)V
+.method private i(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
-    sget-object v0, Lcom/android/camera/n4$u;->SliderBar:[I
+    .line 1
+    sget-object v0, Ld/d/a/k5$u;->SliderBar:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p2
 
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    .line 2
+    invoke-virtual {p0}, Landroid/widget/SeekBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f070d86
+    const v1, 0x7f070af8
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -586,17 +406,19 @@
 
     const/4 v1, 0x0
 
+    .line 3
     invoke-virtual {p2, v1, v0}, Landroid/content/res/TypedArray;->getDimension(IF)F
 
     move-result v0
 
-    iput v0, p0, Lcom/android/camera/ui/SeekBarCompat;->f:F
+    iput v0, p0, Lcom/android/camera/ui/SeekBarCompat;->k0:F
 
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    .line 4
+    invoke-virtual {p0}, Landroid/widget/SeekBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v2, 0x7f070d89
+    const v2, 0x7f070afb
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -606,17 +428,19 @@
 
     const/4 v2, 0x3
 
+    .line 5
     invoke-virtual {p2, v2, v0}, Landroid/content/res/TypedArray;->getDimension(IF)F
 
     move-result v0
 
-    iput v0, p0, Lcom/android/camera/ui/SeekBarCompat;->g:F
+    iput v0, p0, Lcom/android/camera/ui/SeekBarCompat;->K0:F
 
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    .line 6
+    invoke-virtual {p0}, Landroid/widget/SeekBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v2, 0x7f0701b1
+    const v2, 0x7f0701ad
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -624,17 +448,19 @@
 
     const/4 v2, 0x1
 
+    .line 7
     invoke-virtual {p2, v2, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v0
 
-    iput v0, p0, Lcom/android/camera/ui/SeekBarCompat;->h:I
+    iput v0, p0, Lcom/android/camera/ui/SeekBarCompat;->k1:I
 
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    .line 8
+    invoke-virtual {p0}, Landroid/widget/SeekBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v3, 0x7f070da5
+    const v3, 0x7f070b17
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -644,12 +470,14 @@
 
     const/4 v3, 0x2
 
+    .line 9
     invoke-virtual {p2, v3, v0}, Landroid/content/res/TypedArray;->getDimension(IF)F
 
     move-result v0
 
-    iput v0, p0, Lcom/android/camera/ui/SeekBarCompat;->i:F
+    iput v0, p0, Lcom/android/camera/ui/SeekBarCompat;->v1:F
 
+    .line 10
     invoke-static {}, Lcom/android/camera2/compat/theme/MiThemeCompat;->geteOperationZoom()Lcom/android/camera2/compat/theme/common/MiThemeOperationZoomInterface;
 
     move-result-object v0
@@ -660,48 +488,58 @@
 
     if-eqz v0, :cond_0
 
-    iget v0, p0, Lcom/android/camera/ui/SeekBarCompat;->h:I
+    const/4 v0, 0x4
 
-    int-to-float v0, v0
+    .line 11
+    iget v4, p0, Lcom/android/camera/ui/SeekBarCompat;->k1:I
 
-    const/4 v4, 0x4
+    int-to-float v4, v4
 
-    invoke-virtual {p2, v4, v0}, Landroid/content/res/TypedArray;->getDimension(IF)F
+    invoke-virtual {p2, v0, v4}, Landroid/content/res/TypedArray;->getDimension(IF)F
 
     move-result v0
 
     goto :goto_0
 
+    .line 12
     :cond_0
-    iget v0, p0, Lcom/android/camera/ui/SeekBarCompat;->h:I
+    iget v0, p0, Lcom/android/camera/ui/SeekBarCompat;->k1:I
 
     int-to-float v0, v0
 
     :goto_0
-    iput v0, p0, Lcom/android/camera/ui/SeekBarCompat;->e:F
+    iput v0, p0, Lcom/android/camera/ui/SeekBarCompat;->w:F
 
+    .line 13
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
-    invoke-static {p1}, Lcom/android/camera/a6;->R2(Landroid/content/Context;)Z
+    .line 14
+    invoke-static {p1}, Ld/d/a/z5;->G2(Landroid/content/Context;)Z
 
     move-result p2
 
-    iput-boolean p2, p0, Lcom/android/camera/ui/SeekBarCompat;->d:Z
+    iput-boolean p2, p0, Lcom/android/camera/ui/SeekBarCompat;->u:Z
 
     const/4 p2, 0x0
 
-    invoke-virtual {p0, p2}, Landroid/widget/AbsSeekBar;->setThumb(Landroid/graphics/drawable/Drawable;)V
+    .line 15
+    invoke-virtual {p0, p2}, Landroid/widget/SeekBar;->setThumb(Landroid/graphics/drawable/Drawable;)V
 
+    .line 16
     invoke-virtual {p0, p0}, Landroid/widget/SeekBar;->setOnSeekBarChangeListener(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V
 
-    invoke-virtual {p0, p0}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+    .line 17
+    invoke-virtual {p0, p0}, Landroid/widget/SeekBar;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    invoke-virtual {p0, v2, p2}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
+    .line 18
+    invoke-virtual {p0, v2, p2}, Landroid/widget/SeekBar;->setLayerType(ILandroid/graphics/Paint;)V
 
     new-array v0, v3, [I
 
+    .line 19
     fill-array-data v0, :array_0
 
+    .line 20
     invoke-static {}, Lcom/android/camera2/compat/theme/MiThemeCompat;->geteOperationZoom()Lcom/android/camera2/compat/theme/common/MiThemeOperationZoomInterface;
 
     move-result-object v3
@@ -714,6 +552,7 @@
 
     move-result-object p1
 
+    .line 21
     invoke-virtual {p1, v1}, Landroid/content/res/TypedArray;->getIndex(I)I
 
     move-result v0
@@ -724,105 +563,121 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/android/camera/ui/SeekBarCompat;->J:I
+    iput v0, p0, Lcom/android/camera/ui/SeekBarCompat;->d9:I
 
+    .line 22
     invoke-virtual {p1, v2}, Landroid/content/res/TypedArray;->getIndex(I)I
 
     move-result v0
 
-    iget v1, p0, Lcom/android/camera/ui/SeekBarCompat;->I:F
+    iget v1, p0, Lcom/android/camera/ui/SeekBarCompat;->c9:F
 
     invoke-virtual {p1, v0, v1}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
     move-result v0
 
-    iput v0, p0, Lcom/android/camera/ui/SeekBarCompat;->I:F
+    iput v0, p0, Lcom/android/camera/ui/SeekBarCompat;->c9:F
 
+    .line 23
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
     const p1, 0x3fe8b439    # 1.818f
 
-    invoke-static {p1}, Lcom/android/camera/a6;->e0(F)I
+    .line 24
+    invoke-static {p1}, Ld/d/a/z5;->W(F)I
 
     move-result p1
 
     int-to-float p1, p1
 
-    iput p1, p0, Lcom/android/camera/ui/SeekBarCompat;->u:F
+    iput p1, p0, Lcom/android/camera/ui/SeekBarCompat;->Q8:F
 
+    .line 25
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->n:Landroid/graphics/Paint;
+    iput-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->K2:Landroid/graphics/Paint;
 
+    .line 26
     invoke-virtual {p1, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->n:Landroid/graphics/Paint;
+    .line 27
+    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->K2:Landroid/graphics/Paint;
 
     sget-object v0, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->n:Landroid/graphics/Paint;
+    .line 28
+    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->K2:Landroid/graphics/Paint;
 
     const/high16 v0, 0x40000000    # 2.0f
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->n:Landroid/graphics/Paint;
+    .line 29
+    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->K2:Landroid/graphics/Paint;
 
     const/high16 v0, 0x26000000
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 30
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->q:Landroid/graphics/Paint;
+    iput-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->M8:Landroid/graphics/Paint;
 
+    .line 31
     invoke-virtual {p1, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->q:Landroid/graphics/Paint;
+    .line 32
+    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->M8:Landroid/graphics/Paint;
 
     sget-object v0, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->q:Landroid/graphics/Paint;
+    .line 33
+    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->M8:Landroid/graphics/Paint;
 
     const/4 v0, -0x1
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->q:Landroid/graphics/Paint;
+    .line 34
+    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->M8:Landroid/graphics/Paint;
+
+    const/high16 v1, 0x437f0000    # 255.0f
 
     invoke-static {}, Lcom/android/camera2/compat/theme/MiThemeCompat;->geteOperationZoom()Lcom/android/camera2/compat/theme/common/MiThemeOperationZoomInterface;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-interface {v1}, Lcom/android/camera2/compat/theme/common/MiThemeOperationZoomInterface;->getSlideBackgroundAlpha()F
+    invoke-interface {v3}, Lcom/android/camera2/compat/theme/common/MiThemeOperationZoomInterface;->getSlideBackgroundAlpha()F
 
-    move-result v1
+    move-result v3
 
-    const/high16 v3, 0x437f0000    # 255.0f
+    mul-float/2addr v3, v1
 
-    mul-float/2addr v1, v3
-
-    float-to-int v1, v1
+    float-to-int v1, v3
 
     invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
+    .line 35
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->a:Landroid/graphics/Paint;
+    iput-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->p:Landroid/graphics/Paint;
 
+    .line 36
     invoke-virtual {p1, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->a:Landroid/graphics/Paint;
+    .line 37
+    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->p:Landroid/graphics/Paint;
 
     new-instance v1, Landroid/graphics/PorterDuffXfermode;
 
@@ -832,111 +687,130 @@
 
     invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
+    .line 38
     new-instance p1, Landroid/text/TextPaint;
 
     invoke-direct {p1}, Landroid/text/TextPaint;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->b:Landroid/graphics/Paint;
+    iput-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->s:Landroid/graphics/Paint;
 
+    .line 39
     invoke-virtual {p1, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->b:Landroid/graphics/Paint;
+    .line 40
+    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->s:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->b:Landroid/graphics/Paint;
+    .line 41
+    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->s:Landroid/graphics/Paint;
 
-    iget v1, p0, Lcom/android/camera/ui/SeekBarCompat;->I:F
+    iget v1, p0, Lcom/android/camera/ui/SeekBarCompat;->c9:F
 
-    iget v3, p0, Lcom/android/camera/ui/SeekBarCompat;->J:I
+    iget v3, p0, Lcom/android/camera/ui/SeekBarCompat;->d9:I
 
     const/4 v4, 0x0
 
     invoke-virtual {p1, v1, v4, v4, v3}, Landroid/graphics/Paint;->setShadowLayer(FFFI)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->b:Landroid/graphics/Paint;
+    .line 42
+    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->s:Landroid/graphics/Paint;
 
-    iget v1, p0, Lcom/android/camera/ui/SeekBarCompat;->i:F
+    iget v1, p0, Lcom/android/camera/ui/SeekBarCompat;->v1:F
 
     invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->b:Landroid/graphics/Paint;
+    .line 43
+    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->s:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
 
     invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->b:Landroid/graphics/Paint;
+    .line 44
+    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->s:Landroid/graphics/Paint;
 
-    invoke-static {p1, p2}, Lnb/f;->c(Landroid/graphics/Paint;Landroid/graphics/Typeface;)V
+    invoke-static {p1, p2}, Ld/d/e/f;->c(Landroid/graphics/Paint;Landroid/graphics/Typeface;)V
 
+    .line 45
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->p:Landroid/graphics/Paint;
+    iput-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->L8:Landroid/graphics/Paint;
 
+    .line 46
     sget-object p2, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->p:Landroid/graphics/Paint;
+    .line 47
+    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->L8:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->p:Landroid/graphics/Paint;
+    .line 48
+    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->L8:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->p:Landroid/graphics/Paint;
+    .line 49
+    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->L8:Landroid/graphics/Paint;
 
-    iget p2, p0, Lcom/android/camera/ui/SeekBarCompat;->u:F
+    iget p2, p0, Lcom/android/camera/ui/SeekBarCompat;->Q8:F
 
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
     const p1, 0x413451ec    # 11.27f
 
-    invoke-static {p1}, Lcom/android/camera/a6;->e0(F)I
+    .line 50
+    invoke-static {p1}, Ld/d/a/z5;->W(F)I
 
     move-result p1
 
     int-to-float p1, p1
 
-    iput p1, p0, Lcom/android/camera/ui/SeekBarCompat;->r:F
+    iput p1, p0, Lcom/android/camera/ui/SeekBarCompat;->N8:F
 
     const p1, 0x4188b852    # 17.09f
 
-    invoke-static {p1}, Lcom/android/camera/a6;->e0(F)I
+    .line 51
+    invoke-static {p1}, Ld/d/a/z5;->W(F)I
 
     move-result p1
 
     int-to-float p1, p1
 
-    iput p1, p0, Lcom/android/camera/ui/SeekBarCompat;->s:F
+    iput p1, p0, Lcom/android/camera/ui/SeekBarCompat;->O8:F
 
-    iget p1, p0, Lcom/android/camera/ui/SeekBarCompat;->r:F
+    .line 52
+    iget p1, p0, Lcom/android/camera/ui/SeekBarCompat;->N8:F
 
-    iput p1, p0, Lcom/android/camera/ui/SeekBarCompat;->t:F
+    iput p1, p0, Lcom/android/camera/ui/SeekBarCompat;->P8:F
 
-    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->p:Landroid/graphics/Paint;
+    .line 53
+    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->L8:Landroid/graphics/Paint;
 
-    iget p2, p0, Lcom/android/camera/ui/SeekBarCompat;->I:F
+    iget p2, p0, Lcom/android/camera/ui/SeekBarCompat;->c9:F
 
-    iget v1, p0, Lcom/android/camera/ui/SeekBarCompat;->J:I
+    iget v1, p0, Lcom/android/camera/ui/SeekBarCompat;->d9:I
 
     invoke-virtual {p1, p2, v4, v4, v1}, Landroid/graphics/Paint;->setShadowLayer(FFFI)V
 
+    .line 54
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->j:Landroid/graphics/Paint;
+    iput-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->C1:Landroid/graphics/Paint;
 
+    .line 55
     sget-object p2, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->j:Landroid/graphics/Paint;
+    .line 56
+    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->C1:Landroid/graphics/Paint;
 
     invoke-static {}, Lcom/android/camera2/compat/theme/MiThemeCompat;->geteOperationZoom()Lcom/android/camera2/compat/theme/common/MiThemeOperationZoomInterface;
 
@@ -948,63 +822,73 @@
 
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setColor(I)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->j:Landroid/graphics/Paint;
+    .line 57
+    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->C1:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
+    .line 58
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->o:Landroid/graphics/Paint;
+    iput-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->K8:Landroid/graphics/Paint;
 
+    .line 59
     sget-object p2, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->o:Landroid/graphics/Paint;
+    .line 60
+    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->K8:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->o:Landroid/graphics/Paint;
+    .line 61
+    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->K8:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->o:Landroid/graphics/Paint;
+    .line 62
+    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->K8:Landroid/graphics/Paint;
 
-    iget p2, p0, Lcom/android/camera/ui/SeekBarCompat;->I:F
+    iget p2, p0, Lcom/android/camera/ui/SeekBarCompat;->c9:F
 
-    iget v0, p0, Lcom/android/camera/ui/SeekBarCompat;->J:I
+    iget v0, p0, Lcom/android/camera/ui/SeekBarCompat;->d9:I
 
     invoke-virtual {p1, p2, v4, v4, v0}, Landroid/graphics/Paint;->setShadowLayer(FFFI)V
 
+    .line 63
     new-instance p1, Landroid/graphics/RectF;
 
     invoke-direct {p1}, Landroid/graphics/RectF;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->k:Landroid/graphics/RectF;
+    iput-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->K1:Landroid/graphics/RectF;
 
-    iget p1, p0, Lcom/android/camera/ui/SeekBarCompat;->u:F
+    .line 64
+    iget p1, p0, Lcom/android/camera/ui/SeekBarCompat;->Q8:F
 
     const/high16 p2, 0x3f800000    # 1.0f
 
     add-float/2addr p1, p2
 
-    iput p1, p0, Lcom/android/camera/ui/SeekBarCompat;->l:F
+    iput p1, p0, Lcom/android/camera/ui/SeekBarCompat;->v2:F
 
     const p1, 0x400b9581    # 2.181f
 
-    invoke-static {p1}, Lcom/android/camera/a6;->e0(F)I
+    .line 65
+    invoke-static {p1}, Ld/d/a/z5;->W(F)I
 
     move-result p1
 
-    iput p1, p0, Lcom/android/camera/ui/SeekBarCompat;->c:I
+    iput p1, p0, Lcom/android/camera/ui/SeekBarCompat;->t:I
 
-    new-instance p1, Lcom/android/camera/ui/l1;
+    .line 66
+    new-instance p1, Ld/d/a/d8/t0;
 
-    invoke-direct {p1, p0}, Lcom/android/camera/ui/l1;-><init>(Lcom/android/camera/ui/SeekBarCompat;)V
+    invoke-direct {p1, p0}, Ld/d/a/d8/t0;-><init>(Lcom/android/camera/ui/SeekBarCompat;)V
 
-    iput-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->K0:Ljava/lang/Runnable;
+    iput-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->g9:Ljava/lang/Runnable;
 
     return-void
 
@@ -1015,48 +899,72 @@
     .end array-data
 .end method
 
-.method public k()Z
+.method private synthetic k()V
     .locals 0
 
-    iget-boolean p0, p0, Lcom/android/camera/ui/SeekBarCompat;->z:Z
+    .line 1
+    invoke-direct {p0}, Lcom/android/camera/ui/SeekBarCompat;->f()V
 
-    return p0
+    .line 2
+    iget-object p0, p0, Lcom/android/camera/ui/SeekBarCompat;->C2:Lcom/android/camera/ui/SeekBarCompat$d;
+
+    if-eqz p0, :cond_0
+
+    .line 3
+    invoke-interface {p0}, Lcom/android/camera/ui/SeekBarCompat$d;->a()V
+
+    :cond_0
+    return-void
 .end method
 
-.method public final m()V
+.method private m()V
     .locals 1
 
-    iget-object v0, p0, Lcom/android/camera/ui/SeekBarCompat;->k0:Ljava/lang/Runnable;
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/ui/SeekBarCompat;->f9:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+    .line 2
+    invoke-virtual {p0, v0}, Landroid/widget/SeekBar;->removeCallbacks(Ljava/lang/Runnable;)Z
 
+    .line 3
     :cond_0
-    iget-object v0, p0, Lcom/android/camera/ui/SeekBarCompat;->K0:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/android/camera/ui/SeekBarCompat;->g9:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+    .line 4
+    invoke-virtual {p0, v0}, Landroid/widget/SeekBar;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     :cond_1
     return-void
 .end method
 
-.method public final n(Z)V
+.method private n(Z)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x10
+        }
+        names = {
+            "isDown"
+        }
+    .end annotation
 
     if-eqz p1, :cond_0
 
-    iget p1, p0, Lcom/android/camera/ui/SeekBarCompat;->s:F
+    .line 1
+    iget p1, p0, Lcom/android/camera/ui/SeekBarCompat;->O8:F
 
     goto :goto_0
 
     :cond_0
-    iget p1, p0, Lcom/android/camera/ui/SeekBarCompat;->r:F
+    iget p1, p0, Lcom/android/camera/ui/SeekBarCompat;->N8:F
 
+    .line 2
     :goto_0
-    iget-object v0, p0, Lcom/android/camera/ui/SeekBarCompat;->K:Landroid/animation/ObjectAnimator;
+    iget-object v0, p0, Lcom/android/camera/ui/SeekBarCompat;->e9:Landroid/animation/ObjectAnimator;
 
     if-eqz v0, :cond_1
 
@@ -1066,12 +974,14 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/android/camera/ui/SeekBarCompat;->K:Landroid/animation/ObjectAnimator;
+    .line 3
+    iget-object v0, p0, Lcom/android/camera/ui/SeekBarCompat;->e9:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
+    .line 4
     :cond_1
-    iget-object v0, p0, Lcom/android/camera/ui/SeekBarCompat;->C1:Lmiuix/animation/property/ViewProperty;
+    iget-object v0, p0, Lcom/android/camera/ui/SeekBarCompat;->l9:Lmiuix/animation/property/ViewProperty;
 
     const/4 v1, 0x2
 
@@ -1079,7 +989,7 @@
 
     const/4 v2, 0x0
 
-    iget v3, p0, Lcom/android/camera/ui/SeekBarCompat;->t:F
+    iget v3, p0, Lcom/android/camera/ui/SeekBarCompat;->P8:F
 
     aput v3, v1, v2
 
@@ -1091,41 +1001,55 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->K:Landroid/animation/ObjectAnimator;
+    iput-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->e9:Landroid/animation/ObjectAnimator;
 
+    .line 5
     new-instance v0, Lmiuix/animation/utils/EaseManager$SpringInterpolator;
 
     invoke-direct {v0}, Lmiuix/animation/utils/EaseManager$SpringInterpolator;-><init>()V
 
     const v1, 0x3f666666    # 0.9f
 
+    .line 6
     invoke-virtual {v0, v1}, Lmiuix/animation/utils/EaseManager$SpringInterpolator;->setDamping(F)Lmiuix/animation/utils/EaseManager$SpringInterpolator;
 
     move-result-object v0
 
     const v1, 0x3e99999a    # 0.3f
 
+    .line 7
     invoke-virtual {v0, v1}, Lmiuix/animation/utils/EaseManager$SpringInterpolator;->setResponse(F)Lmiuix/animation/utils/EaseManager$SpringInterpolator;
 
     move-result-object v0
 
+    .line 8
     invoke-virtual {p1, v0}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->K:Landroid/animation/ObjectAnimator;
+    .line 9
+    iget-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->e9:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v0, 0x12c
 
     invoke-virtual {p1, v0, v1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    iget-object p0, p0, Lcom/android/camera/ui/SeekBarCompat;->K:Landroid/animation/ObjectAnimator;
+    .line 10
+    iget-object p0, p0, Lcom/android/camera/ui/SeekBarCompat;->e9:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {p0}, Landroid/animation/ObjectAnimator;->start()V
 
     return-void
 .end method
 
-.method public final o(I)V
+.method private o(I)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "progress"
+        }
+    .end annotation
 
     const/4 v0, 0x1
 
@@ -1135,11 +1059,12 @@
 
     aput-object p0, v1, v2
 
+    .line 1
     invoke-static {v1}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object v1
 
-    iget-object v3, p0, Lcom/android/camera/ui/SeekBarCompat;->C:Lmiuix/animation/IFolme;
+    iget-object v3, p0, Lcom/android/camera/ui/SeekBarCompat;->X8:Lmiuix/animation/IFolme;
 
     invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1153,12 +1078,14 @@
 
     aput-object p0, v1, v2
 
+    .line 2
     invoke-static {v1}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/camera/ui/SeekBarCompat;->C:Lmiuix/animation/IFolme;
+    iput-object v1, p0, Lcom/android/camera/ui/SeekBarCompat;->X8:Lmiuix/animation/IFolme;
 
+    .line 3
     invoke-interface {v1}, Lmiuix/animation/IFolme;->state()Lmiuix/animation/IStateStyle;
 
     move-result-object v1
@@ -1171,12 +1098,13 @@
 
     new-array v4, v3, [Ljava/lang/Object;
 
-    iget-object v5, p0, Lcom/android/camera/ui/SeekBarCompat;->v1:Lmiuix/animation/property/ViewProperty;
+    iget-object v5, p0, Lcom/android/camera/ui/SeekBarCompat;->k9:Lmiuix/animation/property/ViewProperty;
 
     aput-object v5, v4, v2
 
-    iget v5, p0, Lcom/android/camera/ui/SeekBarCompat;->x:F
+    iget v5, p0, Lcom/android/camera/ui/SeekBarCompat;->T8:F
 
+    .line 4
     invoke-static {v5}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v5
@@ -1189,12 +1117,13 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    iget-object p0, p0, Lcom/android/camera/ui/SeekBarCompat;->v1:Lmiuix/animation/property/ViewProperty;
+    iget-object p0, p0, Lcom/android/camera/ui/SeekBarCompat;->k9:Lmiuix/animation/property/ViewProperty;
 
     aput-object p0, v3, v2
 
     int-to-float p0, p1
 
+    .line 5
     invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object p0
@@ -1205,8 +1134,9 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
-    iget-object v1, p0, Lcom/android/camera/ui/SeekBarCompat;->C:Lmiuix/animation/IFolme;
+    iget-object v1, p0, Lcom/android/camera/ui/SeekBarCompat;->X8:Lmiuix/animation/IFolme;
 
     invoke-interface {v1}, Lmiuix/animation/IFolme;->state()Lmiuix/animation/IStateStyle;
 
@@ -1214,7 +1144,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    iget-object p0, p0, Lcom/android/camera/ui/SeekBarCompat;->v1:Lmiuix/animation/property/ViewProperty;
+    iget-object p0, p0, Lcom/android/camera/ui/SeekBarCompat;->k9:Lmiuix/animation/property/ViewProperty;
 
     aput-object p0, v3, v2
 
@@ -1232,50 +1162,374 @@
     return-void
 .end method
 
+.method private setAnnounceForAccessibility(Ljava/lang/CharSequence;)V
+    .locals 0
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "text"
+        }
+    .end annotation
+
+    .line 1
+    invoke-super {p0, p1}, Landroid/widget/SeekBar;->announceForAccessibility(Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public announceForAccessibility(Ljava/lang/CharSequence;)V
+    .locals 3
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "text"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/ui/SeekBarCompat;->f9:Ljava/lang/Runnable;
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-virtual {p0, v0}, Landroid/widget/SeekBar;->removeCallbacks(Ljava/lang/Runnable;)Z
+
+    .line 3
+    :cond_0
+    new-instance v0, Lcom/android/camera/ui/SeekBarCompat$c;
+
+    invoke-direct {v0, p0, p1}, Lcom/android/camera/ui/SeekBarCompat$c;-><init>(Lcom/android/camera/ui/SeekBarCompat;Ljava/lang/CharSequence;)V
+
+    iput-object v0, p0, Lcom/android/camera/ui/SeekBarCompat;->f9:Ljava/lang/Runnable;
+
+    const-wide/16 v1, 0x1f4
+
+    .line 4
+    invoke-virtual {p0, v0, v1, v2}, Landroid/widget/SeekBar;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    return-void
+.end method
+
+.method public clean()V
+    .locals 2
+
+    const/4 v0, 0x1
+
+    new-array v0, v0, [Lcom/android/camera/ui/SeekBarCompat;
+
+    const/4 v1, 0x0
+
+    aput-object p0, v0, v1
+
+    .line 1
+    invoke-static {v0}, Lmiuix/animation/Folme;->clean([Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public dispatchTouchEvent(Landroid/view/MotionEvent;)Z
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "event"
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 2
+    iget v0, p0, Lcom/android/camera/ui/SeekBarCompat;->Z8:I
+
+    and-int/lit8 v0, v0, 0x1
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
+
+    move-result v0
+
+    invoke-virtual {p0}, Landroid/widget/SeekBar;->getHeight()I
+
+    move-result v1
+
+    iget v2, p0, Lcom/android/camera/ui/SeekBarCompat;->k1:I
+
+    sub-int/2addr v1, v2
+
+    int-to-float v1, v1
+
+    cmpg-float v0, v0, v1
+
+    if-gez v0, :cond_0
+
+    const/4 p0, 0x0
+
+    return p0
+
+    .line 3
+    :cond_0
+    invoke-super {p0, p1}, Landroid/widget/SeekBar;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public getTouchRect()Landroid/graphics/Rect;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/ui/SeekBarCompat;->W8:Landroid/graphics/Rect;
+
+    return-object p0
+.end method
+
+.method public h(F)I
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "eventX"
+        }
+    .end annotation
+
+    .line 1
+    iget v0, p0, Lcom/android/camera/ui/SeekBarCompat;->R8:F
+
+    const/4 v1, 0x0
+
+    cmpl-float v2, v0, v1
+
+    if-nez v2, :cond_0
+
+    .line 2
+    invoke-virtual {p0}, Landroid/widget/SeekBar;->getWidth()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    .line 3
+    :cond_0
+    iget v2, p0, Lcom/android/camera/ui/SeekBarCompat;->O8:F
+
+    sub-float/2addr p1, v2
+
+    cmpg-float v1, p1, v1
+
+    if-gez v1, :cond_2
+
+    .line 4
+    iget-boolean p1, p0, Lcom/android/camera/ui/SeekBarCompat;->u:Z
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p0}, Landroid/widget/SeekBar;->getMax()I
+
+    move-result p1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p0}, Landroid/widget/SeekBar;->getMin()I
+
+    move-result p1
+
+    goto :goto_0
+
+    :cond_2
+    cmpl-float v1, p1, v0
+
+    if-lez v1, :cond_4
+
+    .line 5
+    iget-boolean p1, p0, Lcom/android/camera/ui/SeekBarCompat;->u:Z
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p0}, Landroid/widget/SeekBar;->getMin()I
+
+    move-result p1
+
+    goto :goto_0
+
+    :cond_3
+    invoke-virtual {p0}, Landroid/widget/SeekBar;->getMax()I
+
+    move-result p1
+
+    goto :goto_0
+
+    :cond_4
+    div-float/2addr p1, v0
+
+    .line 6
+    invoke-virtual {p0}, Landroid/widget/SeekBar;->getMax()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    mul-float/2addr p1, v0
+
+    invoke-static {p1}, Ljava/lang/Math;->round(F)I
+
+    move-result p1
+
+    .line 7
+    iget-boolean v0, p0, Lcom/android/camera/ui/SeekBarCompat;->u:Z
+
+    if-eqz v0, :cond_5
+
+    .line 8
+    invoke-virtual {p0}, Landroid/widget/SeekBar;->getMax()I
+
+    move-result v0
+
+    sub-int p1, v0, p1
+
+    .line 9
+    :cond_5
+    :goto_0
+    iget-boolean v0, p0, Lcom/android/camera/ui/SeekBarCompat;->V8:Z
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_6
+
+    .line 10
+    iget v0, p0, Lcom/android/camera/ui/SeekBarCompat;->U8:I
+
+    sub-int/2addr p1, v0
+
+    sub-int/2addr v1, v0
+
+    .line 11
+    invoke-virtual {p0}, Landroid/widget/SeekBar;->getMax()I
+
+    move-result v0
+
+    iget p0, p0, Lcom/android/camera/ui/SeekBarCompat;->U8:I
+
+    sub-int/2addr v0, p0
+
+    invoke-static {p1, v1, v0}, Ld/d/a/z5;->s(III)I
+
+    move-result p0
+
+    goto :goto_1
+
+    .line 12
+    :cond_6
+    invoke-virtual {p0}, Landroid/widget/SeekBar;->getMax()I
+
+    move-result p0
+
+    invoke-static {p1, v1, p0}, Ld/d/a/z5;->s(III)I
+
+    move-result p0
+
+    :goto_1
+    return p0
+.end method
+
+.method public j()Z
+    .locals 0
+
+    .line 1
+    iget-boolean p0, p0, Lcom/android/camera/ui/SeekBarCompat;->V8:Z
+
+    return p0
+.end method
+
+.method public synthetic l()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/camera/ui/SeekBarCompat;->k()V
+
+    return-void
+.end method
+
 .method public onDetachedFromWindow()V
     .locals 0
 
-    invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
+    .line 1
+    invoke-super {p0}, Landroid/widget/SeekBar;->onDetachedFromWindow()V
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/SeekBarCompat;->m()V
+    .line 2
+    invoke-direct {p0}, Lcom/android/camera/ui/SeekBarCompat;->m()V
 
     return-void
 .end method
 
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 16
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "canvas"
+        }
+    .end annotation
 
     move-object/from16 v0, p0
 
     move-object/from16 v9, p1
 
-    const/4 v1, 0x3
-
-    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->F:I
+    .line 1
+    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->Z8:I
 
     const/4 v10, 0x0
 
     const/high16 v11, 0x40000000    # 2.0f
 
-    if-ne v1, v2, :cond_4
+    const/4 v2, 0x3
 
-    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->H:Ljava/lang/String;
+    if-ne v2, v1, :cond_4
+
+    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->b9:Ljava/lang/String;
 
     if-eqz v1, :cond_4
 
-    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->b:Landroid/graphics/Paint;
+    .line 2
+    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->s:Landroid/graphics/Paint;
 
     invoke-virtual {v1}, Landroid/graphics/Paint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
 
     move-result-object v1
 
-    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->G:F
+    .line 3
+    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->a9:F
 
     cmpl-float v3, v2, v10
 
     if-nez v3, :cond_0
 
-    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWidth()I
+    .line 4
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getWidth()I
 
     move-result v2
 
@@ -1285,26 +1539,30 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
-    iget-boolean v3, v0, Lcom/android/camera/ui/SeekBarCompat;->d:Z
+    iget-boolean v3, v0, Lcom/android/camera/ui/SeekBarCompat;->u:Z
 
     if-eqz v3, :cond_1
 
-    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWidth()I
+    .line 6
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getWidth()I
 
     move-result v2
 
     int-to-float v2, v2
 
-    iget v3, v0, Lcom/android/camera/ui/SeekBarCompat;->G:F
+    iget v3, v0, Lcom/android/camera/ui/SeekBarCompat;->a9:F
 
     sub-float/2addr v2, v3
 
+    .line 7
     :cond_1
     :goto_0
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
-    iget v3, v0, Lcom/android/camera/ui/SeekBarCompat;->D:I
+    .line 8
+    iget v3, v0, Lcom/android/camera/ui/SeekBarCompat;->Y8:I
 
     if-eqz v3, :cond_3
 
@@ -1314,24 +1572,25 @@
 
     goto :goto_1
 
+    .line 9
     :cond_2
-    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getHeight()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getHeight()I
 
     move-result v3
 
-    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->h:I
+    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->k1:I
 
     sub-int/2addr v3, v4
 
     int-to-float v3, v3
 
-    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->f:F
+    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->k0:F
 
     sub-float/2addr v3, v4
 
-    iget-object v4, v0, Lcom/android/camera/ui/SeekBarCompat;->b:Landroid/graphics/Paint;
+    iget-object v4, v0, Lcom/android/camera/ui/SeekBarCompat;->s:Landroid/graphics/Paint;
 
-    iget-object v5, v0, Lcom/android/camera/ui/SeekBarCompat;->H:Ljava/lang/String;
+    iget-object v5, v0, Lcom/android/camera/ui/SeekBarCompat;->b9:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
 
@@ -1339,13 +1598,14 @@
 
     sub-float/2addr v3, v4
 
-    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->D:I
+    .line 10
+    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->Y8:I
 
     int-to-float v4, v4
 
-    iget-object v5, v0, Lcom/android/camera/ui/SeekBarCompat;->b:Landroid/graphics/Paint;
+    iget-object v5, v0, Lcom/android/camera/ui/SeekBarCompat;->s:Landroid/graphics/Paint;
 
-    iget-object v6, v0, Lcom/android/camera/ui/SeekBarCompat;->H:Ljava/lang/String;
+    iget-object v6, v0, Lcom/android/camera/ui/SeekBarCompat;->b9:Ljava/lang/String;
 
     invoke-virtual {v5, v6}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
 
@@ -1357,10 +1617,12 @@
 
     invoke-virtual {v9, v4, v2, v5}, Landroid/graphics/Canvas;->rotate(FFF)V
 
-    iget-object v4, v0, Lcom/android/camera/ui/SeekBarCompat;->H:Ljava/lang/String;
+    .line 11
+    iget-object v4, v0, Lcom/android/camera/ui/SeekBarCompat;->b9:Ljava/lang/String;
 
-    iget-object v5, v0, Lcom/android/camera/ui/SeekBarCompat;->b:Landroid/graphics/Paint;
+    iget-object v5, v0, Lcom/android/camera/ui/SeekBarCompat;->s:Landroid/graphics/Paint;
 
+    .line 12
     invoke-virtual {v5, v4}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
 
     move-result v5
@@ -1385,25 +1647,27 @@
 
     sub-float/2addr v3, v1
 
-    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->b:Landroid/graphics/Paint;
+    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->s:Landroid/graphics/Paint;
 
+    .line 13
     invoke-virtual {v9, v4, v2, v3, v1}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
     goto :goto_2
 
+    .line 14
     :cond_3
     :goto_1
-    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getHeight()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getHeight()I
 
     move-result v3
 
-    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->h:I
+    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->k1:I
 
     sub-int/2addr v3, v4
 
     int-to-float v3, v3
 
-    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->g:F
+    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->K0:F
 
     sub-float/2addr v3, v4
 
@@ -1417,7 +1681,8 @@
 
     sub-float/2addr v3, v6
 
-    iget v6, v0, Lcom/android/camera/ui/SeekBarCompat;->D:I
+    .line 15
+    iget v6, v0, Lcom/android/camera/ui/SeekBarCompat;->Y8:I
 
     int-to-float v6, v6
 
@@ -1431,7 +1696,8 @@
 
     invoke-virtual {v9, v6, v2, v4}, Landroid/graphics/Canvas;->rotate(FFF)V
 
-    iget-object v4, v0, Lcom/android/camera/ui/SeekBarCompat;->H:Ljava/lang/String;
+    .line 16
+    iget-object v4, v0, Lcom/android/camera/ui/SeekBarCompat;->b9:Ljava/lang/String;
 
     iget v1, v1, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
 
@@ -1439,52 +1705,58 @@
 
     sub-float/2addr v3, v1
 
-    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->b:Landroid/graphics/Paint;
+    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->s:Landroid/graphics/Paint;
 
     invoke-virtual {v9, v4, v2, v3, v1}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
+    .line 17
     :goto_2
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->restore()V
 
+    .line 18
     :cond_4
-    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getHeight()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getHeight()I
 
     move-result v1
 
-    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->h:I
+    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->k1:I
 
     div-int/lit8 v2, v2, 0x2
 
     sub-int v8, v1, v2
 
-    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->v:F
+    .line 19
+    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->R8:F
 
     cmpl-float v1, v1, v10
 
     if-nez v1, :cond_5
 
-    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWidth()I
+    .line 20
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getWidth()I
 
     move-result v1
 
     int-to-float v1, v1
 
-    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->s:F
+    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->O8:F
 
     mul-float/2addr v2, v11
 
     sub-float/2addr v1, v2
 
-    iput v1, v0, Lcom/android/camera/ui/SeekBarCompat;->v:F
+    iput v1, v0, Lcom/android/camera/ui/SeekBarCompat;->R8:F
 
+    .line 21
     :cond_5
-    iget-boolean v1, v0, Lcom/android/camera/ui/SeekBarCompat;->z:Z
+    iget-boolean v1, v0, Lcom/android/camera/ui/SeekBarCompat;->V8:Z
 
     if-eqz v1, :cond_6
 
-    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->x:F
+    .line 22
+    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->T8:F
 
-    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->y:I
+    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->U8:I
 
     int-to-float v2, v2
 
@@ -1492,35 +1764,37 @@
 
     goto :goto_3
 
+    .line 23
     :cond_6
-    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->x:F
+    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->T8:F
 
     :goto_3
     move v12, v1
 
-    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->v:F
+    .line 24
+    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->R8:F
 
-    iget-boolean v2, v0, Lcom/android/camera/ui/SeekBarCompat;->d:Z
+    iget-boolean v2, v0, Lcom/android/camera/ui/SeekBarCompat;->u:Z
 
     if-eqz v2, :cond_7
 
-    invoke-virtual/range {p0 .. p0}, Landroid/widget/ProgressBar;->getMax()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getMax()I
 
     move-result v2
 
-    iget v3, v0, Lcom/android/camera/ui/SeekBarCompat;->y:I
+    iget v3, v0, Lcom/android/camera/ui/SeekBarCompat;->U8:I
 
     sub-int/2addr v2, v3
 
     goto :goto_4
 
     :cond_7
-    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->y:I
+    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->U8:I
 
     :goto_4
     int-to-float v2, v2
 
-    invoke-virtual/range {p0 .. p0}, Landroid/widget/ProgressBar;->getMax()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getMax()I
 
     move-result v3
 
@@ -1530,29 +1804,30 @@
 
     mul-float/2addr v1, v2
 
-    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->s:F
+    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->O8:F
 
     add-float v13, v1, v2
 
     const/4 v2, 0x0
 
-    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getHeight()I
+    .line 25
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getHeight()I
 
     move-result v1
 
-    iget v3, v0, Lcom/android/camera/ui/SeekBarCompat;->h:I
+    iget v3, v0, Lcom/android/camera/ui/SeekBarCompat;->k1:I
 
     sub-int/2addr v1, v3
 
     int-to-float v3, v1
 
-    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWidth()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getWidth()I
 
     move-result v1
 
     int-to-float v4, v1
 
-    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getHeight()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getHeight()I
 
     move-result v1
 
@@ -1568,13 +1843,14 @@
 
     move-result v14
 
-    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->s:F
+    .line 26
+    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->O8:F
 
-    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->r:F
+    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->N8:F
 
     sub-float/2addr v1, v2
 
-    iget-object v2, v0, Lcom/android/camera/ui/SeekBarCompat;->n:Landroid/graphics/Paint;
+    iget-object v2, v0, Lcom/android/camera/ui/SeekBarCompat;->K2:Landroid/graphics/Paint;
 
     invoke-virtual {v2}, Landroid/graphics/Paint;->getStrokeWidth()F
 
@@ -1586,14 +1862,15 @@
 
     int-to-float v15, v8
 
-    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->u:F
+    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->Q8:F
 
     div-float/2addr v1, v11
 
     sub-float v1, v15, v1
 
-    iget-object v3, v0, Lcom/android/camera/ui/SeekBarCompat;->n:Landroid/graphics/Paint;
+    iget-object v3, v0, Lcom/android/camera/ui/SeekBarCompat;->K2:Landroid/graphics/Paint;
 
+    .line 27
     invoke-virtual {v3}, Landroid/graphics/Paint;->getStrokeWidth()F
 
     move-result v3
@@ -1602,19 +1879,20 @@
 
     sub-float v3, v1, v3
 
-    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWidth()I
+    .line 28
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getWidth()I
 
     move-result v1
 
     int-to-float v1, v1
 
-    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->s:F
+    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->O8:F
 
-    iget v5, v0, Lcom/android/camera/ui/SeekBarCompat;->r:F
+    iget v5, v0, Lcom/android/camera/ui/SeekBarCompat;->N8:F
 
     sub-float/2addr v4, v5
 
-    iget-object v5, v0, Lcom/android/camera/ui/SeekBarCompat;->n:Landroid/graphics/Paint;
+    iget-object v5, v0, Lcom/android/camera/ui/SeekBarCompat;->K2:Landroid/graphics/Paint;
 
     invoke-virtual {v5}, Landroid/graphics/Paint;->getStrokeWidth()F
 
@@ -1626,14 +1904,15 @@
 
     sub-float v4, v1, v4
 
-    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->u:F
+    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->Q8:F
 
     div-float/2addr v1, v11
 
     add-float/2addr v1, v15
 
-    iget-object v5, v0, Lcom/android/camera/ui/SeekBarCompat;->n:Landroid/graphics/Paint;
+    iget-object v5, v0, Lcom/android/camera/ui/SeekBarCompat;->K2:Landroid/graphics/Paint;
 
+    .line 29
     invoke-virtual {v5}, Landroid/graphics/Paint;->getStrokeWidth()F
 
     move-result v5
@@ -1646,51 +1925,54 @@
 
     const/high16 v7, 0x3f800000    # 1.0f
 
-    iget-object v8, v0, Lcom/android/camera/ui/SeekBarCompat;->n:Landroid/graphics/Paint;
+    iget-object v8, v0, Lcom/android/camera/ui/SeekBarCompat;->K2:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
+    .line 30
     invoke-virtual/range {v1 .. v8}, Landroid/graphics/Canvas;->drawRoundRect(FFFFFFLandroid/graphics/Paint;)V
 
-    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->s:F
+    .line 31
+    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->O8:F
 
-    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->r:F
+    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->N8:F
 
     sub-float v2, v1, v2
 
-    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->u:F
+    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->Q8:F
 
     div-float/2addr v1, v11
 
     sub-float v3, v15, v1
 
-    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWidth()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getWidth()I
 
     move-result v1
 
     int-to-float v1, v1
 
-    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->s:F
+    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->O8:F
 
     sub-float/2addr v1, v4
 
-    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->r:F
+    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->N8:F
 
     add-float/2addr v4, v1
 
-    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->u:F
+    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->Q8:F
 
     div-float/2addr v1, v11
 
     add-float v5, v15, v1
 
-    iget-object v8, v0, Lcom/android/camera/ui/SeekBarCompat;->q:Landroid/graphics/Paint;
+    iget-object v8, v0, Lcom/android/camera/ui/SeekBarCompat;->M8:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
     invoke-virtual/range {v1 .. v8}, Landroid/graphics/Canvas;->drawRoundRect(FFFFFFLandroid/graphics/Paint;)V
 
-    iget-boolean v1, v0, Lcom/android/camera/ui/SeekBarCompat;->d:Z
+    .line 32
+    iget-boolean v1, v0, Lcom/android/camera/ui/SeekBarCompat;->u:Z
 
     const/4 v2, 0x0
 
@@ -1702,29 +1984,32 @@
 
     if-eqz v1, :cond_f
 
-    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->k:Landroid/graphics/RectF;
+    .line 33
+    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->K1:Landroid/graphics/RectF;
 
-    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWidth()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getWidth()I
 
     move-result v6
 
     int-to-float v6, v6
 
-    iget v8, v0, Lcom/android/camera/ui/SeekBarCompat;->s:F
+    iget v8, v0, Lcom/android/camera/ui/SeekBarCompat;->O8:F
 
     sub-float/2addr v6, v8
 
-    iget v8, v0, Lcom/android/camera/ui/SeekBarCompat;->r:F
+    iget v8, v0, Lcom/android/camera/ui/SeekBarCompat;->N8:F
 
     add-float/2addr v6, v8
 
     iput v6, v1, Landroid/graphics/RectF;->left:F
 
-    iget-boolean v1, v0, Lcom/android/camera/ui/SeekBarCompat;->z:Z
+    .line 34
+    iget-boolean v1, v0, Lcom/android/camera/ui/SeekBarCompat;->V8:Z
 
     if-eqz v1, :cond_a
 
-    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->y:I
+    .line 35
+    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->U8:I
 
     int-to-float v6, v1
 
@@ -1732,9 +2017,10 @@
 
     if-gtz v6, :cond_8
 
-    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->k:Landroid/graphics/RectF;
+    .line 36
+    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->K1:Landroid/graphics/RectF;
 
-    iget v6, v0, Lcom/android/camera/ui/SeekBarCompat;->l:F
+    iget v6, v0, Lcom/android/camera/ui/SeekBarCompat;->v2:F
 
     add-float/2addr v6, v13
 
@@ -1749,20 +2035,23 @@
 
     if-lez v1, :cond_9
 
-    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->k:Landroid/graphics/RectF;
+    .line 37
+    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->K1:Landroid/graphics/RectF;
 
-    iget v6, v0, Lcom/android/camera/ui/SeekBarCompat;->l:F
+    iget v6, v0, Lcom/android/camera/ui/SeekBarCompat;->v2:F
 
     sub-float v6, v13, v6
 
     iput v6, v1, Landroid/graphics/RectF;->left:F
 
+    .line 38
     :cond_9
     :goto_5
-    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->o:Landroid/graphics/Paint;
+    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->K8:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v5}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 39
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1781,8 +2070,9 @@
 
     goto :goto_6
 
+    .line 40
     :cond_a
-    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->y:I
+    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->U8:I
 
     int-to-float v1, v1
 
@@ -1790,14 +2080,16 @@
 
     if-gtz v1, :cond_b
 
-    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->o:Landroid/graphics/Paint;
+    .line 41
+    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->K8:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v5}, Landroid/graphics/Paint;->setColor(I)V
 
     goto :goto_6
 
+    .line 42
     :cond_b
-    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->o:Landroid/graphics/Paint;
+    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->K8:Landroid/graphics/Paint;
 
     invoke-static {}, Lcom/android/camera2/compat/theme/MiThemeCompat;->geteOperationZoom()Lcom/android/camera2/compat/theme/common/MiThemeOperationZoomInterface;
 
@@ -1809,12 +2101,13 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 43
     :goto_6
-    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->k:Landroid/graphics/RectF;
+    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->K1:Landroid/graphics/RectF;
 
-    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->s:F
+    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->O8:F
 
-    invoke-virtual/range {p0 .. p0}, Landroid/widget/ProgressBar;->getMax()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getMax()I
 
     move-result v3
 
@@ -1822,11 +2115,11 @@
 
     sub-float/2addr v3, v12
 
-    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->v:F
+    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->R8:F
 
     mul-float/2addr v3, v4
 
-    invoke-virtual/range {p0 .. p0}, Landroid/widget/ProgressBar;->getMax()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getMax()I
 
     move-result v4
 
@@ -1838,9 +2131,10 @@
 
     iput v2, v1, Landroid/graphics/RectF;->right:F
 
-    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->k:Landroid/graphics/RectF;
+    .line 44
+    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->K1:Landroid/graphics/RectF;
 
-    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->u:F
+    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->Q8:F
 
     div-float v3, v2, v11
 
@@ -1852,30 +2146,35 @@
 
     add-float/2addr v2, v15
 
+    .line 45
     iput v2, v1, Landroid/graphics/RectF;->bottom:F
 
-    iget-object v2, v0, Lcom/android/camera/ui/SeekBarCompat;->j:Landroid/graphics/Paint;
+    .line 46
+    iget-object v2, v0, Lcom/android/camera/ui/SeekBarCompat;->C1:Landroid/graphics/Paint;
 
     invoke-virtual {v9, v1, v10, v10, v2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->y:I
+    .line 47
+    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->U8:I
 
     if-eqz v1, :cond_c
 
-    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->l:F
+    .line 48
+    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->v2:F
 
-    iget-object v2, v0, Lcom/android/camera/ui/SeekBarCompat;->o:Landroid/graphics/Paint;
+    iget-object v2, v0, Lcom/android/camera/ui/SeekBarCompat;->K8:Landroid/graphics/Paint;
 
     invoke-virtual {v9, v13, v15, v1, v2}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
+    .line 49
     :cond_c
-    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->A:Landroid/graphics/Rect;
+    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->W8:Landroid/graphics/Rect;
 
-    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->s:F
+    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->O8:F
 
     float-to-double v2, v2
 
-    invoke-virtual/range {p0 .. p0}, Landroid/widget/ProgressBar;->getMax()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getMax()I
 
     move-result v4
 
@@ -1883,11 +2182,11 @@
 
     sub-float/2addr v4, v12
 
-    iget v5, v0, Lcom/android/camera/ui/SeekBarCompat;->v:F
+    iget v5, v0, Lcom/android/camera/ui/SeekBarCompat;->R8:F
 
     mul-float/2addr v4, v5
 
-    invoke-virtual/range {p0 .. p0}, Landroid/widget/ProgressBar;->getMax()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getMax()I
 
     move-result v5
 
@@ -1895,11 +2194,11 @@
 
     div-float/2addr v4, v5
 
-    iget v5, v0, Lcom/android/camera/ui/SeekBarCompat;->t:F
+    iget v5, v0, Lcom/android/camera/ui/SeekBarCompat;->P8:F
 
     sub-float/2addr v4, v5
 
-    iget v5, v0, Lcom/android/camera/ui/SeekBarCompat;->c:I
+    iget v5, v0, Lcom/android/camera/ui/SeekBarCompat;->t:I
 
     int-to-float v5, v5
 
@@ -1915,19 +2214,20 @@
 
     double-to-int v2, v2
 
-    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getHeight()I
+    .line 50
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getHeight()I
 
     move-result v3
 
-    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->h:I
+    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->k1:I
 
     sub-int/2addr v3, v4
 
-    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->s:F
+    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->O8:F
 
     float-to-double v4, v4
 
-    invoke-virtual/range {p0 .. p0}, Landroid/widget/ProgressBar;->getMax()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getMax()I
 
     move-result v6
 
@@ -1935,11 +2235,11 @@
 
     sub-float/2addr v6, v12
 
-    iget v8, v0, Lcom/android/camera/ui/SeekBarCompat;->v:F
+    iget v8, v0, Lcom/android/camera/ui/SeekBarCompat;->R8:F
 
     mul-float/2addr v6, v8
 
-    invoke-virtual/range {p0 .. p0}, Landroid/widget/ProgressBar;->getMax()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getMax()I
 
     move-result v8
 
@@ -1947,11 +2247,11 @@
 
     div-float/2addr v6, v8
 
-    iget v8, v0, Lcom/android/camera/ui/SeekBarCompat;->t:F
+    iget v8, v0, Lcom/android/camera/ui/SeekBarCompat;->P8:F
 
     add-float/2addr v6, v8
 
-    iget v8, v0, Lcom/android/camera/ui/SeekBarCompat;->c:I
+    iget v8, v0, Lcom/android/camera/ui/SeekBarCompat;->t:I
 
     int-to-float v8, v8
 
@@ -1967,15 +2267,17 @@
 
     double-to-int v4, v4
 
-    iget v5, v0, Lcom/android/camera/ui/SeekBarCompat;->h:I
+    iget v5, v0, Lcom/android/camera/ui/SeekBarCompat;->k1:I
 
+    .line 51
     invoke-virtual {v1, v2, v3, v4, v5}, Landroid/graphics/Rect;->set(IIII)V
 
-    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->s:F
+    .line 52
+    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->O8:F
 
     float-to-double v1, v1
 
-    invoke-virtual/range {p0 .. p0}, Landroid/widget/ProgressBar;->getMax()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getMax()I
 
     move-result v3
 
@@ -1983,11 +2285,11 @@
 
     sub-float/2addr v3, v12
 
-    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->v:F
+    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->R8:F
 
     mul-float/2addr v3, v4
 
-    invoke-virtual/range {p0 .. p0}, Landroid/widget/ProgressBar;->getMax()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getMax()I
 
     move-result v4
 
@@ -1995,11 +2297,11 @@
 
     div-float/2addr v3, v4
 
-    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->t:F
+    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->P8:F
 
     sub-float/2addr v3, v4
 
-    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->c:I
+    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->t:I
 
     int-to-float v4, v4
 
@@ -2017,15 +2319,16 @@
 
     int-to-float v2, v1
 
-    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->t:F
+    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->P8:F
 
     sub-float v3, v15, v1
 
-    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->s:F
+    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->O8:F
 
     float-to-double v4, v1
 
-    invoke-virtual/range {p0 .. p0}, Landroid/widget/ProgressBar;->getMax()I
+    .line 53
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getMax()I
 
     move-result v1
 
@@ -2033,11 +2336,11 @@
 
     sub-float/2addr v1, v12
 
-    iget v6, v0, Lcom/android/camera/ui/SeekBarCompat;->v:F
+    iget v6, v0, Lcom/android/camera/ui/SeekBarCompat;->R8:F
 
     mul-float/2addr v1, v6
 
-    invoke-virtual/range {p0 .. p0}, Landroid/widget/ProgressBar;->getMax()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getMax()I
 
     move-result v6
 
@@ -2045,11 +2348,11 @@
 
     div-float/2addr v1, v6
 
-    iget v6, v0, Lcom/android/camera/ui/SeekBarCompat;->t:F
+    iget v6, v0, Lcom/android/camera/ui/SeekBarCompat;->P8:F
 
     add-float/2addr v1, v6
 
-    iget v6, v0, Lcom/android/camera/ui/SeekBarCompat;->c:I
+    iget v6, v0, Lcom/android/camera/ui/SeekBarCompat;->t:I
 
     int-to-float v6, v6
 
@@ -2067,19 +2370,21 @@
 
     int-to-float v4, v1
 
-    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->t:F
+    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->P8:F
 
     add-float v5, v15, v1
 
-    iget-object v6, v0, Lcom/android/camera/ui/SeekBarCompat;->a:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/SeekBarCompat;->p:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
+    .line 54
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->s:F
+    .line 55
+    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->O8:F
 
-    invoke-virtual/range {p0 .. p0}, Landroid/widget/ProgressBar;->getMax()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getMax()I
 
     move-result v2
 
@@ -2087,11 +2392,11 @@
 
     sub-float/2addr v2, v12
 
-    iget v3, v0, Lcom/android/camera/ui/SeekBarCompat;->v:F
+    iget v3, v0, Lcom/android/camera/ui/SeekBarCompat;->R8:F
 
     mul-float/2addr v2, v3
 
-    invoke-virtual/range {p0 .. p0}, Landroid/widget/ProgressBar;->getMax()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getMax()I
 
     move-result v3
 
@@ -2101,7 +2406,8 @@
 
     add-float/2addr v1, v2
 
-    invoke-virtual/range {p0 .. p0}, Landroid/widget/ProgressBar;->getMin()I
+    .line 56
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getMin()I
 
     move-result v2
 
@@ -2120,7 +2426,8 @@
     :cond_d
     const/high16 v2, 0x3f800000    # 1.0f
 
-    invoke-virtual/range {p0 .. p0}, Landroid/widget/ProgressBar;->getMax()I
+    .line 57
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getMax()I
 
     move-result v3
 
@@ -2132,11 +2439,12 @@
 
     add-float/2addr v1, v2
 
+    .line 58
     :cond_e
     :goto_7
-    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->t:F
+    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->P8:F
 
-    iget-object v3, v0, Lcom/android/camera/ui/SeekBarCompat;->p:Landroid/graphics/Paint;
+    iget-object v3, v0, Lcom/android/camera/ui/SeekBarCompat;->L8:Landroid/graphics/Paint;
 
     invoke-virtual {v3}, Landroid/graphics/Paint;->getStrokeWidth()F
 
@@ -2146,28 +2454,31 @@
 
     sub-float/2addr v2, v3
 
-    iget-object v0, v0, Lcom/android/camera/ui/SeekBarCompat;->p:Landroid/graphics/Paint;
+    iget-object v0, v0, Lcom/android/camera/ui/SeekBarCompat;->L8:Landroid/graphics/Paint;
 
     invoke-virtual {v9, v1, v15, v2, v0}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
     goto/16 :goto_b
 
+    .line 59
     :cond_f
-    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->k:Landroid/graphics/RectF;
+    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->K1:Landroid/graphics/RectF;
 
-    iget v6, v0, Lcom/android/camera/ui/SeekBarCompat;->s:F
+    iget v6, v0, Lcom/android/camera/ui/SeekBarCompat;->O8:F
 
-    iget v7, v0, Lcom/android/camera/ui/SeekBarCompat;->r:F
+    iget v7, v0, Lcom/android/camera/ui/SeekBarCompat;->N8:F
 
     sub-float/2addr v6, v7
 
     iput v6, v1, Landroid/graphics/RectF;->left:F
 
-    iget-boolean v6, v0, Lcom/android/camera/ui/SeekBarCompat;->z:Z
+    .line 60
+    iget-boolean v6, v0, Lcom/android/camera/ui/SeekBarCompat;->V8:Z
 
     if-eqz v6, :cond_12
 
-    iget v6, v0, Lcom/android/camera/ui/SeekBarCompat;->y:I
+    .line 61
+    iget v6, v0, Lcom/android/camera/ui/SeekBarCompat;->U8:I
 
     int-to-float v7, v6
 
@@ -2175,7 +2486,8 @@
 
     if-gtz v7, :cond_10
 
-    iget v6, v0, Lcom/android/camera/ui/SeekBarCompat;->l:F
+    .line 62
+    iget v6, v0, Lcom/android/camera/ui/SeekBarCompat;->v2:F
 
     sub-float v6, v13, v6
 
@@ -2190,18 +2502,21 @@
 
     if-lez v6, :cond_11
 
-    iget v6, v0, Lcom/android/camera/ui/SeekBarCompat;->l:F
+    .line 63
+    iget v6, v0, Lcom/android/camera/ui/SeekBarCompat;->v2:F
 
     add-float/2addr v6, v13
 
     iput v6, v1, Landroid/graphics/RectF;->left:F
 
+    .line 64
     :cond_11
     :goto_8
-    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->o:Landroid/graphics/Paint;
+    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->K8:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v5}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 65
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2220,8 +2535,9 @@
 
     goto :goto_9
 
+    .line 66
     :cond_12
-    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->y:I
+    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->U8:I
 
     int-to-float v1, v1
 
@@ -2229,14 +2545,16 @@
 
     if-gtz v1, :cond_13
 
-    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->o:Landroid/graphics/Paint;
+    .line 67
+    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->K8:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v5}, Landroid/graphics/Paint;->setColor(I)V
 
     goto :goto_9
 
+    .line 68
     :cond_13
-    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->o:Landroid/graphics/Paint;
+    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->K8:Landroid/graphics/Paint;
 
     invoke-static {}, Lcom/android/camera2/compat/theme/MiThemeCompat;->geteOperationZoom()Lcom/android/camera2/compat/theme/common/MiThemeOperationZoomInterface;
 
@@ -2248,16 +2566,17 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 69
     :goto_9
-    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->k:Landroid/graphics/RectF;
+    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->K1:Landroid/graphics/RectF;
 
-    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->s:F
+    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->O8:F
 
-    iget v3, v0, Lcom/android/camera/ui/SeekBarCompat;->v:F
+    iget v3, v0, Lcom/android/camera/ui/SeekBarCompat;->R8:F
 
     mul-float/2addr v3, v12
 
-    invoke-virtual/range {p0 .. p0}, Landroid/widget/ProgressBar;->getMax()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getMax()I
 
     move-result v4
 
@@ -2269,9 +2588,10 @@
 
     iput v2, v1, Landroid/graphics/RectF;->right:F
 
-    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->k:Landroid/graphics/RectF;
+    .line 70
+    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->K1:Landroid/graphics/RectF;
 
-    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->u:F
+    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->Q8:F
 
     div-float v3, v2, v11
 
@@ -2283,34 +2603,39 @@
 
     add-float/2addr v2, v15
 
+    .line 71
     iput v2, v1, Landroid/graphics/RectF;->bottom:F
 
-    iget-object v2, v0, Lcom/android/camera/ui/SeekBarCompat;->j:Landroid/graphics/Paint;
+    .line 72
+    iget-object v2, v0, Lcom/android/camera/ui/SeekBarCompat;->C1:Landroid/graphics/Paint;
 
     invoke-virtual {v9, v1, v10, v10, v2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->y:I
+    .line 73
+    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->U8:I
 
     if-eqz v1, :cond_14
 
-    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->l:F
+    .line 74
+    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->v2:F
 
-    iget-object v2, v0, Lcom/android/camera/ui/SeekBarCompat;->o:Landroid/graphics/Paint;
+    iget-object v2, v0, Lcom/android/camera/ui/SeekBarCompat;->K8:Landroid/graphics/Paint;
 
     invoke-virtual {v9, v13, v15, v1, v2}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
+    .line 75
     :cond_14
-    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->A:Landroid/graphics/Rect;
+    iget-object v1, v0, Lcom/android/camera/ui/SeekBarCompat;->W8:Landroid/graphics/Rect;
 
-    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->s:F
+    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->O8:F
 
     float-to-double v2, v2
 
-    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->v:F
+    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->R8:F
 
     mul-float/2addr v4, v12
 
-    invoke-virtual/range {p0 .. p0}, Landroid/widget/ProgressBar;->getMax()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getMax()I
 
     move-result v5
 
@@ -2318,11 +2643,11 @@
 
     div-float/2addr v4, v5
 
-    iget v5, v0, Lcom/android/camera/ui/SeekBarCompat;->t:F
+    iget v5, v0, Lcom/android/camera/ui/SeekBarCompat;->P8:F
 
     sub-float/2addr v4, v5
 
-    iget v5, v0, Lcom/android/camera/ui/SeekBarCompat;->c:I
+    iget v5, v0, Lcom/android/camera/ui/SeekBarCompat;->t:I
 
     int-to-float v5, v5
 
@@ -2338,23 +2663,24 @@
 
     double-to-int v2, v2
 
-    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getHeight()I
+    .line 76
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getHeight()I
 
     move-result v3
 
-    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->h:I
+    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->k1:I
 
     sub-int/2addr v3, v4
 
-    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->s:F
+    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->O8:F
 
     float-to-double v4, v4
 
-    iget v6, v0, Lcom/android/camera/ui/SeekBarCompat;->v:F
+    iget v6, v0, Lcom/android/camera/ui/SeekBarCompat;->R8:F
 
     mul-float/2addr v6, v12
 
-    invoke-virtual/range {p0 .. p0}, Landroid/widget/ProgressBar;->getMax()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getMax()I
 
     move-result v7
 
@@ -2362,11 +2688,11 @@
 
     div-float/2addr v6, v7
 
-    iget v7, v0, Lcom/android/camera/ui/SeekBarCompat;->t:F
+    iget v7, v0, Lcom/android/camera/ui/SeekBarCompat;->P8:F
 
     add-float/2addr v6, v7
 
-    iget v7, v0, Lcom/android/camera/ui/SeekBarCompat;->c:I
+    iget v7, v0, Lcom/android/camera/ui/SeekBarCompat;->t:I
 
     int-to-float v7, v7
 
@@ -2382,19 +2708,21 @@
 
     double-to-int v4, v4
 
-    iget v5, v0, Lcom/android/camera/ui/SeekBarCompat;->h:I
+    iget v5, v0, Lcom/android/camera/ui/SeekBarCompat;->k1:I
 
+    .line 77
     invoke-virtual {v1, v2, v3, v4, v5}, Landroid/graphics/Rect;->set(IIII)V
 
-    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->s:F
+    .line 78
+    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->O8:F
 
     float-to-double v1, v1
 
-    iget v3, v0, Lcom/android/camera/ui/SeekBarCompat;->v:F
+    iget v3, v0, Lcom/android/camera/ui/SeekBarCompat;->R8:F
 
     mul-float/2addr v3, v12
 
-    invoke-virtual/range {p0 .. p0}, Landroid/widget/ProgressBar;->getMax()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getMax()I
 
     move-result v4
 
@@ -2402,11 +2730,11 @@
 
     div-float/2addr v3, v4
 
-    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->t:F
+    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->P8:F
 
     sub-float/2addr v3, v4
 
-    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->c:I
+    iget v4, v0, Lcom/android/camera/ui/SeekBarCompat;->t:I
 
     int-to-float v4, v4
 
@@ -2424,19 +2752,20 @@
 
     int-to-float v2, v1
 
-    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->t:F
+    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->P8:F
 
     sub-float v3, v15, v1
 
-    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->s:F
+    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->O8:F
 
     float-to-double v4, v1
 
-    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->v:F
+    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->R8:F
 
     mul-float/2addr v1, v12
 
-    invoke-virtual/range {p0 .. p0}, Landroid/widget/ProgressBar;->getMax()I
+    .line 79
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getMax()I
 
     move-result v6
 
@@ -2444,11 +2773,11 @@
 
     div-float/2addr v1, v6
 
-    iget v6, v0, Lcom/android/camera/ui/SeekBarCompat;->t:F
+    iget v6, v0, Lcom/android/camera/ui/SeekBarCompat;->P8:F
 
     add-float/2addr v1, v6
 
-    iget v6, v0, Lcom/android/camera/ui/SeekBarCompat;->c:I
+    iget v6, v0, Lcom/android/camera/ui/SeekBarCompat;->t:I
 
     int-to-float v6, v6
 
@@ -2466,23 +2795,25 @@
 
     int-to-float v4, v1
 
-    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->t:F
+    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->P8:F
 
     add-float v5, v15, v1
 
-    iget-object v6, v0, Lcom/android/camera/ui/SeekBarCompat;->a:Landroid/graphics/Paint;
+    iget-object v6, v0, Lcom/android/camera/ui/SeekBarCompat;->p:Landroid/graphics/Paint;
 
     move-object/from16 v1, p1
 
+    .line 80
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->s:F
+    .line 81
+    iget v1, v0, Lcom/android/camera/ui/SeekBarCompat;->O8:F
 
-    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->v:F
+    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->R8:F
 
     mul-float/2addr v2, v12
 
-    invoke-virtual/range {p0 .. p0}, Landroid/widget/ProgressBar;->getMax()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getMax()I
 
     move-result v3
 
@@ -2492,7 +2823,8 @@
 
     add-float/2addr v1, v2
 
-    invoke-virtual/range {p0 .. p0}, Landroid/widget/ProgressBar;->getMin()I
+    .line 82
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getMin()I
 
     move-result v2
 
@@ -2511,7 +2843,8 @@
     :cond_15
     const/high16 v2, 0x3f800000    # 1.0f
 
-    invoke-virtual/range {p0 .. p0}, Landroid/widget/ProgressBar;->getMax()I
+    .line 83
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/SeekBar;->getMax()I
 
     move-result v3
 
@@ -2523,11 +2856,12 @@
 
     sub-float/2addr v1, v2
 
+    .line 84
     :cond_16
     :goto_a
-    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->t:F
+    iget v2, v0, Lcom/android/camera/ui/SeekBarCompat;->P8:F
 
-    iget-object v3, v0, Lcom/android/camera/ui/SeekBarCompat;->p:Landroid/graphics/Paint;
+    iget-object v3, v0, Lcom/android/camera/ui/SeekBarCompat;->L8:Landroid/graphics/Paint;
 
     invoke-virtual {v3}, Landroid/graphics/Paint;->getStrokeWidth()F
 
@@ -2537,10 +2871,11 @@
 
     sub-float/2addr v2, v3
 
-    iget-object v0, v0, Lcom/android/camera/ui/SeekBarCompat;->p:Landroid/graphics/Paint;
+    iget-object v0, v0, Lcom/android/camera/ui/SeekBarCompat;->L8:Landroid/graphics/Paint;
 
     invoke-virtual {v9, v1, v15, v2, v0}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
+    .line 85
     :goto_b
     invoke-virtual {v9, v14}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
@@ -2549,28 +2884,52 @@
 
 .method public onMeasure(II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "widthMeasureSpec",
+            "heightMeasureSpec"
+        }
+    .end annotation
 
-    invoke-virtual {p0}, Landroid/view/View;->getSuggestedMinimumWidth()I
+    .line 1
+    invoke-virtual {p0}, Landroid/widget/SeekBar;->getSuggestedMinimumWidth()I
 
     move-result p2
 
-    invoke-static {p2, p1}, Landroid/view/View;->getDefaultSize(II)I
+    invoke-static {p2, p1}, Landroid/widget/SeekBar;->getDefaultSize(II)I
 
     move-result p1
 
-    iget p2, p0, Lcom/android/camera/ui/SeekBarCompat;->e:F
+    iget p2, p0, Lcom/android/camera/ui/SeekBarCompat;->w:F
 
     float-to-int p2, p2
 
-    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setMeasuredDimension(II)V
+    invoke-virtual {p0, p1, p2}, Landroid/widget/SeekBar;->setMeasuredDimension(II)V
 
     return-void
 .end method
 
 .method public onProgressChanged(Landroid/widget/SeekBar;IZ)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "seekBar",
+            "i",
+            "byUser"
+        }
+    .end annotation
 
-    iget v0, p0, Lcom/android/camera/ui/SeekBarCompat;->y:I
+    .line 1
+    iget v0, p0, Lcom/android/camera/ui/SeekBarCompat;->U8:I
 
     if-eqz v0, :cond_2
 
@@ -2578,7 +2937,8 @@
 
     if-ne p2, v0, :cond_0
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    .line 2
+    invoke-virtual {p0}, Landroid/widget/SeekBar;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -2586,30 +2946,34 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lqb/e;->s(Landroid/content/Context;)Lqb/e;
+    invoke-static {v0}, Ld/d/f/e;->r(Landroid/content/Context;)Ld/d/f/e;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lqb/e;->a()V
+    invoke-virtual {v0}, Ld/d/f/e;->a()V
 
-    iput p2, p0, Lcom/android/camera/ui/SeekBarCompat;->p1:I
+    .line 3
+    iput p2, p0, Lcom/android/camera/ui/SeekBarCompat;->i9:I
 
     goto :goto_0
 
+    .line 4
     :cond_0
-    iget-boolean v1, p0, Lcom/android/camera/ui/SeekBarCompat;->k1:Z
+    iget-boolean v1, p0, Lcom/android/camera/ui/SeekBarCompat;->h9:Z
 
     if-eqz v1, :cond_2
 
-    iget v1, p0, Lcom/android/camera/ui/SeekBarCompat;->p1:I
+    .line 5
+    iget v1, p0, Lcom/android/camera/ui/SeekBarCompat;->i9:I
 
-    invoke-virtual {p0, v0, p2, v1}, Lcom/android/camera/ui/SeekBarCompat;->h(III)Z
+    invoke-direct {p0, v0, p2, v1}, Lcom/android/camera/ui/SeekBarCompat;->g(III)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    .line 6
+    invoke-virtual {p0}, Landroid/widget/SeekBar;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -2617,32 +2981,37 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lqb/e;->s(Landroid/content/Context;)Lqb/e;
+    invoke-static {v0}, Ld/d/f/e;->r(Landroid/content/Context;)Ld/d/f/e;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lqb/e;->a()V
+    invoke-virtual {v0}, Ld/d/f/e;->a()V
 
+    .line 7
     :cond_1
-    iput p2, p0, Lcom/android/camera/ui/SeekBarCompat;->p1:I
+    iput p2, p0, Lcom/android/camera/ui/SeekBarCompat;->i9:I
 
+    .line 8
     :cond_2
     :goto_0
-    iget-object v0, p0, Lcom/android/camera/ui/SeekBarCompat;->m:Lcom/android/camera/ui/SeekBarCompat$d;
+    iget-object v0, p0, Lcom/android/camera/ui/SeekBarCompat;->C2:Lcom/android/camera/ui/SeekBarCompat$d;
 
     if-eqz v0, :cond_4
 
-    iget-boolean v1, p0, Lcom/android/camera/ui/SeekBarCompat;->z:Z
+    .line 9
+    iget-boolean v1, p0, Lcom/android/camera/ui/SeekBarCompat;->V8:Z
 
     if-eqz v1, :cond_3
 
-    iget p0, p0, Lcom/android/camera/ui/SeekBarCompat;->y:I
+    .line 10
+    iget p0, p0, Lcom/android/camera/ui/SeekBarCompat;->U8:I
 
     sub-int/2addr p2, p0
 
     :cond_3
     if-eqz p3, :cond_4
 
+    .line 11
     invoke-interface {v0, p1, p2, p3}, Lcom/android/camera/ui/SeekBarCompat$d;->onProgressChanged(Landroid/widget/SeekBar;IZ)V
 
     :cond_4
@@ -2651,13 +3020,24 @@
 
 .method public onStartTrackingTouch(Landroid/widget/SeekBar;)V
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
-    iget-object p0, p0, Lcom/android/camera/ui/SeekBarCompat;->m:Lcom/android/camera/ui/SeekBarCompat$d;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "seekBar"
+        }
+    .end annotation
+
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/ui/SeekBarCompat;->C2:Lcom/android/camera/ui/SeekBarCompat$d;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0, p1}, Lcom/android/camera/ui/SeekBarCompat$d;->onStartTrackingTouch(Landroid/widget/SeekBar;)V
 
     :cond_0
@@ -2666,13 +3046,24 @@
 
 .method public onStopTrackingTouch(Landroid/widget/SeekBar;)V
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
-    iget-object p0, p0, Lcom/android/camera/ui/SeekBarCompat;->m:Lcom/android/camera/ui/SeekBarCompat$d;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "seekBar"
+        }
+    .end annotation
+
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/ui/SeekBarCompat;->C2:Lcom/android/camera/ui/SeekBarCompat$d;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0, p1}, Lcom/android/camera/ui/SeekBarCompat$d;->onStopTrackingTouch(Landroid/widget/SeekBar;)V
 
     :cond_0
@@ -2681,31 +3072,45 @@
 
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "v",
+            "event"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
     move-result p1
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/ui/SeekBarCompat;->i(F)I
+    invoke-virtual {p0, p1}, Lcom/android/camera/ui/SeekBarCompat;->h(F)I
 
     move-result p1
 
-    iget-object v0, p0, Lcom/android/camera/ui/SeekBarCompat;->m:Lcom/android/camera/ui/SeekBarCompat$d;
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/ui/SeekBarCompat;->C2:Lcom/android/camera/ui/SeekBarCompat$d;
 
     const/4 v1, 0x3
 
     if-eqz v0, :cond_0
 
-    iget v2, p0, Lcom/android/camera/ui/SeekBarCompat;->F:I
+    iget v2, p0, Lcom/android/camera/ui/SeekBarCompat;->Z8:I
 
     if-ne v2, v1, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/android/camera/ui/SeekBarCompat$d;->k(I)Ljava/lang/String;
+    .line 3
+    invoke-interface {v0, p1}, Lcom/android/camera/ui/SeekBarCompat$d;->j(I)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/camera/ui/SeekBarCompat;->H:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/camera/ui/SeekBarCompat;->b9:Ljava/lang/String;
 
+    .line 4
     :cond_0
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
@@ -2727,8 +3132,9 @@
 
     goto/16 :goto_1
 
+    .line 5
     :cond_1
-    iget v0, p0, Lcom/android/camera/ui/SeekBarCompat;->q1:F
+    iget v0, p0, Lcom/android/camera/ui/SeekBarCompat;->j9:F
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
@@ -2740,65 +3146,79 @@
 
     return v4
 
+    .line 6
     :cond_2
-    iget-boolean v0, p0, Lcom/android/camera/ui/SeekBarCompat;->k1:Z
+    iget-boolean v0, p0, Lcom/android/camera/ui/SeekBarCompat;->h9:Z
 
     if-nez v0, :cond_3
 
-    iget v0, p0, Lcom/android/camera/ui/SeekBarCompat;->p1:I
+    iget v0, p0, Lcom/android/camera/ui/SeekBarCompat;->i9:I
 
-    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getProgress()I
+    invoke-virtual {p0}, Landroid/widget/SeekBar;->getProgress()I
 
     move-result v1
 
     if-eq v0, v1, :cond_3
 
-    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getProgress()I
+    .line 7
+    invoke-virtual {p0}, Landroid/widget/SeekBar;->getProgress()I
 
     move-result v0
 
-    iput v0, p0, Lcom/android/camera/ui/SeekBarCompat;->p1:I
+    iput v0, p0, Lcom/android/camera/ui/SeekBarCompat;->i9:I
 
-    iput-boolean v4, p0, Lcom/android/camera/ui/SeekBarCompat;->k1:Z
+    .line 8
+    iput-boolean v4, p0, Lcom/android/camera/ui/SeekBarCompat;->h9:Z
 
+    .line 9
     :cond_3
-    invoke-virtual {p0, p1}, Lcom/android/camera/ui/SeekBarCompat;->o(I)V
+    invoke-direct {p0, p1}, Lcom/android/camera/ui/SeekBarCompat;->o(I)V
 
     goto :goto_1
 
+    .line 10
     :cond_4
-    iget-object v0, p0, Lcom/android/camera/ui/SeekBarCompat;->K0:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/android/camera/ui/SeekBarCompat;->g9:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_5
 
     const-wide/16 v5, 0x3e8
 
-    invoke-virtual {p0, v0, v5, v6}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
+    .line 11
+    invoke-virtual {p0, v0, v5, v6}, Landroid/widget/SeekBar;->postDelayed(Ljava/lang/Runnable;J)Z
 
+    .line 12
     :cond_5
-    iput-boolean v3, p0, Lcom/android/camera/ui/SeekBarCompat;->k1:Z
+    iput-boolean v3, p0, Lcom/android/camera/ui/SeekBarCompat;->h9:Z
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/ui/SeekBarCompat;->o(I)V
+    .line 13
+    invoke-direct {p0, p1}, Lcom/android/camera/ui/SeekBarCompat;->o(I)V
 
-    invoke-virtual {p0, v3}, Lcom/android/camera/ui/SeekBarCompat;->n(Z)V
+    .line 14
+    invoke-direct {p0, v3}, Lcom/android/camera/ui/SeekBarCompat;->n(Z)V
 
-    iget-object v0, p0, Lcom/android/camera/ui/SeekBarCompat;->m:Lcom/android/camera/ui/SeekBarCompat$d;
+    .line 15
+    iget-object v0, p0, Lcom/android/camera/ui/SeekBarCompat;->C2:Lcom/android/camera/ui/SeekBarCompat$d;
 
     if-eqz v0, :cond_a
 
-    invoke-interface {v0, p1}, Lcom/android/camera/ui/SeekBarCompat$d;->n(I)V
+    .line 16
+    invoke-interface {v0, p1}, Lcom/android/camera/ui/SeekBarCompat$d;->m(I)V
 
     goto :goto_1
 
+    .line 17
     :cond_6
-    iget-object v0, p0, Lcom/android/camera/ui/SeekBarCompat;->K0:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/android/camera/ui/SeekBarCompat;->g9:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_7
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+    .line 18
+    invoke-virtual {p0, v0}, Landroid/widget/SeekBar;->removeCallbacks(Ljava/lang/Runnable;)Z
 
+    .line 19
     :cond_7
-    iget v0, p0, Lcom/android/camera/ui/SeekBarCompat;->F:I
+    iget v0, p0, Lcom/android/camera/ui/SeekBarCompat;->Z8:I
 
     and-int/lit8 v5, v0, 0x1
 
@@ -2806,30 +3226,37 @@
 
     or-int/2addr v0, v2
 
-    iput v0, p0, Lcom/android/camera/ui/SeekBarCompat;->F:I
+    .line 20
+    iput v0, p0, Lcom/android/camera/ui/SeekBarCompat;->Z8:I
 
+    .line 21
     :cond_8
-    invoke-virtual {p0, v4}, Lcom/android/camera/ui/SeekBarCompat;->n(Z)V
+    invoke-direct {p0, v4}, Lcom/android/camera/ui/SeekBarCompat;->n(Z)V
 
-    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getProgress()I
+    .line 22
+    invoke-virtual {p0}, Landroid/widget/SeekBar;->getProgress()I
 
     move-result v0
 
-    iput v0, p0, Lcom/android/camera/ui/SeekBarCompat;->p1:I
+    iput v0, p0, Lcom/android/camera/ui/SeekBarCompat;->i9:I
 
+    .line 23
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
 
-    iput v0, p0, Lcom/android/camera/ui/SeekBarCompat;->q1:F
+    iput v0, p0, Lcom/android/camera/ui/SeekBarCompat;->j9:F
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/ui/SeekBarCompat;->o(I)V
+    .line 24
+    invoke-direct {p0, p1}, Lcom/android/camera/ui/SeekBarCompat;->o(I)V
 
-    iget-object v0, p0, Lcom/android/camera/ui/SeekBarCompat;->m:Lcom/android/camera/ui/SeekBarCompat$d;
+    .line 25
+    iget-object v0, p0, Lcom/android/camera/ui/SeekBarCompat;->C2:Lcom/android/camera/ui/SeekBarCompat$d;
 
     if-eqz v0, :cond_a
 
-    iget v5, p0, Lcom/android/camera/ui/SeekBarCompat;->F:I
+    .line 26
+    iget v5, p0, Lcom/android/camera/ui/SeekBarCompat;->Z8:I
 
     if-ne v5, v1, :cond_9
 
@@ -2841,8 +3268,9 @@
     move v1, v3
 
     :goto_0
-    invoke-interface {v0, v1}, Lcom/android/camera/ui/SeekBarCompat$d;->l(Z)V
+    invoke-interface {v0, v1}, Lcom/android/camera/ui/SeekBarCompat$d;->k(Z)V
 
+    .line 27
     :cond_a
     :goto_1
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
@@ -2857,6 +3285,7 @@
 
     return v3
 
+    .line 28
     :cond_b
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
@@ -2864,16 +3293,19 @@
 
     float-to-int v0, v0
 
+    .line 29
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
     move-result p2
 
     float-to-int p2, p2
 
+    .line 30
     invoke-virtual {p0}, Lcom/android/camera/ui/SeekBarCompat;->getTouchRect()Landroid/graphics/Rect;
 
     move-result-object v1
 
+    .line 31
     invoke-virtual {v1, v0, p2}, Landroid/graphics/Rect;->contains(II)Z
 
     move-result p2
@@ -2882,6 +3314,7 @@
 
     return v4
 
+    .line 32
     :cond_c
     invoke-virtual {p0, p1, v4}, Lcom/android/camera/ui/SeekBarCompat;->setProgress(IZ)V
 
@@ -2890,16 +3323,27 @@
 
 .method public setCenterTwoWayMode(Z)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "twoWayMode"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/android/camera/ui/SeekBarCompat;->v:F
+    .line 1
+    iput v0, p0, Lcom/android/camera/ui/SeekBarCompat;->R8:F
 
-    iput-boolean p1, p0, Lcom/android/camera/ui/SeekBarCompat;->z:Z
+    .line 2
+    iput-boolean p1, p0, Lcom/android/camera/ui/SeekBarCompat;->V8:Z
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    .line 3
+    invoke-virtual {p0}, Landroid/widget/SeekBar;->invalidate()V
 
     :cond_0
     return-void
@@ -2907,22 +3351,48 @@
 
 .method public setDegree(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "degree"
+        }
+    .end annotation
 
-    iput p1, p0, Lcom/android/camera/ui/SeekBarCompat;->D:I
+    .line 1
+    iput p1, p0, Lcom/android/camera/ui/SeekBarCompat;->Y8:I
 
     return-void
 .end method
 
 .method public setOnSeekBarChangeListener(Lcom/android/camera/ui/SeekBarCompat$d;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "listener"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->m:Lcom/android/camera/ui/SeekBarCompat$d;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/ui/SeekBarCompat;->C2:Lcom/android/camera/ui/SeekBarCompat$d;
 
     return-void
 .end method
 
 .method public setProgress(I)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "progress"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -2934,11 +3404,21 @@
 
 .method public setProgress(IZ)V
     .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "progress",
+            "fromUser"
+        }
+    .end annotation
 
     if-nez p2, :cond_1
 
     .line 2
-    iget-object v0, p0, Lcom/android/camera/ui/SeekBarCompat;->C:Lmiuix/animation/IFolme;
+    iget-object v0, p0, Lcom/android/camera/ui/SeekBarCompat;->X8:Lmiuix/animation/IFolme;
 
     if-eqz v0, :cond_0
 
@@ -2953,25 +3433,25 @@
     int-to-float v0, p1
 
     .line 4
-    iput v0, p0, Lcom/android/camera/ui/SeekBarCompat;->x:F
+    iput v0, p0, Lcom/android/camera/ui/SeekBarCompat;->T8:F
 
     .line 5
-    invoke-virtual {p0}, Lcom/android/camera/ui/SeekBarCompat;->g()V
+    invoke-direct {p0}, Lcom/android/camera/ui/SeekBarCompat;->f()V
 
     .line 6
-    invoke-virtual {p0}, Lcom/android/camera/ui/SeekBarCompat;->m()V
+    invoke-direct {p0}, Lcom/android/camera/ui/SeekBarCompat;->m()V
 
     .line 7
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    invoke-virtual {p0}, Landroid/widget/SeekBar;->invalidate()V
 
     .line 8
     :cond_1
-    iget-boolean v0, p0, Lcom/android/camera/ui/SeekBarCompat;->z:Z
+    iget-boolean v0, p0, Lcom/android/camera/ui/SeekBarCompat;->V8:Z
 
     if-eqz v0, :cond_2
 
     .line 9
-    iget v0, p0, Lcom/android/camera/ui/SeekBarCompat;->y:I
+    iget v0, p0, Lcom/android/camera/ui/SeekBarCompat;->U8:I
 
     add-int/2addr p1, v0
 
@@ -2979,7 +3459,7 @@
     if-nez p2, :cond_3
 
     .line 10
-    invoke-super {p0, p1}, Landroid/widget/ProgressBar;->setProgress(I)V
+    invoke-super {p0, p1}, Landroid/widget/SeekBar;->setProgress(I)V
 
     goto :goto_0
 
@@ -3016,7 +3496,7 @@
     move-result-object p2
 
     .line 13
-    invoke-virtual {p2, v5}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    invoke-virtual {p2, v5}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
     new-array v0, v1, [Ljava/lang/Object;
 
@@ -3057,12 +3537,22 @@
 
 .method public setSeekBarPinProgress(I)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "progress"
+        }
+    .end annotation
 
-    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getMax()I
+    .line 1
+    invoke-virtual {p0}, Landroid/widget/SeekBar;->getMax()I
 
     move-result v0
 
-    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getMin()I
+    .line 2
+    invoke-virtual {p0}, Landroid/widget/SeekBar;->getMin()I
 
     move-result v1
 
@@ -3072,8 +3562,9 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
-    iput p1, p0, Lcom/android/camera/ui/SeekBarCompat;->y:I
+    iput p1, p0, Lcom/android/camera/ui/SeekBarCompat;->U8:I
 
     return-void
 
@@ -3081,40 +3572,71 @@
     :goto_0
     const/4 p1, 0x0
 
-    iput p1, p0, Lcom/android/camera/ui/SeekBarCompat;->y:I
+    .line 4
+    iput p1, p0, Lcom/android/camera/ui/SeekBarCompat;->U8:I
 
     return-void
 .end method
 
 .method public setSupportShowValue(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "issupport"
+        }
+    .end annotation
 
-    iput p1, p0, Lcom/android/camera/ui/SeekBarCompat;->F:I
+    .line 1
+    iput p1, p0, Lcom/android/camera/ui/SeekBarCompat;->Z8:I
 
     return-void
 .end method
 
 .method public setValuePaddingStart(F)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "paddingStart"
+        }
+    .end annotation
 
-    iput p1, p0, Lcom/android/camera/ui/SeekBarCompat;->G:F
+    .line 1
+    iput p1, p0, Lcom/android/camera/ui/SeekBarCompat;->a9:F
 
     return-void
 .end method
 
 .method public setVisibility(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "visibility"
+        }
+    .end annotation
 
-    invoke-super {p0, p1}, Landroid/view/View;->setVisibility(I)V
+    .line 1
+    invoke-super {p0, p1}, Landroid/widget/SeekBar;->setVisibility(I)V
 
     if-nez p1, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/SeekBarCompat;->g()V
+    .line 2
+    invoke-direct {p0}, Lcom/android/camera/ui/SeekBarCompat;->f()V
 
-    iget-object p0, p0, Lcom/android/camera/ui/SeekBarCompat;->j:Landroid/graphics/Paint;
+    .line 3
+    iget-object p0, p0, Lcom/android/camera/ui/SeekBarCompat;->C1:Landroid/graphics/Paint;
 
     if-eqz p0, :cond_1
 
+    .line 4
     invoke-static {}, Lcom/android/camera2/compat/theme/MiThemeCompat;->geteOperationZoom()Lcom/android/camera2/compat/theme/common/MiThemeOperationZoomInterface;
 
     move-result-object p1
@@ -3127,8 +3649,9 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
-    invoke-virtual {p0}, Lcom/android/camera/ui/SeekBarCompat;->m()V
+    invoke-direct {p0}, Lcom/android/camera/ui/SeekBarCompat;->m()V
 
     :cond_1
     :goto_0

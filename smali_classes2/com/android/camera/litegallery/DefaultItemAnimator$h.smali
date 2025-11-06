@@ -15,26 +15,41 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/android/camera/litegallery/DefaultItemAnimator$i;
+.field public final synthetic c:Lcom/android/camera/litegallery/DefaultItemAnimator$i;
 
-.field public final synthetic b:Landroid/view/ViewPropertyAnimator;
+.field public final synthetic d:Landroid/view/ViewPropertyAnimator;
 
-.field public final synthetic c:Landroid/view/View;
+.field public final synthetic f:Landroid/view/View;
 
-.field public final synthetic d:Lcom/android/camera/litegallery/DefaultItemAnimator;
+.field public final synthetic g:Lcom/android/camera/litegallery/DefaultItemAnimator;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera/litegallery/DefaultItemAnimator;Lcom/android/camera/litegallery/DefaultItemAnimator$i;Landroid/view/ViewPropertyAnimator;Landroid/view/View;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010,
+            0x1010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$changeInfo",
+            "val$newViewAnimation",
+            "val$newView"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$h;->d:Lcom/android/camera/litegallery/DefaultItemAnimator;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$h;->g:Lcom/android/camera/litegallery/DefaultItemAnimator;
 
-    iput-object p2, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$h;->a:Lcom/android/camera/litegallery/DefaultItemAnimator$i;
+    iput-object p2, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$h;->c:Lcom/android/camera/litegallery/DefaultItemAnimator$i;
 
-    iput-object p3, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$h;->b:Landroid/view/ViewPropertyAnimator;
+    iput-object p3, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$h;->d:Landroid/view/ViewPropertyAnimator;
 
-    iput-object p4, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$h;->c:Landroid/view/View;
+    iput-object p4, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$h;->f:Landroid/view/View;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
@@ -45,32 +60,45 @@
 # virtual methods
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animator"
+        }
+    .end annotation
 
-    iget-object p1, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$h;->b:Landroid/view/ViewPropertyAnimator;
+    .line 1
+    iget-object p1, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$h;->d:Landroid/view/ViewPropertyAnimator;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
-    iget-object p1, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$h;->c:Landroid/view/View;
+    .line 2
+    iget-object p1, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$h;->f:Landroid/view/View;
 
     const/high16 v0, 0x3f800000    # 1.0f
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
-    iget-object p1, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$h;->c:Landroid/view/View;
+    .line 3
+    iget-object p1, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$h;->f:Landroid/view/View;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationX(F)V
 
-    iget-object p1, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$h;->c:Landroid/view/View;
+    .line 4
+    iget-object p1, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$h;->f:Landroid/view/View;
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationY(F)V
 
-    iget-object p1, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$h;->d:Lcom/android/camera/litegallery/DefaultItemAnimator;
+    .line 5
+    iget-object p1, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$h;->g:Lcom/android/camera/litegallery/DefaultItemAnimator;
 
-    iget-object v0, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$h;->a:Lcom/android/camera/litegallery/DefaultItemAnimator$i;
+    iget-object v0, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$h;->c:Lcom/android/camera/litegallery/DefaultItemAnimator$i;
 
     iget-object v0, v0, Lcom/android/camera/litegallery/DefaultItemAnimator$i;->b:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
@@ -78,17 +106,19 @@
 
     invoke-virtual {p1, v0, v1}, Landroidx/recyclerview/widget/SimpleItemAnimator;->dispatchChangeFinished(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;Z)V
 
-    iget-object p1, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$h;->d:Lcom/android/camera/litegallery/DefaultItemAnimator;
+    .line 6
+    iget-object p1, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$h;->g:Lcom/android/camera/litegallery/DefaultItemAnimator;
 
-    iget-object p1, p1, Lcom/android/camera/litegallery/DefaultItemAnimator;->k:Ljava/util/ArrayList;
+    iget-object p1, p1, Lcom/android/camera/litegallery/DefaultItemAnimator;->m:Ljava/util/ArrayList;
 
-    iget-object v0, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$h;->a:Lcom/android/camera/litegallery/DefaultItemAnimator$i;
+    iget-object v0, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$h;->c:Lcom/android/camera/litegallery/DefaultItemAnimator$i;
 
     iget-object v0, v0, Lcom/android/camera/litegallery/DefaultItemAnimator$i;->b:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    iget-object p0, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$h;->d:Lcom/android/camera/litegallery/DefaultItemAnimator;
+    .line 7
+    iget-object p0, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$h;->g:Lcom/android/camera/litegallery/DefaultItemAnimator;
 
     invoke-virtual {p0}, Lcom/android/camera/litegallery/DefaultItemAnimator;->dispatchFinishedWhenDone()V
 
@@ -97,10 +127,19 @@
 
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animator"
+        }
+    .end annotation
 
-    iget-object p1, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$h;->d:Lcom/android/camera/litegallery/DefaultItemAnimator;
+    .line 1
+    iget-object p1, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$h;->g:Lcom/android/camera/litegallery/DefaultItemAnimator;
 
-    iget-object p0, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$h;->a:Lcom/android/camera/litegallery/DefaultItemAnimator$i;
+    iget-object p0, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$h;->c:Lcom/android/camera/litegallery/DefaultItemAnimator$i;
 
     iget-object p0, p0, Lcom/android/camera/litegallery/DefaultItemAnimator$i;->b:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 

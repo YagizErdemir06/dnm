@@ -1,4 +1,4 @@
-.class synthetic Lmiuix/animation/internal/TargetVelocityTracker$1;
+.class public synthetic Lmiuix/animation/internal/TargetVelocityTracker$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

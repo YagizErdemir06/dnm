@@ -16,94 +16,102 @@
 
 
 # static fields
-.field public static final A:I = 0x36
+.field private static final C1:I = 0x1
 
-.field public static final C:I = 0x1c
+.field private static final K0:I = -0x41000000
 
-.field public static final D:I = 0x2
+.field private static final c:Ljava/lang/String; = "ToggleSwitch"
 
-.field public static final F:F = 1.33f
+.field private static final d:I = 0x12c
 
-.field public static final G:I = -0xcc5501
+.field private static final f:I = 0x36
 
-.field public static final H:I = 0x4d000000
+.field private static final g:I = 0x1c
 
-.field public static final I:I = -0x78000000
+.field private static final j:I = 0x2
 
-.field public static final J:I = -0x4c000001
+.field private static final k0:I = -0x4c000001
 
-.field public static final K:I = 0x1
+.field private static final k1:I = 0x30
 
-.field public static final K0:I = -0x4c000001
+.field private static final m:F = 1.33f
 
-.field public static final k0:I = -0x1
+.field private static final n:I = -0xcc5501
 
-.field public static final k1:I = -0x41000000
+.field private static final p:I = 0x4d000000
 
-.field public static final p1:I = 0x30
+.field private static final s:I = -0x78000000
 
-.field public static final q1:I = 0x0
+.field private static final t:I = -0x4c000001
 
-.field public static final v1:I = 0x1
+.field private static final u:I = 0x1
 
-.field public static final y:Ljava/lang/String; = "ToggleSwitch"
+.field private static final v1:I = 0x0
 
-.field public static final z:I = 0x12c
+.field private static final w:I = -0x1
 
 
 # instance fields
-.field public a:I
+.field private C2:I
 
-.field public b:I
+.field private K1:I
 
-.field public c:I
+.field private K2:I
 
-.field public d:I
+.field private K8:I
 
-.field public e:I
+.field private L8:F
 
-.field public f:F
+.field private M8:I
 
-.field public g:I
+.field private N8:Ljava/lang/String;
 
-.field public h:Ljava/lang/String;
+.field private O8:Ljava/lang/String;
 
-.field public i:Ljava/lang/String;
+.field private P8:I
 
-.field public j:I
+.field private Q8:I
 
-.field public k:I
+.field private R8:I
 
-.field public l:I
+.field private S8:F
 
-.field public m:F
+.field private T8:I
 
-.field public n:I
+.field private U8:I
 
-.field public o:I
+.field private V8:Z
 
-.field public p:Z
+.field private W8:Z
 
-.field public q:Z
+.field private X8:Z
 
-.field public r:Z
+.field private Y8:F
 
-.field public s:F
+.field private Z8:Lcom/android/camera/ui/ToggleSwitch$d;
 
-.field public t:Lcom/android/camera/ui/ToggleSwitch$d;
+.field private a9:Landroid/animation/ValueAnimator;
 
-.field public u:Landroid/animation/ValueAnimator;
+.field private b9:I
 
-.field public v:I
+.field private c9:I
 
-.field public w:I
+.field private d9:Lcom/android/camera/ui/ToggleSwitch$e;
 
-.field public x:Lcom/android/camera/ui/ToggleSwitch$e;
+.field private v2:I
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     .line 1
     invoke-direct {p0, p1}, Landroid/widget/CompoundButton;-><init>(Landroid/content/Context;)V
@@ -111,22 +119,22 @@
     const-string p1, "ON"
 
     .line 2
-    iput-object p1, p0, Lcom/android/camera/ui/ToggleSwitch;->h:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/camera/ui/ToggleSwitch;->N8:Ljava/lang/String;
 
     const-string p1, "OFF"
 
     .line 3
-    iput-object p1, p0, Lcom/android/camera/ui/ToggleSwitch;->i:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/camera/ui/ToggleSwitch;->O8:Ljava/lang/String;
 
     const/high16 p1, -0x78000000
 
     .line 4
-    iput p1, p0, Lcom/android/camera/ui/ToggleSwitch;->a:I
+    iput p1, p0, Lcom/android/camera/ui/ToggleSwitch;->K1:I
 
     const p1, -0x4c000001
 
     .line 5
-    iput p1, p0, Lcom/android/camera/ui/ToggleSwitch;->b:I
+    iput p1, p0, Lcom/android/camera/ui/ToggleSwitch;->v2:I
 
     const/high16 p1, 0x3f800000    # 1.0f
 
@@ -135,17 +143,17 @@
 
     move-result p1
 
-    iput p1, p0, Lcom/android/camera/ui/ToggleSwitch;->c:I
+    iput p1, p0, Lcom/android/camera/ui/ToggleSwitch;->C2:I
 
     const p1, -0xcc5501
 
     .line 7
-    iput p1, p0, Lcom/android/camera/ui/ToggleSwitch;->d:I
+    iput p1, p0, Lcom/android/camera/ui/ToggleSwitch;->K2:I
 
     const/high16 p1, 0x4d000000    # 1.3421773E8f
 
     .line 8
-    iput p1, p0, Lcom/android/camera/ui/ToggleSwitch;->e:I
+    iput p1, p0, Lcom/android/camera/ui/ToggleSwitch;->K8:I
 
     const p1, 0x3faa3d71    # 1.33f
 
@@ -154,19 +162,19 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/android/camera/ui/ToggleSwitch;->f:F
+    iput v0, p0, Lcom/android/camera/ui/ToggleSwitch;->L8:F
 
     const/high16 v0, -0x41000000    # -0.5f
 
     .line 10
-    iput v0, p0, Lcom/android/camera/ui/ToggleSwitch;->l:I
+    iput v0, p0, Lcom/android/camera/ui/ToggleSwitch;->R8:I
 
     .line 11
     invoke-virtual {p0, p1}, Lcom/android/camera/ui/ToggleSwitch;->i(F)F
 
     move-result p1
 
-    iput p1, p0, Lcom/android/camera/ui/ToggleSwitch;->m:F
+    iput p1, p0, Lcom/android/camera/ui/ToggleSwitch;->S8:F
 
     const/high16 p1, 0x40000000    # 2.0f
 
@@ -175,38 +183,48 @@
 
     move-result p1
 
-    iput p1, p0, Lcom/android/camera/ui/ToggleSwitch;->g:I
+    iput p1, p0, Lcom/android/camera/ui/ToggleSwitch;->M8:I
 
     const/16 p1, 0x12c
 
     .line 13
-    iput p1, p0, Lcom/android/camera/ui/ToggleSwitch;->o:I
+    iput p1, p0, Lcom/android/camera/ui/ToggleSwitch;->U8:I
 
     .line 14
-    iget-boolean p1, p0, Lcom/android/camera/ui/ToggleSwitch;->p:Z
+    iget-boolean p1, p0, Lcom/android/camera/ui/ToggleSwitch;->V8:Z
 
     if-eqz p1, :cond_0
 
-    sget-object p1, Lcom/android/camera/ui/ToggleSwitch$e;->c:Lcom/android/camera/ui/ToggleSwitch$e;
+    sget-object p1, Lcom/android/camera/ui/ToggleSwitch$e;->f:Lcom/android/camera/ui/ToggleSwitch$e;
 
     goto :goto_0
 
     :cond_0
-    sget-object p1, Lcom/android/camera/ui/ToggleSwitch$e;->d:Lcom/android/camera/ui/ToggleSwitch$e;
+    sget-object p1, Lcom/android/camera/ui/ToggleSwitch$e;->g:Lcom/android/camera/ui/ToggleSwitch$e;
 
     :goto_0
-    iput-object p1, p0, Lcom/android/camera/ui/ToggleSwitch;->x:Lcom/android/camera/ui/ToggleSwitch$e;
+    iput-object p1, p0, Lcom/android/camera/ui/ToggleSwitch;->d9:Lcom/android/camera/ui/ToggleSwitch$e;
 
     const/4 p1, 0x1
 
     .line 15
-    invoke-virtual {p0, p1}, Landroid/view/View;->setClickable(Z)V
+    invoke-virtual {p0, p1}, Landroid/widget/CompoundButton;->setClickable(Z)V
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     .line 16
     invoke-direct {p0, p1, p2}, Landroid/widget/CompoundButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -214,41 +232,41 @@
     const-string v0, "ON"
 
     .line 17
-    iput-object v0, p0, Lcom/android/camera/ui/ToggleSwitch;->h:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/camera/ui/ToggleSwitch;->N8:Ljava/lang/String;
 
     const-string v0, "OFF"
 
     .line 18
-    iput-object v0, p0, Lcom/android/camera/ui/ToggleSwitch;->i:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/camera/ui/ToggleSwitch;->O8:Ljava/lang/String;
 
     .line 19
-    sget-object v0, Lcom/android/camera/n4$u;->ToggleSwitch:[I
+    sget-object v0, Ld/d/a/k5$u;->ToggleSwitch:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    const/high16 p2, -0x78000000
+    const/4 p2, 0x0
 
-    const/4 v0, 0x0
+    const/high16 v0, -0x78000000
 
     .line 20
-    invoke-virtual {p1, v0, p2}, Landroid/content/res/TypedArray;->getColor(II)I
+    invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getColor(II)I
 
-    move-result p2
+    move-result v0
 
-    iput p2, p0, Lcom/android/camera/ui/ToggleSwitch;->a:I
+    iput v0, p0, Lcom/android/camera/ui/ToggleSwitch;->K1:I
 
-    const/4 p2, 0x1
+    const/4 v0, 0x1
 
     const v1, -0x4c000001
 
     .line 21
-    invoke-virtual {p1, p2, v1}, Landroid/content/res/TypedArray;->getColor(II)I
+    invoke-virtual {p1, v0, v1}, Landroid/content/res/TypedArray;->getColor(II)I
 
     move-result v2
 
-    iput v2, p0, Lcom/android/camera/ui/ToggleSwitch;->b:I
+    iput v2, p0, Lcom/android/camera/ui/ToggleSwitch;->v2:I
 
     const/high16 v2, 0x3f800000    # 1.0f
 
@@ -263,7 +281,7 @@
 
     move-result v2
 
-    iput v2, p0, Lcom/android/camera/ui/ToggleSwitch;->c:I
+    iput v2, p0, Lcom/android/camera/ui/ToggleSwitch;->C2:I
 
     const/16 v2, 0xb
 
@@ -274,7 +292,7 @@
 
     move-result v2
 
-    iput v2, p0, Lcom/android/camera/ui/ToggleSwitch;->d:I
+    iput v2, p0, Lcom/android/camera/ui/ToggleSwitch;->K2:I
 
     const/16 v2, 0xd
 
@@ -285,7 +303,7 @@
 
     move-result v2
 
-    iput v2, p0, Lcom/android/camera/ui/ToggleSwitch;->e:I
+    iput v2, p0, Lcom/android/camera/ui/ToggleSwitch;->K8:I
 
     const v2, 0x3faa3d71    # 1.33f
 
@@ -300,7 +318,7 @@
 
     move-result v3
 
-    iput v3, p0, Lcom/android/camera/ui/ToggleSwitch;->f:F
+    iput v3, p0, Lcom/android/camera/ui/ToggleSwitch;->L8:F
 
     const/high16 v3, 0x40000000    # 2.0f
 
@@ -315,7 +333,7 @@
 
     move-result v3
 
-    iput v3, p0, Lcom/android/camera/ui/ToggleSwitch;->g:I
+    iput v3, p0, Lcom/android/camera/ui/ToggleSwitch;->M8:I
 
     const/16 v3, 0x8
 
@@ -326,7 +344,7 @@
 
     check-cast v3, Ljava/lang/String;
 
-    iput-object v3, p0, Lcom/android/camera/ui/ToggleSwitch;->h:Ljava/lang/String;
+    iput-object v3, p0, Lcom/android/camera/ui/ToggleSwitch;->N8:Ljava/lang/String;
 
     const/4 v3, 0x4
 
@@ -337,7 +355,7 @@
 
     check-cast v3, Ljava/lang/String;
 
-    iput-object v3, p0, Lcom/android/camera/ui/ToggleSwitch;->i:Ljava/lang/String;
+    iput-object v3, p0, Lcom/android/camera/ui/ToggleSwitch;->O8:Ljava/lang/String;
 
     const/16 v3, 0x9
 
@@ -348,7 +366,7 @@
 
     move-result v3
 
-    iput v3, p0, Lcom/android/camera/ui/ToggleSwitch;->j:I
+    iput v3, p0, Lcom/android/camera/ui/ToggleSwitch;->P8:I
 
     const/4 v3, 0x5
 
@@ -357,7 +375,7 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/camera/ui/ToggleSwitch;->k:I
+    iput v1, p0, Lcom/android/camera/ui/ToggleSwitch;->Q8:I
 
     const/4 v1, 0x6
 
@@ -368,20 +386,20 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/camera/ui/ToggleSwitch;->l:I
-
-    const/4 v1, 0x7
+    iput v1, p0, Lcom/android/camera/ui/ToggleSwitch;->R8:I
 
     .line 32
     invoke-virtual {p0, v2}, Lcom/android/camera/ui/ToggleSwitch;->i(F)F
 
-    move-result v2
+    move-result v1
 
-    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getDimension(IF)F
+    const/4 v2, 0x7
+
+    invoke-virtual {p1, v2, v1}, Landroid/content/res/TypedArray;->getDimension(IF)F
 
     move-result v1
 
-    iput v1, p0, Lcom/android/camera/ui/ToggleSwitch;->m:F
+    iput v1, p0, Lcom/android/camera/ui/ToggleSwitch;->S8:F
 
     const/16 v1, 0xa
 
@@ -392,16 +410,16 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/android/camera/ui/ToggleSwitch;->n:I
+    iput v1, p0, Lcom/android/camera/ui/ToggleSwitch;->T8:I
 
     const/4 v1, 0x3
 
     .line 34
-    invoke-virtual {p1, v1, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    invoke-virtual {p1, v1, p2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
-    move-result v0
+    move-result p2
 
-    iput-boolean v0, p0, Lcom/android/camera/ui/ToggleSwitch;->p:Z
+    iput-boolean p2, p0, Lcom/android/camera/ui/ToggleSwitch;->V8:Z
 
     .line 35
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
@@ -409,28 +427,28 @@
     const/16 p1, 0xc8
 
     .line 36
-    iput p1, p0, Lcom/android/camera/ui/ToggleSwitch;->o:I
+    iput p1, p0, Lcom/android/camera/ui/ToggleSwitch;->U8:I
 
     .line 37
-    invoke-virtual {p0}, Lcom/android/camera/ui/ToggleSwitch;->d()V
+    invoke-direct {p0}, Lcom/android/camera/ui/ToggleSwitch;->d()V
 
     .line 38
-    iget-boolean p1, p0, Lcom/android/camera/ui/ToggleSwitch;->p:Z
+    iget-boolean p1, p0, Lcom/android/camera/ui/ToggleSwitch;->V8:Z
 
     if-eqz p1, :cond_0
 
-    sget-object p1, Lcom/android/camera/ui/ToggleSwitch$e;->c:Lcom/android/camera/ui/ToggleSwitch$e;
+    sget-object p1, Lcom/android/camera/ui/ToggleSwitch$e;->f:Lcom/android/camera/ui/ToggleSwitch$e;
 
     goto :goto_0
 
     :cond_0
-    sget-object p1, Lcom/android/camera/ui/ToggleSwitch$e;->d:Lcom/android/camera/ui/ToggleSwitch$e;
+    sget-object p1, Lcom/android/camera/ui/ToggleSwitch$e;->g:Lcom/android/camera/ui/ToggleSwitch$e;
 
     :goto_0
-    iput-object p1, p0, Lcom/android/camera/ui/ToggleSwitch;->x:Lcom/android/camera/ui/ToggleSwitch$e;
+    iput-object p1, p0, Lcom/android/camera/ui/ToggleSwitch;->d9:Lcom/android/camera/ui/ToggleSwitch$e;
 
     .line 39
-    invoke-virtual {p0, p2}, Landroid/view/View;->setClickable(Z)V
+    invoke-virtual {p0, v0}, Landroid/widget/CompoundButton;->setClickable(Z)V
 
     return-void
 .end method
@@ -438,7 +456,8 @@
 .method public static synthetic a(Lcom/android/camera/ui/ToggleSwitch;F)F
     .locals 0
 
-    iput p1, p0, Lcom/android/camera/ui/ToggleSwitch;->s:F
+    .line 1
+    iput p1, p0, Lcom/android/camera/ui/ToggleSwitch;->Y8:F
 
     return p1
 .end method
@@ -446,43 +465,46 @@
 .method public static synthetic b(Lcom/android/camera/ui/ToggleSwitch;Z)Z
     .locals 0
 
-    iput-boolean p1, p0, Lcom/android/camera/ui/ToggleSwitch;->r:Z
+    .line 1
+    iput-boolean p1, p0, Lcom/android/camera/ui/ToggleSwitch;->X8:Z
 
     return p1
 .end method
 
-
-# virtual methods
-.method public final c()V
+.method private c()V
     .locals 3
 
     const/4 v0, 0x2
 
     new-array v0, v0, [F
 
+    .line 1
     fill-array-data v0, :array_0
 
     invoke-static {v0}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/camera/ui/ToggleSwitch;->u:Landroid/animation/ValueAnimator;
+    iput-object v0, p0, Lcom/android/camera/ui/ToggleSwitch;->a9:Landroid/animation/ValueAnimator;
 
-    iget v1, p0, Lcom/android/camera/ui/ToggleSwitch;->o:I
+    .line 2
+    iget v1, p0, Lcom/android/camera/ui/ToggleSwitch;->U8:I
 
     int-to-long v1, v1
 
     invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    iget-object v0, p0, Lcom/android/camera/ui/ToggleSwitch;->u:Landroid/animation/ValueAnimator;
+    .line 3
+    iget-object v0, p0, Lcom/android/camera/ui/ToggleSwitch;->a9:Landroid/animation/ValueAnimator;
 
-    new-instance v1, Lps/b0;
+    new-instance v1, Lk/j0/k/x;
 
-    invoke-direct {v1}, Lps/b0;-><init>()V
+    invoke-direct {v1}, Lk/j0/k/x;-><init>()V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    iget-object v0, p0, Lcom/android/camera/ui/ToggleSwitch;->u:Landroid/animation/ValueAnimator;
+    .line 4
+    iget-object v0, p0, Lcom/android/camera/ui/ToggleSwitch;->a9:Landroid/animation/ValueAnimator;
 
     new-instance v1, Lcom/android/camera/ui/ToggleSwitch$a;
 
@@ -490,7 +512,8 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    iget-object v0, p0, Lcom/android/camera/ui/ToggleSwitch;->u:Landroid/animation/ValueAnimator;
+    .line 5
+    iget-object v0, p0, Lcom/android/camera/ui/ToggleSwitch;->a9:Landroid/animation/ValueAnimator;
 
     new-instance v1, Lcom/android/camera/ui/ToggleSwitch$b;
 
@@ -498,7 +521,8 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    iget-object v0, p0, Lcom/android/camera/ui/ToggleSwitch;->u:Landroid/animation/ValueAnimator;
+    .line 6
+    iget-object v0, p0, Lcom/android/camera/ui/ToggleSwitch;->a9:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isRunning()Z
 
@@ -506,13 +530,15 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/camera/ui/ToggleSwitch;->u:Landroid/animation/ValueAnimator;
+    .line 7
+    iget-object v0, p0, Lcom/android/camera/ui/ToggleSwitch;->a9:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/android/camera/ui/ToggleSwitch;->s:F
+    .line 8
+    iput v0, p0, Lcom/android/camera/ui/ToggleSwitch;->Y8:F
 
     :cond_0
     return-void
@@ -526,28 +552,33 @@
     .end array-data
 .end method
 
-.method public final d()V
+.method private d()V
     .locals 6
 
+    .line 1
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
+    .line 2
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
+    .line 3
     new-instance v2, Landroid/graphics/Paint;
 
     invoke-direct {v2}, Landroid/graphics/Paint;-><init>()V
 
-    iget v3, p0, Lcom/android/camera/ui/ToggleSwitch;->n:I
+    .line 4
+    iget v3, p0, Lcom/android/camera/ui/ToggleSwitch;->T8:I
 
     int-to-float v3, v3
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    iget-object v3, p0, Lcom/android/camera/ui/ToggleSwitch;->h:Ljava/lang/String;
+    .line 5
+    iget-object v3, p0, Lcom/android/camera/ui/ToggleSwitch;->N8:Ljava/lang/String;
 
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -557,7 +588,8 @@
 
     invoke-virtual {v2, v3, v5, v4, v0}, Landroid/graphics/Paint;->getTextBounds(Ljava/lang/String;IILandroid/graphics/Rect;)V
 
-    iget-object v3, p0, Lcom/android/camera/ui/ToggleSwitch;->i:Ljava/lang/String;
+    .line 6
+    iget-object v3, p0, Lcom/android/camera/ui/ToggleSwitch;->O8:Ljava/lang/String;
 
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -565,42 +597,48 @@
 
     invoke-virtual {v2, v3, v5, v4, v1}, Landroid/graphics/Paint;->getTextBounds(Ljava/lang/String;IILandroid/graphics/Rect;)V
 
+    .line 7
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result v0
 
-    iput v0, p0, Lcom/android/camera/ui/ToggleSwitch;->v:I
+    iput v0, p0, Lcom/android/camera/ui/ToggleSwitch;->b9:I
 
+    .line 8
     invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
 
     move-result v0
 
-    iput v0, p0, Lcom/android/camera/ui/ToggleSwitch;->w:I
+    iput v0, p0, Lcom/android/camera/ui/ToggleSwitch;->c9:I
 
     return-void
 .end method
 
-.method public final e()V
+.method private e()V
     .locals 0
 
-    iget-object p0, p0, Lcom/android/camera/ui/ToggleSwitch;->u:Landroid/animation/ValueAnimator;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/ui/ToggleSwitch;->a9:Landroid/animation/ValueAnimator;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Landroid/animation/ValueAnimator;->cancel()V
 
     :cond_0
     return-void
 .end method
 
-.method public final f()[F
+.method private f()[F
     .locals 5
 
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+    .line 1
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getWidth()I
 
     move-result v0
 
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+    .line 2
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getHeight()I
 
     move-result p0
 
@@ -647,24 +685,36 @@
     return-object v3
 .end method
 
-.method public final g(F)[F
+.method private g(F)[F
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "pos"
+        }
+    .end annotation
 
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+    .line 1
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getWidth()I
 
     move-result v0
 
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+    .line 2
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getHeight()I
 
     move-result v1
 
-    iget v2, p0, Lcom/android/camera/ui/ToggleSwitch;->g:I
+    .line 3
+    iget v2, p0, Lcom/android/camera/ui/ToggleSwitch;->M8:I
 
     mul-int/lit8 v3, v2, 0x2
 
     sub-int/2addr v1, v3
 
-    iget p0, p0, Lcom/android/camera/ui/ToggleSwitch;->c:I
+    .line 4
+    iget p0, p0, Lcom/android/camera/ui/ToggleSwitch;->C2:I
 
     add-int v3, v2, p0
 
@@ -755,104 +805,54 @@
     return-object v4
 .end method
 
-.method public getTextOff()Ljava/lang/String;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/camera/ui/ToggleSwitch;->i:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public getTextOn()Ljava/lang/String;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/camera/ui/ToggleSwitch;->h:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public h(F)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p0
-
-    iget p0, p0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p1, p0
-
-    const/high16 p0, 0x3f000000    # 0.5f
-
-    add-float/2addr p1, p0
-
-    float-to-int p0, p1
-
-    return p0
-.end method
-
-.method public i(F)F
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p0
-
-    iget p0, p0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p1, p0
-
-    const/high16 p0, 0x3f000000    # 0.5f
-
-    add-float/2addr p1, p0
-
-    return p1
-.end method
-
-.method public isChecked()Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/android/camera/ui/ToggleSwitch;->p:Z
-
-    return p0
-.end method
-
-.method public final j(Landroid/graphics/Canvas;I[FZ)V
+.method private j(Landroid/graphics/Canvas;I[FZ)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "canvas",
+            "color",
+            "attrs",
+            "drawShadow"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Landroid/graphics/Paint;
 
     const/4 v1, 0x1
 
     invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
 
+    .line 2
     sget-object v2, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
+    .line 3
     sget-object v2, Landroid/graphics/Paint$Cap;->SQUARE:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
+    .line 4
     new-instance v2, Landroid/graphics/RectF;
 
     invoke-direct {v2}, Landroid/graphics/RectF;-><init>()V
 
+    .line 5
     invoke-virtual {v0, p2}, Landroid/graphics/Paint;->setColor(I)V
 
     if-eqz p4, :cond_0
 
-    iget p2, p0, Lcom/android/camera/ui/ToggleSwitch;->f:F
+    .line 6
+    iget p2, p0, Lcom/android/camera/ui/ToggleSwitch;->L8:F
 
-    iget p0, p0, Lcom/android/camera/ui/ToggleSwitch;->e:I
+    iget p0, p0, Lcom/android/camera/ui/ToggleSwitch;->K8:I
 
     const/4 p4, 0x0
 
@@ -861,6 +861,7 @@
     :cond_0
     const/4 p0, 0x0
 
+    .line 7
     aget p0, p3, p0
 
     aget p2, p3, v1
@@ -877,32 +878,49 @@
 
     const/4 p0, 0x4
 
+    .line 8
+    aget p2, p3, p0
+
     aget p0, p3, p0
 
-    invoke-virtual {p1, v2, p0, p0, v0}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
+    invoke-virtual {p1, v2, p2, p0, v0}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
     return-void
 .end method
 
-.method public final k(Landroid/graphics/Canvas;I)V
+.method private k(Landroid/graphics/Canvas;I)V
     .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "canvas",
+            "color"
+        }
+    .end annotation
 
-    iget v0, p0, Lcom/android/camera/ui/ToggleSwitch;->c:I
+    .line 1
+    iget v0, p0, Lcom/android/camera/ui/ToggleSwitch;->C2:I
 
     if-gtz v0, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getWidth()I
 
     move-result v0
 
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+    .line 3
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getHeight()I
 
     move-result v1
 
-    iget v2, p0, Lcom/android/camera/ui/ToggleSwitch;->c:I
+    .line 4
+    iget v2, p0, Lcom/android/camera/ui/ToggleSwitch;->C2:I
 
     int-to-float v3, v2
 
@@ -928,382 +946,253 @@
 
     mul-float/2addr v4, v5
 
+    .line 5
     new-instance v5, Landroid/graphics/Paint;
 
     const/4 v6, 0x1
 
     invoke-direct {v5, v6}, Landroid/graphics/Paint;-><init>(I)V
 
+    .line 6
     sget-object v6, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v5, v6}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
+    .line 7
     invoke-virtual {v5, p2}, Landroid/graphics/Paint;->setColor(I)V
 
-    iget p0, p0, Lcom/android/camera/ui/ToggleSwitch;->c:I
+    .line 8
+    iget p0, p0, Lcom/android/camera/ui/ToggleSwitch;->C2:I
 
     int-to-float p0, p0
 
     invoke-virtual {v5, p0}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
+    .line 9
     new-instance p0, Landroid/graphics/RectF;
 
     invoke-direct {p0}, Landroid/graphics/RectF;-><init>()V
 
+    .line 10
     invoke-virtual {p0, v3, v2, v0, v1}, Landroid/graphics/RectF;->set(FFFF)V
 
+    .line 11
     invoke-virtual {p1, p0, v4, v4, v5}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
     return-void
 .end method
 
-.method public final l(Landroid/graphics/Canvas;)V
+.method private l(Landroid/graphics/Canvas;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "canvas"
+        }
+    .end annotation
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/ToggleSwitch;->f()[F
+    .line 1
+    invoke-direct {p0}, Lcom/android/camera/ui/ToggleSwitch;->f()[F
 
     move-result-object v0
 
-    iget v1, p0, Lcom/android/camera/ui/ToggleSwitch;->a:I
+    .line 2
+    iget v1, p0, Lcom/android/camera/ui/ToggleSwitch;->K1:I
 
     const/4 v2, 0x0
 
-    invoke-virtual {p0, p1, v1, v0, v2}, Lcom/android/camera/ui/ToggleSwitch;->j(Landroid/graphics/Canvas;I[FZ)V
+    invoke-direct {p0, p1, v1, v0, v2}, Lcom/android/camera/ui/ToggleSwitch;->j(Landroid/graphics/Canvas;I[FZ)V
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/ui/ToggleSwitch;->g(F)[F
+    .line 3
+    invoke-direct {p0, v0}, Lcom/android/camera/ui/ToggleSwitch;->g(F)[F
 
     move-result-object v0
 
-    iget v1, p0, Lcom/android/camera/ui/ToggleSwitch;->d:I
+    .line 4
+    iget v1, p0, Lcom/android/camera/ui/ToggleSwitch;->K2:I
 
     const/4 v2, 0x1
 
-    invoke-virtual {p0, p1, v1, v0, v2}, Lcom/android/camera/ui/ToggleSwitch;->j(Landroid/graphics/Canvas;I[FZ)V
+    invoke-direct {p0, p1, v1, v0, v2}, Lcom/android/camera/ui/ToggleSwitch;->j(Landroid/graphics/Canvas;I[FZ)V
 
-    iget v1, p0, Lcom/android/camera/ui/ToggleSwitch;->b:I
+    .line 5
+    iget v1, p0, Lcom/android/camera/ui/ToggleSwitch;->v2:I
 
-    invoke-virtual {p0, p1, v1}, Lcom/android/camera/ui/ToggleSwitch;->k(Landroid/graphics/Canvas;I)V
+    invoke-direct {p0, p1, v1}, Lcom/android/camera/ui/ToggleSwitch;->k(Landroid/graphics/Canvas;I)V
 
-    invoke-virtual {p0, p1, v0}, Lcom/android/camera/ui/ToggleSwitch;->p(Landroid/graphics/Canvas;[F)V
+    .line 6
+    invoke-direct {p0, p1, v0}, Lcom/android/camera/ui/ToggleSwitch;->p(Landroid/graphics/Canvas;[F)V
 
     return-void
 .end method
 
-.method public final m(Landroid/graphics/Canvas;)V
+.method private m(Landroid/graphics/Canvas;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "canvas"
+        }
+    .end annotation
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/ToggleSwitch;->f()[F
+    .line 1
+    invoke-direct {p0}, Lcom/android/camera/ui/ToggleSwitch;->f()[F
 
     move-result-object v0
 
-    iget v1, p0, Lcom/android/camera/ui/ToggleSwitch;->a:I
+    .line 2
+    iget v1, p0, Lcom/android/camera/ui/ToggleSwitch;->K1:I
 
     const/4 v2, 0x0
 
-    invoke-virtual {p0, p1, v1, v0, v2}, Lcom/android/camera/ui/ToggleSwitch;->j(Landroid/graphics/Canvas;I[FZ)V
+    invoke-direct {p0, p1, v1, v0, v2}, Lcom/android/camera/ui/ToggleSwitch;->j(Landroid/graphics/Canvas;I[FZ)V
 
-    iget v0, p0, Lcom/android/camera/ui/ToggleSwitch;->b:I
+    .line 3
+    iget v0, p0, Lcom/android/camera/ui/ToggleSwitch;->v2:I
 
-    invoke-virtual {p0, p1, v0}, Lcom/android/camera/ui/ToggleSwitch;->k(Landroid/graphics/Canvas;I)V
+    invoke-direct {p0, p1, v0}, Lcom/android/camera/ui/ToggleSwitch;->k(Landroid/graphics/Canvas;I)V
+
+    .line 4
+    iget v0, p0, Lcom/android/camera/ui/ToggleSwitch;->Y8:F
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    sub-float/2addr v1, v0
+
+    invoke-direct {p0, v1}, Lcom/android/camera/ui/ToggleSwitch;->g(F)[F
+
+    move-result-object v0
+
+    .line 5
+    iget v1, p0, Lcom/android/camera/ui/ToggleSwitch;->K2:I
+
+    const/4 v2, 0x1
+
+    invoke-direct {p0, p1, v1, v0, v2}, Lcom/android/camera/ui/ToggleSwitch;->j(Landroid/graphics/Canvas;I[FZ)V
+
+    .line 6
+    invoke-direct {p0, p1, v0}, Lcom/android/camera/ui/ToggleSwitch;->p(Landroid/graphics/Canvas;[F)V
+
+    return-void
+.end method
+
+.method private n(Landroid/graphics/Canvas;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "canvas"
+        }
+    .end annotation
+
+    .line 1
+    invoke-direct {p0}, Lcom/android/camera/ui/ToggleSwitch;->f()[F
+
+    move-result-object v0
+
+    .line 2
+    iget v1, p0, Lcom/android/camera/ui/ToggleSwitch;->K1:I
+
+    const/4 v2, 0x0
+
+    invoke-direct {p0, p1, v1, v0, v2}, Lcom/android/camera/ui/ToggleSwitch;->j(Landroid/graphics/Canvas;I[FZ)V
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    iget v1, p0, Lcom/android/camera/ui/ToggleSwitch;->s:F
-
-    sub-float/2addr v0, v1
-
-    invoke-virtual {p0, v0}, Lcom/android/camera/ui/ToggleSwitch;->g(F)[F
+    .line 3
+    invoke-direct {p0, v0}, Lcom/android/camera/ui/ToggleSwitch;->g(F)[F
 
     move-result-object v0
 
-    iget v1, p0, Lcom/android/camera/ui/ToggleSwitch;->d:I
+    .line 4
+    iget v1, p0, Lcom/android/camera/ui/ToggleSwitch;->K2:I
 
     const/4 v2, 0x1
 
-    invoke-virtual {p0, p1, v1, v0, v2}, Lcom/android/camera/ui/ToggleSwitch;->j(Landroid/graphics/Canvas;I[FZ)V
+    invoke-direct {p0, p1, v1, v0, v2}, Lcom/android/camera/ui/ToggleSwitch;->j(Landroid/graphics/Canvas;I[FZ)V
 
-    invoke-virtual {p0, p1, v0}, Lcom/android/camera/ui/ToggleSwitch;->p(Landroid/graphics/Canvas;[F)V
+    .line 5
+    iget v1, p0, Lcom/android/camera/ui/ToggleSwitch;->v2:I
+
+    invoke-direct {p0, p1, v1}, Lcom/android/camera/ui/ToggleSwitch;->k(Landroid/graphics/Canvas;I)V
+
+    .line 6
+    invoke-direct {p0, p1, v0}, Lcom/android/camera/ui/ToggleSwitch;->p(Landroid/graphics/Canvas;[F)V
 
     return-void
 .end method
 
-.method public final n(Landroid/graphics/Canvas;)V
+.method private o(Landroid/graphics/Canvas;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "canvas"
+        }
+    .end annotation
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/ToggleSwitch;->f()[F
+    .line 1
+    invoke-direct {p0}, Lcom/android/camera/ui/ToggleSwitch;->f()[F
 
     move-result-object v0
 
-    iget v1, p0, Lcom/android/camera/ui/ToggleSwitch;->a:I
+    .line 2
+    iget v1, p0, Lcom/android/camera/ui/ToggleSwitch;->K1:I
 
     const/4 v2, 0x0
 
-    invoke-virtual {p0, p1, v1, v0, v2}, Lcom/android/camera/ui/ToggleSwitch;->j(Landroid/graphics/Canvas;I[FZ)V
+    invoke-direct {p0, p1, v1, v0, v2}, Lcom/android/camera/ui/ToggleSwitch;->j(Landroid/graphics/Canvas;I[FZ)V
 
-    const/high16 v0, 0x3f800000    # 1.0f
+    .line 3
+    iget v0, p0, Lcom/android/camera/ui/ToggleSwitch;->v2:I
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/ui/ToggleSwitch;->g(F)[F
+    invoke-direct {p0, p1, v0}, Lcom/android/camera/ui/ToggleSwitch;->k(Landroid/graphics/Canvas;I)V
+
+    .line 4
+    iget v0, p0, Lcom/android/camera/ui/ToggleSwitch;->Y8:F
+
+    invoke-direct {p0, v0}, Lcom/android/camera/ui/ToggleSwitch;->g(F)[F
 
     move-result-object v0
 
-    iget v1, p0, Lcom/android/camera/ui/ToggleSwitch;->d:I
+    .line 5
+    iget v1, p0, Lcom/android/camera/ui/ToggleSwitch;->K2:I
 
     const/4 v2, 0x1
 
-    invoke-virtual {p0, p1, v1, v0, v2}, Lcom/android/camera/ui/ToggleSwitch;->j(Landroid/graphics/Canvas;I[FZ)V
+    invoke-direct {p0, p1, v1, v0, v2}, Lcom/android/camera/ui/ToggleSwitch;->j(Landroid/graphics/Canvas;I[FZ)V
 
-    iget v1, p0, Lcom/android/camera/ui/ToggleSwitch;->b:I
-
-    invoke-virtual {p0, p1, v1}, Lcom/android/camera/ui/ToggleSwitch;->k(Landroid/graphics/Canvas;I)V
-
-    invoke-virtual {p0, p1, v0}, Lcom/android/camera/ui/ToggleSwitch;->p(Landroid/graphics/Canvas;[F)V
+    .line 6
+    invoke-direct {p0, p1, v0}, Lcom/android/camera/ui/ToggleSwitch;->p(Landroid/graphics/Canvas;[F)V
 
     return-void
 .end method
 
-.method public final o(Landroid/graphics/Canvas;)V
-    .locals 3
-
-    invoke-virtual {p0}, Lcom/android/camera/ui/ToggleSwitch;->f()[F
-
-    move-result-object v0
-
-    iget v1, p0, Lcom/android/camera/ui/ToggleSwitch;->a:I
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p0, p1, v1, v0, v2}, Lcom/android/camera/ui/ToggleSwitch;->j(Landroid/graphics/Canvas;I[FZ)V
-
-    iget v0, p0, Lcom/android/camera/ui/ToggleSwitch;->b:I
-
-    invoke-virtual {p0, p1, v0}, Lcom/android/camera/ui/ToggleSwitch;->k(Landroid/graphics/Canvas;I)V
-
-    iget v0, p0, Lcom/android/camera/ui/ToggleSwitch;->s:F
-
-    invoke-virtual {p0, v0}, Lcom/android/camera/ui/ToggleSwitch;->g(F)[F
-
-    move-result-object v0
-
-    iget v1, p0, Lcom/android/camera/ui/ToggleSwitch;->d:I
-
-    const/4 v2, 0x1
-
-    invoke-virtual {p0, p1, v1, v0, v2}, Lcom/android/camera/ui/ToggleSwitch;->j(Landroid/graphics/Canvas;I[FZ)V
-
-    invoke-virtual {p0, p1, v0}, Lcom/android/camera/ui/ToggleSwitch;->p(Landroid/graphics/Canvas;[F)V
-
-    return-void
-.end method
-
-.method public onDraw(Landroid/graphics/Canvas;)V
+.method private p(Landroid/graphics/Canvas;[F)V
     .locals 7
-
-    invoke-super {p0, p1}, Landroid/widget/CompoundButton;->onDraw(Landroid/graphics/Canvas;)V
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p0, v1, v0}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result v0
-
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
-
-    move-result v2
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
-
-    move-result v3
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
-
-    move-result v4
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
-
-    move-result v5
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
-
-    move-result v6
-
-    sub-int/2addr v0, v3
-
-    sub-int/2addr v0, v5
-
-    sub-int/2addr v2, v4
-
-    sub-int/2addr v2, v6
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result v5
-
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
-
-    move-result v6
-
-    sub-int/2addr v0, v5
-
-    const/4 v5, 0x2
-
-    div-int/2addr v0, v5
-
-    add-int/2addr v3, v0
-
-    sub-int/2addr v2, v6
-
-    div-int/2addr v2, v5
-
-    add-int/2addr v4, v2
-
-    int-to-float v0, v3
-
-    int-to-float v2, v4
-
-    invoke-virtual {p1, v0, v2}, Landroid/graphics/Canvas;->translate(FF)V
-
-    sget-object v0, Lcom/android/camera/ui/ToggleSwitch$c;->a:[I
-
-    iget-object v2, p0, Lcom/android/camera/ui/ToggleSwitch;->x:Lcom/android/camera/ui/ToggleSwitch$e;
-
-    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v2
-
-    aget v0, v0, v2
-
-    if-eq v0, v1, :cond_3
-
-    if-eq v0, v5, :cond_2
-
-    const/4 v1, 0x3
-
-    if-eq v0, v1, :cond_1
-
-    const/4 v1, 0x4
-
-    if-eq v0, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0, p1}, Lcom/android/camera/ui/ToggleSwitch;->m(Landroid/graphics/Canvas;)V
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p0, p1}, Lcom/android/camera/ui/ToggleSwitch;->o(Landroid/graphics/Canvas;)V
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p0, p1}, Lcom/android/camera/ui/ToggleSwitch;->l(Landroid/graphics/Canvas;)V
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p0, p1}, Lcom/android/camera/ui/ToggleSwitch;->n(Landroid/graphics/Canvas;)V
-
-    :goto_0
-    return-void
-.end method
-
-.method public onMeasure(II)V
-    .locals 5
-
-    invoke-super {p0, p2, p1}, Landroid/view/View;->onMeasure(II)V
-
-    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
-
-    move-result v0
-
-    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
-
-    move-result v1
-
-    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
-
-    move-result p1
-
-    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
-
-    move-result p2
-
-    const/high16 v2, 0x42580000    # 54.0f
-
-    invoke-virtual {p0, v2}, Lcom/android/camera/ui/ToggleSwitch;->h(F)I
-
-    move-result v2
-
-    iget v3, p0, Lcom/android/camera/ui/ToggleSwitch;->v:I
-
-    add-int/2addr v2, v3
-
-    iget v3, p0, Lcom/android/camera/ui/ToggleSwitch;->w:I
-
-    add-int/2addr v2, v3
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
-
-    move-result v3
-
-    add-int/2addr v2, v3
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
-
-    move-result v3
-
-    add-int/2addr v2, v3
-
-    const/high16 v3, 0x41e00000    # 28.0f
-
-    invoke-virtual {p0, v3}, Lcom/android/camera/ui/ToggleSwitch;->h(F)I
-
-    move-result v3
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
-
-    move-result v4
-
-    add-int/2addr v3, v4
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
-
-    move-result v4
-
-    add-int/2addr v3, v4
-
-    const/high16 v4, -0x80000000
-
-    if-eq p1, v4, :cond_0
-
-    invoke-static {v2, v0}, Ljava/lang/Math;->max(II)I
-
-    move-result v2
-
-    :cond_0
-    if-eq p2, v4, :cond_1
-
-    invoke-static {v3, v1}, Ljava/lang/Math;->max(II)I
-
-    move-result v3
-
-    :cond_1
-    invoke-virtual {p0, v2, v3}, Landroid/view/View;->setMeasuredDimension(II)V
-
-    return-void
-.end method
-
-.method public final p(Landroid/graphics/Canvas;[F)V
-    .locals 7
-
-    iget-object p2, p0, Lcom/android/camera/ui/ToggleSwitch;->i:Ljava/lang/String;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "canvas",
+            "attrs"
+        }
+    .end annotation
+
+    .line 1
+    iget-object p2, p0, Lcom/android/camera/ui/ToggleSwitch;->O8:Ljava/lang/String;
 
     const/4 v0, 0x1
 
@@ -1315,25 +1204,30 @@
 
     if-eqz p2, :cond_1
 
+    .line 2
     new-instance p2, Landroid/graphics/Paint;
 
     invoke-direct {p2, v0}, Landroid/graphics/Paint;-><init>(I)V
 
+    .line 3
     sget-object v4, Landroid/graphics/Paint$Align;->LEFT:Landroid/graphics/Paint$Align;
 
     invoke-virtual {p2, v4}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
 
-    iget v4, p0, Lcom/android/camera/ui/ToggleSwitch;->n:I
+    .line 4
+    iget v4, p0, Lcom/android/camera/ui/ToggleSwitch;->T8:I
 
     int-to-float v4, v4
 
     invoke-virtual {p2, v4}, Landroid/graphics/Paint;->setTextSize(F)V
 
+    .line 5
     invoke-virtual {p2}, Landroid/graphics/Paint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
 
     move-result-object v4
 
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
+    .line 6
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getMeasuredHeight()I
 
     move-result v5
 
@@ -1349,29 +1243,34 @@
 
     sub-int/2addr v5, v4
 
-    iget-boolean v4, p0, Lcom/android/camera/ui/ToggleSwitch;->p:Z
+    .line 7
+    iget-boolean v4, p0, Lcom/android/camera/ui/ToggleSwitch;->V8:Z
 
     if-eqz v4, :cond_0
 
-    iget v4, p0, Lcom/android/camera/ui/ToggleSwitch;->k:I
+    .line 8
+    iget v4, p0, Lcom/android/camera/ui/ToggleSwitch;->Q8:I
 
     invoke-virtual {p2, v4}, Landroid/graphics/Paint;->setColor(I)V
 
-    iget v4, p0, Lcom/android/camera/ui/ToggleSwitch;->m:F
+    .line 9
+    iget v4, p0, Lcom/android/camera/ui/ToggleSwitch;->S8:F
 
-    iget v6, p0, Lcom/android/camera/ui/ToggleSwitch;->l:I
+    iget v6, p0, Lcom/android/camera/ui/ToggleSwitch;->R8:I
 
     invoke-virtual {p2, v4, v3, v3, v6}, Landroid/graphics/Paint;->setShadowLayer(FFFI)V
 
     goto :goto_0
 
+    .line 10
     :cond_0
-    iget v4, p0, Lcom/android/camera/ui/ToggleSwitch;->j:I
+    iget v4, p0, Lcom/android/camera/ui/ToggleSwitch;->P8:I
 
     invoke-virtual {p2, v4}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 11
     :goto_0
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getWidth()I
 
     move-result v4
 
@@ -1379,7 +1278,7 @@
 
     mul-float/2addr v4, v2
 
-    iget v6, p0, Lcom/android/camera/ui/ToggleSwitch;->g:I
+    iget v6, p0, Lcom/android/camera/ui/ToggleSwitch;->M8:I
 
     int-to-float v6, v6
 
@@ -1387,13 +1286,13 @@
 
     add-float/2addr v4, v6
 
-    iget v6, p0, Lcom/android/camera/ui/ToggleSwitch;->c:I
+    iget v6, p0, Lcom/android/camera/ui/ToggleSwitch;->C2:I
 
     int-to-float v6, v6
 
     add-float/2addr v4, v6
 
-    iget v6, p0, Lcom/android/camera/ui/ToggleSwitch;->w:I
+    iget v6, p0, Lcom/android/camera/ui/ToggleSwitch;->c9:I
 
     int-to-float v6, v6
 
@@ -1401,36 +1300,43 @@
 
     mul-float/2addr v4, v2
 
-    iget-object v6, p0, Lcom/android/camera/ui/ToggleSwitch;->i:Ljava/lang/String;
+    .line 12
+    iget-object v6, p0, Lcom/android/camera/ui/ToggleSwitch;->O8:Ljava/lang/String;
 
     int-to-float v5, v5
 
     invoke-virtual {p1, v6, v4, v5, p2}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
+    .line 13
     :cond_1
-    iget-object p2, p0, Lcom/android/camera/ui/ToggleSwitch;->h:Ljava/lang/String;
+    iget-object p2, p0, Lcom/android/camera/ui/ToggleSwitch;->N8:Ljava/lang/String;
 
     if-eqz p2, :cond_3
 
+    .line 14
     new-instance p2, Landroid/graphics/Paint;
 
     invoke-direct {p2, v0}, Landroid/graphics/Paint;-><init>(I)V
 
+    .line 15
     sget-object v0, Landroid/graphics/Paint$Align;->LEFT:Landroid/graphics/Paint$Align;
 
     invoke-virtual {p2, v0}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
 
-    iget v0, p0, Lcom/android/camera/ui/ToggleSwitch;->n:I
+    .line 16
+    iget v0, p0, Lcom/android/camera/ui/ToggleSwitch;->T8:I
 
     int-to-float v0, v0
 
     invoke-virtual {p2, v0}, Landroid/graphics/Paint;->setTextSize(F)V
 
+    .line 17
     invoke-virtual {p2}, Landroid/graphics/Paint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
+    .line 18
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getMeasuredHeight()I
 
     move-result v4
 
@@ -1446,29 +1352,34 @@
 
     sub-int/2addr v4, v0
 
-    iget-boolean v0, p0, Lcom/android/camera/ui/ToggleSwitch;->p:Z
+    .line 19
+    iget-boolean v0, p0, Lcom/android/camera/ui/ToggleSwitch;->V8:Z
 
     if-eqz v0, :cond_2
 
-    iget v0, p0, Lcom/android/camera/ui/ToggleSwitch;->j:I
+    .line 20
+    iget v0, p0, Lcom/android/camera/ui/ToggleSwitch;->P8:I
 
     invoke-virtual {p2, v0}, Landroid/graphics/Paint;->setColor(I)V
 
     goto :goto_1
 
+    .line 21
     :cond_2
-    iget v0, p0, Lcom/android/camera/ui/ToggleSwitch;->k:I
+    iget v0, p0, Lcom/android/camera/ui/ToggleSwitch;->Q8:I
 
     invoke-virtual {p2, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    iget v0, p0, Lcom/android/camera/ui/ToggleSwitch;->m:F
+    .line 22
+    iget v0, p0, Lcom/android/camera/ui/ToggleSwitch;->S8:F
 
-    iget v5, p0, Lcom/android/camera/ui/ToggleSwitch;->l:I
+    iget v5, p0, Lcom/android/camera/ui/ToggleSwitch;->R8:I
 
     invoke-virtual {p2, v0, v3, v3, v5}, Landroid/graphics/Paint;->setShadowLayer(FFFI)V
 
+    .line 23
     :goto_1
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getWidth()I
 
     move-result v0
 
@@ -1480,7 +1391,7 @@
 
     div-float/2addr v0, v1
 
-    iget v3, p0, Lcom/android/camera/ui/ToggleSwitch;->g:I
+    iget v3, p0, Lcom/android/camera/ui/ToggleSwitch;->M8:I
 
     int-to-float v3, v3
 
@@ -1488,13 +1399,13 @@
 
     sub-float/2addr v0, v3
 
-    iget v1, p0, Lcom/android/camera/ui/ToggleSwitch;->c:I
+    iget v1, p0, Lcom/android/camera/ui/ToggleSwitch;->C2:I
 
     int-to-float v1, v1
 
     sub-float/2addr v0, v1
 
-    iget v1, p0, Lcom/android/camera/ui/ToggleSwitch;->v:I
+    iget v1, p0, Lcom/android/camera/ui/ToggleSwitch;->b9:I
 
     int-to-float v1, v1
 
@@ -1502,7 +1413,8 @@
 
     mul-float/2addr v0, v2
 
-    iget-object p0, p0, Lcom/android/camera/ui/ToggleSwitch;->h:Ljava/lang/String;
+    .line 24
+    iget-object p0, p0, Lcom/android/camera/ui/ToggleSwitch;->N8:Ljava/lang/String;
 
     int-to-float v1, v4
 
@@ -1512,45 +1424,423 @@
     return-void
 .end method
 
-.method public q(Ljava/lang/String;Ljava/lang/String;)V
+
+# virtual methods
+.method public getTextOff()Ljava/lang/String;
     .locals 0
 
-    iput-object p1, p0, Lcom/android/camera/ui/ToggleSwitch;->h:Ljava/lang/String;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/ui/ToggleSwitch;->O8:Ljava/lang/String;
 
-    iput-object p2, p0, Lcom/android/camera/ui/ToggleSwitch;->i:Ljava/lang/String;
+    return-object p0
+.end method
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/ToggleSwitch;->d()V
+.method public getTextOn()Ljava/lang/String;
+    .locals 0
 
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/ui/ToggleSwitch;->N8:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method public h(F)I
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "dpValue"
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p0
+
+    iget p0, p0, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, p0
+
+    const/high16 p0, 0x3f000000    # 0.5f
+
+    add-float/2addr p1, p0
+
+    float-to-int p0, p1
+
+    return p0
+.end method
+
+.method public i(F)F
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "dpValue"
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p0
+
+    iget p0, p0, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, p0
+
+    const/high16 p0, 0x3f000000    # 0.5f
+
+    add-float/2addr p1, p0
+
+    return p1
+.end method
+
+.method public isChecked()Z
+    .locals 0
+
+    .line 1
+    iget-boolean p0, p0, Lcom/android/camera/ui/ToggleSwitch;->V8:Z
+
+    return p0
+.end method
+
+.method public onDraw(Landroid/graphics/Canvas;)V
+    .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "canvas"
+        }
+    .end annotation
+
+    .line 1
+    invoke-super {p0, p1}, Landroid/widget/CompoundButton;->onDraw(Landroid/graphics/Canvas;)V
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    .line 2
+    invoke-virtual {p0, v0, v1}, Landroid/widget/CompoundButton;->setLayerType(ILandroid/graphics/Paint;)V
+
+    .line 3
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getWidth()I
+
+    move-result v1
+
+    .line 4
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getHeight()I
+
+    move-result v2
+
+    .line 5
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getPaddingLeft()I
+
+    move-result v3
+
+    .line 6
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getPaddingTop()I
+
+    move-result v4
+
+    .line 7
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getPaddingRight()I
+
+    move-result v5
+
+    .line 8
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getPaddingBottom()I
+
+    move-result v6
+
+    sub-int/2addr v1, v3
+
+    sub-int/2addr v1, v5
+
+    sub-int/2addr v2, v4
+
+    sub-int/2addr v2, v6
+
+    .line 9
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getWidth()I
+
+    move-result v5
+
+    .line 10
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getHeight()I
+
+    move-result v6
+
+    sub-int/2addr v1, v5
+
+    const/4 v5, 0x2
+
+    .line 11
+    div-int/2addr v1, v5
+
+    add-int/2addr v3, v1
+
+    sub-int/2addr v2, v6
+
+    .line 12
+    div-int/2addr v2, v5
+
+    add-int/2addr v4, v2
+
+    int-to-float v1, v3
+
+    int-to-float v2, v4
+
+    .line 13
+    invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
+
+    .line 14
+    sget-object v1, Lcom/android/camera/ui/ToggleSwitch$c;->a:[I
+
+    iget-object v2, p0, Lcom/android/camera/ui/ToggleSwitch;->d9:Lcom/android/camera/ui/ToggleSwitch$e;
+
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v2
+
+    aget v1, v1, v2
+
+    if-eq v1, v0, :cond_3
+
+    if-eq v1, v5, :cond_2
+
+    const/4 v0, 0x3
+
+    if-eq v1, v0, :cond_1
+
+    const/4 v0, 0x4
+
+    if-eq v1, v0, :cond_0
+
+    goto :goto_0
+
+    .line 15
+    :cond_0
+    invoke-direct {p0, p1}, Lcom/android/camera/ui/ToggleSwitch;->m(Landroid/graphics/Canvas;)V
+
+    goto :goto_0
+
+    .line 16
+    :cond_1
+    invoke-direct {p0, p1}, Lcom/android/camera/ui/ToggleSwitch;->o(Landroid/graphics/Canvas;)V
+
+    goto :goto_0
+
+    .line 17
+    :cond_2
+    invoke-direct {p0, p1}, Lcom/android/camera/ui/ToggleSwitch;->l(Landroid/graphics/Canvas;)V
+
+    goto :goto_0
+
+    .line 18
+    :cond_3
+    invoke-direct {p0, p1}, Lcom/android/camera/ui/ToggleSwitch;->n(Landroid/graphics/Canvas;)V
+
+    :goto_0
+    return-void
+.end method
+
+.method public onMeasure(II)V
+    .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "widthMeasureSpec",
+            "heightMeasureSpec"
+        }
+    .end annotation
+
+    .line 1
+    invoke-super {p0, p2, p1}, Landroid/widget/CompoundButton;->onMeasure(II)V
+
+    .line 2
+    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
+
+    move-result v0
+
+    .line 3
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
+
+    move-result v1
+
+    .line 4
+    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
+
+    move-result p1
+
+    .line 5
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
+
+    move-result p2
+
+    const/high16 v2, 0x42580000    # 54.0f
+
+    .line 6
+    invoke-virtual {p0, v2}, Lcom/android/camera/ui/ToggleSwitch;->h(F)I
+
+    move-result v2
+
+    iget v3, p0, Lcom/android/camera/ui/ToggleSwitch;->b9:I
+
+    add-int/2addr v2, v3
+
+    iget v3, p0, Lcom/android/camera/ui/ToggleSwitch;->c9:I
+
+    add-int/2addr v2, v3
+
+    .line 7
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getPaddingLeft()I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getPaddingRight()I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    const/high16 v3, 0x41e00000    # 28.0f
+
+    .line 8
+    invoke-virtual {p0, v3}, Lcom/android/camera/ui/ToggleSwitch;->h(F)I
+
+    move-result v3
+
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getPaddingTop()I
+
+    move-result v4
+
+    add-int/2addr v3, v4
+
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getPaddingBottom()I
+
+    move-result v4
+
+    add-int/2addr v3, v4
+
+    const/high16 v4, -0x80000000
+
+    if-eq p1, v4, :cond_0
+
+    .line 9
+    invoke-static {v2, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result v2
+
+    :cond_0
+    if-eq p2, v4, :cond_1
+
+    .line 10
+    invoke-static {v3, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v3
+
+    .line 11
+    :cond_1
+    invoke-virtual {p0, v2, v3}, Landroid/widget/CompoundButton;->setMeasuredDimension(II)V
+
+    return-void
+.end method
+
+.method public q(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "textOn",
+            "textOff"
+        }
+    .end annotation
+
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/ui/ToggleSwitch;->N8:Ljava/lang/String;
+
+    .line 2
+    iput-object p2, p0, Lcom/android/camera/ui/ToggleSwitch;->O8:Ljava/lang/String;
+
+    .line 3
+    invoke-direct {p0}, Lcom/android/camera/ui/ToggleSwitch;->d()V
+
+    .line 4
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->requestLayout()V
 
     return-void
 .end method
 
 .method public setAnimDuration(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animDuration"
+        }
+    .end annotation
 
-    iput p1, p0, Lcom/android/camera/ui/ToggleSwitch;->o:I
+    .line 1
+    iput p1, p0, Lcom/android/camera/ui/ToggleSwitch;->U8:I
 
     return-void
 .end method
 
 .method public setChecked(Z)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "checked"
+        }
+    .end annotation
 
-    iget-boolean v0, p0, Lcom/android/camera/ui/ToggleSwitch;->r:Z
+    .line 1
+    iget-boolean v0, p0, Lcom/android/camera/ui/ToggleSwitch;->X8:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
-    iget-boolean v0, p0, Lcom/android/camera/ui/ToggleSwitch;->p:Z
+    iget-boolean v0, p0, Lcom/android/camera/ui/ToggleSwitch;->V8:Z
 
     if-eq v0, p1, :cond_6
 
-    iput-boolean p1, p0, Lcom/android/camera/ui/ToggleSwitch;->p:Z
+    .line 3
+    iput-boolean p1, p0, Lcom/android/camera/ui/ToggleSwitch;->V8:Z
 
-    iget-boolean v0, p0, Lcom/android/camera/ui/ToggleSwitch;->q:Z
+    .line 4
+    iget-boolean v0, p0, Lcom/android/camera/ui/ToggleSwitch;->W8:Z
 
     if-eqz v0, :cond_1
 
@@ -1559,72 +1849,86 @@
     :cond_1
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/camera/ui/ToggleSwitch;->q:Z
+    .line 5
+    iput-boolean v0, p0, Lcom/android/camera/ui/ToggleSwitch;->W8:Z
 
-    iget-object v0, p0, Lcom/android/camera/ui/ToggleSwitch;->t:Lcom/android/camera/ui/ToggleSwitch$d;
+    .line 6
+    iget-object v0, p0, Lcom/android/camera/ui/ToggleSwitch;->Z8:Lcom/android/camera/ui/ToggleSwitch$d;
 
     if-eqz v0, :cond_2
 
+    .line 7
     invoke-interface {v0, p0, p1}, Lcom/android/camera/ui/ToggleSwitch$d;->a(Lcom/android/camera/ui/ToggleSwitch;Z)V
 
     :cond_2
     const/4 p1, 0x0
 
-    iput-boolean p1, p0, Lcom/android/camera/ui/ToggleSwitch;->q:Z
+    .line 8
+    iput-boolean p1, p0, Lcom/android/camera/ui/ToggleSwitch;->W8:Z
 
-    iget-boolean p1, p0, Lcom/android/camera/ui/ToggleSwitch;->p:Z
+    .line 9
+    iget-boolean p1, p0, Lcom/android/camera/ui/ToggleSwitch;->V8:Z
 
     if-eqz p1, :cond_3
 
-    sget-object p1, Lcom/android/camera/ui/ToggleSwitch$e;->b:Lcom/android/camera/ui/ToggleSwitch$e;
+    .line 10
+    sget-object p1, Lcom/android/camera/ui/ToggleSwitch$e;->d:Lcom/android/camera/ui/ToggleSwitch$e;
 
-    iput-object p1, p0, Lcom/android/camera/ui/ToggleSwitch;->x:Lcom/android/camera/ui/ToggleSwitch$e;
+    iput-object p1, p0, Lcom/android/camera/ui/ToggleSwitch;->d9:Lcom/android/camera/ui/ToggleSwitch$e;
 
     goto :goto_0
 
+    .line 11
     :cond_3
-    sget-object p1, Lcom/android/camera/ui/ToggleSwitch$e;->a:Lcom/android/camera/ui/ToggleSwitch$e;
+    sget-object p1, Lcom/android/camera/ui/ToggleSwitch$e;->c:Lcom/android/camera/ui/ToggleSwitch$e;
 
-    iput-object p1, p0, Lcom/android/camera/ui/ToggleSwitch;->x:Lcom/android/camera/ui/ToggleSwitch$e;
+    iput-object p1, p0, Lcom/android/camera/ui/ToggleSwitch;->d9:Lcom/android/camera/ui/ToggleSwitch$e;
 
+    .line 12
     :goto_0
-    invoke-virtual {p0}, Landroid/view/View;->isAttachedToWindow()Z
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->isAttachedToWindow()Z
 
     move-result p1
 
     if-eqz p1, :cond_4
 
-    invoke-virtual {p0}, Landroid/view/View;->isLaidOut()Z
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->isLaidOut()Z
 
     move-result p1
 
     if-eqz p1, :cond_4
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/ToggleSwitch;->c()V
+    .line 13
+    invoke-direct {p0}, Lcom/android/camera/ui/ToggleSwitch;->c()V
 
     goto :goto_1
 
+    .line 14
     :cond_4
-    invoke-virtual {p0}, Lcom/android/camera/ui/ToggleSwitch;->e()V
+    invoke-direct {p0}, Lcom/android/camera/ui/ToggleSwitch;->e()V
 
     const/4 p1, 0x0
 
-    iput p1, p0, Lcom/android/camera/ui/ToggleSwitch;->s:F
+    .line 15
+    iput p1, p0, Lcom/android/camera/ui/ToggleSwitch;->Y8:F
 
-    iget-boolean p1, p0, Lcom/android/camera/ui/ToggleSwitch;->p:Z
+    .line 16
+    iget-boolean p1, p0, Lcom/android/camera/ui/ToggleSwitch;->V8:Z
 
     if-eqz p1, :cond_5
 
-    sget-object p1, Lcom/android/camera/ui/ToggleSwitch$e;->c:Lcom/android/camera/ui/ToggleSwitch$e;
+    .line 17
+    sget-object p1, Lcom/android/camera/ui/ToggleSwitch$e;->f:Lcom/android/camera/ui/ToggleSwitch$e;
 
-    iput-object p1, p0, Lcom/android/camera/ui/ToggleSwitch;->x:Lcom/android/camera/ui/ToggleSwitch$e;
+    iput-object p1, p0, Lcom/android/camera/ui/ToggleSwitch;->d9:Lcom/android/camera/ui/ToggleSwitch$e;
 
     goto :goto_1
 
+    .line 18
     :cond_5
-    sget-object p1, Lcom/android/camera/ui/ToggleSwitch$e;->d:Lcom/android/camera/ui/ToggleSwitch$e;
+    sget-object p1, Lcom/android/camera/ui/ToggleSwitch$e;->g:Lcom/android/camera/ui/ToggleSwitch$e;
 
-    iput-object p1, p0, Lcom/android/camera/ui/ToggleSwitch;->x:Lcom/android/camera/ui/ToggleSwitch$e;
+    iput-object p1, p0, Lcom/android/camera/ui/ToggleSwitch;->d9:Lcom/android/camera/ui/ToggleSwitch$e;
 
     :cond_6
     :goto_1
@@ -1633,8 +1937,17 @@
 
 .method public setOnCheckedChangeListener(Lcom/android/camera/ui/ToggleSwitch$d;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "listener"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera/ui/ToggleSwitch;->t:Lcom/android/camera/ui/ToggleSwitch$d;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/ui/ToggleSwitch;->Z8:Lcom/android/camera/ui/ToggleSwitch$d;
 
     return-void
 .end method
@@ -1642,10 +1955,12 @@
 .method public toggle()V
     .locals 2
 
-    invoke-static {}, Lv8/n2;->impl()Ljava/util/Optional;
+    .line 1
+    invoke-static {}, Ld/d/a/m7/g/p2;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Ljava/util/Optional;->isPresent()Z
 
     move-result v1
@@ -1656,9 +1971,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lv8/n2;
+    check-cast v0, Ld/d/a/m7/g/p2;
 
-    invoke-interface {v0}, Lv8/n2;->j0()Z
+    invoke-interface {v0}, Ld/d/a/m7/g/p2;->j0()Z
 
     move-result v0
 
@@ -1666,8 +1981,9 @@
 
     return-void
 
+    .line 3
     :cond_0
-    iget-boolean v0, p0, Lcom/android/camera/ui/ToggleSwitch;->p:Z
+    iget-boolean v0, p0, Lcom/android/camera/ui/ToggleSwitch;->V8:Z
 
     xor-int/lit8 v0, v0, 0x1
 

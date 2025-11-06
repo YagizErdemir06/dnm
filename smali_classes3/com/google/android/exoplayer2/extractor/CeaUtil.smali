@@ -23,6 +23,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,6 +32,7 @@
 .method public static consume(JLcom/google/android/exoplayer2/util/ParsableByteArray;[Lcom/google/android/exoplayer2/extractor/TrackOutput;)V
     .locals 10
 
+    .line 1
     :goto_0
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
@@ -40,14 +42,17 @@
 
     if-le v0, v1, :cond_9
 
+    .line 2
     invoke-static {p2}, Lcom/google/android/exoplayer2/extractor/CeaUtil;->readNon255TerminatedValue(Lcom/google/android/exoplayer2/util/ParsableByteArray;)I
 
     move-result v0
 
+    .line 3
     invoke-static {p2}, Lcom/google/android/exoplayer2/extractor/CeaUtil;->readNon255TerminatedValue(Lcom/google/android/exoplayer2/util/ParsableByteArray;)I
 
     move-result v2
 
+    .line 4
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getPosition()I
 
     move-result v3
@@ -58,6 +63,7 @@
 
     if-eq v2, v4, :cond_7
 
+    .line 5
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
     move-result v4
@@ -75,10 +81,12 @@
 
     if-lt v2, v0, :cond_8
 
+    .line 6
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v0
 
+    .line 7
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedShort()I
 
     move-result v2
@@ -89,6 +97,7 @@
 
     if-ne v2, v4, :cond_1
 
+    .line 8
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v6
@@ -98,6 +107,7 @@
     :cond_1
     move v6, v5
 
+    .line 9
     :goto_1
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
@@ -107,6 +117,7 @@
 
     if-ne v2, v8, :cond_2
 
+    .line 10
     invoke-virtual {p2, v1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
     :cond_2
@@ -148,6 +159,7 @@
     :cond_6
     if-eqz v0, :cond_8
 
+    .line 11
     invoke-static {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/extractor/CeaUtil;->consumeCcData(JLcom/google/android/exoplayer2/util/ParsableByteArray;[Lcom/google/android/exoplayer2/extractor/TrackOutput;)V
 
     goto :goto_5
@@ -158,12 +170,15 @@
 
     const-string v1, "Skipping remainder of malformed SEI NAL unit."
 
+    .line 12
     invoke-static {v0, v1}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 13
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->limit()I
 
     move-result v3
 
+    .line 14
     :cond_8
     :goto_5
     invoke-virtual {p2, v3}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
@@ -177,6 +192,7 @@
 .method public static consumeCcData(JLcom/google/android/exoplayer2/util/ParsableByteArray;[Lcom/google/android/exoplayer2/extractor/TrackOutput;)V
     .locals 11
 
+    .line 1
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v0
@@ -204,14 +220,17 @@
     :cond_1
     and-int/lit8 v0, v0, 0x1f
 
+    .line 2
     invoke-virtual {p2, v3}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
     mul-int/lit8 v0, v0, 0x3
 
+    .line 3
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getPosition()I
 
     move-result v1
 
+    .line 4
     array-length v3, p3
 
     :goto_1
@@ -219,8 +238,10 @@
 
     aget-object v4, p3, v2
 
+    .line 5
     invoke-virtual {p2, v1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
+    .line 6
     invoke-interface {v4, p2, v0}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->sampleData(Lcom/google/android/exoplayer2/util/ParsableByteArray;I)V
 
     const-wide v5, -0x7fffffffffffffffL    # -4.9E-324
@@ -239,6 +260,7 @@
 
     move v8, v0
 
+    .line 7
     invoke-interface/range {v4 .. v10}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->sampleMetadata(JIIILcom/google/android/exoplayer2/extractor/TrackOutput$CryptoData;)V
 
     :cond_2
@@ -255,6 +277,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
@@ -266,6 +289,7 @@
 
     return p0
 
+    .line 2
     :cond_1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 

@@ -7,8 +7,6 @@
 
 
 # static fields
-.field public static final TYPE_INIT:I = -0x1
-
 .field public static final TYPE_PREFERENCE:I = 0x1
 
 .field public static final TYPE_THUMBNAIL:I

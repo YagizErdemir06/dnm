@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/Striped$WeakSafeLock;
+.class public final Lcom/google/common/util/concurrent/Striped$WeakSafeLock;
 .super Lcom/google/common/util/concurrent/ForwardingLock;
 .source "SourceFile"
 
@@ -24,10 +24,13 @@
 .method public constructor <init>(Ljava/util/concurrent/locks/Lock;Lcom/google/common/util/concurrent/Striped$WeakSafeReadWriteLock;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/util/concurrent/ForwardingLock;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/util/concurrent/Striped$WeakSafeLock;->delegate:Ljava/util/concurrent/locks/Lock;
 
+    .line 3
     iput-object p2, p0, Lcom/google/common/util/concurrent/Striped$WeakSafeLock;->strongReference:Lcom/google/common/util/concurrent/Striped$WeakSafeReadWriteLock;
 
     return-void
@@ -38,6 +41,7 @@
 .method public delegate()Ljava/util/concurrent/locks/Lock;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/Striped$WeakSafeLock;->delegate:Ljava/util/concurrent/locks/Lock;
 
     return-object p0
@@ -46,6 +50,7 @@
 .method public newCondition()Ljava/util/concurrent/locks/Condition;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/Striped$WeakSafeCondition;
 
     iget-object v1, p0, Lcom/google/common/util/concurrent/Striped$WeakSafeLock;->delegate:Ljava/util/concurrent/locks/Lock;

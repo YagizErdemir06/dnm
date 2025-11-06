@@ -1,4 +1,4 @@
-.class final Landroidx/core/app/JobIntentService$CompatWorkItem;
+.class public final Landroidx/core/app/JobIntentService$CompatWorkItem;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,23 +18,26 @@
 
 
 # instance fields
-.field final mIntent:Landroid/content/Intent;
+.field public final mIntent:Landroid/content/Intent;
 
-.field final mStartId:I
+.field public final mStartId:I
 
-.field final synthetic this$0:Landroidx/core/app/JobIntentService;
+.field public final synthetic this$0:Landroidx/core/app/JobIntentService;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/core/app/JobIntentService;Landroid/content/Intent;I)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/core/app/JobIntentService$CompatWorkItem;->this$0:Landroidx/core/app/JobIntentService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p2, p0, Landroidx/core/app/JobIntentService$CompatWorkItem;->mIntent:Landroid/content/Intent;
 
+    .line 3
     iput p3, p0, Landroidx/core/app/JobIntentService$CompatWorkItem;->mStartId:I
 
     return-void
@@ -45,6 +48,7 @@
 .method public complete()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/core/app/JobIntentService$CompatWorkItem;->this$0:Landroidx/core/app/JobIntentService;
 
     iget p0, p0, Landroidx/core/app/JobIntentService$CompatWorkItem;->mStartId:I
@@ -57,6 +61,7 @@
 .method public getIntent()Landroid/content/Intent;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/app/JobIntentService$CompatWorkItem;->mIntent:Landroid/content/Intent;
 
     return-object p0

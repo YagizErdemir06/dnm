@@ -1,4 +1,4 @@
-.class interface abstract annotation Lcom/google/common/util/concurrent/Partially$GwtIncompatible;
+.class public interface abstract annotation Lcom/google/common/util/concurrent/Partially$GwtIncompatible;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

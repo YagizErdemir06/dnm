@@ -15,14 +15,23 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/android/camera/ui/FaceView;
+.field public final synthetic c:Lcom/android/camera/ui/FaceView;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera/ui/FaceView;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera/ui/FaceView$c;->a:Lcom/android/camera/ui/FaceView;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/ui/FaceView$c;->c:Lcom/android/camera/ui/FaceView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
@@ -33,10 +42,19 @@
 # virtual methods
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
 
-    iget-object p1, p0, Lcom/android/camera/ui/FaceView$c;->a:Lcom/android/camera/ui/FaceView;
+    .line 1
+    iget-object p1, p0, Lcom/android/camera/ui/FaceView$c;->c:Lcom/android/camera/ui/FaceView;
 
-    invoke-static {p1}, Lcom/android/camera/ui/FaceView;->m(Lcom/android/camera/ui/FaceView;)Landroid/graphics/Paint;
+    invoke-static {p1}, Lcom/android/camera/ui/FaceView;->j(Lcom/android/camera/ui/FaceView;)Landroid/graphics/Paint;
 
     move-result-object p1
 
@@ -44,15 +62,17 @@
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/FaceView$c;->a:Lcom/android/camera/ui/FaceView;
+    .line 2
+    iget-object p1, p0, Lcom/android/camera/ui/FaceView$c;->c:Lcom/android/camera/ui/FaceView;
 
-    invoke-static {p1}, Lcom/android/camera/ui/FaceView;->n(Lcom/android/camera/ui/FaceView;)Landroid/graphics/Paint;
+    invoke-static {p1}, Lcom/android/camera/ui/FaceView;->k(Lcom/android/camera/ui/FaceView;)Landroid/graphics/Paint;
 
     move-result-object p1
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    iget-object p0, p0, Lcom/android/camera/ui/FaceView$c;->a:Lcom/android/camera/ui/FaceView;
+    .line 3
+    iget-object p0, p0, Lcom/android/camera/ui/FaceView$c;->c:Lcom/android/camera/ui/FaceView;
 
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
@@ -61,14 +81,23 @@
 
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
 
-    iget-object p0, p0, Lcom/android/camera/ui/FaceView$c;->a:Lcom/android/camera/ui/FaceView;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/ui/FaceView$c;->c:Lcom/android/camera/ui/FaceView;
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/FaceView;->getFaces()[Lya/f3;
+    invoke-virtual {p0}, Lcom/android/camera/ui/FaceView;->getFaces()[Ld/d/b/k4;
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Lcom/android/camera/ui/FaceView;->o(Lcom/android/camera/ui/FaceView;[Lya/f3;)[Lya/f3;
+    invoke-static {p0, p1}, Lcom/android/camera/ui/FaceView;->l(Lcom/android/camera/ui/FaceView;[Ld/d/b/k4;)[Ld/d/b/k4;
 
     return-void
 .end method

@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/widget/SearchView$SavedState;
+.class public Landroidx/appcompat/widget/SearchView$SavedState;
 .super Landroidx/customview/view/AbsSavedState;
 .source "SourceFile"
 
@@ -27,13 +27,14 @@
 
 
 # instance fields
-.field isIconified:Z
+.field public isIconified:Z
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/appcompat/widget/SearchView$SavedState$1;
 
     invoke-direct {v0}, Landroidx/appcompat/widget/SearchView$SavedState$1;-><init>()V
@@ -81,6 +82,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -89,6 +91,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 2
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
@@ -121,8 +124,10 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
+    .line 2
     iget-boolean p0, p0, Landroidx/appcompat/widget/SearchView$SavedState;->isIconified:Z
 
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;

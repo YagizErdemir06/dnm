@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Multimaps$AsMap$EntrySet$1;
+.class public Lcom/google/common/collect/Multimaps$AsMap$EntrySet$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -28,13 +28,14 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/google/common/collect/Multimaps$AsMap$EntrySet;
+.field public final synthetic this$1:Lcom/google/common/collect/Multimaps$AsMap$EntrySet;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/Multimaps$AsMap$EntrySet;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/Multimaps$AsMap$EntrySet$1;->this$1:Lcom/google/common/collect/Multimaps$AsMap$EntrySet;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

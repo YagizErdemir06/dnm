@@ -23,6 +23,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,12 +40,14 @@
 
     const/4 v1, 0x0
 
+    .line 1
     invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object p0
 
-    const-string/jumbo v0, "startedFromLauncher"
+    const-string v0, "startedFromLauncher"
 
+    .line 2
     invoke-interface {p0, v0, v1}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p0
@@ -63,12 +66,14 @@
 
     const/4 v1, 0x0
 
+    .line 1
     invoke-virtual {p0, v0, v1}, Landroid/app/Activity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    const-string/jumbo v2, "startedFromLauncher"
+    const-string v2, "startedFromLauncher"
 
+    .line 2
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v1
@@ -77,6 +82,7 @@
 
     return-void
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
@@ -86,14 +92,15 @@
 
     return-void
 
+    .line 4
     :cond_1
-    const-string v1, "android.intent.action.MAIN"
-
     invoke-virtual {p0}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const-string v3, "android.intent.action.MAIN"
+
+    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -101,6 +108,7 @@
 
     const-string v1, "android.intent.category.LAUNCHER"
 
+    .line 5
     invoke-virtual {p0, v1}, Landroid/content/Intent;->hasCategory(Ljava/lang/String;)Z
 
     move-result v1
@@ -109,12 +117,14 @@
 
     const-string v1, "android.intent.category.LEANBACK_LAUNCHER"
 
+    .line 6
     invoke-virtual {p0, v1}, Landroid/content/Intent;->hasCategory(Ljava/lang/String;)Z
 
     move-result p0
 
     if-eqz p0, :cond_3
 
+    .line 7
     :cond_2
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 

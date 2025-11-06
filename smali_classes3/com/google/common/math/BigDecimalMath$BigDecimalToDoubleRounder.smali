@@ -1,4 +1,4 @@
-.class Lcom/google/common/math/BigDecimalMath$BigDecimalToDoubleRounder;
+.class public Lcom/google/common/math/BigDecimalMath$BigDecimalToDoubleRounder;
 .super Lcom/google/common/math/ToDoubleRounder;
 .source "SourceFile"
 
@@ -23,13 +23,14 @@
 
 
 # static fields
-.field static final INSTANCE:Lcom/google/common/math/BigDecimalMath$BigDecimalToDoubleRounder;
+.field public static final INSTANCE:Lcom/google/common/math/BigDecimalMath$BigDecimalToDoubleRounder;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/math/BigDecimalMath$BigDecimalToDoubleRounder;
 
     invoke-direct {v0}, Lcom/google/common/math/BigDecimalMath$BigDecimalToDoubleRounder;-><init>()V
@@ -42,6 +43,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/math/ToDoubleRounder;-><init>()V
 
     return-void

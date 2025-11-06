@@ -1,4 +1,4 @@
-.class Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;
+.class public Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;
 .super Lcom/xiaomi/camera/common/LifecycleAsyncTask;
 .source "SourceFile"
 
@@ -18,30 +18,14 @@
         "Lcom/xiaomi/camera/common/LifecycleAsyncTask<",
         "Ljava/lang/Void;",
         "Ljava/lang/Void;",
-        "Lcom/android/camera/m5;",
+        "Ld/d/a/w5;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field public j:Z
-
-.field public k:Z
-
-.field public l:Z
-
-.field public final m:Ljava/lang/ref/Reference;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/lang/ref/Reference<",
-            "Lcom/android/camera/ActivityBase;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public final n:Ljava/lang/ref/Reference;
+.field private final K0:Ljava/lang/ref/Reference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/Reference<",
@@ -51,22 +35,53 @@
     .end annotation
 .end field
 
-.field public final o:Ljava/lang/ref/Reference;
+.field private final k0:Ljava/lang/ref/Reference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/Reference<",
-            "Lcom/android/camera/m5;",
+            "Lcom/android/camera/ActivityBase;",
             ">;"
         }
     .end annotation
 .end field
 
-.field public p:I
+.field private final k1:Ljava/lang/ref/Reference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ref/Reference<",
+            "Ld/d/a/w5;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private t:Z
+
+.field private u:Z
+
+.field private v1:I
+
+.field private w:Z
 
 
 # direct methods
-.method public constructor <init>(ZLjava/lang/ref/Reference;Lcom/android/camera/ThumbnailUpdater;Lcom/android/camera/m5;)V
+.method public constructor <init>(ZLjava/lang/ref/Reference;Lcom/android/camera/ThumbnailUpdater;Ld/d/a/w5;)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "lookAtCache",
+            "activityBase",
+            "thumbnailUpdater",
+            "thumbnail"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z",
@@ -74,7 +89,7 @@
             "Lcom/android/camera/ActivityBase;",
             ">;",
             "Lcom/android/camera/ThumbnailUpdater;",
-            "Lcom/android/camera/m5;",
+            "Ld/d/a/w5;",
             ")V"
         }
     .end annotation
@@ -92,13 +107,30 @@
     move-object v5, p4
 
     .line 1
-    invoke-direct/range {v0 .. v5}, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;-><init>(ZZLjava/lang/ref/Reference;Lcom/android/camera/ThumbnailUpdater;Lcom/android/camera/m5;)V
+    invoke-direct/range {v0 .. v5}, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;-><init>(ZZLjava/lang/ref/Reference;Lcom/android/camera/ThumbnailUpdater;Ld/d/a/w5;)V
 
     return-void
 .end method
 
-.method public constructor <init>(ZZLjava/lang/ref/Reference;Lcom/android/camera/ThumbnailUpdater;Lcom/android/camera/m5;)V
+.method public constructor <init>(ZZLjava/lang/ref/Reference;Lcom/android/camera/ThumbnailUpdater;Ld/d/a/w5;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "lookAtCache",
+            "updateViewIfThumbnailIsNull",
+            "activityBaseRef",
+            "thumbnailUpdater",
+            "thumbnail"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(ZZ",
@@ -106,7 +138,7 @@
             "Lcom/android/camera/ActivityBase;",
             ">;",
             "Lcom/android/camera/ThumbnailUpdater;",
-            "Lcom/android/camera/m5;",
+            "Ld/d/a/w5;",
             ")V"
         }
     .end annotation
@@ -117,30 +149,30 @@
     const/4 v0, 0x0
 
     .line 3
-    iput v0, p0, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->p:I
+    iput v0, p0, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->v1:I
 
     .line 4
-    iput-boolean p1, p0, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->j:Z
+    iput-boolean p1, p0, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->t:Z
 
     .line 5
-    iput-boolean p2, p0, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->k:Z
+    iput-boolean p2, p0, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->u:Z
 
     .line 6
-    iput-object p3, p0, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->m:Ljava/lang/ref/Reference;
+    iput-object p3, p0, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->k0:Ljava/lang/ref/Reference;
 
     .line 7
     new-instance p1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p1, p4}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object p1, p0, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->n:Ljava/lang/ref/Reference;
+    iput-object p1, p0, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->K0:Ljava/lang/ref/Reference;
 
     .line 8
     new-instance p1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p1, p5}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object p1, p0, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->o:Ljava/lang/ref/Reference;
+    iput-object p1, p0, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->k1:Ljava/lang/ref/Reference;
 
     .line 9
     new-instance p0, Ljava/lang/StringBuilder;
@@ -168,11 +200,20 @@
 
 
 # virtual methods
-.method public varargs C([Ljava/lang/Void;)Lcom/android/camera/m5;
+.method public varargs C([Ljava/lang/Void;)Ld/d/a/w5;
     .locals 17
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "params"
+        }
+    .end annotation
 
     move-object/from16 v1, p0
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -187,7 +228,7 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v2, v1, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->j:Z
+    iget-boolean v2, v1, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->t:Z
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -203,7 +244,8 @@
 
     invoke-static {v4, v0, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v0, v1, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->m:Ljava/lang/ref/Reference;
+    .line 2
+    iget-object v0, v1, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->k0:Ljava/lang/ref/Reference;
 
     invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
@@ -217,16 +259,18 @@
 
     if-nez v3, :cond_0
 
-    const-string v0, "LoadThumbnailTask#doInBackground -> mActivityBaseRef \u5df2\u88ab\u91ca\u653e"
+    new-array v0, v2, [Ljava/lang/Object;
 
-    new-array v1, v2, [Ljava/lang/Object;
+    const-string v1, "LoadThumbnailTask#doInBackground -> mActivityBaseRef \u5df2\u88ab\u91ca\u653e"
 
-    invoke-static {v4, v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 3
+    invoke-static {v4, v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-object v5
 
+    .line 4
     :cond_0
-    invoke-virtual/range {p0 .. p0}, Lcom/xiaomi/camera/common/LifecycleAsyncTask;->r()Z
+    invoke-virtual/range {p0 .. p0}, Lcom/xiaomi/camera/common/LifecycleAsyncTask;->m()Z
 
     move-result v0
 
@@ -234,12 +278,14 @@
 
     return-object v5
 
+    .line 5
     :cond_1
     invoke-virtual {v3}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/android/camera/m5;->t(Landroid/content/ContentResolver;)Lcom/android/camera/m5$b;
+    .line 6
+    invoke-static {v6}, Ld/d/a/w5;->t(Landroid/content/ContentResolver;)Ld/d/a/w5$b;
 
     move-result-object v7
 
@@ -249,11 +295,13 @@
 
     goto :goto_0
 
+    .line 7
     :cond_2
-    iget-object v0, v7, Lcom/android/camera/m5$b;->d:Landroid/net/Uri;
+    iget-object v0, v7, Ld/d/a/w5$b;->d:Landroid/net/Uri;
 
     move-object v8, v0
 
+    .line 8
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -273,14 +321,16 @@
 
     invoke-static {v4, v0, v9}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v0, v1, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->o:Ljava/lang/ref/Reference;
+    .line 9
+    iget-object v0, v1, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->k1:Ljava/lang/ref/Reference;
 
     invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/camera/m5;
+    check-cast v0, Ld/d/a/w5;
 
+    .line 10
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -305,10 +355,12 @@
 
     if-eqz v0, :cond_8
 
-    invoke-virtual {v0}, Lcom/android/camera/m5;->D()Landroid/net/Uri;
+    .line 11
+    invoke-virtual {v0}, Ld/d/a/w5;->D()Landroid/net/Uri;
 
     move-result-object v11
 
+    .line 12
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -327,7 +379,8 @@
 
     invoke-static {v4, v12, v13}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {v11, v6}, Lcom/android/camera/a6;->w3(Landroid/net/Uri;Landroid/content/ContentResolver;)Z
+    .line 13
+    invoke-static {v11, v6}, Ld/d/a/z5;->k3(Landroid/net/Uri;Landroid/content/ContentResolver;)Z
 
     move-result v12
 
@@ -335,6 +388,7 @@
 
     if-eqz v12, :cond_7
 
+    .line 14
     invoke-virtual {v11, v8}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
 
     move-result v12
@@ -345,22 +399,25 @@
 
     goto :goto_1
 
+    .line 15
     :cond_3
-    iget-wide v13, v7, Lcom/android/camera/m5$b;->j:J
+    iget-wide v13, v7, Ld/d/a/w5$b;->j:J
 
     :goto_1
-    invoke-virtual {v0, v13, v14}, Lcom/android/camera/m5;->J(J)V
+    invoke-virtual {v0, v13, v14}, Ld/d/a/w5;->J(J)V
 
     return-object v0
 
     :cond_4
     if-eqz v8, :cond_6
 
+    .line 16
     :try_start_0
     invoke-static {v8}, Landroid/content/ContentUris;->parseId(Landroid/net/Uri;)J
 
     move-result-wide v12
 
+    .line 17
     invoke-static {v11}, Landroid/content/ContentUris;->parseId(Landroid/net/Uri;)J
 
     move-result-wide v14
@@ -369,7 +426,8 @@
 
     if-lez v12, :cond_6
 
-    invoke-static {v3, v11}, Ll9/i;->f(Landroid/content/Context;Landroid/net/Uri;)Z
+    .line 18
+    invoke-static {v3, v11}, Ld/d/a/w7/q;->f(Landroid/content/Context;Landroid/net/Uri;)Z
 
     move-result v12
 
@@ -377,6 +435,7 @@
 
     return-object v0
 
+    .line 19
     :cond_5
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -405,14 +464,17 @@
 
     const-string v11, "LoadThumbnailTask: check lastId out date fail."
 
+    .line 20
     invoke-static {v4, v11, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 21
     :cond_6
     :goto_2
-    iput-boolean v10, v1, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->j:Z
+    iput-boolean v10, v1, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->t:Z
 
     goto :goto_3
 
+    .line 22
     :cond_7
     invoke-static {}, Lcom/xiaomi/camera/parallelservice/provider/ParallelProcessProvider;->f()I
 
@@ -422,16 +484,19 @@
 
     if-eqz v11, :cond_8
 
+    .line 23
     invoke-virtual {v11, v8}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
 
     move-result v12
 
     if-nez v12, :cond_8
 
-    invoke-static {}, Lt2/b;->b()Lw2/c;
+    .line 24
+    invoke-static {}, Ld/d/a/m6/b;->b()Ld/d/a/m6/e/c;
 
     move-result-object v12
 
+    .line 25
     invoke-static {v11}, Landroid/content/ContentUris;->parseId(Landroid/net/Uri;)J
 
     move-result-wide v15
@@ -440,19 +505,22 @@
 
     move-result-object v11
 
-    invoke-virtual {v12, v11}, Lw2/c;->x(Ljava/lang/Long;)Lu2/b;
+    .line 26
+    invoke-virtual {v12, v11}, Ld/d/a/m6/e/c;->x(Ljava/lang/Long;)Ld/d/a/m6/c/b;
 
     move-result-object v11
 
     if-eqz v11, :cond_8
 
-    invoke-virtual {v0, v13, v14}, Lcom/android/camera/m5;->J(J)V
+    .line 27
+    invoke-virtual {v0, v13, v14}, Ld/d/a/w5;->J(J)V
 
     return-object v0
 
+    .line 28
     :cond_8
     :goto_3
-    invoke-virtual/range {p0 .. p0}, Lcom/xiaomi/camera/common/LifecycleAsyncTask;->r()Z
+    invoke-virtual/range {p0 .. p0}, Lcom/xiaomi/camera/common/LifecycleAsyncTask;->m()Z
 
     move-result v0
 
@@ -460,10 +528,12 @@
 
     return-object v5
 
+    .line 29
     :cond_9
-    iput v10, v1, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->p:I
+    iput v10, v1, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->v1:I
 
-    invoke-virtual {v3}, Lcom/android/camera/ActivityBase;->ci()Z
+    .line 30
+    invoke-virtual {v3}, Lcom/android/camera/ActivityBase;->Q9()Z
 
     move-result v0
 
@@ -471,14 +541,17 @@
 
     if-eqz v8, :cond_b
 
-    iget-boolean v0, v1, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->j:Z
+    .line 31
+    iget-boolean v0, v1, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->t:Z
 
     if-eqz v0, :cond_c
 
-    invoke-static {v3, v6}, Lcom/android/camera/m5;->w(Landroid/content/Context;Landroid/content/ContentResolver;)Lcom/android/camera/m5;
+    .line 32
+    invoke-static {v3, v6}, Ld/d/a/w5;->w(Landroid/content/Context;Landroid/content/ContentResolver;)Ld/d/a/w5;
 
     move-result-object v0
 
+    .line 33
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -499,7 +572,8 @@
 
     if-eqz v0, :cond_a
 
-    invoke-virtual {v0}, Lcom/android/camera/m5;->D()Landroid/net/Uri;
+    .line 34
+    invoke-virtual {v0}, Ld/d/a/w5;->D()Landroid/net/Uri;
 
     move-result-object v6
 
@@ -510,22 +584,25 @@
 
     goto :goto_4
 
+    .line 35
     :cond_b
-    iput-boolean v10, v1, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->k:Z
+    iput-boolean v10, v1, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->u:Z
 
-    const-string v0, "LoadThumbnailTask: no image/video was found"
+    new-array v0, v2, [Ljava/lang/Object;
 
-    new-array v6, v2, [Ljava/lang/Object;
+    const-string v6, "LoadThumbnailTask: no image/video was found"
 
-    invoke-static {v4, v0, v6}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 36
+    invoke-static {v4, v6, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :cond_c
     move-object v0, v5
 
     move-object v6, v0
 
+    .line 37
     :goto_4
-    invoke-virtual/range {p0 .. p0}, Lcom/xiaomi/camera/common/LifecycleAsyncTask;->r()Z
+    invoke-virtual/range {p0 .. p0}, Lcom/xiaomi/camera/common/LifecycleAsyncTask;->m()Z
 
     move-result v8
 
@@ -534,13 +611,15 @@
     return-object v5
 
     :cond_d
-    new-array v8, v10, [Lcom/android/camera/m5;
+    new-array v8, v10, [Ld/d/a/w5;
 
     const/4 v11, 0x2
 
-    iput v11, v1, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->p:I
+    .line 38
+    iput v11, v1, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->v1:I
 
-    invoke-virtual {v3}, Lcom/android/camera/ActivityBase;->ai()Z
+    .line 39
+    invoke-virtual {v3}, Lcom/android/camera/ActivityBase;->x9()Z
 
     move-result v12
 
@@ -550,10 +629,12 @@
 
     if-eqz v12, :cond_f
 
-    invoke-static {v3, v8, v6, v7}, Lcom/android/camera/m5;->v(Landroid/content/Context;[Lcom/android/camera/m5;Landroid/net/Uri;Lcom/android/camera/m5$b;)I
+    .line 40
+    invoke-static {v3, v8, v6, v7}, Ld/d/a/w5;->v(Landroid/content/Context;[Ld/d/a/w5;Landroid/net/Uri;Ld/d/a/w5$b;)I
 
     move-result v3
 
+    .line 41
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -572,6 +653,7 @@
 
     goto :goto_5
 
+    .line 42
     :cond_e
     aget-object v12, v8, v2
 
@@ -584,23 +666,29 @@
 
     new-array v12, v2, [Ljava/lang/Object;
 
+    .line 43
     invoke-static {v4, v6, v12}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iput v9, v1, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->p:I
+    .line 44
+    iput v9, v1, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->v1:I
 
     goto :goto_7
 
+    .line 45
     :cond_f
-    iput-boolean v10, v1, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->k:Z
+    iput-boolean v10, v1, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->u:Z
 
-    invoke-virtual {v3}, Lcom/android/camera/ActivityBase;->yi()Ljava/util/ArrayList;
+    .line 46
+    invoke-virtual {v3}, Lcom/android/camera/ActivityBase;->Ic()Ljava/util/ArrayList;
 
     move-result-object v9
 
-    invoke-static {v3, v8, v9, v6}, Lcom/android/camera/m5;->x(Landroid/content/Context;[Lcom/android/camera/m5;Ljava/util/ArrayList;Landroid/net/Uri;)I
+    .line 47
+    invoke-static {v3, v8, v9, v6}, Ld/d/a/w5;->x(Landroid/content/Context;[Ld/d/a/w5;Ljava/util/ArrayList;Landroid/net/Uri;)I
 
     move-result v3
 
+    .line 48
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -619,6 +707,7 @@
 
     goto :goto_6
 
+    .line 49
     :cond_10
     aget-object v9, v8, v2
 
@@ -631,11 +720,13 @@
 
     new-array v9, v2, [Ljava/lang/Object;
 
+    .line 50
     invoke-static {v4, v6, v9}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     const/4 v4, 0x4
 
-    iput v4, v1, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->p:I
+    .line 51
+    iput v4, v1, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->v1:I
 
     :goto_7
     const/4 v4, -0x2
@@ -652,8 +743,9 @@
 
     return-object v5
 
+    .line 52
     :cond_11
-    iput-boolean v10, v1, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->l:Z
+    iput-boolean v10, v1, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->w:Z
 
     return-object v5
 
@@ -664,25 +756,28 @@
 
     goto :goto_8
 
+    .line 53
     :cond_13
-    iget-wide v12, v7, Lcom/android/camera/m5$b;->c:J
+    iget-wide v12, v7, Ld/d/a/w5$b;->c:J
 
     :goto_8
-    invoke-virtual {v0, v12, v13}, Lcom/android/camera/m5;->O(J)V
+    invoke-virtual {v0, v12, v13}, Ld/d/a/w5;->O(J)V
 
     if-nez v7, :cond_14
 
     goto :goto_9
 
+    .line 54
     :cond_14
-    iget-boolean v2, v7, Lcom/android/camera/m5$b;->i:Z
+    iget-boolean v2, v7, Ld/d/a/w5$b;->i:Z
 
     :goto_9
-    invoke-virtual {v0, v2}, Lcom/android/camera/m5;->N(Z)V
+    invoke-virtual {v0, v2}, Ld/d/a/w5;->N(Z)V
 
     :cond_15
     return-object v0
 
+    .line 55
     :cond_16
     aget-object v0, v8, v2
 
@@ -691,11 +786,12 @@
     goto :goto_a
 
     :cond_17
-    iget-wide v12, v7, Lcom/android/camera/m5$b;->c:J
+    iget-wide v12, v7, Ld/d/a/w5$b;->c:J
 
     :goto_a
-    invoke-virtual {v0, v12, v13}, Lcom/android/camera/m5;->O(J)V
+    invoke-virtual {v0, v12, v13}, Ld/d/a/w5;->O(J)V
 
+    .line 56
     aget-object v0, v8, v2
 
     if-nez v7, :cond_18
@@ -705,19 +801,29 @@
     goto :goto_b
 
     :cond_18
-    iget-boolean v1, v7, Lcom/android/camera/m5$b;->i:Z
+    iget-boolean v1, v7, Ld/d/a/w5$b;->i:Z
 
     :goto_b
-    invoke-virtual {v0, v1}, Lcom/android/camera/m5;->N(Z)V
+    invoke-virtual {v0, v1}, Ld/d/a/w5;->N(Z)V
 
+    .line 57
     aget-object v0, v8, v2
 
     return-object v0
 .end method
 
-.method public D(Lcom/android/camera/m5;)V
+.method public D(Ld/d/a/w5;)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "thumbnail"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -728,7 +834,8 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Lcom/xiaomi/camera/common/LifecycleAsyncTask;->q()Z
+    .line 2
+    invoke-virtual {p0}, Lcom/xiaomi/camera/common/LifecycleAsyncTask;->l()Z
 
     move-result v1
 
@@ -748,7 +855,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->l:Z
+    iget-boolean v1, p0, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->w:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -762,9 +869,11 @@
 
     const-string v3, "ThumbnailUpdater"
 
+    .line 3
     invoke-static {v3, v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->n:Ljava/lang/ref/Reference;
+    .line 4
+    iget-object v0, p0, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->K0:Ljava/lang/ref/Reference;
 
     invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
@@ -772,13 +881,14 @@
 
     check-cast v0, Lcom/android/camera/ThumbnailUpdater;
 
-    invoke-virtual {p0}, Lcom/xiaomi/camera/common/LifecycleAsyncTask;->q()Z
+    .line 5
+    invoke-virtual {p0}, Lcom/xiaomi/camera/common/LifecycleAsyncTask;->l()Z
 
     move-result v2
 
     if-nez v2, :cond_2
 
-    iget-boolean v2, p0, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->l:Z
+    iget-boolean v2, p0, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->w:Z
 
     if-nez v2, :cond_2
 
@@ -786,11 +896,13 @@
 
     goto :goto_1
 
+    .line 6
     :cond_1
-    invoke-virtual {v0}, Lcom/android/camera/ThumbnailUpdater;->n()Lcom/android/camera/m5;
+    invoke-virtual {v0}, Lcom/android/camera/ThumbnailUpdater;->k()Ld/d/a/w5;
 
     move-result-object v2
 
+    .line 7
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -811,21 +923,31 @@
 
     const/4 v2, 0x1
 
-    iget-boolean p0, p0, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->k:Z
+    .line 8
+    iget-boolean p0, p0, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->u:Z
 
-    invoke-static {v0, p1, v2, v1, p0}, Lcom/android/camera/ThumbnailUpdater;->e(Lcom/android/camera/ThumbnailUpdater;Lcom/android/camera/m5;ZZZ)V
+    invoke-static {v0, p1, v2, v1, p0}, Lcom/android/camera/ThumbnailUpdater;->b(Lcom/android/camera/ThumbnailUpdater;Ld/d/a/w5;ZZZ)V
 
     :cond_2
     :goto_1
     return-void
 .end method
 
-.method public bridge synthetic m([Ljava/lang/Object;)Ljava/lang/Object;
+.method public bridge synthetic h([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "params"
+        }
+    .end annotation
 
+    .line 1
     check-cast p1, [Ljava/lang/Void;
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->C([Ljava/lang/Void;)Lcom/android/camera/m5;
+    invoke-virtual {p0, p1}, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->C([Ljava/lang/Void;)Ld/d/a/w5;
 
     move-result-object p0
 
@@ -834,6 +956,14 @@
 
 .method public onStop(Landroidx/lifecycle/LifecycleOwner;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "lifecycleOwner"
+        }
+    .end annotation
 
     const/4 p1, 0x0
 
@@ -843,8 +973,10 @@
 
     const-string v2, "LoadThumbnailTask#onStop -> activityBase invoked onStop(), now cancel task."
 
+    .line 1
     invoke-static {v1, v2, v0}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -853,7 +985,7 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v2, p0, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->p:I
+    iget v2, p0, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->v1:I
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -865,17 +997,27 @@
 
     invoke-static {v1, v0, p1}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-virtual {p0}, Lcom/xiaomi/camera/common/LifecycleAsyncTask;->j()V
+    .line 3
+    invoke-virtual {p0}, Lcom/xiaomi/camera/common/LifecycleAsyncTask;->e()V
 
     return-void
 .end method
 
 .method public bridge synthetic y(Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "thumbnail"
+        }
+    .end annotation
 
-    check-cast p1, Lcom/android/camera/m5;
+    .line 1
+    check-cast p1, Ld/d/a/w5;
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->D(Lcom/android/camera/m5;)V
+    invoke-virtual {p0, p1}, Lcom/android/camera/ThumbnailUpdater$LoadThumbnailTask;->D(Ld/d/a/w5;)V
 
     return-void
 .end method

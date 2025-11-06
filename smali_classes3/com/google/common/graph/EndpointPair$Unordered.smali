@@ -1,4 +1,4 @@
-.class final Lcom/google/common/graph/EndpointPair$Unordered;
+.class public final Lcom/google/common/graph/EndpointPair$Unordered;
 .super Lcom/google/common/graph/EndpointPair;
 .source "SourceFile"
 
@@ -65,6 +65,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/common/graph/EndpointPair;
 
@@ -74,9 +75,11 @@
 
     return v2
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/common/graph/EndpointPair;
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/common/graph/EndpointPair$Unordered;->isOrdered()Z
 
     move-result v1
@@ -89,6 +92,7 @@
 
     return v2
 
+    .line 4
     :cond_2
     invoke-virtual {p0}, Lcom/google/common/graph/EndpointPair;->nodeU()Ljava/lang/Object;
 
@@ -104,6 +108,7 @@
 
     if-eqz v1, :cond_3
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/common/graph/EndpointPair;->nodeV()Ljava/lang/Object;
 
     move-result-object p0
@@ -118,6 +123,7 @@
 
     return p0
 
+    .line 6
     :cond_3
     invoke-virtual {p0}, Lcom/google/common/graph/EndpointPair;->nodeU()Ljava/lang/Object;
 
@@ -159,6 +165,7 @@
 .method public hashCode()I
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/EndpointPair;->nodeU()Ljava/lang/Object;
 
     move-result-object v0
@@ -191,6 +198,7 @@
 .method public bridge synthetic iterator()Ljava/util/Iterator;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/graph/EndpointPair;->iterator()Lcom/google/common/collect/UnmodifiableIterator;
 
     move-result-object p0
@@ -206,6 +214,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string v0, "Cannot call source()/target() on a EndpointPair from an undirected graph. Consider calling adjacentNode(node) if you already have a node, or nodeU()/nodeV() if you don\'t."
@@ -223,6 +232,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string v0, "Cannot call source()/target() on a EndpointPair from an undirected graph. Consider calling adjacentNode(node) if you already have a node, or nodeU()/nodeV() if you don\'t."
@@ -235,6 +245,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/EndpointPair;->nodeU()Ljava/lang/Object;
 
     move-result-object v0

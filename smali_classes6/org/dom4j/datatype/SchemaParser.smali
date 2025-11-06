@@ -43,6 +43,7 @@
 
     const-string v1, "http://www.w3.org/2001/XMLSchema"
 
+    .line 1
     invoke-static {v0, v1}, Lorg/dom4j/Namespace;->get(Ljava/lang/String;Ljava/lang/String;)Lorg/dom4j/Namespace;
 
     move-result-object v0
@@ -51,6 +52,7 @@
 
     const-string v1, "element"
 
+    .line 2
     invoke-static {v1, v0}, Lorg/dom4j/QName;->get(Ljava/lang/String;Lorg/dom4j/Namespace;)Lorg/dom4j/QName;
 
     move-result-object v1
@@ -59,6 +61,7 @@
 
     const-string v1, "attribute"
 
+    .line 3
     invoke-static {v1, v0}, Lorg/dom4j/QName;->get(Ljava/lang/String;Lorg/dom4j/Namespace;)Lorg/dom4j/QName;
 
     move-result-object v1
@@ -67,6 +70,7 @@
 
     const-string v1, "simpleType"
 
+    .line 4
     invoke-static {v1, v0}, Lorg/dom4j/QName;->get(Ljava/lang/String;Lorg/dom4j/Namespace;)Lorg/dom4j/QName;
 
     move-result-object v1
@@ -75,6 +79,7 @@
 
     const-string v1, "complexType"
 
+    .line 5
     invoke-static {v1, v0}, Lorg/dom4j/QName;->get(Ljava/lang/String;Lorg/dom4j/Namespace;)Lorg/dom4j/QName;
 
     move-result-object v1
@@ -83,6 +88,7 @@
 
     const-string v1, "restriction"
 
+    .line 6
     invoke-static {v1, v0}, Lorg/dom4j/QName;->get(Ljava/lang/String;Lorg/dom4j/Namespace;)Lorg/dom4j/QName;
 
     move-result-object v1
@@ -91,6 +97,7 @@
 
     const-string v1, "sequence"
 
+    .line 7
     invoke-static {v1, v0}, Lorg/dom4j/QName;->get(Ljava/lang/String;Lorg/dom4j/Namespace;)Lorg/dom4j/QName;
 
     move-result-object v1
@@ -99,6 +106,7 @@
 
     const-string v1, "choice"
 
+    .line 8
     invoke-static {v1, v0}, Lorg/dom4j/QName;->get(Ljava/lang/String;Lorg/dom4j/Namespace;)Lorg/dom4j/QName;
 
     move-result-object v1
@@ -107,6 +115,7 @@
 
     const-string v1, "all"
 
+    .line 9
     invoke-static {v1, v0}, Lorg/dom4j/QName;->get(Ljava/lang/String;Lorg/dom4j/Namespace;)Lorg/dom4j/QName;
 
     move-result-object v1
@@ -115,6 +124,7 @@
 
     const-string v1, "include"
 
+    .line 10
     invoke-static {v1, v0}, Lorg/dom4j/QName;->get(Ljava/lang/String;Lorg/dom4j/Namespace;)Lorg/dom4j/QName;
 
     move-result-object v0
@@ -166,18 +176,21 @@
 
     const-string v0, "type"
 
+    .line 1
     invoke-interface {p1, v0}, Lorg/dom4j/Element;->attributeValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-direct {p0, v0}, Lorg/dom4j/datatype/SchemaParser;->getTypeByName(Ljava/lang/String;)Lcom/sun/msv/datatype/xsd/XSDatatype;
 
     move-result-object p0
 
     goto :goto_0
 
+    .line 3
     :cond_0
     sget-object v0, Lorg/dom4j/datatype/SchemaParser;->XSD_SIMPLETYPE:Lorg/dom4j/QName;
 
@@ -187,6 +200,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     invoke-direct {p0, v0}, Lorg/dom4j/datatype/SchemaParser;->loadXSDatatypeFromSimpleType(Lorg/dom4j/Element;)Lcom/sun/msv/datatype/xsd/XSDatatype;
 
     move-result-object p0
@@ -197,10 +211,12 @@
     :cond_1
     const-string p0, "name"
 
+    .line 5
     invoke-interface {p1, p0}, Lorg/dom4j/Element;->attributeValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 6
     new-instance p1, Ljava/lang/StringBuffer;
 
     invoke-direct {p1}, Ljava/lang/StringBuffer;-><init>()V
@@ -223,6 +239,7 @@
 
     move-result-object p0
 
+    .line 7
     new-instance p1, Lorg/dom4j/datatype/InvalidSchemaException;
 
     invoke-direct {p1, p0}, Lorg/dom4j/datatype/InvalidSchemaException;-><init>(Ljava/lang/String;)V
@@ -233,17 +250,20 @@
 .method private deriveSimpleType(Lcom/sun/msv/datatype/xsd/XSDatatype;Lorg/dom4j/Element;)Lcom/sun/msv/datatype/xsd/XSDatatype;
     .locals 6
 
+    .line 1
     new-instance v0, Lcom/sun/msv/datatype/xsd/TypeIncubator;
 
     invoke-direct {v0, p1}, Lcom/sun/msv/datatype/xsd/TypeIncubator;-><init>(Lcom/sun/msv/datatype/xsd/XSDatatype;)V
 
     const/4 p1, 0x0
 
+    .line 2
     :try_start_0
     invoke-interface {p2}, Lorg/dom4j/Element;->elementIterator()Ljava/util/Iterator;
 
     move-result-object v1
 
+    .line 3
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -251,28 +271,33 @@
 
     if-eqz v2, :cond_0
 
+    .line 4
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lorg/dom4j/Element;
 
+    .line 5
     invoke-interface {v2}, Lorg/dom4j/Node;->getName()Ljava/lang/String;
 
     move-result-object v3
 
     const-string v4, "value"
 
+    .line 6
     invoke-interface {v2, v4}, Lorg/dom4j/Element;->attributeValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     const-string v5, "fixed"
 
+    .line 7
     invoke-static {v2, v5}, Lorg/dom4j/util/AttributeHelper;->booleanValue(Lorg/dom4j/Element;Ljava/lang/String;)Z
 
     move-result v2
 
+    .line 8
     invoke-virtual {v0, v3, v4, v2, p1}, Lcom/sun/msv/datatype/xsd/TypeIncubator;->addFacet(Ljava/lang/String;Ljava/lang/String;ZLorg/relaxng/datatype/ValidationContext;)V
 
     goto :goto_0
@@ -280,6 +305,7 @@
     :cond_0
     const-string v1, ""
 
+    .line 9
     invoke-virtual {v0, v1, p1}, Lcom/sun/msv/datatype/xsd/TypeIncubator;->derive(Ljava/lang/String;Ljava/lang/String;)Lcom/sun/msv/datatype/xsd/XSDatatypeImpl;
 
     move-result-object p0
@@ -291,6 +317,7 @@
     :catch_0
     move-exception v0
 
+    .line 10
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -323,6 +350,7 @@
 .method private getDatatypeElementFactory(Lorg/dom4j/QName;)Lorg/dom4j/datatype/DatatypeElementFactory;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/datatype/SchemaParser;->documentFactory:Lorg/dom4j/datatype/DatatypeDocumentFactory;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/datatype/DatatypeDocumentFactory;->getElementFactory(Lorg/dom4j/QName;)Lorg/dom4j/datatype/DatatypeElementFactory;
@@ -331,10 +359,12 @@
 
     if-nez p0, :cond_0
 
+    .line 2
     new-instance p0, Lorg/dom4j/datatype/DatatypeElementFactory;
 
     invoke-direct {p0, p1}, Lorg/dom4j/datatype/DatatypeElementFactory;-><init>(Lorg/dom4j/QName;)V
 
+    .line 3
     invoke-virtual {p1, p0}, Lorg/dom4j/QName;->setDocumentFactory(Lorg/dom4j/DocumentFactory;)V
 
     :cond_0
@@ -344,10 +374,12 @@
 .method private getQName(Ljava/lang/String;)Lorg/dom4j/QName;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/datatype/SchemaParser;->targetNamespace:Lorg/dom4j/Namespace;
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lorg/dom4j/datatype/SchemaParser;->documentFactory:Lorg/dom4j/datatype/DatatypeDocumentFactory;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/DocumentFactory;->createQName(Ljava/lang/String;)Lorg/dom4j/QName;
@@ -356,6 +388,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lorg/dom4j/datatype/SchemaParser;->documentFactory:Lorg/dom4j/datatype/DatatypeDocumentFactory;
 
@@ -369,6 +402,7 @@
 .method private getTypeByName(Ljava/lang/String;)Lcom/sun/msv/datatype/xsd/XSDatatype;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/datatype/SchemaParser;->dataTypeCache:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -381,6 +415,7 @@
 
     const/16 v1, 0x3a
 
+    .line 2
     invoke-virtual {p1, v1}, Ljava/lang/String;->indexOf(I)I
 
     move-result v1
@@ -389,10 +424,12 @@
 
     add-int/lit8 v1, v1, 0x1
 
+    .line 3
     invoke-virtual {p1, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 4
     :try_start_0
     invoke-static {v1}, Lcom/sun/msv/datatype/xsd/DatatypeFactory;->getTypeByName(Ljava/lang/String;)Lcom/sun/msv/datatype/xsd/XSDatatype;
 
@@ -404,6 +441,7 @@
     :cond_0
     if-nez v0, :cond_1
 
+    .line 5
     :try_start_1
     invoke-static {p1}, Lcom/sun/msv/datatype/xsd/DatatypeFactory;->getTypeByName(Ljava/lang/String;)Lcom/sun/msv/datatype/xsd/XSDatatype;
 
@@ -415,10 +453,12 @@
     :cond_1
     if-nez v0, :cond_2
 
+    .line 6
     invoke-direct {p0, p1}, Lorg/dom4j/datatype/SchemaParser;->getQName(Ljava/lang/String;)Lorg/dom4j/QName;
 
     move-result-object v0
 
+    .line 7
     iget-object v1, p0, Lorg/dom4j/datatype/SchemaParser;->namedTypeResolver:Lorg/dom4j/datatype/NamedTypeResolver;
 
     iget-object v1, v1, Lorg/dom4j/datatype/NamedTypeResolver;->simpleTypeMap:Ljava/util/Map;
@@ -432,6 +472,7 @@
     :cond_2
     if-eqz v0, :cond_3
 
+    .line 8
     iget-object p0, p0, Lorg/dom4j/datatype/SchemaParser;->dataTypeCache:Ljava/util/Map;
 
     invoke-interface {p0, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -445,6 +486,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     invoke-interface {p1}, Lorg/dom4j/Document;->getRootElement()Lorg/dom4j/Element;
 
@@ -452,12 +494,14 @@
 
     if-eqz v0, :cond_6
 
+    .line 2
     sget-object v1, Lorg/dom4j/datatype/SchemaParser;->XSD_INCLUDE:Lorg/dom4j/QName;
 
     invoke-interface {v0, v1}, Lorg/dom4j/Element;->elementIterator(Lorg/dom4j/QName;)Ljava/util/Iterator;
 
     move-result-object v1
 
+    .line 3
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -465,6 +509,7 @@
 
     if-eqz v2, :cond_2
 
+    .line 4
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
@@ -473,10 +518,12 @@
 
     const-string v3, "schemaLocation"
 
+    .line 5
     invoke-interface {v2, v3}, Lorg/dom4j/Element;->attributeValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 6
     invoke-interface {p1}, Lorg/dom4j/Document;->getEntityResolver()Lorg/xml/sax/EntityResolver;
 
     move-result-object v3
@@ -487,6 +534,7 @@
 
     const/4 v4, 0x0
 
+    .line 7
     :try_start_1
     invoke-interface {v3, v4, v2}, Lorg/xml/sax/EntityResolver;->resolveEntity(Ljava/lang/String;Ljava/lang/String;)Lorg/xml/sax/InputSource;
 
@@ -494,18 +542,22 @@
 
     if-eqz v3, :cond_0
 
+    .line 8
     new-instance v4, Lorg/dom4j/io/SAXReader;
 
     invoke-direct {v4}, Lorg/dom4j/io/SAXReader;-><init>()V
 
+    .line 9
     invoke-virtual {v4, v3}, Lorg/dom4j/io/SAXReader;->read(Lorg/xml/sax/InputSource;)Lorg/dom4j/Document;
 
     move-result-object v3
 
+    .line 10
     invoke-virtual {p0, v3}, Lorg/dom4j/datatype/SchemaParser;->build(Lorg/dom4j/Document;)V
 
     goto :goto_0
 
+    .line 11
     :cond_0
     new-instance p1, Ljava/lang/StringBuffer;
 
@@ -521,6 +573,7 @@
 
     move-result-object p1
 
+    .line 12
     new-instance v0, Lorg/dom4j/datatype/InvalidSchemaException;
 
     invoke-direct {v0, p1}, Lorg/dom4j/datatype/InvalidSchemaException;-><init>(Ljava/lang/String;)V
@@ -535,6 +588,7 @@
     :cond_1
     const-string p1, "No EntityResolver available"
 
+    .line 13
     new-instance v0, Lorg/dom4j/datatype/InvalidSchemaException;
 
     invoke-direct {v0, p1}, Lorg/dom4j/datatype/InvalidSchemaException;-><init>(Ljava/lang/String;)V
@@ -544,6 +598,7 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 14
     :goto_1
     :try_start_2
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
@@ -564,6 +619,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 15
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v1, Ljava/lang/StringBuffer;
@@ -582,8 +638,10 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 16
+    invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
+    .line 17
     new-instance p1, Lorg/dom4j/datatype/InvalidSchemaException;
 
     new-instance v0, Ljava/lang/StringBuffer;
@@ -604,6 +662,7 @@
 
     throw p1
 
+    .line 18
     :cond_2
     sget-object p1, Lorg/dom4j/datatype/SchemaParser;->XSD_ELEMENT:Lorg/dom4j/QName;
 
@@ -611,6 +670,7 @@
 
     move-result-object p1
 
+    .line 19
     :goto_2
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -618,6 +678,7 @@
 
     if-eqz v1, :cond_3
 
+    .line 20
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -630,6 +691,7 @@
 
     goto :goto_2
 
+    .line 21
     :cond_3
     sget-object p1, Lorg/dom4j/datatype/SchemaParser;->XSD_SIMPLETYPE:Lorg/dom4j/QName;
 
@@ -637,6 +699,7 @@
 
     move-result-object p1
 
+    .line 22
     :goto_3
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -644,6 +707,7 @@
 
     if-eqz v1, :cond_4
 
+    .line 23
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -654,6 +718,7 @@
 
     goto :goto_3
 
+    .line 24
     :cond_4
     sget-object p1, Lorg/dom4j/datatype/SchemaParser;->XSD_COMPLEXTYPE:Lorg/dom4j/QName;
 
@@ -661,6 +726,7 @@
 
     move-result-object p1
 
+    .line 25
     :goto_4
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -668,6 +734,7 @@
 
     if-eqz v0, :cond_5
 
+    .line 26
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -678,6 +745,7 @@
 
     goto :goto_4
 
+    .line 27
     :cond_5
     iget-object p1, p0, Lorg/dom4j/datatype/SchemaParser;->namedTypeResolver:Lorg/dom4j/datatype/NamedTypeResolver;
 
@@ -685,6 +753,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 28
     :cond_6
     monitor-exit p0
 
@@ -701,6 +770,7 @@
 .method private loadXSDatatypeFromSimpleType(Lorg/dom4j/Element;)Lcom/sun/msv/datatype/xsd/XSDatatype;
     .locals 3
 
+    .line 1
     sget-object v0, Lorg/dom4j/datatype/SchemaParser;->XSD_RESTRICTION:Lorg/dom4j/QName;
 
     invoke-interface {p1, v0}, Lorg/dom4j/Element;->element(Lorg/dom4j/QName;)Lorg/dom4j/Element;
@@ -711,18 +781,21 @@
 
     const-string v1, "base"
 
+    .line 2
     invoke-interface {v0, v1}, Lorg/dom4j/Element;->attributeValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
+    .line 3
     invoke-direct {p0, v1}, Lorg/dom4j/datatype/SchemaParser;->getTypeByName(Ljava/lang/String;)Lcom/sun/msv/datatype/xsd/XSDatatype;
 
     move-result-object p1
 
     if-nez p1, :cond_0
 
+    .line 4
     new-instance p1, Ljava/lang/StringBuffer;
 
     invoke-direct {p1}, Ljava/lang/StringBuffer;-><init>()V
@@ -747,6 +820,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-direct {p0, p1, v0}, Lorg/dom4j/datatype/SchemaParser;->deriveSimpleType(Lcom/sun/msv/datatype/xsd/XSDatatype;Lorg/dom4j/Element;)Lcom/sun/msv/datatype/xsd/XSDatatype;
 
@@ -754,6 +828,7 @@
 
     return-object p0
 
+    .line 6
     :cond_1
     sget-object v0, Lorg/dom4j/datatype/SchemaParser;->XSD_SIMPLETYPE:Lorg/dom4j/QName;
 
@@ -763,6 +838,7 @@
 
     if-nez v0, :cond_2
 
+    .line 7
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -785,10 +861,12 @@
 
     move-result-object p1
 
+    .line 8
     invoke-direct {p0, p1}, Lorg/dom4j/datatype/SchemaParser;->onSchemaError(Ljava/lang/String;)V
 
     goto :goto_0
 
+    .line 9
     :cond_2
     invoke-direct {p0, v0}, Lorg/dom4j/datatype/SchemaParser;->loadXSDatatypeFromSimpleType(Lorg/dom4j/Element;)Lcom/sun/msv/datatype/xsd/XSDatatype;
 
@@ -796,6 +874,7 @@
 
     return-object p0
 
+    .line 10
     :cond_3
     new-instance v0, Ljava/lang/StringBuffer;
 
@@ -822,12 +901,14 @@
 .method private onChildElements(Lorg/dom4j/Element;Lorg/dom4j/datatype/DatatypeElementFactory;)V
     .locals 1
 
+    .line 1
     sget-object v0, Lorg/dom4j/datatype/SchemaParser;->XSD_ELEMENT:Lorg/dom4j/QName;
 
     invoke-interface {p1, v0}, Lorg/dom4j/Element;->elementIterator(Lorg/dom4j/QName;)Ljava/util/Iterator;
 
     move-result-object p1
 
+    .line 2
     :goto_0
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -835,12 +916,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lorg/dom4j/Element;
 
+    .line 4
     invoke-direct {p0, v0, p2}, Lorg/dom4j/datatype/SchemaParser;->onDatatypeElement(Lorg/dom4j/Element;Lorg/dom4j/DocumentFactory;)V
 
     goto :goto_0
@@ -854,20 +937,24 @@
 
     const-string p1, "name"
 
+    .line 1
     invoke-interface {p3, p1}, Lorg/dom4j/Element;->attributeValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 2
     invoke-direct {p0, p1}, Lorg/dom4j/datatype/SchemaParser;->getQName(Ljava/lang/String;)Lorg/dom4j/QName;
 
     move-result-object v0
 
+    .line 3
     invoke-direct {p0, p3}, Lorg/dom4j/datatype/SchemaParser;->dataTypeForXsdAttribute(Lorg/dom4j/Element;)Lcom/sun/msv/datatype/xsd/XSDatatype;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 4
     invoke-virtual {p2, v0, p0}, Lorg/dom4j/datatype/DatatypeElementFactory;->setAttributeXSDatatype(Lorg/dom4j/QName;Lcom/sun/msv/datatype/xsd/XSDatatype;)V
 
     goto :goto_0
@@ -875,10 +962,12 @@
     :cond_0
     const-string p0, "type"
 
+    .line 5
     invoke-interface {p3, p0}, Lorg/dom4j/Element;->attributeValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 6
     sget-object p2, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance p3, Ljava/lang/StringBuffer;
@@ -912,41 +1001,49 @@
 
     const-string v0, "name"
 
+    .line 1
     invoke-interface {p1, v0}, Lorg/dom4j/Element;->attributeValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "type"
 
+    .line 2
     invoke-interface {p1, v1}, Lorg/dom4j/Element;->attributeValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 3
     invoke-direct {p0, v0}, Lorg/dom4j/datatype/SchemaParser;->getQName(Ljava/lang/String;)Lorg/dom4j/QName;
 
     move-result-object v0
 
+    .line 4
     invoke-direct {p0, v0}, Lorg/dom4j/datatype/SchemaParser;->getDatatypeElementFactory(Lorg/dom4j/QName;)Lorg/dom4j/datatype/DatatypeElementFactory;
 
     move-result-object v2
 
     if-eqz v1, :cond_1
 
+    .line 5
     invoke-direct {p0, v1}, Lorg/dom4j/datatype/SchemaParser;->getTypeByName(Ljava/lang/String;)Lcom/sun/msv/datatype/xsd/XSDatatype;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
+    .line 6
     invoke-virtual {v2, v0, v3}, Lorg/dom4j/datatype/DatatypeElementFactory;->setChildElementXSDatatype(Lorg/dom4j/QName;Lcom/sun/msv/datatype/xsd/XSDatatype;)V
 
     goto :goto_0
 
+    .line 7
     :cond_0
     invoke-direct {p0, v1}, Lorg/dom4j/datatype/SchemaParser;->getQName(Ljava/lang/String;)Lorg/dom4j/QName;
 
     move-result-object v0
 
+    .line 8
     iget-object p0, p0, Lorg/dom4j/datatype/SchemaParser;->namedTypeResolver:Lorg/dom4j/datatype/NamedTypeResolver;
 
     invoke-virtual {p0, p1, v0, p2}, Lorg/dom4j/datatype/NamedTypeResolver;->registerTypedElement(Lorg/dom4j/Element;Lorg/dom4j/QName;Lorg/dom4j/DocumentFactory;)V
@@ -954,6 +1051,7 @@
     :goto_0
     return-void
 
+    .line 9
     :cond_1
     sget-object p2, Lorg/dom4j/datatype/SchemaParser;->XSD_SIMPLETYPE:Lorg/dom4j/QName;
 
@@ -963,14 +1061,17 @@
 
     if-eqz p2, :cond_2
 
+    .line 10
     invoke-direct {p0, p2}, Lorg/dom4j/datatype/SchemaParser;->loadXSDatatypeFromSimpleType(Lorg/dom4j/Element;)Lcom/sun/msv/datatype/xsd/XSDatatype;
 
     move-result-object p2
 
     if-eqz p2, :cond_2
 
+    .line 11
     invoke-virtual {v2, v0, p2}, Lorg/dom4j/datatype/DatatypeElementFactory;->setChildElementXSDatatype(Lorg/dom4j/QName;Lcom/sun/msv/datatype/xsd/XSDatatype;)V
 
+    .line 12
     :cond_2
     sget-object p2, Lorg/dom4j/datatype/SchemaParser;->XSD_COMPLEXTYPE:Lorg/dom4j/QName;
 
@@ -980,8 +1081,10 @@
 
     if-eqz p2, :cond_3
 
+    .line 13
     invoke-direct {p0, p2, v2}, Lorg/dom4j/datatype/SchemaParser;->onSchemaComplexType(Lorg/dom4j/Element;Lorg/dom4j/datatype/DatatypeElementFactory;)V
 
+    .line 14
     :cond_3
     sget-object p2, Lorg/dom4j/datatype/SchemaParser;->XSD_ATTRIBUTE:Lorg/dom4j/QName;
 
@@ -989,12 +1092,14 @@
 
     move-result-object p2
 
+    .line 15
     invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
+    .line 16
     :cond_4
     invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1004,6 +1109,7 @@
 
     invoke-direct {p0, p1, v2, v0}, Lorg/dom4j/datatype/SchemaParser;->onDatatypeAttribute(Lorg/dom4j/Element;Lorg/dom4j/datatype/DatatypeElementFactory;Lorg/dom4j/Element;)V
 
+    .line 17
     invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
@@ -1019,6 +1125,7 @@
 
     const-string v0, "name"
 
+    .line 1
     invoke-interface {p1, v0}, Lorg/dom4j/Element;->attribute(Ljava/lang/String;)Lorg/dom4j/Attribute;
 
     move-result-object v0
@@ -1027,21 +1134,26 @@
 
     return-void
 
+    .line 2
     :cond_0
     invoke-interface {v0}, Lorg/dom4j/Node;->getText()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 3
     invoke-direct {p0, v0}, Lorg/dom4j/datatype/SchemaParser;->getQName(Ljava/lang/String;)Lorg/dom4j/QName;
 
     move-result-object v0
 
+    .line 4
     invoke-direct {p0, v0}, Lorg/dom4j/datatype/SchemaParser;->getDatatypeElementFactory(Lorg/dom4j/QName;)Lorg/dom4j/datatype/DatatypeElementFactory;
 
     move-result-object v1
 
+    .line 5
     invoke-direct {p0, p1, v1}, Lorg/dom4j/datatype/SchemaParser;->onSchemaComplexType(Lorg/dom4j/Element;Lorg/dom4j/datatype/DatatypeElementFactory;)V
 
+    .line 6
     iget-object p0, p0, Lorg/dom4j/datatype/SchemaParser;->namedTypeResolver:Lorg/dom4j/datatype/NamedTypeResolver;
 
     invoke-virtual {p0, v0, v1}, Lorg/dom4j/datatype/NamedTypeResolver;->registerComplexType(Lorg/dom4j/QName;Lorg/dom4j/DocumentFactory;)V
@@ -1054,6 +1166,7 @@
 
     const-string v0, "name"
 
+    .line 1
     invoke-interface {p1, v0}, Lorg/dom4j/Element;->attribute(Ljava/lang/String;)Lorg/dom4j/Attribute;
 
     move-result-object v0
@@ -1062,19 +1175,23 @@
 
     return-void
 
+    .line 2
     :cond_0
     invoke-interface {v0}, Lorg/dom4j/Node;->getText()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 3
     invoke-direct {p0, v0}, Lorg/dom4j/datatype/SchemaParser;->getQName(Ljava/lang/String;)Lorg/dom4j/QName;
 
     move-result-object v0
 
+    .line 4
     invoke-direct {p0, p1}, Lorg/dom4j/datatype/SchemaParser;->loadXSDatatypeFromSimpleType(Lorg/dom4j/Element;)Lcom/sun/msv/datatype/xsd/XSDatatype;
 
     move-result-object p1
 
+    .line 5
     iget-object p0, p0, Lorg/dom4j/datatype/SchemaParser;->namedTypeResolver:Lorg/dom4j/datatype/NamedTypeResolver;
 
     invoke-virtual {p0, v0, p1}, Lorg/dom4j/datatype/NamedTypeResolver;->registerSimpleType(Lorg/dom4j/QName;Lcom/sun/msv/datatype/xsd/XSDatatype;)V
@@ -1085,12 +1202,14 @@
 .method private onSchemaComplexType(Lorg/dom4j/Element;Lorg/dom4j/datatype/DatatypeElementFactory;)V
     .locals 3
 
+    .line 1
     sget-object v0, Lorg/dom4j/datatype/SchemaParser;->XSD_ATTRIBUTE:Lorg/dom4j/QName;
 
     invoke-interface {p1, v0}, Lorg/dom4j/Element;->elementIterator(Lorg/dom4j/QName;)Ljava/util/Iterator;
 
     move-result-object v0
 
+    .line 2
     :cond_0
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -1099,6 +1218,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 3
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -1107,24 +1227,29 @@
 
     const-string v2, "name"
 
+    .line 4
     invoke-interface {v1, v2}, Lorg/dom4j/Element;->attributeValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 5
     invoke-direct {p0, v2}, Lorg/dom4j/datatype/SchemaParser;->getQName(Ljava/lang/String;)Lorg/dom4j/QName;
 
     move-result-object v2
 
+    .line 6
     invoke-direct {p0, v1}, Lorg/dom4j/datatype/SchemaParser;->dataTypeForXsdAttribute(Lorg/dom4j/Element;)Lcom/sun/msv/datatype/xsd/XSDatatype;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
+    .line 7
     invoke-virtual {p2, v2, v1}, Lorg/dom4j/datatype/DatatypeElementFactory;->setAttributeXSDatatype(Lorg/dom4j/QName;Lcom/sun/msv/datatype/xsd/XSDatatype;)V
 
     goto :goto_0
 
+    .line 8
     :cond_1
     sget-object v0, Lorg/dom4j/datatype/SchemaParser;->XSD_SEQUENCE:Lorg/dom4j/QName;
 
@@ -1134,8 +1259,10 @@
 
     if-eqz v0, :cond_2
 
+    .line 9
     invoke-direct {p0, v0, p2}, Lorg/dom4j/datatype/SchemaParser;->onChildElements(Lorg/dom4j/Element;Lorg/dom4j/datatype/DatatypeElementFactory;)V
 
+    .line 10
     :cond_2
     sget-object v0, Lorg/dom4j/datatype/SchemaParser;->XSD_CHOICE:Lorg/dom4j/QName;
 
@@ -1145,8 +1272,10 @@
 
     if-eqz v0, :cond_3
 
+    .line 11
     invoke-direct {p0, v0, p2}, Lorg/dom4j/datatype/SchemaParser;->onChildElements(Lorg/dom4j/Element;Lorg/dom4j/datatype/DatatypeElementFactory;)V
 
+    .line 12
     :cond_3
     sget-object v0, Lorg/dom4j/datatype/SchemaParser;->XSD_ALL:Lorg/dom4j/QName;
 
@@ -1156,6 +1285,7 @@
 
     if-eqz p1, :cond_4
 
+    .line 13
     invoke-direct {p0, p1, p2}, Lorg/dom4j/datatype/SchemaParser;->onChildElements(Lorg/dom4j/Element;Lorg/dom4j/datatype/DatatypeElementFactory;)V
 
     :cond_4
@@ -1165,6 +1295,7 @@
 .method private onSchemaError(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     new-instance p0, Lorg/dom4j/datatype/InvalidSchemaException;
 
     invoke-direct {p0, p1}, Lorg/dom4j/datatype/InvalidSchemaException;-><init>(Ljava/lang/String;)V

@@ -60,6 +60,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget v0, p0, Lcom/bumptech/glide/request/target/SimpleTarget;->width:I
 
     iget v1, p0, Lcom/bumptech/glide/request/target/SimpleTarget;->height:I
@@ -70,6 +71,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget v0, p0, Lcom/bumptech/glide/request/target/SimpleTarget;->width:I
 
     iget p0, p0, Lcom/bumptech/glide/request/target/SimpleTarget;->height:I
@@ -78,6 +80,7 @@
 
     return-void
 
+    .line 3
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 

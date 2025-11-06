@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmm/c;
+.implements Lg/a/c;
 
 
 # annotations
@@ -13,7 +13,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lmm/c<",
+        "Lg/a/c<",
         "TT;>;"
     }
 .end annotation

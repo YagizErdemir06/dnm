@@ -16,6 +16,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,6 +39,7 @@
 
     const-string p0, "android.permission.ACCESS_NETWORK_STATE"
 
+    .line 1
     invoke-static {p1, p0}, Landroidx/core/content/ContextCompat;->checkSelfPermission(Landroid/content/Context;Ljava/lang/String;)I
 
     move-result p0
@@ -56,6 +58,7 @@
 
     const-string v1, "ConnectivityMonitor"
 
+    .line 2
     invoke-static {v1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
@@ -71,12 +74,14 @@
     :cond_1
     const-string v0, "ACCESS_NETWORK_STATE permission missing, cannot register connectivity monitor"
 
+    .line 3
     :goto_1
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
     if-eqz p0, :cond_3
 
+    .line 4
     new-instance p0, Lcom/bumptech/glide/manager/DefaultConnectivityMonitor;
 
     invoke-direct {p0, p1, p2}, Lcom/bumptech/glide/manager/DefaultConnectivityMonitor;-><init>(Landroid/content/Context;Lcom/bumptech/glide/manager/ConnectivityMonitor$ConnectivityListener;)V

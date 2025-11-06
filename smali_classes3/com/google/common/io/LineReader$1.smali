@@ -1,4 +1,4 @@
-.class Lcom/google/common/io/LineReader$1;
+.class public Lcom/google/common/io/LineReader$1;
 .super Lcom/google/common/io/LineBuffer;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/io/LineReader;
+.field public final synthetic this$0:Lcom/google/common/io/LineReader;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/io/LineReader;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/io/LineReader$1;->this$0:Lcom/google/common/io/LineReader;
 
     invoke-direct {p0}, Lcom/google/common/io/LineBuffer;-><init>()V
@@ -34,6 +35,7 @@
 .method public handleLine(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/io/LineReader$1;->this$0:Lcom/google/common/io/LineReader;
 
     invoke-static {p0}, Lcom/google/common/io/LineReader;->access$000(Lcom/google/common/io/LineReader;)Ljava/util/Queue;

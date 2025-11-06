@@ -38,10 +38,12 @@
 .method public final zza(ILcom/google/photos/vision/barhopper/zzae;)Lcom/google/photos/vision/barhopper/zzb;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdx;->zzm()V
 
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdx;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;
 
+    .line 2
     check-cast v0, Lcom/google/photos/vision/barhopper/zzc;
 
     invoke-static {v0, p1, p2}, Lcom/google/photos/vision/barhopper/zzc;->zzp(Lcom/google/photos/vision/barhopper/zzc;ILcom/google/photos/vision/barhopper/zzae;)V

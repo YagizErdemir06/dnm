@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/CompactLinkedHashMap;
+.class public Lcom/google/common/collect/CompactLinkedHashMap;
 .super Lcom/google/common/collect/CompactHashMap;
 .source "SourceFile"
 
@@ -34,7 +34,7 @@
 
 .field private transient lastEntry:I
 
-.field transient links:[J
+.field public transient links:[J
     .annotation build Lcom/google/common/annotations/VisibleForTesting;
     .end annotation
 
@@ -92,6 +92,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/CompactLinkedHashMap;
 
     invoke-direct {v0}, Lcom/google/common/collect/CompactLinkedHashMap;-><init>()V
@@ -113,6 +114,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/CompactLinkedHashMap;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/CompactLinkedHashMap;-><init>(I)V
@@ -123,6 +125,7 @@
 .method private getPredecessor(I)I
     .locals 1
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/CompactLinkedHashMap;->link(I)J
 
     move-result-wide p0
@@ -141,6 +144,7 @@
 .method private link(I)J
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/CompactLinkedHashMap;->requireLinks()[J
 
     move-result-object p0
@@ -153,6 +157,7 @@
 .method private requireLinks()[J
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/CompactLinkedHashMap;->links:[J
 
     invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -165,6 +170,7 @@
 .method private setLink(IJ)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/CompactLinkedHashMap;->requireLinks()[J
 
     move-result-object p0
@@ -177,6 +183,7 @@
 .method private setPredecessor(II)V
     .locals 4
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/CompactLinkedHashMap;->link(I)J
 
     move-result-wide v0
@@ -207,20 +214,24 @@
 
     if-ne p1, v0, :cond_0
 
+    .line 1
     iput p2, p0, Lcom/google/common/collect/CompactLinkedHashMap;->firstEntry:I
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-direct {p0, p1, p2}, Lcom/google/common/collect/CompactLinkedHashMap;->setSuccessor(II)V
 
     :goto_0
     if-ne p2, v0, :cond_1
 
+    .line 3
     iput p1, p0, Lcom/google/common/collect/CompactLinkedHashMap;->lastEntry:I
 
     goto :goto_1
 
+    .line 4
     :cond_1
     invoke-direct {p0, p2, p1}, Lcom/google/common/collect/CompactLinkedHashMap;->setPredecessor(II)V
 
@@ -231,6 +242,7 @@
 .method private setSuccessor(II)V
     .locals 6
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/CompactLinkedHashMap;->link(I)J
 
     move-result-wide v0
@@ -259,10 +271,12 @@
 .method public accessEntry(I)V
     .locals 2
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/common/collect/CompactLinkedHashMap;->accessOrder:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/common/collect/CompactLinkedHashMap;->getPredecessor(I)I
 
     move-result v0
@@ -273,14 +287,17 @@
 
     invoke-direct {p0, v0, v1}, Lcom/google/common/collect/CompactLinkedHashMap;->setSucceeds(II)V
 
+    .line 3
     iget v0, p0, Lcom/google/common/collect/CompactLinkedHashMap;->lastEntry:I
 
     invoke-direct {p0, v0, p1}, Lcom/google/common/collect/CompactLinkedHashMap;->setSucceeds(II)V
 
     const/4 v0, -0x2
 
+    .line 4
     invoke-direct {p0, p1, v0}, Lcom/google/common/collect/CompactLinkedHashMap;->setSucceeds(II)V
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/common/collect/CompactHashMap;->incrementModCount()V
 
     :cond_0
@@ -290,6 +307,7 @@
 .method public adjustAfterRemove(II)I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/CompactHashMap;->size()I
 
     move-result p0
@@ -305,10 +323,12 @@
 .method public allocArrays()I
     .locals 2
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/CompactHashMap;->allocArrays()I
 
     move-result v0
 
+    .line 2
     new-array v1, v0, [J
 
     iput-object v1, p0, Lcom/google/common/collect/CompactLinkedHashMap;->links:[J
@@ -319,6 +339,7 @@
 .method public clear()V
     .locals 5
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/CompactHashMap;->needsAllocArrays()Z
 
     move-result v0
@@ -330,24 +351,29 @@
     :cond_0
     const/4 v0, -0x2
 
+    .line 2
     iput v0, p0, Lcom/google/common/collect/CompactLinkedHashMap;->firstEntry:I
 
+    .line 3
     iput v0, p0, Lcom/google/common/collect/CompactLinkedHashMap;->lastEntry:I
 
+    .line 4
     iget-object v0, p0, Lcom/google/common/collect/CompactLinkedHashMap;->links:[J
 
     if-eqz v0, :cond_1
 
+    const/4 v1, 0x0
+
+    .line 5
     invoke-virtual {p0}, Lcom/google/common/collect/CompactHashMap;->size()I
 
-    move-result v1
+    move-result v2
 
-    const-wide/16 v2, 0x0
+    const-wide/16 v3, 0x0
 
-    const/4 v4, 0x0
+    invoke-static {v0, v1, v2, v3, v4}, Ljava/util/Arrays;->fill([JIIJ)V
 
-    invoke-static {v0, v4, v1, v2, v3}, Ljava/util/Arrays;->fill([JIIJ)V
-
+    .line 6
     :cond_1
     invoke-super {p0}, Lcom/google/common/collect/CompactHashMap;->clear()V
 
@@ -367,12 +393,14 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/CompactHashMap;->convertToHashFloodingResistantImplementation()Ljava/util/Map;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
+    .line 2
     iput-object v1, p0, Lcom/google/common/collect/CompactLinkedHashMap;->links:[J
 
     return-object v0
@@ -388,11 +416,12 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/LinkedHashMap;
 
-    const/high16 v1, 0x3f800000    # 1.0f
-
     iget-boolean p0, p0, Lcom/google/common/collect/CompactLinkedHashMap;->accessOrder:Z
+
+    const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-direct {v0, p1, v1, p0}, Ljava/util/LinkedHashMap;-><init>(IFZ)V
 
@@ -402,6 +431,7 @@
 .method public firstEntryIndex()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/collect/CompactLinkedHashMap;->firstEntry:I
 
     return p0
@@ -410,6 +440,7 @@
 .method public getSuccessor(I)I
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/CompactLinkedHashMap;->link(I)J
 
     move-result-wide p0
@@ -424,12 +455,15 @@
 .method public init(I)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/CompactHashMap;->init(I)V
 
     const/4 p1, -0x2
 
+    .line 2
     iput p1, p0, Lcom/google/common/collect/CompactLinkedHashMap;->firstEntry:I
 
+    .line 3
     iput p1, p0, Lcom/google/common/collect/CompactLinkedHashMap;->lastEntry:I
 
     return-void
@@ -451,14 +485,17 @@
         }
     .end annotation
 
+    .line 1
     invoke-super/range {p0 .. p5}, Lcom/google/common/collect/CompactHashMap;->insertEntry(ILjava/lang/Object;Ljava/lang/Object;II)V
 
+    .line 2
     iget p2, p0, Lcom/google/common/collect/CompactLinkedHashMap;->lastEntry:I
 
     invoke-direct {p0, p2, p1}, Lcom/google/common/collect/CompactLinkedHashMap;->setSucceeds(II)V
 
     const/4 p2, -0x2
 
+    .line 3
     invoke-direct {p0, p1, p2}, Lcom/google/common/collect/CompactLinkedHashMap;->setSucceeds(II)V
 
     return-void
@@ -467,14 +504,17 @@
 .method public moveLastEntry(II)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/CompactHashMap;->size()I
 
     move-result v0
 
     add-int/lit8 v0, v0, -0x1
 
+    .line 2
     invoke-super {p0, p1, p2}, Lcom/google/common/collect/CompactHashMap;->moveLastEntry(II)V
 
+    .line 3
     invoke-direct {p0, p1}, Lcom/google/common/collect/CompactLinkedHashMap;->getPredecessor(I)I
 
     move-result p2
@@ -487,12 +527,14 @@
 
     if-ge p1, v0, :cond_0
 
+    .line 4
     invoke-direct {p0, v0}, Lcom/google/common/collect/CompactLinkedHashMap;->getPredecessor(I)I
 
     move-result p2
 
     invoke-direct {p0, p2, p1}, Lcom/google/common/collect/CompactLinkedHashMap;->setSucceeds(II)V
 
+    .line 5
     invoke-virtual {p0, v0}, Lcom/google/common/collect/CompactLinkedHashMap;->getSuccessor(I)I
 
     move-result p2
@@ -502,6 +544,7 @@
     :cond_0
     const-wide/16 p1, 0x0
 
+    .line 6
     invoke-direct {p0, v0, p1, p2}, Lcom/google/common/collect/CompactLinkedHashMap;->setLink(IJ)V
 
     return-void
@@ -510,8 +553,10 @@
 .method public resizeEntries(I)V
     .locals 1
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/CompactHashMap;->resizeEntries(I)V
 
+    .line 2
     invoke-direct {p0}, Lcom/google/common/collect/CompactLinkedHashMap;->requireLinks()[J
 
     move-result-object v0

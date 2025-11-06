@@ -1,4 +1,4 @@
-.class final Lcom/google/common/reflect/Types$ParameterizedTypeImpl;
+.class public final Lcom/google/common/reflect/Types$ParameterizedTypeImpl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -66,10 +66,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     array-length v0, p3
 
     invoke-virtual {p2}, Ljava/lang/Class;->getTypeParameters()[Ljava/lang/reflect/TypeVariable;
@@ -92,12 +95,16 @@
 
     const-string v0, "type parameter"
 
+    .line 4
     invoke-static {p3, v0}, Lcom/google/common/reflect/Types;->access$200([Ljava/lang/reflect/Type;Ljava/lang/String;)V
 
+    .line 5
     iput-object p1, p0, Lcom/google/common/reflect/Types$ParameterizedTypeImpl;->ownerType:Ljava/lang/reflect/Type;
 
+    .line 6
     iput-object p2, p0, Lcom/google/common/reflect/Types$ParameterizedTypeImpl;->rawType:Ljava/lang/Class;
 
+    .line 7
     sget-object p1, Lcom/google/common/reflect/Types$JavaVersion;->CURRENT:Lcom/google/common/reflect/Types$JavaVersion;
 
     invoke-virtual {p1, p3}, Lcom/google/common/reflect/Types$JavaVersion;->usedInGenericType([Ljava/lang/reflect/Type;)Lcom/google/common/collect/ImmutableList;
@@ -118,6 +125,7 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Ljava/lang/reflect/ParameterizedType;
 
     const/4 v1, 0x0
@@ -126,9 +134,11 @@
 
     return v1
 
+    .line 2
     :cond_0
     check-cast p1, Ljava/lang/reflect/ParameterizedType;
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/common/reflect/Types$ParameterizedTypeImpl;->getRawType()Ljava/lang/reflect/Type;
 
     move-result-object v0
@@ -143,6 +153,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/common/reflect/Types$ParameterizedTypeImpl;->getOwnerType()Ljava/lang/reflect/Type;
 
     move-result-object v0
@@ -157,6 +168,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/common/reflect/Types$ParameterizedTypeImpl;->getActualTypeArguments()[Ljava/lang/reflect/Type;
 
     move-result-object p0
@@ -180,6 +192,7 @@
 .method public getActualTypeArguments()[Ljava/lang/reflect/Type;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/Types$ParameterizedTypeImpl;->argumentsList:Lcom/google/common/collect/ImmutableList;
 
     invoke-static {p0}, Lcom/google/common/reflect/Types;->access$300(Ljava/util/Collection;)[Ljava/lang/reflect/Type;
@@ -194,6 +207,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/Types$ParameterizedTypeImpl;->ownerType:Ljava/lang/reflect/Type;
 
     return-object p0
@@ -202,6 +216,7 @@
 .method public getRawType()Ljava/lang/reflect/Type;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/Types$ParameterizedTypeImpl;->rawType:Ljava/lang/Class;
 
     return-object p0
@@ -210,6 +225,7 @@
 .method public hashCode()I
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/reflect/Types$ParameterizedTypeImpl;->ownerType:Ljava/lang/reflect/Type;
 
     if-nez v0, :cond_0
@@ -226,6 +242,7 @@
     :goto_0
     iget-object v1, p0, Lcom/google/common/reflect/Types$ParameterizedTypeImpl;->argumentsList:Lcom/google/common/collect/ImmutableList;
 
+    .line 2
     invoke-virtual {v1}, Lcom/google/common/collect/ImmutableList;->hashCode()I
 
     move-result v1
@@ -234,6 +251,7 @@
 
     iget-object p0, p0, Lcom/google/common/reflect/Types$ParameterizedTypeImpl;->rawType:Ljava/lang/Class;
 
+    .line 3
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
     move-result p0
@@ -246,10 +264,12 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 2
     iget-object v1, p0, Lcom/google/common/reflect/Types$ParameterizedTypeImpl;->ownerType:Ljava/lang/reflect/Type;
 
     if-eqz v1, :cond_0
@@ -262,6 +282,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 3
     iget-object v2, p0, Lcom/google/common/reflect/Types$ParameterizedTypeImpl;->ownerType:Ljava/lang/reflect/Type;
 
     invoke-virtual {v1, v2}, Lcom/google/common/reflect/Types$JavaVersion;->typeName(Ljava/lang/reflect/Type;)Ljava/lang/String;
@@ -274,9 +295,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 4
     :cond_0
     iget-object v1, p0, Lcom/google/common/reflect/Types$ParameterizedTypeImpl;->rawType:Ljava/lang/Class;
 
+    .line 5
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v1
@@ -285,8 +308,10 @@
 
     const/16 v1, 0x3c
 
+    .line 6
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 7
     invoke-static {}, Lcom/google/common/reflect/Types;->access$500()Lcom/google/common/base/Joiner;
 
     move-result-object v1
@@ -309,8 +334,10 @@
 
     const/16 p0, 0x3e
 
+    .line 8
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 9
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

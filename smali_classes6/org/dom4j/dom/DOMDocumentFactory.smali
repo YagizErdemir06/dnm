@@ -7,49 +7,55 @@
 
 
 # static fields
-.field static synthetic class$org$dom4j$dom$DOMDocumentFactory:Ljava/lang/Class;
+.field public static synthetic class$org$dom4j$dom$DOMDocumentFactory:Ljava/lang/Class;
 
 .field private static singleton:Lorg/dom4j/util/SingletonStrategy;
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 2
+    .locals 3
 
     :try_start_0
     const-string v0, "org.dom4j.util.SimpleSingleton"
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
-    :try_start_1
-    const-string v1, "org.dom4j.dom.DOMDocumentFactory.singleton.strategy"
+    const/4 v1, 0x0
 
-    invoke-static {v1, v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    :try_start_1
+    const-string v2, "org.dom4j.dom.DOMDocumentFactory.singleton.strategy"
+
+    .line 1
+    invoke-static {v2, v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 2
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
-    move-result-object v0
+    move-result-object v1
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
     goto :goto_0
 
     :catch_0
+    const-string v0, "org.dom4j.util.SimpleSingleton"
+
+    .line 3
     :try_start_2
-    const-class v0, Lorg/dom4j/util/SimpleSingleton;
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v1
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    goto :goto_0
-
+    .line 4
     :catch_1
-    const/4 v0, 0x0
-
     :goto_0
     :try_start_3
-    invoke-virtual {v0}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -57,6 +63,7 @@
 
     sput-object v0, Lorg/dom4j/dom/DOMDocumentFactory;->singleton:Lorg/dom4j/util/SingletonStrategy;
 
+    .line 5
     sget-object v1, Lorg/dom4j/dom/DOMDocumentFactory;->class$org$dom4j$dom$DOMDocumentFactory:Ljava/lang/Class;
 
     if-nez v1, :cond_0
@@ -85,6 +92,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/dom4j/DocumentFactory;-><init>()V
 
     return-void
@@ -93,6 +101,7 @@
 .method public static synthetic class$(Ljava/lang/String;)Ljava/lang/Class;
     .locals 1
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -107,7 +116,7 @@
 
     new-instance v0, Ljava/lang/NoClassDefFoundError;
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/ClassNotFoundException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
 
@@ -119,6 +128,7 @@
 .method public static getInstance()Lorg/dom4j/DocumentFactory;
     .locals 1
 
+    .line 1
     sget-object v0, Lorg/dom4j/dom/DOMDocumentFactory;->singleton:Lorg/dom4j/util/SingletonStrategy;
 
     invoke-interface {v0}, Lorg/dom4j/util/SingletonStrategy;->instance()Ljava/lang/Object;
@@ -135,14 +145,17 @@
 .method public asDocumentType(Lorg/w3c/dom/DocumentType;)Lorg/dom4j/dom/DOMDocumentType;
     .locals 2
 
+    .line 1
     instance-of p0, p1, Lorg/dom4j/dom/DOMDocumentType;
 
     if-eqz p0, :cond_0
 
+    .line 2
     check-cast p1, Lorg/dom4j/dom/DOMDocumentType;
 
     return-object p1
 
+    .line 3
     :cond_0
     new-instance p0, Lorg/dom4j/dom/DOMDocumentType;
 
@@ -166,6 +179,7 @@
 .method public createAttribute(Lorg/dom4j/Element;Lorg/dom4j/QName;Ljava/lang/String;)Lorg/dom4j/Attribute;
     .locals 0
 
+    .line 1
     new-instance p0, Lorg/dom4j/dom/DOMAttribute;
 
     invoke-direct {p0, p2, p3}, Lorg/dom4j/dom/DOMAttribute;-><init>(Lorg/dom4j/QName;Ljava/lang/String;)V
@@ -176,6 +190,7 @@
 .method public createCDATA(Ljava/lang/String;)Lorg/dom4j/CDATA;
     .locals 0
 
+    .line 1
     new-instance p0, Lorg/dom4j/dom/DOMCDATA;
 
     invoke-direct {p0, p1}, Lorg/dom4j/dom/DOMCDATA;-><init>(Ljava/lang/String;)V
@@ -186,6 +201,7 @@
 .method public createComment(Ljava/lang/String;)Lorg/dom4j/Comment;
     .locals 0
 
+    .line 1
     new-instance p0, Lorg/dom4j/dom/DOMComment;
 
     invoke-direct {p0, p1}, Lorg/dom4j/dom/DOMComment;-><init>(Ljava/lang/String;)V
@@ -196,6 +212,7 @@
 .method public createDocType(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/dom4j/DocumentType;
     .locals 0
 
+    .line 1
     new-instance p0, Lorg/dom4j/dom/DOMDocumentType;
 
     invoke-direct {p0, p1, p2, p3}, Lorg/dom4j/dom/DOMDocumentType;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
@@ -264,6 +281,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Lorg/dom4j/dom/DOMDocumentType;
 
     invoke-direct {p0, p1, p2, p3}, Lorg/dom4j/dom/DOMDocumentType;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
@@ -318,6 +336,7 @@
 .method public createNamespace(Ljava/lang/String;Ljava/lang/String;)Lorg/dom4j/Namespace;
     .locals 0
 
+    .line 1
     new-instance p0, Lorg/dom4j/dom/DOMNamespace;
 
     invoke-direct {p0, p1, p2}, Lorg/dom4j/dom/DOMNamespace;-><init>(Ljava/lang/String;Ljava/lang/String;)V
@@ -350,6 +369,7 @@
 .method public createText(Ljava/lang/String;)Lorg/dom4j/Text;
     .locals 0
 
+    .line 1
     new-instance p0, Lorg/dom4j/dom/DOMText;
 
     invoke-direct {p0, p1}, Lorg/dom4j/dom/DOMText;-><init>(Ljava/lang/String;)V
@@ -362,6 +382,7 @@
 
     const-string p0, "XML"
 
+    .line 1
     invoke-virtual {p0, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result p0
@@ -387,6 +408,7 @@
     :goto_0
     if-eqz p2, :cond_2
 
+    .line 2
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result p0

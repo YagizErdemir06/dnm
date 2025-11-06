@@ -205,7 +205,6 @@
     <string name="accessibility_video_capture_button">வீடியோக்களை எடுக்கும்போது, படங்கள் எடுப்பதற்கான பொத்தான்</string>
     <string name="accessibility_video_pause_button">வீடியோ ரெக்கார்டிங் இடைநிறுத்தப்பட்டது</string>
     <string name="accessibility_video_resume_button">வீடியோ ரெக்கார்டிங் மீண்டும் தொடங்கப்பட்டது</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">வாட்டர்மார்க் முடக்கப்பட்டது</string>
     <string name="accessibility_watermark_image_on">வாட்டர்மார்க் இயங்குகிறது</string>
     <string name="accessibility_watermark_text">வாட்டர்மார்க் சரிசெய்தல் பேனலைத் திற</string>
@@ -213,16 +212,6 @@
     <string name="accessibility_zoom_button">ஜூம் பயன்முறை</string>
     <string name="actionbar_button_up_description">பின்செல்க</string>
     <string name="afternoon">பிற்பகல்</string>
-    <string name="agent_flip_tbc">உள் திரையில் தொடரவும்</string>
-    <string name="agent_function_max">அதிகபட்ச மதிப்புக்கு சரிசெய்யப்பட்டது</string>
-    <string name="agent_function_min">குறைந்தபட்ச மதிப்புக்கு சரிசெய்யப்பட்டது</string>
-    <string name="agent_workspace_mode_not_supported">இந்த அம்சம் ஆதரிக்கப்படவில்லை</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"இந்த அம்சம் ஆதரிக்கப்படவில்லை.
-அதற்கு பதிலாக புகைப்பட பயன்முறை திறக்கப்பட்டது."</string>
-    <string name="agent_workspace_on">புகைப்படமெடுப்பதற்கான அளவுருக்கள் அமைக்கப்பட்டன \"%1$s\"</string>
-    <string name="agent_workspace_tbc">காட்சியை ஆய்வு செய்கிறது</string>
-    <string name="agent_workspace_tbc_use_default">"காட்சியை ஆய்வு செய்கிறது…
-கேமரா அளவுருக்கள் இயல்புநிலைக்கு அமைக்கப்பட்டன"</string>
     <string name="ai_agra_fort">ஆக்ரா கோட்டை</string>
     <string name="ai_amber_fort">அமீர் அரண்மனை</string>
     <string name="ai_baby">குழந்தை</string>
@@ -781,7 +770,6 @@
     <string name="download_hint_cn">"Looks like your device isn't connected to WLAN. Use %1$s MB of mobile data to download items now?"</string>
     <string name="download_hint_wifi">உங்கள் சாதனம் Wi-Fi உடன் இணைக்கப்படவில்லை போல தெரிகிறது. உருப்படிகளைப் பதிவிறக்க, %1$s MB மொபைல் தரவைப் பயன்படுத்தவா?</string>
     <string name="download_in_progress">பதிவிறக்குகிறது…</string>
-    <string name="download_network_error">பதிவிறக்க முடியவில்லை, நெட்வொர்க் இணைப்புகளைச் சோதிக்கவும்.</string>
     <string name="download_title">தரவு பயன்பாட்டு எச்சரிக்கை</string>
     <string name="download_waiting">நிலுவையிலுள்ளது…</string>
     <string name="dual_camera_lens_covered_toast">லென்ஸ் மூடப்பட்டிருந்தது.</string>
@@ -1260,7 +1248,6 @@ A4 தாளில் வயர்லெஸ் வழியில் நகல�
     <string name="miuix_appcompat_delete_description">நீக்கு</string>
     <string name="miuix_appcompat_deselect_all">அனைத்தையும் தேர்வு நீக்கு</string>
     <string name="miuix_appcompat_deselect_all_description">எல்லாம் தேர்வுநீக்கு</string>
-    <string name="miuix_appcompat_edit">திருத்து</string>
     <string name="miuix_appcompat_search_action_mode_cancel">ரத்துசெய்</string>
     <string name="miuix_appcompat_search_input_description">தேடவும்</string>
     <string name="miuix_appcompat_select_all">எல்லாம் தேர்ந்தெடு</string>
@@ -2199,7 +2186,6 @@ A4 தாளில் வயர்லெஸ் வழியில் நகல�
     <string name="time_picker_label_hour">H</string>
     <string name="time_picker_label_minute">M</string>
     <string name="time_stamp_date_format">dd/MM/yyyy</string>
-    <string name="time_stamp_date_format_minute">dd/MM/yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">ஷூட்டிங்கிற்கு முன்பாக அல்லது ஷூட்டிங்கின்போது, நீங்கள் எந்த நேரத்திலும் பின்னணியை ஃப்ரீஸ் அல்லது அன்ஃப்ரீஸ் செய்ய முடியும்.</string>
     <string name="timefreeze_guide_tip3">உங்கள் சப்ஜெக்ட்டிடம் ஃப்ரேமின் மையத்தில் இருக்கும்படி கூறவும்.</string>
     <string name="timefreeze_guide_tip4">டிராஃபிக்கை நிறுத்துங்கள்.</string>
@@ -2219,8 +2205,8 @@ A4 தாளில் வயர்லெஸ் வழியில் நகல�
     <string name="tip_ai_off">AI கேமரா: ஆஃப்</string>
     <string name="tip_beauty_mode_title1">போர்ட்ரெயிட் ஸ்டைல்: ஃபிரஷ்</string>
     <string name="tip_beauty_mode_title2">போர்ட்ரெயிட் ஸ்டைல்: ஃப்ளிம்</string>
-    <string name="tip_cvtype_title1">ஸ்டைல்: Leica ஆதன்டிக்</string>
-    <string name="tip_cvtype_title2">ஸ்டைல்: Leica வைப்ரண்ட்</string>
+    <string name="tip_cvtype_title1">ஸ்டைல்: லெய்க்கா ஆதன்டிக்</string>
+    <string name="tip_cvtype_title2">ஸ்டைல்: லெய்க்கா வைப்ரண்ட்</string>
     <string name="tip_eis_off">ஸ்டெடி வீடியோ: ஆஃப்</string>
     <string name="tip_eis_pro_off">ஸ்டெடி வீடியோ ப்ரோ: ஆஃப்</string>
     <string name="tip_flash_auto">ஃப்ளாஷ்: ஆட்டோ</string>
@@ -2237,7 +2223,7 @@ A4 தாளில் வயர்லெஸ் வழியில் நகல�
     <string name="tip_flash_screen_light_on">சாஃப்ட் ஃபிளாஷ்: ஆன்</string>
     <string name="tip_flash_soft_light_off">சாஃப்ட் ஃபிளாஷ்: ஆஃப்</string>
     <string name="tip_flash_soft_light_torch">சாஃப்ட் ஃபிளாஷ்: டார்ச் லைட் பயன்முறை</string>
-    <string name="tip_flash_torch">ஃபிளாஷ்: டார்ச் லைட்</string>
+    <string name="tip_flash_torch">ஃப்ளாஷ்: எப்போதும் இயக்கத்தில்</string>
     <string name="tip_friend_mode_connect_when_24GHz">முன்னோட்ட தரத்தை அதிகரிக்க, %s GHz இணைப்பைப் பயன்படுத்தவும்</string>
     <string name="tip_friend_mode_display_device_name_connect">பகிரப்பட்ட மாதிரிகாட்சி</string>
     <string name="tip_friend_mode_display_device_name_disconnect">மற்றொரு சாதனம் அமர்விலிருந்து வெளியேறியது</string>

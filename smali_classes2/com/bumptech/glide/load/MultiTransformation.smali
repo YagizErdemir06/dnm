@@ -125,12 +125,15 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
+    .line 1
     instance-of v0, p1, Lcom/bumptech/glide/load/MultiTransformation;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/bumptech/glide/load/MultiTransformation;
 
+    .line 3
     iget-object p0, p0, Lcom/bumptech/glide/load/MultiTransformation;->transformations:Ljava/util/Collection;
 
     iget-object p1, p1, Lcom/bumptech/glide/load/MultiTransformation;->transformations:Ljava/util/Collection;
@@ -150,6 +153,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/MultiTransformation;->transformations:Ljava/util/Collection;
 
     invoke-interface {p0}, Ljava/util/Collection;->hashCode()I
@@ -183,6 +187,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/MultiTransformation;->transformations:Ljava/util/Collection;
 
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
@@ -204,12 +209,14 @@
 
     check-cast v1, Lcom/bumptech/glide/load/Transformation;
 
+    .line 2
     invoke-interface {v1, p1, v0, p3, p4}, Lcom/bumptech/glide/load/Transformation;->transform(Landroid/content/Context;Lcom/bumptech/glide/load/engine/Resource;II)Lcom/bumptech/glide/load/engine/Resource;
 
     move-result-object v1
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {v0, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -222,6 +229,7 @@
 
     if-nez v2, :cond_0
 
+    .line 4
     invoke-interface {v0}, Lcom/bumptech/glide/load/engine/Resource;->recycle()V
 
     :cond_0
@@ -240,6 +248,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/MultiTransformation;->transformations:Ljava/util/Collection;
 
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
@@ -259,6 +268,7 @@
 
     check-cast v0, Lcom/bumptech/glide/load/Transformation;
 
+    .line 2
     invoke-interface {v0, p1}, Lcom/bumptech/glide/load/Key;->updateDiskCacheKey(Ljava/security/MessageDigest;)V
 
     goto :goto_0

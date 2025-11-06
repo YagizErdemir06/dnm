@@ -13,6 +13,7 @@
 .method public static constructor <clinit>()V
     .locals 4
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/common/Feature;
 
     const-string v1, "CLIENT_TELEMETRY"

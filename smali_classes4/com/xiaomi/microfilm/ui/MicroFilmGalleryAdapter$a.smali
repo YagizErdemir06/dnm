@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/xiaomi/microfilm/ui/MicroFilmGalleryAdapter;->i(Lcom/android/camera/fragment/CommonRecyclerViewHolder;I)V
+    value = Lcom/xiaomi/microfilm/ui/MicroFilmGalleryAdapter;->h(Lcom/android/camera/fragment/CommonRecyclerViewHolder;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,22 +18,35 @@
 
 
 # instance fields
-.field public final synthetic a:Lph/p;
+.field public final synthetic c:Ld/o/t/g/b/e0;
 
-.field public final synthetic b:I
+.field public final synthetic d:I
 
-.field public final synthetic c:Lcom/xiaomi/microfilm/ui/MicroFilmGalleryAdapter;
+.field public final synthetic f:Lcom/xiaomi/microfilm/ui/MicroFilmGalleryAdapter;
 
 
 # direct methods
-.method public constructor <init>(Lcom/xiaomi/microfilm/ui/MicroFilmGalleryAdapter;Lph/p;I)V
+.method public constructor <init>(Lcom/xiaomi/microfilm/ui/MicroFilmGalleryAdapter;Ld/o/t/g/b/e0;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$VPItem",
+            "val$position"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/xiaomi/microfilm/ui/MicroFilmGalleryAdapter$a;->c:Lcom/xiaomi/microfilm/ui/MicroFilmGalleryAdapter;
+    .line 1
+    iput-object p1, p0, Lcom/xiaomi/microfilm/ui/MicroFilmGalleryAdapter$a;->f:Lcom/xiaomi/microfilm/ui/MicroFilmGalleryAdapter;
 
-    iput-object p2, p0, Lcom/xiaomi/microfilm/ui/MicroFilmGalleryAdapter$a;->a:Lph/p;
+    iput-object p2, p0, Lcom/xiaomi/microfilm/ui/MicroFilmGalleryAdapter$a;->c:Ld/o/t/g/b/e0;
 
-    iput p3, p0, Lcom/xiaomi/microfilm/ui/MicroFilmGalleryAdapter$a;->b:I
+    iput p3, p0, Lcom/xiaomi/microfilm/ui/MicroFilmGalleryAdapter$a;->d:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,15 +58,17 @@
 .method public run()V
     .locals 2
 
-    iget-object v0, p0, Lcom/xiaomi/microfilm/ui/MicroFilmGalleryAdapter$a;->a:Lph/p;
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/microfilm/ui/MicroFilmGalleryAdapter$a;->c:Ld/o/t/g/b/e0;
 
     const/4 v1, 0x7
 
     invoke-virtual {v0, v1}, Lcom/android/camera/resource/BaseResourceItem;->setState(I)V
 
-    iget-object v0, p0, Lcom/xiaomi/microfilm/ui/MicroFilmGalleryAdapter$a;->c:Lcom/xiaomi/microfilm/ui/MicroFilmGalleryAdapter;
+    .line 2
+    iget-object v0, p0, Lcom/xiaomi/microfilm/ui/MicroFilmGalleryAdapter$a;->f:Lcom/xiaomi/microfilm/ui/MicroFilmGalleryAdapter;
 
-    iget p0, p0, Lcom/xiaomi/microfilm/ui/MicroFilmGalleryAdapter$a;->b:I
+    iget p0, p0, Lcom/xiaomi/microfilm/ui/MicroFilmGalleryAdapter$a;->d:I
 
     sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 

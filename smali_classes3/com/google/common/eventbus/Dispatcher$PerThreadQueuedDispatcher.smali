@@ -1,4 +1,4 @@
-.class final Lcom/google/common/eventbus/Dispatcher$PerThreadQueuedDispatcher;
+.class public final Lcom/google/common/eventbus/Dispatcher$PerThreadQueuedDispatcher;
 .super Lcom/google/common/eventbus/Dispatcher;
 .source "SourceFile"
 
@@ -90,10 +90,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/eventbus/Dispatcher$PerThreadQueuedDispatcher;->queue:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -102,6 +105,7 @@
 
     check-cast v0, Ljava/util/Queue;
 
+    .line 4
     new-instance v1, Lcom/google/common/eventbus/Dispatcher$PerThreadQueuedDispatcher$Event;
 
     const/4 v2, 0x0
@@ -110,6 +114,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/Queue;->offer(Ljava/lang/Object;)Z
 
+    .line 5
     iget-object p1, p0, Lcom/google/common/eventbus/Dispatcher$PerThreadQueuedDispatcher;->dispatching:Ljava/lang/ThreadLocal;
 
     invoke-virtual {p1}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -124,12 +129,14 @@
 
     if-nez p1, :cond_2
 
+    .line 6
     iget-object p1, p0, Lcom/google/common/eventbus/Dispatcher$PerThreadQueuedDispatcher;->dispatching:Ljava/lang/ThreadLocal;
 
     sget-object p2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     invoke-virtual {p1, p2}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
 
+    .line 7
     :cond_0
     :try_start_0
     invoke-interface {v0}, Ljava/util/Queue;->poll()Ljava/lang/Object;
@@ -140,6 +147,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 8
     :goto_0
     invoke-static {p1}, Lcom/google/common/eventbus/Dispatcher$PerThreadQueuedDispatcher$Event;->access$400(Lcom/google/common/eventbus/Dispatcher$PerThreadQueuedDispatcher$Event;)Ljava/util/Iterator;
 
@@ -151,6 +159,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 9
     invoke-static {p1}, Lcom/google/common/eventbus/Dispatcher$PerThreadQueuedDispatcher$Event;->access$400(Lcom/google/common/eventbus/Dispatcher$PerThreadQueuedDispatcher$Event;)Ljava/util/Iterator;
 
     move-result-object p2
@@ -171,11 +180,13 @@
 
     goto :goto_0
 
+    .line 10
     :cond_1
     iget-object p1, p0, Lcom/google/common/eventbus/Dispatcher$PerThreadQueuedDispatcher;->dispatching:Ljava/lang/ThreadLocal;
 
     invoke-virtual {p1}, Ljava/lang/ThreadLocal;->remove()V
 
+    .line 11
     iget-object p0, p0, Lcom/google/common/eventbus/Dispatcher$PerThreadQueuedDispatcher;->queue:Ljava/lang/ThreadLocal;
 
     invoke-virtual {p0}, Ljava/lang/ThreadLocal;->remove()V
@@ -185,14 +196,17 @@
     :catchall_0
     move-exception p1
 
+    .line 12
     iget-object p2, p0, Lcom/google/common/eventbus/Dispatcher$PerThreadQueuedDispatcher;->dispatching:Ljava/lang/ThreadLocal;
 
     invoke-virtual {p2}, Ljava/lang/ThreadLocal;->remove()V
 
+    .line 13
     iget-object p0, p0, Lcom/google/common/eventbus/Dispatcher$PerThreadQueuedDispatcher;->queue:Ljava/lang/ThreadLocal;
 
     invoke-virtual {p0}, Ljava/lang/ThreadLocal;->remove()V
 
+    .line 14
     throw p1
 
     :cond_2

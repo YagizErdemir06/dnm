@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/SequentialExecutor$1;
+.class public Lcom/google/common/util/concurrent/SequentialExecutor$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic val$task:Ljava/lang/Runnable;
+.field public final synthetic val$task:Ljava/lang/Runnable;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/util/concurrent/SequentialExecutor;Ljava/lang/Runnable;)V
     .locals 0
 
+    .line 1
     iput-object p2, p0, Lcom/google/common/util/concurrent/SequentialExecutor$1;->val$task:Ljava/lang/Runnable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,6 +38,7 @@
 .method public run()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/SequentialExecutor$1;->val$task:Ljava/lang/Runnable;
 
     invoke-interface {p0}, Ljava/lang/Runnable;->run()V
@@ -47,6 +49,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/SequentialExecutor$1;->val$task:Ljava/lang/Runnable;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;

@@ -53,6 +53,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/mlkit/common/sdkinternal/MlKitContext;->zza:Ljava/lang/Object;
 
     monitor-enter v0
@@ -76,6 +77,7 @@
 
     sget-object v1, Lcom/google/mlkit/common/sdkinternal/MlKitContext;->zzb:Lcom/google/mlkit/common/sdkinternal/MlKitContext;
 
+    .line 2
     invoke-static {v1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -89,6 +91,7 @@
     :catchall_0
     move-exception v1
 
+    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -123,6 +126,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/mlkit/common/sdkinternal/MlKitContext;->zza:Ljava/lang/Object;
 
     monitor-enter v0
@@ -154,10 +158,12 @@
 
     sput-object v1, Lcom/google/mlkit/common/sdkinternal/MlKitContext;->zzb:Lcom/google/mlkit/common/sdkinternal/MlKitContext;
 
+    .line 2
     invoke-static {p0}, Lcom/google/mlkit/common/sdkinternal/MlKitContext;->zzb(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object p0
 
+    .line 3
     new-instance v4, Lcom/google/firebase/components/ComponentRuntime;
 
     sget-object v5, Lcom/google/android/gms/tasks/TaskExecutors;->MAIN_THREAD:Ljava/util/concurrent/Executor;
@@ -170,6 +176,7 @@
 
     new-array v8, v3, [Ljava/lang/Class;
 
+    .line 4
     invoke-static {p0, v7, v8}, Lcom/google/firebase/components/Component;->of(Ljava/lang/Object;Ljava/lang/Class;[Ljava/lang/Class;)Lcom/google/firebase/components/Component;
 
     move-result-object p0
@@ -180,6 +187,7 @@
 
     new-array v3, v3, [Ljava/lang/Class;
 
+    .line 5
     invoke-static {v1, p0, v3}, Lcom/google/firebase/components/Component;->of(Ljava/lang/Object;Ljava/lang/Class;[Ljava/lang/Class;)Lcom/google/firebase/components/Component;
 
     move-result-object p0
@@ -190,10 +198,12 @@
 
     iput-object v4, v1, Lcom/google/mlkit/common/sdkinternal/MlKitContext;->zzc:Lcom/google/firebase/components/ComponentRuntime;
 
+    .line 6
     invoke-virtual {v4, v2}, Lcom/google/firebase/components/ComponentRuntime;->initializeEagerComponents(Z)V
 
     sget-object p0, Lcom/google/mlkit/common/sdkinternal/MlKitContext;->zzb:Lcom/google/mlkit/common/sdkinternal/MlKitContext;
 
+    .line 7
     monitor-exit v0
 
     return-object p0
@@ -201,6 +211,7 @@
     :catchall_0
     move-exception p0
 
+    .line 8
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -220,6 +231,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/mlkit/common/sdkinternal/MlKitContext;->zza:Ljava/lang/Object;
 
     monitor-enter v0
@@ -244,6 +256,7 @@
     :catchall_0
     move-exception p0
 
+    .line 2
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -260,6 +273,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/mlkit/common/sdkinternal/MlKitContext;->zza:Ljava/lang/Object;
 
     monitor-enter v0
@@ -291,26 +305,32 @@
 
     sput-object v1, Lcom/google/mlkit/common/sdkinternal/MlKitContext;->zzb:Lcom/google/mlkit/common/sdkinternal/MlKitContext;
 
+    .line 2
     invoke-static {p0}, Lcom/google/mlkit/common/sdkinternal/MlKitContext;->zzb(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object p0
 
     const-class v4, Lcom/google/mlkit/common/internal/MlKitComponentDiscoveryService;
 
+    .line 3
     invoke-static {p0, v4}, Lcom/google/firebase/components/ComponentDiscovery;->forContext(Landroid/content/Context;Ljava/lang/Class;)Lcom/google/firebase/components/ComponentDiscovery;
 
     move-result-object v4
 
+    .line 4
     invoke-virtual {v4}, Lcom/google/firebase/components/ComponentDiscovery;->discoverLazy()Ljava/util/List;
 
     move-result-object v4
 
+    .line 5
     sget-object v5, Lcom/google/android/gms/tasks/TaskExecutors;->MAIN_THREAD:Ljava/util/concurrent/Executor;
 
+    .line 6
     invoke-static {v5}, Lcom/google/firebase/components/ComponentRuntime;->builder(Ljava/util/concurrent/Executor;)Lcom/google/firebase/components/ComponentRuntime$Builder;
 
     move-result-object v5
 
+    .line 7
     invoke-virtual {v5, v4}, Lcom/google/firebase/components/ComponentRuntime$Builder;->addLazyComponentRegistrars(Ljava/util/Collection;)Lcom/google/firebase/components/ComponentRuntime$Builder;
 
     move-result-object v4
@@ -319,6 +339,7 @@
 
     new-array v6, v3, [Ljava/lang/Class;
 
+    .line 8
     invoke-static {p0, v5, v6}, Lcom/google/firebase/components/Component;->of(Ljava/lang/Object;Ljava/lang/Class;[Ljava/lang/Class;)Lcom/google/firebase/components/Component;
 
     move-result-object p0
@@ -331,6 +352,7 @@
 
     new-array v3, v3, [Ljava/lang/Class;
 
+    .line 9
     invoke-static {v1, v4, v3}, Lcom/google/firebase/components/Component;->of(Ljava/lang/Object;Ljava/lang/Class;[Ljava/lang/Class;)Lcom/google/firebase/components/Component;
 
     move-result-object v3
@@ -339,16 +361,19 @@
 
     move-result-object p0
 
+    .line 10
     invoke-virtual {p0}, Lcom/google/firebase/components/ComponentRuntime$Builder;->build()Lcom/google/firebase/components/ComponentRuntime;
 
     move-result-object p0
 
     iput-object p0, v1, Lcom/google/mlkit/common/sdkinternal/MlKitContext;->zzc:Lcom/google/firebase/components/ComponentRuntime;
 
+    .line 11
     invoke-virtual {p0, v2}, Lcom/google/firebase/components/ComponentRuntime;->initializeEagerComponents(Z)V
 
     sget-object p0, Lcom/google/mlkit/common/sdkinternal/MlKitContext;->zzb:Lcom/google/mlkit/common/sdkinternal/MlKitContext;
 
+    .line 12
     monitor-exit v0
 
     return-object p0
@@ -356,6 +381,7 @@
     :catchall_0
     move-exception p0
 
+    .line 13
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -366,6 +392,7 @@
 .method private static zzb(Landroid/content/Context;)Landroid/content/Context;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -402,6 +429,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/mlkit/common/sdkinternal/MlKitContext;->zzb:Lcom/google/mlkit/common/sdkinternal/MlKitContext;
 
     if-ne v0, p0, :cond_0
@@ -420,10 +448,12 @@
 
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/MlKitContext;->zzc:Lcom/google/firebase/components/ComponentRuntime;
 
+    .line 2
     invoke-static {v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iget-object p0, p0, Lcom/google/mlkit/common/sdkinternal/MlKitContext;->zzc:Lcom/google/firebase/components/ComponentRuntime;
 
+    .line 3
     invoke-interface {p0, p1}, Lcom/google/firebase/components/ComponentContainer;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p0
@@ -439,6 +469,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     const-class v0, Landroid/content/Context;
 
     invoke-virtual {p0, v0}, Lcom/google/mlkit/common/sdkinternal/MlKitContext;->get(Ljava/lang/Class;)Ljava/lang/Object;

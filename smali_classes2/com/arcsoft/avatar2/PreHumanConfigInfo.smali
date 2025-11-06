@@ -15,14 +15,18 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, ""
 
+    .line 2
     iput-object v0, p0, Lcom/arcsoft/avatar2/PreHumanConfigInfo;->a:Ljava/lang/String;
 
+    .line 3
     iput-object v0, p0, Lcom/arcsoft/avatar2/PreHumanConfigInfo;->b:Ljava/lang/String;
 
+    .line 4
     iput-object v0, p0, Lcom/arcsoft/avatar2/PreHumanConfigInfo;->c:Ljava/lang/String;
 
     return-void
@@ -33,6 +37,7 @@
 .method public getPreHumanConfigPath()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/arcsoft/avatar2/PreHumanConfigInfo;->c:Ljava/lang/String;
 
     return-object p0
@@ -41,6 +46,7 @@
 .method public getPreHumanName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/arcsoft/avatar2/PreHumanConfigInfo;->a:Ljava/lang/String;
 
     return-object p0
@@ -49,6 +55,7 @@
 .method public getPreHumanThumbnailPath()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/arcsoft/avatar2/PreHumanConfigInfo;->b:Ljava/lang/String;
 
     return-object p0
@@ -57,6 +64,7 @@
 .method public setPreHumanConfigPath(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/PreHumanConfigInfo;->c:Ljava/lang/String;
 
     return-void
@@ -65,6 +73,7 @@
 .method public setPreHumanName(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/PreHumanConfigInfo;->a:Ljava/lang/String;
 
     return-void
@@ -73,6 +82,7 @@
 .method public setPreHumanThumbnailPath(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/PreHumanConfigInfo;->b:Ljava/lang/String;
 
     return-void
@@ -81,6 +91,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

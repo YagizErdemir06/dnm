@@ -22,6 +22,7 @@
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;->values()[Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
 
     move-result-object v0
@@ -33,7 +34,7 @@
     sput-object v0, Lcom/xiaomi/camera/common/LifecycleAsyncTask$a;->a:[I
 
     :try_start_0
-    sget-object v1, Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;->b:Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
+    sget-object v1, Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;->d:Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -49,7 +50,7 @@
     :try_start_1
     sget-object v0, Lcom/xiaomi/camera/common/LifecycleAsyncTask$a;->a:[I
 
-    sget-object v1, Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;->c:Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
+    sget-object v1, Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;->f:Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -65,7 +66,7 @@
     :try_start_2
     sget-object v0, Lcom/xiaomi/camera/common/LifecycleAsyncTask$a;->a:[I
 
-    sget-object v1, Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;->d:Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
+    sget-object v1, Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;->g:Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 

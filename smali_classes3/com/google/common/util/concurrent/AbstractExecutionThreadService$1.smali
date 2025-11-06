@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1;
+.class public Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1;
 .super Lcom/google/common/util/concurrent/AbstractService;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/util/concurrent/AbstractExecutionThreadService;
+.field public final synthetic this$0:Lcom/google/common/util/concurrent/AbstractExecutionThreadService;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/util/concurrent/AbstractExecutionThreadService;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1;->this$0:Lcom/google/common/util/concurrent/AbstractExecutionThreadService;
 
     invoke-direct {p0}, Lcom/google/common/util/concurrent/AbstractService;-><init>()V
@@ -34,8 +35,10 @@
 .method public final doStart()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1;->this$0:Lcom/google/common/util/concurrent/AbstractExecutionThreadService;
 
+    .line 2
     invoke-virtual {v0}, Lcom/google/common/util/concurrent/AbstractExecutionThreadService;->executor()Ljava/util/concurrent/Executor;
 
     move-result-object v0
@@ -44,10 +47,12 @@
 
     invoke-direct {v1, p0}, Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1$1;-><init>(Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1;)V
 
+    .line 3
     invoke-static {v0, v1}, Lcom/google/common/util/concurrent/MoreExecutors;->renamingDecorator(Ljava/util/concurrent/Executor;Lcom/google/common/base/Supplier;)Ljava/util/concurrent/Executor;
 
     move-result-object v0
 
+    .line 4
     new-instance v1, Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1$2;
 
     invoke-direct {v1, p0}, Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1$2;-><init>(Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1;)V
@@ -60,6 +65,7 @@
 .method public doStop()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1;->this$0:Lcom/google/common/util/concurrent/AbstractExecutionThreadService;
 
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/AbstractExecutionThreadService;->triggerShutdown()V
@@ -70,6 +76,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1;->this$0:Lcom/google/common/util/concurrent/AbstractExecutionThreadService;
 
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/AbstractExecutionThreadService;->toString()Ljava/lang/String;

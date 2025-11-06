@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/audio/AudioTimestampPoller$AudioTimestampV19;
+.class public final Lcom/google/android/exoplayer2/audio/AudioTimestampPoller$AudioTimestampV19;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -34,10 +34,13 @@
 .method public constructor <init>(Landroid/media/AudioTrack;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/audio/AudioTimestampPoller$AudioTimestampV19;->audioTrack:Landroid/media/AudioTrack;
 
+    .line 3
     new-instance p1, Landroid/media/AudioTimestamp;
 
     invoke-direct {p1}, Landroid/media/AudioTimestamp;-><init>()V
@@ -52,6 +55,7 @@
 .method public getTimestampPositionFrames()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/audio/AudioTimestampPoller$AudioTimestampV19;->lastTimestampPositionFrames:J
 
     return-wide v0
@@ -60,6 +64,7 @@
 .method public getTimestampSystemTimeUs()J
     .locals 4
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/audio/AudioTimestampPoller$AudioTimestampV19;->audioTimestamp:Landroid/media/AudioTimestamp;
 
     iget-wide v0, p0, Landroid/media/AudioTimestamp;->nanoTime:J
@@ -74,6 +79,7 @@
 .method public maybeUpdateTimestamp()Z
     .locals 7
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/AudioTimestampPoller$AudioTimestampV19;->audioTrack:Landroid/media/AudioTrack;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/audio/AudioTimestampPoller$AudioTimestampV19;->audioTimestamp:Landroid/media/AudioTimestamp;
@@ -84,16 +90,19 @@
 
     if-eqz v0, :cond_1
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/audio/AudioTimestampPoller$AudioTimestampV19;->audioTimestamp:Landroid/media/AudioTimestamp;
 
     iget-wide v1, v1, Landroid/media/AudioTimestamp;->framePosition:J
 
+    .line 3
     iget-wide v3, p0, Lcom/google/android/exoplayer2/audio/AudioTimestampPoller$AudioTimestampV19;->lastTimestampRawPositionFrames:J
 
     cmp-long v3, v3, v1
 
     if-lez v3, :cond_0
 
+    .line 4
     iget-wide v3, p0, Lcom/google/android/exoplayer2/audio/AudioTimestampPoller$AudioTimestampV19;->rawTimestampFramePositionWrapCount:J
 
     const-wide/16 v5, 0x1
@@ -102,9 +111,11 @@
 
     iput-wide v3, p0, Lcom/google/android/exoplayer2/audio/AudioTimestampPoller$AudioTimestampV19;->rawTimestampFramePositionWrapCount:J
 
+    .line 5
     :cond_0
     iput-wide v1, p0, Lcom/google/android/exoplayer2/audio/AudioTimestampPoller$AudioTimestampV19;->lastTimestampRawPositionFrames:J
 
+    .line 6
     iget-wide v3, p0, Lcom/google/android/exoplayer2/audio/AudioTimestampPoller$AudioTimestampV19;->rawTimestampFramePositionWrapCount:J
 
     const/16 v5, 0x20

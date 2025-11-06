@@ -44,7 +44,7 @@
 
 
 # instance fields
-.field final isRecoverable:Z
+.field public final isRecoverable:Z
 
 .field public final mediaPeriodId:Lcom/google/android/exoplayer2/source/MediaPeriodId;
     .annotation build Landroidx/annotation/Nullable;
@@ -72,9 +72,8 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/google/android/exoplayer2/d;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/d;-><init>()V
+    .line 1
+    sget-object v0, Ld/j/a/b/d;->a:Ld/j/a/b/d;
 
     sput-object v0, Lcom/google/android/exoplayer2/ExoPlaybackException;->CREATOR:Lcom/google/android/exoplayer2/Bundleable$Creator;
 
@@ -146,12 +145,12 @@
 
     move-result-object v2
 
-    const/4 v10, 0x0
-
     .line 3
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v11
+
+    const/4 v10, 0x0
 
     move-object v1, p0
 
@@ -416,6 +415,7 @@
 .method public static createForRemote(Ljava/lang/String;)Lcom/google/android/exoplayer2/ExoPlaybackException;
     .locals 11
 
+    .line 1
     new-instance v10, Lcom/google/android/exoplayer2/ExoPlaybackException;
 
     const/4 v1, 0x3
@@ -450,11 +450,8 @@
         .end annotation
     .end param
 
+    .line 1
     new-instance v10, Lcom/google/android/exoplayer2/ExoPlaybackException;
-
-    const/4 v1, 0x1
-
-    const/4 v3, 0x0
 
     if-nez p3, :cond_0
 
@@ -468,6 +465,10 @@
     move v8, p4
 
     :goto_0
+    const/4 v1, 0x1
+
+    const/4 v3, 0x0
+
     move-object v0, v10
 
     move-object v2, p0
@@ -482,6 +483,7 @@
 
     move/from16 v9, p5
 
+    .line 2
     invoke-direct/range {v0 .. v9}, Lcom/google/android/exoplayer2/ExoPlaybackException;-><init>(ILjava/lang/Throwable;Ljava/lang/String;ILjava/lang/String;ILcom/google/android/exoplayer2/Format;IZ)V
 
     return-object v10
@@ -490,6 +492,7 @@
 .method public static createForSource(Ljava/io/IOException;I)Lcom/google/android/exoplayer2/ExoPlaybackException;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/ExoPlaybackException;
 
     const/4 v1, 0x0
@@ -561,6 +564,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_1
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -584,6 +588,7 @@
 
     invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 2
     invoke-static {p5}, Lcom/google/android/exoplayer2/util/Util;->getFormatSupportString(I)Ljava/lang/String;
 
     move-result-object p2
@@ -599,6 +604,7 @@
     :cond_2
     const-string p0, "Source error"
 
+    .line 3
     :goto_0
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -606,6 +612,7 @@
 
     if-nez p2, :cond_3
 
+    .line 4
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -637,9 +644,11 @@
     .annotation build Landroidx/annotation/CheckResult;
     .end annotation
 
+    .line 1
     new-instance v13, Lcom/google/android/exoplayer2/ExoPlaybackException;
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 2
+    invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
@@ -651,7 +660,8 @@
 
     check-cast v1, Ljava/lang/String;
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    .line 3
+    invoke-virtual {p0}, Ljava/lang/Exception;->getCause()Ljava/lang/Throwable;
 
     move-result-object v2
 
@@ -687,6 +697,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/android/exoplayer2/PlaybackException;->errorInfoEquals(Lcom/google/android/exoplayer2/PlaybackException;)Z
 
     move-result v0
@@ -697,6 +708,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Util;->castNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -704,6 +716,7 @@
 
     check-cast p1, Lcom/google/android/exoplayer2/ExoPlaybackException;
 
+    .line 3
     iget v0, p0, Lcom/google/android/exoplayer2/ExoPlaybackException;->type:I
 
     iget v2, p1, Lcom/google/android/exoplayer2/ExoPlaybackException;->type:I
@@ -714,6 +727,7 @@
 
     iget-object v2, p1, Lcom/google/android/exoplayer2/ExoPlaybackException;->rendererName:Ljava/lang/String;
 
+    .line 4
     invoke-static {v0, v2}, Lcom/google/android/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
@@ -730,6 +744,7 @@
 
     iget-object v2, p1, Lcom/google/android/exoplayer2/ExoPlaybackException;->rendererFormat:Lcom/google/android/exoplayer2/Format;
 
+    .line 5
     invoke-static {v0, v2}, Lcom/google/android/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
@@ -746,6 +761,7 @@
 
     iget-object v2, p1, Lcom/google/android/exoplayer2/ExoPlaybackException;->mediaPeriodId:Lcom/google/android/exoplayer2/source/MediaPeriodId;
 
+    .line 6
     invoke-static {v0, v2}, Lcom/google/android/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
@@ -767,6 +783,7 @@
 .method public getRendererException()Ljava/lang/Exception;
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/ExoPlaybackException;->type:I
 
     const/4 v1, 0x1
@@ -781,7 +798,8 @@
     :goto_0
     invoke-static {v1}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    .line 2
+    invoke-virtual {p0}, Ljava/lang/Exception;->getCause()Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -797,6 +815,7 @@
 .method public getSourceException()Ljava/io/IOException;
     .locals 1
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/ExoPlaybackException;->type:I
 
     if-nez v0, :cond_0
@@ -811,7 +830,8 @@
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    .line 2
+    invoke-virtual {p0}, Ljava/lang/Exception;->getCause()Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -827,6 +847,7 @@
 .method public getUnexpectedException()Ljava/lang/RuntimeException;
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/ExoPlaybackException;->type:I
 
     const/4 v1, 0x2
@@ -843,7 +864,8 @@
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    .line 2
+    invoke-virtual {p0}, Ljava/lang/Exception;->getCause()Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -859,12 +881,14 @@
 .method public toBundle()Landroid/os/Bundle;
     .locals 3
 
+    .line 1
     invoke-super {p0}, Lcom/google/android/exoplayer2/PlaybackException;->toBundle()Landroid/os/Bundle;
 
     move-result-object v0
 
     const/16 v1, 0x3e9
 
+    .line 2
     invoke-static {v1}, Lcom/google/android/exoplayer2/PlaybackException;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -875,6 +899,7 @@
 
     const/16 v1, 0x3ea
 
+    .line 3
     invoke-static {v1}, Lcom/google/android/exoplayer2/PlaybackException;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -885,6 +910,7 @@
 
     const/16 v1, 0x3eb
 
+    .line 4
     invoke-static {v1}, Lcom/google/android/exoplayer2/PlaybackException;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -893,12 +919,14 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
+    .line 5
     iget-object v1, p0, Lcom/google/android/exoplayer2/ExoPlaybackException;->rendererFormat:Lcom/google/android/exoplayer2/Format;
 
     if-eqz v1, :cond_0
 
     const/16 v1, 0x3ec
 
+    .line 6
     invoke-static {v1}, Lcom/google/android/exoplayer2/PlaybackException;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -914,6 +942,7 @@
     :cond_0
     const/16 v1, 0x3ed
 
+    .line 7
     invoke-static {v1}, Lcom/google/android/exoplayer2/PlaybackException;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -924,6 +953,7 @@
 
     const/16 v1, 0x3ee
 
+    .line 8
     invoke-static {v1}, Lcom/google/android/exoplayer2/PlaybackException;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1

@@ -1,4 +1,4 @@
-.class final Lcom/bumptech/glide/util/ByteBufferUtil$SafeArray;
+.class public final Lcom/bumptech/glide/util/ByteBufferUtil$SafeArray;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field final data:[B
+.field public final data:[B
 
-.field final limit:I
+.field public final limit:I
 
-.field final offset:I
+.field public final offset:I
 
 
 # direct methods
@@ -30,12 +30,16 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/bumptech/glide/util/ByteBufferUtil$SafeArray;->data:[B
 
+    .line 3
     iput p2, p0, Lcom/bumptech/glide/util/ByteBufferUtil$SafeArray;->offset:I
 
+    .line 4
     iput p3, p0, Lcom/bumptech/glide/util/ByteBufferUtil$SafeArray;->limit:I
 
     return-void

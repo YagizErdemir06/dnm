@@ -349,6 +349,7 @@
 .method public static synthetic access$100(Lcom/google/android/exoplayer2/Format$Builder;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Format$Builder;->id:Ljava/lang/String;
 
     return-object p0
@@ -357,6 +358,7 @@
 .method public static synthetic access$1000(Lcom/google/android/exoplayer2/Format$Builder;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Format$Builder;->containerMimeType:Ljava/lang/String;
 
     return-object p0
@@ -365,6 +367,7 @@
 .method public static synthetic access$1100(Lcom/google/android/exoplayer2/Format$Builder;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Format$Builder;->sampleMimeType:Ljava/lang/String;
 
     return-object p0
@@ -373,6 +376,7 @@
 .method public static synthetic access$1200(Lcom/google/android/exoplayer2/Format$Builder;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/Format$Builder;->maxInputSize:I
 
     return p0
@@ -381,6 +385,7 @@
 .method public static synthetic access$1300(Lcom/google/android/exoplayer2/Format$Builder;)Ljava/util/List;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Format$Builder;->initializationData:Ljava/util/List;
 
     return-object p0
@@ -389,6 +394,7 @@
 .method public static synthetic access$1400(Lcom/google/android/exoplayer2/Format$Builder;)Lcom/google/android/exoplayer2/drm/DrmInitData;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Format$Builder;->drmInitData:Lcom/google/android/exoplayer2/drm/DrmInitData;
 
     return-object p0
@@ -397,6 +403,7 @@
 .method public static synthetic access$1500(Lcom/google/android/exoplayer2/Format$Builder;)J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/Format$Builder;->subsampleOffsetUs:J
 
     return-wide v0
@@ -405,6 +412,7 @@
 .method public static synthetic access$1600(Lcom/google/android/exoplayer2/Format$Builder;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/Format$Builder;->width:I
 
     return p0
@@ -413,6 +421,7 @@
 .method public static synthetic access$1700(Lcom/google/android/exoplayer2/Format$Builder;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/Format$Builder;->height:I
 
     return p0
@@ -421,6 +430,7 @@
 .method public static synthetic access$1800(Lcom/google/android/exoplayer2/Format$Builder;)F
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/Format$Builder;->frameRate:F
 
     return p0
@@ -429,6 +439,7 @@
 .method public static synthetic access$1900(Lcom/google/android/exoplayer2/Format$Builder;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/Format$Builder;->rotationDegrees:I
 
     return p0
@@ -437,6 +448,7 @@
 .method public static synthetic access$200(Lcom/google/android/exoplayer2/Format$Builder;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Format$Builder;->label:Ljava/lang/String;
 
     return-object p0
@@ -445,6 +457,7 @@
 .method public static synthetic access$2000(Lcom/google/android/exoplayer2/Format$Builder;)F
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/Format$Builder;->pixelWidthHeightRatio:F
 
     return p0
@@ -453,6 +466,7 @@
 .method public static synthetic access$2100(Lcom/google/android/exoplayer2/Format$Builder;)[B
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Format$Builder;->projectionData:[B
 
     return-object p0
@@ -461,6 +475,7 @@
 .method public static synthetic access$2200(Lcom/google/android/exoplayer2/Format$Builder;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/Format$Builder;->stereoMode:I
 
     return p0
@@ -469,6 +484,7 @@
 .method public static synthetic access$2300(Lcom/google/android/exoplayer2/Format$Builder;)Lcom/google/android/exoplayer2/video/ColorInfo;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Format$Builder;->colorInfo:Lcom/google/android/exoplayer2/video/ColorInfo;
 
     return-object p0
@@ -477,6 +493,7 @@
 .method public static synthetic access$2400(Lcom/google/android/exoplayer2/Format$Builder;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/Format$Builder;->channelCount:I
 
     return p0
@@ -485,6 +502,7 @@
 .method public static synthetic access$2500(Lcom/google/android/exoplayer2/Format$Builder;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/Format$Builder;->sampleRate:I
 
     return p0
@@ -493,6 +511,7 @@
 .method public static synthetic access$2600(Lcom/google/android/exoplayer2/Format$Builder;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/Format$Builder;->pcmEncoding:I
 
     return p0
@@ -501,6 +520,7 @@
 .method public static synthetic access$2700(Lcom/google/android/exoplayer2/Format$Builder;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/Format$Builder;->encoderDelay:I
 
     return p0
@@ -509,6 +529,7 @@
 .method public static synthetic access$2800(Lcom/google/android/exoplayer2/Format$Builder;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/Format$Builder;->encoderPadding:I
 
     return p0
@@ -517,6 +538,7 @@
 .method public static synthetic access$2900(Lcom/google/android/exoplayer2/Format$Builder;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/Format$Builder;->accessibilityChannel:I
 
     return p0
@@ -525,6 +547,7 @@
 .method public static synthetic access$300(Lcom/google/android/exoplayer2/Format$Builder;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Format$Builder;->language:Ljava/lang/String;
 
     return-object p0
@@ -533,6 +556,7 @@
 .method public static synthetic access$3000(Lcom/google/android/exoplayer2/Format$Builder;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/Format$Builder;->cryptoType:I
 
     return p0
@@ -541,6 +565,7 @@
 .method public static synthetic access$400(Lcom/google/android/exoplayer2/Format$Builder;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/Format$Builder;->selectionFlags:I
 
     return p0
@@ -549,6 +574,7 @@
 .method public static synthetic access$500(Lcom/google/android/exoplayer2/Format$Builder;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/Format$Builder;->roleFlags:I
 
     return p0
@@ -557,6 +583,7 @@
 .method public static synthetic access$600(Lcom/google/android/exoplayer2/Format$Builder;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/Format$Builder;->averageBitrate:I
 
     return p0
@@ -565,6 +592,7 @@
 .method public static synthetic access$700(Lcom/google/android/exoplayer2/Format$Builder;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/Format$Builder;->peakBitrate:I
 
     return p0
@@ -573,6 +601,7 @@
 .method public static synthetic access$800(Lcom/google/android/exoplayer2/Format$Builder;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Format$Builder;->codecs:Ljava/lang/String;
 
     return-object p0
@@ -581,6 +610,7 @@
 .method public static synthetic access$900(Lcom/google/android/exoplayer2/Format$Builder;)Lcom/google/android/exoplayer2/metadata/Metadata;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Format$Builder;->metadata:Lcom/google/android/exoplayer2/metadata/Metadata;
 
     return-object p0
@@ -591,6 +621,7 @@
 .method public build()Lcom/google/android/exoplayer2/Format;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/Format;
 
     const/4 v1, 0x0
@@ -603,6 +634,7 @@
 .method public setAccessibilityChannel(I)Lcom/google/android/exoplayer2/Format$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/Format$Builder;->accessibilityChannel:I
 
     return-object p0
@@ -611,6 +643,7 @@
 .method public setAverageBitrate(I)Lcom/google/android/exoplayer2/Format$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/Format$Builder;->averageBitrate:I
 
     return-object p0
@@ -619,6 +652,7 @@
 .method public setChannelCount(I)Lcom/google/android/exoplayer2/Format$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/Format$Builder;->channelCount:I
 
     return-object p0
@@ -631,6 +665,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/Format$Builder;->codecs:Ljava/lang/String;
 
     return-object p0
@@ -643,6 +678,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/Format$Builder;->colorInfo:Lcom/google/android/exoplayer2/video/ColorInfo;
 
     return-object p0
@@ -655,6 +691,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/Format$Builder;->containerMimeType:Ljava/lang/String;
 
     return-object p0
@@ -663,6 +700,7 @@
 .method public setCryptoType(I)Lcom/google/android/exoplayer2/Format$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/Format$Builder;->cryptoType:I
 
     return-object p0
@@ -675,6 +713,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/Format$Builder;->drmInitData:Lcom/google/android/exoplayer2/drm/DrmInitData;
 
     return-object p0
@@ -683,6 +722,7 @@
 .method public setEncoderDelay(I)Lcom/google/android/exoplayer2/Format$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/Format$Builder;->encoderDelay:I
 
     return-object p0
@@ -691,6 +731,7 @@
 .method public setEncoderPadding(I)Lcom/google/android/exoplayer2/Format$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/Format$Builder;->encoderPadding:I
 
     return-object p0
@@ -699,6 +740,7 @@
 .method public setFrameRate(F)Lcom/google/android/exoplayer2/Format$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/Format$Builder;->frameRate:F
 
     return-object p0
@@ -707,6 +749,7 @@
 .method public setHeight(I)Lcom/google/android/exoplayer2/Format$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/Format$Builder;->height:I
 
     return-object p0
@@ -753,6 +796,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/Format$Builder;->initializationData:Ljava/util/List;
 
     return-object p0
@@ -765,6 +809,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/Format$Builder;->label:Ljava/lang/String;
 
     return-object p0
@@ -777,6 +822,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/Format$Builder;->language:Ljava/lang/String;
 
     return-object p0
@@ -785,6 +831,7 @@
 .method public setMaxInputSize(I)Lcom/google/android/exoplayer2/Format$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/Format$Builder;->maxInputSize:I
 
     return-object p0
@@ -797,6 +844,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/Format$Builder;->metadata:Lcom/google/android/exoplayer2/metadata/Metadata;
 
     return-object p0
@@ -805,6 +853,7 @@
 .method public setPcmEncoding(I)Lcom/google/android/exoplayer2/Format$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/Format$Builder;->pcmEncoding:I
 
     return-object p0
@@ -813,6 +862,7 @@
 .method public setPeakBitrate(I)Lcom/google/android/exoplayer2/Format$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/Format$Builder;->peakBitrate:I
 
     return-object p0
@@ -821,6 +871,7 @@
 .method public setPixelWidthHeightRatio(F)Lcom/google/android/exoplayer2/Format$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/Format$Builder;->pixelWidthHeightRatio:F
 
     return-object p0
@@ -833,6 +884,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/Format$Builder;->projectionData:[B
 
     return-object p0
@@ -841,6 +893,7 @@
 .method public setRoleFlags(I)Lcom/google/android/exoplayer2/Format$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/Format$Builder;->roleFlags:I
 
     return-object p0
@@ -849,6 +902,7 @@
 .method public setRotationDegrees(I)Lcom/google/android/exoplayer2/Format$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/Format$Builder;->rotationDegrees:I
 
     return-object p0
@@ -861,6 +915,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/Format$Builder;->sampleMimeType:Ljava/lang/String;
 
     return-object p0
@@ -869,6 +924,7 @@
 .method public setSampleRate(I)Lcom/google/android/exoplayer2/Format$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/Format$Builder;->sampleRate:I
 
     return-object p0
@@ -877,6 +933,7 @@
 .method public setSelectionFlags(I)Lcom/google/android/exoplayer2/Format$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/Format$Builder;->selectionFlags:I
 
     return-object p0
@@ -885,6 +942,7 @@
 .method public setStereoMode(I)Lcom/google/android/exoplayer2/Format$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/Format$Builder;->stereoMode:I
 
     return-object p0
@@ -893,6 +951,7 @@
 .method public setSubsampleOffsetUs(J)Lcom/google/android/exoplayer2/Format$Builder;
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lcom/google/android/exoplayer2/Format$Builder;->subsampleOffsetUs:J
 
     return-object p0
@@ -901,6 +960,7 @@
 .method public setWidth(I)Lcom/google/android/exoplayer2/Format$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/Format$Builder;->width:I
 
     return-object p0

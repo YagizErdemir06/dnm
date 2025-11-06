@@ -25,6 +25,23 @@
 # direct methods
 .method public constructor <init>(ILjava/lang/Class;Ljava/lang/String;ZLjava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "ordinal",
+            "type",
+            "name",
+            "primaryKey",
+            "columnName"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -37,16 +54,22 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lorg/greenrobot/greendao/Property;->ordinal:I
 
+    .line 3
     iput-object p2, p0, Lorg/greenrobot/greendao/Property;->type:Ljava/lang/Class;
 
+    .line 4
     iput-object p3, p0, Lorg/greenrobot/greendao/Property;->name:Ljava/lang/String;
 
+    .line 5
     iput-boolean p4, p0, Lorg/greenrobot/greendao/Property;->primaryKey:Z
 
+    .line 6
     iput-object p5, p0, Lorg/greenrobot/greendao/Property;->columnName:Ljava/lang/String;
 
     return-void
@@ -56,6 +79,16 @@
 # virtual methods
 .method public between(Ljava/lang/Object;Ljava/lang/Object;)Lorg/greenrobot/greendao/query/WhereCondition;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "value1",
+            "value2"
+        }
+    .end annotation
 
     const/4 v0, 0x2
 
@@ -69,6 +102,7 @@
 
     aput-object p2, v0, p1
 
+    .line 1
     new-instance p1, Lorg/greenrobot/greendao/query/WhereCondition$PropertyCondition;
 
     const-string p2, " BETWEEN ? AND ?"
@@ -80,7 +114,16 @@
 
 .method public eq(Ljava/lang/Object;)Lorg/greenrobot/greendao/query/WhereCondition;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Lorg/greenrobot/greendao/query/WhereCondition$PropertyCondition;
 
     const-string v1, "=?"
@@ -92,7 +135,16 @@
 
 .method public ge(Ljava/lang/Object;)Lorg/greenrobot/greendao/query/WhereCondition;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Lorg/greenrobot/greendao/query/WhereCondition$PropertyCondition;
 
     const-string v1, ">=?"
@@ -104,7 +156,16 @@
 
 .method public gt(Ljava/lang/Object;)Lorg/greenrobot/greendao/query/WhereCondition;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Lorg/greenrobot/greendao/query/WhereCondition$PropertyCondition;
 
     const-string v1, ">?"
@@ -116,6 +177,15 @@
 
 .method public in(Ljava/util/Collection;)Lorg/greenrobot/greendao/query/WhereCondition;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "inValues"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -139,6 +209,14 @@
 
 .method public varargs in([Ljava/lang/Object;)Lorg/greenrobot/greendao/query/WhereCondition;
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "inValues"
+        }
+    .end annotation
 
     .line 1
     new-instance v0, Ljava/lang/StringBuilder;
@@ -173,6 +251,7 @@
 .method public isNotNull()Lorg/greenrobot/greendao/query/WhereCondition;
     .locals 2
 
+    .line 1
     new-instance v0, Lorg/greenrobot/greendao/query/WhereCondition$PropertyCondition;
 
     const-string v1, " IS NOT NULL"
@@ -185,6 +264,7 @@
 .method public isNull()Lorg/greenrobot/greendao/query/WhereCondition;
     .locals 2
 
+    .line 1
     new-instance v0, Lorg/greenrobot/greendao/query/WhereCondition$PropertyCondition;
 
     const-string v1, " IS NULL"
@@ -196,7 +276,16 @@
 
 .method public le(Ljava/lang/Object;)Lorg/greenrobot/greendao/query/WhereCondition;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Lorg/greenrobot/greendao/query/WhereCondition$PropertyCondition;
 
     const-string v1, "<=?"
@@ -208,7 +297,16 @@
 
 .method public like(Ljava/lang/String;)Lorg/greenrobot/greendao/query/WhereCondition;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Lorg/greenrobot/greendao/query/WhereCondition$PropertyCondition;
 
     const-string v1, " LIKE ?"
@@ -220,7 +318,16 @@
 
 .method public lt(Ljava/lang/Object;)Lorg/greenrobot/greendao/query/WhereCondition;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Lorg/greenrobot/greendao/query/WhereCondition$PropertyCondition;
 
     const-string v1, "<?"
@@ -232,7 +339,16 @@
 
 .method public notEq(Ljava/lang/Object;)Lorg/greenrobot/greendao/query/WhereCondition;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Lorg/greenrobot/greendao/query/WhereCondition$PropertyCondition;
 
     const-string v1, "<>?"
@@ -244,6 +360,15 @@
 
 .method public notIn(Ljava/util/Collection;)Lorg/greenrobot/greendao/query/WhereCondition;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "notInValues"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -267,6 +392,14 @@
 
 .method public varargs notIn([Ljava/lang/Object;)Lorg/greenrobot/greendao/query/WhereCondition;
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "notInValues"
+        }
+    .end annotation
 
     .line 1
     new-instance v0, Ljava/lang/StringBuilder;

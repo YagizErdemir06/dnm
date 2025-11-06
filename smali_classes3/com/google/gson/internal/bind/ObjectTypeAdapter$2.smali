@@ -1,4 +1,4 @@
-.class synthetic Lcom/google/gson/internal/bind/ObjectTypeAdapter$2;
+.class public synthetic Lcom/google/gson/internal/bind/ObjectTypeAdapter$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$com$google$gson$stream$JsonToken:[I
+.field public static final synthetic $SwitchMap$com$google$gson$stream$JsonToken:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Lcom/google/gson/stream/JsonToken;->values()[Lcom/google/gson/stream/JsonToken;
 
     move-result-object v0

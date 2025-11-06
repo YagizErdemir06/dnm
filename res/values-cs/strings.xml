@@ -2,7 +2,7 @@
 <resources>
     <string name="abc_action_bar_home_description">Přejít na plochu</string>
     <string name="abc_action_bar_up_description">Přejít nahoru</string>
-    <string name="abc_action_menu_overflow_description">Další možnosti</string>
+    <string name="abc_action_menu_overflow_description">Více možností</string>
     <string name="abc_action_mode_done">Hotovo</string>
     <string name="abc_activity_chooser_view_see_all">Zobrazit vše</string>
     <string name="abc_activitychooserview_choose_application">Vybrat aplikaci</string>
@@ -232,7 +232,6 @@
     <string name="accessibility_video_capture_button">Tlačítko pro vyfocení snímku během natáčení videa</string>
     <string name="accessibility_video_pause_button">Nahrávání videa pozastaveno</string>
     <string name="accessibility_video_resume_button">Nahrávání videa obnoveno</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">Vodoznak je vypnutý</string>
     <string name="accessibility_watermark_image_on">Vodoznak je zapnutý</string>
     <string name="accessibility_watermark_text">Otevřít panel pro úpravy vodoznaku</string>
@@ -240,16 +239,6 @@
     <string name="accessibility_zoom_button">Režim přiblížení</string>
     <string name="actionbar_button_up_description">Zpět</string>
     <string name="afternoon">Odpoledne</string>
-    <string name="agent_flip_tbc">Pokračujte na vnitřní obrazovce</string>
-    <string name="agent_function_max">Upraveno na maximální hodnotu</string>
-    <string name="agent_function_min">Upraveno na minimální hodnotu</string>
-    <string name="agent_workspace_mode_not_supported">Tato funkce není podporována</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"Tato funkce není podporována.
-Místo ní byl otevřen režim Fotografie."</string>
-    <string name="agent_workspace_on">Parametry nastavené pro fotografování „%1$s“</string>
-    <string name="agent_workspace_tbc">Studování scény</string>
-    <string name="agent_workspace_tbc_use_default">"Studování scény…
-Parametry fotoaparátu nastaveny jako výchozí"</string>
     <string name="ai_agra_fort">Pevnost Ágra</string>
     <string name="ai_amber_fort">Jantarová pevnost</string>
     <string name="ai_baby">Dítě</string>
@@ -476,7 +465,6 @@ a upravit nastavení automaticky"</string>
     <string name="bluetooth_headset_permission_des">Pro zjištění stavu připojení sluchátek přes Bluetooth a nahrávání zvuku pomocí mikrofonu na sluchátkách</string>
     <string name="bluetooth_permission_not_ask_again">Povolte této aplikaci připojení k okolním zařízením v Nastavení, aby se mohla připojit ke sluchátkům přes Bluetooth.</string>
     <string name="bokeh_use_hint">Hloubkový efekt</string>
-    <string name="bottomsheet_action_expand_halfway">Rozbalit napůl</string>
     <string name="burst_shoot_exit_button_text">Vypnout dávkové snímání</string>
     <string name="button_fisheye_camera_title">Rybí oko</string>
     <string name="button_front_camera_title">Pořídit selfie</string>
@@ -517,8 +505,6 @@ a upravit nastavení automaticky"</string>
     <string name="ccc_temperature_warning_msg">Vaše zařízení se přehřívá. Fotoaparát bude ukončen za %d sekund. Všechny fotografie a videa budou automaticky uloženy.</string>
     <string name="ccc_temperature_warning_title">Zařízení se přehřívá</string>
     <string name="center_mark">Označení středu</string>
-    <string name="character_counter_content_description">Zadané znaky: %1$d z %2$d</string>
-    <string name="character_counter_overflowed_content_description">Byl překročen povolený počet znaků (%1$d z %2$d)</string>
     <string name="cinemaster_cancel">Zrušit</string>
     <string name="cinemaster_confirm">Ukončit</string>
     <string name="cinemaster_connect_exit_message">Ukončit komplexní sestavu?</string>
@@ -537,7 +523,6 @@ a upravit nastavení automaticky"</string>
     <string name="cinemaster_toast_monitor_disconnect">Monitor byl odpojen z komplexní sestavy</string>
     <string name="cinemaster_toast_monitor_play_error">Fotoaparát \"%s\" byl z důvodu chyby odpojen z komplexní sestavy</string>
     <string name="cinemaster_wifi_24g_tips">Přepněte na síť %s GHz a zlepšete stabilitu přenosu signálů do monitorů</string>
-    <string name="clear_text_end_icon_content_description">Vymazat text</string>
     <string name="clearable_edittext_clear_description">Smazat</string>
     <string name="clone_adjust">Upravit</string>
     <string name="clone_copy_mode">Zmrazení snímku</string>
@@ -831,7 +816,6 @@ naskenované dokumenty automaticky"</string>
     <string name="download_hint_cn">"Looks like your device isn't connected to WLAN. Use %1$s MB of mobile data to download items now?"</string>
     <string name="download_hint_wifi">Zdá se, že vaše zařízení není připojeno k síti Wi-Fi. Pro stažení položek bude využito %1$s MB mobilních dat. Stáhnout nyní?</string>
     <string name="download_in_progress">Stahování…</string>
-    <string name="download_network_error">Stažení se nezdařilo. Zkontrolujte nastavení sítě.</string>
     <string name="download_title">Upozornění na využití dat</string>
     <string name="download_waiting">Ve frontě…</string>
     <string name="dual_camera_lens_covered_toast">Objektiv je zakrytý.</string>
@@ -882,7 +866,6 @@ Pomocí funkce Duálního nahrávání můžete také propojit více zařízení
     <string name="eras_ad">n.l.</string>
     <string name="eras_bc">př.n.l.</string>
     <string name="error_fail_to_start_audio_capture">Zahájení snímání pomocí hlasové spouště se nezdařilo</string>
-    <string name="error_icon_content_description">Chyba</string>
     <string name="esp_tip">Náhled na vnějším displeji</string>
     <string name="evening">Odpoledne</string>
     <string name="exo_controls_cc_disabled_description">Zapnout titulky</string>
@@ -937,7 +920,6 @@ Pomocí funkce Duálního nahrávání můžete také propojit více zařízení
     <string name="exo_track_surround_7_point_1">Prostorový zvuk 7.1</string>
     <string name="exo_track_unknown">Neznámé</string>
     <string name="expand_button_title">Rozšířená nastavení</string>
-    <string name="exposed_dropdown_menu_content_description">Zobrazit rozbalovací nabídku</string>
     <string name="exposure_mode_adjust_title">RežimExpozice</string>
     <string name="eye_light">Rozzáření očí</string>
     <string name="eye_light_angel">Anděl</string>
@@ -1094,7 +1076,6 @@ a jejich propojením pak vytvoří ten nejlepší snímek."</string>
     <string name="hint_subtitle_prompt">Nyní můžete začít namlouvat titulky</string>
     <string name="histogram_summary_tip">Zobrazit odezvu expozice v reálném čase</string>
     <string name="hunt_dual_water_mark">Vodoznak duálního fotoaparátu bude přidán automaticky.</string>
-    <string name="icon_content_description">Ikona dialogového okna</string>
     <string name="id_card_mode_hint_back">Naskenujte zadní stranu průkazu</string>
     <string name="id_card_mode_hint_front">Naskenujte přední stranu průkazu</string>
     <string name="id_card_mode_use_hint_text_body">"Propojte obě strany vašeho průkazu totožnosti do jednoho obrázku.
@@ -1105,7 +1086,6 @@ Vytiskněte obrázek na papír A4."</string>
     <string name="invisible_mode_dialog_summary">Fotoaparát nyní nelze použít. Pro použití Fotoaparátu vypněte Inkognito režim v Nastavení.</string>
     <string name="invisible_mode_dialog_title">Jste inkognito</string>
     <string name="invisible_mode_dialog_to_close">Nastavení</string>
-    <string name="item_view_role_description">Karta</string>
     <string name="kaleidoscope_fragment_tab_name">Kaleidoskop</string>
     <string name="lens_dirty_detected_content">"Zdá se, že čočka fotoaparátu je špinavá.
 Pro lepší záběry čočku očistěte."</string>
@@ -1228,18 +1208,6 @@ kdy jsou objekty příliš malé"</string>
     <string name="manually_raw_tip">Ve formátu RAW nelze přiblížení použít</string>
     <string name="manually_ultra_raw_tip">Pro soubory ve formátu Ultra RAW nelze použít přiblížení</string>
     <string name="masterfilter_description_title">Filmové filtry</string>
-    <string name="material_clock_toggle_content_description">Vyberte AM nebo PM</string>
-    <string name="material_hour_selection">Vyberte hodinu</string>
-    <string name="material_hour_suffix">%1$s</string>
-    <string name="material_minute_selection">Zvolte minuty</string>
-    <string name="material_minute_suffix">%1$s min</string>
-    <string name="material_timepicker_am">AM</string>
-    <string name="material_timepicker_clock_mode_description">Chcete-li zadat čas, přepněte na režim hodin.</string>
-    <string name="material_timepicker_hour">Hodina</string>
-    <string name="material_timepicker_minute">Minuta</string>
-    <string name="material_timepicker_pm">PM</string>
-    <string name="material_timepicker_select_time">Vyberte čas</string>
-    <string name="material_timepicker_text_input_mode_description">Chcete-li zadat čas, přepněte na režim textu.</string>
     <string name="message_snap_double_confirm">Dlouhým stiskem tlačítka hlasitosti nyní spustíte NFC. Nahradit tuto funkci?</string>
     <string name="midnight">Noc</string>
     <string name="mimoji_app_name">Fun Cam</string>
@@ -1378,7 +1346,6 @@ kdy jsou objekty příliš malé"</string>
     <string name="miuix_appcompat_delete_description">Smazat</string>
     <string name="miuix_appcompat_deselect_all">Zrušit výběr</string>
     <string name="miuix_appcompat_deselect_all_description">Zrušit výběr</string>
-    <string name="miuix_appcompat_edit">Upravit</string>
     <string name="miuix_appcompat_search_action_mode_cancel">Zrušit</string>
     <string name="miuix_appcompat_search_input_description">Hledat</string>
     <string name="miuix_appcompat_select_all">Vybrat vše</string>
@@ -1486,42 +1453,6 @@ kdy jsou objekty příliš malé"</string>
     <string name="msg_bubble_doc4_first_use">Klepněte pro rozpoznání textu</string>
     <string name="msg_toast_doc4_recognition_failed">Došlo k chybě. Zkuste to znovu.</string>
     <string name="msg_toast_doc4_text_not_found">Rozpoznání textu se nezdařilo</string>
-    <string name="mtrl_badge_numberless_content_description">Nové oznámení</string>
-    <string name="mtrl_chip_close_icon_content_description">Odstranit položku %1$s</string>
-    <string name="mtrl_exceed_max_badge_number_content_description">Více než %1$d nových oznámení</string>
-    <string name="mtrl_picker_a11y_next_month">Přejít na další měsíc</string>
-    <string name="mtrl_picker_a11y_prev_month">Přejít na předchozí měsíc</string>
-    <string name="mtrl_picker_announce_current_selection">Aktuální výběr: %1$s</string>
-    <string name="mtrl_picker_cancel">Zrušit</string>
-    <string name="mtrl_picker_confirm">OK</string>
-    <string name="mtrl_picker_date_header_selected">%1$s</string>
-    <string name="mtrl_picker_date_header_title">Vyberte datum</string>
-    <string name="mtrl_picker_date_header_unselected">Vybrané datum</string>
-    <string name="mtrl_picker_day_of_week_column_header">Sloupec dnů: %1$s</string>
-    <string name="mtrl_picker_invalid_format">Neplatný formát.</string>
-    <string name="mtrl_picker_invalid_format_example">Příklad: %1$s</string>
-    <string name="mtrl_picker_invalid_format_use">Použijte: %1$s</string>
-    <string name="mtrl_picker_invalid_range">Neplatný rozsah.</string>
-    <string name="mtrl_picker_navigate_to_year_description">Přejít na rok %1$s</string>
-    <string name="mtrl_picker_out_of_range">Mimo rozsah: %1$s</string>
-    <string name="mtrl_picker_range_header_only_end_selected">Datum zahájení – %1$s</string>
-    <string name="mtrl_picker_range_header_only_start_selected">%1$s – datum ukončení</string>
-    <string name="mtrl_picker_range_header_selected">%1$s – %2$s</string>
-    <string name="mtrl_picker_range_header_title">Vyberte rozsah</string>
-    <string name="mtrl_picker_range_header_unselected">Datum zahájení – datum ukončení</string>
-    <string name="mtrl_picker_save">Uložit</string>
-    <string name="mtrl_picker_text_input_date_hint">Datum</string>
-    <string name="mtrl_picker_text_input_date_range_end_hint">Datum ukončení</string>
-    <string name="mtrl_picker_text_input_date_range_start_hint">Datum zahájení</string>
-    <string name="mtrl_picker_text_input_day_abbr">d</string>
-    <string name="mtrl_picker_text_input_month_abbr">m</string>
-    <string name="mtrl_picker_text_input_year_abbr">r</string>
-    <string name="mtrl_picker_toggle_to_calendar_input_mode">Přepnout na režim zadávání do kalendáře</string>
-    <string name="mtrl_picker_toggle_to_day_selection">Klepnutím přepnete na výběr dne</string>
-    <string name="mtrl_picker_toggle_to_text_input_mode">Přepnout na režim zadávání textu</string>
-    <string name="mtrl_picker_toggle_to_year_selection">Klepnutím přepnete na výběr roku</string>
-    <string name="mtrl_timepicker_cancel">Zrušit</string>
-    <string name="mtrl_timepicker_confirm">OK</string>
     <string name="multi_window_mode_not_supported">Fotoaparát nelze v režimu více oken využít</string>
     <string name="network_access_user_notice_agree">Souhlasím</string>
     <string name="network_access_user_notice_message_live_video">&lt;Data>Fotoaparát vyžaduje pro poskytnutí efektů, hudby a dalších funkcí pro krátká videa připojení k internetu.&lt;br/>&lt;br/>Klepnutím na \"Souhlasím\" níže, souhlasíte s našimi &lt;a href =%1$s>Smluvními podmínkami&lt;/a> a &lt;a href =%2$s>Zásadami ochrany osobních údajů&lt;/a>. Zároveň povolujete aplikaci Fotoaparát připojení k internetu.&lt;/Data></string>
@@ -1616,7 +1547,6 @@ Snímky ve formátu Ultra RAW ukládají %d bitů dat a zachovávají tak více 
     <string name="parameter_wb_title">Vyvážení bílé</string>
     <string name="parameter_zoom_slider_description">Potažením posuvníku ve vodorovném směru můžete snadno změnit snímek z dlouhého záběru na detailní.</string>
     <string name="parameter_zoom_slider_title">Přiblížení</string>
-    <string name="password_toggle_content_description">Zobrazit heslo</string>
     <string name="path_settings">Systémové aplikace/Fotoaparát/Nastavení</string>
     <string name="photo_assistance_tips_title">Živé tipy</string>
     <string name="pic_flaw_blink_more">Zdá se, že někdo v rámečku má zavřené oči</string>
@@ -2359,7 +2289,6 @@ Váš objekt zůstane ostrý, zatímco pozadí kolem něj bude rozmazané."</str
     <string name="time_picker_label_hour">H</string>
     <string name="time_picker_label_minute">M</string>
     <string name="time_stamp_date_format">d.M.yyyy</string>
-    <string name="time_stamp_date_format_minute">d.M.yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">Pozadí videa můžete kdykoli zmrazit nebo odmrazit před spuštěním nahráváním či během nahrávání.</string>
     <string name="timefreeze_guide_tip3">Ujistěte se, že je váš subjekt uprostřed snímku.</string>
     <string name="timefreeze_guide_tip4">Zastavte dopravu.</string>
@@ -2397,7 +2326,7 @@ Váš objekt zůstane ostrý, zatímco pozadí kolem něj bude rozmazané."</str
     <string name="tip_flash_screen_light_on">Přední blesk: Zapnuto</string>
     <string name="tip_flash_soft_light_off">Přední blesk: vypnuto</string>
     <string name="tip_flash_soft_light_torch">Přední blesk: režim Svítilna</string>
-    <string name="tip_flash_torch">Blesk: Svítilna</string>
+    <string name="tip_flash_torch">Blesk: Vždy zapnuto</string>
     <string name="tip_friend_mode_connect_when_24GHz">Použijte připojení %s GHz k zlepšení kvality náhledu</string>
     <string name="tip_friend_mode_display_device_name_connect">Sdílený náhled</string>
     <string name="tip_friend_mode_display_device_name_disconnect">Druhé zařízení opustilo tuto relaci.</string>
@@ -2495,8 +2424,8 @@ Tento režim se vám může hodit v situacích, kdy se nemůžete posunout dále
     <string name="user_disagree">Nesouhlasím</string>
     <string name="user_notice_identify_summary_format">Před použitím Fotoaparátu musíte souhlasit s našimi <a href="http://www.miui.com/res/doc/eula.html?lang=cs_CZ">Smluvními podmínkami</a> a <a href="http://www.miui.com/res/doc/privacy.html?lang=cs_CZ">Zásadami ochrany osobních údajů</a>. Fotoaparát také vyžaduje pro správné fungování připojení k internetu. Souhlasíte?</string>
     <string name="user_notice_title">Pravidla a podmínky</string>
-    <string name="v7_preference_off">Vypnuto</string>
-    <string name="v7_preference_on">Zapnuto</string>
+    <string name="v7_preference_off">Vypnutí</string>
+    <string name="v7_preference_on">ZAP</string>
     <string name="video_beauty_hint_msg">Skrýt nedokonalosti při současném zachování všech detailů v realistickém podání</string>
     <string name="video_beauty_hint_title">Zcela nové Zkrášlení pro video</string>
     <string name="video_beauty_tip">Zkrášlení pro videa</string>

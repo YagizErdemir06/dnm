@@ -27,13 +27,14 @@
 
 
 # instance fields
-.field public a:Ljava/lang/String;
+.field public c:Ljava/lang/String;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lmiuix/preference/DropDownPreference$h$a;
 
     invoke-direct {v0}, Lmiuix/preference/DropDownPreference$h$a;-><init>()V
@@ -54,7 +55,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lmiuix/preference/DropDownPreference$h;->a:Ljava/lang/String;
+    iput-object p1, p0, Lmiuix/preference/DropDownPreference$h;->c:Ljava/lang/String;
 
     return-void
 .end method
@@ -77,9 +78,11 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroid/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    iget-object p0, p0, Lmiuix/preference/DropDownPreference$h;->a:Ljava/lang/String;
+    .line 2
+    iget-object p0, p0, Lmiuix/preference/DropDownPreference$h;->c:Ljava/lang/String;
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 

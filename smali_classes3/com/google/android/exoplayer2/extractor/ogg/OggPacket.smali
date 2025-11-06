@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;
+.class public final Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -19,14 +19,17 @@
 .method public constructor <init>()V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;->pageHeader:Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;
 
+    .line 3
     new-instance v0, Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     const v1, 0xfe01
@@ -41,6 +44,7 @@
 
     const/4 v0, -0x1
 
+    .line 4
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;->currentSegmentIndex:I
 
     return-void
@@ -51,8 +55,10 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;->segmentCount:I
 
+    .line 2
     :cond_0
     iget v1, p0, Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;->segmentCount:I
 
@@ -64,6 +70,7 @@
 
     if-ge v2, v4, :cond_1
 
+    .line 3
     iget-object v2, v3, Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;->laces:[I
 
     add-int/lit8 v3, v1, 0x1
@@ -89,6 +96,7 @@
 .method public getPageHeader()Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;->pageHeader:Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;
 
     return-object p0
@@ -97,6 +105,7 @@
 .method public getPayload()Lcom/google/android/exoplayer2/util/ParsableByteArray;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;->packetArray:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     return-object p0
@@ -123,29 +132,36 @@
     :cond_0
     move v2, v1
 
+    .line 1
     :goto_0
     invoke-static {v2}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;->populated:Z
 
     if-eqz v2, :cond_1
 
+    .line 3
     iput-boolean v1, p0, Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;->populated:Z
 
+    .line 4
     iget-object v2, p0, Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;->packetArray:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v2, v1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->reset(I)V
 
+    .line 5
     :cond_1
     :goto_1
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;->populated:Z
 
     if-nez v2, :cond_b
 
+    .line 6
     iget v2, p0, Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;->currentSegmentIndex:I
 
     if-gez v2, :cond_6
 
+    .line 7
     iget-object v2, p0, Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;->pageHeader:Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;
 
     invoke-virtual {v2, p1}, Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;->skipToNextPage(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)Z
@@ -164,11 +180,13 @@
 
     goto :goto_3
 
+    .line 8
     :cond_2
     iget-object v2, p0, Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;->pageHeader:Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;
 
     iget v3, v2, Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;->headerSize:I
 
+    .line 9
     iget v2, v2, Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;->type:I
 
     and-int/2addr v2, v0
@@ -183,12 +201,14 @@
 
     if-nez v2, :cond_3
 
+    .line 10
     invoke-direct {p0, v1}, Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;->calculatePacketSize(I)I
 
     move-result v2
 
     add-int/2addr v3, v2
 
+    .line 11
     iget v2, p0, Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;->segmentCount:I
 
     add-int/2addr v2, v1
@@ -198,6 +218,7 @@
     :cond_3
     move v2, v1
 
+    .line 12
     :goto_2
     invoke-static {p1, v3}, Lcom/google/android/exoplayer2/extractor/ExtractorUtil;->skipFullyQuietly(Lcom/google/android/exoplayer2/extractor/ExtractorInput;I)Z
 
@@ -207,6 +228,7 @@
 
     return v1
 
+    .line 13
     :cond_4
     iput v2, p0, Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;->currentSegmentIndex:I
 
@@ -216,6 +238,7 @@
     :goto_3
     return v1
 
+    .line 14
     :cond_6
     :goto_4
     iget v2, p0, Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;->currentSegmentIndex:I
@@ -224,6 +247,7 @@
 
     move-result v2
 
+    .line 15
     iget v3, p0, Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;->currentSegmentIndex:I
 
     iget v4, p0, Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;->segmentCount:I
@@ -232,6 +256,7 @@
 
     if-lez v2, :cond_9
 
+    .line 16
     iget-object v4, p0, Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;->packetArray:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v4}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->limit()I
@@ -242,6 +267,7 @@
 
     invoke-virtual {v4, v5}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->ensureCapacity(I)V
 
+    .line 17
     iget-object v4, p0, Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;->packetArray:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v4}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
@@ -262,6 +288,7 @@
 
     return v1
 
+    .line 18
     :cond_7
     iget-object v4, p0, Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;->packetArray:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
@@ -273,6 +300,7 @@
 
     invoke-virtual {v4, v5}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setLimit(I)V
 
+    .line 19
     iget-object v2, p0, Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;->pageHeader:Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;
 
     iget-object v2, v2, Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;->laces:[I
@@ -295,6 +323,7 @@
     :goto_5
     iput-boolean v2, p0, Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;->populated:Z
 
+    .line 20
     :cond_9
     iget-object v2, p0, Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;->pageHeader:Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;
 
@@ -316,10 +345,12 @@
 .method public reset()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;->pageHeader:Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/extractor/ogg/OggPageHeader;->reset()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;->packetArray:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     const/4 v1, 0x0
@@ -328,8 +359,10 @@
 
     const/4 v0, -0x1
 
+    .line 3
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;->currentSegmentIndex:I
 
+    .line 4
     iput-boolean v1, p0, Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;->populated:Z
 
     return-void
@@ -338,6 +371,7 @@
 .method public trimPayload()V
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;->packetArray:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
@@ -352,9 +386,11 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;->packetArray:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
+    .line 3
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
     move-result-object v2
@@ -369,16 +405,19 @@
 
     move-result v1
 
+    .line 4
     invoke-static {v2, v1}, Ljava/util/Arrays;->copyOf([BI)[B
 
     move-result-object v1
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/ogg/OggPacket;->packetArray:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->limit()I
 
     move-result p0
 
+    .line 6
     invoke-virtual {v0, v1, p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->reset([BI)V
 
     return-void

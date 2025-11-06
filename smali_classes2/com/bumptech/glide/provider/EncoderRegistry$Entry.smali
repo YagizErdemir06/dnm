@@ -1,4 +1,4 @@
-.class final Lcom/bumptech/glide/provider/EncoderRegistry$Entry;
+.class public final Lcom/bumptech/glide/provider/EncoderRegistry$Entry;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -33,7 +33,7 @@
     .end annotation
 .end field
 
-.field final encoder:Lcom/bumptech/glide/load/Encoder;
+.field public final encoder:Lcom/bumptech/glide/load/Encoder;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/bumptech/glide/load/Encoder<",
@@ -64,10 +64,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/bumptech/glide/provider/EncoderRegistry$Entry;->dataClass:Ljava/lang/Class;
 
+    .line 3
     iput-object p2, p0, Lcom/bumptech/glide/provider/EncoderRegistry$Entry;->encoder:Lcom/bumptech/glide/load/Encoder;
 
     return-void
@@ -89,6 +92,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/provider/EncoderRegistry$Entry;->dataClass:Ljava/lang/Class;
 
     invoke-virtual {p0, p1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z

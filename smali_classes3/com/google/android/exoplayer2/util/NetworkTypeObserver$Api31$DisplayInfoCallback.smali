@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/util/NetworkTypeObserver$Api31$DisplayInfoCallback;
+.class public final Lcom/google/android/exoplayer2/util/NetworkTypeObserver$Api31$DisplayInfoCallback;
 .super Landroid/telephony/TelephonyCallback;
 .source "SourceFile"
 
@@ -25,8 +25,10 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/util/NetworkTypeObserver;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroid/telephony/TelephonyCallback;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/util/NetworkTypeObserver$Api31$DisplayInfoCallback;->instance:Lcom/google/android/exoplayer2/util/NetworkTypeObserver;
 
     return-void
@@ -37,21 +39,22 @@
 .method public onDisplayInfoChanged(Landroid/telephony/TelephonyDisplayInfo;)V
     .locals 2
 
-    invoke-static {p1}, Lcom/google/android/exoplayer2/util/f;->a(Landroid/telephony/TelephonyDisplayInfo;)I
+    .line 1
+    invoke-virtual {p1}, Landroid/telephony/TelephonyDisplayInfo;->getOverrideNetworkType()I
 
     move-result p1
 
-    const/4 v0, 0x3
+    const/4 v0, 0x5
 
-    const/4 v1, 0x5
+    const/4 v1, 0x3
 
-    if-eq p1, v0, :cond_1
+    if-eq p1, v1, :cond_1
 
-    const/4 v0, 0x4
+    const/4 v1, 0x4
 
-    if-eq p1, v0, :cond_1
+    if-eq p1, v1, :cond_1
 
-    if-ne p1, v1, :cond_0
+    if-ne p1, v0, :cond_0
 
     goto :goto_0
 
@@ -64,15 +67,16 @@
     :goto_0
     const/4 p1, 0x1
 
+    .line 2
     :goto_1
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/NetworkTypeObserver$Api31$DisplayInfoCallback;->instance:Lcom/google/android/exoplayer2/util/NetworkTypeObserver;
 
     if-eqz p1, :cond_2
 
-    const/16 v1, 0xa
+    const/16 v0, 0xa
 
     :cond_2
-    invoke-static {p0, v1}, Lcom/google/android/exoplayer2/util/NetworkTypeObserver;->access$200(Lcom/google/android/exoplayer2/util/NetworkTypeObserver;I)V
+    invoke-static {p0, v0}, Lcom/google/android/exoplayer2/util/NetworkTypeObserver;->access$200(Lcom/google/android/exoplayer2/util/NetworkTypeObserver;I)V
 
     return-void
 .end method

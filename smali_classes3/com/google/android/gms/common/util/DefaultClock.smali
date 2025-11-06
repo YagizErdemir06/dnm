@@ -54,6 +54,7 @@
 .method public final currentThreadTimeMillis()J
     .locals 2
 
+    .line 1
     invoke-static {}, Landroid/os/SystemClock;->currentThreadTimeMillis()J
 
     move-result-wide v0
@@ -64,6 +65,7 @@
 .method public final currentTimeMillis()J
     .locals 2
 
+    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -74,6 +76,7 @@
 .method public final elapsedRealtime()J
     .locals 2
 
+    .line 1
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -84,6 +87,7 @@
 .method public final nanoTime()J
     .locals 2
 
+    .line 1
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v0

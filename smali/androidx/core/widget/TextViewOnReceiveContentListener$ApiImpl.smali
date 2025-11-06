@@ -1,4 +1,4 @@
-.class final Landroidx/core/widget/TextViewOnReceiveContentListener$ApiImpl;
+.class public final Landroidx/core/widget/TextViewOnReceiveContentListener$ApiImpl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,6 +18,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,6 +35,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p1, p0}, Landroid/content/ClipData$Item;->coerceToText(Landroid/content/Context;)Ljava/lang/CharSequence;
 
     move-result-object p0
@@ -42,10 +44,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 2
     instance-of p1, p0, Landroid/text/Spanned;
 
     if-eqz p1, :cond_0
 
+    .line 3
     invoke-interface {p0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object p0

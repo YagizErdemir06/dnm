@@ -23,8 +23,10 @@
 
     const-string v0, "Mp4WebvttDecoder"
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/text/SimpleSubtitleDecoder;-><init>(Ljava/lang/String;)V
 
+    .line 2
     new-instance v0, Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;-><init>()V
@@ -56,10 +58,12 @@
 
     if-lt p1, v3, :cond_2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v4
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v5
@@ -68,6 +72,7 @@
 
     sub-int/2addr v4, v3
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
     move-result-object v3
@@ -80,6 +85,7 @@
 
     move-result-object v3
 
+    .line 4
     invoke-virtual {p0, v4}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
     sub-int/2addr p1, v4
@@ -88,6 +94,7 @@
 
     if-ne v5, v4, :cond_1
 
+    .line 5
     invoke-static {v3}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser;->parseCueSettingsList(Ljava/lang/String;)Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     move-result-object v2
@@ -99,6 +106,7 @@
 
     if-ne v5, v4, :cond_0
 
+    .line 6
     invoke-virtual {v3}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v1
@@ -107,12 +115,14 @@
 
     move-result-object v3
 
+    .line 7
     invoke-static {v0, v1, v3}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser;->parseCueText(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)Landroid/text/SpannedString;
 
     move-result-object v1
 
     goto :goto_0
 
+    .line 8
     :cond_2
     new-instance p0, Lcom/google/android/exoplayer2/text/SubtitleDecoderException;
 
@@ -130,6 +140,7 @@
     :cond_4
     if-eqz v2, :cond_5
 
+    .line 9
     invoke-virtual {v2, v1}, Lcom/google/android/exoplayer2/text/Cue$Builder;->setText(Ljava/lang/CharSequence;)Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     move-result-object p0
@@ -140,6 +151,7 @@
 
     goto :goto_1
 
+    .line 10
     :cond_5
     invoke-static {v1}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser;->newCueForText(Ljava/lang/CharSequence;)Lcom/google/android/exoplayer2/text/Cue;
 
@@ -159,14 +171,17 @@
         }
     .end annotation
 
+    .line 1
     iget-object p3, p0, Lcom/google/android/exoplayer2/text/webvtt/Mp4WebvttDecoder;->sampleData:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {p3, p1, p2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->reset([BI)V
 
+    .line 2
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 3
     :goto_0
     iget-object p2, p0, Lcom/google/android/exoplayer2/text/webvtt/Mp4WebvttDecoder;->sampleData:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
@@ -176,6 +191,7 @@
 
     if-lez p2, :cond_2
 
+    .line 4
     iget-object p2, p0, Lcom/google/android/exoplayer2/text/webvtt/Mp4WebvttDecoder;->sampleData:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
@@ -186,12 +202,14 @@
 
     if-lt p2, p3, :cond_1
 
+    .line 5
     iget-object p2, p0, Lcom/google/android/exoplayer2/text/webvtt/Mp4WebvttDecoder;->sampleData:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result p2
 
+    .line 6
     iget-object p3, p0, Lcom/google/android/exoplayer2/text/webvtt/Mp4WebvttDecoder;->sampleData:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {p3}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
@@ -202,6 +220,7 @@
 
     if-ne p3, v0, :cond_0
 
+    .line 7
     iget-object p3, p0, Lcom/google/android/exoplayer2/text/webvtt/Mp4WebvttDecoder;->sampleData:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     add-int/lit8 p2, p2, -0x8
@@ -214,6 +233,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_0
     iget-object p3, p0, Lcom/google/android/exoplayer2/text/webvtt/Mp4WebvttDecoder;->sampleData:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
@@ -223,6 +243,7 @@
 
     goto :goto_0
 
+    .line 9
     :cond_1
     new-instance p0, Lcom/google/android/exoplayer2/text/SubtitleDecoderException;
 
@@ -232,6 +253,7 @@
 
     throw p0
 
+    .line 10
     :cond_2
     new-instance p0, Lcom/google/android/exoplayer2/text/webvtt/Mp4WebvttSubtitle;
 

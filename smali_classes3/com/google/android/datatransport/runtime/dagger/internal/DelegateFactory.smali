@@ -20,10 +20,10 @@
 
 
 # instance fields
-.field private delegate:Lmm/c;
+.field private delegate:Lg/a/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lmm/c<",
+            "Lg/a/c<",
             "TT;>;"
         }
     .end annotation
@@ -34,37 +34,43 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static setDelegate(Lmm/c;Lmm/c;)V
+.method public static setDelegate(Lg/a/c;Lg/a/c;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lmm/c<",
+            "Lg/a/c<",
             "TT;>;",
-            "Lmm/c<",
+            "Lg/a/c<",
             "TT;>;)V"
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/datatransport/runtime/dagger/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     check-cast p0, Lcom/google/android/datatransport/runtime/dagger/internal/DelegateFactory;
 
-    iget-object v0, p0, Lcom/google/android/datatransport/runtime/dagger/internal/DelegateFactory;->delegate:Lmm/c;
+    .line 3
+    iget-object v0, p0, Lcom/google/android/datatransport/runtime/dagger/internal/DelegateFactory;->delegate:Lg/a/c;
 
     if-nez v0, :cond_0
 
-    iput-object p1, p0, Lcom/google/android/datatransport/runtime/dagger/internal/DelegateFactory;->delegate:Lmm/c;
+    .line 4
+    iput-object p1, p0, Lcom/google/android/datatransport/runtime/dagger/internal/DelegateFactory;->delegate:Lg/a/c;
 
     return-void
 
+    .line 5
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -83,16 +89,19 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lcom/google/android/datatransport/runtime/dagger/internal/DelegateFactory;->delegate:Lmm/c;
+    .line 1
+    iget-object p0, p0, Lcom/google/android/datatransport/runtime/dagger/internal/DelegateFactory;->delegate:Lg/a/c;
 
     if-eqz p0, :cond_0
 
-    invoke-interface {p0}, Lmm/c;->get()Ljava/lang/Object;
+    .line 2
+    invoke-interface {p0}, Lg/a/c;->get()Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -101,33 +110,34 @@
     throw p0
 .end method
 
-.method public getDelegate()Lmm/c;
+.method public getDelegate()Lg/a/c;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lmm/c<",
+            "Lg/a/c<",
             "TT;>;"
         }
     .end annotation
 
-    iget-object p0, p0, Lcom/google/android/datatransport/runtime/dagger/internal/DelegateFactory;->delegate:Lmm/c;
+    .line 1
+    iget-object p0, p0, Lcom/google/android/datatransport/runtime/dagger/internal/DelegateFactory;->delegate:Lg/a/c;
 
     invoke-static {p0}, Lcom/google/android/datatransport/runtime/dagger/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Lmm/c;
+    check-cast p0, Lg/a/c;
 
     return-object p0
 .end method
 
-.method public setDelegatedProvider(Lmm/c;)V
+.method public setDelegatedProvider(Lg/a/c;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lmm/c<",
+            "Lg/a/c<",
             "TT;>;)V"
         }
     .end annotation
@@ -135,7 +145,8 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    invoke-static {p0, p1}, Lcom/google/android/datatransport/runtime/dagger/internal/DelegateFactory;->setDelegate(Lmm/c;Lmm/c;)V
+    .line 1
+    invoke-static {p0, p1}, Lcom/google/android/datatransport/runtime/dagger/internal/DelegateFactory;->setDelegate(Lg/a/c;Lg/a/c;)V
 
     return-void
 .end method

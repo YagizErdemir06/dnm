@@ -1,4 +1,4 @@
-.class Lcom/google/common/base/Functions$ForMapWithDefault;
+.class public Lcom/google/common/base/Functions$ForMapWithDefault;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -37,7 +37,7 @@
 
 
 # instance fields
-.field final defaultValue:Ljava/lang/Object;
+.field public final defaultValue:Ljava/lang/Object;
     .annotation runtime Lcom/google/common/base/ParametricNullness;
     .end annotation
 
@@ -48,7 +48,7 @@
     .end annotation
 .end field
 
-.field final map:Ljava/util/Map;
+.field public final map:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -73,8 +73,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -83,6 +85,7 @@
 
     iput-object p1, p0, Lcom/google/common/base/Functions$ForMapWithDefault;->map:Ljava/util/Map;
 
+    .line 3
     iput-object p2, p0, Lcom/google/common/base/Functions$ForMapWithDefault;->defaultValue:Ljava/lang/Object;
 
     return-void
@@ -105,6 +108,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/base/Functions$ForMapWithDefault;->map:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -113,6 +117,7 @@
 
     if-nez v0, :cond_1
 
+    .line 2
     iget-object v1, p0, Lcom/google/common/base/Functions$ForMapWithDefault;->map:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -123,11 +128,13 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lcom/google/common/base/Functions$ForMapWithDefault;->defaultValue:Ljava/lang/Object;
 
     goto :goto_1
 
+    .line 4
     :cond_1
     :goto_0
     invoke-static {v0}, Lcom/google/common/base/NullnessCasts;->uncheckedCastNullableTToT(Ljava/lang/Object;)Ljava/lang/Object;
@@ -145,14 +152,17 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/common/base/Functions$ForMapWithDefault;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/common/base/Functions$ForMapWithDefault;
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/base/Functions$ForMapWithDefault;->map:Ljava/util/Map;
 
     iget-object v2, p1, Lcom/google/common/base/Functions$ForMapWithDefault;->map:Ljava/util/Map;
@@ -186,15 +196,16 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    .line 1
+    iget-object v1, p0, Lcom/google/common/base/Functions$ForMapWithDefault;->map:Ljava/util/Map;
 
-    iget-object v2, p0, Lcom/google/common/base/Functions$ForMapWithDefault;->map:Ljava/util/Map;
+    const/4 v2, 0x0
 
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x1
+    aput-object v1, v0, v2
 
     iget-object p0, p0, Lcom/google/common/base/Functions$ForMapWithDefault;->defaultValue:Ljava/lang/Object;
+
+    const/4 v1, 0x1
 
     aput-object p0, v0, v1
 
@@ -208,6 +219,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/base/Functions$ForMapWithDefault;->map:Ljava/util/Map;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

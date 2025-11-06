@@ -12,6 +12,7 @@
 .method public constructor <init>(I)V
     .locals 3
 
+    .line 1
     sget v0, Lcom/google/android/gms/common/GoogleApiAvailabilityLight;->GOOGLE_PLAY_SERVICES_VERSION_CODE:I
 
     new-instance v1, Ljava/lang/StringBuilder;

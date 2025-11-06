@@ -216,8 +216,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->defaultReadObject()V
 
+    .line 2
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
     move-result-object v0
@@ -232,6 +234,7 @@
 
     iput-object v0, p0, Lcom/google/common/collect/TreeMultimap;->keyComparator:Ljava/util/Comparator;
 
+    .line 3
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
     move-result-object v0
@@ -246,6 +249,7 @@
 
     iput-object v0, p0, Lcom/google/common/collect/TreeMultimap;->valueComparator:Ljava/util/Comparator;
 
+    .line 4
     new-instance v0, Ljava/util/TreeMap;
 
     iget-object v1, p0, Lcom/google/common/collect/TreeMultimap;->keyComparator:Ljava/util/Comparator;
@@ -254,6 +258,7 @@
 
     invoke-virtual {p0, v0}, Lcom/google/common/collect/AbstractMapBasedMultimap;->setMap(Ljava/util/Map;)V
 
+    .line 5
     invoke-static {p0, p1}, Lcom/google/common/collect/Serialization;->populateMultimap(Lcom/google/common/collect/Multimap;Ljava/io/ObjectInputStream;)V
 
     return-void
@@ -270,20 +275,24 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/io/ObjectOutputStream;->defaultWriteObject()V
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/TreeMultimap;->keyComparator()Ljava/util/Comparator;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/common/collect/TreeMultimap;->valueComparator()Ljava/util/Comparator;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
 
+    .line 4
     invoke-static {p0, p1}, Lcom/google/common/collect/Serialization;->writeMultimap(Lcom/google/common/collect/Multimap;Ljava/io/ObjectOutputStream;)V
 
     return-void
@@ -338,6 +347,7 @@
 .method public bridge synthetic clear()V
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap;->clear()V
 
     return-void
@@ -354,6 +364,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/google/common/collect/AbstractMultimap;->containsEntry(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -368,6 +379,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/AbstractMapBasedMultimap;->containsKey(Ljava/lang/Object;)Z
 
     move-result p0
@@ -382,6 +394,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/AbstractMultimap;->containsValue(Ljava/lang/Object;)Z
 
     move-result p0
@@ -401,6 +414,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap;->createMaybeNavigableAsMap()Ljava/util/Map;
 
     move-result-object p0
@@ -485,6 +499,7 @@
 .method public bridge synthetic entries()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractSetMultimap;->entries()Ljava/util/Set;
 
     move-result-object p0
@@ -499,6 +514,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/AbstractSetMultimap;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -587,6 +603,7 @@
 .method public bridge synthetic hashCode()I
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractMultimap;->hashCode()I
 
     move-result p0
@@ -597,6 +614,7 @@
 .method public bridge synthetic isEmpty()Z
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractMultimap;->isEmpty()Z
 
     move-result p0
@@ -617,6 +635,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/TreeMultimap;->keyComparator:Ljava/util/Comparator;
 
     return-object p0
@@ -667,6 +686,7 @@
 .method public bridge synthetic keys()Lcom/google/common/collect/Multiset;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractMultimap;->keys()Lcom/google/common/collect/Multiset;
 
     move-result-object p0
@@ -687,6 +707,7 @@
     .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/google/common/collect/AbstractSetMultimap;->put(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -737,6 +758,7 @@
     .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/google/common/collect/AbstractMultimap;->remove(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -753,6 +775,7 @@
     .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/AbstractSortedSetMultimap;->removeAll(Ljava/lang/Object;)Ljava/util/SortedSet;
 
     move-result-object p0
@@ -769,6 +792,7 @@
     .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/google/common/collect/AbstractSortedSetMultimap;->replaceValues(Ljava/lang/Object;Ljava/lang/Iterable;)Ljava/util/SortedSet;
 
     move-result-object p0
@@ -779,6 +803,7 @@
 .method public bridge synthetic size()I
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap;->size()I
 
     move-result p0
@@ -789,6 +814,7 @@
 .method public bridge synthetic toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractMultimap;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -806,6 +832,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/TreeMultimap;->valueComparator:Ljava/util/Comparator;
 
     return-object p0
@@ -814,6 +841,7 @@
 .method public bridge synthetic values()Ljava/util/Collection;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractSortedSetMultimap;->values()Ljava/util/Collection;
 
     move-result-object p0

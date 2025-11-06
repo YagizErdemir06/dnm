@@ -48,6 +48,7 @@
 .method public static synthetic access$300(Lcom/google/android/exoplayer2/upstream/Loader$LoadErrorAction;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/upstream/Loader$LoadErrorAction;->type:I
 
     return p0
@@ -56,6 +57,7 @@
 .method public static synthetic access$400(Lcom/google/android/exoplayer2/upstream/Loader$LoadErrorAction;)J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/upstream/Loader$LoadErrorAction;->retryDelayMillis:J
 
     return-wide v0
@@ -66,6 +68,7 @@
 .method public isRetry()Z
     .locals 1
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/upstream/Loader$LoadErrorAction;->type:I
 
     const/4 v0, 0x1

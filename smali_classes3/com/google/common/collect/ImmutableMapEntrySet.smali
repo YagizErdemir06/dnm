@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/collect/ImmutableMapEntrySet;
+.class public abstract Lcom/google/common/collect/ImmutableMapEntrySet;
 .super Lcom/google/common/collect/ImmutableSet;
 .source "SourceFile"
 
@@ -36,6 +36,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableSet;-><init>()V
 
     return-void
@@ -50,14 +51,17 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Ljava/util/Map$Entry;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Ljava/util/Map$Entry;
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMapEntrySet;->map()Lcom/google/common/collect/ImmutableMap;
 
     move-result-object p0
@@ -72,6 +76,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 4
     invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -91,6 +96,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMapEntrySet;->map()Lcom/google/common/collect/ImmutableMap;
 
     move-result-object p0
@@ -107,6 +113,7 @@
     .annotation build Lcom/google/common/annotations/GwtIncompatible;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMapEntrySet;->map()Lcom/google/common/collect/ImmutableMap;
 
     move-result-object p0
@@ -121,6 +128,7 @@
 .method public isPartialView()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMapEntrySet;->map()Lcom/google/common/collect/ImmutableMap;
 
     move-result-object p0
@@ -145,6 +153,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMapEntrySet;->map()Lcom/google/common/collect/ImmutableMap;
 
     move-result-object p0
@@ -161,6 +170,7 @@
     .annotation build Lcom/google/common/annotations/GwtIncompatible;
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ImmutableMapEntrySet$EntrySetSerializedForm;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMapEntrySet;->map()Lcom/google/common/collect/ImmutableMap;

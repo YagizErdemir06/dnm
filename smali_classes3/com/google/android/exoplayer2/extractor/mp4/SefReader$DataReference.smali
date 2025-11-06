@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/extractor/mp4/SefReader$DataReference;
+.class public final Lcom/google/android/exoplayer2/extractor/mp4/SefReader$DataReference;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,12 +26,16 @@
 .method public constructor <init>(IJI)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/mp4/SefReader$DataReference;->dataType:I
 
+    .line 3
     iput-wide p2, p0, Lcom/google/android/exoplayer2/extractor/mp4/SefReader$DataReference;->startOffset:J
 
+    .line 4
     iput p4, p0, Lcom/google/android/exoplayer2/extractor/mp4/SefReader$DataReference;->size:I
 
     return-void

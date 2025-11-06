@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Multisets$ImmutableEntry;
+.class public Lcom/google/common/collect/Multisets$ImmutableEntry;
 .super Lcom/google/common/collect/Multisets$AbstractEntry;
 .source "SourceFile"
 
@@ -60,14 +60,18 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/Multisets$AbstractEntry;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/Multisets$ImmutableEntry;->element:Ljava/lang/Object;
 
+    .line 3
     iput p2, p0, Lcom/google/common/collect/Multisets$ImmutableEntry;->count:I
 
     const-string p0, "count"
 
+    .line 4
     invoke-static {p2, p0}, Lcom/google/common/collect/CollectPreconditions;->checkNonnegative(ILjava/lang/String;)I
 
     return-void
@@ -78,6 +82,7 @@
 .method public final getCount()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/collect/Multisets$ImmutableEntry;->count:I
 
     return p0
@@ -94,6 +99,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Multisets$ImmutableEntry;->element:Ljava/lang/Object;
 
     return-object p0

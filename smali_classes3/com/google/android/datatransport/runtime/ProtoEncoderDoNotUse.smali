@@ -16,6 +16,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     invoke-static {}, Lcom/google/firebase/encoders/proto/ProtobufEncoder;->builder()Lcom/google/firebase/encoders/proto/ProtobufEncoder$Builder;
 
     move-result-object v0
@@ -38,6 +39,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

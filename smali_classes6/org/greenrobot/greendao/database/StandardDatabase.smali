@@ -13,9 +13,19 @@
 # direct methods
 .method public constructor <init>(Landroid/database/sqlite/SQLiteDatabase;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "delegate"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lorg/greenrobot/greendao/database/StandardDatabase;->delegate:Landroid/database/sqlite/SQLiteDatabase;
 
     return-void
@@ -26,6 +36,7 @@
 .method public beginTransaction()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/greenrobot/greendao/database/StandardDatabase;->delegate:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
@@ -36,16 +47,26 @@
 .method public close()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/greenrobot/greendao/database/StandardDatabase;->delegate:Landroid/database/sqlite/SQLiteDatabase;
 
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteClosable;->close()V
+    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
     return-void
 .end method
 
 .method public compileStatement(Ljava/lang/String;)Lorg/greenrobot/greendao/database/DatabaseStatement;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "sql"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Lorg/greenrobot/greendao/database/StandardDatabaseStatement;
 
     iget-object p0, p0, Lorg/greenrobot/greendao/database/StandardDatabase;->delegate:Landroid/database/sqlite/SQLiteDatabase;
@@ -62,6 +83,7 @@
 .method public endTransaction()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/greenrobot/greendao/database/StandardDatabase;->delegate:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
@@ -71,6 +93,15 @@
 
 .method public execSQL(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "sql"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/database/SQLException;
@@ -87,6 +118,17 @@
 
 .method public execSQL(Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "sql",
+            "bindArgs"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/database/SQLException;
@@ -104,6 +146,7 @@
 .method public getRawDatabase()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/greenrobot/greendao/database/StandardDatabase;->delegate:Landroid/database/sqlite/SQLiteDatabase;
 
     return-object p0
@@ -112,6 +155,7 @@
 .method public getSQLiteDatabase()Landroid/database/sqlite/SQLiteDatabase;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/greenrobot/greendao/database/StandardDatabase;->delegate:Landroid/database/sqlite/SQLiteDatabase;
 
     return-object p0
@@ -120,6 +164,7 @@
 .method public inTransaction()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/greenrobot/greendao/database/StandardDatabase;->delegate:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->inTransaction()Z
@@ -132,6 +177,7 @@
 .method public isDbLockedByCurrentThread()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/greenrobot/greendao/database/StandardDatabase;->delegate:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->isDbLockedByCurrentThread()Z
@@ -144,6 +190,7 @@
 .method public isOpen()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/greenrobot/greendao/database/StandardDatabase;->delegate:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->isOpen()Z
@@ -155,9 +202,32 @@
 
 .method public query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     .locals 9
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "table",
+            "columns",
+            "selection",
+            "selectionArgs",
+            "groupBy",
+            "having",
+            "orderBy",
+            "limit"
+        }
+    .end annotation
 
     move-object v0, p0
 
+    .line 1
     iget-object v0, v0, Lorg/greenrobot/greendao/database/StandardDatabase;->delegate:Landroid/database/sqlite/SQLiteDatabase;
 
     move-object v1, p1
@@ -185,7 +255,18 @@
 
 .method public rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "sql",
+            "selectionArgs"
+        }
+    .end annotation
 
+    .line 1
     iget-object p0, p0, Lorg/greenrobot/greendao/database/StandardDatabase;->delegate:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {p0, p1, p2}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
@@ -198,6 +279,7 @@
 .method public setTransactionSuccessful()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/greenrobot/greendao/database/StandardDatabase;->delegate:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V

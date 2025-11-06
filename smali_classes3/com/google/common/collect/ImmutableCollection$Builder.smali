@@ -27,13 +27,14 @@
 
 
 # static fields
-.field static final DEFAULT_INITIAL_CAPACITY:I = 0x4
+.field public static final DEFAULT_INITIAL_CAPACITY:I = 0x4
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -54,6 +55,7 @@
 
     add-int/lit8 p1, p1, -0x1
 
+    .line 1
     invoke-static {p1}, Ljava/lang/Integer;->highestOneBit(I)I
 
     move-result p0
@@ -68,6 +70,7 @@
     :cond_1
     return p0
 
+    .line 2
     :cond_2
     new-instance p0, Ljava/lang/AssertionError;
 
@@ -106,6 +109,7 @@
         }
     .end annotation
 
+    .line 1
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -115,6 +119,7 @@
 
     aget-object v2, p1, v1
 
+    .line 2
     invoke-virtual {p0, v2}, Lcom/google/common/collect/ImmutableCollection$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableCollection$Builder;
 
     add-int/lit8 v1, v1, 0x1

@@ -40,7 +40,10 @@
 .method public abstract e()Z
 .end method
 
-.method public abstract f(Landroid/view/KeyEvent;)Z
+.method public abstract f()Ljava/lang/CharSequence;
+.end method
+
+.method public abstract g(Landroid/view/KeyEvent;)Z
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0
@@ -49,9 +52,6 @@
             "keyEvent"
         }
     .end annotation
-.end method
-
-.method public abstract g()I
 .end method
 
 .method public abstract getExtras()Landroid/os/Bundle;
@@ -69,30 +69,16 @@
 .method public abstract getPlaybackState()Landroid/support/v4/media/session/PlaybackStateCompat;
 .end method
 
-.method public abstract getQueue()Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List<",
-            "Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;",
-            ">;"
-        }
-    .end annotation
-.end method
-
-.method public abstract getQueueTitle()Ljava/lang/CharSequence;
-.end method
-
-.method public abstract getRatingType()I
-.end method
-
 .method public abstract getRepeatMode()I
 .end method
 
-.method public abstract getSessionInfo()Landroid/os/Bundle;
+.method public abstract h()I
 .end method
 
-.method public abstract h(Landroid/support/v4/media/session/MediaControllerCompat$a;Landroid/os/Handler;)V
+.method public abstract i()I
+.end method
+
+.method public abstract j(Landroid/support/v4/media/session/MediaControllerCompat$a;Landroid/os/Handler;)V
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0,
@@ -105,7 +91,10 @@
     .end annotation
 .end method
 
-.method public abstract i(Landroid/support/v4/media/MediaDescriptionCompat;)V
+.method public abstract k()Landroid/os/Bundle;
+.end method
+
+.method public abstract l(Landroid/support/v4/media/MediaDescriptionCompat;)V
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0
@@ -116,7 +105,7 @@
     .end annotation
 .end method
 
-.method public abstract j(Landroid/support/v4/media/MediaDescriptionCompat;)V
+.method public abstract m(Landroid/support/v4/media/MediaDescriptionCompat;)V
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0
@@ -127,7 +116,18 @@
     .end annotation
 .end method
 
-.method public abstract k(Landroid/support/v4/media/session/MediaControllerCompat$a;)V
+.method public abstract n()Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;",
+            ">;"
+        }
+    .end annotation
+.end method
+
+.method public abstract o(Landroid/support/v4/media/session/MediaControllerCompat$a;)V
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0
@@ -138,7 +138,7 @@
     .end annotation
 .end method
 
-.method public abstract l(Ljava/lang/String;Landroid/os/Bundle;Landroid/os/ResultReceiver;)V
+.method public abstract p(Ljava/lang/String;Landroid/os/Bundle;Landroid/os/ResultReceiver;)V
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0,
@@ -153,7 +153,7 @@
     .end annotation
 .end method
 
-.method public abstract m(II)V
+.method public abstract q(II)V
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0,
@@ -166,10 +166,10 @@
     .end annotation
 .end method
 
-.method public abstract n()Landroid/support/v4/media/session/MediaControllerCompat$e;
+.method public abstract r()Landroid/support/v4/media/session/MediaControllerCompat$e;
 .end method
 
-.method public abstract o(II)V
+.method public abstract s(II)V
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0,
@@ -182,5 +182,5 @@
     .end annotation
 .end method
 
-.method public abstract p()Ljava/lang/Object;
+.method public abstract t()Ljava/lang/Object;
 .end method

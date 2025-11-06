@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Lists$2;
+.class public Lcom/google/common/collect/Lists$2;
 .super Lcom/google/common/collect/Lists$AbstractListWrapper;
 .source "SourceFile"
 
@@ -29,6 +29,7 @@
 .method public constructor <init>(Ljava/util/List;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/Lists$AbstractListWrapper;-><init>(Ljava/util/List;)V
 
     return-void
@@ -46,6 +47,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Lists$AbstractListWrapper;->backingList:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->listIterator(I)Ljava/util/ListIterator;

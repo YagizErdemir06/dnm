@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/ui/WebViewSubtitleOutput$1;
+.class public Lcom/google/android/exoplayer2/ui/WebViewSubtitleOutput$1;
 .super Landroid/webkit/WebView;
 .source "SourceFile"
 
@@ -18,6 +18,7 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/ui/WebViewSubtitleOutput;Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p2, p3}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -28,6 +29,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Landroid/webkit/WebView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     const/4 p0, 0x0
@@ -38,7 +40,8 @@
 .method public performClick()Z
     .locals 0
 
-    invoke-super {p0}, Landroid/view/View;->performClick()Z
+    .line 1
+    invoke-super {p0}, Landroid/webkit/WebView;->performClick()Z
 
     const/4 p0, 0x0
 

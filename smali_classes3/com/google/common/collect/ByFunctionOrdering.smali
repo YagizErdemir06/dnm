@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/ByFunctionOrdering;
+.class public final Lcom/google/common/collect/ByFunctionOrdering;
 .super Lcom/google/common/collect/Ordering;
 .source "SourceFile"
 
@@ -33,7 +33,7 @@
 
 
 # instance fields
-.field final function:Lcom/google/common/base/Function;
+.field public final function:Lcom/google/common/base/Function;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/base/Function<",
@@ -42,7 +42,7 @@
     .end annotation
 .end field
 
-.field final ordering:Lcom/google/common/collect/Ordering;
+.field public final ordering:Lcom/google/common/collect/Ordering;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/Ordering<",
@@ -65,8 +65,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/Ordering;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -75,6 +77,7 @@
 
     iput-object p1, p0, Lcom/google/common/collect/ByFunctionOrdering;->function:Lcom/google/common/base/Function;
 
+    .line 3
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -104,6 +107,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/ByFunctionOrdering;->ordering:Lcom/google/common/collect/Ordering;
 
     iget-object v1, p0, Lcom/google/common/collect/ByFunctionOrdering;->function:Lcom/google/common/base/Function;
@@ -138,6 +142,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/common/collect/ByFunctionOrdering;
 
@@ -145,8 +150,10 @@
 
     if-eqz v1, :cond_2
 
+    .line 2
     check-cast p1, Lcom/google/common/collect/ByFunctionOrdering;
 
+    .line 3
     iget-object v1, p0, Lcom/google/common/collect/ByFunctionOrdering;->function:Lcom/google/common/base/Function;
 
     iget-object v3, p1, Lcom/google/common/collect/ByFunctionOrdering;->function:Lcom/google/common/base/Function;
@@ -186,15 +193,16 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    .line 1
+    iget-object v1, p0, Lcom/google/common/collect/ByFunctionOrdering;->function:Lcom/google/common/base/Function;
 
-    iget-object v2, p0, Lcom/google/common/collect/ByFunctionOrdering;->function:Lcom/google/common/base/Function;
+    const/4 v2, 0x0
 
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x1
+    aput-object v1, v0, v2
 
     iget-object p0, p0, Lcom/google/common/collect/ByFunctionOrdering;->ordering:Lcom/google/common/collect/Ordering;
+
+    const/4 v1, 0x1
 
     aput-object p0, v0, v1
 
@@ -208,6 +216,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/ByFunctionOrdering;->ordering:Lcom/google/common/collect/Ordering;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

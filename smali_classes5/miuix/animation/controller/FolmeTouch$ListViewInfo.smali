@@ -1,4 +1,4 @@
-.class Lmiuix/animation/controller/FolmeTouch$ListViewInfo;
+.class public Lmiuix/animation/controller/FolmeTouch$ListViewInfo;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field itemView:Landroid/view/View;
+.field public itemView:Landroid/view/View;
 
-.field listView:Landroid/widget/AbsListView;
+.field public listView:Landroid/widget/AbsListView;
 
 
 # direct methods

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/internal/service/zan;
+.class public final Lcom/google/android/gms/common/internal/service/zan;
 .super Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;
 .source "SourceFile"
 
@@ -17,10 +17,12 @@
 .method public final synthetic buildClient(Landroid/content/Context;Landroid/os/Looper;Lcom/google/android/gms/common/internal/ClientSettings;Ljava/lang/Object;Lcom/google/android/gms/common/api/internal/ConnectionCallbacks;Lcom/google/android/gms/common/api/internal/OnConnectionFailedListener;)Lcom/google/android/gms/common/api/Api$Client;
     .locals 7
 
+    .line 1
     move-object v4, p4
 
     check-cast v4, Lcom/google/android/gms/common/internal/TelemetryLoggingOptions;
 
+    .line 2
     new-instance p0, Lcom/google/android/gms/common/internal/service/zap;
 
     move-object v0, p0

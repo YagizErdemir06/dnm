@@ -58,6 +58,7 @@
 .method public getColumnClass(I)Ljava/lang/Class;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/swing/XMLTableModel;->definition:Lorg/dom4j/swing/XMLTableDefinition;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/swing/XMLTableDefinition;->getColumnClass(I)Ljava/lang/Class;
@@ -70,6 +71,7 @@
 .method public getColumnCount()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/swing/XMLTableModel;->definition:Lorg/dom4j/swing/XMLTableDefinition;
 
     invoke-virtual {p0}, Lorg/dom4j/swing/XMLTableDefinition;->getColumnCount()I
@@ -82,6 +84,7 @@
 .method public getColumnName(I)Ljava/lang/String;
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/swing/XMLTableModel;->definition:Lorg/dom4j/swing/XMLTableDefinition;
 
     invoke-virtual {v0, p1}, Lorg/dom4j/swing/XMLTableDefinition;->getColumnNameXPath(I)Lorg/dom4j/XPath;
@@ -90,6 +93,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     sget-object p1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v1, Ljava/lang/StringBuffer;
@@ -120,6 +124,7 @@
 
     invoke-virtual {p1, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 3
     iget-object p0, p0, Lorg/dom4j/swing/XMLTableModel;->source:Ljava/lang/Object;
 
     invoke-interface {v0, p0}, Lorg/dom4j/XPath;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -128,6 +133,7 @@
 
     return-object p0
 
+    .line 4
     :cond_0
     iget-object p0, p0, Lorg/dom4j/swing/XMLTableModel;->definition:Lorg/dom4j/swing/XMLTableDefinition;
 
@@ -141,6 +147,7 @@
 .method public getDefinition()Lorg/dom4j/swing/XMLTableDefinition;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/swing/XMLTableModel;->definition:Lorg/dom4j/swing/XMLTableDefinition;
 
     return-object p0
@@ -149,6 +156,7 @@
 .method public getRowCount()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/swing/XMLTableModel;->getRows()Ljava/util/List;
 
     move-result-object p0
@@ -163,6 +171,7 @@
 .method public getRowValue(I)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/swing/XMLTableModel;->getRows()Ljava/util/List;
 
     move-result-object p0
@@ -177,10 +186,12 @@
 .method public getRows()Ljava/util/List;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/swing/XMLTableModel;->rows:Ljava/util/List;
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lorg/dom4j/swing/XMLTableModel;->definition:Lorg/dom4j/swing/XMLTableDefinition;
 
     invoke-virtual {v0}, Lorg/dom4j/swing/XMLTableDefinition;->getRowXPath()Lorg/dom4j/XPath;
@@ -195,6 +206,7 @@
 
     iput-object v0, p0, Lorg/dom4j/swing/XMLTableModel;->rows:Ljava/util/List;
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lorg/dom4j/swing/XMLTableModel;->rows:Ljava/util/List;
 
@@ -204,6 +216,7 @@
 .method public getSource()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/swing/XMLTableModel;->source:Ljava/lang/Object;
 
     return-object p0
@@ -212,11 +225,13 @@
 .method public getValueAt(II)Ljava/lang/Object;
     .locals 1
 
+    .line 1
     :try_start_0
     invoke-virtual {p0, p1}, Lorg/dom4j/swing/XMLTableModel;->getRowValue(I)Ljava/lang/Object;
 
     move-result-object p1
 
+    .line 2
     iget-object v0, p0, Lorg/dom4j/swing/XMLTableModel;->definition:Lorg/dom4j/swing/XMLTableDefinition;
 
     invoke-virtual {v0, p1, p2}, Lorg/dom4j/swing/XMLTableDefinition;->getValueAt(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -230,6 +245,7 @@
     :catch_0
     move-exception p1
 
+    .line 3
     invoke-virtual {p0, p1}, Lorg/dom4j/swing/XMLTableModel;->handleException(Ljava/lang/Exception;)V
 
     const/4 p0, 0x0
@@ -240,6 +256,7 @@
 .method public handleException(Ljava/lang/Exception;)V
     .locals 2
 
+    .line 1
     sget-object p0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v0, Ljava/lang/StringBuffer;
@@ -264,6 +281,7 @@
 .method public setDefinition(Lorg/dom4j/swing/XMLTableDefinition;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/swing/XMLTableModel;->definition:Lorg/dom4j/swing/XMLTableDefinition;
 
     return-void
@@ -272,10 +290,12 @@
 .method public setSource(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/swing/XMLTableModel;->source:Ljava/lang/Object;
 
     const/4 p1, 0x0
 
+    .line 2
     iput-object p1, p0, Lorg/dom4j/swing/XMLTableModel;->rows:Ljava/util/List;
 
     return-void

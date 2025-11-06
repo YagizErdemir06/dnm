@@ -10,6 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -714,10 +715,12 @@
 .method public compareContent(Lorg/dom4j/Branch;Lorg/dom4j/Branch;)I
     .locals 4
 
+    .line 1
     invoke-interface {p1}, Lorg/dom4j/Branch;->nodeCount()I
 
     move-result v0
 
+    .line 2
     invoke-interface {p2}, Lorg/dom4j/Branch;->nodeCount()I
 
     move-result v1
@@ -731,14 +734,17 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
+    .line 3
     invoke-interface {p1, v2}, Lorg/dom4j/Branch;->node(I)Lorg/dom4j/Node;
 
     move-result-object v1
 
+    .line 4
     invoke-interface {p2, v2}, Lorg/dom4j/Branch;->node(I)Lorg/dom4j/Node;
 
     move-result-object v3
 
+    .line 5
     invoke-virtual {p0, v1, v3}, Lorg/dom4j/util/NodeComparator;->compare(Lorg/dom4j/Node;Lorg/dom4j/Node;)I
 
     move-result v1

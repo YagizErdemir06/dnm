@@ -1,4 +1,4 @@
-.class Landroidx/exifinterface/media/ExifInterface$OsApi21Impl;
+.class public Landroidx/exifinterface/media/ExifInterface$OsApi21Impl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,6 +31,7 @@
 .method public static close(Ljava/io/FileDescriptor;)V
     .locals 1
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Landroid/system/Os;->close(Ljava/io/FileDescriptor;)V
     :try_end_0
@@ -42,6 +44,7 @@
 
     const-string v0, "Error closing fd."
 
+    .line 2
     invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -56,6 +59,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Landroid/system/Os;->dup(Ljava/io/FileDescriptor;)Ljava/io/FileDescriptor;
 
@@ -68,6 +72,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance v0, Ljava/io/IOException;
 
     const-string v1, "Failed to duplicate file descriptor"
@@ -87,6 +92,7 @@
 
     int-to-long v0, p1
 
+    .line 1
     :try_start_0
     invoke-static {p0, v0, v1, p2}, Landroid/system/Os;->lseek(Ljava/io/FileDescriptor;JI)J
     :try_end_0
@@ -97,6 +103,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance p1, Ljava/io/IOException;
 
     const-string p2, "Failed to seek file descriptor"

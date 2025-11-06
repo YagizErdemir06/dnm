@@ -29,7 +29,7 @@
 
 .field public mVariesBy:I
 
-.field mWavePoints:Ljava/util/ArrayList;
+.field public mWavePoints:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -48,18 +48,23 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput v0, p0, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;->mWaveShape:I
 
     const/4 v1, 0x0
 
+    .line 3
     iput-object v1, p0, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;->mWaveString:Ljava/lang/String;
 
+    .line 4
     iput v0, p0, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;->mVariesBy:I
 
+    .line 5
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -74,18 +79,21 @@
 
     const-string v0, "pathRotate"
 
+    .line 1
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     new-instance v0, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator$PathRotateSet;
 
     invoke-direct {v0, p0}, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator$PathRotateSet;-><init>(Ljava/lang/String;)V
 
     return-object v0
 
+    .line 3
     :cond_0
     new-instance v0, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator$CoreSpline;
 
@@ -99,6 +107,7 @@
 .method public get(F)F
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;->mCycleOscillator:Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator$CycleOscillator;
 
     invoke-virtual {p0, p1}, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator$CycleOscillator;->getValues(F)D
@@ -113,6 +122,7 @@
 .method public getCurveFit()Landroidx/constraintlayout/core/motion/utils/CurveFit;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;->mCurveFit:Landroidx/constraintlayout/core/motion/utils/CurveFit;
 
     return-object p0
@@ -121,6 +131,7 @@
 .method public getSlope(F)F
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;->mCycleOscillator:Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator$CycleOscillator;
 
     invoke-virtual {p0, p1}, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator$CycleOscillator;->getSlope(F)D
@@ -250,16 +261,18 @@
 .method public setType(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;->mType:Ljava/lang/String;
 
     return-void
 .end method
 
 .method public setup(F)V
-    .locals 17
+    .locals 15
 
-    move-object/from16 v0, p0
+    move-object v0, p0
 
+    .line 1
     iget-object v1, v0, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;->mWavePoints:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -270,39 +283,43 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-object v2, v0, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;->mWavePoints:Ljava/util/ArrayList;
 
     new-instance v3, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator$1;
 
-    invoke-direct {v3, v0}, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator$1;-><init>(Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;)V
+    invoke-direct {v3, p0}, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator$1;-><init>(Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;)V
 
     invoke-static {v2, v3}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
+    .line 3
     new-array v2, v1, [D
 
-    const/4 v3, 0x2
+    const/4 v3, 0x3
 
-    new-array v4, v3, [I
+    const/4 v4, 0x2
 
-    const/4 v5, 0x1
+    new-array v5, v4, [I
 
-    const/4 v6, 0x3
+    const/4 v6, 0x1
 
-    aput v6, v4, v5
+    aput v3, v5, v6
 
-    const/4 v6, 0x0
+    const/4 v3, 0x0
 
-    aput v1, v4, v6
+    aput v1, v5, v3
 
-    sget-object v7, Ljava/lang/Double;->TYPE:Ljava/lang/Class;
+    .line 4
+    const-class v7, D
 
-    invoke-static {v7, v4}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;[I)Ljava/lang/Object;
+    invoke-static {v7, v5}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;[I)Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v5
 
-    check-cast v4, [[D
+    check-cast v5, [[D
 
+    .line 5
     new-instance v7, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator$CycleOscillator;
 
     iget v8, v0, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;->mWaveShape:I
@@ -315,13 +332,14 @@
 
     iput-object v7, v0, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;->mCycleOscillator:Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator$CycleOscillator;
 
+    .line 6
     iget-object v1, v0, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;->mWavePoints:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    move v14, v6
+    move v14, v3
 
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -336,6 +354,7 @@
 
     check-cast v7, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator$WavePoint;
 
+    .line 7
     iget v10, v7, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator$WavePoint;->mPeriod:F
 
     float-to-double v8, v10
@@ -346,30 +365,36 @@
 
     aput-wide v8, v2, v14
 
-    aget-object v8, v4, v14
+    .line 8
+    aget-object v8, v5, v14
 
     iget v13, v7, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator$WavePoint;->mValue:F
 
     float-to-double v11, v13
 
-    aput-wide v11, v8, v6
+    aput-wide v11, v8, v3
+
+    .line 9
+    aget-object v8, v5, v14
 
     iget v11, v7, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator$WavePoint;->mOffset:F
 
-    move-object/from16 v16, v4
-
     float-to-double v3, v11
 
-    aput-wide v3, v8, v5
+    aput-wide v3, v8, v6
+
+    .line 10
+    aget-object v3, v5, v14
 
     iget v12, v7, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator$WavePoint;->mPhase:F
 
-    float-to-double v3, v12
+    float-to-double v8, v12
 
-    const/4 v15, 0x2
+    const/4 v4, 0x2
 
-    aput-wide v3, v8, v15
+    aput-wide v8, v3, v4
 
+    .line 11
     iget-object v3, v0, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;->mCycleOscillator:Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator$CycleOscillator;
 
     iget v9, v7, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator$WavePoint;->mPosition:I
@@ -380,24 +405,24 @@
 
     invoke-virtual/range {v7 .. v13}, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator$CycleOscillator;->setPoint(IIFFFF)V
 
-    add-int/2addr v14, v5
+    add-int/2addr v14, v6
 
-    move v3, v15
-
-    move-object/from16 v4, v16
+    const/4 v3, 0x0
 
     goto :goto_0
 
+    .line 12
     :cond_1
-    move-object/from16 v16, v4
-
     iget-object v1, v0, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;->mCycleOscillator:Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator$CycleOscillator;
 
     move/from16 v3, p1
 
     invoke-virtual {v1, v3}, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator$CycleOscillator;->setup(F)V
 
-    invoke-static {v6, v2, v4}, Landroidx/constraintlayout/core/motion/utils/CurveFit;->get(I[D[[D)Landroidx/constraintlayout/core/motion/utils/CurveFit;
+    const/4 v1, 0x0
+
+    .line 13
+    invoke-static {v1, v2, v5}, Landroidx/constraintlayout/core/motion/utils/CurveFit;->get(I[D[[D)Landroidx/constraintlayout/core/motion/utils/CurveFit;
 
     move-result-object v1
 
@@ -409,14 +434,17 @@
 .method public toString()Ljava/lang/String;
     .locals 6
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;->mType:Ljava/lang/String;
 
+    .line 2
     new-instance v1, Ljava/text/DecimalFormat;
 
     const-string v2, "##.##"
 
     invoke-direct {v1, v2}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
 
+    .line 3
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;->mWavePoints:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -436,6 +464,7 @@
 
     check-cast v2, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator$WavePoint;
 
+    .line 4
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -458,7 +487,7 @@
 
     float-to-double v4, v0
 
-    invoke-virtual {v1, v4, v5}, Ljava/text/NumberFormat;->format(D)Ljava/lang/String;
+    invoke-virtual {v1, v4, v5}, Ljava/text/DecimalFormat;->format(D)Ljava/lang/String;
 
     move-result-object v0
 
@@ -481,6 +510,7 @@
 .method public variesByPath()Z
     .locals 1
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;->mVariesBy:I
 
     const/4 v0, 0x1

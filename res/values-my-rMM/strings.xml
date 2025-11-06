@@ -205,7 +205,6 @@
     <string name="accessibility_video_capture_button">ဗီဒီယို ရိုက်ကူးနေစဥ် ဓာတ်ပုံ ရိုက်ရန် ခလုတ်</string>
     <string name="accessibility_video_pause_button">ဗီဒီယို ရိုက်ကူးခြင်း ခေတ္တရပ်မည်</string>
     <string name="accessibility_video_resume_button">ဗီဒီယို ဆက်လက် ရိုက်ကူးမည်</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">ရေစာပိတ်ထားသည်</string>
     <string name="accessibility_watermark_image_on">ရေစာဖွင့်ထားသည်</string>
     <string name="accessibility_watermark_text">ရေစာချိန်ပန်နယ် ဖွင့်ရန်</string>
@@ -213,16 +212,6 @@
     <string name="accessibility_zoom_button">ချုံ့ချဲ့မုဒ်</string>
     <string name="actionbar_button_up_description">နောက်သို့</string>
     <string name="afternoon">နေ့လယ်</string>
-    <string name="agent_flip_tbc">အတွင်းမျက်နှာပြင်၌ ရှေ့ဆက်ရန်</string>
-    <string name="agent_function_max">အမြင့်ဆုံးတန်ဖိုးသို့ ညှိထားသည်</string>
-    <string name="agent_function_min">အနိမ့်ဆုံးတန်ဖိုးသို့ ညှိထားသည်</string>
-    <string name="agent_workspace_mode_not_supported">ဤအင်္ဂါရပ်ကိုမပံ့ပိုးပါ</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"ဤအင်္ဂါရပ်ကို မပံ့ပိုးပါ။
-၎င်းအစား ဓာတ်ပုံမုဒ်ဖွင့်ထားသည်။"</string>
-    <string name="agent_workspace_on">ဓာတ်ပုံရိုက်ရန် သတ်မှတ်ထားသော ပါရာမီတာများ \"%1$s\"</string>
-    <string name="agent_workspace_tbc">မြင်ကွင်းလေ့လာနေသည်</string>
-    <string name="agent_workspace_tbc_use_default">"မြင်ကွင်းလေ့လာနေသည်…
-ကင်မရာပါရာမီတာကို မူလအတိုင်း သတ်မှတ်ထားသည်"</string>
     <string name="ai_agra_fort">Agra Fort</string>
     <string name="ai_amber_fort">အမ်ဘာ နန်းတော်</string>
     <string name="ai_baby">ကလေး</string>
@@ -780,7 +769,6 @@
     <string name="download_hint_cn">သင့်စက်တွင် WLAN ချိတ်ဆက်ထားပုံမရပါ။ အကြောင်းအရာများကို ယခုဒေါင်းလုဒ်လုပ်ရန် မိုဘိုင်းဒေတာ %1$s MB သုံးလိုသလား။</string>
     <string name="download_hint_wifi">သင့်စက်တွင် Wi-Fi ချိတ်ထားပုံမရပါ။ အကြောင်းအရာများကို ယခုဒေါင်းလုဒ်လုပ်ရန် မိုဘိုင်းဒေတာ %1$s MB သုံးလိုသလား။</string>
     <string name="download_in_progress">ဒေါင်းလုဒ်လုပ်နေသည်…</string>
-    <string name="download_network_error">ဒေါင်းလုဒ်လုပ်မရပါ။ ကွန်ရက်ဆက်တင်ကိုစစ်ပါ။</string>
     <string name="download_title">ဒေတာသုံးစွဲမှု သတိပေးချက်</string>
     <string name="download_waiting">ဆိုင်းငံ့ထားသည်…</string>
     <string name="dual_camera_lens_covered_toast">မှန်ဘီးလူးအား ကာထားသည်။</string>
@@ -1259,7 +1247,6 @@
     <string name="miuix_appcompat_delete_description">ဖျက်ပစ်မည်</string>
     <string name="miuix_appcompat_deselect_all">အားလုံးဖြုတ်ရန်</string>
     <string name="miuix_appcompat_deselect_all_description">ရွေးပြီးသားအားလုံးကို ပြန်ဖြုတ်ရန်</string>
-    <string name="miuix_appcompat_edit">ပြင်ရန်</string>
     <string name="miuix_appcompat_search_action_mode_cancel">မလုပ်တော့ရန်</string>
     <string name="miuix_appcompat_search_input_description">ရှာ​ဖွေမည်</string>
     <string name="miuix_appcompat_select_all">အားလုံး ရွေးပါ</string>
@@ -2198,7 +2185,6 @@
     <string name="time_picker_label_hour">နာရီ</string>
     <string name="time_picker_label_minute">မိနစ်</string>
     <string name="time_stamp_date_format">dd/MM/yyyy</string>
-    <string name="time_stamp_date_format_minute">dd/MM/yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">မရိုက်မီ သို့မဟုတ် ရိုက်နေစဉ်တွင် နောက်ခံကို ရပ်နိုင် ဖြုတ်နိုင်သည်။</string>
     <string name="timefreeze_guide_tip3">ရိုက်လိုသောအရာကို ဖရိန်၏အလယ်တွင် ထားပါ။</string>
     <string name="timefreeze_guide_tip4">ယာဉ်ကြောကို ရပ်အောင်ပြုလုပ်ပါ</string>
@@ -2236,7 +2222,7 @@
     <string name="tip_flash_screen_light_on">ဖလက်(ရှ်)အပျော့ - ဖွင့်ရန်</string>
     <string name="tip_flash_soft_light_off">ဖလက်(ရှ်)အပျော့ - ပိတ်ရန်</string>
     <string name="tip_flash_soft_light_torch">ဖလက်(ရှ်)အပျော့ - ဖလက်(ရှ်)မီးမုဒ်</string>
-    <string name="tip_flash_torch">ဖလက်(ရှ်) - ဖလက်(ရှ်)မီး</string>
+    <string name="tip_flash_torch">ဖလက်(ရှ်) - အမြဲဖွင့်ရန်</string>
     <string name="tip_friend_mode_connect_when_24GHz">မြင်ကွင်းအရည်အသွေးမြှင့်ရန် %s GHz ကွန်ရက် ပြောင်းပါ</string>
     <string name="tip_friend_mode_display_device_name_connect">မျှဝေထားသောအစမ်းမြင်ကွင်း</string>
     <string name="tip_friend_mode_display_device_name_disconnect">အခြားစက်က ဆက်ရှင်မှ ထွက်သွားပါပြီ</string>

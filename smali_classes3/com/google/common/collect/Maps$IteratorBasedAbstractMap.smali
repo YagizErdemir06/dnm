@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/collect/Maps$IteratorBasedAbstractMap;
+.class public abstract Lcom/google/common/collect/Maps$IteratorBasedAbstractMap;
 .super Ljava/util/AbstractMap;
 .source "SourceFile"
 
@@ -30,6 +30,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/util/AbstractMap;-><init>()V
 
     return-void
@@ -40,6 +41,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$IteratorBasedAbstractMap;->entryIterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -71,6 +73,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/Maps$IteratorBasedAbstractMap$1;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/Maps$IteratorBasedAbstractMap$1;-><init>(Lcom/google/common/collect/Maps$IteratorBasedAbstractMap;)V

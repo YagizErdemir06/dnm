@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/AbstractMapBasedMultimap$NavigableKeySet;
+.class public Lcom/google/common/collect/AbstractMapBasedMultimap$NavigableKeySet;
 .super Lcom/google/common/collect/AbstractMapBasedMultimap$SortedKeySet;
 .source "SourceFile"
 
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/AbstractMapBasedMultimap;
+.field public final synthetic this$0:Lcom/google/common/collect/AbstractMapBasedMultimap;
 
 
 # direct methods
@@ -43,8 +43,10 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$NavigableKeySet;->this$0:Lcom/google/common/collect/AbstractMapBasedMultimap;
 
+    .line 2
     invoke-direct {p0, p1, p2}, Lcom/google/common/collect/AbstractMapBasedMultimap$SortedKeySet;-><init>(Lcom/google/common/collect/AbstractMapBasedMultimap;Ljava/util/SortedMap;)V
 
     return-void
@@ -67,6 +69,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$NavigableKeySet;->sortedMap()Ljava/util/NavigableMap;
 
     move-result-object p0
@@ -88,6 +91,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$NavigableKeySet;->descendingSet()Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -109,6 +113,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/AbstractMapBasedMultimap$NavigableKeySet;
 
     iget-object v1, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$NavigableKeySet;->this$0:Lcom/google/common/collect/AbstractMapBasedMultimap;
@@ -141,6 +146,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$NavigableKeySet;->sortedMap()Ljava/util/NavigableMap;
 
     move-result-object p0
@@ -238,6 +244,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$NavigableKeySet;->sortedMap()Ljava/util/NavigableMap;
 
     move-result-object p0
@@ -264,6 +271,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$NavigableKeySet;->sortedMap()Ljava/util/NavigableMap;
 
     move-result-object p0
@@ -286,6 +294,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$KeySet;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -308,6 +317,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$NavigableKeySet;->descendingIterator()Ljava/util/Iterator;
 
     move-result-object p0

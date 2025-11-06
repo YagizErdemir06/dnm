@@ -1,4 +1,4 @@
-.class Landroidx/core/text/TextDirectionHeuristicsCompat$AnyStrong;
+.class public Landroidx/core/text/TextDirectionHeuristicsCompat$AnyStrong;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,7 +18,7 @@
 
 
 # static fields
-.field static final INSTANCE_RTL:Landroidx/core/text/TextDirectionHeuristicsCompat$AnyStrong;
+.field public static final INSTANCE_RTL:Landroidx/core/text/TextDirectionHeuristicsCompat$AnyStrong;
 
 
 # instance fields
@@ -29,6 +29,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Landroidx/core/text/TextDirectionHeuristicsCompat$AnyStrong;
 
     const/4 v1, 0x1
@@ -43,8 +44,10 @@
 .method private constructor <init>(Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-boolean p1, p0, Landroidx/core/text/TextDirectionHeuristicsCompat$AnyStrong;->mLookForRtl:Z
 
     return-void
@@ -64,6 +67,7 @@
     :goto_0
     if-ge p2, p3, :cond_3
 
+    .line 1
     invoke-interface {p1, p2}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v2
@@ -84,6 +88,7 @@
 
     goto :goto_1
 
+    .line 2
     :cond_0
     iget-boolean v1, p0, Landroidx/core/text/TextDirectionHeuristicsCompat$AnyStrong;->mLookForRtl:Z
 
@@ -91,6 +96,7 @@
 
     return v3
 
+    .line 3
     :cond_1
     iget-boolean v1, p0, Landroidx/core/text/TextDirectionHeuristicsCompat$AnyStrong;->mLookForRtl:Z
 
@@ -109,6 +115,7 @@
     :cond_3
     if-eqz v1, :cond_4
 
+    .line 4
     iget-boolean p0, p0, Landroidx/core/text/TextDirectionHeuristicsCompat$AnyStrong;->mLookForRtl:Z
 
     return p0

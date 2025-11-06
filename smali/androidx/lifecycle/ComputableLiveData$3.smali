@@ -1,4 +1,4 @@
-.class Landroidx/lifecycle/ComputableLiveData$3;
+.class public Landroidx/lifecycle/ComputableLiveData$3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/lifecycle/ComputableLiveData;
+.field public final synthetic this$0:Landroidx/lifecycle/ComputableLiveData;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/lifecycle/ComputableLiveData;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/lifecycle/ComputableLiveData$3;->this$0:Landroidx/lifecycle/ComputableLiveData;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,6 +40,7 @@
     .annotation build Landroidx/annotation/MainThread;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/lifecycle/ComputableLiveData$3;->this$0:Landroidx/lifecycle/ComputableLiveData;
 
     iget-object v0, v0, Landroidx/lifecycle/ComputableLiveData;->mLiveData:Landroidx/lifecycle/LiveData;
@@ -47,6 +49,7 @@
 
     move-result v0
 
+    .line 2
     iget-object v1, p0, Landroidx/lifecycle/ComputableLiveData$3;->this$0:Landroidx/lifecycle/ComputableLiveData;
 
     iget-object v1, v1, Landroidx/lifecycle/ComputableLiveData;->mInvalid:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -63,6 +66,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object p0, p0, Landroidx/lifecycle/ComputableLiveData$3;->this$0:Landroidx/lifecycle/ComputableLiveData;
 
     iget-object v0, p0, Landroidx/lifecycle/ComputableLiveData;->mExecutor:Ljava/util/concurrent/Executor;

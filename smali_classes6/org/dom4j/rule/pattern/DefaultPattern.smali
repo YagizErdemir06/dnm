@@ -14,8 +14,10 @@
 .method public constructor <init>(Lorg/dom4j/NodeFilter;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lorg/dom4j/rule/pattern/DefaultPattern;->filter:Lorg/dom4j/NodeFilter;
 
     return-void
@@ -58,6 +60,7 @@
 .method public matches(Lorg/dom4j/Node;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/rule/pattern/DefaultPattern;->filter:Lorg/dom4j/NodeFilter;
 
     invoke-interface {p0, p1}, Lorg/dom4j/NodeFilter;->matches(Lorg/dom4j/Node;)Z

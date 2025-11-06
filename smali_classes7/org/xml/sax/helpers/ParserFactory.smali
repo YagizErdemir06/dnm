@@ -30,22 +30,15 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    const-string v1, "No value for sax.parser property"
+
+    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     invoke-static {v0}, Lorg/xml/sax/helpers/ParserFactory;->makeParser(Ljava/lang/String;)Lorg/xml/sax/Parser;
 
     move-result-object v0
 
     return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/lang/NullPointerException;
-
-    const-string v1, "No value for sax.parser property"
-
-    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw v0
 .end method
 
 .method public static makeParser(Ljava/lang/String;)Lorg/xml/sax/Parser;

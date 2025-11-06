@@ -1,4 +1,4 @@
-.class Landroidx/preference/PreferenceFragmentCompat$2;
+.class public Landroidx/preference/PreferenceFragmentCompat$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/preference/PreferenceFragmentCompat;
+.field public final synthetic this$0:Landroidx/preference/PreferenceFragmentCompat;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/preference/PreferenceFragmentCompat;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/preference/PreferenceFragmentCompat$2;->this$0:Landroidx/preference/PreferenceFragmentCompat;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,6 +38,7 @@
 .method public run()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/preference/PreferenceFragmentCompat$2;->this$0:Landroidx/preference/PreferenceFragmentCompat;
 
     iget-object p0, p0, Landroidx/preference/PreferenceFragmentCompat;->mList:Landroidx/recyclerview/widget/RecyclerView;

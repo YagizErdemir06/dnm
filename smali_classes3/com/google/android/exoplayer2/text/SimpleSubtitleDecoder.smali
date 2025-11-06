@@ -33,12 +33,15 @@
 
     new-array v0, v0, [Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;
 
+    .line 1
     invoke-direct {p0, v1, v0}, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;-><init>([Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;[Lcom/google/android/exoplayer2/decoder/DecoderOutputBuffer;)V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/text/SimpleSubtitleDecoder;->name:Ljava/lang/String;
 
     const/16 p1, 0x400
 
+    .line 3
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->setInitialInputBufferSize(I)V
 
     return-void
@@ -47,6 +50,7 @@
 .method public static synthetic access$000(Lcom/google/android/exoplayer2/text/SimpleSubtitleDecoder;Lcom/google/android/exoplayer2/decoder/DecoderOutputBuffer;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->releaseOutputBuffer(Lcom/google/android/exoplayer2/decoder/DecoderOutputBuffer;)V
 
     return-void
@@ -167,7 +171,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0}, Ljava/nio/Buffer;->limit()I
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v0
 
@@ -204,6 +208,7 @@
 .method public final getName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/SimpleSubtitleDecoder;->name:Ljava/lang/String;
 
     return-object p0

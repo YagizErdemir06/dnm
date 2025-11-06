@@ -8,11 +8,11 @@
 
 
 # instance fields
-.field protected mDrawable2d:Lcom/faceunity/toolbox/program/core/FUDrawable2d;
+.field public mDrawable2d:Lcom/faceunity/toolbox/program/core/FUDrawable2d;
 
 .field private mOriginViewport:[I
 
-.field protected mProgramHandle:I
+.field public mProgramHandle:I
 
 
 # direct methods
@@ -131,12 +131,14 @@
 .method public release()V
     .locals 1
 
+    .line 1
     iget v0, p0, Lcom/faceunity/toolbox/program/core/FUProgram;->mProgramHandle:I
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glDeleteProgram(I)V
 
     const/4 v0, -0x1
 
+    .line 2
     iput v0, p0, Lcom/faceunity/toolbox/program/core/FUProgram;->mProgramHandle:I
 
     return-void
@@ -145,6 +147,7 @@
 .method public updateTexCoordArray([F)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/toolbox/program/core/FUProgram;->mDrawable2d:Lcom/faceunity/toolbox/program/core/FUDrawable2d;
 
     invoke-virtual {p0, p1}, Lcom/faceunity/toolbox/program/core/FUDrawable2d;->updateTexCoordArray([F)V
@@ -155,6 +158,7 @@
 .method public updateVertexArray([F)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/toolbox/program/core/FUProgram;->mDrawable2d:Lcom/faceunity/toolbox/program/core/FUDrawable2d;
 
     invoke-virtual {p0, p1}, Lcom/faceunity/toolbox/program/core/FUDrawable2d;->updateVertexArray([F)V

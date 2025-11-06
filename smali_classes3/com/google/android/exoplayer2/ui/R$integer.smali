@@ -15,13 +15,13 @@
 
 
 # static fields
-.field public static final cancel_button_image_alpha:I = 0x7f0c0011
+.field public static final cancel_button_image_alpha:I = 0x7f0c000e
 
-.field public static final exo_media_button_opacity_percentage_disabled:I = 0x7f0c0029
+.field public static final exo_media_button_opacity_percentage_disabled:I = 0x7f0c0022
 
-.field public static final exo_media_button_opacity_percentage_enabled:I = 0x7f0c002a
+.field public static final exo_media_button_opacity_percentage_enabled:I = 0x7f0c0023
 
-.field public static final status_bar_notification_info_maxnum:I = 0x7f0c0096
+.field public static final status_bar_notification_info_maxnum:I = 0x7f0c0049
 
 
 # direct methods

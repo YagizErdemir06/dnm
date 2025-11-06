@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/upstream/Loader$ReleaseTask;
+.class public final Lcom/google/android/exoplayer2/upstream/Loader$ReleaseTask;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -25,8 +25,10 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/upstream/Loader$ReleaseCallback;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/upstream/Loader$ReleaseTask;->callback:Lcom/google/android/exoplayer2/upstream/Loader$ReleaseCallback;
 
     return-void
@@ -37,6 +39,7 @@
 .method public run()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/upstream/Loader$ReleaseTask;->callback:Lcom/google/android/exoplayer2/upstream/Loader$ReleaseCallback;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/upstream/Loader$ReleaseCallback;->onLoaderReleased()V

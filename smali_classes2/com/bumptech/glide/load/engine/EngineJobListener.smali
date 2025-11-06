@@ -1,4 +1,4 @@
-.class interface abstract Lcom/bumptech/glide/load/engine/EngineJobListener;
+.class public interface abstract Lcom/bumptech/glide/load/engine/EngineJobListener;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

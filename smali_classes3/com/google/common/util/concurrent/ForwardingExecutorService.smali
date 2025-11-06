@@ -21,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ForwardingObject;-><init>()V
 
     return-void
@@ -36,6 +37,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingExecutorService;->delegate()Ljava/util/concurrent/ExecutorService;
 
     move-result-object p0
@@ -50,6 +52,7 @@
 .method public bridge synthetic delegate()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingExecutorService;->delegate()Ljava/util/concurrent/ExecutorService;
 
     move-result-object p0
@@ -63,11 +66,12 @@
 .method public execute(Ljava/lang/Runnable;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingExecutorService;->delegate()Ljava/util/concurrent/ExecutorService;
 
     move-result-object p0
 
-    invoke-interface {p0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-interface {p0, p1}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -216,6 +220,7 @@
 .method public isShutdown()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingExecutorService;->delegate()Ljava/util/concurrent/ExecutorService;
 
     move-result-object p0
@@ -230,6 +235,7 @@
 .method public isTerminated()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingExecutorService;->delegate()Ljava/util/concurrent/ExecutorService;
 
     move-result-object p0
@@ -244,6 +250,7 @@
 .method public shutdown()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingExecutorService;->delegate()Ljava/util/concurrent/ExecutorService;
 
     move-result-object p0
@@ -264,6 +271,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingExecutorService;->delegate()Ljava/util/concurrent/ExecutorService;
 
     move-result-object p0

@@ -10,9 +10,14 @@
     }
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000\u00a4\u0001\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\n\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\t\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\n\n\u0002\u0018\u0002\n\u0002\u0008\u0010\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u000b\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u000e\n\u0002\u0010!\n\u0002\u0008\u0006\u0018\u0000 \u008e\u00012\u00020\u0001:\u0002\u008e\u0001B\u000b\u0008\u0002\u00a2\u0006\u0006\u0008\u008c\u0001\u0010\u008d\u0001J\u001a\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0008\u0008\u0002\u0010\u0005\u001a\u00020\u0004H\u0002J*\u0010\n\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0008\u001a\u00020\u00042\u0006\u0010\t\u001a\u00020\u00042\u0008\u0008\u0002\u0010\u0005\u001a\u00020\u0004H\u0002J\u0018\u0010\u000b\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\t\u001a\u00020\u0004H\u0002J \u0010\u000c\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0008\u001a\u00020\u00042\u0006\u0010\t\u001a\u00020\u0004H\u0002J \u0010\r\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0008\u001a\u00020\u00042\u0006\u0010\t\u001a\u00020\u0004H\u0002J\u0018\u0010\u000e\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\t\u001a\u00020\u0004H\u0002J\u0018\u0010\u000f\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\t\u001a\u00020\u0004H\u0002J \u0010\u0010\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0008\u001a\u00020\u00042\u0006\u0010\t\u001a\u00020\u0004H\u0002J\u0012\u0010\u0013\u001a\u00020\u00042\u0008\u0010\u0012\u001a\u0004\u0018\u00010\u0011H\u0002J\u0010\u0010\u0014\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0002J\u0008\u0010\u0016\u001a\u00020\u0015H\u0002J\u0010\u0010\u0017\u001a\u00020\u00152\u0006\u0010\u0003\u001a\u00020\u0002H\u0002J\u0008\u0010\u0018\u001a\u00020\u0015H\u0002J\u0008\u0010\u0019\u001a\u00020\u0015H\u0002J\u0008\u0010\u001b\u001a\u00020\u001aH\u0002J\u0008\u0010\u001c\u001a\u00020\u0015H\u0002J\u001d\u0010!\u001a\u00020\u00152\u000c\u0010\u001e\u001a\u0008\u0012\u0004\u0012\u00020\u00150\u001dH\u0000\u00a2\u0006\u0004\u0008\u001f\u0010 J\u000e\u0010$\u001a\u00020\u00152\u0006\u0010#\u001a\u00020\"J\u000e\u0010%\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u0002J\u000e\u0010&\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u0002J\u000e\u0010(\u001a\u00020\u00152\u0006\u0010\'\u001a\u00020\u0004R\u001b\u0010.\u001a\u00020)8@X\u0080\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008*\u0010+\u001a\u0004\u0008,\u0010-R\u001b\u00101\u001a\u00020)8@X\u0080\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008/\u0010+\u001a\u0004\u00080\u0010-R\u001b\u00106\u001a\u0002028@X\u0080\u0084\u0002\u00a2\u0006\u000c\n\u0004\u00083\u0010+\u001a\u0004\u00084\u00105R\u001b\u00109\u001a\u00020)8@X\u0080\u0084\u0002\u00a2\u0006\u000c\n\u0004\u00087\u0010+\u001a\u0004\u00088\u0010-R\u001b\u0010<\u001a\u00020)8@X\u0080\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008:\u0010+\u001a\u0004\u0008;\u0010-R\u001b\u0010A\u001a\u00020=8@X\u0080\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008>\u0010+\u001a\u0004\u0008?\u0010@R\u001b\u0010D\u001a\u00020)8@X\u0080\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008B\u0010+\u001a\u0004\u0008C\u0010-R\u001b\u0010G\u001a\u00020)8@X\u0080\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008E\u0010+\u001a\u0004\u0008F\u0010-R\u001b\u0010J\u001a\u00020)8@X\u0080\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008H\u0010+\u001a\u0004\u0008I\u0010-R\u001b\u0010M\u001a\u00020)8@X\u0080\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008K\u0010+\u001a\u0004\u0008L\u0010-R\u001b\u0010R\u001a\u00020N8@X\u0080\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008O\u0010+\u001a\u0004\u0008P\u0010QR\u001b\u0010W\u001a\u00020S8@X\u0080\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008T\u0010+\u001a\u0004\u0008U\u0010VR\u001b\u0010\\\u001a\u00020X8@X\u0080\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008Y\u0010+\u001a\u0004\u0008Z\u0010[R\u0014\u0010^\u001a\u00020]8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008^\u0010_R\u001b\u0010d\u001a\u00020`8BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008a\u0010+\u001a\u0004\u0008b\u0010cR\u001b\u0010i\u001a\u00020e8BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008f\u0010+\u001a\u0004\u0008g\u0010hR\u0016\u0010j\u001a\u00020\u001a8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008j\u0010kR\"\u0010l\u001a\u00020\u001a8\u0000@\u0000X\u0080\u000e\u00a2\u0006\u0012\n\u0004\u0008l\u0010k\u001a\u0004\u0008m\u0010n\"\u0004\u0008o\u0010pR$\u0010r\u001a\u0004\u0018\u00010q8\u0000@\u0000X\u0080\u000e\u00a2\u0006\u0012\n\u0004\u0008r\u0010s\u001a\u0004\u0008t\u0010u\"\u0004\u0008v\u0010wR\u0016\u0010x\u001a\u00020\u001a8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008x\u0010kR\u0016\u0010y\u001a\u00020\u001a8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008y\u0010kR%\u0010{\u001a\u0004\u0018\u00010z8\u0000@\u0000X\u0080\u000e\u00a2\u0006\u0013\n\u0004\u0008{\u0010|\u001a\u0004\u0008}\u0010~\"\u0005\u0008\u007f\u0010\u0080\u0001R\u001b\u0010\u0081\u0001\u001a\u0004\u0018\u00010\u00118\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0008\n\u0006\u0008\u0081\u0001\u0010\u0082\u0001R\u001b\u0010\u0083\u0001\u001a\u0004\u0018\u00010\u00118\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0008\n\u0006\u0008\u0083\u0001\u0010\u0082\u0001R\u001b\u0010\u0084\u0001\u001a\u0004\u0018\u00010\u00118\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0008\n\u0006\u0008\u0084\u0001\u0010\u0082\u0001R\u0019\u0010\u0085\u0001\u001a\u00020\u00048\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0008\n\u0006\u0008\u0085\u0001\u0010\u0086\u0001R\u0019\u0010\u0087\u0001\u001a\u00020\"8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0008\n\u0006\u0008\u0087\u0001\u0010\u0088\u0001R&\u0010\u008a\u0001\u001a\u000f\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u00150\u001d0\u0089\u00018\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0008\n\u0006\u0008\u008a\u0001\u0010\u008b\u0001\u00a8\u0006\u008f\u0001"
+        "\u0000\u00a4\u0001\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\r\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\t\n\u0002\u0008\t\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0019\n\u0002\u0018\u0002\n\u0002\u0008\t\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010!\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\n\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0007\u0018\u0000 \u0097\u00012\u00020\u0001:\u0002\u0097\u0001B\n\u0008\u0002\u00a2\u0006\u0005\u0008\u0096\u0001\u0010\u001cJ!\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0008\u0008\u0002\u0010\u0005\u001a\u00020\u0004H\u0002\u00a2\u0006\u0004\u0008\u0007\u0010\u0008J1\u0010\u000b\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\t\u001a\u00020\u00042\u0006\u0010\n\u001a\u00020\u00042\u0008\u0008\u0002\u0010\u0005\u001a\u00020\u0004H\u0002\u00a2\u0006\u0004\u0008\u000b\u0010\u000cJ\u001f\u0010\r\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\n\u001a\u00020\u0004H\u0002\u00a2\u0006\u0004\u0008\r\u0010\u0008J\'\u0010\u000e\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\t\u001a\u00020\u00042\u0006\u0010\n\u001a\u00020\u0004H\u0002\u00a2\u0006\u0004\u0008\u000e\u0010\u000fJ\'\u0010\u0010\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\t\u001a\u00020\u00042\u0006\u0010\n\u001a\u00020\u0004H\u0002\u00a2\u0006\u0004\u0008\u0010\u0010\u000fJ\u001f\u0010\u0011\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\n\u001a\u00020\u0004H\u0002\u00a2\u0006\u0004\u0008\u0011\u0010\u0008J\u001f\u0010\u0012\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\n\u001a\u00020\u0004H\u0002\u00a2\u0006\u0004\u0008\u0012\u0010\u0008J\'\u0010\u0013\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\t\u001a\u00020\u00042\u0006\u0010\n\u001a\u00020\u0004H\u0002\u00a2\u0006\u0004\u0008\u0013\u0010\u000fJ\u0019\u0010\u0016\u001a\u00020\u00042\u0008\u0010\u0015\u001a\u0004\u0018\u00010\u0014H\u0002\u00a2\u0006\u0004\u0008\u0016\u0010\u0017J\u0017\u0010\u0018\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0002\u00a2\u0006\u0004\u0008\u0018\u0010\u0019J\u000f\u0010\u001b\u001a\u00020\u001aH\u0002\u00a2\u0006\u0004\u0008\u001b\u0010\u001cJ\u0017\u0010\u001d\u001a\u00020\u001a2\u0006\u0010\u0003\u001a\u00020\u0002H\u0002\u00a2\u0006\u0004\u0008\u001d\u0010\u001eJ\u000f\u0010\u001f\u001a\u00020\u001aH\u0002\u00a2\u0006\u0004\u0008\u001f\u0010\u001cJ\u000f\u0010 \u001a\u00020\u001aH\u0002\u00a2\u0006\u0004\u0008 \u0010\u001cJ\u000f\u0010\"\u001a\u00020!H\u0002\u00a2\u0006\u0004\u0008\"\u0010#J\u000f\u0010$\u001a\u00020\u001aH\u0002\u00a2\u0006\u0004\u0008$\u0010\u001cJ\u001d\u0010)\u001a\u00020\u001a2\u000c\u0010&\u001a\u0008\u0012\u0004\u0012\u00020\u001a0%H\u0000\u00a2\u0006\u0004\u0008\'\u0010(J\u0015\u0010,\u001a\u00020\u001a2\u0006\u0010+\u001a\u00020*\u00a2\u0006\u0004\u0008,\u0010-J\u0015\u0010.\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u0002\u00a2\u0006\u0004\u0008.\u0010/J\u0015\u00100\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u0002\u00a2\u0006\u0004\u00080\u0010/J\u0015\u00102\u001a\u00020\u001a2\u0006\u00101\u001a\u00020\u0004\u00a2\u0006\u0004\u00082\u00103R\u001d\u00109\u001a\u0002048@@\u0000X\u0080\u0084\u0002\u00a2\u0006\u000c\n\u0004\u00085\u00106\u001a\u0004\u00087\u00108R\u001d\u0010>\u001a\u00020:8B@\u0002X\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008;\u00106\u001a\u0004\u0008<\u0010=R\u0016\u0010?\u001a\u00020\u00048\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008?\u0010@R\u0018\u0010A\u001a\u0004\u0018\u00010\u00148\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008A\u0010BR\u001d\u0010G\u001a\u00020C8@@\u0000X\u0080\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008D\u00106\u001a\u0004\u0008E\u0010FR\u0016\u0010H\u001a\u00020!8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008H\u0010IR\u0016\u0010J\u001a\u00020!8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008J\u0010IR\u001d\u0010M\u001a\u00020C8@@\u0000X\u0080\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008K\u00106\u001a\u0004\u0008L\u0010FR\u001d\u0010P\u001a\u00020C8@@\u0000X\u0080\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008N\u00106\u001a\u0004\u0008O\u0010FR\"\u0010Q\u001a\u00020!8\u0000@\u0000X\u0080\u000e\u00a2\u0006\u0012\n\u0004\u0008Q\u0010I\u001a\u0004\u0008R\u0010#\"\u0004\u0008S\u0010TR\u001d\u0010W\u001a\u00020C8@@\u0000X\u0080\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008U\u00106\u001a\u0004\u0008V\u0010FR\u001d\u0010Z\u001a\u00020C8@@\u0000X\u0080\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008X\u00106\u001a\u0004\u0008Y\u0010FR\u0016\u0010[\u001a\u00020*8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008[\u0010\\R$\u0010^\u001a\u0004\u0018\u00010]8\u0000@\u0000X\u0080\u000e\u00a2\u0006\u0012\n\u0004\u0008^\u0010_\u001a\u0004\u0008`\u0010a\"\u0004\u0008b\u0010cR\u001d\u0010f\u001a\u00020C8@@\u0000X\u0080\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008d\u00106\u001a\u0004\u0008e\u0010FR\u001d\u0010k\u001a\u00020g8@@\u0000X\u0080\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008h\u00106\u001a\u0004\u0008i\u0010jR\"\u0010m\u001a\u000e\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u001a0%0l8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008m\u0010nR\u001d\u0010s\u001a\u00020o8@@\u0000X\u0080\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008p\u00106\u001a\u0004\u0008q\u0010rR\u001d\u0010x\u001a\u00020t8@@\u0000X\u0080\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008u\u00106\u001a\u0004\u0008v\u0010wR\u0016\u0010y\u001a\u00020!8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008y\u0010IR\u001d\u0010~\u001a\u00020z8B@\u0002X\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008{\u00106\u001a\u0004\u0008|\u0010}R\u001f\u0010\u0081\u0001\u001a\u00020C8@@\u0000X\u0080\u0084\u0002\u00a2\u0006\r\n\u0004\u0008\u007f\u00106\u001a\u0005\u0008\u0080\u0001\u0010FR \u0010\u0084\u0001\u001a\u00020C8@@\u0000X\u0080\u0084\u0002\u00a2\u0006\u000e\n\u0005\u0008\u0082\u0001\u00106\u001a\u0005\u0008\u0083\u0001\u0010FR\u001a\u0010\u0086\u0001\u001a\u00030\u0085\u00018\u0002@\u0002X\u0082\u0004\u00a2\u0006\u0008\n\u0006\u0008\u0086\u0001\u0010\u0087\u0001R,\u0010\u0089\u0001\u001a\u0005\u0018\u00010\u0088\u00018\u0000@\u0000X\u0080\u000e\u00a2\u0006\u0018\n\u0006\u0008\u0089\u0001\u0010\u008a\u0001\u001a\u0006\u0008\u008b\u0001\u0010\u008c\u0001\"\u0006\u0008\u008d\u0001\u0010\u008e\u0001R\u001a\u0010\u008f\u0001\u001a\u0004\u0018\u00010\u00148\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0007\n\u0005\u0008\u008f\u0001\u0010BR\u001a\u0010\u0090\u0001\u001a\u0004\u0018\u00010\u00148\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0007\n\u0005\u0008\u0090\u0001\u0010BR\"\u0010\u0095\u0001\u001a\u00030\u0091\u00018@@\u0000X\u0080\u0084\u0002\u00a2\u0006\u000f\n\u0005\u0008\u0092\u0001\u00106\u001a\u0006\u0008\u0093\u0001\u0010\u0094\u0001\u00a8\u0006\u0098\u0001"
     }
     d2 = {
         "Lcom/faceunity/core/support/FURenderBridge;",
@@ -23,11 +28,14 @@
         "isPoster",
         "Lcom/faceunity/core/entity/FURenderOutputData;",
         "applyRenderWithInput",
+        "(Lcom/faceunity/core/entity/FURenderInputData;Z)Lcom/faceunity/core/entity/FURenderOutputData;",
         "needSwapBuffer",
         "needSwapTexture",
         "renderDistribution",
+        "(Lcom/faceunity/core/entity/FURenderInputData;ZZZ)Lcom/faceunity/core/entity/FURenderOutputData;",
         "drawFrameBeautify",
         "drawFrameYUV",
+        "(Lcom/faceunity/core/entity/FURenderInputData;ZZ)Lcom/faceunity/core/entity/FURenderOutputData;",
         "drawFrameDualInput",
         "drawFrameForPoster",
         "drawFrameTexture",
@@ -35,108 +43,76 @@
         "Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;",
         "matrix",
         "verifyWidthAndHeight",
+        "(Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;)Z",
         "verifyRenderInputData",
-        "Lnm/l2;",
+        "(Lcom/faceunity/core/entity/FURenderInputData;)Z",
+        "Lh/l2;",
         "prepareGLEventQueue",
+        "()V",
         "updateRenderEnvironment",
+        "(Lcom/faceunity/core/entity/FURenderInputData;)V",
         "updateFlipMode",
         "updateRotationMode",
         "",
         "calculateRotationMode",
+        "()I",
         "resetFrameCache",
         "Lkotlin/Function0;",
         "unit",
         "doGLThreadAction$lib_core_release",
-        "(Ljn/a;)V",
+        "(Lh/d3/w/a;)V",
         "doGLThreadAction",
         "",
         "threadId",
         "bindGLThread",
+        "(J)V",
         "renderWithInput",
+        "(Lcom/faceunity/core/entity/FURenderInputData;)Lcom/faceunity/core/entity/FURenderOutputData;",
         "renderWithPoster",
         "isSafe",
         "release",
+        "(Z)V",
+        "Lcom/faceunity/core/controller/prop/PropController;",
+        "mPropContainerController$delegate",
+        "Lh/d0;",
+        "getMPropContainerController$lib_core_release",
+        "()Lcom/faceunity/core/controller/prop/PropController;",
+        "mPropContainerController",
+        "Lcom/faceunity/core/faceunity/FURenderKit;",
+        "mFURenderKit$delegate",
+        "getMFURenderKit",
+        "()Lcom/faceunity/core/faceunity/FURenderKit;",
+        "mFURenderKit",
+        "mLastFrameTextureFlag",
+        "Z",
+        "mInputTextureMatrix",
+        "Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;",
         "Lcom/faceunity/core/controller/BaseSingleController;",
-        "mActionRecognitionController$delegate",
-        "Lnm/d0;",
-        "getMActionRecognitionController$lib_core_release",
-        "()Lcom/faceunity/core/controller/BaseSingleController;",
-        "mActionRecognitionController",
-        "mFaceBeautyController$delegate",
-        "getMFaceBeautyController$lib_core_release",
-        "mFaceBeautyController",
-        "Lcom/faceunity/core/controller/makeup/MakeupController;",
-        "mMakeupController$delegate",
-        "getMMakeupController$lib_core_release",
-        "()Lcom/faceunity/core/controller/makeup/MakeupController;",
-        "mMakeupController",
         "mAnimationFilterController$delegate",
         "getMAnimationFilterController$lib_core_release",
+        "()Lcom/faceunity/core/controller/BaseSingleController;",
         "mAnimationFilterController",
-        "mAntialiasingController$delegate",
-        "getMAntialiasingController$lib_core_release",
-        "mAntialiasingController",
-        "Lcom/faceunity/core/controller/bgSegGreen/BgSegGreenController;",
-        "mBgSegGreenController$delegate",
-        "getMBgSegGreenController$lib_core_release",
-        "()Lcom/faceunity/core/controller/bgSegGreen/BgSegGreenController;",
-        "mBgSegGreenController",
+        "mInputOrientation",
+        "I",
+        "mFrameId",
         "mBodyBeautyController$delegate",
         "getMBodyBeautyController$lib_core_release",
         "mBodyBeautyController",
         "mHairBeautyController$delegate",
         "getMHairBeautyController$lib_core_release",
         "mHairBeautyController",
+        "mRotationMode",
+        "getMRotationMode$lib_core_release",
+        "setMRotationMode$lib_core_release",
+        "(I)V",
+        "mAntialiasingController$delegate",
+        "getMAntialiasingController$lib_core_release",
+        "mAntialiasingController",
         "mLightMakeupController$delegate",
         "getMLightMakeupController$lib_core_release",
         "mLightMakeupController",
-        "mMusicFilterController$delegate",
-        "getMMusicFilterController$lib_core_release",
-        "mMusicFilterController",
-        "Lcom/faceunity/core/controller/prop/PropController;",
-        "mPropContainerController$delegate",
-        "getMPropContainerController$lib_core_release",
-        "()Lcom/faceunity/core/controller/prop/PropController;",
-        "mPropContainerController",
-        "Lcom/faceunity/core/controller/poster/PosterController;",
-        "mPosterController$delegate",
-        "getMPosterController$lib_core_release",
-        "()Lcom/faceunity/core/controller/poster/PosterController;",
-        "mPosterController",
-        "Lcom/faceunity/core/avatar/control/AvatarController;",
-        "mAvatarController$delegate",
-        "getMAvatarController$lib_core_release",
-        "()Lcom/faceunity/core/avatar/control/AvatarController;",
-        "mAvatarController",
-        "Ljava/util/concurrent/locks/ReentrantLock;",
-        "mRenderLock",
-        "Ljava/util/concurrent/locks/ReentrantLock;",
-        "Lcom/faceunity/core/bundle/FUBundleManager;",
-        "mFUBundleManager$delegate",
-        "getMFUBundleManager",
-        "()Lcom/faceunity/core/bundle/FUBundleManager;",
-        "mFUBundleManager",
-        "Lcom/faceunity/core/faceunity/FURenderKit;",
-        "mFURenderKit$delegate",
-        "getMFURenderKit",
-        "()Lcom/faceunity/core/faceunity/FURenderKit;",
-        "mFURenderKit",
-        "mFrameId",
-        "I",
-        "mRotationMode",
-        "getMRotationMode$lib_core_release",
-        "()I",
-        "setMRotationMode$lib_core_release",
-        "(I)V",
-        "Lcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;",
-        "mCameraFacing",
-        "Lcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;",
-        "getMCameraFacing$lib_core_release",
-        "()Lcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;",
-        "setMCameraFacing$lib_core_release",
-        "(Lcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;)V",
-        "mInputOrientation",
-        "mDeviceOrientation",
+        "mGLThreadId",
+        "J",
         "Lcom/faceunity/core/enumeration/FUExternalInputEnum;",
         "mExternalInputType",
         "Lcom/faceunity/core/enumeration/FUExternalInputEnum;",
@@ -144,19 +120,57 @@
         "()Lcom/faceunity/core/enumeration/FUExternalInputEnum;",
         "setMExternalInputType$lib_core_release",
         "(Lcom/faceunity/core/enumeration/FUExternalInputEnum;)V",
-        "mInputTextureMatrix",
-        "Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;",
-        "mInputBufferMatrix",
-        "mOutputMatrix",
-        "mLastFrameTextureFlag",
-        "Z",
-        "mGLThreadId",
-        "J",
+        "mFaceBeautyController$delegate",
+        "getMFaceBeautyController$lib_core_release",
+        "mFaceBeautyController",
+        "Lcom/faceunity/core/controller/poster/PosterController;",
+        "mPosterController$delegate",
+        "getMPosterController$lib_core_release",
+        "()Lcom/faceunity/core/controller/poster/PosterController;",
+        "mPosterController",
         "",
         "mGLEventQueue",
         "Ljava/util/List;",
+        "Lcom/faceunity/core/controller/makeup/MakeupController;",
+        "mMakeupController$delegate",
+        "getMMakeupController$lib_core_release",
+        "()Lcom/faceunity/core/controller/makeup/MakeupController;",
+        "mMakeupController",
+        "Lcom/faceunity/core/controller/bgSegGreen/BgSegGreenController;",
+        "mBgSegGreenController$delegate",
+        "getMBgSegGreenController$lib_core_release",
+        "()Lcom/faceunity/core/controller/bgSegGreen/BgSegGreenController;",
+        "mBgSegGreenController",
+        "mDeviceOrientation",
+        "Lcom/faceunity/core/bundle/FUBundleManager;",
+        "mFUBundleManager$delegate",
+        "getMFUBundleManager",
+        "()Lcom/faceunity/core/bundle/FUBundleManager;",
+        "mFUBundleManager",
+        "mActionRecognitionController$delegate",
+        "getMActionRecognitionController$lib_core_release",
+        "mActionRecognitionController",
+        "mMusicFilterController$delegate",
+        "getMMusicFilterController$lib_core_release",
+        "mMusicFilterController",
+        "Ljava/util/concurrent/locks/ReentrantLock;",
+        "mRenderLock",
+        "Ljava/util/concurrent/locks/ReentrantLock;",
+        "Lcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;",
+        "mCameraFacing",
+        "Lcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;",
+        "getMCameraFacing$lib_core_release",
+        "()Lcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;",
+        "setMCameraFacing$lib_core_release",
+        "(Lcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;)V",
+        "mInputBufferMatrix",
+        "mOutputMatrix",
+        "Lcom/faceunity/core/avatar/control/AvatarController;",
+        "mAvatarController$delegate",
+        "getMAvatarController$lib_core_release",
+        "()Lcom/faceunity/core/avatar/control/AvatarController;",
+        "mAvatarController",
         "<init>",
-        "()V",
         "Companion",
         "lib_core_release"
     }
@@ -171,67 +185,67 @@
 
 # static fields
 .field public static final Companion:Lcom/faceunity/core/support/FURenderBridge$Companion;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field private static volatile INSTANCE:Lcom/faceunity/core/support/FURenderBridge; = null
 
 .field public static final TAG:Ljava/lang/String; = "KIT_FURenderBridge"
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 
 # instance fields
-.field private final mActionRecognitionController$delegate:Lnm/d0;
-    .annotation build Ljv/d;
+.field private final mActionRecognitionController$delegate:Lh/d0;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
-.field private final mAnimationFilterController$delegate:Lnm/d0;
-    .annotation build Ljv/d;
+.field private final mAnimationFilterController$delegate:Lh/d0;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
-.field private final mAntialiasingController$delegate:Lnm/d0;
-    .annotation build Ljv/d;
+.field private final mAntialiasingController$delegate:Lh/d0;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
-.field private final mAvatarController$delegate:Lnm/d0;
-    .annotation build Ljv/d;
+.field private final mAvatarController$delegate:Lh/d0;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
-.field private final mBgSegGreenController$delegate:Lnm/d0;
-    .annotation build Ljv/d;
+.field private final mBgSegGreenController$delegate:Lh/d0;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
-.field private final mBodyBeautyController$delegate:Lnm/d0;
-    .annotation build Ljv/d;
+.field private final mBodyBeautyController$delegate:Lh/d0;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field private mCameraFacing:Lcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 .end field
 
 .field private mDeviceOrientation:I
 
 .field private mExternalInputType:Lcom/faceunity/core/enumeration/FUExternalInputEnum;
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 .end field
 
-.field private final mFUBundleManager$delegate:Lnm/d0;
+.field private final mFUBundleManager$delegate:Lh/d0;
 
-.field private final mFURenderKit$delegate:Lnm/d0;
+.field private final mFURenderKit$delegate:Lh/d0;
 
-.field private final mFaceBeautyController$delegate:Lnm/d0;
-    .annotation build Ljv/d;
+.field private final mFaceBeautyController$delegate:Lh/d0;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -241,8 +255,8 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Ljn/a<",
-            "Lnm/l2;",
+            "Lh/d3/w/a<",
+            "Lh/l2;",
             ">;>;"
         }
     .end annotation
@@ -250,8 +264,8 @@
 
 .field private mGLThreadId:J
 
-.field private final mHairBeautyController$delegate:Lnm/d0;
-    .annotation build Ljv/d;
+.field private final mHairBeautyController$delegate:Lh/d0;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -263,30 +277,30 @@
 
 .field private mLastFrameTextureFlag:Z
 
-.field private final mLightMakeupController$delegate:Lnm/d0;
-    .annotation build Ljv/d;
+.field private final mLightMakeupController$delegate:Lh/d0;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
-.field private final mMakeupController$delegate:Lnm/d0;
-    .annotation build Ljv/d;
+.field private final mMakeupController$delegate:Lh/d0;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
-.field private final mMusicFilterController$delegate:Lnm/d0;
-    .annotation build Ljv/d;
+.field private final mMusicFilterController$delegate:Lh/d0;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field private mOutputMatrix:Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;
 
-.field private final mPosterController$delegate:Lnm/d0;
-    .annotation build Ljv/d;
+.field private final mPosterController$delegate:Lh/d0;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
-.field private final mPropContainerController$delegate:Lnm/d0;
-    .annotation build Ljv/d;
+.field private final mPropContainerController$delegate:Lh/d0;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -303,7 +317,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/faceunity/core/support/FURenderBridge$Companion;-><init>(Lkotlin/jvm/internal/w;)V
+    invoke-direct {v0, v1}, Lcom/faceunity/core/support/FURenderBridge$Companion;-><init>(Lh/d3/x/w;)V
 
     sput-object v0, Lcom/faceunity/core/support/FURenderBridge;->Companion:Lcom/faceunity/core/support/FURenderBridge$Companion;
 
@@ -319,119 +333,119 @@
     .line 2
     sget-object v0, Lcom/faceunity/core/support/FURenderBridge$mActionRecognitionController$2;->INSTANCE:Lcom/faceunity/core/support/FURenderBridge$mActionRecognitionController$2;
 
-    invoke-static {v0}, Lnm/f0;->b(Ljn/a;)Lnm/d0;
+    invoke-static {v0}, Lh/f0;->c(Lh/d3/w/a;)Lh/d0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mActionRecognitionController$delegate:Lnm/d0;
+    iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mActionRecognitionController$delegate:Lh/d0;
 
     .line 3
     sget-object v0, Lcom/faceunity/core/support/FURenderBridge$mFaceBeautyController$2;->INSTANCE:Lcom/faceunity/core/support/FURenderBridge$mFaceBeautyController$2;
 
-    invoke-static {v0}, Lnm/f0;->b(Ljn/a;)Lnm/d0;
+    invoke-static {v0}, Lh/f0;->c(Lh/d3/w/a;)Lh/d0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mFaceBeautyController$delegate:Lnm/d0;
+    iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mFaceBeautyController$delegate:Lh/d0;
 
     .line 4
     sget-object v0, Lcom/faceunity/core/support/FURenderBridge$mMakeupController$2;->INSTANCE:Lcom/faceunity/core/support/FURenderBridge$mMakeupController$2;
 
-    invoke-static {v0}, Lnm/f0;->b(Ljn/a;)Lnm/d0;
+    invoke-static {v0}, Lh/f0;->c(Lh/d3/w/a;)Lh/d0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mMakeupController$delegate:Lnm/d0;
+    iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mMakeupController$delegate:Lh/d0;
 
     .line 5
     sget-object v0, Lcom/faceunity/core/support/FURenderBridge$mAnimationFilterController$2;->INSTANCE:Lcom/faceunity/core/support/FURenderBridge$mAnimationFilterController$2;
 
-    invoke-static {v0}, Lnm/f0;->b(Ljn/a;)Lnm/d0;
+    invoke-static {v0}, Lh/f0;->c(Lh/d3/w/a;)Lh/d0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mAnimationFilterController$delegate:Lnm/d0;
+    iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mAnimationFilterController$delegate:Lh/d0;
 
     .line 6
     sget-object v0, Lcom/faceunity/core/support/FURenderBridge$mAntialiasingController$2;->INSTANCE:Lcom/faceunity/core/support/FURenderBridge$mAntialiasingController$2;
 
-    invoke-static {v0}, Lnm/f0;->b(Ljn/a;)Lnm/d0;
+    invoke-static {v0}, Lh/f0;->c(Lh/d3/w/a;)Lh/d0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mAntialiasingController$delegate:Lnm/d0;
+    iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mAntialiasingController$delegate:Lh/d0;
 
     .line 7
     sget-object v0, Lcom/faceunity/core/support/FURenderBridge$mBgSegGreenController$2;->INSTANCE:Lcom/faceunity/core/support/FURenderBridge$mBgSegGreenController$2;
 
-    invoke-static {v0}, Lnm/f0;->b(Ljn/a;)Lnm/d0;
+    invoke-static {v0}, Lh/f0;->c(Lh/d3/w/a;)Lh/d0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mBgSegGreenController$delegate:Lnm/d0;
+    iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mBgSegGreenController$delegate:Lh/d0;
 
     .line 8
     sget-object v0, Lcom/faceunity/core/support/FURenderBridge$mBodyBeautyController$2;->INSTANCE:Lcom/faceunity/core/support/FURenderBridge$mBodyBeautyController$2;
 
-    invoke-static {v0}, Lnm/f0;->b(Ljn/a;)Lnm/d0;
+    invoke-static {v0}, Lh/f0;->c(Lh/d3/w/a;)Lh/d0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mBodyBeautyController$delegate:Lnm/d0;
+    iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mBodyBeautyController$delegate:Lh/d0;
 
     .line 9
     sget-object v0, Lcom/faceunity/core/support/FURenderBridge$mHairBeautyController$2;->INSTANCE:Lcom/faceunity/core/support/FURenderBridge$mHairBeautyController$2;
 
-    invoke-static {v0}, Lnm/f0;->b(Ljn/a;)Lnm/d0;
+    invoke-static {v0}, Lh/f0;->c(Lh/d3/w/a;)Lh/d0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mHairBeautyController$delegate:Lnm/d0;
+    iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mHairBeautyController$delegate:Lh/d0;
 
     .line 10
     sget-object v0, Lcom/faceunity/core/support/FURenderBridge$mLightMakeupController$2;->INSTANCE:Lcom/faceunity/core/support/FURenderBridge$mLightMakeupController$2;
 
-    invoke-static {v0}, Lnm/f0;->b(Ljn/a;)Lnm/d0;
+    invoke-static {v0}, Lh/f0;->c(Lh/d3/w/a;)Lh/d0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mLightMakeupController$delegate:Lnm/d0;
+    iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mLightMakeupController$delegate:Lh/d0;
 
     .line 11
     sget-object v0, Lcom/faceunity/core/support/FURenderBridge$mMusicFilterController$2;->INSTANCE:Lcom/faceunity/core/support/FURenderBridge$mMusicFilterController$2;
 
-    invoke-static {v0}, Lnm/f0;->b(Ljn/a;)Lnm/d0;
+    invoke-static {v0}, Lh/f0;->c(Lh/d3/w/a;)Lh/d0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mMusicFilterController$delegate:Lnm/d0;
+    iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mMusicFilterController$delegate:Lh/d0;
 
     .line 12
     sget-object v0, Lcom/faceunity/core/support/FURenderBridge$mPropContainerController$2;->INSTANCE:Lcom/faceunity/core/support/FURenderBridge$mPropContainerController$2;
 
-    invoke-static {v0}, Lnm/f0;->b(Ljn/a;)Lnm/d0;
+    invoke-static {v0}, Lh/f0;->c(Lh/d3/w/a;)Lh/d0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mPropContainerController$delegate:Lnm/d0;
+    iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mPropContainerController$delegate:Lh/d0;
 
     .line 13
     sget-object v0, Lcom/faceunity/core/support/FURenderBridge$mPosterController$2;->INSTANCE:Lcom/faceunity/core/support/FURenderBridge$mPosterController$2;
 
-    invoke-static {v0}, Lnm/f0;->b(Ljn/a;)Lnm/d0;
+    invoke-static {v0}, Lh/f0;->c(Lh/d3/w/a;)Lh/d0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mPosterController$delegate:Lnm/d0;
+    iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mPosterController$delegate:Lh/d0;
 
     .line 14
     sget-object v0, Lcom/faceunity/core/support/FURenderBridge$mAvatarController$2;->INSTANCE:Lcom/faceunity/core/support/FURenderBridge$mAvatarController$2;
 
-    invoke-static {v0}, Lnm/f0;->b(Ljn/a;)Lnm/d0;
+    invoke-static {v0}, Lh/f0;->c(Lh/d3/w/a;)Lh/d0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mAvatarController$delegate:Lnm/d0;
+    iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mAvatarController$delegate:Lh/d0;
 
     .line 15
     new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
@@ -445,20 +459,20 @@
     .line 16
     sget-object v0, Lcom/faceunity/core/support/FURenderBridge$mFUBundleManager$2;->INSTANCE:Lcom/faceunity/core/support/FURenderBridge$mFUBundleManager$2;
 
-    invoke-static {v0}, Lnm/f0;->b(Ljn/a;)Lnm/d0;
+    invoke-static {v0}, Lh/f0;->c(Lh/d3/w/a;)Lh/d0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mFUBundleManager$delegate:Lnm/d0;
+    iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mFUBundleManager$delegate:Lh/d0;
 
     .line 17
     sget-object v0, Lcom/faceunity/core/support/FURenderBridge$mFURenderKit$2;->INSTANCE:Lcom/faceunity/core/support/FURenderBridge$mFURenderKit$2;
 
-    invoke-static {v0}, Lnm/f0;->b(Ljn/a;)Lnm/d0;
+    invoke-static {v0}, Lh/f0;->c(Lh/d3/w/a;)Lh/d0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mFURenderKit$delegate:Lnm/d0;
+    iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mFURenderKit$delegate:Lh/d0;
 
     const/4 v0, -0x1
 
@@ -489,14 +503,14 @@
 
     const-string v1, "Collections.synchronized\u2026rrayList<() -> Unit>(16))"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mGLEventQueue:Ljava/util/List;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/w;)V
+.method public synthetic constructor <init>(Lh/d3/x/w;)V
     .locals 0
 
     .line 23
@@ -508,6 +522,7 @@
 .method public static final synthetic access$getINSTANCE$cp()Lcom/faceunity/core/support/FURenderBridge;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/faceunity/core/support/FURenderBridge;->INSTANCE:Lcom/faceunity/core/support/FURenderBridge;
 
     return-object v0
@@ -516,6 +531,7 @@
 .method public static final synthetic access$setINSTANCE$cp(Lcom/faceunity/core/support/FURenderBridge;)V
     .locals 0
 
+    .line 1
     sput-object p0, Lcom/faceunity/core/support/FURenderBridge;->INSTANCE:Lcom/faceunity/core/support/FURenderBridge;
 
     return-void
@@ -524,20 +540,24 @@
 .method private final applyRenderWithInput(Lcom/faceunity/core/entity/FURenderInputData;Z)Lcom/faceunity/core/entity/FURenderOutputData;
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/core/support/FURenderBridge;->prepareGLEventQueue()V
 
+    .line 2
     iget-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mInputBufferMatrix:Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;
 
     invoke-direct {p0, v0}, Lcom/faceunity/core/support/FURenderBridge;->verifyWidthAndHeight(Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;)Z
 
     move-result v0
 
+    .line 3
     iget-object v1, p0, Lcom/faceunity/core/support/FURenderBridge;->mInputTextureMatrix:Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;
 
     invoke-direct {p0, v1}, Lcom/faceunity/core/support/FURenderBridge;->verifyWidthAndHeight(Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;)Z
 
     move-result v1
 
+    .line 4
     invoke-direct {p0, p1, v0, v1, p2}, Lcom/faceunity/core/support/FURenderBridge;->renderDistribution(Lcom/faceunity/core/entity/FURenderInputData;ZZZ)Lcom/faceunity/core/entity/FURenderOutputData;
 
     move-result-object p0
@@ -554,6 +574,7 @@
 
     const/4 p2, 0x0
 
+    .line 1
     :cond_0
     invoke-direct {p0, p1, p2}, Lcom/faceunity/core/support/FURenderBridge;->applyRenderWithInput(Lcom/faceunity/core/entity/FURenderInputData;Z)Lcom/faceunity/core/entity/FURenderOutputData;
 
@@ -563,58 +584,62 @@
 .end method
 
 .method private final calculateRotationMode()I
-    .locals 6
+    .locals 7
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mExternalInputType:Lcom/faceunity/core/enumeration/FUExternalInputEnum;
 
     const/16 v1, 0x10e
 
-    const/16 v2, 0x5a
+    const/4 v2, 0x0
+
+    const/4 v3, 0x2
+
+    const/4 v4, 0x1
+
+    const/16 v5, 0x5a
 
     if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sget-object v3, Lcom/faceunity/core/support/FURenderBridge$WhenMappings;->$EnumSwitchMapping$0:[I
+    sget-object v6, Lcom/faceunity/core/support/FURenderBridge$WhenMappings;->$EnumSwitchMapping$0:[I
 
     invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v0
 
-    aget v0, v3, v0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x1
+    aget v0, v6, v0
 
     if-eq v0, v4, :cond_6
 
-    const/4 v5, 0x2
+    if-eq v0, v3, :cond_2
 
-    if-eq v0, v5, :cond_2
-
+    .line 2
     :goto_0
     iget-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mCameraFacing:Lcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;
 
-    sget-object v3, Lcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;->CAMERA_FRONT:Lcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;
+    sget-object v2, Lcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;->CAMERA_FRONT:Lcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;
 
-    if-ne v0, v3, :cond_1
+    if-ne v0, v2, :cond_1
 
+    .line 3
     iget v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mInputOrientation:I
 
     iget p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mDeviceOrientation:I
 
     add-int/2addr v0, p0
 
-    add-int/2addr v0, v2
+    add-int/2addr v0, v5
 
     rem-int/lit16 v0, v0, 0x168
 
-    div-int/lit8 v3, v0, 0x5a
+    div-int/lit8 v2, v0, 0x5a
 
     goto :goto_1
 
+    .line 4
     :cond_1
     iget v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mInputOrientation:I
 
@@ -626,14 +651,15 @@
 
     rem-int/lit16 v0, v0, 0x168
 
-    div-int/lit8 v3, v0, 0x5a
+    div-int/lit8 v2, v0, 0x5a
 
     goto :goto_1
 
+    .line 5
     :cond_2
     iget p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mInputOrientation:I
 
-    if-eq p0, v2, :cond_5
+    if-eq p0, v5, :cond_5
 
     const/16 v0, 0xb4
 
@@ -644,26 +670,27 @@
     goto :goto_1
 
     :cond_3
-    move v3, v4
+    move v2, v4
 
     goto :goto_1
 
     :cond_4
-    move v3, v5
+    move v2, v3
 
     goto :goto_1
 
     :cond_5
-    const/4 v3, 0x3
+    const/4 v2, 0x3
 
     :cond_6
     :goto_1
-    return v3
+    return v2
 .end method
 
 .method private final drawFrameBeautify(Lcom/faceunity/core/entity/FURenderInputData;Z)Lcom/faceunity/core/entity/FURenderOutputData;
     .locals 8
 
+    .line 1
     sget-object v7, Lcom/faceunity/core/support/FUSDKController;->INSTANCE:Lcom/faceunity/core/support/FUSDKController;
 
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FURenderInputData;->getWidth()I
@@ -692,7 +719,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {p0}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Lcom/faceunity/core/entity/FURenderInputData$FUTexture;->getInputTextureType()Lcom/faceunity/core/enumeration/FUInputTextureEnum;
 
@@ -706,7 +733,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {p0}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Lcom/faceunity/core/entity/FURenderInputData$FUTexture;->getTexId()I
 
@@ -720,11 +747,13 @@
 
     if-gtz p0, :cond_0
 
+    .line 2
     invoke-virtual {v7}, Lcom/faceunity/core/support/FUSDKController;->callBackSystemError()Ljava/lang/String;
 
     :cond_0
     if-eqz p2, :cond_1
 
+    .line 3
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FURenderInputData;->getWidth()I
 
     move-result v0
@@ -739,6 +768,7 @@
     :goto_0
     if-eqz p2, :cond_2
 
+    .line 4
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FURenderInputData;->getHeight()I
 
     move-result p1
@@ -750,6 +780,7 @@
 
     move-result p1
 
+    .line 5
     :goto_1
     new-instance p2, Lcom/faceunity/core/entity/FURenderOutputData;
 
@@ -761,7 +792,7 @@
 
     const/4 p1, 0x0
 
-    invoke-direct {p2, v1, p1, p0, p1}, Lcom/faceunity/core/entity/FURenderOutputData;-><init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;ILkotlin/jvm/internal/w;)V
+    invoke-direct {p2, v1, p1, p0, p1}, Lcom/faceunity/core/entity/FURenderOutputData;-><init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;ILh/d3/x/w;)V
 
     return-object p2
 .end method
@@ -773,6 +804,7 @@
 
     if-eqz p3, :cond_0
 
+    .line 1
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/entity/FURenderInputData;->getWidth()I
 
     move-result v1
@@ -787,6 +819,7 @@
     :goto_0
     if-eqz p3, :cond_1
 
+    .line 2
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/entity/FURenderInputData;->getHeight()I
 
     move-result v2
@@ -801,6 +834,7 @@
     :goto_1
     if-eqz p2, :cond_2
 
+    .line 3
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/entity/FURenderInputData;->getWidth()I
 
     move-result v3
@@ -815,6 +849,7 @@
     :goto_2
     if-eqz p2, :cond_3
 
+    .line 4
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/entity/FURenderInputData;->getHeight()I
 
     move-result v4
@@ -829,6 +864,7 @@
     :goto_3
     move/from16 v16, v4
 
+    .line 5
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/entity/FURenderInputData;->getRenderConfig()Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
 
     move-result-object v4
@@ -841,11 +877,12 @@
 
     if-eqz v4, :cond_4
 
+    .line 6
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/entity/FURenderInputData;->getImageBuffer()Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;
 
     move-result-object v4
 
-    invoke-static {v4}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {v4}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     invoke-virtual {v4}, Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;->getBuffer()[B
 
@@ -862,9 +899,11 @@
     :cond_4
     move-object/from16 v17, v15
 
+    .line 7
     :goto_4
     sget-object v18, Lcom/faceunity/core/support/FUSDKController;->INSTANCE:Lcom/faceunity/core/support/FUSDKController;
 
+    .line 8
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/entity/FURenderInputData;->getWidth()I
 
     move-result v5
@@ -887,11 +926,12 @@
 
     move-result-object v8
 
+    .line 9
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/entity/FURenderInputData;->getTexture()Lcom/faceunity/core/entity/FURenderInputData$FUTexture;
 
     move-result-object v0
 
-    invoke-static {v0}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {v0}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     invoke-virtual {v0}, Lcom/faceunity/core/entity/FURenderInputData$FUTexture;->getTexId()I
 
@@ -901,7 +941,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {v0}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     invoke-virtual {v0}, Lcom/faceunity/core/entity/FURenderInputData$FUTexture;->getInputTextureType()Lcom/faceunity/core/enumeration/FUInputTextureEnum;
 
@@ -915,7 +955,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {v0}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     invoke-virtual {v0}, Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;->getBuffer()[B
 
@@ -925,7 +965,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {v0}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     invoke-virtual {v0}, Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;->getInputBufferType()Lcom/faceunity/core/enumeration/FUInputBufferEnum;
 
@@ -945,14 +985,17 @@
 
     move-object/from16 v15, v17
 
+    .line 10
     invoke-virtual/range {v4 .. v15}, Lcom/faceunity/core/support/FUSDKController;->fuRenderDualInput(III[III[BIII[B)I
 
     move-result v4
 
     if-gtz v4, :cond_5
 
+    .line 11
     invoke-virtual/range {v18 .. v18}, Lcom/faceunity/core/support/FUSDKController;->callBackSystemError()Ljava/lang/String;
 
+    .line 12
     :cond_5
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/entity/FURenderInputData;->getRenderConfig()Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
 
@@ -964,6 +1007,7 @@
 
     if-eqz v5, :cond_6
 
+    .line 13
     new-instance v0, Lcom/faceunity/core/entity/FURenderOutputData;
 
     new-instance v15, Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;
@@ -994,12 +1038,13 @@
 
     move-object/from16 v7, v17
 
-    invoke-direct/range {v4 .. v14}, Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;-><init>(II[B[B[BIIIILkotlin/jvm/internal/w;)V
+    invoke-direct/range {v4 .. v14}, Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;-><init>(II[B[B[BIIIILh/d3/x/w;)V
 
     invoke-direct {v0, v15, v1}, Lcom/faceunity/core/entity/FURenderOutputData;-><init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;)V
 
     goto :goto_5
 
+    .line 14
     :cond_6
     new-instance v3, Lcom/faceunity/core/entity/FURenderOutputData;
 
@@ -1009,7 +1054,7 @@
 
     const/4 v1, 0x2
 
-    invoke-direct {v3, v5, v0, v1, v0}, Lcom/faceunity/core/entity/FURenderOutputData;-><init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;ILkotlin/jvm/internal/w;)V
+    invoke-direct {v3, v5, v0, v1, v0}, Lcom/faceunity/core/entity/FURenderOutputData;-><init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;ILh/d3/x/w;)V
 
     move-object v0, v3
 
@@ -1022,6 +1067,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 1
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FURenderInputData;->getWidth()I
 
     move-result v0
@@ -1036,6 +1082,7 @@
     :goto_0
     if-eqz p2, :cond_1
 
+    .line 2
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FURenderInputData;->getHeight()I
 
     move-result p2
@@ -1047,9 +1094,11 @@
 
     move-result p2
 
+    .line 3
     :goto_1
     sget-object v10, Lcom/faceunity/core/support/FUSDKController;->INSTANCE:Lcom/faceunity/core/support/FUSDKController;
 
+    .line 4
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FURenderInputData;->getWidth()I
 
     move-result v2
@@ -1072,11 +1121,12 @@
 
     move-result-object v5
 
+    .line 5
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FURenderInputData;->getTexture()Lcom/faceunity/core/entity/FURenderInputData$FUTexture;
 
     move-result-object p0
 
-    invoke-static {p0}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {p0}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Lcom/faceunity/core/entity/FURenderInputData$FUTexture;->getTexId()I
 
@@ -1086,7 +1136,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {p0}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Lcom/faceunity/core/entity/FURenderInputData$FUTexture;->getInputTextureType()Lcom/faceunity/core/enumeration/FUInputTextureEnum;
 
@@ -1100,7 +1150,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {p0}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;->getBuffer()[B
 
@@ -1110,7 +1160,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {p0}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;->getInputBufferType()Lcom/faceunity/core/enumeration/FUInputBufferEnum;
 
@@ -1122,14 +1172,17 @@
 
     move-object v1, v10
 
+    .line 6
     invoke-virtual/range {v1 .. v9}, Lcom/faceunity/core/support/FUSDKController;->fuRenderDualInput(III[III[BI)I
 
     move-result p0
 
     if-gtz p0, :cond_2
 
+    .line 7
     invoke-virtual {v10}, Lcom/faceunity/core/support/FUSDKController;->callBackSystemError()Ljava/lang/String;
 
+    .line 8
     :cond_2
     new-instance p1, Lcom/faceunity/core/entity/FURenderOutputData;
 
@@ -1141,7 +1194,7 @@
 
     const/4 p2, 0x0
 
-    invoke-direct {p1, v1, p2, p0, p2}, Lcom/faceunity/core/entity/FURenderOutputData;-><init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;ILkotlin/jvm/internal/w;)V
+    invoke-direct {p1, v1, p2, p0, p2}, Lcom/faceunity/core/entity/FURenderOutputData;-><init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;ILh/d3/x/w;)V
 
     return-object p1
 .end method
@@ -1153,6 +1206,7 @@
 
     if-eqz p3, :cond_0
 
+    .line 1
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/entity/FURenderInputData;->getWidth()I
 
     move-result v1
@@ -1167,6 +1221,7 @@
     :goto_0
     if-eqz p3, :cond_1
 
+    .line 2
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/entity/FURenderInputData;->getHeight()I
 
     move-result v2
@@ -1181,6 +1236,7 @@
     :goto_1
     if-eqz p2, :cond_2
 
+    .line 3
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/entity/FURenderInputData;->getWidth()I
 
     move-result v3
@@ -1195,6 +1251,7 @@
     :goto_2
     if-eqz p2, :cond_3
 
+    .line 4
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/entity/FURenderInputData;->getHeight()I
 
     move-result v4
@@ -1209,6 +1266,7 @@
     :goto_3
     move v15, v4
 
+    .line 5
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/entity/FURenderInputData;->getRenderConfig()Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
 
     move-result-object v4
@@ -1221,11 +1279,12 @@
 
     if-eqz v4, :cond_4
 
+    .line 6
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/entity/FURenderInputData;->getImageBuffer()Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;
 
     move-result-object v4
 
-    invoke-static {v4}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {v4}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     invoke-virtual {v4}, Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;->getBuffer()[B
 
@@ -1242,6 +1301,7 @@
     :cond_4
     move-object/from16 v16, v14
 
+    .line 7
     :goto_4
     sget-object v17, Lcom/faceunity/core/support/FUSDKController;->INSTANCE:Lcom/faceunity/core/support/FUSDKController;
 
@@ -1273,7 +1333,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {v0}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     invoke-virtual {v0}, Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;->getBuffer()[B
 
@@ -1283,7 +1343,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {v0}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     invoke-virtual {v0}, Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;->getInputBufferType()Lcom/faceunity/core/enumeration/FUInputBufferEnum;
 
@@ -1309,8 +1369,10 @@
 
     if-gtz v4, :cond_5
 
+    .line 8
     invoke-virtual/range {v17 .. v17}, Lcom/faceunity/core/support/FUSDKController;->callBackSystemError()Ljava/lang/String;
 
+    .line 9
     :cond_5
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/entity/FURenderInputData;->getRenderConfig()Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
 
@@ -1322,6 +1384,7 @@
 
     if-eqz v5, :cond_6
 
+    .line 10
     new-instance v0, Lcom/faceunity/core/entity/FURenderOutputData;
 
     new-instance v14, Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;
@@ -1356,12 +1419,13 @@
 
     move-object v14, v2
 
-    invoke-direct/range {v4 .. v14}, Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;-><init>(II[B[B[BIIIILkotlin/jvm/internal/w;)V
+    invoke-direct/range {v4 .. v14}, Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;-><init>(II[B[B[BIIIILh/d3/x/w;)V
 
     invoke-direct {v0, v3, v1}, Lcom/faceunity/core/entity/FURenderOutputData;-><init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;)V
 
     goto :goto_5
 
+    .line 11
     :cond_6
     new-instance v3, Lcom/faceunity/core/entity/FURenderOutputData;
 
@@ -1371,7 +1435,7 @@
 
     const/4 v1, 0x2
 
-    invoke-direct {v3, v5, v0, v1, v0}, Lcom/faceunity/core/entity/FURenderOutputData;-><init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;ILkotlin/jvm/internal/w;)V
+    invoke-direct {v3, v5, v0, v1, v0}, Lcom/faceunity/core/entity/FURenderOutputData;-><init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;ILh/d3/x/w;)V
 
     move-object v0, v3
 
@@ -1384,6 +1448,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 1
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FURenderInputData;->getWidth()I
 
     move-result v0
@@ -1398,6 +1463,7 @@
     :goto_0
     if-eqz p2, :cond_1
 
+    .line 2
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FURenderInputData;->getHeight()I
 
     move-result p2
@@ -1409,6 +1475,7 @@
 
     move-result p2
 
+    .line 3
     :goto_1
     sget-object v8, Lcom/faceunity/core/support/FUSDKController;->INSTANCE:Lcom/faceunity/core/support/FUSDKController;
 
@@ -1438,7 +1505,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {p0}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Lcom/faceunity/core/entity/FURenderInputData$FUTexture;->getTexId()I
 
@@ -1448,7 +1515,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {p0}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Lcom/faceunity/core/entity/FURenderInputData$FUTexture;->getInputTextureType()Lcom/faceunity/core/enumeration/FUInputTextureEnum;
 
@@ -1466,8 +1533,10 @@
 
     if-gtz p0, :cond_2
 
+    .line 4
     invoke-virtual {v8}, Lcom/faceunity/core/support/FUSDKController;->callBackSystemError()Ljava/lang/String;
 
+    .line 5
     :cond_2
     new-instance p1, Lcom/faceunity/core/entity/FURenderOutputData;
 
@@ -1479,7 +1548,7 @@
 
     const/4 p2, 0x0
 
-    invoke-direct {p1, v1, p2, p0, p2}, Lcom/faceunity/core/entity/FURenderOutputData;-><init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;ILkotlin/jvm/internal/w;)V
+    invoke-direct {p1, v1, p2, p0, p2}, Lcom/faceunity/core/entity/FURenderOutputData;-><init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;ILh/d3/x/w;)V
 
     return-object p1
 .end method
@@ -1489,6 +1558,7 @@
 
     move-object/from16 v0, p0
 
+    .line 1
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/entity/FURenderInputData;->getImageBuffer()Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;
 
     move-result-object v1
@@ -1504,6 +1574,7 @@
     :cond_0
     const/4 v1, 0x0
 
+    .line 2
     :goto_0
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/entity/FURenderInputData;->getImageBuffer()Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;
 
@@ -1522,6 +1593,7 @@
     :cond_1
     const/16 v16, 0x0
 
+    .line 3
     :goto_1
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/entity/FURenderInputData;->getImageBuffer()Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;
 
@@ -1551,6 +1623,7 @@
 
     goto/16 :goto_8
 
+    .line 4
     :cond_3
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/entity/FURenderInputData;->getWidth()I
 
@@ -1560,6 +1633,7 @@
 
     if-eqz p3, :cond_4
 
+    .line 5
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/entity/FURenderInputData;->getWidth()I
 
     move-result v3
@@ -1576,6 +1650,7 @@
 
     if-eqz p3, :cond_5
 
+    .line 6
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/entity/FURenderInputData;->getHeight()I
 
     move-result v3
@@ -1592,6 +1667,7 @@
 
     if-eqz p2, :cond_6
 
+    .line 7
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/entity/FURenderInputData;->getWidth()I
 
     move-result v3
@@ -1608,6 +1684,7 @@
 
     if-eqz p2, :cond_7
 
+    .line 8
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/entity/FURenderInputData;->getHeight()I
 
     move-result v3
@@ -1624,6 +1701,7 @@
 
     shr-int/lit8 v20, v19, 0x1
 
+    .line 9
     sget-object v21, Lcom/faceunity/core/support/FUSDKController;->INSTANCE:Lcom/faceunity/core/support/FUSDKController;
 
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/entity/FURenderInputData;->getWidth()I
@@ -1686,8 +1764,10 @@
 
     if-gtz v0, :cond_8
 
+    .line 10
     invoke-virtual/range {v21 .. v21}, Lcom/faceunity/core/support/FUSDKController;->callBackSystemError()Ljava/lang/String;
 
+    .line 11
     :cond_8
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/entity/FURenderInputData;->getRenderConfig()Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
 
@@ -1699,12 +1779,15 @@
 
     if-eqz v3, :cond_9
 
+    .line 12
     new-instance v3, Lcom/faceunity/core/entity/FURenderOutputData;
 
+    .line 13
     new-instance v13, Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;
 
     invoke-direct {v13, v0, v2, v1}, Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;-><init>(III)V
 
+    .line 14
     new-instance v0, Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;
 
     invoke-static/range {v22 .. v22}, Lcom/faceunity/toolbox/utils/FUDecimalUtils;->copyArray([B)[B
@@ -1733,10 +1816,12 @@
 
     invoke-direct/range {v4 .. v12}, Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;-><init>(II[B[B[BIII)V
 
+    .line 15
     invoke-direct {v3, v13, v0}, Lcom/faceunity/core/entity/FURenderOutputData;-><init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;)V
 
     goto :goto_7
 
+    .line 16
     :cond_9
     new-instance v3, Lcom/faceunity/core/entity/FURenderOutputData;
 
@@ -1748,7 +1833,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v3, v4, v1, v0, v1}, Lcom/faceunity/core/entity/FURenderOutputData;-><init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;ILkotlin/jvm/internal/w;)V
+    invoke-direct {v3, v4, v1, v0, v1}, Lcom/faceunity/core/entity/FURenderOutputData;-><init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;ILh/d3/x/w;)V
 
     :goto_7
     return-object v3
@@ -1757,6 +1842,7 @@
     :goto_8
     move-object/from16 v22, v1
 
+    .line 17
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1821,23 +1907,24 @@
 
     invoke-static {v1, v0}, Lcom/faceunity/toolbox/utils/FULogger;->e(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 18
     new-instance v0, Lcom/faceunity/core/entity/FURenderOutputData;
 
     const/4 v1, 0x3
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v2, v2, v1, v2}, Lcom/faceunity/core/entity/FURenderOutputData;-><init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;ILkotlin/jvm/internal/w;)V
+    invoke-direct {v0, v2, v2, v1, v2}, Lcom/faceunity/core/entity/FURenderOutputData;-><init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;ILh/d3/x/w;)V
 
     return-object v0
 .end method
 
 .method public static final getInstance$lib_core_release()Lcom/faceunity/core/support/FURenderBridge;
     .locals 1
-    .annotation runtime Lin/l;
+    .annotation runtime Lh/d3/l;
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     sget-object v0, Lcom/faceunity/core/support/FURenderBridge;->Companion:Lcom/faceunity/core/support/FURenderBridge$Companion;
@@ -1852,9 +1939,9 @@
 .method private final getMFUBundleManager()Lcom/faceunity/core/bundle/FUBundleManager;
     .locals 0
 
-    iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mFUBundleManager$delegate:Lnm/d0;
+    iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mFUBundleManager$delegate:Lh/d0;
 
-    invoke-interface {p0}, Lnm/d0;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lh/d0;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -1866,9 +1953,9 @@
 .method private final getMFURenderKit()Lcom/faceunity/core/faceunity/FURenderKit;
     .locals 0
 
-    iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mFURenderKit$delegate:Lnm/d0;
+    iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mFURenderKit$delegate:Lh/d0;
 
-    invoke-interface {p0}, Lnm/d0;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lh/d0;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -1880,10 +1967,9 @@
 .method private final prepareGLEventQueue()V
     .locals 2
 
+    .line 1
     :goto_0
     iget-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mGLEventQueue:Ljava/util/List;
-
-    check-cast v0, Ljava/util/Collection;
 
     const/4 v1, 0x0
 
@@ -1909,15 +1995,16 @@
     :goto_2
     if-nez v0, :cond_2
 
+    .line 2
     iget-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mGLEventQueue:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ljn/a;
+    check-cast v0, Lh/d3/w/a;
 
-    invoke-interface {v0}, Ljn/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lh/d3/w/a;->invoke()Ljava/lang/Object;
 
     goto :goto_0
 
@@ -1928,6 +2015,7 @@
 .method private final renderDistribution(Lcom/faceunity/core/entity/FURenderInputData;ZZZ)Lcom/faceunity/core/entity/FURenderOutputData;
     .locals 3
 
+    .line 1
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FURenderInputData;->getRenderConfig()Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
 
     move-result-object v0
@@ -1950,7 +2038,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {v0}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     invoke-virtual {v0}, Lcom/faceunity/core/entity/FURenderInputData$FUTexture;->getTexId()I
 
@@ -1958,14 +2046,17 @@
 
     if-lez v0, :cond_0
 
+    .line 2
     iput-boolean v1, p0, Lcom/faceunity/core/support/FURenderBridge;->mLastFrameTextureFlag:Z
 
+    .line 3
     invoke-direct {p0, p1, p3}, Lcom/faceunity/core/support/FURenderBridge;->drawFrameBeautify(Lcom/faceunity/core/entity/FURenderInputData;Z)Lcom/faceunity/core/entity/FURenderOutputData;
 
     move-result-object p0
 
     return-object p0
 
+    .line 4
     :cond_0
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FURenderInputData;->getImageBuffer()Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;
 
@@ -1977,7 +2068,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {v0}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     invoke-virtual {v0}, Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;->getInputBufferType()Lcom/faceunity/core/enumeration/FUInputBufferEnum;
 
@@ -1987,14 +2078,17 @@
 
     if-ne v0, v2, :cond_1
 
+    .line 5
     iput-boolean v1, p0, Lcom/faceunity/core/support/FURenderBridge;->mLastFrameTextureFlag:Z
 
+    .line 6
     invoke-direct {p0, p1, p2, p3}, Lcom/faceunity/core/support/FURenderBridge;->drawFrameYUV(Lcom/faceunity/core/entity/FURenderInputData;ZZ)Lcom/faceunity/core/entity/FURenderOutputData;
 
     move-result-object p0
 
     return-object p0
 
+    .line 7
     :cond_1
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FURenderInputData;->getTexture()Lcom/faceunity/core/entity/FURenderInputData$FUTexture;
 
@@ -2008,16 +2102,19 @@
 
     if-eqz v0, :cond_3
 
+    .line 8
     iput-boolean v1, p0, Lcom/faceunity/core/support/FURenderBridge;->mLastFrameTextureFlag:Z
 
     if-eqz p4, :cond_2
 
+    .line 9
     invoke-direct {p0, p1, p3}, Lcom/faceunity/core/support/FURenderBridge;->drawFrameForPoster(Lcom/faceunity/core/entity/FURenderInputData;Z)Lcom/faceunity/core/entity/FURenderOutputData;
 
     move-result-object p0
 
     return-object p0
 
+    .line 10
     :cond_2
     invoke-direct {p0, p1, p2, p3}, Lcom/faceunity/core/support/FURenderBridge;->drawFrameDualInput(Lcom/faceunity/core/entity/FURenderInputData;ZZ)Lcom/faceunity/core/entity/FURenderOutputData;
 
@@ -2025,6 +2122,7 @@
 
     return-object p0
 
+    .line 11
     :cond_3
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FURenderInputData;->getTexture()Lcom/faceunity/core/entity/FURenderInputData$FUTexture;
 
@@ -2032,18 +2130,22 @@
 
     if-eqz p4, :cond_5
 
+    .line 12
     iget-boolean p2, p0, Lcom/faceunity/core/support/FURenderBridge;->mLastFrameTextureFlag:Z
 
     if-nez p2, :cond_4
 
     const/4 p2, 0x1
 
+    .line 13
     iput-boolean p2, p0, Lcom/faceunity/core/support/FURenderBridge;->mLastFrameTextureFlag:Z
 
+    .line 14
     sget-object p2, Lcom/faceunity/core/support/FUSDKController;->INSTANCE:Lcom/faceunity/core/support/FUSDKController;
 
     invoke-virtual {p2}, Lcom/faceunity/core/support/FUSDKController;->clearCacheResource()V
 
+    .line 15
     :cond_4
     invoke-direct {p0, p1, p3}, Lcom/faceunity/core/support/FURenderBridge;->drawFrameTexture(Lcom/faceunity/core/entity/FURenderInputData;Z)Lcom/faceunity/core/entity/FURenderOutputData;
 
@@ -2051,6 +2153,7 @@
 
     return-object p0
 
+    .line 16
     :cond_5
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FURenderInputData;->getImageBuffer()Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;
 
@@ -2058,8 +2161,10 @@
 
     if-eqz p4, :cond_6
 
+    .line 17
     iput-boolean v1, p0, Lcom/faceunity/core/support/FURenderBridge;->mLastFrameTextureFlag:Z
 
+    .line 18
     invoke-direct {p0, p1, p2, p3}, Lcom/faceunity/core/support/FURenderBridge;->drawFrameImg(Lcom/faceunity/core/entity/FURenderInputData;ZZ)Lcom/faceunity/core/entity/FURenderOutputData;
 
     move-result-object p0
@@ -2071,15 +2176,17 @@
 
     const-string p1, "no suitable rendering pass"
 
+    .line 19
     invoke-static {p0, p1}, Lcom/faceunity/toolbox/utils/FULogger;->e(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 20
     new-instance p0, Lcom/faceunity/core/entity/FURenderOutputData;
 
     const/4 p1, 0x3
 
     const/4 p2, 0x0
 
-    invoke-direct {p0, p2, p2, p1, p2}, Lcom/faceunity/core/entity/FURenderOutputData;-><init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;ILkotlin/jvm/internal/w;)V
+    invoke-direct {p0, p2, p2, p1, p2}, Lcom/faceunity/core/entity/FURenderOutputData;-><init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;ILh/d3/x/w;)V
 
     return-object p0
 .end method
@@ -2093,6 +2200,7 @@
 
     const/4 p4, 0x0
 
+    .line 1
     :cond_0
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/faceunity/core/support/FURenderBridge;->renderDistribution(Lcom/faceunity/core/entity/FURenderInputData;ZZZ)Lcom/faceunity/core/entity/FURenderOutputData;
 
@@ -2106,28 +2214,38 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mFrameId:I
 
     const/4 v1, -0x1
 
+    .line 2
     iput v1, p0, Lcom/faceunity/core/support/FURenderBridge;->mRotationMode:I
 
     const/4 v2, 0x0
 
+    .line 3
     iput-object v2, p0, Lcom/faceunity/core/support/FURenderBridge;->mCameraFacing:Lcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;
 
+    .line 4
     iput v1, p0, Lcom/faceunity/core/support/FURenderBridge;->mInputOrientation:I
 
+    .line 5
     iput v1, p0, Lcom/faceunity/core/support/FURenderBridge;->mDeviceOrientation:I
 
+    .line 6
     iput-object v2, p0, Lcom/faceunity/core/support/FURenderBridge;->mExternalInputType:Lcom/faceunity/core/enumeration/FUExternalInputEnum;
 
+    .line 7
     iput-object v2, p0, Lcom/faceunity/core/support/FURenderBridge;->mInputTextureMatrix:Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;
 
+    .line 8
     iput-object v2, p0, Lcom/faceunity/core/support/FURenderBridge;->mInputBufferMatrix:Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;
 
+    .line 9
     iput-object v2, p0, Lcom/faceunity/core/support/FURenderBridge;->mOutputMatrix:Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;
 
+    .line 10
     iput-boolean v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mLastFrameTextureFlag:Z
 
     return-void
@@ -2136,26 +2254,33 @@
 .method private final updateFlipMode()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/core/support/FURenderBridge;->calculateRotationMode()I
 
     move-result v0
 
+    .line 2
     iget v1, p0, Lcom/faceunity/core/support/FURenderBridge;->mRotationMode:I
 
     if-eq v1, v0, :cond_0
 
+    .line 3
     iput v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mRotationMode:I
 
+    .line 4
     sget-object v0, Lcom/faceunity/core/support/FUSDKController;->INSTANCE:Lcom/faceunity/core/support/FUSDKController;
 
     invoke-virtual {v0}, Lcom/faceunity/core/support/FUSDKController;->onCameraChange()V
 
+    .line 5
     invoke-virtual {v0}, Lcom/faceunity/core/support/FUSDKController;->humanProcessorReset()V
 
+    .line 6
     iget v1, p0, Lcom/faceunity/core/support/FURenderBridge;->mRotationMode:I
 
     invoke-virtual {v0, v1}, Lcom/faceunity/core/support/FUSDKController;->setDefaultRotationMode(I)V
 
+    .line 7
     :cond_0
     invoke-direct {p0}, Lcom/faceunity/core/support/FURenderBridge;->getMFURenderKit()Lcom/faceunity/core/faceunity/FURenderKit;
 
@@ -2167,12 +2292,14 @@
 
     if-eqz v0, :cond_1
 
+    .line 8
     invoke-virtual {p0}, Lcom/faceunity/core/support/FURenderBridge;->getMBgSegGreenController$lib_core_release()Lcom/faceunity/core/controller/bgSegGreen/BgSegGreenController;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/faceunity/core/controller/bgSegGreen/BgSegGreenController;->updateFlipMode$lib_core_release()V
 
+    .line 9
     :cond_1
     invoke-direct {p0}, Lcom/faceunity/core/support/FURenderBridge;->getMFURenderKit()Lcom/faceunity/core/faceunity/FURenderKit;
 
@@ -2184,12 +2311,14 @@
 
     if-eqz v0, :cond_2
 
+    .line 10
     invoke-virtual {p0}, Lcom/faceunity/core/support/FURenderBridge;->getMMakeupController$lib_core_release()Lcom/faceunity/core/controller/makeup/MakeupController;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/faceunity/core/controller/makeup/MakeupController;->updateFlipMode$lib_core_release()V
 
+    .line 11
     :cond_2
     invoke-virtual {p0}, Lcom/faceunity/core/support/FURenderBridge;->getMPropContainerController$lib_core_release()Lcom/faceunity/core/controller/prop/PropController;
 
@@ -2203,13 +2332,14 @@
 .method private final updateRenderEnvironment(Lcom/faceunity/core/entity/FURenderInputData;)V
     .locals 5
 
+    .line 1
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
 
     const-string v1, "Thread.currentThread()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Ljava/lang/Thread;->getId()J
 
@@ -2217,10 +2347,12 @@
 
     iput-wide v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mGLThreadId:J
 
+    .line 2
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FURenderInputData;->getRenderConfig()Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
 
     move-result-object p1
 
+    .line 3
     iget-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mExternalInputType:Lcom/faceunity/core/enumeration/FUExternalInputEnum;
 
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;->getExternalInputType()Lcom/faceunity/core/enumeration/FUExternalInputEnum;
@@ -2256,6 +2388,7 @@
 
     goto :goto_1
 
+    .line 4
     :cond_1
     :goto_0
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;->getExternalInputType()Lcom/faceunity/core/enumeration/FUExternalInputEnum;
@@ -2264,12 +2397,14 @@
 
     iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mExternalInputType:Lcom/faceunity/core/enumeration/FUExternalInputEnum;
 
+    .line 5
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;->getInputOrientation()I
 
     move-result v0
 
     iput v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mInputOrientation:I
 
+    .line 6
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;->getDeviceOrientation()I
 
     move-result v0
@@ -2278,6 +2413,7 @@
 
     move v0, v2
 
+    .line 7
     :goto_1
     iget-object v1, p0, Lcom/faceunity/core/support/FURenderBridge;->mCameraFacing:Lcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;
 
@@ -2287,10 +2423,12 @@
 
     if-eq v1, v4, :cond_2
 
+    .line 8
     sget-object v1, Lcom/faceunity/core/support/FUSDKController;->INSTANCE:Lcom/faceunity/core/support/FUSDKController;
 
     invoke-virtual {v1}, Lcom/faceunity/core/support/FUSDKController;->clearCacheResource()V
 
+    .line 9
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;->getCameraFacing()Lcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;
 
     move-result-object v1
@@ -2305,6 +2443,7 @@
     :goto_2
     if-eqz v2, :cond_3
 
+    .line 10
     invoke-direct {p0}, Lcom/faceunity/core/support/FURenderBridge;->updateFlipMode()V
 
     goto :goto_3
@@ -2312,8 +2451,10 @@
     :cond_3
     if-eqz v0, :cond_4
 
+    .line 11
     invoke-direct {p0}, Lcom/faceunity/core/support/FURenderBridge;->updateRotationMode()V
 
+    .line 12
     :cond_4
     :goto_3
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;->getInputTextureMatrix()Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;
@@ -2324,16 +2465,19 @@
 
     if-eq v0, v1, :cond_5
 
+    .line 13
     sget-object v0, Lcom/faceunity/core/support/FUSDKController;->INSTANCE:Lcom/faceunity/core/support/FUSDKController;
 
     invoke-virtual {v0}, Lcom/faceunity/core/support/FUSDKController;->clearCacheResource()V
 
+    .line 14
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;->getInputTextureMatrix()Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/faceunity/core/support/FURenderBridge;->mInputTextureMatrix:Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;
 
+    .line 15
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;->getInputTextureMatrix()Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;
 
     move-result-object v1
@@ -2344,6 +2488,7 @@
 
     invoke-virtual {v0, v1}, Lcom/faceunity/core/support/FUSDKController;->setInputCameraTextureMatrix(I)V
 
+    .line 16
     :cond_5
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;->getInputBufferMatrix()Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;
 
@@ -2353,12 +2498,14 @@
 
     if-eq v0, v1, :cond_6
 
+    .line 17
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;->getInputBufferMatrix()Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mInputBufferMatrix:Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;
 
+    .line 18
     sget-object v0, Lcom/faceunity/core/support/FUSDKController;->INSTANCE:Lcom/faceunity/core/support/FUSDKController;
 
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;->getInputBufferMatrix()Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;
@@ -2371,6 +2518,7 @@
 
     invoke-virtual {v0, v1}, Lcom/faceunity/core/support/FUSDKController;->setInputCameraBufferMatrix(I)V
 
+    .line 19
     :cond_6
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;->getOutputMatrix()Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;
 
@@ -2380,6 +2528,7 @@
 
     if-eq v0, v1, :cond_7
 
+    .line 20
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;->getOutputMatrix()Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;
 
     move-result-object p1
@@ -2388,6 +2537,7 @@
 
     if-eqz p1, :cond_7
 
+    .line 21
     sget-object p0, Lcom/faceunity/core/support/FUSDKController;->INSTANCE:Lcom/faceunity/core/support/FUSDKController;
 
     invoke-virtual {p1}, Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;->getIndex()I
@@ -2403,27 +2553,33 @@
 .method private final updateRotationMode()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/core/support/FURenderBridge;->calculateRotationMode()I
 
     move-result v0
 
+    .line 2
     iget v1, p0, Lcom/faceunity/core/support/FURenderBridge;->mRotationMode:I
 
     if-ne v1, v0, :cond_0
 
     return-void
 
+    .line 3
     :cond_0
     iput v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mRotationMode:I
 
+    .line 4
     sget-object v0, Lcom/faceunity/core/support/FUSDKController;->INSTANCE:Lcom/faceunity/core/support/FUSDKController;
 
     invoke-virtual {v0}, Lcom/faceunity/core/support/FUSDKController;->humanProcessorReset()V
 
+    .line 5
     iget v1, p0, Lcom/faceunity/core/support/FURenderBridge;->mRotationMode:I
 
     invoke-virtual {v0, v1}, Lcom/faceunity/core/support/FUSDKController;->setDefaultRotationMode(I)V
 
+    .line 6
     invoke-direct {p0}, Lcom/faceunity/core/support/FURenderBridge;->getMFURenderKit()Lcom/faceunity/core/faceunity/FURenderKit;
 
     move-result-object v0
@@ -2434,12 +2590,14 @@
 
     if-eqz v0, :cond_1
 
+    .line 7
     invoke-virtual {p0}, Lcom/faceunity/core/support/FURenderBridge;->getMBgSegGreenController$lib_core_release()Lcom/faceunity/core/controller/bgSegGreen/BgSegGreenController;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/faceunity/core/controller/bgSegGreen/BgSegGreenController;->updateRotationMode$lib_core_release()V
 
+    .line 8
     :cond_1
     invoke-virtual {p0}, Lcom/faceunity/core/support/FURenderBridge;->getMPropContainerController$lib_core_release()Lcom/faceunity/core/controller/prop/PropController;
 
@@ -2453,6 +2611,7 @@
 .method private final verifyRenderInputData(Lcom/faceunity/core/entity/FURenderInputData;)Z
     .locals 1
 
+    .line 1
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FURenderInputData;->getWidth()I
 
     move-result p0
@@ -2472,6 +2631,7 @@
 
     return p0
 
+    .line 2
     :cond_1
     :goto_0
     new-instance p0, Ljava/lang/StringBuilder;
@@ -2518,6 +2678,7 @@
 .method private final verifyWidthAndHeight(Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;)Z
     .locals 0
 
+    .line 1
     sget-object p0, Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;->CCROT90:Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;
 
     if-eq p1, p0, :cond_1
@@ -2554,37 +2715,39 @@
 .method public final bindGLThread(J)V
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lcom/faceunity/core/support/FURenderBridge;->mGLThreadId:J
 
     return-void
 .end method
 
-.method public final doGLThreadAction$lib_core_release(Ljn/a;)V
+.method public final doGLThreadAction$lib_core_release(Lh/d3/w/a;)V
     .locals 4
-    .param p1    # Ljn/a;
-        .annotation build Ljv/d;
+    .param p1    # Lh/d3/w/a;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ljn/a<",
-            "Lnm/l2;",
+            "Lh/d3/w/a<",
+            "Lh/l2;",
             ">;)V"
         }
     .end annotation
 
     const-string v0, "unit"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
 
     const-string v1, "Thread.currentThread()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Ljava/lang/Thread;->getId()J
 
@@ -2596,10 +2759,12 @@
 
     if-nez v0, :cond_0
 
-    invoke-interface {p1}, Ljn/a;->invoke()Ljava/lang/Object;
+    .line 2
+    invoke-interface {p1}, Lh/d3/w/a;->invoke()Ljava/lang/Object;
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mGLEventQueue:Ljava/util/List;
 
@@ -2611,12 +2776,12 @@
 
 .method public final getMActionRecognitionController$lib_core_release()Lcom/faceunity/core/controller/BaseSingleController;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
-    iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mActionRecognitionController$delegate:Lnm/d0;
+    iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mActionRecognitionController$delegate:Lh/d0;
 
-    invoke-interface {p0}, Lnm/d0;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lh/d0;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -2627,12 +2792,12 @@
 
 .method public final getMAnimationFilterController$lib_core_release()Lcom/faceunity/core/controller/BaseSingleController;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
-    iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mAnimationFilterController$delegate:Lnm/d0;
+    iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mAnimationFilterController$delegate:Lh/d0;
 
-    invoke-interface {p0}, Lnm/d0;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lh/d0;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -2643,12 +2808,12 @@
 
 .method public final getMAntialiasingController$lib_core_release()Lcom/faceunity/core/controller/BaseSingleController;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
-    iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mAntialiasingController$delegate:Lnm/d0;
+    iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mAntialiasingController$delegate:Lh/d0;
 
-    invoke-interface {p0}, Lnm/d0;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lh/d0;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -2659,12 +2824,12 @@
 
 .method public final getMAvatarController$lib_core_release()Lcom/faceunity/core/avatar/control/AvatarController;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
-    iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mAvatarController$delegate:Lnm/d0;
+    iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mAvatarController$delegate:Lh/d0;
 
-    invoke-interface {p0}, Lnm/d0;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lh/d0;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -2675,12 +2840,12 @@
 
 .method public final getMBgSegGreenController$lib_core_release()Lcom/faceunity/core/controller/bgSegGreen/BgSegGreenController;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
-    iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mBgSegGreenController$delegate:Lnm/d0;
+    iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mBgSegGreenController$delegate:Lh/d0;
 
-    invoke-interface {p0}, Lnm/d0;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lh/d0;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -2691,12 +2856,12 @@
 
 .method public final getMBodyBeautyController$lib_core_release()Lcom/faceunity/core/controller/BaseSingleController;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
-    iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mBodyBeautyController$delegate:Lnm/d0;
+    iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mBodyBeautyController$delegate:Lh/d0;
 
-    invoke-interface {p0}, Lnm/d0;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lh/d0;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -2707,9 +2872,10 @@
 
 .method public final getMCameraFacing$lib_core_release()Lcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;
     .locals 0
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mCameraFacing:Lcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;
 
     return-object p0
@@ -2717,9 +2883,10 @@
 
 .method public final getMExternalInputType$lib_core_release()Lcom/faceunity/core/enumeration/FUExternalInputEnum;
     .locals 0
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mExternalInputType:Lcom/faceunity/core/enumeration/FUExternalInputEnum;
 
     return-object p0
@@ -2727,12 +2894,12 @@
 
 .method public final getMFaceBeautyController$lib_core_release()Lcom/faceunity/core/controller/BaseSingleController;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
-    iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mFaceBeautyController$delegate:Lnm/d0;
+    iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mFaceBeautyController$delegate:Lh/d0;
 
-    invoke-interface {p0}, Lnm/d0;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lh/d0;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -2743,12 +2910,12 @@
 
 .method public final getMHairBeautyController$lib_core_release()Lcom/faceunity/core/controller/BaseSingleController;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
-    iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mHairBeautyController$delegate:Lnm/d0;
+    iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mHairBeautyController$delegate:Lh/d0;
 
-    invoke-interface {p0}, Lnm/d0;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lh/d0;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -2759,12 +2926,12 @@
 
 .method public final getMLightMakeupController$lib_core_release()Lcom/faceunity/core/controller/BaseSingleController;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
-    iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mLightMakeupController$delegate:Lnm/d0;
+    iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mLightMakeupController$delegate:Lh/d0;
 
-    invoke-interface {p0}, Lnm/d0;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lh/d0;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -2775,12 +2942,12 @@
 
 .method public final getMMakeupController$lib_core_release()Lcom/faceunity/core/controller/makeup/MakeupController;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
-    iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mMakeupController$delegate:Lnm/d0;
+    iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mMakeupController$delegate:Lh/d0;
 
-    invoke-interface {p0}, Lnm/d0;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lh/d0;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -2791,12 +2958,12 @@
 
 .method public final getMMusicFilterController$lib_core_release()Lcom/faceunity/core/controller/BaseSingleController;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
-    iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mMusicFilterController$delegate:Lnm/d0;
+    iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mMusicFilterController$delegate:Lh/d0;
 
-    invoke-interface {p0}, Lnm/d0;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lh/d0;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -2807,12 +2974,12 @@
 
 .method public final getMPosterController$lib_core_release()Lcom/faceunity/core/controller/poster/PosterController;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
-    iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mPosterController$delegate:Lnm/d0;
+    iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mPosterController$delegate:Lh/d0;
 
-    invoke-interface {p0}, Lnm/d0;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lh/d0;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -2823,12 +2990,12 @@
 
 .method public final getMPropContainerController$lib_core_release()Lcom/faceunity/core/controller/prop/PropController;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
-    iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mPropContainerController$delegate:Lnm/d0;
+    iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mPropContainerController$delegate:Lh/d0;
 
-    invoke-interface {p0}, Lnm/d0;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lh/d0;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -2840,6 +3007,7 @@
 .method public final getMRotationMode$lib_core_release()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mRotationMode:I
 
     return p0
@@ -2848,10 +3016,12 @@
 .method public final release(Z)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mRenderLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lcom/faceunity/core/support/FURenderBridge;->getMFaceBeautyController$lib_core_release()Lcom/faceunity/core/controller/BaseSingleController;
 
@@ -2859,72 +3029,85 @@
 
     invoke-virtual {v0}, Lcom/faceunity/core/controller/BaseSingleController;->release$lib_core_release()V
 
+    .line 3
     invoke-virtual {p0}, Lcom/faceunity/core/support/FURenderBridge;->getMMakeupController$lib_core_release()Lcom/faceunity/core/controller/makeup/MakeupController;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/faceunity/core/controller/BaseSingleController;->release$lib_core_release()V
 
+    .line 4
     invoke-virtual {p0}, Lcom/faceunity/core/support/FURenderBridge;->getMActionRecognitionController$lib_core_release()Lcom/faceunity/core/controller/BaseSingleController;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/faceunity/core/controller/BaseSingleController;->release$lib_core_release()V
 
+    .line 5
     invoke-virtual {p0}, Lcom/faceunity/core/support/FURenderBridge;->getMAnimationFilterController$lib_core_release()Lcom/faceunity/core/controller/BaseSingleController;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/faceunity/core/controller/BaseSingleController;->release$lib_core_release()V
 
+    .line 6
     invoke-virtual {p0}, Lcom/faceunity/core/support/FURenderBridge;->getMAntialiasingController$lib_core_release()Lcom/faceunity/core/controller/BaseSingleController;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/faceunity/core/controller/BaseSingleController;->release$lib_core_release()V
 
+    .line 7
     invoke-virtual {p0}, Lcom/faceunity/core/support/FURenderBridge;->getMBgSegGreenController$lib_core_release()Lcom/faceunity/core/controller/bgSegGreen/BgSegGreenController;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/faceunity/core/controller/BaseSingleController;->release$lib_core_release()V
 
+    .line 8
     invoke-virtual {p0}, Lcom/faceunity/core/support/FURenderBridge;->getMBodyBeautyController$lib_core_release()Lcom/faceunity/core/controller/BaseSingleController;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/faceunity/core/controller/BaseSingleController;->release$lib_core_release()V
 
+    .line 9
     invoke-virtual {p0}, Lcom/faceunity/core/support/FURenderBridge;->getMHairBeautyController$lib_core_release()Lcom/faceunity/core/controller/BaseSingleController;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/faceunity/core/controller/BaseSingleController;->release$lib_core_release()V
 
+    .line 10
     invoke-virtual {p0}, Lcom/faceunity/core/support/FURenderBridge;->getMLightMakeupController$lib_core_release()Lcom/faceunity/core/controller/BaseSingleController;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/faceunity/core/controller/BaseSingleController;->release$lib_core_release()V
 
+    .line 11
     invoke-virtual {p0}, Lcom/faceunity/core/support/FURenderBridge;->getMMusicFilterController$lib_core_release()Lcom/faceunity/core/controller/BaseSingleController;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/faceunity/core/controller/BaseSingleController;->release$lib_core_release()V
 
+    .line 12
     invoke-virtual {p0}, Lcom/faceunity/core/support/FURenderBridge;->getMPosterController$lib_core_release()Lcom/faceunity/core/controller/poster/PosterController;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/faceunity/core/controller/BaseSingleController;->release$lib_core_release()V
 
+    .line 13
     invoke-direct {p0}, Lcom/faceunity/core/support/FURenderBridge;->resetFrameCache()V
 
     const-wide/16 v0, -0x1
 
+    .line 14
     iput-wide v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mGLThreadId:J
 
+    .line 15
     sget-object v0, Lcom/faceunity/core/bundle/FUBundleManager;->Companion:Lcom/faceunity/core/bundle/FUBundleManager$Companion;
 
     invoke-virtual {v0}, Lcom/faceunity/core/bundle/FUBundleManager$Companion;->getInstance$lib_core_release()Lcom/faceunity/core/bundle/FUBundleManager;
@@ -2933,29 +3116,36 @@
 
     invoke-virtual {v0}, Lcom/faceunity/core/bundle/FUBundleManager;->release()V
 
+    .line 16
     iget-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mGLEventQueue:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
+    .line 17
     sget-object v0, Lcom/faceunity/core/support/FUSDKController;->INSTANCE:Lcom/faceunity/core/support/FUSDKController;
 
     invoke-virtual {v0}, Lcom/faceunity/core/support/FUSDKController;->onCameraChange()V
 
+    .line 18
     invoke-virtual {v0}, Lcom/faceunity/core/support/FUSDKController;->humanProcessorReset()V
 
+    .line 19
     invoke-virtual {v0}, Lcom/faceunity/core/support/FUSDKController;->done()V
 
     if-eqz p1, :cond_0
 
+    .line 20
     invoke-virtual {v0}, Lcom/faceunity/core/support/FUSDKController;->onDeviceLostSafe()V
 
     goto :goto_0
 
+    .line 21
     :cond_0
     invoke-virtual {v0}, Lcom/faceunity/core/support/FUSDKController;->onDeviceLost()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 22
     :goto_0
     iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mRenderLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -2976,16 +3166,17 @@
 .method public final renderWithInput(Lcom/faceunity/core/entity/FURenderInputData;)Lcom/faceunity/core/entity/FURenderOutputData;
     .locals 4
     .param p1    # Lcom/faceunity/core/entity/FURenderInputData;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "input"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mRenderLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
@@ -2994,6 +3185,7 @@
 
     const/4 v1, 0x0
 
+    .line 2
     :try_start_0
     invoke-static {}, Landroid/opengl/EGL14;->eglGetCurrentContext()Landroid/opengl/EGLContext;
 
@@ -3005,15 +3197,18 @@
 
     const-string v2, "EGL14.eglGetCurrentContext is null"
 
+    .line 3
     invoke-static {p1, v2}, Lcom/faceunity/toolbox/utils/FULogger;->e(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 4
     new-instance p1, Lcom/faceunity/core/entity/FURenderOutputData;
 
-    invoke-direct {p1, v1, v1, v0, v1}, Lcom/faceunity/core/entity/FURenderOutputData;-><init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;ILkotlin/jvm/internal/w;)V
+    invoke-direct {p1, v1, v1, v0, v1}, Lcom/faceunity/core/entity/FURenderOutputData;-><init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;ILh/d3/x/w;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 5
     :goto_0
     iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mRenderLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -3021,6 +3216,7 @@
 
     return-object p1
 
+    .line 6
     :cond_0
     :try_start_1
     invoke-direct {p0, p1}, Lcom/faceunity/core/support/FURenderBridge;->verifyRenderInputData(Lcom/faceunity/core/entity/FURenderInputData;)Z
@@ -3031,10 +3227,11 @@
 
     new-instance p1, Lcom/faceunity/core/entity/FURenderOutputData;
 
-    invoke-direct {p1, v1, v1, v0, v1}, Lcom/faceunity/core/entity/FURenderOutputData;-><init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;ILkotlin/jvm/internal/w;)V
+    invoke-direct {p1, v1, v1, v0, v1}, Lcom/faceunity/core/entity/FURenderOutputData;-><init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;ILh/d3/x/w;)V
 
     goto :goto_0
 
+    .line 7
     :cond_1
     invoke-direct {p0, p1}, Lcom/faceunity/core/support/FURenderBridge;->updateRenderEnvironment(Lcom/faceunity/core/entity/FURenderInputData;)V
 
@@ -3042,6 +3239,7 @@
 
     const/4 v3, 0x2
 
+    .line 8
     invoke-static {p0, p1, v2, v3, v1}, Lcom/faceunity/core/support/FURenderBridge;->applyRenderWithInput$default(Lcom/faceunity/core/support/FURenderBridge;Lcom/faceunity/core/entity/FURenderInputData;ZILjava/lang/Object;)Lcom/faceunity/core/entity/FURenderOutputData;
 
     move-result-object p1
@@ -3059,17 +3257,20 @@
     :catch_0
     move-exception p1
 
+    .line 9
     :try_start_2
-    invoke-virtual {p1}, Ljava/lang/Throwable;->printStackTrace()V
+    invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
+    .line 10
     new-instance p1, Lcom/faceunity/core/entity/FURenderOutputData;
 
-    invoke-direct {p1, v1, v1, v0, v1}, Lcom/faceunity/core/entity/FURenderOutputData;-><init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;ILkotlin/jvm/internal/w;)V
+    invoke-direct {p1, v1, v1, v0, v1}, Lcom/faceunity/core/entity/FURenderOutputData;-><init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;ILh/d3/x/w;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     goto :goto_0
 
+    .line 11
     :goto_1
     iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mRenderLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -3081,20 +3282,22 @@
 .method public final renderWithPoster(Lcom/faceunity/core/entity/FURenderInputData;)Lcom/faceunity/core/entity/FURenderOutputData;
     .locals 3
     .param p1    # Lcom/faceunity/core/entity/FURenderInputData;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "input"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/support/FURenderBridge;->mRenderLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
+    .line 2
     :try_start_0
     invoke-static {}, Landroid/opengl/EGL14;->eglGetCurrentContext()Landroid/opengl/EGLContext;
 
@@ -3110,14 +3313,17 @@
 
     const-string v0, "EGL14.eglGetCurrentContext is null"
 
+    .line 3
     invoke-static {p1, v0}, Lcom/faceunity/toolbox/utils/FULogger;->e(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 4
     new-instance p1, Lcom/faceunity/core/entity/FURenderOutputData;
 
-    invoke-direct {p1, v2, v2, v1, v2}, Lcom/faceunity/core/entity/FURenderOutputData;-><init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;ILkotlin/jvm/internal/w;)V
+    invoke-direct {p1, v2, v2, v1, v2}, Lcom/faceunity/core/entity/FURenderOutputData;-><init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;ILh/d3/x/w;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 5
     :goto_0
     iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mRenderLock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -3125,6 +3331,7 @@
 
     return-object p1
 
+    .line 6
     :cond_0
     :try_start_1
     invoke-direct {p0, p1}, Lcom/faceunity/core/support/FURenderBridge;->verifyRenderInputData(Lcom/faceunity/core/entity/FURenderInputData;)Z
@@ -3135,15 +3342,17 @@
 
     new-instance p1, Lcom/faceunity/core/entity/FURenderOutputData;
 
-    invoke-direct {p1, v2, v2, v1, v2}, Lcom/faceunity/core/entity/FURenderOutputData;-><init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;ILkotlin/jvm/internal/w;)V
+    invoke-direct {p1, v2, v2, v1, v2}, Lcom/faceunity/core/entity/FURenderOutputData;-><init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;ILh/d3/x/w;)V
 
     goto :goto_0
 
+    .line 7
     :cond_1
     invoke-direct {p0, p1}, Lcom/faceunity/core/support/FURenderBridge;->updateRenderEnvironment(Lcom/faceunity/core/entity/FURenderInputData;)V
 
     const/4 v0, 0x1
 
+    .line 8
     invoke-direct {p0, p1, v0}, Lcom/faceunity/core/support/FURenderBridge;->applyRenderWithInput(Lcom/faceunity/core/entity/FURenderInputData;Z)Lcom/faceunity/core/entity/FURenderOutputData;
 
     move-result-object p1
@@ -3155,6 +3364,7 @@
     :catchall_0
     move-exception p1
 
+    .line 9
     iget-object p0, p0, Lcom/faceunity/core/support/FURenderBridge;->mRenderLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
@@ -3165,10 +3375,11 @@
 .method public final setMCameraFacing$lib_core_release(Lcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;)V
     .locals 0
     .param p1    # Lcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/core/support/FURenderBridge;->mCameraFacing:Lcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;
 
     return-void
@@ -3177,10 +3388,11 @@
 .method public final setMExternalInputType$lib_core_release(Lcom/faceunity/core/enumeration/FUExternalInputEnum;)V
     .locals 0
     .param p1    # Lcom/faceunity/core/enumeration/FUExternalInputEnum;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/core/support/FURenderBridge;->mExternalInputType:Lcom/faceunity/core/enumeration/FUExternalInputEnum;
 
     return-void
@@ -3189,6 +3401,7 @@
 .method public final setMRotationMode$lib_core_release(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/faceunity/core/support/FURenderBridge;->mRotationMode:I
 
     return-void

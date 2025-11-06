@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/hash/AbstractHashFunction;
+.class public abstract Lcom/google/common/hash/AbstractHashFunction;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,7 +30,7 @@
     .locals 1
 
     .line 4
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v0
 
@@ -94,6 +95,7 @@
 
     const/4 v0, 0x4
 
+    .line 1
     invoke-virtual {p0, v0}, Lcom/google/common/hash/AbstractHashFunction;->newHasher(I)Lcom/google/common/hash/Hasher;
 
     move-result-object p0
@@ -114,6 +116,7 @@
 
     const/16 v0, 0x8
 
+    .line 1
     invoke-virtual {p0, v0}, Lcom/google/common/hash/AbstractHashFunction;->newHasher(I)Lcom/google/common/hash/Hasher;
 
     move-result-object p0
@@ -146,6 +149,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Lcom/google/common/hash/HashFunction;->newHasher()Lcom/google/common/hash/Hasher;
 
     move-result-object p0
@@ -164,6 +168,7 @@
 .method public hashString(Ljava/lang/CharSequence;Ljava/nio/charset/Charset;)Lcom/google/common/hash/HashCode;
     .locals 0
 
+    .line 1
     invoke-interface {p0}, Lcom/google/common/hash/HashFunction;->newHasher()Lcom/google/common/hash/Hasher;
 
     move-result-object p0
@@ -182,12 +187,14 @@
 .method public hashUnencodedChars(Ljava/lang/CharSequence;)Lcom/google/common/hash/HashCode;
     .locals 1
 
+    .line 1
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
 
     mul-int/lit8 v0, v0, 0x2
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/google/common/hash/AbstractHashFunction;->newHasher(I)Lcom/google/common/hash/Hasher;
 
     move-result-object p0
@@ -218,8 +225,10 @@
     :goto_0
     const-string v1, "expectedInputSize must be >= 0 but was %s"
 
+    .line 1
     invoke-static {v0, v1, p1}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;I)V
 
+    .line 2
     invoke-interface {p0}, Lcom/google/common/hash/HashFunction;->newHasher()Lcom/google/common/hash/Hasher;
 
     move-result-object p0

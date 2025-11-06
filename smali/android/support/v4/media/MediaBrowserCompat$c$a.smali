@@ -34,6 +34,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroid/support/v4/media/MediaBrowserCompat$c$a;->a:Landroid/support/v4/media/MediaBrowserCompat$c;
 
     invoke-direct {p0}, Landroid/media/browse/MediaBrowser$ConnectionCallback;-><init>()V
@@ -46,14 +47,17 @@
 .method public onConnected()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$c$a;->a:Landroid/support/v4/media/MediaBrowserCompat$c;
 
     iget-object v0, v0, Landroid/support/v4/media/MediaBrowserCompat$c;->mConnectionCallbackInternal:Landroid/support/v4/media/MediaBrowserCompat$c$b;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {v0}, Landroid/support/v4/media/MediaBrowserCompat$c$b;->k()V
 
+    .line 3
     :cond_0
     iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$c$a;->a:Landroid/support/v4/media/MediaBrowserCompat$c;
 
@@ -65,14 +69,17 @@
 .method public onConnectionFailed()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$c$a;->a:Landroid/support/v4/media/MediaBrowserCompat$c;
 
     iget-object v0, v0, Landroid/support/v4/media/MediaBrowserCompat$c;->mConnectionCallbackInternal:Landroid/support/v4/media/MediaBrowserCompat$c$b;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {v0}, Landroid/support/v4/media/MediaBrowserCompat$c$b;->l()V
 
+    .line 3
     :cond_0
     iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$c$a;->a:Landroid/support/v4/media/MediaBrowserCompat$c;
 
@@ -84,14 +91,17 @@
 .method public onConnectionSuspended()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$c$a;->a:Landroid/support/v4/media/MediaBrowserCompat$c;
 
     iget-object v0, v0, Landroid/support/v4/media/MediaBrowserCompat$c;->mConnectionCallbackInternal:Landroid/support/v4/media/MediaBrowserCompat$c$b;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {v0}, Landroid/support/v4/media/MediaBrowserCompat$c$b;->h()V
 
+    .line 3
     :cond_0
     iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$c$a;->a:Landroid/support/v4/media/MediaBrowserCompat$c;
 

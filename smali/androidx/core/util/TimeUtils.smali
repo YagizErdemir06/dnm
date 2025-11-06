@@ -35,6 +35,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -45,6 +46,7 @@
 
     new-array v0, v0, [C
 
+    .line 2
     sput-object v0, Landroidx/core/util/TimeUtils;->sFormatStr:[C
 
     return-void
@@ -53,6 +55,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -61,15 +64,15 @@
 .method private static accumField(IIZI)I
     .locals 2
 
-    const/16 v0, 0x63
+    const/4 v0, 0x3
 
-    const/4 v1, 0x3
+    const/16 v1, 0x63
 
-    if-gt p0, v0, :cond_5
+    if-gt p0, v1, :cond_5
 
     if-eqz p2, :cond_0
 
-    if-lt p3, v1, :cond_0
+    if-lt p3, v0, :cond_0
 
     goto :goto_2
 
@@ -112,7 +115,7 @@
 
     :cond_5
     :goto_2
-    add-int/2addr p1, v1
+    add-int/2addr p1, v0
 
     return p1
 .end method
@@ -258,16 +261,19 @@
 
     move/from16 v2, p2
 
+    .line 1
     sget-object v3, Landroidx/core/util/TimeUtils;->sFormatStr:[C
 
     array-length v3, v3
 
     if-ge v3, v2, :cond_0
 
+    .line 2
     new-array v3, v2, [C
 
     sput-object v3, Landroidx/core/util/TimeUtils;->sFormatStr:[C
 
+    .line 3
     :cond_0
     sget-object v3, Landroidx/core/util/TimeUtils;->sFormatStr:[C
 
@@ -288,6 +294,7 @@
     :goto_0
     if-lez v0, :cond_1
 
+    .line 4
     aput-char v5, v3, v11
 
     goto :goto_0
@@ -295,6 +302,7 @@
     :cond_1
     const/16 v0, 0x30
 
+    .line 5
     aput-char v0, v3, v11
 
     return v10
@@ -307,17 +315,19 @@
     goto :goto_1
 
     :cond_3
-    neg-long v0, v0
-
     const/16 v4, 0x2d
+
+    neg-long v0, v0
 
     :goto_1
     const-wide/16 v6, 0x3e8
 
+    .line 6
     rem-long v8, v0, v6
 
     long-to-int v12, v8
 
+    .line 7
     div-long/2addr v0, v6
 
     long-to-double v0, v0
@@ -332,6 +342,7 @@
 
     if-le v0, v1, :cond_4
 
+    .line 8
     div-int v6, v0, v1
 
     mul-int/2addr v1, v6
@@ -348,6 +359,7 @@
 
     if-le v0, v1, :cond_5
 
+    .line 9
     div-int/lit16 v1, v0, 0xe10
 
     mul-int/lit16 v7, v1, 0xe10
@@ -364,6 +376,7 @@
 
     if-le v0, v7, :cond_6
 
+    .line 10
     div-int/lit8 v7, v0, 0x3c
 
     mul-int/lit8 v8, v7, 0x3c
@@ -388,6 +401,7 @@
 
     if-eqz v2, :cond_b
 
+    .line 11
     invoke-static {v6, v10, v11, v11}, Landroidx/core/util/TimeUtils;->accumField(IIZI)I
 
     move-result v7
@@ -401,6 +415,7 @@
     :cond_7
     move v8, v11
 
+    .line 12
     :goto_5
     invoke-static {v1, v10, v8, v15}, Landroidx/core/util/TimeUtils;->accumField(IIZI)I
 
@@ -417,6 +432,7 @@
     :cond_8
     move v8, v11
 
+    .line 13
     :goto_6
     invoke-static {v0, v10, v8, v15}, Landroidx/core/util/TimeUtils;->accumField(IIZI)I
 
@@ -433,6 +449,7 @@
     :cond_9
     move v8, v11
 
+    .line 14
     :goto_7
     invoke-static {v13, v10, v8, v15}, Landroidx/core/util/TimeUtils;->accumField(IIZI)I
 
@@ -449,6 +466,7 @@
     :cond_a
     move v8, v11
 
+    .line 15
     :goto_8
     invoke-static {v12, v15, v10, v8}, Landroidx/core/util/TimeUtils;->accumField(IIZI)I
 
@@ -463,6 +481,7 @@
     :goto_9
     if-ge v7, v2, :cond_c
 
+    .line 16
     aput-char v5, v3, v8
 
     add-int/lit8 v8, v8, 0x1
@@ -474,6 +493,7 @@
     :cond_b
     move v8, v11
 
+    .line 17
     :cond_c
     aput-char v4, v3, v8
 
@@ -507,6 +527,7 @@
 
     move/from16 v9, v16
 
+    .line 18
     invoke-static/range {v4 .. v9}, Landroidx/core/util/TimeUtils;->printField([CICIZI)I
 
     move-result v7
@@ -537,6 +558,7 @@
 
     move v5, v1
 
+    .line 19
     invoke-static/range {v4 .. v9}, Landroidx/core/util/TimeUtils;->printField([CICIZI)I
 
     move-result v7
@@ -567,6 +589,7 @@
 
     move v5, v0
 
+    .line 20
     invoke-static/range {v4 .. v9}, Landroidx/core/util/TimeUtils;->printField([CICIZI)I
 
     move-result v7
@@ -597,6 +620,7 @@
 
     move v5, v13
 
+    .line 21
     invoke-static/range {v4 .. v9}, Landroidx/core/util/TimeUtils;->printField([CICIZI)I
 
     move-result v7
@@ -621,12 +645,14 @@
 
     move v5, v12
 
+    .line 22
     invoke-static/range {v4 .. v9}, Landroidx/core/util/TimeUtils;->printField([CICIZI)I
 
     move-result v0
 
     const/16 v1, 0x73
 
+    .line 23
     aput-char v1, v3, v0
 
     add-int/2addr v0, v10
@@ -653,6 +679,7 @@
 
     if-le p1, v0, :cond_3
 
+    .line 1
     :cond_2
     div-int/lit8 v0, p1, 0x64
 
@@ -660,6 +687,7 @@
 
     int-to-char v1, v1
 
+    .line 2
     aput-char v1, p0, p3
 
     add-int/lit8 v1, p3, 0x1
@@ -687,6 +715,7 @@
 
     if-eq p3, v1, :cond_6
 
+    .line 3
     :cond_5
     div-int/lit8 p3, p1, 0xa
 
@@ -694,6 +723,7 @@
 
     int-to-char p4, p4
 
+    .line 4
     aput-char p4, p0, v1
 
     add-int/lit8 v1, v1, 0x1
@@ -707,10 +737,12 @@
 
     int-to-char p1, p1
 
+    .line 5
     aput-char p1, p0, v1
 
     add-int/lit8 v1, v1, 0x1
 
+    .line 6
     aput-char p2, p0, v1
 
     add-int/lit8 p3, v1, 0x1

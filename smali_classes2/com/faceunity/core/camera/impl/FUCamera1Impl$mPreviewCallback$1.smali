@@ -1,4 +1,4 @@
-.class final Lcom/faceunity/core/camera/impl/FUCamera1Impl$mPreviewCallback$1;
+.class public final Lcom/faceunity/core/camera/impl/FUCamera1Impl$mPreviewCallback$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -16,7 +16,12 @@
     name = null
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
         "\u0000\u0016\n\u0002\u0010\u0012\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0008\u001a\u00020\u00052\u000e\u0010\u0002\u001a\n \u0001*\u0004\u0018\u00010\u00000\u00002\u000e\u0010\u0004\u001a\n \u0001*\u0004\u0018\u00010\u00030\u0003H\n\u00a2\u0006\u0004\u0008\u0006\u0010\u0007"
     }
@@ -26,7 +31,7 @@
         "data",
         "Landroid/hardware/Camera;",
         "<anonymous parameter 1>",
-        "Lnm/l2;",
+        "Lh/l2;",
         "onPreviewFrame",
         "([BLandroid/hardware/Camera;)V",
         "<anonymous>"
@@ -41,7 +46,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/faceunity/core/camera/impl/FUCamera1Impl;
+.field public final synthetic this$0:Lcom/faceunity/core/camera/impl/FUCamera1Impl;
 
 
 # direct methods
@@ -60,6 +65,7 @@
 .method public final onPreviewFrame([BLandroid/hardware/Camera;)V
     .locals 7
 
+    .line 1
     iget-object p2, p0, Lcom/faceunity/core/camera/impl/FUCamera1Impl$mPreviewCallback$1;->this$0:Lcom/faceunity/core/camera/impl/FUCamera1Impl;
 
     invoke-static {p2}, Lcom/faceunity/core/camera/impl/FUCamera1Impl;->access$getMCamera$p(Lcom/faceunity/core/camera/impl/FUCamera1Impl;)Landroid/hardware/Camera;
@@ -70,6 +76,7 @@
 
     invoke-virtual {p2, p1}, Landroid/hardware/Camera;->addCallbackBuffer([B)V
 
+    .line 2
     :cond_0
     iget-object p2, p0, Lcom/faceunity/core/camera/impl/FUCamera1Impl$mPreviewCallback$1;->this$0:Lcom/faceunity/core/camera/impl/FUCamera1Impl;
 
@@ -87,6 +94,7 @@
 
     if-nez p2, :cond_1
 
+    .line 3
     iget-object p2, p0, Lcom/faceunity/core/camera/impl/FUCamera1Impl$mPreviewCallback$1;->this$0:Lcom/faceunity/core/camera/impl/FUCamera1Impl;
 
     invoke-static {p2}, Lcom/faceunity/core/camera/impl/FUCamera1Impl;->access$getMCameraListener$p(Lcom/faceunity/core/camera/impl/FUCamera1Impl;)Lcom/faceunity/core/camera/listener/OnFUCameraListener;
@@ -99,7 +107,7 @@
 
     const-string v0, "data"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/faceunity/core/camera/impl/FUCamera1Impl$mPreviewCallback$1;->this$0:Lcom/faceunity/core/camera/impl/FUCamera1Impl;
 

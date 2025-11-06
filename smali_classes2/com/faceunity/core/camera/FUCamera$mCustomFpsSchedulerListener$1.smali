@@ -16,15 +16,21 @@
     name = null
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000\u0011\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002*\u0001\u0000\u0008\n\u0018\u00002\u00020\u0001J\u0008\u0010\u0003\u001a\u00020\u0002H\u0016\u00a8\u0006\u0004"
+        "\u0000\u0011\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003*\u0001\u0000\u0008\n\u0018\u00002\u00020\u0001J\u000f\u0010\u0003\u001a\u00020\u0002H\u0016\u00a2\u0006\u0004\u0008\u0003\u0010\u0004\u00a8\u0006\u0005"
     }
     d2 = {
         "com/faceunity/core/camera/FUCamera$mCustomFpsSchedulerListener$1",
         "Lcom/faceunity/core/camera/scheduler/CustomFpsScheduler$CustomFpsSchedulerListener;",
-        "Lnm/l2;",
+        "Lh/l2;",
         "onRotationTime",
+        "()V",
         "lib_core_release"
     }
     k = 0x1
@@ -37,18 +43,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/faceunity/core/camera/FUCamera;
+.field public final synthetic this$0:Lcom/faceunity/core/camera/FUCamera;
 
 
 # direct methods
 .method public constructor <init>(Lcom/faceunity/core/camera/FUCamera;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/core/camera/FUCamera$mCustomFpsSchedulerListener$1;->this$0:Lcom/faceunity/core/camera/FUCamera;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -61,12 +63,14 @@
 .method public onRotationTime()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/camera/FUCamera$mCustomFpsSchedulerListener$1;->this$0:Lcom/faceunity/core/camera/FUCamera;
 
     invoke-virtual {v0}, Lcom/faceunity/core/camera/FUCamera;->getCameraByte()Lcom/faceunity/core/camera/entity/FUCameraPreviewData;
 
     move-result-object v0
 
+    .line 2
     iget-object v1, p0, Lcom/faceunity/core/camera/FUCamera$mCustomFpsSchedulerListener$1;->this$0:Lcom/faceunity/core/camera/FUCamera;
 
     invoke-static {v1}, Lcom/faceunity/core/camera/FUCamera;->access$isCameraPreviewing$p(Lcom/faceunity/core/camera/FUCamera;)Z
@@ -77,6 +81,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object p0, p0, Lcom/faceunity/core/camera/FUCamera$mCustomFpsSchedulerListener$1;->this$0:Lcom/faceunity/core/camera/FUCamera;
 
     invoke-static {p0}, Lcom/faceunity/core/camera/FUCamera;->access$getMOnFUCameraListener$p(Lcom/faceunity/core/camera/FUCamera;)Lcom/faceunity/core/camera/listener/OnFUCameraListener;

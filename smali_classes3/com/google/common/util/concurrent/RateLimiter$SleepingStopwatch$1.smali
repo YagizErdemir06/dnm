@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/RateLimiter$SleepingStopwatch$1;
+.class public Lcom/google/common/util/concurrent/RateLimiter$SleepingStopwatch$1;
 .super Lcom/google/common/util/concurrent/RateLimiter$SleepingStopwatch;
 .source "SourceFile"
 
@@ -15,15 +15,17 @@
 
 
 # instance fields
-.field final stopwatch:Lcom/google/common/base/Stopwatch;
+.field public final stopwatch:Lcom/google/common/base/Stopwatch;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/util/concurrent/RateLimiter$SleepingStopwatch;-><init>()V
 
+    .line 2
     invoke-static {}, Lcom/google/common/base/Stopwatch;->createStarted()Lcom/google/common/base/Stopwatch;
 
     move-result-object v0
@@ -38,6 +40,7 @@
 .method public readMicros()J
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/RateLimiter$SleepingStopwatch$1;->stopwatch:Lcom/google/common/base/Stopwatch;
 
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MICROSECONDS:Ljava/util/concurrent/TimeUnit;
@@ -58,6 +61,7 @@
 
     if-lez p0, :cond_0
 
+    .line 1
     sget-object p0, Ljava/util/concurrent/TimeUnit;->MICROSECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-static {p1, p2, p0}, Lcom/google/common/util/concurrent/Uninterruptibles;->sleepUninterruptibly(JLjava/util/concurrent/TimeUnit;)V

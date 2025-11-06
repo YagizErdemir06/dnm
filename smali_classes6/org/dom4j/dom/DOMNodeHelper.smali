@@ -19,6 +19,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lorg/dom4j/dom/DOMNodeHelper$EmptyNodeList;
 
     invoke-direct {v0}, Lorg/dom4j/dom/DOMNodeHelper$EmptyNodeList;-><init>()V
@@ -31,33 +32,39 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 .method public static appendChild(Lorg/dom4j/Node;Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
-    .locals 2
+    .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/w3c/dom/DOMException;
         }
     .end annotation
 
+    .line 1
     instance-of v0, p0, Lorg/dom4j/Branch;
 
     if-eqz v0, :cond_1
 
+    .line 2
     check-cast p0, Lorg/dom4j/Branch;
 
+    .line 3
     invoke-interface {p1}, Lorg/w3c/dom/Node;->getParentNode()Lorg/w3c/dom/Node;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-interface {v0, p1}, Lorg/w3c/dom/Node;->removeChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
+    .line 5
     :cond_0
     move-object v0, p1
 
@@ -67,24 +74,25 @@
 
     return-object p1
 
+    .line 6
     :cond_1
     new-instance p1, Lorg/w3c/dom/DOMException;
 
-    new-instance v0, Ljava/lang/StringBuffer;
+    const/4 v0, 0x3
 
-    invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
+    new-instance v1, Ljava/lang/StringBuffer;
 
-    const-string v1, "Children not allowed for this node: "
+    invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    const-string v2, "Children not allowed for this node: "
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object p0
-
-    const/4 v0, 0x3
 
     invoke-direct {p1, v0, p0}, Lorg/w3c/dom/DOMException;-><init>(SLjava/lang/String;)V
 
@@ -92,29 +100,33 @@
 .end method
 
 .method public static appendData(Lorg/dom4j/CharacterData;Ljava/lang/String;)V
-    .locals 2
+    .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/w3c/dom/DOMException;
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Lorg/dom4j/Node;->isReadOnly()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
+    .line 2
     invoke-interface {p0}, Lorg/dom4j/Node;->getText()Ljava/lang/String;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
+    .line 3
     invoke-interface {p0, v0}, Lorg/dom4j/Node;->setText(Ljava/lang/String;)V
 
     goto :goto_0
 
+    .line 4
     :cond_0
     new-instance v1, Ljava/lang/StringBuffer;
 
@@ -133,24 +145,25 @@
     :goto_0
     return-void
 
+    .line 5
     :cond_1
     new-instance p1, Lorg/w3c/dom/DOMException;
 
-    new-instance v0, Ljava/lang/StringBuffer;
+    const/4 v0, 0x7
 
-    invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
+    new-instance v1, Ljava/lang/StringBuffer;
 
-    const-string v1, "CharacterData node is read only: "
+    invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    const-string v2, "CharacterData node is read only: "
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object p0
-
-    const/4 v0, 0x7
 
     invoke-direct {p1, v0, p0}, Lorg/w3c/dom/DOMException;-><init>(SLjava/lang/String;)V
 
@@ -162,10 +175,12 @@
 
     const-string v0, "*"
 
+    .line 1
     invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
+    .line 2
     invoke-interface {p1}, Lorg/dom4j/Branch;->nodeCount()I
 
     move-result v1
@@ -175,18 +190,22 @@
     :goto_0
     if-ge v2, v1, :cond_3
 
+    .line 3
     invoke-interface {p1, v2}, Lorg/dom4j/Branch;->node(I)Lorg/dom4j/Node;
 
     move-result-object v3
 
+    .line 4
     instance-of v4, v3, Lorg/dom4j/Element;
 
     if-eqz v4, :cond_2
 
+    .line 5
     check-cast v3, Lorg/dom4j/Element;
 
     if-nez v0, :cond_0
 
+    .line 6
     invoke-interface {v3}, Lorg/dom4j/Node;->getName()Ljava/lang/String;
 
     move-result-object v4
@@ -197,9 +216,11 @@
 
     if-eqz v4, :cond_1
 
+    .line 7
     :cond_0
     invoke-interface {p0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 8
     :cond_1
     invoke-static {p0, v3, p2}, Lorg/dom4j/dom/DOMNodeHelper;->appendElementsByTagName(Ljava/util/List;Lorg/dom4j/Branch;Ljava/lang/String;)V
 
@@ -217,14 +238,17 @@
 
     const-string v0, "*"
 
+    .line 1
     invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
+    .line 2
     invoke-virtual {v0, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
+    .line 3
     invoke-interface {p1}, Lorg/dom4j/Branch;->nodeCount()I
 
     move-result v2
@@ -234,20 +258,24 @@
     :goto_0
     if-ge v3, v2, :cond_6
 
+    .line 4
     invoke-interface {p1, v3}, Lorg/dom4j/Branch;->node(I)Lorg/dom4j/Node;
 
     move-result-object v4
 
+    .line 5
     instance-of v5, v4, Lorg/dom4j/Element;
 
     if-eqz v5, :cond_5
 
+    .line 6
     check-cast v4, Lorg/dom4j/Element;
 
     if-nez v1, :cond_2
 
     if-eqz p2, :cond_0
 
+    .line 7
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v5
@@ -297,9 +325,11 @@
 
     if-eqz v5, :cond_4
 
+    .line 8
     :cond_3
     invoke-interface {p0, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 9
     :cond_4
     invoke-static {p0, v4, p2, p3}, Lorg/dom4j/dom/DOMNodeHelper;->appendElementsByTagNameNS(Ljava/util/List;Lorg/dom4j/Branch;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -321,15 +351,18 @@
 
     return-object v0
 
+    .line 1
     :cond_0
     instance-of v1, p0, Lorg/w3c/dom/Attr;
 
     if-eqz v1, :cond_1
 
+    .line 2
     check-cast p0, Lorg/w3c/dom/Attr;
 
     return-object p0
 
+    .line 3
     :cond_1
     invoke-static {}, Lorg/dom4j/dom/DOMNodeHelper;->notSupported()V
 
@@ -345,15 +378,18 @@
 
     return-object v0
 
+    .line 1
     :cond_0
     instance-of v1, p0, Lorg/w3c/dom/Document;
 
     if-eqz v1, :cond_1
 
+    .line 2
     check-cast p0, Lorg/w3c/dom/Document;
 
     return-object p0
 
+    .line 3
     :cond_1
     invoke-static {}, Lorg/dom4j/dom/DOMNodeHelper;->notSupported()V
 
@@ -369,15 +405,18 @@
 
     return-object v0
 
+    .line 1
     :cond_0
     instance-of v1, p0, Lorg/w3c/dom/DocumentType;
 
     if-eqz v1, :cond_1
 
+    .line 2
     check-cast p0, Lorg/w3c/dom/DocumentType;
 
     return-object p0
 
+    .line 3
     :cond_1
     invoke-static {}, Lorg/dom4j/dom/DOMNodeHelper;->notSupported()V
 
@@ -393,15 +432,18 @@
 
     return-object v0
 
+    .line 1
     :cond_0
     instance-of v1, p0, Lorg/w3c/dom/Element;
 
     if-eqz v1, :cond_1
 
+    .line 2
     check-cast p0, Lorg/w3c/dom/Element;
 
     return-object p0
 
+    .line 3
     :cond_1
     invoke-static {}, Lorg/dom4j/dom/DOMNodeHelper;->notSupported()V
 
@@ -417,15 +459,18 @@
 
     return-object v0
 
+    .line 1
     :cond_0
     instance-of v1, p0, Lorg/w3c/dom/Node;
 
     if-eqz v1, :cond_1
 
+    .line 2
     check-cast p0, Lorg/w3c/dom/Node;
 
     return-object p0
 
+    .line 3
     :cond_1
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
@@ -449,6 +494,7 @@
 
     invoke-virtual {v1, p0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 4
     invoke-static {}, Lorg/dom4j/dom/DOMNodeHelper;->notSupported()V
 
     return-object v0
@@ -463,15 +509,18 @@
 
     return-object v0
 
+    .line 1
     :cond_0
     instance-of v1, p0, Lorg/w3c/dom/Text;
 
     if-eqz v1, :cond_1
 
+    .line 2
     check-cast p0, Lorg/w3c/dom/Text;
 
     return-object p0
 
+    .line 3
     :cond_1
     invoke-static {}, Lorg/dom4j/dom/DOMNodeHelper;->notSupported()V
 
@@ -481,6 +530,7 @@
 .method public static cloneNode(Lorg/dom4j/Node;Z)Lorg/w3c/dom/Node;
     .locals 0
 
+    .line 1
     invoke-interface {p0}, Lorg/dom4j/Node;->clone()Ljava/lang/Object;
 
     move-result-object p0
@@ -497,6 +547,7 @@
 .method public static createNodeList(Ljava/util/List;)Lorg/w3c/dom/NodeList;
     .locals 1
 
+    .line 1
     new-instance v0, Lorg/dom4j/dom/DOMNodeHelper$1;
 
     invoke-direct {v0, p0}, Lorg/dom4j/dom/DOMNodeHelper$1;-><init>(Ljava/util/List;)V
@@ -512,6 +563,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Lorg/dom4j/Node;->isReadOnly()Z
 
     move-result v0
@@ -522,12 +574,14 @@
 
     if-ltz p2, :cond_2
 
+    .line 2
     invoke-interface {p0}, Lorg/dom4j/Node;->getText()Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
+    .line 3
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -536,14 +590,17 @@
 
     if-ge p1, v2, :cond_0
 
+    .line 4
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuffer;-><init>(Ljava/lang/String;)V
 
     add-int/2addr p2, p1
 
+    .line 5
     invoke-virtual {v0, p1, p2}, Ljava/lang/StringBuffer;->delete(II)Ljava/lang/StringBuffer;
 
+    .line 6
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -552,6 +609,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_0
     new-instance p0, Lorg/w3c/dom/DOMException;
 
@@ -577,6 +635,7 @@
     :goto_0
     return-void
 
+    .line 8
     :cond_2
     new-instance p0, Lorg/w3c/dom/DOMException;
 
@@ -598,24 +657,25 @@
 
     throw p0
 
+    .line 9
     :cond_3
     new-instance p1, Lorg/w3c/dom/DOMException;
 
-    new-instance p2, Ljava/lang/StringBuffer;
+    const/4 p2, 0x7
 
-    invoke-direct {p2}, Ljava/lang/StringBuffer;-><init>()V
+    new-instance v0, Ljava/lang/StringBuffer;
 
-    const-string v0, "CharacterData node is read only: "
+    invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    const-string v1, "CharacterData node is read only: "
 
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-virtual {p2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object p0
-
-    const/4 p2, 0x7
 
     invoke-direct {p1, p2, p0}, Lorg/w3c/dom/DOMException;-><init>(SLjava/lang/String;)V
 
@@ -633,6 +693,7 @@
 .method public static getChildNodes(Lorg/dom4j/Node;)Lorg/w3c/dom/NodeList;
     .locals 0
 
+    .line 1
     sget-object p0, Lorg/dom4j/dom/DOMNodeHelper;->EMPTY_NODE_LIST:Lorg/w3c/dom/NodeList;
 
     return-object p0
@@ -646,6 +707,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Lorg/dom4j/Node;->getText()Ljava/lang/String;
 
     move-result-object p0
@@ -672,12 +734,14 @@
 .method public static getLength(Lorg/dom4j/CharacterData;)I
     .locals 0
 
+    .line 1
     invoke-interface {p0}, Lorg/dom4j/Node;->getText()Ljava/lang/String;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result p0
@@ -710,12 +774,14 @@
 .method public static getNextSibling(Lorg/dom4j/Node;)Lorg/w3c/dom/Node;
     .locals 2
 
+    .line 1
     invoke-interface {p0}, Lorg/dom4j/Node;->getParent()Lorg/dom4j/Element;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {v0, p0}, Lorg/dom4j/Branch;->indexOf(Lorg/dom4j/Node;)I
 
     move-result p0
@@ -724,16 +790,19 @@
 
     add-int/lit8 p0, p0, 0x1
 
+    .line 3
     invoke-interface {v0}, Lorg/dom4j/Branch;->nodeCount()I
 
     move-result v1
 
     if-ge p0, v1, :cond_0
 
+    .line 4
     invoke-interface {v0, p0}, Lorg/dom4j/Branch;->node(I)Lorg/dom4j/Node;
 
     move-result-object p0
 
+    .line 5
     invoke-static {p0}, Lorg/dom4j/dom/DOMNodeHelper;->asDOMNode(Lorg/dom4j/Node;)Lorg/w3c/dom/Node;
 
     move-result-object p0
@@ -754,6 +823,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Lorg/dom4j/Node;->getText()Ljava/lang/String;
 
     move-result-object p0
@@ -764,6 +834,7 @@
 .method public static getOwnerDocument(Lorg/dom4j/Node;)Lorg/w3c/dom/Document;
     .locals 0
 
+    .line 1
     invoke-interface {p0}, Lorg/dom4j/Node;->getDocument()Lorg/dom4j/Document;
 
     move-result-object p0
@@ -778,6 +849,7 @@
 .method public static getParentNode(Lorg/dom4j/Node;)Lorg/w3c/dom/Node;
     .locals 0
 
+    .line 1
     invoke-interface {p0}, Lorg/dom4j/Node;->getParent()Lorg/dom4j/Element;
 
     move-result-object p0
@@ -800,12 +872,14 @@
 .method public static getPreviousSibling(Lorg/dom4j/Node;)Lorg/w3c/dom/Node;
     .locals 1
 
+    .line 1
     invoke-interface {p0}, Lorg/dom4j/Node;->getParent()Lorg/dom4j/Element;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {v0, p0}, Lorg/dom4j/Branch;->indexOf(Lorg/dom4j/Node;)I
 
     move-result p0
@@ -814,10 +888,12 @@
 
     add-int/lit8 p0, p0, -0x1
 
+    .line 3
     invoke-interface {v0, p0}, Lorg/dom4j/Branch;->node(I)Lorg/dom4j/Node;
 
     move-result-object p0
 
+    .line 4
     invoke-static {p0}, Lorg/dom4j/dom/DOMNodeHelper;->asDOMNode(Lorg/dom4j/Node;)Lorg/w3c/dom/Node;
 
     move-result-object p0
@@ -837,10 +913,12 @@
 
     if-eqz p0, :cond_0
 
+    .line 1
     instance-of v1, p0, Lorg/dom4j/Element;
 
     if-eqz v1, :cond_0
 
+    .line 2
     check-cast p0, Lorg/dom4j/Element;
 
     invoke-interface {p0}, Lorg/dom4j/Element;->attributeCount()I
@@ -864,29 +942,34 @@
 .end method
 
 .method public static insertBefore(Lorg/dom4j/Node;Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/w3c/dom/DOMException;
         }
     .end annotation
 
+    .line 1
     instance-of v0, p0, Lorg/dom4j/Branch;
 
     if-eqz v0, :cond_1
 
+    .line 2
     check-cast p0, Lorg/dom4j/Branch;
 
+    .line 3
     invoke-interface {p0}, Lorg/dom4j/Branch;->content()Ljava/util/List;
 
     move-result-object v0
 
+    .line 4
     invoke-interface {v0, p2}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
 
     move-result p2
 
     if-gez p2, :cond_0
 
+    .line 5
     move-object p2, p1
 
     check-cast p2, Lorg/dom4j/Node;
@@ -895,30 +978,32 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-interface {v0, p2, p1}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
     :goto_0
     return-object p1
 
+    .line 7
     :cond_1
     new-instance p1, Lorg/w3c/dom/DOMException;
 
-    new-instance p2, Ljava/lang/StringBuffer;
+    const/4 p2, 0x3
 
-    invoke-direct {p2}, Ljava/lang/StringBuffer;-><init>()V
+    new-instance v0, Ljava/lang/StringBuffer;
 
-    const-string v0, "Children not allowed for this node: "
+    invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    const-string v1, "Children not allowed for this node: "
 
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-virtual {p2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object p0
-
-    const/4 p2, 0x3
 
     invoke-direct {p1, p2, p0}, Lorg/w3c/dom/DOMException;-><init>(SLjava/lang/String;)V
 
@@ -933,22 +1018,26 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Lorg/dom4j/Node;->isReadOnly()Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
+    .line 2
     invoke-interface {p0}, Lorg/dom4j/Node;->getText()Ljava/lang/String;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
+    .line 3
     invoke-interface {p0, p2}, Lorg/dom4j/Node;->setText(Ljava/lang/String;)V
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -958,12 +1047,15 @@
 
     if-gt p1, v1, :cond_1
 
+    .line 5
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1, v0}, Ljava/lang/StringBuffer;-><init>(Ljava/lang/String;)V
 
+    .line 6
     invoke-virtual {v1, p1, p2}, Ljava/lang/StringBuffer;->insert(ILjava/lang/String;)Ljava/lang/StringBuffer;
 
+    .line 7
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -973,47 +1065,49 @@
     :goto_0
     return-void
 
+    .line 8
     :cond_1
     new-instance p0, Lorg/w3c/dom/DOMException;
 
-    new-instance p2, Ljava/lang/StringBuffer;
+    const/4 p2, 0x1
 
-    invoke-direct {p2}, Ljava/lang/StringBuffer;-><init>()V
+    new-instance v0, Ljava/lang/StringBuffer;
 
-    const-string v0, "No text at offset: "
+    invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    const-string v1, "No text at offset: "
 
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-virtual {p2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object p1
-
-    const/4 p2, 0x1
 
     invoke-direct {p0, p2, p1}, Lorg/w3c/dom/DOMException;-><init>(SLjava/lang/String;)V
 
     throw p0
 
+    .line 9
     :cond_2
     new-instance p1, Lorg/w3c/dom/DOMException;
 
-    new-instance p2, Ljava/lang/StringBuffer;
+    const/4 p2, 0x7
 
-    invoke-direct {p2}, Ljava/lang/StringBuffer;-><init>()V
+    new-instance v0, Ljava/lang/StringBuffer;
 
-    const-string v0, "CharacterData node is read only: "
+    invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    const-string v1, "CharacterData node is read only: "
 
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-virtual {p2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object p0
-
-    const/4 p2, 0x7
 
     invoke-direct {p1, p2, p0}, Lorg/w3c/dom/DOMException;-><init>(SLjava/lang/String;)V
 
@@ -1031,6 +1125,7 @@
 .method public static normalize(Lorg/dom4j/Node;)V
     .locals 0
 
+    .line 1
     invoke-static {}, Lorg/dom4j/dom/DOMNodeHelper;->notSupported()V
 
     return-void
@@ -1039,6 +1134,7 @@
 .method public static notSupported()V
     .locals 3
 
+    .line 1
     new-instance v0, Lorg/w3c/dom/DOMException;
 
     const/16 v1, 0x9
@@ -1051,19 +1147,22 @@
 .end method
 
 .method public static removeChild(Lorg/dom4j/Node;Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
-    .locals 2
+    .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/w3c/dom/DOMException;
         }
     .end annotation
 
+    .line 1
     instance-of v0, p0, Lorg/dom4j/Branch;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Lorg/dom4j/Branch;
 
+    .line 3
     move-object v0, p1
 
     check-cast v0, Lorg/dom4j/Node;
@@ -1072,8 +1171,95 @@
 
     return-object p1
 
+    .line 4
     :cond_0
     new-instance p1, Lorg/w3c/dom/DOMException;
+
+    const/4 v0, 0x3
+
+    new-instance v1, Ljava/lang/StringBuffer;
+
+    invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
+
+    const-string v2, "Children not allowed for this node: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, v0, p0}, Lorg/w3c/dom/DOMException;-><init>(SLjava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public static replaceChild(Lorg/dom4j/Node;Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lorg/w3c/dom/DOMException;
+        }
+    .end annotation
+
+    .line 1
+    instance-of v0, p0, Lorg/dom4j/Branch;
+
+    if-eqz v0, :cond_1
+
+    .line 2
+    move-object v0, p0
+
+    check-cast v0, Lorg/dom4j/Branch;
+
+    .line 3
+    invoke-interface {v0}, Lorg/dom4j/Branch;->content()Ljava/util/List;
+
+    move-result-object v0
+
+    .line 4
+    invoke-interface {v0, p2}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
+
+    move-result v1
+
+    if-ltz v1, :cond_0
+
+    .line 5
+    invoke-interface {v0, v1, p1}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+
+    .line 6
+    :cond_0
+    new-instance p1, Lorg/w3c/dom/DOMException;
+
+    const/16 p2, 0x8
+
+    new-instance v0, Ljava/lang/StringBuffer;
+
+    invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
+
+    const-string v1, "Tried to replace a non existing child for node: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p2, p0}, Lorg/w3c/dom/DOMException;-><init>(SLjava/lang/String;)V
+
+    throw p1
+
+    .line 7
+    :cond_1
+    new-instance p1, Lorg/w3c/dom/DOMException;
+
+    const/4 p2, 0x3
 
     new-instance v0, Ljava/lang/StringBuffer;
 
@@ -1089,85 +1275,6 @@
 
     move-result-object p0
 
-    const/4 v0, 0x3
-
-    invoke-direct {p1, v0, p0}, Lorg/w3c/dom/DOMException;-><init>(SLjava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public static replaceChild(Lorg/dom4j/Node;Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
-    .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/w3c/dom/DOMException;
-        }
-    .end annotation
-
-    instance-of v0, p0, Lorg/dom4j/Branch;
-
-    if-eqz v0, :cond_1
-
-    move-object v0, p0
-
-    check-cast v0, Lorg/dom4j/Branch;
-
-    invoke-interface {v0}, Lorg/dom4j/Branch;->content()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0, p2}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
-
-    move-result v1
-
-    if-ltz v1, :cond_0
-
-    invoke-interface {v0, v1, p1}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-
-    :cond_0
-    new-instance p1, Lorg/w3c/dom/DOMException;
-
-    new-instance p2, Ljava/lang/StringBuffer;
-
-    invoke-direct {p2}, Ljava/lang/StringBuffer;-><init>()V
-
-    const-string v0, "Tried to replace a non existing child for node: "
-
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    const/16 p2, 0x8
-
-    invoke-direct {p1, p2, p0}, Lorg/w3c/dom/DOMException;-><init>(SLjava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    new-instance p1, Lorg/w3c/dom/DOMException;
-
-    new-instance p2, Ljava/lang/StringBuffer;
-
-    invoke-direct {p2}, Ljava/lang/StringBuffer;-><init>()V
-
-    const-string v0, "Children not allowed for this node: "
-
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    const/4 p2, 0x3
-
     invoke-direct {p1, p2, p0}, Lorg/w3c/dom/DOMException;-><init>(SLjava/lang/String;)V
 
     throw p1
@@ -1181,6 +1288,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Lorg/dom4j/Node;->isReadOnly()Z
 
     move-result v0
@@ -1191,12 +1299,14 @@
 
     if-ltz p2, :cond_2
 
+    .line 2
     invoke-interface {p0}, Lorg/dom4j/Node;->getText()Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
+    .line 3
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -1205,14 +1315,17 @@
 
     if-ge p1, v2, :cond_0
 
+    .line 4
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuffer;-><init>(Ljava/lang/String;)V
 
     add-int/2addr p2, p1
 
+    .line 5
     invoke-virtual {v0, p1, p2, p3}, Ljava/lang/StringBuffer;->replace(IILjava/lang/String;)Ljava/lang/StringBuffer;
 
+    .line 6
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -1221,6 +1334,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_0
     new-instance p0, Lorg/w3c/dom/DOMException;
 
@@ -1246,6 +1360,7 @@
     :goto_0
     return-void
 
+    .line 8
     :cond_2
     new-instance p0, Lorg/w3c/dom/DOMException;
 
@@ -1267,24 +1382,25 @@
 
     throw p0
 
+    .line 9
     :cond_3
     new-instance p1, Lorg/w3c/dom/DOMException;
 
-    new-instance p2, Ljava/lang/StringBuffer;
+    const/4 p2, 0x7
 
-    invoke-direct {p2}, Ljava/lang/StringBuffer;-><init>()V
+    new-instance p3, Ljava/lang/StringBuffer;
 
-    const-string p3, "CharacterData node is read only: "
+    invoke-direct {p3}, Ljava/lang/StringBuffer;-><init>()V
 
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    const-string v0, "CharacterData node is read only: "
 
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+    invoke-virtual {p3, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-virtual {p2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {p3, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+
+    invoke-virtual {p3}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object p0
-
-    const/4 p2, 0x7
 
     invoke-direct {p1, p2, p0}, Lorg/w3c/dom/DOMException;-><init>(SLjava/lang/String;)V
 
@@ -1299,6 +1415,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0, p1}, Lorg/dom4j/Node;->setText(Ljava/lang/String;)V
 
     return-void
@@ -1312,6 +1429,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0, p1}, Lorg/dom4j/Node;->setText(Ljava/lang/String;)V
 
     return-void
@@ -1325,6 +1443,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lorg/dom4j/dom/DOMNodeHelper;->notSupported()V
 
     return-void
@@ -1342,12 +1461,14 @@
 
     if-ltz p2, :cond_3
 
+    .line 1
     invoke-interface {p0}, Lorg/dom4j/Node;->getText()Ljava/lang/String;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -1366,12 +1487,14 @@
 
     if-le p2, v1, :cond_1
 
+    .line 3
     invoke-virtual {p0, p1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
+    .line 4
     :cond_1
     invoke-virtual {p0, p1, p2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
@@ -1379,6 +1502,7 @@
 
     return-object p0
 
+    .line 5
     :cond_2
     new-instance p0, Lorg/w3c/dom/DOMException;
 
@@ -1400,6 +1524,7 @@
 
     throw p0
 
+    .line 6
     :cond_3
     new-instance p0, Lorg/w3c/dom/DOMException;
 

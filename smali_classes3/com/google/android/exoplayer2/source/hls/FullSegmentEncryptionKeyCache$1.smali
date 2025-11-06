@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/source/hls/FullSegmentEncryptionKeyCache$1;
+.class public Lcom/google/android/exoplayer2/source/hls/FullSegmentEncryptionKeyCache$1;
 .super Ljava/util/LinkedHashMap;
 .source "SourceFile"
 
@@ -23,13 +23,14 @@
 
 
 # instance fields
-.field final synthetic val$maxSize:I
+.field public final synthetic val$maxSize:I
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/exoplayer2/source/hls/FullSegmentEncryptionKeyCache;IFZI)V
     .locals 0
 
+    .line 1
     iput p5, p0, Lcom/google/android/exoplayer2/source/hls/FullSegmentEncryptionKeyCache$1;->val$maxSize:I
 
     invoke-direct {p0, p2, p3, p4}, Ljava/util/LinkedHashMap;-><init>(IFZ)V
@@ -50,7 +51,8 @@
         }
     .end annotation
 
-    invoke-virtual {p0}, Ljava/util/AbstractMap;->size()I
+    .line 1
+    invoke-virtual {p0}, Ljava/util/LinkedHashMap;->size()I
 
     move-result p1
 

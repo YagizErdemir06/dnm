@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/TreeRangeSet$ComplementRangesByLowerBound$2;
+.class public Lcom/google/common/collect/TreeRangeSet$ComplementRangesByLowerBound$2;
 .super Lcom/google/common/collect/AbstractIterator;
 .source "SourceFile"
 
@@ -26,7 +26,7 @@
 
 
 # instance fields
-.field nextComplementRangeUpperBound:Lcom/google/common/collect/Cut;
+.field public nextComplementRangeUpperBound:Lcom/google/common/collect/Cut;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/Cut<",
@@ -35,17 +35,18 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Lcom/google/common/collect/TreeRangeSet$ComplementRangesByLowerBound;
+.field public final synthetic this$0:Lcom/google/common/collect/TreeRangeSet$ComplementRangesByLowerBound;
 
-.field final synthetic val$firstComplementRangeUpperBound:Lcom/google/common/collect/Cut;
+.field public final synthetic val$firstComplementRangeUpperBound:Lcom/google/common/collect/Cut;
 
-.field final synthetic val$positiveItr:Lcom/google/common/collect/PeekingIterator;
+.field public final synthetic val$positiveItr:Lcom/google/common/collect/PeekingIterator;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/TreeRangeSet$ComplementRangesByLowerBound;Lcom/google/common/collect/Cut;Lcom/google/common/collect/PeekingIterator;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/TreeRangeSet$ComplementRangesByLowerBound$2;->this$0:Lcom/google/common/collect/TreeRangeSet$ComplementRangesByLowerBound;
 
     iput-object p2, p0, Lcom/google/common/collect/TreeRangeSet$ComplementRangesByLowerBound$2;->val$firstComplementRangeUpperBound:Lcom/google/common/collect/Cut;
@@ -54,6 +55,7 @@
 
     invoke-direct {p0}, Lcom/google/common/collect/AbstractIterator;-><init>()V
 
+    .line 2
     iput-object p2, p0, Lcom/google/common/collect/TreeRangeSet$ComplementRangesByLowerBound$2;->nextComplementRangeUpperBound:Lcom/google/common/collect/Cut;
 
     return-void

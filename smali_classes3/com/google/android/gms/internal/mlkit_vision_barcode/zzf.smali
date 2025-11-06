@@ -171,60 +171,70 @@
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->beginObjectHeader(Landroid/os/Parcel;)I
 
     move-result p2
 
-    const/4 v0, 0x2
+    iget v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzf;->zza:I
 
-    iget v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzf;->zza:I
+    const/4 v1, 0x2
 
-    invoke-static {p1, v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
+    .line 2
+    invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
-    const/4 v0, 0x3
+    iget v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzf;->zzb:I
 
-    iget v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzf;->zzb:I
+    const/4 v1, 0x3
 
-    invoke-static {p1, v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
+    .line 3
+    invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
-    const/4 v0, 0x4
+    iget v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzf;->zzc:I
 
-    iget v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzf;->zzc:I
+    const/4 v1, 0x4
 
-    invoke-static {p1, v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
+    .line 4
+    invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
-    const/4 v0, 0x5
+    iget v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzf;->zzd:I
 
-    iget v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzf;->zzd:I
+    const/4 v1, 0x5
 
-    invoke-static {p1, v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
+    .line 5
+    invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
-    const/4 v0, 0x6
+    iget v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzf;->zze:I
 
-    iget v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzf;->zze:I
+    const/4 v1, 0x6
 
-    invoke-static {p1, v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
+    .line 6
+    invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
-    const/4 v0, 0x7
+    iget v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzf;->zzf:I
 
-    iget v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzf;->zzf:I
+    const/4 v1, 0x7
 
-    invoke-static {p1, v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
+    .line 7
+    invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
-    const/16 v0, 0x8
+    iget-boolean v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzf;->zzg:Z
 
-    iget-boolean v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzf;->zzg:Z
+    const/16 v1, 0x8
 
-    invoke-static {p1, v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeBoolean(Landroid/os/Parcel;IZ)V
+    .line 8
+    invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeBoolean(Landroid/os/Parcel;IZ)V
 
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzf;->zzh:Ljava/lang/String;
 
-    const/4 v0, 0x0
+    const/16 v0, 0x9
 
-    const/16 v1, 0x9
+    const/4 v1, 0x0
 
-    invoke-static {p1, v1, p0, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeString(Landroid/os/Parcel;ILjava/lang/String;Z)V
+    .line 9
+    invoke-static {p1, v0, p0, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeString(Landroid/os/Parcel;ILjava/lang/String;Z)V
 
+    .line 10
     invoke-static {p1, p2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->finishObjectHeader(Landroid/os/Parcel;I)V
 
     return-void

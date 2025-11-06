@@ -22,6 +22,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
@@ -34,6 +35,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,6 +44,7 @@
 .method public static destroy()V
     .locals 4
 
+    .line 1
     sget-object v0, Lcom/xiaomi/milab/videosdk/message/MsgProxy;->msgIdentiSpArray:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
@@ -53,6 +56,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 2
     sget-object v2, Lcom/xiaomi/milab/videosdk/message/MsgProxy;->msgIdentiSpArray:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->keyAt(I)I
@@ -67,6 +71,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 3
     invoke-interface {v2}, Ljava/util/List;->clear()V
 
     :cond_0
@@ -74,11 +79,13 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     sget-object v0, Lcom/xiaomi/milab/videosdk/message/MsgProxy;->msgIdentiSpArray:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
+    .line 5
     sget-object v0, Lcom/xiaomi/milab/videosdk/message/MsgProxy;->TAG:Ljava/lang/String;
 
     const-string v1, "destory"
@@ -105,6 +112,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/xiaomi/milab/videosdk/message/MsgProxy;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -135,10 +143,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     sget-object v0, Lcom/xiaomi/milab/videosdk/message/MsgProxy;->msgIdentiSpArray:Landroid/util/SparseArray;
 
     monitor-enter v0
 
+    .line 3
     :try_start_0
     sget-object v1, Lcom/xiaomi/milab/videosdk/message/MsgProxy;->msgIdentiSpArray:Landroid/util/SparseArray;
 
@@ -150,12 +160,14 @@
 
     if-eqz v1, :cond_0
 
+    .line 4
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
+    .line 5
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -173,10 +185,12 @@
 
     check-cast v2, Lcom/xiaomi/milab/videosdk/message/IHandler;
 
+    .line 6
     invoke-interface {v2, p0, p1, p2, p3}, Lcom/xiaomi/milab/videosdk/message/IHandler;->handle(IIILjava/lang/Object;)V
 
     goto :goto_0
 
+    .line 7
     :cond_0
     monitor-exit v0
 
@@ -205,6 +219,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/xiaomi/milab/videosdk/message/MsgProxy;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -237,10 +252,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     sget-object v0, Lcom/xiaomi/milab/videosdk/message/MsgProxy;->msgIdentiSpArray:Landroid/util/SparseArray;
 
     monitor-enter v0
 
+    .line 3
     :try_start_0
     sget-object v1, Lcom/xiaomi/milab/videosdk/message/MsgProxy;->msgIdentiSpArray:Landroid/util/SparseArray;
 
@@ -252,27 +269,33 @@
 
     if-eqz v1, :cond_0
 
+    .line 4
     invoke-interface {v1, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-nez p0, :cond_1
 
+    .line 5
     invoke-interface {v1, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 6
     :cond_0
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 7
     invoke-interface {v1, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 8
     sget-object p1, Lcom/xiaomi/milab/videosdk/message/MsgProxy;->msgIdentiSpArray:Landroid/util/SparseArray;
 
     invoke-virtual {p1, p0, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
+    .line 9
     :cond_1
     :goto_0
     monitor-exit v0
@@ -302,6 +325,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/xiaomi/milab/videosdk/message/MsgProxy;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -322,12 +346,15 @@
 
     if-eqz p1, :cond_1
 
+    .line 2
     invoke-interface {p1}, Lcom/xiaomi/milab/videosdk/message/IHandler;->onUnregister()V
 
+    .line 3
     sget-object v0, Lcom/xiaomi/milab/videosdk/message/MsgProxy;->msgIdentiSpArray:Landroid/util/SparseArray;
 
     monitor-enter v0
 
+    .line 4
     :try_start_0
     sget-object v1, Lcom/xiaomi/milab/videosdk/message/MsgProxy;->msgIdentiSpArray:Landroid/util/SparseArray;
 
@@ -339,8 +366,10 @@
 
     if-eqz p0, :cond_0
 
+    .line 5
     invoke-interface {p0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
+    .line 6
     :cond_0
     monitor-exit v0
 

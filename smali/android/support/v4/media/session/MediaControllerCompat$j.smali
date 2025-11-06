@@ -30,6 +30,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Landroid/support/v4/media/session/MediaControllerCompat$i;-><init>(Landroid/media/session/MediaController$TransportControls;)V
 
     return-void
@@ -54,16 +55,18 @@
 
     if-eqz v0, :cond_0
 
+    .line 1
     iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$g;->b:Landroid/media/session/MediaController$TransportControls;
 
     invoke-virtual {p0, p1}, Landroid/media/session/MediaController$TransportControls;->setPlaybackSpeed(F)V
 
     return-void
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo p1, "speed must not be zero"
+    const-string p1, "speed must not be zero"
 
     invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 

@@ -1,4 +1,4 @@
-.class Lcom/bumptech/glide/load/model/ModelCache$1;
+.class public Lcom/bumptech/glide/load/model/ModelCache$1;
 .super Lcom/bumptech/glide/util/LruCache;
 .source "SourceFile"
 
@@ -23,13 +23,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/bumptech/glide/load/model/ModelCache;
+.field public final synthetic this$0:Lcom/bumptech/glide/load/model/ModelCache;
 
 
 # direct methods
 .method public constructor <init>(Lcom/bumptech/glide/load/model/ModelCache;J)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/bumptech/glide/load/model/ModelCache$1;->this$0:Lcom/bumptech/glide/load/model/ModelCache;
 
     invoke-direct {p0, p2, p3}, Lcom/bumptech/glide/util/LruCache;-><init>(J)V

@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/ReverseNaturalOrdering;
+.class public final Lcom/google/common/collect/ReverseNaturalOrdering;
 .super Lcom/google/common/collect/Ordering;
 .source "SourceFile"
 
@@ -25,7 +25,7 @@
 
 
 # static fields
-.field static final INSTANCE:Lcom/google/common/collect/ReverseNaturalOrdering;
+.field public static final INSTANCE:Lcom/google/common/collect/ReverseNaturalOrdering;
 
 .field private static final serialVersionUID:J
 
@@ -34,6 +34,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ReverseNaturalOrdering;
 
     invoke-direct {v0}, Lcom/google/common/collect/ReverseNaturalOrdering;-><init>()V
@@ -46,6 +47,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/Ordering;-><init>()V
 
     return-void
@@ -54,6 +56,7 @@
 .method private readResolve()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     sget-object p0, Lcom/google/common/collect/ReverseNaturalOrdering;->INSTANCE:Lcom/google/common/collect/ReverseNaturalOrdering;
 
     return-object p0
@@ -414,6 +417,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/Ordering;->natural()Lcom/google/common/collect/Ordering;
 
     move-result-object p0

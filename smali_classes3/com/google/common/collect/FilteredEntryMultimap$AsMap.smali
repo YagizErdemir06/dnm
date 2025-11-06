@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/FilteredEntryMultimap$AsMap;
+.class public Lcom/google/common/collect/FilteredEntryMultimap$AsMap;
 .super Lcom/google/common/collect/Maps$ViewCachingAbstractMap;
 .source "SourceFile"
 
@@ -24,13 +24,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/FilteredEntryMultimap;
+.field public final synthetic this$0:Lcom/google/common/collect/FilteredEntryMultimap;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/FilteredEntryMultimap;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/FilteredEntryMultimap$AsMap;->this$0:Lcom/google/common/collect/FilteredEntryMultimap;
 
     invoke-direct {p0}, Lcom/google/common/collect/Maps$ViewCachingAbstractMap;-><init>()V
@@ -43,6 +44,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/FilteredEntryMultimap$AsMap;->this$0:Lcom/google/common/collect/FilteredEntryMultimap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/FilteredEntryMultimap;->clear()V
@@ -57,6 +59,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/FilteredEntryMultimap$AsMap;->get(Ljava/lang/Object;)Ljava/util/Collection;
 
     move-result-object p0
@@ -87,6 +90,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/FilteredEntryMultimap$AsMap$1EntrySetImpl;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/FilteredEntryMultimap$AsMap$1EntrySetImpl;-><init>(Lcom/google/common/collect/FilteredEntryMultimap$AsMap;)V
@@ -104,6 +108,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/FilteredEntryMultimap$AsMap$1KeySetImpl;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/FilteredEntryMultimap$AsMap$1KeySetImpl;-><init>(Lcom/google/common/collect/FilteredEntryMultimap$AsMap;)V
@@ -122,6 +127,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/FilteredEntryMultimap$AsMap$1ValuesImpl;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/FilteredEntryMultimap$AsMap$1ValuesImpl;-><init>(Lcom/google/common/collect/FilteredEntryMultimap$AsMap;)V

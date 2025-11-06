@@ -23,6 +23,7 @@
 
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 1
     invoke-direct {p0, v0, v1}, Lcom/google/android/exoplayer2/extractor/SeekMap$Unseekable;-><init>(J)V
 
     return-void

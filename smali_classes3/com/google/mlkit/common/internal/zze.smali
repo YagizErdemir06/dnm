@@ -36,6 +36,7 @@
 .method public final create(Lcom/google/firebase/components/ComponentContainer;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-static {}, Lcom/google/mlkit/common/sdkinternal/Cleaner;->create()Lcom/google/mlkit/common/sdkinternal/Cleaner;
 
     move-result-object p0

@@ -15,50 +15,50 @@
 
 
 # instance fields
-.field protected channelDescriptionResourceId:I
+.field public channelDescriptionResourceId:I
 
-.field protected final channelId:Ljava/lang/String;
+.field public final channelId:Ljava/lang/String;
 
-.field protected channelImportance:I
+.field public channelImportance:I
 
-.field protected channelNameResourceId:I
+.field public channelNameResourceId:I
 
-.field protected final context:Landroid/content/Context;
+.field public final context:Landroid/content/Context;
 
-.field protected customActionReceiver:Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$CustomActionReceiver;
+.field public customActionReceiver:Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$CustomActionReceiver;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field protected fastForwardActionIconResourceId:I
+.field public fastForwardActionIconResourceId:I
 
-.field protected groupKey:Ljava/lang/String;
+.field public groupKey:Ljava/lang/String;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field protected mediaDescriptionAdapter:Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$MediaDescriptionAdapter;
+.field public mediaDescriptionAdapter:Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$MediaDescriptionAdapter;
 
-.field protected nextActionIconResourceId:I
+.field public nextActionIconResourceId:I
 
-.field protected final notificationId:I
+.field public final notificationId:I
 
-.field protected notificationListener:Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$NotificationListener;
+.field public notificationListener:Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$NotificationListener;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field protected pauseActionIconResourceId:I
+.field public pauseActionIconResourceId:I
 
-.field protected playActionIconResourceId:I
+.field public playActionIconResourceId:I
 
-.field protected previousActionIconResourceId:I
+.field public previousActionIconResourceId:I
 
-.field protected rewindActionIconResourceId:I
+.field public rewindActionIconResourceId:I
 
-.field protected smallIconResourceId:I
+.field public smallIconResourceId:I
 
-.field protected stopActionIconResourceId:I
+.field public stopActionIconResourceId:I
 
 
 # direct methods
@@ -173,10 +173,12 @@
 
     move-object/from16 v0, p0
 
+    .line 1
     iget v1, v0, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;->channelNameResourceId:I
 
     if-eqz v1, :cond_0
 
+    .line 2
     iget-object v2, v0, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;->context:Landroid/content/Context;
 
     iget-object v3, v0, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;->channelId:Ljava/lang/String;
@@ -187,6 +189,7 @@
 
     invoke-static {v2, v3, v1, v4, v5}, Lcom/google/android/exoplayer2/util/NotificationUtil;->createNotificationChannel(Landroid/content/Context;Ljava/lang/String;III)V
 
+    .line 3
     :cond_0
     new-instance v1, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager;
 
@@ -242,6 +245,7 @@
 .method public setChannelDescriptionResourceId(I)Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;->channelDescriptionResourceId:I
 
     return-object p0
@@ -250,6 +254,7 @@
 .method public setChannelImportance(I)Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;->channelImportance:I
 
     return-object p0
@@ -258,6 +263,7 @@
 .method public setChannelNameResourceId(I)Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;->channelNameResourceId:I
 
     return-object p0
@@ -266,6 +272,7 @@
 .method public setCustomActionReceiver(Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$CustomActionReceiver;)Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;->customActionReceiver:Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$CustomActionReceiver;
 
     return-object p0
@@ -274,6 +281,7 @@
 .method public setFastForwardActionIconResourceId(I)Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;->fastForwardActionIconResourceId:I
 
     return-object p0
@@ -282,6 +290,7 @@
 .method public setGroup(Ljava/lang/String;)Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;->groupKey:Ljava/lang/String;
 
     return-object p0
@@ -290,6 +299,7 @@
 .method public setMediaDescriptionAdapter(Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$MediaDescriptionAdapter;)Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;->mediaDescriptionAdapter:Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$MediaDescriptionAdapter;
 
     return-object p0
@@ -298,6 +308,7 @@
 .method public setNextActionIconResourceId(I)Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;->nextActionIconResourceId:I
 
     return-object p0
@@ -306,6 +317,7 @@
 .method public setNotificationListener(Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$NotificationListener;)Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;->notificationListener:Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$NotificationListener;
 
     return-object p0
@@ -314,6 +326,7 @@
 .method public setPauseActionIconResourceId(I)Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;->pauseActionIconResourceId:I
 
     return-object p0
@@ -322,6 +335,7 @@
 .method public setPlayActionIconResourceId(I)Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;->playActionIconResourceId:I
 
     return-object p0
@@ -330,6 +344,7 @@
 .method public setPreviousActionIconResourceId(I)Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;->previousActionIconResourceId:I
 
     return-object p0
@@ -338,6 +353,7 @@
 .method public setRewindActionIconResourceId(I)Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;->rewindActionIconResourceId:I
 
     return-object p0
@@ -346,6 +362,7 @@
 .method public setSmallIconResourceId(I)Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;->smallIconResourceId:I
 
     return-object p0
@@ -354,6 +371,7 @@
 .method public setStopActionIconResourceId(I)Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$Builder;->stopActionIconResourceId:I
 
     return-object p0

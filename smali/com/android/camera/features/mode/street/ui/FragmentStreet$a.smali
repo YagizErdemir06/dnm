@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/features/mode/street/ui/FragmentStreet;->pi()V
+    value = Lcom/android/camera/features/mode/street/ui/FragmentStreet;->sd()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,43 +18,39 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/android/camera/data/data/b;
+.field public final synthetic a:Ld/d/a/l6/e/b;
 
 .field public final synthetic b:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/camera/features/mode/street/ui/FragmentStreet;Lcom/android/camera/data/data/b;)V
+.method public constructor <init>(Lcom/android/camera/features/mode/street/ui/FragmentStreet;Ld/d/a/l6/e/b;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$componentData"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->b:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
 
-    iput-object p2, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->a:Lcom/android/camera/data/data/b;
+    iput-object p2, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->a:Ld/d/a/l6/e/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static synthetic b(Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;Lcom/android/camera/data/data/b;Lv8/n1;)V
+.method public static synthetic b(Ljava/lang/String;Ld/d/a/m7/g/r3/a;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->e(Lcom/android/camera/data/data/b;Lv8/n1;)V
-
-    return-void
-.end method
-
-.method public static synthetic c(Ljava/lang/String;Lx8/a;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->d(Ljava/lang/String;Lx8/a;)V
-
-    return-void
-.end method
-
-.method public static synthetic d(Ljava/lang/String;Lx8/a;)V
-    .locals 0
-
+    .line 1
     invoke-static {p0}, Ljava/lang/Float;->valueOf(Ljava/lang/String;)Ljava/lang/Float;
 
     move-result-object p0
@@ -63,15 +59,16 @@
 
     move-result p0
 
-    invoke-interface {p1, p0}, Lx8/a;->O4(F)Z
+    invoke-interface {p1, p0}, Ld/d/a/m7/g/r3/a;->J4(F)Z
 
     return-void
 .end method
 
-.method private synthetic e(Lcom/android/camera/data/data/b;Lv8/n1;)V
+.method private synthetic c(Ld/d/a/l6/e/b;Ld/d/a/m7/g/q1;)V
     .locals 2
 
-    invoke-static {}, Lcom/android/camera/v2;->O3()Z
+    .line 1
+    invoke-static {}, Ld/d/a/d4;->M3()Z
 
     move-result v0
 
@@ -81,11 +78,11 @@
 
     iget-object p0, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->b:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
 
-    invoke-static {p0}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->ei(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)I
+    invoke-static {p0}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->Mb(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)I
 
     move-result p0
 
-    invoke-virtual {p1, p0}, Lcom/android/camera/data/data/b;->getComponentValue(I)Ljava/lang/String;
+    invoke-virtual {p1, p0}, Ld/d/a/l6/e/b;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object p0
 
@@ -109,18 +106,43 @@
     const/4 p0, 0x1
 
     :goto_1
-    invoke-interface {p2, p0}, Lv8/d1;->setSkipDrawFace(Z)V
+    invoke-interface {p2, p0}, Ld/d/a/m7/g/g1;->setSkipDrawFace(Z)V
 
-    invoke-interface {p2, v1}, Lv8/d1;->setPinFace(Z)V
+    .line 2
+    invoke-interface {p2, v1}, Ld/d/a/m7/g/g1;->setPinFace(Z)V
 
     return-void
 .end method
 
 
 # virtual methods
+.method public X()Z
+    .locals 0
+
+    .line 1
+    invoke-static {}, Ld/d/a/m7/g/v3/p;->e()Z
+
+    move-result p0
+
+    xor-int/lit8 p0, p0, 0x1
+
+    return p0
+.end method
+
 .method public a(ILjava/lang/String;)V
     .locals 12
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "configKey",
+            "newValue"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -145,30 +167,36 @@
 
     invoke-static {v0, p1}, Lcom/android/camera/log/LogK;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lv8/y2;->impl()Ljava/util/Optional;
+    .line 2
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl()Ljava/util/Optional;
 
     move-result-object p1
 
-    invoke-static {}, Lv8/q1;->impl()Ljava/util/Optional;
+    .line 3
+    invoke-static {}, Ld/d/a/m7/g/t1;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    invoke-static {}, Lg2/b;->g()Lj2/b1;
+    .line 4
+    invoke-static {}, Ld/d/a/l6/b;->g()Ld/d/a/l6/e/j/a1;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lj2/b1;->c0()Lj2/j0;
+    .line 5
+    invoke-virtual {v1}, Ld/d/a/l6/e/j/a1;->c0()Ld/d/a/l6/e/j/o0;
 
     move-result-object v1
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 6
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lid/b;->G1()Ljava/util/List;
+    invoke-virtual {v2}, Ld/k/a/b;->C1()Ljava/util/List;
 
     move-result-object v2
 
+    .line 7
     invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
@@ -250,18 +278,19 @@
     move v8, v7
 
     :goto_0
-    const v3, 0x7f140b89
+    const v3, 0x7f130b04
 
-    const-string/jumbo v9, "street"
+    const-string v9, "street"
 
     packed-switch v8, :pswitch_data_0
 
     goto/16 :goto_1
 
+    .line 8
     :pswitch_0
     iget-object v8, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->b:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
 
-    invoke-static {v8}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->hi(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)I
+    invoke-static {v8}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->qc(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)I
 
     move-result v8
 
@@ -271,28 +300,31 @@
 
     move-result-object v10
 
-    invoke-virtual {v1, v8, v10}, Lcom/android/camera/data/data/b;->setComponentValue(ILjava/lang/String;)V
+    invoke-virtual {v1, v8, v10}, Ld/d/a/l6/e/b;->setComponentValue(ILjava/lang/String;)V
 
+    .line 9
     iget-object v8, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->b:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
 
-    invoke-static {v8}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->bi(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)Landroid/widget/LinearLayout;
+    invoke-static {v8}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->qb(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)Landroid/widget/LinearLayout;
 
     move-result-object v8
 
-    invoke-virtual {v8}, Landroid/view/View;->getVisibility()I
+    invoke-virtual {v8}, Landroid/widget/LinearLayout;->getVisibility()I
 
     move-result v8
 
     if-eqz v8, :cond_4
 
+    .line 10
     iget-object v8, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->b:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
 
-    invoke-static {v8}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->bi(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)Landroid/widget/LinearLayout;
+    invoke-static {v8}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->qb(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)Landroid/widget/LinearLayout;
 
     move-result-object v8
 
-    invoke-virtual {v8, v7}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v8, v7}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
+    .line 11
     :cond_4
     invoke-virtual {p1}, Ljava/util/Optional;->isPresent()Z
 
@@ -302,6 +334,7 @@
 
     if-eqz v2, :cond_8
 
+    .line 12
     iget-object v8, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->b:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
 
     invoke-interface {v2, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -320,10 +353,11 @@
 
     move-result v10
 
-    invoke-static {v8, v10}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->gi(Lcom/android/camera/features/mode/street/ui/FragmentStreet;I)Ljava/lang/String;
+    invoke-static {v8, v10}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->gc(Lcom/android/camera/features/mode/street/ui/FragmentStreet;I)Ljava/lang/String;
 
     move-result-object v8
 
+    .line 13
     iget-object v10, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->b:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
 
     invoke-interface {v2, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -342,23 +376,25 @@
 
     move-result v2
 
-    invoke-static {v10, v2}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->gi(Lcom/android/camera/features/mode/street/ui/FragmentStreet;I)Ljava/lang/String;
+    invoke-static {v10, v2}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->gc(Lcom/android/camera/features/mode/street/ui/FragmentStreet;I)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 14
     invoke-virtual {p1}, Ljava/util/Optional;->get()Ljava/lang/Object;
 
     move-result-object v10
 
-    check-cast v10, Lv8/y2;
+    check-cast v10, Ld/d/a/m7/g/a3;
 
-    invoke-interface {v10}, Lv8/y2;->clearTopAlertView()V
+    invoke-interface {v10}, Ld/d/a/m7/g/a3;->clearTopAlertView()V
 
+    .line 15
     invoke-virtual {p1}, Ljava/util/Optional;->get()Ljava/lang/Object;
 
     move-result-object v10
 
-    check-cast v10, Lv8/y2;
+    check-cast v10, Ld/d/a/m7/g/a3;
 
     iget-object v11, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->b:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
 
@@ -376,14 +412,15 @@
 
     move-result-object v2
 
-    invoke-interface {v10, v9, v7, v2}, Lv8/y2;->alertTopBarOperationTip(Ljava/lang/String;ILjava/lang/CharSequence;)V
+    invoke-interface {v10, v9, v7, v2}, Ld/d/a/m7/g/a3;->alertTopBarOperationTip(Ljava/lang/String;ILjava/lang/CharSequence;)V
 
     goto/16 :goto_1
 
+    .line 16
     :pswitch_1
     iget-object v8, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->b:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
 
-    invoke-static {v8}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->fi(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)I
+    invoke-static {v8}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->Yb(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)I
 
     move-result v8
 
@@ -393,28 +430,31 @@
 
     move-result-object v10
 
-    invoke-virtual {v1, v8, v10}, Lcom/android/camera/data/data/b;->setComponentValue(ILjava/lang/String;)V
+    invoke-virtual {v1, v8, v10}, Ld/d/a/l6/e/b;->setComponentValue(ILjava/lang/String;)V
 
+    .line 17
     iget-object v8, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->b:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
 
-    invoke-static {v8}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->bi(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)Landroid/widget/LinearLayout;
+    invoke-static {v8}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->qb(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)Landroid/widget/LinearLayout;
 
     move-result-object v8
 
-    invoke-virtual {v8}, Landroid/view/View;->getVisibility()I
+    invoke-virtual {v8}, Landroid/widget/LinearLayout;->getVisibility()I
 
     move-result v8
 
     if-eqz v8, :cond_5
 
+    .line 18
     iget-object v8, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->b:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
 
-    invoke-static {v8}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->bi(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)Landroid/widget/LinearLayout;
+    invoke-static {v8}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->qb(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)Landroid/widget/LinearLayout;
 
     move-result-object v8
 
-    invoke-virtual {v8, v7}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v8, v7}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
+    .line 19
     :cond_5
     invoke-virtual {p1}, Ljava/util/Optional;->isPresent()Z
 
@@ -424,6 +464,7 @@
 
     if-eqz v2, :cond_8
 
+    .line 20
     iget-object v8, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->b:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
 
     invoke-interface {v2, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -442,10 +483,11 @@
 
     move-result v10
 
-    invoke-static {v8, v10}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->gi(Lcom/android/camera/features/mode/street/ui/FragmentStreet;I)Ljava/lang/String;
+    invoke-static {v8, v10}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->gc(Lcom/android/camera/features/mode/street/ui/FragmentStreet;I)Ljava/lang/String;
 
     move-result-object v8
 
+    .line 21
     iget-object v10, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->b:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
 
     invoke-interface {v2, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -464,23 +506,25 @@
 
     move-result v2
 
-    invoke-static {v10, v2}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->gi(Lcom/android/camera/features/mode/street/ui/FragmentStreet;I)Ljava/lang/String;
+    invoke-static {v10, v2}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->gc(Lcom/android/camera/features/mode/street/ui/FragmentStreet;I)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 22
     invoke-virtual {p1}, Ljava/util/Optional;->get()Ljava/lang/Object;
 
     move-result-object v10
 
-    check-cast v10, Lv8/y2;
+    check-cast v10, Ld/d/a/m7/g/a3;
 
-    invoke-interface {v10}, Lv8/y2;->clearTopAlertView()V
+    invoke-interface {v10}, Ld/d/a/m7/g/a3;->clearTopAlertView()V
 
+    .line 23
     invoke-virtual {p1}, Ljava/util/Optional;->get()Ljava/lang/Object;
 
     move-result-object v10
 
-    check-cast v10, Lv8/y2;
+    check-cast v10, Ld/d/a/m7/g/a3;
 
     iget-object v11, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->b:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
 
@@ -498,14 +542,15 @@
 
     move-result-object v2
 
-    invoke-interface {v10, v9, v7, v2}, Lv8/y2;->alertTopBarOperationTip(Ljava/lang/String;ILjava/lang/CharSequence;)V
+    invoke-interface {v10, v9, v7, v2}, Ld/d/a/m7/g/a3;->alertTopBarOperationTip(Ljava/lang/String;ILjava/lang/CharSequence;)V
 
     goto/16 :goto_1
 
+    .line 24
     :pswitch_2
     iget-object v3, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->b:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
 
-    invoke-static {v3}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->ii(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)I
+    invoke-static {v3}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->uc(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)I
 
     move-result v3
 
@@ -515,28 +560,31 @@
 
     move-result-object v8
 
-    invoke-virtual {v1, v3, v8}, Lcom/android/camera/data/data/b;->setComponentValue(ILjava/lang/String;)V
+    invoke-virtual {v1, v3, v8}, Ld/d/a/l6/e/b;->setComponentValue(ILjava/lang/String;)V
 
+    .line 25
     iget-object v3, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->b:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
 
-    invoke-static {v3}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->bi(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)Landroid/widget/LinearLayout;
+    invoke-static {v3}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->qb(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)Landroid/widget/LinearLayout;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Landroid/view/View;->getVisibility()I
+    invoke-virtual {v3}, Landroid/widget/LinearLayout;->getVisibility()I
 
     move-result v3
 
     if-eqz v3, :cond_6
 
+    .line 26
     iget-object v3, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->b:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
 
-    invoke-static {v3}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->bi(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)Landroid/widget/LinearLayout;
+    invoke-static {v3}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->qb(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)Landroid/widget/LinearLayout;
 
     move-result-object v3
 
-    invoke-virtual {v3, v7}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v3, v7}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
+    .line 27
     :cond_6
     invoke-virtual {p1}, Ljava/util/Optional;->isPresent()Z
 
@@ -546,6 +594,7 @@
 
     if-eqz v2, :cond_8
 
+    .line 28
     iget-object v3, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->b:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
 
     invoke-interface {v2, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -564,10 +613,11 @@
 
     move-result v2
 
-    invoke-static {v3, v2}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->gi(Lcom/android/camera/features/mode/street/ui/FragmentStreet;I)Ljava/lang/String;
+    invoke-static {v3, v2}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->gc(Lcom/android/camera/features/mode/street/ui/FragmentStreet;I)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 29
     new-instance v3, Landroid/text/SpannableStringBuilder;
 
     iget-object v8, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->b:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
@@ -575,6 +625,8 @@
     invoke-virtual {v8}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
+
+    const v10, 0x7f130b05
 
     new-array v5, v5, [Ljava/lang/Object;
 
@@ -584,14 +636,13 @@
 
     aput-object v2, v5, v6
 
-    const v2, 0x7f140b8a
-
-    invoke-virtual {v8, v2, v5}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v8, v10, v5}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-direct {v3, v2}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
+    .line 30
     new-instance v2, Lcom/android/camera/features/mode/street/ui/FragmentStreet$c;
 
     iget-object v5, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->b:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
@@ -614,28 +665,31 @@
 
     invoke-virtual {v3, v2, v5, v8, v10}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
+    .line 31
     invoke-virtual {p1}, Ljava/util/Optional;->get()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lv8/y2;
+    check-cast v2, Ld/d/a/m7/g/a3;
 
-    invoke-interface {v2}, Lv8/y2;->clearTopAlertView()V
+    invoke-interface {v2}, Ld/d/a/m7/g/a3;->clearTopAlertView()V
 
+    .line 32
     invoke-virtual {p1}, Ljava/util/Optional;->get()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lv8/y2;
+    check-cast v2, Ld/d/a/m7/g/a3;
 
-    invoke-interface {v2, v9, v7, v3}, Lv8/y2;->alertTopBarOperationTip(Ljava/lang/String;ILjava/lang/CharSequence;)V
+    invoke-interface {v2, v9, v7, v3}, Ld/d/a/m7/g/a3;->alertTopBarOperationTip(Ljava/lang/String;ILjava/lang/CharSequence;)V
 
     goto :goto_1
 
+    .line 33
     :pswitch_3
     iget-object v2, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->b:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
 
-    invoke-static {v2}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->ai(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)I
+    invoke-static {v2}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->nb(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)I
 
     move-result v2
 
@@ -645,30 +699,33 @@
 
     move-result-object v3
 
-    invoke-virtual {v1, v2, v3}, Lcom/android/camera/data/data/b;->setComponentValue(ILjava/lang/String;)V
+    invoke-virtual {v1, v2, v3}, Ld/d/a/l6/e/b;->setComponentValue(ILjava/lang/String;)V
 
+    .line 34
     iget-object v2, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->b:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
 
-    invoke-static {v2}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->bi(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)Landroid/widget/LinearLayout;
+    invoke-static {v2}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->qb(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)Landroid/widget/LinearLayout;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
+    invoke-virtual {v2}, Landroid/widget/LinearLayout;->getVisibility()I
 
     move-result v2
 
     if-nez v2, :cond_7
 
+    .line 35
     iget-object v2, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->b:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
 
-    invoke-static {v2}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->bi(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)Landroid/widget/LinearLayout;
+    invoke-static {v2}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->qb(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)Landroid/widget/LinearLayout;
 
     move-result-object v2
 
     const/4 v3, 0x4
 
-    invoke-virtual {v2, v3}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v2, v3}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
+    .line 36
     :cond_7
     invoke-virtual {p1}, Ljava/util/Optional;->isPresent()Z
 
@@ -676,103 +733,113 @@
 
     if-eqz v2, :cond_8
 
+    .line 37
     invoke-virtual {p1}, Ljava/util/Optional;->get()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lv8/y2;
+    check-cast v2, Ld/d/a/m7/g/a3;
 
-    invoke-interface {v2}, Lv8/y2;->clearTopAlertView()V
+    invoke-interface {v2}, Ld/d/a/m7/g/a3;->clearTopAlertView()V
 
+    .line 38
     invoke-virtual {p1}, Ljava/util/Optional;->get()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lv8/y2;
+    check-cast v2, Ld/d/a/m7/g/a3;
 
     const/16 v3, 0x8
 
-    const v5, 0x7f140b86
+    const v5, 0x7f130b01
 
-    invoke-interface {v2, v9, v3, v5}, Lv8/y2;->alertTopBarOperationTip(Ljava/lang/String;II)V
+    invoke-interface {v2, v9, v3, v5}, Ld/d/a/m7/g/a3;->alertTopBarOperationTip(Ljava/lang/String;II)V
 
+    .line 39
     :cond_8
     :goto_1
-    iget-object v2, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->a:Lcom/android/camera/data/data/b;
+    iget-object v2, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->a:Ld/d/a/l6/e/b;
 
     iget-object v3, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->b:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
 
-    invoke-static {v3}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->ji(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)I
+    invoke-static {v3}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->xc(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)I
 
     move-result v3
 
-    invoke-virtual {v2, v3, p2}, Lcom/android/camera/data/data/b;->setComponentValue(ILjava/lang/String;)V
+    invoke-virtual {v2, v3, p2}, Ld/d/a/l6/e/b;->setComponentValue(ILjava/lang/String;)V
 
+    .line 40
     iget-object v2, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->b:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
 
-    invoke-static {v2}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->ki(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)Lcom/android/camera/ui/DepthFieldView;
+    invoke-static {v2}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->Hc(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)Lcom/android/camera/ui/DepthFieldView;
 
     move-result-object v2
 
     invoke-virtual {v2}, Lcom/android/camera/ui/DepthFieldView;->c()V
 
+    .line 41
     invoke-virtual {v0}, Ljava/util/Optional;->isPresent()Z
 
     move-result v2
 
     if-eqz v2, :cond_9
 
+    .line 42
     invoke-virtual {v0}, Ljava/util/Optional;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lv8/q1;
+    check-cast v0, Ld/d/a/m7/g/t1;
 
     iget-object v2, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->b:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
 
-    invoke-static {v2}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->li(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->Ic(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)Ljava/lang/String;
 
     move-result-object v2
 
     iget-object v3, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->b:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
 
-    invoke-static {v3}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->ni(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)I
+    invoke-static {v3}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->Wc(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)I
 
     move-result v3
 
-    invoke-virtual {v1, v3}, Lcom/android/camera/data/data/b;->getComponentValue(I)Ljava/lang/String;
+    invoke-virtual {v1, v3}, Ld/d/a/l6/e/b;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-interface {v0, v1, v2, v3, v6}, Lv8/q1;->qa(Lj2/j0;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-interface {v0, v1, v2, v3, v6}, Ld/d/a/m7/g/t1;->n7(Ld/d/a/l6/e/j/o0;Ljava/lang/String;Ljava/lang/String;I)V
 
+    .line 43
     :cond_9
     iget-object v0, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->b:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
 
-    invoke-static {v0}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->ci(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)I
+    invoke-static {v0}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->wb(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)I
 
     move-result v2
 
-    invoke-virtual {v1, v2}, Lcom/android/camera/data/data/b;->getComponentValue(I)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Ld/d/a/l6/e/b;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->mi(Lcom/android/camera/features/mode/street/ui/FragmentStreet;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->Lc(Lcom/android/camera/features/mode/street/ui/FragmentStreet;Ljava/lang/String;)Ljava/lang/String;
 
+    .line 44
     invoke-virtual {p1}, Ljava/util/Optional;->isPresent()Z
 
     move-result v0
 
     if-eqz v0, :cond_a
 
+    .line 45
     invoke-virtual {p1}, Ljava/util/Optional;->get()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lv8/y2;
+    check-cast p1, Ld/d/a/m7/g/a3;
 
-    invoke-interface {p1}, Lv8/y2;->updateTopAlertLayout()V
+    invoke-interface {p1}, Ld/d/a/m7/g/a3;->updateTopAlertLayout()V
 
+    .line 46
     :cond_a
     invoke-static {p2, v4}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
@@ -786,15 +853,15 @@
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lm2/h1;->K()Lj2/t0;
+    invoke-virtual {v0}, Ld/d/a/l6/e/m/g1;->D()Ld/d/a/l6/e/j/t0;
 
     move-result-object v0
 
-    iget v0, v0, Lj2/t0;->g:F
+    iget v0, v0, Ld/d/a/l6/e/j/t0;->l:F
 
     goto :goto_2
 
@@ -803,15 +870,15 @@
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lm2/h1;->K()Lj2/t0;
+    invoke-virtual {v0}, Ld/d/a/l6/e/m/g1;->D()Ld/d/a/l6/e/j/t0;
 
     move-result-object v0
 
-    iget v0, v0, Lj2/t0;->f:F
+    iget v0, v0, Ld/d/a/l6/e/j/t0;->k:F
 
     :goto_2
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
@@ -822,17 +889,19 @@
 
     move-result-object p1
 
-    invoke-static {}, Lx8/a;->impl()Ljava/util/Optional;
+    .line 47
+    invoke-static {}, Ld/d/a/m7/g/r3/a;->impl()Ljava/util/Optional;
 
     move-result-object p2
 
-    new-instance v0, Lt5/f;
+    new-instance v0, Ld/d/a/t6/b/a0/o/d;
 
-    invoke-direct {v0, p1}, Lt5/f;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Ld/d/a/t6/b/a0/o/d;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {p2, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    invoke-static {}, Lv8/z;->impl()Ljava/util/Optional;
+    .line 48
+    invoke-static {}, Ld/d/a/m7/g/c0;->impl()Ljava/util/Optional;
 
     move-result-object p1
 
@@ -844,8 +913,9 @@
 
     return-void
 
+    .line 49
     :cond_c
-    invoke-static {}, Lv8/z;->impl()Ljava/util/Optional;
+    invoke-static {}, Ld/d/a/m7/g/c0;->impl()Ljava/util/Optional;
 
     move-result-object p1
 
@@ -853,47 +923,48 @@
 
     move-result-object p1
 
-    check-cast p1, Lv8/z;
+    check-cast p1, Ld/d/a/m7/g/c0;
 
-    invoke-interface {p1, v7}, Lv8/z;->Ih(Z)V
+    .line 50
+    invoke-interface {p1, v7}, Ld/d/a/m7/g/c0;->kh(Z)V
 
-    invoke-static {}, Lv8/n1;->impl()Ljava/util/Optional;
+    .line 51
+    invoke-static {}, Ld/d/a/m7/g/q1;->impl()Ljava/util/Optional;
 
     move-result-object p1
 
-    iget-object p2, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->a:Lcom/android/camera/data/data/b;
+    iget-object p2, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->a:Ld/d/a/l6/e/b;
 
-    new-instance v0, Lt5/g;
+    new-instance v0, Ld/d/a/t6/b/a0/o/c;
 
-    invoke-direct {v0, p0, p2}, Lt5/g;-><init>(Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;Lcom/android/camera/data/data/b;)V
+    invoke-direct {v0, p0, p2}, Ld/d/a/t6/b/a0/o/c;-><init>(Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;Ld/d/a/l6/e/b;)V
 
     invoke-virtual {p1, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    invoke-static {}, Lg2/b;->g()Lj2/b1;
+    const/4 p1, 0x0
 
-    move-result-object p1
+    .line 52
+    invoke-static {}, Ld/d/a/l6/b;->g()Ld/d/a/l6/e/j/a1;
 
-    invoke-virtual {p1}, Lj2/b1;->F()Lm2/a;
+    move-result-object p2
 
-    move-result-object p1
+    invoke-virtual {p2}, Ld/d/a/l6/e/j/a1;->F()Ld/d/a/l6/e/m/w;
+
+    move-result-object p2
 
     iget-object p0, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->b:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
 
-    invoke-static {p0}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->di(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)I
+    invoke-static {p0}, Lcom/android/camera/features/mode/street/ui/FragmentStreet;->Fb(Lcom/android/camera/features/mode/street/ui/FragmentStreet;)I
 
     move-result p0
 
-    invoke-virtual {p1, p0}, Lcom/android/camera/data/data/b;->getComponentValue(I)Ljava/lang/String;
+    invoke-virtual {p2, p0}, Ld/d/a/l6/e/b;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object p0
 
-    const/4 p1, 0x0
-
-    invoke-static {p1, p0, v7}, Lk9/a;->f3(Ljava/lang/String;Ljava/lang/String;Z)V
+    invoke-static {p1, p0, v7}, Ld/d/a/v7/f;->b3(Ljava/lang/String;Ljava/lang/String;Z)V
 
     return-void
-
-    nop
 
     :sswitch_data_0
     .sparse-switch
@@ -912,14 +983,10 @@
     .end packed-switch
 .end method
 
-.method public g()Z
+.method public synthetic d(Ld/d/a/l6/e/b;Ld/d/a/m7/g/q1;)V
     .locals 0
 
-    invoke-static {}, Lb9/n;->g()Z
+    invoke-direct {p0, p1, p2}, Lcom/android/camera/features/mode/street/ui/FragmentStreet$a;->c(Ld/d/a/l6/e/b;Ld/d/a/m7/g/q1;)V
 
-    move-result p0
-
-    xor-int/lit8 p0, p0, 0x1
-
-    return p0
+    return-void
 .end method

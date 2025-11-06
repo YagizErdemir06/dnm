@@ -25,9 +25,10 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 10
+    .locals 11
 
-    sget-boolean v0, Lid/c;->h:Z
+    .line 1
+    sget-boolean v0, Ld/k/a/c;->h:Z
 
     const/4 v1, 0x0
 
@@ -35,7 +36,7 @@
 
     if-eqz v0, :cond_0
 
-    sget-boolean v3, Lid/c;->b:Z
+    sget-boolean v3, Ld/k/a/c;->b:Z
 
     if-nez v3, :cond_0
 
@@ -49,10 +50,12 @@
     :goto_0
     sput-boolean v3, Lcom/android/camera/log/LogUtil;->IS_USER_STABLE:Z
 
+    .line 2
     sget-object v4, Landroid/os/Build;->TYPE:Ljava/lang/String;
 
     const-string v5, "userdebug"
 
+    .line 3
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
@@ -61,6 +64,7 @@
 
     const-string v5, "eng"
 
+    .line 4
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -71,7 +75,8 @@
 
     const-string v4, "persist.sys.miui.cam.force_on"
 
-    invoke-static {v4, v0}, Lgg/f;->c(Ljava/lang/String;Z)Z
+    .line 5
+    invoke-static {v4, v0}, Ld/o/f/w/f;->c(Ljava/lang/String;Z)Z
 
     move-result v0
 
@@ -99,25 +104,29 @@
 
     const-string v4, "Warn"
 
-    invoke-static {v3, v4}, Lgg/f;->b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .line 6
+    invoke-static {v3, v4}, Ld/o/f/w/f;->b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     const/4 v5, 0x4
 
-    const/4 v6, 0x5
+    const/4 v6, 0x3
 
-    if-eqz v3, :cond_9
+    const/4 v7, 0x6
 
+    const/4 v8, 0x5
+
+    if-eqz v3, :cond_8
+
+    const/4 v9, -0x1
+
+    .line 7
     invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
 
-    move-result v7
+    move-result v10
 
-    const/4 v8, 0x3
-
-    const/4 v9, 0x6
-
-    sparse-switch v7, :sswitch_data_0
+    sparse-switch v10, :sswitch_data_0
 
     goto :goto_3
 
@@ -141,7 +150,7 @@
 
     if-eqz v1, :cond_3
 
-    move v1, v6
+    move v1, v8
 
     goto :goto_4
 
@@ -165,7 +174,7 @@
 
     if-eqz v1, :cond_3
 
-    move v1, v8
+    move v1, v6
 
     goto :goto_4
 
@@ -191,68 +200,73 @@
 
     if-eqz v1, :cond_3
 
-    move v1, v9
+    move v1, v7
 
     goto :goto_4
 
     :cond_3
     :goto_3
-    const/4 v1, -0x1
+    move v1, v9
 
     :goto_4
-    if-eqz v1, :cond_8
+    if-eqz v1, :cond_7
 
-    if-eq v1, v2, :cond_7
+    if-eq v1, v2, :cond_9
 
     if-eq v1, v0, :cond_6
 
-    if-eq v1, v6, :cond_5
+    if-eq v1, v8, :cond_5
 
-    if-eq v1, v9, :cond_4
+    if-eq v1, v7, :cond_4
 
     goto :goto_5
 
     :cond_4
     const v6, 0x7fffffff
 
-    goto :goto_5
+    goto :goto_6
 
     :cond_5
-    move v6, v9
+    move v6, v7
 
-    goto :goto_5
+    goto :goto_6
 
     :cond_6
     move v6, v5
 
-    goto :goto_5
+    goto :goto_6
 
     :cond_7
-    move v6, v8
-
-    goto :goto_5
-
-    :cond_8
     move v6, v0
 
-    :cond_9
+    goto :goto_6
+
+    :cond_8
     :goto_5
+    move v6, v8
+
+    :cond_9
+    :goto_6
     const-string v1, "persist.sys.miui.cam.log_level"
 
-    invoke-static {v1}, Lgg/f;->a(Ljava/lang/String;)Ljava/lang/String;
+    .line 8
+    invoke-static {v1}, Ld/o/f/w/f;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 9
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-eqz v2, :cond_a
 
+    .line 10
     sput v0, Lcom/android/camera/log/LogUtil;->LOG_LEVEL:I
 
-    goto :goto_6
+    goto :goto_7
 
+    .line 11
     :cond_a
     :try_start_0
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
@@ -265,6 +279,7 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 12
     :catch_0
     invoke-static {v5, v6}, Ljava/lang/Math;->min(II)I
 
@@ -272,19 +287,22 @@
 
     sput v0, Lcom/android/camera/log/LogUtil;->LOG_LEVEL:I
 
-    goto :goto_6
+    goto :goto_7
 
     :cond_b
     const-string v1, "persist.sys.miui.cam.tmp_level"
 
-    invoke-static {v1, v0}, Lgg/f;->e(Ljava/lang/String;I)I
+    .line 13
+    invoke-static {v1, v0}, Ld/o/f/w/f;->e(Ljava/lang/String;I)I
 
     move-result v0
 
     sput v0, Lcom/android/camera/log/LogUtil;->LOG_LEVEL:I
 
-    :goto_6
+    :goto_7
     return-void
+
+    nop
 
     :sswitch_data_0
     .sparse-switch
@@ -300,6 +318,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -440,6 +459,7 @@
 .method public static isDebugOsBuild()Z
     .locals 1
 
+    .line 1
     sget-boolean v0, Lcom/android/camera/log/LogUtil;->DEBUG_OS:Z
 
     return v0
@@ -448,6 +468,7 @@
 .method public static isLoggable(Ljava/lang/String;I)Z
     .locals 0
 
+    .line 1
     sget p0, Lcom/android/camera/log/LogUtil;->LOG_LEVEL:I
 
     if-le p0, p1, :cond_1
@@ -478,14 +499,17 @@
 .method public static log(ILjava/lang/String;Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     invoke-static {p1, p0}, Lcom/android/camera/log/LogUtil;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-static {p0, p1, p2}, Lcom/android/camera/log/FileLogger;->log(ILjava/lang/String;Ljava/lang/String;)V
 
+    .line 3
     invoke-static {p0, p1, p2}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
 
     :cond_0

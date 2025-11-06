@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;
+.class public final Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -28,7 +28,7 @@
 
 .field private static final SHORT_TYPE_YEAR:I = 0x646179
 
-.field static final STANDARD_GENRES:[Ljava/lang/String;
+.field public static final STANDARD_GENRES:[Ljava/lang/String;
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 .end field
@@ -464,6 +464,7 @@
 
     const-string v191, "Psybient"
 
+    .line 1
     filled-new-array/range {v0 .. v191}, [Ljava/lang/String;
 
     move-result-object v0
@@ -476,6 +477,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -486,10 +488,12 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v0
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v1
@@ -500,14 +504,17 @@
 
     const/16 p0, 0x8
 
+    .line 3
     invoke-virtual {p1, p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
     add-int/lit8 v0, v0, -0x10
 
+    .line 4
     invoke-virtual {p1, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readNullTerminatedString(I)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 5
     new-instance p1, Lcom/google/android/exoplayer2/metadata/id3/CommentFrame;
 
     const-string v0, "und"
@@ -516,6 +523,7 @@
 
     return-object p1
 
+    .line 6
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -549,53 +557,58 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v1
 
-    const v2, 0x64617461
+    const-string v2, "MetadataUtil"
 
-    const-string v3, "MetadataUtil"
+    const/4 v3, 0x0
 
-    const/4 v4, 0x0
+    const v4, 0x64617461
 
-    if-ne v1, v2, :cond_3
+    if-ne v1, v4, :cond_3
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v1
 
+    .line 4
     invoke-static {v1}, Lcom/google/android/exoplayer2/extractor/mp4/Atom;->parseFullAtomFlags(I)I
 
     move-result v1
 
-    const/16 v2, 0xd
+    const/16 v4, 0xd
 
-    if-ne v1, v2, :cond_0
+    if-ne v1, v4, :cond_0
 
-    const-string v2, "image/jpeg"
+    const-string v4, "image/jpeg"
 
     goto :goto_0
 
     :cond_0
-    const/16 v2, 0xe
+    const/16 v4, 0xe
 
-    if-ne v1, v2, :cond_1
+    if-ne v1, v4, :cond_1
 
-    const-string v2, "image/png"
+    const-string v4, "image/png"
 
     goto :goto_0
 
     :cond_1
-    move-object v2, v4
+    move-object v4, v3
 
     :goto_0
-    if-nez v2, :cond_2
+    if-nez v4, :cond_2
 
+    .line 5
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -610,37 +623,42 @@
 
     move-result-object p0
 
-    invoke-static {v3, p0}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, p0}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    return-object v4
+    return-object v3
 
     :cond_2
     const/4 v1, 0x4
 
+    .line 6
     invoke-virtual {p0, v1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
     add-int/lit8 v0, v0, -0x10
 
+    .line 7
     new-array v1, v0, [B
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    invoke-virtual {p0, v1, v3, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readBytes([BII)V
+    .line 8
+    invoke-virtual {p0, v1, v2, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readBytes([BII)V
 
+    .line 9
     new-instance p0, Lcom/google/android/exoplayer2/metadata/id3/ApicFrame;
 
     const/4 v0, 0x3
 
-    invoke-direct {p0, v2, v4, v0, v1}, Lcom/google/android/exoplayer2/metadata/id3/ApicFrame;-><init>(Ljava/lang/String;Ljava/lang/String;I[B)V
+    invoke-direct {p0, v4, v3, v0, v1}, Lcom/google/android/exoplayer2/metadata/id3/ApicFrame;-><init>(Ljava/lang/String;Ljava/lang/String;I[B)V
 
     return-object p0
 
     :cond_3
     const-string p0, "Failed to parse cover art attribute"
 
-    invoke-static {v3, p0}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
+    .line 10
+    invoke-static {v2, p0}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    return-object v4
+    return-object v3
 .end method
 
 .method public static parseIlstElement(Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/metadata/Metadata$Entry;
@@ -648,16 +666,19 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getPosition()I
 
     move-result v0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v1
 
     add-int/2addr v0, v1
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v1
@@ -681,6 +702,7 @@
 
     if-ne v1, v2, :cond_1
 
+    .line 4
     :try_start_0
     invoke-static {p0}, Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;->parseStandardGenreAttribute(Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;
 
@@ -688,6 +710,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 5
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     return-object v1
@@ -700,12 +723,14 @@
     :try_start_1
     const-string v2, "TPOS"
 
+    .line 6
     invoke-static {v1, v2, p0}, Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;->parseIndexAndCountAttribute(ILjava/lang/String;Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;
 
     move-result-object v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 7
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     return-object v1
@@ -718,12 +743,14 @@
     :try_start_2
     const-string v2, "TRCK"
 
+    .line 8
     invoke-static {v1, v2, p0}, Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;->parseIndexAndCountAttribute(ILjava/lang/String;Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;
 
     move-result-object v1
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 9
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     return-object v1
@@ -740,12 +767,14 @@
     :try_start_3
     const-string v2, "TBPM"
 
+    .line 10
     invoke-static {v1, v2, p0, v4, v3}, Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;->parseUint8Attribute(ILjava/lang/String;Lcom/google/android/exoplayer2/util/ParsableByteArray;ZZ)Lcom/google/android/exoplayer2/metadata/id3/Id3Frame;
 
     move-result-object v1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
+    .line 11
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     return-object v1
@@ -758,12 +787,14 @@
     :try_start_4
     const-string v2, "TCMP"
 
+    .line 12
     invoke-static {v1, v2, p0, v4, v4}, Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;->parseUint8Attribute(ILjava/lang/String;Lcom/google/android/exoplayer2/util/ParsableByteArray;ZZ)Lcom/google/android/exoplayer2/metadata/id3/Id3Frame;
 
     move-result-object v1
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
+    .line 13
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     return-object v1
@@ -773,6 +804,7 @@
 
     if-ne v1, v2, :cond_6
 
+    .line 14
     :try_start_5
     invoke-static {p0}, Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;->parseCoverArt(Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/metadata/id3/ApicFrame;
 
@@ -780,6 +812,7 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
+    .line 15
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     return-object v1
@@ -792,12 +825,14 @@
     :try_start_6
     const-string v2, "TPE2"
 
+    .line 16
     invoke-static {v1, v2, p0}, Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;->parseTextAttribute(ILjava/lang/String;Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;
 
     move-result-object v1
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
+    .line 17
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     return-object v1
@@ -810,12 +845,14 @@
     :try_start_7
     const-string v2, "TSOT"
 
+    .line 18
     invoke-static {v1, v2, p0}, Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;->parseTextAttribute(ILjava/lang/String;Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;
 
     move-result-object v1
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
+    .line 19
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     return-object v1
@@ -828,12 +865,14 @@
     :try_start_8
     const-string v2, "TSO2"
 
+    .line 20
     invoke-static {v1, v2, p0}, Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;->parseTextAttribute(ILjava/lang/String;Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;
 
     move-result-object v1
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
+    .line 21
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     return-object v1
@@ -846,12 +885,14 @@
     :try_start_9
     const-string v2, "TSOA"
 
+    .line 22
     invoke-static {v1, v2, p0}, Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;->parseTextAttribute(ILjava/lang/String;Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;
 
     move-result-object v1
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_0
 
+    .line 23
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     return-object v1
@@ -864,12 +905,14 @@
     :try_start_a
     const-string v2, "TSOP"
 
+    .line 24
     invoke-static {v1, v2, p0}, Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;->parseTextAttribute(ILjava/lang/String;Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;
 
     move-result-object v1
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_0
 
+    .line 25
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     return-object v1
@@ -882,12 +925,14 @@
     :try_start_b
     const-string v2, "TSOC"
 
+    .line 26
     invoke-static {v1, v2, p0}, Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;->parseTextAttribute(ILjava/lang/String;Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;
 
     move-result-object v1
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_0
 
+    .line 27
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     return-object v1
@@ -900,12 +945,14 @@
     :try_start_c
     const-string v2, "ITUNESADVISORY"
 
+    .line 28
     invoke-static {v1, v2, p0, v3, v3}, Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;->parseUint8Attribute(ILjava/lang/String;Lcom/google/android/exoplayer2/util/ParsableByteArray;ZZ)Lcom/google/android/exoplayer2/metadata/id3/Id3Frame;
 
     move-result-object v1
     :try_end_c
     .catchall {:try_start_c .. :try_end_c} :catchall_0
 
+    .line 29
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     return-object v1
@@ -918,12 +965,14 @@
     :try_start_d
     const-string v2, "ITUNESGAPLESS"
 
+    .line 30
     invoke-static {v1, v2, p0, v3, v4}, Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;->parseUint8Attribute(ILjava/lang/String;Lcom/google/android/exoplayer2/util/ParsableByteArray;ZZ)Lcom/google/android/exoplayer2/metadata/id3/Id3Frame;
 
     move-result-object v1
     :try_end_d
     .catchall {:try_start_d .. :try_end_d} :catchall_0
 
+    .line 31
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     return-object v1
@@ -936,12 +985,14 @@
     :try_start_e
     const-string v2, "TVSHOWSORT"
 
+    .line 32
     invoke-static {v1, v2, p0}, Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;->parseTextAttribute(ILjava/lang/String;Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;
 
     move-result-object v1
     :try_end_e
     .catchall {:try_start_e .. :try_end_e} :catchall_0
 
+    .line 33
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     return-object v1
@@ -954,12 +1005,14 @@
     :try_start_f
     const-string v2, "TVSHOW"
 
+    .line 34
     invoke-static {v1, v2, p0}, Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;->parseTextAttribute(ILjava/lang/String;Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;
 
     move-result-object v1
     :try_end_f
     .catchall {:try_start_f .. :try_end_f} :catchall_0
 
+    .line 35
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     return-object v1
@@ -969,6 +1022,7 @@
 
     if-ne v1, v2, :cond_1b
 
+    .line 36
     :try_start_10
     invoke-static {p0, v0}, Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;->parseInternalAttribute(Lcom/google/android/exoplayer2/util/ParsableByteArray;I)Lcom/google/android/exoplayer2/metadata/id3/Id3Frame;
 
@@ -976,6 +1030,7 @@
     :try_end_10
     .catchall {:try_start_10 .. :try_end_10} :catchall_0
 
+    .line 37
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     return-object v1
@@ -990,6 +1045,7 @@
 
     if-ne v2, v3, :cond_12
 
+    .line 38
     :try_start_11
     invoke-static {v1, p0}, Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;->parseCommentAttribute(ILcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/metadata/id3/CommentFrame;
 
@@ -997,6 +1053,7 @@
     :try_end_11
     .catchall {:try_start_11 .. :try_end_11} :catchall_0
 
+    .line 39
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     return-object v1
@@ -1036,12 +1093,14 @@
     :try_start_12
     const-string v2, "TDRC"
 
+    .line 40
     invoke-static {v1, v2, p0}, Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;->parseTextAttribute(ILjava/lang/String;Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;
 
     move-result-object v1
     :try_end_12
     .catchall {:try_start_12 .. :try_end_12} :catchall_0
 
+    .line 41
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     return-object v1
@@ -1054,12 +1113,14 @@
     :try_start_13
     const-string v2, "TPE1"
 
+    .line 42
     invoke-static {v1, v2, p0}, Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;->parseTextAttribute(ILjava/lang/String;Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;
 
     move-result-object v1
     :try_end_13
     .catchall {:try_start_13 .. :try_end_13} :catchall_0
 
+    .line 43
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     return-object v1
@@ -1072,12 +1133,14 @@
     :try_start_14
     const-string v2, "TSSE"
 
+    .line 44
     invoke-static {v1, v2, p0}, Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;->parseTextAttribute(ILjava/lang/String;Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;
 
     move-result-object v1
     :try_end_14
     .catchall {:try_start_14 .. :try_end_14} :catchall_0
 
+    .line 45
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     return-object v1
@@ -1090,12 +1153,14 @@
     :try_start_15
     const-string v2, "TALB"
 
+    .line 46
     invoke-static {v1, v2, p0}, Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;->parseTextAttribute(ILjava/lang/String;Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;
 
     move-result-object v1
     :try_end_15
     .catchall {:try_start_15 .. :try_end_15} :catchall_0
 
+    .line 47
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     return-object v1
@@ -1108,12 +1173,14 @@
     :try_start_16
     const-string v2, "USLT"
 
+    .line 48
     invoke-static {v1, v2, p0}, Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;->parseTextAttribute(ILjava/lang/String;Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;
 
     move-result-object v1
     :try_end_16
     .catchall {:try_start_16 .. :try_end_16} :catchall_0
 
+    .line 49
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     return-object v1
@@ -1126,12 +1193,14 @@
     :try_start_17
     const-string v2, "TCON"
 
+    .line 50
     invoke-static {v1, v2, p0}, Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;->parseTextAttribute(ILjava/lang/String;Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;
 
     move-result-object v1
     :try_end_17
     .catchall {:try_start_17 .. :try_end_17} :catchall_0
 
+    .line 51
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     return-object v1
@@ -1144,12 +1213,14 @@
     :try_start_18
     const-string v2, "TIT1"
 
+    .line 52
     invoke-static {v1, v2, p0}, Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;->parseTextAttribute(ILjava/lang/String;Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;
 
     move-result-object v1
     :try_end_18
     .catchall {:try_start_18 .. :try_end_18} :catchall_0
 
+    .line 53
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     return-object v1
@@ -1158,6 +1229,7 @@
     :try_start_19
     const-string v2, "MetadataUtil"
 
+    .line 54
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1180,23 +1252,26 @@
     :try_end_19
     .catchall {:try_start_19 .. :try_end_19} :catchall_0
 
+    const/4 v1, 0x0
+
+    .line 55
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
-    const/4 p0, 0x0
-
-    return-object p0
+    return-object v1
 
     :cond_1c
     :goto_1
     :try_start_1a
     const-string v2, "TCOM"
 
+    .line 56
     invoke-static {v1, v2, p0}, Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;->parseTextAttribute(ILjava/lang/String;Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;
 
     move-result-object v1
     :try_end_1a
     .catchall {:try_start_1a .. :try_end_1a} :catchall_0
 
+    .line 57
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     return-object v1
@@ -1206,12 +1281,14 @@
     :try_start_1b
     const-string v2, "TIT2"
 
+    .line 58
     invoke-static {v1, v2, p0}, Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;->parseTextAttribute(ILjava/lang/String;Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;
 
     move-result-object v1
     :try_end_1b
     .catchall {:try_start_1b .. :try_end_1b} :catchall_0
 
+    .line 59
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     return-object v1
@@ -1219,6 +1296,7 @@
     :goto_3
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
+    .line 60
     throw v1
 .end method
 
@@ -1227,19 +1305,21 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v0
 
+    .line 2
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v1
 
-    const v2, 0x64617461
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    const v3, 0x64617461
 
-    if-ne v1, v2, :cond_1
+    if-ne v1, v3, :cond_1
 
     const/16 v1, 0x16
 
@@ -1247,14 +1327,17 @@
 
     const/16 v0, 0xa
 
+    .line 3
     invoke-virtual {p2, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
+    .line 4
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedShort()I
 
     move-result v0
 
     if-lez v0, :cond_1
 
+    .line 5
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1269,12 +1352,14 @@
 
     move-result-object p0
 
+    .line 6
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedShort()I
 
     move-result p2
 
     if-lez p2, :cond_0
 
+    .line 7
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1291,13 +1376,15 @@
 
     move-result-object p0
 
+    .line 8
     :cond_0
     new-instance p2, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;
 
-    invoke-direct {p2, p1, v3, p0}, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p2, p1, v2, p0}, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-object p2
 
+    .line 9
     :cond_1
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -1321,7 +1408,7 @@
 
     invoke-static {p1, p0}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    return-object v3
+    return-object v2
 .end method
 
 .method private static parseInternalAttribute(Lcom/google/android/exoplayer2/util/ParsableByteArray;I)Lcom/google/android/exoplayer2/metadata/id3/Id3Frame;
@@ -1329,18 +1416,19 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    const/4 v0, 0x0
+    const/4 v0, -0x1
 
-    const/4 v1, -0x1
+    const/4 v1, 0x0
 
-    move-object v2, v0
-
-    move-object v3, v2
-
-    move v4, v1
+    move v4, v0
 
     move v5, v4
 
+    move-object v2, v1
+
+    move-object v3, v2
+
+    .line 1
     :goto_0
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getPosition()I
 
@@ -1348,20 +1436,24 @@
 
     if-ge v6, p1, :cond_3
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getPosition()I
 
     move-result v6
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v7
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v8
 
     const/4 v9, 0x4
 
+    .line 5
     invoke-virtual {p0, v9}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
     const v9, 0x6d65616e
@@ -1370,6 +1462,7 @@
 
     add-int/lit8 v7, v7, -0xc
 
+    .line 6
     invoke-virtual {p0, v7}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readNullTerminatedString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -1383,6 +1476,7 @@
 
     add-int/lit8 v7, v7, -0xc
 
+    .line 7
     invoke-virtual {p0, v7}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readNullTerminatedString(I)Ljava/lang/String;
 
     move-result-object v3
@@ -1401,6 +1495,7 @@
     :cond_2
     add-int/lit8 v7, v7, -0xc
 
+    .line 8
     invoke-virtual {p0, v7}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
     goto :goto_0
@@ -1410,23 +1505,27 @@
 
     if-eqz v3, :cond_5
 
-    if-ne v4, v1, :cond_4
+    if-ne v4, v0, :cond_4
 
     goto :goto_1
 
+    .line 9
     :cond_4
     invoke-virtual {p0, v4}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     const/16 p1, 0x10
 
+    .line 10
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
     sub-int/2addr v5, p1
 
+    .line 11
     invoke-virtual {p0, v5}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readNullTerminatedString(I)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 12
     new-instance p1, Lcom/google/android/exoplayer2/metadata/id3/InternalFrame;
 
     invoke-direct {p1, v2, v3, p0}, Lcom/google/android/exoplayer2/metadata/id3/InternalFrame;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
@@ -1435,7 +1534,7 @@
 
     :cond_5
     :goto_1
-    return-object v0
+    return-object v1
 .end method
 
 .method public static parseMdtaMetadataEntryFromIlst(Lcom/google/android/exoplayer2/util/ParsableByteArray;ILjava/lang/String;)Lcom/google/android/exoplayer2/metadata/mp4/MdtaMetadataEntry;
@@ -1443,6 +1542,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     :goto_0
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getPosition()I
 
@@ -1450,10 +1550,12 @@
 
     if-ge v0, p1, :cond_1
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v1
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v2
@@ -1462,22 +1564,27 @@
 
     if-ne v2, v3, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result p1
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v0
 
     add-int/lit8 v1, v1, -0x10
 
+    .line 6
     new-array v2, v1, [B
 
     const/4 v3, 0x0
 
+    .line 7
     invoke-virtual {p0, v2, v3, v1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readBytes([BII)V
 
+    .line 8
     new-instance p0, Lcom/google/android/exoplayer2/metadata/mp4/MdtaMetadataEntry;
 
     invoke-direct {p0, p2, v2, v0, p1}, Lcom/google/android/exoplayer2/metadata/mp4/MdtaMetadataEntry;-><init>(Ljava/lang/String;[BII)V
@@ -1487,6 +1594,7 @@
     :cond_0
     add-int/2addr v0, v1
 
+    .line 9
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     goto :goto_0
@@ -1502,6 +1610,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;->parseUint8AttributeValue(Lcom/google/android/exoplayer2/util/ParsableByteArray;)I
 
     move-result p0
@@ -1510,6 +1619,7 @@
 
     if-lez p0, :cond_0
 
+    .line 2
     sget-object v1, Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;->STANDARD_GENRES:[Ljava/lang/String;
 
     array-length v2, v1
@@ -1518,6 +1628,7 @@
 
     add-int/lit8 p0, p0, -0x1
 
+    .line 3
     aget-object p0, v1, p0
 
     goto :goto_0
@@ -1528,6 +1639,7 @@
     :goto_0
     if-eqz p0, :cond_1
 
+    .line 4
     new-instance v1, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;
 
     const-string v2, "TCON"
@@ -1541,6 +1653,7 @@
 
     const-string v1, "Failed to parse standard genre code"
 
+    .line 5
     invoke-static {p0, v1}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
@@ -1551,36 +1664,42 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v0
 
+    .line 2
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v1
 
-    const v2, 0x64617461
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    const v3, 0x64617461
 
-    if-ne v1, v2, :cond_0
+    if-ne v1, v3, :cond_0
 
     const/16 p0, 0x8
 
+    .line 3
     invoke-virtual {p2, p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
     add-int/lit8 v0, v0, -0x10
 
+    .line 4
     invoke-virtual {p2, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readNullTerminatedString(I)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 5
     new-instance p2, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;
 
-    invoke-direct {p2, p1, v3, p0}, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p2, p1, v2, p0}, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-object p2
 
+    .line 6
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -1604,7 +1723,7 @@
 
     invoke-static {p1, p0}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    return-object v3
+    return-object v2
 .end method
 
 .method private static parseUint8Attribute(ILjava/lang/String;Lcom/google/android/exoplayer2/util/ParsableByteArray;ZZ)Lcom/google/android/exoplayer2/metadata/id3/Id3Frame;
@@ -1612,6 +1731,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-static {p2}, Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;->parseUint8AttributeValue(Lcom/google/android/exoplayer2/util/ParsableByteArray;)I
 
     move-result p2
@@ -1620,6 +1740,7 @@
 
     const/4 p4, 0x1
 
+    .line 2
     invoke-static {p4, p2}, Ljava/lang/Math;->min(II)I
 
     move-result p2
@@ -1631,6 +1752,7 @@
 
     if-eqz p3, :cond_1
 
+    .line 3
     new-instance p0, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;
 
     invoke-static {p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -1641,20 +1763,22 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     new-instance p0, Lcom/google/android/exoplayer2/metadata/id3/CommentFrame;
-
-    const-string p3, "und"
 
     invoke-static {p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p2
+
+    const-string p3, "und"
 
     invoke-direct {p0, p3, p1, p2}, Lcom/google/android/exoplayer2/metadata/id3/CommentFrame;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-object p0
 
+    .line 5
     :cond_2
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -1686,8 +1810,10 @@
 
     const/4 v0, 0x4
 
+    .line 1
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v0
@@ -1698,8 +1824,10 @@
 
     const/16 v0, 0x8
 
+    .line 3
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result p0
@@ -1711,6 +1839,7 @@
 
     const-string v0, "Failed to parse uint8 attribute value"
 
+    .line 5
     invoke-static {p0, v0}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p0, -0x1
@@ -1725,20 +1854,24 @@
 
     if-ne p0, v0, :cond_0
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/extractor/GaplessInfoHolder;->hasGaplessInfo()Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     iget p0, p1, Lcom/google/android/exoplayer2/extractor/GaplessInfoHolder;->encoderDelay:I
 
+    .line 3
     invoke-virtual {p2, p0}, Lcom/google/android/exoplayer2/Format$Builder;->setEncoderDelay(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
     iget p1, p1, Lcom/google/android/exoplayer2/extractor/GaplessInfoHolder;->encoderPadding:I
 
+    .line 4
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/Format$Builder;->setEncoderPadding(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     :cond_0
@@ -1756,6 +1889,7 @@
         .end annotation
     .end param
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/metadata/Metadata;
 
     const/4 v1, 0x0
@@ -1781,6 +1915,7 @@
 
     move p0, v1
 
+    .line 2
     :goto_0
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/metadata/Metadata;->length()I
 
@@ -1788,16 +1923,20 @@
 
     if-ge p0, p1, :cond_2
 
+    .line 3
     invoke-virtual {p2, p0}, Lcom/google/android/exoplayer2/metadata/Metadata;->get(I)Lcom/google/android/exoplayer2/metadata/Metadata$Entry;
 
     move-result-object p1
 
+    .line 4
     instance-of v3, p1, Lcom/google/android/exoplayer2/metadata/mp4/MdtaMetadataEntry;
 
     if-eqz v3, :cond_1
 
+    .line 5
     check-cast p1, Lcom/google/android/exoplayer2/metadata/mp4/MdtaMetadataEntry;
 
+    .line 6
     iget-object v3, p1, Lcom/google/android/exoplayer2/metadata/mp4/MdtaMetadataEntry;->key:Ljava/lang/String;
 
     const-string v4, "com.android.capture.fps"
@@ -1808,6 +1947,7 @@
 
     if-eqz v3, :cond_1
 
+    .line 7
     new-instance p0, Lcom/google/android/exoplayer2/metadata/Metadata;
 
     new-array p2, v2, [Lcom/google/android/exoplayer2/metadata/Metadata$Entry;
@@ -1828,6 +1968,7 @@
     :cond_2
     move-object p1, v0
 
+    .line 8
     :goto_1
     array-length p0, p4
 
@@ -1836,6 +1977,7 @@
 
     aget-object p2, p4, v1
 
+    .line 9
     invoke-virtual {p1, p2}, Lcom/google/android/exoplayer2/metadata/Metadata;->copyWithAppendedEntriesFrom(Lcom/google/android/exoplayer2/metadata/Metadata;)Lcom/google/android/exoplayer2/metadata/Metadata;
 
     move-result-object p1
@@ -1844,6 +1986,7 @@
 
     goto :goto_2
 
+    .line 10
     :cond_3
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/metadata/Metadata;->length()I
 
@@ -1851,6 +1994,7 @@
 
     if-lez p0, :cond_4
 
+    .line 11
     invoke-virtual {p3, p1}, Lcom/google/android/exoplayer2/Format$Builder;->setMetadata(Lcom/google/android/exoplayer2/metadata/Metadata;)Lcom/google/android/exoplayer2/Format$Builder;
 
     :cond_4

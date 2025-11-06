@@ -24,9 +24,9 @@
 
 
 # instance fields
-.field public a:Landroidx/lifecycle/LifecycleOwner;
+.field private a:Landroidx/lifecycle/LifecycleOwner;
 
-.field public final b:Lio/reactivex/functions/Predicate;
+.field private final b:Lio/reactivex/functions/Predicate;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lio/reactivex/functions/Predicate<",
@@ -39,15 +39,26 @@
 # direct methods
 .method public constructor <init>(Landroidx/lifecycle/LifecycleOwner;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "owner"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Lcom/android/camera/data/observeable/RxData$a$a;
 
     invoke-direct {v0, p0}, Lcom/android/camera/data/observeable/RxData$a$a;-><init>(Lcom/android/camera/data/observeable/RxData$a;)V
 
     iput-object v0, p0, Lcom/android/camera/data/observeable/RxData$a;->b:Lio/reactivex/functions/Predicate;
 
+    .line 3
     iput-object p1, p0, Lcom/android/camera/data/observeable/RxData$a;->a:Landroidx/lifecycle/LifecycleOwner;
 
     return-void
@@ -56,6 +67,7 @@
 .method public static synthetic a(Lcom/android/camera/data/observeable/RxData$a;)Landroidx/lifecycle/LifecycleOwner;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera/data/observeable/RxData$a;->a:Landroidx/lifecycle/LifecycleOwner;
 
     return-object p0
@@ -73,6 +85,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera/data/observeable/RxData$a;->b:Lio/reactivex/functions/Predicate;
 
     return-object p0

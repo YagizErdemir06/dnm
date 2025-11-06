@@ -23,21 +23,22 @@
 
 
 # static fields
-.field public static final enum a:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
-
-.field public static final enum b:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
-
 .field public static final enum c:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
 
 .field public static final enum d:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
 
-.field public static final synthetic e:[Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
+.field public static final enum f:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
+
+.field public static final enum g:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
+
+.field private static final synthetic j:[Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 9
 
+    .line 1
     new-instance v0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
 
     const-string v1, "Collapsed"
@@ -46,8 +47,9 @@
 
     invoke-direct {v0, v1, v2}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;->a:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
+    sput-object v0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;->c:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
 
+    .line 2
     new-instance v1, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
 
     const-string v3, "Expanding"
@@ -56,8 +58,9 @@
 
     invoke-direct {v1, v3, v4}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;-><init>(Ljava/lang/String;I)V
 
-    sput-object v1, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;->b:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
+    sput-object v1, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;->d:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
 
+    .line 3
     new-instance v3, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
 
     const-string v5, "Expanded"
@@ -66,8 +69,9 @@
 
     invoke-direct {v3, v5, v6}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;-><init>(Ljava/lang/String;I)V
 
-    sput-object v3, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;->c:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
+    sput-object v3, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;->f:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
 
+    .line 4
     new-instance v5, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
 
     const-string v7, "Collapsing"
@@ -76,7 +80,7 @@
 
     invoke-direct {v5, v7, v8}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;-><init>(Ljava/lang/String;I)V
 
-    sput-object v5, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;->d:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
+    sput-object v5, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;->g:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
 
     const/4 v7, 0x4
 
@@ -90,19 +94,16 @@
 
     aput-object v5, v7, v8
 
-    sput-object v7, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;->e:[Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
+    .line 5
+    sput-object v7, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;->j:[Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;I)V
+.method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -111,6 +112,7 @@
 .method public static valueOf(Ljava/lang/String;)Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
     .locals 1
 
+    .line 1
     const-class v0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -125,7 +127,8 @@
 .method public static values()[Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
     .locals 1
 
-    sget-object v0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;->e:[Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
+    .line 1
+    sget-object v0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;->j:[Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
 
     invoke-virtual {v0}, [Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;->clone()Ljava/lang/Object;
 

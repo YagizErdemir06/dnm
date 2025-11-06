@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/drm/DrmSessionManager$1;
+.class public Lcom/google/android/exoplayer2/drm/DrmSessionManager$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -21,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,6 +38,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p2, Lcom/google/android/exoplayer2/Format;->drmInitData:Lcom/google/android/exoplayer2/drm/DrmInitData;
 
     if-nez p0, :cond_0
@@ -45,6 +47,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     new-instance p0, Lcom/google/android/exoplayer2/drm/ErrorStateDrmSession;
 
@@ -68,6 +71,7 @@
 .method public getCryptoType(Lcom/google/android/exoplayer2/Format;)I
     .locals 0
 
+    .line 1
     iget-object p0, p1, Lcom/google/android/exoplayer2/Format;->drmInitData:Lcom/google/android/exoplayer2/drm/DrmInitData;
 
     if-eqz p0, :cond_0

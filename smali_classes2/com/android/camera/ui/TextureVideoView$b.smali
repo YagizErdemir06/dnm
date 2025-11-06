@@ -18,18 +18,29 @@
 
 
 # instance fields
-.field public final synthetic a:Landroid/graphics/SurfaceTexture;
+.field public final synthetic c:Landroid/graphics/SurfaceTexture;
 
-.field public final synthetic b:Lcom/android/camera/ui/TextureVideoView;
+.field public final synthetic d:Lcom/android/camera/ui/TextureVideoView;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera/ui/TextureVideoView;Landroid/graphics/SurfaceTexture;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$surface"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera/ui/TextureVideoView$b;->b:Lcom/android/camera/ui/TextureVideoView;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/ui/TextureVideoView$b;->d:Lcom/android/camera/ui/TextureVideoView;
 
-    iput-object p2, p0, Lcom/android/camera/ui/TextureVideoView$b;->a:Landroid/graphics/SurfaceTexture;
+    iput-object p2, p0, Lcom/android/camera/ui/TextureVideoView$b;->c:Landroid/graphics/SurfaceTexture;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,21 +52,23 @@
 .method public run()V
     .locals 1
 
-    iget-object v0, p0, Lcom/android/camera/ui/TextureVideoView$b;->b:Lcom/android/camera/ui/TextureVideoView;
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/ui/TextureVideoView$b;->d:Lcom/android/camera/ui/TextureVideoView;
 
-    invoke-static {v0}, Lcom/android/camera/ui/TextureVideoView;->j(Lcom/android/camera/ui/TextureVideoView;)Lcom/android/camera/ui/TextureVideoView$d;
+    invoke-static {v0}, Lcom/android/camera/ui/TextureVideoView;->b(Lcom/android/camera/ui/TextureVideoView;)Lcom/android/camera/ui/TextureVideoView$d;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/camera/ui/TextureVideoView$b;->b:Lcom/android/camera/ui/TextureVideoView;
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/ui/TextureVideoView$b;->d:Lcom/android/camera/ui/TextureVideoView;
 
-    invoke-static {v0}, Lcom/android/camera/ui/TextureVideoView;->j(Lcom/android/camera/ui/TextureVideoView;)Lcom/android/camera/ui/TextureVideoView$d;
+    invoke-static {v0}, Lcom/android/camera/ui/TextureVideoView;->b(Lcom/android/camera/ui/TextureVideoView;)Lcom/android/camera/ui/TextureVideoView$d;
 
     move-result-object v0
 
-    iget-object p0, p0, Lcom/android/camera/ui/TextureVideoView$b;->a:Landroid/graphics/SurfaceTexture;
+    iget-object p0, p0, Lcom/android/camera/ui/TextureVideoView$b;->c:Landroid/graphics/SurfaceTexture;
 
     invoke-interface {v0, p0}, Lcom/android/camera/ui/TextureVideoView$d;->onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)V
 

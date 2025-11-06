@@ -3,38 +3,47 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/android/camera/ui/c1;
+.implements Ld/d/a/d8/z1;
 
 
 # instance fields
-.field public a:I
+.field private c:I
 
-.field public b:I
+.field private d:I
 
-.field public c:Lz9/b;
+.field private f:Ld/d/a/d8/n2/e/b;
 
-.field public d:Landroid/graphics/RectF;
+.field private g:Landroid/graphics/RectF;
 
-.field public e:Landroid/graphics/RectF;
+.field private j:Landroid/graphics/RectF;
 
-.field public f:I
+.field private m:I
 
-.field public g:I
+.field private n:I
 
-.field public h:Z
+.field private p:Z
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
     .end annotation
 
     .line 1
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/android/camera/ui/LightingView;->b(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/android/camera/ui/LightingView;->b(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -45,12 +54,22 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     .line 3
     invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 4
-    invoke-virtual {p0, p1}, Lcom/android/camera/ui/LightingView;->b(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/android/camera/ui/LightingView;->b(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -61,14 +80,65 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr"
+        }
     .end annotation
 
     .line 5
     invoke-direct {p0, p1, p2, p3}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 6
-    invoke-virtual {p0, p1}, Lcom/android/camera/ui/LightingView;->b(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/android/camera/ui/LightingView;->b(Landroid/content/Context;)V
+
+    return-void
+.end method
+
+.method private b(Landroid/content/Context;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Ld/d/a/d8/n2/e/b;
+
+    invoke-direct {v0, p1}, Ld/d/a/d8/n2/e/b;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/android/camera/ui/LightingView;->f:Ld/d/a/d8/n2/e/b;
+
+    .line 2
+    invoke-virtual {v0, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+
+    .line 3
+    new-instance p1, Landroid/graphics/RectF;
+
+    invoke-direct {p1}, Landroid/graphics/RectF;-><init>()V
+
+    iput-object p1, p0, Lcom/android/camera/ui/LightingView;->g:Landroid/graphics/RectF;
+
+    .line 4
+    new-instance p1, Landroid/graphics/RectF;
+
+    invoke-direct {p1}, Landroid/graphics/RectF;-><init>()V
+
+    iput-object p1, p0, Lcom/android/camera/ui/LightingView;->j:Landroid/graphics/RectF;
 
     return-void
 .end method
@@ -78,35 +148,10 @@
 .method public a()V
     .locals 0
 
-    iget-object p0, p0, Lcom/android/camera/ui/LightingView;->c:Lz9/b;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/ui/LightingView;->f:Ld/d/a/d8/n2/e/b;
 
-    invoke-virtual {p0}, Lz9/b;->q()V
-
-    return-void
-.end method
-
-.method public final b(Landroid/content/Context;)V
-    .locals 1
-
-    new-instance v0, Lz9/b;
-
-    invoke-direct {v0, p1}, Lz9/b;-><init>(Landroid/content/Context;)V
-
-    iput-object v0, p0, Lcom/android/camera/ui/LightingView;->c:Lz9/b;
-
-    invoke-virtual {v0, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
-
-    new-instance p1, Landroid/graphics/RectF;
-
-    invoke-direct {p1}, Landroid/graphics/RectF;-><init>()V
-
-    iput-object p1, p0, Lcom/android/camera/ui/LightingView;->d:Landroid/graphics/RectF;
-
-    new-instance p1, Landroid/graphics/RectF;
-
-    invoke-direct {p1}, Landroid/graphics/RectF;-><init>()V
-
-    iput-object p1, p0, Lcom/android/camera/ui/LightingView;->e:Landroid/graphics/RectF;
+    invoke-virtual {p0}, Ld/d/a/d8/n2/e/b;->p()V
 
     return-void
 .end method
@@ -114,34 +159,50 @@
 .method public c()V
     .locals 0
 
-    iget-object p0, p0, Lcom/android/camera/ui/LightingView;->c:Lz9/b;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/ui/LightingView;->f:Ld/d/a/d8/n2/e/b;
 
-    invoke-virtual {p0}, Lz9/b;->k()V
+    invoke-virtual {p0}, Ld/d/a/d8/n2/e/b;->j()V
 
     return-void
 .end method
 
 .method public d(IZ)V
     .locals 0
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isLightingVersion1"
         type = 0x2
     .end annotation
 
-    iget p2, p0, Lcom/android/camera/ui/LightingView;->g:I
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "orientation",
+            "animation"
+        }
+    .end annotation
+
+    .line 1
+    iget p2, p0, Lcom/android/camera/ui/LightingView;->n:I
 
     if-eq p2, p1, :cond_0
 
-    iput p1, p0, Lcom/android/camera/ui/LightingView;->g:I
+    .line 2
+    iput p1, p0, Lcom/android/camera/ui/LightingView;->n:I
 
-    iget-object p0, p0, Lcom/android/camera/ui/LightingView;->c:Lz9/b;
+    .line 3
+    iget-object p0, p0, Lcom/android/camera/ui/LightingView;->f:Ld/d/a/d8/n2/e/b;
 
     if-eqz p0, :cond_0
 
     const/4 p2, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lz9/b;->y(IZ)V
+    .line 4
+    invoke-virtual {p0, p1, p2}, Ld/d/a/d8/n2/e/b;->y(IZ)V
 
     :cond_0
     return-void
@@ -149,15 +210,16 @@
 
 .method public e()V
     .locals 0
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isLightingVersion1"
         type = 0x2
     .end annotation
 
-    iget-object p0, p0, Lcom/android/camera/ui/LightingView;->c:Lz9/b;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/ui/LightingView;->f:Ld/d/a/d8/n2/e/b;
 
-    invoke-virtual {p0}, Lz9/b;->w()V
+    invoke-virtual {p0}, Ld/d/a/d8/n2/e/b;->w()V
 
     return-void
 .end method
@@ -165,9 +227,10 @@
 .method public f()V
     .locals 0
 
-    iget-object p0, p0, Lcom/android/camera/ui/LightingView;->c:Lz9/b;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/ui/LightingView;->f:Ld/d/a/d8/n2/e/b;
 
-    invoke-virtual {p0}, Lz9/b;->n()V
+    invoke-virtual {p0}, Ld/d/a/d8/n2/e/b;->m()V
 
     return-void
 .end method
@@ -175,9 +238,10 @@
 .method public g()V
     .locals 0
 
-    iget-object p0, p0, Lcom/android/camera/ui/LightingView;->c:Lz9/b;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/ui/LightingView;->f:Ld/d/a/d8/n2/e/b;
 
-    invoke-virtual {p0}, Lz9/b;->x()V
+    invoke-virtual {p0}, Ld/d/a/d8/n2/e/b;->x()V
 
     return-void
 .end method
@@ -185,7 +249,8 @@
 .method public getFaceViewRectF()Landroid/graphics/RectF;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/camera/ui/LightingView;->d:Landroid/graphics/RectF;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/ui/LightingView;->g:Landroid/graphics/RectF;
 
     return-object p0
 .end method
@@ -193,7 +258,8 @@
 .method public getFocusRectF()Landroid/graphics/RectF;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/camera/ui/LightingView;->e:Landroid/graphics/RectF;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/ui/LightingView;->j:Landroid/graphics/RectF;
 
     return-object p0
 .end method
@@ -201,11 +267,12 @@
 .method public getIsFocusingSuccess()Z
     .locals 0
 
-    iget-object p0, p0, Lcom/android/camera/ui/LightingView;->c:Lz9/b;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/ui/LightingView;->f:Ld/d/a/d8/n2/e/b;
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Lz9/b;->r()Z
+    invoke-virtual {p0}, Ld/d/a/d8/n2/e/b;->q()Z
 
     move-result p0
 
@@ -224,7 +291,16 @@
 
 .method public invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "who"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     return-void
@@ -233,34 +309,57 @@
 .method public onDetachedFromWindow()V
     .locals 2
 
+    .line 1
     invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
 
-    iget-object v0, p0, Lcom/android/camera/ui/LightingView;->c:Lz9/b;
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/ui/LightingView;->f:Ld/d/a/d8/n2/e/b;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    iget-object p0, p0, Lcom/android/camera/ui/LightingView;->c:Lz9/b;
+    .line 3
+    iget-object p0, p0, Lcom/android/camera/ui/LightingView;->f:Ld/d/a/d8/n2/e/b;
 
-    invoke-virtual {p0}, Lz9/b;->q()V
+    invoke-virtual {p0}, Ld/d/a/d8/n2/e/b;->p()V
 
     return-void
 .end method
 
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "canvas"
+        }
+    .end annotation
 
-    iget-object p0, p0, Lcom/android/camera/ui/LightingView;->c:Lz9/b;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/ui/LightingView;->f:Ld/d/a/d8/n2/e/b;
 
-    invoke-virtual {p0, p1}, Lz9/b;->draw(Landroid/graphics/Canvas;)V
+    invoke-virtual {p0, p1}, Ld/d/a/d8/n2/e/b;->draw(Landroid/graphics/Canvas;)V
 
     return-void
 .end method
 
 .method public onMeasure(II)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "widthMeasureSpec",
+            "heightMeasureSpec"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
     move-result v0
@@ -269,60 +368,70 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 2
     invoke-super {p0, p1, p2}, Landroid/view/View;->onMeasure(II)V
 
     goto :goto_1
 
+    .line 3
     :cond_0
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p1
 
-    iput p1, p0, Lcom/android/camera/ui/LightingView;->a:I
+    iput p1, p0, Lcom/android/camera/ui/LightingView;->c:I
 
+    .line 4
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p1
 
-    iput p1, p0, Lcom/android/camera/ui/LightingView;->b:I
+    iput p1, p0, Lcom/android/camera/ui/LightingView;->d:I
 
-    iget p2, p0, Lcom/android/camera/ui/LightingView;->a:I
+    .line 5
+    iget p2, p0, Lcom/android/camera/ui/LightingView;->c:I
 
     invoke-virtual {p0, p2, p1}, Landroid/view/View;->setMeasuredDimension(II)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/LightingView;->c:Lz9/b;
+    .line 6
+    iget-object p1, p0, Lcom/android/camera/ui/LightingView;->f:Ld/d/a/d8/n2/e/b;
 
     if-eqz p1, :cond_2
 
-    iget-boolean p2, p0, Lcom/android/camera/ui/LightingView;->h:Z
+    .line 7
+    iget-boolean p2, p0, Lcom/android/camera/ui/LightingView;->p:Z
 
     const v0, 0x3f4ccccd    # 0.8f
 
     if-eqz p2, :cond_1
 
-    invoke-virtual {p1, v0}, Lz9/b;->u(F)V
+    .line 8
+    invoke-virtual {p1, v0}, Ld/d/a/d8/n2/e/b;->u(F)V
 
     goto :goto_0
 
     :cond_1
     const/high16 p2, 0x3f800000    # 1.0f
 
-    invoke-virtual {p1, p2}, Lz9/b;->u(F)V
+    .line 9
+    invoke-virtual {p1, p2}, Ld/d/a/d8/n2/e/b;->u(F)V
 
+    .line 10
     :goto_0
-    iget-object p1, p0, Lcom/android/camera/ui/LightingView;->c:Lz9/b;
+    iget-object p1, p0, Lcom/android/camera/ui/LightingView;->f:Ld/d/a/d8/n2/e/b;
 
-    iget p2, p0, Lcom/android/camera/ui/LightingView;->a:I
+    iget p2, p0, Lcom/android/camera/ui/LightingView;->c:I
 
-    iget v1, p0, Lcom/android/camera/ui/LightingView;->b:I
+    iget v1, p0, Lcom/android/camera/ui/LightingView;->d:I
 
-    iget v2, p0, Lcom/android/camera/ui/LightingView;->g:I
+    iget v2, p0, Lcom/android/camera/ui/LightingView;->n:I
 
-    invoke-virtual {p1, p2, v1, v2}, Lz9/b;->v(III)V
+    invoke-virtual {p1, p2, v1, v2}, Ld/d/a/d8/n2/e/b;->v(III)V
 
-    iget p1, p0, Lcom/android/camera/ui/LightingView;->a:I
+    .line 11
+    iget p1, p0, Lcom/android/camera/ui/LightingView;->c:I
 
-    iget p2, p0, Lcom/android/camera/ui/LightingView;->b:I
+    iget p2, p0, Lcom/android/camera/ui/LightingView;->d:I
 
     invoke-static {p1, p2}, Ljava/lang/Math;->max(II)I
 
@@ -338,13 +447,15 @@
 
     mul-float/2addr p1, v1
 
-    iget v1, p0, Lcom/android/camera/ui/LightingView;->a:I
+    .line 12
+    iget v1, p0, Lcom/android/camera/ui/LightingView;->c:I
 
     int-to-float v1, v1
 
     div-float/2addr v1, p2
 
-    iget v2, p0, Lcom/android/camera/ui/LightingView;->b:I
+    .line 13
+    iget v2, p0, Lcom/android/camera/ui/LightingView;->d:I
 
     int-to-float v2, v2
 
@@ -352,7 +463,8 @@
 
     mul-float/2addr v2, v0
 
-    iget-object p0, p0, Lcom/android/camera/ui/LightingView;->e:Landroid/graphics/RectF;
+    .line 14
+    iget-object p0, p0, Lcom/android/camera/ui/LightingView;->j:Landroid/graphics/RectF;
 
     sub-float p2, v1, p1
 
@@ -371,14 +483,25 @@
 
 .method public setCinematicAspectRatio(Z)V
     .locals 0
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isLightingVersion1"
         type = 0x2
     .end annotation
 
-    iput-boolean p1, p0, Lcom/android/camera/ui/LightingView;->h:Z
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isCinematicAspectRatio"
+        }
+    .end annotation
 
+    .line 1
+    iput-boolean p1, p0, Lcom/android/camera/ui/LightingView;->p:Z
+
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
     return-void
@@ -386,33 +509,61 @@
 
 .method public setCircleHeightRatio(F)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "ratio"
+        }
+    .end annotation
 
-    iget-object p0, p0, Lcom/android/camera/ui/LightingView;->c:Lz9/b;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/ui/LightingView;->f:Ld/d/a/d8/n2/e/b;
 
-    invoke-virtual {p0, p1}, Lz9/b;->t(F)V
+    invoke-virtual {p0, p1}, Ld/d/a/d8/n2/e/b;->t(F)V
 
     return-void
 .end method
 
 .method public setCircleRatio(F)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "ratio"
+        }
+    .end annotation
 
-    iget-object p0, p0, Lcom/android/camera/ui/LightingView;->c:Lz9/b;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/ui/LightingView;->f:Ld/d/a/d8/n2/e/b;
 
-    invoke-virtual {p0, p1}, Lz9/b;->u(F)V
+    invoke-virtual {p0, p1}, Ld/d/a/d8/n2/e/b;->u(F)V
 
     return-void
 .end method
 
 .method public setRotation(I)V
     .locals 0
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isLightingVersion1"
         type = 0x2
     .end annotation
 
-    iput p1, p0, Lcom/android/camera/ui/LightingView;->g:I
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "rotation"
+        }
+    .end annotation
+
+    .line 1
+    iput p1, p0, Lcom/android/camera/ui/LightingView;->n:I
 
     return-void
 .end method

@@ -19,6 +19,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,6 +32,7 @@
 
     new-array v0, v0, [I
 
+    .line 1
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -45,6 +47,7 @@
 
     return-object v0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -52,6 +55,7 @@
 
     const/16 v4, 0x23
 
+    .line 3
     invoke-virtual {p0, v4}, Ljava/lang/String;->indexOf(I)I
 
     move-result v4
@@ -66,6 +70,7 @@
     :goto_0
     const/16 v4, 0x3f
 
+    .line 4
     invoke-virtual {p0, v4}, Ljava/lang/String;->indexOf(I)I
 
     move-result v4
@@ -80,6 +85,7 @@
     :cond_3
     const/16 v5, 0x2f
 
+    .line 5
     invoke-virtual {p0, v5}, Ljava/lang/String;->indexOf(I)I
 
     move-result v6
@@ -94,6 +100,7 @@
     :cond_5
     const/16 v7, 0x3a
 
+    .line 6
     invoke-virtual {p0, v7}, Ljava/lang/String;->indexOf(I)I
 
     move-result v7
@@ -111,12 +118,14 @@
 
     add-int/lit8 v9, v7, 0x1
 
+    .line 7
     invoke-virtual {p0, v9}, Ljava/lang/String;->charAt(I)C
 
     move-result v9
 
     if-ne v9, v5, :cond_7
 
+    .line 8
     invoke-virtual {p0, v6}, Ljava/lang/String;->charAt(I)C
 
     move-result v6
@@ -135,6 +144,7 @@
 
     add-int/lit8 v6, v7, 0x3
 
+    .line 9
     invoke-virtual {p0, v5, v6}, Ljava/lang/String;->indexOf(II)I
 
     move-result p0
@@ -179,6 +189,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/UriUtil;->getUriIndices(Ljava/lang/String;)[I
 
     move-result-object p0
@@ -200,12 +211,14 @@
 
     if-lt p1, p2, :cond_0
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
+    .line 2
     :cond_0
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->charAt(I)C
 
@@ -231,6 +244,7 @@
 
     goto :goto_1
 
+    .line 3
     :cond_2
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->charAt(I)C
 
@@ -247,12 +261,14 @@
 
     if-ne v0, v4, :cond_3
 
+    .line 4
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->charAt(I)C
 
     move-result v6
 
     if-ne v6, v5, :cond_3
 
+    .line 5
     invoke-virtual {p0, v2, v3}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
 
     sub-int/2addr v3, v2
@@ -266,22 +282,25 @@
 
     if-ne v0, v6, :cond_5
 
+    .line 6
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->charAt(I)C
 
     move-result v6
 
     if-ne v6, v5, :cond_5
 
+    .line 7
     invoke-virtual {p0, v4}, Ljava/lang/StringBuilder;->charAt(I)C
 
     move-result v4
 
     if-ne v4, v5, :cond_5
 
-    const-string v0, "/"
-
     add-int/lit8 v2, v2, -0x2
 
+    const-string v0, "/"
+
+    .line 8
     invoke-virtual {p0, v0, v2}, Ljava/lang/StringBuilder;->lastIndexOf(Ljava/lang/String;I)I
 
     move-result v0
@@ -297,6 +316,7 @@
     :cond_4
     move v2, p1
 
+    .line 9
     :goto_2
     invoke-virtual {p0, v2, v3}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
 
@@ -322,6 +342,7 @@
 
     goto :goto_0
 
+    .line 10
     :cond_7
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -333,12 +354,15 @@
 .method public static removeQueryParameter(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
     .locals 5
 
+    .line 1
     invoke-virtual {p0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Landroid/net/Uri$Builder;->clearQuery()Landroid/net/Uri$Builder;
 
+    .line 3
     invoke-virtual {p0}, Landroid/net/Uri;->getQueryParameterNames()Ljava/util/Set;
 
     move-result-object v1
@@ -360,12 +384,14 @@
 
     check-cast v2, Ljava/lang/String;
 
+    .line 4
     invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
+    .line 5
     invoke-virtual {p0, v2}, Landroid/net/Uri;->getQueryParameters(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v3
@@ -387,10 +413,12 @@
 
     check-cast v4, Ljava/lang/String;
 
+    .line 6
     invoke-virtual {v0, v2, v4}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     goto :goto_0
 
+    .line 7
     :cond_1
     invoke-virtual {v0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
@@ -410,6 +438,7 @@
         .end annotation
     .end param
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -425,6 +454,7 @@
 
     move-object p1, v1
 
+    .line 2
     :cond_1
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/UriUtil;->getUriIndices(Ljava/lang/String;)[I
 
@@ -432,6 +462,7 @@
 
     const/4 v2, 0x0
 
+    .line 3
     aget v3, v1, v2
 
     const/4 v4, -0x1
@@ -442,20 +473,24 @@
 
     if-eq v3, v4, :cond_2
 
+    .line 4
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 5
     aget p0, v1, v6
 
     aget p1, v1, v5
 
     invoke-static {v0, p0, p1}, Lcom/google/android/exoplayer2/util/UriUtil;->removeDotSegments(Ljava/lang/StringBuilder;II)Ljava/lang/String;
 
+    .line 6
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
+    .line 7
     :cond_2
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/UriUtil;->getUriIndices(Ljava/lang/String;)[I
 
@@ -463,10 +498,12 @@
 
     const/4 v7, 0x3
 
+    .line 8
     aget v8, v1, v7
 
     if-nez v8, :cond_3
 
+    .line 9
     aget v1, v3, v7
 
     invoke-virtual {v0, p0, v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
@@ -479,11 +516,13 @@
 
     return-object p0
 
+    .line 10
     :cond_3
     aget v7, v1, v5
 
     if-nez v7, :cond_4
 
+    .line 11
     aget v1, v3, v5
 
     invoke-virtual {v0, p0, v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
@@ -496,19 +535,23 @@
 
     return-object p0
 
+    .line 12
     :cond_4
     aget v7, v1, v6
 
     if-eqz v7, :cond_5
 
+    .line 13
     aget v3, v3, v2
 
     add-int/2addr v3, v6
 
+    .line 14
     invoke-virtual {v0, p0, v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 15
     aget p0, v1, v6
 
     add-int/2addr p0, v3
@@ -523,7 +566,10 @@
 
     return-object p0
 
+    .line 16
     :cond_5
+    aget v7, v1, v6
+
     invoke-virtual {p1, v7}, Ljava/lang/String;->charAt(I)C
 
     move-result v7
@@ -532,17 +578,21 @@
 
     if-ne v7, v8, :cond_6
 
+    .line 17
     aget v4, v3, v6
 
     invoke-virtual {v0, p0, v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 18
     aget p0, v3, v6
 
-    aget p1, v1, v5
+    aget p1, v3, v6
 
-    add-int/2addr p1, p0
+    aget v1, v1, v5
+
+    add-int/2addr p1, v1
 
     invoke-static {v0, p0, p1}, Lcom/google/android/exoplayer2/util/UriUtil;->removeDotSegments(Ljava/lang/StringBuilder;II)Ljava/lang/String;
 
@@ -550,6 +600,7 @@
 
     return-object p0
 
+    .line 19
     :cond_6
     aget v7, v3, v2
 
@@ -559,21 +610,29 @@
 
     if-ge v7, v9, :cond_7
 
-    aget v7, v3, v5
+    aget v7, v3, v6
 
-    if-ne v9, v7, :cond_7
+    aget v9, v3, v5
 
-    invoke-virtual {v0, p0, v2, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
+    if-ne v7, v9, :cond_7
+
+    .line 20
+    aget v4, v3, v6
+
+    invoke-virtual {v0, p0, v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 21
     aget p0, v3, v6
 
-    aget p1, v1, v5
+    aget p1, v3, v6
 
-    add-int/2addr p1, p0
+    aget v1, v1, v5
+
+    add-int/2addr p1, v1
 
     add-int/2addr p1, v6
 
@@ -583,6 +642,7 @@
 
     return-object p0
 
+    .line 22
     :cond_7
     aget v7, v3, v5
 
@@ -594,6 +654,7 @@
 
     if-ne v7, v4, :cond_8
 
+    .line 23
     aget v4, v3, v6
 
     goto :goto_0
@@ -601,11 +662,13 @@
     :cond_8
     add-int/lit8 v4, v7, 0x1
 
+    .line 24
     :goto_0
     invoke-virtual {v0, p0, v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 25
     aget p0, v3, v6
 
     aget p1, v1, v5
@@ -630,6 +693,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/android/exoplayer2/util/UriUtil;->resolve(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0

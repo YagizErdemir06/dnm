@@ -30,6 +30,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -48,6 +49,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;
 
     invoke-direct {p0, p1}, Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;-><init>(Landroid/os/Parcel;)V
@@ -66,6 +68,7 @@
         }
     .end annotation
 
+    .line 1
     new-array p0, p1, [Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;
 
     return-object p0
@@ -82,6 +85,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper$a;->a(Landroid/os/Parcel;)Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;
 
     move-result-object p0
@@ -100,6 +104,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper$a;->b(I)[Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;
 
     move-result-object p0

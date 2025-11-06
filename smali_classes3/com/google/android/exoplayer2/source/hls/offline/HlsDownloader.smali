@@ -39,9 +39,7 @@
     .locals 1
 
     .line 1
-    new-instance v0, Landroidx/window/layout/e;
-
-    invoke-direct {v0}, Landroidx/window/layout/e;-><init>()V
+    sget-object v0, Ld/j/a/b/v2/a0/e/a;->c:Ld/j/a/b/v2/a0/e/a;
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/exoplayer2/source/hls/offline/HlsDownloader;-><init>(Lcom/google/android/exoplayer2/MediaItem;Lcom/google/android/exoplayer2/upstream/cache/CacheDataSource$Factory;Ljava/util/concurrent/Executor;)V
 
@@ -77,6 +75,7 @@
 
     const/4 p0, 0x0
 
+    .line 1
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -84,6 +83,7 @@
 
     if-ge p0, v0, :cond_0
 
+    .line 2
     invoke-interface {p1, p0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -120,28 +120,34 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p1, Lcom/google/android/exoplayer2/source/hls/playlist/HlsPlaylist;->baseUri:Ljava/lang/String;
 
+    .line 2
     iget-wide v0, p1, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->startTimeUs:J
 
     iget-wide v2, p2, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist$SegmentBase;->relativeStartTimeUs:J
 
     add-long/2addr v0, v2
 
+    .line 3
     iget-object p1, p2, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist$SegmentBase;->fullSegmentEncryptionKeyUri:Ljava/lang/String;
 
     if-eqz p1, :cond_0
 
+    .line 4
     invoke-static {p0, p1}, Lcom/google/android/exoplayer2/util/UriUtil;->resolveToUri(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
 
+    .line 5
     invoke-virtual {p3, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     move-result p3
 
     if-eqz p3, :cond_0
 
+    .line 6
     new-instance p3, Lcom/google/android/exoplayer2/offline/SegmentDownloader$Segment;
 
     invoke-static {p1}, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->getCompressibleDataSpec(Landroid/net/Uri;)Lcom/google/android/exoplayer2/upstream/DataSpec;
@@ -152,6 +158,7 @@
 
     invoke-virtual {p4, p3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 7
     :cond_0
     iget-object p1, p2, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist$SegmentBase;->url:Ljava/lang/String;
 
@@ -159,6 +166,7 @@
 
     move-result-object v3
 
+    .line 8
     new-instance p0, Lcom/google/android/exoplayer2/upstream/DataSpec;
 
     iget-wide v4, p2, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist$SegmentBase;->byteRangeOffset:J
@@ -169,6 +177,7 @@
 
     invoke-direct/range {v2 .. v7}, Lcom/google/android/exoplayer2/upstream/DataSpec;-><init>(Landroid/net/Uri;JJ)V
 
+    .line 9
     new-instance p1, Lcom/google/android/exoplayer2/offline/SegmentDownloader$Segment;
 
     invoke-direct {p1, v0, v1, p0}, Lcom/google/android/exoplayer2/offline/SegmentDownloader$Segment;-><init>(JLcom/google/android/exoplayer2/upstream/DataSpec;)V
@@ -305,23 +314,23 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 14
-    iget-object v3, v2, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->segments:Ljava/util/List;
+    const/4 v3, 0x0
 
-    const/4 v4, 0x0
+    .line 14
+    iget-object v4, v2, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->segments:Ljava/util/List;
 
     const/4 v5, 0x0
 
     .line 15
     :goto_2
-    invoke-interface {v3}, Ljava/util/List;->size()I
+    invoke-interface {v4}, Ljava/util/List;->size()I
 
     move-result v6
 
     if-ge v5, v6, :cond_1
 
     .line 16
-    invoke-interface {v3, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v4, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
 
@@ -332,12 +341,12 @@
 
     if-eqz v7, :cond_2
 
-    if-eq v7, v4, :cond_2
+    if-eq v7, v3, :cond_2
 
     .line 18
     invoke-direct {p0, v2, v7, v1, p2}, Lcom/google/android/exoplayer2/source/hls/offline/HlsDownloader;->addSegment(Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;Ljava/util/HashSet;Ljava/util/ArrayList;)V
 
-    move-object v4, v7
+    move-object v3, v7
 
     .line 19
     :cond_2

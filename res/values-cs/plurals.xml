@@ -84,18 +84,6 @@
         <item quantity="few">Doba trvání: %d sekundy</item>
         <item quantity="many">Doba trvání: %d sekundy</item>
     </plurals>
-    <plurals name="accessibility_watermark_characters_inputted">
-        <item quantity="other">Zadáno %d znaků.</item>
-        <item quantity="one">Zadán %d znak.</item>
-        <item quantity="few">Zadány %d znaky.</item>
-        <item quantity="many">Zadáno %d znaků.</item>
-    </plurals>
-    <plurals name="accessibility_watermark_characters_max">
-        <item quantity="other">Zadejte max. %d znaků.</item>
-        <item quantity="one">Zadejte max. %d znak.</item>
-        <item quantity="few">Zadejte max. %d znaky.</item>
-        <item quantity="many">Zadejte max. %d znaků.</item>
-    </plurals>
     <plurals name="cinemaster_toast_camera_overflow">
         <item quantity="other">Ke stejné síti můžete připojit max. %d fotoaparátů</item>
         <item quantity="one">Ke stejné síti můžete připojit max. %d fotoaparát</item>
@@ -209,12 +197,6 @@
         <item quantity="one">Vybrána %d položka</item>
         <item quantity="few">Vybrány %d položky</item>
         <item quantity="many">Vybráno %d položky</item>
-    </plurals>
-    <plurals name="mtrl_badge_content_description">
-        <item quantity="other">%d nových oznámení</item>
-        <item quantity="one">%d nové oznámení</item>
-        <item quantity="few">%d nová oznámení</item>
-        <item quantity="many">%d nového oznámení</item>
     </plurals>
     <plurals name="num_minutes_ago">
         <item quantity="other">Před %d minutami</item>

@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor$2;
+.class public Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor$2;
 .super Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
 .source "SourceFile"
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor;
+.field public final synthetic this$0:Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor;
 
 
 # direct methods
@@ -30,6 +30,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor$2;->this$0:Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor;
 
     invoke-direct {p0}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;-><init>()V
@@ -56,6 +57,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor;->access$100()Ljava/lang/String;
 
     move-result-object p0
@@ -112,6 +114,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor;->access$100()Ljava/lang/String;
 
     move-result-object p1
@@ -136,6 +139,7 @@
 
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor$2;->this$0:Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor;
 
+    .line 2
     invoke-static {p0}, Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor;->access$200(Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor;)Ljava/util/LinkedList;
 
     move-result-object p0
@@ -150,6 +154,7 @@
 
     move-result-object p0
 
+    .line 3
     invoke-static {p1, p0}, Lcom/xiaomi/engine/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -182,6 +187,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor;->access$100()Ljava/lang/String;
 
     move-result-object p1
@@ -204,6 +210,7 @@
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 2
     invoke-virtual {p3}, Landroid/hardware/camera2/CaptureFailure;->getReason()I
 
     move-result v0
@@ -224,8 +231,10 @@
 
     move-result-object p2
 
+    .line 3
     invoke-static {p1, p2}, Lcom/xiaomi/engine/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 4
     iget-object p1, p0, Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor$2;->this$0:Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor;
 
     invoke-static {p1}, Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor;->access$300(Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor;)Ljava/lang/Object;
@@ -234,6 +243,7 @@
 
     monitor-enter p1
 
+    .line 5
     :try_start_0
     iget-object p2, p0, Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor$2;->this$0:Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor;
 
@@ -243,6 +253,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 6
     iget-object p2, p0, Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor$2;->this$0:Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor;
 
     invoke-static {p2}, Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor;->access$400(Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor;)Lcom/xiaomi/camera/imagecodec/ReprocessData;
@@ -283,17 +294,20 @@
 
     invoke-interface {p2, p3, v0}, Lcom/xiaomi/camera/imagecodec/ReprocessData$OnDataAvailableListener;->onError(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 7
     iget-object p2, p0, Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor$2;->this$0:Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor;
 
     const/4 p3, 0x0
 
     invoke-static {p2, p3}, Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor;->access$402(Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor;Lcom/xiaomi/camera/imagecodec/ReprocessData;)Lcom/xiaomi/camera/imagecodec/ReprocessData;
 
+    .line 8
     :cond_0
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 9
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor$2;->this$0:Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor;
 
     invoke-static {p0}, Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor;->access$500(Lcom/xiaomi/camera/imagecodec/impl/VirtualCameraReprocessor;)V
@@ -303,6 +317,7 @@
     :catchall_0
     move-exception p0
 
+    .line 10
     :try_start_1
     monitor-exit p1
     :try_end_1

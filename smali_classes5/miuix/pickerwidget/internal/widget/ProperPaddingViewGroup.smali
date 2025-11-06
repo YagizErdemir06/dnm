@@ -4,35 +4,35 @@
 
 
 # static fields
-.field public static final l:I = -0x80000000
+.field private static final c:I = -0x80000000
 
-.field public static final m:I = 0x154
+.field private static final d:I = 0x154
 
-.field public static final n:I = 0x122
+.field private static final f:I = 0x122
 
 
 # instance fields
-.field public final a:F
+.field private K0:Landroid/view/View;
 
-.field public b:Z
+.field private final g:F
 
-.field public final c:I
+.field private j:Z
 
-.field public final d:I
+.field private k0:I
 
-.field public final e:I
+.field private final m:I
 
-.field public final f:I
+.field private final n:I
 
-.field public g:I
+.field private final p:I
 
-.field public h:I
+.field private final s:I
 
-.field public i:I
+.field private t:I
 
-.field public j:I
+.field private u:I
 
-.field public k:Landroid/view/View;
+.field private w:I
 
 
 # direct methods
@@ -67,20 +67,20 @@
     const/4 p3, 0x0
 
     .line 4
-    iput-boolean p3, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->b:Z
+    iput-boolean p3, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->j:Z
 
     const/high16 v0, -0x80000000
 
     .line 5
-    iput v0, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->g:I
+    iput v0, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->t:I
 
     .line 6
-    iput v0, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->h:I
+    iput v0, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->u:I
 
     const/4 v0, 0x0
 
     .line 7
-    iput-object v0, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->k:Landroid/view/View;
+    iput-object v0, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->K0:Landroid/view/View;
 
     .line 8
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -93,65 +93,65 @@
 
     iget v1, v1, Landroid/util/DisplayMetrics;->density:F
 
-    iput v1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->a:F
+    iput v1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->g:F
 
     .line 9
     :try_start_0
-    sget-object v1, Ler/b$q;->ProperPaddingViewGroup:[I
+    sget-object v1, Lk/v/b$p;->ProperPaddingViewGroup:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
     .line 10
-    sget p1, Ler/b$q;->ProperPaddingViewGroup_horizontalPadding:I
+    sget p1, Lk/v/b$p;->ProperPaddingViewGroup_horizontalPadding:I
 
     invoke-virtual {v0, p1, p3}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result p1
 
     .line 11
-    sget p2, Ler/b$q;->ProperPaddingViewGroup_horizontalPaddingStart:I
+    sget p2, Lk/v/b$p;->ProperPaddingViewGroup_horizontalPaddingStart:I
 
     invoke-virtual {v0, p2, p1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result p2
 
-    iput p2, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->c:I
+    iput p2, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->m:I
 
     .line 12
-    sget p2, Ler/b$q;->ProperPaddingViewGroup_horizontalPaddingEnd:I
+    sget p2, Lk/v/b$p;->ProperPaddingViewGroup_horizontalPaddingEnd:I
 
     invoke-virtual {v0, p2, p1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result p1
 
-    iput p1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->d:I
+    iput p1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->n:I
 
     .line 13
-    sget p1, Ler/b$q;->ProperPaddingViewGroup_smallHorizontalPadding:I
+    sget p1, Lk/v/b$p;->ProperPaddingViewGroup_smallHorizontalPadding:I
 
     invoke-virtual {v0, p1, p3}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result p1
 
     .line 14
-    sget p2, Ler/b$q;->ProperPaddingViewGroup_smallHorizontalPaddingStart:I
+    sget p2, Lk/v/b$p;->ProperPaddingViewGroup_smallHorizontalPaddingStart:I
 
     invoke-virtual {v0, p2, p1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result p2
 
-    iput p2, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->e:I
+    iput p2, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->p:I
 
     .line 15
-    sget p2, Ler/b$q;->ProperPaddingViewGroup_smallHorizontalPaddingEnd:I
+    sget p2, Lk/v/b$p;->ProperPaddingViewGroup_smallHorizontalPaddingEnd:I
 
     invoke-virtual {v0, p2, p1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result p1
 
-    iput p1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->f:I
+    iput p1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->s:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -179,15 +179,20 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->b:Z
+    .line 1
+    iput-boolean v0, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->j:Z
 
-    iget v1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->g:I
+    .line 2
+    iget v1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->t:I
 
-    iget v2, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->h:I
+    .line 3
+    iget v2, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->u:I
 
-    iput p1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->g:I
+    .line 4
+    iput p1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->t:I
 
-    iput p2, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->h:I
+    .line 5
+    iput p2, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->u:I
 
     if-eq p1, v1, :cond_0
 
@@ -209,7 +214,8 @@
     :goto_1
     if-eqz v0, :cond_2
 
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
+    .line 6
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->requestLayout()V
 
     :cond_2
     return-void
@@ -218,8 +224,10 @@
 .method public onFinishInflate()V
     .locals 2
 
-    invoke-super {p0}, Landroid/view/View;->onFinishInflate()V
+    .line 1
+    invoke-super {p0}, Landroid/view/ViewGroup;->onFinishInflate()V
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
@@ -230,14 +238,16 @@
 
     const/4 v0, 0x0
 
+    .line 3
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->k:Landroid/view/View;
+    iput-object v0, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->K0:Landroid/view/View;
 
     return-void
 
+    .line 4
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -251,41 +261,47 @@
 .method public onLayout(ZIIII)V
     .locals 0
 
-    invoke-static {p0}, Lnq/n;->l(Landroid/view/View;)Z
+    .line 1
+    invoke-static {p0}, Lk/l/c/k;->g(Landroid/view/View;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    iget p1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->j:I
+    .line 2
+    iget p1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->k0:I
 
     goto :goto_0
 
+    .line 3
     :cond_0
-    iget p1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->i:I
+    iget p1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->w:I
 
     :goto_0
-    iget-object p2, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->k:Landroid/view/View;
+    const/4 p2, 0x0
 
-    invoke-virtual {p2}, Landroid/view/View;->getMeasuredWidth()I
+    .line 4
+    iget-object p3, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->K0:Landroid/view/View;
 
-    move-result p2
-
-    add-int/2addr p2, p1
-
-    iget-object p3, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->k:Landroid/view/View;
-
-    invoke-virtual {p3}, Landroid/view/View;->getMeasuredHeight()I
+    invoke-virtual {p3}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result p3
 
-    const/4 p4, 0x0
+    add-int/2addr p3, p1
 
-    add-int/2addr p3, p4
+    .line 5
+    iget-object p4, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->K0:Landroid/view/View;
 
-    iget-object p0, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->k:Landroid/view/View;
+    invoke-virtual {p4}, Landroid/view/View;->getMeasuredHeight()I
 
-    invoke-virtual {p0, p1, p4, p2, p3}, Landroid/view/View;->layout(IIII)V
+    move-result p4
+
+    add-int/2addr p4, p2
+
+    .line 6
+    iget-object p0, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->K0:Landroid/view/View;
+
+    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/view/View;->layout(IIII)V
 
     return-void
 .end method
@@ -293,29 +309,34 @@
 .method public onMeasure(II)V
     .locals 6
 
+    .line 1
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
 
     int-to-float v1, v0
 
-    iget v2, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->a:F
+    .line 2
+    iget v2, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->g:F
 
     div-float v3, v1, v2
 
-    iget-boolean v4, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->b:Z
+    .line 3
+    iget-boolean v4, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->j:Z
 
     const/4 v5, 0x0
 
     if-eqz v4, :cond_0
 
-    iget v1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->g:I
+    .line 4
+    iget v1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->t:I
 
-    iput v1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->i:I
+    iput v1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->w:I
 
-    iget v1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->h:I
+    .line 5
+    iget v1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->u:I
 
-    iput v1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->j:I
+    iput v1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->k0:I
 
     goto :goto_0
 
@@ -334,61 +355,70 @@
 
     float-to-int v1, v1
 
+    .line 6
     div-int/lit8 v1, v1, 0x2
 
     if-gez v1, :cond_1
 
     move v1, v5
 
+    .line 7
     :cond_1
-    iget v2, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->e:I
+    iget v2, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->p:I
 
     div-int/lit8 v1, v1, 0x2
 
     add-int/2addr v2, v1
 
-    iput v2, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->i:I
+    iput v2, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->w:I
 
-    iget v2, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->f:I
+    .line 8
+    iget v2, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->s:I
 
     add-int/2addr v2, v1
 
-    iput v2, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->j:I
+    iput v2, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->k0:I
 
     goto :goto_0
 
+    .line 9
     :cond_2
-    iget v1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->c:I
+    iget v1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->m:I
 
-    iput v1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->i:I
+    iput v1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->w:I
 
-    iget v1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->d:I
+    .line 10
+    iget v1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->n:I
 
-    iput v1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->j:I
+    iput v1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->k0:I
 
+    .line 11
     :goto_0
-    iget-object v1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->k:Landroid/view/View;
+    iget-object v1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->K0:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
-    iget-object v2, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->k:Landroid/view/View;
+    .line 12
+    iget-object v2, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->K0:Landroid/view/View;
 
-    iget v3, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->i:I
+    iget v3, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->w:I
 
-    iget v4, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->j:I
+    iget v4, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->k0:I
 
     add-int/2addr v3, v4
 
     iget v1, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
+    .line 13
     invoke-static {p1, v3, v1}, Landroid/view/ViewGroup;->getChildMeasureSpec(III)I
 
     move-result p1
 
-    iget-object v1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->k:Landroid/view/View;
+    iget-object v1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->K0:Landroid/view/View;
 
+    .line 14
     invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
@@ -399,15 +429,17 @@
 
     move-result p2
 
+    .line 15
     invoke-virtual {v2, p1, p2}, Landroid/view/View;->measure(II)V
 
-    iget-object p1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->k:Landroid/view/View;
+    .line 16
+    iget-object p1, p0, Lmiuix/pickerwidget/internal/widget/ProperPaddingViewGroup;->K0:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result p1
 
-    invoke-virtual {p0, v0, p1}, Landroid/view/View;->setMeasuredDimension(II)V
+    invoke-virtual {p0, v0, p1}, Landroid/view/ViewGroup;->setMeasuredDimension(II)V
 
     return-void
 .end method

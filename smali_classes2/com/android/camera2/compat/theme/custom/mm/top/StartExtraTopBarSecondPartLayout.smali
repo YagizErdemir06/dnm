@@ -26,8 +26,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -37,34 +39,11 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/android/camera2/compat/theme/custom/mm/top/StartExtraTopBarSecondPartLayout;ILw6/p2;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/top/StartExtraTopBarSecondPartLayout;->lambda$updateData$2(ILw6/p2;)V
-
-    return-void
-.end method
-
-.method public static synthetic b(Lw6/p2;Landroid/view/View;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/StartExtraTopBarSecondPartLayout;->lambda$updateData$1(Lw6/p2;Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method public static synthetic c(Ljava/util/List;Lw6/p2;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/StartExtraTopBarSecondPartLayout;->lambda$updateData$0(Ljava/util/List;Lw6/p2;)V
-
-    return-void
-.end method
-
-.method private static synthetic lambda$updateData$0(Ljava/util/List;Lw6/p2;)V
+.method public static synthetic lambda$updateData$0(Ljava/util/List;Ld/d/a/u6/a5/q/k4;)V
     .locals 2
 
-    invoke-virtual {p1}, Lw6/p2;->c()I
+    .line 1
+    invoke-virtual {p1}, Ld/d/a/u6/a5/q/k4;->c()I
 
     move-result v0
 
@@ -72,16 +51,18 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 2
     invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_0
     return-void
 .end method
 
-.method private static synthetic lambda$updateData$1(Lw6/p2;Landroid/view/View;)V
+.method public static synthetic lambda$updateData$1(Ld/d/a/u6/a5/q/k4;Landroid/view/View;)V
     .locals 0
 
-    invoke-virtual {p0}, Lw6/p2;->e()Landroid/view/View$OnClickListener;
+    .line 1
+    invoke-virtual {p0}, Ld/d/a/u6/a5/q/k4;->e()Landroid/view/View$OnClickListener;
 
     move-result-object p0
 
@@ -90,62 +71,75 @@
     return-void
 .end method
 
-.method private synthetic lambda$updateData$2(ILw6/p2;)V
+.method private synthetic lambda$updateData$2(ILd/d/a/u6/a5/q/k4;)V
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughImageView;
 
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StartExtraTopBarSecondPartLayout;->mExtraTopBarLayout:Landroid/widget/LinearLayout;
 
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughImageView;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {p2}, Lw6/p2;->f()Lw6/p2$d;
+    .line 2
+    invoke-virtual {p2}, Ld/d/a/u6/a5/q/k4;->f()Ld/d/a/u6/a5/q/k4$d;
 
     move-result-object v1
 
-    invoke-interface {v1, p1}, Lw6/p2$d;->updateResource(I)Lw6/l4;
+    invoke-interface {v1, p1}, Ld/d/a/u6/a5/q/k4$d;->updateResource(I)Ld/d/a/u6/a5/q/m4;
 
     move-result-object p1
 
-    invoke-virtual {v0, p2}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+    .line 3
+    invoke-virtual {v0, p2}, Landroid/widget/ImageView;->setTag(Ljava/lang/Object;)V
 
+    .line 4
     new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughImageViewHolder;
 
     invoke-direct {v1, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughImageViewHolder;-><init>(Landroid/view/View;)V
 
+    .line 5
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StartExtraTopBarSecondPartLayout;->mImageViewHodlers:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v1, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughImageViewHolder;->updateView(Lw6/l4;)V
+    .line 6
+    invoke-virtual {v1, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughImageViewHolder;->updateView(Ld/d/a/u6/a5/q/m4;)V
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/top/x0;
+    .line 7
+    new-instance v1, Ld/d/b/x5/a/b/b/m/d1;
 
-    invoke-direct {v1, p2}, Lcom/android/camera2/compat/theme/custom/mm/top/x0;-><init>(Lw6/p2;)V
+    invoke-direct {v1, p2}, Ld/d/b/x5/a/b/b/m/d1;-><init>(Ld/d/a/u6/a5/q/k4;)V
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    .line 8
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StartExtraTopBarSecondPartLayout;->mExtraTopBarLayout:Landroid/widget/LinearLayout;
 
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    .line 9
+    invoke-virtual {v0}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p0
 
     const/4 p2, -0x2
 
+    .line 10
     iput p2, p0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
+    .line 11
     iput p2, p0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    .line 12
+    invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-virtual {p1}, Lw6/l4;->f()I
+    .line 13
+    invoke-virtual {p1}, Ld/d/a/u6/a5/q/m4;->f()I
 
     move-result p0
 
@@ -153,14 +147,16 @@
 
     const/4 p0, 0x0
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->setVisibility(I)V
+    .line 14
+    invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto :goto_0
 
     :cond_0
     const/16 p0, 0x8
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->setVisibility(I)V
+    .line 15
+    invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setVisibility(I)V
 
     :goto_0
     return-void
@@ -168,8 +164,25 @@
 
 
 # virtual methods
+.method public synthetic a(ILd/d/a/u6/a5/q/k4;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/top/StartExtraTopBarSecondPartLayout;->lambda$updateData$2(ILd/d/a/u6/a5/q/k4;)V
+
+    return-void
+.end method
+
 .method public getViews(Ljava/util/List;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "outViews"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -181,6 +194,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StartExtraTopBarSecondPartLayout;->mImageViewHodlers:Ljava/util/List;
 
@@ -190,6 +204,7 @@
 
     if-ge v0, v1, :cond_0
 
+    .line 2
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StartExtraTopBarSecondPartLayout;->mImageViewHodlers:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -214,9 +229,18 @@
 
 .method public initView(Landroid/view/View;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "view"
+        }
+    .end annotation
 
-    const v0, 0x7f0b06bb
+    const v0, 0x7f0b05ef
 
+    .line 1
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -230,11 +254,20 @@
 
 .method public notifyItemChanged(I)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "configItem"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
     move v1, v0
 
+    .line 1
     :goto_0
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StartExtraTopBarSecondPartLayout;->mImageViewHodlers:Ljava/util/List;
 
@@ -244,6 +277,7 @@
 
     if-ge v1, v2, :cond_3
 
+    .line 2
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StartExtraTopBarSecondPartLayout;->mImageViewHodlers:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -256,7 +290,8 @@
 
     check-cast v2, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughImageView;
 
-    invoke-virtual {v2}, Landroid/view/View;->getTag()Ljava/lang/Object;
+    .line 3
+    invoke-virtual {v2}, Landroid/widget/ImageView;->getTag()Ljava/lang/Object;
 
     move-result-object v2
 
@@ -264,25 +299,29 @@
 
     goto :goto_1
 
+    .line 4
     :cond_0
-    check-cast v2, Lw6/p2;
+    check-cast v2, Ld/d/a/u6/a5/q/k4;
 
-    invoke-virtual {v2}, Lw6/p2;->a()I
+    .line 5
+    invoke-virtual {v2}, Ld/d/a/u6/a5/q/k4;->a()I
 
     move-result v3
 
     if-ne v3, p1, :cond_2
 
-    invoke-virtual {v2}, Lw6/p2;->f()Lw6/p2$d;
+    .line 6
+    invoke-virtual {v2}, Ld/d/a/u6/a5/q/k4;->f()Ld/d/a/u6/a5/q/k4$d;
 
     move-result-object v2
 
     iget v3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StartExtraTopBarSecondPartLayout;->mMode:I
 
-    invoke-interface {v2, v3}, Lw6/p2$d;->updateResource(I)Lw6/l4;
+    invoke-interface {v2, v3}, Ld/d/a/u6/a5/q/k4$d;->updateResource(I)Ld/d/a/u6/a5/q/m4;
 
     move-result-object v2
 
+    .line 7
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StartExtraTopBarSecondPartLayout;->mImageViewHodlers:Ljava/util/List;
 
     invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -291,14 +330,16 @@
 
     check-cast v3, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughImageViewHolder;
 
-    invoke-virtual {v3, v2}, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughImageViewHolder;->updateView(Lw6/l4;)V
+    invoke-virtual {v3, v2}, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughImageViewHolder;->updateView(Ld/d/a/u6/a5/q/m4;)V
 
-    invoke-virtual {v2}, Lw6/l4;->f()I
+    .line 8
+    invoke-virtual {v2}, Ld/d/a/u6/a5/q/m4;->f()I
 
     move-result v2
 
     if-nez v2, :cond_1
 
+    .line 9
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StartExtraTopBarSecondPartLayout;->mImageViewHodlers:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -313,6 +354,7 @@
 
     goto :goto_1
 
+    .line 10
     :cond_1
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StartExtraTopBarSecondPartLayout;->mImageViewHodlers:Ljava/util/List;
 
@@ -346,11 +388,26 @@
 
 .method public updateData(ILjava/util/List;Landroid/view/View$OnClickListener;Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarUIConfig;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "mode",
+            "topConfigItems",
+            "listener",
+            "extraTopBarUIStyle"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
             "Ljava/util/List<",
-            "Lw6/p2;",
+            "Ld/d/a/u6/a5/q/k4;",
             ">;",
             "Landroid/view/View$OnClickListener;",
             "Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarUIConfig;",
@@ -358,18 +415,22 @@
         }
     .end annotation
 
+    .line 1
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StartExtraTopBarSecondPartLayout;->mMode:I
 
+    .line 2
     iget-object p3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StartExtraTopBarSecondPartLayout;->mExtraTopBarLayout:Landroid/widget/LinearLayout;
 
-    invoke-virtual {p3}, Landroid/view/ViewGroup;->removeAllViews()V
+    invoke-virtual {p3}, Landroid/widget/LinearLayout;->removeAllViews()V
 
+    .line 3
     iget-object p3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StartExtraTopBarSecondPartLayout;->mImageViewHodlers:Ljava/util/List;
 
     invoke-interface {p3}, Ljava/util/List;->clear()V
 
     if-eqz p2, :cond_2
 
+    .line 4
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result p3
@@ -378,21 +439,24 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     new-instance p3, Ljava/util/ArrayList;
 
     invoke-direct {p3}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-interface {p2}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
+    .line 6
+    invoke-interface {p2}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
 
     move-result-object p2
 
-    new-instance p4, Lcom/android/camera2/compat/theme/custom/mm/top/y0;
+    new-instance p4, Ld/d/b/x5/a/b/b/m/e1;
 
-    invoke-direct {p4, p3}, Lcom/android/camera2/compat/theme/custom/mm/top/y0;-><init>(Ljava/util/List;)V
+    invoke-direct {p4, p3}, Ld/d/b/x5/a/b/b/m/e1;-><init>(Ljava/util/List;)V
 
     invoke-interface {p2, p4}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V
 
+    .line 7
     invoke-interface {p3}, Ljava/util/List;->size()I
 
     move-result p2
@@ -401,14 +465,15 @@
 
     return-void
 
+    .line 8
     :cond_1
-    invoke-interface {p3}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
+    invoke-interface {p3}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
 
     move-result-object p2
 
-    new-instance p3, Lcom/android/camera2/compat/theme/custom/mm/top/z0;
+    new-instance p3, Ld/d/b/x5/a/b/b/m/c1;
 
-    invoke-direct {p3, p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/z0;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/StartExtraTopBarSecondPartLayout;I)V
+    invoke-direct {p3, p0, p1}, Ld/d/b/x5/a/b/b/m/c1;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/StartExtraTopBarSecondPartLayout;I)V
 
     invoke-interface {p2, p3}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V
 
@@ -420,32 +485,37 @@
 .method public updateLayout()V
     .locals 7
 
+    .line 1
     invoke-super {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;->updateLayout()V
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StartExtraTopBarSecondPartLayout;->mExtraTopBarLayout:Landroid/widget/LinearLayout;
 
     if-eqz v0, :cond_7
 
-    invoke-static {}, Ly2/b;->F0()Z
+    .line 3
+    invoke-static {}, Ld/d/a/n6/b;->F0()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Ly2/b;->B()I
+    .line 4
+    invoke-static {}, Ld/d/a/n6/b;->B()I
 
     move-result v0
 
     goto :goto_0
 
+    .line 5
     :cond_0
-    invoke-static {}, Ly2/b;->E0()Z
+    invoke-static {}, Ld/d/a/n6/b;->E0()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-static {}, Ly2/b;->G()I
+    invoke-static {}, Ld/d/a/n6/b;->G()I
 
     move-result v0
 
@@ -454,28 +524,30 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {}, Ly2/b;->G()I
+    invoke-static {}, Ld/d/a/n6/b;->G()I
 
     move-result v0
 
+    .line 6
     :goto_0
-    invoke-static {}, Ly2/b;->F0()Z
+    invoke-static {}, Ld/d/a/n6/b;->F0()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    invoke-static {}, Ly2/b;->G()I
+    invoke-static {}, Ld/d/a/n6/b;->G()I
 
     move-result v1
 
     goto :goto_1
 
     :cond_2
-    invoke-static {}, Ly2/b;->B()I
+    invoke-static {}, Ld/d/a/n6/b;->B()I
 
     move-result v1
 
+    .line 7
     :goto_1
     new-instance v2, Landroid/graphics/Rect;
 
@@ -483,18 +555,21 @@
 
     invoke-direct {v2, v3, v3, v0, v1}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    invoke-static {}, Ly2/b;->y()Landroid/graphics/Rect;
+    .line 8
+    invoke-static {}, Ld/d/a/n6/b;->y()Landroid/graphics/Rect;
 
     move-result-object v0
 
+    .line 9
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StartExtraTopBarSecondPartLayout;->mExtraTopBarLayout:Landroid/widget/LinearLayout;
 
-    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/FrameLayout$LayoutParams;
 
+    .line 10
     invoke-virtual {v0, v2}, Landroid/graphics/Rect;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -515,6 +590,7 @@
     :goto_2
     iput v3, v1, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
+    .line 11
     invoke-virtual {v0, v2}, Landroid/graphics/Rect;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -531,6 +607,7 @@
     :goto_3
     iput v4, v1, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
+    .line 12
     iget v3, v0, Landroid/graphics/Rect;->left:I
 
     iget v4, v2, Landroid/graphics/Rect;->left:I
@@ -555,21 +632,23 @@
 
     sub-int/2addr v2, v0
 
-    invoke-virtual {v1, v3, v4, v5, v2}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
+    invoke-virtual {v1, v3, v4, v5, v2}, Landroid/widget/FrameLayout$LayoutParams;->setMargins(IIII)V
 
-    invoke-static {}, Ly2/b;->C0()Z
+    .line 13
+    invoke-static {}, Ld/d/a/n6/b;->C0()Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
-    invoke-static {}, Ly2/b;->j0()I
+    .line 14
+    invoke-static {}, Ld/d/a/n6/b;->j0()I
 
     move-result v0
 
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StartExtraTopBarSecondPartLayout;->mExtraTopBarLayout:Landroid/widget/LinearLayout;
 
-    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {v2}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -577,7 +656,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f070e54
+    const v3, 0x7f070bb5
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -589,14 +668,15 @@
 
     iput v0, v1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
+    .line 15
     :cond_5
-    invoke-static {}, Ly2/b;->D0()Z
+    invoke-static {}, Ld/d/a/n6/b;->D0()Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
-    invoke-static {}, Lcom/android/camera/v2;->Y3()Z
+    invoke-static {}, Ld/d/a/d4;->W3()Z
 
     move-result v0
 
@@ -604,6 +684,7 @@
 
     const v0, 0x800005
 
+    .line 16
     iput v0, v1, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
     goto :goto_4
@@ -611,12 +692,14 @@
     :cond_6
     const v0, 0x800003
 
+    .line 17
     iput v0, v1, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
+    .line 18
     :goto_4
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/StartExtraTopBarSecondPartLayout;->mExtraTopBarLayout:Landroid/widget/LinearLayout;
 
-    invoke-virtual {p0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p0, v1}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     :cond_7
     return-void

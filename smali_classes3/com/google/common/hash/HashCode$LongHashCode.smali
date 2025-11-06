@@ -1,4 +1,4 @@
-.class final Lcom/google/common/hash/HashCode$LongHashCode;
+.class public final Lcom/google/common/hash/HashCode$LongHashCode;
 .super Lcom/google/common/hash/HashCode;
 .source "SourceFile"
 
@@ -22,15 +22,17 @@
 
 
 # instance fields
-.field final hash:J
+.field public final hash:J
 
 
 # direct methods
 .method public constructor <init>(J)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/hash/HashCode;-><init>()V
 
+    .line 2
     iput-wide p1, p0, Lcom/google/common/hash/HashCode$LongHashCode;->hash:J
 
     return-void
@@ -45,6 +47,7 @@
 
     new-array v1, v0, [B
 
+    .line 1
     iget-wide v2, p0, Lcom/google/common/hash/HashCode$LongHashCode;->hash:J
 
     long-to-int p0, v2
@@ -143,6 +146,7 @@
 .method public asInt()I
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/hash/HashCode$LongHashCode;->hash:J
 
     long-to-int p0, v0
@@ -153,6 +157,7 @@
 .method public asLong()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/hash/HashCode$LongHashCode;->hash:J
 
     return-wide v0
@@ -169,6 +174,7 @@
 .method public equalsSameBits(Lcom/google/common/hash/HashCode;)Z
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/hash/HashCode$LongHashCode;->hash:J
 
     invoke-virtual {p1}, Lcom/google/common/hash/HashCode;->asLong()J
@@ -193,6 +199,7 @@
 .method public padToLong()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/hash/HashCode$LongHashCode;->hash:J
 
     return-wide v0
@@ -208,6 +215,7 @@
 
     add-int v1, p2, v0
 
+    .line 1
     iget-wide v2, p0, Lcom/google/common/hash/HashCode$LongHashCode;->hash:J
 
     mul-int/lit8 v4, v0, 0x8

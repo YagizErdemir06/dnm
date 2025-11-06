@@ -1,4 +1,4 @@
-.class Landroidx/core/app/NotificationManagerCompat$NotifyTask;
+.class public Landroidx/core/app/NotificationManagerCompat$NotifyTask;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,27 +18,32 @@
 
 
 # instance fields
-.field final id:I
+.field public final id:I
 
-.field final notif:Landroid/app/Notification;
+.field public final notif:Landroid/app/Notification;
 
-.field final packageName:Ljava/lang/String;
+.field public final packageName:Ljava/lang/String;
 
-.field final tag:Ljava/lang/String;
+.field public final tag:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Landroid/app/Notification;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/core/app/NotificationManagerCompat$NotifyTask;->packageName:Ljava/lang/String;
 
+    .line 3
     iput p2, p0, Landroidx/core/app/NotificationManagerCompat$NotifyTask;->id:I
 
+    .line 4
     iput-object p3, p0, Landroidx/core/app/NotificationManagerCompat$NotifyTask;->tag:Ljava/lang/String;
 
+    .line 5
     iput-object p4, p0, Landroidx/core/app/NotificationManagerCompat$NotifyTask;->notif:Landroid/app/Notification;
 
     return-void
@@ -46,7 +51,7 @@
 
 
 # virtual methods
-.method public send(Landroid/support/v4/app/a;)V
+.method public send(Lb/b/a/a/a;)V
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -54,6 +59,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/core/app/NotificationManagerCompat$NotifyTask;->packageName:Ljava/lang/String;
 
     iget v1, p0, Landroidx/core/app/NotificationManagerCompat$NotifyTask;->id:I
@@ -62,7 +68,7 @@
 
     iget-object p0, p0, Landroidx/core/app/NotificationManagerCompat$NotifyTask;->notif:Landroid/app/Notification;
 
-    invoke-interface {p1, v0, v1, v2, p0}, Landroid/support/v4/app/a;->notify(Ljava/lang/String;ILjava/lang/String;Landroid/app/Notification;)V
+    invoke-interface {p1, v0, v1, v2, p0}, Lb/b/a/a/a;->notify(Ljava/lang/String;ILjava/lang/String;Landroid/app/Notification;)V
 
     return-void
 .end method
@@ -72,6 +78,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "NotifyTask["
@@ -80,6 +87,7 @@
 
     const-string v1, "packageName:"
 
+    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Landroidx/core/app/NotificationManagerCompat$NotifyTask;->packageName:Ljava/lang/String;
@@ -88,6 +96,7 @@
 
     const-string v1, ", id:"
 
+    .line 3
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Landroidx/core/app/NotificationManagerCompat$NotifyTask;->id:I
@@ -96,6 +105,7 @@
 
     const-string v1, ", tag:"
 
+    .line 4
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object p0, p0, Landroidx/core/app/NotificationManagerCompat$NotifyTask;->tag:Ljava/lang/String;
@@ -104,8 +114,10 @@
 
     const-string p0, "]"
 
+    .line 5
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 6
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

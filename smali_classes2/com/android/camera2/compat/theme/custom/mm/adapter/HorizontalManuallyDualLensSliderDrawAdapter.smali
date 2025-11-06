@@ -4,7 +4,7 @@
 
 
 # static fields
-.field protected static final EVERY_STOP_POINT_SCALE_VALUE_ANGLE:F = 36.0f
+.field public static final EVERY_STOP_POINT_SCALE_VALUE_ANGLE:F = 36.0f
 
 .field private static final TAG:Ljava/lang/String; = "HorizontalManuallyDualLensSliderDrawAdapter"
 
@@ -12,6 +12,26 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;ILcom/android/camera2/compat/theme/custom/mm/StopPointValueListener;ZZZZ)V
     .locals 9
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "currentMode",
+            "listener",
+            "isSupportedEqualRaito",
+            "isVertical",
+            "isNonSAT",
+            "isGapType"
+        }
+    .end annotation
 
     const/4 v2, 0x0
 
@@ -31,6 +51,7 @@
 
     move/from16 v8, p7
 
+    .line 1
     invoke-direct/range {v0 .. v8}, Lcom/android/camera2/compat/theme/custom/mm/adapter/HorizontalStopPointScaleZoomSliderDrawAdapter;-><init>(Landroid/content/Context;ZILcom/android/camera2/compat/theme/custom/mm/StopPointValueListener;ZZZZ)V
 
     return-void
@@ -38,27 +59,39 @@
 
 .method private initZoomIndex(I)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mode"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
+    .line 2
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mCurrentMode:I
 
-    invoke-static {v0}, Lcom/android/camera/v2;->I(I)Ljava/lang/String;
+    invoke-static {v0}, Ld/d/a/d4;->H(I)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "ultra"
 
+    .line 3
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 4
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mZoomRatioMin:F
@@ -69,6 +102,7 @@
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 5
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
     const/high16 v0, 0x3f800000    # 1.0f
@@ -79,12 +113,14 @@
 
     invoke-interface {p1, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 6
     iget p1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mZoomRatioMax:F
 
     cmpl-float v0, p1, v0
 
     if-lez v0, :cond_7
 
+    .line 7
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
     invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -98,6 +134,7 @@
     :cond_0
     const-string v1, "wide"
 
+    .line 8
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -114,6 +151,7 @@
 
     if-ne p1, v3, :cond_1
 
+    .line 9
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
     iget v3, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mZoomRatioMin:F
@@ -124,6 +162,7 @@
 
     invoke-interface {p1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 10
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
     invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -132,6 +171,7 @@
 
     invoke-interface {p1, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 11
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -140,6 +180,7 @@
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 12
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
     invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -148,6 +189,7 @@
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 13
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mZoomRatioMax:F
@@ -160,6 +202,7 @@
 
     goto/16 :goto_0
 
+    .line 14
     :cond_1
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
@@ -171,6 +214,7 @@
 
     invoke-interface {p1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 15
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
     invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -179,6 +223,7 @@
 
     invoke-interface {p1, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 16
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -187,6 +232,7 @@
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 17
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mZoomRatioMax:F
@@ -202,6 +248,7 @@
     :cond_2
     const-string v1, "tele"
 
+    .line 18
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -212,6 +259,7 @@
 
     if-ne p1, v3, :cond_3
 
+    .line 19
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mZoomRatioMin:F
@@ -222,6 +270,7 @@
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 20
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
     invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -230,6 +279,7 @@
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 21
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
     invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -238,12 +288,14 @@
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 22
     iget p1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mZoomRatioMax:F
 
     cmpl-float v0, p1, v4
 
     if-lez v0, :cond_7
 
+    .line 23
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
     invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -254,6 +306,7 @@
 
     goto/16 :goto_0
 
+    .line 24
     :cond_3
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
@@ -265,6 +318,7 @@
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 25
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
     const/high16 v0, 0x40c00000    # 6.0f
@@ -275,12 +329,14 @@
 
     invoke-interface {p1, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 26
     iget p1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mZoomRatioMax:F
 
     cmpl-float v0, p1, v0
 
     if-lez v0, :cond_7
 
+    .line 27
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
     invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -294,6 +350,7 @@
     :cond_4
     const-string v1, "Standalone"
 
+    .line 28
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -302,6 +359,7 @@
 
     if-ne p1, v3, :cond_5
 
+    .line 29
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mZoomRatioMin:F
@@ -312,6 +370,7 @@
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 30
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
     invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -320,6 +379,7 @@
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 31
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
     const/high16 v0, 0x41f00000    # 30.0f
@@ -330,12 +390,14 @@
 
     invoke-interface {p1, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 32
     iget p1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mZoomRatioMax:F
 
     cmpl-float v0, p1, v0
 
     if-lez v0, :cond_7
 
+    .line 33
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
     invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -346,6 +408,7 @@
 
     goto :goto_0
 
+    .line 34
     :cond_5
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
@@ -357,6 +420,7 @@
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 35
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
     invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -365,12 +429,14 @@
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 36
     iget p1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mZoomRatioMax:F
 
     cmpl-float v0, p1, v4
 
     if-lez v0, :cond_7
 
+    .line 37
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
     invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -384,12 +450,14 @@
     :cond_6
     const-string p1, "macro"
 
+    .line 38
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_8
 
+    .line 39
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mZoomRatioMin:F
@@ -400,6 +468,7 @@
 
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 40
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mZoomRatioMax:F
@@ -414,6 +483,7 @@
     :goto_0
     return-void
 
+    .line 41
     :cond_8
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -440,15 +510,25 @@
 # virtual methods
 .method public getItemAngle(I)F
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "position"
+        }
+    .end annotation
 
     if-nez p1, :cond_0
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->getRotateAngle()F
 
     move-result v0
 
     goto/16 :goto_1
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mRulerLines:Ljava/util/List;
 
@@ -462,6 +542,7 @@
 
     if-lt v0, v1, :cond_3
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mRulerLines:Ljava/util/List;
 
     const/4 v1, 0x0
@@ -484,6 +565,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mRulerLines:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -503,6 +585,7 @@
 
     goto :goto_1
 
+    .line 5
     :cond_1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mRulerLines:Ljava/util/List;
 
@@ -552,6 +635,7 @@
 
     if-gt p1, v0, :cond_2
 
+    .line 6
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mRulerLines:Ljava/util/List;
 
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -566,6 +650,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_2
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mScaleRingStartPisition:I
 
@@ -573,6 +658,7 @@
 
     sub-int v0, p1, v0
 
+    .line 8
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mStopPointUnitRatios:Ljava/util/List;
 
     if-eqz v1, :cond_3
@@ -583,6 +669,7 @@
 
     if-ge v0, v1, :cond_3
 
+    .line 9
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mStopPointUnitRatios:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -618,6 +705,7 @@
     :cond_3
     const/4 v0, 0x0
 
+    .line 10
     :goto_1
     iget-boolean v1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mInit:Z
 
@@ -629,6 +717,7 @@
 
     if-gt p1, v1, :cond_4
 
+    .line 11
     iget p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mFinalScaleRingStartAngle:F
 
     invoke-static {v0}, Ljava/lang/Math;->abs(F)F
@@ -639,6 +728,7 @@
 
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mFinalScaleRingStartAngle:F
 
+    .line 12
     :cond_4
     iget-boolean p0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mIsVerType:Z
 
@@ -653,6 +743,7 @@
 .method public getMinRotateAngle()F
     .locals 1
 
+    .line 1
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mUnitCount:F
 
     const/high16 v0, 0x42100000    # 36.0f
@@ -666,11 +757,20 @@
 
 .method public getScaleTextValue(I)Ljava/lang/String;
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "position"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
+    .line 1
     :goto_0
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mZoomStops:Ljava/util/List;
 
@@ -680,6 +780,7 @@
 
     if-ge v1, v2, :cond_1
 
+    .line 2
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mZoomStops:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -694,6 +795,7 @@
 
     if-ne p1, v2, :cond_0
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mStopPointScaleValues:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -716,28 +818,34 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mInitAngle:F
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/adapter/HorizontalManuallyDualLensSliderDrawAdapter;->mapAngleToValue(F)Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mCurrentValue:Ljava/lang/String;
 
+    .line 3
     iget-boolean v1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mInit:Z
 
     const/4 v2, 0x0
 
     if-nez v1, :cond_3
 
+    .line 4
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mFinalScaleRingStartAngle:F
 
     const/4 v1, 0x1
 
+    .line 5
     iput-boolean v1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mInit:Z
 
     move v1, v2
 
+    .line 6
     :goto_0
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->getItemCount()I
 
@@ -745,16 +853,19 @@
 
     if-ge v1, v3, :cond_2
 
+    .line 7
     invoke-virtual {p0, v1}, Lcom/android/camera2/compat/theme/custom/mm/adapter/HorizontalManuallyDualLensSliderDrawAdapter;->getItemAngle(I)F
 
     move-result v3
 
     add-float/2addr v0, v3
 
+    .line 8
     iget-boolean v3, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mIsVerType:Z
 
     if-nez v3, :cond_0
 
+    .line 9
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mAngleItem:Ljava/util/List;
 
     neg-float v4, v0
@@ -765,6 +876,7 @@
 
     invoke-interface {v3, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 10
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mZoomStops:Ljava/util/List;
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -777,6 +889,7 @@
 
     if-eqz v3, :cond_1
 
+    .line 11
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mStopPointsAngleItem:Ljava/util/List;
 
     invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -787,6 +900,7 @@
 
     goto :goto_1
 
+    .line 12
     :cond_0
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mAngleItem:Ljava/util/List;
 
@@ -796,6 +910,7 @@
 
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 13
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mZoomStops:Ljava/util/List;
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -808,6 +923,7 @@
 
     if-eqz v3, :cond_1
 
+    .line 14
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mStopPointsAngleItem:Ljava/util/List;
 
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -822,9 +938,11 @@
 
     goto :goto_0
 
+    .line 15
     :cond_2
     iput-boolean v2, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mInit:Z
 
+    .line 16
     :cond_3
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -853,20 +971,27 @@
 
 .method public initValue(Z)V
     .locals 12
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isPartSlider"
+        }
+    .end annotation
 
-    invoke-static {}, Lc9/b;->impl()Ljava/util/Optional;
+    .line 1
+    invoke-static {}, Ld/d/a/m7/g/w3/b;->impl()Ljava/util/Optional;
 
     move-result-object p1
 
-    new-instance v0, Lcom/android/camera/fragment/dual/h;
-
-    invoke-direct {v0}, Lcom/android/camera/fragment/dual/h;-><init>()V
+    sget-object v0, Ld/d/b/x5/a/b/b/c/a;->a:Ld/d/b/x5/a/b/b/c/a;
 
     invoke-virtual {p1, v0}, Ljava/util/Optional;->map(Ljava/util/function/Function;)Ljava/util/Optional;
 
     move-result-object p1
 
-    sget-object v0, Lwa/b$a;->a:Landroid/util/Range;
+    sget-object v0, Ld/d/a/k8/z$a;->a:Landroid/util/Range;
 
     invoke-virtual {p1, v0}, Ljava/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -874,6 +999,7 @@
 
     check-cast p1, Landroid/util/Range;
 
+    .line 2
     invoke-virtual {p1}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
 
     move-result-object v0
@@ -886,6 +1012,7 @@
 
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mZoomRatioMax:F
 
+    .line 3
     invoke-virtual {p1}, Landroid/util/Range;->getLower()Ljava/lang/Comparable;
 
     move-result-object p1
@@ -898,31 +1025,36 @@
 
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mZoomRatioMin:F
 
+    .line 4
     iget-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mIsVerType:Z
 
     if-nez p1, :cond_0
 
+    .line 5
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
+    .line 6
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mCurrentMode:I
 
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mZoomRatioMin:F
 
     iget v2, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mZoomRatioMax:F
 
-    invoke-static {p1, v0, v1, v2}, Lwa/a;->q(Ljava/util/List;IFF)V
+    invoke-static {p1, v0, v1, v2}, Ld/d/a/k8/y;->p(Ljava/util/List;IFF)V
 
     goto :goto_0
 
+    .line 7
     :cond_0
     iget p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mCurrentMode:I
 
     invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/adapter/HorizontalManuallyDualLensSliderDrawAdapter;->initZoomIndex(I)V
 
+    .line 8
     :goto_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -960,6 +1092,7 @@
 
     invoke-static {v2, p1, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 9
     iget p1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mZoomRatioMin:F
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -968,6 +1101,7 @@
 
     if-gez v3, :cond_1
 
+    .line 10
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mUnitRatios:Ljava/util/List;
 
     invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -976,6 +1110,7 @@
 
     invoke-interface {p1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 11
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mRulerLines:Ljava/util/List;
 
     iget v3, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mZoomRatioMin:F
@@ -996,6 +1131,7 @@
 
     invoke-interface {p1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 12
     iget p1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mZoomRatioMin:F
 
     sub-float p1, v1, p1
@@ -1008,6 +1144,7 @@
 
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mScaleLineUnitOneEnd:I
 
+    .line 13
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mZoomIndexs:Ljava/util/List;
 
     iget v3, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mZoomRatioMin:F
@@ -1020,6 +1157,7 @@
 
     move p1, v1
 
+    .line 14
     :cond_1
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mZoomIndexs:Ljava/util/List;
 
@@ -1034,6 +1172,7 @@
 
     mul-float v4, p1, v3
 
+    .line 15
     iget v5, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mZoomRatioMax:F
 
     cmpg-float v5, v4, v5
@@ -1044,6 +1183,7 @@
 
     if-nez p1, :cond_2
 
+    .line 16
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mRulerLines:Ljava/util/List;
 
     const/16 v3, 0xa
@@ -1054,6 +1194,7 @@
 
     invoke-interface {p1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 17
     :cond_2
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mUnitRatios:Ljava/util/List;
 
@@ -1063,6 +1204,7 @@
 
     invoke-interface {p1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 18
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mZoomIndexs:Ljava/util/List;
 
     invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -1078,6 +1220,7 @@
     :cond_3
     move v4, v0
 
+    .line 19
     :goto_2
     iget-object v5, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mRulerLines:Ljava/util/List;
 
@@ -1087,6 +1230,7 @@
 
     if-ge v4, v5, :cond_4
 
+    .line 20
     iget v5, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mScaleRingStartPisition:I
 
     iget-object v6, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mRulerLines:Ljava/util/List;
@@ -1112,6 +1256,7 @@
     :cond_4
     move v4, v0
 
+    .line 21
     :goto_3
     iget-object v5, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
@@ -1123,6 +1268,7 @@
 
     if-ge v4, v5, :cond_6
 
+    .line 22
     iget-object v5, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
     invoke-interface {v5, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1139,6 +1285,7 @@
 
     if-ltz v5, :cond_5
 
+    .line 23
     iget-object v5, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mRulerLines:Ljava/util/List;
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1152,6 +1299,7 @@
 
     goto :goto_3
 
+    .line 24
     :cond_6
     iget-object v4, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mZoomIndexs:Ljava/util/List;
 
@@ -1167,6 +1315,7 @@
 
     if-nez v4, :cond_7
 
+    .line 25
     iget v4, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mZoomRatioMax:F
 
     sub-float/2addr v4, p1
@@ -1175,6 +1324,7 @@
 
     mul-float/2addr v4, v1
 
+    .line 26
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mUnitRatios:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -1187,6 +1337,7 @@
 
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mUnitCount:F
 
+    .line 27
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mUnitRatios:Ljava/util/List;
 
     invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -1195,6 +1346,7 @@
 
     invoke-interface {p1, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 28
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mZoomIndexs:Ljava/util/List;
 
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mZoomRatioMax:F
@@ -1207,6 +1359,7 @@
 
     goto :goto_4
 
+    .line 29
     :cond_7
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mUnitRatios:Ljava/util/List;
 
@@ -1218,6 +1371,7 @@
 
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mUnitCount:F
 
+    .line 30
     :goto_4
     iget p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mCurrentMode:I
 
@@ -1225,6 +1379,7 @@
 
     if-ne p1, v1, :cond_8
 
+    .line 31
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mFocusLensOnlyHighLightValue:Ljava/util/List;
 
     const/high16 v4, 0x41e00000    # 28.0f
@@ -1237,6 +1392,7 @@
 
     goto :goto_5
 
+    .line 32
     :cond_8
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mFocusLensOnlyHighLightValue:Ljava/util/List;
 
@@ -1255,6 +1411,7 @@
 
     move v5, v4
 
+    .line 33
     :goto_6
     iget-object v7, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mZoomIndexs:Ljava/util/List;
 
@@ -1266,6 +1423,7 @@
 
     if-ge p1, v7, :cond_b
 
+    .line 34
     iget-object v7, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mZoomIndexs:Ljava/util/List;
 
     invoke-interface {v7, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1282,6 +1440,7 @@
 
     if-gez v7, :cond_a
 
+    .line 35
     iget-object v7, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mZoomIndexs:Ljava/util/List;
 
     add-int/lit8 v8, p1, 0x1
@@ -1326,6 +1485,7 @@
 
     div-float/2addr v7, v9
 
+    .line 36
     :goto_7
     iget-object v9, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
@@ -1337,6 +1497,7 @@
 
     iget-object v9, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
+    .line 37
     invoke-interface {v9, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v9
@@ -1365,6 +1526,7 @@
 
     iget-object v9, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
+    .line 38
     invoke-interface {v9, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v9
@@ -1391,6 +1553,7 @@
 
     if-gtz v9, :cond_9
 
+    .line 39
     iget-object v9, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mZoomStops:Ljava/util/List;
 
     iget-object v10, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
@@ -1437,6 +1600,7 @@
 
     goto :goto_7
 
+    .line 40
     :cond_9
     iget-object v7, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mRulerLines:Ljava/util/List;
 
@@ -1457,6 +1621,7 @@
 
     goto/16 :goto_6
 
+    .line 41
     :cond_b
     iget p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mScaleRingStartPisition:I
 
@@ -1464,6 +1629,7 @@
 
     move p1, v0
 
+    .line 42
     :goto_8
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mRulerLines:Ljava/util/List;
 
@@ -1473,6 +1639,7 @@
 
     if-ge p1, v1, :cond_e
 
+    .line 43
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mZoomStops:Ljava/util/List;
 
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mRulerLines:Ljava/util/List;
@@ -1497,6 +1664,7 @@
 
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 44
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mRulerLines:Ljava/util/List;
 
     invoke-interface {v1, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1515,6 +1683,7 @@
 
     goto :goto_8
 
+    .line 45
     :cond_c
     iget p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mCurrentMode:I
 
@@ -1527,6 +1696,7 @@
     :cond_d
     const/4 p1, 0x2
 
+    .line 46
     :goto_9
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mRulerLines:Ljava/util/List;
 
@@ -1536,6 +1706,7 @@
 
     if-ge p1, v1, :cond_e
 
+    .line 47
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mZoomStops:Ljava/util/List;
 
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mRulerLines:Ljava/util/List;
@@ -1558,6 +1729,7 @@
 
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 48
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mRulerLines:Ljava/util/List;
 
     invoke-interface {v1, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1576,11 +1748,13 @@
 
     goto :goto_9
 
+    .line 49
     :cond_e
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mZoomStops:Ljava/util/List;
 
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mEquivalentFocalLengthStops:Ljava/util/List;
 
+    .line 50
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1609,6 +1783,7 @@
 
     invoke-static {v2, p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 51
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/adapter/HorizontalManuallyDualLensSliderDrawAdapter;->stopPointUnitRatios()V
 
     return-void
@@ -1616,6 +1791,19 @@
 
 .method public isSupportedZoomItemSlideOn(FFLjava/util/List;)Z
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "preAngle",
+            "curAngle",
+            "angleItem"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(FF",
@@ -1625,6 +1813,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/adapter/HorizontalManuallyDualLensSliderDrawAdapter;->getMinRotateAngle()F
 
     move-result p0
@@ -1672,6 +1861,7 @@
     :goto_0
     move v1, v2
 
+    .line 2
     :goto_1
     invoke-interface {p3}, Ljava/util/List;->size()I
 
@@ -1681,6 +1871,7 @@
 
     if-eqz p0, :cond_4
 
+    .line 3
     invoke-interface {p3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -1711,6 +1902,7 @@
 
     return v0
 
+    .line 4
     :cond_4
     invoke-interface {p3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1753,7 +1945,16 @@
 
 .method public mapAngleToValue(F)Ljava/lang/String;
     .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "angle"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {p1}, Ljava/lang/Math;->abs(F)F
 
     move-result p1
@@ -1772,8 +1973,9 @@
 
     const/4 v1, 0x0
 
-    move v2, v1
+    move v2, v0
 
+    .line 2
     :goto_0
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mUnitRatios:Ljava/util/List;
 
@@ -1783,6 +1985,7 @@
 
     if-ge v2, v3, :cond_1
 
+    .line 3
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mUnitRatios:Ljava/util/List;
 
     invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1795,14 +1998,15 @@
 
     move-result v3
 
-    add-float/2addr v3, v0
+    add-float/2addr v3, v1
 
     cmpg-float v3, p1, v3
 
     if-gtz v3, :cond_0
 
-    sub-float v3, p1, v0
+    sub-float v3, p1, v1
 
+    .line 4
     iget-object v4, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mUnitRatios:Ljava/util/List;
 
     invoke-interface {v4, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1817,6 +2021,7 @@
 
     div-float v4, v3, v4
 
+    .line 5
     iget-object v5, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mZoomIndexs:Ljava/util/List;
 
     add-int/lit8 v6, v2, 0x1
@@ -1845,6 +2050,7 @@
 
     sub-float/2addr v5, v6
 
+    .line 6
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mZoomIndexs:Ljava/util/List;
 
     invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1865,6 +2071,7 @@
 
     move-result-object p0
 
+    .line 7
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1879,7 +2086,7 @@
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
     const-string p1, ", extraUnit = "
 
@@ -1909,7 +2116,7 @@
 
     move-result-object p1
 
-    new-array v0, v1, [Ljava/lang/Object;
+    new-array v0, v0, [Ljava/lang/Object;
 
     const-string v1, "HorizontalManuallyDualLensSliderDrawAdapter"
 
@@ -1917,6 +2124,7 @@
 
     goto :goto_1
 
+    .line 8
     :cond_0
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mUnitRatios:Ljava/util/List;
 
@@ -1930,7 +2138,7 @@
 
     move-result v3
 
-    add-float/2addr v0, v3
+    add-float/2addr v1, v3
 
     add-int/lit8 v2, v2, 0x1
 
@@ -1945,7 +2153,16 @@
 
 .method public mapValueToAngle(Ljava/lang/String;)F
     .locals 9
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "zoomStr"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mCurrentValue:Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -1954,6 +2171,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1961,8 +2179,10 @@
 
     if-nez v0, :cond_1
 
+    .line 3
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mCurrentValue:Ljava/lang/String;
 
+    .line 4
     :cond_1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->isNonSAT()Z
 
@@ -1974,10 +2194,11 @@
 
     if-eqz v0, :cond_2
 
-    invoke-static {p1}, Lwa/a;->x(F)F
+    invoke-static {p1}, Ld/d/a/k8/y;->w(F)F
 
     move-result p1
 
+    .line 5
     :cond_2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mZoomIndexs:Ljava/util/List;
 
@@ -1987,14 +2208,16 @@
 
     add-int/lit8 v0, v0, -0x2
 
+    .line 6
     iget v2, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mCurrentMode:I
 
-    invoke-static {v2}, Lcom/android/camera/v2;->I(I)Ljava/lang/String;
+    invoke-static {v2}, Ld/d/a/d4;->H(I)Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "ultra"
 
+    .line 7
     invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -2007,7 +2230,8 @@
 
     if-eq v3, v4, :cond_3
 
-    invoke-static {}, Lcom/android/camera/v2;->H6()Z
+    .line 8
+    invoke-static {}, Ld/d/a/d4;->F6()Z
 
     move-result v3
 
@@ -2021,6 +2245,7 @@
 
     if-eqz v2, :cond_4
 
+    .line 9
     :cond_3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mZoomIndexs:Ljava/util/List;
 
@@ -2044,6 +2269,7 @@
 
     if-ge v3, v0, :cond_7
 
+    .line 10
     iget-object v5, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mZoomIndexs:Ljava/util/List;
 
     add-int/lit8 v7, v3, 0x1
@@ -2064,6 +2290,7 @@
 
     if-gtz v8, :cond_5
 
+    .line 11
     iget-object v8, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mZoomIndexs:Ljava/util/List;
 
     invoke-interface {v8, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2096,6 +2323,7 @@
 
     if-gtz v8, :cond_6
 
+    .line 12
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mZoomIndexs:Ljava/util/List;
 
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2128,6 +2356,7 @@
 
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mZoomIndexs:Ljava/util/List;
 
+    .line 13
     invoke-interface {v1, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -2154,6 +2383,7 @@
 
     div-float/2addr v0, v1
 
+    .line 14
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mRulerLines:Ljava/util/List;
 
     invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2172,10 +2402,12 @@
 
     add-float/2addr v0, v4
 
+    .line 15
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mUnitCount:F
 
     goto :goto_1
 
+    .line 16
     :cond_5
     iget-object v8, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mZoomIndexs:Ljava/util/List;
 
@@ -2209,6 +2441,7 @@
 
     if-gtz v8, :cond_6
 
+    .line 17
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mZoomIndexs:Ljava/util/List;
 
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2229,6 +2462,7 @@
 
     iget-object v8, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mZoomIndexs:Ljava/util/List;
 
+    .line 18
     invoke-interface {v8, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v7
@@ -2259,6 +2493,7 @@
 
     add-float/2addr v0, v4
 
+    .line 19
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mUnitCount:F
 
     :goto_1
@@ -2272,6 +2507,7 @@
 
     goto :goto_2
 
+    .line 20
     :cond_6
     iget-object v6, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mUnitRatios:Ljava/util/List;
 
@@ -2297,6 +2533,7 @@
 
     if-lez v0, :cond_8
 
+    .line 21
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mZoomRatioMax:F
 
     cmpg-float v0, p1, v0
@@ -2309,6 +2546,7 @@
 
     add-float/2addr v4, p1
 
+    .line 22
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mUnitCount:F
 
     div-float/2addr v4, p0
@@ -2319,6 +2557,7 @@
 
     neg-float v1, v4
 
+    .line 23
     :cond_8
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -2345,7 +2584,16 @@
 
 .method public snapHelperTransform(F)F
     .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "angle"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {p1}, Ljava/lang/Math;->abs(F)F
 
     move-result p1
@@ -2364,10 +2612,11 @@
 
     const/4 v2, 0x0
 
-    move v4, v0
+    move v3, v0
 
-    move v3, v2
+    move v4, v2
 
+    .line 2
     :goto_0
     iget-object v5, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mUnitRatios:Ljava/util/List;
 
@@ -2377,6 +2626,7 @@
 
     if-ge v3, v5, :cond_5
 
+    .line 3
     iget-object v5, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mUnitRatios:Ljava/util/List;
 
     invoke-interface {v5, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2395,42 +2645,45 @@
 
     if-gtz v5, :cond_4
 
-    const/4 v0, 0x1
+    const/4 v2, 0x1
 
-    if-ge v3, v0, :cond_0
+    if-ge v3, v2, :cond_0
 
-    iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mScaleRingStartPisition:I
+    .line 4
+    iget v2, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mScaleRingStartPisition:I
 
-    if-eqz v0, :cond_0
+    if-eqz v2, :cond_0
 
-    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mRulerLines:Ljava/util/List;
+    .line 5
+    iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mRulerLines:Ljava/util/List;
 
-    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v2
 
-    check-cast v0, Ljava/lang/Integer;
+    check-cast v2, Ljava/lang/Integer;
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
-    move-result v0
+    move-result v2
 
     goto :goto_1
 
+    .line 6
     :cond_0
-    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mZoomIndexs:Ljava/util/List;
+    iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mZoomIndexs:Ljava/util/List;
 
     add-int/lit8 v5, v3, 0x1
 
-    invoke-interface {v0, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v2, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v2
 
-    check-cast v0, Ljava/lang/Float;
+    check-cast v2, Ljava/lang/Float;
 
-    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
+    invoke-virtual {v2}, Ljava/lang/Float;->floatValue()F
 
-    move-result v0
+    move-result v2
 
     iget-object v5, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mZoomIndexs:Ljava/util/List;
 
@@ -2444,14 +2697,15 @@
 
     move-result v5
 
-    sub-float/2addr v0, v5
+    sub-float/2addr v2, v5
 
     const/high16 v5, 0x41200000    # 10.0f
 
-    mul-float/2addr v0, v5
+    mul-float/2addr v2, v5
 
-    float-to-int v0, v0
+    float-to-int v2, v2
 
+    .line 7
     :goto_1
     iget-object v5, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mUnitRatios:Ljava/util/List;
 
@@ -2465,14 +2719,14 @@
 
     move-result v3
 
-    int-to-float v5, v0
+    int-to-float v5, v2
 
     div-float/2addr v3, v5
 
     :goto_2
-    if-ge v2, v0, :cond_3
+    if-ge v0, v2, :cond_3
 
-    int-to-float v5, v2
+    int-to-float v5, v0
 
     mul-float/2addr v5, v3
 
@@ -2482,7 +2736,7 @@
 
     if-ltz v6, :cond_2
 
-    add-int/lit8 v6, v2, 0x1
+    add-int/lit8 v6, v0, 0x1
 
     int-to-float v6, v6
 
@@ -2514,10 +2768,11 @@
     goto :goto_3
 
     :cond_2
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
+    .line 8
     :cond_3
     :goto_3
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mUnitCount:F
@@ -2530,10 +2785,11 @@
 
     mul-float/2addr p0, v1
 
-    mul-float v0, p1, p0
+    mul-float v2, p1, p0
 
     goto :goto_4
 
+    .line 9
     :cond_4
     iget-object v5, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mUnitRatios:Ljava/util/List;
 
@@ -2555,38 +2811,42 @@
 
     :cond_5
     :goto_4
-    return v0
+    return v2
 .end method
 
 .method public stopPointUnitRatios()V
     .locals 7
 
+    .line 1
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mCurrentMode:I
 
-    invoke-static {v0}, Lcom/android/camera/v2;->I(I)Ljava/lang/String;
+    invoke-static {v0}, Ld/d/a/d4;->H(I)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "ultra"
 
+    .line 2
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    const/4 v2, 0x0
+    const/high16 v2, 0x3f800000    # 1.0f
 
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v3
+    const/4 v3, 0x0
 
     const/4 v4, 0x0
 
-    const/high16 v5, 0x3f800000    # 1.0f
+    .line 3
+    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v5
 
     if-nez v1, :cond_4
 
     const-string v1, "wide"
 
+    .line 4
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2606,12 +2866,14 @@
     :cond_0
     const-string v1, "tele"
 
+    .line 5
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
+    .line 6
     :goto_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
@@ -2619,13 +2881,15 @@
 
     move-result v0
 
-    if-ge v4, v0, :cond_8
+    if-ge v3, v0, :cond_8
 
-    invoke-virtual {p0, v4}, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->setScaleZoomValue(I)V
+    .line 7
+    invoke-virtual {p0, v3}, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->setScaleZoomValue(I)V
 
+    .line 8
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
-    invoke-interface {v0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2641,31 +2905,35 @@
 
     if-nez v0, :cond_1
 
+    .line 9
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mStopPointUnitRatios:Ljava/util/List;
 
-    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    move v5, v1
+    move v2, v1
 
     goto :goto_1
 
+    .line 10
     :cond_1
-    invoke-virtual {p0, v5, v4, v2, v2}, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->initStopPointUnitRatios(FIFF)V
+    invoke-virtual {p0, v2, v3, v4, v4}, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->initStopPointUnitRatios(FIFF)V
 
     :goto_1
-    add-int/lit8 v4, v4, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_2
     const-string v1, "Standalone"
 
+    .line 11
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_8
 
+    .line 12
     :goto_2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
@@ -2673,13 +2941,15 @@
 
     move-result v0
 
-    if-ge v4, v0, :cond_8
+    if-ge v3, v0, :cond_8
 
-    invoke-virtual {p0, v4}, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->setScaleZoomValue(I)V
+    .line 13
+    invoke-virtual {p0, v3}, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->setScaleZoomValue(I)V
 
+    .line 14
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
-    invoke-interface {v0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2695,28 +2965,31 @@
 
     if-nez v0, :cond_3
 
+    .line 15
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mStopPointUnitRatios:Ljava/util/List;
 
-    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_3
 
+    .line 16
     :cond_3
-    invoke-virtual {p0, v1, v4, v2, v2}, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->initStopPointUnitRatios(FIFF)V
+    invoke-virtual {p0, v1, v3, v4, v4}, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->initStopPointUnitRatios(FIFF)V
 
     :goto_3
-    add-int/lit8 v4, v4, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_2
 
     :cond_4
     :goto_4
-    move v1, v2
+    move v0, v3
 
-    move v3, v1
+    move v1, v4
 
-    move v0, v4
+    move v5, v1
 
+    .line 17
     :goto_5
     iget-object v6, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
@@ -2724,13 +2997,15 @@
 
     move-result v6
 
-    if-ge v4, v6, :cond_8
+    if-ge v3, v6, :cond_8
 
-    invoke-virtual {p0, v4}, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->setScaleZoomValue(I)V
+    .line 18
+    invoke-virtual {p0, v3}, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->setScaleZoomValue(I)V
 
+    .line 19
     iget-object v6, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
-    invoke-interface {v6, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v6, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
 
@@ -2740,20 +3015,21 @@
 
     move-result v6
 
-    cmpg-float v6, v6, v5
+    cmpg-float v6, v6, v2
 
     if-gez v6, :cond_5
 
     const/4 v0, 0x1
 
-    move v3, v5
+    move v5, v2
 
     goto :goto_6
 
+    .line 20
     :cond_5
     iget-object v6, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mIndexs:Ljava/util/List;
 
-    invoke-interface {v6, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v6, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
 
@@ -2763,30 +3039,32 @@
 
     move-result v6
 
-    cmpl-float v6, v6, v5
+    cmpl-float v6, v6, v2
 
     if-nez v6, :cond_7
 
     if-eqz v0, :cond_6
 
+    .line 21
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->mStopPointUnitRatios:Ljava/util/List;
 
-    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    invoke-static {v5}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v6
 
     invoke-interface {v1, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_6
-    move v1, v3
+    move v1, v5
 
     goto :goto_6
 
+    .line 22
     :cond_7
-    invoke-virtual {p0, v5, v4, v2, v1}, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->initStopPointUnitRatios(FIFF)V
+    invoke-virtual {p0, v2, v3, v4, v1}, Lcom/android/camera2/compat/theme/custom/mm/adapter/StopPointScaleZoomSliderDrawAdapter;->initStopPointUnitRatios(FIFF)V
 
     :goto_6
-    add-int/lit8 v4, v4, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_5
 

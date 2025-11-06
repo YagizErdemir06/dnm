@@ -1,4 +1,4 @@
-.class Landroidx/core/os/HandlerCompat$Api29Impl;
+.class public Landroidx/core/os/HandlerCompat$Api29Impl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,6 +31,7 @@
 .method public static hasCallbacks(Landroid/os/Handler;Ljava/lang/Runnable;)Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/os/Handler;->hasCallbacks(Ljava/lang/Runnable;)Z
 
     move-result p0

@@ -16,6 +16,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,12 +30,12 @@
     .annotation build Lcom/google/common/annotations/GwtIncompatible;
     .end annotation
 
-    const-wide v0, 0x7fffffffffffffffL
-
     .line 1
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-static {p0, v0, v1, v2}, Lcom/google/common/util/concurrent/Uninterruptibles;->awaitTerminationUninterruptibly(Ljava/util/concurrent/ExecutorService;JLjava/util/concurrent/TimeUnit;)Z
+    const-wide v1, 0x7fffffffffffffffL
+
+    invoke-static {p0, v1, v2, v0}, Lcom/google/common/util/concurrent/Uninterruptibles;->awaitTerminationUninterruptibly(Ljava/util/concurrent/ExecutorService;JLjava/util/concurrent/TimeUnit;)Z
 
     move-result p0
 
@@ -647,6 +648,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     :try_start_0
     invoke-interface {p0, p1}, Ljava/util/concurrent/BlockingQueue;->put(Ljava/lang/Object;)V
@@ -656,6 +658,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object p0
@@ -676,6 +679,7 @@
 
     invoke-virtual {p1}, Ljava/lang/Thread;->interrupt()V
 
+    .line 3
     :cond_1
     throw p0
 
@@ -692,11 +696,13 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :try_start_0
     invoke-virtual {p2, p0, p1}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
 
     move-result-wide p0
 
+    .line 2
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v1
@@ -705,6 +711,7 @@
 
     add-long/2addr v1, p0
 
+    .line 3
     :goto_0
     :try_start_1
     sget-object p2, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
@@ -716,6 +723,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object p0
@@ -728,6 +736,7 @@
     :catch_0
     const/4 v0, 0x1
 
+    .line 5
     :try_start_2
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
@@ -744,12 +753,14 @@
 
     if-eqz v0, :cond_1
 
+    .line 6
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object p1
 
     invoke-virtual {p1}, Ljava/lang/Thread;->interrupt()V
 
+    .line 7
     :cond_1
     throw p0
 .end method
@@ -771,6 +782,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     :try_start_0
     invoke-interface {p0}, Ljava/util/concurrent/BlockingQueue;->take()Ljava/lang/Object;
@@ -782,6 +794,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
@@ -802,6 +815,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
 
+    .line 3
     :cond_1
     throw p0
 
@@ -911,11 +925,13 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :try_start_0
     invoke-virtual {p3, p1, p2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
 
     move-result-wide p1
 
+    .line 2
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v1
@@ -924,6 +940,7 @@
 
     add-long/2addr v1, p1
 
+    .line 3
     :goto_0
     :try_start_1
     sget-object p3, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
@@ -937,6 +954,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object p1
@@ -949,6 +967,7 @@
     :catch_0
     const/4 v0, 0x1
 
+    .line 5
     :try_start_2
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
@@ -965,12 +984,14 @@
 
     if-eqz v0, :cond_1
 
+    .line 6
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object p1
 
     invoke-virtual {p1}, Ljava/lang/Thread;->interrupt()V
 
+    .line 7
     :cond_1
     throw p0
 .end method

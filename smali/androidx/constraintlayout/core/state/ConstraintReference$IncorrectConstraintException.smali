@@ -1,4 +1,4 @@
-.class Landroidx/constraintlayout/core/state/ConstraintReference$IncorrectConstraintException;
+.class public Landroidx/constraintlayout/core/state/ConstraintReference$IncorrectConstraintException;
 .super Ljava/lang/Exception;
 .source "SourceFile"
 
@@ -38,8 +38,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/constraintlayout/core/state/ConstraintReference$IncorrectConstraintException;->mErrors:Ljava/util/ArrayList;
 
     return-void
@@ -58,6 +60,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/state/ConstraintReference$IncorrectConstraintException;->mErrors:Ljava/util/ArrayList;
 
     return-object p0
@@ -66,6 +69,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -76,7 +80,7 @@
 
     iget-object p0, p0, Landroidx/constraintlayout/core/state/ConstraintReference$IncorrectConstraintException;->mErrors:Ljava/util/ArrayList;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/util/ArrayList;->toString()Ljava/lang/String;
 
     move-result-object p0
 

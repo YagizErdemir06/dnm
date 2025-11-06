@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/util/concurrent/zza;
+.class public final Lcom/google/android/gms/common/util/concurrent/zza;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -28,10 +28,12 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
     iget-object p0, p0, Lcom/google/android/gms/common/util/concurrent/zza;->zza:Ljava/lang/Runnable;
 
+    .line 2
     invoke-interface {p0}, Ljava/lang/Runnable;->run()V
 
     return-void

@@ -19,6 +19,7 @@
     :goto_0
     if-ge v0, p1, :cond_1
 
+    .line 1
     aget-object v1, p0, v0
 
     if-eqz v1, :cond_0
@@ -32,6 +33,7 @@
 
     new-instance p1, Ljava/lang/StringBuilder;
 
+    .line 2
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v1, "at index "

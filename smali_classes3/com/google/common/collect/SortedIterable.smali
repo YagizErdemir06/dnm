@@ -1,4 +1,4 @@
-.class interface abstract Lcom/google/common/collect/SortedIterable;
+.class public interface abstract Lcom/google/common/collect/SortedIterable;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

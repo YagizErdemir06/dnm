@@ -1,4 +1,4 @@
-.class Landroidx/constraintlayout/utils/widget/MotionButton$2;
+.class public Landroidx/constraintlayout/utils/widget/MotionButton$2;
 .super Landroid/view/ViewOutlineProvider;
 .source "SourceFile"
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/constraintlayout/utils/widget/MotionButton;
+.field public final synthetic this$0:Landroidx/constraintlayout/utils/widget/MotionButton;
 
 
 # direct methods
@@ -30,6 +30,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroidx/constraintlayout/utils/widget/MotionButton$2;->this$0:Landroidx/constraintlayout/utils/widget/MotionButton;
 
     invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
@@ -52,27 +53,30 @@
         }
     .end annotation
 
+    .line 1
     iget-object p1, p0, Landroidx/constraintlayout/utils/widget/MotionButton$2;->this$0:Landroidx/constraintlayout/utils/widget/MotionButton;
 
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+    invoke-virtual {p1}, Landroid/widget/Button;->getWidth()I
 
     move-result v3
 
+    .line 2
     iget-object p1, p0, Landroidx/constraintlayout/utils/widget/MotionButton$2;->this$0:Landroidx/constraintlayout/utils/widget/MotionButton;
 
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+    invoke-virtual {p1}, Landroid/widget/Button;->getHeight()I
 
     move-result v4
 
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
+    .line 3
     iget-object p0, p0, Landroidx/constraintlayout/utils/widget/MotionButton$2;->this$0:Landroidx/constraintlayout/utils/widget/MotionButton;
 
     invoke-static {p0}, Landroidx/constraintlayout/utils/widget/MotionButton;->access$100(Landroidx/constraintlayout/utils/widget/MotionButton;)F
 
     move-result v5
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
 
     move-object v0, p2
 

@@ -1,4 +1,4 @@
-.class Landroidx/media/MediaBrowserServiceCompat$ServiceBinderImpl$4;
+.class public Landroidx/media/MediaBrowserServiceCompat$ServiceBinderImpl$4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,13 @@
 
 
 # instance fields
-.field final synthetic this$1:Landroidx/media/MediaBrowserServiceCompat$ServiceBinderImpl;
+.field public final synthetic this$1:Landroidx/media/MediaBrowserServiceCompat$ServiceBinderImpl;
 
-.field final synthetic val$callbacks:Landroidx/media/MediaBrowserServiceCompat$ServiceCallbacks;
+.field public final synthetic val$callbacks:Landroidx/media/MediaBrowserServiceCompat$ServiceCallbacks;
 
-.field final synthetic val$id:Ljava/lang/String;
+.field public final synthetic val$id:Ljava/lang/String;
 
-.field final synthetic val$token:Landroid/os/IBinder;
+.field public final synthetic val$token:Landroid/os/IBinder;
 
 
 # direct methods
@@ -45,6 +45,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroidx/media/MediaBrowserServiceCompat$ServiceBinderImpl$4;->this$1:Landroidx/media/MediaBrowserServiceCompat$ServiceBinderImpl;
 
     iput-object p2, p0, Landroidx/media/MediaBrowserServiceCompat$ServiceBinderImpl$4;->val$callbacks:Landroidx/media/MediaBrowserServiceCompat$ServiceCallbacks;
@@ -63,12 +64,14 @@
 .method public run()V
     .locals 5
 
+    .line 1
     iget-object v0, p0, Landroidx/media/MediaBrowserServiceCompat$ServiceBinderImpl$4;->val$callbacks:Landroidx/media/MediaBrowserServiceCompat$ServiceCallbacks;
 
     invoke-interface {v0}, Landroidx/media/MediaBrowserServiceCompat$ServiceCallbacks;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
+    .line 2
     iget-object v1, p0, Landroidx/media/MediaBrowserServiceCompat$ServiceBinderImpl$4;->this$1:Landroidx/media/MediaBrowserServiceCompat$ServiceBinderImpl;
 
     iget-object v1, v1, Landroidx/media/MediaBrowserServiceCompat$ServiceBinderImpl;->this$0:Landroidx/media/MediaBrowserServiceCompat;
@@ -85,11 +88,12 @@
 
     if-nez v0, :cond_0
 
+    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "removeSubscription for callback that isn\'t registered id="
+    const-string v2, "removeSubscription for callback that isn\'t registered id="
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -105,6 +109,7 @@
 
     return-void
 
+    .line 4
     :cond_0
     iget-object v2, p0, Landroidx/media/MediaBrowserServiceCompat$ServiceBinderImpl$4;->this$1:Landroidx/media/MediaBrowserServiceCompat$ServiceBinderImpl;
 
@@ -120,11 +125,12 @@
 
     if-nez v0, :cond_1
 
+    .line 5
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "removeSubscription called for "
+    const-string v2, "removeSubscription called for "
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

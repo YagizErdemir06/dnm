@@ -1,16 +1,17 @@
-.class final Lcom/google/android/gms/common/api/internal/zabc;
+.class public final Lcom/google/android/gms/common/api/internal/zabc;
 .super Lcom/google/android/gms/internal/base/zau;
 .source "SourceFile"
 
 
 # instance fields
-.field final synthetic zaa:Lcom/google/android/gms/common/api/internal/zabe;
+.field public final synthetic zaa:Lcom/google/android/gms/common/api/internal/zabe;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/gms/common/api/internal/zabe;Landroid/os/Looper;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/common/api/internal/zabc;->zaa:Lcom/google/android/gms/common/api/internal/zabe;
 
     invoke-direct {p0, p2}, Lcom/google/android/gms/internal/base/zau;-><init>(Landroid/os/Looper;)V
@@ -23,6 +24,7 @@
 .method public final handleMessage(Landroid/os/Message;)V
     .locals 1
 
+    .line 1
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/4 v0, 0x1
@@ -33,6 +35,7 @@
 
     if-eq p1, v0, :cond_0
 
+    .line 2
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -43,11 +46,11 @@
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string p1, "GoogleApiClientImpl"
-
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
+
+    const-string p1, "GoogleApiClientImpl"
 
     invoke-static {p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -56,6 +59,7 @@
     :cond_0
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zabc;->zaa:Lcom/google/android/gms/common/api/internal/zabe;
 
+    .line 3
     invoke-static {p0}, Lcom/google/android/gms/common/api/internal/zabe;->zai(Lcom/google/android/gms/common/api/internal/zabe;)V
 
     return-void
@@ -63,6 +67,7 @@
     :cond_1
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zabc;->zaa:Lcom/google/android/gms/common/api/internal/zabe;
 
+    .line 4
     invoke-static {p0}, Lcom/google/android/gms/common/api/internal/zabe;->zaj(Lcom/google/android/gms/common/api/internal/zabe;)V
 
     return-void

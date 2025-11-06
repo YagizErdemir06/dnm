@@ -1,4 +1,4 @@
-.class Lcom/google/common/base/Suppliers$MemoizingSupplier;
+.class public Lcom/google/common/base/Suppliers$MemoizingSupplier;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -38,7 +38,7 @@
 
 
 # instance fields
-.field final delegate:Lcom/google/common/base/Supplier;
+.field public final delegate:Lcom/google/common/base/Supplier;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/base/Supplier<",
@@ -47,9 +47,9 @@
     .end annotation
 .end field
 
-.field volatile transient initialized:Z
+.field public volatile transient initialized:Z
 
-.field transient value:Ljava/lang/Object;
+.field public transient value:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TT;"
@@ -72,8 +72,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -98,33 +100,41 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/common/base/Suppliers$MemoizingSupplier;->initialized:Z
 
     if-nez v0, :cond_1
 
+    .line 2
     monitor-enter p0
 
+    .line 3
     :try_start_0
     iget-boolean v0, p0, Lcom/google/common/base/Suppliers$MemoizingSupplier;->initialized:Z
 
     if-nez v0, :cond_0
 
+    .line 4
     iget-object v0, p0, Lcom/google/common/base/Suppliers$MemoizingSupplier;->delegate:Lcom/google/common/base/Supplier;
 
     invoke-interface {v0}, Lcom/google/common/base/Supplier;->get()Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 5
     iput-object v0, p0, Lcom/google/common/base/Suppliers$MemoizingSupplier;->value:Ljava/lang/Object;
 
     const/4 v1, 0x1
 
+    .line 6
     iput-boolean v1, p0, Lcom/google/common/base/Suppliers$MemoizingSupplier;->initialized:Z
 
+    .line 7
     monitor-exit p0
 
     return-object v0
 
+    .line 8
     :cond_0
     monitor-exit p0
 
@@ -139,6 +149,7 @@
 
     throw v0
 
+    .line 9
     :cond_1
     :goto_0
     iget-object p0, p0, Lcom/google/common/base/Suppliers$MemoizingSupplier;->value:Ljava/lang/Object;
@@ -153,6 +164,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/common/base/Suppliers$MemoizingSupplier;->initialized:Z
 
     if-eqz v0, :cond_0

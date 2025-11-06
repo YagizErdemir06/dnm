@@ -19,12 +19,28 @@
 .end method
 
 .method public abstract onFriendModeConnectSuccess(Ljava/lang/String;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "ip"
+        }
+    .end annotation
 .end method
 
 .method public abstract onFriendModeServerReceiveCancelConnect()V
 .end method
 
 .method public abstract onFriendModeServerReceiveConnect(Ljava/lang/String;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "deviceName"
+        }
+    .end annotation
 .end method
 
 .method public abstract onRemoteCancel()V
@@ -37,7 +53,25 @@
 .end method
 
 .method public abstract onStartError(Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeError;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "error"
+        }
+    .end annotation
 .end method
 
 .method public abstract onStreamStart(Ljava/lang/String;Ljava/lang/String;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "ip",
+            "param"
+        }
+    .end annotation
 .end method

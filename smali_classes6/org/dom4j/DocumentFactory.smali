@@ -7,19 +7,19 @@
 
 
 # static fields
-.field static synthetic class$org$dom4j$DocumentFactory:Ljava/lang/Class;
+.field public static synthetic class$org$dom4j$DocumentFactory:Ljava/lang/Class;
 
 .field private static singleton:Lorg/dom4j/util/SingletonStrategy;
 
 
 # instance fields
-.field protected transient cache:Lorg/dom4j/tree/QNameCache;
+.field public transient cache:Lorg/dom4j/tree/QNameCache;
 
 .field private xpathNamespaceURIs:Ljava/util/Map;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 0
 
     return-void
@@ -28,16 +28,19 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/DocumentFactory;->init()V
 
     return-void
 .end method
 
-.method static synthetic class$(Ljava/lang/String;)Ljava/lang/Class;
+.method public static synthetic class$(Ljava/lang/String;)Ljava/lang/Class;
     .locals 1
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -52,7 +55,7 @@
 
     new-instance v0, Ljava/lang/NoClassDefFoundError;
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/ClassNotFoundException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
 
@@ -64,28 +67,28 @@
 .method public static createSingleton(Ljava/lang/String;)Lorg/dom4j/DocumentFactory;
     .locals 3
 
+    const/4 v0, 0x1
+
     .line 7
     :try_start_0
-    sget-object v0, Lorg/dom4j/DocumentFactory;->class$org$dom4j$DocumentFactory:Ljava/lang/Class;
+    sget-object v1, Lorg/dom4j/DocumentFactory;->class$org$dom4j$DocumentFactory:Ljava/lang/Class;
 
-    if-nez v0, :cond_0
+    if-nez v1, :cond_0
 
-    const-string v0, "org.dom4j.DocumentFactory"
+    const-string v1, "org.dom4j.DocumentFactory"
 
-    invoke-static {v0}, Lorg/dom4j/DocumentFactory;->class$(Ljava/lang/String;)Ljava/lang/Class;
+    invoke-static {v1}, Lorg/dom4j/DocumentFactory;->class$(Ljava/lang/String;)Ljava/lang/Class;
 
-    move-result-object v0
+    move-result-object v1
 
-    sput-object v0, Lorg/dom4j/DocumentFactory;->class$org$dom4j$DocumentFactory:Ljava/lang/Class;
+    sput-object v1, Lorg/dom4j/DocumentFactory;->class$org$dom4j$DocumentFactory:Ljava/lang/Class;
 
     :cond_0
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
-    move-result-object v0
+    move-result-object v1
 
-    const/4 v1, 0x1
-
-    invoke-static {p0, v1, v0}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
+    invoke-static {p0, v0, v1}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
 
     move-result-object v0
 
@@ -190,17 +193,20 @@
 
     monitor-enter v0
 
+    .line 1
     :try_start_0
     sget-object v1, Lorg/dom4j/DocumentFactory;->singleton:Lorg/dom4j/util/SingletonStrategy;
 
     if-nez v1, :cond_0
 
+    .line 2
     invoke-static {}, Lorg/dom4j/DocumentFactory;->createSingleton()Lorg/dom4j/util/SingletonStrategy;
 
     move-result-object v1
 
     sput-object v1, Lorg/dom4j/DocumentFactory;->singleton:Lorg/dom4j/util/SingletonStrategy;
 
+    .line 3
     :cond_0
     sget-object v1, Lorg/dom4j/DocumentFactory;->singleton:Lorg/dom4j/util/SingletonStrategy;
 
@@ -233,8 +239,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->defaultReadObject()V
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/DocumentFactory;->init()V
 
     return-void
@@ -271,6 +279,7 @@
 .method public createCDATA(Ljava/lang/String;)Lorg/dom4j/CDATA;
     .locals 0
 
+    .line 1
     new-instance p0, Lorg/dom4j/tree/DefaultCDATA;
 
     invoke-direct {p0, p1}, Lorg/dom4j/tree/DefaultCDATA;-><init>(Ljava/lang/String;)V
@@ -281,6 +290,7 @@
 .method public createComment(Ljava/lang/String;)Lorg/dom4j/Comment;
     .locals 0
 
+    .line 1
     new-instance p0, Lorg/dom4j/tree/DefaultComment;
 
     invoke-direct {p0, p1}, Lorg/dom4j/tree/DefaultComment;-><init>(Ljava/lang/String;)V
@@ -291,6 +301,7 @@
 .method public createDocType(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/dom4j/DocumentType;
     .locals 0
 
+    .line 1
     new-instance p0, Lorg/dom4j/tree/DefaultDocumentType;
 
     invoke-direct {p0, p1, p2, p3}, Lorg/dom4j/tree/DefaultDocumentType;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
@@ -394,6 +405,7 @@
 .method public createEntity(Ljava/lang/String;Ljava/lang/String;)Lorg/dom4j/Entity;
     .locals 0
 
+    .line 1
     new-instance p0, Lorg/dom4j/tree/DefaultEntity;
 
     invoke-direct {p0, p1, p2}, Lorg/dom4j/tree/DefaultEntity;-><init>(Ljava/lang/String;Ljava/lang/String;)V
@@ -404,6 +416,7 @@
 .method public createNamespace(Ljava/lang/String;Ljava/lang/String;)Lorg/dom4j/Namespace;
     .locals 0
 
+    .line 1
     invoke-static {p1, p2}, Lorg/dom4j/Namespace;->get(Ljava/lang/String;Ljava/lang/String;)Lorg/dom4j/Namespace;
 
     move-result-object p0
@@ -414,6 +427,7 @@
 .method public createPattern(Ljava/lang/String;)Lorg/dom4j/rule/Pattern;
     .locals 0
 
+    .line 1
     new-instance p0, Lorg/dom4j/xpath/XPathPattern;
 
     invoke-direct {p0, p1}, Lorg/dom4j/xpath/XPathPattern;-><init>(Ljava/lang/String;)V
@@ -502,6 +516,7 @@
 .method public createQNameCache()Lorg/dom4j/tree/QNameCache;
     .locals 1
 
+    .line 1
     new-instance v0, Lorg/dom4j/tree/QNameCache;
 
     invoke-direct {v0, p0}, Lorg/dom4j/tree/QNameCache;-><init>(Lorg/dom4j/DocumentFactory;)V
@@ -514,12 +529,14 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     new-instance p0, Lorg/dom4j/tree/DefaultText;
 
     invoke-direct {p0, p1}, Lorg/dom4j/tree/DefaultText;-><init>(Ljava/lang/String;)V
 
     return-object p0
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -597,6 +614,7 @@
 .method public getQNames()Ljava/util/List;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/DocumentFactory;->cache:Lorg/dom4j/tree/QNameCache;
 
     invoke-virtual {p0}, Lorg/dom4j/tree/QNameCache;->getQNames()Ljava/util/List;
@@ -609,6 +627,7 @@
 .method public getXPathNamespaceURIs()Ljava/util/Map;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/DocumentFactory;->xpathNamespaceURIs:Ljava/util/Map;
 
     return-object p0
@@ -617,6 +636,7 @@
 .method public init()V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/DocumentFactory;->createQNameCache()Lorg/dom4j/tree/QNameCache;
 
     move-result-object v0
@@ -629,6 +649,7 @@
 .method public intern(Lorg/dom4j/QName;)Lorg/dom4j/QName;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/DocumentFactory;->cache:Lorg/dom4j/tree/QNameCache;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/QNameCache;->intern(Lorg/dom4j/QName;)Lorg/dom4j/QName;
@@ -641,6 +662,7 @@
 .method public setXPathNamespaceURIs(Ljava/util/Map;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/DocumentFactory;->xpathNamespaceURIs:Ljava/util/Map;
 
     return-void

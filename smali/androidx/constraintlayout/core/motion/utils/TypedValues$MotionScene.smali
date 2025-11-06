@@ -36,6 +36,7 @@
 
     const-string v1, "layoutDuringTransition"
 
+    .line 1
     filled-new-array {v0, v1}, [Ljava/lang/String;
 
     move-result-object v0
@@ -48,6 +49,7 @@
 .method public static getId(Ljava/lang/String;)I
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     const-string v0, "defaultDuration"

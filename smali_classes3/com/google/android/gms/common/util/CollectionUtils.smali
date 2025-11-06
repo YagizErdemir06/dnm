@@ -40,6 +40,7 @@
 
     return p0
 
+    .line 1
     :cond_0
     invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
 
@@ -377,6 +378,7 @@
         }
     .end annotation
 
+    .line 1
     array-length v0, p0
 
     array-length v1, p1
@@ -391,15 +393,18 @@
 
     if-eq v0, v1, :cond_1
 
+    .line 2
     invoke-static {v0, v2}, Lcom/google/android/gms/common/util/CollectionUtils;->zza(IZ)Ljava/util/Map;
 
     move-result-object v0
 
+    .line 3
     :goto_0
     array-length v1, p0
 
     if-ge v2, v1, :cond_0
 
+    .line 4
     aget-object v1, p0, v2
 
     aget-object v3, p1, v2
@@ -410,6 +415,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
@@ -417,17 +423,20 @@
 
     return-object p0
 
+    .line 6
     :cond_1
     aget-object p0, p0, v2
 
     aget-object p1, p1, v2
 
+    .line 7
     invoke-static {p0, p1}, Ljava/util/Collections;->singletonMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
 
     move-result-object p0
 
     return-object p0
 
+    .line 8
     :cond_2
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
@@ -440,6 +449,7 @@
 
     new-instance p1, Ljava/lang/StringBuilder;
 
+    .line 9
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v2, "Key and values array lengths not equal: "
@@ -483,6 +493,7 @@
 
     if-nez p0, :cond_0
 
+    .line 1
     new-instance p0, Landroidx/collection/ArraySet;
 
     invoke-direct {p0}, Landroidx/collection/ArraySet;-><init>()V
@@ -492,6 +503,7 @@
     :cond_0
     const/4 v0, 0x1
 
+    .line 2
     invoke-static {p0, v0}, Lcom/google/android/gms/common/util/CollectionUtils;->zzb(IZ)Ljava/util/Set;
 
     move-result-object p0
@@ -721,6 +733,7 @@
 
     if-gt p0, p1, :cond_0
 
+    .line 1
     new-instance p1, Landroidx/collection/ArrayMap;
 
     invoke-direct {p1, p0}, Landroidx/collection/ArrayMap;-><init>(I)V
@@ -732,6 +745,7 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
+    .line 2
     invoke-direct {p1, p0, v0}, Ljava/util/HashMap;-><init>(IF)V
 
     :goto_0
@@ -765,6 +779,7 @@
     :goto_1
     if-gt p0, p1, :cond_2
 
+    .line 1
     new-instance p1, Landroidx/collection/ArraySet;
 
     invoke-direct {p1, p0}, Landroidx/collection/ArraySet;-><init>(I)V
@@ -774,6 +789,7 @@
     :cond_2
     new-instance p1, Ljava/util/HashSet;
 
+    .line 2
     invoke-direct {p1, p0, v1}, Ljava/util/HashSet;-><init>(IF)V
 
     :goto_2

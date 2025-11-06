@@ -20,6 +20,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     iput p1, p0, Lcom/google/android/gms/common/GooglePlayServicesManifestException;->zza:I
@@ -40,6 +41,7 @@
 .method public getExpectedVersion()I
     .locals 0
 
+    .line 1
     sget p0, Lcom/google/android/gms/common/GoogleApiAvailabilityLight;->GOOGLE_PLAY_SERVICES_VERSION_CODE:I
 
     return p0

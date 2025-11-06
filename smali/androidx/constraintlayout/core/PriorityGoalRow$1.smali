@@ -1,4 +1,4 @@
-.class Landroidx/constraintlayout/core/PriorityGoalRow$1;
+.class public Landroidx/constraintlayout/core/PriorityGoalRow$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,13 +27,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/constraintlayout/core/PriorityGoalRow;
+.field public final synthetic this$0:Landroidx/constraintlayout/core/PriorityGoalRow;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/constraintlayout/core/PriorityGoalRow;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/constraintlayout/core/PriorityGoalRow$1;->this$0:Landroidx/constraintlayout/core/PriorityGoalRow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

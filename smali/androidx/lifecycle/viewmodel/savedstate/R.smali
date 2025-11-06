@@ -3,6 +3,14 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/lifecycle/viewmodel/savedstate/R$id;
+    }
+.end annotation
+
+
 # direct methods
 .method private constructor <init>()V
     .locals 0

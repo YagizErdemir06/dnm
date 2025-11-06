@@ -27,21 +27,22 @@
 
 
 # instance fields
-.field lockModeEnd:I
+.field public lockModeEnd:I
 
-.field lockModeLeft:I
+.field public lockModeLeft:I
 
-.field lockModeRight:I
+.field public lockModeRight:I
 
-.field lockModeStart:I
+.field public lockModeStart:I
 
-.field openDrawerGravity:I
+.field public openDrawerGravity:I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/drawerlayout/widget/DrawerLayout$SavedState$1;
 
     invoke-direct {v0}, Landroidx/drawerlayout/widget/DrawerLayout$SavedState$1;-><init>()V
@@ -131,24 +132,30 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
+    .line 2
     iget p2, p0, Landroidx/drawerlayout/widget/DrawerLayout$SavedState;->openDrawerGravity:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 3
     iget p2, p0, Landroidx/drawerlayout/widget/DrawerLayout$SavedState;->lockModeLeft:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 4
     iget p2, p0, Landroidx/drawerlayout/widget/DrawerLayout$SavedState;->lockModeRight:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 5
     iget p2, p0, Landroidx/drawerlayout/widget/DrawerLayout$SavedState;->lockModeStart:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 6
     iget p0, p0, Landroidx/drawerlayout/widget/DrawerLayout$SavedState;->lockModeEnd:I
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V

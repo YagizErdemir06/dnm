@@ -15,12 +15,16 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/Timeline;IJ)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/IllegalSeekPositionException;->timeline:Lcom/google/android/exoplayer2/Timeline;
 
+    .line 3
     iput p2, p0, Lcom/google/android/exoplayer2/IllegalSeekPositionException;->windowIndex:I
 
+    .line 4
     iput-wide p3, p0, Lcom/google/android/exoplayer2/IllegalSeekPositionException;->positionMs:J
 
     return-void

@@ -1,4 +1,4 @@
-.class Lmiuix/animation/controller/FolmeTouch$InnerViewTouchListener;
+.class public Lmiuix/animation/controller/FolmeTouch$InnerViewTouchListener;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -62,6 +62,7 @@
 .method public varargs addTouch(Lmiuix/animation/controller/FolmeTouch;[Lmiuix/animation/base/AnimConfig;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/animation/controller/FolmeTouch$InnerViewTouchListener;->mTouchMap:Ljava/util/WeakHashMap;
 
     invoke-virtual {p0, p1, p2}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -72,6 +73,7 @@
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lmiuix/animation/controller/FolmeTouch$InnerViewTouchListener;->mTouchMap:Ljava/util/WeakHashMap;
 
     invoke-virtual {p0}, Ljava/util/WeakHashMap;->entrySet()Ljava/util/Set;
@@ -95,18 +97,21 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
+    .line 2
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lmiuix/animation/controller/FolmeTouch;
 
+    .line 3
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [Lmiuix/animation/base/AnimConfig;
 
+    .line 4
     invoke-static {v1, p1, p2, v0}, Lmiuix/animation/controller/FolmeTouch;->access$700(Lmiuix/animation/controller/FolmeTouch;Landroid/view/View;Landroid/view/MotionEvent;[Lmiuix/animation/base/AnimConfig;)V
 
     goto :goto_0
@@ -120,10 +125,12 @@
 .method public removeTouch(Lmiuix/animation/controller/FolmeTouch;)Z
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch$InnerViewTouchListener;->mTouchMap:Ljava/util/WeakHashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object p0, p0, Lmiuix/animation/controller/FolmeTouch$InnerViewTouchListener;->mTouchMap:Ljava/util/WeakHashMap;
 
     invoke-virtual {p0}, Ljava/util/WeakHashMap;->isEmpty()Z

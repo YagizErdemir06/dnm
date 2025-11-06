@@ -17,6 +17,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,6 +28,7 @@
 .method public contains(II)Z
     .locals 2
 
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/core/widgets/Rectangle;->x:I
 
     if-lt p1, v0, :cond_0
@@ -61,6 +63,7 @@
 .method public getCenterX()I
     .locals 1
 
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/core/widgets/Rectangle;->x:I
 
     iget p0, p0, Landroidx/constraintlayout/core/widgets/Rectangle;->width:I
@@ -75,6 +78,7 @@
 .method public getCenterY()I
     .locals 1
 
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/core/widgets/Rectangle;->y:I
 
     iget p0, p0, Landroidx/constraintlayout/core/widgets/Rectangle;->height:I
@@ -89,18 +93,21 @@
 .method public grow(II)V
     .locals 1
 
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/core/widgets/Rectangle;->x:I
 
     sub-int/2addr v0, p1
 
     iput v0, p0, Landroidx/constraintlayout/core/widgets/Rectangle;->x:I
 
+    .line 2
     iget v0, p0, Landroidx/constraintlayout/core/widgets/Rectangle;->y:I
 
     sub-int/2addr v0, p2
 
     iput v0, p0, Landroidx/constraintlayout/core/widgets/Rectangle;->y:I
 
+    .line 3
     iget v0, p0, Landroidx/constraintlayout/core/widgets/Rectangle;->width:I
 
     mul-int/lit8 p1, p1, 0x2
@@ -109,6 +116,7 @@
 
     iput v0, p0, Landroidx/constraintlayout/core/widgets/Rectangle;->width:I
 
+    .line 4
     iget p1, p0, Landroidx/constraintlayout/core/widgets/Rectangle;->height:I
 
     mul-int/lit8 p2, p2, 0x2
@@ -123,6 +131,7 @@
 .method public intersects(Landroidx/constraintlayout/core/widgets/Rectangle;)Z
     .locals 3
 
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/core/widgets/Rectangle;->x:I
 
     iget v1, p1, Landroidx/constraintlayout/core/widgets/Rectangle;->x:I
@@ -161,12 +170,16 @@
 .method public setBounds(IIII)V
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/core/widgets/Rectangle;->x:I
 
+    .line 2
     iput p2, p0, Landroidx/constraintlayout/core/widgets/Rectangle;->y:I
 
+    .line 3
     iput p3, p0, Landroidx/constraintlayout/core/widgets/Rectangle;->width:I
 
+    .line 4
     iput p4, p0, Landroidx/constraintlayout/core/widgets/Rectangle;->height:I
 
     return-void

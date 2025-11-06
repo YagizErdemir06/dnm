@@ -41,6 +41,7 @@
 
     new-instance p4, Landroid/graphics/Rect;
 
+    .line 1
     invoke-direct {p4, p1, p1, p2, p3}, Landroid/graphics/Rect;-><init>(IIII)V
 
     iput-object p4, p0, Lcom/google/android/odml/image/ByteBufferMlImageBuilder;->zzf:Landroid/graphics/Rect;
@@ -63,17 +64,18 @@
 
     iget v2, p0, Lcom/google/android/odml/image/ByteBufferMlImageBuilder;->zzd:I
 
+    .line 1
     invoke-direct {v1, v0, v2}, Lcom/google/android/odml/image/zzf;-><init>(Ljava/nio/ByteBuffer;I)V
 
     iget v2, p0, Lcom/google/android/odml/image/ByteBufferMlImageBuilder;->zze:I
 
     iget-object v3, p0, Lcom/google/android/odml/image/ByteBufferMlImageBuilder;->zzf:Landroid/graphics/Rect;
 
-    const-wide/16 v4, 0x0
-
     iget v6, p0, Lcom/google/android/odml/image/ByteBufferMlImageBuilder;->zzb:I
 
     iget v7, p0, Lcom/google/android/odml/image/ByteBufferMlImageBuilder;->zzc:I
+
+    const-wide/16 v4, 0x0
 
     move-object v0, v8
 
@@ -87,6 +89,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/odml/image/MlImage;->zzc(I)V
 
     iput p1, p0, Lcom/google/android/odml/image/ByteBufferMlImageBuilder;->zze:I

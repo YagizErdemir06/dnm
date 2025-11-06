@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/decoder/CryptoInfo$PatternHolderV24;
+.class public final Lcom/google/android/exoplayer2/decoder/CryptoInfo$PatternHolderV24;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -58,6 +58,7 @@
 .method public static synthetic access$100(Lcom/google/android/exoplayer2/decoder/CryptoInfo$PatternHolderV24;II)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/decoder/CryptoInfo$PatternHolderV24;->set(II)V
 
     return-void
@@ -66,10 +67,12 @@
 .method private set(II)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/decoder/CryptoInfo$PatternHolderV24;->pattern:Landroid/media/MediaCodec$CryptoInfo$Pattern;
 
     invoke-virtual {v0, p1, p2}, Landroid/media/MediaCodec$CryptoInfo$Pattern;->set(II)V
 
+    .line 2
     iget-object p1, p0, Lcom/google/android/exoplayer2/decoder/CryptoInfo$PatternHolderV24;->frameworkCryptoInfo:Landroid/media/MediaCodec$CryptoInfo;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/decoder/CryptoInfo$PatternHolderV24;->pattern:Landroid/media/MediaCodec$CryptoInfo$Pattern;

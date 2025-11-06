@@ -27,14 +27,17 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/metadata/SimpleMetadataDecoder;-><init>()V
 
+    .line 2
     new-instance v0, Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/metadata/scte35/SpliceInfoDecoder;->sectionData:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
+    .line 3
     new-instance v0, Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;-><init>()V
@@ -47,14 +50,16 @@
 
 # virtual methods
 .method public decode(Lcom/google/android/exoplayer2/metadata/MetadataInputBuffer;Ljava/nio/ByteBuffer;)Lcom/google/android/exoplayer2/metadata/Metadata;
-    .locals 5
+    .locals 6
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/metadata/scte35/SpliceInfoDecoder;->timestampAdjuster:Lcom/google/android/exoplayer2/util/TimestampAdjuster;
 
     if-eqz v0, :cond_0
 
     iget-wide v1, p1, Lcom/google/android/exoplayer2/metadata/MetadataInputBuffer;->subsampleOffsetUs:J
 
+    .line 2
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/TimestampAdjuster;->getTimestampOffsetUs()J
 
     move-result-wide v3
@@ -63,6 +68,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 3
     :cond_0
     new-instance v0, Lcom/google/android/exoplayer2/util/TimestampAdjuster;
 
@@ -72,6 +78,7 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/metadata/scte35/SpliceInfoDecoder;->timestampAdjuster:Lcom/google/android/exoplayer2/util/TimestampAdjuster;
 
+    .line 4
     iget-wide v1, p1, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->timeUs:J
 
     iget-wide v3, p1, Lcom/google/android/exoplayer2/metadata/MetadataInputBuffer;->subsampleOffsetUs:J
@@ -80,29 +87,35 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/google/android/exoplayer2/util/TimestampAdjuster;->adjustSampleTimestamp(J)J
 
+    .line 5
     :cond_1
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object p1
 
-    invoke-virtual {p2}, Ljava/nio/Buffer;->limit()I
+    .line 6
+    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result p2
 
+    .line 7
     iget-object v0, p0, Lcom/google/android/exoplayer2/metadata/scte35/SpliceInfoDecoder;->sectionData:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v0, p1, p2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->reset([BI)V
 
+    .line 8
     iget-object v0, p0, Lcom/google/android/exoplayer2/metadata/scte35/SpliceInfoDecoder;->sectionHeader:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v0, p1, p2}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->reset([BI)V
 
+    .line 9
     iget-object p1, p0, Lcom/google/android/exoplayer2/metadata/scte35/SpliceInfoDecoder;->sectionHeader:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/16 p2, 0x27
 
     invoke-virtual {p1, p2}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
+    .line 10
     iget-object p1, p0, Lcom/google/android/exoplayer2/metadata/scte35/SpliceInfoDecoder;->sectionHeader:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/4 p2, 0x1
@@ -117,6 +130,7 @@
 
     shl-long/2addr v0, p1
 
+    .line 11
     iget-object v2, p0, Lcom/google/android/exoplayer2/metadata/scte35/SpliceInfoDecoder;->sectionHeader:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v2, p1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
@@ -127,12 +141,14 @@
 
     or-long/2addr v0, v2
 
+    .line 12
     iget-object p1, p0, Lcom/google/android/exoplayer2/metadata/scte35/SpliceInfoDecoder;->sectionHeader:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/16 v2, 0x14
 
     invoke-virtual {p1, v2}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
+    .line 13
     iget-object p1, p0, Lcom/google/android/exoplayer2/metadata/scte35/SpliceInfoDecoder;->sectionHeader:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/16 v2, 0xc
@@ -141,6 +157,7 @@
 
     move-result p1
 
+    .line 14
     iget-object v2, p0, Lcom/google/android/exoplayer2/metadata/scte35/SpliceInfoDecoder;->sectionHeader:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/16 v3, 0x8
@@ -149,17 +166,20 @@
 
     move-result v2
 
-    iget-object v3, p0, Lcom/google/android/exoplayer2/metadata/scte35/SpliceInfoDecoder;->sectionData:Lcom/google/android/exoplayer2/util/ParsableByteArray;
+    const/4 v3, 0x0
 
-    const/16 v4, 0xe
+    .line 15
+    iget-object v4, p0, Lcom/google/android/exoplayer2/metadata/scte35/SpliceInfoDecoder;->sectionData:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
-    invoke-virtual {v3, v4}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
+    const/16 v5, 0xe
+
+    invoke-virtual {v4, v5}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
     if-eqz v2, :cond_6
 
-    const/16 v3, 0xff
+    const/16 v4, 0xff
 
-    if-eq v2, v3, :cond_5
+    if-eq v2, v4, :cond_5
 
     const/4 p1, 0x4
 
@@ -173,10 +193,9 @@
 
     if-eq v2, p1, :cond_2
 
-    const/4 p0, 0x0
-
     goto :goto_0
 
+    .line 16
     :cond_2
     iget-object p1, p0, Lcom/google/android/exoplayer2/metadata/scte35/SpliceInfoDecoder;->sectionData:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
@@ -184,68 +203,70 @@
 
     invoke-static {p1, v0, v1, p0}, Lcom/google/android/exoplayer2/metadata/scte35/TimeSignalCommand;->parseFromSection(Lcom/google/android/exoplayer2/util/ParsableByteArray;JLcom/google/android/exoplayer2/util/TimestampAdjuster;)Lcom/google/android/exoplayer2/metadata/scte35/TimeSignalCommand;
 
-    move-result-object p0
+    move-result-object v3
 
     goto :goto_0
 
+    .line 17
     :cond_3
     iget-object p1, p0, Lcom/google/android/exoplayer2/metadata/scte35/SpliceInfoDecoder;->sectionData:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/metadata/scte35/SpliceInfoDecoder;->timestampAdjuster:Lcom/google/android/exoplayer2/util/TimestampAdjuster;
 
+    .line 18
     invoke-static {p1, v0, v1, p0}, Lcom/google/android/exoplayer2/metadata/scte35/SpliceInsertCommand;->parseFromSection(Lcom/google/android/exoplayer2/util/ParsableByteArray;JLcom/google/android/exoplayer2/util/TimestampAdjuster;)Lcom/google/android/exoplayer2/metadata/scte35/SpliceInsertCommand;
 
-    move-result-object p0
+    move-result-object v3
 
     goto :goto_0
 
+    .line 19
     :cond_4
     iget-object p0, p0, Lcom/google/android/exoplayer2/metadata/scte35/SpliceInfoDecoder;->sectionData:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/metadata/scte35/SpliceScheduleCommand;->parseFromSection(Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/metadata/scte35/SpliceScheduleCommand;
 
-    move-result-object p0
+    move-result-object v3
 
     goto :goto_0
 
+    .line 20
     :cond_5
     iget-object p0, p0, Lcom/google/android/exoplayer2/metadata/scte35/SpliceInfoDecoder;->sectionData:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-static {p0, p1, v0, v1}, Lcom/google/android/exoplayer2/metadata/scte35/PrivateCommand;->parseFromSection(Lcom/google/android/exoplayer2/util/ParsableByteArray;IJ)Lcom/google/android/exoplayer2/metadata/scte35/PrivateCommand;
 
-    move-result-object p0
+    move-result-object v3
 
     goto :goto_0
 
+    .line 21
     :cond_6
-    new-instance p0, Lcom/google/android/exoplayer2/metadata/scte35/SpliceNullCommand;
+    new-instance v3, Lcom/google/android/exoplayer2/metadata/scte35/SpliceNullCommand;
 
-    invoke-direct {p0}, Lcom/google/android/exoplayer2/metadata/scte35/SpliceNullCommand;-><init>()V
+    invoke-direct {v3}, Lcom/google/android/exoplayer2/metadata/scte35/SpliceNullCommand;-><init>()V
 
     :goto_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    if-nez p0, :cond_7
+    .line 22
+    new-instance p1, Lcom/google/android/exoplayer2/metadata/Metadata;
 
-    new-instance p0, Lcom/google/android/exoplayer2/metadata/Metadata;
+    if-nez v3, :cond_7
 
-    new-array p1, p1, [Lcom/google/android/exoplayer2/metadata/Metadata$Entry;
+    new-array p0, p0, [Lcom/google/android/exoplayer2/metadata/Metadata$Entry;
 
-    invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/metadata/Metadata;-><init>([Lcom/google/android/exoplayer2/metadata/Metadata$Entry;)V
+    invoke-direct {p1, p0}, Lcom/google/android/exoplayer2/metadata/Metadata;-><init>([Lcom/google/android/exoplayer2/metadata/Metadata$Entry;)V
 
     goto :goto_1
 
     :cond_7
-    new-instance v0, Lcom/google/android/exoplayer2/metadata/Metadata;
-
     new-array p2, p2, [Lcom/google/android/exoplayer2/metadata/Metadata$Entry;
 
-    aput-object p0, p2, p1
+    aput-object v3, p2, p0
 
-    invoke-direct {v0, p2}, Lcom/google/android/exoplayer2/metadata/Metadata;-><init>([Lcom/google/android/exoplayer2/metadata/Metadata$Entry;)V
-
-    move-object p0, v0
+    invoke-direct {p1, p2}, Lcom/google/android/exoplayer2/metadata/Metadata;-><init>([Lcom/google/android/exoplayer2/metadata/Metadata$Entry;)V
 
     :goto_1
-    return-object p0
+    return-object p1
 .end method

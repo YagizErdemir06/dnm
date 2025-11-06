@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/FilteredEntryMultimap$ValuePredicate;
+.class public final Lcom/google/common/collect/FilteredEntryMultimap$ValuePredicate;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -37,7 +37,7 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Lcom/google/common/collect/FilteredEntryMultimap;
+.field public final synthetic this$0:Lcom/google/common/collect/FilteredEntryMultimap;
 
 
 # direct methods
@@ -53,10 +53,12 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/FilteredEntryMultimap$ValuePredicate;->this$0:Lcom/google/common/collect/FilteredEntryMultimap;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p2, p0, Lcom/google/common/collect/FilteredEntryMultimap$ValuePredicate;->key:Ljava/lang/Object;
 
     return-void
@@ -76,6 +78,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/FilteredEntryMultimap$ValuePredicate;->this$0:Lcom/google/common/collect/FilteredEntryMultimap;
 
     iget-object p0, p0, Lcom/google/common/collect/FilteredEntryMultimap$ValuePredicate;->key:Ljava/lang/Object;

@@ -103,9 +103,9 @@
 
     if-nez p0, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    monitor-exit v0
 
     return-object p0
 

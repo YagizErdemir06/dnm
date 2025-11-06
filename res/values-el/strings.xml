@@ -232,7 +232,6 @@
     <string name="accessibility_video_capture_button">Κουμπί για λήψη φωτογραφιών κατά τη λήψη βίντεο</string>
     <string name="accessibility_video_pause_button">Έγινε διακοπή λήψης βίντεο</string>
     <string name="accessibility_video_resume_button">Συνέχεια λήψης βίντεο</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">Υδατογράφημα ανενεργό</string>
     <string name="accessibility_watermark_image_on">Υδατογράφημα ενεργό</string>
     <string name="accessibility_watermark_text">Ανοίξτε τον πίνακα προσαρμογής υδατογραφήματος</string>
@@ -240,16 +239,6 @@
     <string name="accessibility_zoom_button">Λειτουργία μεγέθυνσης</string>
     <string name="actionbar_button_up_description">Πίσω</string>
     <string name="afternoon">Απόγευμα</string>
-    <string name="agent_flip_tbc">Συνέχεια στην εσωτερική οθόνη</string>
-    <string name="agent_function_max">Έγινε ρύθμιση στη μέγιστη τιμή</string>
-    <string name="agent_function_min">Έγινε ρύθμιση στην ελάχιστη τιμή</string>
-    <string name="agent_workspace_mode_not_supported">Αυτή η λειτουργία δεν υποστηρίζεται</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"Αυτή η λειτουργία δεν υποστηρίζεται
-Αντ' αυτού, άνοιξε η Λειτουργία φωτογραφίας."</string>
-    <string name="agent_workspace_on">Ορίστηκαν παράμετροι για τη φωτογράφηση \"%1$s\"</string>
-    <string name="agent_workspace_tbc">Μελέτη σκηνής</string>
-    <string name="agent_workspace_tbc_use_default">"Μελέτη σκηνής…
-Οι παράμετροι της κάμερας έχουν οριστεί στις προεπιλεγμένες τιμές"</string>
     <string name="ai_agra_fort">Οχυρό Άγκρα</string>
     <string name="ai_amber_fort">Ανάκτορο Άμπερ</string>
     <string name="ai_baby">Μωρό</string>
@@ -476,7 +465,6 @@
     <string name="bluetooth_headset_permission_des">Για τον προσδιορισμό της κατάστασης σύνδεσης των ακουστικών earphones Bluetooth και την εγγραφή ήχου χρησιμοποιώντας το μικρόφωνο των ακουστικών</string>
     <string name="bluetooth_permission_not_ask_again">Επιτρέψτε σε αυτήν την εφαρμογή να συνδέεται με κοντινές συσκευές στις Ρυθμίσεις για να μπορεί να συνδεθεί με ακουστικά earphones Bluetooth.</string>
     <string name="bokeh_use_hint">Εφέ βάθους</string>
-    <string name="bottomsheet_action_expand_halfway">Ανάπτυξη μέχρι τη μέση</string>
     <string name="burst_shoot_exit_button_text">Απενεργοποίηση Λήψης ριπής</string>
     <string name="button_fisheye_camera_title">Ευρυγώνιος φακός</string>
     <string name="button_front_camera_title">Δημιουργία selfie</string>
@@ -517,8 +505,6 @@
     <string name="ccc_temperature_warning_msg">Η συσκευή σας έχει ζεσταθεί υπερβολικά. Η Κάμερα θα κλείσει σε %d δευτερόλεπτα. Οι φωτογραφίες και τα βίντεο θα αποθηκευτούν αυτόματα.</string>
     <string name="ccc_temperature_warning_title">Η συσκευή έχει ζεσταθεί υπερβολικά</string>
     <string name="center_mark">Κεντρικό μαρκάρισμα</string>
-    <string name="character_counter_content_description">Εισήχθησαν %1$d από %2$d χαρακτήρες</string>
-    <string name="character_counter_overflowed_content_description">Υπέρβαση ορίου χαρακτήρων %1$d από %2$d</string>
     <string name="cinemaster_cancel">Ακύρωση</string>
     <string name="cinemaster_confirm">Έξοδος</string>
     <string name="cinemaster_connect_exit_message">Έξοδος από τη ρύθμιση πολλαπλής κάμερας τώρα;</string>
@@ -537,7 +523,6 @@
     <string name="cinemaster_toast_monitor_disconnect">Η οθόνη αποσυνδέθηκε από τη ρύθμιση πολλαπλής κάμερας</string>
     <string name="cinemaster_toast_monitor_play_error">Η κάμερα %s αποσυνδέθηκε από τη ρύθμιση πολλαπλής κάμερας λόγω σφάλματος</string>
     <string name="cinemaster_wifi_24g_tips">Εναλλαγή σε δίκτυο %s GHz για την ενίσχυση της σταθερότητας της ροής της οθόνης</string>
-    <string name="clear_text_end_icon_content_description">Διαγραφή κειμένου</string>
     <string name="clearable_edittext_clear_description">Εκκαθάριση</string>
     <string name="clone_adjust">Προσαρμογή</string>
     <string name="clone_copy_mode">Πάγωμα πλαισίου</string>
@@ -831,7 +816,6 @@
     <string name="download_hint_cn">"Looks like your device isn't connected to WLAN. Use %1$s MB of mobile data to download items now?"</string>
     <string name="download_hint_wifi">Φαίνεται ότι η συσκευή σας δεν είναι συνδεδεμένη σε Wi-Fi. Χρήση %1$s MB δεδομένων κινητής τηλεφωνίας για λήψη των αντικειμένων τώρα;</string>
     <string name="download_in_progress">Γίνεται λήψη…</string>
-    <string name="download_network_error">Αδυναμία λήψης. Ελέγξτε τις ρυθμίσεις του δικτύου σας.</string>
     <string name="download_title">Προειδοποίηση χρήσης δεδομένων</string>
     <string name="download_waiting">Σε αναμονή…</string>
     <string name="dual_camera_lens_covered_toast">Ο φακός είναι καλλυμένος.</string>
@@ -882,7 +866,6 @@
     <string name="eras_ad">μ.Χ.</string>
     <string name="eras_bc">π.Χ.</string>
     <string name="error_fail_to_start_audio_capture">Αδυναμία εκκίνησης λήψης ήχου</string>
-    <string name="error_icon_content_description">Σφάλμα</string>
     <string name="esp_tip">Προεπισκόπηση εξωτερικής οθόνης</string>
     <string name="evening">Απόγευμα</string>
     <string name="exo_controls_cc_disabled_description">Ενεργοποίηση υπότιτλων</string>
@@ -937,7 +920,6 @@
     <string name="exo_track_surround_7_point_1">Περιφερειακός ήχος 7.1</string>
     <string name="exo_track_unknown">Άγνωστο</string>
     <string name="expand_button_title">Σύνθετες</string>
-    <string name="exposed_dropdown_menu_content_description">Εμφάνιση αναπτυσσόμενου μενού</string>
     <string name="exposure_mode_adjust_title">ExposureMode</string>
     <string name="eye_light">Λάμψη ματιών</string>
     <string name="eye_light_angel">Άγγελος</string>
@@ -1094,7 +1076,6 @@
     <string name="hint_subtitle_prompt">Τώρα μπορείτε να υπαγορεύετε υπότιτλους</string>
     <string name="histogram_summary_tip">Εμφάνιση ανατροφοδότησης έκθεσης σε πραγματικό χρόνο</string>
     <string name="hunt_dual_water_mark">Το υδατογράφημα διπλή κάμερας θα προστεθεί αυτόματα.</string>
-    <string name="icon_content_description">Εικονίδιο παραθύρου διαλόγου</string>
     <string name="id_card_mode_hint_back">Σαρώστε την πίσω πλευρά του ID σας</string>
     <string name="id_card_mode_hint_front">Σαρώστε την εμπρόσθια πλευρά του ID σας</string>
     <string name="id_card_mode_use_hint_text_body">"Συνδυάστε και τις δύο πλευρές του ID σε μία εικόνα.
@@ -1105,7 +1086,6 @@
     <string name="invisible_mode_dialog_summary">Δεν είναι δυνατή η χρήση κάμερας τώρα. Απενεργοποιήστε τη Λειτουργία ανώνυμης περιήγησης στις Ρυθμίσεις για να μπορείτε να χρησιμοποιείτε κάμερα.</string>
     <string name="invisible_mode_dialog_title">Είστε σε ανώνυμη λειτουργία</string>
     <string name="invisible_mode_dialog_to_close">Ρυθμίσεις</string>
-    <string name="item_view_role_description">Καρτέλα</string>
     <string name="kaleidoscope_fragment_tab_name">Καλειδοσκόπιο</string>
     <string name="lens_dirty_detected_content">"Φαίνεται πως ο φακός κάμερας σας είναι βρόμικος.
 Καθαρίστε τον φακό για καλύτερο εφέ."</string>
@@ -1228,18 +1208,6 @@
     <string name="manually_raw_tip">Δεν είναι δυνατή η χρήση μεγέθυνσης με μορφή RAW</string>
     <string name="manually_ultra_raw_tip">Δεν είναι δυνατή η χρήση μεγέθυνσης με Ultra RAW</string>
     <string name="masterfilter_description_title">Φίλτρα ταινίας</string>
-    <string name="material_clock_toggle_content_description">Επιλέξτε π.μ. ή μ.μ.</string>
-    <string name="material_hour_selection">Επιλογή ώρας</string>
-    <string name="material_hour_suffix">%1$s ακριβώς</string>
-    <string name="material_minute_selection">Επιλογή λεπτών</string>
-    <string name="material_minute_suffix">%1$s λεπτά</string>
-    <string name="material_timepicker_am">ΠΜ</string>
-    <string name="material_timepicker_clock_mode_description">Κάντε εναλλαγή στη λειτουργία ρολογιού, για την εισαγωγή της ώρας.</string>
-    <string name="material_timepicker_hour">Ώρα</string>
-    <string name="material_timepicker_minute">Λεπτό</string>
-    <string name="material_timepicker_pm">ΜΜ</string>
-    <string name="material_timepicker_select_time">Επιλέξτε ώρα</string>
-    <string name="material_timepicker_text_input_mode_description">Κάντε εναλλαγή στη λειτουργία εισαγωγής κειμένου, για την εισαγωγή της ώρας.</string>
     <string name="message_snap_double_confirm">Το παρατεταμένο άγγιγμα του κουμπιού έντασης ενεργοποιεί το NFC τώρα. Αντικατάσταση αυτής της ενέργειας;</string>
     <string name="midnight">Νύχτα</string>
     <string name="mimoji_app_name">Fun Cam</string>
@@ -1378,7 +1346,6 @@
     <string name="miuix_appcompat_delete_description">Διαγραφή</string>
     <string name="miuix_appcompat_deselect_all">Αποεπιλογή όλων</string>
     <string name="miuix_appcompat_deselect_all_description">Αποεπιλογή όλων</string>
-    <string name="miuix_appcompat_edit">Επεξεργασία</string>
     <string name="miuix_appcompat_search_action_mode_cancel">Ακύρωση</string>
     <string name="miuix_appcompat_search_input_description">Αναζήτηση</string>
     <string name="miuix_appcompat_select_all">Επιλογή όλων</string>
@@ -1486,42 +1453,6 @@
     <string name="msg_bubble_doc4_first_use">Πατήστε για αναγνώριση κειμένου</string>
     <string name="msg_toast_doc4_recognition_failed">Παρουσιάστηκε σφάλμα. Προσπαθήστε ξανά.</string>
     <string name="msg_toast_doc4_text_not_found">Αδυναμία ανίχνευσης κειμένου</string>
-    <string name="mtrl_badge_numberless_content_description">Νέα ειδοποίηση</string>
-    <string name="mtrl_chip_close_icon_content_description">Κατάργηση %1$s</string>
-    <string name="mtrl_exceed_max_badge_number_content_description">Πάνω από %1$d νέες ειδοποιήσεις</string>
-    <string name="mtrl_picker_a11y_next_month">Αλλαγή στον επόμενο μήνα</string>
-    <string name="mtrl_picker_a11y_prev_month">Αλλαγή στον προηγούμενο μήνα</string>
-    <string name="mtrl_picker_announce_current_selection">Τρέχουσα επιλογή: %1$s</string>
-    <string name="mtrl_picker_cancel">Ακύρωση</string>
-    <string name="mtrl_picker_confirm">ΟΚ</string>
-    <string name="mtrl_picker_date_header_selected">%1$s</string>
-    <string name="mtrl_picker_date_header_title">Επιλογή ημερομηνίας</string>
-    <string name="mtrl_picker_date_header_unselected">Επιλεγμένη ημερομηνία</string>
-    <string name="mtrl_picker_day_of_week_column_header">Στήλη ημερών: %1$s</string>
-    <string name="mtrl_picker_invalid_format">Μη έγκυρη μορφή.</string>
-    <string name="mtrl_picker_invalid_format_example">Παράδειγμα: %1$s</string>
-    <string name="mtrl_picker_invalid_format_use">Χρησιμοποιήστε: %1$s</string>
-    <string name="mtrl_picker_invalid_range">Μη έγκυρο εύρος.</string>
-    <string name="mtrl_picker_navigate_to_year_description">Πλοήγηση στο έτος %1$s</string>
-    <string name="mtrl_picker_out_of_range">Εκτός εύρους: %1$s</string>
-    <string name="mtrl_picker_range_header_only_end_selected">Ημερομηνία έναρξης – %1$s</string>
-    <string name="mtrl_picker_range_header_only_start_selected">%1$s – Ημερομηνία λήξης</string>
-    <string name="mtrl_picker_range_header_selected">%1$s – %2$s</string>
-    <string name="mtrl_picker_range_header_title">Επιλογή εύρους</string>
-    <string name="mtrl_picker_range_header_unselected">Ημερομηνία έναρξης – Ημερομηνία λήξης</string>
-    <string name="mtrl_picker_save">Αποθήκευση</string>
-    <string name="mtrl_picker_text_input_date_hint">Ημερομηνία</string>
-    <string name="mtrl_picker_text_input_date_range_end_hint">Ημερομηνία λήξης</string>
-    <string name="mtrl_picker_text_input_date_range_start_hint">Ημερομηνία έναρξης</string>
-    <string name="mtrl_picker_text_input_day_abbr">η</string>
-    <string name="mtrl_picker_text_input_month_abbr">μ</string>
-    <string name="mtrl_picker_text_input_year_abbr">ε</string>
-    <string name="mtrl_picker_toggle_to_calendar_input_mode">Εναλλαγή στη λειτουργία εισαγωγής ημερολογίου</string>
-    <string name="mtrl_picker_toggle_to_day_selection">Πατήστε για εναλλαγή για την επιλογή ημέρας</string>
-    <string name="mtrl_picker_toggle_to_text_input_mode">Εναλλαγή στη λειτουργία εισαγωγής κειμένου</string>
-    <string name="mtrl_picker_toggle_to_year_selection">Πατήστε για εναλλαγή για την επιλογή έτους</string>
-    <string name="mtrl_timepicker_cancel">Ακύρωση</string>
-    <string name="mtrl_timepicker_confirm">ΟΚ</string>
     <string name="multi_window_mode_not_supported">Η Κάμερα δεν μπορεί να χρησιμοποιηθεί σε λειτουργία πολλαπλών παραθύρων</string>
     <string name="network_access_user_notice_agree">Αποδοχή</string>
     <string name="network_access_user_notice_message_live_video">&lt;Data>Η Κάμερα πρέπει να συνδεθεί στο ίντερνετ για να παρέχει εφέ, μουσική και άλλα χαρακτηριστικά για σύντομα βίντεο.&lt;br/>&lt;br/>Πατώντας στο \"Αποδοχή\" παρακάτω, αποδέχεστε τη &lt;a href =%1$s>Συμφωνία Χρήστη&lt;/a> και την &lt;a href =%2$s>Πολιτική Απορρήτου&lt;/a> και θα επιτρέψετε η Κάμερα να συνδεθεί στο Ίντερνετ.&lt;/Data></string>
@@ -1616,7 +1547,6 @@
     <string name="parameter_wb_title">Ισορροπία λευκού</string>
     <string name="parameter_zoom_slider_description">Σύρετε το ρυθμιστικό μεγέθυνσης οριζόντια για να αλλάξετε ομαλά τη λήψη από μακρινή σε κοντινή.</string>
     <string name="parameter_zoom_slider_title">Μεγέθυνση</string>
-    <string name="password_toggle_content_description">Εμφάνιση κωδικού πρόσβασης</string>
     <string name="path_settings">Εφαρμογές συστήματος/Κάμερα/Ρυθμίσεις</string>
     <string name="photo_assistance_tips_title">Ζωντανές συμβουλές</string>
     <string name="pic_flaw_blink_more">Φαίνεται ότι κάποιος στο κάδρο έχει κλειστά μάτια</string>
@@ -2359,7 +2289,6 @@
     <string name="time_picker_label_hour">Ω</string>
     <string name="time_picker_label_minute">Λ</string>
     <string name="time_stamp_date_format">dd/MM/yyyy</string>
-    <string name="time_stamp_date_format_minute">dd/MM/yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">Μπορείτε να παγώσετε και να ξεπαγώσετε το φόντο οποιαδήποτε στιγμή πριν ή κατά τη λήψη.</string>
     <string name="timefreeze_guide_tip3">Ζητήστε από το θέμα σας να παραμείνει στο κέντρο του πλαισίου.</string>
     <string name="timefreeze_guide_tip4">Σταματήστε την κίνηση.</string>
@@ -2397,7 +2326,7 @@
     <string name="tip_flash_screen_light_on">Ελαφρύ φλας: Ενεργό</string>
     <string name="tip_flash_soft_light_off">Ελαφρύ φλας: Ανενεργό</string>
     <string name="tip_flash_soft_light_torch">Ελαφρύ φλας: Λειτουργία φακού</string>
-    <string name="tip_flash_torch">Φλας: Φακός</string>
+    <string name="tip_flash_torch">Φλας: Πάντα ενεργό</string>
     <string name="tip_friend_mode_connect_when_24GHz">Χρησιμοποιήστε μια σύνδεση %s GHz για να βελτιώσετε την ποιότητα προεπισκόπησης</string>
     <string name="tip_friend_mode_display_device_name_connect">Κοινή προεπισκόπηση</string>
     <string name="tip_friend_mode_display_device_name_disconnect">Η άλλη συσκευή αποχώρησε από αυτήν τη συνεδρία</string>

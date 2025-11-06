@@ -38,6 +38,7 @@
 .method public static constructor <clinit>()V
     .locals 9
 
+    .line 1
     new-instance v0, Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$ReprocessorType;
 
     const-string v1, "VIRTUAL_CAMERA"
@@ -48,6 +49,7 @@
 
     sput-object v0, Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$ReprocessorType;->VIRTUAL_CAMERA:Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$ReprocessorType;
 
+    .line 2
     new-instance v1, Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$ReprocessorType;
 
     const-string v3, "HARDWARE_CODEC"
@@ -58,6 +60,7 @@
 
     sput-object v1, Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$ReprocessorType;->HARDWARE_CODEC:Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$ReprocessorType;
 
+    .line 3
     new-instance v3, Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$ReprocessorType;
 
     const-string v5, "SOFTWARE_CODEC"
@@ -68,6 +71,7 @@
 
     sput-object v3, Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$ReprocessorType;->SOFTWARE_CODEC:Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$ReprocessorType;
 
+    .line 4
     new-instance v5, Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$ReprocessorType;
 
     const-string v7, "ISP_INTERFACE"
@@ -90,6 +94,7 @@
 
     aput-object v5, v7, v8
 
+    .line 5
     sput-object v7, Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$ReprocessorType;->$VALUES:[Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$ReprocessorType;
 
     return-void
@@ -108,12 +113,7 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
-
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -130,6 +130,7 @@
         }
     .end annotation
 
+    .line 1
     const-class v0, Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$ReprocessorType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -144,6 +145,7 @@
 .method public static values()[Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$ReprocessorType;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$ReprocessorType;->$VALUES:[Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$ReprocessorType;
 
     invoke-virtual {v0}, [Lcom/xiaomi/camera/imagecodec/ReprocessorFactory$ReprocessorType;->clone()Ljava/lang/Object;

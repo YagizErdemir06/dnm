@@ -34,6 +34,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     const-class v0, Lcom/google/common/eventbus/EventBus;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -159,6 +160,7 @@
 .method public final executor()Ljava/util/concurrent/Executor;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/eventbus/EventBus;->executor:Ljava/util/concurrent/Executor;
 
     return-object p0
@@ -167,10 +169,13 @@
 .method public handleSubscriberException(Ljava/lang/Throwable;Lcom/google/common/eventbus/SubscriberExceptionContext;)V
     .locals 4
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     :try_start_0
     iget-object p0, p0, Lcom/google/common/eventbus/EventBus;->exceptionHandler:Lcom/google/common/eventbus/SubscriberExceptionHandler;
 
@@ -183,6 +188,7 @@
     :catchall_0
     move-exception p0
 
+    .line 4
     sget-object p2, Lcom/google/common/eventbus/EventBus;->logger:Ljava/util/logging/Logger;
 
     sget-object v0, Ljava/util/logging/Level;->SEVERE:Ljava/util/logging/Level;
@@ -203,10 +209,12 @@
 
     const-string p1, "Exception %s thrown while handling exception: %s"
 
+    .line 5
     invoke-static {v1, p1, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 6
     invoke-virtual {p2, v0, p1, p0}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
@@ -216,6 +224,7 @@
 .method public final identifier()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/eventbus/EventBus;->identifier:Ljava/lang/String;
 
     return-object p0
@@ -224,29 +233,34 @@
 .method public post(Ljava/lang/Object;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/eventbus/EventBus;->subscribers:Lcom/google/common/eventbus/SubscriberRegistry;
 
     invoke-virtual {v0, p1}, Lcom/google/common/eventbus/SubscriberRegistry;->getSubscribers(Ljava/lang/Object;)Ljava/util/Iterator;
 
     move-result-object v0
 
+    .line 2
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/eventbus/EventBus;->dispatcher:Lcom/google/common/eventbus/Dispatcher;
 
     invoke-virtual {p0, p1, v0}, Lcom/google/common/eventbus/Dispatcher;->dispatch(Ljava/lang/Object;Ljava/util/Iterator;)V
 
     goto :goto_0
 
+    .line 4
     :cond_0
     instance-of v0, p1, Lcom/google/common/eventbus/DeadEvent;
 
     if-nez v0, :cond_1
 
+    .line 5
     new-instance v0, Lcom/google/common/eventbus/DeadEvent;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/eventbus/DeadEvent;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
@@ -261,6 +275,7 @@
 .method public register(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/eventbus/EventBus;->subscribers:Lcom/google/common/eventbus/SubscriberRegistry;
 
     invoke-virtual {p0, p1}, Lcom/google/common/eventbus/SubscriberRegistry;->register(Ljava/lang/Object;)V
@@ -271,6 +286,7 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/base/MoreObjects;->toStringHelper(Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     move-result-object v0
@@ -291,6 +307,7 @@
 .method public unregister(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/eventbus/EventBus;->subscribers:Lcom/google/common/eventbus/SubscriberRegistry;
 
     invoke-virtual {p0, p1}, Lcom/google/common/eventbus/SubscriberRegistry;->unregister(Ljava/lang/Object;)V

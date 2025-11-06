@@ -28,10 +28,13 @@
 .method public constructor <init>(Lcom/bumptech/glide/load/resource/drawable/ResourceDrawableDecoder;Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/bumptech/glide/load/resource/bitmap/ResourceBitmapDecoder;->drawableDecoder:Lcom/bumptech/glide/load/resource/drawable/ResourceDrawableDecoder;
 
+    .line 3
     iput-object p2, p0, Lcom/bumptech/glide/load/resource/bitmap/ResourceBitmapDecoder;->bitmapPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;
 
     return-void
@@ -136,14 +139,14 @@
         .end annotation
     .end param
 
-    const-string p0, "android.resource"
-
     .line 2
     invoke-virtual {p1}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const-string p1, "android.resource"
+
+    invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 

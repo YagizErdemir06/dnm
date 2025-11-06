@@ -9,7 +9,7 @@
     .end annotation
 .end field
 
-.field final synthetic zzf:Lcom/google/android/gms/common/internal/BaseGmsClient;
+.field public final synthetic zzf:Lcom/google/android/gms/common/internal/BaseGmsClient;
 
 
 # direct methods
@@ -26,6 +26,7 @@
     .annotation build Landroidx/annotation/BinderThread;
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/common/internal/zzf;->zzf:Lcom/google/android/gms/common/internal/BaseGmsClient;
 
     invoke-direct {p0, p1, p2, p4}, Lcom/google/android/gms/common/internal/zza;-><init>(Lcom/google/android/gms/common/internal/BaseGmsClient;ILandroid/os/Bundle;)V
@@ -40,6 +41,7 @@
 .method public final zzb(Lcom/google/android/gms/common/ConnectionResult;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/internal/zzf;->zzf:Lcom/google/android/gms/common/internal/BaseGmsClient;
 
     invoke-static {v0}, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzc(Lcom/google/android/gms/common/internal/BaseGmsClient;)Lcom/google/android/gms/common/internal/BaseGmsClient$BaseOnConnectionFailedListener;
@@ -50,6 +52,7 @@
 
     iget-object v0, p0, Lcom/google/android/gms/common/internal/zzf;->zzf:Lcom/google/android/gms/common/internal/BaseGmsClient;
 
+    .line 2
     invoke-static {v0}, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzc(Lcom/google/android/gms/common/internal/BaseGmsClient;)Lcom/google/android/gms/common/internal/BaseGmsClient$BaseOnConnectionFailedListener;
 
     move-result-object v0
@@ -59,6 +62,7 @@
     :cond_0
     iget-object p0, p0, Lcom/google/android/gms/common/internal/zzf;->zzf:Lcom/google/android/gms/common/internal/BaseGmsClient;
 
+    .line 3
     invoke-virtual {p0, p1}, Lcom/google/android/gms/common/internal/BaseGmsClient;->onConnectionFailed(Lcom/google/android/gms/common/ConnectionResult;)V
 
     return-void
@@ -71,6 +75,7 @@
 
     const/4 v1, 0x0
 
+    .line 1
     :try_start_0
     iget-object v2, p0, Lcom/google/android/gms/common/internal/zzf;->zze:Landroid/os/IBinder;
 
@@ -84,6 +89,7 @@
 
     iget-object v3, p0, Lcom/google/android/gms/common/internal/zzf;->zzf:Lcom/google/android/gms/common/internal/BaseGmsClient;
 
+    .line 2
     invoke-virtual {v3}, Lcom/google/android/gms/common/internal/BaseGmsClient;->getServiceDescriptor()Ljava/lang/String;
 
     move-result-object v3
@@ -96,6 +102,7 @@
 
     iget-object p0, p0, Lcom/google/android/gms/common/internal/zzf;->zzf:Lcom/google/android/gms/common/internal/BaseGmsClient;
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/gms/common/internal/BaseGmsClient;->getServiceDescriptor()Ljava/lang/String;
 
     move-result-object p0
@@ -129,6 +136,7 @@
 
     iget-object v2, p0, Lcom/google/android/gms/common/internal/zzf;->zze:Landroid/os/IBinder;
 
+    .line 4
     invoke-virtual {v0, v2}, Lcom/google/android/gms/common/internal/BaseGmsClient;->createServiceInterface(Landroid/os/IBinder;)Landroid/os/IInterface;
 
     move-result-object v0
@@ -141,6 +149,7 @@
 
     const/4 v4, 0x4
 
+    .line 5
     invoke-static {v2, v3, v4, v0}, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzn(Lcom/google/android/gms/common/internal/BaseGmsClient;IILandroid/os/IInterface;)Z
 
     move-result v2
@@ -151,6 +160,7 @@
 
     const/4 v3, 0x3
 
+    .line 6
     invoke-static {v2, v3, v4, v0}, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzn(Lcom/google/android/gms/common/internal/BaseGmsClient;IILandroid/os/IInterface;)Z
 
     move-result v0
@@ -162,10 +172,12 @@
 
     const/4 v1, 0x0
 
+    .line 7
     invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzg(Lcom/google/android/gms/common/internal/BaseGmsClient;Lcom/google/android/gms/common/ConnectionResult;)V
 
     iget-object v0, p0, Lcom/google/android/gms/common/internal/zzf;->zzf:Lcom/google/android/gms/common/internal/BaseGmsClient;
 
+    .line 8
     invoke-virtual {v0}, Lcom/google/android/gms/common/internal/BaseGmsClient;->getConnectionHint()Landroid/os/Bundle;
 
     move-result-object v0
@@ -182,6 +194,7 @@
 
     move-result-object p0
 
+    .line 9
     invoke-interface {p0, v0}, Lcom/google/android/gms/common/internal/BaseGmsClient$BaseConnectionCallbacks;->onConnected(Landroid/os/Bundle;)V
 
     :cond_2
@@ -195,6 +208,7 @@
     :catch_0
     const-string p0, "service probably died"
 
+    .line 10
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1

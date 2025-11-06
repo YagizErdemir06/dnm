@@ -1,16 +1,17 @@
-.class final synthetic Lcom/google/barhopper/deeplearning/zza;
+.class public final synthetic Lcom/google/barhopper/deeplearning/zza;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field static final synthetic zza:[I
+.field public static final synthetic zza:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 6
 
+    .line 1
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzec;->zza()[I
 
     const/4 v0, 0x7

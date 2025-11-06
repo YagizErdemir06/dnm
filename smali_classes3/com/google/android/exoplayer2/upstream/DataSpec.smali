@@ -80,6 +80,7 @@
 
     const-string v0, "goog.exo.datasource"
 
+    .line 1
     invoke-static {v0}, Lcom/google/android/exoplayer2/ExoPlayerLibraryInfo;->registerModule(Ljava/lang/String;)V
 
     return-void
@@ -405,16 +406,16 @@
 .method public constructor <init>(Landroid/net/Uri;JJ)V
     .locals 14
 
+    .line 3
+    invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
+
+    move-result-object v6
+
     const-wide/16 v2, 0x0
 
     const/4 v4, 0x1
 
     const/4 v5, 0x0
-
-    .line 3
-    invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
-
-    move-result-object v6
 
     const/4 v11, 0x0
 
@@ -640,6 +641,7 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -663,6 +665,7 @@
 .method public buildUpon()Lcom/google/android/exoplayer2/upstream/DataSpec$Builder;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/upstream/DataSpec$Builder;
 
     const/4 v1, 0x0
@@ -675,6 +678,7 @@
 .method public final getHttpMethodString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/upstream/DataSpec;->httpMethod:I
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/upstream/DataSpec;->getStringForHttpMethod(I)Ljava/lang/String;
@@ -687,6 +691,7 @@
 .method public isFlagSet(I)Z
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/upstream/DataSpec;->flags:I
 
     and-int/2addr p0, p1
@@ -787,6 +792,7 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -795,6 +801,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/upstream/DataSpec;->getHttpMethodString()Ljava/lang/String;
 
     move-result-object v1
@@ -859,14 +866,17 @@
         }
     .end annotation
 
+    .line 1
     new-instance v6, Ljava/util/HashMap;
 
     iget-object v0, p0, Lcom/google/android/exoplayer2/upstream/DataSpec;->httpRequestHeaders:Ljava/util/Map;
 
     invoke-direct {v6, v0}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
 
+    .line 2
     invoke-interface {v6, p1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
+    .line 3
     new-instance p1, Lcom/google/android/exoplayer2/upstream/DataSpec;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/upstream/DataSpec;->uri:Landroid/net/Uri;
@@ -909,6 +919,7 @@
 
     move-object v0, p0
 
+    .line 1
     new-instance v14, Lcom/google/android/exoplayer2/upstream/DataSpec;
 
     iget-object v1, v0, Lcom/google/android/exoplayer2/upstream/DataSpec;->uri:Landroid/net/Uri;
@@ -943,6 +954,7 @@
 
     move-object v0, p0
 
+    .line 1
     new-instance v14, Lcom/google/android/exoplayer2/upstream/DataSpec;
 
     iget-wide v2, v0, Lcom/google/android/exoplayer2/upstream/DataSpec;->uriPositionOffset:J

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/text/ttml/TtmlSubtitle;
+.class public final Lcom/google/android/exoplayer2/text/ttml/TtmlSubtitle;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -67,16 +67,21 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlSubtitle;->root:Lcom/google/android/exoplayer2/text/ttml/TtmlNode;
 
+    .line 3
     iput-object p3, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlSubtitle;->regionMap:Ljava/util/Map;
 
+    .line 4
     iput-object p4, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlSubtitle;->imageMap:Ljava/util/Map;
 
     if-eqz p2, :cond_0
 
+    .line 5
     invoke-static {p2}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object p2
@@ -91,6 +96,7 @@
     :goto_0
     iput-object p2, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlSubtitle;->globalStyles:Ljava/util/Map;
 
+    .line 6
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/text/ttml/TtmlNode;->getEventTimesUs()[J
 
     move-result-object p1
@@ -113,6 +119,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlSubtitle;->root:Lcom/google/android/exoplayer2/text/ttml/TtmlNode;
 
     iget-object v3, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlSubtitle;->globalStyles:Ljava/util/Map;
@@ -133,6 +140,7 @@
 .method public getEventTime(I)J
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlSubtitle;->eventTimesUs:[J
 
     aget-wide p0, p0, p1
@@ -143,6 +151,7 @@
 .method public getEventTimeCount()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlSubtitle;->eventTimesUs:[J
 
     array-length p0, p0
@@ -165,6 +174,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlSubtitle;->globalStyles:Ljava/util/Map;
 
     return-object p0
@@ -173,6 +183,7 @@
 .method public getNextEventTimeIndex(J)I
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlSubtitle;->eventTimesUs:[J
 
     const/4 v1, 0x0
@@ -181,6 +192,7 @@
 
     move-result p1
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlSubtitle;->eventTimesUs:[J
 
     array-length p0, p0
@@ -201,6 +213,7 @@
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlSubtitle;->root:Lcom/google/android/exoplayer2/text/ttml/TtmlNode;
 
     return-object p0

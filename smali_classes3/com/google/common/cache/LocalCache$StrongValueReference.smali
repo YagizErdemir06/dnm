@@ -1,4 +1,4 @@
-.class Lcom/google/common/cache/LocalCache$StrongValueReference;
+.class public Lcom/google/common/cache/LocalCache$StrongValueReference;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -31,7 +31,7 @@
 
 
 # instance fields
-.field final referent:Ljava/lang/Object;
+.field public final referent:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TV;"
@@ -49,8 +49,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/cache/LocalCache$StrongValueReference;->referent:Ljava/lang/Object;
 
     return-void
@@ -83,6 +85,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/cache/LocalCache$StrongValueReference;->referent:Ljava/lang/Object;
 
     return-object p0
@@ -146,6 +149,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/cache/LocalCache$StrongValueReference;->get()Ljava/lang/Object;
 
     move-result-object p0

@@ -22,6 +22,7 @@
 .method public constructor <init>(Lorg/dom4j/tree/ConcurrentReaderHashMap;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lorg/dom4j/tree/ConcurrentReaderHashMap$HashIterator;-><init>(Lorg/dom4j/tree/ConcurrentReaderHashMap;)V
 
     iput-object p1, p0, Lorg/dom4j/tree/ConcurrentReaderHashMap$KeyIterator;->this$0:Lorg/dom4j/tree/ConcurrentReaderHashMap;
@@ -34,6 +35,7 @@
 .method public returnValueOfNext()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/ConcurrentReaderHashMap$HashIterator;->currentKey:Ljava/lang/Object;
 
     return-object p0

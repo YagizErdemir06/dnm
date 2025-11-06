@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/base/CommonPattern;
+.class public abstract Lcom/google/common/base/CommonPattern;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,6 +15,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,6 +24,7 @@
 .method public static compile(Ljava/lang/String;)Lcom/google/common/base/CommonPattern;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/base/Platform;->compilePattern(Ljava/lang/String;)Lcom/google/common/base/CommonPattern;
 
     move-result-object p0
@@ -33,6 +35,7 @@
 .method public static isPcreLike()Z
     .locals 1
 
+    .line 1
     invoke-static {}, Lcom/google/common/base/Platform;->patternCompilerIsPcreLike()Z
 
     move-result v0

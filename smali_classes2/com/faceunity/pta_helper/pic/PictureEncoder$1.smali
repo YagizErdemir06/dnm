@@ -1,4 +1,4 @@
-.class final Lcom/faceunity/pta_helper/pic/PictureEncoder$1;
+.class public final Lcom/faceunity/pta_helper/pic/PictureEncoder$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,19 +18,20 @@
 
 
 # instance fields
-.field final synthetic val$intBuffer:Ljava/nio/IntBuffer;
+.field public final synthetic val$intBuffer:Ljava/nio/IntBuffer;
 
-.field final synthetic val$listener:Lcom/faceunity/pta_helper/pic/PictureEncoder$OnEncoderPictureListener;
+.field public final synthetic val$listener:Lcom/faceunity/pta_helper/pic/PictureEncoder$OnEncoderPictureListener;
 
-.field final synthetic val$texHeight:I
+.field public final synthetic val$texHeight:I
 
-.field final synthetic val$texWidth:I
+.field public final synthetic val$texWidth:I
 
 
 # direct methods
 .method public constructor <init>(IILjava/nio/IntBuffer;Lcom/faceunity/pta_helper/pic/PictureEncoder$OnEncoderPictureListener;)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/faceunity/pta_helper/pic/PictureEncoder$1;->val$texWidth:I
 
     iput p2, p0, Lcom/faceunity/pta_helper/pic/PictureEncoder$1;->val$texHeight:I
@@ -51,6 +52,7 @@
     .annotation build Lcom/faceunity/pta_helper/NotProguard;
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/faceunity/pta_helper/pic/PictureEncoder$1;->val$texWidth:I
 
     iget v1, p0, Lcom/faceunity/pta_helper/pic/PictureEncoder$1;->val$texHeight:I
@@ -59,6 +61,7 @@
 
     new-array v0, v0, [I
 
+    .line 2
     iget-object v1, p0, Lcom/faceunity/pta_helper/pic/PictureEncoder$1;->val$intBuffer:Ljava/nio/IntBuffer;
 
     invoke-virtual {v1}, Ljava/nio/IntBuffer;->array()[I
@@ -69,6 +72,7 @@
 
     move v3, v2
 
+    .line 3
     :goto_0
     iget v4, p0, Lcom/faceunity/pta_helper/pic/PictureEncoder$1;->val$texHeight:I
 
@@ -76,6 +80,7 @@
 
     if-ge v3, v4, :cond_1
 
+    .line 4
     iget v6, p0, Lcom/faceunity/pta_helper/pic/PictureEncoder$1;->val$texWidth:I
 
     mul-int v7, v3, v6
@@ -88,6 +93,7 @@
 
     move v5, v2
 
+    .line 5
     :goto_1
     iget v6, p0, Lcom/faceunity/pta_helper/pic/PictureEncoder$1;->val$texWidth:I
 
@@ -95,6 +101,7 @@
 
     add-int v6, v7, v5
 
+    .line 6
     aget v6, v1, v6
 
     shr-int/lit8 v8, v6, 0x10
@@ -117,6 +124,7 @@
 
     add-int v8, v4, v5
 
+    .line 7
     aput v6, v0, v8
 
     add-int/lit8 v5, v5, 0x1
@@ -128,6 +136,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_1
     iget v1, p0, Lcom/faceunity/pta_helper/pic/PictureEncoder$1;->val$texWidth:I
 
@@ -143,10 +152,12 @@
 
     move-result-object v0
 
+    .line 9
     iget-object p0, p0, Lcom/faceunity/pta_helper/pic/PictureEncoder$1;->val$listener:Lcom/faceunity/pta_helper/pic/PictureEncoder$OnEncoderPictureListener;
 
     if-eqz p0, :cond_2
 
+    .line 10
     invoke-interface {p0, v0}, Lcom/faceunity/pta_helper/pic/PictureEncoder$OnEncoderPictureListener;->onEncoderPictureListener(Landroid/graphics/Bitmap;)V
 
     :cond_2

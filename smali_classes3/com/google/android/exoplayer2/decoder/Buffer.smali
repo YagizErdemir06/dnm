@@ -11,6 +11,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,6 +22,7 @@
 .method public final addFlag(I)V
     .locals 1
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/decoder/Buffer;->flags:I
 
     or-int/2addr p1, v0
@@ -35,6 +37,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput v0, p0, Lcom/google/android/exoplayer2/decoder/Buffer;->flags:I
 
     return-void
@@ -43,6 +46,7 @@
 .method public final clearFlag(I)V
     .locals 1
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/decoder/Buffer;->flags:I
 
     not-int p1, p1
@@ -57,6 +61,7 @@
 .method public final getFlag(I)Z
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/decoder/Buffer;->flags:I
 
     and-int/2addr p0, p1
@@ -79,6 +84,7 @@
 
     const/high16 v0, 0x10000000
 
+    .line 1
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/decoder/Buffer;->getFlag(I)Z
 
     move-result p0
@@ -91,6 +97,7 @@
 
     const/high16 v0, -0x80000000
 
+    .line 1
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/decoder/Buffer;->getFlag(I)Z
 
     move-result p0
@@ -103,6 +110,7 @@
 
     const/4 v0, 0x4
 
+    .line 1
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/decoder/Buffer;->getFlag(I)Z
 
     move-result p0
@@ -115,6 +123,7 @@
 
     const/high16 v0, 0x8000000
 
+    .line 1
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/decoder/Buffer;->getFlag(I)Z
 
     move-result p0
@@ -127,6 +136,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/decoder/Buffer;->getFlag(I)Z
 
     move-result p0
@@ -137,6 +147,7 @@
 .method public final setFlags(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/decoder/Buffer;->flags:I
 
     return-void

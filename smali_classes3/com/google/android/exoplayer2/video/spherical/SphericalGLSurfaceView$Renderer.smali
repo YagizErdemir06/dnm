@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView$Renderer;
+.class public final Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView$Renderer;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -33,7 +33,7 @@
 
 .field private final tempMatrix:[F
 
-.field final synthetic this$0:Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView;
+.field public final synthetic this$0:Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView;
 
 .field private touchPitch:F
 
@@ -50,6 +50,7 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView;Lcom/google/android/exoplayer2/video/spherical/SceneRenderer;)V
     .locals 4
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView$Renderer;->this$0:Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -58,44 +59,56 @@
 
     new-array v0, p1, [F
 
+    .line 2
     iput-object v0, p0, Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView$Renderer;->projectionMatrix:[F
 
     new-array v0, p1, [F
 
+    .line 3
     iput-object v0, p0, Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView$Renderer;->viewProjectionMatrix:[F
 
     new-array v0, p1, [F
 
+    .line 4
     iput-object v0, p0, Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView$Renderer;->deviceOrientationMatrix:[F
 
     new-array v1, p1, [F
 
+    .line 5
     iput-object v1, p0, Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView$Renderer;->touchPitchMatrix:[F
 
     new-array v2, p1, [F
 
+    .line 6
     iput-object v2, p0, Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView$Renderer;->touchYawMatrix:[F
 
     new-array v3, p1, [F
 
+    .line 7
     iput-object v3, p0, Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView$Renderer;->viewMatrix:[F
 
     new-array p1, p1, [F
 
+    .line 8
     iput-object p1, p0, Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView$Renderer;->tempMatrix:[F
 
+    .line 9
     iput-object p2, p0, Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView$Renderer;->scene:Lcom/google/android/exoplayer2/video/spherical/SceneRenderer;
 
     const/4 p1, 0x0
 
+    .line 10
     invoke-static {v0, p1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
+    .line 11
     invoke-static {v1, p1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
+    .line 12
     invoke-static {v2, p1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
     const p1, 0x40490fdb    # (float)Math.PI
 
+    .line 13
     iput p1, p0, Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView$Renderer;->deviceRoll:F
 
     return-void
@@ -122,6 +135,7 @@
 
     const-wide v0, 0x4046800000000000L    # 45.0
 
+    .line 1
     invoke-static {v0, v1}, Ljava/lang/Math;->toRadians(D)D
 
     move-result-wide v0
@@ -134,6 +148,7 @@
 
     div-double/2addr v0, p0
 
+    .line 2
     invoke-static {v0, v1}, Ljava/lang/Math;->atan(D)D
 
     move-result-wide p0
@@ -161,18 +176,18 @@
     .annotation build Landroidx/annotation/AnyThread;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView$Renderer;->touchPitchMatrix:[F
 
-    const/4 v1, 0x0
+    iget v1, p0, Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView$Renderer;->touchPitch:F
 
-    iget v2, p0, Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView$Renderer;->touchPitch:F
+    neg-float v2, v1
 
-    neg-float v2, v2
+    iget v1, p0, Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView$Renderer;->deviceRoll:F
 
-    iget v3, p0, Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView$Renderer;->deviceRoll:F
+    float-to-double v3, v1
 
-    float-to-double v3, v3
-
+    .line 2
     invoke-static {v3, v4}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v3
@@ -183,14 +198,18 @@
 
     float-to-double v4, p0
 
+    .line 3
     invoke-static {v4, v5}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v4
 
     double-to-float v4, v4
 
+    const/4 v1, 0x0
+
     const/4 v5, 0x0
 
+    .line 4
     invoke-static/range {v0 .. v5}, Landroid/opengl/Matrix;->setRotateM([FIFFFF)V
 
     return-void
@@ -201,8 +220,10 @@
 .method public onDrawFrame(Ljavax/microedition/khronos/opengles/GL10;)V
     .locals 12
 
+    .line 1
     monitor-enter p0
 
+    .line 2
     :try_start_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView$Renderer;->tempMatrix:[F
 
@@ -218,6 +239,7 @@
 
     invoke-static/range {v0 .. v5}, Landroid/opengl/Matrix;->multiplyMM([FI[FI[FI)V
 
+    .line 3
     iget-object v6, p0, Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView$Renderer;->viewMatrix:[F
 
     const/4 v7, 0x0
@@ -232,10 +254,12 @@
 
     invoke-static/range {v6 .. v11}, Landroid/opengl/Matrix;->multiplyMM([FI[FI[FI)V
 
+    .line 4
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 5
     iget-object v0, p0, Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView$Renderer;->viewProjectionMatrix:[F
 
     const/4 v1, 0x0
@@ -250,6 +274,7 @@
 
     invoke-static/range {v0 .. v5}, Landroid/opengl/Matrix;->multiplyMM([FI[FI[FI)V
 
+    .line 6
     iget-object p1, p0, Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView$Renderer;->scene:Lcom/google/android/exoplayer2/video/spherical/SceneRenderer;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView$Renderer;->viewProjectionMatrix:[F
@@ -263,6 +288,7 @@
     :catchall_0
     move-exception p1
 
+    .line 7
     :try_start_1
     monitor-exit p0
     :try_end_1
@@ -278,6 +304,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView$Renderer;->deviceOrientationMatrix:[F
 
@@ -289,12 +316,15 @@
 
     neg-float p1, p2
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView$Renderer;->deviceRoll:F
 
+    .line 3
     invoke-direct {p0}, Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView$Renderer;->updatePitchMatrix()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
     monitor-exit p0
 
     return-void
@@ -314,13 +344,16 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget v0, p1, Landroid/graphics/PointF;->y:F
 
     iput v0, p0, Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView$Renderer;->touchPitch:F
 
+    .line 2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView$Renderer;->updatePitchMatrix()V
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView$Renderer;->touchYawMatrix:[F
 
     const/4 v2, 0x0
@@ -339,6 +372,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
     monitor-exit p0
 
     return-void
@@ -356,9 +390,10 @@
     .annotation build Landroidx/annotation/UiThread;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView$Renderer;->this$0:Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView;
 
-    invoke-virtual {p0}, Landroid/view/View;->performClick()Z
+    invoke-virtual {p0}, Landroid/opengl/GLSurfaceView;->performClick()Z
 
     move-result p0
 
@@ -370,6 +405,7 @@
 
     const/4 p1, 0x0
 
+    .line 1
     invoke-static {p1, p1, p2, p3}, Landroid/opengl/GLES20;->glViewport(IIII)V
 
     int-to-float p1, p2
@@ -378,10 +414,12 @@
 
     div-float v3, p1, p2
 
+    .line 2
     invoke-direct {p0, v3}, Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView$Renderer;->calculateFieldOfViewInYDirection(F)F
 
     move-result v2
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView$Renderer;->projectionMatrix:[F
 
     const/4 v1, 0x0
@@ -400,6 +438,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-object p1, p0, Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView$Renderer;->this$0:Lcom/google/android/exoplayer2/video/spherical/SphericalGLSurfaceView;
 
@@ -413,6 +452,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     monitor-exit p0
 
     return-void

@@ -4,45 +4,45 @@
 
 
 # static fields
-.field public static final u:I = 0x0
+.field public static final f:I = 0x0
 
-.field public static final v:I = 0x1
+.field public static final g:I = 0x1
 
 
 # instance fields
-.field public d:Lmiuix/androidbasewidget/widget/ProgressBar;
+.field private C1:Landroid/graphics/drawable/Drawable;
 
-.field public e:Landroid/widget/TextView;
+.field private C2:Z
 
-.field public f:Landroid/widget/TextView;
+.field private K0:I
 
-.field public g:I
+.field private K1:Ljava/lang/CharSequence;
 
-.field public h:Ljava/lang/String;
+.field private K2:Landroid/os/Handler;
 
-.field public i:Ljava/text/NumberFormat;
+.field private j:Lmiuix/androidbasewidget/widget/ProgressBar;
 
-.field public j:I
+.field private k0:I
 
-.field public k:I
+.field private k1:I
 
-.field public l:I
+.field private m:Landroid/widget/TextView;
 
-.field public m:I
+.field private n:Landroid/widget/TextView;
 
-.field public n:I
+.field private p:I
 
-.field public o:Landroid/graphics/drawable/Drawable;
+.field private s:Ljava/lang/String;
 
-.field public p:Landroid/graphics/drawable/Drawable;
+.field private t:Ljava/text/NumberFormat;
 
-.field public q:Ljava/lang/CharSequence;
+.field private u:I
 
-.field public r:Z
+.field private v1:Landroid/graphics/drawable/Drawable;
 
-.field public s:Z
+.field private v2:Z
 
-.field public t:Landroid/os/Handler;
+.field private w:I
 
 
 # direct methods
@@ -55,10 +55,10 @@
     const/4 p1, 0x0
 
     .line 2
-    iput p1, p0, Lmiuix/appcompat/app/ProgressDialog;->g:I
+    iput p1, p0, Lmiuix/appcompat/app/ProgressDialog;->p:I
 
     .line 3
-    invoke-virtual {p0}, Lmiuix/appcompat/app/ProgressDialog;->W()V
+    invoke-direct {p0}, Lmiuix/appcompat/app/ProgressDialog;->L()V
 
     return-void
 .end method
@@ -72,75 +72,137 @@
     const/4 p1, 0x0
 
     .line 5
-    iput p1, p0, Lmiuix/appcompat/app/ProgressDialog;->g:I
+    iput p1, p0, Lmiuix/appcompat/app/ProgressDialog;->p:I
 
     .line 6
-    invoke-virtual {p0}, Lmiuix/appcompat/app/ProgressDialog;->W()V
+    invoke-direct {p0}, Lmiuix/appcompat/app/ProgressDialog;->L()V
 
     return-void
 .end method
 
-.method public static synthetic L(Lmiuix/appcompat/app/ProgressDialog;)Ljava/lang/CharSequence;
+.method public static synthetic A(Lmiuix/appcompat/app/ProgressDialog;)Ljava/lang/CharSequence;
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/ProgressDialog;->q:Ljava/lang/CharSequence;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/ProgressDialog;->K1:Ljava/lang/CharSequence;
 
     return-object p0
 .end method
 
-.method public static synthetic M(Lmiuix/appcompat/app/ProgressDialog;)Landroid/widget/TextView;
+.method public static synthetic B(Lmiuix/appcompat/app/ProgressDialog;)Landroid/widget/TextView;
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/ProgressDialog;->e:Landroid/widget/TextView;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/ProgressDialog;->m:Landroid/widget/TextView;
 
     return-object p0
 .end method
 
-.method public static synthetic N(Lmiuix/appcompat/app/ProgressDialog;)Ljava/text/NumberFormat;
+.method public static synthetic C(Lmiuix/appcompat/app/ProgressDialog;)Ljava/text/NumberFormat;
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/ProgressDialog;->i:Ljava/text/NumberFormat;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/ProgressDialog;->t:Ljava/text/NumberFormat;
 
     return-object p0
 .end method
 
-.method public static synthetic O(Lmiuix/appcompat/app/ProgressDialog;)Landroid/widget/TextView;
+.method public static synthetic D(Lmiuix/appcompat/app/ProgressDialog;)Landroid/widget/TextView;
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/ProgressDialog;->f:Landroid/widget/TextView;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/ProgressDialog;->n:Landroid/widget/TextView;
 
     return-object p0
 .end method
 
-.method public static synthetic P(Lmiuix/appcompat/app/ProgressDialog;)I
+.method public static synthetic E(Lmiuix/appcompat/app/ProgressDialog;)I
     .locals 0
 
-    iget p0, p0, Lmiuix/appcompat/app/ProgressDialog;->k:I
+    .line 1
+    iget p0, p0, Lmiuix/appcompat/app/ProgressDialog;->w:I
 
     return p0
 .end method
 
-.method public static synthetic Q(Lmiuix/appcompat/app/ProgressDialog;)Lmiuix/androidbasewidget/widget/ProgressBar;
+.method public static synthetic F(Lmiuix/appcompat/app/ProgressDialog;)Lmiuix/androidbasewidget/widget/ProgressBar;
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/ProgressDialog;->d:Lmiuix/androidbasewidget/widget/ProgressBar;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/ProgressDialog;->j:Lmiuix/androidbasewidget/widget/ProgressBar;
 
     return-object p0
 .end method
 
-.method public static i0(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Lmiuix/appcompat/app/ProgressDialog;
+.method private L()V
+    .locals 1
+
+    const-string v0, "%1d/%2d"
+
+    .line 1
+    iput-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->s:Ljava/lang/String;
+
+    .line 2
+    invoke-static {}, Ljava/text/NumberFormat;->getPercentInstance()Ljava/text/NumberFormat;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->t:Ljava/text/NumberFormat;
+
+    const/4 p0, 0x0
+
+    .line 3
+    invoke-virtual {v0, p0}, Ljava/text/NumberFormat;->setMaximumFractionDigits(I)V
+
+    return-void
+.end method
+
+.method private N()V
+    .locals 2
+
+    .line 1
+    iget v0, p0, Lmiuix/appcompat/app/ProgressDialog;->p:I
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    .line 2
+    iget-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->K2:Landroid/os/Handler;
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->hasMessages(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 3
+    iget-object p0, p0, Lmiuix/appcompat/app/ProgressDialog;->K2:Landroid/os/Handler;
+
+    invoke-virtual {p0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public static X(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Lmiuix/appcompat/app/ProgressDialog;
     .locals 1
 
     const/4 v0, 0x0
 
-    invoke-static {p0, p1, p2, v0}, Lmiuix/appcompat/app/ProgressDialog;->j0(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Lmiuix/appcompat/app/ProgressDialog;
+    .line 1
+    invoke-static {p0, p1, p2, v0}, Lmiuix/appcompat/app/ProgressDialog;->Y(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Lmiuix/appcompat/app/ProgressDialog;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static j0(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Lmiuix/appcompat/app/ProgressDialog;
+.method public static Y(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Lmiuix/appcompat/app/ProgressDialog;
     .locals 6
 
     const/4 v4, 0x0
@@ -155,14 +217,15 @@
 
     move v3, p3
 
-    invoke-static/range {v0 .. v5}, Lmiuix/appcompat/app/ProgressDialog;->l0(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZZLandroid/content/DialogInterface$OnCancelListener;)Lmiuix/appcompat/app/ProgressDialog;
+    .line 1
+    invoke-static/range {v0 .. v5}, Lmiuix/appcompat/app/ProgressDialog;->a0(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZZLandroid/content/DialogInterface$OnCancelListener;)Lmiuix/appcompat/app/ProgressDialog;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static k0(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZZ)Lmiuix/appcompat/app/ProgressDialog;
+.method public static Z(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZZ)Lmiuix/appcompat/app/ProgressDialog;
     .locals 6
 
     const/4 v5, 0x0
@@ -177,350 +240,355 @@
 
     move v4, p4
 
-    invoke-static/range {v0 .. v5}, Lmiuix/appcompat/app/ProgressDialog;->l0(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZZLandroid/content/DialogInterface$OnCancelListener;)Lmiuix/appcompat/app/ProgressDialog;
+    .line 1
+    invoke-static/range {v0 .. v5}, Lmiuix/appcompat/app/ProgressDialog;->a0(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZZLandroid/content/DialogInterface$OnCancelListener;)Lmiuix/appcompat/app/ProgressDialog;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static l0(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZZLandroid/content/DialogInterface$OnCancelListener;)Lmiuix/appcompat/app/ProgressDialog;
+.method public static a0(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZZLandroid/content/DialogInterface$OnCancelListener;)Lmiuix/appcompat/app/ProgressDialog;
     .locals 1
 
+    .line 1
     new-instance v0, Lmiuix/appcompat/app/ProgressDialog;
 
     invoke-direct {v0, p0}, Lmiuix/appcompat/app/ProgressDialog;-><init>(Landroid/content/Context;)V
 
+    .line 2
     invoke-virtual {v0, p1}, Lmiuix/appcompat/app/AlertDialog;->setTitle(Ljava/lang/CharSequence;)V
 
+    .line 3
     invoke-virtual {v0, p2}, Lmiuix/appcompat/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v0, p3}, Lmiuix/appcompat/app/ProgressDialog;->Z(Z)V
+    .line 4
+    invoke-virtual {v0, p3}, Lmiuix/appcompat/app/ProgressDialog;->O(Z)V
 
+    .line 5
     invoke-virtual {v0, p4}, Lmiuix/appcompat/app/AlertDialog;->setCancelable(Z)V
 
+    .line 6
     invoke-virtual {v0, p5}, Landroid/app/Dialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
-    invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog;->show()V
+    .line 7
+    invoke-virtual {v0}, Landroid/app/Dialog;->show()V
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public R()I
+.method public G()I
     .locals 1
 
-    iget-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->d:Lmiuix/androidbasewidget/widget/ProgressBar;
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->j:Lmiuix/androidbasewidget/widget/ProgressBar;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Landroid/widget/ProgressBar;->getMax()I
 
     move-result p0
 
     return p0
 
+    .line 3
     :cond_0
-    iget p0, p0, Lmiuix/appcompat/app/ProgressDialog;->j:I
+    iget p0, p0, Lmiuix/appcompat/app/ProgressDialog;->u:I
 
     return p0
 .end method
 
-.method public S()I
+.method public H()I
     .locals 1
 
-    iget-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->d:Lmiuix/androidbasewidget/widget/ProgressBar;
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->j:Lmiuix/androidbasewidget/widget/ProgressBar;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Landroid/widget/ProgressBar;->getProgress()I
 
     move-result p0
 
     return p0
 
+    .line 3
     :cond_0
-    iget p0, p0, Lmiuix/appcompat/app/ProgressDialog;->k:I
+    iget p0, p0, Lmiuix/appcompat/app/ProgressDialog;->w:I
 
     return p0
 .end method
 
-.method public T()I
+.method public I()I
     .locals 1
 
-    iget-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->d:Lmiuix/androidbasewidget/widget/ProgressBar;
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->j:Lmiuix/androidbasewidget/widget/ProgressBar;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Landroid/widget/ProgressBar;->getSecondaryProgress()I
 
     move-result p0
 
     return p0
 
+    .line 3
     :cond_0
-    iget p0, p0, Lmiuix/appcompat/app/ProgressDialog;->l:I
+    iget p0, p0, Lmiuix/appcompat/app/ProgressDialog;->k0:I
 
     return p0
 .end method
 
-.method public U(I)V
+.method public J(I)V
     .locals 1
 
-    iget-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->d:Lmiuix/androidbasewidget/widget/ProgressBar;
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->j:Lmiuix/androidbasewidget/widget/ProgressBar;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0, p1}, Landroid/widget/ProgressBar;->incrementProgressBy(I)V
 
-    invoke-virtual {p0}, Lmiuix/appcompat/app/ProgressDialog;->Y()V
+    .line 3
+    invoke-direct {p0}, Lmiuix/appcompat/app/ProgressDialog;->N()V
 
     goto :goto_0
 
+    .line 4
     :cond_0
-    iget v0, p0, Lmiuix/appcompat/app/ProgressDialog;->m:I
+    iget v0, p0, Lmiuix/appcompat/app/ProgressDialog;->K0:I
 
     add-int/2addr v0, p1
 
-    iput v0, p0, Lmiuix/appcompat/app/ProgressDialog;->m:I
+    iput v0, p0, Lmiuix/appcompat/app/ProgressDialog;->K0:I
 
     :goto_0
     return-void
 .end method
 
-.method public V(I)V
+.method public K(I)V
     .locals 1
 
-    iget-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->d:Lmiuix/androidbasewidget/widget/ProgressBar;
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->j:Lmiuix/androidbasewidget/widget/ProgressBar;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0, p1}, Landroid/widget/ProgressBar;->incrementSecondaryProgressBy(I)V
 
-    invoke-virtual {p0}, Lmiuix/appcompat/app/ProgressDialog;->Y()V
+    .line 3
+    invoke-direct {p0}, Lmiuix/appcompat/app/ProgressDialog;->N()V
 
     goto :goto_0
 
+    .line 4
     :cond_0
-    iget v0, p0, Lmiuix/appcompat/app/ProgressDialog;->n:I
+    iget v0, p0, Lmiuix/appcompat/app/ProgressDialog;->k1:I
 
     add-int/2addr v0, p1
 
-    iput v0, p0, Lmiuix/appcompat/app/ProgressDialog;->n:I
+    iput v0, p0, Lmiuix/appcompat/app/ProgressDialog;->k1:I
 
     :goto_0
     return-void
 .end method
 
-.method public final W()V
+.method public M()Z
     .locals 1
 
-    const-string v0, "%1d/%2d"
-
-    iput-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->h:Ljava/lang/String;
-
-    invoke-static {}, Ljava/text/NumberFormat;->getPercentInstance()Ljava/text/NumberFormat;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->i:Ljava/text/NumberFormat;
-
-    const/4 p0, 0x0
-
-    invoke-virtual {v0, p0}, Ljava/text/NumberFormat;->setMaximumFractionDigits(I)V
-
-    return-void
-.end method
-
-.method public X()Z
-    .locals 1
-
-    iget-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->d:Lmiuix/androidbasewidget/widget/ProgressBar;
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->j:Lmiuix/androidbasewidget/widget/ProgressBar;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Landroid/widget/ProgressBar;->isIndeterminate()Z
 
     move-result p0
 
     return p0
 
+    .line 3
     :cond_0
-    iget-boolean p0, p0, Lmiuix/appcompat/app/ProgressDialog;->r:Z
+    iget-boolean p0, p0, Lmiuix/appcompat/app/ProgressDialog;->v2:Z
 
     return p0
 .end method
 
-.method public final Y()V
-    .locals 2
-
-    iget v0, p0, Lmiuix/appcompat/app/ProgressDialog;->g:I
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    iget-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->t:Landroid/os/Handler;
-
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->hasMessages(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/ProgressDialog;->t:Landroid/os/Handler;
-
-    invoke-virtual {p0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
-
-    :cond_0
-    return-void
-.end method
-
-.method public Z(Z)V
+.method public O(Z)V
     .locals 1
 
-    iget-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->d:Lmiuix/androidbasewidget/widget/ProgressBar;
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->j:Lmiuix/androidbasewidget/widget/ProgressBar;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0, p1}, Landroid/widget/ProgressBar;->setIndeterminate(Z)V
 
     goto :goto_0
 
+    .line 3
     :cond_0
-    iput-boolean p1, p0, Lmiuix/appcompat/app/ProgressDialog;->r:Z
+    iput-boolean p1, p0, Lmiuix/appcompat/app/ProgressDialog;->v2:Z
 
     :goto_0
     return-void
 .end method
 
-.method public a0(Landroid/graphics/drawable/Drawable;)V
+.method public P(Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
-    iget-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->d:Lmiuix/androidbasewidget/widget/ProgressBar;
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->j:Lmiuix/androidbasewidget/widget/ProgressBar;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0, p1}, Lmiuix/androidbasewidget/widget/ProgressBar;->setIndeterminateDrawable(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_0
 
+    .line 3
     :cond_0
-    iput-object p1, p0, Lmiuix/appcompat/app/ProgressDialog;->p:Landroid/graphics/drawable/Drawable;
+    iput-object p1, p0, Lmiuix/appcompat/app/ProgressDialog;->C1:Landroid/graphics/drawable/Drawable;
 
     :goto_0
     return-void
 .end method
 
-.method public b0(I)V
+.method public Q(I)V
     .locals 1
 
-    iget-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->d:Lmiuix/androidbasewidget/widget/ProgressBar;
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->j:Lmiuix/androidbasewidget/widget/ProgressBar;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0, p1}, Landroid/widget/ProgressBar;->setMax(I)V
 
-    invoke-virtual {p0}, Lmiuix/appcompat/app/ProgressDialog;->Y()V
+    .line 3
+    invoke-direct {p0}, Lmiuix/appcompat/app/ProgressDialog;->N()V
 
     goto :goto_0
 
+    .line 4
     :cond_0
-    iput p1, p0, Lmiuix/appcompat/app/ProgressDialog;->j:I
+    iput p1, p0, Lmiuix/appcompat/app/ProgressDialog;->u:I
 
     :goto_0
     return-void
 .end method
 
-.method public c0(I)V
+.method public R(I)V
     .locals 0
 
-    iput p1, p0, Lmiuix/appcompat/app/ProgressDialog;->k:I
+    .line 1
+    iput p1, p0, Lmiuix/appcompat/app/ProgressDialog;->w:I
 
-    iget-boolean p1, p0, Lmiuix/appcompat/app/ProgressDialog;->s:Z
+    .line 2
+    iget-boolean p1, p0, Lmiuix/appcompat/app/ProgressDialog;->C2:Z
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p0}, Lmiuix/appcompat/app/ProgressDialog;->Y()V
+    .line 3
+    invoke-direct {p0}, Lmiuix/appcompat/app/ProgressDialog;->N()V
 
     :cond_0
     return-void
 .end method
 
-.method public d0(Landroid/graphics/drawable/Drawable;)V
+.method public S(Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
-    iget-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->d:Lmiuix/androidbasewidget/widget/ProgressBar;
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->j:Lmiuix/androidbasewidget/widget/ProgressBar;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0, p1}, Landroid/widget/ProgressBar;->setProgressDrawable(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_0
 
+    .line 3
     :cond_0
-    iput-object p1, p0, Lmiuix/appcompat/app/ProgressDialog;->o:Landroid/graphics/drawable/Drawable;
+    iput-object p1, p0, Lmiuix/appcompat/app/ProgressDialog;->v1:Landroid/graphics/drawable/Drawable;
 
     :goto_0
     return-void
 .end method
 
-.method public e0(Ljava/lang/String;)V
+.method public T(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lmiuix/appcompat/app/ProgressDialog;->h:Ljava/lang/String;
+    .line 1
+    iput-object p1, p0, Lmiuix/appcompat/app/ProgressDialog;->s:Ljava/lang/String;
 
-    invoke-virtual {p0}, Lmiuix/appcompat/app/ProgressDialog;->Y()V
+    .line 2
+    invoke-direct {p0}, Lmiuix/appcompat/app/ProgressDialog;->N()V
 
     return-void
 .end method
 
-.method public f0(Ljava/text/NumberFormat;)V
+.method public U(Ljava/text/NumberFormat;)V
     .locals 0
 
-    iput-object p1, p0, Lmiuix/appcompat/app/ProgressDialog;->i:Ljava/text/NumberFormat;
+    .line 1
+    iput-object p1, p0, Lmiuix/appcompat/app/ProgressDialog;->t:Ljava/text/NumberFormat;
 
-    invoke-virtual {p0}, Lmiuix/appcompat/app/ProgressDialog;->Y()V
+    .line 2
+    invoke-direct {p0}, Lmiuix/appcompat/app/ProgressDialog;->N()V
 
     return-void
 .end method
 
-.method public g0(I)V
+.method public V(I)V
     .locals 0
 
-    iput p1, p0, Lmiuix/appcompat/app/ProgressDialog;->g:I
+    .line 1
+    iput p1, p0, Lmiuix/appcompat/app/ProgressDialog;->p:I
 
     return-void
 .end method
 
-.method public h0(I)V
+.method public W(I)V
     .locals 1
 
-    iget-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->d:Lmiuix/androidbasewidget/widget/ProgressBar;
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->j:Lmiuix/androidbasewidget/widget/ProgressBar;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0, p1}, Landroid/widget/ProgressBar;->setSecondaryProgress(I)V
 
-    invoke-virtual {p0}, Lmiuix/appcompat/app/ProgressDialog;->Y()V
+    .line 3
+    invoke-direct {p0}, Lmiuix/appcompat/app/ProgressDialog;->N()V
 
     goto :goto_0
 
+    .line 4
     :cond_0
-    iput p1, p0, Lmiuix/appcompat/app/ProgressDialog;->l:I
+    iput p1, p0, Lmiuix/appcompat/app/ProgressDialog;->k0:I
 
     :goto_0
     return-void
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 8
+    .locals 6
 
+    .line 1
     invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -529,11 +597,12 @@
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    sget-object v2, Lso/b$r;->AlertDialog:[I
+    sget-object v2, Lk/b/b$r;->AlertDialog:[I
 
     const/4 v3, 0x0
 
@@ -545,107 +614,24 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
-
-    move-result-object v2
+    .line 3
+    iget v2, p0, Lmiuix/appcompat/app/ProgressDialog;->p:I
 
     const/4 v4, 0x1
 
-    new-array v6, v4, [I
+    if-ne v2, v4, :cond_0
 
-    sget v7, Lso/b$d;->dialogProgressPercentColor:I
-
-    aput v7, v6, v5
-
-    invoke-virtual {v2, v6}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
-
-    move-result-object v2
-
-    invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v6
-
-    sget v7, Lso/b$f;->miuix_appcompat_dialog_default_progress_percent_color:I
-
-    invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v6
-
-    invoke-virtual {v2, v5, v6}, Landroid/content/res/TypedArray;->getColor(II)I
-
-    move-result v6
-
-    invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
-
-    invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lmp/k;->f(Landroid/content/Context;)I
-
-    move-result v2
-
-    const/4 v7, 0x2
-
-    if-ne v2, v7, :cond_0
-
-    move v5, v4
-
-    :cond_0
-    iget v2, p0, Lmiuix/appcompat/app/ProgressDialog;->g:I
-
-    if-ne v2, v4, :cond_2
-
+    .line 4
     new-instance v2, Lmiuix/appcompat/app/ProgressDialog$a;
 
-    invoke-direct {v2, p0, v6}, Lmiuix/appcompat/app/ProgressDialog$a;-><init>(Lmiuix/appcompat/app/ProgressDialog;I)V
+    invoke-direct {v2, p0}, Lmiuix/appcompat/app/ProgressDialog$a;-><init>(Lmiuix/appcompat/app/ProgressDialog;)V
 
-    iput-object v2, p0, Lmiuix/appcompat/app/ProgressDialog;->t:Landroid/os/Handler;
+    iput-object v2, p0, Lmiuix/appcompat/app/ProgressDialog;->K2:Landroid/os/Handler;
 
-    if-eqz v5, :cond_1
+    .line 5
+    sget v2, Lk/b/b$r;->AlertDialog_horizontalProgressLayout:I
 
-    sget v2, Lso/b$m;->miuix_appcompat_alert_dialog_progress_xl_font:I
-
-    goto :goto_0
-
-    :cond_1
-    sget v2, Lso/b$m;->miuix_appcompat_alert_dialog_progress:I
-
-    :goto_0
-    sget v4, Lso/b$r;->AlertDialog_horizontalProgressLayout:I
-
-    invoke-virtual {v1, v4, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
-
-    move-result v2
-
-    invoke-virtual {v0, v2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object v0
-
-    sget v2, Lso/b$j;->progress_percent:I
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/TextView;
-
-    iput-object v2, p0, Lmiuix/appcompat/app/ProgressDialog;->f:Landroid/widget/TextView;
-
-    goto :goto_1
-
-    :cond_2
-    sget v2, Lso/b$r;->AlertDialog_progressLayout:I
-
-    sget v4, Lso/b$m;->miuix_appcompat_progress_dialog:I
+    sget v4, Lk/b/b$m;->miuix_appcompat_alert_dialog_progress:I
 
     invoke-virtual {v1, v2, v4}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -655,18 +641,8 @@
 
     move-result-object v0
 
-    :goto_1
-    const v2, 0x102000d
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    check-cast v2, Lmiuix/androidbasewidget/widget/ProgressBar;
-
-    iput-object v2, p0, Lmiuix/appcompat/app/ProgressDialog;->d:Lmiuix/androidbasewidget/widget/ProgressBar;
-
-    sget v2, Lso/b$j;->message:I
+    .line 6
+    sget v2, Lk/b/b$j;->progress_percent:I
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -674,74 +650,159 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    iput-object v2, p0, Lmiuix/appcompat/app/ProgressDialog;->e:Landroid/widget/TextView;
+    iput-object v2, p0, Lmiuix/appcompat/app/ProgressDialog;->n:Landroid/widget/TextView;
 
+    goto :goto_0
+
+    .line 7
+    :cond_0
+    sget v2, Lk/b/b$r;->AlertDialog_progressLayout:I
+
+    sget v4, Lk/b/b$m;->miuix_appcompat_progress_dialog:I
+
+    invoke-virtual {v1, v2, v4}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result v2
+
+    invoke-virtual {v0, v2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object v0
+
+    :goto_0
+    const v2, 0x102000d
+
+    .line 8
+    invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Lmiuix/androidbasewidget/widget/ProgressBar;
+
+    iput-object v2, p0, Lmiuix/appcompat/app/ProgressDialog;->j:Lmiuix/androidbasewidget/widget/ProgressBar;
+
+    .line 9
+    sget v2, Lk/b/b$j;->message:I
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/TextView;
+
+    iput-object v2, p0, Lmiuix/appcompat/app/ProgressDialog;->m:Landroid/widget/TextView;
+
+    .line 10
+    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v4, 0x1c
+
+    if-lt v3, v4, :cond_1
+
+    .line 11
+    invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    sget v4, Lk/b/b$g;->miuix_appcompat_dialog_message_line_height:I
+
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setLineHeight(I)V
+
+    .line 12
+    :cond_1
     invoke-virtual {p0, v0}, Lmiuix/appcompat/app/AlertDialog;->setView(Landroid/view/View;)V
 
+    .line 13
     invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
-    iget v0, p0, Lmiuix/appcompat/app/ProgressDialog;->j:I
+    .line 14
+    iget v0, p0, Lmiuix/appcompat/app/ProgressDialog;->u:I
+
+    if-lez v0, :cond_2
+
+    .line 15
+    invoke-virtual {p0, v0}, Lmiuix/appcompat/app/ProgressDialog;->Q(I)V
+
+    .line 16
+    :cond_2
+    iget v0, p0, Lmiuix/appcompat/app/ProgressDialog;->w:I
 
     if-lez v0, :cond_3
 
-    invoke-virtual {p0, v0}, Lmiuix/appcompat/app/ProgressDialog;->b0(I)V
+    .line 17
+    invoke-virtual {p0, v0}, Lmiuix/appcompat/app/ProgressDialog;->R(I)V
 
+    .line 18
     :cond_3
-    iget v0, p0, Lmiuix/appcompat/app/ProgressDialog;->k:I
+    iget v0, p0, Lmiuix/appcompat/app/ProgressDialog;->k0:I
 
     if-lez v0, :cond_4
 
-    invoke-virtual {p0, v0}, Lmiuix/appcompat/app/ProgressDialog;->c0(I)V
+    .line 19
+    invoke-virtual {p0, v0}, Lmiuix/appcompat/app/ProgressDialog;->W(I)V
 
+    .line 20
     :cond_4
-    iget v0, p0, Lmiuix/appcompat/app/ProgressDialog;->l:I
+    iget v0, p0, Lmiuix/appcompat/app/ProgressDialog;->K0:I
 
     if-lez v0, :cond_5
 
-    invoke-virtual {p0, v0}, Lmiuix/appcompat/app/ProgressDialog;->h0(I)V
+    .line 21
+    invoke-virtual {p0, v0}, Lmiuix/appcompat/app/ProgressDialog;->J(I)V
 
+    .line 22
     :cond_5
-    iget v0, p0, Lmiuix/appcompat/app/ProgressDialog;->m:I
+    iget v0, p0, Lmiuix/appcompat/app/ProgressDialog;->k1:I
 
     if-lez v0, :cond_6
 
-    invoke-virtual {p0, v0}, Lmiuix/appcompat/app/ProgressDialog;->U(I)V
+    .line 23
+    invoke-virtual {p0, v0}, Lmiuix/appcompat/app/ProgressDialog;->K(I)V
 
+    .line 24
     :cond_6
-    iget v0, p0, Lmiuix/appcompat/app/ProgressDialog;->n:I
+    iget-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->v1:Landroid/graphics/drawable/Drawable;
 
-    if-lez v0, :cond_7
+    if-eqz v0, :cond_7
 
-    invoke-virtual {p0, v0}, Lmiuix/appcompat/app/ProgressDialog;->V(I)V
+    .line 25
+    invoke-virtual {p0, v0}, Lmiuix/appcompat/app/ProgressDialog;->S(Landroid/graphics/drawable/Drawable;)V
 
+    .line 26
     :cond_7
-    iget-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->o:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->C1:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_8
 
-    invoke-virtual {p0, v0}, Lmiuix/appcompat/app/ProgressDialog;->d0(Landroid/graphics/drawable/Drawable;)V
+    .line 27
+    invoke-virtual {p0, v0}, Lmiuix/appcompat/app/ProgressDialog;->P(Landroid/graphics/drawable/Drawable;)V
 
+    .line 28
     :cond_8
-    iget-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->p:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->K1:Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_9
 
-    invoke-virtual {p0, v0}, Lmiuix/appcompat/app/ProgressDialog;->a0(Landroid/graphics/drawable/Drawable;)V
-
-    :cond_9
-    iget-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->q:Ljava/lang/CharSequence;
-
-    if-eqz v0, :cond_a
-
+    .line 29
     invoke-virtual {p0, v0}, Lmiuix/appcompat/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    :cond_a
-    iget-boolean v0, p0, Lmiuix/appcompat/app/ProgressDialog;->r:Z
+    .line 30
+    :cond_9
+    iget-boolean v0, p0, Lmiuix/appcompat/app/ProgressDialog;->v2:Z
 
-    invoke-virtual {p0, v0}, Lmiuix/appcompat/app/ProgressDialog;->Z(Z)V
+    invoke-virtual {p0, v0}, Lmiuix/appcompat/app/ProgressDialog;->O(Z)V
 
-    invoke-virtual {p0}, Lmiuix/appcompat/app/ProgressDialog;->Y()V
+    .line 31
+    invoke-direct {p0}, Lmiuix/appcompat/app/ProgressDialog;->N()V
 
+    .line 32
     invoke-super {p0, p1}, Lmiuix/appcompat/app/AlertDialog;->onCreate(Landroid/os/Bundle;)V
 
     return-void
@@ -750,11 +811,13 @@
 .method public onStart()V
     .locals 1
 
+    .line 1
     invoke-super {p0}, Lmiuix/appcompat/app/AlertDialog;->onStart()V
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lmiuix/appcompat/app/ProgressDialog;->s:Z
+    .line 2
+    iput-boolean v0, p0, Lmiuix/appcompat/app/ProgressDialog;->C2:Z
 
     return-void
 .end method
@@ -762,11 +825,13 @@
 .method public onStop()V
     .locals 1
 
+    .line 1
     invoke-super {p0}, Lmiuix/appcompat/app/AlertDialog;->onStop()V
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lmiuix/appcompat/app/ProgressDialog;->s:Z
+    .line 2
+    iput-boolean v0, p0, Lmiuix/appcompat/app/ProgressDialog;->C2:Z
 
     return-void
 .end method
@@ -774,27 +839,32 @@
 .method public setMessage(Ljava/lang/CharSequence;)V
     .locals 2
 
-    iget-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->d:Lmiuix/androidbasewidget/widget/ProgressBar;
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/app/ProgressDialog;->j:Lmiuix/androidbasewidget/widget/ProgressBar;
 
     if-eqz v0, :cond_1
 
-    iget v0, p0, Lmiuix/appcompat/app/ProgressDialog;->g:I
+    .line 2
+    iget v0, p0, Lmiuix/appcompat/app/ProgressDialog;->p:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    iput-object p1, p0, Lmiuix/appcompat/app/ProgressDialog;->q:Ljava/lang/CharSequence;
+    .line 3
+    iput-object p1, p0, Lmiuix/appcompat/app/ProgressDialog;->K1:Ljava/lang/CharSequence;
 
+    .line 4
     :cond_0
-    iget-object p0, p0, Lmiuix/appcompat/app/ProgressDialog;->e:Landroid/widget/TextView;
+    iget-object p0, p0, Lmiuix/appcompat/app/ProgressDialog;->m:Landroid/widget/TextView;
 
     invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
+    .line 5
     :cond_1
-    iput-object p1, p0, Lmiuix/appcompat/app/ProgressDialog;->q:Ljava/lang/CharSequence;
+    iput-object p1, p0, Lmiuix/appcompat/app/ProgressDialog;->K1:Ljava/lang/CharSequence;
 
     :goto_0
     return-void

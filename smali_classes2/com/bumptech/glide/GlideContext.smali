@@ -4,7 +4,7 @@
 
 
 # static fields
-.field static final DEFAULT_TRANSITION_OPTIONS:Lcom/bumptech/glide/TransitionOptions;
+.field public static final DEFAULT_TRANSITION_OPTIONS:Lcom/bumptech/glide/TransitionOptions;
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 
@@ -69,6 +69,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/bumptech/glide/GenericTransitionOptions;
 
     invoke-direct {v0}, Lcom/bumptech/glide/GenericTransitionOptions;-><init>()V
@@ -134,28 +135,38 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
 
     invoke-direct {p0, p1}, Landroid/content/ContextWrapper;-><init>(Landroid/content/Context;)V
 
+    .line 2
     iput-object p2, p0, Lcom/bumptech/glide/GlideContext;->arrayPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;
 
+    .line 3
     iput-object p3, p0, Lcom/bumptech/glide/GlideContext;->registry:Lcom/bumptech/glide/Registry;
 
+    .line 4
     iput-object p4, p0, Lcom/bumptech/glide/GlideContext;->imageViewTargetFactory:Lcom/bumptech/glide/request/target/ImageViewTargetFactory;
 
+    .line 5
     iput-object p5, p0, Lcom/bumptech/glide/GlideContext;->defaultRequestOptionsFactory:Lcom/bumptech/glide/Glide$RequestOptionsFactory;
 
+    .line 6
     iput-object p7, p0, Lcom/bumptech/glide/GlideContext;->defaultRequestListeners:Ljava/util/List;
 
+    .line 7
     iput-object p6, p0, Lcom/bumptech/glide/GlideContext;->defaultTransitionOptions:Ljava/util/Map;
 
+    .line 8
     iput-object p8, p0, Lcom/bumptech/glide/GlideContext;->engine:Lcom/bumptech/glide/load/engine/Engine;
 
+    .line 9
     iput-boolean p9, p0, Lcom/bumptech/glide/GlideContext;->isLoggingRequestOriginsEnabled:Z
 
+    .line 10
     iput p10, p0, Lcom/bumptech/glide/GlideContext;->logLevel:I
 
     return-void
@@ -190,6 +201,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/GlideContext;->imageViewTargetFactory:Lcom/bumptech/glide/request/target/ImageViewTargetFactory;
 
     invoke-virtual {p0, p1, p2}, Lcom/bumptech/glide/request/target/ImageViewTargetFactory;->buildTarget(Landroid/widget/ImageView;Ljava/lang/Class;)Lcom/bumptech/glide/request/target/ViewTarget;
@@ -204,6 +216,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/GlideContext;->arrayPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;
 
     return-object p0
@@ -221,6 +234,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/GlideContext;->defaultRequestListeners:Ljava/util/List;
 
     return-object p0
@@ -231,11 +245,13 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/GlideContext;->defaultRequestOptions:Lcom/bumptech/glide/request/RequestOptions;
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/bumptech/glide/GlideContext;->defaultRequestOptionsFactory:Lcom/bumptech/glide/Glide$RequestOptionsFactory;
 
     invoke-interface {v0}, Lcom/bumptech/glide/Glide$RequestOptionsFactory;->build()Lcom/bumptech/glide/request/RequestOptions;
@@ -250,6 +266,7 @@
 
     iput-object v0, p0, Lcom/bumptech/glide/GlideContext;->defaultRequestOptions:Lcom/bumptech/glide/request/RequestOptions;
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/bumptech/glide/GlideContext;->defaultRequestOptions:Lcom/bumptech/glide/request/RequestOptions;
     :try_end_0
@@ -288,6 +305,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/GlideContext;->defaultTransitionOptions:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -298,6 +316,7 @@
 
     if-nez v0, :cond_1
 
+    .line 2
     iget-object p0, p0, Lcom/bumptech/glide/GlideContext;->defaultTransitionOptions:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -322,6 +341,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
+    .line 3
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -334,6 +354,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 4
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -345,6 +366,7 @@
     :cond_1
     if-nez v0, :cond_2
 
+    .line 5
     sget-object v0, Lcom/bumptech/glide/GlideContext;->DEFAULT_TRANSITION_OPTIONS:Lcom/bumptech/glide/TransitionOptions;
 
     :cond_2
@@ -356,6 +378,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/GlideContext;->engine:Lcom/bumptech/glide/load/engine/Engine;
 
     return-object p0
@@ -364,6 +387,7 @@
 .method public getLogLevel()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/bumptech/glide/GlideContext;->logLevel:I
 
     return p0
@@ -374,6 +398,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/GlideContext;->registry:Lcom/bumptech/glide/Registry;
 
     return-object p0
@@ -382,6 +407,7 @@
 .method public isLoggingRequestOriginsEnabled()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/bumptech/glide/GlideContext;->isLoggingRequestOriginsEnabled:Z
 
     return p0

@@ -11,8 +11,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/BaseFragment;-><init>()V
 
+    .line 2
     new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/top/TopConfigManager;
 
     invoke-direct {v0, p0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopConfigManager;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;)V
@@ -27,6 +29,7 @@
 .method public getFragmentTopConfig()Lcom/android/camera2/compat/theme/custom/mm/top/IFragmentTopBar;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;->mTopConfigManager:Lcom/android/camera2/compat/theme/custom/mm/top/ITopConfigManager;
 
     invoke-interface {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/ITopConfigManager;->getFragmentTopConfig()Lcom/android/camera2/compat/theme/custom/mm/top/IFragmentTopBar;
@@ -39,6 +42,7 @@
 .method public getTopConfigAnimation()Lcom/android/camera2/compat/theme/custom/mm/top/ITopConfigAnimator;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;->mTopConfigManager:Lcom/android/camera2/compat/theme/custom/mm/top/ITopConfigManager;
 
     invoke-interface {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/ITopConfigManager;->getTopConfigAnimation()Lcom/android/camera2/compat/theme/custom/mm/top/ITopConfigAnimator;
@@ -51,6 +55,7 @@
 .method public getTopConfigDataProcessing()Lcom/android/camera2/compat/theme/custom/mm/top/ITopConfigDataProcessing;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/BaseFragmentTopBar;->mTopConfigManager:Lcom/android/camera2/compat/theme/custom/mm/top/ITopConfigManager;
 
     invoke-interface {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/ITopConfigManager;->getTopConfigDataProcessing()Lcom/android/camera2/compat/theme/custom/mm/top/ITopConfigDataProcessing;

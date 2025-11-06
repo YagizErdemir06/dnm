@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/mediacodec/MiHWEncoder$MsgHandler;
+.class public Lcom/xiaomi/mediacodec/MiHWEncoder$MsgHandler;
 .super Landroid/os/Handler;
 .source "SourceFile"
 
@@ -35,15 +35,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/xiaomi/mediacodec/MiHWEncoder;
+.field public final synthetic this$0:Lcom/xiaomi/mediacodec/MiHWEncoder;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/mediacodec/MiHWEncoder;Landroid/os/Looper;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mediacodec/MiHWEncoder$MsgHandler;->this$0:Lcom/xiaomi/mediacodec/MiHWEncoder;
 
+    .line 2
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -54,12 +56,14 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
+    .line 1
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
     goto :goto_0
 
+    .line 2
     :pswitch_0
     iget-object p0, p0, Lcom/xiaomi/mediacodec/MiHWEncoder$MsgHandler;->this$0:Lcom/xiaomi/mediacodec/MiHWEncoder;
 
@@ -71,6 +75,7 @@
 
     goto :goto_0
 
+    .line 3
     :pswitch_1
     iget-object p0, p0, Lcom/xiaomi/mediacodec/MiHWEncoder$MsgHandler;->this$0:Lcom/xiaomi/mediacodec/MiHWEncoder;
 
@@ -82,6 +87,7 @@
 
     goto :goto_0
 
+    .line 4
     :pswitch_2
     iget-object p0, p0, Lcom/xiaomi/mediacodec/MiHWEncoder$MsgHandler;->this$0:Lcom/xiaomi/mediacodec/MiHWEncoder;
 
@@ -89,6 +95,7 @@
 
     goto :goto_0
 
+    .line 5
     :pswitch_3
     iget-object p0, p0, Lcom/xiaomi/mediacodec/MiHWEncoder$MsgHandler;->this$0:Lcom/xiaomi/mediacodec/MiHWEncoder;
 
@@ -96,6 +103,7 @@
 
     goto :goto_0
 
+    .line 6
     :pswitch_4
     iget-object p0, p0, Lcom/xiaomi/mediacodec/MiHWEncoder$MsgHandler;->this$0:Lcom/xiaomi/mediacodec/MiHWEncoder;
 
@@ -109,6 +117,7 @@
 
     goto :goto_0
 
+    .line 7
     :pswitch_5
     iget-object p0, p0, Lcom/xiaomi/mediacodec/MiHWEncoder$MsgHandler;->this$0:Lcom/xiaomi/mediacodec/MiHWEncoder;
 
@@ -123,8 +132,10 @@
     :pswitch_6
     const-string v0, " TO update context"
 
+    .line 8
     invoke-static {v0}, Lcom/xiaomi/mediacodec/Logg;->LogI(Ljava/lang/String;)V
 
+    .line 9
     iget-object p0, p0, Lcom/xiaomi/mediacodec/MiHWEncoder$MsgHandler;->this$0:Lcom/xiaomi/mediacodec/MiHWEncoder;
 
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -135,6 +146,7 @@
 
     goto :goto_0
 
+    .line 10
     :pswitch_7
     iget-object p0, p0, Lcom/xiaomi/mediacodec/MiHWEncoder$MsgHandler;->this$0:Lcom/xiaomi/mediacodec/MiHWEncoder;
 
@@ -142,6 +154,7 @@
 
     goto :goto_0
 
+    .line 11
     :pswitch_8
     iget-object p0, p0, Lcom/xiaomi/mediacodec/MiHWEncoder$MsgHandler;->this$0:Lcom/xiaomi/mediacodec/MiHWEncoder;
 

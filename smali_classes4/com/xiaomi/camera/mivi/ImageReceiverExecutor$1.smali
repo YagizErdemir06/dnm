@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/camera/mivi/ImageReceiverExecutor$1;
+.class public Lcom/xiaomi/camera/mivi/ImageReceiverExecutor$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,22 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;
+.field public final synthetic this$0:Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor$1;->this$0:Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +45,16 @@
 # virtual methods
 .method public onFail(Lcom/xiaomi/camera/mivi/bean/ResultImageData;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "resultData"
+        }
+    .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -59,13 +77,15 @@
 
     invoke-static {v2, p0, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     invoke-virtual {p1}, Lcom/xiaomi/camera/mivi/bean/ResultImageData;->getPictureName()Ljava/lang/String;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    invoke-static {}, Lse/d;->l()Lse/d;
+    .line 3
+    invoke-static {}, Ld/o/f/d;->i()Ld/o/f/d;
 
     move-result-object p0
 
@@ -77,16 +97,17 @@
 
     move-result-wide v1
 
-    invoke-virtual {p0, v0, v1, v2}, Lse/d;->y(Ljava/lang/String;J)V
+    invoke-virtual {p0, v0, v1, v2}, Ld/o/f/d;->y(Ljava/lang/String;J)V
 
     goto :goto_0
 
     :cond_0
-    const-string p0, "[2] onFail: pictureName is not received from mock camera"
+    new-array p0, v0, [Ljava/lang/Object;
 
-    new-array p1, v0, [Ljava/lang/Object;
+    const-string p1, "[2] onFail: pictureName is not received from mock camera"
 
-    invoke-static {v2, p0, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 4
+    invoke-static {v2, p1, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :goto_0
     return-void
@@ -94,7 +115,16 @@
 
 .method public onSuccess(Lcom/xiaomi/camera/mivi/bean/ResultImageData;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "resultData"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -113,6 +143,7 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/LogK;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 2
     :try_start_0
     iget-object p0, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor$1;->this$0:Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;
 
@@ -127,7 +158,8 @@
     :catch_0
     move-exception p0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 3
+    invoke-virtual {p0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     :goto_0
     return-void

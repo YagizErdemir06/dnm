@@ -15,18 +15,29 @@
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic c:I
 
-.field public final synthetic b:Lcom/android/camera/ui/TopAlertSlideSwitchButton;
+.field public final synthetic d:Lcom/android/camera/ui/TopAlertSlideSwitchButton;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera/ui/TopAlertSlideSwitchButton;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$index"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera/ui/TopAlertSlideSwitchButton$a;->b:Lcom/android/camera/ui/TopAlertSlideSwitchButton;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/ui/TopAlertSlideSwitchButton$a;->d:Lcom/android/camera/ui/TopAlertSlideSwitchButton;
 
-    iput p2, p0, Lcom/android/camera/ui/TopAlertSlideSwitchButton$a;->a:I
+    iput p2, p0, Lcom/android/camera/ui/TopAlertSlideSwitchButton$a;->c:I
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
@@ -37,48 +48,72 @@
 # virtual methods
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 1
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
+
+    .line 1
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationCancel(Landroid/animation/Animator;)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/TopAlertSlideSwitchButton$a;->b:Lcom/android/camera/ui/TopAlertSlideSwitchButton;
+    .line 2
+    iget-object p1, p0, Lcom/android/camera/ui/TopAlertSlideSwitchButton$a;->d:Lcom/android/camera/ui/TopAlertSlideSwitchButton;
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setEnabled(Z)V
+    invoke-virtual {p1, v0}, Landroid/widget/LinearLayout;->setEnabled(Z)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/TopAlertSlideSwitchButton$a;->b:Lcom/android/camera/ui/TopAlertSlideSwitchButton;
+    .line 3
+    iget-object p1, p0, Lcom/android/camera/ui/TopAlertSlideSwitchButton$a;->d:Lcom/android/camera/ui/TopAlertSlideSwitchButton;
 
-    iget p0, p0, Lcom/android/camera/ui/TopAlertSlideSwitchButton$a;->a:I
+    iget p0, p0, Lcom/android/camera/ui/TopAlertSlideSwitchButton$a;->c:I
 
-    invoke-static {p1, p0}, Lcom/android/camera/ui/TopAlertSlideSwitchButton;->b(Lcom/android/camera/ui/TopAlertSlideSwitchButton;I)V
+    invoke-static {p1, p0}, Lcom/android/camera/ui/TopAlertSlideSwitchButton;->a(Lcom/android/camera/ui/TopAlertSlideSwitchButton;I)V
 
     return-void
 .end method
 
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/TopAlertSlideSwitchButton$a;->b:Lcom/android/camera/ui/TopAlertSlideSwitchButton;
+    .line 2
+    iget-object p1, p0, Lcom/android/camera/ui/TopAlertSlideSwitchButton$a;->d:Lcom/android/camera/ui/TopAlertSlideSwitchButton;
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setEnabled(Z)V
+    invoke-virtual {p1, v0}, Landroid/widget/LinearLayout;->setEnabled(Z)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/TopAlertSlideSwitchButton$a;->b:Lcom/android/camera/ui/TopAlertSlideSwitchButton;
+    .line 3
+    iget-object p1, p0, Lcom/android/camera/ui/TopAlertSlideSwitchButton$a;->d:Lcom/android/camera/ui/TopAlertSlideSwitchButton;
 
-    iget v1, p0, Lcom/android/camera/ui/TopAlertSlideSwitchButton$a;->a:I
+    iget v1, p0, Lcom/android/camera/ui/TopAlertSlideSwitchButton$a;->c:I
 
-    invoke-static {p1, v1}, Lcom/android/camera/ui/TopAlertSlideSwitchButton;->c(Lcom/android/camera/ui/TopAlertSlideSwitchButton;I)I
+    invoke-static {p1, v1}, Lcom/android/camera/ui/TopAlertSlideSwitchButton;->b(Lcom/android/camera/ui/TopAlertSlideSwitchButton;I)I
 
-    iget-object p1, p0, Lcom/android/camera/ui/TopAlertSlideSwitchButton$a;->b:Lcom/android/camera/ui/TopAlertSlideSwitchButton;
+    .line 4
+    iget-object p1, p0, Lcom/android/camera/ui/TopAlertSlideSwitchButton$a;->d:Lcom/android/camera/ui/TopAlertSlideSwitchButton;
 
-    iget p0, p0, Lcom/android/camera/ui/TopAlertSlideSwitchButton$a;->a:I
+    iget p0, p0, Lcom/android/camera/ui/TopAlertSlideSwitchButton$a;->c:I
 
-    invoke-static {p1, p0, v0}, Lcom/android/camera/ui/TopAlertSlideSwitchButton;->d(Lcom/android/camera/ui/TopAlertSlideSwitchButton;IZ)V
+    invoke-static {p1, p0, v0}, Lcom/android/camera/ui/TopAlertSlideSwitchButton;->c(Lcom/android/camera/ui/TopAlertSlideSwitchButton;IZ)V
 
     return-void
 .end method

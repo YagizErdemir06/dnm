@@ -4,48 +4,53 @@
 
 
 # annotations
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
     bv = {
         0x1,
         0x0,
         0x3
     }
     d1 = {
-        "\u0000\"\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0010\u0007\n\u0002\u0008\u0005\n\u0002\u0010\u0012\n\u0002\u0008\u0013\u0018\u00002\u00020\u0001BG\u0008\u0017\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0003\u0012\u0008\u0008\u0002\u0010\u0006\u001a\u00020\u0007\u0012\u0008\u0008\u0002\u0010\u0008\u001a\u00020\u0007\u0012\u0008\u0008\u0002\u0010\t\u001a\u00020\u0007\u0012\u0008\u0008\u0002\u0010\n\u001a\u00020\u0007\u00a2\u0006\u0002\u0010\u000bBG\u0008\u0017\u0012\u0006\u0010\u000c\u001a\u00020\r\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0003\u0012\u0008\u0008\u0002\u0010\u0006\u001a\u00020\u0007\u0012\u0008\u0008\u0002\u0010\u0008\u001a\u00020\u0007\u0012\u0008\u0008\u0002\u0010\t\u001a\u00020\u0007\u0012\u0008\u0008\u0002\u0010\n\u001a\u00020\u0007\u00a2\u0006\u0002\u0010\u000eB7\u0008\u0002\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0003\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\u0008\u001a\u00020\u0007\u0012\u0006\u0010\t\u001a\u00020\u0007\u0012\u0006\u0010\n\u001a\u00020\u0007\u00a2\u0006\u0002\u0010\u000fJ\u0006\u0010\u001f\u001a\u00020\u0000R\u0011\u0010\u0005\u001a\u00020\u0003\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0010\u0010\u0011R\u001c\u0010\u000c\u001a\u0004\u0018\u00010\rX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0012\u0010\u0013\"\u0004\u0008\u0014\u0010\u0015R\u001a\u0010\u0002\u001a\u00020\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0016\u0010\u0011\"\u0004\u0008\u0017\u0010\u0018R\u0011\u0010\u0004\u001a\u00020\u0003\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0019\u0010\u0011R\u0011\u0010\t\u001a\u00020\u0007\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u001a\u0010\u001bR\u0011\u0010\u0006\u001a\u00020\u0007\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u001c\u0010\u001bR\u0011\u0010\n\u001a\u00020\u0007\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u001d\u0010\u001bR\u0011\u0010\u0008\u001a\u00020\u0007\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u001e\u0010\u001b\u00a8\u0006 "
+        "\u0000$\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\u0007\n\u0002\u0008\u0004\n\u0002\u0010\u0008\n\u0002\u0008\u0004\n\u0002\u0010\u0012\n\u0002\u0008\u0017\u0018\u00002\u00020\u0001B9\u0008\u0002\u0012\u0006\u0010\n\u001a\u00020\t\u0012\u0006\u0010\u0019\u001a\u00020\t\u0012\u0006\u0010\u0017\u001a\u00020\u0004\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0015\u001a\u00020\u0004\u0012\u0006\u0010\u001f\u001a\u00020\u0004\u00a2\u0006\u0004\u0008!\u0010\"BI\u0008\u0017\u0012\u0006\u0010\u001b\u001a\u00020\t\u0012\u0006\u0010\n\u001a\u00020\t\u0012\u0006\u0010\u0019\u001a\u00020\t\u0012\u0008\u0008\u0002\u0010\u0017\u001a\u00020\u0004\u0012\u0008\u0008\u0002\u0010\u0005\u001a\u00020\u0004\u0012\u0008\u0008\u0002\u0010\u0015\u001a\u00020\u0004\u0012\u0008\u0008\u0002\u0010\u001f\u001a\u00020\u0004\u00a2\u0006\u0004\u0008!\u0010#BI\u0008\u0017\u0012\u0006\u0010\u000f\u001a\u00020\u000e\u0012\u0006\u0010\n\u001a\u00020\t\u0012\u0006\u0010\u0019\u001a\u00020\t\u0012\u0008\u0008\u0002\u0010\u0017\u001a\u00020\u0004\u0012\u0008\u0008\u0002\u0010\u0005\u001a\u00020\u0004\u0012\u0008\u0008\u0002\u0010\u0015\u001a\u00020\u0004\u0012\u0008\u0008\u0002\u0010\u001f\u001a\u00020\u0004\u00a2\u0006\u0004\u0008!\u0010$J\r\u0010\u0002\u001a\u00020\u0000\u00a2\u0006\u0004\u0008\u0002\u0010\u0003R\u0019\u0010\u0005\u001a\u00020\u00048\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0005\u0010\u0006\u001a\u0004\u0008\u0007\u0010\u0008R\u0019\u0010\n\u001a\u00020\t8\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\n\u0010\u000b\u001a\u0004\u0008\u000c\u0010\rR$\u0010\u000f\u001a\u0004\u0018\u00010\u000e8\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u000f\u0010\u0010\u001a\u0004\u0008\u0011\u0010\u0012\"\u0004\u0008\u0013\u0010\u0014R\u0019\u0010\u0015\u001a\u00020\u00048\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0015\u0010\u0006\u001a\u0004\u0008\u0016\u0010\u0008R\u0019\u0010\u0017\u001a\u00020\u00048\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0017\u0010\u0006\u001a\u0004\u0008\u0018\u0010\u0008R\u0019\u0010\u0019\u001a\u00020\t8\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0019\u0010\u000b\u001a\u0004\u0008\u001a\u0010\rR\"\u0010\u001b\u001a\u00020\t8\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u001b\u0010\u000b\u001a\u0004\u0008\u001c\u0010\r\"\u0004\u0008\u001d\u0010\u001eR\u0019\u0010\u001f\u001a\u00020\u00048\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\u001f\u0010\u0006\u001a\u0004\u0008 \u0010\u0008\u00a8\u0006%"
     }
     d2 = {
         "Lcom/faceunity/core/entity/FUCustomTexture;",
         "",
-        "textureId",
-        "",
-        "width",
-        "height",
-        "xSize",
+        "clone",
+        "()Lcom/faceunity/core/entity/FUCustomTexture;",
         "",
         "ySize",
-        "xOffset",
-        "yOffset",
-        "(IIIFFFF)V",
-        "imageData",
+        "F",
+        "getYSize",
+        "()F",
         "",
-        "([BIIFFFF)V",
-        "(IIFFFF)V",
-        "getHeight",
+        "width",
+        "I",
+        "getWidth",
         "()I",
+        "",
+        "imageData",
+        "[B",
         "getImageData",
         "()[B",
         "setImageData",
         "([B)V",
+        "xOffset",
+        "getXOffset",
+        "xSize",
+        "getXSize",
+        "height",
+        "getHeight",
+        "textureId",
         "getTextureId",
         "setTextureId",
         "(I)V",
-        "getWidth",
-        "getXOffset",
-        "()F",
-        "getXSize",
+        "yOffset",
         "getYOffset",
-        "getYSize",
-        "clone",
+        "<init>",
+        "(IIFFFF)V",
+        "(IIIFFFF)V",
+        "([BIIFFFF)V",
         "lib_core_release"
     }
     k = 0x1
@@ -61,7 +66,7 @@
 .field private final height:I
 
 .field private imageData:[B
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 .end field
 
@@ -107,7 +112,7 @@
 
 .method public constructor <init>(III)V
     .locals 10
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const/4 v4, 0x0
@@ -130,14 +135,14 @@
 
     move v3, p3
 
-    invoke-direct/range {v0 .. v9}, Lcom/faceunity/core/entity/FUCustomTexture;-><init>(IIIFFFFILkotlin/jvm/internal/w;)V
+    invoke-direct/range {v0 .. v9}, Lcom/faceunity/core/entity/FUCustomTexture;-><init>(IIIFFFFILh/d3/x/w;)V
 
     return-void
 .end method
 
 .method public constructor <init>(IIIF)V
     .locals 10
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const/4 v5, 0x0
@@ -160,14 +165,14 @@
 
     move v4, p4
 
-    invoke-direct/range {v0 .. v9}, Lcom/faceunity/core/entity/FUCustomTexture;-><init>(IIIFFFFILkotlin/jvm/internal/w;)V
+    invoke-direct/range {v0 .. v9}, Lcom/faceunity/core/entity/FUCustomTexture;-><init>(IIIFFFFILh/d3/x/w;)V
 
     return-void
 .end method
 
 .method public constructor <init>(IIIFF)V
     .locals 10
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const/4 v6, 0x0
@@ -190,14 +195,14 @@
 
     move v5, p5
 
-    invoke-direct/range {v0 .. v9}, Lcom/faceunity/core/entity/FUCustomTexture;-><init>(IIIFFFFILkotlin/jvm/internal/w;)V
+    invoke-direct/range {v0 .. v9}, Lcom/faceunity/core/entity/FUCustomTexture;-><init>(IIIFFFFILh/d3/x/w;)V
 
     return-void
 .end method
 
 .method public constructor <init>(IIIFFF)V
     .locals 10
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const/4 v7, 0x0
@@ -220,14 +225,14 @@
 
     move/from16 v6, p6
 
-    invoke-direct/range {v0 .. v9}, Lcom/faceunity/core/entity/FUCustomTexture;-><init>(IIIFFFFILkotlin/jvm/internal/w;)V
+    invoke-direct/range {v0 .. v9}, Lcom/faceunity/core/entity/FUCustomTexture;-><init>(IIIFFFFILh/d3/x/w;)V
 
     return-void
 .end method
 
 .method public constructor <init>(IIIFFFF)V
     .locals 7
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     move-object v0, p0
@@ -253,7 +258,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IIIFFFFILkotlin/jvm/internal/w;)V
+.method public synthetic constructor <init>(IIIFFFFILh/d3/x/w;)V
     .locals 10
 
     and-int/lit8 v0, p8, 0x8
@@ -325,10 +330,10 @@
 .method public constructor <init>([BII)V
     .locals 10
     .param p1    # [B
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const/4 v4, 0x0
@@ -351,7 +356,7 @@
 
     move v3, p3
 
-    invoke-direct/range {v0 .. v9}, Lcom/faceunity/core/entity/FUCustomTexture;-><init>([BIIFFFFILkotlin/jvm/internal/w;)V
+    invoke-direct/range {v0 .. v9}, Lcom/faceunity/core/entity/FUCustomTexture;-><init>([BIIFFFFILh/d3/x/w;)V
 
     return-void
 .end method
@@ -359,10 +364,10 @@
 .method public constructor <init>([BIIF)V
     .locals 10
     .param p1    # [B
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const/4 v5, 0x0
@@ -385,7 +390,7 @@
 
     move v4, p4
 
-    invoke-direct/range {v0 .. v9}, Lcom/faceunity/core/entity/FUCustomTexture;-><init>([BIIFFFFILkotlin/jvm/internal/w;)V
+    invoke-direct/range {v0 .. v9}, Lcom/faceunity/core/entity/FUCustomTexture;-><init>([BIIFFFFILh/d3/x/w;)V
 
     return-void
 .end method
@@ -393,10 +398,10 @@
 .method public constructor <init>([BIIFF)V
     .locals 10
     .param p1    # [B
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const/4 v6, 0x0
@@ -419,7 +424,7 @@
 
     move v5, p5
 
-    invoke-direct/range {v0 .. v9}, Lcom/faceunity/core/entity/FUCustomTexture;-><init>([BIIFFFFILkotlin/jvm/internal/w;)V
+    invoke-direct/range {v0 .. v9}, Lcom/faceunity/core/entity/FUCustomTexture;-><init>([BIIFFFFILh/d3/x/w;)V
 
     return-void
 .end method
@@ -427,10 +432,10 @@
 .method public constructor <init>([BIIFFF)V
     .locals 10
     .param p1    # [B
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const/4 v7, 0x0
@@ -453,7 +458,7 @@
 
     move/from16 v6, p6
 
-    invoke-direct/range {v0 .. v9}, Lcom/faceunity/core/entity/FUCustomTexture;-><init>([BIIFFFFILkotlin/jvm/internal/w;)V
+    invoke-direct/range {v0 .. v9}, Lcom/faceunity/core/entity/FUCustomTexture;-><init>([BIIFFFFILh/d3/x/w;)V
 
     return-void
 .end method
@@ -461,15 +466,15 @@
 .method public constructor <init>([BIIFFFF)V
     .locals 7
     .param p1    # [B
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const-string v0, "imageData"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object v0, p0
 
@@ -494,7 +499,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>([BIIFFFFILkotlin/jvm/internal/w;)V
+.method public synthetic constructor <init>([BIIFFFFILh/d3/x/w;)V
     .locals 10
 
     and-int/lit8 v0, p8, 0x8
@@ -567,9 +572,10 @@
 # virtual methods
 .method public final clone()Lcom/faceunity/core/entity/FUCustomTexture;
     .locals 8
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     new-instance v7, Lcom/faceunity/core/entity/FUCustomTexture;
 
     iget v1, p0, Lcom/faceunity/core/entity/FUCustomTexture;->width:I
@@ -588,14 +594,17 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/faceunity/core/entity/FUCustomTexture;-><init>(IIFFFF)V
 
+    .line 2
     iget v0, p0, Lcom/faceunity/core/entity/FUCustomTexture;->textureId:I
 
     iput v0, v7, Lcom/faceunity/core/entity/FUCustomTexture;->textureId:I
 
+    .line 3
     iget-object p0, p0, Lcom/faceunity/core/entity/FUCustomTexture;->imageData:[B
 
     if-eqz p0, :cond_0
 
+    .line 4
     invoke-static {p0}, Lcom/faceunity/toolbox/utils/FUDecimalUtils;->copyArray([B)[B
 
     move-result-object p0
@@ -605,6 +614,7 @@
     :cond_0
     const/4 p0, 0x0
 
+    .line 5
     :goto_0
     iput-object p0, v7, Lcom/faceunity/core/entity/FUCustomTexture;->imageData:[B
 
@@ -614,6 +624,7 @@
 .method public final getHeight()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/faceunity/core/entity/FUCustomTexture;->height:I
 
     return p0
@@ -621,9 +632,10 @@
 
 .method public final getImageData()[B
     .locals 0
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/entity/FUCustomTexture;->imageData:[B
 
     return-object p0
@@ -632,6 +644,7 @@
 .method public final getTextureId()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/faceunity/core/entity/FUCustomTexture;->textureId:I
 
     return p0
@@ -640,6 +653,7 @@
 .method public final getWidth()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/faceunity/core/entity/FUCustomTexture;->width:I
 
     return p0
@@ -648,6 +662,7 @@
 .method public final getXOffset()F
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/faceunity/core/entity/FUCustomTexture;->xOffset:F
 
     return p0
@@ -656,6 +671,7 @@
 .method public final getXSize()F
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/faceunity/core/entity/FUCustomTexture;->xSize:F
 
     return p0
@@ -664,6 +680,7 @@
 .method public final getYOffset()F
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/faceunity/core/entity/FUCustomTexture;->yOffset:F
 
     return p0
@@ -672,6 +689,7 @@
 .method public final getYSize()F
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/faceunity/core/entity/FUCustomTexture;->ySize:F
 
     return p0
@@ -680,10 +698,11 @@
 .method public final setImageData([B)V
     .locals 0
     .param p1    # [B
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/core/entity/FUCustomTexture;->imageData:[B
 
     return-void
@@ -692,6 +711,7 @@
 .method public final setTextureId(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/faceunity/core/entity/FUCustomTexture;->textureId:I
 
     return-void

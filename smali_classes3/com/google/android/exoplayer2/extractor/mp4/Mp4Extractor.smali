@@ -120,9 +120,8 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/google/android/exoplayer2/extractor/mp4/c;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/extractor/mp4/c;-><init>()V
+    .line 1
+    sget-object v0, Ld/j/a/b/q2/i/c;->a:Ld/j/a/b/q2/i/c;
 
     sput-object v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->FACTORY:Lcom/google/android/exoplayer2/extractor/ExtractorsFactory;
 
@@ -239,26 +238,6 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/google/android/exoplayer2/extractor/mp4/Track;)Lcom/google/android/exoplayer2/extractor/mp4/Track;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->lambda$processMoovAtom$1(Lcom/google/android/exoplayer2/extractor/mp4/Track;)Lcom/google/android/exoplayer2/extractor/mp4/Track;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic b()[Lcom/google/android/exoplayer2/extractor/Extractor;
-    .locals 1
-
-    invoke-static {}, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->lambda$static$0()[Lcom/google/android/exoplayer2/extractor/Extractor;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method private static brandToFileType(I)I
     .locals 1
 
@@ -286,20 +265,24 @@
 .end method
 
 .method private static calculateAccumulatedSampleSizes([Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;)[[J
-    .locals 15
+    .locals 14
 
+    .line 1
     array-length v0, p0
 
     new-array v0, v0, [[J
 
+    .line 2
     array-length v1, p0
 
     new-array v1, v1, [I
 
+    .line 3
     array-length v2, p0
 
     new-array v2, v2, [J
 
+    .line 4
     array-length v3, p0
 
     new-array v3, v3, [Z
@@ -308,11 +291,13 @@
 
     move v5, v4
 
+    .line 5
     :goto_0
     array-length v6, p0
 
     if-ge v5, v6, :cond_0
 
+    .line 6
     aget-object v6, p0, v5
 
     iget-object v6, v6, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->sampleTable:Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;
@@ -323,6 +308,7 @@
 
     aput-object v6, v0, v5
 
+    .line 7
     aget-object v6, p0, v5
 
     iget-object v6, v6, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->sampleTable:Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;
@@ -342,6 +328,7 @@
 
     move v7, v4
 
+    .line 8
     :goto_1
     array-length v8, p0
 
@@ -353,60 +340,75 @@
 
     move v11, v4
 
+    .line 9
     :goto_2
     array-length v12, p0
 
     if-ge v11, v12, :cond_2
 
+    .line 10
     aget-boolean v12, v3, v11
 
     if-nez v12, :cond_1
 
     aget-wide v12, v2, v11
 
-    cmp-long v14, v12, v8
+    cmp-long v12, v12, v8
 
-    if-gtz v14, :cond_1
+    if-gtz v12, :cond_1
+
+    .line 11
+    aget-wide v8, v2, v11
 
     move v10, v11
-
-    move-wide v8, v12
 
     :cond_1
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_2
 
+    .line 12
     :cond_2
     aget v8, v1, v10
 
+    .line 13
     aget-object v9, v0, v10
 
     aput-wide v5, v9, v8
 
-    aget-object v11, p0, v10
+    .line 14
+    aget-object v9, p0, v10
 
-    iget-object v11, v11, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->sampleTable:Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;
+    iget-object v9, v9, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->sampleTable:Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;
 
-    iget-object v12, v11, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->sizes:[I
+    iget-object v9, v9, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->sizes:[I
 
-    aget v12, v12, v8
+    aget v9, v9, v8
 
-    int-to-long v12, v12
+    int-to-long v11, v9
 
-    add-long/2addr v5, v12
+    add-long/2addr v5, v11
 
-    const/4 v12, 0x1
+    const/4 v9, 0x1
 
-    add-int/2addr v8, v12
+    add-int/2addr v8, v9
 
+    .line 15
     aput v8, v1, v10
 
-    array-length v9, v9
+    .line 16
+    aget-object v11, v0, v10
 
-    if-ge v8, v9, :cond_3
+    array-length v11, v11
 
-    iget-object v9, v11, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->timestampsUs:[J
+    if-ge v8, v11, :cond_3
+
+    .line 17
+    aget-object v9, p0, v10
+
+    iget-object v9, v9, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->sampleTable:Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;
+
+    iget-object v9, v9, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->timestampsUs:[J
 
     aget-wide v8, v9, v8
 
@@ -414,8 +416,9 @@
 
     goto :goto_1
 
+    .line 18
     :cond_3
-    aput-boolean v12, v3, v10
+    aput-boolean v9, v3, v10
 
     add-int/lit8 v7, v7, 0x1
 
@@ -430,8 +433,10 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->parserState:I
 
+    .line 2
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeaderBytesRead:I
 
     return-void
@@ -440,6 +445,7 @@
 .method private static getSynchronizationSampleIndex(Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;J)I
     .locals 2
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->getIndexOfEarlierOrEqualSynchronizationSample(J)I
 
     move-result v0
@@ -448,6 +454,7 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1, p2}, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->getIndexOfLaterOrEqualSynchronizationSample(J)I
 
     move-result v0
@@ -461,9 +468,9 @@
 
     move-object/from16 v0, p0
 
-    const/4 v4, -0x1
+    const/4 v2, -0x1
 
-    move v6, v4
+    move v6, v2
 
     const/4 v7, 0x0
 
@@ -477,96 +484,102 @@
 
     const-wide v14, 0x7fffffffffffffffL
 
+    .line 1
     :goto_0
-    iget-object v3, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->tracks:[Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;
+    iget-object v1, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->tracks:[Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;
 
-    array-length v5, v3
+    array-length v3, v1
 
-    if-ge v7, v5, :cond_7
+    if-ge v7, v3, :cond_7
 
-    aget-object v3, v3, v7
+    .line 2
+    aget-object v1, v1, v7
 
-    iget v5, v3, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->sampleIndex:I
+    .line 3
+    iget v3, v1, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->sampleIndex:I
 
-    iget-object v3, v3, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->sampleTable:Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;
+    .line 4
+    iget-object v1, v1, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->sampleTable:Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;
 
-    iget v1, v3, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->sampleCount:I
+    iget v4, v1, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->sampleCount:I
 
-    if-ne v5, v1, :cond_0
+    if-ne v3, v4, :cond_0
 
     goto :goto_3
 
+    .line 5
     :cond_0
-    iget-object v1, v3, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->offsets:[J
+    iget-object v1, v1, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->offsets:[J
 
-    aget-wide v1, v1, v5
+    aget-wide v4, v1, v3
 
-    iget-object v3, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->accumulatedSampleSizes:[[J
+    .line 6
+    iget-object v1, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->accumulatedSampleSizes:[[J
 
-    invoke-static {v3}, Lcom/google/android/exoplayer2/util/Util;->castNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v1}, Lcom/google/android/exoplayer2/util/Util;->castNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object v1
 
-    check-cast v3, [[J
+    check-cast v1, [[J
 
-    aget-object v3, v3, v7
+    aget-object v1, v1, v7
 
-    aget-wide v16, v3, v5
+    aget-wide v16, v1, v3
 
-    sub-long v1, v1, p1
+    sub-long v4, v4, p1
 
     const-wide/16 v18, 0x0
 
-    cmp-long v3, v1, v18
+    cmp-long v1, v4, v18
 
-    if-ltz v3, :cond_2
+    if-ltz v1, :cond_2
 
     const-wide/32 v18, 0x40000
 
-    cmp-long v3, v1, v18
+    cmp-long v1, v4, v18
 
-    if-ltz v3, :cond_1
+    if-ltz v1, :cond_1
 
     goto :goto_1
 
     :cond_1
-    const/4 v3, 0x0
+    const/4 v1, 0x0
 
     goto :goto_2
 
     :cond_2
     :goto_1
-    const/4 v3, 0x1
+    const/4 v1, 0x1
 
     :goto_2
-    if-nez v3, :cond_3
+    if-nez v1, :cond_3
 
     if-nez v13, :cond_4
 
     :cond_3
-    if-ne v3, v13, :cond_5
+    if-ne v1, v13, :cond_5
 
-    cmp-long v5, v1, v14
+    cmp-long v3, v4, v14
 
-    if-gez v5, :cond_5
+    if-gez v3, :cond_5
 
     :cond_4
-    move-wide v14, v1
+    move v13, v1
 
-    move v13, v3
+    move-wide v14, v4
 
     move v6, v7
 
     move-wide/from16 v11, v16
 
     :cond_5
-    cmp-long v1, v16, v8
+    cmp-long v3, v16, v8
 
-    if-gez v1, :cond_6
+    if-gez v3, :cond_6
 
-    move v10, v3
+    move v10, v1
 
-    move v4, v7
+    move v2, v7
 
     move-wide/from16 v8, v16
 
@@ -577,9 +590,9 @@
     goto :goto_0
 
     :cond_7
-    const-wide v1, 0x7fffffffffffffffL
+    const-wide v3, 0x7fffffffffffffffL
 
-    cmp-long v0, v8, v1
+    cmp-long v0, v8, v3
 
     if-eqz v0, :cond_8
 
@@ -594,25 +607,26 @@
     if-gez v0, :cond_9
 
     :cond_8
-    move v4, v6
+    move v2, v6
 
     :cond_9
-    return v4
+    return v2
 .end method
 
-.method private static synthetic lambda$processMoovAtom$1(Lcom/google/android/exoplayer2/extractor/mp4/Track;)Lcom/google/android/exoplayer2/extractor/mp4/Track;
+.method public static synthetic lambda$processMoovAtom$1(Lcom/google/android/exoplayer2/extractor/mp4/Track;)Lcom/google/android/exoplayer2/extractor/mp4/Track;
     .locals 0
 
     return-object p0
 .end method
 
-.method private static synthetic lambda$static$0()[Lcom/google/android/exoplayer2/extractor/Extractor;
+.method public static synthetic lambda$static$0()[Lcom/google/android/exoplayer2/extractor/Extractor;
     .locals 3
 
     const/4 v0, 0x1
 
     new-array v0, v0, [Lcom/google/android/exoplayer2/extractor/Extractor;
 
+    .line 1
     new-instance v1, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;
 
     invoke-direct {v1}, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;-><init>()V
@@ -627,6 +641,7 @@
 .method private static maybeAdjustSeekOffset(Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;JJ)J
     .locals 0
 
+    .line 1
     invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->getSynchronizationSampleIndex(Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;J)I
 
     move-result p1
@@ -637,11 +652,13 @@
 
     return-wide p3
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->offsets:[J
 
     aget-wide p0, p0, p1
 
+    .line 3
     invoke-static {p0, p1, p3, p4}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide p0
@@ -657,12 +674,14 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->reset(I)V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
@@ -673,10 +692,12 @@
 
     invoke-interface {p1, v0, v2, v1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->peekFully([BII)V
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/extractor/mp4/AtomParsers;->maybeSkipRemainingMetaAtomHeaderBytes(Lcom/google/android/exoplayer2/util/ParsableByteArray;)V
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getPosition()I
@@ -685,6 +706,7 @@
 
     invoke-interface {p1, p0}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->skipFully(I)V
 
+    .line 5
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
 
     return-void
@@ -698,6 +720,7 @@
         }
     .end annotation
 
+    .line 1
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->containerAtoms:Ljava/util/ArrayDeque;
@@ -724,6 +747,7 @@
 
     if-nez v0, :cond_2
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->containerAtoms:Ljava/util/ArrayDeque;
 
     invoke-virtual {v0}, Ljava/util/ArrayDeque;->pop()Ljava/lang/Object;
@@ -732,22 +756,27 @@
 
     check-cast v0, Lcom/google/android/exoplayer2/extractor/mp4/Atom$ContainerAtom;
 
+    .line 3
     iget v2, v0, Lcom/google/android/exoplayer2/extractor/mp4/Atom;->type:I
 
     const v3, 0x6d6f6f76
 
     if-ne v2, v3, :cond_1
 
+    .line 4
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->processMoovAtom(Lcom/google/android/exoplayer2/extractor/mp4/Atom$ContainerAtom;)V
 
+    .line 5
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->containerAtoms:Ljava/util/ArrayDeque;
 
     invoke-virtual {v0}, Ljava/util/ArrayDeque;->clear()V
 
+    .line 6
     iput v1, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->parserState:I
 
     goto :goto_0
 
+    .line 7
     :cond_1
     iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->containerAtoms:Ljava/util/ArrayDeque;
 
@@ -757,6 +786,7 @@
 
     if-nez v1, :cond_0
 
+    .line 8
     iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->containerAtoms:Ljava/util/ArrayDeque;
 
     invoke-virtual {v1}, Ljava/util/ArrayDeque;->peek()Ljava/lang/Object;
@@ -769,11 +799,13 @@
 
     goto :goto_0
 
+    .line 9
     :cond_2
     iget p1, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->parserState:I
 
     if-eq p1, v1, :cond_3
 
+    .line 10
     invoke-direct {p0}, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->enterReadingAtomHeaderState()V
 
     :cond_3
@@ -783,6 +815,7 @@
 .method private processEndOfStreamReadingAtomHeader()V
     .locals 5
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->fileType:I
 
     const/4 v1, 0x2
@@ -795,6 +828,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->extractorOutput:Lcom/google/android/exoplayer2/extractor/ExtractorOutput;
 
     const/4 v1, 0x4
@@ -805,6 +839,7 @@
 
     move-result-object v0
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->motionPhotoMetadata:Lcom/google/android/exoplayer2/metadata/mp4/MotionPhotoMetadata;
 
     if-nez v1, :cond_0
@@ -826,6 +861,7 @@
 
     invoke-direct {v1, v3}, Lcom/google/android/exoplayer2/metadata/Metadata;-><init>([Lcom/google/android/exoplayer2/metadata/Metadata$Entry;)V
 
+    .line 4
     :goto_0
     new-instance v2, Lcom/google/android/exoplayer2/Format$Builder;
 
@@ -841,10 +877,12 @@
 
     invoke-interface {v0, v1}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->format(Lcom/google/android/exoplayer2/Format;)V
 
+    .line 5
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->extractorOutput:Lcom/google/android/exoplayer2/extractor/ExtractorOutput;
 
     invoke-interface {v0}, Lcom/google/android/exoplayer2/extractor/ExtractorOutput;->endTracks()V
 
+    .line 6
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->extractorOutput:Lcom/google/android/exoplayer2/extractor/ExtractorOutput;
 
     new-instance v0, Lcom/google/android/exoplayer2/extractor/SeekMap$Unseekable;
@@ -864,12 +902,15 @@
 
     const/16 v0, 0x8
 
+    .line 1
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v0
 
+    .line 3
     invoke-static {v0}, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->brandToFileType(I)I
 
     move-result v0
@@ -881,8 +922,10 @@
     :cond_0
     const/4 v0, 0x4
 
+    .line 4
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
+    .line 5
     :cond_1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
@@ -890,6 +933,7 @@
 
     if-lez v0, :cond_2
 
+    .line 6
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v0
@@ -920,10 +964,12 @@
 
     move-object/from16 v1, p1
 
+    .line 1
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
+    .line 2
     iget v2, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->fileType:I
 
     const/4 v11, 0x1
@@ -937,6 +983,7 @@
     :cond_0
     const/4 v7, 0x0
 
+    .line 3
     :goto_0
     new-instance v12, Lcom/google/android/exoplayer2/extractor/GaplessInfoHolder;
 
@@ -944,26 +991,31 @@
 
     const v2, 0x75647461
 
+    .line 4
     invoke-virtual {v1, v2}, Lcom/google/android/exoplayer2/extractor/mp4/Atom$ContainerAtom;->getLeafAtomOfType(I)Lcom/google/android/exoplayer2/extractor/mp4/Atom$LeafAtom;
 
     move-result-object v2
 
     if-eqz v2, :cond_2
 
+    .line 5
     invoke-static {v2}, Lcom/google/android/exoplayer2/extractor/mp4/AtomParsers;->parseUdta(Lcom/google/android/exoplayer2/extractor/mp4/Atom$LeafAtom;)Landroid/util/Pair;
 
     move-result-object v2
 
+    .line 6
     iget-object v3, v2, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v3, Lcom/google/android/exoplayer2/metadata/Metadata;
 
+    .line 7
     iget-object v2, v2, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v2, Lcom/google/android/exoplayer2/metadata/Metadata;
 
     if-eqz v3, :cond_1
 
+    .line 8
     invoke-virtual {v12, v3}, Lcom/google/android/exoplayer2/extractor/GaplessInfoHolder;->setFromMetadata(Lcom/google/android/exoplayer2/metadata/Metadata;)Z
 
     :cond_1
@@ -981,12 +1033,14 @@
     :goto_1
     const v2, 0x6d657461
 
+    .line 9
     invoke-virtual {v1, v2}, Lcom/google/android/exoplayer2/extractor/mp4/Atom$ContainerAtom;->getContainerAtomOfType(I)Lcom/google/android/exoplayer2/extractor/mp4/Atom$ContainerAtom;
 
     move-result-object v2
 
     if-eqz v2, :cond_3
 
+    .line 10
     invoke-static {v2}, Lcom/google/android/exoplayer2/extractor/mp4/AtomParsers;->parseMdtaFromMeta(Lcom/google/android/exoplayer2/extractor/mp4/Atom$ContainerAtom;)Lcom/google/android/exoplayer2/metadata/Metadata;
 
     move-result-object v2
@@ -998,6 +1052,7 @@
     :cond_3
     const/4 v8, 0x0
 
+    .line 11
     :goto_2
     iget v2, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->flags:I
 
@@ -1017,9 +1072,8 @@
 
     const/4 v5, 0x0
 
-    new-instance v16, Lcom/google/android/exoplayer2/extractor/mp4/d;
-
-    invoke-direct/range {v16 .. v16}, Lcom/google/android/exoplayer2/extractor/mp4/d;-><init>()V
+    .line 12
+    sget-object v16, Ld/j/a/b/q2/i/b;->c:Ld/j/a/b/q2/i/b;
 
     move-object/from16 v1, p1
 
@@ -1029,17 +1083,17 @@
 
     move-object/from16 v8, v16
 
+    .line 13
     invoke-static/range {v1 .. v8}, Lcom/google/android/exoplayer2/extractor/mp4/AtomParsers;->parseTraks(Lcom/google/android/exoplayer2/extractor/mp4/Atom$ContainerAtom;Lcom/google/android/exoplayer2/extractor/GaplessInfoHolder;JLcom/google/android/exoplayer2/drm/DrmInitData;ZZLcom/google/common/base/Function;)Ljava/util/List;
 
     move-result-object v1
 
+    .line 14
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v2
 
-    const-wide v4, -0x7fffffffffffffffL    # -4.9E-324
-
-    move-wide v10, v4
+    move-wide v10, v3
 
     const/4 v6, 0x0
 
@@ -1048,6 +1102,7 @@
     :goto_4
     if-ge v6, v2, :cond_c
 
+    .line 15
     invoke-interface {v1, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v17
@@ -1056,9 +1111,10 @@
 
     check-cast v8, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;
 
-    iget v3, v8, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->sampleCount:I
+    .line 16
+    iget v5, v8, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->sampleCount:I
 
-    if-nez v3, :cond_5
+    if-nez v5, :cond_5
 
     move-object/from16 v18, v1
 
@@ -1070,16 +1126,18 @@
 
     goto/16 :goto_9
 
+    .line 17
     :cond_5
-    iget-object v3, v8, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->track:Lcom/google/android/exoplayer2/extractor/mp4/Track;
+    iget-object v5, v8, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->track:Lcom/google/android/exoplayer2/extractor/mp4/Track;
 
     move-object/from16 v18, v1
 
     move/from16 v19, v2
 
-    iget-wide v1, v3, Lcom/google/android/exoplayer2/extractor/mp4/Track;->durationUs:J
+    .line 18
+    iget-wide v1, v5, Lcom/google/android/exoplayer2/extractor/mp4/Track;->durationUs:J
 
-    cmp-long v20, v1, v4
+    cmp-long v20, v1, v3
 
     if-eqz v20, :cond_6
 
@@ -1088,76 +1146,85 @@
     :cond_6
     iget-wide v1, v8, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->durationUs:J
 
+    .line 19
     :goto_5
     invoke-static {v10, v11, v1, v2}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide v10
 
-    new-instance v4, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;
+    .line 20
+    new-instance v3, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;
 
-    iget-object v5, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->extractorOutput:Lcom/google/android/exoplayer2/extractor/ExtractorOutput;
+    iget-object v4, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->extractorOutput:Lcom/google/android/exoplayer2/extractor/ExtractorOutput;
 
     move-wide/from16 v21, v10
 
-    iget v10, v3, Lcom/google/android/exoplayer2/extractor/mp4/Track;->type:I
+    iget v10, v5, Lcom/google/android/exoplayer2/extractor/mp4/Track;->type:I
 
-    invoke-interface {v5, v6, v10}, Lcom/google/android/exoplayer2/extractor/ExtractorOutput;->track(II)Lcom/google/android/exoplayer2/extractor/TrackOutput;
+    .line 21
+    invoke-interface {v4, v6, v10}, Lcom/google/android/exoplayer2/extractor/ExtractorOutput;->track(II)Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
-    move-result-object v5
+    move-result-object v4
 
-    invoke-direct {v4, v3, v8, v5}, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;-><init>(Lcom/google/android/exoplayer2/extractor/mp4/Track;Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;Lcom/google/android/exoplayer2/extractor/TrackOutput;)V
+    invoke-direct {v3, v5, v8, v4}, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;-><init>(Lcom/google/android/exoplayer2/extractor/mp4/Track;Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;Lcom/google/android/exoplayer2/extractor/TrackOutput;)V
 
-    iget-object v5, v3, Lcom/google/android/exoplayer2/extractor/mp4/Track;->format:Lcom/google/android/exoplayer2/Format;
+    .line 22
+    iget-object v4, v5, Lcom/google/android/exoplayer2/extractor/mp4/Track;->format:Lcom/google/android/exoplayer2/Format;
 
-    iget-object v5, v5, Lcom/google/android/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
+    iget-object v4, v4, Lcom/google/android/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
     const-string v10, "audio/true-hd"
 
-    invoke-virtual {v10, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v10, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_7
+    if-eqz v4, :cond_7
 
-    iget v5, v8, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->maximumSize:I
+    .line 23
+    iget v4, v8, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->maximumSize:I
 
-    mul-int/lit8 v5, v5, 0x10
+    mul-int/lit8 v4, v4, 0x10
 
     goto :goto_6
 
+    .line 24
     :cond_7
-    iget v5, v8, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->maximumSize:I
+    iget v4, v8, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->maximumSize:I
 
-    add-int/lit8 v5, v5, 0x1e
+    add-int/lit8 v4, v4, 0x1e
 
+    .line 25
     :goto_6
-    iget-object v10, v3, Lcom/google/android/exoplayer2/extractor/mp4/Track;->format:Lcom/google/android/exoplayer2/Format;
+    iget-object v10, v5, Lcom/google/android/exoplayer2/extractor/mp4/Track;->format:Lcom/google/android/exoplayer2/Format;
 
     invoke-virtual {v10}, Lcom/google/android/exoplayer2/Format;->buildUpon()Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v10
 
-    invoke-virtual {v10, v5}, Lcom/google/android/exoplayer2/Format$Builder;->setMaxInputSize(I)Lcom/google/android/exoplayer2/Format$Builder;
+    .line 26
+    invoke-virtual {v10, v4}, Lcom/google/android/exoplayer2/Format$Builder;->setMaxInputSize(I)Lcom/google/android/exoplayer2/Format$Builder;
 
-    iget v5, v3, Lcom/google/android/exoplayer2/extractor/mp4/Track;->type:I
+    .line 27
+    iget v4, v5, Lcom/google/android/exoplayer2/extractor/mp4/Track;->type:I
 
     const/4 v11, 0x2
 
-    if-ne v5, v11, :cond_8
+    if-ne v4, v11, :cond_8
 
     const-wide/16 v23, 0x0
 
-    cmp-long v5, v1, v23
+    cmp-long v4, v1, v23
 
-    if-lez v5, :cond_8
+    if-lez v4, :cond_8
 
-    iget v5, v8, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->sampleCount:I
+    iget v4, v8, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->sampleCount:I
 
     const/4 v8, 0x1
 
-    if-le v5, v8, :cond_8
+    if-le v4, v8, :cond_8
 
-    int-to-float v5, v5
+    int-to-float v4, v4
 
     long-to-float v1, v1
 
@@ -1165,50 +1232,56 @@
 
     div-float/2addr v1, v2
 
-    div-float/2addr v5, v1
+    div-float/2addr v4, v1
 
-    invoke-virtual {v10, v5}, Lcom/google/android/exoplayer2/Format$Builder;->setFrameRate(F)Lcom/google/android/exoplayer2/Format$Builder;
+    .line 28
+    invoke-virtual {v10, v4}, Lcom/google/android/exoplayer2/Format$Builder;->setFrameRate(F)Lcom/google/android/exoplayer2/Format$Builder;
 
+    .line 29
     :cond_8
-    iget v1, v3, Lcom/google/android/exoplayer2/extractor/mp4/Track;->type:I
+    iget v1, v5, Lcom/google/android/exoplayer2/extractor/mp4/Track;->type:I
 
     invoke-static {v1, v12, v10}, Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;->setFormatGaplessInfo(ILcom/google/android/exoplayer2/extractor/GaplessInfoHolder;Lcom/google/android/exoplayer2/Format$Builder;)V
 
-    iget v1, v3, Lcom/google/android/exoplayer2/extractor/mp4/Track;->type:I
+    .line 30
+    iget v1, v5, Lcom/google/android/exoplayer2/extractor/mp4/Track;->type:I
 
     new-array v2, v11, [Lcom/google/android/exoplayer2/metadata/Metadata;
 
-    const/4 v5, 0x0
+    const/4 v4, 0x0
 
-    aput-object v14, v2, v5
+    aput-object v14, v2, v4
 
-    iget-object v5, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->slowMotionMetadataEntries:Ljava/util/List;
+    .line 31
+    iget-object v4, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->slowMotionMetadataEntries:Ljava/util/List;
 
-    invoke-interface {v5}, Ljava/util/List;->isEmpty()Z
+    invoke-interface {v4}, Ljava/util/List;->isEmpty()Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_9
+    if-eqz v4, :cond_9
 
-    const/4 v5, 0x0
+    const/4 v4, 0x0
 
     goto :goto_7
 
     :cond_9
-    new-instance v5, Lcom/google/android/exoplayer2/metadata/Metadata;
+    new-instance v4, Lcom/google/android/exoplayer2/metadata/Metadata;
 
     iget-object v8, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->slowMotionMetadataEntries:Ljava/util/List;
 
-    invoke-direct {v5, v8}, Lcom/google/android/exoplayer2/metadata/Metadata;-><init>(Ljava/util/List;)V
+    invoke-direct {v4, v8}, Lcom/google/android/exoplayer2/metadata/Metadata;-><init>(Ljava/util/List;)V
 
     :goto_7
     const/4 v8, 0x1
 
-    aput-object v5, v2, v8
+    aput-object v4, v2, v8
 
+    .line 32
     invoke-static {v1, v15, v13, v10, v2}, Lcom/google/android/exoplayer2/extractor/mp4/MetadataUtil;->setFormatMetadata(ILcom/google/android/exoplayer2/metadata/Metadata;Lcom/google/android/exoplayer2/metadata/Metadata;Lcom/google/android/exoplayer2/Format$Builder;[Lcom/google/android/exoplayer2/metadata/Metadata;)V
 
-    iget-object v1, v4, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->trackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
+    .line 33
+    iget-object v1, v3, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->trackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     invoke-virtual {v10}, Lcom/google/android/exoplayer2/Format$Builder;->build()Lcom/google/android/exoplayer2/Format;
 
@@ -1216,7 +1289,8 @@
 
     invoke-interface {v1, v2}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->format(Lcom/google/android/exoplayer2/Format;)V
 
-    iget v1, v3, Lcom/google/android/exoplayer2/extractor/mp4/Track;->type:I
+    .line 34
+    iget v1, v5, Lcom/google/android/exoplayer2/extractor/mp4/Track;->type:I
 
     if-ne v1, v11, :cond_a
 
@@ -1224,6 +1298,7 @@
 
     if-ne v7, v1, :cond_b
 
+    .line 35
     invoke-interface {v9}, Ljava/util/List;->size()I
 
     move-result v2
@@ -1235,9 +1310,10 @@
     :cond_a
     const/4 v1, -0x1
 
+    .line 36
     :cond_b
     :goto_8
-    invoke-interface {v9, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v9, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     move-wide/from16 v10, v21
 
@@ -1248,19 +1324,22 @@
 
     move/from16 v2, v19
 
-    const-wide v4, -0x7fffffffffffffffL    # -4.9E-324
+    const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
 
     goto/16 :goto_4
 
+    .line 37
     :cond_c
     iput v7, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->firstVideoTrackIndex:I
 
+    .line 38
     iput-wide v10, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->durationUs:J
 
     const/4 v1, 0x0
 
     new-array v1, v1, [Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;
 
+    .line 39
     invoke-interface {v9, v1}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v1
@@ -1269,16 +1348,19 @@
 
     iput-object v1, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->tracks:[Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;
 
+    .line 40
     invoke-static {v1}, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->calculateAccumulatedSampleSizes([Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;)[[J
 
     move-result-object v1
 
     iput-object v1, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->accumulatedSampleSizes:[[J
 
+    .line 41
     iget-object v1, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->extractorOutput:Lcom/google/android/exoplayer2/extractor/ExtractorOutput;
 
     invoke-interface {v1}, Lcom/google/android/exoplayer2/extractor/ExtractorOutput;->endTracks()V
 
+    .line 42
     iget-object v1, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->extractorOutput:Lcom/google/android/exoplayer2/extractor/ExtractorOutput;
 
     invoke-interface {v1, v0}, Lcom/google/android/exoplayer2/extractor/ExtractorOutput;->seekMap(Lcom/google/android/exoplayer2/extractor/SeekMap;)V
@@ -1289,12 +1371,14 @@
 .method private processUnparsedAtom(J)V
     .locals 13
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomType:I
 
     const v1, 0x6d707664
 
     if-ne v0, v1, :cond_0
 
+    .line 2
     new-instance v0, Lcom/google/android/exoplayer2/metadata/mp4/MotionPhotoMetadata;
 
     const-wide/16 v3, 0x0
@@ -1333,6 +1417,7 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeaderBytesRead:I
 
     const/4 v1, 0x1
@@ -1343,6 +1428,7 @@
 
     if-nez v0, :cond_1
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeader:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
@@ -1355,17 +1441,21 @@
 
     if-nez v0, :cond_0
 
+    .line 3
     invoke-direct {p0}, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->processEndOfStreamReadingAtomHeader()V
 
     return v3
 
+    .line 4
     :cond_0
     iput v2, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeaderBytesRead:I
 
+    .line 5
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeader:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v0, v3}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
+    .line 6
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeader:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedInt()J
@@ -1374,6 +1464,7 @@
 
     iput-wide v4, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomSize:J
 
+    .line 7
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeader:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
@@ -1382,6 +1473,7 @@
 
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomType:I
 
+    .line 8
     :cond_1
     iget-wide v4, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomSize:J
 
@@ -1391,6 +1483,7 @@
 
     if-nez v0, :cond_2
 
+    .line 9
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeader:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
@@ -1399,12 +1492,14 @@
 
     invoke-interface {p1, v0, v2, v2}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->readFully([BII)V
 
+    .line 10
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeaderBytesRead:I
 
     add-int/2addr v0, v2
 
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeaderBytesRead:I
 
+    .line 11
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeader:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedLongToLong()J
@@ -1422,6 +1517,7 @@
 
     if-nez v0, :cond_4
 
+    .line 12
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getLength()J
 
     move-result-wide v4
@@ -1432,6 +1528,7 @@
 
     if-nez v0, :cond_3
 
+    .line 13
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->containerAtoms:Ljava/util/ArrayDeque;
 
     invoke-virtual {v0}, Ljava/util/ArrayDeque;->peek()Ljava/lang/Object;
@@ -1442,6 +1539,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 14
     iget-wide v4, v0, Lcom/google/android/exoplayer2/extractor/mp4/Atom$ContainerAtom;->endPosition:J
 
     :cond_3
@@ -1449,6 +1547,7 @@
 
     if-eqz v0, :cond_4
 
+    .line 15
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
     move-result-wide v6
@@ -1463,6 +1562,7 @@
 
     iput-wide v4, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomSize:J
 
+    .line 16
     :cond_4
     :goto_0
     iget-wide v4, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomSize:J
@@ -1475,6 +1575,7 @@
 
     if-ltz v0, :cond_b
 
+    .line 17
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomType:I
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->shouldParseContainerAtom(I)Z
@@ -1483,6 +1584,7 @@
 
     if-eqz v0, :cond_7
 
+    .line 18
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
     move-result-wide v2
@@ -1503,14 +1605,17 @@
 
     if-eqz v0, :cond_5
 
+    .line 19
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomType:I
 
     const v4, 0x6d657461
 
     if-ne v0, v4, :cond_5
 
+    .line 20
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->maybeSkipRemainingMetaAtomHeaderBytes(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)V
 
+    .line 21
     :cond_5
     iget-object p1, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->containerAtoms:Ljava/util/ArrayDeque;
 
@@ -1522,6 +1627,7 @@
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayDeque;->push(Ljava/lang/Object;)V
 
+    .line 22
     iget-wide v4, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomSize:J
 
     iget p1, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeaderBytesRead:I
@@ -1532,15 +1638,18 @@
 
     if-nez p1, :cond_6
 
+    .line 23
     invoke-direct {p0, v2, v3}, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->processAtomEnded(J)V
 
     goto :goto_3
 
+    .line 24
     :cond_6
     invoke-direct {p0}, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->enterReadingAtomHeaderState()V
 
     goto :goto_3
 
+    .line 25
     :cond_7
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomType:I
 
@@ -1550,6 +1659,7 @@
 
     if-eqz v0, :cond_a
 
+    .line 26
     iget p1, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeaderBytesRead:I
 
     if-ne p1, v2, :cond_8
@@ -1564,6 +1674,7 @@
     :goto_1
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 27
     iget-wide v4, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomSize:J
 
     const-wide/32 v6, 0x7fffffff
@@ -1582,6 +1693,7 @@
     :goto_2
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 28
     new-instance p1, Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     iget-wide v4, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomSize:J
@@ -1590,6 +1702,7 @@
 
     invoke-direct {p1, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;-><init>(I)V
 
+    .line 29
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeader:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
@@ -1602,12 +1715,15 @@
 
     invoke-static {v0, v3, v4, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 30
     iput-object p1, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomData:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
+    .line 31
     iput v1, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->parserState:I
 
     goto :goto_3
 
+    .line 32
     :cond_a
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
@@ -1623,8 +1739,10 @@
 
     const/4 p1, 0x0
 
+    .line 33
     iput-object p1, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomData:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
+    .line 34
     iput v1, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->parserState:I
 
     :goto_3
@@ -1633,6 +1751,7 @@
     :cond_b
     const-string p0, "Atom size less than header length (unsupported)."
 
+    .line 35
     invoke-static {p0}, Lcom/google/android/exoplayer2/ParserException;->createForUnsupportedContainerFeature(Ljava/lang/String;)Lcom/google/android/exoplayer2/ParserException;
 
     move-result-object p0
@@ -1648,6 +1767,7 @@
         }
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomSize:J
 
     iget v2, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeaderBytesRead:I
@@ -1656,12 +1776,14 @@
 
     sub-long/2addr v0, v2
 
+    .line 2
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
     move-result-wide v2
 
     add-long/2addr v2, v0
 
+    .line 3
     iget-object v4, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomData:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     const/4 v5, 0x1
@@ -1670,6 +1792,7 @@
 
     if-eqz v4, :cond_1
 
+    .line 4
     invoke-virtual {v4}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
     move-result-object p2
@@ -1680,12 +1803,14 @@
 
     invoke-interface {p1, p2, v7, v0}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->readFully([BII)V
 
+    .line 5
     iget p1, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomType:I
 
     const p2, 0x66747970
 
     if-ne p1, p2, :cond_0
 
+    .line 6
     invoke-static {v4}, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->processFtypAtom(Lcom/google/android/exoplayer2/util/ParsableByteArray;)I
 
     move-result p1
@@ -1694,6 +1819,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_0
     iget-object p1, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->containerAtoms:Ljava/util/ArrayDeque;
 
@@ -1703,6 +1829,7 @@
 
     if-nez p1, :cond_2
 
+    .line 8
     iget-object p1, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->containerAtoms:Ljava/util/ArrayDeque;
 
     invoke-virtual {p1}, Ljava/util/ArrayDeque;->peek()Ljava/lang/Object;
@@ -1730,6 +1857,7 @@
 
     long-to-int p2, v0
 
+    .line 9
     invoke-interface {p1, p2}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->skipFully(I)V
 
     :cond_2
@@ -1738,6 +1866,7 @@
 
     goto :goto_1
 
+    .line 10
     :cond_3
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
@@ -1749,11 +1878,13 @@
 
     move p1, v5
 
+    .line 11
     :goto_1
     invoke-direct {p0, v2, v3}, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->processAtomEnded(J)V
 
     if-eqz p1, :cond_4
 
+    .line 12
     iget p0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->parserState:I
 
     const/4 p1, 0x2
@@ -1781,16 +1912,19 @@
 
     move-object/from16 v1, p1
 
+    .line 1
     invoke-interface/range {p1 .. p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
     move-result-wide v2
 
+    .line 2
     iget v4, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->sampleTrackIndex:I
 
     const/4 v5, -0x1
 
     if-ne v4, v5, :cond_0
 
+    .line 3
     invoke-direct {v0, v2, v3}, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->getTrackIndexOfNextReadSample(J)I
 
     move-result v4
@@ -1801,6 +1935,7 @@
 
     return v5
 
+    .line 4
     :cond_0
     iget-object v4, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->tracks:[Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;
 
@@ -1808,24 +1943,30 @@
 
     aget-object v4, v4, v6
 
+    .line 5
     iget-object v14, v4, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->trackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
+    .line 6
     iget v15, v4, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->sampleIndex:I
 
+    .line 7
     iget-object v6, v4, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->sampleTable:Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;
 
     iget-object v7, v6, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->offsets:[J
 
     aget-wide v7, v7, v15
 
+    .line 8
     iget-object v6, v6, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->sizes:[I
 
     aget v6, v6, v15
 
+    .line 9
     iget-object v13, v4, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->trueHdSampleRechunker:Lcom/google/android/exoplayer2/extractor/TrueHdSampleRechunker;
 
     sub-long v2, v7, v2
 
+    .line 10
     iget v9, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->sampleBytesRead:I
 
     int-to-long v9, v9
@@ -1852,6 +1993,7 @@
 
     goto/16 :goto_3
 
+    .line 11
     :cond_1
     iget-object v7, v4, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->track:Lcom/google/android/exoplayer2/extractor/mp4/Track;
 
@@ -1868,8 +2010,10 @@
     :cond_2
     long-to-int v2, v2
 
+    .line 12
     invoke-interface {v1, v2}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->skipFully(I)V
 
+    .line 13
     iget-object v2, v4, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->track:Lcom/google/android/exoplayer2/extractor/mp4/Track;
 
     iget v3, v2, Lcom/google/android/exoplayer2/extractor/mp4/Track;->nalUnitLengthFieldLength:I
@@ -1880,47 +2024,58 @@
 
     if-eqz v3, :cond_5
 
+    .line 14
     iget-object v2, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->nalLength:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
     move-result-object v2
 
+    .line 15
     aput-byte v10, v2, v10
 
+    .line 16
     aput-byte v10, v2, v12
 
     const/4 v3, 0x2
 
+    .line 17
     aput-byte v10, v2, v3
 
+    .line 18
     iget-object v3, v4, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->track:Lcom/google/android/exoplayer2/extractor/mp4/Track;
 
     iget v3, v3, Lcom/google/android/exoplayer2/extractor/mp4/Track;->nalUnitLengthFieldLength:I
 
     rsub-int/lit8 v7, v3, 0x4
 
+    .line 19
     :goto_0
     iget v8, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->sampleBytesWritten:I
 
     if-ge v8, v6, :cond_9
 
+    .line 20
     iget v8, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->sampleCurrentNalBytesRemaining:I
 
     if-nez v8, :cond_4
 
+    .line 21
     invoke-interface {v1, v2, v7, v3}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->readFully([BII)V
 
+    .line 22
     iget v8, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->sampleBytesRead:I
 
     add-int/2addr v8, v3
 
     iput v8, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->sampleBytesRead:I
 
+    .line 23
     iget-object v8, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->nalLength:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v8, v10}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
+    .line 24
     iget-object v8, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->nalLength:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v8}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
@@ -1929,18 +2084,22 @@
 
     if-ltz v8, :cond_3
 
+    .line 25
     iput v8, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->sampleCurrentNalBytesRemaining:I
 
+    .line 26
     iget-object v8, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->nalStartCode:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v8, v10}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
+    .line 27
     iget-object v8, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->nalStartCode:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     const/4 v9, 0x4
 
     invoke-interface {v14, v8, v9}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->sampleData(Lcom/google/android/exoplayer2/util/ParsableByteArray;I)V
 
+    .line 28
     iget v8, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->sampleBytesWritten:I
 
     add-int/2addr v8, v9
@@ -1954,29 +2113,34 @@
     :cond_3
     const-string v0, "Invalid NAL length"
 
+    .line 29
     invoke-static {v0, v11}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedContainer(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
     move-result-object v0
 
     throw v0
 
+    .line 30
     :cond_4
     invoke-interface {v14, v1, v8, v10}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->sampleData(Lcom/google/android/exoplayer2/upstream/DataReader;IZ)I
 
     move-result v8
 
+    .line 31
     iget v9, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->sampleBytesRead:I
 
     add-int/2addr v9, v8
 
     iput v9, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->sampleBytesRead:I
 
+    .line 32
     iget v9, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->sampleBytesWritten:I
 
     add-int/2addr v9, v8
 
     iput v9, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->sampleBytesWritten:I
 
+    .line 33
     iget v9, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->sampleCurrentNalBytesRemaining:I
 
     sub-int/2addr v9, v8
@@ -1985,6 +2149,7 @@
 
     goto :goto_0
 
+    .line 34
     :cond_5
     iget-object v2, v2, Lcom/google/android/exoplayer2/extractor/mp4/Track;->format:Lcom/google/android/exoplayer2/Format;
 
@@ -1998,20 +2163,24 @@
 
     if-eqz v2, :cond_7
 
+    .line 35
     iget v2, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->sampleBytesWritten:I
 
     if-nez v2, :cond_6
 
+    .line 36
     iget-object v2, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-static {v6, v2}, Lcom/google/android/exoplayer2/audio/Ac4Util;->getAc4SampleHeader(ILcom/google/android/exoplayer2/util/ParsableByteArray;)V
 
+    .line 37
     iget-object v2, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     const/4 v3, 0x7
 
     invoke-interface {v14, v2, v3}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->sampleData(Lcom/google/android/exoplayer2/util/ParsableByteArray;I)V
 
+    .line 38
     iget v2, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->sampleBytesWritten:I
 
     add-int/2addr v2, v3
@@ -2026,8 +2195,10 @@
     :cond_7
     if-eqz v13, :cond_8
 
+    .line 39
     invoke-virtual {v13, v1}, Lcom/google/android/exoplayer2/extractor/TrueHdSampleRechunker;->startSample(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)V
 
+    .line 40
     :cond_8
     :goto_1
     iget v2, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->sampleBytesWritten:I
@@ -2036,22 +2207,26 @@
 
     sub-int v2, v6, v2
 
+    .line 41
     invoke-interface {v14, v1, v2, v10}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->sampleData(Lcom/google/android/exoplayer2/upstream/DataReader;IZ)I
 
     move-result v2
 
+    .line 42
     iget v3, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->sampleBytesRead:I
 
     add-int/2addr v3, v2
 
     iput v3, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->sampleBytesRead:I
 
+    .line 43
     iget v3, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->sampleBytesWritten:I
 
     add-int/2addr v3, v2
 
     iput v3, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->sampleBytesWritten:I
 
+    .line 44
     iget v3, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->sampleCurrentNalBytesRemaining:I
 
     sub-int/2addr v3, v2
@@ -2063,12 +2238,14 @@
     :cond_9
     move v1, v6
 
+    .line 45
     iget-object v2, v4, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->sampleTable:Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;
 
     iget-object v3, v2, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->timestampsUs:[J
 
     aget-wide v8, v3, v15
 
+    .line 46
     iget-object v2, v2, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->flags:[I
 
     aget v2, v2, v15
@@ -2097,16 +2274,19 @@
 
     move-object/from16 v13, v16
 
+    .line 47
     invoke-virtual/range {v6 .. v13}, Lcom/google/android/exoplayer2/extractor/TrueHdSampleRechunker;->sampleMetadata(Lcom/google/android/exoplayer2/extractor/TrackOutput;JIIILcom/google/android/exoplayer2/extractor/TrackOutput$CryptoData;)V
 
     add-int/lit8 v15, v15, 0x1
 
+    .line 48
     iget-object v3, v4, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->sampleTable:Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;
 
     iget v3, v3, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->sampleCount:I
 
     if-ne v15, v3, :cond_b
 
+    .line 49
     invoke-virtual {v1, v14, v2}, Lcom/google/android/exoplayer2/extractor/TrueHdSampleRechunker;->outputPendingSampleMetadata(Lcom/google/android/exoplayer2/extractor/TrackOutput;Lcom/google/android/exoplayer2/extractor/TrackOutput$CryptoData;)V
 
     goto :goto_2
@@ -2126,8 +2306,10 @@
 
     move v10, v1
 
+    .line 50
     invoke-interface/range {v6 .. v12}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->sampleMetadata(JIIILcom/google/android/exoplayer2/extractor/TrackOutput$CryptoData;)V
 
+    .line 51
     :cond_b
     :goto_2
     iget v1, v4, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->sampleIndex:I
@@ -2136,14 +2318,18 @@
 
     iput v1, v4, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->sampleIndex:I
 
+    .line 52
     iput v5, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->sampleTrackIndex:I
 
     const/4 v1, 0x0
 
+    .line 53
     iput v1, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->sampleBytesRead:I
 
+    .line 54
     iput v1, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->sampleBytesWritten:I
 
+    .line 55
     iput v1, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->sampleCurrentNalBytesRemaining:I
 
     return v1
@@ -2153,6 +2339,7 @@
 
     move-object/from16 v0, p2
 
+    .line 56
     :goto_3
     iput-wide v7, v0, Lcom/google/android/exoplayer2/extractor/PositionHolder;->position:J
 
@@ -2167,6 +2354,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->sefReader:Lcom/google/android/exoplayer2/extractor/mp4/SefReader;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->slowMotionMetadataEntries:Ljava/util/List;
@@ -2179,6 +2367,7 @@
 
     if-ne p1, v0, :cond_0
 
+    .line 2
     iget-wide v0, p2, Lcom/google/android/exoplayer2/extractor/PositionHolder;->position:J
 
     const-wide/16 v2, 0x0
@@ -2187,6 +2376,7 @@
 
     if-nez p2, :cond_0
 
+    .line 3
     invoke-direct {p0}, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->enterReadingAtomHeaderState()V
 
     :cond_0
@@ -2332,8 +2522,10 @@
 .method private updateSampleIndex(Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;J)V
     .locals 2
 
+    .line 1
     iget-object p0, p1, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->sampleTable:Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;
 
+    .line 2
     invoke-virtual {p0, p2, p3}, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->getIndexOfEarlierOrEqualSynchronizationSample(J)I
 
     move-result v0
@@ -2342,10 +2534,12 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 3
     invoke-virtual {p0, p2, p3}, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->getIndexOfLaterOrEqualSynchronizationSample(J)I
 
     move-result v0
 
+    .line 4
     :cond_0
     iput v0, p1, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->sampleIndex:I
 
@@ -2357,6 +2551,7 @@
 .method public getDurationUs()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->durationUs:J
 
     return-wide v0
@@ -2401,36 +2596,36 @@
     return-object v0
 
     :cond_0
-    const/4 v5, -0x1
+    const-wide/16 v5, -0x1
 
-    if-eq v3, v5, :cond_1
+    const/4 v7, -0x1
 
-    move v6, v3
+    if-eq v3, v7, :cond_1
+
+    move v8, v3
 
     goto :goto_0
 
     .line 4
     :cond_1
-    iget v6, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->firstVideoTrackIndex:I
+    iget v8, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->firstVideoTrackIndex:I
 
     :goto_0
-    const-wide v7, -0x7fffffffffffffffL    # -4.9E-324
+    const-wide v9, -0x7fffffffffffffffL    # -4.9E-324
 
-    const-wide/16 v9, -0x1
-
-    if-eq v6, v5, :cond_4
+    if-eq v8, v7, :cond_4
 
     .line 5
-    aget-object v4, v4, v6
+    aget-object v4, v4, v8
 
     iget-object v4, v4, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->sampleTable:Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;
 
     .line 6
     invoke-static {v4, v1, v2}, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->getSynchronizationSampleIndex(Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;J)I
 
-    move-result v6
+    move-result v8
 
-    if-ne v6, v5, :cond_2
+    if-ne v8, v7, :cond_2
 
     .line 7
     new-instance v0, Lcom/google/android/exoplayer2/extractor/SeekMap$SeekPoints;
@@ -2445,12 +2640,12 @@
     :cond_2
     iget-object v11, v4, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->timestampsUs:[J
 
-    aget-wide v11, v11, v6
+    aget-wide v11, v11, v8
 
     .line 9
     iget-object v13, v4, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->offsets:[J
 
-    aget-wide v13, v13, v6
+    aget-wide v13, v13, v8
 
     cmp-long v15, v11, v1
 
@@ -2461,21 +2656,21 @@
 
     add-int/lit8 v15, v15, -0x1
 
-    if-ge v6, v15, :cond_3
+    if-ge v8, v15, :cond_3
 
     .line 11
     invoke-virtual {v4, v1, v2}, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->getIndexOfLaterOrEqualSynchronizationSample(J)I
 
     move-result v1
 
-    if-eq v1, v5, :cond_3
+    if-eq v1, v7, :cond_3
 
-    if-eq v1, v6, :cond_3
+    if-eq v1, v8, :cond_3
 
     .line 12
     iget-object v2, v4, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->timestampsUs:[J
 
-    aget-wide v9, v2, v1
+    aget-wide v5, v2, v1
 
     .line 13
     iget-object v2, v4, Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;->offsets:[J
@@ -2485,9 +2680,9 @@
     goto :goto_1
 
     :cond_3
-    move-wide v1, v9
+    move-wide v1, v5
 
-    move-wide v9, v7
+    move-wide v5, v9
 
     :goto_1
     move-wide/from16 v16, v1
@@ -2501,12 +2696,12 @@
     :cond_4
     const-wide v13, 0x7fffffffffffffffL
 
-    move-wide v11, v9
+    move-wide v11, v5
 
-    move-wide v9, v7
+    move-wide v5, v9
 
     :goto_2
-    if-ne v3, v5, :cond_6
+    if-ne v3, v7, :cond_6
 
     const/4 v3, 0x0
 
@@ -2514,14 +2709,14 @@
     :goto_3
     iget-object v4, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->tracks:[Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;
 
-    array-length v5, v4
+    array-length v7, v4
 
-    if-ge v3, v5, :cond_6
+    if-ge v3, v7, :cond_6
 
     .line 15
-    iget v5, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->firstVideoTrackIndex:I
+    iget v7, v0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->firstVideoTrackIndex:I
 
-    if-eq v3, v5, :cond_5
+    if-eq v3, v7, :cond_5
 
     .line 16
     aget-object v4, v4, v3
@@ -2533,12 +2728,12 @@
 
     move-result-wide v13
 
-    cmp-long v5, v9, v7
+    cmp-long v7, v5, v9
 
-    if-eqz v5, :cond_5
+    if-eqz v7, :cond_5
 
     .line 18
-    invoke-static {v4, v9, v10, v11, v12}, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->maybeAdjustSeekOffset(Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;JJ)J
+    invoke-static {v4, v5, v6, v11, v12}, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->maybeAdjustSeekOffset(Lcom/google/android/exoplayer2/extractor/mp4/TrackSampleTable;JJ)J
 
     move-result-wide v11
 
@@ -2553,7 +2748,7 @@
 
     invoke-direct {v0, v1, v2, v13, v14}, Lcom/google/android/exoplayer2/extractor/SeekPoint;-><init>(JJ)V
 
-    cmp-long v1, v9, v7
+    cmp-long v1, v5, v9
 
     if-nez v1, :cond_7
 
@@ -2568,7 +2763,7 @@
     :cond_7
     new-instance v1, Lcom/google/android/exoplayer2/extractor/SeekPoint;
 
-    invoke-direct {v1, v9, v10, v11, v12}, Lcom/google/android/exoplayer2/extractor/SeekPoint;-><init>(JJ)V
+    invoke-direct {v1, v5, v6, v11, v12}, Lcom/google/android/exoplayer2/extractor/SeekPoint;-><init>(JJ)V
 
     .line 22
     new-instance v2, Lcom/google/android/exoplayer2/extractor/SeekMap$SeekPoints;
@@ -2581,6 +2776,7 @@
 .method public init(Lcom/google/android/exoplayer2/extractor/ExtractorOutput;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->extractorOutput:Lcom/google/android/exoplayer2/extractor/ExtractorOutput;
 
     return-void
@@ -2602,6 +2798,7 @@
         }
     .end annotation
 
+    .line 1
     :cond_0
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->parserState:I
 
@@ -2619,12 +2816,14 @@
 
     if-ne v0, v1, :cond_1
 
+    .line 2
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->readSefData(Lcom/google/android/exoplayer2/extractor/ExtractorInput;Lcom/google/android/exoplayer2/extractor/PositionHolder;)I
 
     move-result p0
 
     return p0
 
+    .line 3
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2632,6 +2831,7 @@
 
     throw p0
 
+    .line 4
     :cond_2
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->readSample(Lcom/google/android/exoplayer2/extractor/ExtractorInput;Lcom/google/android/exoplayer2/extractor/PositionHolder;)I
 
@@ -2639,6 +2839,7 @@
 
     return p0
 
+    .line 5
     :cond_3
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->readAtomPayload(Lcom/google/android/exoplayer2/extractor/ExtractorInput;Lcom/google/android/exoplayer2/extractor/PositionHolder;)Z
 
@@ -2648,6 +2849,7 @@
 
     return v1
 
+    .line 6
     :cond_4
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->readAtomHeader(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)Z
 
@@ -2669,22 +2871,28 @@
 .method public seek(JJ)V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->containerAtoms:Ljava/util/ArrayDeque;
 
     invoke-virtual {v0}, Ljava/util/ArrayDeque;->clear()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeaderBytesRead:I
 
     const/4 v1, -0x1
 
+    .line 3
     iput v1, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->sampleTrackIndex:I
 
+    .line 4
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->sampleBytesRead:I
 
+    .line 5
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->sampleBytesWritten:I
 
+    .line 6
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->sampleCurrentNalBytesRemaining:I
 
     const-wide/16 v1, 0x0
@@ -2693,27 +2901,32 @@
 
     if-nez p1, :cond_1
 
+    .line 7
     iget p1, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->parserState:I
 
     const/4 p2, 0x3
 
     if-eq p1, p2, :cond_0
 
+    .line 8
     invoke-direct {p0}, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->enterReadingAtomHeaderState()V
 
     goto :goto_1
 
+    .line 9
     :cond_0
     iget-object p1, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->sefReader:Lcom/google/android/exoplayer2/extractor/mp4/SefReader;
 
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/extractor/mp4/SefReader;->reset()V
 
+    .line 10
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->slowMotionMetadataEntries:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->clear()V
 
     goto :goto_1
 
+    .line 11
     :cond_1
     iget-object p1, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->tracks:[Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;
 
@@ -2724,12 +2937,15 @@
 
     aget-object v1, p1, v0
 
+    .line 12
     invoke-direct {p0, v1, p3, p4}, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->updateSampleIndex(Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;J)V
 
+    .line 13
     iget-object v1, v1, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->trueHdSampleRechunker:Lcom/google/android/exoplayer2/extractor/TrueHdSampleRechunker;
 
     if-eqz v1, :cond_2
 
+    .line 14
     invoke-virtual {v1}, Lcom/google/android/exoplayer2/extractor/TrueHdSampleRechunker;->reset()V
 
     :cond_2
@@ -2750,6 +2966,7 @@
         }
     .end annotation
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;->flags:I
 
     and-int/lit8 p0, p0, 0x2

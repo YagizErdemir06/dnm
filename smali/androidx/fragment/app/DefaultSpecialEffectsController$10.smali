@@ -1,4 +1,4 @@
-.class synthetic Landroidx/fragment/app/DefaultSpecialEffectsController$10;
+.class public synthetic Landroidx/fragment/app/DefaultSpecialEffectsController$10;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$androidx$fragment$app$SpecialEffectsController$Operation$State:[I
+.field public static final synthetic $SwitchMap$androidx$fragment$app$SpecialEffectsController$Operation$State:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Landroidx/fragment/app/SpecialEffectsController$Operation$State;->values()[Landroidx/fragment/app/SpecialEffectsController$Operation$State;
 
     move-result-object v0

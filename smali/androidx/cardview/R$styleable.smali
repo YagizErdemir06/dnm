@@ -21,66 +21,34 @@
 
 .field public static final CardView_android_minWidth:I = 0x0
 
-.field public static final CardView_android_shadowColor:I = 0x2
+.field public static final CardView_cardBackgroundColor:I = 0x2
 
-.field public static final CardView_android_shadowDx:I = 0x3
+.field public static final CardView_cardCornerRadius:I = 0x3
 
-.field public static final CardView_android_shadowDy:I = 0x4
+.field public static final CardView_cardElevation:I = 0x4
 
-.field public static final CardView_android_shadowRadius:I = 0x5
+.field public static final CardView_cardMaxElevation:I = 0x5
 
-.field public static final CardView_cardBackgroundColor:I = 0x6
+.field public static final CardView_cardPreventCornerOverlap:I = 0x6
 
-.field public static final CardView_cardBlendColorModes:I = 0x7
+.field public static final CardView_cardUseCompatPadding:I = 0x7
 
-.field public static final CardView_cardBlendColors:I = 0x8
+.field public static final CardView_contentPadding:I = 0x8
 
-.field public static final CardView_cardCornerRadius:I = 0x9
+.field public static final CardView_contentPaddingBottom:I = 0x9
 
-.field public static final CardView_cardElevation:I = 0xa
+.field public static final CardView_contentPaddingLeft:I = 0xa
 
-.field public static final CardView_cardMaxElevation:I = 0xb
+.field public static final CardView_contentPaddingRight:I = 0xb
 
-.field public static final CardView_cardPreventCornerOverlap:I = 0xc
-
-.field public static final CardView_cardUseCompatPadding:I = 0xd
-
-.field public static final CardView_contentPadding:I = 0xe
-
-.field public static final CardView_contentPaddingBottom:I = 0xf
-
-.field public static final CardView_contentPaddingLeft:I = 0x10
-
-.field public static final CardView_contentPaddingRight:I = 0x11
-
-.field public static final CardView_contentPaddingTop:I = 0x12
-
-.field public static final CardView_miuix_blurRadius:I = 0x13
-
-.field public static final CardView_miuix_blurSelfBackground:I = 0x14
-
-.field public static final CardView_miuix_shadowDispersion:I = 0x15
-
-.field public static final CardView_miuix_strokeColor:I = 0x16
-
-.field public static final CardView_miuix_strokeGradientColors:I = 0x17
-
-.field public static final CardView_miuix_strokeGradientPositions:I = 0x18
-
-.field public static final CardView_miuix_strokeWidth:I = 0x19
-
-.field public static final CardView_miuix_useCompatShadow:I = 0x1a
-
-.field public static final CardView_miuix_useSmooth:I = 0x1b
-
-.field public static final CardView_outlineStyle:I = 0x1c
+.field public static final CardView_contentPaddingTop:I = 0xc
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
-    const/16 v0, 0x1d
+    const/16 v0, 0xd
 
     new-array v0, v0, [I
 
@@ -94,33 +62,17 @@
     .array-data 4
         0x101013f
         0x1010140
-        0x1010161
-        0x1010162
-        0x1010163
-        0x1010164
-        0x7f040111
-        0x7f040112
-        0x7f040113
-        0x7f040114
-        0x7f040115
-        0x7f040125
-        0x7f040126
-        0x7f040128
-        0x7f040206
-        0x7f040207
-        0x7f040209
-        0x7f04020a
-        0x7f04020c
-        0x7f0404d3
-        0x7f0404d4
-        0x7f0404d5
-        0x7f0404d7
-        0x7f0404d8
-        0x7f0404d9
-        0x7f0404da
-        0x7f0404db
-        0x7f0404dc
-        0x7f04053a
+        0x7f0400c9
+        0x7f0400ca
+        0x7f0400cb
+        0x7f0400cc
+        0x7f0400cd
+        0x7f0400ce
+        0x7f04013d
+        0x7f04013e
+        0x7f04013f
+        0x7f040140
+        0x7f040141
     .end array-data
 .end method
 

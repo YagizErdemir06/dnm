@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/api/internal/zabb;
+.class public final Lcom/google/android/gms/common/api/internal/zabb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,13 +7,13 @@
 
 
 # instance fields
-.field final synthetic zaa:Lcom/google/android/gms/common/api/internal/StatusPendingResult;
+.field public final synthetic zaa:Lcom/google/android/gms/common/api/internal/StatusPendingResult;
 
-.field final synthetic zab:Z
+.field public final synthetic zab:Z
 
-.field final synthetic zac:Lcom/google/android/gms/common/api/GoogleApiClient;
+.field public final synthetic zac:Lcom/google/android/gms/common/api/GoogleApiClient;
 
-.field final synthetic zad:Lcom/google/android/gms/common/api/internal/zabe;
+.field public final synthetic zad:Lcom/google/android/gms/common/api/internal/zabe;
 
 
 # direct methods
@@ -42,6 +42,7 @@
         .end annotation
     .end param
 
+    .line 1
     check-cast p1, Lcom/google/android/gms/common/api/Status;
 
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabb;->zad:Lcom/google/android/gms/common/api/internal/zabe;
@@ -50,12 +51,14 @@
 
     move-result-object v0
 
+    .line 2
     invoke-static {v0}, Lcom/google/android/gms/auth/api/signin/internal/Storage;->getInstance(Landroid/content/Context;)Lcom/google/android/gms/auth/api/signin/internal/Storage;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/google/android/gms/auth/api/signin/internal/Storage;->zac()V
 
+    .line 3
     invoke-virtual {p1}, Lcom/google/android/gms/common/api/Status;->isSuccess()Z
 
     move-result v0
@@ -72,13 +75,16 @@
 
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabb;->zad:Lcom/google/android/gms/common/api/internal/zabe;
 
+    .line 4
     invoke-virtual {v0}, Lcom/google/android/gms/common/api/internal/zabe;->disconnect()V
 
+    .line 5
     invoke-virtual {v0}, Lcom/google/android/gms/common/api/internal/zabe;->connect()V
 
     :cond_0
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabb;->zaa:Lcom/google/android/gms/common/api/internal/StatusPendingResult;
 
+    .line 6
     invoke-virtual {v0, p1}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->setResult(Lcom/google/android/gms/common/api/Result;)V
 
     iget-boolean p1, p0, Lcom/google/android/gms/common/api/internal/zabb;->zab:Z
@@ -87,6 +93,7 @@
 
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zabb;->zac:Lcom/google/android/gms/common/api/GoogleApiClient;
 
+    .line 7
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/GoogleApiClient;->disconnect()V
 
     :cond_1

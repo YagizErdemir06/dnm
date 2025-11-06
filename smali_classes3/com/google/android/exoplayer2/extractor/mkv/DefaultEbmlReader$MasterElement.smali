@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader$MasterElement;
+.class public final Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader$MasterElement;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -48,6 +48,7 @@
 .method public static synthetic access$000(Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader$MasterElement;)J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader$MasterElement;->elementEndPosition:J
 
     return-wide v0
@@ -56,6 +57,7 @@
 .method public static synthetic access$100(Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader$MasterElement;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/extractor/mkv/DefaultEbmlReader$MasterElement;->elementId:I
 
     return p0

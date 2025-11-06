@@ -1,4 +1,4 @@
-.class Lcom/bumptech/glide/load/model/ByteArrayLoader$StreamFactory$1;
+.class public Lcom/bumptech/glide/load/model/ByteArrayLoader$StreamFactory$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,13 +27,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/bumptech/glide/load/model/ByteArrayLoader$StreamFactory;
+.field public final synthetic this$0:Lcom/bumptech/glide/load/model/ByteArrayLoader$StreamFactory;
 
 
 # direct methods
 .method public constructor <init>(Lcom/bumptech/glide/load/model/ByteArrayLoader$StreamFactory;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/bumptech/glide/load/model/ByteArrayLoader$StreamFactory$1;->this$0:Lcom/bumptech/glide/load/model/ByteArrayLoader$StreamFactory;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -76,6 +77,7 @@
         }
     .end annotation
 
+    .line 1
     const-class p0, Ljava/io/InputStream;
 
     return-object p0

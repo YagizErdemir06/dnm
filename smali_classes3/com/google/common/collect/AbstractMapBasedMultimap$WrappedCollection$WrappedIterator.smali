@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection$WrappedIterator;
+.class public Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection$WrappedIterator;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,7 +26,7 @@
 
 
 # instance fields
-.field final delegateIterator:Ljava/util/Iterator;
+.field public final delegateIterator:Ljava/util/Iterator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Iterator<",
@@ -35,7 +35,7 @@
     .end annotation
 .end field
 
-.field final originalDelegate:Ljava/util/Collection;
+.field public final originalDelegate:Ljava/util/Collection;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Collection<",
@@ -44,7 +44,7 @@
     .end annotation
 .end field
 
-.field final synthetic this$1:Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection;
+.field public final synthetic this$1:Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection;
 
 
 # direct methods
@@ -109,8 +109,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection$WrappedIterator;->validateIterator()V
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection$WrappedIterator;->delegateIterator:Ljava/util/Iterator;
 
     return-object p0
@@ -119,8 +121,10 @@
 .method public hasNext()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection$WrappedIterator;->validateIterator()V
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection$WrappedIterator;->delegateIterator:Ljava/util/Iterator;
 
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
@@ -141,8 +145,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection$WrappedIterator;->validateIterator()V
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection$WrappedIterator;->delegateIterator:Ljava/util/Iterator;
 
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -155,16 +161,19 @@
 .method public remove()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection$WrappedIterator;->delegateIterator:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->remove()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection$WrappedIterator;->this$1:Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection;
 
     iget-object v0, v0, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection;->this$0:Lcom/google/common/collect/AbstractMapBasedMultimap;
 
     invoke-static {v0}, Lcom/google/common/collect/AbstractMapBasedMultimap;->access$210(Lcom/google/common/collect/AbstractMapBasedMultimap;)I
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection$WrappedIterator;->this$1:Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection;
 
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection;->removeIfEmpty()V
@@ -175,10 +184,12 @@
 .method public validateIterator()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection$WrappedIterator;->this$1:Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection;
 
     invoke-virtual {v0}, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection;->refreshIfEmpty()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection$WrappedIterator;->this$1:Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection;
 
     iget-object v0, v0, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedCollection;->delegate:Ljava/util/Collection;
@@ -189,6 +200,7 @@
 
     return-void
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/util/ConcurrentModificationException;
 

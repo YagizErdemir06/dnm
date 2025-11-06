@@ -68,6 +68,7 @@
 .method public static constructor <clinit>()V
     .locals 22
 
+    .line 1
     new-instance v0, Lcom/xiaomi/fenshen/FenShenCam$Message;
 
     const-string v1, "START"
@@ -78,6 +79,7 @@
 
     sput-object v0, Lcom/xiaomi/fenshen/FenShenCam$Message;->START:Lcom/xiaomi/fenshen/FenShenCam$Message;
 
+    .line 2
     new-instance v1, Lcom/xiaomi/fenshen/FenShenCam$Message;
 
     const-string v3, "PREVIEW_NO_PERSON"
@@ -88,6 +90,7 @@
 
     sput-object v1, Lcom/xiaomi/fenshen/FenShenCam$Message;->PREVIEW_NO_PERSON:Lcom/xiaomi/fenshen/FenShenCam$Message;
 
+    .line 3
     new-instance v3, Lcom/xiaomi/fenshen/FenShenCam$Message;
 
     const-string v5, "ALIGN_OK"
@@ -98,6 +101,7 @@
 
     sput-object v3, Lcom/xiaomi/fenshen/FenShenCam$Message;->ALIGN_OK:Lcom/xiaomi/fenshen/FenShenCam$Message;
 
+    .line 4
     new-instance v5, Lcom/xiaomi/fenshen/FenShenCam$Message;
 
     const-string v7, "ALIGN_WARNING"
@@ -108,6 +112,7 @@
 
     sput-object v5, Lcom/xiaomi/fenshen/FenShenCam$Message;->ALIGN_WARNING:Lcom/xiaomi/fenshen/FenShenCam$Message;
 
+    .line 5
     new-instance v7, Lcom/xiaomi/fenshen/FenShenCam$Message;
 
     const-string v9, "ALIGN_TOO_LARGE_OR_FAILED"
@@ -118,6 +123,7 @@
 
     sput-object v7, Lcom/xiaomi/fenshen/FenShenCam$Message;->ALIGN_TOO_LARGE_OR_FAILED:Lcom/xiaomi/fenshen/FenShenCam$Message;
 
+    .line 6
     new-instance v9, Lcom/xiaomi/fenshen/FenShenCam$Message;
 
     const-string v11, "NO_PERSON"
@@ -128,6 +134,7 @@
 
     sput-object v9, Lcom/xiaomi/fenshen/FenShenCam$Message;->NO_PERSON:Lcom/xiaomi/fenshen/FenShenCam$Message;
 
+    .line 7
     new-instance v11, Lcom/xiaomi/fenshen/FenShenCam$Message;
 
     const-string v13, "MOVE_OUTSIDE"
@@ -138,6 +145,7 @@
 
     sput-object v11, Lcom/xiaomi/fenshen/FenShenCam$Message;->MOVE_OUTSIDE:Lcom/xiaomi/fenshen/FenShenCam$Message;
 
+    .line 8
     new-instance v13, Lcom/xiaomi/fenshen/FenShenCam$Message;
 
     const-string v15, "DYNAMIC_SCENE"
@@ -148,6 +156,7 @@
 
     sput-object v13, Lcom/xiaomi/fenshen/FenShenCam$Message;->DYNAMIC_SCENE:Lcom/xiaomi/fenshen/FenShenCam$Message;
 
+    .line 9
     new-instance v15, Lcom/xiaomi/fenshen/FenShenCam$Message;
 
     const-string v14, "ERROR_INIT"
@@ -158,6 +167,7 @@
 
     sput-object v15, Lcom/xiaomi/fenshen/FenShenCam$Message;->ERROR_INIT:Lcom/xiaomi/fenshen/FenShenCam$Message;
 
+    .line 10
     new-instance v14, Lcom/xiaomi/fenshen/FenShenCam$Message;
 
     const-string v12, "ERROR_RUNTIME"
@@ -168,6 +178,7 @@
 
     sput-object v14, Lcom/xiaomi/fenshen/FenShenCam$Message;->ERROR_RUNTIME:Lcom/xiaomi/fenshen/FenShenCam$Message;
 
+    .line 11
     new-instance v12, Lcom/xiaomi/fenshen/FenShenCam$Message;
 
     const-string v10, "PREVIEW_PERSON"
@@ -178,6 +189,7 @@
 
     sput-object v12, Lcom/xiaomi/fenshen/FenShenCam$Message;->PREVIEW_PERSON:Lcom/xiaomi/fenshen/FenShenCam$Message;
 
+    .line 12
     new-instance v10, Lcom/xiaomi/fenshen/FenShenCam$Message;
 
     const-string v8, "SAVE_VIDEO_SUCCESS"
@@ -188,6 +200,7 @@
 
     sput-object v10, Lcom/xiaomi/fenshen/FenShenCam$Message;->SAVE_VIDEO_SUCCESS:Lcom/xiaomi/fenshen/FenShenCam$Message;
 
+    .line 13
     new-instance v8, Lcom/xiaomi/fenshen/FenShenCam$Message;
 
     const-string v6, "EDIT_DONE"
@@ -198,6 +211,7 @@
 
     sput-object v8, Lcom/xiaomi/fenshen/FenShenCam$Message;->EDIT_DONE:Lcom/xiaomi/fenshen/FenShenCam$Message;
 
+    .line 14
     new-instance v6, Lcom/xiaomi/fenshen/FenShenCam$Message;
 
     const-string v4, "PAUSED"
@@ -208,6 +222,7 @@
 
     sput-object v6, Lcom/xiaomi/fenshen/FenShenCam$Message;->PAUSED:Lcom/xiaomi/fenshen/FenShenCam$Message;
 
+    .line 15
     new-instance v4, Lcom/xiaomi/fenshen/FenShenCam$Message;
 
     const-string v2, "NOPERSON_INCLICKPOS"
@@ -220,6 +235,7 @@
 
     sput-object v4, Lcom/xiaomi/fenshen/FenShenCam$Message;->NOPERSON_INCLICKPOS:Lcom/xiaomi/fenshen/FenShenCam$Message;
 
+    .line 16
     new-instance v2, Lcom/xiaomi/fenshen/FenShenCam$Message;
 
     const-string v6, "EDIT_POS"
@@ -232,6 +248,7 @@
 
     sput-object v2, Lcom/xiaomi/fenshen/FenShenCam$Message;->EDIT_POS:Lcom/xiaomi/fenshen/FenShenCam$Message;
 
+    .line 17
     new-instance v6, Lcom/xiaomi/fenshen/FenShenCam$Message;
 
     const-string v4, "THUMBNAIL_SUCCESS"
@@ -244,6 +261,7 @@
 
     sput-object v6, Lcom/xiaomi/fenshen/FenShenCam$Message;->THUMBNAIL_SUCCESS:Lcom/xiaomi/fenshen/FenShenCam$Message;
 
+    .line 18
     new-instance v4, Lcom/xiaomi/fenshen/FenShenCam$Message;
 
     const-string v2, "PLAY_ONE_TIME"
@@ -256,6 +274,7 @@
 
     sput-object v4, Lcom/xiaomi/fenshen/FenShenCam$Message;->PLAY_ONE_TIME:Lcom/xiaomi/fenshen/FenShenCam$Message;
 
+    .line 19
     new-instance v2, Lcom/xiaomi/fenshen/FenShenCam$Message;
 
     const-string v6, "PLAY_CURRENT_POS"
@@ -346,6 +365,7 @@
 
     aput-object v2, v6, v4
 
+    .line 20
     sput-object v6, Lcom/xiaomi/fenshen/FenShenCam$Message;->$VALUES:[Lcom/xiaomi/fenshen/FenShenCam$Message;
 
     return-void
@@ -353,12 +373,8 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -367,6 +383,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/fenshen/FenShenCam$Message;
     .locals 1
 
+    .line 1
     const-class v0, Lcom/xiaomi/fenshen/FenShenCam$Message;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -381,6 +398,7 @@
 .method public static values()[Lcom/xiaomi/fenshen/FenShenCam$Message;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/fenshen/FenShenCam$Message;->$VALUES:[Lcom/xiaomi/fenshen/FenShenCam$Message;
 
     invoke-virtual {v0}, [Lcom/xiaomi/fenshen/FenShenCam$Message;->clone()Ljava/lang/Object;

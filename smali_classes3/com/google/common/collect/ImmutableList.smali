@@ -56,6 +56,7 @@
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ImmutableList$Itr;
 
     sget-object v1, Lcom/google/common/collect/RegularImmutableList;->EMPTY:Lcom/google/common/collect/ImmutableList;
@@ -72,6 +73,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableCollection;-><init>()V
 
     return-void
@@ -145,6 +147,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ImmutableList$Builder;
 
     invoke-direct {v0}, Lcom/google/common/collect/ImmutableList$Builder;-><init>()V
@@ -169,8 +172,10 @@
 
     const-string v0, "expectedSize"
 
+    .line 1
     invoke-static {p0, v0}, Lcom/google/common/collect/CollectPreconditions;->checkNonnegative(ILjava/lang/String;)I
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/ImmutableList$Builder;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/ImmutableList$Builder;-><init>(I)V
@@ -192,6 +197,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/collect/ObjectArrays;->checkElementsNotNull([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p0
@@ -980,95 +986,95 @@
     .line 13
     array-length v1, v0
 
-    const v2, 0x7ffffff3
+    const/4 v2, 0x1
 
-    const/4 v3, 0x1
+    const/4 v3, 0x0
 
-    const/4 v4, 0x0
+    const v4, 0x7ffffff3
 
-    if-gt v1, v2, :cond_0
+    if-gt v1, v4, :cond_0
 
-    move v1, v3
+    move v1, v2
 
     goto :goto_0
 
     :cond_0
-    move v1, v4
+    move v1, v3
 
     :goto_0
-    const-string v2, "the total number of elements must fit in an int"
+    const-string v4, "the total number of elements must fit in an int"
 
-    invoke-static {v1, v2}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
+    invoke-static {v1, v4}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
     .line 14
     array-length v1, v0
 
-    const/16 v2, 0xc
+    const/16 v4, 0xc
 
-    add-int/2addr v1, v2
+    add-int/2addr v1, v4
 
     new-array v1, v1, [Ljava/lang/Object;
 
     .line 15
-    aput-object p0, v1, v4
+    aput-object p0, v1, v3
 
     .line 16
-    aput-object p1, v1, v3
+    aput-object p1, v1, v2
 
-    const/4 v3, 0x2
+    const/4 v2, 0x2
 
     .line 17
-    aput-object p2, v1, v3
+    aput-object p2, v1, v2
 
-    const/4 v3, 0x3
+    const/4 v2, 0x3
 
     .line 18
-    aput-object p3, v1, v3
+    aput-object p3, v1, v2
 
-    const/4 v3, 0x4
+    const/4 v2, 0x4
 
     .line 19
-    aput-object p4, v1, v3
+    aput-object p4, v1, v2
 
-    const/4 v3, 0x5
+    const/4 v2, 0x5
 
     .line 20
-    aput-object p5, v1, v3
+    aput-object p5, v1, v2
 
-    const/4 v3, 0x6
+    const/4 v2, 0x6
 
     .line 21
-    aput-object p6, v1, v3
+    aput-object p6, v1, v2
 
-    const/4 v3, 0x7
+    const/4 v2, 0x7
 
     .line 22
-    aput-object p7, v1, v3
+    aput-object p7, v1, v2
 
-    const/16 v3, 0x8
+    const/16 v2, 0x8
 
     .line 23
-    aput-object p8, v1, v3
+    aput-object p8, v1, v2
 
-    const/16 v3, 0x9
+    const/16 v2, 0x9
 
     .line 24
-    aput-object p9, v1, v3
+    aput-object p9, v1, v2
 
-    const/16 v3, 0xa
+    const/16 v2, 0xa
 
     .line 25
-    aput-object p10, v1, v3
+    aput-object p10, v1, v2
 
-    const/16 v3, 0xb
+    const/16 v2, 0xb
 
     .line 26
-    aput-object p11, v1, v3
+    aput-object p11, v1, v2
 
     .line 27
-    array-length v3, v0
+    array-length v2, v0
 
-    invoke-static {v0, v4, v1, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-static {v0, v3, v1, v4, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 28
     invoke-static {v1}, Lcom/google/common/collect/ImmutableList;->construct([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
@@ -1086,6 +1092,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/io/InvalidObjectException;
 
     const-string p1, "Use SerializedForm"
@@ -1189,6 +1196,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -1216,6 +1224,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -1250,6 +1259,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableList;->indexOf(Ljava/lang/Object;)I
 
     move-result p0
@@ -1270,6 +1280,7 @@
 .method public copyIntoArray([Ljava/lang/Object;I)I
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
 
     move-result v0
@@ -1281,6 +1292,7 @@
 
     add-int v2, p2, v1
 
+    .line 2
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -1304,6 +1316,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/common/collect/Lists;->equalsImpl(Ljava/util/List;Ljava/lang/Object;)Z
 
     move-result p0
@@ -1314,6 +1327,7 @@
 .method public hashCode()I
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
 
     move-result v0
@@ -1327,6 +1341,7 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
+    .line 2
     invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -1362,6 +1377,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     invoke-static {p0, p1}, Lcom/google/common/collect/Lists;->indexOfImpl(Ljava/util/List;Ljava/lang/Object;)I
 
@@ -1413,6 +1429,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     invoke-static {p0, p1}, Lcom/google/common/collect/Lists;->lastIndexOfImpl(Ljava/util/List;Ljava/lang/Object;)I
 
@@ -1520,6 +1537,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -1537,6 +1555,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
 
     move-result v0
@@ -1576,6 +1595,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -1651,6 +1671,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ImmutableList$SubList;
 
     sub-int/2addr p2, p1
@@ -1663,6 +1684,7 @@
 .method public writeReplace()Ljava/lang/Object;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ImmutableList$SerializedForm;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->toArray()[Ljava/lang/Object;

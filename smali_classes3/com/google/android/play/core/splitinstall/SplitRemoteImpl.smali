@@ -24,13 +24,14 @@
 
 
 # static fields
-.field static final sInstance:Lcom/google/android/play/core/remote/IRemote;
+.field public static final sInstance:Lcom/google/android/play/core/remote/IRemote;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/play/core/splitinstall/SplitRemoteImpl;
 
     invoke-direct {v0}, Lcom/google/android/play/core/splitinstall/SplitRemoteImpl;-><init>()V
@@ -43,6 +44,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

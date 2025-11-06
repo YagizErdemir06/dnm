@@ -31,6 +31,7 @@
 .method public getData()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/util/UserDataAttribute;->data:Ljava/lang/Object;
 
     return-object p0
@@ -39,6 +40,7 @@
 .method public setData(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/util/UserDataAttribute;->data:Ljava/lang/Object;
 
     return-void

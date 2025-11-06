@@ -1,4 +1,4 @@
-.class Lcom/bumptech/glide/load/engine/bitmap_recycle/AttributeStrategy$KeyPool;
+.class public Lcom/bumptech/glide/load/engine/bitmap_recycle/AttributeStrategy$KeyPool;
 .super Lcom/bumptech/glide/load/engine/bitmap_recycle/BaseKeyPool;
 .source "SourceFile"
 
@@ -29,6 +29,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/BaseKeyPool;-><init>()V
 
     return-void
@@ -61,12 +62,14 @@
 .method public get(IILandroid/graphics/Bitmap$Config;)Lcom/bumptech/glide/load/engine/bitmap_recycle/AttributeStrategy$Key;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/bumptech/glide/load/engine/bitmap_recycle/BaseKeyPool;->get()Lcom/bumptech/glide/load/engine/bitmap_recycle/Poolable;
 
     move-result-object p0
 
     check-cast p0, Lcom/bumptech/glide/load/engine/bitmap_recycle/AttributeStrategy$Key;
 
+    .line 2
     invoke-virtual {p0, p1, p2, p3}, Lcom/bumptech/glide/load/engine/bitmap_recycle/AttributeStrategy$Key;->init(IILandroid/graphics/Bitmap$Config;)V
 
     return-object p0

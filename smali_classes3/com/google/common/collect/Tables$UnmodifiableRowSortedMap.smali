@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/Tables$UnmodifiableRowSortedMap;
+.class public final Lcom/google/common/collect/Tables$UnmodifiableRowSortedMap;
 .super Lcom/google/common/collect/Tables$UnmodifiableTable;
 .source "SourceFile"
 
@@ -48,6 +48,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/Tables$UnmodifiableTable;-><init>(Lcom/google/common/collect/Table;)V
 
     return-void

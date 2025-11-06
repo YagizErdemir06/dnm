@@ -14,17 +14,23 @@
     value = "SMAP\nAvatar.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Avatar.kt\ncom/faceunity/core/avatar/model/Avatar\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,507:1\n13571#2,3:508\n13571#2,3:511\n256#3,2:514\n256#3,2:516\n256#3,2:518\n256#3,2:520\n1819#3,2:522\n1819#3,2:524\n1819#3,2:526\n1819#3,2:528\n1819#3,2:530\n*E\n*S KotlinDebug\n*F\n+ 1 Avatar.kt\ncom/faceunity/core/avatar/model/Avatar\n*L\n104#1,3:508\n114#1,3:511\n147#1,2:514\n162#1,2:516\n177#1,2:518\n193#1,2:520\n308#1,2:522\n311#1,2:524\n314#1,2:526\n319#1,2:528\n337#1,2:530\n*E\n"
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000\u00c6\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u000b\n\u0002\u0010 \n\u0002\u0008\u000b\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\u0015\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0007\u0018\u0000 f2\u00020\u0001:\u0001fB\u0015\u0008\u0007\u0012\n\u0008\u0002\u0010c\u001a\u0004\u0018\u00010\u0002\u00a2\u0006\u0004\u0008d\u0010eJ\u0010\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0002JX\u0010\r\u001a\u00020\u00042\"\u0010\t\u001a\u001e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00070\u0006j\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0007`\u00082\"\u0010\n\u001a\u001e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00070\u0006j\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0007`\u00082\u0006\u0010\u000c\u001a\u00020\u000bH\u0002J\u0016\u0010\u0010\u001a\u0012\u0012\u0004\u0012\u00020\u00070\u000ej\u0008\u0012\u0004\u0012\u00020\u0007`\u000fJ\u0012\u0010\u0012\u001a\u0004\u0018\u00010\u00072\u0006\u0010\u0011\u001a\u00020\u0002H\u0007J\u0012\u0010\u0014\u001a\u0004\u0018\u00010\u00072\u0006\u0010\u0013\u001a\u00020\u0002H\u0007J\u001c\u0010\u0016\u001a\u0004\u0018\u00010\u00072\u0006\u0010\u0013\u001a\u00020\u00022\u0008\u0010\u0015\u001a\u0004\u0018\u00010\u0002H\u0007J\u0012\u0010\u0018\u001a\u0004\u0018\u00010\u00072\u0006\u0010\u0017\u001a\u00020\u0002H\u0007J\u001a\u0010\u001a\u001a\u00020\u00042\u0006\u0010\u0019\u001a\u00020\u00072\u0008\u0008\u0002\u0010\u000c\u001a\u00020\u000bH\u0007J \u0010\u001a\u001a\u00020\u00042\u000c\u0010\u001c\u001a\u0008\u0012\u0004\u0012\u00020\u00070\u001b2\u0008\u0008\u0002\u0010\u000c\u001a\u00020\u000bH\u0007J\u001a\u0010\u001d\u001a\u00020\u00042\u0006\u0010\u0019\u001a\u00020\u00072\u0008\u0008\u0002\u0010\u000c\u001a\u00020\u000bH\u0007J \u0010\u001d\u001a\u00020\u00042\u000c\u0010\u001c\u001a\u0008\u0012\u0004\u0012\u00020\u00070\u001b2\u0008\u0008\u0002\u0010\u000c\u001a\u00020\u000bH\u0007J\u0012\u0010\u001e\u001a\u00020\u00042\u0008\u0008\u0002\u0010\u000c\u001a\u00020\u000bH\u0007J$\u0010!\u001a\u00020\u00042\u0006\u0010\u001f\u001a\u00020\u00022\u0008\u0010 \u001a\u0004\u0018\u00010\u00072\u0008\u0008\u0002\u0010\u000c\u001a\u00020\u000bH\u0007J&\u0010!\u001a\u00020\u00042\u0008\u0010\"\u001a\u0004\u0018\u00010\u00072\u0008\u0010 \u001a\u0004\u0018\u00010\u00072\u0008\u0008\u0002\u0010\u000c\u001a\u00020\u000bH\u0007J.\u0010!\u001a\u00020\u00042\u000c\u0010#\u001a\u0008\u0012\u0004\u0012\u00020\u00070\u001b2\u000c\u0010$\u001a\u0008\u0012\u0004\u0012\u00020\u00070\u001b2\u0008\u0008\u0002\u0010\u000c\u001a\u00020\u000bH\u0007J.\u0010&\u001a\u00020\u00042\u000c\u0010%\u001a\u0008\u0012\u0004\u0012\u00020\u00020\u001b2\u000c\u0010$\u001a\u0008\u0012\u0004\u0012\u00020\u00070\u001b2\u0008\u0008\u0002\u0010\u000c\u001a\u00020\u000bH\u0007J \u0010+\u001a\u0004\u0018\u00010*2\u0006\u0010(\u001a\u00020\'2\u000c\u0010)\u001a\u0008\u0012\u0004\u0012\u00020\u00020\u001bH\u0007J.\u0010+\u001a\u00020\u00042\u0006\u0010(\u001a\u00020\'2\u000c\u0010)\u001a\u0008\u0012\u0004\u0012\u00020\u00020\u001b2\u0006\u0010-\u001a\u00020,2\u0008\u0008\u0002\u0010\u000c\u001a\u00020\u000bJ\u0012\u0010/\u001a\u0004\u0018\u00010\u00022\u0006\u0010.\u001a\u00020\u0002H\u0007J\u001d\u00104\u001a\u00020\u00042\u000c\u00101\u001a\u0008\u0012\u0004\u0012\u00020\u000400H\u0000\u00a2\u0006\u0004\u00082\u00103J\u000f\u00108\u001a\u000205H\u0000\u00a2\u0006\u0004\u00086\u00107J\u0008\u00109\u001a\u00020\u0000H\u0007J\u000f\u0010=\u001a\u00020:H\u0001\u00a2\u0006\u0004\u0008;\u0010<R*\u0010>\u001a\u0012\u0012\u0004\u0012\u00020\u00070\u000ej\u0008\u0012\u0004\u0012\u00020\u0007`\u000f8\u0000X\u0080\u0004\u00a2\u0006\u000c\n\u0004\u0008>\u0010?\u001a\u0004\u0008@\u0010AR\u0014\u0010C\u001a\u00020B8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008C\u0010DR\u0014\u0010F\u001a\u00020E8\u0006X\u0087\u0004\u00a2\u0006\u0006\n\u0004\u0008F\u0010GR\u0014\u0010I\u001a\u00020H8\u0006X\u0087\u0004\u00a2\u0006\u0006\n\u0004\u0008I\u0010JR\u0014\u0010L\u001a\u00020K8\u0006X\u0087\u0004\u00a2\u0006\u0006\n\u0004\u0008L\u0010MR\u0014\u0010O\u001a\u00020N8\u0006X\u0087\u0004\u00a2\u0006\u0006\n\u0004\u0008O\u0010PR\u0014\u0010R\u001a\u00020Q8\u0006X\u0087\u0004\u00a2\u0006\u0006\n\u0004\u0008R\u0010SR\u0014\u0010U\u001a\u00020T8\u0006X\u0087\u0004\u00a2\u0006\u0006\n\u0004\u0008U\u0010VR\u0014\u0010X\u001a\u00020W8\u0006X\u0087\u0004\u00a2\u0006\u0006\n\u0004\u0008X\u0010YR\u0014\u0010[\u001a\u00020Z8\u0006X\u0087\u0004\u00a2\u0006\u0006\n\u0004\u0008[\u0010\\R\u0014\u0010^\u001a\u00020]8\u0006X\u0087\u0004\u00a2\u0006\u0006\n\u0004\u0008^\u0010_R\u0014\u0010a\u001a\u00020`8\u0006X\u0087\u0004\u00a2\u0006\u0006\n\u0004\u0008a\u0010b\u00a8\u0006g"
+        "\u0000\u00ca\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u000f\n\u0002\u0010 \n\u0002\u0008\u0010\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u0015\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0006\u0018\u0000 s2\u00020\u0001:\u0001sB\u0015\u0008\u0007\u0012\n\u0008\u0002\u0010q\u001a\u0004\u0018\u00010\u0002\u00a2\u0006\u0004\u0008r\u0010\u0006J\u0017\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0002\u00a2\u0006\u0004\u0008\u0005\u0010\u0006J_\u0010\u000e\u001a\u00020\u00042\"\u0010\n\u001a\u001e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00080\u0007j\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0008`\t2\"\u0010\u000b\u001a\u001e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00080\u0007j\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0008`\t2\u0006\u0010\r\u001a\u00020\u000cH\u0002\u00a2\u0006\u0004\u0008\u000e\u0010\u000fJ\u001d\u0010\u0012\u001a\u0012\u0012\u0004\u0012\u00020\u00080\u0010j\u0008\u0012\u0004\u0012\u00020\u0008`\u0011\u00a2\u0006\u0004\u0008\u0012\u0010\u0013J\u0019\u0010\u0015\u001a\u0004\u0018\u00010\u00082\u0006\u0010\u0014\u001a\u00020\u0002H\u0007\u00a2\u0006\u0004\u0008\u0015\u0010\u0016J\u0019\u0010\u0018\u001a\u0004\u0018\u00010\u00082\u0006\u0010\u0017\u001a\u00020\u0002H\u0007\u00a2\u0006\u0004\u0008\u0018\u0010\u0016J#\u0010\u001a\u001a\u0004\u0018\u00010\u00082\u0006\u0010\u0017\u001a\u00020\u00022\u0008\u0010\u0019\u001a\u0004\u0018\u00010\u0002H\u0007\u00a2\u0006\u0004\u0008\u001a\u0010\u001bJ\u0019\u0010\u001d\u001a\u0004\u0018\u00010\u00082\u0006\u0010\u001c\u001a\u00020\u0002H\u0007\u00a2\u0006\u0004\u0008\u001d\u0010\u0016J!\u0010\u001f\u001a\u00020\u00042\u0006\u0010\u001e\u001a\u00020\u00082\u0008\u0008\u0002\u0010\r\u001a\u00020\u000cH\u0007\u00a2\u0006\u0004\u0008\u001f\u0010 J\'\u0010\u001f\u001a\u00020\u00042\u000c\u0010\"\u001a\u0008\u0012\u0004\u0012\u00020\u00080!2\u0008\u0008\u0002\u0010\r\u001a\u00020\u000cH\u0007\u00a2\u0006\u0004\u0008\u001f\u0010#J!\u0010$\u001a\u00020\u00042\u0006\u0010\u001e\u001a\u00020\u00082\u0008\u0008\u0002\u0010\r\u001a\u00020\u000cH\u0007\u00a2\u0006\u0004\u0008$\u0010 J\'\u0010$\u001a\u00020\u00042\u000c\u0010\"\u001a\u0008\u0012\u0004\u0012\u00020\u00080!2\u0008\u0008\u0002\u0010\r\u001a\u00020\u000cH\u0007\u00a2\u0006\u0004\u0008$\u0010#J\u0019\u0010%\u001a\u00020\u00042\u0008\u0008\u0002\u0010\r\u001a\u00020\u000cH\u0007\u00a2\u0006\u0004\u0008%\u0010&J+\u0010)\u001a\u00020\u00042\u0006\u0010\'\u001a\u00020\u00022\u0008\u0010(\u001a\u0004\u0018\u00010\u00082\u0008\u0008\u0002\u0010\r\u001a\u00020\u000cH\u0007\u00a2\u0006\u0004\u0008)\u0010*J-\u0010)\u001a\u00020\u00042\u0008\u0010+\u001a\u0004\u0018\u00010\u00082\u0008\u0010(\u001a\u0004\u0018\u00010\u00082\u0008\u0008\u0002\u0010\r\u001a\u00020\u000cH\u0007\u00a2\u0006\u0004\u0008)\u0010,J5\u0010)\u001a\u00020\u00042\u000c\u0010-\u001a\u0008\u0012\u0004\u0012\u00020\u00080!2\u000c\u0010.\u001a\u0008\u0012\u0004\u0012\u00020\u00080!2\u0008\u0008\u0002\u0010\r\u001a\u00020\u000cH\u0007\u00a2\u0006\u0004\u0008)\u0010/J5\u00101\u001a\u00020\u00042\u000c\u00100\u001a\u0008\u0012\u0004\u0012\u00020\u00020!2\u000c\u0010.\u001a\u0008\u0012\u0004\u0012\u00020\u00080!2\u0008\u0008\u0002\u0010\r\u001a\u00020\u000cH\u0007\u00a2\u0006\u0004\u00081\u0010/J\'\u00106\u001a\u0004\u0018\u0001052\u0006\u00103\u001a\u0002022\u000c\u00104\u001a\u0008\u0012\u0004\u0012\u00020\u00020!H\u0007\u00a2\u0006\u0004\u00086\u00107J5\u00106\u001a\u00020\u00042\u0006\u00103\u001a\u0002022\u000c\u00104\u001a\u0008\u0012\u0004\u0012\u00020\u00020!2\u0006\u00109\u001a\u0002082\u0008\u0008\u0002\u0010\r\u001a\u00020\u000c\u00a2\u0006\u0004\u00086\u0010:J\u0019\u0010<\u001a\u0004\u0018\u00010\u00022\u0006\u0010;\u001a\u00020\u0002H\u0007\u00a2\u0006\u0004\u0008<\u0010=J\u001d\u0010B\u001a\u00020\u00042\u000c\u0010?\u001a\u0008\u0012\u0004\u0012\u00020\u00040>H\u0000\u00a2\u0006\u0004\u0008@\u0010AJ\u000f\u0010F\u001a\u00020CH\u0000\u00a2\u0006\u0004\u0008D\u0010EJ\u000f\u0010G\u001a\u00020\u0000H\u0007\u00a2\u0006\u0004\u0008G\u0010HJ\u000f\u0010L\u001a\u00020IH\u0001\u00a2\u0006\u0004\u0008J\u0010KR\u0016\u0010N\u001a\u00020M8\u0006@\u0007X\u0087\u0004\u00a2\u0006\u0006\n\u0004\u0008N\u0010OR\u0016\u0010Q\u001a\u00020P8\u0006@\u0007X\u0087\u0004\u00a2\u0006\u0006\n\u0004\u0008Q\u0010RR\u0016\u0010T\u001a\u00020S8\u0006@\u0007X\u0087\u0004\u00a2\u0006\u0006\n\u0004\u0008T\u0010UR\u0016\u0010W\u001a\u00020V8\u0006@\u0007X\u0087\u0004\u00a2\u0006\u0006\n\u0004\u0008W\u0010XR\u0016\u0010Z\u001a\u00020Y8\u0006@\u0007X\u0087\u0004\u00a2\u0006\u0006\n\u0004\u0008Z\u0010[R\u0016\u0010]\u001a\u00020\\8\u0006@\u0007X\u0087\u0004\u00a2\u0006\u0006\n\u0004\u0008]\u0010^R\u0016\u0010`\u001a\u00020_8\u0006@\u0007X\u0087\u0004\u00a2\u0006\u0006\n\u0004\u0008`\u0010aR\u0016\u0010c\u001a\u00020b8\u0002@\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008c\u0010dR\u0016\u0010f\u001a\u00020e8\u0006@\u0007X\u0087\u0004\u00a2\u0006\u0006\n\u0004\u0008f\u0010gR\u0016\u0010i\u001a\u00020h8\u0006@\u0007X\u0087\u0004\u00a2\u0006\u0006\n\u0004\u0008i\u0010jR,\u0010k\u001a\u0012\u0012\u0004\u0012\u00020\u00080\u0010j\u0008\u0012\u0004\u0012\u00020\u0008`\u00118\u0000@\u0000X\u0080\u0004\u00a2\u0006\u000c\n\u0004\u0008k\u0010l\u001a\u0004\u0008m\u0010\u0013R\u0016\u0010o\u001a\u00020n8\u0006@\u0007X\u0087\u0004\u00a2\u0006\u0006\n\u0004\u0008o\u0010p\u00a8\u0006t"
     }
     d2 = {
         "Lcom/faceunity/core/avatar/model/Avatar;",
         "Lcom/faceunity/core/avatar/base/BaseAvatarAttribute;",
         "",
         "json",
-        "Lnm/l2;",
+        "Lh/l2;",
         "initAvatarFromJson",
+        "(Ljava/lang/String;)V",
         "Ljava/util/HashMap;",
         "Lcom/faceunity/core/entity/FUBundleData;",
         "Lkotlin/collections/HashMap;",
@@ -33,29 +39,39 @@
         "",
         "needBackgroundThread",
         "doReplaceAvatarBundle",
+        "(Ljava/util/HashMap;Ljava/util/HashMap;Z)V",
         "Ljava/util/ArrayList;",
         "Lkotlin/collections/ArrayList;",
         "getComponents",
+        "()Ljava/util/ArrayList;",
         "componentName",
         "getComponent",
+        "(Ljava/lang/String;)Lcom/faceunity/core/entity/FUBundleData;",
         "componentPath",
         "getComponentByPath",
         "slot",
         "getComponentByPathAndSlot",
+        "(Ljava/lang/String;Ljava/lang/String;)Lcom/faceunity/core/entity/FUBundleData;",
         "componentFileId",
         "getComponentByFileId",
         "component",
         "addComponent",
+        "(Lcom/faceunity/core/entity/FUBundleData;Z)V",
         "",
         "components",
+        "(Ljava/util/List;Z)V",
         "removeComponent",
         "removeAllComponents",
+        "(Z)V",
         "oldComponentName",
         "newComponent",
         "replaceComponent",
+        "(Ljava/lang/String;Lcom/faceunity/core/entity/FUBundleData;Z)V",
         "oldComponent",
+        "(Lcom/faceunity/core/entity/FUBundleData;Lcom/faceunity/core/entity/FUBundleData;Z)V",
         "oldComponents",
         "newComponents",
+        "(Ljava/util/List;Ljava/util/List;Z)V",
         "oldComponentNames",
         "replaceComponentByName",
         "Lcom/faceunity/core/enumeration/FUInstanceBundleOPEnum;",
@@ -63,64 +79,66 @@
         "componentFileIds",
         "Lcom/faceunity/core/entity/FUAvatarComponentModifyResult;",
         "getComponentModifyResult",
+        "(Lcom/faceunity/core/enumeration/FUInstanceBundleOPEnum;Ljava/util/List;)Lcom/faceunity/core/entity/FUAvatarComponentModifyResult;",
         "Lcom/faceunity/core/listener/OnAvatarModifyListener;",
         "listener",
+        "(Lcom/faceunity/core/enumeration/FUInstanceBundleOPEnum;Ljava/util/List;Lcom/faceunity/core/listener/OnAvatarModifyListener;Z)V",
         "name",
         "getAvatarJson",
+        "(Ljava/lang/String;)Ljava/lang/String;",
         "Lkotlin/Function0;",
         "unit",
         "reentrantLock$lib_core_release",
-        "(Ljn/a;)V",
+        "(Lh/d3/w/a;)V",
         "reentrantLock",
         "Lcom/faceunity/core/avatar/entity/FUAAvatarData;",
         "buildFUAAvatarData$lib_core_release",
         "()Lcom/faceunity/core/avatar/entity/FUAAvatarData;",
         "buildFUAAvatarData",
         "clone",
+        "()Lcom/faceunity/core/avatar/model/Avatar;",
         "",
         "getComponentInvisibleList$lib_core_release",
         "()[I",
         "getComponentInvisibleList",
-        "mComponents",
-        "Ljava/util/ArrayList;",
-        "getMComponents$lib_core_release",
-        "()Ljava/util/ArrayList;",
-        "Ljava/util/concurrent/locks/ReentrantLock;",
-        "mComponentsLock",
-        "Ljava/util/concurrent/locks/ReentrantLock;",
-        "Lcom/faceunity/core/avatar/avatar/AnimationGraph;",
-        "animationGraph",
-        "Lcom/faceunity/core/avatar/avatar/AnimationGraph;",
-        "Lcom/faceunity/core/avatar/avatar/Animation;",
-        "animation",
-        "Lcom/faceunity/core/avatar/avatar/Animation;",
-        "Lcom/faceunity/core/avatar/avatar/TransForm;",
-        "transForm",
-        "Lcom/faceunity/core/avatar/avatar/TransForm;",
         "Lcom/faceunity/core/avatar/avatar/BlendShape;",
         "blendShape",
         "Lcom/faceunity/core/avatar/avatar/BlendShape;",
-        "Lcom/faceunity/core/avatar/avatar/Color;",
-        "color",
-        "Lcom/faceunity/core/avatar/avatar/Color;",
+        "Lcom/faceunity/core/avatar/avatar/ProcessorConfig;",
+        "processorConfig",
+        "Lcom/faceunity/core/avatar/avatar/ProcessorConfig;",
         "Lcom/faceunity/core/avatar/avatar/Deformation;",
         "deformation",
         "Lcom/faceunity/core/avatar/avatar/Deformation;",
-        "Lcom/faceunity/core/avatar/avatar/DynamicBone;",
-        "dynamicBone",
-        "Lcom/faceunity/core/avatar/avatar/DynamicBone;",
+        "Lcom/faceunity/core/avatar/avatar/TransForm;",
+        "transForm",
+        "Lcom/faceunity/core/avatar/avatar/TransForm;",
+        "Lcom/faceunity/core/avatar/avatar/Color;",
+        "color",
+        "Lcom/faceunity/core/avatar/avatar/Color;",
         "Lcom/faceunity/core/avatar/avatar/EyeFocusToCamera;",
         "eyeFocusToCamera",
         "Lcom/faceunity/core/avatar/avatar/EyeFocusToCamera;",
         "Lcom/faceunity/core/avatar/avatar/FacePup;",
         "facePup",
         "Lcom/faceunity/core/avatar/avatar/FacePup;",
-        "Lcom/faceunity/core/avatar/avatar/ProcessorConfig;",
-        "processorConfig",
-        "Lcom/faceunity/core/avatar/avatar/ProcessorConfig;",
+        "Ljava/util/concurrent/locks/ReentrantLock;",
+        "mComponentsLock",
+        "Ljava/util/concurrent/locks/ReentrantLock;",
+        "Lcom/faceunity/core/avatar/avatar/Animation;",
+        "animation",
+        "Lcom/faceunity/core/avatar/avatar/Animation;",
+        "Lcom/faceunity/core/avatar/avatar/AnimationGraph;",
+        "animationGraph",
+        "Lcom/faceunity/core/avatar/avatar/AnimationGraph;",
+        "mComponents",
+        "Ljava/util/ArrayList;",
+        "getMComponents$lib_core_release",
+        "Lcom/faceunity/core/avatar/avatar/DynamicBone;",
+        "dynamicBone",
+        "Lcom/faceunity/core/avatar/avatar/DynamicBone;",
         "avatarJson",
         "<init>",
-        "(Ljava/lang/String;)V",
         "Companion",
         "lib_core_release"
     }
@@ -135,78 +153,78 @@
 
 # static fields
 .field public static final Companion:Lcom/faceunity/core/avatar/model/Avatar$Companion;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field public static final TAG:Ljava/lang/String; = "KIT_Avatar"
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 
 # instance fields
 .field public final animation:Lcom/faceunity/core/avatar/avatar/Animation;
-    .annotation build Lin/e;
+    .annotation build Lh/d3/e;
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field public final animationGraph:Lcom/faceunity/core/avatar/avatar/AnimationGraph;
-    .annotation build Lin/e;
+    .annotation build Lh/d3/e;
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field public final blendShape:Lcom/faceunity/core/avatar/avatar/BlendShape;
-    .annotation build Lin/e;
+    .annotation build Lh/d3/e;
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field public final color:Lcom/faceunity/core/avatar/avatar/Color;
-    .annotation build Lin/e;
+    .annotation build Lh/d3/e;
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field public final deformation:Lcom/faceunity/core/avatar/avatar/Deformation;
-    .annotation build Lin/e;
+    .annotation build Lh/d3/e;
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field public final dynamicBone:Lcom/faceunity/core/avatar/avatar/DynamicBone;
-    .annotation build Lin/e;
+    .annotation build Lh/d3/e;
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field public final eyeFocusToCamera:Lcom/faceunity/core/avatar/avatar/EyeFocusToCamera;
-    .annotation build Lin/e;
+    .annotation build Lh/d3/e;
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field public final facePup:Lcom/faceunity/core/avatar/avatar/FacePup;
-    .annotation build Lin/e;
+    .annotation build Lh/d3/e;
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -219,25 +237,25 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field private final mComponentsLock:Ljava/util/concurrent/locks/ReentrantLock;
 
 .field public final processorConfig:Lcom/faceunity/core/avatar/avatar/ProcessorConfig;
-    .annotation build Lin/e;
+    .annotation build Lh/d3/e;
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field public final transForm:Lcom/faceunity/core/avatar/avatar/TransForm;
-    .annotation build Lin/e;
+    .annotation build Lh/d3/e;
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -250,7 +268,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/faceunity/core/avatar/model/Avatar$Companion;-><init>(Lkotlin/jvm/internal/w;)V
+    invoke-direct {v0, v1}, Lcom/faceunity/core/avatar/model/Avatar$Companion;-><init>(Lh/d3/x/w;)V
 
     sput-object v0, Lcom/faceunity/core/avatar/model/Avatar;->Companion:Lcom/faceunity/core/avatar/model/Avatar$Companion;
 
@@ -259,14 +277,14 @@
 
 .method public constructor <init>()V
     .locals 2
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
-    invoke-direct {p0, v0, v1, v0}, Lcom/faceunity/core/avatar/model/Avatar;-><init>(Ljava/lang/String;ILkotlin/jvm/internal/w;)V
+    invoke-direct {p0, v0, v1, v0}, Lcom/faceunity/core/avatar/model/Avatar;-><init>(Ljava/lang/String;ILh/d3/x/w;)V
 
     return-void
 .end method
@@ -274,10 +292,10 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 12
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     .line 1
@@ -458,7 +476,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;ILkotlin/jvm/internal/w;)V
+.method public synthetic constructor <init>(Ljava/lang/String;ILh/d3/x/w;)V
     .locals 0
 
     and-int/lit8 p2, p2, 0x1
@@ -522,14 +540,17 @@
         }
     .end annotation
 
+    .line 1
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
+    .line 2
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
+    .line 3
     new-instance v8, Lcom/faceunity/core/avatar/model/Avatar$doReplaceAvatarBundle$1;
 
     move-object v0, v8
@@ -546,8 +567,9 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/faceunity/core/avatar/model/Avatar$doReplaceAvatarBundle$1;-><init>(Lcom/faceunity/core/avatar/model/Avatar;Ljava/util/HashMap;Ljava/util/ArrayList;Ljava/util/HashMap;Ljava/util/ArrayList;)V
 
-    invoke-virtual {p0, v8}, Lcom/faceunity/core/avatar/model/Avatar;->reentrantLock$lib_core_release(Ljn/a;)V
+    invoke-virtual {p0, v8}, Lcom/faceunity/core/avatar/model/Avatar;->reentrantLock$lib_core_release(Lh/d3/w/a;)V
 
+    .line 4
     invoke-virtual {p0}, Lcom/faceunity/core/avatar/base/BaseAvatarAttribute;->getHasLoaded$lib_core_release()Z
 
     move-result p1
@@ -556,6 +578,7 @@
 
     return-void
 
+    .line 5
     :cond_0
     invoke-virtual {p0}, Lcom/faceunity/core/avatar/base/BaseAvatarAttribute;->getMFUAvatarController$lib_core_release()Lcom/faceunity/core/avatar/control/AvatarController;
 
@@ -589,6 +612,7 @@
 
     const/4 p4, 0x1
 
+    .line 1
     :cond_0
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/faceunity/core/avatar/model/Avatar;->getComponentModifyResult(Lcom/faceunity/core/enumeration/FUInstanceBundleOPEnum;Ljava/util/List;Lcom/faceunity/core/listener/OnAvatarModifyListener;Z)V
 
@@ -598,6 +622,7 @@
 .method private final initAvatarFromJson(Ljava/lang/String;)V
     .locals 14
 
+    .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/avatar/base/BaseAvatarAttribute;->getMFUAvatarController$lib_core_release()Lcom/faceunity/core/avatar/control/AvatarController;
 
     move-result-object v0
@@ -608,12 +633,14 @@
 
     if-eqz p1, :cond_3
 
+    .line 2
     new-instance v0, Lcom/faceunity/core/avatar/model/Avatar$initAvatarFromJson$$inlined$apply$lambda$1;
 
     invoke-direct {v0, p1, p0}, Lcom/faceunity/core/avatar/model/Avatar$initAvatarFromJson$$inlined$apply$lambda$1;-><init>(Lcom/faceunity/wrapper/faceunity$AvatarSetting;Lcom/faceunity/core/avatar/model/Avatar;)V
 
-    invoke-virtual {p0, v0}, Lcom/faceunity/core/avatar/model/Avatar;->reentrantLock$lib_core_release(Ljn/a;)V
+    invoke-virtual {p0, v0}, Lcom/faceunity/core/avatar/model/Avatar;->reentrantLock$lib_core_release(Lh/d3/w/a;)V
 
+    .line 3
     iget-object v0, p1, Lcom/faceunity/wrapper/faceunity$AvatarSetting;->mColorListName:[Ljava/lang/String;
 
     const-string v1, "name"
@@ -622,10 +649,12 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     iget-object v3, p1, Lcom/faceunity/wrapper/faceunity$AvatarSetting;->mColorList:[[I
 
     if-eqz v3, :cond_1
 
+    .line 5
     array-length v4, v0
 
     move v5, v2
@@ -639,23 +668,26 @@
 
     add-int/lit8 v13, v6, 0x1
 
+    .line 6
     array-length v7, v3
 
     if-le v7, v6, :cond_0
 
+    .line 7
     new-instance v9, Lcom/faceunity/core/entity/FUColorRGBData;
 
     aget-object v6, v3, v6
 
     const-string v7, "colors[index]"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v9, v6}, Lcom/faceunity/core/entity/FUColorRGBData;-><init>([I)V
 
+    .line 8
     iget-object v7, p0, Lcom/faceunity/core/avatar/model/Avatar;->color:Lcom/faceunity/core/avatar/avatar/Color;
 
-    invoke-static {v8, v1}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v1}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v10, 0x0
 
@@ -672,15 +704,18 @@
 
     goto :goto_0
 
+    .line 9
     :cond_1
     iget-object v0, p1, Lcom/faceunity/wrapper/faceunity$AvatarSetting;->mBoneControllerName:[Ljava/lang/String;
 
     if-eqz v0, :cond_3
 
+    .line 10
     iget-object p1, p1, Lcom/faceunity/wrapper/faceunity$AvatarSetting;->mBoneControllerValue:[F
 
     if-eqz p1, :cond_3
 
+    .line 11
     array-length v3, v0
 
     move v4, v2
@@ -692,13 +727,15 @@
 
     add-int/lit8 v11, v4, 0x1
 
+    .line 12
     array-length v5, p1
 
     if-le v5, v4, :cond_2
 
+    .line 13
     iget-object v5, p0, Lcom/faceunity/core/avatar/model/Avatar;->deformation:Lcom/faceunity/core/avatar/avatar/Deformation;
 
-    invoke-static {v6, v1}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v1}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     aget v7, p1, v4
 
@@ -732,6 +769,7 @@
 
     move p1, p3
 
+    .line 1
     :cond_0
     invoke-virtual {p0, p1}, Lcom/faceunity/core/avatar/model/Avatar;->removeAllComponents(Z)V
 
@@ -827,6 +865,7 @@
 
     const/4 p3, 0x1
 
+    .line 1
     :cond_0
     invoke-virtual {p0, p1, p2, p3}, Lcom/faceunity/core/avatar/model/Avatar;->replaceComponentByName(Ljava/util/List;Ljava/util/List;Z)V
 
@@ -838,19 +877,19 @@
 .method public final addComponent(Lcom/faceunity/core/entity/FUBundleData;)V
     .locals 3
     .param p1    # Lcom/faceunity/core/entity/FUBundleData;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
-    const/4 v0, 0x2
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    const/4 v1, 0x2
 
     const/4 v2, 0x0
 
-    invoke-static {p0, p1, v2, v0, v1}, Lcom/faceunity/core/avatar/model/Avatar;->addComponent$default(Lcom/faceunity/core/avatar/model/Avatar;Lcom/faceunity/core/entity/FUBundleData;ZILjava/lang/Object;)V
+    invoke-static {p0, p1, v0, v1, v2}, Lcom/faceunity/core/avatar/model/Avatar;->addComponent$default(Lcom/faceunity/core/avatar/model/Avatar;Lcom/faceunity/core/entity/FUBundleData;ZILjava/lang/Object;)V
 
     return-void
 .end method
@@ -858,15 +897,15 @@
 .method public final addComponent(Lcom/faceunity/core/entity/FUBundleData;Z)V
     .locals 1
     .param p1    # Lcom/faceunity/core/entity/FUBundleData;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const-string v0, "component"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -879,7 +918,7 @@
 .method public final addComponent(Ljava/util/List;)V
     .locals 3
     .param p1    # Ljava/util/List;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
@@ -892,16 +931,16 @@
         }
     .end annotation
 
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
-    const/4 v0, 0x2
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    const/4 v1, 0x2
 
     const/4 v2, 0x0
 
-    invoke-static {p0, p1, v2, v0, v1}, Lcom/faceunity/core/avatar/model/Avatar;->addComponent$default(Lcom/faceunity/core/avatar/model/Avatar;Ljava/util/List;ZILjava/lang/Object;)V
+    invoke-static {p0, p1, v0, v1, v2}, Lcom/faceunity/core/avatar/model/Avatar;->addComponent$default(Lcom/faceunity/core/avatar/model/Avatar;Ljava/util/List;ZILjava/lang/Object;)V
 
     return-void
 .end method
@@ -909,7 +948,7 @@
 .method public final addComponent(Ljava/util/List;Z)V
     .locals 1
     .param p1    # Ljava/util/List;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
@@ -922,12 +961,12 @@
         }
     .end annotation
 
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const-string v0, "components"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     new-instance v0, Ljava/util/ArrayList;
@@ -941,39 +980,47 @@
 
 .method public final buildFUAAvatarData$lib_core_release()Lcom/faceunity/core/avatar/entity/FUAAvatarData;
     .locals 9
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     new-instance v5, Ljava/util/LinkedHashMap;
 
     invoke-direct {v5}, Ljava/util/LinkedHashMap;-><init>()V
 
+    .line 2
     new-instance v6, Ljava/util/LinkedHashMap;
 
     invoke-direct {v6}, Ljava/util/LinkedHashMap;-><init>()V
 
+    .line 3
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
+    .line 4
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
+    .line 5
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
+    .line 6
     new-instance v0, Lcom/faceunity/core/avatar/model/Avatar$buildFUAAvatarData$1;
 
     invoke-direct {v0, p0, v3}, Lcom/faceunity/core/avatar/model/Avatar$buildFUAAvatarData$1;-><init>(Lcom/faceunity/core/avatar/model/Avatar;Ljava/util/ArrayList;)V
 
-    invoke-virtual {p0, v0}, Lcom/faceunity/core/avatar/model/Avatar;->reentrantLock$lib_core_release(Ljn/a;)V
+    invoke-virtual {p0, v0}, Lcom/faceunity/core/avatar/model/Avatar;->reentrantLock$lib_core_release(Lh/d3/w/a;)V
 
+    .line 7
     invoke-virtual {p0}, Lcom/faceunity/core/avatar/model/Avatar;->getComponentInvisibleList$lib_core_release()[I
 
     move-result-object v0
 
+    .line 8
     new-instance v1, Lcom/faceunity/core/avatar/model/Avatar$buildFUAAvatarData$2;
 
     invoke-direct {v1, p0, v0}, Lcom/faceunity/core/avatar/model/Avatar$buildFUAAvatarData$2;-><init>(Lcom/faceunity/core/avatar/model/Avatar;[I)V
@@ -982,50 +1029,62 @@
 
     invoke-interface {v5, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 9
     iget-object v0, p0, Lcom/faceunity/core/avatar/model/Avatar;->transForm:Lcom/faceunity/core/avatar/avatar/TransForm;
 
     invoke-virtual {v0, v5}, Lcom/faceunity/core/avatar/avatar/TransForm;->loadParams$lib_core_release(Ljava/util/LinkedHashMap;)V
 
+    .line 10
     iget-object v0, p0, Lcom/faceunity/core/avatar/model/Avatar;->animationGraph:Lcom/faceunity/core/avatar/avatar/AnimationGraph;
 
     invoke-virtual {v0, v5, v6}, Lcom/faceunity/core/avatar/avatar/AnimationGraph;->loadParams$lib_core_release(Ljava/util/LinkedHashMap;Ljava/util/LinkedHashMap;)V
 
+    .line 11
     iget-object v0, p0, Lcom/faceunity/core/avatar/model/Avatar;->animation:Lcom/faceunity/core/avatar/avatar/Animation;
 
     invoke-virtual {v0, v4, v7, v5}, Lcom/faceunity/core/avatar/avatar/Animation;->loadParams$lib_core_release(Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/LinkedHashMap;)V
 
+    .line 12
     iget-object v0, p0, Lcom/faceunity/core/avatar/model/Avatar;->blendShape:Lcom/faceunity/core/avatar/avatar/BlendShape;
 
     invoke-virtual {v0, v5}, Lcom/faceunity/core/avatar/avatar/BlendShape;->loadParams$lib_core_release(Ljava/util/LinkedHashMap;)V
 
+    .line 13
     iget-object v0, p0, Lcom/faceunity/core/avatar/model/Avatar;->dynamicBone:Lcom/faceunity/core/avatar/avatar/DynamicBone;
 
     invoke-virtual {v0, v5}, Lcom/faceunity/core/avatar/avatar/DynamicBone;->loadParams$lib_core_release(Ljava/util/LinkedHashMap;)V
 
+    .line 14
     iget-object v0, p0, Lcom/faceunity/core/avatar/model/Avatar;->eyeFocusToCamera:Lcom/faceunity/core/avatar/avatar/EyeFocusToCamera;
 
     invoke-virtual {v0, v5}, Lcom/faceunity/core/avatar/avatar/EyeFocusToCamera;->loadParams$lib_core_release(Ljava/util/LinkedHashMap;)V
 
+    .line 15
     iget-object v0, p0, Lcom/faceunity/core/avatar/model/Avatar;->color:Lcom/faceunity/core/avatar/avatar/Color;
 
     invoke-virtual {v0, v5}, Lcom/faceunity/core/avatar/avatar/Color;->loadParams$lib_core_release(Ljava/util/LinkedHashMap;)V
 
+    .line 16
     iget-object v0, p0, Lcom/faceunity/core/avatar/model/Avatar;->facePup:Lcom/faceunity/core/avatar/avatar/FacePup;
 
     invoke-virtual {v0, v5}, Lcom/faceunity/core/avatar/avatar/FacePup;->loadParams$lib_core_release(Ljava/util/LinkedHashMap;)V
 
+    .line 17
     iget-object v0, p0, Lcom/faceunity/core/avatar/model/Avatar;->deformation:Lcom/faceunity/core/avatar/avatar/Deformation;
 
     invoke-virtual {v0, v5}, Lcom/faceunity/core/avatar/avatar/Deformation;->loadParams$lib_core_release(Ljava/util/LinkedHashMap;)V
 
+    .line 18
     iget-object v0, p0, Lcom/faceunity/core/avatar/model/Avatar;->processorConfig:Lcom/faceunity/core/avatar/avatar/ProcessorConfig;
 
     invoke-virtual {v0, v5}, Lcom/faceunity/core/avatar/avatar/ProcessorConfig;->loadParams$lib_core_release(Ljava/util/LinkedHashMap;)V
 
     const/4 v0, 0x1
 
+    .line 19
     invoke-virtual {p0, v0}, Lcom/faceunity/core/avatar/base/BaseAvatarAttribute;->setHasLoaded$lib_core_release(Z)V
 
+    .line 20
     new-instance v8, Lcom/faceunity/core/avatar/entity/FUAAvatarData;
 
     invoke-virtual {p0}, Lcom/faceunity/core/avatar/base/BaseAvatarAttribute;->getMAvatarId$lib_core_release()J
@@ -1041,81 +1100,94 @@
 
 .method public final clone()Lcom/faceunity/core/avatar/model/Avatar;
     .locals 5
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/avatar/model/Avatar;->getComponents()Ljava/util/ArrayList;
 
     move-result-object v0
 
+    .line 2
     new-instance v1, Lcom/faceunity/core/avatar/model/Avatar;
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, v3, v2, v3}, Lcom/faceunity/core/avatar/model/Avatar;-><init>(Ljava/lang/String;ILkotlin/jvm/internal/w;)V
 
     const/4 v2, 0x0
 
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3, v2}, Lcom/faceunity/core/avatar/model/Avatar;-><init>(Ljava/lang/String;ILh/d3/x/w;)V
+
+    const/4 v3, 0x0
+
     const/4 v4, 0x2
 
-    invoke-static {v1, v0, v2, v4, v3}, Lcom/faceunity/core/avatar/model/Avatar;->addComponent$default(Lcom/faceunity/core/avatar/model/Avatar;Ljava/util/List;ZILjava/lang/Object;)V
+    .line 3
+    invoke-static {v1, v0, v3, v4, v2}, Lcom/faceunity/core/avatar/model/Avatar;->addComponent$default(Lcom/faceunity/core/avatar/model/Avatar;Ljava/util/List;ZILjava/lang/Object;)V
 
+    .line 4
     iget-object v0, v1, Lcom/faceunity/core/avatar/model/Avatar;->transForm:Lcom/faceunity/core/avatar/avatar/TransForm;
 
     iget-object v2, p0, Lcom/faceunity/core/avatar/model/Avatar;->transForm:Lcom/faceunity/core/avatar/avatar/TransForm;
 
     invoke-virtual {v0, v2}, Lcom/faceunity/core/avatar/avatar/TransForm;->clone$lib_core_release(Lcom/faceunity/core/avatar/avatar/TransForm;)V
 
+    .line 5
     iget-object v0, v1, Lcom/faceunity/core/avatar/model/Avatar;->animationGraph:Lcom/faceunity/core/avatar/avatar/AnimationGraph;
 
     iget-object v2, p0, Lcom/faceunity/core/avatar/model/Avatar;->animationGraph:Lcom/faceunity/core/avatar/avatar/AnimationGraph;
 
     invoke-virtual {v0, v2}, Lcom/faceunity/core/avatar/avatar/AnimationGraph;->clone$lib_core_release(Lcom/faceunity/core/avatar/avatar/AnimationGraph;)V
 
+    .line 6
     iget-object v0, v1, Lcom/faceunity/core/avatar/model/Avatar;->animation:Lcom/faceunity/core/avatar/avatar/Animation;
 
     iget-object v2, p0, Lcom/faceunity/core/avatar/model/Avatar;->animation:Lcom/faceunity/core/avatar/avatar/Animation;
 
     invoke-virtual {v0, v2}, Lcom/faceunity/core/avatar/avatar/Animation;->clone$lib_core_release(Lcom/faceunity/core/avatar/avatar/Animation;)V
 
+    .line 7
     iget-object v0, v1, Lcom/faceunity/core/avatar/model/Avatar;->blendShape:Lcom/faceunity/core/avatar/avatar/BlendShape;
 
     iget-object v2, p0, Lcom/faceunity/core/avatar/model/Avatar;->blendShape:Lcom/faceunity/core/avatar/avatar/BlendShape;
 
     invoke-virtual {v0, v2}, Lcom/faceunity/core/avatar/avatar/BlendShape;->clone$lib_core_release(Lcom/faceunity/core/avatar/avatar/BlendShape;)V
 
+    .line 8
     iget-object v0, v1, Lcom/faceunity/core/avatar/model/Avatar;->dynamicBone:Lcom/faceunity/core/avatar/avatar/DynamicBone;
 
     iget-object v2, p0, Lcom/faceunity/core/avatar/model/Avatar;->dynamicBone:Lcom/faceunity/core/avatar/avatar/DynamicBone;
 
     invoke-virtual {v0, v2}, Lcom/faceunity/core/avatar/avatar/DynamicBone;->clone$lib_core_release(Lcom/faceunity/core/avatar/avatar/DynamicBone;)V
 
+    .line 9
     iget-object v0, v1, Lcom/faceunity/core/avatar/model/Avatar;->eyeFocusToCamera:Lcom/faceunity/core/avatar/avatar/EyeFocusToCamera;
 
     iget-object v2, p0, Lcom/faceunity/core/avatar/model/Avatar;->eyeFocusToCamera:Lcom/faceunity/core/avatar/avatar/EyeFocusToCamera;
 
     invoke-virtual {v0, v2}, Lcom/faceunity/core/avatar/avatar/EyeFocusToCamera;->clone$lib_core_release(Lcom/faceunity/core/avatar/avatar/EyeFocusToCamera;)V
 
+    .line 10
     iget-object v0, v1, Lcom/faceunity/core/avatar/model/Avatar;->color:Lcom/faceunity/core/avatar/avatar/Color;
 
     iget-object v2, p0, Lcom/faceunity/core/avatar/model/Avatar;->color:Lcom/faceunity/core/avatar/avatar/Color;
 
     invoke-virtual {v0, v2}, Lcom/faceunity/core/avatar/avatar/Color;->clone$lib_core_release(Lcom/faceunity/core/avatar/avatar/Color;)V
 
+    .line 11
     iget-object v0, v1, Lcom/faceunity/core/avatar/model/Avatar;->facePup:Lcom/faceunity/core/avatar/avatar/FacePup;
 
     iget-object v2, p0, Lcom/faceunity/core/avatar/model/Avatar;->facePup:Lcom/faceunity/core/avatar/avatar/FacePup;
 
     invoke-virtual {v0, v2}, Lcom/faceunity/core/avatar/avatar/FacePup;->clone$lib_core_release(Lcom/faceunity/core/avatar/avatar/FacePup;)V
 
+    .line 12
     iget-object v0, v1, Lcom/faceunity/core/avatar/model/Avatar;->deformation:Lcom/faceunity/core/avatar/avatar/Deformation;
 
     iget-object v2, p0, Lcom/faceunity/core/avatar/model/Avatar;->deformation:Lcom/faceunity/core/avatar/avatar/Deformation;
 
     invoke-virtual {v0, v2}, Lcom/faceunity/core/avatar/avatar/Deformation;->clone$lib_core_release(Lcom/faceunity/core/avatar/avatar/Deformation;)V
 
+    .line 13
     iget-object v0, v1, Lcom/faceunity/core/avatar/model/Avatar;->processorConfig:Lcom/faceunity/core/avatar/avatar/ProcessorConfig;
 
     iget-object p0, p0, Lcom/faceunity/core/avatar/model/Avatar;->processorConfig:Lcom/faceunity/core/avatar/avatar/ProcessorConfig;
@@ -1128,19 +1200,20 @@
 .method public final getAvatarJson(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
     const-string v0, "name"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/avatar/base/BaseAvatarAttribute;->getMFUAvatarController$lib_core_release()Lcom/faceunity/core/avatar/control/AvatarController;
 
     move-result-object v0
@@ -1159,26 +1232,29 @@
 .method public final getComponent(Ljava/lang/String;)Lcom/faceunity/core/entity/FUBundleData;
     .locals 3
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
     const-string v0, "componentName"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/avatar/model/Avatar;->mComponentsLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
+    .line 2
     :try_start_0
     iget-object v0, p0, Lcom/faceunity/core/avatar/model/Avatar;->mComponents:Ljava/util/ArrayList;
 
+    .line 3
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -1198,11 +1274,12 @@
 
     check-cast v2, Lcom/faceunity/core/entity/FUBundleData;
 
+    .line 4
     invoke-virtual {v2}, Lcom/faceunity/core/entity/FUBundleData;->getName()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v2, p1}, Lkotlin/jvm/internal/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p1}, Lh/d3/x/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -1213,11 +1290,13 @@
     :cond_1
     const/4 v1, 0x0
 
+    .line 5
     :goto_0
     check-cast v1, Lcom/faceunity/core/entity/FUBundleData;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 6
     iget-object p0, p0, Lcom/faceunity/core/avatar/model/Avatar;->mComponentsLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
@@ -1237,26 +1316,29 @@
 .method public final getComponentByFileId(Ljava/lang/String;)Lcom/faceunity/core/entity/FUBundleData;
     .locals 3
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
     const-string v0, "componentFileId"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/avatar/model/Avatar;->mComponentsLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
+    .line 2
     :try_start_0
     iget-object v0, p0, Lcom/faceunity/core/avatar/model/Avatar;->mComponents:Ljava/util/ArrayList;
 
+    .line 3
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -1276,11 +1358,12 @@
 
     check-cast v2, Lcom/faceunity/core/entity/FUBundleData;
 
+    .line 4
     invoke-virtual {v2}, Lcom/faceunity/core/entity/FUBundleData;->getFileId()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v2, p1}, Lkotlin/jvm/internal/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p1}, Lh/d3/x/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -1291,11 +1374,13 @@
     :cond_1
     const/4 v1, 0x0
 
+    .line 5
     :goto_0
     check-cast v1, Lcom/faceunity/core/entity/FUBundleData;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 6
     iget-object p0, p0, Lcom/faceunity/core/avatar/model/Avatar;->mComponentsLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
@@ -1315,26 +1400,29 @@
 .method public final getComponentByPath(Ljava/lang/String;)Lcom/faceunity/core/entity/FUBundleData;
     .locals 3
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
     const-string v0, "componentPath"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/avatar/model/Avatar;->mComponentsLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
+    .line 2
     :try_start_0
     iget-object v0, p0, Lcom/faceunity/core/avatar/model/Avatar;->mComponents:Ljava/util/ArrayList;
 
+    .line 3
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -1354,11 +1442,12 @@
 
     check-cast v2, Lcom/faceunity/core/entity/FUBundleData;
 
+    .line 4
     invoke-virtual {v2}, Lcom/faceunity/core/entity/FUBundleData;->getPath()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v2, p1}, Lkotlin/jvm/internal/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p1}, Lh/d3/x/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -1369,11 +1458,13 @@
     :cond_1
     const/4 v1, 0x0
 
+    .line 5
     :goto_0
     check-cast v1, Lcom/faceunity/core/entity/FUBundleData;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 6
     iget-object p0, p0, Lcom/faceunity/core/avatar/model/Avatar;->mComponentsLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
@@ -1393,30 +1484,33 @@
 .method public final getComponentByPathAndSlot(Ljava/lang/String;Ljava/lang/String;)Lcom/faceunity/core/entity/FUBundleData;
     .locals 4
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
     const-string v0, "componentPath"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/avatar/model/Avatar;->mComponentsLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
+    .line 2
     :try_start_0
     iget-object v0, p0, Lcom/faceunity/core/avatar/model/Avatar;->mComponents:Ljava/util/ArrayList;
 
+    .line 3
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -1436,11 +1530,12 @@
 
     check-cast v2, Lcom/faceunity/core/entity/FUBundleData;
 
+    .line 4
     invoke-virtual {v2}, Lcom/faceunity/core/entity/FUBundleData;->getPath()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v3, p1}, Lkotlin/jvm/internal/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, p1}, Lh/d3/x/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -1450,7 +1545,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, p2}, Lkotlin/jvm/internal/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p2}, Lh/d3/x/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -1471,11 +1566,13 @@
     :cond_2
     const/4 v1, 0x0
 
+    .line 5
     :goto_1
     check-cast v1, Lcom/faceunity/core/entity/FUBundleData;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 6
     iget-object p0, p0, Lcom/faceunity/core/avatar/model/Avatar;->mComponentsLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
@@ -1494,20 +1591,23 @@
 
 .method public final getComponentInvisibleList$lib_core_release()[I
     .locals 2
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/LinkedHashSet;
 
     invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
+    .line 2
     new-instance v1, Lcom/faceunity/core/avatar/model/Avatar$getComponentInvisibleList$1;
 
     invoke-direct {v1, p0, v0}, Lcom/faceunity/core/avatar/model/Avatar$getComponentInvisibleList$1;-><init>(Lcom/faceunity/core/avatar/model/Avatar;Ljava/util/LinkedHashSet;)V
 
-    invoke-virtual {p0, v1}, Lcom/faceunity/core/avatar/model/Avatar;->reentrantLock$lib_core_release(Ljn/a;)V
+    invoke-virtual {p0, v1}, Lcom/faceunity/core/avatar/model/Avatar;->reentrantLock$lib_core_release(Lh/d3/w/a;)V
 
-    invoke-static {v0}, Lpm/g0;->P5(Ljava/util/Collection;)[I
+    .line 3
+    invoke-static {v0}, Lh/t2/g0;->P5(Ljava/util/Collection;)[I
 
     move-result-object p0
 
@@ -1517,11 +1617,11 @@
 .method public final getComponentModifyResult(Lcom/faceunity/core/enumeration/FUInstanceBundleOPEnum;Ljava/util/List;)Lcom/faceunity/core/entity/FUAvatarComponentModifyResult;
     .locals 3
     .param p1    # Lcom/faceunity/core/enumeration/FUInstanceBundleOPEnum;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Ljava/util/List;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation build Landroidx/annotation/Nullable;
@@ -1538,16 +1638,16 @@
         }
     .end annotation
 
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
     const-string v0, "operation"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "componentFileIds"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/avatar/base/BaseAvatarAttribute;->getMFUAvatarController$lib_core_release()Lcom/faceunity/core/avatar/control/AvatarController;
@@ -1568,15 +1668,15 @@
 .method public final getComponentModifyResult(Lcom/faceunity/core/enumeration/FUInstanceBundleOPEnum;Ljava/util/List;Lcom/faceunity/core/listener/OnAvatarModifyListener;Z)V
     .locals 8
     .param p1    # Lcom/faceunity/core/enumeration/FUInstanceBundleOPEnum;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Ljava/util/List;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p3    # Lcom/faceunity/core/listener/OnAvatarModifyListener;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
@@ -1593,15 +1693,15 @@
 
     const-string v0, "operation"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "componentFileIds"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "listener"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     invoke-virtual {p0}, Lcom/faceunity/core/avatar/base/BaseAvatarAttribute;->getMFUAvatarController$lib_core_release()Lcom/faceunity/core/avatar/control/AvatarController;
@@ -1636,13 +1736,15 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/avatar/model/Avatar;->mComponentsLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
+    .line 2
     :try_start_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -1652,6 +1754,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     iget-object p0, p0, Lcom/faceunity/core/avatar/model/Avatar;->mComponentsLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
@@ -1679,42 +1782,46 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/avatar/model/Avatar;->mComponents:Ljava/util/ArrayList;
 
     return-object p0
 .end method
 
-.method public final reentrantLock$lib_core_release(Ljn/a;)V
+.method public final reentrantLock$lib_core_release(Lh/d3/w/a;)V
     .locals 1
-    .param p1    # Ljn/a;
-        .annotation build Ljv/d;
+    .param p1    # Lh/d3/w/a;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ljn/a<",
-            "Lnm/l2;",
+            "Lh/d3/w/a<",
+            "Lh/l2;",
             ">;)V"
         }
     .end annotation
 
     const-string v0, "unit"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/avatar/model/Avatar;->mComponentsLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
+    .line 2
     :try_start_0
-    invoke-interface {p1}, Ljn/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lh/d3/w/a;->invoke()Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     iget-object p0, p0, Lcom/faceunity/core/avatar/model/Avatar;->mComponentsLock:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
@@ -1733,29 +1840,31 @@
 
 .method public final removeAllComponents()V
     .locals 3
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    invoke-static {p0, v2, v0, v1}, Lcom/faceunity/core/avatar/model/Avatar;->removeAllComponents$default(Lcom/faceunity/core/avatar/model/Avatar;ZILjava/lang/Object;)V
+    invoke-static {p0, v0, v1, v2}, Lcom/faceunity/core/avatar/model/Avatar;->removeAllComponents$default(Lcom/faceunity/core/avatar/model/Avatar;ZILjava/lang/Object;)V
 
     return-void
 .end method
 
 .method public final removeAllComponents(Z)V
     .locals 2
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/avatar/model/Avatar;->getComponents()Ljava/util/ArrayList;
 
     move-result-object v0
 
+    .line 2
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
@@ -1768,19 +1877,19 @@
 .method public final removeComponent(Lcom/faceunity/core/entity/FUBundleData;)V
     .locals 3
     .param p1    # Lcom/faceunity/core/entity/FUBundleData;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
-    const/4 v0, 0x2
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    const/4 v1, 0x2
 
     const/4 v2, 0x0
 
-    invoke-static {p0, p1, v2, v0, v1}, Lcom/faceunity/core/avatar/model/Avatar;->removeComponent$default(Lcom/faceunity/core/avatar/model/Avatar;Lcom/faceunity/core/entity/FUBundleData;ZILjava/lang/Object;)V
+    invoke-static {p0, p1, v0, v1, v2}, Lcom/faceunity/core/avatar/model/Avatar;->removeComponent$default(Lcom/faceunity/core/avatar/model/Avatar;Lcom/faceunity/core/entity/FUBundleData;ZILjava/lang/Object;)V
 
     return-void
 .end method
@@ -1788,15 +1897,15 @@
 .method public final removeComponent(Lcom/faceunity/core/entity/FUBundleData;Z)V
     .locals 1
     .param p1    # Lcom/faceunity/core/entity/FUBundleData;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const-string v0, "component"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1809,7 +1918,7 @@
 .method public final removeComponent(Ljava/util/List;)V
     .locals 3
     .param p1    # Ljava/util/List;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
@@ -1822,16 +1931,16 @@
         }
     .end annotation
 
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
-    const/4 v0, 0x2
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    const/4 v1, 0x2
 
     const/4 v2, 0x0
 
-    invoke-static {p0, p1, v2, v0, v1}, Lcom/faceunity/core/avatar/model/Avatar;->removeComponent$default(Lcom/faceunity/core/avatar/model/Avatar;Ljava/util/List;ZILjava/lang/Object;)V
+    invoke-static {p0, p1, v0, v1, v2}, Lcom/faceunity/core/avatar/model/Avatar;->removeComponent$default(Lcom/faceunity/core/avatar/model/Avatar;Ljava/util/List;ZILjava/lang/Object;)V
 
     return-void
 .end method
@@ -1839,7 +1948,7 @@
 .method public final removeComponent(Ljava/util/List;Z)V
     .locals 1
     .param p1    # Ljava/util/List;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
@@ -1852,12 +1961,12 @@
         }
     .end annotation
 
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const-string v0, "components"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     new-instance v0, Ljava/util/ArrayList;
@@ -1872,14 +1981,14 @@
 .method public final replaceComponent(Lcom/faceunity/core/entity/FUBundleData;Lcom/faceunity/core/entity/FUBundleData;)V
     .locals 6
     .param p1    # Lcom/faceunity/core/entity/FUBundleData;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
     .param p2    # Lcom/faceunity/core/entity/FUBundleData;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const/4 v3, 0x0
@@ -1902,18 +2011,18 @@
 .method public final replaceComponent(Lcom/faceunity/core/entity/FUBundleData;Lcom/faceunity/core/entity/FUBundleData;Z)V
     .locals 3
     .param p1    # Lcom/faceunity/core/entity/FUBundleData;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
     .param p2    # Lcom/faceunity/core/entity/FUBundleData;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     .line 3
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, p2}, Lh/d3/x/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2027,14 +2136,14 @@
 .method public final replaceComponent(Ljava/lang/String;Lcom/faceunity/core/entity/FUBundleData;)V
     .locals 6
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Lcom/faceunity/core/entity/FUBundleData;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const/4 v3, 0x0
@@ -2057,19 +2166,19 @@
 .method public final replaceComponent(Ljava/lang/String;Lcom/faceunity/core/entity/FUBundleData;Z)V
     .locals 1
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Lcom/faceunity/core/entity/FUBundleData;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const-string v0, "oldComponentName"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     invoke-virtual {p0, p1}, Lcom/faceunity/core/avatar/model/Avatar;->getComponent(Ljava/lang/String;)Lcom/faceunity/core/entity/FUBundleData;
@@ -2085,11 +2194,11 @@
 .method public final replaceComponent(Ljava/util/List;Ljava/util/List;)V
     .locals 6
     .param p1    # Ljava/util/List;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Ljava/util/List;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
@@ -2106,7 +2215,7 @@
         }
     .end annotation
 
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const/4 v3, 0x0
@@ -2129,11 +2238,11 @@
 .method public final replaceComponent(Ljava/util/List;Ljava/util/List;Z)V
     .locals 5
     .param p1    # Ljava/util/List;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Ljava/util/List;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
@@ -2150,16 +2259,16 @@
         }
     .end annotation
 
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const-string v0, "oldComponents"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "newComponents"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 12
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
@@ -2195,9 +2304,6 @@
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     .line 16
-    check-cast p1, Ljava/lang/Iterable;
-
-    .line 17
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -2215,7 +2321,7 @@
 
     check-cast v3, Lcom/faceunity/core/entity/FUBundleData;
 
-    .line 18
+    .line 17
     invoke-virtual {v3}, Lcom/faceunity/core/entity/FUBundleData;->getDataMark()Ljava/lang/String;
 
     move-result-object v4
@@ -2224,11 +2330,8 @@
 
     goto :goto_0
 
-    .line 19
+    .line 18
     :cond_1
-    check-cast p2, Ljava/lang/Iterable;
-
-    .line 20
     invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -2246,7 +2349,7 @@
 
     check-cast v3, Lcom/faceunity/core/entity/FUBundleData;
 
-    .line 21
+    .line 19
     invoke-virtual {v3}, Lcom/faceunity/core/entity/FUBundleData;->getDataMark()Ljava/lang/String;
 
     move-result-object v4
@@ -2255,7 +2358,7 @@
 
     goto :goto_1
 
-    .line 22
+    .line 20
     :cond_2
     invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -2275,7 +2378,7 @@
 
     check-cast v2, Lcom/faceunity/core/entity/FUBundleData;
 
-    .line 23
+    .line 21
     invoke-virtual {v2}, Lcom/faceunity/core/entity/FUBundleData;->getDataMark()Ljava/lang/String;
 
     move-result-object v3
@@ -2286,7 +2389,7 @@
 
     if-eqz v3, :cond_3
 
-    .line 24
+    .line 22
     invoke-virtual {v2}, Lcom/faceunity/core/entity/FUBundleData;->getDataMark()Ljava/lang/String;
 
     move-result-object v2
@@ -2295,7 +2398,7 @@
 
     goto :goto_2
 
-    .line 25
+    .line 23
     :cond_4
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -2315,7 +2418,7 @@
 
     check-cast p2, Lcom/faceunity/core/entity/FUBundleData;
 
-    .line 26
+    .line 24
     invoke-virtual {p2}, Lcom/faceunity/core/entity/FUBundleData;->getDataMark()Ljava/lang/String;
 
     move-result-object v2
@@ -2326,7 +2429,7 @@
 
     if-eqz v2, :cond_5
 
-    .line 27
+    .line 25
     invoke-virtual {p2}, Lcom/faceunity/core/entity/FUBundleData;->getDataMark()Ljava/lang/String;
 
     move-result-object p2
@@ -2335,7 +2438,7 @@
 
     goto :goto_3
 
-    .line 28
+    .line 26
     :cond_6
     invoke-direct {p0, v0, v1, p3}, Lcom/faceunity/core/avatar/model/Avatar;->doReplaceAvatarBundle(Ljava/util/HashMap;Ljava/util/HashMap;Z)V
 
@@ -2345,11 +2448,11 @@
 .method public final replaceComponentByName(Ljava/util/List;Ljava/util/List;)V
     .locals 6
     .param p1    # Ljava/util/List;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Ljava/util/List;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
@@ -2365,7 +2468,7 @@
         }
     .end annotation
 
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const/4 v3, 0x0
@@ -2388,11 +2491,11 @@
 .method public final replaceComponentByName(Ljava/util/List;Ljava/util/List;Z)V
     .locals 2
     .param p1    # Ljava/util/List;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Ljava/util/List;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
@@ -2408,23 +2511,23 @@
         }
     .end annotation
 
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const-string v0, "oldComponentNames"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "newComponents"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    check-cast p1, Ljava/lang/Iterable;
-
+    .line 2
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -2443,16 +2546,19 @@
 
     check-cast v1, Ljava/lang/String;
 
+    .line 3
     invoke-virtual {p0, v1}, Lcom/faceunity/core/avatar/model/Avatar;->getComponent(Ljava/lang/String;)Lcom/faceunity/core/entity/FUBundleData;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
+    .line 4
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 5
     :cond_1
     invoke-virtual {p0, v0, p2, p3}, Lcom/faceunity/core/avatar/model/Avatar;->replaceComponent(Ljava/util/List;Ljava/util/List;Z)V
 

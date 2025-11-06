@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/Multimaps$TransformedEntriesListMultimap;
+.class public final Lcom/google/common/collect/Multimaps$TransformedEntriesListMultimap;
 .super Lcom/google/common/collect/Multimaps$TransformedEntriesMultimap;
 .source "SourceFile"
 
@@ -46,6 +46,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/common/collect/Multimaps$TransformedEntriesMultimap;-><init>(Lcom/google/common/collect/Multimap;Lcom/google/common/collect/Maps$EntryTransformer;)V
 
     return-void

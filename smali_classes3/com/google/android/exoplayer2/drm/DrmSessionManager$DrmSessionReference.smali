@@ -22,24 +22,15 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/google/android/exoplayer2/drm/o;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/drm/o;-><init>()V
+    .line 1
+    sget-object v0, Ld/j/a/b/p2/m;->a:Ld/j/a/b/p2/m;
 
     sput-object v0, Lcom/google/android/exoplayer2/drm/DrmSessionManager$DrmSessionReference;->EMPTY:Lcom/google/android/exoplayer2/drm/DrmSessionManager$DrmSessionReference;
 
     return-void
 .end method
 
-.method public static synthetic a()V
-    .locals 0
-
-    invoke-static {}, Lcom/google/android/exoplayer2/drm/DrmSessionManager$DrmSessionReference;->lambda$static$0()V
-
-    return-void
-.end method
-
-.method private static synthetic lambda$static$0()V
+.method public static synthetic lambda$static$0()V
     .locals 0
 
     return-void

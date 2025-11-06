@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzge;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzge;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -16,16 +16,19 @@
 .method public synthetic constructor <init>(Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgd;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     instance-of p2, p1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgg;
 
     if-eqz p2, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgg;
 
     new-instance p2, Ljava/util/ArrayDeque;
 
+    .line 3
     invoke-virtual {p1}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgg;->zzf()I
 
     move-result v0
@@ -34,8 +37,10 @@
 
     iput-object p2, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzge;->zza:Ljava/util/ArrayDeque;
 
+    .line 4
     invoke-virtual {p2, p1}, Ljava/util/ArrayDeque;->push(Ljava/lang/Object;)V
 
+    .line 5
     invoke-static {p1}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgg;->zzg(Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgg;)Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;
 
     move-result-object p1
@@ -53,6 +58,7 @@
 
     iput-object p2, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzge;->zza:Ljava/util/ArrayDeque;
 
+    .line 6
     check-cast p1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcx;
 
     iput-object p1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzge;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcx;
@@ -63,23 +69,28 @@
 .method private final zzb(Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;)Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcx;
     .locals 1
 
+    .line 1
     :goto_0
     instance-of v0, p1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgg;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgg;
 
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzge;->zza:Ljava/util/ArrayDeque;
 
+    .line 3
     invoke-virtual {v0, p1}, Ljava/util/ArrayDeque;->push(Ljava/lang/Object;)V
 
+    .line 4
     invoke-static {p1}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgg;->zzg(Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgg;)Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;
 
     move-result-object p1
 
     goto :goto_0
 
+    .line 5
     :cond_0
     check-cast p1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcx;
 
@@ -108,6 +119,7 @@
 .method public final bridge synthetic next()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzge;->zza()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcx;
 
     move-result-object p0
@@ -118,6 +130,7 @@
 .method public final remove()V
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -128,6 +141,7 @@
 .method public final zza()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcx;
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzge;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcx;
 
     if-eqz v0, :cond_3
@@ -139,6 +153,7 @@
 
     if-eqz v1, :cond_2
 
+    .line 2
     invoke-virtual {v1}, Ljava/util/ArrayDeque;->isEmpty()Z
 
     move-result v1
@@ -150,6 +165,7 @@
     :cond_1
     iget-object v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzge;->zza:Ljava/util/ArrayDeque;
 
+    .line 3
     invoke-virtual {v1}, Ljava/util/ArrayDeque;->pop()Ljava/lang/Object;
 
     move-result-object v1
@@ -164,18 +180,21 @@
 
     move-result-object v2
 
+    .line 4
     invoke-virtual {v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;->zzd()I
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 5
     :cond_2
     :goto_0
     iput-object v2, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzge;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcx;
 
     return-object v0
 
+    .line 6
     :cond_3
     new-instance p0, Ljava/util/NoSuchElementException;
 

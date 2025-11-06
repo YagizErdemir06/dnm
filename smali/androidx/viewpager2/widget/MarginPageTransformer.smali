@@ -18,12 +18,15 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "Margin must be non-negative"
 
+    .line 2
     invoke-static {p1, v0}, Landroidx/core/util/Preconditions;->checkArgumentNonnegative(ILjava/lang/String;)I
 
+    .line 3
     iput p1, p0, Landroidx/viewpager2/widget/MarginPageTransformer;->mMarginPx:I
 
     return-void
@@ -36,14 +39,17 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object p0
 
+    .line 2
     invoke-interface {p0}, Landroid/view/ViewParent;->getParent()Landroid/view/ViewParent;
 
     move-result-object p1
 
+    .line 3
     instance-of p0, p0, Landroidx/recyclerview/widget/RecyclerView;
 
     if-eqz p0, :cond_0
@@ -52,10 +58,12 @@
 
     if-eqz p0, :cond_0
 
+    .line 4
     check-cast p1, Landroidx/viewpager2/widget/ViewPager2;
 
     return-object p1
 
+    .line 5
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -75,22 +83,26 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/viewpager2/widget/MarginPageTransformer;->requireViewPager(Landroid/view/View;)Landroidx/viewpager2/widget/ViewPager2;
 
     move-result-object v0
 
+    .line 2
     iget p0, p0, Landroidx/viewpager2/widget/MarginPageTransformer;->mMarginPx:I
 
     int-to-float p0, p0
 
     mul-float/2addr p0, p2
 
+    .line 3
     invoke-virtual {v0}, Landroidx/viewpager2/widget/ViewPager2;->getOrientation()I
 
     move-result p2
 
     if-nez p2, :cond_1
 
+    .line 4
     invoke-virtual {v0}, Landroidx/viewpager2/widget/ViewPager2;->isRtl()Z
 
     move-result p2
@@ -104,6 +116,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     invoke-virtual {p1, p0}, Landroid/view/View;->setTranslationY(F)V
 

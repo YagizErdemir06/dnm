@@ -4,20 +4,32 @@
 
 
 # instance fields
-.field public a:Z
+.field private c:Z
 
-.field public b:Z
+.field private d:Z
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 p1, 0x0
 
-    iput-boolean p1, p0, Lcom/android/camera/ui/CameraRootView;->a:Z
+    .line 2
+    iput-boolean p1, p0, Lcom/android/camera/ui/CameraRootView;->c:Z
 
     return-void
 .end method
@@ -29,7 +41,8 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/camera/ui/CameraRootView;->a:Z
+    .line 1
+    iput-boolean v0, p0, Lcom/android/camera/ui/CameraRootView;->c:Z
 
     return-void
 .end method
@@ -39,7 +52,8 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/camera/ui/CameraRootView;->a:Z
+    .line 1
+    iput-boolean v0, p0, Lcom/android/camera/ui/CameraRootView;->c:Z
 
     return-void
 .end method
@@ -49,7 +63,8 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/camera/ui/CameraRootView;->b:Z
+    .line 1
+    iput-boolean v0, p0, Lcom/android/camera/ui/CameraRootView;->d:Z
 
     return-void
 .end method
@@ -59,24 +74,36 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/camera/ui/CameraRootView;->b:Z
+    .line 1
+    iput-boolean v0, p0, Lcom/android/camera/ui/CameraRootView;->d:Z
 
     return-void
 .end method
 
 .method public dispatchTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "ev"
+        }
+    .end annotation
 
-    iget-boolean v0, p0, Lcom/android/camera/ui/CameraRootView;->a:Z
+    .line 1
+    iget-boolean v0, p0, Lcom/android/camera/ui/CameraRootView;->c:Z
 
     if-eqz v0, :cond_1
 
+    .line 2
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
@@ -90,8 +117,9 @@
 
     return p0
 
+    .line 4
     :cond_1
-    invoke-super {p0, p1}, Landroid/view/View;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
+    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p0
 
@@ -100,13 +128,31 @@
 
 .method public onLayout(ZIIII)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "changed",
+            "left",
+            "top",
+            "right",
+            "bottom"
+        }
+    .end annotation
 
-    iget-boolean v0, p0, Lcom/android/camera/ui/CameraRootView;->b:Z
+    .line 1
+    iget-boolean v0, p0, Lcom/android/camera/ui/CameraRootView;->d:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
 

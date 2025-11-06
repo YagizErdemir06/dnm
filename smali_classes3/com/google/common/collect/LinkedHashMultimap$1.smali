@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/LinkedHashMultimap$1;
+.class public Lcom/google/common/collect/LinkedHashMultimap$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field nextEntry:Lcom/google/common/collect/LinkedHashMultimap$ValueEntry;
+.field public nextEntry:Lcom/google/common/collect/LinkedHashMultimap$ValueEntry;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/LinkedHashMultimap$ValueEntry<",
@@ -36,9 +36,9 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Lcom/google/common/collect/LinkedHashMultimap;
+.field public final synthetic this$0:Lcom/google/common/collect/LinkedHashMultimap;
 
-.field toRemove:Lcom/google/common/collect/LinkedHashMultimap$ValueEntry;
+.field public toRemove:Lcom/google/common/collect/LinkedHashMultimap$ValueEntry;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/LinkedHashMultimap$ValueEntry<",
@@ -55,10 +55,12 @@
 .method public constructor <init>(Lcom/google/common/collect/LinkedHashMultimap;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/LinkedHashMultimap$1;->this$0:Lcom/google/common/collect/LinkedHashMultimap;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/collect/LinkedHashMultimap;->access$300(Lcom/google/common/collect/LinkedHashMultimap;)Lcom/google/common/collect/LinkedHashMultimap$ValueEntry;
 
     move-result-object p1
@@ -77,6 +79,7 @@
 .method public hasNext()Z
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/LinkedHashMultimap$1;->nextEntry:Lcom/google/common/collect/LinkedHashMultimap$ValueEntry;
 
     iget-object p0, p0, Lcom/google/common/collect/LinkedHashMultimap$1;->this$0:Lcom/google/common/collect/LinkedHashMultimap;
@@ -153,6 +156,7 @@
 .method public remove()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/LinkedHashMultimap$1;->toRemove:Lcom/google/common/collect/LinkedHashMultimap$ValueEntry;
 
     if-eqz v0, :cond_0
@@ -169,6 +173,7 @@
 
     invoke-static {v0, v1}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/Object;)V
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/LinkedHashMultimap$1;->this$0:Lcom/google/common/collect/LinkedHashMultimap;
 
     iget-object v1, p0, Lcom/google/common/collect/LinkedHashMultimap$1;->toRemove:Lcom/google/common/collect/LinkedHashMultimap$ValueEntry;
@@ -187,6 +192,7 @@
 
     const/4 v0, 0x0
 
+    .line 3
     iput-object v0, p0, Lcom/google/common/collect/LinkedHashMultimap$1;->toRemove:Lcom/google/common/collect/LinkedHashMultimap$ValueEntry;
 
     return-void

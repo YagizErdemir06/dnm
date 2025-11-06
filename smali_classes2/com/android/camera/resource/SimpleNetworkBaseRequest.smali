@@ -16,9 +16,9 @@
 
 
 # static fields
-.field protected static final CLIENT:Lokhttp3/OkHttpClient;
+.field public static final CLIENT:Lokhttp3/OkHttpClient;
 
-.field protected static final TAG:Ljava/lang/String; = "SimpleNetworkBaseRequest"
+.field public static final TAG:Ljava/lang/String; = "SimpleNetworkBaseRequest"
 
 
 # instance fields
@@ -33,7 +33,7 @@
     .end annotation
 .end field
 
-.field protected mParams:Ljava/util/Map;
+.field public mParams:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -44,13 +44,14 @@
     .end annotation
 .end field
 
-.field protected mUrl:Ljava/lang/String;
+.field public mUrl:Ljava/lang/String;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 4
 
+    .line 1
     new-instance v0, Lokhttp3/OkHttpClient$Builder;
 
     invoke-direct {v0}, Lokhttp3/OkHttpClient$Builder;-><init>()V
@@ -59,18 +60,22 @@
 
     const-wide/16 v2, 0xf
 
+    .line 2
     invoke-virtual {v0, v2, v3, v1}, Lokhttp3/OkHttpClient$Builder;->connectTimeout(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$Builder;
 
     move-result-object v0
 
+    .line 3
     invoke-virtual {v0, v2, v3, v1}, Lokhttp3/OkHttpClient$Builder;->writeTimeout(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$Builder;
 
     move-result-object v0
 
+    .line 4
     invoke-virtual {v0, v2, v3, v1}, Lokhttp3/OkHttpClient$Builder;->readTimeout(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$Builder;
 
     move-result-object v0
 
+    .line 5
     invoke-virtual {v0}, Lokhttp3/OkHttpClient$Builder;->build()Lokhttp3/OkHttpClient;
 
     move-result-object v0
@@ -82,9 +87,19 @@
 
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "url"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera/resource/BaseObservableRequest;-><init>()V
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->setUrl(Ljava/lang/String;)V
 
     return-void
@@ -92,7 +107,16 @@
 
 .method private addHeaders(Lokhttp3/Request$Builder;)V
     .locals 2
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "builder"
+        }
     .end annotation
 
     .line 4
@@ -157,9 +181,10 @@
 
 .method private appendUrlParams()Ljava/lang/String;
     .locals 4
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->mUrl:Ljava/lang/String;
 
     if-eqz v0, :cond_2
@@ -174,12 +199,14 @@
 
     if-nez v0, :cond_2
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->mUrl:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
+    .line 3
     iget-object v1, p0, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->mUrl:Ljava/lang/String;
 
     const/16 v2, 0x3f
@@ -194,6 +221,7 @@
 
     if-lez v1, :cond_1
 
+    .line 4
     iget-object v1, p0, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->mUrl:Ljava/lang/String;
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
@@ -212,8 +240,10 @@
 
     if-nez v1, :cond_0
 
+    .line 5
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 6
     :cond_0
     iget-object v1, p0, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->mParams:Ljava/util/Map;
 
@@ -229,6 +259,7 @@
 
     return-object p0
 
+    .line 7
     :cond_1
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -246,6 +277,7 @@
 
     return-object p0
 
+    .line 8
     :cond_2
     iget-object p0, p0, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->mUrl:Ljava/lang/String;
 
@@ -254,6 +286,17 @@
 
 .method private encodeParameters(Ljava/util/Map;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "params",
+            "paramsEncoding"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -267,10 +310,12 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 2
     :try_start_0
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -293,6 +338,7 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
+    .line 3
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -307,8 +353,10 @@
 
     const/16 v1, 0x3d
 
+    .line 4
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 5
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -323,10 +371,12 @@
 
     const/16 v0, 0x26
 
+    .line 6
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
+    .line 7
     :cond_0
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -339,6 +389,7 @@
     :catch_0
     move-exception p0
 
+    .line 8
     new-instance p1, Ljava/lang/RuntimeException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -364,7 +415,18 @@
 # virtual methods
 .method public final addHeaders(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "name",
+            "value"
+        }
     .end annotation
 
     .line 1
@@ -390,17 +452,30 @@
 
 .method public addParam(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "key",
+            "value"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->mParams:Ljava/util/Map;
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->mParams:Ljava/util/Map;
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->mParams:Ljava/util/Map;
 
@@ -422,6 +497,17 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "content",
+            "t"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -443,6 +529,17 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x10,
+            0x0
+        }
+        names = {
+            "listener",
+            "t"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -451,6 +548,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lokhttp3/Request$Builder;
 
     invoke-direct {v0}, Lokhttp3/Request$Builder;-><init>()V
@@ -467,20 +565,24 @@
 
     move-result-object v0
 
+    .line 2
     invoke-direct {p0, v0}, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->addHeaders(Lokhttp3/Request$Builder;)V
 
+    .line 3
     invoke-virtual {p0}, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->generatePostBody()Lokhttp3/RequestBody;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
+    .line 4
     invoke-virtual {v0}, Lokhttp3/Request$Builder;->build()Lokhttp3/Request;
 
     move-result-object v0
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-virtual {v0, v1}, Lokhttp3/Request$Builder;->post(Lokhttp3/RequestBody;)Lokhttp3/Request$Builder;
 
@@ -490,6 +592,7 @@
 
     move-result-object v0
 
+    .line 6
     :goto_0
     sget-object v1, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->CLIENT:Lokhttp3/OkHttpClient;
 
@@ -508,7 +611,16 @@
 
 .method public setUrl(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "url"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/resource/SimpleNetworkBaseRequest;->mUrl:Ljava/lang/String;
 
     return-void

@@ -25,6 +25,7 @@
 
     move-object v6, p6
 
+    .line 1
     invoke-direct/range {v0 .. v6}, Lcom/google/android/gms/common/internal/GmsClient;-><init>(Landroid/content/Context;Landroid/os/Looper;ILcom/google/android/gms/common/internal/ClientSettings;Lcom/google/android/gms/common/api/internal/ConnectionCallbacks;Lcom/google/android/gms/common/api/internal/OnConnectionFailedListener;)V
 
     iput-object p4, p0, Lcom/google/android/gms/common/internal/service/zap;->zaa:Lcom/google/android/gms/common/internal/TelemetryLoggingOptions;
@@ -48,14 +49,17 @@
     :cond_0
     const-string p0, "com.google.android.gms.common.internal.service.IClientTelemetryService"
 
+    .line 1
     invoke-interface {p1, p0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object p0
 
+    .line 2
     instance-of v0, p0, Lcom/google/android/gms/common/internal/service/zai;
 
     if-eqz v0, :cond_1
 
+    .line 3
     check-cast p0, Lcom/google/android/gms/common/internal/service/zai;
 
     goto :goto_0
@@ -72,6 +76,7 @@
 .method public final getApiFeatures()[Lcom/google/android/gms/common/Feature;
     .locals 0
 
+    .line 1
     sget-object p0, Lcom/google/android/gms/internal/base/zaf;->zab:[Lcom/google/android/gms/common/Feature;
 
     return-object p0
@@ -80,6 +85,7 @@
 .method public final getGetServiceRequestExtraArgs()Landroid/os/Bundle;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/internal/service/zap;->zaa:Lcom/google/android/gms/common/internal/TelemetryLoggingOptions;
 
     invoke-virtual {p0}, Lcom/google/android/gms/common/internal/TelemetryLoggingOptions;->zaa()Landroid/os/Bundle;

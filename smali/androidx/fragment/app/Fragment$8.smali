@@ -1,4 +1,4 @@
-.class Landroidx/fragment/app/Fragment$8;
+.class public Landroidx/fragment/app/Fragment$8;
 .super Landroidx/fragment/app/Fragment$OnPreAttachedListener;
 .source "SourceFile"
 
@@ -15,21 +15,22 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/fragment/app/Fragment;
+.field public final synthetic this$0:Landroidx/fragment/app/Fragment;
 
-.field final synthetic val$callback:Landroidx/activity/result/ActivityResultCallback;
+.field public final synthetic val$callback:Landroidx/activity/result/ActivityResultCallback;
 
-.field final synthetic val$contract:Landroidx/activity/result/contract/ActivityResultContract;
+.field public final synthetic val$contract:Landroidx/activity/result/contract/ActivityResultContract;
 
-.field final synthetic val$ref:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final synthetic val$ref:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field final synthetic val$registryProvider:Landroidx/arch/core/util/Function;
+.field public final synthetic val$registryProvider:Landroidx/arch/core/util/Function;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/fragment/app/Fragment;Landroidx/arch/core/util/Function;Ljava/util/concurrent/atomic/AtomicReference;Landroidx/activity/result/contract/ActivityResultContract;Landroidx/activity/result/ActivityResultCallback;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/fragment/app/Fragment$8;->this$0:Landroidx/fragment/app/Fragment;
 
     iput-object p2, p0, Landroidx/fragment/app/Fragment$8;->val$registryProvider:Landroidx/arch/core/util/Function;
@@ -52,12 +53,14 @@
 .method public onPreAttached()V
     .locals 5
 
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/Fragment$8;->this$0:Landroidx/fragment/app/Fragment;
 
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->generateActivityResultKey()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 2
     iget-object v1, p0, Landroidx/fragment/app/Fragment$8;->val$registryProvider:Landroidx/arch/core/util/Function;
 
     const/4 v2, 0x0
@@ -68,6 +71,7 @@
 
     check-cast v1, Landroidx/activity/result/ActivityResultRegistry;
 
+    .line 3
     iget-object v2, p0, Landroidx/fragment/app/Fragment$8;->val$ref:Ljava/util/concurrent/atomic/AtomicReference;
 
     iget-object v3, p0, Landroidx/fragment/app/Fragment$8;->this$0:Landroidx/fragment/app/Fragment;

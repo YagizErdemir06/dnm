@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/extractor/avi/AviExtractor$ChunkHeaderHolder;
+.class public Lcom/google/android/exoplayer2/extractor/avi/AviExtractor$ChunkHeaderHolder;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -46,12 +46,14 @@
 .method public populateFrom(Lcom/google/android/exoplayer2/util/ParsableByteArray;)V
     .locals 1
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLittleEndianInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/avi/AviExtractor$ChunkHeaderHolder;->chunkType:I
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLittleEndianInt()I
 
     move-result p1
@@ -60,6 +62,7 @@
 
     const/4 p1, 0x0
 
+    .line 3
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/avi/AviExtractor$ChunkHeaderHolder;->listType:I
 
     return-void
@@ -73,14 +76,17 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/extractor/avi/AviExtractor$ChunkHeaderHolder;->populateFrom(Lcom/google/android/exoplayer2/util/ParsableByteArray;)V
 
+    .line 2
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/avi/AviExtractor$ChunkHeaderHolder;->chunkType:I
 
     const v1, 0x5453494c
 
     if-ne v0, v1, :cond_0
 
+    .line 3
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLittleEndianInt()I
 
     move-result p1
@@ -89,6 +95,7 @@
 
     return-void
 
+    .line 4
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 

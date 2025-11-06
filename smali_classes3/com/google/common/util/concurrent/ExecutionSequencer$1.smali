@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/ExecutionSequencer$1;
+.class public Lcom/google/common/util/concurrent/ExecutionSequencer$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,13 +26,14 @@
 
 
 # instance fields
-.field final synthetic val$callable:Ljava/util/concurrent/Callable;
+.field public final synthetic val$callable:Ljava/util/concurrent/Callable;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/util/concurrent/ExecutionSequencer;Ljava/util/concurrent/Callable;)V
     .locals 0
 
+    .line 1
     iput-object p2, p0, Lcom/google/common/util/concurrent/ExecutionSequencer$1;->val$callable:Ljava/util/concurrent/Callable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -58,6 +59,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/ExecutionSequencer$1;->val$callable:Ljava/util/concurrent/Callable;
 
     invoke-interface {p0}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
@@ -74,6 +76,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/ExecutionSequencer$1;->val$callable:Ljava/util/concurrent/Callable;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;

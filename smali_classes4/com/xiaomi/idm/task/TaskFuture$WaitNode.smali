@@ -1,4 +1,4 @@
-.class final Lcom/xiaomi/idm/task/TaskFuture$WaitNode;
+.class public final Lcom/xiaomi/idm/task/TaskFuture$WaitNode;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,17 +15,19 @@
 
 
 # instance fields
-.field volatile next:Lcom/xiaomi/idm/task/TaskFuture$WaitNode;
+.field public volatile next:Lcom/xiaomi/idm/task/TaskFuture$WaitNode;
 
-.field volatile thread:Ljava/lang/Thread;
+.field public volatile thread:Ljava/lang/Thread;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0

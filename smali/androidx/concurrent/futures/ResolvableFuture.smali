@@ -25,6 +25,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroidx/concurrent/futures/AbstractResolvableFuture;-><init>()V
 
     return-void
@@ -42,6 +43,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Landroidx/concurrent/futures/ResolvableFuture;
 
     invoke-direct {v0}, Landroidx/concurrent/futures/ResolvableFuture;-><init>()V
@@ -63,6 +65,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroidx/concurrent/futures/AbstractResolvableFuture;->set(Ljava/lang/Object;)Z
 
     move-result p0
@@ -73,6 +76,7 @@
 .method public setException(Ljava/lang/Throwable;)Z
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Landroidx/concurrent/futures/AbstractResolvableFuture;->setException(Ljava/lang/Throwable;)Z
 
     move-result p0
@@ -90,6 +94,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroidx/concurrent/futures/AbstractResolvableFuture;->setFuture(Lcom/google/common/util/concurrent/ListenableFuture;)Z
 
     move-result p0

@@ -1,4 +1,4 @@
-.class Lcom/google/common/io/FileBackedOutputStream$1;
+.class public Lcom/google/common/io/FileBackedOutputStream$1;
 .super Lcom/google/common/io/ByteSource;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/io/FileBackedOutputStream;
+.field public final synthetic this$0:Lcom/google/common/io/FileBackedOutputStream;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/io/FileBackedOutputStream;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/io/FileBackedOutputStream$1;->this$0:Lcom/google/common/io/FileBackedOutputStream;
 
     invoke-direct {p0}, Lcom/google/common/io/ByteSource;-><init>()V
@@ -34,6 +35,7 @@
 .method public finalize()V
     .locals 1
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/google/common/io/FileBackedOutputStream$1;->this$0:Lcom/google/common/io/FileBackedOutputStream;
 
@@ -46,6 +48,7 @@
     :catchall_0
     move-exception p0
 
+    .line 2
     sget-object v0, Ljava/lang/System;->err:Ljava/io/PrintStream;
 
     invoke-virtual {p0, v0}, Ljava/lang/Throwable;->printStackTrace(Ljava/io/PrintStream;)V
@@ -62,6 +65,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/io/FileBackedOutputStream$1;->this$0:Lcom/google/common/io/FileBackedOutputStream;
 
     invoke-static {p0}, Lcom/google/common/io/FileBackedOutputStream;->access$100(Lcom/google/common/io/FileBackedOutputStream;)Ljava/io/InputStream;

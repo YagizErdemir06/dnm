@@ -1,4 +1,4 @@
-.class synthetic Lcom/google/common/math/IntMath$1;
+.class public synthetic Lcom/google/common/math/IntMath$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$java$math$RoundingMode:[I
+.field public static final synthetic $SwitchMap$java$math$RoundingMode:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Ljava/math/RoundingMode;->values()[Ljava/math/RoundingMode;
 
     move-result-object v0
@@ -35,7 +36,7 @@
     :try_start_0
     sget-object v1, Ljava/math/RoundingMode;->UNNECESSARY:Ljava/math/RoundingMode;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Ljava/math/RoundingMode;->ordinal()I
 
     move-result v1
 
@@ -51,7 +52,7 @@
 
     sget-object v1, Ljava/math/RoundingMode;->DOWN:Ljava/math/RoundingMode;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Ljava/math/RoundingMode;->ordinal()I
 
     move-result v1
 
@@ -67,7 +68,7 @@
 
     sget-object v1, Ljava/math/RoundingMode;->FLOOR:Ljava/math/RoundingMode;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Ljava/math/RoundingMode;->ordinal()I
 
     move-result v1
 
@@ -83,7 +84,7 @@
 
     sget-object v1, Ljava/math/RoundingMode;->UP:Ljava/math/RoundingMode;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Ljava/math/RoundingMode;->ordinal()I
 
     move-result v1
 
@@ -99,7 +100,7 @@
 
     sget-object v1, Ljava/math/RoundingMode;->CEILING:Ljava/math/RoundingMode;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Ljava/math/RoundingMode;->ordinal()I
 
     move-result v1
 
@@ -115,7 +116,7 @@
 
     sget-object v1, Ljava/math/RoundingMode;->HALF_DOWN:Ljava/math/RoundingMode;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Ljava/math/RoundingMode;->ordinal()I
 
     move-result v1
 
@@ -131,7 +132,7 @@
 
     sget-object v1, Ljava/math/RoundingMode;->HALF_UP:Ljava/math/RoundingMode;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Ljava/math/RoundingMode;->ordinal()I
 
     move-result v1
 
@@ -147,7 +148,7 @@
 
     sget-object v1, Ljava/math/RoundingMode;->HALF_EVEN:Ljava/math/RoundingMode;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Ljava/math/RoundingMode;->ordinal()I
 
     move-result v1
 

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/dynamite/zzf;
+.class public final Lcom/google/android/gms/dynamite/zzf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -25,6 +25,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy$SelectionResult;
 
     invoke-direct {p0}, Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy$SelectionResult;-><init>()V
@@ -43,6 +44,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-interface {p3, p1, p2}, Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy$IVersions;->zza(Landroid/content/Context;Ljava/lang/String;)I
 

@@ -15,22 +15,35 @@
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic c:I
 
-.field public final synthetic b:I
+.field public final synthetic d:I
 
-.field public final synthetic c:Lcom/xiaomi/ocr/view/GuideView;
+.field public final synthetic f:Lcom/xiaomi/ocr/view/GuideView;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/ocr/view/GuideView;II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$startColor",
+            "val$endColor"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/xiaomi/ocr/view/GuideView$a;->c:Lcom/xiaomi/ocr/view/GuideView;
+    .line 1
+    iput-object p1, p0, Lcom/xiaomi/ocr/view/GuideView$a;->f:Lcom/xiaomi/ocr/view/GuideView;
 
-    iput p2, p0, Lcom/xiaomi/ocr/view/GuideView$a;->a:I
+    iput p2, p0, Lcom/xiaomi/ocr/view/GuideView$a;->c:I
 
-    iput p3, p0, Lcom/xiaomi/ocr/view/GuideView$a;->b:I
+    iput p3, p0, Lcom/xiaomi/ocr/view/GuideView$a;->d:I
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
@@ -41,56 +54,80 @@
 # virtual methods
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
 
-    iget-object p1, p0, Lcom/xiaomi/ocr/view/GuideView$a;->c:Lcom/xiaomi/ocr/view/GuideView;
+    .line 2
+    iget-object p1, p0, Lcom/xiaomi/ocr/view/GuideView$a;->f:Lcom/xiaomi/ocr/view/GuideView;
 
-    iget v0, p0, Lcom/xiaomi/ocr/view/GuideView$a;->b:I
+    iget v0, p0, Lcom/xiaomi/ocr/view/GuideView$a;->d:I
 
-    invoke-static {p1, v0}, Lcom/xiaomi/ocr/view/GuideView;->f(Lcom/xiaomi/ocr/view/GuideView;I)I
+    invoke-static {p1, v0}, Lcom/xiaomi/ocr/view/GuideView;->d(Lcom/xiaomi/ocr/view/GuideView;I)I
 
-    iget-object p1, p0, Lcom/xiaomi/ocr/view/GuideView$a;->c:Lcom/xiaomi/ocr/view/GuideView;
+    .line 3
+    iget-object p1, p0, Lcom/xiaomi/ocr/view/GuideView$a;->f:Lcom/xiaomi/ocr/view/GuideView;
 
     const/4 v0, 0x1
 
-    invoke-static {p1, v0}, Lcom/xiaomi/ocr/view/GuideView;->g(Lcom/xiaomi/ocr/view/GuideView;Z)Z
+    invoke-static {p1, v0}, Lcom/xiaomi/ocr/view/GuideView;->e(Lcom/xiaomi/ocr/view/GuideView;Z)Z
 
-    iget-object p0, p0, Lcom/xiaomi/ocr/view/GuideView$a;->c:Lcom/xiaomi/ocr/view/GuideView;
+    .line 4
+    iget-object p0, p0, Lcom/xiaomi/ocr/view/GuideView$a;->f:Lcom/xiaomi/ocr/view/GuideView;
 
-    invoke-static {p0}, Lcom/xiaomi/ocr/view/GuideView;->h(Lcom/xiaomi/ocr/view/GuideView;)Lcom/xiaomi/ocr/view/a;
+    invoke-static {p0}, Lcom/xiaomi/ocr/view/GuideView;->f(Lcom/xiaomi/ocr/view/GuideView;)Ld/o/c0/b/e;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/xiaomi/ocr/view/a;->f()V
+    invoke-virtual {p0}, Ld/o/c0/b/e;->f()V
 
     return-void
 .end method
 
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
 
-    iget-object p1, p0, Lcom/xiaomi/ocr/view/GuideView$a;->c:Lcom/xiaomi/ocr/view/GuideView;
+    .line 2
+    iget-object p1, p0, Lcom/xiaomi/ocr/view/GuideView$a;->f:Lcom/xiaomi/ocr/view/GuideView;
 
-    iget v0, p0, Lcom/xiaomi/ocr/view/GuideView$a;->a:I
+    iget v0, p0, Lcom/xiaomi/ocr/view/GuideView$a;->c:I
 
-    invoke-static {p1, v0}, Lcom/xiaomi/ocr/view/GuideView;->f(Lcom/xiaomi/ocr/view/GuideView;I)I
+    invoke-static {p1, v0}, Lcom/xiaomi/ocr/view/GuideView;->d(Lcom/xiaomi/ocr/view/GuideView;I)I
 
-    iget-object p1, p0, Lcom/xiaomi/ocr/view/GuideView$a;->c:Lcom/xiaomi/ocr/view/GuideView;
+    .line 3
+    iget-object p1, p0, Lcom/xiaomi/ocr/view/GuideView$a;->f:Lcom/xiaomi/ocr/view/GuideView;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/xiaomi/ocr/view/GuideView;->g(Lcom/xiaomi/ocr/view/GuideView;Z)Z
+    invoke-static {p1, v0}, Lcom/xiaomi/ocr/view/GuideView;->e(Lcom/xiaomi/ocr/view/GuideView;Z)Z
 
-    iget-object p0, p0, Lcom/xiaomi/ocr/view/GuideView$a;->c:Lcom/xiaomi/ocr/view/GuideView;
+    .line 4
+    iget-object p0, p0, Lcom/xiaomi/ocr/view/GuideView$a;->f:Lcom/xiaomi/ocr/view/GuideView;
 
-    invoke-static {p0}, Lcom/xiaomi/ocr/view/GuideView;->h(Lcom/xiaomi/ocr/view/GuideView;)Lcom/xiaomi/ocr/view/a;
+    invoke-static {p0}, Lcom/xiaomi/ocr/view/GuideView;->f(Lcom/xiaomi/ocr/view/GuideView;)Ld/o/c0/b/e;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/xiaomi/ocr/view/a;->B()V
+    invoke-virtual {p0}, Ld/o/c0/b/e;->B()V
 
     return-void
 .end method

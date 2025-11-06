@@ -39,6 +39,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ForwardingObject;-><init>()V
 
     return-void
@@ -49,6 +50,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingMap;->delegate()Ljava/util/Map;
 
     move-result-object p0
@@ -65,6 +67,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingMap;->delegate()Ljava/util/Map;
 
     move-result-object p0
@@ -83,6 +86,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingMap;->delegate()Ljava/util/Map;
 
     move-result-object p0
@@ -97,6 +101,7 @@
 .method public bridge synthetic delegate()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingMap;->delegate()Ljava/util/Map;
 
     move-result-object p0
@@ -125,6 +130,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingMap;->delegate()Ljava/util/Map;
 
     move-result-object p0
@@ -145,6 +151,7 @@
 
     if-eq p1, p0, :cond_1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingMap;->delegate()Ljava/util/Map;
 
     move-result-object p0
@@ -187,6 +194,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingMap;->delegate()Ljava/util/Map;
 
     move-result-object p0
@@ -201,6 +209,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingMap;->delegate()Ljava/util/Map;
 
     move-result-object p0
@@ -215,6 +224,7 @@
 .method public isEmpty()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingMap;->delegate()Ljava/util/Map;
 
     move-result-object p0
@@ -236,6 +246,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingMap;->delegate()Ljava/util/Map;
 
     move-result-object p0
@@ -269,6 +280,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingMap;->delegate()Ljava/util/Map;
 
     move-result-object p0
@@ -290,6 +302,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingMap;->delegate()Ljava/util/Map;
 
     move-result-object p0
@@ -319,6 +332,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingMap;->delegate()Ljava/util/Map;
 
     move-result-object p0
@@ -333,6 +347,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingMap;->delegate()Ljava/util/Map;
 
     move-result-object p0
@@ -347,6 +362,7 @@
 .method public standardClear()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingMap;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -369,6 +385,7 @@
     .annotation build Lcom/google/common/annotations/Beta;
     .end annotation
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/common/collect/Maps;->containsKeyImpl(Ljava/util/Map;Ljava/lang/Object;)Z
 
     move-result p0
@@ -383,6 +400,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/common/collect/Maps;->containsValueImpl(Ljava/util/Map;Ljava/lang/Object;)Z
 
     move-result p0
@@ -397,6 +415,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/common/collect/Maps;->equalsImpl(Ljava/util/Map;Ljava/lang/Object;)Z
 
     move-result p0
@@ -407,6 +426,7 @@
 .method public standardHashCode()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingMap;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -421,6 +441,7 @@
 .method public standardIsEmpty()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingMap;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -448,6 +469,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/common/collect/Maps;->putAllImpl(Ljava/util/Map;Ljava/util/Map;)V
 
     return-void
@@ -473,6 +495,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingMap;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -481,6 +504,7 @@
 
     move-result-object p0
 
+    .line 2
     :cond_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -488,12 +512,14 @@
 
     if-eqz v0, :cond_1
 
+    .line 3
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/Map$Entry;
 
+    .line 4
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -504,10 +530,12 @@
 
     if-eqz v1, :cond_0
 
+    .line 5
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
+    .line 6
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V
 
     return-object p1
@@ -521,6 +549,7 @@
 .method public standardToString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/collect/Maps;->toStringImpl(Ljava/util/Map;)Ljava/lang/String;
 
     move-result-object p0
@@ -538,6 +567,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingMap;->delegate()Ljava/util/Map;
 
     move-result-object p0

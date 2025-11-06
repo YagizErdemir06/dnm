@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/camera/mivi/ImageReceiverFactory$1;
+.class public Lcom/xiaomi/camera/mivi/ImageReceiverFactory$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,22 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/xiaomi/camera/mivi/ImageReceiverFactory;
+.field public final synthetic this$0:Lcom/xiaomi/camera/mivi/ImageReceiverFactory;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/camera/mivi/ImageReceiverFactory;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/mivi/ImageReceiverFactory$1;->this$0:Lcom/xiaomi/camera/mivi/ImageReceiverFactory;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,6 +44,7 @@
 .method private submitPendingDataList()V
     .locals 8
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/mivi/ImageReceiverFactory$1;->this$0:Lcom/xiaomi/camera/mivi/ImageReceiverFactory;
 
     invoke-static {v0}, Lcom/xiaomi/camera/mivi/ImageReceiverFactory;->access$100(Lcom/xiaomi/camera/mivi/ImageReceiverFactory;)Ljava/lang/Object;
@@ -46,6 +56,7 @@
     :try_start_0
     const-string v1, "ImageReceiverFactory"
 
+    .line 2
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -76,6 +87,7 @@
 
     invoke-static {v1, v2, v4}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 3
     iget-object v1, p0, Lcom/xiaomi/camera/mivi/ImageReceiverFactory$1;->this$0:Lcom/xiaomi/camera/mivi/ImageReceiverFactory;
 
     invoke-static {v1}, Lcom/xiaomi/camera/mivi/ImageReceiverFactory;->access$200(Lcom/xiaomi/camera/mivi/ImageReceiverFactory;)Ljava/util/List;
@@ -86,6 +98,7 @@
 
     move-result-object v1
 
+    .line 4
     :cond_0
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -94,12 +107,14 @@
 
     if-eqz v2, :cond_1
 
+    .line 5
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/xiaomi/camera/mivi/bean/RequestData;
 
+    .line 6
     iget-object v4, p0, Lcom/xiaomi/camera/mivi/ImageReceiverFactory$1;->this$0:Lcom/xiaomi/camera/mivi/ImageReceiverFactory;
 
     invoke-static {v4, v2}, Lcom/xiaomi/camera/mivi/ImageReceiverFactory;->access$300(Lcom/xiaomi/camera/mivi/ImageReceiverFactory;Lcom/xiaomi/camera/mivi/bean/RequestData;)Z
@@ -108,6 +123,7 @@
 
     const-string v5, "ImageReceiverFactory"
 
+    .line 7
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -134,6 +150,7 @@
 
     if-eqz v4, :cond_0
 
+    .line 8
     invoke-interface {v1}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
@@ -141,6 +158,7 @@
     :cond_1
     const-string v1, "ImageReceiverFactory"
 
+    .line 9
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -169,6 +187,7 @@
 
     invoke-static {v1, p0, v2}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 10
     monitor-exit v0
 
     return-void
@@ -188,6 +207,7 @@
 .method public onIdle()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/camera/mivi/ImageReceiverFactory$1;->submitPendingDataList()V
 
     return-void

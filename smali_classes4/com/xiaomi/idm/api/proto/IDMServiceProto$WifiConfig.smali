@@ -81,12 +81,15 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
 
     invoke-direct {v0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;-><init>()V
 
+    .line 2
     sput-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
 
+    .line 3
     const-class v1, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
 
     invoke-static {v1, v0}, Lcom/google/protobuf/GeneratedMessageLite;->registerDefaultInstance(Ljava/lang/Class;Lcom/google/protobuf/GeneratedMessageLite;)V
@@ -97,18 +100,24 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageLite;-><init>()V
 
     const-string v0, ""
 
+    .line 2
     iput-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->ssid_:Ljava/lang/String;
 
+    .line 3
     iput-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->pwd_:Ljava/lang/String;
 
+    .line 4
     iput-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->macAddr_:Ljava/lang/String;
 
+    .line 5
     iput-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->remoteIp_:Ljava/lang/String;
 
+    .line 6
     iput-object v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->localIp_:Ljava/lang/String;
 
     return-void
@@ -117,6 +126,7 @@
 .method public static synthetic access$22600()Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
 
     return-object v0
@@ -125,6 +135,7 @@
 .method public static synthetic access$22700(Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->setSsid(Ljava/lang/String;)V
 
     return-void
@@ -133,6 +144,7 @@
 .method public static synthetic access$22800(Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->clearSsid()V
 
     return-void
@@ -141,6 +153,7 @@
 .method public static synthetic access$22900(Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->setSsidBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -149,6 +162,7 @@
 .method public static synthetic access$23000(Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->setPwd(Ljava/lang/String;)V
 
     return-void
@@ -157,6 +171,7 @@
 .method public static synthetic access$23100(Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->clearPwd()V
 
     return-void
@@ -165,6 +180,7 @@
 .method public static synthetic access$23200(Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->setPwdBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -173,6 +189,7 @@
 .method public static synthetic access$23300(Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->setUse5GBand(Z)V
 
     return-void
@@ -181,6 +198,7 @@
 .method public static synthetic access$23400(Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->clearUse5GBand()V
 
     return-void
@@ -189,6 +207,7 @@
 .method public static synthetic access$23500(Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->setChannel(I)V
 
     return-void
@@ -197,6 +216,7 @@
 .method public static synthetic access$23600(Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->clearChannel()V
 
     return-void
@@ -205,6 +225,7 @@
 .method public static synthetic access$23700(Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->setMacAddr(Ljava/lang/String;)V
 
     return-void
@@ -213,6 +234,7 @@
 .method public static synthetic access$23800(Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->clearMacAddr()V
 
     return-void
@@ -221,6 +243,7 @@
 .method public static synthetic access$23900(Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->setMacAddrBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -229,6 +252,7 @@
 .method public static synthetic access$24000(Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->setRemoteIp(Ljava/lang/String;)V
 
     return-void
@@ -237,6 +261,7 @@
 .method public static synthetic access$24100(Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->clearRemoteIp()V
 
     return-void
@@ -245,6 +270,7 @@
 .method public static synthetic access$24200(Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->setRemoteIpBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -253,6 +279,7 @@
 .method public static synthetic access$24300(Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->setLocalIp(Ljava/lang/String;)V
 
     return-void
@@ -261,6 +288,7 @@
 .method public static synthetic access$24400(Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->clearLocalIp()V
 
     return-void
@@ -269,6 +297,7 @@
 .method public static synthetic access$24500(Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->setLocalIpBytes(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -279,6 +308,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->channel_:I
 
     return-void
@@ -287,6 +317,7 @@
 .method private clearLocalIp()V
     .locals 1
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->getDefaultInstance()Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
 
     move-result-object v0
@@ -303,6 +334,7 @@
 .method private clearMacAddr()V
     .locals 1
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->getDefaultInstance()Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
 
     move-result-object v0
@@ -319,6 +351,7 @@
 .method private clearPwd()V
     .locals 1
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->getDefaultInstance()Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
 
     move-result-object v0
@@ -335,6 +368,7 @@
 .method private clearRemoteIp()V
     .locals 1
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->getDefaultInstance()Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
 
     move-result-object v0
@@ -351,6 +385,7 @@
 .method private clearSsid()V
     .locals 1
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->getDefaultInstance()Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
 
     move-result-object v0
@@ -369,6 +404,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-boolean v0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->use5GBand_:Z
 
     return-void
@@ -377,6 +413,7 @@
 .method public static getDefaultInstance()Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
 
     return-object v0
@@ -663,6 +700,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
 
     invoke-virtual {v0}, Lcom/google/protobuf/GeneratedMessageLite;->getParserForType()Lcom/google/protobuf/Parser;
@@ -675,6 +713,7 @@
 .method private setChannel(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->channel_:I
 
     return-void
@@ -683,8 +722,10 @@
 .method private setLocalIp(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 2
     iput-object p1, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->localIp_:Ljava/lang/String;
 
     return-void
@@ -693,8 +734,10 @@
 .method private setLocalIpBytes(Lcom/google/protobuf/ByteString;)V
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/google/protobuf/AbstractMessageLite;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object p1
@@ -707,8 +750,10 @@
 .method private setMacAddr(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 2
     iput-object p1, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->macAddr_:Ljava/lang/String;
 
     return-void
@@ -717,8 +762,10 @@
 .method private setMacAddrBytes(Lcom/google/protobuf/ByteString;)V
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/google/protobuf/AbstractMessageLite;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object p1
@@ -731,8 +778,10 @@
 .method private setPwd(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 2
     iput-object p1, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->pwd_:Ljava/lang/String;
 
     return-void
@@ -741,8 +790,10 @@
 .method private setPwdBytes(Lcom/google/protobuf/ByteString;)V
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/google/protobuf/AbstractMessageLite;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object p1
@@ -755,8 +806,10 @@
 .method private setRemoteIp(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 2
     iput-object p1, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->remoteIp_:Ljava/lang/String;
 
     return-void
@@ -765,8 +818,10 @@
 .method private setRemoteIpBytes(Lcom/google/protobuf/ByteString;)V
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/google/protobuf/AbstractMessageLite;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object p1
@@ -779,8 +834,10 @@
 .method private setSsid(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 2
     iput-object p1, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->ssid_:Ljava/lang/String;
 
     return-void
@@ -789,8 +846,10 @@
 .method private setSsidBytes(Lcom/google/protobuf/ByteString;)V
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/google/protobuf/AbstractMessageLite;->checkByteStringIsUtf8(Lcom/google/protobuf/ByteString;)V
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object p1
@@ -803,6 +862,7 @@
 .method private setUse5GBand(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->use5GBand_:Z
 
     return-void
@@ -813,6 +873,7 @@
 .method public final dynamicMethod(Lcom/google/protobuf/GeneratedMessageLite$MethodToInvoke;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     sget-object p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$1;->$SwitchMap$com$google$protobuf$GeneratedMessageLite$MethodToInvoke:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
@@ -827,6 +888,7 @@
 
     packed-switch p0, :pswitch_data_0
 
+    .line 2
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -836,6 +898,7 @@
     :pswitch_0
     return-object p2
 
+    .line 3
     :pswitch_1
     invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
@@ -843,28 +906,34 @@
 
     return-object p0
 
+    .line 4
     :pswitch_2
     sget-object p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->PARSER:Lcom/google/protobuf/Parser;
 
     if-nez p0, :cond_1
 
+    .line 5
     const-class p1, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
 
     monitor-enter p1
 
+    .line 6
     :try_start_0
     sget-object p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->PARSER:Lcom/google/protobuf/Parser;
 
     if-nez p0, :cond_0
 
+    .line 7
     new-instance p0, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;
 
     sget-object p2, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
 
     invoke-direct {p0, p2}, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;-><init>(Lcom/google/protobuf/GeneratedMessageLite;)V
 
+    .line 8
     sput-object p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->PARSER:Lcom/google/protobuf/Parser;
 
+    .line 9
     :cond_0
     monitor-exit p1
 
@@ -883,6 +952,7 @@
     :goto_0
     return-object p0
 
+    .line 10
     :pswitch_3
     sget-object p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
 
@@ -935,6 +1005,7 @@
 
     const-string p1, "\u0000\u0007\u0000\u0000\u0001\u0007\u0007\u0000\u0000\u0000\u0001\u0208\u0002\u0208\u0003\u0007\u0004\u0004\u0005\u0208\u0006\u0208\u0007\u0208"
 
+    .line 11
     sget-object p2, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
 
     invoke-static {p2, p1, p0}, Lcom/google/protobuf/GeneratedMessageLite;->newMessageInfo(Lcom/google/protobuf/MessageLite;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
@@ -943,6 +1014,7 @@
 
     return-object p0
 
+    .line 12
     :pswitch_5
     new-instance p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig$Builder;
 
@@ -950,6 +1022,7 @@
 
     return-object p0
 
+    .line 13
     :pswitch_6
     new-instance p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;
 
@@ -972,6 +1045,7 @@
 .method public getChannel()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->channel_:I
 
     return p0
@@ -980,6 +1054,7 @@
 .method public getLocalIp()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->localIp_:Ljava/lang/String;
 
     return-object p0
@@ -988,6 +1063,7 @@
 .method public getLocalIpBytes()Lcom/google/protobuf/ByteString;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->localIp_:Ljava/lang/String;
 
     invoke-static {p0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
@@ -1000,6 +1076,7 @@
 .method public getMacAddr()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->macAddr_:Ljava/lang/String;
 
     return-object p0
@@ -1008,6 +1085,7 @@
 .method public getMacAddrBytes()Lcom/google/protobuf/ByteString;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->macAddr_:Ljava/lang/String;
 
     invoke-static {p0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
@@ -1020,6 +1098,7 @@
 .method public getPwd()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->pwd_:Ljava/lang/String;
 
     return-object p0
@@ -1028,6 +1107,7 @@
 .method public getPwdBytes()Lcom/google/protobuf/ByteString;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->pwd_:Ljava/lang/String;
 
     invoke-static {p0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
@@ -1040,6 +1120,7 @@
 .method public getRemoteIp()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->remoteIp_:Ljava/lang/String;
 
     return-object p0
@@ -1048,6 +1129,7 @@
 .method public getRemoteIpBytes()Lcom/google/protobuf/ByteString;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->remoteIp_:Ljava/lang/String;
 
     invoke-static {p0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
@@ -1060,6 +1142,7 @@
 .method public getSsid()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->ssid_:Ljava/lang/String;
 
     return-object p0
@@ -1068,6 +1151,7 @@
 .method public getSsidBytes()Lcom/google/protobuf/ByteString;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->ssid_:Ljava/lang/String;
 
     invoke-static {p0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
@@ -1080,6 +1164,7 @@
 .method public getUse5GBand()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$WifiConfig;->use5GBand_:Z
 
     return p0

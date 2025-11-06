@@ -1,14 +1,14 @@
-.class final Lcom/google/android/gms/common/internal/zad;
+.class public final Lcom/google/android/gms/common/internal/zad;
 .super Lcom/google/android/gms/common/internal/zag;
 .source "SourceFile"
 
 
 # instance fields
-.field final synthetic zaa:Landroid/content/Intent;
+.field public final synthetic zaa:Landroid/content/Intent;
 
-.field final synthetic zab:Landroid/app/Activity;
+.field public final synthetic zab:Landroid/app/Activity;
 
-.field final synthetic zac:I
+.field public final synthetic zac:I
 
 
 # direct methods
@@ -31,6 +31,7 @@
 .method public final zaa()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/internal/zad;->zaa:Landroid/content/Intent;
 
     if-eqz v0, :cond_0

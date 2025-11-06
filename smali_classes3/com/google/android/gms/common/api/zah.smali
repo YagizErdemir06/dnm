@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/api/zah;
+.class public final Lcom/google/android/gms/common/api/zah;
 .super Lcom/google/android/gms/common/api/internal/BasePendingResult;
 .source "SourceFile"
 
@@ -23,6 +23,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/gms/common/api/internal/BasePendingResult;-><init>(Lcom/google/android/gms/common/api/GoogleApiClient;)V
 
     return-void
@@ -40,6 +41,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Creating failed results is not supported"

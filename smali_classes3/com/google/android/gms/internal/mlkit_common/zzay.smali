@@ -1,16 +1,17 @@
-.class final Lcom/google/android/gms/internal/mlkit_common/zzay;
+.class public final Lcom/google/android/gms/internal/mlkit_common/zzay;
 .super Lcom/google/android/gms/internal/mlkit_common/zzar;
 .source "SourceFile"
 
 
 # instance fields
-.field final synthetic zza:Lcom/google/android/gms/internal/mlkit_common/zzaz;
+.field public final synthetic zza:Lcom/google/android/gms/internal/mlkit_common/zzaz;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_common/zzaz;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/internal/mlkit_common/zzay;->zza:Lcom/google/android/gms/internal/mlkit_common/zzaz;
 
     invoke-direct {p0}, Lcom/google/android/gms/internal/mlkit_common/zzar;-><init>()V
@@ -23,6 +24,7 @@
 .method public final bridge synthetic get(I)Ljava/lang/Object;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_common/zzay;->zza:Lcom/google/android/gms/internal/mlkit_common/zzaz;
 
     invoke-static {v0}, Lcom/google/android/gms/internal/mlkit_common/zzaz;->zzh(Lcom/google/android/gms/internal/mlkit_common/zzaz;)I
@@ -41,6 +43,7 @@
 
     add-int/2addr p1, p1
 
+    .line 2
     aget-object v0, v0, p1
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -51,12 +54,14 @@
 
     add-int/lit8 p1, p1, 0x1
 
+    .line 3
     aget-object p0, p0, p1
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     new-instance p1, Ljava/util/AbstractMap$SimpleImmutableEntry;
 
+    .line 4
     invoke-direct {p1, v0, p0}, Ljava/util/AbstractMap$SimpleImmutableEntry;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-object p1

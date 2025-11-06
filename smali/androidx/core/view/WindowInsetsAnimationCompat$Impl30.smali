@@ -1,4 +1,4 @@
-.class Landroidx/core/view/WindowInsetsAnimationCompat$Impl30;
+.class public Landroidx/core/view/WindowInsetsAnimationCompat$Impl30;
 .super Landroidx/core/view/WindowInsetsAnimationCompat$Impl;
 .source "SourceFile"
 
@@ -54,12 +54,12 @@
 
     const/4 v0, 0x0
 
-    const-wide/16 v1, 0x0
+    const/4 v1, 0x0
 
-    const/4 v3, 0x0
+    const-wide/16 v2, 0x0
 
     .line 1
-    invoke-direct {p0, v3, v0, v1, v2}, Landroidx/core/view/WindowInsetsAnimationCompat$Impl;-><init>(ILandroid/view/animation/Interpolator;J)V
+    invoke-direct {p0, v0, v1, v2, v3}, Landroidx/core/view/WindowInsetsAnimationCompat$Impl;-><init>(ILandroid/view/animation/Interpolator;J)V
 
     .line 2
     iput-object p1, p0, Landroidx/core/view/WindowInsetsAnimationCompat$Impl30;->mWrapped:Landroid/view/WindowInsetsAnimation;
@@ -76,6 +76,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     new-instance v0, Landroid/view/WindowInsetsAnimation$Bounds;
 
     invoke-virtual {p0}, Landroidx/core/view/WindowInsetsAnimationCompat$BoundsCompat;->getLowerBound()Landroidx/core/graphics/Insets;
@@ -86,6 +87,7 @@
 
     move-result-object v1
 
+    .line 2
     invoke-virtual {p0}, Landroidx/core/view/WindowInsetsAnimationCompat$BoundsCompat;->getUpperBound()Landroidx/core/graphics/Insets;
 
     move-result-object p0
@@ -108,7 +110,8 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    invoke-static {p0}, Landroidx/core/view/j0;->a(Landroid/view/WindowInsetsAnimation$Bounds;)Landroid/graphics/Insets;
+    .line 1
+    invoke-virtual {p0}, Landroid/view/WindowInsetsAnimation$Bounds;->getUpperBound()Landroid/graphics/Insets;
 
     move-result-object p0
 
@@ -128,7 +131,8 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    invoke-static {p0}, Landroidx/core/view/d0;->a(Landroid/view/WindowInsetsAnimation$Bounds;)Landroid/graphics/Insets;
+    .line 1
+    invoke-virtual {p0}, Landroid/view/WindowInsetsAnimation$Bounds;->getLowerBound()Landroid/graphics/Insets;
 
     move-result-object p0
 
@@ -152,6 +156,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     new-instance v0, Landroidx/core/view/WindowInsetsAnimationCompat$Impl30$ProxyCallback;
 
     invoke-direct {v0, p1}, Landroidx/core/view/WindowInsetsAnimationCompat$Impl30$ProxyCallback;-><init>(Landroidx/core/view/WindowInsetsAnimationCompat$Callback;)V
@@ -161,8 +166,9 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 2
     :goto_0
-    invoke-static {p0, v0}, Landroidx/core/view/f0;->a(Landroid/view/View;Landroid/view/WindowInsetsAnimation$Callback;)V
+    invoke-virtual {p0, v0}, Landroid/view/View;->setWindowInsetsAnimationCallback(Landroid/view/WindowInsetsAnimation$Callback;)V
 
     return-void
 .end method
@@ -172,9 +178,10 @@
 .method public getDurationMillis()J
     .locals 2
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/WindowInsetsAnimationCompat$Impl30;->mWrapped:Landroid/view/WindowInsetsAnimation;
 
-    invoke-static {p0}, Landroidx/core/view/b0;->a(Landroid/view/WindowInsetsAnimation;)J
+    invoke-virtual {p0}, Landroid/view/WindowInsetsAnimation;->getDurationMillis()J
 
     move-result-wide v0
 
@@ -184,9 +191,10 @@
 .method public getFraction()F
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/WindowInsetsAnimationCompat$Impl30;->mWrapped:Landroid/view/WindowInsetsAnimation;
 
-    invoke-static {p0}, Landroidx/core/view/e0;->a(Landroid/view/WindowInsetsAnimation;)F
+    invoke-virtual {p0}, Landroid/view/WindowInsetsAnimation;->getFraction()F
 
     move-result p0
 
@@ -196,9 +204,10 @@
 .method public getInterpolatedFraction()F
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/WindowInsetsAnimationCompat$Impl30;->mWrapped:Landroid/view/WindowInsetsAnimation;
 
-    invoke-static {p0}, Landroidx/core/view/c0;->a(Landroid/view/WindowInsetsAnimation;)F
+    invoke-virtual {p0}, Landroid/view/WindowInsetsAnimation;->getInterpolatedFraction()F
 
     move-result p0
 
@@ -210,9 +219,10 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/WindowInsetsAnimationCompat$Impl30;->mWrapped:Landroid/view/WindowInsetsAnimation;
 
-    invoke-static {p0}, Landroidx/core/view/h0;->a(Landroid/view/WindowInsetsAnimation;)Landroid/view/animation/Interpolator;
+    invoke-virtual {p0}, Landroid/view/WindowInsetsAnimation;->getInterpolator()Landroid/view/animation/Interpolator;
 
     move-result-object p0
 
@@ -222,9 +232,10 @@
 .method public getTypeMask()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/WindowInsetsAnimationCompat$Impl30;->mWrapped:Landroid/view/WindowInsetsAnimation;
 
-    invoke-static {p0}, Landroidx/core/view/g0;->a(Landroid/view/WindowInsetsAnimation;)I
+    invoke-virtual {p0}, Landroid/view/WindowInsetsAnimation;->getTypeMask()I
 
     move-result p0
 
@@ -234,9 +245,10 @@
 .method public setFraction(F)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/WindowInsetsAnimationCompat$Impl30;->mWrapped:Landroid/view/WindowInsetsAnimation;
 
-    invoke-static {p0, p1}, Landroidx/core/view/i0;->a(Landroid/view/WindowInsetsAnimation;F)V
+    invoke-virtual {p0, p1}, Landroid/view/WindowInsetsAnimation;->setFraction(F)V
 
     return-void
 .end method

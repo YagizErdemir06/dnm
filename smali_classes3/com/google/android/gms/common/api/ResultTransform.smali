@@ -46,6 +46,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Lcom/google/android/gms/common/api/internal/zacp;
 
     invoke-direct {p0, p1}, Lcom/google/android/gms/common/api/internal/zacp;-><init>(Lcom/google/android/gms/common/api/Status;)V

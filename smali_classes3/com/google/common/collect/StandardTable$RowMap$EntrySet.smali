@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/StandardTable$RowMap$EntrySet;
+.class public Lcom/google/common/collect/StandardTable$RowMap$EntrySet;
 .super Lcom/google/common/collect/StandardTable$TableSet;
 .source "SourceFile"
 
@@ -26,13 +26,14 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/google/common/collect/StandardTable$RowMap;
+.field public final synthetic this$1:Lcom/google/common/collect/StandardTable$RowMap;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/StandardTable$RowMap;)V
     .locals 1
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/StandardTable$RowMap$EntrySet;->this$1:Lcom/google/common/collect/StandardTable$RowMap;
 
     iget-object p1, p1, Lcom/google/common/collect/StandardTable$RowMap;->this$0:Lcom/google/common/collect/StandardTable;
@@ -53,20 +54,24 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Ljava/util/Map$Entry;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Ljava/util/Map$Entry;
 
+    .line 3
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -81,6 +86,7 @@
 
     iget-object p0, p0, Lcom/google/common/collect/StandardTable;->backingMap:Ljava/util/Map;
 
+    .line 5
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -110,12 +116,14 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/StandardTable$RowMap$EntrySet;->this$1:Lcom/google/common/collect/StandardTable$RowMap;
 
     iget-object v0, v0, Lcom/google/common/collect/StandardTable$RowMap;->this$0:Lcom/google/common/collect/StandardTable;
 
     iget-object v0, v0, Lcom/google/common/collect/StandardTable;->backingMap:Ljava/util/Map;
 
+    .line 2
     invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v0
@@ -124,6 +132,7 @@
 
     invoke-direct {v1, p0}, Lcom/google/common/collect/StandardTable$RowMap$EntrySet$1;-><init>(Lcom/google/common/collect/StandardTable$RowMap$EntrySet;)V
 
+    .line 3
     invoke-static {v0, v1}, Lcom/google/common/collect/Maps;->asMapEntryIterator(Ljava/util/Set;Lcom/google/common/base/Function;)Ljava/util/Iterator;
 
     move-result-object p0
@@ -138,20 +147,24 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Ljava/util/Map$Entry;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Ljava/util/Map$Entry;
 
+    .line 3
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -166,6 +179,7 @@
 
     iget-object p0, p0, Lcom/google/common/collect/StandardTable;->backingMap:Ljava/util/Map;
 
+    .line 5
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -185,6 +199,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/StandardTable$RowMap$EntrySet;->this$1:Lcom/google/common/collect/StandardTable$RowMap;
 
     iget-object p0, p0, Lcom/google/common/collect/StandardTable$RowMap;->this$0:Lcom/google/common/collect/StandardTable;

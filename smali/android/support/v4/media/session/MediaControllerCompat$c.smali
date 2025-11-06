@@ -32,6 +32,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;-><init>(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat$Token;)V
 
     return-void
@@ -39,13 +40,15 @@
 
 
 # virtual methods
-.method public getSessionInfo()Landroid/os/Bundle;
+.method public k()Landroid/os/Bundle;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->e:Landroid/os/Bundle;
 
     if-eqz v0, :cond_0
 
+    .line 2
     new-instance v0, Landroid/os/Bundle;
 
     iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->e:Landroid/os/Bundle;
@@ -54,6 +57,7 @@
 
     return-object v0
 
+    .line 3
     :cond_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->a:Landroid/media/session/MediaController;
 
@@ -63,6 +67,7 @@
 
     iput-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->e:Landroid/os/Bundle;
 
+    .line 4
     invoke-static {v0}, Landroid/support/v4/media/session/MediaSessionCompat;->F(Landroid/os/Bundle;)Landroid/os/Bundle;
 
     move-result-object v0
@@ -71,6 +76,7 @@
 
     if-nez v0, :cond_1
 
+    .line 5
     sget-object p0, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
 
     goto :goto_0

@@ -23,21 +23,22 @@
 
 
 # static fields
-.field public static final enum a:Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
-
-.field public static final enum b:Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
-
 .field public static final enum c:Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
 
 .field public static final enum d:Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
 
-.field public static final synthetic e:[Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
+.field public static final enum f:Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
+
+.field public static final enum g:Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
+
+.field private static final synthetic j:[Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 9
 
+    .line 1
     new-instance v0, Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
 
     const-string v1, "PENDING"
@@ -46,8 +47,9 @@
 
     invoke-direct {v0, v1, v2}, Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;->a:Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
+    sput-object v0, Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;->c:Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
 
+    .line 2
     new-instance v1, Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
 
     const-string v3, "RUNNABLE"
@@ -56,8 +58,9 @@
 
     invoke-direct {v1, v3, v4}, Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;-><init>(Ljava/lang/String;I)V
 
-    sput-object v1, Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;->b:Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
+    sput-object v1, Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;->d:Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
 
+    .line 3
     new-instance v3, Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
 
     const-string v5, "RUNNING"
@@ -66,8 +69,9 @@
 
     invoke-direct {v3, v5, v6}, Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;-><init>(Ljava/lang/String;I)V
 
-    sput-object v3, Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;->c:Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
+    sput-object v3, Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;->f:Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
 
+    .line 4
     new-instance v5, Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
 
     const-string v7, "FINISHED"
@@ -76,7 +80,7 @@
 
     invoke-direct {v5, v7, v8}, Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;-><init>(Ljava/lang/String;I)V
 
-    sput-object v5, Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;->d:Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
+    sput-object v5, Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;->g:Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
 
     const/4 v7, 0x4
 
@@ -90,19 +94,26 @@
 
     aput-object v5, v7, v8
 
-    sput-object v7, Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;->e:[Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
+    .line 5
+    sput-object v7, Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;->j:[Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;I)V
+.method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "$enum$name",
+            "$enum$ordinal"
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -110,7 +121,16 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8000
+        }
+        names = {
+            "name"
+        }
+    .end annotation
 
+    .line 1
     const-class v0, Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -125,7 +145,8 @@
 .method public static values()[Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
     .locals 1
 
-    sget-object v0, Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;->e:[Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
+    .line 1
+    sget-object v0, Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;->j:[Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;
 
     invoke-virtual {v0}, [Lcom/xiaomi/camera/common/LifecycleAsyncTask$b;->clone()Ljava/lang/Object;
 

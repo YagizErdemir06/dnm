@@ -1,4 +1,4 @@
-.class Lcom/google/common/base/FinalizableReferenceQueue$DecoupledLoader;
+.class public Lcom/google/common/base/FinalizableReferenceQueue$DecoupledLoader;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -25,6 +25,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,20 +34,21 @@
 
 # virtual methods
 .method public getBaseUrl()Ljava/net/URL;
-    .locals 3
+    .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    const/16 v0, 0x2e
+    const-string v0, "com.google.common.base.internal.Finalizer"
 
-    const/16 v1, 0x2f
+    const/16 v1, 0x2e
 
-    const-string v2, "com.google.common.base.internal.Finalizer"
+    const/16 v2, 0x2f
 
-    invoke-virtual {v2, v0, v1}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
+    .line 1
+    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
 
     move-result-object v0
 
@@ -60,6 +62,7 @@
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p0
@@ -74,36 +77,41 @@
 
     if-eqz p0, :cond_2
 
+    .line 3
     invoke-virtual {p0}, Ljava/net/URL;->toString()Ljava/lang/String;
 
     move-result-object v1
 
+    .line 4
     invoke-virtual {v1, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
+    .line 5
     new-instance p0, Ljava/io/IOException;
+
+    const-string v0, "Unsupported path style: "
 
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
-    move-result v0
+    move-result v2
 
-    const-string v2, "Unsupported path style: "
+    if-eqz v2, :cond_0
 
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v2, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Ljava/lang/String;
+    new-instance v1, Ljava/lang/String;
 
-    invoke-direct {v0, v2}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v0}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    move-object v0, v1
 
     :goto_0
     invoke-direct {p0, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
@@ -111,28 +119,31 @@
     throw p0
 
     :cond_1
+    const/4 v2, 0x0
+
+    .line 6
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
-    move-result v2
+    move-result v3
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    sub-int/2addr v2, v0
+    sub-int/2addr v3, v0
 
-    const/4 v0, 0x0
-
-    invoke-virtual {v1, v0, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    invoke-virtual {v1, v2, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 7
     new-instance v1, Ljava/net/URL;
 
     invoke-direct {v1, p0, v0}, Ljava/net/URL;-><init>(Ljava/net/URL;Ljava/lang/String;)V
 
     return-object v1
 
+    .line 8
     :cond_2
     new-instance p0, Ljava/io/FileNotFoundException;
 
@@ -154,6 +165,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Lcom/google/common/base/FinalizableReferenceQueue$DecoupledLoader;->getBaseUrl()Ljava/net/URL;
 
@@ -165,6 +177,7 @@
 
     const-string v0, "com.google.common.base.internal.Finalizer"
 
+    .line 2
     invoke-virtual {p0, v0}, Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object p0
@@ -176,6 +189,7 @@
     :catch_0
     move-exception p0
 
+    .line 3
     invoke-static {}, Lcom/google/common/base/FinalizableReferenceQueue;->access$000()Ljava/util/logging/Logger;
 
     move-result-object v0
@@ -194,6 +208,7 @@
 .method public newLoader(Ljava/net/URL;)Ljava/net/URLClassLoader;
     .locals 2
 
+    .line 1
     new-instance p0, Ljava/net/URLClassLoader;
 
     const/4 v0, 0x1

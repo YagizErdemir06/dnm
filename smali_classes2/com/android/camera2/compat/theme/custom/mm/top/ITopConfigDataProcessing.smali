@@ -18,6 +18,15 @@
 
 # virtual methods
 .method public abstract processTopConfigData(Ljava/lang/Object;)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "supportConfigs"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)TR;"

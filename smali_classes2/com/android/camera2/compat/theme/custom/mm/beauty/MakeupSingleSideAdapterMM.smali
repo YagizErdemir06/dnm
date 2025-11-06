@@ -23,7 +23,7 @@
 
 
 # instance fields
-.field private mComponentRunningShine:Lm2/v0;
+.field private mComponentRunningShine:Ld/d/a/l6/e/m/x0;
 
 
 # direct methods
@@ -35,41 +35,62 @@
 
 .method public constructor <init>(Landroid/content/Context;Ljava/util/List;II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "listItems",
+            "first",
+            "last"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
             "Ljava/util/List<",
-            "Lcom/android/camera/data/data/j;",
+            "Ld/d/a/l6/e/i;",
             ">;II)V"
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/camera2/compat/theme/custom/cv/panleentrance/MakeupSingleCheckAdapterCV;-><init>(Landroid/content/Context;Ljava/util/List;II)V
 
-    invoke-static {}, Lv8/o1;->impl2()Lv8/o1;
+    .line 2
+    invoke-static {}, Ld/d/a/m7/g/r1;->impl2()Ld/d/a/m7/g/r1;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lv8/o1;->n9()Lm2/v0;
+    .line 3
+    invoke-interface {p1}, Ld/d/a/m7/g/r1;->a9()Ld/d/a/l6/e/m/x0;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/MakeupSingleSideAdapterMM;->mComponentRunningShine:Lm2/v0;
+    iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/MakeupSingleSideAdapterMM;->mComponentRunningShine:Ld/d/a/l6/e/m/x0;
 
-    invoke-static {}, Ly2/b;->C0()Z
+    .line 4
+    invoke-static {}, Ld/d/a/n6/b;->C0()Z
 
     move-result p0
 
     sput-boolean p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/MakeupSingleSideAdapterMM;->mIsGallery:Z
 
-    invoke-static {}, Ly2/b;->M0()Z
+    .line 5
+    invoke-static {}, Ld/d/a/n6/b;->M0()Z
 
     move-result p0
 
     sput-boolean p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/MakeupSingleSideAdapterMM;->mIsVertical:Z
 
-    invoke-static {}, Ly2/b;->G0()Z
+    .line 6
+    invoke-static {}, Ld/d/a/n6/b;->G0()Z
 
     move-result p0
 
@@ -81,6 +102,7 @@
 .method public static synthetic access$000(Lcom/android/camera2/compat/theme/custom/mm/beauty/MakeupSingleSideAdapterMM;I)Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter;->normalItem(I)Z
 
     move-result p0
@@ -91,6 +113,7 @@
 .method public static synthetic access$100(Lcom/android/camera2/compat/theme/custom/mm/beauty/MakeupSingleSideAdapterMM;I)Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter;->normalItem(I)Z
 
     move-result p0
@@ -101,6 +124,7 @@
 .method public static synthetic access$200(Lcom/android/camera2/compat/theme/custom/mm/beauty/MakeupSingleSideAdapterMM;I)Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter;->normalItem(I)Z
 
     move-result p0
@@ -111,6 +135,7 @@
 .method public static synthetic access$300(Lcom/android/camera2/compat/theme/custom/mm/beauty/MakeupSingleSideAdapterMM;I)Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter;->normalItem(I)Z
 
     move-result p0
@@ -123,6 +148,7 @@
 .method public getItemCount()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter;->mSingleCheckList:Ljava/util/List;
 
     if-nez p0, :cond_0
@@ -131,6 +157,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -141,6 +168,16 @@
 
 .method public bridge synthetic onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "viewHolder",
+            "position"
+        }
+    .end annotation
 
     .line 1
     check-cast p1, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter$SingleCheckViewHolder;
@@ -160,6 +197,18 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000,
+            0x1000
+        }
+        names = {
+            "holder",
+            "position",
+            "payloads"
+        }
+    .end annotation
 
     .line 2
     check-cast p1, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter$SingleCheckViewHolder;
@@ -171,6 +220,16 @@
 
 .method public onBindViewHolder(Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter$SingleCheckViewHolder;I)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "viewHolder",
+            "position"
+        }
+    .end annotation
 
     .line 3
     iget-object v0, p1, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter$SingleCheckViewHolder;->itemView:Landroid/view/View;
@@ -184,7 +243,7 @@
     .line 4
     iget-object v0, p1, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter$SingleCheckViewHolder;->itemView:Landroid/view/View;
 
-    const v1, 0x7f0b043a
+    const v1, 0x7f0b03e2
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -201,16 +260,16 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/camera/data/data/j;
+    check-cast v0, Ld/d/a/l6/e/i;
 
     .line 6
-    iget-boolean v1, v0, Lcom/android/camera/data/data/j;->j:Z
+    iget-boolean v1, v0, Ld/d/a/l6/e/i;->m:Z
 
     if-eqz v1, :cond_0
 
-    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/MakeupSingleSideAdapterMM;->mComponentRunningShine:Lm2/v0;
+    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/MakeupSingleSideAdapterMM;->mComponentRunningShine:Ld/d/a/l6/e/m/x0;
 
-    invoke-virtual {p0}, Lm2/v0;->m0()Z
+    invoke-virtual {p0}, Ld/d/a/l6/e/m/x0;->c0()Z
 
     move-result p0
 
@@ -227,12 +286,12 @@
 
     aput-object v2, p0, v1
 
-    invoke-static {p0}, Lz1/f;->y([Landroid/view/View;)V
+    invoke-static {p0}, Ld/d/a/f6/f;->y([Landroid/view/View;)V
 
     .line 8
     :cond_0
     :try_start_0
-    invoke-virtual {p1, v0, p2}, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter$SingleCheckViewHolder;->setDataToView(Lcom/android/camera/data/data/j;I)V
+    invoke-virtual {p1, v0, p2}, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter$SingleCheckViewHolder;->setDataToView(Ld/d/a/l6/e/i;I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -248,21 +307,21 @@
 
     .line 10
     :goto_0
-    invoke-static {}, Ly2/b;->C0()Z
+    invoke-static {}, Ld/d/a/n6/b;->C0()Z
 
     move-result p0
 
     sput-boolean p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/MakeupSingleSideAdapterMM;->mIsGallery:Z
 
     .line 11
-    invoke-static {}, Ly2/b;->M0()Z
+    invoke-static {}, Ld/d/a/n6/b;->M0()Z
 
     move-result p0
 
     sput-boolean p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/MakeupSingleSideAdapterMM;->mIsVertical:Z
 
     .line 12
-    invoke-static {}, Ly2/b;->G0()Z
+    invoke-static {}, Ld/d/a/n6/b;->G0()Z
 
     move-result p0
 
@@ -281,6 +340,19 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "holder",
+            "position",
+            "payloads"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -300,6 +372,16 @@
 
 .method public bridge synthetic onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "viewGroup",
+            "i"
+        }
+    .end annotation
 
     .line 1
     invoke-virtual {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/beauty/MakeupSingleSideAdapterMM;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter$SingleCheckViewHolder;
@@ -311,6 +393,16 @@
 
 .method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter$SingleCheckViewHolder;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "viewGroup",
+            "i"
+        }
+    .end annotation
 
     .line 2
     iget-object p2, p0, Lcom/android/camera/fragment/beauty/MakeupSingleCheckAdapter;->mContext:Landroid/content/Context;
@@ -320,7 +412,7 @@
     move-result-object p2
 
     .line 3
-    invoke-static {}, Ly2/b;->H0()Z
+    invoke-static {}, Ld/d/a/n6/b;->H0()Z
 
     move-result v0
 
@@ -328,7 +420,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0e0199
+    const v0, 0x7f0e0185
 
     .line 4
     invoke-virtual {p2, v0, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
@@ -338,7 +430,7 @@
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f0e019a
+    const v0, 0x7f0e0186
 
     .line 5
     invoke-virtual {p2, v0, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;

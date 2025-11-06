@@ -11,13 +11,13 @@
 
 .field private final formats:[Lcom/google/android/exoplayer2/Format;
 
-.field protected final group:Lcom/google/android/exoplayer2/source/TrackGroup;
+.field public final group:Lcom/google/android/exoplayer2/source/TrackGroup;
 
 .field private hashCode:I
 
-.field protected final length:I
+.field public final length:I
 
-.field protected final tracks:[I
+.field public final tracks:[I
 
 .field private final type:I
 
@@ -106,9 +106,7 @@
     :cond_1
     iget-object p2, p0, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->formats:[Lcom/google/android/exoplayer2/Format;
 
-    new-instance p3, Lcom/google/android/exoplayer2/trackselection/a;
-
-    invoke-direct {p3}, Lcom/google/android/exoplayer2/trackselection/a;-><init>()V
+    sget-object p3, Ld/j/a/b/x2/b;->c:Ld/j/a/b/x2/b;
 
     invoke-static {p2, p3}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
 
@@ -151,19 +149,10 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/google/android/exoplayer2/Format;Lcom/google/android/exoplayer2/Format;)I
+.method public static synthetic lambda$new$0(Lcom/google/android/exoplayer2/Format;Lcom/google/android/exoplayer2/Format;)I
     .locals 0
 
-    invoke-static {p0, p1}, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->lambda$new$0(Lcom/google/android/exoplayer2/Format;Lcom/google/android/exoplayer2/Format;)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method private static synthetic lambda$new$0(Lcom/google/android/exoplayer2/Format;Lcom/google/android/exoplayer2/Format;)I
-    .locals 0
-
+    .line 1
     iget p1, p1, Lcom/google/android/exoplayer2/Format;->bitrate:I
 
     iget p0, p0, Lcom/google/android/exoplayer2/Format;->bitrate:I
@@ -178,10 +167,12 @@
 .method public blacklist(IJ)Z
     .locals 9
 
+    .line 1
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
+    .line 2
     invoke-virtual {p0, p1, v0, v1}, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->isBlacklisted(IJ)Z
 
     move-result v2
@@ -190,6 +181,7 @@
 
     move v4, v3
 
+    .line 3
     :goto_0
     iget v5, p0, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->length:I
 
@@ -201,6 +193,7 @@
 
     if-eq v4, p1, :cond_0
 
+    .line 4
     invoke-virtual {p0, v4, v0, v1}, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->isBlacklisted(IJ)Z
 
     move-result v2
@@ -224,6 +217,7 @@
 
     return v3
 
+    .line 5
     :cond_2
     iget-object p0, p0, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->excludeUntilTimes:[J
 
@@ -233,10 +227,12 @@
 
     move-wide v2, p2
 
+    .line 6
     invoke-static/range {v0 .. v5}, Lcom/google/android/exoplayer2/util/Util;->addWithOverflowDefault(JJJ)J
 
     move-result-wide p2
 
+    .line 7
     invoke-static {v7, v8, p2, p3}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide p2
@@ -276,6 +272,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -288,9 +285,11 @@
 
     goto :goto_1
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;
 
+    .line 3
     iget-object v2, p0, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->group:Lcom/google/android/exoplayer2/source/TrackGroup;
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->group:Lcom/google/android/exoplayer2/source/TrackGroup;
@@ -332,6 +331,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p3}, Ljava/util/List;->size()I
 
     move-result p0
@@ -342,6 +342,7 @@
 .method public final getFormat(I)Lcom/google/android/exoplayer2/Format;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->formats:[Lcom/google/android/exoplayer2/Format;
 
     aget-object p0, p0, p1
@@ -352,6 +353,7 @@
 .method public final getIndexInTrackGroup(I)I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->tracks:[I
 
     aget p0, p0, p1
@@ -362,6 +364,7 @@
 .method public final getSelectedFormat()Lcom/google/android/exoplayer2/Format;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->formats:[Lcom/google/android/exoplayer2/Format;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;->getSelectedIndex()I
@@ -376,6 +379,7 @@
 .method public final getSelectedIndexInTrackGroup()I
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->tracks:[I
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;->getSelectedIndex()I
@@ -390,6 +394,7 @@
 .method public final getTrackGroup()Lcom/google/android/exoplayer2/source/TrackGroup;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->group:Lcom/google/android/exoplayer2/source/TrackGroup;
 
     return-object p0
@@ -398,6 +403,7 @@
 .method public final getType()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->type:I
 
     return p0
@@ -406,10 +412,12 @@
 .method public hashCode()I
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->hashCode:I
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->group:Lcom/google/android/exoplayer2/source/TrackGroup;
 
     invoke-static {v0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
@@ -428,6 +436,7 @@
 
     iput v0, p0, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->hashCode:I
 
+    .line 3
     :cond_0
     iget p0, p0, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->hashCode:I
 
@@ -499,6 +508,7 @@
 .method public isBlacklisted(IJ)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->excludeUntilTimes:[J
 
     aget-wide p0, p0, p1
@@ -521,6 +531,7 @@
 .method public final length()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->tracks:[I
 
     array-length p0, p0

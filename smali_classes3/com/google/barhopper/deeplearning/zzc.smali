@@ -30,6 +30,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/barhopper/deeplearning/zzc;
 
     invoke-direct {v0}, Lcom/google/barhopper/deeplearning/zzc;-><init>()V
@@ -38,6 +39,7 @@
 
     const-class v1, Lcom/google/barhopper/deeplearning/zzc;
 
+    .line 2
     invoke-static {v1, v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;->zzU(Ljava/lang/Class;Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;)V
 
     return-void
@@ -46,14 +48,17 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;-><init>()V
 
+    .line 2
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;->zzL()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzei;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/barhopper/deeplearning/zzc;->zze:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzei;
 
+    .line 3
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;->zzL()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzei;
 
     move-result-object v0
@@ -66,6 +71,7 @@
 .method public static zza()Lcom/google/barhopper/deeplearning/zzb;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/barhopper/deeplearning/zzc;->zza:Lcom/google/barhopper/deeplearning/zzc;
 
     invoke-virtual {v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;->zzF()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdx;
@@ -102,6 +108,7 @@
 .method public static synthetic zzd(Lcom/google/barhopper/deeplearning/zzc;F)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/barhopper/deeplearning/zzc;->zze:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzei;
 
     invoke-interface {v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzel;->zzc()Z
@@ -110,6 +117,7 @@
 
     if-nez v1, :cond_0
 
+    .line 2
     invoke-static {v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;->zzM(Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzei;)Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzei;
 
     move-result-object v0
@@ -119,6 +127,7 @@
     :cond_0
     iget-object p0, p0, Lcom/google/barhopper/deeplearning/zzc;->zze:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzei;
 
+    .line 3
     invoke-interface {p0, p1}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzei;->zzg(F)V
 
     return-void
@@ -127,6 +136,7 @@
 .method public static synthetic zze(Lcom/google/barhopper/deeplearning/zzc;F)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/barhopper/deeplearning/zzc;->zzf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzei;
 
     invoke-interface {v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzel;->zzc()Z
@@ -135,6 +145,7 @@
 
     if-nez v1, :cond_0
 
+    .line 2
     invoke-static {v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;->zzM(Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzei;)Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzei;
 
     move-result-object v0
@@ -144,6 +155,7 @@
     :cond_0
     iget-object p0, p0, Lcom/google/barhopper/deeplearning/zzc;->zzf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzei;
 
+    .line 3
     invoke-interface {p0, p1}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzei;->zzg(F)V
 
     return-void
@@ -194,6 +206,7 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     sget-object p0, Lcom/google/barhopper/deeplearning/zzc;->zza:Lcom/google/barhopper/deeplearning/zzc;
 
@@ -202,6 +215,7 @@
     :cond_1
     new-instance p1, Lcom/google/barhopper/deeplearning/zzb;
 
+    .line 2
     invoke-direct {p1, p0}, Lcom/google/barhopper/deeplearning/zzb;-><init>(Lcom/google/barhopper/deeplearning/zza;)V
 
     return-object p1
@@ -209,6 +223,7 @@
     :cond_2
     new-instance p0, Lcom/google/barhopper/deeplearning/zzc;
 
+    .line 3
     invoke-direct {p0}, Lcom/google/barhopper/deeplearning/zzc;-><init>()V
 
     return-object p0
@@ -250,6 +265,7 @@
 
     aput-object p2, p1, p0
 
+    .line 4
     sget-object p0, Lcom/google/barhopper/deeplearning/zzc;->zza:Lcom/google/barhopper/deeplearning/zzc;
 
     const-string p2, "\u0001\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0002\u0000\u0001\u0013\u0002\u0013\u0003\u100b\u0000\u0004\u100b\u0001\u0005\u100b\u0002\u0006\u100b\u0003"
@@ -260,6 +276,7 @@
 
     return-object p0
 
+    .line 5
     :cond_4
     invoke-static {p0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 

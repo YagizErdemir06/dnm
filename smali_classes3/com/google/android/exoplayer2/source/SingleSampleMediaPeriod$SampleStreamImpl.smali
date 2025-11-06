@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod$SampleStreamImpl;
+.class public final Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod$SampleStreamImpl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -30,7 +30,7 @@
 
 .field private streamState:I
 
-.field final synthetic this$0:Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod;
+.field public final synthetic this$0:Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod;
 
 
 # direct methods
@@ -57,10 +57,12 @@
 .method private maybeNotifyDownstreamFormat()V
     .locals 8
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod$SampleStreamImpl;->notifiedDownstreamFormat:Z
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod$SampleStreamImpl;->this$0:Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod;->access$300(Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod;)Lcom/google/android/exoplayer2/source/MediaSourceEventListener$EventDispatcher;
@@ -73,6 +75,7 @@
 
     iget-object v0, v0, Lcom/google/android/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
+    .line 3
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/MimeTypes;->getTrackType(Ljava/lang/String;)I
 
     move-result v2
@@ -87,10 +90,12 @@
 
     const-wide/16 v6, 0x0
 
+    .line 4
     invoke-virtual/range {v1 .. v7}, Lcom/google/android/exoplayer2/source/MediaSourceEventListener$EventDispatcher;->downstreamFormatChanged(ILcom/google/android/exoplayer2/Format;ILjava/lang/Object;J)V
 
     const/4 v0, 0x1
 
+    .line 5
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod$SampleStreamImpl;->notifiedDownstreamFormat:Z
 
     :cond_0
@@ -102,6 +107,7 @@
 .method public isReady()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod$SampleStreamImpl;->this$0:Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod;
 
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod;->loadingFinished:Z
@@ -117,12 +123,14 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod$SampleStreamImpl;->this$0:Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod;
 
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod;->treatLoadErrorsAsEndOfStream:Z
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod;->loader:Lcom/google/android/exoplayer2/upstream/Loader;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/upstream/Loader;->maybeThrowError()V
@@ -134,8 +142,10 @@
 .method public readData(Lcom/google/android/exoplayer2/FormatHolder;Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;I)I
     .locals 7
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod$SampleStreamImpl;->maybeNotifyDownstreamFormat()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod$SampleStreamImpl;->this$0:Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod;
 
     iget-boolean v1, v0, Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod;->loadingFinished:Z
@@ -148,8 +158,10 @@
 
     if-nez v3, :cond_0
 
+    .line 3
     iput v2, p0, Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod$SampleStreamImpl;->streamState:I
 
+    .line 4
     :cond_0
     iget v3, p0, Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod$SampleStreamImpl;->streamState:I
 
@@ -159,6 +171,7 @@
 
     const/4 p0, 0x4
 
+    .line 5
     invoke-virtual {p2, p0}, Lcom/google/android/exoplayer2/decoder/Buffer;->addFlag(I)V
 
     return v4
@@ -181,27 +194,32 @@
 
     return p0
 
+    .line 6
     :cond_3
     iget-object p1, v0, Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod;->sampleData:[B
 
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 7
     invoke-virtual {p2, v6}, Lcom/google/android/exoplayer2/decoder/Buffer;->addFlag(I)V
 
     const-wide/16 v0, 0x0
 
+    .line 8
     iput-wide v0, p2, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->timeUs:J
 
     and-int/lit8 p1, p3, 0x4
 
     if-nez p1, :cond_4
 
+    .line 9
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod$SampleStreamImpl;->this$0:Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod;
 
     iget p1, p1, Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod;->sampleSize:I
 
     invoke-virtual {p2, p1}, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->ensureSpaceForWrite(I)V
 
+    .line 10
     iget-object p1, p2, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->data:Ljava/nio/ByteBuffer;
 
     iget-object p2, p0, Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod$SampleStreamImpl;->this$0:Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod;
@@ -219,17 +237,20 @@
 
     if-nez p1, :cond_5
 
+    .line 11
     iput v2, p0, Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod$SampleStreamImpl;->streamState:I
 
     :cond_5
     return v4
 
+    .line 12
     :cond_6
     :goto_0
     iget-object p2, v0, Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod;->format:Lcom/google/android/exoplayer2/Format;
 
     iput-object p2, p1, Lcom/google/android/exoplayer2/FormatHolder;->format:Lcom/google/android/exoplayer2/Format;
 
+    .line 13
     iput v6, p0, Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod$SampleStreamImpl;->streamState:I
 
     const/4 p0, -0x5
@@ -240,6 +261,7 @@
 .method public reset()V
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod$SampleStreamImpl;->streamState:I
 
     const/4 v1, 0x2
@@ -248,6 +270,7 @@
 
     const/4 v0, 0x1
 
+    .line 2
     iput v0, p0, Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod$SampleStreamImpl;->streamState:I
 
     :cond_0
@@ -257,6 +280,7 @@
 .method public skipData(J)I
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod$SampleStreamImpl;->maybeNotifyDownstreamFormat()V
 
     const-wide/16 v0, 0x0
@@ -265,12 +289,14 @@
 
     if-lez p1, :cond_0
 
+    .line 2
     iget p1, p0, Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod$SampleStreamImpl;->streamState:I
 
     const/4 p2, 0x2
 
     if-eq p1, p2, :cond_0
 
+    .line 3
     iput p2, p0, Lcom/google/android/exoplayer2/source/SingleSampleMediaPeriod$SampleStreamImpl;->streamState:I
 
     const/4 p0, 0x1

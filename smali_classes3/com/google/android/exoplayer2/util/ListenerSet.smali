@@ -138,9 +138,9 @@
     iput-object p1, p0, Lcom/google/android/exoplayer2/util/ListenerSet;->queuedEvents:Ljava/util/ArrayDeque;
 
     .line 8
-    new-instance p1, Lcom/google/android/exoplayer2/util/a;
+    new-instance p1, Ld/j/a/b/a3/b;
 
-    invoke-direct {p1, p0}, Lcom/google/android/exoplayer2/util/a;-><init>(Lcom/google/android/exoplayer2/util/ListenerSet;)V
+    invoke-direct {p1, p0}, Ld/j/a/b/a3/b;-><init>(Lcom/google/android/exoplayer2/util/ListenerSet;)V
 
     invoke-interface {p3, p2, p1}, Lcom/google/android/exoplayer2/util/Clock;->createHandler(Landroid/os/Looper;Landroid/os/Handler$Callback;)Lcom/google/android/exoplayer2/util/HandlerWrapper;
 
@@ -152,15 +152,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Ljava/util/concurrent/CopyOnWriteArraySet;ILcom/google/android/exoplayer2/util/ListenerSet$Event;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/util/ListenerSet;->lambda$queueEvent$0(Ljava/util/concurrent/CopyOnWriteArraySet;ILcom/google/android/exoplayer2/util/ListenerSet$Event;)V
-
-    return-void
-.end method
-
-.method public static synthetic b(Lcom/google/android/exoplayer2/util/ListenerSet;Landroid/os/Message;)Z
+.method public static synthetic a(Lcom/google/android/exoplayer2/util/ListenerSet;Landroid/os/Message;)Z
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/util/ListenerSet;->handleMessage(Landroid/os/Message;)Z
@@ -173,6 +165,7 @@
 .method private handleMessage(Landroid/os/Message;)Z
     .locals 2
 
+    .line 1
     iget-object p1, p0, Lcom/google/android/exoplayer2/util/ListenerSet;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
@@ -192,10 +185,12 @@
 
     check-cast v0, Lcom/google/android/exoplayer2/util/ListenerSet$ListenerHolder;
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/util/ListenerSet;->iterationFinishedEvent:Lcom/google/android/exoplayer2/util/ListenerSet$IterationFinishedEvent;
 
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/util/ListenerSet$ListenerHolder;->iterationFinished(Lcom/google/android/exoplayer2/util/ListenerSet$IterationFinishedEvent;)V
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/ListenerSet;->handler:Lcom/google/android/exoplayer2/util/HandlerWrapper;
 
     const/4 v1, 0x0
@@ -212,9 +207,10 @@
     return p0
 .end method
 
-.method private static synthetic lambda$queueEvent$0(Ljava/util/concurrent/CopyOnWriteArraySet;ILcom/google/android/exoplayer2/util/ListenerSet$Event;)V
+.method public static synthetic lambda$queueEvent$0(Ljava/util/concurrent/CopyOnWriteArraySet;ILcom/google/android/exoplayer2/util/ListenerSet$Event;)V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -232,6 +228,7 @@
 
     check-cast v0, Lcom/google/android/exoplayer2/util/ListenerSet$ListenerHolder;
 
+    .line 2
     invoke-virtual {v0, p1, p2}, Lcom/google/android/exoplayer2/util/ListenerSet$ListenerHolder;->invoke(ILcom/google/android/exoplayer2/util/ListenerSet$Event;)V
 
     goto :goto_0
@@ -250,15 +247,18 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/util/ListenerSet;->released:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/ListenerSet;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     new-instance v0, Lcom/google/android/exoplayer2/util/ListenerSet$ListenerHolder;
@@ -273,6 +273,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/ListenerSet;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->clear()V
@@ -336,6 +337,7 @@
 .method public flushEvents()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/ListenerSet;->queuedEvents:Ljava/util/ArrayDeque;
 
     invoke-virtual {v0}, Ljava/util/ArrayDeque;->isEmpty()Z
@@ -346,6 +348,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/ListenerSet;->handler:Lcom/google/android/exoplayer2/util/HandlerWrapper;
 
@@ -357,6 +360,7 @@
 
     if-nez v0, :cond_1
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/ListenerSet;->handler:Lcom/google/android/exoplayer2/util/HandlerWrapper;
 
     invoke-interface {v0, v1}, Lcom/google/android/exoplayer2/util/HandlerWrapper;->obtainMessage(I)Lcom/google/android/exoplayer2/util/HandlerWrapper$Message;
@@ -365,6 +369,7 @@
 
     invoke-interface {v0, v1}, Lcom/google/android/exoplayer2/util/HandlerWrapper;->sendMessageAtFrontOfQueue(Lcom/google/android/exoplayer2/util/HandlerWrapper$Message;)Z
 
+    .line 4
     :cond_1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/ListenerSet;->flushingEvents:Ljava/util/ArrayDeque;
 
@@ -374,12 +379,14 @@
 
     xor-int/lit8 v0, v0, 0x1
 
+    .line 5
     iget-object v1, p0, Lcom/google/android/exoplayer2/util/ListenerSet;->flushingEvents:Ljava/util/ArrayDeque;
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/util/ListenerSet;->queuedEvents:Ljava/util/ArrayDeque;
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayDeque;->addAll(Ljava/util/Collection;)Z
 
+    .line 6
     iget-object v1, p0, Lcom/google/android/exoplayer2/util/ListenerSet;->queuedEvents:Ljava/util/ArrayDeque;
 
     invoke-virtual {v1}, Ljava/util/ArrayDeque;->clear()V
@@ -388,6 +395,7 @@
 
     return-void
 
+    .line 7
     :cond_2
     :goto_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/ListenerSet;->flushingEvents:Ljava/util/ArrayDeque;
@@ -398,6 +406,7 @@
 
     if-nez v0, :cond_3
 
+    .line 8
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/ListenerSet;->flushingEvents:Ljava/util/ArrayDeque;
 
     invoke-virtual {v0}, Ljava/util/ArrayDeque;->peekFirst()Ljava/lang/Object;
@@ -408,6 +417,7 @@
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
+    .line 9
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/ListenerSet;->flushingEvents:Ljava/util/ArrayDeque;
 
     invoke-virtual {v0}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;
@@ -428,17 +438,19 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/util/ListenerSet;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>(Ljava/util/Collection;)V
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/ListenerSet;->queuedEvents:Ljava/util/ArrayDeque;
 
-    new-instance v1, Lcom/google/android/exoplayer2/util/b;
+    new-instance v1, Ld/j/a/b/a3/a;
 
-    invoke-direct {v1, v0, p1, p2}, Lcom/google/android/exoplayer2/util/b;-><init>(Ljava/util/concurrent/CopyOnWriteArraySet;ILcom/google/android/exoplayer2/util/ListenerSet$Event;)V
+    invoke-direct {v1, v0, p1, p2}, Ld/j/a/b/a3/a;-><init>(Ljava/util/concurrent/CopyOnWriteArraySet;ILcom/google/android/exoplayer2/util/ListenerSet$Event;)V
 
     invoke-virtual {p0, v1}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
 
@@ -448,6 +460,7 @@
 .method public release()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/ListenerSet;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
@@ -467,12 +480,14 @@
 
     check-cast v1, Lcom/google/android/exoplayer2/util/ListenerSet$ListenerHolder;
 
+    .line 2
     iget-object v2, p0, Lcom/google/android/exoplayer2/util/ListenerSet;->iterationFinishedEvent:Lcom/google/android/exoplayer2/util/ListenerSet$IterationFinishedEvent;
 
     invoke-virtual {v1, v2}, Lcom/google/android/exoplayer2/util/ListenerSet$ListenerHolder;->release(Lcom/google/android/exoplayer2/util/ListenerSet$IterationFinishedEvent;)V
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/ListenerSet;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
@@ -480,6 +495,7 @@
 
     const/4 v0, 0x1
 
+    .line 4
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/util/ListenerSet;->released:Z
 
     return-void
@@ -493,6 +509,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/ListenerSet;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
@@ -513,6 +530,7 @@
 
     check-cast v1, Lcom/google/android/exoplayer2/util/ListenerSet$ListenerHolder;
 
+    .line 2
     iget-object v2, v1, Lcom/google/android/exoplayer2/util/ListenerSet$ListenerHolder;->listener:Ljava/lang/Object;
 
     invoke-virtual {v2, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -521,10 +539,12 @@
 
     if-eqz v2, :cond_0
 
+    .line 3
     iget-object v2, p0, Lcom/google/android/exoplayer2/util/ListenerSet;->iterationFinishedEvent:Lcom/google/android/exoplayer2/util/ListenerSet$IterationFinishedEvent;
 
     invoke-virtual {v1, v2}, Lcom/google/android/exoplayer2/util/ListenerSet$ListenerHolder;->release(Lcom/google/android/exoplayer2/util/ListenerSet$IterationFinishedEvent;)V
 
+    .line 4
     iget-object v2, p0, Lcom/google/android/exoplayer2/util/ListenerSet;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v2, v1}, Ljava/util/concurrent/CopyOnWriteArraySet;->remove(Ljava/lang/Object;)Z
@@ -545,8 +565,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/google/android/exoplayer2/util/ListenerSet;->queueEvent(ILcom/google/android/exoplayer2/util/ListenerSet$Event;)V
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ListenerSet;->flushEvents()V
 
     return-void
@@ -555,6 +577,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/ListenerSet;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->size()I

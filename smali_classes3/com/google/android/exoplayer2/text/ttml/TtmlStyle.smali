@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;
+.class public final Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -104,28 +104,38 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
+    .line 2
     iput v0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->linethrough:I
 
+    .line 3
     iput v0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->underline:I
 
+    .line 4
     iput v0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->bold:I
 
+    .line 5
     iput v0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->italic:I
 
+    .line 6
     iput v0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->fontSizeUnit:I
 
+    .line 7
     iput v0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->rubyType:I
 
+    .line 8
     iput v0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->rubyPosition:I
 
+    .line 9
     iput v0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->textCombine:I
 
     const v0, 0x7f7fffff    # Float.MAX_VALUE
 
+    .line 10
     iput v0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->shearPercentage:F
 
     return-void
@@ -350,6 +360,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-direct {p0, p1, v0}, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->inherit(Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;Z)Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;
 
     move-result-object p0
@@ -360,14 +371,17 @@
 .method public getBackgroundColor()I
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->hasBackgroundColor:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget p0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->backgroundColor:I
 
     return p0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -381,14 +395,17 @@
 .method public getFontColor()I
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->hasFontColor:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget p0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->fontColor:I
 
     return p0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -404,6 +421,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->fontFamily:Ljava/lang/String;
 
     return-object p0
@@ -412,6 +430,7 @@
 .method public getFontSize()F
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->fontSize:F
 
     return p0
@@ -420,6 +439,7 @@
 .method public getFontSizeUnit()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->fontSizeUnit:I
 
     return p0
@@ -430,6 +450,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->id:Ljava/lang/String;
 
     return-object p0
@@ -440,6 +461,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->multiRowAlign:Landroid/text/Layout$Alignment;
 
     return-object p0
@@ -448,6 +470,7 @@
 .method public getRubyPosition()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->rubyPosition:I
 
     return p0
@@ -456,6 +479,7 @@
 .method public getRubyType()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->rubyType:I
 
     return p0
@@ -464,6 +488,7 @@
 .method public getShearPercentage()F
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->shearPercentage:F
 
     return p0
@@ -472,6 +497,7 @@
 .method public getStyle()I
     .locals 3
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->bold:I
 
     const/4 v1, -0x1
@@ -498,6 +524,7 @@
     :cond_1
     move v0, v1
 
+    .line 2
     :goto_0
     iget p0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->italic:I
 
@@ -516,6 +543,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->textAlign:Landroid/text/Layout$Alignment;
 
     return-object p0
@@ -524,6 +552,7 @@
 .method public getTextCombine()Z
     .locals 1
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->textCombine:I
 
     const/4 v0, 0x1
@@ -544,6 +573,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->textEmphasis:Lcom/google/android/exoplayer2/text/ttml/TextEmphasis;
 
     return-object p0
@@ -552,6 +582,7 @@
 .method public hasBackgroundColor()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->hasBackgroundColor:Z
 
     return p0
@@ -560,6 +591,7 @@
 .method public hasFontColor()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->hasFontColor:Z
 
     return p0
@@ -585,6 +617,7 @@
 .method public isLinethrough()Z
     .locals 1
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->linethrough:I
 
     const/4 v0, 0x1
@@ -603,6 +636,7 @@
 .method public isUnderline()Z
     .locals 1
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->underline:I
 
     const/4 v0, 0x1
@@ -621,10 +655,12 @@
 .method public setBackgroundColor(I)Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->backgroundColor:I
 
     const/4 p1, 0x1
 
+    .line 2
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->hasBackgroundColor:Z
 
     return-object p0
@@ -633,6 +669,7 @@
 .method public setBold(Z)Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->bold:I
 
     return-object p0
@@ -641,10 +678,12 @@
 .method public setFontColor(I)Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->fontColor:I
 
     const/4 p1, 0x1
 
+    .line 2
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->hasFontColor:Z
 
     return-object p0
@@ -657,6 +696,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->fontFamily:Ljava/lang/String;
 
     return-object p0
@@ -665,6 +705,7 @@
 .method public setFontSize(F)Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->fontSize:F
 
     return-object p0
@@ -673,6 +714,7 @@
 .method public setFontSizeUnit(I)Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->fontSizeUnit:I
 
     return-object p0
@@ -685,6 +727,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->id:Ljava/lang/String;
 
     return-object p0
@@ -693,6 +736,7 @@
 .method public setItalic(Z)Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->italic:I
 
     return-object p0
@@ -701,6 +745,7 @@
 .method public setLinethrough(Z)Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->linethrough:I
 
     return-object p0
@@ -713,6 +758,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->multiRowAlign:Landroid/text/Layout$Alignment;
 
     return-object p0
@@ -721,6 +767,7 @@
 .method public setRubyPosition(I)Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->rubyPosition:I
 
     return-object p0
@@ -729,6 +776,7 @@
 .method public setRubyType(I)Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->rubyType:I
 
     return-object p0
@@ -737,6 +785,7 @@
 .method public setShearPercentage(F)Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->shearPercentage:F
 
     return-object p0
@@ -749,6 +798,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->textAlign:Landroid/text/Layout$Alignment;
 
     return-object p0
@@ -757,6 +807,7 @@
 .method public setTextCombine(Z)Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->textCombine:I
 
     return-object p0
@@ -769,6 +820,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->textEmphasis:Lcom/google/android/exoplayer2/text/ttml/TextEmphasis;
 
     return-object p0
@@ -777,6 +829,7 @@
 .method public setUnderline(Z)Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/ttml/TtmlStyle;->underline:I
 
     return-object p0

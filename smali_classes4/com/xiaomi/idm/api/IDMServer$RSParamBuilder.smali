@@ -15,19 +15,19 @@
 
 
 # instance fields
-.field commType:I
+.field public commType:I
 
-.field discType:I
+.field public discType:I
 
-.field idmService:Lcom/xiaomi/idm/api/IDMService;
+.field public idmService:Lcom/xiaomi/idm/api/IDMService;
 
-.field intentStr:Ljava/lang/String;
+.field public intentStr:Ljava/lang/String;
 
-.field intentType:Ljava/lang/String;
+.field public intentType:Ljava/lang/String;
 
-.field privateData:[B
+.field public privateData:[B
 
-.field serviceSecurityType:I
+.field public serviceSecurityType:I
 
 
 # direct methods
@@ -38,32 +38,42 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Lcom/xiaomi/idm/api/IDMServer$RSParamBuilder;->intentStr:Ljava/lang/String;
 
+    .line 3
     iput-object v0, p0, Lcom/xiaomi/idm/api/IDMServer$RSParamBuilder;->intentType:Ljava/lang/String;
 
     const/4 v0, 0x0
 
     new-array v1, v0, [B
 
+    .line 4
     iput-object v1, p0, Lcom/xiaomi/idm/api/IDMServer$RSParamBuilder;->privateData:[B
 
+    .line 5
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    check-cast p1, Lcom/xiaomi/idm/api/IDMService;
 
     iput-object p1, p0, Lcom/xiaomi/idm/api/IDMServer$RSParamBuilder;->idmService:Lcom/xiaomi/idm/api/IDMService;
 
     const/16 p1, 0xc3
 
+    .line 6
     iput p1, p0, Lcom/xiaomi/idm/api/IDMServer$RSParamBuilder;->discType:I
 
     const/16 p1, 0x8
 
+    .line 7
     iput p1, p0, Lcom/xiaomi/idm/api/IDMServer$RSParamBuilder;->commType:I
 
+    .line 8
     iput v0, p0, Lcom/xiaomi/idm/api/IDMServer$RSParamBuilder;->serviceSecurityType:I
 
     return-void
@@ -74,6 +84,7 @@
 .method public appData([B)Lcom/xiaomi/idm/api/IDMServer$RSParamBuilder;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMServer$RSParamBuilder;->idmService:Lcom/xiaomi/idm/api/IDMService;
 
     invoke-virtual {v0, p1}, Lcom/xiaomi/idm/api/IDMService;->setAppData([B)V
@@ -84,6 +95,7 @@
 .method public commType(I)Lcom/xiaomi/idm/api/IDMServer$RSParamBuilder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/idm/api/IDMServer$RSParamBuilder;->commType:I
 
     return-object p0
@@ -92,6 +104,7 @@
 .method public discType(I)Lcom/xiaomi/idm/api/IDMServer$RSParamBuilder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/idm/api/IDMServer$RSParamBuilder;->discType:I
 
     return-object p0
@@ -100,6 +113,7 @@
 .method public intentStr(Ljava/lang/String;)Lcom/xiaomi/idm/api/IDMServer$RSParamBuilder;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/api/IDMServer$RSParamBuilder;->intentStr:Ljava/lang/String;
 
     return-object p0
@@ -108,6 +122,7 @@
 .method public intentType(Ljava/lang/String;)Lcom/xiaomi/idm/api/IDMServer$RSParamBuilder;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/api/IDMServer$RSParamBuilder;->intentType:Ljava/lang/String;
 
     return-object p0
@@ -120,6 +135,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/api/IDMServer$RSParamBuilder;->privateData:[B
 
     return-object p0
@@ -128,6 +144,7 @@
 .method public serviceSecurityType(I)Lcom/xiaomi/idm/api/IDMServer$RSParamBuilder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/idm/api/IDMServer$RSParamBuilder;->serviceSecurityType:I
 
     return-object p0
@@ -138,6 +155,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -148,6 +166,7 @@
 
     iget-object v1, p0, Lcom/xiaomi/idm/api/IDMServer$RSParamBuilder;->idmService:Lcom/xiaomi/idm/api/IDMService;
 
+    .line 2
     invoke-virtual {v1}, Lcom/xiaomi/idm/api/IDMService;->getIDMServiceProto()Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;
 
     move-result-object v1
@@ -200,6 +219,7 @@
 
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMServer$RSParamBuilder;->privateData:[B
 
+    .line 3
     invoke-static {p0}, Ljava/util/Arrays;->toString([B)Ljava/lang/String;
 
     move-result-object p0

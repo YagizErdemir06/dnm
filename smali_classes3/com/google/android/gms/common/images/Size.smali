@@ -41,6 +41,7 @@
 
     const/16 v0, 0x2a
 
+    .line 1
     invoke-virtual {p0, v0}, Ljava/lang/String;->indexOf(I)I
 
     move-result v0
@@ -49,6 +50,7 @@
 
     const/16 v0, 0x78
 
+    .line 2
     invoke-virtual {p0, v0}, Ljava/lang/String;->indexOf(I)I
 
     move-result v0
@@ -56,11 +58,13 @@
     :cond_0
     if-ltz v0, :cond_1
 
+    .line 3
     :try_start_0
     new-instance v1, Lcom/google/android/gms/common/images/Size;
 
     const/4 v2, 0x0
 
+    .line 4
     invoke-virtual {p0, v2, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v2
@@ -71,6 +75,7 @@
 
     add-int/lit8 v0, v0, 0x1
 
+    .line 5
     invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v0
@@ -85,6 +90,7 @@
 
     return-object v1
 
+    .line 6
     :catch_0
     invoke-static {p0}, Lcom/google/android/gms/common/images/Size;->zaa(Ljava/lang/String;)Ljava/lang/NumberFormatException;
 
@@ -92,6 +98,7 @@
 
     throw p0
 
+    .line 7
     :cond_1
     invoke-static {p0}, Lcom/google/android/gms/common/images/Size;->zaa(Ljava/lang/String;)Ljava/lang/NumberFormatException;
 
@@ -99,6 +106,7 @@
 
     throw p0
 
+    .line 8
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -112,6 +120,7 @@
 .method private static zaa(Ljava/lang/String;)Ljava/lang/NumberFormatException;
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/NumberFormatException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -159,11 +168,13 @@
 
     return v1
 
+    .line 1
     :cond_1
     instance-of v2, p1, Lcom/google/android/gms/common/images/Size;
 
     if-eqz v2, :cond_2
 
+    .line 2
     check-cast p1, Lcom/google/android/gms/common/images/Size;
 
     iget v2, p0, Lcom/google/android/gms/common/images/Size;->zaa:I
@@ -223,6 +234,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/android/gms/common/images/Size;->zaa:I
 
     iget p0, p0, Lcom/google/android/gms/common/images/Size;->zab:I

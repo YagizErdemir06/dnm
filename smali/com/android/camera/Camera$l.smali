@@ -21,7 +21,16 @@
 # direct methods
 .method public constructor <init>(Lcom/android/camera/Camera;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/Camera$l;->a:Lcom/android/camera/Camera;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -33,7 +42,18 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "intent"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -46,72 +66,79 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {p2}, Lcom/android/camera/s2;->l(Landroid/content/Intent;)Lcom/android/camera/s2;
+    .line 2
+    invoke-static {p2}, Ld/d/a/b4;->l(Landroid/content/Intent;)Ld/d/a/b4;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/camera/s2;->t()Ljava/lang/String;
+    invoke-virtual {v0}, Ld/d/a/b4;->t()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "QUERY_CAMERA_STATUS"
 
+    .line 3
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lg2/b;->h()Ll2/g;
+    .line 4
+    invoke-static {}, Ld/d/a/l6/b;->h()Ld/d/a/l6/e/l/g;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ll2/g;->B()I
+    invoke-virtual {v0}, Ld/d/a/l6/e/l/g;->y()I
 
     move-result v0
 
-    invoke-static {}, Lg2/b;->h()Ll2/g;
+    .line 5
+    invoke-static {}, Ld/d/a/l6/b;->h()Ld/d/a/l6/e/l/g;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Ll2/g;->D()I
+    invoke-virtual {v1}, Ld/d/a/l6/e/l/g;->A()I
 
     move-result v1
 
+    .line 6
     iget-object v2, p0, Lcom/android/camera/Camera$l;->a:Lcom/android/camera/Camera;
 
     invoke-virtual {v2}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-static {v2}, Lc4/b;->c(Landroid/content/Context;)Lc4/b;
+    invoke-static {v2}, Ld/d/a/r6/b;->c(Landroid/content/Context;)Ld/d/a/r6/b;
 
     move-result-object v2
 
-    invoke-virtual {v2, v1, v0}, Lc4/b;->a(II)V
+    invoke-virtual {v2, v1, v0}, Ld/d/a/r6/b;->a(II)V
 
+    .line 7
     :cond_0
     iget-object v0, p0, Lcom/android/camera/Camera$l;->a:Lcom/android/camera/Camera;
 
-    iget-object v0, v0, Lcom/android/camera/ActivityBase;->e:Lq7/v4;
+    iget-object v0, v0, Lcom/android/camera/ActivityBase;->v1:Ld/d/a/d7/z7;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lq7/v4;->M9()Lr7/h;
+    invoke-interface {v0}, Ld/d/a/d7/z7;->Y9()Ld/d/a/d7/i8/n;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lr7/h;->isDeparted()Z
+    invoke-interface {v0}, Ld/d/a/d7/i8/n;->isDeparted()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
+    .line 8
     iget-object p0, p0, Lcom/android/camera/Camera$l;->a:Lcom/android/camera/Camera;
 
-    iget-object p0, p0, Lcom/android/camera/ActivityBase;->e:Lq7/v4;
+    iget-object p0, p0, Lcom/android/camera/ActivityBase;->v1:Ld/d/a/d7/z7;
 
-    invoke-interface {p0, p1, p2}, Lq7/v4;->z7(Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-interface {p0, p1, p2}, Ld/d/a/d7/z7;->o7(Landroid/content/Context;Landroid/content/Intent;)V
 
     :cond_1
     return-void

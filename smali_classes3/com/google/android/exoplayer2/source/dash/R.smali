@@ -13,6 +13,7 @@
         Lcom/google/android/exoplayer2/source/dash/R$id;,
         Lcom/google/android/exoplayer2/source/dash/R$integer;,
         Lcom/google/android/exoplayer2/source/dash/R$layout;,
+        Lcom/google/android/exoplayer2/source/dash/R$menu;,
         Lcom/google/android/exoplayer2/source/dash/R$string;,
         Lcom/google/android/exoplayer2/source/dash/R$style;,
         Lcom/google/android/exoplayer2/source/dash/R$styleable;

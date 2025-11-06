@@ -44,6 +44,7 @@
 .method public add(J)V
     .locals 3
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/util/LongArray;->size:I
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/util/LongArray;->values:[J
@@ -54,12 +55,14 @@
 
     mul-int/lit8 v0, v0, 0x2
 
+    .line 2
     invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([JI)[J
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/util/LongArray;->values:[J
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/LongArray;->values:[J
 
@@ -79,16 +82,19 @@
 
     if-ltz p1, :cond_0
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/util/LongArray;->size:I
 
     if-ge p1, v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/LongArray;->values:[J
 
     aget-wide p0, p0, p1
 
     return-wide p0
 
+    .line 3
     :cond_0
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -122,6 +128,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/util/LongArray;->size:I
 
     return p0
@@ -130,6 +137,7 @@
 .method public toArray()[J
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/LongArray;->values:[J
 
     iget p0, p0, Lcom/google/android/exoplayer2/util/LongArray;->size:I

@@ -1,4 +1,4 @@
-.class Lmiuix/appcompat/app/AlertController$5;
+.class public Lmiuix/appcompat/app/AlertController$5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lmiuix/appcompat/app/AlertController;->y0(Landroid/os/Bundle;)V
+    value = Lmiuix/appcompat/app/AlertController;->n1(ZZZZ)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lmiuix/appcompat/app/AlertController;
+.field public final synthetic this$0:Lmiuix/appcompat/app/AlertController;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/appcompat/app/AlertController;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/appcompat/app/AlertController$5;->this$0:Lmiuix/appcompat/app/AlertController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,67 +38,59 @@
 .method public run()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController$5;->this$0:Lmiuix/appcompat/app/AlertController;
 
-    invoke-virtual {v0}, Lmiuix/appcompat/app/AlertController;->E0()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lmiuix/appcompat/app/AlertController$5;->this$0:Lmiuix/appcompat/app/AlertController;
-
-    invoke-static {v0}, Lmiuix/appcompat/app/AlertController;->G(Lmiuix/appcompat/app/AlertController;)Lmiuix/appcompat/internal/widget/DialogRootView;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lmiuix/appcompat/app/AlertController;->H(Lmiuix/appcompat/app/AlertController;Landroid/view/View;)V
-
-    :cond_0
-    iget-object v0, p0, Lmiuix/appcompat/app/AlertController$5;->this$0:Lmiuix/appcompat/app/AlertController;
-
-    invoke-static {v0}, Lmiuix/appcompat/app/AlertController;->e(Lmiuix/appcompat/app/AlertController;)Lmiuix/appcompat/internal/widget/DialogParentPanel2;
+    invoke-static {v0}, Lmiuix/appcompat/app/AlertController;->a(Lmiuix/appcompat/app/AlertController;)Lmiuix/appcompat/internal/widget/DialogParentPanel2;
 
     move-result-object v0
 
-    sget v1, Lso/b$j;->contentPanel:I
+    sget v1, Lk/b/b$j;->contentPanel:I
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/view/ViewGroup;
 
+    .line 2
     iget-object v1, p0, Lmiuix/appcompat/app/AlertController$5;->this$0:Lmiuix/appcompat/app/AlertController;
 
-    invoke-static {v1}, Lmiuix/appcompat/app/AlertController;->e(Lmiuix/appcompat/app/AlertController;)Lmiuix/appcompat/internal/widget/DialogParentPanel2;
+    invoke-static {v1}, Lmiuix/appcompat/app/AlertController;->a(Lmiuix/appcompat/app/AlertController;)Lmiuix/appcompat/internal/widget/DialogParentPanel2;
 
     move-result-object v1
 
-    sget v2, Lso/b$j;->buttonPanel:I
+    sget v2, Lk/b/b$j;->buttonPanel:I
 
-    invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/view/ViewGroup;
 
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_0
 
-    if-eqz v0, :cond_1
-
+    .line 3
     iget-object v2, p0, Lmiuix/appcompat/app/AlertController$5;->this$0:Lmiuix/appcompat/app/AlertController;
 
-    invoke-static {v2}, Lmiuix/appcompat/app/AlertController;->f(Lmiuix/appcompat/app/AlertController;)Z
+    invoke-static {v2, v0}, Lmiuix/appcompat/app/AlertController;->w(Lmiuix/appcompat/app/AlertController;Landroid/view/ViewGroup;)V
+
+    if-eqz v1, :cond_0
+
+    .line 4
+    iget-object v2, p0, Lmiuix/appcompat/app/AlertController$5;->this$0:Lmiuix/appcompat/app/AlertController;
+
+    invoke-static {v2}, Lmiuix/appcompat/app/AlertController;->x(Lmiuix/appcompat/app/AlertController;)Z
 
     move-result v2
 
-    if-nez v2, :cond_1
+    if-nez v2, :cond_0
 
+    .line 5
     iget-object p0, p0, Lmiuix/appcompat/app/AlertController$5;->this$0:Lmiuix/appcompat/app/AlertController;
 
-    invoke-static {p0, v1, v0}, Lmiuix/appcompat/app/AlertController;->h(Lmiuix/appcompat/app/AlertController;Landroid/view/ViewGroup;Landroid/view/ViewGroup;)V
+    invoke-static {p0, v1, v0}, Lmiuix/appcompat/app/AlertController;->b(Lmiuix/appcompat/app/AlertController;Landroid/view/ViewGroup;Landroid/view/ViewGroup;)V
 
-    :cond_1
+    :cond_0
     return-void
 .end method

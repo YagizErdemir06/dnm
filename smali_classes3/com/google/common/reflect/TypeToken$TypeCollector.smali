@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/reflect/TypeToken$TypeCollector;
+.class public abstract Lcom/google/common/reflect/TypeToken$TypeCollector;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -30,7 +30,7 @@
 
 
 # static fields
-.field static final FOR_GENERIC_TYPE:Lcom/google/common/reflect/TypeToken$TypeCollector;
+.field public static final FOR_GENERIC_TYPE:Lcom/google/common/reflect/TypeToken$TypeCollector;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/reflect/TypeToken$TypeCollector<",
@@ -40,7 +40,7 @@
     .end annotation
 .end field
 
-.field static final FOR_RAW_TYPE:Lcom/google/common/reflect/TypeToken$TypeCollector;
+.field public static final FOR_RAW_TYPE:Lcom/google/common/reflect/TypeToken$TypeCollector;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/reflect/TypeToken$TypeCollector<",
@@ -55,12 +55,14 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/reflect/TypeToken$TypeCollector$1;
 
     invoke-direct {v0}, Lcom/google/common/reflect/TypeToken$TypeCollector$1;-><init>()V
 
     sput-object v0, Lcom/google/common/reflect/TypeToken$TypeCollector;->FOR_GENERIC_TYPE:Lcom/google/common/reflect/TypeToken$TypeCollector;
 
+    .line 2
     new-instance v0, Lcom/google/common/reflect/TypeToken$TypeCollector$2;
 
     invoke-direct {v0}, Lcom/google/common/reflect/TypeToken$TypeCollector$2;-><init>()V
@@ -208,10 +210,12 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/reflect/TypeToken$TypeCollector$4;
 
     invoke-direct {v0, p1, p0}, Lcom/google/common/reflect/TypeToken$TypeCollector$4;-><init>(Ljava/util/Comparator;Ljava/util/Map;)V
 
+    .line 2
     invoke-interface {p0}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object p0
@@ -235,6 +239,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/reflect/TypeToken$TypeCollector$3;
 
     invoke-direct {v0, p0, p0}, Lcom/google/common/reflect/TypeToken$TypeCollector$3;-><init>(Lcom/google/common/reflect/TypeToken$TypeCollector;Lcom/google/common/reflect/TypeToken$TypeCollector;)V

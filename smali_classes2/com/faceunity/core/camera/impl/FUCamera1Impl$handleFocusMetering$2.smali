@@ -1,4 +1,4 @@
-.class final Lcom/faceunity/core/camera/impl/FUCamera1Impl$handleFocusMetering$2;
+.class public final Lcom/faceunity/core/camera/impl/FUCamera1Impl$handleFocusMetering$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -16,7 +16,12 @@
     name = null
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
         "\u0000\u0016\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0008\u001a\u00020\u00052\u0006\u0010\u0001\u001a\u00020\u00002\u000e\u0010\u0004\u001a\n \u0003*\u0004\u0018\u00010\u00020\u0002H\n\u00a2\u0006\u0004\u0008\u0006\u0010\u0007"
     }
@@ -26,7 +31,7 @@
         "Landroid/hardware/Camera;",
         "kotlin.jvm.PlatformType",
         "it",
-        "Lnm/l2;",
+        "Lh/l2;",
         "onAutoFocus",
         "(ZLandroid/hardware/Camera;)V",
         "<anonymous>"
@@ -41,9 +46,9 @@
 
 
 # instance fields
-.field final synthetic $focusMode:Ljava/lang/String;
+.field public final synthetic $focusMode:Ljava/lang/String;
 
-.field final synthetic this$0:Lcom/faceunity/core/camera/impl/FUCamera1Impl;
+.field public final synthetic this$0:Lcom/faceunity/core/camera/impl/FUCamera1Impl;
 
 
 # direct methods
@@ -64,17 +69,18 @@
 .method public final onAutoFocus(ZLandroid/hardware/Camera;)V
     .locals 1
 
+    .line 1
     iget-object p1, p0, Lcom/faceunity/core/camera/impl/FUCamera1Impl$handleFocusMetering$2;->this$0:Lcom/faceunity/core/camera/impl/FUCamera1Impl;
 
     const-string v0, "it"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object p0, p0, Lcom/faceunity/core/camera/impl/FUCamera1Impl$handleFocusMetering$2;->$focusMode:Ljava/lang/String;
 
     const-string v0, "focusMode"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1, p2, p0}, Lcom/faceunity/core/camera/impl/FUCamera1Impl;->access$resetFocus(Lcom/faceunity/core/camera/impl/FUCamera1Impl;Landroid/hardware/Camera;Ljava/lang/String;)V
 

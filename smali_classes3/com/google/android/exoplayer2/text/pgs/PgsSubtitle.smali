@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/text/pgs/PgsSubtitle;
+.class public final Lcom/google/android/exoplayer2/text/pgs/PgsSubtitle;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -30,8 +30,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/text/pgs/PgsSubtitle;->cues:Ljava/util/List;
 
     return-void
@@ -50,6 +52,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/pgs/PgsSubtitle;->cues:Ljava/util/List;
 
     return-object p0

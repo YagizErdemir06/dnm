@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/AggregateFuture$1;
+.class public Lcom/google/common/util/concurrent/AggregateFuture$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,17 +18,18 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/util/concurrent/AggregateFuture;
+.field public final synthetic this$0:Lcom/google/common/util/concurrent/AggregateFuture;
 
-.field final synthetic val$future:Lcom/google/common/util/concurrent/ListenableFuture;
+.field public final synthetic val$future:Lcom/google/common/util/concurrent/ListenableFuture;
 
-.field final synthetic val$index:I
+.field public final synthetic val$index:I
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/util/concurrent/AggregateFuture;Lcom/google/common/util/concurrent/ListenableFuture;I)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/AggregateFuture$1;->this$0:Lcom/google/common/util/concurrent/AggregateFuture;
 
     iput-object p2, p0, Lcom/google/common/util/concurrent/AggregateFuture$1;->val$future:Lcom/google/common/util/concurrent/ListenableFuture;
@@ -47,6 +48,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :try_start_0
     iget-object v1, p0, Lcom/google/common/util/concurrent/AggregateFuture$1;->val$future:Lcom/google/common/util/concurrent/ListenableFuture;
 
@@ -56,10 +58,12 @@
 
     if-eqz v1, :cond_0
 
+    .line 2
     iget-object v1, p0, Lcom/google/common/util/concurrent/AggregateFuture$1;->this$0:Lcom/google/common/util/concurrent/AggregateFuture;
 
     invoke-static {v1, v0}, Lcom/google/common/util/concurrent/AggregateFuture;->access$002(Lcom/google/common/util/concurrent/AggregateFuture;Lcom/google/common/collect/ImmutableCollection;)Lcom/google/common/collect/ImmutableCollection;
 
+    .line 3
     iget-object v1, p0, Lcom/google/common/util/concurrent/AggregateFuture$1;->this$0:Lcom/google/common/util/concurrent/AggregateFuture;
 
     const/4 v2, 0x0
@@ -68,6 +72,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-object v1, p0, Lcom/google/common/util/concurrent/AggregateFuture$1;->this$0:Lcom/google/common/util/concurrent/AggregateFuture;
 
@@ -79,6 +84,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 5
     :goto_0
     iget-object p0, p0, Lcom/google/common/util/concurrent/AggregateFuture$1;->this$0:Lcom/google/common/util/concurrent/AggregateFuture;
 
@@ -93,5 +99,6 @@
 
     invoke-static {p0, v0}, Lcom/google/common/util/concurrent/AggregateFuture;->access$200(Lcom/google/common/util/concurrent/AggregateFuture;Lcom/google/common/collect/ImmutableCollection;)V
 
+    .line 6
     throw v1
 .end method

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;
+.class public final Lcom/google/android/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -31,16 +31,21 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata$SeekTable;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->streamMetadata:Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->seekTable:Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata$SeekTable;
 
     const-wide/16 p1, -0x1
 
+    .line 4
     iput-wide p1, p0, Lcom/google/android/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->firstFrameOffset:J
 
+    .line 5
     iput-wide p1, p0, Lcom/google/android/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->pendingSeekGranule:J
 
     return-void
@@ -51,6 +56,7 @@
 .method public createSeekMap()Lcom/google/android/exoplayer2/extractor/SeekMap;
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->firstFrameOffset:J
 
     const-wide/16 v2, -0x1
@@ -69,6 +75,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     new-instance v0, Lcom/google/android/exoplayer2/extractor/FlacSeekTableSeekMap;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->streamMetadata:Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;
@@ -83,6 +90,7 @@
 .method public read(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)J
     .locals 6
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->pendingSeekGranule:J
 
     const-wide/16 v2, 0x0
@@ -99,6 +107,7 @@
 
     neg-long v0, v0
 
+    .line 2
     iput-wide v2, p0, Lcom/google/android/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->pendingSeekGranule:J
 
     return-wide v0
@@ -110,6 +119,7 @@
 .method public setFirstFrameOffset(J)V
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lcom/google/android/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->firstFrameOffset:J
 
     return-void
@@ -118,16 +128,19 @@
 .method public startSeek(J)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->seekTable:Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata$SeekTable;
 
     iget-object v0, v0, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata$SeekTable;->pointSampleNumbers:[J
 
     const/4 v1, 0x1
 
+    .line 2
     invoke-static {v0, p1, p2, v1, v1}, Lcom/google/android/exoplayer2/util/Util;->binarySearchFloor([JJZZ)I
 
     move-result p1
 
+    .line 3
     aget-wide p1, v0, p1
 
     iput-wide p1, p0, Lcom/google/android/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->pendingSeekGranule:J

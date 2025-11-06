@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/tasks/zzaf;
+.class public final Lcom/google/android/gms/tasks/zzaf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -82,6 +82,7 @@
         value = "mLock"
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/android/gms/tasks/zzaf;->zzd:I
 
     iget v1, p0, Lcom/google/android/gms/tasks/zzaf;->zze:I
@@ -143,6 +144,7 @@
 
     iget-object p0, p0, Lcom/google/android/gms/tasks/zzaf;->zzc:Lcom/google/android/gms/tasks/zzw;
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/gms/tasks/zzw;->zzc()Z
 
     return-void
@@ -152,6 +154,7 @@
 
     const/4 v0, 0x0
 
+    .line 3
     invoke-virtual {p0, v0}, Lcom/google/android/gms/tasks/zzw;->zzb(Ljava/lang/Object;)V
 
     :cond_2
@@ -163,6 +166,7 @@
 .method public final onCanceled()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/tasks/zzaf;->zza:Ljava/lang/Object;
 
     monitor-enter v0
@@ -180,6 +184,7 @@
 
     invoke-direct {p0}, Lcom/google/android/gms/tasks/zzaf;->zza()V
 
+    .line 2
     monitor-exit v0
 
     return-void
@@ -201,6 +206,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/tasks/zzaf;->zza:Ljava/lang/Object;
 
     monitor-enter v0
@@ -216,6 +222,7 @@
 
     invoke-direct {p0}, Lcom/google/android/gms/tasks/zzaf;->zza()V
 
+    .line 2
     monitor-exit v0
 
     return-void
@@ -238,6 +245,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p1, p0, Lcom/google/android/gms/tasks/zzaf;->zza:Ljava/lang/Object;
 
     monitor-enter p1
@@ -251,6 +259,7 @@
 
     invoke-direct {p0}, Lcom/google/android/gms/tasks/zzaf;->zza()V
 
+    .line 2
     monitor-exit p1
 
     return-void

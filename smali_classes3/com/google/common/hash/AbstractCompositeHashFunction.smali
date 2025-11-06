@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/hash/AbstractCompositeHashFunction;
+.class public abstract Lcom/google/common/hash/AbstractCompositeHashFunction;
 .super Lcom/google/common/hash/AbstractHashFunction;
 .source "SourceFile"
 
@@ -16,15 +16,17 @@
 
 
 # instance fields
-.field final functions:[Lcom/google/common/hash/HashFunction;
+.field public final functions:[Lcom/google/common/hash/HashFunction;
 
 
 # direct methods
 .method public varargs constructor <init>([Lcom/google/common/hash/HashFunction;)V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/hash/AbstractHashFunction;-><init>()V
 
+    .line 2
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -34,12 +36,14 @@
 
     aget-object v2, p1, v1
 
+    .line 3
     invoke-static {v2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iput-object p1, p0, Lcom/google/common/hash/AbstractCompositeHashFunction;->functions:[Lcom/google/common/hash/HashFunction;
 
@@ -49,6 +53,7 @@
 .method private fromHashers([Lcom/google/common/hash/Hasher;)Lcom/google/common/hash/Hasher;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/hash/AbstractCompositeHashFunction$1;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/hash/AbstractCompositeHashFunction$1;-><init>(Lcom/google/common/hash/AbstractCompositeHashFunction;[Lcom/google/common/hash/Hasher;)V

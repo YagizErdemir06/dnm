@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/RegularImmutableMultiset$ElementSet;
+.class public final Lcom/google/common/collect/RegularImmutableMultiset$ElementSet;
 .super Lcom/google/common/collect/IndexedImmutableSet;
 .source "SourceFile"
 
@@ -22,7 +22,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/RegularImmutableMultiset;
+.field public final synthetic this$0:Lcom/google/common/collect/RegularImmutableMultiset;
 
 
 # direct methods
@@ -55,6 +55,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/RegularImmutableMultiset$ElementSet;->this$0:Lcom/google/common/collect/RegularImmutableMultiset;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableMultiset;->contains(Ljava/lang/Object;)Z
@@ -72,6 +73,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/RegularImmutableMultiset$ElementSet;->this$0:Lcom/google/common/collect/RegularImmutableMultiset;
 
     iget-object p0, p0, Lcom/google/common/collect/RegularImmutableMultiset;->contents:Lcom/google/common/collect/ObjectCountHashMap;
@@ -94,6 +96,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/RegularImmutableMultiset$ElementSet;->this$0:Lcom/google/common/collect/RegularImmutableMultiset;
 
     iget-object p0, p0, Lcom/google/common/collect/RegularImmutableMultiset;->contents:Lcom/google/common/collect/ObjectCountHashMap;

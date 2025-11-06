@@ -11,6 +11,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,10 +38,12 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;
 
     invoke-direct {v0, p1, p0, p2, p4}, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;-><init>(ILandroidx/constraintlayout/motion/widget/MotionScene;II)V
 
+    .line 2
     invoke-static {p0, v0, p3, p5}, Landroidx/constraintlayout/motion/widget/TransitionBuilder;->updateConstraintSetInMotionScene(Landroidx/constraintlayout/motion/widget/MotionScene;Landroidx/constraintlayout/motion/widget/MotionScene$Transition;Landroidx/constraintlayout/widget/ConstraintSet;Landroidx/constraintlayout/widget/ConstraintSet;)V
 
     return-object v0
@@ -63,16 +66,20 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->getStartConstraintSetId()I
 
     move-result v0
 
+    .line 2
     invoke-virtual {p1}, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->getEndConstraintSetId()I
 
     move-result p1
 
+    .line 3
     invoke-virtual {p0, v0, p2}, Landroidx/constraintlayout/motion/widget/MotionScene;->setConstraintSet(ILandroidx/constraintlayout/widget/ConstraintSet;)V
 
+    .line 4
     invoke-virtual {p0, p1, p3}, Landroidx/constraintlayout/motion/widget/MotionScene;->setConstraintSet(ILandroidx/constraintlayout/widget/ConstraintSet;)V
 
     return-void
@@ -89,16 +96,19 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/motion/widget/MotionLayout;->mScene:Landroidx/constraintlayout/motion/widget/MotionScene;
 
     if-eqz v0, :cond_2
 
+    .line 2
     invoke-virtual {v0, p0}, Landroidx/constraintlayout/motion/widget/MotionScene;->validateLayout(Landroidx/constraintlayout/motion/widget/MotionLayout;)Z
 
     move-result p0
 
     if-eqz p0, :cond_1
 
+    .line 3
     iget-object p0, v0, Landroidx/constraintlayout/motion/widget/MotionScene;->mCurrentTransition:Landroidx/constraintlayout/motion/widget/MotionScene$Transition;
 
     if-eqz p0, :cond_0
@@ -115,6 +125,7 @@
 
     return-void
 
+    .line 4
     :cond_0
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -124,6 +135,7 @@
 
     throw p0
 
+    .line 5
     :cond_1
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -133,6 +145,7 @@
 
     throw p0
 
+    .line 6
     :cond_2
     new-instance p0, Ljava/lang/RuntimeException;
 

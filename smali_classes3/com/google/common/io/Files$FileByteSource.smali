@@ -1,4 +1,4 @@
-.class final Lcom/google/common/io/Files$FileByteSource;
+.class public final Lcom/google/common/io/Files$FileByteSource;
 .super Lcom/google/common/io/ByteSource;
 .source "SourceFile"
 
@@ -90,10 +90,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/io/Closer;->create()Lcom/google/common/io/Closer;
 
     move-result-object v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lcom/google/common/io/Files$FileByteSource;->openStream()Ljava/io/FileInputStream;
 
@@ -105,6 +107,7 @@
 
     check-cast p0, Ljava/io/FileInputStream;
 
+    .line 3
     invoke-virtual {p0}, Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
 
     move-result-object v1
@@ -119,6 +122,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
     invoke-virtual {v0}, Lcom/google/common/io/Closer;->close()V
 
     return-object p0
@@ -126,6 +130,7 @@
     :catchall_0
     move-exception p0
 
+    .line 5
     :try_start_1
     invoke-virtual {v0, p0}, Lcom/google/common/io/Closer;->rethrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
@@ -138,8 +143,10 @@
     :catchall_1
     move-exception p0
 
+    .line 6
     invoke-virtual {v0}, Lcom/google/common/io/Closer;->close()V
 
+    .line 7
     throw p0
 .end method
 
@@ -151,6 +158,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/io/Files$FileByteSource;->file:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->isFile()Z
@@ -159,6 +167,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/io/Files$FileByteSource;->file:Ljava/io/File;
 
     invoke-virtual {p0}, Ljava/io/File;->length()J
@@ -167,6 +176,7 @@
 
     return-wide v0
 
+    .line 3
     :cond_0
     new-instance v0, Ljava/io/FileNotFoundException;
 
@@ -192,6 +202,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/io/Files$FileByteSource;->file:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->isFile()Z
@@ -200,6 +211,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/io/Files$FileByteSource;->file:Ljava/io/File;
 
     invoke-virtual {p0}, Ljava/io/File;->length()J
@@ -216,6 +228,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-static {}, Lcom/google/common/base/Optional;->absent()Lcom/google/common/base/Optional;
 
@@ -227,6 +240,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/io/Files$FileByteSource;->file:Ljava/io/File;
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

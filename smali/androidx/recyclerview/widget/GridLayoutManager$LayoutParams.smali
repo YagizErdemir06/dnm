@@ -19,9 +19,9 @@
 
 
 # instance fields
-.field mSpanIndex:I
+.field public mSpanIndex:I
 
-.field mSpanSize:I
+.field public mSpanSize:I
 
 
 # direct methods
@@ -125,6 +125,7 @@
 .method public getSpanIndex()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->mSpanIndex:I
 
     return p0
@@ -133,6 +134,7 @@
 .method public getSpanSize()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/recyclerview/widget/GridLayoutManager$LayoutParams;->mSpanSize:I
 
     return p0

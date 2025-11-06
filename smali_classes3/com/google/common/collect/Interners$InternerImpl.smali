@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/Interners$InternerImpl;
+.class public final Lcom/google/common/collect/Interners$InternerImpl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -32,7 +32,7 @@
 
 
 # instance fields
-.field final map:Lcom/google/common/collect/MapMakerInternalMap;
+.field public final map:Lcom/google/common/collect/MapMakerInternalMap;
     .annotation build Lcom/google/common/annotations/VisibleForTesting;
     .end annotation
 
@@ -91,6 +91,7 @@
         }
     .end annotation
 
+    .line 1
     :cond_0
     iget-object v0, p0, Lcom/google/common/collect/Interners$InternerImpl;->map:Lcom/google/common/collect/MapMakerInternalMap;
 
@@ -100,6 +101,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 2
     invoke-interface {v0}, Lcom/google/common/collect/MapMakerInternalMap$InternalEntry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -108,6 +110,7 @@
 
     return-object v0
 
+    .line 3
     :cond_1
     iget-object v0, p0, Lcom/google/common/collect/Interners$InternerImpl;->map:Lcom/google/common/collect/MapMakerInternalMap;
 

@@ -19,29 +19,32 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     sput-object v0, Lcom/xiaomi/milab/videosdk/utils/Device;->MODULE:Ljava/lang/String;
 
-    const-string v0, "qcom"
-
+    .line 2
     invoke-static {}, Lcom/xiaomi/milab/videosdk/utils/Device;->vendorName()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const-string v1, "qcom"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     sput-boolean v0, Lcom/xiaomi/milab/videosdk/utils/Device;->IS_VENDOR_QCOM:Z
 
-    const-string v0, "mediatek"
-
+    .line 3
     invoke-static {}, Lcom/xiaomi/milab/videosdk/utils/Device;->vendorName()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const-string v1, "mediatek"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -53,6 +56,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -61,6 +65,7 @@
 .method public static isMTKPlatform()Z
     .locals 1
 
+    .line 1
     sget-boolean v0, Lcom/xiaomi/milab/videosdk/utils/Device;->IS_VENDOR_MTK:Z
 
     return v0
@@ -69,6 +74,7 @@
 .method public static isQcomPlatform()Z
     .locals 1
 
+    .line 1
     sget-boolean v0, Lcom/xiaomi/milab/videosdk/utils/Device;->IS_VENDOR_QCOM:Z
 
     return v0
@@ -77,6 +83,7 @@
 .method private static vendorName()Ljava/lang/String;
     .locals 3
 
+    .line 1
     sget-object v0, Landroid/os/Build;->HARDWARE:Ljava/lang/String;
 
     const-string v1, "qcom"
@@ -92,6 +99,7 @@
     :cond_0
     const-string v2, "mt[0-9]*"
 
+    .line 2
     invoke-virtual {v0, v2}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
 
     move-result v0

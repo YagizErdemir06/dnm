@@ -62,13 +62,13 @@
 # instance fields
 .field private mProgress:F
 
-.field mTransitionPathRotate:F
+.field public mTransitionPathRotate:F
 
-.field motion:Landroidx/constraintlayout/core/motion/MotionWidget$Motion;
+.field public motion:Landroidx/constraintlayout/core/motion/MotionWidget$Motion;
 
-.field propertySet:Landroidx/constraintlayout/core/motion/MotionWidget$PropertySet;
+.field public propertySet:Landroidx/constraintlayout/core/motion/MotionWidget$PropertySet;
 
-.field widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
+.field public widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
 
 # direct methods
@@ -148,6 +148,7 @@
 .method public getAlpha()F
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->propertySet:Landroidx/constraintlayout/core/motion/MotionWidget$PropertySet;
 
     iget p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget$PropertySet;->alpha:F
@@ -158,6 +159,7 @@
 .method public getBottom()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     iget p0, p0, Landroidx/constraintlayout/core/state/WidgetFrame;->bottom:I
@@ -168,6 +170,7 @@
 .method public getCustomAttribute(Ljava/lang/String;)Landroidx/constraintlayout/core/motion/CustomVariable;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     invoke-virtual {p0, p1}, Landroidx/constraintlayout/core/state/WidgetFrame;->getCustomAttribute(Ljava/lang/String;)Landroidx/constraintlayout/core/motion/CustomVariable;
@@ -188,6 +191,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     invoke-virtual {p0}, Landroidx/constraintlayout/core/state/WidgetFrame;->getCustomAttributeNames()Ljava/util/Set;
@@ -200,6 +204,7 @@
 .method public getHeight()I
     .locals 1
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     iget v0, p0, Landroidx/constraintlayout/core/state/WidgetFrame;->bottom:I
@@ -214,6 +219,7 @@
 .method public getId(Ljava/lang/String;)I
     .locals 1
 
+    .line 1
     invoke-static {p1}, Landroidx/constraintlayout/core/motion/utils/TypedValues$AttributesType;->getId(Ljava/lang/String;)I
 
     move-result p0
@@ -224,6 +230,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     invoke-static {p1}, Landroidx/constraintlayout/core/motion/utils/TypedValues$MotionType;->getId(Ljava/lang/String;)I
 
@@ -235,6 +242,7 @@
 .method public getLeft()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     iget p0, p0, Landroidx/constraintlayout/core/state/WidgetFrame;->left:I
@@ -245,6 +253,7 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     invoke-virtual {p0}, Landroidx/constraintlayout/core/state/WidgetFrame;->getId()Ljava/lang/String;
@@ -265,6 +274,7 @@
 .method public getPivotX()F
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     iget p0, p0, Landroidx/constraintlayout/core/state/WidgetFrame;->pivotX:F
@@ -275,6 +285,7 @@
 .method public getPivotY()F
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     iget p0, p0, Landroidx/constraintlayout/core/state/WidgetFrame;->pivotY:F
@@ -285,6 +296,7 @@
 .method public getRight()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     iget p0, p0, Landroidx/constraintlayout/core/state/WidgetFrame;->right:I
@@ -295,6 +307,7 @@
 .method public getRotationX()F
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     iget p0, p0, Landroidx/constraintlayout/core/state/WidgetFrame;->rotationX:F
@@ -305,6 +318,7 @@
 .method public getRotationY()F
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     iget p0, p0, Landroidx/constraintlayout/core/state/WidgetFrame;->rotationY:F
@@ -315,6 +329,7 @@
 .method public getRotationZ()F
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     iget p0, p0, Landroidx/constraintlayout/core/state/WidgetFrame;->rotationZ:F
@@ -325,6 +340,7 @@
 .method public getScaleX()F
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     iget p0, p0, Landroidx/constraintlayout/core/state/WidgetFrame;->scaleX:F
@@ -335,6 +351,7 @@
 .method public getScaleY()F
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     iget p0, p0, Landroidx/constraintlayout/core/state/WidgetFrame;->scaleY:F
@@ -345,6 +362,7 @@
 .method public getTop()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     iget p0, p0, Landroidx/constraintlayout/core/state/WidgetFrame;->top:I
@@ -355,6 +373,7 @@
 .method public getTranslationX()F
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     iget p0, p0, Landroidx/constraintlayout/core/state/WidgetFrame;->translationX:F
@@ -365,6 +384,7 @@
 .method public getTranslationY()F
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     iget p0, p0, Landroidx/constraintlayout/core/state/WidgetFrame;->translationY:F
@@ -375,6 +395,7 @@
 .method public getTranslationZ()F
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     iget p0, p0, Landroidx/constraintlayout/core/state/WidgetFrame;->translationZ:F
@@ -392,16 +413,19 @@
 
     return p0
 
+    .line 1
     :pswitch_1
     iget p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->mTransitionPathRotate:F
 
     return p0
 
+    .line 2
     :pswitch_2
     iget p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->mProgress:F
 
     return p0
 
+    .line 3
     :pswitch_3
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
@@ -409,6 +433,7 @@
 
     return p0
 
+    .line 4
     :pswitch_4
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
@@ -416,6 +441,7 @@
 
     return p0
 
+    .line 5
     :pswitch_5
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
@@ -423,6 +449,7 @@
 
     return p0
 
+    .line 6
     :pswitch_6
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
@@ -430,6 +457,7 @@
 
     return p0
 
+    .line 7
     :pswitch_7
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
@@ -437,6 +465,7 @@
 
     return p0
 
+    .line 8
     :pswitch_8
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
@@ -444,6 +473,7 @@
 
     return p0
 
+    .line 9
     :pswitch_9
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
@@ -451,6 +481,7 @@
 
     return p0
 
+    .line 10
     :pswitch_a
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
@@ -458,6 +489,7 @@
 
     return p0
 
+    .line 11
     :pswitch_b
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
@@ -465,6 +497,7 @@
 
     return p0
 
+    .line 12
     :pswitch_c
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
@@ -472,6 +505,7 @@
 
     return p0
 
+    .line 13
     :pswitch_d
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
@@ -503,6 +537,7 @@
 .method public getVisibility()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->propertySet:Landroidx/constraintlayout/core/motion/MotionWidget$PropertySet;
 
     iget p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget$PropertySet;->visibility:I
@@ -513,6 +548,7 @@
 .method public getWidgetFrame()Landroidx/constraintlayout/core/state/WidgetFrame;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     return-object p0
@@ -521,6 +557,7 @@
 .method public getWidth()I
     .locals 1
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     iget v0, p0, Landroidx/constraintlayout/core/state/WidgetFrame;->right:I
@@ -535,6 +572,7 @@
 .method public getX()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     iget p0, p0, Landroidx/constraintlayout/core/state/WidgetFrame;->left:I
@@ -545,6 +583,7 @@
 .method public getY()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     iget p0, p0, Landroidx/constraintlayout/core/state/WidgetFrame;->top:I
@@ -555,6 +594,7 @@
 .method public layout(IIII)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2, p3, p4}, Landroidx/constraintlayout/core/motion/MotionWidget;->setBounds(IIII)V
 
     return-void
@@ -563,10 +603,12 @@
 .method public setBounds(IIII)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Landroidx/constraintlayout/core/state/WidgetFrame;
 
     const/4 v1, 0x0
@@ -575,15 +617,19 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
+    .line 3
     :cond_0
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     iput p2, p0, Landroidx/constraintlayout/core/state/WidgetFrame;->top:I
 
+    .line 4
     iput p1, p0, Landroidx/constraintlayout/core/state/WidgetFrame;->left:I
 
+    .line 5
     iput p3, p0, Landroidx/constraintlayout/core/state/WidgetFrame;->right:I
 
+    .line 6
     iput p4, p0, Landroidx/constraintlayout/core/state/WidgetFrame;->bottom:I
 
     return-void
@@ -636,6 +682,7 @@
 .method public setInterpolatedValue(Landroidx/constraintlayout/core/motion/CustomAttribute;[F)V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     iget-object p1, p1, Landroidx/constraintlayout/core/motion/CustomAttribute;->mName:Ljava/lang/String;
@@ -654,6 +701,7 @@
 .method public setPivotX(F)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     iput p1, p0, Landroidx/constraintlayout/core/state/WidgetFrame;->pivotX:F
@@ -664,6 +712,7 @@
 .method public setPivotY(F)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     iput p1, p0, Landroidx/constraintlayout/core/state/WidgetFrame;->pivotY:F
@@ -674,6 +723,7 @@
 .method public setRotationX(F)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     iput p1, p0, Landroidx/constraintlayout/core/state/WidgetFrame;->rotationX:F
@@ -684,6 +734,7 @@
 .method public setRotationY(F)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     iput p1, p0, Landroidx/constraintlayout/core/state/WidgetFrame;->rotationY:F
@@ -694,6 +745,7 @@
 .method public setRotationZ(F)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     iput p1, p0, Landroidx/constraintlayout/core/state/WidgetFrame;->rotationZ:F
@@ -704,6 +756,7 @@
 .method public setScaleX(F)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     iput p1, p0, Landroidx/constraintlayout/core/state/WidgetFrame;->scaleX:F
@@ -714,6 +767,7 @@
 .method public setScaleY(F)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     iput p1, p0, Landroidx/constraintlayout/core/state/WidgetFrame;->scaleY:F
@@ -724,6 +778,7 @@
 .method public setTranslationX(F)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     iput p1, p0, Landroidx/constraintlayout/core/state/WidgetFrame;->translationX:F
@@ -734,6 +789,7 @@
 .method public setTranslationY(F)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     iput p1, p0, Landroidx/constraintlayout/core/state/WidgetFrame;->translationY:F
@@ -744,6 +800,7 @@
 .method public setTranslationZ(F)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
     iput p1, p0, Landroidx/constraintlayout/core/state/WidgetFrame;->translationZ:F
@@ -816,16 +873,19 @@
 
     return p0
 
+    .line 1
     :pswitch_1
     iput p2, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->mTransitionPathRotate:F
 
     goto :goto_0
 
+    .line 2
     :pswitch_2
     iput p2, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->mProgress:F
 
     goto :goto_0
 
+    .line 3
     :pswitch_3
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
@@ -833,6 +893,7 @@
 
     goto :goto_0
 
+    .line 4
     :pswitch_4
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
@@ -840,6 +901,7 @@
 
     goto :goto_0
 
+    .line 5
     :pswitch_5
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
@@ -847,6 +909,7 @@
 
     goto :goto_0
 
+    .line 6
     :pswitch_6
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
@@ -854,6 +917,7 @@
 
     goto :goto_0
 
+    .line 7
     :pswitch_7
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
@@ -861,6 +925,7 @@
 
     goto :goto_0
 
+    .line 8
     :pswitch_8
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
@@ -868,6 +933,7 @@
 
     goto :goto_0
 
+    .line 9
     :pswitch_9
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
@@ -875,6 +941,7 @@
 
     goto :goto_0
 
+    .line 10
     :pswitch_a
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
@@ -882,6 +949,7 @@
 
     goto :goto_0
 
+    .line 11
     :pswitch_b
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
@@ -889,6 +957,7 @@
 
     goto :goto_0
 
+    .line 12
     :pswitch_c
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
@@ -896,6 +965,7 @@
 
     goto :goto_0
 
+    .line 13
     :pswitch_d
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->widgetFrame:Landroidx/constraintlayout/core/state/WidgetFrame;
 
@@ -1100,6 +1170,7 @@
 .method public setVisibility(I)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/MotionWidget;->propertySet:Landroidx/constraintlayout/core/motion/MotionWidget$PropertySet;
 
     iput p1, p0, Landroidx/constraintlayout/core/motion/MotionWidget$PropertySet;->visibility:I
@@ -1110,6 +1181,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

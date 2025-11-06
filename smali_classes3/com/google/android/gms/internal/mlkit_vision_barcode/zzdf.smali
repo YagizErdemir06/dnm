@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdf;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -44,6 +44,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdk;
 
@@ -53,11 +54,13 @@
 
     return v2
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdk;
 
     iget v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdf;->zza:I
 
+    .line 3
     invoke-interface {p1}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdk;->zza()I
 
     move-result v3
@@ -66,11 +69,12 @@
 
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdf;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdj;
 
+    .line 4
     invoke-interface {p1}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdk;->zzb()Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdj;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -85,6 +89,7 @@
 .method public final hashCode()I
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdf;->zza:I
 
     const v1, 0xde0d66
@@ -93,7 +98,7 @@
 
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdf;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdj;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {p0}, Ljava/lang/Enum;->hashCode()I
 
     move-result p0
 
@@ -109,6 +114,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "@com.google.firebase.encoders.proto.Protobuf"
@@ -117,6 +123,7 @@
 
     const-string v1, "(tag="
 
+    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdf;->zza:I
@@ -125,6 +132,7 @@
 
     const-string v1, "intEncoding="
 
+    .line 3
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdf;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdj;
@@ -133,6 +141,7 @@
 
     const/16 p0, 0x29
 
+    .line 4
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;

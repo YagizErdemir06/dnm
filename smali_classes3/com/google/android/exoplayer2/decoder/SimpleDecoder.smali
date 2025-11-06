@@ -104,28 +104,34 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->lock:Ljava/lang/Object;
 
+    .line 3
     new-instance v0, Ljava/util/ArrayDeque;
 
     invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->queuedInputBuffers:Ljava/util/ArrayDeque;
 
+    .line 4
     new-instance v0, Ljava/util/ArrayDeque;
 
     invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->queuedOutputBuffers:Ljava/util/ArrayDeque;
 
+    .line 5
     iput-object p1, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->availableInputBuffers:[Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;
 
+    .line 6
     array-length p1, p1
 
     iput p1, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->availableInputBufferCount:I
@@ -134,11 +140,13 @@
 
     move v0, p1
 
+    .line 7
     :goto_0
     iget v1, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->availableInputBufferCount:I
 
     if-ge v0, v1, :cond_0
 
+    .line 8
     iget-object v1, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->availableInputBuffers:[Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->createInputBuffer()Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;
@@ -151,18 +159,22 @@
 
     goto :goto_0
 
+    .line 9
     :cond_0
     iput-object p2, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->availableOutputBuffers:[Lcom/google/android/exoplayer2/decoder/DecoderOutputBuffer;
 
+    .line 10
     array-length p2, p2
 
     iput p2, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->availableOutputBufferCount:I
 
+    .line 11
     :goto_1
     iget p2, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->availableOutputBufferCount:I
 
     if-ge p1, p2, :cond_1
 
+    .line 12
     iget-object p2, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->availableOutputBuffers:[Lcom/google/android/exoplayer2/decoder/DecoderOutputBuffer;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->createOutputBuffer()Lcom/google/android/exoplayer2/decoder/DecoderOutputBuffer;
@@ -175,6 +187,7 @@
 
     goto :goto_1
 
+    .line 13
     :cond_1
     new-instance p1, Lcom/google/android/exoplayer2/decoder/SimpleDecoder$1;
 
@@ -184,6 +197,7 @@
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->decodeThread:Ljava/lang/Thread;
 
+    .line 14
     invoke-virtual {p1}, Ljava/lang/Thread;->start()V
 
     return-void
@@ -192,6 +206,7 @@
 .method public static synthetic access$000(Lcom/google/android/exoplayer2/decoder/SimpleDecoder;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->run()V
 
     return-void
@@ -200,6 +215,7 @@
 .method private canDecodeBuffer()Z
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->queuedInputBuffers:Ljava/util/ArrayDeque;
 
     invoke-virtual {v0}, Ljava/util/ArrayDeque;->isEmpty()Z
@@ -231,10 +247,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :goto_0
     :try_start_0
     iget-boolean v1, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->released:Z
@@ -247,12 +265,14 @@
 
     if-nez v1, :cond_0
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->lock:Ljava/lang/Object;
 
     invoke-virtual {v1}, Ljava/lang/Object;->wait()V
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-boolean v1, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->released:Z
 
@@ -260,10 +280,12 @@
 
     if-eqz v1, :cond_1
 
+    .line 5
     monitor-exit v0
 
     return v2
 
+    .line 6
     :cond_1
     iget-object v1, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->queuedInputBuffers:Ljava/util/ArrayDeque;
 
@@ -273,6 +295,7 @@
 
     check-cast v1, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;
 
+    .line 7
     iget-object v3, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->availableOutputBuffers:[Lcom/google/android/exoplayer2/decoder/DecoderOutputBuffer;
 
     iget v4, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->availableOutputBufferCount:I
@@ -285,14 +308,18 @@
 
     aget-object v3, v3, v4
 
+    .line 8
     iget-boolean v4, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->flushed:Z
 
+    .line 9
     iput-boolean v2, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->flushed:Z
 
+    .line 10
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
+    .line 11
     invoke-virtual {v1}, Lcom/google/android/exoplayer2/decoder/Buffer;->isEndOfStream()Z
 
     move-result v0
@@ -301,10 +328,12 @@
 
     const/4 v0, 0x4
 
+    .line 12
     invoke-virtual {v3, v0}, Lcom/google/android/exoplayer2/decoder/Buffer;->addFlag(I)V
 
     goto :goto_2
 
+    .line 13
     :cond_2
     invoke-virtual {v1}, Lcom/google/android/exoplayer2/decoder/Buffer;->isDecodeOnly()Z
 
@@ -314,8 +343,10 @@
 
     const/high16 v0, -0x80000000
 
+    .line 14
     invoke-virtual {v3, v0}, Lcom/google/android/exoplayer2/decoder/Buffer;->addFlag(I)V
 
+    .line 15
     :cond_3
     invoke-virtual {v1}, Lcom/google/android/exoplayer2/decoder/Buffer;->isFirstSample()Z
 
@@ -325,8 +356,10 @@
 
     const/high16 v0, 0x8000000
 
+    .line 16
     invoke-virtual {v3, v0}, Lcom/google/android/exoplayer2/decoder/Buffer;->addFlag(I)V
 
+    .line 17
     :cond_4
     :try_start_1
     invoke-virtual {p0, v1, v3, v4}, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->decode(Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;Lcom/google/android/exoplayer2/decoder/DecoderOutputBuffer;Z)Lcom/google/android/exoplayer2/decoder/DecoderException;
@@ -341,6 +374,7 @@
     :catch_0
     move-exception v0
 
+    .line 18
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->createUnexpectedDecodeException(Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/decoder/DecoderException;
 
     move-result-object v0
@@ -350,6 +384,7 @@
     :catch_1
     move-exception v0
 
+    .line 19
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->createUnexpectedDecodeException(Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/decoder/DecoderException;
 
     move-result-object v0
@@ -357,13 +392,16 @@
     :goto_1
     if-eqz v0, :cond_5
 
+    .line 20
     iget-object v4, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->lock:Ljava/lang/Object;
 
     monitor-enter v4
 
+    .line 21
     :try_start_2
     iput-object v0, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->exception:Lcom/google/android/exoplayer2/decoder/DecoderException;
 
+    .line 22
     monitor-exit v4
 
     return v2
@@ -377,21 +415,25 @@
 
     throw p0
 
+    .line 23
     :cond_5
     :goto_2
     iget-object v4, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->lock:Ljava/lang/Object;
 
     monitor-enter v4
 
+    .line 24
     :try_start_3
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->flushed:Z
 
     if-eqz v0, :cond_6
 
+    .line 25
     invoke-virtual {v3}, Lcom/google/android/exoplayer2/decoder/DecoderOutputBuffer;->release()V
 
     goto :goto_3
 
+    .line 26
     :cond_6
     invoke-virtual {v3}, Lcom/google/android/exoplayer2/decoder/Buffer;->isDecodeOnly()Z
 
@@ -399,30 +441,37 @@
 
     if-eqz v0, :cond_7
 
+    .line 27
     iget v0, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->skippedOutputBufferCount:I
 
     add-int/2addr v0, v5
 
     iput v0, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->skippedOutputBufferCount:I
 
+    .line 28
     invoke-virtual {v3}, Lcom/google/android/exoplayer2/decoder/DecoderOutputBuffer;->release()V
 
     goto :goto_3
 
+    .line 29
     :cond_7
     iget v0, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->skippedOutputBufferCount:I
 
     iput v0, v3, Lcom/google/android/exoplayer2/decoder/DecoderOutputBuffer;->skippedOutputBufferCount:I
 
+    .line 30
     iput v2, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->skippedOutputBufferCount:I
 
+    .line 31
     iget-object v0, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->queuedOutputBuffers:Ljava/util/ArrayDeque;
 
     invoke-virtual {v0, v3}, Ljava/util/ArrayDeque;->addLast(Ljava/lang/Object;)V
 
+    .line 32
     :goto_3
     invoke-direct {p0, v1}, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->releaseInputBufferInternal(Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;)V
 
+    .line 33
     monitor-exit v4
 
     return v5
@@ -439,6 +488,7 @@
     :catchall_2
     move-exception p0
 
+    .line 34
     :try_start_4
     monitor-exit v0
     :try_end_4
@@ -450,12 +500,14 @@
 .method private maybeNotifyDecodeLoop()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->canDecodeBuffer()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->lock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notify()V
@@ -478,12 +530,14 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->exception:Lcom/google/android/exoplayer2/decoder/DecoderException;
 
     if-nez p0, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     throw p0
 .end method
@@ -496,8 +550,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->clear()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->availableInputBuffers:[Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;
 
     iget v1, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->availableInputBufferCount:I
@@ -519,8 +575,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/decoder/Buffer;->clear()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->availableOutputBuffers:[Lcom/google/android/exoplayer2/decoder/DecoderOutputBuffer;
 
     iget v1, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->availableOutputBufferCount:I
@@ -537,6 +595,7 @@
 .method private run()V
     .locals 1
 
+    .line 1
     :goto_0
     :try_start_0
     invoke-direct {p0}, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->decode()Z
@@ -555,6 +614,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance v0, Ljava/lang/IllegalStateException;
 
     invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
@@ -736,10 +796,10 @@
 
     if-eqz v1, :cond_0
 
+    const/4 p0, 0x0
+
     .line 5
     monitor-exit v0
-
-    const/4 p0, 0x0
 
     return-object p0
 
@@ -790,29 +850,36 @@
 .method public final flush()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
     const/4 v1, 0x1
 
+    .line 2
     :try_start_0
     iput-boolean v1, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->flushed:Z
 
     const/4 v1, 0x0
 
+    .line 3
     iput v1, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->skippedOutputBufferCount:I
 
+    .line 4
     iget-object v1, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->dequeuedInputBuffer:Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;
 
     if-eqz v1, :cond_0
 
+    .line 5
     invoke-direct {p0, v1}, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->releaseInputBufferInternal(Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;)V
 
     const/4 v1, 0x0
 
+    .line 6
     iput-object v1, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->dequeuedInputBuffer:Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;
 
+    .line 7
     :cond_0
     :goto_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->queuedInputBuffers:Ljava/util/ArrayDeque;
@@ -823,6 +890,7 @@
 
     if-nez v1, :cond_1
 
+    .line 8
     iget-object v1, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->queuedInputBuffers:Ljava/util/ArrayDeque;
 
     invoke-virtual {v1}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;
@@ -835,6 +903,7 @@
 
     goto :goto_0
 
+    .line 9
     :cond_1
     :goto_1
     iget-object v1, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->queuedOutputBuffers:Ljava/util/ArrayDeque;
@@ -845,6 +914,7 @@
 
     if-nez v1, :cond_2
 
+    .line 10
     iget-object v1, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->queuedOutputBuffers:Ljava/util/ArrayDeque;
 
     invoke-virtual {v1}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;
@@ -857,6 +927,7 @@
 
     goto :goto_1
 
+    .line 11
     :cond_2
     monitor-exit v0
 
@@ -959,23 +1030,28 @@
     .annotation build Landroidx/annotation/CallSuper;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
     const/4 v1, 0x1
 
+    .line 2
     :try_start_0
     iput-boolean v1, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->released:Z
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->lock:Ljava/lang/Object;
 
     invoke-virtual {v1}, Ljava/lang/Object;->notify()V
 
+    .line 4
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 5
     :try_start_1
     iget-object p0, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->decodeThread:Ljava/lang/Thread;
 
@@ -985,6 +1061,7 @@
 
     goto :goto_0
 
+    .line 6
     :catch_0
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -998,6 +1075,7 @@
     :catchall_0
     move-exception p0
 
+    .line 7
     :try_start_2
     monitor-exit v0
     :try_end_2
@@ -1017,15 +1095,19 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->releaseOutputBufferInternal(Lcom/google/android/exoplayer2/decoder/DecoderOutputBuffer;)V
 
+    .line 3
     invoke-direct {p0}, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->maybeNotifyDecodeLoop()V
 
+    .line 4
     monitor-exit v0
 
     return-void
@@ -1043,6 +1125,7 @@
 .method public final setInitialInputBufferSize(I)V
     .locals 3
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->availableInputBufferCount:I
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->availableInputBuffers:[Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;
@@ -1063,6 +1146,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->availableInputBuffers:[Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;
 
     array-length v0, p0
@@ -1072,6 +1156,7 @@
 
     aget-object v1, p0, v2
 
+    .line 3
     invoke-virtual {v1, p1}, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->ensureSpaceForWrite(I)V
 
     add-int/lit8 v2, v2, 0x1

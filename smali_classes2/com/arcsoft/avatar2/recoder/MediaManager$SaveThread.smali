@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/arcsoft/avatar2/recoder/MediaManager;
+.field public final synthetic a:Lcom/arcsoft/avatar2/recoder/MediaManager;
 
 .field private b:Ljava/nio/ByteBuffer;
 
@@ -24,10 +24,12 @@
 .method public constructor <init>(Lcom/arcsoft/avatar2/recoder/MediaManager;Ljava/nio/ByteBuffer;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager$SaveThread;->a:Lcom/arcsoft/avatar2/recoder/MediaManager;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
+    .line 2
     iput-object p2, p0, Lcom/arcsoft/avatar2/recoder/MediaManager$SaveThread;->b:Ljava/nio/ByteBuffer;
 
     return-void
@@ -38,8 +40,10 @@
 .method public run()V
     .locals 3
 
+    .line 1
     invoke-super {p0}, Ljava/lang/Thread;->run()V
 
+    .line 2
     iget-object v0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager$SaveThread;->a:Lcom/arcsoft/avatar2/recoder/MediaManager;
 
     invoke-static {v0}, Lcom/arcsoft/avatar2/recoder/MediaManager;->a(Lcom/arcsoft/avatar2/recoder/MediaManager;)I
@@ -58,10 +62,12 @@
 
     move-result-object v0
 
+    .line 3
     iget-object p0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager$SaveThread;->b:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0, p0}, Landroid/graphics/Bitmap;->copyPixelsFromBuffer(Ljava/nio/Buffer;)V
 
+    .line 4
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -84,19 +90,23 @@
 
     move-result-object p0
 
+    .line 5
     :try_start_0
     new-instance v1, Ljava/io/FileOutputStream;
 
     invoke-direct {v1, p0}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
 
+    .line 6
     sget-object p0, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
 
     const/16 v2, 0x64
 
     invoke-virtual {v0, p0, v2, v1}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
+    .line 7
     invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
 
+    .line 8
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
@@ -107,14 +117,16 @@
     :catch_0
     move-exception p0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 9
+    invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_0
 
     :catch_1
     move-exception p0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 10
+    invoke-virtual {p0}, Ljava/io/FileNotFoundException;->printStackTrace()V
 
     :goto_0
     return-void

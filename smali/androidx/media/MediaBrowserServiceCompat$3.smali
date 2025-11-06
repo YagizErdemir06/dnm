@@ -1,11 +1,11 @@
-.class Landroidx/media/MediaBrowserServiceCompat$3;
+.class public Landroidx/media/MediaBrowserServiceCompat$3;
 .super Landroidx/media/MediaBrowserServiceCompat$Result;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/media/MediaBrowserServiceCompat;->performSearch(Ljava/lang/String;Landroid/os/Bundle;Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;Lb/b;)V
+    value = Landroidx/media/MediaBrowserServiceCompat;->performSearch(Ljava/lang/String;Landroid/os/Bundle;Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;Lb/b/a/c/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,13 +24,13 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/media/MediaBrowserServiceCompat;
+.field public final synthetic this$0:Landroidx/media/MediaBrowserServiceCompat;
 
-.field final synthetic val$receiver:Lb/b;
+.field public final synthetic val$receiver:Lb/b/a/c/b;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/media/MediaBrowserServiceCompat;Ljava/lang/Object;Lb/b;)V
+.method public constructor <init>(Landroidx/media/MediaBrowserServiceCompat;Ljava/lang/Object;Lb/b/a/c/b;)V
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -45,9 +45,10 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroidx/media/MediaBrowserServiceCompat$3;->this$0:Landroidx/media/MediaBrowserServiceCompat;
 
-    iput-object p3, p0, Landroidx/media/MediaBrowserServiceCompat$3;->val$receiver:Lb/b;
+    iput-object p3, p0, Landroidx/media/MediaBrowserServiceCompat$3;->val$receiver:Lb/b/a/c/b;
 
     invoke-direct {p0, p2}, Landroidx/media/MediaBrowserServiceCompat$Result;-><init>(Ljava/lang/Object;)V
 
@@ -133,28 +134,28 @@
 
     check-cast p1, [Landroid/os/Parcelable;
 
-    const-string/jumbo v2, "search_results"
+    const-string v2, "search_results"
 
     .line 5
     invoke-virtual {v0, v2, p1}, Landroid/os/Bundle;->putParcelableArray(Ljava/lang/String;[Landroid/os/Parcelable;)V
 
     .line 6
-    iget-object p0, p0, Landroidx/media/MediaBrowserServiceCompat$3;->val$receiver:Lb/b;
+    iget-object p0, p0, Landroidx/media/MediaBrowserServiceCompat$3;->val$receiver:Lb/b/a/c/b;
 
-    invoke-virtual {p0, v1, v0}, Lb/b;->c(ILandroid/os/Bundle;)V
+    invoke-virtual {p0, v1, v0}, Lb/b/a/c/b;->b(ILandroid/os/Bundle;)V
 
     return-void
 
     .line 7
     :cond_1
     :goto_0
-    iget-object p0, p0, Landroidx/media/MediaBrowserServiceCompat$3;->val$receiver:Lb/b;
+    iget-object p0, p0, Landroidx/media/MediaBrowserServiceCompat$3;->val$receiver:Lb/b/a/c/b;
 
     const/4 p1, -0x1
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, p1, v0}, Lb/b;->c(ILandroid/os/Bundle;)V
+    invoke-virtual {p0, p1, v0}, Lb/b/a/c/b;->b(ILandroid/os/Bundle;)V
 
     return-void
 .end method

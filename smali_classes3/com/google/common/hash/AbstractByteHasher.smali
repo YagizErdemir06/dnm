@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/hash/AbstractByteHasher;
+.class public abstract Lcom/google/common/hash/AbstractByteHasher;
 .super Lcom/google/common/hash/AbstractHasher;
 .source "SourceFile"
 
@@ -19,10 +19,12 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/hash/AbstractHasher;-><init>()V
 
     const/16 v0, 0x8
 
+    .line 2
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
@@ -303,20 +305,20 @@
 
     move-result v1
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v2
 
     add-int/2addr v1, v2
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v2
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/google/common/hash/AbstractByteHasher;->update([BII)V
 
     .line 5
-    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result p0
 
@@ -326,7 +328,7 @@
 
     .line 6
     :cond_0
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v0
 

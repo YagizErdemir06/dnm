@@ -1,4 +1,4 @@
-.class Landroidx/viewpager2/adapter/FragmentStateAdapter$3;
+.class public Landroidx/viewpager2/adapter/FragmentStateAdapter$3;
 .super Landroidx/fragment/app/FragmentManager$FragmentLifecycleCallbacks;
 .source "SourceFile"
 
@@ -15,17 +15,18 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/viewpager2/adapter/FragmentStateAdapter;
+.field public final synthetic this$0:Landroidx/viewpager2/adapter/FragmentStateAdapter;
 
-.field final synthetic val$container:Landroid/widget/FrameLayout;
+.field public final synthetic val$container:Landroid/widget/FrameLayout;
 
-.field final synthetic val$fragment:Landroidx/fragment/app/Fragment;
+.field public final synthetic val$fragment:Landroidx/fragment/app/Fragment;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/viewpager2/adapter/FragmentStateAdapter;Landroidx/fragment/app/Fragment;Landroid/widget/FrameLayout;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$3;->this$0:Landroidx/viewpager2/adapter/FragmentStateAdapter;
 
     iput-object p2, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$3;->val$fragment:Landroidx/fragment/app/Fragment;
@@ -58,12 +59,15 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p4, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$3;->val$fragment:Landroidx/fragment/app/Fragment;
 
     if-ne p2, p4, :cond_0
 
+    .line 2
     invoke-virtual {p1, p0}, Landroidx/fragment/app/FragmentManager;->unregisterFragmentLifecycleCallbacks(Landroidx/fragment/app/FragmentManager$FragmentLifecycleCallbacks;)V
 
+    .line 3
     iget-object p1, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$3;->this$0:Landroidx/viewpager2/adapter/FragmentStateAdapter;
 
     iget-object p0, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$3;->val$container:Landroid/widget/FrameLayout;

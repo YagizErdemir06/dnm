@@ -56,6 +56,7 @@
 
     const-string v0, "common"
 
+    .line 1
     invoke-static {v0}, Lcom/google/android/gms/internal/mlkit_common/zzpy;->zzb(Ljava/lang/String;)Lcom/google/android/gms/internal/mlkit_common/zzpn;
 
     move-result-object v6
@@ -72,6 +73,7 @@
 
     move-object v5, p3
 
+    .line 2
     invoke-direct/range {v1 .. v6}, Lcom/google/mlkit/common/sdkinternal/CloseGuard;-><init>(Ljava/lang/Object;ILcom/google/mlkit/common/sdkinternal/Cleaner;Ljava/lang/Runnable;Lcom/google/android/gms/internal/mlkit_common/zzpn;)V
 
     return-object v0

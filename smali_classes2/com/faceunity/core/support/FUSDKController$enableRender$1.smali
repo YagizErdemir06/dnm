@@ -1,9 +1,9 @@
-.class final Lcom/faceunity/core/support/FUSDKController$enableRender$1;
-.super Lkotlin/jvm/internal/n0;
+.class public final Lcom/faceunity/core/support/FUSDKController$enableRender$1;
+.super Lh/d3/x/n0;
 .source "SourceFile"
 
 # interfaces
-.implements Ljn/a;
+.implements Lh/d3/w/a;
 
 
 # annotations
@@ -18,26 +18,27 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lkotlin/jvm/internal/n0;",
-        "Ljn/a<",
+        "Lh/d3/x/n0;",
+        "Lh/d3/w/a<",
         "Ljava/lang/Object;",
         ">;"
     }
 .end annotation
 
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
     bv = {
         0x1,
         0x0,
         0x3
     }
     d1 = {
-        "\u0000\u0008\n\u0000\n\u0002\u0010\u0000\n\u0000\u0010\u0000\u001a\u0004\u0018\u00010\u0001H\n\u00a2\u0006\u0002\u0008\u0002"
+        "\u0000\u0008\n\u0002\u0010\u0000\n\u0002\u0008\u0003\u0010\u0003\u001a\u0004\u0018\u00010\u0000H\n\u00a2\u0006\u0004\u0008\u0001\u0010\u0002"
     }
     d2 = {
-        "<anonymous>",
         "",
-        "invoke"
+        "invoke",
+        "()Ljava/lang/Object;",
+        "<anonymous>"
     }
     k = 0x3
     mv = {
@@ -49,11 +50,11 @@
 
 
 # instance fields
-.field final synthetic $enable:Z
+.field public final synthetic $enable:Z
 
-.field final synthetic $res:I
+.field public final synthetic $res:I
 
-.field final synthetic $sceneId:I
+.field public final synthetic $sceneId:I
 
 
 # direct methods
@@ -68,7 +69,7 @@
 
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Lkotlin/jvm/internal/n0;-><init>(I)V
+    invoke-direct {p0, p1}, Lh/d3/x/n0;-><init>(I)V
 
     return-void
 .end method
@@ -77,9 +78,10 @@
 # virtual methods
 .method public final invoke()Ljava/lang/Object;
     .locals 2
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

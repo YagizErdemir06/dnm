@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/StandardRowSortedTable;
+.class public Lcom/google/common/collect/StandardRowSortedTable;
 .super Lcom/google/common/collect/StandardTable;
 .source "SourceFile"
 
@@ -57,6 +57,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/common/collect/StandardTable;-><init>(Ljava/util/Map;Lcom/google/common/base/Supplier;)V
 
     return-void
@@ -65,6 +66,7 @@
 .method public static synthetic access$100(Lcom/google/common/collect/StandardRowSortedTable;)Ljava/util/SortedMap;
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/StandardRowSortedTable;->sortedBackingMap()Ljava/util/SortedMap;
 
     move-result-object p0
@@ -84,6 +86,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/StandardTable;->backingMap:Ljava/util/Map;
 
     check-cast p0, Ljava/util/SortedMap;

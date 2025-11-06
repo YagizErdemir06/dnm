@@ -47,6 +47,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/Player$Commands$Builder;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/Player$Commands$Builder;-><init>()V
@@ -57,9 +58,8 @@
 
     sput-object v0, Lcom/google/android/exoplayer2/Player$Commands;->EMPTY:Lcom/google/android/exoplayer2/Player$Commands;
 
-    new-instance v0, Lcom/google/android/exoplayer2/f2;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/f2;-><init>()V
+    .line 2
+    sget-object v0, Ld/j/a/b/x1;->a:Ld/j/a/b/x1;
 
     sput-object v0, Lcom/google/android/exoplayer2/Player$Commands;->CREATOR:Lcom/google/android/exoplayer2/Bundleable$Creator;
 
@@ -100,6 +100,7 @@
 .method public static synthetic access$000(Lcom/google/android/exoplayer2/Player$Commands;)Lcom/google/android/exoplayer2/util/FlagSet;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Player$Commands;->flags:Lcom/google/android/exoplayer2/util/FlagSet;
 
     return-object p0
@@ -110,6 +111,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {v0}, Lcom/google/android/exoplayer2/Player$Commands;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -120,15 +122,18 @@
 
     if-nez p0, :cond_0
 
+    .line 2
     sget-object p0, Lcom/google/android/exoplayer2/Player$Commands;->EMPTY:Lcom/google/android/exoplayer2/Player$Commands;
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance v1, Lcom/google/android/exoplayer2/Player$Commands$Builder;
 
     invoke-direct {v1}, Lcom/google/android/exoplayer2/Player$Commands$Builder;-><init>()V
 
+    .line 4
     :goto_0
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
@@ -136,6 +141,7 @@
 
     if-ge v0, v2, :cond_1
 
+    .line 5
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -152,6 +158,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_1
     invoke-virtual {v1}, Lcom/google/android/exoplayer2/Player$Commands$Builder;->build()Lcom/google/android/exoplayer2/Player$Commands;
 
@@ -165,6 +172,7 @@
 
     const/16 v0, 0x24
 
+    .line 1
     invoke-static {p0, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
     move-result-object p0
@@ -177,6 +185,7 @@
 .method public buildUpon()Lcom/google/android/exoplayer2/Player$Commands$Builder;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/Player$Commands$Builder;
 
     const/4 v1, 0x0
@@ -189,6 +198,7 @@
 .method public contains(I)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Player$Commands;->flags:Lcom/google/android/exoplayer2/util/FlagSet;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/util/FlagSet;->contains(I)Z
@@ -201,6 +211,7 @@
 .method public varargs containsAny([I)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Player$Commands;->flags:Lcom/google/android/exoplayer2/util/FlagSet;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/util/FlagSet;->containsAny([I)Z
@@ -223,6 +234,7 @@
 
     return p0
 
+    .line 1
     :cond_0
     instance-of v0, p1, Lcom/google/android/exoplayer2/Player$Commands;
 
@@ -232,9 +244,11 @@
 
     return p0
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/Player$Commands;
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/Player$Commands;->flags:Lcom/google/android/exoplayer2/util/FlagSet;
 
     iget-object p1, p1, Lcom/google/android/exoplayer2/Player$Commands;->flags:Lcom/google/android/exoplayer2/util/FlagSet;
@@ -249,6 +263,7 @@
 .method public get(I)I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Player$Commands;->flags:Lcom/google/android/exoplayer2/util/FlagSet;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/util/FlagSet;->get(I)I
@@ -261,6 +276,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Player$Commands;->flags:Lcom/google/android/exoplayer2/util/FlagSet;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/FlagSet;->hashCode()I
@@ -273,6 +289,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Player$Commands;->flags:Lcom/google/android/exoplayer2/util/FlagSet;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/FlagSet;->size()I
@@ -285,10 +302,12 @@
 .method public toBundle()Landroid/os/Bundle;
     .locals 5
 
+    .line 1
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
+    .line 2
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
@@ -297,6 +316,7 @@
 
     move v3, v2
 
+    .line 3
     :goto_0
     iget-object v4, p0, Lcom/google/android/exoplayer2/Player$Commands;->flags:Lcom/google/android/exoplayer2/util/FlagSet;
 
@@ -306,6 +326,7 @@
 
     if-ge v3, v4, :cond_0
 
+    .line 4
     iget-object v4, p0, Lcom/google/android/exoplayer2/Player$Commands;->flags:Lcom/google/android/exoplayer2/util/FlagSet;
 
     invoke-virtual {v4, v3}, Lcom/google/android/exoplayer2/util/FlagSet;->get(I)I
@@ -322,6 +343,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-static {v2}, Lcom/google/android/exoplayer2/Player$Commands;->keyForField(I)Ljava/lang/String;
 

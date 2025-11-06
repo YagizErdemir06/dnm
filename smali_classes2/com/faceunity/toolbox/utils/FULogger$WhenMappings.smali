@@ -4,17 +4,19 @@
 
 
 # annotations
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
     bv = {
         0x1,
         0x0,
         0x3
     }
+    d1 = {}
+    d2 = {}
     k = 0x3
     mv = {
         0x1,
-        0x1,
-        0xf
+        0x4,
+        0x0
     }
 .end annotation
 

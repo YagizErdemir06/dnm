@@ -22,6 +22,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/source/MediaSourceFactory;->UNSUPPORTED:Lcom/google/android/exoplayer2/source/MediaSourceFactory;
 
     sput-object v0, Lcom/google/android/exoplayer2/source/MediaSource$Factory;->UNSUPPORTED:Lcom/google/android/exoplayer2/source/MediaSource$Factory;

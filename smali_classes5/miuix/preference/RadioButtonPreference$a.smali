@@ -22,6 +22,7 @@
 .method public constructor <init>(Lmiuix/preference/RadioButtonPreference;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/preference/RadioButtonPreference$a;->a:Lmiuix/preference/RadioButtonPreference;
 
     invoke-direct {p0}, Landroid/view/View$AccessibilityDelegate;-><init>()V
@@ -34,10 +35,12 @@
 .method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
     const/4 p0, 0x0
 
+    .line 2
     invoke-virtual {p2, p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setCheckable(Z)V
 
     return-void

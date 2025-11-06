@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/AbstractFuture$Listener;
+.class public final Lcom/google/common/util/concurrent/AbstractFuture$Listener;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,21 +15,21 @@
 
 
 # static fields
-.field static final TOMBSTONE:Lcom/google/common/util/concurrent/AbstractFuture$Listener;
+.field public static final TOMBSTONE:Lcom/google/common/util/concurrent/AbstractFuture$Listener;
 
 
 # instance fields
-.field final executor:Ljava/util/concurrent/Executor;
+.field public final executor:Ljava/util/concurrent/Executor;
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 .end field
 
-.field next:Lcom/google/common/util/concurrent/AbstractFuture$Listener;
+.field public next:Lcom/google/common/util/concurrent/AbstractFuture$Listener;
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 .end field
 
-.field final task:Ljava/lang/Runnable;
+.field public final task:Ljava/lang/Runnable;
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 .end field
@@ -39,6 +39,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/AbstractFuture$Listener;
 
     invoke-direct {v0}, Lcom/google/common/util/concurrent/AbstractFuture$Listener;-><init>()V

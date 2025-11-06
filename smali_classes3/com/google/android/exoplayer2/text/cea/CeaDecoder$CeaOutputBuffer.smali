@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/text/cea/CeaDecoder$CeaOutputBuffer;
+.class public final Lcom/google/android/exoplayer2/text/cea/CeaDecoder$CeaOutputBuffer;
 .super Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;
 .source "SourceFile"
 
@@ -38,8 +38,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/text/cea/CeaDecoder$CeaOutputBuffer;->owner:Lcom/google/android/exoplayer2/decoder/DecoderOutputBuffer$Owner;
 
     return-void
@@ -50,6 +52,7 @@
 .method public final release()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/CeaDecoder$CeaOutputBuffer;->owner:Lcom/google/android/exoplayer2/decoder/DecoderOutputBuffer$Owner;
 
     invoke-interface {v0, p0}, Lcom/google/android/exoplayer2/decoder/DecoderOutputBuffer$Owner;->releaseOutputBuffer(Lcom/google/android/exoplayer2/decoder/DecoderOutputBuffer;)V

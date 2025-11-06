@@ -42,6 +42,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/activity/result/ActivityResult$1;
 
     invoke-direct {v0}, Landroidx/activity/result/ActivityResult$1;-><init>()V
@@ -120,6 +121,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 1
     invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p0
@@ -152,6 +154,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/activity/result/ActivityResult;->mData:Landroid/content/Intent;
 
     return-object p0
@@ -160,6 +163,7 @@
 .method public getResultCode()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/activity/result/ActivityResult;->mResultCode:I
 
     return p0
@@ -168,6 +172,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -178,6 +183,7 @@
 
     iget v1, p0, Landroidx/activity/result/ActivityResult;->mResultCode:I
 
+    .line 2
     invoke-static {v1}, Landroidx/activity/result/ActivityResult;->resultCodeToString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -210,10 +216,12 @@
         .end annotation
     .end param
 
+    .line 1
     iget v0, p0, Landroidx/activity/result/ActivityResult;->mResultCode:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 2
     iget-object v0, p0, Landroidx/activity/result/ActivityResult;->mData:Landroid/content/Intent;
 
     if-nez v0, :cond_0
@@ -228,10 +236,12 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 3
     iget-object p0, p0, Landroidx/activity/result/ActivityResult;->mData:Landroid/content/Intent;
 
     if-eqz p0, :cond_1
 
+    .line 4
     invoke-virtual {p0, p1, p2}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
 
     :cond_1

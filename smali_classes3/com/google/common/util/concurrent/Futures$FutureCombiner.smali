@@ -100,6 +100,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/CombinedFuture;
 
     iget-object v1, p0, Lcom/google/common/util/concurrent/Futures$FutureCombiner;->futures:Lcom/google/common/collect/ImmutableList;
@@ -127,6 +128,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/CombinedFuture;
 
     iget-object v1, p0, Lcom/google/common/util/concurrent/Futures$FutureCombiner;->futures:Lcom/google/common/collect/ImmutableList;
@@ -151,6 +153,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/Futures$FutureCombiner$1;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/util/concurrent/Futures$FutureCombiner$1;-><init>(Lcom/google/common/util/concurrent/Futures$FutureCombiner;Ljava/lang/Runnable;)V

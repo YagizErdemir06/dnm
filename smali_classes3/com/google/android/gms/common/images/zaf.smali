@@ -13,12 +13,15 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p2, v0}, Lcom/google/android/gms/common/images/zag;-><init>(Landroid/net/Uri;I)V
 
+    .line 2
     invoke-static {p1}, Lcom/google/android/gms/common/internal/Asserts;->checkNotNull(Ljava/lang/Object;)V
 
     new-instance p2, Ljava/lang/ref/WeakReference;
 
+    .line 3
     invoke-direct {p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object p2, p0, Lcom/google/android/gms/common/images/zaf;->zac:Ljava/lang/ref/WeakReference;
@@ -41,6 +44,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/android/gms/common/images/zaf;
 
@@ -50,20 +54,23 @@
 
     return v2
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/gms/common/images/zaf;
 
     iget-object v1, p0, Lcom/google/android/gms/common/images/zaf;->zac:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    .line 3
+    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/google/android/gms/common/images/ImageManager$OnImageLoadedListener;
 
+    .line 4
     iget-object v3, p1, Lcom/google/android/gms/common/images/zaf;->zac:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v3}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {v3}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v3
 
@@ -73,6 +80,7 @@
 
     if-eqz v1, :cond_2
 
+    .line 5
     invoke-static {v3, v1}, Lcom/google/android/gms/common/internal/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
@@ -83,6 +91,7 @@
 
     iget-object p0, p0, Lcom/google/android/gms/common/images/zag;->zaa:Lcom/google/android/gms/common/images/zad;
 
+    .line 6
     invoke-static {p1, p0}, Lcom/google/android/gms/common/internal/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -102,9 +111,10 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    const/4 v1, 0x0
-
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/images/zag;->zaa:Lcom/google/android/gms/common/images/zad;
+
+    const/4 v1, 0x0
 
     aput-object p0, v0, v1
 
@@ -124,9 +134,10 @@
 
     if-nez p3, :cond_0
 
+    .line 1
     iget-object p2, p0, Lcom/google/android/gms/common/images/zaf;->zac:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {p2}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p2
 
@@ -138,6 +149,7 @@
 
     iget-object p0, p0, Lcom/google/android/gms/common/images/zad;->zaa:Landroid/net/Uri;
 
+    .line 2
     invoke-interface {p2, p0, p1, p4}, Lcom/google/android/gms/common/images/ImageManager$OnImageLoadedListener;->onImageLoaded(Landroid/net/Uri;Landroid/graphics/drawable/Drawable;Z)V
 
     :cond_0

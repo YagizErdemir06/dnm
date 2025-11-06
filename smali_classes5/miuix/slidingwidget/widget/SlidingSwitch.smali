@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public a:Lds/b;
+.field private c:Lk/c0/c/b;
 
 
 # direct methods
@@ -23,7 +23,7 @@
     .locals 1
 
     .line 2
-    sget v0, Lcs/b$c;->slidingButtonStyle:I
+    sget v0, Lk/c0/b$b;->slidingButtonStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Lmiuix/slidingwidget/widget/SlidingSwitch;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -37,31 +37,36 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/Switch;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 4
-    new-instance v0, Lds/b;
+    new-instance v0, Lk/c0/c/b;
 
-    invoke-direct {v0, p0}, Lds/b;-><init>(Landroid/widget/CompoundButton;)V
+    invoke-direct {v0, p0}, Lk/c0/c/b;-><init>(Landroid/widget/CompoundButton;)V
 
-    iput-object v0, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->a:Lds/b;
+    iput-object v0, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->c:Lk/c0/c/b;
 
     .line 5
-    invoke-virtual {v0}, Lds/b;->v()V
+    invoke-virtual {v0}, Lk/c0/c/b;->B()V
 
     .line 6
-    sget-object v0, Lcs/b$n;->SlidingButton:[I
+    iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->c:Lk/c0/c/b;
 
-    sget v1, Lcs/b$m;->Widget_SlidingButton_DayNight:I
+    invoke-virtual {v0}, Lk/c0/c/b;->A()V
 
     .line 7
+    sget-object v0, Lk/c0/b$m;->SlidingButton:[I
+
+    sget v1, Lk/c0/b$l;->Widget_SlidingButton_DayNight:I
+
+    .line 8
     invoke-virtual {p1, p2, v0, p3, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p2
 
-    .line 8
-    iget-object p0, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->a:Lds/b;
-
-    invoke-virtual {p0, p1, p2}, Lds/b;->x(Landroid/content/Context;Landroid/content/res/TypedArray;)V
-
     .line 9
+    iget-object p0, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->c:Lk/c0/c/b;
+
+    invoke-virtual {p0, p1, p2}, Lk/c0/c/b;->D(Landroid/content/Context;Landroid/content/res/TypedArray;)V
+
+    .line 10
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void
@@ -72,13 +77,16 @@
 .method public drawableStateChanged()V
     .locals 0
 
+    .line 1
     invoke-super {p0}, Landroid/widget/Switch;->drawableStateChanged()V
 
-    iget-object p0, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->a:Lds/b;
+    .line 2
+    iget-object p0, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->c:Lk/c0/c/b;
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Lds/b;->S()V
+    .line 3
+    invoke-virtual {p0}, Lk/c0/c/b;->b0()V
 
     :cond_0
     return-void
@@ -87,18 +95,21 @@
 .method public getAlpha()F
     .locals 1
 
-    iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->a:Lds/b;
+    .line 1
+    iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->c:Lk/c0/c/b;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lds/b;->o()F
+    .line 2
+    invoke-virtual {v0}, Lk/c0/c/b;->t()F
 
     move-result p0
 
     return p0
 
+    .line 3
     :cond_0
-    invoke-super {p0}, Landroid/view/View;->getAlpha()F
+    invoke-super {p0}, Landroid/widget/Switch;->getAlpha()F
 
     move-result p0
 
@@ -116,13 +127,16 @@
 .method public jumpDrawablesToCurrentState()V
     .locals 0
 
+    .line 1
     invoke-super {p0}, Landroid/widget/Switch;->jumpDrawablesToCurrentState()V
 
-    iget-object p0, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->a:Lds/b;
+    .line 2
+    iget-object p0, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->c:Lk/c0/c/b;
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Lds/b;->y()V
+    .line 3
+    invoke-virtual {p0}, Lk/c0/c/b;->E()V
 
     :cond_0
     return-void
@@ -131,16 +145,19 @@
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 1
 
-    iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->a:Lds/b;
+    .line 1
+    iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->c:Lk/c0/c/b;
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-super {p0, p1}, Landroid/widget/Switch;->onDraw(Landroid/graphics/Canvas;)V
 
     return-void
 
+    .line 3
     :cond_0
-    invoke-virtual {v0, p1}, Lds/b;->C(Landroid/graphics/Canvas;)V
+    invoke-virtual {v0, p1}, Lk/c0/c/b;->J(Landroid/graphics/Canvas;)V
 
     return-void
 .end method
@@ -148,14 +165,17 @@
 .method public onHoverEvent(Landroid/view/MotionEvent;)Z
     .locals 1
 
-    iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->a:Lds/b;
+    .line 1
+    iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->c:Lk/c0/c/b;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lds/b;->E(Landroid/view/MotionEvent;)V
+    .line 2
+    invoke-virtual {v0, p1}, Lk/c0/c/b;->N(Landroid/view/MotionEvent;)V
 
+    .line 3
     :cond_0
-    invoke-super {p0, p1}, Landroid/view/View;->onHoverEvent(Landroid/view/MotionEvent;)Z
+    invoke-super {p0, p1}, Landroid/widget/Switch;->onHoverEvent(Landroid/view/MotionEvent;)Z
 
     move-result p0
 
@@ -165,23 +185,25 @@
 .method public onMeasure(II)V
     .locals 0
 
-    iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->a:Lds/b;
+    .line 1
+    iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->c:Lk/c0/c/b;
 
-    invoke-virtual {p1}, Lds/b;->q()I
+    invoke-virtual {p1}, Lk/c0/c/b;->v()I
 
     move-result p1
 
-    iget-object p2, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->a:Lds/b;
+    iget-object p2, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->c:Lk/c0/c/b;
 
-    invoke-virtual {p2}, Lds/b;->p()I
+    invoke-virtual {p2}, Lk/c0/c/b;->u()I
 
     move-result p2
 
-    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setMeasuredDimension(II)V
+    invoke-virtual {p0, p1, p2}, Landroid/widget/Switch;->setMeasuredDimension(II)V
 
-    iget-object p0, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->a:Lds/b;
+    .line 2
+    iget-object p0, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->c:Lk/c0/c/b;
 
-    invoke-virtual {p0}, Lds/b;->R()V
+    invoke-virtual {p0}, Lk/c0/c/b;->a0()V
 
     return-void
 .end method
@@ -197,7 +219,8 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
 
-    invoke-virtual {p0}, Landroid/view/View;->isEnabled()Z
+    .line 1
+    invoke-virtual {p0}, Landroid/widget/Switch;->isEnabled()Z
 
     move-result v0
 
@@ -207,12 +230,14 @@
 
     return p0
 
+    .line 2
     :cond_0
-    iget-object p0, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->a:Lds/b;
+    iget-object p0, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->c:Lk/c0/c/b;
 
     if-eqz p0, :cond_1
 
-    invoke-virtual {p0, p1}, Lds/b;->G(Landroid/view/MotionEvent;)V
+    .line 3
+    invoke-virtual {p0, p1}, Lk/c0/c/b;->P(Landroid/view/MotionEvent;)V
 
     :cond_1
     const/4 p0, 0x1
@@ -223,13 +248,16 @@
 .method public performClick()Z
     .locals 0
 
-    invoke-super {p0}, Landroid/view/View;->performClick()Z
+    .line 1
+    invoke-super {p0}, Landroid/widget/Switch;->performClick()Z
 
-    iget-object p0, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->a:Lds/b;
+    .line 2
+    iget-object p0, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->c:Lk/c0/c/b;
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Lds/b;->B()V
+    .line 3
+    invoke-virtual {p0}, Lk/c0/c/b;->I()V
 
     :cond_0
     const/4 p0, 0x1
@@ -240,16 +268,20 @@
 .method public setAlpha(F)V
     .locals 1
 
-    invoke-super {p0, p1}, Landroid/view/View;->setAlpha(F)V
+    .line 1
+    invoke-super {p0, p1}, Landroid/widget/Switch;->setAlpha(F)V
 
-    iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->a:Lds/b;
+    .line 2
+    iget-object v0, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->c:Lk/c0/c/b;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lds/b;->M(F)V
+    .line 3
+    invoke-virtual {v0, p1}, Lk/c0/c/b;->V(F)V
 
+    .line 4
     :cond_0
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    invoke-virtual {p0}, Landroid/widget/Switch;->invalidate()V
 
     return-void
 .end method
@@ -263,23 +295,28 @@
 .method public setChecked(Z)V
     .locals 1
 
-    invoke-virtual {p0}, Landroid/widget/CompoundButton;->isChecked()Z
+    .line 1
+    invoke-virtual {p0}, Landroid/widget/Switch;->isChecked()Z
 
     move-result v0
 
     if-eq v0, p1, :cond_0
 
+    .line 2
     invoke-super {p0, p1}, Landroid/widget/Switch;->setChecked(Z)V
 
-    invoke-virtual {p0}, Landroid/widget/CompoundButton;->isChecked()Z
+    .line 3
+    invoke-virtual {p0}, Landroid/widget/Switch;->isChecked()Z
 
     move-result p1
 
-    iget-object p0, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->a:Lds/b;
+    .line 4
+    iget-object p0, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->c:Lk/c0/c/b;
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0, p1}, Lds/b;->N(Z)V
+    .line 5
+    invoke-virtual {p0, p1}, Lk/c0/c/b;->W(Z)V
 
     :cond_0
     return-void
@@ -292,13 +329,16 @@
         .end annotation
     .end param
 
-    invoke-super {p0, p1, p2}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
+    .line 1
+    invoke-super {p0, p1, p2}, Landroid/widget/Switch;->setLayerType(ILandroid/graphics/Paint;)V
 
-    iget-object p0, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->a:Lds/b;
+    .line 2
+    iget-object p0, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->c:Lk/c0/c/b;
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0, p1}, Lds/b;->P(I)V
+    .line 3
+    invoke-virtual {p0, p1}, Lk/c0/c/b;->Y(I)V
 
     :cond_0
     return-void
@@ -307,11 +347,13 @@
 .method public setOnPerformCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->a:Lds/b;
+    .line 1
+    iget-object p0, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->c:Lk/c0/c/b;
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0, p1}, Lds/b;->Q(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+    .line 2
+    invoke-virtual {p0, p1}, Lk/c0/c/b;->Z(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
     :cond_0
     return-void
@@ -320,9 +362,11 @@
 .method public setPressed(Z)V
     .locals 0
 
-    invoke-super {p0, p1}, Landroid/view/View;->setPressed(Z)V
+    .line 1
+    invoke-super {p0, p1}, Landroid/widget/Switch;->setPressed(Z)V
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    .line 2
+    invoke-virtual {p0}, Landroid/widget/Switch;->invalidate()V
 
     return-void
 .end method
@@ -330,17 +374,18 @@
 .method public verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
     .locals 1
 
+    .line 1
     invoke-super {p0, p1}, Landroid/widget/Switch;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    iget-object p0, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->a:Lds/b;
+    iget-object p0, p0, Lmiuix/slidingwidget/widget/SlidingSwitch;->c:Lk/c0/c/b;
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0, p1}, Lds/b;->W(Landroid/graphics/drawable/Drawable;)Z
+    invoke-virtual {p0, p1}, Lk/c0/c/b;->f0(Landroid/graphics/drawable/Drawable;)Z
 
     move-result p0
 

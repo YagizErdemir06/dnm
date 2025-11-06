@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/decoder/SimpleDecoder$1;
+.class public Lcom/google/android/exoplayer2/decoder/SimpleDecoder$1;
 .super Ljava/lang/Thread;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/android/exoplayer2/decoder/SimpleDecoder;
+.field public final synthetic this$0:Lcom/google/android/exoplayer2/decoder/SimpleDecoder;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/exoplayer2/decoder/SimpleDecoder;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder$1;->this$0:Lcom/google/android/exoplayer2/decoder/SimpleDecoder;
 
     invoke-direct {p0, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
@@ -34,6 +35,7 @@
 .method public run()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoder$1;->this$0:Lcom/google/android/exoplayer2/decoder/SimpleDecoder;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/decoder/SimpleDecoder;->access$000(Lcom/google/android/exoplayer2/decoder/SimpleDecoder;)V

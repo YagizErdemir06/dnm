@@ -1,4 +1,4 @@
-.class final Lcom/google/android/datatransport/runtime/TransportFactoryImpl;
+.class public final Lcom/google/android/datatransport/runtime/TransportFactoryImpl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -37,12 +37,16 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/TransportFactoryImpl;->supportedPayloadEncodings:Ljava/util/Set;
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/datatransport/runtime/TransportFactoryImpl;->transportContext:Lcom/google/android/datatransport/runtime/TransportContext;
 
+    .line 4
     iput-object p3, p0, Lcom/google/android/datatransport/runtime/TransportFactoryImpl;->transportInternal:Lcom/google/android/datatransport/runtime/TransportInternal;
 
     return-void

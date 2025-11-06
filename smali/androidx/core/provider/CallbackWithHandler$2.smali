@@ -1,4 +1,4 @@
-.class Landroidx/core/provider/CallbackWithHandler$2;
+.class public Landroidx/core/provider/CallbackWithHandler$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,17 +18,18 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/core/provider/CallbackWithHandler;
+.field public final synthetic this$0:Landroidx/core/provider/CallbackWithHandler;
 
-.field final synthetic val$callback:Landroidx/core/provider/FontsContractCompat$FontRequestCallback;
+.field public final synthetic val$callback:Landroidx/core/provider/FontsContractCompat$FontRequestCallback;
 
-.field final synthetic val$reason:I
+.field public final synthetic val$reason:I
 
 
 # direct methods
 .method public constructor <init>(Landroidx/core/provider/CallbackWithHandler;Landroidx/core/provider/FontsContractCompat$FontRequestCallback;I)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/core/provider/CallbackWithHandler$2;->this$0:Landroidx/core/provider/CallbackWithHandler;
 
     iput-object p2, p0, Landroidx/core/provider/CallbackWithHandler$2;->val$callback:Landroidx/core/provider/FontsContractCompat$FontRequestCallback;
@@ -45,6 +46,7 @@
 .method public run()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/core/provider/CallbackWithHandler$2;->val$callback:Landroidx/core/provider/FontsContractCompat$FontRequestCallback;
 
     iget p0, p0, Landroidx/core/provider/CallbackWithHandler$2;->val$reason:I

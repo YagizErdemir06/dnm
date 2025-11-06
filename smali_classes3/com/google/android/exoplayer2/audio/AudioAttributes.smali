@@ -62,6 +62,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/audio/AudioAttributes$Builder;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/audio/AudioAttributes$Builder;-><init>()V
@@ -72,9 +73,8 @@
 
     sput-object v0, Lcom/google/android/exoplayer2/audio/AudioAttributes;->DEFAULT:Lcom/google/android/exoplayer2/audio/AudioAttributes;
 
-    new-instance v0, Lcom/google/android/exoplayer2/audio/a;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/audio/a;-><init>()V
+    .line 2
+    sget-object v0, Ld/j/a/b/o2/a;->a:Ld/j/a/b/o2/a;
 
     sput-object v0, Lcom/google/android/exoplayer2/audio/AudioAttributes;->CREATOR:Lcom/google/android/exoplayer2/Bundleable$Creator;
 
@@ -114,21 +114,12 @@
     return-void
 .end method
 
-.method public static synthetic a(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/audio/AudioAttributes;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/audio/AudioAttributes;->lambda$static$0(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/audio/AudioAttributes;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 .method private static keyForField(I)Ljava/lang/String;
     .locals 1
 
     const/16 v0, 0x24
 
+    .line 1
     invoke-static {p0, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
     move-result-object p0
@@ -136,15 +127,17 @@
     return-object p0
 .end method
 
-.method private static synthetic lambda$static$0(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/audio/AudioAttributes;
+.method public static synthetic lambda$static$0(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/audio/AudioAttributes;
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/audio/AudioAttributes$Builder;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/audio/AudioAttributes$Builder;-><init>()V
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-static {v1}, Lcom/google/android/exoplayer2/audio/AudioAttributes;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -155,6 +148,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 3
     invoke-static {v1}, Lcom/google/android/exoplayer2/audio/AudioAttributes;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -168,6 +162,7 @@
     :cond_0
     const/4 v1, 0x1
 
+    .line 4
     invoke-static {v1}, Lcom/google/android/exoplayer2/audio/AudioAttributes;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -178,6 +173,7 @@
 
     if-eqz v2, :cond_1
 
+    .line 5
     invoke-static {v1}, Lcom/google/android/exoplayer2/audio/AudioAttributes;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -191,6 +187,7 @@
     :cond_1
     const/4 v1, 0x2
 
+    .line 6
     invoke-static {v1}, Lcom/google/android/exoplayer2/audio/AudioAttributes;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -201,6 +198,7 @@
 
     if-eqz v2, :cond_2
 
+    .line 7
     invoke-static {v1}, Lcom/google/android/exoplayer2/audio/AudioAttributes;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -214,6 +212,7 @@
     :cond_2
     const/4 v1, 0x3
 
+    .line 8
     invoke-static {v1}, Lcom/google/android/exoplayer2/audio/AudioAttributes;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -224,6 +223,7 @@
 
     if-eqz v2, :cond_3
 
+    .line 9
     invoke-static {v1}, Lcom/google/android/exoplayer2/audio/AudioAttributes;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -237,6 +237,7 @@
     :cond_3
     const/4 v1, 0x4
 
+    .line 10
     invoke-static {v1}, Lcom/google/android/exoplayer2/audio/AudioAttributes;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -247,6 +248,7 @@
 
     if-eqz v2, :cond_4
 
+    .line 11
     invoke-static {v1}, Lcom/google/android/exoplayer2/audio/AudioAttributes;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -255,8 +257,10 @@
 
     move-result p0
 
+    .line 12
     invoke-virtual {v0, p0}, Lcom/google/android/exoplayer2/audio/AudioAttributes$Builder;->setSpatializationBehavior(I)Lcom/google/android/exoplayer2/audio/AudioAttributes$Builder;
 
+    .line 13
     :cond_4
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/audio/AudioAttributes$Builder;->build()Lcom/google/android/exoplayer2/audio/AudioAttributes;
 
@@ -285,6 +289,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 1
     const-class v2, Lcom/google/android/exoplayer2/audio/AudioAttributes;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -295,9 +300,11 @@
 
     goto :goto_1
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/audio/AudioAttributes;
 
+    .line 3
     iget v2, p0, Lcom/google/android/exoplayer2/audio/AudioAttributes;->contentType:I
 
     iget v3, p1, Lcom/google/android/exoplayer2/audio/AudioAttributes;->contentType:I
@@ -347,10 +354,12 @@
         value = 0x15
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/AudioAttributes;->audioAttributesV21:Lcom/google/android/exoplayer2/audio/AudioAttributes$AudioAttributesV21;
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Lcom/google/android/exoplayer2/audio/AudioAttributes$AudioAttributesV21;
 
     const/4 v1, 0x0
@@ -359,6 +368,7 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/audio/AudioAttributes;->audioAttributesV21:Lcom/google/android/exoplayer2/audio/AudioAttributes$AudioAttributesV21;
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/audio/AudioAttributes;->audioAttributesV21:Lcom/google/android/exoplayer2/audio/AudioAttributes$AudioAttributesV21;
 
@@ -368,48 +378,55 @@
 .method public hashCode()I
     .locals 2
 
-    const/16 v0, 0x20f
+    .line 1
+    iget v0, p0, Lcom/google/android/exoplayer2/audio/AudioAttributes;->contentType:I
 
-    iget v1, p0, Lcom/google/android/exoplayer2/audio/AudioAttributes;->contentType:I
+    const/16 v1, 0x20f
 
-    add-int/2addr v0, v1
+    add-int/2addr v1, v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    mul-int/lit8 v1, v1, 0x1f
 
-    iget v1, p0, Lcom/google/android/exoplayer2/audio/AudioAttributes;->flags:I
+    .line 2
+    iget v0, p0, Lcom/google/android/exoplayer2/audio/AudioAttributes;->flags:I
 
-    add-int/2addr v0, v1
+    add-int/2addr v1, v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    mul-int/lit8 v1, v1, 0x1f
 
-    iget v1, p0, Lcom/google/android/exoplayer2/audio/AudioAttributes;->usage:I
+    .line 3
+    iget v0, p0, Lcom/google/android/exoplayer2/audio/AudioAttributes;->usage:I
 
-    add-int/2addr v0, v1
+    add-int/2addr v1, v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    mul-int/lit8 v1, v1, 0x1f
 
-    iget v1, p0, Lcom/google/android/exoplayer2/audio/AudioAttributes;->allowedCapturePolicy:I
+    .line 4
+    iget v0, p0, Lcom/google/android/exoplayer2/audio/AudioAttributes;->allowedCapturePolicy:I
 
-    add-int/2addr v0, v1
+    add-int/2addr v1, v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    mul-int/lit8 v1, v1, 0x1f
 
+    .line 5
     iget p0, p0, Lcom/google/android/exoplayer2/audio/AudioAttributes;->spatializationBehavior:I
 
-    add-int/2addr v0, p0
+    add-int/2addr v1, p0
 
-    return v0
+    return v1
 .end method
 
 .method public toBundle()Landroid/os/Bundle;
     .locals 3
 
+    .line 1
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-static {v1}, Lcom/google/android/exoplayer2/audio/AudioAttributes;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -420,6 +437,7 @@
 
     const/4 v1, 0x1
 
+    .line 3
     invoke-static {v1}, Lcom/google/android/exoplayer2/audio/AudioAttributes;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -430,6 +448,7 @@
 
     const/4 v1, 0x2
 
+    .line 4
     invoke-static {v1}, Lcom/google/android/exoplayer2/audio/AudioAttributes;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -440,6 +459,7 @@
 
     const/4 v1, 0x3
 
+    .line 5
     invoke-static {v1}, Lcom/google/android/exoplayer2/audio/AudioAttributes;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -450,6 +470,7 @@
 
     const/4 v1, 0x4
 
+    .line 6
     invoke-static {v1}, Lcom/google/android/exoplayer2/audio/AudioAttributes;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1

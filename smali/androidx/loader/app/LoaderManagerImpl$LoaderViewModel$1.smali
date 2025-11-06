@@ -1,4 +1,4 @@
-.class final Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel$1;
+.class public final Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -21,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,6 +48,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;
 
     invoke-direct {p0}, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;-><init>()V

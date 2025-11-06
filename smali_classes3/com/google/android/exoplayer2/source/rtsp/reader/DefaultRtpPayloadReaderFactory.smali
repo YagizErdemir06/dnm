@@ -10,6 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,6 +23,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p1, Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;->format:Lcom/google/android/exoplayer2/Format;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
@@ -273,6 +275,7 @@
 
     return-object p0
 
+    .line 2
     :pswitch_0
     new-instance p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp9Reader;
 
@@ -280,6 +283,7 @@
 
     return-object p0
 
+    .line 3
     :pswitch_1
     new-instance p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;
 
@@ -287,6 +291,7 @@
 
     return-object p0
 
+    .line 4
     :pswitch_2
     new-instance p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpOpusReader;
 
@@ -294,6 +299,7 @@
 
     return-object p0
 
+    .line 5
     :pswitch_3
     new-instance p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpH264Reader;
 
@@ -301,6 +307,7 @@
 
     return-object p0
 
+    .line 6
     :pswitch_4
     new-instance p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpMpeg4Reader;
 
@@ -308,6 +315,7 @@
 
     return-object p0
 
+    .line 7
     :pswitch_5
     new-instance p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpPcmReader;
 
@@ -315,6 +323,7 @@
 
     return-object p0
 
+    .line 8
     :pswitch_6
     new-instance p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpAc3Reader;
 
@@ -322,6 +331,7 @@
 
     return-object p0
 
+    .line 9
     :pswitch_7
     new-instance p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpAacReader;
 
@@ -329,6 +339,7 @@
 
     return-object p0
 
+    .line 10
     :pswitch_8
     new-instance p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpAmrReader;
 
@@ -336,6 +347,7 @@
 
     return-object p0
 
+    .line 11
     :pswitch_9
     new-instance p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpH265Reader;
 
@@ -343,6 +355,7 @@
 
     return-object p0
 
+    .line 12
     :pswitch_a
     new-instance p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpH263Reader;
 

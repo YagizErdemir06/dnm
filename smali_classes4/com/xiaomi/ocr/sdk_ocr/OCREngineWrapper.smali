@@ -87,9 +87,9 @@
     .end annotation
 .end field
 
-.field private final mRDFocusTypeSet:Lnb/b;
+.field private final mRDFocusTypeSet:Ld/d/e/c;
 
-.field private final mRDSuppressingCondsSet:Lnb/b;
+.field private final mRDSuppressingCondsSet:Ld/d/e/c;
 
 
 # direct methods
@@ -100,7 +100,8 @@
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lgg/f;->c(Ljava/lang/String;Z)Z
+    .line 1
+    invoke-static {v0, v1}, Ld/o/f/w/f;->c(Ljava/lang/String;Z)Z
 
     move-result v0
 
@@ -110,7 +111,8 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lgg/f;->c(Ljava/lang/String;Z)Z
+    .line 2
+    invoke-static {v0, v1}, Ld/o/f/w/f;->c(Ljava/lang/String;Z)Z
 
     move-result v0
 
@@ -118,12 +120,14 @@
 
     const-string v0, "camera.ocr.faketimeout"
 
-    invoke-static {v0, v1}, Lgg/f;->c(Ljava/lang/String;Z)Z
+    .line 3
+    invoke-static {v0, v1}, Ld/o/f/w/f;->c(Ljava/lang/String;Z)Z
 
     move-result v0
 
     sput-boolean v0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->FAKE_TIMEOUT:Z
 
+    .line 4
     new-instance v0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;
 
     invoke-direct {v0}, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;-><init>()V
@@ -136,26 +140,31 @@
 .method private constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     iput-object v0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mEngineRef:Ljava/util/concurrent/atomic/AtomicReference;
 
-    new-instance v0, Lnb/b;
+    .line 3
+    new-instance v0, Ld/d/e/c;
 
-    invoke-direct {v0}, Lnb/b;-><init>()V
+    invoke-direct {v0}, Ld/d/e/c;-><init>()V
 
-    iput-object v0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDSuppressingCondsSet:Lnb/b;
+    iput-object v0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDSuppressingCondsSet:Ld/d/e/c;
 
-    new-instance v0, Lnb/b;
+    .line 4
+    new-instance v0, Ld/d/e/c;
 
-    invoke-direct {v0}, Lnb/b;-><init>()V
+    invoke-direct {v0}, Ld/d/e/c;-><init>()V
 
-    iput-object v0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDFocusTypeSet:Lnb/b;
+    iput-object v0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDFocusTypeSet:Ld/d/e/c;
 
+    .line 5
     new-instance v0, Landroidx/lifecycle/MutableLiveData;
 
     sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
@@ -170,6 +179,7 @@
 .method public static getInstance()Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->sInstance:Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;
 
     return-object v0
@@ -177,7 +187,16 @@
 
 .method private startRegionDetection(Z)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "needReset"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mEngineRef:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -190,6 +209,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->isOCRRegionDetectionEnabled()Z
 
@@ -199,10 +219,11 @@
 
     return-void
 
+    .line 3
     :cond_1
-    iget-object v1, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDSuppressingCondsSet:Lnb/b;
+    iget-object v1, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDSuppressingCondsSet:Ld/d/e/c;
 
-    invoke-virtual {v1}, Lnb/b;->f()Z
+    invoke-virtual {v1}, Ld/d/e/c;->f()Z
 
     move-result v1
 
@@ -212,55 +233,61 @@
 
     if-nez v1, :cond_2
 
-    const-string p0, "startRegionDetection: suppressing, return"
+    new-array p0, v2, [Ljava/lang/Object;
 
-    new-array p1, v2, [Ljava/lang/Object;
+    const-string p1, "startRegionDetection: suppressing, return"
 
-    invoke-static {v3, p0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 4
+    invoke-static {v3, p1, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
+    .line 5
     :cond_2
-    iget-object v1, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDFocusTypeSet:Lnb/b;
+    iget-object v1, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDFocusTypeSet:Ld/d/e/c;
 
-    invoke-virtual {v1}, Lnb/b;->f()Z
+    invoke-virtual {v1}, Ld/d/e/c;->f()Z
 
     move-result v1
 
     if-nez v1, :cond_3
 
-    iget-object v1, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDFocusTypeSet:Lnb/b;
+    iget-object v1, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDFocusTypeSet:Ld/d/e/c;
 
     const/4 v4, 0x1
 
-    invoke-virtual {v1, v4}, Lnb/b;->c(I)Z
+    invoke-virtual {v1, v4}, Ld/d/e/c;->c(I)Z
 
     move-result v1
 
     if-nez v1, :cond_3
 
-    const-string p0, "startRegionDetection: focus conflict, return"
+    new-array p0, v2, [Ljava/lang/Object;
 
-    new-array p1, v2, [Ljava/lang/Object;
+    const-string p1, "startRegionDetection: focus conflict, return"
 
-    invoke-static {v3, p0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 6
+    invoke-static {v3, p1, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
+    .line 7
     :cond_3
     invoke-virtual {v0, p1}, Lcom/xiaomi/ocr/sdk_ocr/OCREngine;->startOCRRegionDetect(Z)V
 
+    .line 8
     iget-object p0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDEnabledState:Landroidx/lifecycle/MutableLiveData;
 
     sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     invoke-virtual {p0, p1}, Landroidx/lifecycle/MutableLiveData;->postValue(Ljava/lang/Object;)V
 
-    const-string p0, "startRegionDetection: started"
+    new-array p0, v2, [Ljava/lang/Object;
 
-    new-array p1, v2, [Ljava/lang/Object;
+    const-string p1, "startRegionDetection: started"
 
-    invoke-static {v3, p0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 9
+    invoke-static {v3, p1, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -268,6 +295,7 @@
 .method private stopRegionDetection()V
     .locals 5
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mEngineRef:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -280,6 +308,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->isOCRRegionDetectionEnabled()Z
 
@@ -289,10 +318,11 @@
 
     return-void
 
+    .line 3
     :cond_1
-    iget-object v1, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDSuppressingCondsSet:Lnb/b;
+    iget-object v1, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDSuppressingCondsSet:Ld/d/e/c;
 
-    invoke-virtual {v1}, Lnb/b;->f()Z
+    invoke-virtual {v1}, Ld/d/e/c;->f()Z
 
     move-result v1
 
@@ -302,38 +332,42 @@
 
     if-eqz v1, :cond_2
 
-    iget-object v1, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDFocusTypeSet:Lnb/b;
+    iget-object v1, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDFocusTypeSet:Ld/d/e/c;
 
     const/4 v4, 0x1
 
-    invoke-virtual {v1, v4}, Lnb/b;->c(I)Z
+    invoke-virtual {v1, v4}, Ld/d/e/c;->c(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    const-string p0, "stopRegionDetection: force focusing, return"
+    new-array p0, v2, [Ljava/lang/Object;
 
-    new-array v0, v2, [Ljava/lang/Object;
+    const-string v0, "stopRegionDetection: force focusing, return"
 
-    invoke-static {v3, p0, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 4
+    invoke-static {v3, v0, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
+    .line 5
     :cond_2
     invoke-virtual {v0}, Lcom/xiaomi/ocr/sdk_ocr/OCREngine;->stopOCRRegionDetect()V
 
+    .line 6
     iget-object p0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDEnabledState:Landroidx/lifecycle/MutableLiveData;
 
     sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     invoke-virtual {p0, v0}, Landroidx/lifecycle/MutableLiveData;->postValue(Ljava/lang/Object;)V
 
-    const-string p0, "stopRegionDetection: stopped"
+    new-array p0, v2, [Ljava/lang/Object;
 
-    new-array v0, v2, [Ljava/lang/Object;
+    const-string v0, "stopRegionDetection: stopped"
 
-    invoke-static {v3, p0, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 7
+    invoke-static {v3, v0, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -342,17 +376,27 @@
 # virtual methods
 .method public addFocusType(I)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "focusType"
+        }
+    .end annotation
 
+    .line 1
     sget-boolean v0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->IGNORE_MUTEX:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
-    iget-object v0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDFocusTypeSet:Lnb/b;
+    iget-object v0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDFocusTypeSet:Ld/d/e/c;
 
-    invoke-virtual {v0, p1}, Lnb/b;->c(I)Z
+    invoke-virtual {v0, p1}, Ld/d/e/c;->c(I)Z
 
     move-result v0
 
@@ -360,8 +404,9 @@
 
     return-void
 
+    .line 3
     :cond_1
-    iget-object v0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDFocusTypeSet:Lnb/b;
+    iget-object v0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDFocusTypeSet:Ld/d/e/c;
 
     const/4 v1, 0x1
 
@@ -371,8 +416,9 @@
 
     aput p1, v2, v3
 
-    invoke-virtual {v0, v2}, Lnb/b;->a([I)V
+    invoke-virtual {v0, v2}, Ld/d/e/c;->a([I)V
 
+    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -391,7 +437,7 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDFocusTypeSet:Lnb/b;
+    iget-object v2, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDFocusTypeSet:Ld/d/e/c;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -407,10 +453,12 @@
 
     if-ne p1, v1, :cond_2
 
+    .line 5
     invoke-direct {p0, v3}, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->startRegionDetection(Z)V
 
     return-void
 
+    .line 6
     :cond_2
     invoke-direct {p0}, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->stopRegionDetection()V
 
@@ -419,7 +467,16 @@
 
 .method public doOCRRecognition(Lcom/xiaomi/ocr/sdk_ocr/OCRData$RegionData;)Lcom/xiaomi/ocr/sdk_ocr/OCRData$OCRResult;
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "regionData"
+        }
+    .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mEngineRef:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -434,11 +491,13 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
+    .line 3
     iget-object v2, p1, Lcom/xiaomi/ocr/sdk_ocr/OCRData$RegionData;->regionImg:Landroid/graphics/Bitmap;
 
     iget-object p1, p1, Lcom/xiaomi/ocr/sdk_ocr/OCRData$RegionData;->texts_locations:[Lcom/xiaomi/ocr/sdk_ocr/OCRData$Location;
@@ -447,17 +506,20 @@
 
     move-result-object p0
 
+    .line 4
     sget-boolean p1, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->FAKE_TIMEOUT:Z
 
     if-eqz p1, :cond_1
 
     const-wide/16 v2, 0x1770
 
+    .line 5
     :try_start_0
     invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 6
     :catch_0
     :cond_1
     new-instance p1, Ljava/lang/StringBuilder;
@@ -497,7 +559,16 @@
 
 .method public doOCRRegionDetection(Lcom/xiaomi/ocr/sdk_ocr/OCRData$FocusPoint;)Lcom/xiaomi/ocr/sdk_ocr/OCRData$Location;
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "focusPoint"
+        }
+    .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mEngineRef:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -512,6 +583,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -519,14 +591,18 @@
 
     const-string v2, "OCR_REGION_DETECT"
 
+    .line 3
     invoke-static {v2}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {p0, p1}, Lcom/xiaomi/ocr/sdk_ocr/OCREngine;->doOCRRegionDetect(Lcom/xiaomi/ocr/sdk_ocr/OCRData$FocusPoint;)Lcom/xiaomi/ocr/sdk_ocr/OCRData$Location;
 
     move-result-object p0
 
+    .line 5
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
+    .line 6
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -565,6 +641,7 @@
 .method public getOCRRegionData()Lcom/xiaomi/ocr/sdk_ocr/OCRData$RegionData;
     .locals 5
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mEngineRef:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -579,15 +656,18 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
+    .line 3
     invoke-virtual {p0}, Lcom/xiaomi/ocr/sdk_ocr/OCREngine;->getOCRRegionImage()Lcom/xiaomi/ocr/sdk_ocr/OCRData$RegionData;
 
     move-result-object p0
 
+    .line 4
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -634,6 +714,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDEnabledState:Landroidx/lifecycle/MutableLiveData;
 
     return-object p0
@@ -641,7 +722,16 @@
 
 .method public initEngine(Landroid/content/Context;)Z
     .locals 9
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mEngineRef:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -654,19 +744,23 @@
 
     return v1
 
+    .line 2
     :cond_0
     invoke-static {}, Lcom/xiaomi/ocr/sdk_ocr/OCREngine;->getInstance()Lcom/xiaomi/ocr/sdk_ocr/OCREngine;
 
     move-result-object v0
 
+    .line 3
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
     const-string v4, "OCR_INIT"
 
+    .line 4
     invoke-static {v4}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {p1}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
 
     move-result-object p1
@@ -681,6 +775,7 @@
 
     move-result p1
 
+    .line 6
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
     const/4 v4, 0x0
@@ -689,10 +784,12 @@
 
     if-eqz p1, :cond_1
 
+    .line 7
     iget-object v6, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mEngineRef:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v6, v0}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
+    .line 8
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -721,6 +818,7 @@
 
     invoke-static {v5, v2, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 9
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -743,14 +841,16 @@
 
     invoke-static {v5, v0, v2}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 10
     invoke-direct {p0, v1}, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->startRegionDetection(Z)V
 
     :cond_1
-    const-string p0, "initEngine: done"
+    new-array p0, v4, [Ljava/lang/Object;
 
-    new-array v0, v4, [Ljava/lang/Object;
+    const-string v0, "initEngine: done"
 
-    invoke-static {v5, p0, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 11
+    invoke-static {v5, v0, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return p1
 .end method
@@ -758,6 +858,7 @@
 .method public isOCRRegionDetectionEnabled()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mEngineRef:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -772,6 +873,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Lcom/xiaomi/ocr/sdk_ocr/OCREngine;->isOCRRegionDetectStart()Z
 
@@ -782,7 +884,16 @@
 
 .method public isOCRRegionDetectionNeedFrame(J)Z
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "timestamp"
+        }
+    .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mEngineRef:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -797,6 +908,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/xiaomi/ocr/sdk_ocr/OCREngine;->isOCRRegionDetectNeedFrame(J)Z
 
@@ -808,12 +920,15 @@
 .method public releaseEngine()V
     .locals 4
 
-    iget-object v0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDFocusTypeSet:Lnb/b;
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDFocusTypeSet:Ld/d/e/c;
 
-    invoke-virtual {v0}, Lnb/b;->b()V
+    invoke-virtual {v0}, Ld/d/e/c;->b()V
 
+    .line 2
     invoke-direct {p0}, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->stopRegionDetection()V
 
+    .line 3
     iget-object p0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mEngineRef:Ljava/util/concurrent/atomic/AtomicReference;
 
     const/4 v0, 0x0
@@ -828,13 +943,16 @@
 
     return-void
 
+    .line 4
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
+    .line 5
     invoke-virtual {p0}, Lcom/xiaomi/ocr/sdk_ocr/OCREngine;->release()V
 
+    .line 6
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -872,6 +990,14 @@
 
 .method public releaseRegionDetection(I)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "suppressingCond"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -883,11 +1009,21 @@
 
 .method public releaseRegionDetection(IZ)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "suppressingCond",
+            "needReset"
+        }
+    .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDSuppressingCondsSet:Lnb/b;
+    iget-object v0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDSuppressingCondsSet:Ld/d/e/c;
 
-    invoke-virtual {v0, p1}, Lnb/b;->c(I)Z
+    invoke-virtual {v0, p1}, Ld/d/e/c;->c(I)Z
 
     move-result v0
 
@@ -897,7 +1033,7 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDSuppressingCondsSet:Lnb/b;
+    iget-object v0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDSuppressingCondsSet:Ld/d/e/c;
 
     const/4 v1, 0x1
 
@@ -907,7 +1043,7 @@
 
     aput p1, v1, v2
 
-    invoke-virtual {v0, v1}, Lnb/b;->g([I)V
+    invoke-virtual {v0, v1}, Ld/d/e/c;->g([I)V
 
     .line 4
     new-instance v0, Ljava/lang/StringBuilder;
@@ -928,7 +1064,7 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDSuppressingCondsSet:Lnb/b;
+    iget-object p1, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDSuppressingCondsSet:Ld/d/e/c;
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -950,6 +1086,14 @@
 
 .method public removeFocusType(I)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "focusType"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -961,11 +1105,21 @@
 
 .method public removeFocusType(IZ)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "focusType",
+            "needReset"
+        }
+    .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDFocusTypeSet:Lnb/b;
+    iget-object v0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDFocusTypeSet:Ld/d/e/c;
 
-    invoke-virtual {v0, p1}, Lnb/b;->c(I)Z
+    invoke-virtual {v0, p1}, Ld/d/e/c;->c(I)Z
 
     move-result v0
 
@@ -975,7 +1129,7 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDFocusTypeSet:Lnb/b;
+    iget-object v0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDFocusTypeSet:Ld/d/e/c;
 
     const/4 v1, 0x1
 
@@ -985,7 +1139,7 @@
 
     aput p1, v2, v3
 
-    invoke-virtual {v0, v2}, Lnb/b;->g([I)V
+    invoke-virtual {v0, v2}, Ld/d/e/c;->g([I)V
 
     .line 4
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1006,7 +1160,7 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDFocusTypeSet:Lnb/b;
+    iget-object v2, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDFocusTypeSet:Ld/d/e/c;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1023,9 +1177,9 @@
     if-ne p1, v1, :cond_1
 
     .line 5
-    iget-object p1, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDFocusTypeSet:Lnb/b;
+    iget-object p1, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDFocusTypeSet:Ld/d/e/c;
 
-    invoke-virtual {p1}, Lnb/b;->f()Z
+    invoke-virtual {p1}, Ld/d/e/c;->f()Z
 
     move-result p1
 
@@ -1045,7 +1199,18 @@
 
 .method public setOCRRegionDetectionImage(Landroid/media/Image;Lcom/xiaomi/ocr/sdk_ocr/OCRData$RotateFlags;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "image",
+            "rotateFlag"
+        }
+    .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mEngineRef:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -1058,13 +1223,16 @@
 
     return-void
 
+    .line 2
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
+    .line 3
     invoke-virtual {p0, p1, p2}, Lcom/xiaomi/ocr/sdk_ocr/OCREngine;->setOCRRegionDetectImage(Landroid/media/Image;Lcom/xiaomi/ocr/sdk_ocr/OCRData$RotateFlags;)V
 
+    .line 4
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1102,17 +1270,27 @@
 
 .method public suppressRegionDetection(I)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "suppressingCond"
+        }
+    .end annotation
 
+    .line 1
     sget-boolean v0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->IGNORE_MUTEX:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
-    iget-object v0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDSuppressingCondsSet:Lnb/b;
+    iget-object v0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDSuppressingCondsSet:Ld/d/e/c;
 
-    invoke-virtual {v0, p1}, Lnb/b;->c(I)Z
+    invoke-virtual {v0, p1}, Ld/d/e/c;->c(I)Z
 
     move-result v0
 
@@ -1120,8 +1298,9 @@
 
     return-void
 
+    .line 3
     :cond_1
-    iget-object v0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDSuppressingCondsSet:Lnb/b;
+    iget-object v0, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDSuppressingCondsSet:Ld/d/e/c;
 
     const/4 v1, 0x1
 
@@ -1131,8 +1310,9 @@
 
     aput p1, v1, v2
 
-    invoke-virtual {v0, v1}, Lnb/b;->a([I)V
+    invoke-virtual {v0, v1}, Ld/d/e/c;->a([I)V
 
+    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1151,7 +1331,7 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDSuppressingCondsSet:Lnb/b;
+    iget-object p1, p0, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->mRDSuppressingCondsSet:Ld/d/e/c;
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1165,6 +1345,7 @@
 
     invoke-static {v1, p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 5
     invoke-direct {p0}, Lcom/xiaomi/ocr/sdk_ocr/OCREngineWrapper;->stopRegionDetection()V
 
     return-void

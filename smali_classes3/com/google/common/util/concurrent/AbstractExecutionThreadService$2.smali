@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/AbstractExecutionThreadService$2;
+.class public Lcom/google/common/util/concurrent/AbstractExecutionThreadService$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/util/concurrent/AbstractExecutionThreadService;
+.field public final synthetic this$0:Lcom/google/common/util/concurrent/AbstractExecutionThreadService;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/util/concurrent/AbstractExecutionThreadService;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/AbstractExecutionThreadService$2;->this$0:Lcom/google/common/util/concurrent/AbstractExecutionThreadService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,6 +38,7 @@
 .method public execute(Ljava/lang/Runnable;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/AbstractExecutionThreadService$2;->this$0:Lcom/google/common/util/concurrent/AbstractExecutionThreadService;
 
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/AbstractExecutionThreadService;->serviceName()Ljava/lang/String;

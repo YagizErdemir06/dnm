@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/CompactHashMap$KeySetView;
+.class public Lcom/google/common/collect/CompactHashMap$KeySetView;
 .super Ljava/util/AbstractSet;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/CompactHashMap;
+.field public final synthetic this$0:Lcom/google/common/collect/CompactHashMap;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/CompactHashMap;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/CompactHashMap$KeySetView;->this$0:Lcom/google/common/collect/CompactHashMap;
 
     invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
@@ -41,6 +42,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/CompactHashMap$KeySetView;->this$0:Lcom/google/common/collect/CompactHashMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/CompactHashMap;->clear()V
@@ -55,6 +57,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/CompactHashMap$KeySetView;->this$0:Lcom/google/common/collect/CompactHashMap;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/CompactHashMap;->containsKey(Ljava/lang/Object;)Z
@@ -74,6 +77,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/CompactHashMap$KeySetView;->this$0:Lcom/google/common/collect/CompactHashMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/CompactHashMap;->keySetIterator()Ljava/util/Iterator;
@@ -90,6 +94,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/CompactHashMap$KeySetView;->this$0:Lcom/google/common/collect/CompactHashMap;
 
     invoke-virtual {v0}, Lcom/google/common/collect/CompactHashMap;->delegateOrNull()Ljava/util/Map;
@@ -98,6 +103,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object p0
@@ -108,6 +114,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lcom/google/common/collect/CompactHashMap$KeySetView;->this$0:Lcom/google/common/collect/CompactHashMap;
 
@@ -135,6 +142,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/CompactHashMap$KeySetView;->this$0:Lcom/google/common/collect/CompactHashMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/CompactHashMap;->size()I

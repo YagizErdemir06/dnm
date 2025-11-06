@@ -36,6 +36,7 @@
 .method public constructor <init>(Ljava/lang/Object;ILcom/google/mlkit/common/sdkinternal/Cleaner;Ljava/lang/Runnable;Lcom/google/android/gms/internal/mlkit_common/zzpn;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -44,6 +45,7 @@
 
     iput-object v0, p0, Lcom/google/mlkit/common/sdkinternal/CloseGuard;->zza:Ljava/util/concurrent/atomic/AtomicBoolean;
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -54,6 +56,7 @@
 
     invoke-direct {v0, p0, p2, p5, p4}, Lcom/google/mlkit/common/sdkinternal/zze;-><init>(Lcom/google/mlkit/common/sdkinternal/CloseGuard;ILcom/google/android/gms/internal/mlkit_common/zzpn;Ljava/lang/Runnable;)V
 
+    .line 3
     invoke-virtual {p3, p1, v0}, Lcom/google/mlkit/common/sdkinternal/Cleaner;->register(Ljava/lang/Object;Ljava/lang/Runnable;)Lcom/google/mlkit/common/sdkinternal/Cleaner$Cleanable;
 
     move-result-object p1
@@ -68,6 +71,7 @@
 .method public final close()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/CloseGuard;->zza:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1
@@ -76,6 +80,7 @@
 
     iget-object p0, p0, Lcom/google/mlkit/common/sdkinternal/CloseGuard;->zzc:Lcom/google/mlkit/common/sdkinternal/Cleaner$Cleanable;
 
+    .line 2
     invoke-interface {p0}, Lcom/google/mlkit/common/sdkinternal/Cleaner$Cleanable;->clean()V
 
     return-void
@@ -84,6 +89,7 @@
 .method public final synthetic zza(ILcom/google/android/gms/internal/mlkit_common/zzpn;Ljava/lang/Runnable;)V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/CloseGuard;->zza:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -106,6 +112,7 @@
 
     const-string p0, "%s has not been closed"
 
+    .line 2
     invoke-static {v0, p0, v1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -122,6 +129,7 @@
 
     invoke-direct {v0}, Lcom/google/android/gms/internal/mlkit_common/zzkz;-><init>()V
 
+    .line 3
     invoke-static {p1}, Lcom/google/android/gms/internal/mlkit_common/zzky;->zzb(I)Lcom/google/android/gms/internal/mlkit_common/zzky;
 
     move-result-object p1
@@ -132,16 +140,20 @@
 
     move-result-object p1
 
+    .line 4
     invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/mlkit_common/zzle;->zzh(Lcom/google/android/gms/internal/mlkit_common/zzlb;)Lcom/google/android/gms/internal/mlkit_common/zzle;
 
+    .line 5
     invoke-static {p0}, Lcom/google/android/gms/internal/mlkit_common/zzpq;->zzf(Lcom/google/android/gms/internal/mlkit_common/zzle;)Lcom/google/android/gms/internal/mlkit_common/zzpe;
 
     move-result-object p0
 
     sget-object p1, Lcom/google/android/gms/internal/mlkit_common/zzld;->zzbE:Lcom/google/android/gms/internal/mlkit_common/zzld;
 
+    .line 6
     invoke-virtual {p2, p0, p1}, Lcom/google/android/gms/internal/mlkit_common/zzpn;->zzd(Lcom/google/android/gms/internal/mlkit_common/zzpe;Lcom/google/android/gms/internal/mlkit_common/zzld;)V
 
+    .line 7
     :cond_0
     invoke-interface {p3}, Ljava/lang/Runnable;->run()V
 

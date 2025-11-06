@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/ClosingFuture$6;
+.class public Lcom/google/common/util/concurrent/ClosingFuture$6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,13 +26,14 @@
 
 
 # instance fields
-.field final synthetic val$function:Lcom/google/common/util/concurrent/AsyncFunction;
+.field public final synthetic val$function:Lcom/google/common/util/concurrent/AsyncFunction;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/util/concurrent/AsyncFunction;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/ClosingFuture$6;->val$function:Lcom/google/common/util/concurrent/AsyncFunction;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -60,6 +61,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/ClosingFuture$6;->val$function:Lcom/google/common/util/concurrent/AsyncFunction;
 
     invoke-interface {p0, p2}, Lcom/google/common/util/concurrent/AsyncFunction;->apply(Ljava/lang/Object;)Lcom/google/common/util/concurrent/ListenableFuture;

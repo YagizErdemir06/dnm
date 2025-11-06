@@ -28,6 +28,7 @@
 .method public constructor <init>(Lcom/google/common/collect/ForwardingMap;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/Maps$KeySet;-><init>(Ljava/util/Map;)V
 
     return-void

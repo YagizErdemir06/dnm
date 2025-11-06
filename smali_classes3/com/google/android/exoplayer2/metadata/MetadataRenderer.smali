@@ -133,6 +133,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/metadata/Metadata;->length()I
 
@@ -140,6 +141,7 @@
 
     if-ge v0, v1, :cond_2
 
+    .line 2
     invoke-virtual {p1, v0}, Lcom/google/android/exoplayer2/metadata/Metadata;->get(I)Lcom/google/android/exoplayer2/metadata/Metadata$Entry;
 
     move-result-object v1
@@ -150,6 +152,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 3
     iget-object v2, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->decoderFactory:Lcom/google/android/exoplayer2/metadata/MetadataDecoderFactory;
 
     invoke-interface {v2, v1}, Lcom/google/android/exoplayer2/metadata/MetadataDecoderFactory;->supportsFormat(Lcom/google/android/exoplayer2/Format;)Z
@@ -158,12 +161,15 @@
 
     if-eqz v2, :cond_0
 
+    .line 4
     iget-object v2, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->decoderFactory:Lcom/google/android/exoplayer2/metadata/MetadataDecoderFactory;
 
+    .line 5
     invoke-interface {v2, v1}, Lcom/google/android/exoplayer2/metadata/MetadataDecoderFactory;->createDecoder(Lcom/google/android/exoplayer2/Format;)Lcom/google/android/exoplayer2/metadata/MetadataDecoder;
 
     move-result-object v1
 
+    .line 6
     invoke-virtual {p1, v0}, Lcom/google/android/exoplayer2/metadata/Metadata;->get(I)Lcom/google/android/exoplayer2/metadata/Metadata$Entry;
 
     move-result-object v2
@@ -178,16 +184,19 @@
 
     check-cast v2, [B
 
+    .line 7
     iget-object v3, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->buffer:Lcom/google/android/exoplayer2/metadata/MetadataInputBuffer;
 
     invoke-virtual {v3}, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->clear()V
 
+    .line 8
     iget-object v3, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->buffer:Lcom/google/android/exoplayer2/metadata/MetadataInputBuffer;
 
     array-length v4, v2
 
     invoke-virtual {v3, v4}, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->ensureSpaceForWrite(I)V
 
+    .line 9
     iget-object v3, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->buffer:Lcom/google/android/exoplayer2/metadata/MetadataInputBuffer;
 
     iget-object v3, v3, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->data:Ljava/nio/ByteBuffer;
@@ -200,10 +209,12 @@
 
     invoke-virtual {v3, v2}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
+    .line 10
     iget-object v2, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->buffer:Lcom/google/android/exoplayer2/metadata/MetadataInputBuffer;
 
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->flip()V
 
+    .line 11
     iget-object v2, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->buffer:Lcom/google/android/exoplayer2/metadata/MetadataInputBuffer;
 
     invoke-interface {v1, v2}, Lcom/google/android/exoplayer2/metadata/MetadataDecoder;->decode(Lcom/google/android/exoplayer2/metadata/MetadataInputBuffer;)Lcom/google/android/exoplayer2/metadata/Metadata;
@@ -212,10 +223,12 @@
 
     if-eqz v1, :cond_1
 
+    .line 12
     invoke-direct {p0, v1, p2}, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->decodeWrappedMetadata(Lcom/google/android/exoplayer2/metadata/Metadata;Ljava/util/List;)V
 
     goto :goto_1
 
+    .line 13
     :cond_0
     invoke-virtual {p1, v0}, Lcom/google/android/exoplayer2/metadata/Metadata;->get(I)Lcom/google/android/exoplayer2/metadata/Metadata$Entry;
 
@@ -236,12 +249,14 @@
 .method private invokeRenderer(Lcom/google/android/exoplayer2/metadata/Metadata;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->outputHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
 
     const/4 p0, 0x0
 
+    .line 2
     invoke-virtual {v0, p0, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object p0
@@ -250,6 +265,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->invokeRendererInternal(Lcom/google/android/exoplayer2/metadata/Metadata;)V
 
@@ -260,6 +276,7 @@
 .method private invokeRendererInternal(Lcom/google/android/exoplayer2/metadata/Metadata;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->output:Lcom/google/android/exoplayer2/metadata/MetadataOutput;
 
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/metadata/MetadataOutput;->onMetadata(Lcom/google/android/exoplayer2/metadata/Metadata;)V
@@ -270,6 +287,7 @@
 .method private outputMetadata(J)Z
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->pendingMetadata:Lcom/google/android/exoplayer2/metadata/Metadata;
 
     const/4 v1, 0x1
@@ -282,14 +300,17 @@
 
     if-gtz p1, :cond_0
 
+    .line 2
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->invokeRenderer(Lcom/google/android/exoplayer2/metadata/Metadata;)V
 
     const/4 p1, 0x0
 
+    .line 3
     iput-object p1, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->pendingMetadata:Lcom/google/android/exoplayer2/metadata/Metadata;
 
     const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 4
     iput-wide p1, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->pendingMetadataTimestampUs:J
 
     move p1, v1
@@ -299,6 +320,7 @@
     :cond_0
     const/4 p1, 0x0
 
+    .line 5
     :goto_0
     iget-boolean p2, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->inputStreamEnded:Z
 
@@ -308,6 +330,7 @@
 
     if-nez p2, :cond_1
 
+    .line 6
     iput-boolean v1, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->outputStreamEnded:Z
 
     :cond_1
@@ -317,6 +340,7 @@
 .method private readMetadata()V
     .locals 3
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->inputStreamEnded:Z
 
     if-nez v0, :cond_2
@@ -325,14 +349,17 @@
 
     if-nez v0, :cond_2
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->buffer:Lcom/google/android/exoplayer2/metadata/MetadataInputBuffer;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->clear()V
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BaseRenderer;->getFormatHolder()Lcom/google/android/exoplayer2/FormatHolder;
 
     move-result-object v0
 
+    .line 4
     iget-object v1, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->buffer:Lcom/google/android/exoplayer2/metadata/MetadataInputBuffer;
 
     const/4 v2, 0x0
@@ -345,6 +372,7 @@
 
     if-ne v1, v2, :cond_1
 
+    .line 5
     iget-object v0, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->buffer:Lcom/google/android/exoplayer2/metadata/MetadataInputBuffer;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/decoder/Buffer;->isEndOfStream()Z
@@ -355,10 +383,12 @@
 
     const/4 v0, 0x1
 
+    .line 6
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->inputStreamEnded:Z
 
     goto :goto_0
 
+    .line 7
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->buffer:Lcom/google/android/exoplayer2/metadata/MetadataInputBuffer;
 
@@ -366,8 +396,10 @@
 
     iput-wide v1, v0, Lcom/google/android/exoplayer2/metadata/MetadataInputBuffer;->subsampleOffsetUs:J
 
+    .line 8
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->flip()V
 
+    .line 9
     iget-object v0, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->decoder:Lcom/google/android/exoplayer2/metadata/MetadataDecoder;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Util;->castNonNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -384,6 +416,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 10
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/metadata/Metadata;->length()I
@@ -392,20 +425,25 @@
 
     invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
 
+    .line 11
     invoke-direct {p0, v0, v1}, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->decodeWrappedMetadata(Lcom/google/android/exoplayer2/metadata/Metadata;Ljava/util/List;)V
 
+    .line 12
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
+    .line 13
     new-instance v0, Lcom/google/android/exoplayer2/metadata/Metadata;
 
     invoke-direct {v0, v1}, Lcom/google/android/exoplayer2/metadata/Metadata;-><init>(Ljava/util/List;)V
 
+    .line 14
     iput-object v0, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->pendingMetadata:Lcom/google/android/exoplayer2/metadata/Metadata;
 
+    .line 15
     iget-object v0, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->buffer:Lcom/google/android/exoplayer2/metadata/MetadataInputBuffer;
 
     iget-wide v0, v0, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->timeUs:J
@@ -419,6 +457,7 @@
 
     if-ne v1, v2, :cond_2
 
+    .line 16
     iget-object v0, v0, Lcom/google/android/exoplayer2/FormatHolder;->format:Lcom/google/android/exoplayer2/Format;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -449,10 +488,12 @@
 .method public handleMessage(Landroid/os/Message;)Z
     .locals 1
 
+    .line 1
     iget v0, p1, Landroid/os/Message;->what:I
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Lcom/google/android/exoplayer2/metadata/Metadata;
@@ -463,6 +504,7 @@
 
     return p0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -474,6 +516,7 @@
 .method public isEnded()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->outputStreamEnded:Z
 
     return p0
@@ -492,12 +535,15 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->pendingMetadata:Lcom/google/android/exoplayer2/metadata/Metadata;
 
     const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 2
     iput-wide v1, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->pendingMetadataTimestampUs:J
 
+    .line 3
     iput-object v0, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->decoder:Lcom/google/android/exoplayer2/metadata/MetadataDecoder;
 
     return-void
@@ -508,16 +554,20 @@
 
     const/4 p1, 0x0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->pendingMetadata:Lcom/google/android/exoplayer2/metadata/Metadata;
 
     const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 2
     iput-wide p1, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->pendingMetadataTimestampUs:J
 
     const/4 p1, 0x0
 
+    .line 3
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->inputStreamEnded:Z
 
+    .line 4
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->outputStreamEnded:Z
 
     return-void
@@ -526,6 +576,7 @@
 .method public onStreamChanged([Lcom/google/android/exoplayer2/Format;JJ)V
     .locals 0
 
+    .line 1
     iget-object p2, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->decoderFactory:Lcom/google/android/exoplayer2/metadata/MetadataDecoderFactory;
 
     const/4 p3, 0x0
@@ -549,8 +600,10 @@
     :goto_0
     if-eqz p3, :cond_0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->readMetadata()V
 
+    .line 2
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->outputMetadata(J)Z
 
     move-result p3
@@ -564,6 +617,7 @@
 .method public supportsFormat(Lcom/google/android/exoplayer2/Format;)I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/metadata/MetadataRenderer;->decoderFactory:Lcom/google/android/exoplayer2/metadata/MetadataDecoderFactory;
 
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/metadata/MetadataDecoderFactory;->supportsFormat(Lcom/google/android/exoplayer2/Format;)Z
@@ -572,6 +626,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 2
     iget p0, p1, Lcom/google/android/exoplayer2/Format;->cryptoType:I
 
     if-nez p0, :cond_0
@@ -583,6 +638,7 @@
     :cond_0
     const/4 p0, 0x2
 
+    .line 3
     :goto_0
     invoke-static {p0}, Lcom/google/android/exoplayer2/RendererCapabilities;->create(I)I
 
@@ -593,6 +649,7 @@
     :cond_1
     const/4 p0, 0x0
 
+    .line 4
     invoke-static {p0}, Lcom/google/android/exoplayer2/RendererCapabilities;->create(I)I
 
     move-result p0

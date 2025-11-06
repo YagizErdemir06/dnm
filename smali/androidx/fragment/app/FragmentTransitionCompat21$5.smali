@@ -1,4 +1,4 @@
-.class Landroidx/fragment/app/FragmentTransitionCompat21$5;
+.class public Landroidx/fragment/app/FragmentTransitionCompat21$5;
 .super Landroid/transition/Transition$EpicenterCallback;
 .source "SourceFile"
 
@@ -15,15 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/fragment/app/FragmentTransitionCompat21;
+.field public final synthetic this$0:Landroidx/fragment/app/FragmentTransitionCompat21;
 
-.field final synthetic val$epicenter:Landroid/graphics/Rect;
+.field public final synthetic val$epicenter:Landroid/graphics/Rect;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/fragment/app/FragmentTransitionCompat21;Landroid/graphics/Rect;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/fragment/app/FragmentTransitionCompat21$5;->this$0:Landroidx/fragment/app/FragmentTransitionCompat21;
 
     iput-object p2, p0, Landroidx/fragment/app/FragmentTransitionCompat21$5;->val$epicenter:Landroid/graphics/Rect;
@@ -38,6 +39,7 @@
 .method public onGetEpicenter(Landroid/transition/Transition;)Landroid/graphics/Rect;
     .locals 0
 
+    .line 1
     iget-object p1, p0, Landroidx/fragment/app/FragmentTransitionCompat21$5;->val$epicenter:Landroid/graphics/Rect;
 
     if-eqz p1, :cond_1
@@ -50,6 +52,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Landroidx/fragment/app/FragmentTransitionCompat21$5;->val$epicenter:Landroid/graphics/Rect;
 

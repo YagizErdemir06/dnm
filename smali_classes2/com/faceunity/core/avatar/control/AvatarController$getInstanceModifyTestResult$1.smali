@@ -1,9 +1,9 @@
-.class final Lcom/faceunity/core/avatar/control/AvatarController$getInstanceModifyTestResult$1;
-.super Lkotlin/jvm/internal/n0;
+.class public final Lcom/faceunity/core/avatar/control/AvatarController$getInstanceModifyTestResult$1;
+.super Lh/d3/x/n0;
 .source "SourceFile"
 
 # interfaces
-.implements Ljn/l;
+.implements Lh/d3/w/l;
 
 
 # annotations
@@ -18,10 +18,10 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lkotlin/jvm/internal/n0;",
-        "Ljn/l<",
+        "Lh/d3/x/n0;",
+        "Lh/d3/w/l<",
         "Ljava/lang/Integer;",
-        "Lnm/l2;",
+        "Lh/l2;",
         ">;"
     }
 .end annotation
@@ -30,14 +30,19 @@
     value = "SMAP\nAvatarController.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AvatarController.kt\ncom/faceunity/core/avatar/control/AvatarController$getInstanceModifyTestResult$1\n+ 2 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n*L\n1#1,2344:1\n37#2,2:2345\n*E\n*S KotlinDebug\n*F\n+ 1 AvatarController.kt\ncom/faceunity/core/avatar/control/AvatarController$getInstanceModifyTestResult$1\n*L\n1172#1,2:2345\n*E\n"
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
         "\u0000\u000e\n\u0002\u0010\u0008\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0005\u001a\u00020\u00022\u0006\u0010\u0001\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0003\u0010\u0004"
     }
     d2 = {
         "",
         "it",
-        "Lnm/l2;",
+        "Lh/l2;",
         "invoke",
         "(I)V",
         "<anonymous>"
@@ -52,11 +57,11 @@
 
 
 # instance fields
-.field final synthetic $listener:Lcom/faceunity/core/listener/OnAvatarModifyListener;
+.field public final synthetic $listener:Lcom/faceunity/core/listener/OnAvatarModifyListener;
 
-.field final synthetic $operation:Lcom/faceunity/core/enumeration/FUInstanceBundleOPEnum;
+.field public final synthetic $operation:Lcom/faceunity/core/enumeration/FUInstanceBundleOPEnum;
 
-.field final synthetic $paths:Ljava/util/List;
+.field public final synthetic $paths:Ljava/util/List;
 
 
 # direct methods
@@ -71,7 +76,7 @@
 
     const/4 p1, 0x1
 
-    invoke-direct {p0, p1}, Lkotlin/jvm/internal/n0;-><init>(I)V
+    invoke-direct {p0, p1}, Lh/d3/x/n0;-><init>(I)V
 
     return-void
 .end method
@@ -90,7 +95,7 @@
 
     invoke-virtual {p0, p1}, Lcom/faceunity/core/avatar/control/AvatarController$getInstanceModifyTestResult$1;->invoke(I)V
 
-    sget-object p0, Lnm/l2;->a:Lnm/l2;
+    sget-object p0, Lh/l2;->a:Lh/l2;
 
     return-object p0
 .end method
@@ -109,8 +114,6 @@
 
     iget-object v2, p0, Lcom/faceunity/core/avatar/control/AvatarController$getInstanceModifyTestResult$1;->$paths:Ljava/util/List;
 
-    check-cast v2, Ljava/util/Collection;
-
     const/4 v3, 0x0
 
     new-array v3, v3, [Ljava/lang/String;
@@ -120,7 +123,9 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_0
+    const-string v3, "null cannot be cast to non-null type kotlin.Array<T>"
+
+    invoke-static {v2, v3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     check-cast v2, [Ljava/lang/String;
 
@@ -139,14 +144,4 @@
     invoke-interface {p0, v0}, Lcom/faceunity/core/listener/OnAvatarModifyListener;->onCompleted(Lcom/faceunity/core/entity/FUAvatarComponentModifyResult;)V
 
     return-void
-
-    .line 6
-    :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string p1, "null cannot be cast to non-null type kotlin.Array<T>"
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method

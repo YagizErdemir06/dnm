@@ -42,7 +42,7 @@
 
 .field private final connectivityMonitor:Lcom/bumptech/glide/manager/ConnectivityMonitor;
 
-.field protected final context:Landroid/content/Context;
+.field public final context:Landroid/content/Context;
 
 .field private final defaultRequestListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
     .annotation system Ldalvik/annotation/Signature;
@@ -55,9 +55,9 @@
     .end annotation
 .end field
 
-.field protected final glide:Lcom/bumptech/glide/Glide;
+.field public final glide:Lcom/bumptech/glide/Glide;
 
-.field final lifecycle:Lcom/bumptech/glide/manager/Lifecycle;
+.field public final lifecycle:Lcom/bumptech/glide/manager/Lifecycle;
 
 .field private final mainHandler:Landroid/os/Handler;
 
@@ -92,6 +92,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     const-class v0, Landroid/graphics/Bitmap;
 
     invoke-static {v0}, Lcom/bumptech/glide/request/RequestOptions;->decodeTypeOf(Ljava/lang/Class;)Lcom/bumptech/glide/request/RequestOptions;
@@ -106,6 +107,7 @@
 
     sput-object v0, Lcom/bumptech/glide/RequestManager;->DECODE_TYPE_BITMAP:Lcom/bumptech/glide/request/RequestOptions;
 
+    .line 2
     const-class v0, Lcom/bumptech/glide/load/resource/gif/GifDrawable;
 
     invoke-static {v0}, Lcom/bumptech/glide/request/RequestOptions;->decodeTypeOf(Ljava/lang/Class;)Lcom/bumptech/glide/request/RequestOptions;
@@ -120,8 +122,10 @@
 
     sput-object v0, Lcom/bumptech/glide/RequestManager;->DECODE_TYPE_GIF:Lcom/bumptech/glide/request/RequestOptions;
 
+    .line 3
     sget-object v0, Lcom/bumptech/glide/load/engine/DiskCacheStrategy;->DATA:Lcom/bumptech/glide/load/engine/DiskCacheStrategy;
 
+    .line 4
     invoke-static {v0}, Lcom/bumptech/glide/request/RequestOptions;->diskCacheStrategyOf(Lcom/bumptech/glide/load/engine/DiskCacheStrategy;)Lcom/bumptech/glide/request/RequestOptions;
 
     move-result-object v0
@@ -321,16 +325,19 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/RequestManager;->untrack(Lcom/bumptech/glide/request/target/Target;)Z
 
     move-result v0
 
+    .line 2
     invoke-interface {p1}, Lcom/bumptech/glide/request/target/Target;->getRequest()Lcom/bumptech/glide/request/Request;
 
     move-result-object v1
 
     if-nez v0, :cond_0
 
+    .line 3
     iget-object p0, p0, Lcom/bumptech/glide/RequestManager;->glide:Lcom/bumptech/glide/Glide;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/Glide;->removeFromManagers(Lcom/bumptech/glide/request/target/Target;)Z
@@ -343,8 +350,10 @@
 
     const/4 p0, 0x0
 
+    .line 4
     invoke-interface {p1, p0}, Lcom/bumptech/glide/request/target/Target;->setRequest(Lcom/bumptech/glide/request/Request;)V
 
+    .line 5
     invoke-interface {v1}, Lcom/bumptech/glide/request/Request;->clear()V
 
     :cond_0
@@ -360,6 +369,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/RequestManager;->requestOptions:Lcom/bumptech/glide/request/RequestOptions;
 
@@ -373,6 +383,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     monitor-exit p0
 
     return-void
@@ -399,6 +410,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/RequestManager;->defaultRequestListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
@@ -417,11 +429,13 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     invoke-direct {p0, p1}, Lcom/bumptech/glide/RequestManager;->updateRequestOptions(Lcom/bumptech/glide/request/RequestOptions;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     monitor-exit p0
 
     return-object p0
@@ -458,6 +472,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/bumptech/glide/RequestBuilder;
 
     iget-object v1, p0, Lcom/bumptech/glide/RequestManager;->glide:Lcom/bumptech/glide/Glide;
@@ -486,6 +501,7 @@
         }
     .end annotation
 
+    .line 1
     const-class v0, Landroid/graphics/Bitmap;
 
     invoke-virtual {p0, v0}, Lcom/bumptech/glide/RequestManager;->as(Ljava/lang/Class;)Lcom/bumptech/glide/RequestBuilder;
@@ -518,6 +534,7 @@
         }
     .end annotation
 
+    .line 1
     const-class v0, Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, v0}, Lcom/bumptech/glide/RequestManager;->as(Ljava/lang/Class;)Lcom/bumptech/glide/RequestBuilder;
@@ -544,6 +561,7 @@
         }
     .end annotation
 
+    .line 1
     const-class v0, Ljava/io/File;
 
     invoke-virtual {p0, v0}, Lcom/bumptech/glide/RequestManager;->as(Ljava/lang/Class;)Lcom/bumptech/glide/RequestBuilder;
@@ -580,6 +598,7 @@
         }
     .end annotation
 
+    .line 1
     const-class v0, Lcom/bumptech/glide/load/resource/gif/GifDrawable;
 
     invoke-virtual {p0, v0}, Lcom/bumptech/glide/RequestManager;->as(Ljava/lang/Class;)Lcom/bumptech/glide/RequestBuilder;
@@ -660,6 +679,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/bumptech/glide/RequestManager;->downloadOnly()Lcom/bumptech/glide/RequestBuilder;
 
     move-result-object p0
@@ -688,6 +708,7 @@
         }
     .end annotation
 
+    .line 1
     const-class v0, Ljava/io/File;
 
     invoke-virtual {p0, v0}, Lcom/bumptech/glide/RequestManager;->as(Ljava/lang/Class;)Lcom/bumptech/glide/RequestBuilder;
@@ -715,6 +736,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/RequestManager;->defaultRequestListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     return-object p0
@@ -725,6 +747,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/RequestManager;->requestOptions:Lcom/bumptech/glide/request/RequestOptions;
     :try_end_0
@@ -759,6 +782,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/RequestManager;->glide:Lcom/bumptech/glide/Glide;
 
     invoke-virtual {p0}, Lcom/bumptech/glide/Glide;->getGlideContext()Lcom/bumptech/glide/GlideContext;
@@ -777,6 +801,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/RequestManager;->requestTracker:Lcom/bumptech/glide/manager/RequestTracker;
 
@@ -1314,11 +1339,13 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/RequestManager;->targetTracker:Lcom/bumptech/glide/manager/TargetTracker;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/manager/TargetTracker;->onDestroy()V
 
+    .line 2
     iget-object v0, p0, Lcom/bumptech/glide/RequestManager;->targetTracker:Lcom/bumptech/glide/manager/TargetTracker;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/manager/TargetTracker;->getAll()Ljava/util/List;
@@ -1342,41 +1369,49 @@
 
     check-cast v1, Lcom/bumptech/glide/request/target/Target;
 
+    .line 3
     invoke-virtual {p0, v1}, Lcom/bumptech/glide/RequestManager;->clear(Lcom/bumptech/glide/request/target/Target;)V
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lcom/bumptech/glide/RequestManager;->targetTracker:Lcom/bumptech/glide/manager/TargetTracker;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/manager/TargetTracker;->clear()V
 
+    .line 5
     iget-object v0, p0, Lcom/bumptech/glide/RequestManager;->requestTracker:Lcom/bumptech/glide/manager/RequestTracker;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/manager/RequestTracker;->clearRequests()V
 
+    .line 6
     iget-object v0, p0, Lcom/bumptech/glide/RequestManager;->lifecycle:Lcom/bumptech/glide/manager/Lifecycle;
 
     invoke-interface {v0, p0}, Lcom/bumptech/glide/manager/Lifecycle;->removeListener(Lcom/bumptech/glide/manager/LifecycleListener;)V
 
+    .line 7
     iget-object v0, p0, Lcom/bumptech/glide/RequestManager;->lifecycle:Lcom/bumptech/glide/manager/Lifecycle;
 
     iget-object v1, p0, Lcom/bumptech/glide/RequestManager;->connectivityMonitor:Lcom/bumptech/glide/manager/ConnectivityMonitor;
 
     invoke-interface {v0, v1}, Lcom/bumptech/glide/manager/Lifecycle;->removeListener(Lcom/bumptech/glide/manager/LifecycleListener;)V
 
+    .line 8
     iget-object v0, p0, Lcom/bumptech/glide/RequestManager;->mainHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/bumptech/glide/RequestManager;->addSelfToLifecycle:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
+    .line 9
     iget-object v0, p0, Lcom/bumptech/glide/RequestManager;->glide:Lcom/bumptech/glide/Glide;
 
     invoke-virtual {v0, p0}, Lcom/bumptech/glide/Glide;->unregisterRequestManager(Lcom/bumptech/glide/RequestManager;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 10
     monitor-exit p0
 
     return-void
@@ -1400,15 +1435,18 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Lcom/bumptech/glide/RequestManager;->resumeRequests()V
 
+    .line 2
     iget-object v0, p0, Lcom/bumptech/glide/RequestManager;->targetTracker:Lcom/bumptech/glide/manager/TargetTracker;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/manager/TargetTracker;->onStart()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     monitor-exit p0
 
     return-void
@@ -1426,15 +1464,18 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Lcom/bumptech/glide/RequestManager;->pauseRequests()V
 
+    .line 2
     iget-object v0, p0, Lcom/bumptech/glide/RequestManager;->targetTracker:Lcom/bumptech/glide/manager/TargetTracker;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/manager/TargetTracker;->onStop()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     monitor-exit p0
 
     return-void
@@ -1454,10 +1495,12 @@
 
     if-ne p1, v0, :cond_0
 
+    .line 1
     iget-boolean p1, p0, Lcom/bumptech/glide/RequestManager;->pauseAllRequestsOnTrimMemoryModerate:Z
 
     if-eqz p1, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/bumptech/glide/RequestManager;->pauseAllRequestsRecursive()V
 
     :cond_0
@@ -1469,6 +1512,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/RequestManager;->requestTracker:Lcom/bumptech/glide/manager/RequestTracker;
 
@@ -1476,6 +1520,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     monitor-exit p0
 
     return-void
@@ -1493,9 +1538,11 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Lcom/bumptech/glide/RequestManager;->pauseAllRequests()V
 
+    .line 2
     iget-object v0, p0, Lcom/bumptech/glide/RequestManager;->treeNode:Lcom/bumptech/glide/manager/RequestManagerTreeNode;
 
     invoke-interface {v0}, Lcom/bumptech/glide/manager/RequestManagerTreeNode;->getDescendants()Ljava/util/Set;
@@ -1519,12 +1566,14 @@
 
     check-cast v1, Lcom/bumptech/glide/RequestManager;
 
+    .line 3
     invoke-virtual {v1}, Lcom/bumptech/glide/RequestManager;->pauseAllRequests()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
+    .line 4
     :cond_0
     monitor-exit p0
 
@@ -1543,6 +1592,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/RequestManager;->requestTracker:Lcom/bumptech/glide/manager/RequestTracker;
 
@@ -1550,6 +1600,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     monitor-exit p0
 
     return-void
@@ -1567,9 +1618,11 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Lcom/bumptech/glide/RequestManager;->pauseRequests()V
 
+    .line 2
     iget-object v0, p0, Lcom/bumptech/glide/RequestManager;->treeNode:Lcom/bumptech/glide/manager/RequestManagerTreeNode;
 
     invoke-interface {v0}, Lcom/bumptech/glide/manager/RequestManagerTreeNode;->getDescendants()Ljava/util/Set;
@@ -1593,12 +1646,14 @@
 
     check-cast v1, Lcom/bumptech/glide/RequestManager;
 
+    .line 3
     invoke-virtual {v1}, Lcom/bumptech/glide/RequestManager;->pauseRequests()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
+    .line 4
     :cond_0
     monitor-exit p0
 
@@ -1617,6 +1672,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/RequestManager;->requestTracker:Lcom/bumptech/glide/manager/RequestTracker;
 
@@ -1624,6 +1680,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     monitor-exit p0
 
     return-void
@@ -1641,11 +1698,14 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     invoke-static {}, Lcom/bumptech/glide/util/Util;->assertMainThread()V
 
+    .line 2
     invoke-virtual {p0}, Lcom/bumptech/glide/RequestManager;->resumeRequests()V
 
+    .line 3
     iget-object v0, p0, Lcom/bumptech/glide/RequestManager;->treeNode:Lcom/bumptech/glide/manager/RequestManagerTreeNode;
 
     invoke-interface {v0}, Lcom/bumptech/glide/manager/RequestManagerTreeNode;->getDescendants()Ljava/util/Set;
@@ -1669,12 +1729,14 @@
 
     check-cast v1, Lcom/bumptech/glide/RequestManager;
 
+    .line 4
     invoke-virtual {v1}, Lcom/bumptech/glide/RequestManager;->resumeRequests()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
+    .line 5
     :cond_0
     monitor-exit p0
 
@@ -1699,11 +1761,13 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/RequestManager;->setRequestOptions(Lcom/bumptech/glide/request/RequestOptions;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     monitor-exit p0
 
     return-object p0
@@ -1719,6 +1783,7 @@
 .method public setPauseAllRequestsOnTrimMemoryModerate(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/bumptech/glide/RequestManager;->pauseAllRequestsOnTrimMemoryModerate:Z
 
     return-void
@@ -1733,6 +1798,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     invoke-virtual {p1}, Lcom/bumptech/glide/request/BaseRequestOptions;->clone()Lcom/bumptech/glide/request/BaseRequestOptions;
 
@@ -1750,6 +1816,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     monitor-exit p0
 
     return-void
@@ -1767,6 +1834,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1838,17 +1906,20 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/bumptech/glide/RequestManager;->targetTracker:Lcom/bumptech/glide/manager/TargetTracker;
 
     invoke-virtual {v0, p1}, Lcom/bumptech/glide/manager/TargetTracker;->track(Lcom/bumptech/glide/request/target/Target;)V
 
+    .line 2
     iget-object p1, p0, Lcom/bumptech/glide/RequestManager;->requestTracker:Lcom/bumptech/glide/manager/RequestTracker;
 
     invoke-virtual {p1, p2}, Lcom/bumptech/glide/manager/RequestTracker;->runRequest(Lcom/bumptech/glide/request/Request;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     monitor-exit p0
 
     return-void
@@ -1877,6 +1948,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     invoke-interface {p1}, Lcom/bumptech/glide/request/target/Target;->getRequest()Lcom/bumptech/glide/request/Request;
 
@@ -1888,10 +1960,12 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     monitor-exit p0
 
     return v1
 
+    .line 3
     :cond_0
     :try_start_1
     iget-object v2, p0, Lcom/bumptech/glide/RequestManager;->requestTracker:Lcom/bumptech/glide/manager/RequestTracker;
@@ -1902,26 +1976,30 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     iget-object v0, p0, Lcom/bumptech/glide/RequestManager;->targetTracker:Lcom/bumptech/glide/manager/TargetTracker;
 
     invoke-virtual {v0, p1}, Lcom/bumptech/glide/manager/TargetTracker;->untrack(Lcom/bumptech/glide/request/target/Target;)V
 
     const/4 v0, 0x0
 
+    .line 5
     invoke-interface {p1, v0}, Lcom/bumptech/glide/request/target/Target;->setRequest(Lcom/bumptech/glide/request/Request;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 6
     monitor-exit p0
 
     return v1
 
     :cond_1
+    const/4 p1, 0x0
+
+    .line 7
     monitor-exit p0
 
-    const/4 p0, 0x0
-
-    return p0
+    return p1
 
     :catchall_0
     move-exception p1

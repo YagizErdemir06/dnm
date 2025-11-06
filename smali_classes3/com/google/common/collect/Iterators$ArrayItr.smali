@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/Iterators$ArrayItr;
+.class public final Lcom/google/common/collect/Iterators$ArrayItr;
 .super Lcom/google/common/collect/AbstractIndexedListIterator;
 .source "SourceFile"
 
@@ -25,7 +25,7 @@
 
 
 # static fields
-.field static final EMPTY:Lcom/google/common/collect/UnmodifiableListIterator;
+.field public static final EMPTY:Lcom/google/common/collect/UnmodifiableListIterator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/UnmodifiableListIterator<",
@@ -52,6 +52,7 @@
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/Iterators$ArrayItr;
 
     const/4 v1, 0x0
@@ -73,10 +74,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p3, p4}, Lcom/google/common/collect/AbstractIndexedListIterator;-><init>(II)V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/Iterators$ArrayItr;->array:[Ljava/lang/Object;
 
+    .line 3
     iput p2, p0, Lcom/google/common/collect/Iterators$ArrayItr;->offset:I
 
     return-void
@@ -95,6 +99,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Iterators$ArrayItr;->array:[Ljava/lang/Object;
 
     iget p0, p0, Lcom/google/common/collect/Iterators$ArrayItr;->offset:I

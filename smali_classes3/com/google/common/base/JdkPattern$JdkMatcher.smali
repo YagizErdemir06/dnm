@@ -1,4 +1,4 @@
-.class final Lcom/google/common/base/JdkPattern$JdkMatcher;
+.class public final Lcom/google/common/base/JdkPattern$JdkMatcher;
 .super Lcom/google/common/base/CommonMatcher;
 .source "SourceFile"
 
@@ -15,15 +15,17 @@
 
 
 # instance fields
-.field final matcher:Ljava/util/regex/Matcher;
+.field public final matcher:Ljava/util/regex/Matcher;
 
 
 # direct methods
 .method public constructor <init>(Ljava/util/regex/Matcher;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/base/CommonMatcher;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -40,6 +42,7 @@
 .method public end()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/JdkPattern$JdkMatcher;->matcher:Ljava/util/regex/Matcher;
 
     invoke-virtual {p0}, Ljava/util/regex/Matcher;->end()I
@@ -78,6 +81,7 @@
 .method public matches()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/JdkPattern$JdkMatcher;->matcher:Ljava/util/regex/Matcher;
 
     invoke-virtual {p0}, Ljava/util/regex/Matcher;->matches()Z
@@ -90,6 +94,7 @@
 .method public replaceAll(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/JdkPattern$JdkMatcher;->matcher:Ljava/util/regex/Matcher;
 
     invoke-virtual {p0, p1}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
@@ -102,6 +107,7 @@
 .method public start()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/JdkPattern$JdkMatcher;->matcher:Ljava/util/regex/Matcher;
 
     invoke-virtual {p0}, Ljava/util/regex/Matcher;->start()I

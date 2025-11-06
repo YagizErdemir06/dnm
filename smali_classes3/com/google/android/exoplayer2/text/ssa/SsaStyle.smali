@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/text/ssa/SsaStyle;
+.class public final Lcom/google/android/exoplayer2/text/ssa/SsaStyle;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -96,26 +96,37 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle;->name:Ljava/lang/String;
 
+    .line 3
     iput p2, p0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle;->alignment:I
 
+    .line 4
     iput-object p3, p0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle;->primaryColor:Ljava/lang/Integer;
 
+    .line 5
     iput-object p4, p0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle;->outlineColor:Ljava/lang/Integer;
 
+    .line 6
     iput p5, p0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle;->fontSize:F
 
+    .line 7
     iput-boolean p6, p0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle;->bold:Z
 
+    .line 8
     iput-boolean p7, p0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle;->italic:Z
 
+    .line 9
     iput-boolean p8, p0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle;->underline:Z
 
+    .line 10
     iput-boolean p9, p0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle;->strikeout:Z
 
+    .line 11
     iput p10, p0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle;->borderStyle:I
 
     return-void
@@ -124,6 +135,7 @@
 .method public static synthetic access$000(Ljava/lang/String;)I
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/text/ssa/SsaStyle;->parseAlignment(Ljava/lang/String;)I
 
     move-result p0
@@ -142,6 +154,7 @@
 
     const-string v2, "Style:"
 
+    .line 1
     invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v2
@@ -150,6 +163,7 @@
 
     const/4 v2, 0x6
 
+    .line 2
     invoke-virtual {v1, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v2
@@ -160,6 +174,7 @@
 
     move-result-object v2
 
+    .line 3
     array-length v3, v2
 
     iget v4, v0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Format;->length:I
@@ -178,6 +193,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 4
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -198,14 +214,17 @@
 
     const-string v1, "Skipping malformed \'Style:\' line (expected %s values, found %s): \'%s\'"
 
+    .line 5
     invoke-static {v1, v0}, Lcom/google/android/exoplayer2/util/Util;->formatInvariant(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 6
     invoke-static {v5, v0}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v6
 
+    .line 7
     :cond_0
     :try_start_0
     new-instance v3, Lcom/google/android/exoplayer2/text/ssa/SsaStyle;
@@ -214,16 +233,19 @@
 
     aget-object v4, v2, v4
 
+    .line 8
     invoke-virtual {v4}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v4
 
+    .line 9
     iget v9, v0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Format;->alignmentIndex:I
 
     const/4 v10, -0x1
 
     if-eq v9, v10, :cond_1
 
+    .line 10
     aget-object v9, v2, v9
 
     invoke-virtual {v9}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -239,11 +261,13 @@
     :cond_1
     move v9, v10
 
+    .line 11
     :goto_0
     iget v11, v0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Format;->primaryColorIndex:I
 
     if-eq v11, v10, :cond_2
 
+    .line 12
     aget-object v11, v2, v11
 
     invoke-virtual {v11}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -259,11 +283,13 @@
     :cond_2
     move-object v11, v6
 
+    .line 13
     :goto_1
     iget v12, v0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Format;->outlineColorIndex:I
 
     if-eq v12, v10, :cond_3
 
+    .line 14
     aget-object v12, v2, v12
 
     invoke-virtual {v12}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -279,11 +305,13 @@
     :cond_3
     move-object v12, v6
 
+    .line 15
     :goto_2
     iget v13, v0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Format;->fontSizeIndex:I
 
     if-eq v13, v10, :cond_4
 
+    .line 16
     aget-object v13, v2, v13
 
     invoke-virtual {v13}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -299,6 +327,7 @@
     :cond_4
     const v13, -0x800001
 
+    .line 17
     :goto_3
     iget v14, v0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Format;->boldIndex:I
 
@@ -306,6 +335,7 @@
 
     aget-object v14, v2, v14
 
+    .line 18
     invoke-virtual {v14}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v14
@@ -330,6 +360,7 @@
 
     aget-object v15, v2, v15
 
+    .line 19
     invoke-virtual {v15}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v15
@@ -354,6 +385,7 @@
 
     aget-object v7, v2, v7
 
+    .line 20
     invoke-virtual {v7}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v7
@@ -378,6 +410,7 @@
 
     aget-object v7, v2, v7
 
+    .line 21
     invoke-virtual {v7}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v7
@@ -395,11 +428,13 @@
     :cond_8
     move/from16 v16, v8
 
+    .line 22
     :goto_7
     iget v0, v0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Format;->borderStyleIndex:I
 
     if-eq v0, v10, :cond_9
 
+    .line 23
     aget-object v0, v2, v0
 
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -434,6 +469,7 @@
 
     move/from16 v17, v0
 
+    .line 24
     invoke-direct/range {v7 .. v17}, Lcom/google/android/exoplayer2/text/ssa/SsaStyle;-><init>(Ljava/lang/String;ILjava/lang/Integer;Ljava/lang/Integer;FZZZZI)V
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
@@ -443,6 +479,7 @@
     :catch_0
     move-exception v0
 
+    .line 25
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -518,6 +555,7 @@
 .method private static parseAlignment(Ljava/lang/String;)I
     .locals 2
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -527,6 +565,7 @@
 
     move-result v0
 
+    .line 2
     invoke-static {v0}, Lcom/google/android/exoplayer2/text/ssa/SsaStyle;->isValidAlignment(I)Z
 
     move-result v1
@@ -537,6 +576,7 @@
 
     return v0
 
+    .line 3
     :catch_0
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
@@ -567,6 +607,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -591,6 +632,7 @@
     :catch_0
     move-exception v1
 
+    .line 2
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -619,6 +661,7 @@
 .method private static parseBorderStyle(Ljava/lang/String;)I
     .locals 2
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -628,6 +671,7 @@
 
     move-result v0
 
+    .line 2
     invoke-static {v0}, Lcom/google/android/exoplayer2/text/ssa/SsaStyle;->isValidBorderStyle(I)Z
 
     move-result v1
@@ -638,6 +682,7 @@
 
     return v0
 
+    .line 3
     :catch_0
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
@@ -674,6 +719,7 @@
     :try_start_0
     const-string v0, "&H"
 
+    .line 1
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -684,6 +730,7 @@
 
     const/4 v0, 0x2
 
+    .line 2
     invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v0
@@ -694,6 +741,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
@@ -713,6 +761,7 @@
     :cond_1
     const/4 v0, 0x0
 
+    .line 4
     :goto_1
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
     :try_end_0
@@ -728,6 +777,7 @@
 
     xor-long/2addr v4, v6
 
+    .line 5
     invoke-static {v4, v5}, Lcom/google/common/primitives/Ints;->checkedCast(J)I
 
     move-result p0
@@ -736,6 +786,7 @@
 
     and-long/2addr v0, v6
 
+    .line 6
     invoke-static {v0, v1}, Lcom/google/common/primitives/Ints;->checkedCast(J)I
 
     move-result v0
@@ -746,16 +797,19 @@
 
     and-long/2addr v4, v6
 
+    .line 7
     invoke-static {v4, v5}, Lcom/google/common/primitives/Ints;->checkedCast(J)I
 
     move-result v1
 
     and-long/2addr v2, v6
 
+    .line 8
     invoke-static {v2, v3}, Lcom/google/common/primitives/Ints;->checkedCast(J)I
 
     move-result v2
 
+    .line 9
     invoke-static {p0, v2, v1, v0}, Landroid/graphics/Color;->argb(IIII)I
 
     move-result p0
@@ -769,6 +823,7 @@
     :catch_0
     move-exception v0
 
+    .line 10
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -799,6 +854,7 @@
 .method private static parseFontSize(Ljava/lang/String;)F
     .locals 3
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
@@ -811,6 +867,7 @@
     :catch_0
     move-exception v0
 
+    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V

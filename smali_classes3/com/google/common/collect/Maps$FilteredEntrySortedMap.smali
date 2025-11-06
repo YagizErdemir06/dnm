@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Maps$FilteredEntrySortedMap;
+.class public Lcom/google/common/collect/Maps$FilteredEntrySortedMap;
 .super Lcom/google/common/collect/Maps$FilteredEntryMap;
 .source "SourceFile"
 
@@ -52,6 +52,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/common/collect/Maps$FilteredEntryMap;-><init>(Ljava/util/Map;Lcom/google/common/base/Predicate;)V
 
     return-void
@@ -72,6 +73,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$FilteredEntrySortedMap;->sortedMap()Ljava/util/SortedMap;
 
     move-result-object p0
@@ -123,11 +125,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$FilteredEntrySortedMap;->keySet()Ljava/util/SortedSet;
 
     move-result-object p0
 
-    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    invoke-interface {p0}, Ljava/util/SortedSet;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
@@ -152,6 +155,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/Maps$FilteredEntrySortedMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$FilteredEntrySortedMap;->sortedMap()Ljava/util/SortedMap;
@@ -211,15 +215,18 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$FilteredEntrySortedMap;->sortedMap()Ljava/util/SortedMap;
 
     move-result-object v0
 
+    .line 2
     :goto_0
     invoke-interface {v0}, Ljava/util/SortedMap;->lastKey()Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 3
     iget-object v1, p0, Lcom/google/common/collect/Maps$AbstractFilteredMap;->unfiltered:Ljava/util/Map;
 
     invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -238,6 +245,7 @@
 
     return-object v0
 
+    .line 4
     :cond_0
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$FilteredEntrySortedMap;->sortedMap()Ljava/util/SortedMap;
 
@@ -260,6 +268,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Maps$AbstractFilteredMap;->unfiltered:Ljava/util/Map;
 
     check-cast p0, Ljava/util/SortedMap;
@@ -285,6 +294,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/Maps$FilteredEntrySortedMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$FilteredEntrySortedMap;->sortedMap()Ljava/util/SortedMap;
@@ -316,6 +326,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/Maps$FilteredEntrySortedMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$FilteredEntrySortedMap;->sortedMap()Ljava/util/SortedMap;

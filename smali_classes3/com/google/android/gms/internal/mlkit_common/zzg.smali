@@ -47,6 +47,7 @@
 .method public final zza(Lcom/google/android/gms/internal/mlkit_common/zzs;)Lcom/google/android/gms/internal/mlkit_common/zzg;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_common/zzg;->zzb:Ljava/lang/Boolean;
 
     const-string v1, "Must call internal() or external() before appending rules."
@@ -55,6 +56,7 @@
 
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_common/zzg;->zza:Lcom/google/android/gms/internal/mlkit_common/zzao;
 
+    .line 2
     invoke-virtual {v0, p1}, Lcom/google/android/gms/internal/mlkit_common/zzao;->zzb(Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzao;
 
     return-object p0
@@ -63,6 +65,7 @@
 .method public final zzb()Lcom/google/android/gms/internal/mlkit_common/zzg;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_common/zzg;->zzb:Ljava/lang/Boolean;
 
     if-nez v0, :cond_0
@@ -79,6 +82,7 @@
 
     invoke-static {v0, v1}, Lcom/google/android/gms/internal/mlkit_common/zzaf;->zze(ZLjava/lang/Object;)V
 
+    .line 2
     sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     iput-object v0, p0, Lcom/google/android/gms/internal/mlkit_common/zzg;->zzb:Ljava/lang/Boolean;
@@ -89,6 +93,7 @@
 .method public final zzc()Lcom/google/android/gms/internal/mlkit_common/zzg;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_common/zzg;->zzb:Ljava/lang/Boolean;
 
     if-nez v0, :cond_0
@@ -105,6 +110,7 @@
 
     invoke-static {v0, v1}, Lcom/google/android/gms/internal/mlkit_common/zzaf;->zze(ZLjava/lang/Object;)V
 
+    .line 2
     sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     iput-object v0, p0, Lcom/google/android/gms/internal/mlkit_common/zzg;->zzb:Ljava/lang/Boolean;
@@ -115,12 +121,14 @@
 .method public final zzd()Lcom/google/android/gms/internal/mlkit_common/zzi;
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_common/zzg;->zzb:Ljava/lang/Boolean;
 
     const-string v1, "Must call internal() or external() when building a SourcePolicy."
 
     invoke-static {v0, v1}, Lcom/google/android/gms/internal/mlkit_common/zzaf;->zzc(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lcom/google/android/gms/internal/mlkit_common/zzi;
 
     iget-object v1, p0, Lcom/google/android/gms/internal/mlkit_common/zzg;->zzb:Ljava/lang/Boolean;
@@ -139,7 +147,7 @@
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, v1, v3, p0, v2}, Lcom/google/android/gms/internal/mlkit_common/zzi;-><init>(ZZLcom/google/android/gms/internal/mlkit_common/zzar;Lcom/google/android/gms/internal/mlkit_common/zzh;)V
+    invoke-direct {v0, v1, v2, p0, v3}, Lcom/google/android/gms/internal/mlkit_common/zzi;-><init>(ZZLcom/google/android/gms/internal/mlkit_common/zzar;Lcom/google/android/gms/internal/mlkit_common/zzh;)V
 
     return-object v0
 .end method

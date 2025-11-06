@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/AbstractCatchingFuture$AsyncCatchingFuture;
+.class public final Lcom/google/common/util/concurrent/AbstractCatchingFuture$AsyncCatchingFuture;
 .super Lcom/google/common/util/concurrent/AbstractCatchingFuture;
 .source "SourceFile"
 
@@ -45,6 +45,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/google/common/util/concurrent/AbstractCatchingFuture;-><init>(Lcom/google/common/util/concurrent/ListenableFuture;Ljava/lang/Class;Ljava/lang/Object;)V
 
     return-void

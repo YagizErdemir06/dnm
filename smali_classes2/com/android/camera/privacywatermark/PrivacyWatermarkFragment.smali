@@ -12,62 +12,69 @@
 
 
 # static fields
-.field public static final k0:Ljava/lang/String; = "PrivacyWatermarkFragment"
+.field public static final O8:Ljava/lang/String; = "PrivacyWatermarkFragment"
 
 
 # instance fields
-.field public K:Lcom/android/camera/ui/ValuePreference;
+.field private P8:Lcom/android/camera/ui/ValuePreference;
 
-.field public Y:Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment$b;
+.field private Q8:Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment$b;
 
-.field public final Z:Landroid/content/BroadcastReceiver;
+.field private final R8:Landroid/content/BroadcastReceiver;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/settings/BasePreferenceFragment;-><init>()V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment;->Y:Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment$b;
+    .line 2
+    iput-object v0, p0, Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment;->Q8:Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment$b;
 
+    .line 3
     new-instance v0, Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment$a;
 
     invoke-direct {v0, p0}, Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment$a;-><init>(Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment;)V
 
-    iput-object v0, p0, Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment;->Z:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment;->R8:Landroid/content/BroadcastReceiver;
 
     return-void
 .end method
 
-.method public static synthetic Ei(Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment;)Landroidx/preference/PreferenceScreen;
+.method public static synthetic Of(Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment;)Landroidx/preference/PreferenceScreen;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->z:Landroidx/preference/PreferenceScreen;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->K8:Landroidx/preference/PreferenceScreen;
 
     return-object p0
 .end method
 
-.method public static synthetic Fi(Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment;)Lr8/a;
+.method public static synthetic cg(Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment;)Ld/d/a/j7/e;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->y:Lr8/a;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->K2:Ld/d/a/j7/e;
 
     return-object p0
 .end method
 
 
 # virtual methods
-.method public Bi()V
+.method public Ff()V
     .locals 2
 
-    iget-object v0, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->z:Landroidx/preference/PreferenceScreen;
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->K8:Landroidx/preference/PreferenceScreen;
 
-    invoke-virtual {p0, v0, p0}, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->Ai(Landroidx/preference/PreferenceGroup;Landroidx/preference/Preference$OnPreferenceChangeListener;)V
+    invoke-virtual {p0, v0, p0}, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->Af(Landroidx/preference/PreferenceGroup;Landroidx/preference/Preference$OnPreferenceChangeListener;)V
 
-    iget-object v0, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->z:Landroidx/preference/PreferenceScreen;
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->K8:Landroidx/preference/PreferenceScreen;
 
     const-string v1, "pref_privacy_watermark_enabled"
 
@@ -77,10 +84,12 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {v0, p0}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
+    .line 4
     :cond_0
-    iget-object v0, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->z:Landroidx/preference/PreferenceScreen;
+    iget-object v0, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->K8:Landroidx/preference/PreferenceScreen;
 
     const-string v1, "pref_privacy_watermark"
 
@@ -90,21 +99,24 @@
 
     check-cast v0, Lcom/android/camera/ui/ValuePreference;
 
-    iput-object v0, p0, Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment;->K:Lcom/android/camera/ui/ValuePreference;
+    iput-object v0, p0, Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment;->P8:Lcom/android/camera/ui/ValuePreference;
 
     if-eqz v0, :cond_1
 
     const/16 v1, 0x9
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/ui/ValuePreference;->m(I)V
+    .line 5
+    invoke-virtual {v0, v1}, Lcom/android/camera/ui/ValuePreference;->h(I)V
 
-    iget-object v0, p0, Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment;->K:Lcom/android/camera/ui/ValuePreference;
+    .line 6
+    iget-object v0, p0, Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment;->P8:Lcom/android/camera/ui/ValuePreference;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setShouldDisableView(Z)V
 
-    iget-object v0, p0, Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment;->K:Lcom/android/camera/ui/ValuePreference;
+    .line 7
+    iget-object v0, p0, Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment;->P8:Lcom/android/camera/ui/ValuePreference;
 
     invoke-virtual {v0, p0}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
@@ -112,13 +124,15 @@
     return-void
 .end method
 
-.method public Ci()V
+.method public Jf()V
     .locals 2
 
-    iget-object v0, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->z:Landroidx/preference/PreferenceScreen;
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->K8:Landroidx/preference/PreferenceScreen;
 
     const-string v1, "pref_privacy_watermark_enabled"
 
+    .line 2
     invoke-virtual {v0, v1}, Landroidx/preference/PreferenceGroup;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -127,26 +141,30 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/android/camera/v2;->h5()Z
+    .line 3
+    invoke-static {}, Ld/d/a/d4;->f5()Z
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
 
+    .line 4
     :cond_0
-    iget-object v0, p0, Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment;->K:Lcom/android/camera/ui/ValuePreference;
+    iget-object v0, p0, Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment;->P8:Lcom/android/camera/ui/ValuePreference;
 
     if-eqz v0, :cond_1
 
-    invoke-static {}, Lcom/android/camera/v2;->g1()Ljava/lang/String;
+    .line 5
+    invoke-static {}, Ld/d/a/d4;->f1()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/android/camera/ui/ValuePreference;->setValue(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment;->K:Lcom/android/camera/ui/ValuePreference;
+    .line 6
+    iget-object v0, p0, Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment;->P8:Lcom/android/camera/ui/ValuePreference;
 
-    invoke-static {}, Lcom/android/camera/a6;->F2()Z
+    invoke-static {}, Ld/d/a/z5;->u2()Z
 
     move-result v1
 
@@ -154,56 +172,88 @@
 
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setEnabled(Z)V
 
+    .line 7
     :cond_1
-    iget-object p0, p0, Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment;->Y:Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment$b;
+    iget-object p0, p0, Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment;->Q8:Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment$b;
 
     if-eqz p0, :cond_2
 
-    invoke-interface {p0}, Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment$b;->e0()V
+    .line 8
+    invoke-interface {p0}, Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment$b;->W()V
 
     :cond_2
     return-void
 .end method
 
-.method public Gi(Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment$b;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment;->Y:Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment$b;
-
-    return-void
-.end method
-
-.method public mi()V
+.method public Wc()V
     .locals 6
 
-    iget-object v1, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->z:Landroidx/preference/PreferenceScreen;
+    .line 1
+    iget-object v1, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->K8:Landroidx/preference/PreferenceScreen;
 
     const-string v2, "pref_privacy_watermark_enabled"
 
-    const v3, 0x7f05005a
+    const v3, 0x7f050057
 
-    const v4, 0x7f140a60
+    const v4, 0x7f1309da
 
     const/4 v5, -0x1
 
     move-object v0, p0
 
-    invoke-virtual/range {v0 .. v5}, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->li(Landroidx/preference/PreferenceGroup;Ljava/lang/String;III)Landroidx/preference/CheckBoxPreference;
+    invoke-virtual/range {v0 .. v5}, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->Lc(Landroidx/preference/PreferenceGroup;Ljava/lang/String;III)Landroidx/preference/CheckBoxPreference;
 
-    iget-object v0, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->z:Landroidx/preference/PreferenceScreen;
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->K8:Landroidx/preference/PreferenceScreen;
 
     const-string v1, "pref_privacy_watermark"
 
-    const v2, 0x7f140a5b
+    const v2, 0x7f1309d5
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->qi(Landroidx/preference/PreferenceGroup;Ljava/lang/String;I)Lcom/android/camera/ui/ValuePreference;
+    invoke-virtual {p0, v0, v1, v2}, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->Sd(Landroidx/preference/PreferenceGroup;Ljava/lang/String;I)Lcom/android/camera/ui/ValuePreference;
+
+    return-void
+.end method
+
+.method public ne()I
+    .locals 0
+
+    const p0, 0x7f1309d9
+
+    return p0
+.end method
+
+.method public og(Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment$b;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "listener"
+        }
+    .end annotation
+
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment;->Q8:Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment$b;
 
     return-void
 .end method
 
 .method public onPreferenceChange(Landroidx/preference/Preference;Ljava/lang/Object;)Z
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "preference",
+            "newValue"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object v0
@@ -216,6 +266,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     move-object v0, p2
 
     check-cast v0, Ljava/lang/Boolean;
@@ -226,7 +277,8 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/android/camera/v2;->g1()Ljava/lang/String;
+    .line 3
+    invoke-static {}, Ld/d/a/d4;->f1()Ljava/lang/String;
 
     move-result-object v0
 
@@ -236,28 +288,32 @@
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p0
 
     const-class p1, Lcom/android/camera/privacywatermark/PrivacyWatermarkEditActivity;
 
-    invoke-static {p0, p1}, Lcom/android/camera/k;->a(Landroid/app/Activity;Ljava/lang/Class;)V
+    invoke-static {p0, p1}, Ld/d/a/m3;->a(Landroid/app/Activity;Ljava/lang/Class;)V
 
     const/4 p0, 0x0
 
     return p0
 
+    .line 5
     :cond_0
     invoke-super {p0, p1, p2}, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->onPreferenceChange(Landroidx/preference/Preference;Ljava/lang/Object;)Z
 
     move-result p1
 
-    iget-object p0, p0, Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment;->Y:Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment$b;
+    .line 6
+    iget-object p0, p0, Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment;->Q8:Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment$b;
 
     if-eqz p0, :cond_1
 
-    invoke-interface {p0}, Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment$b;->e0()V
+    .line 7
+    invoke-interface {p0}, Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment$b;->W()V
 
     :cond_1
     return p1
@@ -265,7 +321,16 @@
 
 .method public onPreferenceClick(Landroidx/preference/Preference;)Z
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "preference"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object p1
@@ -293,7 +358,8 @@
     :cond_0
     const-string p0, "attr_privacy_watermark_mode"
 
-    invoke-static {p0}, Lk9/a;->D2(Ljava/lang/String;)V
+    .line 2
+    invoke-static {p0}, Ld/d/a/v7/f;->z2(Ljava/lang/String;)V
 
     :goto_0
     const/4 p0, 0x0
@@ -303,15 +369,17 @@
     :cond_1
     const-string p1, "attr_privacy_watermark_enter"
 
-    invoke-static {p1}, Lk9/a;->D2(Ljava/lang/String;)V
+    .line 3
+    invoke-static {p1}, Ld/d/a/v7/f;->z2(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p0
 
     const-class p1, Lcom/android/camera/privacywatermark/PrivacyWatermarkEditActivity;
 
-    invoke-static {p0, p1}, Lcom/android/camera/k;->a(Landroid/app/Activity;Ljava/lang/Class;)V
+    invoke-static {p0, p1}, Ld/d/a/m3;->a(Landroid/app/Activity;Ljava/lang/Class;)V
 
     const/4 p0, 0x1
 
@@ -321,13 +389,15 @@
 .method public onStart()V
     .locals 3
 
+    .line 1
     invoke-super {p0}, Landroidx/preference/PreferenceFragmentCompat;->onStart()V
 
+    .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
-    iget-object p0, p0, Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment;->Z:Landroid/content/BroadcastReceiver;
+    iget-object p0, p0, Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment;->R8:Landroid/content/BroadcastReceiver;
 
     new-instance v1, Landroid/content/IntentFilter;
 
@@ -335,7 +405,7 @@
 
     invoke-direct {v1, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    invoke-static {}, Lm7/a;->s()I
+    invoke-static {}, Ld/d/a/a7/a/b/a;->s()I
 
     move-result v2
 
@@ -347,37 +417,33 @@
 .method public onStop()V
     .locals 1
 
+    .line 1
     invoke-super {p0}, Lmiuix/preference/PreferenceFragment;->onStop()V
 
+    .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
-    iget-object p0, p0, Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment;->Z:Landroid/content/BroadcastReceiver;
+    iget-object p0, p0, Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment;->R8:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, p0}, Landroid/app/Activity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     return-void
 .end method
 
-.method public vi()I
-    .locals 0
-
-    const p0, 0x7f140a5f
-
-    return p0
-.end method
-
-.method public yi()V
+.method public qf()V
     .locals 2
 
-    invoke-virtual {p0}, Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment;->Ci()V
+    .line 1
+    invoke-virtual {p0}, Lcom/android/camera/privacywatermark/PrivacyWatermarkFragment;->Jf()V
 
-    iget-object v0, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->z:Landroidx/preference/PreferenceScreen;
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->K8:Landroidx/preference/PreferenceScreen;
 
-    iget-object v1, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->y:Lr8/a;
+    iget-object v1, p0, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->K2:Ld/d/a/j7/e;
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->Di(Landroidx/preference/PreferenceGroup;Landroid/content/SharedPreferences;)V
+    invoke-virtual {p0, v0, v1}, Lcom/android/camera/fragment/settings/BasePreferenceFragment;->Mf(Landroidx/preference/PreferenceGroup;Landroid/content/SharedPreferences;)V
 
     return-void
 .end method

@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/RegularContiguousSet$3;
+.class public Lcom/google/common/collect/RegularContiguousSet$3;
 .super Lcom/google/common/collect/ImmutableAsList;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/RegularContiguousSet;
+.field public final synthetic this$0:Lcom/google/common/collect/RegularContiguousSet;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/RegularContiguousSet;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/RegularContiguousSet$3;->this$0:Lcom/google/common/collect/RegularContiguousSet;
 
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableAsList;-><init>()V

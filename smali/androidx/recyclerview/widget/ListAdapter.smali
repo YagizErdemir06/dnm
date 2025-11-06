@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final mDiffer:Landroidx/recyclerview/widget/AsyncListDiffer;
+.field public final mDiffer:Landroidx/recyclerview/widget/AsyncListDiffer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/recyclerview/widget/AsyncListDiffer<",
@@ -144,6 +144,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/ListAdapter;->mDiffer:Landroidx/recyclerview/widget/AsyncListDiffer;
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/AsyncListDiffer;->getCurrentList()Ljava/util/List;
@@ -161,6 +162,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/ListAdapter;->mDiffer:Landroidx/recyclerview/widget/AsyncListDiffer;
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/AsyncListDiffer;->getCurrentList()Ljava/util/List;
@@ -177,6 +179,7 @@
 .method public getItemCount()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/ListAdapter;->mDiffer:Landroidx/recyclerview/widget/AsyncListDiffer;
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/AsyncListDiffer;->getCurrentList()Ljava/util/List;

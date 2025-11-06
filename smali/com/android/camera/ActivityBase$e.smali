@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/ref/WeakReference;
+.field private final a:Ljava/lang/ref/WeakReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference<",
@@ -29,9 +29,19 @@
 # direct methods
 .method public constructor <init>(Lcom/android/camera/ActivityBase;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "activity"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -45,10 +55,19 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 9
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "msg"
+        }
+    .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera/ActivityBase$e;->a:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -58,12 +77,13 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget v0, p1, Landroid/os/Message;->what:I
 
     const-string v1, "CameraExitHint"
 
-    const v2, 0x7f150139
+    const v2, 0x7f1400bd
 
     const/4 v3, 0x2
 
@@ -78,21 +98,25 @@
     :pswitch_0
     goto/16 :goto_1
 
+    .line 3
     :pswitch_1
-    invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->xi()Lcom/android/camera/ui/a1;
+    invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->Hc()Ld/d/a/d8/x1;
 
     move-result-object p1
 
     if-eqz p1, :cond_3
 
-    iget-boolean p0, p0, Lcom/android/camera/ActivityBase;->i:Z
+    .line 4
+    iget-boolean p0, p0, Lcom/android/camera/ActivityBase;->C2:Z
 
     if-nez p0, :cond_3
 
-    invoke-interface {p1}, Lcom/android/camera/ui/a1;->A0()V
+    .line 5
+    invoke-interface {p1}, Ld/d/a/d8/x1;->m()V
 
     goto/16 :goto_1
 
+    .line 6
     :pswitch_2
     new-instance p1, Lcom/android/camera/fragment/dialog/CameraExitHintDialogFragment;
 
@@ -100,10 +124,13 @@
 
     const/4 v0, 0x4
 
-    invoke-virtual {p1, v0}, Lcom/android/camera/fragment/dialog/CameraExitHintDialogFragment;->Fh(I)V
+    .line 7
+    invoke-virtual {p1, v0}, Lcom/android/camera/fragment/dialog/CameraExitHintDialogFragment;->eb(I)V
 
+    .line 8
     invoke-virtual {p1, v3, v2}, Landroidx/fragment/app/DialogFragment;->setStyle(II)V
 
+    .line 9
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object p0
@@ -112,23 +139,28 @@
 
     move-result-object p0
 
+    .line 10
     invoke-virtual {p0, p1, v1}, Landroidx/fragment/app/FragmentTransaction;->add(Landroidx/fragment/app/Fragment;Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p0
 
+    .line 11
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentTransaction;->commitAllowingStateLoss()I
 
-    const-string p0, "on APK version error, finish activity after 3 seconds"
+    new-array p0, v6, [Ljava/lang/Object;
 
-    new-array p1, v6, [Ljava/lang/Object;
+    const-string p1, "on APK version error, finish activity after 3 seconds"
 
-    invoke-static {v4, p0, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 12
+    invoke-static {v4, p1, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_1
 
+    .line 13
     :pswitch_3
     iget v0, p1, Landroid/os/Message;->arg1:I
 
+    .line 14
     sget-object v1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     new-array v2, v3, [Ljava/lang/Object;
@@ -172,17 +204,20 @@
     goto/16 :goto_1
 
     :pswitch_4
-    const p1, 0x7f140266
+    const p1, 0x7f130252
 
-    invoke-static {p0, p1, v5, v6}, Lcom/android/camera/a6;->H4(Landroid/app/Activity;IZZ)V
+    .line 15
+    invoke-static {p0, p1, v5, v6}, Ld/d/a/z5;->t4(Landroid/app/Activity;IZZ)V
 
-    invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->Nj()V
+    .line 16
+    invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->oi()V
 
     goto/16 :goto_1
 
+    .line 17
     :cond_1
     :pswitch_5
-    invoke-static {}, Lcom/android/camera/v2;->ea()J
+    invoke-static {}, Ld/d/a/d4;->aa()J
 
     move-result-wide v0
 
@@ -192,37 +227,44 @@
 
     if-lez p1, :cond_2
 
-    invoke-static {v3, p0, v5, v6}, Lcom/android/camera/a6;->I4(ILmiuix/appcompat/app/AppCompatActivity;ZZ)V
+    .line 18
+    invoke-static {v3, p0, v5, v6}, Ld/d/a/z5;->u4(ILmiuix/appcompat/app/AppCompatActivity;ZZ)V
 
     goto :goto_0
 
+    .line 19
     :cond_2
-    invoke-static {v5, p0, v5, v6}, Lcom/android/camera/a6;->I4(ILmiuix/appcompat/app/AppCompatActivity;ZZ)V
+    invoke-static {v5, p0, v5, v6}, Ld/d/a/z5;->u4(ILmiuix/appcompat/app/AppCompatActivity;ZZ)V
 
+    .line 20
     :goto_0
-    invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->Nj()V
+    invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->oi()V
 
     goto :goto_1
 
+    .line 21
     :pswitch_6
-    invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->di()V
+    invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->T9()V
 
     goto :goto_1
 
+    .line 22
     :pswitch_7
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    check-cast p1, Lf2/a$a;
+    check-cast p1, Ld/d/a/k6/c$a;
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/ActivityBase;->mj(Lf2/a$a;)V
+    invoke-virtual {p0, p1}, Lcom/android/camera/ActivityBase;->Nh(Ld/d/a/k6/c$a;)V
 
     goto :goto_1
 
+    .line 23
     :pswitch_8
-    invoke-static {p0}, Lcom/android/camera/ActivityBase;->Fh(Lcom/android/camera/ActivityBase;)V
+    invoke-static {p0}, Lcom/android/camera/ActivityBase;->x7(Lcom/android/camera/ActivityBase;)V
 
     goto :goto_1
 
+    .line 24
     :pswitch_9
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -232,10 +274,11 @@
 
     move-result p1
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/ActivityBase;->Yj(I)V
+    invoke-virtual {p0, p1}, Lcom/android/camera/ActivityBase;->zi(I)V
 
     goto :goto_1
 
+    .line 25
     :pswitch_a
     new-instance p1, Lcom/android/camera/fragment/dialog/CameraExitHintDialogFragment;
 
@@ -243,10 +286,13 @@
 
     const/4 v0, 0x3
 
-    invoke-virtual {p1, v0}, Lcom/android/camera/fragment/dialog/CameraExitHintDialogFragment;->Fh(I)V
+    .line 26
+    invoke-virtual {p1, v0}, Lcom/android/camera/fragment/dialog/CameraExitHintDialogFragment;->eb(I)V
 
+    .line 27
     invoke-virtual {p1, v3, v2}, Landroidx/fragment/app/DialogFragment;->setStyle(II)V
 
+    .line 28
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object p0
@@ -255,48 +301,56 @@
 
     move-result-object p0
 
+    .line 29
     invoke-virtual {p0, p1, v1}, Landroidx/fragment/app/FragmentTransaction;->add(Landroidx/fragment/app/Fragment;Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p0
 
+    .line 30
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentTransaction;->commitAllowingStateLoss()I
 
-    const-string p0, "onThermalNotification finish activity after 3 seconds"
+    new-array p0, v6, [Ljava/lang/Object;
 
-    new-array p1, v6, [Ljava/lang/Object;
+    const-string p1, "onThermalNotification finish activity after 3 seconds"
 
-    invoke-static {v4, p0, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 31
+    invoke-static {v4, p1, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_1
 
+    .line 32
     :pswitch_b
-    invoke-static {}, Lk9/a;->j2()V
+    invoke-static {}, Ld/d/a/v7/f;->f2()V
 
     goto :goto_1
 
     :pswitch_c
-    const-string p1, "handleMessage:  set mIsFinishInKeyguard = true;"
+    new-array p1, v6, [Ljava/lang/Object;
 
-    new-array v0, v6, [Ljava/lang/Object;
+    const-string v0, "handleMessage:  set mIsFinishInKeyguard = true;"
 
-    invoke-static {v4, p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 33
+    invoke-static {v4, v0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iput-boolean v5, p0, Lcom/android/camera/ActivityBase;->v1:Z
+    .line 34
+    iput-boolean v5, p0, Lcom/android/camera/ActivityBase;->q9:Z
 
     goto :goto_1
 
+    .line 35
     :pswitch_d
-    invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->B2()Z
+    invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->a2()Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
+    .line 36
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/ActivityBase;->Mj(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/android/camera/ActivityBase;->ni(Ljava/lang/String;)V
 
     :cond_3
     :goto_1

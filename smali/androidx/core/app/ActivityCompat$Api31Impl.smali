@@ -1,4 +1,4 @@
-.class Landroidx/core/app/ActivityCompat$Api31Impl;
+.class public Landroidx/core/app/ActivityCompat$Api31Impl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,10 +34,9 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/DoNotInline;
-    .end annotation
 
-    invoke-static {p0}, Landroidx/core/app/c;->a(Landroid/app/Activity;)Z
+    .line 1
+    invoke-virtual {p0}, Landroid/app/Activity;->isLaunchedFromBubble()Z
 
     move-result p0
 

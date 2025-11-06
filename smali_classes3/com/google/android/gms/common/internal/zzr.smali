@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/internal/zzr;
+.class public final Lcom/google/android/gms/common/internal/zzr;
 .super Lcom/google/android/gms/common/internal/GmsClientSupervisor;
 .source "SourceFile"
 
@@ -27,6 +27,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/common/internal/GmsClientSupervisor;-><init>()V
 
     new-instance v0, Ljava/util/HashMap;
@@ -35,6 +36,7 @@
 
     iput-object v0, p0, Lcom/google/android/gms/common/internal/zzr;->zzb:Ljava/util/HashMap;
 
+    .line 2
     new-instance v0, Lcom/google/android/gms/common/internal/zzq;
 
     const/4 v1, 0x0
@@ -43,6 +45,7 @@
 
     iput-object v0, p0, Lcom/google/android/gms/common/internal/zzr;->zze:Lcom/google/android/gms/common/internal/zzq;
 
+    .line 3
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
@@ -51,10 +54,12 @@
 
     new-instance p1, Lcom/google/android/gms/internal/common/zzi;
 
+    .line 4
     invoke-direct {p1, p2, v0}, Lcom/google/android/gms/internal/common/zzi;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
 
     iput-object p1, p0, Lcom/google/android/gms/common/internal/zzr;->zzd:Landroid/os/Handler;
 
+    .line 5
     invoke-static {}, Lcom/google/android/gms/common/stats/ConnectionTracker;->getInstance()Lcom/google/android/gms/common/stats/ConnectionTracker;
 
     move-result-object p1
@@ -119,6 +124,7 @@
 
     const-string v0, "ServiceConnection must not be null"
 
+    .line 1
     invoke-static {p2, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     iget-object v0, p0, Lcom/google/android/gms/common/internal/zzr;->zzb:Ljava/util/HashMap;
@@ -128,6 +134,7 @@
     :try_start_0
     iget-object v1, p0, Lcom/google/android/gms/common/internal/zzr;->zzb:Ljava/util/HashMap;
 
+    .line 2
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -136,14 +143,17 @@
 
     if-eqz v1, :cond_2
 
+    .line 3
     invoke-virtual {v1, p2}, Lcom/google/android/gms/common/internal/zzo;->zzh(Landroid/content/ServiceConnection;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
+    .line 4
     invoke-virtual {v1, p2, p3}, Lcom/google/android/gms/common/internal/zzo;->zzf(Landroid/content/ServiceConnection;Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v1}, Lcom/google/android/gms/common/internal/zzo;->zzi()Z
 
     move-result p2
@@ -154,6 +164,7 @@
 
     const/4 p3, 0x0
 
+    .line 6
     invoke-virtual {p2, p3, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object p1
@@ -162,16 +173,20 @@
 
     iget-wide v1, p0, Lcom/google/android/gms/common/internal/zzr;->zzg:J
 
+    .line 7
     invoke-virtual {p2, p1, v1, v2}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
+    .line 8
     :cond_0
     monitor-exit v0
 
     return-void
 
+    .line 9
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
+    .line 10
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -194,9 +209,11 @@
 
     throw p0
 
+    .line 11
     :cond_2
     new-instance p0, Ljava/lang/IllegalStateException;
 
+    .line 12
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -222,6 +239,7 @@
     :catchall_0
     move-exception p0
 
+    .line 13
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -238,6 +256,7 @@
 
     const-string v0, "ServiceConnection must not be null"
 
+    .line 1
     invoke-static {p2, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     iget-object v0, p0, Lcom/google/android/gms/common/internal/zzr;->zzb:Ljava/util/HashMap;
@@ -247,6 +266,7 @@
     :try_start_0
     iget-object v1, p0, Lcom/google/android/gms/common/internal/zzr;->zzb:Ljava/util/HashMap;
 
+    .line 2
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -257,31 +277,39 @@
 
     new-instance v1, Lcom/google/android/gms/common/internal/zzo;
 
+    .line 3
     invoke-direct {v1, p0, p1}, Lcom/google/android/gms/common/internal/zzo;-><init>(Lcom/google/android/gms/common/internal/zzr;Lcom/google/android/gms/common/internal/zzn;)V
 
+    .line 4
     invoke-virtual {v1, p2, p2, p3}, Lcom/google/android/gms/common/internal/zzo;->zzd(Landroid/content/ServiceConnection;Landroid/content/ServiceConnection;Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {v1, p3, p4}, Lcom/google/android/gms/common/internal/zzo;->zze(Ljava/lang/String;Ljava/util/concurrent/Executor;)V
 
     iget-object p0, p0, Lcom/google/android/gms/common/internal/zzr;->zzb:Ljava/util/HashMap;
 
+    .line 6
     invoke-virtual {p0, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
+    .line 7
     :cond_0
     iget-object p0, p0, Lcom/google/android/gms/common/internal/zzr;->zzd:Landroid/os/Handler;
 
     const/4 v2, 0x0
 
+    .line 8
     invoke-virtual {p0, v2, p1}, Landroid/os/Handler;->removeMessages(ILjava/lang/Object;)V
 
+    .line 9
     invoke-virtual {v1, p2}, Lcom/google/android/gms/common/internal/zzo;->zzh(Landroid/content/ServiceConnection;)Z
 
     move-result p0
 
     if-nez p0, :cond_3
 
+    .line 10
     invoke-virtual {v1, p2, p2, p3}, Lcom/google/android/gms/common/internal/zzo;->zzd(Landroid/content/ServiceConnection;Landroid/content/ServiceConnection;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Lcom/google/android/gms/common/internal/zzo;->zza()I
@@ -298,6 +326,7 @@
 
     goto :goto_0
 
+    .line 11
     :cond_1
     invoke-virtual {v1, p3, p4}, Lcom/google/android/gms/common/internal/zzo;->zze(Ljava/lang/String;Ljava/util/concurrent/Executor;)V
 
@@ -312,20 +341,25 @@
 
     move-result-object p1
 
+    .line 12
     invoke-interface {p2, p0, p1}, Landroid/content/ServiceConnection;->onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
 
+    .line 13
     :goto_0
     invoke-virtual {v1}, Lcom/google/android/gms/common/internal/zzo;->zzj()Z
 
     move-result p0
 
+    .line 14
     monitor-exit v0
 
     return p0
 
+    .line 15
     :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 
+    .line 16
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -351,6 +385,7 @@
     :catchall_0
     move-exception p0
 
+    .line 17
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -361,6 +396,7 @@
 .method public final zzi(Landroid/os/Looper;)V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/internal/zzr;->zzb:Ljava/util/HashMap;
 
     monitor-enter v0
@@ -374,6 +410,7 @@
 
     iput-object v1, p0, Lcom/google/android/gms/common/internal/zzr;->zzd:Landroid/os/Handler;
 
+    .line 2
     monitor-exit v0
 
     return-void

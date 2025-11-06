@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;
+.class public abstract Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;
 .super Lcom/google/common/collect/ForwardingConcurrentMap;
 .source "SourceFile"
 
@@ -35,9 +35,9 @@
 
 
 # instance fields
-.field final concurrencyLevel:I
+.field public final concurrencyLevel:I
 
-.field transient delegate:Ljava/util/concurrent/ConcurrentMap;
+.field public transient delegate:Ljava/util/concurrent/ConcurrentMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/ConcurrentMap<",
@@ -46,7 +46,7 @@
     .end annotation
 .end field
 
-.field final keyEquivalence:Lcom/google/common/base/Equivalence;
+.field public final keyEquivalence:Lcom/google/common/base/Equivalence;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/base/Equivalence<",
@@ -56,9 +56,9 @@
     .end annotation
 .end field
 
-.field final keyStrength:Lcom/google/common/collect/MapMakerInternalMap$Strength;
+.field public final keyStrength:Lcom/google/common/collect/MapMakerInternalMap$Strength;
 
-.field final valueEquivalence:Lcom/google/common/base/Equivalence;
+.field public final valueEquivalence:Lcom/google/common/base/Equivalence;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/base/Equivalence<",
@@ -68,7 +68,7 @@
     .end annotation
 .end field
 
-.field final valueStrength:Lcom/google/common/collect/MapMakerInternalMap$Strength;
+.field public final valueStrength:Lcom/google/common/collect/MapMakerInternalMap$Strength;
 
 
 # direct methods
@@ -90,18 +90,25 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ForwardingConcurrentMap;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->keyStrength:Lcom/google/common/collect/MapMakerInternalMap$Strength;
 
+    .line 3
     iput-object p2, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->valueStrength:Lcom/google/common/collect/MapMakerInternalMap$Strength;
 
+    .line 4
     iput-object p3, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->keyEquivalence:Lcom/google/common/base/Equivalence;
 
+    .line 5
     iput-object p4, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->valueEquivalence:Lcom/google/common/base/Equivalence;
 
+    .line 6
     iput p5, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->concurrencyLevel:I
 
+    .line 7
     iput-object p6, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->delegate:Ljava/util/concurrent/ConcurrentMap;
 
     return-void
@@ -156,6 +163,7 @@
         }
     .end annotation
 
+    .line 1
     :goto_0
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
@@ -165,14 +173,16 @@
 
     return-void
 
+    .line 2
     :cond_0
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
     move-result-object v1
 
+    .line 3
     iget-object v2, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->delegate:Ljava/util/concurrent/ConcurrentMap;
 
-    invoke-interface {v2, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v2, v0, v1}, Ljava/util/concurrent/ConcurrentMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 .end method
@@ -185,38 +195,45 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readInt()I
 
     move-result p1
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/MapMaker;
 
     invoke-direct {v0}, Lcom/google/common/collect/MapMaker;-><init>()V
 
+    .line 3
     invoke-virtual {v0, p1}, Lcom/google/common/collect/MapMaker;->initialCapacity(I)Lcom/google/common/collect/MapMaker;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->keyStrength:Lcom/google/common/collect/MapMakerInternalMap$Strength;
 
+    .line 4
     invoke-virtual {p1, v0}, Lcom/google/common/collect/MapMaker;->setKeyStrength(Lcom/google/common/collect/MapMakerInternalMap$Strength;)Lcom/google/common/collect/MapMaker;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->valueStrength:Lcom/google/common/collect/MapMakerInternalMap$Strength;
 
+    .line 5
     invoke-virtual {p1, v0}, Lcom/google/common/collect/MapMaker;->setValueStrength(Lcom/google/common/collect/MapMakerInternalMap$Strength;)Lcom/google/common/collect/MapMaker;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->keyEquivalence:Lcom/google/common/base/Equivalence;
 
+    .line 6
     invoke-virtual {p1, v0}, Lcom/google/common/collect/MapMaker;->keyEquivalence(Lcom/google/common/base/Equivalence;)Lcom/google/common/collect/MapMaker;
 
     move-result-object p1
 
     iget p0, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->concurrencyLevel:I
 
+    .line 7
     invoke-virtual {p1, p0}, Lcom/google/common/collect/MapMaker;->concurrencyLevel(I)Lcom/google/common/collect/MapMaker;
 
     move-result-object p0
@@ -232,17 +249,19 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->delegate:Ljava/util/concurrent/ConcurrentMap;
 
-    invoke-interface {v0}, Ljava/util/Map;->size()I
+    invoke-interface {v0}, Ljava/util/concurrent/ConcurrentMap;->size()I
 
     move-result v0
 
     invoke-virtual {p1, v0}, Ljava/io/ObjectOutputStream;->writeInt(I)V
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractSerializationProxy;->delegate:Ljava/util/concurrent/ConcurrentMap;
 
-    invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+    invoke-interface {p0}, Ljava/util/concurrent/ConcurrentMap;->entrySet()Ljava/util/Set;
 
     move-result-object p0
 
@@ -263,12 +282,14 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
+    .line 3
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
 
     invoke-virtual {p1, v1}, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
 
+    .line 4
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -280,6 +301,7 @@
     :cond_0
     const/4 p0, 0x0
 
+    .line 5
     invoke-virtual {p1, p0}, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
 
     return-void

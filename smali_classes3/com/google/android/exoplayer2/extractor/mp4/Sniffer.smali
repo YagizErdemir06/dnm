@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/extractor/mp4/Sniffer;
+.class public final Lcom/google/android/exoplayer2/extractor/mp4/Sniffer;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -21,6 +21,7 @@
 
     new-array v0, v0, [I
 
+    .line 1
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/google/android/exoplayer2/extractor/mp4/Sniffer;->COMPATIBLE_BRANDS:[I
@@ -64,6 +65,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -74,13 +76,13 @@
 
     ushr-int/lit8 v0, p0, 0x8
 
-    const v1, 0x336770
+    const/4 v1, 0x1
 
-    const/4 v2, 0x1
+    const v2, 0x336770
 
-    if-ne v0, v1, :cond_0
+    if-ne v0, v2, :cond_0
 
-    return v2
+    return v1
 
     :cond_0
     const v0, 0x68656963
@@ -89,16 +91,17 @@
 
     if-eqz p1, :cond_1
 
-    return v2
+    return v1
 
+    .line 1
     :cond_1
     sget-object p1, Lcom/google/android/exoplayer2/extractor/mp4/Sniffer;->COMPATIBLE_BRANDS:[I
 
     array-length v0, p1
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    move v3, v1
+    move v3, v2
 
     :goto_0
     if-ge v3, v0, :cond_3
@@ -107,7 +110,7 @@
 
     if-ne v4, p0, :cond_2
 
-    return v2
+    return v1
 
     :cond_2
     add-int/lit8 v3, v3, 0x1
@@ -115,7 +118,7 @@
     goto :goto_0
 
     :cond_3
-    return v1
+    return v2
 .end method
 
 .method public static sniffFragmented(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)Z
@@ -130,6 +133,7 @@
 
     const/4 v1, 0x0
 
+    .line 1
     invoke-static {p0, v0, v1}, Lcom/google/android/exoplayer2/extractor/mp4/Sniffer;->sniffInternal(Lcom/google/android/exoplayer2/extractor/ExtractorInput;ZZ)Z
 
     move-result p0
@@ -138,7 +142,7 @@
 .end method
 
 .method private static sniffInternal(Lcom/google/android/exoplayer2/extractor/ExtractorInput;ZZ)Z
-    .locals 21
+    .locals 22
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -147,6 +151,7 @@
 
     move-object/from16 v0, p0
 
+    .line 1
     invoke-interface/range {p0 .. p0}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getLength()J
 
     move-result-wide v1
@@ -172,6 +177,7 @@
     :goto_0
     long-to-int v6, v6
 
+    .line 2
     new-instance v7, Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     const/16 v8, 0x40
@@ -191,8 +197,10 @@
 
     const/16 v12, 0x8
 
+    .line 3
     invoke-virtual {v7, v12}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->reset(I)V
 
+    .line 4
     invoke-virtual {v7}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
     move-result-object v13
@@ -205,11 +213,13 @@
 
     goto/16 :goto_9
 
+    .line 5
     :cond_2
     invoke-virtual {v7}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedInt()J
 
     move-result-wide v13
 
+    .line 6
     invoke-virtual {v7}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v15
@@ -218,71 +228,73 @@
 
     cmp-long v16, v13, v16
 
+    const/16 v11, 0x10
+
     if-nez v16, :cond_3
 
+    .line 7
     invoke-virtual {v7}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
     move-result-object v13
 
+    .line 8
     invoke-interface {v0, v13, v12, v12}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->peekFully([BII)V
 
-    const/16 v13, 0x10
+    .line 9
+    invoke-virtual {v7, v11}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setLimit(I)V
 
-    invoke-virtual {v7, v13}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setLimit(I)V
-
+    .line 10
     invoke-virtual {v7}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLong()J
 
-    move-result-wide v16
-
-    move v3, v13
-
-    move-wide/from16 v13, v16
+    move-result-wide v13
 
     goto :goto_2
 
     :cond_3
-    const-wide/16 v16, 0x0
+    const-wide/16 v18, 0x0
 
-    cmp-long v16, v13, v16
+    cmp-long v11, v13, v18
 
-    if-nez v16, :cond_4
+    if-nez v11, :cond_4
 
+    .line 11
     invoke-interface/range {p0 .. p0}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getLength()J
 
-    move-result-wide v16
+    move-result-wide v18
 
-    cmp-long v18, v16, v3
+    cmp-long v11, v18, v3
 
-    if-eqz v18, :cond_4
+    if-eqz v11, :cond_4
 
+    .line 12
     invoke-interface/range {p0 .. p0}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPeekPosition()J
 
     move-result-wide v13
 
-    sub-long v16, v16, v13
+    sub-long v18, v18, v13
 
     int-to-long v13, v12
 
-    add-long v13, v16, v13
+    add-long v13, v18, v13
 
     :cond_4
-    move v3, v12
+    move v11, v12
 
     :goto_2
-    int-to-long v11, v3
+    int-to-long v3, v11
 
-    cmp-long v19, v13, v11
+    cmp-long v16, v13, v3
 
-    if-gez v19, :cond_5
+    if-gez v16, :cond_5
 
     return v8
 
     :cond_5
-    add-int/2addr v9, v3
+    add-int/2addr v9, v11
 
-    const v3, 0x6d6f6f76
+    const v11, 0x6d6f6f76
 
-    if-ne v15, v3, :cond_7
+    if-ne v15, v11, :cond_7
 
     long-to-int v3, v13
 
@@ -305,161 +317,165 @@
     goto :goto_1
 
     :cond_7
-    const v3, 0x6d6f6f66
+    const v11, 0x6d6f6f66
 
-    if-eq v15, v3, :cond_11
+    if-eq v15, v11, :cond_11
 
-    const v3, 0x6d766578
+    const v11, 0x6d766578
 
-    if-ne v15, v3, :cond_8
+    if-ne v15, v11, :cond_8
 
     goto :goto_8
 
     :cond_8
-    move v3, v5
+    move-wide/from16 v20, v1
 
-    int-to-long v4, v9
+    int-to-long v1, v9
 
-    add-long/2addr v4, v13
+    add-long/2addr v1, v13
 
-    sub-long/2addr v4, v11
+    sub-long/2addr v1, v3
 
-    move/from16 v20, v9
+    move/from16 v16, v9
 
     int-to-long v8, v6
 
-    cmp-long v4, v4, v8
+    cmp-long v1, v1, v8
 
-    if-ltz v4, :cond_9
+    if-ltz v1, :cond_9
 
-    const/4 v5, 0x0
+    const/4 v2, 0x0
 
-    const/4 v8, 0x1
+    const/4 v3, 0x1
 
     goto :goto_a
 
     :cond_9
-    sub-long/2addr v13, v11
+    sub-long/2addr v13, v3
 
-    long-to-int v4, v13
+    long-to-int v1, v13
 
-    add-int v9, v20, v4
+    add-int v9, v16, v1
 
-    const v5, 0x66747970
+    const v2, 0x66747970
 
-    if-ne v15, v5, :cond_f
+    if-ne v15, v2, :cond_f
 
-    const/16 v5, 0x8
+    if-ge v1, v12, :cond_a
 
-    if-ge v4, v5, :cond_a
+    const/4 v2, 0x0
 
-    const/4 v5, 0x0
-
-    return v5
+    return v2
 
     :cond_a
-    const/4 v5, 0x0
+    const/4 v2, 0x0
 
-    invoke-virtual {v7, v4}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->reset(I)V
+    .line 13
+    invoke-virtual {v7, v1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->reset(I)V
 
+    .line 14
     invoke-virtual {v7}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
-    move-result-object v8
+    move-result-object v3
 
-    invoke-interface {v0, v8, v5, v4}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->peekFully([BII)V
+    invoke-interface {v0, v3, v2, v1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->peekFully([BII)V
 
-    div-int/lit8 v4, v4, 0x4
+    .line 15
+    div-int/lit8 v1, v1, 0x4
 
-    const/4 v5, 0x0
+    const/4 v2, 0x0
 
     :goto_4
-    if-ge v5, v4, :cond_d
+    if-ge v2, v1, :cond_d
 
-    const/4 v8, 0x1
+    const/4 v3, 0x1
 
-    if-ne v5, v8, :cond_b
+    if-ne v2, v3, :cond_b
 
-    const/4 v11, 0x4
+    const/4 v4, 0x4
 
-    invoke-virtual {v7, v11}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
+    .line 16
+    invoke-virtual {v7, v4}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
-    move/from16 v12, p2
+    move/from16 v8, p2
 
     goto :goto_5
 
+    .line 17
     :cond_b
     invoke-virtual {v7}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
-    move-result v11
+    move-result v4
 
-    move/from16 v12, p2
+    move/from16 v8, p2
 
-    invoke-static {v11, v12}, Lcom/google/android/exoplayer2/extractor/mp4/Sniffer;->isCompatibleBrand(IZ)Z
+    invoke-static {v4, v8}, Lcom/google/android/exoplayer2/extractor/mp4/Sniffer;->isCompatibleBrand(IZ)Z
 
-    move-result v11
+    move-result v4
 
-    if-eqz v11, :cond_c
+    if-eqz v4, :cond_c
 
-    move v10, v8
+    move v10, v3
 
     goto :goto_6
 
     :cond_c
     :goto_5
-    add-int/lit8 v5, v5, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_4
 
     :cond_d
-    move/from16 v12, p2
+    move/from16 v8, p2
 
     :goto_6
     if-nez v10, :cond_e
 
-    const/4 v5, 0x0
+    const/4 v2, 0x0
 
-    return v5
+    return v2
 
     :cond_e
-    const/4 v5, 0x0
+    const/4 v2, 0x0
 
     goto :goto_7
 
     :cond_f
-    move/from16 v12, p2
+    move/from16 v8, p2
 
-    const/4 v5, 0x0
+    const/4 v2, 0x0
 
-    if-eqz v4, :cond_10
+    if-eqz v1, :cond_10
 
-    invoke-interface {v0, v4}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->advancePeekPosition(I)V
+    .line 18
+    invoke-interface {v0, v1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->advancePeekPosition(I)V
 
     :cond_10
     :goto_7
-    move v8, v5
+    move v8, v2
 
-    move v5, v3
+    move-wide/from16 v1, v20
 
     goto :goto_3
 
     :cond_11
     :goto_8
-    move v5, v8
+    move v2, v8
 
-    const/4 v8, 0x1
+    const/4 v3, 0x1
 
-    move v0, v8
+    move v0, v3
 
     goto :goto_b
 
     :cond_12
     :goto_9
-    move v5, v8
+    move v2, v8
 
-    move v8, v11
+    move v3, v11
 
     :goto_a
-    move v0, v5
+    move v0, v2
 
     :goto_b
     if-eqz v10, :cond_13
@@ -468,10 +484,12 @@
 
     if-ne v1, v0, :cond_13
 
+    move v8, v3
+
     goto :goto_c
 
     :cond_13
-    move v8, v5
+    move v8, v2
 
     :goto_c
     return v8

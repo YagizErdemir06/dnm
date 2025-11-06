@@ -20,8 +20,10 @@
 
     const-string v0, "DvbDecoder"
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/text/SimpleSubtitleDecoder;-><init>(Ljava/lang/String;)V
 
+    .line 2
     new-instance v0, Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     const/4 v1, 0x0
@@ -34,14 +36,17 @@
 
     invoke-direct {v0, p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;-><init>([B)V
 
+    .line 3
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedShort()I
 
     move-result p1
 
+    .line 4
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedShort()I
 
     move-result v0
 
+    .line 5
     new-instance v1, Lcom/google/android/exoplayer2/text/dvb/DvbParser;
 
     invoke-direct {v1, p1, v0}, Lcom/google/android/exoplayer2/text/dvb/DvbParser;-><init>(II)V
@@ -58,10 +63,12 @@
 
     if-eqz p3, :cond_0
 
+    .line 1
     iget-object p3, p0, Lcom/google/android/exoplayer2/text/dvb/DvbDecoder;->parser:Lcom/google/android/exoplayer2/text/dvb/DvbParser;
 
     invoke-virtual {p3}, Lcom/google/android/exoplayer2/text/dvb/DvbParser;->reset()V
 
+    .line 2
     :cond_0
     new-instance p3, Lcom/google/android/exoplayer2/text/dvb/DvbSubtitle;
 

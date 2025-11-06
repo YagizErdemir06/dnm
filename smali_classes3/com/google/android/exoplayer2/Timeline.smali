@@ -37,18 +37,18 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/Timeline$1;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/Timeline$1;-><init>()V
 
     sput-object v0, Lcom/google/android/exoplayer2/Timeline;->EMPTY:Lcom/google/android/exoplayer2/Timeline;
 
-    new-instance v0, Lcom/google/android/exoplayer2/l2;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/l2;-><init>()V
+    .line 2
+    sget-object v0, Ld/j/a/b/d2;->a:Ld/j/a/b/d2;
 
     sput-object v0, Lcom/google/android/exoplayer2/Timeline;->CREATOR:Lcom/google/android/exoplayer2/Bundleable$Creator;
 
@@ -58,6 +58,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -76,10 +77,12 @@
 .method private static fromBundle(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/Timeline;
     .locals 3
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/Timeline$Window;->CREATOR:Lcom/google/android/exoplayer2/Bundleable$Creator;
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-static {v1}, Lcom/google/android/exoplayer2/Timeline;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -88,14 +91,17 @@
 
     move-result-object v1
 
+    .line 3
     invoke-static {v0, v1}, Lcom/google/android/exoplayer2/Timeline;->fromBundleListRetriever(Lcom/google/android/exoplayer2/Bundleable$Creator;Landroid/os/IBinder;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object v0
 
+    .line 4
     sget-object v1, Lcom/google/android/exoplayer2/Timeline$Period;->CREATOR:Lcom/google/android/exoplayer2/Bundleable$Creator;
 
     const/4 v2, 0x1
 
+    .line 5
     invoke-static {v2}, Lcom/google/android/exoplayer2/Timeline;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -104,12 +110,14 @@
 
     move-result-object v2
 
+    .line 6
     invoke-static {v1, v2}, Lcom/google/android/exoplayer2/Timeline;->fromBundleListRetriever(Lcom/google/android/exoplayer2/Bundleable$Creator;Landroid/os/IBinder;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object v1
 
     const/4 v2, 0x2
 
+    .line 7
     invoke-static {v2}, Lcom/google/android/exoplayer2/Timeline;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -118,10 +126,12 @@
 
     move-result-object p0
 
+    .line 8
     new-instance v2, Lcom/google/android/exoplayer2/Timeline$RemotableTimeline;
 
     if-nez p0, :cond_0
 
+    .line 9
     invoke-virtual {v0}, Ljava/util/AbstractCollection;->size()I
 
     move-result p0
@@ -130,6 +140,7 @@
 
     move-result-object p0
 
+    .line 10
     :cond_0
     invoke-direct {v2, v0, v1, p0}, Lcom/google/android/exoplayer2/Timeline$RemotableTimeline;-><init>(Lcom/google/common/collect/ImmutableList;Lcom/google/common/collect/ImmutableList;[I)V
 
@@ -158,23 +169,27 @@
 
     if-nez p1, :cond_0
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
 
     move-result-object p0
 
     return-object p0
 
+    .line 2
     :cond_0
     new-instance v0, Lcom/google/common/collect/ImmutableList$Builder;
 
     invoke-direct {v0}, Lcom/google/common/collect/ImmutableList$Builder;-><init>()V
 
+    .line 3
     invoke-static {p1}, Lcom/google/android/exoplayer2/BundleListRetriever;->getList(Landroid/os/IBinder;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object p1
 
     const/4 v1, 0x0
 
+    .line 4
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -182,6 +197,7 @@
 
     if-ge v1, v2, :cond_1
 
+    .line 5
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -198,6 +214,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_1
     invoke-virtual {v0}, Lcom/google/common/collect/ImmutableList$Builder;->build()Lcom/google/common/collect/ImmutableList;
 
@@ -209,6 +226,7 @@
 .method private static generateUnshuffledIndices(I)[I
     .locals 2
 
+    .line 1
     new-array v0, p0, [I
 
     const/4 v1, 0x0
@@ -216,6 +234,7 @@
     :goto_0
     if-ge v1, p0, :cond_0
 
+    .line 2
     aput v1, v0, v1
 
     add-int/lit8 v1, v1, 0x1
@@ -231,6 +250,7 @@
 
     const/16 v0, 0x24
 
+    .line 1
     invoke-static {p0, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
     move-result-object p0
@@ -253,6 +273,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/android/exoplayer2/Timeline;
 
@@ -262,9 +283,11 @@
 
     return v2
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/Timeline;
 
+    .line 3
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/Timeline;->getWindowCount()I
 
     move-result v1
@@ -287,25 +310,30 @@
 
     goto :goto_2
 
+    .line 4
     :cond_2
     new-instance v1, Lcom/google/android/exoplayer2/Timeline$Window;
 
     invoke-direct {v1}, Lcom/google/android/exoplayer2/Timeline$Window;-><init>()V
 
+    .line 5
     new-instance v3, Lcom/google/android/exoplayer2/Timeline$Period;
 
     invoke-direct {v3}, Lcom/google/android/exoplayer2/Timeline$Period;-><init>()V
 
+    .line 6
     new-instance v4, Lcom/google/android/exoplayer2/Timeline$Window;
 
     invoke-direct {v4}, Lcom/google/android/exoplayer2/Timeline$Window;-><init>()V
 
+    .line 7
     new-instance v5, Lcom/google/android/exoplayer2/Timeline$Period;
 
     invoke-direct {v5}, Lcom/google/android/exoplayer2/Timeline$Period;-><init>()V
 
     move v6, v2
 
+    .line 8
     :goto_0
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Timeline;->getWindowCount()I
 
@@ -313,6 +341,7 @@
 
     if-ge v6, v7, :cond_4
 
+    .line 9
     invoke-virtual {p0, v6, v1}, Lcom/google/android/exoplayer2/Timeline;->getWindow(ILcom/google/android/exoplayer2/Timeline$Window;)Lcom/google/android/exoplayer2/Timeline$Window;
 
     move-result-object v7
@@ -337,6 +366,7 @@
     :cond_4
     move v1, v2
 
+    .line 10
     :goto_1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Timeline;->getPeriodCount()I
 
@@ -344,10 +374,12 @@
 
     if-ge v1, v4, :cond_6
 
+    .line 11
     invoke-virtual {p0, v1, v3, v0}, Lcom/google/android/exoplayer2/Timeline;->getPeriod(ILcom/google/android/exoplayer2/Timeline$Period;Z)Lcom/google/android/exoplayer2/Timeline$Period;
 
     move-result-object v4
 
+    .line 12
     invoke-virtual {p1, v1, v5, v0}, Lcom/google/android/exoplayer2/Timeline;->getPeriod(ILcom/google/android/exoplayer2/Timeline$Period;Z)Lcom/google/android/exoplayer2/Timeline$Period;
 
     move-result-object v6
@@ -376,6 +408,7 @@
 .method public getFirstWindowIndex(Z)I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Timeline;->isEmpty()Z
 
     move-result p0
@@ -399,6 +432,7 @@
 .method public getLastWindowIndex(Z)I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Timeline;->isEmpty()Z
 
     move-result p1
@@ -423,12 +457,14 @@
 .method public final getNextPeriodIndex(ILcom/google/android/exoplayer2/Timeline$Period;Lcom/google/android/exoplayer2/Timeline$Window;IZ)I
     .locals 1
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/google/android/exoplayer2/Timeline;->getPeriod(ILcom/google/android/exoplayer2/Timeline$Period;)Lcom/google/android/exoplayer2/Timeline$Period;
 
     move-result-object p2
 
     iget p2, p2, Lcom/google/android/exoplayer2/Timeline$Period;->windowIndex:I
 
+    .line 2
     invoke-virtual {p0, p2, p3}, Lcom/google/android/exoplayer2/Timeline;->getWindow(ILcom/google/android/exoplayer2/Timeline$Window;)Lcom/google/android/exoplayer2/Timeline$Window;
 
     move-result-object v0
@@ -437,6 +473,7 @@
 
     if-ne v0, p1, :cond_1
 
+    .line 3
     invoke-virtual {p0, p2, p4, p5}, Lcom/google/android/exoplayer2/Timeline;->getNextWindowIndex(IIZ)I
 
     move-result p1
@@ -447,6 +484,7 @@
 
     return p2
 
+    .line 4
     :cond_0
     invoke-virtual {p0, p1, p3}, Lcom/google/android/exoplayer2/Timeline;->getWindow(ILcom/google/android/exoplayer2/Timeline$Window;)Lcom/google/android/exoplayer2/Timeline$Window;
 
@@ -475,12 +513,14 @@
 
     if-ne p2, v1, :cond_1
 
+    .line 1
     invoke-virtual {p0, p3}, Lcom/google/android/exoplayer2/Timeline;->getLastWindowIndex(Z)I
 
     move-result p2
 
     if-ne p1, p2, :cond_0
 
+    .line 2
     invoke-virtual {p0, p3}, Lcom/google/android/exoplayer2/Timeline;->getFirstWindowIndex(Z)I
 
     move-result p0
@@ -493,6 +533,7 @@
     :goto_0
     return p0
 
+    .line 3
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -503,6 +544,7 @@
     :cond_2
     return p1
 
+    .line 4
     :cond_3
     invoke-virtual {p0, p3}, Lcom/google/android/exoplayer2/Timeline;->getLastWindowIndex(Z)I
 
@@ -526,6 +568,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, p2, v0}, Lcom/google/android/exoplayer2/Timeline;->getPeriod(ILcom/google/android/exoplayer2/Timeline$Period;Z)Lcom/google/android/exoplayer2/Timeline$Period;
 
     move-result-object p0
@@ -539,6 +582,7 @@
 .method public getPeriodByUid(Ljava/lang/Object;Lcom/google/android/exoplayer2/Timeline$Period;)Lcom/google/android/exoplayer2/Timeline$Period;
     .locals 1
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/Timeline;->getIndexOfPeriod(Ljava/lang/Object;)I
 
     move-result p1
@@ -678,14 +722,14 @@
         }
     .end annotation
 
-    const/4 v0, 0x0
-
     .line 3
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Timeline;->getWindowCount()I
 
-    move-result v1
+    move-result v0
 
-    invoke-static {p3, v0, v1}, Lcom/google/android/exoplayer2/util/Assertions;->checkIndex(III)I
+    const/4 v1, 0x0
+
+    invoke-static {p3, v1, v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkIndex(III)I
 
     .line 4
     invoke-virtual {p0, p3, p1, p6, p7}, Lcom/google/android/exoplayer2/Timeline;->getWindow(ILcom/google/android/exoplayer2/Timeline$Window;J)Lcom/google/android/exoplayer2/Timeline$Window;
@@ -811,12 +855,14 @@
 
     if-ne p2, v1, :cond_1
 
+    .line 1
     invoke-virtual {p0, p3}, Lcom/google/android/exoplayer2/Timeline;->getFirstWindowIndex(Z)I
 
     move-result p2
 
     if-ne p1, p2, :cond_0
 
+    .line 2
     invoke-virtual {p0, p3}, Lcom/google/android/exoplayer2/Timeline;->getLastWindowIndex(Z)I
 
     move-result p0
@@ -829,6 +875,7 @@
     :goto_0
     return p0
 
+    .line 3
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -839,6 +886,7 @@
     :cond_2
     return p1
 
+    .line 4
     :cond_3
     invoke-virtual {p0, p3}, Lcom/google/android/exoplayer2/Timeline;->getFirstWindowIndex(Z)I
 
@@ -865,6 +913,7 @@
 
     const-wide/16 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, p2, v0, v1}, Lcom/google/android/exoplayer2/Timeline;->getWindow(ILcom/google/android/exoplayer2/Timeline$Window;J)Lcom/google/android/exoplayer2/Timeline$Window;
 
     move-result-object p0
@@ -881,26 +930,30 @@
 .method public hashCode()I
     .locals 6
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/Timeline$Window;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/Timeline$Window;-><init>()V
 
+    .line 2
     new-instance v1, Lcom/google/android/exoplayer2/Timeline$Period;
 
     invoke-direct {v1}, Lcom/google/android/exoplayer2/Timeline$Period;-><init>()V
 
-    const/16 v2, 0xd9
-
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Timeline;->getWindowCount()I
 
-    move-result v3
+    move-result v2
 
-    add-int/2addr v2, v3
+    const/16 v3, 0xd9
 
-    const/4 v3, 0x0
+    add-int/2addr v3, v2
 
-    move v4, v3
+    const/4 v2, 0x0
 
+    move v4, v2
+
+    .line 4
     :goto_0
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Timeline;->getWindowCount()I
 
@@ -908,8 +961,9 @@
 
     if-ge v4, v5, :cond_0
 
-    mul-int/lit8 v2, v2, 0x1f
+    mul-int/lit8 v3, v3, 0x1f
 
+    .line 5
     invoke-virtual {p0, v4, v0}, Lcom/google/android/exoplayer2/Timeline;->getWindow(ILcom/google/android/exoplayer2/Timeline$Window;)Lcom/google/android/exoplayer2/Timeline$Window;
 
     move-result-object v5
@@ -918,33 +972,36 @@
 
     move-result v5
 
-    add-int/2addr v2, v5
+    add-int/2addr v3, v5
 
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
     :cond_0
-    mul-int/lit8 v2, v2, 0x1f
+    mul-int/lit8 v3, v3, 0x1f
 
+    .line 6
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Timeline;->getPeriodCount()I
 
     move-result v0
 
-    add-int/2addr v2, v0
+    add-int/2addr v3, v0
 
+    .line 7
     :goto_1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Timeline;->getPeriodCount()I
 
     move-result v0
 
-    if-ge v3, v0, :cond_1
+    if-ge v2, v0, :cond_1
 
-    mul-int/lit8 v2, v2, 0x1f
+    mul-int/lit8 v3, v3, 0x1f
 
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v3, v1, v0}, Lcom/google/android/exoplayer2/Timeline;->getPeriod(ILcom/google/android/exoplayer2/Timeline$Period;Z)Lcom/google/android/exoplayer2/Timeline$Period;
+    .line 8
+    invoke-virtual {p0, v2, v1, v0}, Lcom/google/android/exoplayer2/Timeline;->getPeriod(ILcom/google/android/exoplayer2/Timeline$Period;Z)Lcom/google/android/exoplayer2/Timeline$Period;
 
     move-result-object v0
 
@@ -952,19 +1009,20 @@
 
     move-result v0
 
-    add-int/2addr v2, v0
+    add-int/2addr v3, v0
 
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
     :cond_1
-    return v2
+    return v3
 .end method
 
 .method public final isEmpty()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Timeline;->getWindowCount()I
 
     move-result p0
@@ -985,6 +1043,7 @@
 .method public final isLastPeriod(ILcom/google/android/exoplayer2/Timeline$Period;Lcom/google/android/exoplayer2/Timeline$Window;IZ)Z
     .locals 0
 
+    .line 1
     invoke-virtual/range {p0 .. p5}, Lcom/google/android/exoplayer2/Timeline;->getNextPeriodIndex(ILcom/google/android/exoplayer2/Timeline$Period;Lcom/google/android/exoplayer2/Timeline$Window;IZ)I
 
     move-result p0

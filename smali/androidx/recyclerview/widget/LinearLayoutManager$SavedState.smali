@@ -42,17 +42,18 @@
 
 
 # instance fields
-.field mAnchorLayoutFromEnd:Z
+.field public mAnchorLayoutFromEnd:Z
 
-.field mAnchorOffset:I
+.field public mAnchorOffset:I
 
-.field mAnchorPosition:I
+.field public mAnchorPosition:I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/recyclerview/widget/LinearLayoutManager$SavedState$1;
 
     invoke-direct {v0}, Landroidx/recyclerview/widget/LinearLayoutManager$SavedState$1;-><init>()V
@@ -148,6 +149,7 @@
 .method public hasValidAnchor()Z
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$SavedState;->mAnchorPosition:I
 
     if-ltz p0, :cond_0
@@ -168,6 +170,7 @@
 
     const/4 v0, -0x1
 
+    .line 1
     iput v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$SavedState;->mAnchorPosition:I
 
     return-void
@@ -176,14 +179,17 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
+    .line 1
     iget p2, p0, Landroidx/recyclerview/widget/LinearLayoutManager$SavedState;->mAnchorPosition:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 2
     iget p2, p0, Landroidx/recyclerview/widget/LinearLayoutManager$SavedState;->mAnchorOffset:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 3
     iget-boolean p0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$SavedState;->mAnchorLayoutFromEnd:Z
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V

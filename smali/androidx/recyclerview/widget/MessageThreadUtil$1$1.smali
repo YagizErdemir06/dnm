@@ -1,4 +1,4 @@
-.class Landroidx/recyclerview/widget/MessageThreadUtil$1$1;
+.class public Landroidx/recyclerview/widget/MessageThreadUtil$1$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$1:Landroidx/recyclerview/widget/MessageThreadUtil$1;
+.field public final synthetic this$1:Landroidx/recyclerview/widget/MessageThreadUtil$1;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/recyclerview/widget/MessageThreadUtil$1;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/recyclerview/widget/MessageThreadUtil$1$1;->this$1:Landroidx/recyclerview/widget/MessageThreadUtil$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,6 +38,7 @@
 .method public run()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/MessageThreadUtil$1$1;->this$1:Landroidx/recyclerview/widget/MessageThreadUtil$1;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/MessageThreadUtil$1;->mQueue:Landroidx/recyclerview/widget/MessageThreadUtil$MessageQueue;
@@ -48,6 +50,7 @@
     :goto_0
     if-eqz v0, :cond_3
 
+    .line 2
     iget v1, v0, Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;->what:I
 
     const/4 v2, 0x1
@@ -62,6 +65,7 @@
 
     if-eq v1, v2, :cond_0
 
+    .line 3
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -84,6 +88,7 @@
 
     goto :goto_1
 
+    .line 4
     :cond_0
     iget-object v1, p0, Landroidx/recyclerview/widget/MessageThreadUtil$1$1;->this$1:Landroidx/recyclerview/widget/MessageThreadUtil$1;
 
@@ -97,11 +102,13 @@
 
     goto :goto_1
 
+    .line 5
     :cond_1
     iget-object v1, v0, Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;->data:Ljava/lang/Object;
 
     check-cast v1, Landroidx/recyclerview/widget/TileList$Tile;
 
+    .line 6
     iget-object v2, p0, Landroidx/recyclerview/widget/MessageThreadUtil$1$1;->this$1:Landroidx/recyclerview/widget/MessageThreadUtil$1;
 
     iget-object v2, v2, Landroidx/recyclerview/widget/MessageThreadUtil$1;->val$callback:Landroidx/recyclerview/widget/ThreadUtil$MainThreadCallback;
@@ -112,6 +119,7 @@
 
     goto :goto_1
 
+    .line 7
     :cond_2
     iget-object v1, p0, Landroidx/recyclerview/widget/MessageThreadUtil$1$1;->this$1:Landroidx/recyclerview/widget/MessageThreadUtil$1;
 
@@ -123,6 +131,7 @@
 
     invoke-interface {v1, v2, v0}, Landroidx/recyclerview/widget/ThreadUtil$MainThreadCallback;->updateItemCount(II)V
 
+    .line 8
     :goto_1
     iget-object v0, p0, Landroidx/recyclerview/widget/MessageThreadUtil$1$1;->this$1:Landroidx/recyclerview/widget/MessageThreadUtil$1;
 

@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/MapMakerInternalMap$WeakKeyDummyValueEntry;
+.class public final Lcom/google/common/collect/MapMakerInternalMap$WeakKeyDummyValueEntry;
 .super Lcom/google/common/collect/MapMakerInternalMap$AbstractWeakKeyEntry;
 .source "SourceFile"
 
@@ -58,6 +58,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/common/collect/MapMakerInternalMap$AbstractWeakKeyEntry;-><init>(Ljava/lang/ref/ReferenceQueue;Ljava/lang/Object;ILcom/google/common/collect/MapMakerInternalMap$InternalEntry;)V
 
     return-void
@@ -79,6 +80,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/MapMakerInternalMap$WeakKeyDummyValueEntry;
 
     invoke-virtual {p0}, Lcom/google/common/collect/MapMakerInternalMap$AbstractWeakKeyEntry;->getKey()Ljava/lang/Object;

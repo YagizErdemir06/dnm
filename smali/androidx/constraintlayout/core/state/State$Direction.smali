@@ -42,6 +42,7 @@
 .method public static constructor <clinit>()V
     .locals 13
 
+    .line 1
     new-instance v0, Landroidx/constraintlayout/core/state/State$Direction;
 
     const-string v1, "LEFT"
@@ -52,6 +53,7 @@
 
     sput-object v0, Landroidx/constraintlayout/core/state/State$Direction;->LEFT:Landroidx/constraintlayout/core/state/State$Direction;
 
+    .line 2
     new-instance v1, Landroidx/constraintlayout/core/state/State$Direction;
 
     const-string v3, "RIGHT"
@@ -62,6 +64,7 @@
 
     sput-object v1, Landroidx/constraintlayout/core/state/State$Direction;->RIGHT:Landroidx/constraintlayout/core/state/State$Direction;
 
+    .line 3
     new-instance v3, Landroidx/constraintlayout/core/state/State$Direction;
 
     const-string v5, "START"
@@ -72,6 +75,7 @@
 
     sput-object v3, Landroidx/constraintlayout/core/state/State$Direction;->START:Landroidx/constraintlayout/core/state/State$Direction;
 
+    .line 4
     new-instance v5, Landroidx/constraintlayout/core/state/State$Direction;
 
     const-string v7, "END"
@@ -82,6 +86,7 @@
 
     sput-object v5, Landroidx/constraintlayout/core/state/State$Direction;->END:Landroidx/constraintlayout/core/state/State$Direction;
 
+    .line 5
     new-instance v7, Landroidx/constraintlayout/core/state/State$Direction;
 
     const-string v9, "TOP"
@@ -92,6 +97,7 @@
 
     sput-object v7, Landroidx/constraintlayout/core/state/State$Direction;->TOP:Landroidx/constraintlayout/core/state/State$Direction;
 
+    .line 6
     new-instance v9, Landroidx/constraintlayout/core/state/State$Direction;
 
     const-string v11, "BOTTOM"
@@ -118,6 +124,7 @@
 
     aput-object v9, v11, v12
 
+    .line 7
     sput-object v11, Landroidx/constraintlayout/core/state/State$Direction;->$VALUES:[Landroidx/constraintlayout/core/state/State$Direction;
 
     return-void
@@ -125,12 +132,8 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -139,6 +142,7 @@
 .method public static valueOf(Ljava/lang/String;)Landroidx/constraintlayout/core/state/State$Direction;
     .locals 1
 
+    .line 1
     const-class v0, Landroidx/constraintlayout/core/state/State$Direction;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -153,6 +157,7 @@
 .method public static values()[Landroidx/constraintlayout/core/state/State$Direction;
     .locals 1
 
+    .line 1
     sget-object v0, Landroidx/constraintlayout/core/state/State$Direction;->$VALUES:[Landroidx/constraintlayout/core/state/State$Direction;
 
     invoke-virtual {v0}, [Landroidx/constraintlayout/core/state/State$Direction;->clone()Ljava/lang/Object;

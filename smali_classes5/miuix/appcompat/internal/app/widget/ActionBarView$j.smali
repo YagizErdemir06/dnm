@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemSelectedListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
@@ -18,14 +18,15 @@
 
 
 # instance fields
-.field public final synthetic a:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+.field public final synthetic c:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/appcompat/internal/app/widget/ActionBarView;)V
     .locals 0
 
-    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$j;->a:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    .line 1
+    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$j;->c:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -34,47 +35,21 @@
 
 
 # virtual methods
-.method public onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView<",
-            "*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
+.method public onClick(Landroid/view/View;)V
+    .locals 1
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$j;->a:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$j;->c:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->s0(Lmiuix/appcompat/internal/app/widget/ActionBarView;)Landroidx/appcompat/app/ActionBar$OnNavigationListener;
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView;->da:Landroid/view/Window$Callback;
 
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$j;->a:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-static {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->s0(Lmiuix/appcompat/internal/app/widget/ActionBarView;)Landroidx/appcompat/app/ActionBar$OnNavigationListener;
+    invoke-static {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->i0(Lmiuix/appcompat/internal/app/widget/ActionBarView;)Lk/b/e/e/f/m/b;
 
     move-result-object p0
 
-    invoke-interface {p0, p3, p4, p5}, Landroidx/appcompat/app/ActionBar$OnNavigationListener;->onNavigationItemSelected(IJ)Z
+    const/4 v0, 0x0
 
-    :cond_0
-    return-void
-.end method
-
-.method public onNothingSelected(Landroid/widget/AdapterView;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView<",
-            "*>;)V"
-        }
-    .end annotation
+    invoke-interface {p1, v0, p0}, Landroid/view/Window$Callback;->onMenuItemSelected(ILandroid/view/MenuItem;)Z
 
     return-void
 .end method

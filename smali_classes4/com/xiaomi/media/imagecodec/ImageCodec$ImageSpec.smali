@@ -67,6 +67,7 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
+    .line 1
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const/4 v1, 0x3

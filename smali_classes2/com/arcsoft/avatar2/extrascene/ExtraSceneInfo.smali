@@ -162,74 +162,104 @@
 .method public constructor <init>()V
     .locals 5
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, ""
 
+    .line 2
     iput-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->a:Ljava/lang/String;
 
     const/4 v1, -0x1
 
+    .line 3
     iput v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->b:I
 
     const/4 v2, 0x0
 
+    .line 4
     iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->c:I
 
+    .line 5
     iput-boolean v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->d:Z
 
     const/4 v3, 0x0
 
+    .line 6
     iput-object v3, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->e:Ljava/util/ArrayList;
 
+    .line 7
     iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->f:I
 
+    .line 8
     iput-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->g:Ljava/lang/String;
 
+    .line 9
     iput-object v3, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->h:Ljava/util/ArrayList;
 
+    .line 10
     iput-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->i:Ljava/lang/String;
 
+    .line 11
     iput-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->j:Ljava/lang/String;
 
+    .line 12
     iput-object v3, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->k:Ljava/util/ArrayList;
 
+    .line 13
     iput-object v3, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->l:Ljava/util/ArrayList;
 
+    .line 14
     iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->m:I
 
     const/4 v4, 0x1
 
+    .line 15
     iput v4, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->n:I
 
+    .line 16
     iput-boolean v4, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->o:Z
 
+    .line 17
     iput v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->p:I
 
+    .line 18
     iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->q:I
 
+    .line 19
     iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->r:I
 
+    .line 20
     iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->s:I
 
+    .line 21
     iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->t:I
 
+    .line 22
     iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->u:I
 
+    .line 23
     iput v4, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->v:I
 
+    .line 24
     iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->w:I
 
+    .line 25
     iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->x:I
 
+    .line 26
     iput v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->y:I
 
+    .line 27
     iput-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->z:Ljava/lang/String;
 
+    .line 28
     iput-object v3, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->A:Ljava/util/ArrayList;
 
+    .line 29
     iput-object v3, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->B:[I
 
+    .line 30
     iput-object v3, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->C:[I
 
     return-void
@@ -240,6 +270,7 @@
 .method public getAccPath()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->z:Ljava/lang/String;
 
     return-object p0
@@ -248,6 +279,7 @@
 .method public getDuration()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->f:I
 
     return p0
@@ -256,6 +288,7 @@
 .method public getEmojiHelmetLeftRandomNum()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->u:I
 
     return p0
@@ -264,6 +297,7 @@
 .method public getEmojiHelmetRightRandomNum()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->v:I
 
     return p0
@@ -279,6 +313,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->k:Ljava/util/ArrayList;
 
     return-object p0
@@ -294,6 +329,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->l:Ljava/util/ArrayList;
 
     return-object p0
@@ -302,6 +338,7 @@
 .method public getExpCount()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->c:I
 
     return p0
@@ -310,6 +347,7 @@
 .method public getExpIdInPut()[I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->B:[I
 
     return-object p0
@@ -318,6 +356,7 @@
 .method public getExpIdOutPut()[I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->C:[I
 
     return-object p0
@@ -334,6 +373,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->e:Ljava/util/ArrayList;
 
     return-object p0
@@ -342,6 +382,7 @@
 .method public getExtraStatus()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->n:I
 
     return p0
@@ -358,6 +399,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->A:Ljava/util/ArrayList;
 
     return-object p0
@@ -366,6 +408,7 @@
 .method public getHeadPitchStatus()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->x:I
 
     return p0
@@ -374,6 +417,7 @@
 .method public getHeadWear()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->b:I
 
     return p0
@@ -382,6 +426,7 @@
 .method public getHeadWearColor()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->p:I
 
     return p0
@@ -390,6 +435,7 @@
 .method public getLoopBeginFrameIndex()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->q:I
 
     return p0
@@ -398,6 +444,7 @@
 .method public getLoopCount()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->s:I
 
     return p0
@@ -406,6 +453,7 @@
 .method public getLoopEndFrameIndex()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->r:I
 
     return p0
@@ -414,6 +462,7 @@
 .method public getLoopNum()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->t:I
 
     return p0
@@ -422,6 +471,7 @@
 .method public getLoopType()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->m:I
 
     return p0
@@ -430,6 +480,7 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->a:Ljava/lang/String;
 
     return-object p0
@@ -446,6 +497,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->h:Ljava/util/ArrayList;
 
     return-object p0
@@ -454,6 +506,7 @@
 .method public getNewToothPath()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->j:Ljava/lang/String;
 
     return-object p0
@@ -462,6 +515,7 @@
 .method public getOldHeadWearPath()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->g:Ljava/lang/String;
 
     return-object p0
@@ -470,6 +524,7 @@
 .method public getOldToothPath()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->i:Ljava/lang/String;
 
     return-object p0
@@ -478,6 +533,7 @@
 .method public getPauseIndex()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->y:I
 
     return p0
@@ -486,6 +542,7 @@
 .method public getRandom()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->w:I
 
     return p0
@@ -494,6 +551,7 @@
 .method public isNeedOutLine()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->d:Z
 
     return p0
@@ -502,6 +560,7 @@
 .method public isOldHeadWearAcc()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->o:Z
 
     return p0
@@ -510,6 +569,7 @@
 .method public setAccPath(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->z:Ljava/lang/String;
 
     return-void
@@ -518,6 +578,7 @@
 .method public setDuration(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->f:I
 
     return-void
@@ -526,6 +587,7 @@
 .method public setEmojiHelmetLeftRandomNum(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->u:I
 
     return-void
@@ -534,6 +596,7 @@
 .method public setEmojiHelmetRightRandomNum(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->v:I
 
     return-void
@@ -542,16 +605,19 @@
 .method public setExpCheckId([I)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->k:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->k:Ljava/util/ArrayList;
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->k:Ljava/util/ArrayList;
 
@@ -563,16 +629,19 @@
 .method public setExpCheckValue([F)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->l:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->l:Ljava/util/ArrayList;
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->l:Ljava/util/ArrayList;
 
@@ -584,6 +653,7 @@
 .method public setExpCount(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->c:I
 
     return-void
@@ -592,6 +662,7 @@
 .method public setExpIdInPut([I)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->B:[I
 
     return-void
@@ -600,6 +671,7 @@
 .method public setExpIdOutPut([I)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->C:[I
 
     return-void
@@ -608,16 +680,19 @@
 .method public setExpressInfo(Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->e:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->e:Ljava/util/ArrayList;
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->e:Ljava/util/ArrayList;
 
@@ -629,6 +704,7 @@
 .method public setExtraStatus(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->n:I
 
     return-void
@@ -637,16 +713,19 @@
 .method public setHairMaskInfo(Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$HairMaskInfo;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->A:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->A:Ljava/util/ArrayList;
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->A:Ljava/util/ArrayList;
 
@@ -658,6 +737,7 @@
 .method public setHeadPitchStatus(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->x:I
 
     return-void
@@ -666,6 +746,7 @@
 .method public setHeadWear(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->b:I
 
     return-void
@@ -674,6 +755,7 @@
 .method public setHeadWearColor(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->p:I
 
     return-void
@@ -682,6 +764,7 @@
 .method public setIsOldHeadWearAcc(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->o:Z
 
     return-void
@@ -690,6 +773,7 @@
 .method public setLoopBeginFrameIndex(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->q:I
 
     return-void
@@ -698,6 +782,7 @@
 .method public setLoopCount(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->s:I
 
     return-void
@@ -706,6 +791,7 @@
 .method public setLoopEndFrameIndex(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->r:I
 
     return-void
@@ -714,6 +800,7 @@
 .method public setLoopNum(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->t:I
 
     return-void
@@ -722,6 +809,7 @@
 .method public setLoopType(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->m:I
 
     return-void
@@ -730,6 +818,7 @@
 .method public setName(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->a:Ljava/lang/String;
 
     return-void
@@ -738,6 +827,7 @@
 .method public setNeedOutLine(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->d:Z
 
     return-void
@@ -746,16 +836,19 @@
 .method public setNewHeadWearPath(Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->h:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->h:Ljava/util/ArrayList;
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->h:Ljava/util/ArrayList;
 
@@ -767,6 +860,7 @@
 .method public setNewToothPath(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->j:Ljava/lang/String;
 
     return-void
@@ -775,6 +869,7 @@
 .method public setOldHeadWearPath(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->g:Ljava/lang/String;
 
     return-void
@@ -783,6 +878,7 @@
 .method public setOldToothPath(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->i:Ljava/lang/String;
 
     return-void
@@ -791,6 +887,7 @@
 .method public setPauseIndex(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->y:I
 
     return-void
@@ -799,6 +896,7 @@
 .method public setRandom(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->w:I
 
     return-void
@@ -807,6 +905,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

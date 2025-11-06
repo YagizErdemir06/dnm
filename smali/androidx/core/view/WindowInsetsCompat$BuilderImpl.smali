@@ -1,4 +1,4 @@
-.class Landroidx/core/view/WindowInsetsCompat$BuilderImpl;
+.class public Landroidx/core/view/WindowInsetsCompat$BuilderImpl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -17,7 +17,7 @@
 # instance fields
 .field private final mInsets:Landroidx/core/view/WindowInsetsCompat;
 
-.field mInsetsTypeMask:[Landroidx/core/graphics/Insets;
+.field public mInsetsTypeMask:[Landroidx/core/graphics/Insets;
 
 
 # direct methods
@@ -57,18 +57,21 @@
 .method public final applyInsetTypes()V
     .locals 5
 
+    .line 1
     iget-object v0, p0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl;->mInsetsTypeMask:[Landroidx/core/graphics/Insets;
 
     if-eqz v0, :cond_4
 
     const/4 v1, 0x1
 
+    .line 2
     invoke-static {v1}, Landroidx/core/view/WindowInsetsCompat$Type;->indexOf(I)I
 
     move-result v2
 
     aget-object v0, v0, v2
 
+    .line 3
     iget-object v2, p0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl;->mInsetsTypeMask:[Landroidx/core/graphics/Insets;
 
     const/4 v3, 0x2
@@ -81,6 +84,7 @@
 
     if-nez v2, :cond_0
 
+    .line 4
     iget-object v2, p0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl;->mInsets:Landroidx/core/view/WindowInsetsCompat;
 
     invoke-virtual {v2, v3}, Landroidx/core/view/WindowInsetsCompat;->getInsets(I)Landroidx/core/graphics/Insets;
@@ -90,12 +94,14 @@
     :cond_0
     if-nez v0, :cond_1
 
+    .line 5
     iget-object v0, p0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl;->mInsets:Landroidx/core/view/WindowInsetsCompat;
 
     invoke-virtual {v0, v1}, Landroidx/core/view/WindowInsetsCompat;->getInsets(I)Landroidx/core/graphics/Insets;
 
     move-result-object v0
 
+    .line 6
     :cond_1
     invoke-static {v0, v2}, Landroidx/core/graphics/Insets;->max(Landroidx/core/graphics/Insets;Landroidx/core/graphics/Insets;)Landroidx/core/graphics/Insets;
 
@@ -103,6 +109,7 @@
 
     invoke-virtual {p0, v0}, Landroidx/core/view/WindowInsetsCompat$BuilderImpl;->setSystemWindowInsets(Landroidx/core/graphics/Insets;)V
 
+    .line 7
     iget-object v0, p0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl;->mInsetsTypeMask:[Landroidx/core/graphics/Insets;
 
     const/16 v1, 0x10
@@ -115,8 +122,10 @@
 
     if-eqz v0, :cond_2
 
+    .line 8
     invoke-virtual {p0, v0}, Landroidx/core/view/WindowInsetsCompat$BuilderImpl;->setSystemGestureInsets(Landroidx/core/graphics/Insets;)V
 
+    .line 9
     :cond_2
     iget-object v0, p0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl;->mInsetsTypeMask:[Landroidx/core/graphics/Insets;
 
@@ -130,8 +139,10 @@
 
     if-eqz v0, :cond_3
 
+    .line 10
     invoke-virtual {p0, v0}, Landroidx/core/view/WindowInsetsCompat$BuilderImpl;->setMandatorySystemGestureInsets(Landroidx/core/graphics/Insets;)V
 
+    .line 11
     :cond_3
     iget-object v0, p0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl;->mInsetsTypeMask:[Landroidx/core/graphics/Insets;
 
@@ -145,6 +156,7 @@
 
     if-eqz v0, :cond_4
 
+    .line 12
     invoke-virtual {p0, v0}, Landroidx/core/view/WindowInsetsCompat$BuilderImpl;->setTappableElementInsets(Landroidx/core/graphics/Insets;)V
 
     :cond_4
@@ -156,8 +168,10 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroidx/core/view/WindowInsetsCompat$BuilderImpl;->applyInsetTypes()V
 
+    .line 2
     iget-object p0, p0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl;->mInsets:Landroidx/core/view/WindowInsetsCompat;
 
     return-object p0
@@ -180,6 +194,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl;->mInsetsTypeMask:[Landroidx/core/graphics/Insets;
 
     if-nez v0, :cond_0
@@ -188,6 +203,7 @@
 
     new-array v0, v0, [Landroidx/core/graphics/Insets;
 
+    .line 2
     iput-object v0, p0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl;->mInsetsTypeMask:[Landroidx/core/graphics/Insets;
 
     :cond_0
@@ -204,6 +220,7 @@
 
     goto :goto_1
 
+    .line 3
     :cond_1
     iget-object v1, p0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl;->mInsetsTypeMask:[Landroidx/core/graphics/Insets;
 
@@ -235,6 +252,7 @@
 
     return-void
 
+    .line 1
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

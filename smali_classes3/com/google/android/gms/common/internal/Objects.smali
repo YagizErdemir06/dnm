@@ -18,6 +18,7 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance p0, Ljava/lang/AssertionError;
@@ -52,6 +53,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     invoke-virtual {p0}, Landroid/os/Bundle;->size()I
 
@@ -65,11 +67,13 @@
 
     return v1
 
+    .line 2
     :cond_1
     invoke-virtual {p0}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v2
 
+    .line 3
     invoke-virtual {p1}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v3
@@ -82,6 +86,7 @@
 
     return v1
 
+    .line 4
     :cond_2
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -100,6 +105,7 @@
 
     check-cast v3, Ljava/lang/String;
 
+    .line 5
     invoke-virtual {p0, v3}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v4
@@ -142,14 +148,15 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    if-eq p0, p1, :cond_2
+    const/4 v1, 0x1
 
-    const/4 v1, 0x0
+    if-eq p0, p1, :cond_1
 
-    if-eqz p0, :cond_1
+    if-eqz p0, :cond_2
 
+    .line 1
     invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -159,13 +166,13 @@
     goto :goto_0
 
     :cond_0
-    return v1
+    return v0
 
     :cond_1
+    :goto_0
     move v0, v1
 
     :cond_2
-    :goto_0
     return v0
 .end method
 
@@ -178,6 +185,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     invoke-static {p0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     move-result p0
@@ -197,6 +205,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/common/internal/Objects$ToStringHelper;
 
     const/4 v1, 0x0

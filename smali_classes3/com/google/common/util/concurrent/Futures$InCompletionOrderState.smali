@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/Futures$InCompletionOrderState;
+.class public final Lcom/google/common/util/concurrent/Futures$InCompletionOrderState;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -97,6 +97,7 @@
 .method public static synthetic access$300(Lcom/google/common/util/concurrent/Futures$InCompletionOrderState;Lcom/google/common/collect/ImmutableList;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/common/util/concurrent/Futures$InCompletionOrderState;->recordInputCompletion(Lcom/google/common/collect/ImmutableList;I)V
 
     return-void
@@ -105,6 +106,7 @@
 .method public static synthetic access$400(Lcom/google/common/util/concurrent/Futures$InCompletionOrderState;Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/util/concurrent/Futures$InCompletionOrderState;->recordOutputCancellation(Z)V
 
     return-void
@@ -113,6 +115,7 @@
 .method public static synthetic access$500(Lcom/google/common/util/concurrent/Futures$InCompletionOrderState;)[Lcom/google/common/util/concurrent/ListenableFuture;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/Futures$InCompletionOrderState;->inputFutures:[Lcom/google/common/util/concurrent/ListenableFuture;
 
     return-object p0
@@ -121,6 +124,7 @@
 .method public static synthetic access$600(Lcom/google/common/util/concurrent/Futures$InCompletionOrderState;)Ljava/util/concurrent/atomic/AtomicInteger;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/Futures$InCompletionOrderState;->incompleteOutputCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
     return-object p0
@@ -129,6 +133,7 @@
 .method private recordCompletion()V
     .locals 5
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/util/concurrent/Futures$InCompletionOrderState;->incompleteOutputCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
@@ -141,6 +146,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/util/concurrent/Futures$InCompletionOrderState;->inputFutures:[Lcom/google/common/util/concurrent/ListenableFuture;
 
     array-length v1, v0
@@ -154,6 +160,7 @@
 
     if-eqz v3, :cond_0
 
+    .line 3
     iget-boolean v4, p0, Lcom/google/common/util/concurrent/Futures$InCompletionOrderState;->shouldInterrupt:Z
 
     invoke-interface {v3, v4}, Ljava/util/concurrent/Future;->cancel(Z)Z
@@ -178,6 +185,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/util/concurrent/Futures$InCompletionOrderState;->inputFutures:[Lcom/google/common/util/concurrent/ListenableFuture;
 
     aget-object v0, v0, p2
@@ -186,12 +194,14 @@
 
     check-cast v0, Lcom/google/common/util/concurrent/ListenableFuture;
 
+    .line 2
     iget-object v1, p0, Lcom/google/common/util/concurrent/Futures$InCompletionOrderState;->inputFutures:[Lcom/google/common/util/concurrent/ListenableFuture;
 
     const/4 v2, 0x0
 
     aput-object v2, v1, p2
 
+    .line 3
     iget p2, p0, Lcom/google/common/util/concurrent/Futures$InCompletionOrderState;->delegateIndex:I
 
     :goto_0
@@ -201,6 +211,7 @@
 
     if-ge p2, v1, :cond_1
 
+    .line 4
     invoke-interface {p1, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -213,10 +224,12 @@
 
     if-eqz v1, :cond_0
 
+    .line 5
     invoke-direct {p0}, Lcom/google/common/util/concurrent/Futures$InCompletionOrderState;->recordCompletion()V
 
     add-int/lit8 p2, p2, 0x1
 
+    .line 6
     iput p2, p0, Lcom/google/common/util/concurrent/Futures$InCompletionOrderState;->delegateIndex:I
 
     return-void
@@ -226,6 +239,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_1
     invoke-virtual {p1}, Ljava/util/AbstractCollection;->size()I
 
@@ -241,14 +255,17 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/common/util/concurrent/Futures$InCompletionOrderState;->wasCancelled:Z
 
     if-nez p1, :cond_0
 
     const/4 p1, 0x0
 
+    .line 2
     iput-boolean p1, p0, Lcom/google/common/util/concurrent/Futures$InCompletionOrderState;->shouldInterrupt:Z
 
+    .line 3
     :cond_0
     invoke-direct {p0}, Lcom/google/common/util/concurrent/Futures$InCompletionOrderState;->recordCompletion()V
 

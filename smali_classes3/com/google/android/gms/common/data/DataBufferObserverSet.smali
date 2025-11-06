@@ -15,6 +15,7 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/util/HashSet;
@@ -35,6 +36,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/data/DataBufferObserverSet;->zaa:Ljava/util/HashSet;
 
     invoke-virtual {p0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
@@ -45,6 +47,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/data/DataBufferObserverSet;->zaa:Ljava/util/HashSet;
 
     invoke-virtual {p0}, Ljava/util/HashSet;->clear()V
@@ -55,6 +58,7 @@
 .method public hasObservers()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/data/DataBufferObserverSet;->zaa:Ljava/util/HashSet;
 
     invoke-virtual {p0}, Ljava/util/HashSet;->isEmpty()Z
@@ -76,6 +80,7 @@
 .method public onDataChanged()V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/data/DataBufferObserverSet;->zaa:Ljava/util/HashSet;
 
     invoke-virtual {p0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -95,6 +100,7 @@
 
     check-cast v0, Lcom/google/android/gms/common/data/DataBufferObserver;
 
+    .line 2
     invoke-interface {v0}, Lcom/google/android/gms/common/data/DataBufferObserver;->onDataChanged()V
 
     goto :goto_0
@@ -106,6 +112,7 @@
 .method public onDataRangeChanged(II)V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/data/DataBufferObserverSet;->zaa:Ljava/util/HashSet;
 
     invoke-virtual {p0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -125,6 +132,7 @@
 
     check-cast v0, Lcom/google/android/gms/common/data/DataBufferObserver;
 
+    .line 2
     invoke-interface {v0, p1, p2}, Lcom/google/android/gms/common/data/DataBufferObserver;->onDataRangeChanged(II)V
 
     goto :goto_0
@@ -136,6 +144,7 @@
 .method public onDataRangeInserted(II)V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/data/DataBufferObserverSet;->zaa:Ljava/util/HashSet;
 
     invoke-virtual {p0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -155,6 +164,7 @@
 
     check-cast v0, Lcom/google/android/gms/common/data/DataBufferObserver;
 
+    .line 2
     invoke-interface {v0, p1, p2}, Lcom/google/android/gms/common/data/DataBufferObserver;->onDataRangeInserted(II)V
 
     goto :goto_0
@@ -166,6 +176,7 @@
 .method public onDataRangeMoved(III)V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/data/DataBufferObserverSet;->zaa:Ljava/util/HashSet;
 
     invoke-virtual {p0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -185,6 +196,7 @@
 
     check-cast v0, Lcom/google/android/gms/common/data/DataBufferObserver;
 
+    .line 2
     invoke-interface {v0, p1, p2, p3}, Lcom/google/android/gms/common/data/DataBufferObserver;->onDataRangeMoved(III)V
 
     goto :goto_0
@@ -196,6 +208,7 @@
 .method public onDataRangeRemoved(II)V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/data/DataBufferObserverSet;->zaa:Ljava/util/HashSet;
 
     invoke-virtual {p0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -215,6 +228,7 @@
 
     check-cast v0, Lcom/google/android/gms/common/data/DataBufferObserver;
 
+    .line 2
     invoke-interface {v0, p1, p2}, Lcom/google/android/gms/common/data/DataBufferObserver;->onDataRangeRemoved(II)V
 
     goto :goto_0
@@ -230,6 +244,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/data/DataBufferObserverSet;->zaa:Ljava/util/HashSet;
 
     invoke-virtual {p0, p1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z

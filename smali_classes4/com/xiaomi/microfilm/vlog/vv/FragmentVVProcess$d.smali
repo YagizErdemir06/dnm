@@ -18,14 +18,23 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;
+.field public final synthetic c:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess$d;->a:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;
+    .line 1
+    iput-object p1, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess$d;->c:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,9 +46,10 @@
 .method public run()V
     .locals 1
 
-    iget-object p0, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess$d;->a:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess$d;->c:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;
 
-    invoke-static {p0}, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;->di(Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;)Landroid/view/View;
+    invoke-static {p0}, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;->nb(Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;)Landroid/view/View;
 
     move-result-object p0
 

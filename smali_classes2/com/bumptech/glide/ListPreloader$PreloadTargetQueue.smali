@@ -1,4 +1,4 @@
-.class final Lcom/bumptech/glide/ListPreloader$PreloadTargetQueue;
+.class public final Lcom/bumptech/glide/ListPreloader$PreloadTargetQueue;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final queue:Ljava/util/Queue;
+.field public final queue:Ljava/util/Queue;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Queue<",
@@ -30,8 +30,10 @@
 .method public constructor <init>(I)V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/bumptech/glide/util/Util;->createQueue(I)Ljava/util/Queue;
 
     move-result-object v0
@@ -43,6 +45,7 @@
     :goto_0
     if-ge v0, p1, :cond_0
 
+    .line 3
     iget-object v1, p0, Lcom/bumptech/glide/ListPreloader$PreloadTargetQueue;->queue:Ljava/util/Queue;
 
     new-instance v2, Lcom/bumptech/glide/ListPreloader$PreloadTarget;
@@ -64,6 +67,7 @@
 .method public next(II)Lcom/bumptech/glide/ListPreloader$PreloadTarget;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/ListPreloader$PreloadTargetQueue;->queue:Ljava/util/Queue;
 
     invoke-interface {v0}, Ljava/util/Queue;->poll()Ljava/lang/Object;
@@ -72,12 +76,15 @@
 
     check-cast v0, Lcom/bumptech/glide/ListPreloader$PreloadTarget;
 
+    .line 2
     iget-object p0, p0, Lcom/bumptech/glide/ListPreloader$PreloadTargetQueue;->queue:Ljava/util/Queue;
 
     invoke-interface {p0, v0}, Ljava/util/Queue;->offer(Ljava/lang/Object;)Z
 
+    .line 3
     iput p1, v0, Lcom/bumptech/glide/ListPreloader$PreloadTarget;->photoWidth:I
 
+    .line 4
     iput p2, v0, Lcom/bumptech/glide/ListPreloader$PreloadTarget;->photoHeight:I
 
     return-object v0

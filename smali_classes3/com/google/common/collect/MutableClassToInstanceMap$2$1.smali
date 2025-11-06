@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/MutableClassToInstanceMap$2$1;
+.class public Lcom/google/common/collect/MutableClassToInstanceMap$2$1;
 .super Lcom/google/common/collect/TransformedIterator;
 .source "SourceFile"
 
@@ -30,6 +30,7 @@
 .method public constructor <init>(Lcom/google/common/collect/MutableClassToInstanceMap$2;Ljava/util/Iterator;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p2}, Lcom/google/common/collect/TransformedIterator;-><init>(Ljava/util/Iterator;)V
 
     return-void

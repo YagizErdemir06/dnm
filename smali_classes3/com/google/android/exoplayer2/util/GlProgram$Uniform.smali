@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/util/GlProgram$Uniform;
+.class public final Lcom/google/android/exoplayer2/util/GlProgram$Uniform;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -32,18 +32,23 @@
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/util/GlProgram$Uniform;->name:Ljava/lang/String;
 
+    .line 3
     iput p2, p0, Lcom/google/android/exoplayer2/util/GlProgram$Uniform;->location:I
 
+    .line 4
     iput p3, p0, Lcom/google/android/exoplayer2/util/GlProgram$Uniform;->type:I
 
     const/16 p1, 0x10
 
     new-array p1, p1, [F
 
+    .line 5
     iput-object p1, p0, Lcom/google/android/exoplayer2/util/GlProgram$Uniform;->value:[F
 
     return-void
@@ -62,19 +67,24 @@
 
     const/4 v12, 0x0
 
+    .line 1
     invoke-static {p0, v2, v1, v12}, Landroid/opengl/GLES20;->glGetProgramiv(II[II)V
 
     new-array v13, v0, [I
 
+    .line 2
     aget v2, v1, v12
 
     new-array v14, v2, [B
 
+    .line 3
+    aget v2, v1, v12
+
     new-array v3, v0, [I
 
-    const/4 v4, 0x0
-
     new-array v5, v0, [I
+
+    const/4 v4, 0x0
 
     const/4 v6, 0x0
 
@@ -92,6 +102,7 @@
 
     invoke-static/range {v0 .. v10}, Landroid/opengl/GLES20;->glGetActiveUniform(III[II[II[II[BI)V
 
+    .line 4
     new-instance v0, Ljava/lang/String;
 
     invoke-static {v14}, Lcom/google/android/exoplayer2/util/GlProgram;->access$000([B)I
@@ -100,10 +111,12 @@
 
     invoke-direct {v0, v14, v12, v1}, Ljava/lang/String;-><init>([BII)V
 
+    .line 5
     invoke-static {p0, v0}, Lcom/google/android/exoplayer2/util/GlProgram;->access$200(ILjava/lang/String;)I
 
     move-result v1
 
+    .line 6
     new-instance v2, Lcom/google/android/exoplayer2/util/GlProgram$Uniform;
 
     aget v3, v13, v12
@@ -118,6 +131,7 @@
 .method public bind()V
     .locals 3
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/util/GlProgram$Uniform;->type:I
 
     const/4 v1, 0x1
@@ -126,6 +140,7 @@
 
     sparse-switch v0, :sswitch_data_0
 
+    .line 2
     new-instance v0, Ljava/lang/IllegalStateException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -148,6 +163,7 @@
 
     throw v0
 
+    .line 3
     :sswitch_0
     iget v0, p0, Lcom/google/android/exoplayer2/util/GlProgram$Uniform;->texId:I
 
@@ -155,14 +171,17 @@
 
     const v0, 0x84c0
 
+    .line 4
     iget v1, p0, Lcom/google/android/exoplayer2/util/GlProgram$Uniform;->texUnitIndex:I
 
     add-int/2addr v1, v0
 
     invoke-static {v1}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
+    .line 5
     invoke-static {}, Lcom/google/android/exoplayer2/util/GlUtil;->checkGlError()V
 
+    .line 6
     iget v0, p0, Lcom/google/android/exoplayer2/util/GlProgram$Uniform;->type:I
 
     const v1, 0x8b5e    # 4.9996E-41f
@@ -176,21 +195,26 @@
     :cond_0
     const v0, 0x8d65
 
+    .line 7
     :goto_0
     iget v1, p0, Lcom/google/android/exoplayer2/util/GlProgram$Uniform;->texId:I
 
+    .line 8
     invoke-static {v0, v1}, Lcom/google/android/exoplayer2/util/GlUtil;->bindTexture(II)V
 
+    .line 9
     iget v0, p0, Lcom/google/android/exoplayer2/util/GlProgram$Uniform;->location:I
 
     iget p0, p0, Lcom/google/android/exoplayer2/util/GlProgram$Uniform;->texUnitIndex:I
 
     invoke-static {v0, p0}, Landroid/opengl/GLES20;->glUniform1i(II)V
 
+    .line 10
     invoke-static {}, Lcom/google/android/exoplayer2/util/GlUtil;->checkGlError()V
 
     goto :goto_1
 
+    .line 11
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -200,6 +224,7 @@
 
     throw p0
 
+    .line 12
     :sswitch_1
     iget v0, p0, Lcom/google/android/exoplayer2/util/GlProgram$Uniform;->location:I
 
@@ -207,10 +232,12 @@
 
     invoke-static {v0, v1, v2, p0, v2}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZ[FI)V
 
+    .line 13
     invoke-static {}, Lcom/google/android/exoplayer2/util/GlUtil;->checkGlError()V
 
     goto :goto_1
 
+    .line 14
     :sswitch_2
     iget v0, p0, Lcom/google/android/exoplayer2/util/GlProgram$Uniform;->location:I
 
@@ -218,10 +245,12 @@
 
     invoke-static {v0, v1, v2, p0, v2}, Landroid/opengl/GLES20;->glUniformMatrix3fv(IIZ[FI)V
 
+    .line 15
     invoke-static {}, Lcom/google/android/exoplayer2/util/GlUtil;->checkGlError()V
 
     goto :goto_1
 
+    .line 16
     :sswitch_3
     iget v0, p0, Lcom/google/android/exoplayer2/util/GlProgram$Uniform;->location:I
 
@@ -229,10 +258,12 @@
 
     invoke-static {v0, v1, p0, v2}, Landroid/opengl/GLES20;->glUniform3fv(II[FI)V
 
+    .line 17
     invoke-static {}, Lcom/google/android/exoplayer2/util/GlUtil;->checkGlError()V
 
     goto :goto_1
 
+    .line 18
     :sswitch_4
     iget v0, p0, Lcom/google/android/exoplayer2/util/GlProgram$Uniform;->location:I
 
@@ -240,10 +271,12 @@
 
     invoke-static {v0, v1, p0, v2}, Landroid/opengl/GLES20;->glUniform2fv(II[FI)V
 
+    .line 19
     invoke-static {}, Lcom/google/android/exoplayer2/util/GlUtil;->checkGlError()V
 
     goto :goto_1
 
+    .line 20
     :sswitch_5
     iget v0, p0, Lcom/google/android/exoplayer2/util/GlProgram$Uniform;->location:I
 
@@ -251,6 +284,7 @@
 
     invoke-static {v0, v1, p0, v2}, Landroid/opengl/GLES20;->glUniform1fv(II[FI)V
 
+    .line 21
     invoke-static {}, Lcom/google/android/exoplayer2/util/GlUtil;->checkGlError()V
 
     :goto_1
@@ -272,6 +306,7 @@
 .method public setFloat(F)V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/GlProgram$Uniform;->value:[F
 
     const/4 v0, 0x0
@@ -284,6 +319,7 @@
 .method public setFloats([F)V
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/GlProgram$Uniform;->value:[F
 
     array-length v0, p1
@@ -298,8 +334,10 @@
 .method public setSamplerTexId(II)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/util/GlProgram$Uniform;->texId:I
 
+    .line 2
     iput p2, p0, Lcom/google/android/exoplayer2/util/GlProgram$Uniform;->texUnitIndex:I
 
     return-void

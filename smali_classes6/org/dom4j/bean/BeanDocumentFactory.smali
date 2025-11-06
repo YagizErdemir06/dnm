@@ -4,7 +4,7 @@
 
 
 # static fields
-.field static synthetic class$org$dom4j$bean$BeanDocumentFactory:Ljava/lang/Class;
+.field public static synthetic class$org$dom4j$bean$BeanDocumentFactory:Ljava/lang/Class;
 
 .field private static singleton:Lorg/dom4j/bean/BeanDocumentFactory;
 
@@ -13,6 +13,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lorg/dom4j/bean/BeanDocumentFactory;
 
     invoke-direct {v0}, Lorg/dom4j/bean/BeanDocumentFactory;-><init>()V
@@ -25,6 +26,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/dom4j/DocumentFactory;-><init>()V
 
     return-void
@@ -33,6 +35,7 @@
 .method public static synthetic class$(Ljava/lang/String;)Ljava/lang/Class;
     .locals 1
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -47,7 +50,7 @@
 
     new-instance v0, Ljava/lang/NoClassDefFoundError;
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/ClassNotFoundException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
 
@@ -59,6 +62,7 @@
 .method public static getInstance()Lorg/dom4j/DocumentFactory;
     .locals 1
 
+    .line 1
     sget-object v0, Lorg/dom4j/bean/BeanDocumentFactory;->singleton:Lorg/dom4j/bean/BeanDocumentFactory;
 
     return-object v0
@@ -69,6 +73,7 @@
 .method public createAttribute(Lorg/dom4j/Element;Lorg/dom4j/QName;Ljava/lang/String;)Lorg/dom4j/Attribute;
     .locals 0
 
+    .line 1
     new-instance p0, Lorg/dom4j/tree/DefaultAttribute;
 
     invoke-direct {p0, p2, p3}, Lorg/dom4j/tree/DefaultAttribute;-><init>(Lorg/dom4j/QName;Ljava/lang/String;)V
@@ -89,36 +94,39 @@
 
     const-string p1, "class"
 
+    .line 1
     invoke-interface {p2, p1}, Lorg/xml/sax/Attributes;->getValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
+    const/4 p2, 0x1
+
+    .line 2
     :try_start_0
-    sget-object p2, Lorg/dom4j/bean/BeanDocumentFactory;->class$org$dom4j$bean$BeanDocumentFactory:Ljava/lang/Class;
+    sget-object v0, Lorg/dom4j/bean/BeanDocumentFactory;->class$org$dom4j$bean$BeanDocumentFactory:Ljava/lang/Class;
 
-    if-nez p2, :cond_0
+    if-nez v0, :cond_0
 
-    const-string p2, "org.dom4j.bean.BeanDocumentFactory"
+    const-string v0, "org.dom4j.bean.BeanDocumentFactory"
 
-    invoke-static {p2}, Lorg/dom4j/bean/BeanDocumentFactory;->class$(Ljava/lang/String;)Ljava/lang/Class;
+    invoke-static {v0}, Lorg/dom4j/bean/BeanDocumentFactory;->class$(Ljava/lang/String;)Ljava/lang/Class;
 
-    move-result-object p2
+    move-result-object v0
 
-    sput-object p2, Lorg/dom4j/bean/BeanDocumentFactory;->class$org$dom4j$bean$BeanDocumentFactory:Ljava/lang/Class;
+    sput-object v0, Lorg/dom4j/bean/BeanDocumentFactory;->class$org$dom4j$bean$BeanDocumentFactory:Ljava/lang/Class;
 
     :cond_0
-    invoke-virtual {p2}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
-    move-result-object p2
+    move-result-object v0
 
-    const/4 v0, 0x1
-
-    invoke-static {p1, v0, p2}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
+    invoke-static {p1, p2, v0}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
 
     move-result-object p1
 
+    .line 3
     invoke-virtual {p1}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
     move-result-object p0
@@ -130,6 +138,7 @@
     :catch_0
     move-exception p1
 
+    .line 4
     invoke-virtual {p0, p1}, Lorg/dom4j/bean/BeanDocumentFactory;->handleException(Ljava/lang/Exception;)V
 
     :cond_1
@@ -193,6 +202,7 @@
 .method public handleException(Ljava/lang/Exception;)V
     .locals 2
 
+    .line 1
     sget-object p0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v0, Ljava/lang/StringBuffer;

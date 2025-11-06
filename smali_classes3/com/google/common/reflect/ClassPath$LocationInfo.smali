@@ -1,4 +1,4 @@
-.class final Lcom/google/common/reflect/ClassPath$LocationInfo;
+.class public final Lcom/google/common/reflect/ClassPath$LocationInfo;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -17,15 +17,17 @@
 # instance fields
 .field private final classloader:Ljava/lang/ClassLoader;
 
-.field final home:Ljava/io/File;
+.field public final home:Ljava/io/File;
 
 
 # direct methods
 .method public constructor <init>(Ljava/io/File;Ljava/lang/ClassLoader;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -34,6 +36,7 @@
 
     iput-object p1, p0, Lcom/google/common/reflect/ClassPath$LocationInfo;->home:Ljava/io/File;
 
+    .line 3
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -66,6 +69,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
@@ -77,6 +81,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     invoke-virtual {p1}, Ljava/io/File;->isDirectory()Z
 
@@ -84,10 +89,12 @@
 
     if-eqz v0, :cond_1
 
+    .line 3
     invoke-direct {p0, p1, p3}, Lcom/google/common/reflect/ClassPath$LocationInfo;->scanDirectory(Ljava/io/File;Lcom/google/common/collect/ImmutableSet$Builder;)V
 
     goto :goto_0
 
+    .line 4
     :cond_1
     invoke-direct {p0, p1, p2, p3}, Lcom/google/common/reflect/ClassPath$LocationInfo;->scanJar(Ljava/io/File;Ljava/util/Set;Lcom/google/common/collect/ImmutableSet$Builder;)V
 
@@ -97,6 +104,7 @@
     :catch_0
     move-exception p0
 
+    .line 5
     invoke-static {}, Lcom/google/common/reflect/ClassPath;->access$000()Ljava/util/logging/Logger;
 
     move-result-object p2
@@ -402,6 +410,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     new-instance v0, Ljava/util/jar/JarFile;
 
@@ -409,6 +418,7 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
 
+    .line 2
     :try_start_1
     invoke-virtual {v0}, Ljava/util/jar/JarFile;->getManifest()Ljava/util/jar/Manifest;
 
@@ -436,6 +446,7 @@
 
     check-cast v1, Ljava/io/File;
 
+    .line 3
     invoke-virtual {v1}, Ljava/io/File;->getCanonicalFile()Ljava/io/File;
 
     move-result-object v2
@@ -446,17 +457,20 @@
 
     if-eqz v2, :cond_0
 
+    .line 4
     invoke-direct {p0, v1, p2, p3}, Lcom/google/common/reflect/ClassPath$LocationInfo;->scan(Ljava/io/File;Ljava/util/Set;Lcom/google/common/collect/ImmutableSet$Builder;)V
 
     goto :goto_0
 
+    .line 5
     :cond_1
     invoke-direct {p0, v0, p3}, Lcom/google/common/reflect/ClassPath$LocationInfo;->scanJarFile(Ljava/util/jar/JarFile;Lcom/google/common/collect/ImmutableSet$Builder;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 6
     :try_start_2
-    invoke-virtual {v0}, Ljava/util/zip/ZipFile;->close()V
+    invoke-virtual {v0}, Ljava/util/jar/JarFile;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
@@ -467,10 +481,11 @@
     move-exception p0
 
     :try_start_3
-    invoke-virtual {v0}, Ljava/util/zip/ZipFile;->close()V
+    invoke-virtual {v0}, Ljava/util/jar/JarFile;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
 
+    .line 7
     :catch_1
     throw p0
 
@@ -490,10 +505,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/util/jar/JarFile;->entries()Ljava/util/Enumeration;
 
     move-result-object v0
 
+    .line 2
     :cond_0
     :goto_0
     invoke-interface {v0}, Ljava/util/Enumeration;->hasMoreElements()Z
@@ -502,19 +519,21 @@
 
     if-eqz v1, :cond_2
 
+    .line 3
     invoke-interface {v0}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/jar/JarEntry;
 
-    invoke-virtual {v1}, Ljava/util/zip/ZipEntry;->isDirectory()Z
+    .line 4
+    invoke-virtual {v1}, Ljava/util/jar/JarEntry;->isDirectory()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    invoke-virtual {v1}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/util/jar/JarEntry;->getName()Ljava/lang/String;
 
     move-result-object v2
 
@@ -528,16 +547,17 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     new-instance v2, Ljava/io/File;
 
-    invoke-virtual {p1}, Ljava/util/zip/ZipFile;->getName()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/util/jar/JarFile;->getName()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-direct {v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/util/jar/JarEntry;->getName()Ljava/lang/String;
 
     move-result-object v1
 
@@ -564,14 +584,17 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/common/reflect/ClassPath$LocationInfo;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/common/reflect/ClassPath$LocationInfo;
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/reflect/ClassPath$LocationInfo;->home:Ljava/io/File;
 
     iget-object v2, p1, Lcom/google/common/reflect/ClassPath$LocationInfo;->home:Ljava/io/File;
@@ -601,6 +624,7 @@
 .method public final file()Ljava/io/File;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/ClassPath$LocationInfo;->home:Ljava/io/File;
 
     return-object p0
@@ -609,6 +633,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/ClassPath$LocationInfo;->home:Ljava/io/File;
 
     invoke-virtual {p0}, Ljava/io/File;->hashCode()I
@@ -693,6 +718,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/ClassPath$LocationInfo;->home:Ljava/io/File;
 
     invoke-virtual {p0}, Ljava/io/File;->toString()Ljava/lang/String;

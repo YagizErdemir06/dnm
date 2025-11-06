@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
+.class public final Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -105,30 +105,39 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/source/rtsp/RtspClient$SessionInfoListener;Lcom/google/android/exoplayer2/source/rtsp/RtspClient$PlaybackEventListener;Ljava/lang/String;Landroid/net/Uri;Ljavax/net/SocketFactory;Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->sessionInfoListener:Lcom/google/android/exoplayer2/source/rtsp/RtspClient$SessionInfoListener;
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->playbackEventListener:Lcom/google/android/exoplayer2/source/rtsp/RtspClient$PlaybackEventListener;
 
+    .line 4
     iput-object p3, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->userAgent:Ljava/lang/String;
 
+    .line 5
     iput-object p5, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->socketFactory:Ljavax/net/SocketFactory;
 
+    .line 6
     iput-boolean p6, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->debugLoggingEnabled:Z
 
+    .line 7
     new-instance p1, Ljava/util/ArrayDeque;
 
     invoke-direct {p1}, Ljava/util/ArrayDeque;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->pendingSetupRtpLoadInfos:Ljava/util/ArrayDeque;
 
+    .line 8
     new-instance p1, Landroid/util/SparseArray;
 
     invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->pendingRequests:Landroid/util/SparseArray;
 
+    .line 9
     new-instance p1, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;
 
     const/4 p2, 0x0
@@ -137,12 +146,14 @@
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->messageSender:Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;
 
+    .line 10
     invoke-static {p4}, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil;->removeUserInfo(Landroid/net/Uri;)Landroid/net/Uri;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->uri:Landroid/net/Uri;
 
+    .line 11
     new-instance p1, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;
 
     new-instance p2, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageListener;
@@ -153,6 +164,7 @@
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->messageChannel:Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;
 
+    .line 12
     invoke-static {p4}, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil;->parseUserInfo(Landroid/net/Uri;)Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil$RtspAuthUserInfo;
 
     move-result-object p1
@@ -161,10 +173,12 @@
 
     const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 13
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->pendingSeekPositionUs:J
 
     const/4 p1, -0x1
 
+    .line 14
     iput p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->rtspState:I
 
     return-void
@@ -173,6 +187,7 @@
 .method public static synthetic access$100(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->rtspState:I
 
     return p0
@@ -181,6 +196,7 @@
 .method public static synthetic access$1000(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;)Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->messageChannel:Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;
 
     return-object p0
@@ -189,6 +205,7 @@
 .method public static synthetic access$102(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;I)I
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->rtspState:I
 
     return p1
@@ -197,6 +214,7 @@
 .method public static synthetic access$1100(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;)Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->messageSender:Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;
 
     return-object p0
@@ -205,6 +223,7 @@
 .method public static synthetic access$1200(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;)Lcom/google/android/exoplayer2/source/rtsp/RtspClient$SessionInfoListener;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->sessionInfoListener:Lcom/google/android/exoplayer2/source/rtsp/RtspClient$SessionInfoListener;
 
     return-object p0
@@ -213,6 +232,7 @@
 .method public static synthetic access$1300(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;)Landroid/net/Uri;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->uri:Landroid/net/Uri;
 
     return-object p0
@@ -221,6 +241,7 @@
 .method public static synthetic access$1302(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;Landroid/net/Uri;)Landroid/net/Uri;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->uri:Landroid/net/Uri;
 
     return-object p1
@@ -229,6 +250,7 @@
 .method public static synthetic access$1400(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;)Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->receivedAuthorizationRequest:Z
 
     return p0
@@ -237,6 +259,7 @@
 .method public static synthetic access$1402(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;Z)Z
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->receivedAuthorizationRequest:Z
 
     return p1
@@ -245,6 +268,7 @@
 .method public static synthetic access$1500(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;)Lcom/google/android/exoplayer2/source/rtsp/RtspClient$KeepAliveMonitor;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->keepAliveMonitor:Lcom/google/android/exoplayer2/source/rtsp/RtspClient$KeepAliveMonitor;
 
     return-object p0
@@ -253,6 +277,7 @@
 .method public static synthetic access$1502(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;Lcom/google/android/exoplayer2/source/rtsp/RtspClient$KeepAliveMonitor;)Lcom/google/android/exoplayer2/source/rtsp/RtspClient$KeepAliveMonitor;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->keepAliveMonitor:Lcom/google/android/exoplayer2/source/rtsp/RtspClient$KeepAliveMonitor;
 
     return-object p1
@@ -261,6 +286,7 @@
 .method public static synthetic access$1600(Ljava/util/List;)Z
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->serverSupportsDescribe(Ljava/util/List;)Z
 
     move-result p0
@@ -271,6 +297,7 @@
 .method public static synthetic access$1700(Lcom/google/android/exoplayer2/source/rtsp/SessionDescription;Landroid/net/Uri;)Lcom/google/common/collect/ImmutableList;
     .locals 0
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->buildTrackList(Lcom/google/android/exoplayer2/source/rtsp/SessionDescription;Landroid/net/Uri;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object p0
@@ -281,6 +308,7 @@
 .method public static synthetic access$1802(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;Z)Z
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->hasUpdatedTimelineAndTracks:Z
 
     return p1
@@ -289,6 +317,7 @@
 .method public static synthetic access$1900(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->continueSetupRtspTrack()V
 
     return-void
@@ -297,6 +326,7 @@
 .method public static synthetic access$2000(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;)J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->pendingSeekPositionUs:J
 
     return-wide v0
@@ -305,6 +335,7 @@
 .method public static synthetic access$2002(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;J)J
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->pendingSeekPositionUs:J
 
     return-wide p1
@@ -313,6 +344,7 @@
 .method public static synthetic access$202(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;Z)Z
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->hasPendingPauseRequest:Z
 
     return p1
@@ -321,6 +353,7 @@
 .method public static synthetic access$2100(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;)Lcom/google/android/exoplayer2/source/rtsp/RtspClient$PlaybackEventListener;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->playbackEventListener:Lcom/google/android/exoplayer2/source/rtsp/RtspClient$PlaybackEventListener;
 
     return-object p0
@@ -329,6 +362,7 @@
 .method public static synthetic access$300(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->sessionId:Ljava/lang/String;
 
     return-object p0
@@ -337,6 +371,7 @@
 .method public static synthetic access$302(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->sessionId:Ljava/lang/String;
 
     return-object p1
@@ -345,6 +380,7 @@
 .method public static synthetic access$400(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->userAgent:Ljava/lang/String;
 
     return-object p0
@@ -353,6 +389,7 @@
 .method public static synthetic access$500(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;)Lcom/google/android/exoplayer2/source/rtsp/RtspAuthenticationInfo;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->rtspAuthenticationInfo:Lcom/google/android/exoplayer2/source/rtsp/RtspAuthenticationInfo;
 
     return-object p0
@@ -361,6 +398,7 @@
 .method public static synthetic access$502(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;Lcom/google/android/exoplayer2/source/rtsp/RtspAuthenticationInfo;)Lcom/google/android/exoplayer2/source/rtsp/RtspAuthenticationInfo;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->rtspAuthenticationInfo:Lcom/google/android/exoplayer2/source/rtsp/RtspAuthenticationInfo;
 
     return-object p1
@@ -369,6 +407,7 @@
 .method public static synthetic access$600(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;)Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil$RtspAuthUserInfo;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->rtspAuthUserInfo:Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil$RtspAuthUserInfo;
 
     return-object p0
@@ -377,6 +416,7 @@
 .method public static synthetic access$602(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil$RtspAuthUserInfo;)Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil$RtspAuthUserInfo;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->rtspAuthUserInfo:Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil$RtspAuthUserInfo;
 
     return-object p1
@@ -385,6 +425,7 @@
 .method public static synthetic access$700(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->dispatchRtspError(Ljava/lang/Throwable;)V
 
     return-void
@@ -393,6 +434,7 @@
 .method public static synthetic access$800(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;)Landroid/util/SparseArray;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->pendingRequests:Landroid/util/SparseArray;
 
     return-object p0
@@ -401,6 +443,7 @@
 .method public static synthetic access$900(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;Ljava/util/List;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->maybeLogMessage(Ljava/util/List;)V
 
     return-void
@@ -420,12 +463,14 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ImmutableList$Builder;
 
     invoke-direct {v0}, Lcom/google/common/collect/ImmutableList$Builder;-><init>()V
 
     const/4 v1, 0x0
 
+    .line 2
     :goto_0
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/rtsp/SessionDescription;->mediaDescriptionList:Lcom/google/common/collect/ImmutableList;
 
@@ -435,6 +480,7 @@
 
     if-ge v1, v2, :cond_1
 
+    .line 3
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/rtsp/SessionDescription;->mediaDescriptionList:Lcom/google/common/collect/ImmutableList;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -443,12 +489,14 @@
 
     check-cast v2, Lcom/google/android/exoplayer2/source/rtsp/MediaDescription;
 
+    .line 4
     invoke-static {v2}, Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;->isFormatSupported(Lcom/google/android/exoplayer2/source/rtsp/MediaDescription;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
+    .line 5
     new-instance v3, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaTrack;
 
     invoke-direct {v3, v2, p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaTrack;-><init>(Lcom/google/android/exoplayer2/source/rtsp/MediaDescription;Landroid/net/Uri;)V
@@ -460,6 +508,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_1
     invoke-virtual {v0}, Lcom/google/common/collect/ImmutableList$Builder;->build()Lcom/google/common/collect/ImmutableList;
 
@@ -471,6 +520,7 @@
 .method private continueSetupRtspTrack()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->pendingSetupRtpLoadInfos:Ljava/util/ArrayDeque;
 
     invoke-virtual {v0}, Ljava/util/ArrayDeque;->pollFirst()Ljava/lang/Object;
@@ -481,12 +531,14 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->playbackEventListener:Lcom/google/android/exoplayer2/source/rtsp/RtspClient$PlaybackEventListener;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$PlaybackEventListener;->onRtspSetupCompleted()V
 
     return-void
 
+    .line 3
     :cond_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->messageSender:Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;
 
@@ -508,32 +560,38 @@
 .method private dispatchRtspError(Ljava/lang/Throwable;)V
     .locals 2
 
+    .line 1
     instance-of v0, p1, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$RtspPlaybackException;
 
     if-eqz v0, :cond_0
 
+    .line 2
     move-object v0, p1
 
     check-cast v0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$RtspPlaybackException;
 
     goto :goto_0
 
+    .line 3
     :cond_0
     new-instance v0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$RtspPlaybackException;
 
     invoke-direct {v0, p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$RtspPlaybackException;-><init>(Ljava/lang/Throwable;)V
 
+    .line 4
     :goto_0
     iget-boolean v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->hasUpdatedTimelineAndTracks:Z
 
     if-eqz v1, :cond_1
 
+    .line 5
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->playbackEventListener:Lcom/google/android/exoplayer2/source/rtsp/RtspClient$PlaybackEventListener;
 
     invoke-interface {p0, v0}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$PlaybackEventListener;->onPlaybackError(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$RtspPlaybackException;)V
 
     goto :goto_1
 
+    .line 6
     :cond_1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->sessionInfoListener:Lcom/google/android/exoplayer2/source/rtsp/RtspClient$SessionInfoListener;
 
@@ -559,6 +617,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/net/Uri;->getHost()Ljava/lang/String;
 
     move-result-object v0
@@ -575,6 +634,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 2
     invoke-virtual {p1}, Landroid/net/Uri;->getPort()I
 
     move-result v0
@@ -590,6 +650,7 @@
     :cond_1
     const/16 v0, 0x22a
 
+    .line 3
     :goto_1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->socketFactory:Ljavax/net/SocketFactory;
 
@@ -621,12 +682,14 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->debugLoggingEnabled:Z
 
     if-eqz p0, :cond_0
 
     const-string p0, "\n"
 
+    .line 2
     invoke-static {p0}, Lcom/google/common/base/Joiner;->on(Ljava/lang/String;)Lcom/google/common/base/Joiner;
 
     move-result-object p0
@@ -654,6 +717,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
@@ -697,16 +761,20 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->keepAliveMonitor:Lcom/google/android/exoplayer2/source/rtsp/RtspClient$KeepAliveMonitor;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$KeepAliveMonitor;->close()V
 
     const/4 v0, 0x0
 
+    .line 3
     iput-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->keepAliveMonitor:Lcom/google/android/exoplayer2/source/rtsp/RtspClient$KeepAliveMonitor;
 
+    .line 4
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->messageSender:Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->uri:Landroid/net/Uri;
@@ -721,6 +789,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->sendTeardownRequest(Landroid/net/Uri;Ljava/lang/String;)V
 
+    .line 5
     :cond_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->messageChannel:Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;
 
@@ -732,6 +801,7 @@
 .method public getState()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->rtspState:I
 
     return p0
@@ -740,6 +810,7 @@
 .method public registerInterleavedDataChannel(ILcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel$InterleavedBinaryDataListener;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->messageChannel:Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;->registerInterleavedBinaryDataListener(ILcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel$InterleavedBinaryDataListener;)V
@@ -750,9 +821,11 @@
 .method public retryWithRtpTcp()V
     .locals 2
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->close()V
 
+    .line 2
     new-instance v0, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;
 
     new-instance v1, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageListener;
@@ -763,6 +836,7 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->messageChannel:Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->uri:Landroid/net/Uri;
 
     invoke-direct {p0, v1}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->getSocket(Landroid/net/Uri;)Ljava/net/Socket;
@@ -773,12 +847,15 @@
 
     const/4 v0, 0x0
 
+    .line 4
     iput-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->sessionId:Ljava/lang/String;
 
     const/4 v1, 0x0
 
+    .line 5
     iput-boolean v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->receivedAuthorizationRequest:Z
 
+    .line 6
     iput-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->rtspAuthenticationInfo:Lcom/google/android/exoplayer2/source/rtsp/RtspAuthenticationInfo;
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -788,6 +865,7 @@
     :catch_0
     move-exception v0
 
+    .line 7
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->playbackEventListener:Lcom/google/android/exoplayer2/source/rtsp/RtspClient$PlaybackEventListener;
 
     new-instance v1, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$RtspPlaybackException;
@@ -803,6 +881,7 @@
 .method public seekToUs(J)V
     .locals 3
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->rtspState:I
 
     const/4 v1, 0x2
@@ -813,6 +892,7 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->messageSender:Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->uri:Landroid/net/Uri;
@@ -827,6 +907,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->sendPauseRequest(Landroid/net/Uri;Ljava/lang/String;)V
 
+    .line 3
     :cond_0
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->pendingSeekPositionUs:J
 
@@ -844,10 +925,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->pendingSetupRtpLoadInfos:Ljava/util/ArrayDeque;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayDeque;->addAll(Ljava/util/Collection;)Z
 
+    .line 2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->continueSetupRtspTrack()V
 
     return-void
@@ -861,6 +944,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->messageChannel:Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;
 
@@ -874,6 +958,7 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->messageSender:Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->uri:Landroid/net/Uri;
@@ -887,16 +972,19 @@
     :catch_0
     move-exception v0
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->messageChannel:Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Util;->closeQuietly(Ljava/io/Closeable;)V
 
+    .line 4
     throw v0
 .end method
 
 .method public startPlayback(J)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->messageSender:Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->uri:Landroid/net/Uri;

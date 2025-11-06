@@ -37,6 +37,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ForwardingObject;-><init>()V
 
     return-void
@@ -54,6 +55,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/cache/ForwardingCache;->delegate()Lcom/google/common/cache/Cache;
 
     move-result-object p0
@@ -68,6 +70,7 @@
 .method public cleanUp()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/cache/ForwardingCache;->delegate()Lcom/google/common/cache/Cache;
 
     move-result-object p0
@@ -90,6 +93,7 @@
 .method public bridge synthetic delegate()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/cache/ForwardingCache;->delegate()Lcom/google/common/cache/Cache;
 
     move-result-object p0
@@ -113,6 +117,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/cache/ForwardingCache;->delegate()Lcom/google/common/cache/Cache;
 
     move-result-object p0
@@ -138,6 +143,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/cache/ForwardingCache;->delegate()Lcom/google/common/cache/Cache;
 
     move-result-object p0
@@ -162,6 +168,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/cache/ForwardingCache;->delegate()Lcom/google/common/cache/Cache;
 
     move-result-object p0
@@ -176,6 +183,7 @@
 .method public invalidate(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/cache/ForwardingCache;->delegate()Lcom/google/common/cache/Cache;
 
     move-result-object p0
@@ -228,6 +236,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/cache/ForwardingCache;->delegate()Lcom/google/common/cache/Cache;
 
     move-result-object p0
@@ -247,6 +256,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/cache/ForwardingCache;->delegate()Lcom/google/common/cache/Cache;
 
     move-result-object p0
@@ -259,6 +269,7 @@
 .method public size()J
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/cache/ForwardingCache;->delegate()Lcom/google/common/cache/Cache;
 
     move-result-object p0
@@ -273,6 +284,7 @@
 .method public stats()Lcom/google/common/cache/CacheStats;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/cache/ForwardingCache;->delegate()Lcom/google/common/cache/Cache;
 
     move-result-object p0

@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ImmutableList$SerializedForm;
+.class public Lcom/google/common/collect/ImmutableList$SerializedForm;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,15 +22,17 @@
 
 
 # instance fields
-.field final elements:[Ljava/lang/Object;
+.field public final elements:[Ljava/lang/Object;
 
 
 # direct methods
 .method public constructor <init>([Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/ImmutableList$SerializedForm;->elements:[Ljava/lang/Object;
 
     return-void
@@ -41,6 +43,7 @@
 .method public readResolve()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableList$SerializedForm;->elements:[Ljava/lang/Object;
 
     invoke-static {p0}, Lcom/google/common/collect/ImmutableList;->copyOf([Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;

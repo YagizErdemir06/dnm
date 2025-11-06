@@ -117,7 +117,7 @@
 
 
 # instance fields
-.field final zzb:I
+.field public final zzb:I
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$VersionField;
         id = 0x3e8
     .end annotation
@@ -392,12 +392,12 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    const/4 v1, 0x1
-
     .line 5
     invoke-virtual {p1}, Lcom/google/android/gms/common/ConnectionResult;->getResolution()Landroid/app/PendingIntent;
 
     move-result-object v4
+
+    const/4 v1, 0x1
 
     move-object v0, p0
 
@@ -422,6 +422,7 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/android/gms/common/api/Status;
 
     const/4 v1, 0x0
@@ -430,11 +431,13 @@
 
     return v1
 
+    .line 2
     :cond_0
     check-cast p1, Lcom/google/android/gms/common/api/Status;
 
     iget v0, p0, Lcom/google/android/gms/common/api/Status;->zzb:I
 
+    .line 3
     iget v2, p1, Lcom/google/android/gms/common/api/Status;->zzb:I
 
     if-ne v0, v2, :cond_1
@@ -449,6 +452,7 @@
 
     iget-object v2, p1, Lcom/google/android/gms/common/api/Status;->zzd:Ljava/lang/String;
 
+    .line 4
     invoke-static {v0, v2}, Lcom/google/android/gms/common/internal/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
@@ -459,6 +463,7 @@
 
     iget-object v2, p1, Lcom/google/android/gms/common/api/Status;->zze:Landroid/app/PendingIntent;
 
+    .line 5
     invoke-static {v0, v2}, Lcom/google/android/gms/common/internal/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
@@ -469,6 +474,7 @@
 
     iget-object p1, p1, Lcom/google/android/gms/common/api/Status;->zzf:Lcom/google/android/gms/common/ConnectionResult;
 
+    .line 6
     invoke-static {p0, p1}, Lcom/google/android/gms/common/internal/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -558,6 +564,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 1
     iget v1, p0, Lcom/google/android/gms/common/api/Status;->zzb:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -578,24 +585,25 @@
 
     aput-object v1, v0, v2
 
-    const/4 v1, 0x2
+    iget-object v1, p0, Lcom/google/android/gms/common/api/Status;->zzd:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/google/android/gms/common/api/Status;->zzd:Ljava/lang/String;
+    const/4 v2, 0x2
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/4 v1, 0x3
+    iget-object v1, p0, Lcom/google/android/gms/common/api/Status;->zze:Landroid/app/PendingIntent;
 
-    iget-object v2, p0, Lcom/google/android/gms/common/api/Status;->zze:Landroid/app/PendingIntent;
+    const/4 v2, 0x3
 
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x4
+    aput-object v1, v0, v2
 
     iget-object p0, p0, Lcom/google/android/gms/common/api/Status;->zzf:Lcom/google/android/gms/common/ConnectionResult;
 
+    const/4 v1, 0x4
+
     aput-object p0, v0, v1
 
+    .line 2
     invoke-static {v0}, Lcom/google/android/gms/common/internal/Objects;->hashCode([Ljava/lang/Object;)I
 
     move-result p0
@@ -672,6 +680,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/Status;->hasResolution()Z
 
     move-result v0
@@ -701,6 +710,7 @@
 
     move v2, p2
 
+    .line 2
     invoke-virtual/range {v0 .. v6}, Landroid/app/Activity;->startIntentSenderForResult(Landroid/content/IntentSender;ILandroid/content/Intent;III)V
 
     return-void
@@ -711,24 +721,28 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/gms/common/internal/Objects;->toStringHelper(Ljava/lang/Object;)Lcom/google/android/gms/common/internal/Objects$ToStringHelper;
 
     move-result-object v0
 
-    const-string v1, "statusCode"
-
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/Status;->zza()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/android/gms/common/internal/Objects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/common/internal/Objects$ToStringHelper;
+    const-string v2, "statusCode"
 
-    const-string v1, "resolution"
+    invoke-virtual {v0, v2, v1}, Lcom/google/android/gms/common/internal/Objects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/common/internal/Objects$ToStringHelper;
 
     iget-object p0, p0, Lcom/google/android/gms/common/api/Status;->zze:Landroid/app/PendingIntent;
 
+    const-string v1, "resolution"
+
+    .line 3
     invoke-virtual {v0, v1, p0}, Lcom/google/android/gms/common/internal/Objects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/common/internal/Objects$ToStringHelper;
 
+    .line 4
     invoke-virtual {v0}, Lcom/google/android/gms/common/internal/Objects$ToStringHelper;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -743,17 +757,19 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->beginObjectHeader(Landroid/os/Parcel;)I
 
     move-result v0
 
-    const/4 v1, 0x1
-
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/Status;->getStatusCode()I
 
-    move-result v2
+    move-result v1
 
-    invoke-static {p1, v1, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
+    const/4 v2, 0x1
+
+    .line 2
+    invoke-static {p1, v2, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/Status;->getStatusMessage()Ljava/lang/String;
 
@@ -763,28 +779,33 @@
 
     const/4 v3, 0x0
 
+    .line 3
     invoke-static {p1, v2, v1, v3}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeString(Landroid/os/Parcel;ILjava/lang/String;Z)V
 
-    const/4 v1, 0x3
+    iget-object v1, p0, Lcom/google/android/gms/common/api/Status;->zze:Landroid/app/PendingIntent;
 
-    iget-object v2, p0, Lcom/google/android/gms/common/api/Status;->zze:Landroid/app/PendingIntent;
+    const/4 v2, 0x3
 
-    invoke-static {p1, v1, v2, p2, v3}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeParcelable(Landroid/os/Parcel;ILandroid/os/Parcelable;IZ)V
-
-    const/4 v1, 0x4
+    .line 4
+    invoke-static {p1, v2, v1, p2, v3}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeParcelable(Landroid/os/Parcel;ILandroid/os/Parcelable;IZ)V
 
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/Status;->getConnectionResult()Lcom/google/android/gms/common/ConnectionResult;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-static {p1, v1, v2, p2, v3}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeParcelable(Landroid/os/Parcel;ILandroid/os/Parcelable;IZ)V
+    const/4 v2, 0x4
 
-    const/16 p2, 0x3e8
+    .line 5
+    invoke-static {p1, v2, v1, p2, v3}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeParcelable(Landroid/os/Parcel;ILandroid/os/Parcelable;IZ)V
 
     iget p0, p0, Lcom/google/android/gms/common/api/Status;->zzb:I
 
+    const/16 p2, 0x3e8
+
+    .line 6
     invoke-static {p1, p2, p0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
+    .line 7
     invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->finishObjectHeader(Landroid/os/Parcel;I)V
 
     return-void
@@ -795,6 +816,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/Status;->zzd:Ljava/lang/String;
 
     if-eqz v0, :cond_0

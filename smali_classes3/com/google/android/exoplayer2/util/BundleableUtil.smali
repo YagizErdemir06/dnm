@@ -7,6 +7,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,6 +22,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 1
     const-class v0, Lcom/google/android/exoplayer2/util/BundleableUtil;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -56,12 +58,14 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->builder()Lcom/google/common/collect/ImmutableList$Builder;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
+    .line 2
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -69,6 +73,7 @@
 
     if-ge v1, v2, :cond_0
 
+    .line 3
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -81,16 +86,19 @@
 
     check-cast v2, Landroid/os/Bundle;
 
+    .line 4
     invoke-interface {p0, v2}, Lcom/google/android/exoplayer2/Bundleable$Creator;->fromBundle(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/Bundleable;
 
     move-result-object v2
 
+    .line 5
     invoke-virtual {v0, v2}, Lcom/google/common/collect/ImmutableList$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-virtual {v0}, Lcom/google/common/collect/ImmutableList$Builder;->build()Lcom/google/common/collect/ImmutableList;
 
@@ -116,6 +124,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-virtual {p1}, Landroid/util/SparseArray;->size()I
@@ -126,6 +135,7 @@
 
     const/4 v1, 0x0
 
+    .line 2
     :goto_0
     invoke-virtual {p1}, Landroid/util/SparseArray;->size()I
 
@@ -133,6 +143,7 @@
 
     if-ge v1, v2, :cond_0
 
+    .line 3
     invoke-virtual {p1, v1}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v2
@@ -172,6 +183,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-interface {p0}, Ljava/util/Collection;->size()I
@@ -180,6 +192,7 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
+    .line 2
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -197,6 +210,7 @@
 
     check-cast v1, Lcom/google/android/exoplayer2/Bundleable;
 
+    .line 3
     invoke-interface {v1}, Lcom/google/android/exoplayer2/Bundleable;->toBundle()Landroid/os/Bundle;
 
     move-result-object v1
@@ -224,12 +238,14 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->builder()Lcom/google/common/collect/ImmutableList$Builder;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
+    .line 2
     :goto_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -237,12 +253,14 @@
 
     if-ge v1, v2, :cond_0
 
+    .line 3
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/google/android/exoplayer2/Bundleable;
 
+    .line 4
     invoke-interface {v2}, Lcom/google/android/exoplayer2/Bundleable;->toBundle()Landroid/os/Bundle;
 
     move-result-object v2
@@ -253,6 +271,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-virtual {v0}, Lcom/google/common/collect/ImmutableList$Builder;->build()Lcom/google/common/collect/ImmutableList;
 
@@ -276,6 +295,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-virtual {p0}, Landroid/util/SparseArray;->size()I
@@ -286,6 +306,7 @@
 
     const/4 v1, 0x0
 
+    .line 2
     :goto_0
     invoke-virtual {p0}, Landroid/util/SparseArray;->size()I
 
@@ -293,6 +314,7 @@
 
     if-ge v1, v2, :cond_0
 
+    .line 3
     invoke-virtual {p0, v1}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v2

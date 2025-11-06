@@ -1,4 +1,4 @@
-.class Lcom/google/common/graph/Graphs$TransposedGraph;
+.class public Lcom/google/common/graph/Graphs$TransposedGraph;
 .super Lcom/google/common/graph/ForwardingGraph;
 .source "SourceFile"
 
@@ -46,8 +46,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/graph/ForwardingGraph;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/graph/Graphs$TransposedGraph;->graph:Lcom/google/common/graph/Graph;
 
     return-void
@@ -56,6 +58,7 @@
 .method public static synthetic access$000(Lcom/google/common/graph/Graphs$TransposedGraph;)Lcom/google/common/graph/Graph;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/Graphs$TransposedGraph;->graph:Lcom/google/common/graph/Graph;
 
     return-object p0
@@ -144,6 +147,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/Graphs$TransposedGraph;->delegate()Lcom/google/common/graph/Graph;
 
     move-result-object p0
@@ -166,6 +170,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/graph/Graphs$TransposedGraph$1;
 
     invoke-direct {v0, p0, p0, p1}, Lcom/google/common/graph/Graphs$TransposedGraph$1;-><init>(Lcom/google/common/graph/Graphs$TransposedGraph;Lcom/google/common/graph/BaseGraph;Ljava/lang/Object;)V
@@ -181,6 +186,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/Graphs$TransposedGraph;->delegate()Lcom/google/common/graph/Graph;
 
     move-result-object p0

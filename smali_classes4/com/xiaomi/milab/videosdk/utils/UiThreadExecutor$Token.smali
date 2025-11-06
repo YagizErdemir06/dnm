@@ -1,4 +1,4 @@
-.class final Lcom/xiaomi/milab/videosdk/utils/UiThreadExecutor$Token;
+.class public final Lcom/xiaomi/milab/videosdk/utils/UiThreadExecutor$Token;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field final id:Ljava/lang/String;
+.field public final id:Ljava/lang/String;
 
-.field runnablesCount:I
+.field public runnablesCount:I
 
 
 # direct methods

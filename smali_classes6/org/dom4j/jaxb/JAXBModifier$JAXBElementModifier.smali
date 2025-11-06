@@ -1,4 +1,4 @@
-.class Lorg/dom4j/jaxb/JAXBModifier$JAXBElementModifier;
+.class public Lorg/dom4j/jaxb/JAXBModifier$JAXBElementModifier;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -29,12 +29,15 @@
 .method public constructor <init>(Lorg/dom4j/jaxb/JAXBModifier;Lorg/dom4j/jaxb/JAXBModifier;Lorg/dom4j/jaxb/JAXBObjectModifier;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/dom4j/jaxb/JAXBModifier$JAXBElementModifier;->this$0:Lorg/dom4j/jaxb/JAXBModifier;
 
+    .line 2
     iput-object p2, p0, Lorg/dom4j/jaxb/JAXBModifier$JAXBElementModifier;->jaxbModifier:Lorg/dom4j/jaxb/JAXBModifier;
 
+    .line 3
     iput-object p3, p0, Lorg/dom4j/jaxb/JAXBModifier$JAXBElementModifier;->objectModifier:Lorg/dom4j/jaxb/JAXBObjectModifier;
 
     return-void
@@ -50,18 +53,21 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/jaxb/JAXBModifier$JAXBElementModifier;->jaxbModifier:Lorg/dom4j/jaxb/JAXBModifier;
 
     invoke-virtual {v0, p1}, Lorg/dom4j/jaxb/JAXBSupport;->unmarshal(Lorg/dom4j/Element;)Ljavax/xml/bind/Element;
 
     move-result-object p1
 
+    .line 2
     iget-object v0, p0, Lorg/dom4j/jaxb/JAXBModifier$JAXBElementModifier;->objectModifier:Lorg/dom4j/jaxb/JAXBObjectModifier;
 
     invoke-interface {v0, p1}, Lorg/dom4j/jaxb/JAXBObjectModifier;->modifyObject(Ljavax/xml/bind/Element;)Ljavax/xml/bind/Element;
 
     move-result-object p1
 
+    .line 3
     iget-object p0, p0, Lorg/dom4j/jaxb/JAXBModifier$JAXBElementModifier;->jaxbModifier:Lorg/dom4j/jaxb/JAXBModifier;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/jaxb/JAXBSupport;->marshal(Ljavax/xml/bind/Element;)Lorg/dom4j/Element;

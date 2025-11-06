@@ -40,6 +40,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/bumptech/glide/util/pool/StateVerifier$DefaultStateVerifier;
 
     invoke-direct {v0}, Lcom/bumptech/glide/util/pool/StateVerifier$DefaultStateVerifier;-><init>()V

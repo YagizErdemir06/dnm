@@ -1,4 +1,4 @@
-.class Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream$1;
+.class public Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -16,6 +16,7 @@
 .method public constructor <init>(Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream;Lorg/apache/xmlbeans/xml/stream/Location;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream$1;->this$0:Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream;
 
     iput-object p2, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream$1;->val$xeLoc:Lorg/apache/xmlbeans/xml/stream/Location;
@@ -38,6 +39,7 @@
 .method public getColumnNumber()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream$1;->val$xeLoc:Lorg/apache/xmlbeans/xml/stream/Location;
 
     invoke-interface {p0}, Lorg/apache/xmlbeans/xml/stream/Location;->getColumnNumber()I
@@ -50,6 +52,7 @@
 .method public getLineNumber()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream$1;->val$xeLoc:Lorg/apache/xmlbeans/xml/stream/Location;
 
     invoke-interface {p0}, Lorg/apache/xmlbeans/xml/stream/Location;->getLineNumber()I
@@ -62,6 +65,7 @@
 .method public getPublicId()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream$1;->val$xeLoc:Lorg/apache/xmlbeans/xml/stream/Location;
 
     invoke-interface {p0}, Lorg/apache/xmlbeans/xml/stream/Location;->getPublicId()Ljava/lang/String;
@@ -74,6 +78,7 @@
 .method public getSystemId()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream$1;->val$xeLoc:Lorg/apache/xmlbeans/xml/stream/Location;
 
     invoke-interface {p0}, Lorg/apache/xmlbeans/xml/stream/Location;->getSystemId()Ljava/lang/String;

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lv8/z0;
+.implements Ld/d/a/m7/g/c1;
 .implements Landroid/view/View$OnClickListener;
 
 
@@ -17,39 +17,24 @@
 
 
 # static fields
-.field public static final b:Ljava/lang/String; = "MIMOJI_BaseFragmentMimoji"
+.field private static final c:Ljava/lang/String; = "MIMOJI_BaseFragmentMimoji"
 
 
 # instance fields
-.field public a:Lmiuix/appcompat/app/AlertDialog;
+.field public d:Lmiuix/appcompat/app/AlertDialog;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/BaseFragment;-><init>()V
 
     return-void
 .end method
 
-.method public static synthetic Gh(Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji;Landroid/content/DialogInterface;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji;->ai(Landroid/content/DialogInterface;)V
-
-    return-void
-.end method
-
-.method public static synthetic Hh()V
-    .locals 0
-
-    invoke-static {}, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji;->Zh()V
-
-    return-void
-.end method
-
-.method public static synthetic Zh()V
+.method public static synthetic qb()V
     .locals 3
 
     const/4 v0, 0x0
@@ -60,27 +45,46 @@
 
     const-string v2, "showExitConfirm onClick negative"
 
+    .line 1
     invoke-static {v1, v2, v0}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method private synthetic ai(Landroid/content/DialogInterface;)V
+.method private synthetic wb(Landroid/content/DialogInterface;)V
     .locals 0
 
     const/4 p1, 0x0
 
-    iput-object p1, p0, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji;->a:Lmiuix/appcompat/app/AlertDialog;
+    .line 1
+    iput-object p1, p0, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji;->d:Lmiuix/appcompat/app/AlertDialog;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public Xh(Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji$b;)V
-    .locals 11
+.method public synthetic Fb(Landroid/content/DialogInterface;)V
+    .locals 0
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji;->a:Lmiuix/appcompat/app/AlertDialog;
+    invoke-direct {p0, p1}, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji;->wb(Landroid/content/DialogInterface;)V
+
+    return-void
+.end method
+
+.method public nb(Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji$b;)V
+    .locals 11
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "exitConfirmListener"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji;->d:Lmiuix/appcompat/app/AlertDialog;
 
     if-eqz v0, :cond_0
 
@@ -91,22 +95,26 @@
 
     const-string v1, "exit"
 
-    invoke-static {v0, v1}, Lk9/a;->Z1(Ljava/lang/String;Ljava/lang/String;)V
+    .line 2
+    invoke-static {v0, v1}, Ld/d/a/v7/f;->V1(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
     const/4 v3, 0x0
 
-    const v0, 0x7f14059e
+    const v0, 0x7f13057f
 
+    .line 4
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    const v0, 0x7f14059d
+    const v0, 0x7f13057e
 
+    .line 5
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v5
@@ -115,27 +123,28 @@
 
     const/4 v8, 0x0
 
-    const v0, 0x7f140b4c
+    const v0, 0x7f130ac7
 
+    .line 6
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v9
 
-    new-instance v10, Lxh/a;
-
-    invoke-direct {v10}, Lxh/a;-><init>()V
+    sget-object v10, Ld/o/v/a/d0/a/b;->c:Ld/o/v/a/d0/a/b;
 
     move-object v6, p1
 
-    invoke-static/range {v2 .. v10}, Lcom/android/camera/y4;->E(Landroid/content/Context;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;)Lmiuix/appcompat/app/AlertDialog;
+    .line 7
+    invoke-static/range {v2 .. v10}, Ld/d/a/l5;->u(Landroid/content/Context;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;)Lmiuix/appcompat/app/AlertDialog;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji;->a:Lmiuix/appcompat/app/AlertDialog;
+    iput-object p1, p0, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji;->d:Lmiuix/appcompat/app/AlertDialog;
 
-    new-instance v0, Lxh/b;
+    .line 8
+    new-instance v0, Ld/o/v/a/d0/a/a;
 
-    invoke-direct {v0, p0}, Lxh/b;-><init>(Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji;)V
+    invoke-direct {v0, p0}, Ld/o/v/a/d0/a/a;-><init>(Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji;)V
 
     invoke-virtual {p1, v0}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 

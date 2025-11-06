@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/drm/DrmUtil$Api21;
+.class public final Lcom/google/android/exoplayer2/drm/DrmUtil$Api21;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,6 +37,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     instance-of p0, p0, Landroid/media/MediaDrm$MediaDrmStateException;
 
     return p0
@@ -46,16 +48,19 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     check-cast p0, Landroid/media/MediaDrm$MediaDrmStateException;
 
     invoke-virtual {p0}, Landroid/media/MediaDrm$MediaDrmStateException;->getDiagnosticInfo()Ljava/lang/String;
 
     move-result-object p0
 
+    .line 2
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Util;->getErrorCodeFromPlatformDiagnosticsInfo(Ljava/lang/String;)I
 
     move-result p0
 
+    .line 3
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Util;->getErrorCodeForMediaDrmErrorCode(I)I
 
     move-result p0

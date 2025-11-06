@@ -12,7 +12,7 @@
 
 
 # static fields
-.field public static a:Ljava/lang/String; = "MediaTrim"
+.field private static a:Ljava/lang/String; = "MediaTrim"
 
 
 # direct methods
@@ -25,6 +25,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,12 +37,14 @@
 .method public static a(Ljava/lang/String;Ljava/lang/String;JJIILcom/xiaomi/magicvideosky/MediaTrim$Callback;)I
     .locals 2
 
+    .line 1
     sget-object v0, Lcom/xiaomi/magicvideosky/MediaTrim;->a:Ljava/lang/String;
 
     const-string v1, "MediaTrim"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static/range {p0 .. p8}, Lcom/xiaomi/magicvideosky/MediaTrim;->MediaTrimJni(Ljava/lang/String;Ljava/lang/String;JJIILcom/xiaomi/magicvideosky/MediaTrim$Callback;)I
 
     move-result p0
@@ -52,12 +55,14 @@
 .method public static b(Ljava/lang/String;)I
     .locals 2
 
+    .line 1
     sget-object v0, Lcom/xiaomi/magicvideosky/MediaTrim;->a:Ljava/lang/String;
 
     const-string v1, "cancel MediaTrim "
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {p0}, Lcom/xiaomi/magicvideosky/MediaTrim;->cancelmediatrimJni(Ljava/lang/String;)I
 
     move-result p0

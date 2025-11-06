@@ -35,7 +35,7 @@
 
 
 # instance fields
-.field transient expectedValuesPerKey:I
+.field public transient expectedValuesPerKey:I
     .annotation build Lcom/google/common/annotations/VisibleForTesting;
     .end annotation
 .end field
@@ -202,22 +202,28 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->defaultReadObject()V
 
     const/4 v0, 0x3
 
+    .line 2
     iput v0, p0, Lcom/google/common/collect/ArrayListMultimap;->expectedValuesPerKey:I
 
+    .line 3
     invoke-static {p1}, Lcom/google/common/collect/Serialization;->readCount(Ljava/io/ObjectInputStream;)I
 
     move-result v0
 
+    .line 4
     invoke-static {}, Lcom/google/common/collect/CompactHashMap;->create()Lcom/google/common/collect/CompactHashMap;
 
     move-result-object v1
 
+    .line 5
     invoke-virtual {p0, v1}, Lcom/google/common/collect/AbstractMapBasedMultimap;->setMap(Ljava/util/Map;)V
 
+    .line 6
     invoke-static {p0, p1, v0}, Lcom/google/common/collect/Serialization;->populateMultimap(Lcom/google/common/collect/Multimap;Ljava/io/ObjectInputStream;I)V
 
     return-void
@@ -234,8 +240,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/io/ObjectOutputStream;->defaultWriteObject()V
 
+    .line 2
     invoke-static {p0, p1}, Lcom/google/common/collect/Serialization;->writeMultimap(Lcom/google/common/collect/Multimap;Ljava/io/ObjectOutputStream;)V
 
     return-void
@@ -246,6 +254,7 @@
 .method public bridge synthetic asMap()Ljava/util/Map;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractListMultimap;->asMap()Ljava/util/Map;
 
     move-result-object p0
@@ -256,6 +265,7 @@
 .method public bridge synthetic clear()V
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap;->clear()V
 
     return-void
@@ -272,6 +282,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/google/common/collect/AbstractMultimap;->containsEntry(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -286,6 +297,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/AbstractMapBasedMultimap;->containsKey(Ljava/lang/Object;)Z
 
     move-result p0
@@ -300,6 +312,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/AbstractMultimap;->containsValue(Ljava/lang/Object;)Z
 
     move-result p0
@@ -341,6 +354,7 @@
 .method public bridge synthetic entries()Ljava/util/Collection;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap;->entries()Ljava/util/Collection;
 
     move-result-object p0
@@ -355,6 +369,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/AbstractListMultimap;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -369,6 +384,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/AbstractListMultimap;->get(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
@@ -379,6 +395,7 @@
 .method public bridge synthetic hashCode()I
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractMultimap;->hashCode()I
 
     move-result p0
@@ -389,6 +406,7 @@
 .method public bridge synthetic isEmpty()Z
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractMultimap;->isEmpty()Z
 
     move-result p0
@@ -399,6 +417,7 @@
 .method public bridge synthetic keySet()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractMultimap;->keySet()Ljava/util/Set;
 
     move-result-object p0
@@ -409,6 +428,7 @@
 .method public bridge synthetic keys()Lcom/google/common/collect/Multiset;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractMultimap;->keys()Lcom/google/common/collect/Multiset;
 
     move-result-object p0
@@ -429,6 +449,7 @@
     .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/google/common/collect/AbstractListMultimap;->put(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -479,6 +500,7 @@
     .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/google/common/collect/AbstractMultimap;->remove(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -495,6 +517,7 @@
     .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/AbstractListMultimap;->removeAll(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
@@ -511,6 +534,7 @@
     .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/google/common/collect/AbstractListMultimap;->replaceValues(Ljava/lang/Object;Ljava/lang/Iterable;)Ljava/util/List;
 
     move-result-object p0
@@ -521,6 +545,7 @@
 .method public bridge synthetic size()I
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap;->size()I
 
     move-result p0
@@ -531,6 +556,7 @@
 .method public bridge synthetic toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractMultimap;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -543,6 +569,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap;->backingMap()Ljava/util/Map;
 
     move-result-object p0
@@ -568,8 +595,10 @@
 
     check-cast v0, Ljava/util/Collection;
 
+    .line 2
     check-cast v0, Ljava/util/ArrayList;
 
+    .line 3
     invoke-virtual {v0}, Ljava/util/ArrayList;->trimToSize()V
 
     goto :goto_0
@@ -581,6 +610,7 @@
 .method public bridge synthetic values()Ljava/util/Collection;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap;->values()Ljava/util/Collection;
 
     move-result-object p0

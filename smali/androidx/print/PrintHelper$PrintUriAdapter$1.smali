@@ -1,4 +1,4 @@
-.class Landroidx/print/PrintHelper$PrintUriAdapter$1;
+.class public Landroidx/print/PrintHelper$PrintUriAdapter$1;
 .super Landroid/os/AsyncTask;
 .source "SourceFile"
 
@@ -25,21 +25,22 @@
 
 
 # instance fields
-.field final synthetic this$1:Landroidx/print/PrintHelper$PrintUriAdapter;
+.field public final synthetic this$1:Landroidx/print/PrintHelper$PrintUriAdapter;
 
-.field final synthetic val$cancellationSignal:Landroid/os/CancellationSignal;
+.field public final synthetic val$cancellationSignal:Landroid/os/CancellationSignal;
 
-.field final synthetic val$layoutResultCallback:Landroid/print/PrintDocumentAdapter$LayoutResultCallback;
+.field public final synthetic val$layoutResultCallback:Landroid/print/PrintDocumentAdapter$LayoutResultCallback;
 
-.field final synthetic val$newPrintAttributes:Landroid/print/PrintAttributes;
+.field public final synthetic val$newPrintAttributes:Landroid/print/PrintAttributes;
 
-.field final synthetic val$oldPrintAttributes:Landroid/print/PrintAttributes;
+.field public final synthetic val$oldPrintAttributes:Landroid/print/PrintAttributes;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/print/PrintHelper$PrintUriAdapter;Landroid/os/CancellationSignal;Landroid/print/PrintAttributes;Landroid/print/PrintAttributes;Landroid/print/PrintDocumentAdapter$LayoutResultCallback;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/print/PrintHelper$PrintUriAdapter$1;->this$1:Landroidx/print/PrintHelper$PrintUriAdapter;
 
     iput-object p2, p0, Landroidx/print/PrintHelper$PrintUriAdapter$1;->val$cancellationSignal:Landroid/os/CancellationSignal;
@@ -306,6 +307,7 @@
 .method public onPreExecute()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/print/PrintHelper$PrintUriAdapter$1;->val$cancellationSignal:Landroid/os/CancellationSignal;
 
     new-instance v1, Landroidx/print/PrintHelper$PrintUriAdapter$1$1;

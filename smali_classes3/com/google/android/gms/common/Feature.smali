@@ -132,14 +132,17 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/android/gms/common/Feature;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_2
 
+    .line 2
     check-cast p1, Lcom/google/android/gms/common/Feature;
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/gms/common/Feature;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -160,6 +163,7 @@
 
     if-nez v0, :cond_1
 
+    .line 4
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/gms/common/Feature;->getName()Ljava/lang/String;
 
@@ -173,6 +177,7 @@
 
     if-nez v0, :cond_2
 
+    .line 5
     :cond_1
     invoke-virtual {p0}, Lcom/google/android/gms/common/Feature;->getVersion()J
 
@@ -235,13 +240,14 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    const/4 v1, 0x0
-
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/common/Feature;->getName()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    aput-object v2, v0, v1
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
 
     invoke-virtual {p0}, Lcom/google/android/gms/common/Feature;->getVersion()J
 
@@ -267,18 +273,21 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/gms/common/internal/Objects;->toStringHelper(Ljava/lang/Object;)Lcom/google/android/gms/common/internal/Objects$ToStringHelper;
 
     move-result-object v0
 
-    const-string v1, "name"
-
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/gms/common/Feature;->getName()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/android/gms/common/internal/Objects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/common/internal/Objects$ToStringHelper;
+    const-string v2, "name"
 
+    invoke-virtual {v0, v2, v1}, Lcom/google/android/gms/common/internal/Objects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/common/internal/Objects$ToStringHelper;
+
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/gms/common/Feature;->getVersion()J
 
     move-result-wide v1
@@ -291,6 +300,7 @@
 
     invoke-virtual {v0, v1, p0}, Lcom/google/android/gms/common/internal/Objects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/android/gms/common/internal/Objects$ToStringHelper;
 
+    .line 4
     invoke-virtual {v0}, Lcom/google/android/gms/common/internal/Objects$ToStringHelper;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -305,34 +315,41 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->beginObjectHeader(Landroid/os/Parcel;)I
 
     move-result p2
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/gms/common/Feature;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
-    const/4 v2, 0x1
+    const/4 v2, 0x0
 
-    invoke-static {p1, v2, v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeString(Landroid/os/Parcel;ILjava/lang/String;Z)V
+    .line 3
+    invoke-static {p1, v1, v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeString(Landroid/os/Parcel;ILjava/lang/String;Z)V
 
-    const/4 v0, 0x2
+    iget v0, p0, Lcom/google/android/gms/common/Feature;->zzb:I
 
-    iget v1, p0, Lcom/google/android/gms/common/Feature;->zzb:I
+    const/4 v1, 0x2
 
-    invoke-static {p1, v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
+    .line 4
+    invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
-    const/4 v0, 0x3
-
+    .line 5
     invoke-virtual {p0}, Lcom/google/android/gms/common/Feature;->getVersion()J
 
-    move-result-wide v1
+    move-result-wide v0
 
-    invoke-static {p1, v0, v1, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeLong(Landroid/os/Parcel;IJ)V
+    const/4 p0, 0x3
 
+    .line 6
+    invoke-static {p1, p0, v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeLong(Landroid/os/Parcel;IJ)V
+
+    .line 7
     invoke-static {p1, p2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->finishObjectHeader(Landroid/os/Parcel;I)V
 
     return-void

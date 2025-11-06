@@ -13,19 +13,6 @@
     return-void
 .end method
 
-.method public constructor <init>(I)V
-    .locals 0
-    .param p1    # I
-        .annotation build Landroidx/annotation/LayoutRes;
-        .end annotation
-    .end param
-
-    .line 2
-    invoke-direct {p0, p1}, Landroidx/fragment/app/DialogFragment;-><init>(I)V
-
-    return-void
-.end method
-
 
 # virtual methods
 .method public onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
@@ -37,6 +24,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     new-instance p1, Landroidx/appcompat/app/AppCompatDialog;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
@@ -64,10 +52,12 @@
         }
     .end annotation
 
+    .line 1
     instance-of v0, p1, Landroidx/appcompat/app/AppCompatDialog;
 
     if-eqz v0, :cond_2
 
+    .line 2
     move-object p0, p1
 
     check-cast p0, Landroidx/appcompat/app/AppCompatDialog;
@@ -86,6 +76,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-virtual {p1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
@@ -95,11 +86,13 @@
 
     invoke-virtual {p1, p2}, Landroid/view/Window;->addFlags(I)V
 
+    .line 4
     :cond_1
     invoke-virtual {p0, v0}, Landroidx/appcompat/app/AppCompatDialog;->supportRequestWindowFeature(I)Z
 
     goto :goto_0
 
+    .line 5
     :cond_2
     invoke-super {p0, p1, p2}, Landroidx/fragment/app/DialogFragment;->setupDialog(Landroid/app/Dialog;I)V
 

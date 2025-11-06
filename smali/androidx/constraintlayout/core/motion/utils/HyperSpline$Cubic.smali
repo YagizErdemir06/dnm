@@ -15,27 +15,32 @@
 
 
 # instance fields
-.field mA:D
+.field public mA:D
 
-.field mB:D
+.field public mB:D
 
-.field mC:D
+.field public mC:D
 
-.field mD:D
+.field public mD:D
 
 
 # direct methods
 .method public constructor <init>(DDDD)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-wide p1, p0, Landroidx/constraintlayout/core/motion/utils/HyperSpline$Cubic;->mA:D
 
+    .line 3
     iput-wide p3, p0, Landroidx/constraintlayout/core/motion/utils/HyperSpline$Cubic;->mB:D
 
+    .line 4
     iput-wide p5, p0, Landroidx/constraintlayout/core/motion/utils/HyperSpline$Cubic;->mC:D
 
+    .line 5
     iput-wide p7, p0, Landroidx/constraintlayout/core/motion/utils/HyperSpline$Cubic;->mD:D
 
     return-void
@@ -46,6 +51,7 @@
 .method public eval(D)D
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Landroidx/constraintlayout/core/motion/utils/HyperSpline$Cubic;->mD:D
 
     mul-double/2addr v0, p1
@@ -72,6 +78,7 @@
 .method public vel(D)D
     .locals 6
 
+    .line 1
     iget-wide v0, p0, Landroidx/constraintlayout/core/motion/utils/HyperSpline$Cubic;->mD:D
 
     const-wide/high16 v2, 0x4008000000000000L    # 3.0

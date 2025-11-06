@@ -1,4 +1,4 @@
-.class Lcom/google/common/cache/RemovalListeners$1;
+.class public Lcom/google/common/cache/RemovalListeners$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,15 +26,16 @@
 
 
 # instance fields
-.field final synthetic val$executor:Ljava/util/concurrent/Executor;
+.field public final synthetic val$executor:Ljava/util/concurrent/Executor;
 
-.field final synthetic val$listener:Lcom/google/common/cache/RemovalListener;
+.field public final synthetic val$listener:Lcom/google/common/cache/RemovalListener;
 
 
 # direct methods
 .method public constructor <init>(Ljava/util/concurrent/Executor;Lcom/google/common/cache/RemovalListener;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/cache/RemovalListeners$1;->val$executor:Ljava/util/concurrent/Executor;
 
     iput-object p2, p0, Lcom/google/common/cache/RemovalListeners$1;->val$listener:Lcom/google/common/cache/RemovalListener;
@@ -56,6 +57,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/cache/RemovalListeners$1;->val$executor:Ljava/util/concurrent/Executor;
 
     new-instance v1, Lcom/google/common/cache/RemovalListeners$1$1;

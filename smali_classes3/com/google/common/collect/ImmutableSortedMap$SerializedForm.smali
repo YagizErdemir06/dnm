@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ImmutableSortedMap$SerializedForm;
+.class public Lcom/google/common/collect/ImmutableSortedMap$SerializedForm;
 .super Lcom/google/common/collect/ImmutableMap$SerializedForm;
 .source "SourceFile"
 
@@ -52,8 +52,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/ImmutableMap$SerializedForm;-><init>(Lcom/google/common/collect/ImmutableMap;)V
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/common/collect/ImmutableSortedMap;->comparator()Ljava/util/Comparator;
 
     move-result-object p1

@@ -1,4 +1,4 @@
-.class synthetic Lcom/google/common/util/concurrent/ClosingFuture$12;
+.class public synthetic Lcom/google/common/util/concurrent/ClosingFuture$12;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$com$google$common$util$concurrent$ClosingFuture$State:[I
+.field public static final synthetic $SwitchMap$com$google$common$util$concurrent$ClosingFuture$State:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Lcom/google/common/util/concurrent/ClosingFuture$State;->values()[Lcom/google/common/util/concurrent/ClosingFuture$State;
 
     move-result-object v0

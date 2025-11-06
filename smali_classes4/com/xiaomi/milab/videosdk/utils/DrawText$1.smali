@@ -1,4 +1,4 @@
-.class synthetic Lcom/xiaomi/milab/videosdk/utils/DrawText$1;
+.class public synthetic Lcom/xiaomi/milab/videosdk/utils/DrawText$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$com$xiaomi$milab$videosdk$utils$TextAnim$Type:[I
+.field public static final synthetic $SwitchMap$com$xiaomi$milab$videosdk$utils$TextAnim$Type:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/milab/videosdk/utils/TextAnim$Type;->values()[Lcom/xiaomi/milab/videosdk/utils/TextAnim$Type;
 
     move-result-object v0

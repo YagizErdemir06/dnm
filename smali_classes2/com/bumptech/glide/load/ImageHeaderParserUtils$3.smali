@@ -1,4 +1,4 @@
-.class final Lcom/bumptech/glide/load/ImageHeaderParserUtils$3;
+.class public final Lcom/bumptech/glide/load/ImageHeaderParserUtils$3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,15 +18,16 @@
 
 
 # instance fields
-.field final synthetic val$byteArrayPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;
+.field public final synthetic val$byteArrayPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;
 
-.field final synthetic val$parcelFileDescriptorRewinder:Lcom/bumptech/glide/load/data/ParcelFileDescriptorRewinder;
+.field public final synthetic val$parcelFileDescriptorRewinder:Lcom/bumptech/glide/load/data/ParcelFileDescriptorRewinder;
 
 
 # direct methods
 .method public constructor <init>(Lcom/bumptech/glide/load/data/ParcelFileDescriptorRewinder;Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/bumptech/glide/load/ImageHeaderParserUtils$3;->val$parcelFileDescriptorRewinder:Lcom/bumptech/glide/load/data/ParcelFileDescriptorRewinder;
 
     iput-object p2, p0, Lcom/bumptech/glide/load/ImageHeaderParserUtils$3;->val$byteArrayPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/ArrayPool;
@@ -48,6 +49,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :try_start_0
     new-instance v1, Lcom/bumptech/glide/load/resource/bitmap/RecyclableBufferedInputStream;
 
@@ -55,6 +57,7 @@
 
     iget-object v3, p0, Lcom/bumptech/glide/load/ImageHeaderParserUtils$3;->val$parcelFileDescriptorRewinder:Lcom/bumptech/glide/load/data/ParcelFileDescriptorRewinder;
 
+    .line 2
     invoke-virtual {v3}, Lcom/bumptech/glide/load/data/ParcelFileDescriptorRewinder;->rewindAndGet()Landroid/os/ParcelFileDescriptor;
 
     move-result-object v3
@@ -71,6 +74,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
+    .line 3
     :try_start_1
     invoke-interface {p1, v1}, Lcom/bumptech/glide/load/ImageHeaderParser;->getType(Ljava/io/InputStream;)Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
@@ -78,11 +82,13 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 4
     :try_start_2
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
+    .line 5
     :catch_0
     iget-object p0, p0, Lcom/bumptech/glide/load/ImageHeaderParserUtils$3;->val$parcelFileDescriptorRewinder:Lcom/bumptech/glide/load/data/ParcelFileDescriptorRewinder;
 
@@ -103,16 +109,19 @@
     :goto_0
     if-eqz v0, :cond_0
 
+    .line 6
     :try_start_3
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
 
+    .line 7
     :catch_1
     :cond_0
     iget-object p0, p0, Lcom/bumptech/glide/load/ImageHeaderParserUtils$3;->val$parcelFileDescriptorRewinder:Lcom/bumptech/glide/load/data/ParcelFileDescriptorRewinder;
 
     invoke-virtual {p0}, Lcom/bumptech/glide/load/data/ParcelFileDescriptorRewinder;->rewindAndGet()Landroid/os/ParcelFileDescriptor;
 
+    .line 8
     throw p1
 .end method

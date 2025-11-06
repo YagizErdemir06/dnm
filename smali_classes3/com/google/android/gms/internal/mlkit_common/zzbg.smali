@@ -1,4 +1,4 @@
-.class final enum Lcom/google/android/gms/internal/mlkit_common/zzbg;
+.class public final enum Lcom/google/android/gms/internal/mlkit_common/zzbg;
 .super Ljava/lang/Enum;
 .source "SourceFile"
 
@@ -16,6 +16,7 @@
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_common/zzbg;
 
     const-string v1, "INSTANCE"
@@ -44,6 +45,7 @@
 
     const/4 p2, 0x0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -52,6 +54,7 @@
 .method public static values()[Lcom/google/android/gms/internal/mlkit_common/zzbg;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/internal/mlkit_common/zzbg;->zzb:[Lcom/google/android/gms/internal/mlkit_common/zzbg;
 
     invoke-virtual {v0}, [Lcom/google/android/gms/internal/mlkit_common/zzbg;->clone()Ljava/lang/Object;
@@ -68,6 +71,7 @@
 .method public final execute(Ljava/lang/Runnable;)V
     .locals 0
 
+    .line 1
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     return-void

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/api/internal/zam;
+.class public final Lcom/google/android/gms/common/api/internal/zam;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -13,6 +13,7 @@
 .method public constructor <init>(Lcom/google/android/gms/common/ConnectionResult;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     invoke-static {p1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;

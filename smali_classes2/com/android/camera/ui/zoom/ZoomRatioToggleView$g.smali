@@ -15,36 +15,55 @@
 
 
 # static fields
-.field public static final e:I = 0x0
+.field public static final a:I = 0x0
 
-.field public static final f:I = 0x1
+.field public static final b:I = 0x1
 
-.field public static final g:I = 0x2
+.field public static final c:I = 0x2
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:Z
-
-.field public final c:Z
-
 .field public final d:I
+
+.field public final e:Z
+
+.field public final f:Z
+
+.field public final g:I
 
 
 # direct methods
 .method public constructor <init>(IZZI)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "visibility",
+            "suppress",
+            "immersive",
+            "useSliderType"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lcom/android/camera/ui/zoom/ZoomRatioToggleView$g;->a:I
+    .line 2
+    iput p1, p0, Lcom/android/camera/ui/zoom/ZoomRatioToggleView$g;->d:I
 
-    iput-boolean p2, p0, Lcom/android/camera/ui/zoom/ZoomRatioToggleView$g;->b:Z
+    .line 3
+    iput-boolean p2, p0, Lcom/android/camera/ui/zoom/ZoomRatioToggleView$g;->e:Z
 
-    iput-boolean p3, p0, Lcom/android/camera/ui/zoom/ZoomRatioToggleView$g;->c:Z
+    .line 4
+    iput-boolean p3, p0, Lcom/android/camera/ui/zoom/ZoomRatioToggleView$g;->f:Z
 
-    iput p4, p0, Lcom/android/camera/ui/zoom/ZoomRatioToggleView$g;->d:I
+    .line 5
+    iput p4, p0, Lcom/android/camera/ui/zoom/ZoomRatioToggleView$g;->g:I
 
     return-void
 .end method

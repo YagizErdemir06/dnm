@@ -11,6 +11,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,6 +20,7 @@
 .method public static getIncomingRtpDataSpec(I)Lcom/google/android/exoplayer2/upstream/DataSpec;
     .locals 4
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/upstream/DataSpec;
 
     const/4 v1, 0x2
@@ -31,11 +33,12 @@
 
     aput-object v3, v1, v2
 
-    const/4 v2, 0x1
-
+    .line 2
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
+
+    const/4 v2, 0x1
 
     aput-object p0, v1, v2
 

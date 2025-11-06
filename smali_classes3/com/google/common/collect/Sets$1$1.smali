@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Sets$1$1;
+.class public Lcom/google/common/collect/Sets$1$1;
 .super Lcom/google/common/collect/AbstractIterator;
 .source "SourceFile"
 
@@ -22,7 +22,7 @@
 
 
 # instance fields
-.field final itr1:Ljava/util/Iterator;
+.field public final itr1:Ljava/util/Iterator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Iterator<",
@@ -31,7 +31,7 @@
     .end annotation
 .end field
 
-.field final itr2:Ljava/util/Iterator;
+.field public final itr2:Ljava/util/Iterator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Iterator<",
@@ -40,17 +40,19 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Lcom/google/common/collect/Sets$1;
+.field public final synthetic this$0:Lcom/google/common/collect/Sets$1;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/Sets$1;)V
     .locals 1
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/Sets$1$1;->this$0:Lcom/google/common/collect/Sets$1;
 
     invoke-direct {p0}, Lcom/google/common/collect/AbstractIterator;-><init>()V
 
+    .line 2
     iget-object v0, p1, Lcom/google/common/collect/Sets$1;->val$set1:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -59,6 +61,7 @@
 
     iput-object v0, p0, Lcom/google/common/collect/Sets$1$1;->itr1:Ljava/util/Iterator;
 
+    .line 3
     iget-object p1, p1, Lcom/google/common/collect/Sets$1;->val$set2:Ljava/util/Set;
 
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -83,6 +86,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Sets$1$1;->itr1:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -91,6 +95,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/Sets$1$1;->itr1:Ljava/util/Iterator;
 
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -99,6 +104,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/google/common/collect/Sets$1$1;->itr2:Ljava/util/Iterator;
 
@@ -108,12 +114,14 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     iget-object v0, p0, Lcom/google/common/collect/Sets$1$1;->itr2:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 5
     iget-object v1, p0, Lcom/google/common/collect/Sets$1$1;->this$0:Lcom/google/common/collect/Sets$1;
 
     iget-object v1, v1, Lcom/google/common/collect/Sets$1;->val$set1:Ljava/util/Set;
@@ -126,6 +134,7 @@
 
     return-object v0
 
+    .line 6
     :cond_1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractIterator;->endOfData()Ljava/lang/Object;
 

@@ -1,4 +1,4 @@
-.class Lorg/apache/xmlbeans/impl/validator/Validator$ValidatorVC;
+.class public Lorg/apache/xmlbeans/impl/validator/Validator$ValidatorVC;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field _event:Lorg/apache/xmlbeans/impl/common/ValidatorListener$Event;
+.field public _event:Lorg/apache/xmlbeans/impl/common/ValidatorListener$Event;
 
 .field private final synthetic this$0:Lorg/apache/xmlbeans/impl/validator/Validator;
 

@@ -1,4 +1,4 @@
-.class Lmiuix/animation/internal/ThreadPoolUtil$1;
+.class public Lmiuix/animation/internal/ThreadPoolUtil$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -21,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,6 +32,7 @@
 .method public rejectedExecution(Ljava/lang/Runnable;Ljava/util/concurrent/ThreadPoolExecutor;)V
     .locals 0
 
+    .line 1
     invoke-static {}, Lmiuix/animation/internal/ThreadPoolUtil;->access$000()Ljava/util/concurrent/Executor;
 
     move-result-object p0

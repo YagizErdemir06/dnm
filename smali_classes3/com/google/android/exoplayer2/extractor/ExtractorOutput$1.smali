@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/extractor/ExtractorOutput$1;
+.class public Lcom/google/android/exoplayer2/extractor/ExtractorOutput$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -21,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,6 +32,7 @@
 .method public endTracks()V
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -41,6 +43,7 @@
 .method public seekMap(Lcom/google/android/exoplayer2/extractor/SeekMap;)V
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -51,6 +54,7 @@
 .method public track(II)Lcom/google/android/exoplayer2/extractor/TrackOutput;
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V

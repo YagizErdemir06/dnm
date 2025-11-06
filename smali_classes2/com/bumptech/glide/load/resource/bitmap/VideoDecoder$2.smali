@@ -1,4 +1,4 @@
-.class final Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder$2;
+.class public final Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -34,10 +34,12 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x4
 
+    .line 2
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0

@@ -34,6 +34,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/metadata/Metadata$1;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/metadata/Metadata$1;-><init>()V
@@ -139,12 +140,14 @@
 .method public varargs copyWithAppendedEntries([Lcom/google/android/exoplayer2/metadata/Metadata$Entry;)Lcom/google/android/exoplayer2/metadata/Metadata;
     .locals 1
 
+    .line 1
     array-length v0, p1
 
     if-nez v0, :cond_0
 
     return-object p0
 
+    .line 2
     :cond_0
     new-instance v0, Lcom/google/android/exoplayer2/metadata/Metadata;
 
@@ -172,6 +175,7 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     iget-object p1, p1, Lcom/google/android/exoplayer2/metadata/Metadata;->entries:[Lcom/google/android/exoplayer2/metadata/Metadata$Entry;
 
@@ -206,6 +210,7 @@
     :cond_0
     if-eqz p1, :cond_2
 
+    .line 1
     const-class v0, Lcom/google/android/exoplayer2/metadata/Metadata;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -216,9 +221,11 @@
 
     goto :goto_0
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/metadata/Metadata;
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/metadata/Metadata;->entries:[Lcom/google/android/exoplayer2/metadata/Metadata$Entry;
 
     iget-object p1, p1, Lcom/google/android/exoplayer2/metadata/Metadata;->entries:[Lcom/google/android/exoplayer2/metadata/Metadata$Entry;
@@ -239,6 +246,7 @@
 .method public get(I)Lcom/google/android/exoplayer2/metadata/Metadata$Entry;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/metadata/Metadata;->entries:[Lcom/google/android/exoplayer2/metadata/Metadata$Entry;
 
     aget-object p0, p0, p1
@@ -249,6 +257,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/metadata/Metadata;->entries:[Lcom/google/android/exoplayer2/metadata/Metadata$Entry;
 
     invoke-static {p0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
@@ -261,6 +270,7 @@
 .method public length()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/metadata/Metadata;->entries:[Lcom/google/android/exoplayer2/metadata/Metadata$Entry;
 
     array-length p0, p0
@@ -271,6 +281,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -297,12 +308,14 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 
+    .line 1
     iget-object p2, p0, Lcom/google/android/exoplayer2/metadata/Metadata;->entries:[Lcom/google/android/exoplayer2/metadata/Metadata$Entry;
 
     array-length p2, p2
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/metadata/Metadata;->entries:[Lcom/google/android/exoplayer2/metadata/Metadata$Entry;
 
     array-length p2, p0
@@ -316,6 +329,7 @@
 
     aget-object v2, p0, v1
 
+    .line 3
     invoke-virtual {p1, v2, v0}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
     add-int/lit8 v1, v1, 0x1

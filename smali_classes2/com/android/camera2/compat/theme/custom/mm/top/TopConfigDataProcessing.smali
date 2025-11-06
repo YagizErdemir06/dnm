@@ -12,11 +12,11 @@
         "Ljava/lang/Object;",
         "Lcom/android/camera2/compat/theme/custom/mm/top/ITopConfigDataProcessing<",
         "Ljava/util/List<",
-        "Lw6/p2;",
+        "Ld/d/a/u6/a5/q/k4;",
         ">;",
         "Landroid/util/SparseArray<",
         "Ljava/util/List<",
-        "Lw6/p2;",
+        "Ld/d/a/u6/a5/q/k4;",
         ">;>;>;"
     }
 .end annotation
@@ -26,6 +26,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,15 +36,24 @@
 # virtual methods
 .method public processTopConfigData(Ljava/util/List;)Landroid/util/SparseArray;
     .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "supportConfigs"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
-            "Lw6/p2;",
+            "Ld/d/a/u6/a5/q/k4;",
             ">;)",
             "Landroid/util/SparseArray<",
             "Ljava/util/List<",
-            "Lw6/p2;",
+            "Ld/d/a/u6/a5/q/k4;",
             ">;>;"
         }
     .end annotation
@@ -102,10 +112,10 @@
 
     move-result-object v3
 
-    check-cast v3, Lw6/p2;
+    check-cast v3, Ld/d/a/u6/a5/q/k4;
 
     .line 8
-    invoke-virtual {v3}, Lw6/p2;->c()I
+    invoke-virtual {v3}, Ld/d/a/u6/a5/q/k4;->c()I
 
     move-result v7
 
@@ -156,6 +166,14 @@
 
 .method public bridge synthetic processTopConfigData(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "supportConfigs"
+        }
+    .end annotation
 
     .line 1
     check-cast p1, Ljava/util/List;

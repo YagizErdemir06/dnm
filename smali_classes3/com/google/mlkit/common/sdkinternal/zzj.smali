@@ -26,6 +26,7 @@
 .method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/common/sdkinternal/zzj;->zza:Ljava/util/concurrent/ThreadFactory;
 
     new-instance v0, Lcom/google/mlkit/common/sdkinternal/zzi;

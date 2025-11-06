@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Maps$AsMapView;
+.class public Lcom/google/common/collect/Maps$AsMapView;
 .super Lcom/google/common/collect/Maps$ViewCachingAbstractMap;
 .source "SourceFile"
 
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field final function:Lcom/google/common/base/Function;
+.field public final function:Lcom/google/common/base/Function;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/base/Function<",
@@ -59,8 +59,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/Maps$ViewCachingAbstractMap;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -69,6 +71,7 @@
 
     iput-object p1, p0, Lcom/google/common/collect/Maps$AsMapView;->set:Ljava/util/Set;
 
+    .line 3
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -92,6 +95,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Maps$AsMapView;->set:Ljava/util/Set;
 
     return-object p0
@@ -100,6 +104,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$AsMapView;->backingSet()Ljava/util/Set;
 
     move-result-object p0
@@ -116,6 +121,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$AsMapView;->backingSet()Ljava/util/Set;
 
     move-result-object p0
@@ -138,6 +144,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/Maps$AsMapView$1EntrySetImpl;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/Maps$AsMapView$1EntrySetImpl;-><init>(Lcom/google/common/collect/Maps$AsMapView;)V
@@ -155,6 +162,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$AsMapView;->backingSet()Ljava/util/Set;
 
     move-result-object p0
@@ -176,6 +184,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Maps$AsMapView;->set:Ljava/util/Set;
 
     iget-object p0, p0, Lcom/google/common/collect/Maps$AsMapView;->function:Lcom/google/common/base/Function;
@@ -204,6 +213,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$AsMapView;->backingSet()Ljava/util/Set;
 
     move-result-object v0
@@ -214,6 +224,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/Maps$AsMapView;->function:Lcom/google/common/base/Function;
 
     invoke-interface {p0, p1}, Lcom/google/common/base/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
@@ -245,6 +256,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$AsMapView;->backingSet()Ljava/util/Set;
 
     move-result-object v0
@@ -255,6 +267,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/Maps$AsMapView;->function:Lcom/google/common/base/Function;
 
     invoke-interface {p0, p1}, Lcom/google/common/base/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
@@ -272,6 +285,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$AsMapView;->backingSet()Ljava/util/Set;
 
     move-result-object p0

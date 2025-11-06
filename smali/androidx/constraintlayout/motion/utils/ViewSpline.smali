@@ -33,6 +33,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroidx/constraintlayout/core/motion/utils/SplineSet;-><init>()V
 
     return-void
@@ -62,6 +63,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Landroidx/constraintlayout/motion/utils/ViewSpline$CustomSet;
 
     invoke-direct {v0, p0, p1}, Landroidx/constraintlayout/motion/utils/ViewSpline$CustomSet;-><init>(Ljava/lang/String;Landroid/util/SparseArray;)V
@@ -80,6 +82,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -157,7 +160,7 @@
     goto/16 :goto_0
 
     :sswitch_4
-    const-string/jumbo v0, "rotation"
+    const-string v0, "rotation"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -221,7 +224,7 @@
     goto/16 :goto_0
 
     :sswitch_8
-    const-string/jumbo v0, "scaleY"
+    const-string v0, "scaleY"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -237,7 +240,7 @@
     goto :goto_0
 
     :sswitch_9
-    const-string/jumbo v0, "scaleX"
+    const-string v0, "scaleX"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -253,7 +256,7 @@
     goto :goto_0
 
     :sswitch_a
-    const-string/jumbo v0, "progress"
+    const-string v0, "progress"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -317,7 +320,7 @@
     goto :goto_0
 
     :sswitch_e
-    const-string/jumbo v0, "rotationY"
+    const-string v0, "rotationY"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -333,7 +336,7 @@
     goto :goto_0
 
     :sswitch_f
-    const-string/jumbo v0, "rotationX"
+    const-string v0, "rotationX"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -353,6 +356,7 @@
 
     return-object p0
 
+    .line 2
     :pswitch_0
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewSpline$AlphaSet;
 
@@ -360,6 +364,7 @@
 
     return-object p0
 
+    .line 3
     :pswitch_1
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewSpline$AlphaSet;
 
@@ -367,6 +372,7 @@
 
     return-object p0
 
+    .line 4
     :pswitch_2
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewSpline$PathRotate;
 
@@ -374,6 +380,7 @@
 
     return-object p0
 
+    .line 5
     :pswitch_3
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewSpline$ElevationSet;
 
@@ -381,6 +388,7 @@
 
     return-object p0
 
+    .line 6
     :pswitch_4
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewSpline$RotationSet;
 
@@ -388,6 +396,7 @@
 
     return-object p0
 
+    .line 7
     :pswitch_5
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewSpline$PivotYset;
 
@@ -395,6 +404,7 @@
 
     return-object p0
 
+    .line 8
     :pswitch_6
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewSpline$PivotXset;
 
@@ -402,6 +412,7 @@
 
     return-object p0
 
+    .line 9
     :pswitch_7
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewSpline$AlphaSet;
 
@@ -409,6 +420,7 @@
 
     return-object p0
 
+    .line 10
     :pswitch_8
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewSpline$ScaleYset;
 
@@ -416,6 +428,7 @@
 
     return-object p0
 
+    .line 11
     :pswitch_9
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewSpline$ScaleXset;
 
@@ -423,6 +436,7 @@
 
     return-object p0
 
+    .line 12
     :pswitch_a
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewSpline$ProgressSet;
 
@@ -430,6 +444,7 @@
 
     return-object p0
 
+    .line 13
     :pswitch_b
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewSpline$TranslationZset;
 
@@ -437,6 +452,7 @@
 
     return-object p0
 
+    .line 14
     :pswitch_c
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewSpline$TranslationYset;
 
@@ -444,6 +460,7 @@
 
     return-object p0
 
+    .line 15
     :pswitch_d
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewSpline$TranslationXset;
 
@@ -451,6 +468,7 @@
 
     return-object p0
 
+    .line 16
     :pswitch_e
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewSpline$RotationYset;
 
@@ -458,6 +476,7 @@
 
     return-object p0
 
+    .line 17
     :pswitch_f
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewSpline$RotationXset;
 

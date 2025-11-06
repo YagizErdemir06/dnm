@@ -4,6 +4,9 @@
 
 
 # annotations
+.annotation build Ld/d/a/x6/c;
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Lcom/android/camera/ui/CameraSnapView;
 .end annotation
@@ -19,22 +22,19 @@
     }
 .end annotation
 
-.annotation build Lh7/c;
-.end annotation
-
 
 # static fields
-.field public static final D3:I = 0x0
+.field public static final d6:I = 0x0
 
-.field public static final E3:I = 0x1
+.field public static final e6:I = 0x1
 
-.field public static final F3:I = 0x2
+.field public static final f6:I = 0x2
 
-.field public static final G3:I = 0x3
+.field public static final g6:I = 0x3
 
 
 # virtual methods
-.method public Eb(FFZ)Z
+.method public B2()I
     .locals 0
 
     const/4 p0, 0x0
@@ -42,7 +42,25 @@
     return p0
 .end method
 
-.method public Oa()V
+.method public I(II)Z
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "x",
+            "y"
+        }
+    .end annotation
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public K0()V
     .locals 0
 
     return-void
@@ -50,6 +68,44 @@
 
 .method public Q()Z
     .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public Q6(FFZ)Z
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "offset",
+            "triggerDraggingThreshold",
+            "reset"
+        }
+    .end annotation
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public S(II)Z
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "x",
+            "y"
+        }
+    .end annotation
 
     const/4 p0, 0x0
 
@@ -64,8 +120,44 @@
     return p0
 .end method
 
-.method public W(II)Z
+.method public W(IIIJII)Z
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "x",
+            "y",
+            "minY",
+            "time",
+            "l",
+            "t"
+        }
+    .end annotation
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public c(II)Z
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "x",
+            "y"
+        }
+    .end annotation
 
     const/4 p0, 0x0
 
@@ -81,18 +173,16 @@
 .method public abstract canSnap()Z
 .end method
 
-.method public e0(II)V
+.method public g6()V
     .locals 0
 
     return-void
 .end method
 
-.method public e4()I
+.method public g9()V
     .locals 0
 
-    const/4 p0, 0x0
-
-    return p0
+    return-void
 .end method
 
 .method public getIsBack()I
@@ -103,16 +193,18 @@
     return p0
 .end method
 
-.method public h0(II)Z
+.method public h(II)V
     .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public j2()V
-    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "x",
+            "y"
+        }
+    .end annotation
 
     return-void
 .end method
@@ -136,29 +228,23 @@
 .end method
 
 .method public abstract onTrackSnapMissTaken(J)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "time"
+        }
+    .end annotation
 .end method
 
 .method public abstract onTrackSnapTaken(J)V
-.end method
-
-.method public q0(II)Z
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public r0(IIIJII)Z
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public ze()V
-    .locals 0
-
-    return-void
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "time"
+        }
+    .end annotation
 .end method

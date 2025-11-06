@@ -16,15 +16,15 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/upstream/PlaceholderDataSource;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/upstream/PlaceholderDataSource;-><init>()V
 
     sput-object v0, Lcom/google/android/exoplayer2/upstream/PlaceholderDataSource;->INSTANCE:Lcom/google/android/exoplayer2/upstream/PlaceholderDataSource;
 
-    new-instance v0, Lcom/google/android/exoplayer2/upstream/f;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/upstream/f;-><init>()V
+    .line 2
+    sget-object v0, Ld/j/a/b/z2/f;->a:Ld/j/a/b/z2/f;
 
     sput-object v0, Lcom/google/android/exoplayer2/upstream/PlaceholderDataSource;->FACTORY:Lcom/google/android/exoplayer2/upstream/DataSource$Factory;
 
@@ -34,12 +34,13 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static synthetic b()Lcom/google/android/exoplayer2/upstream/PlaceholderDataSource;
+.method public static synthetic a()Lcom/google/android/exoplayer2/upstream/PlaceholderDataSource;
     .locals 1
 
     new-instance v0, Lcom/google/android/exoplayer2/upstream/PlaceholderDataSource;
@@ -81,6 +82,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/io/IOException;
 
     const-string p1, "PlaceholderDataSource cannot be opened"
@@ -93,6 +95,7 @@
 .method public read([BII)I
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V

@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Maps$UnmodifiableBiMap;
+.class public Lcom/google/common/collect/Maps$UnmodifiableBiMap;
 .super Lcom/google/common/collect/ForwardingMap;
 .source "SourceFile"
 
@@ -38,7 +38,7 @@
 
 
 # instance fields
-.field final delegate:Lcom/google/common/collect/BiMap;
+.field public final delegate:Lcom/google/common/collect/BiMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/BiMap<",
@@ -47,7 +47,7 @@
     .end annotation
 .end field
 
-.field inverse:Lcom/google/common/collect/BiMap;
+.field public inverse:Lcom/google/common/collect/BiMap;
     .annotation build Lcom/google/j2objc/annotations/RetainedWith;
     .end annotation
 
@@ -62,7 +62,7 @@
     .end annotation
 .end field
 
-.field final unmodifiableMap:Ljava/util/Map;
+.field public final unmodifiableMap:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -71,7 +71,7 @@
     .end annotation
 .end field
 
-.field transient values:Ljava/util/Set;
+.field public transient values:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
@@ -101,16 +101,20 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ForwardingMap;-><init>()V
 
+    .line 2
     invoke-static {p1}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/common/collect/Maps$UnmodifiableBiMap;->unmodifiableMap:Ljava/util/Map;
 
+    .line 3
     iput-object p1, p0, Lcom/google/common/collect/Maps$UnmodifiableBiMap;->delegate:Lcom/google/common/collect/BiMap;
 
+    .line 4
     iput-object p2, p0, Lcom/google/common/collect/Maps$UnmodifiableBiMap;->inverse:Lcom/google/common/collect/BiMap;
 
     return-void
@@ -164,6 +168,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -181,10 +186,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Maps$UnmodifiableBiMap;->inverse:Lcom/google/common/collect/BiMap;
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/Maps$UnmodifiableBiMap;
 
     iget-object v1, p0, Lcom/google/common/collect/Maps$UnmodifiableBiMap;->delegate:Lcom/google/common/collect/BiMap;

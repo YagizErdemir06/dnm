@@ -1,4 +1,4 @@
-.class Landroidx/core/content/ContextCompat$Api23Impl;
+.class public Landroidx/core/content/ContextCompat$Api23Impl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,6 +33,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/content/Context;->getColor(I)I
 
     move-result p0
@@ -55,6 +57,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p0
@@ -77,6 +80,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/content/Context;->getSystemServiceName(Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object p0

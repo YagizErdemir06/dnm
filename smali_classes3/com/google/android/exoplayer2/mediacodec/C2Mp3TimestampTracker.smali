@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/mediacodec/C2Mp3TimestampTracker;
+.class public final Lcom/google/android/exoplayer2/mediacodec/C2Mp3TimestampTracker;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -21,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,6 +30,7 @@
 .method private getBufferTimestampUs(J)J
     .locals 6
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/mediacodec/C2Mp3TimestampTracker;->anchorTimestampUs:J
 
     iget-wide v2, p0, Lcom/google/android/exoplayer2/mediacodec/C2Mp3TimestampTracker;->processedFrames:J
@@ -45,6 +47,7 @@
 
     const-wide/16 p0, 0x0
 
+    .line 2
     invoke-static {p0, p1, v2, v3}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide p0
@@ -59,6 +62,7 @@
 .method public getLastOutputBufferPresentationTimeUs(Lcom/google/android/exoplayer2/Format;)J
     .locals 2
 
+    .line 1
     iget p1, p1, Lcom/google/android/exoplayer2/Format;->sampleRate:I
 
     int-to-long v0, p1
@@ -75,12 +79,15 @@
 
     const-wide/16 v0, 0x0
 
+    .line 1
     iput-wide v0, p0, Lcom/google/android/exoplayer2/mediacodec/C2Mp3TimestampTracker;->anchorTimestampUs:J
 
+    .line 2
     iput-wide v0, p0, Lcom/google/android/exoplayer2/mediacodec/C2Mp3TimestampTracker;->processedFrames:J
 
     const/4 v0, 0x0
 
+    .line 3
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/mediacodec/C2Mp3TimestampTracker;->seenInvalidMpegAudioHeader:Z
 
     return-void
@@ -89,6 +96,7 @@
 .method public updateAndGetPresentationTimeUs(Lcom/google/android/exoplayer2/Format;Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;)J
     .locals 6
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/mediacodec/C2Mp3TimestampTracker;->processedFrames:J
 
     const-wide/16 v2, 0x0
@@ -97,19 +105,23 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-wide v0, p2, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->timeUs:J
 
     iput-wide v0, p0, Lcom/google/android/exoplayer2/mediacodec/C2Mp3TimestampTracker;->anchorTimestampUs:J
 
+    .line 3
     :cond_0
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/mediacodec/C2Mp3TimestampTracker;->seenInvalidMpegAudioHeader:Z
 
     if-eqz v0, :cond_1
 
+    .line 4
     iget-wide p0, p2, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->timeUs:J
 
     return-wide p0
 
+    .line 5
     :cond_1
     iget-object v0, p2, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->data:Ljava/nio/ByteBuffer;
 
@@ -130,6 +142,7 @@
 
     shl-int/lit8 v4, v4, 0x8
 
+    .line 6
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->get(I)B
 
     move-result v5
@@ -142,6 +155,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_2
     invoke-static {v4}, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->parseMpegAudioFrameSampleCount(I)I
 
@@ -153,10 +167,13 @@
 
     const/4 p1, 0x1
 
+    .line 8
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/mediacodec/C2Mp3TimestampTracker;->seenInvalidMpegAudioHeader:Z
 
+    .line 9
     iput-wide v2, p0, Lcom/google/android/exoplayer2/mediacodec/C2Mp3TimestampTracker;->processedFrames:J
 
+    .line 10
     iget-wide v0, p2, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->timeUs:J
 
     iput-wide v0, p0, Lcom/google/android/exoplayer2/mediacodec/C2Mp3TimestampTracker;->anchorTimestampUs:J
@@ -165,12 +182,15 @@
 
     const-string p1, "MPEG audio header is invalid."
 
+    .line 11
     invoke-static {p0, p1}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 12
     iget-wide p0, p2, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->timeUs:J
 
     return-wide p0
 
+    .line 13
     :cond_3
     iget p1, p1, Lcom/google/android/exoplayer2/Format;->sampleRate:I
 
@@ -180,6 +200,7 @@
 
     move-result-wide p1
 
+    .line 14
     iget-wide v1, p0, Lcom/google/android/exoplayer2/mediacodec/C2Mp3TimestampTracker;->processedFrames:J
 
     int-to-long v3, v0

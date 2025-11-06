@@ -24,6 +24,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,6 +47,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Lcom/google/common/graph/Graph;->isDirected()Z
 
     move-result p0
@@ -1125,6 +1127,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Lcom/google/common/graph/Graph;->nodes()Ljava/util/Set;
 
     move-result-object v0
@@ -1137,6 +1140,7 @@
 
     invoke-static {v0, v1, p1}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;Ljava/lang/Object;)V
 
+    .line 2
     invoke-static {p0}, Lcom/google/common/graph/Traverser;->forGraph(Lcom/google/common/graph/SuccessorsFunction;)Lcom/google/common/graph/Traverser;
 
     move-result-object p0
@@ -1172,12 +1176,14 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/google/common/graph/Graphs$NodeVisitState;
 
+    .line 2
     sget-object v1, Lcom/google/common/graph/Graphs$NodeVisitState;->COMPLETE:Lcom/google/common/graph/Graphs$NodeVisitState;
 
     const/4 v2, 0x0
@@ -1186,6 +1192,7 @@
 
     return v2
 
+    .line 3
     :cond_0
     sget-object v1, Lcom/google/common/graph/Graphs$NodeVisitState;->PENDING:Lcom/google/common/graph/Graphs$NodeVisitState;
 
@@ -1195,9 +1202,11 @@
 
     return v3
 
+    .line 4
     :cond_1
     invoke-interface {p1, p2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 5
     invoke-interface {p0, p2}, Lcom/google/common/graph/Graph;->successors(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object v0
@@ -1217,12 +1226,14 @@
 
     move-result-object v1
 
+    .line 6
     invoke-static {p0, v1, p3}, Lcom/google/common/graph/Graphs;->canTraverseWithoutReusingEdge(Lcom/google/common/graph/Graph;Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_2
 
+    .line 7
     invoke-static {p0, p1, v1, p2}, Lcom/google/common/graph/Graphs;->subgraphHasCycle(Lcom/google/common/graph/Graph;Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
@@ -1231,6 +1242,7 @@
 
     return v3
 
+    .line 8
     :cond_3
     sget-object p0, Lcom/google/common/graph/Graphs$NodeVisitState;->COMPLETE:Lcom/google/common/graph/Graphs$NodeVisitState;
 
@@ -1253,6 +1265,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/graph/GraphBuilder;->from(Lcom/google/common/graph/Graph;)Lcom/google/common/graph/GraphBuilder;
 
     move-result-object v0
@@ -1267,12 +1280,14 @@
 
     move-result-object v0
 
+    .line 2
     invoke-interface {p0}, Lcom/google/common/graph/Graph;->isDirected()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
+    .line 3
     invoke-interface {p0}, Lcom/google/common/graph/Graph;->nodes()Ljava/util/Set;
 
     move-result-object v1
@@ -1292,6 +1307,7 @@
 
     move-result-object v2
 
+    .line 4
     invoke-static {p0, v2}, Lcom/google/common/graph/Graphs;->reachableNodes(Lcom/google/common/graph/Graph;Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object v3
@@ -1311,15 +1327,18 @@
 
     move-result-object v4
 
+    .line 5
     invoke-interface {v0, v2, v4}, Lcom/google/common/graph/MutableGraph;->putEdge(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 6
     :cond_1
     new-instance v2, Ljava/util/HashSet;
 
     invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
 
+    .line 7
     invoke-interface {p0}, Lcom/google/common/graph/Graph;->nodes()Ljava/util/Set;
 
     move-result-object v3
@@ -1339,18 +1358,22 @@
 
     move-result-object v4
 
+    .line 8
     invoke-interface {v2, v4}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v5
 
     if-nez v5, :cond_2
 
+    .line 9
     invoke-static {p0, v4}, Lcom/google/common/graph/Graphs;->reachableNodes(Lcom/google/common/graph/Graph;Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object v4
 
+    .line 10
     invoke-interface {v2, v4}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
+    .line 11
     invoke-interface {v4}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -1370,6 +1393,7 @@
 
     add-int/lit8 v8, v6, 0x1
 
+    .line 12
     invoke-static {v4, v6}, Lcom/google/common/collect/Iterables;->limit(Ljava/lang/Iterable;I)Ljava/lang/Iterable;
 
     move-result-object v6
@@ -1389,6 +1413,7 @@
 
     move-result-object v9
 
+    .line 13
     invoke-interface {v0, v7, v9}, Lcom/google/common/graph/MutableGraph;->putEdge(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     goto :goto_2

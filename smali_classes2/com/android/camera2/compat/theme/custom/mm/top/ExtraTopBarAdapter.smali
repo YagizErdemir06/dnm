@@ -14,7 +14,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lw6/p2;",
+            "Ld/d/a/u6/a5/q/k4;",
             ">;"
         }
     .end annotation
@@ -24,23 +24,40 @@
 # direct methods
 .method public constructor <init>(Ljava/util/List;ILandroid/view/View$OnClickListener;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "topConfigItems",
+            "mode",
+            "clickListener"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
-            "Lw6/p2;",
+            "Ld/d/a/u6/a5/q/k4;",
             ">;I",
             "Landroid/view/View$OnClickListener;",
             ")V"
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p3}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;-><init>(Landroid/view/View$OnClickListener;)V
 
+    .line 2
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarAdapter;->mTopConfigItems:Ljava/util/List;
 
+    .line 3
     iput-object p3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarAdapter;->mOnClickListener:Landroid/view/View$OnClickListener;
 
+    .line 4
     iput p2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarAdapter;->mMode:I
 
     return-void
@@ -51,6 +68,7 @@
 .method public getItemCount()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarAdapter;->mTopConfigItems:Ljava/util/List;
 
     if-nez p0, :cond_0
@@ -82,9 +100,19 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "recyclerView"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->onAttachedToRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
 
+    .line 2
     check-cast p1, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarAdapter;->mExtraRecycleView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
@@ -98,6 +126,16 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "holder",
+            "position"
+        }
+    .end annotation
 
     .line 1
     check-cast p1, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;
@@ -113,6 +151,16 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "holder",
+            "position"
+        }
+    .end annotation
 
     .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarAdapter;->mTopConfigItems:Ljava/util/List;
@@ -173,16 +221,16 @@
 
     move-result-object p2
 
-    check-cast p2, Lw6/p2;
+    check-cast p2, Ld/d/a/u6/a5/q/k4;
 
     .line 8
-    invoke-virtual {p2}, Lw6/p2;->f()Lw6/p2$d;
+    invoke-virtual {p2}, Ld/d/a/u6/a5/q/k4;->f()Ld/d/a/u6/a5/q/k4$d;
 
     move-result-object v0
 
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarAdapter;->mMode:I
 
-    invoke-interface {v0, v1}, Lw6/p2$d;->updateResource(I)Lw6/l4;
+    invoke-interface {v0, v1}, Ld/d/a/u6/a5/q/k4$d;->updateResource(I)Ld/d/a/u6/a5/q/m4;
 
     move-result-object v0
 
@@ -199,7 +247,7 @@
     move-result-object v1
 
     .line 10
-    invoke-virtual {v0}, Lw6/l4;->g()I
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/m4;->g()I
 
     move-result v2
 
@@ -208,7 +256,7 @@
     .line 11
     iget-object v2, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-virtual {v0}, Lw6/l4;->g()I
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/m4;->g()I
 
     move-result v3
 
@@ -222,7 +270,7 @@
 
     .line 12
     :cond_4
-    invoke-virtual {v0}, Lw6/l4;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/m4;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -235,7 +283,7 @@
     .line 13
     iget-object v1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-virtual {v0}, Lw6/l4;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/m4;->a()Ljava/lang/String;
 
     move-result-object v2
 
@@ -244,10 +292,10 @@
     .line 14
     :cond_5
     :goto_0
-    invoke-virtual {p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;->updateView(Lw6/l4;)V
+    invoke-virtual {p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;->updateView(Ld/d/a/u6/a5/q/m4;)V
 
     .line 15
-    invoke-virtual {v0}, Lw6/l4;->j()Z
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/m4;->j()Z
 
     move-result v1
 
@@ -291,7 +339,7 @@
     invoke-virtual {p0, p2}, Landroid/view/View;->setEnabled(Z)V
 
     .line 21
-    invoke-virtual {v0}, Lw6/l4;->f()I
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/m4;->f()I
 
     move-result p0
 
@@ -317,7 +365,7 @@
     .line 24
     iget-object p0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p0}, Lz1/f;->z(Landroid/view/View;)V
+    invoke-static {p0}, Ld/d/a/f6/f;->z(Landroid/view/View;)V
 
     :cond_8
     :goto_2
@@ -331,6 +379,17 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "parent",
+            "viewType"
+        }
     .end annotation
 
     .line 1
@@ -348,6 +407,17 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "parent",
+            "viewType"
+        }
     .end annotation
 
     const/4 p0, 0x0

@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Maps$5;
+.class public Lcom/google/common/collect/Maps$5;
 .super Lcom/google/common/collect/ForwardingSortedSet;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic val$set:Ljava/util/SortedSet;
+.field public final synthetic val$set:Ljava/util/SortedSet;
 
 
 # direct methods
 .method public constructor <init>(Ljava/util/SortedSet;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/Maps$5;->val$set:Ljava/util/SortedSet;
 
     invoke-direct {p0}, Lcom/google/common/collect/ForwardingSortedSet;-><init>()V
@@ -50,6 +51,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -67,6 +69,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -137,6 +140,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/ForwardingSortedSet;->headSet(Ljava/lang/Object;)Ljava/util/SortedSet;
 
     move-result-object p0
@@ -166,6 +170,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/google/common/collect/ForwardingSortedSet;->subSet(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/SortedSet;
 
     move-result-object p0
@@ -191,6 +196,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/ForwardingSortedSet;->tailSet(Ljava/lang/Object;)Ljava/util/SortedSet;
 
     move-result-object p0

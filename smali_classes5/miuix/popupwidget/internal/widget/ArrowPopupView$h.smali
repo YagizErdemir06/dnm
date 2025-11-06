@@ -3,29 +3,32 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lmiuix/popupwidget/internal/widget/ArrowPopupView;->s()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x1
-    name = null
+    name = "h"
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
+.field public c:Landroid/view/View$OnClickListener;
+
+.field public final synthetic d:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/popupwidget/internal/widget/ArrowPopupView;)V
     .locals 0
 
-    iput-object p1, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$h;->a:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
+    .line 1
+    iput-object p1, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$h;->d:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -34,82 +37,37 @@
 
 
 # virtual methods
-.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 4
+.method public a(Landroid/view/View$OnClickListener;)V
+    .locals 0
 
-    iget-object v0, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$h;->a:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
+    .line 1
+    iput-object p1, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$h;->c:Landroid/view/View$OnClickListener;
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object p1
+.method public onClick(Landroid/view/View;)V
+    .locals 1
 
-    check-cast p1, Ljava/lang/Float;
+    .line 1
+    iget-object v0, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$h;->c:Landroid/view/View$OnClickListener;
 
-    invoke-virtual {p1}, Ljava/lang/Float;->intValue()I
+    if-eqz v0, :cond_0
 
-    move-result p1
+    .line 2
+    invoke-interface {v0, p1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
 
-    invoke-static {v0, p1}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->f(Lmiuix/popupwidget/internal/widget/ArrowPopupView;I)I
+    .line 3
+    :cond_0
+    iget-object p0, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$h;->d:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
-    iget-object p1, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$h;->a:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
-
-    invoke-static {p1}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->e(Lmiuix/popupwidget/internal/widget/ArrowPopupView;)I
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Math;->abs(I)I
-
-    move-result p1
-
-    iget-object v0, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$h;->a:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
-
-    invoke-static {v0}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->g(Lmiuix/popupwidget/internal/widget/ArrowPopupView;)Landroid/widget/LinearLayout;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/view/View;->getLeft()I
-
-    move-result v1
-
-    sub-int/2addr v1, p1
-
-    iget-object v2, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$h;->a:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
-
-    invoke-static {v2}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->g(Lmiuix/popupwidget/internal/widget/ArrowPopupView;)Landroid/widget/LinearLayout;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/view/View;->getTop()I
-
-    move-result v2
-
-    sub-int/2addr v2, p1
-
-    iget-object v3, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$h;->a:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
-
-    invoke-static {v3}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->g(Lmiuix/popupwidget/internal/widget/ArrowPopupView;)Landroid/widget/LinearLayout;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/view/View;->getRight()I
-
-    move-result v3
-
-    add-int/2addr v3, p1
-
-    iget-object p0, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$h;->a:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
-
-    invoke-static {p0}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->g(Lmiuix/popupwidget/internal/widget/ArrowPopupView;)Landroid/widget/LinearLayout;
+    invoke-static {p0}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->j(Lmiuix/popupwidget/internal/widget/ArrowPopupView;)Lk/w/c/a;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Landroid/view/View;->getBottom()I
+    const/4 p1, 0x1
 
-    move-result p0
-
-    add-int/2addr p0, p1
-
-    invoke-virtual {v0, v1, v2, v3, p0}, Landroid/view/View;->invalidate(IIII)V
+    invoke-virtual {p0, p1}, Lk/w/c/a;->a(Z)V
 
     return-void
 .end method

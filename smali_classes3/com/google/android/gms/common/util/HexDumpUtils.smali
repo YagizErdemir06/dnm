@@ -55,6 +55,7 @@
     :cond_1
     const/16 v0, 0x39
 
+    .line 1
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -91,6 +92,7 @@
 
     new-array v5, v7, [Ljava/lang/Object;
 
+    .line 2
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v8
@@ -110,6 +112,7 @@
     :cond_2
     new-array v5, v7, [Ljava/lang/Object;
 
+    .line 3
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v8
@@ -134,12 +137,14 @@
 
     const-string v8, " -"
 
+    .line 4
     invoke-virtual {v1, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_4
     :goto_3
     new-array v7, v7, [Ljava/lang/Object;
 
+    .line 5
     aget-byte v8, p0, p1
 
     and-int/lit16 v8, v8, 0xff
@@ -180,6 +185,7 @@
 
     const-string v9, "   "
 
+    .line 6
     invoke-virtual {v1, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     add-int/lit8 v8, v8, 0x1
@@ -191,8 +197,10 @@
 
     if-lt v7, v6, :cond_7
 
+    .line 7
     invoke-virtual {v1, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 8
     :cond_7
     invoke-virtual {v1, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -203,6 +211,7 @@
 
     add-int v7, v5, v6
 
+    .line 9
     aget-byte v7, p0, v7
 
     int-to-char v7, v7
@@ -220,6 +229,7 @@
     :cond_8
     move v7, v9
 
+    .line 10
     :cond_9
     invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
@@ -235,6 +245,7 @@
     :cond_b
     const/16 v4, 0xa
 
+    .line 11
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     move v4, v0
@@ -244,6 +255,7 @@
 
     goto/16 :goto_1
 
+    .line 12
     :cond_d
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

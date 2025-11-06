@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field commDataType:I
+.field public commDataType:I
 
-.field commType:I
+.field public commType:I
 
-.field connLevel:I
+.field public connLevel:I
 
-.field linkRole:I
+.field public linkRole:I
 
-.field privateData:[B
+.field public privateData:[B
 
-.field rpcChannels:Ljava/util/List;
+.field public rpcChannels:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -35,11 +35,11 @@
     .end annotation
 .end field
 
-.field serviceProto:Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;
+.field public serviceProto:Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;
 
-.field serviceSecurityType:I
+.field public serviceSecurityType:I
 
-.field verifySameAccount:Z
+.field public verifySameAccount:Z
 
 
 # direct methods
@@ -106,6 +106,7 @@
 .method public varargs addRpcChannel([I)Lcom/xiaomi/idm/api/IDMClient$CSParamBuilder;
     .locals 4
 
+    .line 1
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -115,6 +116,7 @@
 
     aget v2, p1, v1
 
+    .line 2
     iget-object v3, p0, Lcom/xiaomi/idm/api/IDMClient$CSParamBuilder;->rpcChannels:Ljava/util/List;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -134,6 +136,7 @@
 .method public clearRpcChannel()Lcom/xiaomi/idm/api/IDMClient$CSParamBuilder;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMClient$CSParamBuilder;->rpcChannels:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
@@ -144,6 +147,7 @@
 .method public commDataType(I)Lcom/xiaomi/idm/api/IDMClient$CSParamBuilder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/idm/api/IDMClient$CSParamBuilder;->commDataType:I
 
     return-object p0
@@ -152,6 +156,7 @@
 .method public commType(I)Lcom/xiaomi/idm/api/IDMClient$CSParamBuilder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/idm/api/IDMClient$CSParamBuilder;->commType:I
 
     return-object p0
@@ -160,6 +165,7 @@
 .method public connLevel(I)Lcom/xiaomi/idm/api/IDMClient$CSParamBuilder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/idm/api/IDMClient$CSParamBuilder;->connLevel:I
 
     return-object p0
@@ -168,6 +174,7 @@
 .method public linkRole(I)Lcom/xiaomi/idm/api/IDMClient$CSParamBuilder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/idm/api/IDMClient$CSParamBuilder;->linkRole:I
 
     return-object p0
@@ -180,6 +187,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/api/IDMClient$CSParamBuilder;->privateData:[B
 
     return-object p0
@@ -197,9 +205,11 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     iput-boolean v0, p0, Lcom/xiaomi/idm/api/IDMClient$CSParamBuilder;->verifySameAccount:Z
 
+    .line 2
     iput p1, p0, Lcom/xiaomi/idm/api/IDMClient$CSParamBuilder;->serviceSecurityType:I
 
     return-object p0
@@ -210,6 +220,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/idm/api/IDMClient$CSParamBuilder;->verifySameAccount:Z
 
     return-object p0

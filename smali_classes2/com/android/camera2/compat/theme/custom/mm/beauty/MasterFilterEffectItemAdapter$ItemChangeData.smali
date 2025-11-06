@@ -15,19 +15,32 @@
 
 
 # instance fields
-.field index:I
+.field public index:I
 
-.field select:Z
+.field public select:Z
 
 
 # direct methods
 .method public constructor <init>(ZI)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "select",
+            "index"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/MasterFilterEffectItemAdapter$ItemChangeData;->select:Z
 
+    .line 3
     iput p2, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/MasterFilterEffectItemAdapter$ItemChangeData;->index:I
 
     return-void
@@ -37,9 +50,10 @@
 # virtual methods
 .method public toString()Ljava/lang/String;
     .locals 2
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

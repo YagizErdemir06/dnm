@@ -15,35 +15,43 @@
 
 
 # static fields
-.field public static final i:I = 0xc8
+.field private static final a:I = 0xc8
 
-.field public static final j:I = 0x3e8
+.field private static final b:I = 0x3e8
 
 
 # instance fields
-.field public a:F
+.field private c:F
 
-.field public b:F
+.field private d:F
 
-.field public c:F
+.field private e:F
 
-.field public d:F
+.field private f:F
 
-.field public e:F
+.field private g:F
 
-.field public f:F
+.field private h:F
 
-.field public g:J
+.field private i:J
 
-.field public final synthetic h:Lcom/xiaomi/ocr/view/ParticleAnimView;
+.field public final synthetic j:Lcom/xiaomi/ocr/view/ParticleAnimView;
 
 
 # direct methods
-.method public constructor <init>(Lcom/xiaomi/ocr/view/ParticleAnimView;)V
+.method private constructor <init>(Lcom/xiaomi/ocr/view/ParticleAnimView;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->h:Lcom/xiaomi/ocr/view/ParticleAnimView;
+    iput-object p1, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->j:Lcom/xiaomi/ocr/view/ParticleAnimView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -62,7 +70,8 @@
 .method public static synthetic a(Lcom/xiaomi/ocr/view/ParticleAnimView$b;)F
     .locals 0
 
-    iget p0, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->c:F
+    .line 1
+    iget p0, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->e:F
 
     return p0
 .end method
@@ -70,7 +79,8 @@
 .method public static synthetic b(Lcom/xiaomi/ocr/view/ParticleAnimView$b;)F
     .locals 0
 
-    iget p0, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->d:F
+    .line 1
+    iget p0, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->f:F
 
     return p0
 .end method
@@ -78,7 +88,8 @@
 .method public static synthetic c(Lcom/xiaomi/ocr/view/ParticleAnimView$b;)F
     .locals 0
 
-    iget p0, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->e:F
+    .line 1
+    iget p0, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->g:F
 
     return p0
 .end method
@@ -86,19 +97,19 @@
 .method public static synthetic d(Lcom/xiaomi/ocr/view/ParticleAnimView$b;)F
     .locals 0
 
-    iget p0, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->f:F
+    .line 1
+    iget p0, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->h:F
 
     return p0
 .end method
 
-
-# virtual methods
-.method public final e()V
+.method private e()V
     .locals 4
 
-    iget-object v0, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->h:Lcom/xiaomi/ocr/view/ParticleAnimView;
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->j:Lcom/xiaomi/ocr/view/ParticleAnimView;
 
-    invoke-static {v0}, Lcom/xiaomi/ocr/view/ParticleAnimView;->b(Lcom/xiaomi/ocr/view/ParticleAnimView;)Landroid/graphics/Rect;
+    invoke-static {v0}, Lcom/xiaomi/ocr/view/ParticleAnimView;->a(Lcom/xiaomi/ocr/view/ParticleAnimView;)Landroid/graphics/Rect;
 
     move-result-object v0
 
@@ -114,9 +125,9 @@
 
     mul-double/2addr v0, v2
 
-    iget-object v2, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->h:Lcom/xiaomi/ocr/view/ParticleAnimView;
+    iget-object v2, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->j:Lcom/xiaomi/ocr/view/ParticleAnimView;
 
-    invoke-static {v2}, Lcom/xiaomi/ocr/view/ParticleAnimView;->b(Lcom/xiaomi/ocr/view/ParticleAnimView;)Landroid/graphics/Rect;
+    invoke-static {v2}, Lcom/xiaomi/ocr/view/ParticleAnimView;->a(Lcom/xiaomi/ocr/view/ParticleAnimView;)Landroid/graphics/Rect;
 
     move-result-object v2
 
@@ -128,11 +139,12 @@
 
     double-to-float v0, v0
 
-    iput v0, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->e:F
+    iput v0, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->g:F
 
-    iget-object v0, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->h:Lcom/xiaomi/ocr/view/ParticleAnimView;
+    .line 2
+    iget-object v0, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->j:Lcom/xiaomi/ocr/view/ParticleAnimView;
 
-    invoke-static {v0}, Lcom/xiaomi/ocr/view/ParticleAnimView;->b(Lcom/xiaomi/ocr/view/ParticleAnimView;)Landroid/graphics/Rect;
+    invoke-static {v0}, Lcom/xiaomi/ocr/view/ParticleAnimView;->a(Lcom/xiaomi/ocr/view/ParticleAnimView;)Landroid/graphics/Rect;
 
     move-result-object v0
 
@@ -148,9 +160,9 @@
 
     mul-double/2addr v0, v2
 
-    iget-object v2, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->h:Lcom/xiaomi/ocr/view/ParticleAnimView;
+    iget-object v2, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->j:Lcom/xiaomi/ocr/view/ParticleAnimView;
 
-    invoke-static {v2}, Lcom/xiaomi/ocr/view/ParticleAnimView;->b(Lcom/xiaomi/ocr/view/ParticleAnimView;)Landroid/graphics/Rect;
+    invoke-static {v2}, Lcom/xiaomi/ocr/view/ParticleAnimView;->a(Lcom/xiaomi/ocr/view/ParticleAnimView;)Landroid/graphics/Rect;
 
     move-result-object v2
 
@@ -162,8 +174,9 @@
 
     double-to-float v0, v0
 
-    iput v0, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->f:F
+    iput v0, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->h:F
 
+    .line 3
     invoke-static {}, Ljava/lang/Math;->random()D
 
     move-result-wide v0
@@ -178,14 +191,17 @@
 
     double-to-float v0, v0
 
-    iput v0, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->b:F
+    iput v0, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->d:F
 
     return-void
 .end method
 
+
+# virtual methods
 .method public f()V
     .locals 4
 
+    .line 1
     invoke-static {}, Ljava/lang/Math;->random()D
 
     move-result-wide v0
@@ -200,16 +216,19 @@
 
     double-to-float v0, v0
 
-    iput v0, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->a:F
+    iput v0, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->c:F
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->c:F
+    .line 2
+    iput v0, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->e:F
 
     const v0, 0x3dcccccd    # 0.1f
 
-    iput v0, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->d:F
+    .line 3
+    iput v0, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->f:F
 
+    .line 4
     invoke-static {}, Ljava/lang/Math;->random()D
 
     move-result-wide v0
@@ -222,9 +241,10 @@
 
     double-to-long v0, v0
 
-    iput-wide v0, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->g:J
+    iput-wide v0, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->i:J
 
-    invoke-virtual {p0}, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->e()V
+    .line 5
+    invoke-direct {p0}, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->e()V
 
     return-void
 .end method
@@ -232,13 +252,14 @@
 .method public g()V
     .locals 6
 
-    iget-wide v0, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->g:J
+    .line 1
+    iget-wide v0, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->i:J
 
     const-wide/16 v2, 0xa
 
     add-long/2addr v0, v2
 
-    iput-wide v0, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->g:J
+    iput-wide v0, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->i:J
 
     const-wide/16 v4, 0x0
 
@@ -248,6 +269,7 @@
 
     long-to-int v0, v0
 
+    .line 2
     rem-int/lit16 v0, v0, 0x190
 
     const/16 v1, 0xc8
@@ -274,13 +296,15 @@
     :goto_0
     div-float/2addr v1, v4
 
-    iget v4, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->a:F
+    .line 3
+    iget v4, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->c:F
 
     mul-float/2addr v4, v1
 
-    iput v4, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->c:F
+    iput v4, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->e:F
 
-    iget v4, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->b:F
+    .line 4
+    iget v4, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->d:F
 
     mul-float/2addr v4, v1
 
@@ -290,7 +314,7 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->d:F
+    iput v1, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->f:F
 
     if-ltz v0, :cond_2
 
@@ -300,14 +324,16 @@
 
     if-gez v0, :cond_2
 
-    invoke-virtual {p0}, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->e()V
+    .line 5
+    invoke-direct {p0}, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->e()V
 
     goto :goto_1
 
     :cond_1
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->c:F
+    .line 6
+    iput v0, p0, Lcom/xiaomi/ocr/view/ParticleAnimView$b;->e:F
 
     :cond_2
     :goto_1

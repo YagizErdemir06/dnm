@@ -1,4 +1,4 @@
-.class final Lcom/bumptech/glide/util/ViewPreloadSizeProvider$SizeViewTarget;
+.class public final Lcom/bumptech/glide/util/ViewPreloadSizeProvider$SizeViewTarget;
 .super Lcom/bumptech/glide/request/target/CustomViewTarget;
 .source "SourceFile"
 
@@ -31,6 +31,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/bumptech/glide/request/target/CustomViewTarget;-><init>(Landroid/view/View;)V
 
     return-void

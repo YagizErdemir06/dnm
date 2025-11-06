@@ -31,8 +31,10 @@
 
     const-string v0, "camera_imagecodec_jni.xiaomi"
 
+    .line 1
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
+    .line 2
     invoke-static {}, Lcom/xiaomi/media/imagecodec/ImageCodec;->nativeClassInit()V
 
     return-void
@@ -49,14 +51,17 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/xiaomi/media/imagecodec/ImageCodec;->mContextLock:Ljava/lang/Object;
 
+    .line 3
     sget-object v0, Lcom/xiaomi/media/imagecodec/ImageCodec;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -79,8 +84,10 @@
 
     invoke-static {v0, v1}, Lcom/xiaomi/engine/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 4
     iput-object p1, p0, Lcom/xiaomi/media/imagecodec/ImageCodec;->mInputSpec:Lcom/xiaomi/media/imagecodec/ImageCodec$ImageSpec;
 
+    .line 5
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -135,6 +142,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -144,6 +152,7 @@
 
     throw p0
 
+    .line 2
     :cond_1
     :goto_0
     new-instance v0, Lcom/xiaomi/media/imagecodec/ImageCodec$ImageSpec;
@@ -152,12 +161,14 @@
 
     invoke-direct {v0, p0, p1, p2, v1}, Lcom/xiaomi/media/imagecodec/ImageCodec$ImageSpec;-><init>(IIILcom/xiaomi/media/imagecodec/ImageCodec$1;)V
 
+    .line 3
     new-instance p0, Lcom/xiaomi/media/imagecodec/ImageCodec;
 
     invoke-direct {p0, v0}, Lcom/xiaomi/media/imagecodec/ImageCodec;-><init>(Lcom/xiaomi/media/imagecodec/ImageCodec$ImageSpec;)V
 
     return-object p0
 
+    .line 4
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -179,6 +190,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     const-class p0, Landroid/media/Image;
 
@@ -194,10 +206,12 @@
 
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    .line 2
+    invoke-virtual {p0, v0}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
     new-array v0, v1, [Ljava/lang/Object;
 
+    .line 3
     invoke-virtual {p0, p1, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -211,12 +225,14 @@
     :catch_0
     move-exception p0
 
+    .line 4
     sget-object p1, Lcom/xiaomi/media/imagecodec/ImageCodec;->TAG:Ljava/lang/String;
 
     const-string v0, "Failed to get the owner of the given image"
 
     invoke-static {p1, v0, p0}, Lcom/xiaomi/engine/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 5
     sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     return-object p0
@@ -225,6 +241,7 @@
 .method public static getVersionCode()I
     .locals 1
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/media/imagecodec/ImageCodec;->nativeGetVersionCode()I
 
     move-result v0
@@ -243,6 +260,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     const-class p0, Landroid/media/Image;
 
@@ -254,8 +272,10 @@
 
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    .line 2
+    invoke-virtual {p0, v0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
+    .line 3
     invoke-virtual {p0, p1}, Ljava/lang/reflect/Field;->getBoolean(Ljava/lang/Object;)Z
 
     move-result p0
@@ -268,6 +288,7 @@
     :catch_0
     move-exception p0
 
+    .line 4
     sget-object p1, Lcom/xiaomi/media/imagecodec/ImageCodec;->TAG:Ljava/lang/String;
 
     const-string v0, "Failed to check if the given image is valid ot not"
@@ -378,15 +399,18 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/xiaomi/media/imagecodec/ImageCodec;->TAG:Ljava/lang/String;
 
     const-string v1, "postEventFromNative(): E"
 
     invoke-static {v0, v1}, Lcom/xiaomi/engine/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     check-cast p0, Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    .line 3
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -399,6 +423,7 @@
     :cond_0
     const-string p0, "postEventFromNative(): X"
 
+    .line 4
     invoke-static {v0, p0}, Lcom/xiaomi/engine/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -419,6 +444,7 @@
 
     if-eqz p1, :cond_5
 
+    .line 1
     invoke-virtual {p1}, Landroid/media/Image;->getWidth()I
 
     move-result v0
@@ -439,6 +465,7 @@
 
     if-ne v0, v1, :cond_4
 
+    .line 2
     invoke-virtual {p1}, Landroid/media/Image;->getFormat()I
 
     move-result v0
@@ -449,6 +476,7 @@
 
     if-ne v0, v1, :cond_3
 
+    .line 3
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -465,16 +493,19 @@
 
     if-eqz v0, :cond_2
 
+    .line 4
     invoke-direct {p0, p1}, Lcom/xiaomi/media/imagecodec/ImageCodec;->isImageValid(Landroid/media/Image;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 5
     iget-object v0, p0, Lcom/xiaomi/media/imagecodec/ImageCodec;->mContextLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 6
     :try_start_0
     iget-wide v1, p0, Lcom/xiaomi/media/imagecodec/ImageCodec;->mNativeContext:J
 
@@ -484,14 +515,17 @@
 
     if-eqz v3, :cond_0
 
+    .line 7
     invoke-direct {p0, v1, v2, p1}, Lcom/xiaomi/media/imagecodec/ImageCodec;->nativeDrainInputImage(JLandroid/media/Image;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 8
     :cond_0
     :try_start_1
     invoke-virtual {p1}, Landroid/media/Image;->close()V
 
+    .line 9
     monitor-exit v0
 
     return-void
@@ -499,19 +533,23 @@
     :catchall_0
     move-exception p0
 
+    .line 10
     invoke-virtual {p1}, Landroid/media/Image;->close()V
 
+    .line 11
     throw p0
 
     :catchall_1
     move-exception p0
 
+    .line 12
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     throw p0
 
+    .line 13
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -521,6 +559,7 @@
 
     throw p0
 
+    .line 14
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -530,6 +569,7 @@
 
     throw p0
 
+    .line 15
     :cond_3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -555,6 +595,7 @@
 
     throw p0
 
+    .line 16
     :cond_4
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -590,6 +631,7 @@
 
     throw p0
 
+    .line 17
     :cond_5
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -603,6 +645,7 @@
 .method public getInputSpec()Lcom/xiaomi/media/imagecodec/ImageCodec$ImageSpec;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/media/imagecodec/ImageCodec;->mInputSpec:Lcom/xiaomi/media/imagecodec/ImageCodec$ImageSpec;
 
     return-object p0
@@ -611,15 +654,18 @@
 .method public getOutputSpec()Lcom/xiaomi/media/imagecodec/ImageCodec$ImageSpec;
     .locals 5
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/media/imagecodec/ImageCodec;->mContextLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/xiaomi/media/imagecodec/ImageCodec;->mOutputSpec:Lcom/xiaomi/media/imagecodec/ImageCodec$ImageSpec;
 
     if-nez v1, :cond_1
 
+    .line 3
     iget-wide v1, p0, Lcom/xiaomi/media/imagecodec/ImageCodec;->mNativeContext:J
 
     const-wide/16 v3, 0x0
@@ -628,6 +674,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 4
     new-instance v1, Lcom/xiaomi/media/imagecodec/ImageCodec$ImageSpec;
 
     const/4 v2, 0x0
@@ -638,12 +685,14 @@
 
     iput-object v1, p0, Lcom/xiaomi/media/imagecodec/ImageCodec;->mOutputSpec:Lcom/xiaomi/media/imagecodec/ImageCodec$ImageSpec;
 
+    .line 5
     iget-wide v2, p0, Lcom/xiaomi/media/imagecodec/ImageCodec;->mNativeContext:J
 
     invoke-direct {p0, v2, v3, v1}, Lcom/xiaomi/media/imagecodec/ImageCodec;->nativeGetOutputSpec(JLcom/xiaomi/media/imagecodec/ImageCodec$ImageSpec;)V
 
     goto :goto_0
 
+    .line 6
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -653,12 +702,14 @@
 
     throw p0
 
+    .line 7
     :cond_1
     :goto_0
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 8
     iget-object p0, p0, Lcom/xiaomi/media/imagecodec/ImageCodec;->mOutputSpec:Lcom/xiaomi/media/imagecodec/ImageCodec$ImageSpec;
 
     return-object p0
@@ -666,6 +717,7 @@
     :catchall_0
     move-exception p0
 
+    .line 9
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -677,6 +729,7 @@
 .method public release()V
     .locals 4
 
+    .line 1
     sget-object v0, Lcom/xiaomi/media/imagecodec/ImageCodec;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -699,10 +752,12 @@
 
     invoke-static {v0, v1}, Lcom/xiaomi/engine/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     iget-object v1, p0, Lcom/xiaomi/media/imagecodec/ImageCodec;->mContextLock:Ljava/lang/Object;
 
     monitor-enter v1
 
+    .line 3
     :try_start_0
     iget-wide v2, p0, Lcom/xiaomi/media/imagecodec/ImageCodec;->mNativeContext:J
 
@@ -710,12 +765,15 @@
 
     const-wide/16 v2, 0x0
 
+    .line 4
     iput-wide v2, p0, Lcom/xiaomi/media/imagecodec/ImageCodec;->mNativeContext:J
 
+    .line 5
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 6
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -741,6 +799,7 @@
     :catchall_0
     move-exception p0
 
+    .line 7
     :try_start_1
     monitor-exit v1
     :try_end_1
@@ -760,10 +819,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/media/imagecodec/ImageCodec;->mContextLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-wide v1, p0, Lcom/xiaomi/media/imagecodec/ImageCodec;->mNativeContext:J
 
@@ -782,13 +843,16 @@
     :cond_0
     const/4 p1, 0x0
 
+    .line 3
     :goto_0
     invoke-direct {p0, v1, v2, p1}, Lcom/xiaomi/media/imagecodec/ImageCodec;->nativeSetFlipFlag(JI)V
 
+    .line 4
     monitor-exit v0
 
     return-void
 
+    .line 5
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -801,6 +865,7 @@
     :catchall_0
     move-exception p0
 
+    .line 6
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -821,6 +886,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     new-instance v1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v1, p0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -845,6 +911,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -872,10 +939,12 @@
 
     if-gt p1, v0, :cond_1
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/media/imagecodec/ImageCodec;->mContextLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-wide v1, p0, Lcom/xiaomi/media/imagecodec/ImageCodec;->mNativeContext:J
 
@@ -885,12 +954,15 @@
 
     if-eqz v3, :cond_0
 
+    .line 3
     invoke-direct {p0, v1, v2, p1}, Lcom/xiaomi/media/imagecodec/ImageCodec;->nativeSetCodecQuality(JI)V
 
+    .line 4
     monitor-exit v0
 
     return-void
 
+    .line 5
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -903,12 +975,14 @@
     :catchall_0
     move-exception p0
 
+    .line 6
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw p0
 
+    .line 7
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

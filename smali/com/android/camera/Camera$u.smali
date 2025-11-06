@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lse/d$d;
+.implements Ld/o/f/d$d;
 
 
 # annotations
@@ -22,8 +22,16 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/camera/Camera;)V
+.method private constructor <init>(Lcom/android/camera/Camera;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/android/camera/Camera$u;->a:Lcom/android/camera/Camera;
@@ -47,9 +55,10 @@
 .method public onIdle()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera/Camera$u;->a:Lcom/android/camera/Camera;
 
-    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->Ii()Z
+    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->ke()Z
 
     move-result v0
 
@@ -57,16 +66,17 @@
 
     iget-object v0, p0, Lcom/android/camera/Camera$u;->a:Lcom/android/camera/Camera;
 
-    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->B2()Z
+    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->a2()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/android/camera/Camera$u;->a:Lcom/android/camera/Camera;
 
-    invoke-static {p0}, Lcom/android/camera/Camera;->Pk(Lcom/android/camera/Camera;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/android/camera/Camera;->Di(Lcom/android/camera/Camera;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -78,7 +88,8 @@
 
     invoke-static {p0, v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {}, Lcom/android/camera/a6;->V3()V
+    .line 3
+    invoke-static {}, Ld/d/a/z5;->I3()V
 
     :cond_1
     return-void

@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
-.implements Lv8/k0;
+.implements Ld/d/a/m7/g/n0;
 
 
 # static fields
@@ -21,79 +21,23 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/BaseFragment;-><init>()V
-
-    return-void
-.end method
-
-.method public static synthetic Gh(Lv8/n1;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;->lambda$showManualParameterResetDialog$4(Lv8/n1;)V
-
-    return-void
-.end method
-
-.method public static synthetic Hh(Landroid/view/View;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;->lambda$hideExtraTopConfig$0(Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method public static synthetic Xh(Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;Landroid/content/DialogInterface;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;->lambda$showManualParameterResetDialog$7(Landroid/content/DialogInterface;)V
-
-    return-void
-.end method
-
-.method public static synthetic Zh()V
-    .locals 0
-
-    invoke-static {}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;->lambda$showManualParameterResetDialog$6()V
-
-    return-void
-.end method
-
-.method public static synthetic ai()V
-    .locals 0
-
-    invoke-static {}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;->lambda$showManualParameterResetDialog$5()V
-
-    return-void
-.end method
-
-.method public static synthetic bi(Landroid/view/View;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;->lambda$showExtraTopConfig$1(Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method public static synthetic ci(Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughImageView;)Z
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;->lambda$handleExtraTopBarNeedHideViews$2(Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughImageView;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static synthetic di(Lv8/z;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;->lambda$showManualParameterResetDialog$3(Lv8/z;)V
 
     return-void
 .end method
 
 .method private handleExtraTopBarNeedHideViews(Ljava/util/function/Consumer;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "consumer"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -103,6 +47,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;->mExtraTopBarLayout:Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarLayout;
 
     if-eqz p0, :cond_0
@@ -119,6 +64,7 @@
     :goto_0
     if-eqz p0, :cond_2
 
+    .line 2
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -127,19 +73,19 @@
 
     goto :goto_1
 
+    .line 3
     :cond_1
-    invoke-interface {p0}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
+    invoke-interface {p0}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
 
     move-result-object p0
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/top/n;
-
-    invoke-direct {v0}, Lcom/android/camera2/compat/theme/custom/mm/top/n;-><init>()V
+    sget-object v0, Ld/d/b/x5/a/b/b/m/q;->a:Ld/d/b/x5/a/b/b/m/q;
 
     invoke-interface {p0, v0}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object p0
 
+    .line 4
     invoke-interface {p0, p1}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V
 
     :cond_2
@@ -149,21 +95,29 @@
 
 .method private isExtraTopBarNeedHideItem(I)Z
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "topConfigItem"
+        }
+    .end annotation
 
-    const/16 p0, 0xea
+    const/4 p0, 0x0
 
-    const/4 v0, 0x0
+    const/16 v0, 0xea
 
-    if-ne p1, p0, :cond_0
+    if-ne p1, v0, :cond_0
 
-    return v0
+    return p0
 
     :cond_0
-    const/16 p0, 0xee
+    const/16 v0, 0xee
 
-    if-ne p1, p0, :cond_1
+    if-ne p1, v0, :cond_1
 
-    return v0
+    return p0
 
     :cond_1
     const/4 p0, 0x1
@@ -171,14 +125,15 @@
     return p0
 .end method
 
-.method private static synthetic lambda$handleExtraTopBarNeedHideViews$2(Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughImageView;)Z
+.method public static synthetic lambda$handleExtraTopBarNeedHideViews$2(Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughImageView;)Z
     .locals 3
 
-    invoke-virtual {p0}, Landroid/view/View;->getTag()Ljava/lang/Object;
+    .line 1
+    invoke-virtual {p0}, Landroid/widget/ImageView;->getTag()Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Lw6/p2;
+    check-cast p0, Ld/d/a/u6/a5/q/k4;
 
     const/4 v0, 0x1
 
@@ -186,8 +141,9 @@
 
     return v0
 
+    .line 2
     :cond_0
-    invoke-virtual {p0}, Lw6/p2;->a()I
+    invoke-virtual {p0}, Ld/d/a/u6/a5/q/k4;->a()I
 
     move-result v1
 
@@ -195,7 +151,8 @@
 
     if-eq v1, v2, :cond_1
 
-    invoke-virtual {p0}, Lw6/p2;->a()I
+    .line 3
+    invoke-virtual {p0}, Ld/d/a/u6/a5/q/k4;->a()I
 
     move-result p0
 
@@ -212,136 +169,150 @@
     return v0
 .end method
 
-.method private static synthetic lambda$hideExtraTopConfig$0(Landroid/view/View;)V
+.method public static synthetic lambda$hideExtraTopConfig$0(Landroid/view/View;)V
     .locals 1
 
     const/16 v0, 0x8
 
+    .line 1
     invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$showExtraTopConfig$1(Landroid/view/View;)V
+.method public static synthetic lambda$showExtraTopConfig$1(Landroid/view/View;)V
     .locals 1
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$showManualParameterResetDialog$3(Lv8/z;)V
+.method public static synthetic lambda$showManualParameterResetDialog$3(Ld/d/a/m7/g/c0;)V
     .locals 0
 
-    invoke-interface {p0}, Lv8/z;->md()V
+    .line 1
+    invoke-interface {p0}, Ld/d/a/m7/g/c0;->Vc()V
 
     return-void
 .end method
 
-.method private static synthetic lambda$showManualParameterResetDialog$4(Lv8/n1;)V
+.method public static synthetic lambda$showManualParameterResetDialog$4(Ld/d/a/m7/g/q1;)V
     .locals 1
 
     const/4 v0, 0x7
 
-    invoke-interface {p0, v0}, Lv8/d1;->clearFocusView(I)V
+    .line 1
+    invoke-interface {p0, v0}, Ld/d/a/m7/g/g1;->clearFocusView(I)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$showManualParameterResetDialog$5()V
+.method public static synthetic lambda$showManualParameterResetDialog$5()V
     .locals 5
 
-    invoke-static {}, Lq7/x4;->x()Z
+    .line 1
+    invoke-static {}, Ld/d/a/d7/b8;->x()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lv8/s2;->impl2()Lv8/s2;
+    .line 2
+    invoke-static {}, Ld/d/a/m7/g/u2;->impl2()Ld/d/a/m7/g/u2;
 
     move-result-object v0
 
     if-eqz v0, :cond_4
 
-    invoke-interface {v0}, Lv8/s2;->dh()V
+    .line 3
+    invoke-interface {v0}, Ld/d/a/m7/g/u2;->Gg()V
 
     goto :goto_0
 
+    .line 4
     :cond_0
-    invoke-static {}, Lq7/x4;->h()Z
+    invoke-static {}, Ld/d/a/d7/b8;->h()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lid/b;->W5()Z
+    invoke-virtual {v0}, Ld/k/a/b;->K5()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    invoke-static {}, Ly8/c;->impl2()Ly8/c;
+    .line 5
+    invoke-static {}, Ld/d/a/m7/g/s3/c;->impl2()Ld/d/a/m7/g/s3/c;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Ly8/a;->isShowing()Z
+    .line 6
+    invoke-interface {v0}, Ld/d/a/m7/g/s3/a;->isShowing()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    invoke-interface {v0}, Ly8/c;->resetManually()V
+    .line 7
+    invoke-interface {v0}, Ld/d/a/m7/g/s3/c;->resetManually()V
 
     goto :goto_0
 
+    .line 8
     :cond_1
-    invoke-static {}, Lv8/z;->impl()Ljava/util/Optional;
+    invoke-static {}, Ld/d/a/m7/g/c0;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/top/k;
-
-    invoke-direct {v1}, Lcom/android/camera2/compat/theme/custom/mm/top/k;-><init>()V
+    .line 9
+    sget-object v1, Ld/d/b/x5/a/b/b/m/r;->c:Ld/d/b/x5/a/b/b/m/r;
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
     goto :goto_0
 
+    .line 10
     :cond_2
-    invoke-static {}, Lv8/p1;->impl2()Lv8/p1;
+    invoke-static {}, Ld/d/a/m7/g/s1;->impl2()Ld/d/a/m7/g/s1;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
-    invoke-interface {v0}, Lv8/p1;->resetManually()V
+    .line 11
+    invoke-interface {v0}, Ld/d/a/m7/g/s1;->resetManually()V
 
+    .line 12
     :cond_3
-    invoke-static {}, Lv8/n1;->impl()Ljava/util/Optional;
+    invoke-static {}, Ld/d/a/m7/g/q1;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/top/l;
-
-    invoke-direct {v1}, Lcom/android/camera2/compat/theme/custom/mm/top/l;-><init>()V
+    sget-object v1, Ld/d/b/x5/a/b/b/m/k;->c:Ld/d/b/x5/a/b/b/m/k;
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
+    .line 13
     :cond_4
     :goto_0
-    invoke-static {}, Lv8/y2;->impl2()Lv8/y2;
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl2()Ld/d/a/m7/g/a3;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/android/camera/v2;->T3()Z
+    .line 14
+    invoke-static {}, Ld/d/a/d4;->R3()Z
 
     move-result v1
 
@@ -359,7 +330,8 @@
 
     aput v4, v1, v2
 
-    invoke-interface {v0, v1}, Lv8/y2;->updateConfigItem([I)V
+    .line 15
+    invoke-interface {v0, v1}, Ld/d/a/m7/g/a3;->updateConfigItem([I)V
 
     :cond_5
     if-eqz v0, :cond_6
@@ -370,30 +342,35 @@
 
     aput v3, v1, v2
 
-    invoke-interface {v0, v1}, Lv8/y2;->updateConfigItem([I)V
+    .line 16
+    invoke-interface {v0, v1}, Ld/d/a/m7/g/a3;->updateConfigItem([I)V
 
     :cond_6
     const-string v0, "FragmentExtraTopConfig"
 
     const-string v1, "onClick trackManuallyResetDialogOk"
 
+    .line 17
     invoke-static {v0, v1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lk9/a;->O1()V
+    .line 18
+    invoke-static {}, Ld/d/a/v7/f;->K1()V
 
     return-void
 .end method
 
-.method private static synthetic lambda$showManualParameterResetDialog$6()V
+.method public static synthetic lambda$showManualParameterResetDialog$6()V
     .locals 2
 
     const-string v0, "FragmentExtraTopConfig"
 
     const-string v1, "onClick trackManuallyResetDialogCancel"
 
+    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lk9/a;->N1()V
+    .line 2
+    invoke-static {}, Ld/d/a/v7/f;->J1()V
 
     return-void
 .end method
@@ -403,6 +380,7 @@
 
     const/4 p1, 0x0
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;->mAlertDialog:Lmiuix/appcompat/app/AlertDialog;
 
     return-void
@@ -410,55 +388,73 @@
 
 .method private updateExtraTopBarData(ILjava/util/Optional;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "newMode",
+            "iModeUI"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
             "Ljava/util/Optional<",
-            "Ls6/l;",
+            "Ld/d/a/u6/a5/l;",
             ">;)V"
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p2}, Ljava/util/Optional;->get()Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, Ls6/l;
+    check-cast p2, Ld/d/a/u6/a5/l;
 
-    invoke-interface {p2}, Ls6/l;->l()Ljava/util/List;
+    invoke-interface {p2}, Ld/d/a/u6/a5/l;->l()Ljava/util/List;
 
     move-result-object p2
 
-    invoke-static {}, Ly2/b;->G0()Z
+    .line 2
+    invoke-static {}, Ld/d/a/n6/b;->G0()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/top/LaptopUIConfig;
 
     invoke-direct {v0}, Lcom/android/camera2/compat/theme/custom/mm/top/LaptopUIConfig;-><init>()V
 
     goto :goto_0
 
+    .line 4
     :cond_0
-    invoke-static {}, Ly2/b;->C0()Z
+    invoke-static {}, Ld/d/a/n6/b;->C0()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 5
     new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/top/GalleryUIConfig;
 
     invoke-direct {v0}, Lcom/android/camera2/compat/theme/custom/mm/top/GalleryUIConfig;-><init>()V
 
     goto :goto_0
 
+    .line 6
     :cond_1
     new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/top/CommonUIConfig;
 
     invoke-direct {v0}, Lcom/android/camera2/compat/theme/custom/mm/top/CommonUIConfig;-><init>()V
 
+    .line 7
     :goto_0
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;->mExtraTopBarLayout:Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarLayout;
 
@@ -469,8 +465,17 @@
 
 .method private updateExtraTopBarLayout(Landroid/view/View;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "view"
+        }
+    .end annotation
 
-    invoke-static {}, Ly2/b;->x0()Z
+    .line 1
+    invoke-static {}, Ld/d/a/n6/b;->x0()Z
 
     move-result v0
 
@@ -478,6 +483,7 @@
 
     const/16 p0, 0x8
 
+    .line 2
     invoke-virtual {p1, p0}, Landroid/view/View;->setVisibility(I)V
 
     return-void
@@ -485,15 +491,18 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 3
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
+    .line 4
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
 
-    invoke-static {}, Ly2/b;->B()I
+    .line 5
+    invoke-static {}, Ld/d/a/n6/b;->B()I
 
     move-result v1
 
@@ -501,7 +510,8 @@
 
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    invoke-static {}, Ly2/b;->j0()I
+    .line 6
+    invoke-static {}, Ld/d/a/n6/b;->j0()I
 
     move-result v1
 
@@ -509,7 +519,7 @@
 
     move-result-object p0
 
-    const v2, 0x7f070e54
+    const v2, 0x7f070bb5
 
     invoke-virtual {p0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -519,7 +529,8 @@
 
     div-int/lit8 v1, v1, 0x2
 
-    invoke-static {}, Ly2/b;->o0()I
+    .line 7
+    invoke-static {}, Ld/d/a/n6/b;->o0()I
 
     move-result p0
 
@@ -527,6 +538,7 @@
 
     iput p0, v0, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
+    .line 8
     invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
@@ -535,6 +547,7 @@
 .method private updateExtraTopBarTintColor()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;->mExtraTopBarLayout:Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarLayout;
 
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarLayout;->notifyThemeChanged()V
@@ -555,23 +568,31 @@
 .method public getLayoutResourceId()I
     .locals 0
 
-    const p0, 0x7f0e007d
+    const p0, 0x7f0e006e
 
     return p0
 .end method
 
 .method public hideExtraTopConfig(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    new-instance p1, Lcom/android/camera2/compat/theme/custom/mm/top/o;
-
-    invoke-direct {p1}, Lcom/android/camera2/compat/theme/custom/mm/top/o;-><init>()V
+    .line 2
+    sget-object p1, Ld/d/b/x5/a/b/b/m/l;->c:Ld/d/b/x5/a/b/b/m/l;
 
     invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;->handleExtraTopBarNeedHideViews(Ljava/util/function/Consumer;)V
 
@@ -581,15 +602,27 @@
 
 .method public initView(Landroid/view/View;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->initView(Landroid/view/View;)V
 
+    .line 2
     check-cast p1, Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarLayout;
 
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;->mExtraTopBarLayout:Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarLayout;
 
+    .line 3
     invoke-virtual {p1}, Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarLayout;->initView()V
 
+    .line 4
     iget p1, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
 
     const/4 v0, 0x0
@@ -601,11 +634,31 @@
     return-void
 .end method
 
+.method public synthetic nb(Landroid/content/DialogInterface;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;->lambda$showManualParameterResetDialog$7(Landroid/content/DialogInterface;)V
+
+    return-void
+.end method
+
 .method public notifyDataChanged(II)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "dataChangeType",
+            "currentMode"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/android/camera/fragment/BaseFragment;->notifyDataChanged(II)V
 
+    .line 2
     invoke-virtual {p0}, Lcom/android/camera/fragment/BaseFragment;->getResetType()I
 
     move-result p1
@@ -616,6 +669,7 @@
 
     const/4 v0, 0x0
 
+    .line 3
     invoke-virtual {p0, p2, v0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;->provideAnimateElement(ILjava/util/List;I)V
 
     :cond_0
@@ -625,13 +679,16 @@
 .method public notifyLayoutChange()V
     .locals 2
 
+    .line 1
     invoke-super {p0}, Lcom/android/camera/fragment/BaseFragment;->notifyLayoutChange()V
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;->mExtraTopBarLayout:Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarLayout;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Lcom/android/camera/fragment/BaseFragment;->getAppController()Lcom/android/camera/l;
+    .line 3
+    invoke-virtual {p0}, Lcom/android/camera/fragment/BaseFragment;->getAppController()Ld/d/a/n3;
 
     move-result-object v0
 
@@ -639,14 +696,13 @@
 
     move-result-object v0
 
-    new-instance v1, La6/t0;
-
-    invoke-direct {v1}, La6/t0;-><init>()V
+    sget-object v1, Ld/d/b/x5/a/b/b/m/a1;->a:Ld/d/b/x5/a/b/b/m/a1;
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->map(Ljava/util/function/Function;)Ljava/util/Optional;
 
     move-result-object v0
 
+    .line 4
     invoke-virtual {v0}, Ljava/util/Optional;->isPresent()Z
 
     move-result v1
@@ -655,11 +711,13 @@
 
     return-void
 
+    .line 5
     :cond_0
     iget v1, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
 
     invoke-direct {p0, v1, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;->updateExtraTopBarData(ILjava/util/Optional;)V
 
+    .line 6
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;->updateExtraTopBarTintColor()V
 
     :cond_1
@@ -668,6 +726,19 @@
 
 .method public notifyThemeChanged(ILjava/util/List;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "newMode",
+            "animateInElements",
+            "themeChangeType"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -677,8 +748,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2, p3}, Lcom/android/camera/fragment/BaseFragment;->notifyThemeChanged(ILjava/util/List;I)V
 
+    .line 2
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;->updateExtraTopBarTintColor()V
 
     return-void
@@ -686,12 +759,21 @@
 
 .method public onClick(Landroid/view/View;)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lw6/p2;
+    check-cast v0, Ld/d/a/u6/a5/q/k4;
 
     const/4 v1, 0x1
 
@@ -699,7 +781,8 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lw6/p2;->a()I
+    .line 2
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/k4;->a()I
 
     move-result v3
 
@@ -720,8 +803,9 @@
     :goto_0
     move v3, v1
 
+    .line 3
     :goto_1
-    invoke-static {}, Lb9/n;->g()Z
+    invoke-static {}, Ld/d/a/m7/g/v3/p;->e()Z
 
     move-result v4
 
@@ -731,14 +815,16 @@
 
     if-eqz v3, :cond_2
 
-    const-string p0, "TopBar onClick: doing action"
+    new-array p0, v2, [Ljava/lang/Object;
 
-    new-array p1, v2, [Ljava/lang/Object;
+    const-string p1, "TopBar onClick: doing action"
 
-    invoke-static {v5, p0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 4
+    invoke-static {v5, p1, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
+    .line 5
     :cond_2
     invoke-virtual {p0}, Lcom/android/camera/fragment/BaseFragment;->isEnableClick()Z
 
@@ -746,24 +832,28 @@
 
     if-nez p0, :cond_3
 
-    const-string p0, "TopBar onClick: disable click"
+    new-array p0, v2, [Ljava/lang/Object;
 
-    new-array p1, v2, [Ljava/lang/Object;
+    const-string p1, "TopBar onClick: disable click"
 
-    invoke-static {v5, p0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 6
+    invoke-static {v5, p1, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
+    .line 7
     :cond_3
-    invoke-virtual {v0}, Lw6/p2;->e()Landroid/view/View$OnClickListener;
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/k4;->e()Landroid/view/View$OnClickListener;
 
     move-result-object p0
 
     if-eqz p0, :cond_4
 
-    invoke-virtual {v0, v1}, Lw6/p2;->k(Z)V
+    .line 8
+    invoke-virtual {v0, v1}, Ld/d/a/u6/a5/q/k4;->k(Z)V
 
-    invoke-virtual {v0}, Lw6/p2;->e()Landroid/view/View$OnClickListener;
+    .line 9
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/k4;->e()Landroid/view/View$OnClickListener;
 
     move-result-object p0
 
@@ -776,16 +866,20 @@
 .method public onStop()V
     .locals 1
 
+    .line 1
     invoke-super {p0}, Lcom/android/camera/fragment/BaseFragment;->onStop()V
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;->mAlertDialog:Lmiuix/appcompat/app/AlertDialog;
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
 
     const/4 v0, 0x0
 
+    .line 4
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;->mAlertDialog:Lmiuix/appcompat/app/AlertDialog;
 
     :cond_0
@@ -794,6 +888,19 @@
 
 .method public provideAnimateElement(ILjava/util/List;I)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "newMode",
+            "animateInElements",
+            "resetType"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -803,8 +910,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2, p3}, Lcom/android/camera/fragment/BaseFragment;->provideAnimateElement(ILjava/util/List;I)V
 
+    .line 2
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -833,7 +942,8 @@
 
     invoke-static {v0, p2, p3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-virtual {p0}, Lcom/android/camera/fragment/BaseFragment;->getAppController()Lcom/android/camera/l;
+    .line 3
+    invoke-virtual {p0}, Lcom/android/camera/fragment/BaseFragment;->getAppController()Ld/d/a/n3;
 
     move-result-object p2
 
@@ -841,14 +951,13 @@
 
     move-result-object p2
 
-    new-instance p3, La6/t0;
-
-    invoke-direct {p3}, La6/t0;-><init>()V
+    sget-object p3, Ld/d/b/x5/a/b/b/m/a1;->a:Ld/d/b/x5/a/b/b/m/a1;
 
     invoke-virtual {p2, p3}, Ljava/util/Optional;->map(Ljava/util/function/Function;)Ljava/util/Optional;
 
     move-result-object p2
 
+    .line 4
     invoke-virtual {p2}, Ljava/util/Optional;->isPresent()Z
 
     move-result p3
@@ -857,26 +966,38 @@
 
     return-void
 
+    .line 5
     :cond_0
     invoke-direct {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;->updateExtraTopBarData(ILjava/util/Optional;)V
 
+    .line 6
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;->updateExtraTopBarTintColor()V
 
     return-void
 .end method
 
-.method public register(Lu8/d;)V
+.method public register(Ld/d/a/m7/c;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "modeCoordinator"
+        }
+    .end annotation
 
-    invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->register(Lu8/d;)V
+    .line 1
+    invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->register(Ld/d/a/m7/c;)V
 
-    invoke-static {}, Lu8/e;->i()Lu8/e;
+    .line 2
+    invoke-static {}, Ld/d/a/m7/d;->i()Ld/d/a/m7/d;
 
     move-result-object p1
 
-    const-class v0, Lv8/k0;
+    const-class v0, Ld/d/a/m7/g/n0;
 
-    invoke-virtual {p1, v0, p0}, Lu8/e;->d(Ljava/lang/Class;Lu8/a;)V
+    invoke-virtual {p1, v0, p0}, Ld/d/a/m7/d;->b(Ljava/lang/Class;Ld/d/a/m7/a;)V
 
     return-void
 .end method
@@ -884,15 +1005,15 @@
 .method public showExtraTopConfig()V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/top/m;
-
-    invoke-direct {v0}, Lcom/android/camera2/compat/theme/custom/mm/top/m;-><init>()V
+    .line 2
+    sget-object v0, Ld/d/b/x5/a/b/b/m/p;->c:Ld/d/b/x5/a/b/b/m/p;
 
     invoke-direct {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;->handleExtraTopBarNeedHideViews(Ljava/util/function/Consumer;)V
 
@@ -903,12 +1024,14 @@
 .method public showManualParameterResetDialog()V
     .locals 10
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;->mAlertDialog:Lmiuix/appcompat/app/AlertDialog;
 
     if-eqz v0, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
@@ -916,18 +1039,19 @@
 
     const/4 v2, 0x0
 
-    invoke-static {}, Lq7/x4;->x()Z
+    .line 3
+    invoke-static {}, Ld/d/a/d7/b8;->x()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f140389
+    const v0, 0x7f130373
 
     goto :goto_0
 
     :cond_1
-    const v0, 0x7f140380
+    const v0, 0x7f13036a
 
     :goto_0
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
@@ -936,15 +1060,14 @@
 
     move-object v3, v0
 
-    const v0, 0x7f140b16
+    const v0, 0x7f130a91
 
+    .line 4
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    new-instance v5, Lcom/android/camera2/compat/theme/custom/mm/top/h;
-
-    invoke-direct {v5}, Lcom/android/camera2/compat/theme/custom/mm/top/h;-><init>()V
+    sget-object v5, Ld/d/b/x5/a/b/b/m/o;->c:Ld/d/b/x5/a/b/b/m/o;
 
     const/4 v6, 0x0
 
@@ -952,48 +1075,68 @@
 
     const/high16 v0, 0x1040000
 
+    .line 5
     invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
-    new-instance v9, Lcom/android/camera2/compat/theme/custom/mm/top/i;
+    sget-object v9, Ld/d/b/x5/a/b/b/m/n;->c:Ld/d/b/x5/a/b/b/m/n;
 
-    invoke-direct {v9}, Lcom/android/camera2/compat/theme/custom/mm/top/i;-><init>()V
-
-    invoke-static/range {v1 .. v9}, Lcom/android/camera/y4;->E(Landroid/content/Context;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;)Lmiuix/appcompat/app/AlertDialog;
+    .line 6
+    invoke-static/range {v1 .. v9}, Ld/d/a/l5;->u(Landroid/content/Context;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;)Lmiuix/appcompat/app/AlertDialog;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;->mAlertDialog:Lmiuix/appcompat/app/AlertDialog;
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/top/j;
+    .line 7
+    new-instance v1, Ld/d/b/x5/a/b/b/m/m;
 
-    invoke-direct {v1, p0}, Lcom/android/camera2/compat/theme/custom/mm/top/j;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;)V
+    invoke-direct {v1, p0}, Ld/d/b/x5/a/b/b/m/m;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;)V
 
     invoke-virtual {v0, v1}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
     return-void
 .end method
 
-.method public unRegister(Lu8/d;)V
+.method public unRegister(Ld/d/a/m7/c;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "modeCoordinator"
+        }
+    .end annotation
 
-    invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->unRegister(Lu8/d;)V
+    .line 1
+    invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->unRegister(Ld/d/a/m7/c;)V
 
-    invoke-static {}, Lu8/e;->i()Lu8/e;
+    .line 2
+    invoke-static {}, Ld/d/a/m7/d;->i()Ld/d/a/m7/d;
 
     move-result-object p1
 
-    const-class v0, Lv8/k0;
+    const-class v0, Ld/d/a/m7/g/n0;
 
-    invoke-virtual {p1, v0, p0}, Lu8/e;->c(Ljava/lang/Class;Lu8/a;)V
+    invoke-virtual {p1, v0, p0}, Ld/d/a/m7/d;->d(Ljava/lang/Class;Ld/d/a/m7/a;)V
 
     return-void
 .end method
 
 .method public varargs updateExtraConfigItem([I)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "configItems"
+        }
+    .end annotation
 
+    .line 1
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -1003,6 +1146,7 @@
 
     aget v2, p1, v1
 
+    .line 2
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;->mExtraTopBarLayout:Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarLayout;
 
     invoke-virtual {v3, v2}, Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarLayout;->notifyExtraTopBarItemChanged(I)V
@@ -1021,13 +1165,26 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "v",
+            "savedInstanceState"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;->updateExtraTopBarLayout(Landroid/view/View;)V
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/FragmentExtraTopConfig;->mExtraTopBarLayout:Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarLayout;
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarLayout;->updateLayout()V
 
     :cond_0

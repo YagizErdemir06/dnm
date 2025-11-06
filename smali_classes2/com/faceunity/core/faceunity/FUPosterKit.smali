@@ -10,36 +10,48 @@
     }
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000|\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0010\u0006\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0010\u0014\n\u0002\u0018\u0002\n\u0002\u0008\u000e\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0010\n\u0002\u0010\u0012\n\u0002\u0008\r\n\u0002\u0010\u0007\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u0008\u0018\u0000 ^2\u00020\u0001:\u0001^B\t\u0008\u0002\u00a2\u0006\u0004\u0008\\\u0010]J\u0008\u0010\u0003\u001a\u00020\u0002H\u0002J\u0010\u0010\u0006\u001a\u00020\u00022\u0006\u0010\u0005\u001a\u00020\u0004H\u0002J\u0018\u0010\u0006\u001a\u00020\u00022\u0006\u0010\u0008\u001a\u00020\u00072\u0006\u0010\n\u001a\u00020\tH\u0002J\u0018\u0010\u000e\u001a\u00020\u00022\u0006\u0010\u000b\u001a\u00020\u00042\u0006\u0010\r\u001a\u00020\u000cH\u0002J\u0018\u0010\u0011\u001a\u00020\u00022\u0006\u0010\u000f\u001a\u00020\t2\u0006\u0010\u0010\u001a\u00020\tH\u0002J \u0010\u0016\u001a\u0012\u0012\u0004\u0012\u00020\u00140\u0013j\u0008\u0012\u0004\u0012\u00020\u0014`\u00152\u0006\u0010\u0012\u001a\u00020\tH\u0002J\u0010\u0010\u0018\u001a\u00020\u00142\u0006\u0010\u0017\u001a\u00020\u0014H\u0002J\u0008\u0010\u0019\u001a\u00020\u0002H\u0002J\u0008\u0010\u001a\u001a\u00020\u0002H\u0002J\u0016\u0010\u001d\u001a\u00020\u00022\u0006\u0010\u001b\u001a\u00020\t2\u0006\u0010\u001c\u001a\u00020\tJ&\u0010\u001f\u001a\u00020\u00022\u0006\u0010\u0008\u001a\u00020\u00072\u0006\u0010\n\u001a\u00020\t2\u0006\u0010\u000b\u001a\u00020\u00042\u0006\u0010\u001e\u001a\u00020\u000cJ\u001e\u0010\u001f\u001a\u00020\u00022\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u000b\u001a\u00020\u00042\u0006\u0010\u001e\u001a\u00020\u000cJ\u000e\u0010!\u001a\u00020\u00022\u0006\u0010 \u001a\u00020\tJ\u0016\u0010\"\u001a\u00020\u00022\u0006\u0010\u000b\u001a\u00020\u00042\u0006\u0010\u001e\u001a\u00020\u000cJ\u0006\u0010#\u001a\u00020\u0002R\u0018\u0010%\u001a\u0004\u0018\u00010$8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008%\u0010&R\u0016\u0010(\u001a\u00020\'8\u0002@\u0002X\u0082.\u00a2\u0006\u0006\n\u0004\u0008(\u0010)R\u001b\u0010/\u001a\u00020*8BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008+\u0010,\u001a\u0004\u0008-\u0010.R\u001b\u00104\u001a\u0002008BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u00081\u0010,\u001a\u0004\u00082\u00103R\u001b\u00109\u001a\u0002058BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u00086\u0010,\u001a\u0004\u00087\u00108R\u0016\u0010:\u001a\u00020\t8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008:\u0010;R\u0016\u0010<\u001a\u00020\t8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008<\u0010;R\u0018\u0010\u000b\u001a\u0004\u0018\u00010\u00048\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u000b\u0010=R\"\u0010>\u001a\u00020\t8\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008>\u0010;\u001a\u0004\u0008?\u0010@\"\u0004\u0008A\u0010BR\"\u0010C\u001a\u00020\t8\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008C\u0010;\u001a\u0004\u0008D\u0010@\"\u0004\u0008E\u0010BR\u0018\u0010G\u001a\u0004\u0018\u00010F8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008G\u0010HR\u0016\u0010\r\u001a\u00020\u000c8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\r\u0010IR\"\u0010\u000f\u001a\u00020\t8\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u000f\u0010;\u001a\u0004\u0008J\u0010@\"\u0004\u0008K\u0010BR\"\u0010\u0010\u001a\u00020\t8\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0010\u0010;\u001a\u0004\u0008L\u0010@\"\u0004\u0008M\u0010BR\u0018\u0010N\u001a\u0004\u0018\u00010F8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008N\u0010HR\u0018\u0010O\u001a\u0004\u0018\u00010F8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008O\u0010HR\u0016\u0010P\u001a\u00020\t8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008P\u0010;R\u0016\u0010Q\u001a\u00020\t8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008Q\u0010;R\u0016\u0010R\u001a\u00020\t8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008R\u0010;R\u0016\u0010S\u001a\u00020\t8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008S\u0010;R\u0016\u0010U\u001a\u00020T8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008U\u0010VR\u0016\u0010X\u001a\u00020W8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008X\u0010YR\u0016\u0010Z\u001a\u00020W8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008Z\u0010YR\u0016\u0010[\u001a\u00020W8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008[\u0010Y\u00a8\u0006_"
+        "\u0000~\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0010\u0006\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0010\u0014\n\u0002\u0018\u0002\n\u0002\u0008\u0013\n\u0002\u0010\u0012\n\u0002\u0008\u000c\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\n\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0007\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0007\u0018\u0000 f2\u00020\u0001:\u0001fB\t\u0008\u0002\u00a2\u0006\u0004\u0008e\u0010\u0004J\u000f\u0010\u0003\u001a\u00020\u0002H\u0002\u00a2\u0006\u0004\u0008\u0003\u0010\u0004J\u0017\u0010\u0007\u001a\u00020\u00022\u0006\u0010\u0006\u001a\u00020\u0005H\u0002\u00a2\u0006\u0004\u0008\u0007\u0010\u0008J\u001f\u0010\u0007\u001a\u00020\u00022\u0006\u0010\n\u001a\u00020\t2\u0006\u0010\u000c\u001a\u00020\u000bH\u0002\u00a2\u0006\u0004\u0008\u0007\u0010\rJ\u001f\u0010\u0011\u001a\u00020\u00022\u0006\u0010\u000e\u001a\u00020\u00052\u0006\u0010\u0010\u001a\u00020\u000fH\u0002\u00a2\u0006\u0004\u0008\u0011\u0010\u0012J\u001f\u0010\u0015\u001a\u00020\u00022\u0006\u0010\u0013\u001a\u00020\u000b2\u0006\u0010\u0014\u001a\u00020\u000bH\u0002\u00a2\u0006\u0004\u0008\u0015\u0010\u0016J\'\u0010\u001b\u001a\u0012\u0012\u0004\u0012\u00020\u00190\u0018j\u0008\u0012\u0004\u0012\u00020\u0019`\u001a2\u0006\u0010\u0017\u001a\u00020\u000bH\u0002\u00a2\u0006\u0004\u0008\u001b\u0010\u001cJ\u0017\u0010\u001e\u001a\u00020\u00192\u0006\u0010\u001d\u001a\u00020\u0019H\u0002\u00a2\u0006\u0004\u0008\u001e\u0010\u001fJ\u000f\u0010 \u001a\u00020\u0002H\u0002\u00a2\u0006\u0004\u0008 \u0010\u0004J\u000f\u0010!\u001a\u00020\u0002H\u0002\u00a2\u0006\u0004\u0008!\u0010\u0004J\u001d\u0010$\u001a\u00020\u00022\u0006\u0010\"\u001a\u00020\u000b2\u0006\u0010#\u001a\u00020\u000b\u00a2\u0006\u0004\u0008$\u0010\u0016J-\u0010&\u001a\u00020\u00022\u0006\u0010\n\u001a\u00020\t2\u0006\u0010\u000c\u001a\u00020\u000b2\u0006\u0010\u000e\u001a\u00020\u00052\u0006\u0010%\u001a\u00020\u000f\u00a2\u0006\u0004\u0008&\u0010\'J%\u0010&\u001a\u00020\u00022\u0006\u0010\u0006\u001a\u00020\u00052\u0006\u0010\u000e\u001a\u00020\u00052\u0006\u0010%\u001a\u00020\u000f\u00a2\u0006\u0004\u0008&\u0010(J\u0015\u0010*\u001a\u00020\u00022\u0006\u0010)\u001a\u00020\u000b\u00a2\u0006\u0004\u0008*\u0010+J\u001d\u0010,\u001a\u00020\u00022\u0006\u0010\u000e\u001a\u00020\u00052\u0006\u0010%\u001a\u00020\u000f\u00a2\u0006\u0004\u0008,\u0010\u0012J\r\u0010-\u001a\u00020\u0002\u00a2\u0006\u0004\u0008-\u0010\u0004R\u0018\u0010/\u001a\u0004\u0018\u00010.8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008/\u00100R\u0018\u00101\u001a\u0004\u0018\u00010.8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u00081\u00100R\"\u00102\u001a\u00020\u000b8\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u00082\u00103\u001a\u0004\u00084\u00105\"\u0004\u00086\u0010+R\u0016\u00107\u001a\u00020\u000b8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u00087\u00103R\u0016\u00108\u001a\u00020\u000b8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u00088\u00103R\"\u0010\u0014\u001a\u00020\u000b8\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0014\u00103\u001a\u0004\u00089\u00105\"\u0004\u0008:\u0010+R\u0016\u0010<\u001a\u00020;8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008<\u0010=R\u001d\u0010C\u001a\u00020>8B@\u0002X\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008?\u0010@\u001a\u0004\u0008A\u0010BR\u0018\u0010\u000e\u001a\u0004\u0018\u00010\u00058\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u000e\u0010DR\u0016\u0010E\u001a\u00020\u000b8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008E\u00103R\u0016\u0010F\u001a\u00020;8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008F\u0010=R\u0016\u0010H\u001a\u00020G8\u0002@\u0002X\u0082.\u00a2\u0006\u0006\n\u0004\u0008H\u0010IR\"\u0010\u0013\u001a\u00020\u000b8\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0013\u00103\u001a\u0004\u0008J\u00105\"\u0004\u0008K\u0010+R\u0016\u0010L\u001a\u00020\u000b8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008L\u00103R\"\u0010M\u001a\u00020\u000b8\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008M\u00103\u001a\u0004\u0008N\u00105\"\u0004\u0008O\u0010+R\u0016\u0010\u0010\u001a\u00020\u000f8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0010\u0010PR\u0016\u0010Q\u001a\u00020\u000b8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008Q\u00103R\u0018\u0010S\u001a\u0004\u0018\u00010R8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008S\u0010TR\u0016\u0010V\u001a\u00020U8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008V\u0010WR\u0018\u0010X\u001a\u0004\u0018\u00010.8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008X\u00100R\u0016\u0010Y\u001a\u00020;8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008Y\u0010=R\u001d\u0010^\u001a\u00020Z8B@\u0002X\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008[\u0010@\u001a\u0004\u0008\\\u0010]R\u0016\u0010_\u001a\u00020\u000b8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008_\u00103R\u001d\u0010d\u001a\u00020`8B@\u0002X\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008a\u0010@\u001a\u0004\u0008b\u0010c\u00a8\u0006g"
     }
     d2 = {
         "Lcom/faceunity/core/faceunity/FUPosterKit;",
         "",
-        "Lnm/l2;",
+        "Lh/l2;",
         "bindController",
+        "()V",
         "",
         "photoPath",
         "loadPhotoData",
+        "(Ljava/lang/String;)V",
         "Landroid/graphics/Bitmap;",
         "photoBitmap",
         "",
         "photoTexId",
+        "(Landroid/graphics/Bitmap;I)V",
         "templatePath",
         "",
         "warpIntensity",
         "loadTemplateData",
+        "(Ljava/lang/String;D)V",
         "photoWidth",
         "photoHeight",
         "scale",
+        "(II)V",
         "trackFace",
         "Ljava/util/ArrayList;",
         "",
         "Lkotlin/collections/ArrayList;",
         "getPhotoMaskData",
+        "(I)Ljava/util/ArrayList;",
         "faceRect",
         "convertFaceRect",
+        "([F)[F",
         "doMerge",
         "destroyPhotoTexture",
         "width",
@@ -47,68 +59,69 @@
         "bindSurfaceSize",
         "intensity",
         "renderPoster",
+        "(Landroid/graphics/Bitmap;ILjava/lang/String;D)V",
+        "(Ljava/lang/String;Ljava/lang/String;D)V",
         "index",
         "bindPhotoData",
+        "(I)V",
         "updateTemplate",
         "onDestroy",
-        "Lcom/faceunity/core/callback/OnPosterRenderCallback;",
-        "posterRenderCallback",
-        "Lcom/faceunity/core/callback/OnPosterRenderCallback;",
-        "Lcom/faceunity/core/model/poster/Poster;",
-        "mPoster",
-        "Lcom/faceunity/core/model/poster/Poster;",
-        "Lcom/faceunity/core/controller/poster/PosterController;",
-        "mPosterController$delegate",
-        "Lnm/d0;",
-        "getMPosterController",
-        "()Lcom/faceunity/core/controller/poster/PosterController;",
-        "mPosterController",
+        "",
+        "templateBytes",
+        "[B",
+        "photoRGBABytes",
+        "templateHeight",
+        "I",
+        "getTemplateHeight",
+        "()I",
+        "setTemplateHeight",
+        "viewWidth",
+        "mViewPortY",
+        "getPhotoHeight",
+        "setPhotoHeight",
+        "",
+        "hasTemplateDraw",
+        "Z",
         "Lcom/faceunity/core/faceunity/FURenderKit;",
         "mFURenderKit$delegate",
+        "Lh/d0;",
         "getMFURenderKit",
         "()Lcom/faceunity/core/faceunity/FURenderKit;",
         "mFURenderKit",
+        "Ljava/lang/String;",
+        "mergeTexId",
+        "isNeedPhotoDraw",
+        "Lcom/faceunity/core/model/poster/Poster;",
+        "mPoster",
+        "Lcom/faceunity/core/model/poster/Poster;",
+        "getPhotoWidth",
+        "setPhotoWidth",
+        "photoTextureId",
+        "templateWidth",
+        "getTemplateWidth",
+        "setTemplateWidth",
+        "D",
+        "viewHeight",
+        "Lcom/faceunity/core/callback/OnPosterRenderCallback;",
+        "posterRenderCallback",
+        "Lcom/faceunity/core/callback/OnPosterRenderCallback;",
+        "",
+        "mViewPortScale",
+        "F",
+        "photoBytes",
+        "hasPhotoDraw",
+        "Lcom/faceunity/core/controller/poster/PosterController;",
+        "mPosterController$delegate",
+        "getMPosterController",
+        "()Lcom/faceunity/core/controller/poster/PosterController;",
+        "mPosterController",
+        "mViewPortX",
         "Lcom/faceunity/core/faceunity/FUAIKit;",
         "mFUAIKit$delegate",
         "getMFUAIKit",
         "()Lcom/faceunity/core/faceunity/FUAIKit;",
         "mFUAIKit",
-        "viewWidth",
-        "I",
-        "viewHeight",
-        "Ljava/lang/String;",
-        "templateWidth",
-        "getTemplateWidth",
-        "()I",
-        "setTemplateWidth",
-        "(I)V",
-        "templateHeight",
-        "getTemplateHeight",
-        "setTemplateHeight",
-        "",
-        "templateBytes",
-        "[B",
-        "D",
-        "getPhotoWidth",
-        "setPhotoWidth",
-        "getPhotoHeight",
-        "setPhotoHeight",
-        "photoBytes",
-        "photoRGBABytes",
-        "photoTextureId",
-        "mergeTexId",
-        "mViewPortX",
-        "mViewPortY",
-        "",
-        "mViewPortScale",
-        "F",
-        "",
-        "hasPhotoDraw",
-        "Z",
-        "isNeedPhotoDraw",
-        "hasTemplateDraw",
         "<init>",
-        "()V",
         "Companion",
         "lib_core_release"
     }
@@ -123,14 +136,14 @@
 
 # static fields
 .field public static final Companion:Lcom/faceunity/core/faceunity/FUPosterKit$Companion;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field private static volatile INSTANCE:Lcom/faceunity/core/faceunity/FUPosterKit; = null
 
 .field public static final TAG:Ljava/lang/String; = "KIT_FUPosterKit"
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -142,13 +155,13 @@
 
 .field private isNeedPhotoDraw:Z
 
-.field private final mFUAIKit$delegate:Lnm/d0;
+.field private final mFUAIKit$delegate:Lh/d0;
 
-.field private final mFURenderKit$delegate:Lnm/d0;
+.field private final mFURenderKit$delegate:Lh/d0;
 
 .field private mPoster:Lcom/faceunity/core/model/poster/Poster;
 
-.field private final mPosterController$delegate:Lnm/d0;
+.field private final mPosterController$delegate:Lh/d0;
 
 .field private mViewPortScale:F
 
@@ -193,7 +206,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/faceunity/core/faceunity/FUPosterKit$Companion;-><init>(Lkotlin/jvm/internal/w;)V
+    invoke-direct {v0, v1}, Lcom/faceunity/core/faceunity/FUPosterKit$Companion;-><init>(Lh/d3/x/w;)V
 
     sput-object v0, Lcom/faceunity/core/faceunity/FUPosterKit;->Companion:Lcom/faceunity/core/faceunity/FUPosterKit$Companion;
 
@@ -209,29 +222,29 @@
     .line 2
     sget-object v0, Lcom/faceunity/core/faceunity/FUPosterKit$mPosterController$2;->INSTANCE:Lcom/faceunity/core/faceunity/FUPosterKit$mPosterController$2;
 
-    invoke-static {v0}, Lnm/f0;->b(Ljn/a;)Lnm/d0;
+    invoke-static {v0}, Lh/f0;->c(Lh/d3/w/a;)Lh/d0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->mPosterController$delegate:Lnm/d0;
+    iput-object v0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->mPosterController$delegate:Lh/d0;
 
     .line 3
     sget-object v0, Lcom/faceunity/core/faceunity/FUPosterKit$mFURenderKit$2;->INSTANCE:Lcom/faceunity/core/faceunity/FUPosterKit$mFURenderKit$2;
 
-    invoke-static {v0}, Lnm/f0;->b(Ljn/a;)Lnm/d0;
+    invoke-static {v0}, Lh/f0;->c(Lh/d3/w/a;)Lh/d0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->mFURenderKit$delegate:Lnm/d0;
+    iput-object v0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->mFURenderKit$delegate:Lh/d0;
 
     .line 4
     sget-object v0, Lcom/faceunity/core/faceunity/FUPosterKit$mFUAIKit$2;->INSTANCE:Lcom/faceunity/core/faceunity/FUPosterKit$mFUAIKit$2;
 
-    invoke-static {v0}, Lnm/f0;->b(Ljn/a;)Lnm/d0;
+    invoke-static {v0}, Lh/f0;->c(Lh/d3/w/a;)Lh/d0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->mFUAIKit$delegate:Lnm/d0;
+    iput-object v0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->mFUAIKit$delegate:Lh/d0;
 
     const/16 v0, 0x2d0
 
@@ -262,7 +275,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/w;)V
+.method public synthetic constructor <init>(Lh/d3/x/w;)V
     .locals 0
 
     .line 11
@@ -274,6 +287,7 @@
 .method public static final synthetic access$bindController(Lcom/faceunity/core/faceunity/FUPosterKit;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/core/faceunity/FUPosterKit;->bindController()V
 
     return-void
@@ -282,6 +296,7 @@
 .method public static final synthetic access$getINSTANCE$cp()Lcom/faceunity/core/faceunity/FUPosterKit;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/faceunity/core/faceunity/FUPosterKit;->INSTANCE:Lcom/faceunity/core/faceunity/FUPosterKit;
 
     return-object v0
@@ -290,13 +305,14 @@
 .method public static final synthetic access$getMPoster$p(Lcom/faceunity/core/faceunity/FUPosterKit;)Lcom/faceunity/core/model/poster/Poster;
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->mPoster:Lcom/faceunity/core/model/poster/Poster;
 
     if-nez p0, :cond_0
 
     const-string v0, "mPoster"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/l0;->S(Ljava/lang/String;)V
+    invoke-static {v0}, Lh/d3/x/l0;->S(Ljava/lang/String;)V
 
     :cond_0
     return-object p0
@@ -305,6 +321,7 @@
 .method public static final synthetic access$getPosterRenderCallback$p(Lcom/faceunity/core/faceunity/FUPosterKit;)Lcom/faceunity/core/callback/OnPosterRenderCallback;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->posterRenderCallback:Lcom/faceunity/core/callback/OnPosterRenderCallback;
 
     return-object p0
@@ -313,6 +330,7 @@
 .method public static final synthetic access$setINSTANCE$cp(Lcom/faceunity/core/faceunity/FUPosterKit;)V
     .locals 0
 
+    .line 1
     sput-object p0, Lcom/faceunity/core/faceunity/FUPosterKit;->INSTANCE:Lcom/faceunity/core/faceunity/FUPosterKit;
 
     return-void
@@ -321,6 +339,7 @@
 .method public static final synthetic access$setMPoster$p(Lcom/faceunity/core/faceunity/FUPosterKit;Lcom/faceunity/core/model/poster/Poster;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->mPoster:Lcom/faceunity/core/model/poster/Poster;
 
     return-void
@@ -329,6 +348,7 @@
 .method public static final synthetic access$setPosterRenderCallback$p(Lcom/faceunity/core/faceunity/FUPosterKit;Lcom/faceunity/core/callback/OnPosterRenderCallback;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->posterRenderCallback:Lcom/faceunity/core/callback/OnPosterRenderCallback;
 
     return-void
@@ -337,6 +357,7 @@
 .method private final bindController()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/core/faceunity/FUPosterKit;->getMPosterController()Lcom/faceunity/core/controller/poster/PosterController;
 
     move-result-object v0
@@ -347,7 +368,7 @@
 
     const-string v1, "mPoster"
 
-    invoke-static {v1}, Lkotlin/jvm/internal/l0;->S(Ljava/lang/String;)V
+    invoke-static {v1}, Lh/d3/x/l0;->S(Ljava/lang/String;)V
 
     :cond_0
     invoke-virtual {p0}, Lcom/faceunity/core/model/poster/Poster;->buildFUFeaturesData$lib_core_release()Lcom/faceunity/core/entity/FUFeaturesData;
@@ -370,6 +391,7 @@
 
     const/4 v1, 0x0
 
+    .line 1
     aget v2, p1, v1
 
     iget v3, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->mViewPortScale:F
@@ -386,6 +408,7 @@
 
     const/4 v1, 0x1
 
+    .line 2
     aget v2, p1, v1
 
     mul-float/2addr v2, v3
@@ -400,6 +423,7 @@
 
     const/4 v1, 0x2
 
+    .line 3
     aget v2, p1, v1
 
     mul-float/2addr v2, v3
@@ -412,6 +436,7 @@
 
     const/4 v1, 0x3
 
+    .line 4
     aget p1, p1, v1
 
     mul-float/2addr p1, v3
@@ -428,6 +453,7 @@
 .method private final destroyPhotoTexture()V
     .locals 4
 
+    .line 1
     iget v0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->photoTextureId:I
 
     if-eqz v0, :cond_0
@@ -440,8 +466,10 @@
 
     aput v0, v2, v3
 
+    .line 2
     invoke-static {v1, v2, v3}, Landroid/opengl/GLES20;->glDeleteTextures(I[II)V
 
+    .line 3
     iput v3, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->photoTextureId:I
 
     :cond_0
@@ -453,6 +481,7 @@
 
     move-object/from16 v0, p0
 
+    .line 1
     iget-boolean v1, v0, Lcom/faceunity/core/faceunity/FUPosterKit;->hasPhotoDraw:Z
 
     if-eqz v1, :cond_5
@@ -463,6 +492,7 @@
 
     goto/16 :goto_3
 
+    .line 2
     :cond_0
     new-instance v1, Lcom/faceunity/core/entity/FURenderInputData;
 
@@ -472,6 +502,7 @@
 
     invoke-direct {v1, v2, v3}, Lcom/faceunity/core/entity/FURenderInputData;-><init>(II)V
 
+    .line 3
     new-instance v2, Lcom/faceunity/core/entity/FURenderInputData$FUTexture;
 
     sget-object v3, Lcom/faceunity/core/enumeration/FUInputTextureEnum;->FU_ADM_FLAG_COMMON_TEXTURE:Lcom/faceunity/core/enumeration/FUInputTextureEnum;
@@ -482,10 +513,12 @@
 
     invoke-virtual {v1, v2}, Lcom/faceunity/core/entity/FURenderInputData;->setTexture(Lcom/faceunity/core/entity/FURenderInputData$FUTexture;)V
 
+    .line 4
     iget-object v7, v0, Lcom/faceunity/core/faceunity/FUPosterKit;->templateBytes:[B
 
     if-eqz v7, :cond_1
 
+    .line 5
     new-instance v2, Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;
 
     sget-object v6, Lcom/faceunity/core/enumeration/FUInputBufferEnum;->FU_FORMAT_NV21_BUFFER:Lcom/faceunity/core/enumeration/FUInputBufferEnum;
@@ -500,19 +533,22 @@
 
     move-object v5, v2
 
-    invoke-direct/range {v5 .. v11}, Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;-><init>(Lcom/faceunity/core/enumeration/FUInputBufferEnum;[B[B[BILkotlin/jvm/internal/w;)V
+    invoke-direct/range {v5 .. v11}, Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;-><init>(Lcom/faceunity/core/enumeration/FUInputBufferEnum;[B[B[BILh/d3/x/w;)V
 
     invoke-virtual {v1, v2}, Lcom/faceunity/core/entity/FURenderInputData;->setImageBuffer(Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;)V
 
+    .line 6
     :cond_1
     new-instance v2, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
 
+    .line 7
     sget-object v13, Lcom/faceunity/core/enumeration/FUExternalInputEnum;->EXTERNAL_INPUT_TYPE_IMAGE:Lcom/faceunity/core/enumeration/FUExternalInputEnum;
 
     const/4 v14, 0x0
 
     const/16 v15, 0x5a
 
+    .line 8
     sget-object v16, Lcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;->CAMERA_FRONT:Lcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;
 
     sget-object v18, Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;->CCROT0_FLIPVERTICAL:Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;
@@ -531,66 +567,70 @@
 
     move-object/from16 v17, v18
 
-    invoke-direct/range {v12 .. v23}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;-><init>(Lcom/faceunity/core/enumeration/FUExternalInputEnum;IILcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;ZZILkotlin/jvm/internal/w;)V
+    .line 9
+    invoke-direct/range {v12 .. v23}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;-><init>(Lcom/faceunity/core/enumeration/FUExternalInputEnum;IILcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;ZZILh/d3/x/w;)V
 
     invoke-virtual {v1, v2}, Lcom/faceunity/core/entity/FURenderInputData;->setRenderConfig(Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;)V
 
-    const/4 v2, 0x0
+    const/16 v2, 0x32
 
-    move v3, v2
+    const/4 v3, 0x0
+
+    move v4, v3
 
     :goto_0
-    const/16 v4, 0x32
+    if-gt v4, v2, :cond_4
 
-    if-gt v3, v4, :cond_4
+    .line 10
+    sget-object v5, Lcom/faceunity/core/support/FURenderBridge;->Companion:Lcom/faceunity/core/support/FURenderBridge$Companion;
 
-    sget-object v4, Lcom/faceunity/core/support/FURenderBridge;->Companion:Lcom/faceunity/core/support/FURenderBridge$Companion;
+    invoke-virtual {v5}, Lcom/faceunity/core/support/FURenderBridge$Companion;->getInstance$lib_core_release()Lcom/faceunity/core/support/FURenderBridge;
 
-    invoke-virtual {v4}, Lcom/faceunity/core/support/FURenderBridge$Companion;->getInstance$lib_core_release()Lcom/faceunity/core/support/FURenderBridge;
+    move-result-object v5
 
-    move-result-object v4
+    invoke-virtual {v5, v1}, Lcom/faceunity/core/support/FURenderBridge;->renderWithPoster(Lcom/faceunity/core/entity/FURenderInputData;)Lcom/faceunity/core/entity/FURenderOutputData;
 
-    invoke-virtual {v4, v1}, Lcom/faceunity/core/support/FURenderBridge;->renderWithPoster(Lcom/faceunity/core/entity/FURenderInputData;)Lcom/faceunity/core/entity/FURenderOutputData;
+    move-result-object v5
 
-    move-result-object v4
+    invoke-virtual {v5}, Lcom/faceunity/core/entity/FURenderOutputData;->getTexture()Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;
 
-    invoke-virtual {v4}, Lcom/faceunity/core/entity/FURenderOutputData;->getTexture()Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;
+    move-result-object v5
 
-    move-result-object v4
+    if-eqz v5, :cond_2
 
-    if-eqz v4, :cond_2
+    invoke-virtual {v5}, Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;->getTexId()I
 
-    invoke-virtual {v4}, Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;->getTexId()I
-
-    move-result v4
+    move-result v5
 
     goto :goto_1
 
     :cond_2
-    move v4, v2
+    move v5, v3
 
     :goto_1
-    iput v4, v0, Lcom/faceunity/core/faceunity/FUPosterKit;->mergeTexId:I
+    iput v5, v0, Lcom/faceunity/core/faceunity/FUPosterKit;->mergeTexId:I
 
+    .line 11
     invoke-direct/range {p0 .. p0}, Lcom/faceunity/core/faceunity/FUPosterKit;->getMFUAIKit()Lcom/faceunity/core/faceunity/FUAIKit;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-virtual {v4}, Lcom/faceunity/core/faceunity/FUAIKit;->isTracking()I
+    invoke-virtual {v5}, Lcom/faceunity/core/faceunity/FUAIKit;->isTracking()I
 
-    move-result v4
+    move-result v5
 
-    if-lez v4, :cond_3
+    if-lez v5, :cond_3
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
     goto :goto_2
 
     :cond_3
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
+    .line 12
     :cond_4
     :goto_2
     iget-object v1, v0, Lcom/faceunity/core/faceunity/FUPosterKit;->posterRenderCallback:Lcom/faceunity/core/callback/OnPosterRenderCallback;
@@ -599,7 +639,7 @@
 
     iget v0, v0, Lcom/faceunity/core/faceunity/FUPosterKit;->mergeTexId:I
 
-    invoke-interface {v1, v2, v0}, Lcom/faceunity/core/callback/OnPosterRenderCallback;->onMergeResult(ZI)V
+    invoke-interface {v1, v3, v0}, Lcom/faceunity/core/callback/OnPosterRenderCallback;->onMergeResult(ZI)V
 
     :cond_5
     :goto_3
@@ -609,17 +649,17 @@
 .method public static final getInstance(Lcom/faceunity/core/entity/FUBundleData;Lcom/faceunity/core/callback/OnPosterRenderCallback;)Lcom/faceunity/core/faceunity/FUPosterKit;
     .locals 1
     .param p0    # Lcom/faceunity/core/entity/FUBundleData;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p1    # Lcom/faceunity/core/callback/OnPosterRenderCallback;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation runtime Lin/l;
+    .annotation runtime Lh/d3/l;
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     sget-object v0, Lcom/faceunity/core/faceunity/FUPosterKit;->Companion:Lcom/faceunity/core/faceunity/FUPosterKit$Companion;
@@ -634,9 +674,9 @@
 .method private final getMFUAIKit()Lcom/faceunity/core/faceunity/FUAIKit;
     .locals 0
 
-    iget-object p0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->mFUAIKit$delegate:Lnm/d0;
+    iget-object p0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->mFUAIKit$delegate:Lh/d0;
 
-    invoke-interface {p0}, Lnm/d0;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lh/d0;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -648,9 +688,9 @@
 .method private final getMFURenderKit()Lcom/faceunity/core/faceunity/FURenderKit;
     .locals 0
 
-    iget-object p0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->mFURenderKit$delegate:Lnm/d0;
+    iget-object p0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->mFURenderKit$delegate:Lh/d0;
 
-    invoke-interface {p0}, Lnm/d0;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lh/d0;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -662,9 +702,9 @@
 .method private final getMPosterController()Lcom/faceunity/core/controller/poster/PosterController;
     .locals 0
 
-    iget-object p0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->mPosterController$delegate:Lnm/d0;
+    iget-object p0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->mPosterController$delegate:Lh/d0;
 
-    invoke-interface {p0}, Lnm/d0;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lh/d0;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -683,6 +723,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -692,6 +733,7 @@
     :goto_0
     if-ge v1, p1, :cond_0
 
+    .line 2
     invoke-direct {p0}, Lcom/faceunity/core/faceunity/FUPosterKit;->getMPosterController()Lcom/faceunity/core/controller/poster/PosterController;
 
     move-result-object v2
@@ -700,10 +742,12 @@
 
     move-result-object v2
 
+    .line 3
     invoke-static {v2}, Lcom/faceunity/toolbox/utils/FUDecimalUtils;->copyArray([F)[F
 
     move-result-object v2
 
+    .line 4
     invoke-direct {p0, v2}, Lcom/faceunity/core/faceunity/FUPosterKit;->convertFaceRect([F)[F
 
     move-result-object v2
@@ -766,21 +810,21 @@
 
     iput-object p1, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->photoBytes:[B
 
-    move p1, v2
+    const/16 p1, 0x32
 
-    move p2, p1
+    move p2, v2
+
+    move v0, p2
 
     :goto_0
-    const/16 v0, 0x32
-
-    if-ge p1, v0, :cond_1
+    if-ge p2, p1, :cond_1
 
     .line 11
     invoke-direct {p0}, Lcom/faceunity/core/faceunity/FUPosterKit;->getMFURenderKit()Lcom/faceunity/core/faceunity/FURenderKit;
 
-    move-result-object p2
+    move-result-object v0
 
-    invoke-virtual {p2}, Lcom/faceunity/core/faceunity/FURenderKit;->clearCameraCache()V
+    invoke-virtual {v0}, Lcom/faceunity/core/faceunity/FURenderKit;->clearCameraCache()V
 
     .line 12
     invoke-direct {p0}, Lcom/faceunity/core/faceunity/FUPosterKit;->getMFUAIKit()Lcom/faceunity/core/faceunity/FUAIKit;
@@ -789,7 +833,7 @@
 
     iget-object v4, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->photoBytes:[B
 
-    invoke-static {v4}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {v4}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     sget-object v5, Lcom/faceunity/core/enumeration/FUInputBufferEnum;->FU_FORMAT_NV21_BUFFER:Lcom/faceunity/core/enumeration/FUInputBufferEnum;
 
@@ -801,14 +845,14 @@
 
     invoke-virtual/range {v3 .. v8}, Lcom/faceunity/core/faceunity/FUAIKit;->trackFace([BLcom/faceunity/core/enumeration/FUInputBufferEnum;III)I
 
-    move-result p2
+    move-result v0
 
-    if-lez p2, :cond_0
+    if-lez v0, :cond_0
 
     goto :goto_1
 
     :cond_0
-    add-int/lit8 p1, p1, 0x1
+    add-int/lit8 p2, p2, 0x1
 
     goto :goto_0
 
@@ -816,13 +860,13 @@
     :goto_1
     const/4 p1, 0x2
 
-    const/4 v0, 0x0
+    const/4 p2, 0x0
 
-    if-eqz p2, :cond_6
+    if-eqz v0, :cond_6
 
     const/4 v1, 0x1
 
-    if-eq p2, v1, :cond_2
+    if-eq v0, v1, :cond_2
 
     .line 13
     iput-boolean v1, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->isNeedPhotoDraw:Z
@@ -832,11 +876,11 @@
 
     if-eqz p1, :cond_8
 
-    invoke-direct {p0, p2}, Lcom/faceunity/core/faceunity/FUPosterKit;->getPhotoMaskData(I)Ljava/util/ArrayList;
+    invoke-direct {p0, v0}, Lcom/faceunity/core/faceunity/FUPosterKit;->getPhotoMaskData(I)Ljava/util/ArrayList;
 
     move-result-object p0
 
-    invoke-interface {p1, p2, p0}, Lcom/faceunity/core/callback/OnPosterRenderCallback;->onPhotoLoaded(ILjava/util/ArrayList;)V
+    invoke-interface {p1, v0, p0}, Lcom/faceunity/core/callback/OnPosterRenderCallback;->onPhotoLoaded(ILjava/util/ArrayList;)V
 
     goto :goto_2
 
@@ -844,22 +888,22 @@
     :cond_2
     invoke-direct {p0}, Lcom/faceunity/core/faceunity/FUPosterKit;->getMPosterController()Lcom/faceunity/core/controller/poster/PosterController;
 
-    move-result-object p2
+    move-result-object v0
 
-    invoke-virtual {p2}, Lcom/faceunity/core/controller/poster/PosterController;->checkRotation()Z
+    invoke-virtual {v0}, Lcom/faceunity/core/controller/poster/PosterController;->checkRotation()Z
 
-    move-result p2
+    move-result v0
 
-    if-eqz p2, :cond_4
+    if-eqz v0, :cond_4
 
     .line 16
-    iget-object p2, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->posterRenderCallback:Lcom/faceunity/core/callback/OnPosterRenderCallback;
+    iget-object v0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->posterRenderCallback:Lcom/faceunity/core/callback/OnPosterRenderCallback;
 
-    if-eqz p2, :cond_3
+    if-eqz v0, :cond_3
 
     const/4 v1, -0x1
 
-    invoke-static {p2, v1, v0, p1, v0}, Lcom/faceunity/core/callback/OnPosterRenderCallback$DefaultImpls;->onPhotoLoaded$default(Lcom/faceunity/core/callback/OnPosterRenderCallback;ILjava/util/ArrayList;ILjava/lang/Object;)V
+    invoke-static {v0, v1, p2, p1, p2}, Lcom/faceunity/core/callback/OnPosterRenderCallback$DefaultImpls;->onPhotoLoaded$default(Lcom/faceunity/core/callback/OnPosterRenderCallback;ILjava/util/ArrayList;ILjava/lang/Object;)V
 
     .line 17
     :cond_3
@@ -890,7 +934,7 @@
 
     const-string p2, "mPoster"
 
-    invoke-static {p2}, Lkotlin/jvm/internal/l0;->S(Ljava/lang/String;)V
+    invoke-static {p2}, Lh/d3/x/l0;->S(Ljava/lang/String;)V
 
     :cond_5
     invoke-virtual {p1}, Lcom/faceunity/core/model/BaseSingleModel;->getMModelId$lib_core_release()J
@@ -903,7 +947,7 @@
 
     iget-object v8, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->photoRGBABytes:[B
 
-    invoke-static {v8}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {v8}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     invoke-virtual/range {v3 .. v9}, Lcom/faceunity/core/controller/poster/PosterController;->loadPosterPhoto(JII[B[F)V
 
@@ -914,11 +958,11 @@
 
     .line 21
     :cond_6
-    iget-object p2, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->posterRenderCallback:Lcom/faceunity/core/callback/OnPosterRenderCallback;
+    iget-object v0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->posterRenderCallback:Lcom/faceunity/core/callback/OnPosterRenderCallback;
 
-    if-eqz p2, :cond_7
+    if-eqz v0, :cond_7
 
-    invoke-static {p2, v2, v0, p1, v0}, Lcom/faceunity/core/callback/OnPosterRenderCallback$DefaultImpls;->onPhotoLoaded$default(Lcom/faceunity/core/callback/OnPosterRenderCallback;ILjava/util/ArrayList;ILjava/lang/Object;)V
+    invoke-static {v0, v2, p2, p1, p2}, Lcom/faceunity/core/callback/OnPosterRenderCallback$DefaultImpls;->onPhotoLoaded$default(Lcom/faceunity/core/callback/OnPosterRenderCallback;ILjava/util/ArrayList;ILjava/lang/Object;)V
 
     .line 22
     :cond_7
@@ -932,7 +976,7 @@
     move-exception p0
 
     .line 23
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_8
     :goto_2
@@ -967,193 +1011,212 @@
 .end method
 
 .method private final loadTemplateData(Ljava/lang/String;D)V
-    .locals 10
+    .locals 17
 
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    .line 1
     :try_start_0
     invoke-static {}, Lcom/faceunity/core/FURenderConstants;->getApplication()Landroid/app/Application;
 
-    move-result-object v0
-
-    invoke-static {v0, p1}, Lcom/faceunity/toolbox/media/FUMediaUtils;->loadBitmap(Landroid/content/Context;Ljava/lang/String;)Landroid/graphics/Bitmap;
-
     move-result-object v2
 
-    if-nez v2, :cond_0
+    invoke-static {v2, v1}, Lcom/faceunity/toolbox/media/FUMediaUtils;->loadBitmap(Landroid/content/Context;Ljava/lang/String;)Landroid/graphics/Bitmap;
 
-    const-string p0, "KIT_FUPosterKit"
+    move-result-object v4
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    if-nez v4, :cond_0
 
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v0, "KIT_FUPosterKit"
 
-    const-string p3, "loadTemplateData failed TemplateData path:"
+    .line 2
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v3, "loadTemplateData failed TemplateData path:"
 
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p0, p1}, Lcom/faceunity/toolbox/utils/FULogger;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result p1
-
-    iput p1, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->templateWidth:I
-
-    invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result p1
-
-    iput p1, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->templateHeight:I
-
-    invoke-static {v2}, Lcom/faceunity/toolbox/media/FUMediaUtils;->readRgbaByteFromBitmap(Landroid/graphics/Bitmap;)[B
-
-    move-result-object v8
-
-    if-eqz v8, :cond_7
-
-    sget-object v1, Lcom/faceunity/toolbox/media/FUMediaUtils;->INSTANCE:Lcom/faceunity/toolbox/media/FUMediaUtils;
-
-    iget v3, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->templateWidth:I
-
-    iget v4, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->templateHeight:I
-
-    const/4 v5, 0x0
-
-    const/16 v6, 0x8
-
-    const/4 v7, 0x0
-
-    invoke-static/range {v1 .. v7}, Lcom/faceunity/toolbox/media/FUMediaUtils;->readNV21FromBitmap$default(Lcom/faceunity/toolbox/media/FUMediaUtils;Landroid/graphics/Bitmap;IIZILjava/lang/Object;)[B
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->templateBytes:[B
-
-    const/4 p1, 0x0
-
-    move v0, p1
-
-    move v1, v0
-
-    :goto_0
-    const/16 v2, 0x32
-
-    if-ge v0, v2, :cond_2
-
-    invoke-direct {p0}, Lcom/faceunity/core/faceunity/FUPosterKit;->getMFURenderKit()Lcom/faceunity/core/faceunity/FURenderKit;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/faceunity/core/faceunity/FURenderKit;->clearCameraCache()V
+    invoke-static {v0, v1}, Lcom/faceunity/toolbox/utils/FULogger;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {p0}, Lcom/faceunity/core/faceunity/FUPosterKit;->getMFUAIKit()Lcom/faceunity/core/faceunity/FUAIKit;
+    return-void
 
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->templateBytes:[B
-
-    invoke-static {v3}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
-
-    sget-object v4, Lcom/faceunity/core/enumeration/FUInputBufferEnum;->FU_FORMAT_NV21_BUFFER:Lcom/faceunity/core/enumeration/FUInputBufferEnum;
-
-    iget v5, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->templateWidth:I
-
-    iget v6, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->templateHeight:I
-
-    const/4 v7, 0x0
-
-    invoke-virtual/range {v2 .. v7}, Lcom/faceunity/core/faceunity/FUAIKit;->trackFace([BLcom/faceunity/core/enumeration/FUInputBufferEnum;III)I
+    .line 3
+    :cond_0
+    invoke-virtual {v4}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v1
 
-    if-lez v1, :cond_1
+    iput v1, v0, Lcom/faceunity/core/faceunity/FUPosterKit;->templateWidth:I
+
+    .line 4
+    invoke-virtual {v4}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v1
+
+    iput v1, v0, Lcom/faceunity/core/faceunity/FUPosterKit;->templateHeight:I
+
+    .line 5
+    invoke-static {v4}, Lcom/faceunity/toolbox/media/FUMediaUtils;->readRgbaByteFromBitmap(Landroid/graphics/Bitmap;)[B
+
+    move-result-object v10
+
+    if-eqz v10, :cond_7
+
+    .line 6
+    sget-object v3, Lcom/faceunity/toolbox/media/FUMediaUtils;->INSTANCE:Lcom/faceunity/toolbox/media/FUMediaUtils;
+
+    iget v5, v0, Lcom/faceunity/core/faceunity/FUPosterKit;->templateWidth:I
+
+    iget v6, v0, Lcom/faceunity/core/faceunity/FUPosterKit;->templateHeight:I
+
+    const/4 v7, 0x0
+
+    const/16 v8, 0x8
+
+    const/4 v9, 0x0
+
+    invoke-static/range {v3 .. v9}, Lcom/faceunity/toolbox/media/FUMediaUtils;->readNV21FromBitmap$default(Lcom/faceunity/toolbox/media/FUMediaUtils;Landroid/graphics/Bitmap;IIZILjava/lang/Object;)[B
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/faceunity/core/faceunity/FUPosterKit;->templateBytes:[B
+
+    const/16 v1, 0x32
+
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    move v4, v3
+
+    :goto_0
+    if-ge v3, v1, :cond_2
+
+    .line 7
+    invoke-direct/range {p0 .. p0}, Lcom/faceunity/core/faceunity/FUPosterKit;->getMFURenderKit()Lcom/faceunity/core/faceunity/FURenderKit;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lcom/faceunity/core/faceunity/FURenderKit;->clearCameraCache()V
+
+    .line 8
+    invoke-direct/range {p0 .. p0}, Lcom/faceunity/core/faceunity/FUPosterKit;->getMFUAIKit()Lcom/faceunity/core/faceunity/FUAIKit;
+
+    move-result-object v11
+
+    iget-object v12, v0, Lcom/faceunity/core/faceunity/FUPosterKit;->templateBytes:[B
+
+    invoke-static {v12}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
+
+    sget-object v13, Lcom/faceunity/core/enumeration/FUInputBufferEnum;->FU_FORMAT_NV21_BUFFER:Lcom/faceunity/core/enumeration/FUInputBufferEnum;
+
+    iget v14, v0, Lcom/faceunity/core/faceunity/FUPosterKit;->templateWidth:I
+
+    iget v15, v0, Lcom/faceunity/core/faceunity/FUPosterKit;->templateHeight:I
+
+    const/16 v16, 0x0
+
+    invoke-virtual/range {v11 .. v16}, Lcom/faceunity/core/faceunity/FUAIKit;->trackFace([BLcom/faceunity/core/enumeration/FUInputBufferEnum;III)I
+
+    move-result v4
+
+    if-lez v4, :cond_1
 
     goto :goto_1
 
     :cond_1
-    add-int/lit8 v0, v0, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_2
     :goto_1
-    if-lez v1, :cond_5
+    if-lez v4, :cond_5
 
-    const/16 v0, 0x96
+    const/16 v1, 0x96
 
-    new-array v9, v0, [F
+    new-array v11, v1, [F
 
-    invoke-direct {p0}, Lcom/faceunity/core/faceunity/FUPosterKit;->getMPosterController()Lcom/faceunity/core/controller/poster/PosterController;
+    .line 9
+    invoke-direct/range {p0 .. p0}, Lcom/faceunity/core/faceunity/FUPosterKit;->getMPosterController()Lcom/faceunity/core/controller/poster/PosterController;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0, p1, v9}, Lcom/faceunity/core/controller/poster/PosterController;->getLandmarksData(I[F)V
+    invoke-virtual {v1, v2, v11}, Lcom/faceunity/core/controller/poster/PosterController;->getLandmarksData(I[F)V
 
-    invoke-direct {p0}, Lcom/faceunity/core/faceunity/FUPosterKit;->getMPosterController()Lcom/faceunity/core/controller/poster/PosterController;
+    .line 10
+    invoke-direct/range {p0 .. p0}, Lcom/faceunity/core/faceunity/FUPosterKit;->getMPosterController()Lcom/faceunity/core/controller/poster/PosterController;
 
-    move-result-object p1
+    move-result-object v1
 
-    iget-object v0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->mPoster:Lcom/faceunity/core/model/poster/Poster;
+    iget-object v2, v0, Lcom/faceunity/core/faceunity/FUPosterKit;->mPoster:Lcom/faceunity/core/model/poster/Poster;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    const-string v1, "mPoster"
+    const-string v3, "mPoster"
 
-    if-nez v0, :cond_3
+    if-nez v2, :cond_3
 
     :try_start_1
-    invoke-static {v1}, Lkotlin/jvm/internal/l0;->S(Ljava/lang/String;)V
+    invoke-static {v3}, Lh/d3/x/l0;->S(Ljava/lang/String;)V
 
     :cond_3
-    invoke-virtual {v0}, Lcom/faceunity/core/model/BaseSingleModel;->getMModelId$lib_core_release()J
-
-    move-result-wide v2
-
-    invoke-virtual {p1, v2, v3, p2, p3}, Lcom/faceunity/core/controller/poster/PosterController;->fixPosterFaceParam(JD)V
-
-    invoke-direct {p0}, Lcom/faceunity/core/faceunity/FUPosterKit;->getMPosterController()Lcom/faceunity/core/controller/poster/PosterController;
-
-    move-result-object v3
-
-    iget-object p1, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->mPoster:Lcom/faceunity/core/model/poster/Poster;
-
-    if-nez p1, :cond_4
-
-    invoke-static {v1}, Lkotlin/jvm/internal/l0;->S(Ljava/lang/String;)V
-
-    :cond_4
-    invoke-virtual {p1}, Lcom/faceunity/core/model/BaseSingleModel;->getMModelId$lib_core_release()J
+    invoke-virtual {v2}, Lcom/faceunity/core/model/BaseSingleModel;->getMModelId$lib_core_release()J
 
     move-result-wide v4
 
-    iget v6, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->templateWidth:I
+    move-wide/from16 v6, p2
 
-    iget v7, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->templateHeight:I
+    invoke-virtual {v1, v4, v5, v6, v7}, Lcom/faceunity/core/controller/poster/PosterController;->fixPosterFaceParam(JD)V
 
-    invoke-virtual/range {v3 .. v9}, Lcom/faceunity/core/controller/poster/PosterController;->loadPosterTemplate(JII[B[F)V
+    .line 11
+    invoke-direct/range {p0 .. p0}, Lcom/faceunity/core/faceunity/FUPosterKit;->getMPosterController()Lcom/faceunity/core/controller/poster/PosterController;
 
-    const/4 p1, 0x1
+    move-result-object v5
+
+    iget-object v1, v0, Lcom/faceunity/core/faceunity/FUPosterKit;->mPoster:Lcom/faceunity/core/model/poster/Poster;
+
+    if-nez v1, :cond_4
+
+    invoke-static {v3}, Lh/d3/x/l0;->S(Ljava/lang/String;)V
+
+    :cond_4
+    invoke-virtual {v1}, Lcom/faceunity/core/model/BaseSingleModel;->getMModelId$lib_core_release()J
+
+    move-result-wide v6
+
+    iget v8, v0, Lcom/faceunity/core/faceunity/FUPosterKit;->templateWidth:I
+
+    iget v9, v0, Lcom/faceunity/core/faceunity/FUPosterKit;->templateHeight:I
+
+    invoke-virtual/range {v5 .. v11}, Lcom/faceunity/core/controller/poster/PosterController;->loadPosterTemplate(JII[B[F)V
+
+    const/4 v2, 0x1
 
     goto :goto_2
 
+    .line 12
     :cond_5
-    iget-object p2, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->posterRenderCallback:Lcom/faceunity/core/callback/OnPosterRenderCallback;
+    iget-object v1, v0, Lcom/faceunity/core/faceunity/FUPosterKit;->posterRenderCallback:Lcom/faceunity/core/callback/OnPosterRenderCallback;
 
-    if-eqz p2, :cond_6
+    if-eqz v1, :cond_6
 
-    invoke-interface {p2, v1}, Lcom/faceunity/core/callback/OnPosterRenderCallback;->onTemplateLoaded(I)V
+    invoke-interface {v1, v4}, Lcom/faceunity/core/callback/OnPosterRenderCallback;->onTemplateLoaded(I)V
 
+    .line 13
     :cond_6
     :goto_2
-    iput-boolean p1, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->hasTemplateDraw:Z
+    iput-boolean v2, v0, Lcom/faceunity/core/faceunity/FUPosterKit;->hasTemplateDraw:Z
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -1163,9 +1226,10 @@
     return-void
 
     :catch_0
-    move-exception p0
+    move-exception v0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 14
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_3
     return-void
@@ -1174,6 +1238,7 @@
 .method private final scale(II)V
     .locals 7
 
+    .line 1
     iget v0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->viewWidth:I
 
     int-to-float v1, v0
@@ -1204,12 +1269,14 @@
 
     if-lez v4, :cond_0
 
+    .line 2
     iput v6, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->mViewPortY:I
 
     int-to-float v1, v2
 
     div-float/2addr v1, p2
 
+    .line 3
     iput v1, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->mViewPortScale:F
 
     int-to-float p2, v0
@@ -1224,6 +1291,7 @@
 
     float-to-int p1, p2
 
+    .line 4
     iput p1, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->mViewPortX:I
 
     goto :goto_0
@@ -1233,12 +1301,14 @@
 
     if-gez v1, :cond_1
 
+    .line 5
     iput v6, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->mViewPortX:I
 
     int-to-float v0, v0
 
     div-float/2addr v0, p1
 
+    .line 6
     iput v0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->mViewPortScale:F
 
     int-to-float p1, v2
@@ -1253,19 +1323,23 @@
 
     float-to-int p1, p1
 
+    .line 7
     iput p1, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->mViewPortY:I
 
     goto :goto_0
 
+    .line 8
     :cond_1
     iput v6, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->mViewPortX:I
 
+    .line 9
     iput v6, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->mViewPortY:I
 
     int-to-float p2, v0
 
     div-float/2addr p2, p1
 
+    .line 10
     iput p2, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->mViewPortScale:F
 
     :goto_0
@@ -1277,6 +1351,7 @@
 .method public final bindPhotoData(I)V
     .locals 8
 
+    .line 1
     iget-boolean v0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->isNeedPhotoDraw:Z
 
     if-nez v0, :cond_0
@@ -1289,12 +1364,14 @@
     :try_start_0
     new-array v7, v0, [F
 
+    .line 2
     invoke-direct {p0}, Lcom/faceunity/core/faceunity/FUPosterKit;->getMPosterController()Lcom/faceunity/core/controller/poster/PosterController;
 
     move-result-object v0
 
     invoke-virtual {v0, p1, v7}, Lcom/faceunity/core/controller/poster/PosterController;->getLandmarksData(I[F)V
 
+    .line 3
     invoke-direct {p0}, Lcom/faceunity/core/faceunity/FUPosterKit;->getMPosterController()Lcom/faceunity/core/controller/poster/PosterController;
 
     move-result-object v1
@@ -1305,7 +1382,7 @@
 
     const-string v0, "mPoster"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/l0;->S(Ljava/lang/String;)V
+    invoke-static {v0}, Lh/d3/x/l0;->S(Ljava/lang/String;)V
 
     :cond_1
     invoke-virtual {p1}, Lcom/faceunity/core/model/BaseSingleModel;->getMModelId$lib_core_release()J
@@ -1318,31 +1395,36 @@
 
     iget-object v6, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->photoRGBABytes:[B
 
-    invoke-static {v6}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {v6}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     invoke-virtual/range {v1 .. v7}, Lcom/faceunity/core/controller/poster/PosterController;->loadPosterPhoto(JII[B[F)V
 
     const/4 p1, 0x1
 
+    .line 4
     iput-boolean p1, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->hasPhotoDraw:Z
 
+    .line 5
     iget-object p1, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->templatePath:Ljava/lang/String;
 
     if-nez p1, :cond_2
 
     return-void
 
+    .line 6
     :cond_2
-    invoke-static {p1}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {p1}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     iget-wide v0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->warpIntensity:D
 
     invoke-direct {p0, p1, v0, v1}, Lcom/faceunity/core/faceunity/FUPosterKit;->loadTemplateData(Ljava/lang/String;D)V
 
+    .line 7
     iget-boolean p1, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->hasTemplateDraw:Z
 
     if-eqz p1, :cond_3
 
+    .line 8
     invoke-direct {p0}, Lcom/faceunity/core/faceunity/FUPosterKit;->doMerge()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -1352,7 +1434,8 @@
     :catch_0
     move-exception p0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 9
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_3
     :goto_0
@@ -1362,8 +1445,10 @@
 .method public final bindSurfaceSize(II)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->viewWidth:I
 
+    .line 2
     iput p2, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->viewHeight:I
 
     return-void
@@ -1372,6 +1457,7 @@
 .method public final getPhotoHeight()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->photoHeight:I
 
     return p0
@@ -1380,6 +1466,7 @@
 .method public final getPhotoWidth()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->photoWidth:I
 
     return p0
@@ -1388,6 +1475,7 @@
 .method public final getTemplateHeight()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->templateHeight:I
 
     return p0
@@ -1396,6 +1484,7 @@
 .method public final getTemplateWidth()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->templateWidth:I
 
     return p0
@@ -1406,30 +1495,41 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->photoBytes:[B
 
+    .line 2
     iput-object v0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->photoRGBABytes:[B
 
+    .line 3
     iput-object v0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->templateBytes:[B
 
     const/high16 v1, 0x3f800000    # 1.0f
 
+    .line 4
     iput v1, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->mViewPortScale:F
 
     const/4 v1, 0x0
 
+    .line 5
     iput v1, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->mViewPortX:I
 
+    .line 6
     iput v1, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->mViewPortY:I
 
+    .line 7
     iput-boolean v1, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->hasPhotoDraw:Z
 
+    .line 8
     iput-boolean v1, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->isNeedPhotoDraw:Z
 
+    .line 9
     iput-boolean v1, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->hasTemplateDraw:Z
 
+    .line 10
     iput-object v0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->posterRenderCallback:Lcom/faceunity/core/callback/OnPosterRenderCallback;
 
+    .line 11
     iget v0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->photoTextureId:I
 
     const/4 v2, 0x1
@@ -1440,10 +1540,13 @@
 
     aput v0, v3, v1
 
+    .line 12
     invoke-static {v3}, Lcom/faceunity/toolbox/utils/FUGLUtils;->deleteTextures([I)V
 
+    .line 13
     iput v1, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->photoTextureId:I
 
+    .line 14
     :cond_0
     iget v0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->mergeTexId:I
 
@@ -1453,10 +1556,13 @@
 
     aput v0, v2, v1
 
+    .line 15
     invoke-static {v2}, Lcom/faceunity/toolbox/utils/FUGLUtils;->deleteTextures([I)V
 
+    .line 16
     iput v1, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->mergeTexId:I
 
+    .line 17
     :cond_1
     invoke-direct {p0}, Lcom/faceunity/core/faceunity/FUPosterKit;->getMFUAIKit()Lcom/faceunity/core/faceunity/FUAIKit;
 
@@ -1466,6 +1572,7 @@
 
     invoke-virtual {p0, v0}, Lcom/faceunity/core/faceunity/FUAIKit;->setFaceProcessorDetectMode(Lcom/faceunity/core/enumeration/FUFaceProcessorDetectModeEnum;)V
 
+    .line 18
     sget-object p0, Lcom/faceunity/core/support/FURenderBridge;->Companion:Lcom/faceunity/core/support/FURenderBridge$Companion;
 
     invoke-virtual {p0}, Lcom/faceunity/core/support/FURenderBridge$Companion;->getInstance$lib_core_release()Lcom/faceunity/core/support/FURenderBridge;
@@ -1484,21 +1591,21 @@
 .method public final renderPoster(Landroid/graphics/Bitmap;ILjava/lang/String;D)V
     .locals 1
     .param p1    # Landroid/graphics/Bitmap;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p3    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "photoBitmap"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "templatePath"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     iput-object p3, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->templatePath:Ljava/lang/String;
@@ -1535,21 +1642,21 @@
 .method public final renderPoster(Ljava/lang/String;Ljava/lang/String;D)V
     .locals 1
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "photoPath"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "templatePath"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
     iput-object p2, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->templatePath:Ljava/lang/String;
@@ -1586,6 +1693,7 @@
 .method public final setPhotoHeight(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->photoHeight:I
 
     return-void
@@ -1594,6 +1702,7 @@
 .method public final setPhotoWidth(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->photoWidth:I
 
     return-void
@@ -1602,6 +1711,7 @@
 .method public final setTemplateHeight(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->templateHeight:I
 
     return-void
@@ -1610,6 +1720,7 @@
 .method public final setTemplateWidth(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->templateWidth:I
 
     return-void
@@ -1618,14 +1729,15 @@
 .method public final updateTemplate(Ljava/lang/String;D)V
     .locals 1
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "templatePath"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-boolean v0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->hasPhotoDraw:Z
 
     if-nez v0, :cond_0
@@ -1634,6 +1746,7 @@
 
     const-string p1, "please renderPoster first"
 
+    .line 2
     invoke-static {p0, p1}, Lcom/faceunity/toolbox/utils/FULogger;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -1641,14 +1754,18 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 3
     iput-boolean v0, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->hasTemplateDraw:Z
 
+    .line 4
     invoke-direct {p0, p1, p2, p3}, Lcom/faceunity/core/faceunity/FUPosterKit;->loadTemplateData(Ljava/lang/String;D)V
 
+    .line 5
     iget-boolean p1, p0, Lcom/faceunity/core/faceunity/FUPosterKit;->hasTemplateDraw:Z
 
     if-eqz p1, :cond_1
 
+    .line 6
     invoke-direct {p0}, Lcom/faceunity/core/faceunity/FUPosterKit;->doMerge()V
 
     :cond_1

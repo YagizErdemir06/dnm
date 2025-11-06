@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ImmutableEnumMap$EnumSerializedForm;
+.class public Lcom/google/common/collect/ImmutableEnumMap$EnumSerializedForm;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -34,7 +34,7 @@
 
 
 # instance fields
-.field final delegate:Ljava/util/EnumMap;
+.field public final delegate:Ljava/util/EnumMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/EnumMap<",
@@ -55,8 +55,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/ImmutableEnumMap$EnumSerializedForm;->delegate:Ljava/util/EnumMap;
 
     return-void
@@ -67,6 +69,7 @@
 .method public readResolve()Ljava/lang/Object;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ImmutableEnumMap;
 
     iget-object p0, p0, Lcom/google/common/collect/ImmutableEnumMap$EnumSerializedForm;->delegate:Ljava/util/EnumMap;

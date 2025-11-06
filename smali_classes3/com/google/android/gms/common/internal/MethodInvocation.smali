@@ -244,39 +244,45 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->beginObjectHeader(Landroid/os/Parcel;)I
 
     move-result p2
 
-    const/4 v0, 0x1
+    iget v0, p0, Lcom/google/android/gms/common/internal/MethodInvocation;->zaa:I
 
-    iget v1, p0, Lcom/google/android/gms/common/internal/MethodInvocation;->zaa:I
+    const/4 v1, 0x1
 
-    invoke-static {p1, v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
+    .line 2
+    invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
-    const/4 v0, 0x2
+    iget v0, p0, Lcom/google/android/gms/common/internal/MethodInvocation;->zab:I
 
-    iget v1, p0, Lcom/google/android/gms/common/internal/MethodInvocation;->zab:I
+    const/4 v1, 0x2
 
-    invoke-static {p1, v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
+    .line 3
+    invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
-    const/4 v0, 0x3
+    iget v0, p0, Lcom/google/android/gms/common/internal/MethodInvocation;->zac:I
 
-    iget v1, p0, Lcom/google/android/gms/common/internal/MethodInvocation;->zac:I
+    const/4 v1, 0x3
 
-    invoke-static {p1, v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
+    .line 4
+    invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
-    const/4 v0, 0x4
+    iget-wide v0, p0, Lcom/google/android/gms/common/internal/MethodInvocation;->zad:J
 
-    iget-wide v1, p0, Lcom/google/android/gms/common/internal/MethodInvocation;->zad:J
+    const/4 v2, 0x4
 
-    invoke-static {p1, v0, v1, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeLong(Landroid/os/Parcel;IJ)V
+    .line 5
+    invoke-static {p1, v2, v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeLong(Landroid/os/Parcel;IJ)V
 
-    const/4 v0, 0x5
+    iget-wide v0, p0, Lcom/google/android/gms/common/internal/MethodInvocation;->zae:J
 
-    iget-wide v1, p0, Lcom/google/android/gms/common/internal/MethodInvocation;->zae:J
+    const/4 v2, 0x5
 
-    invoke-static {p1, v0, v1, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeLong(Landroid/os/Parcel;IJ)V
+    .line 6
+    invoke-static {p1, v2, v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeLong(Landroid/os/Parcel;IJ)V
 
     iget-object v0, p0, Lcom/google/android/gms/common/internal/MethodInvocation;->zaf:Ljava/lang/String;
 
@@ -284,26 +290,31 @@
 
     const/4 v2, 0x0
 
+    .line 7
     invoke-static {p1, v1, v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeString(Landroid/os/Parcel;ILjava/lang/String;Z)V
 
-    const/4 v0, 0x7
+    iget-object v0, p0, Lcom/google/android/gms/common/internal/MethodInvocation;->zag:Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/google/android/gms/common/internal/MethodInvocation;->zag:Ljava/lang/String;
+    const/4 v1, 0x7
 
-    invoke-static {p1, v0, v1, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeString(Landroid/os/Parcel;ILjava/lang/String;Z)V
+    .line 8
+    invoke-static {p1, v1, v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeString(Landroid/os/Parcel;ILjava/lang/String;Z)V
 
-    const/16 v0, 0x8
+    iget v0, p0, Lcom/google/android/gms/common/internal/MethodInvocation;->zah:I
 
-    iget v1, p0, Lcom/google/android/gms/common/internal/MethodInvocation;->zah:I
+    const/16 v1, 0x8
 
-    invoke-static {p1, v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
-
-    const/16 v0, 0x9
+    .line 9
+    invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
     iget p0, p0, Lcom/google/android/gms/common/internal/MethodInvocation;->zai:I
 
+    const/16 v0, 0x9
+
+    .line 10
     invoke-static {p1, v0, p0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
+    .line 11
     invoke-static {p1, p2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->finishObjectHeader(Landroid/os/Parcel;I)V
 
     return-void

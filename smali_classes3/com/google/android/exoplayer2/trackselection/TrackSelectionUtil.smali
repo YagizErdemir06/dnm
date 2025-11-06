@@ -15,6 +15,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -297,10 +298,12 @@
 .method public static createFallbackOptions(Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;)Lcom/google/android/exoplayer2/upstream/LoadErrorHandlingPolicy$FallbackOptions;
     .locals 7
 
+    .line 1
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
+    .line 2
     invoke-interface {p0}, Lcom/google/android/exoplayer2/trackselection/TrackSelection;->length()I
 
     move-result v2
@@ -314,6 +317,7 @@
     :goto_0
     if-ge v4, v2, :cond_1
 
+    .line 3
     invoke-interface {p0, v4, v0, v1}, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;->isBlacklisted(IJ)Z
 
     move-result v6
@@ -327,6 +331,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     new-instance p0, Lcom/google/android/exoplayer2/upstream/LoadErrorHandlingPolicy$FallbackOptions;
 
@@ -340,6 +345,7 @@
 .method public static createTrackSelectionsForDefinitions([Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;Lcom/google/android/exoplayer2/trackselection/TrackSelectionUtil$AdaptiveTrackSelectionFactory;)[Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;
     .locals 8
 
+    .line 1
     array-length v0, p0
 
     new-array v0, v0, [Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;
@@ -350,50 +356,55 @@
 
     move v3, v2
 
+    .line 2
     :goto_0
     array-length v4, p0
 
     if-ge v2, v4, :cond_2
 
+    .line 3
     aget-object v4, p0, v2
+
+    const/4 v5, 0x1
 
     if-nez v4, :cond_0
 
     goto :goto_1
 
+    .line 4
     :cond_0
-    iget-object v5, v4, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;->tracks:[I
+    iget-object v6, v4, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;->tracks:[I
 
-    array-length v6, v5
+    array-length v7, v6
 
-    const/4 v7, 0x1
-
-    if-le v6, v7, :cond_1
+    if-le v7, v5, :cond_1
 
     if-nez v3, :cond_1
 
+    .line 5
     invoke-interface {p1, v4}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionUtil$AdaptiveTrackSelectionFactory;->createAdaptiveTrackSelection(Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;)Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;
 
     move-result-object v3
 
     aput-object v3, v0, v2
 
-    move v3, v7
+    move v3, v5
 
     goto :goto_1
 
+    .line 6
     :cond_1
-    new-instance v6, Lcom/google/android/exoplayer2/trackselection/FixedTrackSelection;
+    new-instance v5, Lcom/google/android/exoplayer2/trackselection/FixedTrackSelection;
 
     iget-object v7, v4, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;->group:Lcom/google/android/exoplayer2/source/TrackGroup;
 
-    aget v5, v5, v1
+    aget v6, v6, v1
 
     iget v4, v4, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;->type:I
 
-    invoke-direct {v6, v7, v5, v4}, Lcom/google/android/exoplayer2/trackselection/FixedTrackSelection;-><init>(Lcom/google/android/exoplayer2/source/TrackGroup;II)V
+    invoke-direct {v5, v7, v6, v4}, Lcom/google/android/exoplayer2/trackselection/FixedTrackSelection;-><init>(Lcom/google/android/exoplayer2/source/TrackGroup;II)V
 
-    aput-object v6, v0, v2
+    aput-object v5, v0, v2
 
     :goto_1
     add-int/lit8 v2, v2, 0x1
@@ -411,22 +422,27 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->buildUpon()Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;
 
     move-result-object p0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;->clearSelectionOverrides(I)Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;
 
     move-result-object p0
 
+    .line 3
     invoke-virtual {p0, p1, p3}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;->setRendererDisabled(IZ)Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;
 
     move-result-object p0
 
     if-eqz p4, :cond_0
 
+    .line 4
     invoke-virtual {p0, p1, p2, p4}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;->setSelectionOverride(ILcom/google/android/exoplayer2/source/TrackGroupArray;Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;)Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;
 
+    .line 5
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;->build()Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
 

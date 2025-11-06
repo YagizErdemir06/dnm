@@ -1,4 +1,4 @@
-.class synthetic Lmiuix/animation/styles/TintDrawable$3;
+.class public synthetic Lmiuix/animation/styles/TintDrawable$3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$miuix$animation$ITouchStyle$TouchRectGravity:[I
+.field public static final synthetic $SwitchMap$miuix$animation$ITouchStyle$TouchRectGravity:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Lmiuix/animation/ITouchStyle$TouchRectGravity;->values()[Lmiuix/animation/ITouchStyle$TouchRectGravity;
 
     move-result-object v0

@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lmiuix/appcompat/internal/app/widget/ActionBarView;->I1(Z)V
+    value = Lmiuix/appcompat/internal/app/widget/ActionBarView;->O0(ILk/b/d/i;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,18 +18,23 @@
 
 
 # instance fields
-.field public final synthetic a:Z
+.field public final synthetic c:Lk/b/d/i;
 
-.field public final synthetic b:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+.field public final synthetic d:Landroid/view/View;
+
+.field public final synthetic f:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
 
 # direct methods
-.method public constructor <init>(Lmiuix/appcompat/internal/app/widget/ActionBarView;Z)V
+.method public constructor <init>(Lmiuix/appcompat/internal/app/widget/ActionBarView;Lk/b/d/i;Landroid/view/View;)V
     .locals 0
 
-    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$b;->b:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    .line 1
+    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$b;->f:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
-    iput-boolean p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$b;->a:Z
+    iput-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$b;->c:Lk/b/d/i;
+
+    iput-object p3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$b;->d:Landroid/view/View;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,25 +43,17 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public onClick(Landroid/view/View;)V
+    .locals 1
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$b;->b:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    .line 1
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$b;->c:Lk/b/d/i;
 
-    iget-boolean v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$b;->a:Z
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$b;->d:Landroid/view/View;
 
-    invoke-virtual {v0, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->H1(Z)V
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$b;->f:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$b;->b:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    invoke-virtual {p1, v0, p0}, Lk/b/d/i;->F(Landroid/view/View;Landroid/view/ViewGroup;)V
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/b;->i:Lmiuix/appcompat/internal/view/menu/action/b;
-
-    if-eqz p0, :cond_0
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_0
     return-void
 .end method

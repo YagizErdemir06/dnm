@@ -1,4 +1,4 @@
-.class final enum Lcom/google/common/collect/TreeMultiset$Aggregate$1;
+.class public final enum Lcom/google/common/collect/TreeMultiset$Aggregate$1;
 .super Lcom/google/common/collect/TreeMultiset$Aggregate;
 .source "SourceFile"
 
@@ -20,6 +20,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, p2, v0}, Lcom/google/common/collect/TreeMultiset$Aggregate;-><init>(Ljava/lang/String;ILcom/google/common/collect/TreeMultiset$1;)V
 
     return-void
@@ -37,6 +38,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/collect/TreeMultiset$AvlNode;->access$200(Lcom/google/common/collect/TreeMultiset$AvlNode;)I
 
     move-result p0
@@ -64,6 +66,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     invoke-static {p1}, Lcom/google/common/collect/TreeMultiset$AvlNode;->access$300(Lcom/google/common/collect/TreeMultiset$AvlNode;)J
 

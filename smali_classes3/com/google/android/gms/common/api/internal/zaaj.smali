@@ -40,6 +40,7 @@
 .method public final zaa(Lcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl;)Lcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/android/gms/common/api/internal/zaaj;->zab(Lcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl;)Lcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl;
 
     return-object p1
@@ -48,6 +49,7 @@
 .method public final zab(Lcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl;)Lcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl;
     .locals 3
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zaaj;->zaa:Lcom/google/android/gms/common/api/internal/zabi;
 
@@ -61,12 +63,14 @@
 
     iget-object v0, v0, Lcom/google/android/gms/common/api/internal/zabi;->zag:Lcom/google/android/gms/common/api/internal/zabe;
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl;->getClientKey()Lcom/google/android/gms/common/api/Api$AnyClientKey;
 
     move-result-object v1
 
     iget-object v0, v0, Lcom/google/android/gms/common/api/internal/zabe;->zac:Ljava/util/Map;
 
+    .line 3
     invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -75,8 +79,10 @@
 
     const-string v1, "Appropriate Api was not requested."
 
+    .line 4
     invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 5
     invoke-interface {v0}, Lcom/google/android/gms/common/api/Api$Client;->isConnected()Z
 
     move-result v1
@@ -97,6 +103,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 6
     new-instance v0, Lcom/google/android/gms/common/api/Status;
 
     const/16 v1, 0x11
@@ -107,6 +114,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_0
     invoke-virtual {p1, v0}, Lcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl;->run(Lcom/google/android/gms/common/api/Api$AnyClient;)V
     :try_end_0
@@ -121,6 +129,7 @@
 
     invoke-direct {v1, p0, p0}, Lcom/google/android/gms/common/api/internal/zaah;-><init>(Lcom/google/android/gms/common/api/internal/zaaj;Lcom/google/android/gms/common/api/internal/zabf;)V
 
+    .line 8
     invoke-virtual {v0, v1}, Lcom/google/android/gms/common/api/internal/zabi;->zal(Lcom/google/android/gms/common/api/internal/zabg;)V
 
     :goto_0
@@ -136,6 +145,7 @@
 .method public final zae()V
     .locals 2
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/gms/common/api/internal/zaaj;->zab:Z
 
     if-eqz v0, :cond_0
@@ -159,6 +169,7 @@
 .method public final zaf()V
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/gms/common/api/internal/zaaj;->zab:Z
 
     if-eqz v0, :cond_0
@@ -175,6 +186,7 @@
 
     invoke-virtual {v0}, Lcom/google/android/gms/common/api/internal/zadc;->zab()V
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/internal/zaaj;->zaj()Z
 
     :cond_0
@@ -200,6 +212,7 @@
 .method public final zai(I)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zaaj;->zaa:Lcom/google/android/gms/common/api/internal/zabi;
 
     const/4 v1, 0x0
@@ -212,6 +225,7 @@
 
     iget-boolean p0, p0, Lcom/google/android/gms/common/api/internal/zaaj;->zab:Z
 
+    .line 2
     invoke-interface {v0, p1, p0}, Lcom/google/android/gms/common/api/internal/zabz;->zac(IZ)V
 
     return-void
@@ -220,6 +234,7 @@
 .method public final zaj()Z
     .locals 4
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/gms/common/api/internal/zaaj;->zab:Z
 
     const/4 v1, 0x0
@@ -247,6 +262,7 @@
 
     iput-boolean v2, p0, Lcom/google/android/gms/common/api/internal/zaaj;->zab:Z
 
+    .line 2
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -264,6 +280,7 @@
 
     check-cast v0, Lcom/google/android/gms/common/api/internal/zada;
 
+    .line 3
     invoke-virtual {v0}, Lcom/google/android/gms/common/api/internal/zada;->zah()V
 
     goto :goto_0
@@ -276,6 +293,7 @@
 
     const/4 v0, 0x0
 
+    .line 4
     invoke-virtual {p0, v0}, Lcom/google/android/gms/common/api/internal/zabi;->zak(Lcom/google/android/gms/common/ConnectionResult;)V
 
     return v2

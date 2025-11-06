@@ -1,4 +1,4 @@
-.class Landroidx/media/VolumeProviderCompat$1;
+.class public Landroidx/media/VolumeProviderCompat$1;
 .super Landroid/media/VolumeProvider;
 .source "SourceFile"
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/media/VolumeProviderCompat;
+.field public final synthetic this$0:Landroidx/media/VolumeProviderCompat;
 
 
 # direct methods
@@ -38,6 +38,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroidx/media/VolumeProviderCompat$1;->this$0:Landroidx/media/VolumeProviderCompat;
 
     invoke-direct {p0, p2, p3, p4, p5}, Landroid/media/VolumeProvider;-><init>(IIILjava/lang/String;)V
@@ -58,6 +59,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/media/VolumeProviderCompat$1;->this$0:Landroidx/media/VolumeProviderCompat;
 
     invoke-virtual {p0, p1}, Landroidx/media/VolumeProviderCompat;->onAdjustVolume(I)V
@@ -76,6 +78,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/media/VolumeProviderCompat$1;->this$0:Landroidx/media/VolumeProviderCompat;
 
     invoke-virtual {p0, p1}, Landroidx/media/VolumeProviderCompat;->onSetVolumeTo(I)V

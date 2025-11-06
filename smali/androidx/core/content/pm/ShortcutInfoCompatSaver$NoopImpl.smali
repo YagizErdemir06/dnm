@@ -32,6 +32,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroidx/core/content/pm/ShortcutInfoCompatSaver;-><init>()V
 
     return-void
@@ -42,6 +43,7 @@
 .method public bridge synthetic addShortcuts(Ljava/util/List;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/core/content/pm/ShortcutInfoCompatSaver$NoopImpl;->addShortcuts(Ljava/util/List;)Ljava/lang/Void;
 
     move-result-object p0
@@ -69,6 +71,7 @@
 .method public bridge synthetic removeAllShortcuts()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/core/content/pm/ShortcutInfoCompatSaver$NoopImpl;->removeAllShortcuts()Ljava/lang/Void;
 
     move-result-object p0
@@ -87,6 +90,7 @@
 .method public bridge synthetic removeShortcuts(Ljava/util/List;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/core/content/pm/ShortcutInfoCompatSaver$NoopImpl;->removeShortcuts(Ljava/util/List;)Ljava/lang/Void;
 
     move-result-object p0

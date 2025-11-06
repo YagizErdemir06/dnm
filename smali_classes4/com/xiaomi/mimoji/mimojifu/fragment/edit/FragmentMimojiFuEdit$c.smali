@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->tj(I)V
+    value = Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->ci(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,18 +15,29 @@
 
 
 # instance fields
-.field public final synthetic b:I
+.field public final synthetic d:I
 
-.field public final synthetic c:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;
+.field public final synthetic f:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$backType"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$c;->c:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;
+    .line 1
+    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$c;->f:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;
 
-    iput p2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$c;->b:I
+    iput p2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$c;->d:I
 
     invoke-direct {p0}, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji$a;-><init>()V
 
@@ -37,7 +48,18 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "dialog",
+            "which"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji$a;->a()Z
 
     move-result p1
@@ -46,12 +68,14 @@
 
     return-void
 
+    .line 2
     :cond_0
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$c;->c:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$c;->f:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;
 
-    invoke-virtual {p1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Ui()V
+    invoke-virtual {p1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->ch()V
 
-    iget p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$c;->b:I
+    .line 3
+    iget p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$c;->d:I
 
     const/4 p1, 0x1
 
@@ -76,7 +100,8 @@
     :cond_1
     const-string p0, "edit_cancel"
 
-    invoke-static {p0, p2}, Lk9/a;->b2(Ljava/lang/String;Ljava/lang/String;)V
+    .line 4
+    invoke-static {p0, p2}, Ld/d/a/v7/f;->X1(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -85,21 +110,24 @@
 
     const-string p1, "edit"
 
-    invoke-static {p0, p1}, Lk9/a;->b2(Ljava/lang/String;Ljava/lang/String;)V
+    .line 5
+    invoke-static {p0, p1}, Ld/d/a/v7/f;->X1(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_3
     const-string p0, "preview_mid_soft_back"
 
-    invoke-static {p0, p2}, Lk9/a;->b2(Ljava/lang/String;Ljava/lang/String;)V
+    .line 6
+    invoke-static {p0, p2}, Ld/d/a/v7/f;->X1(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_4
     const-string p0, "mimoji_click_preview_mid_back"
 
-    invoke-static {p0, p2}, Lk9/a;->b2(Ljava/lang/String;Ljava/lang/String;)V
+    .line 7
+    invoke-static {p0, p2}, Ld/d/a/v7/f;->X1(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/offline/DownloadHelper$DownloadTrackSelection;
+.class public final Lcom/google/android/exoplayer2/offline/DownloadHelper$DownloadTrackSelection;
 .super Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;
 .source "SourceFile"
 
@@ -24,6 +24,7 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/source/TrackGroup;[I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;-><init>(Lcom/google/android/exoplayer2/source/TrackGroup;[I)V
 
     return-void

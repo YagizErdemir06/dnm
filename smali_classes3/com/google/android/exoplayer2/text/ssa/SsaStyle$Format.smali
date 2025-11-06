@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Format;
+.class public final Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Format;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -42,28 +42,40 @@
 .method private constructor <init>(IIIIIIIIIII)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Format;->nameIndex:I
 
+    .line 3
     iput p2, p0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Format;->alignmentIndex:I
 
+    .line 4
     iput p3, p0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Format;->primaryColorIndex:I
 
+    .line 5
     iput p4, p0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Format;->outlineColorIndex:I
 
+    .line 6
     iput p5, p0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Format;->fontSizeIndex:I
 
+    .line 7
     iput p6, p0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Format;->boldIndex:I
 
+    .line 8
     iput p7, p0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Format;->italicIndex:I
 
+    .line 9
     iput p8, p0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Format;->underlineIndex:I
 
+    .line 10
     iput p9, p0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Format;->strikeoutIndex:I
 
+    .line 11
     iput p10, p0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Format;->borderStyleIndex:I
 
+    .line 12
     iput p11, p0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Format;->length:I
 
     return-void
@@ -78,6 +90,7 @@
 
     move-object/from16 v1, p0
 
+    .line 1
     invoke-virtual {v1, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v1
@@ -88,11 +101,13 @@
 
     move-result-object v1
 
-    const/4 v2, -0x1
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    const/4 v3, -0x1
 
-    move v6, v2
+    move v4, v2
+
+    move v6, v3
 
     move v7, v6
 
@@ -112,13 +127,13 @@
 
     move v15, v14
 
-    move v4, v3
-
+    .line 2
     :goto_0
     array-length v5, v1
 
     if-ge v4, v5, :cond_a
 
+    .line 3
     aget-object v5, v1, v4
 
     invoke-virtual {v5}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -138,7 +153,7 @@
     sparse-switch v16, :sswitch_data_0
 
     :goto_1
-    move v0, v2
+    move v0, v3
 
     goto/16 :goto_2
 
@@ -298,7 +313,7 @@
     goto :goto_1
 
     :cond_9
-    move v0, v3
+    move v0, v2
 
     :goto_2
     packed-switch v0, :pswitch_data_0
@@ -361,8 +376,9 @@
     goto/16 :goto_0
 
     :cond_a
-    if-eq v6, v2, :cond_b
+    if-eq v6, v3, :cond_b
 
+    .line 4
     new-instance v0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Format;
 
     array-length v1, v1

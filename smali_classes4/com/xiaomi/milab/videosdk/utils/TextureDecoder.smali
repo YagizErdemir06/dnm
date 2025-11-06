@@ -26,18 +26,22 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-boolean v0, p0, Lcom/xiaomi/milab/videosdk/utils/TextureDecoder;->mUpdate:Z
 
+    .line 3
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/xiaomi/milab/videosdk/utils/TextureDecoder;->mFrameSyncObject:Ljava/lang/Object;
 
+    .line 4
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Lcom/xiaomi/milab/videosdk/utils/HandlerThreadHolder;->getHandlerThread()Landroid/os/HandlerThread;
@@ -68,34 +72,40 @@
         }
     .end annotation
 
-    const-string v0, "getSurfaceFromTextureOES"
+    const-string v0, "TextureDecoder"
 
-    const-string v1, "TextureDecoder"
+    const-string v1, "getSurfaceFromTextureOES"
 
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    .line 1
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    new-instance v0, Landroid/graphics/SurfaceTexture;
+    .line 2
+    new-instance v1, Landroid/graphics/SurfaceTexture;
 
-    invoke-direct {v0, p1}, Landroid/graphics/SurfaceTexture;-><init>(I)V
+    invoke-direct {v1, p1}, Landroid/graphics/SurfaceTexture;-><init>(I)V
 
-    iput-object v0, p0, Lcom/xiaomi/milab/videosdk/utils/TextureDecoder;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
+    iput-object v1, p0, Lcom/xiaomi/milab/videosdk/utils/TextureDecoder;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
+    .line 3
     iget-object p1, p0, Lcom/xiaomi/milab/videosdk/utils/TextureDecoder;->mHandler:Landroid/os/Handler;
 
-    invoke-virtual {v0, p0, p1}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;Landroid/os/Handler;)V
+    invoke-virtual {v1, p0, p1}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;Landroid/os/Handler;)V
 
+    .line 4
     new-instance p1, Landroid/view/Surface;
 
-    iget-object v0, p0, Lcom/xiaomi/milab/videosdk/utils/TextureDecoder;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
+    iget-object v1, p0, Lcom/xiaomi/milab/videosdk/utils/TextureDecoder;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
-    invoke-direct {p1, v0}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
+    invoke-direct {p1, v1}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
 
     iput-object p1, p0, Lcom/xiaomi/milab/videosdk/utils/TextureDecoder;->mSurface:Landroid/view/Surface;
 
     const-string p1, "getSurfaceFromTextureOES done"
 
-    invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    .line 5
+    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 6
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/utils/TextureDecoder;->mSurface:Landroid/view/Surface;
 
     return-object p0
@@ -112,6 +122,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/utils/TextureDecoder;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {p0, p1}, Landroid/graphics/SurfaceTexture;->getTransformMatrix([F)V
@@ -138,6 +149,7 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
     move-result v3
@@ -150,6 +162,7 @@
 
     aput-object v3, v2, v4
 
+    .line 2
     invoke-virtual {p1}, Landroid/graphics/SurfaceTexture;->getTimestamp()J
 
     move-result-wide v3
@@ -190,24 +203,29 @@
 
     aput-object p1, v2, v4
 
+    .line 3
     invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 4
     iget-object p1, p0, Lcom/xiaomi/milab/videosdk/utils/TextureDecoder;->mFrameSyncObject:Ljava/lang/Object;
 
     if-nez p1, :cond_0
 
     return-void
 
+    .line 5
     :cond_0
     monitor-enter p1
 
+    .line 6
     :try_start_0
     iput-boolean v3, p0, Lcom/xiaomi/milab/videosdk/utils/TextureDecoder;->mUpdate:Z
 
+    .line 7
     monitor-exit p1
 
     return-void
@@ -225,10 +243,12 @@
 .method public refreshTexture()Z
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/milab/videosdk/utils/TextureDecoder;->mFrameSyncObject:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-boolean v1, p0, Lcom/xiaomi/milab/videosdk/utils/TextureDecoder;->mUpdate:Z
 
@@ -236,18 +256,22 @@
 
     if-eqz v1, :cond_0
 
+    .line 3
     iget-object v1, p0, Lcom/xiaomi/milab/videosdk/utils/TextureDecoder;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v1}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
 
+    .line 4
     iput-boolean v2, p0, Lcom/xiaomi/milab/videosdk/utils/TextureDecoder;->mUpdate:Z
-
-    monitor-exit v0
 
     const/4 p0, 0x1
 
+    .line 5
+    monitor-exit v0
+
     return p0
 
+    .line 6
     :cond_0
     monitor-exit v0
 
@@ -266,26 +290,31 @@
 .method public release()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/milab/videosdk/utils/TextureDecoder;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;)V
 
+    .line 2
     iget-object v0, p0, Lcom/xiaomi/milab/videosdk/utils/TextureDecoder;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->release()V
 
+    .line 3
     iget-object v0, p0, Lcom/xiaomi/milab/videosdk/utils/TextureDecoder;->mSurface:Landroid/view/Surface;
 
     invoke-virtual {v0}, Landroid/view/Surface;->release()V
 
+    .line 4
     iput-object v1, p0, Lcom/xiaomi/milab/videosdk/utils/TextureDecoder;->mFrameSyncObject:Ljava/lang/Object;
 
     const-string p0, "TextureDecoder"
 
     const-string v0, "release"
 
+    .line 5
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void

@@ -1,4 +1,4 @@
-.class final Lcom/google/common/reflect/Types$TypeVariableInvocationHandler;
+.class public final Lcom/google/common/reflect/Types$TypeVariableInvocationHandler;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -45,13 +45,15 @@
 .method public static constructor <clinit>()V
     .locals 7
 
+    .line 1
+    const-class v0, Lcom/google/common/reflect/Types$TypeVariableImpl;
+
     invoke-static {}, Lcom/google/common/collect/ImmutableMap;->builder()Lcom/google/common/collect/ImmutableMap$Builder;
 
-    move-result-object v0
+    move-result-object v1
 
-    const-class v1, Lcom/google/common/reflect/Types$TypeVariableImpl;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getMethods()[Ljava/lang/reflect/Method;
+    .line 2
+    invoke-virtual {v0}, Ljava/lang/Class;->getMethods()[Ljava/lang/reflect/Method;
 
     move-result-object v2
 
@@ -64,11 +66,12 @@
 
     aget-object v5, v2, v4
 
+    .line 3
     invoke-virtual {v5}, Ljava/lang/reflect/Method;->getDeclaringClass()Ljava/lang/Class;
 
     move-result-object v6
 
-    invoke-virtual {v6, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v6, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v6
 
@@ -76,25 +79,28 @@
 
     const/4 v6, 0x1
 
+    .line 4
     :try_start_0
-    invoke-virtual {v5, v6}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    invoke-virtual {v5, v6}, Ljava/lang/reflect/Method;->setAccessible(Z)V
     :try_end_0
     .catch Ljava/security/AccessControlException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 5
     :catch_0
     invoke-virtual {v5}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-virtual {v0, v6, v5}, Lcom/google/common/collect/ImmutableMap$Builder;->put(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMap$Builder;
+    invoke-virtual {v1, v6, v5}, Lcom/google/common/collect/ImmutableMap$Builder;->put(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMap$Builder;
 
     :cond_0
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
+    .line 6
     :cond_1
-    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableMap$Builder;->build()Lcom/google/common/collect/ImmutableMap;
+    invoke-virtual {v1}, Lcom/google/common/collect/ImmutableMap$Builder;->build()Lcom/google/common/collect/ImmutableMap;
 
     move-result-object v0
 
@@ -113,8 +119,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/reflect/Types$TypeVariableInvocationHandler;->typeVariableImpl:Lcom/google/common/reflect/Types$TypeVariableImpl;
 
     return-void
@@ -123,6 +131,7 @@
 .method public static synthetic access$600(Lcom/google/common/reflect/Types$TypeVariableInvocationHandler;)Lcom/google/common/reflect/Types$TypeVariableImpl;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/Types$TypeVariableInvocationHandler;->typeVariableImpl:Lcom/google/common/reflect/Types$TypeVariableImpl;
 
     return-object p0
@@ -145,10 +154,12 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p2}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 2
     sget-object p2, Lcom/google/common/reflect/Types$TypeVariableInvocationHandler;->typeVariableMethods:Lcom/google/common/collect/ImmutableMap;
 
     invoke-virtual {p2, p1}, Lcom/google/common/collect/ImmutableMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -159,6 +170,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 3
     :try_start_0
     iget-object p0, p0, Lcom/google/common/reflect/Types$TypeVariableInvocationHandler;->typeVariableImpl:Lcom/google/common/reflect/Types$TypeVariableImpl;
 
@@ -173,12 +185,14 @@
     :catch_0
     move-exception p0
 
+    .line 4
     invoke-virtual {p0}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p0
 
     throw p0
 
+    .line 5
     :cond_0
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 

@@ -16,6 +16,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,6 +25,7 @@
 .method public static synthetic access$000(Ljava/lang/String;Ljava/lang/Thread;)Z
     .locals 0
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/common/util/concurrent/Callables;->trySetName(Ljava/lang/String;Ljava/lang/Thread;)Z
 
     move-result p0
@@ -53,10 +55,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     new-instance v0, Lcom/google/common/util/concurrent/Callables$2;
 
     invoke-direct {v0, p1, p0}, Lcom/google/common/util/concurrent/Callables$2;-><init>(Lcom/google/common/util/concurrent/ListeningExecutorService;Ljava/util/concurrent/Callable;)V
@@ -80,6 +85,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/Callables$1;
 
     invoke-direct {v0, p0}, Lcom/google/common/util/concurrent/Callables$1;-><init>(Ljava/lang/Object;)V
@@ -156,6 +162,7 @@
     .annotation build Lcom/google/common/annotations/GwtIncompatible;
     .end annotation
 
+    .line 1
     :try_start_0
     invoke-virtual {p1, p0}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
     :try_end_0

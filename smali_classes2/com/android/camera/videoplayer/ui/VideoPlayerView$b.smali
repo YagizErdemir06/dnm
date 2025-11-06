@@ -18,14 +18,15 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/android/camera/videoplayer/ui/VideoPlayerView;
+.field public final synthetic c:Lcom/android/camera/videoplayer/ui/VideoPlayerView;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView$b;->a:Lcom/android/camera/videoplayer/ui/VideoPlayerView;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView$b;->c:Lcom/android/camera/videoplayer/ui/VideoPlayerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,9 +38,10 @@
 .method public run()V
     .locals 0
 
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView$b;->a:Lcom/android/camera/videoplayer/ui/VideoPlayerView;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView$b;->c:Lcom/android/camera/videoplayer/ui/VideoPlayerView;
 
-    invoke-static {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->j(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)Lcom/android/camera/videoplayer/ui/VideoPlayerView$g;
+    invoke-static {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->i(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)Lcom/android/camera/videoplayer/ui/VideoPlayerView$g;
 
     move-result-object p0
 

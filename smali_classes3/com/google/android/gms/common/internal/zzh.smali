@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/internal/zzh;
+.class public final Lcom/google/android/gms/common/internal/zzh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -20,6 +20,7 @@
 .method public final synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 1
 
+    .line 1
     new-instance p0, Lcom/google/android/gms/common/internal/BinderWrapper;
 
     const/4 v0, 0x0
@@ -32,6 +33,7 @@
 .method public final synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
+    .line 1
     new-array p0, p1, [Lcom/google/android/gms/common/internal/BinderWrapper;
 
     return-object p0

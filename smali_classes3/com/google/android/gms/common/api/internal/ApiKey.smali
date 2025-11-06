@@ -45,6 +45,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/gms/common/api/internal/ApiKey;->zab:Lcom/google/android/gms/common/api/Api;
@@ -112,6 +113,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/common/api/internal/ApiKey;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/google/android/gms/common/api/internal/ApiKey;-><init>(Lcom/google/android/gms/common/api/Api;Lcom/google/android/gms/common/api/Api$ApiOptions;Ljava/lang/String;)V
@@ -141,6 +143,7 @@
 
     return v1
 
+    .line 1
     :cond_1
     instance-of v2, p1, Lcom/google/android/gms/common/api/internal/ApiKey;
 
@@ -148,6 +151,7 @@
 
     return v0
 
+    .line 2
     :cond_2
     check-cast p1, Lcom/google/android/gms/common/api/internal/ApiKey;
 
@@ -155,6 +159,7 @@
 
     iget-object v3, p1, Lcom/google/android/gms/common/api/internal/ApiKey;->zab:Lcom/google/android/gms/common/api/Api;
 
+    .line 3
     invoke-static {v2, v3}, Lcom/google/android/gms/common/internal/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -165,6 +170,7 @@
 
     iget-object v3, p1, Lcom/google/android/gms/common/api/internal/ApiKey;->zac:Lcom/google/android/gms/common/api/Api$ApiOptions;
 
+    .line 4
     invoke-static {v2, v3}, Lcom/google/android/gms/common/internal/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -175,6 +181,7 @@
 
     iget-object p1, p1, Lcom/google/android/gms/common/api/internal/ApiKey;->zad:Ljava/lang/String;
 
+    .line 5
     invoke-static {p0, p1}, Lcom/google/android/gms/common/internal/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -200,6 +207,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/ApiKey;->zab:Lcom/google/android/gms/common/api/Api;
 
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/Api;->zad()Ljava/lang/String;

@@ -1,4 +1,4 @@
-.class Lcom/google/common/hash/Striped64$1;
+.class public Lcom/google/common/hash/Striped64$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -30,6 +30,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -81,7 +82,7 @@
     const/4 v4, 0x1
 
     .line 4
-    invoke-virtual {v3, v4}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    invoke-virtual {v3, v4}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
     const/4 v4, 0x0
 

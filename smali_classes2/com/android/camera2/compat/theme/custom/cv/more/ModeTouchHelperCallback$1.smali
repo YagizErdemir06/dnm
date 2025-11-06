@@ -1,4 +1,4 @@
-.class Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback$1;
+.class public Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,17 +18,30 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;
+.field public final synthetic this$0:Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;
 
-.field final synthetic val$coordinate:[I
+.field public final synthetic val$coordinate:[I
 
-.field final synthetic val$viewHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
+.field public final synthetic val$viewHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;[I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$viewHolder",
+            "val$coordinate"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback$1;->this$0:Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;
 
     iput-object p2, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback$1;->val$viewHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
@@ -45,6 +58,7 @@
 .method public run()V
     .locals 6
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback$1;->this$0:Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;
 
     iget-object v0, v0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mTargetList:Ljava/util/List;
@@ -55,17 +69,17 @@
 
     const/4 v1, 0x2
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
-    const/4 v3, 0x1
+    const/4 v3, 0x0
 
-    if-le v0, v3, :cond_0
+    if-le v0, v2, :cond_0
 
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback$1;->this$0:Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;
 
     iget-object v0, v0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mTargetList:Ljava/util/List;
 
-    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -77,14 +91,16 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback$1;->this$0:Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;
 
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback;->mTargetList:Ljava/util/List;
 
-    invoke-interface {p0, v2}, Ljava/util/List;->remove(I)Ljava/lang/Object;
+    invoke-interface {p0, v3}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback$1;->val$viewHolder:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
@@ -98,7 +114,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f1406dd
+    const v5, 0x7f130694
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -108,23 +124,23 @@
 
     iget-object v5, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback$1;->val$coordinate:[I
 
-    aget v5, v5, v2
+    aget v5, v5, v3
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
-    aput-object v5, v1, v2
+    aput-object v5, v1, v3
 
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/more/ModeTouchHelperCallback$1;->val$coordinate:[I
 
-    aget p0, p0, v3
+    aget p0, p0, v2
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
 
-    aput-object p0, v1, v3
+    aput-object p0, v1, v2
 
     invoke-static {v4, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 

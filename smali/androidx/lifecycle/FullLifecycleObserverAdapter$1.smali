@@ -1,4 +1,4 @@
-.class synthetic Landroidx/lifecycle/FullLifecycleObserverAdapter$1;
+.class public synthetic Landroidx/lifecycle/FullLifecycleObserverAdapter$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$androidx$lifecycle$Lifecycle$Event:[I
+.field public static final synthetic $SwitchMap$androidx$lifecycle$Lifecycle$Event:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Landroidx/lifecycle/Lifecycle$Event;->values()[Landroidx/lifecycle/Lifecycle$Event;
 
     move-result-object v0

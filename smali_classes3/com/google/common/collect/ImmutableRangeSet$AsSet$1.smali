@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ImmutableRangeSet$AsSet$1;
+.class public Lcom/google/common/collect/ImmutableRangeSet$AsSet$1;
 .super Lcom/google/common/collect/AbstractIterator;
 .source "SourceFile"
 
@@ -22,7 +22,7 @@
 
 
 # instance fields
-.field elemItr:Ljava/util/Iterator;
+.field public elemItr:Ljava/util/Iterator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Iterator<",
@@ -31,7 +31,7 @@
     .end annotation
 .end field
 
-.field final rangeItr:Ljava/util/Iterator;
+.field public final rangeItr:Ljava/util/Iterator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Iterator<",
@@ -41,17 +41,19 @@
     .end annotation
 .end field
 
-.field final synthetic this$1:Lcom/google/common/collect/ImmutableRangeSet$AsSet;
+.field public final synthetic this$1:Lcom/google/common/collect/ImmutableRangeSet$AsSet;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/ImmutableRangeSet$AsSet;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/ImmutableRangeSet$AsSet$1;->this$1:Lcom/google/common/collect/ImmutableRangeSet$AsSet;
 
     invoke-direct {p0}, Lcom/google/common/collect/AbstractIterator;-><init>()V
 
+    .line 2
     iget-object p1, p1, Lcom/google/common/collect/ImmutableRangeSet$AsSet;->this$0:Lcom/google/common/collect/ImmutableRangeSet;
 
     invoke-static {p1}, Lcom/google/common/collect/ImmutableRangeSet;->access$000(Lcom/google/common/collect/ImmutableRangeSet;)Lcom/google/common/collect/ImmutableList;
@@ -64,6 +66,7 @@
 
     iput-object p1, p0, Lcom/google/common/collect/ImmutableRangeSet$AsSet$1;->rangeItr:Ljava/util/Iterator;
 
+    .line 3
     invoke-static {}, Lcom/google/common/collect/Iterators;->emptyIterator()Lcom/google/common/collect/UnmodifiableIterator;
 
     move-result-object p1

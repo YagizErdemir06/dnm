@@ -44,6 +44,7 @@
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/common/primitives/UnsignedLong;
 
     const-wide/16 v1, 0x0
@@ -52,6 +53,7 @@
 
     sput-object v0, Lcom/google/common/primitives/UnsignedLong;->ZERO:Lcom/google/common/primitives/UnsignedLong;
 
+    .line 2
     new-instance v0, Lcom/google/common/primitives/UnsignedLong;
 
     const-wide/16 v1, 0x1
@@ -60,6 +62,7 @@
 
     sput-object v0, Lcom/google/common/primitives/UnsignedLong;->ONE:Lcom/google/common/primitives/UnsignedLong;
 
+    .line 3
     new-instance v0, Lcom/google/common/primitives/UnsignedLong;
 
     const-wide/16 v1, -0x1
@@ -74,8 +77,10 @@
 .method private constructor <init>(J)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Number;-><init>()V
 
+    .line 2
     iput-wide p1, p0, Lcom/google/common/primitives/UnsignedLong;->value:J
 
     return-void
@@ -84,6 +89,7 @@
 .method public static fromLongBits(J)Lcom/google/common/primitives/UnsignedLong;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/primitives/UnsignedLong;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/primitives/UnsignedLong;-><init>(J)V
@@ -208,6 +214,7 @@
 .method public bigIntegerValue()Ljava/math/BigInteger;
     .locals 5
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/primitives/UnsignedLong;->value:J
 
     const-wide v2, 0x7fffffffffffffffL
@@ -218,6 +225,7 @@
 
     move-result-object v0
 
+    .line 2
     iget-wide v1, p0, Lcom/google/common/primitives/UnsignedLong;->value:J
 
     const-wide/16 v3, 0x0
@@ -228,6 +236,7 @@
 
     const/16 p0, 0x3f
 
+    .line 3
     invoke-virtual {v0, p0}, Ljava/math/BigInteger;->setBit(I)Ljava/math/BigInteger;
 
     move-result-object v0
@@ -270,6 +279,7 @@
 .method public dividedBy(Lcom/google/common/primitives/UnsignedLong;)Lcom/google/common/primitives/UnsignedLong;
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/primitives/UnsignedLong;->value:J
 
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -294,6 +304,7 @@
 .method public doubleValue()D
     .locals 6
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/primitives/UnsignedLong;->value:J
 
     const-wide/16 v2, 0x0
@@ -333,14 +344,17 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/common/primitives/UnsignedLong;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/common/primitives/UnsignedLong;
 
+    .line 3
     iget-wide v2, p0, Lcom/google/common/primitives/UnsignedLong;->value:J
 
     iget-wide p0, p1, Lcom/google/common/primitives/UnsignedLong;->value:J
@@ -358,6 +372,7 @@
 .method public floatValue()F
     .locals 6
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/primitives/UnsignedLong;->value:J
 
     const-wide/16 v2, 0x0
@@ -393,6 +408,7 @@
 .method public hashCode()I
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/primitives/UnsignedLong;->value:J
 
     invoke-static {v0, v1}, Lcom/google/common/primitives/Longs;->hashCode(J)I
@@ -405,6 +421,7 @@
 .method public intValue()I
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/primitives/UnsignedLong;->value:J
 
     long-to-int p0, v0
@@ -415,6 +432,7 @@
 .method public longValue()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/primitives/UnsignedLong;->value:J
 
     return-wide v0
@@ -423,6 +441,7 @@
 .method public minus(Lcom/google/common/primitives/UnsignedLong;)Lcom/google/common/primitives/UnsignedLong;
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/primitives/UnsignedLong;->value:J
 
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -445,6 +464,7 @@
 .method public mod(Lcom/google/common/primitives/UnsignedLong;)Lcom/google/common/primitives/UnsignedLong;
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/primitives/UnsignedLong;->value:J
 
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -469,6 +489,7 @@
 .method public plus(Lcom/google/common/primitives/UnsignedLong;)Lcom/google/common/primitives/UnsignedLong;
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/primitives/UnsignedLong;->value:J
 
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -491,6 +512,7 @@
 .method public times(Lcom/google/common/primitives/UnsignedLong;)Lcom/google/common/primitives/UnsignedLong;
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/primitives/UnsignedLong;->value:J
 
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;

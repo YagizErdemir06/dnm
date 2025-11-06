@@ -1,9 +1,9 @@
-.class final Lcom/faceunity/core/avatar/model/Scene$removeAllAvatar$1;
-.super Lkotlin/jvm/internal/n0;
+.class public final Lcom/faceunity/core/avatar/model/Scene$removeAllAvatar$1;
+.super Lh/d3/x/n0;
 .source "SourceFile"
 
 # interfaces
-.implements Ljn/a;
+.implements Lh/d3/w/a;
 
 
 # annotations
@@ -18,9 +18,9 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lkotlin/jvm/internal/n0;",
-        "Ljn/a<",
-        "Lnm/l2;",
+        "Lh/d3/x/n0;",
+        "Lh/d3/w/a<",
+        "Lh/l2;",
         ">;"
     }
 .end annotation
@@ -29,12 +29,17 @@
     value = "SMAP\nScene.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Scene.kt\ncom/faceunity/core/avatar/model/Scene$removeAllAvatar$1\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,528:1\n1517#2:529\n1588#2,3:530\n*E\n*S KotlinDebug\n*F\n+ 1 Scene.kt\ncom/faceunity/core/avatar/model/Scene$removeAllAvatar$1\n*L\n370#1:529\n370#1,3:530\n*E\n"
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
         "\u0000\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0003\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0001\u0010\u0002"
     }
     d2 = {
-        "Lnm/l2;",
+        "Lh/l2;",
         "invoke",
         "()V",
         "<anonymous>"
@@ -49,9 +54,9 @@
 
 
 # instance fields
-.field final synthetic $removeData:Ljava/util/ArrayList;
+.field public final synthetic $removeData:Ljava/util/ArrayList;
 
-.field final synthetic this$0:Lcom/faceunity/core/avatar/model/Scene;
+.field public final synthetic this$0:Lcom/faceunity/core/avatar/model/Scene;
 
 
 # direct methods
@@ -64,7 +69,7 @@
 
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Lkotlin/jvm/internal/n0;-><init>(I)V
+    invoke-direct {p0, p1}, Lh/d3/x/n0;-><init>(I)V
 
     return-void
 .end method
@@ -77,7 +82,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/avatar/model/Scene$removeAllAvatar$1;->invoke()V
 
-    sget-object p0, Lnm/l2;->a:Lnm/l2;
+    sget-object p0, Lh/l2;->a:Lh/l2;
 
     return-object p0
 .end method
@@ -99,7 +104,7 @@
 
     const/16 v3, 0xa
 
-    invoke-static {v1, v3}, Lpm/z;->Z(Ljava/lang/Iterable;I)I
+    invoke-static {v1, v3}, Lh/t2/z;->Z(Ljava/lang/Iterable;I)I
 
     move-result v3
 

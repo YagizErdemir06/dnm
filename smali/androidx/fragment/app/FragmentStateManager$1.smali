@@ -1,4 +1,4 @@
-.class Landroidx/fragment/app/FragmentStateManager$1;
+.class public Landroidx/fragment/app/FragmentStateManager$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,15 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/fragment/app/FragmentStateManager;
+.field public final synthetic this$0:Landroidx/fragment/app/FragmentStateManager;
 
-.field final synthetic val$fragmentView:Landroid/view/View;
+.field public final synthetic val$fragmentView:Landroid/view/View;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/fragment/app/FragmentStateManager;Landroid/view/View;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/fragment/app/FragmentStateManager$1;->this$0:Landroidx/fragment/app/FragmentStateManager;
 
     iput-object p2, p0, Landroidx/fragment/app/FragmentStateManager$1;->val$fragmentView:Landroid/view/View;
@@ -41,10 +42,12 @@
 .method public onViewAttachedToWindow(Landroid/view/View;)V
     .locals 0
 
+    .line 1
     iget-object p1, p0, Landroidx/fragment/app/FragmentStateManager$1;->val$fragmentView:Landroid/view/View;
 
     invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
+    .line 2
     iget-object p0, p0, Landroidx/fragment/app/FragmentStateManager$1;->val$fragmentView:Landroid/view/View;
 
     invoke-static {p0}, Landroidx/core/view/ViewCompat;->requestApplyInsets(Landroid/view/View;)V

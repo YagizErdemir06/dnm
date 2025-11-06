@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/auth/api/signin/zac;
+.class public final Lcom/google/android/gms/auth/api/signin/zac;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -20,10 +20,12 @@
 .method public final bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/google/android/gms/common/api/Scope;
 
     check-cast p2, Lcom/google/android/gms/common/api/Scope;
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/android/gms/common/api/Scope;->getScopeUri()Ljava/lang/String;
 
     move-result-object p0

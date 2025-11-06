@@ -57,9 +57,9 @@
     .locals 1
 
     .line 2
-    new-instance v0, Lcom/google/android/exoplayer2/source/s;
+    new-instance v0, Ld/j/a/b/v2/s;
 
-    invoke-direct {v0, p2}, Lcom/google/android/exoplayer2/source/s;-><init>(Lcom/google/android/exoplayer2/extractor/ExtractorsFactory;)V
+    invoke-direct {v0, p2}, Ld/j/a/b/v2/s;-><init>(Lcom/google/android/exoplayer2/extractor/ExtractorsFactory;)V
 
     invoke-direct {p0, p1, v0}, Lcom/google/android/exoplayer2/source/ProgressiveMediaSource$Factory;-><init>(Lcom/google/android/exoplayer2/upstream/DataSource$Factory;Lcom/google/android/exoplayer2/source/ProgressiveMediaExtractor$Factory;)V
 
@@ -115,19 +115,10 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/google/android/exoplayer2/extractor/ExtractorsFactory;Lcom/google/android/exoplayer2/analytics/PlayerId;)Lcom/google/android/exoplayer2/source/ProgressiveMediaExtractor;
+.method public static synthetic lambda$new$0(Lcom/google/android/exoplayer2/extractor/ExtractorsFactory;Lcom/google/android/exoplayer2/analytics/PlayerId;)Lcom/google/android/exoplayer2/source/ProgressiveMediaExtractor;
     .locals 0
 
-    invoke-static {p0, p1}, Lcom/google/android/exoplayer2/source/ProgressiveMediaSource$Factory;->lambda$new$0(Lcom/google/android/exoplayer2/extractor/ExtractorsFactory;Lcom/google/android/exoplayer2/analytics/PlayerId;)Lcom/google/android/exoplayer2/source/ProgressiveMediaExtractor;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method private static synthetic lambda$new$0(Lcom/google/android/exoplayer2/extractor/ExtractorsFactory;Lcom/google/android/exoplayer2/analytics/PlayerId;)Lcom/google/android/exoplayer2/source/ProgressiveMediaExtractor;
-    .locals 0
-
+    .line 1
     new-instance p1, Lcom/google/android/exoplayer2/source/BundledExtractorsAdapter;
 
     invoke-direct {p1, p0}, Lcom/google/android/exoplayer2/source/BundledExtractorsAdapter;-><init>(Lcom/google/android/exoplayer2/extractor/ExtractorsFactory;)V
@@ -309,6 +300,7 @@
 .method public setContinueLoadingCheckIntervalBytes(I)Lcom/google/android/exoplayer2/source/ProgressiveMediaSource$Factory;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/source/ProgressiveMediaSource$Factory;->continueLoadingCheckIntervalBytes:I
 
     return-object p0

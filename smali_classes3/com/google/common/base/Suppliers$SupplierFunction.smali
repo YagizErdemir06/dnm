@@ -1,4 +1,4 @@
-.class interface abstract Lcom/google/common/base/Suppliers$SupplierFunction;
+.class public interface abstract Lcom/google/common/base/Suppliers$SupplierFunction;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

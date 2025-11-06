@@ -12,7 +12,7 @@
 
 
 # static fields
-.field static final CONFIG_PLAIN:[I
+.field public static final CONFIG_PLAIN:[I
 
 .field private static final EGL_OPENGL_ES2_BIT:I = 0x4
 
@@ -23,6 +23,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -33,6 +34,7 @@
 
     new-array v0, v0, [I
 
+    .line 2
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/xiaomi/mediacodec/EglBase;->CONFIG_PLAIN:[I
@@ -64,6 +66,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -72,12 +75,12 @@
 .method public static create()Lcom/xiaomi/mediacodec/EglBase;
     .locals 2
 
-    const/4 v0, 0x0
-
     .line 2
-    sget-object v1, Lcom/xiaomi/mediacodec/EglBase;->CONFIG_PLAIN:[I
+    sget-object v0, Lcom/xiaomi/mediacodec/EglBase;->CONFIG_PLAIN:[I
 
-    invoke-static {v0, v1}, Lcom/xiaomi/mediacodec/EglBase;->create(Lcom/xiaomi/mediacodec/EglBase$Context;[I)Lcom/xiaomi/mediacodec/EglBase;
+    const/4 v1, 0x0
+
+    invoke-static {v1, v0}, Lcom/xiaomi/mediacodec/EglBase;->create(Lcom/xiaomi/mediacodec/EglBase$Context;[I)Lcom/xiaomi/mediacodec/EglBase;
 
     move-result-object v0
 
@@ -133,18 +136,21 @@
 .method public static getCurrentContext()Lcom/xiaomi/mediacodec/EglBase$Context;
     .locals 1
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/mediacodec/EglBase14;->isEGL14Supported()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-static {}, Lcom/xiaomi/mediacodec/EglBase14;->getCurrentContext14()Lcom/xiaomi/mediacodec/EglBase$Context;
 
     move-result-object v0
 
     return-object v0
 
+    .line 3
     :cond_0
     invoke-static {}, Lcom/xiaomi/mediacodec/EglBase10;->getCurrentContext10()Lcom/xiaomi/mediacodec/EglBase$Context;
 

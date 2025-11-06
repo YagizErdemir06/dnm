@@ -15,26 +15,34 @@
 
 
 # instance fields
-.field public a:I
+.field private c:I
 
-.field public b:Ljava/util/List;
+.field private d:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lf2/f;",
+            "Ld/d/a/k6/g;",
             ">;"
         }
     .end annotation
 .end field
 
-.field public c:Lcom/android/camera/customization/TintColorTableView$a;
+.field private f:Lcom/android/camera/customization/TintColorTableView$a;
 
-.field public d:I
+.field private g:I
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     .line 1
     invoke-direct {p0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
@@ -42,10 +50,10 @@
     const/4 p1, 0x0
 
     .line 2
-    iput p1, p0, Lcom/android/camera/customization/TintColorTableView;->a:I
+    iput p1, p0, Lcom/android/camera/customization/TintColorTableView;->c:I
 
     .line 3
-    iput p1, p0, Lcom/android/camera/customization/TintColorTableView;->d:I
+    iput p1, p0, Lcom/android/camera/customization/TintColorTableView;->g:I
 
     return-void
 .end method
@@ -56,6 +64,16 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     .line 4
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -63,10 +81,10 @@
     const/4 p1, 0x0
 
     .line 5
-    iput p1, p0, Lcom/android/camera/customization/TintColorTableView;->a:I
+    iput p1, p0, Lcom/android/camera/customization/TintColorTableView;->c:I
 
     .line 6
-    iput p1, p0, Lcom/android/camera/customization/TintColorTableView;->d:I
+    iput p1, p0, Lcom/android/camera/customization/TintColorTableView;->g:I
 
     return-void
 .end method
@@ -77,6 +95,18 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr"
+        }
+    .end annotation
 
     .line 7
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -84,16 +114,30 @@
     const/4 p1, 0x0
 
     .line 8
-    iput p1, p0, Lcom/android/camera/customization/TintColorTableView;->a:I
+    iput p1, p0, Lcom/android/camera/customization/TintColorTableView;->c:I
 
     .line 9
-    iput p1, p0, Lcom/android/camera/customization/TintColorTableView;->d:I
+    iput p1, p0, Lcom/android/camera/customization/TintColorTableView;->g:I
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr",
+            "defStyleRes"
+        }
+    .end annotation
 
     .line 10
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
@@ -101,38 +145,27 @@
     const/4 p1, 0x0
 
     .line 11
-    iput p1, p0, Lcom/android/camera/customization/TintColorTableView;->a:I
+    iput p1, p0, Lcom/android/camera/customization/TintColorTableView;->c:I
 
     .line 12
-    iput p1, p0, Lcom/android/camera/customization/TintColorTableView;->d:I
+    iput p1, p0, Lcom/android/camera/customization/TintColorTableView;->g:I
 
     return-void
 .end method
 
-.method public static synthetic a(Landroid/view/View;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera/customization/TintColorTableView;->e(Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method public static synthetic e(Landroid/view/View;)V
-    .locals 1
-
-    const/16 v0, 0x80
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->sendAccessibilityEvent(I)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final b(I)V
+.method private a(I)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "index"
+        }
+    .end annotation
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    .line 1
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -140,7 +173,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e02a6
+    const v1, 0x7f0e0241
 
     const/4 v2, 0x0
 
@@ -150,33 +183,37 @@
 
     check-cast v0, Lcom/android/camera/customization/TintShapeView;
 
+    .line 2
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
+    .line 3
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    .line 4
     new-instance v1, Lcom/android/camera/customization/TintShapeView$b;
 
     invoke-direct {v1}, Lcom/android/camera/customization/TintShapeView$b;-><init>()V
 
-    sget-object v3, Lcom/android/camera/customization/TintShapeView$a;->a:Lcom/android/camera/customization/TintShapeView$a;
+    sget-object v3, Lcom/android/camera/customization/TintShapeView$a;->c:Lcom/android/camera/customization/TintShapeView$a;
 
     invoke-virtual {v1, v3}, Lcom/android/camera/customization/TintShapeView$b;->o(Lcom/android/camera/customization/TintShapeView$a;)Lcom/android/camera/customization/TintShapeView$b;
 
     move-result-object v1
 
-    iget-object v3, p0, Lcom/android/camera/customization/TintColorTableView;->b:Ljava/util/List;
+    iget-object v3, p0, Lcom/android/camera/customization/TintColorTableView;->d:Ljava/util/List;
 
+    .line 5
     invoke-interface {v3, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Lf2/f;
+    check-cast v3, Ld/d/a/k6/g;
 
-    invoke-virtual {v3}, Lf2/f;->b()I
+    invoke-virtual {v3}, Ld/d/a/k6/g;->b()I
 
     move-result v3
 
@@ -186,15 +223,17 @@
 
     const/4 v3, -0x1
 
+    .line 6
     invoke-virtual {v1, v3}, Lcom/android/camera/customization/TintShapeView$b;->m(I)Lcom/android/camera/customization/TintShapeView$b;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    .line 7
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v4, 0x7f0702dc
+    const v4, 0x7f0702d7
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -206,11 +245,12 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    .line 8
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v4, 0x7f0702dd
+    const v4, 0x7f0702d8
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -218,11 +258,11 @@
 
     div-int/lit8 v3, v3, 0x2
 
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    const v5, 0x7f0702de
+    const v5, 0x7f0702d9
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -234,7 +274,8 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    .line 9
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -248,9 +289,11 @@
 
     move-result-object v1
 
+    .line 10
     invoke-virtual {v0, v1}, Lcom/android/camera/customization/TintShapeView;->a(Lcom/android/camera/customization/TintShapeView$b;)V
 
-    iget v1, p0, Lcom/android/camera/customization/TintColorTableView;->a:I
+    .line 11
+    iget v1, p0, Lcom/android/camera/customization/TintColorTableView;->c:I
 
     const/4 v3, 0x1
 
@@ -266,15 +309,18 @@
     :goto_0
     invoke-virtual {v0, v1}, Lcom/android/camera/customization/TintShapeView;->setSelection(Z)V
 
+    .line 12
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/LinearLayout$LayoutParams;
 
-    invoke-virtual {v1, v2}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
+    .line 13
+    invoke-virtual {v1, v2}, Landroid/widget/LinearLayout$LayoutParams;->setMarginStart(I)V
 
-    iget-object v4, p0, Lcom/android/camera/customization/TintColorTableView;->b:Ljava/util/List;
+    .line 14
+    iget-object v4, p0, Lcom/android/camera/customization/TintColorTableView;->d:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->size()I
 
@@ -289,29 +335,32 @@
     goto :goto_1
 
     :cond_1
-    iget v4, p0, Lcom/android/camera/customization/TintColorTableView;->d:I
+    iget v4, p0, Lcom/android/camera/customization/TintColorTableView;->g:I
 
     :goto_1
-    invoke-virtual {v1, v4}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginEnd(I)V
+    invoke-virtual {v1, v4}, Landroid/widget/LinearLayout$LayoutParams;->setMarginEnd(I)V
 
-    iget v4, p0, Lcom/android/camera/customization/TintColorTableView;->a:I
+    .line 15
+    iget v4, p0, Lcom/android/camera/customization/TintColorTableView;->c:I
 
     if-ne p1, v4, :cond_2
 
     move v2, v3
 
     :cond_2
-    invoke-virtual {p0, v0, p1, v2}, Lcom/android/camera/customization/TintColorTableView;->f(Landroid/view/View;IZ)V
+    invoke-direct {p0, v0, p1, v2}, Lcom/android/camera/customization/TintColorTableView;->e(Landroid/view/View;IZ)V
 
-    invoke-virtual {p0, v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    .line 16
+    invoke-virtual {p0, v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
 .end method
 
-.method public final c()I
+.method private b()I
     .locals 7
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    .line 1
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -327,13 +376,13 @@
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x1
+    const/4 v2, 0x2
 
-    const/4 v3, 0x2
+    const/4 v3, 0x1
 
-    if-ne v0, v3, :cond_0
+    if-ne v0, v2, :cond_0
 
-    move v0, v2
+    move v0, v3
 
     goto :goto_0
 
@@ -343,11 +392,12 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    invoke-static {}, Ly2/b;->n()I
+    .line 2
+    invoke-static {}, Ld/d/a/n6/b;->n()I
 
     move-result v0
 
-    invoke-static {}, Ly2/b;->q()I
+    invoke-static {}, Ld/d/a/n6/b;->q()I
 
     move-result v4
 
@@ -357,12 +407,13 @@
 
     goto :goto_1
 
+    .line 3
     :cond_1
-    invoke-static {}, Ly2/b;->n()I
+    invoke-static {}, Ld/d/a/n6/b;->n()I
 
     move-result v0
 
-    invoke-static {}, Ly2/b;->q()I
+    invoke-static {}, Ld/d/a/n6/b;->q()I
 
     move-result v4
 
@@ -370,34 +421,37 @@
 
     move-result v0
 
+    .line 4
     :goto_1
-    iget-object v4, p0, Lcom/android/camera/customization/TintColorTableView;->b:Ljava/util/List;
+    iget-object v4, p0, Lcom/android/camera/customization/TintColorTableView;->d:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->size()I
 
     move-result v4
 
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    .line 5
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
-    const v6, 0x7f0702e1
+    const v6, 0x7f0702dc
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v5
 
-    mul-int/2addr v5, v3
+    mul-int/2addr v5, v2
 
     sub-int/2addr v0, v5
 
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    .line 6
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const v3, 0x7f0702dd
+    const v2, 0x7f0702d8
 
-    invoke-virtual {p0, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {p0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p0
 
@@ -405,79 +459,60 @@
 
     sub-int/2addr v0, p0
 
-    if-ne v4, v2, :cond_2
+    if-ne v4, v3, :cond_2
 
     goto :goto_2
 
     :cond_2
-    sub-int/2addr v4, v2
+    sub-int/2addr v4, v3
 
+    .line 7
     div-int v1, v0, v4
 
     :goto_2
     return v1
 .end method
 
-.method public d(Ljava/util/List;I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Lf2/f;",
-            ">;I)V"
-        }
-    .end annotation
+.method public static synthetic d(Landroid/view/View;)V
+    .locals 1
 
-    iput-object p1, p0, Lcom/android/camera/customization/TintColorTableView;->b:Ljava/util/List;
+    const/16 v0, 0x80
 
-    iput p2, p0, Lcom/android/camera/customization/TintColorTableView;->a:I
+    .line 1
+    invoke-virtual {p0, v0}, Landroid/view/View;->sendAccessibilityEvent(I)V
 
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->removeAllViews()V
-
-    invoke-virtual {p0}, Lcom/android/camera/customization/TintColorTableView;->c()I
-
-    move-result p1
-
-    iput p1, p0, Lcom/android/camera/customization/TintColorTableView;->d:I
-
-    const/4 p1, 0x0
-
-    :goto_0
-    iget-object p2, p0, Lcom/android/camera/customization/TintColorTableView;->b:Ljava/util/List;
-
-    invoke-interface {p2}, Ljava/util/List;->size()I
-
-    move-result p2
-
-    if-ge p1, p2, :cond_0
-
-    invoke-virtual {p0, p1}, Lcom/android/camera/customization/TintColorTableView;->b(I)V
-
-    add-int/lit8 p1, p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
     return-void
 .end method
 
-.method public final f(Landroid/view/View;IZ)V
+.method private e(Landroid/view/View;IZ)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "view",
+            "index",
+            "isSelected"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    iget-object p0, p0, Lcom/android/camera/customization/TintColorTableView;->b:Ljava/util/List;
+    iget-object p0, p0, Lcom/android/camera/customization/TintColorTableView;->d:Ljava/util/List;
 
     invoke-interface {p0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Lf2/f;
+    check-cast p0, Ld/d/a/k6/g;
 
-    invoke-virtual {p0}, Lf2/f;->f()I
+    invoke-virtual {p0}, Ld/d/a/k6/g;->f()I
 
     move-result p0
 
@@ -487,6 +522,7 @@
 
     if-eqz p3, :cond_0
 
+    .line 2
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -501,7 +537,7 @@
 
     move-result-object p0
 
-    const p3, 0x7f1400d4
+    const p3, 0x7f1300d3
 
     invoke-virtual {p0, p3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -515,15 +551,17 @@
 
     invoke-virtual {p1, p0}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    invoke-static {}, Lcom/android/camera/a6;->u2()Z
+    .line 3
+    invoke-static {}, Ld/d/a/z5;->k2()Z
 
     move-result p0
 
     if-eqz p0, :cond_1
 
-    new-instance p0, Lf2/g;
+    .line 4
+    new-instance p0, Ld/d/a/k6/b;
 
-    invoke-direct {p0, p1}, Lf2/g;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Ld/d/a/k6/b;-><init>(Landroid/view/View;)V
 
     const-wide/16 p2, 0x64
 
@@ -531,6 +569,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-virtual {p1, p0}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
@@ -539,9 +578,81 @@
     return-void
 .end method
 
+
+# virtual methods
+.method public c(Ljava/util/List;I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "colors",
+            "selection"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Ld/d/a/k6/g;",
+            ">;I)V"
+        }
+    .end annotation
+
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/customization/TintColorTableView;->d:Ljava/util/List;
+
+    .line 2
+    iput p2, p0, Lcom/android/camera/customization/TintColorTableView;->c:I
+
+    .line 3
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->removeAllViews()V
+
+    .line 4
+    invoke-direct {p0}, Lcom/android/camera/customization/TintColorTableView;->b()I
+
+    move-result p1
+
+    iput p1, p0, Lcom/android/camera/customization/TintColorTableView;->g:I
+
+    const/4 p1, 0x0
+
+    .line 5
+    :goto_0
+    iget-object p2, p0, Lcom/android/camera/customization/TintColorTableView;->d:Ljava/util/List;
+
+    invoke-interface {p2}, Ljava/util/List;->size()I
+
+    move-result p2
+
+    if-ge p1, p2, :cond_0
+
+    .line 6
+    invoke-direct {p0, p1}, Lcom/android/camera/customization/TintColorTableView;->a(I)V
+
+    add-int/lit8 p1, p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
 .method public onClick(Landroid/view/View;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "view"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object p1
@@ -554,13 +665,15 @@
 
     invoke-virtual {p0, p1}, Lcom/android/camera/customization/TintColorTableView;->setCurrent(I)V
 
-    iget-object p1, p0, Lcom/android/camera/customization/TintColorTableView;->c:Lcom/android/camera/customization/TintColorTableView$a;
+    .line 2
+    iget-object p1, p0, Lcom/android/camera/customization/TintColorTableView;->f:Lcom/android/camera/customization/TintColorTableView$a;
 
     if-eqz p1, :cond_0
 
-    iget p0, p0, Lcom/android/camera/customization/TintColorTableView;->a:I
+    .line 3
+    iget p0, p0, Lcom/android/camera/customization/TintColorTableView;->c:I
 
-    invoke-interface {p1, p0}, Lcom/android/camera/customization/TintColorTableView$a;->h9(I)V
+    invoke-interface {p1, p0}, Lcom/android/camera/customization/TintColorTableView$a;->n5(I)V
 
     :cond_0
     return-void
@@ -569,25 +682,37 @@
 .method public onFinishInflate()V
     .locals 0
 
-    invoke-super {p0}, Landroid/view/View;->onFinishInflate()V
+    .line 1
+    invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
     return-void
 .end method
 
 .method public setCurrent(I)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "current"
+        }
+    .end annotation
 
-    iget v0, p0, Lcom/android/camera/customization/TintColorTableView;->a:I
+    .line 1
+    iget v0, p0, Lcom/android/camera/customization/TintColorTableView;->c:I
 
     if-ne p1, v0, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
+    .line 3
     move-object v1, v0
 
     check-cast v1, Lcom/android/camera/customization/TintShapeView;
@@ -596,14 +721,17 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/customization/TintShapeView;->setSelection(Z)V
 
-    iget v1, p0, Lcom/android/camera/customization/TintColorTableView;->a:I
+    .line 4
+    iget v1, p0, Lcom/android/camera/customization/TintColorTableView;->c:I
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/android/camera/customization/TintColorTableView;->f(Landroid/view/View;IZ)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/android/camera/customization/TintColorTableView;->e(Landroid/view/View;IZ)V
 
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    .line 5
+    invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
+    .line 6
     move-object v1, v0
 
     check-cast v1, Lcom/android/camera/customization/TintShapeView;
@@ -612,17 +740,28 @@
 
     invoke-virtual {v1, v2}, Lcom/android/camera/customization/TintShapeView;->setSelection(Z)V
 
-    invoke-virtual {p0, v0, p1, v2}, Lcom/android/camera/customization/TintColorTableView;->f(Landroid/view/View;IZ)V
+    .line 7
+    invoke-direct {p0, v0, p1, v2}, Lcom/android/camera/customization/TintColorTableView;->e(Landroid/view/View;IZ)V
 
-    iput p1, p0, Lcom/android/camera/customization/TintColorTableView;->a:I
+    .line 8
+    iput p1, p0, Lcom/android/camera/customization/TintColorTableView;->c:I
 
     return-void
 .end method
 
 .method public setOnColorChangeListener(Lcom/android/camera/customization/TintColorTableView$a;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "listener"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera/customization/TintColorTableView;->c:Lcom/android/camera/customization/TintColorTableView$a;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/customization/TintColorTableView;->f:Lcom/android/camera/customization/TintColorTableView$a;
 
     return-void
 .end method

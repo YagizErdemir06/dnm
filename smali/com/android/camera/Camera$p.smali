@@ -18,11 +18,11 @@
 
 
 # static fields
-.field public static final c:Ljava/lang/String; = "CameraRunnable"
+.field private static final c:Ljava/lang/String; = "CameraRunnable"
 
 
 # instance fields
-.field public final a:Ljava/lang/ref/WeakReference;
+.field private final d:Ljava/lang/ref/WeakReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference<",
@@ -32,12 +32,23 @@
     .end annotation
 .end field
 
-.field public final b:Z
+.field private final f:Z
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/ref/WeakReference;Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "camera",
+            "releaseDevice"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -47,32 +58,19 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/Camera$p;->a:Ljava/lang/ref/WeakReference;
+    .line 2
+    iput-object p1, p0, Lcom/android/camera/Camera$p;->d:Ljava/lang/ref/WeakReference;
 
-    iput-boolean p2, p0, Lcom/android/camera/Camera$p;->b:Z
-
-    return-void
-.end method
-
-.method public static synthetic a(Lcom/android/camera/ui/a1;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera/Camera$p;->d(Lcom/android/camera/ui/a1;)V
+    .line 3
+    iput-boolean p2, p0, Lcom/android/camera/Camera$p;->f:Z
 
     return-void
 .end method
 
-.method public static synthetic b(Lcom/android/camera/Camera$p;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/camera/Camera$p;->c()V
-
-    return-void
-.end method
-
-.method private synthetic c()V
+.method private synthetic a()V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -82,13 +80,15 @@
 
     const-string v0, "CameraRunnable"
 
-    const-string/jumbo v1, "release surfaceTexture ..."
+    const-string v1, "release surfaceTexture ..."
 
+    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/LogK;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object p0, p0, Lcom/android/camera/Camera$p;->a:Ljava/lang/ref/WeakReference;
+    .line 2
+    iget-object p0, p0, Lcom/android/camera/Camera$p;->d:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -98,39 +98,47 @@
 
     move-result-object p0
 
-    new-instance v0, Lcom/android/camera/b1;
+    sget-object v0, Ld/d/a/l3;->a:Ld/d/a/l3;
 
-    invoke-direct {v0}, Lcom/android/camera/b1;-><init>()V
-
+    .line 3
     invoke-virtual {p0, v0}, Ljava/util/Optional;->map(Ljava/util/function/Function;)Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance v0, Lcom/android/camera/m1;
+    sget-object v0, Ld/d/a/b;->c:Ld/d/a/b;
 
-    invoke-direct {v0}, Lcom/android/camera/m1;-><init>()V
-
+    .line 4
     invoke-virtual {p0, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
     return-void
 .end method
 
-.method public static synthetic d(Lcom/android/camera/ui/a1;)V
+.method public static synthetic c(Ld/d/a/d8/x1;)V
     .locals 0
 
-    invoke-interface {p0}, Lcom/android/camera/ui/a1;->m1()V
+    .line 1
+    invoke-interface {p0}, Ld/d/a/d8/x1;->X()V
 
     return-void
 .end method
 
 
 # virtual methods
+.method public synthetic b()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/camera/Camera$p;->a()V
+
+    return-void
+.end method
+
 .method public run()V
     .locals 8
 
-    iget-object v0, p0, Lcom/android/camera/Camera$p;->a:Ljava/lang/ref/WeakReference;
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/Camera$p;->d:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -140,40 +148,46 @@
 
     return-void
 
+    .line 2
     :cond_0
-    invoke-virtual {v0}, Lcom/android/camera/Camera;->Ml()Z
+    invoke-virtual {v0}, Lcom/android/camera/Camera;->Aj()Z
 
     move-result v1
 
-    const/4 v2, 0x1
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    const/4 v3, 0x1
 
     if-eqz v1, :cond_1
 
-    iget-object v1, v0, Lcom/android/camera/ActivityBase;->e:Lq7/v4;
+    .line 3
+    iget-object v1, v0, Lcom/android/camera/ActivityBase;->v1:Ld/d/a/d7/z7;
 
-    invoke-interface {v1, v2}, Lq7/v4;->i4(Z)V
+    .line 4
+    invoke-interface {v1, v3}, Ld/d/a/d7/z7;->d4(Z)V
 
     goto :goto_0
 
     :cond_1
-    move-object v1, v3
+    move-object v1, v2
 
+    .line 5
     :goto_0
-    invoke-static {}, Lg2/b;->h()Ll2/g;
+    invoke-static {}, Ld/d/a/l6/b;->h()Ld/d/a/l6/e/l/g;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Ll2/g;->B0()V
+    invoke-virtual {v4}, Ld/d/a/l6/e/l/g;->x0()V
 
-    iget-object v4, v0, Lcom/android/camera/ActivityBase;->A:Lcom/android/camera/CameraAppImpl;
+    .line 6
+    iget-object v4, v0, Lcom/android/camera/ActivityBase;->a9:Lcom/android/camera/CameraAppImpl;
 
-    invoke-virtual {v4}, Lcom/android/camera/CameraAppImpl;->m()Z
+    invoke-virtual {v4}, Lcom/android/camera/CameraAppImpl;->b()Z
 
     move-result v4
 
-    iget-boolean v5, p0, Lcom/android/camera/Camera$p;->b:Z
+    .line 7
+    iget-boolean v5, p0, Lcom/android/camera/Camera$p;->f:Z
 
     const/4 v6, 0x0
 
@@ -185,30 +199,34 @@
 
     goto :goto_1
 
+    .line 8
     :cond_2
-    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->Ii()Z
+    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->ke()Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
-    invoke-static {}, Lib/u;->f()Lib/u;
+    .line 9
+    invoke-static {}, Ld/d/b/z5/u;->c()Ld/d/b/z5/u;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lib/u;->l()Z
+    invoke-virtual {v1}, Ld/d/b/z5/u;->i()Z
 
     move-result v1
 
     if-nez v1, :cond_3
 
-    const-string/jumbo v1, "release surfaceTexture..."
+    new-array v1, v6, [Ljava/lang/Object;
 
-    new-array v3, v6, [Ljava/lang/Object;
+    const-string v2, "release surfaceTexture..."
 
-    invoke-static {v7, v1, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 10
+    invoke-static {v7, v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->xi()Lcom/android/camera/ui/a1;
+    .line 11
+    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->Hc()Ld/d/a/d8/x1;
 
     move-result-object v0
 
@@ -216,25 +234,25 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera/e2;
-
-    invoke-direct {v1}, Lcom/android/camera/e2;-><init>()V
+    sget-object v1, Ld/d/a/z;->c:Ld/d/a/z;
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
+    .line 12
     :cond_3
-    iget-object p0, p0, Lcom/android/camera/Camera$p;->a:Ljava/lang/ref/WeakReference;
+    iget-object p0, p0, Lcom/android/camera/Camera$p;->d:Ljava/lang/ref/WeakReference;
 
-    invoke-static {p0}, Lcom/android/camera/Camera;->Yk(Ljava/lang/ref/WeakReference;)Lc8/m$b;
+    invoke-static {p0}, Lcom/android/camera/Camera;->Mi(Ljava/lang/ref/WeakReference;)Ld/d/a/d7/o8/b/s$b;
 
-    move-result-object v3
+    move-result-object v2
 
+    .line 13
     :cond_4
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v0, "start releaseCameraDevice: "
+    const-string v0, "start releaseCameraDevice: "
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -250,45 +268,50 @@
 
     invoke-static {v7, p0, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {}, Lc8/m;->n()Lc8/m;
+    .line 14
+    invoke-static {}, Ld/d/a/d7/o8/b/s;->j()Ld/d/a/d7/o8/b/s;
 
     move-result-object p0
 
-    invoke-virtual {p0, v3}, Lc8/m;->t(Lc8/m$b;)V
+    invoke-virtual {p0, v2}, Ld/d/a/d7/o8/b/s;->q(Ld/d/a/d7/o8/b/s$b;)V
 
     return-void
 
     :cond_5
     :goto_1
-    const-string v3, "Camera2OpenManager release ignored."
+    new-array v2, v6, [Ljava/lang/Object;
 
-    new-array v4, v6, [Ljava/lang/Object;
+    const-string v4, "Camera2OpenManager release ignored."
 
-    invoke-static {v7, v3, v4}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 15
+    invoke-static {v7, v4, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 16
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v3}, Lid/b;->M6()Z
+    invoke-virtual {v2}, Ld/k/a/b;->A6()Z
 
-    move-result v3
+    move-result v2
 
-    if-eqz v3, :cond_6
-
-    if-eqz v1, :cond_6
-
-    invoke-interface {v1}, Lq7/v4;->Ah()Lr7/m;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lr7/m;->t0()Lya/a;
-
-    move-result-object v1
+    if-eqz v2, :cond_6
 
     if-eqz v1, :cond_6
 
-    invoke-static {v0}, Lcom/android/camera/Camera;->Wk(Lcom/android/camera/Camera;)Lcom/android/camera/module/loader/base/StartControl;
+    .line 17
+    invoke-interface {v1}, Ld/d/a/d7/z7;->ch()Ld/d/a/d7/i8/s;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ld/d/a/d7/i8/s;->R1()Ld/d/b/f4;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_6
+
+    .line 18
+    invoke-static {v0}, Lcom/android/camera/Camera;->Ki(Lcom/android/camera/Camera;)Lcom/android/camera/module/loader/base/StartControl;
 
     move-result-object v0
 
@@ -296,17 +319,19 @@
 
     if-eqz v0, :cond_6
 
-    const-string/jumbo v0, "switchToOffline when start releaseCameraDevice=false"
+    const-string v0, "switchToOffline when start releaseCameraDevice=false"
 
+    .line 19
     invoke-static {v7, v0}, Lcom/android/camera/log/LogK;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2}, Lya/a;->B1(Z)Lio/reactivex/Completable;
+    .line 20
+    invoke-virtual {v1, v3}, Ld/d/b/f4;->B1(Z)Lio/reactivex/Completable;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera/d2;
+    new-instance v1, Ld/d/a/a0;
 
-    invoke-direct {v1, p0}, Lcom/android/camera/d2;-><init>(Lcom/android/camera/Camera$p;)V
+    invoke-direct {v1, p0}, Ld/d/a/a0;-><init>(Lcom/android/camera/Camera$p;)V
 
     invoke-virtual {v0, v1}, Lio/reactivex/Completable;->subscribe(Lio/reactivex/functions/Action;)Lio/reactivex/disposables/Disposable;
 

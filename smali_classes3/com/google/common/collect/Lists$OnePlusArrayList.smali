@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Lists$OnePlusArrayList;
+.class public Lcom/google/common/collect/Lists$OnePlusArrayList;
 .super Ljava/util/AbstractList;
 .source "SourceFile"
 
@@ -35,7 +35,7 @@
 
 
 # instance fields
-.field final first:Ljava/lang/Object;
+.field public final first:Ljava/lang/Object;
     .annotation runtime Lcom/google/common/collect/ParametricNullness;
     .end annotation
 
@@ -46,7 +46,7 @@
     .end annotation
 .end field
 
-.field final rest:[Ljava/lang/Object;
+.field public final rest:[Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "[TE;"
@@ -68,10 +68,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/Lists$OnePlusArrayList;->first:Ljava/lang/Object;
 
+    .line 3
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -96,6 +99,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Lists$OnePlusArrayList;->size()I
 
     move-result v0
@@ -104,6 +108,7 @@
 
     if-nez p1, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/Lists$OnePlusArrayList;->first:Ljava/lang/Object;
 
     goto :goto_0
@@ -122,6 +127,7 @@
 .method public size()I
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Lists$OnePlusArrayList;->rest:[Ljava/lang/Object;
 
     array-length p0, p0

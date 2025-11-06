@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/widget/AppCompatTextViewAutoSizeHelper$Impl;
+.class public Landroidx/appcompat/widget/AppCompatTextViewAutoSizeHelper$Impl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,11 +35,12 @@
 .method public isHorizontallyScrollable(Landroid/widget/TextView;)Z
     .locals 1
 
-    const-string p0, "getHorizontallyScrolling"
+    .line 1
+    sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    const-string v0, "getHorizontallyScrolling"
 
-    invoke-static {p1, p0, v0}, Landroidx/appcompat/widget/AppCompatTextViewAutoSizeHelper;->invokeAndReturnWithDefault(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1, v0, p0}, Landroidx/appcompat/widget/AppCompatTextViewAutoSizeHelper;->invokeAndReturnWithDefault(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 

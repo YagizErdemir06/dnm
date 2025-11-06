@@ -70,16 +70,6 @@
         <item quantity="one">Trajanje: %d sekunda</item>
         <item quantity="few">Trajanje: %d sekunde</item>
     </plurals>
-    <plurals name="accessibility_watermark_characters_inputted">
-        <item quantity="other">Uneseno %d karaktera.</item>
-        <item quantity="one">Unesen %d karakter.</item>
-        <item quantity="few">Unesena %d karaktera.</item>
-    </plurals>
-    <plurals name="accessibility_watermark_characters_max">
-        <item quantity="other">Unesite do %d karaktera.</item>
-        <item quantity="one">Unesite do %d karaktera.</item>
-        <item quantity="few">Unesite do %d karaktera.</item>
-    </plurals>
     <plurals name="cinemaster_toast_camera_overflow">
         <item quantity="other">Na istu mrežu možete povezati do %d kamera</item>
         <item quantity="one">Na istu mrežu možete povezati do %d kamere</item>
@@ -174,11 +164,6 @@
         <item quantity="other">%d stavki odabrano</item>
         <item quantity="one">%d stavka odabrana</item>
         <item quantity="few">%d stavke odabrane</item>
-    </plurals>
-    <plurals name="mtrl_badge_content_description">
-        <item quantity="other">%d novih obavještenja</item>
-        <item quantity="one">%d novo obavještenje</item>
-        <item quantity="few">%d nova obavještenja</item>
     </plurals>
     <plurals name="num_minutes_ago">
         <item quantity="other">Prije %d minuta</item>

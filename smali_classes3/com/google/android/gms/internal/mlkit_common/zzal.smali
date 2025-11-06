@@ -1,14 +1,14 @@
-.class Lcom/google/android/gms/internal/mlkit_common/zzal;
+.class public Lcom/google/android/gms/internal/mlkit_common/zzal;
 .super Lcom/google/android/gms/internal/mlkit_common/zzam;
 .source "SourceFile"
 
 
 # instance fields
-.field zza:[Ljava/lang/Object;
+.field public zza:[Ljava/lang/Object;
 
-.field zzb:I
+.field public zzb:I
 
-.field zzc:Z
+.field public zzc:Z
 
 
 # direct methods

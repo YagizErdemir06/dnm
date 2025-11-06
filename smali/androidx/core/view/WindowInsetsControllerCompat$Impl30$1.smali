@@ -1,4 +1,4 @@
-.class Landroidx/core/view/WindowInsetsControllerCompat$Impl30$1;
+.class public Landroidx/core/view/WindowInsetsControllerCompat$Impl30$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -20,15 +20,16 @@
 # instance fields
 .field private mCompatAnimController:Landroidx/core/view/WindowInsetsAnimationControllerCompat;
 
-.field final synthetic this$0:Landroidx/core/view/WindowInsetsControllerCompat$Impl30;
+.field public final synthetic this$0:Landroidx/core/view/WindowInsetsControllerCompat$Impl30;
 
-.field final synthetic val$listener:Landroidx/core/view/WindowInsetsAnimationControlListenerCompat;
+.field public final synthetic val$listener:Landroidx/core/view/WindowInsetsAnimationControlListenerCompat;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/core/view/WindowInsetsControllerCompat$Impl30;Landroidx/core/view/WindowInsetsAnimationControlListenerCompat;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/core/view/WindowInsetsControllerCompat$Impl30$1;->this$0:Landroidx/core/view/WindowInsetsControllerCompat$Impl30;
 
     iput-object p2, p0, Landroidx/core/view/WindowInsetsControllerCompat$Impl30$1;->val$listener:Landroidx/core/view/WindowInsetsAnimationControlListenerCompat;
@@ -37,6 +38,7 @@
 
     const/4 p1, 0x0
 
+    .line 2
     iput-object p1, p0, Landroidx/core/view/WindowInsetsControllerCompat$Impl30$1;->mCompatAnimController:Landroidx/core/view/WindowInsetsAnimationControllerCompat;
 
     return-void
@@ -51,6 +53,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Landroidx/core/view/WindowInsetsControllerCompat$Impl30$1;->val$listener:Landroidx/core/view/WindowInsetsAnimationControlListenerCompat;
 
     if-nez p1, :cond_0
@@ -75,6 +78,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p1, p0, Landroidx/core/view/WindowInsetsControllerCompat$Impl30$1;->val$listener:Landroidx/core/view/WindowInsetsAnimationControlListenerCompat;
 
     iget-object p0, p0, Landroidx/core/view/WindowInsetsControllerCompat$Impl30$1;->mCompatAnimController:Landroidx/core/view/WindowInsetsAnimationControllerCompat;
@@ -91,12 +95,14 @@
         .end annotation
     .end param
 
+    .line 1
     new-instance v0, Landroidx/core/view/WindowInsetsAnimationControllerCompat;
 
     invoke-direct {v0, p1}, Landroidx/core/view/WindowInsetsAnimationControllerCompat;-><init>(Landroid/view/WindowInsetsAnimationController;)V
 
     iput-object v0, p0, Landroidx/core/view/WindowInsetsControllerCompat$Impl30$1;->mCompatAnimController:Landroidx/core/view/WindowInsetsAnimationControllerCompat;
 
+    .line 2
     iget-object p0, p0, Landroidx/core/view/WindowInsetsControllerCompat$Impl30$1;->val$listener:Landroidx/core/view/WindowInsetsAnimationControlListenerCompat;
 
     invoke-interface {p0, v0, p2}, Landroidx/core/view/WindowInsetsAnimationControlListenerCompat;->onReady(Landroidx/core/view/WindowInsetsAnimationControllerCompat;I)V

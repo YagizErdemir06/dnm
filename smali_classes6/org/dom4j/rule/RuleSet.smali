@@ -13,8 +13,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -29,6 +31,7 @@
 .method public addAll(Lorg/dom4j/rule/RuleSet;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/rule/RuleSet;->rules:Ljava/util/ArrayList;
 
     iget-object p1, p1, Lorg/dom4j/rule/RuleSet;->rules:Ljava/util/ArrayList;
@@ -37,6 +40,7 @@
 
     const/4 p1, 0x0
 
+    .line 2
     iput-object p1, p0, Lorg/dom4j/rule/RuleSet;->ruleArray:[Lorg/dom4j/rule/Rule;
 
     return-void
@@ -45,12 +49,14 @@
 .method public addRule(Lorg/dom4j/rule/Rule;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/rule/RuleSet;->rules:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const/4 p1, 0x0
 
+    .line 2
     iput-object p1, p0, Lorg/dom4j/rule/RuleSet;->ruleArray:[Lorg/dom4j/rule/Rule;
 
     return-void
@@ -59,10 +65,12 @@
 .method public getMatchingRule(Lorg/dom4j/Node;)Lorg/dom4j/rule/Rule;
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/rule/RuleSet;->getRuleArray()[Lorg/dom4j/rule/Rule;
 
     move-result-object p0
 
+    .line 2
     array-length v0, p0
 
     add-int/lit8 v0, v0, -0x1
@@ -70,8 +78,10 @@
     :goto_0
     if-ltz v0, :cond_1
 
+    .line 3
     aget-object v1, p0, v0
 
+    .line 4
     invoke-virtual {v1, p1}, Lorg/dom4j/rule/Rule;->matches(Lorg/dom4j/Node;)Z
 
     move-result v2
@@ -94,28 +104,34 @@
 .method public getRuleArray()[Lorg/dom4j/rule/Rule;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/rule/RuleSet;->ruleArray:[Lorg/dom4j/rule/Rule;
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lorg/dom4j/rule/RuleSet;->rules:Ljava/util/ArrayList;
 
     invoke-static {v0}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
+    .line 3
     iget-object v0, p0, Lorg/dom4j/rule/RuleSet;->rules:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
+    .line 4
     new-array v0, v0, [Lorg/dom4j/rule/Rule;
 
     iput-object v0, p0, Lorg/dom4j/rule/RuleSet;->ruleArray:[Lorg/dom4j/rule/Rule;
 
+    .line 5
     iget-object v1, p0, Lorg/dom4j/rule/RuleSet;->rules:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
+    .line 6
     :cond_0
     iget-object p0, p0, Lorg/dom4j/rule/RuleSet;->ruleArray:[Lorg/dom4j/rule/Rule;
 
@@ -125,12 +141,14 @@
 .method public removeRule(Lorg/dom4j/rule/Rule;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/rule/RuleSet;->rules:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
     const/4 p1, 0x0
 
+    .line 2
     iput-object p1, p0, Lorg/dom4j/rule/RuleSet;->ruleArray:[Lorg/dom4j/rule/Rule;
 
     return-void
@@ -139,6 +157,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V

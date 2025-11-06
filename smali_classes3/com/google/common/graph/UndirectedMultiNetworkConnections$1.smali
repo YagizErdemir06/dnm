@@ -1,4 +1,4 @@
-.class Lcom/google/common/graph/UndirectedMultiNetworkConnections$1;
+.class public Lcom/google/common/graph/UndirectedMultiNetworkConnections$1;
 .super Lcom/google/common/graph/MultiEdgesConnecting;
 .source "SourceFile"
 
@@ -22,15 +22,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/graph/UndirectedMultiNetworkConnections;
+.field public final synthetic this$0:Lcom/google/common/graph/UndirectedMultiNetworkConnections;
 
-.field final synthetic val$node:Ljava/lang/Object;
+.field public final synthetic val$node:Ljava/lang/Object;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/graph/UndirectedMultiNetworkConnections;Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/graph/UndirectedMultiNetworkConnections$1;->this$0:Lcom/google/common/graph/UndirectedMultiNetworkConnections;
 
     iput-object p4, p0, Lcom/google/common/graph/UndirectedMultiNetworkConnections$1;->val$node:Ljava/lang/Object;
@@ -45,6 +46,7 @@
 .method public size()I
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/graph/UndirectedMultiNetworkConnections$1;->this$0:Lcom/google/common/graph/UndirectedMultiNetworkConnections;
 
     invoke-static {v0}, Lcom/google/common/graph/UndirectedMultiNetworkConnections;->access$000(Lcom/google/common/graph/UndirectedMultiNetworkConnections;)Lcom/google/common/collect/Multiset;

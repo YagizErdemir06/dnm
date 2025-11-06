@@ -25,7 +25,7 @@
     <dimen name="manual_extra_recyclerview_wb_item_padding">12.03598dip</dimen>
     <dimen name="manual_extra_slideview_margin_left">36.359985dip</dimen>
     <dimen name="manual_recyclerview_item_padding">2.9449768dip</dimen>
-    <dimen name="more_mode_settings_padding_hor">148.0dip</dimen>
+    <dimen name="more_mode_settings_padding_hor">222.0dip</dimen>
     <dimen name="pro_view_zoom_view_slider_height">215.26999dip</dimen>
     <dimen name="tint_AItip_font_select">8.889984sp</dimen>
     <dimen name="tint_AItip_margin_top_select">73.78dip</dimen>

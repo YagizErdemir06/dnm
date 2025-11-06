@@ -1,4 +1,4 @@
-.class Lcom/google/android/gms/common/zzx;
+.class public Lcom/google/android/gms/common/zzx;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -13,19 +13,19 @@
 
 
 # instance fields
-.field final zza:Z
+.field public final zza:Z
 
-.field final zzb:Ljava/lang/String;
+.field public final zzb:Ljava/lang/String;
     .annotation runtime Ljavax/annotation/Nullable;
     .end annotation
 .end field
 
-.field final zzc:Ljava/lang/Throwable;
+.field public final zzc:Ljava/lang/Throwable;
     .annotation runtime Ljavax/annotation/Nullable;
     .end annotation
 .end field
 
-.field final zzd:I
+.field public final zzd:I
 
 
 # direct methods
@@ -228,6 +228,7 @@
 .method public final zze()V
     .locals 2
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/gms/common/zzx;->zza:Z
 
     if-nez v0, :cond_1
@@ -246,6 +247,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/gms/common/zzx;->zza()Ljava/lang/String;
 
     move-result-object v0
@@ -256,6 +258,7 @@
 
     return-void
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/gms/common/zzx;->zza()Ljava/lang/String;
 

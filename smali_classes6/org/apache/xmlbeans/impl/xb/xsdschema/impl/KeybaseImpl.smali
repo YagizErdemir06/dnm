@@ -15,27 +15,30 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "selector"
+    const-string v1, "http://www.w3.org/2001/XMLSchema"
 
-    const-string v2, "http://www.w3.org/2001/XMLSchema"
+    const-string v2, "selector"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/apache/xmlbeans/impl/xb/xsdschema/impl/KeybaseImpl;->SELECTOR$0:Ljavax/xml/namespace/QName;
 
+    .line 2
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "field"
+    const-string v2, "field"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/apache/xmlbeans/impl/xb/xsdschema/impl/KeybaseImpl;->FIELD$2:Ljavax/xml/namespace/QName;
 
+    .line 3
     new-instance v0, Ljavax/xml/namespace/QName;
 
     const-string v1, ""
@@ -52,6 +55,7 @@
 .method public constructor <init>(Lorg/apache/xmlbeans/SchemaType;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lorg/apache/xmlbeans/impl/xb/xsdschema/impl/AnnotatedImpl;-><init>(Lorg/apache/xmlbeans/SchemaType;)V
 
     return-void
@@ -62,15 +66,18 @@
 .method public addNewField()Lorg/apache/xmlbeans/impl/xb/xsdschema/FieldDocument$Field;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -83,6 +90,7 @@
 
     check-cast p0, Lorg/apache/xmlbeans/impl/xb/xsdschema/FieldDocument$Field;
 
+    .line 4
     monitor-exit v0
 
     return-object p0
@@ -90,6 +98,7 @@
     :catchall_0
     move-exception p0
 
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -100,15 +109,18 @@
 .method public addNewSelector()Lorg/apache/xmlbeans/impl/xb/xsdschema/SelectorDocument$Selector;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -121,6 +133,7 @@
 
     check-cast p0, Lorg/apache/xmlbeans/impl/xb/xsdschema/SelectorDocument$Selector;
 
+    .line 4
     monitor-exit v0
 
     return-object p0
@@ -128,6 +141,7 @@
     :catchall_0
     move-exception p0
 
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -245,15 +259,18 @@
 .method public getName()Ljava/lang/String;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -268,12 +285,14 @@
 
     if-nez p0, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    .line 4
+    monitor-exit v0
 
     return-object p0
 
+    .line 5
     :cond_0
     invoke-interface {p0}, Lorg/apache/xmlbeans/SimpleValue;->getStringValue()Ljava/lang/String;
 
@@ -286,6 +305,7 @@
     :catchall_0
     move-exception p0
 
+    .line 6
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -296,15 +316,18 @@
 .method public getSelector()Lorg/apache/xmlbeans/impl/xb/xsdschema/SelectorDocument$Selector;
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -321,12 +344,14 @@
 
     if-nez p0, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    .line 4
+    monitor-exit v0
 
     return-object p0
 
+    .line 5
     :cond_0
     monitor-exit v0
 
@@ -335,6 +360,7 @@
     :catchall_0
     move-exception p0
 
+    .line 6
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -345,15 +371,18 @@
 .method public insertNewField(I)Lorg/apache/xmlbeans/impl/xb/xsdschema/FieldDocument$Field;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -366,6 +395,7 @@
 
     check-cast p0, Lorg/apache/xmlbeans/impl/xb/xsdschema/FieldDocument$Field;
 
+    .line 4
     monitor-exit v0
 
     return-object p0
@@ -373,6 +403,7 @@
     :catchall_0
     move-exception p0
 
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -383,15 +414,18 @@
 .method public removeField(I)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -400,6 +434,7 @@
 
     invoke-interface {p0, v1, p1}, Lorg/apache/xmlbeans/impl/values/TypeStore;->remove_element(Ljavax/xml/namespace/QName;I)V
 
+    .line 4
     monitor-exit v0
 
     return-void
@@ -507,15 +542,18 @@
 .method public setName(Ljava/lang/String;)V
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object v1
@@ -530,6 +568,7 @@
 
     if-nez v1, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -542,9 +581,11 @@
 
     check-cast v1, Lorg/apache/xmlbeans/SimpleValue;
 
+    .line 5
     :cond_0
     invoke-interface {v1, p1}, Lorg/apache/xmlbeans/SimpleValue;->setStringValue(Ljava/lang/String;)V
 
+    .line 6
     monitor-exit v0
 
     return-void
@@ -562,15 +603,18 @@
 .method public setSelector(Lorg/apache/xmlbeans/impl/xb/xsdschema/SelectorDocument$Selector;)V
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object v1
@@ -587,6 +631,7 @@
 
     if-nez v1, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -599,9 +644,11 @@
 
     check-cast v1, Lorg/apache/xmlbeans/impl/xb/xsdschema/SelectorDocument$Selector;
 
+    .line 5
     :cond_0
     invoke-interface {v1, p1}, Lorg/apache/xmlbeans/XmlObject;->set(Lorg/apache/xmlbeans/XmlObject;)Lorg/apache/xmlbeans/XmlObject;
 
+    .line 6
     monitor-exit v0
 
     return-void
@@ -619,15 +666,18 @@
 .method public sizeOfFieldArray()I
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -645,6 +695,7 @@
     :catchall_0
     move-exception p0
 
+    .line 4
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -655,15 +706,18 @@
 .method public xgetName()Lorg/apache/xmlbeans/XmlNCName;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -676,6 +730,7 @@
 
     check-cast p0, Lorg/apache/xmlbeans/XmlNCName;
 
+    .line 4
     monitor-exit v0
 
     return-object p0
@@ -683,6 +738,7 @@
     :catchall_0
     move-exception p0
 
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -693,15 +749,18 @@
 .method public xsetName(Lorg/apache/xmlbeans/XmlNCName;)V
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object v1
@@ -716,6 +775,7 @@
 
     if-nez v1, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -728,9 +788,11 @@
 
     check-cast v1, Lorg/apache/xmlbeans/XmlNCName;
 
+    .line 5
     :cond_0
     invoke-interface {v1, p1}, Lorg/apache/xmlbeans/XmlObject;->set(Lorg/apache/xmlbeans/XmlObject;)Lorg/apache/xmlbeans/XmlObject;
 
+    .line 6
     monitor-exit v0
 
     return-void

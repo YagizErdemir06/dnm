@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Synchronized$SynchronizedListMultimap;
+.class public Lcom/google/common/collect/Synchronized$SynchronizedListMultimap;
 .super Lcom/google/common/collect/Synchronized$SynchronizedMultimap;
 .source "SourceFile"
 
@@ -52,6 +52,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/common/collect/Synchronized$SynchronizedMultimap;-><init>(Lcom/google/common/collect/Multimap;Ljava/lang/Object;)V
 
     return-void

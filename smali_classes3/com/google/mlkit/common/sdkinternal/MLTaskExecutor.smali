@@ -41,6 +41,7 @@
 .method private constructor <init>(Landroid/os/Looper;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_common/zza;
@@ -60,6 +61,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/mlkit/common/sdkinternal/MLTaskExecutor;->zza:Ljava/lang/Object;
 
     monitor-enter v0
@@ -77,14 +79,17 @@
 
     invoke-direct {v1, v2, v3}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {v1}, Ljava/lang/Thread;->start()V
+    .line 2
+    invoke-virtual {v1}, Landroid/os/HandlerThread;->start()V
 
+    .line 3
     invoke-virtual {v1}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
     move-result-object v1
 
     new-instance v2, Lcom/google/mlkit/common/sdkinternal/MLTaskExecutor;
 
+    .line 4
     invoke-direct {v2, v1}, Lcom/google/mlkit/common/sdkinternal/MLTaskExecutor;-><init>(Landroid/os/Looper;)V
 
     sput-object v2, Lcom/google/mlkit/common/sdkinternal/MLTaskExecutor;->zzb:Lcom/google/mlkit/common/sdkinternal/MLTaskExecutor;
@@ -92,6 +97,7 @@
     :cond_0
     sget-object v1, Lcom/google/mlkit/common/sdkinternal/MLTaskExecutor;->zzb:Lcom/google/mlkit/common/sdkinternal/MLTaskExecutor;
 
+    .line 5
     monitor-exit v0
 
     return-object v1
@@ -99,6 +105,7 @@
     :catchall_0
     move-exception v1
 
+    .line 6
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -114,6 +121,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/mlkit/common/sdkinternal/zzh;->zza:Lcom/google/mlkit/common/sdkinternal/zzh;
 
     return-object v0
@@ -166,6 +174,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/tasks/TaskCompletionSource;
 
     invoke-direct {v0}, Lcom/google/android/gms/tasks/TaskCompletionSource;-><init>()V
@@ -174,8 +183,10 @@
 
     invoke-direct {v1, p1, v0}, Lcom/google/mlkit/common/sdkinternal/zzf;-><init>(Ljava/util/concurrent/Callable;Lcom/google/android/gms/tasks/TaskCompletionSource;)V
 
+    .line 2
     invoke-virtual {p0, v1}, Lcom/google/mlkit/common/sdkinternal/MLTaskExecutor;->scheduleRunnable(Ljava/lang/Runnable;)V
 
+    .line 3
     invoke-virtual {v0}, Lcom/google/android/gms/tasks/TaskCompletionSource;->getTask()Lcom/google/android/gms/tasks/Task;
 
     move-result-object p0
@@ -192,6 +203,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/mlkit/common/sdkinternal/MLTaskExecutor;->workerThreadExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object p0
@@ -210,6 +222,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/common/sdkinternal/MLTaskExecutor;->zzc:Landroid/os/Handler;
 
     invoke-virtual {p0, p1, p2, p3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
@@ -242,10 +255,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/mlkit/common/sdkinternal/MLTaskExecutor;->scheduleCallable(Ljava/util/concurrent/Callable;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object p0
 
+    .line 2
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_common/zzbi;->zza()Ljava/util/concurrent/Executor;
 
     move-result-object p1

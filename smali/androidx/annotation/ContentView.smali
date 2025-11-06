@@ -7,17 +7,7 @@
 
 
 # annotations
-.annotation runtime Ljava/lang/annotation/Retention;
-    value = .enum Ljava/lang/annotation/RetentionPolicy;->CLASS:Ljava/lang/annotation/RetentionPolicy;
-.end annotation
-
-.annotation runtime Ljava/lang/annotation/Target;
-    value = {
-        .enum Ljava/lang/annotation/ElementType;->CONSTRUCTOR:Ljava/lang/annotation/ElementType;
-    }
-.end annotation
-
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
     d1 = {
         "\u0000\n\n\u0002\u0018\u0002\n\u0002\u0010\u001b\n\u0000\u0008\u0087\u0002\u0018\u00002\u00020\u0001B\u0000\u00a8\u0006\u0002"
     }
@@ -35,12 +25,22 @@
     xi = 0x30
 .end annotation
 
-.annotation runtime Lom/e;
-    value = .enum Lom/a;->b:Lom/a;
+.annotation runtime Lh/s2/e;
+    value = .enum Lh/s2/a;->d:Lh/s2/a;
 .end annotation
 
-.annotation runtime Lom/f;
+.annotation runtime Lh/s2/f;
     allowedTargets = {
-        .enum Lom/b;->h:Lom/b;
+        .enum Lh/s2/b;->p:Lh/s2/b;
+    }
+.end annotation
+
+.annotation runtime Ljava/lang/annotation/Retention;
+    value = .enum Ljava/lang/annotation/RetentionPolicy;->CLASS:Ljava/lang/annotation/RetentionPolicy;
+.end annotation
+
+.annotation runtime Ljava/lang/annotation/Target;
+    value = {
+        .enum Ljava/lang/annotation/ElementType;->CONSTRUCTOR:Ljava/lang/annotation/ElementType;
     }
 .end annotation

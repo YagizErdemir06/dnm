@@ -1,4 +1,4 @@
-.class Landroidx/core/view/WindowInsetsCompat$BuilderImpl30;
+.class public Landroidx/core/view/WindowInsetsCompat$BuilderImpl30;
 .super Landroidx/core/view/WindowInsetsCompat$BuilderImpl29;
 .source "SourceFile"
 
@@ -50,17 +50,21 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl29;->mPlatBuilder:Landroid/view/WindowInsets$Builder;
 
+    .line 2
     invoke-static {p1}, Landroidx/core/view/WindowInsetsCompat$TypeImpl30;->toPlatformType(I)I
 
     move-result p1
 
+    .line 3
     invoke-virtual {p2}, Landroidx/core/graphics/Insets;->toPlatformInsets()Landroid/graphics/Insets;
 
     move-result-object p2
 
-    invoke-static {p0, p1, p2}, Landroidx/core/view/w0;->a(Landroid/view/WindowInsets$Builder;ILandroid/graphics/Insets;)Landroid/view/WindowInsets$Builder;
+    .line 4
+    invoke-virtual {p0, p1, p2}, Landroid/view/WindowInsets$Builder;->setInsets(ILandroid/graphics/Insets;)Landroid/view/WindowInsets$Builder;
 
     return-void
 .end method
@@ -72,17 +76,21 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl29;->mPlatBuilder:Landroid/view/WindowInsets$Builder;
 
+    .line 2
     invoke-static {p1}, Landroidx/core/view/WindowInsetsCompat$TypeImpl30;->toPlatformType(I)I
 
     move-result p1
 
+    .line 3
     invoke-virtual {p2}, Landroidx/core/graphics/Insets;->toPlatformInsets()Landroid/graphics/Insets;
 
     move-result-object p2
 
-    invoke-static {p0, p1, p2}, Landroidx/core/view/v0;->a(Landroid/view/WindowInsets$Builder;ILandroid/graphics/Insets;)Landroid/view/WindowInsets$Builder;
+    .line 4
+    invoke-virtual {p0, p1, p2}, Landroid/view/WindowInsets$Builder;->setInsetsIgnoringVisibility(ILandroid/graphics/Insets;)Landroid/view/WindowInsets$Builder;
 
     return-void
 .end method
@@ -90,13 +98,14 @@
 .method public setVisible(IZ)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl29;->mPlatBuilder:Landroid/view/WindowInsets$Builder;
 
     invoke-static {p1}, Landroidx/core/view/WindowInsetsCompat$TypeImpl30;->toPlatformType(I)I
 
     move-result p1
 
-    invoke-static {p0, p1, p2}, Landroidx/core/view/x0;->a(Landroid/view/WindowInsets$Builder;IZ)Landroid/view/WindowInsets$Builder;
+    invoke-virtual {p0, p1, p2}, Landroid/view/WindowInsets$Builder;->setVisible(IZ)Landroid/view/WindowInsets$Builder;
 
     return-void
 .end method

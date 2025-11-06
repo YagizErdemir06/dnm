@@ -18,14 +18,23 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/android/camera/ui/TextureVideoView;
+.field public final synthetic c:Lcom/android/camera/ui/TextureVideoView;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera/ui/TextureVideoView;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera/ui/TextureVideoView$a;->a:Lcom/android/camera/ui/TextureVideoView;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/ui/TextureVideoView$a;->c:Lcom/android/camera/ui/TextureVideoView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,21 +46,23 @@
 .method public run()V
     .locals 1
 
-    iget-object v0, p0, Lcom/android/camera/ui/TextureVideoView$a;->a:Lcom/android/camera/ui/TextureVideoView;
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/ui/TextureVideoView$a;->c:Lcom/android/camera/ui/TextureVideoView;
 
-    invoke-static {v0}, Lcom/android/camera/ui/TextureVideoView;->j(Lcom/android/camera/ui/TextureVideoView;)Lcom/android/camera/ui/TextureVideoView$d;
+    invoke-static {v0}, Lcom/android/camera/ui/TextureVideoView;->b(Lcom/android/camera/ui/TextureVideoView;)Lcom/android/camera/ui/TextureVideoView$d;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/camera/ui/TextureVideoView$a;->a:Lcom/android/camera/ui/TextureVideoView;
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/ui/TextureVideoView$a;->c:Lcom/android/camera/ui/TextureVideoView;
 
-    invoke-static {v0}, Lcom/android/camera/ui/TextureVideoView;->j(Lcom/android/camera/ui/TextureVideoView;)Lcom/android/camera/ui/TextureVideoView$d;
+    invoke-static {v0}, Lcom/android/camera/ui/TextureVideoView;->b(Lcom/android/camera/ui/TextureVideoView;)Lcom/android/camera/ui/TextureVideoView$d;
 
     move-result-object v0
 
-    iget-object p0, p0, Lcom/android/camera/ui/TextureVideoView$a;->a:Lcom/android/camera/ui/TextureVideoView;
+    iget-object p0, p0, Lcom/android/camera/ui/TextureVideoView$a;->c:Lcom/android/camera/ui/TextureVideoView;
 
     invoke-virtual {p0}, Lcom/android/camera/ui/TextureVideoView;->getPreviewSurface()Landroid/view/Surface;
 

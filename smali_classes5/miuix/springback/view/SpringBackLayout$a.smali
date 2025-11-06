@@ -15,5 +15,8 @@
 
 
 # virtual methods
-.method public abstract a()Z
+.method public abstract a(Lmiuix/springback/view/SpringBackLayout;II)V
+.end method
+
+.method public abstract b(IIZ)V
 .end method

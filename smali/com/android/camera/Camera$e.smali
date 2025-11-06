@@ -18,14 +18,23 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/android/camera/Camera;
+.field public final synthetic c:Lcom/android/camera/Camera;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera/Camera;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera/Camera$e;->a:Lcom/android/camera/Camera;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/Camera$e;->c:Lcom/android/camera/Camera;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,68 +45,77 @@
 # virtual methods
 .method public run()V
     .locals 1
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isGlobalDevice"
         type = 0x1
     .end annotation
 
-    iget-object v0, p0, Lcom/android/camera/Camera$e;->a:Lcom/android/camera/Camera;
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/Camera$e;->c:Lcom/android/camera/Camera;
 
-    iget-object v0, v0, Lcom/android/camera/ActivityBase;->k0:Lcom/android/camera/ui/CameraRootView;
+    iget-object v0, v0, Lcom/android/camera/ActivityBase;->l9:Lcom/android/camera/ui/CameraRootView;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Lcom/android/camera/ui/CameraRootView;->b()V
 
+    .line 3
     :cond_0
-    iget-object v0, p0, Lcom/android/camera/Camera$e;->a:Lcom/android/camera/Camera;
+    iget-object v0, p0, Lcom/android/camera/Camera$e;->c:Lcom/android/camera/Camera;
 
-    invoke-static {v0}, Lcom/android/camera/Camera;->bl(Lcom/android/camera/Camera;)V
+    invoke-static {v0}, Lcom/android/camera/Camera;->Pi(Lcom/android/camera/Camera;)V
 
-    invoke-static {}, Lq8/a;->c()Z
+    .line 4
+    invoke-static {}, Ld/d/a/i7/a;->c()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    iget-object p0, p0, Lcom/android/camera/Camera$e;->a:Lcom/android/camera/Camera;
+    .line 5
+    iget-object p0, p0, Lcom/android/camera/Camera$e;->c:Lcom/android/camera/Camera;
 
     const/4 v0, 0x0
 
-    invoke-static {p0, v0}, Lcom/android/camera/Camera;->cl(Lcom/android/camera/Camera;Z)Z
+    invoke-static {p0, v0}, Lcom/android/camera/Camera;->Qi(Lcom/android/camera/Camera;Z)Z
 
     goto :goto_0
 
+    .line 6
     :cond_1
-    invoke-static {}, Lcom/android/camera/v2;->F5()Z
+    invoke-static {}, Ld/d/a/d4;->D5()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    invoke-static {}, Lq8/a;->d()Z
+    invoke-static {}, Ld/d/a/i7/a;->d()Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    iget-object p0, p0, Lcom/android/camera/Camera$e;->a:Lcom/android/camera/Camera;
+    .line 7
+    iget-object p0, p0, Lcom/android/camera/Camera$e;->c:Lcom/android/camera/Camera;
 
-    invoke-static {p0}, Lcom/android/camera/Camera;->dl(Lcom/android/camera/Camera;)V
+    invoke-static {p0}, Lcom/android/camera/Camera;->Ri(Lcom/android/camera/Camera;)V
 
     goto :goto_0
 
+    .line 8
     :cond_2
-    invoke-static {}, Lcom/android/camera/v2;->R3()Z
+    invoke-static {}, Ld/d/a/d4;->P3()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    iget-object p0, p0, Lcom/android/camera/Camera$e;->a:Lcom/android/camera/Camera;
+    .line 9
+    iget-object p0, p0, Lcom/android/camera/Camera$e;->c:Lcom/android/camera/Camera;
 
-    invoke-virtual {p0}, Lcom/android/camera/Camera;->Cn()V
+    invoke-virtual {p0}, Lcom/android/camera/Camera;->Ol()V
 
     :cond_3
     :goto_0

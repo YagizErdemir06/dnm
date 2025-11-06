@@ -29,15 +29,17 @@
 
 
 # instance fields
-.field final hardwareConfigState:Lcom/bumptech/glide/load/resource/bitmap/HardwareConfigState;
+.field public final hardwareConfigState:Lcom/bumptech/glide/load/resource/bitmap/HardwareConfigState;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {}, Lcom/bumptech/glide/load/resource/bitmap/HardwareConfigState;->getInstance()Lcom/bumptech/glide/load/resource/bitmap/HardwareConfigState;
 
     move-result-object v0
@@ -247,6 +249,7 @@
         }
     .end annotation
 
+    .line 1
     check-cast p1, Landroid/graphics/ImageDecoder$Source;
 
     invoke-virtual {p0, p1, p2}, Lcom/bumptech/glide/load/resource/ImageDecoderResourceDecoder;->handles(Landroid/graphics/ImageDecoder$Source;Lcom/bumptech/glide/load/Options;)Z

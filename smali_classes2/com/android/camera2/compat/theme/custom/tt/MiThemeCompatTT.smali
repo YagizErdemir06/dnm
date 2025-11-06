@@ -14,6 +14,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,6 +24,14 @@
 # virtual methods
 .method public create(Landroid/content/Context;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     return-void
 .end method
@@ -33,8 +42,20 @@
     return-void
 .end method
 
-.method public getDeviceWatermark(Ljava/lang/String;FZ)Lcom/android/gallery3d/ui/b;
+.method public getDeviceWatermark(Ljava/lang/String;FZ)Ld/d/c/a/b;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "customText",
+            "ratio",
+            "isLTR"
+        }
+    .end annotation
 
     const/4 p0, 0x0
 
@@ -52,6 +73,7 @@
 .method public getOperationBottom()Lcom/android/camera2/compat/theme/common/MiThemeOperationBottomInterface;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/tt/MiThemeCompatTT;->miThemeOperatioBottomTT:Lcom/android/camera2/compat/theme/custom/tt/MiThemeOperatioBottomTT;
 
     return-object p0
@@ -99,12 +121,30 @@
 
 .method public getOverlayResByDefaultSuffix(I)I
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "srcId"
+        }
+    .end annotation
 
     return p1
 .end method
 
 .method public getOverlayResBySuffix(ILjava/lang/String;)I
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "srcId",
+            "suffix"
+        }
+    .end annotation
 
     return p1
 .end method
@@ -112,19 +152,37 @@
 .method public getTestStringID()I
     .locals 0
 
-    const p0, 0x7f140bd4
+    const p0, 0x7f130b4f
 
     return p0
 .end method
 
 .method public getTypeface(Landroid/content/Context;Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "tf"
+        }
+    .end annotation
 
     return-object p2
 .end method
 
 .method public setTheme(Landroid/app/Activity;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "activity"
+        }
+    .end annotation
 
     return-void
 .end method

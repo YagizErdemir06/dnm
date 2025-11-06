@@ -40,9 +40,10 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/xb/xsdschema/SimpleDerivationSet$1;->class$org$apache$xmlbeans$impl$xb$xsdschema$SimpleDerivationSet$Member2$Item:Ljava/lang/Class;
 
     if-nez v0, :cond_0
@@ -76,14 +77,17 @@
 
     sput-object v0, Lorg/apache/xmlbeans/impl/xb/xsdschema/SimpleDerivationSet$Member2$Item;->type:Lorg/apache/xmlbeans/SchemaType;
 
+    .line 2
     sget-object v0, Lorg/apache/xmlbeans/impl/xb/xsdschema/DerivationControl;->LIST:Lorg/apache/xmlbeans/impl/xb/xsdschema/DerivationControl$Enum;
 
     sput-object v0, Lorg/apache/xmlbeans/impl/xb/xsdschema/SimpleDerivationSet$Member2$Item;->LIST:Lorg/apache/xmlbeans/impl/xb/xsdschema/DerivationControl$Enum;
 
+    .line 3
     sget-object v0, Lorg/apache/xmlbeans/impl/xb/xsdschema/DerivationControl;->UNION:Lorg/apache/xmlbeans/impl/xb/xsdschema/DerivationControl$Enum;
 
     sput-object v0, Lorg/apache/xmlbeans/impl/xb/xsdschema/SimpleDerivationSet$Member2$Item;->UNION:Lorg/apache/xmlbeans/impl/xb/xsdschema/DerivationControl$Enum;
 
+    .line 4
     sget-object v0, Lorg/apache/xmlbeans/impl/xb/xsdschema/DerivationControl;->RESTRICTION:Lorg/apache/xmlbeans/impl/xb/xsdschema/DerivationControl$Enum;
 
     sput-object v0, Lorg/apache/xmlbeans/impl/xb/xsdschema/SimpleDerivationSet$Member2$Item;->RESTRICTION:Lorg/apache/xmlbeans/impl/xb/xsdschema/DerivationControl$Enum;

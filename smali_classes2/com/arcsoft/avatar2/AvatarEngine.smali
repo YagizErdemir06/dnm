@@ -39,10 +39,12 @@
 
     const-string v0, "mimoji_jni"
 
+    .line 1
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     const-string v0, "mimoji_avatarengine"
 
+    .line 2
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     return-void
@@ -51,20 +53,25 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
+    .line 2
     iput v0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->b:I
 
+    .line 3
     iput v0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->c:I
 
+    .line 4
     new-instance v0, Ljava/util/TreeMap;
 
     invoke-direct {v0}, Ljava/util/TreeMap;-><init>()V
 
     iput-object v0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->d:Ljava/util/TreeMap;
 
+    .line 5
     new-instance v0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;
 
     invoke-direct {v0}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;-><init>()V
@@ -73,10 +80,12 @@
 
     const-wide/16 v0, 0x0
 
+    .line 6
     iput-wide v0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
     const-string v0, ""
 
+    .line 7
     iput-object v0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->g:Ljava/lang/String;
 
     return-void
@@ -107,6 +116,7 @@
 .method public static synthetic b(Lcom/arcsoft/avatar2/AvatarEngine;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->b:I
 
     return p0
@@ -247,6 +257,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-wide v2, v12, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
@@ -293,6 +304,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-wide v2, v12, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
@@ -337,6 +349,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-wide v1, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
@@ -375,10 +388,12 @@
 
     const-string v0, "avatarProcessWithInfo"
 
+    .line 1
     invoke-static {v0}, Lcom/arcsoft/avatar2/util/TimeConsumingUtil;->startTheTimer(Ljava/lang/String;)V
 
     move-object v1, p0
 
+    .line 2
     iget-wide v2, v1, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
     move-object v4, p1
@@ -403,6 +418,7 @@
 
     const-string v2, "performance"
 
+    .line 3
     invoke-static {v2, v0}, Lcom/arcsoft/avatar2/util/TimeConsumingUtil;->stopTiming(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
@@ -411,6 +427,7 @@
 .method public avatarProcessWithInfoEx(Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;IZILcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;Z)I
     .locals 9
 
+    .line 1
     iget-wide v1, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
     move-object v0, p0
@@ -441,6 +458,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-wide v2, v14, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
@@ -489,6 +507,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-wide v1, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
@@ -510,6 +529,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     monitor-exit p0
 
     return-void
@@ -533,10 +553,12 @@
 
     const-string p1, "null"
 
+    .line 1
     invoke-static {p0, p1}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 
+    .line 2
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -558,6 +580,7 @@
 
     invoke-static {p0, v1}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 3
     invoke-virtual {p1}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->getFaceCount()I
 
     move-result v1
@@ -568,6 +591,7 @@
 
     return p0
 
+    .line 4
     :cond_1
     invoke-virtual {p1}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->shelterIsNull()Z
 
@@ -577,10 +601,12 @@
 
     const-string p1, "shelterFlags == null"
 
+    .line 5
     invoke-static {p0, p1}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 
+    .line 6
     :cond_2
     invoke-virtual {p1}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->getFaceCount()I
 
@@ -590,6 +616,7 @@
 
     return v0
 
+    .line 7
     :cond_3
     invoke-virtual {p1}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->checkOutLineInfo()I
 
@@ -603,6 +630,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-wide v0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
@@ -632,24 +660,29 @@
     :try_start_0
     const-string v0, "destroy"
 
+    .line 1
     invoke-static {v0}, Lcom/arcsoft/avatar2/util/TimeConsumingUtil;->startTheTimer(Ljava/lang/String;)V
 
+    .line 2
     iget-wide v0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
     invoke-direct {p0, v0, v1}, Lcom/arcsoft/avatar2/AvatarEngine;->nativeDestroy(J)I
 
     const-wide/16 v0, 0x0
 
+    .line 3
     iput-wide v0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
     const-string v0, "performance"
 
     const-string v1, "destroy"
 
+    .line 4
     invoke-static {v0, v1}, Lcom/arcsoft/avatar2/util/TimeConsumingUtil;->stopTiming(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 5
     monitor-exit p0
 
     return-void
@@ -667,6 +700,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-wide v0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
@@ -701,11 +735,13 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 2
     iget-wide v2, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
     new-instance v6, Lcom/arcsoft/avatar2/AvatarEngine$2;
@@ -722,6 +758,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     monitor-exit p0
 
     return-object v0
@@ -739,21 +776,25 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-wide v0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
     invoke-direct {p0, v0, v1, p1}, Lcom/arcsoft/avatar2/AvatarEngine;->nativeGetConfigValue(JLcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;)I
 
+    .line 2
     iget v0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configFaceColorID:I
 
     iput v0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->b:I
 
+    .line 3
     iget p1, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configLipColorID:I
 
     iput p1, p0, Lcom/arcsoft/avatar2/AvatarEngine;->c:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
     monitor-exit p0
 
     return-void
@@ -769,14 +810,17 @@
 .method public getExtraSceneName()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->e:Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;
 
     const-string v1, ""
 
     if-eqz v0, :cond_1
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/arcsoft/avatar2/AvatarEngine;->getConfigValue(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;)V
 
+    .line 3
     iget-object p0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->e:Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;
 
     iget p0, p0, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configHeadwearStyleID:I
@@ -877,11 +921,13 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 2
     iget-wide v1, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
     new-instance v3, Lcom/arcsoft/avatar2/AvatarEngine$1;
@@ -892,6 +938,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     monitor-exit p0
 
     return-object v0
@@ -907,6 +954,7 @@
 .method public getTemplatePath()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->g:Ljava/lang/String;
 
     return-object p0
@@ -915,6 +963,7 @@
 .method public getVersion()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/arcsoft/avatar2/AvatarEngine;->nativeGetVersion()Ljava/lang/String;
 
     move-result-object p0
@@ -930,20 +979,24 @@
     :try_start_0
     const-string v0, "init"
 
+    .line 1
     invoke-static {v0}, Lcom/arcsoft/avatar2/util/TimeConsumingUtil;->startTheTimer(Ljava/lang/String;)V
 
+    .line 2
     invoke-direct {p0}, Lcom/arcsoft/avatar2/AvatarEngine;->nativeCreate()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
+    .line 3
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/arcsoft/avatar2/AvatarEngine;->nativeInit(JLjava/lang/String;Ljava/lang/String;)I
 
     move-result p1
 
     const-string p2, "AvatarEngine"
 
+    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -964,10 +1017,12 @@
 
     const-string p2, "init"
 
+    .line 5
     invoke-static {p1, p2}, Lcom/arcsoft/avatar2/util/TimeConsumingUtil;->stopTiming(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 6
     monitor-exit p0
 
     return-void
@@ -985,6 +1040,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-wide v0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
@@ -1011,6 +1067,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     invoke-direct {p0, p1}, Lcom/arcsoft/avatar2/AvatarEngine;->nativeLoadColorValue(Ljava/lang/String;)I
 
@@ -1038,8 +1095,10 @@
     :try_start_0
     const-string v0, "loadConfig"
 
+    .line 1
     invoke-static {v0}, Lcom/arcsoft/avatar2/util/TimeConsumingUtil;->startTheTimer(Ljava/lang/String;)V
 
+    .line 2
     iget-wide v0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
     invoke-direct {p0, v0, v1, p1}, Lcom/arcsoft/avatar2/AvatarEngine;->nativeLoadConfig(JLjava/lang/String;)I
@@ -1048,10 +1107,12 @@
 
     const-string v0, "loadConfig"
 
+    .line 3
     invoke-static {p1, v0}, Lcom/arcsoft/avatar2/util/TimeConsumingUtil;->stopTiming(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
     monitor-exit p0
 
     return-void
@@ -1067,6 +1128,7 @@
 .method public nativeProcessWithInfoToPreview(Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;IZILcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;Z)Z
     .locals 9
 
+    .line 1
     iget-wide v1, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
     move-object v0, p0
@@ -1095,6 +1157,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     new-instance v9, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;
 
@@ -1102,8 +1165,10 @@
 
     const-string v0, "outlineProcess"
 
+    .line 2
     invoke-static {v0}, Lcom/arcsoft/avatar2/util/TimeConsumingUtil;->startTheTimer(Ljava/lang/String;)V
 
+    .line 3
     iget-wide v1, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
     move-object v0, p0
@@ -1128,10 +1193,12 @@
 
     const-string p3, "outlineProcess"
 
+    .line 4
     invoke-static {p2, p3}, Lcom/arcsoft/avatar2/util/TimeConsumingUtil;->stopTiming(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p2, "CheckOutLine"
 
+    .line 5
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1148,6 +1215,7 @@
 
     invoke-static {p2, p1}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 6
     invoke-virtual {p0, v9}, Lcom/arcsoft/avatar2/AvatarEngine;->checkOutlineInfo(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;)I
 
     move-result p1
@@ -1171,6 +1239,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     new-instance v6, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;
 
@@ -1178,8 +1247,10 @@
 
     const-string v0, "outlineProcessEx"
 
+    .line 2
     invoke-static {v0}, Lcom/arcsoft/avatar2/util/TimeConsumingUtil;->startTheTimer(Ljava/lang/String;)V
 
+    .line 3
     iget-wide v1, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
     move-object v0, p0
@@ -1198,10 +1269,12 @@
 
     const-string v0, "outlineProcessEx"
 
+    .line 4
     invoke-static {p2, v0}, Lcom/arcsoft/avatar2/util/TimeConsumingUtil;->stopTiming(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p2, "CheckOutLine"
 
+    .line 5
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1218,6 +1291,7 @@
 
     invoke-static {p2, p1}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 6
     invoke-virtual {p0, v6}, Lcom/arcsoft/avatar2/AvatarEngine;->checkOutlineInfo(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;)I
 
     move-result p1
@@ -1243,6 +1317,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-wide v2, v12, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
@@ -1285,6 +1360,7 @@
 .method public readRGBA(Ljava/lang/String;II[B)I
     .locals 7
 
+    .line 1
     iget-wide v1, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
     move-object v0, p0
@@ -1312,8 +1388,10 @@
     :try_start_0
     const-string v0, "releaseRender"
 
+    .line 1
     invoke-static {v0}, Lcom/arcsoft/avatar2/util/TimeConsumingUtil;->startTheTimer(Ljava/lang/String;)V
 
+    .line 2
     iget-wide v0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
     invoke-direct {p0, v0, v1}, Lcom/arcsoft/avatar2/AvatarEngine;->nativeReleaseRender(J)I
@@ -1322,10 +1400,12 @@
 
     const-string v1, "releaseRender"
 
+    .line 3
     invoke-static {v0, v1}, Lcom/arcsoft/avatar2/util/TimeConsumingUtil;->stopTiming(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
     monitor-exit p0
 
     return-void
@@ -1341,6 +1421,7 @@
 .method public renderBackgroundWithImageData(Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;IZ[I)I
     .locals 7
 
+    .line 1
     iget-wide v1, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
     move-object v0, p0
@@ -1363,6 +1444,7 @@
 .method public renderBackgroundWithTexture(IIZ[F)I
     .locals 7
 
+    .line 1
     iget-wide v1, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
     move-object v0, p0
@@ -1392,8 +1474,10 @@
     :try_start_0
     const-string v0, "renderThumb"
 
+    .line 1
     invoke-static {v0}, Lcom/arcsoft/avatar2/util/TimeConsumingUtil;->startTheTimer(Ljava/lang/String;)V
 
+    .line 2
     iget-wide v2, v14, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
     move-object v1, p0
@@ -1426,10 +1510,12 @@
 
     const-string v2, "renderThumb"
 
+    .line 3
     invoke-static {v1, v2}, Lcom/arcsoft/avatar2/util/TimeConsumingUtil;->stopTiming(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
     monitor-exit p0
 
     return v0
@@ -1447,6 +1533,7 @@
 
     move-object v0, p0
 
+    .line 1
     iget-wide v1, v0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
     move-object/from16 v3, p1
@@ -1485,6 +1572,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-wide v0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
@@ -1509,6 +1597,7 @@
 .method public setAnimationParam(ZI)V
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/arcsoft/avatar2/AvatarEngine;->nativeSetAnimationParam(JZI)I
@@ -1517,10 +1606,11 @@
 .end method
 
 .method public declared-synchronized setConfig(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;)I
-    .locals 4
+    .locals 5
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget v0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;->configType:I
 
@@ -1528,18 +1618,23 @@
 
     if-ne v0, v1, :cond_2
 
+    .line 2
     iget v0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;->configID:I
 
     iput v0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->b:I
 
-    new-instance v1, Ljava/lang/Integer;
+    .line 3
+    new-instance v0, Ljava/lang/Integer;
 
-    invoke-direct {v1, v0}, Ljava/lang/Integer;-><init>(I)V
+    iget v1, p0, Lcom/arcsoft/avatar2/AvatarEngine;->b:I
 
-    invoke-virtual {v1}, Ljava/lang/Integer;->toString()Ljava/lang/String;
+    invoke-direct {v0, v1}, Ljava/lang/Integer;-><init>(I)V
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->toString()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 4
     iget-object v1, p0, Lcom/arcsoft/avatar2/AvatarEngine;->d:Ljava/util/TreeMap;
 
     invoke-virtual {v1}, Ljava/util/TreeMap;->size()I
@@ -1556,45 +1651,45 @@
 
     if-eqz v1, :cond_3
 
-    iget-object v1, p0, Lcom/arcsoft/avatar2/AvatarEngine;->d:Ljava/util/TreeMap;
+    const/4 v1, 0x0
 
-    invoke-virtual {v1}, Ljava/util/TreeMap;->values()Ljava/util/Collection;
+    .line 5
+    iget-object v2, p0, Lcom/arcsoft/avatar2/AvatarEngine;->d:Ljava/util/TreeMap;
 
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v2}, Ljava/util/TreeMap;->values()Ljava/util/Collection;
 
     move-result-object v2
 
-    check-cast v2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;
+    invoke-interface {v2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
-    iget v2, v2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;->configID:I
+    move-result-object v2
 
-    iget v3, p0, Lcom/arcsoft/avatar2/AvatarEngine;->c:I
+    :cond_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    if-ne v2, v3, :cond_0
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;
+
+    .line 6
+    iget v3, v3, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;->configID:I
+
+    iget v4, p0, Lcom/arcsoft/avatar2/AvatarEngine;->c:I
+
+    if-ne v3, v4, :cond_0
 
     const/4 v1, 0x1
 
-    goto :goto_0
-
     :cond_1
-    const/4 v1, 0x0
-
-    :goto_0
     if-eqz v1, :cond_3
 
+    .line 7
     iget-wide v1, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
     iget-object v3, p0, Lcom/arcsoft/avatar2/AvatarEngine;->d:Ljava/util/TreeMap;
@@ -1607,19 +1702,21 @@
 
     invoke-direct {p0, v1, v2, v0}, Lcom/arcsoft/avatar2/AvatarEngine;->nativeSetConfig(JLcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;)I
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_2
     const/4 v1, 0x5
 
     if-ne v0, v1, :cond_3
 
+    .line 8
     iget v0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;->configID:I
 
     iput v0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->c:I
 
+    .line 9
     :cond_3
-    :goto_1
+    :goto_0
     iget-wide v0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
     invoke-direct {p0, v0, v1, p1}, Lcom/arcsoft/avatar2/AvatarEngine;->nativeSetConfig(JLcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;)I
@@ -1643,6 +1740,7 @@
 .method public setHairRenderParam(ZZ)I
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/arcsoft/avatar2/AvatarEngine;->nativeSetHairRenderParam(JZZ)I
@@ -1655,6 +1753,7 @@
 .method public setHeadWearGrayPath(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->g:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1667,6 +1766,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget v0, p1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigInfo;->configType:I
 
@@ -1680,6 +1780,7 @@
 
     if-ne p1, v0, :cond_1
 
+    .line 3
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1696,6 +1797,7 @@
 
     move-result-object p1
 
+    .line 4
     invoke-direct {p0, p1}, Lcom/arcsoft/avatar2/AvatarEngine;->a(Ljava/lang/String;)I
 
     :cond_1
@@ -1706,6 +1808,7 @@
 .method public setHeadWearTexture(Ljava/lang/String;)I
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
     invoke-direct {p0, v0, v1, p1}, Lcom/arcsoft/avatar2/AvatarEngine;->nativeSetHeadWearTexture(JLjava/lang/String;)I
@@ -1718,6 +1821,7 @@
 .method public setProcessInfo(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;)I
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
     invoke-direct {p0, v0, v1, p1}, Lcom/arcsoft/avatar2/AvatarEngine;->nativeSetProcessInfo(JLcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;)I
@@ -1732,6 +1836,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-wide v1, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
@@ -1747,6 +1852,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     monitor-exit p0
 
     return-void
@@ -1764,6 +1870,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-wide v1, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
@@ -1779,6 +1886,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     monitor-exit p0
 
     return-void
@@ -1799,22 +1907,27 @@
     :try_start_0
     const-string v0, "setTemplatePath"
 
+    .line 1
     invoke-static {v0}, Lcom/arcsoft/avatar2/util/TimeConsumingUtil;->startTheTimer(Ljava/lang/String;)V
 
+    .line 2
     iget-wide v0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
     invoke-direct {p0, v0, v1, p1}, Lcom/arcsoft/avatar2/AvatarEngine;->nativeSetTemplate(JLjava/lang/String;)I
 
+    .line 3
     iput-object p1, p0, Lcom/arcsoft/avatar2/AvatarEngine;->g:Ljava/lang/String;
 
     const-string p1, "performance"
 
     const-string v0, "setTemplatePath"
 
+    .line 4
     invoke-static {p1, v0}, Lcom/arcsoft/avatar2/util/TimeConsumingUtil;->stopTiming(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 5
     monitor-exit p0
 
     return-void
@@ -1830,6 +1943,7 @@
 .method public setTongueAnimationParam(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarTongueAnimationParam;)I
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
     invoke-direct {p0, v0, v1, p1}, Lcom/arcsoft/avatar2/AvatarEngine;->nativeSetTongueAnimationParam(JLcom/arcsoft/avatar2/AvatarConfig$ASAvatarTongueAnimationParam;)I
@@ -1842,6 +1956,7 @@
 .method public setToothTexture(Ljava/lang/String;)I
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
     invoke-direct {p0, v0, v1, p1}, Lcom/arcsoft/avatar2/AvatarEngine;->nativeSetToothTexture(JLjava/lang/String;)I
@@ -1856,6 +1971,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-wide v0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
@@ -1863,6 +1979,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     monitor-exit p0
 
     return-void
@@ -1883,8 +2000,10 @@
     :try_start_0
     const-string v0, "unInit"
 
+    .line 1
     invoke-static {v0}, Lcom/arcsoft/avatar2/util/TimeConsumingUtil;->startTheTimer(Ljava/lang/String;)V
 
+    .line 2
     iget-wide v0, p0, Lcom/arcsoft/avatar2/AvatarEngine;->f:J
 
     invoke-direct {p0, v0, v1}, Lcom/arcsoft/avatar2/AvatarEngine;->nativeUnInit(J)I
@@ -1895,10 +2014,12 @@
 
     const-string v2, "unInit"
 
+    .line 3
     invoke-static {v1, v2}, Lcom/arcsoft/avatar2/util/TimeConsumingUtil;->stopTiming(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "AvatarEngine"
 
+    .line 4
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1917,6 +2038,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 5
     monitor-exit p0
 
     return-void

@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ComparisonChain$1;
+.class public Lcom/google/common/collect/ComparisonChain$1;
 .super Lcom/google/common/collect/ComparisonChain;
 .source "SourceFile"
 
@@ -20,6 +20,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/google/common/collect/ComparisonChain;-><init>(Lcom/google/common/collect/ComparisonChain$1;)V
 
     return-void
@@ -32,6 +33,7 @@
 
     if-gez p1, :cond_0
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/ComparisonChain;->access$100()Lcom/google/common/collect/ComparisonChain;
 
     move-result-object p0
@@ -177,6 +179,7 @@
 .method public compareFalseFirst(ZZ)Lcom/google/common/collect/ComparisonChain;
     .locals 0
 
+    .line 1
     invoke-static {p1, p2}, Lcom/google/common/primitives/Booleans;->compare(ZZ)I
 
     move-result p1
@@ -191,6 +194,7 @@
 .method public compareTrueFirst(ZZ)Lcom/google/common/collect/ComparisonChain;
     .locals 0
 
+    .line 1
     invoke-static {p2, p1}, Lcom/google/common/primitives/Booleans;->compare(ZZ)I
 
     move-result p1

@@ -20,8 +20,4 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Landroidx/preference/Preference;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 .end method

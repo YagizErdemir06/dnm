@@ -13,8 +13,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Lorg/dom4j/rule/RuleManager;
 
     invoke-direct {v0}, Lorg/dom4j/rule/RuleManager;-><init>()V
@@ -29,6 +31,7 @@
 .method public addRule(Lorg/dom4j/rule/Rule;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/rule/Stylesheet;->ruleManager:Lorg/dom4j/rule/RuleManager;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/rule/RuleManager;->addRule(Lorg/dom4j/rule/Rule;)V
@@ -314,6 +317,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/rule/Stylesheet;->ruleManager:Lorg/dom4j/rule/RuleManager;
 
     invoke-virtual {p0}, Lorg/dom4j/rule/RuleManager;->clear()V
@@ -324,6 +328,7 @@
 .method public getModeName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/rule/Stylesheet;->modeName:Ljava/lang/String;
 
     return-object p0
@@ -332,6 +337,7 @@
 .method public getValueOfAction()Lorg/dom4j/rule/Action;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/rule/Stylesheet;->ruleManager:Lorg/dom4j/rule/RuleManager;
 
     invoke-virtual {p0}, Lorg/dom4j/rule/RuleManager;->getValueOfAction()Lorg/dom4j/rule/Action;
@@ -344,6 +350,7 @@
 .method public removeRule(Lorg/dom4j/rule/Rule;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/rule/Stylesheet;->ruleManager:Lorg/dom4j/rule/RuleManager;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/rule/RuleManager;->removeRule(Lorg/dom4j/rule/Rule;)V
@@ -501,6 +508,7 @@
 .method public setModeName(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/rule/Stylesheet;->modeName:Ljava/lang/String;
 
     return-void
@@ -509,6 +517,7 @@
 .method public setValueOfAction(Lorg/dom4j/rule/Action;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/rule/Stylesheet;->ruleManager:Lorg/dom4j/rule/RuleManager;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/rule/RuleManager;->setValueOfAction(Lorg/dom4j/rule/Action;)V

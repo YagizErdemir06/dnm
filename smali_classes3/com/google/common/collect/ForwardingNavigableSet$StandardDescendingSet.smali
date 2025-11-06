@@ -28,6 +28,7 @@
 .method public constructor <init>(Lcom/google/common/collect/ForwardingNavigableSet;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/Sets$DescendingSet;-><init>(Ljava/util/NavigableSet;)V
 
     return-void

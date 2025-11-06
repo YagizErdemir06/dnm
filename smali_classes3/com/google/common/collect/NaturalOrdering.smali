@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/NaturalOrdering;
+.class public final Lcom/google/common/collect/NaturalOrdering;
 .super Lcom/google/common/collect/Ordering;
 .source "SourceFile"
 
@@ -25,7 +25,7 @@
 
 
 # static fields
-.field static final INSTANCE:Lcom/google/common/collect/NaturalOrdering;
+.field public static final INSTANCE:Lcom/google/common/collect/NaturalOrdering;
 
 .field private static final serialVersionUID:J
 
@@ -62,6 +62,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/NaturalOrdering;
 
     invoke-direct {v0}, Lcom/google/common/collect/NaturalOrdering;-><init>()V
@@ -74,6 +75,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/Ordering;-><init>()V
 
     return-void
@@ -82,6 +84,7 @@
 .method private readResolve()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     sget-object p0, Lcom/google/common/collect/NaturalOrdering;->INSTANCE:Lcom/google/common/collect/NaturalOrdering;
 
     return-object p0
@@ -142,10 +145,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/NaturalOrdering;->nullsFirst:Lcom/google/common/collect/Ordering;
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-super {p0}, Lcom/google/common/collect/Ordering;->nullsFirst()Lcom/google/common/collect/Ordering;
 
     move-result-object v0
@@ -168,10 +173,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/NaturalOrdering;->nullsLast:Lcom/google/common/collect/Ordering;
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-super {p0}, Lcom/google/common/collect/Ordering;->nullsLast()Lcom/google/common/collect/Ordering;
 
     move-result-object v0
@@ -194,6 +201,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object p0, Lcom/google/common/collect/ReverseNaturalOrdering;->INSTANCE:Lcom/google/common/collect/ReverseNaturalOrdering;
 
     return-object p0

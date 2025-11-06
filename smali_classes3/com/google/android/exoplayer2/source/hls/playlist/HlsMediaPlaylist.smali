@@ -131,74 +131,91 @@
 
     move/from16 v5, p18
 
+    .line 1
     invoke-direct {p0, p2, p3, v5}, Lcom/google/android/exoplayer2/source/hls/playlist/HlsPlaylist;-><init>(Ljava/lang/String;Ljava/util/List;Z)V
 
     move v3, p1
 
+    .line 2
     iput v3, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->playlistType:I
 
     move-wide/from16 v3, p7
 
+    .line 3
     iput-wide v3, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->startTimeUs:J
 
     move/from16 v3, p6
 
+    .line 4
     iput-boolean v3, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->preciseStart:Z
 
     move/from16 v3, p9
 
+    .line 5
     iput-boolean v3, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->hasDiscontinuitySequence:Z
 
     move/from16 v3, p10
 
+    .line 6
     iput v3, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->discontinuitySequence:I
 
     move-wide/from16 v3, p11
 
+    .line 7
     iput-wide v3, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->mediaSequence:J
 
     move/from16 v3, p13
 
+    .line 8
     iput v3, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->version:I
 
     move-wide/from16 v3, p14
 
+    .line 9
     iput-wide v3, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->targetDurationUs:J
 
     move-wide/from16 v3, p16
 
+    .line 10
     iput-wide v3, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->partTargetDurationUs:J
 
     move/from16 v3, p19
 
+    .line 11
     iput-boolean v3, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->hasEndTag:Z
 
     move/from16 v3, p20
 
+    .line 12
     iput-boolean v3, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->hasProgramDateTime:Z
 
     move-object/from16 v3, p21
 
+    .line 13
     iput-object v3, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->protectionSchemes:Lcom/google/android/exoplayer2/drm/DrmInitData;
 
+    .line 14
     invoke-static/range {p22 .. p22}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object v3
 
     iput-object v3, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->segments:Ljava/util/List;
 
+    .line 15
     invoke-static/range {p23 .. p23}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object v3
 
     iput-object v3, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->trailingParts:Ljava/util/List;
 
+    .line 16
     invoke-static/range {p25 .. p25}, Lcom/google/common/collect/ImmutableMap;->copyOf(Ljava/util/Map;)Lcom/google/common/collect/ImmutableMap;
 
     move-result-object v3
 
     iput-object v3, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->renditionReports:Ljava/util/Map;
 
+    .line 17
     invoke-interface/range {p23 .. p23}, Ljava/util/List;->isEmpty()Z
 
     move-result v3
@@ -207,12 +224,14 @@
 
     if-nez v3, :cond_0
 
+    .line 18
     invoke-static/range {p23 .. p23}, Lcom/google/common/collect/Iterables;->getLast(Ljava/lang/Iterable;)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Part;
 
+    .line 19
     iget-wide v6, v3, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist$SegmentBase;->relativeStartTimeUs:J
 
     iget-wide v8, v3, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist$SegmentBase;->durationUs:J
@@ -223,6 +242,7 @@
 
     goto :goto_0
 
+    .line 20
     :cond_0
     invoke-interface/range {p22 .. p22}, Ljava/util/List;->isEmpty()Z
 
@@ -230,12 +250,14 @@
 
     if-nez v3, :cond_1
 
+    .line 21
     invoke-static/range {p22 .. p22}, Lcom/google/common/collect/Iterables;->getLast(Ljava/lang/Iterable;)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;
 
+    .line 22
     iget-wide v6, v3, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist$SegmentBase;->relativeStartTimeUs:J
 
     iget-wide v8, v3, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist$SegmentBase;->durationUs:J
@@ -246,6 +268,7 @@
 
     goto :goto_0
 
+    .line 23
     :cond_1
     iput-wide v4, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->durationUs:J
 
@@ -263,6 +286,7 @@
 
     if-ltz v3, :cond_3
 
+    .line 24
     iget-wide v6, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->durationUs:J
 
     invoke-static {v6, v7, p4, p5}, Ljava/lang/Math;->min(JJ)J
@@ -271,6 +295,7 @@
 
     goto :goto_1
 
+    .line 25
     :cond_3
     iget-wide v6, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->durationUs:J
 
@@ -294,11 +319,13 @@
     :cond_4
     const/4 v1, 0x0
 
+    .line 26
     :goto_2
     iput-boolean v1, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->hasPositiveStartOffset:Z
 
     move-object/from16 v1, p24
 
+    .line 27
     iput-object v1, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->serverControl:Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist$ServerControl;
 
     return-void
@@ -324,6 +351,7 @@
 .method public bridge synthetic copy(Ljava/util/List;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->copy(Ljava/util/List;)Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;
 
     move-result-object p0
@@ -340,6 +368,7 @@
 
     move/from16 v11, p3
 
+    .line 1
     new-instance v27, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;
 
     move-object/from16 v1, v27
@@ -354,57 +383,59 @@
 
     iget-boolean v7, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->preciseStart:Z
 
-    const/4 v10, 0x1
-
     iget-wide v12, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->mediaSequence:J
 
     iget v14, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->version:I
 
-    move/from16 p1, v11
+    move-object/from16 p1, v1
 
-    iget-wide v10, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->targetDurationUs:J
+    move/from16 p2, v2
 
-    move-wide v15, v10
+    iget-wide v1, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->targetDurationUs:J
 
-    iget-wide v10, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->partTargetDurationUs:J
+    move-wide v15, v1
 
-    move-wide/from16 v17, v10
+    iget-wide v1, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->partTargetDurationUs:J
 
-    iget-boolean v10, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsPlaylist;->hasIndependentSegments:Z
+    move-wide/from16 v17, v1
 
-    move/from16 v19, v10
+    iget-boolean v1, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsPlaylist;->hasIndependentSegments:Z
 
-    iget-boolean v10, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->hasEndTag:Z
+    move/from16 v19, v1
 
-    move/from16 v20, v10
+    iget-boolean v1, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->hasEndTag:Z
 
-    iget-boolean v10, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->hasProgramDateTime:Z
+    move/from16 v20, v1
 
-    move/from16 v21, v10
+    iget-boolean v1, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->hasProgramDateTime:Z
 
-    iget-object v10, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->protectionSchemes:Lcom/google/android/exoplayer2/drm/DrmInitData;
+    move/from16 v21, v1
 
-    move-object/from16 v22, v10
+    iget-object v1, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->protectionSchemes:Lcom/google/android/exoplayer2/drm/DrmInitData;
 
-    iget-object v10, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->segments:Ljava/util/List;
+    move-object/from16 v22, v1
 
-    move-object/from16 v23, v10
+    iget-object v1, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->segments:Ljava/util/List;
 
-    iget-object v10, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->trailingParts:Ljava/util/List;
+    move-object/from16 v23, v1
 
-    move-object/from16 v24, v10
+    iget-object v1, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->trailingParts:Ljava/util/List;
 
-    iget-object v10, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->serverControl:Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist$ServerControl;
+    move-object/from16 v24, v1
 
-    move-object/from16 v25, v10
+    iget-object v1, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->serverControl:Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist$ServerControl;
+
+    move-object/from16 v25, v1
 
     iget-object v0, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->renditionReports:Ljava/util/Map;
 
     move-object/from16 v26, v0
 
-    move/from16 v11, p1
-
     const/4 v10, 0x1
+
+    move-object/from16 v1, p1
+
+    move/from16 v2, p2
 
     invoke-direct/range {v1 .. v26}, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;-><init>(ILjava/lang/String;Ljava/util/List;JZJZIJIJJZZZLcom/google/android/exoplayer2/drm/DrmInitData;Ljava/util/List;Ljava/util/List;Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist$ServerControl;Ljava/util/Map;)V
 
@@ -416,12 +447,14 @@
 
     move-object/from16 v0, p0
 
+    .line 1
     iget-boolean v1, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->hasEndTag:Z
 
     if-eqz v1, :cond_0
 
     return-object v0
 
+    .line 2
     :cond_0
     new-instance v1, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;
 
@@ -499,6 +532,7 @@
 .method public getEndTimeUs()J
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->startTimeUs:J
 
     iget-wide v2, p0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->durationUs:J
@@ -519,6 +553,7 @@
 
     if-eqz p1, :cond_5
 
+    .line 1
     iget-wide v1, p0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->mediaSequence:J
 
     iget-wide v3, p1, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->mediaSequence:J
@@ -538,6 +573,7 @@
 
     return v2
 
+    .line 2
     :cond_1
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->segments:Ljava/util/List;
 
@@ -565,6 +601,7 @@
     :goto_0
     return v0
 
+    .line 3
     :cond_3
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->trailingParts:Ljava/util/List;
 
@@ -572,6 +609,7 @@
 
     move-result v1
 
+    .line 4
     iget-object v3, p1, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->trailingParts:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->size()I
@@ -582,6 +620,7 @@
 
     if-ne v1, v3, :cond_4
 
+    .line 5
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->hasEndTag:Z
 
     if-eqz p0, :cond_4

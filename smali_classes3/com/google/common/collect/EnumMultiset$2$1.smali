@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/EnumMultiset$2$1;
+.class public Lcom/google/common/collect/EnumMultiset$2$1;
 .super Lcom/google/common/collect/Multisets$AbstractEntry;
 .source "SourceFile"
 
@@ -22,15 +22,16 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/google/common/collect/EnumMultiset$2;
+.field public final synthetic this$1:Lcom/google/common/collect/EnumMultiset$2;
 
-.field final synthetic val$index:I
+.field public final synthetic val$index:I
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/EnumMultiset$2;I)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/EnumMultiset$2$1;->this$1:Lcom/google/common/collect/EnumMultiset$2;
 
     iput p2, p0, Lcom/google/common/collect/EnumMultiset$2$1;->val$index:I
@@ -45,6 +46,7 @@
 .method public getCount()I
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/EnumMultiset$2$1;->this$1:Lcom/google/common/collect/EnumMultiset$2;
 
     iget-object v0, v0, Lcom/google/common/collect/EnumMultiset$2;->this$0:Lcom/google/common/collect/EnumMultiset;

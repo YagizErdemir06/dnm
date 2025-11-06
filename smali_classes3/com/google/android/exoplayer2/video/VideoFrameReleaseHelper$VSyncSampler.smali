@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/video/VideoFrameReleaseHelper$VSyncSampler;
+.class public final Lcom/google/android/exoplayer2/video/VideoFrameReleaseHelper$VSyncSampler;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -44,6 +44,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/video/VideoFrameReleaseHelper$VSyncSampler;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/video/VideoFrameReleaseHelper$VSyncSampler;-><init>()V
@@ -56,12 +57,15 @@
 .method private constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 2
     iput-wide v0, p0, Lcom/google/android/exoplayer2/video/VideoFrameReleaseHelper$VSyncSampler;->sampledVsyncTimeNs:J
 
+    .line 3
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "ExoPlayer:FrameReleaseChoreographer"
@@ -70,8 +74,10 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/video/VideoFrameReleaseHelper$VSyncSampler;->choreographerOwnerThread:Landroid/os/HandlerThread;
 
-    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
+    .line 4
+    invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
+    .line 5
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -84,6 +90,7 @@
 
     const/4 p0, 0x0
 
+    .line 6
     invoke-virtual {v0, p0}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     return-void
@@ -92,10 +99,12 @@
 .method private addObserverInternal()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/video/VideoFrameReleaseHelper$VSyncSampler;->choreographer:Landroid/view/Choreographer;
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget v1, p0, Lcom/google/android/exoplayer2/video/VideoFrameReleaseHelper$VSyncSampler;->observerCount:I
 
     const/4 v2, 0x1
@@ -106,6 +115,7 @@
 
     if-ne v1, v2, :cond_0
 
+    .line 3
     invoke-virtual {v0, p0}, Landroid/view/Choreographer;->postFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
 
     :cond_0
@@ -115,6 +125,7 @@
 .method private createChoreographerInstanceInternal()V
     .locals 2
 
+    .line 1
     :try_start_0
     invoke-static {}, Landroid/view/Choreographer;->getInstance()Landroid/view/Choreographer;
 
@@ -133,6 +144,7 @@
 
     const-string v1, "Vsync sampling disabled due to platform error"
 
+    .line 2
     invoke-static {v0, v1, p0}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
@@ -142,6 +154,7 @@
 .method public static getInstance()Lcom/google/android/exoplayer2/video/VideoFrameReleaseHelper$VSyncSampler;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/video/VideoFrameReleaseHelper$VSyncSampler;->INSTANCE:Lcom/google/android/exoplayer2/video/VideoFrameReleaseHelper$VSyncSampler;
 
     return-object v0
@@ -150,10 +163,12 @@
 .method private removeObserverInternal()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/video/VideoFrameReleaseHelper$VSyncSampler;->choreographer:Landroid/view/Choreographer;
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget v1, p0, Lcom/google/android/exoplayer2/video/VideoFrameReleaseHelper$VSyncSampler;->observerCount:I
 
     add-int/lit8 v1, v1, -0x1
@@ -162,10 +177,12 @@
 
     if-nez v1, :cond_0
 
+    .line 3
     invoke-virtual {v0, p0}, Landroid/view/Choreographer;->removeFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
 
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 4
     iput-wide v0, p0, Lcom/google/android/exoplayer2/video/VideoFrameReleaseHelper$VSyncSampler;->sampledVsyncTimeNs:J
 
     :cond_0
@@ -177,6 +194,7 @@
 .method public addObserver()V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/video/VideoFrameReleaseHelper$VSyncSampler;->handler:Landroid/os/Handler;
 
     const/4 v0, 0x1
@@ -189,8 +207,10 @@
 .method public doFrame(J)V
     .locals 2
 
+    .line 1
     iput-wide p1, p0, Lcom/google/android/exoplayer2/video/VideoFrameReleaseHelper$VSyncSampler;->sampledVsyncTimeNs:J
 
+    .line 2
     iget-object p1, p0, Lcom/google/android/exoplayer2/video/VideoFrameReleaseHelper$VSyncSampler;->choreographer:Landroid/view/Choreographer;
 
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -209,6 +229,7 @@
 .method public handleMessage(Landroid/os/Message;)Z
     .locals 2
 
+    .line 1
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/4 v0, 0x1
@@ -225,16 +246,19 @@
 
     return p0
 
+    .line 2
     :cond_0
     invoke-direct {p0}, Lcom/google/android/exoplayer2/video/VideoFrameReleaseHelper$VSyncSampler;->removeObserverInternal()V
 
     return v0
 
+    .line 3
     :cond_1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/video/VideoFrameReleaseHelper$VSyncSampler;->addObserverInternal()V
 
     return v0
 
+    .line 4
     :cond_2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/video/VideoFrameReleaseHelper$VSyncSampler;->createChoreographerInstanceInternal()V
 
@@ -244,6 +268,7 @@
 .method public removeObserver()V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/video/VideoFrameReleaseHelper$VSyncSampler;->handler:Landroid/os/Handler;
 
     const/4 v0, 0x2

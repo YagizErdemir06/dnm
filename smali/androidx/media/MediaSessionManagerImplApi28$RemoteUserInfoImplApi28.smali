@@ -1,4 +1,4 @@
-.class final Landroidx/media/MediaSessionManagerImplApi28$RemoteUserInfoImplApi28;
+.class public final Landroidx/media/MediaSessionManagerImplApi28$RemoteUserInfoImplApi28;
 .super Landroidx/media/MediaSessionManagerImplBase$RemoteUserInfoImplBase;
 .source "SourceFile"
 
@@ -19,7 +19,7 @@
 
 
 # instance fields
-.field final mObject:Landroid/media/session/MediaSessionManager$RemoteUserInfo;
+.field public final mObject:Landroid/media/session/MediaSessionManager$RemoteUserInfo;
 
 
 # direct methods
@@ -96,6 +96,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/media/session/MediaSessionManager$RemoteUserInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object p0

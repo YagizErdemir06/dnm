@@ -1,4 +1,4 @@
-.class Lcom/google/common/graph/AbstractBaseGraph$2;
+.class public Lcom/google/common/graph/AbstractBaseGraph$2;
 .super Lcom/google/common/graph/IncidentEdgeSet;
 .source "SourceFile"
 
@@ -25,6 +25,7 @@
 .method public constructor <init>(Lcom/google/common/graph/AbstractBaseGraph;Lcom/google/common/graph/BaseGraph;Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p2, p3}, Lcom/google/common/graph/IncidentEdgeSet;-><init>(Lcom/google/common/graph/BaseGraph;Ljava/lang/Object;)V
 
     return-void

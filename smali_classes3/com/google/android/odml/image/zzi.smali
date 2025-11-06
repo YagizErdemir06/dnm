@@ -1,4 +1,4 @@
-.class final Lcom/google/android/odml/image/zzi;
+.class public final Lcom/google/android/odml/image/zzi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -20,7 +20,7 @@
 
 # direct methods
 .method public constructor <init>(Landroid/media/Image;)V
-    .locals 2
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -32,11 +32,19 @@
 
     const/4 v1, 0x3
 
+    .line 1
     invoke-virtual {v0, v1}, Lcom/google/android/odml/image/zzh;->zzb(I)Lcom/google/android/odml/image/zzh;
 
+    .line 2
     invoke-virtual {p1}, Landroid/media/Image;->getFormat()I
 
     move-result p1
+
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v2, 0x17
+
+    if-lt v1, v2, :cond_1
 
     const/16 v1, 0x2a
 
@@ -79,6 +87,7 @@
     :goto_0
     invoke-virtual {v0, p1}, Lcom/google/android/odml/image/zzh;->zza(I)Lcom/google/android/odml/image/zzh;
 
+    .line 3
     invoke-virtual {v0}, Lcom/google/android/odml/image/zzh;->zzc()Lcom/google/android/odml/image/ImageProperties;
 
     move-result-object p1
@@ -111,6 +120,7 @@
 
     iget-object p0, p0, Lcom/google/android/odml/image/zzi;->zza:Landroid/media/Image;
 
+    .line 1
     invoke-virtual {p0}, Landroid/media/Image;->close()V
 
     return-void

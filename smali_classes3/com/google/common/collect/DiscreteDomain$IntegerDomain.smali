@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/DiscreteDomain$IntegerDomain;
+.class public final Lcom/google/common/collect/DiscreteDomain$IntegerDomain;
 .super Lcom/google/common/collect/DiscreteDomain;
 .source "SourceFile"
 
@@ -36,6 +36,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/DiscreteDomain$IntegerDomain;
 
     invoke-direct {v0}, Lcom/google/common/collect/DiscreteDomain$IntegerDomain;-><init>()V
@@ -52,6 +53,7 @@
 
     const/4 v1, 0x0
 
+    .line 1
     invoke-direct {p0, v0, v1}, Lcom/google/common/collect/DiscreteDomain;-><init>(ZLcom/google/common/collect/DiscreteDomain$1;)V
 
     return-void
@@ -60,6 +62,7 @@
 .method public static synthetic access$000()Lcom/google/common/collect/DiscreteDomain$IntegerDomain;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/common/collect/DiscreteDomain$IntegerDomain;->INSTANCE:Lcom/google/common/collect/DiscreteDomain$IntegerDomain;
 
     return-object v0
@@ -68,6 +71,7 @@
 .method private readResolve()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     sget-object p0, Lcom/google/common/collect/DiscreteDomain$IntegerDomain;->INSTANCE:Lcom/google/common/collect/DiscreteDomain$IntegerDomain;
 
     return-object p0

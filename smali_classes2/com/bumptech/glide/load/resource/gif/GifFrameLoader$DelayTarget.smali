@@ -1,4 +1,4 @@
-.class Lcom/bumptech/glide/load/resource/gif/GifFrameLoader$DelayTarget;
+.class public Lcom/bumptech/glide/load/resource/gif/GifFrameLoader$DelayTarget;
 .super Lcom/bumptech/glide/request/target/CustomTarget;
 .source "SourceFile"
 
@@ -28,7 +28,7 @@
 # instance fields
 .field private final handler:Landroid/os/Handler;
 
-.field final index:I
+.field public final index:I
 
 .field private resource:Landroid/graphics/Bitmap;
 
@@ -39,12 +39,16 @@
 .method public constructor <init>(Landroid/os/Handler;IJ)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/bumptech/glide/request/target/CustomTarget;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/bumptech/glide/load/resource/gif/GifFrameLoader$DelayTarget;->handler:Landroid/os/Handler;
 
+    .line 3
     iput p2, p0, Lcom/bumptech/glide/load/resource/gif/GifFrameLoader$DelayTarget;->index:I
 
+    .line 4
     iput-wide p3, p0, Lcom/bumptech/glide/load/resource/gif/GifFrameLoader$DelayTarget;->targetTime:J
 
     return-void
@@ -55,6 +59,7 @@
 .method public getResource()Landroid/graphics/Bitmap;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/gif/GifFrameLoader$DelayTarget;->resource:Landroid/graphics/Bitmap;
 
     return-object p0
@@ -69,6 +74,7 @@
 
     const/4 p1, 0x0
 
+    .line 1
     iput-object p1, p0, Lcom/bumptech/glide/load/resource/gif/GifFrameLoader$DelayTarget;->resource:Landroid/graphics/Bitmap;
 
     return-void

@@ -22,8 +22,10 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/util/FlagSet;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/Player$Events;->flags:Lcom/google/android/exoplayer2/util/FlagSet;
 
     return-void
@@ -34,6 +36,7 @@
 .method public contains(I)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Player$Events;->flags:Lcom/google/android/exoplayer2/util/FlagSet;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/util/FlagSet;->contains(I)Z
@@ -46,6 +49,7 @@
 .method public varargs containsAny([I)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Player$Events;->flags:Lcom/google/android/exoplayer2/util/FlagSet;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/util/FlagSet;->containsAny([I)Z
@@ -68,6 +72,7 @@
 
     return p0
 
+    .line 1
     :cond_0
     instance-of v0, p1, Lcom/google/android/exoplayer2/Player$Events;
 
@@ -77,9 +82,11 @@
 
     return p0
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/Player$Events;
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/Player$Events;->flags:Lcom/google/android/exoplayer2/util/FlagSet;
 
     iget-object p1, p1, Lcom/google/android/exoplayer2/Player$Events;->flags:Lcom/google/android/exoplayer2/util/FlagSet;
@@ -94,6 +101,7 @@
 .method public get(I)I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Player$Events;->flags:Lcom/google/android/exoplayer2/util/FlagSet;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/util/FlagSet;->get(I)I
@@ -106,6 +114,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Player$Events;->flags:Lcom/google/android/exoplayer2/util/FlagSet;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/FlagSet;->hashCode()I
@@ -118,6 +127,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Player$Events;->flags:Lcom/google/android/exoplayer2/util/FlagSet;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/FlagSet;->size()I

@@ -95,6 +95,7 @@
 .method private maybeThrowUninitializedError()V
     .locals 1
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;->trackId:I
 
     const/high16 v0, -0x80000000
@@ -103,6 +104,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -118,6 +120,7 @@
 .method public generateNewId()V
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;->trackId:I
 
     const/high16 v1, -0x80000000
@@ -136,6 +139,7 @@
     :goto_0
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;->trackId:I
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -160,8 +164,10 @@
 .method public getFormatId()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;->maybeThrowUninitializedError()V
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;->formatId:Ljava/lang/String;
 
     return-object p0
@@ -170,8 +176,10 @@
 .method public getTrackId()I
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;->maybeThrowUninitializedError()V
 
+    .line 2
     iget p0, p0, Lcom/google/android/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;->trackId:I
 
     return p0

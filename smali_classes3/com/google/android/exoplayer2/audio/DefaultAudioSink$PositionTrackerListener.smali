@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/audio/DefaultAudioSink$PositionTrackerListener;
+.class public final Lcom/google/android/exoplayer2/audio/DefaultAudioSink$PositionTrackerListener;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/android/exoplayer2/audio/DefaultAudioSink;
+.field public final synthetic this$0:Lcom/google/android/exoplayer2/audio/DefaultAudioSink;
 
 
 # direct methods
@@ -47,6 +47,7 @@
 .method public onInvalidLatency(J)V
     .locals 1
 
+    .line 1
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -71,6 +72,7 @@
 .method public onPositionAdvancing(J)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$PositionTrackerListener;->this$0:Lcom/google/android/exoplayer2/audio/DefaultAudioSink;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->access$1000(Lcom/google/android/exoplayer2/audio/DefaultAudioSink;)Lcom/google/android/exoplayer2/audio/AudioSink$Listener;
@@ -79,6 +81,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$PositionTrackerListener;->this$0:Lcom/google/android/exoplayer2/audio/DefaultAudioSink;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->access$1000(Lcom/google/android/exoplayer2/audio/DefaultAudioSink;)Lcom/google/android/exoplayer2/audio/AudioSink$Listener;
@@ -94,6 +97,7 @@
 .method public onPositionFramesMismatch(JJJJ)V
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -122,6 +126,7 @@
 
     iget-object p2, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$PositionTrackerListener;->this$0:Lcom/google/android/exoplayer2/audio/DefaultAudioSink;
 
+    .line 2
     invoke-static {p2}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->access$1200(Lcom/google/android/exoplayer2/audio/DefaultAudioSink;)J
 
     move-result-wide p2
@@ -132,6 +137,7 @@
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$PositionTrackerListener;->this$0:Lcom/google/android/exoplayer2/audio/DefaultAudioSink;
 
+    .line 3
     invoke-static {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->access$1300(Lcom/google/android/exoplayer2/audio/DefaultAudioSink;)J
 
     move-result-wide p0
@@ -142,16 +148,19 @@
 
     move-result-object p0
 
+    .line 4
     sget-boolean p1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->failOnSpuriousAudioTimestamp:Z
 
     if-nez p1, :cond_0
 
     const-string p1, "DefaultAudioSink"
 
+    .line 5
     invoke-static {p1, p0}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
+    .line 6
     :cond_0
     new-instance p1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$InvalidAudioTrackTimestampException;
 
@@ -165,6 +174,7 @@
 .method public onSystemTimeUsMismatch(JJJJ)V
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -193,6 +203,7 @@
 
     iget-object p2, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$PositionTrackerListener;->this$0:Lcom/google/android/exoplayer2/audio/DefaultAudioSink;
 
+    .line 2
     invoke-static {p2}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->access$1200(Lcom/google/android/exoplayer2/audio/DefaultAudioSink;)J
 
     move-result-wide p2
@@ -203,6 +214,7 @@
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$PositionTrackerListener;->this$0:Lcom/google/android/exoplayer2/audio/DefaultAudioSink;
 
+    .line 3
     invoke-static {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->access$1300(Lcom/google/android/exoplayer2/audio/DefaultAudioSink;)J
 
     move-result-wide p0
@@ -213,16 +225,19 @@
 
     move-result-object p0
 
+    .line 4
     sget-boolean p1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->failOnSpuriousAudioTimestamp:Z
 
     if-nez p1, :cond_0
 
     const-string p1, "DefaultAudioSink"
 
+    .line 5
     invoke-static {p1, p0}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
+    .line 6
     :cond_0
     new-instance p1, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$InvalidAudioTrackTimestampException;
 
@@ -236,6 +251,7 @@
 .method public onUnderrun(IJ)V
     .locals 10
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$PositionTrackerListener;->this$0:Lcom/google/android/exoplayer2/audio/DefaultAudioSink;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->access$1000(Lcom/google/android/exoplayer2/audio/DefaultAudioSink;)Lcom/google/android/exoplayer2/audio/AudioSink$Listener;
@@ -244,6 +260,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -256,6 +273,7 @@
 
     sub-long v8, v0, v2
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/audio/DefaultAudioSink$PositionTrackerListener;->this$0:Lcom/google/android/exoplayer2/audio/DefaultAudioSink;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/audio/DefaultAudioSink;->access$1000(Lcom/google/android/exoplayer2/audio/DefaultAudioSink;)Lcom/google/android/exoplayer2/audio/AudioSink$Listener;

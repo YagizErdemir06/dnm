@@ -30,6 +30,7 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/lang/Object;
@@ -46,6 +47,7 @@
 
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
+    .line 2
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     iput-object v0, p0, Lcom/google/mlkit/common/sdkinternal/TaskQueue;->zzd:Ljava/util/concurrent/atomic/AtomicReference;
@@ -72,6 +74,7 @@
 .method private final zzc()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/TaskQueue;->zza:Ljava/lang/Object;
 
     monitor-enter v0
@@ -79,7 +82,7 @@
     :try_start_0
     iget-object v1, p0, Lcom/google/mlkit/common/sdkinternal/TaskQueue;->zzc:Ljava/util/Queue;
 
-    invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
+    invoke-interface {v1}, Ljava/util/Queue;->isEmpty()Z
 
     move-result v1
 
@@ -89,6 +92,7 @@
 
     iput-boolean v1, p0, Lcom/google/mlkit/common/sdkinternal/TaskQueue;->zzb:Z
 
+    .line 2
     monitor-exit v0
 
     return-void
@@ -96,16 +100,19 @@
     :cond_0
     iget-object v1, p0, Lcom/google/mlkit/common/sdkinternal/TaskQueue;->zzc:Ljava/util/Queue;
 
+    .line 3
     invoke-interface {v1}, Ljava/util/Queue;->remove()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/google/mlkit/common/sdkinternal/zzv;
 
+    .line 4
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 5
     iget-object v0, v1, Lcom/google/mlkit/common/sdkinternal/zzv;->zza:Ljava/util/concurrent/Executor;
 
     iget-object v1, v1, Lcom/google/mlkit/common/sdkinternal/zzv;->zzb:Ljava/lang/Runnable;
@@ -117,6 +124,7 @@
     :catchall_0
     move-exception p0
 
+    .line 6
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -128,6 +136,7 @@
 .method private final zzd(Ljava/util/concurrent/Executor;Ljava/lang/Runnable;)V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/mlkit/common/sdkinternal/zzt;
 
     invoke-direct {v0, p0, p2}, Lcom/google/mlkit/common/sdkinternal/zzt;-><init>(Lcom/google/mlkit/common/sdkinternal/TaskQueue;Ljava/lang/Runnable;)V
@@ -139,6 +148,7 @@
 
     return-void
 
+    .line 2
     :catch_0
     invoke-direct {p0}, Lcom/google/mlkit/common/sdkinternal/TaskQueue;->zzc()V
 
@@ -152,6 +162,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
@@ -184,6 +195,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/TaskQueue;->zza:Ljava/lang/Object;
 
     monitor-enter v0
@@ -203,6 +215,7 @@
 
     invoke-interface {p0, v1}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
 
+    .line 2
     monitor-exit v0
 
     return-void
@@ -212,10 +225,12 @@
 
     iput-boolean v1, p0, Lcom/google/mlkit/common/sdkinternal/TaskQueue;->zzb:Z
 
+    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
     invoke-direct {p0, p1, p2}, Lcom/google/mlkit/common/sdkinternal/TaskQueue;->zzd(Ljava/util/concurrent/Executor;Ljava/lang/Runnable;)V
 
     return-void
@@ -223,6 +238,7 @@
     :catchall_0
     move-exception p0
 
+    .line 5
     :try_start_1
     monitor-exit v0
     :try_end_1

@@ -85,10 +85,12 @@
     :goto_0
     if-eqz p0, :cond_1
 
+    .line 1
     instance-of v0, p0, Lcom/google/android/exoplayer2/upstream/DataSourceException;
 
     if-eqz v0, :cond_0
 
+    .line 2
     move-object v0, p0
 
     check-cast v0, Lcom/google/android/exoplayer2/upstream/DataSourceException;
@@ -103,6 +105,7 @@
 
     return p0
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 

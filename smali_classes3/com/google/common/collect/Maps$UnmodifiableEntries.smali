@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Maps$UnmodifiableEntries;
+.class public Lcom/google/common/collect/Maps$UnmodifiableEntries;
 .super Lcom/google/common/collect/ForwardingCollection;
 .source "SourceFile"
 
@@ -51,8 +51,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ForwardingCollection;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/Maps$UnmodifiableEntries;->entries:Ljava/util/Collection;
 
     return-void
@@ -99,6 +101,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Maps$UnmodifiableEntries;->entries:Ljava/util/Collection;
 
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;

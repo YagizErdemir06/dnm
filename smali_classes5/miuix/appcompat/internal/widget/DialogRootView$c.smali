@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract onConfigurationChanged(Landroid/content/res/Configuration;IIII)V
+.method public abstract a(IIII)V
 .end method

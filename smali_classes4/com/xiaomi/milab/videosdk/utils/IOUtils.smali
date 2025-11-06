@@ -11,6 +11,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,6 +30,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     if-lez p1, :cond_0
@@ -45,6 +47,7 @@
 
     new-array p1, p1, [B
 
+    .line 2
     :goto_1
     :try_start_0
     invoke-virtual {p0, p1}, Ljava/io/InputStream;->read([B)I
@@ -57,10 +60,12 @@
 
     const/4 v2, 0x0
 
+    .line 3
     invoke-virtual {v0, p1, v2, v1}, Ljava/io/ByteArrayOutputStream;->write([BII)V
 
     goto :goto_1
 
+    .line 4
     :cond_1
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
@@ -75,6 +80,7 @@
 
     const-string p1, "IOUtils"
 
+    .line 5
     invoke-static {p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -157,6 +163,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :try_start_0
     invoke-virtual {p0, p1}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
 
@@ -168,6 +175,7 @@
     :try_start_1
     const-string p1, "IOUtils"
 
+    .line 2
     invoke-static {p1, p0}, Lcom/xiaomi/milab/videosdk/utils/IOUtils;->readInputStreamToString(Ljava/lang/String;Ljava/io/InputStream;)Ljava/lang/String;
 
     move-result-object v0
@@ -199,12 +207,14 @@
 
     move-object p0, v0
 
+    .line 3
     :goto_0
     :try_start_2
-    invoke-virtual {p1}, Ljava/lang/Throwable;->printStackTrace()V
+    invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 4
     :goto_1
     invoke-static {p0}, Lcom/xiaomi/milab/videosdk/utils/IOUtils;->close(Ljava/io/Closeable;)V
 
@@ -213,6 +223,7 @@
     :goto_2
     invoke-static {v0}, Lcom/xiaomi/milab/videosdk/utils/IOUtils;->close(Ljava/io/Closeable;)V
 
+    .line 5
     throw p1
 .end method
 
@@ -301,7 +312,7 @@
     move-exception p0
 
     .line 5
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    invoke-virtual {p0}, Ljava/io/FileNotFoundException;->printStackTrace()V
 
     const/4 p0, 0x0
 
@@ -393,7 +404,7 @@
     move-exception p0
 
     .line 5
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    invoke-virtual {p0}, Ljava/io/FileNotFoundException;->printStackTrace()V
 
     const/4 p0, 0x0
 
@@ -411,6 +422,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     new-instance v0, Ljava/io/FileReader;
 
@@ -425,6 +437,7 @@
 
     const-string v0, "IOUtils"
 
+    .line 2
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -443,6 +456,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     new-instance v0, Ljava/io/FileWriter;
 
@@ -457,6 +471,7 @@
 
     const-string v0, "IOUtils"
 
+    .line 2
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -479,6 +494,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -496,15 +512,19 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     :try_start_1
     invoke-virtual {p0}, Ljava/io/InputStream;->available()I
 
     move-result p1
 
+    .line 3
     new-array p1, p1, [B
 
+    .line 4
     invoke-virtual {p0, p1}, Ljava/io/InputStream;->read([B)I
 
+    .line 5
     new-instance v1, Ljava/lang/String;
 
     const-string v2, "UTF-8"
@@ -515,6 +535,7 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    .line 6
     :try_start_2
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
     :try_end_2
@@ -525,7 +546,8 @@
     :catch_0
     move-exception p0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 7
+    invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     :goto_0
     return-object v1
@@ -550,12 +572,14 @@
 
     move-object p0, v0
 
+    .line 8
     :goto_1
     :try_start_3
-    invoke-virtual {p1}, Ljava/lang/Throwable;->printStackTrace()V
+    invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
+    .line 9
     :try_start_4
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
     :try_end_4
@@ -566,7 +590,8 @@
     :catch_4
     move-exception p0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 10
+    invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     :goto_2
     return-object v0
@@ -576,12 +601,14 @@
 
     move-object p0, v0
 
+    .line 11
     :goto_3
     :try_start_5
-    invoke-virtual {p1}, Ljava/lang/Throwable;->printStackTrace()V
+    invoke-virtual {p1}, Ljava/io/FileNotFoundException;->printStackTrace()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
+    .line 12
     :try_start_6
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
     :try_end_6
@@ -592,7 +619,8 @@
     :catch_6
     move-exception p0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 13
+    invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     :goto_4
     return-object v0
@@ -602,6 +630,7 @@
 
     move-object v0, p0
 
+    .line 14
     :goto_5
     :try_start_7
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
@@ -613,8 +642,10 @@
     :catch_7
     move-exception p0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 15
+    invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
+    .line 16
     :goto_6
     throw p1
 .end method
@@ -711,7 +742,7 @@
 
     .line 8
     :try_start_1
-    invoke-virtual {p2}, Ljava/lang/Throwable;->printStackTrace()V
+    invoke-virtual {p2}, Ljava/io/IOException;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 

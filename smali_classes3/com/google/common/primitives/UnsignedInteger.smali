@@ -42,6 +42,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {v0}, Lcom/google/common/primitives/UnsignedInteger;->fromIntBits(I)Lcom/google/common/primitives/UnsignedInteger;
 
     move-result-object v0
@@ -50,6 +51,7 @@
 
     const/4 v0, 0x1
 
+    .line 2
     invoke-static {v0}, Lcom/google/common/primitives/UnsignedInteger;->fromIntBits(I)Lcom/google/common/primitives/UnsignedInteger;
 
     move-result-object v0
@@ -58,6 +60,7 @@
 
     const/4 v0, -0x1
 
+    .line 3
     invoke-static {v0}, Lcom/google/common/primitives/UnsignedInteger;->fromIntBits(I)Lcom/google/common/primitives/UnsignedInteger;
 
     move-result-object v0
@@ -70,10 +73,12 @@
 .method private constructor <init>(I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Number;-><init>()V
 
     and-int/lit8 p1, p1, -0x1
 
+    .line 2
     iput p1, p0, Lcom/google/common/primitives/UnsignedInteger;->value:I
 
     return-void
@@ -82,6 +87,7 @@
 .method public static fromIntBits(I)Lcom/google/common/primitives/UnsignedInteger;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/primitives/UnsignedInteger;
 
     invoke-direct {v0, p0}, Lcom/google/common/primitives/UnsignedInteger;-><init>(I)V
@@ -202,6 +208,7 @@
 .method public bigIntegerValue()Ljava/math/BigInteger;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/primitives/UnsignedInteger;->longValue()J
 
     move-result-wide v0
@@ -247,6 +254,7 @@
 .method public dividedBy(Lcom/google/common/primitives/UnsignedInteger;)Lcom/google/common/primitives/UnsignedInteger;
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/primitives/UnsignedInteger;->value:I
 
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -271,6 +279,7 @@
 .method public doubleValue()D
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/primitives/UnsignedInteger;->longValue()J
 
     move-result-wide v0
@@ -287,14 +296,17 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/common/primitives/UnsignedInteger;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/common/primitives/UnsignedInteger;
 
+    .line 3
     iget p0, p0, Lcom/google/common/primitives/UnsignedInteger;->value:I
 
     iget p1, p1, Lcom/google/common/primitives/UnsignedInteger;->value:I
@@ -310,6 +322,7 @@
 .method public floatValue()F
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/primitives/UnsignedInteger;->longValue()J
 
     move-result-wide v0
@@ -322,6 +335,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/primitives/UnsignedInteger;->value:I
 
     return p0
@@ -330,6 +344,7 @@
 .method public intValue()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/primitives/UnsignedInteger;->value:I
 
     return p0
@@ -338,6 +353,7 @@
 .method public longValue()J
     .locals 2
 
+    .line 1
     iget p0, p0, Lcom/google/common/primitives/UnsignedInteger;->value:I
 
     invoke-static {p0}, Lcom/google/common/primitives/UnsignedInts;->toLong(I)J
@@ -350,6 +366,7 @@
 .method public minus(Lcom/google/common/primitives/UnsignedInteger;)Lcom/google/common/primitives/UnsignedInteger;
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/primitives/UnsignedInteger;->value:I
 
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -372,6 +389,7 @@
 .method public mod(Lcom/google/common/primitives/UnsignedInteger;)Lcom/google/common/primitives/UnsignedInteger;
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/primitives/UnsignedInteger;->value:I
 
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -396,6 +414,7 @@
 .method public plus(Lcom/google/common/primitives/UnsignedInteger;)Lcom/google/common/primitives/UnsignedInteger;
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/primitives/UnsignedInteger;->value:I
 
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -420,6 +439,7 @@
     .annotation build Lcom/google/common/annotations/GwtIncompatible;
     .end annotation
 
+    .line 1
     iget p0, p0, Lcom/google/common/primitives/UnsignedInteger;->value:I
 
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;

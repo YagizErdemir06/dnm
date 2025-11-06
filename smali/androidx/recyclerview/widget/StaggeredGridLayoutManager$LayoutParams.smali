@@ -19,9 +19,9 @@
 
 
 # instance fields
-.field mFullSpan:Z
+.field public mFullSpan:Z
 
-.field mSpan:Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;
+.field public mSpan:Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;
 
 
 # direct methods
@@ -75,6 +75,7 @@
 .method public final getSpanIndex()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LayoutParams;->mSpan:Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;
 
     if-nez p0, :cond_0
@@ -83,6 +84,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     iget p0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mIndex:I
 
@@ -92,6 +94,7 @@
 .method public isFullSpan()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LayoutParams;->mFullSpan:Z
 
     return p0
@@ -100,6 +103,7 @@
 .method public setFullSpan(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LayoutParams;->mFullSpan:Z
 
     return-void

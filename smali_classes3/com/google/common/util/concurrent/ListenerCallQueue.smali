@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/ListenerCallQueue;
+.class public final Lcom/google/common/util/concurrent/ListenerCallQueue;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -49,6 +49,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     const-class v0, Lcom/google/common/util/concurrent/ListenerCallQueue;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -67,12 +68,15 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 3
     invoke-static {v0}, Ljava/util/Collections;->synchronizedList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
@@ -85,6 +89,7 @@
 .method public static synthetic access$000()Ljava/util/logging/Logger;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/common/util/concurrent/ListenerCallQueue;->logger:Ljava/util/logging/Logger;
 
     return-object v0
@@ -106,16 +111,20 @@
 
     const-string v0, "event"
 
+    .line 1
     invoke-static {p1, v0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v0, "label"
 
+    .line 2
     invoke-static {p2, v0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/util/concurrent/ListenerCallQueue;->listeners:Ljava/util/List;
 
     monitor-enter v0
 
+    .line 4
     :try_start_0
     iget-object p0, p0, Lcom/google/common/util/concurrent/ListenerCallQueue;->listeners:Ljava/util/List;
 
@@ -136,10 +145,12 @@
 
     check-cast v1, Lcom/google/common/util/concurrent/ListenerCallQueue$PerListenerQueue;
 
+    .line 5
     invoke-virtual {v1, p1, p2}, Lcom/google/common/util/concurrent/ListenerCallQueue$PerListenerQueue;->add(Lcom/google/common/util/concurrent/ListenerCallQueue$Event;Ljava/lang/Object;)V
 
     goto :goto_0
 
+    .line 6
     :cond_0
     monitor-exit v0
 
@@ -170,12 +181,15 @@
 
     const-string v0, "listener"
 
+    .line 1
     invoke-static {p1, v0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v0, "executor"
 
+    .line 2
     invoke-static {p2, v0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/util/concurrent/ListenerCallQueue;->listeners:Ljava/util/List;
 
     new-instance v0, Lcom/google/common/util/concurrent/ListenerCallQueue$PerListenerQueue;
@@ -192,6 +206,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     iget-object v1, p0, Lcom/google/common/util/concurrent/ListenerCallQueue;->listeners:Ljava/util/List;
 
@@ -201,6 +216,7 @@
 
     if-ge v0, v1, :cond_0
 
+    .line 2
     iget-object v1, p0, Lcom/google/common/util/concurrent/ListenerCallQueue;->listeners:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;

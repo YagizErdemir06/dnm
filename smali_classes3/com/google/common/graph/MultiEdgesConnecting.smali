@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/graph/MultiEdgesConnecting;
+.class public abstract Lcom/google/common/graph/MultiEdgesConnecting;
 .super Ljava/util/AbstractSet;
 .source "SourceFile"
 
@@ -44,8 +44,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -54,6 +56,7 @@
 
     iput-object p1, p0, Lcom/google/common/graph/MultiEdgesConnecting;->outEdgeToNode:Ljava/util/Map;
 
+    .line 3
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -66,6 +69,7 @@
 .method public static synthetic access$000(Lcom/google/common/graph/MultiEdgesConnecting;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/MultiEdgesConnecting;->targetNode:Ljava/lang/Object;
 
     return-object p0
@@ -80,6 +84,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/graph/MultiEdgesConnecting;->targetNode:Ljava/lang/Object;
 
     iget-object p0, p0, Lcom/google/common/graph/MultiEdgesConnecting;->outEdgeToNode:Ljava/util/Map;

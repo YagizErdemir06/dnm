@@ -55,8 +55,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/graph/ForwardingGraph;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/graph/ImmutableGraph;->backingGraph:Lcom/google/common/graph/BaseGraph;
 
     return-void
@@ -78,18 +80,22 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/common/graph/GraphConstants$Presence;->EDGE_EXISTS:Lcom/google/common/graph/GraphConstants$Presence;
 
+    .line 2
     invoke-static {v0}, Lcom/google/common/base/Functions;->constant(Ljava/lang/Object;)Lcom/google/common/base/Function;
 
     move-result-object v0
 
+    .line 3
     invoke-interface {p0}, Lcom/google/common/graph/Graph;->isDirected()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 4
     invoke-interface {p0, p1}, Lcom/google/common/graph/Graph;->incidentEdges(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0
@@ -100,6 +106,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-interface {p0, p1}, Lcom/google/common/graph/Graph;->adjacentNodes(Ljava/lang/Object;)Ljava/util/Set;
 
@@ -109,6 +116,7 @@
 
     move-result-object p0
 
+    .line 6
     invoke-static {p0}, Lcom/google/common/graph/UndirectedGraphConnections;->ofImmutable(Ljava/util/Map;)Lcom/google/common/graph/UndirectedGraphConnections;
 
     move-result-object p0
@@ -221,10 +229,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/ImmutableMap;->builder()Lcom/google/common/collect/ImmutableMap$Builder;
 
     move-result-object v0
 
+    .line 2
     invoke-interface {p0}, Lcom/google/common/graph/Graph;->nodes()Ljava/util/Set;
 
     move-result-object v1
@@ -244,6 +254,7 @@
 
     move-result-object v2
 
+    .line 3
     invoke-static {p0, v2}, Lcom/google/common/graph/ImmutableGraph;->connectionsOf(Lcom/google/common/graph/Graph;Ljava/lang/Object;)Lcom/google/common/graph/GraphConnections;
 
     move-result-object v3
@@ -252,6 +263,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-virtual {v0}, Lcom/google/common/collect/ImmutableMap$Builder;->build()Lcom/google/common/collect/ImmutableMap;
 
@@ -265,6 +277,7 @@
 .method public bridge synthetic adjacentNodes(Ljava/lang/Object;)Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/graph/ForwardingGraph;->adjacentNodes(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0
@@ -275,6 +288,7 @@
 .method public bridge synthetic allowsSelfLoops()Z
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/graph/ForwardingGraph;->allowsSelfLoops()Z
 
     move-result p0
@@ -285,6 +299,7 @@
 .method public bridge synthetic degree(Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/graph/ForwardingGraph;->degree(Ljava/lang/Object;)I
 
     move-result p0
@@ -302,6 +317,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/ImmutableGraph;->backingGraph:Lcom/google/common/graph/BaseGraph;
 
     return-object p0
@@ -332,6 +348,7 @@
 .method public bridge synthetic inDegree(Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/graph/ForwardingGraph;->inDegree(Ljava/lang/Object;)I
 
     move-result p0
@@ -349,6 +366,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/graph/ElementOrder;->stable()Lcom/google/common/graph/ElementOrder;
 
     move-result-object p0
@@ -359,6 +377,7 @@
 .method public bridge synthetic incidentEdges(Ljava/lang/Object;)Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/graph/ForwardingGraph;->incidentEdges(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0
@@ -369,6 +388,7 @@
 .method public bridge synthetic isDirected()Z
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/graph/ForwardingGraph;->isDirected()Z
 
     move-result p0
@@ -379,6 +399,7 @@
 .method public bridge synthetic nodeOrder()Lcom/google/common/graph/ElementOrder;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/graph/ForwardingGraph;->nodeOrder()Lcom/google/common/graph/ElementOrder;
 
     move-result-object p0
@@ -389,6 +410,7 @@
 .method public bridge synthetic nodes()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/graph/ForwardingGraph;->nodes()Ljava/util/Set;
 
     move-result-object p0
@@ -399,6 +421,7 @@
 .method public bridge synthetic outDegree(Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/graph/ForwardingGraph;->outDegree(Ljava/lang/Object;)I
 
     move-result p0
@@ -409,6 +432,7 @@
 .method public bridge synthetic predecessors(Ljava/lang/Object;)Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/graph/ForwardingGraph;->predecessors(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0
@@ -419,6 +443,7 @@
 .method public bridge synthetic successors(Ljava/lang/Object;)Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/graph/ForwardingGraph;->successors(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0

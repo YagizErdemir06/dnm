@@ -36,6 +36,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/barhopper/deeplearning/zzn;
 
     invoke-direct {v0}, Lcom/google/barhopper/deeplearning/zzn;-><init>()V
@@ -44,6 +45,7 @@
 
     const-class v1, Lcom/google/barhopper/deeplearning/zzn;
 
+    .line 2
     invoke-static {v1, v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;->zzU(Ljava/lang/Class;Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;)V
 
     return-void
@@ -52,12 +54,14 @@
 .method private constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;-><init>()V
 
     const-string v0, ""
 
     iput-object v0, p0, Lcom/google/barhopper/deeplearning/zzn;->zze:Ljava/lang/String;
 
+    .line 2
     sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;
 
     iput-object v1, p0, Lcom/google/barhopper/deeplearning/zzn;->zzf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;
@@ -90,6 +94,7 @@
 .method public static zza()Lcom/google/barhopper/deeplearning/zzm;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/barhopper/deeplearning/zzn;->zza:Lcom/google/barhopper/deeplearning/zzn;
 
     invoke-virtual {v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;->zzF()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdx;
@@ -112,6 +117,7 @@
 .method public static synthetic zzc(Lcom/google/barhopper/deeplearning/zzn;Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;)V
     .locals 1
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     iget v0, p0, Lcom/google/barhopper/deeplearning/zzn;->zzd:I
@@ -128,6 +134,7 @@
 .method public static synthetic zzd(Lcom/google/barhopper/deeplearning/zzn;Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;)V
     .locals 1
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     iget v0, p0, Lcom/google/barhopper/deeplearning/zzn;->zzd:I
@@ -172,6 +179,7 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     sget-object p0, Lcom/google/barhopper/deeplearning/zzn;->zza:Lcom/google/barhopper/deeplearning/zzn;
 
@@ -180,6 +188,7 @@
     :cond_1
     new-instance p1, Lcom/google/barhopper/deeplearning/zzm;
 
+    .line 2
     invoke-direct {p1, p0}, Lcom/google/barhopper/deeplearning/zzm;-><init>(Lcom/google/barhopper/deeplearning/zzl;)V
 
     return-object p1
@@ -187,6 +196,7 @@
     :cond_2
     new-instance p0, Lcom/google/barhopper/deeplearning/zzn;
 
+    .line 3
     invoke-direct {p0}, Lcom/google/barhopper/deeplearning/zzn;-><init>()V
 
     return-object p0
@@ -246,6 +256,7 @@
 
     aput-object p2, p1, p0
 
+    .line 4
     sget-object p0, Lcom/google/barhopper/deeplearning/zzn;->zza:Lcom/google/barhopper/deeplearning/zzn;
 
     const-string p2, "\u0001\t\u0000\u0001\u0001\t\t\u0000\u0000\u0000\u0001\u1008\u0000\u0002\u100a\u0001\u0003\u1008\u0002\u0004\u100a\u0003\u0005\u1001\u0004\u0006\u1001\u0005\u0007\u1001\u0006\u0008\u1001\u0007\t\u1004\u0008"
@@ -256,6 +267,7 @@
 
     return-object p0
 
+    .line 5
     :cond_4
     invoke-static {p0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 

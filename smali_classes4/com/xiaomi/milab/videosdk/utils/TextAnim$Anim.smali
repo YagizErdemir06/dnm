@@ -61,7 +61,7 @@
 
 .field public textSize:F
 
-.field final synthetic this$0:Lcom/xiaomi/milab/videosdk/utils/TextAnim;
+.field public final synthetic this$0:Lcom/xiaomi/milab/videosdk/utils/TextAnim;
 
 .field public thrutext:Z
 
@@ -86,6 +86,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/milab/videosdk/utils/TextAnim$Anim;->this$0:Lcom/xiaomi/milab/videosdk/utils/TextAnim;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

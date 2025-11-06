@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ImmutableList$SubList;
+.class public Lcom/google/common/collect/ImmutableList$SubList;
 .super Lcom/google/common/collect/ImmutableList;
 .source "SourceFile"
 
@@ -22,23 +22,26 @@
 
 
 # instance fields
-.field final transient length:I
+.field public final transient length:I
 
-.field final transient offset:I
+.field public final transient offset:I
 
-.field final synthetic this$0:Lcom/google/common/collect/ImmutableList;
+.field public final synthetic this$0:Lcom/google/common/collect/ImmutableList;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/ImmutableList;II)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/ImmutableList$SubList;->this$0:Lcom/google/common/collect/ImmutableList;
 
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableList;-><init>()V
 
+    .line 2
     iput p2, p0, Lcom/google/common/collect/ImmutableList$SubList;->offset:I
 
+    .line 3
     iput p3, p0, Lcom/google/common/collect/ImmutableList$SubList;->length:I
 
     return-void
@@ -54,10 +57,12 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/common/collect/ImmutableList$SubList;->length:I
 
     invoke-static {p1, v0}, Lcom/google/common/base/Preconditions;->checkElementIndex(II)I
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/ImmutableList$SubList;->this$0:Lcom/google/common/collect/ImmutableList;
 
     iget p0, p0, Lcom/google/common/collect/ImmutableList$SubList;->offset:I
@@ -76,6 +81,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableList$SubList;->this$0:Lcom/google/common/collect/ImmutableList;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->internalArray()[Ljava/lang/Object;
@@ -88,6 +94,7 @@
 .method public internalArrayEnd()I
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/ImmutableList$SubList;->this$0:Lcom/google/common/collect/ImmutableList;
 
     invoke-virtual {v0}, Lcom/google/common/collect/ImmutableCollection;->internalArrayStart()I
@@ -108,6 +115,7 @@
 .method public internalArrayStart()I
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/ImmutableList$SubList;->this$0:Lcom/google/common/collect/ImmutableList;
 
     invoke-virtual {v0}, Lcom/google/common/collect/ImmutableCollection;->internalArrayStart()I
@@ -132,6 +140,7 @@
 .method public bridge synthetic iterator()Ljava/util/Iterator;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/ImmutableList;->iterator()Lcom/google/common/collect/UnmodifiableIterator;
 
     move-result-object p0
@@ -164,6 +173,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/collect/ImmutableList$SubList;->length:I
 
     return p0

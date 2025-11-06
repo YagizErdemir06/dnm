@@ -75,12 +75,16 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/LoadPath;->dataClass:Ljava/lang/Class;
 
+    .line 3
     iput-object p5, p0, Lcom/bumptech/glide/load/engine/LoadPath;->listPool:Landroidx/core/util/Pools$Pool;
 
+    .line 4
     invoke-static {p4}, Lcom/bumptech/glide/util/Preconditions;->checkNotEmpty(Ljava/util/Collection;)Ljava/util/Collection;
 
     move-result-object p4
@@ -89,6 +93,7 @@
 
     iput-object p4, p0, Lcom/bumptech/glide/load/engine/LoadPath;->decodePaths:Ljava/util/List;
 
+    .line 5
     new-instance p4, Ljava/lang/StringBuilder;
 
     invoke-direct {p4}, Ljava/lang/StringBuilder;-><init>()V
@@ -97,6 +102,7 @@
 
     invoke-virtual {p4, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 6
     invoke-virtual {p1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object p1
@@ -107,6 +113,7 @@
 
     invoke-virtual {p4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 7
     invoke-virtual {p2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object p2
@@ -115,6 +122,7 @@
 
     invoke-virtual {p4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 8
     invoke-virtual {p3}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object p1
@@ -167,6 +175,7 @@
 
     move-object/from16 v2, p6
 
+    .line 1
     iget-object v0, v1, Lcom/bumptech/glide/load/engine/LoadPath;->decodePaths:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -184,6 +193,7 @@
     :goto_0
     if-ge v5, v3, :cond_1
 
+    .line 2
     iget-object v0, v1, Lcom/bumptech/glide/load/engine/LoadPath;->decodePaths:Ljava/util/List;
 
     invoke-interface {v0, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -204,6 +214,7 @@
 
     move-object/from16 v11, p5
 
+    .line 3
     :try_start_0
     invoke-virtual/range {v6 .. v11}, Lcom/bumptech/glide/load/engine/DecodePath;->decode(Lcom/bumptech/glide/load/data/DataRewinder;IILcom/bumptech/glide/load/Options;Lcom/bumptech/glide/load/engine/DecodePath$DecodeCallback;)Lcom/bumptech/glide/load/engine/Resource;
 
@@ -220,6 +231,7 @@
 
     move-object v6, v0
 
+    .line 4
     invoke-interface {v2, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :goto_1
@@ -238,6 +250,7 @@
 
     return-object v4
 
+    .line 5
     :cond_2
     new-instance v0, Lcom/bumptech/glide/load/engine/GlideException;
 
@@ -264,6 +277,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/LoadPath;->dataClass:Ljava/lang/Class;
 
     return-object p0
@@ -295,6 +309,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/LoadPath;->listPool:Landroidx/core/util/Pools$Pool;
 
     invoke-interface {v0}, Landroidx/core/util/Pools$Pool;->acquire()Ljava/lang/Object;
@@ -321,6 +336,7 @@
 
     move-object v7, v0
 
+    .line 2
     :try_start_0
     invoke-direct/range {v1 .. v7}, Lcom/bumptech/glide/load/engine/LoadPath;->loadWithExceptionList(Lcom/bumptech/glide/load/data/DataRewinder;Lcom/bumptech/glide/load/Options;IILcom/bumptech/glide/load/engine/DecodePath$DecodeCallback;Ljava/util/List;)Lcom/bumptech/glide/load/engine/Resource;
 
@@ -328,6 +344,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/LoadPath;->listPool:Landroidx/core/util/Pools$Pool;
 
     invoke-interface {p0, v0}, Landroidx/core/util/Pools$Pool;->release(Ljava/lang/Object;)Z
@@ -341,12 +358,14 @@
 
     invoke-interface {p0, v0}, Landroidx/core/util/Pools$Pool;->release(Ljava/lang/Object;)Z
 
+    .line 4
     throw p1
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

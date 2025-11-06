@@ -36,8 +36,10 @@
 .method public constructor <init>(Landroid/content/pm/ResolveInfo;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;->resolveInfo:Landroid/content/pm/ResolveInfo;
 
     return-void
@@ -95,6 +97,7 @@
 
     return v1
 
+    .line 1
     :cond_1
     const-class v2, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;
 
@@ -106,9 +109,11 @@
 
     return v1
 
+    .line 2
     :cond_2
     check-cast p1, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;
 
+    .line 3
     iget p0, p0, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;->weight:F
 
     invoke-static {p0}, Ljava/lang/Float;->floatToIntBits(F)I
@@ -132,6 +137,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;->weight:F
 
     invoke-static {p0}, Ljava/lang/Float;->floatToIntBits(F)I
@@ -146,16 +152,19 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v1, "["
 
+    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string/jumbo v1, "resolveInfo:"
+    const-string v1, "resolveInfo:"
 
+    .line 3
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserModel$ActivityResolveInfo;->resolveInfo:Landroid/content/pm/ResolveInfo;
@@ -168,6 +177,7 @@
 
     const-string v1, "; weight:"
 
+    .line 4
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     new-instance v1, Ljava/math/BigDecimal;
@@ -182,8 +192,10 @@
 
     const-string p0, "]"
 
+    .line 5
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 6
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

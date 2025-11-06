@@ -1,4 +1,4 @@
-.class final Lcom/google/gson/internal/bind/TypeAdapters$12;
+.class public final Lcom/google/gson/internal/bind/TypeAdapters$12;
 .super Lcom/google/gson/TypeAdapter;
 .source "SourceFile"
 
@@ -26,6 +26,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/gson/TypeAdapter;-><init>()V
 
     return-void

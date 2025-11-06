@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/extractor/avi/StreamNameChunk;
+.class public final Lcom/google/android/exoplayer2/extractor/avi/StreamNameChunk;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -14,8 +14,10 @@
 .method private constructor <init>(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/extractor/avi/StreamNameChunk;->name:Ljava/lang/String;
 
     return-void
@@ -24,6 +26,7 @@
 .method public static parseFrom(Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/extractor/avi/StreamNameChunk;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/extractor/avi/StreamNameChunk;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I

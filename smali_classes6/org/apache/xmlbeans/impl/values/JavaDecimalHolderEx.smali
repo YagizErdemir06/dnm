@@ -11,6 +11,7 @@
 .method public constructor <init>(Lorg/apache/xmlbeans/SchemaType;Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/JavaDecimalHolder;-><init>()V
 
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/values/JavaDecimalHolderEx;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
@@ -25,14 +26,17 @@
 .method public static validateLexical(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/impl/common/ValidationContext;)V
     .locals 3
 
+    .line 1
     invoke-static {p0, p2}, Lorg/apache/xmlbeans/impl/values/JavaDecimalHolder;->validateLexical(Ljava/lang/String;Lorg/apache/xmlbeans/impl/common/ValidationContext;)V
 
+    .line 2
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaType;->hasPatternFacet()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-interface {p1, p0}, Lorg/apache/xmlbeans/SchemaType;->matchPatternFacet(Ljava/lang/String;)Z
 
     move-result v0
@@ -55,6 +59,7 @@
 
     const/4 p0, 0x2
 
+    .line 4
     invoke-static {p1}, Lorg/apache/xmlbeans/impl/common/QNameHelper;->readable(Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object p1
@@ -74,6 +79,7 @@
 
     const/16 v0, 0x8
 
+    .line 1
     invoke-interface {p1, v0}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v0
@@ -90,6 +96,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast v0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
 
     invoke-virtual {v0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->bigIntegerValue()Ljava/math/BigInteger;
@@ -100,6 +107,7 @@
 
     move-result v0
 
+    .line 3
     :try_start_0
     invoke-virtual {p0, v0}, Ljava/math/BigDecimal;->setScale(I)Ljava/math/BigDecimal;
     :try_end_0
@@ -110,6 +118,7 @@
     :catch_0
     new-array v2, v2, [Ljava/lang/Object;
 
+    .line 4
     new-instance v6, Ljava/lang/Integer;
 
     invoke-virtual {p0}, Ljava/math/BigDecimal;->scale()I
@@ -148,12 +157,14 @@
     :goto_0
     const/4 v0, 0x7
 
+    .line 5
     invoke-interface {p1, v0}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v0
 
     if-eqz v0, :cond_4
 
+    .line 6
     invoke-virtual {p0}, Ljava/math/BigDecimal;->unscaledValue()Ljava/math/BigInteger;
 
     move-result-object v6
@@ -162,6 +173,7 @@
 
     move-result-object v6
 
+    .line 7
     check-cast v0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
 
     invoke-virtual {v0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->bigIntegerValue()Ljava/math/BigInteger;
@@ -172,12 +184,14 @@
 
     move-result v0
 
+    .line 8
     invoke-virtual {v6}, Ljava/lang/String;->length()I
 
     move-result v7
 
     if-lez v7, :cond_3
 
+    .line 9
     invoke-virtual {v6, v5}, Ljava/lang/String;->charAt(I)C
 
     move-result v8
@@ -193,6 +207,7 @@
     :cond_1
     move v8, v7
 
+    .line 10
     :goto_1
     invoke-virtual {p0}, Ljava/math/BigDecimal;->scale()I
 
@@ -202,6 +217,7 @@
 
     move v10, v5
 
+    .line 11
     :goto_2
     invoke-virtual {v6, v7}, Ljava/lang/String;->charAt(I)C
 
@@ -229,6 +245,7 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
+    .line 12
     new-instance v6, Ljava/lang/Integer;
 
     invoke-direct {v6, v7}, Ljava/lang/Integer;-><init>(I)V
@@ -259,6 +276,7 @@
 
     return-void
 
+    .line 13
     :cond_4
     invoke-interface {p1, v3}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
@@ -268,12 +286,14 @@
 
     if-eqz v0, :cond_5
 
+    .line 14
     check-cast v0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
 
     invoke-virtual {v0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->bigDecimalValue()Ljava/math/BigDecimal;
 
     move-result-object v0
 
+    .line 15
     invoke-virtual {p0, v0}, Ljava/math/BigDecimal;->compareTo(Ljava/math/BigDecimal;)I
 
     move-result v7
@@ -288,6 +308,7 @@
 
     aput-object v0, v2, v1
 
+    .line 16
     invoke-static {p1}, Lorg/apache/xmlbeans/impl/common/QNameHelper;->readable(Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object p0
@@ -300,6 +321,7 @@
 
     return-void
 
+    .line 17
     :cond_5
     invoke-interface {p1, v2}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
@@ -307,12 +329,14 @@
 
     if-eqz v0, :cond_6
 
+    .line 18
     check-cast v0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
 
     invoke-virtual {v0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->bigDecimalValue()Ljava/math/BigDecimal;
 
     move-result-object v0
 
+    .line 19
     invoke-virtual {p0, v0}, Ljava/math/BigDecimal;->compareTo(Ljava/math/BigDecimal;)I
 
     move-result v7
@@ -327,6 +351,7 @@
 
     aput-object v0, v2, v1
 
+    .line 20
     invoke-static {p1}, Lorg/apache/xmlbeans/impl/common/QNameHelper;->readable(Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object p0
@@ -342,18 +367,21 @@
     :cond_6
     const/4 v0, 0x5
 
+    .line 21
     invoke-interface {p1, v0}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v0
 
     if-eqz v0, :cond_7
 
+    .line 22
     check-cast v0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
 
     invoke-virtual {v0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->bigDecimalValue()Ljava/math/BigDecimal;
 
     move-result-object v0
 
+    .line 23
     invoke-virtual {p0, v0}, Ljava/math/BigDecimal;->compareTo(Ljava/math/BigDecimal;)I
 
     move-result v7
@@ -368,6 +396,7 @@
 
     aput-object v0, v2, v1
 
+    .line 24
     invoke-static {p1}, Lorg/apache/xmlbeans/impl/common/QNameHelper;->readable(Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object p0
@@ -383,18 +412,21 @@
     :cond_7
     const/4 v0, 0x6
 
+    .line 25
     invoke-interface {p1, v0}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v0
 
     if-eqz v0, :cond_8
 
+    .line 26
     check-cast v0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
 
     invoke-virtual {v0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->bigDecimalValue()Ljava/math/BigDecimal;
 
     move-result-object v0
 
+    .line 27
     invoke-virtual {p0, v0}, Ljava/math/BigDecimal;->compareTo(Ljava/math/BigDecimal;)I
 
     move-result v7
@@ -409,6 +441,7 @@
 
     aput-object v0, v2, v1
 
+    .line 28
     invoke-static {p1}, Lorg/apache/xmlbeans/impl/common/QNameHelper;->readable(Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object p0
@@ -421,6 +454,7 @@
 
     return-void
 
+    .line 29
     :cond_8
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaType;->getEnumerationValues()[Lorg/apache/xmlbeans/XmlAnySimpleType;
 
@@ -430,11 +464,13 @@
 
     move v2, v5
 
+    .line 30
     :goto_3
     array-length v7, v0
 
     if-ge v2, v7, :cond_a
 
+    .line 31
     aget-object v7, v0, v2
 
     check-cast v7, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
@@ -463,6 +499,7 @@
 
     aput-object p0, v0, v4
 
+    .line 32
     invoke-static {p1}, Lorg/apache/xmlbeans/impl/common/QNameHelper;->readable(Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object p0
@@ -482,6 +519,7 @@
 .method public schemaType()Lorg/apache/xmlbeans/SchemaType;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaDecimalHolderEx;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     return-object p0
@@ -490,18 +528,21 @@
 .method public set_BigDecimal(Ljava/math/BigDecimal;)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_validateOnSet()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/JavaDecimalHolderEx;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     sget-object v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_voorVc:Lorg/apache/xmlbeans/impl/common/ValidationContext;
 
     invoke-static {p1, v0, v1}, Lorg/apache/xmlbeans/impl/values/JavaDecimalHolderEx;->validateValue(Ljava/math/BigDecimal;Lorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/impl/common/ValidationContext;)V
 
+    .line 3
     :cond_0
     invoke-super {p0, p1}, Lorg/apache/xmlbeans/impl/values/JavaDecimalHolder;->set_BigDecimal(Ljava/math/BigDecimal;)V
 
@@ -509,14 +550,16 @@
 .end method
 
 .method public set_text(Ljava/lang/String;)V
-    .locals 3
+    .locals 4
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_validateOnSet()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/JavaDecimalHolderEx;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     sget-object v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_voorVc:Lorg/apache/xmlbeans/impl/common/ValidationContext;
@@ -524,32 +567,37 @@
     invoke-static {p1, v0, v1}, Lorg/apache/xmlbeans/impl/values/JavaDecimalHolderEx;->validateLexical(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/impl/common/ValidationContext;)V
 
     :cond_0
-    :try_start_0
-    new-instance v0, Ljava/math/BigDecimal;
+    const/4 v0, 0x0
 
-    invoke-direct {v0, p1}, Ljava/math/BigDecimal;-><init>(Ljava/lang/String;)V
+    .line 3
+    :try_start_0
+    new-instance v1, Ljava/math/BigDecimal;
+
+    invoke-direct {v1, p1}, Ljava/math/BigDecimal;-><init>(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
+    move-object v0, v1
+
     goto :goto_0
 
+    .line 4
     :catch_0
-    sget-object v0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_voorVc:Lorg/apache/xmlbeans/impl/common/ValidationContext;
+    sget-object v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_voorVc:Lorg/apache/xmlbeans/impl/common/ValidationContext;
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    new-array v1, v1, [Ljava/lang/Object;
+    new-array v2, v2, [Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    aput-object p1, v1, v2
+    aput-object p1, v2, v3
 
     const-string p1, "decimal"
 
-    invoke-interface {v0, p1, v1}, Lorg/apache/xmlbeans/impl/common/ValidationContext;->invalid(Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-interface {v1, p1, v2}, Lorg/apache/xmlbeans/impl/common/ValidationContext;->invalid(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    const/4 v0, 0x0
-
+    .line 5
     :goto_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_validateOnSet()Z
 
@@ -557,12 +605,14 @@
 
     if-eqz p1, :cond_1
 
+    .line 6
     iget-object p1, p0, Lorg/apache/xmlbeans/impl/values/JavaDecimalHolderEx;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     sget-object v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_voorVc:Lorg/apache/xmlbeans/impl/common/ValidationContext;
 
     invoke-static {v0, p1, v1}, Lorg/apache/xmlbeans/impl/values/JavaDecimalHolderEx;->validateValue(Ljava/math/BigDecimal;Lorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/impl/common/ValidationContext;)V
 
+    .line 7
     :cond_1
     invoke-super {p0, v0}, Lorg/apache/xmlbeans/impl/values/JavaDecimalHolder;->set_BigDecimal(Ljava/math/BigDecimal;)V
 
@@ -572,12 +622,14 @@
 .method public validate_simpleval(Ljava/lang/String;Lorg/apache/xmlbeans/impl/common/ValidationContext;)V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/JavaDecimalHolderEx;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object v0
 
     invoke-static {p1, v0, p2}, Lorg/apache/xmlbeans/impl/values/JavaDecimalHolderEx;->validateLexical(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/impl/common/ValidationContext;)V
 
+    .line 2
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/JavaDecimalHolder;->bigDecimalValue()Ljava/math/BigDecimal;
 
     move-result-object p1

@@ -64,6 +64,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/DataHolderNotifier;->zaa:Lcom/google/android/gms/common/data/DataHolder;
 
     invoke-virtual {p0, p1, v0}, Lcom/google/android/gms/common/api/internal/DataHolderNotifier;->notifyListener(Ljava/lang/Object;Lcom/google/android/gms/common/data/DataHolder;)V
@@ -98,6 +99,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/DataHolderNotifier;->zaa:Lcom/google/android/gms/common/data/DataHolder;
 
     if-eqz p0, :cond_0

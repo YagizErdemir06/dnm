@@ -6,6 +6,14 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -23,6 +31,16 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     const/4 v0, -0x1
 
@@ -38,6 +56,18 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr"
+        }
+    .end annotation
 
     const/4 v0, -0x1
 
@@ -53,6 +83,20 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr",
+            "defStyleRes"
+        }
+    .end annotation
 
     .line 4
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
@@ -62,11 +106,20 @@
 
 .method private drawHorizontalScaleZoomMaskCoverView(Landroid/graphics/Canvas;)V
     .locals 15
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "canvas"
+        }
+    .end annotation
 
     move-object v0, p0
 
     move-object/from16 v1, p1
 
+    .line 1
     iget-boolean v2, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mIsSupportedCinemaster:Z
 
     const-wide/high16 v3, 0x4000000000000000L    # 2.0
@@ -77,35 +130,39 @@
 
     if-eqz v2, :cond_0
 
+    .line 2
     iget-boolean v2, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mIsLandScape:Z
 
     if-eqz v2, :cond_3
 
+    .line 3
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    const v11, 0x7f070224
+    const v11, 0x7f070220
 
     invoke-virtual {v2, v11}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v2
 
+    .line 4
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v11
 
-    const v12, 0x7f070221
+    const v12, 0x7f07021d
 
     invoke-virtual {v11, v12}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v11
 
+    .line 5
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v12
 
-    const v13, 0x7f070220
+    const v13, 0x7f07021c
 
     invoke-virtual {v12, v13}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -123,6 +180,7 @@
 
     int-to-double v12, v12
 
+    .line 6
     invoke-static {v12, v13}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v12
@@ -135,6 +193,7 @@
 
     div-double/2addr v13, v7
 
+    .line 7
     invoke-static {v13, v14}, Ljava/lang/Math;->atan(D)D
 
     move-result-wide v7
@@ -149,9 +208,11 @@
 
     mul-int/lit8 v7, v11, 0x2
 
+    .line 8
     iput v7, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mRectWidth:I
 
-    invoke-static {}, Ly2/b;->w()I
+    .line 9
+    invoke-static {}, Ld/d/a/n6/b;->w()I
 
     move-result v7
 
@@ -161,7 +222,8 @@
 
     iput v7, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mRectLeft:I
 
-    invoke-static {}, Ly2/b;->w()I
+    .line 10
+    invoke-static {}, Ld/d/a/n6/b;->w()I
 
     move-result v7
 
@@ -179,14 +241,17 @@
 
     add-float/2addr v3, v2
 
+    .line 11
     iput v3, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mSweepAngle:F
 
     sub-double/2addr v9, v5
 
     double-to-float v2, v9
 
+    .line 12
     iput v2, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mStartAngle:F
 
+    .line 13
     new-instance v2, Landroid/graphics/RectF;
 
     iget v3, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mRectLeft:I
@@ -205,6 +270,7 @@
 
     invoke-direct {v2, v3, v6, v4, v5}, Landroid/graphics/RectF;-><init>(FFFF)V
 
+    .line 14
     iget v3, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mStartAngle:F
 
     iget v4, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mSweepAngle:F
@@ -229,17 +295,20 @@
 
     goto/16 :goto_1
 
+    .line 15
     :cond_0
-    invoke-static {}, Ly2/b;->w()I
+    invoke-static {}, Ld/d/a/n6/b;->w()I
 
     move-result v7
 
     iput v7, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mDisplayWidth:I
 
+    .line 16
     div-int/lit8 v7, v7, 0x2
 
     iput v7, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mDisplayRadius:I
 
+    .line 17
     iget-boolean v7, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mIsSupportedEqualRatio:Z
 
     if-eqz v7, :cond_1
@@ -248,7 +317,7 @@
 
     move-result-object v7
 
-    const v8, 0x7f070d65
+    const v8, 0x7f070ad7
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -256,12 +325,13 @@
 
     goto :goto_0
 
+    .line 18
     :cond_1
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
 
-    const v8, 0x7f070d64
+    const v8, 0x7f070ad6
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -270,6 +340,7 @@
     :goto_0
     iput v7, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mArcViewHeight:I
 
+    .line 19
     iget v8, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mDisplayRadius:I
 
     mul-int v11, v8, v8
@@ -286,12 +357,15 @@
 
     mul-int/lit8 v7, v11, 0x2
 
+    .line 20
     iput v7, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mRectWidth:I
 
     sub-int/2addr v8, v11
 
+    .line 21
     iput v8, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mRectLeft:I
 
+    .line 22
     invoke-static {v8}, Ljava/lang/Math;->abs(I)I
 
     move-result v8
@@ -300,6 +374,7 @@
 
     iput v7, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mRectBottom:I
 
+    .line 23
     iget v7, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mDisplayRadius:I
 
     int-to-double v7, v7
@@ -316,6 +391,7 @@
 
     iput-wide v7, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mTan:D
 
+    .line 24
     invoke-static {v7, v8}, Ljava/lang/Math;->atan(D)D
 
     move-result-wide v7
@@ -334,6 +410,7 @@
 
     double-to-float v3, v3
 
+    .line 25
     iput v3, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mSweepAngle:F
 
     const-wide v3, 0x4056800000000000L    # 90.0
@@ -344,8 +421,10 @@
 
     double-to-float v3, v3
 
+    .line 26
     iput v3, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mStartAngle:F
 
+    .line 27
     new-instance v3, Landroid/graphics/RectF;
 
     iget v4, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mRectLeft:I
@@ -364,20 +443,24 @@
 
     invoke-direct {v3, v4, v7, v5, v6}, Landroid/graphics/RectF;-><init>(FFFF)V
 
+    .line 28
     iget-boolean v4, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mIsSupportedScaleZoomView:Z
 
     if-eqz v4, :cond_2
 
     const/4 v4, 0x0
 
+    .line 29
     iput-boolean v4, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mIsSupportedScaleZoomView:Z
 
+    .line 30
     iget-object v4, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mPath:Landroid/graphics/Path;
 
     const/high16 v2, 0x43340000    # 180.0f
 
     invoke-virtual {v4, v3, v2, v2}, Landroid/graphics/Path;->addArc(Landroid/graphics/RectF;FF)V
 
+    .line 31
     iget-object v2, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mPath:Landroid/graphics/Path;
 
     iget v3, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mRectBottom:I
@@ -392,6 +475,7 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/graphics/Path;->lineTo(FF)V
 
+    .line 32
     iget-object v2, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mPath:Landroid/graphics/Path;
 
     iget v3, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mRectLeft:I
@@ -406,6 +490,7 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/graphics/Path;->lineTo(FF)V
 
+    .line 33
     iget-object v2, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mPath:Landroid/graphics/Path;
 
     iget v3, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mRectLeft:I
@@ -418,6 +503,7 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/graphics/Path;->lineTo(FF)V
 
+    .line 34
     iget-object v2, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mPath:Landroid/graphics/Path;
 
     iget-object v0, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mPaint:Landroid/graphics/Paint;
@@ -426,6 +512,7 @@
 
     goto :goto_1
 
+    .line 35
     :cond_2
     iget-object v0, v0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mPaint:Landroid/graphics/Paint;
 
@@ -440,12 +527,21 @@
 
 .method private drawVerticalScaleZoomMaskCoverView(Landroid/graphics/Canvas;)V
     .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "canvas"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f070c8d
+    const v1, 0x7f070a02
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -453,11 +549,12 @@
 
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mArcViewHeight:I
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f070c8c
+    const v1, 0x7f070a01
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -469,6 +566,7 @@
 
     mul-int v1, v0, v0
 
+    .line 3
     iget v2, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mArcViewHeight:I
 
     mul-int v3, v2, v2
@@ -483,6 +581,7 @@
 
     mul-int/lit8 v3, v1, 0x2
 
+    .line 4
     iput v3, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mRectWidth:I
 
     int-to-double v3, v0
@@ -493,8 +592,10 @@
 
     div-double/2addr v3, v0
 
+    .line 5
     iput-wide v3, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mTan:D
 
+    .line 6
     invoke-static {v3, v4}, Ljava/lang/Math;->atan(D)D
 
     move-result-wide v0
@@ -513,6 +614,7 @@
 
     iput-wide v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mHalfSweepAngle:D
 
+    .line 7
     new-instance v3, Landroid/graphics/RectF;
 
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I
@@ -537,6 +639,7 @@
 
     int-to-float v1, v1
 
+    .line 8
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v2
@@ -557,12 +660,14 @@
 
     invoke-direct {v3, v0, v1, v2, v4}, Landroid/graphics/RectF;-><init>(FFFF)V
 
+    .line 9
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mIsSupportedScaleZoomView:Z
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
+    .line 10
     iput-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mIsSupportedScaleZoomView:Z
 
     const/4 v4, 0x0
@@ -571,6 +676,7 @@
 
     const/4 v6, 0x0
 
+    .line 11
     iget-object v7, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mPaint:Landroid/graphics/Paint;
 
     move-object v2, p1
@@ -579,6 +685,7 @@
 
     goto :goto_0
 
+    .line 12
     :cond_0
     new-instance v0, Landroid/graphics/RectF;
 
@@ -616,6 +723,7 @@
 
     invoke-direct {v0, v4, v1, v2, v3}, Landroid/graphics/RectF;-><init>(FFFF)V
 
+    .line 13
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v4, v4, p0}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
@@ -628,21 +736,34 @@
 # virtual methods
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "canvas"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->onDraw(Landroid/graphics/Canvas;)V
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mPath:Landroid/graphics/Path;
 
     invoke-virtual {v0}, Landroid/graphics/Path;->reset()V
 
+    .line 3
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mIsVertical:Z
 
     if-nez v0, :cond_0
 
+    .line 4
     invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/zoom/HorizontalScaleZoomMaskCoverView;->drawHorizontalScaleZoomMaskCoverView(Landroid/graphics/Canvas;)V
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/zoom/HorizontalScaleZoomMaskCoverView;->drawVerticalScaleZoomMaskCoverView(Landroid/graphics/Canvas;)V
 

@@ -1,4 +1,4 @@
-.class Lcom/android/camera/panorama/RoundDetector$LoopRangeLeft;
+.class public Lcom/android/camera/panorama/RoundDetector$LoopRangeLeft;
 .super Lcom/android/camera/panorama/RoundDetector$LoopRange;
 .source "SourceFile"
 
@@ -17,13 +17,27 @@
 # direct methods
 .method public constructor <init>(III)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "lower",
+            "upper",
+            "max"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/android/camera/panorama/RoundDetector$LoopRange;-><init>(III)V
 
     if-gt p1, p2, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     new-instance v0, Landroid/util/Range;
 
@@ -45,6 +59,7 @@
 
     iput-object v0, p0, Lcom/android/camera/panorama/RoundDetector$LoopRange;->mRange:Landroid/util/Range;
 
+    .line 3
     new-instance p1, Landroid/util/Range;
 
     const/4 p3, 0x0
@@ -77,6 +92,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera/panorama/RoundDetector$LoopRange;->mRangeSecond:Landroid/util/Range;
 
     invoke-virtual {v0}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
@@ -91,6 +107,7 @@
 
     if-gez v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera/panorama/RoundDetector$LoopRange;->mRange:Landroid/util/Range;
 
     invoke-virtual {p0}, Landroid/util/Range;->toString()Ljava/lang/String;
@@ -104,23 +121,24 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    iget-object v1, p0, Lcom/android/camera/panorama/RoundDetector$LoopRange;->mRange:Landroid/util/Range;
+    const/4 v1, 0x0
 
-    invoke-virtual {v1}, Landroid/util/Range;->toString()Ljava/lang/String;
+    .line 3
+    iget-object v2, p0, Lcom/android/camera/panorama/RoundDetector$LoopRange;->mRange:Landroid/util/Range;
 
-    move-result-object v1
+    invoke-virtual {v2}, Landroid/util/Range;->toString()Ljava/lang/String;
 
-    const/4 v2, 0x0
+    move-result-object v2
 
-    aput-object v1, v0, v2
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x1
 
     iget-object p0, p0, Lcom/android/camera/panorama/RoundDetector$LoopRange;->mRangeSecond:Landroid/util/Range;
 
     invoke-virtual {p0}, Landroid/util/Range;->toString()Ljava/lang/String;
 
     move-result-object p0
-
-    const/4 v1, 0x1
 
     aput-object p0, v0, v1
 

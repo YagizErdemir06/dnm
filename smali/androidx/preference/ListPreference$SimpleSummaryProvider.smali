@@ -34,6 +34,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,19 +42,20 @@
 
 .method public static getInstance()Landroidx/preference/ListPreference$SimpleSummaryProvider;
     .locals 1
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
 
+    .line 1
     sget-object v0, Landroidx/preference/ListPreference$SimpleSummaryProvider;->sSimpleSummaryProvider:Landroidx/preference/ListPreference$SimpleSummaryProvider;
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Landroidx/preference/ListPreference$SimpleSummaryProvider;
 
     invoke-direct {v0}, Landroidx/preference/ListPreference$SimpleSummaryProvider;-><init>()V
 
     sput-object v0, Landroidx/preference/ListPreference$SimpleSummaryProvider;->sSimpleSummaryProvider:Landroidx/preference/ListPreference$SimpleSummaryProvider;
 
+    .line 3
     :cond_0
     sget-object v0, Landroidx/preference/ListPreference$SimpleSummaryProvider;->sSimpleSummaryProvider:Landroidx/preference/ListPreference$SimpleSummaryProvider;
 
@@ -64,12 +66,6 @@
 # virtual methods
 .method public provideSummary(Landroidx/preference/ListPreference;)Ljava/lang/CharSequence;
     .locals 0
-    .param p1    # Landroidx/preference/ListPreference;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
 
     .line 2
     invoke-virtual {p1}, Landroidx/preference/ListPreference;->getEntry()Ljava/lang/CharSequence;
@@ -106,12 +102,6 @@
 
 .method public bridge synthetic provideSummary(Landroidx/preference/Preference;)Ljava/lang/CharSequence;
     .locals 0
-    .param p1    # Landroidx/preference/Preference;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
 
     .line 1
     check-cast p1, Landroidx/preference/ListPreference;

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzff;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzff;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -37,12 +37,14 @@
 
     aget-object v1, p0, v0
 
+    .line 1
     invoke-interface {v1, p1}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfm;->zzc(Ljava/lang/Class;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
+    .line 2
     invoke-interface {v1, p1}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfm;->zzb(Ljava/lang/Class;)Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfl;
 
     move-result-object p0
@@ -57,6 +59,7 @@
     :cond_1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
+    .line 3
     invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p1
@@ -88,6 +91,7 @@
 
     aget-object v2, p0, v1
 
+    .line 1
     invoke-interface {v2, p1}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfm;->zzc(Ljava/lang/Class;)Z
 
     move-result v2

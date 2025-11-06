@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/drm/DefaultDrmSession$RequestTask;
+.class public final Lcom/google/android/exoplayer2/drm/DefaultDrmSession$RequestTask;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -30,14 +30,19 @@
 .method public constructor <init>(JZJLjava/lang/Object;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-wide p1, p0, Lcom/google/android/exoplayer2/drm/DefaultDrmSession$RequestTask;->taskId:J
 
+    .line 3
     iput-boolean p3, p0, Lcom/google/android/exoplayer2/drm/DefaultDrmSession$RequestTask;->allowRetry:Z
 
+    .line 4
     iput-wide p4, p0, Lcom/google/android/exoplayer2/drm/DefaultDrmSession$RequestTask;->startTimeMs:J
 
+    .line 5
     iput-object p6, p0, Lcom/google/android/exoplayer2/drm/DefaultDrmSession$RequestTask;->request:Ljava/lang/Object;
 
     return-void

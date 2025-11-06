@@ -232,7 +232,6 @@
     <string name="accessibility_video_capture_button">Button for taking photos while shooting videos</string>
     <string name="accessibility_video_pause_button">Paused recording video</string>
     <string name="accessibility_video_resume_button">Resumed recording video</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">Watermark is off</string>
     <string name="accessibility_watermark_image_on">Watermark is on</string>
     <string name="accessibility_watermark_text">Open watermark adjustment panel</string>
@@ -240,16 +239,6 @@
     <string name="accessibility_zoom_button">Zoom mode</string>
     <string name="actionbar_button_up_description">Back</string>
     <string name="afternoon">Afternoon</string>
-    <string name="agent_flip_tbc">Continue on the inner screen</string>
-    <string name="agent_function_max">Adjusted to maximum value</string>
-    <string name="agent_function_min">Adjusted to minimum value</string>
-    <string name="agent_workspace_mode_not_supported">"This feature isn't supported"</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"This feature isn't supported.
-Opened Photo mode instead."</string>
-    <string name="agent_workspace_on">Parameters set for photographing \"%1$s\"</string>
-    <string name="agent_workspace_tbc">Studying scene</string>
-    <string name="agent_workspace_tbc_use_default">"Studying scene…
-Camera parameters set as default"</string>
     <string name="ai_agra_fort">Agra Fort</string>
     <string name="ai_amber_fort">Amber Palace</string>
     <string name="ai_baby">Baby</string>
@@ -809,7 +798,6 @@ scanned documents automatically"</string>
     <string name="download_hint_cn">"Looks like your device isn't connected to WLAN. Use %1$s MB of mobile data to download items now?"</string>
     <string name="download_hint_wifi">"Looks like your device isn't connected to Wi-Fi. Use %1$s MB of mobile data to download items now?"</string>
     <string name="download_in_progress">Downloading…</string>
-    <string name="download_network_error">"Couldn't download. Check your network settings."</string>
     <string name="download_title">Data usage warning</string>
     <string name="download_waiting">Pending…</string>
     <string name="dual_camera_lens_covered_toast">The lens is covered.</string>
@@ -1340,7 +1328,6 @@ look larger on photos"</string>
     <string name="miuix_appcompat_delete_description">Delete</string>
     <string name="miuix_appcompat_deselect_all">Deselect all</string>
     <string name="miuix_appcompat_deselect_all_description">Deselect all</string>
-    <string name="miuix_appcompat_edit">Edit</string>
     <string name="miuix_appcompat_search_action_mode_cancel">Cancel</string>
     <string name="miuix_appcompat_search_input_description">Search</string>
     <string name="miuix_appcompat_select_all">Select all</string>
@@ -2284,7 +2271,6 @@ Keep the subject sharp while blurring the background."</string>
     <string name="time_picker_label_hour">H</string>
     <string name="time_picker_label_minute">M</string>
     <string name="time_stamp_date_format">dd/MM/yyyy</string>
-    <string name="time_stamp_date_format_minute">dd/MM/yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">You can freeze and unfreeze the background any time before or during shooting.</string>
     <string name="timefreeze_guide_tip3">Ask your subject to stay in the centre of the frame.</string>
     <string name="timefreeze_guide_tip4">Make the traffic stop.</string>
@@ -2322,7 +2308,7 @@ Keep the subject sharp while blurring the background."</string>
     <string name="tip_flash_screen_light_on">Soft flash: On</string>
     <string name="tip_flash_soft_light_off">Soft flash: Off</string>
     <string name="tip_flash_soft_light_torch">Soft flash: Flashlight mode</string>
-    <string name="tip_flash_torch">Flash: Flashlight</string>
+    <string name="tip_flash_torch">Flash: Always on</string>
     <string name="tip_friend_mode_connect_when_24GHz">Use a %s GHz connection to boost preview quality</string>
     <string name="tip_friend_mode_display_device_name_connect">Shared preview</string>
     <string name="tip_friend_mode_display_device_name_disconnect">The other device left this session</string>

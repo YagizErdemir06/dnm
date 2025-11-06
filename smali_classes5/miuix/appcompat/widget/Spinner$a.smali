@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lmiuix/appcompat/widget/Spinner;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    value = Lmiuix/appcompat/widget/Spinner;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,18 +18,15 @@
 
 
 # instance fields
-.field public final synthetic a:Landroid/widget/AdapterView$OnItemSelectedListener;
-
-.field public final synthetic b:Lmiuix/appcompat/widget/Spinner;
+.field public final synthetic c:Lmiuix/appcompat/widget/Spinner;
 
 
 # direct methods
-.method public constructor <init>(Lmiuix/appcompat/widget/Spinner;Landroid/widget/AdapterView$OnItemSelectedListener;)V
+.method public constructor <init>(Lmiuix/appcompat/widget/Spinner;)V
     .locals 0
 
-    iput-object p1, p0, Lmiuix/appcompat/widget/Spinner$a;->b:Lmiuix/appcompat/widget/Spinner;
-
-    iput-object p2, p0, Lmiuix/appcompat/widget/Spinner$a;->a:Landroid/widget/AdapterView$OnItemSelectedListener;
+    .line 1
+    iput-object p1, p0, Lmiuix/appcompat/widget/Spinner$a;->c:Lmiuix/appcompat/widget/Spinner;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,23 +35,40 @@
 
 
 # virtual methods
-.method public run()V
+.method public onGlobalLayout()V
     .locals 1
 
-    iget-object v0, p0, Lmiuix/appcompat/widget/Spinner$a;->b:Lmiuix/appcompat/widget/Spinner;
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/widget/Spinner$a;->c:Lmiuix/appcompat/widget/Spinner;
 
-    invoke-virtual {v0}, Landroid/widget/AdapterView;->getOnItemSelectedListener()Landroid/widget/AdapterView$OnItemSelectedListener;
+    invoke-static {v0}, Lmiuix/appcompat/widget/Spinner;->a(Lmiuix/appcompat/widget/Spinner;)Lmiuix/appcompat/widget/Spinner$j;
 
     move-result-object v0
 
+    invoke-interface {v0}, Lmiuix/appcompat/widget/Spinner$j;->isShowing()Z
+
+    move-result v0
+
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lmiuix/appcompat/widget/Spinner$a;->b:Lmiuix/appcompat/widget/Spinner;
+    .line 2
+    iget-object v0, p0, Lmiuix/appcompat/widget/Spinner$a;->c:Lmiuix/appcompat/widget/Spinner;
 
-    iget-object p0, p0, Lmiuix/appcompat/widget/Spinner$a;->a:Landroid/widget/AdapterView$OnItemSelectedListener;
+    invoke-virtual {v0}, Lmiuix/appcompat/widget/Spinner;->o()V
 
-    invoke-virtual {v0, p0}, Landroid/widget/AdapterView;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
-
+    .line 3
     :cond_0
+    iget-object v0, p0, Lmiuix/appcompat/widget/Spinner$a;->c:Lmiuix/appcompat/widget/Spinner;
+
+    invoke-virtual {v0}, Landroid/widget/Spinner;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    .line 4
+    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
+
+    :cond_1
     return-void
 .end method

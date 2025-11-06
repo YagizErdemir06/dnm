@@ -60,6 +60,7 @@
 .method public static constructor <clinit>()V
     .locals 6
 
+    .line 1
     new-instance v0, Lcom/xiaomi/idm/compat/proto/IPCParam$Configuration$Type;
 
     const-string v1, "SEND_BLOCK"
@@ -70,15 +71,16 @@
 
     sput-object v0, Lcom/xiaomi/idm/compat/proto/IPCParam$Configuration$Type;->SEND_BLOCK:Lcom/xiaomi/idm/compat/proto/IPCParam$Configuration$Type;
 
+    .line 2
     new-instance v1, Lcom/xiaomi/idm/compat/proto/IPCParam$Configuration$Type;
 
-    const/4 v3, -0x1
+    const-string v3, "UNRECOGNIZED"
 
-    const-string v4, "UNRECOGNIZED"
+    const/4 v4, 0x1
 
-    const/4 v5, 0x1
+    const/4 v5, -0x1
 
-    invoke-direct {v1, v4, v5, v3}, Lcom/xiaomi/idm/compat/proto/IPCParam$Configuration$Type;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v1, v3, v4, v5}, Lcom/xiaomi/idm/compat/proto/IPCParam$Configuration$Type;-><init>(Ljava/lang/String;II)V
 
     sput-object v1, Lcom/xiaomi/idm/compat/proto/IPCParam$Configuration$Type;->UNRECOGNIZED:Lcom/xiaomi/idm/compat/proto/IPCParam$Configuration$Type;
 
@@ -88,10 +90,12 @@
 
     aput-object v0, v3, v2
 
-    aput-object v1, v3, v5
+    aput-object v1, v3, v4
 
+    .line 3
     sput-object v3, Lcom/xiaomi/idm/compat/proto/IPCParam$Configuration$Type;->$VALUES:[Lcom/xiaomi/idm/compat/proto/IPCParam$Configuration$Type;
 
+    .line 4
     new-instance v0, Lcom/xiaomi/idm/compat/proto/IPCParam$Configuration$Type$1;
 
     invoke-direct {v0}, Lcom/xiaomi/idm/compat/proto/IPCParam$Configuration$Type$1;-><init>()V
@@ -109,8 +113,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 2
     iput p3, p0, Lcom/xiaomi/idm/compat/proto/IPCParam$Configuration$Type;->value:I
 
     return-void
@@ -125,6 +131,7 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     sget-object p0, Lcom/xiaomi/idm/compat/proto/IPCParam$Configuration$Type;->SEND_BLOCK:Lcom/xiaomi/idm/compat/proto/IPCParam$Configuration$Type;
 
@@ -142,6 +149,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/xiaomi/idm/compat/proto/IPCParam$Configuration$Type;->internalValueMap:Lcom/google/protobuf/Internal$EnumLiteMap;
 
     return-object v0
@@ -150,6 +158,7 @@
 .method public static internalGetVerifier()Lcom/google/protobuf/Internal$EnumVerifier;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/idm/compat/proto/IPCParam$Configuration$Type$TypeVerifier;->INSTANCE:Lcom/google/protobuf/Internal$EnumVerifier;
 
     return-object v0
@@ -186,6 +195,7 @@
 .method public static values()[Lcom/xiaomi/idm/compat/proto/IPCParam$Configuration$Type;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/idm/compat/proto/IPCParam$Configuration$Type;->$VALUES:[Lcom/xiaomi/idm/compat/proto/IPCParam$Configuration$Type;
 
     invoke-virtual {v0}, [Lcom/xiaomi/idm/compat/proto/IPCParam$Configuration$Type;->clone()Ljava/lang/Object;
@@ -202,14 +212,17 @@
 .method public final getNumber()I
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/idm/compat/proto/IPCParam$Configuration$Type;->UNRECOGNIZED:Lcom/xiaomi/idm/compat/proto/IPCParam$Configuration$Type;
 
     if-eq p0, v0, :cond_0
 
+    .line 2
     iget p0, p0, Lcom/xiaomi/idm/compat/proto/IPCParam$Configuration$Type;->value:I
 
     return p0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

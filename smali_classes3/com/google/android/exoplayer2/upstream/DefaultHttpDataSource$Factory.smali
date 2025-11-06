@@ -56,8 +56,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Lcom/google/android/exoplayer2/upstream/HttpDataSource$RequestProperties;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/upstream/HttpDataSource$RequestProperties;-><init>()V
@@ -66,8 +68,10 @@
 
     const/16 v0, 0x1f40
 
+    .line 3
     iput v0, p0, Lcom/google/android/exoplayer2/upstream/DefaultHttpDataSource$Factory;->connectTimeoutMs:I
 
+    .line 4
     iput v0, p0, Lcom/google/android/exoplayer2/upstream/DefaultHttpDataSource$Factory;->readTimeoutMs:I
 
     return-void
@@ -138,6 +142,7 @@
 .method public setAllowCrossProtocolRedirects(Z)Lcom/google/android/exoplayer2/upstream/DefaultHttpDataSource$Factory;
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/upstream/DefaultHttpDataSource$Factory;->allowCrossProtocolRedirects:Z
 
     return-object p0
@@ -146,6 +151,7 @@
 .method public setConnectTimeoutMs(I)Lcom/google/android/exoplayer2/upstream/DefaultHttpDataSource$Factory;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/upstream/DefaultHttpDataSource$Factory;->connectTimeoutMs:I
 
     return-object p0
@@ -167,6 +173,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/upstream/DefaultHttpDataSource$Factory;->contentTypePredicate:Lcom/google/common/base/Predicate;
 
     return-object p0
@@ -207,6 +214,7 @@
 .method public setKeepPostFor302Redirects(Z)Lcom/google/android/exoplayer2/upstream/DefaultHttpDataSource$Factory;
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/upstream/DefaultHttpDataSource$Factory;->keepPostFor302Redirects:Z
 
     return-object p0
@@ -215,6 +223,7 @@
 .method public setReadTimeoutMs(I)Lcom/google/android/exoplayer2/upstream/DefaultHttpDataSource$Factory;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/upstream/DefaultHttpDataSource$Factory;->readTimeoutMs:I
 
     return-object p0
@@ -227,6 +236,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/upstream/DefaultHttpDataSource$Factory;->transferListener:Lcom/google/android/exoplayer2/upstream/TransferListener;
 
     return-object p0
@@ -239,6 +249,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/upstream/DefaultHttpDataSource$Factory;->userAgent:Ljava/lang/String;
 
     return-object p0

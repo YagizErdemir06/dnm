@@ -12,15 +12,16 @@
 
 
 # static fields
-.field static final synthetic $assertionsDisabled:Z
+.field public static final synthetic $assertionsDisabled:Z
 
-.field static synthetic class$org$apache$xmlbeans$impl$validator$ValidatorUtil:Ljava/lang/Class;
+.field public static synthetic class$org$apache$xmlbeans$impl$validator$ValidatorUtil:Ljava/lang/Class;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/validator/ValidatorUtil;->class$org$apache$xmlbeans$impl$validator$ValidatorUtil:Ljava/lang/Class;
 
     if-nez v0, :cond_0
@@ -44,6 +45,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -52,6 +54,7 @@
 .method public static synthetic class$(Ljava/lang/String;)Ljava/lang/Class;
     .locals 1
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -68,7 +71,7 @@
 
     invoke-direct {v0}, Ljava/lang/NoClassDefFoundError;-><init>()V
 
-    invoke-virtual {v0, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v0, p0}, Ljava/lang/NoClassDefFoundError;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -78,6 +81,7 @@
 .method public static validateSimpleType(Lorg/apache/xmlbeans/SchemaType;Ljava/lang/String;Ljava/util/Collection;Lorg/apache/xmlbeans/impl/common/PrefixResolver;)Z
     .locals 8
 
+    .line 1
     invoke-interface {p0}, Lorg/apache/xmlbeans/SchemaType;->isSimpleType()Z
 
     move-result v0
@@ -92,6 +96,7 @@
 
     if-eq v0, v1, :cond_1
 
+    .line 2
     sget-boolean p0, Lorg/apache/xmlbeans/impl/validator/ValidatorUtil;->$assertionsDisabled:Z
 
     if-nez p0, :cond_0
@@ -102,6 +107,7 @@
 
     throw p0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -111,6 +117,7 @@
 
     throw p0
 
+    .line 4
     :cond_1
     new-instance v0, Lorg/apache/xmlbeans/impl/validator/Validator;
 
@@ -130,20 +137,25 @@
 
     invoke-direct/range {v2 .. v7}, Lorg/apache/xmlbeans/impl/validator/Validator;-><init>(Lorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/SchemaField;Lorg/apache/xmlbeans/SchemaTypeLoader;Lorg/apache/xmlbeans/XmlOptions;Ljava/util/Collection;)V
 
+    .line 5
     new-instance p0, Lorg/apache/xmlbeans/impl/validator/ValidatorUtil$EventImpl;
 
     invoke-direct {p0, p3, p1}, Lorg/apache/xmlbeans/impl/validator/ValidatorUtil$EventImpl;-><init>(Lorg/apache/xmlbeans/impl/common/PrefixResolver;Ljava/lang/String;)V
 
     const/4 p1, 0x1
 
+    .line 6
     invoke-virtual {v0, p1, p0}, Lorg/apache/xmlbeans/impl/validator/Validator;->nextEvent(ILorg/apache/xmlbeans/impl/common/ValidatorListener$Event;)V
 
     const/4 p1, 0x3
 
+    .line 7
     invoke-virtual {v0, p1, p0}, Lorg/apache/xmlbeans/impl/validator/Validator;->nextEvent(ILorg/apache/xmlbeans/impl/common/ValidatorListener$Event;)V
 
+    .line 8
     invoke-virtual {v0, v1, p0}, Lorg/apache/xmlbeans/impl/validator/Validator;->nextEvent(ILorg/apache/xmlbeans/impl/common/ValidatorListener$Event;)V
 
+    .line 9
     invoke-virtual {v0}, Lorg/apache/xmlbeans/impl/validator/Validator;->isValid()Z
 
     move-result p0

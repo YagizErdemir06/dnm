@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/RegularImmutableAsList;
+.class public Lcom/google/common/collect/RegularImmutableAsList;
 .super Lcom/google/common/collect/ImmutableAsList;
 .source "SourceFile"
 
@@ -118,6 +118,7 @@
     .annotation build Lcom/google/common/annotations/GwtIncompatible;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/RegularImmutableAsList;->delegateList:Lcom/google/common/collect/ImmutableList;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/ImmutableList;->copyIntoArray([Ljava/lang/Object;I)I
@@ -137,6 +138,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/RegularImmutableAsList;->delegate:Lcom/google/common/collect/ImmutableCollection;
 
     return-object p0
@@ -152,6 +154,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/RegularImmutableAsList;->delegateList:Lcom/google/common/collect/ImmutableList;
 
     return-object p0
@@ -165,6 +168,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/RegularImmutableAsList;->delegateList:Lcom/google/common/collect/ImmutableList;
 
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -179,6 +183,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/RegularImmutableAsList;->delegateList:Lcom/google/common/collect/ImmutableList;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->internalArray()[Ljava/lang/Object;
@@ -191,6 +196,7 @@
 .method public internalArrayEnd()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/RegularImmutableAsList;->delegateList:Lcom/google/common/collect/ImmutableList;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->internalArrayEnd()I
@@ -203,6 +209,7 @@
 .method public internalArrayStart()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/RegularImmutableAsList;->delegateList:Lcom/google/common/collect/ImmutableList;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->internalArrayStart()I

@@ -1,4 +1,4 @@
-.class Lcom/google/common/base/Predicates$InstanceOfPredicate;
+.class public Lcom/google/common/base/Predicates$InstanceOfPredicate;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -97,6 +97,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/Predicates$InstanceOfPredicate;->clazz:Ljava/lang/Class;
 
     invoke-virtual {p0, p1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
@@ -113,14 +114,17 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/common/base/Predicates$InstanceOfPredicate;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/common/base/Predicates$InstanceOfPredicate;
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/base/Predicates$InstanceOfPredicate;->clazz:Ljava/lang/Class;
 
     iget-object p1, p1, Lcom/google/common/base/Predicates$InstanceOfPredicate;->clazz:Ljava/lang/Class;
@@ -136,6 +140,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/Predicates$InstanceOfPredicate;->clazz:Ljava/lang/Class;
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
@@ -148,6 +153,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/Predicates$InstanceOfPredicate;->clazz:Ljava/lang/Class;
 
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;

@@ -74,6 +74,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/constraintlayout/widget/ConstraintHelper;->applyLayoutFeatures(Landroidx/constraintlayout/widget/ConstraintLayout;)V
 
     return-void
@@ -90,10 +91,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroidx/constraintlayout/widget/ConstraintHelper;->init(Landroid/util/AttributeSet;)V
 
     const/4 p1, 0x0
 
+    .line 2
     iput-boolean p1, p0, Landroidx/constraintlayout/widget/ConstraintHelper;->mUseViewMeasure:Z
 
     return-void
@@ -102,8 +105,10 @@
 .method public onAttachedToWindow()V
     .locals 0
 
+    .line 1
     invoke-super {p0}, Landroidx/constraintlayout/widget/ConstraintHelper;->onAttachedToWindow()V
 
+    .line 2
     invoke-virtual {p0}, Landroidx/constraintlayout/widget/ConstraintHelper;->applyLayoutFeatures()V
 
     return-void
@@ -120,8 +125,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroid/view/View;->setElevation(F)V
 
+    .line 2
     invoke-virtual {p0}, Landroidx/constraintlayout/widget/ConstraintHelper;->applyLayoutFeatures()V
 
     return-void
@@ -138,8 +145,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroid/view/View;->setVisibility(I)V
 
+    .line 2
     invoke-virtual {p0}, Landroidx/constraintlayout/widget/ConstraintHelper;->applyLayoutFeatures()V
 
     return-void
@@ -156,18 +165,21 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p0
 
     check-cast p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;
 
+    .line 2
     iget-object p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->widget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->setWidth(I)V
 
+    .line 3
     iget-object p0, p0, Landroidx/constraintlayout/widget/ConstraintLayout$LayoutParams;->widget:Landroidx/constraintlayout/core/widgets/ConstraintWidget;
 
     invoke-virtual {p0, v0}, Landroidx/constraintlayout/core/widgets/ConstraintWidget;->setHeight(I)V

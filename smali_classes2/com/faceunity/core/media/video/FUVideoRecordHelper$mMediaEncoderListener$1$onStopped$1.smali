@@ -1,4 +1,4 @@
-.class final Lcom/faceunity/core/media/video/FUVideoRecordHelper$mMediaEncoderListener$1$onStopped$1;
+.class public final Lcom/faceunity/core/media/video/FUVideoRecordHelper$mMediaEncoderListener$1$onStopped$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -16,12 +16,17 @@
     name = null
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
         "\u0000\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0003\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0001\u0010\u0002"
     }
     d2 = {
-        "Lnm/l2;",
+        "Lh/l2;",
         "run",
         "()V",
         "<anonymous>"
@@ -36,7 +41,7 @@
 
 
 # instance fields
-.field final synthetic $encoder:Lcom/faceunity/core/media/video/encoder/MediaEncoder;
+.field public final synthetic $encoder:Lcom/faceunity/core/media/video/encoder/MediaEncoder;
 
 
 # direct methods
@@ -55,6 +60,7 @@
 .method public final run()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/media/video/FUVideoRecordHelper$mMediaEncoderListener$1$onStopped$1;->$encoder:Lcom/faceunity/core/media/video/encoder/MediaEncoder;
 
     check-cast p0, Lcom/faceunity/core/media/video/encoder/MediaVideoEncoder;

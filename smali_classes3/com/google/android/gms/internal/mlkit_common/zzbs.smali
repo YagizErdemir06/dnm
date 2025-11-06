@@ -24,6 +24,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/internal/mlkit_common/zzbr;->zza:Lcom/google/android/gms/internal/mlkit_common/zzbr;
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_common/zzbs;->zzb:Lcom/google/firebase/encoders/ObjectEncoder;
@@ -34,6 +35,7 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/util/HashMap;
@@ -44,6 +46,7 @@
 
     new-instance v0, Ljava/util/HashMap;
 
+    .line 2
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/gms/internal/mlkit_common/zzbs;->zzd:Ljava/util/Map;
@@ -112,6 +115,7 @@
 .method public final zza()Lcom/google/android/gms/internal/mlkit_common/zzbt;
     .locals 4
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_common/zzbt;
 
     new-instance v1, Ljava/util/HashMap;

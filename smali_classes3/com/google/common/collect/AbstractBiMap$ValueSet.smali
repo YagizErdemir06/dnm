@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/AbstractBiMap$ValueSet;
+.class public Lcom/google/common/collect/AbstractBiMap$ValueSet;
 .super Lcom/google/common/collect/ForwardingSet;
 .source "SourceFile"
 
@@ -22,9 +22,9 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/AbstractBiMap;
+.field public final synthetic this$0:Lcom/google/common/collect/AbstractBiMap;
 
-.field final valuesDelegate:Ljava/util/Set;
+.field public final valuesDelegate:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
@@ -114,6 +114,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/AbstractBiMap$ValueSet;->this$0:Lcom/google/common/collect/AbstractBiMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractBiMap;->entrySet()Ljava/util/Set;
@@ -163,6 +164,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingCollection;->standardToString()Ljava/lang/String;
 
     move-result-object p0

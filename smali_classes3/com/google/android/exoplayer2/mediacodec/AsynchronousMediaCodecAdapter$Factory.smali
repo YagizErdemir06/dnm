@@ -46,13 +46,13 @@
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/google/android/exoplayer2/mediacodec/b;
+    new-instance v0, Ld/j/a/b/r2/a;
 
-    invoke-direct {v0, p1}, Lcom/google/android/exoplayer2/mediacodec/b;-><init>(I)V
+    invoke-direct {v0, p1}, Ld/j/a/b/r2/a;-><init>(I)V
 
-    new-instance v1, Lcom/google/android/exoplayer2/mediacodec/c;
+    new-instance v1, Ld/j/a/b/r2/b;
 
-    invoke-direct {v1, p1}, Lcom/google/android/exoplayer2/mediacodec/c;-><init>(I)V
+    invoke-direct {v1, p1}, Ld/j/a/b/r2/b;-><init>(I)V
 
     invoke-direct {p0, v0, v1, p2}, Lcom/google/android/exoplayer2/mediacodec/AsynchronousMediaCodecAdapter$Factory;-><init>(Lcom/google/common/base/Supplier;Lcom/google/common/base/Supplier;Z)V
 
@@ -91,29 +91,10 @@
     return-void
 .end method
 
-.method public static synthetic a(I)Landroid/os/HandlerThread;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/mediacodec/AsynchronousMediaCodecAdapter$Factory;->lambda$new$0(I)Landroid/os/HandlerThread;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic b(I)Landroid/os/HandlerThread;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/mediacodec/AsynchronousMediaCodecAdapter$Factory;->lambda$new$1(I)Landroid/os/HandlerThread;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method private static synthetic lambda$new$0(I)Landroid/os/HandlerThread;
+.method public static synthetic lambda$new$0(I)Landroid/os/HandlerThread;
     .locals 1
 
+    .line 1
     new-instance v0, Landroid/os/HandlerThread;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/mediacodec/AsynchronousMediaCodecAdapter;->access$300(I)Ljava/lang/String;
@@ -125,9 +106,10 @@
     return-object v0
 .end method
 
-.method private static synthetic lambda$new$1(I)Landroid/os/HandlerThread;
+.method public static synthetic lambda$new$1(I)Landroid/os/HandlerThread;
     .locals 1
 
+    .line 1
     new-instance v0, Landroid/os/HandlerThread;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/mediacodec/AsynchronousMediaCodecAdapter;->access$200(I)Ljava/lang/String;

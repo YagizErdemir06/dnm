@@ -1,4 +1,4 @@
-.class Lmiuix/animation/internal/TargetVelocityTracker$MonitorInfo;
+.class public Lmiuix/animation/internal/TargetVelocityTracker$MonitorInfo;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field monitor:Lmiuix/animation/utils/VelocityMonitor;
+.field public monitor:Lmiuix/animation/utils/VelocityMonitor;
 
-.field resetTask:Lmiuix/animation/internal/TargetVelocityTracker$ResetRunnable;
+.field public resetTask:Lmiuix/animation/internal/TargetVelocityTracker$ResetRunnable;
 
 
 # direct methods

@@ -64,8 +64,10 @@
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 
+    .line 1
     invoke-direct {p0, p2, p3}, Lcom/google/mlkit/vision/common/internal/MobileVisionBase;-><init>(Lcom/google/mlkit/common/sdkinternal/MLTask;Ljava/util/concurrent/Executor;)V
 
+    .line 2
     invoke-static {}, Lcom/google/mlkit/vision/barcode/internal/zzb;->zzf()Z
 
     move-result p2
@@ -76,6 +78,7 @@
 
     invoke-direct {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznr;-><init>()V
 
+    .line 3
     invoke-static {p1}, Lcom/google/mlkit/vision/barcode/internal/zzb;->zzc(Lcom/google/mlkit/vision/barcode/BarcodeScannerOptions;)Lcom/google/android/gms/internal/mlkit_vision_barcode/zzqv;
 
     move-result-object p1
@@ -92,6 +95,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 4
     sget-object p2, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznc;->zzc:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznc;
 
     goto :goto_0
@@ -102,16 +106,19 @@
     :goto_0
     invoke-virtual {p1, p2}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznf;->zze(Lcom/google/android/gms/internal/mlkit_vision_barcode/zznc;)Lcom/google/android/gms/internal/mlkit_vision_barcode/zznf;
 
+    .line 5
     invoke-virtual {p1, p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznf;->zzg(Lcom/google/android/gms/internal/mlkit_vision_barcode/zznt;)Lcom/google/android/gms/internal/mlkit_vision_barcode/zznf;
 
     const/4 p0, 0x1
 
+    .line 6
     invoke-static {p1, p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzro;->zzg(Lcom/google/android/gms/internal/mlkit_vision_barcode/zznf;I)Lcom/google/android/gms/internal/mlkit_vision_barcode/zzra;
 
     move-result-object p0
 
     sget-object p1, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzne;->zzk:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzne;
 
+    .line 7
     invoke-virtual {p4, p0, p1}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrl;->zzd(Lcom/google/android/gms/internal/mlkit_vision_barcode/zzra;Lcom/google/android/gms/internal/mlkit_vision_barcode/zzne;)V
 
     return-void
@@ -140,6 +147,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/mlkit/vision/barcode/internal/BarcodeScannerImpl;->zzc:Z
 
     if-eqz p0, :cond_0
@@ -155,6 +163,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     sget-object v1, Lcom/google/mlkit/common/sdkinternal/OptionalModuleUtils;->FEATURE_BARCODE:Lcom/google/android/gms/common/Feature;
 
     aput-object v1, p0, v0

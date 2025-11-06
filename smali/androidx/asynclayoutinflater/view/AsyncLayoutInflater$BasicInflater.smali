@@ -1,4 +1,4 @@
-.class Landroidx/asynclayoutinflater/view/AsyncLayoutInflater$BasicInflater;
+.class public Landroidx/asynclayoutinflater/view/AsyncLayoutInflater$BasicInflater;
 .super Landroid/view/LayoutInflater;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    const-string v0, "android.webkit."
+    const-string v0, "android.widget."
 
-    const-string v1, "android.app."
+    const-string v1, "android.webkit."
 
-    const-string v2, "android.widget."
+    const-string v2, "android.app."
 
-    filled-new-array {v2, v0, v1}, [Ljava/lang/String;
+    .line 1
+    filled-new-array {v0, v1, v2}, [Ljava/lang/String;
 
     move-result-object v0
 
@@ -40,6 +41,7 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroid/view/LayoutInflater;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -50,6 +52,7 @@
 .method public cloneInContext(Landroid/content/Context;)Landroid/view/LayoutInflater;
     .locals 0
 
+    .line 1
     new-instance p0, Landroidx/asynclayoutinflater/view/AsyncLayoutInflater$BasicInflater;
 
     invoke-direct {p0, p1}, Landroidx/asynclayoutinflater/view/AsyncLayoutInflater$BasicInflater;-><init>(Landroid/content/Context;)V
@@ -65,6 +68,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Landroidx/asynclayoutinflater/view/AsyncLayoutInflater$BasicInflater;->sClassPrefixList:[Ljava/lang/String;
 
     array-length v1, v0
@@ -76,6 +80,7 @@
 
     aget-object v3, v0, v2
 
+    .line 2
     :try_start_0
     invoke-virtual {p0, p1, v3, p2}, Landroid/view/LayoutInflater;->createView(Ljava/lang/String;Ljava/lang/String;Landroid/util/AttributeSet;)Landroid/view/View;
 
@@ -93,6 +98,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_1
     invoke-super {p0, p1, p2}, Landroid/view/LayoutInflater;->onCreateView(Ljava/lang/String;Landroid/util/AttributeSet;)Landroid/view/View;
 

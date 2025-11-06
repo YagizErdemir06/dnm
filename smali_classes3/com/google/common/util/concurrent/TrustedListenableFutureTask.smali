@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/TrustedListenableFutureTask;
+.class public Lcom/google/common/util/concurrent/TrustedListenableFutureTask;
 .super Lcom/google/common/util/concurrent/FluentFuture$TrustedFuture;
 .source "SourceFile"
 
@@ -173,23 +173,28 @@
 .method public afterDone()V
     .locals 1
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/util/concurrent/AbstractFuture;->afterDone()V
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/AbstractFuture;->wasInterrupted()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/util/concurrent/TrustedListenableFutureTask;->task:Lcom/google/common/util/concurrent/InterruptibleTask;
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-virtual {v0}, Lcom/google/common/util/concurrent/InterruptibleTask;->interruptTask()V
 
     :cond_0
     const/4 v0, 0x0
 
+    .line 5
     iput-object v0, p0, Lcom/google/common/util/concurrent/TrustedListenableFutureTask;->task:Lcom/google/common/util/concurrent/InterruptibleTask;
 
     return-void
@@ -200,10 +205,12 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/util/concurrent/TrustedListenableFutureTask;->task:Lcom/google/common/util/concurrent/InterruptibleTask;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -234,6 +241,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-super {p0}, Lcom/google/common/util/concurrent/AbstractFuture;->pendingToString()Ljava/lang/String;
 
@@ -245,15 +253,18 @@
 .method public run()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/util/concurrent/TrustedListenableFutureTask;->task:Lcom/google/common/util/concurrent/InterruptibleTask;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Lcom/google/common/util/concurrent/InterruptibleTask;->run()V
 
     :cond_0
     const/4 v0, 0x0
 
+    .line 3
     iput-object v0, p0, Lcom/google/common/util/concurrent/TrustedListenableFutureTask;->task:Lcom/google/common/util/concurrent/InterruptibleTask;
 
     return-void

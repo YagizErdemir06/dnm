@@ -3,8 +3,8 @@
     <string name="abc_action_bar_home_description">Navigeren naar startpositie</string>
     <string name="abc_action_bar_up_description">Omhoog navigeren</string>
     <string name="abc_action_menu_overflow_description">Meer opties</string>
-    <string name="abc_action_mode_done">Klaar</string>
-    <string name="abc_activity_chooser_view_see_all">Alles tonen</string>
+    <string name="abc_action_mode_done">Gereed</string>
+    <string name="abc_activity_chooser_view_see_all">Alles weergeven</string>
     <string name="abc_activitychooserview_choose_application">Een app selecteren</string>
     <string name="abc_capital_off">UIT</string>
     <string name="abc_capital_on">AAN</string>
@@ -232,7 +232,6 @@
     <string name="accessibility_video_capture_button">"Knop voor het nemen van foto's tijdens het opnemen van video's"</string>
     <string name="accessibility_video_pause_button">Opname gepauzeerd</string>
     <string name="accessibility_video_resume_button">Opname hervat</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">Watermerk staat uit</string>
     <string name="accessibility_watermark_image_on">Watermerk staat aan</string>
     <string name="accessibility_watermark_text">Open het watermerkaanpassingspaneel</string>
@@ -240,16 +239,6 @@
     <string name="accessibility_zoom_button">Zoommodus</string>
     <string name="actionbar_button_up_description">Terug</string>
     <string name="afternoon">Middag</string>
-    <string name="agent_flip_tbc">Ga verder op het binnenste scherm</string>
-    <string name="agent_function_max">Aangepast aan maximale waarde</string>
-    <string name="agent_function_min">Aangepast aan minimale waarde</string>
-    <string name="agent_workspace_mode_not_supported">Deze functie wordt niet ondersteund</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"Deze functie wordt niet ondersteund.
-In plaats daarvan de Fotomodus geopend."</string>
-    <string name="agent_workspace_on">Parameters ingesteld voor het fotograferen van \"%1$s\"</string>
-    <string name="agent_workspace_tbc">Studie scène</string>
-    <string name="agent_workspace_tbc_use_default">"Studie scène…
-Cameraparameters ingesteld als standaard"</string>
     <string name="ai_agra_fort">Fort van Agra</string>
     <string name="ai_amber_fort">Amber Fort</string>
     <string name="ai_baby">Baby</string>
@@ -476,7 +465,6 @@ en voorkeuren automatisch aanpassen"</string>
     <string name="bluetooth_headset_permission_des">Voor het bepalen van de verbindingsstatus van Bluetooth-oortelefoons en het opnemen van audio met de microfoon van de oortelefoon</string>
     <string name="bluetooth_permission_not_ask_again">Geef deze app toestemming om verbinding te maken met apparaten in de buurt in Instellingen om verbinding te kunnen maken met Bluetooth-oortelefoons.</string>
     <string name="bokeh_use_hint">Diepte-effect</string>
-    <string name="bottomsheet_action_expand_halfway">Half uitvouwen</string>
     <string name="burst_shoot_exit_button_text">Burst Shoot uitschakelen</string>
     <string name="button_fisheye_camera_title">Visooglens</string>
     <string name="button_front_camera_title">Maak een selfie</string>
@@ -517,8 +505,6 @@ en voorkeuren automatisch aanpassen"</string>
     <string name="ccc_temperature_warning_msg">"Uw apparaat is oververhit. De camera wordt over %d seconden afgesloten. Uw foto's of video's worden automatisch opgeslagen."</string>
     <string name="ccc_temperature_warning_title">Apparaat is oververhit</string>
     <string name="center_mark">Middenmarkering</string>
-    <string name="character_counter_content_description">%1$d van %2$d tekens opgegeven</string>
-    <string name="character_counter_overflowed_content_description">Tekenlimiet heeft %1$d van %2$d overschreden</string>
     <string name="cinemaster_cancel">Annuleren</string>
     <string name="cinemaster_confirm">Afsluiten</string>
     <string name="cinemaster_connect_exit_message">Multicam-configuratie nu afsluiten?</string>
@@ -537,7 +523,6 @@ en voorkeuren automatisch aanpassen"</string>
     <string name="cinemaster_toast_monitor_disconnect">Monitor losgekoppeld van multicam-configuratie</string>
     <string name="cinemaster_toast_monitor_play_error">Camera %s losgekoppeld van multicam-configuratie vanwege een fout</string>
     <string name="cinemaster_wifi_24g_tips">Schakel over naar een %s GHz-netwerk om de stabiliteit van de monitorfeed te vergroten</string>
-    <string name="clear_text_end_icon_content_description">Tekst wissen</string>
     <string name="clearable_edittext_clear_description">Opschonen</string>
     <string name="clone_adjust">Aanpassen</string>
     <string name="clone_copy_mode">Bevroren beeld</string>
@@ -831,7 +816,6 @@ gescande documenten automatisch"</string>
     <string name="download_hint_cn">"Looks like your device isn't connected to WLAN. Use %1$s MB of mobile data to download items now?"</string>
     <string name="download_hint_wifi">Het lijkt erop dat uw apparaat niet is verbonden met wifi. %1$s MB aan mobiele data gebruiken om nu items te downloaden?</string>
     <string name="download_in_progress">Downloaden…</string>
-    <string name="download_network_error">Kon niet downloaden. Controleer uw netwerkinstellingen.</string>
     <string name="download_title">Waarschuwing datagebruik</string>
     <string name="download_waiting">Afwachting…</string>
     <string name="dual_camera_lens_covered_toast">De lens is bedekt.</string>
@@ -882,7 +866,6 @@ Met Dubbele telefoonopname kunt u ook verbinding maken met een ander apparaat in
     <string name="eras_ad">n.C.</string>
     <string name="eras_bc">v.C.</string>
     <string name="error_fail_to_start_audio_capture">Kon audio-opname niet starten</string>
-    <string name="error_icon_content_description">Fout</string>
     <string name="esp_tip">Buitenste display voorbeeld</string>
     <string name="evening">Middag</string>
     <string name="exo_controls_cc_disabled_description">Ondertiteling aanzetten</string>
@@ -937,7 +920,6 @@ Met Dubbele telefoonopname kunt u ook verbinding maken met een ander apparaat in
     <string name="exo_track_surround_7_point_1">7.1 surroundgeluid</string>
     <string name="exo_track_unknown">Onbekend</string>
     <string name="expand_button_title">Geavanceerd</string>
-    <string name="exposed_dropdown_menu_content_description">Dropdownmenu tonen</string>
     <string name="exposure_mode_adjust_title">Belichtingsmodus</string>
     <string name="eye_light">Oog schittering</string>
     <string name="eye_light_angel">Engel</string>
@@ -1094,7 +1076,6 @@ en vervolgens een foto maken waarbij iedereen er op z'n best uitziet."</string>
     <string name="hint_subtitle_prompt">U kunt nu ondertitels dicteren</string>
     <string name="histogram_summary_tip">Toon real time feedback over de blootstelling</string>
     <string name="hunt_dual_water_mark">Het duale camera watermerk zal automatisch worden toegevoegd.</string>
-    <string name="icon_content_description">Icoon voor dialoogvenster</string>
     <string name="id_card_mode_hint_back">Scan de achterkant van uw ID</string>
     <string name="id_card_mode_hint_front">Scan de voorkant van uw ID</string>
     <string name="id_card_mode_use_hint_text_body">"Combineer beide zijden van uw ID in één afbeelding.
@@ -1105,7 +1086,6 @@ Druk de kopie draadloos af op A4-papier."</string>
     <string name="invisible_mode_dialog_summary">Kan camera nu niet gebruiken. Schakel Incognito modus uit in de Instellingen om de camera te kunnen gebruiken.</string>
     <string name="invisible_mode_dialog_title">U bent incognito</string>
     <string name="invisible_mode_dialog_to_close">Instellingen</string>
-    <string name="item_view_role_description">Tabblad</string>
     <string name="kaleidoscope_fragment_tab_name">Caleidoscoop</string>
     <string name="lens_dirty_detected_content">"Het lijkt erop dat de lens van de camera vies is.
 Reinig de lens voor een beter effect."</string>
@@ -1228,18 +1208,6 @@ er groter uit te laten zien op foto's"</string>
     <string name="manually_raw_tip">Kan zoom niet gebruiken met RAW formaat</string>
     <string name="manually_ultra_raw_tip">Kan niet zoomen met Ultra RAW</string>
     <string name="masterfilter_description_title">Filmfilters</string>
-    <string name="material_clock_toggle_content_description">Selecteer a.m. of p.m.</string>
-    <string name="material_hour_selection">Selecteer uur</string>
-    <string name="material_hour_suffix">%1$s uur</string>
-    <string name="material_minute_selection">Minuten selecteren</string>
-    <string name="material_minute_suffix">%1$s minuten</string>
-    <string name="material_timepicker_am">a.m.</string>
-    <string name="material_timepicker_clock_mode_description">Schakel naar de klokmodus om de tijd in te voeren.</string>
-    <string name="material_timepicker_hour">Uur</string>
-    <string name="material_timepicker_minute">Minuut</string>
-    <string name="material_timepicker_pm">p.m.</string>
-    <string name="material_timepicker_select_time">Tijd selecteren</string>
-    <string name="material_timepicker_text_input_mode_description">Schakel naar de tekstinvoermodus om de tijd in te voeren.</string>
     <string name="message_snap_double_confirm">De volumeknop lang ingedrukt houden schakelt nu NFC in. Wilt u deze functie vervangen?</string>
     <string name="midnight">Nacht</string>
     <string name="mimoji_app_name">Fun Cam</string>
@@ -1378,7 +1346,6 @@ er groter uit te laten zien op foto's"</string>
     <string name="miuix_appcompat_delete_description">Verwijderen</string>
     <string name="miuix_appcompat_deselect_all">Alles deselecteren</string>
     <string name="miuix_appcompat_deselect_all_description">Alles deselecteren</string>
-    <string name="miuix_appcompat_edit">Bewerken</string>
     <string name="miuix_appcompat_search_action_mode_cancel">Annuleren</string>
     <string name="miuix_appcompat_search_input_description">Zoeken</string>
     <string name="miuix_appcompat_select_all">Alles selecteren</string>
@@ -1486,42 +1453,6 @@ er groter uit te laten zien op foto's"</string>
     <string name="msg_bubble_doc4_first_use">Tik om tekst te herkennen</string>
     <string name="msg_toast_doc4_recognition_failed">Er is een fout opgetreden. Probeer het opnieuw.</string>
     <string name="msg_toast_doc4_text_not_found">Kon tekst niet detecteren</string>
-    <string name="mtrl_badge_numberless_content_description">Nieuwe melding</string>
-    <string name="mtrl_chip_close_icon_content_description">%1$s verwijderen</string>
-    <string name="mtrl_exceed_max_badge_number_content_description">Meer dan %1$d nieuwe meldingen</string>
-    <string name="mtrl_picker_a11y_next_month">Naar volgende maand gaan</string>
-    <string name="mtrl_picker_a11y_prev_month">Naar vorige maand gaan</string>
-    <string name="mtrl_picker_announce_current_selection">Huidige selectie: %1$s</string>
-    <string name="mtrl_picker_cancel">Annuleren</string>
-    <string name="mtrl_picker_confirm">OK</string>
-    <string name="mtrl_picker_date_header_selected">%1$s</string>
-    <string name="mtrl_picker_date_header_title">Selecteer een datum</string>
-    <string name="mtrl_picker_date_header_unselected">Geselecteerde datum</string>
-    <string name="mtrl_picker_day_of_week_column_header">Kolom met dagen: %1$s</string>
-    <string name="mtrl_picker_invalid_format">Ongeldige indeling.</string>
-    <string name="mtrl_picker_invalid_format_example">Voorbeeld: %1$s</string>
-    <string name="mtrl_picker_invalid_format_use">Gebruik: %1$s</string>
-    <string name="mtrl_picker_invalid_range">Ongeldig bereik.</string>
-    <string name="mtrl_picker_navigate_to_year_description">Naar jaar %1$s navigeren</string>
-    <string name="mtrl_picker_out_of_range">Valt buiten bereik: %1$s</string>
-    <string name="mtrl_picker_range_header_only_end_selected">Startdatum - %1$s</string>
-    <string name="mtrl_picker_range_header_only_start_selected">%1$s – einddatum</string>
-    <string name="mtrl_picker_range_header_selected">%1$s – %2$s</string>
-    <string name="mtrl_picker_range_header_title">Selecteer een periode</string>
-    <string name="mtrl_picker_range_header_unselected">Startdatum - einddatum</string>
-    <string name="mtrl_picker_save">Opslaan</string>
-    <string name="mtrl_picker_text_input_date_hint">Datum</string>
-    <string name="mtrl_picker_text_input_date_range_end_hint">Einddatum</string>
-    <string name="mtrl_picker_text_input_date_range_start_hint">Startdatum</string>
-    <string name="mtrl_picker_text_input_day_abbr">d</string>
-    <string name="mtrl_picker_text_input_month_abbr">m</string>
-    <string name="mtrl_picker_text_input_year_abbr">j</string>
-    <string name="mtrl_picker_toggle_to_calendar_input_mode">Overschakelen naar agenda-invoermodus</string>
-    <string name="mtrl_picker_toggle_to_day_selection">Tik om naar dagselectie te schakelen</string>
-    <string name="mtrl_picker_toggle_to_text_input_mode">Overschakelen naar tekstinvoermodus</string>
-    <string name="mtrl_picker_toggle_to_year_selection">Tik om naar jaarselectie te schakelen</string>
-    <string name="mtrl_timepicker_cancel">Annuleren</string>
-    <string name="mtrl_timepicker_confirm">OK</string>
     <string name="multi_window_mode_not_supported">Camera kan niet worden gebruikt in de modus met meerdere vensters</string>
     <string name="network_access_user_notice_agree">Akkoord</string>
     <string name="network_access_user_notice_message_live_video">"&lt;Data>Camera moet verbinding met internet maken om effecten, muziek en andere functies voor korte video's te bieden.&lt;br/>&lt;br/>Door hieronder op \"Akkoord\" te tikken, gaat u akkoord met onze &lt;a href =%1$s>Gebruikersovereenkomst&lt;/a> en ons &lt;a href =%2$s>Privacybeleid&lt;/a> en staat u Camera toe om verbinding met internet te maken.&lt;/Data>"</string>
@@ -1616,7 +1547,6 @@ Ultra RAW afbeeldingen slaan %d bit aan gegevens op en behouden nog meer details
     <string name="parameter_wb_title">Witbalans</string>
     <string name="parameter_zoom_slider_description">Sleep de zoomschuifregelaar horizontaal om uw opname soepel te veranderen van een langeafstands opname naar een close-up.</string>
     <string name="parameter_zoom_slider_title">Zoom</string>
-    <string name="password_toggle_content_description">Wachtwoord tonen</string>
     <string name="path_settings">Systeem-apps/Camera/Instellingen</string>
     <string name="photo_assistance_tips_title">Live-tips</string>
     <string name="pic_flaw_blink_more">Het lijkt erop dat iemand in het kader zijn ogen gesloten heeft</string>
@@ -2359,7 +2289,6 @@ Houd het object scherp terwijl de achtergrond onscherp wordt gemaakt."</string>
     <string name="time_picker_label_hour">H</string>
     <string name="time_picker_label_minute">M</string>
     <string name="time_stamp_date_format">dd-MM-yyyy</string>
-    <string name="time_stamp_date_format_minute">dd-MM-yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">U kunt de achtergrond op elk moment voor of tijdens het fotograferen bevriezen en ontgrendelen.</string>
     <string name="timefreeze_guide_tip3">Vraag uw onderwerp om in het midden van het kader te blijven.</string>
     <string name="timefreeze_guide_tip4">Laat het verkeer stoppen.</string>
@@ -2397,7 +2326,7 @@ Houd het object scherp terwijl de achtergrond onscherp wordt gemaakt."</string>
     <string name="tip_flash_screen_light_on">Zachte flits: Aan</string>
     <string name="tip_flash_soft_light_off">Zachte flits: Uit</string>
     <string name="tip_flash_soft_light_torch">Zachte flits: Zaklamp-modus</string>
-    <string name="tip_flash_torch">Flits: Zaklamp</string>
+    <string name="tip_flash_torch">Flits: Altijd aan</string>
     <string name="tip_friend_mode_connect_when_24GHz">Gebruik een %s GHz verbinding om de kwaliteit van het voorbeeld te verbeteren</string>
     <string name="tip_friend_mode_display_device_name_connect">Gedeeld voorbeeld</string>
     <string name="tip_friend_mode_display_device_name_disconnect">Het andere apparaat heeft deze sessie verlaten</string>

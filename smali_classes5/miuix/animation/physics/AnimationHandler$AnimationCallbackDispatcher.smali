@@ -1,4 +1,4 @@
-.class Lmiuix/animation/physics/AnimationHandler$AnimationCallbackDispatcher;
+.class public Lmiuix/animation/physics/AnimationHandler$AnimationCallbackDispatcher;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lmiuix/animation/physics/AnimationHandler;
+.field public final synthetic this$0:Lmiuix/animation/physics/AnimationHandler;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/animation/physics/AnimationHandler;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/animation/physics/AnimationHandler$AnimationCallbackDispatcher;->this$0:Lmiuix/animation/physics/AnimationHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -31,28 +32,44 @@
 
 
 # virtual methods
-.method public dispatchAnimationFrame(J)V
-    .locals 1
+.method public dispatchAnimationFrame()V
+    .locals 3
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/physics/AnimationHandler$AnimationCallbackDispatcher;->this$0:Lmiuix/animation/physics/AnimationHandler;
 
-    invoke-static {v0, p1, p2}, Lmiuix/animation/physics/AnimationHandler;->access$000(Lmiuix/animation/physics/AnimationHandler;J)V
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    iget-object p1, p0, Lmiuix/animation/physics/AnimationHandler$AnimationCallbackDispatcher;->this$0:Lmiuix/animation/physics/AnimationHandler;
+    move-result-wide v1
 
-    invoke-static {p1}, Lmiuix/animation/physics/AnimationHandler;->access$100(Lmiuix/animation/physics/AnimationHandler;)Ljava/util/ArrayList;
+    invoke-static {v0, v1, v2}, Lmiuix/animation/physics/AnimationHandler;->access$002(Lmiuix/animation/physics/AnimationHandler;J)J
 
-    move-result-object p1
+    .line 2
+    iget-object v0, p0, Lmiuix/animation/physics/AnimationHandler$AnimationCallbackDispatcher;->this$0:Lmiuix/animation/physics/AnimationHandler;
 
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+    invoke-static {v0}, Lmiuix/animation/physics/AnimationHandler;->access$000(Lmiuix/animation/physics/AnimationHandler;)J
 
-    move-result p1
+    move-result-wide v1
 
-    if-lez p1, :cond_0
+    invoke-static {v0, v1, v2}, Lmiuix/animation/physics/AnimationHandler;->access$100(Lmiuix/animation/physics/AnimationHandler;J)V
 
+    .line 3
+    iget-object v0, p0, Lmiuix/animation/physics/AnimationHandler$AnimationCallbackDispatcher;->this$0:Lmiuix/animation/physics/AnimationHandler;
+
+    invoke-static {v0}, Lmiuix/animation/physics/AnimationHandler;->access$200(Lmiuix/animation/physics/AnimationHandler;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    .line 4
     iget-object p0, p0, Lmiuix/animation/physics/AnimationHandler$AnimationCallbackDispatcher;->this$0:Lmiuix/animation/physics/AnimationHandler;
 
-    invoke-static {p0}, Lmiuix/animation/physics/AnimationHandler;->access$200(Lmiuix/animation/physics/AnimationHandler;)Lmiuix/animation/physics/AnimationHandler$AnimationFrameCallbackProvider;
+    invoke-static {p0}, Lmiuix/animation/physics/AnimationHandler;->access$300(Lmiuix/animation/physics/AnimationHandler;)Lmiuix/animation/physics/AnimationHandler$AnimationFrameCallbackProvider;
 
     move-result-object p0
 

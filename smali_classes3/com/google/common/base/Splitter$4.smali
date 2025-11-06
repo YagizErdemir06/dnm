@@ -1,4 +1,4 @@
-.class Lcom/google/common/base/Splitter$4;
+.class public Lcom/google/common/base/Splitter$4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic val$length:I
+.field public final synthetic val$length:I
 
 
 # direct methods
 .method public constructor <init>(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/common/base/Splitter$4;->val$length:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

@@ -1,16 +1,17 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbl;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbl;
 .super Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbp;
 .source "SourceFile"
 
 
 # instance fields
-.field final synthetic zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;
+.field public final synthetic zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;)V
     .locals 1
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbl;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;
 
     const/4 v0, 0x0
@@ -25,6 +26,7 @@
 .method public final bridge synthetic zza(I)Ljava/lang/Object;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbr;
 
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbl;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;

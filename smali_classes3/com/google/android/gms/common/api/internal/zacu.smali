@@ -32,6 +32,7 @@
 
     check-cast p2, Lcom/google/android/gms/tasks/TaskCompletionSource;
 
+    .line 1
     invoke-interface {p0, p1, p2}, Lcom/google/android/gms/common/util/BiConsumer;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void

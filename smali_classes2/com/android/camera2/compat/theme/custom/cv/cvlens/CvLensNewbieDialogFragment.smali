@@ -14,6 +14,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/dialog/AiSceneNewbieDialogFragment;-><init>()V
 
     return-void
@@ -21,7 +22,18 @@
 
 .method private hideLayout(Ljava/lang/String;Landroid/view/View;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "cvLensValue",
+            "view"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -104,8 +116,9 @@
     goto :goto_1
 
     :pswitch_4
-    const p1, 0x7f0b01c1
+    const p1, 0x7f0b0196
 
+    .line 2
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -115,8 +128,9 @@
     goto :goto_1
 
     :pswitch_5
-    const p1, 0x7f0b01bf
+    const p1, 0x7f0b0194
 
+    .line 3
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -126,8 +140,9 @@
     goto :goto_1
 
     :pswitch_6
-    const p1, 0x7f0b01c2
+    const p1, 0x7f0b0197
 
+    .line 4
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -137,8 +152,9 @@
     goto :goto_1
 
     :pswitch_7
-    const p1, 0x7f0b01c0
+    const p1, 0x7f0b0195
 
+    .line 5
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -171,33 +187,44 @@
 # virtual methods
 .method public dismiss()V
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .line 1
     invoke-super {p0}, Landroidx/fragment/app/DialogFragment;->dismiss()V
 
-    invoke-static {}, Lcom/android/camera/v2;->E8()V
+    .line 2
+    invoke-static {}, Ld/d/a/d4;->A8()V
 
     return-void
 .end method
 
 .method public onClick(Landroid/view/View;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0}, Landroidx/fragment/app/DialogFragment;->dismiss()V
 
-    invoke-static {}, Lv8/p;->impl()Ljava/util/Optional;
+    .line 2
+    invoke-static {}, Ld/d/a/m7/g/s;->impl()Ljava/util/Optional;
 
     move-result-object p1
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/cv/cvlens/a;
-
-    invoke-direct {v0}, Lcom/android/camera2/compat/theme/custom/cv/cvlens/a;-><init>()V
+    sget-object v0, Ld/d/b/x5/a/b/a/j/a;->c:Ld/d/b/x5/a/b/a/j/a;
 
     invoke-virtual {p1, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
     const/4 p1, 0x5
 
+    .line 3
     invoke-virtual {p0, p1}, Lcom/android/camera/fragment/dialog/AiSceneNewbieDialogFragment;->onBackEvent(I)Z
 
     return-void
@@ -216,65 +243,84 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "inflater",
+            "container",
+            "savedInstanceState"
+        }
+    .end annotation
+
+    .line 1
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
     move-result-object p3
 
-    invoke-virtual {p3}, Lm2/h1;->Q()Lcom/android/camera2/compat/theme/custom/cv/cvlens/ComponentRunningCvLens;
+    invoke-virtual {p3}, Ld/d/a/l6/e/m/g1;->J()Lcom/android/camera2/compat/theme/custom/cv/cvlens/ComponentRunningCvLens;
 
     move-result-object p3
 
+    .line 2
     invoke-virtual {p3}, Lcom/android/camera2/compat/theme/custom/cv/cvlens/ComponentRunningCvLens;->getItems()Ljava/util/List;
 
     move-result-object p3
 
+    .line 3
     invoke-interface {p3}, Ljava/util/List;->size()I
 
     move-result v0
 
-    const/4 v1, 0x4
+    const/4 v1, 0x1
 
-    const/4 v2, 0x1
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    const/4 v3, 0x4
 
-    if-le v0, v1, :cond_0
+    if-le v0, v3, :cond_0
 
-    const p3, 0x7f0e00bb
+    const p3, 0x7f0e00ac
 
-    invoke-virtual {p1, p3, p2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    .line 4
+    invoke-virtual {p1, p3, p2, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p1
 
     goto :goto_1
 
     :cond_0
-    const v0, 0x7f0e00ba
+    const v0, 0x7f0e00ab
 
-    invoke-virtual {p1, v0, p2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    .line 5
+    invoke-virtual {p1, v0, p2, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p1
 
-    move p2, v3
+    move p2, v2
 
     move v0, p2
 
     :goto_0
-    const/4 v1, 0x5
+    const/4 v3, 0x5
 
-    if-ge p2, v1, :cond_2
+    if-ge p2, v3, :cond_2
 
-    sget-object v1, Le2/m;->o:[Ljava/lang/String;
+    .line 6
+    sget-object v3, Ld/d/a/j6/m;->o:[Ljava/lang/String;
 
-    aget-object v4, v1, p2
+    aget-object v4, v3, p2
 
     invoke-interface {p3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lcom/android/camera/data/data/c;
+    check-cast v5, Ld/d/a/l6/e/c;
 
-    iget-object v5, v5, Lcom/android/camera/data/data/c;->n:Ljava/lang/String;
+    iget-object v5, v5, Ld/d/a/l6/e/c;->q:Ljava/lang/String;
 
     invoke-static {v4, v5}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -282,48 +328,52 @@
 
     if-nez v4, :cond_1
 
-    aget-object v1, v1, p2
+    .line 7
+    aget-object v3, v3, p2
 
-    invoke-direct {p0, v1, p1}, Lcom/android/camera2/compat/theme/custom/cv/cvlens/CvLensNewbieDialogFragment;->hideLayout(Ljava/lang/String;Landroid/view/View;)V
+    invoke-direct {p0, v3, p1}, Lcom/android/camera2/compat/theme/custom/cv/cvlens/CvLensNewbieDialogFragment;->hideLayout(Ljava/lang/String;Landroid/view/View;)V
 
     add-int/lit8 v0, v0, -0x1
 
     :cond_1
     add-int/lit8 p2, p2, 0x1
 
-    add-int/2addr v0, v2
+    add-int/2addr v0, v1
 
     goto :goto_0
 
     :cond_2
     :goto_1
-    const p2, 0x7f0b010a
+    const p2, 0x7f0b00ee
 
+    .line 8
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
 
     invoke-virtual {p2, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const p2, 0x7f0b01c3
+    const p2, 0x7f0b0198
 
+    .line 9
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
 
     check-cast p2, Landroid/widget/TextView;
 
+    .line 10
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p3
 
-    const v0, 0x7f1403cb
+    const v0, 0x7f1303b5
 
     invoke-virtual {p3, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object p3
 
-    new-array v1, v2, [Ljava/lang/Object;
+    new-array v3, v1, [Ljava/lang/Object;
 
     const/16 v4, 0x23
 
@@ -331,33 +381,35 @@
 
     move-result-object v4
 
-    aput-object v4, v1, v3
+    aput-object v4, v3, v2
 
-    invoke-static {p3, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p3, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p3
 
     invoke-virtual {p2, p3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const p2, 0x7f0b01c4
+    const p2, 0x7f0b0199
 
+    .line 11
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
 
     check-cast p2, Landroid/widget/TextView;
 
+    .line 12
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p3
 
-    const v1, 0x7f1403cc
+    const v3, 0x7f1303b6
 
-    invoke-virtual {p3, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {p3, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object p3
 
-    new-array v1, v2, [Ljava/lang/Object;
+    new-array v3, v1, [Ljava/lang/Object;
 
     const/16 v4, 0x32
 
@@ -365,22 +417,24 @@
 
     move-result-object v4
 
-    aput-object v4, v1, v3
+    aput-object v4, v3, v2
 
-    invoke-static {p3, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p3, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p3
 
     invoke-virtual {p2, p3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const p2, 0x7f0b01c5
+    const p2, 0x7f0b019a
 
+    .line 13
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
 
     check-cast p2, Landroid/widget/TextView;
 
+    .line 14
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p3
@@ -389,15 +443,15 @@
 
     move-result-object p3
 
-    new-array v0, v2, [Ljava/lang/Object;
+    new-array v0, v1, [Ljava/lang/Object;
 
-    const/16 v1, 0x4b
+    const/16 v3, 0x4b
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v1
+    move-result-object v3
 
-    aput-object v1, v0, v3
+    aput-object v3, v0, v2
 
     invoke-static {p3, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -405,25 +459,27 @@
 
     invoke-virtual {p2, p3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const p2, 0x7f0b01c6
+    const p2, 0x7f0b019b
 
+    .line 15
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
 
     check-cast p2, Landroid/widget/TextView;
 
+    .line 16
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p0
 
-    const p3, 0x7f1403cd
+    const p3, 0x7f1303b7
 
     invoke-virtual {p0, p3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object p0
 
-    new-array p3, v2, [Ljava/lang/Object;
+    new-array p3, v1, [Ljava/lang/Object;
 
     const/16 v0, 0x5a
 
@@ -431,7 +487,7 @@
 
     move-result-object v0
 
-    aput-object v0, p3, v3
+    aput-object v0, p3, v2
 
     invoke-static {p0, p3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -445,9 +501,11 @@
 .method public onStop()V
     .locals 0
 
+    .line 1
     invoke-super {p0}, Landroidx/fragment/app/DialogFragment;->onStop()V
 
-    invoke-static {}, Lcom/android/camera/v2;->E8()V
+    .line 2
+    invoke-static {}, Ld/d/a/d4;->A8()V
 
     return-void
 .end method

@@ -66,6 +66,7 @@
 .method public static synthetic access$100(Lcom/google/common/base/Joiner;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/Joiner;->separator:Ljava/lang/String;
 
     return-object p0
@@ -95,8 +96,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lcom/google/common/base/Joiner$3;
 
     invoke-direct {v0, p2, p0, p1}, Lcom/google/common/base/Joiner$3;-><init>([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
@@ -520,6 +523,7 @@
 .method public skipNulls()Lcom/google/common/base/Joiner;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/base/Joiner$2;
 
     invoke-direct {v0, p0, p0}, Lcom/google/common/base/Joiner$2;-><init>(Lcom/google/common/base/Joiner;Lcom/google/common/base/Joiner;)V
@@ -534,8 +538,10 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     instance-of p0, p1, Ljava/lang/CharSequence;
 
     if-eqz p0, :cond_0
@@ -556,8 +562,10 @@
 .method public useForNull(Ljava/lang/String;)Lcom/google/common/base/Joiner;
     .locals 1
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lcom/google/common/base/Joiner$1;
 
     invoke-direct {v0, p0, p0, p1}, Lcom/google/common/base/Joiner$1;-><init>(Lcom/google/common/base/Joiner;Lcom/google/common/base/Joiner;Ljava/lang/String;)V

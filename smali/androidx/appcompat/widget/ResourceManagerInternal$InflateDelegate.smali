@@ -1,4 +1,4 @@
-.class interface abstract Landroidx/appcompat/widget/ResourceManagerInternal$InflateDelegate;
+.class public interface abstract Landroidx/appcompat/widget/ResourceManagerInternal$InflateDelegate;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

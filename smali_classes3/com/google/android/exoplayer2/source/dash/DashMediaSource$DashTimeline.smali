@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;
+.class public final Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;
 .super Lcom/google/android/exoplayer2/Timeline;
 .source "SourceFile"
 
@@ -53,8 +53,10 @@
 
     move-object/from16 v2, p16
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/Timeline;-><init>()V
 
+    .line 2
     iget-boolean v3, v1, Lcom/google/android/exoplayer2/source/dash/manifest/DashManifest;->dynamic:Z
 
     const/4 v4, 0x1
@@ -83,38 +85,48 @@
 
     move-wide v3, p1
 
+    .line 3
     iput-wide v3, v0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->presentationStartTimeMs:J
 
     move-wide v3, p3
 
+    .line 4
     iput-wide v3, v0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->windowStartTimeMs:J
 
     move-wide v3, p5
 
+    .line 5
     iput-wide v3, v0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->elapsedRealtimeEpochOffsetMs:J
 
     move v3, p7
 
+    .line 6
     iput v3, v0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->firstPeriodId:I
 
     move-wide v3, p8
 
+    .line 7
     iput-wide v3, v0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->offsetInFirstPeriodUs:J
 
     move-wide/from16 v3, p10
 
+    .line 8
     iput-wide v3, v0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->windowDurationUs:J
 
     move-wide/from16 v3, p12
 
+    .line 9
     iput-wide v3, v0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->windowDefaultStartPositionUs:J
 
+    .line 10
     iput-object v1, v0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->manifest:Lcom/google/android/exoplayer2/source/dash/manifest/DashManifest;
 
     move-object/from16 v1, p15
 
+    .line 11
     iput-object v1, v0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->mediaItem:Lcom/google/android/exoplayer2/MediaItem;
 
+    .line 12
     iput-object v2, v0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->liveConfiguration:Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration;
 
     return-void
@@ -123,8 +135,10 @@
 .method private getAdjustedWindowDefaultStartPositionUs(J)J
     .locals 9
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->windowDefaultStartPositionUs:J
 
+    .line 2
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->manifest:Lcom/google/android/exoplayer2/source/dash/manifest/DashManifest;
 
     invoke-static {v2}, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->isMovingLiveWindow(Lcom/google/android/exoplayer2/source/dash/manifest/DashManifest;)Z
@@ -144,6 +158,7 @@
 
     add-long/2addr v0, p1
 
+    .line 3
     iget-wide p1, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->windowDurationUs:J
 
     cmp-long p1, v0, p1
@@ -154,11 +169,13 @@
 
     return-wide p0
 
+    .line 4
     :cond_1
     iget-wide p1, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->offsetInFirstPeriodUs:J
 
     add-long/2addr p1, v0
 
+    .line 5
     iget-object v4, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->manifest:Lcom/google/android/exoplayer2/source/dash/manifest/DashManifest;
 
     const/4 v5, 0x0
@@ -169,6 +186,7 @@
 
     move v4, v5
 
+    .line 6
     :goto_0
     iget-object v8, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->manifest:Lcom/google/android/exoplayer2/source/dash/manifest/DashManifest;
 
@@ -188,6 +206,7 @@
 
     add-int/lit8 v4, v4, 0x1
 
+    .line 7
     iget-object v6, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->manifest:Lcom/google/android/exoplayer2/source/dash/manifest/DashManifest;
 
     invoke-virtual {v6, v4}, Lcom/google/android/exoplayer2/source/dash/manifest/DashManifest;->getPeriodDurationUs(I)J
@@ -196,15 +215,18 @@
 
     goto :goto_0
 
+    .line 8
     :cond_2
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->manifest:Lcom/google/android/exoplayer2/source/dash/manifest/DashManifest;
 
+    .line 9
     invoke-virtual {p0, v4}, Lcom/google/android/exoplayer2/source/dash/manifest/DashManifest;->getPeriod(I)Lcom/google/android/exoplayer2/source/dash/manifest/Period;
 
     move-result-object p0
 
     const/4 v4, 0x2
 
+    .line 10
     invoke-virtual {p0, v4}, Lcom/google/android/exoplayer2/source/dash/manifest/Period;->getAdaptationSetIndex(I)I
 
     move-result v4
@@ -215,9 +237,11 @@
 
     return-wide v0
 
+    .line 11
     :cond_3
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/dash/manifest/Period;->adaptationSets:Ljava/util/List;
 
+    .line 12
     invoke-interface {p0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -238,6 +262,7 @@
 
     if-eqz p0, :cond_5
 
+    .line 13
     invoke-interface {p0, v6, v7}, Lcom/google/android/exoplayer2/source/dash/DashSegmentIndex;->getSegmentCount(J)J
 
     move-result-wide v4
@@ -248,11 +273,13 @@
 
     goto :goto_1
 
+    .line 14
     :cond_4
     invoke-interface {p0, p1, p2, v6, v7}, Lcom/google/android/exoplayer2/source/dash/DashSegmentIndex;->getSegmentNum(JJ)J
 
     move-result-wide v2
 
+    .line 15
     invoke-interface {p0, v2, v3}, Lcom/google/android/exoplayer2/source/dash/DashSegmentIndex;->getTimeUs(J)J
 
     move-result-wide v2
@@ -269,6 +296,7 @@
 .method private static isMovingLiveWindow(Lcom/google/android/exoplayer2/source/dash/manifest/DashManifest;)Z
     .locals 4
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/source/dash/manifest/DashManifest;->dynamic:Z
 
     if-eqz v0, :cond_0
@@ -303,6 +331,7 @@
 .method public getIndexOfPeriod(Ljava/lang/Object;)I
     .locals 2
 
+    .line 1
     instance-of v0, p1, Ljava/lang/Integer;
 
     const/4 v1, -0x1
@@ -311,6 +340,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     check-cast p1, Ljava/lang/Integer;
 
@@ -318,12 +348,14 @@
 
     move-result p1
 
+    .line 3
     iget v0, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->firstPeriodId:I
 
     sub-int/2addr p1, v0
 
     if-ltz p1, :cond_2
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->getPeriodCount()I
 
     move-result p0
@@ -343,6 +375,7 @@
 .method public getPeriod(ILcom/google/android/exoplayer2/Timeline$Period;Z)Lcom/google/android/exoplayer2/Timeline$Period;
     .locals 11
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->getPeriodCount()I
 
     move-result v0
@@ -355,6 +388,7 @@
 
     if-eqz p3, :cond_0
 
+    .line 2
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->manifest:Lcom/google/android/exoplayer2/source/dash/manifest/DashManifest;
 
     invoke-virtual {v2, p1}, Lcom/google/android/exoplayer2/source/dash/manifest/DashManifest;->getPeriod(I)Lcom/google/android/exoplayer2/source/dash/manifest/Period;
@@ -373,6 +407,7 @@
     :goto_0
     if-eqz p3, :cond_1
 
+    .line 3
     iget p3, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->firstPeriodId:I
 
     add-int/2addr p3, p1
@@ -386,14 +421,17 @@
 
     const/4 v6, 0x0
 
+    .line 4
     iget-object p3, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->manifest:Lcom/google/android/exoplayer2/source/dash/manifest/DashManifest;
 
+    .line 5
     invoke-virtual {p3, p1}, Lcom/google/android/exoplayer2/source/dash/manifest/DashManifest;->getPeriodDurationUs(I)J
 
     move-result-wide v7
 
     iget-object p3, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->manifest:Lcom/google/android/exoplayer2/source/dash/manifest/DashManifest;
 
+    .line 6
     invoke-virtual {p3, p1}, Lcom/google/android/exoplayer2/source/dash/manifest/DashManifest;->getPeriod(I)Lcom/google/android/exoplayer2/source/dash/manifest/Period;
 
     move-result-object p1
@@ -420,6 +458,7 @@
 
     move-object v3, p2
 
+    .line 7
     invoke-virtual/range {v3 .. v10}, Lcom/google/android/exoplayer2/Timeline$Period;->set(Ljava/lang/Object;Ljava/lang/Object;IJJ)Lcom/google/android/exoplayer2/Timeline$Period;
 
     move-result-object p0
@@ -430,6 +469,7 @@
 .method public getPeriodCount()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->manifest:Lcom/google/android/exoplayer2/source/dash/manifest/DashManifest;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/source/dash/manifest/DashManifest;->getPeriodCount()I
@@ -442,14 +482,16 @@
 .method public getUidOfPeriod(I)Ljava/lang/Object;
     .locals 2
 
-    const/4 v0, 0x0
-
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->getPeriodCount()I
 
-    move-result v1
+    move-result v0
 
-    invoke-static {p1, v0, v1}, Lcom/google/android/exoplayer2/util/Assertions;->checkIndex(III)I
+    const/4 v1, 0x0
 
+    invoke-static {p1, v1, v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkIndex(III)I
+
+    .line 2
     iget p0, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->firstPeriodId:I
 
     add-int/2addr p0, p1
@@ -470,18 +512,21 @@
 
     const/4 v2, 0x0
 
-    const/4 v13, 0x1
+    const/4 v11, 0x1
 
     move/from16 v3, p1
 
-    invoke-static {v3, v2, v13}, Lcom/google/android/exoplayer2/util/Assertions;->checkIndex(III)I
+    .line 1
+    invoke-static {v3, v2, v11}, Lcom/google/android/exoplayer2/util/Assertions;->checkIndex(III)I
 
     move-wide/from16 v2, p3
 
+    .line 2
     invoke-direct {v0, v2, v3}, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->getAdjustedWindowDefaultStartPositionUs(J)J
 
     move-result-wide v14
 
+    .line 3
     sget-object v2, Lcom/google/android/exoplayer2/Timeline$Window;->SINGLE_WINDOW_UID:Ljava/lang/Object;
 
     iget-object v3, v0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->mediaItem:Lcom/google/android/exoplayer2/MediaItem;
@@ -496,27 +541,25 @@
 
     iget-wide v9, v0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->elapsedRealtimeEpochOffsetMs:J
 
-    const/4 v11, 0x1
-
+    .line 4
     invoke-static {v12}, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->isMovingLiveWindow(Lcom/google/android/exoplayer2/source/dash/manifest/DashManifest;)Z
 
     move-result v12
 
     iget-object v13, v0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->liveConfiguration:Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration;
 
-    const/16 v19, 0x1
-
-    move/from16 p2, v12
+    move/from16 p1, v12
 
     iget-wide v11, v0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->windowDurationUs:J
 
     move-wide/from16 v16, v11
 
-    const/16 v18, 0x0
-
+    .line 5
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$DashTimeline;->getPeriodCount()I
 
     move-result v11
+
+    const/4 v12, 0x1
 
     add-int/lit8 v19, v11, -0x1
 
@@ -524,10 +567,13 @@
 
     move-wide/from16 v20, v11
 
-    move/from16 v12, p2
-
     const/4 v11, 0x1
 
+    const/16 v18, 0x0
+
+    move/from16 v12, p1
+
+    .line 6
     invoke-virtual/range {v1 .. v21}, Lcom/google/android/exoplayer2/Timeline$Window;->set(Ljava/lang/Object;Lcom/google/android/exoplayer2/MediaItem;Ljava/lang/Object;JJJZZLcom/google/android/exoplayer2/MediaItem$LiveConfiguration;JJIIJ)Lcom/google/android/exoplayer2/Timeline$Window;
 
     move-result-object v0

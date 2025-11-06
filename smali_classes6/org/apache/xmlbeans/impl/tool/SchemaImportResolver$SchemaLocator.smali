@@ -1,4 +1,4 @@
-.class Lorg/apache/xmlbeans/impl/tool/SchemaImportResolver$SchemaLocator;
+.class public Lorg/apache/xmlbeans/impl/tool/SchemaImportResolver$SchemaLocator;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -24,10 +24,13 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaImportResolver$SchemaLocator;->namespace:Ljava/lang/String;
 
+    .line 3
     iput-object p2, p0, Lorg/apache/xmlbeans/impl/tool/SchemaImportResolver$SchemaLocator;->schemaLocation:Ljava/lang/String;
 
     return-void

@@ -16,9 +16,6 @@
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/os/Parcelable$Creator<",
@@ -30,9 +27,10 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/preference/Preference$BaseSavedState$1;
 
     invoke-direct {v0}, Landroidx/preference/Preference$BaseSavedState$1;-><init>()V

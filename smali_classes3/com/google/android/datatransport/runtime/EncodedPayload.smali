@@ -11,7 +11,7 @@
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/datatransport/Encoding;[B)V
-    .locals 0
+    .locals 1
     .param p1    # Lcom/google/android/datatransport/Encoding;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -21,35 +21,26 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p1, :cond_1
+    const-string v0, "encoding is null"
 
-    if-eqz p2, :cond_0
+    .line 2
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    const-string v0, "bytes is null"
+
+    .line 3
+    invoke-static {p2, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 4
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/EncodedPayload;->encoding:Lcom/google/android/datatransport/Encoding;
 
+    .line 5
     iput-object p2, p0, Lcom/google/android/datatransport/runtime/EncodedPayload;->bytes:[B
 
     return-void
-
-    :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string p1, "bytes is null"
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string p1, "encoding is null"
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method
 
 
@@ -63,6 +54,7 @@
 
     return p0
 
+    .line 1
     :cond_0
     instance-of v0, p1, Lcom/google/android/datatransport/runtime/EncodedPayload;
 
@@ -72,9 +64,11 @@
 
     return v1
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/datatransport/runtime/EncodedPayload;
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/EncodedPayload;->encoding:Lcom/google/android/datatransport/Encoding;
 
     iget-object v2, p1, Lcom/google/android/datatransport/runtime/EncodedPayload;->encoding:Lcom/google/android/datatransport/Encoding;
@@ -87,6 +81,7 @@
 
     return v1
 
+    .line 4
     :cond_2
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/EncodedPayload;->bytes:[B
 
@@ -102,6 +97,7 @@
 .method public getBytes()[B
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/EncodedPayload;->bytes:[B
 
     return-object p0
@@ -110,6 +106,7 @@
 .method public getEncoding()Lcom/google/android/datatransport/Encoding;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/EncodedPayload;->encoding:Lcom/google/android/datatransport/Encoding;
 
     return-object p0
@@ -118,6 +115,7 @@
 .method public hashCode()I
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/EncodedPayload;->encoding:Lcom/google/android/datatransport/Encoding;
 
     invoke-virtual {v0}, Lcom/google/android/datatransport/Encoding;->hashCode()I
@@ -130,6 +128,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/EncodedPayload;->bytes:[B
 
     invoke-static {p0}, Ljava/util/Arrays;->hashCode([B)I
@@ -144,6 +143,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

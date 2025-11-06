@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/drm/ClearKeyUtil;
+.class public final Lcom/google/android/exoplayer2/drm/ClearKeyUtil;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -11,6 +11,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,6 +20,7 @@
 .method public static adjustRequestData([B)[B
     .locals 2
 
+    .line 1
     sget v0, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
     const/16 v1, 0x1b
@@ -27,11 +29,13 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Util;->fromUtf8Bytes([B)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 3
     invoke-static {p0}, Lcom/google/android/exoplayer2/drm/ClearKeyUtil;->base64ToBase64Url(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -46,6 +50,7 @@
 .method public static adjustResponseData([B)[B
     .locals 5
 
+    .line 1
     sget v0, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
     const/16 v1, 0x1b
@@ -54,6 +59,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     :try_start_0
     new-instance v0, Lorg/json/JSONObject;
@@ -64,6 +70,7 @@
 
     invoke-direct {v0, v1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
+    .line 3
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "{\"keys\":["
@@ -72,12 +79,14 @@
 
     const-string v2, "keys"
 
+    .line 4
     invoke-virtual {v0, v2}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v0
 
     const/4 v2, 0x0
 
+    .line 5
     :goto_0
     invoke-virtual {v0}, Lorg/json/JSONArray;->length()I
 
@@ -89,8 +98,10 @@
 
     const-string v3, ","
 
+    .line 6
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 7
     :cond_1
     invoke-virtual {v0, v2}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
@@ -98,10 +109,12 @@
 
     const-string v4, "{\"k\":\""
 
+    .line 8
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v4, "k"
 
+    .line 9
     invoke-virtual {v3, v4}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -114,10 +127,12 @@
 
     const-string v4, "\",\"kid\":\""
 
+    .line 10
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v4, "kid"
 
+    .line 11
     invoke-virtual {v3, v4}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -130,10 +145,12 @@
 
     const-string v4, "\",\"kty\":\""
 
+    .line 12
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v4, "kty"
 
+    .line 13
     invoke-virtual {v3, v4}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
@@ -142,6 +159,7 @@
 
     const-string v3, "\"}"
 
+    .line 14
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     add-int/lit8 v2, v2, 0x1
@@ -151,8 +169,10 @@
     :cond_2
     const-string v0, "]}"
 
+    .line 15
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 16
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -168,6 +188,7 @@
     :catch_0
     move-exception v0
 
+    .line 17
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -200,6 +221,7 @@
 
     const/16 v1, 0x2d
 
+    .line 1
     invoke-virtual {p0, v0, v1}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
 
     move-result-object p0
@@ -222,6 +244,7 @@
 
     const/16 v1, 0x2b
 
+    .line 1
     invoke-virtual {p0, v0, v1}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
 
     move-result-object p0

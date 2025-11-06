@@ -1,4 +1,4 @@
-.class Lorg/dom4j/io/DocumentInputSource$1;
+.class public Lorg/dom4j/io/DocumentInputSource$1;
 .super Ljava/io/Reader;
 .source "SourceFile"
 
@@ -18,6 +18,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/io/Reader;-><init>()V
 
     iput-object p1, p0, Lorg/dom4j/io/DocumentInputSource$1;->this$0:Lorg/dom4j/io/DocumentInputSource;
@@ -48,6 +49,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/DocumentInputSource$1;->val$e:Ljava/io/IOException;
 
     throw p0

@@ -65,6 +65,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "Cannot construct an Api with a null ClientBuilder"
@@ -73,6 +74,7 @@
 
     const-string v0, "Cannot construct an Api with a null ClientKey"
 
+    .line 2
     invoke-static {p3, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p1, p0, Lcom/google/android/gms/common/api/Api;->zac:Ljava/lang/String;

@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ImmutableMap$MapViewOfValuesAsSingletonSets$1$1;
+.class public Lcom/google/common/collect/ImmutableMap$MapViewOfValuesAsSingletonSets$1$1;
 .super Lcom/google/common/collect/AbstractMapEntry;
 .source "SourceFile"
 
@@ -24,13 +24,14 @@
 
 
 # instance fields
-.field final synthetic val$backingEntry:Ljava/util/Map$Entry;
+.field public final synthetic val$backingEntry:Ljava/util/Map$Entry;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/ImmutableMap$MapViewOfValuesAsSingletonSets$1;Ljava/util/Map$Entry;)V
     .locals 0
 
+    .line 1
     iput-object p2, p0, Lcom/google/common/collect/ImmutableMap$MapViewOfValuesAsSingletonSets$1$1;->val$backingEntry:Ljava/util/Map$Entry;
 
     invoke-direct {p0}, Lcom/google/common/collect/AbstractMapEntry;-><init>()V
@@ -48,6 +49,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMap$MapViewOfValuesAsSingletonSets$1$1;->val$backingEntry:Ljava/util/Map$Entry;
 
     invoke-interface {p0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;

@@ -15,7 +15,8 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lgg/f;->c(Ljava/lang/String;Z)Z
+    .line 1
+    invoke-static {v0, v1}, Ld/o/f/w/f;->c(Ljava/lang/String;Z)Z
 
     move-result v0
 
@@ -27,6 +28,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,19 +36,31 @@
 
 .method public static showDebugToast(Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "message"
+        }
+    .end annotation
 
+    .line 1
     sget-boolean v0, Lcom/android/camera2/compat/theme/custom/mm/friend/utils/FriendModeUtils;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lgg/g;->c()V
+    .line 2
+    invoke-static {}, Ld/o/f/w/g;->c()V
 
-    invoke-static {}, Lcom/android/camera/CameraAppImpl;->o()Landroid/content/Context;
+    .line 3
+    invoke-static {}, Lcom/android/camera/CameraAppImpl;->d()Landroid/content/Context;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
+    .line 4
     invoke-static {v0, p0, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
 
     move-result-object p0

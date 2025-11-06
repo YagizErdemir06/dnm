@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhe;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhe;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -25,6 +25,7 @@
         }
     .end annotation
 
+    .line 1
     const-class p0, Lsun/misc/Unsafe;
 
     invoke-virtual {p0}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
@@ -44,18 +45,22 @@
 
     const/4 v5, 0x1
 
-    invoke-virtual {v4, v5}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    .line 2
+    invoke-virtual {v4, v5}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
+    .line 3
     invoke-virtual {v4, v3}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
+    .line 4
     invoke-virtual {p0, v3}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
+    .line 5
     invoke-virtual {p0, v3}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0

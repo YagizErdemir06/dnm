@@ -66,10 +66,12 @@
 .method public blink()Lmiuix/animation/IBlinkStyle;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mBlink:Lmiuix/animation/IBlinkStyle;
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Lmiuix/animation/controller/FolmeBlink;
 
     iget-object v1, p0, Lmiuix/animation/Folme$FolmeImpl;->mTargets:[Lmiuix/animation/IAnimTarget;
@@ -78,6 +80,7 @@
 
     iput-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mBlink:Lmiuix/animation/IBlinkStyle;
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lmiuix/animation/Folme$FolmeImpl;->mBlink:Lmiuix/animation/IBlinkStyle;
 
@@ -85,60 +88,51 @@
 .end method
 
 .method public clean()V
-    .locals 3
+    .locals 1
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mTouch:Lmiuix/animation/ITouchStyle;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {v0}, Lmiuix/animation/IStateContainer;->clean()V
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mVisible:Lmiuix/animation/IVisibleStyle;
 
     if-eqz v0, :cond_1
 
+    .line 4
     invoke-interface {v0}, Lmiuix/animation/IStateContainer;->clean()V
 
+    .line 5
     :cond_1
     iget-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mState:Lmiuix/animation/IStateStyle;
 
     if-eqz v0, :cond_2
 
+    .line 6
     invoke-interface {v0}, Lmiuix/animation/IStateContainer;->clean()V
 
+    .line 7
     :cond_2
-    iget-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mHover:Lmiuix/animation/IHoverStyle;
+    iget-object p0, p0, Lmiuix/animation/Folme$FolmeImpl;->mHover:Lmiuix/animation/IHoverStyle;
 
-    if-eqz v0, :cond_3
+    if-eqz p0, :cond_3
 
-    invoke-interface {v0}, Lmiuix/animation/IStateContainer;->clean()V
+    .line 8
+    invoke-interface {p0}, Lmiuix/animation/IStateContainer;->clean()V
 
     :cond_3
-    iget-object p0, p0, Lmiuix/animation/Folme$FolmeImpl;->mTargets:[Lmiuix/animation/IAnimTarget;
-
-    array-length v0, p0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_4
-
-    aget-object v2, p0, v1
-
-    invoke-static {v2}, Lmiuix/animation/FolmeFactory;->clean(Lmiuix/animation/IAnimTarget;)V
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_4
     return-void
 .end method
 
 .method public end()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mTouch:Lmiuix/animation/ITouchStyle;
 
     const/4 v1, 0x0
@@ -147,8 +141,10 @@
 
     new-array v2, v1, [Ljava/lang/Object;
 
+    .line 2
     invoke-interface {v0, v2}, Lmiuix/animation/ICancelableStyle;->end([Ljava/lang/Object;)V
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mVisible:Lmiuix/animation/IVisibleStyle;
 
@@ -156,8 +152,10 @@
 
     new-array v2, v1, [Ljava/lang/Object;
 
+    .line 4
     invoke-interface {v0, v2}, Lmiuix/animation/ICancelableStyle;->end([Ljava/lang/Object;)V
 
+    .line 5
     :cond_1
     iget-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mState:Lmiuix/animation/IStateStyle;
 
@@ -165,8 +163,10 @@
 
     new-array v2, v1, [Ljava/lang/Object;
 
+    .line 6
     invoke-interface {v0, v2}, Lmiuix/animation/ICancelableStyle;->end([Ljava/lang/Object;)V
 
+    .line 7
     :cond_2
     iget-object p0, p0, Lmiuix/animation/Folme$FolmeImpl;->mHover:Lmiuix/animation/IHoverStyle;
 
@@ -174,6 +174,7 @@
 
     new-array v0, v1, [Ljava/lang/Object;
 
+    .line 8
     invoke-interface {p0, v0}, Lmiuix/animation/ICancelableStyle;->end([Ljava/lang/Object;)V
 
     :cond_3
@@ -183,10 +184,12 @@
 .method public hover()Lmiuix/animation/IHoverStyle;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mHover:Lmiuix/animation/IHoverStyle;
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Lmiuix/animation/controller/FolmeHover;
 
     iget-object v1, p0, Lmiuix/animation/Folme$FolmeImpl;->mTargets:[Lmiuix/animation/IAnimTarget;
@@ -195,6 +198,7 @@
 
     iput-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mHover:Lmiuix/animation/IHoverStyle;
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lmiuix/animation/Folme$FolmeImpl;->mHover:Lmiuix/animation/IHoverStyle;
 
@@ -204,10 +208,12 @@
 .method public state()Lmiuix/animation/IStateStyle;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mState:Lmiuix/animation/IStateStyle;
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mTargets:[Lmiuix/animation/IAnimTarget;
 
     invoke-static {v0}, Lmiuix/animation/controller/StateComposer;->composeStyle([Lmiuix/animation/IAnimTarget;)Lmiuix/animation/controller/IFolmeStateStyle;
@@ -216,6 +222,7 @@
 
     iput-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mState:Lmiuix/animation/IStateStyle;
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lmiuix/animation/Folme$FolmeImpl;->mState:Lmiuix/animation/IStateStyle;
 
@@ -225,24 +232,30 @@
 .method public touch()Lmiuix/animation/ITouchStyle;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mTouch:Lmiuix/animation/ITouchStyle;
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Lmiuix/animation/controller/FolmeTouch;
 
     iget-object v1, p0, Lmiuix/animation/Folme$FolmeImpl;->mTargets:[Lmiuix/animation/IAnimTarget;
 
     invoke-direct {v0, v1}, Lmiuix/animation/controller/FolmeTouch;-><init>([Lmiuix/animation/IAnimTarget;)V
 
+    .line 3
     new-instance v1, Lmiuix/animation/controller/FolmeFont;
 
     invoke-direct {v1}, Lmiuix/animation/controller/FolmeFont;-><init>()V
 
+    .line 4
     invoke-virtual {v0, v1}, Lmiuix/animation/controller/FolmeTouch;->setFontStyle(Lmiuix/animation/controller/FolmeFont;)V
 
+    .line 5
     iput-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mTouch:Lmiuix/animation/ITouchStyle;
 
+    .line 6
     :cond_0
     iget-object p0, p0, Lmiuix/animation/Folme$FolmeImpl;->mTouch:Lmiuix/animation/ITouchStyle;
 
@@ -252,10 +265,12 @@
 .method public visible()Lmiuix/animation/IVisibleStyle;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mVisible:Lmiuix/animation/IVisibleStyle;
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Lmiuix/animation/controller/FolmeVisible;
 
     iget-object v1, p0, Lmiuix/animation/Folme$FolmeImpl;->mTargets:[Lmiuix/animation/IAnimTarget;
@@ -264,6 +279,7 @@
 
     iput-object v0, p0, Lmiuix/animation/Folme$FolmeImpl;->mVisible:Lmiuix/animation/IVisibleStyle;
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lmiuix/animation/Folme$FolmeImpl;->mVisible:Lmiuix/animation/IVisibleStyle;
 

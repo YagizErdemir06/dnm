@@ -40,6 +40,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -58,6 +59,7 @@
 .method private constructor <init>(Landroid/content/Context;Z)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -68,6 +70,7 @@
 
     new-instance p1, Lcom/google/android/gms/internal/base/zau;
 
+    .line 2
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object p2
@@ -76,6 +79,7 @@
 
     iput-object p1, p0, Lcom/google/android/gms/common/images/ImageManager;->zae:Landroid/os/Handler;
 
+    .line 3
     invoke-static {}, Lcom/google/android/gms/internal/base/zat;->zaa()Lcom/google/android/gms/internal/base/zaq;
 
     move-result-object p1
@@ -84,12 +88,14 @@
 
     const/4 v0, 0x2
 
+    .line 4
     invoke-interface {p1, p2, v0}, Lcom/google/android/gms/internal/base/zaq;->zab(II)Ljava/util/concurrent/ExecutorService;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/android/gms/common/images/ImageManager;->zaf:Ljava/util/concurrent/ExecutorService;
 
+    .line 5
     new-instance p1, Lcom/google/android/gms/internal/base/zam;
 
     invoke-direct {p1}, Lcom/google/android/gms/internal/base/zam;-><init>()V
@@ -98,18 +104,21 @@
 
     new-instance p1, Ljava/util/HashMap;
 
+    .line 6
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/gms/common/images/ImageManager;->zah:Ljava/util/Map;
 
     new-instance p1, Ljava/util/HashMap;
 
+    .line 7
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/gms/common/images/ImageManager;->zai:Ljava/util/Map;
 
     new-instance p1, Ljava/util/HashMap;
 
+    .line 8
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/gms/common/images/ImageManager;->zaj:Ljava/util/Map;
@@ -126,6 +135,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/common/images/ImageManager;->zac:Lcom/google/android/gms/common/images/ImageManager;
 
     if-nez v0, :cond_0
@@ -333,12 +343,14 @@
 
     const-string v0, "ImageManager.loadImage() must be called in the main thread"
 
+    .line 1
     invoke-static {v0}, Lcom/google/android/gms/common/internal/Asserts;->checkMainThread(Ljava/lang/String;)V
 
     new-instance v0, Lcom/google/android/gms/common/images/zab;
 
     invoke-direct {v0, p0, p1}, Lcom/google/android/gms/common/images/zab;-><init>(Lcom/google/android/gms/common/images/ImageManager;Lcom/google/android/gms/common/images/zag;)V
 
+    .line 2
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
     return-void

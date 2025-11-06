@@ -32,6 +32,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ForwardingSetMultimap;-><init>()V
 
     return-void
@@ -267,6 +268,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingSortedSetMultimap;->delegate()Lcom/google/common/collect/SortedSetMultimap;
 
     move-result-object p0

@@ -1,4 +1,4 @@
-.class final Lcom/google/common/hash/LongAddables$PureJavaLongAddable;
+.class public final Lcom/google/common/hash/LongAddables$PureJavaLongAddable;
 .super Ljava/util/concurrent/atomic/AtomicLong;
 .source "SourceFile"
 
@@ -41,6 +41,7 @@
 .method public add(J)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Ljava/util/concurrent/atomic/AtomicLong;->getAndAdd(J)J
 
     return-void
@@ -49,6 +50,7 @@
 .method public increment()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicLong;->getAndIncrement()J
 
     return-void
@@ -57,6 +59,7 @@
 .method public sum()J
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
 
     move-result-wide v0

@@ -1,4 +1,4 @@
-.class Landroidx/lifecycle/ReportFragment$LifecycleCallbacks;
+.class public Landroidx/lifecycle/ReportFragment$LifecycleCallbacks;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -25,6 +25,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,6 +34,7 @@
 .method public static registerIn(Landroid/app/Activity;)V
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/lifecycle/ReportFragment$LifecycleCallbacks;
 
     invoke-direct {v0}, Landroidx/lifecycle/ReportFragment$LifecycleCallbacks;-><init>()V
@@ -89,6 +91,7 @@
         .end annotation
     .end param
 
+    .line 1
     sget-object p0, Landroidx/lifecycle/Lifecycle$Event;->ON_CREATE:Landroidx/lifecycle/Lifecycle$Event;
 
     invoke-static {p1, p0}, Landroidx/lifecycle/ReportFragment;->dispatch(Landroid/app/Activity;Landroidx/lifecycle/Lifecycle$Event;)V
@@ -103,6 +106,7 @@
         .end annotation
     .end param
 
+    .line 1
     sget-object p0, Landroidx/lifecycle/Lifecycle$Event;->ON_RESUME:Landroidx/lifecycle/Lifecycle$Event;
 
     invoke-static {p1, p0}, Landroidx/lifecycle/ReportFragment;->dispatch(Landroid/app/Activity;Landroidx/lifecycle/Lifecycle$Event;)V
@@ -117,6 +121,7 @@
         .end annotation
     .end param
 
+    .line 1
     sget-object p0, Landroidx/lifecycle/Lifecycle$Event;->ON_START:Landroidx/lifecycle/Lifecycle$Event;
 
     invoke-static {p1, p0}, Landroidx/lifecycle/ReportFragment;->dispatch(Landroid/app/Activity;Landroidx/lifecycle/Lifecycle$Event;)V
@@ -131,6 +136,7 @@
         .end annotation
     .end param
 
+    .line 1
     sget-object p0, Landroidx/lifecycle/Lifecycle$Event;->ON_DESTROY:Landroidx/lifecycle/Lifecycle$Event;
 
     invoke-static {p1, p0}, Landroidx/lifecycle/ReportFragment;->dispatch(Landroid/app/Activity;Landroidx/lifecycle/Lifecycle$Event;)V
@@ -145,6 +151,7 @@
         .end annotation
     .end param
 
+    .line 1
     sget-object p0, Landroidx/lifecycle/Lifecycle$Event;->ON_PAUSE:Landroidx/lifecycle/Lifecycle$Event;
 
     invoke-static {p1, p0}, Landroidx/lifecycle/ReportFragment;->dispatch(Landroid/app/Activity;Landroidx/lifecycle/Lifecycle$Event;)V
@@ -159,6 +166,7 @@
         .end annotation
     .end param
 
+    .line 1
     sget-object p0, Landroidx/lifecycle/Lifecycle$Event;->ON_STOP:Landroidx/lifecycle/Lifecycle$Event;
 
     invoke-static {p1, p0}, Landroidx/lifecycle/ReportFragment;->dispatch(Landroid/app/Activity;Landroidx/lifecycle/Lifecycle$Event;)V

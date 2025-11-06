@@ -22,6 +22,7 @@
 
     move-object/from16 v0, p1
 
+    .line 1
     invoke-static/range {p1 .. p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->validateObjectHeader(Landroid/os/Parcel;)I
 
     move-result v1
@@ -32,9 +33,7 @@
 
     const-wide/16 v4, 0x0
 
-    move v7, v2
-
-    move-object v8, v3
+    move-object v8, v2
 
     move-object v9, v8
 
@@ -54,8 +53,11 @@
 
     move-object/from16 v19, v18
 
+    move v7, v3
+
     move-wide v14, v4
 
+    .line 2
     :goto_0
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->dataPosition()I
 
@@ -63,20 +65,24 @@
 
     if-ge v2, v1, :cond_0
 
+    .line 3
     invoke-static/range {p1 .. p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->readHeader(Landroid/os/Parcel;)I
 
     move-result v2
 
+    .line 4
     invoke-static {v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->getFieldId(I)I
 
     move-result v3
 
     packed-switch v3, :pswitch_data_0
 
+    .line 5
     invoke-static {v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->skipUnknownField(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
+    .line 6
     :pswitch_0
     invoke-static {v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->createString(Landroid/os/Parcel;I)Ljava/lang/String;
 
@@ -86,6 +92,7 @@
 
     goto :goto_0
 
+    .line 7
     :pswitch_1
     invoke-static {v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->createString(Landroid/os/Parcel;I)Ljava/lang/String;
 
@@ -95,9 +102,11 @@
 
     goto :goto_0
 
+    .line 8
     :pswitch_2
     sget-object v3, Lcom/google/android/gms/common/api/Scope;->CREATOR:Landroid/os/Parcelable$Creator;
 
+    .line 9
     invoke-static {v0, v2, v3}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->createTypedList(Landroid/os/Parcel;ILandroid/os/Parcelable$Creator;)Ljava/util/ArrayList;
 
     move-result-object v2
@@ -106,6 +115,7 @@
 
     goto :goto_0
 
+    .line 10
     :pswitch_3
     invoke-static {v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->createString(Landroid/os/Parcel;I)Ljava/lang/String;
 
@@ -115,6 +125,7 @@
 
     goto :goto_0
 
+    .line 11
     :pswitch_4
     invoke-static {v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->readLong(Landroid/os/Parcel;I)J
 
@@ -124,6 +135,7 @@
 
     goto :goto_0
 
+    .line 12
     :pswitch_5
     invoke-static {v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->createString(Landroid/os/Parcel;I)Ljava/lang/String;
 
@@ -136,6 +148,7 @@
     :pswitch_6
     sget-object v3, Landroid/net/Uri;->CREATOR:Landroid/os/Parcelable$Creator;
 
+    .line 13
     invoke-static {v0, v2, v3}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->createParcelable(Landroid/os/Parcel;ILandroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
 
     move-result-object v2
@@ -146,6 +159,7 @@
 
     goto :goto_0
 
+    .line 14
     :pswitch_7
     invoke-static {v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->createString(Landroid/os/Parcel;I)Ljava/lang/String;
 
@@ -155,6 +169,7 @@
 
     goto :goto_0
 
+    .line 15
     :pswitch_8
     invoke-static {v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->createString(Landroid/os/Parcel;I)Ljava/lang/String;
 
@@ -164,6 +179,7 @@
 
     goto :goto_0
 
+    .line 16
     :pswitch_9
     invoke-static {v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->createString(Landroid/os/Parcel;I)Ljava/lang/String;
 
@@ -173,6 +189,7 @@
 
     goto :goto_0
 
+    .line 17
     :pswitch_a
     invoke-static {v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->createString(Landroid/os/Parcel;I)Ljava/lang/String;
 
@@ -182,6 +199,7 @@
 
     goto :goto_0
 
+    .line 18
     :pswitch_b
     invoke-static {v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->readInt(Landroid/os/Parcel;I)I
 
@@ -191,9 +209,11 @@
 
     goto :goto_0
 
+    .line 19
     :cond_0
     invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->ensureAtEnd(Landroid/os/Parcel;I)V
 
+    .line 20
     new-instance v0, Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
 
     move-object v6, v0
@@ -224,6 +244,7 @@
 .method public final synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
+    .line 1
     new-array p0, p1, [Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
 
     return-object p0

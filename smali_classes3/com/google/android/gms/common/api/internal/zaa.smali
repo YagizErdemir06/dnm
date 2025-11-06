@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/api/internal/zaa;
+.class public final Lcom/google/android/gms/common/api/internal/zaa;
 .super Lcom/google/android/gms/common/api/internal/LifecycleCallback;
 .source "SourceFile"
 
@@ -17,14 +17,17 @@
 .method private constructor <init>(Lcom/google/android/gms/common/api/internal/LifecycleFragment;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/gms/common/api/internal/LifecycleCallback;-><init>(Lcom/google/android/gms/common/api/internal/LifecycleFragment;)V
 
     new-instance p1, Ljava/util/ArrayList;
 
+    .line 2
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/gms/common/api/internal/zaa;->zaa:Ljava/util/List;
 
+    .line 3
     iget-object p1, p0, Lcom/google/android/gms/common/api/internal/LifecycleCallback;->mLifecycleFragment:Lcom/google/android/gms/common/api/internal/LifecycleFragment;
 
     const-string v0, "LifecycleObserverOnStop"
@@ -37,8 +40,10 @@
 .method public static bridge synthetic zaa(Landroid/app/Activity;)Lcom/google/android/gms/common/api/internal/zaa;
     .locals 3
 
+    .line 1
     monitor-enter p0
 
+    .line 2
     :try_start_0
     invoke-static {p0}, Lcom/google/android/gms/common/api/internal/LifecycleCallback;->getFragment(Landroid/app/Activity;)Lcom/google/android/gms/common/api/internal/LifecycleFragment;
 
@@ -48,6 +53,7 @@
 
     const-class v2, Lcom/google/android/gms/common/api/internal/zaa;
 
+    .line 3
     invoke-interface {v0, v1, v2}, Lcom/google/android/gms/common/api/internal/LifecycleFragment;->getCallbackOrNull(Ljava/lang/String;Ljava/lang/Class;)Lcom/google/android/gms/common/api/internal/LifecycleCallback;
 
     move-result-object v1
@@ -58,8 +64,10 @@
 
     new-instance v1, Lcom/google/android/gms/common/api/internal/zaa;
 
+    .line 4
     invoke-direct {v1, v0}, Lcom/google/android/gms/common/api/internal/zaa;-><init>(Lcom/google/android/gms/common/api/internal/LifecycleFragment;)V
 
+    .line 5
     :cond_0
     monitor-exit p0
 
@@ -68,6 +76,7 @@
     :catchall_0
     move-exception v0
 
+    .line 6
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -88,6 +97,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zaa;->zaa:Ljava/util/List;
 
@@ -114,6 +124,7 @@
     .annotation build Landroidx/annotation/MainThread;
     .end annotation
 
+    .line 1
     monitor-enter p0
 
     :try_start_0
@@ -125,10 +136,12 @@
 
     iput-object v1, p0, Lcom/google/android/gms/common/api/internal/zaa;->zaa:Ljava/util/List;
 
+    .line 2
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -146,6 +159,7 @@
 
     check-cast v0, Ljava/lang/Runnable;
 
+    .line 4
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
     goto :goto_0
@@ -156,6 +170,7 @@
     :catchall_0
     move-exception v0
 
+    .line 5
     :try_start_1
     monitor-exit p0
     :try_end_1

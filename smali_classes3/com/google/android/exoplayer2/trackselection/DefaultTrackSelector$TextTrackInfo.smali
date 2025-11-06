@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TextTrackInfo;
+.class public final Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TextTrackInfo;
 .super Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo;
 .source "SourceFile"
 
@@ -50,22 +50,25 @@
 
 # direct methods
 .method public constructor <init>(ILcom/google/android/exoplayer2/source/TrackGroup;ILcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;ILjava/lang/String;)V
-    .locals 4
+    .locals 5
     .param p6    # Ljava/lang/String;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo;-><init>(ILcom/google/android/exoplayer2/source/TrackGroup;I)V
 
     const/4 p1, 0x0
 
+    .line 2
     invoke-static {p5, p1}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->isSupported(IZ)Z
 
     move-result p2
 
     iput-boolean p2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TextTrackInfo;->isWithinRendererCapabilities:Z
 
+    .line 3
     iget-object p2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo;->format:Lcom/google/android/exoplayer2/Format;
 
     iget p2, p2, Lcom/google/android/exoplayer2/Format;->selectionFlags:I
@@ -89,6 +92,7 @@
     :cond_0
     move p3, p1
 
+    .line 4
     :goto_0
     iput-boolean p3, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TextTrackInfo;->isDefault:Z
 
@@ -103,83 +107,98 @@
     :cond_1
     move p2, p1
 
+    .line 5
     :goto_1
     iput-boolean p2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TextTrackInfo;->isForced:Z
 
-    iget-object p2, p4, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->preferredTextLanguages:Lcom/google/common/collect/ImmutableList;
+    const p2, 0x7fffffff
 
-    invoke-virtual {p2}, Ljava/util/AbstractCollection;->isEmpty()Z
+    .line 6
+    iget-object p3, p4, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->preferredTextLanguages:Lcom/google/common/collect/ImmutableList;
 
-    move-result p2
+    invoke-virtual {p3}, Ljava/util/AbstractCollection;->isEmpty()Z
 
-    if-eqz p2, :cond_2
+    move-result p3
 
-    const-string p2, ""
+    if-eqz p3, :cond_2
 
-    invoke-static {p2}, Lcom/google/common/collect/ImmutableList;->of(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
+    const-string p3, ""
 
-    move-result-object p2
+    .line 7
+    invoke-static {p3}, Lcom/google/common/collect/ImmutableList;->of(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
+
+    move-result-object p3
 
     goto :goto_2
 
+    .line 8
     :cond_2
-    iget-object p2, p4, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->preferredTextLanguages:Lcom/google/common/collect/ImmutableList;
+    iget-object p3, p4, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->preferredTextLanguages:Lcom/google/common/collect/ImmutableList;
 
     :goto_2
-    move p3, p1
+    move v1, p1
 
+    .line 9
     :goto_3
-    invoke-virtual {p2}, Ljava/util/AbstractCollection;->size()I
+    invoke-virtual {p3}, Ljava/util/AbstractCollection;->size()I
 
-    move-result v1
+    move-result v2
 
-    if-ge p3, v1, :cond_4
+    if-ge v1, v2, :cond_4
 
-    iget-object v1, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo;->format:Lcom/google/android/exoplayer2/Format;
+    .line 10
+    iget-object v2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo;->format:Lcom/google/android/exoplayer2/Format;
 
-    invoke-interface {p2, p3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    .line 11
+    invoke-interface {p3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v3
 
-    check-cast v2, Ljava/lang/String;
+    check-cast v3, Ljava/lang/String;
 
-    iget-boolean v3, p4, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->selectUndeterminedTextLanguage:Z
+    iget-boolean v4, p4, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->selectUndeterminedTextLanguage:Z
 
-    invoke-static {v1, v2, v3}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->getFormatLanguageScore(Lcom/google/android/exoplayer2/Format;Ljava/lang/String;Z)I
+    .line 12
+    invoke-static {v2, v3, v4}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->getFormatLanguageScore(Lcom/google/android/exoplayer2/Format;Ljava/lang/String;Z)I
 
-    move-result v1
+    move-result v2
 
-    if-lez v1, :cond_3
+    if-lez v2, :cond_3
+
+    move p2, v1
 
     goto :goto_4
 
     :cond_3
-    add-int/lit8 p3, p3, 0x1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_3
 
     :cond_4
-    const p3, 0x7fffffff
+    move v2, p1
 
-    move v1, p1
-
+    .line 13
     :goto_4
-    iput p3, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TextTrackInfo;->preferredLanguageIndex:I
+    iput p2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TextTrackInfo;->preferredLanguageIndex:I
 
-    iput v1, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TextTrackInfo;->preferredLanguageScore:I
+    .line 14
+    iput v2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TextTrackInfo;->preferredLanguageScore:I
 
+    .line 15
     iget-object p2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo;->format:Lcom/google/android/exoplayer2/Format;
 
     iget p2, p2, Lcom/google/android/exoplayer2/Format;->roleFlags:I
 
     iget p3, p4, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->preferredTextRoleFlags:I
 
+    .line 16
     invoke-static {p2, p3}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->access$2100(II)I
 
     move-result p2
 
     iput p2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TextTrackInfo;->preferredRoleFlagsScore:I
 
+    .line 17
     iget-object p3, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo;->format:Lcom/google/android/exoplayer2/Format;
 
     iget p3, p3, Lcom/google/android/exoplayer2/Format;->roleFlags:I
@@ -198,6 +217,7 @@
     :goto_5
     iput-boolean p3, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TextTrackInfo;->hasCaptionRoleFlags:Z
 
+    .line 18
     invoke-static {p6}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->normalizeUndeterminedLanguageToNull(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p3
@@ -211,19 +231,23 @@
     :cond_6
     move p3, p1
 
+    .line 19
     :goto_6
-    iget-object v2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo;->format:Lcom/google/android/exoplayer2/Format;
+    iget-object v1, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo;->format:Lcom/google/android/exoplayer2/Format;
 
-    invoke-static {v2, p6, p3}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->getFormatLanguageScore(Lcom/google/android/exoplayer2/Format;Ljava/lang/String;Z)I
+    .line 20
+    invoke-static {v1, p6, p3}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->getFormatLanguageScore(Lcom/google/android/exoplayer2/Format;Ljava/lang/String;Z)I
 
     move-result p3
 
     iput p3, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TextTrackInfo;->selectedAudioLanguageScore:I
 
-    if-gtz v1, :cond_9
+    if-gtz v2, :cond_9
 
+    .line 21
     iget-object p6, p4, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->preferredTextLanguages:Lcom/google/common/collect/ImmutableList;
 
+    .line 22
     invoke-virtual {p6}, Ljava/util/AbstractCollection;->isEmpty()Z
 
     move-result p6
@@ -254,9 +278,11 @@
     :goto_7
     move p2, v0
 
+    .line 23
     :goto_8
     iget-boolean p3, p4, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->exceedRendererCapabilitiesIfNecessary:Z
 
+    .line 24
     invoke-static {p5, p3}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->isSupported(IZ)Z
 
     move-result p3
@@ -267,6 +293,7 @@
 
     move p1, v0
 
+    .line 25
     :cond_a
     iput p1, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TextTrackInfo;->selectionEligibility:I
 
@@ -289,6 +316,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -328,17 +356,20 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->builder()Lcom/google/common/collect/ImmutableList$Builder;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
+    .line 2
     :goto_0
     iget v2, p1, Lcom/google/android/exoplayer2/source/TrackGroup;->length:I
 
     if-ge v1, v2, :cond_0
 
+    .line 3
     new-instance v9, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TextTrackInfo;
 
     aget v7, p3, v1
@@ -363,6 +394,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-virtual {v0}, Lcom/google/common/collect/ImmutableList$Builder;->build()Lcom/google/common/collect/ImmutableList;
 
@@ -533,6 +565,7 @@
 .method public getSelectionEligibility()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TextTrackInfo;->selectionEligibility:I
 
     return p0
@@ -549,6 +582,7 @@
 .method public bridge synthetic isCompatibleForAdaptationWith(Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo;)Z
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TextTrackInfo;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TextTrackInfo;->isCompatibleForAdaptationWith(Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TextTrackInfo;)Z

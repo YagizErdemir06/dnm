@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ly8/e;
+.implements Ld/d/a/m7/g/s3/e;
 
 
 # direct methods
@@ -18,13 +18,14 @@
         }
     .end annotation
 
-    invoke-static {}, Lu8/e;->i()Lu8/e;
+    .line 1
+    invoke-static {}, Ld/d/a/m7/d;->i()Ld/d/a/m7/d;
 
     move-result-object v0
 
     const-class v1, Lcom/android/camera2/compat/theme/custom/mm/manually/PictureStyleProtocol;
 
-    invoke-virtual {v0, v1}, Lu8/e;->b(Ljava/lang/Class;)Ljava/util/Optional;
+    invoke-virtual {v0, v1}, Ld/d/a/m7/d;->c(Ljava/lang/Class;)Ljava/util/Optional;
 
     move-result-object v0
 
@@ -36,13 +37,14 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    invoke-static {}, Lu8/e;->i()Lu8/e;
+    .line 1
+    invoke-static {}, Ld/d/a/m7/d;->i()Ld/d/a/m7/d;
 
     move-result-object v0
 
     const-class v1, Lcom/android/camera2/compat/theme/custom/mm/manually/PictureStyleProtocol;
 
-    invoke-virtual {v0, v1}, Lu8/e;->a(Ljava/lang/Class;)Lu8/a;
+    invoke-virtual {v0, v1}, Ld/d/a/m7/d;->a(Ljava/lang/Class;)Ld/d/a/m7/a;
 
     move-result-object v0
 
@@ -53,11 +55,37 @@
 
 
 # virtual methods
-.method public abstract addProcessListener(Ljava/lang/String;Lcom/android/camera/l4;)V
+.method public abstract addProcessListener(Ljava/lang/String;Ld/d/a/i5;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "beautyType",
+            "processListener"
+        }
+    .end annotation
 .end method
 
 .method public abstract resetProcessListeners(I)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isResetOrNone"
+        }
+    .end annotation
 .end method
 
-.method public abstract setProcessListener(Lcom/android/camera/l4;)V
+.method public abstract setProcessListener(Ld/d/a/i5;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "processListener"
+        }
+    .end annotation
 .end method

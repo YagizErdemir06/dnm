@@ -4,9 +4,9 @@
 
 
 # static fields
-.field static final synthetic $assertionsDisabled:Z
+.field public static final synthetic $assertionsDisabled:Z
 
-.field static synthetic class$org$apache$xmlbeans$impl$values$JavaGDateHolderEx:Ljava/lang/Class;
+.field public static synthetic class$org$apache$xmlbeans$impl$values$JavaGDateHolderEx:Ljava/lang/Class;
 
 
 # instance fields
@@ -16,9 +16,10 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->class$org$apache$xmlbeans$impl$values$JavaGDateHolderEx:Ljava/lang/Class;
 
     if-nez v0, :cond_0
@@ -42,20 +43,24 @@
 .method public constructor <init>(Lorg/apache/xmlbeans/SchemaType;Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     const/4 p1, 0x0
 
+    .line 3
     invoke-virtual {p0, p2, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->initComplexType(ZZ)V
 
     return-void
 .end method
 
-.method static synthetic class$(Ljava/lang/String;)Ljava/lang/Class;
+.method public static synthetic class$(Ljava/lang/String;)Ljava/lang/Class;
     .locals 1
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -72,7 +77,7 @@
 
     invoke-direct {v0}, Ljava/lang/NoClassDefFoundError;-><init>()V
 
-    invoke-virtual {v0, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v0, p0}, Ljava/lang/NoClassDefFoundError;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -90,6 +95,7 @@
 
     const/4 v3, 0x0
 
+    .line 1
     :try_start_0
     new-instance v4, Lorg/apache/xmlbeans/GDate;
 
@@ -104,6 +110,7 @@
 
     aput-object p0, v4, v1
 
+    .line 2
     invoke-interface {p2, v0, v4}, Lorg/apache/xmlbeans/impl/common/ValidationContext;->invalid(Ljava/lang/String;[Ljava/lang/Object;)V
 
     move-object v4, v3
@@ -111,6 +118,7 @@
     :goto_0
     if-eqz v4, :cond_1
 
+    .line 3
     invoke-virtual {v4}, Lorg/apache/xmlbeans/GDate;->getBuiltinTypeCode()I
 
     move-result v5
@@ -127,6 +135,7 @@
 
     new-array p1, v2, [Ljava/lang/Object;
 
+    .line 4
     new-instance v2, Ljava/lang/StringBuffer;
 
     invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
@@ -147,6 +156,7 @@
 
     goto :goto_1
 
+    .line 5
     :cond_0
     invoke-virtual {v4}, Lorg/apache/xmlbeans/GDate;->isValid()Z
 
@@ -158,6 +168,7 @@
 
     aput-object p0, p1, v1
 
+    .line 6
     invoke-interface {p2, v0, p1}, Lorg/apache/xmlbeans/impl/common/ValidationContext;->invalid(Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_1
@@ -172,18 +183,21 @@
 .method public static validateLexical(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/impl/common/ValidationContext;)Lorg/apache/xmlbeans/GDate;
     .locals 4
 
+    .line 1
     invoke-static {p0, p1, p2}, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->lex(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/impl/common/ValidationContext;)Lorg/apache/xmlbeans/GDate;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaType;->hasPatternFacet()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 3
     invoke-interface {p1, p0}, Lorg/apache/xmlbeans/SchemaType;->matchPatternFacet(Ljava/lang/String;)Z
 
     move-result v1
@@ -206,6 +220,7 @@
 
     const/4 p0, 0x2
 
+    .line 4
     invoke-static {p1}, Lorg/apache/xmlbeans/impl/common/QNameHelper;->readable(Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object p1
@@ -223,6 +238,7 @@
 .method public static validateValue(Lorg/apache/xmlbeans/GDateSpecification;Lorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/impl/common/ValidationContext;)V
     .locals 8
 
+    .line 1
     invoke-interface {p0}, Lorg/apache/xmlbeans/GDateSpecification;->getBuiltinTypeCode()I
 
     move-result v0
@@ -245,6 +261,7 @@
 
     new-array v0, v4, [Ljava/lang/Object;
 
+    .line 2
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -276,6 +293,7 @@
     :cond_0
     const/4 v0, 0x3
 
+    .line 3
     invoke-interface {p1, v0}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v1
@@ -286,6 +304,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 4
     check-cast v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
 
     invoke-virtual {v1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->gDateValue()Lorg/apache/xmlbeans/GDate;
@@ -306,6 +325,7 @@
 
     aput-object v1, v7, v5
 
+    .line 5
     invoke-static {p1}, Lorg/apache/xmlbeans/impl/common/QNameHelper;->readable(Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object v1
@@ -316,6 +336,7 @@
 
     invoke-interface {p2, v1, v7}, Lorg/apache/xmlbeans/impl/common/ValidationContext;->invalid(Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 6
     :cond_1
     invoke-interface {p1, v6}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
@@ -323,6 +344,7 @@
 
     if-eqz v1, :cond_2
 
+    .line 7
     check-cast v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
 
     invoke-virtual {v1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->gDateValue()Lorg/apache/xmlbeans/GDate;
@@ -343,6 +365,7 @@
 
     aput-object v1, v7, v5
 
+    .line 8
     invoke-static {p1}, Lorg/apache/xmlbeans/impl/common/QNameHelper;->readable(Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object v1
@@ -356,12 +379,14 @@
     :cond_2
     const/4 v1, 0x6
 
+    .line 9
     invoke-interface {p1, v1}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v1
 
     if-eqz v1, :cond_3
 
+    .line 10
     check-cast v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
 
     invoke-virtual {v1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->gDateValue()Lorg/apache/xmlbeans/GDate;
@@ -382,6 +407,7 @@
 
     aput-object v1, v7, v5
 
+    .line 11
     invoke-static {p1}, Lorg/apache/xmlbeans/impl/common/QNameHelper;->readable(Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object v1
@@ -395,12 +421,14 @@
     :cond_3
     const/4 v1, 0x5
 
+    .line 12
     invoke-interface {p1, v1}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v1
 
     if-eqz v1, :cond_4
 
+    .line 13
     check-cast v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
 
     invoke-virtual {v1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->gDateValue()Lorg/apache/xmlbeans/GDate;
@@ -421,6 +449,7 @@
 
     aput-object v1, v6, v5
 
+    .line 14
     invoke-static {p1}, Lorg/apache/xmlbeans/impl/common/QNameHelper;->readable(Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object v1
@@ -431,6 +460,7 @@
 
     invoke-interface {p2, v1, v6}, Lorg/apache/xmlbeans/impl/common/ValidationContext;->invalid(Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 15
     :cond_4
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaType;->getEnumerationValues()[Lorg/apache/xmlbeans/XmlAnySimpleType;
 
@@ -440,11 +470,13 @@
 
     move v6, v3
 
+    .line 16
     :goto_0
     array-length v7, v1
 
     if-ge v6, v7, :cond_6
 
+    .line 17
     aget-object v7, v1, v6
 
     check-cast v7, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
@@ -473,6 +505,7 @@
 
     aput-object p0, v0, v4
 
+    .line 18
     invoke-static {p1}, Lorg/apache/xmlbeans/impl/common/QNameHelper;->readable(Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object p0
@@ -492,8 +525,10 @@
 .method public calendarValue()Ljava/util/Calendar;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
+    .line 2
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->_value:Lorg/apache/xmlbeans/GDate;
 
     if-nez p0, :cond_0
@@ -502,6 +537,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/GDate;->getCalendar()Lorg/apache/xmlbeans/XmlCalendar;
 
@@ -513,6 +549,7 @@
 .method public compare_to(Lorg/apache/xmlbeans/XmlObject;)I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->_value:Lorg/apache/xmlbeans/GDate;
 
     check-cast p1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
@@ -531,6 +568,7 @@
 .method public compute_text(Lorg/apache/xmlbeans/impl/values/NamespaceManager;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->_value:Lorg/apache/xmlbeans/GDate;
 
     if-nez p0, :cond_0
@@ -551,8 +589,10 @@
 .method public dateValue()Ljava/util/Date;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
+    .line 2
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->_value:Lorg/apache/xmlbeans/GDate;
 
     if-nez p0, :cond_0
@@ -561,6 +601,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/GDate;->getDate()Ljava/util/Date;
 
@@ -572,6 +613,7 @@
 .method public equal_to(Lorg/apache/xmlbeans/XmlObject;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->_value:Lorg/apache/xmlbeans/GDate;
 
     check-cast p1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
@@ -590,8 +632,10 @@
 .method public gDateValue()Lorg/apache/xmlbeans/GDate;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
+    .line 2
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->_value:Lorg/apache/xmlbeans/GDate;
 
     if-nez p0, :cond_0
@@ -605,6 +649,7 @@
 .method public intValue()I
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object v0
@@ -631,6 +676,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     new-instance p0, Lorg/apache/xmlbeans/impl/values/XmlValueOutOfRangeException;
 
@@ -638,10 +684,12 @@
 
     throw p0
 
+    .line 3
     :cond_1
     :goto_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
+    .line 4
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->_value:Lorg/apache/xmlbeans/GDate;
 
     if-nez p0, :cond_2
@@ -657,6 +705,7 @@
 
     if-eq v0, v2, :cond_4
 
+    .line 5
     sget-boolean p0, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->$assertionsDisabled:Z
 
     if-nez p0, :cond_3
@@ -667,6 +716,7 @@
 
     throw p0
 
+    .line 6
     :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -674,6 +724,7 @@
 
     throw p0
 
+    .line 7
     :cond_4
     invoke-virtual {p0}, Lorg/apache/xmlbeans/GDate;->getMonth()I
 
@@ -681,6 +732,7 @@
 
     return p0
 
+    .line 8
     :cond_5
     invoke-virtual {p0}, Lorg/apache/xmlbeans/GDate;->getDay()I
 
@@ -688,6 +740,7 @@
 
     return p0
 
+    .line 9
     :cond_6
     invoke-virtual {p0}, Lorg/apache/xmlbeans/GDate;->getYear()I
 
@@ -699,6 +752,7 @@
 .method public schemaType()Lorg/apache/xmlbeans/SchemaType;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     return-object p0
@@ -707,6 +761,7 @@
 .method public set_Calendar(Ljava/util/Calendar;)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object v0
@@ -719,28 +774,34 @@
 
     move-result v0
 
+    .line 2
     new-instance v1, Lorg/apache/xmlbeans/GDateBuilder;
 
     invoke-direct {v1, p1}, Lorg/apache/xmlbeans/GDateBuilder;-><init>(Ljava/util/Calendar;)V
 
+    .line 3
     invoke-virtual {v1, v0}, Lorg/apache/xmlbeans/GDateBuilder;->setBuiltinTypeCode(I)V
 
+    .line 4
     invoke-virtual {v1}, Lorg/apache/xmlbeans/GDateBuilder;->toGDate()Lorg/apache/xmlbeans/GDate;
 
     move-result-object p1
 
+    .line 5
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_validateOnSet()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 6
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     sget-object v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_voorVc:Lorg/apache/xmlbeans/impl/common/ValidationContext;
 
     invoke-static {p1, v0, v1}, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->validateValue(Lorg/apache/xmlbeans/GDateSpecification;Lorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/impl/common/ValidationContext;)V
 
+    .line 7
     :cond_0
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->_value:Lorg/apache/xmlbeans/GDate;
 
@@ -750,6 +811,7 @@
 .method public set_Date(Ljava/util/Date;)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object v0
@@ -773,33 +835,40 @@
     :cond_0
     if-eqz p1, :cond_2
 
+    .line 2
     new-instance v1, Lorg/apache/xmlbeans/GDateBuilder;
 
     invoke-direct {v1, p1}, Lorg/apache/xmlbeans/GDateBuilder;-><init>(Ljava/util/Date;)V
 
+    .line 3
     invoke-virtual {v1, v0}, Lorg/apache/xmlbeans/GDateBuilder;->setBuiltinTypeCode(I)V
 
+    .line 4
     invoke-virtual {v1}, Lorg/apache/xmlbeans/GDateBuilder;->toGDate()Lorg/apache/xmlbeans/GDate;
 
     move-result-object p1
 
+    .line 5
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_validateOnSet()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 6
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     sget-object v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_voorVc:Lorg/apache/xmlbeans/impl/common/ValidationContext;
 
     invoke-static {p1, v0, v1}, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->validateValue(Lorg/apache/xmlbeans/GDateSpecification;Lorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/impl/common/ValidationContext;)V
 
+    .line 7
     :cond_1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->_value:Lorg/apache/xmlbeans/GDate;
 
     return-void
 
+    .line 8
     :cond_2
     new-instance p0, Lorg/apache/xmlbeans/impl/values/XmlValueOutOfRangeException;
 
@@ -811,6 +880,7 @@
 .method public set_GDate(Lorg/apache/xmlbeans/GDateSpecification;)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object v0
@@ -823,6 +893,7 @@
 
     move-result v0
 
+    .line 2
     invoke-interface {p1}, Lorg/apache/xmlbeans/GDateSpecification;->isImmutable()Z
 
     move-result v1
@@ -839,10 +910,12 @@
 
     if-ne v1, v0, :cond_0
 
+    .line 3
     check-cast p1, Lorg/apache/xmlbeans/GDate;
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-interface {p1}, Lorg/apache/xmlbeans/GDateSpecification;->getBuiltinTypeCode()I
 
@@ -850,14 +923,17 @@
 
     if-eq v1, v0, :cond_1
 
+    .line 5
     new-instance v1, Lorg/apache/xmlbeans/GDateBuilder;
 
     invoke-direct {v1, p1}, Lorg/apache/xmlbeans/GDateBuilder;-><init>(Lorg/apache/xmlbeans/GDateSpecification;)V
 
+    .line 6
     invoke-virtual {v1, v0}, Lorg/apache/xmlbeans/GDateBuilder;->setBuiltinTypeCode(I)V
 
     move-object p1, v1
 
+    .line 7
     :cond_1
     new-instance v0, Lorg/apache/xmlbeans/GDate;
 
@@ -865,6 +941,7 @@
 
     move-object p1, v0
 
+    .line 8
     :goto_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_validateOnSet()Z
 
@@ -872,12 +949,14 @@
 
     if-eqz v0, :cond_2
 
+    .line 9
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     sget-object v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_voorVc:Lorg/apache/xmlbeans/impl/common/ValidationContext;
 
     invoke-static {p1, v0, v1}, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->validateValue(Lorg/apache/xmlbeans/GDateSpecification;Lorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/impl/common/ValidationContext;)V
 
+    .line 10
     :cond_2
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->_value:Lorg/apache/xmlbeans/GDate;
 
@@ -887,6 +966,7 @@
 .method public set_int(I)V
     .locals 5
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object v0
@@ -913,6 +993,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     new-instance p0, Lorg/apache/xmlbeans/impl/values/XmlValueOutOfRangeException;
 
@@ -920,6 +1001,7 @@
 
     throw p0
 
+    .line 3
     :cond_1
     :goto_0
     new-instance v4, Lorg/apache/xmlbeans/GDateBuilder;
@@ -934,19 +1016,23 @@
 
     goto :goto_1
 
+    .line 4
     :cond_2
     invoke-virtual {v4, p1}, Lorg/apache/xmlbeans/GDateBuilder;->setMonth(I)V
 
     goto :goto_1
 
+    .line 5
     :cond_3
     invoke-virtual {v4, p1}, Lorg/apache/xmlbeans/GDateBuilder;->setDay(I)V
 
     goto :goto_1
 
+    .line 6
     :cond_4
     invoke-virtual {v4, p1}, Lorg/apache/xmlbeans/GDateBuilder;->setYear(I)V
 
+    .line 7
     :goto_1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_validateOnSet()Z
 
@@ -954,12 +1040,14 @@
 
     if-eqz p1, :cond_5
 
+    .line 8
     iget-object p1, p0, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     sget-object v0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_voorVc:Lorg/apache/xmlbeans/impl/common/ValidationContext;
 
     invoke-static {v4, p1, v0}, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->validateValue(Lorg/apache/xmlbeans/GDateSpecification;Lorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/impl/common/ValidationContext;)V
 
+    .line 9
     :cond_5
     invoke-virtual {v4}, Lorg/apache/xmlbeans/GDateBuilder;->toGDate()Lorg/apache/xmlbeans/GDate;
 
@@ -975,6 +1063,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->_value:Lorg/apache/xmlbeans/GDate;
 
     return-void
@@ -983,12 +1072,14 @@
 .method public set_text(Ljava/lang/String;)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_validateOnSet()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     sget-object v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_voorVc:Lorg/apache/xmlbeans/impl/common/ValidationContext;
@@ -999,6 +1090,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
@@ -1008,6 +1100,7 @@
 
     move-result-object p1
 
+    .line 4
     :goto_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_validateOnSet()Z
 
@@ -1017,12 +1110,14 @@
 
     if-eqz p1, :cond_1
 
+    .line 5
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     sget-object v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_voorVc:Lorg/apache/xmlbeans/impl/common/ValidationContext;
 
     invoke-static {p1, v0, v1}, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->validateValue(Lorg/apache/xmlbeans/GDateSpecification;Lorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/impl/common/ValidationContext;)V
 
+    .line 6
     :cond_1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->_value:Lorg/apache/xmlbeans/GDate;
 
@@ -1032,12 +1127,14 @@
 .method public validate_simpleval(Ljava/lang/String;Lorg/apache/xmlbeans/impl/common/ValidationContext;)V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object v0
 
     invoke-static {p1, v0, p2}, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->validateLexical(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/impl/common/ValidationContext;)Lorg/apache/xmlbeans/GDate;
 
+    .line 2
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->gDateValue()Lorg/apache/xmlbeans/GDate;
 
     move-result-object p1
@@ -1054,6 +1151,7 @@
 .method public value_hash_code()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaGDateHolderEx;->_value:Lorg/apache/xmlbeans/GDate;
 
     invoke-virtual {p0}, Lorg/apache/xmlbeans/GDate;->hashCode()I

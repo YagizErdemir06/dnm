@@ -4,15 +4,15 @@
 
 
 # instance fields
-.field public a:Landroid/graphics/Paint;
+.field private c:Landroid/graphics/Paint;
 
-.field public b:Landroid/graphics/Bitmap;
+.field private d:Landroid/graphics/Bitmap;
 
-.field public c:Landroid/graphics/Bitmap;
+.field private f:Landroid/graphics/Bitmap;
 
-.field public d:Landroid/graphics/Bitmap;
+.field private g:Landroid/graphics/Bitmap;
 
-.field public e:Landroid/graphics/Bitmap;
+.field private j:Landroid/graphics/Bitmap;
 
 
 # direct methods
@@ -49,7 +49,7 @@
 
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object p1, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->a:Landroid/graphics/Paint;
+    iput-object p1, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->c:Landroid/graphics/Paint;
 
     .line 5
     new-instance p2, Landroid/graphics/PorterDuffXfermode;
@@ -61,37 +61,19 @@
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
     .line 6
-    iget-object p1, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->a:Landroid/graphics/Paint;
+    iget-object p1, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->c:Landroid/graphics/Paint;
 
     const/4 p2, 0x1
 
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
     .line 7
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
     .line 8
-    sget p2, Lir/b$g;->miuix_appcompat_popup_mask_1:I
-
-    invoke-static {p1, p2}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->b:Landroid/graphics/Bitmap;
-
-    .line 9
-    sget p2, Lir/b$g;->miuix_appcompat_popup_mask_2:I
-
-    invoke-static {p1, p2}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->c:Landroid/graphics/Bitmap;
-
-    .line 10
-    sget p2, Lir/b$g;->miuix_appcompat_popup_mask_3:I
+    sget p2, Lk/w/b$f;->miuix_appcompat_popup_mask_1:I
 
     invoke-static {p1, p2}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
@@ -99,14 +81,32 @@
 
     iput-object p2, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->d:Landroid/graphics/Bitmap;
 
+    .line 9
+    sget p2, Lk/w/b$f;->miuix_appcompat_popup_mask_2:I
+
+    invoke-static {p1, p2}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->f:Landroid/graphics/Bitmap;
+
+    .line 10
+    sget p2, Lk/w/b$f;->miuix_appcompat_popup_mask_3:I
+
+    invoke-static {p1, p2}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->g:Landroid/graphics/Bitmap;
+
     .line 11
-    sget p2, Lir/b$g;->miuix_appcompat_popup_mask_4:I
+    sget p2, Lk/w/b$f;->miuix_appcompat_popup_mask_4:I
 
     invoke-static {p1, p2}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
-    iput-object p1, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->e:Landroid/graphics/Bitmap;
+    iput-object p1, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->j:Landroid/graphics/Bitmap;
 
     return-void
 .end method
@@ -114,93 +114,40 @@
 
 # virtual methods
 .method public dispatchDraw(Landroid/graphics/Canvas;)V
-    .locals 7
+    .locals 8
 
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result v0
-
-    int-to-float v3, v0
-
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+    .line 1
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getWidth()I
 
     move-result v0
 
     int-to-float v4, v0
 
-    const/4 v5, 0x0
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getHeight()I
 
-    const/16 v6, 0x1f
+    move-result v0
 
-    move-object v0, p1
+    int-to-float v5, v0
 
-    invoke-virtual/range {v0 .. v6}, Landroid/graphics/Canvas;->saveLayer(FFFFLandroid/graphics/Paint;I)I
+    const/4 v2, 0x0
 
-    invoke-super {p0, p1}, Landroid/view/View;->dispatchDraw(Landroid/graphics/Canvas;)V
+    const/4 v3, 0x0
 
-    iget-object v0, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->b:Landroid/graphics/Bitmap;
+    const/4 v6, 0x0
 
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
+    const/16 v7, 0x1f
 
-    move-result v1
+    move-object v1, p1
 
-    add-int/lit8 v1, v1, 0x0
+    invoke-virtual/range {v1 .. v7}, Landroid/graphics/Canvas;->saveLayer(FFFFLandroid/graphics/Paint;I)I
 
-    int-to-float v1, v1
+    .line 2
+    invoke-super {p0, p1}, Landroid/widget/LinearLayout;->dispatchDraw(Landroid/graphics/Canvas;)V
 
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, 0x0
-
-    int-to-float v2, v2
-
-    iget-object v3, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->a:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
-
-    iget-object v0, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->c:Landroid/graphics/Bitmap;
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result v1
-
-    iget-object v2, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->c:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v2
-
-    sub-int/2addr v1, v2
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
-
-    move-result v2
-
-    sub-int/2addr v1, v2
-
-    int-to-float v1, v1
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, 0x0
-
-    int-to-float v2, v2
-
-    iget-object v3, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->a:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
-
+    .line 3
     iget-object v0, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->d:Landroid/graphics/Bitmap;
 
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getPaddingLeft()I
 
     move-result v1
 
@@ -208,37 +155,26 @@
 
     int-to-float v1, v1
 
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getPaddingTop()I
 
     move-result v2
 
-    iget-object v3, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->d:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v3}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v3
-
-    sub-int/2addr v2, v3
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
-
-    move-result v3
-
-    sub-int/2addr v2, v3
+    add-int/lit8 v2, v2, 0x0
 
     int-to-float v2, v2
 
-    iget-object v3, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->a:Landroid/graphics/Paint;
+    iget-object v3, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->c:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    iget-object v0, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->e:Landroid/graphics/Bitmap;
+    .line 4
+    iget-object v0, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->f:Landroid/graphics/Bitmap;
 
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getWidth()I
 
     move-result v1
 
-    iget-object v2, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->e:Landroid/graphics/Bitmap;
+    iget-object v2, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->f:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -246,7 +182,7 @@
 
     sub-int/2addr v1, v2
 
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getPaddingRight()I
 
     move-result v2
 
@@ -254,11 +190,34 @@
 
     int-to-float v1, v1
 
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getPaddingTop()I
 
     move-result v2
 
-    iget-object v3, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->e:Landroid/graphics/Bitmap;
+    add-int/lit8 v2, v2, 0x0
+
+    int-to-float v2, v2
+
+    iget-object v3, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->c:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
+
+    .line 5
+    iget-object v0, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->g:Landroid/graphics/Bitmap;
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getPaddingLeft()I
+
+    move-result v1
+
+    add-int/lit8 v1, v1, 0x0
+
+    int-to-float v1, v1
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getHeight()I
+
+    move-result v2
+
+    iget-object v3, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->g:Landroid/graphics/Bitmap;
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -266,7 +225,7 @@
 
     sub-int/2addr v2, v3
 
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getPaddingBottom()I
 
     move-result v3
 
@@ -274,10 +233,60 @@
 
     int-to-float v2, v2
 
-    iget-object p0, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->a:Landroid/graphics/Paint;
+    iget-object v3, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->c:Landroid/graphics/Paint;
 
+    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
+
+    .line 6
+    iget-object v0, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->j:Landroid/graphics/Bitmap;
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getWidth()I
+
+    move-result v1
+
+    iget-object v2, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->j:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v2
+
+    sub-int/2addr v1, v2
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getPaddingRight()I
+
+    move-result v2
+
+    sub-int/2addr v1, v2
+
+    int-to-float v1, v1
+
+    .line 7
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getHeight()I
+
+    move-result v2
+
+    iget-object v3, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->j:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v3}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v3
+
+    sub-int/2addr v2, v3
+
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getPaddingBottom()I
+
+    move-result v3
+
+    sub-int/2addr v2, v3
+
+    int-to-float v2, v2
+
+    iget-object p0, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupContentWrapper;->c:Landroid/graphics/Paint;
+
+    .line 8
     invoke-virtual {p1, v0, v1, v2, p0}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
+    .line 9
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     return-void

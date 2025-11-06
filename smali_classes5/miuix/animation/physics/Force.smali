@@ -1,4 +1,4 @@
-.class interface abstract Lmiuix/animation/physics/Force;
+.class public interface abstract Lmiuix/animation/physics/Force;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

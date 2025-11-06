@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/util/concurrent/SmoothRateLimiter;
+.class public abstract Lcom/google/common/util/concurrent/SmoothRateLimiter;
 .super Lcom/google/common/util/concurrent/RateLimiter;
 .source "SourceFile"
 
@@ -19,13 +19,13 @@
 
 
 # instance fields
-.field maxPermits:D
+.field public maxPermits:D
 
 .field private nextFreeTicketMicros:J
 
-.field stableIntervalMicros:D
+.field public stableIntervalMicros:D
 
-.field storedPermits:D
+.field public storedPermits:D
 
 
 # direct methods
@@ -60,6 +60,7 @@
 .method public final doGetRate()D
     .locals 4
 
+    .line 1
     sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v1, 0x1
@@ -83,8 +84,10 @@
 .method public final doSetRate(DJ)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0, p3, p4}, Lcom/google/common/util/concurrent/SmoothRateLimiter;->resync(J)V
 
+    .line 2
     sget-object p3, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v0, 0x1
@@ -97,8 +100,10 @@
 
     div-double/2addr p3, p1
 
+    .line 3
     iput-wide p3, p0, Lcom/google/common/util/concurrent/SmoothRateLimiter;->stableIntervalMicros:D
 
+    .line 4
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/google/common/util/concurrent/SmoothRateLimiter;->doSetRate(DD)V
 
     return-void
@@ -107,6 +112,7 @@
 .method public final queryEarliestAvailable(J)J
     .locals 0
 
+    .line 1
     iget-wide p0, p0, Lcom/google/common/util/concurrent/SmoothRateLimiter;->nextFreeTicketMicros:J
 
     return-wide p0
@@ -115,12 +121,15 @@
 .method public final reserveEarliestAvailable(IJ)J
     .locals 8
 
+    .line 1
     invoke-virtual {p0, p2, p3}, Lcom/google/common/util/concurrent/SmoothRateLimiter;->resync(J)V
 
+    .line 2
     iget-wide p2, p0, Lcom/google/common/util/concurrent/SmoothRateLimiter;->nextFreeTicketMicros:J
 
     int-to-double v0, p1
 
+    .line 3
     iget-wide v2, p0, Lcom/google/common/util/concurrent/SmoothRateLimiter;->storedPermits:D
 
     invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(DD)D
@@ -129,8 +138,10 @@
 
     sub-double/2addr v0, v2
 
+    .line 4
     iget-wide v4, p0, Lcom/google/common/util/concurrent/SmoothRateLimiter;->storedPermits:D
 
+    .line 5
     invoke-virtual {p0, v4, v5, v2, v3}, Lcom/google/common/util/concurrent/SmoothRateLimiter;->storedPermitsToWaitTime(DD)J
 
     move-result-wide v4
@@ -143,6 +154,7 @@
 
     add-long/2addr v4, v0
 
+    .line 6
     iget-wide v0, p0, Lcom/google/common/util/concurrent/SmoothRateLimiter;->nextFreeTicketMicros:J
 
     invoke-static {v0, v1, v4, v5}, Lcom/google/common/math/LongMath;->saturatedAdd(JJ)J
@@ -151,6 +163,7 @@
 
     iput-wide v0, p0, Lcom/google/common/util/concurrent/SmoothRateLimiter;->nextFreeTicketMicros:J
 
+    .line 7
     iget-wide v0, p0, Lcom/google/common/util/concurrent/SmoothRateLimiter;->storedPermits:D
 
     sub-double/2addr v0, v2
@@ -163,6 +176,7 @@
 .method public resync(J)V
     .locals 6
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/util/concurrent/SmoothRateLimiter;->nextFreeTicketMicros:J
 
     cmp-long v2, p1, v0
@@ -173,12 +187,14 @@
 
     long-to-double v0, v0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/SmoothRateLimiter;->coolDownIntervalMicros()D
 
     move-result-wide v2
 
     div-double/2addr v0, v2
 
+    .line 3
     iget-wide v2, p0, Lcom/google/common/util/concurrent/SmoothRateLimiter;->maxPermits:D
 
     iget-wide v4, p0, Lcom/google/common/util/concurrent/SmoothRateLimiter;->storedPermits:D
@@ -191,6 +207,7 @@
 
     iput-wide v0, p0, Lcom/google/common/util/concurrent/SmoothRateLimiter;->storedPermits:D
 
+    .line 4
     iput-wide p1, p0, Lcom/google/common/util/concurrent/SmoothRateLimiter;->nextFreeTicketMicros:J
 
     :cond_0

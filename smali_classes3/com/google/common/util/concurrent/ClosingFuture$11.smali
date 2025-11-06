@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/ClosingFuture$11;
+.class public Lcom/google/common/util/concurrent/ClosingFuture$11;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic val$closeable:Ljava/io/Closeable;
+.field public final synthetic val$closeable:Ljava/io/Closeable;
 
 
 # direct methods
 .method public constructor <init>(Ljava/io/Closeable;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/ClosingFuture$11;->val$closeable:Ljava/io/Closeable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,6 +38,7 @@
 .method public run()V
     .locals 3
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/google/common/util/concurrent/ClosingFuture$11;->val$closeable:Ljava/io/Closeable;
 
@@ -50,6 +52,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     invoke-static {}, Lcom/google/common/util/concurrent/ClosingFuture;->access$3200()Ljava/util/logging/Logger;
 
     move-result-object v0

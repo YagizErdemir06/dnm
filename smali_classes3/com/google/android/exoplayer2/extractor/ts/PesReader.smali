@@ -54,10 +54,13 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/extractor/ts/ElementaryStreamReader;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->reader:Lcom/google/android/exoplayer2/extractor/ts/ElementaryStreamReader;
 
+    .line 3
     new-instance p1, Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/16 v0, 0xa
@@ -70,6 +73,7 @@
 
     const/4 p1, 0x0
 
+    .line 4
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->state:I
 
     return-void
@@ -82,6 +86,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
     move-result v0
@@ -103,15 +108,18 @@
     :cond_0
     if-nez p2, :cond_1
 
+    .line 2
     invoke-virtual {p1, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
     goto :goto_0
 
+    .line 3
     :cond_1
     iget v2, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->bytesRead:I
 
     invoke-virtual {p1, p2, v2, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readBytes([BII)V
 
+    .line 4
     :goto_0
     iget p1, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->bytesRead:I
 
@@ -133,12 +141,14 @@
 .method private parseHeader()Z
     .locals 7
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->pesScratch:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->setPosition(I)V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->pesScratch:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/16 v2, 0x18
@@ -149,32 +159,35 @@
 
     const-string v2, "PesReader"
 
-    const/4 v3, -0x1
+    const/4 v3, 0x1
 
-    const/4 v4, 0x1
+    const/4 v4, -0x1
 
-    if-eq v0, v4, :cond_0
+    if-eq v0, v3, :cond_0
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    .line 3
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v5, "Unexpected start code prefix: "
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v2, v0}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    iput v3, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->payloadSize:I
+    .line 4
+    iput v4, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->payloadSize:I
 
     return v1
 
+    .line 5
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->pesScratch:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
@@ -182,6 +195,7 @@
 
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
+    .line 6
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->pesScratch:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/16 v5, 0x10
@@ -190,12 +204,14 @@
 
     move-result v0
 
+    .line 7
     iget-object v5, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->pesScratch:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/4 v6, 0x5
 
     invoke-virtual {v5, v6}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
+    .line 8
     iget-object v5, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->pesScratch:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v5}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBit()Z
@@ -204,12 +220,14 @@
 
     iput-boolean v5, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->dataAlignmentIndicator:Z
 
+    .line 9
     iget-object v5, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->pesScratch:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/4 v6, 0x2
 
     invoke-virtual {v5, v6}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
+    .line 10
     iget-object v5, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->pesScratch:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v5}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBit()Z
@@ -218,6 +236,7 @@
 
     iput-boolean v5, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->ptsFlag:Z
 
+    .line 11
     iget-object v5, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->pesScratch:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v5}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBit()Z
@@ -226,12 +245,14 @@
 
     iput-boolean v5, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->dtsFlag:Z
 
+    .line 12
     iget-object v5, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->pesScratch:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/4 v6, 0x6
 
     invoke-virtual {v5, v6}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
+    .line 13
     iget-object v5, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->pesScratch:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v5, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
@@ -242,7 +263,8 @@
 
     if-nez v0, :cond_1
 
-    iput v3, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->payloadSize:I
+    .line 14
+    iput v4, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->payloadSize:I
 
     goto :goto_0
 
@@ -253,10 +275,12 @@
 
     sub-int/2addr v0, v1
 
+    .line 15
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->payloadSize:I
 
     if-gez v0, :cond_2
 
+    .line 16
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -275,11 +299,12 @@
 
     invoke-static {v2, v0}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    iput v3, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->payloadSize:I
+    .line 17
+    iput v4, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->payloadSize:I
 
     :cond_2
     :goto_0
-    return v4
+    return v3
 .end method
 
 .method private parseHeaderExtension()V
@@ -290,6 +315,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->pesScratch:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/4 v1, 0x0
@@ -298,18 +324,22 @@
 
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 2
     iput-wide v0, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->timeUs:J
 
+    .line 3
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->ptsFlag:Z
 
     if-eqz v0, :cond_1
 
+    .line 4
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->pesScratch:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
+    .line 5
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->pesScratch:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/4 v2, 0x3
@@ -324,12 +354,14 @@
 
     shl-long/2addr v3, v0
 
+    .line 6
     iget-object v5, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->pesScratch:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/4 v6, 0x1
 
     invoke-virtual {v5, v6}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
+    .line 7
     iget-object v5, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->pesScratch:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/16 v7, 0xf
@@ -344,10 +376,12 @@
 
     or-long/2addr v3, v8
 
+    .line 8
     iget-object v5, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->pesScratch:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v5, v6}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
+    .line 9
     iget-object v5, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->pesScratch:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v5, v7}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
@@ -358,10 +392,12 @@
 
     or-long/2addr v3, v8
 
+    .line 10
     iget-object v5, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->pesScratch:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v5, v6}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
+    .line 11
     iget-boolean v5, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->seenFirstDts:Z
 
     if-nez v5, :cond_0
@@ -370,10 +406,12 @@
 
     if-eqz v5, :cond_0
 
+    .line 12
     iget-object v5, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->pesScratch:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v5, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
+    .line 13
     iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->pesScratch:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v1, v2}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
@@ -384,10 +422,12 @@
 
     shl-long v0, v1, v0
 
+    .line 14
     iget-object v2, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->pesScratch:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v2, v6}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
+    .line 15
     iget-object v2, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->pesScratch:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v2, v7}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
@@ -400,10 +440,12 @@
 
     or-long/2addr v0, v8
 
+    .line 16
     iget-object v2, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->pesScratch:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v2, v6}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
+    .line 17
     iget-object v2, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->pesScratch:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v2, v7}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
@@ -414,16 +456,20 @@
 
     or-long/2addr v0, v7
 
+    .line 18
     iget-object v2, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->pesScratch:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v2, v6}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
+    .line 19
     iget-object v2, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->timestampAdjuster:Lcom/google/android/exoplayer2/util/TimestampAdjuster;
 
     invoke-virtual {v2, v0, v1}, Lcom/google/android/exoplayer2/util/TimestampAdjuster;->adjustTsTimestamp(J)J
 
+    .line 20
     iput-boolean v6, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->seenFirstDts:Z
 
+    .line 21
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->timestampAdjuster:Lcom/google/android/exoplayer2/util/TimestampAdjuster;
 
@@ -440,10 +486,12 @@
 .method private setState(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->state:I
 
     const/4 p1, 0x0
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->bytesRead:I
 
     return-void
@@ -459,6 +507,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->timestampAdjuster:Lcom/google/android/exoplayer2/util/TimestampAdjuster;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkStateNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -475,6 +524,7 @@
 
     if-eqz v0, :cond_4
 
+    .line 2
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->state:I
 
     if-eqz v0, :cond_3
@@ -487,10 +537,12 @@
 
     if-ne v0, v2, :cond_1
 
+    .line 3
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->payloadSize:I
 
     if-eq v0, v1, :cond_0
 
+    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -513,6 +565,7 @@
 
     invoke-static {v5, v0}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 5
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->reader:Lcom/google/android/exoplayer2/extractor/ts/ElementaryStreamReader;
 
@@ -520,6 +573,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -530,12 +584,15 @@
     :cond_2
     const-string v0, "Unexpected start indicator reading extended header"
 
+    .line 7
     invoke-static {v5, v0}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 8
     :cond_3
     :goto_0
     invoke-direct {p0, v4}, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->setState(I)V
 
+    .line 9
     :cond_4
     :goto_1
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
@@ -544,6 +601,7 @@
 
     if-lez v0, :cond_d
 
+    .line 10
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->state:I
 
     if-eqz v0, :cond_c
@@ -556,10 +614,12 @@
 
     if-ne v0, v2, :cond_7
 
+    .line 11
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
     move-result v0
 
+    .line 12
     iget v6, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->payloadSize:I
 
     if-ne v6, v1, :cond_5
@@ -574,6 +634,7 @@
 
     sub-int/2addr v0, v5
 
+    .line 13
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getPosition()I
 
     move-result v5
@@ -582,29 +643,35 @@
 
     invoke-virtual {p1, v5}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setLimit(I)V
 
+    .line 14
     :cond_6
     iget-object v5, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->reader:Lcom/google/android/exoplayer2/extractor/ts/ElementaryStreamReader;
 
     invoke-interface {v5, p1}, Lcom/google/android/exoplayer2/extractor/ts/ElementaryStreamReader;->consume(Lcom/google/android/exoplayer2/util/ParsableByteArray;)V
 
+    .line 15
     iget v5, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->payloadSize:I
 
     if-eq v5, v1, :cond_4
 
     sub-int/2addr v5, v0
 
+    .line 16
     iput v5, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->payloadSize:I
 
     if-nez v5, :cond_4
 
+    .line 17
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->reader:Lcom/google/android/exoplayer2/extractor/ts/ElementaryStreamReader;
 
     invoke-interface {v0}, Lcom/google/android/exoplayer2/extractor/ts/ElementaryStreamReader;->packetFinished()V
 
+    .line 18
     invoke-direct {p0, v4}, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->setState(I)V
 
     goto :goto_1
 
+    .line 19
     :cond_7
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -615,12 +682,14 @@
     :cond_8
     const/16 v0, 0xa
 
+    .line 20
     iget v6, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->extendedHeaderLength:I
 
     invoke-static {v0, v6}, Ljava/lang/Math;->min(II)I
 
     move-result v0
 
+    .line 21
     iget-object v6, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->pesScratch:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     iget-object v6, v6, Lcom/google/android/exoplayer2/util/ParsableBitArray;->data:[B
@@ -635,14 +704,17 @@
 
     iget v6, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->extendedHeaderLength:I
 
+    .line 22
     invoke-direct {p0, p1, v0, v6}, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->continueRead(Lcom/google/android/exoplayer2/util/ParsableByteArray;[BI)Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
+    .line 23
     invoke-direct {p0}, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->parseHeaderExtension()V
 
+    .line 24
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->dataAlignmentIndicator:Z
 
     if-eqz v0, :cond_9
@@ -652,16 +724,19 @@
     :cond_9
     or-int/2addr p2, v5
 
+    .line 25
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->reader:Lcom/google/android/exoplayer2/extractor/ts/ElementaryStreamReader;
 
     iget-wide v5, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->timeUs:J
 
     invoke-interface {v0, v5, v6, p2}, Lcom/google/android/exoplayer2/extractor/ts/ElementaryStreamReader;->packetStarted(JI)V
 
+    .line 26
     invoke-direct {p0, v2}, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->setState(I)V
 
     goto :goto_1
 
+    .line 27
     :cond_a
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->pesScratch:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
@@ -675,6 +750,7 @@
 
     if-eqz v0, :cond_4
 
+    .line 28
     invoke-direct {p0}, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->parseHeader()Z
 
     move-result v0
@@ -688,6 +764,7 @@
 
     goto/16 :goto_1
 
+    .line 29
     :cond_c
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
@@ -704,8 +781,10 @@
 .method public init(Lcom/google/android/exoplayer2/util/TimestampAdjuster;Lcom/google/android/exoplayer2/extractor/ExtractorOutput;Lcom/google/android/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->timestampAdjuster:Lcom/google/android/exoplayer2/util/TimestampAdjuster;
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->reader:Lcom/google/android/exoplayer2/extractor/ts/ElementaryStreamReader;
 
     invoke-interface {p0, p2, p3}, Lcom/google/android/exoplayer2/extractor/ts/ElementaryStreamReader;->createTracks(Lcom/google/android/exoplayer2/extractor/ExtractorOutput;Lcom/google/android/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;)V
@@ -718,12 +797,16 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->state:I
 
+    .line 2
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->bytesRead:I
 
+    .line 3
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->seenFirstDts:Z
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/ts/PesReader;->reader:Lcom/google/android/exoplayer2/extractor/ts/ElementaryStreamReader;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/extractor/ts/ElementaryStreamReader;->seek()V

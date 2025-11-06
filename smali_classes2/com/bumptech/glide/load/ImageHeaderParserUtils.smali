@@ -20,6 +20,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -167,6 +168,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -178,12 +180,14 @@
 
     if-ge v1, v0, :cond_1
 
+    .line 2
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/bumptech/glide/load/ImageHeaderParser;
 
+    .line 3
     invoke-interface {p1, v3}, Lcom/bumptech/glide/load/ImageHeaderParserUtils$OrientationReader;->getOrientation(Lcom/bumptech/glide/load/ImageHeaderParser;)I
 
     move-result v3
@@ -407,6 +411,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -416,16 +421,19 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 2
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/bumptech/glide/load/ImageHeaderParser;
 
+    .line 3
     invoke-interface {p1, v2}, Lcom/bumptech/glide/load/ImageHeaderParserUtils$TypeReader;->getType(Lcom/bumptech/glide/load/ImageHeaderParser;)Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
     move-result-object v2
 
+    .line 4
     sget-object v3, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->UNKNOWN:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 
     if-eq v2, v3, :cond_0
@@ -437,6 +445,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     sget-object p0, Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;->UNKNOWN:Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;
 

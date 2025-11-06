@@ -19,6 +19,7 @@
 
     const-string v0, "FUP2AHelper"
 
+    .line 1
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     return-void
@@ -27,14 +28,17 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
+    .line 2
     iput-wide v0, p0, Lcom/faceunity/pta_helper/gif/GifEncoder;->instance:J
 
     const/4 v0, 0x1
 
+    .line 3
     iput v0, p0, Lcom/faceunity/pta_helper/gif/GifEncoder;->threadCount:I
 
     return-void
@@ -60,12 +64,14 @@
 .method public close()V
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/faceunity/pta_helper/gif/GifEncoder;->instance:J
 
     invoke-direct {p0, v0, v1}, Lcom/faceunity/pta_helper/gif/GifEncoder;->nativeClose(J)V
 
     const-wide/16 v0, 0x0
 
+    .line 2
     iput-wide v0, p0, Lcom/faceunity/pta_helper/gif/GifEncoder;->instance:J
 
     return-void
@@ -74,11 +80,12 @@
 .method public encodeFrame(Landroid/graphics/Bitmap;I)Z
     .locals 4
 
-    const-wide/16 v0, 0x0
+    .line 1
+    iget-wide v0, p0, Lcom/faceunity/pta_helper/gif/GifEncoder;->instance:J
 
-    iget-wide v2, p0, Lcom/faceunity/pta_helper/gif/GifEncoder;->instance:J
+    const-wide/16 v2, 0x0
 
-    cmp-long v0, v0, v2
+    cmp-long v0, v2, v0
 
     const/4 v1, 0x0
 
@@ -86,6 +93,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -105,12 +113,14 @@
 
     if-ne v0, v2, :cond_1
 
+    .line 3
     iget-wide v0, p0, Lcom/faceunity/pta_helper/gif/GifEncoder;->instance:J
 
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/faceunity/pta_helper/gif/GifEncoder;->nativeEncodeFrame(JLandroid/graphics/Bitmap;I)Z
 
     return v3
 
+    .line 4
     :cond_1
     sget-object p2, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
@@ -134,29 +144,29 @@
 
     aput-object p0, v0, v3
 
+    const/4 p0, 0x2
+
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
-    move-result p0
+    move-result v1
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object p0
+    move-result-object v1
 
-    const/4 v1, 0x2
+    aput-object v1, v0, p0
 
-    aput-object p0, v0, v1
+    const/4 p0, 0x3
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
-    move-result p0
+    move-result p1
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object p0
+    move-result-object p1
 
-    const/4 p1, 0x3
-
-    aput-object p0, v0, p1
+    aput-object p1, v0, p0
 
     const-string p0, "The size specified at initialization differs from the size of the image.\n expected:(%d, %d) actual:(%d,%d)"
 
@@ -164,6 +174,7 @@
 
     move-result-object p0
 
+    .line 5
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
@@ -243,6 +254,7 @@
 .method public setDither(Z)V
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/faceunity/pta_helper/gif/GifEncoder;->instance:J
 
     const-wide/16 v2, 0x0
@@ -253,6 +265,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     invoke-direct {p0, v0, v1, p1}, Lcom/faceunity/pta_helper/gif/GifEncoder;->nativeSetDither(JZ)V
 
@@ -262,8 +275,10 @@
 .method public setThreadCount(I)V
     .locals 4
 
+    .line 1
     iput p1, p0, Lcom/faceunity/pta_helper/gif/GifEncoder;->threadCount:I
 
+    .line 2
     iget-wide v0, p0, Lcom/faceunity/pta_helper/gif/GifEncoder;->instance:J
 
     const-wide/16 v2, 0x0
@@ -274,6 +289,7 @@
 
     return-void
 
+    .line 3
     :cond_0
     invoke-direct {p0, v0, v1, p1}, Lcom/faceunity/pta_helper/gif/GifEncoder;->nativeSetThreadCount(JI)V
 

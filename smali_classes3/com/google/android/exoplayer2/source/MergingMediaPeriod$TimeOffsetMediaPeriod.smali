@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetMediaPeriod;
+.class public final Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetMediaPeriod;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -30,10 +30,13 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/source/MediaPeriod;J)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetMediaPeriod;->mediaPeriod:Lcom/google/android/exoplayer2/source/MediaPeriod;
 
+    .line 3
     iput-wide p2, p0, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetMediaPeriod;->timeOffsetUs:J
 
     return-void
@@ -42,6 +45,7 @@
 .method public static synthetic access$000(Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetMediaPeriod;)Lcom/google/android/exoplayer2/source/MediaPeriod;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetMediaPeriod;->mediaPeriod:Lcom/google/android/exoplayer2/source/MediaPeriod;
 
     return-object p0
@@ -52,6 +56,7 @@
 .method public continueLoading(J)Z
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetMediaPeriod;->mediaPeriod:Lcom/google/android/exoplayer2/source/MediaPeriod;
 
     iget-wide v1, p0, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetMediaPeriod;->timeOffsetUs:J
@@ -68,6 +73,7 @@
 .method public discardBuffer(JZ)V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetMediaPeriod;->mediaPeriod:Lcom/google/android/exoplayer2/source/MediaPeriod;
 
     iget-wide v1, p0, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetMediaPeriod;->timeOffsetUs:J
@@ -82,6 +88,7 @@
 .method public getAdjustedSeekPositionUs(JLcom/google/android/exoplayer2/SeekParameters;)J
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetMediaPeriod;->mediaPeriod:Lcom/google/android/exoplayer2/source/MediaPeriod;
 
     iget-wide v1, p0, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetMediaPeriod;->timeOffsetUs:J
@@ -102,6 +109,7 @@
 .method public getBufferedPositionUs()J
     .locals 5
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetMediaPeriod;->mediaPeriod:Lcom/google/android/exoplayer2/source/MediaPeriod;
 
     invoke-interface {v0}, Lcom/google/android/exoplayer2/source/MediaPeriod;->getBufferedPositionUs()J
@@ -116,6 +124,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-wide v2, p0, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetMediaPeriod;->timeOffsetUs:J
 
@@ -128,6 +137,7 @@
 .method public getNextLoadPositionUs()J
     .locals 5
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetMediaPeriod;->mediaPeriod:Lcom/google/android/exoplayer2/source/MediaPeriod;
 
     invoke-interface {v0}, Lcom/google/android/exoplayer2/source/MediaPeriod;->getNextLoadPositionUs()J
@@ -142,6 +152,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-wide v2, p0, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetMediaPeriod;->timeOffsetUs:J
 
@@ -165,6 +176,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetMediaPeriod;->mediaPeriod:Lcom/google/android/exoplayer2/source/MediaPeriod;
 
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/source/MediaPeriod;->getStreamKeys(Ljava/util/List;)Ljava/util/List;
@@ -177,6 +189,7 @@
 .method public getTrackGroups()Lcom/google/android/exoplayer2/source/TrackGroupArray;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetMediaPeriod;->mediaPeriod:Lcom/google/android/exoplayer2/source/MediaPeriod;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/source/MediaPeriod;->getTrackGroups()Lcom/google/android/exoplayer2/source/TrackGroupArray;
@@ -189,6 +202,7 @@
 .method public isLoading()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetMediaPeriod;->mediaPeriod:Lcom/google/android/exoplayer2/source/MediaPeriod;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/source/MediaPeriod;->isLoading()Z
@@ -206,6 +220,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetMediaPeriod;->mediaPeriod:Lcom/google/android/exoplayer2/source/MediaPeriod;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/source/MediaPeriod;->maybeThrowPrepareError()V
@@ -244,6 +259,7 @@
 .method public onPrepared(Lcom/google/android/exoplayer2/source/MediaPeriod;)V
     .locals 0
 
+    .line 1
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetMediaPeriod;->callback:Lcom/google/android/exoplayer2/source/MediaPeriod$Callback;
 
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -260,8 +276,10 @@
 .method public prepare(Lcom/google/android/exoplayer2/source/MediaPeriod$Callback;J)V
     .locals 2
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetMediaPeriod;->callback:Lcom/google/android/exoplayer2/source/MediaPeriod$Callback;
 
+    .line 2
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetMediaPeriod;->mediaPeriod:Lcom/google/android/exoplayer2/source/MediaPeriod;
 
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetMediaPeriod;->timeOffsetUs:J
@@ -276,6 +294,7 @@
 .method public readDiscontinuity()J
     .locals 5
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetMediaPeriod;->mediaPeriod:Lcom/google/android/exoplayer2/source/MediaPeriod;
 
     invoke-interface {v0}, Lcom/google/android/exoplayer2/source/MediaPeriod;->readDiscontinuity()J
@@ -290,6 +309,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-wide v2, p0, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetMediaPeriod;->timeOffsetUs:J
 
@@ -302,6 +322,7 @@
 .method public reevaluateBuffer(J)V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetMediaPeriod;->mediaPeriod:Lcom/google/android/exoplayer2/source/MediaPeriod;
 
     iget-wide v1, p0, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetMediaPeriod;->timeOffsetUs:J
@@ -316,6 +337,7 @@
 .method public seekToUs(J)J
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetMediaPeriod;->mediaPeriod:Lcom/google/android/exoplayer2/source/MediaPeriod;
 
     iget-wide v1, p0, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetMediaPeriod;->timeOffsetUs:J
@@ -340,6 +362,7 @@
 
     move-object v1, p3
 
+    .line 1
     array-length v2, v1
 
     new-array v2, v2, [Lcom/google/android/exoplayer2/source/SampleStream;
@@ -348,6 +371,7 @@
 
     move v3, v10
 
+    .line 2
     :goto_0
     array-length v4, v1
 
@@ -355,12 +379,14 @@
 
     if-ge v3, v4, :cond_1
 
+    .line 3
     aget-object v4, v1, v3
 
     check-cast v4, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetSampleStream;
 
     if-eqz v4, :cond_0
 
+    .line 4
     invoke-virtual {v4}, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetSampleStream;->getChildStream()Lcom/google/android/exoplayer2/source/SampleStream;
 
     move-result-object v11
@@ -372,6 +398,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     iget-object v3, v0, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetMediaPeriod;->mediaPeriod:Lcom/google/android/exoplayer2/source/MediaPeriod;
 
@@ -387,36 +414,45 @@
 
     move-object/from16 v7, p4
 
+    .line 6
     invoke-interface/range {v3 .. v9}, Lcom/google/android/exoplayer2/source/MediaPeriod;->selectTracks([Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;[Z[Lcom/google/android/exoplayer2/source/SampleStream;[ZJ)J
 
     move-result-wide v3
 
+    .line 7
     :goto_1
     array-length v5, v1
 
     if-ge v10, v5, :cond_5
 
+    .line 8
     aget-object v5, v2, v10
 
     if-nez v5, :cond_2
 
+    .line 9
     aput-object v11, v1, v10
 
     goto :goto_2
 
+    .line 10
     :cond_2
     aget-object v6, v1, v10
 
     if-eqz v6, :cond_3
 
+    aget-object v6, v1, v10
+
     check-cast v6, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetSampleStream;
 
+    .line 11
     invoke-virtual {v6}, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetSampleStream;->getChildStream()Lcom/google/android/exoplayer2/source/SampleStream;
 
     move-result-object v6
 
     if-eq v6, v5, :cond_4
 
+    .line 12
     :cond_3
     new-instance v6, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetSampleStream;
 
@@ -432,6 +468,7 @@
 
     goto :goto_1
 
+    .line 13
     :cond_5
     iget-wide v0, v0, Lcom/google/android/exoplayer2/source/MergingMediaPeriod$TimeOffsetMediaPeriod;->timeOffsetUs:J
 

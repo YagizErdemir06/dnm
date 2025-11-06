@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/tasks/zzt;
+.class public final Lcom/google/android/gms/tasks/zzt;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -24,6 +24,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     return-void

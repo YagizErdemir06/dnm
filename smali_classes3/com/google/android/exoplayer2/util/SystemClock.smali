@@ -10,6 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,6 +25,7 @@
         .end annotation
     .end param
 
+    .line 1
     new-instance p0, Lcom/google/android/exoplayer2/util/SystemHandlerWrapper;
 
     new-instance v0, Landroid/os/Handler;
@@ -38,6 +40,7 @@
 .method public currentTimeMillis()J
     .locals 2
 
+    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -48,6 +51,7 @@
 .method public elapsedRealtime()J
     .locals 2
 
+    .line 1
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -64,6 +68,7 @@
 .method public uptimeMillis()J
     .locals 2
 
+    .line 1
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0

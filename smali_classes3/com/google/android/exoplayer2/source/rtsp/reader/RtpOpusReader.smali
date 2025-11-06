@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/rtsp/reader/RtpOpusReader;
+.class public final Lcom/google/android/exoplayer2/source/rtsp/reader/RtpOpusReader;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -32,16 +32,20 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpOpusReader;->payloadFormat:Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;
 
     const-wide/16 v0, -0x1
 
+    .line 3
     iput-wide v0, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpOpusReader;->firstReceivedTimestamp:J
 
     const/4 p1, -0x1
 
+    .line 4
     iput p1, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpOpusReader;->previousSequenceNumber:I
 
     return-void
@@ -56,6 +60,7 @@
 
     const-wide/32 v4, 0xbb80
 
+    .line 1
     invoke-static/range {v0 .. v5}, Lcom/google/android/exoplayer2/util/Util;->scaleLargeTimestamp(JJJ)J
 
     move-result-wide p2
@@ -68,63 +73,70 @@
 .method private static validateOpusIdHeader(Lcom/google/android/exoplayer2/util/ParsableByteArray;)V
     .locals 5
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getPosition()I
 
     move-result v0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->limit()I
 
     move-result v1
 
-    const/16 v2, 0x12
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    const/4 v3, 0x1
 
-    const/4 v4, 0x1
+    const/16 v4, 0x12
 
-    if-le v1, v2, :cond_0
+    if-le v1, v4, :cond_0
 
-    move v1, v4
+    move v1, v3
 
     goto :goto_0
 
     :cond_0
-    move v1, v3
+    move v1, v2
 
     :goto_0
-    const-string v2, "ID Header has insufficient data"
+    const-string v4, "ID Header has insufficient data"
 
-    invoke-static {v1, v2}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(ZLjava/lang/Object;)V
+    .line 3
+    invoke-static {v1, v4}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(ZLjava/lang/Object;)V
 
     const/16 v1, 0x8
 
+    .line 4
     invoke-virtual {p0, v1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    const-string v2, "OpusHead"
+    const-string v4, "OpusHead"
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 5
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    const-string v2, "ID Header missing"
+    const-string v4, "ID Header missing"
 
-    invoke-static {v1, v2}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(ZLjava/lang/Object;)V
+    invoke-static {v1, v4}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 6
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v1
 
-    if-ne v1, v4, :cond_1
+    if-ne v1, v3, :cond_1
 
-    move v3, v4
+    move v2, v3
 
     :cond_1
     const-string v1, "version number must always be 1"
 
-    invoke-static {v3, v1}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(ZLjava/lang/Object;)V
+    invoke-static {v2, v1}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 7
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     return-void
@@ -141,18 +153,22 @@
 
     move/from16 v2, p4
 
+    .line 1
     iget-object v3, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpOpusReader;->trackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     invoke-static {v3}, Lcom/google/android/exoplayer2/util/Assertions;->checkStateNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-boolean v3, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpOpusReader;->foundOpusIDHeader:Z
 
     const/4 v4, 0x1
 
     if-nez v3, :cond_0
 
+    .line 3
     invoke-static/range {p1 .. p1}, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpOpusReader;->validateOpusIdHeader(Lcom/google/android/exoplayer2/util/ParsableByteArray;)V
 
+    .line 4
     invoke-virtual/range {p1 .. p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
     move-result-object v1
@@ -161,6 +177,7 @@
 
     move-result-object v1
 
+    .line 5
     iget-object v3, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpOpusReader;->payloadFormat:Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;
 
     iget-object v3, v3, Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;->format:Lcom/google/android/exoplayer2/Format;
@@ -169,8 +186,10 @@
 
     move-result-object v3
 
+    .line 6
     invoke-virtual {v3, v1}, Lcom/google/android/exoplayer2/Format$Builder;->setInitializationData(Ljava/util/List;)Lcom/google/android/exoplayer2/Format$Builder;
 
+    .line 7
     iget-object v1, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpOpusReader;->trackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     invoke-virtual {v3}, Lcom/google/android/exoplayer2/Format$Builder;->build()Lcom/google/android/exoplayer2/Format;
@@ -179,10 +198,12 @@
 
     invoke-interface {v1, v3}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->format(Lcom/google/android/exoplayer2/Format;)V
 
+    .line 8
     iput-boolean v4, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpOpusReader;->foundOpusIDHeader:Z
 
     goto :goto_0
 
+    .line 9
     :cond_0
     iget-boolean v3, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpOpusReader;->foundOpusCommentHeader:Z
 
@@ -190,6 +211,7 @@
 
     if-nez v3, :cond_2
 
+    .line 10
     invoke-virtual/range {p1 .. p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->limit()I
 
     move-result v3
@@ -203,14 +225,17 @@
     :cond_1
     const-string v3, "Comment Header has insufficient data"
 
+    .line 11
     invoke-static {v5, v3}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 12
     invoke-virtual {v1, v6}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readString(I)Ljava/lang/String;
 
     move-result-object v1
 
     const-string v3, "OpusTags"
 
+    .line 13
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -219,10 +244,12 @@
 
     invoke-static {v1, v3}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 14
     iput-boolean v4, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpOpusReader;->foundOpusCommentHeader:Z
 
     goto :goto_0
 
+    .line 15
     :cond_2
     iget v3, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpOpusReader;->previousSequenceNumber:I
 
@@ -236,6 +263,7 @@
 
     new-array v6, v6, [Ljava/lang/Object;
 
+    .line 16
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -250,23 +278,28 @@
 
     const-string v3, "Received RTP packet with unexpected sequence number. Expected: %d; received: %d."
 
+    .line 17
     invoke-static {v3, v6}, Lcom/google/android/exoplayer2/util/Util;->formatInvariant(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
     const-string v4, "RtpOpusReader"
 
+    .line 18
     invoke-static {v4, v3}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 19
     :cond_3
     invoke-virtual/range {p1 .. p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
     move-result v9
 
+    .line 20
     iget-object v3, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpOpusReader;->trackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     invoke-interface {v3, v1, v9}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->sampleData(Lcom/google/android/exoplayer2/util/ParsableByteArray;I)V
 
+    .line 21
     iget-wide v10, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpOpusReader;->startTimeOffsetUs:J
 
     iget-wide v14, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpOpusReader;->firstReceivedTimestamp:J
@@ -277,6 +310,7 @@
 
     move-result-wide v6
 
+    .line 22
     iget-object v5, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpOpusReader;->trackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     const/4 v8, 0x1
@@ -287,6 +321,7 @@
 
     invoke-interface/range {v5 .. v11}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->sampleMetadata(JIIILcom/google/android/exoplayer2/extractor/TrackOutput$CryptoData;)V
 
+    .line 23
     :goto_0
     iput v2, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpOpusReader;->previousSequenceNumber:I
 
@@ -298,12 +333,14 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-interface {p1, p2, v0}, Lcom/google/android/exoplayer2/extractor/ExtractorOutput;->track(II)Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpOpusReader;->trackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpOpusReader;->payloadFormat:Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;->format:Lcom/google/android/exoplayer2/Format;
@@ -316,6 +353,7 @@
 .method public onReceivingFirstPacket(JI)V
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpOpusReader;->firstReceivedTimestamp:J
 
     return-void
@@ -324,8 +362,10 @@
 .method public seek(JJ)V
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpOpusReader;->firstReceivedTimestamp:J
 
+    .line 2
     iput-wide p3, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpOpusReader;->startTimeOffsetUs:J
 
     return-void

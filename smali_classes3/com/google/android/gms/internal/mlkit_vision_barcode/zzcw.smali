@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcw;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcw;
 .super Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcd;
 .source "SourceFile"
 
@@ -15,6 +15,7 @@
 .method public constructor <init>([Ljava/lang/Object;II)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcd;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcw;->zza:[Ljava/lang/Object;
@@ -31,6 +32,7 @@
 .method public final get(I)Ljava/lang/Object;
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcw;->zzc:I
 
     const-string v1, "index"
@@ -45,6 +47,7 @@
 
     add-int/2addr p1, p0
 
+    .line 2
     aget-object p0, v0, p1
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;

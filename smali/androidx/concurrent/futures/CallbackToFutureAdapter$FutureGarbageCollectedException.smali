@@ -1,4 +1,4 @@
-.class final Landroidx/concurrent/futures/CallbackToFutureAdapter$FutureGarbageCollectedException;
+.class public final Landroidx/concurrent/futures/CallbackToFutureAdapter$FutureGarbageCollectedException;
 .super Ljava/lang/Throwable;
 .source "SourceFile"
 
@@ -18,6 +18,7 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -30,6 +31,7 @@
 
     monitor-enter p0
 
+    .line 1
     monitor-exit p0
 
     return-object p0

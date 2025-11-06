@@ -1,4 +1,4 @@
-.class final Lcom/google/common/eventbus/Dispatcher$PerThreadQueuedDispatcher$Event;
+.class public final Lcom/google/common/eventbus/Dispatcher$PerThreadQueuedDispatcher$Event;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -65,6 +65,7 @@
 .method public static synthetic access$400(Lcom/google/common/eventbus/Dispatcher$PerThreadQueuedDispatcher$Event;)Ljava/util/Iterator;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/eventbus/Dispatcher$PerThreadQueuedDispatcher$Event;->subscribers:Ljava/util/Iterator;
 
     return-object p0
@@ -73,6 +74,7 @@
 .method public static synthetic access$500(Lcom/google/common/eventbus/Dispatcher$PerThreadQueuedDispatcher$Event;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/eventbus/Dispatcher$PerThreadQueuedDispatcher$Event;->event:Ljava/lang/Object;
 
     return-object p0

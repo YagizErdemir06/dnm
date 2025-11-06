@@ -1,4 +1,4 @@
-.class Lcom/bumptech/glide/load/resource/gif/GifFrameLoader$FrameLoaderCallback;
+.class public Lcom/bumptech/glide/load/resource/gif/GifFrameLoader$FrameLoaderCallback;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,19 +18,20 @@
 
 
 # static fields
-.field static final MSG_CLEAR:I = 0x2
+.field public static final MSG_CLEAR:I = 0x2
 
-.field static final MSG_DELAY:I = 0x1
+.field public static final MSG_DELAY:I = 0x1
 
 
 # instance fields
-.field final synthetic this$0:Lcom/bumptech/glide/load/resource/gif/GifFrameLoader;
+.field public final synthetic this$0:Lcom/bumptech/glide/load/resource/gif/GifFrameLoader;
 
 
 # direct methods
 .method public constructor <init>(Lcom/bumptech/glide/load/resource/gif/GifFrameLoader;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/bumptech/glide/load/resource/gif/GifFrameLoader$FrameLoaderCallback;->this$0:Lcom/bumptech/glide/load/resource/gif/GifFrameLoader;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,16 +44,19 @@
 .method public handleMessage(Landroid/os/Message;)Z
     .locals 2
 
+    .line 1
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
+    .line 2
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Lcom/bumptech/glide/load/resource/gif/GifFrameLoader$DelayTarget;
 
+    .line 3
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/gif/GifFrameLoader$FrameLoaderCallback;->this$0:Lcom/bumptech/glide/load/resource/gif/GifFrameLoader;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/resource/gif/GifFrameLoader;->onFrameReady(Lcom/bumptech/glide/load/resource/gif/GifFrameLoader$DelayTarget;)V
@@ -64,10 +68,12 @@
 
     if-ne v0, v1, :cond_1
 
+    .line 4
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Lcom/bumptech/glide/load/resource/gif/GifFrameLoader$DelayTarget;
 
+    .line 5
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/gif/GifFrameLoader$FrameLoaderCallback;->this$0:Lcom/bumptech/glide/load/resource/gif/GifFrameLoader;
 
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/gif/GifFrameLoader;->requestManager:Lcom/bumptech/glide/RequestManager;

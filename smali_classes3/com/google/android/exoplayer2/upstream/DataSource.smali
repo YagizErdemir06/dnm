@@ -39,6 +39,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
     move-result-object p0

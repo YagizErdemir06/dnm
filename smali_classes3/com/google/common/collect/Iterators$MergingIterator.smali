@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Iterators$MergingIterator;
+.class public Lcom/google/common/collect/Iterators$MergingIterator;
 .super Lcom/google/common/collect/UnmodifiableIterator;
 .source "SourceFile"
 
@@ -25,7 +25,7 @@
 
 
 # instance fields
-.field final queue:Ljava/util/Queue;
+.field public final queue:Ljava/util/Queue;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Queue<",
@@ -51,12 +51,15 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/UnmodifiableIterator;-><init>()V
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/Iterators$MergingIterator$1;
 
     invoke-direct {v0, p0, p2}, Lcom/google/common/collect/Iterators$MergingIterator$1;-><init>(Lcom/google/common/collect/Iterators$MergingIterator;Ljava/util/Comparator;)V
 
+    .line 3
     new-instance p2, Ljava/util/PriorityQueue;
 
     const/4 v1, 0x2
@@ -65,6 +68,7 @@
 
     iput-object p2, p0, Lcom/google/common/collect/Iterators$MergingIterator;->queue:Ljava/util/Queue;
 
+    .line 4
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -83,12 +87,14 @@
 
     check-cast p2, Ljava/util/Iterator;
 
+    .line 5
     invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 6
     iget-object v0, p0, Lcom/google/common/collect/Iterators$MergingIterator;->queue:Ljava/util/Queue;
 
     invoke-static {p2}, Lcom/google/common/collect/Iterators;->peekingIterator(Ljava/util/Iterator;)Lcom/google/common/collect/PeekingIterator;
@@ -108,9 +114,10 @@
 .method public hasNext()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Iterators$MergingIterator;->queue:Ljava/util/Queue;
 
-    invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
+    invoke-interface {p0}, Ljava/util/Queue;->isEmpty()Z
 
     move-result p0
 
@@ -130,6 +137,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Iterators$MergingIterator;->queue:Ljava/util/Queue;
 
     invoke-interface {v0}, Ljava/util/Queue;->remove()Ljava/lang/Object;
@@ -138,16 +146,19 @@
 
     check-cast v0, Lcom/google/common/collect/PeekingIterator;
 
+    .line 2
     invoke-interface {v0}, Lcom/google/common/collect/PeekingIterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
+    .line 3
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
+    .line 4
     iget-object p0, p0, Lcom/google/common/collect/Iterators$MergingIterator;->queue:Ljava/util/Queue;
 
     invoke-interface {p0, v0}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z

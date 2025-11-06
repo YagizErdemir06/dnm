@@ -83,12 +83,16 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/fragment/app/FragmentManagerNonConfig;->mFragments:Ljava/util/Collection;
 
+    .line 3
     iput-object p2, p0, Landroidx/fragment/app/FragmentManagerNonConfig;->mChildNonConfigs:Ljava/util/Map;
 
+    .line 4
     iput-object p3, p0, Landroidx/fragment/app/FragmentManagerNonConfig;->mViewModelStores:Ljava/util/Map;
 
     return-void
@@ -111,6 +115,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/fragment/app/FragmentManagerNonConfig;->mChildNonConfigs:Ljava/util/Map;
 
     return-object p0
@@ -130,6 +135,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/fragment/app/FragmentManagerNonConfig;->mFragments:Ljava/util/Collection;
 
     return-object p0
@@ -150,6 +156,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/fragment/app/FragmentManagerNonConfig;->mViewModelStores:Ljava/util/Map;
 
     return-object p0
@@ -158,6 +165,7 @@
 .method public isRetaining(Landroidx/fragment/app/Fragment;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/fragment/app/FragmentManagerNonConfig;->mFragments:Ljava/util/Collection;
 
     if-nez p0, :cond_0
@@ -166,6 +174,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     invoke-interface {p0, p1}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 

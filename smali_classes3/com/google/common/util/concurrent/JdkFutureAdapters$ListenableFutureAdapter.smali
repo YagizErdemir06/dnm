@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/JdkFutureAdapters$ListenableFutureAdapter;
+.class public Lcom/google/common/util/concurrent/JdkFutureAdapters$ListenableFutureAdapter;
 .super Lcom/google/common/util/concurrent/ForwardingFuture;
 .source "SourceFile"
 
@@ -56,28 +56,33 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/ThreadFactoryBuilder;
 
     invoke-direct {v0}, Lcom/google/common/util/concurrent/ThreadFactoryBuilder;-><init>()V
 
     const/4 v1, 0x1
 
+    .line 2
     invoke-virtual {v0, v1}, Lcom/google/common/util/concurrent/ThreadFactoryBuilder;->setDaemon(Z)Lcom/google/common/util/concurrent/ThreadFactoryBuilder;
 
     move-result-object v0
 
     const-string v1, "ListenableFutureAdapter-thread-%d"
 
+    .line 3
     invoke-virtual {v0, v1}, Lcom/google/common/util/concurrent/ThreadFactoryBuilder;->setNameFormat(Ljava/lang/String;)Lcom/google/common/util/concurrent/ThreadFactoryBuilder;
 
     move-result-object v0
 
+    .line 4
     invoke-virtual {v0}, Lcom/google/common/util/concurrent/ThreadFactoryBuilder;->build()Ljava/util/concurrent/ThreadFactory;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/common/util/concurrent/JdkFutureAdapters$ListenableFutureAdapter;->threadFactory:Ljava/util/concurrent/ThreadFactory;
 
+    .line 5
     invoke-static {v0}, Ljava/util/concurrent/Executors;->newCachedThreadPool(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
 
     move-result-object v0
@@ -160,6 +165,7 @@
 .method public static synthetic access$000(Lcom/google/common/util/concurrent/JdkFutureAdapters$ListenableFutureAdapter;)Ljava/util/concurrent/Future;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/JdkFutureAdapters$ListenableFutureAdapter;->delegate:Ljava/util/concurrent/Future;
 
     return-object p0
@@ -168,6 +174,7 @@
 .method public static synthetic access$100(Lcom/google/common/util/concurrent/JdkFutureAdapters$ListenableFutureAdapter;)Lcom/google/common/util/concurrent/ExecutionList;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/JdkFutureAdapters$ListenableFutureAdapter;->executionList:Lcom/google/common/util/concurrent/ExecutionList;
 
     return-object p0
@@ -178,10 +185,12 @@
 .method public addListener(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/util/concurrent/JdkFutureAdapters$ListenableFutureAdapter;->executionList:Lcom/google/common/util/concurrent/ExecutionList;
 
     invoke-virtual {v0, p1, p2}, Lcom/google/common/util/concurrent/ExecutionList;->add(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
+    .line 2
     iget-object p1, p0, Lcom/google/common/util/concurrent/JdkFutureAdapters$ListenableFutureAdapter;->hasListeners:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 p2, 0x0
@@ -194,6 +203,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 3
     iget-object p1, p0, Lcom/google/common/util/concurrent/JdkFutureAdapters$ListenableFutureAdapter;->delegate:Ljava/util/concurrent/Future;
 
     invoke-interface {p1}, Ljava/util/concurrent/Future;->isDone()Z
@@ -202,12 +212,14 @@
 
     if-eqz p1, :cond_0
 
+    .line 4
     iget-object p0, p0, Lcom/google/common/util/concurrent/JdkFutureAdapters$ListenableFutureAdapter;->executionList:Lcom/google/common/util/concurrent/ExecutionList;
 
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ExecutionList;->execute()V
 
     return-void
 
+    .line 5
     :cond_0
     iget-object p1, p0, Lcom/google/common/util/concurrent/JdkFutureAdapters$ListenableFutureAdapter;->adapterExecutor:Ljava/util/concurrent/Executor;
 

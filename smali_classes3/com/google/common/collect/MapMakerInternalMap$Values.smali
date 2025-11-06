@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/MapMakerInternalMap$Values;
+.class public final Lcom/google/common/collect/MapMakerInternalMap$Values;
 .super Ljava/util/AbstractCollection;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/MapMakerInternalMap;
+.field public final synthetic this$0:Lcom/google/common/collect/MapMakerInternalMap;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/MapMakerInternalMap;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/MapMakerInternalMap$Values;->this$0:Lcom/google/common/collect/MapMakerInternalMap;
 
     invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
@@ -41,6 +42,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/MapMakerInternalMap$Values;->this$0:Lcom/google/common/collect/MapMakerInternalMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/MapMakerInternalMap;->clear()V
@@ -51,6 +53,7 @@
 .method public contains(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/MapMakerInternalMap$Values;->this$0:Lcom/google/common/collect/MapMakerInternalMap;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/MapMakerInternalMap;->containsValue(Ljava/lang/Object;)Z
@@ -63,6 +66,7 @@
 .method public isEmpty()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/MapMakerInternalMap$Values;->this$0:Lcom/google/common/collect/MapMakerInternalMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/MapMakerInternalMap;->isEmpty()Z
@@ -82,6 +86,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/MapMakerInternalMap$ValueIterator;
 
     iget-object p0, p0, Lcom/google/common/collect/MapMakerInternalMap$Values;->this$0:Lcom/google/common/collect/MapMakerInternalMap;
@@ -94,6 +99,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/MapMakerInternalMap$Values;->this$0:Lcom/google/common/collect/MapMakerInternalMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/MapMakerInternalMap;->size()I

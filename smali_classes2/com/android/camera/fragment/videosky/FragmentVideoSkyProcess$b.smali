@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->n()V
+    value = Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->o()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,14 +18,23 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;
+.field public final synthetic c:Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess$b;->a:Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess$b;->c:Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,32 +50,38 @@
 
     const-string v1, "showExitConfirm onClick positive"
 
+    .line 1
     invoke-static {v0, v1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lv8/j3;->impl2()Lv8/j3;
+    .line 2
+    invoke-static {}, Ld/d/a/m7/g/h3;->impl2()Ld/d/a/m7/g/h3;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lv8/j3;->w()V
+    .line 3
+    invoke-interface {v0}, Ld/d/a/m7/g/h3;->x()V
 
+    .line 4
     :cond_0
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess$b;->a:Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess$b;->c:Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->ni(Z)V
+    invoke-virtual {v0, v1}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->sd(Z)V
 
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess$b;->a:Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;
+    .line 5
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess$b;->c:Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;
 
-    invoke-static {v0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Zh(Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;)Lmiuix/appcompat/app/AlertDialog;
+    invoke-static {v0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->nb(Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;)Lmiuix/appcompat/app/AlertDialog;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
 
-    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess$b;->a:Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;
+    .line 6
+    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess$b;->c:Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;
 
     invoke-virtual {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->prepare()V
 

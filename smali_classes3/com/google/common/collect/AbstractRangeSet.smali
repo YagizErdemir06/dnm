@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/collect/AbstractRangeSet;
+.class public abstract Lcom/google/common/collect/AbstractRangeSet;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -29,6 +29,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,6 +47,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -114,6 +116,7 @@
 .method public clear()V
     .locals 1
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/Range;->all()Lcom/google/common/collect/Range;
 
     move-result-object v0
@@ -131,6 +134,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/AbstractRangeSet;->rangeContaining(Ljava/lang/Comparable;)Lcom/google/common/collect/Range;
 
     move-result-object p0
@@ -239,13 +243,16 @@
 
     return p0
 
+    .line 1
     :cond_0
     instance-of v0, p1, Lcom/google/common/collect/RangeSet;
 
     if-eqz v0, :cond_1
 
+    .line 2
     check-cast p1, Lcom/google/common/collect/RangeSet;
 
+    .line 3
     invoke-interface {p0}, Lcom/google/common/collect/RangeSet;->asRanges()Ljava/util/Set;
 
     move-result-object p0
@@ -269,6 +276,7 @@
 .method public final hashCode()I
     .locals 0
 
+    .line 1
     invoke-interface {p0}, Lcom/google/common/collect/RangeSet;->asRanges()Ljava/util/Set;
 
     move-result-object p0
@@ -290,6 +298,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0, p1}, Lcom/google/common/collect/RangeSet;->subRangeSet(Lcom/google/common/collect/Range;)Lcom/google/common/collect/RangeSet;
 
     move-result-object p0
@@ -306,6 +315,7 @@
 .method public isEmpty()Z
     .locals 0
 
+    .line 1
     invoke-interface {p0}, Lcom/google/common/collect/RangeSet;->asRanges()Ljava/util/Set;
 
     move-result-object p0
@@ -340,6 +350,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -408,6 +419,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-interface {p0}, Lcom/google/common/collect/RangeSet;->asRanges()Ljava/util/Set;
 
     move-result-object p0

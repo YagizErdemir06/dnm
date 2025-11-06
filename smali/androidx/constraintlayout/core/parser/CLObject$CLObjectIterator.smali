@@ -1,4 +1,4 @@
-.class Landroidx/constraintlayout/core/parser/CLObject$CLObjectIterator;
+.class public Landroidx/constraintlayout/core/parser/CLObject$CLObjectIterator;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,25 +18,28 @@
 
 
 # instance fields
-.field index:I
+.field public index:I
 
-.field myObject:Landroidx/constraintlayout/core/parser/CLObject;
+.field public myObject:Landroidx/constraintlayout/core/parser/CLObject;
 
-.field final synthetic this$0:Landroidx/constraintlayout/core/parser/CLObject;
+.field public final synthetic this$0:Landroidx/constraintlayout/core/parser/CLObject;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/constraintlayout/core/parser/CLObject;Landroidx/constraintlayout/core/parser/CLObject;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/constraintlayout/core/parser/CLObject$CLObjectIterator;->this$0:Landroidx/constraintlayout/core/parser/CLObject;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
+    .line 2
     iput p1, p0, Landroidx/constraintlayout/core/parser/CLObject$CLObjectIterator;->index:I
 
+    .line 3
     iput-object p2, p0, Landroidx/constraintlayout/core/parser/CLObject$CLObjectIterator;->myObject:Landroidx/constraintlayout/core/parser/CLObject;
 
     return-void
@@ -47,6 +50,7 @@
 .method public hasNext()Z
     .locals 1
 
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/core/parser/CLObject$CLObjectIterator;->index:I
 
     iget-object p0, p0, Landroidx/constraintlayout/core/parser/CLObject$CLObjectIterator;->myObject:Landroidx/constraintlayout/core/parser/CLObject;
@@ -71,6 +75,7 @@
 .method public next()Ljava/lang/Object;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/core/parser/CLObject$CLObjectIterator;->myObject:Landroidx/constraintlayout/core/parser/CLObject;
 
     iget-object v0, v0, Landroidx/constraintlayout/core/parser/CLContainer;->mElements:Ljava/util/ArrayList;
@@ -83,6 +88,7 @@
 
     check-cast v0, Landroidx/constraintlayout/core/parser/CLKey;
 
+    .line 2
     iget v1, p0, Landroidx/constraintlayout/core/parser/CLObject$CLObjectIterator;->index:I
 
     add-int/lit8 v1, v1, 0x1

@@ -65,8 +65,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/PropertyProto$SetProperties;
@@ -157,8 +159,10 @@
 .method public clearPropertyNode()Lcom/xiaomi/idm/api/proto/PropertyProto$SetProperties$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/PropertyProto$SetProperties;
@@ -171,6 +175,7 @@
 .method public getPropertyNode(I)Lcom/xiaomi/idm/api/proto/PropertyProto$PropertyNode;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast p0, Lcom/xiaomi/idm/api/proto/PropertyProto$SetProperties;
@@ -185,6 +190,7 @@
 .method public getPropertyNodeCount()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast p0, Lcom/xiaomi/idm/api/proto/PropertyProto$SetProperties;
@@ -207,14 +213,17 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast p0, Lcom/xiaomi/idm/api/proto/PropertyProto$SetProperties;
 
+    .line 2
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/proto/PropertyProto$SetProperties;->getPropertyNodeList()Ljava/util/List;
 
     move-result-object p0
 
+    .line 3
     invoke-static {p0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p0
@@ -225,8 +234,10 @@
 .method public removePropertyNode(I)Lcom/xiaomi/idm/api/proto/PropertyProto$SetProperties$Builder;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     check-cast v0, Lcom/xiaomi/idm/api/proto/PropertyProto$SetProperties;

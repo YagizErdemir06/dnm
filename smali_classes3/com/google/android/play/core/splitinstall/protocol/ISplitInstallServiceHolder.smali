@@ -18,6 +18,7 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/binder/BinderWrapper;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -35,6 +36,7 @@
     :cond_0
     const-string v0, "com.iqiyi.android.qigsaw.core.splitinstall.protocol.ISplitInstallService"
 
+    .line 1
     invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0

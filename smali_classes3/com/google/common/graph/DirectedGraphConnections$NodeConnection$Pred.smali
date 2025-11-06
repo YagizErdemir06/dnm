@@ -1,4 +1,4 @@
-.class final Lcom/google/common/graph/DirectedGraphConnections$NodeConnection$Pred;
+.class public final Lcom/google/common/graph/DirectedGraphConnections$NodeConnection$Pred;
 .super Lcom/google/common/graph/DirectedGraphConnections$NodeConnection;
 .source "SourceFile"
 
@@ -33,6 +33,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/graph/DirectedGraphConnections$NodeConnection;-><init>(Ljava/lang/Object;)V
 
     return-void
@@ -47,10 +48,12 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/common/graph/DirectedGraphConnections$NodeConnection$Pred;
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/graph/DirectedGraphConnections$NodeConnection;->node:Ljava/lang/Object;
 
     check-cast p1, Lcom/google/common/graph/DirectedGraphConnections$NodeConnection$Pred;
@@ -72,6 +75,7 @@
 .method public hashCode()I
     .locals 1
 
+    .line 1
     const-class v0, Lcom/google/common/graph/DirectedGraphConnections$NodeConnection$Pred;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I

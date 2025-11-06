@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/Iterables$UnmodifiableIterable;
+.class public final Lcom/google/common/collect/Iterables$UnmodifiableIterable;
 .super Lcom/google/common/collect/FluentIterable;
 .source "SourceFile"
 
@@ -76,6 +76,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Iterables$UnmodifiableIterable;->iterable:Ljava/lang/Iterable;
 
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -92,6 +93,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Iterables$UnmodifiableIterable;->iterable:Ljava/lang/Iterable;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;

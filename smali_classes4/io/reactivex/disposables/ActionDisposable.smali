@@ -1,4 +1,4 @@
-.class final Lio/reactivex/disposables/ActionDisposable;
+.class public final Lio/reactivex/disposables/ActionDisposable;
 .super Lio/reactivex/disposables/ReferenceDisposable;
 .source "SourceFile"
 
@@ -21,6 +21,7 @@
 .method public constructor <init>(Lio/reactivex/functions/Action;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lio/reactivex/disposables/ReferenceDisposable;-><init>(Ljava/lang/Object;)V
 
     return-void

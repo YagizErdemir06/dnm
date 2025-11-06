@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;->Si()V
+    value = Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;->Dh()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,16 @@
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess$b;->a:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,10 +45,19 @@
 # virtual methods
 .method public a(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "pageIndex"
+        }
+    .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess$b;->a:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;
 
-    invoke-static {p0}, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;->ii(Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;)Lcom/xiaomi/microfilm/vlog/vv/page/PageIndicatorView;
+    invoke-static {p0}, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;->Yb(Lcom/xiaomi/microfilm/vlog/vv/FragmentVVProcess;)Lcom/xiaomi/microfilm/vlog/vv/page/PageIndicatorView;
 
     move-result-object p0
 
@@ -50,6 +68,14 @@
 
 .method public b(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "pageSize"
+        }
+    .end annotation
 
     return-void
 .end method

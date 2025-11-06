@@ -7,13 +7,14 @@
 
 
 # instance fields
-.field protected mIsMFNRSupported:Z
+.field public mIsMFNRSupported:Z
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,6 +33,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p0
@@ -58,6 +60,7 @@
 .method public isMFNRSupported()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/camera/imagecodec/BaseReprocessor;->mIsMFNRSupported:Z
 
     return p0
@@ -92,6 +95,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p0
@@ -120,20 +124,24 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/media/Image;->getTimestamp()J
 
     move-result-wide v0
 
+    .line 2
     invoke-static {p1}, Lcom/xiaomi/camera/imagecodec/ImagePool;->toImageQueueKey(Landroid/media/Image;)Lcom/xiaomi/camera/imagecodec/ImagePool$ImageFormat;
 
     move-result-object v2
 
+    .line 3
     invoke-static {}, Lcom/xiaomi/camera/imagecodec/ImagePool;->getInstance()Lcom/xiaomi/camera/imagecodec/ImagePool;
 
     move-result-object v3
 
     invoke-virtual {v3, p1}, Lcom/xiaomi/camera/imagecodec/ImagePool;->queueImage(Landroid/media/Image;)V
 
+    .line 4
     invoke-static {}, Lcom/xiaomi/camera/imagecodec/ImagePool;->getInstance()Lcom/xiaomi/camera/imagecodec/ImagePool;
 
     move-result-object p1
@@ -142,12 +150,14 @@
 
     move-result-object p1
 
+    .line 5
     invoke-static {}, Lcom/xiaomi/camera/imagecodec/ImagePool;->getInstance()Lcom/xiaomi/camera/imagecodec/ImagePool;
 
     move-result-object v2
 
     invoke-virtual {v2, p1}, Lcom/xiaomi/camera/imagecodec/ImagePool;->holdImage(Landroid/media/Image;)V
 
+    .line 6
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p0

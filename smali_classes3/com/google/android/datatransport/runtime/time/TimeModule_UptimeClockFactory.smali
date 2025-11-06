@@ -27,6 +27,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,6 +36,7 @@
 .method public static create()Lcom/google/android/datatransport/runtime/time/TimeModule_UptimeClockFactory;
     .locals 1
 
+    .line 1
     invoke-static {}, Lcom/google/android/datatransport/runtime/time/TimeModule_UptimeClockFactory$InstanceHolder;->access$000()Lcom/google/android/datatransport/runtime/time/TimeModule_UptimeClockFactory;
 
     move-result-object v0
@@ -45,6 +47,7 @@
 .method public static uptimeClock()Lcom/google/android/datatransport/runtime/time/Clock;
     .locals 2
 
+    .line 1
     invoke-static {}, Lcom/google/android/datatransport/runtime/time/TimeModule;->uptimeClock()Lcom/google/android/datatransport/runtime/time/Clock;
 
     move-result-object v0

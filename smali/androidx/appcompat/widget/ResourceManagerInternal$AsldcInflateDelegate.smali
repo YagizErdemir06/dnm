@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/widget/ResourceManagerInternal$AsldcInflateDelegate;
+.class public Landroidx/appcompat/widget/ResourceManagerInternal$AsldcInflateDelegate;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,6 +7,10 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0xb
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/appcompat/widget/ResourceManagerInternal;
 .end annotation
@@ -21,6 +25,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,6 +52,7 @@
         .end annotation
     .end param
 
+    .line 1
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -67,6 +73,7 @@
 
     const-string p2, "Exception while inflating <animated-selector>"
 
+    .line 2
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0

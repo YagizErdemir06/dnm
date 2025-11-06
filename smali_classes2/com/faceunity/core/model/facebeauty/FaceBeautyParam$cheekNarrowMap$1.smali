@@ -22,7 +22,7 @@
     }
 .end annotation
 
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
     bv = {
         0x1,
         0x0,
@@ -49,33 +49,31 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/faceunity/core/model/facebeauty/FaceBeautyParam;
+.field public final synthetic this$0:Lcom/faceunity/core/model/facebeauty/FaceBeautyParam;
 
 
 # direct methods
 .method public constructor <init>(Lcom/faceunity/core/model/facebeauty/FaceBeautyParam;)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/core/model/facebeauty/FaceBeautyParam$cheekNarrowMap$1;->this$0:Lcom/faceunity/core/model/facebeauty/FaceBeautyParam;
 
     invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
 
+    .line 2
     sget-object p1, Lcom/faceunity/core/model/facebeauty/FaceBeautyVersionEnum;->VERSION_1:Lcom/faceunity/core/model/facebeauty/FaceBeautyVersionEnum;
 
     const-string v0, "cheek_narrow"
 
-    invoke-virtual {p0, p1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     sget-object p1, Lcom/faceunity/core/model/facebeauty/FaceBeautyVersionEnum;->VERSION_2:Lcom/faceunity/core/model/facebeauty/FaceBeautyVersionEnum;
 
     const-string v0, "cheek_narrow_v2"
 
-    invoke-virtual {p0, p1, v0}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -161,6 +159,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/model/facebeauty/FaceBeautyParam$cheekNarrowMap$1;->getEntries()Ljava/util/Set;
 
     move-result-object p0
@@ -206,6 +205,7 @@
 .method public bridge getEntries()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -216,6 +216,7 @@
 .method public bridge getKeys()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
     move-result-object p0
@@ -261,6 +262,7 @@
 .method public bridge getSize()I
     .locals 0
 
+    .line 1
     invoke-super {p0}, Ljava/util/HashMap;->size()I
 
     move-result p0
@@ -271,6 +273,7 @@
 .method public bridge getValues()Ljava/util/Collection;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
     move-result-object p0
@@ -289,6 +292,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/model/facebeauty/FaceBeautyParam$cheekNarrowMap$1;->getKeys()Ljava/util/Set;
 
     move-result-object p0
@@ -373,6 +377,7 @@
 .method public final bridge size()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/model/facebeauty/FaceBeautyParam$cheekNarrowMap$1;->getSize()I
 
     move-result p0
@@ -391,6 +396,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/model/facebeauty/FaceBeautyParam$cheekNarrowMap$1;->getValues()Ljava/util/Collection;
 
     move-result-object p0

@@ -21,7 +21,16 @@
 # direct methods
 .method public constructor <init>(Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$d;->a:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter;
 
     invoke-direct {p0}, Landroidx/core/view/ViewPropertyAnimatorListenerAdapter;-><init>()V
@@ -33,9 +42,19 @@
 # virtual methods
 .method public onAnimationStart(Landroid/view/View;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "view"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroidx/core/view/ViewPropertyAnimatorListenerAdapter;->onAnimationStart(Landroid/view/View;)V
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$d;->a:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter;
 
     invoke-static {p0}, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter;->access$200(Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter;)Landroid/widget/ImageView;

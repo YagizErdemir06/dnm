@@ -1,4 +1,4 @@
-.class final Lcom/google/common/hash/HashCode$IntHashCode;
+.class public final Lcom/google/common/hash/HashCode$IntHashCode;
 .super Lcom/google/common/hash/HashCode;
 .source "SourceFile"
 
@@ -22,15 +22,17 @@
 
 
 # instance fields
-.field final hash:I
+.field public final hash:I
 
 
 # direct methods
 .method public constructor <init>(I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/hash/HashCode;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/google/common/hash/HashCode$IntHashCode;->hash:I
 
     return-void
@@ -45,6 +47,7 @@
 
     new-array v0, v0, [B
 
+    .line 1
     iget p0, p0, Lcom/google/common/hash/HashCode$IntHashCode;->hash:I
 
     int-to-byte v1, p0
@@ -83,6 +86,7 @@
 .method public asInt()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/hash/HashCode$IntHashCode;->hash:I
 
     return p0
@@ -91,6 +95,7 @@
 .method public asLong()J
     .locals 1
 
+    .line 1
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string v0, "this HashCode only has 32 bits; cannot create a long"
@@ -111,6 +116,7 @@
 .method public equalsSameBits(Lcom/google/common/hash/HashCode;)Z
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/hash/HashCode$IntHashCode;->hash:I
 
     invoke-virtual {p1}, Lcom/google/common/hash/HashCode;->asInt()I
@@ -133,6 +139,7 @@
 .method public padToLong()J
     .locals 2
 
+    .line 1
     iget p0, p0, Lcom/google/common/hash/HashCode$IntHashCode;->hash:I
 
     invoke-static {p0}, Lcom/google/common/primitives/UnsignedInts;->toLong(I)J
@@ -152,6 +159,7 @@
 
     add-int v1, p2, v0
 
+    .line 1
     iget v2, p0, Lcom/google/common/hash/HashCode$IntHashCode;->hash:I
 
     mul-int/lit8 v3, v0, 0x8

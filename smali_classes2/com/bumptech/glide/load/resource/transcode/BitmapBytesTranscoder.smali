@@ -84,10 +84,12 @@
         }
     .end annotation
 
+    .line 1
     new-instance p2, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {p2}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
+    .line 2
     invoke-interface {p1}, Lcom/bumptech/glide/load/engine/Resource;->get()Ljava/lang/Object;
 
     move-result-object v0
@@ -100,8 +102,10 @@
 
     invoke-virtual {v0, v1, p0, p2}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
+    .line 3
     invoke-interface {p1}, Lcom/bumptech/glide/load/engine/Resource;->recycle()V
 
+    .line 4
     new-instance p0, Lcom/bumptech/glide/load/resource/bytes/BytesResource;
 
     invoke-virtual {p2}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/play/core/splitinstall/ChangeSessionStatusWorker;
+.class public final Lcom/google/android/play/core/splitinstall/ChangeSessionStatusWorker;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -49,10 +49,12 @@
 .method public run()V
     .locals 3
 
+    .line 1
     iget v0, p0, Lcom/google/android/play/core/splitinstall/ChangeSessionStatusWorker;->errorCode:I
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/play/core/splitinstall/ChangeSessionStatusWorker;->changer:Lcom/google/android/play/core/splitinstall/SplitSessionStatusChanger;
 
     iget-object v2, v1, Lcom/google/android/play/core/splitinstall/SplitSessionStatusChanger;->mRegistry:Lcom/google/android/play/core/splitinstall/SplitInstallListenerRegistry;
@@ -69,6 +71,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/google/android/play/core/splitinstall/ChangeSessionStatusWorker;->changer:Lcom/google/android/play/core/splitinstall/SplitSessionStatusChanger;
 

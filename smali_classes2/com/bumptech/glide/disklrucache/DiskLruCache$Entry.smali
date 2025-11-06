@@ -1,4 +1,4 @@
-.class final Lcom/bumptech/glide/disklrucache/DiskLruCache$Entry;
+.class public final Lcom/bumptech/glide/disklrucache/DiskLruCache$Entry;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field cleanFiles:[Ljava/io/File;
+.field public cleanFiles:[Ljava/io/File;
 
 .field private currentEditor:Lcom/bumptech/glide/disklrucache/DiskLruCache$Editor;
 
-.field dirtyFiles:[Ljava/io/File;
+.field public dirtyFiles:[Ljava/io/File;
 
 .field private final key:Ljava/lang/String;
 
@@ -29,7 +29,7 @@
 
 .field private sequenceNumber:J
 
-.field final synthetic this$0:Lcom/bumptech/glide/disklrucache/DiskLruCache;
+.field public final synthetic this$0:Lcom/bumptech/glide/disklrucache/DiskLruCache;
 
 
 # direct methods
@@ -160,6 +160,7 @@
 .method public static synthetic access$1100(Lcom/bumptech/glide/disklrucache/DiskLruCache$Entry;)[J
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/disklrucache/DiskLruCache$Entry;->lengths:[J
 
     return-object p0
@@ -168,6 +169,7 @@
 .method public static synthetic access$1200(Lcom/bumptech/glide/disklrucache/DiskLruCache$Entry;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/disklrucache/DiskLruCache$Entry;->key:Ljava/lang/String;
 
     return-object p0
@@ -176,6 +178,7 @@
 .method public static synthetic access$1300(Lcom/bumptech/glide/disklrucache/DiskLruCache$Entry;)J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/bumptech/glide/disklrucache/DiskLruCache$Entry;->sequenceNumber:J
 
     return-wide v0
@@ -184,6 +187,7 @@
 .method public static synthetic access$1302(Lcom/bumptech/glide/disklrucache/DiskLruCache$Entry;J)J
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lcom/bumptech/glide/disklrucache/DiskLruCache$Entry;->sequenceNumber:J
 
     return-wide p1
@@ -192,6 +196,7 @@
 .method public static synthetic access$700(Lcom/bumptech/glide/disklrucache/DiskLruCache$Entry;)Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/bumptech/glide/disklrucache/DiskLruCache$Entry;->readable:Z
 
     return p0
@@ -200,6 +205,7 @@
 .method public static synthetic access$702(Lcom/bumptech/glide/disklrucache/DiskLruCache$Entry;Z)Z
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/bumptech/glide/disklrucache/DiskLruCache$Entry;->readable:Z
 
     return p1
@@ -208,6 +214,7 @@
 .method public static synthetic access$800(Lcom/bumptech/glide/disklrucache/DiskLruCache$Entry;)Lcom/bumptech/glide/disklrucache/DiskLruCache$Editor;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/disklrucache/DiskLruCache$Entry;->currentEditor:Lcom/bumptech/glide/disklrucache/DiskLruCache$Editor;
 
     return-object p0
@@ -216,6 +223,7 @@
 .method public static synthetic access$802(Lcom/bumptech/glide/disklrucache/DiskLruCache$Entry;Lcom/bumptech/glide/disklrucache/DiskLruCache$Editor;)Lcom/bumptech/glide/disklrucache/DiskLruCache$Editor;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/bumptech/glide/disklrucache/DiskLruCache$Entry;->currentEditor:Lcom/bumptech/glide/disklrucache/DiskLruCache$Editor;
 
     return-object p1
@@ -229,6 +237,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/bumptech/glide/disklrucache/DiskLruCache$Entry;->setLengths([Ljava/lang/String;)V
 
     return-void
@@ -242,6 +251,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/io/IOException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -275,6 +285,7 @@
         }
     .end annotation
 
+    .line 1
     array-length v0, p1
 
     iget-object v1, p0, Lcom/bumptech/glide/disklrucache/DiskLruCache$Entry;->this$0:Lcom/bumptech/glide/disklrucache/DiskLruCache;
@@ -287,12 +298,14 @@
 
     const/4 v0, 0x0
 
+    .line 2
     :goto_0
     :try_start_0
     array-length v1, p1
 
     if-ge v0, v1, :cond_0
 
+    .line 3
     iget-object v1, p0, Lcom/bumptech/glide/disklrucache/DiskLruCache$Entry;->lengths:[J
 
     aget-object v2, p1, v0
@@ -312,6 +325,7 @@
     :cond_0
     return-void
 
+    .line 4
     :catch_0
     invoke-direct {p0, p1}, Lcom/bumptech/glide/disklrucache/DiskLruCache$Entry;->invalidLengths([Ljava/lang/String;)Ljava/io/IOException;
 
@@ -319,6 +333,7 @@
 
     throw p0
 
+    .line 5
     :cond_1
     invoke-direct {p0, p1}, Lcom/bumptech/glide/disklrucache/DiskLruCache$Entry;->invalidLengths([Ljava/lang/String;)Ljava/io/IOException;
 
@@ -332,6 +347,7 @@
 .method public getCleanFile(I)Ljava/io/File;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/disklrucache/DiskLruCache$Entry;->cleanFiles:[Ljava/io/File;
 
     aget-object p0, p0, p1
@@ -342,6 +358,7 @@
 .method public getDirtyFile(I)Ljava/io/File;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/disklrucache/DiskLruCache$Entry;->dirtyFiles:[Ljava/io/File;
 
     aget-object p0, p0, p1
@@ -357,10 +374,12 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 2
     iget-object p0, p0, Lcom/bumptech/glide/disklrucache/DiskLruCache$Entry;->lengths:[J
 
     array-length v1, p0
@@ -374,6 +393,7 @@
 
     const/16 v5, 0x20
 
+    .line 3
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
@@ -382,6 +402,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

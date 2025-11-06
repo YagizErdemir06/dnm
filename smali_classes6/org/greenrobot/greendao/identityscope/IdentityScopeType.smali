@@ -25,6 +25,7 @@
 .method public static constructor <clinit>()V
     .locals 5
 
+    .line 1
     new-instance v0, Lorg/greenrobot/greendao/identityscope/IdentityScopeType;
 
     const-string v1, "Session"
@@ -53,6 +54,7 @@
 
     aput-object v1, v3, v4
 
+    .line 2
     sput-object v3, Lorg/greenrobot/greendao/identityscope/IdentityScopeType;->$VALUES:[Lorg/greenrobot/greendao/identityscope/IdentityScopeType;
 
     return-void
@@ -60,12 +62,18 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "$enum$name",
+            "$enum$ordinal"
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -73,7 +81,16 @@
 
 .method public static valueOf(Ljava/lang/String;)Lorg/greenrobot/greendao/identityscope/IdentityScopeType;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8000
+        }
+        names = {
+            "name"
+        }
+    .end annotation
 
+    .line 1
     const-class v0, Lorg/greenrobot/greendao/identityscope/IdentityScopeType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -88,6 +105,7 @@
 .method public static values()[Lorg/greenrobot/greendao/identityscope/IdentityScopeType;
     .locals 1
 
+    .line 1
     sget-object v0, Lorg/greenrobot/greendao/identityscope/IdentityScopeType;->$VALUES:[Lorg/greenrobot/greendao/identityscope/IdentityScopeType;
 
     invoke-virtual {v0}, [Lorg/greenrobot/greendao/identityscope/IdentityScopeType;->clone()Ljava/lang/Object;

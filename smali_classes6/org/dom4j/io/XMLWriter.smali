@@ -7,9 +7,9 @@
 
 
 # static fields
-.field protected static final DEFAULT_FORMAT:Lorg/dom4j/io/OutputFormat;
+.field public static final DEFAULT_FORMAT:Lorg/dom4j/io/OutputFormat;
 
-.field protected static final LEXICAL_HANDLER_NAMES:[Ljava/lang/String;
+.field public static final LEXICAL_HANDLER_NAMES:[Ljava/lang/String;
 
 .field private static final PAD_TEXT:Ljava/lang/String; = " "
 
@@ -33,7 +33,7 @@
 
 .field private lastElementClosed:Z
 
-.field protected lastOutputNodeType:I
+.field public lastOutputNodeType:I
 
 .field private lexicalHandler:Lorg/xml/sax/ext/LexicalHandler;
 
@@ -43,13 +43,13 @@
 
 .field private namespacesMap:Ljava/util/Map;
 
-.field protected preserve:Z
+.field public preserve:Z
 
 .field private resolveEntityRefs:Z
 
 .field private showCommentsInDTDs:Z
 
-.field protected writer:Ljava/io/Writer;
+.field public writer:Ljava/io/Writer;
 
 
 # direct methods
@@ -60,12 +60,14 @@
 
     const-string v1, "http://xml.org/sax/handlers/LexicalHandler"
 
+    .line 1
     filled-new-array {v0, v1}, [Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Lorg/dom4j/io/XMLWriter;->LEXICAL_HANDLER_NAMES:[Ljava/lang/String;
 
+    .line 2
     new-instance v0, Lorg/dom4j/io/OutputFormat;
 
     invoke-direct {v0}, Lorg/dom4j/io/OutputFormat;-><init>()V
@@ -455,6 +457,7 @@
 
     if-eqz p1, :cond_7
 
+    .line 1
     array-length v0, p1
 
     if-eqz v0, :cond_7
@@ -463,20 +466,24 @@
 
     goto/16 :goto_2
 
+    .line 2
     :cond_0
     :try_start_0
     invoke-static {p1, p2, p3}, Ljava/lang/String;->valueOf([CII)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 3
     iget-boolean v1, p0, Lorg/dom4j/io/XMLWriter;->escapeText:Z
 
     if-eqz v1, :cond_1
 
+    .line 4
     invoke-virtual {p0, v0}, Lorg/dom4j/io/XMLWriter;->escapeElementEntities(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 5
     :cond_1
     iget-object v1, p0, Lorg/dom4j/io/XMLWriter;->format:Lorg/dom4j/io/OutputFormat;
 
@@ -490,6 +497,7 @@
 
     if-eqz v1, :cond_5
 
+    .line 6
     iget v1, p0, Lorg/dom4j/io/XMLWriter;->lastOutputNodeType:I
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -505,12 +513,14 @@
 
     if-nez v1, :cond_2
 
+    .line 7
     iget-object v1, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-virtual {v1, v5}, Ljava/io/Writer;->write(I)V
 
     goto :goto_0
 
+    .line 8
     :cond_2
     iget-boolean v1, p0, Lorg/dom4j/io/XMLWriter;->charsAdded:Z
 
@@ -524,12 +534,14 @@
 
     if-eqz v1, :cond_3
 
+    .line 9
     iget-object v1, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-virtual {v1, v5}, Ljava/io/Writer;->write(I)V
 
     goto :goto_0
 
+    .line 10
     :cond_3
     iget v1, p0, Lorg/dom4j/io/XMLWriter;->lastOutputNodeType:I
 
@@ -557,6 +569,7 @@
 
     if-eqz v1, :cond_4
 
+    .line 11
     iget-object v1, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-virtual {v1, v4}, Ljava/io/Writer;->write(Ljava/lang/String;)V
@@ -565,10 +578,12 @@
     :goto_0
     const-string v1, ""
 
+    .line 12
     new-instance v5, Ljava/util/StringTokenizer;
 
     invoke-direct {v5, v0}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;)V
 
+    .line 13
     :goto_1
     invoke-virtual {v5}, Ljava/util/StringTokenizer;->hasMoreTokens()Z
 
@@ -576,10 +591,12 @@
 
     if-eqz v0, :cond_6
 
+    .line 14
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-virtual {v0, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 15
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-virtual {v5}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
@@ -592,11 +609,13 @@
 
     goto :goto_1
 
+    .line 16
     :cond_5
     iget-object v1, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-virtual {v1, v0}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 17
     :cond_6
     iput-boolean v3, p0, Lorg/dom4j/io/XMLWriter;->charsAdded:Z
 
@@ -604,12 +623,15 @@
 
     sub-int/2addr v0, v3
 
+    .line 18
     aget-char v0, p1, v0
 
     iput-char v0, p0, Lorg/dom4j/io/XMLWriter;->lastChar:C
 
+    .line 19
     iput v2, p0, Lorg/dom4j/io/XMLWriter;->lastOutputNodeType:I
 
+    .line 20
     invoke-super {p0, p1, p2, p3}, Lorg/xml/sax/helpers/XMLFilterImpl;->characters([CII)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
@@ -619,6 +641,7 @@
     :catch_0
     move-exception p1
 
+    .line 21
     invoke-virtual {p0, p1}, Lorg/dom4j/io/XMLWriter;->handleException(Ljava/io/IOException;)V
 
     :cond_7
@@ -634,6 +657,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-virtual {p0}, Ljava/io/Writer;->close()V
@@ -649,6 +673,7 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lorg/dom4j/io/XMLWriter;->showCommentsInDTDs:Z
 
     if-nez v0, :cond_0
@@ -660,9 +685,11 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 2
     :try_start_0
     iput-boolean v0, p0, Lorg/dom4j/io/XMLWriter;->charsAdded:Z
 
+    .line 3
     new-instance v0, Ljava/lang/String;
 
     invoke-direct {v0, p1, p2, p3}, Ljava/lang/String;-><init>([CII)V
@@ -676,14 +703,17 @@
     :catch_0
     move-exception v0
 
+    .line 4
     invoke-virtual {p0, v0}, Lorg/dom4j/io/XMLWriter;->handleException(Ljava/io/IOException;)V
 
+    .line 5
     :cond_1
     :goto_0
     iget-object p0, p0, Lorg/dom4j/io/XMLWriter;->lexicalHandler:Lorg/xml/sax/ext/LexicalHandler;
 
     if-eqz p0, :cond_2
 
+    .line 6
     invoke-interface {p0, p1, p2, p3}, Lorg/xml/sax/ext/LexicalHandler;->comment([CII)V
 
     :cond_2
@@ -698,6 +728,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/io/BufferedWriter;
 
     new-instance v0, Ljava/io/OutputStreamWriter;
@@ -712,6 +743,7 @@
 .method public defaultMaximumAllowedCharacter()I
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/XMLWriter;->format:Lorg/dom4j/io/OutputFormat;
 
     invoke-virtual {p0}, Lorg/dom4j/io/OutputFormat;->getEncoding()Ljava/lang/String;
@@ -722,6 +754,7 @@
 
     const-string v0, "US-ASCII"
 
+    .line 2
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -746,6 +779,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
@@ -760,13 +794,16 @@
     :catch_0
     move-exception v0
 
+    .line 2
     invoke-virtual {p0, v0}, Lorg/dom4j/io/XMLWriter;->handleException(Ljava/io/IOException;)V
 
+    .line 3
     :goto_0
     iget-object p0, p0, Lorg/dom4j/io/XMLWriter;->lexicalHandler:Lorg/xml/sax/ext/LexicalHandler;
 
     if-eqz p0, :cond_0
 
+    .line 4
     invoke-interface {p0}, Lorg/xml/sax/ext/LexicalHandler;->endCDATA()V
 
     :cond_0
@@ -783,12 +820,15 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-boolean v0, p0, Lorg/dom4j/io/XMLWriter;->inDTD:Z
 
+    .line 2
     iget-object p0, p0, Lorg/dom4j/io/XMLWriter;->lexicalHandler:Lorg/xml/sax/ext/LexicalHandler;
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-interface {p0}, Lorg/xml/sax/ext/LexicalHandler;->endDTD()V
 
     :cond_0
@@ -803,12 +843,15 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0}, Lorg/xml/sax/helpers/XMLFilterImpl;->endDocument()V
 
+    .line 2
     iget-boolean v0, p0, Lorg/dom4j/io/XMLWriter;->autoFlush:Z
 
     if-eqz v0, :cond_0
 
+    .line 3
     :try_start_0
     invoke-virtual {p0}, Lorg/dom4j/io/XMLWriter;->flush()V
     :try_end_0
@@ -829,9 +872,11 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :try_start_0
     iput-boolean v0, p0, Lorg/dom4j/io/XMLWriter;->charsAdded:Z
 
+    .line 2
     iget v0, p0, Lorg/dom4j/io/XMLWriter;->indentLevel:I
 
     const/4 v1, 0x1
@@ -840,21 +885,28 @@
 
     iput v0, p0, Lorg/dom4j/io/XMLWriter;->indentLevel:I
 
+    .line 3
     iget-boolean v0, p0, Lorg/dom4j/io/XMLWriter;->lastElementClosed:Z
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Lorg/dom4j/io/XMLWriter;->writePrintln()V
 
+    .line 5
     invoke-virtual {p0}, Lorg/dom4j/io/XMLWriter;->indent()V
 
+    .line 6
     :cond_0
     invoke-virtual {p0, p3}, Lorg/dom4j/io/XMLWriter;->writeClose(Ljava/lang/String;)V
 
+    .line 7
     iput v1, p0, Lorg/dom4j/io/XMLWriter;->lastOutputNodeType:I
 
+    .line 8
     iput-boolean v1, p0, Lorg/dom4j/io/XMLWriter;->lastElementClosed:Z
 
+    .line 9
     invoke-super {p0, p1, p2, p3}, Lorg/xml/sax/helpers/XMLFilterImpl;->endElement(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -864,6 +916,7 @@
     :catch_0
     move-exception p1
 
+    .line 10
     invoke-virtual {p0, p1}, Lorg/dom4j/io/XMLWriter;->handleException(Ljava/io/IOException;)V
 
     :goto_0
@@ -878,10 +931,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/XMLWriter;->lexicalHandler:Lorg/xml/sax/ext/LexicalHandler;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0, p1}, Lorg/xml/sax/ext/LexicalHandler;->endEntity(Ljava/lang/String;)V
 
     :cond_0
@@ -896,6 +951,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lorg/xml/sax/helpers/XMLFilterImpl;->endPrefixMapping(Ljava/lang/String;)V
 
     return-void
@@ -904,12 +960,14 @@
 .method public escapeAttributeEntities(Ljava/lang/String;)Ljava/lang/String;
     .locals 10
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->format:Lorg/dom4j/io/OutputFormat;
 
     invoke-virtual {v0}, Lorg/dom4j/io/OutputFormat;->getAttributeQuoteCharacter()C
 
     move-result v0
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -927,6 +985,7 @@
     :goto_0
     if-ge v4, v1, :cond_9
 
+    .line 3
     invoke-virtual {p1, v4}, Ljava/lang/String;->charAt(I)C
 
     move-result v7
@@ -967,12 +1026,14 @@
 
     if-lt v7, v8, :cond_0
 
+    .line 4
     invoke-virtual {p0, v7}, Lorg/dom4j/io/XMLWriter;->shouldEncodeChar(C)Z
 
     move-result v8
 
     if-eqz v8, :cond_6
 
+    .line 5
     :cond_0
     new-instance v8, Ljava/lang/StringBuffer;
 
@@ -1031,10 +1092,12 @@
 
     if-nez v6, :cond_7
 
+    .line 6
     invoke-virtual {p1}, Ljava/lang/String;->toCharArray()[C
 
     move-result-object v6
 
+    .line 7
     :cond_7
     iget-object v8, p0, Lorg/dom4j/io/XMLWriter;->buffer:Ljava/lang/StringBuffer;
 
@@ -1042,6 +1105,7 @@
 
     invoke-virtual {v8, v6, v5, v9}, Ljava/lang/StringBuffer;->append([CII)Ljava/lang/StringBuffer;
 
+    .line 8
     iget-object v5, p0, Lorg/dom4j/io/XMLWriter;->buffer:Ljava/lang/StringBuffer;
 
     invoke-virtual {v5, v7}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -1063,10 +1127,12 @@
 
     if-nez v6, :cond_b
 
+    .line 9
     invoke-virtual {p1}, Ljava/lang/String;->toCharArray()[C
 
     move-result-object v6
 
+    .line 10
     :cond_b
     iget-object p1, p0, Lorg/dom4j/io/XMLWriter;->buffer:Ljava/lang/StringBuffer;
 
@@ -1074,6 +1140,7 @@
 
     invoke-virtual {p1, v6, v5, v4}, Ljava/lang/StringBuffer;->append([CII)Ljava/lang/StringBuffer;
 
+    .line 11
     :cond_c
     iget-object p1, p0, Lorg/dom4j/io/XMLWriter;->buffer:Ljava/lang/StringBuffer;
 
@@ -1081,6 +1148,7 @@
 
     move-result-object p1
 
+    .line 12
     iget-object p0, p0, Lorg/dom4j/io/XMLWriter;->buffer:Ljava/lang/StringBuffer;
 
     invoke-virtual {p0, v3}, Ljava/lang/StringBuffer;->setLength(I)V
@@ -1091,6 +1159,7 @@
 .method public escapeElementEntities(Ljava/lang/String;)Ljava/lang/String;
     .locals 9
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -1108,6 +1177,7 @@
     :goto_0
     if-ge v3, v0, :cond_8
 
+    .line 2
     invoke-virtual {p1, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v6
@@ -1140,12 +1210,14 @@
 
     if-lt v6, v7, :cond_0
 
+    .line 3
     invoke-virtual {p0, v6}, Lorg/dom4j/io/XMLWriter;->shouldEncodeChar(C)Z
 
     move-result v7
 
     if-eqz v7, :cond_5
 
+    .line 4
     :cond_0
     new-instance v7, Ljava/lang/StringBuffer;
 
@@ -1182,11 +1254,13 @@
 
     goto :goto_1
 
+    .line 5
     :cond_4
     iget-boolean v7, p0, Lorg/dom4j/io/XMLWriter;->preserve:Z
 
     if-eqz v7, :cond_5
 
+    .line 6
     invoke-static {v6}, Ljava/lang/String;->valueOf(C)Ljava/lang/String;
 
     move-result-object v6
@@ -1201,10 +1275,12 @@
 
     if-nez v5, :cond_6
 
+    .line 7
     invoke-virtual {p1}, Ljava/lang/String;->toCharArray()[C
 
     move-result-object v5
 
+    .line 8
     :cond_6
     iget-object v7, p0, Lorg/dom4j/io/XMLWriter;->buffer:Ljava/lang/StringBuffer;
 
@@ -1212,6 +1288,7 @@
 
     invoke-virtual {v7, v5, v4, v8}, Ljava/lang/StringBuffer;->append([CII)Ljava/lang/StringBuffer;
 
+    .line 9
     iget-object v4, p0, Lorg/dom4j/io/XMLWriter;->buffer:Ljava/lang/StringBuffer;
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -1233,10 +1310,12 @@
 
     if-nez v5, :cond_a
 
+    .line 10
     invoke-virtual {p1}, Ljava/lang/String;->toCharArray()[C
 
     move-result-object v5
 
+    .line 11
     :cond_a
     iget-object p1, p0, Lorg/dom4j/io/XMLWriter;->buffer:Ljava/lang/StringBuffer;
 
@@ -1244,6 +1323,7 @@
 
     invoke-virtual {p1, v5, v4, v3}, Ljava/lang/StringBuffer;->append([CII)Ljava/lang/StringBuffer;
 
+    .line 12
     :cond_b
     iget-object p1, p0, Lorg/dom4j/io/XMLWriter;->buffer:Ljava/lang/StringBuffer;
 
@@ -1251,6 +1331,7 @@
 
     move-result-object p1
 
+    .line 13
     iget-object p0, p0, Lorg/dom4j/io/XMLWriter;->buffer:Ljava/lang/StringBuffer;
 
     invoke-virtual {p0, v2}, Ljava/lang/StringBuffer;->setLength(I)V
@@ -1266,6 +1347,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-virtual {p0}, Ljava/io/Writer;->flush()V
@@ -1276,6 +1358,7 @@
 .method public getLexicalHandler()Lorg/xml/sax/ext/LexicalHandler;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/XMLWriter;->lexicalHandler:Lorg/xml/sax/ext/LexicalHandler;
 
     return-object p0
@@ -1284,16 +1367,19 @@
 .method public getMaximumAllowedCharacter()I
     .locals 1
 
+    .line 1
     iget v0, p0, Lorg/dom4j/io/XMLWriter;->maximumAllowedCharacter:I
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/io/XMLWriter;->defaultMaximumAllowedCharacter()I
 
     move-result v0
 
     iput v0, p0, Lorg/dom4j/io/XMLWriter;->maximumAllowedCharacter:I
 
+    .line 3
     :cond_0
     iget p0, p0, Lorg/dom4j/io/XMLWriter;->maximumAllowedCharacter:I
 
@@ -1303,6 +1389,7 @@
 .method public getOutputFormat()Lorg/dom4j/io/OutputFormat;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/XMLWriter;->format:Lorg/dom4j/io/OutputFormat;
 
     return-object p0
@@ -1319,6 +1406,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     sget-object v1, Lorg/dom4j/io/XMLWriter;->LEXICAL_HANDLER_NAMES:[Ljava/lang/String;
 
@@ -1326,6 +1414,7 @@
 
     if-ge v0, v2, :cond_1
 
+    .line 2
     aget-object v1, v1, v0
 
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1334,6 +1423,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 3
     invoke-virtual {p0}, Lorg/dom4j/io/XMLWriter;->getLexicalHandler()Lorg/xml/sax/ext/LexicalHandler;
 
     move-result-object p0
@@ -1345,6 +1435,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     invoke-super {p0, p1}, Lorg/xml/sax/helpers/XMLFilterImpl;->getProperty(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1361,6 +1452,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Lorg/xml/sax/SAXException;
 
     invoke-direct {p0, p1}, Lorg/xml/sax/SAXException;-><init>(Ljava/lang/Exception;)V
@@ -1376,6 +1468,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2, p3}, Lorg/xml/sax/helpers/XMLFilterImpl;->ignorableWhitespace([CII)V
 
     return-void
@@ -1389,6 +1482,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->format:Lorg/dom4j/io/OutputFormat;
 
     invoke-virtual {v0}, Lorg/dom4j/io/OutputFormat;->getIndent()Ljava/lang/String;
@@ -1397,6 +1491,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -1405,11 +1500,13 @@
 
     const/4 v1, 0x0
 
+    .line 3
     :goto_0
     iget v2, p0, Lorg/dom4j/io/XMLWriter;->indentLevel:I
 
     if-ge v1, v2, :cond_0
 
+    .line 4
     iget-object v2, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-virtual {v2, v0}, Ljava/io/Writer;->write(Ljava/lang/String;)V
@@ -1425,14 +1522,19 @@
 .method public installLexicalHandler()V
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Lorg/xml/sax/helpers/XMLFilterImpl;->getParent()Lorg/xml/sax/XMLReader;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    const-string v1, "No parent for filter"
+
+    .line 2
+    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/4 v1, 0x0
 
+    .line 3
     :goto_0
     sget-object v2, Lorg/dom4j/io/XMLWriter;->LEXICAL_HANDLER_NAMES:[Ljava/lang/String;
 
@@ -1440,6 +1542,7 @@
 
     if-ge v1, v3, :cond_0
 
+    .line 4
     :try_start_0
     aget-object v2, v2, v1
 
@@ -1458,15 +1561,6 @@
     :cond_0
     :goto_1
     return-void
-
-    :cond_1
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string v0, "No parent for filter"
-
-    invoke-direct {p0, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method
 
 .method public final isElementSpacePreserved(Lorg/dom4j/Element;)Z
@@ -1474,33 +1568,36 @@
 
     const-string v0, "space"
 
+    .line 1
     invoke-interface {p1, v0}, Lorg/dom4j/Element;->attribute(Ljava/lang/String;)Lorg/dom4j/Attribute;
 
     move-result-object p1
 
+    .line 2
     iget-boolean p0, p0, Lorg/dom4j/io/XMLWriter;->preserve:Z
 
     if-eqz p1, :cond_1
 
-    const-string p0, "xml"
-
+    .line 3
     invoke-interface {p1}, Lorg/dom4j/Attribute;->getNamespacePrefix()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const-string v0, "xml"
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    const-string p0, "preserve"
-
     invoke-interface {p1}, Lorg/dom4j/Node;->getText()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const-string p1, "preserve"
+
+    invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -1521,6 +1618,7 @@
 .method public isEscapeText()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/dom4j/io/XMLWriter;->escapeText:Z
 
     return p0
@@ -1529,6 +1627,7 @@
 .method public isExpandEmptyElements()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/XMLWriter;->format:Lorg/dom4j/io/OutputFormat;
 
     invoke-virtual {p0}, Lorg/dom4j/io/OutputFormat;->isExpandEmptyElements()Z
@@ -1543,16 +1642,19 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     sget-object v0, Lorg/dom4j/Namespace;->XML_NAMESPACE:Lorg/dom4j/Namespace;
 
     if-eq p1, v0, :cond_0
 
+    .line 2
     invoke-virtual {p1}, Lorg/dom4j/Namespace;->getURI()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object p0, p0, Lorg/dom4j/io/XMLWriter;->namespaceStack:Lorg/dom4j/tree/NamespaceStack;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/NamespaceStack;->contains(Lorg/dom4j/Namespace;)Z
@@ -1579,6 +1681,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2, p3}, Lorg/xml/sax/helpers/XMLFilterImpl;->notationDecl(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -1593,8 +1696,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/io/XMLWriter;->installLexicalHandler()V
 
+    .line 2
     invoke-super {p0, p1}, Lorg/xml/sax/helpers/XMLFilterImpl;->parse(Lorg/xml/sax/InputSource;)V
 
     return-void
@@ -1608,6 +1713,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     iget-object p0, p0, Lorg/dom4j/io/XMLWriter;->format:Lorg/dom4j/io/OutputFormat;
@@ -1629,41 +1735,50 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Lorg/dom4j/io/XMLWriter;->indent()V
 
+    .line 2
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     const-string v1, "<?"
 
     invoke-virtual {v0, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 3
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-virtual {v0, p1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 4
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     const-string v1, " "
 
     invoke-virtual {v0, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 5
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-virtual {v0, p2}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 6
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     const-string v1, "?>"
 
     invoke-virtual {v0, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 7
     invoke-virtual {p0}, Lorg/dom4j/io/XMLWriter;->writePrintln()V
 
     const/4 v0, 0x7
 
+    .line 8
     iput v0, p0, Lorg/dom4j/io/XMLWriter;->lastOutputNodeType:I
 
+    .line 9
     invoke-super {p0, p1, p2}, Lorg/xml/sax/helpers/XMLFilterImpl;->processingInstruction(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1673,6 +1788,7 @@
     :catch_0
     move-exception p1
 
+    .line 10
     invoke-virtual {p0, p1}, Lorg/dom4j/io/XMLWriter;->handleException(Ljava/io/IOException;)V
 
     :goto_0
@@ -1682,6 +1798,7 @@
 .method public resolveEntityRefs()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/dom4j/io/XMLWriter;->resolveEntityRefs:Z
 
     return p0
@@ -1690,6 +1807,7 @@
 .method public setDocumentLocator(Lorg/xml/sax/Locator;)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lorg/xml/sax/helpers/XMLFilterImpl;->setDocumentLocator(Lorg/xml/sax/Locator;)V
 
     return-void
@@ -1698,6 +1816,7 @@
 .method public setEscapeText(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lorg/dom4j/io/XMLWriter;->escapeText:Z
 
     return-void
@@ -1706,33 +1825,30 @@
 .method public setIndentLevel(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lorg/dom4j/io/XMLWriter;->indentLevel:I
 
     return-void
 .end method
 
 .method public setLexicalHandler(Lorg/xml/sax/ext/LexicalHandler;)V
-    .locals 0
+    .locals 1
 
-    if-eqz p1, :cond_0
+    const-string v0, "Null lexical handler"
 
+    .line 1
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 2
     iput-object p1, p0, Lorg/dom4j/io/XMLWriter;->lexicalHandler:Lorg/xml/sax/ext/LexicalHandler;
 
     return-void
-
-    :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string p1, "Null lexical handler"
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method
 
 .method public setMaximumAllowedCharacter(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lorg/dom4j/io/XMLWriter;->maximumAllowedCharacter:I
 
     return-void
@@ -1746,6 +1862,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->format:Lorg/dom4j/io/OutputFormat;
 
     invoke-virtual {v0}, Lorg/dom4j/io/OutputFormat;->getEncoding()Ljava/lang/String;
@@ -1760,6 +1877,7 @@
 
     const/4 p1, 0x1
 
+    .line 2
     iput-boolean p1, p0, Lorg/dom4j/io/XMLWriter;->autoFlush:Z
 
     return-void
@@ -1776,6 +1894,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     sget-object v1, Lorg/dom4j/io/XMLWriter;->LEXICAL_HANDLER_NAMES:[Ljava/lang/String;
 
@@ -1783,6 +1902,7 @@
 
     if-ge v0, v2, :cond_1
 
+    .line 2
     aget-object v1, v1, v0
 
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1791,6 +1911,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 3
     check-cast p2, Lorg/xml/sax/ext/LexicalHandler;
 
     invoke-virtual {p0, p2}, Lorg/dom4j/io/XMLWriter;->setLexicalHandler(Lorg/xml/sax/ext/LexicalHandler;)V
@@ -1802,6 +1923,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     invoke-super {p0, p1, p2}, Lorg/xml/sax/helpers/XMLFilterImpl;->setProperty(Ljava/lang/String;Ljava/lang/Object;)V
 
@@ -1811,6 +1933,7 @@
 .method public setResolveEntityRefs(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lorg/dom4j/io/XMLWriter;->resolveEntityRefs:Z
 
     return-void
@@ -1819,10 +1942,12 @@
 .method public setWriter(Ljava/io/Writer;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     const/4 p1, 0x0
 
+    .line 2
     iput-boolean p1, p0, Lorg/dom4j/io/XMLWriter;->autoFlush:Z
 
     return-void
@@ -1831,6 +1956,7 @@
 .method public shouldEncodeChar(C)Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/io/XMLWriter;->getMaximumAllowedCharacter()I
 
     move-result p0
@@ -1858,6 +1984,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
@@ -1872,13 +1999,16 @@
     :catch_0
     move-exception v0
 
+    .line 2
     invoke-virtual {p0, v0}, Lorg/dom4j/io/XMLWriter;->handleException(Ljava/io/IOException;)V
 
+    .line 3
     :goto_0
     iget-object p0, p0, Lorg/dom4j/io/XMLWriter;->lexicalHandler:Lorg/xml/sax/ext/LexicalHandler;
 
     if-eqz p0, :cond_0
 
+    .line 4
     invoke-interface {p0}, Lorg/xml/sax/ext/LexicalHandler;->startCDATA()V
 
     :cond_0
@@ -1895,8 +2025,10 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lorg/dom4j/io/XMLWriter;->inDTD:Z
 
+    .line 2
     :try_start_0
     invoke-virtual {p0, p1, p2, p3}, Lorg/dom4j/io/XMLWriter;->writeDocType(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
@@ -1907,13 +2039,16 @@
     :catch_0
     move-exception v0
 
+    .line 3
     invoke-virtual {p0, v0}, Lorg/dom4j/io/XMLWriter;->handleException(Ljava/io/IOException;)V
 
+    .line 4
     :goto_0
     iget-object p0, p0, Lorg/dom4j/io/XMLWriter;->lexicalHandler:Lorg/xml/sax/ext/LexicalHandler;
 
     if-eqz p0, :cond_0
 
+    .line 5
     invoke-interface {p0, p1, p2, p3}, Lorg/xml/sax/ext/LexicalHandler;->startDTD(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
@@ -1928,9 +2063,11 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Lorg/dom4j/io/XMLWriter;->writeDeclaration()V
 
+    .line 2
     invoke-super {p0}, Lorg/xml/sax/helpers/XMLFilterImpl;->startDocument()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1940,6 +2077,7 @@
     :catch_0
     move-exception v0
 
+    .line 3
     invoke-virtual {p0, v0}, Lorg/dom4j/io/XMLWriter;->handleException(Ljava/io/IOException;)V
 
     :goto_0
@@ -1956,33 +2094,42 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :try_start_0
     iput-boolean v0, p0, Lorg/dom4j/io/XMLWriter;->charsAdded:Z
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/io/XMLWriter;->writePrintln()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/dom4j/io/XMLWriter;->indent()V
 
+    .line 4
     iget-object v1, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     const-string v2, "<"
 
     invoke-virtual {v1, v2}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 5
     iget-object v1, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-virtual {v1, p3}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 6
     invoke-virtual {p0}, Lorg/dom4j/io/XMLWriter;->writeNamespaces()V
 
+    .line 7
     invoke-virtual {p0, p4}, Lorg/dom4j/io/XMLWriter;->writeAttributes(Lorg/xml/sax/Attributes;)V
 
+    .line 8
     iget-object v1, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     const-string v2, ">"
 
     invoke-virtual {v1, v2}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 9
     iget v1, p0, Lorg/dom4j/io/XMLWriter;->indentLevel:I
 
     const/4 v2, 0x1
@@ -1991,10 +2138,13 @@
 
     iput v1, p0, Lorg/dom4j/io/XMLWriter;->indentLevel:I
 
+    .line 10
     iput v2, p0, Lorg/dom4j/io/XMLWriter;->lastOutputNodeType:I
 
+    .line 11
     iput-boolean v0, p0, Lorg/dom4j/io/XMLWriter;->lastElementClosed:Z
 
+    .line 12
     invoke-super {p0, p1, p2, p3, p4}, Lorg/xml/sax/helpers/XMLFilterImpl;->startElement(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -2004,6 +2154,7 @@
     :catch_0
     move-exception p1
 
+    .line 13
     invoke-virtual {p0, p1}, Lorg/dom4j/io/XMLWriter;->handleException(Ljava/io/IOException;)V
 
     :goto_0
@@ -2018,6 +2169,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     invoke-virtual {p0, p1}, Lorg/dom4j/io/XMLWriter;->writeEntityRef(Ljava/lang/String;)V
     :try_end_0
@@ -2028,13 +2180,16 @@
     :catch_0
     move-exception v0
 
+    .line 2
     invoke-virtual {p0, v0}, Lorg/dom4j/io/XMLWriter;->handleException(Ljava/io/IOException;)V
 
+    .line 3
     :goto_0
     iget-object p0, p0, Lorg/dom4j/io/XMLWriter;->lexicalHandler:Lorg/xml/sax/ext/LexicalHandler;
 
     if-eqz p0, :cond_0
 
+    .line 4
     invoke-interface {p0, p1}, Lorg/xml/sax/ext/LexicalHandler;->startEntity(Ljava/lang/String;)V
 
     :cond_0
@@ -2049,21 +2204,25 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->namespacesMap:Ljava/util/Map;
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lorg/dom4j/io/XMLWriter;->namespacesMap:Ljava/util/Map;
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->namespacesMap:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     invoke-super {p0, p1, p2}, Lorg/xml/sax/helpers/XMLFilterImpl;->startPrefixMapping(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -2077,6 +2236,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2, p3, p4}, Lorg/xml/sax/helpers/XMLFilterImpl;->unparsedEntityDecl(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -2124,24 +2284,24 @@
     .line 49
     check-cast p1, Ljava/util/List;
 
+    const/4 v0, 0x0
+
     .line 50
     invoke-interface {p1}, Ljava/util/List;->size()I
 
-    move-result v0
-
-    const/4 v1, 0x0
+    move-result v1
 
     :goto_0
-    if-ge v1, v0, :cond_3
+    if-ge v0, v1, :cond_3
 
     .line 51
-    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     invoke-virtual {p0, v2}, Lorg/dom4j/io/XMLWriter;->write(Ljava/lang/Object;)V
 
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
@@ -2303,26 +2463,26 @@
 
     invoke-virtual {p0, v0}, Lorg/dom4j/io/XMLWriter;->writeDocType(Lorg/dom4j/DocumentType;)V
 
-    .line 8
     :cond_0
+    const/4 v0, 0x0
+
+    .line 8
     invoke-interface {p1}, Lorg/dom4j/Branch;->nodeCount()I
 
-    move-result v0
-
-    const/4 v1, 0x0
+    move-result v1
 
     :goto_0
-    if-ge v1, v0, :cond_1
+    if-ge v0, v1, :cond_1
 
     .line 9
-    invoke-interface {p1, v1}, Lorg/dom4j/Branch;->node(I)Lorg/dom4j/Node;
+    invoke-interface {p1, v0}, Lorg/dom4j/Branch;->node(I)Lorg/dom4j/Node;
 
     move-result-object v2
 
     .line 10
     invoke-virtual {p0, v2}, Lorg/dom4j/io/XMLWriter;->writeNode(Lorg/dom4j/Node;)V
 
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
@@ -2875,6 +3035,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     const-string v1, "<![CDATA["
@@ -2883,10 +3044,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 2
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-virtual {v0, p1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 3
     :cond_0
     iget-object p1, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
@@ -2896,6 +3059,7 @@
 
     const/4 p1, 0x4
 
+    .line 4
     iput p1, p0, Lorg/dom4j/io/XMLWriter;->lastOutputNodeType:I
 
     return-void
@@ -2957,6 +3121,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->format:Lorg/dom4j/io/OutputFormat;
 
     invoke-virtual {v0}, Lorg/dom4j/io/OutputFormat;->isNewlines()Z
@@ -2965,10 +3130,13 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/io/XMLWriter;->println()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/dom4j/io/XMLWriter;->indent()V
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
@@ -2976,10 +3144,12 @@
 
     invoke-virtual {v0, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 5
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-virtual {v0, p1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 6
     iget-object p1, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     const-string v0, "-->"
@@ -2988,6 +3158,7 @@
 
     const/16 p1, 0x8
 
+    .line 7
     iput p1, p0, Lorg/dom4j/io/XMLWriter;->lastOutputNodeType:I
 
     return-void
@@ -3001,12 +3172,14 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->format:Lorg/dom4j/io/OutputFormat;
 
     invoke-virtual {v0}, Lorg/dom4j/io/OutputFormat;->getEncoding()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 2
     iget-object v1, p0, Lorg/dom4j/io/XMLWriter;->format:Lorg/dom4j/io/OutputFormat;
 
     invoke-virtual {v1}, Lorg/dom4j/io/OutputFormat;->isSuppressDeclaration()Z
@@ -3017,6 +3190,7 @@
 
     const-string v1, "UTF8"
 
+    .line 3
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -3027,10 +3201,12 @@
 
     if-eqz v1, :cond_1
 
+    .line 4
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-virtual {v0, v3}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 5
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->format:Lorg/dom4j/io/OutputFormat;
 
     invoke-virtual {v0}, Lorg/dom4j/io/OutputFormat;->isOmitEncoding()Z
@@ -3039,12 +3215,14 @@
 
     if-nez v0, :cond_0
 
+    .line 6
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     const-string v1, " encoding=\"UTF-8\""
 
     invoke-virtual {v0, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 7
     :cond_0
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
@@ -3052,11 +3230,13 @@
 
     goto :goto_0
 
+    .line 8
     :cond_1
     iget-object v1, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-virtual {v1, v3}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 9
     iget-object v1, p0, Lorg/dom4j/io/XMLWriter;->format:Lorg/dom4j/io/OutputFormat;
 
     invoke-virtual {v1}, Lorg/dom4j/io/OutputFormat;->isOmitEncoding()Z
@@ -3065,6 +3245,7 @@
 
     if-nez v1, :cond_2
 
+    .line 10
     iget-object v1, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     new-instance v3, Ljava/lang/StringBuffer;
@@ -3087,11 +3268,13 @@
 
     invoke-virtual {v1, v0}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 11
     :cond_2
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-virtual {v0, v2}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 12
     :goto_0
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->format:Lorg/dom4j/io/OutputFormat;
 
@@ -3101,6 +3284,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 13
     invoke-virtual {p0}, Lorg/dom4j/io/XMLWriter;->println()V
 
     :cond_3
@@ -3245,48 +3429,59 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Lorg/dom4j/Branch;->nodeCount()I
 
     move-result v0
 
+    .line 2
     invoke-interface {p1}, Lorg/dom4j/Element;->getQualifiedName()Ljava/lang/String;
 
     move-result-object v1
 
+    .line 3
     invoke-virtual {p0}, Lorg/dom4j/io/XMLWriter;->writePrintln()V
 
+    .line 4
     invoke-virtual {p0}, Lorg/dom4j/io/XMLWriter;->indent()V
 
+    .line 5
     iget-object v2, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     const-string v3, "<"
 
     invoke-virtual {v2, v3}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 6
     iget-object v2, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-virtual {v2, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 7
     iget-object v2, p0, Lorg/dom4j/io/XMLWriter;->namespaceStack:Lorg/dom4j/tree/NamespaceStack;
 
     invoke-virtual {v2}, Lorg/dom4j/tree/NamespaceStack;->size()I
 
     move-result v2
 
+    .line 8
     invoke-interface {p1}, Lorg/dom4j/Element;->getNamespace()Lorg/dom4j/Namespace;
 
     move-result-object v3
 
+    .line 9
     invoke-virtual {p0, v3}, Lorg/dom4j/io/XMLWriter;->isNamespaceDeclaration(Lorg/dom4j/Namespace;)Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
+    .line 10
     iget-object v4, p0, Lorg/dom4j/io/XMLWriter;->namespaceStack:Lorg/dom4j/tree/NamespaceStack;
 
     invoke-virtual {v4, v3}, Lorg/dom4j/tree/NamespaceStack;->push(Lorg/dom4j/Namespace;)V
 
+    .line 11
     invoke-virtual {p0, v3}, Lorg/dom4j/io/XMLWriter;->writeNamespace(Lorg/dom4j/Namespace;)V
 
     :cond_0
@@ -3301,30 +3496,37 @@
     :goto_0
     if-ge v5, v0, :cond_4
 
+    .line 12
     invoke-interface {p1, v5}, Lorg/dom4j/Branch;->node(I)Lorg/dom4j/Node;
 
     move-result-object v7
 
+    .line 13
     instance-of v8, v7, Lorg/dom4j/Namespace;
 
     if-eqz v8, :cond_1
 
+    .line 14
     check-cast v7, Lorg/dom4j/Namespace;
 
+    .line 15
     invoke-virtual {p0, v7}, Lorg/dom4j/io/XMLWriter;->isNamespaceDeclaration(Lorg/dom4j/Namespace;)Z
 
     move-result v8
 
     if-eqz v8, :cond_3
 
+    .line 16
     iget-object v8, p0, Lorg/dom4j/io/XMLWriter;->namespaceStack:Lorg/dom4j/tree/NamespaceStack;
 
     invoke-virtual {v8, v7}, Lorg/dom4j/tree/NamespaceStack;->push(Lorg/dom4j/Namespace;)V
 
+    .line 17
     invoke-virtual {p0, v7}, Lorg/dom4j/io/XMLWriter;->writeNamespace(Lorg/dom4j/Namespace;)V
 
     goto :goto_2
 
+    .line 18
     :cond_1
     instance-of v8, v7, Lorg/dom4j/Element;
 
@@ -3335,6 +3537,7 @@
 
     goto :goto_2
 
+    .line 19
     :cond_2
     instance-of v7, v7, Lorg/dom4j/Comment;
 
@@ -3348,17 +3551,21 @@
 
     goto :goto_0
 
+    .line 20
     :cond_4
     invoke-virtual {p0, p1}, Lorg/dom4j/io/XMLWriter;->writeAttributes(Lorg/dom4j/Element;)V
 
+    .line 21
     iput v4, p0, Lorg/dom4j/io/XMLWriter;->lastOutputNodeType:I
 
     if-gtz v0, :cond_5
 
+    .line 22
     invoke-virtual {p0, v1}, Lorg/dom4j/io/XMLWriter;->writeEmptyElementClose(Ljava/lang/String;)V
 
     goto :goto_4
 
+    .line 23
     :cond_5
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
@@ -3368,10 +3575,12 @@
 
     if-eqz v6, :cond_6
 
+    .line 24
     invoke-virtual {p0, p1}, Lorg/dom4j/io/XMLWriter;->writeElementContent(Lorg/dom4j/Element;)V
 
     goto :goto_3
 
+    .line 25
     :cond_6
     iget v0, p0, Lorg/dom4j/io/XMLWriter;->indentLevel:I
 
@@ -3379,18 +3588,23 @@
 
     iput v0, p0, Lorg/dom4j/io/XMLWriter;->indentLevel:I
 
+    .line 26
     invoke-virtual {p0, p1}, Lorg/dom4j/io/XMLWriter;->writeElementContent(Lorg/dom4j/Element;)V
 
+    .line 27
     iget p1, p0, Lorg/dom4j/io/XMLWriter;->indentLevel:I
 
     sub-int/2addr p1, v4
 
     iput p1, p0, Lorg/dom4j/io/XMLWriter;->indentLevel:I
 
+    .line 28
     invoke-virtual {p0}, Lorg/dom4j/io/XMLWriter;->writePrintln()V
 
+    .line 29
     invoke-virtual {p0}, Lorg/dom4j/io/XMLWriter;->indent()V
 
+    .line 30
     :goto_3
     iget-object p1, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
@@ -3398,14 +3612,17 @@
 
     invoke-virtual {p1, v0}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 31
     iget-object p1, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-virtual {p1, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 32
     iget-object p1, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-virtual {p1, v3}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 33
     :goto_4
     iget-object p1, p0, Lorg/dom4j/io/XMLWriter;->namespaceStack:Lorg/dom4j/tree/NamespaceStack;
 
@@ -3415,12 +3632,14 @@
 
     if-le p1, v2, :cond_7
 
+    .line 34
     iget-object p1, p0, Lorg/dom4j/io/XMLWriter;->namespaceStack:Lorg/dom4j/tree/NamespaceStack;
 
     invoke-virtual {p1}, Lorg/dom4j/tree/NamespaceStack;->pop()Lorg/dom4j/Namespace;
 
     goto :goto_4
 
+    .line 35
     :cond_7
     iput v4, p0, Lorg/dom4j/io/XMLWriter;->lastOutputNodeType:I
 
@@ -3435,18 +3654,21 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->format:Lorg/dom4j/io/OutputFormat;
 
     invoke-virtual {v0}, Lorg/dom4j/io/OutputFormat;->isTrimText()Z
 
     move-result v0
 
+    .line 2
     iget-boolean v1, p0, Lorg/dom4j/io/XMLWriter;->preserve:Z
 
     const/4 v2, 0x1
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {p0, p1}, Lorg/dom4j/io/XMLWriter;->isElementSpacePreserved(Lorg/dom4j/Element;)Z
 
     move-result v0
@@ -3464,6 +3686,7 @@
 
     if-eqz v0, :cond_f
 
+    .line 4
     invoke-interface {p1}, Lorg/dom4j/Branch;->nodeCount()I
 
     move-result v0
@@ -3479,16 +3702,19 @@
     :goto_0
     if-ge v6, v0, :cond_b
 
+    .line 5
     invoke-interface {p1, v6}, Lorg/dom4j/Branch;->node(I)Lorg/dom4j/Node;
 
     move-result-object v10
 
+    .line 6
     instance-of v11, v10, Lorg/dom4j/Text;
 
     if-eqz v11, :cond_3
 
     if-nez v7, :cond_1
 
+    .line 7
     move-object v7, v10
 
     check-cast v7, Lorg/dom4j/Text;
@@ -3498,6 +3724,7 @@
     :cond_1
     if-nez v9, :cond_2
 
+    .line 8
     new-instance v9, Ljava/lang/StringBuffer;
 
     invoke-interface {v7}, Lorg/dom4j/Node;->getText()Ljava/lang/String;
@@ -3506,6 +3733,7 @@
 
     invoke-direct {v9, v11}, Ljava/lang/StringBuffer;-><init>(Ljava/lang/String;)V
 
+    .line 9
     :cond_2
     check-cast v10, Lorg/dom4j/Text;
 
@@ -3520,6 +3748,7 @@
     :cond_3
     if-nez v8, :cond_6
 
+    .line 10
     iget-object v8, p0, Lorg/dom4j/io/XMLWriter;->format:Lorg/dom4j/io/OutputFormat;
 
     invoke-virtual {v8}, Lorg/dom4j/io/OutputFormat;->isPadText()Z
@@ -3528,8 +3757,11 @@
 
     if-eqz v8, :cond_6
 
+    const/16 v8, 0x61
+
     if-eqz v9, :cond_4
 
+    .line 11
     invoke-virtual {v9, v5}, Ljava/lang/StringBuffer;->charAt(I)C
 
     move-result v8
@@ -3539,6 +3771,7 @@
     :cond_4
     if-eqz v7, :cond_5
 
+    .line 12
     invoke-interface {v7}, Lorg/dom4j/Node;->getText()Ljava/lang/String;
 
     move-result-object v8
@@ -3547,11 +3780,8 @@
 
     move-result v8
 
-    goto :goto_1
-
+    .line 13
     :cond_5
-    const/16 v8, 0x61
-
     :goto_1
     invoke-static {v8}, Ljava/lang/Character;->isWhitespace(C)Z
 
@@ -3559,6 +3789,7 @@
 
     if-eqz v8, :cond_6
 
+    .line 14
     iget-object v8, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-virtual {v8, v3}, Ljava/io/Writer;->write(Ljava/lang/String;)V
@@ -3568,6 +3799,7 @@
 
     if-eqz v9, :cond_7
 
+    .line 15
     invoke-virtual {v9}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v8
@@ -3578,6 +3810,7 @@
 
     goto :goto_2
 
+    .line 16
     :cond_7
     invoke-interface {v7}, Lorg/dom4j/Node;->getText()Ljava/lang/String;
 
@@ -3585,6 +3818,7 @@
 
     invoke-virtual {p0, v8}, Lorg/dom4j/io/XMLWriter;->writeString(Ljava/lang/String;)V
 
+    .line 17
     :goto_2
     iget-object v8, p0, Lorg/dom4j/io/XMLWriter;->format:Lorg/dom4j/io/OutputFormat;
 
@@ -3596,6 +3830,7 @@
 
     if-eqz v9, :cond_8
 
+    .line 18
     invoke-virtual {v9}, Ljava/lang/StringBuffer;->length()I
 
     move-result v7
@@ -3608,11 +3843,13 @@
 
     goto :goto_3
 
+    .line 19
     :cond_8
     invoke-interface {v7}, Lorg/dom4j/Node;->getText()Ljava/lang/String;
 
     move-result-object v7
 
+    .line 20
     invoke-virtual {v7}, Ljava/lang/String;->length()I
 
     move-result v8
@@ -3623,6 +3860,7 @@
 
     move-result v7
 
+    .line 21
     :goto_3
     invoke-static {v7}, Ljava/lang/Character;->isWhitespace(C)Z
 
@@ -3630,6 +3868,7 @@
 
     if-eqz v7, :cond_9
 
+    .line 22
     iget-object v7, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-virtual {v7, v3}, Ljava/io/Writer;->write(Ljava/lang/String;)V
@@ -3637,6 +3876,7 @@
     :cond_9
     move-object v7, v4
 
+    .line 23
     :cond_a
     invoke-virtual {p0, v10}, Lorg/dom4j/io/XMLWriter;->writeNode(Lorg/dom4j/Node;)V
 
@@ -3652,6 +3892,7 @@
 
     if-nez v8, :cond_d
 
+    .line 24
     iget-object p1, p0, Lorg/dom4j/io/XMLWriter;->format:Lorg/dom4j/io/OutputFormat;
 
     invoke-virtual {p1}, Lorg/dom4j/io/OutputFormat;->isPadText()Z
@@ -3662,12 +3903,14 @@
 
     if-eqz v9, :cond_c
 
+    .line 25
     invoke-virtual {v9, v5}, Ljava/lang/StringBuffer;->charAt(I)C
 
     move-result p1
 
     goto :goto_5
 
+    .line 26
     :cond_c
     invoke-interface {v7}, Lorg/dom4j/Node;->getText()Ljava/lang/String;
 
@@ -3677,6 +3920,7 @@
 
     move-result p1
 
+    .line 27
     :goto_5
     invoke-static {p1}, Ljava/lang/Character;->isWhitespace(C)Z
 
@@ -3684,6 +3928,7 @@
 
     if-eqz p1, :cond_d
 
+    .line 28
     iget-object p1, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-virtual {p1, v3}, Ljava/io/Writer;->write(Ljava/lang/String;)V
@@ -3691,6 +3936,7 @@
     :cond_d
     if-eqz v9, :cond_e
 
+    .line 29
     invoke-virtual {v9}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -3699,6 +3945,7 @@
 
     goto :goto_8
 
+    .line 30
     :cond_e
     invoke-interface {v7}, Lorg/dom4j/Node;->getText()Ljava/lang/String;
 
@@ -3708,6 +3955,7 @@
 
     goto :goto_8
 
+    .line 31
     :cond_f
     invoke-interface {p1}, Lorg/dom4j/Branch;->nodeCount()I
 
@@ -3718,14 +3966,17 @@
     :goto_6
     if-ge v5, v0, :cond_12
 
+    .line 32
     invoke-interface {p1, v5}, Lorg/dom4j/Branch;->node(I)Lorg/dom4j/Node;
 
     move-result-object v7
 
+    .line 33
     instance-of v8, v7, Lorg/dom4j/Text;
 
     if-eqz v8, :cond_10
 
+    .line 34
     invoke-virtual {p0, v7}, Lorg/dom4j/io/XMLWriter;->writeNode(Lorg/dom4j/Node;)V
 
     move-object v6, v7
@@ -3735,6 +3986,7 @@
     :cond_10
     if-eqz v6, :cond_11
 
+    .line 35
     iget-object v8, p0, Lorg/dom4j/io/XMLWriter;->format:Lorg/dom4j/io/OutputFormat;
 
     invoke-virtual {v8}, Lorg/dom4j/io/OutputFormat;->isPadText()Z
@@ -3743,10 +3995,12 @@
 
     if-eqz v8, :cond_11
 
+    .line 36
     invoke-interface {v6}, Lorg/dom4j/Node;->getText()Ljava/lang/String;
 
     move-result-object v6
 
+    .line 37
     invoke-virtual {v6}, Ljava/lang/String;->length()I
 
     move-result v8
@@ -3757,16 +4011,19 @@
 
     move-result v6
 
+    .line 38
     invoke-static {v6}, Ljava/lang/Character;->isWhitespace(C)Z
 
     move-result v6
 
     if-eqz v6, :cond_11
 
+    .line 39
     iget-object v6, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-virtual {v6, v3}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 40
     :cond_11
     invoke-virtual {p0, v7}, Lorg/dom4j/io/XMLWriter;->writeNode(Lorg/dom4j/Node;)V
 
@@ -3777,6 +4034,7 @@
 
     goto :goto_6
 
+    .line 41
     :cond_12
     :goto_8
     iput-boolean v1, p0, Lorg/dom4j/io/XMLWriter;->preserve:Z
@@ -3792,6 +4050,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->format:Lorg/dom4j/io/OutputFormat;
 
     invoke-virtual {v0}, Lorg/dom4j/io/OutputFormat;->isExpandEmptyElements()Z
@@ -3800,6 +4059,7 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     const-string p1, "/>"
@@ -3808,6 +4068,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
@@ -3815,10 +4076,12 @@
 
     invoke-virtual {v0, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 4
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-virtual {v0, p1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 5
     iget-object p0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     const-string p1, ">"
@@ -3837,12 +4100,14 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/io/XMLWriter;->resolveEntityRefs()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-interface {p1}, Lorg/dom4j/Node;->getName()Ljava/lang/String;
 
     move-result-object p1
@@ -3851,6 +4116,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
@@ -3872,16 +4138,19 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     const-string v1, "&"
 
     invoke-virtual {v0, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 2
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-virtual {v0, p1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 3
     iget-object p1, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     const-string v0, ";"
@@ -3890,6 +4159,7 @@
 
     const/4 p1, 0x5
 
+    .line 4
     iput p1, p0, Lorg/dom4j/io/XMLWriter;->lastOutputNodeType:I
 
     return-void
@@ -3905,10 +4175,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/dom4j/io/XMLWriter;->escapeAttributeEntities(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 2
     iget-object p0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-virtual {p0, p1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
@@ -4012,10 +4284,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->namespacesMap:Ljava/util/Map;
 
     if-eqz v0, :cond_1
 
+    .line 2
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v0
@@ -4024,6 +4298,7 @@
 
     move-result-object v0
 
+    .line 3
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -4031,24 +4306,28 @@
 
     if-eqz v1, :cond_0
 
+    .line 4
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/Map$Entry;
 
+    .line 5
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
+    .line 6
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
+    .line 7
     invoke-virtual {p0, v2, v1}, Lorg/dom4j/io/XMLWriter;->writeNamespace(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
@@ -4056,6 +4335,7 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 8
     iput-object v0, p0, Lorg/dom4j/io/XMLWriter;->namespacesMap:Ljava/util/Map;
 
     :cond_1
@@ -4070,12 +4350,14 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Lorg/dom4j/Node;->getNodeType()S
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
+    .line 2
     :pswitch_0
     new-instance p0, Ljava/io/IOException;
 
@@ -4097,6 +4379,7 @@
 
     throw p0
 
+    .line 3
     :pswitch_1
     check-cast p1, Lorg/dom4j/DocumentType;
 
@@ -4104,6 +4387,7 @@
 
     goto :goto_0
 
+    .line 4
     :pswitch_2
     check-cast p1, Lorg/dom4j/Document;
 
@@ -4111,6 +4395,7 @@
 
     goto :goto_0
 
+    .line 5
     :pswitch_3
     invoke-interface {p1}, Lorg/dom4j/Node;->getText()Ljava/lang/String;
 
@@ -4120,6 +4405,7 @@
 
     goto :goto_0
 
+    .line 6
     :pswitch_4
     check-cast p1, Lorg/dom4j/ProcessingInstruction;
 
@@ -4127,6 +4413,7 @@
 
     goto :goto_0
 
+    .line 7
     :pswitch_5
     check-cast p1, Lorg/dom4j/Entity;
 
@@ -4134,6 +4421,7 @@
 
     goto :goto_0
 
+    .line 8
     :pswitch_6
     invoke-interface {p1}, Lorg/dom4j/Node;->getText()Ljava/lang/String;
 
@@ -4143,11 +4431,13 @@
 
     goto :goto_0
 
+    .line 9
     :pswitch_7
     invoke-virtual {p0, p1}, Lorg/dom4j/io/XMLWriter;->writeNodeText(Lorg/dom4j/Node;)V
 
     goto :goto_0
 
+    .line 10
     :pswitch_8
     check-cast p1, Lorg/dom4j/Attribute;
 
@@ -4155,6 +4445,7 @@
 
     goto :goto_0
 
+    .line 11
     :pswitch_9
     check-cast p1, Lorg/dom4j/Element;
 
@@ -4190,22 +4481,26 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Lorg/dom4j/Node;->getText()Ljava/lang/String;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
 
     if-lez v0, :cond_1
 
+    .line 3
     iget-boolean v0, p0, Lorg/dom4j/io/XMLWriter;->escapeText:Z
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-virtual {p0, p1}, Lorg/dom4j/io/XMLWriter;->escapeElementEntities(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -4213,12 +4508,15 @@
     :cond_0
     const/4 v0, 0x3
 
+    .line 5
     iput v0, p0, Lorg/dom4j/io/XMLWriter;->lastOutputNodeType:I
 
+    .line 6
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-virtual {v0, p1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 7
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -4243,12 +4541,14 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     const-string v1, "<"
 
     invoke-virtual {v0, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 2
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-interface {p1}, Lorg/dom4j/Element;->getQualifiedName()Ljava/lang/String;
@@ -4257,8 +4557,10 @@
 
     invoke-virtual {v0, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 3
     invoke-virtual {p0, p1}, Lorg/dom4j/io/XMLWriter;->writeAttributes(Lorg/dom4j/Element;)V
 
+    .line 4
     iget-object p0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     const-string p1, ">"
@@ -4276,6 +4578,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->format:Lorg/dom4j/io/OutputFormat;
 
     invoke-virtual {v0}, Lorg/dom4j/io/OutputFormat;->isNewlines()Z
@@ -4284,12 +4587,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->format:Lorg/dom4j/io/OutputFormat;
 
     invoke-virtual {v0}, Lorg/dom4j/io/OutputFormat;->getLineSeparator()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 3
     iget-char v1, p0, Lorg/dom4j/io/XMLWriter;->lastChar:C
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -4304,6 +4609,7 @@
 
     if-eq v1, v0, :cond_0
 
+    .line 4
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     iget-object p0, p0, Lorg/dom4j/io/XMLWriter;->format:Lorg/dom4j/io/OutputFormat;
@@ -4326,12 +4632,14 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     const-string v1, "<?"
 
     invoke-virtual {v0, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 2
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-interface {p1}, Lorg/dom4j/Node;->getName()Ljava/lang/String;
@@ -4340,12 +4648,14 @@
 
     invoke-virtual {v0, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 3
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     const-string v1, " "
 
     invoke-virtual {v0, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 4
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-interface {p1}, Lorg/dom4j/ProcessingInstruction;->getText()Ljava/lang/String;
@@ -4354,16 +4664,19 @@
 
     invoke-virtual {v0, p1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 5
     iget-object p1, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     const-string v0, "?>"
 
     invoke-virtual {p1, v0}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 6
     invoke-virtual {p0}, Lorg/dom4j/io/XMLWriter;->writePrintln()V
 
     const/4 p1, 0x7
 
+    .line 7
     iput p1, p0, Lorg/dom4j/io/XMLWriter;->lastOutputNodeType:I
 
     return-void
@@ -4379,20 +4692,24 @@
 
     if-eqz p1, :cond_4
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
 
     if-lez v0, :cond_4
 
+    .line 2
     iget-boolean v0, p0, Lorg/dom4j/io/XMLWriter;->escapeText:Z
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {p0, p1}, Lorg/dom4j/io/XMLWriter;->escapeElementEntities(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->format:Lorg/dom4j/io/OutputFormat;
 
@@ -4406,12 +4723,14 @@
 
     if-eqz v0, :cond_3
 
+    .line 5
     new-instance v0, Ljava/util/StringTokenizer;
 
     invoke-direct {v0, p1}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;)V
 
     move p1, v1
 
+    .line 6
     :goto_0
     invoke-virtual {v0}, Ljava/util/StringTokenizer;->hasMoreTokens()Z
 
@@ -4419,39 +4738,46 @@
 
     if-eqz v3, :cond_4
 
+    .line 7
     invoke-virtual {v0}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v3
 
     const-string v4, " "
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_1
 
-    iget p1, p0, Lorg/dom4j/io/XMLWriter;->lastOutputNodeType:I
-
-    if-ne p1, v2, :cond_1
-
-    iget-object p1, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
-
-    invoke-virtual {p1, v4}, Ljava/io/Writer;->write(Ljava/lang/String;)V
-
-    :cond_1
     const/4 p1, 0x0
 
-    goto :goto_1
+    .line 8
+    iget v5, p0, Lorg/dom4j/io/XMLWriter;->lastOutputNodeType:I
 
-    :cond_2
+    if-ne v5, v2, :cond_2
+
+    .line 9
     iget-object v5, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-virtual {v5, v4}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    goto :goto_1
+
+    .line 10
+    :cond_1
+    iget-object v5, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
+
+    invoke-virtual {v5, v4}, Ljava/io/Writer;->write(Ljava/lang/String;)V
+
+    .line 11
+    :cond_2
     :goto_1
     iget-object v4, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-virtual {v4, v3}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 12
     iput v2, p0, Lorg/dom4j/io/XMLWriter;->lastOutputNodeType:I
 
+    .line 13
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     move-result v4
@@ -4466,13 +4792,16 @@
 
     goto :goto_0
 
+    .line 14
     :cond_3
     iput v2, p0, Lorg/dom4j/io/XMLWriter;->lastOutputNodeType:I
 
+    .line 15
     iget-object v0, p0, Lorg/dom4j/io/XMLWriter;->writer:Ljava/io/Writer;
 
     invoke-virtual {v0, p1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
+    .line 16
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0

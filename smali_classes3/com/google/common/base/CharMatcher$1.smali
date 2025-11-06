@@ -1,4 +1,4 @@
-.class Lcom/google/common/base/CharMatcher$1;
+.class public Lcom/google/common/base/CharMatcher$1;
 .super Lcom/google/common/base/CharMatcher$NegatedFastMatcher;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic val$description:Ljava/lang/String;
+.field public final synthetic val$description:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/base/CharMatcher;Lcom/google/common/base/CharMatcher;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p3, p0, Lcom/google/common/base/CharMatcher$1;->val$description:Ljava/lang/String;
 
     invoke-direct {p0, p2}, Lcom/google/common/base/CharMatcher$NegatedFastMatcher;-><init>(Lcom/google/common/base/CharMatcher;)V
@@ -34,6 +35,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/CharMatcher$1;->val$description:Ljava/lang/String;
 
     return-object p0

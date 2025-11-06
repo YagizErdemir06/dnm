@@ -1,4 +1,4 @@
-.class final Lcom/google/common/io/CharStreams$NullWriter;
+.class public final Lcom/google/common/io/CharStreams$NullWriter;
 .super Ljava/io/Writer;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/io/CharStreams$NullWriter;
 
     invoke-direct {v0}, Lcom/google/common/io/CharStreams$NullWriter;-><init>()V
@@ -34,6 +35,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/io/Writer;-><init>()V
 
     return-void
@@ -42,6 +44,7 @@
 .method public static synthetic access$000()Lcom/google/common/io/CharStreams$NullWriter;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/common/io/CharStreams$NullWriter;->INSTANCE:Lcom/google/common/io/CharStreams$NullWriter;
 
     return-object v0

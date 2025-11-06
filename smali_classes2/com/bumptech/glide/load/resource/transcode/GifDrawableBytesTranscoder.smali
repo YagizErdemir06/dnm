@@ -21,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -54,16 +55,19 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Lcom/bumptech/glide/load/engine/Resource;->get()Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Lcom/bumptech/glide/load/resource/gif/GifDrawable;
 
+    .line 2
     invoke-virtual {p0}, Lcom/bumptech/glide/load/resource/gif/GifDrawable;->getBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object p0
 
+    .line 3
     new-instance p1, Lcom/bumptech/glide/load/resource/bytes/BytesResource;
 
     invoke-static {p0}, Lcom/bumptech/glide/util/ByteBufferUtil;->toBytes(Ljava/nio/ByteBuffer;)[B

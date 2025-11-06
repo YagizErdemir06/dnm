@@ -53,6 +53,7 @@
 .method public static createFromParcel(Landroid/os/Parcel;)Lcom/google/android/exoplayer2/metadata/scte35/SpliceInsertCommand$ComponentSplice;
     .locals 7
 
+    .line 1
     new-instance v6, Lcom/google/android/exoplayer2/metadata/scte35/SpliceInsertCommand$ComponentSplice;
 
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
@@ -79,14 +80,17 @@
 .method public writeToParcel(Landroid/os/Parcel;)V
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/metadata/scte35/SpliceInsertCommand$ComponentSplice;->componentTag:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 2
     iget-wide v0, p0, Lcom/google/android/exoplayer2/metadata/scte35/SpliceInsertCommand$ComponentSplice;->componentSplicePts:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
+    .line 3
     iget-wide v0, p0, Lcom/google/android/exoplayer2/metadata/scte35/SpliceInsertCommand$ComponentSplice;->componentSplicePlaybackPositionUs:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V

@@ -1,4 +1,4 @@
-.class Lmiuix/animation/property/ViewProperty$18;
+.class public Lmiuix/animation/property/ViewProperty$18;
 .super Lmiuix/animation/property/ViewProperty;
 .source "SourceFile"
 
@@ -15,10 +15,11 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;F)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lmiuix/animation/property/ViewProperty;-><init>(Ljava/lang/String;F)V
+    .line 1
+    invoke-direct {p0, p1}, Lmiuix/animation/property/ViewProperty;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -28,12 +29,7 @@
 .method public getValue(Landroid/view/View;)F
     .locals 0
 
-    .line 2
-    invoke-virtual {p1}, Landroid/view/View;->getScrollY()I
-
-    move-result p0
-
-    int-to-float p0, p0
+    const/4 p0, 0x0
 
     return p0
 .end method
@@ -53,11 +49,6 @@
 
 .method public setValue(Landroid/view/View;F)V
     .locals 0
-
-    float-to-int p0, p2
-
-    .line 2
-    invoke-virtual {p1, p0}, Landroid/view/View;->setScrollY(I)V
 
     return-void
 .end method

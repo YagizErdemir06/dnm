@@ -1,4 +1,4 @@
-.class Landroidx/core/view/WindowInsetsCompat$BuilderImpl29;
+.class public Landroidx/core/view/WindowInsetsCompat$BuilderImpl29;
 .super Landroidx/core/view/WindowInsetsCompat$BuilderImpl;
 .source "SourceFile"
 
@@ -19,7 +19,7 @@
 
 
 # instance fields
-.field final mPlatBuilder:Landroid/view/WindowInsets$Builder;
+.field public final mPlatBuilder:Landroid/view/WindowInsets$Builder;
 
 
 # direct methods
@@ -82,18 +82,23 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroidx/core/view/WindowInsetsCompat$BuilderImpl;->applyInsetTypes()V
 
+    .line 2
     iget-object v0, p0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl29;->mPlatBuilder:Landroid/view/WindowInsets$Builder;
 
+    .line 3
     invoke-virtual {v0}, Landroid/view/WindowInsets$Builder;->build()Landroid/view/WindowInsets;
 
     move-result-object v0
 
+    .line 4
     invoke-static {v0}, Landroidx/core/view/WindowInsetsCompat;->toWindowInsetsCompat(Landroid/view/WindowInsets;)Landroidx/core/view/WindowInsetsCompat;
 
     move-result-object v0
 
+    .line 5
     iget-object p0, p0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl;->mInsetsTypeMask:[Landroidx/core/graphics/Insets;
 
     invoke-virtual {v0, p0}, Landroidx/core/view/WindowInsetsCompat;->setOverriddenInsets([Landroidx/core/graphics/Insets;)V
@@ -108,6 +113,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl29;->mPlatBuilder:Landroid/view/WindowInsets$Builder;
 
     if-eqz p1, :cond_0
@@ -134,6 +140,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl29;->mPlatBuilder:Landroid/view/WindowInsets$Builder;
 
     invoke-virtual {p1}, Landroidx/core/graphics/Insets;->toPlatformInsets()Landroid/graphics/Insets;
@@ -152,6 +159,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl29;->mPlatBuilder:Landroid/view/WindowInsets$Builder;
 
     invoke-virtual {p1}, Landroidx/core/graphics/Insets;->toPlatformInsets()Landroid/graphics/Insets;
@@ -170,6 +178,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl29;->mPlatBuilder:Landroid/view/WindowInsets$Builder;
 
     invoke-virtual {p1}, Landroidx/core/graphics/Insets;->toPlatformInsets()Landroid/graphics/Insets;
@@ -188,6 +197,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl29;->mPlatBuilder:Landroid/view/WindowInsets$Builder;
 
     invoke-virtual {p1}, Landroidx/core/graphics/Insets;->toPlatformInsets()Landroid/graphics/Insets;
@@ -206,6 +216,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/WindowInsetsCompat$BuilderImpl29;->mPlatBuilder:Landroid/view/WindowInsets$Builder;
 
     invoke-virtual {p1}, Landroidx/core/graphics/Insets;->toPlatformInsets()Landroid/graphics/Insets;

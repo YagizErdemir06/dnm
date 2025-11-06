@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ArrayTable$Column;
+.class public Lcom/google/common/collect/ArrayTable$Column;
 .super Lcom/google/common/collect/ArrayTable$ArrayMap;
 .source "SourceFile"
 
@@ -22,17 +22,19 @@
 
 
 # instance fields
-.field final columnIndex:I
+.field public final columnIndex:I
 
-.field final synthetic this$0:Lcom/google/common/collect/ArrayTable;
+.field public final synthetic this$0:Lcom/google/common/collect/ArrayTable;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/ArrayTable;I)V
     .locals 1
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/ArrayTable$Column;->this$0:Lcom/google/common/collect/ArrayTable;
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/collect/ArrayTable;->access$300(Lcom/google/common/collect/ArrayTable;)Lcom/google/common/collect/ImmutableMap;
 
     move-result-object p1
@@ -41,6 +43,7 @@
 
     invoke-direct {p0, p1, v0}, Lcom/google/common/collect/ArrayTable$ArrayMap;-><init>(Lcom/google/common/collect/ImmutableMap;Lcom/google/common/collect/ArrayTable$1;)V
 
+    .line 3
     iput p2, p0, Lcom/google/common/collect/ArrayTable$Column;->columnIndex:I
 
     return-void
@@ -67,6 +70,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/ArrayTable$Column;->this$0:Lcom/google/common/collect/ArrayTable;
 
     iget p0, p0, Lcom/google/common/collect/ArrayTable$Column;->columnIndex:I
@@ -93,6 +97,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/ArrayTable$Column;->this$0:Lcom/google/common/collect/ArrayTable;
 
     iget p0, p0, Lcom/google/common/collect/ArrayTable$Column;->columnIndex:I

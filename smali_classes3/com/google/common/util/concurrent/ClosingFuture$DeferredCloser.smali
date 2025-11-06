@@ -25,8 +25,10 @@
 .method public constructor <init>(Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/util/concurrent/ClosingFuture$DeferredCloser;->list:Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;
 
     return-void
@@ -58,10 +60,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     if-eqz p1, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/util/concurrent/ClosingFuture$DeferredCloser;->list:Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;
 
     move-object v0, p1

@@ -1,4 +1,4 @@
-.class Landroidx/constraintlayout/motion/widget/KeyTrigger$Loader;
+.class public Landroidx/constraintlayout/motion/widget/KeyTrigger$Loader;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -48,18 +48,21 @@
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
     sput-object v0, Landroidx/constraintlayout/motion/widget/KeyTrigger$Loader;->mAttrMap:Landroid/util/SparseIntArray;
 
+    .line 2
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->KeyTrigger_framePosition:I
 
     const/16 v2, 0x8
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
+    .line 3
     sget-object v0, Landroidx/constraintlayout/motion/widget/KeyTrigger$Loader;->mAttrMap:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->KeyTrigger_onCross:I
@@ -68,6 +71,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
+    .line 4
     sget-object v0, Landroidx/constraintlayout/motion/widget/KeyTrigger$Loader;->mAttrMap:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->KeyTrigger_onNegativeCross:I
@@ -76,6 +80,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
+    .line 5
     sget-object v0, Landroidx/constraintlayout/motion/widget/KeyTrigger$Loader;->mAttrMap:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->KeyTrigger_onPositiveCross:I
@@ -84,6 +89,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
+    .line 6
     sget-object v0, Landroidx/constraintlayout/motion/widget/KeyTrigger$Loader;->mAttrMap:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->KeyTrigger_motionTarget:I
@@ -92,6 +98,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
+    .line 7
     sget-object v0, Landroidx/constraintlayout/motion/widget/KeyTrigger$Loader;->mAttrMap:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->KeyTrigger_triggerId:I
@@ -100,6 +107,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
+    .line 8
     sget-object v0, Landroidx/constraintlayout/motion/widget/KeyTrigger$Loader;->mAttrMap:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->KeyTrigger_triggerSlack:I
@@ -108,6 +116,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
+    .line 9
     sget-object v0, Landroidx/constraintlayout/motion/widget/KeyTrigger$Loader;->mAttrMap:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->KeyTrigger_motion_triggerOnCollision:I
@@ -116,6 +125,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
+    .line 10
     sget-object v0, Landroidx/constraintlayout/motion/widget/KeyTrigger$Loader;->mAttrMap:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->KeyTrigger_motion_postLayoutCollision:I
@@ -124,6 +134,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
+    .line 11
     sget-object v0, Landroidx/constraintlayout/motion/widget/KeyTrigger$Loader;->mAttrMap:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->KeyTrigger_triggerReceiver:I
@@ -132,6 +143,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
+    .line 12
     sget-object v0, Landroidx/constraintlayout/motion/widget/KeyTrigger$Loader;->mAttrMap:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->KeyTrigger_viewTransitionOnCross:I
@@ -140,6 +152,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
+    .line 13
     sget-object v0, Landroidx/constraintlayout/motion/widget/KeyTrigger$Loader;->mAttrMap:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->KeyTrigger_viewTransitionOnNegativeCross:I
@@ -148,6 +161,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
+    .line 14
     sget-object v0, Landroidx/constraintlayout/motion/widget/KeyTrigger$Loader;->mAttrMap:Landroid/util/SparseIntArray;
 
     sget v1, Landroidx/constraintlayout/widget/R$styleable;->KeyTrigger_viewTransitionOnPositiveCross:I
@@ -162,6 +176,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -182,6 +197,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->getIndexCount()I
 
     move-result p2
@@ -191,10 +207,12 @@
     :goto_0
     if-ge v0, p2, :cond_3
 
+    .line 2
     invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->getIndex(I)I
 
     move-result v1
 
+    .line 3
     sget-object v2, Landroidx/constraintlayout/motion/widget/KeyTrigger$Loader;->mAttrMap:Landroid/util/SparseIntArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseIntArray;->get(I)I
@@ -203,6 +221,7 @@
 
     packed-switch v2, :pswitch_data_0
 
+    .line 4
     :pswitch_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -240,6 +259,7 @@
 
     goto/16 :goto_1
 
+    .line 5
     :pswitch_1
     iget v2, p0, Landroidx/constraintlayout/motion/widget/KeyTrigger;->mViewTransitionOnPositiveCross:I
 
@@ -251,6 +271,7 @@
 
     goto/16 :goto_1
 
+    .line 6
     :pswitch_2
     iget v2, p0, Landroidx/constraintlayout/motion/widget/KeyTrigger;->mViewTransitionOnNegativeCross:I
 
@@ -262,6 +283,7 @@
 
     goto/16 :goto_1
 
+    .line 7
     :pswitch_3
     iget v2, p0, Landroidx/constraintlayout/motion/widget/KeyTrigger;->mViewTransitionOnCross:I
 
@@ -273,6 +295,7 @@
 
     goto/16 :goto_1
 
+    .line 8
     :pswitch_4
     invoke-static {p0}, Landroidx/constraintlayout/motion/widget/KeyTrigger;->access$700(Landroidx/constraintlayout/motion/widget/KeyTrigger;)I
 
@@ -286,6 +309,7 @@
 
     goto/16 :goto_1
 
+    .line 9
     :pswitch_5
     invoke-static {p0}, Landroidx/constraintlayout/motion/widget/KeyTrigger;->access$600(Landroidx/constraintlayout/motion/widget/KeyTrigger;)Z
 
@@ -299,6 +323,7 @@
 
     goto/16 :goto_1
 
+    .line 10
     :pswitch_6
     invoke-static {p0}, Landroidx/constraintlayout/motion/widget/KeyTrigger;->access$500(Landroidx/constraintlayout/motion/widget/KeyTrigger;)I
 
@@ -312,6 +337,7 @@
 
     goto/16 :goto_1
 
+    .line 11
     :pswitch_7
     iget v2, p0, Landroidx/constraintlayout/motion/widget/Key;->mFramePosition:I
 
@@ -331,15 +357,18 @@
 
     div-float/2addr v1, v2
 
+    .line 12
     invoke-static {p0, v1}, Landroidx/constraintlayout/motion/widget/KeyTrigger;->access$002(Landroidx/constraintlayout/motion/widget/KeyTrigger;F)F
 
     goto :goto_1
 
+    .line 13
     :pswitch_8
     sget-boolean v2, Landroidx/constraintlayout/motion/widget/MotionLayout;->IS_IN_EDIT_MODE:Z
 
     if-eqz v2, :cond_0
 
+    .line 14
     iget v2, p0, Landroidx/constraintlayout/motion/widget/Key;->mTargetId:I
 
     invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
@@ -352,6 +381,7 @@
 
     if-ne v2, v3, :cond_2
 
+    .line 15
     invoke-virtual {p1, v1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -360,6 +390,7 @@
 
     goto :goto_1
 
+    .line 16
     :cond_0
     invoke-virtual {p1, v1}, Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
 
@@ -371,6 +402,7 @@
 
     if-ne v2, v3, :cond_1
 
+    .line 17
     invoke-virtual {p1, v1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -379,6 +411,7 @@
 
     goto :goto_1
 
+    .line 18
     :cond_1
     iget v2, p0, Landroidx/constraintlayout/motion/widget/Key;->mTargetId:I
 
@@ -390,6 +423,7 @@
 
     goto :goto_1
 
+    .line 19
     :pswitch_9
     invoke-static {p0}, Landroidx/constraintlayout/motion/widget/KeyTrigger;->access$400(Landroidx/constraintlayout/motion/widget/KeyTrigger;)I
 
@@ -403,6 +437,7 @@
 
     goto :goto_1
 
+    .line 20
     :pswitch_a
     iget v2, p0, Landroidx/constraintlayout/motion/widget/KeyTrigger;->mTriggerSlack:F
 
@@ -414,6 +449,7 @@
 
     goto :goto_1
 
+    .line 21
     :pswitch_b
     invoke-virtual {p1, v1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -423,6 +459,7 @@
 
     goto :goto_1
 
+    .line 22
     :pswitch_c
     invoke-virtual {p1, v1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -432,6 +469,7 @@
 
     goto :goto_1
 
+    .line 23
     :pswitch_d
     invoke-virtual {p1, v1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 

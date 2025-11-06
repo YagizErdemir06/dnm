@@ -26,33 +26,35 @@
 # static fields
 .field private static final DESCRIPTOR:Ljava/lang/String; = "com.xiaomi.mi_connect_service.IMiConnectCallback"
 
-.field static final TRANSACTION_onAdvertisingResult:I = 0x1
+.field public static final TRANSACTION_onAdvertisingResult:I = 0x1
 
-.field static final TRANSACTION_onConnectionInitiated:I = 0x4
+.field public static final TRANSACTION_onConnectionInitiated:I = 0x4
 
-.field static final TRANSACTION_onConnectionResult:I = 0x5
+.field public static final TRANSACTION_onConnectionResult:I = 0x5
 
-.field static final TRANSACTION_onDisconnection:I = 0x6
+.field public static final TRANSACTION_onDisconnection:I = 0x6
 
-.field static final TRANSACTION_onDiscoveryResult:I = 0x2
+.field public static final TRANSACTION_onDiscoveryResult:I = 0x2
 
-.field static final TRANSACTION_onEndpointFound:I = 0x3
+.field public static final TRANSACTION_onEndpointFound:I = 0x3
 
-.field static final TRANSACTION_onEndpointLost:I = 0x9
+.field public static final TRANSACTION_onEndpointLost:I = 0x9
 
-.field static final TRANSACTION_onPayloadReceived:I = 0x8
+.field public static final TRANSACTION_onPayloadReceived:I = 0x8
 
-.field static final TRANSACTION_onPayloadSentResult:I = 0x7
+.field public static final TRANSACTION_onPayloadSentResult:I = 0x7
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
     const-string v0, "com.xiaomi.mi_connect_service.IMiConnectCallback"
 
+    .line 2
     invoke-virtual {p0, p0, v0}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
     return-void
@@ -70,20 +72,24 @@
     :cond_0
     const-string v0, "com.xiaomi.mi_connect_service.IMiConnectCallback"
 
+    .line 1
     invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
+    .line 2
     instance-of v1, v0, Lcom/xiaomi/mi_connect_service/IMiConnectCallback;
 
     if-eqz v1, :cond_1
 
+    .line 3
     check-cast v0, Lcom/xiaomi/mi_connect_service/IMiConnectCallback;
 
     return-object v0
 
+    .line 4
     :cond_1
     new-instance v0, Lcom/xiaomi/mi_connect_service/IMiConnectCallback$Stub$Proxy;
 
@@ -95,6 +101,7 @@
 .method public static getDefaultImpl()Lcom/xiaomi/mi_connect_service/IMiConnectCallback;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/IMiConnectCallback$Stub$Proxy;->sDefaultImpl:Lcom/xiaomi/mi_connect_service/IMiConnectCallback;
 
     return-object v0
@@ -103,12 +110,14 @@
 .method public static setDefaultImpl(Lcom/xiaomi/mi_connect_service/IMiConnectCallback;)Z
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/IMiConnectCallback$Stub$Proxy;->sDefaultImpl:Lcom/xiaomi/mi_connect_service/IMiConnectCallback;
 
     if-nez v0, :cond_1
 
     if-eqz p0, :cond_0
 
+    .line 2
     sput-object p0, Lcom/xiaomi/mi_connect_service/IMiConnectCallback$Stub$Proxy;->sDefaultImpl:Lcom/xiaomi/mi_connect_service/IMiConnectCallback;
 
     const/4 p0, 0x1
@@ -120,6 +129,7 @@
 
     return p0
 
+    .line 3
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -156,189 +166,237 @@
 
     packed-switch p1, :pswitch_data_0
 
+    .line 1
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result p0
 
     return p0
 
+    .line 2
     :pswitch_0
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 3
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
+    .line 4
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p3
 
+    .line 5
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p2
 
+    .line 6
     invoke-interface {p0, p1, p3, p2}, Lcom/xiaomi/mi_connect_service/IMiConnectCallback;->onEndpointLost(IILjava/lang/String;)V
 
     return v1
 
+    .line 7
     :pswitch_1
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 8
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
+    .line 9
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p3
 
+    .line 10
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object p2
 
+    .line 11
     invoke-interface {p0, p1, p3, p2}, Lcom/xiaomi/mi_connect_service/IMiConnectCallback;->onPayloadReceived(II[B)V
 
     return v1
 
+    .line 12
     :pswitch_2
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 13
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
+    .line 14
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p3
 
+    .line 15
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p2
 
+    .line 16
     invoke-interface {p0, p1, p3, p2}, Lcom/xiaomi/mi_connect_service/IMiConnectCallback;->onPayloadSentResult(III)V
 
     return v1
 
+    .line 17
     :pswitch_3
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 18
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
+    .line 19
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p2
 
+    .line 20
     invoke-interface {p0, p1, p2}, Lcom/xiaomi/mi_connect_service/IMiConnectCallback;->onDisconnection(II)V
 
     return v1
 
+    .line 21
     :pswitch_4
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 22
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
+    .line 23
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p3
 
+    .line 24
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p4
 
+    .line 25
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p2
 
+    .line 26
     invoke-interface {p0, p1, p3, p4, p2}, Lcom/xiaomi/mi_connect_service/IMiConnectCallback;->onConnectionResult(IILjava/lang/String;I)V
 
     return v1
 
+    .line 27
     :pswitch_5
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 28
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
+    .line 29
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
+    .line 30
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
 
+    .line 31
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v6
 
+    .line 32
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v7
 
     move-object v2, p0
 
+    .line 33
     invoke-interface/range {v2 .. v7}, Lcom/xiaomi/mi_connect_service/IMiConnectCallback;->onConnectionInitiated(IILjava/lang/String;[B[B)V
 
     return v1
 
+    .line 34
     :pswitch_6
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 35
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
+    .line 36
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p3
 
+    .line 37
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object p4
 
+    .line 38
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object p2
 
+    .line 39
     invoke-interface {p0, p1, p3, p4, p2}, Lcom/xiaomi/mi_connect_service/IMiConnectCallback;->onEndpointFound(IILjava/lang/String;[B)V
 
     return v1
 
+    .line 40
     :pswitch_7
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 41
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
+    .line 42
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p2
 
+    .line 43
     invoke-interface {p0, p1, p2}, Lcom/xiaomi/mi_connect_service/IMiConnectCallback;->onDiscoveryResult(II)V
 
     return v1
 
+    .line 44
     :pswitch_8
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 45
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
+    .line 46
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result p2
 
+    .line 47
     invoke-interface {p0, p1, p2}, Lcom/xiaomi/mi_connect_service/IMiConnectCallback;->onAdvertisingResult(II)V
 
     return v1
 
+    .line 48
     :cond_0
     invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 

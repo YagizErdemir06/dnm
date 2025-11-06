@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/offline/DownloadHelper$DownloadTrackSelection$Factory;
+.class public final Lcom/google/android/exoplayer2/offline/DownloadHelper$DownloadTrackSelection$Factory;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -41,17 +41,20 @@
 .method public createTrackSelections([Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;Lcom/google/android/exoplayer2/upstream/BandwidthMeter;Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;Lcom/google/android/exoplayer2/Timeline;)[Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;
     .locals 1
 
+    .line 1
     array-length p0, p1
 
     new-array p0, p0, [Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;
 
     const/4 p2, 0x0
 
+    .line 2
     :goto_0
     array-length p3, p1
 
     if-ge p2, p3, :cond_1
 
+    .line 3
     aget-object p3, p1, p2
 
     if-nez p3, :cond_0
@@ -60,16 +63,19 @@
 
     goto :goto_1
 
+    .line 4
     :cond_0
-    new-instance p4, Lcom/google/android/exoplayer2/offline/DownloadHelper$DownloadTrackSelection;
+    new-instance p3, Lcom/google/android/exoplayer2/offline/DownloadHelper$DownloadTrackSelection;
 
-    iget-object v0, p3, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;->group:Lcom/google/android/exoplayer2/source/TrackGroup;
+    aget-object p4, p1, p2
 
-    iget-object p3, p3, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;->tracks:[I
+    iget-object p4, p4, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;->group:Lcom/google/android/exoplayer2/source/TrackGroup;
 
-    invoke-direct {p4, v0, p3}, Lcom/google/android/exoplayer2/offline/DownloadHelper$DownloadTrackSelection;-><init>(Lcom/google/android/exoplayer2/source/TrackGroup;[I)V
+    aget-object v0, p1, p2
 
-    move-object p3, p4
+    iget-object v0, v0, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;->tracks:[I
+
+    invoke-direct {p3, p4, v0}, Lcom/google/android/exoplayer2/offline/DownloadHelper$DownloadTrackSelection;-><init>(Lcom/google/android/exoplayer2/source/TrackGroup;[I)V
 
     :goto_1
     aput-object p3, p0, p2

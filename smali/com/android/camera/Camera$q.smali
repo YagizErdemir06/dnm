@@ -20,23 +20,23 @@
     value = {
         "Ljava/lang/Object;",
         "Lio/reactivex/functions/BiFunction<",
-        "Lb8/k<",
-        "Lq7/v4;",
+        "Ld/d/a/d7/o8/a/k<",
+        "Ld/d/a/d7/z7;",
         ">;",
-        "Lc8/o;",
-        "Lb8/k<",
-        "Lq7/v4;",
+        "Ld/d/a/d7/o8/b/u;",
+        "Ld/d/a/d7/o8/a/k<",
+        "Ld/d/a/d7/z7;",
         ">;>;"
     }
 .end annotation
 
 
 # static fields
-.field public static final b:Ljava/lang/String; = "FunctionCameraOpenResult"
+.field private static final c:Ljava/lang/String; = "FunctionCameraOpenResult"
 
 
 # instance fields
-.field public final a:Ljava/lang/ref/WeakReference;
+.field private final d:Ljava/lang/ref/WeakReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference<",
@@ -50,32 +50,53 @@
 # direct methods
 .method public constructor <init>(Lcom/android/camera/Camera;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "activity"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lcom/android/camera/Camera$q;->a:Ljava/lang/ref/WeakReference;
+    iput-object v0, p0, Lcom/android/camera/Camera$q;->d:Ljava/lang/ref/WeakReference;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lb8/k;Lc8/o;)Lb8/k;
+.method public a(Ld/d/a/d7/o8/a/k;Ld/d/a/d7/o8/b/u;)Ld/d/a/d7/o8/a/k;
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "moduleNullHolder",
+            "camera2Result"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lb8/k<",
-            "Lq7/v4;",
+            "Ld/d/a/d7/o8/a/k<",
+            "Ld/d/a/d7/z7;",
             ">;",
-            "Lc8/o;",
+            "Ld/d/a/d7/o8/b/u;",
             ")",
-            "Lb8/k<",
-            "Lq7/v4;",
+            "Ld/d/a/d7/o8/a/k<",
+            "Ld/d/a/d7/z7;",
             ">;"
         }
     .end annotation
@@ -86,10 +107,12 @@
         }
     .end annotation
 
-    invoke-virtual {p2}, Lc8/o;->c()I
+    .line 1
+    invoke-virtual {p2}, Ld/d/a/d7/o8/b/u;->c()I
 
     move-result v0
 
+    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -118,25 +141,29 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
-    invoke-interface {p1}, Lb8/k;->b()Z
+    invoke-interface {p1}, Ld/d/a/d7/o8/a/k;->b()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-interface {p1}, Lb8/k;->get()Ljava/lang/Object;
+    .line 4
+    invoke-interface {p1}, Ld/d/a/d7/o8/a/k;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lq7/v4;
+    check-cast v0, Ld/d/a/d7/z7;
 
-    invoke-interface {v0}, Lq7/v4;->setDeparted()V
+    .line 5
+    invoke-interface {v0}, Ld/d/a/d7/z7;->setDeparted()V
 
+    .line 6
     :cond_1
-    iget-object p0, p0, Lcom/android/camera/Camera$q;->a:Ljava/lang/ref/WeakReference;
+    iget-object p0, p0, Lcom/android/camera/Camera$q;->d:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -144,11 +171,12 @@
 
     if-eqz p0, :cond_2
 
-    invoke-virtual {p2}, Lc8/o;->b()I
+    .line 7
+    invoke-virtual {p2}, Ld/d/a/d7/o8/b/u;->b()I
 
     move-result p2
 
-    invoke-static {p0, p2}, Lcom/android/camera/Camera;->el(Lcom/android/camera/Camera;I)V
+    invoke-static {p0, p2}, Lcom/android/camera/Camera;->Si(Lcom/android/camera/Camera;I)V
 
     :cond_2
     :goto_0
@@ -157,17 +185,29 @@
 
 .method public bridge synthetic apply(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "moduleNullHolder",
+            "camera2Result"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
         }
     .end annotation
 
-    check-cast p1, Lb8/k;
+    .line 1
+    check-cast p1, Ld/d/a/d7/o8/a/k;
 
-    check-cast p2, Lc8/o;
+    check-cast p2, Ld/d/a/d7/o8/b/u;
 
-    invoke-virtual {p0, p1, p2}, Lcom/android/camera/Camera$q;->a(Lb8/k;Lc8/o;)Lb8/k;
+    invoke-virtual {p0, p1, p2}, Lcom/android/camera/Camera$q;->a(Ld/d/a/d7/o8/a/k;Ld/d/a/d7/o8/b/u;)Ld/d/a/d7/o8/a/k;
 
     move-result-object p0
 

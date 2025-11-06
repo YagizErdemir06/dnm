@@ -1,4 +1,4 @@
-.class final Lcom/bumptech/glide/load/engine/ActiveResources$ResourceWeakReference;
+.class public final Lcom/bumptech/glide/load/engine/ActiveResources$ResourceWeakReference;
 .super Ljava/lang/ref/WeakReference;
 .source "SourceFile"
 
@@ -26,11 +26,11 @@
 
 
 # instance fields
-.field final isCacheable:Z
+.field public final isCacheable:Z
 
-.field final key:Lcom/bumptech/glide/load/Key;
+.field public final key:Lcom/bumptech/glide/load/Key;
 
-.field resource:Lcom/bumptech/glide/load/engine/Resource;
+.field public resource:Lcom/bumptech/glide/load/engine/Resource;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -71,8 +71,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p2, p3}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V
 
+    .line 2
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -81,6 +83,7 @@
 
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/ActiveResources$ResourceWeakReference;->key:Lcom/bumptech/glide/load/Key;
 
+    .line 3
     invoke-virtual {p2}, Lcom/bumptech/glide/load/engine/EngineResource;->isMemoryCacheable()Z
 
     move-result p1
@@ -89,6 +92,7 @@
 
     if-eqz p4, :cond_0
 
+    .line 4
     invoke-virtual {p2}, Lcom/bumptech/glide/load/engine/EngineResource;->getResource()Lcom/bumptech/glide/load/engine/Resource;
 
     move-result-object p1
@@ -107,6 +111,7 @@
     :goto_0
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/ActiveResources$ResourceWeakReference;->resource:Lcom/bumptech/glide/load/engine/Resource;
 
+    .line 5
     invoke-virtual {p2}, Lcom/bumptech/glide/load/engine/EngineResource;->isMemoryCacheable()Z
 
     move-result p1
@@ -123,9 +128,11 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Lcom/bumptech/glide/load/engine/ActiveResources$ResourceWeakReference;->resource:Lcom/bumptech/glide/load/engine/Resource;
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->clear()V
+    .line 2
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->clear()V
 
     return-void
 .end method

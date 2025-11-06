@@ -1,4 +1,4 @@
-.class Lcom/google/common/graph/Graphs$TransposedNetwork;
+.class public Lcom/google/common/graph/Graphs$TransposedNetwork;
 .super Lcom/google/common/graph/ForwardingNetwork;
 .source "SourceFile"
 
@@ -48,8 +48,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/graph/ForwardingNetwork;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/graph/Graphs$TransposedNetwork;->network:Lcom/google/common/graph/Network;
 
     return-void
@@ -58,6 +60,7 @@
 .method public static synthetic access$200(Lcom/google/common/graph/Graphs$TransposedNetwork;)Lcom/google/common/graph/Network;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/Graphs$TransposedNetwork;->network:Lcom/google/common/graph/Network;
 
     return-object p0
@@ -75,6 +78,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/Graphs$TransposedNetwork;->network:Lcom/google/common/graph/Network;
 
     return-object p0
@@ -236,6 +240,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/Graphs$TransposedNetwork;->delegate()Lcom/google/common/graph/Network;
 
     move-result-object p0
@@ -257,6 +262,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/Graphs$TransposedNetwork;->delegate()Lcom/google/common/graph/Network;
 
     move-result-object p0
@@ -278,6 +284,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/Graphs$TransposedNetwork;->delegate()Lcom/google/common/graph/Network;
 
     move-result-object v0
@@ -286,6 +293,7 @@
 
     move-result-object p1
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/graph/Graphs$TransposedNetwork;->network:Lcom/google/common/graph/Network;
 
     invoke-virtual {p1}, Lcom/google/common/graph/EndpointPair;->nodeV()Ljava/lang/Object;
@@ -311,6 +319,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/Graphs$TransposedNetwork;->delegate()Lcom/google/common/graph/Network;
 
     move-result-object p0
@@ -332,6 +341,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/Graphs$TransposedNetwork;->delegate()Lcom/google/common/graph/Network;
 
     move-result-object p0

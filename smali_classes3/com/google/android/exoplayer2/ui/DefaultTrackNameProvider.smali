@@ -14,8 +14,10 @@
 .method public constructor <init>(Landroid/content/res/Resources;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -30,6 +32,7 @@
 .method private buildAudioChannelString(Lcom/google/android/exoplayer2/Format;)Ljava/lang/String;
     .locals 1
 
+    .line 1
     iget p1, p1, Lcom/google/android/exoplayer2/Format;->channelCount:I
 
     const/4 v0, -0x1
@@ -61,6 +64,7 @@
 
     if-eq p1, v0, :cond_1
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/DefaultTrackNameProvider;->resources:Landroid/content/res/Resources;
 
     sget p1, Lcom/google/android/exoplayer2/ui/R$string;->exo_track_surround:I
@@ -71,6 +75,7 @@
 
     return-object p0
 
+    .line 3
     :cond_1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/DefaultTrackNameProvider;->resources:Landroid/content/res/Resources;
 
@@ -82,6 +87,7 @@
 
     return-object p0
 
+    .line 4
     :cond_2
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/DefaultTrackNameProvider;->resources:Landroid/content/res/Resources;
 
@@ -93,6 +99,7 @@
 
     return-object p0
 
+    .line 5
     :cond_3
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/DefaultTrackNameProvider;->resources:Landroid/content/res/Resources;
 
@@ -104,6 +111,7 @@
 
     return-object p0
 
+    .line 6
     :cond_4
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/DefaultTrackNameProvider;->resources:Landroid/content/res/Resources;
 
@@ -123,8 +131,9 @@
 .end method
 
 .method private buildBitrateString(Lcom/google/android/exoplayer2/Format;)Ljava/lang/String;
-    .locals 3
+    .locals 4
 
+    .line 1
     iget p1, p1, Lcom/google/android/exoplayer2/Format;->bitrate:I
 
     const/4 v0, -0x1
@@ -135,6 +144,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/DefaultTrackNameProvider;->resources:Landroid/content/res/Resources;
 
@@ -144,17 +154,17 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
+    const/4 v2, 0x0
+
     int-to-float p1, p1
 
-    const v2, 0x49742400    # 1000000.0f
+    const v3, 0x49742400    # 1000000.0f
 
-    div-float/2addr p1, v2
+    div-float/2addr p1, v3
 
     invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object p1
-
-    const/4 v2, 0x0
 
     aput-object p1, v1, v2
 
@@ -169,6 +179,7 @@
 .method private buildLabelString(Lcom/google/android/exoplayer2/Format;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p1, Lcom/google/android/exoplayer2/Format;->label:Ljava/lang/String;
 
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -195,26 +206,28 @@
 
     new-array v0, v0, [Ljava/lang/String;
 
-    const/4 v1, 0x0
-
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/ui/DefaultTrackNameProvider;->buildLanguageString(Lcom/google/android/exoplayer2/Format;)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    aput-object v2, v0, v1
+    const/4 v2, 0x0
 
-    const/4 v1, 0x1
+    aput-object v1, v0, v2
 
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/ui/DefaultTrackNameProvider;->buildRoleString(Lcom/google/android/exoplayer2/Format;)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    aput-object v2, v0, v1
+    const/4 v2, 0x1
+
+    aput-object v1, v0, v2
 
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/ui/DefaultTrackNameProvider;->joinWithSeparator([Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 2
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -232,8 +245,10 @@
 .method private buildLanguageString(Lcom/google/android/exoplayer2/Format;)Ljava/lang/String;
     .locals 3
 
+    .line 1
     iget-object p0, p1, Lcom/google/android/exoplayer2/Format;->language:Ljava/lang/String;
 
+    .line 2
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p1
@@ -252,6 +267,7 @@
 
     goto :goto_1
 
+    .line 3
     :cond_0
     sget p1, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
@@ -272,15 +288,18 @@
 
     move-object p0, p1
 
+    .line 4
     :goto_0
     invoke-static {}, Lcom/google/android/exoplayer2/util/Util;->getDefaultDisplayLocale()Ljava/util/Locale;
 
     move-result-object p1
 
+    .line 5
     invoke-virtual {p0, p1}, Ljava/util/Locale;->getDisplayName(Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 6
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -294,11 +313,13 @@
 
     const/4 v1, 0x0
 
+    .line 7
     :try_start_0
     invoke-virtual {p0, v1, v0}, Ljava/lang/String;->offsetByCodePoints(II)I
 
     move-result v0
 
+    .line 8
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -313,6 +334,7 @@
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 9
     invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p1
@@ -336,8 +358,10 @@
 .method private buildResolutionString(Lcom/google/android/exoplayer2/Format;)Ljava/lang/String;
     .locals 4
 
+    .line 1
     iget v0, p1, Lcom/google/android/exoplayer2/Format;->width:I
 
+    .line 2
     iget p1, p1, Lcom/google/android/exoplayer2/Format;->height:I
 
     const/4 v1, -0x1
@@ -348,6 +372,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/DefaultTrackNameProvider;->resources:Landroid/content/res/Resources;
 
@@ -390,6 +415,7 @@
 .method private buildRoleString(Lcom/google/android/exoplayer2/Format;)Ljava/lang/String;
     .locals 6
 
+    .line 1
     iget v0, p1, Lcom/google/android/exoplayer2/Format;->roleFlags:I
 
     const/4 v1, 0x2
@@ -398,6 +424,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTrackNameProvider;->resources:Landroid/content/res/Resources;
 
     sget v2, Lcom/google/android/exoplayer2/ui/R$string;->exo_track_role_alternate:I
@@ -411,6 +438,7 @@
     :cond_0
     const-string v0, ""
 
+    .line 3
     :goto_0
     iget v2, p1, Lcom/google/android/exoplayer2/Format;->roleFlags:I
 
@@ -426,6 +454,7 @@
 
     aput-object v0, v2, v4
 
+    .line 4
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTrackNameProvider;->resources:Landroid/content/res/Resources;
 
     sget v5, Lcom/google/android/exoplayer2/ui/R$string;->exo_track_role_supplementary:I
@@ -440,6 +469,7 @@
 
     move-result-object v0
 
+    .line 5
     :cond_1
     iget v2, p1, Lcom/google/android/exoplayer2/Format;->roleFlags:I
 
@@ -451,6 +481,7 @@
 
     aput-object v0, v2, v4
 
+    .line 6
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTrackNameProvider;->resources:Landroid/content/res/Resources;
 
     sget v5, Lcom/google/android/exoplayer2/ui/R$string;->exo_track_role_commentary:I
@@ -465,6 +496,7 @@
 
     move-result-object v0
 
+    .line 7
     :cond_2
     iget p1, p1, Lcom/google/android/exoplayer2/Format;->roleFlags:I
 
@@ -476,10 +508,12 @@
 
     aput-object v0, p1, v4
 
+    .line 8
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTrackNameProvider;->resources:Landroid/content/res/Resources;
 
     sget v1, Lcom/google/android/exoplayer2/ui/R$string;->exo_track_role_closed_captions:I
 
+    .line 9
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -497,6 +531,7 @@
 .method private static inferPrimaryTrackType(Lcom/google/android/exoplayer2/Format;)I
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/MimeTypes;->getTrackType(Ljava/lang/String;)I
@@ -509,6 +544,7 @@
 
     return v0
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/Format;->codecs:Ljava/lang/String;
 
@@ -522,6 +558,7 @@
 
     return v2
 
+    .line 3
     :cond_1
     iget-object v0, p0, Lcom/google/android/exoplayer2/Format;->codecs:Ljava/lang/String;
 
@@ -535,6 +572,7 @@
 
     return v3
 
+    .line 4
     :cond_2
     iget v0, p0, Lcom/google/android/exoplayer2/Format;->width:I
 
@@ -546,6 +584,7 @@
 
     goto :goto_1
 
+    .line 5
     :cond_3
     iget v0, p0, Lcom/google/android/exoplayer2/Format;->channelCount:I
 
@@ -572,35 +611,39 @@
 .method private varargs joinWithSeparator([Ljava/lang/String;)Ljava/lang/String;
     .locals 8
 
+    .line 1
     array-length v0, p1
 
-    const-string v1, ""
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const-string v2, ""
 
-    move v3, v2
+    move v3, v1
 
     :goto_0
     if-ge v3, v0, :cond_2
 
     aget-object v4, p1, v3
 
+    .line 2
     invoke-virtual {v4}, Ljava/lang/String;->length()I
 
     move-result v5
 
     if-lez v5, :cond_1
 
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    .line 3
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    move-object v1, v4
+    move-object v2, v4
 
     goto :goto_1
 
+    .line 4
     :cond_0
     iget-object v5, p0, Lcom/google/android/exoplayer2/ui/DefaultTrackNameProvider;->resources:Landroid/content/res/Resources;
 
@@ -610,15 +653,15 @@
 
     new-array v7, v7, [Ljava/lang/Object;
 
-    aput-object v1, v7, v2
+    aput-object v2, v7, v1
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    aput-object v4, v7, v1
+    aput-object v4, v7, v2
 
     invoke-virtual {v5, v6, v7}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
     :cond_1
     :goto_1
@@ -627,7 +670,7 @@
     goto :goto_0
 
     :cond_2
-    return-object v1
+    return-object v2
 .end method
 
 
@@ -635,6 +678,7 @@
 .method public getTrackName(Lcom/google/android/exoplayer2/Format;)Ljava/lang/String;
     .locals 5
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/exoplayer2/ui/DefaultTrackNameProvider;->inferPrimaryTrackType(Lcom/google/android/exoplayer2/Format;)I
 
     move-result v0
@@ -651,6 +695,7 @@
 
     new-array v0, v2, [Ljava/lang/String;
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/ui/DefaultTrackNameProvider;->buildRoleString(Lcom/google/android/exoplayer2/Format;)Ljava/lang/String;
 
     move-result-object v2
@@ -669,6 +714,7 @@
 
     aput-object p1, v0, v4
 
+    .line 3
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/ui/DefaultTrackNameProvider;->joinWithSeparator([Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -680,35 +726,41 @@
 
     new-array v0, v2, [Ljava/lang/String;
 
+    .line 4
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/ui/DefaultTrackNameProvider;->buildLanguageOrLabelString(Lcom/google/android/exoplayer2/Format;)Ljava/lang/String;
 
     move-result-object v2
 
     aput-object v2, v0, v1
 
+    .line 5
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/ui/DefaultTrackNameProvider;->buildAudioChannelString(Lcom/google/android/exoplayer2/Format;)Ljava/lang/String;
 
     move-result-object v1
 
     aput-object v1, v0, v3
 
+    .line 6
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/ui/DefaultTrackNameProvider;->buildBitrateString(Lcom/google/android/exoplayer2/Format;)Ljava/lang/String;
 
     move-result-object p1
 
     aput-object p1, v0, v4
 
+    .line 7
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/ui/DefaultTrackNameProvider;->joinWithSeparator([Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     goto :goto_0
 
+    .line 8
     :cond_1
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/ui/DefaultTrackNameProvider;->buildLanguageOrLabelString(Lcom/google/android/exoplayer2/Format;)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 9
     :goto_0
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 

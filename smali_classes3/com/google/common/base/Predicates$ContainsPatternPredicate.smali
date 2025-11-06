@@ -1,4 +1,4 @@
-.class Lcom/google/common/base/Predicates$ContainsPatternPredicate;
+.class public Lcom/google/common/base/Predicates$ContainsPatternPredicate;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -36,15 +36,17 @@
 
 
 # instance fields
-.field final pattern:Lcom/google/common/base/CommonPattern;
+.field public final pattern:Lcom/google/common/base/CommonPattern;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/base/CommonPattern;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -95,14 +97,17 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/common/base/Predicates$ContainsPatternPredicate;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/common/base/Predicates$ContainsPatternPredicate;
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/base/Predicates$ContainsPatternPredicate;->pattern:Lcom/google/common/base/CommonPattern;
 
     invoke-virtual {v0}, Lcom/google/common/base/CommonPattern;->pattern()Ljava/lang/String;
@@ -123,6 +128,7 @@
 
     iget-object p0, p0, Lcom/google/common/base/Predicates$ContainsPatternPredicate;->pattern:Lcom/google/common/base/CommonPattern;
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/common/base/CommonPattern;->flags()I
 
     move-result p0
@@ -148,6 +154,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 1
     iget-object v1, p0, Lcom/google/common/base/Predicates$ContainsPatternPredicate;->pattern:Lcom/google/common/base/CommonPattern;
 
     invoke-virtual {v1}, Lcom/google/common/base/CommonPattern;->pattern()Ljava/lang/String;
@@ -182,14 +189,17 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/base/Predicates$ContainsPatternPredicate;->pattern:Lcom/google/common/base/CommonPattern;
 
+    .line 2
     invoke-static {v0}, Lcom/google/common/base/MoreObjects;->toStringHelper(Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/google/common/base/Predicates$ContainsPatternPredicate;->pattern:Lcom/google/common/base/CommonPattern;
 
+    .line 3
     invoke-virtual {v1}, Lcom/google/common/base/CommonPattern;->pattern()Ljava/lang/String;
 
     move-result-object v1
@@ -202,6 +212,7 @@
 
     iget-object p0, p0, Lcom/google/common/base/Predicates$ContainsPatternPredicate;->pattern:Lcom/google/common/base/CommonPattern;
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/common/base/CommonPattern;->flags()I
 
     move-result p0
@@ -212,10 +223,12 @@
 
     move-result-object p0
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/common/base/MoreObjects$ToStringHelper;->toString()Ljava/lang/String;
 
     move-result-object p0
 
+    .line 6
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0

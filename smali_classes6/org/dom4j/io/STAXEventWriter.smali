@@ -183,6 +183,7 @@
 .method public static synthetic access$000(Lorg/dom4j/io/STAXEventWriter;)Ljavax/xml/stream/XMLEventFactory;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/STAXEventWriter;->factory:Ljavax/xml/stream/XMLEventFactory;
 
     return-object p0
@@ -191,6 +192,7 @@
 .method private createEntityReference(Lorg/dom4j/Entity;)Ljavax/xml/stream/events/EntityReference;
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/STAXEventWriter;->factory:Ljavax/xml/stream/XMLEventFactory;
 
     invoke-interface {p1}, Lorg/dom4j/Node;->getName()Ljava/lang/String;
@@ -211,6 +213,7 @@
 .method public createAttribute(Lorg/dom4j/Attribute;)Ljavax/xml/stream/events/Attribute;
     .locals 1
 
+    .line 1
     invoke-interface {p1}, Lorg/dom4j/Attribute;->getQName()Lorg/dom4j/QName;
 
     move-result-object v0
@@ -219,10 +222,12 @@
 
     move-result-object v0
 
+    .line 2
     invoke-interface {p1}, Lorg/dom4j/Attribute;->getValue()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 3
     iget-object p0, p0, Lorg/dom4j/io/STAXEventWriter;->factory:Ljavax/xml/stream/XMLEventFactory;
 
     invoke-virtual {p0, v0, p1}, Ljavax/xml/stream/XMLEventFactory;->createAttribute(Ljavax/xml/namespace/QName;Ljava/lang/String;)Ljavax/xml/stream/events/Attribute;
@@ -269,6 +274,7 @@
 .method public createComment(Lorg/dom4j/Comment;)Ljavax/xml/stream/events/Comment;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/STAXEventWriter;->factory:Ljavax/xml/stream/XMLEventFactory;
 
     invoke-interface {p1}, Lorg/dom4j/Node;->getText()Ljava/lang/String;
@@ -285,15 +291,18 @@
 .method public createDTD(Lorg/dom4j/DocumentType;)Ljavax/xml/stream/events/DTD;
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/io/StringWriter;
 
     invoke-direct {v0}, Ljava/io/StringWriter;-><init>()V
 
+    .line 2
     :try_start_0
     invoke-interface {p1, v0}, Lorg/dom4j/Node;->write(Ljava/io/Writer;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 3
     iget-object p0, p0, Lorg/dom4j/io/STAXEventWriter;->factory:Ljavax/xml/stream/XMLEventFactory;
 
     invoke-virtual {v0}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
@@ -309,6 +318,7 @@
     :catch_0
     move-exception p0
 
+    .line 4
     new-instance p1, Ljava/lang/RuntimeException;
 
     const-string v0, "Error writing DTD"
@@ -321,6 +331,7 @@
 .method public createEndDocument(Lorg/dom4j/Document;)Ljavax/xml/stream/events/EndDocument;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/STAXEventWriter;->factory:Ljavax/xml/stream/XMLEventFactory;
 
     invoke-virtual {p0}, Ljavax/xml/stream/XMLEventFactory;->createEndDocument()Ljavax/xml/stream/events/EndDocument;
@@ -333,6 +344,7 @@
 .method public createEndElement(Lorg/dom4j/Element;)Ljavax/xml/stream/events/EndElement;
     .locals 2
 
+    .line 1
     invoke-interface {p1}, Lorg/dom4j/Element;->getQName()Lorg/dom4j/QName;
 
     move-result-object v0
@@ -341,6 +353,7 @@
 
     move-result-object v0
 
+    .line 2
     new-instance v1, Lorg/dom4j/io/STAXEventWriter$NamespaceIterator;
 
     invoke-interface {p1}, Lorg/dom4j/Element;->declaredNamespaces()Ljava/util/List;
@@ -353,6 +366,7 @@
 
     invoke-direct {v1, p0, p1}, Lorg/dom4j/io/STAXEventWriter$NamespaceIterator;-><init>(Lorg/dom4j/io/STAXEventWriter;Ljava/util/Iterator;)V
 
+    .line 3
     iget-object p0, p0, Lorg/dom4j/io/STAXEventWriter;->factory:Ljavax/xml/stream/XMLEventFactory;
 
     invoke-virtual {p0, v0, v1}, Ljavax/xml/stream/XMLEventFactory;->createEndElement(Ljavax/xml/namespace/QName;Ljava/util/Iterator;)Ljavax/xml/stream/events/EndElement;
@@ -365,14 +379,17 @@
 .method public createNamespace(Lorg/dom4j/Namespace;)Ljavax/xml/stream/events/Namespace;
     .locals 1
 
+    .line 1
     invoke-virtual {p1}, Lorg/dom4j/Namespace;->getPrefix()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p1}, Lorg/dom4j/Namespace;->getURI()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 3
     iget-object p0, p0, Lorg/dom4j/io/STAXEventWriter;->factory:Ljavax/xml/stream/XMLEventFactory;
 
     invoke-virtual {p0, v0, p1}, Ljavax/xml/stream/XMLEventFactory;->createNamespace(Ljava/lang/String;Ljava/lang/String;)Ljavax/xml/stream/events/Namespace;
@@ -385,14 +402,17 @@
 .method public createProcessingInstruction(Lorg/dom4j/ProcessingInstruction;)Ljavax/xml/stream/events/ProcessingInstruction;
     .locals 1
 
+    .line 1
     invoke-interface {p1}, Lorg/dom4j/ProcessingInstruction;->getTarget()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 2
     invoke-interface {p1}, Lorg/dom4j/ProcessingInstruction;->getText()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 3
     iget-object p0, p0, Lorg/dom4j/io/STAXEventWriter;->factory:Ljavax/xml/stream/XMLEventFactory;
 
     invoke-virtual {p0, v0, p1}, Ljavax/xml/stream/XMLEventFactory;->createProcessingInstruction(Ljava/lang/String;Ljava/lang/String;)Ljavax/xml/stream/events/ProcessingInstruction;
@@ -405,6 +425,7 @@
 .method public createQName(Lorg/dom4j/QName;)Ljavax/xml/namespace/QName;
     .locals 2
 
+    .line 1
     new-instance p0, Ljavax/xml/namespace/QName;
 
     invoke-virtual {p1}, Lorg/dom4j/QName;->getNamespaceURI()Ljava/lang/String;
@@ -427,12 +448,14 @@
 .method public createStartDocument(Lorg/dom4j/Document;)Ljavax/xml/stream/events/StartDocument;
     .locals 0
 
+    .line 1
     invoke-interface {p1}, Lorg/dom4j/Document;->getXMLEncoding()Ljava/lang/String;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
+    .line 2
     iget-object p0, p0, Lorg/dom4j/io/STAXEventWriter;->factory:Ljavax/xml/stream/XMLEventFactory;
 
     invoke-virtual {p0, p1}, Ljavax/xml/stream/XMLEventFactory;->createStartDocument(Ljava/lang/String;)Ljavax/xml/stream/events/StartDocument;
@@ -441,6 +464,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lorg/dom4j/io/STAXEventWriter;->factory:Ljavax/xml/stream/XMLEventFactory;
 
@@ -454,6 +478,7 @@
 .method public createStartElement(Lorg/dom4j/Element;)Ljavax/xml/stream/events/StartElement;
     .locals 3
 
+    .line 1
     invoke-interface {p1}, Lorg/dom4j/Element;->getQName()Lorg/dom4j/QName;
 
     move-result-object v0
@@ -462,6 +487,7 @@
 
     move-result-object v0
 
+    .line 2
     new-instance v1, Lorg/dom4j/io/STAXEventWriter$AttributeIterator;
 
     invoke-interface {p1}, Lorg/dom4j/Element;->attributeIterator()Ljava/util/Iterator;
@@ -470,6 +496,7 @@
 
     invoke-direct {v1, p0, v2}, Lorg/dom4j/io/STAXEventWriter$AttributeIterator;-><init>(Lorg/dom4j/io/STAXEventWriter;Ljava/util/Iterator;)V
 
+    .line 3
     new-instance v2, Lorg/dom4j/io/STAXEventWriter$NamespaceIterator;
 
     invoke-interface {p1}, Lorg/dom4j/Element;->declaredNamespaces()Ljava/util/List;
@@ -482,6 +509,7 @@
 
     invoke-direct {v2, p0, p1}, Lorg/dom4j/io/STAXEventWriter$NamespaceIterator;-><init>(Lorg/dom4j/io/STAXEventWriter;Ljava/util/Iterator;)V
 
+    .line 4
     iget-object p0, p0, Lorg/dom4j/io/STAXEventWriter;->factory:Ljavax/xml/stream/XMLEventFactory;
 
     invoke-virtual {p0, v0, v1, v2}, Ljavax/xml/stream/XMLEventFactory;->createStartElement(Ljavax/xml/namespace/QName;Ljava/util/Iterator;Ljava/util/Iterator;)Ljavax/xml/stream/events/StartElement;
@@ -494,6 +522,7 @@
 .method public getConsumer()Ljavax/xml/stream/util/XMLEventConsumer;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/STAXEventWriter;->consumer:Ljavax/xml/stream/util/XMLEventConsumer;
 
     return-object p0
@@ -502,6 +531,7 @@
 .method public getEventFactory()Ljavax/xml/stream/XMLEventFactory;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/STAXEventWriter;->factory:Ljavax/xml/stream/XMLEventFactory;
 
     return-object p0
@@ -510,6 +540,7 @@
 .method public setConsumer(Ljavax/xml/stream/util/XMLEventConsumer;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/io/STAXEventWriter;->consumer:Ljavax/xml/stream/util/XMLEventConsumer;
 
     return-void
@@ -518,6 +549,7 @@
 .method public setEventFactory(Ljavax/xml/stream/XMLEventFactory;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/io/STAXEventWriter;->factory:Ljavax/xml/stream/XMLEventFactory;
 
     return-void
@@ -531,6 +563,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/STAXEventWriter;->consumer:Ljavax/xml/stream/util/XMLEventConsumer;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/io/STAXEventWriter;->createAttribute(Lorg/dom4j/Attribute;)Ljavax/xml/stream/events/Attribute;
@@ -550,6 +583,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/STAXEventWriter;->consumer:Ljavax/xml/stream/util/XMLEventConsumer;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/io/STAXEventWriter;->createCharacters(Lorg/dom4j/CDATA;)Ljavax/xml/stream/events/Characters;
@@ -569,6 +603,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Lorg/dom4j/Branch;->nodeCount()I
 
     move-result v0
@@ -578,10 +613,12 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
+    .line 2
     invoke-interface {p1, v1}, Lorg/dom4j/Branch;->node(I)Lorg/dom4j/Node;
 
     move-result-object v2
 
+    .line 3
     invoke-virtual {p0, v2}, Lorg/dom4j/io/STAXEventWriter;->writeNode(Lorg/dom4j/Node;)V
 
     add-int/lit8 v1, v1, 0x1
@@ -600,6 +637,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/STAXEventWriter;->consumer:Ljavax/xml/stream/util/XMLEventConsumer;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/io/STAXEventWriter;->createComment(Lorg/dom4j/Comment;)Ljavax/xml/stream/events/Comment;
@@ -619,6 +657,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/STAXEventWriter;->consumer:Ljavax/xml/stream/util/XMLEventConsumer;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/io/STAXEventWriter;->createStartDocument(Lorg/dom4j/Document;)Ljavax/xml/stream/events/StartDocument;
@@ -627,8 +666,10 @@
 
     invoke-interface {v0, v1}, Ljavax/xml/stream/util/XMLEventConsumer;->add(Ljavax/xml/stream/events/XMLEvent;)V
 
+    .line 2
     invoke-virtual {p0, p1}, Lorg/dom4j/io/STAXEventWriter;->writeChildNodes(Lorg/dom4j/Branch;)V
 
+    .line 3
     iget-object v0, p0, Lorg/dom4j/io/STAXEventWriter;->consumer:Ljavax/xml/stream/util/XMLEventConsumer;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/io/STAXEventWriter;->createEndDocument(Lorg/dom4j/Document;)Ljavax/xml/stream/events/EndDocument;
@@ -648,6 +689,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/STAXEventWriter;->consumer:Ljavax/xml/stream/util/XMLEventConsumer;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/io/STAXEventWriter;->createDTD(Lorg/dom4j/DocumentType;)Ljavax/xml/stream/events/DTD;
@@ -667,6 +709,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/STAXEventWriter;->consumer:Ljavax/xml/stream/util/XMLEventConsumer;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/io/STAXEventWriter;->createStartElement(Lorg/dom4j/Element;)Ljavax/xml/stream/events/StartElement;
@@ -675,8 +718,10 @@
 
     invoke-interface {v0, v1}, Ljavax/xml/stream/util/XMLEventConsumer;->add(Ljavax/xml/stream/events/XMLEvent;)V
 
+    .line 2
     invoke-virtual {p0, p1}, Lorg/dom4j/io/STAXEventWriter;->writeChildNodes(Lorg/dom4j/Branch;)V
 
+    .line 3
     iget-object v0, p0, Lorg/dom4j/io/STAXEventWriter;->consumer:Ljavax/xml/stream/util/XMLEventConsumer;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/io/STAXEventWriter;->createEndElement(Lorg/dom4j/Element;)Ljavax/xml/stream/events/EndElement;
@@ -696,6 +741,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/STAXEventWriter;->consumer:Ljavax/xml/stream/util/XMLEventConsumer;
 
     invoke-direct {p0, p1}, Lorg/dom4j/io/STAXEventWriter;->createEntityReference(Lorg/dom4j/Entity;)Ljavax/xml/stream/events/EntityReference;
@@ -715,6 +761,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/STAXEventWriter;->consumer:Ljavax/xml/stream/util/XMLEventConsumer;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/io/STAXEventWriter;->createNamespace(Lorg/dom4j/Namespace;)Ljavax/xml/stream/events/Namespace;
@@ -734,12 +781,14 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Lorg/dom4j/Node;->getNodeType()S
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
+    .line 2
     :pswitch_0
     new-instance p0, Ljavax/xml/stream/XMLStreamException;
 
@@ -761,6 +810,7 @@
 
     throw p0
 
+    .line 3
     :pswitch_1
     check-cast p1, Lorg/dom4j/Namespace;
 
@@ -768,6 +818,7 @@
 
     goto :goto_0
 
+    .line 4
     :pswitch_2
     check-cast p1, Lorg/dom4j/DocumentType;
 
@@ -775,6 +826,7 @@
 
     goto :goto_0
 
+    .line 5
     :pswitch_3
     check-cast p1, Lorg/dom4j/Document;
 
@@ -782,6 +834,7 @@
 
     goto :goto_0
 
+    .line 6
     :pswitch_4
     check-cast p1, Lorg/dom4j/Comment;
 
@@ -789,6 +842,7 @@
 
     goto :goto_0
 
+    .line 7
     :pswitch_5
     check-cast p1, Lorg/dom4j/ProcessingInstruction;
 
@@ -796,6 +850,7 @@
 
     goto :goto_0
 
+    .line 8
     :pswitch_6
     check-cast p1, Lorg/dom4j/Entity;
 
@@ -803,6 +858,7 @@
 
     goto :goto_0
 
+    .line 9
     :pswitch_7
     check-cast p1, Lorg/dom4j/CDATA;
 
@@ -810,6 +866,7 @@
 
     goto :goto_0
 
+    .line 10
     :pswitch_8
     check-cast p1, Lorg/dom4j/Text;
 
@@ -817,6 +874,7 @@
 
     goto :goto_0
 
+    .line 11
     :pswitch_9
     check-cast p1, Lorg/dom4j/Attribute;
 
@@ -824,6 +882,7 @@
 
     goto :goto_0
 
+    .line 12
     :pswitch_a
     check-cast p1, Lorg/dom4j/Element;
 
@@ -858,6 +917,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/STAXEventWriter;->consumer:Ljavax/xml/stream/util/XMLEventConsumer;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/io/STAXEventWriter;->createProcessingInstruction(Lorg/dom4j/ProcessingInstruction;)Ljavax/xml/stream/events/ProcessingInstruction;
@@ -877,6 +937,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/STAXEventWriter;->consumer:Ljavax/xml/stream/util/XMLEventConsumer;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/io/STAXEventWriter;->createCharacters(Lorg/dom4j/Text;)Ljavax/xml/stream/events/Characters;

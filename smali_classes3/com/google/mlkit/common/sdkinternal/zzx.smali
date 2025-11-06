@@ -1,4 +1,4 @@
-.class final Lcom/google/mlkit/common/sdkinternal/zzx;
+.class public final Lcom/google/mlkit/common/sdkinternal/zzx;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,13 +7,14 @@
 
 
 # instance fields
-.field final synthetic zza:Lcom/google/mlkit/common/sdkinternal/TaskQueue;
+.field public final synthetic zza:Lcom/google/mlkit/common/sdkinternal/TaskQueue;
 
 
 # direct methods
 .method public synthetic constructor <init>(Lcom/google/mlkit/common/sdkinternal/TaskQueue;Lcom/google/mlkit/common/sdkinternal/zzw;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/mlkit/common/sdkinternal/zzx;->zza:Lcom/google/mlkit/common/sdkinternal/TaskQueue;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,6 +42,7 @@
     :cond_0
     const/4 p0, 0x0
 
+    .line 2
     :goto_0
     invoke-static {p0}, Lcom/google/android/gms/common/internal/Preconditions;->checkState(Z)V
 
@@ -52,6 +54,7 @@
 .method public final close()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/zzx;->zza:Lcom/google/mlkit/common/sdkinternal/TaskQueue;
 
     invoke-static {v0}, Lcom/google/mlkit/common/sdkinternal/TaskQueue;->zza(Lcom/google/mlkit/common/sdkinternal/TaskQueue;)Ljava/util/concurrent/atomic/AtomicReference;
@@ -64,6 +67,7 @@
 
     iget-object p0, p0, Lcom/google/mlkit/common/sdkinternal/zzx;->zza:Lcom/google/mlkit/common/sdkinternal/TaskQueue;
 
+    .line 2
     invoke-static {p0}, Lcom/google/mlkit/common/sdkinternal/TaskQueue;->zzb(Lcom/google/mlkit/common/sdkinternal/TaskQueue;)V
 
     return-void

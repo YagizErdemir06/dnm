@@ -1,4 +1,4 @@
-.class Lmiuix/animation/controller/FolmeBlink$1;
+.class public Lmiuix/animation/controller/FolmeBlink$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lmiuix/animation/controller/FolmeBlink;
+.field public final synthetic this$0:Lmiuix/animation/controller/FolmeBlink;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/animation/controller/FolmeBlink;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/animation/controller/FolmeBlink$1;->this$0:Lmiuix/animation/controller/FolmeBlink;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,14 +38,7 @@
 .method public run()V
     .locals 4
 
-    iget-object v0, p0, Lmiuix/animation/controller/FolmeBlink$1;->this$0:Lmiuix/animation/controller/FolmeBlink;
-
-    invoke-static {v0}, Lmiuix/animation/controller/FolmeBlink;->access$000(Lmiuix/animation/controller/FolmeBlink;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
+    .line 1
     iget-object v0, p0, Lmiuix/animation/controller/FolmeBlink$1;->this$0:Lmiuix/animation/controller/FolmeBlink;
 
     iget-object v0, v0, Lmiuix/animation/controller/FolmeBase;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
@@ -61,7 +55,7 @@
 
     iget-object p0, p0, Lmiuix/animation/controller/FolmeBlink$1;->this$0:Lmiuix/animation/controller/FolmeBlink;
 
-    invoke-static {p0}, Lmiuix/animation/controller/FolmeBlink;->access$100(Lmiuix/animation/controller/FolmeBlink;)Lmiuix/animation/base/AnimConfig;
+    invoke-static {p0}, Lmiuix/animation/controller/FolmeBlink;->access$000(Lmiuix/animation/controller/FolmeBlink;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object p0
 
@@ -71,6 +65,5 @@
 
     invoke-interface {v0, v1, v2}, Lmiuix/animation/IStateStyle;->to(Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
 
-    :cond_0
     return-void
 .end method

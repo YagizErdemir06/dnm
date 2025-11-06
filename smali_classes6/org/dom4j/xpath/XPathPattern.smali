@@ -108,6 +108,7 @@
 .method public getContextSupport()Lorg/jaxen/ContextSupport;
     .locals 4
 
+    .line 1
     new-instance p0, Lorg/jaxen/ContextSupport;
 
     new-instance v0, Lorg/jaxen/SimpleNamespaceContext;
@@ -134,6 +135,7 @@
 .method public getMatchType()S
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/xpath/XPathPattern;->pattern:Lorg/jaxen/pattern/Pattern;
 
     invoke-virtual {p0}, Lorg/jaxen/pattern/Pattern;->getMatchType()S
@@ -146,6 +148,7 @@
 .method public getMatchesNodeName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/xpath/XPathPattern;->pattern:Lorg/jaxen/pattern/Pattern;
 
     invoke-virtual {p0}, Lorg/jaxen/pattern/Pattern;->getMatchesNodeName()Ljava/lang/String;
@@ -158,6 +161,7 @@
 .method public getPriority()D
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/xpath/XPathPattern;->pattern:Lorg/jaxen/pattern/Pattern;
 
     invoke-virtual {p0}, Lorg/jaxen/pattern/Pattern;->getPriority()D
@@ -170,6 +174,7 @@
 .method public getText()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/xpath/XPathPattern;->text:Ljava/lang/String;
 
     return-object p0
@@ -178,6 +183,7 @@
 .method public getUnionPatterns()[Lorg/dom4j/rule/Pattern;
     .locals 5
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/xpath/XPathPattern;->pattern:Lorg/jaxen/pattern/Pattern;
 
     invoke-virtual {p0}, Lorg/jaxen/pattern/Pattern;->getUnionPatterns()[Lorg/jaxen/pattern/Pattern;
@@ -186,8 +192,10 @@
 
     if-eqz p0, :cond_1
 
+    .line 2
     array-length v0, p0
 
+    .line 3
     new-array v1, v0, [Lorg/dom4j/xpath/XPathPattern;
 
     const/4 v2, 0x0
@@ -195,6 +203,7 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
+    .line 4
     new-instance v3, Lorg/dom4j/xpath/XPathPattern;
 
     aget-object v4, p0, v2
@@ -224,6 +233,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lorg/dom4j/XPathException;
 
     iget-object p0, p0, Lorg/dom4j/xpath/XPathPattern;->text:Ljava/lang/String;
@@ -236,6 +246,7 @@
 .method public matches(Lorg/dom4j/Node;)Z
     .locals 2
 
+    .line 1
     :try_start_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -243,12 +254,15 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
+    .line 2
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 3
     iget-object v1, p0, Lorg/dom4j/xpath/XPathPattern;->context:Lorg/jaxen/Context;
 
     invoke-virtual {v1, v0}, Lorg/jaxen/Context;->setNodeSet(Ljava/util/List;)V
 
+    .line 4
     iget-object v0, p0, Lorg/dom4j/xpath/XPathPattern;->pattern:Lorg/jaxen/pattern/Pattern;
 
     iget-object v1, p0, Lorg/dom4j/xpath/XPathPattern;->context:Lorg/jaxen/Context;
@@ -264,6 +278,7 @@
     :catch_0
     move-exception p1
 
+    .line 5
     invoke-virtual {p0, p1}, Lorg/dom4j/xpath/XPathPattern;->handleJaxenException(Lorg/jaxen/JaxenException;)V
 
     const/4 p0, 0x0
@@ -274,6 +289,7 @@
 .method public setVariableContext(Lorg/jaxen/VariableContext;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/xpath/XPathPattern;->context:Lorg/jaxen/Context;
 
     invoke-virtual {p0}, Lorg/jaxen/Context;->getContextSupport()Lorg/jaxen/ContextSupport;
@@ -288,6 +304,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V

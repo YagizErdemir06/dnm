@@ -1,4 +1,4 @@
-.class Landroidx/core/location/GnssStatusWrapper;
+.class public Landroidx/core/location/GnssStatusWrapper;
 .super Landroidx/core/location/GnssStatusCompat;
 .source "SourceFile"
 
@@ -14,26 +14,19 @@
     }
 .end annotation
 
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Landroidx/core/location/GnssStatusWrapper$Api30Impl;,
-        Landroidx/core/location/GnssStatusWrapper$Api26Impl;
-    }
-.end annotation
-
 
 # instance fields
 .field private final mWrapped:Landroid/location/GnssStatus;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
+.method public constructor <init>(Landroid/location/GnssStatus;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroidx/core/location/GnssStatusCompat;-><init>()V
 
-    check-cast p1, Landroid/location/GnssStatus;
-
+    .line 2
     invoke-static {p1}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -56,6 +49,7 @@
 
     return p0
 
+    .line 1
     :cond_0
     instance-of v0, p1, Landroidx/core/location/GnssStatusWrapper;
 
@@ -65,9 +59,11 @@
 
     return p0
 
+    .line 2
     :cond_1
     check-cast p1, Landroidx/core/location/GnssStatusWrapper;
 
+    .line 3
     iget-object p0, p0, Landroidx/core/location/GnssStatusWrapper;->mWrapped:Landroid/location/GnssStatus;
 
     iget-object p1, p1, Landroidx/core/location/GnssStatusWrapper;->mWrapped:Landroid/location/GnssStatus;
@@ -82,6 +78,7 @@
 .method public getAzimuthDegrees(I)F
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/location/GnssStatusWrapper;->mWrapped:Landroid/location/GnssStatus;
 
     invoke-virtual {p0, p1}, Landroid/location/GnssStatus;->getAzimuthDegrees(I)F
@@ -94,20 +91,23 @@
 .method public getBasebandCn0DbHz(I)F
     .locals 2
 
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1e
 
     if-lt v0, v1, :cond_0
 
+    .line 2
     iget-object p0, p0, Landroidx/core/location/GnssStatusWrapper;->mWrapped:Landroid/location/GnssStatus;
 
-    invoke-static {p0, p1}, Landroidx/core/location/GnssStatusWrapper$Api30Impl;->getBasebandCn0DbHz(Landroid/location/GnssStatus;I)F
+    invoke-virtual {p0, p1}, Landroid/location/GnssStatus;->getBasebandCn0DbHz(I)F
 
     move-result p0
 
     return p0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -117,20 +117,37 @@
 .end method
 
 .method public getCarrierFrequencyHz(I)F
-    .locals 0
+    .locals 2
 
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1a
+
+    if-lt v0, v1, :cond_0
+
+    .line 2
     iget-object p0, p0, Landroidx/core/location/GnssStatusWrapper;->mWrapped:Landroid/location/GnssStatus;
 
-    invoke-static {p0, p1}, Landroidx/core/location/GnssStatusWrapper$Api26Impl;->getCarrierFrequencyHz(Landroid/location/GnssStatus;I)F
+    invoke-virtual {p0, p1}, Landroid/location/GnssStatus;->getCarrierFrequencyHz(I)F
 
     move-result p0
 
     return p0
+
+    .line 3
+    :cond_0
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p0
 .end method
 
 .method public getCn0DbHz(I)F
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/location/GnssStatusWrapper;->mWrapped:Landroid/location/GnssStatus;
 
     invoke-virtual {p0, p1}, Landroid/location/GnssStatus;->getCn0DbHz(I)F
@@ -143,6 +160,7 @@
 .method public getConstellationType(I)I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/location/GnssStatusWrapper;->mWrapped:Landroid/location/GnssStatus;
 
     invoke-virtual {p0, p1}, Landroid/location/GnssStatus;->getConstellationType(I)I
@@ -155,6 +173,7 @@
 .method public getElevationDegrees(I)F
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/location/GnssStatusWrapper;->mWrapped:Landroid/location/GnssStatus;
 
     invoke-virtual {p0, p1}, Landroid/location/GnssStatus;->getElevationDegrees(I)F
@@ -167,6 +186,7 @@
 .method public getSatelliteCount()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/location/GnssStatusWrapper;->mWrapped:Landroid/location/GnssStatus;
 
     invoke-virtual {p0}, Landroid/location/GnssStatus;->getSatelliteCount()I
@@ -179,6 +199,7 @@
 .method public getSvid(I)I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/location/GnssStatusWrapper;->mWrapped:Landroid/location/GnssStatus;
 
     invoke-virtual {p0, p1}, Landroid/location/GnssStatus;->getSvid(I)I
@@ -191,6 +212,7 @@
 .method public hasAlmanacData(I)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/location/GnssStatusWrapper;->mWrapped:Landroid/location/GnssStatus;
 
     invoke-virtual {p0, p1}, Landroid/location/GnssStatus;->hasAlmanacData(I)Z
@@ -203,15 +225,17 @@
 .method public hasBasebandCn0DbHz(I)Z
     .locals 2
 
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1e
 
     if-lt v0, v1, :cond_0
 
+    .line 2
     iget-object p0, p0, Landroidx/core/location/GnssStatusWrapper;->mWrapped:Landroid/location/GnssStatus;
 
-    invoke-static {p0, p1}, Landroidx/core/location/GnssStatusWrapper$Api30Impl;->hasBasebandCn0DbHz(Landroid/location/GnssStatus;I)Z
+    invoke-virtual {p0, p1}, Landroid/location/GnssStatus;->hasBasebandCn0DbHz(I)Z
 
     move-result p0
 
@@ -224,13 +248,26 @@
 .end method
 
 .method public hasCarrierFrequencyHz(I)Z
-    .locals 0
+    .locals 2
 
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1a
+
+    if-lt v0, v1, :cond_0
+
+    .line 2
     iget-object p0, p0, Landroidx/core/location/GnssStatusWrapper;->mWrapped:Landroid/location/GnssStatus;
 
-    invoke-static {p0, p1}, Landroidx/core/location/GnssStatusWrapper$Api26Impl;->hasCarrierFrequencyHz(Landroid/location/GnssStatus;I)Z
+    invoke-virtual {p0, p1}, Landroid/location/GnssStatus;->hasCarrierFrequencyHz(I)Z
 
     move-result p0
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
 
     return p0
 .end method
@@ -238,6 +275,7 @@
 .method public hasEphemerisData(I)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/location/GnssStatusWrapper;->mWrapped:Landroid/location/GnssStatus;
 
     invoke-virtual {p0, p1}, Landroid/location/GnssStatus;->hasEphemerisData(I)Z
@@ -250,6 +288,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/location/GnssStatusWrapper;->mWrapped:Landroid/location/GnssStatus;
 
     invoke-virtual {p0}, Landroid/location/GnssStatus;->hashCode()I
@@ -262,6 +301,7 @@
 .method public usedInFix(I)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/location/GnssStatusWrapper;->mWrapped:Landroid/location/GnssStatus;
 
     invoke-virtual {p0, p1}, Landroid/location/GnssStatus;->usedInFix(I)Z

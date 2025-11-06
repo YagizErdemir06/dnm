@@ -61,7 +61,7 @@
 
 
 # virtual methods
-.method public setRatingType(I)V
+.method public d(I)V
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -72,6 +72,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroid/support/v4/media/session/MediaSessionCompat$f;->a:Landroid/media/session/MediaSession;
 
     invoke-virtual {p0, p1}, Landroid/media/session/MediaSession;->setRatingType(I)V

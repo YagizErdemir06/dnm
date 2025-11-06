@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/ExecutionSequencer$3;
+.class public Lcom/google/common/util/concurrent/ExecutionSequencer$3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,21 +18,22 @@
 
 
 # instance fields
-.field final synthetic val$newFuture:Lcom/google/common/util/concurrent/SettableFuture;
+.field public final synthetic val$newFuture:Lcom/google/common/util/concurrent/SettableFuture;
 
-.field final synthetic val$oldFuture:Lcom/google/common/util/concurrent/ListenableFuture;
+.field public final synthetic val$oldFuture:Lcom/google/common/util/concurrent/ListenableFuture;
 
-.field final synthetic val$outputFuture:Lcom/google/common/util/concurrent/ListenableFuture;
+.field public final synthetic val$outputFuture:Lcom/google/common/util/concurrent/ListenableFuture;
 
-.field final synthetic val$taskExecutor:Lcom/google/common/util/concurrent/ExecutionSequencer$TaskNonReentrantExecutor;
+.field public final synthetic val$taskExecutor:Lcom/google/common/util/concurrent/ExecutionSequencer$TaskNonReentrantExecutor;
 
-.field final synthetic val$taskFuture:Lcom/google/common/util/concurrent/TrustedListenableFutureTask;
+.field public final synthetic val$taskFuture:Lcom/google/common/util/concurrent/TrustedListenableFutureTask;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/util/concurrent/ExecutionSequencer;Lcom/google/common/util/concurrent/TrustedListenableFutureTask;Lcom/google/common/util/concurrent/SettableFuture;Lcom/google/common/util/concurrent/ListenableFuture;Lcom/google/common/util/concurrent/ListenableFuture;Lcom/google/common/util/concurrent/ExecutionSequencer$TaskNonReentrantExecutor;)V
     .locals 0
 
+    .line 1
     iput-object p2, p0, Lcom/google/common/util/concurrent/ExecutionSequencer$3;->val$taskFuture:Lcom/google/common/util/concurrent/TrustedListenableFutureTask;
 
     iput-object p3, p0, Lcom/google/common/util/concurrent/ExecutionSequencer$3;->val$newFuture:Lcom/google/common/util/concurrent/SettableFuture;
@@ -53,6 +54,7 @@
 .method public run()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/util/concurrent/ExecutionSequencer$3;->val$taskFuture:Lcom/google/common/util/concurrent/TrustedListenableFutureTask;
 
     invoke-virtual {v0}, Lcom/google/common/util/concurrent/FluentFuture$TrustedFuture;->isDone()Z
@@ -61,6 +63,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/util/concurrent/ExecutionSequencer$3;->val$newFuture:Lcom/google/common/util/concurrent/SettableFuture;
 
     iget-object p0, p0, Lcom/google/common/util/concurrent/ExecutionSequencer$3;->val$oldFuture:Lcom/google/common/util/concurrent/ListenableFuture;
@@ -69,6 +72,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/google/common/util/concurrent/ExecutionSequencer$3;->val$outputFuture:Lcom/google/common/util/concurrent/ListenableFuture;
 
@@ -86,6 +90,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     iget-object p0, p0, Lcom/google/common/util/concurrent/ExecutionSequencer$3;->val$taskFuture:Lcom/google/common/util/concurrent/TrustedListenableFutureTask;
 
     const/4 v0, 0x0

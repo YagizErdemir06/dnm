@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/MultimapBuilder$1;
+.class public Lcom/google/common/collect/MultimapBuilder$1;
 .super Lcom/google/common/collect/MultimapBuilder$MultimapBuilderWithKeys;
 .source "SourceFile"
 
@@ -23,13 +23,14 @@
 
 
 # instance fields
-.field final synthetic val$expectedKeys:I
+.field public final synthetic val$expectedKeys:I
 
 
 # direct methods
 .method public constructor <init>(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/common/collect/MultimapBuilder$1;->val$expectedKeys:I
 
     invoke-direct {p0}, Lcom/google/common/collect/MultimapBuilder$MultimapBuilderWithKeys;-><init>()V
@@ -55,6 +56,7 @@
         }
     .end annotation
 
+    .line 1
     iget p0, p0, Lcom/google/common/collect/MultimapBuilder$1;->val$expectedKeys:I
 
     invoke-static {p0}, Lcom/google/common/collect/Platform;->newHashMapWithExpectedSize(I)Ljava/util/Map;

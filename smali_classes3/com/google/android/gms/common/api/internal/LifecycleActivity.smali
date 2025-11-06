@@ -70,6 +70,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/LifecycleActivity;->zza:Ljava/lang/Object;
 
     check-cast p0, Landroidx/fragment/app/FragmentActivity;
@@ -80,6 +81,7 @@
 .method public final zzc()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/LifecycleActivity;->zza:Ljava/lang/Object;
 
     instance-of p0, p0, Landroid/app/Activity;
@@ -90,6 +92,7 @@
 .method public final zzd()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/LifecycleActivity;->zza:Ljava/lang/Object;
 
     instance-of p0, p0, Landroidx/fragment/app/FragmentActivity;

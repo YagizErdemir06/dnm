@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/ConcatenatingMediaSource$FakeMediaSource;
+.class public final Lcom/google/android/exoplayer2/source/ConcatenatingMediaSource$FakeMediaSource;
 .super Lcom/google/android/exoplayer2/source/BaseMediaSource;
 .source "SourceFile"
 
@@ -38,6 +38,7 @@
 .method public createPeriod(Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;Lcom/google/android/exoplayer2/upstream/Allocator;J)Lcom/google/android/exoplayer2/source/MediaPeriod;
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -48,6 +49,7 @@
 .method public getMediaItem()Lcom/google/android/exoplayer2/MediaItem;
     .locals 0
 
+    .line 1
     invoke-static {}, Lcom/google/android/exoplayer2/source/ConcatenatingMediaSource;->access$100()Lcom/google/android/exoplayer2/MediaItem;
 
     move-result-object p0

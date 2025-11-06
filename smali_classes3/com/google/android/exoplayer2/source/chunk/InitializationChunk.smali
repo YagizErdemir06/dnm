@@ -39,10 +39,12 @@
 
     move-object/from16 v6, p5
 
+    .line 1
     invoke-direct/range {v0 .. v10}, Lcom/google/android/exoplayer2/source/chunk/Chunk;-><init>(Lcom/google/android/exoplayer2/upstream/DataSource;Lcom/google/android/exoplayer2/upstream/DataSpec;ILcom/google/android/exoplayer2/Format;ILjava/lang/Object;JJ)V
 
     move-object/from16 v1, p6
 
+    .line 2
     iput-object v1, v0, Lcom/google/android/exoplayer2/source/chunk/InitializationChunk;->chunkExtractor:Lcom/google/android/exoplayer2/source/chunk/ChunkExtractor;
 
     return-void
@@ -55,6 +57,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/source/chunk/InitializationChunk;->loadCanceled:Z
 
     return-void
@@ -63,6 +66,7 @@
 .method public init(Lcom/google/android/exoplayer2/source/chunk/ChunkExtractor$TrackOutputProvider;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/chunk/InitializationChunk;->trackOutputProvider:Lcom/google/android/exoplayer2/source/chunk/ChunkExtractor$TrackOutputProvider;
 
     return-void
@@ -76,6 +80,7 @@
         }
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/chunk/InitializationChunk;->nextLoadPosition:J
 
     const-wide/16 v2, 0x0
@@ -84,6 +89,7 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/chunk/InitializationChunk;->chunkExtractor:Lcom/google/android/exoplayer2/source/chunk/ChunkExtractor;
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/chunk/InitializationChunk;->trackOutputProvider:Lcom/google/android/exoplayer2/source/chunk/ChunkExtractor$TrackOutputProvider;
@@ -94,6 +100,7 @@
 
     invoke-interface/range {v1 .. v6}, Lcom/google/android/exoplayer2/source/chunk/ChunkExtractor;->init(Lcom/google/android/exoplayer2/source/chunk/ChunkExtractor$TrackOutputProvider;JJ)V
 
+    .line 3
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/Chunk;->dataSpec:Lcom/google/android/exoplayer2/upstream/DataSpec;
@@ -104,12 +111,14 @@
 
     move-result-object v0
 
+    .line 4
     new-instance v7, Lcom/google/android/exoplayer2/extractor/DefaultExtractorInput;
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/chunk/Chunk;->dataSource:Lcom/google/android/exoplayer2/upstream/StatsDataSource;
 
     iget-wide v3, v0, Lcom/google/android/exoplayer2/upstream/DataSpec;->position:J
 
+    .line 5
     invoke-virtual {v2, v0}, Lcom/google/android/exoplayer2/upstream/StatsDataSource;->open(Lcom/google/android/exoplayer2/upstream/DataSpec;)J
 
     move-result-wide v5
@@ -120,6 +129,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
+    .line 6
     :goto_0
     :try_start_1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/source/chunk/InitializationChunk;->loadCanceled:Z
@@ -138,6 +148,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_1
     :try_start_2
     invoke-interface {v7}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPosition()J
@@ -154,6 +165,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
+    .line 8
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/chunk/Chunk;->dataSource:Lcom/google/android/exoplayer2/upstream/StatsDataSource;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/upstream/DataSourceUtil;->closeQuietly(Lcom/google/android/exoplayer2/upstream/DataSource;)V
@@ -163,6 +175,7 @@
     :catchall_0
     move-exception v0
 
+    .line 9
     :try_start_3
     invoke-interface {v7}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
@@ -176,6 +189,7 @@
 
     iput-wide v1, p0, Lcom/google/android/exoplayer2/source/chunk/InitializationChunk;->nextLoadPosition:J
 
+    .line 10
     throw v0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
@@ -183,9 +197,11 @@
     :catchall_1
     move-exception v0
 
+    .line 11
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/chunk/Chunk;->dataSource:Lcom/google/android/exoplayer2/upstream/StatsDataSource;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/upstream/DataSourceUtil;->closeQuietly(Lcom/google/android/exoplayer2/upstream/DataSource;)V
 
+    .line 12
     throw v0
 .end method

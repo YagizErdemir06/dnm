@@ -52,6 +52,7 @@
 .method public static constructor <clinit>()V
     .locals 15
 
+    .line 1
     new-instance v0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
     const-string v1, "REASON_UNKNOWN"
@@ -62,6 +63,7 @@
 
     sput-object v0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->REASON_UNKNOWN:Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
+    .line 2
     new-instance v1, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
     const-string v3, "MESSAGE_TOO_OLD"
@@ -72,6 +74,7 @@
 
     sput-object v1, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->MESSAGE_TOO_OLD:Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
+    .line 3
     new-instance v3, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
     const-string v5, "CACHE_FULL"
@@ -82,6 +85,7 @@
 
     sput-object v3, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->CACHE_FULL:Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
+    .line 4
     new-instance v5, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
     const-string v7, "PAYLOAD_TOO_BIG"
@@ -92,6 +96,7 @@
 
     sput-object v5, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->PAYLOAD_TOO_BIG:Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
+    .line 5
     new-instance v7, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
     const-string v9, "MAX_RETRIES_REACHED"
@@ -102,6 +107,7 @@
 
     sput-object v7, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->MAX_RETRIES_REACHED:Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
+    .line 6
     new-instance v9, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
     const-string v11, "INVALID_PAYLOD"
@@ -112,6 +118,7 @@
 
     sput-object v9, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->INVALID_PAYLOD:Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
+    .line 7
     new-instance v11, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
     const-string v13, "SERVER_ERROR"
@@ -140,6 +147,7 @@
 
     aput-object v11, v13, v14
 
+    .line 8
     sput-object v13, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->$VALUES:[Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
     return-void
@@ -153,8 +161,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 2
     iput p3, p0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->number_:I
 
     return-void
@@ -163,6 +173,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
     .locals 1
 
+    .line 1
     const-class v0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -177,6 +188,7 @@
 .method public static values()[Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->$VALUES:[Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
     invoke-virtual {v0}, [Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->clone()Ljava/lang/Object;
@@ -193,6 +205,7 @@
 .method public getNumber()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->number_:I
 
     return p0

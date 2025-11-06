@@ -1,4 +1,4 @@
-.class final Lcom/google/gson/internal/LinkedHashTreeMap$KeySet;
+.class public final Lcom/google/gson/internal/LinkedHashTreeMap$KeySet;
 .super Ljava/util/AbstractSet;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/gson/internal/LinkedHashTreeMap;
+.field public final synthetic this$0:Lcom/google/gson/internal/LinkedHashTreeMap;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/gson/internal/LinkedHashTreeMap;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/gson/internal/LinkedHashTreeMap$KeySet;->this$0:Lcom/google/gson/internal/LinkedHashTreeMap;
 
     invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
@@ -41,6 +42,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/gson/internal/LinkedHashTreeMap$KeySet;->this$0:Lcom/google/gson/internal/LinkedHashTreeMap;
 
     invoke-virtual {p0}, Lcom/google/gson/internal/LinkedHashTreeMap;->clear()V
@@ -51,6 +53,7 @@
 .method public contains(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/gson/internal/LinkedHashTreeMap$KeySet;->this$0:Lcom/google/gson/internal/LinkedHashTreeMap;
 
     invoke-virtual {p0, p1}, Lcom/google/gson/internal/LinkedHashTreeMap;->containsKey(Ljava/lang/Object;)Z
@@ -70,6 +73,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/gson/internal/LinkedHashTreeMap$KeySet$1;
 
     invoke-direct {v0, p0}, Lcom/google/gson/internal/LinkedHashTreeMap$KeySet$1;-><init>(Lcom/google/gson/internal/LinkedHashTreeMap$KeySet;)V
@@ -80,6 +84,7 @@
 .method public remove(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/gson/internal/LinkedHashTreeMap$KeySet;->this$0:Lcom/google/gson/internal/LinkedHashTreeMap;
 
     invoke-virtual {p0, p1}, Lcom/google/gson/internal/LinkedHashTreeMap;->removeInternalByKey(Ljava/lang/Object;)Lcom/google/gson/internal/LinkedHashTreeMap$Node;
@@ -102,6 +107,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/gson/internal/LinkedHashTreeMap$KeySet;->this$0:Lcom/google/gson/internal/LinkedHashTreeMap;
 
     iget p0, p0, Lcom/google/gson/internal/LinkedHashTreeMap;->size:I

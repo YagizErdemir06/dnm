@@ -205,7 +205,6 @@
     <string name="accessibility_video_capture_button">भिडियो शुट गर्दा फोटो लिने बटन</string>
     <string name="accessibility_video_pause_button">भिडियो रेकर्ड गर्न पज गरियो</string>
     <string name="accessibility_video_resume_button">भिडियो रेकर्ड गर्न चालू गरियो</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">वाटरमार्क बन्द छ</string>
     <string name="accessibility_watermark_image_on">वाटरमार्क चालु छ</string>
     <string name="accessibility_watermark_text">वाटरमार्क समायोजन प्यानल खोल्नुहोस्</string>
@@ -213,16 +212,6 @@
     <string name="accessibility_zoom_button">जूम मोड</string>
     <string name="actionbar_button_up_description">पछाडि</string>
     <string name="afternoon">दिउँसो</string>
-    <string name="agent_flip_tbc">भित्री स्क्रिनमा जारी राख्नुहोस्</string>
-    <string name="agent_function_max">अधिकतम मूल्य समायोजन</string>
-    <string name="agent_function_min">न्यूनतम मूल्यमा समायोजन गरियो</string>
-    <string name="agent_workspace_mode_not_supported">यो सुवधा समर्थन गरिएको छैन</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"यो सुविधा समर्थित छैन।
-बरु फोटो मोड खोलियो।"</string>
-    <string name="agent_workspace_on">फोटो खिच्नका लागि प्यारामिटरहरू सेट गरियो \"%1$s\"</string>
-    <string name="agent_workspace_tbc">अध्ययन दृश्य</string>
-    <string name="agent_workspace_tbc_use_default">"दृश्य अध्ययन गर्दै…
-क्यामेरा प्यारामिटरहरू पूर्वनिर्धारित रूपमा सेट गरियो"</string>
     <string name="ai_agra_fort">आगरा फोर्ट</string>
     <string name="ai_amber_fort">एम्बर प्यालेस</string>
     <string name="ai_baby">बच्चा</string>
@@ -781,7 +770,6 @@
     <string name="download_hint_cn">तपाईंको डिभाइस WLAN मा जडान भएको छैन जस्तो देखिन्छ। अहिले वस्तुहरू डाउनलोड गर्न %1$s MB मोबाइल डाटा प्रयोग गर्नुहुन्छ?</string>
     <string name="download_hint_wifi">तपाईंको डिभाइस वाइ-फाइ मा कनेक्टभएको छैन जस्तो देखिन्छ। अहिले वस्तुहरू डाउनलोड गर्न %1$s MB मोबाइल डाटा प्रयोग गर्नुहुन्छ?</string>
     <string name="download_in_progress">डाउनलोड हुदैँछ…</string>
-    <string name="download_network_error">डाउनलोड गर्न सकिएन । तपाईंको नेटवर्क सेटिंग्स जाँच गर्नुहोस्।</string>
     <string name="download_title">डाटा प्रयोग चेतावनी</string>
     <string name="download_waiting">बाँकी छ…</string>
     <string name="dual_camera_lens_covered_toast">लेन्स ढाकिएको छ।</string>
@@ -1260,7 +1248,6 @@
     <string name="miuix_appcompat_delete_description">मेटाउनुहोस्</string>
     <string name="miuix_appcompat_deselect_all">सबै चयन गरेको हटाउनुहोस्</string>
     <string name="miuix_appcompat_deselect_all_description">सबै चयन गरेको हटाउनुहोस्</string>
-    <string name="miuix_appcompat_edit">सम्पादन गर्नुहोस्</string>
     <string name="miuix_appcompat_search_action_mode_cancel">रद्द गर्नुहोस्</string>
     <string name="miuix_appcompat_search_input_description">खोज्नुहोस्</string>
     <string name="miuix_appcompat_select_all">सबै चयन गर्नुहोस्</string>
@@ -2199,7 +2186,6 @@
     <string name="time_picker_label_hour">घ</string>
     <string name="time_picker_label_minute">मि</string>
     <string name="time_stamp_date_format">dd/MM/yyyy</string>
-    <string name="time_stamp_date_format_minute">dd/MM/yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">शूटिंग अघि वा सूटिंग गर्दा तपाईं कुनै पनि समय पृष्ठभूमि फ्रिज र अनफ्रिज गर्न सक्नुहुनेछ।</string>
     <string name="timefreeze_guide_tip3">तपाईंको वस्तुलाई फ्रेमको बिचमा रहन भन्नुहोस्।</string>
     <string name="timefreeze_guide_tip4">ट्राफिकलाई रोक्नुहोस्।</string>
@@ -2237,7 +2223,7 @@
     <string name="tip_flash_screen_light_on">सफ्ट फ्ल्यास: अन</string>
     <string name="tip_flash_soft_light_off">सफ्ट फ्ल्यास: अफ</string>
     <string name="tip_flash_soft_light_torch">सफ्ट फ्ल्यास: फ्ल्यासलाइट मोड</string>
-    <string name="tip_flash_torch">फ्ल्यास:फ्ल्यासलाइट</string>
+    <string name="tip_flash_torch">फ्ल्यास: सधैँ अन</string>
     <string name="tip_friend_mode_connect_when_24GHz">प्रिभ्यू क्वालिटी बुस्ट गर्न %s GHz प्रयोग गर्नुहोस्</string>
     <string name="tip_friend_mode_display_device_name_connect">सेयर गरिएको प्रिभ्यू</string>
     <string name="tip_friend_mode_display_device_name_disconnect">अर्को डिभाइस यो सत्रबाट बाहिरियो</string>

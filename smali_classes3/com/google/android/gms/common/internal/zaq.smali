@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/internal/zaq;
+.class public final Lcom/google/android/gms/common/internal/zaq;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field final synthetic zaa:Lcom/google/android/gms/common/api/Response;
+.field public final synthetic zaa:Lcom/google/android/gms/common/api/Response;
 
 
 # direct methods
@@ -26,6 +26,7 @@
 .method public final bridge synthetic convert(Lcom/google/android/gms/common/api/Result;)Ljava/lang/Object;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/internal/zaq;->zaa:Lcom/google/android/gms/common/api/Response;
 
     invoke-virtual {v0, p1}, Lcom/google/android/gms/common/api/Response;->setResult(Lcom/google/android/gms/common/api/Result;)V

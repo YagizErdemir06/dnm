@@ -15,21 +15,21 @@
 
 
 # static fields
-.field public static final f:I = 0x1
+.field public static final a:I = 0x1
 
-.field public static final g:I = 0x2
+.field public static final b:I = 0x2
 
 
 # instance fields
-.field public final a:I
+.field private final c:I
 
-.field public final b:Landroidx/media/AudioAttributesCompat;
+.field private final d:Landroidx/media/AudioAttributesCompat;
 
-.field public final c:I
+.field private final e:I
 
-.field public final d:I
+.field private final f:I
 
-.field public final e:I
+.field private final g:I
 
 
 # direct methods
@@ -107,19 +107,19 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
-    iput p1, p0, Landroid/support/v4/media/session/MediaControllerCompat$e;->a:I
+    iput p1, p0, Landroid/support/v4/media/session/MediaControllerCompat$e;->c:I
 
     .line 4
-    iput-object p2, p0, Landroid/support/v4/media/session/MediaControllerCompat$e;->b:Landroidx/media/AudioAttributesCompat;
+    iput-object p2, p0, Landroid/support/v4/media/session/MediaControllerCompat$e;->d:Landroidx/media/AudioAttributesCompat;
 
     .line 5
-    iput p3, p0, Landroid/support/v4/media/session/MediaControllerCompat$e;->c:I
+    iput p3, p0, Landroid/support/v4/media/session/MediaControllerCompat$e;->e:I
 
     .line 6
-    iput p4, p0, Landroid/support/v4/media/session/MediaControllerCompat$e;->d:I
+    iput p4, p0, Landroid/support/v4/media/session/MediaControllerCompat$e;->f:I
 
     .line 7
-    iput p5, p0, Landroid/support/v4/media/session/MediaControllerCompat$e;->e:I
+    iput p5, p0, Landroid/support/v4/media/session/MediaControllerCompat$e;->g:I
 
     return-void
 .end method
@@ -131,7 +131,8 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$e;->b:Landroidx/media/AudioAttributesCompat;
+    .line 1
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$e;->d:Landroidx/media/AudioAttributesCompat;
 
     return-object p0
 .end method
@@ -141,7 +142,8 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$e;->b:Landroidx/media/AudioAttributesCompat;
+    .line 1
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$e;->d:Landroidx/media/AudioAttributesCompat;
 
     invoke-virtual {p0}, Landroidx/media/AudioAttributesCompat;->getLegacyStreamType()I
 
@@ -153,7 +155,8 @@
 .method public c()I
     .locals 0
 
-    iget p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$e;->e:I
+    .line 1
+    iget p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$e;->g:I
 
     return p0
 .end method
@@ -161,7 +164,8 @@
 .method public d()I
     .locals 0
 
-    iget p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$e;->d:I
+    .line 1
+    iget p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$e;->f:I
 
     return p0
 .end method
@@ -169,7 +173,8 @@
 .method public e()I
     .locals 0
 
-    iget p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$e;->a:I
+    .line 1
+    iget p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$e;->c:I
 
     return p0
 .end method
@@ -177,7 +182,8 @@
 .method public f()I
     .locals 0
 
-    iget p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$e;->c:I
+    .line 1
+    iget p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$e;->e:I
 
     return p0
 .end method

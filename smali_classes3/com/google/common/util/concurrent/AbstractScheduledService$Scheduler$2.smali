@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/AbstractScheduledService$Scheduler$2;
+.class public Lcom/google/common/util/concurrent/AbstractScheduledService$Scheduler$2;
 .super Lcom/google/common/util/concurrent/AbstractScheduledService$Scheduler;
 .source "SourceFile"
 
@@ -15,17 +15,18 @@
 
 
 # instance fields
-.field final synthetic val$initialDelay:J
+.field public final synthetic val$initialDelay:J
 
-.field final synthetic val$period:J
+.field public final synthetic val$period:J
 
-.field final synthetic val$unit:Ljava/util/concurrent/TimeUnit;
+.field public final synthetic val$unit:Ljava/util/concurrent/TimeUnit;
 
 
 # direct methods
 .method public constructor <init>(JJLjava/util/concurrent/TimeUnit;)V
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lcom/google/common/util/concurrent/AbstractScheduledService$Scheduler$2;->val$initialDelay:J
 
     iput-wide p3, p0, Lcom/google/common/util/concurrent/AbstractScheduledService$Scheduler$2;->val$period:J
@@ -44,6 +45,7 @@
 .method public schedule(Lcom/google/common/util/concurrent/AbstractService;Ljava/util/concurrent/ScheduledExecutorService;Ljava/lang/Runnable;)Lcom/google/common/util/concurrent/AbstractScheduledService$Cancellable;
     .locals 7
 
+    .line 1
     new-instance p1, Lcom/google/common/util/concurrent/AbstractScheduledService$FutureAsCancellable;
 
     iget-wide v2, p0, Lcom/google/common/util/concurrent/AbstractScheduledService$Scheduler$2;->val$initialDelay:J
@@ -56,6 +58,7 @@
 
     move-object v1, p3
 
+    .line 2
     invoke-interface/range {v0 .. v6}, Ljava/util/concurrent/ScheduledExecutorService;->scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
 
     move-result-object p0

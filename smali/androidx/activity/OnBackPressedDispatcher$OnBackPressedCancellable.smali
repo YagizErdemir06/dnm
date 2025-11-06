@@ -1,4 +1,4 @@
-.class Landroidx/activity/OnBackPressedDispatcher$OnBackPressedCancellable;
+.class public Landroidx/activity/OnBackPressedDispatcher$OnBackPressedCancellable;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -20,17 +20,19 @@
 # instance fields
 .field private final mOnBackPressedCallback:Landroidx/activity/OnBackPressedCallback;
 
-.field final synthetic this$0:Landroidx/activity/OnBackPressedDispatcher;
+.field public final synthetic this$0:Landroidx/activity/OnBackPressedDispatcher;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/activity/OnBackPressedDispatcher;Landroidx/activity/OnBackPressedCallback;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/activity/OnBackPressedDispatcher$OnBackPressedCancellable;->this$0:Landroidx/activity/OnBackPressedDispatcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p2, p0, Landroidx/activity/OnBackPressedDispatcher$OnBackPressedCancellable;->mOnBackPressedCallback:Landroidx/activity/OnBackPressedCallback;
 
     return-void
@@ -41,6 +43,7 @@
 .method public cancel()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/activity/OnBackPressedDispatcher$OnBackPressedCancellable;->this$0:Landroidx/activity/OnBackPressedDispatcher;
 
     iget-object v0, v0, Landroidx/activity/OnBackPressedDispatcher;->mOnBackPressedCallbacks:Ljava/util/ArrayDeque;
@@ -49,6 +52,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayDeque;->remove(Ljava/lang/Object;)Z
 
+    .line 2
     iget-object v0, p0, Landroidx/activity/OnBackPressedDispatcher$OnBackPressedCancellable;->mOnBackPressedCallback:Landroidx/activity/OnBackPressedCallback;
 
     invoke-virtual {v0, p0}, Landroidx/activity/OnBackPressedCallback;->removeCancellable(Landroidx/activity/Cancellable;)V

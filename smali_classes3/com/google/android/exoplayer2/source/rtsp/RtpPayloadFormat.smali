@@ -71,14 +71,19 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p2, p0, Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;->rtpPayloadType:I
 
+    .line 3
     iput p3, p0, Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;->clockRate:I
 
+    .line 4
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;->format:Lcom/google/android/exoplayer2/Format;
 
+    .line 5
     invoke-static {p4}, Lcom/google/common/collect/ImmutableMap;->copyOf(Ljava/util/Map;)Lcom/google/common/collect/ImmutableMap;
 
     move-result-object p1
@@ -91,6 +96,7 @@
 .method public static getMimeTypeFromRtpMediaType(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/base/Ascii;->toUpperCase(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -364,6 +370,7 @@
     :goto_0
     packed-switch v2, :pswitch_data_0
 
+    .line 2
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
@@ -488,6 +495,7 @@
 
     const-string v0, "L8"
 
+    .line 1
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -513,9 +521,11 @@
     :goto_0
     const/4 v1, 0x1
 
+    .line 2
     :goto_1
     invoke-static {v1}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 3
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -536,6 +546,7 @@
 .method public static isFormatSupported(Lcom/google/android/exoplayer2/source/rtsp/MediaDescription;)Z
     .locals 4
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/MediaDescription;->rtpMapAttribute:Lcom/google/android/exoplayer2/source/rtsp/MediaDescription$RtpMapAttribute;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/MediaDescription$RtpMapAttribute;->mediaEncoding:Ljava/lang/String;
@@ -885,6 +896,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 1
     const-class v2, Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -895,9 +907,11 @@
 
     goto :goto_1
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;
 
+    .line 3
     iget v2, p0, Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;->rtpPayloadType:I
 
     iget v3, p1, Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;->rtpPayloadType:I
@@ -914,6 +928,7 @@
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;->format:Lcom/google/android/exoplayer2/Format;
 
+    .line 4
     invoke-virtual {v2, v3}, Lcom/google/android/exoplayer2/Format;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -924,6 +939,7 @@
 
     iget-object p1, p1, Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;->fmtpParameters:Lcom/google/common/collect/ImmutableMap;
 
+    .line 5
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableMap;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -946,37 +962,41 @@
 .method public hashCode()I
     .locals 2
 
-    const/16 v0, 0xd9
+    .line 1
+    iget v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;->rtpPayloadType:I
 
-    iget v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;->rtpPayloadType:I
+    const/16 v1, 0xd9
 
-    add-int/2addr v0, v1
+    add-int/2addr v1, v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    mul-int/lit8 v1, v1, 0x1f
 
-    iget v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;->clockRate:I
+    .line 2
+    iget v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;->clockRate:I
 
-    add-int/2addr v0, v1
+    add-int/2addr v1, v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    mul-int/lit8 v1, v1, 0x1f
 
-    iget-object v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;->format:Lcom/google/android/exoplayer2/Format;
+    .line 3
+    iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;->format:Lcom/google/android/exoplayer2/Format;
 
-    invoke-virtual {v1}, Lcom/google/android/exoplayer2/Format;->hashCode()I
+    invoke-virtual {v0}, Lcom/google/android/exoplayer2/Format;->hashCode()I
 
-    move-result v1
+    move-result v0
 
-    add-int/2addr v0, v1
+    add-int/2addr v1, v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    mul-int/lit8 v1, v1, 0x1f
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;->fmtpParameters:Lcom/google/common/collect/ImmutableMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMap;->hashCode()I
 
     move-result p0
 
-    add-int/2addr v0, p0
+    add-int/2addr v1, p0
 
-    return v0
+    return v1
 .end method

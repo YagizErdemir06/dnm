@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field final zza:Ljava/util/List;
+.field public final zza:Ljava/util/List;
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 .end field
@@ -17,6 +17,7 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/google/android/gms/internal/mlkit_common/zzph;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/util/ArrayList;
@@ -25,6 +26,7 @@
 
     iput-object v0, p0, Lcom/google/android/gms/internal/mlkit_common/zzpi;->zza:Ljava/util/List;
 
+    .line 2
     invoke-virtual {p2}, Lcom/google/android/gms/internal/mlkit_common/zzph;->zzc()Z
 
     move-result p0
@@ -33,6 +35,7 @@
 
     new-instance p0, Lcom/google/android/gms/internal/mlkit_common/zzpv;
 
+    .line 3
     invoke-direct {p0, p1, p2}, Lcom/google/android/gms/internal/mlkit_common/zzpv;-><init>(Landroid/content/Context;Lcom/google/android/gms/internal/mlkit_common/zzph;)V
 
     invoke-interface {v0, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -46,6 +49,7 @@
 .method public final zza(Lcom/google/android/gms/internal/mlkit_common/zzpe;)V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_common/zzpi;->zza:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -65,6 +69,7 @@
 
     check-cast v0, Lcom/google/android/gms/internal/mlkit_common/zzpf;
 
+    .line 2
     invoke-interface {v0, p1}, Lcom/google/android/gms/internal/mlkit_common/zzpf;->zza(Lcom/google/android/gms/internal/mlkit_common/zzpe;)V
 
     goto :goto_0

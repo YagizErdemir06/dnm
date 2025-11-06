@@ -14,9 +14,14 @@
     value = "SMAP\nPropContainer.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PropContainer.kt\ncom/faceunity/core/model/prop/PropContainer\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,151:1\n1819#2,2:152\n*E\n*S KotlinDebug\n*F\n+ 1 PropContainer.kt\ncom/faceunity/core/model/prop/PropContainer\n*L\n56#1,2:152\n*E\n"
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000J\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u0005\n\u0002\u0010 \n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0006\u0018\u0000 #2\u00020\u0001:\u0001#B\u0007\u00a2\u0006\u0004\u0008!\u0010\"J\u001c\u0010\u0006\u001a\u00020\u00052\u0008\u0010\u0003\u001a\u0004\u0018\u00010\u00022\u0008\u0010\u0004\u001a\u0004\u0018\u00010\u0002H\u0002J\u000e\u0010\u0008\u001a\u00020\u00052\u0006\u0010\u0007\u001a\u00020\u0002J\u000e\u0010\t\u001a\u00020\u00052\u0006\u0010\u0007\u001a\u00020\u0002J\u0006\u0010\n\u001a\u00020\u0005J\u000c\u0010\u000c\u001a\u0008\u0012\u0004\u0012\u00020\u00020\u000bJ\u000e\u0010\r\u001a\u00020\u00052\u0006\u0010\u0007\u001a\u00020\u0002J\u001a\u0010\u000e\u001a\u00020\u00052\u0008\u0010\u0003\u001a\u0004\u0018\u00010\u00022\u0008\u0010\u0004\u001a\u0004\u0018\u00010\u0002J\u0006\u0010\u0010\u001a\u00020\u000fJ\u0010\u0010\u0013\u001a\u00020\u000f2\u0008\u0010\u0012\u001a\u0004\u0018\u00010\u0011R\u001b\u0010\u0019\u001a\u00020\u00148BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u0015\u0010\u0016\u001a\u0004\u0008\u0017\u0010\u0018R$\u0010\u001c\u001a\u0012\u0012\u0004\u0012\u00020\u00020\u001aj\u0008\u0012\u0004\u0012\u00020\u0002`\u001b8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u001c\u0010\u001dR\u0016\u0010\u001f\u001a\u00020\u001e8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u001f\u0010 \u00a8\u0006$"
+        "\u0000L\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u0008\n\u0002\u0010 \n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\u0018\u0000 (2\u00020\u0001:\u0001(B\u0007\u00a2\u0006\u0004\u0008\'\u0010\u0015J#\u0010\u0006\u001a\u00020\u00052\u0008\u0010\u0003\u001a\u0004\u0018\u00010\u00022\u0008\u0010\u0004\u001a\u0004\u0018\u00010\u0002H\u0002\u00a2\u0006\u0004\u0008\u0006\u0010\u0007J\u0015\u0010\t\u001a\u00020\u00052\u0006\u0010\u0008\u001a\u00020\u0002\u00a2\u0006\u0004\u0008\t\u0010\nJ\u0015\u0010\u000b\u001a\u00020\u00052\u0006\u0010\u0008\u001a\u00020\u0002\u00a2\u0006\u0004\u0008\u000b\u0010\nJ\r\u0010\u000c\u001a\u00020\u0005\u00a2\u0006\u0004\u0008\u000c\u0010\rJ\u0013\u0010\u000f\u001a\u0008\u0012\u0004\u0012\u00020\u00020\u000e\u00a2\u0006\u0004\u0008\u000f\u0010\u0010J\u0015\u0010\u0011\u001a\u00020\u00052\u0006\u0010\u0008\u001a\u00020\u0002\u00a2\u0006\u0004\u0008\u0011\u0010\nJ!\u0010\u0012\u001a\u00020\u00052\u0008\u0010\u0003\u001a\u0004\u0018\u00010\u00022\u0008\u0010\u0004\u001a\u0004\u0018\u00010\u0002\u00a2\u0006\u0004\u0008\u0012\u0010\u0007J\r\u0010\u0014\u001a\u00020\u0013\u00a2\u0006\u0004\u0008\u0014\u0010\u0015J\u0017\u0010\u0018\u001a\u00020\u00132\u0008\u0010\u0017\u001a\u0004\u0018\u00010\u0016\u00a2\u0006\u0004\u0008\u0018\u0010\u0019R\u0016\u0010\u001b\u001a\u00020\u001a8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u001b\u0010\u001cR\u001d\u0010\"\u001a\u00020\u001d8B@\u0002X\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u001e\u0010\u001f\u001a\u0004\u0008 \u0010!R&\u0010%\u001a\u0012\u0012\u0004\u0012\u00020\u00020#j\u0008\u0012\u0004\u0012\u00020\u0002`$8\u0002@\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008%\u0010&\u00a8\u0006)"
     }
     d2 = {
         "Lcom/faceunity/core/model/prop/PropContainer;",
@@ -26,22 +31,31 @@
         "newProp",
         "",
         "doReplaceProp",
+        "(Lcom/faceunity/core/model/prop/Prop;Lcom/faceunity/core/model/prop/Prop;)Z",
         "prop",
         "addProp",
+        "(Lcom/faceunity/core/model/prop/Prop;)Z",
         "removeProp",
         "removeAllProp",
+        "()Z",
         "",
         "getAllProp",
+        "()Ljava/util/List;",
         "hasContains",
         "replaceProp",
-        "Lnm/l2;",
+        "Lh/l2;",
         "release",
+        "()V",
         "Lcom/faceunity/core/callback/OnPropCallBack;",
         "onPropCallBack",
         "setOnPropCallBack",
+        "(Lcom/faceunity/core/callback/OnPropCallBack;)V",
+        "Ljava/lang/Object;",
+        "mPropLock",
+        "Ljava/lang/Object;",
         "Lcom/faceunity/core/controller/prop/PropController;",
         "mPropController$delegate",
-        "Lnm/d0;",
+        "Lh/d0;",
         "getMPropController",
         "()Lcom/faceunity/core/controller/prop/PropController;",
         "mPropController",
@@ -49,11 +63,7 @@
         "Lkotlin/collections/ArrayList;",
         "mProps",
         "Ljava/util/ArrayList;",
-        "Ljava/lang/Object;",
-        "mPropLock",
-        "Ljava/lang/Object;",
         "<init>",
-        "()V",
         "Companion",
         "lib_core_release"
     }
@@ -68,18 +78,18 @@
 
 # static fields
 .field public static final Companion:Lcom/faceunity/core/model/prop/PropContainer$Companion;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field public static final TAG:Ljava/lang/String; = "KIT_PropContainer"
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 
 # instance fields
-.field private final mPropController$delegate:Lnm/d0;
+.field private final mPropController$delegate:Lh/d0;
 
 .field private mPropLock:Ljava/lang/Object;
 
@@ -102,7 +112,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/faceunity/core/model/prop/PropContainer$Companion;-><init>(Lkotlin/jvm/internal/w;)V
+    invoke-direct {v0, v1}, Lcom/faceunity/core/model/prop/PropContainer$Companion;-><init>(Lh/d3/x/w;)V
 
     sput-object v0, Lcom/faceunity/core/model/prop/PropContainer;->Companion:Lcom/faceunity/core/model/prop/PropContainer$Companion;
 
@@ -112,22 +122,26 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     sget-object v0, Lcom/faceunity/core/model/prop/PropContainer$mPropController$2;->INSTANCE:Lcom/faceunity/core/model/prop/PropContainer$mPropController$2;
 
-    invoke-static {v0}, Lnm/f0;->b(Ljn/a;)Lnm/d0;
+    invoke-static {v0}, Lh/f0;->c(Lh/d3/w/a;)Lh/d0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/faceunity/core/model/prop/PropContainer;->mPropController$delegate:Lnm/d0;
+    iput-object v0, p0, Lcom/faceunity/core/model/prop/PropContainer;->mPropController$delegate:Lh/d0;
 
+    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/faceunity/core/model/prop/PropContainer;->mProps:Ljava/util/ArrayList;
 
+    .line 4
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -140,12 +154,14 @@
 .method private final doReplaceProp(Lcom/faceunity/core/model/prop/Prop;Lcom/faceunity/core/model/prop/Prop;)Z
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/model/prop/PropContainer;->mPropLock:Ljava/lang/Object;
 
     monitor-enter v0
 
     if-eqz p1, :cond_0
 
+    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/faceunity/core/model/prop/PropContainer;->mProps:Ljava/util/ArrayList;
 
@@ -162,6 +178,7 @@
     :goto_0
     if-eqz p2, :cond_1
 
+    .line 3
     iget-object v1, p0, Lcom/faceunity/core/model/prop/PropContainer;->mProps:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -170,6 +187,7 @@
 
     goto :goto_2
 
+    .line 4
     :goto_1
     monitor-exit v0
 
@@ -179,6 +197,7 @@
     :goto_2
     monitor-exit v0
 
+    .line 5
     invoke-direct {p0}, Lcom/faceunity/core/model/prop/PropContainer;->getMPropController()Lcom/faceunity/core/controller/prop/PropController;
 
     move-result-object p0
@@ -193,9 +212,9 @@
 .method private final getMPropController()Lcom/faceunity/core/controller/prop/PropController;
     .locals 0
 
-    iget-object p0, p0, Lcom/faceunity/core/model/prop/PropContainer;->mPropController$delegate:Lnm/d0;
+    iget-object p0, p0, Lcom/faceunity/core/model/prop/PropContainer;->mPropController$delegate:Lh/d0;
 
-    invoke-interface {p0}, Lnm/d0;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lh/d0;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -209,16 +228,17 @@
 .method public final addProp(Lcom/faceunity/core/model/prop/Prop;)Z
     .locals 1
     .param p1    # Lcom/faceunity/core/model/prop/Prop;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "prop"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, v0, p1}, Lcom/faceunity/core/model/prop/PropContainer;->replaceProp(Lcom/faceunity/core/model/prop/Prop;Lcom/faceunity/core/model/prop/Prop;)Z
 
     move-result p0
@@ -237,17 +257,20 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 2
     iget-object v1, p0, Lcom/faceunity/core/model/prop/PropContainer;->mPropLock:Ljava/lang/Object;
 
     monitor-enter v1
 
+    .line 3
     :try_start_0
     iget-object p0, p0, Lcom/faceunity/core/model/prop/PropContainer;->mProps:Ljava/util/ArrayList;
 
@@ -255,6 +278,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
     monitor-exit v1
 
     return-object v0
@@ -270,18 +294,20 @@
 .method public final hasContains(Lcom/faceunity/core/model/prop/Prop;)Z
     .locals 1
     .param p1    # Lcom/faceunity/core/model/prop/Prop;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "prop"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/model/prop/PropContainer;->mPropLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-object p0, p0, Lcom/faceunity/core/model/prop/PropContainer;->mProps:Ljava/util/ArrayList;
 
@@ -298,6 +324,7 @@
     :catchall_0
     move-exception p0
 
+    .line 3
     monitor-exit v0
 
     throw p0
@@ -306,6 +333,7 @@
 .method public final release()V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/core/model/prop/PropContainer;->getMPropController()Lcom/faceunity/core/controller/prop/PropController;
 
     move-result-object v0
@@ -314,8 +342,9 @@
 
     const/4 v2, 0x1
 
-    invoke-static {v0, v1, v2, v1}, Lcom/faceunity/core/controller/prop/BasePropController;->release$lib_core_release$default(Lcom/faceunity/core/controller/prop/BasePropController;Ljn/a;ILjava/lang/Object;)V
+    invoke-static {v0, v1, v2, v1}, Lcom/faceunity/core/controller/prop/BasePropController;->release$lib_core_release$default(Lcom/faceunity/core/controller/prop/BasePropController;Lh/d3/w/a;ILjava/lang/Object;)V
 
+    .line 2
     iget-object p0, p0, Lcom/faceunity/core/model/prop/PropContainer;->mProps:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
@@ -326,14 +355,17 @@
 .method public final removeAllProp()Z
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 2
     iget-object v1, p0, Lcom/faceunity/core/model/prop/PropContainer;->mPropLock:Ljava/lang/Object;
 
     monitor-enter v1
 
+    .line 3
     :try_start_0
     iget-object v2, p0, Lcom/faceunity/core/model/prop/PropContainer;->mProps:Ljava/util/ArrayList;
 
@@ -341,8 +373,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
     monitor-exit v1
 
+    .line 5
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -362,6 +396,7 @@
 
     const/4 v2, 0x0
 
+    .line 6
     invoke-virtual {p0, v1, v2}, Lcom/faceunity/core/model/prop/PropContainer;->replaceProp(Lcom/faceunity/core/model/prop/Prop;Lcom/faceunity/core/model/prop/Prop;)Z
 
     goto :goto_0
@@ -374,6 +409,7 @@
     :catchall_0
     move-exception p0
 
+    .line 7
     monitor-exit v1
 
     throw p0
@@ -382,16 +418,17 @@
 .method public final removeProp(Lcom/faceunity/core/model/prop/Prop;)Z
     .locals 1
     .param p1    # Lcom/faceunity/core/model/prop/Prop;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "prop"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, v0}, Lcom/faceunity/core/model/prop/PropContainer;->replaceProp(Lcom/faceunity/core/model/prop/Prop;Lcom/faceunity/core/model/prop/Prop;)Z
 
     move-result p0
@@ -402,15 +439,16 @@
 .method public final replaceProp(Lcom/faceunity/core/model/prop/Prop;Lcom/faceunity/core/model/prop/Prop;)Z
     .locals 4
     .param p1    # Lcom/faceunity/core/model/prop/Prop;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
     .param p2    # Lcom/faceunity/core/model/prop/Prop;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .line 1
+    invoke-static {p1, p2}, Lh/d3/x/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -422,6 +460,7 @@
 
     const-string p0, "oldProp and newProp is same"
 
+    .line 2
     invoke-static {v2, p0}, Lcom/faceunity/toolbox/utils/FULogger;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
@@ -431,6 +470,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 3
     invoke-virtual {p0, p1}, Lcom/faceunity/core/model/prop/PropContainer;->hasContains(Lcom/faceunity/core/model/prop/Prop;)Z
 
     move-result v3
@@ -439,6 +479,7 @@
 
     const-string p1, "The prop  does not exist "
 
+    .line 4
     invoke-static {v2, p1}, Lcom/faceunity/toolbox/utils/FULogger;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
@@ -447,6 +488,7 @@
     :cond_2
     if-eqz p2, :cond_4
 
+    .line 5
     invoke-virtual {p0, p2}, Lcom/faceunity/core/model/prop/PropContainer;->hasContains(Lcom/faceunity/core/model/prop/Prop;)Z
 
     move-result v3
@@ -455,6 +497,7 @@
 
     const-string p2, "this prop already added "
 
+    .line 6
     invoke-static {v2, p2}, Lcom/faceunity/toolbox/utils/FULogger;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object p2, v0
@@ -469,10 +512,12 @@
 
     const-string p0, "cacheProp and targetProp is null"
 
+    .line 7
     invoke-static {v2, p0}, Lcom/faceunity/toolbox/utils/FULogger;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
 
+    .line 8
     :cond_5
     invoke-direct {p0, p1, v0}, Lcom/faceunity/core/model/prop/PropContainer;->doReplaceProp(Lcom/faceunity/core/model/prop/Prop;Lcom/faceunity/core/model/prop/Prop;)Z
 
@@ -484,10 +529,11 @@
 .method public final setOnPropCallBack(Lcom/faceunity/core/callback/OnPropCallBack;)V
     .locals 0
     .param p1    # Lcom/faceunity/core/callback/OnPropCallBack;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/core/model/prop/PropContainer;->getMPropController()Lcom/faceunity/core/controller/prop/PropController;
 
     move-result-object p0

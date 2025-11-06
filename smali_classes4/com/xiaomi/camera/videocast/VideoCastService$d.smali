@@ -18,14 +18,23 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/xiaomi/camera/videocast/VideoCastService;
+.field public final synthetic c:Lcom/xiaomi/camera/videocast/VideoCastService;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/camera/videocast/VideoCastService;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/xiaomi/camera/videocast/VideoCastService$d;->a:Lcom/xiaomi/camera/videocast/VideoCastService;
+    .line 1
+    iput-object p1, p0, Lcom/xiaomi/camera/videocast/VideoCastService$d;->c:Lcom/xiaomi/camera/videocast/VideoCastService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,21 +46,24 @@
 .method public run()V
     .locals 2
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/camera/videocast/VideoCastService;->a()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "stopAdvertising due to no response"
 
-    invoke-static {v0, v1}, Lbg/a;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Ld/o/f/r/m/a;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/xiaomi/camera/videocast/VideoCastService$d;->a:Lcom/xiaomi/camera/videocast/VideoCastService;
+    .line 2
+    iget-object v0, p0, Lcom/xiaomi/camera/videocast/VideoCastService$d;->c:Lcom/xiaomi/camera/videocast/VideoCastService;
 
-    const v1, 0x7f140c8e
+    const v1, 0x7f130c08
 
     invoke-static {v0, v1}, Lcom/xiaomi/camera/videocast/VideoCastService;->f(Lcom/xiaomi/camera/videocast/VideoCastService;I)V
 
-    iget-object p0, p0, Lcom/xiaomi/camera/videocast/VideoCastService$d;->a:Lcom/xiaomi/camera/videocast/VideoCastService;
+    .line 3
+    iget-object p0, p0, Lcom/xiaomi/camera/videocast/VideoCastService$d;->c:Lcom/xiaomi/camera/videocast/VideoCastService;
 
     const/4 v0, 0x0
 

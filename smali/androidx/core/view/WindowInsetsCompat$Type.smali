@@ -21,35 +21,36 @@
 
 
 # static fields
-.field static final CAPTION_BAR:I = 0x4
+.field public static final CAPTION_BAR:I = 0x4
 
-.field static final DISPLAY_CUTOUT:I = 0x80
+.field public static final DISPLAY_CUTOUT:I = 0x80
 
-.field static final FIRST:I = 0x1
+.field public static final FIRST:I = 0x1
 
-.field static final IME:I = 0x8
+.field public static final IME:I = 0x8
 
-.field static final LAST:I = 0x100
+.field public static final LAST:I = 0x100
 
-.field static final MANDATORY_SYSTEM_GESTURES:I = 0x20
+.field public static final MANDATORY_SYSTEM_GESTURES:I = 0x20
 
-.field static final NAVIGATION_BARS:I = 0x2
+.field public static final NAVIGATION_BARS:I = 0x2
 
-.field static final SIZE:I = 0x9
+.field public static final SIZE:I = 0x9
 
-.field static final STATUS_BARS:I = 0x1
+.field public static final STATUS_BARS:I = 0x1
 
-.field static final SYSTEM_GESTURES:I = 0x10
+.field public static final SYSTEM_GESTURES:I = 0x10
 
-.field static final TAPPABLE_ELEMENT:I = 0x40
+.field public static final TAPPABLE_ELEMENT:I = 0x40
 
-.field static final WINDOW_DECOR:I = 0x100
+.field public static final WINDOW_DECOR:I = 0x100
 
 
 # direct methods
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -139,6 +140,7 @@
 
     return v1
 
+    .line 1
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 

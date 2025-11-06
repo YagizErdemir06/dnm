@@ -1,4 +1,4 @@
-.class Lcom/android/camera2/compat/theme/custom/mm/apertureadjust/FragmentApertureAdjustMM$1;
+.class public Lcom/android/camera2/compat/theme/custom/mm/apertureadjust/FragmentApertureAdjustMM$1;
 .super Landroid/os/Handler;
 .source "SourceFile"
 
@@ -15,13 +15,24 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/apertureadjust/FragmentApertureAdjustMM;
+.field public final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/apertureadjust/FragmentApertureAdjustMM;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera2/compat/theme/custom/mm/apertureadjust/FragmentApertureAdjustMM;Landroid/os/Looper;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x0
+        }
+        names = {
+            "this$0",
+            "looper"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/apertureadjust/FragmentApertureAdjustMM$1;->this$0:Lcom/android/camera2/compat/theme/custom/mm/apertureadjust/FragmentApertureAdjustMM;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -33,7 +44,16 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "msg"
+        }
+    .end annotation
 
+    .line 1
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/4 v0, 0x1
@@ -42,6 +62,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/apertureadjust/FragmentApertureAdjustMM$1;->this$0:Lcom/android/camera2/compat/theme/custom/mm/apertureadjust/FragmentApertureAdjustMM;
 
@@ -59,12 +80,14 @@
 
     if-ne p1, v0, :cond_1
 
+    .line 3
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/apertureadjust/FragmentApertureAdjustMM$1;->this$0:Lcom/android/camera2/compat/theme/custom/mm/apertureadjust/FragmentApertureAdjustMM;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/apertureadjust/FragmentApertureAdjustMM;->access$102(Lcom/android/camera2/compat/theme/custom/mm/apertureadjust/FragmentApertureAdjustMM;Z)Z
 
+    .line 4
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/apertureadjust/FragmentApertureAdjustMM$1;->this$0:Lcom/android/camera2/compat/theme/custom/mm/apertureadjust/FragmentApertureAdjustMM;
 
     const/4 p1, 0x5

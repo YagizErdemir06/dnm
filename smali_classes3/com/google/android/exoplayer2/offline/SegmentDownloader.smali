@@ -95,12 +95,15 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iget-object v0, p1, Lcom/google/android/exoplayer2/MediaItem;->localConfiguration:Lcom/google/android/exoplayer2/MediaItem$LocalConfiguration;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     iget-object v0, p1, Lcom/google/android/exoplayer2/MediaItem;->localConfiguration:Lcom/google/android/exoplayer2/MediaItem$LocalConfiguration;
 
     iget-object v0, v0, Lcom/google/android/exoplayer2/MediaItem$LocalConfiguration;->uri:Landroid/net/Uri;
@@ -111,8 +114,10 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->manifestDataSpec:Lcom/google/android/exoplayer2/upstream/DataSpec;
 
+    .line 4
     iput-object p2, p0, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->manifestParser:Lcom/google/android/exoplayer2/upstream/ParsingLoadable$Parser;
 
+    .line 5
     new-instance p2, Ljava/util/ArrayList;
 
     iget-object p1, p1, Lcom/google/android/exoplayer2/MediaItem;->localConfiguration:Lcom/google/android/exoplayer2/MediaItem$LocalConfiguration;
@@ -123,10 +128,13 @@
 
     iput-object p2, p0, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->streamKeys:Ljava/util/ArrayList;
 
+    .line 6
     iput-object p3, p0, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->cacheDataSourceFactory:Lcom/google/android/exoplayer2/upstream/cache/CacheDataSource$Factory;
 
+    .line 7
     iput-object p4, p0, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->executor:Ljava/util/concurrent/Executor;
 
+    .line 8
     invoke-virtual {p3}, Lcom/google/android/exoplayer2/upstream/cache/CacheDataSource$Factory;->getCache()Lcom/google/android/exoplayer2/upstream/cache/Cache;
 
     move-result-object p1
@@ -139,18 +147,21 @@
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->cache:Lcom/google/android/exoplayer2/upstream/cache/Cache;
 
+    .line 9
     invoke-virtual {p3}, Lcom/google/android/exoplayer2/upstream/cache/CacheDataSource$Factory;->getCacheKeyFactory()Lcom/google/android/exoplayer2/upstream/cache/CacheKeyFactory;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->cacheKeyFactory:Lcom/google/android/exoplayer2/upstream/cache/CacheKeyFactory;
 
+    .line 10
     invoke-virtual {p3}, Lcom/google/android/exoplayer2/upstream/cache/CacheDataSource$Factory;->getUpstreamPriorityTaskManager()Lcom/google/android/exoplayer2/util/PriorityTaskManager;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->priorityTaskManager:Lcom/google/android/exoplayer2/util/PriorityTaskManager;
 
+    .line 11
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -163,6 +174,7 @@
 .method public static synthetic access$000(Lcom/google/android/exoplayer2/offline/SegmentDownloader;)Lcom/google/android/exoplayer2/upstream/ParsingLoadable$Parser;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->manifestParser:Lcom/google/android/exoplayer2/upstream/ParsingLoadable$Parser;
 
     return-object p0
@@ -186,23 +198,28 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->activeRunnables:Ljava/util/ArrayList;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-boolean v1, p0, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->isCanceled:Z
 
     if-nez v1, :cond_0
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->activeRunnables:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 4
     monitor-exit v0
 
     return-void
 
+    .line 5
     :cond_0
     new-instance p0, Ljava/lang/InterruptedException;
 
@@ -213,6 +230,7 @@
     :catchall_0
     move-exception p0
 
+    .line 6
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -223,6 +241,7 @@
 .method private static canMergeSegments(Lcom/google/android/exoplayer2/upstream/DataSpec;Lcom/google/android/exoplayer2/upstream/DataSpec;)Z
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/upstream/DataSpec;->uri:Landroid/net/Uri;
 
     iget-object v1, p1, Lcom/google/android/exoplayer2/upstream/DataSpec;->uri:Landroid/net/Uri;
@@ -255,6 +274,7 @@
 
     iget-object v1, p1, Lcom/google/android/exoplayer2/upstream/DataSpec;->key:Ljava/lang/String;
 
+    .line 2
     invoke-static {v0, v1}, Lcom/google/android/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
@@ -277,6 +297,7 @@
 
     iget-object p1, p1, Lcom/google/android/exoplayer2/upstream/DataSpec;->httpRequestHeaders:Ljava/util/Map;
 
+    .line 3
     invoke-interface {p0, p1}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -297,6 +318,7 @@
 .method public static getCompressibleDataSpec(Landroid/net/Uri;)Lcom/google/android/exoplayer2/upstream/DataSpec;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/upstream/DataSpec$Builder;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/upstream/DataSpec$Builder;-><init>()V
@@ -331,6 +353,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -339,6 +362,7 @@
 
     move v2, v1
 
+    .line 2
     :goto_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -346,18 +370,21 @@
 
     if-ge v1, v3, :cond_4
 
+    .line 3
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/google/android/exoplayer2/offline/SegmentDownloader$Segment;
 
+    .line 4
     iget-object v4, v3, Lcom/google/android/exoplayer2/offline/SegmentDownloader$Segment;->dataSpec:Lcom/google/android/exoplayer2/upstream/DataSpec;
 
     invoke-interface {p1, v4}, Lcom/google/android/exoplayer2/upstream/cache/CacheKeyFactory;->buildCacheKey(Lcom/google/android/exoplayer2/upstream/DataSpec;)Ljava/lang/String;
 
     move-result-object v4
 
+    .line 5
     invoke-virtual {v0, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v5
@@ -370,6 +397,7 @@
 
     goto :goto_1
 
+    .line 6
     :cond_0
     invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
 
@@ -384,6 +412,7 @@
     :goto_1
     if-eqz v6, :cond_3
 
+    .line 7
     iget-wide v7, v3, Lcom/google/android/exoplayer2/offline/SegmentDownloader$Segment;->startTimeUs:J
 
     iget-wide v9, v6, Lcom/google/android/exoplayer2/offline/SegmentDownloader$Segment;->startTimeUs:J
@@ -400,6 +429,7 @@
 
     iget-object v8, v3, Lcom/google/android/exoplayer2/offline/SegmentDownloader$Segment;->dataSpec:Lcom/google/android/exoplayer2/upstream/DataSpec;
 
+    .line 8
     invoke-static {v7, v8}, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->canMergeSegments(Lcom/google/android/exoplayer2/upstream/DataSpec;Lcom/google/android/exoplayer2/upstream/DataSpec;)Z
 
     move-result v7
@@ -408,6 +438,7 @@
 
     goto :goto_3
 
+    .line 9
     :cond_1
     iget-object v3, v3, Lcom/google/android/exoplayer2/offline/SegmentDownloader$Segment;->dataSpec:Lcom/google/android/exoplayer2/upstream/DataSpec;
 
@@ -421,6 +452,7 @@
 
     goto :goto_2
 
+    .line 10
     :cond_2
     iget-object v7, v6, Lcom/google/android/exoplayer2/offline/SegmentDownloader$Segment;->dataSpec:Lcom/google/android/exoplayer2/upstream/DataSpec;
 
@@ -428,6 +460,7 @@
 
     add-long/2addr v7, v3
 
+    .line 11
     :goto_2
     iget-object v3, v6, Lcom/google/android/exoplayer2/offline/SegmentDownloader$Segment;->dataSpec:Lcom/google/android/exoplayer2/upstream/DataSpec;
 
@@ -437,6 +470,7 @@
 
     move-result-object v3
 
+    .line 12
     invoke-static {v5}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
@@ -453,10 +487,12 @@
 
     invoke-direct {v5, v6, v7, v3}, Lcom/google/android/exoplayer2/offline/SegmentDownloader$Segment;-><init>(JLcom/google/android/exoplayer2/upstream/DataSpec;)V
 
+    .line 13
     invoke-interface {p0, v4, v5}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_4
 
+    .line 14
     :cond_3
     :goto_3
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -465,6 +501,7 @@
 
     invoke-virtual {v0, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 15
     invoke-interface {p0, v2, v3}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
     add-int/lit8 v2, v2, 0x1
@@ -474,6 +511,7 @@
 
     goto :goto_0
 
+    .line 16
     :cond_4
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -554,17 +592,20 @@
 .method public cancel()V
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->activeRunnables:Ljava/util/ArrayList;
 
     monitor-enter v0
 
     const/4 v1, 0x1
 
+    .line 2
     :try_start_0
     iput-boolean v1, p0, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->isCanceled:Z
 
     const/4 v2, 0x0
 
+    .line 3
     :goto_0
     iget-object v3, p0, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->activeRunnables:Ljava/util/ArrayList;
 
@@ -574,6 +615,7 @@
 
     if-ge v2, v3, :cond_0
 
+    .line 4
     iget-object v3, p0, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->activeRunnables:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -588,6 +630,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     monitor-exit v0
 
@@ -618,20 +661,24 @@
 
     move-object/from16 v1, p0
 
+    .line 1
     new-instance v2, Ljava/util/ArrayDeque;
 
     invoke-direct {v2}, Ljava/util/ArrayDeque;-><init>()V
 
+    .line 2
     new-instance v3, Ljava/util/ArrayDeque;
 
     invoke-direct {v3}, Ljava/util/ArrayDeque;-><init>()V
 
+    .line 3
     iget-object v0, v1, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->priorityTaskManager:Lcom/google/android/exoplayer2/util/PriorityTaskManager;
 
     const/16 v4, -0x3e8
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-virtual {v0, v4}, Lcom/google/android/exoplayer2/util/PriorityTaskManager;->add(I)V
 
     :cond_0
@@ -639,6 +686,7 @@
 
     const/4 v6, 0x1
 
+    .line 5
     :try_start_0
     iget-object v0, v1, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->cacheDataSourceFactory:Lcom/google/android/exoplayer2/upstream/cache/CacheDataSource$Factory;
 
@@ -646,12 +694,14 @@
 
     move-result-object v0
 
+    .line 6
     iget-object v7, v1, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->manifestDataSpec:Lcom/google/android/exoplayer2/upstream/DataSpec;
 
     invoke-virtual {v1, v0, v7, v5}, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->getManifest(Lcom/google/android/exoplayer2/upstream/DataSource;Lcom/google/android/exoplayer2/upstream/DataSpec;Z)Lcom/google/android/exoplayer2/offline/FilterableManifest;
 
     move-result-object v7
 
+    .line 7
     iget-object v8, v1, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->streamKeys:Ljava/util/ArrayList;
 
     invoke-virtual {v8}, Ljava/util/ArrayList;->isEmpty()Z
@@ -660,6 +710,7 @@
 
     if-nez v8, :cond_1
 
+    .line 8
     iget-object v8, v1, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->streamKeys:Ljava/util/ArrayList;
 
     invoke-interface {v7, v8}, Lcom/google/android/exoplayer2/offline/FilterableManifest;->copy(Ljava/util/List;)Ljava/lang/Object;
@@ -668,21 +719,26 @@
 
     check-cast v7, Lcom/google/android/exoplayer2/offline/FilterableManifest;
 
+    .line 9
     :cond_1
     invoke-virtual {v1, v0, v7, v5}, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->getSegments(Lcom/google/android/exoplayer2/upstream/DataSource;Lcom/google/android/exoplayer2/offline/FilterableManifest;Z)Ljava/util/List;
 
     move-result-object v0
 
+    .line 10
     invoke-static {v0}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
+    .line 11
     iget-object v7, v1, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->cacheKeyFactory:Lcom/google/android/exoplayer2/upstream/cache/CacheKeyFactory;
 
     invoke-static {v0, v7}, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->mergeSegments(Ljava/util/List;Lcom/google/android/exoplayer2/upstream/cache/CacheKeyFactory;)V
 
+    .line 12
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v12
 
+    .line 13
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v7
@@ -702,6 +758,7 @@
     :goto_0
     if-ltz v7, :cond_6
 
+    .line 14
     :try_start_1
     invoke-interface {v0, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -711,12 +768,14 @@
 
     iget-object v8, v8, Lcom/google/android/exoplayer2/offline/SegmentDownloader$Segment;->dataSpec:Lcom/google/android/exoplayer2/upstream/DataSpec;
 
+    .line 15
     iget-object v9, v1, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->cacheKeyFactory:Lcom/google/android/exoplayer2/upstream/cache/CacheKeyFactory;
 
     invoke-interface {v9, v8}, Lcom/google/android/exoplayer2/upstream/cache/CacheKeyFactory;->buildCacheKey(Lcom/google/android/exoplayer2/upstream/DataSpec;)Ljava/lang/String;
 
     move-result-object v9
 
+    .line 16
     iget-wide v5, v8, Lcom/google/android/exoplayer2/upstream/DataSpec;->length:J
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -727,9 +786,11 @@
 
     if-nez v16, :cond_2
 
+    .line 17
     :try_start_2
     iget-object v4, v1, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->cache:Lcom/google/android/exoplayer2/upstream/cache/Cache;
 
+    .line 18
     invoke-interface {v4, v9}, Lcom/google/android/exoplayer2/upstream/cache/Cache;->getContentMetadata(Ljava/lang/String;)Lcom/google/android/exoplayer2/upstream/cache/ContentMetadata;
 
     move-result-object v4
@@ -742,12 +803,14 @@
 
     if-eqz v4, :cond_2
 
+    .line 19
     iget-wide v4, v8, Lcom/google/android/exoplayer2/upstream/DataSpec;->position:J
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
     sub-long v5, v16, v4
 
+    .line 20
     :cond_2
     :try_start_3
     iget-object v4, v1, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->cache:Lcom/google/android/exoplayer2/upstream/cache/Cache;
@@ -764,6 +827,7 @@
 
     move-wide/from16 v20, v5
 
+    .line 21
     invoke-interface/range {v16 .. v21}, Lcom/google/android/exoplayer2/upstream/cache/Cache;->getCachedBytes(Ljava/lang/String;JJ)J
 
     move-result-wide v1
@@ -780,6 +844,7 @@
 
     add-int/lit8 v15, v15, 0x1
 
+    .line 22
     invoke-interface {v0, v7}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
     :cond_3
@@ -822,6 +887,7 @@
 
     if-eqz p1, :cond_7
 
+    .line 23
     new-instance v1, Lcom/google/android/exoplayer2/offline/SegmentDownloader$ProgressNotifier;
 
     move-object v8, v1
@@ -838,12 +904,14 @@
     :goto_2
     move-object/from16 v2, v24
 
+    .line 24
     invoke-virtual {v2, v0}, Ljava/util/ArrayDeque;->addAll(Ljava/util/Collection;)Z
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     move-object/from16 v4, p0
 
+    .line 25
     :goto_3
     :try_start_4
     iget-boolean v0, v4, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->isCanceled:Z
@@ -856,14 +924,17 @@
 
     if-nez v0, :cond_f
 
+    .line 26
     iget-object v0, v4, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->priorityTaskManager:Lcom/google/android/exoplayer2/util/PriorityTaskManager;
 
     if-eqz v0, :cond_8
 
     const/16 v5, -0x3e8
 
+    .line 27
     invoke-virtual {v0, v5}, Lcom/google/android/exoplayer2/util/PriorityTaskManager;->proceed(I)V
 
+    .line 28
     :cond_8
     invoke-virtual {v3}, Ljava/util/ArrayDeque;->isEmpty()Z
 
@@ -871,18 +942,22 @@
 
     if-nez v0, :cond_9
 
+    .line 29
     invoke-virtual {v3}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/google/android/exoplayer2/offline/SegmentDownloader$SegmentDownloadRunnable;
 
+    .line 30
     iget-object v5, v0, Lcom/google/android/exoplayer2/offline/SegmentDownloader$SegmentDownloadRunnable;->dataSource:Lcom/google/android/exoplayer2/upstream/cache/CacheDataSource;
 
+    .line 31
     iget-object v0, v0, Lcom/google/android/exoplayer2/offline/SegmentDownloader$SegmentDownloadRunnable;->temporaryBuffer:[B
 
     goto :goto_4
 
+    .line 32
     :cond_9
     iget-object v0, v4, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->cacheDataSourceFactory:Lcom/google/android/exoplayer2/upstream/cache/CacheDataSource$Factory;
 
@@ -894,6 +969,7 @@
 
     new-array v0, v0, [B
 
+    .line 33
     :goto_4
     invoke-virtual {v2}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;
 
@@ -901,16 +977,20 @@
 
     check-cast v6, Lcom/google/android/exoplayer2/offline/SegmentDownloader$Segment;
 
+    .line 34
     new-instance v7, Lcom/google/android/exoplayer2/offline/SegmentDownloader$SegmentDownloadRunnable;
 
     invoke-direct {v7, v6, v5, v1, v0}, Lcom/google/android/exoplayer2/offline/SegmentDownloader$SegmentDownloadRunnable;-><init>(Lcom/google/android/exoplayer2/offline/SegmentDownloader$Segment;Lcom/google/android/exoplayer2/upstream/cache/CacheDataSource;Lcom/google/android/exoplayer2/offline/SegmentDownloader$ProgressNotifier;[B)V
 
+    .line 35
     invoke-direct {v4, v7}, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->addActiveRunnable(Lcom/google/android/exoplayer2/util/RunnableFutureTask;)V
 
+    .line 36
     iget-object v0, v4, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->executor:Ljava/util/concurrent/Executor;
 
     invoke-interface {v0, v7}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
+    .line 37
     iget-object v0, v4, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->activeRunnables:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -926,6 +1006,7 @@
     :goto_5
     if-ltz v5, :cond_e
 
+    .line 38
     iget-object v0, v4, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->activeRunnables:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -936,6 +1017,7 @@
 
     check-cast v6, Lcom/google/android/exoplayer2/offline/SegmentDownloader$SegmentDownloadRunnable;
 
+    .line 39
     invoke-virtual {v2}, Ljava/util/ArrayDeque;->isEmpty()Z
 
     move-result v0
@@ -950,12 +1032,15 @@
 
     if-eqz v0, :cond_c
 
+    .line 40
     :cond_a
     :try_start_5
     invoke-virtual {v6}, Lcom/google/android/exoplayer2/util/RunnableFutureTask;->get()Ljava/lang/Object;
 
+    .line 41
     invoke-direct {v4, v5}, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->removeActiveRunnable(I)V
 
+    .line 42
     invoke-virtual {v3, v6}, Ljava/util/ArrayDeque;->addLast(Ljava/lang/Object;)V
     :try_end_5
     .catch Ljava/util/concurrent/ExecutionException; {:try_start_5 .. :try_end_5} :catch_0
@@ -966,8 +1051,9 @@
     :catch_0
     move-exception v0
 
+    .line 43
     :try_start_6
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    invoke-virtual {v0}, Ljava/util/concurrent/ExecutionException;->getCause()Ljava/lang/Throwable;
 
     move-result-object v0
 
@@ -977,25 +1063,31 @@
 
     check-cast v0, Ljava/lang/Throwable;
 
+    .line 44
     instance-of v8, v0, Lcom/google/android/exoplayer2/util/PriorityTaskManager$PriorityTooLowException;
 
     if-eqz v8, :cond_b
 
+    .line 45
     iget-object v0, v6, Lcom/google/android/exoplayer2/offline/SegmentDownloader$SegmentDownloadRunnable;->segment:Lcom/google/android/exoplayer2/offline/SegmentDownloader$Segment;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayDeque;->addFirst(Ljava/lang/Object;)V
 
+    .line 46
     invoke-direct {v4, v5}, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->removeActiveRunnable(I)V
 
+    .line 47
     invoke-virtual {v3, v6}, Ljava/util/ArrayDeque;->addLast(Ljava/lang/Object;)V
 
     goto :goto_6
 
+    .line 48
     :cond_b
     instance-of v6, v0, Ljava/io/IOException;
 
     if-nez v6, :cond_d
 
+    .line 49
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Util;->sneakyThrow(Ljava/lang/Throwable;)V
 
     :cond_c
@@ -1004,11 +1096,13 @@
 
     goto :goto_5
 
+    .line 50
     :cond_d
     check-cast v0, Ljava/io/IOException;
 
     throw v0
 
+    .line 51
     :cond_e
     invoke-virtual {v7}, Lcom/google/android/exoplayer2/util/RunnableFutureTask;->blockUntilStarted()V
     :try_end_6
@@ -1019,6 +1113,7 @@
     :cond_f
     const/4 v5, 0x0
 
+    .line 52
     :goto_7
     iget-object v0, v4, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->activeRunnables:Ljava/util/ArrayList;
 
@@ -1028,6 +1123,7 @@
 
     if-ge v5, v0, :cond_10
 
+    .line 53
     iget-object v0, v4, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->activeRunnables:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1047,6 +1143,7 @@
     :cond_10
     const/4 v1, 0x1
 
+    .line 54
     iget-object v0, v4, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->activeRunnables:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -1058,6 +1155,7 @@
     :goto_8
     if-ltz v0, :cond_11
 
+    .line 55
     iget-object v1, v4, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->activeRunnables:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1068,12 +1166,14 @@
 
     invoke-virtual {v1}, Lcom/google/android/exoplayer2/util/RunnableFutureTask;->blockUntilFinished()V
 
+    .line 56
     invoke-direct {v4, v0}, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->removeActiveRunnable(I)V
 
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_8
 
+    .line 57
     :cond_11
     iget-object v0, v4, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->priorityTaskManager:Lcom/google/android/exoplayer2/util/PriorityTaskManager;
 
@@ -1081,6 +1181,7 @@
 
     const/16 v1, -0x3e8
 
+    .line 58
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/util/PriorityTaskManager;->remove(I)V
 
     :cond_12
@@ -1099,6 +1200,7 @@
     :goto_9
     const/4 v5, 0x0
 
+    .line 59
     :goto_a
     iget-object v1, v4, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->activeRunnables:Ljava/util/ArrayList;
 
@@ -1108,6 +1210,7 @@
 
     if-ge v5, v1, :cond_13
 
+    .line 60
     iget-object v1, v4, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->activeRunnables:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1127,6 +1230,7 @@
     :cond_13
     const/4 v2, 0x1
 
+    .line 61
     iget-object v1, v4, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->activeRunnables:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -1138,6 +1242,7 @@
     :goto_b
     if-ltz v1, :cond_14
 
+    .line 62
     iget-object v2, v4, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->activeRunnables:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1148,12 +1253,14 @@
 
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/util/RunnableFutureTask;->blockUntilFinished()V
 
+    .line 63
     invoke-direct {v4, v1}, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->removeActiveRunnable(I)V
 
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_b
 
+    .line 64
     :cond_14
     iget-object v1, v4, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->priorityTaskManager:Lcom/google/android/exoplayer2/util/PriorityTaskManager;
 
@@ -1161,8 +1268,10 @@
 
     const/16 v2, -0x3e8
 
+    .line 65
     invoke-virtual {v1, v2}, Lcom/google/android/exoplayer2/util/PriorityTaskManager;->remove(I)V
 
+    .line 66
     :cond_15
     throw v0
 .end method
@@ -1188,8 +1297,10 @@
 
     if-eqz p2, :cond_1
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/RunnableFutureTask;->run()V
 
+    .line 2
     :try_start_0
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/RunnableFutureTask;->get()Ljava/lang/Object;
 
@@ -1202,7 +1313,8 @@
     :catch_0
     move-exception p2
 
-    invoke-virtual {p2}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    .line 3
+    invoke-virtual {p2}, Ljava/util/concurrent/ExecutionException;->getCause()Ljava/lang/Throwable;
 
     move-result-object v0
 
@@ -1212,40 +1324,49 @@
 
     check-cast v0, Ljava/lang/Throwable;
 
+    .line 4
     instance-of v1, v0, Ljava/io/IOException;
 
     if-nez v1, :cond_0
 
+    .line 5
     invoke-static {p2}, Lcom/google/android/exoplayer2/util/Util;->sneakyThrow(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
+    .line 6
     :cond_0
     check-cast v0, Ljava/io/IOException;
 
     throw v0
 
+    .line 7
     :cond_1
     :goto_0
     iget-boolean p2, p0, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->isCanceled:Z
 
     if-nez p2, :cond_5
 
+    .line 8
     iget-object p2, p0, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->priorityTaskManager:Lcom/google/android/exoplayer2/util/PriorityTaskManager;
 
     if-eqz p2, :cond_2
 
     const/16 v0, -0x3e8
 
+    .line 9
     invoke-virtual {p2, v0}, Lcom/google/android/exoplayer2/util/PriorityTaskManager;->proceed(I)V
 
+    .line 10
     :cond_2
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->addActiveRunnable(Lcom/google/android/exoplayer2/util/RunnableFutureTask;)V
 
+    .line 11
     iget-object p2, p0, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->executor:Ljava/util/concurrent/Executor;
 
     invoke-interface {p2, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
+    .line 12
     :try_start_1
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/RunnableFutureTask;->get()Ljava/lang/Object;
 
@@ -1254,8 +1375,10 @@
     .catch Ljava/util/concurrent/ExecutionException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 13
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/RunnableFutureTask;->blockUntilFinished()V
 
+    .line 14
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->removeActiveRunnable(Lcom/google/android/exoplayer2/util/RunnableFutureTask;)V
 
     return-object p2
@@ -1268,8 +1391,9 @@
     :catch_1
     move-exception p2
 
+    .line 15
     :try_start_2
-    invoke-virtual {p2}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    invoke-virtual {p2}, Ljava/util/concurrent/ExecutionException;->getCause()Ljava/lang/Throwable;
 
     move-result-object v0
 
@@ -1279,28 +1403,34 @@
 
     check-cast v0, Ljava/lang/Throwable;
 
+    .line 16
     instance-of v1, v0, Lcom/google/android/exoplayer2/util/PriorityTaskManager$PriorityTooLowException;
 
     if-eqz v1, :cond_3
 
     goto :goto_1
 
+    .line 17
     :cond_3
     instance-of v1, v0, Ljava/io/IOException;
 
     if-nez v1, :cond_4
 
+    .line 18
     invoke-static {p2}, Lcom/google/android/exoplayer2/util/Util;->sneakyThrow(Ljava/lang/Throwable;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 19
     :goto_1
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/RunnableFutureTask;->blockUntilFinished()V
 
+    .line 20
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->removeActiveRunnable(Lcom/google/android/exoplayer2/util/RunnableFutureTask;)V
 
     goto :goto_0
 
+    .line 21
     :cond_4
     :try_start_3
     check-cast v0, Ljava/io/IOException;
@@ -1309,13 +1439,17 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
+    .line 22
     :goto_2
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/RunnableFutureTask;->blockUntilFinished()V
 
+    .line 23
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->removeActiveRunnable(Lcom/google/android/exoplayer2/util/RunnableFutureTask;)V
 
+    .line 24
     throw p2
 
+    .line 25
     :cond_5
     new-instance p0, Ljava/lang/InterruptedException;
 
@@ -1342,6 +1476,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/offline/SegmentDownloader$1;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/google/android/exoplayer2/offline/SegmentDownloader$1;-><init>(Lcom/google/android/exoplayer2/offline/SegmentDownloader;Lcom/google/android/exoplayer2/upstream/DataSource;Lcom/google/android/exoplayer2/upstream/DataSpec;)V
@@ -1378,12 +1513,14 @@
 .method public final remove()V
     .locals 5
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->cacheDataSourceFactory:Lcom/google/android/exoplayer2/upstream/cache/CacheDataSource$Factory;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/upstream/cache/CacheDataSource$Factory;->createDataSourceForRemovingDownload()Lcom/google/android/exoplayer2/upstream/cache/CacheDataSource;
 
     move-result-object v0
 
+    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->manifestDataSpec:Lcom/google/android/exoplayer2/upstream/DataSpec;
 
@@ -1393,12 +1530,14 @@
 
     move-result-object v1
 
+    .line 3
     invoke-virtual {p0, v0, v1, v2}, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->getSegments(Lcom/google/android/exoplayer2/upstream/DataSource;Lcom/google/android/exoplayer2/offline/FilterableManifest;Z)Ljava/util/List;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
+    .line 4
     :goto_0
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -1406,6 +1545,7 @@
 
     if-ge v1, v2, :cond_0
 
+    .line 5
     iget-object v2, p0, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->cache:Lcom/google/android/exoplayer2/upstream/cache/Cache;
 
     iget-object v3, p0, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->cacheKeyFactory:Lcom/google/android/exoplayer2/upstream/cache/CacheKeyFactory;
@@ -1437,6 +1577,7 @@
 
     goto :goto_3
 
+    .line 6
     :catch_0
     :cond_0
     :goto_1
@@ -1454,6 +1595,7 @@
 
     goto :goto_2
 
+    .line 7
     :catch_1
     :try_start_1
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
@@ -1469,6 +1611,7 @@
     :goto_2
     return-void
 
+    .line 8
     :goto_3
     iget-object v1, p0, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->cache:Lcom/google/android/exoplayer2/upstream/cache/Cache;
 
@@ -1482,5 +1625,6 @@
 
     invoke-interface {v1, p0}, Lcom/google/android/exoplayer2/upstream/cache/Cache;->removeResource(Ljava/lang/String;)V
 
+    .line 9
     throw v0
 .end method

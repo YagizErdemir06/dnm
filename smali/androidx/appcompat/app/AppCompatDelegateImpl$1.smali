@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/app/AppCompatDelegateImpl$1;
+.class public Landroidx/appcompat/app/AppCompatDelegateImpl$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic val$defHandler:Ljava/lang/Thread$UncaughtExceptionHandler;
+.field public final synthetic val$defHandler:Ljava/lang/Thread$UncaughtExceptionHandler;
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/Thread$UncaughtExceptionHandler;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$1;->val$defHandler:Ljava/lang/Thread$UncaughtExceptionHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,12 +36,14 @@
 .method private shouldWrapException(Ljava/lang/Throwable;)Z
     .locals 1
 
+    .line 1
     instance-of p0, p1, Landroid/content/res/Resources$NotFoundException;
 
     const/4 v0, 0x0
 
     if-eqz p0, :cond_1
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -49,6 +52,7 @@
 
     const-string p1, "drawable"
 
+    .line 3
     invoke-virtual {p0, p1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result p1
@@ -57,6 +61,7 @@
 
     const-string p1, "Drawable"
 
+    .line 4
     invoke-virtual {p0, p1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result p0
@@ -83,18 +88,21 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0, p2}, Landroidx/appcompat/app/AppCompatDelegateImpl$1;->shouldWrapException(Ljava/lang/Throwable;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     new-instance v0, Landroid/content/res/Resources$NotFoundException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 3
     invoke-virtual {p2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v2
@@ -111,24 +119,28 @@
 
     invoke-direct {v0, v1}, Landroid/content/res/Resources$NotFoundException;-><init>(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {p2}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
+    .line 5
     invoke-virtual {p2}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
 
     move-result-object p2
 
     invoke-virtual {v0, p2}, Ljava/lang/Throwable;->setStackTrace([Ljava/lang/StackTraceElement;)V
 
+    .line 6
     iget-object p0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$1;->val$defHandler:Ljava/lang/Thread$UncaughtExceptionHandler;
 
     invoke-interface {p0, p1, v0}, Ljava/lang/Thread$UncaughtExceptionHandler;->uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
 
     goto :goto_0
 
+    .line 7
     :cond_0
     iget-object p0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl$1;->val$defHandler:Ljava/lang/Thread$UncaughtExceptionHandler;
 

@@ -1,4 +1,4 @@
-.class Lcom/faceunity/core/weight/GLTextureView$ComponentSizeChooser;
+.class public Lcom/faceunity/core/weight/GLTextureView$ComponentSizeChooser;
 .super Lcom/faceunity/core/weight/GLTextureView$BaseConfigChooser;
 .source "SourceFile"
 
@@ -15,19 +15,19 @@
 
 
 # instance fields
-.field protected alphaSize:I
+.field public alphaSize:I
 
-.field protected blueSize:I
+.field public blueSize:I
 
-.field protected depthSize:I
+.field public depthSize:I
 
-.field protected greenSize:I
+.field public greenSize:I
 
-.field protected redSize:I
+.field public redSize:I
 
-.field protected stencilSize:I
+.field public stencilSize:I
 
-.field final synthetic this$0:Lcom/faceunity/core/weight/GLTextureView;
+.field public final synthetic this$0:Lcom/faceunity/core/weight/GLTextureView;
 
 .field private value:[I
 
@@ -36,6 +36,7 @@
 .method public constructor <init>(Lcom/faceunity/core/weight/GLTextureView;IIIIII)V
     .locals 4
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/core/weight/GLTextureView$ComponentSizeChooser;->this$0:Lcom/faceunity/core/weight/GLTextureView;
 
     const/16 v0, 0xd
@@ -108,22 +109,30 @@
 
     aput v3, v0, v2
 
+    .line 2
     invoke-direct {p0, p1, v0}, Lcom/faceunity/core/weight/GLTextureView$BaseConfigChooser;-><init>(Lcom/faceunity/core/weight/GLTextureView;[I)V
 
     new-array p1, v1, [I
 
+    .line 3
     iput-object p1, p0, Lcom/faceunity/core/weight/GLTextureView$ComponentSizeChooser;->value:[I
 
+    .line 4
     iput p2, p0, Lcom/faceunity/core/weight/GLTextureView$ComponentSizeChooser;->redSize:I
 
+    .line 5
     iput p3, p0, Lcom/faceunity/core/weight/GLTextureView$ComponentSizeChooser;->greenSize:I
 
+    .line 6
     iput p4, p0, Lcom/faceunity/core/weight/GLTextureView$ComponentSizeChooser;->blueSize:I
 
+    .line 7
     iput p5, p0, Lcom/faceunity/core/weight/GLTextureView$ComponentSizeChooser;->alphaSize:I
 
+    .line 8
     iput p6, p0, Lcom/faceunity/core/weight/GLTextureView$ComponentSizeChooser;->depthSize:I
 
+    .line 9
     iput p7, p0, Lcom/faceunity/core/weight/GLTextureView$ComponentSizeChooser;->stencilSize:I
 
     return-void
@@ -132,6 +141,7 @@
 .method private findConfigAttrib(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLConfig;II)I
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/weight/GLTextureView$ComponentSizeChooser;->value:[I
 
     const/4 v1, 0x0
@@ -142,6 +152,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/faceunity/core/weight/GLTextureView$ComponentSizeChooser;->value:[I
 
     aget p0, p0, v1
@@ -157,6 +168,7 @@
 .method public chooseConfig(Landroid/opengl/EGLDisplay;[Landroid/opengl/EGLConfig;)Landroid/opengl/EGLConfig;
     .locals 9
 
+    .line 1
     array-length v0, p2
 
     const/4 v1, 0x0
@@ -170,16 +182,19 @@
 
     const/16 v4, 0x3025
 
+    .line 2
     invoke-direct {p0, p1, v3, v4, v1}, Lcom/faceunity/core/weight/GLTextureView$ComponentSizeChooser;->findConfigAttrib(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLConfig;II)I
 
     move-result v4
 
     const/16 v5, 0x3026
 
+    .line 3
     invoke-direct {p0, p1, v3, v5, v1}, Lcom/faceunity/core/weight/GLTextureView$ComponentSizeChooser;->findConfigAttrib(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLConfig;II)I
 
     move-result v5
 
+    .line 4
     iget v6, p0, Lcom/faceunity/core/weight/GLTextureView$ComponentSizeChooser;->depthSize:I
 
     if-lt v4, v6, :cond_0
@@ -190,28 +205,33 @@
 
     const/16 v4, 0x3024
 
+    .line 5
     invoke-direct {p0, p1, v3, v4, v1}, Lcom/faceunity/core/weight/GLTextureView$ComponentSizeChooser;->findConfigAttrib(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLConfig;II)I
 
     move-result v4
 
     const/16 v5, 0x3023
 
+    .line 6
     invoke-direct {p0, p1, v3, v5, v1}, Lcom/faceunity/core/weight/GLTextureView$ComponentSizeChooser;->findConfigAttrib(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLConfig;II)I
 
     move-result v5
 
     const/16 v6, 0x3022
 
+    .line 7
     invoke-direct {p0, p1, v3, v6, v1}, Lcom/faceunity/core/weight/GLTextureView$ComponentSizeChooser;->findConfigAttrib(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLConfig;II)I
 
     move-result v6
 
     const/16 v7, 0x3021
 
+    .line 8
     invoke-direct {p0, p1, v3, v7, v1}, Lcom/faceunity/core/weight/GLTextureView$ComponentSizeChooser;->findConfigAttrib(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLConfig;II)I
 
     move-result v7
 
+    .line 9
     iget v8, p0, Lcom/faceunity/core/weight/GLTextureView$ComponentSizeChooser;->redSize:I
 
     if-ne v4, v8, :cond_0

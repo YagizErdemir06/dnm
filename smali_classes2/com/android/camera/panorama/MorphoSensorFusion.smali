@@ -62,6 +62,7 @@
     :try_start_0
     const-string v0, "morpho_sensor_fusion"
 
+    .line 1
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_0
@@ -75,6 +76,7 @@
 
     const-string v2, "can\'t loadLibrary morpho_sensor_fusion"
 
+    .line 2
     invoke-static {v1, v2, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
@@ -84,8 +86,10 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-direct {p0}, Lcom/android/camera/panorama/MorphoSensorFusion;->createNativeObject()J
 
     move-result-wide v0
@@ -96,22 +100,47 @@
 .end method
 
 .method private native calc(J)I
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mNative"
+        }
+    .end annotation
 .end method
 
 .method private native createNativeObject()J
 .end method
 
 .method private native deleteNativeObject(J)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mNative"
+        }
+    .end annotation
 .end method
 
 .method private native finish(J)I
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mNative"
+        }
+    .end annotation
 .end method
 
 .method public static getVersion()Ljava/lang/String;
     .locals 1
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/android/camera/panorama/MorphoSensorFusion;->nativeGetVersion()Ljava/lang/String;
 
     move-result-object v0
@@ -120,36 +149,142 @@
 .end method
 
 .method private native initialize(J)I
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mNative"
+        }
+    .end annotation
 .end method
 
 .method private static native nativeGetVersion()Ljava/lang/String;
 .end method
 
 .method private native outputRotationAngle(J[D)I
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "mNative",
+            "angle"
+        }
+    .end annotation
 .end method
 
 .method private native outputRotationMatrix3x3(JI[D)I
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "mNative",
+            "sensorType",
+            "dstMat"
+        }
+    .end annotation
 .end method
 
 .method private native setAppState(JI)I
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "mNative",
+            "state"
+        }
+    .end annotation
 .end method
 
 .method private native setMode(JI)I
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "mNative",
+            "mode"
+        }
+    .end annotation
 .end method
 
 .method private native setOffset(JLcom/android/camera/panorama/MorphoSensorFusion$SensorData;I)I
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "mNative",
+            "data",
+            "sensorType"
+        }
+    .end annotation
 .end method
 
 .method private native setOffsetMode(JI)I
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "mNative",
+            "offsetMode"
+        }
+    .end annotation
 .end method
 
 .method private native setRotation(JI)I
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "mNative",
+            "rotation"
+        }
+    .end annotation
 .end method
 
 .method private native setSensorData(J[Ljava/lang/Object;I)I
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "mNative",
+            "data",
+            "sensorType"
+        }
+    .end annotation
 .end method
 
 .method private native setSensorReliability(JII)I
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "mNative",
+            "rel",
+            "sensorType"
+        }
+    .end annotation
 .end method
 
 
@@ -157,6 +292,7 @@
 .method public calc()I
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/MorphoSensorFusion;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -165,6 +301,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 2
     invoke-direct {p0, v0, v1}, Lcom/android/camera/panorama/MorphoSensorFusion;->calc(J)I
 
     move-result p0
@@ -180,9 +317,10 @@
 
 .method public finish()I
     .locals 6
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/MorphoSensorFusion;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -191,14 +329,17 @@
 
     if-eqz v4, :cond_0
 
+    .line 2
     invoke-direct {p0, v0, v1}, Lcom/android/camera/panorama/MorphoSensorFusion;->finish(J)I
 
     move-result v0
 
+    .line 3
     iget-wide v4, p0, Lcom/android/camera/panorama/MorphoSensorFusion;->mNative:J
 
     invoke-direct {p0, v4, v5}, Lcom/android/camera/panorama/MorphoSensorFusion;->deleteNativeObject(J)V
 
+    .line 4
     iput-wide v2, p0, Lcom/android/camera/panorama/MorphoSensorFusion;->mNative:J
 
     goto :goto_0
@@ -213,6 +354,7 @@
 .method public initialize()I
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/MorphoSensorFusion;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -221,6 +363,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 2
     invoke-direct {p0, v0, v1}, Lcom/android/camera/panorama/MorphoSensorFusion;->initialize(J)I
 
     move-result p0
@@ -236,9 +379,19 @@
 
 .method public outputRotationAngle([D)I
     .locals 4
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "angle"
+        }
+    .end annotation
+
+    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/MorphoSensorFusion;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -247,6 +400,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 2
     invoke-direct {p0, v0, v1, p1}, Lcom/android/camera/panorama/MorphoSensorFusion;->outputRotationAngle(J[D)I
 
     move-result p0
@@ -262,7 +416,18 @@
 
 .method public outputRotationMatrix3x3(I[D)I
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "sensorType",
+            "dstMat"
+        }
+    .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/MorphoSensorFusion;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -271,6 +436,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 2
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/android/camera/panorama/MorphoSensorFusion;->outputRotationMatrix3x3(JI[D)I
 
     move-result p0
@@ -286,7 +452,16 @@
 
 .method public setAppState(I)I
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "state"
+        }
+    .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/MorphoSensorFusion;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -295,6 +470,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 2
     invoke-direct {p0, v0, v1, p1}, Lcom/android/camera/panorama/MorphoSensorFusion;->setAppState(JI)I
 
     move-result p0
@@ -310,7 +486,16 @@
 
 .method public setMode(I)I
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mode"
+        }
+    .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/MorphoSensorFusion;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -319,6 +504,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 2
     invoke-direct {p0, v0, v1, p1}, Lcom/android/camera/panorama/MorphoSensorFusion;->setMode(JI)I
 
     move-result p0
@@ -334,9 +520,21 @@
 
 .method public setOffset(Lcom/android/camera/panorama/MorphoSensorFusion$SensorData;I)I
     .locals 4
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "data",
+            "sensorType"
+        }
+    .end annotation
+
+    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/MorphoSensorFusion;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -345,6 +543,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 2
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/android/camera/panorama/MorphoSensorFusion;->setOffset(JLcom/android/camera/panorama/MorphoSensorFusion$SensorData;I)I
 
     move-result p0
@@ -360,7 +559,16 @@
 
 .method public setOffsetMode(I)I
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "offsetMode"
+        }
+    .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/MorphoSensorFusion;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -369,6 +577,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 2
     invoke-direct {p0, v0, v1, p1}, Lcom/android/camera/panorama/MorphoSensorFusion;->setOffsetMode(JI)I
 
     move-result p0
@@ -384,7 +593,16 @@
 
 .method public setRotation(I)I
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "rotation"
+        }
+    .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/MorphoSensorFusion;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -393,6 +611,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 2
     invoke-direct {p0, v0, v1, p1}, Lcom/android/camera/panorama/MorphoSensorFusion;->setRotation(JI)I
 
     move-result p0
@@ -408,7 +627,18 @@
 
 .method public setSensorData([Ljava/lang/Object;I)I
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "data",
+            "sensorType"
+        }
+    .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/MorphoSensorFusion;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -417,6 +647,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 2
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/android/camera/panorama/MorphoSensorFusion;->setSensorData(J[Ljava/lang/Object;I)I
 
     move-result p0
@@ -432,9 +663,21 @@
 
 .method public setSensorReliability(II)I
     .locals 4
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "rel",
+            "sensorType"
+        }
+    .end annotation
+
+    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/MorphoSensorFusion;->mNative:J
 
     const-wide/16 v2, 0x0
@@ -443,6 +686,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 2
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/android/camera/panorama/MorphoSensorFusion;->setSensorReliability(JII)I
 
     move-result p0

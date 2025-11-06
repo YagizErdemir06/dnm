@@ -39,12 +39,14 @@
 
     new-array v1, v0, [I
 
+    .line 1
     fill-array-data v1, :array_0
 
     sput-object v1, Lcom/google/android/exoplayer2/audio/DtsUtil;->CHANNELS_BY_AMODE:[I
 
     new-array v0, v0, [I
 
+    .line 2
     fill-array-data v0, :array_1
 
     sput-object v0, Lcom/google/android/exoplayer2/audio/DtsUtil;->SAMPLE_RATE_BY_SFREQ:[I
@@ -53,6 +55,7 @@
 
     new-array v0, v0, [I
 
+    .line 3
     fill-array-data v0, :array_2
 
     sput-object v0, Lcom/google/android/exoplayer2/audio/DtsUtil;->TWICE_BITRATE_KBPS_BY_RATE:[I
@@ -136,6 +139,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -146,6 +150,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     aget-byte v1, p0, v0
 
     const/4 v2, -0x2
@@ -170,6 +175,7 @@
 
     const/4 v1, 0x5
 
+    .line 2
     aget-byte v1, p0, v1
 
     and-int/lit8 v1, v1, 0x3
@@ -188,6 +194,7 @@
 
     goto :goto_1
 
+    .line 3
     :cond_0
     aget-byte v0, p0, v3
 
@@ -209,6 +216,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     aget-byte v0, p0, v4
 
@@ -241,6 +249,7 @@
 
     goto :goto_2
 
+    .line 5
     :cond_2
     aget-byte v1, p0, v6
 
@@ -272,6 +281,7 @@
 
     mul-int/lit8 p0, p0, 0x10
 
+    .line 6
     div-int/lit8 p0, p0, 0xe
 
     :cond_3
@@ -283,18 +293,21 @@
 
     const/4 v0, 0x0
 
+    .line 1
     aget-byte v1, p0, v0
 
     const/16 v2, 0x7f
 
     if-ne v1, v2, :cond_0
 
+    .line 2
     new-instance v0, Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-direct {v0, p0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;-><init>([B)V
 
     return-object v0
 
+    .line 3
     :cond_0
     array-length v1, p0
 
@@ -302,6 +315,7 @@
 
     move-result-object p0
 
+    .line 4
     invoke-static {p0}, Lcom/google/android/exoplayer2/audio/DtsUtil;->isLittleEndianFrameHeader([B)Z
 
     move-result v1
@@ -310,6 +324,7 @@
 
     move v1, v0
 
+    .line 5
     :goto_0
     array-length v2, p0
 
@@ -317,35 +332,42 @@
 
     if-ge v1, v2, :cond_1
 
+    .line 6
     aget-byte v2, p0, v1
 
     add-int/lit8 v3, v1, 0x1
 
+    .line 7
     aget-byte v4, p0, v3
 
     aput-byte v4, p0, v1
 
+    .line 8
     aput-byte v2, p0, v3
 
     add-int/lit8 v1, v1, 0x2
 
     goto :goto_0
 
+    .line 9
     :cond_1
     new-instance v1, Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-direct {v1, p0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;-><init>([B)V
 
+    .line 10
     aget-byte v0, p0, v0
 
     const/16 v2, 0x1f
 
     if-ne v0, v2, :cond_2
 
+    .line 11
     new-instance v0, Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-direct {v0, p0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;-><init>([B)V
 
+    .line 12
     :goto_1
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->bitsLeft()I
 
@@ -357,10 +379,12 @@
 
     const/4 v2, 0x2
 
+    .line 13
     invoke-virtual {v0, v2}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
     const/16 v2, 0xe
 
+    .line 14
     invoke-virtual {v0, v2}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v3
@@ -369,6 +393,7 @@
 
     goto :goto_1
 
+    .line 15
     :cond_2
     invoke-virtual {v1, p0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->reset([B)V
 
@@ -376,15 +401,18 @@
 .end method
 
 .method private static isLittleEndianFrameHeader([B)Z
-    .locals 2
+    .locals 3
 
     const/4 v0, 0x0
 
+    .line 1
+    aget-byte v1, p0, v0
+
+    const/4 v2, -0x2
+
+    if-eq v1, v2, :cond_0
+
     aget-byte p0, p0, v0
-
-    const/4 v1, -0x2
-
-    if-eq p0, v1, :cond_0
 
     const/4 v1, -0x1
 
@@ -435,7 +463,7 @@
     .locals 3
 
     .line 6
-    invoke-virtual {p0}, Ljava/nio/Buffer;->position()I
+    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v0
 
@@ -657,40 +685,48 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/audio/DtsUtil;->getNormalizedFrameHeader([B)Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     move-result-object p0
 
     const/16 v0, 0x3c
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
     const/4 v0, 0x6
 
+    .line 3
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v0
 
+    .line 4
     sget-object v1, Lcom/google/android/exoplayer2/audio/DtsUtil;->CHANNELS_BY_AMODE:[I
 
     aget v0, v1, v0
 
     const/4 v1, 0x4
 
+    .line 5
     invoke-virtual {p0, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v1
 
+    .line 6
     sget-object v2, Lcom/google/android/exoplayer2/audio/DtsUtil;->SAMPLE_RATE_BY_SFREQ:[I
 
     aget v1, v2, v1
 
     const/4 v2, 0x5
 
+    .line 7
     invoke-virtual {p0, v2}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v2
 
+    .line 8
     sget-object v3, Lcom/google/android/exoplayer2/audio/DtsUtil;->TWICE_BITRATE_KBPS_BY_RATE:[I
 
     array-length v4, v3
@@ -703,6 +739,7 @@
 
     goto :goto_0
 
+    .line 9
     :cond_0
     aget v2, v3, v2
 
@@ -713,8 +750,10 @@
     :goto_0
     const/16 v3, 0xa
 
+    .line 10
     invoke-virtual {p0, v3}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
+    .line 11
     invoke-virtual {p0, v5}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result p0
@@ -731,40 +770,49 @@
     :goto_1
     add-int/2addr v0, p0
 
+    .line 12
     new-instance p0, Lcom/google/android/exoplayer2/Format$Builder;
 
     invoke-direct {p0}, Lcom/google/android/exoplayer2/Format$Builder;-><init>()V
 
+    .line 13
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/Format$Builder;->setId(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
     const-string p1, "audio/vnd.dts"
 
+    .line 14
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/Format$Builder;->setSampleMimeType(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 15
     invoke-virtual {p0, v2}, Lcom/google/android/exoplayer2/Format$Builder;->setAverageBitrate(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 16
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/Format$Builder;->setChannelCount(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 17
     invoke-virtual {p0, v1}, Lcom/google/android/exoplayer2/Format$Builder;->setSampleRate(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 18
     invoke-virtual {p0, p3}, Lcom/google/android/exoplayer2/Format$Builder;->setDrmInitData(Lcom/google/android/exoplayer2/drm/DrmInitData;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 19
     invoke-virtual {p0, p2}, Lcom/google/android/exoplayer2/Format$Builder;->setLanguage(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 20
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Format$Builder;->build()Lcom/google/android/exoplayer2/Format;
 
     move-result-object p0

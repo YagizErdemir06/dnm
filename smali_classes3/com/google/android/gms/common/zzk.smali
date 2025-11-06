@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/zzk;
+.class public final Lcom/google/android/gms/common/zzk;
 .super Lcom/google/android/gms/common/zzj;
 .source "SourceFile"
 
@@ -15,6 +15,7 @@
 
     const/16 v1, 0x19
 
+    .line 1
     invoke-static {p1, v0, v1}, Ljava/util/Arrays;->copyOfRange([BII)[B
 
     move-result-object v0

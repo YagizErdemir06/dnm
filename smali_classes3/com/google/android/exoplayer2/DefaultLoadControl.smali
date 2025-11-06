@@ -222,6 +222,7 @@
 .method public static synthetic access$000(IILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-static {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/DefaultLoadControl;->assertGreaterOrEqual(IILjava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -239,6 +240,7 @@
     :cond_0
     const/4 p0, 0x0
 
+    .line 1
     :goto_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -268,6 +270,7 @@
 
     packed-switch p0, :pswitch_data_0
 
+    .line 1
     :pswitch_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -317,6 +320,7 @@
 .method private reset(Z)V
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/DefaultLoadControl;->targetBufferBytesOverwrite:I
 
     const/4 v1, -0x1
@@ -325,15 +329,18 @@
 
     const/high16 v0, 0xc80000
 
+    .line 2
     :cond_0
     iput v0, p0, Lcom/google/android/exoplayer2/DefaultLoadControl;->targetBufferBytes:I
 
     const/4 v0, 0x0
 
+    .line 3
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/DefaultLoadControl;->isLoading:Z
 
     if-eqz p1, :cond_1
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/exoplayer2/DefaultLoadControl;->allocator:Lcom/google/android/exoplayer2/upstream/DefaultAllocator;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/upstream/DefaultAllocator;->reset()V
@@ -351,15 +358,18 @@
 
     move v0, p0
 
+    .line 1
     :goto_0
     array-length v1, p1
 
     if-ge p0, v1, :cond_1
 
+    .line 2
     aget-object v1, p2, p0
 
     if-eqz v1, :cond_0
 
+    .line 3
     aget-object v1, p1, p0
 
     invoke-interface {v1}, Lcom/google/android/exoplayer2/Renderer;->getTrackType()I
@@ -380,6 +390,7 @@
     :cond_1
     const/high16 p0, 0xc80000
 
+    .line 4
     invoke-static {p0, v0}, Ljava/lang/Math;->max(II)I
 
     move-result p0
@@ -390,6 +401,7 @@
 .method public getAllocator()Lcom/google/android/exoplayer2/upstream/Allocator;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/DefaultLoadControl;->allocator:Lcom/google/android/exoplayer2/upstream/DefaultAllocator;
 
     return-object p0
@@ -398,6 +410,7 @@
 .method public getBackBufferDurationUs()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/DefaultLoadControl;->backBufferDurationUs:J
 
     return-wide v0
@@ -408,6 +421,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/DefaultLoadControl;->reset(Z)V
 
     return-void
@@ -418,6 +432,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/DefaultLoadControl;->reset(Z)V
 
     return-void
@@ -428,6 +443,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/DefaultLoadControl;->reset(Z)V
 
     return-void
@@ -436,19 +452,23 @@
 .method public onTracksSelected([Lcom/google/android/exoplayer2/Renderer;Lcom/google/android/exoplayer2/source/TrackGroupArray;[Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;)V
     .locals 1
 
+    .line 1
     iget p2, p0, Lcom/google/android/exoplayer2/DefaultLoadControl;->targetBufferBytesOverwrite:I
 
     const/4 v0, -0x1
 
     if-ne p2, v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1, p3}, Lcom/google/android/exoplayer2/DefaultLoadControl;->calculateTargetBufferBytes([Lcom/google/android/exoplayer2/Renderer;[Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;)I
 
     move-result p2
 
+    .line 3
     :cond_0
     iput p2, p0, Lcom/google/android/exoplayer2/DefaultLoadControl;->targetBufferBytes:I
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/exoplayer2/DefaultLoadControl;->allocator:Lcom/google/android/exoplayer2/upstream/DefaultAllocator;
 
     invoke-virtual {p0, p2}, Lcom/google/android/exoplayer2/upstream/DefaultAllocator;->setTargetBufferSize(I)V
@@ -459,6 +479,7 @@
 .method public retainBackBufferFromKeyframe()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/DefaultLoadControl;->retainBackBufferFromKeyframe:Z
 
     return p0
@@ -467,6 +488,7 @@
 .method public shouldContinueLoading(JJF)Z
     .locals 6
 
+    .line 1
     iget-object p1, p0, Lcom/google/android/exoplayer2/DefaultLoadControl;->allocator:Lcom/google/android/exoplayer2/upstream/DefaultAllocator;
 
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/upstream/DefaultAllocator;->getTotalBytesAllocated()I
@@ -488,6 +510,7 @@
     :cond_0
     move p1, v1
 
+    .line 2
     :goto_0
     iget-wide v2, p0, Lcom/google/android/exoplayer2/DefaultLoadControl;->minBufferUs:J
 
@@ -497,10 +520,12 @@
 
     if-lez p2, :cond_1
 
+    .line 3
     invoke-static {v2, v3, p5}, Lcom/google/android/exoplayer2/util/Util;->getMediaDurationForPlayoutDuration(JF)J
 
     move-result-wide v2
 
+    .line 4
     iget-wide v4, p0, Lcom/google/android/exoplayer2/DefaultLoadControl;->maxBufferUs:J
 
     invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->min(JJ)J
@@ -510,6 +535,7 @@
     :cond_1
     const-wide/32 v4, 0x7a120
 
+    .line 5
     invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide v2
@@ -518,6 +544,7 @@
 
     if-gez p2, :cond_4
 
+    .line 6
     iget-boolean p2, p0, Lcom/google/android/exoplayer2/DefaultLoadControl;->prioritizeTimeOverSizeThresholds:Z
 
     if-nez p2, :cond_3
@@ -543,10 +570,12 @@
 
     const-string p2, "Target buffer size reached with less than 500ms of buffered media data."
 
+    .line 7
     invoke-static {p1, p2}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_2
 
+    .line 8
     :cond_4
     iget-wide v2, p0, Lcom/google/android/exoplayer2/DefaultLoadControl;->maxBufferUs:J
 
@@ -556,9 +585,11 @@
 
     if-eqz p1, :cond_6
 
+    .line 9
     :cond_5
     iput-boolean v1, p0, Lcom/google/android/exoplayer2/DefaultLoadControl;->isLoading:Z
 
+    .line 10
     :cond_6
     :goto_2
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/DefaultLoadControl;->isLoading:Z
@@ -569,12 +600,14 @@
 .method public shouldStartPlayback(JFZJ)Z
     .locals 2
 
+    .line 1
     invoke-static {p1, p2, p3}, Lcom/google/android/exoplayer2/util/Util;->getPlayoutDurationForMediaDuration(JF)J
 
     move-result-wide p1
 
     if-eqz p4, :cond_0
 
+    .line 2
     iget-wide p3, p0, Lcom/google/android/exoplayer2/DefaultLoadControl;->bufferForPlaybackAfterRebufferUs:J
 
     goto :goto_0
@@ -591,6 +624,7 @@
 
     const-wide/16 v0, 0x2
 
+    .line 3
     div-long/2addr p5, v0
 
     invoke-static {p5, p6, p3, p4}, Ljava/lang/Math;->min(JJ)J
@@ -608,12 +642,14 @@
 
     if-gez p1, :cond_3
 
+    .line 4
     iget-boolean p1, p0, Lcom/google/android/exoplayer2/DefaultLoadControl;->prioritizeTimeOverSizeThresholds:Z
 
     if-nez p1, :cond_2
 
     iget-object p1, p0, Lcom/google/android/exoplayer2/DefaultLoadControl;->allocator:Lcom/google/android/exoplayer2/upstream/DefaultAllocator;
 
+    .line 5
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/upstream/DefaultAllocator;->getTotalBytesAllocated()I
 
     move-result p1

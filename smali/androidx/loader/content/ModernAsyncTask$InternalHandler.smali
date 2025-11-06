@@ -1,4 +1,4 @@
-.class Landroidx/loader/content/ModernAsyncTask$InternalHandler;
+.class public Landroidx/loader/content/ModernAsyncTask$InternalHandler;
 .super Landroid/os/Handler;
 .source "SourceFile"
 
@@ -18,6 +18,7 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -32,10 +33,12 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
+    .line 1
     iget-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p0, Landroidx/loader/content/ModernAsyncTask$AsyncTaskResult;
 
+    .line 2
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/4 v0, 0x1
@@ -48,6 +51,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object p1, p0, Landroidx/loader/content/ModernAsyncTask$AsyncTaskResult;->mTask:Landroidx/loader/content/ModernAsyncTask;
 
@@ -57,6 +61,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     iget-object p1, p0, Landroidx/loader/content/ModernAsyncTask$AsyncTaskResult;->mTask:Landroidx/loader/content/ModernAsyncTask;
 

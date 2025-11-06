@@ -21,7 +21,16 @@
 # direct methods
 .method public constructor <init>(Lcom/android/camera/litegallery/RecyclerVideoItemHolder;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/litegallery/RecyclerVideoItemHolder$a;->a:Lcom/android/camera/litegallery/RecyclerVideoItemHolder;
 
     invoke-direct {p0}, Landroid/view/View$AccessibilityDelegate;-><init>()V
@@ -41,6 +50,18 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "host",
+            "action",
+            "args"
+        }
+    .end annotation
 
     const/16 v0, 0x10
 
@@ -48,8 +69,9 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
-    invoke-static {}, Lcom/android/camera/a6;->u2()Z
+    invoke-static {}, Ld/d/a/z5;->k2()Z
 
     move-result v0
 
@@ -59,6 +81,7 @@
 
     return p0
 
+    .line 2
     :cond_1
     :goto_0
     invoke-super {p0, p1, p2, p3}, Landroid/view/View$AccessibilityDelegate;->performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z

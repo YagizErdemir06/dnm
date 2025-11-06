@@ -16,32 +16,32 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerViewHolder<",
-        "Lcom/xiaomi/mimoji/mimojifu/bean/b;",
+        "Ld/o/v/d/a/b;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field public a:Landroid/widget/TextView;
+.field private a:Landroid/widget/TextView;
 
-.field public b:Lmiuix/recyclerview/widget/RecyclerView;
+.field private b:Lmiuix/recyclerview/widget/RecyclerView;
 
-.field public c:Lmiuix/recyclerview/widget/RecyclerView;
+.field private c:Lmiuix/recyclerview/widget/RecyclerView;
 
-.field public d:Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearLayoutManager;
+.field private d:Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearLayoutManager;
 
-.field public e:Lcom/xiaomi/mimoji/common/widget/baseview/BaseGirdLayoutManager;
+.field private e:Lcom/xiaomi/mimoji/common/widget/baseview/BaseGirdLayoutManager;
 
-.field public f:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter;
+.field private f:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter;
 
-.field public g:Ldi/b;
+.field private g:Ld/o/v/a/g0/c/b;
 
-.field public h:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditColorAdapter;
+.field private h:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditColorAdapter;
 
-.field public i:Ldi/b;
+.field private i:Ld/o/v/a/g0/c/b;
 
-.field public j:Lcom/android/camera/fragment/DefaultItemAnimator;
+.field private j:Lcom/android/camera/fragment/DefaultItemAnimator;
 
 .field public final synthetic k:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter;
 
@@ -53,13 +53,26 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x0
+        }
+        names = {
+            "this$0",
+            "itemView"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->k:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter;
 
+    .line 2
     invoke-direct {p0, p2}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerViewHolder;-><init>(Landroid/view/View;)V
 
-    const v0, 0x7f0b0795
+    const v0, 0x7f0b06b5
 
+    .line 3
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -68,8 +81,9 @@
 
     iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->a:Landroid/widget/TextView;
 
-    const v0, 0x7f0b0625
+    const v0, 0x7f0b056e
 
+    .line 4
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -78,10 +92,12 @@
 
     iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->b:Lmiuix/recyclerview/widget/RecyclerView;
 
+    .line 5
     iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->d:Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearLayoutManager;
 
     if-nez v0, :cond_0
 
+    .line 6
     new-instance v0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearLayoutManager;
 
     invoke-static {p1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter;->h(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter;)Landroid/content/Context;
@@ -94,6 +110,7 @@
 
     iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->d:Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearLayoutManager;
 
+    .line 7
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->b:Lmiuix/recyclerview/widget/RecyclerView;
 
@@ -101,16 +118,19 @@
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
+    .line 8
     iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->h:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditColorAdapter;
 
     if-nez v0, :cond_1
 
+    .line 9
     new-instance v0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditColorAdapter;
 
     invoke-direct {v0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditColorAdapter;-><init>()V
 
     iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->h:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditColorAdapter;
 
+    .line 10
     :cond_1
     iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->b:Lmiuix/recyclerview/widget/RecyclerView;
 
@@ -118,8 +138,9 @@
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    const v0, 0x7f0b0626
+    const v0, 0x7f0b056f
 
+    .line 11
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
@@ -128,10 +149,12 @@
 
     iput-object p2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->c:Lmiuix/recyclerview/widget/RecyclerView;
 
+    .line 12
     iget-object p2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->j:Lcom/android/camera/fragment/DefaultItemAnimator;
 
     if-nez p2, :cond_2
 
+    .line 13
     new-instance p2, Lcom/android/camera/fragment/DefaultItemAnimator;
 
     invoke-direct {p2}, Lcom/android/camera/fragment/DefaultItemAnimator;-><init>()V
@@ -140,12 +163,15 @@
 
     const-wide/16 v0, 0x0
 
+    .line 14
     invoke-virtual {p2, v0, v1}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->setChangeDuration(J)V
 
+    .line 15
     iget-object p2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->j:Lcom/android/camera/fragment/DefaultItemAnimator;
 
     invoke-virtual {p2, v0, v1}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->setAddDuration(J)V
 
+    .line 16
     :cond_2
     iget-object p2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->c:Lmiuix/recyclerview/widget/RecyclerView;
 
@@ -153,10 +179,12 @@
 
     invoke-virtual {p2, v0}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;)V
 
+    .line 17
     iget-object p2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->e:Lcom/xiaomi/mimoji/common/widget/baseview/BaseGirdLayoutManager;
 
     if-nez p2, :cond_3
 
+    .line 18
     new-instance p2, Lcom/xiaomi/mimoji/common/widget/baseview/BaseGirdLayoutManager;
 
     invoke-static {p1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter;->h(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter;)Landroid/content/Context;
@@ -169,6 +197,7 @@
 
     iput-object p2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->e:Lcom/xiaomi/mimoji/common/widget/baseview/BaseGirdLayoutManager;
 
+    .line 19
     :cond_3
     iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->c:Lmiuix/recyclerview/widget/RecyclerView;
 
@@ -176,23 +205,27 @@
 
     invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
+    .line 20
     iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->f:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter;
 
     if-nez p1, :cond_4
 
+    .line 21
     new-instance p1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter;
 
     invoke-direct {p1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter;-><init>()V
 
     iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->f:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter;
 
+    .line 22
     :cond_4
     iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->f:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter;
 
-    iget-object p2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->g:Ldi/b;
+    iget-object p2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->g:Ld/o/v/a/g0/c/b;
 
-    invoke-virtual {p1, p2}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->setOnRecyclerItemClickListener(Ldi/b;)V
+    invoke-virtual {p1, p2}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->setOnRecyclerItemClickListener(Ld/o/v/a/g0/c/b;)V
 
+    .line 23
     iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->c:Lmiuix/recyclerview/widget/RecyclerView;
 
     iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->f:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter;
@@ -202,25 +235,10 @@
     return-void
 .end method
 
-.method public static synthetic d(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;Lcom/xiaomi/mimoji/mimojifu/bean/b;ILki/f;ILandroid/view/View;)V
+.method private synthetic f(Ld/o/v/d/a/b;ILd/o/v/d/b/a/a/g;ILandroid/view/View;)V
     .locals 0
 
-    invoke-direct/range {p0 .. p5}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->i(Lcom/xiaomi/mimoji/mimojifu/bean/b;ILki/f;ILandroid/view/View;)V
-
-    return-void
-.end method
-
-.method public static synthetic e(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;Lcom/xiaomi/mimoji/mimojifu/bean/b;ILki/i;ILandroid/view/View;)V
-    .locals 0
-
-    invoke-direct/range {p0 .. p5}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->j(Lcom/xiaomi/mimoji/mimojifu/bean/b;ILki/i;ILandroid/view/View;)V
-
-    return-void
-.end method
-
-.method private synthetic i(Lcom/xiaomi/mimoji/mimojifu/bean/b;ILki/f;ILandroid/view/View;)V
-    .locals 0
-
+    .line 1
     iget-object p3, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->k:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter;
 
     invoke-static {p3}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter;->i(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter;)Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$a;
@@ -231,21 +249,24 @@
 
     if-eqz p3, :cond_0
 
+    .line 2
     iget-object p3, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->k:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter;
 
     invoke-static {p3}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter;->i(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter;)Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$a;
 
     move-result-object p3
 
-    invoke-interface {p3, p1, p5, p2, p4}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$a;->a(Lcom/xiaomi/mimoji/mimojifu/bean/b;ZII)Z
+    invoke-interface {p3, p1, p5, p2, p4}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$a;->a(Ld/o/v/d/a/b;ZII)Z
 
     move-result p5
 
     :cond_0
     if-eqz p5, :cond_1
 
-    invoke-virtual {p1, p4}, Lcom/xiaomi/mimoji/mimojifu/bean/b;->k(I)V
+    .line 3
+    invoke-virtual {p1, p4}, Ld/o/v/d/a/b;->k(I)V
 
+    .line 4
     iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->h:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditColorAdapter;
 
     invoke-virtual {p0, p4}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditColorAdapter;->setSelectState(I)V
@@ -254,9 +275,10 @@
     return-void
 .end method
 
-.method private synthetic j(Lcom/xiaomi/mimoji/mimojifu/bean/b;ILki/i;ILandroid/view/View;)V
+.method private synthetic h(Ld/o/v/d/a/b;ILd/o/v/d/b/a/a/i;ILandroid/view/View;)V
     .locals 0
 
+    .line 1
     iget-object p3, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->k:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter;
 
     invoke-static {p3}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter;->i(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter;)Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$a;
@@ -265,6 +287,7 @@
 
     if-eqz p3, :cond_0
 
+    .line 2
     iget-object p3, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->k:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter;
 
     invoke-static {p3}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter;->i(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter;)Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$a;
@@ -273,7 +296,7 @@
 
     const/4 p5, 0x1
 
-    invoke-interface {p3, p1, p5, p2, p4}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$a;->a(Lcom/xiaomi/mimoji/mimojifu/bean/b;ZII)Z
+    invoke-interface {p3, p1, p5, p2, p4}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$a;->a(Ld/o/v/d/a/b;ZII)Z
 
     move-result p2
 
@@ -285,8 +308,10 @@
     :goto_0
     if-eqz p2, :cond_1
 
-    invoke-virtual {p1, p4}, Lcom/xiaomi/mimoji/mimojifu/bean/b;->l(I)V
+    .line 3
+    invoke-virtual {p1, p4}, Ld/o/v/d/a/b;->l(I)V
 
+    .line 4
     iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->f:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter;
 
     invoke-virtual {p0, p4}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter;->setSelectState(I)V
@@ -297,36 +322,65 @@
 
 
 # virtual methods
-.method public f()Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditColorAdapter;
+.method public c()Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditColorAdapter;
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->h:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditColorAdapter;
 
     return-object p0
 .end method
 
-.method public g()Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter;
+.method public d()Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->f:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter;
 
     return-object p0
 .end method
 
-.method public h()Lmiuix/recyclerview/widget/RecyclerView;
+.method public e()Lmiuix/recyclerview/widget/RecyclerView;
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->c:Lmiuix/recyclerview/widget/RecyclerView;
 
     return-object p0
 .end method
 
-.method public k(Lcom/xiaomi/mimoji/mimojifu/bean/b;I)V
+.method public synthetic g(Ld/o/v/d/a/b;ILd/o/v/d/b/a/a/g;ILandroid/view/View;)V
+    .locals 0
+
+    invoke-direct/range {p0 .. p5}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->f(Ld/o/v/d/a/b;ILd/o/v/d/b/a/a/g;ILandroid/view/View;)V
+
+    return-void
+.end method
+
+.method public synthetic i(Ld/o/v/d/a/b;ILd/o/v/d/b/a/a/i;ILandroid/view/View;)V
+    .locals 0
+
+    invoke-direct/range {p0 .. p5}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->h(Ld/o/v/d/a/b;ILd/o/v/d/b/a/a/i;ILandroid/view/View;)V
+
+    return-void
+.end method
+
+.method public j(Ld/o/v/d/a/b;I)V
     .locals 9
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "data",
+            "position"
+        }
+    .end annotation
 
     const/16 v0, 0x8
 
@@ -336,22 +390,25 @@
 
     if-nez p2, :cond_0
 
+    .line 1
     iget-object v3, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->a:Landroid/widget/TextView;
 
-    invoke-virtual {v3, v0}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v3, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
     move v3, v2
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object v3, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->a:Landroid/widget/TextView;
 
-    invoke-virtual {v3, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v3, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
+    .line 3
     iget-object v3, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->a:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/xiaomi/mimoji/mimojifu/bean/b;->g()I
+    invoke-virtual {p1}, Ld/o/v/d/a/b;->g()I
 
     move-result v4
 
@@ -359,54 +416,62 @@
 
     move v3, v1
 
+    .line 4
     :goto_0
-    invoke-virtual {p1}, Lcom/xiaomi/mimoji/mimojifu/bean/b;->d()I
+    invoke-virtual {p1}, Ld/o/v/d/a/b;->d()I
 
     move-result v4
 
     if-gez v4, :cond_1
 
+    .line 5
     iget-object v4, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->b:Lmiuix/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {v4, v0}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v4, v0}, Landroid/view/ViewGroup;->setVisibility(I)V
 
     move v4, v2
 
     goto :goto_1
 
+    .line 6
     :cond_1
     iget-object v4, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->b:Lmiuix/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {v4, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v4, v2}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    iget-object v4, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->i:Ldi/b;
+    .line 7
+    iget-object v4, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->i:Ld/o/v/a/g0/c/b;
 
     if-nez v4, :cond_2
 
-    new-instance v4, Lui/a;
+    .line 8
+    new-instance v4, Ld/o/v/d/c/a/g0/a;
 
-    invoke-direct {v4, p0, p1, p2}, Lui/a;-><init>(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;Lcom/xiaomi/mimoji/mimojifu/bean/b;I)V
+    invoke-direct {v4, p0, p1, p2}, Ld/o/v/d/c/a/g0/a;-><init>(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;Ld/o/v/d/a/b;I)V
 
-    iput-object v4, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->i:Ldi/b;
+    iput-object v4, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->i:Ld/o/v/a/g0/c/b;
 
+    .line 9
     :cond_2
     iget-object v4, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->h:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditColorAdapter;
 
-    iget-object v5, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->i:Ldi/b;
+    iget-object v5, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->i:Ld/o/v/a/g0/c/b;
 
-    invoke-virtual {v4, v5}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->setOnRecyclerItemClickListener(Ldi/b;)V
+    invoke-virtual {v4, v5}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->setOnRecyclerItemClickListener(Ld/o/v/a/g0/c/b;)V
 
+    .line 10
     iget-object v4, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->h:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditColorAdapter;
 
-    invoke-virtual {p1}, Lcom/xiaomi/mimoji/mimojifu/bean/b;->b()Ljava/util/List;
+    invoke-virtual {p1}, Ld/o/v/d/a/b;->b()Ljava/util/List;
 
     move-result-object v5
 
     invoke-virtual {v4, v5}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->setDataList(Ljava/util/List;)V
 
+    .line 11
     iget-object v4, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->h:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditColorAdapter;
 
-    invoke-virtual {p1}, Lcom/xiaomi/mimoji/mimojifu/bean/b;->d()I
+    invoke-virtual {p1}, Ld/o/v/d/a/b;->d()I
 
     move-result v5
 
@@ -414,54 +479,62 @@
 
     move v4, v1
 
+    .line 12
     :goto_1
-    invoke-virtual {p1}, Lcom/xiaomi/mimoji/mimojifu/bean/b;->e()I
+    invoke-virtual {p1}, Ld/o/v/d/a/b;->e()I
 
     move-result v5
 
     if-gez v5, :cond_3
 
+    .line 13
     iget-object p2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->c:Lmiuix/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {p2, v0}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {p2, v0}, Landroid/view/ViewGroup;->setVisibility(I)V
 
     move p2, v2
 
     goto :goto_2
 
+    .line 14
     :cond_3
     iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->c:Lmiuix/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->g:Ldi/b;
+    .line 15
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->g:Ld/o/v/a/g0/c/b;
 
     if-nez v0, :cond_4
 
-    new-instance v0, Lui/b;
+    .line 16
+    new-instance v0, Ld/o/v/d/c/a/g0/b;
 
-    invoke-direct {v0, p0, p1, p2}, Lui/b;-><init>(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;Lcom/xiaomi/mimoji/mimojifu/bean/b;I)V
+    invoke-direct {v0, p0, p1, p2}, Ld/o/v/d/c/a/g0/b;-><init>(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;Ld/o/v/d/a/b;I)V
 
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->g:Ldi/b;
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->g:Ld/o/v/a/g0/c/b;
 
+    .line 17
     :cond_4
     iget-object p2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->f:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter;
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->g:Ldi/b;
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->g:Ld/o/v/a/g0/c/b;
 
-    invoke-virtual {p2, v0}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->setOnRecyclerItemClickListener(Ldi/b;)V
+    invoke-virtual {p2, v0}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->setOnRecyclerItemClickListener(Ld/o/v/a/g0/c/b;)V
 
+    .line 18
     iget-object p2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->f:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter;
 
-    invoke-virtual {p1}, Lcom/xiaomi/mimoji/mimojifu/bean/b;->c()Ljava/util/List;
+    invoke-virtual {p1}, Ld/o/v/d/a/b;->c()Ljava/util/List;
 
     move-result-object v0
 
     invoke-virtual {p2, v0}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->setDataList(Ljava/util/List;)V
 
+    .line 19
     iget-object p2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->f:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter;
 
-    invoke-virtual {p1}, Lcom/xiaomi/mimoji/mimojifu/bean/b;->e()I
+    invoke-virtual {p1}, Ld/o/v/d/a/b;->e()I
 
     move-result v0
 
@@ -469,6 +542,7 @@
 
     move p2, v1
 
+    .line 20
     :goto_2
     iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->k:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter;
 
@@ -480,12 +554,13 @@
 
     move-result-object v0
 
-    const v5, 0x7f070798
+    const v5, 0x7f070679
 
     invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
+    .line 21
     iget-object v5, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->k:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter;
 
     invoke-static {v5}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter;->h(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter;)Landroid/content/Context;
@@ -496,31 +571,34 @@
 
     move-result-object v5
 
-    const v6, 0x7f070799
+    const v6, 0x7f07067a
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v5
 
+    .line 22
     iget-object v6, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->a:Landroid/widget/TextView;
 
-    invoke-virtual {v6}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v6}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v6
 
     check-cast v6, Landroid/widget/LinearLayout$LayoutParams;
 
+    .line 23
     iget-object v7, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->b:Lmiuix/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {v7}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v7}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v7
 
     check-cast v7, Landroid/widget/LinearLayout$LayoutParams;
 
+    .line 24
     iget-object v8, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->c:Lmiuix/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {v8}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v8}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v8
 
@@ -528,7 +606,8 @@
 
     if-eqz p2, :cond_8
 
-    invoke-virtual {p1}, Lcom/xiaomi/mimoji/mimojifu/bean/b;->c()Ljava/util/List;
+    .line 25
+    invoke-virtual {p1}, Ld/o/v/d/a/b;->c()Ljava/util/List;
 
     move-result-object p2
 
@@ -538,7 +617,7 @@
 
     div-int/lit8 p2, p2, 0x3
 
-    invoke-virtual {p1}, Lcom/xiaomi/mimoji/mimojifu/bean/b;->c()Ljava/util/List;
+    invoke-virtual {p1}, Ld/o/v/d/a/b;->c()Ljava/util/List;
 
     move-result-object p1
 
@@ -559,6 +638,7 @@
 
     mul-int/2addr v5, p2
 
+    .line 26
     iput v5, v8, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
     if-nez v4, :cond_7
@@ -576,18 +656,22 @@
     :goto_3
     move p1, v2
 
+    .line 27
     :goto_4
     iput p1, v8, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
 
+    .line 28
     iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->c:Lmiuix/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {p1, v8}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p1, v8}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     :cond_8
     if-eqz v3, :cond_9
 
+    .line 29
     iput v2, v6, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
 
+    .line 30
     div-int/lit8 p1, v0, 0x2
 
     iput p1, v6, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
@@ -599,38 +683,54 @@
 
     goto :goto_5
 
+    .line 31
     :cond_a
     div-int/lit8 v2, v0, 0x2
 
     :goto_5
     iput v2, v7, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
 
+    .line 32
     div-int/lit8 v0, v0, 0x2
 
     iput v0, v7, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
 
+    .line 33
     :cond_b
     iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->a:Landroid/widget/TextView;
 
-    invoke-virtual {p1, v6}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p1, v6}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
+    .line 34
     iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->b:Lmiuix/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {p1, v7}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p1, v7}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
+    .line 35
     iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->c:Lmiuix/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {p0, v8}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p0, v8}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
 .end method
 
 .method public bridge synthetic setData(Ljava/lang/Object;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "data",
+            "position"
+        }
+    .end annotation
 
-    check-cast p1, Lcom/xiaomi/mimoji/mimojifu/bean/b;
+    .line 1
+    check-cast p1, Ld/o/v/d/a/b;
 
-    invoke-virtual {p0, p1, p2}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->k(Lcom/xiaomi/mimoji/mimojifu/bean/b;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$MimojiFuEditHolder;->j(Ld/o/v/d/a/b;I)V
 
     return-void
 .end method

@@ -15,14 +15,23 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/android/camera/ui/V6EffectCropView;
+.field public final synthetic c:Lcom/android/camera/ui/V6EffectCropView;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera/ui/V6EffectCropView;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera/ui/V6EffectCropView$a;->a:Lcom/android/camera/ui/V6EffectCropView;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/ui/V6EffectCropView$a;->c:Lcom/android/camera/ui/V6EffectCropView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
@@ -33,10 +42,20 @@
 # virtual methods
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/V6EffectCropView$a;->a:Lcom/android/camera/ui/V6EffectCropView;
+    .line 2
+    iget-object p1, p0, Lcom/android/camera/ui/V6EffectCropView$a;->c:Lcom/android/camera/ui/V6EffectCropView;
 
     invoke-static {p1}, Lcom/android/camera/ui/V6EffectCropView;->a(Lcom/android/camera/ui/V6EffectCropView;)Landroid/animation/ObjectAnimator;
 
@@ -48,7 +67,8 @@
 
     if-eqz p1, :cond_0
 
-    iget-object p0, p0, Lcom/android/camera/ui/V6EffectCropView$a;->a:Lcom/android/camera/ui/V6EffectCropView;
+    .line 3
+    iget-object p0, p0, Lcom/android/camera/ui/V6EffectCropView$a;->c:Lcom/android/camera/ui/V6EffectCropView;
 
     const/4 p1, 0x0
 

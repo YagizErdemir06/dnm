@@ -1,4 +1,4 @@
-.class Landroidx/core/view/ViewCompat$4;
+.class public Landroidx/core/view/ViewCompat$4;
 .super Landroidx/core/view/ViewCompat$AccessibilityViewProperty;
 .source "SourceFile"
 
@@ -26,6 +26,7 @@
 .method public constructor <init>(ILjava/lang/Class;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Landroidx/core/view/ViewCompat$AccessibilityViewProperty;-><init>(ILjava/lang/Class;I)V
 
     return-void

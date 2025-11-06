@@ -1,4 +1,4 @@
-.class final Lcom/google/common/io/ReaderInputStream;
+.class public final Lcom/google/common/io/ReaderInputStream;
 .super Ljava/io/InputStream;
 .source "SourceFile"
 
@@ -128,6 +128,7 @@
 .method private static availableCapacity(Ljava/nio/Buffer;)I
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Ljava/nio/Buffer;->capacity()I
 
     move-result v0
@@ -144,9 +145,10 @@
 .method private drain([BII)I
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/io/ReaderInputStream;->byteBuffer:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {v0}, Ljava/nio/Buffer;->remaining()I
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v0
 
@@ -154,6 +156,7 @@
 
     move-result p3
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/io/ReaderInputStream;->byteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p0, p1, p2, p3}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
@@ -164,11 +167,12 @@
 .method private static grow(Ljava/nio/CharBuffer;)Ljava/nio/CharBuffer;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Ljava/nio/CharBuffer;->array()[C
 
     move-result-object v0
 
-    invoke-virtual {p0}, Ljava/nio/Buffer;->capacity()I
+    invoke-virtual {p0}, Ljava/nio/CharBuffer;->capacity()I
 
     move-result v1
 
@@ -178,17 +182,20 @@
 
     move-result-object v0
 
+    .line 2
     invoke-static {v0}, Ljava/nio/CharBuffer;->wrap([C)Ljava/nio/CharBuffer;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Ljava/nio/Buffer;->position()I
+    .line 3
+    invoke-virtual {p0}, Ljava/nio/CharBuffer;->position()I
 
     move-result v1
 
     invoke-static {v0, v1}, Lcom/google/common/io/Java8Compatibility;->position(Ljava/nio/Buffer;I)V
 
-    invoke-virtual {p0}, Ljava/nio/Buffer;->limit()I
+    .line 4
+    invoke-virtual {p0}, Ljava/nio/CharBuffer;->limit()I
 
     move-result p0
 
@@ -205,6 +212,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/io/ReaderInputStream;->charBuffer:Ljava/nio/CharBuffer;
 
     invoke-static {v0}, Lcom/google/common/io/ReaderInputStream;->availableCapacity(Ljava/nio/Buffer;)I
@@ -213,14 +221,16 @@
 
     if-nez v0, :cond_1
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/io/ReaderInputStream;->charBuffer:Ljava/nio/CharBuffer;
 
-    invoke-virtual {v0}, Ljava/nio/Buffer;->position()I
+    invoke-virtual {v0}, Ljava/nio/CharBuffer;->position()I
 
     move-result v0
 
     if-lez v0, :cond_0
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/io/ReaderInputStream;->charBuffer:Ljava/nio/CharBuffer;
 
     invoke-virtual {v0}, Ljava/nio/CharBuffer;->compact()Ljava/nio/CharBuffer;
@@ -231,6 +241,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lcom/google/common/io/ReaderInputStream;->charBuffer:Ljava/nio/CharBuffer;
 
@@ -240,14 +251,16 @@
 
     iput-object v0, p0, Lcom/google/common/io/ReaderInputStream;->charBuffer:Ljava/nio/CharBuffer;
 
+    .line 5
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/google/common/io/ReaderInputStream;->charBuffer:Ljava/nio/CharBuffer;
 
-    invoke-virtual {v0}, Ljava/nio/Buffer;->limit()I
+    invoke-virtual {v0}, Ljava/nio/CharBuffer;->limit()I
 
     move-result v0
 
+    .line 6
     iget-object v1, p0, Lcom/google/common/io/ReaderInputStream;->reader:Ljava/io/Reader;
 
     iget-object v2, p0, Lcom/google/common/io/ReaderInputStream;->charBuffer:Ljava/nio/CharBuffer;
@@ -272,10 +285,12 @@
 
     const/4 v0, 0x1
 
+    .line 7
     iput-boolean v0, p0, Lcom/google/common/io/ReaderInputStream;->endOfInput:Z
 
     goto :goto_1
 
+    .line 8
     :cond_2
     iget-object p0, p0, Lcom/google/common/io/ReaderInputStream;->charBuffer:Ljava/nio/CharBuffer;
 
@@ -290,23 +305,26 @@
 .method private startDraining(Z)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/io/ReaderInputStream;->byteBuffer:Ljava/nio/ByteBuffer;
 
     invoke-static {v0}, Lcom/google/common/io/Java8Compatibility;->flip(Ljava/nio/Buffer;)V
 
     if-eqz p1, :cond_0
 
+    .line 2
     iget-object p1, p0, Lcom/google/common/io/ReaderInputStream;->byteBuffer:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result p1
 
     if-nez p1, :cond_0
 
+    .line 3
     iget-object p1, p0, Lcom/google/common/io/ReaderInputStream;->byteBuffer:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->capacity()I
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->capacity()I
 
     move-result p1
 
@@ -323,6 +341,7 @@
     :cond_0
     const/4 p1, 0x1
 
+    .line 4
     iput-boolean p1, p0, Lcom/google/common/io/ReaderInputStream;->draining:Z
 
     :goto_0
@@ -339,6 +358,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/io/ReaderInputStream;->reader:Ljava/io/Reader;
 
     invoke-virtual {p0}, Ljava/io/Reader;->close()V

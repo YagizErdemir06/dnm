@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;->yi(Z)V
+    value = Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;->yd(Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,30 +15,47 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/xiaomi/microfilm/vlogpro/vp/VlogProSegmentItemPadding;
-
-.field public final synthetic b:I
-
-.field public final synthetic c:Landroid/view/ViewGroup$MarginLayoutParams;
+.field public final synthetic c:Lcom/xiaomi/microfilm/vlogpro/vp/VlogProSegmentItemPadding;
 
 .field public final synthetic d:I
 
-.field public final synthetic e:Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;
+.field public final synthetic f:Landroid/view/ViewGroup$MarginLayoutParams;
+
+.field public final synthetic g:I
+
+.field public final synthetic j:Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;Lcom/xiaomi/microfilm/vlogpro/vp/VlogProSegmentItemPadding;ILandroid/view/ViewGroup$MarginLayoutParams;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010,
+            0x1010,
+            0x1010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$itemDecoration",
+            "val$firstItemMargin",
+            "val$params",
+            "val$marginStart"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->e:Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;
+    .line 1
+    iput-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->j:Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;
 
-    iput-object p2, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->a:Lcom/xiaomi/microfilm/vlogpro/vp/VlogProSegmentItemPadding;
+    iput-object p2, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->c:Lcom/xiaomi/microfilm/vlogpro/vp/VlogProSegmentItemPadding;
 
-    iput p3, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->b:I
+    iput p3, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->d:I
 
-    iput-object p4, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->c:Landroid/view/ViewGroup$MarginLayoutParams;
+    iput-object p4, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->f:Landroid/view/ViewGroup$MarginLayoutParams;
 
-    iput p5, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->d:I
+    iput p5, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->g:I
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
@@ -49,28 +66,40 @@
 # virtual methods
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
 
-    iget-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->e:Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;
+    .line 2
+    iget-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->j:Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;
 
-    const/4 v0, 0x1
+    invoke-static {p1}, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;->Yb(Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;)Landroid/widget/FrameLayout;
 
-    invoke-static {p1}, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;->ni(Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;)Landroid/widget/FrameLayout;
+    move-result-object v0
 
-    move-result-object v1
+    const/4 v1, 0x1
 
-    invoke-static {p1, v0, v0, v1}, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;->oi(Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;IZLandroid/view/View;)V
+    invoke-static {p1, v1, v1, v0}, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;->gc(Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;IZLandroid/view/View;)V
 
-    iget-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->a:Lcom/xiaomi/microfilm/vlogpro/vp/VlogProSegmentItemPadding;
+    .line 3
+    iget-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->c:Lcom/xiaomi/microfilm/vlogpro/vp/VlogProSegmentItemPadding;
 
-    iget v0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->b:I
+    iget v0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->d:I
 
     invoke-virtual {p1, v0}, Lcom/xiaomi/microfilm/vlogpro/vp/VlogProSegmentItemPadding;->b(I)V
 
-    iget-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->e:Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;
+    .line 4
+    iget-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->j:Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;
 
-    invoke-static {p1}, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;->pi(Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;)Landroidx/recyclerview/widget/RecyclerView;
+    invoke-static {p1}, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;->qc(Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;)Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object p1
 
@@ -78,17 +107,19 @@
 
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->removeItemDecorationAt(I)V
 
-    iget-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->e:Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;
+    .line 5
+    iget-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->j:Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;
 
-    invoke-static {p1}, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;->pi(Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;)Landroidx/recyclerview/widget/RecyclerView;
+    invoke-static {p1}, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;->qc(Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;)Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object p1
 
-    iget-object v1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->a:Lcom/xiaomi/microfilm/vlogpro/vp/VlogProSegmentItemPadding;
+    iget-object v1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->c:Lcom/xiaomi/microfilm/vlogpro/vp/VlogProSegmentItemPadding;
 
     invoke-virtual {p1, v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;I)V
 
-    invoke-static {}, Ly2/b;->M0()Z
+    .line 6
+    invoke-static {}, Ld/d/a/n6/b;->M0()Z
 
     move-result p1
 
@@ -96,51 +127,57 @@
 
     if-nez p1, :cond_0
 
-    iget-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->c:Landroid/view/ViewGroup$MarginLayoutParams;
+    .line 7
+    iget-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->f:Landroid/view/ViewGroup$MarginLayoutParams;
 
-    iget v1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->d:I
+    iget v1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->g:I
 
     invoke-virtual {p1, v1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
 
-    iget-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->e:Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;
+    .line 8
+    iget-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->j:Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;
 
-    invoke-static {p1}, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;->qi(Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;)Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;
+    invoke-static {p1}, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;->uc(Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;)Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;
 
     move-result-object p1
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationX(F)V
+    invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setTranslationX(F)V
 
     goto :goto_0
 
+    .line 9
     :cond_0
-    iget-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->c:Landroid/view/ViewGroup$MarginLayoutParams;
+    iget-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->f:Landroid/view/ViewGroup$MarginLayoutParams;
 
-    iget v1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->d:I
+    iget v1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->g:I
 
     iput v1, p1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    iget-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->e:Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;
+    .line 10
+    iget-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->j:Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;
 
-    invoke-static {p1}, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;->qi(Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;)Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;
+    invoke-static {p1}, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;->uc(Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;)Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;
 
     move-result-object p1
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationY(F)V
+    invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setTranslationY(F)V
 
+    .line 11
     :goto_0
-    iget-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->e:Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;
+    iget-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->j:Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;
 
-    invoke-static {p1}, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;->qi(Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;)Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;
+    invoke-static {p1}, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;->uc(Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;)Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->c:Landroid/view/ViewGroup$MarginLayoutParams;
+    iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->f:Landroid/view/ViewGroup$MarginLayoutParams;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->e:Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;
+    .line 12
+    iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess$e;->j:Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;
 
-    invoke-static {p0}, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;->qi(Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;)Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;
+    invoke-static {p0}, Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;->uc(Lcom/xiaomi/microfilm/vlogpro/vp/FragmentVlogProProcess;)Lcom/xiaomi/microfilm/vlogpro/StartEdgeHorizonScrollView;
 
     move-result-object p0
 

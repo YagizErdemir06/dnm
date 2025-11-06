@@ -15,19 +15,34 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/camera2/compat/theme/custom/cv/EffectItemAdapterCV;
+.field public final synthetic this$0:Lcom/android/camera2/compat/theme/custom/cv/EffectItemAdapterCV;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/camera2/compat/theme/custom/cv/EffectItemAdapterCV;Landroid/view/View;Lyl/c;)V
+.method public constructor <init>(Lcom/android/camera2/compat/theme/custom/cv/EffectItemAdapterCV;Landroid/view/View;Ld/o/g0/q0/f;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x0,
+            0x0
+        }
+        names = {
+            "this$0",
+            "itemView",
+            "eglCore"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/EffectItemAdapterCV$EffectRealtimeItemHolderCV;->this$0:Lcom/android/camera2/compat/theme/custom/cv/EffectItemAdapterCV;
 
-    invoke-direct {p0, p1, p2, p3}, Lcom/android/camera/fragment/EffectItemAdapter$EffectRealtimeItemHolder;-><init>(Lcom/android/camera/fragment/EffectItemAdapter;Landroid/view/View;Lyl/c;)V
+    .line 2
+    invoke-direct {p0, p1, p2, p3}, Lcom/android/camera/fragment/EffectItemAdapter$EffectRealtimeItemHolder;-><init>(Lcom/android/camera/fragment/EffectItemAdapter;Landroid/view/View;Ld/o/g0/q0/f;)V
 
-    const v0, 0x7f0b0258
+    const v0, 0x7f0b0222
 
+    .line 3
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
@@ -36,12 +51,15 @@
 
     iput-object p2, p0, Lcom/android/camera/fragment/EffectItemAdapter$EffectRealtimeItemHolder;->mTextureView:Landroid/view/TextureView;
 
-    invoke-static {p1, p3}, Lcom/android/camera2/compat/theme/custom/cv/EffectItemAdapterCV;->access$002(Lcom/android/camera2/compat/theme/custom/cv/EffectItemAdapterCV;Lyl/c;)Lyl/c;
+    .line 4
+    invoke-static {p1, p3}, Lcom/android/camera2/compat/theme/custom/cv/EffectItemAdapterCV;->access$002(Lcom/android/camera2/compat/theme/custom/cv/EffectItemAdapterCV;Ld/o/g0/q0/f;)Ld/o/g0/q0/f;
 
+    .line 5
     iget-object p1, p0, Lcom/android/camera/fragment/EffectItemAdapter$EffectRealtimeItemHolder;->mTextureView:Landroid/view/TextureView;
 
     if-eqz p1, :cond_0
 
+    .line 6
     invoke-virtual {p1, p0}, Landroid/view/TextureView;->setSurfaceTextureListener(Landroid/view/TextureView$SurfaceTextureListener;)V
 
     :cond_0
@@ -50,15 +68,27 @@
 
 
 # virtual methods
-.method public bindEffectIndex(ILcom/android/camera/data/data/c;)V
+.method public bindEffectIndex(ILd/d/a/l6/e/c;)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "index",
+            "componentDataItem"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/EffectItemAdapterCV$EffectRealtimeItemHolderCV;->this$0:Lcom/android/camera2/compat/theme/custom/cv/EffectItemAdapterCV;
 
     iget-object v1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    iget p2, p2, Lcom/android/camera/data/data/c;->h:I
+    iget p2, p2, Ld/d/a/l6/e/c;->k:I
 
+    .line 2
     invoke-static {v0}, Lcom/android/camera2/compat/theme/custom/cv/EffectItemAdapterCV;->access$100(Lcom/android/camera2/compat/theme/custom/cv/EffectItemAdapterCV;)Lcom/android/camera/fragment/EffectItemAdapter$a;
 
     move-result-object v2
@@ -90,9 +120,11 @@
     :cond_0
     move v2, v3
 
+    .line 3
     :goto_0
     invoke-virtual {v0, v1, p2, v2}, Lcom/android/camera/fragment/EffectItemAdapter;->setAccessible(Landroid/view/View;IZ)V
 
+    .line 4
     iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/cv/EffectItemAdapterCV$EffectRealtimeItemHolderCV;->this$0:Lcom/android/camera2/compat/theme/custom/cv/EffectItemAdapterCV;
 
     invoke-static {p2}, Lcom/android/camera2/compat/theme/custom/cv/EffectItemAdapterCV;->access$300(Lcom/android/camera2/compat/theme/custom/cv/EffectItemAdapterCV;)Lcom/android/camera/fragment/EffectItemAdapter$a;
@@ -113,12 +145,14 @@
 
     if-ne p2, p1, :cond_1
 
+    .line 5
     iget-object p0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {p0, v4}, Landroid/view/View;->setActivated(Z)V
 
     goto :goto_1
 
+    .line 6
     :cond_1
     iget-object p0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -128,10 +162,11 @@
     return-void
 .end method
 
-.method public bridge synthetic getEglSurface()Lyl/f;
+.method public bridge synthetic getEglSurface()Ld/o/g0/q0/i;
     .locals 0
 
-    invoke-super {p0}, Lcom/android/camera/fragment/EffectItemAdapter$EffectRealtimeItemHolder;->getEglSurface()Lyl/f;
+    .line 1
+    invoke-super {p0}, Lcom/android/camera/fragment/EffectItemAdapter$EffectRealtimeItemHolder;->getEglSurface()Ld/o/g0/q0/i;
 
     move-result-object p0
 
@@ -140,7 +175,20 @@
 
 .method public bridge synthetic onSurfaceTextureAvailable(Landroid/graphics/SurfaceTexture;II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000,
+            0x1000
+        }
+        names = {
+            "surface",
+            "width",
+            "height"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2, p3}, Lcom/android/camera/fragment/EffectItemAdapter$EffectRealtimeItemHolder;->onSurfaceTextureAvailable(Landroid/graphics/SurfaceTexture;II)V
 
     return-void
@@ -148,7 +196,16 @@
 
 .method public bridge synthetic onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)Z
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "surface"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/EffectItemAdapter$EffectRealtimeItemHolder;->onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)Z
 
     move-result p0
@@ -158,9 +215,23 @@
 
 .method public bridge synthetic onSurfaceTextureSizeChanged(Landroid/graphics/SurfaceTexture;II)V
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000,
+            0x1000
+        }
+        names = {
+            "surface",
+            "width",
+            "height"
+        }
+    .end annotation
+
+    .line 1
     invoke-super {p0, p1, p2, p3}, Lcom/android/camera/fragment/EffectItemAdapter$EffectRealtimeItemHolder;->onSurfaceTextureSizeChanged(Landroid/graphics/SurfaceTexture;II)V
 
     return-void
@@ -168,7 +239,16 @@
 
 .method public bridge synthetic onSurfaceTextureUpdated(Landroid/graphics/SurfaceTexture;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "surface"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/EffectItemAdapter$EffectRealtimeItemHolder;->onSurfaceTextureUpdated(Landroid/graphics/SurfaceTexture;)V
 
     return-void

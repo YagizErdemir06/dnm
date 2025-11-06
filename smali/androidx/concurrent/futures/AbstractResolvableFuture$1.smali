@@ -1,4 +1,4 @@
-.class synthetic Landroidx/concurrent/futures/AbstractResolvableFuture$1;
+.class public synthetic Landroidx/concurrent/futures/AbstractResolvableFuture$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

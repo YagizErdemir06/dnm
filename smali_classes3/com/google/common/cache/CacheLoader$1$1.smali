@@ -1,4 +1,4 @@
-.class Lcom/google/common/cache/CacheLoader$1$1;
+.class public Lcom/google/common/cache/CacheLoader$1$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,17 +26,18 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/cache/CacheLoader$1;
+.field public final synthetic this$0:Lcom/google/common/cache/CacheLoader$1;
 
-.field final synthetic val$key:Ljava/lang/Object;
+.field public final synthetic val$key:Ljava/lang/Object;
 
-.field final synthetic val$oldValue:Ljava/lang/Object;
+.field public final synthetic val$oldValue:Ljava/lang/Object;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/cache/CacheLoader$1;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/cache/CacheLoader$1$1;->this$0:Lcom/google/common/cache/CacheLoader$1;
 
     iput-object p2, p0, Lcom/google/common/cache/CacheLoader$1$1;->val$key:Ljava/lang/Object;
@@ -64,6 +65,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/cache/CacheLoader$1$1;->this$0:Lcom/google/common/cache/CacheLoader$1;
 
     iget-object v0, v0, Lcom/google/common/cache/CacheLoader$1;->val$loader:Lcom/google/common/cache/CacheLoader;

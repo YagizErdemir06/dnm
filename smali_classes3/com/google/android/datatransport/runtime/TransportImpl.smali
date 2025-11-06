@@ -1,4 +1,4 @@
-.class final Lcom/google/android/datatransport/runtime/TransportImpl;
+.class public final Lcom/google/android/datatransport/runtime/TransportImpl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -54,30 +54,28 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/TransportImpl;->transportContext:Lcom/google/android/datatransport/runtime/TransportContext;
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/datatransport/runtime/TransportImpl;->name:Ljava/lang/String;
 
+    .line 4
     iput-object p3, p0, Lcom/google/android/datatransport/runtime/TransportImpl;->payloadEncoding:Lcom/google/android/datatransport/Encoding;
 
+    .line 5
     iput-object p4, p0, Lcom/google/android/datatransport/runtime/TransportImpl;->transformer:Lcom/google/android/datatransport/Transformer;
 
+    .line 6
     iput-object p5, p0, Lcom/google/android/datatransport/runtime/TransportImpl;->transportInternal:Lcom/google/android/datatransport/runtime/TransportInternal;
 
     return-void
 .end method
 
-.method public static synthetic a(Ljava/lang/Exception;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/datatransport/runtime/TransportImpl;->lambda$send$0(Ljava/lang/Exception;)V
-
-    return-void
-.end method
-
-.method private static synthetic lambda$send$0(Ljava/lang/Exception;)V
+.method public static synthetic lambda$send$0(Ljava/lang/Exception;)V
     .locals 0
 
     return-void
@@ -88,6 +86,7 @@
 .method public getTransportContext()Lcom/google/android/datatransport/runtime/TransportContext;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/TransportImpl;->transportContext:Lcom/google/android/datatransport/runtime/TransportContext;
 
     return-object p0
@@ -105,44 +104,53 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/TransportImpl;->transportInternal:Lcom/google/android/datatransport/runtime/TransportInternal;
 
+    .line 2
     invoke-static {}, Lcom/google/android/datatransport/runtime/SendRequest;->builder()Lcom/google/android/datatransport/runtime/SendRequest$Builder;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/google/android/datatransport/runtime/TransportImpl;->transportContext:Lcom/google/android/datatransport/runtime/TransportContext;
 
+    .line 3
     invoke-virtual {v1, v2}, Lcom/google/android/datatransport/runtime/SendRequest$Builder;->setTransportContext(Lcom/google/android/datatransport/runtime/TransportContext;)Lcom/google/android/datatransport/runtime/SendRequest$Builder;
 
     move-result-object v1
 
+    .line 4
     invoke-virtual {v1, p1}, Lcom/google/android/datatransport/runtime/SendRequest$Builder;->setEvent(Lcom/google/android/datatransport/Event;)Lcom/google/android/datatransport/runtime/SendRequest$Builder;
 
     move-result-object p1
 
     iget-object v1, p0, Lcom/google/android/datatransport/runtime/TransportImpl;->name:Ljava/lang/String;
 
+    .line 5
     invoke-virtual {p1, v1}, Lcom/google/android/datatransport/runtime/SendRequest$Builder;->setTransportName(Ljava/lang/String;)Lcom/google/android/datatransport/runtime/SendRequest$Builder;
 
     move-result-object p1
 
     iget-object v1, p0, Lcom/google/android/datatransport/runtime/TransportImpl;->transformer:Lcom/google/android/datatransport/Transformer;
 
+    .line 6
     invoke-virtual {p1, v1}, Lcom/google/android/datatransport/runtime/SendRequest$Builder;->setTransformer(Lcom/google/android/datatransport/Transformer;)Lcom/google/android/datatransport/runtime/SendRequest$Builder;
 
     move-result-object p1
 
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/TransportImpl;->payloadEncoding:Lcom/google/android/datatransport/Encoding;
 
+    .line 7
     invoke-virtual {p1, p0}, Lcom/google/android/datatransport/runtime/SendRequest$Builder;->setEncoding(Lcom/google/android/datatransport/Encoding;)Lcom/google/android/datatransport/runtime/SendRequest$Builder;
 
     move-result-object p0
 
+    .line 8
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/SendRequest$Builder;->build()Lcom/google/android/datatransport/runtime/SendRequest;
 
     move-result-object p0
 
+    .line 9
     invoke-interface {v0, p0, p2}, Lcom/google/android/datatransport/runtime/TransportInternal;->send(Lcom/google/android/datatransport/runtime/SendRequest;Lcom/google/android/datatransport/TransportScheduleCallback;)V
 
     return-void
@@ -158,9 +166,8 @@
         }
     .end annotation
 
-    new-instance v0, Lcom/google/android/datatransport/runtime/a;
-
-    invoke-direct {v0}, Lcom/google/android/datatransport/runtime/a;-><init>()V
+    .line 1
+    sget-object v0, Ld/j/a/a/b/a;->a:Ld/j/a/a/b/a;
 
     invoke-virtual {p0, p1, v0}, Lcom/google/android/datatransport/runtime/TransportImpl;->schedule(Lcom/google/android/datatransport/Event;Lcom/google/android/datatransport/TransportScheduleCallback;)V
 

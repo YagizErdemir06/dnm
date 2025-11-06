@@ -1,11 +1,11 @@
 .class public Lcom/android/camera/module/FunModule$d;
-.super Lz7/k;
+.super Ld/d/a/d7/n8/a/k;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/module/FunModule;->Gi(Lcom/android/camera/module/loader/base/StartControl;)V
+    value = Lcom/android/camera/module/FunModule;->Sh(Lcom/android/camera/module/loader/base/StartControl;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,16 +15,25 @@
 
 
 # instance fields
-.field public final synthetic k:Lcom/android/camera/module/FunModule;
+.field public final synthetic u:Lcom/android/camera/module/FunModule;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera/module/FunModule;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera/module/FunModule$d;->k:Lcom/android/camera/module/FunModule;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/module/FunModule$d;->u:Lcom/android/camera/module/FunModule;
 
-    invoke-direct {p0}, Lz7/k;-><init>()V
+    invoke-direct {p0}, Ld/d/a/d7/n8/a/k;-><init>()V
 
     return-void
 .end method
@@ -34,13 +43,15 @@
 .method public a()V
     .locals 0
 
-    invoke-static {}, Lv8/k1;->impl2()Lv8/k1;
+    .line 1
+    invoke-static {}, Ld/d/a/m7/g/n1;->impl2()Ld/d/a/m7/g/n1;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    invoke-interface {p0}, Lv8/k1;->s()V
+    .line 2
+    invoke-interface {p0}, Ld/d/a/m7/g/n1;->t()V
 
     :cond_0
     return-void

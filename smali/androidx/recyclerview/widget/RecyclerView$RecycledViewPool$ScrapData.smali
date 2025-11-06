@@ -1,4 +1,4 @@
-.class Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool$ScrapData;
+.class public Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool$ScrapData;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field mBindRunningAverageNs:J
+.field public mBindRunningAverageNs:J
 
-.field mCreateRunningAverageNs:J
+.field public mCreateRunningAverageNs:J
 
-.field mMaxScrap:I
+.field public mMaxScrap:I
 
-.field final mScrapHeap:Ljava/util/ArrayList;
+.field public final mScrapHeap:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -36,8 +36,10 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -46,12 +48,15 @@
 
     const/4 v0, 0x5
 
+    .line 3
     iput v0, p0, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool$ScrapData;->mMaxScrap:I
 
     const-wide/16 v0, 0x0
 
+    .line 4
     iput-wide v0, p0, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool$ScrapData;->mCreateRunningAverageNs:J
 
+    .line 5
     iput-wide v0, p0, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool$ScrapData;->mBindRunningAverageNs:J
 
     return-void

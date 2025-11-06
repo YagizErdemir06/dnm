@@ -1,4 +1,4 @@
-.class Lcom/google/common/eventbus/Subscriber$1;
+.class public Lcom/google/common/eventbus/Subscriber$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,15 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/eventbus/Subscriber;
+.field public final synthetic this$0:Lcom/google/common/eventbus/Subscriber;
 
-.field final synthetic val$event:Ljava/lang/Object;
+.field public final synthetic val$event:Ljava/lang/Object;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/eventbus/Subscriber;Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/eventbus/Subscriber$1;->this$0:Lcom/google/common/eventbus/Subscriber;
 
     iput-object p2, p0, Lcom/google/common/eventbus/Subscriber$1;->val$event:Ljava/lang/Object;
@@ -41,6 +42,7 @@
 .method public run()V
     .locals 3
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/common/eventbus/Subscriber$1;->this$0:Lcom/google/common/eventbus/Subscriber;
 
@@ -55,6 +57,7 @@
     :catch_0
     move-exception v0
 
+    .line 2
     iget-object v1, p0, Lcom/google/common/eventbus/Subscriber$1;->this$0:Lcom/google/common/eventbus/Subscriber;
 
     invoke-static {v1}, Lcom/google/common/eventbus/Subscriber;->access$200(Lcom/google/common/eventbus/Subscriber;)Lcom/google/common/eventbus/EventBus;

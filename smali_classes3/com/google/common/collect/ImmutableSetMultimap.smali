@@ -112,8 +112,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/common/collect/ImmutableMultimap;-><init>(Lcom/google/common/collect/ImmutableMap;I)V
 
+    .line 2
     invoke-static {p3}, Lcom/google/common/collect/ImmutableSetMultimap;->emptySet(Ljava/util/Comparator;)Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p1
@@ -137,6 +139,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ImmutableSetMultimap$Builder;
 
     invoke-direct {v0}, Lcom/google/common/collect/ImmutableSetMultimap$Builder;-><init>()V
@@ -305,12 +308,14 @@
 
     if-nez p0, :cond_0
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/ImmutableSet;->of()Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p0
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-static {p0}, Lcom/google/common/collect/ImmutableSortedSet;->emptySet(Ljava/util/Comparator;)Lcom/google/common/collect/RegularImmutableSortedSet;
 
@@ -346,32 +351,37 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-static {}, Lcom/google/common/collect/ImmutableSetMultimap;->of()Lcom/google/common/collect/ImmutableSetMultimap;
 
     move-result-object p0
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance v0, Lcom/google/common/collect/ImmutableMap$Builder;
 
+    .line 4
     invoke-interface {p0}, Ljava/util/Collection;->size()I
 
     move-result v1
 
     invoke-direct {v0, v1}, Lcom/google/common/collect/ImmutableMap$Builder;-><init>(I)V
 
+    const/4 v1, 0x0
+
+    .line 5
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
-
-    const/4 v1, 0x0
 
     :cond_1
     :goto_0
@@ -387,28 +397,34 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
+    .line 6
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v3
 
+    .line 7
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/util/Collection;
 
+    .line 8
     invoke-static {p1, v2}, Lcom/google/common/collect/ImmutableSetMultimap;->valueSet(Ljava/util/Comparator;Ljava/util/Collection;)Lcom/google/common/collect/ImmutableSet;
 
     move-result-object v2
 
+    .line 9
     invoke-virtual {v2}, Ljava/util/AbstractCollection;->isEmpty()Z
 
     move-result v4
 
     if-nez v4, :cond_1
 
+    .line 10
     invoke-virtual {v0, v3, v2}, Lcom/google/common/collect/ImmutableMap$Builder;->put(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMap$Builder;
 
+    .line 11
     invoke-virtual {v2}, Ljava/util/AbstractCollection;->size()I
 
     move-result v2
@@ -417,6 +433,7 @@
 
     goto :goto_0
 
+    .line 12
     :cond_2
     new-instance p0, Lcom/google/common/collect/ImmutableSetMultimap;
 
@@ -439,10 +456,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/ImmutableSetMultimap;->builder()Lcom/google/common/collect/ImmutableSetMultimap$Builder;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableSetMultimap;->entries()Lcom/google/common/collect/ImmutableSet;
 
     move-result-object v1
@@ -464,6 +483,7 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
+    .line 3
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
@@ -476,11 +496,13 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-virtual {v0}, Lcom/google/common/collect/ImmutableSetMultimap$Builder;->build()Lcom/google/common/collect/ImmutableSetMultimap;
 
     move-result-object v0
 
+    .line 5
     iput-object p0, v0, Lcom/google/common/collect/ImmutableSetMultimap;->inverse:Lcom/google/common/collect/ImmutableSetMultimap;
 
     return-object v0
@@ -698,20 +720,24 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->defaultReadObject()V
 
+    .line 2
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/Comparator;
 
+    .line 3
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readInt()I
 
     move-result v1
 
     if-ltz v1, :cond_4
 
+    .line 4
     invoke-static {}, Lcom/google/common/collect/ImmutableMap;->builder()Lcom/google/common/collect/ImmutableMap$Builder;
 
     move-result-object v2
@@ -725,16 +751,19 @@
     :goto_0
     if-ge v4, v1, :cond_3
 
+    .line 5
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
     move-result-object v6
 
+    .line 6
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readInt()I
 
     move-result v7
 
     if-lez v7, :cond_2
 
+    .line 7
     invoke-static {v0}, Lcom/google/common/collect/ImmutableSetMultimap;->valuesBuilder(Ljava/util/Comparator;)Lcom/google/common/collect/ImmutableSet$Builder;
 
     move-result-object v8
@@ -744,6 +773,7 @@
     :goto_1
     if-ge v9, v7, :cond_0
 
+    .line 8
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
     move-result-object v10
@@ -754,17 +784,20 @@
 
     goto :goto_1
 
+    .line 9
     :cond_0
     invoke-virtual {v8}, Lcom/google/common/collect/ImmutableSet$Builder;->build()Lcom/google/common/collect/ImmutableSet;
 
     move-result-object v8
 
+    .line 10
     invoke-virtual {v8}, Ljava/util/AbstractCollection;->size()I
 
     move-result v9
 
     if-ne v9, v7, :cond_1
 
+    .line 11
     invoke-virtual {v2, v6, v8}, Lcom/google/common/collect/ImmutableMap$Builder;->put(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableMap$Builder;
 
     add-int/2addr v5, v7
@@ -773,6 +806,7 @@
 
     goto :goto_0
 
+    .line 12
     :cond_1
     new-instance p0, Ljava/io/InvalidObjectException;
 
@@ -804,22 +838,23 @@
 
     throw p0
 
+    .line 13
     :cond_2
     new-instance p0, Ljava/io/InvalidObjectException;
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    const/16 p1, 0x1f
 
-    const/16 v0, 0x1f
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v0, p1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    const-string v0, "Invalid value count "
+    const-string p1, "Invalid value count "
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
@@ -827,6 +862,7 @@
 
     throw p0
 
+    .line 14
     :cond_3
     :try_start_0
     invoke-virtual {v2}, Lcom/google/common/collect/ImmutableMap$Builder;->build()Lcom/google/common/collect/ImmutableMap;
@@ -835,14 +871,17 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 15
     sget-object v1, Lcom/google/common/collect/ImmutableMultimap$FieldSettersHolder;->MAP_FIELD_SETTER:Lcom/google/common/collect/Serialization$FieldSetter;
 
     invoke-virtual {v1, p0, p1}, Lcom/google/common/collect/Serialization$FieldSetter;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
+    .line 16
     sget-object p1, Lcom/google/common/collect/ImmutableMultimap$FieldSettersHolder;->SIZE_FIELD_SETTER:Lcom/google/common/collect/Serialization$FieldSetter;
 
     invoke-virtual {p1, p0, v5}, Lcom/google/common/collect/Serialization$FieldSetter;->set(Ljava/lang/Object;I)V
 
+    .line 17
     sget-object p1, Lcom/google/common/collect/ImmutableSetMultimap$SetFieldSettersHolder;->EMPTY_SET_FIELD_SETTER:Lcom/google/common/collect/Serialization$FieldSetter;
 
     invoke-static {v0}, Lcom/google/common/collect/ImmutableSetMultimap;->emptySet(Ljava/util/Comparator;)Lcom/google/common/collect/ImmutableSet;
@@ -856,15 +895,16 @@
     :catch_0
     move-exception p0
 
+    .line 18
     new-instance p1, Ljava/io/InvalidObjectException;
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/IllegalArgumentException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-direct {p1, v0}, Ljava/io/InvalidObjectException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {p1, p0}, Ljava/io/InvalidObjectException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -872,22 +912,23 @@
 
     throw p0
 
+    .line 19
     :cond_4
     new-instance p0, Ljava/io/InvalidObjectException;
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    const/16 p1, 0x1d
 
-    const/16 v0, 0x1d
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v0, p1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    const-string v0, "Invalid key count "
+    const-string p1, "Invalid key count "
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
@@ -918,12 +959,14 @@
 
     if-nez p0, :cond_0
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/collect/ImmutableSet;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p0
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-static {p0, p1}, Lcom/google/common/collect/ImmutableSortedSet;->copyOf(Ljava/util/Comparator;Ljava/util/Collection;)Lcom/google/common/collect/ImmutableSortedSet;
 
@@ -953,12 +996,14 @@
 
     if-nez p0, :cond_0
 
+    .line 1
     new-instance p0, Lcom/google/common/collect/ImmutableSet$Builder;
 
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableSet$Builder;-><init>()V
 
     goto :goto_0
 
+    .line 2
     :cond_0
     new-instance v0, Lcom/google/common/collect/ImmutableSortedSet$Builder;
 
@@ -981,14 +1026,17 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/io/ObjectOutputStream;->defaultWriteObject()V
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableSetMultimap;->valueComparator()Ljava/util/Comparator;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
 
+    .line 3
     invoke-static {p0, p1}, Lcom/google/common/collect/Serialization;->writeMultimap(Lcom/google/common/collect/Multimap;Ljava/io/ObjectOutputStream;)V
 
     return-void
@@ -1366,12 +1414,14 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableSetMultimap;->emptySet:Lcom/google/common/collect/ImmutableSet;
 
     instance-of v0, p0, Lcom/google/common/collect/ImmutableSortedSet;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Lcom/google/common/collect/ImmutableSortedSet;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableSortedSet;->comparator()Ljava/util/Comparator;

@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/StandardTable$Row$2;
+.class public Lcom/google/common/collect/StandardTable$Row$2;
 .super Lcom/google/common/collect/ForwardingMapEntry;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic val$entry:Ljava/util/Map$Entry;
+.field public final synthetic val$entry:Ljava/util/Map$Entry;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/StandardTable$Row;Ljava/util/Map$Entry;)V
     .locals 0
 
+    .line 1
     iput-object p2, p0, Lcom/google/common/collect/StandardTable$Row$2;->val$entry:Ljava/util/Map$Entry;
 
     invoke-direct {p0}, Lcom/google/common/collect/ForwardingMapEntry;-><init>()V
@@ -72,6 +73,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ForwardingMapEntry;->standardEquals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -87,6 +89,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1

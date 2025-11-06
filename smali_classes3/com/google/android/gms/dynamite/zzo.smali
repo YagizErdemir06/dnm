@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/dynamite/zzo;
+.class public final Lcom/google/android/gms/dynamite/zzo;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/rtsp/RtspClient$KeepAliveMonitor;
+.class public final Lcom/google/android/exoplayer2/source/rtsp/RtspClient$KeepAliveMonitor;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -25,19 +25,22 @@
 
 .field private final keepAliveHandler:Landroid/os/Handler;
 
-.field final synthetic this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
+.field public final synthetic this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;J)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$KeepAliveMonitor;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-wide p2, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$KeepAliveMonitor;->intervalMs:J
 
+    .line 3
     invoke-static {}, Lcom/google/android/exoplayer2/util/Util;->createHandlerForCurrentLooper()Landroid/os/Handler;
 
     move-result-object p1
@@ -54,8 +57,10 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$KeepAliveMonitor;->isStarted:Z
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$KeepAliveMonitor;->keepAliveHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
@@ -66,6 +71,7 @@
 .method public run()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$KeepAliveMonitor;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->access$1100(Lcom/google/android/exoplayer2/source/rtsp/RtspClient;)Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;
@@ -86,6 +92,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$MessageSender;->sendOptionsRequest(Landroid/net/Uri;Ljava/lang/String;)V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$KeepAliveMonitor;->keepAliveHandler:Landroid/os/Handler;
 
     iget-wide v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$KeepAliveMonitor;->intervalMs:J
@@ -98,6 +105,7 @@
 .method public start()V
     .locals 3
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$KeepAliveMonitor;->isStarted:Z
 
     if-eqz v0, :cond_0
@@ -107,8 +115,10 @@
     :cond_0
     const/4 v0, 0x1
 
+    .line 2
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$KeepAliveMonitor;->isStarted:Z
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$KeepAliveMonitor;->keepAliveHandler:Landroid/os/Handler;
 
     iget-wide v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspClient$KeepAliveMonitor;->intervalMs:J

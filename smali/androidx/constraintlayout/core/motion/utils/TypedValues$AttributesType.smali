@@ -116,21 +116,21 @@
 
     const-string v6, "elevation"
 
-    const-string/jumbo v7, "rotationX"
+    const-string v7, "rotationX"
 
-    const-string/jumbo v8, "rotationY"
+    const-string v8, "rotationY"
 
-    const-string/jumbo v9, "rotationZ"
+    const-string v9, "rotationZ"
 
-    const-string/jumbo v10, "scaleX"
+    const-string v10, "scaleX"
 
-    const-string/jumbo v11, "scaleY"
+    const-string v11, "scaleY"
 
     const-string v12, "pivotX"
 
     const-string v13, "pivotY"
 
-    const-string/jumbo v14, "progress"
+    const-string v14, "progress"
 
     const-string v15, "pathRotate"
 
@@ -140,10 +140,11 @@
 
     const-string v18, "frame"
 
-    const-string/jumbo v19, "target"
+    const-string v19, "target"
 
     const-string v20, "pivotTarget"
 
+    .line 1
     filled-new-array/range {v0 .. v20}, [Ljava/lang/String;
 
     move-result-object v0
@@ -156,6 +157,7 @@
 .method public static getId(Ljava/lang/String;)I
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -284,7 +286,7 @@
     goto/16 :goto_1
 
     :sswitch_7
-    const-string/jumbo v0, "target"
+    const-string v0, "target"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -300,7 +302,7 @@
     goto/16 :goto_1
 
     :sswitch_8
-    const-string/jumbo v0, "scaleY"
+    const-string v0, "scaleY"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -316,7 +318,7 @@
     goto/16 :goto_1
 
     :sswitch_9
-    const-string/jumbo v0, "scaleX"
+    const-string v0, "scaleX"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -364,7 +366,7 @@
     goto/16 :goto_1
 
     :sswitch_c
-    const-string/jumbo v0, "progress"
+    const-string v0, "progress"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -428,7 +430,7 @@
     goto :goto_1
 
     :sswitch_10
-    const-string/jumbo v0, "rotationZ"
+    const-string v0, "rotationZ"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -444,7 +446,7 @@
     goto :goto_1
 
     :sswitch_11
-    const-string/jumbo v0, "rotationY"
+    const-string v0, "rotationY"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -460,7 +462,7 @@
     goto :goto_1
 
     :sswitch_12
-    const-string/jumbo v0, "rotationX"
+    const-string v0, "rotationX"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -593,8 +595,6 @@
     const/16 p0, 0x13d
 
     return p0
-
-    nop
 
     :sswitch_data_0
     .sparse-switch

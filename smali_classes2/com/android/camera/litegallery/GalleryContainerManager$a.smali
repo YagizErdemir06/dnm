@@ -15,26 +15,64 @@
 
 
 # virtual methods
-.method public abstract B2(IZ)V
+.method public abstract F4()V
 .end method
 
-.method public abstract P7()V
+.method public abstract Q0(IZ)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "position",
+            "needScroll"
+        }
+    .end annotation
 .end method
 
-.method public abstract Y6(IZ)V
+.method public abstract S2(II)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "positionStart",
+            "itemCount"
+        }
+    .end annotation
 .end method
 
-.method public abstract q3()V
+.method public abstract Y()V
 .end method
 
-.method public abstract q4(II)V
+.method public abstract Y4(I)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "position"
+        }
+    .end annotation
 .end method
 
-.method public abstract u0()V
+.method public abstract Z3(IZ)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "position",
+            "needScroll"
+        }
+    .end annotation
 .end method
 
-.method public abstract z8(I)V
+.method public abstract e6()V
 .end method
 
-.method public abstract za()V
+.method public abstract m2()V
 .end method

@@ -1,4 +1,4 @@
-.class Lcom/google/common/graph/Traverser$1;
+.class public Lcom/google/common/graph/Traverser$1;
 .super Lcom/google/common/graph/Traverser;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic val$graph:Lcom/google/common/graph/SuccessorsFunction;
+.field public final synthetic val$graph:Lcom/google/common/graph/SuccessorsFunction;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/graph/SuccessorsFunction;Lcom/google/common/graph/SuccessorsFunction;)V
     .locals 0
 
+    .line 1
     iput-object p2, p0, Lcom/google/common/graph/Traverser$1;->val$graph:Lcom/google/common/graph/SuccessorsFunction;
 
     const/4 p2, 0x0
@@ -50,6 +51,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/Traverser$1;->val$graph:Lcom/google/common/graph/SuccessorsFunction;
 
     invoke-static {p0}, Lcom/google/common/graph/Traverser$Traversal;->inGraph(Lcom/google/common/graph/SuccessorsFunction;)Lcom/google/common/graph/Traverser$Traversal;

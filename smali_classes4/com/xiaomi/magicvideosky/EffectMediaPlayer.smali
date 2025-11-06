@@ -12,13 +12,13 @@
 
 
 # static fields
-.field public static c:Ljava/lang/String; = "EffectMediaPlayer"
+.field private static a:Ljava/lang/String; = "EffectMediaPlayer"
 
 
 # instance fields
-.field public a:Lcom/xiaomi/magicvideosky/MediaEffectGraph;
+.field private b:Lcom/xiaomi/magicvideosky/MediaEffectGraph;
 
-.field public b:J
+.field private c:J
 
 
 # direct methods
@@ -31,9 +31,11 @@
 .method public constructor <init>(Lcom/xiaomi/magicvideosky/MediaEffectGraph;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->a:Lcom/xiaomi/magicvideosky/MediaEffectGraph;
+    .line 2
+    iput-object p1, p0, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->b:Lcom/xiaomi/magicvideosky/MediaEffectGraph;
 
     return-void
 .end method
@@ -97,11 +99,13 @@
 .method public a()Z
     .locals 2
 
-    iget-object p0, p0, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->a:Lcom/xiaomi/magicvideosky/MediaEffectGraph;
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->b:Lcom/xiaomi/magicvideosky/MediaEffectGraph;
 
     if-nez p0, :cond_0
 
-    sget-object p0, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->c:Ljava/lang/String;
+    .line 2
+    sget-object p0, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->a:Ljava/lang/String;
 
     const-string v0, "effect graph is null, failed!"
 
@@ -111,6 +115,7 @@
 
     return p0
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Lcom/xiaomi/magicvideosky/MediaEffectGraph;->j()J
 
@@ -118,7 +123,8 @@
 
     invoke-static {v0, v1}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->ConstructMediaPlayerJni(J)Z
 
-    sget-object p0, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->c:Ljava/lang/String;
+    .line 4
+    sget-object p0, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->a:Ljava/lang/String;
 
     const-string v0, "construct EffectPlayer"
 
@@ -132,12 +138,14 @@
 .method public b()V
     .locals 1
 
-    sget-object p0, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->c:Ljava/lang/String;
+    .line 1
+    sget-object p0, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->a:Ljava/lang/String;
 
     const-string v0, "desctruct EffectPlayer"
 
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->DestructMediaPlayerJni()V
 
     return-void
@@ -146,6 +154,7 @@
 .method public c(Z)V
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->EnableUserAdjustRotatePlayJni(Z)V
 
     return-void
@@ -154,6 +163,7 @@
 .method public d()J
     .locals 2
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->GetCurrentPlayingPositionJni()J
 
     move-result-wide v0
@@ -161,20 +171,22 @@
     return-wide v0
 .end method
 
-.method public e()Lwg/b;
+.method public e()Ld/o/n/b;
     .locals 1
 
-    sget-object p0, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->c:Ljava/lang/String;
+    .line 1
+    sget-object p0, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->a:Ljava/lang/String;
 
     const-string v0, "GetPreViewStatus "
 
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->GetPreViewStatusJni()I
 
     move-result p0
 
-    invoke-static {p0}, Lwg/b;->a(I)Lwg/b;
+    invoke-static {p0}, Ld/o/n/b;->a(I)Ld/o/n/b;
 
     move-result-object p0
 
@@ -184,6 +196,7 @@
 .method public f(Z)J
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->GetStreamDurationJni(Z)J
 
     move-result-wide p0
@@ -194,12 +207,14 @@
 .method public g()V
     .locals 1
 
-    sget-object p0, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->c:Ljava/lang/String;
+    .line 1
+    sget-object p0, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->a:Ljava/lang/String;
 
     const-string v0, "pause preview "
 
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->PausePreViewJni()V
 
     return-void
@@ -208,11 +223,13 @@
 .method public h()Z
     .locals 3
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->ResumePreViewJni()Z
 
     move-result p0
 
-    sget-object v0, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->c:Ljava/lang/String;
+    .line 2
+    sget-object v0, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->a:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -233,9 +250,10 @@
     return p0
 .end method
 
-.method public i(JLzg/e;)Z
+.method public i(JLd/o/p/b/e;)Z
     .locals 0
 
+    .line 1
     invoke-virtual {p3}, Ljava/lang/Enum;->ordinal()I
 
     move-result p0
@@ -250,6 +268,7 @@
 .method public j(Z)V
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->SetGraphLoopJni(Z)V
 
     return-void
@@ -258,8 +277,10 @@
 .method public k(Lcom/xiaomi/magicvideosky/MediaEffectGraph;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->a:Lcom/xiaomi/magicvideosky/MediaEffectGraph;
+    .line 1
+    iput-object p1, p0, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->b:Lcom/xiaomi/magicvideosky/MediaEffectGraph;
 
+    .line 2
     invoke-virtual {p1}, Lcom/xiaomi/magicvideosky/MediaEffectGraph;->j()J
 
     move-result-wide p0
@@ -272,6 +293,7 @@
 .method public l(Z)V
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->SetPlayLoopJni(Z)V
 
     return-void
@@ -280,7 +302,8 @@
 .method public m(Lcom/xiaomi/magicvideosky/EffectNotifier;)V
     .locals 2
 
-    sget-object p0, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->c:Ljava/lang/String;
+    .line 1
+    sget-object p0, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->a:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -298,6 +321,7 @@
 
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {p1}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->SetPlayerNotifyJni(Lcom/xiaomi/magicvideosky/EffectNotifier;)V
 
     return-void
@@ -306,12 +330,14 @@
 .method public n(Landroid/view/Surface;)V
     .locals 1
 
-    sget-object p0, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->c:Ljava/lang/String;
+    .line 1
+    sget-object p0, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->a:Ljava/lang/String;
 
     const-string v0, "set view surface "
 
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {p1}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->SetViewSurfaceJni(Landroid/view/Surface;)V
 
     return-void
@@ -320,12 +346,14 @@
 .method public o()V
     .locals 1
 
-    sget-object p0, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->c:Ljava/lang/String;
+    .line 1
+    sget-object p0, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->a:Ljava/lang/String;
 
     const-string v0, "start preview "
 
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->StartPreViewJni()V
 
     return-void
@@ -334,7 +362,8 @@
 .method public p(J)V
     .locals 2
 
-    sget-object p0, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->c:Ljava/lang/String;
+    .line 1
+    sget-object p0, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->a:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -352,6 +381,7 @@
 
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {p1, p2}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->StartPreViewSourceidJni(J)V
 
     return-void
@@ -360,12 +390,14 @@
 .method public q()V
     .locals 1
 
-    sget-object p0, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->c:Ljava/lang/String;
+    .line 1
+    sget-object p0, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->a:Ljava/lang/String;
 
     const-string v0, "stop preview "
 
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->StopPreViewJni()V
 
     return-void
@@ -374,6 +406,7 @@
 .method public r(Lcom/xiaomi/magicvideosky/EffectMediaPlayer$a;II)V
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer$a;->a()I
 
     move-result p0

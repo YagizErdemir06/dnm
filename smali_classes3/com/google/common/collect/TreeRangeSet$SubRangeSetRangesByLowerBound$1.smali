@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/TreeRangeSet$SubRangeSetRangesByLowerBound$1;
+.class public Lcom/google/common/collect/TreeRangeSet$SubRangeSetRangesByLowerBound$1;
 .super Lcom/google/common/collect/AbstractIterator;
 .source "SourceFile"
 
@@ -26,17 +26,18 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/TreeRangeSet$SubRangeSetRangesByLowerBound;
+.field public final synthetic this$0:Lcom/google/common/collect/TreeRangeSet$SubRangeSetRangesByLowerBound;
 
-.field final synthetic val$completeRangeItr:Ljava/util/Iterator;
+.field public final synthetic val$completeRangeItr:Ljava/util/Iterator;
 
-.field final synthetic val$upperBoundOnLowerBounds:Lcom/google/common/collect/Cut;
+.field public final synthetic val$upperBoundOnLowerBounds:Lcom/google/common/collect/Cut;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/TreeRangeSet$SubRangeSetRangesByLowerBound;Ljava/util/Iterator;Lcom/google/common/collect/Cut;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/TreeRangeSet$SubRangeSetRangesByLowerBound$1;->this$0:Lcom/google/common/collect/TreeRangeSet$SubRangeSetRangesByLowerBound;
 
     iput-object p2, p0, Lcom/google/common/collect/TreeRangeSet$SubRangeSetRangesByLowerBound$1;->val$completeRangeItr:Ljava/util/Iterator;

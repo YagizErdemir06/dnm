@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/MoreExecutors$Application$1;
+.class public Lcom/google/common/util/concurrent/MoreExecutors$Application$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,17 +18,18 @@
 
 
 # instance fields
-.field final synthetic val$service:Ljava/util/concurrent/ExecutorService;
+.field public final synthetic val$service:Ljava/util/concurrent/ExecutorService;
 
-.field final synthetic val$terminationTimeout:J
+.field public final synthetic val$terminationTimeout:J
 
-.field final synthetic val$timeUnit:Ljava/util/concurrent/TimeUnit;
+.field public final synthetic val$timeUnit:Ljava/util/concurrent/TimeUnit;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/util/concurrent/MoreExecutors$Application;Ljava/util/concurrent/ExecutorService;JLjava/util/concurrent/TimeUnit;)V
     .locals 0
 
+    .line 1
     iput-object p2, p0, Lcom/google/common/util/concurrent/MoreExecutors$Application$1;->val$service:Ljava/util/concurrent/ExecutorService;
 
     iput-wide p3, p0, Lcom/google/common/util/concurrent/MoreExecutors$Application$1;->val$terminationTimeout:J
@@ -45,11 +46,13 @@
 .method public run()V
     .locals 3
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/common/util/concurrent/MoreExecutors$Application$1;->val$service:Ljava/util/concurrent/ExecutorService;
 
     invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->shutdown()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/util/concurrent/MoreExecutors$Application$1;->val$service:Ljava/util/concurrent/ExecutorService;
 
     iget-wide v1, p0, Lcom/google/common/util/concurrent/MoreExecutors$Application$1;->val$terminationTimeout:J

@@ -18,7 +18,7 @@
 
 
 # static fields
-.field static final BYTES:I = 0x28
+.field public static final BYTES:I = 0x28
 
 .field private static final serialVersionUID:J
 
@@ -39,16 +39,22 @@
 .method public constructor <init>(JDDDD)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-wide p1, p0, Lcom/google/common/math/Stats;->count:J
 
+    .line 3
     iput-wide p3, p0, Lcom/google/common/math/Stats;->mean:D
 
+    .line 4
     iput-wide p5, p0, Lcom/google/common/math/Stats;->sumOfSquaresOfDeltas:D
 
+    .line 5
     iput-wide p7, p0, Lcom/google/common/math/Stats;->min:D
 
+    .line 6
     iput-wide p9, p0, Lcom/google/common/math/Stats;->max:D
 
     return-void
@@ -57,8 +63,10 @@
 .method public static fromByteArray([B)Lcom/google/common/math/Stats;
     .locals 4
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     array-length v0, p0
 
     const/16 v1, 0x28
@@ -73,12 +81,13 @@
     const/4 v0, 0x0
 
     :goto_0
-    const-string v2, "Expected Stats.BYTES = %s remaining , got %s"
+    array-length v2, p0
 
-    array-length v3, p0
+    const-string v3, "Expected Stats.BYTES = %s remaining , got %s"
 
-    invoke-static {v0, v2, v1, v3}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;II)V
+    invoke-static {v0, v3, v1, v2}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;II)V
 
+    .line 3
     invoke-static {p0}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
     move-result-object p0
@@ -558,9 +567,11 @@
 .method public static readFrom(Ljava/nio/ByteBuffer;)Lcom/google/common/math/Stats;
     .locals 15
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p0}, Ljava/nio/Buffer;->remaining()I
+    .line 2
+    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v0
 
@@ -575,33 +586,41 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 3
     :goto_0
-    const-string v2, "Expected at least Stats.BYTES = %s remaining , got %s"
+    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->remaining()I
 
-    invoke-virtual {p0}, Ljava/nio/Buffer;->remaining()I
+    move-result v2
 
-    move-result v3
+    const-string v3, "Expected at least Stats.BYTES = %s remaining , got %s"
 
-    invoke-static {v0, v2, v1, v3}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;II)V
+    .line 4
+    invoke-static {v0, v3, v1, v2}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;II)V
 
+    .line 5
     new-instance v0, Lcom/google/common/math/Stats;
 
+    .line 6
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getLong()J
 
     move-result-wide v5
 
+    .line 7
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getDouble()D
 
     move-result-wide v7
 
+    .line 8
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getDouble()D
 
     move-result-wide v9
 
+    .line 9
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getDouble()D
 
     move-result-wide v11
 
+    .line 10
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getDouble()D
 
     move-result-wide v13
@@ -618,6 +637,7 @@
 .method public count()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/math/Stats;->count:J
 
     return-wide v0
@@ -636,6 +656,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     const-class v1, Lcom/google/common/math/Stats;
 
@@ -647,9 +668,11 @@
 
     return v0
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/common/math/Stats;
 
+    .line 3
     iget-wide v1, p0, Lcom/google/common/math/Stats;->count:J
 
     iget-wide v3, p1, Lcom/google/common/math/Stats;->count:J
@@ -660,6 +683,7 @@
 
     iget-wide v1, p0, Lcom/google/common/math/Stats;->mean:D
 
+    .line 4
     invoke-static {v1, v2}, Ljava/lang/Double;->doubleToLongBits(D)J
 
     move-result-wide v1
@@ -676,6 +700,7 @@
 
     iget-wide v1, p0, Lcom/google/common/math/Stats;->sumOfSquaresOfDeltas:D
 
+    .line 5
     invoke-static {v1, v2}, Ljava/lang/Double;->doubleToLongBits(D)J
 
     move-result-wide v1
@@ -692,6 +717,7 @@
 
     iget-wide v1, p0, Lcom/google/common/math/Stats;->min:D
 
+    .line 6
     invoke-static {v1, v2}, Ljava/lang/Double;->doubleToLongBits(D)J
 
     move-result-wide v1
@@ -708,6 +734,7 @@
 
     iget-wide v1, p0, Lcom/google/common/math/Stats;->max:D
 
+    .line 7
     invoke-static {v1, v2}, Ljava/lang/Double;->doubleToLongBits(D)J
 
     move-result-wide v1
@@ -735,6 +762,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 1
     iget-wide v1, p0, Lcom/google/common/math/Stats;->count:J
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -795,6 +823,7 @@
 .method public max()D
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/math/Stats;->count:J
 
     const-wide/16 v2, 0x0
@@ -813,6 +842,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
+    .line 2
     iget-wide v0, p0, Lcom/google/common/math/Stats;->max:D
 
     return-wide v0
@@ -821,6 +851,7 @@
 .method public mean()D
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/math/Stats;->count:J
 
     const-wide/16 v2, 0x0
@@ -839,6 +870,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
+    .line 2
     iget-wide v0, p0, Lcom/google/common/math/Stats;->mean:D
 
     return-wide v0
@@ -847,6 +879,7 @@
 .method public min()D
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/math/Stats;->count:J
 
     const-wide/16 v2, 0x0
@@ -865,6 +898,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
+    .line 2
     iget-wide v0, p0, Lcom/google/common/math/Stats;->min:D
 
     return-wide v0
@@ -873,6 +907,7 @@
 .method public populationStandardDeviation()D
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/math/Stats;->populationVariance()D
 
     move-result-wide v0
@@ -887,6 +922,7 @@
 .method public populationVariance()D
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/math/Stats;->count:J
 
     const-wide/16 v2, 0x0
@@ -905,6 +941,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
+    .line 2
     iget-wide v0, p0, Lcom/google/common/math/Stats;->sumOfSquaresOfDeltas:D
 
     invoke-static {v0, v1}, Ljava/lang/Double;->isNaN(D)Z
@@ -917,6 +954,7 @@
 
     return-wide v0
 
+    .line 3
     :cond_1
     iget-wide v0, p0, Lcom/google/common/math/Stats;->count:J
 
@@ -930,6 +968,7 @@
 
     return-wide v0
 
+    .line 4
     :cond_2
     iget-wide v0, p0, Lcom/google/common/math/Stats;->sumOfSquaresOfDeltas:D
 
@@ -951,6 +990,7 @@
 .method public sampleStandardDeviation()D
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/math/Stats;->sampleVariance()D
 
     move-result-wide v0
@@ -965,6 +1005,7 @@
 .method public sampleVariance()D
     .locals 6
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/math/Stats;->count:J
 
     const-wide/16 v2, 0x1
@@ -983,6 +1024,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
+    .line 2
     iget-wide v0, p0, Lcom/google/common/math/Stats;->sumOfSquaresOfDeltas:D
 
     invoke-static {v0, v1}, Ljava/lang/Double;->isNaN(D)Z
@@ -995,6 +1037,7 @@
 
     return-wide v0
 
+    .line 3
     :cond_1
     iget-wide v0, p0, Lcom/google/common/math/Stats;->sumOfSquaresOfDeltas:D
 
@@ -1016,6 +1059,7 @@
 .method public sum()D
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/math/Stats;->mean:D
 
     iget-wide v2, p0, Lcom/google/common/math/Stats;->count:J
@@ -1030,6 +1074,7 @@
 .method public sumOfSquaresOfDeltas()D
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/math/Stats;->sumOfSquaresOfDeltas:D
 
     return-wide v0
@@ -1040,6 +1085,7 @@
 
     const/16 v0, 0x28
 
+    .line 1
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
@@ -1050,8 +1096,10 @@
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/google/common/math/Stats;->writeTo(Ljava/nio/ByteBuffer;)V
 
+    .line 3
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object p0
@@ -1062,6 +1110,7 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/math/Stats;->count()J
 
     move-result-wide v0
@@ -1074,56 +1123,64 @@
 
     if-lez v0, :cond_0
 
+    .line 2
     invoke-static {p0}, Lcom/google/common/base/MoreObjects;->toStringHelper(Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     move-result-object v0
 
     iget-wide v2, p0, Lcom/google/common/math/Stats;->count:J
 
+    .line 3
     invoke-virtual {v0, v1, v2, v3}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     move-result-object v0
 
-    const-string v1, "mean"
+    iget-wide v1, p0, Lcom/google/common/math/Stats;->mean:D
 
-    iget-wide v2, p0, Lcom/google/common/math/Stats;->mean:D
+    const-string v3, "mean"
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;D)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    .line 4
+    invoke-virtual {v0, v3, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;D)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     move-result-object v0
 
-    const-string v1, "populationStandardDeviation"
-
+    .line 5
     invoke-virtual {p0}, Lcom/google/common/math/Stats;->populationStandardDeviation()D
 
-    move-result-wide v2
+    move-result-wide v1
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;D)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    const-string v3, "populationStandardDeviation"
 
-    move-result-object v0
-
-    const-string v1, "min"
-
-    iget-wide v2, p0, Lcom/google/common/math/Stats;->min:D
-
-    invoke-virtual {v0, v1, v2, v3}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;D)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    invoke-virtual {v0, v3, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;D)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     move-result-object v0
 
-    const-string v1, "max"
+    iget-wide v1, p0, Lcom/google/common/math/Stats;->min:D
 
-    iget-wide v2, p0, Lcom/google/common/math/Stats;->max:D
+    const-string v3, "min"
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;D)Lcom/google/common/base/MoreObjects$ToStringHelper;
+    .line 6
+    invoke-virtual {v0, v3, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;D)Lcom/google/common/base/MoreObjects$ToStringHelper;
+
+    move-result-object v0
+
+    iget-wide v1, p0, Lcom/google/common/math/Stats;->max:D
+
+    const-string p0, "max"
+
+    .line 7
+    invoke-virtual {v0, p0, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;D)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     move-result-object p0
 
+    .line 8
     invoke-virtual {p0}, Lcom/google/common/base/MoreObjects$ToStringHelper;->toString()Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
+    .line 9
     :cond_0
     invoke-static {p0}, Lcom/google/common/base/MoreObjects;->toStringHelper(Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
@@ -1145,9 +1202,11 @@
 .method public writeTo(Ljava/nio/ByteBuffer;)V
     .locals 4
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+    .line 2
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v0
 
@@ -1162,41 +1221,49 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 3
     :goto_0
-    const-string v2, "Expected at least Stats.BYTES = %s remaining , got %s"
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+    move-result v2
 
-    move-result v3
+    const-string v3, "Expected at least Stats.BYTES = %s remaining , got %s"
 
-    invoke-static {v0, v2, v1, v3}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;II)V
+    .line 4
+    invoke-static {v0, v3, v1, v2}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;II)V
 
+    .line 5
     iget-wide v0, p0, Lcom/google/common/math/Stats;->count:J
 
+    .line 6
     invoke-virtual {p1, v0, v1}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
 
     move-result-object p1
 
     iget-wide v0, p0, Lcom/google/common/math/Stats;->mean:D
 
+    .line 7
     invoke-virtual {p1, v0, v1}, Ljava/nio/ByteBuffer;->putDouble(D)Ljava/nio/ByteBuffer;
 
     move-result-object p1
 
     iget-wide v0, p0, Lcom/google/common/math/Stats;->sumOfSquaresOfDeltas:D
 
+    .line 8
     invoke-virtual {p1, v0, v1}, Ljava/nio/ByteBuffer;->putDouble(D)Ljava/nio/ByteBuffer;
 
     move-result-object p1
 
     iget-wide v0, p0, Lcom/google/common/math/Stats;->min:D
 
+    .line 9
     invoke-virtual {p1, v0, v1}, Ljava/nio/ByteBuffer;->putDouble(D)Ljava/nio/ByteBuffer;
 
     move-result-object p1
 
     iget-wide v0, p0, Lcom/google/common/math/Stats;->max:D
 
+    .line 10
     invoke-virtual {p1, v0, v1}, Ljava/nio/ByteBuffer;->putDouble(D)Ljava/nio/ByteBuffer;
 
     return-void

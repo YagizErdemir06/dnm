@@ -1,14 +1,14 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcs;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcs;
 .super Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcd;
 .source "SourceFile"
 
 
 # static fields
-.field static final zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcd;
+.field public static final zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcd;
 
 
 # instance fields
-.field final transient zzb:[Ljava/lang/Object;
+.field public final transient zzb:[Ljava/lang/Object;
 
 .field private final transient zzc:I
 
@@ -17,6 +17,7 @@
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcs;
 
     const/4 v1, 0x0
@@ -33,6 +34,7 @@
 .method public constructor <init>([Ljava/lang/Object;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcd;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcs;->zzb:[Ljava/lang/Object;
@@ -47,6 +49,7 @@
 .method public final get(I)Ljava/lang/Object;
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcs;->zzc:I
 
     const-string v1, "index"
@@ -55,6 +58,7 @@
 
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcs;->zzb:[Ljava/lang/Object;
 
+    .line 2
     aget-object p0, p0, p1
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -73,13 +77,14 @@
 .method public final zza([Ljava/lang/Object;I)I
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcs;->zzb:[Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    iget v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcs;->zzc:I
 
-    iget v2, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcs;->zzc:I
+    const/4 v2, 0x0
 
-    invoke-static {v0, v1, p1, p2, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-static {v0, v2, p1, p2, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     iget p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcs;->zzc:I
 

@@ -33,7 +33,7 @@
                     <com.android.camera.AudioMapMove android:id="@id/audio_map_display" android:layout_width="fill_parent" android:layout_height="fill_parent" app:mAnimTimeAudioMap="100" app:mAnimTimeLine="80" />
                 </FrameLayout>
                 <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/mishot_topalert_main_margintop">
-                    <TextView android:textSize="@dimen/mishot_topalert_time_size" android:textColor="@color/white" android:gravity="center" android:id="@id/mishot_calculate_time_textview" android:clickable="true" android:layout_width="@dimen/mishot_topalert_time_width" android:layout_height="@dimen/mishot_topalert_log_height" android:maxLines="2" android:shadowColor="@color/black" android:shadowRadius="2.0" android:lineSpacingExtra="@dimen/mishot_topalert_time_spacing" />
+                    <TextView android:textSize="@dimen/mishot_topalert_time_size" android:textColor="@color/white" android:gravity="center" android:id="@id/mishot_calculate_time_textview" android:layout_width="@dimen/mishot_topalert_time_width" android:layout_height="@dimen/mishot_topalert_log_height" android:maxLines="2" android:shadowColor="@color/black" android:shadowRadius="2.0" android:lineSpacingExtra="@dimen/mishot_topalert_time_spacing" />
                     <ImageView android:id="@id/mishot_log_view" android:visibility="invisible" android:layout_width="@dimen/mishot_topalert_time_width" android:layout_height="@dimen/battery_width" android:layout_marginTop="@dimen/top_menu_padding_start" android:src="@drawable/ic_vector_log_view" />
                 </LinearLayout>
                 <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
@@ -41,7 +41,7 @@
                     <ImageView android:id="@id/mishot_eis_view" android:layout_width="@dimen/mishot_topalert_time_width" android:layout_height="@dimen/battery_width" android:layout_marginTop="@dimen/top_menu_padding_start" android:src="@drawable/ic_vector_eis_view" />
                 </LinearLayout>
                 <LinearLayout android:gravity="end" android:layout_gravity="end" android:id="@id/mishot_recording_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
-                    <TextView android:gravity="end" android:layout_gravity="center_vertical" android:id="@id/mishot_recording_time_view" android:clickable="true" android:layout_width="@dimen/mishot_topalert_recording_width" android:layout_height="@dimen/mishot_topalert_recording_height" android:text="00:00:00:00" android:maxLines="1" android:shadowColor="@color/black" android:shadowRadius="1.0" android:contentDescription="00:00:00" android:layout_marginStart="@dimen/mishot_topalert_recording_marginleft" android:fontFeatureSettings="tnum" style="@style/MishotRecordingTimeStyle" />
+                    <TextView android:gravity="end" android:layout_gravity="center_vertical" android:id="@id/mishot_recording_time_view" android:layout_width="@dimen/mishot_topalert_recording_width" android:layout_height="@dimen/mishot_topalert_recording_height" android:text="00:00:00:00" android:maxLines="1" android:shadowColor="@color/black" android:shadowRadius="1.0" android:layout_marginStart="@dimen/mishot_topalert_recording_marginleft" android:fontFeatureSettings="tnum" style="@style/MishotRecordingTimeStyle" />
                 </LinearLayout>
                 <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/mishot_right_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
             </LinearLayout>
@@ -62,7 +62,7 @@
             </FrameLayout>
         </LinearLayout>
         <LinearLayout android:gravity="end" android:layout_gravity="end" android:id="@id/mishot_recording_layout_pad" android:layout_width="fill_parent" android:layout_height="fill_parent">
-            <TextView android:gravity="end" android:layout_gravity="center_vertical" android:id="@id/mishot_recording_time_view_pad" android:clickable="true" android:layout_width="@dimen/mishot_topalert_recording_width" android:layout_height="@dimen/mishot_topalert_recording_height" android:text="00:00:00:00" android:maxLines="1" android:shadowColor="@color/black" android:shadowRadius="1.0" android:contentDescription="00:00:00" android:layout_marginStart="@dimen/mishot_topalert_recording_marginleft" android:fontFeatureSettings="tnum" style="@style/MishotRecordingTimeStyle" />
+            <TextView android:gravity="end" android:layout_gravity="center_vertical" android:id="@id/mishot_recording_time_view_pad" android:layout_width="@dimen/mishot_topalert_recording_width" android:layout_height="@dimen/mishot_topalert_recording_height" android:text="00:00:00:00" android:maxLines="1" android:shadowColor="@color/black" android:shadowRadius="1.0" android:layout_marginStart="@dimen/mishot_topalert_recording_marginleft" android:fontFeatureSettings="tnum" style="@style/MishotRecordingTimeStyle" />
         </LinearLayout>
     </FrameLayout>
 </FrameLayout>

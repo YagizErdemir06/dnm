@@ -26,7 +26,7 @@
 # instance fields
 .field private mDisposeCall:Z
 
-.field protected mEmitter:Lio/reactivex/ObservableEmitter;
+.field public mEmitter:Lio/reactivex/ObservableEmitter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lio/reactivex/ObservableEmitter<",
@@ -49,31 +49,8 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public static synthetic a(Lcom/android/camera/resource/BaseObservableRequest;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/camera/resource/BaseObservableRequest;->lambda$startObservable$2()V
-
-    return-void
-.end method
-
-.method public static synthetic b(Lcom/android/camera/resource/BaseObservableRequest;Ljava/lang/Class;Lio/reactivex/ObservableEmitter;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/android/camera/resource/BaseObservableRequest;->lambda$startObservable$0(Ljava/lang/Class;Lio/reactivex/ObservableEmitter;)V
-
-    return-void
-.end method
-
-.method public static synthetic c(Lcom/android/camera/resource/BaseObservableRequest;Ljava/lang/Object;Lio/reactivex/ObservableEmitter;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/android/camera/resource/BaseObservableRequest;->lambda$startObservable$1(Ljava/lang/Object;Lio/reactivex/ObservableEmitter;)V
 
     return-void
 .end method
@@ -86,12 +63,15 @@
         }
     .end annotation
 
+    .line 1
     iput-object p2, p0, Lcom/android/camera/resource/BaseObservableRequest;->mEmitter:Lio/reactivex/ObservableEmitter;
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera/resource/BaseObservableRequest;->create(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p1
 
+    .line 3
     invoke-virtual {p0, p0, p1}, Lcom/android/camera/resource/BaseObservableRequest;->scheduleRequest(Lcom/android/camera/resource/ResponseListener;Ljava/lang/Object;)V
 
     return-void
@@ -105,8 +85,10 @@
         }
     .end annotation
 
+    .line 1
     iput-object p2, p0, Lcom/android/camera/resource/BaseObservableRequest;->mEmitter:Lio/reactivex/ObservableEmitter;
 
+    .line 2
     invoke-virtual {p0, p0, p1}, Lcom/android/camera/resource/BaseObservableRequest;->scheduleRequest(Lcom/android/camera/resource/ResponseListener;Ljava/lang/Object;)V
 
     return-void
@@ -120,6 +102,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera/resource/BaseObservableRequest;->onDisposeCall()V
 
     return-void
@@ -127,6 +110,30 @@
 
 
 # virtual methods
+.method public synthetic a(Ljava/lang/Class;Lio/reactivex/ObservableEmitter;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/android/camera/resource/BaseObservableRequest;->lambda$startObservable$0(Ljava/lang/Class;Lio/reactivex/ObservableEmitter;)V
+
+    return-void
+.end method
+
+.method public synthetic b(Ljava/lang/Object;Lio/reactivex/ObservableEmitter;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/android/camera/resource/BaseObservableRequest;->lambda$startObservable$1(Ljava/lang/Object;Lio/reactivex/ObservableEmitter;)V
+
+    return-void
+.end method
+
+.method public synthetic c()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/camera/resource/BaseObservableRequest;->lambda$startObservable$2()V
+
+    return-void
+.end method
+
 .method public final create(Ljava/lang/Class;)Ljava/lang/Object;
     .locals 3
     .param p1    # Ljava/lang/Class;
@@ -134,6 +141,18 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "modelClass"
+        }
     .end annotation
 
     .annotation system Ldalvik/annotation/Signature;
@@ -144,15 +163,13 @@
         }
     .end annotation
 
-    .annotation build Lh7/c;
-    .end annotation
-
     const-string p0, "Cannot create an instance of "
 
     const-string v0, "newInstanceError"
 
     const/4 v1, 0x0
 
+    .line 1
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
@@ -163,6 +180,7 @@
 
     return-object p0
 
+    .line 2
     :catch_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -182,6 +200,7 @@
 
     goto :goto_0
 
+    .line 3
     :catch_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -207,7 +226,7 @@
 
 .method public getWorkThread()Lio/reactivex/Scheduler;
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
     const/4 p0, 0x0
@@ -222,6 +241,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/android/camera/resource/BaseObservableRequest;->mDisposeCall:Z
 
     return-void
@@ -229,20 +249,34 @@
 
 .method public onResponse(Ljava/lang/Object;Z)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "response",
+            "directlyComplete"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;Z)V"
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera/resource/BaseObservableRequest;->mEmitter:Lio/reactivex/ObservableEmitter;
 
     if-eqz v0, :cond_1
 
     if-nez p2, :cond_0
 
+    .line 2
     invoke-interface {v0, p1}, Lio/reactivex/Emitter;->onNext(Ljava/lang/Object;)V
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lcom/android/camera/resource/BaseObservableRequest;->mEmitter:Lio/reactivex/ObservableEmitter;
 
@@ -254,9 +288,23 @@
 
 .method public onResponseError(ILjava/lang/String;Ljava/lang/Object;)V
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "errorType",
+            "errorMessage",
+            "responseData"
+        }
+    .end annotation
+
+    .line 1
     iget-boolean p3, p0, Lcom/android/camera/resource/BaseObservableRequest;->mDisposeCall:Z
 
     if-nez p3, :cond_0
@@ -269,6 +317,7 @@
 
     if-nez p3, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera/resource/BaseObservableRequest;->mEmitter:Lio/reactivex/ObservableEmitter;
 
     new-instance p3, Lcom/android/camera/resource/BaseRequestException;
@@ -283,11 +332,32 @@
 
 .method public onResponseProgress(JJ)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "bytesRead",
+            "contentLength"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public abstract scheduleRequest(Lcom/android/camera/resource/ResponseListener;Ljava/lang/Object;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "listener",
+            "resource"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -303,6 +373,15 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x10
+        }
+        names = {
+            "modelClass"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -314,9 +393,9 @@
     .end annotation
 
     .line 1
-    new-instance v0, Lcom/android/camera/resource/c;
+    new-instance v0, Ld/d/a/p7/b;
 
-    invoke-direct {v0, p0, p1}, Lcom/android/camera/resource/c;-><init>(Lcom/android/camera/resource/BaseObservableRequest;Ljava/lang/Class;)V
+    invoke-direct {v0, p0, p1}, Ld/d/a/p7/b;-><init>(Lcom/android/camera/resource/BaseObservableRequest;Ljava/lang/Class;)V
 
     invoke-static {v0}, Lio/reactivex/Observable;->create(Lio/reactivex/ObservableOnSubscribe;)Lio/reactivex/Observable;
 
@@ -338,6 +417,15 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x10
+        }
+        names = {
+            "t"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)",
@@ -349,17 +437,17 @@
     if-eqz p1, :cond_0
 
     .line 3
-    new-instance v0, Lcom/android/camera/resource/a;
+    new-instance v0, Ld/d/a/p7/c;
 
-    invoke-direct {v0, p0, p1}, Lcom/android/camera/resource/a;-><init>(Lcom/android/camera/resource/BaseObservableRequest;Ljava/lang/Object;)V
+    invoke-direct {v0, p0, p1}, Ld/d/a/p7/c;-><init>(Lcom/android/camera/resource/BaseObservableRequest;Ljava/lang/Object;)V
 
     invoke-static {v0}, Lio/reactivex/Observable;->create(Lio/reactivex/ObservableOnSubscribe;)Lio/reactivex/Observable;
 
     move-result-object p1
 
-    new-instance v0, Lcom/android/camera/resource/b;
+    new-instance v0, Ld/d/a/p7/a;
 
-    invoke-direct {v0, p0}, Lcom/android/camera/resource/b;-><init>(Lcom/android/camera/resource/BaseObservableRequest;)V
+    invoke-direct {v0, p0}, Ld/d/a/p7/a;-><init>(Lcom/android/camera/resource/BaseObservableRequest;)V
 
     .line 4
     invoke-virtual {p1, v0}, Lio/reactivex/Observable;->doOnDispose(Lio/reactivex/functions/Action;)Lio/reactivex/Observable;
@@ -388,11 +476,25 @@
 
 .method public final writeToCache(Ljava/lang/String;Landroid/content/Context;Ljava/lang/String;)V
     .locals 2
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "cacheName",
+            "context",
+            "content"
+        }
     .end annotation
 
     const-string p0, "BaseObservableRequest"
 
+    .line 1
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p2}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
@@ -401,17 +503,20 @@
 
     invoke-direct {v0, p2, p1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
+    .line 2
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
+    .line 3
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     :cond_0
     const/4 p1, 0x0
 
+    .line 4
     :try_start_0
     new-instance p2, Ljava/io/FileOutputStream;
 
@@ -421,9 +526,8 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
+    .line 5
     :try_start_1
-    invoke-virtual {v0}, Ljava/io/File;->setReadOnly()Z
-
     invoke-virtual {p3}, Ljava/lang/String;->getBytes()[B
 
     move-result-object p1
@@ -434,6 +538,7 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 6
     :try_start_2
     invoke-virtual {p2}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
@@ -476,6 +581,7 @@
 
     move-object p1, v1
 
+    .line 7
     :goto_0
     :try_start_3
     invoke-static {p0, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)V
@@ -484,6 +590,7 @@
 
     if-eqz p2, :cond_1
 
+    .line 8
     :try_start_4
     invoke-virtual {p2}, Ljava/io/FileOutputStream;->close()V
     :try_end_4
@@ -500,6 +607,7 @@
 
     move-object p1, v1
 
+    .line 9
     :goto_1
     :try_start_5
     invoke-static {p0, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)V
@@ -508,6 +616,7 @@
 
     if-eqz p2, :cond_1
 
+    .line 10
     :try_start_6
     invoke-virtual {p2}, Ljava/io/FileOutputStream;->close()V
     :try_end_6
@@ -518,6 +627,7 @@
     :catch_4
     move-exception p1
 
+    .line 11
     invoke-static {p0, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
@@ -527,6 +637,7 @@
     :goto_3
     if-eqz p2, :cond_2
 
+    .line 12
     :try_start_7
     invoke-virtual {p2}, Ljava/io/FileOutputStream;->close()V
     :try_end_7
@@ -537,8 +648,10 @@
     :catch_5
     move-exception p2
 
+    .line 13
     invoke-static {p0, p2}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 14
     :cond_2
     :goto_4
     throw p1

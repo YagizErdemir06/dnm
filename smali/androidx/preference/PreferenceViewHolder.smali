@@ -4,11 +4,6 @@
 
 
 # instance fields
-.field private final mBackground:Landroid/graphics/drawable/Drawable;
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-.end field
-
 .field private final mCachedViews:Landroid/util/SparseArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -23,19 +18,15 @@
 
 .field private mDividerAllowedBelow:Z
 
-.field private mTitleTextColors:Landroid/content/res/ColorStateList;
-
 
 # direct methods
 .method public constructor <init>(Landroid/view/View;)V
-    .locals 4
-    .param p1    # Landroid/view/View;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
+    .locals 2
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
+    .line 2
     new-instance v0, Landroid/util/SparseArray;
 
     const/4 v1, 0x4
@@ -44,81 +35,64 @@
 
     iput-object v0, p0, Landroidx/preference/PreferenceViewHolder;->mCachedViews:Landroid/util/SparseArray;
 
-    const v1, 0x1020016
+    const p0, 0x1020016
 
-    invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    .line 3
+    invoke-virtual {p1, p0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    move-result-object v2
+    move-result-object v1
 
-    check-cast v2, Landroid/widget/TextView;
+    invoke-virtual {v0, p0, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    const p0, 0x1020010
 
-    const v1, 0x1020010
+    .line 4
+    invoke-virtual {p1, p0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    move-result-object v1
 
-    move-result-object v3
+    invoke-virtual {v0, p0, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    invoke-virtual {v0, v1, v3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    const p0, 0x1020006
 
-    const v1, 0x1020006
+    .line 5
+    invoke-virtual {p1, p0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    move-result-object v1
 
-    move-result-object v3
+    invoke-virtual {v0, p0, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    invoke-virtual {v0, v1, v3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    .line 6
+    sget p0, Landroidx/preference/R$id;->icon_frame:I
 
-    sget v1, Landroidx/preference/R$id;->icon_frame:I
+    invoke-virtual {p1, p0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    move-result-object v1
 
-    move-result-object v3
+    invoke-virtual {v0, p0, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    invoke-virtual {v0, v1, v3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    const p0, 0x102003e
 
-    const v1, 0x102003e
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v1, v3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    invoke-virtual {p1}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
+    .line 7
+    invoke-virtual {p1, p0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/preference/PreferenceViewHolder;->mBackground:Landroid/graphics/drawable/Drawable;
+    .line 8
+    invoke-virtual {v0, p0, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v2}, Landroid/widget/TextView;->getTextColors()Landroid/content/res/ColorStateList;
-
-    move-result-object p1
-
-    iput-object p1, p0, Landroidx/preference/PreferenceViewHolder;->mTitleTextColors:Landroid/content/res/ColorStateList;
-
-    :cond_0
     return-void
 .end method
 
 .method public static createInstanceForTests(Landroid/view/View;)Landroidx/preference/PreferenceViewHolder;
     .locals 1
-    .param p0    # Landroid/view/View;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
             .enum Landroidx/annotation/RestrictTo$Scope;->TESTS:Landroidx/annotation/RestrictTo$Scope;
         }
     .end annotation
 
+    .line 1
     new-instance v0, Landroidx/preference/PreferenceViewHolder;
 
     invoke-direct {v0, p0}, Landroidx/preference/PreferenceViewHolder;-><init>(Landroid/view/View;)V
@@ -135,6 +109,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Landroidx/preference/PreferenceViewHolder;->mCachedViews:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -147,6 +122,7 @@
 
     return-object v0
 
+    .line 2
     :cond_0
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -156,6 +132,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 3
     iget-object p0, p0, Landroidx/preference/PreferenceViewHolder;->mCachedViews:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
@@ -167,6 +144,7 @@
 .method public isDividerAllowedAbove()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Landroidx/preference/PreferenceViewHolder;->mDividerAllowedAbove:Z
 
     return p0
@@ -175,66 +153,16 @@
 .method public isDividerAllowedBelow()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Landroidx/preference/PreferenceViewHolder;->mDividerAllowedBelow:Z
 
     return p0
 .end method
 
-.method public resetState()V
-    .locals 3
-
-    iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
-
-    invoke-virtual {v0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    iget-object v1, p0, Landroidx/preference/PreferenceViewHolder;->mBackground:Landroid/graphics/drawable/Drawable;
-
-    if-eq v0, v1, :cond_0
-
-    iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
-
-    invoke-static {v0, v1}, Landroidx/core/view/ViewCompat;->setBackground(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
-
-    :cond_0
-    const v0, 0x1020016
-
-    invoke-virtual {p0, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    if-eqz v0, :cond_1
-
-    iget-object v1, p0, Landroidx/preference/PreferenceViewHolder;->mTitleTextColors:Landroid/content/res/ColorStateList;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v0}, Landroid/widget/TextView;->getTextColors()Landroid/content/res/ColorStateList;
-
-    move-result-object v1
-
-    iget-object v2, p0, Landroidx/preference/PreferenceViewHolder;->mTitleTextColors:Landroid/content/res/ColorStateList;
-
-    invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    iget-object p0, p0, Landroidx/preference/PreferenceViewHolder;->mTitleTextColors:Landroid/content/res/ColorStateList;
-
-    invoke-virtual {v0, p0}, Landroid/widget/TextView;->setTextColor(Landroid/content/res/ColorStateList;)V
-
-    :cond_1
-    return-void
-.end method
-
 .method public setDividerAllowedAbove(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Landroidx/preference/PreferenceViewHolder;->mDividerAllowedAbove:Z
 
     return-void
@@ -243,6 +171,7 @@
 .method public setDividerAllowedBelow(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Landroidx/preference/PreferenceViewHolder;->mDividerAllowedBelow:Z
 
     return-void

@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field private final a:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -25,7 +25,7 @@
     .end annotation
 .end field
 
-.field public final b:Ljava/util/List;
+.field private final b:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -40,14 +40,17 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$n;->a:Ljava/util/List;
 
+    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -72,6 +75,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     iget-object v1, p0, Landroid/support/v4/media/MediaBrowserCompat$n;->b:Ljava/util/List;
 
@@ -81,6 +85,7 @@
 
     if-ge v0, v1, :cond_1
 
+    .line 2
     iget-object v1, p0, Landroid/support/v4/media/MediaBrowserCompat$n;->b:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -95,6 +100,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 3
     iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$n;->a:Ljava/util/List;
 
     invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -127,6 +133,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$n;->a:Ljava/util/List;
 
     return-object p0
@@ -143,6 +150,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$n;->b:Ljava/util/List;
 
     return-object p0
@@ -151,6 +159,7 @@
 .method public d()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$n;->a:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
@@ -175,6 +184,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     iget-object v1, p0, Landroid/support/v4/media/MediaBrowserCompat$n;->b:Ljava/util/List;
 
@@ -184,6 +194,7 @@
 
     if-ge v0, v1, :cond_1
 
+    .line 2
     iget-object v1, p0, Landroid/support/v4/media/MediaBrowserCompat$n;->b:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -198,6 +209,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 3
     iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$n;->a:Ljava/util/List;
 
     invoke-interface {p0, v0, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
@@ -209,11 +221,13 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$n;->a:Ljava/util/List;
 
     invoke-interface {v0, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 5
     iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$n;->b:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z

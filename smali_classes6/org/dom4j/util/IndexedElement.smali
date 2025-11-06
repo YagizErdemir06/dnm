@@ -42,8 +42,10 @@
 .method public addNode(Lorg/dom4j/Node;)V
     .locals 1
 
+    .line 1
     invoke-super {p0, p1}, Lorg/dom4j/tree/AbstractElement;->addNode(Lorg/dom4j/Node;)V
 
+    .line 2
     iget-object v0, p0, Lorg/dom4j/util/IndexedElement;->elementIndex:Ljava/util/Map;
 
     if-eqz v0, :cond_0
@@ -52,12 +54,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     check-cast p1, Lorg/dom4j/Element;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/util/IndexedElement;->addToElementIndex(Lorg/dom4j/Element;)V
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lorg/dom4j/util/IndexedElement;->attributeIndex:Ljava/util/Map;
 
@@ -67,6 +71,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 5
     check-cast p1, Lorg/dom4j/Attribute;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/util/IndexedElement;->addToAttributeIndex(Lorg/dom4j/Attribute;)V
@@ -198,10 +203,12 @@
 .method public asElement(Ljava/lang/Object;)Lorg/dom4j/Element;
     .locals 1
 
+    .line 1
     instance-of p0, p1, Lorg/dom4j/Element;
 
     if-eqz p0, :cond_0
 
+    .line 2
     check-cast p1, Lorg/dom4j/Element;
 
     return-object p1
@@ -209,8 +216,10 @@
     :cond_0
     if-eqz p1, :cond_1
 
+    .line 3
     check-cast p1, Ljava/util/List;
 
+    .line 4
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result p0
@@ -221,6 +230,7 @@
 
     const/4 p0, 0x0
 
+    .line 5
     invoke-interface {p1, p0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -238,6 +248,7 @@
 .method public asElementIterator(Ljava/lang/Object;)Ljava/util/Iterator;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/dom4j/util/IndexedElement;->asElementList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
@@ -252,10 +263,12 @@
 .method public asElementList(Ljava/lang/Object;)Ljava/util/List;
     .locals 3
 
+    .line 1
     instance-of v0, p1, Lorg/dom4j/Element;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/AbstractBranch;->createSingleResultList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
@@ -265,34 +278,39 @@
     :cond_0
     if-eqz p1, :cond_2
 
+    .line 3
     check-cast p1, Ljava/util/List;
 
+    .line 4
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractBranch;->createResultList()Lorg/dom4j/tree/BackedList;
 
     move-result-object p0
 
+    const/4 v0, 0x0
+
+    .line 5
     invoke-interface {p1}, Ljava/util/List;->size()I
 
-    move-result v0
-
-    const/4 v1, 0x0
+    move-result v1
 
     :goto_0
-    if-ge v1, v0, :cond_1
+    if-ge v0, v1, :cond_1
 
-    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    .line 6
+    invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     invoke-virtual {p0, v2}, Lorg/dom4j/tree/BackedList;->addLocal(Ljava/lang/Object;)V
 
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
     :cond_1
     return-object p0
 
+    .line 7
     :cond_2
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractBranch;->createEmptyList()Ljava/util/List;
 
@@ -338,16 +356,19 @@
 .method public attributeIndex()Ljava/util/Map;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/util/IndexedElement;->attributeIndex:Ljava/util/Map;
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/util/IndexedElement;->createAttributeIndex()Ljava/util/Map;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/dom4j/util/IndexedElement;->attributeIndex:Ljava/util/Map;
 
+    .line 3
     invoke-virtual {p0}, Lorg/dom4j/tree/DefaultElement;->attributeIterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -359,6 +380,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 4
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -369,6 +391,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     iget-object p0, p0, Lorg/dom4j/util/IndexedElement;->attributeIndex:Ljava/util/Map;
 
@@ -378,6 +401,7 @@
 .method public createAttributeIndex()Ljava/util/Map;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/util/IndexedElement;->createIndex()Ljava/util/Map;
 
     move-result-object p0
@@ -388,6 +412,7 @@
 .method public createElementIndex()Ljava/util/Map;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/util/IndexedElement;->createIndex()Ljava/util/Map;
 
     move-result-object p0
@@ -398,6 +423,7 @@
 .method public createIndex()Ljava/util/Map;
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/util/HashMap;
 
     invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
@@ -408,6 +434,7 @@
 .method public createList()Ljava/util/List;
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
@@ -456,16 +483,19 @@
 .method public elementIndex()Ljava/util/Map;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/util/IndexedElement;->elementIndex:Ljava/util/Map;
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/util/IndexedElement;->createElementIndex()Ljava/util/Map;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/dom4j/util/IndexedElement;->elementIndex:Ljava/util/Map;
 
+    .line 3
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractElement;->elementIterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -477,6 +507,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 4
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -487,6 +518,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     iget-object p0, p0, Lorg/dom4j/util/IndexedElement;->elementIndex:Ljava/util/Map;
 
@@ -639,12 +671,14 @@
 .method public removeNode(Lorg/dom4j/Node;)Z
     .locals 1
 
+    .line 1
     invoke-super {p0, p1}, Lorg/dom4j/tree/DefaultElement;->removeNode(Lorg/dom4j/Node;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
+    .line 2
     iget-object v0, p0, Lorg/dom4j/util/IndexedElement;->elementIndex:Ljava/util/Map;
 
     if-eqz v0, :cond_0
@@ -653,12 +687,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     check-cast p1, Lorg/dom4j/Element;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/util/IndexedElement;->removeFromElementIndex(Lorg/dom4j/Element;)V
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lorg/dom4j/util/IndexedElement;->attributeIndex:Ljava/util/Map;
 
@@ -668,6 +704,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 5
     check-cast p1, Lorg/dom4j/Attribute;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/util/IndexedElement;->removeFromAttributeIndex(Lorg/dom4j/Attribute;)V

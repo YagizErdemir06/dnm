@@ -51,6 +51,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/drm/DrmInitData$SchemeData$1;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/drm/DrmInitData$SchemeData$1;-><init>()V
@@ -172,6 +173,7 @@
 .method public canReplace(Lcom/google/android/exoplayer2/drm/DrmInitData$SchemeData;)Z
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/drm/DrmInitData$SchemeData;->hasData()Z
 
     move-result v0
@@ -210,6 +212,7 @@
         .end annotation
     .end param
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/drm/DrmInitData$SchemeData;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/drm/DrmInitData$SchemeData;->uuid:Ljava/util/UUID;
@@ -238,6 +241,7 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/android/exoplayer2/drm/DrmInitData$SchemeData;
 
     const/4 v1, 0x0
@@ -253,9 +257,11 @@
 
     return v0
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/drm/DrmInitData$SchemeData;
 
+    .line 3
     iget-object v2, p0, Lcom/google/android/exoplayer2/drm/DrmInitData$SchemeData;->licenseServerUrl:Ljava/lang/String;
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/drm/DrmInitData$SchemeData;->licenseServerUrl:Ljava/lang/String;
@@ -270,6 +276,7 @@
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/drm/DrmInitData$SchemeData;->mimeType:Ljava/lang/String;
 
+    .line 4
     invoke-static {v2, v3}, Lcom/google/android/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -280,6 +287,7 @@
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/drm/DrmInitData$SchemeData;->uuid:Ljava/util/UUID;
 
+    .line 5
     invoke-static {v2, v3}, Lcom/google/android/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -290,6 +298,7 @@
 
     iget-object p1, p1, Lcom/google/android/exoplayer2/drm/DrmInitData$SchemeData;->data:[B
 
+    .line 6
     invoke-static {p0, p1}, Ljava/util/Arrays;->equals([B[B)Z
 
     move-result p0
@@ -305,6 +314,7 @@
 .method public hasData()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/drm/DrmInitData$SchemeData;->data:[B
 
     if-eqz p0, :cond_0
@@ -323,10 +333,12 @@
 .method public hashCode()I
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/drm/DrmInitData$SchemeData;->hashCode:I
 
     if-nez v0, :cond_1
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/drm/DrmInitData$SchemeData;->uuid:Ljava/util/UUID;
 
     invoke-virtual {v0}, Ljava/util/UUID;->hashCode()I
@@ -335,6 +347,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/drm/DrmInitData$SchemeData;->licenseServerUrl:Ljava/lang/String;
 
     if-nez v1, :cond_0
@@ -353,6 +366,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 4
     iget-object v1, p0, Lcom/google/android/exoplayer2/drm/DrmInitData$SchemeData;->mimeType:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
@@ -363,6 +377,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 5
     iget-object v1, p0, Lcom/google/android/exoplayer2/drm/DrmInitData$SchemeData;->data:[B
 
     invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
@@ -371,8 +386,10 @@
 
     add-int/2addr v0, v1
 
+    .line 6
     iput v0, p0, Lcom/google/android/exoplayer2/drm/DrmInitData$SchemeData;->hashCode:I
 
+    .line 7
     :cond_1
     iget p0, p0, Lcom/google/android/exoplayer2/drm/DrmInitData$SchemeData;->hashCode:I
 
@@ -382,6 +399,7 @@
 .method public matches(Ljava/util/UUID;)Z
     .locals 2
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/C;->UUID_NIL:Ljava/util/UUID;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/drm/DrmInitData$SchemeData;->uuid:Ljava/util/UUID;
@@ -418,6 +436,7 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
+    .line 1
     iget-object p2, p0, Lcom/google/android/exoplayer2/drm/DrmInitData$SchemeData;->uuid:Ljava/util/UUID;
 
     invoke-virtual {p2}, Ljava/util/UUID;->getMostSignificantBits()J
@@ -426,6 +445,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
+    .line 2
     iget-object p2, p0, Lcom/google/android/exoplayer2/drm/DrmInitData$SchemeData;->uuid:Ljava/util/UUID;
 
     invoke-virtual {p2}, Ljava/util/UUID;->getLeastSignificantBits()J
@@ -434,14 +454,17 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
+    .line 3
     iget-object p2, p0, Lcom/google/android/exoplayer2/drm/DrmInitData$SchemeData;->licenseServerUrl:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 4
     iget-object p2, p0, Lcom/google/android/exoplayer2/drm/DrmInitData$SchemeData;->mimeType:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 5
     iget-object p0, p0, Lcom/google/android/exoplayer2/drm/DrmInitData$SchemeData;->data:[B
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeByteArray([B)V

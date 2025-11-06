@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_common/zzgg;
+.class public final Lcom/google/android/gms/internal/mlkit_common/zzgg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,7 +7,7 @@
 
 
 # static fields
-.field static final zza:Lcom/google/android/gms/internal/mlkit_common/zzgg;
+.field public static final zza:Lcom/google/android/gms/internal/mlkit_common/zzgg;
 
 .field private static final zzb:Lcom/google/firebase/encoders/FieldDescriptor;
 
@@ -16,6 +16,7 @@
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_common/zzgg;
 
     invoke-direct {v0}, Lcom/google/android/gms/internal/mlkit_common/zzgg;-><init>()V
@@ -30,20 +31,24 @@
 
     new-instance v1, Lcom/google/android/gms/internal/mlkit_common/zzbk;
 
+    .line 2
     invoke-direct {v1}, Lcom/google/android/gms/internal/mlkit_common/zzbk;-><init>()V
 
     const/4 v2, 0x1
 
+    .line 3
     invoke-virtual {v1, v2}, Lcom/google/android/gms/internal/mlkit_common/zzbk;->zza(I)Lcom/google/android/gms/internal/mlkit_common/zzbk;
 
     invoke-virtual {v1}, Lcom/google/android/gms/internal/mlkit_common/zzbk;->zzb()Lcom/google/android/gms/internal/mlkit_common/zzbo;
 
     move-result-object v1
 
+    .line 4
     invoke-virtual {v0, v1}, Lcom/google/firebase/encoders/FieldDescriptor$Builder;->withProperty(Ljava/lang/annotation/Annotation;)Lcom/google/firebase/encoders/FieldDescriptor$Builder;
 
     move-result-object v0
 
+    .line 5
     invoke-virtual {v0}, Lcom/google/firebase/encoders/FieldDescriptor$Builder;->build()Lcom/google/firebase/encoders/FieldDescriptor;
 
     move-result-object v0
@@ -71,12 +76,14 @@
         }
     .end annotation
 
+    .line 1
     check-cast p1, Lcom/google/android/gms/internal/mlkit_common/zzlb;
 
     check-cast p2, Lcom/google/firebase/encoders/ObjectEncoderContext;
 
     sget-object p0, Lcom/google/android/gms/internal/mlkit_common/zzgg;->zzb:Lcom/google/firebase/encoders/FieldDescriptor;
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/android/gms/internal/mlkit_common/zzlb;->zza()Lcom/google/android/gms/internal/mlkit_common/zzky;
 
     move-result-object p1

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/offline/DownloadManager$DownloadUpdate;
+.class public final Lcom/google/android/exoplayer2/offline/DownloadManager$DownloadUpdate;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -55,14 +55,19 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/offline/DownloadManager$DownloadUpdate;->download:Lcom/google/android/exoplayer2/offline/Download;
 
+    .line 3
     iput-boolean p2, p0, Lcom/google/android/exoplayer2/offline/DownloadManager$DownloadUpdate;->isRemove:Z
 
+    .line 4
     iput-object p3, p0, Lcom/google/android/exoplayer2/offline/DownloadManager$DownloadUpdate;->downloads:Ljava/util/List;
 
+    .line 5
     iput-object p4, p0, Lcom/google/android/exoplayer2/offline/DownloadManager$DownloadUpdate;->finalException:Ljava/lang/Exception;
 
     return-void

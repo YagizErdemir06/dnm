@@ -1,4 +1,4 @@
-.class interface abstract Landroidx/recyclerview/widget/StableIdStorage;
+.class public interface abstract Landroidx/recyclerview/widget/StableIdStorage;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

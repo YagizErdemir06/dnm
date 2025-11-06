@@ -1,4 +1,4 @@
-.class Landroidx/core/provider/FontRequestWorker$2;
+.class public Landroidx/core/provider/FontRequestWorker$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,13 +27,14 @@
 
 
 # instance fields
-.field final synthetic val$callback:Landroidx/core/provider/CallbackWithHandler;
+.field public final synthetic val$callback:Landroidx/core/provider/CallbackWithHandler;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/core/provider/CallbackWithHandler;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/core/provider/FontRequestWorker$2;->val$callback:Landroidx/core/provider/CallbackWithHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

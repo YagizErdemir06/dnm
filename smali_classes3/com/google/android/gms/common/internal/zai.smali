@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/internal/zai;
+.class public final Lcom/google/android/gms/common/internal/zai;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field final synthetic zaa:Lcom/google/android/gms/common/api/internal/OnConnectionFailedListener;
+.field public final synthetic zaa:Lcom/google/android/gms/common/api/internal/OnConnectionFailedListener;
 
 
 # direct methods
@@ -30,6 +30,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/internal/zai;->zaa:Lcom/google/android/gms/common/api/internal/OnConnectionFailedListener;
 
     invoke-interface {p0, p1}, Lcom/google/android/gms/common/api/internal/OnConnectionFailedListener;->onConnectionFailed(Lcom/google/android/gms/common/ConnectionResult;)V

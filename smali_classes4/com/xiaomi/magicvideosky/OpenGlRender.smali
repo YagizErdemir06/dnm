@@ -4,17 +4,17 @@
 
 
 # static fields
-.field public static e:Ljava/lang/String; = "OpenGlRender"
+.field private static a:Ljava/lang/String; = "OpenGlRender"
 
 
 # instance fields
-.field public a:I
+.field private b:I
 
-.field public b:I
+.field private c:I
 
-.field public c:[B
+.field private d:[B
 
-.field public d:[B
+.field private e:[B
 
 
 # direct methods
@@ -27,9 +27,11 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object p0, Lcom/xiaomi/magicvideosky/OpenGlRender;->e:Ljava/lang/String;
+    .line 2
+    sget-object p0, Lcom/xiaomi/magicvideosky/OpenGlRender;->a:Ljava/lang/String;
 
     const-string v0, "construction"
 
@@ -64,6 +66,7 @@
 .method public a()V
     .locals 0
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/magicvideosky/OpenGlRender;->RenderFrameJni()V
 
     return-void
@@ -72,12 +75,14 @@
 .method public b()V
     .locals 1
 
-    sget-object p0, Lcom/xiaomi/magicvideosky/OpenGlRender;->e:Ljava/lang/String;
+    .line 1
+    sget-object p0, Lcom/xiaomi/magicvideosky/OpenGlRender;->a:Ljava/lang/String;
 
     const-string v0, "SetCurrentGLContext"
 
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {}, Lcom/xiaomi/magicvideosky/OpenGlRender;->SetCurrentGLContextJni()V
 
     return-void
@@ -86,12 +91,14 @@
 .method public c()V
     .locals 1
 
-    sget-object p0, Lcom/xiaomi/magicvideosky/OpenGlRender;->e:Ljava/lang/String;
+    .line 1
+    sget-object p0, Lcom/xiaomi/magicvideosky/OpenGlRender;->a:Ljava/lang/String;
 
     const-string v0, "SetCurrentGLContext"
 
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {}, Lcom/xiaomi/magicvideosky/OpenGlRender;->SetCurrentGLContextForGraphJni()V
 
     return-void
@@ -100,12 +107,14 @@
 .method public d(IIII[B[B)V
     .locals 1
 
-    sget-object p0, Lcom/xiaomi/magicvideosky/OpenGlRender;->e:Ljava/lang/String;
+    .line 1
+    sget-object p0, Lcom/xiaomi/magicvideosky/OpenGlRender;->a:Ljava/lang/String;
 
     const-string v0, "SetOpengGlRenderParams"
 
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static/range {p1 .. p6}, Lcom/xiaomi/magicvideosky/OpenGlRender;->SetOpengGlRenderParamsJni(IIII[B[B)V
 
     return-void
@@ -114,6 +123,7 @@
 .method public e(IIII)V
     .locals 0
 
+    .line 1
     invoke-static {p1, p2, p3, p4}, Lcom/xiaomi/magicvideosky/OpenGlRender;->SetWindowSizeJni(IIII)V
 
     return-void
@@ -122,6 +132,7 @@
 .method public f()V
     .locals 0
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/magicvideosky/OpenGlRender;->FrameAvailableJni()V
 
     return-void
@@ -130,7 +141,8 @@
 .method public g(II)V
     .locals 0
 
-    sget-object p0, Lcom/xiaomi/magicvideosky/OpenGlRender;->e:Ljava/lang/String;
+    .line 1
+    sget-object p0, Lcom/xiaomi/magicvideosky/OpenGlRender;->a:Ljava/lang/String;
 
     const-string p1, "setCopyTextureOfFBO"
 

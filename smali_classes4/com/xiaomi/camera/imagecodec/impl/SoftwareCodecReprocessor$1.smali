@@ -1,4 +1,4 @@
-.class final Lcom/xiaomi/camera/imagecodec/impl/SoftwareCodecReprocessor$1;
+.class public final Lcom/xiaomi/camera/imagecodec/impl/SoftwareCodecReprocessor$1;
 .super Lcom/xiaomi/camera/imagecodec/Reprocessor$Singleton;
 .source "SourceFile"
 
@@ -26,6 +26,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/camera/imagecodec/Reprocessor$Singleton;-><init>()V
 
     return-void

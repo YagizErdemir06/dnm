@@ -13,7 +13,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lorg/greenrobot/greendao/AbstractDao<",
-        "Lu2/b;",
+        "Ld/d/a/m6/c/b;",
         "Ljava/lang/Long;",
         ">;"
     }
@@ -27,7 +27,16 @@
 # direct methods
 .method public constructor <init>(Lorg/greenrobot/greendao/internal/DaoConfig;)V
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "config"
+        }
     .end annotation
 
     .line 1
@@ -36,8 +45,18 @@
     return-void
 .end method
 
-.method public constructor <init>(Lorg/greenrobot/greendao/internal/DaoConfig;Lv2/b;)V
+.method public constructor <init>(Lorg/greenrobot/greendao/internal/DaoConfig;Ld/d/a/m6/d/b;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "config",
+            "daoSession"
+        }
+    .end annotation
 
     .line 2
     invoke-direct {p0, p1, p2}, Lorg/greenrobot/greendao/AbstractDao;-><init>(Lorg/greenrobot/greendao/internal/DaoConfig;Lorg/greenrobot/greendao/AbstractDaoSession;)V
@@ -47,6 +66,16 @@
 
 .method public static c(Lorg/greenrobot/greendao/database/Database;Z)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "db",
+            "ifNotExists"
+        }
+    .end annotation
 
     if-eqz p1, :cond_0
 
@@ -57,6 +86,7 @@
     :cond_0
     const-string p1, ""
 
+    .line 1
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -83,7 +113,18 @@
 
 .method public static d(Lorg/greenrobot/greendao/database/Database;Z)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "db",
+            "ifExists"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -112,6 +153,7 @@
 
     move-result-object p1
 
+    .line 2
     invoke-interface {p0, p1}, Lorg/greenrobot/greendao/database/Database;->execSQL(Ljava/lang/String;)V
 
     return-void
@@ -119,12 +161,24 @@
 
 
 # virtual methods
-.method public final a(Landroid/database/sqlite/SQLiteStatement;Lu2/b;)V
+.method public final a(Landroid/database/sqlite/SQLiteStatement;Ld/d/a/m6/c/b;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "stmt",
+            "entity"
+        }
+    .end annotation
 
-    invoke-virtual {p1}, Landroid/database/sqlite/SQLiteProgram;->clearBindings()V
+    .line 1
+    invoke-virtual {p1}, Landroid/database/sqlite/SQLiteStatement;->clearBindings()V
 
-    invoke-virtual {p2}, Lu2/b;->e()Ljava/lang/Long;
+    .line 2
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->e()Ljava/lang/Long;
 
     move-result-object p0
 
@@ -132,14 +186,16 @@
 
     const/4 v0, 0x1
 
+    .line 3
     invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v1
 
-    invoke-virtual {p1, v0, v1, v2}, Landroid/database/sqlite/SQLiteProgram;->bindLong(IJ)V
+    invoke-virtual {p1, v0, v1, v2}, Landroid/database/sqlite/SQLiteStatement;->bindLong(IJ)V
 
+    .line 4
     :cond_0
-    invoke-virtual {p2}, Lu2/b;->n()Ljava/lang/Long;
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->n()Ljava/lang/Long;
 
     move-result-object p0
 
@@ -147,14 +203,16 @@
 
     const/4 v0, 0x2
 
+    .line 5
     invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v1
 
-    invoke-virtual {p1, v0, v1, v2}, Landroid/database/sqlite/SQLiteProgram;->bindLong(IJ)V
+    invoke-virtual {p1, v0, v1, v2}, Landroid/database/sqlite/SQLiteStatement;->bindLong(IJ)V
 
+    .line 6
     :cond_1
-    invoke-virtual {p2}, Lu2/b;->g()Ljava/lang/Long;
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->g()Ljava/lang/Long;
 
     move-result-object p0
 
@@ -162,14 +220,16 @@
 
     const/4 v0, 0x3
 
+    .line 7
     invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v1
 
-    invoke-virtual {p1, v0, v1, v2}, Landroid/database/sqlite/SQLiteProgram;->bindLong(IJ)V
+    invoke-virtual {p1, v0, v1, v2}, Landroid/database/sqlite/SQLiteStatement;->bindLong(IJ)V
 
+    .line 8
     :cond_2
-    invoke-virtual {p2}, Lu2/b;->j()Ljava/lang/String;
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->j()Ljava/lang/String;
 
     move-result-object p0
 
@@ -177,58 +237,65 @@
 
     const/4 v0, 0x4
 
-    invoke-virtual {p1, v0, p0}, Landroid/database/sqlite/SQLiteProgram;->bindString(ILjava/lang/String;)V
+    .line 9
+    invoke-virtual {p1, v0, p0}, Landroid/database/sqlite/SQLiteStatement;->bindString(ILjava/lang/String;)V
 
     :cond_3
-    invoke-virtual {p2}, Lu2/b;->o()I
-
-    move-result p0
-
-    int-to-long v0, p0
-
     const/4 p0, 0x5
 
-    invoke-virtual {p1, p0, v0, v1}, Landroid/database/sqlite/SQLiteProgram;->bindLong(IJ)V
+    .line 10
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->o()I
 
-    invoke-virtual {p2}, Lu2/b;->k()I
+    move-result v0
 
-    move-result p0
+    int-to-long v0, v0
 
-    int-to-long v0, p0
+    invoke-virtual {p1, p0, v0, v1}, Landroid/database/sqlite/SQLiteStatement;->bindLong(IJ)V
 
     const/4 p0, 0x6
 
-    invoke-virtual {p1, p0, v0, v1}, Landroid/database/sqlite/SQLiteProgram;->bindLong(IJ)V
+    .line 11
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->k()I
 
-    invoke-virtual {p2}, Lu2/b;->f()I
+    move-result v0
 
-    move-result p0
+    int-to-long v0, v0
 
-    int-to-long v0, p0
+    invoke-virtual {p1, p0, v0, v1}, Landroid/database/sqlite/SQLiteStatement;->bindLong(IJ)V
 
     const/4 p0, 0x7
 
-    invoke-virtual {p1, p0, v0, v1}, Landroid/database/sqlite/SQLiteProgram;->bindLong(IJ)V
+    .line 12
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->f()I
 
-    invoke-virtual {p2}, Lu2/b;->i()I
+    move-result v0
 
-    move-result p0
+    int-to-long v0, v0
 
-    int-to-long v0, p0
+    invoke-virtual {p1, p0, v0, v1}, Landroid/database/sqlite/SQLiteStatement;->bindLong(IJ)V
 
     const/16 p0, 0x8
 
-    invoke-virtual {p1, p0, v0, v1}, Landroid/database/sqlite/SQLiteProgram;->bindLong(IJ)V
+    .line 13
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->i()I
+
+    move-result v0
+
+    int-to-long v0, v0
+
+    invoke-virtual {p1, p0, v0, v1}, Landroid/database/sqlite/SQLiteStatement;->bindLong(IJ)V
 
     const/16 p0, 0x9
 
-    invoke-virtual {p2}, Lu2/b;->a()Ljava/lang/String;
+    .line 14
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->a()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p1, p0, v0}, Landroid/database/sqlite/SQLiteProgram;->bindString(ILjava/lang/String;)V
+    invoke-virtual {p1, p0, v0}, Landroid/database/sqlite/SQLiteStatement;->bindString(ILjava/lang/String;)V
 
-    invoke-virtual {p2}, Lu2/b;->p()Ljava/lang/String;
+    .line 15
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->p()Ljava/lang/String;
 
     move-result-object p0
 
@@ -236,18 +303,21 @@
 
     const/16 v0, 0xa
 
-    invoke-virtual {p1, v0, p0}, Landroid/database/sqlite/SQLiteProgram;->bindString(ILjava/lang/String;)V
+    .line 16
+    invoke-virtual {p1, v0, p0}, Landroid/database/sqlite/SQLiteStatement;->bindString(ILjava/lang/String;)V
 
     :cond_4
     const/16 p0, 0xb
 
-    invoke-virtual {p2}, Lu2/b;->m()J
+    .line 17
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->m()J
 
     move-result-wide v0
 
-    invoke-virtual {p1, p0, v0, v1}, Landroid/database/sqlite/SQLiteProgram;->bindLong(IJ)V
+    invoke-virtual {p1, p0, v0, v1}, Landroid/database/sqlite/SQLiteStatement;->bindLong(IJ)V
 
-    invoke-virtual {p2}, Lu2/b;->h()Ljava/lang/String;
+    .line 18
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->h()Ljava/lang/String;
 
     move-result-object p0
 
@@ -255,38 +325,43 @@
 
     const/16 v0, 0xc
 
-    invoke-virtual {p1, v0, p0}, Landroid/database/sqlite/SQLiteProgram;->bindString(ILjava/lang/String;)V
+    .line 19
+    invoke-virtual {p1, v0, p0}, Landroid/database/sqlite/SQLiteStatement;->bindString(ILjava/lang/String;)V
 
     :cond_5
     const/16 p0, 0xd
 
-    invoke-virtual {p2}, Lu2/b;->c()J
+    .line 20
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->c()J
 
     move-result-wide v0
 
-    invoke-virtual {p1, p0, v0, v1}, Landroid/database/sqlite/SQLiteProgram;->bindLong(IJ)V
-
-    invoke-virtual {p2}, Lu2/b;->q()I
-
-    move-result p0
-
-    int-to-long v0, p0
+    invoke-virtual {p1, p0, v0, v1}, Landroid/database/sqlite/SQLiteStatement;->bindLong(IJ)V
 
     const/16 p0, 0xe
 
-    invoke-virtual {p1, p0, v0, v1}, Landroid/database/sqlite/SQLiteProgram;->bindLong(IJ)V
+    .line 21
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->q()I
 
-    invoke-virtual {p2}, Lu2/b;->d()I
+    move-result v0
 
-    move-result p0
+    int-to-long v0, v0
 
-    int-to-long v0, p0
+    invoke-virtual {p1, p0, v0, v1}, Landroid/database/sqlite/SQLiteStatement;->bindLong(IJ)V
 
     const/16 p0, 0xf
 
-    invoke-virtual {p1, p0, v0, v1}, Landroid/database/sqlite/SQLiteProgram;->bindLong(IJ)V
+    .line 22
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->d()I
 
-    invoke-virtual {p2}, Lu2/b;->b()Ljava/lang/String;
+    move-result v0
+
+    int-to-long v0, v0
+
+    invoke-virtual {p1, p0, v0, v1}, Landroid/database/sqlite/SQLiteStatement;->bindLong(IJ)V
+
+    .line 23
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->b()Ljava/lang/String;
 
     move-result-object p0
 
@@ -294,28 +369,42 @@
 
     const/16 v0, 0x10
 
-    invoke-virtual {p1, v0, p0}, Landroid/database/sqlite/SQLiteProgram;->bindString(ILjava/lang/String;)V
+    .line 24
+    invoke-virtual {p1, v0, p0}, Landroid/database/sqlite/SQLiteStatement;->bindString(ILjava/lang/String;)V
 
     :cond_6
-    invoke-virtual {p2}, Lu2/b;->l()I
-
-    move-result p0
-
-    int-to-long v0, p0
-
     const/16 p0, 0x11
 
-    invoke-virtual {p1, p0, v0, v1}, Landroid/database/sqlite/SQLiteProgram;->bindLong(IJ)V
+    .line 25
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->l()I
+
+    move-result p2
+
+    int-to-long v0, p2
+
+    invoke-virtual {p1, p0, v0, v1}, Landroid/database/sqlite/SQLiteStatement;->bindLong(IJ)V
 
     return-void
 .end method
 
-.method public final b(Lorg/greenrobot/greendao/database/DatabaseStatement;Lu2/b;)V
+.method public final b(Lorg/greenrobot/greendao/database/DatabaseStatement;Ld/d/a/m6/c/b;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "stmt",
+            "entity"
+        }
+    .end annotation
 
+    .line 1
     invoke-interface {p1}, Lorg/greenrobot/greendao/database/DatabaseStatement;->clearBindings()V
 
-    invoke-virtual {p2}, Lu2/b;->e()Ljava/lang/Long;
+    .line 2
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->e()Ljava/lang/Long;
 
     move-result-object p0
 
@@ -323,14 +412,16 @@
 
     const/4 v0, 0x1
 
+    .line 3
     invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v1
 
     invoke-interface {p1, v0, v1, v2}, Lorg/greenrobot/greendao/database/DatabaseStatement;->bindLong(IJ)V
 
+    .line 4
     :cond_0
-    invoke-virtual {p2}, Lu2/b;->n()Ljava/lang/Long;
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->n()Ljava/lang/Long;
 
     move-result-object p0
 
@@ -338,14 +429,16 @@
 
     const/4 v0, 0x2
 
+    .line 5
     invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v1
 
     invoke-interface {p1, v0, v1, v2}, Lorg/greenrobot/greendao/database/DatabaseStatement;->bindLong(IJ)V
 
+    .line 6
     :cond_1
-    invoke-virtual {p2}, Lu2/b;->g()Ljava/lang/Long;
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->g()Ljava/lang/Long;
 
     move-result-object p0
 
@@ -353,14 +446,16 @@
 
     const/4 v0, 0x3
 
+    .line 7
     invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v1
 
     invoke-interface {p1, v0, v1, v2}, Lorg/greenrobot/greendao/database/DatabaseStatement;->bindLong(IJ)V
 
+    .line 8
     :cond_2
-    invoke-virtual {p2}, Lu2/b;->j()Ljava/lang/String;
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->j()Ljava/lang/String;
 
     move-result-object p0
 
@@ -368,58 +463,65 @@
 
     const/4 v0, 0x4
 
+    .line 9
     invoke-interface {p1, v0, p0}, Lorg/greenrobot/greendao/database/DatabaseStatement;->bindString(ILjava/lang/String;)V
 
     :cond_3
-    invoke-virtual {p2}, Lu2/b;->o()I
-
-    move-result p0
-
-    int-to-long v0, p0
-
     const/4 p0, 0x5
 
+    .line 10
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->o()I
+
+    move-result v0
+
+    int-to-long v0, v0
+
     invoke-interface {p1, p0, v0, v1}, Lorg/greenrobot/greendao/database/DatabaseStatement;->bindLong(IJ)V
-
-    invoke-virtual {p2}, Lu2/b;->k()I
-
-    move-result p0
-
-    int-to-long v0, p0
 
     const/4 p0, 0x6
 
+    .line 11
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->k()I
+
+    move-result v0
+
+    int-to-long v0, v0
+
     invoke-interface {p1, p0, v0, v1}, Lorg/greenrobot/greendao/database/DatabaseStatement;->bindLong(IJ)V
-
-    invoke-virtual {p2}, Lu2/b;->f()I
-
-    move-result p0
-
-    int-to-long v0, p0
 
     const/4 p0, 0x7
 
+    .line 12
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->f()I
+
+    move-result v0
+
+    int-to-long v0, v0
+
     invoke-interface {p1, p0, v0, v1}, Lorg/greenrobot/greendao/database/DatabaseStatement;->bindLong(IJ)V
 
-    invoke-virtual {p2}, Lu2/b;->i()I
-
-    move-result p0
-
-    int-to-long v0, p0
-
     const/16 p0, 0x8
+
+    .line 13
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->i()I
+
+    move-result v0
+
+    int-to-long v0, v0
 
     invoke-interface {p1, p0, v0, v1}, Lorg/greenrobot/greendao/database/DatabaseStatement;->bindLong(IJ)V
 
     const/16 p0, 0x9
 
-    invoke-virtual {p2}, Lu2/b;->a()Ljava/lang/String;
+    .line 14
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->a()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-interface {p1, p0, v0}, Lorg/greenrobot/greendao/database/DatabaseStatement;->bindString(ILjava/lang/String;)V
 
-    invoke-virtual {p2}, Lu2/b;->p()Ljava/lang/String;
+    .line 15
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->p()Ljava/lang/String;
 
     move-result-object p0
 
@@ -427,18 +529,21 @@
 
     const/16 v0, 0xa
 
+    .line 16
     invoke-interface {p1, v0, p0}, Lorg/greenrobot/greendao/database/DatabaseStatement;->bindString(ILjava/lang/String;)V
 
     :cond_4
     const/16 p0, 0xb
 
-    invoke-virtual {p2}, Lu2/b;->m()J
+    .line 17
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->m()J
 
     move-result-wide v0
 
     invoke-interface {p1, p0, v0, v1}, Lorg/greenrobot/greendao/database/DatabaseStatement;->bindLong(IJ)V
 
-    invoke-virtual {p2}, Lu2/b;->h()Ljava/lang/String;
+    .line 18
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->h()Ljava/lang/String;
 
     move-result-object p0
 
@@ -446,38 +551,43 @@
 
     const/16 v0, 0xc
 
+    .line 19
     invoke-interface {p1, v0, p0}, Lorg/greenrobot/greendao/database/DatabaseStatement;->bindString(ILjava/lang/String;)V
 
     :cond_5
     const/16 p0, 0xd
 
-    invoke-virtual {p2}, Lu2/b;->c()J
+    .line 20
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->c()J
 
     move-result-wide v0
 
     invoke-interface {p1, p0, v0, v1}, Lorg/greenrobot/greendao/database/DatabaseStatement;->bindLong(IJ)V
 
-    invoke-virtual {p2}, Lu2/b;->q()I
-
-    move-result p0
-
-    int-to-long v0, p0
-
     const/16 p0, 0xe
 
+    .line 21
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->q()I
+
+    move-result v0
+
+    int-to-long v0, v0
+
     invoke-interface {p1, p0, v0, v1}, Lorg/greenrobot/greendao/database/DatabaseStatement;->bindLong(IJ)V
-
-    invoke-virtual {p2}, Lu2/b;->d()I
-
-    move-result p0
-
-    int-to-long v0, p0
 
     const/16 p0, 0xf
 
+    .line 22
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->d()I
+
+    move-result v0
+
+    int-to-long v0, v0
+
     invoke-interface {p1, p0, v0, v1}, Lorg/greenrobot/greendao/database/DatabaseStatement;->bindLong(IJ)V
 
-    invoke-virtual {p2}, Lu2/b;->b()Ljava/lang/String;
+    .line 23
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->b()Ljava/lang/String;
 
     move-result-object p0
 
@@ -485,16 +595,18 @@
 
     const/16 v0, 0x10
 
+    .line 24
     invoke-interface {p1, v0, p0}, Lorg/greenrobot/greendao/database/DatabaseStatement;->bindString(ILjava/lang/String;)V
 
     :cond_6
-    invoke-virtual {p2}, Lu2/b;->l()I
-
-    move-result p0
-
-    int-to-long v0, p0
-
     const/16 p0, 0x11
+
+    .line 25
+    invoke-virtual {p2}, Ld/d/a/m6/c/b;->l()I
+
+    move-result p2
+
+    int-to-long v0, p2
 
     invoke-interface {p1, p0, v0, v1}, Lorg/greenrobot/greendao/database/DatabaseStatement;->bindLong(IJ)V
 
@@ -503,32 +615,61 @@
 
 .method public bridge synthetic bindValues(Landroid/database/sqlite/SQLiteStatement;Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "stmt",
+            "entity"
+        }
+    .end annotation
 
     .line 1
-    check-cast p2, Lu2/b;
+    check-cast p2, Ld/d/a/m6/c/b;
 
-    invoke-virtual {p0, p1, p2}, Lcom/android/camera/db/greendao/SaveTaskDao;->a(Landroid/database/sqlite/SQLiteStatement;Lu2/b;)V
+    invoke-virtual {p0, p1, p2}, Lcom/android/camera/db/greendao/SaveTaskDao;->a(Landroid/database/sqlite/SQLiteStatement;Ld/d/a/m6/c/b;)V
 
     return-void
 .end method
 
 .method public bridge synthetic bindValues(Lorg/greenrobot/greendao/database/DatabaseStatement;Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "stmt",
+            "entity"
+        }
+    .end annotation
 
     .line 2
-    check-cast p2, Lu2/b;
+    check-cast p2, Ld/d/a/m6/c/b;
 
-    invoke-virtual {p0, p1, p2}, Lcom/android/camera/db/greendao/SaveTaskDao;->b(Lorg/greenrobot/greendao/database/DatabaseStatement;Lu2/b;)V
+    invoke-virtual {p0, p1, p2}, Lcom/android/camera/db/greendao/SaveTaskDao;->b(Lorg/greenrobot/greendao/database/DatabaseStatement;Ld/d/a/m6/c/b;)V
 
     return-void
 .end method
 
-.method public e(Lu2/b;)Ljava/lang/Long;
+.method public e(Ld/d/a/m6/c/b;)Ljava/lang/Long;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "entity"
+        }
+    .end annotation
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lu2/b;->e()Ljava/lang/Long;
+    .line 1
+    invoke-virtual {p1}, Ld/d/a/m6/c/b;->e()Ljava/lang/Long;
 
     move-result-object p0
 
@@ -540,10 +681,19 @@
     return-object p0
 .end method
 
-.method public f(Lu2/b;)Z
+.method public f(Ld/d/a/m6/c/b;)Z
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "entity"
+        }
+    .end annotation
 
-    invoke-virtual {p1}, Lu2/b;->e()Ljava/lang/Long;
+    .line 1
+    invoke-virtual {p1}, Ld/d/a/m6/c/b;->e()Ljava/lang/Long;
 
     move-result-object p0
 
@@ -560,15 +710,27 @@
     return p0
 .end method
 
-.method public g(Landroid/database/Cursor;I)Lu2/b;
+.method public g(Landroid/database/Cursor;I)Ld/d/a/m6/c/b;
     .locals 23
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "cursor",
+            "offset"
+        }
+    .end annotation
 
     move-object/from16 v0, p1
 
-    new-instance v20, Lu2/b;
+    .line 1
+    new-instance v20, Ld/d/a/m6/c/b;
 
     add-int/lit8 v1, p2, 0x0
 
+    .line 2
     invoke-interface {v0, v1}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v2
@@ -591,6 +753,7 @@
     :goto_0
     add-int/lit8 v2, p2, 0x1
 
+    .line 3
     invoke-interface {v0, v2}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v4
@@ -613,6 +776,7 @@
     :goto_1
     add-int/lit8 v4, p2, 0x2
 
+    .line 4
     invoke-interface {v0, v4}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v5
@@ -635,6 +799,7 @@
     :goto_2
     add-int/lit8 v5, p2, 0x3
 
+    .line 5
     invoke-interface {v0, v5}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v6
@@ -653,36 +818,42 @@
     :goto_3
     add-int/lit8 v6, p2, 0x4
 
+    .line 6
     invoke-interface {v0, v6}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v6
 
     add-int/lit8 v7, p2, 0x5
 
+    .line 7
     invoke-interface {v0, v7}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v7
 
     add-int/lit8 v8, p2, 0x6
 
+    .line 8
     invoke-interface {v0, v8}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v8
 
     add-int/lit8 v9, p2, 0x7
 
+    .line 9
     invoke-interface {v0, v9}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v9
 
     add-int/lit8 v10, p2, 0x8
 
+    .line 10
     invoke-interface {v0, v10}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v10
 
     add-int/lit8 v11, p2, 0x9
 
+    .line 11
     invoke-interface {v0, v11}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v12
@@ -701,6 +872,7 @@
     :goto_4
     add-int/lit8 v12, p2, 0xa
 
+    .line 12
     invoke-interface {v0, v12}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v13
@@ -721,6 +893,7 @@
     :goto_5
     add-int/lit8 v3, p2, 0xb
 
+    .line 13
     invoke-interface {v0, v3}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v16
@@ -741,6 +914,7 @@
     :goto_6
     add-int/lit8 v3, p2, 0xc
 
+    .line 14
     invoke-interface {v0, v3}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v17
@@ -757,6 +931,7 @@
     :goto_7
     add-int/lit8 v3, p2, 0xd
 
+    .line 15
     invoke-interface {v0, v3}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v17
@@ -779,6 +954,7 @@
     :goto_8
     add-int/lit8 v3, p2, 0xe
 
+    .line 16
     invoke-interface {v0, v3}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v19
@@ -799,6 +975,7 @@
     :goto_9
     add-int/lit8 v3, p2, 0xf
 
+    .line 17
     invoke-interface {v0, v3}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v21
@@ -819,6 +996,7 @@
     :goto_a
     add-int/lit8 v3, p2, 0x10
 
+    .line 18
     invoke-interface {v0, v3}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v22
@@ -867,28 +1045,50 @@
 
     move/from16 v19, v22
 
-    invoke-direct/range {v0 .. v19}, Lu2/b;-><init>(Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/String;IIIILjava/lang/String;Ljava/lang/String;JLjava/lang/String;JIILjava/lang/String;I)V
+    invoke-direct/range {v0 .. v19}, Ld/d/a/m6/c/b;-><init>(Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/String;IIIILjava/lang/String;Ljava/lang/String;JLjava/lang/String;JIILjava/lang/String;I)V
 
     return-object v20
 .end method
 
 .method public bridge synthetic getKey(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "entity"
+        }
+    .end annotation
 
-    check-cast p1, Lu2/b;
+    .line 1
+    check-cast p1, Ld/d/a/m6/c/b;
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/db/greendao/SaveTaskDao;->e(Lu2/b;)Ljava/lang/Long;
+    invoke-virtual {p0, p1}, Lcom/android/camera/db/greendao/SaveTaskDao;->e(Ld/d/a/m6/c/b;)Ljava/lang/Long;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public h(Landroid/database/Cursor;Lu2/b;I)V
+.method public h(Landroid/database/Cursor;Ld/d/a/m6/c/b;I)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "cursor",
+            "entity",
+            "offset"
+        }
+    .end annotation
 
     add-int/lit8 p0, p3, 0x0
 
+    .line 1
     invoke-interface {p1, p0}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v0
@@ -911,10 +1111,11 @@
     move-result-object p0
 
     :goto_0
-    invoke-virtual {p2, p0}, Lu2/b;->x(Ljava/lang/Long;)V
+    invoke-virtual {p2, p0}, Ld/d/a/m6/c/b;->x(Ljava/lang/Long;)V
 
     add-int/lit8 p0, p3, 0x1
 
+    .line 2
     invoke-interface {p1, p0}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v0
@@ -935,10 +1136,11 @@
     move-result-object p0
 
     :goto_1
-    invoke-virtual {p2, p0}, Lu2/b;->G(Ljava/lang/Long;)V
+    invoke-virtual {p2, p0}, Ld/d/a/m6/c/b;->G(Ljava/lang/Long;)V
 
     add-int/lit8 p0, p3, 0x2
 
+    .line 3
     invoke-interface {p1, p0}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v0
@@ -959,10 +1161,11 @@
     move-result-object p0
 
     :goto_2
-    invoke-virtual {p2, p0}, Lu2/b;->z(Ljava/lang/Long;)V
+    invoke-virtual {p2, p0}, Ld/d/a/m6/c/b;->z(Ljava/lang/Long;)V
 
     add-int/lit8 p0, p3, 0x3
 
+    .line 4
     invoke-interface {p1, p0}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v0
@@ -979,50 +1182,56 @@
     move-result-object p0
 
     :goto_3
-    invoke-virtual {p2, p0}, Lu2/b;->C(Ljava/lang/String;)V
+    invoke-virtual {p2, p0}, Ld/d/a/m6/c/b;->C(Ljava/lang/String;)V
 
     add-int/lit8 p0, p3, 0x4
 
+    .line 5
     invoke-interface {p1, p0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result p0
 
-    invoke-virtual {p2, p0}, Lu2/b;->H(I)V
+    invoke-virtual {p2, p0}, Ld/d/a/m6/c/b;->H(I)V
 
     add-int/lit8 p0, p3, 0x5
 
+    .line 6
     invoke-interface {p1, p0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result p0
 
-    invoke-virtual {p2, p0}, Lu2/b;->D(I)V
+    invoke-virtual {p2, p0}, Ld/d/a/m6/c/b;->D(I)V
 
     add-int/lit8 p0, p3, 0x6
 
+    .line 7
     invoke-interface {p1, p0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result p0
 
-    invoke-virtual {p2, p0}, Lu2/b;->y(I)V
+    invoke-virtual {p2, p0}, Ld/d/a/m6/c/b;->y(I)V
 
     add-int/lit8 p0, p3, 0x7
 
+    .line 8
     invoke-interface {p1, p0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result p0
 
-    invoke-virtual {p2, p0}, Lu2/b;->B(I)V
+    invoke-virtual {p2, p0}, Ld/d/a/m6/c/b;->B(I)V
 
     add-int/lit8 p0, p3, 0x8
 
+    .line 9
     invoke-interface {p1, p0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-virtual {p2, p0}, Lu2/b;->t(Ljava/lang/String;)V
+    invoke-virtual {p2, p0}, Ld/d/a/m6/c/b;->t(Ljava/lang/String;)V
 
     add-int/lit8 p0, p3, 0x9
 
+    .line 10
     invoke-interface {p1, p0}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v0
@@ -1039,10 +1248,11 @@
     move-result-object p0
 
     :goto_4
-    invoke-virtual {p2, p0}, Lu2/b;->I(Ljava/lang/String;)V
+    invoke-virtual {p2, p0}, Ld/d/a/m6/c/b;->I(Ljava/lang/String;)V
 
     add-int/lit8 p0, p3, 0xa
 
+    .line 11
     invoke-interface {p1, p0}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v0
@@ -1061,10 +1271,11 @@
     move-result-wide v4
 
     :goto_5
-    invoke-virtual {p2, v4, v5}, Lu2/b;->F(J)V
+    invoke-virtual {p2, v4, v5}, Ld/d/a/m6/c/b;->F(J)V
 
     add-int/lit8 p0, p3, 0xb
 
+    .line 12
     invoke-interface {p1, p0}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v0
@@ -1081,10 +1292,11 @@
     move-result-object p0
 
     :goto_6
-    invoke-virtual {p2, p0}, Lu2/b;->A(Ljava/lang/String;)V
+    invoke-virtual {p2, p0}, Ld/d/a/m6/c/b;->A(Ljava/lang/String;)V
 
     add-int/lit8 p0, p3, 0xc
 
+    .line 13
     invoke-interface {p1, p0}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v0
@@ -1099,10 +1311,11 @@
     move-result-wide v2
 
     :goto_7
-    invoke-virtual {p2, v2, v3}, Lu2/b;->v(J)V
+    invoke-virtual {p2, v2, v3}, Ld/d/a/m6/c/b;->v(J)V
 
     add-int/lit8 p0, p3, 0xd
 
+    .line 14
     invoke-interface {p1, p0}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v0
@@ -1121,10 +1334,11 @@
     move-result p0
 
     :goto_8
-    invoke-virtual {p2, p0}, Lu2/b;->J(I)V
+    invoke-virtual {p2, p0}, Ld/d/a/m6/c/b;->J(I)V
 
     add-int/lit8 p0, p3, 0xe
 
+    .line 15
     invoke-interface {p1, p0}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v0
@@ -1141,10 +1355,11 @@
     move-result p0
 
     :goto_9
-    invoke-virtual {p2, p0}, Lu2/b;->w(I)V
+    invoke-virtual {p2, p0}, Ld/d/a/m6/c/b;->w(I)V
 
     add-int/lit8 p0, p3, 0xf
 
+    .line 16
     invoke-interface {p1, p0}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v0
@@ -1159,10 +1374,11 @@
     move-result-object v1
 
     :goto_a
-    invoke-virtual {p2, v1}, Lu2/b;->u(Ljava/lang/String;)V
+    invoke-virtual {p2, v1}, Ld/d/a/m6/c/b;->u(Ljava/lang/String;)V
 
     add-int/lit8 p3, p3, 0x10
 
+    .line 17
     invoke-interface {p1, p3}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result p0
@@ -1177,17 +1393,26 @@
     move-result v2
 
     :goto_b
-    invoke-virtual {p2, v2}, Lu2/b;->E(I)V
+    invoke-virtual {p2, v2}, Ld/d/a/m6/c/b;->E(I)V
 
     return-void
 .end method
 
 .method public bridge synthetic hasKey(Ljava/lang/Object;)Z
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "entity"
+        }
+    .end annotation
 
-    check-cast p1, Lu2/b;
+    .line 1
+    check-cast p1, Ld/d/a/m6/c/b;
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/db/greendao/SaveTaskDao;->f(Lu2/b;)Z
+    invoke-virtual {p0, p1}, Lcom/android/camera/db/greendao/SaveTaskDao;->f(Ld/d/a/m6/c/b;)Z
 
     move-result p0
 
@@ -1196,9 +1421,20 @@
 
 .method public i(Landroid/database/Cursor;I)Ljava/lang/Long;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "cursor",
+            "offset"
+        }
+    .end annotation
 
     add-int/lit8 p2, p2, 0x0
 
+    .line 1
     invoke-interface {p1, p2}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result p0
@@ -1230,15 +1466,27 @@
     return p0
 .end method
 
-.method public final j(Lu2/b;J)Ljava/lang/Long;
+.method public final j(Ld/d/a/m6/c/b;J)Ljava/lang/Long;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "entity",
+            "rowId"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p0
 
-    invoke-virtual {p1, p0}, Lu2/b;->x(Ljava/lang/Long;)V
+    invoke-virtual {p1, p0}, Ld/d/a/m6/c/b;->x(Ljava/lang/Long;)V
 
+    .line 2
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p0
@@ -1248,9 +1496,19 @@
 
 .method public bridge synthetic readEntity(Landroid/database/Cursor;I)Ljava/lang/Object;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "cursor",
+            "offset"
+        }
+    .end annotation
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/android/camera/db/greendao/SaveTaskDao;->g(Landroid/database/Cursor;I)Lu2/b;
+    invoke-virtual {p0, p1, p2}, Lcom/android/camera/db/greendao/SaveTaskDao;->g(Landroid/database/Cursor;I)Ld/d/a/m6/c/b;
 
     move-result-object p0
 
@@ -1259,18 +1517,41 @@
 
 .method public bridge synthetic readEntity(Landroid/database/Cursor;Ljava/lang/Object;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000,
+            0x1000
+        }
+        names = {
+            "cursor",
+            "entity",
+            "offset"
+        }
+    .end annotation
 
     .line 2
-    check-cast p2, Lu2/b;
+    check-cast p2, Ld/d/a/m6/c/b;
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/android/camera/db/greendao/SaveTaskDao;->h(Landroid/database/Cursor;Lu2/b;I)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/android/camera/db/greendao/SaveTaskDao;->h(Landroid/database/Cursor;Ld/d/a/m6/c/b;I)V
 
     return-void
 .end method
 
 .method public bridge synthetic readKey(Landroid/database/Cursor;I)Ljava/lang/Object;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "cursor",
+            "offset"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/android/camera/db/greendao/SaveTaskDao;->i(Landroid/database/Cursor;I)Ljava/lang/Long;
 
     move-result-object p0
@@ -1280,10 +1561,21 @@
 
 .method public bridge synthetic updateKeyAfterInsert(Ljava/lang/Object;J)Ljava/lang/Object;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "entity",
+            "rowId"
+        }
+    .end annotation
 
-    check-cast p1, Lu2/b;
+    .line 1
+    check-cast p1, Ld/d/a/m6/c/b;
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/android/camera/db/greendao/SaveTaskDao;->j(Lu2/b;J)Ljava/lang/Long;
+    invoke-virtual {p0, p1, p2, p3}, Lcom/android/camera/db/greendao/SaveTaskDao;->j(Ld/d/a/m6/c/b;J)Ljava/lang/Long;
 
     move-result-object p0
 

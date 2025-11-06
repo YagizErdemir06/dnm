@@ -4,105 +4,116 @@
 
 
 # instance fields
-.field protected final CoordsPerTextureCount:I
+.field public final CoordsPerTextureCount:I
 
-.field protected final CoordsPerVertexCount:I
+.field public final CoordsPerVertexCount:I
 
-.field protected final TextureStride:I
+.field public final TextureStride:I
 
-.field protected final VertexCount:I
+.field public final VertexCount:I
 
-.field protected final VertexStride:I
+.field public final VertexStride:I
 
-.field protected backTextureData:[F
+.field public backTextureData:[F
 
-.field protected displayTextureData:[F
+.field public displayTextureData:[F
 
-.field protected frameBufferData:[F
+.field public frameBufferData:[F
 
-.field protected frontTextureData:[F
+.field public frontTextureData:[F
 
-.field protected height:I
+.field public height:I
 
 .field private mBackTextureBuffer:Ljava/nio/FloatBuffer;
 
-.field protected mBackTextureBufferId:I
+.field public mBackTextureBufferId:I
 
 .field private mDisplayTextureBuffer:Ljava/nio/FloatBuffer;
 
-.field protected mDisplayTextureBufferId:I
+.field public mDisplayTextureBufferId:I
 
 .field private mFrameTextureBuffer:Ljava/nio/FloatBuffer;
 
-.field protected mFrameTextureBufferId:I
+.field public mFrameTextureBufferId:I
 
 .field private mFrontTextureBuffer:Ljava/nio/FloatBuffer;
 
-.field protected mFrontTextureBufferId:I
+.field public mFrontTextureBufferId:I
 
-.field protected mProgram:I
+.field public mProgram:I
 
 .field private mVertexBuffer:Ljava/nio/FloatBuffer;
 
-.field protected mVertexBufferId:I
+.field public mVertexBufferId:I
 
-.field protected vertexData:[F
+.field public vertexData:[F
 
-.field protected width:I
+.field public width:I
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x8
 
     new-array v1, v0, [F
 
+    .line 2
     fill-array-data v1, :array_0
 
     iput-object v1, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->vertexData:[F
 
     new-array v2, v0, [F
 
+    .line 3
     fill-array-data v2, :array_1
 
     iput-object v2, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->frontTextureData:[F
 
     new-array v2, v0, [F
 
+    .line 4
     fill-array-data v2, :array_2
 
     iput-object v2, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->backTextureData:[F
 
     new-array v2, v0, [F
 
+    .line 5
     fill-array-data v2, :array_3
 
     iput-object v2, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->displayTextureData:[F
 
     new-array v2, v0, [F
 
+    .line 6
     fill-array-data v2, :array_4
 
     iput-object v2, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->frameBufferData:[F
 
     const/4 v2, 0x2
 
+    .line 7
     iput v2, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->CoordsPerVertexCount:I
 
+    .line 8
     array-length v1, v1
 
     div-int/2addr v1, v2
 
     iput v1, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->VertexCount:I
 
+    .line 9
     iput v0, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->VertexStride:I
 
+    .line 10
     iput v2, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->CoordsPerTextureCount:I
 
+    .line 11
     iput v0, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->TextureStride:I
 
     return-void
@@ -177,11 +188,13 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p0, p0, p0, v0}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
+    .line 1
+    invoke-static {p0, p0, p0, v0}, Landroid/opengl/GLES30;->glClearColor(FFFF)V
 
     const/16 p0, 0x4100
 
-    invoke-static {p0}, Landroid/opengl/GLES20;->glClear(I)V
+    .line 2
+    invoke-static {p0}, Landroid/opengl/GLES30;->glClear(I)V
 
     return-void
 .end method
@@ -189,6 +202,7 @@
 .method public create()V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->getVertexSource()Ljava/lang/String;
 
     move-result-object v0
@@ -203,8 +217,10 @@
 
     iput v0, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->mProgram:I
 
+    .line 2
     invoke-virtual {p0}, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->initVertexBufferObjects()V
 
+    .line 3
     invoke-virtual {p0}, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->onCreated()V
 
     return-void
@@ -213,6 +229,7 @@
 .method public cropSize(IIIIII)V
     .locals 0
 
+    .line 1
     invoke-virtual/range {p0 .. p6}, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->onCroped(IIIIII)V
 
     return-void
@@ -221,12 +238,15 @@
 .method public destroy()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->releaseVertexBufferObjects()V
 
+    .line 2
     iget p0, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->mProgram:I
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-static {p0}, Lcom/xiaomi/mediacodec/GlesUtil;->DestoryProgram(I)V
 
     :cond_0
@@ -236,10 +256,13 @@
 .method public draw(J[F)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->clear()V
 
+    .line 2
     invoke-virtual {p0}, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->useProgram()V
 
+    .line 3
     iget p1, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->width:I
 
     iget p2, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->height:I
@@ -248,6 +271,7 @@
 
     invoke-virtual {p0, p3, p3, p1, p2}, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->viewPort(IIII)V
 
+    .line 4
     invoke-virtual {p0}, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->onDraw()V
 
     return-void
@@ -271,8 +295,10 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2}, Landroid/opengl/GLES20;->glGenBuffers(I[II)V
+    .line 1
+    invoke-static {v0, v1, v2}, Landroid/opengl/GLES30;->glGenBuffers(I[II)V
 
+    .line 2
     iget-object v0, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->vertexData:[F
 
     array-length v0, v0
@@ -305,16 +331,20 @@
 
     iput-object v0, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->mVertexBuffer:Ljava/nio/FloatBuffer;
 
+    .line 3
     invoke-virtual {v0, v2}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
 
+    .line 4
     aget v0, v1, v2
 
     iput v0, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->mVertexBufferId:I
 
     const v4, 0x8892
 
-    invoke-static {v4, v0}, Landroid/opengl/GLES20;->glBindBuffer(II)V
+    .line 5
+    invoke-static {v4, v0}, Landroid/opengl/GLES30;->glBindBuffer(II)V
 
+    .line 6
     iget-object v0, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->vertexData:[F
 
     array-length v0, v0
@@ -325,8 +355,9 @@
 
     const v6, 0x88e4
 
-    invoke-static {v4, v0, v5, v6}, Landroid/opengl/GLES20;->glBufferData(IILjava/nio/Buffer;I)V
+    invoke-static {v4, v0, v5, v6}, Landroid/opengl/GLES30;->glBufferData(IILjava/nio/Buffer;I)V
 
+    .line 7
     iget-object v0, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->backTextureData:[F
 
     array-length v0, v0
@@ -357,16 +388,20 @@
 
     iput-object v0, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->mBackTextureBuffer:Ljava/nio/FloatBuffer;
 
+    .line 8
     invoke-virtual {v0, v2}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
 
     const/4 v0, 0x1
 
+    .line 9
     aget v0, v1, v0
 
     iput v0, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->mBackTextureBufferId:I
 
-    invoke-static {v4, v0}, Landroid/opengl/GLES20;->glBindBuffer(II)V
+    .line 10
+    invoke-static {v4, v0}, Landroid/opengl/GLES30;->glBindBuffer(II)V
 
+    .line 11
     iget-object v0, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->backTextureData:[F
 
     array-length v0, v0
@@ -375,8 +410,9 @@
 
     iget-object v5, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->mBackTextureBuffer:Ljava/nio/FloatBuffer;
 
-    invoke-static {v4, v0, v5, v6}, Landroid/opengl/GLES20;->glBufferData(IILjava/nio/Buffer;I)V
+    invoke-static {v4, v0, v5, v6}, Landroid/opengl/GLES30;->glBufferData(IILjava/nio/Buffer;I)V
 
+    .line 12
     iget-object v0, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->frontTextureData:[F
 
     array-length v0, v0
@@ -407,16 +443,20 @@
 
     iput-object v0, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->mFrontTextureBuffer:Ljava/nio/FloatBuffer;
 
+    .line 13
     invoke-virtual {v0, v2}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
 
     const/4 v0, 0x2
 
+    .line 14
     aget v0, v1, v0
 
     iput v0, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->mFrontTextureBufferId:I
 
-    invoke-static {v4, v0}, Landroid/opengl/GLES20;->glBindBuffer(II)V
+    .line 15
+    invoke-static {v4, v0}, Landroid/opengl/GLES30;->glBindBuffer(II)V
 
+    .line 16
     iget-object v0, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->frontTextureData:[F
 
     array-length v0, v0
@@ -425,8 +465,9 @@
 
     iget-object v5, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->mFrontTextureBuffer:Ljava/nio/FloatBuffer;
 
-    invoke-static {v4, v0, v5, v6}, Landroid/opengl/GLES20;->glBufferData(IILjava/nio/Buffer;I)V
+    invoke-static {v4, v0, v5, v6}, Landroid/opengl/GLES30;->glBufferData(IILjava/nio/Buffer;I)V
 
+    .line 17
     iget-object v0, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->displayTextureData:[F
 
     array-length v0, v0
@@ -457,16 +498,20 @@
 
     iput-object v0, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->mDisplayTextureBuffer:Ljava/nio/FloatBuffer;
 
+    .line 18
     invoke-virtual {v0, v2}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
 
     const/4 v0, 0x3
 
+    .line 19
     aget v0, v1, v0
 
     iput v0, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->mDisplayTextureBufferId:I
 
-    invoke-static {v4, v0}, Landroid/opengl/GLES20;->glBindBuffer(II)V
+    .line 20
+    invoke-static {v4, v0}, Landroid/opengl/GLES30;->glBindBuffer(II)V
 
+    .line 21
     iget-object v0, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->displayTextureData:[F
 
     array-length v0, v0
@@ -475,8 +520,9 @@
 
     iget-object v5, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->mDisplayTextureBuffer:Ljava/nio/FloatBuffer;
 
-    invoke-static {v4, v0, v5, v6}, Landroid/opengl/GLES20;->glBufferData(IILjava/nio/Buffer;I)V
+    invoke-static {v4, v0, v5, v6}, Landroid/opengl/GLES30;->glBufferData(IILjava/nio/Buffer;I)V
 
+    .line 22
     iget-object v0, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->frameBufferData:[F
 
     array-length v0, v0
@@ -507,14 +553,18 @@
 
     iput-object v0, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->mFrameTextureBuffer:Ljava/nio/FloatBuffer;
 
+    .line 23
     invoke-virtual {v0, v2}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
 
+    .line 24
     aget v0, v1, v3
 
     iput v0, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->mFrameTextureBufferId:I
 
-    invoke-static {v4, v0}, Landroid/opengl/GLES20;->glBindBuffer(II)V
+    .line 25
+    invoke-static {v4, v0}, Landroid/opengl/GLES30;->glBindBuffer(II)V
 
+    .line 26
     iget-object v0, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->frameBufferData:[F
 
     array-length v0, v0
@@ -523,9 +573,10 @@
 
     iget-object p0, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->mFrameTextureBuffer:Ljava/nio/FloatBuffer;
 
-    invoke-static {v4, v0, p0, v6}, Landroid/opengl/GLES20;->glBufferData(IILjava/nio/Buffer;I)V
+    invoke-static {v4, v0, p0, v6}, Landroid/opengl/GLES30;->glBufferData(IILjava/nio/Buffer;I)V
 
-    invoke-static {v4, v2}, Landroid/opengl/GLES20;->glBindBuffer(II)V
+    .line 27
+    invoke-static {v4, v2}, Landroid/opengl/GLES30;->glBindBuffer(II)V
 
     return-void
 .end method
@@ -552,54 +603,63 @@
 
     new-array v1, v0, [I
 
+    .line 1
     iget v2, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->mVertexBufferId:I
 
     const/4 v3, 0x0
 
     aput v2, v1, v3
 
-    invoke-static {v0, v1, v3}, Landroid/opengl/GLES20;->glDeleteBuffers(I[II)V
+    invoke-static {v0, v1, v3}, Landroid/opengl/GLES30;->glDeleteBuffers(I[II)V
 
     new-array v1, v0, [I
 
+    .line 2
     iget v2, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->mBackTextureBufferId:I
 
     aput v2, v1, v3
 
-    invoke-static {v0, v1, v3}, Landroid/opengl/GLES20;->glDeleteBuffers(I[II)V
+    invoke-static {v0, v1, v3}, Landroid/opengl/GLES30;->glDeleteBuffers(I[II)V
 
     new-array v1, v0, [I
 
+    .line 3
     iget v2, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->mFrontTextureBufferId:I
 
     aput v2, v1, v3
 
-    invoke-static {v0, v1, v3}, Landroid/opengl/GLES20;->glDeleteBuffers(I[II)V
+    invoke-static {v0, v1, v3}, Landroid/opengl/GLES30;->glDeleteBuffers(I[II)V
 
     new-array v1, v0, [I
 
+    .line 4
     iget v2, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->mDisplayTextureBufferId:I
 
     aput v2, v1, v3
 
-    invoke-static {v0, v1, v3}, Landroid/opengl/GLES20;->glDeleteBuffers(I[II)V
+    invoke-static {v0, v1, v3}, Landroid/opengl/GLES30;->glDeleteBuffers(I[II)V
 
     new-array v1, v0, [I
 
+    .line 5
     iget v2, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->mFrameTextureBufferId:I
 
     aput v2, v1, v3
 
-    invoke-static {v0, v1, v3}, Landroid/opengl/GLES20;->glDeleteBuffers(I[II)V
+    invoke-static {v0, v1, v3}, Landroid/opengl/GLES30;->glDeleteBuffers(I[II)V
 
     const/4 v0, 0x0
 
+    .line 6
     iput-object v0, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->mVertexBuffer:Ljava/nio/FloatBuffer;
 
+    .line 7
     iput-object v0, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->mBackTextureBuffer:Ljava/nio/FloatBuffer;
 
+    .line 8
     iput-object v0, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->mFrontTextureBuffer:Ljava/nio/FloatBuffer;
 
+    .line 9
     iput-object v0, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->mFrameTextureBuffer:Ljava/nio/FloatBuffer;
 
     return-void
@@ -614,10 +674,13 @@
 .method public surfaceChangedSize(II)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->width:I
 
+    .line 2
     iput p2, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->height:I
 
+    .line 3
     invoke-virtual {p0, p1, p2}, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->onChanged(II)V
 
     return-void
@@ -626,9 +689,10 @@
 .method public useProgram()V
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/mediacodec/BaseRenderDrawer;->mProgram:I
 
-    invoke-static {p0}, Landroid/opengl/GLES20;->glUseProgram(I)V
+    invoke-static {p0}, Landroid/opengl/GLES30;->glUseProgram(I)V
 
     return-void
 .end method
@@ -636,7 +700,8 @@
 .method public viewPort(IIII)V
     .locals 0
 
-    invoke-static {p1, p2, p3, p4}, Landroid/opengl/GLES20;->glViewport(IIII)V
+    .line 1
+    invoke-static {p1, p2, p3, p4}, Landroid/opengl/GLES30;->glViewport(IIII)V
 
     return-void
 .end method

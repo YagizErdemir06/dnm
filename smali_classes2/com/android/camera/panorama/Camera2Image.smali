@@ -6,7 +6,16 @@
 # direct methods
 .method public constructor <init>(Landroid/media/Image;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "image"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/panorama/CaptureImage;-><init>(Landroid/media/Image;)V
 
     return-void
@@ -17,6 +26,7 @@
 .method public getHeight()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera/panorama/CaptureImage;->mImage:Landroid/media/Image;
 
     invoke-virtual {p0}, Landroid/media/Image;->getHeight()I
@@ -29,6 +39,7 @@
 .method public getImageFormat()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera/panorama/CaptureImage;->mImage:Landroid/media/Image;
 
     invoke-static {p0}, Lcom/android/camera/panorama/PanoramaGP3ImageFormat;->getImageFormat(Landroid/media/Image;)Ljava/lang/String;
@@ -41,6 +52,7 @@
 .method public getWidth()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera/panorama/CaptureImage;->mImage:Landroid/media/Image;
 
     invoke-virtual {p0}, Landroid/media/Image;->getWidth()I

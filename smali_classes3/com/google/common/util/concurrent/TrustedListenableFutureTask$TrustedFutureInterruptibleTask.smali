@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/TrustedListenableFutureTask$TrustedFutureInterruptibleTask;
+.class public final Lcom/google/common/util/concurrent/TrustedListenableFutureTask$TrustedFutureInterruptibleTask;
 .super Lcom/google/common/util/concurrent/InterruptibleTask;
 .source "SourceFile"
 
@@ -31,7 +31,7 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Lcom/google/common/util/concurrent/TrustedListenableFutureTask;
+.field public final synthetic this$0:Lcom/google/common/util/concurrent/TrustedListenableFutureTask;
 
 
 # direct methods
@@ -45,10 +45,12 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/TrustedListenableFutureTask$TrustedFutureInterruptibleTask;->this$0:Lcom/google/common/util/concurrent/TrustedListenableFutureTask;
 
     invoke-direct {p0}, Lcom/google/common/util/concurrent/InterruptibleTask;-><init>()V
 
+    .line 2
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -65,6 +67,7 @@
 .method public afterRanInterruptiblyFailure(Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/TrustedListenableFutureTask$TrustedFutureInterruptibleTask;->this$0:Lcom/google/common/util/concurrent/TrustedListenableFutureTask;
 
     invoke-virtual {p0, p1}, Lcom/google/common/util/concurrent/AbstractFuture;->setException(Ljava/lang/Throwable;)Z
@@ -84,6 +87,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/TrustedListenableFutureTask$TrustedFutureInterruptibleTask;->this$0:Lcom/google/common/util/concurrent/TrustedListenableFutureTask;
 
     invoke-virtual {p0, p1}, Lcom/google/common/util/concurrent/AbstractFuture;->set(Ljava/lang/Object;)Z
@@ -94,6 +98,7 @@
 .method public final isDone()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/TrustedListenableFutureTask$TrustedFutureInterruptibleTask;->this$0:Lcom/google/common/util/concurrent/TrustedListenableFutureTask;
 
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/FluentFuture$TrustedFuture;->isDone()Z
@@ -120,6 +125,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/TrustedListenableFutureTask$TrustedFutureInterruptibleTask;->callable:Ljava/util/concurrent/Callable;
 
     invoke-interface {p0}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
@@ -132,6 +138,7 @@
 .method public toPendingString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/TrustedListenableFutureTask$TrustedFutureInterruptibleTask;->callable:Ljava/util/concurrent/Callable;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;

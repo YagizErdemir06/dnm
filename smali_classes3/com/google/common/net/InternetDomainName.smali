@@ -66,6 +66,7 @@
 
     const-string v0, ".\u3002\uff0e\uff61"
 
+    .line 1
     invoke-static {v0}, Lcom/google/common/base/CharMatcher;->anyOf(Ljava/lang/CharSequence;)Lcom/google/common/base/CharMatcher;
 
     move-result-object v0
@@ -74,12 +75,14 @@
 
     const/16 v0, 0x2e
 
+    .line 2
     invoke-static {v0}, Lcom/google/common/base/Splitter;->on(C)Lcom/google/common/base/Splitter;
 
     move-result-object v1
 
     sput-object v1, Lcom/google/common/net/InternetDomainName;->DOT_SPLITTER:Lcom/google/common/base/Splitter;
 
+    .line 3
     invoke-static {v0}, Lcom/google/common/base/Joiner;->on(C)Lcom/google/common/base/Joiner;
 
     move-result-object v0
@@ -88,6 +91,7 @@
 
     const-string v0, "-_"
 
+    .line 4
     invoke-static {v0}, Lcom/google/common/base/CharMatcher;->anyOf(Ljava/lang/CharSequence;)Lcom/google/common/base/CharMatcher;
 
     move-result-object v0
@@ -98,6 +102,7 @@
 
     const/16 v2, 0x39
 
+    .line 5
     invoke-static {v1, v2}, Lcom/google/common/base/CharMatcher;->inRange(CC)Lcom/google/common/base/CharMatcher;
 
     move-result-object v1
@@ -108,6 +113,7 @@
 
     const/16 v3, 0x7a
 
+    .line 6
     invoke-static {v2, v3}, Lcom/google/common/base/CharMatcher;->inRange(CC)Lcom/google/common/base/CharMatcher;
 
     move-result-object v2
@@ -126,6 +132,7 @@
 
     sput-object v2, Lcom/google/common/net/InternetDomainName;->LETTER_MATCHER:Lcom/google/common/base/CharMatcher;
 
+    .line 7
     invoke-virtual {v1, v2}, Lcom/google/common/base/CharMatcher;->or(Lcom/google/common/base/CharMatcher;)Lcom/google/common/base/CharMatcher;
 
     move-result-object v1
@@ -142,8 +149,10 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 5
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     sget-object v0, Lcom/google/common/net/InternetDomainName;->DOTS_MATCHER:Lcom/google/common/base/CharMatcher;
 
     const/16 v1, 0x2e
@@ -158,6 +167,7 @@
 
     const-string v0, "."
 
+    .line 3
     invoke-virtual {p1, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -168,6 +178,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -178,6 +189,7 @@
 
     move-result-object p1
 
+    .line 5
     :cond_0
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -199,8 +211,10 @@
 
     invoke-static {v0, v3, p1}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;Ljava/lang/Object;)V
 
+    .line 6
     iput-object p1, p0, Lcom/google/common/net/InternetDomainName;->name:Ljava/lang/String;
 
+    .line 7
     sget-object v0, Lcom/google/common/net/InternetDomainName;->DOT_SPLITTER:Lcom/google/common/base/Splitter;
 
     invoke-virtual {v0, p1}, Lcom/google/common/base/Splitter;->split(Ljava/lang/CharSequence;)Ljava/lang/Iterable;
@@ -213,6 +227,7 @@
 
     iput-object v0, p0, Lcom/google/common/net/InternetDomainName;->parts:Lcom/google/common/collect/ImmutableList;
 
+    .line 8
     invoke-virtual {v0}, Ljava/util/AbstractCollection;->size()I
 
     move-result v3
@@ -231,6 +246,7 @@
 
     invoke-static {v1, v2, p1}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;Ljava/lang/Object;)V
 
+    .line 9
     invoke-static {v0}, Lcom/google/common/net/InternetDomainName;->validateSyntax(Ljava/util/List;)Z
 
     move-result v0
@@ -239,6 +255,7 @@
 
     invoke-static {v0, v1, p1}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;Ljava/lang/Object;)V
 
+    .line 10
     invoke-static {}, Lcom/google/common/base/Optional;->absent()Lcom/google/common/base/Optional;
 
     move-result-object p1
@@ -249,6 +266,7 @@
 
     iput p1, p0, Lcom/google/common/net/InternetDomainName;->publicSuffixIndex:I
 
+    .line 11
     sget-object p1, Lcom/google/thirdparty/publicsuffix/PublicSuffixType;->REGISTRY:Lcom/google/thirdparty/publicsuffix/PublicSuffixType;
 
     invoke-static {p1}, Lcom/google/common/base/Optional;->of(Ljava/lang/Object;)Lcom/google/common/base/Optional;
@@ -267,6 +285,7 @@
 .method private ancestor(I)Lcom/google/common/net/InternetDomainName;
     .locals 2
 
+    .line 1
     sget-object v0, Lcom/google/common/net/InternetDomainName;->DOT_JOINER:Lcom/google/common/base/Joiner;
 
     iget-object p0, p0, Lcom/google/common/net/InternetDomainName;->parts:Lcom/google/common/collect/ImmutableList;
@@ -301,6 +320,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/net/InternetDomainName;->parts:Lcom/google/common/collect/ImmutableList;
 
     invoke-virtual {v0}, Ljava/util/AbstractCollection;->size()I
@@ -312,6 +332,7 @@
     :goto_0
     if-ge v1, v0, :cond_3
 
+    .line 2
     sget-object v2, Lcom/google/common/net/InternetDomainName;->DOT_JOINER:Lcom/google/common/base/Joiner;
 
     iget-object v3, p0, Lcom/google/common/net/InternetDomainName;->parts:Lcom/google/common/collect/ImmutableList;
@@ -324,8 +345,10 @@
 
     move-result-object v2
 
+    .line 3
     sget-object v3, Lcom/google/thirdparty/publicsuffix/PublicSuffixPatterns;->EXACT:Lcom/google/common/collect/ImmutableMap;
 
+    .line 4
     invoke-virtual {v3, v2}, Lcom/google/common/collect/ImmutableMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
@@ -336,6 +359,7 @@
 
     move-result-object v3
 
+    .line 5
     invoke-static {p1, v3}, Lcom/google/common/net/InternetDomainName;->matchesType(Lcom/google/common/base/Optional;Lcom/google/common/base/Optional;)Z
 
     move-result v3
@@ -344,6 +368,7 @@
 
     return v1
 
+    .line 6
     :cond_0
     sget-object v3, Lcom/google/thirdparty/publicsuffix/PublicSuffixPatterns;->EXCLUDED:Lcom/google/common/collect/ImmutableMap;
 
@@ -357,6 +382,7 @@
 
     return v1
 
+    .line 7
     :cond_1
     invoke-static {p1, v2}, Lcom/google/common/net/InternetDomainName;->matchesWildcardSuffixType(Lcom/google/common/base/Optional;Ljava/lang/String;)Z
 
@@ -380,6 +406,7 @@
 .method public static from(Ljava/lang/String;)Lcom/google/common/net/InternetDomainName;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/net/InternetDomainName;
 
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -396,6 +423,7 @@
 .method public static isValid(Ljava/lang/String;)Z
     .locals 0
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Lcom/google/common/net/InternetDomainName;->from(Ljava/lang/String;)Lcom/google/common/net/InternetDomainName;
     :try_end_0
@@ -425,6 +453,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/base/Optional;->isPresent()Z
 
     move-result v0
@@ -447,7 +476,7 @@
 .end method
 
 .method private static matchesWildcardSuffixType(Lcom/google/common/base/Optional;Ljava/lang/String;)Z
-    .locals 2
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -459,6 +488,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/common/net/InternetDomainName;->DOT_SPLITTER:Lcom/google/common/base/Splitter;
 
     const/4 v1, 0x2
@@ -471,17 +501,19 @@
 
     move-result-object p1
 
+    .line 2
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
+
+    const/4 v2, 0x1
 
     if-ne v0, v1, :cond_0
 
     sget-object v0, Lcom/google/thirdparty/publicsuffix/PublicSuffixPatterns;->UNDER:Lcom/google/common/collect/ImmutableMap;
 
-    const/4 v1, 0x1
-
-    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    .line 3
+    invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -495,6 +527,7 @@
 
     move-result-object p1
 
+    .line 4
     invoke-static {p0, p1}, Lcom/google/common/net/InternetDomainName;->matchesType(Lcom/google/common/base/Optional;Lcom/google/common/base/Optional;)Z
 
     move-result p0
@@ -504,24 +537,25 @@
     goto :goto_0
 
     :cond_0
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
     :goto_0
-    return v1
+    return v2
 .end method
 
 .method private static validatePart(Ljava/lang/String;Z)Z
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
-    const/4 v2, 0x1
+    const/4 v2, 0x0
 
-    if-lt v0, v2, :cond_4
+    if-lt v0, v1, :cond_4
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -533,6 +567,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-static {}, Lcom/google/common/base/CharMatcher;->ascii()Lcom/google/common/base/CharMatcher;
 
@@ -542,6 +577,7 @@
 
     move-result-object v0
 
+    .line 3
     sget-object v3, Lcom/google/common/net/InternetDomainName;->PART_CHAR_MATCHER:Lcom/google/common/base/CharMatcher;
 
     invoke-virtual {v3, v0}, Lcom/google/common/base/CharMatcher;->matchesAllOf(Ljava/lang/CharSequence;)Z
@@ -550,12 +586,13 @@
 
     if-nez v0, :cond_1
 
-    return v1
+    return v2
 
+    .line 4
     :cond_1
     sget-object v0, Lcom/google/common/net/InternetDomainName;->DASH_MATCHER:Lcom/google/common/base/CharMatcher;
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
+    invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
 
@@ -565,11 +602,12 @@
 
     if-nez v3, :cond_4
 
+    .line 5
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v3
 
-    sub-int/2addr v3, v2
+    sub-int/2addr v3, v1
 
     invoke-virtual {p0, v3}, Ljava/lang/String;->charAt(I)C
 
@@ -586,9 +624,10 @@
     :cond_2
     if-eqz p1, :cond_3
 
+    .line 6
     sget-object p1, Lcom/google/common/net/InternetDomainName;->DIGIT_MATCHER:Lcom/google/common/base/CharMatcher;
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
+    invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result p0
 
@@ -598,14 +637,14 @@
 
     if-eqz p0, :cond_3
 
-    return v1
+    return v2
 
     :cond_3
-    return v2
+    return v1
 
     :cond_4
     :goto_0
-    return v1
+    return v2
 .end method
 
 .method private static validateSyntax(Ljava/util/List;)Z
@@ -619,6 +658,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -627,6 +667,7 @@
 
     sub-int/2addr v0, v1
 
+    .line 2
     invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -649,12 +690,14 @@
     :goto_0
     if-ge v2, v0, :cond_2
 
+    .line 3
     invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Ljava/lang/String;
 
+    .line 4
     invoke-static {v4, v3}, Lcom/google/common/net/InternetDomainName;->validatePart(Ljava/lang/String;Z)Z
 
     move-result v4
@@ -677,6 +720,7 @@
 .method public child(Ljava/lang/String;)Lcom/google/common/net/InternetDomainName;
     .locals 2
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -741,13 +785,16 @@
 
     return p0
 
+    .line 1
     :cond_0
     instance-of v0, p1, Lcom/google/common/net/InternetDomainName;
 
     if-eqz v0, :cond_1
 
+    .line 2
     check-cast p1, Lcom/google/common/net/InternetDomainName;
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/net/InternetDomainName;->name:Ljava/lang/String;
 
     iget-object p1, p1, Lcom/google/common/net/InternetDomainName;->name:Ljava/lang/String;
@@ -767,6 +814,7 @@
 .method public hasParent()Z
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/net/InternetDomainName;->parts:Lcom/google/common/collect/ImmutableList;
 
     invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
@@ -789,6 +837,7 @@
 .method public hasPublicSuffix()Z
     .locals 1
 
+    .line 1
     iget p0, p0, Lcom/google/common/net/InternetDomainName;->publicSuffixIndex:I
 
     const/4 v0, -0x1
@@ -809,6 +858,7 @@
 .method public hasRegistrySuffix()Z
     .locals 1
 
+    .line 1
     iget p0, p0, Lcom/google/common/net/InternetDomainName;->registrySuffixIndex:I
 
     const/4 v0, -0x1
@@ -829,6 +879,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/net/InternetDomainName;->name:Ljava/lang/String;
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -841,6 +892,7 @@
 .method public isPublicSuffix()Z
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/net/InternetDomainName;->publicSuffixIndex:I
 
     if-nez p0, :cond_0
@@ -859,6 +911,7 @@
 .method public isRegistrySuffix()Z
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/net/InternetDomainName;->registrySuffixIndex:I
 
     if-nez p0, :cond_0
@@ -877,6 +930,7 @@
 .method public isTopDomainUnderRegistrySuffix()Z
     .locals 1
 
+    .line 1
     iget p0, p0, Lcom/google/common/net/InternetDomainName;->registrySuffixIndex:I
 
     const/4 v0, 0x1
@@ -895,6 +949,7 @@
 .method public isTopPrivateDomain()Z
     .locals 1
 
+    .line 1
     iget p0, p0, Lcom/google/common/net/InternetDomainName;->publicSuffixIndex:I
 
     const/4 v0, 0x1
@@ -913,6 +968,7 @@
 .method public isUnderPublicSuffix()Z
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/net/InternetDomainName;->publicSuffixIndex:I
 
     if-lez p0, :cond_0
@@ -931,6 +987,7 @@
 .method public isUnderRegistrySuffix()Z
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/net/InternetDomainName;->registrySuffixIndex:I
 
     if-lez p0, :cond_0
@@ -949,18 +1006,20 @@
 .method public parent()Lcom/google/common/net/InternetDomainName;
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/net/InternetDomainName;->hasParent()Z
 
     move-result v0
 
-    const-string v1, "Domain \'%s\' has no parent"
+    iget-object v1, p0, Lcom/google/common/net/InternetDomainName;->name:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/google/common/net/InternetDomainName;->name:Ljava/lang/String;
+    const-string v2, "Domain \'%s\' has no parent"
 
-    invoke-static {v0, v1, v2}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/String;Ljava/lang/Object;)V
+    invoke-static {v0, v2, v1}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/String;Ljava/lang/Object;)V
 
     const/4 v0, 0x1
 
+    .line 2
     invoke-direct {p0, v0}, Lcom/google/common/net/InternetDomainName;->ancestor(I)Lcom/google/common/net/InternetDomainName;
 
     move-result-object p0
@@ -979,6 +1038,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/net/InternetDomainName;->parts:Lcom/google/common/collect/ImmutableList;
 
     return-object p0
@@ -989,6 +1049,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/net/InternetDomainName;->hasPublicSuffix()Z
 
     move-result v0
@@ -1015,6 +1076,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/net/InternetDomainName;->hasRegistrySuffix()Z
 
     move-result v0
@@ -1039,6 +1101,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/net/InternetDomainName;->name:Ljava/lang/String;
 
     return-object p0
@@ -1047,6 +1110,7 @@
 .method public topDomainUnderRegistrySuffix()Lcom/google/common/net/InternetDomainName;
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/net/InternetDomainName;->isTopDomainUnderRegistrySuffix()Z
 
     move-result v0
@@ -1055,17 +1119,19 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Lcom/google/common/net/InternetDomainName;->isUnderRegistrySuffix()Z
 
     move-result v0
 
-    const-string v1, "Not under a registry suffix: %s"
+    iget-object v1, p0, Lcom/google/common/net/InternetDomainName;->name:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/google/common/net/InternetDomainName;->name:Ljava/lang/String;
+    const-string v2, "Not under a registry suffix: %s"
 
-    invoke-static {v0, v1, v2}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/String;Ljava/lang/Object;)V
+    invoke-static {v0, v2, v1}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/String;Ljava/lang/Object;)V
 
+    .line 3
     iget v0, p0, Lcom/google/common/net/InternetDomainName;->registrySuffixIndex:I
 
     add-int/lit8 v0, v0, -0x1
@@ -1080,6 +1146,7 @@
 .method public topPrivateDomain()Lcom/google/common/net/InternetDomainName;
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/net/InternetDomainName;->isTopPrivateDomain()Z
 
     move-result v0
@@ -1088,17 +1155,19 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Lcom/google/common/net/InternetDomainName;->isUnderPublicSuffix()Z
 
     move-result v0
 
-    const-string v1, "Not under a public suffix: %s"
+    iget-object v1, p0, Lcom/google/common/net/InternetDomainName;->name:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/google/common/net/InternetDomainName;->name:Ljava/lang/String;
+    const-string v2, "Not under a public suffix: %s"
 
-    invoke-static {v0, v1, v2}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/String;Ljava/lang/Object;)V
+    invoke-static {v0, v2, v1}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/String;Ljava/lang/Object;)V
 
+    .line 3
     iget v0, p0, Lcom/google/common/net/InternetDomainName;->publicSuffixIndex:I
 
     add-int/lit8 v0, v0, -0x1

@@ -1,4 +1,4 @@
-.class final Lcom/google/common/hash/MessageDigestHashFunction$SerializedForm;
+.class public final Lcom/google/common/hash/MessageDigestHashFunction$SerializedForm;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -60,6 +60,7 @@
 .method private readResolve()Ljava/lang/Object;
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/common/hash/MessageDigestHashFunction;
 
     iget-object v1, p0, Lcom/google/common/hash/MessageDigestHashFunction$SerializedForm;->algorithmName:Ljava/lang/String;

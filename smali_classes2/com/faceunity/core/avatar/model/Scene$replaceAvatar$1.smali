@@ -1,9 +1,9 @@
-.class final Lcom/faceunity/core/avatar/model/Scene$replaceAvatar$1;
-.super Lkotlin/jvm/internal/n0;
+.class public final Lcom/faceunity/core/avatar/model/Scene$replaceAvatar$1;
+.super Lh/d3/x/n0;
 .source "SourceFile"
 
 # interfaces
-.implements Ljn/a;
+.implements Lh/d3/w/a;
 
 
 # annotations
@@ -18,19 +18,24 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lkotlin/jvm/internal/n0;",
-        "Ljn/a<",
-        "Lnm/l2;",
+        "Lh/d3/x/n0;",
+        "Lh/d3/w/a<",
+        "Lh/l2;",
         ">;"
     }
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
         "\u0000\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0003\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0001\u0010\u0002"
     }
     d2 = {
-        "Lnm/l2;",
+        "Lh/l2;",
         "invoke",
         "()V",
         "<anonymous>"
@@ -45,34 +50,34 @@
 
 
 # instance fields
-.field final synthetic $addAvatar:Lkotlin/jvm/internal/k1$h;
+.field public final synthetic $addAvatar:Lh/d3/x/k1$h;
 
-.field final synthetic $newAvatar:Lcom/faceunity/core/avatar/model/Avatar;
+.field public final synthetic $newAvatar:Lcom/faceunity/core/avatar/model/Avatar;
 
-.field final synthetic $oldAvatar:Lcom/faceunity/core/avatar/model/Avatar;
+.field public final synthetic $oldAvatar:Lcom/faceunity/core/avatar/model/Avatar;
 
-.field final synthetic $removeAvatar:Lkotlin/jvm/internal/k1$h;
+.field public final synthetic $removeAvatar:Lh/d3/x/k1$h;
 
-.field final synthetic this$0:Lcom/faceunity/core/avatar/model/Scene;
+.field public final synthetic this$0:Lcom/faceunity/core/avatar/model/Scene;
 
 
 # direct methods
-.method public constructor <init>(Lcom/faceunity/core/avatar/model/Scene;Lcom/faceunity/core/avatar/model/Avatar;Lkotlin/jvm/internal/k1$h;Lcom/faceunity/core/avatar/model/Avatar;Lkotlin/jvm/internal/k1$h;)V
+.method public constructor <init>(Lcom/faceunity/core/avatar/model/Scene;Lcom/faceunity/core/avatar/model/Avatar;Lh/d3/x/k1$h;Lcom/faceunity/core/avatar/model/Avatar;Lh/d3/x/k1$h;)V
     .locals 0
 
     iput-object p1, p0, Lcom/faceunity/core/avatar/model/Scene$replaceAvatar$1;->this$0:Lcom/faceunity/core/avatar/model/Scene;
 
     iput-object p2, p0, Lcom/faceunity/core/avatar/model/Scene$replaceAvatar$1;->$oldAvatar:Lcom/faceunity/core/avatar/model/Avatar;
 
-    iput-object p3, p0, Lcom/faceunity/core/avatar/model/Scene$replaceAvatar$1;->$removeAvatar:Lkotlin/jvm/internal/k1$h;
+    iput-object p3, p0, Lcom/faceunity/core/avatar/model/Scene$replaceAvatar$1;->$removeAvatar:Lh/d3/x/k1$h;
 
     iput-object p4, p0, Lcom/faceunity/core/avatar/model/Scene$replaceAvatar$1;->$newAvatar:Lcom/faceunity/core/avatar/model/Avatar;
 
-    iput-object p5, p0, Lcom/faceunity/core/avatar/model/Scene$replaceAvatar$1;->$addAvatar:Lkotlin/jvm/internal/k1$h;
+    iput-object p5, p0, Lcom/faceunity/core/avatar/model/Scene$replaceAvatar$1;->$addAvatar:Lh/d3/x/k1$h;
 
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Lkotlin/jvm/internal/n0;-><init>(I)V
+    invoke-direct {p0, p1}, Lh/d3/x/n0;-><init>(I)V
 
     return-void
 .end method
@@ -85,7 +90,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/avatar/model/Scene$replaceAvatar$1;->invoke()V
 
-    sget-object p0, Lnm/l2;->a:Lnm/l2;
+    sget-object p0, Lh/l2;->a:Lh/l2;
 
     return-object p0
 .end method
@@ -114,9 +119,9 @@
     if-eqz v2, :cond_0
 
     .line 4
-    iget-object v2, p0, Lcom/faceunity/core/avatar/model/Scene$replaceAvatar$1;->$removeAvatar:Lkotlin/jvm/internal/k1$h;
+    iget-object v2, p0, Lcom/faceunity/core/avatar/model/Scene$replaceAvatar$1;->$removeAvatar:Lh/d3/x/k1$h;
 
-    iput-object v0, v2, Lkotlin/jvm/internal/k1$h;->a:Ljava/lang/Object;
+    iput-object v0, v2, Lh/d3/x/k1$h;->c:Ljava/lang/Object;
 
     .line 5
     iget-object v2, p0, Lcom/faceunity/core/avatar/model/Scene$replaceAvatar$1;->this$0:Lcom/faceunity/core/avatar/model/Scene;
@@ -172,9 +177,9 @@
     if-nez v2, :cond_2
 
     .line 9
-    iget-object v1, p0, Lcom/faceunity/core/avatar/model/Scene$replaceAvatar$1;->$addAvatar:Lkotlin/jvm/internal/k1$h;
+    iget-object v1, p0, Lcom/faceunity/core/avatar/model/Scene$replaceAvatar$1;->$addAvatar:Lh/d3/x/k1$h;
 
-    iput-object v0, v1, Lkotlin/jvm/internal/k1$h;->a:Ljava/lang/Object;
+    iput-object v0, v1, Lh/d3/x/k1$h;->c:Ljava/lang/Object;
 
     .line 10
     iget-object p0, p0, Lcom/faceunity/core/avatar/model/Scene$replaceAvatar$1;->this$0:Lcom/faceunity/core/avatar/model/Scene;

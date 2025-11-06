@@ -4,20 +4,26 @@
 
 
 # annotations
-.annotation build Lin/h;
+.annotation build Lh/d3/h;
     name = "-InflaterSourceExtensions"
 .end annotation
 
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000\u0012\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\u001a\u0017\u0010\u0000\u001a\u00020\u0001*\u00020\u00022\u0008\u0008\u0002\u0010\u0003\u001a\u00020\u0004H\u0086\u0008\u00a8\u0006\u0005"
+        "\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u001a\u001e\u0010\u0004\u001a\u00020\u0003*\u00020\u00002\u0008\u0008\u0002\u0010\u0002\u001a\u00020\u0001H\u0086\u0008\u00a2\u0006\u0004\u0008\u0004\u0010\u0005\u00a8\u0006\u0006"
     }
     d2 = {
-        "inflate",
-        "Lokio/InflaterSource;",
         "Lokio/Source;",
-        "inflater",
         "Ljava/util/zip/Inflater;",
+        "inflater",
+        "Lokio/InflaterSource;",
+        "inflate",
+        "(Lokio/Source;Ljava/util/zip/Inflater;)Lokio/InflaterSource;",
         "okio"
     }
     k = 0x2
@@ -26,7 +32,6 @@
         0x5,
         0x1
     }
-    xi = 0x30
 .end annotation
 
 
@@ -34,24 +39,25 @@
 .method public static final inflate(Lokio/Source;Ljava/util/zip/Inflater;)Lokio/InflaterSource;
     .locals 1
     .param p0    # Lokio/Source;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p1    # Ljava/util/zip/Inflater;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "inflater"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     new-instance v0, Lokio/InflaterSource;
 
     invoke-direct {v0, p0, p1}, Lokio/InflaterSource;-><init>(Lokio/Source;Ljava/util/zip/Inflater;)V
@@ -66,6 +72,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 1
     new-instance p1, Ljava/util/zip/Inflater;
 
     invoke-direct {p1}, Ljava/util/zip/Inflater;-><init>()V
@@ -73,12 +80,13 @@
     :cond_0
     const-string p2, "<this>"
 
-    invoke-static {p0, p2}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p2}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string p2, "inflater"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 2
     new-instance p2, Lokio/InflaterSource;
 
     invoke-direct {p2, p0, p1}, Lokio/InflaterSource;-><init>(Lokio/Source;Ljava/util/zip/Inflater;)V

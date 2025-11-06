@@ -1,4 +1,4 @@
-.class interface abstract Landroidx/constraintlayout/core/Pools$Pool;
+.class public interface abstract Landroidx/constraintlayout/core/Pools$Pool;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

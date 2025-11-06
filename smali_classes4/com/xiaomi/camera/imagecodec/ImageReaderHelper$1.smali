@@ -1,4 +1,4 @@
-.class synthetic Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$1;
+.class public synthetic Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$com$xiaomi$camera$imagecodec$ImageReaderHelper$ImageReaderType:[I
+.field public static final synthetic $SwitchMap$com$xiaomi$camera$imagecodec$ImageReaderHelper$ImageReaderType:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;->values()[Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;
 
     move-result-object v0

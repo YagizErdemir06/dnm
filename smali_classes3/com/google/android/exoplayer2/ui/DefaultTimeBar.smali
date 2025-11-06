@@ -680,9 +680,9 @@
     iput-object v2, v0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->formatter:Ljava/util/Formatter;
 
     .line 82
-    new-instance v1, Lcom/google/android/exoplayer2/ui/a;
+    new-instance v1, Ld/j/a/b/y2/b;
 
-    invoke-direct {v1, v0}, Lcom/google/android/exoplayer2/ui/a;-><init>(Lcom/google/android/exoplayer2/ui/DefaultTimeBar;)V
+    invoke-direct {v1, v0}, Ld/j/a/b/y2/b;-><init>(Lcom/google/android/exoplayer2/ui/DefaultTimeBar;)V
 
     iput-object v1, v0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->stopScrubbingRunnable:Ljava/lang/Runnable;
 
@@ -745,9 +745,9 @@
     iput-object v1, v0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubberScalingAnimator:Landroid/animation/ValueAnimator;
 
     .line 89
-    new-instance v2, Lcom/google/android/exoplayer2/ui/b;
+    new-instance v2, Ld/j/a/b/y2/c;
 
-    invoke-direct {v2, v0}, Lcom/google/android/exoplayer2/ui/b;-><init>(Lcom/google/android/exoplayer2/ui/DefaultTimeBar;)V
+    invoke-direct {v2, v0}, Ld/j/a/b/y2/c;-><init>(Lcom/google/android/exoplayer2/ui/DefaultTimeBar;)V
 
     invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -783,22 +783,6 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/google/android/exoplayer2/ui/DefaultTimeBar;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->lambda$new$0()V
-
-    return-void
-.end method
-
-.method public static synthetic b(Lcom/google/android/exoplayer2/ui/DefaultTimeBar;Landroid/animation/ValueAnimator;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->lambda$new$1(Landroid/animation/ValueAnimator;)V
-
-    return-void
-.end method
-
 .method private static dpToPx(FI)I
     .locals 0
 
@@ -818,6 +802,7 @@
 .method private drawPlayhead(Landroid/graphics/Canvas;)V
     .locals 7
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->duration:J
 
     const-wide/16 v2, 0x0
@@ -828,6 +813,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubberBar:Landroid/graphics/Rect;
 
@@ -843,16 +829,19 @@
 
     move-result v0
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubberBar:Landroid/graphics/Rect;
 
     invoke-virtual {v1}, Landroid/graphics/Rect;->centerY()I
 
     move-result v1
 
+    .line 4
     iget-object v2, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubberDrawable:Landroid/graphics/drawable/Drawable;
 
     if-nez v2, :cond_4
 
+    .line 5
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubbing:Z
 
     if-nez v2, :cond_3
@@ -865,6 +854,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_1
     invoke-virtual {p0}, Landroid/view/View;->isEnabled()Z
 
@@ -881,6 +871,7 @@
 
     goto :goto_1
 
+    .line 7
     :cond_3
     :goto_0
     iget v2, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubberDraggedSize:I
@@ -888,6 +879,7 @@
     :goto_1
     int-to-float v2, v2
 
+    .line 8
     iget v3, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubberScale:F
 
     mul-float/2addr v2, v3
@@ -904,12 +896,14 @@
 
     int-to-float v2, v2
 
+    .line 9
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubberPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1, v2, p0}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
     goto :goto_2
 
+    .line 10
     :cond_4
     invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
@@ -923,6 +917,7 @@
 
     float-to-int v2, v2
 
+    .line 11
     iget-object v3, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubberDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
@@ -937,6 +932,7 @@
 
     float-to-int v3, v3
 
+    .line 12
     iget-object v4, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubberDrawable:Landroid/graphics/drawable/Drawable;
 
     div-int/lit8 v2, v2, 0x2
@@ -953,6 +949,7 @@
 
     invoke-virtual {v4, v5, v6, v0, v1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
+    .line 13
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubberDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
@@ -966,12 +963,14 @@
 
     move-object/from16 v0, p0
 
+    .line 1
     iget-object v1, v0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->progressBar:Landroid/graphics/Rect;
 
     invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
 
     move-result v1
 
+    .line 2
     iget-object v2, v0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->progressBar:Landroid/graphics/Rect;
 
     invoke-virtual {v2}, Landroid/graphics/Rect;->centerY()I
@@ -984,6 +983,7 @@
 
     add-int/2addr v1, v2
 
+    .line 3
     iget-wide v3, v0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->duration:J
 
     const-wide/16 v5, 0x0
@@ -992,6 +992,7 @@
 
     if-gtz v3, :cond_0
 
+    .line 4
     iget-object v3, v0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->progressBar:Landroid/graphics/Rect;
 
     iget v4, v3, Landroid/graphics/Rect;->left:I
@@ -1014,13 +1015,16 @@
 
     return-void
 
+    .line 5
     :cond_0
     iget-object v3, v0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->bufferedBar:Landroid/graphics/Rect;
 
     iget v4, v3, Landroid/graphics/Rect;->left:I
 
+    .line 6
     iget v3, v3, Landroid/graphics/Rect;->right:I
 
+    .line 7
     iget-object v5, v0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->progressBar:Landroid/graphics/Rect;
 
     iget v5, v5, Landroid/graphics/Rect;->left:I
@@ -1037,6 +1041,7 @@
 
     move-result v5
 
+    .line 8
     iget-object v6, v0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->progressBar:Landroid/graphics/Rect;
 
     iget v6, v6, Landroid/graphics/Rect;->right:I
@@ -1051,12 +1056,14 @@
 
     int-to-float v11, v1
 
+    .line 9
     iget-object v12, v0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->unplayedPaint:Landroid/graphics/Paint;
 
     move-object/from16 v7, p1
 
     invoke-virtual/range {v7 .. v12}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
+    .line 10
     :cond_1
     iget-object v5, v0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubberBar:Landroid/graphics/Rect;
 
@@ -1076,12 +1083,14 @@
 
     int-to-float v9, v1
 
+    .line 11
     iget-object v10, v0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->bufferedPaint:Landroid/graphics/Paint;
 
     move-object/from16 v5, p1
 
     invoke-virtual/range {v5 .. v10}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
+    .line 12
     :cond_2
     iget-object v3, v0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubberBar:Landroid/graphics/Rect;
 
@@ -1091,6 +1100,7 @@
 
     if-lez v3, :cond_3
 
+    .line 13
     iget-object v3, v0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubberBar:Landroid/graphics/Rect;
 
     iget v4, v3, Landroid/graphics/Rect;->left:I
@@ -1111,6 +1121,7 @@
 
     invoke-virtual/range {v5 .. v10}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
+    .line 14
     :cond_3
     iget v3, v0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->adGroupCount:I
 
@@ -1118,6 +1129,7 @@
 
     return-void
 
+    .line 15
     :cond_4
     iget-object v3, v0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->adGroupTimesMs:[J
 
@@ -1127,6 +1139,7 @@
 
     check-cast v3, [J
 
+    .line 16
     iget-object v4, v0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->playedAdGroups:[Z
 
     invoke-static {v4}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1135,6 +1148,7 @@
 
     check-cast v4, [Z
 
+    .line 17
     iget v5, v0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->adMarkerWidth:I
 
     div-int/lit8 v5, v5, 0x2
@@ -1143,11 +1157,13 @@
 
     move v7, v6
 
+    .line 18
     :goto_0
     iget v8, v0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->adGroupCount:I
 
     if-ge v7, v8, :cond_6
 
+    .line 19
     aget-wide v9, v3, v7
 
     const-wide/16 v11, 0x0
@@ -1158,8 +1174,10 @@
 
     move-result-wide v8
 
+    .line 20
     iget-object v10, v0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->progressBar:Landroid/graphics/Rect;
 
+    .line 21
     invoke-virtual {v10}, Landroid/graphics/Rect;->width()I
 
     move-result v10
@@ -1176,10 +1194,12 @@
 
     sub-int/2addr v8, v5
 
+    .line 22
     iget-object v9, v0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->progressBar:Landroid/graphics/Rect;
 
     iget v10, v9, Landroid/graphics/Rect;->left:I
 
+    .line 23
     invoke-virtual {v9}, Landroid/graphics/Rect;->width()I
 
     move-result v9
@@ -1198,6 +1218,7 @@
 
     add-int/2addr v10, v8
 
+    .line 24
     aget-boolean v8, v4, v7
 
     if-eqz v8, :cond_5
@@ -1216,6 +1237,7 @@
 
     int-to-float v13, v2
 
+    .line 25
     iget v8, v0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->adMarkerWidth:I
 
     add-int/2addr v10, v8
@@ -1239,6 +1261,7 @@
 .method private getPositionIncrement()J
     .locals 5
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->keyTimeIncrement:J
 
     const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
@@ -1247,6 +1270,7 @@
 
     if-nez v4, :cond_1
 
+    .line 2
     iget-wide v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->duration:J
 
     cmp-long v2, v0, v2
@@ -1272,6 +1296,7 @@
 .method private getProgressText()Ljava/lang/String;
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->formatBuilder:Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->formatter:Ljava/util/Formatter;
@@ -1288,6 +1313,7 @@
 .method private getScrubberPosition()J
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->progressBar:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
@@ -1306,6 +1332,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubberBar:Landroid/graphics/Rect;
 
@@ -1341,6 +1368,7 @@
 .method private isInSeekBar(FF)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->seekBounds:Landroid/graphics/Rect;
 
     float-to-int p1, p1
@@ -1359,6 +1387,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->stopScrubbing(Z)V
 
     return-void
@@ -1367,6 +1396,7 @@
 .method private synthetic lambda$new$1(Landroid/animation/ValueAnimator;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -1379,6 +1409,7 @@
 
     iput p1, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubberScale:F
 
+    .line 2
     iget-object p1, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->seekBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p0, p1}, Landroid/view/View;->invalidate(Landroid/graphics/Rect;)V
@@ -1389,6 +1420,7 @@
 .method private positionScrubber(F)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubberBar:Landroid/graphics/Rect;
 
     float-to-int p1, p1
@@ -1423,6 +1455,7 @@
 .method private resolveRelativeTouchPosition(Landroid/view/MotionEvent;)Landroid/graphics/Point;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->touchPosition:Landroid/graphics/Point;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
@@ -1439,6 +1472,7 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/graphics/Point;->set(II)V
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->touchPosition:Landroid/graphics/Point;
 
     return-object p0
@@ -1447,6 +1481,7 @@
 .method private scrubIncrementally(J)Z
     .locals 9
 
+    .line 1
     iget-wide v4, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->duration:J
 
     const-wide/16 v0, 0x0
@@ -1459,6 +1494,7 @@
 
     return v6
 
+    .line 2
     :cond_0
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubbing:Z
 
@@ -1478,6 +1514,7 @@
 
     const-wide/16 v2, 0x0
 
+    .line 3
     invoke-static/range {v0 .. v5}, Lcom/google/android/exoplayer2/util/Util;->constrainValue(JJJ)J
 
     move-result-wide p1
@@ -1488,18 +1525,22 @@
 
     return v6
 
+    .line 4
     :cond_2
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubbing:Z
 
     if-nez v0, :cond_3
 
+    .line 5
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->startScrubbing(J)V
 
     goto :goto_1
 
+    .line 6
     :cond_3
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->updateScrubbing(J)V
 
+    .line 7
     :goto_1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->update()V
 
@@ -1572,10 +1613,12 @@
         value = 0x1d
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->lastExclusionRectangle:Landroid/graphics/Rect;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result v0
@@ -1584,6 +1627,7 @@
 
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->lastExclusionRectangle:Landroid/graphics/Rect;
 
+    .line 3
     invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
 
     move-result v0
@@ -1592,6 +1636,7 @@
 
     return-void
 
+    .line 4
     :cond_0
     new-instance v0, Landroid/graphics/Rect;
 
@@ -1601,6 +1646,7 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->lastExclusionRectangle:Landroid/graphics/Rect;
 
+    .line 5
     invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
@@ -1613,22 +1659,28 @@
 .method private startScrubbing(J)V
     .locals 2
 
+    .line 1
     iput-wide p1, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubPosition:J
 
     const/4 v0, 0x1
 
+    .line 2
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubbing:Z
 
+    .line 3
     invoke-virtual {p0, v0}, Landroid/view/View;->setPressed(Z)V
 
+    .line 4
     invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
+    .line 5
     invoke-interface {v1, v0}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
+    .line 6
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
@@ -1649,6 +1701,7 @@
 
     check-cast v1, Lcom/google/android/exoplayer2/ui/TimeBar$OnScrubListener;
 
+    .line 7
     invoke-interface {v1, p0, p1, p2}, Lcom/google/android/exoplayer2/ui/TimeBar$OnScrubListener;->onScrubStart(Lcom/google/android/exoplayer2/ui/TimeBar;J)V
 
     goto :goto_0
@@ -1660,27 +1713,34 @@
 .method private stopScrubbing(Z)V
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->stopScrubbingRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     const/4 v0, 0x0
 
+    .line 2
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubbing:Z
 
+    .line 3
     invoke-virtual {p0, v0}, Landroid/view/View;->setPressed(Z)V
 
+    .line 4
     invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
+    .line 5
     invoke-interface {v1, v0}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
+    .line 6
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
+    .line 7
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
@@ -1700,6 +1760,7 @@
 
     check-cast v1, Lcom/google/android/exoplayer2/ui/TimeBar$OnScrubListener;
 
+    .line 8
     iget-wide v2, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubPosition:J
 
     invoke-interface {v1, p0, v2, v3, p1}, Lcom/google/android/exoplayer2/ui/TimeBar$OnScrubListener;->onScrubStop(Lcom/google/android/exoplayer2/ui/TimeBar;JZ)V
@@ -1713,18 +1774,21 @@
 .method private update()V
     .locals 6
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->bufferedBar:Landroid/graphics/Rect;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->progressBar:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubberBar:Landroid/graphics/Rect;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->progressBar:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
+    .line 3
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubbing:Z
 
     if-eqz v0, :cond_0
@@ -1736,6 +1800,7 @@
     :cond_0
     iget-wide v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->position:J
 
+    .line 4
     :goto_0
     iget-wide v2, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->duration:J
 
@@ -1745,6 +1810,7 @@
 
     if-lez v2, :cond_1
 
+    .line 5
     iget-object v2, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->progressBar:Landroid/graphics/Rect;
 
     invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
@@ -1763,6 +1829,7 @@
 
     long-to-int v2, v2
 
+    .line 6
     iget-object v3, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->bufferedBar:Landroid/graphics/Rect;
 
     iget-object v4, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->progressBar:Landroid/graphics/Rect;
@@ -1779,6 +1846,7 @@
 
     iput v2, v3, Landroid/graphics/Rect;->right:I
 
+    .line 7
     iget-object v2, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->progressBar:Landroid/graphics/Rect;
 
     invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
@@ -1795,6 +1863,7 @@
 
     long-to-int v0, v2
 
+    .line 8
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubberBar:Landroid/graphics/Rect;
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->progressBar:Landroid/graphics/Rect;
@@ -1813,6 +1882,7 @@
 
     goto :goto_1
 
+    .line 9
     :cond_1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->bufferedBar:Landroid/graphics/Rect;
 
@@ -1822,10 +1892,12 @@
 
     iput v1, v0, Landroid/graphics/Rect;->right:I
 
+    .line 10
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubberBar:Landroid/graphics/Rect;
 
     iput v1, v0, Landroid/graphics/Rect;->right:I
 
+    .line 11
     :goto_1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->seekBounds:Landroid/graphics/Rect;
 
@@ -1837,10 +1909,12 @@
 .method private updateDrawableState()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubberDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->isStateful()Z
 
     move-result v0
@@ -1849,6 +1923,7 @@
 
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubberDrawable:Landroid/graphics/drawable/Drawable;
 
+    .line 3
     invoke-virtual {p0}, Landroid/view/View;->getDrawableState()[I
 
     move-result-object v1
@@ -1859,6 +1934,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     :cond_0
@@ -1868,6 +1944,7 @@
 .method private updateScrubbing(J)V
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubPosition:J
 
     cmp-long v0, v0, p1
@@ -1876,9 +1953,11 @@
 
     return-void
 
+    .line 2
     :cond_0
     iput-wide p1, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubPosition:J
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
@@ -1898,6 +1977,7 @@
 
     check-cast v1, Lcom/google/android/exoplayer2/ui/TimeBar$OnScrubListener;
 
+    .line 4
     invoke-interface {v1, p0, p1, p2}, Lcom/google/android/exoplayer2/ui/TimeBar$OnScrubListener;->onScrubMove(Lcom/google/android/exoplayer2/ui/TimeBar;J)V
 
     goto :goto_0
@@ -1908,11 +1988,21 @@
 
 
 # virtual methods
+.method public synthetic a()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->lambda$new$0()V
+
+    return-void
+.end method
+
 .method public addListener(Lcom/google/android/exoplayer2/ui/TimeBar$OnScrubListener;)V
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {p0, p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
@@ -1920,11 +2010,21 @@
     return-void
 .end method
 
+.method public synthetic b(Landroid/animation/ValueAnimator;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->lambda$new$1(Landroid/animation/ValueAnimator;)V
+
+    return-void
+.end method
+
 .method public drawableStateChanged()V
     .locals 0
 
+    .line 1
     invoke-super {p0}, Landroid/view/View;->drawableStateChanged()V
 
+    .line 2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->updateDrawableState()V
 
     return-void
@@ -1933,6 +2033,7 @@
 .method public getPreferredUpdateDelay()J
     .locals 5
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->density:F
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->progressBar:Landroid/graphics/Rect;
@@ -1947,6 +2048,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 2
     iget-wide v1, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->duration:J
 
     const-wide/16 v3, 0x0
@@ -1966,6 +2068,7 @@
     :cond_0
     int-to-long v3, v0
 
+    .line 3
     div-long/2addr v1, v3
 
     goto :goto_1
@@ -2067,12 +2170,15 @@
 .method public jumpDrawablesToCurrentState()V
     .locals 0
 
+    .line 1
     invoke-super {p0}, Landroid/view/View;->jumpDrawablesToCurrentState()V
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubberDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->jumpToCurrentState()V
 
     :cond_0
@@ -2082,12 +2188,16 @@
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->drawTimeBar(Landroid/graphics/Canvas;)V
 
+    .line 3
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->drawPlayhead(Landroid/graphics/Canvas;)V
 
+    .line 4
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     return-void
@@ -2100,8 +2210,10 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1, p2, p3}, Landroid/view/View;->onFocusChanged(ZILandroid/graphics/Rect;)V
 
+    .line 2
     iget-boolean p2, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubbing:Z
 
     if-eqz p2, :cond_0
@@ -2110,6 +2222,7 @@
 
     const/4 p1, 0x0
 
+    .line 3
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->stopScrubbing(Z)V
 
     :cond_0
@@ -2119,8 +2232,10 @@
 .method public onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
     .locals 2
 
+    .line 1
     invoke-super {p0, p1}, Landroid/view/View;->onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
+    .line 2
     invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityEvent;->getEventType()I
 
     move-result v0
@@ -2129,7 +2244,8 @@
 
     if-ne v0, v1, :cond_0
 
-    invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityRecord;->getText()Ljava/util/List;
+    .line 3
+    invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityEvent;->getText()Ljava/util/List;
 
     move-result-object v0
 
@@ -2142,7 +2258,8 @@
     :cond_0
     const-string p0, "android.widget.SeekBar"
 
-    invoke-virtual {p1, p0}, Landroid/view/accessibility/AccessibilityRecord;->setClassName(Ljava/lang/CharSequence;)V
+    .line 4
+    invoke-virtual {p1, p0}, Landroid/view/accessibility/AccessibilityEvent;->setClassName(Ljava/lang/CharSequence;)V
 
     return-void
 .end method
@@ -2150,18 +2267,22 @@
 .method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
     .locals 4
 
+    .line 1
     invoke-super {p0, p1}, Landroid/view/View;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
     const-string v0, "android.widget.SeekBar"
 
+    .line 2
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setClassName(Ljava/lang/CharSequence;)V
 
+    .line 3
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->getProgressText()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setContentDescription(Ljava/lang/CharSequence;)V
 
+    .line 4
     iget-wide v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->duration:J
 
     const-wide/16 v2, 0x0
@@ -2172,6 +2293,7 @@
 
     return-void
 
+    .line 5
     :cond_0
     sget p0, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
@@ -2179,10 +2301,12 @@
 
     if-lt p0, v0, :cond_1
 
+    .line 6
     sget-object p0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_SCROLL_FORWARD:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
 
     invoke-virtual {p1, p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->addAction(Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;)V
 
+    .line 7
     sget-object p0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_SCROLL_BACKWARD:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
 
     invoke-virtual {p1, p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->addAction(Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;)V
@@ -2192,10 +2316,12 @@
     :cond_1
     const/16 p0, 0x1000
 
+    .line 8
     invoke-virtual {p1, p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->addAction(I)V
 
     const/16 p0, 0x2000
 
+    .line 9
     invoke-virtual {p1, p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->addAction(I)V
 
     :goto_0
@@ -2205,12 +2331,14 @@
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->isEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->getPositionIncrement()J
 
     move-result-wide v0
@@ -2228,6 +2356,7 @@
     :pswitch_0
     neg-long v0, v0
 
+    .line 3
     :pswitch_1
     invoke-direct {p0, v0, v1}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubIncrementally(J)Z
 
@@ -2235,10 +2364,12 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     iget-object p1, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->stopScrubbingRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, p1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
+    .line 5
     iget-object p1, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->stopScrubbingRunnable:Ljava/lang/Runnable;
 
     const-wide/16 v0, 0x3e8
@@ -2247,6 +2378,7 @@
 
     return v3
 
+    .line 6
     :cond_0
     :pswitch_2
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubbing:Z
@@ -2255,10 +2387,12 @@
 
     const/4 p1, 0x0
 
+    .line 7
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->stopScrubbing(Z)V
 
     return v3
 
+    .line 8
     :cond_1
     :goto_0
     invoke-super {p0, p1, p2}, Landroid/view/View;->onKeyDown(ILandroid/view/KeyEvent;)Z
@@ -2284,16 +2418,19 @@
 
     sub-int/2addr p5, p3
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
 
     move-result p1
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
 
     move-result p2
 
     sub-int p2, p4, p2
 
+    .line 3
     iget-boolean p3, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubberPaddingDisabled:Z
 
     const/4 v0, 0x0
@@ -2307,6 +2444,7 @@
     :cond_0
     iget p3, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubberPadding:I
 
+    .line 4
     :goto_0
     iget v1, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->barGravity:I
 
@@ -2314,6 +2452,7 @@
 
     if-ne v1, v2, :cond_1
 
+    .line 5
     invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
 
     move-result v1
@@ -2324,6 +2463,7 @@
 
     sub-int/2addr v1, v2
 
+    .line 6
     invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
 
     move-result v2
@@ -2346,6 +2486,7 @@
 
     goto :goto_1
 
+    .line 7
     :cond_1
     iget v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->touchTargetHeight:I
 
@@ -2353,12 +2494,14 @@
 
     div-int/lit8 v1, v0, 0x2
 
+    .line 8
     iget v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->barHeight:I
 
     sub-int v0, p5, v0
 
     div-int/lit8 v2, v0, 0x2
 
+    .line 9
     :goto_1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->seekBounds:Landroid/graphics/Rect;
 
@@ -2368,6 +2511,7 @@
 
     invoke-virtual {v0, p1, v1, p2, v3}, Landroid/graphics/Rect;->set(IIII)V
 
+    .line 10
     iget-object p1, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->progressBar:Landroid/graphics/Rect;
 
     iget-object p2, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->seekBounds:Landroid/graphics/Rect;
@@ -2386,14 +2530,17 @@
 
     invoke-virtual {p1, v0, v2, p2, p3}, Landroid/graphics/Rect;->set(IIII)V
 
+    .line 11
     sget p1, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
     const/16 p2, 0x1d
 
     if-lt p1, p2, :cond_2
 
+    .line 12
     invoke-direct {p0, p4, p5}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->setSystemGestureExclusionRectsV29(II)V
 
+    .line 13
     :cond_2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->update()V
 
@@ -2403,16 +2550,19 @@
 .method public onMeasure(II)V
     .locals 2
 
+    .line 1
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
     move-result v0
 
+    .line 2
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result p2
 
     if-nez v0, :cond_0
 
+    .line 3
     iget p2, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->touchTargetHeight:I
 
     goto :goto_0
@@ -2424,6 +2574,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     iget v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->touchTargetHeight:I
 
@@ -2431,6 +2582,7 @@
 
     move-result p2
 
+    .line 5
     :goto_0
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
@@ -2438,6 +2590,7 @@
 
     invoke-virtual {p0, p1, p2}, Landroid/view/View;->setMeasuredDimension(II)V
 
+    .line 6
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->updateDrawableState()V
 
     return-void
@@ -2446,6 +2599,7 @@
 .method public onRtlPropertiesChanged(I)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubberDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
@@ -2456,6 +2610,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     :cond_0
@@ -2465,6 +2620,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 7
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->isEnabled()Z
 
     move-result v0
@@ -2483,15 +2639,19 @@
 
     goto :goto_1
 
+    .line 2
     :cond_0
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->resolveRelativeTouchPosition(Landroid/view/MotionEvent;)Landroid/graphics/Point;
 
     move-result-object v0
 
+    .line 3
     iget v2, v0, Landroid/graphics/Point;->x:I
 
+    .line 4
     iget v0, v0, Landroid/graphics/Point;->y:I
 
+    .line 5
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v3
@@ -2512,19 +2672,23 @@
 
     goto :goto_1
 
+    .line 6
     :cond_1
     iget-boolean p1, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubbing:Z
 
     if-eqz p1, :cond_6
 
+    .line 7
     iget p1, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->fineScrubYThreshold:I
 
     if-ge v0, p1, :cond_2
 
+    .line 8
     iget p1, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->lastCoarseScrubXPosition:I
 
     sub-int/2addr v2, p1
 
+    .line 9
     div-int/2addr v2, v5
 
     add-int/2addr p1, v2
@@ -2535,13 +2699,16 @@
 
     goto :goto_0
 
+    .line 10
     :cond_2
     iput v2, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->lastCoarseScrubXPosition:I
 
     int-to-float p1, v2
 
+    .line 11
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->positionScrubber(F)V
 
+    .line 12
     :goto_0
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->getScrubberPosition()J
 
@@ -2549,17 +2716,21 @@
 
     invoke-direct {p0, v0, v1}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->updateScrubbing(J)V
 
+    .line 13
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->update()V
 
+    .line 14
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     return v4
 
+    .line 15
     :cond_3
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubbing:Z
 
     if-eqz v0, :cond_6
 
+    .line 16
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result p1
@@ -2578,22 +2749,27 @@
 
     int-to-float v0, v0
 
+    .line 17
     invoke-direct {p0, p1, v0}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->isInSeekBar(FF)Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
+    .line 18
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->positionScrubber(F)V
 
+    .line 19
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->getScrubberPosition()J
 
     move-result-wide v0
 
     invoke-direct {p0, v0, v1}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->startScrubbing(J)V
 
+    .line 20
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->update()V
 
+    .line 21
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     return v4
@@ -2610,6 +2786,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroid/view/View;->performAccessibilityAction(ILandroid/os/Bundle;)Z
 
     move-result p2
@@ -2620,6 +2797,7 @@
 
     return v0
 
+    .line 2
     :cond_0
     iget-wide v1, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->duration:J
 
@@ -2638,6 +2816,7 @@
 
     if-ne p1, p2, :cond_2
 
+    .line 3
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->getPositionIncrement()J
 
     move-result-wide p1
@@ -2650,6 +2829,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 4
     invoke-direct {p0, v1}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->stopScrubbing(Z)V
 
     goto :goto_0
@@ -2659,6 +2839,7 @@
 
     if-ne p1, p2, :cond_4
 
+    .line 5
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->getPositionIncrement()J
 
     move-result-wide p1
@@ -2669,12 +2850,14 @@
 
     if-eqz p1, :cond_3
 
+    .line 6
     invoke-direct {p0, v1}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->stopScrubbing(Z)V
 
     :cond_3
     :goto_0
     const/4 p1, 0x4
 
+    .line 7
     invoke-virtual {p0, p1}, Landroid/view/View;->sendAccessibilityEvent(I)V
 
     return v0
@@ -2686,6 +2869,7 @@
 .method public removeListener(Lcom/google/android/exoplayer2/ui/TimeBar$OnScrubListener;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {p0, p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->remove(Ljava/lang/Object;)Z
@@ -2721,15 +2905,20 @@
     :goto_0
     const/4 v0, 0x1
 
+    .line 1
     :goto_1
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 2
     iput p3, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->adGroupCount:I
 
+    .line 3
     iput-object p1, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->adGroupTimesMs:[J
 
+    .line 4
     iput-object p2, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->playedAdGroups:[Z
 
+    .line 5
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->update()V
 
     return-void
@@ -2742,10 +2931,12 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->adMarkerPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 2
     iget-object p1, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->seekBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p0, p1}, Landroid/view/View;->invalidate(Landroid/graphics/Rect;)V
@@ -2760,10 +2951,12 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->bufferedPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 2
     iget-object p1, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->seekBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p0, p1}, Landroid/view/View;->invalidate(Landroid/graphics/Rect;)V
@@ -2774,6 +2967,7 @@
 .method public setBufferedPosition(J)V
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->bufferedPosition:J
 
     cmp-long v0, v0, p1
@@ -2782,9 +2976,11 @@
 
     return-void
 
+    .line 2
     :cond_0
     iput-wide p1, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->bufferedPosition:J
 
+    .line 3
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->update()V
 
     return-void
@@ -2793,6 +2989,7 @@
 .method public setDuration(J)V
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->duration:J
 
     cmp-long v0, v0, p1
@@ -2801,9 +2998,11 @@
 
     return-void
 
+    .line 2
     :cond_0
     iput-wide p1, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->duration:J
 
+    .line 3
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubbing:Z
 
     if-eqz v0, :cond_1
@@ -2816,8 +3015,10 @@
 
     const/4 p1, 0x1
 
+    .line 4
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->stopScrubbing(Z)V
 
+    .line 5
     :cond_1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->update()V
 
@@ -2827,8 +3028,10 @@
 .method public setEnabled(Z)V
     .locals 1
 
+    .line 1
     invoke-super {p0, p1}, Landroid/view/View;->setEnabled(Z)V
 
+    .line 2
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubbing:Z
 
     if-eqz v0, :cond_0
@@ -2837,6 +3040,7 @@
 
     const/4 p1, 0x1
 
+    .line 3
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->stopScrubbing(Z)V
 
     :cond_0
@@ -2855,13 +3059,16 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->keyCountIncrement:I
 
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 3
     iput-wide v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->keyTimeIncrement:J
 
     return-void
@@ -2883,13 +3090,16 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
     const/4 v0, -0x1
 
+    .line 2
     iput v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->keyCountIncrement:I
 
+    .line 3
     iput-wide p1, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->keyTimeIncrement:J
 
     return-void
@@ -2902,10 +3112,12 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->playedAdMarkerPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 2
     iget-object p1, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->seekBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p0, p1}, Landroid/view/View;->invalidate(Landroid/graphics/Rect;)V
@@ -2920,10 +3132,12 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->playedPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 2
     iget-object p1, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->seekBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p0, p1}, Landroid/view/View;->invalidate(Landroid/graphics/Rect;)V
@@ -2934,6 +3148,7 @@
 .method public setPosition(J)V
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->position:J
 
     cmp-long v0, v0, p1
@@ -2942,15 +3157,18 @@
 
     return-void
 
+    .line 2
     :cond_0
     iput-wide p1, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->position:J
 
+    .line 3
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->getProgressText()Ljava/lang/String;
 
     move-result-object p1
 
     invoke-virtual {p0, p1}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
+    .line 4
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->update()V
 
     return-void
@@ -2963,10 +3181,12 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->scrubberPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 2
     iget-object p1, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->seekBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p0, p1}, Landroid/view/View;->invalidate(Landroid/graphics/Rect;)V
@@ -2981,10 +3201,12 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->unplayedPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 2
     iget-object p1, p0, Lcom/google/android/exoplayer2/ui/DefaultTimeBar;->seekBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p0, p1}, Landroid/view/View;->invalidate(Landroid/graphics/Rect;)V

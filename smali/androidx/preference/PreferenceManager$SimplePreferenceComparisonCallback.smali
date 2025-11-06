@@ -18,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroidx/preference/PreferenceManager$PreferenceComparisonCallback;-><init>()V
 
     return-void
@@ -27,15 +28,8 @@
 # virtual methods
 .method public arePreferenceContentsTheSame(Landroidx/preference/Preference;Landroidx/preference/Preference;)Z
     .locals 2
-    .param p1    # Landroidx/preference/Preference;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroidx/preference/Preference;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p0
@@ -53,6 +47,7 @@
     :cond_0
     if-ne p1, p2, :cond_1
 
+    .line 2
     invoke-virtual {p1}, Landroidx/preference/Preference;->wasDetached()Z
 
     move-result p0
@@ -61,6 +56,7 @@
 
     return v1
 
+    .line 3
     :cond_1
     invoke-virtual {p1}, Landroidx/preference/Preference;->getTitle()Ljava/lang/CharSequence;
 
@@ -78,6 +74,7 @@
 
     return v1
 
+    .line 4
     :cond_2
     invoke-virtual {p1}, Landroidx/preference/Preference;->getSummary()Ljava/lang/CharSequence;
 
@@ -95,11 +92,13 @@
 
     return v1
 
+    .line 5
     :cond_3
     invoke-virtual {p1}, Landroidx/preference/Preference;->getIcon()Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
 
+    .line 6
     invoke-virtual {p2}, Landroidx/preference/Preference;->getIcon()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -108,6 +107,7 @@
 
     if-eqz p0, :cond_4
 
+    .line 7
     invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -117,6 +117,7 @@
     :cond_4
     return v1
 
+    .line 8
     :cond_5
     invoke-virtual {p1}, Landroidx/preference/Preference;->isEnabled()Z
 
@@ -130,6 +131,7 @@
 
     return v1
 
+    .line 9
     :cond_6
     invoke-virtual {p1}, Landroidx/preference/Preference;->isSelectable()Z
 
@@ -143,11 +145,13 @@
 
     return v1
 
+    .line 10
     :cond_7
     instance-of p0, p1, Landroidx/preference/TwoStatePreference;
 
     if-eqz p0, :cond_8
 
+    .line 11
     move-object p0, p1
 
     check-cast p0, Landroidx/preference/TwoStatePreference;
@@ -160,6 +164,7 @@
 
     check-cast v0, Landroidx/preference/TwoStatePreference;
 
+    .line 12
     invoke-virtual {v0}, Landroidx/preference/TwoStatePreference;->isChecked()Z
 
     move-result v0
@@ -168,6 +173,7 @@
 
     return v1
 
+    .line 13
     :cond_8
     instance-of p0, p1, Landroidx/preference/DropDownPreference;
 
@@ -185,15 +191,8 @@
 
 .method public arePreferenceItemsTheSame(Landroidx/preference/Preference;Landroidx/preference/Preference;)Z
     .locals 2
-    .param p1    # Landroidx/preference/Preference;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroidx/preference/Preference;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 
+    .line 1
     invoke-virtual {p1}, Landroidx/preference/Preference;->getId()J
 
     move-result-wide p0

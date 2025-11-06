@@ -109,6 +109,7 @@
 .method public final getCurrentVolume()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/media/VolumeProviderCompat;->mCurrentVolume:I
 
     return p0
@@ -117,6 +118,7 @@
 .method public final getMaxVolume()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/media/VolumeProviderCompat;->mMaxVolume:I
 
     return p0
@@ -125,6 +127,7 @@
 .method public final getVolumeControl()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/media/VolumeProviderCompat;->mControlType:I
 
     return p0
@@ -141,6 +144,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/media/VolumeProviderCompat;->mControlId:Ljava/lang/String;
 
     return-object p0
@@ -149,16 +153,19 @@
 .method public getVolumeProvider()Ljava/lang/Object;
     .locals 8
 
+    .line 1
     iget-object v0, p0, Landroidx/media/VolumeProviderCompat;->mVolumeProviderFwk:Landroid/media/VolumeProvider;
 
     if-nez v0, :cond_1
 
+    .line 2
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1e
 
     if-lt v0, v1, :cond_0
 
+    .line 3
     new-instance v0, Landroidx/media/VolumeProviderCompat$1;
 
     iget v4, p0, Landroidx/media/VolumeProviderCompat;->mControlType:I
@@ -180,6 +187,11 @@
     goto :goto_0
 
     :cond_0
+    const/16 v1, 0x15
+
+    if-lt v0, v1, :cond_1
+
+    .line 4
     new-instance v0, Landroidx/media/VolumeProviderCompat$2;
 
     iget v1, p0, Landroidx/media/VolumeProviderCompat;->mControlType:I
@@ -192,6 +204,7 @@
 
     iput-object v0, p0, Landroidx/media/VolumeProviderCompat;->mVolumeProviderFwk:Landroid/media/VolumeProvider;
 
+    .line 5
     :cond_1
     :goto_0
     iget-object p0, p0, Landroidx/media/VolumeProviderCompat;->mVolumeProviderFwk:Landroid/media/VolumeProvider;
@@ -238,13 +251,14 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroidx/media/VolumeProviderCompat;->mCallback:Landroidx/media/VolumeProviderCompat$Callback;
 
     return-void
 .end method
 
 .method public final setCurrentVolume(I)V
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0
@@ -254,22 +268,35 @@
         }
     .end annotation
 
+    .line 1
     iput p1, p0, Landroidx/media/VolumeProviderCompat;->mCurrentVolume:I
 
+    .line 2
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x15
+
+    if-lt v0, v1, :cond_0
+
+    .line 3
     invoke-virtual {p0}, Landroidx/media/VolumeProviderCompat;->getVolumeProvider()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/media/VolumeProvider;
 
+    .line 4
     invoke-static {v0, p1}, Landroidx/media/VolumeProviderCompat$Api21Impl;->setCurrentVolume(Landroid/media/VolumeProvider;I)V
 
+    .line 5
+    :cond_0
     iget-object p1, p0, Landroidx/media/VolumeProviderCompat;->mCallback:Landroidx/media/VolumeProviderCompat$Callback;
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_1
 
+    .line 6
     invoke-virtual {p1, p0}, Landroidx/media/VolumeProviderCompat$Callback;->onVolumeChanged(Landroidx/media/VolumeProviderCompat;)V
 
-    :cond_0
+    :cond_1
     return-void
 .end method

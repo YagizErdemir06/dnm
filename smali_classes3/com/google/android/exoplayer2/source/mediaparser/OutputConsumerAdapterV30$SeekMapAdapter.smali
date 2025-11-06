@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30$SeekMapAdapter;
+.class public final Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30$SeekMapAdapter;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -25,8 +25,10 @@
 .method public constructor <init>(Landroid/media/MediaParser$SeekMap;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30$SeekMapAdapter;->adaptedSeekMap:Landroid/media/MediaParser$SeekMap;
 
     return-void
@@ -35,6 +37,7 @@
 .method private static asExoPlayerSeekPoint(Landroid/media/MediaParser$SeekPoint;)Lcom/google/android/exoplayer2/extractor/SeekPoint;
     .locals 5
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/extractor/SeekPoint;
 
     iget-wide v1, p0, Landroid/media/MediaParser$SeekPoint;->timeMicros:J
@@ -51,6 +54,7 @@
 .method public getDurationUs()J
     .locals 4
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30$SeekMapAdapter;->adaptedSeekMap:Landroid/media/MediaParser$SeekMap;
 
     invoke-virtual {p0}, Landroid/media/MediaParser$SeekMap;->getDurationMicros()J
@@ -75,18 +79,22 @@
 .method public getSeekPoints(J)Lcom/google/android/exoplayer2/extractor/SeekMap$SeekPoints;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30$SeekMapAdapter;->adaptedSeekMap:Landroid/media/MediaParser$SeekMap;
 
+    .line 2
     invoke-virtual {p0, p1, p2}, Landroid/media/MediaParser$SeekMap;->getSeekPoints(J)Landroid/util/Pair;
 
     move-result-object p0
 
+    .line 3
     iget-object p1, p0, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     iget-object p2, p0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     if-ne p1, p2, :cond_0
 
+    .line 4
     new-instance p0, Lcom/google/android/exoplayer2/extractor/SeekMap$SeekPoints;
 
     check-cast p1, Landroid/media/MediaParser$SeekPoint;
@@ -99,11 +107,13 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     new-instance p2, Lcom/google/android/exoplayer2/extractor/SeekMap$SeekPoints;
 
     check-cast p1, Landroid/media/MediaParser$SeekPoint;
 
+    .line 6
     invoke-static {p1}, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30$SeekMapAdapter;->asExoPlayerSeekPoint(Landroid/media/MediaParser$SeekPoint;)Lcom/google/android/exoplayer2/extractor/SeekPoint;
 
     move-result-object p1
@@ -127,6 +137,7 @@
 .method public isSeekable()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/mediaparser/OutputConsumerAdapterV30$SeekMapAdapter;->adaptedSeekMap:Landroid/media/MediaParser$SeekMap;
 
     invoke-virtual {p0}, Landroid/media/MediaParser$SeekMap;->isSeekable()Z

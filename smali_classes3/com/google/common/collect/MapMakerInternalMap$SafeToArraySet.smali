@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/collect/MapMakerInternalMap$SafeToArraySet;
+.class public abstract Lcom/google/common/collect/MapMakerInternalMap$SafeToArraySet;
 .super Ljava/util/AbstractSet;
 .source "SourceFile"
 

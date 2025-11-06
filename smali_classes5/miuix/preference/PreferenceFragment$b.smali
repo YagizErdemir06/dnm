@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lmiuix/preference/PreferenceFragment;->ei(Ljava/lang/String;)V
+    value = Lmiuix/preference/PreferenceFragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,18 +18,27 @@
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/String;
+.field public final synthetic c:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
-.field public final synthetic b:Lmiuix/preference/PreferenceFragment;
+.field public final synthetic d:I
+
+.field public final synthetic f:I
+
+.field public final synthetic g:Lmiuix/preference/PreferenceFragment;
 
 
 # direct methods
-.method public constructor <init>(Lmiuix/preference/PreferenceFragment;Ljava/lang/String;)V
+.method public constructor <init>(Lmiuix/preference/PreferenceFragment;Landroidx/recyclerview/widget/RecyclerView$LayoutManager;II)V
     .locals 0
 
-    iput-object p1, p0, Lmiuix/preference/PreferenceFragment$b;->b:Lmiuix/preference/PreferenceFragment;
+    .line 1
+    iput-object p1, p0, Lmiuix/preference/PreferenceFragment$b;->g:Lmiuix/preference/PreferenceFragment;
 
-    iput-object p2, p0, Lmiuix/preference/PreferenceFragment$b;->a:Ljava/lang/String;
+    iput-object p2, p0, Lmiuix/preference/PreferenceFragment$b;->c:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
+
+    iput p3, p0, Lmiuix/preference/PreferenceFragment$b;->d:I
+
+    iput p4, p0, Lmiuix/preference/PreferenceFragment$b;->f:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,33 +47,46 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public onGlobalLayout()V
+    .locals 3
 
-    iget-object v0, p0, Lmiuix/preference/PreferenceFragment$b;->b:Lmiuix/preference/PreferenceFragment;
+    .line 1
+    iget-object v0, p0, Lmiuix/preference/PreferenceFragment$b;->c:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
-    invoke-static {v0}, Lmiuix/preference/PreferenceFragment;->Hh(Lmiuix/preference/PreferenceFragment;)Lmiuix/preference/b;
+    const/4 v1, 0x0
 
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lmiuix/preference/PreferenceFragment$b;->b:Lmiuix/preference/PreferenceFragment;
-
-    invoke-static {v0}, Lmiuix/preference/PreferenceFragment;->Hh(Lmiuix/preference/PreferenceFragment;)Lmiuix/preference/b;
+    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    iget-object v1, p0, Lmiuix/preference/PreferenceFragment$b;->b:Lmiuix/preference/PreferenceFragment;
+    if-nez v0, :cond_0
 
-    invoke-virtual {v1}, Landroidx/preference/PreferenceFragmentCompat;->getListView()Landroidx/recyclerview/widget/RecyclerView;
+    return-void
 
-    move-result-object v1
-
-    iget-object p0, p0, Lmiuix/preference/PreferenceFragment$b;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, p0}, Lmiuix/preference/b;->N(Landroidx/recyclerview/widget/RecyclerView;Ljava/lang/String;)V
-
+    .line 2
     :cond_0
+    iget-object v0, p0, Lmiuix/preference/PreferenceFragment$b;->c:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
+
+    check-cast v0, Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    iget v1, p0, Lmiuix/preference/PreferenceFragment$b;->d:I
+
+    iget v2, p0, Lmiuix/preference/PreferenceFragment$b;->f:I
+
+    invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/LinearLayoutManager;->scrollToPositionWithOffset(II)V
+
+    .line 3
+    iget-object v0, p0, Lmiuix/preference/PreferenceFragment$b;->g:Lmiuix/preference/PreferenceFragment;
+
+    invoke-virtual {v0}, Landroidx/preference/PreferenceFragmentCompat;->getListView()Landroidx/recyclerview/widget/RecyclerView;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
+
     return-void
 .end method

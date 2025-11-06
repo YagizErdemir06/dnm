@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/text/webvtt/WebvttSubtitle;
+.class public final Lcom/google/android/exoplayer2/text/webvtt/WebvttSubtitle;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -34,8 +34,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
@@ -46,6 +48,7 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttSubtitle;->cueInfos:Ljava/util/List;
 
+    .line 3
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -58,6 +61,7 @@
 
     const/4 v0, 0x0
 
+    .line 4
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -65,6 +69,7 @@
 
     if-ge v0, v1, :cond_0
 
+    .line 5
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -73,6 +78,7 @@
 
     mul-int/lit8 v2, v0, 0x2
 
+    .line 6
     iget-object v3, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttSubtitle;->cueTimesUs:[J
 
     iget-wide v4, v1, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueInfo;->startTimeUs:J
@@ -81,6 +87,7 @@
 
     add-int/lit8 v2, v2, 0x1
 
+    .line 7
     iget-wide v4, v1, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueInfo;->endTimeUs:J
 
     aput-wide v4, v3, v2
@@ -89,6 +96,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_0
     iget-object p1, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttSubtitle;->cueTimesUs:[J
 
@@ -100,24 +108,16 @@
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttSubtitle;->sortedCueTimesUs:[J
 
+    .line 9
     invoke-static {p1}, Ljava/util/Arrays;->sort([J)V
 
     return-void
 .end method
 
-.method public static synthetic a(Lcom/google/android/exoplayer2/text/webvtt/WebvttCueInfo;Lcom/google/android/exoplayer2/text/webvtt/WebvttCueInfo;)I
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/google/android/exoplayer2/text/webvtt/WebvttSubtitle;->lambda$getCues$0(Lcom/google/android/exoplayer2/text/webvtt/WebvttCueInfo;Lcom/google/android/exoplayer2/text/webvtt/WebvttCueInfo;)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method private static synthetic lambda$getCues$0(Lcom/google/android/exoplayer2/text/webvtt/WebvttCueInfo;Lcom/google/android/exoplayer2/text/webvtt/WebvttCueInfo;)I
+.method public static synthetic lambda$getCues$0(Lcom/google/android/exoplayer2/text/webvtt/WebvttCueInfo;Lcom/google/android/exoplayer2/text/webvtt/WebvttCueInfo;)I
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueInfo;->startTimeUs:J
 
     iget-wide p0, p1, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueInfo;->startTimeUs:J
@@ -142,10 +142,12 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 2
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
@@ -154,6 +156,7 @@
 
     move v3, v2
 
+    .line 3
     :goto_0
     iget-object v4, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttSubtitle;->cueInfos:Ljava/util/List;
 
@@ -163,6 +166,7 @@
 
     if-ge v3, v4, :cond_2
 
+    .line 4
     iget-object v4, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttSubtitle;->cueTimesUs:[J
 
     mul-int/lit8 v5, v3, 0x2
@@ -181,6 +185,7 @@
 
     if-gez v4, :cond_1
 
+    .line 5
     iget-object v4, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttSubtitle;->cueInfos:Ljava/util/List;
 
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -189,6 +194,7 @@
 
     check-cast v4, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueInfo;
 
+    .line 6
     iget-object v5, v4, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueInfo;->cue:Lcom/google/android/exoplayer2/text/Cue;
 
     iget v6, v5, Lcom/google/android/exoplayer2/text/Cue;->line:F
@@ -199,10 +205,12 @@
 
     if-nez v6, :cond_0
 
+    .line 7
     invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
+    .line 8
     :cond_0
     invoke-interface {v0, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -212,13 +220,13 @@
 
     goto :goto_0
 
+    .line 9
     :cond_2
-    new-instance p0, Lcom/google/android/exoplayer2/text/webvtt/b;
-
-    invoke-direct {p0}, Lcom/google/android/exoplayer2/text/webvtt/b;-><init>()V
+    sget-object p0, Ld/j/a/b/w2/d/b;->c:Ld/j/a/b/w2/d/b;
 
     invoke-static {v1, p0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
+    .line 10
     :goto_2
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -226,6 +234,7 @@
 
     if-ge v2, p0, :cond_3
 
+    .line 11
     invoke-interface {v1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -234,6 +243,7 @@
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueInfo;->cue:Lcom/google/android/exoplayer2/text/Cue;
 
+    .line 12
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/text/Cue;->buildUpon()Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     move-result-object p0
@@ -278,9 +288,11 @@
     :cond_0
     move v2, v1
 
+    .line 1
     :goto_0
     invoke-static {v2}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 2
     iget-object v2, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttSubtitle;->sortedCueTimesUs:[J
 
     array-length v2, v2
@@ -295,6 +307,7 @@
     :goto_1
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttSubtitle;->sortedCueTimesUs:[J
 
     aget-wide p0, p0, p1
@@ -305,6 +318,7 @@
 .method public getEventTimeCount()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttSubtitle;->sortedCueTimesUs:[J
 
     array-length p0, p0
@@ -315,6 +329,7 @@
 .method public getNextEventTimeIndex(J)I
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttSubtitle;->sortedCueTimesUs:[J
 
     const/4 v1, 0x0
@@ -323,6 +338,7 @@
 
     move-result p1
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttSubtitle;->sortedCueTimesUs:[J
 
     array-length p0, p0

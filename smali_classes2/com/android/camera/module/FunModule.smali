@@ -1,11 +1,11 @@
 .class public Lcom/android/camera/module/FunModule;
-.super Lq7/b6;
+.super Ld/d/a/d7/e8;
 .source "SourceFile"
 
 # interfaces
-.implements Lv8/l1;
-.implements Lv8/f1;
-.implements Lya/a$m;
+.implements Ld/d/a/m7/g/o1;
+.implements Ld/d/a/m7/g/i1;
+.implements Ld/d/b/f4$m;
 .implements Landroidx/lifecycle/LifecycleOwner;
 
 
@@ -19,27 +19,37 @@
 
 
 # static fields
-.field public static final ca:J = 0x1c2L
+.field private static final y9:J = 0x1c2L
 
-.field public static final da:I = 0x1e
+.field private static final z9:I = 0x1e
 
 
 # instance fields
-.field public R9:Landroid/os/CountDownTimer;
+.field private A9:Ld/d/a/d7/j8/f;
 
-.field public S9:J
+.field private B9:Ld/d/a/d7/j8/c;
 
-.field public T9:I
+.field private C9:Ld/d/a/d7/j8/e;
 
-.field public U9:Lo9/c;
+.field private D9:Ld/d/a/d7/j8/e;
 
-.field public V9:Z
+.field private E9:Ld/d/a/d8/x1;
 
-.field public W9:F
+.field private F9:Landroid/os/CountDownTimer;
 
-.field public final X9:[F
+.field private G9:J
 
-.field public Y9:Ljava/util/ArrayList;
+.field private H9:I
+
+.field private I9:Ld/d/a/w7/b0/c;
+
+.field private J9:Z
+
+.field private K9:F
+
+.field private final L9:[F
+
+.field private M9:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -49,78 +59,75 @@
     .end annotation
 .end field
 
-.field public final Z9:Ls7/d$a;
+.field private final N9:Ld/d/a/d7/j8/d$a;
 
-.field public aa:Landroid/util/SparseArray;
+.field private O9:Landroid/util/SparseArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/SparseArray<",
-            "Lz7/j;",
+            "Ld/d/a/d7/n8/a/j;",
             ">;"
         }
     .end annotation
 .end field
 
-.field public ba:Landroidx/lifecycle/LifecycleRegistry;
-
-.field public p8:Ls7/c;
-
-.field public p9:Ls7/e;
-
-.field public q7:Ls7/f;
-
-.field public q8:Ls7/e;
-
-.field public q9:Lcom/android/camera/ui/a1;
+.field private P9:Landroidx/lifecycle/LifecycleRegistry;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     const-class v0, Lcom/android/camera/module/FunModule;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Lq7/b6;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Ld/d/a/d7/e8;-><init>(Ljava/lang/String;)V
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    iput v0, p0, Lcom/android/camera/module/FunModule;->W9:F
+    .line 2
+    iput v0, p0, Lcom/android/camera/module/FunModule;->K9:F
 
     const/4 v0, 0x5
 
     new-array v0, v0, [F
 
+    .line 3
     fill-array-data v0, :array_0
 
-    iput-object v0, p0, Lcom/android/camera/module/FunModule;->X9:[F
+    iput-object v0, p0, Lcom/android/camera/module/FunModule;->L9:[F
 
+    .line 4
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/camera/module/FunModule;->Y9:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/camera/module/FunModule;->M9:Ljava/util/ArrayList;
 
+    .line 5
     new-instance v0, Lcom/android/camera/module/FunModule$f;
 
     invoke-direct {v0, p0}, Lcom/android/camera/module/FunModule$f;-><init>(Lcom/android/camera/module/FunModule;)V
 
-    iput-object v0, p0, Lcom/android/camera/module/FunModule;->Z9:Ls7/d$a;
+    iput-object v0, p0, Lcom/android/camera/module/FunModule;->N9:Ld/d/a/d7/j8/d$a;
 
+    .line 6
     new-instance v0, Landroidx/lifecycle/LifecycleRegistry;
 
     invoke-direct {v0, p0}, Landroidx/lifecycle/LifecycleRegistry;-><init>(Landroidx/lifecycle/LifecycleOwner;)V
 
-    iput-object v0, p0, Lcom/android/camera/module/FunModule;->ba:Landroidx/lifecycle/LifecycleRegistry;
+    iput-object v0, p0, Lcom/android/camera/module/FunModule;->P9:Landroidx/lifecycle/LifecycleRegistry;
 
-    iget-object p0, p0, Lq7/b6;->v1:Lg8/u0;
+    .line 7
+    iget-object p0, p0, Ld/d/a/d7/e8;->g9:Ld/d/a/d7/r8/x0;
 
     const/4 v0, 0x2
 
-    iput v0, p0, Lg8/u0;->p:I
+    iput v0, p0, Ld/d/a/d7/r8/x0;->q:I
 
     return-void
 
@@ -134,30 +141,406 @@
     .end array-data
 .end method
 
-.method private synthetic Fm()V
+.method public static synthetic Hl(Lcom/android/camera/module/FunModule;)F
+    .locals 0
+
+    .line 1
+    iget p0, p0, Lcom/android/camera/module/FunModule;->K9:F
+
+    return p0
+.end method
+
+.method private Ll()Z
+    .locals 12
+
+    .line 1
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->R1()Ld/d/b/f4;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    .line 2
+    sget-object p0, Ld/d/a/d7/e8;->d9:Ljava/lang/String;
+
+    new-array v0, v1, [Ljava/lang/Object;
+
+    const-string v2, "initializeRecorder: null camera"
+
+    invoke-static {p0, v2, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return v1
+
+    .line 3
+    :cond_0
+    sget-object v0, Ld/d/a/d7/e8;->d9:Ljava/lang/String;
+
+    const-string v2, "initializeRecorder"
+
+    invoke-static {v0, v2}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 4
+    invoke-virtual {p0}, Ld/d/a/d7/e8;->y8()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 5
+    iget-object v0, p0, Ld/d/a/d7/p7;->K8:Lcom/android/camera/Camera;
+
+    invoke-virtual {v0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Ld/d/a/d7/e8;->hl(Landroid/content/Intent;)V
+
+    .line 6
+    :cond_1
+    iget-object v0, p0, Ld/d/a/d7/e8;->f9:Ld/d/a/d7/r8/s0;
+
+    iget-object v2, p0, Ld/d/a/d7/p7;->s:Ld/d/a/d7/i8/k;
+
+    invoke-interface {v2}, Ld/d/a/d7/i8/k;->getOrientation()I
+
+    move-result v2
+
+    iput v2, v0, Ld/d/a/d7/r8/s0;->j:I
+
+    .line 7
+    :try_start_0
+    invoke-direct {p0}, Lcom/android/camera/module/FunModule;->Vl()V
+
+    .line 8
+    iget-object v0, p0, Ld/d/a/d7/e8;->o9:Landroid/net/Uri;
+
+    if-eqz v0, :cond_2
+
+    .line 9
+    new-instance v2, Ld/d/a/d7/j8/e;
+
+    invoke-direct {v2, v0}, Ld/d/a/d7/j8/e;-><init>(Landroid/net/Uri;)V
+
+    iput-object v2, p0, Lcom/android/camera/module/FunModule;->C9:Ld/d/a/d7/j8/e;
+
+    goto :goto_0
+
+    .line 10
+    :cond_2
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    .line 11
+    iget-object v0, p0, Ld/d/a/d7/e8;->g9:Ld/d/a/d7/r8/x0;
+
+    const/4 v4, -0x1
+
+    iget-object v5, v0, Ld/d/a/d7/r8/x0;->p:Ljava/lang/String;
+
+    invoke-static {v2, v3, v4, v5}, Ld/d/a/d7/r8/c1;->b(JILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    iput-object v2, v0, Ld/d/a/d7/r8/x0;->p:Ljava/lang/String;
+
+    .line 12
+    iget-object v0, p0, Ld/d/a/d7/e8;->g9:Ld/d/a/d7/r8/x0;
+
+    iget v4, v0, Ld/d/a/d7/r8/x0;->q:I
+
+    const/4 v5, -0x1
+
+    iget-object v6, v0, Ld/d/a/d7/r8/x0;->p:Ljava/lang/String;
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x1
+
+    const/4 v10, 0x0
+
+    move-object v3, v0
+
+    invoke-static/range {v3 .. v10}, Ld/d/a/d7/r8/c1;->d(Ld/d/a/d7/r8/x0;IILjava/lang/String;Ljava/lang/String;ZZZ)Landroid/content/ContentValues;
+
+    move-result-object v2
+
+    iput-object v2, v0, Ld/d/a/d7/r8/x0;->o:Landroid/content/ContentValues;
+
+    .line 13
+    iget-object v0, p0, Ld/d/a/d7/e8;->g9:Ld/d/a/d7/r8/x0;
+
+    iget-object v2, v0, Ld/d/a/d7/r8/x0;->o:Landroid/content/ContentValues;
+
+    const-string v3, "_data"
+
+    invoke-virtual {v2, v3}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    iput-object v2, v0, Ld/d/a/d7/r8/x0;->s:Ljava/lang/String;
+
+    .line 14
+    iget-object v0, p0, Ld/d/a/d7/e8;->g9:Ld/d/a/d7/r8/x0;
+
+    iget-object v0, v0, Ld/d/a/d7/r8/x0;->s:Ljava/lang/String;
+
+    invoke-static {v0}, Ld/d/a/a7/a/b/a;->y(Ljava/lang/String;)Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/android/camera/module/FunModule;->J9:Z
+
+    if-eqz v0, :cond_3
+
+    .line 15
+    new-instance v0, Ld/d/a/w7/b0/c;
+
+    invoke-static {}, Lcom/android/camera/CameraAppImpl;->d()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-direct {v0, v2}, Ld/d/a/w7/b0/c;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/android/camera/module/FunModule;->I9:Ld/d/a/w7/b0/c;
+
+    const/4 v2, 0x0
+
+    .line 16
+    invoke-virtual {v0, v1, v2}, Ld/d/a/w7/b0/c;->k(ZLandroid/content/Intent;)V
+
+    .line 17
+    iget-object v0, p0, Lcom/android/camera/module/FunModule;->I9:Ld/d/a/w7/b0/c;
+
+    iget-object v2, p0, Ld/d/a/d7/e8;->g9:Ld/d/a/d7/r8/x0;
+
+    iget-object v2, v2, Ld/d/a/d7/r8/x0;->o:Landroid/content/ContentValues;
+
+    invoke-virtual {v0, v2}, Ld/d/a/w7/b0/c;->r(Landroid/content/ContentValues;)V
+
+    .line 18
+    new-instance v0, Ld/d/a/d7/j8/e;
+
+    iget-object v2, p0, Lcom/android/camera/module/FunModule;->I9:Ld/d/a/w7/b0/c;
+
+    invoke-virtual {v2}, Ld/d/a/w7/b0/c;->l()Landroid/net/Uri;
+
+    move-result-object v2
+
+    invoke-direct {v0, v2}, Ld/d/a/d7/j8/e;-><init>(Landroid/net/Uri;)V
+
+    iput-object v0, p0, Lcom/android/camera/module/FunModule;->C9:Ld/d/a/d7/j8/e;
+
+    goto :goto_0
+
+    .line 19
+    :cond_3
+    new-instance v0, Ld/d/a/d7/j8/e;
+
+    iget-object v2, p0, Ld/d/a/d7/e8;->g9:Ld/d/a/d7/r8/x0;
+
+    iget-object v2, v2, Ld/d/a/d7/r8/x0;->s:Ljava/lang/String;
+
+    invoke-direct {v0, v2}, Ld/d/a/d7/j8/e;-><init>(Ljava/lang/String;)V
+
+    iput-object v0, p0, Lcom/android/camera/module/FunModule;->C9:Ld/d/a/d7/j8/e;
+
+    .line 20
+    :goto_0
+    new-instance v0, Ld/d/a/d7/j8/f;
+
+    .line 21
+    invoke-virtual {p0}, Ld/d/a/d7/p7;->u0()Lcom/android/camera/Camera;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/android/camera/ActivityBase;->Hc()Ld/d/a/d8/x1;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ld/d/a/d8/x1;->w()Landroid/opengl/EGLContext;
+
+    move-result-object v4
+
+    sget-object v6, Ld/o/g0/f0;->c:Ld/o/g0/f0;
+
+    const/4 v7, 0x0
+
+    iget-object v8, p0, Lcom/android/camera/module/FunModule;->C9:Ld/d/a/d7/j8/e;
+
+    iget-object v9, p0, Lcom/android/camera/module/FunModule;->N9:Ld/d/a/d7/j8/d$a;
+
+    iget-object v2, p0, Ld/d/a/d7/e8;->g9:Ld/d/a/d7/r8/x0;
+
+    iget-object v2, v2, Ld/d/a/d7/r8/x0;->d:Ld/d/a/e4;
+
+    iget v10, v2, Ld/d/a/e4;->c:I
+
+    iget v11, v2, Ld/d/a/e4;->d:I
+
+    move-object v3, v0
+
+    move-object v5, v6
+
+    invoke-direct/range {v3 .. v11}, Ld/d/a/d7/j8/f;-><init>(Landroid/opengl/EGLContext;Ld/o/g0/f0;Ld/o/g0/f0;Ljava/lang/String;Ld/d/a/d7/j8/e;Ld/d/a/d7/j8/d$a;II)V
+
+    iput-object v0, p0, Lcom/android/camera/module/FunModule;->A9:Ld/d/a/d7/j8/f;
+
+    .line 22
+    new-instance v0, Ld/d/a/d7/j8/c;
+
+    iget-object v2, p0, Lcom/android/camera/module/FunModule;->C9:Ld/d/a/d7/j8/e;
+
+    iget-object v3, p0, Lcom/android/camera/module/FunModule;->N9:Ld/d/a/d7/j8/d$a;
+
+    invoke-direct {v0, v2, v3}, Ld/d/a/d7/j8/c;-><init>(Ld/d/a/d7/j8/e;Ld/d/a/d7/j8/d$a;)V
+
+    iput-object v0, p0, Lcom/android/camera/module/FunModule;->B9:Ld/d/a/d7/j8/c;
+
+    .line 23
+    iget-object v0, p0, Lcom/android/camera/module/FunModule;->A9:Ld/d/a/d7/j8/f;
+
+    iget v2, p0, Lcom/android/camera/module/FunModule;->K9:F
+
+    invoke-virtual {v0, v2}, Ld/d/a/d7/j8/d;->h(F)V
+
+    .line 24
+    iget-object v0, p0, Lcom/android/camera/module/FunModule;->B9:Ld/d/a/d7/j8/c;
+
+    iget v2, p0, Lcom/android/camera/module/FunModule;->K9:F
+
+    invoke-virtual {v0, v2}, Ld/d/a/d7/j8/d;->h(F)V
+
+    .line 25
+    iget-object v0, p0, Lcom/android/camera/module/FunModule;->C9:Ld/d/a/d7/j8/e;
+
+    invoke-virtual {v0}, Ld/d/a/d7/j8/e;->f()V
+
+    .line 26
+    sget-object v0, Ld/d/a/d7/e8;->d9:Ljava/lang/String;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "rotation: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Ld/d/a/d7/p7;->s:Ld/d/a/d7/i8/k;
+
+    invoke-interface {v3}, Ld/d/a/d7/i8/k;->a()I
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    new-array v3, v1, [Ljava/lang/Object;
+
+    invoke-static {v0, v2, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 27
+    iget-object v0, p0, Lcom/android/camera/module/FunModule;->C9:Ld/d/a/d7/j8/e;
+
+    iget-object p0, p0, Ld/d/a/d7/p7;->s:Ld/d/a/d7/i8/k;
+
+    invoke-interface {p0}, Ld/d/a/d7/i8/k;->a()I
+
+    move-result p0
+
+    invoke-virtual {v0, p0}, Ld/d/a/d7/j8/e;->h(I)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :catch_0
+    move-exception p0
+
+    .line 28
+    sget-object v0, Ld/d/a/d7/e8;->d9:Ljava/lang/String;
+
+    const-string v2, "initializeRecorder: "
+
+    invoke-static {v0, v2, p0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return v1
+.end method
+
+.method private Ml()Z
+    .locals 0
+    .annotation build Ld/d/a/x6/d;
+        ignore = false
+        key = "isSupportedMovieSolid"
+        type = 0x0
+    .end annotation
+
+    .line 1
+    iget-object p0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    invoke-interface {p0}, Ld/d/a/d7/i8/s;->q1()Z
+
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    .line 2
+    invoke-static {}, Ld/d/a/d4;->E4()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+.end method
+
+.method private synthetic Nl()V
     .locals 1
 
-    sget-object v0, Le2/b0;->g1:[I
+    .line 1
+    sget-object v0, Ld/d/a/j6/a0;->g1:[I
 
-    invoke-virtual {p0, v0}, Lq7/i0;->Oa([I)V
+    invoke-virtual {p0, v0}, Ld/d/a/d7/p7;->Ha([I)V
 
     return-void
 .end method
 
-.method public static synthetic Gm(Lv8/n1;)V
+.method public static synthetic Pl(Ld/d/a/m7/g/q1;)V
     .locals 1
 
     const/4 v0, 0x1
 
-    invoke-interface {p0, v0}, Lv8/d1;->setFocusViewType(Z)V
+    .line 1
+    invoke-interface {p0, v0}, Ld/d/a/m7/g/g1;->setFocusViewType(Z)V
 
     return-void
 .end method
 
-.method private synthetic Hm()V
+.method private synthetic Ql()V
     .locals 1
 
-    iget-object p0, p0, Lcom/android/camera/module/FunModule;->ba:Landroidx/lifecycle/LifecycleRegistry;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/module/FunModule;->P9:Landroidx/lifecycle/LifecycleRegistry;
 
     sget-object v0, Landroidx/lifecycle/Lifecycle$Event;->ON_DESTROY:Landroidx/lifecycle/Lifecycle$Event;
 
@@ -166,53 +549,1396 @@
     return-void
 .end method
 
-.method public static synthetic wm(Lcom/android/camera/module/FunModule;)V
-    .locals 0
+.method private Sl()V
+    .locals 1
 
-    invoke-direct {p0}, Lcom/android/camera/module/FunModule;->Hm()V
+    const/4 v0, 0x1
+
+    .line 1
+    invoke-virtual {p0, v0}, Ld/d/a/d7/p7;->Y(Z)V
+
+    .line 2
+    invoke-static {}, Ld/d/a/d7/o7;->d()V
+
+    .line 3
+    invoke-static {}, Ld/d/a/m7/g/l2;->impl2()Ld/d/a/m7/g/l2;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    .line 4
+    invoke-interface {p0}, Ld/d/a/m7/g/l2;->Z()V
+
+    :cond_0
+    return-void
+.end method
+
+.method private Tl()V
+    .locals 8
+
+    const/4 v0, 0x1
+
+    .line 1
+    invoke-virtual {p0, v0}, Ld/d/a/d7/p7;->Y(Z)V
+
+    .line 2
+    invoke-virtual {p0}, Ld/d/a/d7/p7;->Of()Ld/d/a/k8/a0;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ld/d/a/k8/a0;->v6()V
+
+    .line 3
+    iget-object v1, p0, Ld/d/a/d7/p7;->K8:Lcom/android/camera/Camera;
+
+    new-instance v2, Landroid/content/Intent;
+
+    const-string v3, "com.android.camera.action.start_video_recording"
+
+    invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v2}, Landroid/app/Activity;->sendBroadcast(Landroid/content/Intent;)V
+
+    .line 4
+    iget-object v1, p0, Ld/d/a/d7/e8;->f9:Ld/d/a/d7/r8/s0;
+
+    iput-boolean v0, v1, Ld/d/a/d7/r8/s0;->f:Z
+
+    .line 5
+    iget-object v1, p0, Ld/d/a/d7/e8;->f9:Ld/d/a/d7/r8/s0;
+
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v2
+
+    iput-wide v2, v1, Ld/d/a/d7/r8/s0;->c:J
+
+    .line 6
+    invoke-virtual {p0, v0}, Ld/d/a/d7/p7;->bd(Z)V
+
+    .line 7
+    invoke-virtual {p0}, Ld/d/a/d7/p7;->Of()Ld/d/a/k8/a0;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ld/d/a/k8/a0;->Q7(Z)V
+
+    .line 8
+    invoke-virtual {p0}, Lcom/android/camera/module/FunModule;->El()V
+
+    .line 9
+    invoke-virtual {p0}, Ld/d/a/d7/p7;->Fb()V
+
+    .line 10
+    iget-object v0, p0, Ld/d/a/d7/p7;->K8:Lcom/android/camera/Camera;
+
+    invoke-static {v0}, Ld/d/a/t3;->c(Landroid/content/Context;)Ld/d/a/t3;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ld/d/a/t3;->m()V
+
+    .line 11
+    new-instance v2, Ljava/util/HashMap;
+
+    invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
+
+    .line 12
+    iget-boolean v0, p0, Ld/d/a/d7/e8;->q9:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    const-string v1, "attr_3a_locked"
+
+    invoke-interface {v2, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 13
+    iget-object v0, p0, Ld/d/a/d7/e8;->g9:Ld/d/a/d7/r8/x0;
+
+    iget-object v5, v0, Ld/d/a/d7/r8/x0;->w:Ld/d/a/u6/h4/b1;
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    move-object v1, p0
+
+    invoke-virtual/range {v1 .. v7}, Ld/d/a/d7/p7;->Sj(Ljava/util/Map;IZLd/d/a/u6/h4/b1;ZI)V
 
     return-void
 .end method
 
-.method public static synthetic xm(Lcom/android/camera/module/FunModule;)V
+.method private Vl()V
+    .locals 4
+
+    .line 1
+    sget-object v0, Ld/d/a/d7/e8;->d9:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "releaseLastMediaRecorder "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lcom/android/camera/module/FunModule;->D9:Ld/d/a/d7/j8/e;
+
+    const/4 v3, 0x0
+
+    if-eqz v2, :cond_0
+
+    const/4 v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v3
+
+    :goto_0
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    new-array v2, v3, [Ljava/lang/Object;
+
+    invoke-static {v0, v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/module/FunModule;->D9:Ld/d/a/d7/j8/e;
+
+    if-eqz v0, :cond_1
+
+    .line 3
+    invoke-virtual {v0}, Ld/d/a/d7/j8/e;->e()V
+
+    const/4 v0, 0x0
+
+    .line 4
+    iput-object v0, p0, Lcom/android/camera/module/FunModule;->D9:Ld/d/a/d7/j8/e;
+
+    :cond_1
+    return-void
+.end method
+
+.method private Wl()V
+    .locals 2
+
+    .line 1
+    sget-object v0, Ld/d/a/d7/e8;->d9:Ljava/lang/String;
+
+    const-string v1, "releaseMediaRecorder"
+
+    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/module/FunModule;->C9:Ld/d/a/d7/j8/e;
+
+    if-eqz v0, :cond_0
+
+    .line 3
+    iput-object v0, p0, Lcom/android/camera/module/FunModule;->D9:Ld/d/a/d7/j8/e;
+
+    .line 4
+    invoke-direct {p0}, Lcom/android/camera/module/FunModule;->am()V
+
+    .line 5
+    iget-object p0, p0, Ld/d/a/d7/e8;->g9:Ld/d/a/d7/r8/x0;
+
+    invoke-virtual {p0}, Ld/d/a/d7/r8/x0;->a()V
+
+    :cond_0
+    return-void
+.end method
+
+.method private Xl()V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/camera/module/FunModule;->Fm()V
+    .line 1
+    invoke-virtual {p0}, Lcom/android/camera/module/FunModule;->Mh()V
+
+    .line 2
+    invoke-direct {p0}, Lcom/android/camera/module/FunModule;->Wl()V
+
+    .line 3
+    invoke-direct {p0}, Lcom/android/camera/module/FunModule;->Vl()V
 
     return-void
 .end method
 
-.method public static synthetic ym(Lv8/n1;)V
-    .locals 0
+.method private Yl(II)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x10,
+            0x10
+        }
+        names = {
+            "width",
+            "height"
+        }
+    .end annotation
 
-    invoke-static {p0}, Lcom/android/camera/module/FunModule;->Gm(Lv8/n1;)V
+    .line 1
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->N1()I
+
+    move-result v0
+
+    rem-int/lit16 v0, v0, 0xb4
+
+    if-nez v0, :cond_0
+
+    .line 2
+    iget-object p0, p0, Ld/d/a/d7/e8;->g9:Ld/d/a/d7/r8/x0;
+
+    new-instance v0, Ld/d/a/e4;
+
+    invoke-direct {v0, p1, p2}, Ld/d/a/e4;-><init>(II)V
+
+    iput-object v0, p0, Ld/d/a/d7/r8/x0;->d:Ld/d/a/e4;
+
+    goto :goto_0
+
+    .line 3
+    :cond_0
+    iget-object p0, p0, Ld/d/a/d7/e8;->g9:Ld/d/a/d7/r8/x0;
+
+    new-instance v0, Ld/d/a/e4;
+
+    invoke-direct {v0, p2, p1}, Ld/d/a/e4;-><init>(II)V
+
+    iput-object v0, p0, Ld/d/a/d7/r8/x0;->d:Ld/d/a/e4;
+
+    :goto_0
+    return-void
+.end method
+
+.method private Zl()Z
+    .locals 6
+
+    .line 1
+    invoke-direct {p0}, Lcom/android/camera/module/FunModule;->Ll()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 2
+    sget-object p0, Ld/d/a/d7/e8;->d9:Ljava/lang/String;
+
+    const/4 v0, 0x0
+
+    new-array v1, v0, [Ljava/lang/Object;
+
+    const-string v2, "fail to initialize recorder"
+
+    invoke-static {p0, v2, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return v0
+
+    :cond_0
+    const-wide/16 v0, 0x1c2
+
+    .line 3
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    iget-wide v4, p0, Lcom/android/camera/module/FunModule;->G9:J
+
+    sub-long/2addr v2, v4
+
+    sub-long/2addr v0, v2
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v4, v0, v2
+
+    if-gez v4, :cond_1
+
+    move-wide v0, v2
+
+    .line 4
+    :cond_1
+    invoke-virtual {p0}, Ld/d/a/d7/p7;->U()I
+
+    move-result v2
+
+    invoke-static {v2}, Ld/d/a/d4;->R4(I)Z
+
+    move-result v2
+
+    .line 5
+    iget-object v3, p0, Lcom/android/camera/module/FunModule;->C9:Ld/d/a/d7/j8/e;
+
+    invoke-virtual {v3, v0, v1, v2}, Ld/d/a/d7/j8/e;->j(JZ)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    .line 6
+    iget-object v1, p0, Lcom/android/camera/module/FunModule;->C9:Ld/d/a/d7/j8/e;
+
+    invoke-virtual {v1}, Ld/d/a/d7/j8/e;->l()V
+
+    const v1, 0x7f130372
+
+    const v2, 0x7f130371
+
+    .line 7
+    invoke-virtual {p0, v1, v2}, Ld/d/a/d7/p7;->S2(II)V
+
+    .line 8
+    invoke-direct {p0}, Lcom/android/camera/module/FunModule;->Wl()V
+
+    :cond_2
+    return v0
+.end method
+
+.method private am()V
+    .locals 3
+
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/module/FunModule;->I9:Ld/d/a/w7/b0/c;
+
+    if-eqz v0, :cond_1
+
+    .line 2
+    invoke-virtual {v0}, Ld/d/a/w7/b0/c;->f()Ljava/io/FileDescriptor;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 3
+    :try_start_0
+    invoke-virtual {v0}, Ljava/io/FileDescriptor;->sync()V
+    :try_end_0
+    .catch Ljava/io/SyncFailedException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    .line 4
+    sget-object v1, Ld/d/a/d7/e8;->d9:Ljava/lang/String;
+
+    invoke-static {v1, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 5
+    sget-object v1, Ld/d/a/d7/e8;->d9:Ljava/lang/String;
+
+    const-string v2, "fd sync failed."
+
+    invoke-static {v1, v2, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 6
+    :cond_0
+    :goto_0
+    iget-object p0, p0, Lcom/android/camera/module/FunModule;->I9:Ld/d/a/w7/b0/c;
+
+    invoke-virtual {p0}, Ld/d/a/w7/b0/c;->d()V
+
+    :cond_1
+    return-void
+.end method
+
+.method private cm()V
+    .locals 3
+
+    .line 1
+    invoke-static {}, Ld/d/a/d4;->r1()I
+
+    move-result p0
+
+    .line 2
+    sget-object v0, Ld/d/a/d7/e8;->d9:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "updateFilter: 0x"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {p0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 3
+    invoke-static {}, Ld/d/a/q6/b;->getInstance()Ld/d/a/q6/b;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Ld/d/a/q6/b;->setEffect(I)V
 
     return-void
 .end method
 
-.method public static synthetic zm(Lcom/android/camera/module/FunModule;)F
-    .locals 0
+.method private dm()V
+    .locals 5
 
-    iget p0, p0, Lcom/android/camera/module/FunModule;->W9:F
+    .line 1
+    invoke-static {}, Ld/k/a/c;->k()Z
 
-    return p0
+    move-result v0
+
+    const/16 v1, 0x1e
+
+    .line 2
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    if-eqz v0, :cond_0
+
+    .line 3
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->Z1()Ld/d/b/i4;
+
+    move-result-object v0
+
+    new-instance v2, Landroid/util/Range;
+
+    const/4 v3, 0x5
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    invoke-direct {v2, v4, v1}, Landroid/util/Range;-><init>(Ljava/lang/Comparable;Ljava/lang/Comparable;)V
+
+    invoke-virtual {v0, v2}, Ld/d/b/i4;->b6(Landroid/util/Range;)V
+
+    .line 4
+    iget-object p0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    invoke-interface {p0}, Ld/d/a/d7/i8/s;->Z1()Ld/d/b/i4;
+
+    move-result-object p0
+
+    new-instance v0, Landroid/util/Range;
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-direct {v0, v2, v1}, Landroid/util/Range;-><init>(Ljava/lang/Comparable;Ljava/lang/Comparable;)V
+
+    invoke-virtual {p0, v0}, Ld/d/b/i4;->o4(Landroid/util/Range;)V
+
+    goto :goto_0
+
+    .line 5
+    :cond_0
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->Z1()Ld/d/b/i4;
+
+    move-result-object v0
+
+    new-instance v2, Landroid/util/Range;
+
+    invoke-direct {v2, v1, v1}, Landroid/util/Range;-><init>(Ljava/lang/Comparable;Ljava/lang/Comparable;)V
+
+    invoke-virtual {v0, v2}, Ld/d/b/i4;->b6(Landroid/util/Range;)V
+
+    .line 6
+    iget-object p0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    invoke-interface {p0}, Ld/d/a/d7/i8/s;->Z1()Ld/d/b/i4;
+
+    move-result-object p0
+
+    new-instance v0, Landroid/util/Range;
+
+    invoke-direct {v0, v1, v1}, Landroid/util/Range;-><init>(Ljava/lang/Comparable;Ljava/lang/Comparable;)V
+
+    invoke-virtual {p0, v0}, Ld/d/b/i4;->o4(Landroid/util/Range;)V
+
+    :goto_0
+    return-void
+.end method
+
+.method private em()V
+    .locals 1
+    .annotation build Ld/d/a/x6/d;
+        ignore = false
+        key = "needShowKaleidoscope"
+        type = 0x0
+    .end annotation
+
+    .line 1
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ld/d/a/l6/e/m/g1;->U()Ld/d/a/l6/e/m/r0;
+
+    move-result-object p0
+
+    .line 2
+    invoke-virtual {p0}, Ld/d/a/l6/e/m/r0;->b()Ljava/lang/String;
+
+    move-result-object p0
+
+    .line 3
+    invoke-static {}, Ld/d/a/q6/b;->getInstance()Ld/d/a/q6/b;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Ld/d/a/q6/b;->setKaleidoscope(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method private fm()V
+    .locals 9
+
+    .line 1
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    .line 2
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->getCapabilities()Ld/d/b/g4;
+
+    move-result-object v0
+
+    const-class v1, Landroid/graphics/SurfaceTexture;
+
+    invoke-static {v0, v1}, Ld/d/b/h4;->x1(Ld/d/b/g4;Ljava/lang/Class;)Ljava/util/List;
+
+    move-result-object v4
+
+    .line 3
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->getCapabilities()Ld/d/b/g4;
+
+    move-result-object v0
+
+    const/16 v1, 0x10
+
+    const/16 v2, 0x9
+
+    invoke-static {v1, v2, v0}, Ld/d/a/d4;->d1(IILd/d/b/g4;)F
+
+    move-result v0
+
+    .line 4
+    iget-object v1, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    invoke-interface {v1}, Ld/d/a/d7/i8/s;->R1()Ld/d/b/f4;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ld/d/b/f4;->y()I
+
+    move-result v1
+
+    iget v2, p0, Ld/d/a/d7/p7;->m:I
+
+    invoke-static {v1, v2}, Ld/d/a/d4;->Z0(II)I
+
+    move-result v1
+
+    .line 5
+    sget-object v2, Ld/d/a/d7/e8;->d9:Ljava/lang/String;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "updatePictureAndPreviewSize quality: "
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v8, 0x0
+
+    new-array v5, v8, [Ljava/lang/Object;
+
+    invoke-static {v2, v3, v5}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    const/4 v2, 0x5
+
+    if-eq v1, v2, :cond_1
+
+    .line 6
+    invoke-static {}, Ld/d/a/n6/b;->k()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ld/k/a/b;->c4()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    .line 7
+    :cond_0
+    new-instance v1, Ld/d/a/e4;
+
+    const/16 v2, 0x780
+
+    const/16 v3, 0x438
+
+    invoke-direct {v1, v2, v3}, Ld/d/a/e4;-><init>(II)V
+
+    goto :goto_0
+
+    .line 8
+    :cond_1
+    new-instance v1, Ld/d/a/e4;
+
+    const/16 v2, 0x500
+
+    const/16 v3, 0x2d0
+
+    invoke-direct {v1, v2, v3}, Ld/d/a/e4;-><init>(II)V
+
+    :goto_0
+    move-object v7, v1
+
+    .line 9
+    iget-object v1, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    const/4 v2, 0x0
+
+    invoke-interface {v1}, Ld/d/a/d7/i8/s;->t1()I
+
+    move-result v3
+
+    float-to-double v5, v0
+
+    invoke-static/range {v2 .. v7}, Ld/d/a/z5;->s1(ZILjava/util/List;DLd/d/a/e4;)Ld/d/a/e4;
+
+    move-result-object v0
+
+    invoke-interface {v1, v0}, Ld/d/a/d7/i8/s;->c1(Ld/d/a/e4;)V
+
+    .line 10
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->getPreviewSize()Ld/d/a/e4;
+
+    move-result-object v0
+
+    iget v0, v0, Ld/d/a/e4;->c:I
+
+    iget-object v1, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    invoke-interface {v1}, Ld/d/a/d7/i8/s;->getPreviewSize()Ld/d/a/e4;
+
+    move-result-object v1
+
+    iget v1, v1, Ld/d/a/e4;->d:I
+
+    invoke-virtual {p0, v0, v1}, Ld/d/a/d7/p7;->Zj(II)V
+
+    .line 11
+    sget-object v0, Ld/d/a/d7/e8;->d9:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "previewSize: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    invoke-interface {p0}, Ld/d/a/d7/i8/s;->getPreviewSize()Ld/d/a/e4;
+
+    move-result-object p0
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    new-array v1, v8, [Ljava/lang/Object;
+
+    invoke-static {v0, p0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method private gm()V
+    .locals 6
+
+    .line 1
+    invoke-virtual {p0}, Ld/d/a/d7/p7;->C5()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 2
+    :cond_0
+    invoke-direct {p0}, Lcom/android/camera/module/FunModule;->Ml()Z
+
+    move-result v0
+
+    const v1, 0x3f4ccccd    # 0.8f
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    if-eqz v0, :cond_1
+
+    .line 3
+    sget-object v0, Ld/d/a/d7/e8;->d9:Ljava/lang/String;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "videoStabilization: EIS isEISPreviewSupported = "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v5, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    .line 4
+    invoke-interface {v5}, Ld/d/a/d7/i8/s;->getCapabilities()Ld/d/b/g4;
+
+    move-result-object v5
+
+    invoke-static {v5}, Ld/d/b/h4;->W2(Ld/d/b/g4;)Z
+
+    move-result v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    new-array v5, v3, [Ljava/lang/Object;
+
+    .line 5
+    invoke-static {v0, v4, v5}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 6
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->Z1()Ld/d/b/i4;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Ld/d/b/i4;->T3(Z)V
+
+    .line 7
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->Z1()Ld/d/b/i4;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Ld/d/b/i4;->U3(Z)V
+
+    .line 8
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->getCapabilities()Ld/d/b/g4;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ld/d/b/h4;->W2(Ld/d/b/g4;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    .line 9
+    iget-object v0, p0, Ld/d/a/d7/p7;->K8:Lcom/android/camera/Camera;
+
+    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->S()Ld/d/a/c4;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Ld/d/a/s5;->C(Z)V
+
+    .line 10
+    iget-object p0, p0, Ld/d/a/d7/p7;->K8:Lcom/android/camera/Camera;
+
+    invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->Hc()Ld/d/a/d8/x1;
+
+    move-result-object p0
+
+    invoke-interface {p0, v1, v1}, Ld/d/a/d8/x1;->k0(FF)V
+
+    goto :goto_0
+
+    .line 11
+    :cond_1
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->Z1()Ld/d/b/i4;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Ld/d/b/i4;->T3(Z)V
+
+    .line 12
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->Z1()Ld/d/b/i4;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Ld/d/b/i4;->U3(Z)V
+
+    .line 13
+    iget-object v0, p0, Ld/d/a/d7/p7;->K8:Lcom/android/camera/Camera;
+
+    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->S()Ld/d/a/c4;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Ld/d/a/s5;->C(Z)V
+
+    .line 14
+    iget-object v0, p0, Ld/d/a/d7/p7;->K8:Lcom/android/camera/Camera;
+
+    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->Hc()Ld/d/a/d8/x1;
+
+    move-result-object v0
+
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    invoke-interface {v0, v3, v3}, Ld/d/a/d8/x1;->k0(FF)V
+
+    .line 15
+    invoke-static {}, Ld/k/a/c;->k()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->R1()Ld/d/b/f4;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ld/d/b/f4;->y()I
+
+    move-result v0
+
+    invoke-static {}, Ld/d/a/d7/o8/b/r;->R()Ld/d/a/d7/o8/b/r;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ld/d/a/d7/o8/b/r;->o()I
+
+    move-result v3
+
+    if-ne v0, v3, :cond_2
+
+    .line 16
+    iget-object v0, p0, Ld/d/a/d7/p7;->K8:Lcom/android/camera/Camera;
+
+    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->S()Ld/d/a/c4;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Ld/d/a/s5;->C(Z)V
+
+    .line 17
+    iget-object p0, p0, Ld/d/a/d7/p7;->K8:Lcom/android/camera/Camera;
+
+    invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->Hc()Ld/d/a/d8/x1;
+
+    move-result-object p0
+
+    invoke-interface {p0, v1, v1}, Ld/d/a/d8/x1;->k0(FF)V
+
+    :cond_2
+    :goto_0
+    return-void
 .end method
 
 
 # virtual methods
-.method public Ai()V
-    .locals 0
+.method public C(I)Z
+    .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mode"
+        }
+    .end annotation
 
-    invoke-super {p0}, Lq7/b6;->Ai()V
+    .line 1
+    sget-object v0, Ld/d/a/d7/e8;->d9:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "onShutterButtonClick  isRecording="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Ld/d/a/d7/e8;->f9:Ld/d/a/d7/r8/s0;
+
+    iget-boolean v2, v2, Ld/d/a/d7/r8/s0;->f:Z
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v2, " inStartingFocusRecording="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v2, p0, Ld/d/a/d7/p7;->Y8:Z
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    .line 2
+    iput-boolean v0, p0, Ld/d/a/d7/p7;->Y8:Z
+
+    .line 3
+    iget-object v1, p0, Ld/d/a/d7/p7;->s:Ld/d/a/d7/i8/k;
+
+    const-wide/16 v2, 0x0
+
+    invoke-interface {v1, v2, v3}, Ld/d/a/d7/i8/k;->n0(J)V
+
+    .line 4
+    invoke-virtual {p0}, Ld/d/a/d7/p7;->c()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 5
+    sget-object p0, Ld/d/a/d7/e8;->d9:Ljava/lang/String;
+
+    new-array p1, v0, [Ljava/lang/Object;
+
+    const-string v1, "onShutterButtonClick: ignore touch event"
+
+    invoke-static {p0, v1, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return v0
+
+    .line 6
+    :cond_0
+    iget-object v1, p0, Lcom/android/camera/module/FunModule;->O9:Landroid/util/SparseArray;
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_1
+
+    .line 7
+    invoke-virtual {v1, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ld/d/a/d7/n8/a/j;
+
+    if-eqz v1, :cond_1
+
+    .line 8
+    invoke-virtual {v1}, Ld/d/a/d7/n8/a/j;->a()V
+
+    .line 9
+    invoke-virtual {v1}, Ld/d/a/d7/n8/a/j;->b()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    return v0
+
+    .line 10
+    :cond_1
+    iget-object v1, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    invoke-interface {v1}, Ld/d/a/d7/i8/s;->q1()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Ld/d/a/d7/p7;->K8:Lcom/android/camera/Camera;
+
+    invoke-virtual {v1}, Lcom/android/camera/Camera;->Lj()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    return v0
+
+    .line 11
+    :cond_2
+    invoke-static {}, Ld/d/a/m7/g/l2;->impl2()Ld/d/a/m7/g/l2;
+
+    move-result-object v1
+
+    .line 12
+    iget-object v3, p0, Ld/d/a/d7/e8;->f9:Ld/d/a/d7/r8/s0;
+
+    iget-boolean v3, v3, Ld/d/a/d7/r8/s0;->f:Z
+
+    if-eqz v3, :cond_3
+
+    .line 13
+    sget-object p1, Ld/d/a/d7/e8;->d9:Ljava/lang/String;
+
+    const-string v1, "onShutterButtonClick stopVideoRecording"
+
+    invoke-static {p1, v1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 14
+    invoke-virtual {p0, v0}, Lcom/android/camera/module/FunModule;->xl(Z)V
+
+    goto :goto_0
+
+    .line 15
+    :cond_3
+    invoke-interface {v1, p0}, Ld/d/a/m7/g/l2;->If(Ld/d/a/d7/z7;)V
+
+    .line 16
+    invoke-virtual {p0}, Ld/d/a/d7/p7;->Hh()Z
+
+    move-result v3
+
+    if-nez v3, :cond_4
+
+    .line 17
+    invoke-interface {v1}, Ld/d/a/m7/g/l2;->Z()V
+
+    return v0
+
+    .line 18
+    :cond_4
+    iget-object v3, p0, Ld/d/a/d7/p7;->K8:Lcom/android/camera/Camera;
+
+    invoke-virtual {v3}, Lcom/android/camera/ActivityBase;->z2()Ld/d/a/d8/c2;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ld/d/a/d8/c2;->o()V
+
+    .line 19
+    invoke-static {}, Ld/d/a/w7/z;->M()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_5
+
+    .line 20
+    invoke-interface {v1}, Ld/d/a/m7/g/l2;->Z()V
+
+    return v0
+
+    .line 21
+    :cond_5
+    iget-object v1, p0, Ld/d/a/d7/p7;->p:Ld/d/a/d7/i8/n;
+
+    invoke-interface {v1, p1}, Ld/d/a/d7/i8/n;->C(I)V
+
+    .line 22
+    invoke-virtual {p0, v0}, Ld/d/a/d7/p7;->Y(Z)V
+
+    const/4 p1, 0x2
+
+    .line 23
+    invoke-virtual {p0, p1}, Ld/d/a/d7/p7;->f0(I)V
+
+    .line 24
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/android/camera/module/FunModule;->G9:J
+
+    .line 25
+    iget-object p1, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    invoke-interface {p1}, Ld/d/a/d7/i8/s;->u1()Ld/d/a/d7/o8/b/x;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ld/d/a/d7/o8/b/x;->M()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_6
+
+    .line 26
+    sget-object p1, Ld/d/a/d7/e8;->d9:Ljava/lang/String;
+
+    const-string v0, "onShutterButtonClick startVideoRecording"
+
+    invoke-static {p1, v0}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 27
+    invoke-virtual {p0}, Lcom/android/camera/module/FunModule;->vl()V
+
+    goto :goto_0
+
+    .line 28
+    :cond_6
+    sget-object p1, Ld/d/a/d7/e8;->d9:Ljava/lang/String;
+
+    const-string v0, "wait for autoFocus"
+
+    invoke-static {p1, v0}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 29
+    iput-boolean v2, p0, Ld/d/a/d7/p7;->Y8:Z
+
+    :goto_0
+    return v2
+.end method
+
+.method public Cj()V
+    .locals 2
+
+    .line 1
+    sget-object v0, Ld/d/a/d7/e8;->d9:Ljava/lang/String;
+
+    const-string v1, "resumePreview"
+
+    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, 0x1
+
+    .line 2
+    iput-boolean v0, p0, Ld/d/a/d7/e8;->h9:Z
+
+    .line 3
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->R1()Ld/d/b/f4;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 4
+    iget-object p0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    invoke-interface {p0}, Ld/d/a/d7/i8/s;->R1()Ld/d/b/f4;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ld/d/b/f4;->A0()I
+
+    :cond_0
+    return-void
+.end method
+
+.method public Dk()Z
+    .locals 1
+
+    .line 1
+    iget p0, p0, Ld/d/a/d7/p7;->m:I
+
+    const/16 v0, 0xd1
+
+    if-eq p0, v0, :cond_0
+
+    const/16 v0, 0xd2
+
+    if-eq p0, v0, :cond_0
+
+    const/16 v0, 0xdc
+
+    if-eq p0, v0, :cond_0
+
+    const/16 v0, 0xd3
+
+    if-eq p0, v0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+.end method
+
+.method public El()V
+    .locals 8
+
+    .line 1
+    invoke-super {p0}, Ld/d/a/d7/e8;->El()V
+
+    .line 2
+    iget-object v0, p0, Ld/d/a/d7/e8;->f9:Ld/d/a/d7/r8/s0;
+
+    iget-boolean v0, v0, Ld/d/a/d7/r8/s0;->f:Z
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 3
+    :cond_0
+    iget-object v0, p0, Lcom/android/camera/module/FunModule;->F9:Landroid/os/CountDownTimer;
+
+    if-eqz v0, :cond_1
+
+    .line 4
+    invoke-virtual {v0}, Landroid/os/CountDownTimer;->cancel()V
+
+    .line 5
+    :cond_1
+    iget-object v0, p0, Ld/d/a/d7/e8;->g9:Ld/d/a/d7/r8/x0;
+
+    iget v0, v0, Ld/d/a/d7/r8/x0;->b:I
+
+    int-to-float v0, v0
+
+    iget v1, p0, Lcom/android/camera/module/FunModule;->K9:F
+
+    div-float/2addr v0, v1
+
+    float-to-long v4, v0
+
+    const/high16 v0, 0x447a0000    # 1000.0f
+
+    div-float/2addr v0, v1
+
+    float-to-long v6, v0
+
+    .line 6
+    new-instance v0, Lcom/android/camera/module/FunModule$a;
+
+    move-object v2, v0
+
+    move-object v3, p0
+
+    invoke-direct/range {v2 .. v7}, Lcom/android/camera/module/FunModule$a;-><init>(Lcom/android/camera/module/FunModule;JJ)V
+
+    iput-object v0, p0, Lcom/android/camera/module/FunModule;->F9:Landroid/os/CountDownTimer;
+
+    .line 7
+    invoke-virtual {v0}, Landroid/os/CountDownTimer;->start()Landroid/os/CountDownTimer;
 
     return-void
 .end method
 
-.method public Am(Landroid/net/Uri;Ljava/lang/String;Landroid/content/ContentValues;)V
+.method public Ff()Z
+    .locals 2
+
+    .line 1
+    iget v0, p0, Ld/d/a/d7/p7;->m:I
+
+    const/16 v1, 0xdc
+
+    if-eq v0, v1, :cond_0
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 2
+    invoke-super {p0}, Ld/d/a/d7/e8;->Ff()Z
+
+    move-result p0
+
+    return p0
+
+    :cond_0
+    :pswitch_0
+    const/4 p0, 0x0
+
+    return p0
+
+    :pswitch_data_0
+    .packed-switch 0xd1
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public Hk()Z
+    .locals 0
+
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public Il(Landroid/net/Uri;Ljava/lang/String;Landroid/content/ContentValues;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "uri",
+            "videoPath",
+            "values"
+        }
+    .end annotation
 
     const-string v0, "datetaken"
 
+    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
@@ -223,17 +1949,21 @@
 
     invoke-virtual {p3, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
+    .line 2
     new-instance v0, Lcom/android/camera/module/FunModule$g;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/android/camera/module/FunModule$g;-><init>(Lcom/android/camera/module/FunModule;Landroid/net/Uri;Ljava/lang/String;Landroid/content/ContentValues;)V
 
+    .line 3
     monitor-enter p0
 
+    .line 4
     :try_start_0
-    iget-object p1, p0, Lcom/android/camera/module/FunModule;->Y9:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/android/camera/module/FunModule;->M9:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 5
     monitor-exit p0
 
     return-void
@@ -248,221 +1978,271 @@
     throw p1
 .end method
 
-.method public B(I)Z
-    .locals 4
+.method public J3()V
+    .locals 1
 
-    sget-object v0, Lq7/b6;->p7:Ljava/lang/String;
+    .line 1
+    iget-object v0, p0, Ld/d/a/d7/p7;->p:Ld/d/a/d7/i8/n;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-interface {v0}, Ld/d/a/d7/i8/n;->isPaused()Z
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    move-result v0
 
-    const-string v2, "onShutterButtonClick  isRecording="
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
 
-    iget-object v2, p0, Lq7/b6;->q1:Lg8/d0;
+    .line 2
+    :cond_0
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
 
-    iget-boolean v2, v2, Lg8/d0;->f:Z
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->R1()Ld/d/b/f4;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    const-string v2, " inStartingFocusRecording="
+    if-nez v0, :cond_1
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
 
-    iget-boolean v2, p0, Lq7/i0;->G:Z
+    .line 3
+    :cond_1
+    invoke-virtual {p0}, Lcom/android/camera/module/FunModule;->Ul()V
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+.method public Jk()Z
+    .locals 2
 
-    move-result-object v1
+    .line 1
+    iget v0, p0, Ld/d/a/d7/p7;->m:I
 
-    invoke-static {v0, v1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
+    const/16 v1, 0xdc
 
-    const/4 v0, 0x0
+    if-eq v0, v1, :cond_0
 
-    iput-boolean v0, p0, Lq7/i0;->G:Z
+    .line 2
+    invoke-super {p0}, Ld/d/a/d7/e8;->Jk()Z
 
-    iget-object v1, p0, Lq7/i0;->d:Lr7/b;
+    move-result p0
 
-    const-wide/16 v2, 0x0
-
-    invoke-interface {v1, v2, v3}, Lr7/b;->H(J)V
-
-    invoke-virtual {p0}, Lq7/i0;->g()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    sget-object p0, Lq7/b6;->p7:Ljava/lang/String;
-
-    const-string p1, "onShutterButtonClick: ignore touch event"
-
-    new-array v1, v0, [Ljava/lang/Object;
-
-    invoke-static {p0, p1, v1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return v0
+    return p0
 
     :cond_0
-    iget-object v1, p0, Lcom/android/camera/module/FunModule;->aa:Landroid/util/SparseArray;
+    const/4 p0, 0x0
 
-    const/4 v2, 0x1
+    return p0
+.end method
 
-    if-eqz v1, :cond_1
+.method public Jl(Ljava/lang/String;Landroid/content/ContentValues;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "videoPath",
+            "values"
+        }
+    .end annotation
 
-    invoke-virtual {v1, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+    const-string v0, "datetaken"
 
-    move-result-object v1
+    .line 1
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    check-cast v1, Lz7/j;
+    move-result-wide v1
 
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Lz7/j;->a()V
-
-    invoke-virtual {v1}, Lz7/j;->b()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    return v0
-
-    :cond_1
-    iget-object v1, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {v1}, Lr7/m;->S()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Lq7/i0;->q:Lcom/android/camera/Camera;
-
-    invoke-virtual {v1}, Lcom/android/camera/Camera;->Xl()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    return v0
-
-    :cond_2
-    invoke-static {}, Lv8/i2;->impl2()Lv8/i2;
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
 
-    iget-object v3, p0, Lq7/b6;->q1:Lg8/d0;
+    invoke-virtual {p2, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    iget-boolean v3, v3, Lg8/d0;->f:Z
+    .line 2
+    new-instance v0, Lcom/android/camera/module/FunModule$g;
 
-    if-eqz v3, :cond_3
+    invoke-direct {v0, p0, p1, p2}, Lcom/android/camera/module/FunModule$g;-><init>(Lcom/android/camera/module/FunModule;Ljava/lang/String;Landroid/content/ContentValues;)V
 
-    sget-object p1, Lq7/b6;->p7:Ljava/lang/String;
+    .line 3
+    monitor-enter p0
 
-    const-string v1, "onShutterButtonClick stopVideoRecording"
+    .line 4
+    :try_start_0
+    iget-object p1, p0, Lcom/android/camera/module/FunModule;->M9:Ljava/util/ArrayList;
 
-    invoke-static {p1, v1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/module/FunModule;->mm(Z)V
+    .line 5
+    monitor-exit p0
 
-    goto :goto_0
+    return-void
 
-    :cond_3
-    invoke-interface {v1, p0}, Lv8/i2;->ag(Lq7/v4;)V
+    :catchall_0
+    move-exception p1
 
-    invoke-virtual {p0}, Lq7/i0;->vi()Z
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result v3
+    throw p1
+.end method
 
-    if-nez v3, :cond_4
+.method public Kl(Z)V
+    .locals 9
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "justOne"
+        }
+    .end annotation
 
-    invoke-interface {v1}, Lv8/i2;->Y()V
+    .line 1
+    monitor-enter p0
 
-    return v0
+    .line 2
+    :cond_0
+    :try_start_0
+    iget-object v0, p0, Lcom/android/camera/module/FunModule;->M9:Ljava/util/ArrayList;
 
-    :cond_4
-    iget-object v3, p0, Lq7/i0;->q:Lcom/android/camera/Camera;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
-    invoke-virtual {v3}, Lcom/android/camera/ActivityBase;->m3()Lcom/android/camera/ui/k1;
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    .line 3
+    iget-object v0, p0, Lcom/android/camera/module/FunModule;->M9:Ljava/util/ArrayList;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/camera/module/FunModule$g;
+
+    .line 4
+    sget-object v2, Ld/d/a/d7/e8;->d9:Ljava/lang/String;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "executeSaveTask: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v4, v0, Lcom/android/camera/module/FunModule$g;->a:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/android/camera/ui/k1;->p()V
+    new-array v1, v1, [Ljava/lang/Object;
 
-    invoke-static {}, Ll9/x;->O()Z
+    invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    move-result v3
+    .line 5
+    invoke-static {v0}, Lcom/android/camera/module/FunModule$g;->a(Lcom/android/camera/module/FunModule$g;)Landroid/net/Uri;
 
-    if-eqz v3, :cond_5
+    move-result-object v1
 
-    invoke-interface {v1}, Lv8/i2;->Y()V
+    if-nez v1, :cond_1
 
-    return v0
+    .line 6
+    iget-object v1, p0, Ld/d/a/d7/p7;->K8:Lcom/android/camera/Camera;
 
-    :cond_5
-    iget-object v1, p0, Lq7/i0;->c:Lr7/h;
+    invoke-virtual {v1}, Lcom/android/camera/Camera;->c2()Ld/d/a/w7/p;
 
-    invoke-interface {v1, p1}, Lr7/h;->F(I)V
+    move-result-object v1
 
-    invoke-virtual {p0, v0}, Lq7/i0;->X(Z)V
+    iget-object v2, v0, Lcom/android/camera/module/FunModule$g;->a:Ljava/lang/String;
 
-    const/4 p1, 0x2
+    iget-object v0, v0, Lcom/android/camera/module/FunModule$g;->b:Landroid/content/ContentValues;
 
-    invoke-virtual {p0, p1}, Lq7/i0;->e0(I)V
+    const/4 v3, 0x1
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lcom/android/camera/module/FunModule;->S9:J
-
-    iget-object p1, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {p1}, Lr7/m;->W()Lc8/u;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lc8/u;->M()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_6
-
-    sget-object p1, Lq7/b6;->p7:Ljava/lang/String;
-
-    const-string v0, "onShutterButtonClick startVideoRecording"
-
-    invoke-static {p1, v0}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lcom/android/camera/module/FunModule;->km()V
+    invoke-virtual {v1, v2, v0, v3}, Ld/d/a/w7/p;->z(Ljava/lang/String;Landroid/content/ContentValues;Z)V
 
     goto :goto_0
 
-    :cond_6
-    sget-object p1, Lq7/b6;->p7:Ljava/lang/String;
+    .line 7
+    :cond_1
+    iget-object v1, p0, Ld/d/a/d7/p7;->K8:Lcom/android/camera/Camera;
 
-    const-string v0, "wait for autoFocus"
+    invoke-virtual {v1}, Lcom/android/camera/Camera;->c2()Ld/d/a/w7/p;
 
-    invoke-static {p1, v0}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v2
 
-    iput-boolean v2, p0, Lq7/i0;->G:Z
+    invoke-static {v0}, Lcom/android/camera/module/FunModule$g;->a(Lcom/android/camera/module/FunModule$g;)Landroid/net/Uri;
+
+    move-result-object v3
+
+    iget-object v4, v0, Lcom/android/camera/module/FunModule$g;->a:Ljava/lang/String;
+
+    iget-object v5, v0, Lcom/android/camera/module/FunModule$g;->b:Landroid/content/ContentValues;
+
+    const/4 v6, 0x1
+
+    const/4 v7, 0x1
+
+    const/4 v8, 0x0
+
+    invoke-virtual/range {v2 .. v8}, Ld/d/a/w7/p;->y(Landroid/net/Uri;Ljava/lang/String;Landroid/content/ContentValues;ZZLjava/util/List;)Landroid/net/Uri;
 
     :goto_0
-    return v2
+    if-eqz p1, :cond_0
+
+    .line 8
+    :cond_2
+    invoke-virtual {p0}, Ld/d/a/d7/e8;->tk()V
+
+    .line 9
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
 .end method
 
-.method public varargs Bi([I)V
+.method public Mh()V
+    .locals 0
+
+    .line 1
+    invoke-super {p0}, Ld/d/a/d7/e8;->Mh()V
+
+    return-void
+.end method
+
+.method public varargs Nh([I)V
     .locals 7
     .param p1    # [I
-        .annotation build Le2/b0$a;
+        .annotation build Ld/d/a/j6/a0$a;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "updateTypes"
+        }
+    .end annotation
 
+    .line 1
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -560,13 +2340,15 @@
 
     packed-switch v3, :pswitch_data_2
 
-    sget-boolean v4, Lq7/i0;->Z:Z
+    .line 2
+    sget-boolean v4, Ld/d/a/d7/p7;->d:Z
 
     const-string v5, "no consumer for this updateType: "
 
     if-nez v4, :cond_0
 
-    sget-object v4, Lq7/b6;->p7:Ljava/lang/String;
+    .line 3
+    sget-object v4, Ld/d/a/d7/e8;->d9:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -586,6 +2368,7 @@
 
     goto/16 :goto_1
 
+    .line 4
     :cond_0
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -605,123 +2388,143 @@
 
     throw p0
 
+    .line 5
     :pswitch_0
-    invoke-virtual {p0}, Lcom/android/camera/module/FunModule;->Wm()V
+    invoke-direct {p0}, Lcom/android/camera/module/FunModule;->gm()V
 
     goto/16 :goto_1
 
+    .line 6
     :pswitch_1
-    iget-object v3, p0, Lq7/i0;->b:Lr7/m;
+    iget-object v3, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
 
-    invoke-interface {v3}, Lr7/m;->b0()V
+    invoke-interface {v3}, Ld/d/a/d7/i8/s;->z1()V
 
     goto :goto_1
 
+    .line 7
     :pswitch_2
-    invoke-virtual {p0}, Lq7/b6;->vm()V
+    invoke-virtual {p0}, Ld/d/a/d7/e8;->Gl()V
 
     goto :goto_1
 
+    .line 8
     :pswitch_3
-    invoke-virtual {p0}, Lq7/b6;->om()V
+    invoke-virtual {p0}, Ld/d/a/d7/e8;->zl()V
 
     goto :goto_1
 
+    .line 9
     :pswitch_4
-    invoke-virtual {p0}, Lq7/i0;->pk()V
+    invoke-virtual {p0}, Ld/d/a/d7/p7;->Gj()V
 
     goto :goto_1
 
+    .line 10
     :pswitch_5
-    invoke-virtual {p0}, Lq7/b6;->Jk()V
+    invoke-virtual {p0}, Ld/d/a/d7/e8;->ak()V
 
     goto :goto_1
 
+    .line 11
     :pswitch_6
-    invoke-static {}, Lcom/android/camera/v2;->o()Ljava/lang/String;
+    invoke-static {}, Ld/d/a/d4;->n()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {p0, v3}, Lq7/i0;->Gk(Ljava/lang/String;)V
+    invoke-virtual {p0, v3}, Ld/d/a/d7/p7;->Xj(Ljava/lang/String;)V
 
     goto :goto_1
 
+    .line 12
     :cond_1
-    invoke-virtual {p0}, Lq7/i0;->Mk()V
+    invoke-virtual {p0}, Ld/d/a/d7/p7;->dk()V
 
     goto :goto_1
 
+    .line 13
     :cond_2
-    invoke-virtual {p0}, Lq7/b6;->pm()V
+    invoke-virtual {p0}, Ld/d/a/d7/e8;->Al()V
 
     goto :goto_1
 
+    .line 14
     :cond_3
-    invoke-virtual {p0}, Lq7/i0;->Hi()V
+    invoke-virtual {p0}, Ld/d/a/d7/p7;->Th()V
 
     goto :goto_1
 
+    .line 15
     :cond_4
-    invoke-virtual {p0}, Lq7/i0;->hg()Lwa/w;
+    invoke-virtual {p0}, Ld/d/a/d7/p7;->Of()Ld/d/a/k8/a0;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lwa/w;->L0()V
+    invoke-virtual {v3}, Ld/d/a/k8/a0;->c()V
 
     goto :goto_1
 
+    .line 16
     :cond_5
-    invoke-virtual {p0}, Lcom/android/camera/module/FunModule;->Tm()V
+    invoke-direct {p0}, Lcom/android/camera/module/FunModule;->dm()V
 
     goto :goto_1
 
+    .line 17
     :cond_6
-    invoke-virtual {p0}, Lq7/i0;->Y6()Lb2/g;
+    invoke-virtual {p0}, Ld/d/a/d7/p7;->N6()Ld/d/a/g6/g;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lb2/g;->e0()V
+    invoke-virtual {v3}, Ld/d/a/g6/g;->I()V
 
     goto :goto_1
 
+    .line 18
     :cond_7
-    invoke-virtual {p0, p0}, Lq7/i0;->dj(Lq7/i0;)V
+    invoke-virtual {p0, p0}, Ld/d/a/d7/p7;->pi(Ld/d/a/d7/p7;)V
 
     goto :goto_1
 
+    .line 19
     :cond_8
-    invoke-virtual {p0}, Lcom/android/camera/module/FunModule;->Um()V
+    invoke-direct {p0}, Lcom/android/camera/module/FunModule;->em()V
 
     goto :goto_1
 
+    .line 20
     :cond_9
-    invoke-virtual {p0}, Lq7/i0;->Nk()V
+    invoke-virtual {p0}, Ld/d/a/d7/p7;->ek()V
 
     goto :goto_1
 
+    .line 21
     :cond_a
-    iget-object v3, p0, Lq7/b6;->q5:Lg8/n;
+    iget-object v3, p0, Ld/d/a/d7/e8;->v9:Ld/d/a/d7/r8/h0;
 
-    invoke-virtual {v3}, Lg8/n;->f()V
+    invoke-virtual {v3}, Ld/d/a/d7/r8/h0;->f()V
 
     goto :goto_1
 
+    .line 22
     :cond_b
-    invoke-virtual {p0}, Lq7/i0;->Ah()Lr7/m;
+    invoke-virtual {p0}, Ld/d/a/d7/p7;->ch()Ld/d/a/d7/i8/s;
 
     move-result-object v3
 
-    invoke-interface {v3, v1}, Lr7/m;->B0(Z)V
+    invoke-interface {v3, v1}, Ld/d/a/d7/i8/s;->X1(Z)V
 
     goto :goto_1
 
+    .line 23
     :cond_c
-    invoke-virtual {p0}, Lcom/android/camera/module/FunModule;->Sm()V
+    invoke-direct {p0}, Lcom/android/camera/module/FunModule;->cm()V
 
     goto :goto_1
 
+    .line 24
     :cond_d
-    invoke-virtual {p0}, Lcom/android/camera/module/FunModule;->Vm()V
+    invoke-direct {p0}, Lcom/android/camera/module/FunModule;->fm()V
 
     :cond_e
     :goto_1
@@ -758,775 +2561,152 @@
     .end packed-switch
 .end method
 
-.method public Bm(Ljava/lang/String;Landroid/content/ContentValues;)V
-    .locals 3
-
-    const-string v0, "datetaken"
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v1
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-virtual {p2, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
-
-    new-instance v0, Lcom/android/camera/module/FunModule$g;
-
-    invoke-direct {v0, p0, p1, p2}, Lcom/android/camera/module/FunModule$g;-><init>(Lcom/android/camera/module/FunModule;Ljava/lang/String;Landroid/content/ContentValues;)V
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object p1, p0, Lcom/android/camera/module/FunModule;->Y9:Ljava/util/ArrayList;
-
-    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
-.end method
-
-.method public Cl()Z
+.method public O7(ZJI)V
     .locals 0
-
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public Cm(Z)V
-    .locals 9
-
-    monitor-enter p0
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Lcom/android/camera/module/FunModule;->Y9:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    iget-object v0, p0, Lcom/android/camera/module/FunModule;->Y9:Ljava/util/ArrayList;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/camera/module/FunModule$g;
-
-    sget-object v2, Lq7/b6;->p7:Ljava/lang/String;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "executeSaveTask: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v4, v0, Lcom/android/camera/module/FunModule$g;->a:Ljava/lang/String;
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    invoke-static {v0}, Lcom/android/camera/module/FunModule$g;->a(Lcom/android/camera/module/FunModule$g;)Landroid/net/Uri;
-
-    move-result-object v1
-
-    if-nez v1, :cond_1
-
-    iget-object v1, p0, Lq7/i0;->q:Lcom/android/camera/Camera;
-
-    invoke-virtual {v1}, Lcom/android/camera/Camera;->G2()Ll9/h;
-
-    move-result-object v1
-
-    iget-object v2, v0, Lcom/android/camera/module/FunModule$g;->a:Ljava/lang/String;
-
-    iget-object v0, v0, Lcom/android/camera/module/FunModule$g;->b:Landroid/content/ContentValues;
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v1, v2, v0, v3}, Ll9/h;->z(Ljava/lang/String;Landroid/content/ContentValues;Z)V
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v1, p0, Lq7/i0;->q:Lcom/android/camera/Camera;
-
-    invoke-virtual {v1}, Lcom/android/camera/Camera;->G2()Ll9/h;
-
-    move-result-object v2
-
-    invoke-static {v0}, Lcom/android/camera/module/FunModule$g;->a(Lcom/android/camera/module/FunModule$g;)Landroid/net/Uri;
-
-    move-result-object v3
-
-    iget-object v4, v0, Lcom/android/camera/module/FunModule$g;->a:Ljava/lang/String;
-
-    iget-object v5, v0, Lcom/android/camera/module/FunModule$g;->b:Landroid/content/ContentValues;
-
-    const/4 v6, 0x1
-
-    const/4 v7, 0x1
-
-    const/4 v8, 0x0
-
-    invoke-virtual/range {v2 .. v8}, Ll9/h;->y(Landroid/net/Uri;Ljava/lang/String;Landroid/content/ContentValues;ZZLjava/util/List;)Landroid/net/Uri;
-
-    :goto_0
-    if-eqz p1, :cond_0
-
-    :cond_2
-    invoke-virtual {p0}, Lq7/b6;->ol()V
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
-.end method
-
-.method public final Dm()Z
-    .locals 12
-
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {v0}, Lr7/m;->t0()Lya/a;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    sget-object p0, Lq7/b6;->p7:Ljava/lang/String;
-
-    const-string v0, "initializeRecorder: null camera"
-
-    new-array v2, v1, [Ljava/lang/Object;
-
-    invoke-static {p0, v0, v2}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return v1
-
-    :cond_0
-    sget-object v0, Lq7/b6;->p7:Ljava/lang/String;
-
-    const-string v2, "initializeRecorder"
-
-    invoke-static {v0, v2}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lq7/b6;->p8()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lq7/i0;->q:Lcom/android/camera/Camera;
-
-    invoke-virtual {v0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lq7/b6;->Wl(Landroid/content/Intent;)V
-
-    :cond_1
-    iget-object v0, p0, Lq7/b6;->q1:Lg8/d0;
-
-    iget-object v2, p0, Lq7/i0;->d:Lr7/b;
-
-    invoke-interface {v2}, Lr7/b;->getOrientation()I
-
-    move-result v2
-
-    iput v2, v0, Lg8/d0;->j:I
-
-    :try_start_0
-    invoke-virtual {p0}, Lcom/android/camera/module/FunModule;->Lm()V
-
-    iget-object v0, p0, Lq7/b6;->K2:Landroid/net/Uri;
-
-    if-eqz v0, :cond_2
-
-    new-instance v2, Ls7/e;
-
-    invoke-direct {v2, v0}, Ls7/e;-><init>(Landroid/net/Uri;)V
-
-    iput-object v2, p0, Lcom/android/camera/module/FunModule;->q8:Ls7/e;
-
-    goto :goto_0
-
-    :cond_2
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v2
-
-    iget-object v0, p0, Lq7/b6;->v1:Lg8/u0;
-
-    iget-object v4, v0, Lg8/u0;->o:Ljava/lang/String;
-
-    const/4 v5, -0x1
-
-    invoke-static {v2, v3, v5, v4}, Lg8/b1;->b(JILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    iput-object v2, v0, Lg8/u0;->o:Ljava/lang/String;
-
-    iget-object v0, p0, Lq7/b6;->v1:Lg8/u0;
-
-    iget v4, v0, Lg8/u0;->p:I
-
-    const/4 v5, -0x1
-
-    iget-object v6, v0, Lg8/u0;->o:Ljava/lang/String;
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x1
-
-    const/4 v10, 0x0
-
-    move-object v3, v0
-
-    invoke-static/range {v3 .. v10}, Lg8/b1;->d(Lg8/u0;IILjava/lang/String;Ljava/lang/String;ZZZ)Landroid/content/ContentValues;
-
-    move-result-object v2
-
-    iput-object v2, v0, Lg8/u0;->n:Landroid/content/ContentValues;
-
-    iget-object v0, p0, Lq7/b6;->v1:Lg8/u0;
-
-    iget-object v2, v0, Lg8/u0;->n:Landroid/content/ContentValues;
-
-    const-string v3, "_data"
-
-    invoke-virtual {v2, v3}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    iput-object v2, v0, Lg8/u0;->r:Ljava/lang/String;
-
-    iget-object v0, p0, Lq7/b6;->v1:Lg8/u0;
-
-    iget-object v0, v0, Lg8/u0;->r:Ljava/lang/String;
-
-    invoke-static {v0}, Lm7/a;->y(Ljava/lang/String;)Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lcom/android/camera/module/FunModule;->V9:Z
-
-    if-eqz v0, :cond_3
-
-    new-instance v0, Lo9/c;
-
-    invoke-static {}, Lcom/android/camera/CameraAppImpl;->o()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-direct {v0, v2}, Lo9/c;-><init>(Landroid/content/Context;)V
-
-    iput-object v0, p0, Lcom/android/camera/module/FunModule;->U9:Lo9/c;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Lo9/c;->k(ZLandroid/content/Intent;)V
-
-    iget-object v0, p0, Lcom/android/camera/module/FunModule;->U9:Lo9/c;
-
-    iget-object v2, p0, Lq7/b6;->v1:Lg8/u0;
-
-    iget-object v2, v2, Lg8/u0;->n:Landroid/content/ContentValues;
-
-    invoke-virtual {v0, v2}, Lo9/c;->r(Landroid/content/ContentValues;)V
-
-    new-instance v0, Ls7/e;
-
-    iget-object v2, p0, Lcom/android/camera/module/FunModule;->U9:Lo9/c;
-
-    invoke-virtual {v2}, Lo9/c;->l()Landroid/net/Uri;
-
-    move-result-object v2
-
-    invoke-direct {v0, v2}, Ls7/e;-><init>(Landroid/net/Uri;)V
-
-    iput-object v0, p0, Lcom/android/camera/module/FunModule;->q8:Ls7/e;
-
-    goto :goto_0
-
-    :cond_3
-    new-instance v0, Ls7/e;
-
-    iget-object v2, p0, Lq7/b6;->v1:Lg8/u0;
-
-    iget-object v2, v2, Lg8/u0;->r:Ljava/lang/String;
-
-    invoke-direct {v0, v2}, Ls7/e;-><init>(Ljava/lang/String;)V
-
-    iput-object v0, p0, Lcom/android/camera/module/FunModule;->q8:Ls7/e;
-
-    :goto_0
-    new-instance v0, Ls7/f;
-
-    invoke-virtual {p0}, Lq7/i0;->u0()Lcom/android/camera/Camera;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/android/camera/ActivityBase;->xi()Lcom/android/camera/ui/a1;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Lcom/android/camera/ui/a1;->H0()Landroid/opengl/EGLContext;
-
-    move-result-object v4
-
-    sget-object v6, Lul/b;->a:Lul/b;
-
-    const/4 v7, 0x0
-
-    iget-object v8, p0, Lcom/android/camera/module/FunModule;->q8:Ls7/e;
-
-    iget-object v9, p0, Lcom/android/camera/module/FunModule;->Z9:Ls7/d$a;
-
-    iget-object v2, p0, Lq7/b6;->v1:Lg8/u0;
-
-    iget-object v2, v2, Lg8/u0;->c:Lcom/android/camera/w2;
-
-    iget v10, v2, Lcom/android/camera/w2;->a:I
-
-    iget v11, v2, Lcom/android/camera/w2;->b:I
-
-    move-object v3, v0
-
-    move-object v5, v6
-
-    invoke-direct/range {v3 .. v11}, Ls7/f;-><init>(Landroid/opengl/EGLContext;Lul/b;Lul/b;Ljava/lang/String;Ls7/e;Ls7/d$a;II)V
-
-    iput-object v0, p0, Lcom/android/camera/module/FunModule;->q7:Ls7/f;
-
-    new-instance v0, Ls7/c;
-
-    iget-object v2, p0, Lcom/android/camera/module/FunModule;->q8:Ls7/e;
-
-    iget-object v3, p0, Lcom/android/camera/module/FunModule;->Z9:Ls7/d$a;
-
-    invoke-direct {v0, v2, v3}, Ls7/c;-><init>(Ls7/e;Ls7/d$a;)V
-
-    iput-object v0, p0, Lcom/android/camera/module/FunModule;->p8:Ls7/c;
-
-    iget-object v0, p0, Lcom/android/camera/module/FunModule;->q7:Ls7/f;
-
-    iget v2, p0, Lcom/android/camera/module/FunModule;->W9:F
-
-    invoke-virtual {v0, v2}, Ls7/d;->h(F)V
-
-    iget-object v0, p0, Lcom/android/camera/module/FunModule;->p8:Ls7/c;
-
-    iget v2, p0, Lcom/android/camera/module/FunModule;->W9:F
-
-    invoke-virtual {v0, v2}, Ls7/d;->h(F)V
-
-    iget-object v0, p0, Lcom/android/camera/module/FunModule;->q8:Ls7/e;
-
-    invoke-virtual {v0}, Ls7/e;->f()V
-
-    sget-object v0, Lq7/b6;->p7:Ljava/lang/String;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "rotation: "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v3, p0, Lq7/i0;->d:Lr7/b;
-
-    invoke-interface {v3}, Lr7/b;->d()I
-
-    move-result v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    new-array v3, v1, [Ljava/lang/Object;
-
-    invoke-static {v0, v2, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v0, p0, Lcom/android/camera/module/FunModule;->q8:Ls7/e;
-
-    iget-object p0, p0, Lq7/i0;->d:Lr7/b;
-
-    invoke-interface {p0}, Lr7/b;->d()I
-
-    move-result p0
-
-    invoke-virtual {v0, p0}, Ls7/e;->h(I)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :catch_0
-    move-exception p0
-
-    sget-object v0, Lq7/b6;->p7:Ljava/lang/String;
-
-    const-string v2, "initializeRecorder: "
-
-    invoke-static {v0, v2, p0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return v1
-.end method
-
-.method public El()Z
-    .locals 2
-
-    iget v0, p0, Lq7/i0;->a:I
-
-    const/16 v1, 0xdc
-
-    if-eq v0, v1, :cond_0
-
-    invoke-super {p0}, Lq7/b6;->El()Z
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final Em()Z
-    .locals 0
-    .annotation build Lh7/d;
-        ignore = false
-        key = "isSupportedMovieSolid"
-        type = 0x0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "success",
+            "captureStartTime",
+            "reason"
+        }
     .end annotation
 
-    iget-object p0, p0, Lq7/i0;->b:Lr7/m;
+    .line 1
+    iget-object p1, p0, Ld/d/a/d7/p7;->K8:Lcom/android/camera/Camera;
 
-    invoke-interface {p0}, Lr7/m;->S()Z
+    invoke-virtual {p1}, Lcom/android/camera/ActivityBase;->Hc()Ld/d/a/d8/x1;
 
-    move-result p0
+    move-result-object p1
 
-    if-nez p0, :cond_0
+    sget-object p2, Ld/o/g0/o0/a;->p:Ld/o/g0/o0/a;
 
-    invoke-static {}, Lcom/android/camera/v2;->G4()Z
+    const/4 p3, 0x0
 
-    move-result p0
+    invoke-interface {p1, p2, p3}, Ld/d/a/d8/x1;->m0(Ld/o/g0/o0/a;Ljava/lang/Object;)V
 
-    if-eqz p0, :cond_0
+    .line 2
+    iget-object p1, p0, Ld/d/a/d7/p7;->K8:Lcom/android/camera/Camera;
 
-    const/4 p0, 0x1
+    invoke-virtual {p1}, Lcom/android/camera/ActivityBase;->Hc()Ld/d/a/d8/x1;
 
-    goto :goto_0
+    move-result-object p1
 
-    :cond_0
-    const/4 p0, 0x0
+    invoke-interface {p1, p3}, Ld/d/a/d8/x1;->i(Ld/d/a/d8/p2/r;)V
 
-    :goto_0
-    return p0
-.end method
+    .line 3
+    iget-object p0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
 
-.method public Ff(IIZ)V
-    .locals 2
+    const/4 p1, 0x1
 
-    iget-object v0, p0, Lq7/i0;->c:Lr7/h;
+    invoke-interface {p0, p1}, Ld/d/a/d7/i8/s;->D0(I)V
 
-    invoke-interface {v0}, Lr7/h;->isPaused()Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {v0}, Lr7/m;->t0()Lya/a;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_4
-
-    invoke-virtual {p0}, Lq7/i0;->aj()Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {v0}, Lr7/m;->t0()Lya/a;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lya/a;->h0()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    invoke-virtual {p0, p1, p2}, Lq7/i0;->sh(II)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {v0}, Lr7/m;->L()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    sget-object p0, Lq7/b6;->p7:Ljava/lang/String;
-
-    const/4 p1, 0x0
-
-    new-array p1, p1, [Ljava/lang/Object;
-
-    const-string p2, "onSingleTapUp: frame not available"
-
-    invoke-static {p0, p2, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_1
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {v0}, Lr7/m;->S()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lq7/i0;->q:Lcom/android/camera/Camera;
-
-    invoke-virtual {v0}, Lcom/android/camera/Camera;->Xl()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    return-void
-
-    :cond_2
-    invoke-static {}, Lv8/k;->impl2()Lv8/k;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_4
-
-    invoke-interface {v0, p1, p2}, Lv8/k;->ph(II)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    invoke-static {}, Lv8/n1;->impl()Ljava/util/Optional;
-
-    move-result-object v0
-
-    new-instance v1, Lq7/s4;
-
-    invoke-direct {v1}, Lq7/s4;-><init>()V
-
-    invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lq7/b6;->K1:J
-
-    new-instance v0, Landroid/graphics/Point;
-
-    invoke-direct {v0, p1, p2}, Landroid/graphics/Point;-><init>(II)V
-
-    invoke-virtual {p0, v0}, Lq7/i0;->Qj(Ljava/lang/Object;)V
-
-    invoke-virtual {p0}, Lq7/b6;->nm()V
-
-    invoke-virtual {p0, p3, v0}, Lq7/i0;->Yi(ZLandroid/graphics/Point;)V
-
-    :cond_4
-    :goto_0
     return-void
 .end method
 
-.method public Fh()Z
-    .locals 2
+.method public synthetic Ol()V
+    .locals 0
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    invoke-direct {p0}, Lcom/android/camera/module/FunModule;->Nl()V
 
-    move-result-object v0
+    return-void
+.end method
 
-    invoke-virtual {v0}, Lid/b;->v2()Z
+.method public Q0(Ld/d/c/a/h;Ld/d/a/q6/h/a;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "canvas",
+            "attribute"
+        }
+    .end annotation
 
-    move-result v0
+    .line 1
+    monitor-enter p0
+
+    .line 2
+    :try_start_0
+    iget-object p1, p0, Lcom/android/camera/module/FunModule;->A9:Ld/d/a/d7/j8/f;
+
+    .line 3
+    iget-object v0, p0, Ld/d/a/d7/e8;->f9:Ld/d/a/d7/r8/s0;
+
+    iget-boolean v0, v0, Ld/d/a/d7/r8/s0;->f:Z
+
+    .line 4
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz p1, :cond_0
 
     if-eqz v0, :cond_0
 
-    iget v0, p0, Lq7/i0;->a:I
+    .line 5
+    check-cast p2, Ld/d/a/q6/h/d;
 
-    const/16 v1, 0xa1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {v0}, Lcom/android/camera/v2;->A4(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {v0}, Lr7/m;->S()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lq7/b6;->q1:Lg8/d0;
-
-    iget-boolean v0, v0, Lg8/d0;->f:Z
-
-    if-nez v0, :cond_0
-
-    iget-object p0, p0, Lq7/b6;->q1:Lg8/d0;
-
-    iget-boolean p0, p0, Lg8/d0;->a:Z
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x1
-
-    goto :goto_0
+    invoke-virtual {p1, p2}, Ld/d/a/d7/j8/f;->n(Ld/d/a/q6/h/d;)Z
 
     :cond_0
-    const/4 p0, 0x0
+    return-void
 
-    :goto_0
-    return p0
+    :catchall_0
+    move-exception p1
+
+    .line 6
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 .end method
 
-.method public G4(Lya/o5;)V
-    .locals 3
-    .annotation build Lh7/d;
-        ignore = false
-        key = "isFastShutterCallbackSupported"
-        type = 0x0
-    .end annotation
+.method public synthetic Rl()V
+    .locals 0
 
-    iget-object p0, p0, Lq7/i0;->q:Lcom/android/camera/Camera;
-
-    invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->xi()Lcom/android/camera/ui/a1;
-
-    move-result-object p0
-
-    sget-object p1, Lwl/d;->e:Lwl/d;
-
-    const/4 v0, 0x2
-
-    new-array v0, v0, [Ljava/lang/Object;
-
-    const/4 v1, 0x0
-
-    sget-object v2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x1
-
-    sget-object v2, Lwl/c;->a:Lwl/c;
-
-    aput-object v2, v0, v1
-
-    invoke-interface {p0, p1, v0}, Lcom/android/camera/ui/a1;->i1(Lwl/d;[Ljava/lang/Object;)V
-
-    const-string p0, "mi_live_click_kaleidoscope_capture"
-
-    invoke-static {p0}, Lk9/a;->z1(Ljava/lang/String;)V
+    invoke-direct {p0}, Lcom/android/camera/module/FunModule;->Ql()V
 
     return-void
 .end method
 
-.method public Gf()F
-    .locals 0
-
-    iget p0, p0, Lcom/android/camera/module/FunModule;->W9:F
-
-    return p0
-.end method
-
-.method public Gi(Lcom/android/camera/module/loader/base/StartControl;)V
+.method public Sh(Lcom/android/camera/module/loader/base/StartControl;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "startControl"
+        }
+    .end annotation
 
-    invoke-super {p0, p1}, Lq7/i0;->Gi(Lcom/android/camera/module/loader/base/StartControl;)V
+    .line 1
+    invoke-super {p0, p1}, Ld/d/a/d7/p7;->Sh(Lcom/android/camera/module/loader/base/StartControl;)V
 
-    iget-object v0, p0, Lcom/android/camera/module/FunModule;->ba:Landroidx/lifecycle/LifecycleRegistry;
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/module/FunModule;->P9:Landroidx/lifecycle/LifecycleRegistry;
 
     sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_START:Landroidx/lifecycle/Lifecycle$Event;
 
     invoke-virtual {v0, v1}, Landroidx/lifecycle/LifecycleRegistry;->handleLifecycleEvent(Landroidx/lifecycle/Lifecycle$Event;)V
 
+    .line 3
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    iput-object v0, p0, Lcom/android/camera/module/FunModule;->aa:Landroid/util/SparseArray;
+    iput-object v0, p0, Lcom/android/camera/module/FunModule;->O9:Landroid/util/SparseArray;
 
+    .line 4
     iget p1, p1, Lcom/android/camera/module/loader/base/StartControl;->mTargetMode:I
 
     const/16 v0, 0xdc
@@ -1537,14 +2717,16 @@
 
     goto :goto_0
 
+    .line 5
     :pswitch_0
     new-instance p1, Lcom/android/camera/module/FunModule$d;
 
     invoke-direct {p1, p0}, Lcom/android/camera/module/FunModule$d;-><init>(Lcom/android/camera/module/FunModule;)V
 
-    iget-object p0, p0, Lcom/android/camera/module/FunModule;->aa:Landroid/util/SparseArray;
+    .line 6
+    iget-object p0, p0, Lcom/android/camera/module/FunModule;->O9:Landroid/util/SparseArray;
 
-    invoke-virtual {p1}, Lz7/k;->d()I
+    invoke-virtual {p1}, Ld/d/a/d7/n8/a/k;->d()I
 
     move-result v0
 
@@ -1552,14 +2734,16 @@
 
     goto :goto_0
 
+    .line 7
     :pswitch_1
     new-instance p1, Lcom/android/camera/module/FunModule$c;
 
     invoke-direct {p1, p0}, Lcom/android/camera/module/FunModule$c;-><init>(Lcom/android/camera/module/FunModule;)V
 
-    iget-object p0, p0, Lcom/android/camera/module/FunModule;->aa:Landroid/util/SparseArray;
+    .line 8
+    iget-object p0, p0, Lcom/android/camera/module/FunModule;->O9:Landroid/util/SparseArray;
 
-    invoke-virtual {p1}, Lz7/k;->d()I
+    invoke-virtual {p1}, Ld/d/a/d7/n8/a/k;->d()I
 
     move-result v0
 
@@ -1567,14 +2751,16 @@
 
     goto :goto_0
 
+    .line 9
     :pswitch_2
     new-instance p1, Lcom/android/camera/module/FunModule$b;
 
     invoke-direct {p1, p0}, Lcom/android/camera/module/FunModule$b;-><init>(Lcom/android/camera/module/FunModule;)V
 
-    iget-object p0, p0, Lcom/android/camera/module/FunModule;->aa:Landroid/util/SparseArray;
+    .line 10
+    iget-object p0, p0, Lcom/android/camera/module/FunModule;->O9:Landroid/util/SparseArray;
 
-    invoke-virtual {p1}, Lz7/k;->d()I
+    invoke-virtual {p1}, Ld/d/a/d7/n8/a/k;->d()I
 
     move-result v0
 
@@ -1582,14 +2768,16 @@
 
     goto :goto_0
 
+    .line 11
     :cond_0
     new-instance p1, Lcom/android/camera/module/FunModule$e;
 
     invoke-direct {p1, p0}, Lcom/android/camera/module/FunModule$e;-><init>(Lcom/android/camera/module/FunModule;)V
 
-    iget-object p0, p0, Lcom/android/camera/module/FunModule;->aa:Landroid/util/SparseArray;
+    .line 12
+    iget-object p0, p0, Lcom/android/camera/module/FunModule;->O9:Landroid/util/SparseArray;
 
-    invoke-virtual {p1}, Lz7/k;->d()I
+    invoke-virtual {p1}, Ld/d/a/d7/n8/a/k;->d()I
 
     move-result v0
 
@@ -1608,134 +2796,99 @@
     .end packed-switch
 .end method
 
-.method public final Im()V
-    .locals 1
+.method public T2()Ljava/lang/Object;
+    .locals 5
 
-    const/4 v0, 0x1
+    .line 1
+    new-instance v0, Ld/d/a/t6/b/f$a;
 
-    invoke-virtual {p0, v0}, Lq7/i0;->X(Z)V
+    iget v1, p0, Ld/d/a/d7/p7;->m:I
 
-    invoke-static {}, Lq7/l;->d()V
+    iget-object v2, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
 
-    invoke-static {}, Lv8/i2;->impl2()Lv8/i2;
+    .line 2
+    invoke-interface {v2}, Ld/d/a/d7/i8/s;->t1()I
+
+    move-result v2
+
+    iget-object v3, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    .line 3
+    invoke-interface {v3}, Ld/d/a/d7/i8/s;->R1()Ld/d/b/f4;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ld/d/b/f4;->y()I
+
+    move-result v3
+
+    iget-object v4, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    .line 4
+    invoke-interface {v4}, Ld/d/a/d7/i8/s;->getCapabilities()Ld/d/b/g4;
+
+    move-result-object v4
+
+    invoke-direct {v0, v1, v2, v3, v4}, Ld/d/a/t6/b/f$a;-><init>(IIILd/d/b/g4;)V
+
+    .line 5
+    invoke-direct {p0}, Lcom/android/camera/module/FunModule;->Ml()Z
+
+    move-result p0
+
+    invoke-virtual {v0, p0}, Ld/d/a/t6/b/f$a;->b(Z)Ld/d/a/t6/b/f$a;
+
+    .line 6
+    invoke-virtual {v0}, Ld/d/a/t6/b/f$a;->a()Ld/d/a/t6/b/f;
 
     move-result-object p0
 
-    if-eqz p0, :cond_0
-
-    invoke-interface {p0}, Lv8/i2;->Y()V
-
-    :cond_0
-    return-void
+    return-object p0
 .end method
 
-.method public final Jm()V
-    .locals 8
+.method public Uf(I)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "speed"
+        }
+    .end annotation
 
-    const/4 v0, 0x1
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/module/FunModule;->L9:[F
 
-    invoke-virtual {p0, v0}, Lq7/i0;->X(Z)V
+    aget p1, v0, p1
 
-    invoke-virtual {p0}, Lq7/i0;->hg()Lwa/w;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lwa/w;->z9()V
-
-    iget-object v1, p0, Lq7/i0;->q:Lcom/android/camera/Camera;
-
-    new-instance v2, Landroid/content/Intent;
-
-    const-string v3, "com.android.camera.action.start_video_recording"
-
-    invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v2}, Landroid/app/Activity;->sendBroadcast(Landroid/content/Intent;)V
-
-    iget-object v1, p0, Lq7/b6;->q1:Lg8/d0;
-
-    iput-boolean v0, v1, Lg8/d0;->f:Z
-
-    iget-object v1, p0, Lq7/b6;->q1:Lg8/d0;
-
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v2
-
-    iput-wide v2, v1, Lg8/d0;->c:J
-
-    invoke-virtual {p0, v0}, Lq7/i0;->sd(Z)V
-
-    invoke-virtual {p0}, Lq7/i0;->hg()Lwa/w;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lwa/w;->ib(Z)V
-
-    invoke-virtual {p0}, Lcom/android/camera/module/FunModule;->tm()V
-
-    invoke-virtual {p0}, Lq7/i0;->Wb()V
-
-    iget-object v0, p0, Lq7/i0;->q:Lcom/android/camera/Camera;
-
-    invoke-static {v0}, Lcom/android/camera/s;->d(Landroid/content/Context;)Lcom/android/camera/s;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/android/camera/s;->m()V
-
-    new-instance v2, Ljava/util/HashMap;
-
-    invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
-
-    iget-boolean v0, p0, Lq7/b6;->p3:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    const-string v1, "attr_3a_locked"
-
-    invoke-interface {v2, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 v3, 0x1
-
-    const/4 v4, 0x0
-
-    iget-object v0, p0, Lq7/b6;->v1:Lg8/u0;
-
-    iget-object v5, v0, Lg8/u0;->v:Lcom/android/camera/fragment/beauty/e0;
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    move-object v1, p0
-
-    invoke-virtual/range {v1 .. v7}, Lq7/i0;->Bk(Ljava/util/Map;IZLcom/android/camera/fragment/beauty/e0;ZI)V
+    iput p1, p0, Lcom/android/camera/module/FunModule;->K9:F
 
     return-void
 .end method
 
-.method public Km()V
+.method public Ul()V
     .locals 2
 
-    invoke-static {}, Lg2/b;->i()Lk2/g;
+    .line 1
+    invoke-static {}, Ld/d/a/l6/b;->i()Ld/d/a/l6/e/k/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lk2/g;->t()Lj2/b0;
+    invoke-virtual {v0}, Ld/d/a/l6/e/k/d;->t()Ld/d/a/l6/e/j/i0;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lq7/i0;->U()I
+    .line 2
+    invoke-virtual {p0}, Ld/d/a/d7/p7;->U()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lj2/b0;->getComponentValue(I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ld/d/a/l6/e/j/i0;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 3
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v0
@@ -1747,269 +2900,16 @@
     return-void
 .end method
 
-.method public final Lm()V
-    .locals 4
-
-    sget-object v0, Lq7/b6;->p7:Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "releaseLastMediaRecorder "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lcom/android/camera/module/FunModule;->p9:Ls7/e;
-
-    const/4 v3, 0x0
-
-    if-eqz v2, :cond_0
-
-    const/4 v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    move v2, v3
-
-    :goto_0
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    new-array v2, v3, [Ljava/lang/Object;
-
-    invoke-static {v0, v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v0, p0, Lcom/android/camera/module/FunModule;->p9:Ls7/e;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Ls7/e;->e()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/android/camera/module/FunModule;->p9:Ls7/e;
-
-    :cond_1
-    return-void
-.end method
-
-.method public M3()V
-    .locals 1
-
-    iget-object v0, p0, Lq7/i0;->c:Lr7/h;
-
-    invoke-interface {v0}, Lr7/h;->isPaused()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {v0}, Lr7/m;->t0()Lya/a;
-
-    move-result-object v0
-
-    if-nez v0, :cond_1
-
-    return-void
-
-    :cond_1
-    invoke-virtual {p0}, Lcom/android/camera/module/FunModule;->Km()V
-
-    return-void
-.end method
-
-.method public final Mm()V
-    .locals 2
-
-    sget-object v0, Lq7/b6;->p7:Ljava/lang/String;
-
-    const-string v1, "releaseMediaRecorder"
-
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcom/android/camera/module/FunModule;->q8:Ls7/e;
-
-    if-eqz v0, :cond_0
-
-    iput-object v0, p0, Lcom/android/camera/module/FunModule;->p9:Ls7/e;
-
-    invoke-virtual {p0}, Lcom/android/camera/module/FunModule;->Qm()V
-
-    iget-object p0, p0, Lq7/b6;->v1:Lg8/u0;
-
-    invoke-virtual {p0}, Lg8/u0;->a()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final Nm()V
-    .locals 0
-
-    invoke-virtual {p0}, Lcom/android/camera/module/FunModule;->Ai()V
-
-    invoke-virtual {p0}, Lcom/android/camera/module/FunModule;->Mm()V
-
-    invoke-virtual {p0}, Lcom/android/camera/module/FunModule;->Lm()V
-
-    return-void
-.end method
-
-.method public final Om(II)V
-    .locals 1
-
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {v0}, Lr7/m;->p0()I
-
-    move-result v0
-
-    rem-int/lit16 v0, v0, 0xb4
-
-    if-nez v0, :cond_0
-
-    iget-object p0, p0, Lq7/b6;->v1:Lg8/u0;
-
-    new-instance v0, Lcom/android/camera/w2;
-
-    invoke-direct {v0, p1, p2}, Lcom/android/camera/w2;-><init>(II)V
-
-    iput-object v0, p0, Lg8/u0;->c:Lcom/android/camera/w2;
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p0, p0, Lq7/b6;->v1:Lg8/u0;
-
-    new-instance v0, Lcom/android/camera/w2;
-
-    invoke-direct {v0, p2, p1}, Lcom/android/camera/w2;-><init>(II)V
-
-    iput-object v0, p0, Lg8/u0;->c:Lcom/android/camera/w2;
-
-    :goto_0
-    return-void
-.end method
-
-.method public final Pm()Z
-    .locals 5
-
-    invoke-virtual {p0}, Lcom/android/camera/module/FunModule;->Dm()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    sget-object p0, Lq7/b6;->p7:Ljava/lang/String;
-
-    const-string v0, "fail to initialize recorder"
-
-    const/4 v1, 0x0
-
-    new-array v2, v1, [Ljava/lang/Object;
-
-    invoke-static {p0, v0, v2}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return v1
-
-    :cond_0
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    iget-wide v2, p0, Lcom/android/camera/module/FunModule;->S9:J
-
-    sub-long/2addr v0, v2
-
-    const-wide/16 v2, 0x1c2
-
-    sub-long/2addr v2, v0
-
-    const-wide/16 v0, 0x0
-
-    cmp-long v4, v2, v0
-
-    if-gez v4, :cond_1
-
-    move-wide v2, v0
-
-    :cond_1
-    invoke-virtual {p0}, Lq7/i0;->U()I
-
-    move-result v0
-
-    invoke-static {v0}, Lcom/android/camera/v2;->T4(I)Z
-
-    move-result v0
-
-    iget-object v1, p0, Lcom/android/camera/module/FunModule;->q8:Ls7/e;
-
-    invoke-virtual {v1, v2, v3, v0}, Ls7/e;->j(JZ)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    iget-object v1, p0, Lcom/android/camera/module/FunModule;->q8:Ls7/e;
-
-    invoke-virtual {v1}, Ls7/e;->l()V
-
-    const v1, 0x7f140388
-
-    const v2, 0x7f140387
-
-    invoke-virtual {p0, v1, v2}, Lq7/i0;->T2(II)V
-
-    invoke-virtual {p0}, Lcom/android/camera/module/FunModule;->Mm()V
-
-    :cond_2
-    return v0
-.end method
-
-.method public Q7(ZJI)V
-    .locals 0
-
-    iget-object p1, p0, Lq7/i0;->q:Lcom/android/camera/Camera;
-
-    invoke-virtual {p1}, Lcom/android/camera/ActivityBase;->xi()Lcom/android/camera/ui/a1;
-
-    move-result-object p1
-
-    sget-object p2, Lwl/a;->h:Lwl/a;
-
-    const/4 p3, 0x0
-
-    invoke-interface {p1, p2, p3}, Lcom/android/camera/ui/a1;->b1(Lwl/a;Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lq7/i0;->q:Lcom/android/camera/Camera;
-
-    invoke-virtual {p1}, Lcom/android/camera/ActivityBase;->xi()Lcom/android/camera/ui/a1;
-
-    move-result-object p1
-
-    invoke-interface {p1, p3}, Lcom/android/camera/ui/a1;->T0(Lda/e;)V
-
-    iget-object p0, p0, Lq7/i0;->b:Lr7/m;
-
-    const/4 p1, 0x1
-
-    invoke-interface {p0, p1}, Lr7/m;->e(I)V
-
-    return-void
-.end method
-
-.method public Q9(I)V
+.method public aa(I)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "configItem"
+        }
+    .end annotation
 
     const/16 v0, 0xc4
 
@@ -2029,6 +2929,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -2045,7 +2946,8 @@
 
     aput v0, p1, v1
 
-    invoke-virtual {p0, p1}, Lq7/i0;->d4([I)V
+    .line 2
+    invoke-virtual {p0, p1}, Ld/d/a/d7/p7;->Z3([I)V
 
     goto :goto_0
 
@@ -2056,9 +2958,11 @@
 
     aput v0, p1, v1
 
-    invoke-virtual {p0, p1}, Lq7/i0;->Oa([I)V
+    .line 3
+    invoke-virtual {p0, p1}, Ld/d/a/d7/p7;->Ha([I)V
 
-    invoke-static {}, Lv8/n1;->impl()Ljava/util/Optional;
+    .line 4
+    invoke-static {}, Ld/d/a/m7/g/q1;->impl()Ljava/util/Optional;
 
     move-result-object p0
 
@@ -2066,796 +2970,29 @@
 
     move-result-object p0
 
-    check-cast p0, Lv8/n1;
+    check-cast p0, Ld/d/a/m7/g/q1;
 
-    invoke-interface {p0}, Lv8/h0;->updateEffectViewVisible()V
+    invoke-interface {p0}, Ld/d/a/m7/g/k0;->updateEffectViewVisible()V
 
     :goto_0
     return-void
 .end method
 
-.method public final Qm()V
-    .locals 3
-
-    iget-object v0, p0, Lcom/android/camera/module/FunModule;->U9:Lo9/c;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Lo9/c;->f()Ljava/io/FileDescriptor;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    :try_start_0
-    invoke-virtual {v0}, Ljava/io/FileDescriptor;->sync()V
-    :try_end_0
-    .catch Ljava/io/SyncFailedException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    sget-object v1, Lq7/b6;->p7:Ljava/lang/String;
-
-    invoke-static {v1, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    sget-object v1, Lq7/b6;->p7:Ljava/lang/String;
-
-    const-string v2, "fd sync failed."
-
-    invoke-static {v1, v2, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_0
-    :goto_0
-    iget-object p0, p0, Lcom/android/camera/module/FunModule;->U9:Lo9/c;
-
-    invoke-virtual {p0}, Lo9/c;->d()V
-
-    :cond_1
-    return-void
-.end method
-
-.method public Rm()V
-    .locals 3
-
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {v0}, Lr7/m;->s()I
-
-    move-result v0
-
-    const/4 v1, 0x3
-
-    if-ne v0, v1, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {v0, v1}, Lr7/m;->e(I)V
-
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {v0}, Lr7/m;->D0()Lya/b3;
-
-    move-result-object v0
-
-    const/4 v1, -0x8
-
-    invoke-virtual {v0, v1}, Lya/b3;->A5(I)V
-
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {v0}, Lr7/m;->t0()Lya/a;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lq7/i0;->q:Lcom/android/camera/Camera;
-
-    invoke-virtual {v1}, Lcom/android/camera/Camera;->G2()Ll9/h;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lq7/i0;->q:Lcom/android/camera/Camera;
-
-    invoke-virtual {v2}, Lcom/android/camera/ActivityBase;->xi()Lcom/android/camera/ui/a1;
-
-    move-result-object v2
-
-    invoke-virtual {v0, p0, v1, v2}, Lya/a;->D1(Lya/a$m;Ll9/h;Lcom/android/camera/ui/a1;)V
-
-    return-void
-.end method
-
-.method public final Sm()V
-    .locals 3
-
-    invoke-static {}, Lcom/android/camera/v2;->t1()I
-
-    move-result p0
-
-    sget-object v0, Lq7/b6;->p7:Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "updateFilter: 0x"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {p0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {}, Lcom/android/camera/effect/b;->getInstance()Lcom/android/camera/effect/b;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Lcom/android/camera/effect/b;->setEffect(I)V
-
-    return-void
-.end method
-
-.method public final Tm()V
-    .locals 5
-
-    invoke-static {}, Lid/c;->l()Z
-
-    move-result v0
-
-    const/16 v1, 0x1e
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {v0}, Lr7/m;->D0()Lya/b3;
-
-    move-result-object v0
-
-    new-instance v2, Landroid/util/Range;
-
-    const/4 v3, 0x5
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    invoke-direct {v2, v4, v1}, Landroid/util/Range;-><init>(Ljava/lang/Comparable;Ljava/lang/Comparable;)V
-
-    invoke-virtual {v0, v2}, Lya/b3;->f6(Landroid/util/Range;)V
-
-    iget-object p0, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {p0}, Lr7/m;->D0()Lya/b3;
-
-    move-result-object p0
-
-    new-instance v0, Landroid/util/Range;
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-direct {v0, v2, v1}, Landroid/util/Range;-><init>(Ljava/lang/Comparable;Ljava/lang/Comparable;)V
-
-    invoke-virtual {p0, v0}, Lya/b3;->s4(Landroid/util/Range;)V
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {v0}, Lr7/m;->D0()Lya/b3;
-
-    move-result-object v0
-
-    new-instance v2, Landroid/util/Range;
-
-    invoke-direct {v2, v1, v1}, Landroid/util/Range;-><init>(Ljava/lang/Comparable;Ljava/lang/Comparable;)V
-
-    invoke-virtual {v0, v2}, Lya/b3;->f6(Landroid/util/Range;)V
-
-    iget-object p0, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {p0}, Lr7/m;->D0()Lya/b3;
-
-    move-result-object p0
-
-    new-instance v0, Landroid/util/Range;
-
-    invoke-direct {v0, v1, v1}, Landroid/util/Range;-><init>(Ljava/lang/Comparable;Ljava/lang/Comparable;)V
-
-    invoke-virtual {p0, v0}, Lya/b3;->s4(Landroid/util/Range;)V
-
-    :goto_0
-    return-void
-.end method
-
-.method public U2()Ljava/lang/Object;
-    .locals 5
-
-    new-instance v0, Li4/f$a;
-
-    iget v1, p0, Lq7/i0;->a:I
-
-    iget-object v2, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {v2}, Lr7/m;->V()I
-
-    move-result v2
-
-    iget-object v3, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {v3}, Lr7/m;->t0()Lya/a;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lya/a;->y()I
-
-    move-result v3
-
-    iget-object v4, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {v4}, Lr7/m;->getCapabilities()Lya/f;
-
-    move-result-object v4
-
-    invoke-direct {v0, v1, v2, v3, v4}, Li4/f$a;-><init>(IIILya/f;)V
-
-    invoke-virtual {p0}, Lcom/android/camera/module/FunModule;->Em()Z
-
-    move-result p0
-
-    invoke-virtual {v0, p0}, Li4/f$a;->b(Z)Li4/f$a;
-
-    invoke-virtual {v0}, Li4/f$a;->a()Li4/f;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public Uj()V
-    .locals 1
-
-    invoke-super {p0}, Lq7/b6;->Uj()V
-
-    invoke-virtual {p0}, Lcom/android/camera/module/FunModule;->Km()V
-
-    invoke-virtual {p0}, Lq7/i0;->cj()V
-
-    sget-object v0, Le2/b0;->e1:[I
-
-    invoke-virtual {p0, v0}, Lq7/i0;->Oa([I)V
-
-    invoke-virtual {p0}, Lcom/android/camera/module/FunModule;->jm()V
-
-    invoke-static {}, Lcom/android/camera/v2;->S()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    invoke-virtual {p0, v0}, Lcom/android/camera/module/FunModule;->ng(I)V
-
-    return-void
-.end method
-
-.method public Ul()V
+.method public b3(Ljava/lang/String;)V
     .locals 2
-    .annotation build Landroidx/annotation/MainThread;
-    .end annotation
-
-    iget-boolean v0, p0, Lq7/b6;->C1:Z
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x3
-
-    invoke-interface {p0, v0, v1}, Lv8/q;->Xg(ZI)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final Um()V
-    .locals 1
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "needShowKaleidoscope"
         type = 0x0
     .end annotation
 
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lm2/h1;->c0()Lm2/o0;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lm2/o0;->b()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {}, Lcom/android/camera/effect/b;->getInstance()Lcom/android/camera/effect/b;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Lcom/android/camera/effect/b;->setKaleidoscope(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public Vf()Z
-    .locals 2
-
-    iget v0, p0, Lq7/i0;->a:I
-
-    const/16 v1, 0xdc
-
-    if-eq v0, v1, :cond_0
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Lq7/b6;->Vf()Z
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    :pswitch_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :pswitch_data_0
-    .packed-switch 0xd1
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final Vm()V
-    .locals 9
-
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {v0}, Lr7/m;->getCapabilities()Lya/f;
-
-    move-result-object v0
-
-    const-class v1, Landroid/graphics/SurfaceTexture;
-
-    invoke-static {v0, v1}, Lya/g;->x1(Lya/f;Ljava/lang/Class;)Ljava/util/List;
-
-    move-result-object v4
-
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {v0}, Lr7/m;->getCapabilities()Lya/f;
-
-    move-result-object v0
-
-    const/16 v1, 0x10
-
-    const/16 v2, 0x9
-
-    invoke-static {v1, v2, v0}, Lcom/android/camera/v2;->e1(IILya/f;)F
-
-    move-result v0
-
-    iget-object v1, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {v1}, Lr7/m;->t0()Lya/a;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lya/a;->y()I
-
-    move-result v1
-
-    iget v2, p0, Lq7/i0;->a:I
-
-    invoke-static {v1, v2}, Lcom/android/camera/v2;->a1(II)I
-
-    move-result v1
-
-    sget-object v2, Lq7/b6;->p7:Ljava/lang/String;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "updatePictureAndPreviewSize quality: "
-
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    const/4 v8, 0x0
-
-    new-array v5, v8, [Ljava/lang/Object;
-
-    invoke-static {v2, v3, v5}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    const/4 v2, 0x5
-
-    if-eq v1, v2, :cond_1
-
-    invoke-static {}, Ly2/b;->k()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-static {}, Lid/b;->q2()Lid/b;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lid/b;->n4()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v1, Lcom/android/camera/w2;
-
-    const/16 v2, 0x780
-
-    const/16 v3, 0x438
-
-    invoke-direct {v1, v2, v3}, Lcom/android/camera/w2;-><init>(II)V
-
-    goto :goto_0
-
-    :cond_1
-    new-instance v1, Lcom/android/camera/w2;
-
-    const/16 v2, 0x500
-
-    const/16 v3, 0x2d0
-
-    invoke-direct {v1, v2, v3}, Lcom/android/camera/w2;-><init>(II)V
-
-    :goto_0
-    move-object v7, v1
-
-    iget-object v1, p0, Lq7/i0;->b:Lr7/m;
-
-    const/4 v2, 0x0
-
-    invoke-interface {v1}, Lr7/m;->V()I
-
-    move-result v3
-
-    float-to-double v5, v0
-
-    invoke-static/range {v2 .. v7}, Lcom/android/camera/a6;->B1(ZILjava/util/List;DLcom/android/camera/w2;)Lcom/android/camera/w2;
-
-    move-result-object v0
-
-    invoke-interface {v1, v0}, Lr7/m;->F(Lcom/android/camera/w2;)V
-
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {v0}, Lr7/m;->getPreviewSize()Lcom/android/camera/w2;
-
-    move-result-object v0
-
-    iget v0, v0, Lcom/android/camera/w2;->a:I
-
-    iget-object v1, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {v1}, Lr7/m;->getPreviewSize()Lcom/android/camera/w2;
-
-    move-result-object v1
-
-    iget v1, v1, Lcom/android/camera/w2;->b:I
-
-    invoke-virtual {p0, v0, v1}, Lq7/i0;->Ik(II)V
-
-    sget-object v0, Lq7/b6;->p7:Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "previewSize: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {p0}, Lr7/m;->getPreviewSize()Lcom/android/camera/w2;
-
-    move-result-object p0
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    new-array v1, v8, [Ljava/lang/Object;
-
-    invoke-static {v0, p0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public Wj(II)V
-    .locals 0
-
-    invoke-super {p0, p1, p2}, Lq7/i0;->Wj(II)V
-
-    iget-object p1, p0, Lq7/i0;->q:Lcom/android/camera/Camera;
-
-    invoke-virtual {p1}, Lcom/android/camera/Camera;->Dl()Lcom/android/camera/z4;
-
-    move-result-object p1
-
-    iget-object p2, p0, Lq7/b6;->q6:Lcom/android/camera/z4$p;
-
-    invoke-virtual {p1, p2}, Lcom/android/camera/z4;->d0(Lcom/android/camera/z4$p;)V
-
-    iget-object p1, p0, Lq7/i0;->q:Lcom/android/camera/Camera;
-
-    invoke-virtual {p1}, Lcom/android/camera/Camera;->Dl()Lcom/android/camera/z4;
-
-    move-result-object p1
-
-    invoke-static {}, Lcom/android/camera/v2;->f4()Z
-
-    move-result p2
-
-    invoke-virtual {p1, p2}, Lcom/android/camera/z4;->Y(Z)V
-
-    iget-object p1, p0, Lq7/i0;->q:Lcom/android/camera/Camera;
-
-    invoke-virtual {p1}, Lcom/android/camera/ActivityBase;->xi()Lcom/android/camera/ui/a1;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcom/android/camera/module/FunModule;->q9:Lcom/android/camera/ui/a1;
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Lq7/i0;->X(Z)V
-
-    const-string p1, "continuous-video"
-
-    iput-object p1, p0, Lq7/b6;->p2:Ljava/lang/String;
-
-    invoke-virtual {p0}, Lcom/android/camera/module/FunModule;->Uj()V
-
-    return-void
-.end method
-
-.method public final Wm()V
-    .locals 6
-
-    invoke-virtual {p0}, Lq7/i0;->L5()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0}, Lcom/android/camera/module/FunModule;->Em()Z
-
-    move-result v0
-
-    const v1, 0x3f4ccccd    # 0.8f
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    if-eqz v0, :cond_1
-
-    sget-object v0, Lq7/b6;->p7:Ljava/lang/String;
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "videoStabilization: EIS isEISPreviewSupported = "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v5, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {v5}, Lr7/m;->getCapabilities()Lya/f;
-
-    move-result-object v5
-
-    invoke-static {v5}, Lya/g;->X2(Lya/f;)Z
-
-    move-result v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    new-array v5, v3, [Ljava/lang/Object;
-
-    invoke-static {v0, v4, v5}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {v0}, Lr7/m;->D0()Lya/b3;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Lya/b3;->X3(Z)V
-
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {v0}, Lr7/m;->D0()Lya/b3;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Lya/b3;->Y3(Z)V
-
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {v0}, Lr7/m;->getCapabilities()Lya/f;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lya/g;->X2(Lya/f;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    iget-object v0, p0, Lq7/i0;->q:Lcom/android/camera/Camera;
-
-    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->W()Lcom/android/camera/t2;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Lcom/android/camera/g5;->C(Z)V
-
-    iget-object p0, p0, Lq7/i0;->q:Lcom/android/camera/Camera;
-
-    invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->xi()Lcom/android/camera/ui/a1;
-
-    move-result-object p0
-
-    invoke-interface {p0, v1, v1}, Lcom/android/camera/ui/a1;->z1(FF)V
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {v0}, Lr7/m;->D0()Lya/b3;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Lya/b3;->X3(Z)V
-
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {v0}, Lr7/m;->D0()Lya/b3;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Lya/b3;->Y3(Z)V
-
-    iget-object v0, p0, Lq7/i0;->q:Lcom/android/camera/Camera;
-
-    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->W()Lcom/android/camera/t2;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Lcom/android/camera/g5;->C(Z)V
-
-    iget-object v0, p0, Lq7/i0;->q:Lcom/android/camera/Camera;
-
-    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->xi()Lcom/android/camera/ui/a1;
-
-    move-result-object v0
-
-    const/high16 v3, 0x3f800000    # 1.0f
-
-    invoke-interface {v0, v3, v3}, Lcom/android/camera/ui/a1;->z1(FF)V
-
-    invoke-static {}, Lid/c;->l()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {v0}, Lr7/m;->t0()Lya/a;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lya/a;->y()I
-
-    move-result v0
-
-    invoke-static {}, Lc8/g;->a0()Lc8/g;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lc8/g;->o()I
-
-    move-result v3
-
-    if-ne v0, v3, :cond_2
-
-    iget-object v0, p0, Lq7/i0;->q:Lcom/android/camera/Camera;
-
-    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->W()Lcom/android/camera/t2;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Lcom/android/camera/g5;->C(Z)V
-
-    iget-object p0, p0, Lq7/i0;->q:Lcom/android/camera/Camera;
-
-    invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->xi()Lcom/android/camera/ui/a1;
-
-    move-result-object p0
-
-    invoke-interface {p0, v1, v1}, Lcom/android/camera/ui/a1;->z1(FF)V
-
-    :cond_2
-    :goto_0
-    return-void
-.end method
-
-.method public a3(Ljava/lang/String;)V
-    .locals 2
-    .annotation build Lh7/d;
-        ignore = false
-        key = "needShowKaleidoscope"
-        type = 0x0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "kaleidoscope"
+        }
     .end annotation
 
     const/4 p1, 0x1
@@ -2868,38 +3005,85 @@
 
     aput v1, p1, v0
 
-    invoke-virtual {p0, p1}, Lq7/i0;->Oa([I)V
+    .line 1
+    invoke-virtual {p0, p1}, Ld/d/a/d7/p7;->Ha([I)V
 
     return-void
 .end method
 
-.method public ak()V
-    .locals 1
-    .annotation build Lh7/c;
-    .end annotation
+.method public bm()V
+    .locals 3
 
-    invoke-super {p0}, Lq7/b6;->ak()V
+    .line 1
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
 
-    iget-object v0, p0, Lq7/b6;->q1:Lg8/d0;
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->P0()I
 
-    iget-boolean v0, v0, Lg8/d0;->f:Z
+    move-result v0
 
-    if-eqz v0, :cond_0
+    const/4 v1, 0x3
 
-    const/4 v0, 0x0
+    if-ne v0, v1, :cond_0
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/module/FunModule;->mm(Z)V
+    return-void
 
+    .line 2
     :cond_0
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    invoke-interface {v0, v1}, Ld/d/a/d7/i8/s;->D0(I)V
+
+    .line 3
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->Z1()Ld/d/b/i4;
+
+    move-result-object v0
+
+    const/4 v1, -0x8
+
+    invoke-virtual {v0, v1}, Ld/d/b/i4;->w5(I)V
+
+    .line 4
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->R1()Ld/d/b/f4;
+
+    move-result-object v0
+
+    iget-object v1, p0, Ld/d/a/d7/p7;->K8:Lcom/android/camera/Camera;
+
+    invoke-virtual {v1}, Lcom/android/camera/Camera;->c2()Ld/d/a/w7/p;
+
+    move-result-object v1
+
+    iget-object v2, p0, Ld/d/a/d7/p7;->K8:Lcom/android/camera/Camera;
+
+    invoke-virtual {v2}, Lcom/android/camera/ActivityBase;->Hc()Ld/d/a/d8/x1;
+
+    move-result-object v2
+
+    invoke-virtual {v0, p0, v1, v2}, Ld/d/b/f4;->D1(Ld/d/b/f4$m;Ld/d/a/w7/p;Ld/d/a/d8/x1;)V
+
     return-void
 .end method
 
 .method public c1(Landroid/hardware/camera2/CameraCaptureSession;)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "session"
+        }
+    .end annotation
 
-    invoke-super {p0, p1}, Lq7/b6;->c1(Landroid/hardware/camera2/CameraCaptureSession;)V
+    .line 1
+    invoke-super {p0, p1}, Ld/d/a/d7/e8;->c1(Landroid/hardware/camera2/CameraCaptureSession;)V
 
-    invoke-virtual {p0}, Lq7/i0;->ej()Z
+    .line 2
+    invoke-virtual {p0}, Ld/d/a/d7/p7;->qi()Z
 
     move-result v0
 
@@ -2907,18 +3091,20 @@
 
     if-nez v0, :cond_0
 
-    sget-object p0, Lq7/b6;->p7:Ljava/lang/String;
+    .line 3
+    sget-object p0, Ld/d/a/d7/e8;->d9:Ljava/lang/String;
 
-    const-string p1, "onPreviewSessionSuccess: module is not ready"
+    new-array p1, v1, [Ljava/lang/Object;
 
-    new-array v0, v1, [Ljava/lang/Object;
+    const-string v0, "onPreviewSessionSuccess: module is not ready"
 
-    invoke-static {p0, p1, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {p0, v0, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
+    .line 4
     :cond_0
-    sget-object v0, Lq7/b6;->p7:Ljava/lang/String;
+    sget-object v0, Ld/d/a/d7/e8;->d9:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -2938,14 +3124,37 @@
 
     invoke-static {v0, p1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lq7/b6;->q5:Lg8/n;
+    .line 5
+    iget-object p1, p0, Ld/d/a/d7/e8;->v9:Ld/d/a/d7/r8/h0;
 
-    invoke-virtual {p1, v1}, Lg8/n;->c(Z)V
+    invoke-virtual {p1, v1}, Ld/d/a/d7/r8/h0;->c(Z)V
 
-    sget-object p1, Le2/b0;->f1:[I
+    .line 6
+    sget-object p1, Ld/d/a/j6/a0;->f1:[I
 
-    invoke-virtual {p0, p1}, Lq7/i0;->d4([I)V
+    invoke-virtual {p0, p1}, Ld/d/a/d7/p7;->Z3([I)V
 
+    return-void
+.end method
+
+.method public fl()V
+    .locals 2
+    .annotation build Landroidx/annotation/MainThread;
+    .end annotation
+
+    .line 1
+    iget-boolean v0, p0, Ld/d/a/d7/e8;->h9:Z
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x3
+
+    .line 2
+    invoke-interface {p0, v0, v1}, Ld/d/a/m7/g/t;->Bg(ZI)V
+
+    :cond_0
     return-void
 .end method
 
@@ -2954,113 +3163,754 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    iget-object p0, p0, Lcom/android/camera/module/FunModule;->ba:Landroidx/lifecycle/LifecycleRegistry;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/module/FunModule;->P9:Landroidx/lifecycle/LifecycleRegistry;
 
     return-object p0
 .end method
 
-.method public gk()V
+.method public hh()Z
     .locals 2
 
-    sget-object v0, Lq7/b6;->p7:Ljava/lang/String;
-
-    const-string v1, "pausePreview"
-
-    invoke-static {v0, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lq7/b6;->C1:Z
-
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {v0}, Lr7/m;->t0()Lya/a;
+    .line 1
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v0
+
+    invoke-virtual {v0}, Ld/k/a/b;->o2()Z
+
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
+    iget v0, p0, Ld/d/a/d7/p7;->m:I
 
-    invoke-interface {v0}, Lr7/m;->t0()Lya/a;
+    const/16 v1, 0xa1
+
+    if-ne v0, v1, :cond_0
+
+    .line 2
+    invoke-static {v0}, Ld/d/a/d4;->y4(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    .line 3
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->q1()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Ld/d/a/d7/e8;->f9:Ld/d/a/d7/r8/s0;
+
+    iget-boolean v0, v0, Ld/d/a/d7/r8/s0;->f:Z
+
+    if-nez v0, :cond_0
+
+    iget-object p0, p0, Ld/d/a/d7/e8;->f9:Ld/d/a/d7/r8/s0;
+
+    iget-boolean p0, p0, Ld/d/a/d7/r8/s0;->a:Z
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+.end method
+
+.method public je()V
+    .locals 2
+
+    .line 1
+    sget-object v0, Ld/o/f/u/k;->f:Lio/reactivex/Scheduler;
+
+    new-instance v1, Ld/d/a/d7/x3;
+
+    invoke-direct {v1, p0}, Ld/d/a/d7/x3;-><init>(Lcom/android/camera/module/FunModule;)V
+
+    invoke-static {v0, v1}, Ld/o/f/u/k;->k(Lio/reactivex/Scheduler;Ljava/lang/Runnable;)Lio/reactivex/disposables/Disposable;
+
+    return-void
+.end method
+
+.method public lh(Ld/d/b/r5;)V
+    .locals 3
+    .annotation build Ld/d/a/x6/d;
+        ignore = false
+        key = "isFastShutterCallbackSupported"
+        type = 0x0
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "quickViewParam"
+        }
+    .end annotation
+
+    .line 1
+    iget-object p0, p0, Ld/d/a/d7/p7;->K8:Lcom/android/camera/Camera;
+
+    invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->Hc()Ld/d/a/d8/x1;
+
+    move-result-object p0
+
+    sget-object p1, Ld/o/g0/o0/d;->j:Ld/o/g0/o0/d;
+
+    const/4 v0, 0x2
+
+    new-array v0, v0, [Ljava/lang/Object;
+
+    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ld/o/g0/o0/c;->c:Ld/o/g0/o0/c;
+
+    const/4 v2, 0x1
+
+    aput-object v1, v0, v2
+
+    invoke-interface {p0, p1, v0}, Ld/d/a/d8/x1;->I(Ld/o/g0/o0/d;[Ljava/lang/Object;)V
+
+    const-string p0, "mi_live_click_kaleidoscope_capture"
+
+    .line 2
+    invoke-static {p0}, Ld/d/a/v7/f;->v1(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public lj()V
+    .locals 1
+
+    .line 1
+    invoke-super {p0}, Ld/d/a/d7/e8;->lj()V
+
+    .line 2
+    invoke-virtual {p0}, Lcom/android/camera/module/FunModule;->Ul()V
+
+    .line 3
+    invoke-virtual {p0}, Ld/d/a/d7/p7;->oi()V
+
+    .line 4
+    sget-object v0, Ld/d/a/j6/a0;->e1:[I
+
+    invoke-virtual {p0, v0}, Ld/d/a/d7/p7;->Ha([I)V
+
+    .line 5
+    invoke-virtual {p0}, Lcom/android/camera/module/FunModule;->ul()V
+
+    .line 6
+    invoke-static {}, Ld/d/a/d4;->R()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lya/a;->u0()V
+    .line 7
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcom/android/camera/module/FunModule;->Uf(I)V
+
+    return-void
+.end method
+
+.method public nj(II)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "moduleIndex",
+            "cameraId"
+        }
+    .end annotation
+
+    .line 1
+    invoke-super {p0, p1, p2}, Ld/d/a/d7/p7;->nj(II)V
+
+    .line 2
+    iget-object p1, p0, Ld/d/a/d7/p7;->K8:Lcom/android/camera/Camera;
+
+    invoke-virtual {p1}, Lcom/android/camera/Camera;->rj()Ld/d/a/m5;
+
+    move-result-object p1
+
+    iget-object p2, p0, Ld/d/a/d7/e8;->x9:Ld/d/a/m5$p;
+
+    invoke-virtual {p1, p2}, Ld/d/a/m5;->d0(Ld/d/a/m5$p;)V
+
+    .line 3
+    iget-object p1, p0, Ld/d/a/d7/p7;->K8:Lcom/android/camera/Camera;
+
+    invoke-virtual {p1}, Lcom/android/camera/Camera;->rj()Ld/d/a/m5;
+
+    move-result-object p1
+
+    invoke-static {}, Ld/d/a/d4;->d4()Z
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, Ld/d/a/m5;->Y(Z)V
+
+    .line 4
+    iget-object p1, p0, Ld/d/a/d7/p7;->K8:Lcom/android/camera/Camera;
+
+    invoke-virtual {p1}, Lcom/android/camera/ActivityBase;->Hc()Ld/d/a/d8/x1;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/android/camera/module/FunModule;->E9:Ld/d/a/d8/x1;
+
+    const/4 p1, 0x0
+
+    .line 5
+    invoke-virtual {p0, p1}, Ld/d/a/d7/p7;->Y(Z)V
+
+    const-string p1, "continuous-video"
+
+    .line 6
+    iput-object p1, p0, Ld/d/a/d7/e8;->k9:Ljava/lang/String;
+
+    .line 7
+    invoke-virtual {p0}, Lcom/android/camera/module/FunModule;->lj()V
+
+    return-void
+.end method
+
+.method public onDestroy()V
+    .locals 0
+
+    .line 1
+    invoke-super {p0}, Ld/d/a/d7/p7;->onDestroy()V
+
+    return-void
+.end method
+
+.method public onKeyDown(ILandroid/view/KeyEvent;)Z
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "keyCode",
+            "event"
+        }
+    .end annotation
+
+    const/16 v0, 0x18
+
+    if-eq p1, v0, :cond_0
+
+    const/16 v0, 0x19
+
+    if-eq p1, v0, :cond_1
+
+    goto :goto_0
+
+    .line 1
     :cond_0
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
-
-    invoke-interface {v0}, Lr7/m;->W()Lc8/u;
+    invoke-static {}, Ld/d/a/m7/g/m3;->impl2()Ld/d/a/m7/g/m3;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    iget-object p0, p0, Lq7/i0;->b:Lr7/m;
+    .line 2
+    invoke-interface {v0}, Ld/d/a/m7/g/m3;->isShow()Z
 
-    invoke-interface {p0}, Lr7/m;->W()Lc8/u;
+    move-result v1
 
-    move-result-object p0
+    if-eqz v1, :cond_1
 
-    invoke-virtual {p0}, Lc8/u;->V0()V
+    .line 3
+    invoke-interface {v0}, Ld/d/a/m7/g/m3;->I5()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 4
+    invoke-interface {v0}, Ld/d/a/m7/g/m3;->Ve()V
 
     :cond_1
-    return-void
-.end method
+    const/16 v0, 0xdc
 
-.method public h0(Lcom/android/gallery3d/ui/h;Lt3/a;)V
-    .locals 1
+    .line 5
+    iget v1, p0, Ld/d/a/d7/p7;->m:I
 
-    monitor-enter p0
+    if-ne v0, v1, :cond_2
 
-    :try_start_0
-    iget-object p1, p0, Lcom/android/camera/module/FunModule;->q7:Ls7/f;
+    .line 6
+    iget-object p0, p0, Ld/d/a/d7/p7;->p:Ld/d/a/d7/i8/n;
 
-    iget-object v0, p0, Lq7/b6;->q1:Lg8/d0;
+    const p1, 0x7f13095d
 
-    iget-boolean v0, v0, Lg8/d0;->f:Z
+    invoke-static {p1}, Ld/d/a/d4;->w1(I)Ljava/lang/String;
 
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result-object p1
 
-    if-eqz p1, :cond_0
+    invoke-interface {p0, p1}, Ld/d/a/d7/i8/n;->U(Ljava/lang/String;)V
 
-    if-eqz v0, :cond_0
+    const/4 p0, 0x0
 
-    check-cast p2, Lt3/d;
+    return p0
 
-    invoke-virtual {p1, p2}, Ls7/f;->n(Lt3/d;)Z
+    .line 7
+    :cond_2
+    :goto_0
+    invoke-super {p0, p1, p2}, Ld/d/a/d7/e8;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
-    :cond_0
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public jj()Z
-    .locals 0
-
-    iget-object p0, p0, Lq7/b6;->q1:Lg8/d0;
-
-    iget-boolean p0, p0, Lg8/d0;->f:Z
+    move-result p0
 
     return p0
 .end method
 
-.method public jm()V
+.method public onPause()V
+    .locals 3
+
+    .line 1
+    invoke-super {p0}, Ld/d/a/d7/e8;->onPause()V
+
+    .line 2
+    invoke-direct {p0}, Lcom/android/camera/module/FunModule;->Xl()V
+
+    .line 3
+    iget-object v0, p0, Ld/d/a/d7/p7;->K8:Lcom/android/camera/Camera;
+
+    invoke-virtual {v0}, Lcom/android/camera/Camera;->rj()Ld/d/a/m5;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ld/d/a/m5;->V()V
+
+    const/4 v0, 0x1
+
+    .line 4
+    invoke-virtual {p0, v0}, Ld/d/a/d7/e8;->wl(Z)V
+
+    .line 5
+    invoke-virtual {p0}, Ld/d/a/d7/p7;->Aj()V
+
+    .line 6
+    iget-object v1, p0, Ld/d/a/d7/p7;->v1:Landroid/os/Handler;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+
+    .line 7
+    iget-object v1, p0, Ld/d/a/d7/p7;->K8:Lcom/android/camera/Camera;
+
+    invoke-virtual {v1}, Lcom/android/camera/ActivityBase;->a2()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 8
+    iget-object p0, p0, Ld/d/a/d7/p7;->K8:Lcom/android/camera/Camera;
+
+    invoke-static {p0}, Ld/d/a/d8/w1;->b(Landroid/content/Context;)Ld/d/a/d8/w1;
+
+    move-result-object p0
+
+    invoke-virtual {p0, v2, v0}, Ld/d/a/d8/w1;->e(Landroid/view/View;I)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public onStop()V
+    .locals 1
+
+    .line 1
+    invoke-super {p0}, Ld/d/a/d7/p7;->onStop()V
+
+    .line 2
+    invoke-static {}, Ld/d/a/q6/b;->getInstance()Ld/d/a/q6/b;
+
+    move-result-object p0
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Ld/d/a/q6/b;->setCurrentSticker(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public qf(IIZ)V
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "x",
+            "y",
+            "isLongPress"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Ld/d/a/d7/p7;->p:Ld/d/a/d7/i8/n;
+
+    invoke-interface {v0}, Ld/d/a/d7/i8/n;->isPaused()Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    .line 2
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->R1()Ld/d/b/f4;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_4
+
+    .line 3
+    invoke-virtual {p0}, Ld/d/a/d7/p7;->mi()Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    .line 4
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->R1()Ld/d/b/f4;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ld/d/b/f4;->h0()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    .line 5
+    invoke-virtual {p0, p1, p2}, Ld/d/a/d7/p7;->Vg(II)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    .line 6
+    :cond_0
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->i1()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 7
+    sget-object p0, Ld/d/a/d7/e8;->d9:Ljava/lang/String;
+
+    const/4 p1, 0x0
+
+    new-array p1, p1, [Ljava/lang/Object;
+
+    const-string p2, "onSingleTapUp: frame not available"
+
+    invoke-static {p0, p2, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    .line 8
+    :cond_1
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->q1()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Ld/d/a/d7/p7;->K8:Lcom/android/camera/Camera;
+
+    invoke-virtual {v0}, Lcom/android/camera/Camera;->Lj()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    return-void
+
+    .line 9
+    :cond_2
+    invoke-static {}, Ld/d/a/m7/g/o;->impl2()Ld/d/a/m7/g/o;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_4
+
+    .line 10
+    invoke-interface {v0, p1, p2}, Ld/d/a/m7/g/o;->Sg(II)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    goto :goto_0
+
+    .line 11
+    :cond_3
+    invoke-static {}, Ld/d/a/m7/g/q1;->impl()Ljava/util/Optional;
+
+    move-result-object v0
+
+    sget-object v1, Ld/d/a/d7/y3;->c:Ld/d/a/d7/y3;
+
+    invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
+
+    .line 12
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Ld/d/a/d7/e8;->i9:J
+
+    .line 13
+    new-instance v0, Landroid/graphics/Point;
+
+    invoke-direct {v0, p1, p2}, Landroid/graphics/Point;-><init>(II)V
+
+    .line 14
+    invoke-virtual {p0, v0}, Ld/d/a/d7/p7;->hj(Ljava/lang/Object;)V
+
+    .line 15
+    invoke-virtual {p0}, Ld/d/a/d7/e8;->yl()V
+
+    .line 16
+    invoke-virtual {p0, p3, v0}, Ld/d/a/d7/p7;->ki(ZLandroid/graphics/Point;)V
+
+    :cond_4
+    :goto_0
+    return-void
+.end method
+
+.method public registerProtocol()V
+    .locals 4
+
+    .line 1
+    invoke-super {p0}, Ld/d/a/d7/p7;->registerProtocol()V
+
+    .line 2
+    invoke-static {}, Ld/d/a/m7/d;->i()Ld/d/a/m7/d;
+
+    move-result-object v0
+
+    const-class v1, Ld/d/a/m7/g/t;
+
+    invoke-virtual {v0, v1, p0}, Ld/d/a/m7/d;->b(Ljava/lang/Class;Ld/d/a/m7/a;)V
+
+    .line 3
+    invoke-static {}, Ld/d/a/m7/d;->i()Ld/d/a/m7/d;
+
+    move-result-object v0
+
+    const-class v1, Ld/d/a/m7/g/p2;
+
+    invoke-virtual {v0, v1, p0}, Ld/d/a/m7/d;->b(Ljava/lang/Class;Ld/d/a/m7/a;)V
+
+    .line 4
+    invoke-static {}, Ld/d/a/m7/d;->i()Ld/d/a/m7/d;
+
+    move-result-object v0
+
+    const-class v1, Ld/d/a/m7/g/g2;
+
+    invoke-virtual {v0, v1, p0}, Ld/d/a/m7/d;->b(Ljava/lang/Class;Ld/d/a/m7/a;)V
+
+    .line 5
+    invoke-static {}, Ld/d/a/m7/d;->i()Ld/d/a/m7/d;
+
+    move-result-object v0
+
+    const-class v1, Ld/d/a/m7/g/l0;
+
+    invoke-virtual {v0, v1, p0}, Ld/d/a/m7/d;->b(Ljava/lang/Class;Ld/d/a/m7/a;)V
+
+    .line 6
+    invoke-static {}, Ld/d/a/m7/d;->i()Ld/d/a/m7/d;
+
+    move-result-object v0
+
+    const-class v1, Ld/d/a/m7/g/i1;
+
+    invoke-virtual {v0, v1, p0}, Ld/d/a/m7/d;->b(Ljava/lang/Class;Ld/d/a/m7/a;)V
+
+    .line 7
+    invoke-static {}, Ld/d/a/m7/d;->i()Ld/d/a/m7/d;
+
+    move-result-object v0
+
+    const-class v1, Ld/d/a/m7/g/o1;
+
+    invoke-virtual {v0, v1, p0}, Ld/d/a/m7/d;->b(Ljava/lang/Class;Ld/d/a/m7/a;)V
+
+    .line 8
+    invoke-virtual {p0}, Ld/d/a/d7/p7;->u0()Lcom/android/camera/Camera;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/camera/Camera;->pj()Ld/d/a/d7/m8/a;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Ld/d/a/d7/p7;->u0()Lcom/android/camera/Camera;
+
+    move-result-object p0
+
+    const/4 v1, 0x4
+
+    new-array v1, v1, [Ljava/lang/Class;
+
+    const/4 v2, 0x0
+
+    const-class v3, Ld/d/a/m7/g/c0;
+
+    aput-object v3, v1, v2
+
+    const/4 v2, 0x1
+
+    const-class v3, Ld/d/a/m7/g/t1;
+
+    aput-object v3, v1, v2
+
+    const/4 v2, 0x2
+
+    const-class v3, Ld/d/a/m7/g/e2;
+
+    aput-object v3, v1, v2
+
+    const/4 v2, 0x3
+
+    const-class v3, Ld/d/a/m7/g/l2;
+
+    aput-object v3, v1, v2
+
+    invoke-virtual {v0, p0, v1}, Ld/d/a/d7/m8/a;->e(Lcom/android/camera/ActivityBase;[Ljava/lang/Class;)V
+
+    return-void
+.end method
+
+.method public rf()F
+    .locals 0
+
+    .line 1
+    iget p0, p0, Lcom/android/camera/module/FunModule;->K9:F
+
+    return p0
+.end method
+
+.method public rj()V
+    .locals 1
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .line 1
+    invoke-super {p0}, Ld/d/a/d7/e8;->rj()V
+
+    .line 2
+    iget-object v0, p0, Ld/d/a/d7/e8;->f9:Ld/d/a/d7/r8/s0;
+
+    iget-boolean v0, v0, Ld/d/a/d7/r8/s0;->f:Z
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    .line 3
+    invoke-virtual {p0, v0}, Lcom/android/camera/module/FunModule;->xl(Z)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setDeparted()V
+    .locals 2
+
+    .line 1
+    invoke-super {p0}, Ld/d/a/d7/p7;->setDeparted()V
+
+    .line 2
+    invoke-static {}, Ld/o/f/u/k;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 3
+    iget-object p0, p0, Lcom/android/camera/module/FunModule;->P9:Landroidx/lifecycle/LifecycleRegistry;
+
+    sget-object v0, Landroidx/lifecycle/Lifecycle$Event;->ON_DESTROY:Landroidx/lifecycle/Lifecycle$Event;
+
+    invoke-virtual {p0, v0}, Landroidx/lifecycle/LifecycleRegistry;->handleLifecycleEvent(Landroidx/lifecycle/Lifecycle$Event;)V
+
+    goto :goto_0
+
+    .line 4
+    :cond_0
+    sget-object v0, Ld/o/f/u/k;->b:Lio/reactivex/Scheduler;
+
+    new-instance v1, Ld/d/a/d7/w3;
+
+    invoke-direct {v1, p0}, Ld/d/a/d7/w3;-><init>(Lcom/android/camera/module/FunModule;)V
+
+    invoke-static {v0, v1}, Ld/o/f/u/k;->k(Lio/reactivex/Scheduler;Ljava/lang/Runnable;)Lio/reactivex/disposables/Disposable;
+
+    :goto_0
+    return-void
+.end method
+
+.method public ui()Z
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Ld/d/a/d7/e8;->f9:Ld/d/a/d7/r8/s0;
+
+    iget-boolean p0, p0, Ld/d/a/d7/r8/s0;->f:Z
+
+    return p0
+.end method
+
+.method public ul()V
     .locals 9
 
-    sget-object v0, Lq7/b6;->p7:Ljava/lang/String;
+    .line 1
+    sget-object v0, Ld/d/a/d7/e8;->d9:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3070,7 +3920,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v2, p0, Lq7/b6;->C1:Z
+    iget-boolean v2, p0, Ld/d/a/d7/e8;->h9:Z
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -3084,7 +3934,8 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-virtual {p0}, Lq7/i0;->L5()Z
+    .line 2
+    invoke-virtual {p0}, Ld/d/a/d7/p7;->C5()Z
 
     move-result v0
 
@@ -3092,74 +3943,81 @@
 
     return-void
 
+    .line 3
     :cond_0
-    invoke-virtual {p0}, Lq7/b6;->wi()V
+    invoke-virtual {p0}, Ld/d/a/d7/e8;->Ih()V
 
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
+    .line 4
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
 
-    invoke-interface {v0}, Lr7/m;->getPreviewSize()Lcom/android/camera/w2;
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->getPreviewSize()Ld/d/a/e4;
 
     move-result-object v0
 
-    iget v0, v0, Lcom/android/camera/w2;->a:I
+    iget v0, v0, Ld/d/a/e4;->c:I
 
-    iget-object v1, p0, Lq7/i0;->b:Lr7/m;
+    iget-object v1, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
 
-    invoke-interface {v1}, Lr7/m;->getPreviewSize()Lcom/android/camera/w2;
+    invoke-interface {v1}, Ld/d/a/d7/i8/s;->getPreviewSize()Ld/d/a/e4;
 
     move-result-object v1
 
-    iget v1, v1, Lcom/android/camera/w2;->b:I
+    iget v1, v1, Ld/d/a/e4;->d:I
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/camera/module/FunModule;->Om(II)V
+    invoke-direct {p0, v0, v1}, Lcom/android/camera/module/FunModule;->Yl(II)V
 
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
+    .line 5
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
 
-    invoke-interface {v0}, Lr7/m;->getPreviewSize()Lcom/android/camera/w2;
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->getPreviewSize()Ld/d/a/e4;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/camera/a6;->Q(Lcom/android/camera/w2;)I
+    invoke-static {v0}, Ld/d/a/z5;->I(Ld/d/a/e4;)I
 
     move-result v0
 
-    iput v0, p0, Lcom/android/camera/module/FunModule;->T9:I
+    iput v0, p0, Lcom/android/camera/module/FunModule;->H9:I
 
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
+    .line 6
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
 
-    invoke-interface {v0}, Lr7/m;->t0()Lya/a;
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->R1()Ld/d/b/f4;
 
     move-result-object v0
 
-    iget-object v1, p0, Lq7/i0;->b:Lr7/m;
+    iget-object v1, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
 
-    invoke-interface {v1}, Lr7/m;->getPreviewSize()Lcom/android/camera/w2;
+    invoke-interface {v1}, Ld/d/a/d7/i8/s;->getPreviewSize()Ld/d/a/e4;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lya/a;->f1(Lcom/android/camera/w2;)V
+    invoke-virtual {v0, v1}, Ld/d/b/f4;->f1(Ld/d/a/e4;)V
 
-    iget-object v0, p0, Lq7/i0;->c:Lr7/h;
+    .line 7
+    iget-object v0, p0, Ld/d/a/d7/p7;->p:Ld/d/a/d7/i8/n;
 
-    iget-object v1, p0, Lq7/i0;->q:Lcom/android/camera/Camera;
+    iget-object v1, p0, Ld/d/a/d7/p7;->K8:Lcom/android/camera/Camera;
 
-    invoke-virtual {v1}, Lcom/android/camera/ActivityBase;->zi()J
+    invoke-virtual {v1}, Lcom/android/camera/ActivityBase;->Lc()J
 
     move-result-wide v1
 
-    invoke-interface {v0, v1, v2}, Lr7/h;->E(J)V
+    invoke-interface {v0, v1, v2}, Ld/d/a/d7/i8/n;->B(J)V
 
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
+    .line 8
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
 
-    invoke-interface {v0}, Lr7/m;->t0()Lya/a;
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->R1()Ld/d/b/f4;
 
     move-result-object v1
 
     new-instance v2, Landroid/view/Surface;
 
-    iget-object v0, p0, Lq7/i0;->q:Lcom/android/camera/Camera;
+    iget-object v0, p0, Ld/d/a/d7/p7;->K8:Lcom/android/camera/Camera;
 
-    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->Ai()Landroid/graphics/SurfaceTexture;
+    .line 9
+    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->Wc()Landroid/graphics/SurfaceTexture;
 
     move-result-object v0
 
@@ -3171,7 +4029,8 @@
 
     const/4 v5, 0x0
 
-    invoke-virtual {p0}, Lq7/i0;->E0()I
+    .line 10
+    invoke-virtual {p0}, Ld/d/a/d7/p7;->E0()I
 
     move-result v6
 
@@ -3179,189 +4038,320 @@
 
     move-object v8, p0
 
-    invoke-virtual/range {v1 .. v8}, Lya/a;->r1(Landroid/view/Surface;IILandroid/view/Surface;IZLya/a$e;)V
+    .line 11
+    invoke-virtual/range {v1 .. v8}, Ld/d/b/f4;->r1(Landroid/view/Surface;IILandroid/view/Surface;IZLd/d/b/f4$e;)V
 
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
+    .line 12
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
 
-    invoke-interface {v0}, Lr7/m;->W()Lc8/u;
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->u1()Ld/d/a/d7/o8/b/x;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lc8/u;->V0()V
+    invoke-virtual {v0}, Ld/d/a/d7/o8/b/x;->V0()V
 
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
+    .line 13
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
 
-    invoke-interface {v0}, Lr7/m;->M()Z
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->j1()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
+    .line 14
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
 
-    invoke-interface {v0}, Lr7/m;->t0()Lya/a;
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->R1()Ld/d/b/f4;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lya/a;->R0(Lya/a$h;)V
+    invoke-virtual {v0, p0}, Ld/d/b/f4;->R0(Ld/d/b/f4$h;)V
 
     :cond_1
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lq7/b6;->C1:Z
+    .line 15
+    iput-boolean v0, p0, Ld/d/a/d7/e8;->h9:Z
 
     return-void
 .end method
 
-.method public km()V
+.method public unRegisterProtocol()V
     .locals 2
 
-    invoke-super {p0}, Lq7/b6;->km()V
+    .line 1
+    invoke-super {p0}, Ld/d/a/d7/p7;->unRegisterProtocol()V
 
-    sget-object v0, Lq7/b6;->p7:Ljava/lang/String;
+    .line 2
+    invoke-static {}, Ld/d/a/m7/d;->i()Ld/d/a/m7/d;
+
+    move-result-object v0
+
+    const-class v1, Ld/d/a/m7/g/t;
+
+    invoke-virtual {v0, v1, p0}, Ld/d/a/m7/d;->d(Ljava/lang/Class;Ld/d/a/m7/a;)V
+
+    .line 3
+    invoke-static {}, Ld/d/a/m7/d;->i()Ld/d/a/m7/d;
+
+    move-result-object v0
+
+    const-class v1, Ld/d/a/m7/g/p2;
+
+    invoke-virtual {v0, v1, p0}, Ld/d/a/m7/d;->d(Ljava/lang/Class;Ld/d/a/m7/a;)V
+
+    .line 4
+    invoke-static {}, Ld/d/a/m7/d;->i()Ld/d/a/m7/d;
+
+    move-result-object v0
+
+    const-class v1, Ld/d/a/m7/g/g2;
+
+    invoke-virtual {v0, v1, p0}, Ld/d/a/m7/d;->d(Ljava/lang/Class;Ld/d/a/m7/a;)V
+
+    .line 5
+    invoke-static {}, Ld/d/a/m7/d;->i()Ld/d/a/m7/d;
+
+    move-result-object v0
+
+    const-class v1, Ld/d/a/m7/g/l0;
+
+    invoke-virtual {v0, v1, p0}, Ld/d/a/m7/d;->d(Ljava/lang/Class;Ld/d/a/m7/a;)V
+
+    .line 6
+    invoke-static {}, Ld/d/a/m7/d;->i()Ld/d/a/m7/d;
+
+    move-result-object v0
+
+    const-class v1, Ld/d/a/m7/g/i1;
+
+    invoke-virtual {v0, v1, p0}, Ld/d/a/m7/d;->d(Ljava/lang/Class;Ld/d/a/m7/a;)V
+
+    .line 7
+    invoke-static {}, Ld/d/a/m7/d;->i()Ld/d/a/m7/d;
+
+    move-result-object v0
+
+    const-class v1, Ld/d/a/m7/g/o1;
+
+    invoke-virtual {v0, v1, p0}, Ld/d/a/m7/d;->d(Ljava/lang/Class;Ld/d/a/m7/a;)V
+
+    .line 8
+    invoke-virtual {p0}, Ld/d/a/d7/p7;->u0()Lcom/android/camera/Camera;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/camera/Camera;->pj()Ld/d/a/d7/m8/a;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ld/d/a/d7/m8/a;->b()V
+
+    return-void
+.end method
+
+.method public vl()V
+    .locals 2
+
+    .line 1
+    invoke-super {p0}, Ld/d/a/d7/e8;->vl()V
+
+    .line 2
+    sget-object v0, Ld/d/a/d7/e8;->d9:Ljava/lang/String;
 
     const-string v1, "startVideoRecording"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
+    .line 3
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
 
     const/4 v1, 0x1
 
-    invoke-interface {v0, v1}, Lr7/m;->h1(Z)V
+    invoke-interface {v0, v1}, Ld/d/a/d7/i8/s;->D2(Z)V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lq7/b6;->K2:Landroid/net/Uri;
+    .line 4
+    iput-object v0, p0, Ld/d/a/d7/e8;->o9:Landroid/net/Uri;
 
-    invoke-static {}, Lq7/l;->f()V
+    .line 5
+    invoke-static {}, Ld/d/a/d7/o7;->f()V
 
-    invoke-virtual {p0}, Lcom/android/camera/module/FunModule;->Pm()Z
+    .line 6
+    invoke-direct {p0}, Lcom/android/camera/module/FunModule;->Zl()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/camera/module/FunModule;->Im()V
+    .line 7
+    invoke-direct {p0}, Lcom/android/camera/module/FunModule;->Sl()V
 
     return-void
 
+    .line 8
     :cond_0
-    invoke-virtual {p0}, Lq7/i0;->u0()Lcom/android/camera/Camera;
+    invoke-virtual {p0}, Ld/d/a/d7/p7;->u0()Lcom/android/camera/Camera;
 
     move-result-object v0
 
-    invoke-static {v0}, Lqb/e;->s(Landroid/content/Context;)Lqb/e;
+    invoke-static {v0}, Ld/d/f/e;->r(Landroid/content/Context;)Ld/d/f/e;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lqb/e;->o()V
+    invoke-virtual {v0}, Ld/d/f/e;->o()V
 
-    invoke-static {}, Lv8/i2;->impl2()Lv8/i2;
+    .line 9
+    invoke-static {}, Ld/d/a/m7/g/l2;->impl2()Ld/d/a/m7/g/l2;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lv8/i2;->onStart()V
+    .line 10
+    invoke-interface {v0}, Ld/d/a/m7/g/l2;->onStart()V
 
+    .line 11
     :cond_1
-    sget-object v0, Lq7/b6;->p7:Ljava/lang/String;
+    sget-object v0, Ld/d/a/d7/e8;->d9:Ljava/lang/String;
 
     const-string v1, "startVideoRecording process done"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lcom/android/camera/module/FunModule;->Jm()V
+    .line 12
+    invoke-direct {p0}, Lcom/android/camera/module/FunModule;->Tl()V
 
     return-void
 .end method
 
-.method public lk()V
+.method public xj()V
     .locals 2
 
-    sget-object v0, Lq7/b6;->p7:Ljava/lang/String;
+    .line 1
+    sget-object v0, Ld/d/a/d7/e8;->d9:Ljava/lang/String;
 
-    const-string v1, "resumePreview"
+    const-string v1, "pausePreview"
 
     invoke-static {v0, v1}, Lcom/android/camera/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lq7/b6;->C1:Z
+    .line 2
+    iput-boolean v0, p0, Ld/d/a/d7/e8;->h9:Z
 
-    iget-object v0, p0, Lq7/i0;->b:Lr7/m;
+    .line 3
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
 
-    invoke-interface {v0}, Lr7/m;->t0()Lya/a;
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->R1()Ld/d/b/f4;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lq7/i0;->b:Lr7/m;
+    .line 4
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
 
-    invoke-interface {p0}, Lr7/m;->t0()Lya/a;
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->R1()Ld/d/b/f4;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ld/d/b/f4;->u0()V
+
+    .line 5
+    :cond_0
+    iget-object v0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->u1()Ld/d/a/d7/o8/b/x;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    .line 6
+    iget-object p0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
+
+    invoke-interface {p0}, Ld/d/a/d7/i8/s;->u1()Ld/d/a/d7/o8/b/x;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lya/a;->A0()I
+    invoke-virtual {p0}, Ld/d/a/d7/o8/b/x;->V0()V
 
-    :cond_0
+    :cond_1
     return-void
 .end method
 
-.method public mm(Z)V
+.method public xl(Z)V
     .locals 29
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "fromRelease"
+        }
+    .end annotation
 
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lq7/i0;->b:Lr7/m;
+    .line 1
+    iget-object v1, v0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
 
     const/4 v2, 0x0
 
-    invoke-interface {v1, v2}, Lr7/m;->h1(Z)V
+    invoke-interface {v1, v2}, Ld/d/a/d7/i8/s;->D2(Z)V
 
-    iget-object v1, v0, Lq7/b6;->q1:Lg8/d0;
+    .line 2
+    iget-object v1, v0, Ld/d/a/d7/e8;->f9:Ld/d/a/d7/r8/s0;
 
-    iget-boolean v1, v1, Lg8/d0;->f:Z
+    iget-boolean v1, v1, Ld/d/a/d7/r8/s0;->f:Z
 
     if-nez v1, :cond_0
 
     return-void
 
+    .line 3
     :cond_0
-    invoke-super/range {p0 .. p1}, Lq7/b6;->mm(Z)V
+    invoke-super/range {p0 .. p1}, Ld/d/a/d7/e8;->xl(Z)V
 
-    invoke-virtual/range {p0 .. p0}, Lq7/b6;->xl()Z
+    .line 4
+    invoke-virtual/range {p0 .. p0}, Ld/d/a/d7/e8;->Ck()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    invoke-virtual/range {p0 .. p0}, Lq7/b6;->nm()V
+    .line 5
+    invoke-virtual/range {p0 .. p0}, Ld/d/a/d7/e8;->yl()V
 
+    .line 6
     :cond_1
-    iget-object v1, v0, Lq7/b6;->q1:Lg8/d0;
+    iget-object v1, v0, Ld/d/a/d7/e8;->f9:Ld/d/a/d7/r8/s0;
 
-    iput-boolean v2, v1, Lg8/d0;->f:Z
+    iput-boolean v2, v1, Ld/d/a/d7/r8/s0;->f:Z
 
+    .line 7
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v3
 
-    iget-object v1, v0, Lq7/b6;->q1:Lg8/d0;
+    iget-object v1, v0, Ld/d/a/d7/e8;->f9:Ld/d/a/d7/r8/s0;
 
-    iget-wide v5, v1, Lg8/d0;->c:J
+    iget-wide v5, v1, Ld/d/a/d7/r8/s0;->c:J
 
     sub-long/2addr v3, v5
 
-    iget-object v1, v0, Lcom/android/camera/module/FunModule;->q8:Ls7/e;
+    .line 8
+    iget-object v1, v0, Lcom/android/camera/module/FunModule;->C9:Ld/d/a/d7/j8/e;
 
-    invoke-virtual {v1}, Ls7/e;->l()V
+    invoke-virtual {v1}, Ld/d/a/d7/j8/e;->l()V
 
-    iget-object v1, v0, Lq7/i0;->c:Lr7/h;
+    .line 9
+    iget-object v1, v0, Ld/d/a/d7/p7;->p:Ld/d/a/d7/i8/n;
 
-    invoke-interface {v1}, Lr7/h;->isPaused()Z
+    invoke-interface {v1}, Ld/d/a/d7/i8/n;->isPaused()Z
 
     move-result v1
 
@@ -3369,14 +4359,17 @@
 
     const/4 v1, 0x3
 
-    invoke-virtual {v0, v1}, Lq7/i0;->e0(I)V
+    .line 10
+    invoke-virtual {v0, v1}, Ld/d/a/d7/p7;->f0(I)V
 
+    .line 11
     :cond_2
-    invoke-virtual/range {p0 .. p0}, Lcom/android/camera/module/FunModule;->Mm()V
+    invoke-direct/range {p0 .. p0}, Lcom/android/camera/module/FunModule;->Wl()V
 
-    iget-object v1, v0, Lq7/b6;->v1:Lg8/u0;
+    .line 12
+    iget-object v1, v0, Ld/d/a/d7/e8;->g9:Ld/d/a/d7/r8/x0;
 
-    iget-object v1, v1, Lg8/u0;->r:Ljava/lang/String;
+    iget-object v1, v1, Ld/d/a/d7/r8/x0;->s:Ljava/lang/String;
 
     const/4 v5, 0x1
 
@@ -3398,51 +4391,57 @@
 
     if-gez v9, :cond_4
 
-    invoke-static {v1}, Lg8/b1;->c(Ljava/lang/String;)V
+    .line 13
+    invoke-static {v1}, Ld/d/a/d7/r8/c1;->c(Ljava/lang/String;)V
 
     move v6, v5
 
     :cond_4
     if-nez v6, :cond_6
 
-    iget-boolean v1, v0, Lcom/android/camera/module/FunModule;->V9:Z
+    .line 14
+    iget-boolean v1, v0, Lcom/android/camera/module/FunModule;->J9:Z
 
     if-eqz v1, :cond_5
 
-    iget-object v1, v0, Lcom/android/camera/module/FunModule;->U9:Lo9/c;
+    .line 15
+    iget-object v1, v0, Lcom/android/camera/module/FunModule;->I9:Ld/d/a/w7/b0/c;
 
-    invoke-virtual {v1}, Lo9/c;->h()Landroid/net/Uri;
+    invoke-virtual {v1}, Ld/d/a/w7/b0/c;->h()Landroid/net/Uri;
 
     move-result-object v1
 
-    iget-object v6, v0, Lq7/b6;->v1:Lg8/u0;
+    iget-object v6, v0, Ld/d/a/d7/e8;->g9:Ld/d/a/d7/r8/x0;
 
-    iget-object v9, v6, Lg8/u0;->r:Ljava/lang/String;
+    iget-object v9, v6, Ld/d/a/d7/r8/x0;->s:Ljava/lang/String;
 
-    iget-object v6, v6, Lg8/u0;->n:Landroid/content/ContentValues;
+    iget-object v6, v6, Ld/d/a/d7/r8/x0;->o:Landroid/content/ContentValues;
 
-    invoke-virtual {v0, v1, v9, v6}, Lcom/android/camera/module/FunModule;->Am(Landroid/net/Uri;Ljava/lang/String;Landroid/content/ContentValues;)V
+    invoke-virtual {v0, v1, v9, v6}, Lcom/android/camera/module/FunModule;->Il(Landroid/net/Uri;Ljava/lang/String;Landroid/content/ContentValues;)V
 
     goto :goto_1
 
+    .line 16
     :cond_5
-    iget-object v1, v0, Lq7/b6;->v1:Lg8/u0;
+    iget-object v1, v0, Ld/d/a/d7/e8;->g9:Ld/d/a/d7/r8/x0;
 
-    iget-object v6, v1, Lg8/u0;->r:Ljava/lang/String;
+    iget-object v6, v1, Ld/d/a/d7/r8/x0;->s:Ljava/lang/String;
 
-    iget-object v1, v1, Lg8/u0;->n:Landroid/content/ContentValues;
+    iget-object v1, v1, Ld/d/a/d7/r8/x0;->o:Landroid/content/ContentValues;
 
-    invoke-virtual {v0, v6, v1}, Lcom/android/camera/module/FunModule;->Bm(Ljava/lang/String;Landroid/content/ContentValues;)V
+    invoke-virtual {v0, v6, v1}, Lcom/android/camera/module/FunModule;->Jl(Ljava/lang/String;Landroid/content/ContentValues;)V
 
+    .line 17
     :cond_6
     :goto_1
-    invoke-virtual/range {p0 .. p0}, Lq7/i0;->hg()Lwa/w;
+    invoke-virtual/range {p0 .. p0}, Ld/d/a/d7/p7;->Of()Ld/d/a/k8/a0;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lwa/w;->J9()V
+    invoke-virtual {v1}, Ld/d/a/k8/a0;->N6()V
 
-    iget-object v1, v0, Lq7/i0;->q:Lcom/android/camera/Camera;
+    .line 18
+    iget-object v1, v0, Ld/d/a/d7/p7;->K8:Lcom/android/camera/Camera;
 
     new-instance v6, Landroid/content/Intent;
 
@@ -3452,55 +4451,66 @@
 
     invoke-virtual {v1, v6}, Landroid/app/Activity;->sendBroadcast(Landroid/content/Intent;)V
 
-    invoke-virtual {v0, v2}, Lq7/i0;->sd(Z)V
+    .line 19
+    invoke-virtual {v0, v2}, Ld/d/a/d7/p7;->bd(Z)V
 
-    invoke-virtual/range {p0 .. p0}, Lq7/b6;->hl()V
+    .line 20
+    invoke-virtual/range {p0 .. p0}, Ld/d/a/d7/e8;->mk()V
 
-    iget-object v1, v0, Lcom/android/camera/module/FunModule;->R9:Landroid/os/CountDownTimer;
+    .line 21
+    iget-object v1, v0, Lcom/android/camera/module/FunModule;->F9:Landroid/os/CountDownTimer;
 
     if-eqz v1, :cond_7
 
+    .line 22
     invoke-virtual {v1}, Landroid/os/CountDownTimer;->cancel()V
 
+    .line 23
     :cond_7
-    invoke-virtual/range {p0 .. p0}, Lq7/i0;->u0()Lcom/android/camera/Camera;
+    invoke-virtual/range {p0 .. p0}, Ld/d/a/d7/p7;->u0()Lcom/android/camera/Camera;
 
     move-result-object v1
 
-    invoke-static {v1}, Lqb/e;->s(Landroid/content/Context;)Lqb/e;
+    invoke-static {v1}, Ld/d/f/e;->r(Landroid/content/Context;)Ld/d/f/e;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lqb/e;->o()V
+    invoke-virtual {v1}, Ld/d/f/e;->o()V
 
-    invoke-static {}, Lv8/i2;->impl2()Lv8/i2;
+    .line 24
+    invoke-static {}, Ld/d/a/m7/g/l2;->impl2()Ld/d/a/m7/g/l2;
 
     move-result-object v1
 
     if-eqz v1, :cond_8
 
-    invoke-interface {v1}, Lv8/i2;->onFinish()V
+    .line 25
+    invoke-interface {v1}, Ld/d/a/m7/g/l2;->onFinish()V
 
+    .line 26
     :cond_8
-    iget-object v1, v0, Lq7/i0;->b:Lr7/m;
+    iget-object v1, v0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
 
-    invoke-interface {v1}, Lr7/m;->t0()Lya/a;
+    invoke-interface {v1}, Ld/d/a/d7/i8/s;->R1()Ld/d/b/f4;
 
     move-result-object v1
 
     if-eqz v1, :cond_9
 
-    iget-object v1, v0, Lq7/i0;->b:Lr7/m;
+    .line 27
+    iget-object v1, v0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
 
-    invoke-interface {v1}, Lr7/m;->S()Z
+    invoke-interface {v1}, Ld/d/a/d7/i8/s;->q1()Z
 
     move-result v9
 
-    invoke-virtual/range {p0 .. p0}, Lq7/i0;->Li()I
+    .line 28
+    invoke-virtual/range {p0 .. p0}, Ld/d/a/d7/p7;->Xh()I
 
     move-result v10
 
-    invoke-virtual/range {p0 .. p0}, Lq7/i0;->U()I
+    .line 29
+    invoke-virtual/range {p0 .. p0}, Ld/d/a/d7/p7;->U()I
 
     move-result v11
 
@@ -3508,31 +4518,31 @@
 
     const/4 v13, 0x0
 
-    invoke-virtual/range {p0 .. p0}, Lq7/i0;->U()I
+    .line 30
+    invoke-virtual/range {p0 .. p0}, Ld/d/a/d7/p7;->U()I
 
     move-result v1
 
-    invoke-static {v1}, Lcom/android/camera/v2;->M6(I)Z
+    invoke-static {v1}, Ld/d/a/d4;->K6(I)Z
 
     move-result v14
 
-    const-string v15, "fun"
-
-    iget v1, v0, Lcom/android/camera/module/FunModule;->T9:I
+    iget v1, v0, Lcom/android/camera/module/FunModule;->H9:I
 
     move/from16 v16, v1
 
-    iget-object v1, v0, Lq7/i0;->b:Lr7/m;
+    iget-object v1, v0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
 
-    invoke-interface {v1}, Lr7/m;->D0()Lya/b3;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lya/b3;->b1()Lya/c3;
+    .line 31
+    invoke-interface {v1}, Ld/d/a/d7/i8/s;->Z1()Ld/d/b/i4;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lya/c3;->a0()I
+    invoke-virtual {v1}, Ld/d/b/i4;->h()Ld/d/b/j4;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ld/d/b/j4;->a0()I
 
     move-result v17
 
@@ -3540,9 +4550,9 @@
 
     const/16 v19, 0x0
 
-    iget-object v1, v0, Lq7/b6;->v1:Lg8/u0;
+    iget-object v1, v0, Ld/d/a/d7/e8;->g9:Ld/d/a/d7/r8/x0;
 
-    iget-object v1, v1, Lg8/u0;->v:Lcom/android/camera/fragment/beauty/e0;
+    iget-object v1, v1, Ld/d/a/d7/r8/x0;->w:Ld/d/a/u6/h4/b1;
 
     move-object/from16 v20, v1
 
@@ -3554,36 +4564,43 @@
 
     const/16 v25, 0x0
 
-    iget-object v1, v0, Lq7/i0;->d:Lr7/b;
+    iget-object v1, v0, Ld/d/a/d7/p7;->s:Ld/d/a/d7/i8/k;
 
-    invoke-interface {v1}, Lr7/b;->F()Z
+    .line 32
+    invoke-interface {v1}, Ld/d/a/d7/i8/k;->l0()Z
 
     move-result v26
 
-    iget-object v1, v0, Lq7/i0;->d:Lr7/b;
+    iget-object v1, v0, Ld/d/a/d7/p7;->s:Ld/d/a/d7/i8/k;
 
-    invoke-interface {v1}, Lr7/b;->r()I
+    .line 33
+    invoke-interface {v1}, Ld/d/a/d7/i8/k;->Y()I
 
     move-result v27
 
-    iget-object v1, v0, Lq7/i0;->b:Lr7/m;
+    iget-object v1, v0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
 
-    invoke-interface {v1}, Lr7/m;->getCapabilities()Lya/f;
+    .line 34
+    invoke-interface {v1}, Ld/d/a/d7/i8/s;->getCapabilities()Ld/d/b/g4;
 
     move-result-object v1
 
-    iget v3, v0, Lq7/i0;->a:I
+    iget v3, v0, Ld/d/a/d7/p7;->m:I
 
-    invoke-static {v1, v3}, Lcom/android/camera/v2;->Q6(Lya/f;I)Z
+    invoke-static {v1, v3}, Ld/d/a/d4;->O6(Ld/d/b/g4;I)Z
 
     move-result v28
 
-    invoke-static/range {v9 .. v28}, Lk9/a;->X3(ZIIZZZLjava/lang/String;IIIILcom/android/camera/fragment/beauty/e0;JZ[Ljava/lang/String;ZZIZ)V
+    const-string v15, "fun"
+
+    .line 35
+    invoke-static/range {v9 .. v28}, Ld/d/a/v7/f;->T3(ZIIZZZLjava/lang/String;IIIILd/d/a/u6/h4/b1;JZ[Ljava/lang/String;ZZIZ)V
 
     :cond_9
     if-nez p1, :cond_a
 
-    iget-object v1, v0, Lq7/b6;->p2:Ljava/lang/String;
+    .line 36
+    iget-object v1, v0, Ld/d/a/d7/e8;->k9:Ljava/lang/String;
 
     const-string v3, "continuous-video"
 
@@ -3593,7 +4610,8 @@
 
     if-nez v1, :cond_a
 
-    invoke-static {}, Lv8/n1;->impl()Ljava/util/Optional;
+    .line 37
+    invoke-static {}, Ld/d/a/m7/g/q1;->impl()Ljava/util/Optional;
 
     move-result-object v1
 
@@ -3601,13 +4619,14 @@
 
     move-result-object v1
 
-    check-cast v1, Lv8/n1;
+    check-cast v1, Ld/d/a/m7/g/q1;
 
     const/4 v4, 0x2
 
-    invoke-interface {v1, v4}, Lv8/d1;->clearFocusView(I)V
+    invoke-interface {v1, v4}, Ld/d/a/m7/g/g1;->clearFocusView(I)V
 
-    invoke-virtual {v0, v3, v2}, Lq7/b6;->em(Ljava/lang/String;Z)V
+    .line 38
+    invoke-virtual {v0, v3, v2}, Ld/d/a/d7/e8;->pl(Ljava/lang/String;Z)V
 
     new-array v1, v5, [I
 
@@ -3615,477 +4634,48 @@
 
     aput v3, v1, v2
 
-    invoke-virtual {v0, v1}, Lq7/i0;->d4([I)V
+    .line 39
+    invoke-virtual {v0, v1}, Ld/d/a/d7/p7;->Z3([I)V
 
+    .line 40
     :cond_a
-    invoke-virtual/range {p0 .. p0}, Lq7/i0;->hg()Lwa/w;
+    invoke-virtual/range {p0 .. p0}, Ld/d/a/d7/p7;->Of()Ld/d/a/k8/a0;
 
     move-result-object v1
 
-    invoke-virtual {v1, v2}, Lwa/w;->ib(Z)V
+    invoke-virtual {v1, v2}, Ld/d/a/k8/a0;->Q7(Z)V
 
-    invoke-static {}, Lq7/l;->d()V
+    .line 41
+    invoke-static {}, Ld/d/a/d7/o7;->d()V
 
-    invoke-virtual/range {p0 .. p0}, Lq7/i0;->h9()V
+    .line 42
+    invoke-virtual/range {p0 .. p0}, Ld/d/a/d7/p7;->X8()V
 
-    iget-object v0, v0, Lq7/i0;->q:Lcom/android/camera/Camera;
+    .line 43
+    iget-object v0, v0, Ld/d/a/d7/p7;->K8:Lcom/android/camera/Camera;
 
-    invoke-static {v0}, Lcom/android/camera/s;->d(Landroid/content/Context;)Lcom/android/camera/s;
+    invoke-static {v0}, Ld/d/a/t3;->c(Landroid/content/Context;)Ld/d/a/t3;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/camera/s;->f()V
+    invoke-virtual {v0}, Ld/d/a/t3;->e()V
 
     return-void
-.end method
-
-.method public ng(I)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/android/camera/module/FunModule;->X9:[F
-
-    aget p1, v0, p1
-
-    iput p1, p0, Lcom/android/camera/module/FunModule;->W9:F
-
-    return-void
-.end method
-
-.method public onDestroy()V
-    .locals 0
-
-    invoke-super {p0}, Lq7/i0;->onDestroy()V
-
-    return-void
-.end method
-
-.method public onKeyDown(ILandroid/view/KeyEvent;)Z
-    .locals 2
-
-    const/16 v0, 0x18
-
-    if-eq p1, v0, :cond_0
-
-    const/16 v0, 0x19
-
-    if-eq p1, v0, :cond_1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {}, Lv8/o3;->impl2()Lv8/o3;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0}, Lv8/o3;->isShow()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Lv8/o3;->S5()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Lv8/o3;->jf()V
-
-    :cond_1
-    const/16 v0, 0xdc
-
-    iget v1, p0, Lq7/i0;->a:I
-
-    if-ne v0, v1, :cond_2
-
-    iget-object p0, p0, Lq7/i0;->c:Lr7/h;
-
-    const p1, 0x7f1409e3
-
-    invoke-static {p1}, Lcom/android/camera/v2;->y1(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-interface {p0, p1}, Lr7/h;->Y(Ljava/lang/String;)V
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_2
-    :goto_0
-    invoke-super {p0, p1, p2}, Lq7/b6;->onKeyDown(ILandroid/view/KeyEvent;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public onPause()V
-    .locals 3
-
-    invoke-super {p0}, Lq7/b6;->onPause()V
-
-    invoke-virtual {p0}, Lcom/android/camera/module/FunModule;->Nm()V
-
-    iget-object v0, p0, Lq7/i0;->q:Lcom/android/camera/Camera;
-
-    invoke-virtual {v0}, Lcom/android/camera/Camera;->Dl()Lcom/android/camera/z4;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/android/camera/z4;->V()V
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Lq7/b6;->lm(Z)V
-
-    invoke-virtual {p0}, Lq7/i0;->jk()V
-
-    iget-object v1, p0, Lq7/i0;->k:Landroid/os/Handler;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
-
-    iget-object v1, p0, Lq7/i0;->q:Lcom/android/camera/Camera;
-
-    invoke-virtual {v1}, Lcom/android/camera/ActivityBase;->B2()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    iget-object p0, p0, Lq7/i0;->q:Lcom/android/camera/Camera;
-
-    invoke-static {p0}, Lcom/android/camera/ui/z0;->b(Landroid/content/Context;)Lcom/android/camera/ui/z0;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v2, v0}, Lcom/android/camera/ui/z0;->e(Landroid/view/View;I)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public onStop()V
-    .locals 1
-
-    invoke-super {p0}, Lq7/i0;->onStop()V
-
-    invoke-static {}, Lcom/android/camera/effect/b;->getInstance()Lcom/android/camera/effect/b;
-
-    move-result-object p0
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lcom/android/camera/effect/b;->setCurrentSticker(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public registerProtocol()V
-    .locals 4
-
-    invoke-super {p0}, Lq7/i0;->registerProtocol()V
-
-    invoke-static {}, Lu8/e;->i()Lu8/e;
-
-    move-result-object v0
-
-    const-class v1, Lv8/q;
-
-    invoke-virtual {v0, v1, p0}, Lu8/e;->d(Ljava/lang/Class;Lu8/a;)V
-
-    invoke-static {}, Lu8/e;->i()Lu8/e;
-
-    move-result-object v0
-
-    const-class v1, Lv8/n2;
-
-    invoke-virtual {v0, v1, p0}, Lu8/e;->d(Ljava/lang/Class;Lu8/a;)V
-
-    invoke-static {}, Lu8/e;->i()Lu8/e;
-
-    move-result-object v0
-
-    const-class v1, Lv8/d2;
-
-    invoke-virtual {v0, v1, p0}, Lu8/e;->d(Ljava/lang/Class;Lu8/a;)V
-
-    invoke-static {}, Lu8/e;->i()Lu8/e;
-
-    move-result-object v0
-
-    const-class v1, Lv8/i0;
-
-    invoke-virtual {v0, v1, p0}, Lu8/e;->d(Ljava/lang/Class;Lu8/a;)V
-
-    invoke-static {}, Lu8/e;->i()Lu8/e;
-
-    move-result-object v0
-
-    const-class v1, Lv8/f1;
-
-    invoke-virtual {v0, v1, p0}, Lu8/e;->d(Ljava/lang/Class;Lu8/a;)V
-
-    invoke-static {}, Lu8/e;->i()Lu8/e;
-
-    move-result-object v0
-
-    const-class v1, Lv8/l1;
-
-    invoke-virtual {v0, v1, p0}, Lu8/e;->d(Ljava/lang/Class;Lu8/a;)V
-
-    invoke-virtual {p0}, Lq7/i0;->u0()Lcom/android/camera/Camera;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/android/camera/Camera;->Bl()Lx7/a;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Lq7/i0;->u0()Lcom/android/camera/Camera;
-
-    move-result-object p0
-
-    const/4 v1, 0x4
-
-    new-array v1, v1, [Ljava/lang/Class;
-
-    const/4 v2, 0x0
-
-    const-class v3, Lv8/z;
-
-    aput-object v3, v1, v2
-
-    const/4 v2, 0x1
-
-    const-class v3, Lv8/q1;
-
-    aput-object v3, v1, v2
-
-    const/4 v2, 0x2
-
-    const-class v3, Lv8/b2;
-
-    aput-object v3, v1, v2
-
-    const/4 v2, 0x3
-
-    const-class v3, Lv8/i2;
-
-    aput-object v3, v1, v2
-
-    invoke-virtual {v0, p0, v1}, Lx7/a;->e(Lcom/android/camera/ActivityBase;[Ljava/lang/Class;)V
-
-    return-void
-.end method
-
-.method public setDeparted()V
-    .locals 2
-
-    invoke-super {p0}, Lq7/i0;->setDeparted()V
-
-    invoke-static {}, Leg/i;->j()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Lcom/android/camera/module/FunModule;->ba:Landroidx/lifecycle/LifecycleRegistry;
-
-    sget-object v0, Landroidx/lifecycle/Lifecycle$Event;->ON_DESTROY:Landroidx/lifecycle/Lifecycle$Event;
-
-    invoke-virtual {p0, v0}, Landroidx/lifecycle/LifecycleRegistry;->handleLifecycleEvent(Landroidx/lifecycle/Lifecycle$Event;)V
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v0, Leg/i;->b:Lio/reactivex/Scheduler;
-
-    new-instance v1, Lq7/t4;
-
-    invoke-direct {v1, p0}, Lq7/t4;-><init>(Lcom/android/camera/module/FunModule;)V
-
-    invoke-static {v0, v1}, Leg/i;->r(Lio/reactivex/Scheduler;Ljava/lang/Runnable;)Lio/reactivex/disposables/Disposable;
-
-    :goto_0
-    return-void
-.end method
-
-.method public tm()V
-    .locals 8
-
-    invoke-super {p0}, Lq7/b6;->tm()V
-
-    iget-object v0, p0, Lq7/b6;->q1:Lg8/d0;
-
-    iget-boolean v0, v0, Lg8/d0;->f:Z
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lcom/android/camera/module/FunModule;->R9:Landroid/os/CountDownTimer;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Landroid/os/CountDownTimer;->cancel()V
-
-    :cond_1
-    iget-object v0, p0, Lq7/b6;->v1:Lg8/u0;
-
-    iget v0, v0, Lg8/u0;->a:I
-
-    int-to-float v0, v0
-
-    iget v1, p0, Lcom/android/camera/module/FunModule;->W9:F
-
-    div-float/2addr v0, v1
-
-    float-to-long v4, v0
-
-    const/high16 v0, 0x447a0000    # 1000.0f
-
-    div-float/2addr v0, v1
-
-    float-to-long v6, v0
-
-    new-instance v0, Lcom/android/camera/module/FunModule$a;
-
-    move-object v2, v0
-
-    move-object v3, p0
-
-    invoke-direct/range {v2 .. v7}, Lcom/android/camera/module/FunModule$a;-><init>(Lcom/android/camera/module/FunModule;JJ)V
-
-    iput-object v0, p0, Lcom/android/camera/module/FunModule;->R9:Landroid/os/CountDownTimer;
-
-    invoke-virtual {v0}, Landroid/os/CountDownTimer;->start()Landroid/os/CountDownTimer;
-
-    return-void
-.end method
-
-.method public unRegisterProtocol()V
-    .locals 2
-
-    invoke-super {p0}, Lq7/i0;->unRegisterProtocol()V
-
-    invoke-static {}, Lu8/e;->i()Lu8/e;
-
-    move-result-object v0
-
-    const-class v1, Lv8/q;
-
-    invoke-virtual {v0, v1, p0}, Lu8/e;->c(Ljava/lang/Class;Lu8/a;)V
-
-    invoke-static {}, Lu8/e;->i()Lu8/e;
-
-    move-result-object v0
-
-    const-class v1, Lv8/n2;
-
-    invoke-virtual {v0, v1, p0}, Lu8/e;->c(Ljava/lang/Class;Lu8/a;)V
-
-    invoke-static {}, Lu8/e;->i()Lu8/e;
-
-    move-result-object v0
-
-    const-class v1, Lv8/d2;
-
-    invoke-virtual {v0, v1, p0}, Lu8/e;->c(Ljava/lang/Class;Lu8/a;)V
-
-    invoke-static {}, Lu8/e;->i()Lu8/e;
-
-    move-result-object v0
-
-    const-class v1, Lv8/i0;
-
-    invoke-virtual {v0, v1, p0}, Lu8/e;->c(Ljava/lang/Class;Lu8/a;)V
-
-    invoke-static {}, Lu8/e;->i()Lu8/e;
-
-    move-result-object v0
-
-    const-class v1, Lv8/f1;
-
-    invoke-virtual {v0, v1, p0}, Lu8/e;->c(Ljava/lang/Class;Lu8/a;)V
-
-    invoke-static {}, Lu8/e;->i()Lu8/e;
-
-    move-result-object v0
-
-    const-class v1, Lv8/l1;
-
-    invoke-virtual {v0, v1, p0}, Lu8/e;->c(Ljava/lang/Class;Lu8/a;)V
-
-    invoke-virtual {p0}, Lq7/i0;->u0()Lcom/android/camera/Camera;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lcom/android/camera/Camera;->Bl()Lx7/a;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lx7/a;->b()V
-
-    return-void
-.end method
-
-.method public ye()V
-    .locals 2
-
-    sget-object v0, Leg/i;->f:Lio/reactivex/Scheduler;
-
-    new-instance v1, Lq7/r4;
-
-    invoke-direct {v1, p0}, Lq7/r4;-><init>(Lcom/android/camera/module/FunModule;)V
-
-    invoke-static {v0, v1}, Leg/i;->r(Lio/reactivex/Scheduler;Ljava/lang/Runnable;)Lio/reactivex/disposables/Disposable;
-
-    return-void
-.end method
-
-.method public yl()Z
-    .locals 1
-
-    iget p0, p0, Lq7/i0;->a:I
-
-    const/16 v0, 0xd1
-
-    if-eq p0, v0, :cond_0
-
-    const/16 v0, 0xd2
-
-    if-eq p0, v0, :cond_0
-
-    const/16 v0, 0xdc
-
-    if-eq p0, v0, :cond_0
-
-    const/16 v0, 0xd3
-
-    if-eq p0, v0, :cond_0
-
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    return p0
 .end method
 
 .method public z0(J)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "maxDuration"
+        }
+    .end annotation
 
-    iget-object p0, p0, Lq7/b6;->v1:Lg8/u0;
+    .line 1
+    iget-object p0, p0, Ld/d/a/d7/e8;->g9:Ld/d/a/d7/r8/x0;
 
     const-wide/16 v0, 0x1c2
 
@@ -4093,7 +4683,7 @@
 
     long-to-int p1, p1
 
-    iput p1, p0, Lg8/u0;->a:I
+    iput p1, p0, Ld/d/a/d7/r8/x0;->b:I
 
     return-void
 .end method

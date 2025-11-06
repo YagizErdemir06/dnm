@@ -63,29 +63,7 @@
 
 .field public static final btn_radio_to_on_mtrl_ring_outer_path_animation:I = 0x7f010022
 
-.field public static final design_bottom_sheet_slide_in:I = 0x7f010028
-
-.field public static final design_bottom_sheet_slide_out:I = 0x7f010029
-
-.field public static final design_snackbar_in:I = 0x7f01002a
-
-.field public static final design_snackbar_out:I = 0x7f01002b
-
-.field public static final fragment_fast_out_extra_slow_in:I = 0x7f010036
-
-.field public static final linear_indeterminate_line1_head_interpolator:I = 0x7f010049
-
-.field public static final linear_indeterminate_line1_tail_interpolator:I = 0x7f01004a
-
-.field public static final linear_indeterminate_line2_head_interpolator:I = 0x7f01004b
-
-.field public static final linear_indeterminate_line2_tail_interpolator:I = 0x7f01004c
-
-.field public static final mtrl_bottom_sheet_slide_in:I = 0x7f010061
-
-.field public static final mtrl_bottom_sheet_slide_out:I = 0x7f010062
-
-.field public static final mtrl_card_lowers_interpolator:I = 0x7f010063
+.field public static final fragment_fast_out_extra_slow_in:I = 0x7f010030
 
 
 # direct methods

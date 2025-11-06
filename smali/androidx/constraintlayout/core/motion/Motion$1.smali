@@ -1,4 +1,4 @@
-.class final Landroidx/constraintlayout/core/motion/Motion$1;
+.class public final Landroidx/constraintlayout/core/motion/Motion$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,15 +18,16 @@
 
 
 # instance fields
-.field mX:F
+.field public mX:F
 
-.field final synthetic val$easing:Landroidx/constraintlayout/core/motion/utils/Easing;
+.field public final synthetic val$easing:Landroidx/constraintlayout/core/motion/utils/Easing;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/constraintlayout/core/motion/utils/Easing;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/constraintlayout/core/motion/Motion$1;->val$easing:Landroidx/constraintlayout/core/motion/utils/Easing;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,8 +40,10 @@
 .method public getInterpolation(F)F
     .locals 2
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/core/motion/Motion$1;->mX:F
 
+    .line 2
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/Motion$1;->val$easing:Landroidx/constraintlayout/core/motion/utils/Easing;
 
     float-to-double v0, p1
@@ -57,6 +60,7 @@
 .method public getVelocity()F
     .locals 3
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/core/motion/Motion$1;->val$easing:Landroidx/constraintlayout/core/motion/utils/Easing;
 
     iget p0, p0, Landroidx/constraintlayout/core/motion/Motion$1;->mX:F

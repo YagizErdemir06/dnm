@@ -1,4 +1,4 @@
-.class Lcom/google/common/hash/Hashing$Sha512Holder;
+.class public Lcom/google/common/hash/Hashing$Sha512Holder;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # static fields
-.field static final SHA_512:Lcom/google/common/hash/HashFunction;
+.field public static final SHA_512:Lcom/google/common/hash/HashFunction;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/common/hash/MessageDigestHashFunction;
 
     const-string v1, "SHA-512"
@@ -38,6 +39,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

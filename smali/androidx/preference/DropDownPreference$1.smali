@@ -1,4 +1,4 @@
-.class Landroidx/preference/DropDownPreference$1;
+.class public Landroidx/preference/DropDownPreference$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/preference/DropDownPreference;
+.field public final synthetic this$0:Landroidx/preference/DropDownPreference;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/preference/DropDownPreference;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/preference/DropDownPreference$1;->this$0:Landroidx/preference/DropDownPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,6 +49,7 @@
 
     if-ltz p3, :cond_0
 
+    .line 1
     iget-object p1, p0, Landroidx/preference/DropDownPreference$1;->this$0:Landroidx/preference/DropDownPreference;
 
     invoke-virtual {p1}, Landroidx/preference/ListPreference;->getEntryValues()[Ljava/lang/CharSequence;
@@ -60,6 +62,7 @@
 
     move-result-object p1
 
+    .line 2
     iget-object p2, p0, Landroidx/preference/DropDownPreference$1;->this$0:Landroidx/preference/DropDownPreference;
 
     invoke-virtual {p2}, Landroidx/preference/ListPreference;->getValue()Ljava/lang/String;
@@ -80,6 +83,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 3
     iget-object p0, p0, Landroidx/preference/DropDownPreference$1;->this$0:Landroidx/preference/DropDownPreference;
 
     invoke-virtual {p0, p1}, Landroidx/preference/ListPreference;->setValue(Ljava/lang/String;)V

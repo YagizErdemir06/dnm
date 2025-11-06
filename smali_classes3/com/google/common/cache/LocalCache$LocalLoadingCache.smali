@@ -1,4 +1,4 @@
-.class Lcom/google/common/cache/LocalCache$LocalLoadingCache;
+.class public Lcom/google/common/cache/LocalCache$LocalLoadingCache;
 .super Lcom/google/common/cache/LocalCache$LocalManualCache;
 .source "SourceFile"
 
@@ -48,6 +48,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/cache/LocalCache;
 
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -75,6 +76,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/cache/LocalCache$LocalLoadingCache;->getUnchecked(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -96,6 +98,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/cache/LocalCache$LocalManualCache;->localCache:Lcom/google/common/cache/LocalCache;
 
     invoke-virtual {p0, p1}, Lcom/google/common/cache/LocalCache;->getOrLoad(Ljava/lang/Object;)Ljava/lang/Object;
@@ -123,6 +126,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/cache/LocalCache$LocalManualCache;->localCache:Lcom/google/common/cache/LocalCache;
 
     invoke-virtual {p0, p1}, Lcom/google/common/cache/LocalCache;->getAll(Ljava/lang/Iterable;)Lcom/google/common/collect/ImmutableMap;
@@ -140,6 +144,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/google/common/cache/LocalCache$LocalLoadingCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -152,9 +157,10 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance p1, Lcom/google/common/util/concurrent/UncheckedExecutionException;
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    invoke-virtual {p0}, Ljava/util/concurrent/ExecutionException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -171,6 +177,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/cache/LocalCache$LocalManualCache;->localCache:Lcom/google/common/cache/LocalCache;
 
     invoke-virtual {p0, p1}, Lcom/google/common/cache/LocalCache;->refresh(Ljava/lang/Object;)V
@@ -181,6 +188,7 @@
 .method public writeReplace()Ljava/lang/Object;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/cache/LocalCache$LoadingSerializationProxy;
 
     iget-object p0, p0, Lcom/google/common/cache/LocalCache$LocalManualCache;->localCache:Lcom/google/common/cache/LocalCache;

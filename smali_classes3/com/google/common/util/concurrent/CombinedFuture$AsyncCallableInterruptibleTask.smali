@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/CombinedFuture$AsyncCallableInterruptibleTask;
+.class public final Lcom/google/common/util/concurrent/CombinedFuture$AsyncCallableInterruptibleTask;
 .super Lcom/google/common/util/concurrent/CombinedFuture$CombinedFutureInterruptibleTask;
 .source "SourceFile"
 
@@ -33,7 +33,7 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Lcom/google/common/util/concurrent/CombinedFuture;
+.field public final synthetic this$0:Lcom/google/common/util/concurrent/CombinedFuture;
 
 
 # direct methods
@@ -49,10 +49,13 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/CombinedFuture$AsyncCallableInterruptibleTask;->this$0:Lcom/google/common/util/concurrent/CombinedFuture;
 
+    .line 2
     invoke-direct {p0, p1, p3}, Lcom/google/common/util/concurrent/CombinedFuture$CombinedFutureInterruptibleTask;-><init>(Lcom/google/common/util/concurrent/CombinedFuture;Ljava/util/concurrent/Executor;)V
 
+    .line 3
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -89,10 +92,10 @@
 
     move-result-object v0
 
-    const-string v1, "AsyncCallable.call returned null instead of a Future. Did you mean to return immediateFuture(null)? %s"
-
     .line 3
     iget-object p0, p0, Lcom/google/common/util/concurrent/CombinedFuture$AsyncCallableInterruptibleTask;->callable:Lcom/google/common/util/concurrent/AsyncCallable;
+
+    const-string v1, "AsyncCallable.call returned null instead of a Future. Did you mean to return immediateFuture(null)? %s"
 
     invoke-static {v0, v1, p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -151,6 +154,7 @@
 .method public toPendingString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/CombinedFuture$AsyncCallableInterruptibleTask;->callable:Lcom/google/common/util/concurrent/AsyncCallable;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;

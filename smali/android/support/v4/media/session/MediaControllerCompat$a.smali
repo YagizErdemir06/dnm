@@ -26,31 +26,56 @@
 
 
 # instance fields
-.field public final a:Landroid/media/session/MediaController$Callback;
+.field public final c:Landroid/media/session/MediaController$Callback;
 
-.field public b:Landroid/support/v4/media/session/MediaControllerCompat$a$b;
+.field public d:Landroid/support/v4/media/session/MediaControllerCompat$a$b;
 
-.field public c:Landroid/support/v4/media/session/a;
+.field public f:Lb/b/a/b/a/a;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x15
+
+    if-lt v0, v1, :cond_0
+
+    .line 3
     new-instance v0, Landroid/support/v4/media/session/MediaControllerCompat$a$a;
 
     invoke-direct {v0, p0}, Landroid/support/v4/media/session/MediaControllerCompat$a$a;-><init>(Landroid/support/v4/media/session/MediaControllerCompat$a;)V
 
-    iput-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a;->a:Landroid/media/session/MediaController$Callback;
+    iput-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a;->c:Landroid/media/session/MediaController$Callback;
 
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 4
+    iput-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a;->c:Landroid/media/session/MediaController$Callback;
+
+    .line 5
+    new-instance v0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;
+
+    invoke-direct {v0, p0}, Landroid/support/v4/media/session/MediaControllerCompat$a$c;-><init>(Landroid/support/v4/media/session/MediaControllerCompat$a;)V
+
+    iput-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a;->f:Lb/b/a/b/a/a;
+
+    :goto_0
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Landroid/support/v4/media/session/a;
+.method public a()Lb/b/a/b/a/a;
     .locals 0
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
@@ -58,7 +83,8 @@
         }
     .end annotation
 
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a;->c:Landroid/support/v4/media/session/a;
+    .line 1
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a;->f:Lb/b/a/b/a/a;
 
     return-object p0
 .end method
@@ -84,6 +110,7 @@
 
     const/4 v1, 0x0
 
+    .line 1
     invoke-virtual {p0, v0, v1, v1}, Landroid/support/v4/media/session/MediaControllerCompat$a;->n(ILjava/lang/Object;Landroid/os/Bundle;)V
 
     return-void
@@ -253,16 +280,20 @@
         }
     .end annotation
 
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a;->b:Landroid/support/v4/media/session/MediaControllerCompat$a$b;
+    .line 1
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a;->d:Landroid/support/v4/media/session/MediaControllerCompat$a$b;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1, p2}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object p0
 
+    .line 3
     invoke-virtual {p0, p3}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
+    .line 4
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     :cond_0
@@ -282,22 +313,27 @@
 
     if-nez p1, :cond_0
 
-    iget-object p1, p0, Landroid/support/v4/media/session/MediaControllerCompat$a;->b:Landroid/support/v4/media/session/MediaControllerCompat$a$b;
+    .line 1
+    iget-object p1, p0, Landroid/support/v4/media/session/MediaControllerCompat$a;->d:Landroid/support/v4/media/session/MediaControllerCompat$a$b;
 
     if-eqz p1, :cond_1
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p1, Landroid/support/v4/media/session/MediaControllerCompat$a$b;->a:Z
+    .line 2
+    iput-boolean v0, p1, Landroid/support/v4/media/session/MediaControllerCompat$a$b;->m:Z
 
     const/4 v0, 0x0
 
+    .line 3
     invoke-virtual {p1, v0}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a;->b:Landroid/support/v4/media/session/MediaControllerCompat$a$b;
+    .line 4
+    iput-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a;->d:Landroid/support/v4/media/session/MediaControllerCompat$a$b;
 
     goto :goto_0
 
+    .line 5
     :cond_0
     new-instance v0, Landroid/support/v4/media/session/MediaControllerCompat$a$b;
 
@@ -307,11 +343,12 @@
 
     invoke-direct {v0, p0, p1}, Landroid/support/v4/media/session/MediaControllerCompat$a$b;-><init>(Landroid/support/v4/media/session/MediaControllerCompat$a;Landroid/os/Looper;)V
 
-    iput-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a;->b:Landroid/support/v4/media/session/MediaControllerCompat$a$b;
+    iput-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a;->d:Landroid/support/v4/media/session/MediaControllerCompat$a$b;
 
     const/4 p0, 0x1
 
-    iput-boolean p0, v0, Landroid/support/v4/media/session/MediaControllerCompat$a$b;->a:Z
+    .line 6
+    iput-boolean p0, v0, Landroid/support/v4/media/session/MediaControllerCompat$a$b;->m:Z
 
     :cond_1
     :goto_0

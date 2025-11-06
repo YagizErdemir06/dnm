@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Synchronized$SynchronizedAsMapValues$1;
+.class public Lcom/google/common/collect/Synchronized$SynchronizedAsMapValues$1;
 .super Lcom/google/common/collect/TransformedIterator;
 .source "SourceFile"
 
@@ -25,13 +25,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/Synchronized$SynchronizedAsMapValues;
+.field public final synthetic this$0:Lcom/google/common/collect/Synchronized$SynchronizedAsMapValues;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/Synchronized$SynchronizedAsMapValues;Ljava/util/Iterator;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/Synchronized$SynchronizedAsMapValues$1;->this$0:Lcom/google/common/collect/Synchronized$SynchronizedAsMapValues;
 
     invoke-direct {p0, p2}, Lcom/google/common/collect/TransformedIterator;-><init>(Ljava/util/Iterator;)V

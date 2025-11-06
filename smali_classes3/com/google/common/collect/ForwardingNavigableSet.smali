@@ -36,6 +36,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ForwardingSortedSet;-><init>()V
 
     return-void
@@ -58,6 +59,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingNavigableSet;->delegate()Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -133,6 +135,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingNavigableSet;->delegate()Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -154,6 +157,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingNavigableSet;->delegate()Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -180,6 +184,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingNavigableSet;->delegate()Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -205,6 +210,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingNavigableSet;->delegate()Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -231,6 +237,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingNavigableSet;->delegate()Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -257,6 +264,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingNavigableSet;->delegate()Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -279,6 +287,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingNavigableSet;->delegate()Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -301,6 +310,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingNavigableSet;->delegate()Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -329,6 +339,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-virtual {p0, p1, v0}, Lcom/google/common/collect/ForwardingNavigableSet;->tailSet(Ljava/lang/Object;Z)Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -357,6 +368,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingCollection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -385,6 +397,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-virtual {p0, p1, v0}, Lcom/google/common/collect/ForwardingNavigableSet;->headSet(Ljava/lang/Object;Z)Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -418,6 +431,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, v0}, Lcom/google/common/collect/ForwardingNavigableSet;->headSet(Ljava/lang/Object;Z)Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -442,6 +456,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, v0}, Lcom/google/common/collect/ForwardingNavigableSet;->tailSet(Ljava/lang/Object;Z)Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -470,6 +485,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingNavigableSet;->descendingIterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -498,6 +514,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, v0}, Lcom/google/common/collect/ForwardingNavigableSet;->headSet(Ljava/lang/Object;Z)Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -526,6 +543,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingCollection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -548,6 +566,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingNavigableSet;->descendingIterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -638,6 +657,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-virtual {p0, p1, v0}, Lcom/google/common/collect/ForwardingNavigableSet;->tailSet(Ljava/lang/Object;Z)Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -663,6 +683,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingNavigableSet;->delegate()Ljava/util/NavigableSet;
 
     move-result-object p0
@@ -688,6 +709,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingNavigableSet;->delegate()Ljava/util/NavigableSet;
 
     move-result-object p0

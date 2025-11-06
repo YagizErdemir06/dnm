@@ -1,4 +1,4 @@
-.class final Lcom/google/android/play/core/splitinstall/SplitInstallManagerImpl;
+.class public final Lcom/google/android/play/core/splitinstall/SplitInstallManagerImpl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -77,6 +77,7 @@
 
     const-string p0, "\\.config\\."
 
+    .line 1
     invoke-virtual {p1, p0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
@@ -101,10 +102,12 @@
 
     const-string v0, "SplitInstallManagerImpl"
 
+    .line 1
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
+    .line 2
     :try_start_0
     iget-object v2, p0, Lcom/google/android/play/core/splitinstall/SplitInstallManagerImpl;->context:Landroid/content/Context;
 
@@ -122,12 +125,14 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     iget-object p0, p0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
 
     if-eqz p0, :cond_1
 
     const-string v2, "shadow.bundletool.com.android.dynamic.apk.fused.modules"
 
+    .line 4
     invoke-virtual {p0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -140,11 +145,12 @@
 
     if-nez v2, :cond_0
 
-    const-string v0, ","
+    const/4 v0, -0x1
 
-    const/4 v2, -0x1
+    const-string v2, ","
 
-    invoke-virtual {p0, v0, v2}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
+    .line 5
+    invoke-virtual {p0, v2, v0}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
 
     move-result-object p0
 
@@ -152,6 +158,7 @@
 
     const-string p0, ""
 
+    .line 6
     invoke-interface {v1, p0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
     return-object v1
@@ -159,6 +166,7 @@
     :cond_0
     const-string p0, "App has no fused modules."
 
+    .line 7
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v1
@@ -166,6 +174,7 @@
     :cond_1
     const-string p0, "App has no applicationInfo or metaData"
 
+    .line 8
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v1
@@ -173,6 +182,7 @@
     :catchall_0
     const-string p0, "App is not found in PackageManager"
 
+    .line 9
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v1
@@ -189,73 +199,91 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/play/core/splitinstall/SplitInstallManagerImpl;->getFusedModules()Ljava/util/Set;
 
     move-result-object v0
 
+    .line 2
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v2, 0x15
+
+    if-ge v1, v2, :cond_0
+
+    return-object v0
+
+    .line 3
+    :cond_0
     invoke-direct {p0}, Lcom/google/android/play/core/splitinstall/SplitInstallManagerImpl;->getSplitInstallInfo()[Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "SplitInstallManagerImpl"
 
-    if-nez v1, :cond_0
+    if-nez v1, :cond_1
 
     const-string p0, "No splits are found or app cannot be found in package manager."
 
+    .line 4
     invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
 
-    :cond_0
+    :cond_1
+    const-string v3, "Split names are: "
+
+    .line 5
     invoke-static {v1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v4
+
+    .line 6
+    invoke-virtual {v4}, Ljava/lang/String;->length()I
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
+    :cond_2
+    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    move-result v4
-
-    const-string v5, "Split names are: "
-
-    if-eqz v4, :cond_1
-
-    invoke-virtual {v5, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    :cond_1
-    invoke-static {v2, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
+    .line 7
     array-length v2, v1
 
     const/4 v3, 0x0
 
     :goto_0
-    if-ge v3, v2, :cond_3
+    if-ge v3, v2, :cond_4
 
     aget-object v4, v1, v3
 
     const-string v5, "config."
 
+    .line 8
     invoke-virtual {v4, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v5
 
-    if-nez v5, :cond_2
+    if-nez v5, :cond_3
 
+    .line 9
     invoke-direct {p0, v4}, Lcom/google/android/play/core/splitinstall/SplitInstallManagerImpl;->cutSplitName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     invoke-interface {v0, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    :cond_2
+    :cond_3
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    :cond_3
+    :cond_4
     return-object v0
 .end method
 
@@ -267,6 +295,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :try_start_0
     iget-object v1, p0, Lcom/google/android/play/core/splitinstall/SplitInstallManagerImpl;->context:Landroid/content/Context;
 
@@ -296,6 +325,7 @@
 
     const-string v1, "App is not found in PackageManager"
 
+    .line 2
     invoke-static {p0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
@@ -314,6 +344,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/play/core/splitinstall/SplitInstallManagerImpl;->mInstallService:Lcom/google/android/play/core/splitinstall/SplitInstallService;
 
     invoke-virtual {p0, p1}, Lcom/google/android/play/core/splitinstall/SplitInstallService;->cancelInstall(I)Lcom/google/android/play/core/tasks/Task;
@@ -337,6 +368,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/play/core/splitinstall/SplitInstallManagerImpl;->mInstallService:Lcom/google/android/play/core/splitinstall/SplitInstallService;
 
     invoke-virtual {p0, p1}, Lcom/google/android/play/core/splitinstall/SplitInstallService;->deferredInstall(Ljava/util/List;)Lcom/google/android/play/core/tasks/Task;
@@ -360,6 +392,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/play/core/splitinstall/SplitInstallManagerImpl;->mInstallService:Lcom/google/android/play/core/splitinstall/SplitInstallService;
 
     invoke-virtual {p0, p1}, Lcom/google/android/play/core/splitinstall/SplitInstallService;->deferredUninstall(Ljava/util/List;)Lcom/google/android/play/core/tasks/Task;
@@ -380,12 +413,14 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/play/core/splitinstall/SplitInstallManagerImpl;->getInstalledSplitInstallInfo()Ljava/util/Set;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0}, Ljava/util/Set;->isEmpty()Z
 
     move-result v0
@@ -394,6 +429,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-static {}, Lcom/google/android/play/core/splitinstall/LoadedSplitFetcherSingleton;->get()Lcom/google/android/play/core/splitinstall/LoadedSplitFetcher;
 
@@ -409,6 +445,7 @@
 .method public getRegistry()Lcom/google/android/play/core/splitinstall/SplitInstallListenerRegistry;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/play/core/splitinstall/SplitInstallManagerImpl;->mRegistry:Lcom/google/android/play/core/splitinstall/SplitInstallListenerRegistry;
 
     return-object p0
@@ -425,6 +462,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/play/core/splitinstall/SplitInstallManagerImpl;->mInstallService:Lcom/google/android/play/core/splitinstall/SplitInstallService;
 
     invoke-virtual {p0, p1}, Lcom/google/android/play/core/splitinstall/SplitInstallService;->getSessionState(I)Lcom/google/android/play/core/tasks/Task;
@@ -446,6 +484,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/play/core/splitinstall/SplitInstallManagerImpl;->mInstallService:Lcom/google/android/play/core/splitinstall/SplitInstallService;
 
     invoke-virtual {p0}, Lcom/google/android/play/core/splitinstall/SplitInstallService;->getSessionStates()Lcom/google/android/play/core/tasks/Task;
@@ -458,6 +497,7 @@
 .method public registerListener(Lcom/google/android/play/core/splitinstall/SplitInstallStateUpdatedListener;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/play/core/splitinstall/SplitInstallManagerImpl;->getRegistry()Lcom/google/android/play/core/splitinstall/SplitInstallListenerRegistry;
 
     move-result-object p0
@@ -475,6 +515,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/play/core/splitinstall/SplitInstallSessionState;->status()I
 
     move-result p0
@@ -489,6 +530,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/android/play/core/splitinstall/SplitInstallSessionState;->resolutionIntent()Landroid/app/PendingIntent;
 
     move-result-object p0
@@ -534,6 +576,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/play/core/splitinstall/SplitInstallManagerImpl;->getInstalledModules()Ljava/util/Set;
 
     move-result-object v0
@@ -548,6 +591,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/play/core/splitinstall/SplitInstallManagerImpl;->mMainHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/google/android/play/core/splitinstall/SplitInstalledDisposer;
@@ -558,6 +602,7 @@
 
     const/4 p0, 0x0
 
+    .line 3
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -568,6 +613,7 @@
 
     return-object p0
 
+    .line 4
     :cond_0
     iget-object p0, p0, Lcom/google/android/play/core/splitinstall/SplitInstallManagerImpl;->mInstallService:Lcom/google/android/play/core/splitinstall/SplitInstallService;
 
@@ -585,6 +631,7 @@
 .method public unregisterListener(Lcom/google/android/play/core/splitinstall/SplitInstallStateUpdatedListener;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/play/core/splitinstall/SplitInstallManagerImpl;->getRegistry()Lcom/google/android/play/core/splitinstall/SplitInstallListenerRegistry;
 
     move-result-object p0

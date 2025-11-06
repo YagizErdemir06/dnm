@@ -27,6 +27,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/bean/ConnConfig;-><init>()V
 
     return-void
@@ -87,14 +88,14 @@
     :catch_0
     move-exception p0
 
-    const-string v1, "BTConfig"
-
     .line 2
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-static {v1, v2, p0}, Lcom/xiaomi/idm/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    const-string v2, "BTConfig"
+
+    invoke-static {v2, v1, p0}, Lcom/xiaomi/idm/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 3
     :goto_0

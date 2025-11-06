@@ -121,6 +121,7 @@
 .method private updateMatrix()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable;->matrix:Landroid/graphics/Matrix;
 
     iget-object v1, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable;->wrappedRect:Landroid/graphics/RectF;
@@ -139,6 +140,7 @@
 .method public clearColorFilter()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable;->wrapped:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->clearColorFilter()V
@@ -153,16 +155,20 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
+    .line 2
     iget-object v0, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable;->matrix:Landroid/graphics/Matrix;
 
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->concat(Landroid/graphics/Matrix;)V
 
+    .line 3
     iget-object p0, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable;->wrapped:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
+    .line 4
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     return-void
@@ -174,6 +180,7 @@
         value = 0x13
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable;->wrapped:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getAlpha()I
@@ -186,6 +193,7 @@
 .method public getCallback()Landroid/graphics/drawable/Drawable$Callback;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable;->wrapped:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
@@ -198,6 +206,7 @@
 .method public getChangingConfigurations()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable;->wrapped:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getChangingConfigurations()I
@@ -210,6 +219,7 @@
 .method public getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable;->state:Lcom/bumptech/glide/request/target/FixedSizeDrawable$State;
 
     return-object p0
@@ -220,6 +230,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable;->wrapped:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getCurrent()Landroid/graphics/drawable/Drawable;
@@ -232,6 +243,7 @@
 .method public getIntrinsicHeight()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable;->state:Lcom/bumptech/glide/request/target/FixedSizeDrawable$State;
 
     iget p0, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable$State;->height:I
@@ -242,6 +254,7 @@
 .method public getIntrinsicWidth()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable;->state:Lcom/bumptech/glide/request/target/FixedSizeDrawable$State;
 
     iget p0, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable$State;->width:I
@@ -252,6 +265,7 @@
 .method public getMinimumHeight()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable;->wrapped:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getMinimumHeight()I
@@ -264,6 +278,7 @@
 .method public getMinimumWidth()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable;->wrapped:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getMinimumWidth()I
@@ -276,6 +291,7 @@
 .method public getOpacity()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable;->wrapped:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getOpacity()I
@@ -292,6 +308,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable;->wrapped:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
@@ -304,8 +321,10 @@
 .method public invalidateSelf()V
     .locals 0
 
+    .line 1
     invoke-super {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
+    .line 2
     iget-object p0, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable;->wrapped:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
@@ -318,6 +337,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable;->mutated:Z
 
     if-nez v0, :cond_0
@@ -328,6 +348,7 @@
 
     if-ne v0, p0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable;->wrapped:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
@@ -336,6 +357,7 @@
 
     iput-object v0, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable;->wrapped:Landroid/graphics/drawable/Drawable;
 
+    .line 3
     new-instance v0, Lcom/bumptech/glide/request/target/FixedSizeDrawable$State;
 
     iget-object v1, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable;->state:Lcom/bumptech/glide/request/target/FixedSizeDrawable$State;
@@ -346,6 +368,7 @@
 
     const/4 v0, 0x1
 
+    .line 4
     iput-boolean v0, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable;->mutated:Z
 
     :cond_0
@@ -359,8 +382,10 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1, p2, p3}, Landroid/graphics/drawable/Drawable;->scheduleSelf(Ljava/lang/Runnable;J)V
 
+    .line 2
     iget-object p0, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable;->wrapped:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, p1, p2, p3}, Landroid/graphics/drawable/Drawable;->scheduleSelf(Ljava/lang/Runnable;J)V
@@ -371,6 +396,7 @@
 .method public setAlpha(I)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable;->wrapped:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
@@ -427,6 +453,7 @@
 .method public setChangingConfigurations(I)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable;->wrapped:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setChangingConfigurations(I)V
@@ -465,6 +492,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable;->wrapped:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setDither(Z)V
@@ -475,6 +503,7 @@
 .method public setFilterBitmap(Z)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable;->wrapped:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setFilterBitmap(Z)V
@@ -485,6 +514,7 @@
 .method public setVisible(ZZ)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable;->wrapped:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, p1, p2}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
@@ -501,8 +531,10 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->unscheduleSelf(Ljava/lang/Runnable;)V
 
+    .line 2
     iget-object p0, p0, Lcom/bumptech/glide/request/target/FixedSizeDrawable;->wrapped:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->unscheduleSelf(Ljava/lang/Runnable;)V

@@ -35,6 +35,25 @@
 # direct methods
 .method private constructor <init>(Lorg/greenrobot/greendao/query/Query$QueryData;Lorg/greenrobot/greendao/AbstractDao;Ljava/lang/String;[Ljava/lang/String;II)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "queryData",
+            "dao",
+            "sql",
+            "initialValues",
+            "limitPosition",
+            "offsetPosition"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -81,6 +100,23 @@
 
 .method public static create(Lorg/greenrobot/greendao/AbstractDao;Ljava/lang/String;[Ljava/lang/Object;II)Lorg/greenrobot/greendao/query/Query;
     .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "dao",
+            "sql",
+            "initialValues",
+            "limitPosition",
+            "offsetPosition"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T2:",
@@ -97,6 +133,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v6, Lorg/greenrobot/greendao/query/Query$QueryData;
 
     invoke-static {p2}, Lorg/greenrobot/greendao/query/AbstractQuery;->toStringArray([Ljava/lang/Object;)[Ljava/lang/String;
@@ -115,6 +152,7 @@
 
     invoke-direct/range {v0 .. v5}, Lorg/greenrobot/greendao/query/Query$QueryData;-><init>(Lorg/greenrobot/greendao/AbstractDao;Ljava/lang/String;[Ljava/lang/String;II)V
 
+    .line 2
     invoke-virtual {v6}, Lorg/greenrobot/greendao/query/AbstractQueryData;->forCurrentThread()Lorg/greenrobot/greendao/query/AbstractQuery;
 
     move-result-object p0
@@ -126,6 +164,19 @@
 
 .method public static internalCreate(Lorg/greenrobot/greendao/AbstractDao;Ljava/lang/String;[Ljava/lang/Object;)Lorg/greenrobot/greendao/query/Query;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "dao",
+            "sql",
+            "initialValues"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T2:",
@@ -144,6 +195,7 @@
 
     const/4 v0, -0x1
 
+    .line 1
     invoke-static {p0, p1, p2, v0, v0}, Lorg/greenrobot/greendao/query/Query;->create(Lorg/greenrobot/greendao/AbstractDao;Ljava/lang/String;[Ljava/lang/Object;II)Lorg/greenrobot/greendao/query/Query;
 
     move-result-object p0
@@ -163,6 +215,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/greenrobot/greendao/query/Query;->queryData:Lorg/greenrobot/greendao/query/Query$QueryData;
 
     invoke-virtual {v0, p0}, Lorg/greenrobot/greendao/query/AbstractQueryData;->forCurrentThread(Lorg/greenrobot/greendao/query/AbstractQuery;)Lorg/greenrobot/greendao/query/AbstractQuery;
@@ -184,8 +237,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lorg/greenrobot/greendao/query/AbstractQuery;->checkThread()V
 
+    .line 2
     iget-object v0, p0, Lorg/greenrobot/greendao/query/AbstractQuery;->dao:Lorg/greenrobot/greendao/AbstractDao;
 
     invoke-virtual {v0}, Lorg/greenrobot/greendao/AbstractDao;->getDatabase()Lorg/greenrobot/greendao/database/Database;
@@ -200,6 +255,7 @@
 
     move-result-object v0
 
+    .line 3
     iget-object p0, p0, Lorg/greenrobot/greendao/query/AbstractQuery;->daoAccess:Lorg/greenrobot/greendao/InternalQueryDaoAccess;
 
     invoke-virtual {p0, v0}, Lorg/greenrobot/greendao/InternalQueryDaoAccess;->loadAllAndCloseCursor(Landroid/database/Cursor;)Ljava/util/List;
@@ -219,6 +275,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lorg/greenrobot/greendao/query/Query;->listLazyUncached()Lorg/greenrobot/greendao/query/LazyList;
 
     move-result-object p0
@@ -240,8 +297,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lorg/greenrobot/greendao/query/AbstractQuery;->checkThread()V
 
+    .line 2
     iget-object v0, p0, Lorg/greenrobot/greendao/query/AbstractQuery;->dao:Lorg/greenrobot/greendao/AbstractDao;
 
     invoke-virtual {v0}, Lorg/greenrobot/greendao/AbstractDao;->getDatabase()Lorg/greenrobot/greendao/database/Database;
@@ -256,6 +315,7 @@
 
     move-result-object v0
 
+    .line 3
     new-instance v1, Lorg/greenrobot/greendao/query/LazyList;
 
     iget-object p0, p0, Lorg/greenrobot/greendao/query/AbstractQuery;->daoAccess:Lorg/greenrobot/greendao/InternalQueryDaoAccess;
@@ -277,8 +337,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lorg/greenrobot/greendao/query/AbstractQuery;->checkThread()V
 
+    .line 2
     iget-object v0, p0, Lorg/greenrobot/greendao/query/AbstractQuery;->dao:Lorg/greenrobot/greendao/AbstractDao;
 
     invoke-virtual {v0}, Lorg/greenrobot/greendao/AbstractDao;->getDatabase()Lorg/greenrobot/greendao/database/Database;
@@ -293,6 +355,7 @@
 
     move-result-object v0
 
+    .line 3
     new-instance v1, Lorg/greenrobot/greendao/query/LazyList;
 
     iget-object p0, p0, Lorg/greenrobot/greendao/query/AbstractQuery;->daoAccess:Lorg/greenrobot/greendao/InternalQueryDaoAccess;
@@ -306,7 +369,16 @@
 
 .method public bridge synthetic setLimit(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "limit"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lorg/greenrobot/greendao/query/AbstractQueryWithLimit;->setLimit(I)V
 
     return-void
@@ -314,7 +386,16 @@
 
 .method public bridge synthetic setOffset(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "offset"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lorg/greenrobot/greendao/query/AbstractQueryWithLimit;->setOffset(I)V
 
     return-void
@@ -322,6 +403,16 @@
 
 .method public bridge synthetic setParameter(ILjava/lang/Boolean;)Lorg/greenrobot/greendao/query/AbstractQuery;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "index",
+            "parameter"
+        }
+    .end annotation
 
     .line 1
     invoke-virtual {p0, p1, p2}, Lorg/greenrobot/greendao/query/Query;->setParameter(ILjava/lang/Boolean;)Lorg/greenrobot/greendao/query/Query;
@@ -333,6 +424,16 @@
 
 .method public bridge synthetic setParameter(ILjava/lang/Object;)Lorg/greenrobot/greendao/query/AbstractQuery;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "index",
+            "parameter"
+        }
+    .end annotation
 
     .line 2
     invoke-virtual {p0, p1, p2}, Lorg/greenrobot/greendao/query/Query;->setParameter(ILjava/lang/Object;)Lorg/greenrobot/greendao/query/Query;
@@ -344,6 +445,16 @@
 
 .method public bridge synthetic setParameter(ILjava/util/Date;)Lorg/greenrobot/greendao/query/AbstractQuery;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "index",
+            "parameter"
+        }
+    .end annotation
 
     .line 3
     invoke-virtual {p0, p1, p2}, Lorg/greenrobot/greendao/query/Query;->setParameter(ILjava/util/Date;)Lorg/greenrobot/greendao/query/Query;
@@ -355,6 +466,16 @@
 
 .method public bridge synthetic setParameter(ILjava/lang/Object;)Lorg/greenrobot/greendao/query/AbstractQueryWithLimit;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "index",
+            "parameter"
+        }
+    .end annotation
 
     .line 4
     invoke-virtual {p0, p1, p2}, Lorg/greenrobot/greendao/query/Query;->setParameter(ILjava/lang/Object;)Lorg/greenrobot/greendao/query/Query;
@@ -366,6 +487,17 @@
 
 .method public setParameter(ILjava/lang/Boolean;)Lorg/greenrobot/greendao/query/Query;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "index",
+            "parameter"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -388,6 +520,17 @@
 
 .method public setParameter(ILjava/lang/Object;)Lorg/greenrobot/greendao/query/Query;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "index",
+            "parameter"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -410,6 +553,17 @@
 
 .method public setParameter(ILjava/util/Date;)Lorg/greenrobot/greendao/query/Query;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "index",
+            "parameter"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -438,8 +592,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lorg/greenrobot/greendao/query/AbstractQuery;->checkThread()V
 
+    .line 2
     iget-object v0, p0, Lorg/greenrobot/greendao/query/AbstractQuery;->dao:Lorg/greenrobot/greendao/AbstractDao;
 
     invoke-virtual {v0}, Lorg/greenrobot/greendao/AbstractDao;->getDatabase()Lorg/greenrobot/greendao/database/Database;
@@ -454,6 +610,7 @@
 
     move-result-object v0
 
+    .line 3
     iget-object p0, p0, Lorg/greenrobot/greendao/query/AbstractQuery;->daoAccess:Lorg/greenrobot/greendao/InternalQueryDaoAccess;
 
     invoke-virtual {p0, v0}, Lorg/greenrobot/greendao/InternalQueryDaoAccess;->loadUniqueAndCloseCursor(Landroid/database/Cursor;)Ljava/lang/Object;
@@ -471,6 +628,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lorg/greenrobot/greendao/query/Query;->unique()Ljava/lang/Object;
 
     move-result-object p0
@@ -479,6 +637,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     new-instance p0, Lorg/greenrobot/greendao/DaoException;
 

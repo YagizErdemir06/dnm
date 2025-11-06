@@ -1,4 +1,4 @@
-.class Lmiuix/animation/property/ViewProperty$3;
+.class public Lmiuix/animation/property/ViewProperty$3;
 .super Lmiuix/animation/property/ViewProperty;
 .source "SourceFile"
 
@@ -15,10 +15,11 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;F)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lmiuix/animation/property/ViewProperty;-><init>(Ljava/lang/String;F)V
+    .line 1
+    invoke-direct {p0, p1}, Lmiuix/animation/property/ViewProperty;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -26,12 +27,24 @@
 
 # virtual methods
 .method public getValue(Landroid/view/View;)F
-    .locals 0
+    .locals 1
 
     .line 2
+    sget p0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v0, 0x15
+
+    if-lt p0, v0, :cond_0
+
+    .line 3
     invoke-virtual {p1}, Landroid/view/View;->getTranslationZ()F
 
     move-result p0
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
 
     return p0
 .end method
@@ -50,11 +63,19 @@
 .end method
 
 .method public setValue(Landroid/view/View;F)V
-    .locals 0
+    .locals 1
 
     .line 2
+    sget p0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v0, 0x15
+
+    if-lt p0, v0, :cond_0
+
+    .line 3
     invoke-virtual {p1, p2}, Landroid/view/View;->setTranslationZ(F)V
 
+    :cond_0
     return-void
 .end method
 

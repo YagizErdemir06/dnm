@@ -33,6 +33,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -109,7 +110,7 @@
     :goto_0
     iget-object v0, p0, Lcom/xiaomi/engine/MiaNodeJNI;->mHandlerThread:Landroid/os/HandlerThread;
 
-    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
+    invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
     .line 9
     new-instance v0, Landroid/os/Handler;
@@ -139,6 +140,7 @@
 .method public static synthetic access$100()I
     .locals 1
 
+    .line 1
     sget v0, Lcom/xiaomi/engine/MiaNodeJNI;->sType:I
 
     return v0
@@ -147,6 +149,7 @@
 .method public static synthetic access$200(Lcom/xiaomi/engine/MiaNodeJNI;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/engine/MiaNodeJNI;->deInitialize(I)V
 
     return-void
@@ -174,17 +177,21 @@
         }
     .end annotation
 
+    .line 1
     sget-object p0, Lcom/xiaomi/engine/MiaNodeJNI;->mObjLock:Ljava/lang/Object;
 
     monitor-enter p0
 
+    .line 2
     :try_start_0
     sget-boolean v0, Lcom/xiaomi/engine/MiaNodeJNI;->sInitialized:Z
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-static {p1}, Lcom/xiaomi/engine/MiaNodeJNI;->deInit(I)I
 
+    .line 4
     sget-object v0, Lcom/xiaomi/engine/MiaNodeJNI;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -209,8 +216,10 @@
 
     const/4 p1, 0x0
 
+    .line 5
     sput-boolean p1, Lcom/xiaomi/engine/MiaNodeJNI;->sInitialized:Z
 
+    .line 6
     :cond_0
     monitor-exit p0
 
@@ -229,6 +238,7 @@
 .method public static getInstance()Lcom/xiaomi/engine/MiaNodeJNI;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/engine/MiaNodeJNI$InstanceHolder;->INSTANCE:Lcom/xiaomi/engine/MiaNodeJNI;
 
     return-object v0
@@ -256,15 +266,18 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/xiaomi/engine/MiaNodeJNI;->mObjLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
 
+    .line 3
     sget-boolean v3, Lcom/xiaomi/engine/MiaNodeJNI;->sInitialized:Z
 
     if-eqz v3, :cond_0
@@ -275,17 +288,22 @@
 
     if-eqz v3, :cond_0
 
+    .line 4
     invoke-direct {p0, v3}, Lcom/xiaomi/engine/MiaNodeJNI;->deInitialize(I)V
 
+    .line 5
     :cond_0
     sget-boolean p0, Lcom/xiaomi/engine/MiaNodeJNI;->sInitialized:Z
 
     if-nez p0, :cond_1
 
+    .line 6
     sput p1, Lcom/xiaomi/engine/MiaNodeJNI;->sType:I
 
+    .line 7
     invoke-static {p1}, Lcom/xiaomi/engine/MiaNodeJNI;->init(I)I
 
+    .line 8
     sget-object p0, Lcom/xiaomi/engine/MiaNodeJNI;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -302,6 +320,7 @@
 
     invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 9
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
@@ -314,12 +333,15 @@
 
     move-result-object p1
 
+    .line 10
     invoke-static {p0, p1}, Lcom/xiaomi/engine/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x1
 
+    .line 11
     sput-boolean p0, Lcom/xiaomi/engine/MiaNodeJNI;->sInitialized:Z
 
+    .line 12
     :cond_1
     monitor-exit v0
 
@@ -374,12 +396,14 @@
 .method private tryToCloseNode()V
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/engine/MiaNodeJNI;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
+    .line 2
     iget-object v0, p0, Lcom/xiaomi/engine/MiaNodeJNI;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/xiaomi/engine/MiaNodeJNI$1;
@@ -431,32 +455,39 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/xiaomi/engine/MiaNodeJNI;->mObjLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     sget-boolean v1, Lcom/xiaomi/engine/MiaNodeJNI;->sInitialized:Z
 
     if-nez v1, :cond_0
 
+    .line 3
     invoke-direct {p0, p3}, Lcom/xiaomi/engine/MiaNodeJNI;->initialize(I)V
 
+    .line 4
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
 
+    .line 5
     sget-object v3, Lcom/xiaomi/engine/MiaNodeJNI;->TAG:Ljava/lang/String;
 
     const-string v4, "processRequest: start"
 
     invoke-static {v3, v4}, Lcom/xiaomi/engine/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 6
     invoke-static {p1, p2, p3, p4}, Lcom/xiaomi/engine/MiaNodeJNI;->processRequest(Ljava/util/List;Landroid/media/Image;IZ)I
 
     move-result p1
 
+    .line 7
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -479,8 +510,10 @@
 
     invoke-static {v3, p2}, Lcom/xiaomi/engine/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 8
     invoke-direct {p0}, Lcom/xiaomi/engine/MiaNodeJNI;->tryToCloseNode()V
 
+    .line 9
     monitor-exit v0
 
     return p1
@@ -488,6 +521,7 @@
     :catchall_0
     move-exception p0
 
+    .line 10
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

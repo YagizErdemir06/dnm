@@ -10,6 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,22 +18,44 @@
 
 
 # virtual methods
-.method public getConfigSelectColor(Landroid/content/Context;ZLcom/airbnb/lottie/LottieAnimationView;FLw6/a;Landroid/widget/TextView;Landroid/view/View;)V
+.method public getConfigSelectColor(Landroid/content/Context;ZLcom/airbnb/lottie/LottieAnimationView;FLd/d/a/u6/a5/q/i4;Landroid/widget/TextView;Landroid/view/View;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "needPlayAnimation",
+            "imageView",
+            "animationScaleSize",
+            "resource",
+            "textView",
+            "rightAngleView"
+        }
+    .end annotation
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    .line 1
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object p0
 
-    const p1, 0x7f06089c
+    const p1, 0x7f060434
 
-    invoke-virtual {p0, p1}, Lf2/e;->b(I)I
+    invoke-virtual {p0, p1}, Ld/d/a/k6/f;->b(I)I
 
     move-result p0
 
     invoke-virtual {p6, p0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    invoke-virtual {p5}, Lw6/a;->l()Z
+    .line 2
+    invoke-virtual {p5}, Ld/d/a/u6/a5/q/i4;->l()Z
 
     move-result p0
 
@@ -40,21 +63,24 @@
 
     if-nez p2, :cond_1
 
+    .line 3
     invoke-virtual {p3}, Lcom/airbnb/lottie/LottieAnimationView;->cancelAnimation()V
 
-    invoke-virtual {p5}, Lw6/a;->f()I
+    .line 4
+    invoke-virtual {p5}, Ld/d/a/u6/a5/q/i4;->f()I
 
     move-result p0
 
     invoke-virtual {p3, p0}, Lcom/airbnb/lottie/LottieAnimationView;->setImageResource(I)V
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    .line 5
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object p0
 
-    const p1, 0x7f06012f
+    const p1, 0x7f06010b
 
-    invoke-virtual {p0, p1}, Lf2/e;->b(I)I
+    invoke-virtual {p0, p1}, Ld/d/a/k6/f;->b(I)I
 
     move-result p0
 
@@ -62,22 +88,25 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-virtual {p3}, Lcom/airbnb/lottie/LottieAnimationView;->cancelAnimation()V
 
-    invoke-virtual {p5}, Lw6/a;->f()I
+    .line 7
+    invoke-virtual {p5}, Ld/d/a/u6/a5/q/i4;->f()I
 
     move-result p0
 
     invoke-virtual {p3, p0}, Lcom/airbnb/lottie/LottieAnimationView;->setImageResource(I)V
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    .line 8
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object p0
 
-    const p1, 0x7f06012b
+    const p1, 0x7f060107
 
-    invoke-virtual {p0, p1}, Lf2/e;->b(I)I
+    invoke-virtual {p0, p1}, Ld/d/a/k6/f;->b(I)I
 
     move-result p0
 
@@ -89,11 +118,14 @@
 
     const/4 p0, 0x0
 
+    .line 9
     invoke-virtual {p3, p0}, Lcom/airbnb/lottie/LottieAnimationView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
+    .line 10
     invoke-virtual {p3, p4}, Lcom/airbnb/lottie/LottieAnimationView;->setScale(F)V
 
-    invoke-virtual {p5}, Lw6/a;->g()I
+    .line 11
+    invoke-virtual {p5}, Ld/d/a/u6/a5/q/i4;->g()I
 
     move-result p0
 
@@ -101,18 +133,21 @@
 
     const/high16 p0, 0x3f800000    # 1.0f
 
+    .line 12
     invoke-virtual {p3, p0}, Lcom/airbnb/lottie/LottieAnimationView;->setProgress(F)V
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 13
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lid/b;->A3()Z
+    invoke-virtual {p0}, Ld/k/a/b;->t3()Z
 
     move-result p0
 
     if-nez p0, :cond_2
 
+    .line 14
     invoke-virtual {p3}, Lcom/airbnb/lottie/LottieAnimationView;->playAnimation()V
 
     :cond_2
@@ -121,12 +156,32 @@
 
 .method public getTopMenuRes(Landroid/content/Context;I)I
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "res"
+        }
+    .end annotation
 
     return p2
 .end method
 
 .method public getTopMenuResMM(Landroid/content/Context;I)I
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "res"
+        }
+    .end annotation
 
     return p2
 .end method

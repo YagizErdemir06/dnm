@@ -11,9 +11,14 @@
     }
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000\"\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u000b\u0018\u00002\u00020\u0001:\u0002\u0011\u0012B\u0007\u00a2\u0006\u0004\u0008\u000f\u0010\u0010J\u0018\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0005\u001a\u00020\u0004H\u0002J\u0010\u0010\n\u001a\u00020\u00062\u0008\u0010\t\u001a\u0004\u0018\u00010\u0008J\u0006\u0010\u000b\u001a\u00020\u0006J\u000e\u0010\u000c\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u0002R\u0018\u0010\r\u001a\u0004\u0018\u00010\u00088\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\r\u0010\u000e\u00a8\u0006\u0013"
+        "\u0000$\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\r\u0018\u00002\u00020\u0001:\u0002\u0014\u0015B\u0007\u00a2\u0006\u0004\u0008\u0013\u0010\u000eJ\u001f\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0005\u001a\u00020\u0004H\u0002\u00a2\u0006\u0004\u0008\u0007\u0010\u0008J\u0017\u0010\u000b\u001a\u00020\u00062\u0008\u0010\n\u001a\u0004\u0018\u00010\t\u00a2\u0006\u0004\u0008\u000b\u0010\u000cJ\r\u0010\r\u001a\u00020\u0006\u00a2\u0006\u0004\u0008\r\u0010\u000eJ\u0015\u0010\u000f\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u0002\u00a2\u0006\u0004\u0008\u000f\u0010\u0010R\u0018\u0010\u0011\u001a\u0004\u0018\u00010\t8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0011\u0010\u0012\u00a8\u0006\u0016"
     }
     d2 = {
         "Lcom/faceunity/core/media/photo/FUPhotoRecordHelper;",
@@ -22,17 +27,20 @@
         "recordData",
         "Ljava/nio/ByteBuffer;",
         "buffer",
-        "Lnm/l2;",
+        "Lh/l2;",
         "getBitmapFromBuffer",
+        "(Lcom/faceunity/core/media/photo/FUPhotoRecordHelper$RecordData;Ljava/nio/ByteBuffer;)V",
         "Lcom/faceunity/core/media/photo/FUPhotoRecordHelper$OnPhotoRecordingListener;",
         "listener",
         "bindListener",
+        "(Lcom/faceunity/core/media/photo/FUPhotoRecordHelper$OnPhotoRecordingListener;)V",
         "release",
+        "()V",
         "sendRecordingData",
+        "(Lcom/faceunity/core/media/photo/FUPhotoRecordHelper$RecordData;)V",
         "mOnPhotoRecordingListener",
         "Lcom/faceunity/core/media/photo/FUPhotoRecordHelper$OnPhotoRecordingListener;",
         "<init>",
-        "()V",
         "OnPhotoRecordingListener",
         "RecordData",
         "lib_core_release"
@@ -54,6 +62,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -62,6 +71,7 @@
 .method public static final synthetic access$getBitmapFromBuffer(Lcom/faceunity/core/media/photo/FUPhotoRecordHelper;Lcom/faceunity/core/media/photo/FUPhotoRecordHelper$RecordData;Ljava/nio/ByteBuffer;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/faceunity/core/media/photo/FUPhotoRecordHelper;->getBitmapFromBuffer(Lcom/faceunity/core/media/photo/FUPhotoRecordHelper$RecordData;Ljava/nio/ByteBuffer;)V
 
     return-void
@@ -70,6 +80,7 @@
 .method private final getBitmapFromBuffer(Lcom/faceunity/core/media/photo/FUPhotoRecordHelper$RecordData;Ljava/nio/ByteBuffer;)V
     .locals 10
 
+    .line 1
     invoke-virtual {p1}, Lcom/faceunity/core/media/photo/FUPhotoRecordHelper$RecordData;->getTexWidth()I
 
     move-result v0
@@ -84,8 +95,10 @@
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0, p2}, Landroid/graphics/Bitmap;->copyPixelsFromBuffer(Ljava/nio/Buffer;)V
 
+    .line 3
     new-instance v8, Landroid/graphics/Matrix;
 
     invoke-direct {v8}, Landroid/graphics/Matrix;-><init>()V
@@ -94,15 +107,13 @@
 
     const/high16 v1, -0x40800000    # -1.0f
 
+    .line 4
     invoke-virtual {v8, p2, v1}, Landroid/graphics/Matrix;->preScale(FF)Z
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
 
     const-string p2, "bmp"
 
-    invoke-static {v0, p2}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 5
+    invoke-static {v0, p2}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -112,6 +123,10 @@
 
     move-result v7
 
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
     const/4 v9, 0x0
 
     move-object v3, v0
@@ -120,8 +135,10 @@
 
     move-result-object p2
 
+    .line 6
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
+    .line 7
     iget-object p0, p0, Lcom/faceunity/core/media/photo/FUPhotoRecordHelper;->mOnPhotoRecordingListener:Lcom/faceunity/core/media/photo/FUPhotoRecordHelper$OnPhotoRecordingListener;
 
     if-eqz p0, :cond_0
@@ -141,10 +158,11 @@
 .method public final bindListener(Lcom/faceunity/core/media/photo/FUPhotoRecordHelper$OnPhotoRecordingListener;)V
     .locals 0
     .param p1    # Lcom/faceunity/core/media/photo/FUPhotoRecordHelper$OnPhotoRecordingListener;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/core/media/photo/FUPhotoRecordHelper;->mOnPhotoRecordingListener:Lcom/faceunity/core/media/photo/FUPhotoRecordHelper$OnPhotoRecordingListener;
 
     return-void
@@ -155,6 +173,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Lcom/faceunity/core/media/photo/FUPhotoRecordHelper;->mOnPhotoRecordingListener:Lcom/faceunity/core/media/photo/FUPhotoRecordHelper$OnPhotoRecordingListener;
 
     return-void
@@ -163,7 +182,7 @@
 .method public final sendRecordingData(Lcom/faceunity/core/media/photo/FUPhotoRecordHelper$RecordData;)V
     .locals 23
     .param p1    # Lcom/faceunity/core/media/photo/FUPhotoRecordHelper$RecordData;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
@@ -173,32 +192,39 @@
 
     const-string v2, "recordData"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/media/photo/FUPhotoRecordHelper$RecordData;->getTexWidth()I
 
     move-result v2
 
+    .line 2
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/media/photo/FUPhotoRecordHelper$RecordData;->getTexHeight()I
 
     move-result v12
 
+    .line 3
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/media/photo/FUPhotoRecordHelper$RecordData;->getTexId()I
 
     move-result v13
 
+    .line 4
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/media/photo/FUPhotoRecordHelper$RecordData;->getTexMatrix()[F
 
     move-result-object v14
 
+    .line 5
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/media/photo/FUPhotoRecordHelper$RecordData;->getMvpMatrix()[F
 
     move-result-object v15
 
+    .line 6
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/media/photo/FUPhotoRecordHelper$RecordData;->isOES()Z
 
     move-result v16
 
+    .line 7
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/media/photo/FUPhotoRecordHelper$RecordData;->isAlpha()Z
 
     move-result v17
@@ -209,8 +235,10 @@
 
     const/4 v9, 0x0
 
+    .line 8
     invoke-static {v11, v10, v9}, Landroid/opengl/GLES20;->glGenTextures(I[II)V
 
+    .line 9
     aget v3, v10, v9
 
     const/16 v8, 0xde1
@@ -219,6 +247,7 @@
 
     const v3, 0x84c0
 
+    .line 10
     invoke-static {v3}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
     const/16 v3, 0xde1
@@ -251,29 +280,33 @@
 
     move-object/from16 v11, v21
 
+    .line 11
     invoke-static/range {v3 .. v11}, Landroid/opengl/GLES20;->glTexImage2D(IIIIIIIILjava/nio/Buffer;)V
 
     new-array v10, v0, [I
 
     const/4 v11, 0x0
 
+    .line 12
     invoke-static {v0, v10, v11}, Landroid/opengl/GLES20;->glGenFramebuffers(I[II)V
 
+    .line 13
     aget v3, v10, v11
 
     const v9, 0x8d40
 
     invoke-static {v9, v3}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
 
-    const v3, 0x8ce0
-
     move-object/from16 v8, v22
 
-    aget v4, v8, v11
+    .line 14
+    aget v3, v8, v11
+
+    const v4, 0x8ce0
 
     const/16 v7, 0xde1
 
-    invoke-static {v9, v3, v7, v4, v11}, Landroid/opengl/GLES20;->glFramebufferTexture2D(IIIII)V
+    invoke-static {v9, v4, v7, v3, v11}, Landroid/opengl/GLES20;->glFramebufferTexture2D(IIIII)V
 
     const/4 v3, 0x4
 
@@ -281,20 +314,25 @@
 
     const/16 v4, 0xba2
 
+    .line 15
     invoke-static {v4, v6, v11}, Landroid/opengl/GLES20;->glGetIntegerv(I[II)V
 
+    .line 16
     invoke-static {v11, v11, v2, v12}, Landroid/opengl/GLES20;->glViewport(IIII)V
 
     const/4 v4, 0x0
 
+    .line 17
     invoke-static {v4, v4, v4, v4}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
 
     const/16 v4, 0x4000
 
+    .line 18
     invoke-static {v4}, Landroid/opengl/GLES20;->glClear(I)V
 
     if-eqz v16, :cond_0
 
+    .line 19
     new-instance v4, Lcom/faceunity/toolbox/program/FUProgramTextureOES;
 
     invoke-direct {v4}, Lcom/faceunity/toolbox/program/FUProgramTextureOES;-><init>()V
@@ -306,6 +344,7 @@
     :cond_0
     if-eqz v17, :cond_1
 
+    .line 20
     new-instance v4, Lcom/faceunity/toolbox/program/FUProgramTexture2d;
 
     invoke-direct {v4}, Lcom/faceunity/toolbox/program/FUProgramTexture2d;-><init>()V
@@ -314,6 +353,7 @@
 
     goto :goto_0
 
+    .line 21
     :cond_1
     new-instance v4, Lcom/faceunity/toolbox/program/FUProgramTexture2dWithAlpha;
 
@@ -326,14 +366,17 @@
 
     mul-int/2addr v4, v3
 
+    .line 22
     invoke-static {v4}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
     move-result-object v13
 
+    .line 23
     sget-object v3, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
 
     invoke-virtual {v13, v3}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
+    .line 24
     invoke-static {}, Landroid/opengl/GLES20;->glFinish()V
 
     const/4 v3, 0x0
@@ -362,14 +405,18 @@
 
     move-object v9, v13
 
+    .line 25
     invoke-static/range {v3 .. v9}, Landroid/opengl/GLES20;->glReadPixels(IIIIIILjava/nio/Buffer;)V
 
     const-string v3, "glReadPixels"
 
+    .line 26
     invoke-static {v3}, Lcom/faceunity/toolbox/utils/FUGLUtils;->checkGlError(Ljava/lang/String;)V
 
+    .line 27
     invoke-virtual {v13}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
+    .line 28
     aget v3, v2, v11
 
     aget v4, v2, v0
@@ -384,14 +431,19 @@
 
     invoke-static {v3, v4, v5, v2}, Landroid/opengl/GLES20;->glViewport(IIII)V
 
+    .line 29
     invoke-static {v12, v11}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
+    .line 30
     invoke-static {v15, v11}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
 
+    .line 31
     invoke-static {v0, v14, v11}, Landroid/opengl/GLES20;->glDeleteTextures(I[II)V
 
+    .line 32
     invoke-static {v0, v10, v11}, Landroid/opengl/GLES20;->glDeleteFramebuffers(I[II)V
 
+    .line 33
     invoke-virtual/range {p1 .. p1}, Lcom/faceunity/core/media/photo/FUPhotoRecordHelper$RecordData;->isSynchronize()Z
 
     move-result v0
@@ -400,7 +452,8 @@
 
     const-string v0, "buffer"
 
-    invoke-static {v13, v0}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 34
+    invoke-static {v13, v0}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object/from16 v0, p0
 
@@ -411,6 +464,7 @@
     :cond_2
     move-object/from16 v0, p0
 
+    .line 35
     new-instance v2, Lcom/faceunity/toolbox/async/FUSerialScheduler;
 
     invoke-direct {v2}, Lcom/faceunity/toolbox/async/FUSerialScheduler;-><init>()V

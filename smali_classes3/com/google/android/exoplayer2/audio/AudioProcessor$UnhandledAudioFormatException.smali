@@ -18,6 +18,7 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/audio/AudioProcessor$AudioFormat;)V
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

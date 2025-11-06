@@ -4,9 +4,9 @@
 
 
 # static fields
-.field static synthetic class$java$lang$Class:Ljava/lang/Class;
+.field public static synthetic class$java$lang$Class:Ljava/lang/Class;
 
-.field static synthetic class$schemaorg_apache_xmlbeans$system$sXMLTOOLS$TypeSystemHolder:Ljava/lang/Class;
+.field public static synthetic class$schemaorg_apache_xmlbeans$system$sXMLTOOLS$TypeSystemHolder:Ljava/lang/Class;
 
 .field public static final typeSystem:Lorg/apache/xmlbeans/SchemaTypeSystem;
 
@@ -51,7 +51,7 @@
 
     invoke-direct {v0}, Ljava/lang/NoClassDefFoundError;-><init>()V
 
-    invoke-virtual {v0, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v0, p0}, Ljava/lang/NoClassDefFoundError;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -153,7 +153,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object v3
 

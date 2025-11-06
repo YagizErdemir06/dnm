@@ -7,28 +7,31 @@
 
 
 # instance fields
-.field public a:Ljava/lang/String;
+.field public c:Ljava/lang/String;
 
-.field public b:I
+.field public d:I
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/appcompat/app/AppCompatActivity;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Lmiuix/appcompat/app/AppCompatActivity;->V3()Ljava/lang/String;
+    .line 2
+    invoke-virtual {p1}, Lmiuix/appcompat/app/AppCompatActivity;->S2()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lmiuix/appcompat/app/floatingactivity/FloatingLifecycleObserver;->a:Ljava/lang/String;
+    iput-object v0, p0, Lmiuix/appcompat/app/floatingactivity/FloatingLifecycleObserver;->c:Ljava/lang/String;
 
+    .line 3
     invoke-virtual {p1}, Landroid/app/Activity;->getTaskId()I
 
     move-result p1
 
-    iput p1, p0, Lmiuix/appcompat/app/floatingactivity/FloatingLifecycleObserver;->b:I
+    iput p1, p0, Lmiuix/appcompat/app/floatingactivity/FloatingLifecycleObserver;->d:I
 
     return-void
 .end method
@@ -38,7 +41,8 @@
 .method public a()Ljava/lang/String;
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/floatingactivity/FloatingLifecycleObserver;->a:Ljava/lang/String;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/floatingactivity/FloatingLifecycleObserver;->c:Ljava/lang/String;
 
     return-object p0
 .end method
@@ -46,7 +50,8 @@
 .method public b()I
     .locals 0
 
-    iget p0, p0, Lmiuix/appcompat/app/floatingactivity/FloatingLifecycleObserver;->b:I
+    .line 1
+    iget p0, p0, Lmiuix/appcompat/app/floatingactivity/FloatingLifecycleObserver;->d:I
 
     return p0
 .end method

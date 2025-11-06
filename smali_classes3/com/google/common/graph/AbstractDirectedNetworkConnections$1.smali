@@ -1,4 +1,4 @@
-.class Lcom/google/common/graph/AbstractDirectedNetworkConnections$1;
+.class public Lcom/google/common/graph/AbstractDirectedNetworkConnections$1;
 .super Ljava/util/AbstractSet;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/graph/AbstractDirectedNetworkConnections;
+.field public final synthetic this$0:Lcom/google/common/graph/AbstractDirectedNetworkConnections;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/graph/AbstractDirectedNetworkConnections;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/graph/AbstractDirectedNetworkConnections$1;->this$0:Lcom/google/common/graph/AbstractDirectedNetworkConnections;
 
     invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
@@ -45,6 +46,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/graph/AbstractDirectedNetworkConnections$1;->this$0:Lcom/google/common/graph/AbstractDirectedNetworkConnections;
 
     iget-object v0, v0, Lcom/google/common/graph/AbstractDirectedNetworkConnections;->inEdgeMap:Ljava/util/Map;
@@ -171,6 +173,7 @@
 .method public size()I
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/graph/AbstractDirectedNetworkConnections$1;->this$0:Lcom/google/common/graph/AbstractDirectedNetworkConnections;
 
     iget-object v0, v0, Lcom/google/common/graph/AbstractDirectedNetworkConnections;->inEdgeMap:Ljava/util/Map;

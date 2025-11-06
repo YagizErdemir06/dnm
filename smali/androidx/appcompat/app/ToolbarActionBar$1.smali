@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/app/ToolbarActionBar$1;
+.class public Landroidx/appcompat/app/ToolbarActionBar$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/appcompat/app/ToolbarActionBar;
+.field public final synthetic this$0:Landroidx/appcompat/app/ToolbarActionBar;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/appcompat/app/ToolbarActionBar;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/app/ToolbarActionBar$1;->this$0:Landroidx/appcompat/app/ToolbarActionBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,6 +38,7 @@
 .method public run()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/app/ToolbarActionBar$1;->this$0:Landroidx/appcompat/app/ToolbarActionBar;
 
     invoke-virtual {p0}, Landroidx/appcompat/app/ToolbarActionBar;->populateOptionsMenu()V

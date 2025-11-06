@@ -15,9 +15,121 @@
 
 
 # virtual methods
-.method public E0(II)Z
+.method public abstract B3(Z)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "up"
+        }
+    .end annotation
+.end method
+
+.method public Fa(ZLjava/lang/Runnable;)V
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "withAnim",
+            "finishCb"
+        }
+    .end annotation
+
+    return-void
+.end method
+
+.method public N5(Ljava/lang/Runnable;)V
+    .locals 0
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "finishCb"
+        }
+    .end annotation
+
+    return-void
+.end method
+
+.method public Q7()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public abstract R3(Z)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "up"
+        }
+    .end annotation
+.end method
+
+.method public a6()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public ca(II)Z
+    .locals 0
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "x",
+            "y"
+        }
+    .end annotation
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public j5()Z
+    .locals 0
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public q0(II)Z
+    .locals 0
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "x",
+            "y"
+        }
     .end annotation
 
     const/4 p0, 0x1
@@ -25,59 +137,15 @@
     return p0
 .end method
 
-.method public E8()Z
-    .locals 0
-    .annotation build Lh7/c;
+.method public abstract u0(IZ)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "translationY",
+            "up"
+        }
     .end annotation
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public abstract G6(Z)V
-.end method
-
-.method public abstract H0(IZ)V
-.end method
-
-.method public M9(Ljava/lang/Runnable;)V
-    .locals 0
-    .annotation build Lh7/c;
-    .end annotation
-
-    return-void
-.end method
-
-.method public Vf(II)Z
-    .locals 0
-    .annotation build Lh7/c;
-    .end annotation
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public abstract a6(Z)V
-.end method
-
-.method public mh(ZLjava/lang/Runnable;)V
-    .locals 0
-    .annotation build Lh7/c;
-    .end annotation
-
-    return-void
-.end method
-
-.method public sd()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public ya()V
-    .locals 0
-
-    return-void
 .end method

@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/AbstractService$IsStartableGuard;
+.class public final Lcom/google/common/util/concurrent/AbstractService$IsStartableGuard;
 .super Lcom/google/common/util/concurrent/Monitor$Guard;
 .source "SourceFile"
 
@@ -15,15 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/util/concurrent/AbstractService;
+.field public final synthetic this$0:Lcom/google/common/util/concurrent/AbstractService;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/util/concurrent/AbstractService;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/AbstractService$IsStartableGuard;->this$0:Lcom/google/common/util/concurrent/AbstractService;
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/util/concurrent/AbstractService;->access$000(Lcom/google/common/util/concurrent/AbstractService;)Lcom/google/common/util/concurrent/Monitor;
 
     move-result-object p1
@@ -38,6 +40,7 @@
 .method public isSatisfied()Z
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/AbstractService$IsStartableGuard;->this$0:Lcom/google/common/util/concurrent/AbstractService;
 
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/AbstractService;->state()Lcom/google/common/util/concurrent/Service$State;

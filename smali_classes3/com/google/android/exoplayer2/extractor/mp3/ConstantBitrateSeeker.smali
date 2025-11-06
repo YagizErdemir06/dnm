@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/extractor/mp3/ConstantBitrateSeeker;
+.class public final Lcom/google/android/exoplayer2/extractor/mp3/ConstantBitrateSeeker;
 .super Lcom/google/android/exoplayer2/extractor/ConstantBitrateSeekMap;
 .source "SourceFile"
 
@@ -10,6 +10,7 @@
 .method public constructor <init>(JJLcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;Z)V
     .locals 8
 
+    .line 1
     iget v5, p5, Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;->bitrate:I
 
     iget v6, p5, Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;->frameSize:I
@@ -40,6 +41,7 @@
 .method public getTimeUs(J)J
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/google/android/exoplayer2/extractor/ConstantBitrateSeekMap;->getTimeUsAtPosition(J)J
 
     move-result-wide p0

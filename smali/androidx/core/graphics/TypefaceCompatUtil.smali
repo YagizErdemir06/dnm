@@ -10,12 +10,6 @@
     }
 .end annotation
 
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Landroidx/core/graphics/TypefaceCompatUtil$Api19Impl;
-    }
-.end annotation
-
 
 # static fields
 .field private static final CACHE_FILE_PREFIX:Ljava/lang/String; = ".font"
@@ -27,6 +21,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,13 +29,10 @@
 
 .method public static closeQuietly(Ljava/io/Closeable;)V
     .locals 0
-    .param p0    # Ljava/io/Closeable;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
 
     if-eqz p0, :cond_0
 
+    .line 1
     :try_start_0
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
     :try_end_0
@@ -53,14 +45,6 @@
 
 .method public static copyToDirectBuffer(Landroid/content/Context;Landroid/content/res/Resources;I)Ljava/nio/ByteBuffer;
     .locals 1
-    .param p0    # Landroid/content/Context;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p1    # Landroid/content/res/Resources;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -68,6 +52,7 @@
         value = 0x13
     .end annotation
 
+    .line 1
     invoke-static {p0}, Landroidx/core/graphics/TypefaceCompatUtil;->getTempFile(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object p0
@@ -78,6 +63,7 @@
 
     return-object v0
 
+    .line 2
     :cond_0
     :try_start_0
     invoke-static {p0, p1, p2}, Landroidx/core/graphics/TypefaceCompatUtil;->copyToFile(Ljava/io/File;Landroid/content/res/Resources;I)Z
@@ -88,10 +74,12 @@
 
     if-nez p1, :cond_1
 
+    .line 3
     invoke-virtual {p0}, Ljava/io/File;->delete()Z
 
     return-object v0
 
+    .line 4
     :cond_1
     :try_start_1
     invoke-static {p0}, Landroidx/core/graphics/TypefaceCompatUtil;->mmap(Ljava/io/File;)Ljava/nio/ByteBuffer;
@@ -100,6 +88,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 5
     invoke-virtual {p0}, Ljava/io/File;->delete()Z
 
     return-object p1
@@ -109,19 +98,12 @@
 
     invoke-virtual {p0}, Ljava/io/File;->delete()Z
 
+    .line 6
     throw p1
 .end method
 
 .method public static copyToFile(Ljava/io/File;Landroid/content/res/Resources;I)Z
     .locals 0
-    .param p0    # Ljava/io/File;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p1    # Landroid/content/res/Resources;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 
     .line 13
     :try_start_0
@@ -163,14 +145,6 @@
 
 .method public static copyToFile(Ljava/io/File;Ljava/io/InputStream;)Z
     .locals 5
-    .param p0    # Ljava/io/File;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p1    # Ljava/io/InputStream;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 
     .line 1
     invoke-static {}, Landroid/os/StrictMode;->allowThreadDiskWrites()Landroid/os/StrictMode$ThreadPolicy;
@@ -213,14 +187,14 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
+    const/4 p0, 0x1
+
+    .line 5
     invoke-static {v3}, Landroidx/core/graphics/TypefaceCompatUtil;->closeQuietly(Ljava/io/Closeable;)V
 
     .line 6
     invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
-
-    const/4 p0, 0x1
 
     return p0
 
@@ -259,7 +233,7 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
 
@@ -294,13 +268,10 @@
 
 .method public static getTempFile(Landroid/content/Context;)Ljava/io/File;
     .locals 5
-    .param p0    # Landroid/content/Context;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
 
     move-result-object p0
@@ -311,6 +282,7 @@
 
     return-object v0
 
+    .line 2
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -349,6 +321,7 @@
 
     if-ge v2, v3, :cond_2
 
+    .line 3
     new-instance v3, Ljava/io/File;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -365,6 +338,7 @@
 
     invoke-direct {v3, p0, v4}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
+    .line 4
     :try_start_0
     invoke-virtual {v3}, Ljava/io/File;->createNewFile()Z
 
@@ -388,18 +362,6 @@
 
 .method public static mmap(Landroid/content/Context;Landroid/os/CancellationSignal;Landroid/net/Uri;)Ljava/nio/ByteBuffer;
     .locals 7
-    .param p0    # Landroid/content/Context;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p1    # Landroid/os/CancellationSignal;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p2    # Landroid/net/Uri;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -415,10 +377,10 @@
     const/4 v0, 0x0
 
     :try_start_0
-    const-string/jumbo v1, "r"
+    const-string v1, "r"
 
     .line 8
-    invoke-static {p0, p2, v1, p1}, Landroidx/core/graphics/TypefaceCompatUtil$Api19Impl;->openFileDescriptor(Landroid/content/ContentResolver;Landroid/net/Uri;Ljava/lang/String;Landroid/os/CancellationSignal;)Landroid/os/ParcelFileDescriptor;
+    invoke-virtual {p0, p2, v1, p1}, Landroid/content/ContentResolver;->openFileDescriptor(Landroid/net/Uri;Ljava/lang/String;Landroid/os/CancellationSignal;)Landroid/os/ParcelFileDescriptor;
 
     move-result-object p0
 
@@ -648,10 +610,12 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
+    .line 2
     array-length v1, p1
 
     const/4 v2, 0x0
@@ -661,6 +625,7 @@
 
     aget-object v3, p1, v2
 
+    .line 3
     invoke-virtual {v3}, Landroidx/core/provider/FontsContractCompat$FontInfo;->getResultCode()I
 
     move-result v4
@@ -669,11 +634,13 @@
 
     goto :goto_1
 
+    .line 4
     :cond_0
     invoke-virtual {v3}, Landroidx/core/provider/FontsContractCompat$FontInfo;->getUri()Landroid/net/Uri;
 
     move-result-object v3
 
+    .line 5
     invoke-virtual {v0, v3}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v4
@@ -682,11 +649,13 @@
 
     goto :goto_1
 
+    .line 6
     :cond_1
     invoke-static {p0, p2, v3}, Landroidx/core/graphics/TypefaceCompatUtil;->mmap(Landroid/content/Context;Landroid/os/CancellationSignal;Landroid/net/Uri;)Ljava/nio/ByteBuffer;
 
     move-result-object v4
 
+    .line 7
     invoke-virtual {v0, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :goto_1
@@ -694,6 +663,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_2
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 

@@ -59,7 +59,7 @@
     .locals 3
 
     .line 3
-    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
+    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
@@ -86,7 +86,7 @@
     .line 5
     iget-object v0, p0, Lorg/dom4j/tree/BackedList;->branchContent:Ljava/util/List;
 
-    invoke-virtual {p0, p1}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -102,7 +102,7 @@
 
     add-int/lit8 v0, v0, -0x1
 
-    invoke-virtual {p0, v0}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -206,7 +206,7 @@
     .locals 3
 
     .line 5
-    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
+    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
@@ -219,7 +219,7 @@
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->ensureCapacity(I)V
 
     .line 6
-    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
+    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
@@ -268,7 +268,7 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
+    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
@@ -281,7 +281,7 @@
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->ensureCapacity(I)V
 
     .line 2
-    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
+    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
@@ -325,6 +325,7 @@
 .method public addLocal(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
@@ -333,14 +334,17 @@
 .method public asNode(Ljava/lang/Object;)Lorg/dom4j/Node;
     .locals 2
 
+    .line 1
     instance-of p0, p1, Lorg/dom4j/Node;
 
     if-eqz p0, :cond_0
 
+    .line 2
     check-cast p1, Lorg/dom4j/Node;
 
     return-object p1
 
+    .line 3
     :cond_0
     new-instance p0, Lorg/dom4j/IllegalAddException;
 
@@ -366,7 +370,8 @@
 .method public clear()V
     .locals 3
 
-    invoke-virtual {p0}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
+    .line 1
+    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
@@ -377,14 +382,17 @@
 
     if-eqz v1, :cond_0
 
+    .line 2
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
+    .line 3
     iget-object v2, p0, Lorg/dom4j/tree/BackedList;->branchContent:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
+    .line 4
     iget-object v2, p0, Lorg/dom4j/tree/BackedList;->branch:Lorg/dom4j/tree/AbstractBranch;
 
     invoke-virtual {p0, v1}, Lorg/dom4j/tree/BackedList;->asNode(Ljava/lang/Object;)Lorg/dom4j/Node;
@@ -395,6 +403,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-super {p0}, Ljava/util/ArrayList;->clear()V
 
@@ -447,9 +456,10 @@
 .method public set(ILjava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/tree/BackedList;->branchContent:Ljava/util/List;
 
-    invoke-virtual {p0, p1}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -468,6 +478,7 @@
     :cond_0
     const v0, 0x7fffffff
 
+    .line 2
     :cond_1
     :goto_0
     iget-object v1, p0, Lorg/dom4j/tree/BackedList;->branchContent:Ljava/util/List;
@@ -478,9 +489,10 @@
 
     if-ge v0, v1, :cond_2
 
+    .line 3
     iget-object v1, p0, Lorg/dom4j/tree/BackedList;->branch:Lorg/dom4j/tree/AbstractBranch;
 
-    invoke-virtual {p0, p1}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -490,6 +502,7 @@
 
     invoke-virtual {v1, v2}, Lorg/dom4j/tree/AbstractBranch;->removeNode(Lorg/dom4j/Node;)Z
 
+    .line 4
     iget-object v1, p0, Lorg/dom4j/tree/BackedList;->branch:Lorg/dom4j/tree/AbstractBranch;
 
     invoke-virtual {p0, p2}, Lorg/dom4j/tree/BackedList;->asNode(Ljava/lang/Object;)Lorg/dom4j/Node;
@@ -500,10 +513,11 @@
 
     goto :goto_1
 
+    .line 5
     :cond_2
     iget-object v0, p0, Lorg/dom4j/tree/BackedList;->branch:Lorg/dom4j/tree/AbstractBranch;
 
-    invoke-virtual {p0, p1}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -513,6 +527,7 @@
 
     invoke-virtual {v0, v1}, Lorg/dom4j/tree/AbstractBranch;->removeNode(Lorg/dom4j/Node;)Z
 
+    .line 6
     iget-object v0, p0, Lorg/dom4j/tree/BackedList;->branch:Lorg/dom4j/tree/AbstractBranch;
 
     invoke-virtual {p0, p2}, Lorg/dom4j/tree/BackedList;->asNode(Ljava/lang/Object;)Lorg/dom4j/Node;
@@ -521,6 +536,7 @@
 
     invoke-virtual {v0, v1}, Lorg/dom4j/tree/AbstractBranch;->addNode(Lorg/dom4j/Node;)V
 
+    .line 7
     :goto_1
     iget-object v0, p0, Lorg/dom4j/tree/BackedList;->branch:Lorg/dom4j/tree/AbstractBranch;
 
@@ -530,6 +546,7 @@
 
     invoke-virtual {v0, v1}, Lorg/dom4j/tree/AbstractBranch;->childAdded(Lorg/dom4j/Node;)V
 
+    .line 8
     invoke-super {p0, p1, p2}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0

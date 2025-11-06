@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/RegularImmutableTable$1;
+.class public Lcom/google/common/collect/RegularImmutableTable$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,15 +27,16 @@
 
 
 # instance fields
-.field final synthetic val$columnComparator:Ljava/util/Comparator;
+.field public final synthetic val$columnComparator:Ljava/util/Comparator;
 
-.field final synthetic val$rowComparator:Ljava/util/Comparator;
+.field public final synthetic val$rowComparator:Ljava/util/Comparator;
 
 
 # direct methods
 .method public constructor <init>(Ljava/util/Comparator;Ljava/util/Comparator;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/RegularImmutableTable$1;->val$rowComparator:Ljava/util/Comparator;
 
     iput-object p2, p0, Lcom/google/common/collect/RegularImmutableTable$1;->val$columnComparator:Ljava/util/Comparator;

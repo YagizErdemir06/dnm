@@ -259,6 +259,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;
 
     invoke-direct {v0, p0}, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;-><init>(Landroid/content/Context;)V
@@ -296,6 +297,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/internal/ClientSettings;->zaa:Landroid/accounts/Account;
 
     if-eqz p0, :cond_0
@@ -318,6 +320,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/internal/ClientSettings;->zaa:Landroid/accounts/Account;
 
     if-eqz p0, :cond_0
@@ -381,6 +384,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/internal/ClientSettings;->zad:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -393,6 +397,7 @@
 
     iget-object v0, p1, Lcom/google/android/gms/common/internal/zab;->zaa:Ljava/util/Set;
 
+    .line 2
     invoke-interface {v0}, Ljava/util/Set;->isEmpty()Z
 
     move-result v0
@@ -406,14 +411,17 @@
 
     iget-object p0, p0, Lcom/google/android/gms/common/internal/ClientSettings;->zab:Ljava/util/Set;
 
+    .line 3
     invoke-direct {v0, p0}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
     iget-object p0, p1, Lcom/google/android/gms/common/internal/zab;->zaa:Ljava/util/Set;
 
+    .line 4
     invoke-interface {v0, p0}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
     return-object v0
 
+    .line 5
     :cond_1
     :goto_0
     iget-object p0, p0, Lcom/google/android/gms/common/internal/ClientSettings;->zab:Ljava/util/Set;

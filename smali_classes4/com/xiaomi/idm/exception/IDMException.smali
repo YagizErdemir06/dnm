@@ -11,6 +11,7 @@
 .method public constructor <init>(ILjava/lang/String;)V
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -33,6 +34,7 @@
 
     invoke-direct {p0, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
+    .line 2
     iput p1, p0, Lcom/xiaomi/idm/exception/IDMException;->code:I
 
     return-void
@@ -41,13 +43,14 @@
 .method public static asIDMException(Ljava/lang/Exception;)Lcom/xiaomi/idm/exception/IDMException;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/xiaomi/idm/exception/IDMException;
 
-    const/4 v1, -0x1
-
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p0
+
+    const/4 v1, -0x1
 
     invoke-direct {v0, v1, p0}, Lcom/xiaomi/idm/exception/IDMException;-><init>(ILjava/lang/String;)V
 
@@ -57,6 +60,7 @@
 .method public static create(Lcom/xiaomi/idm/constant/ResponseCode;)Lcom/xiaomi/idm/exception/IDMException;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/xiaomi/idm/exception/IDMException;
 
     invoke-interface {p0}, Lcom/xiaomi/idm/constant/ResponseCode;->getCode()I
@@ -77,6 +81,7 @@
 .method public getCode()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/idm/exception/IDMException;->code:I
 
     return p0

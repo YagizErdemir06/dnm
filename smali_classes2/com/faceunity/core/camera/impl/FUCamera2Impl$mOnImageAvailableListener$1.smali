@@ -1,4 +1,4 @@
-.class final Lcom/faceunity/core/camera/impl/FUCamera2Impl$mOnImageAvailableListener$1;
+.class public final Lcom/faceunity/core/camera/impl/FUCamera2Impl$mOnImageAvailableListener$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -16,7 +16,12 @@
     name = null
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
         "\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0006\u001a\u00020\u00032\u000e\u0010\u0002\u001a\n \u0001*\u0004\u0018\u00010\u00000\u0000H\n\u00a2\u0006\u0004\u0008\u0004\u0010\u0005"
     }
@@ -24,7 +29,7 @@
         "Landroid/media/ImageReader;",
         "kotlin.jvm.PlatformType",
         "reader",
-        "Lnm/l2;",
+        "Lh/l2;",
         "onImageAvailable",
         "(Landroid/media/ImageReader;)V",
         "<anonymous>"
@@ -39,7 +44,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/faceunity/core/camera/impl/FUCamera2Impl;
+.field public final synthetic this$0:Lcom/faceunity/core/camera/impl/FUCamera2Impl;
 
 
 # direct methods
@@ -58,6 +63,7 @@
 .method public final onImageAvailable(Landroid/media/ImageReader;)V
     .locals 8
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/faceunity/core/camera/impl/FUCamera2Impl$mOnImageAvailableListener$1;->this$0:Lcom/faceunity/core/camera/impl/FUCamera2Impl;
 
@@ -80,12 +86,14 @@
     :cond_0
     if-eqz p1, :cond_2
 
+    .line 2
     invoke-virtual {p1}, Landroid/media/ImageReader;->acquireLatestImage()Landroid/media/Image;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
+    .line 3
     iget-object v0, p0, Lcom/faceunity/core/camera/impl/FUCamera2Impl$mOnImageAvailableListener$1;->this$0:Lcom/faceunity/core/camera/impl/FUCamera2Impl;
 
     invoke-static {v0}, Lcom/faceunity/core/camera/impl/FUCamera2Impl;->access$getMYuvDataBufferArray$p(Lcom/faceunity/core/camera/impl/FUCamera2Impl;)[[B
@@ -94,6 +102,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     iget-object v1, p0, Lcom/faceunity/core/camera/impl/FUCamera2Impl$mOnImageAvailableListener$1;->this$0:Lcom/faceunity/core/camera/impl/FUCamera2Impl;
 
     invoke-static {v1}, Lcom/faceunity/core/camera/impl/FUCamera2Impl;->access$getMYuvDataBufferPosition$p(Lcom/faceunity/core/camera/impl/FUCamera2Impl;)I
@@ -102,6 +111,7 @@
 
     aget-object v3, v0, v1
 
+    .line 5
     iget-object v0, p0, Lcom/faceunity/core/camera/impl/FUCamera2Impl$mOnImageAvailableListener$1;->this$0:Lcom/faceunity/core/camera/impl/FUCamera2Impl;
 
     invoke-static {v0}, Lcom/faceunity/core/camera/impl/FUCamera2Impl;->access$getMYuvDataBufferPosition$p(Lcom/faceunity/core/camera/impl/FUCamera2Impl;)I
@@ -122,7 +132,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {v2}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     array-length v2, v2
 
@@ -130,8 +140,10 @@
 
     invoke-static {v0, v1}, Lcom/faceunity/core/camera/impl/FUCamera2Impl;->access$setMYuvDataBufferPosition$p(Lcom/faceunity/core/camera/impl/FUCamera2Impl;I)V
 
+    .line 6
     invoke-static {p1, v3}, Lcom/faceunity/toolbox/media/FUMediaUtils;->changeYUV420ToNV21(Landroid/media/Image;[B)V
 
+    .line 7
     iget-object v0, p0, Lcom/faceunity/core/camera/impl/FUCamera2Impl$mOnImageAvailableListener$1;->this$0:Lcom/faceunity/core/camera/impl/FUCamera2Impl;
 
     invoke-static {v0}, Lcom/faceunity/core/camera/impl/FUCamera2Impl;->access$getMIsPreviewing$p(Lcom/faceunity/core/camera/impl/FUCamera2Impl;)Z
@@ -148,6 +160,7 @@
 
     if-nez v0, :cond_1
 
+    .line 8
     iget-object v0, p0, Lcom/faceunity/core/camera/impl/FUCamera2Impl$mOnImageAvailableListener$1;->this$0:Lcom/faceunity/core/camera/impl/FUCamera2Impl;
 
     invoke-static {v0}, Lcom/faceunity/core/camera/impl/FUCamera2Impl;->access$getMCameraListener$p(Lcom/faceunity/core/camera/impl/FUCamera2Impl;)Lcom/faceunity/core/camera/listener/OnFUCameraListener;
@@ -188,6 +201,7 @@
 
     invoke-interface {v0, v1}, Lcom/faceunity/core/camera/listener/OnFUCameraListener;->onPreviewFrame(Lcom/faceunity/core/camera/entity/FUCameraPreviewData;)V
 
+    .line 9
     :cond_1
     invoke-virtual {p1}, Landroid/media/Image;->close()V
     :try_end_0
@@ -202,7 +216,8 @@
     :catch_0
     move-exception p0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 10
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_1
     return-void

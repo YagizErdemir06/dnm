@@ -1,4 +1,4 @@
-.class final Lcom/google/android/play/core/remote/ServiceConnectedTask;
+.class public final Lcom/google/android/play/core/remote/ServiceConnectedTask;
 .super Lcom/google/android/play/core/remote/RemoteTask;
 .source "SourceFile"
 
@@ -13,10 +13,13 @@
 .method public constructor <init>(Lcom/google/android/play/core/remote/ServiceConnectionImpl;Landroid/os/IBinder;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/play/core/remote/RemoteTask;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/play/core/remote/ServiceConnectedTask;->mServiceConnection:Lcom/google/android/play/core/remote/ServiceConnectionImpl;
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/play/core/remote/ServiceConnectedTask;->mService:Landroid/os/IBinder;
 
     return-void
@@ -27,6 +30,7 @@
 .method public execute()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/play/core/remote/ServiceConnectedTask;->mServiceConnection:Lcom/google/android/play/core/remote/ServiceConnectionImpl;
 
     iget-object v0, v0, Lcom/google/android/play/core/remote/ServiceConnectionImpl;->mRemoteManager:Lcom/google/android/play/core/remote/RemoteManager;
@@ -43,12 +47,14 @@
 
     iput-object v1, v0, Lcom/google/android/play/core/remote/RemoteManager;->mIInterface:Landroid/os/IInterface;
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/play/core/remote/ServiceConnectedTask;->mServiceConnection:Lcom/google/android/play/core/remote/ServiceConnectionImpl;
 
     iget-object v0, v0, Lcom/google/android/play/core/remote/ServiceConnectionImpl;->mRemoteManager:Lcom/google/android/play/core/remote/RemoteManager;
 
     invoke-virtual {v0}, Lcom/google/android/play/core/remote/RemoteManager;->linkToDeath()V
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/play/core/remote/ServiceConnectedTask;->mServiceConnection:Lcom/google/android/play/core/remote/ServiceConnectionImpl;
 
     iget-object v0, v0, Lcom/google/android/play/core/remote/ServiceConnectionImpl;->mRemoteManager:Lcom/google/android/play/core/remote/RemoteManager;
@@ -57,8 +63,10 @@
 
     iput-boolean v1, v0, Lcom/google/android/play/core/remote/RemoteManager;->mBindingService:Z
 
+    .line 4
     iget-object v0, v0, Lcom/google/android/play/core/remote/RemoteManager;->mPendingTasks:Ljava/util/List;
 
+    .line 5
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -76,10 +84,12 @@
 
     check-cast v1, Ljava/lang/Runnable;
 
+    .line 6
     invoke-interface {v1}, Ljava/lang/Runnable;->run()V
 
     goto :goto_0
 
+    .line 7
     :cond_0
     iget-object p0, p0, Lcom/google/android/play/core/remote/ServiceConnectedTask;->mServiceConnection:Lcom/google/android/play/core/remote/ServiceConnectionImpl;
 

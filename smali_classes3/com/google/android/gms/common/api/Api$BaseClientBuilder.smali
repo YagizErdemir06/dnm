@@ -80,6 +80,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p0

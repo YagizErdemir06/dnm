@@ -1,4 +1,4 @@
-.class Lcom/google/common/graph/ImmutableNetwork$3;
+.class public Lcom/google/common/graph/ImmutableNetwork$3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,15 +26,16 @@
 
 
 # instance fields
-.field final synthetic val$network:Lcom/google/common/graph/Network;
+.field public final synthetic val$network:Lcom/google/common/graph/Network;
 
-.field final synthetic val$node:Ljava/lang/Object;
+.field public final synthetic val$node:Ljava/lang/Object;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/graph/Network;Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/graph/ImmutableNetwork$3;->val$network:Lcom/google/common/graph/Network;
 
     iput-object p2, p0, Lcom/google/common/graph/ImmutableNetwork$3;->val$node:Ljava/lang/Object;
@@ -54,6 +55,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/graph/ImmutableNetwork$3;->val$network:Lcom/google/common/graph/Network;
 
     invoke-interface {v0, p1}, Lcom/google/common/graph/Network;->incidentNodes(Ljava/lang/Object;)Lcom/google/common/graph/EndpointPair;

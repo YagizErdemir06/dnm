@@ -42,6 +42,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -50,6 +51,7 @@
 .method public static synthetic access$1002(Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;Z)Z
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->svExpected:Z
 
     return p1
@@ -58,6 +60,7 @@
 .method public static synthetic access$1100(Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;)Ljava/io/File;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->resourceFile:Ljava/io/File;
 
     return-object p0
@@ -66,6 +69,7 @@
 .method public static synthetic access$1102(Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;Ljava/io/File;)Ljava/io/File;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->resourceFile:Ljava/io/File;
 
     return-object p1
@@ -74,6 +78,7 @@
 .method public static synthetic access$1202(Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;Z)Z
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->rvExpected:Z
 
     return p1
@@ -82,6 +87,7 @@
 .method public static synthetic access$1302(Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->errorCode:Ljava/lang/String;
 
     return-object p1
@@ -90,6 +96,7 @@
 .method public static synthetic access$302(Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;Ljava/io/File;)Ljava/io/File;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->ltgFile:Ljava/io/File;
 
     return-object p1
@@ -98,6 +105,7 @@
 .method public static synthetic access$402(Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->id:Ljava/lang/String;
 
     return-object p1
@@ -106,6 +114,7 @@
 .method public static synthetic access$502(Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->origin:Ljava/lang/String;
 
     return-object p1
@@ -114,6 +123,7 @@
 .method public static synthetic access$602(Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->description:Ljava/lang/String;
 
     return-object p1
@@ -122,6 +132,7 @@
 .method public static synthetic access$700(Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;)Ljava/io/File;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->instanceFile:Ljava/io/File;
 
     return-object p0
@@ -130,6 +141,7 @@
 .method public static synthetic access$702(Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;Ljava/io/File;)Ljava/io/File;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->instanceFile:Ljava/io/File;
 
     return-object p1
@@ -138,6 +150,7 @@
 .method public static synthetic access$802(Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;Z)Z
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->ivExpected:Z
 
     return p1
@@ -146,6 +159,7 @@
 .method public static synthetic access$900(Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;)Ljava/io/File;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->schemaFile:Ljava/io/File;
 
     return-object p0
@@ -154,6 +168,7 @@
 .method public static synthetic access$902(Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;Ljava/io/File;)Ljava/io/File;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->schemaFile:Ljava/io/File;
 
     return-object p1
@@ -164,6 +179,7 @@
 .method public getDescription()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->description:Ljava/lang/String;
 
     return-object p0
@@ -172,6 +188,7 @@
 .method public getErrorCode()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->errorCode:Ljava/lang/String;
 
     return-object p0
@@ -180,6 +197,7 @@
 .method public getId()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->id:Ljava/lang/String;
 
     return-object p0
@@ -188,6 +206,7 @@
 .method public getInstanceFile()Ljava/io/File;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->instanceFile:Ljava/io/File;
 
     return-object p0
@@ -196,6 +215,7 @@
 .method public getLtgFile()Ljava/io/File;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->ltgFile:Ljava/io/File;
 
     return-object p0
@@ -204,6 +224,7 @@
 .method public getOrigin()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->origin:Ljava/lang/String;
 
     return-object p0
@@ -212,6 +233,7 @@
 .method public getResourceFile()Ljava/io/File;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->resourceFile:Ljava/io/File;
 
     return-object p0
@@ -220,6 +242,7 @@
 .method public getSchemaFile()Ljava/io/File;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->schemaFile:Ljava/io/File;
 
     return-object p0
@@ -228,6 +251,7 @@
 .method public isIvExpected()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->ivExpected:Z
 
     return p0
@@ -236,6 +260,7 @@
 .method public isRvExpected()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->rvExpected:Z
 
     return p0
@@ -244,6 +269,7 @@
 .method public isSvExpected()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->svExpected:Z
 
     return p0

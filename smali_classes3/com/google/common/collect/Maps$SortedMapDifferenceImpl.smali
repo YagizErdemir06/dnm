@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Maps$SortedMapDifferenceImpl;
+.class public Lcom/google/common/collect/Maps$SortedMapDifferenceImpl;
 .super Lcom/google/common/collect/Maps$MapDifferenceImpl;
 .source "SourceFile"
 
@@ -50,6 +50,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/common/collect/Maps$MapDifferenceImpl;-><init>(Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;)V
 
     return-void

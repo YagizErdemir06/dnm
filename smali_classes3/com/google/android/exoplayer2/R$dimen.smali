@@ -15,131 +15,131 @@
 
 
 # static fields
-.field public static final compat_button_inset_horizontal_material:I = 0x7f07029b
+.field public static final compat_button_inset_horizontal_material:I = 0x7f070296
 
-.field public static final compat_button_inset_vertical_material:I = 0x7f07029c
+.field public static final compat_button_inset_vertical_material:I = 0x7f070297
 
-.field public static final compat_button_padding_horizontal_material:I = 0x7f07029d
+.field public static final compat_button_padding_horizontal_material:I = 0x7f070298
 
-.field public static final compat_button_padding_vertical_material:I = 0x7f07029e
+.field public static final compat_button_padding_vertical_material:I = 0x7f070299
 
-.field public static final compat_control_corner_material:I = 0x7f07029f
+.field public static final compat_control_corner_material:I = 0x7f07029a
 
-.field public static final compat_notification_large_icon_max_height:I = 0x7f0702a0
+.field public static final compat_notification_large_icon_max_height:I = 0x7f07029b
 
-.field public static final compat_notification_large_icon_max_width:I = 0x7f0702a1
+.field public static final compat_notification_large_icon_max_width:I = 0x7f07029c
 
-.field public static final exo_error_message_height:I = 0x7f07041a
+.field public static final exo_error_message_height:I = 0x7f0703ed
 
-.field public static final exo_error_message_margin_bottom:I = 0x7f07041b
+.field public static final exo_error_message_margin_bottom:I = 0x7f0703ee
 
-.field public static final exo_error_message_text_padding_horizontal:I = 0x7f07041c
+.field public static final exo_error_message_text_padding_horizontal:I = 0x7f0703ef
 
-.field public static final exo_error_message_text_padding_vertical:I = 0x7f07041d
+.field public static final exo_error_message_text_padding_vertical:I = 0x7f0703f0
 
-.field public static final exo_error_message_text_size:I = 0x7f07041e
+.field public static final exo_error_message_text_size:I = 0x7f0703f1
 
-.field public static final exo_icon_horizontal_margin:I = 0x7f07041f
+.field public static final exo_icon_horizontal_margin:I = 0x7f0703f2
 
-.field public static final exo_icon_padding:I = 0x7f070420
+.field public static final exo_icon_padding:I = 0x7f0703f3
 
-.field public static final exo_icon_padding_bottom:I = 0x7f070421
+.field public static final exo_icon_padding_bottom:I = 0x7f0703f4
 
-.field public static final exo_icon_size:I = 0x7f070422
+.field public static final exo_icon_size:I = 0x7f0703f5
 
-.field public static final exo_icon_text_size:I = 0x7f070423
+.field public static final exo_icon_text_size:I = 0x7f0703f6
 
-.field public static final exo_media_button_height:I = 0x7f070424
+.field public static final exo_media_button_height:I = 0x7f0703f7
 
-.field public static final exo_media_button_width:I = 0x7f070425
+.field public static final exo_media_button_width:I = 0x7f0703f8
 
-.field public static final exo_setting_width:I = 0x7f070426
+.field public static final exo_setting_width:I = 0x7f0703f9
 
-.field public static final exo_settings_height:I = 0x7f070427
+.field public static final exo_settings_height:I = 0x7f0703fa
 
-.field public static final exo_settings_icon_size:I = 0x7f070428
+.field public static final exo_settings_icon_size:I = 0x7f0703fb
 
-.field public static final exo_settings_main_text_size:I = 0x7f070429
+.field public static final exo_settings_main_text_size:I = 0x7f0703fc
 
-.field public static final exo_settings_offset:I = 0x7f07042a
+.field public static final exo_settings_offset:I = 0x7f0703fd
 
-.field public static final exo_settings_sub_text_size:I = 0x7f07042b
+.field public static final exo_settings_sub_text_size:I = 0x7f0703fe
 
-.field public static final exo_settings_text_height:I = 0x7f07042c
+.field public static final exo_settings_text_height:I = 0x7f0703ff
 
-.field public static final exo_small_icon_height:I = 0x7f07042d
+.field public static final exo_small_icon_height:I = 0x7f070400
 
-.field public static final exo_small_icon_horizontal_margin:I = 0x7f07042e
+.field public static final exo_small_icon_horizontal_margin:I = 0x7f070401
 
-.field public static final exo_small_icon_padding_horizontal:I = 0x7f07042f
+.field public static final exo_small_icon_padding_horizontal:I = 0x7f070402
 
-.field public static final exo_small_icon_padding_vertical:I = 0x7f070430
+.field public static final exo_small_icon_padding_vertical:I = 0x7f070403
 
-.field public static final exo_small_icon_width:I = 0x7f070431
+.field public static final exo_small_icon_width:I = 0x7f070404
 
-.field public static final exo_styled_bottom_bar_height:I = 0x7f070432
+.field public static final exo_styled_bottom_bar_height:I = 0x7f070405
 
-.field public static final exo_styled_bottom_bar_margin_top:I = 0x7f070433
+.field public static final exo_styled_bottom_bar_margin_top:I = 0x7f070406
 
-.field public static final exo_styled_bottom_bar_time_padding:I = 0x7f070434
+.field public static final exo_styled_bottom_bar_time_padding:I = 0x7f070407
 
-.field public static final exo_styled_controls_padding:I = 0x7f070435
+.field public static final exo_styled_controls_padding:I = 0x7f070408
 
-.field public static final exo_styled_minimal_controls_margin_bottom:I = 0x7f070436
+.field public static final exo_styled_minimal_controls_margin_bottom:I = 0x7f070409
 
-.field public static final exo_styled_progress_bar_height:I = 0x7f070437
+.field public static final exo_styled_progress_bar_height:I = 0x7f07040a
 
-.field public static final exo_styled_progress_dragged_thumb_size:I = 0x7f070438
+.field public static final exo_styled_progress_dragged_thumb_size:I = 0x7f07040b
 
-.field public static final exo_styled_progress_enabled_thumb_size:I = 0x7f070439
+.field public static final exo_styled_progress_enabled_thumb_size:I = 0x7f07040c
 
-.field public static final exo_styled_progress_layout_height:I = 0x7f07043a
+.field public static final exo_styled_progress_layout_height:I = 0x7f07040d
 
-.field public static final exo_styled_progress_margin_bottom:I = 0x7f07043b
+.field public static final exo_styled_progress_margin_bottom:I = 0x7f07040e
 
-.field public static final exo_styled_progress_touch_target_height:I = 0x7f07043c
+.field public static final exo_styled_progress_touch_target_height:I = 0x7f07040f
 
-.field public static final fastscroll_default_thickness:I = 0x7f070499
+.field public static final fastscroll_default_thickness:I = 0x7f07046c
 
-.field public static final fastscroll_margin:I = 0x7f07049a
+.field public static final fastscroll_margin:I = 0x7f07046d
 
-.field public static final fastscroll_minimum_range:I = 0x7f07049b
+.field public static final fastscroll_minimum_range:I = 0x7f07046e
 
-.field public static final item_touch_helper_max_drag_scroll_per_frame:I = 0x7f07057f
+.field public static final item_touch_helper_max_drag_scroll_per_frame:I = 0x7f070557
 
-.field public static final item_touch_helper_swipe_escape_max_velocity:I = 0x7f070580
+.field public static final item_touch_helper_swipe_escape_max_velocity:I = 0x7f070558
 
-.field public static final item_touch_helper_swipe_escape_velocity:I = 0x7f070581
+.field public static final item_touch_helper_swipe_escape_velocity:I = 0x7f070559
 
-.field public static final notification_action_icon_size:I = 0x7f070c39
+.field public static final notification_action_icon_size:I = 0x7f0709ae
 
-.field public static final notification_action_text_size:I = 0x7f070c3a
+.field public static final notification_action_text_size:I = 0x7f0709af
 
-.field public static final notification_big_circle_margin:I = 0x7f070c3b
+.field public static final notification_big_circle_margin:I = 0x7f0709b0
 
-.field public static final notification_content_margin_start:I = 0x7f070c3c
+.field public static final notification_content_margin_start:I = 0x7f0709b1
 
-.field public static final notification_large_icon_height:I = 0x7f070c3d
+.field public static final notification_large_icon_height:I = 0x7f0709b2
 
-.field public static final notification_large_icon_width:I = 0x7f070c3e
+.field public static final notification_large_icon_width:I = 0x7f0709b3
 
-.field public static final notification_main_column_padding_top:I = 0x7f070c3f
+.field public static final notification_main_column_padding_top:I = 0x7f0709b4
 
-.field public static final notification_media_narrow_margin:I = 0x7f070c40
+.field public static final notification_media_narrow_margin:I = 0x7f0709b5
 
-.field public static final notification_right_icon_size:I = 0x7f070c41
+.field public static final notification_right_icon_size:I = 0x7f0709b6
 
-.field public static final notification_right_side_padding_top:I = 0x7f070c42
+.field public static final notification_right_side_padding_top:I = 0x7f0709b7
 
-.field public static final notification_small_icon_background_padding:I = 0x7f070c43
+.field public static final notification_small_icon_background_padding:I = 0x7f0709b8
 
-.field public static final notification_small_icon_size_as_large:I = 0x7f070c44
+.field public static final notification_small_icon_size_as_large:I = 0x7f0709b9
 
-.field public static final notification_subtext_size:I = 0x7f070c45
+.field public static final notification_subtext_size:I = 0x7f0709ba
 
-.field public static final notification_top_pad:I = 0x7f070c46
+.field public static final notification_top_pad:I = 0x7f0709bb
 
-.field public static final notification_top_pad_large_text:I = 0x7f070c47
+.field public static final notification_top_pad_large_text:I = 0x7f0709bc
 
 
 # direct methods

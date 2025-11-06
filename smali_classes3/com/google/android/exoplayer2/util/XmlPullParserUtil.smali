@@ -7,6 +7,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,6 +18,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeCount()I
 
     move-result v0
@@ -26,6 +28,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 2
     invoke-interface {p0, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeName(I)Ljava/lang/String;
 
     move-result-object v2
@@ -36,6 +39,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 3
     invoke-interface {p0, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
 
     move-result-object p0
@@ -58,6 +62,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeCount()I
 
     move-result v0
@@ -67,6 +72,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
+    .line 2
     invoke-interface {p0, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeName(I)Ljava/lang/String;
 
     move-result-object v2
@@ -81,6 +87,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 3
     invoke-interface {p0, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
 
     move-result-object p0
@@ -234,6 +241,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/XmlPullParserUtil;->isStartTag(Lorg/xmlpull/v1/XmlPullParser;)Z
 
     move-result v0
@@ -270,6 +278,7 @@
 
     const/16 v0, 0x3a
 
+    .line 1
     invoke-virtual {p0, v0}, Ljava/lang/String;->indexOf(I)I
 
     move-result v0
@@ -283,6 +292,7 @@
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
+    .line 2
     invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p0

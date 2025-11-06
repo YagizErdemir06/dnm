@@ -1,4 +1,4 @@
-.class Lmiuix/appcompat/app/AlertController$AlertParams$3;
+.class public Lmiuix/appcompat/app/AlertController$AlertParams$3;
 .super Landroid/widget/SimpleCursorAdapter;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lmiuix/appcompat/app/AlertController$AlertParams;
+.field public final synthetic this$0:Lmiuix/appcompat/app/AlertController$AlertParams;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/appcompat/app/AlertController$AlertParams;Landroid/content/Context;ILandroid/database/Cursor;[Ljava/lang/String;[I)V
     .locals 6
 
+    .line 1
     iput-object p1, p0, Lmiuix/appcompat/app/AlertController$AlertParams$3;->this$0:Lmiuix/appcompat/app/AlertController$AlertParams;
 
     move-object v0, p0
@@ -46,14 +47,27 @@
 .method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 0
 
-    invoke-super {p0, p1, p2, p3}, Landroid/widget/CursorAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    .line 1
+    invoke-super {p0, p1, p2, p3}, Landroid/widget/SimpleCursorAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p0
 
     if-nez p2, :cond_0
 
-    invoke-static {p0}, Lnq/d;->c(Landroid/view/View;)V
+    .line 2
+    invoke-static {p0}, Lk/l/c/c;->a(Landroid/view/View;)V
 
     :cond_0
+    const p1, 0x1020014
+
+    .line 3
+    invoke-virtual {p0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/TextView;
+
+    invoke-static {p1}, Lk/b/e/d/e;->b(Landroid/widget/TextView;)V
+
     return-object p0
 .end method

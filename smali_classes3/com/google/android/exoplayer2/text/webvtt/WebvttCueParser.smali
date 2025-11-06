@@ -42,7 +42,7 @@
     .end annotation
 .end field
 
-.field static final DEFAULT_POSITION:F = 0.5f
+.field public static final DEFAULT_POSITION:F = 0.5f
 
 .field private static final DEFAULT_TEXT_COLORS:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
@@ -102,6 +102,7 @@
 
     const-string v0, "^(\\S+)\\s+-->\\s+(\\S+)(.*)?$"
 
+    .line 1
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -110,18 +111,21 @@
 
     const-string v0, "(\\S+?):(\\S+)"
 
+    .line 2
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser;->CUE_SETTING_PATTERN:Ljava/util/regex/Pattern;
 
+    .line 3
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const/16 v1, 0xff
 
+    .line 4
     invoke-static {v1, v1, v1}, Landroid/graphics/Color;->rgb(III)I
 
     move-result v2
@@ -136,6 +140,7 @@
 
     const/4 v2, 0x0
 
+    .line 5
     invoke-static {v2, v1, v2}, Landroid/graphics/Color;->rgb(III)I
 
     move-result v3
@@ -148,6 +153,7 @@
 
     invoke-interface {v0, v4, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 6
     invoke-static {v2, v1, v1}, Landroid/graphics/Color;->rgb(III)I
 
     move-result v3
@@ -160,6 +166,7 @@
 
     invoke-interface {v0, v4, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 7
     invoke-static {v1, v2, v2}, Landroid/graphics/Color;->rgb(III)I
 
     move-result v3
@@ -172,6 +179,7 @@
 
     invoke-interface {v0, v4, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 8
     invoke-static {v1, v1, v2}, Landroid/graphics/Color;->rgb(III)I
 
     move-result v3
@@ -184,6 +192,7 @@
 
     invoke-interface {v0, v4, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 9
     invoke-static {v1, v2, v1}, Landroid/graphics/Color;->rgb(III)I
 
     move-result v3
@@ -196,6 +205,7 @@
 
     invoke-interface {v0, v4, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 10
     invoke-static {v2, v2, v1}, Landroid/graphics/Color;->rgb(III)I
 
     move-result v3
@@ -208,6 +218,7 @@
 
     invoke-interface {v0, v4, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 11
     invoke-static {v2, v2, v2}, Landroid/graphics/Color;->rgb(III)I
 
     move-result v3
@@ -220,16 +231,19 @@
 
     invoke-interface {v0, v4, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 12
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser;->DEFAULT_TEXT_COLORS:Ljava/util/Map;
 
+    .line 13
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
+    .line 14
     invoke-static {v1, v1, v1}, Landroid/graphics/Color;->rgb(III)I
 
     move-result v3
@@ -242,6 +256,7 @@
 
     invoke-interface {v0, v4, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 15
     invoke-static {v2, v1, v2}, Landroid/graphics/Color;->rgb(III)I
 
     move-result v3
@@ -254,6 +269,7 @@
 
     invoke-interface {v0, v4, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 16
     invoke-static {v2, v1, v1}, Landroid/graphics/Color;->rgb(III)I
 
     move-result v3
@@ -266,6 +282,7 @@
 
     invoke-interface {v0, v4, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 17
     invoke-static {v1, v2, v2}, Landroid/graphics/Color;->rgb(III)I
 
     move-result v3
@@ -278,6 +295,7 @@
 
     invoke-interface {v0, v4, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 18
     invoke-static {v1, v1, v2}, Landroid/graphics/Color;->rgb(III)I
 
     move-result v3
@@ -290,6 +308,7 @@
 
     invoke-interface {v0, v4, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 19
     invoke-static {v1, v2, v1}, Landroid/graphics/Color;->rgb(III)I
 
     move-result v3
@@ -302,6 +321,7 @@
 
     invoke-interface {v0, v4, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 20
     invoke-static {v2, v2, v1}, Landroid/graphics/Color;->rgb(III)I
 
     move-result v1
@@ -314,6 +334,7 @@
 
     invoke-interface {v0, v3, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 21
     invoke-static {v2, v2, v2}, Landroid/graphics/Color;->rgb(III)I
 
     move-result v1
@@ -326,6 +347,7 @@
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 22
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
@@ -338,6 +360,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -355,6 +378,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -373,6 +397,7 @@
 
     check-cast v0, Ljava/lang/String;
 
+    .line 2
     sget-object v1, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser;->DEFAULT_TEXT_COLORS:Ljava/util/Map;
 
     invoke-interface {v1, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -383,6 +408,7 @@
 
     if-eqz v2, :cond_1
 
+    .line 3
     invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -393,6 +419,7 @@
 
     move-result v0
 
+    .line 4
     new-instance v1, Landroid/text/style/ForegroundColorSpan;
 
     invoke-direct {v1, v0}, Landroid/text/style/ForegroundColorSpan;-><init>(I)V
@@ -401,6 +428,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     sget-object v1, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser;->DEFAULT_BACKGROUND_COLORS:Ljava/util/Map;
 
@@ -410,6 +438,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 6
     invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -420,6 +449,7 @@
 
     move-result v0
 
+    .line 7
     new-instance v1, Landroid/text/style/BackgroundColorSpan;
 
     invoke-direct {v1, v0}, Landroid/text/style/BackgroundColorSpan;-><init>(I)V
@@ -435,6 +465,7 @@
 .method private static applyEntity(Ljava/lang/String;Landroid/text/SpannableStringBuilder;)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -512,6 +543,7 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
+    .line 2
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -539,6 +571,7 @@
     :pswitch_0
     const/16 p0, 0x20
 
+    .line 3
     invoke-virtual {p1, p0}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
 
     goto :goto_1
@@ -546,6 +579,7 @@
     :pswitch_1
     const/16 p0, 0x26
 
+    .line 4
     invoke-virtual {p1, p0}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
 
     goto :goto_1
@@ -553,6 +587,7 @@
     :pswitch_2
     const/16 p0, 0x3c
 
+    .line 5
     invoke-virtual {p1, p0}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
 
     goto :goto_1
@@ -560,6 +595,7 @@
     :pswitch_3
     const/16 p0, 0x3e
 
+    .line 6
     invoke-virtual {p1, p0}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
 
     :goto_1
@@ -603,10 +639,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p4, p1, p2}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser;->getRubyPosition(Ljava/util/List;Ljava/lang/String;Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$StartTag;)I
 
     move-result v0
 
+    .line 2
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-interface {p3}, Ljava/util/List;->size()I
@@ -615,20 +653,24 @@
 
     invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
 
+    .line 3
     invoke-interface {v1, p3}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
+    .line 4
     invoke-static {}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$Element;->access$100()Ljava/util/Comparator;
 
     move-result-object p3
 
     invoke-static {v1, p3}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
+    .line 5
     iget p2, p2, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$StartTag;->position:I
 
     const/4 p3, 0x0
 
     move v2, p3
 
+    .line 6
     :goto_0
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -636,6 +678,7 @@
 
     if-ge p3, v3, :cond_1
 
+    .line 7
     invoke-interface {v1, p3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -658,6 +701,7 @@
 
     goto :goto_1
 
+    .line 8
     :cond_0
     invoke-interface {v1, p3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -665,6 +709,7 @@
 
     check-cast v3, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$Element;
 
+    .line 9
     invoke-static {v3}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$Element;->access$200(Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$Element;)Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$StartTag;
 
     move-result-object v4
@@ -675,10 +720,12 @@
 
     const/4 v5, 0x1
 
+    .line 10
     invoke-static {v4, v0, v5}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser;->firstKnownRubyPosition(III)I
 
     move-result v4
 
+    .line 11
     invoke-static {v3}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$Element;->access$200(Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$Element;)Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$StartTag;
 
     move-result-object v5
@@ -687,20 +734,25 @@
 
     sub-int/2addr v5, v2
 
+    .line 12
     invoke-static {v3}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$Element;->access$300(Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$Element;)I
 
     move-result v3
 
     sub-int/2addr v3, v2
 
+    .line 13
     invoke-virtual {p0, v5, v3}, Landroid/text/SpannableStringBuilder;->subSequence(II)Ljava/lang/CharSequence;
 
     move-result-object v6
 
+    .line 14
     invoke-virtual {p0, v5, v3}, Landroid/text/SpannableStringBuilder;->delete(II)Landroid/text/SpannableStringBuilder;
 
+    .line 15
     new-instance v3, Lcom/google/android/exoplayer2/text/span/RubySpan;
 
+    .line 16
     invoke-interface {v6}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v7
@@ -709,8 +761,10 @@
 
     const/16 v4, 0x21
 
+    .line 17
     invoke-virtual {p0, v3, p2, v5, v4}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
+    .line 18
     invoke-interface {v6}, Ljava/lang/CharSequence;->length()I
 
     move-result p2
@@ -749,12 +803,15 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p1, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$StartTag;->position:I
 
+    .line 2
     invoke-virtual {p3}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v1
 
+    .line 3
     iget-object v2, p1, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$StartTag;->name:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
@@ -908,11 +965,13 @@
 
     return-void
 
+    .line 4
     :pswitch_0
     invoke-static {p3, p0, p1, p2, p4}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser;->applyRubySpans(Landroid/text/SpannableStringBuilder;Ljava/lang/String;Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$StartTag;Ljava/util/List;Ljava/util/List;)V
 
     goto :goto_1
 
+    .line 5
     :pswitch_1
     new-instance p2, Landroid/text/style/UnderlineSpan;
 
@@ -922,6 +981,7 @@
 
     goto :goto_1
 
+    .line 6
     :pswitch_2
     new-instance p2, Landroid/text/style/StyleSpan;
 
@@ -931,6 +991,7 @@
 
     goto :goto_1
 
+    .line 7
     :pswitch_3
     iget-object p2, p1, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$StartTag;->classes:Ljava/util/Set;
 
@@ -938,6 +999,7 @@
 
     goto :goto_1
 
+    .line 8
     :pswitch_4
     new-instance p2, Landroid/text/style/StyleSpan;
 
@@ -945,12 +1007,14 @@
 
     invoke-virtual {p3, p2, v0, v1, v2}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
+    .line 9
     :goto_1
     :pswitch_5
     invoke-static {p4, p0, p1}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser;->getApplicableStyles(Ljava/util/List;Ljava/lang/String;Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$StartTag;)Ljava/util/List;
 
     move-result-object p0
 
+    .line 10
     :goto_2
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -958,6 +1022,7 @@
 
     if-ge v5, p1, :cond_8
 
+    .line 11
     invoke-interface {p0, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -1007,6 +1072,7 @@
 
     return-void
 
+    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->getStyle()I
 
@@ -1018,16 +1084,20 @@
 
     if-eq v0, v1, :cond_1
 
+    .line 2
     new-instance v0, Landroid/text/style/StyleSpan;
 
+    .line 3
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->getStyle()I
 
     move-result v1
 
     invoke-direct {v0, v1}, Landroid/text/style/StyleSpan;-><init>(I)V
 
+    .line 4
     invoke-static {p0, v0, p2, p3, v2}, Lcom/google/android/exoplayer2/text/span/SpanUtil;->addOrReplaceSpan(Landroid/text/Spannable;Ljava/lang/Object;III)V
 
+    .line 5
     :cond_1
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->isLinethrough()Z
 
@@ -1035,12 +1105,14 @@
 
     if-eqz v0, :cond_2
 
+    .line 6
     new-instance v0, Landroid/text/style/StrikethroughSpan;
 
     invoke-direct {v0}, Landroid/text/style/StrikethroughSpan;-><init>()V
 
     invoke-virtual {p0, v0, p2, p3, v2}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
+    .line 7
     :cond_2
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->isUnderline()Z
 
@@ -1048,12 +1120,14 @@
 
     if-eqz v0, :cond_3
 
+    .line 8
     new-instance v0, Landroid/text/style/UnderlineSpan;
 
     invoke-direct {v0}, Landroid/text/style/UnderlineSpan;-><init>()V
 
     invoke-virtual {p0, v0, p2, p3, v2}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
+    .line 9
     :cond_3
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->hasFontColor()Z
 
@@ -1061,16 +1135,20 @@
 
     if-eqz v0, :cond_4
 
+    .line 10
     new-instance v0, Landroid/text/style/ForegroundColorSpan;
 
+    .line 11
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->getFontColor()I
 
     move-result v1
 
     invoke-direct {v0, v1}, Landroid/text/style/ForegroundColorSpan;-><init>(I)V
 
+    .line 12
     invoke-static {p0, v0, p2, p3, v2}, Lcom/google/android/exoplayer2/text/span/SpanUtil;->addOrReplaceSpan(Landroid/text/Spannable;Ljava/lang/Object;III)V
 
+    .line 13
     :cond_4
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->hasBackgroundColor()Z
 
@@ -1078,16 +1156,20 @@
 
     if-eqz v0, :cond_5
 
+    .line 14
     new-instance v0, Landroid/text/style/BackgroundColorSpan;
 
+    .line 15
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->getBackgroundColor()I
 
     move-result v1
 
     invoke-direct {v0, v1}, Landroid/text/style/BackgroundColorSpan;-><init>(I)V
 
+    .line 16
     invoke-static {p0, v0, p2, p3, v2}, Lcom/google/android/exoplayer2/text/span/SpanUtil;->addOrReplaceSpan(Landroid/text/Spannable;Ljava/lang/Object;III)V
 
+    .line 17
     :cond_5
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->getFontFamily()Ljava/lang/String;
 
@@ -1095,16 +1177,20 @@
 
     if-eqz v0, :cond_6
 
+    .line 18
     new-instance v0, Landroid/text/style/TypefaceSpan;
 
+    .line 19
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->getFontFamily()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Landroid/text/style/TypefaceSpan;-><init>(Ljava/lang/String;)V
 
+    .line 20
     invoke-static {p0, v0, p2, p3, v2}, Lcom/google/android/exoplayer2/text/span/SpanUtil;->addOrReplaceSpan(Landroid/text/Spannable;Ljava/lang/Object;III)V
 
+    .line 21
     :cond_6
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->getFontSizeUnit()I
 
@@ -1124,9 +1210,11 @@
 
     goto :goto_0
 
+    .line 22
     :cond_7
     new-instance v0, Landroid/text/style/RelativeSizeSpan;
 
+    .line 23
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->getFontSize()F
 
     move-result v1
@@ -1137,26 +1225,32 @@
 
     invoke-direct {v0, v1}, Landroid/text/style/RelativeSizeSpan;-><init>(F)V
 
+    .line 24
     invoke-static {p0, v0, p2, p3, v2}, Lcom/google/android/exoplayer2/text/span/SpanUtil;->addOrReplaceSpan(Landroid/text/Spannable;Ljava/lang/Object;III)V
 
     goto :goto_0
 
+    .line 25
     :cond_8
     new-instance v0, Landroid/text/style/RelativeSizeSpan;
 
+    .line 26
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->getFontSize()F
 
     move-result v1
 
     invoke-direct {v0, v1}, Landroid/text/style/RelativeSizeSpan;-><init>(F)V
 
+    .line 27
     invoke-static {p0, v0, p2, p3, v2}, Lcom/google/android/exoplayer2/text/span/SpanUtil;->addOrReplaceSpan(Landroid/text/Spannable;Ljava/lang/Object;III)V
 
     goto :goto_0
 
+    .line 28
     :cond_9
     new-instance v0, Landroid/text/style/AbsoluteSizeSpan;
 
+    .line 29
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->getFontSize()F
 
     move-result v3
@@ -1165,8 +1259,10 @@
 
     invoke-direct {v0, v3, v1}, Landroid/text/style/AbsoluteSizeSpan;-><init>(IZ)V
 
+    .line 30
     invoke-static {p0, v0, p2, p3, v2}, Lcom/google/android/exoplayer2/text/span/SpanUtil;->addOrReplaceSpan(Landroid/text/Spannable;Ljava/lang/Object;III)V
 
+    .line 31
     :goto_0
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->getCombineUpright()Z
 
@@ -1174,6 +1270,7 @@
 
     if-eqz p1, :cond_a
 
+    .line 32
     new-instance p1, Lcom/google/android/exoplayer2/text/span/HorizontalTextInVerticalContextSpan;
 
     invoke-direct {p1}, Lcom/google/android/exoplayer2/text/span/HorizontalTextInVerticalContextSpan;-><init>()V
@@ -1189,6 +1286,7 @@
 
     const/16 v0, 0x3e
 
+    .line 1
     invoke-virtual {p0, v0, p1}, Ljava/lang/String;->indexOf(II)I
 
     move-result p1
@@ -1197,6 +1295,7 @@
 
     if-ne p1, v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result p0
@@ -1229,6 +1328,7 @@
 
     return p2
 
+    .line 1
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1258,12 +1358,14 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v1, 0x0
 
+    .line 2
     :goto_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -1271,12 +1373,14 @@
 
     if-ge v1, v2, :cond_1
 
+    .line 3
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;
 
+    .line 4
     iget-object v3, p2, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$StartTag;->name:Ljava/lang/String;
 
     iget-object v4, p2, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$StartTag;->classes:Ljava/util/Set;
@@ -1289,6 +1393,7 @@
 
     if-lez v3, :cond_0
 
+    .line 5
     new-instance v4, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$StyleMatch;
 
     invoke-direct {v4, v3, v2}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$StyleMatch;-><init>(ILcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;)V
@@ -1300,6 +1405,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_1
     invoke-static {v0}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
@@ -1324,12 +1430,14 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser;->getApplicableStyles(Ljava/util/List;Ljava/lang/String;Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$StartTag;)Ljava/util/List;
 
     move-result-object p0
 
     const/4 p1, 0x0
 
+    .line 2
     :goto_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -1339,6 +1447,7 @@
 
     if-ge p1, p2, :cond_1
 
+    .line 3
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p2
@@ -1347,12 +1456,14 @@
 
     iget-object p2, p2, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$StyleMatch;->style:Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;
 
+    .line 4
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->getRubyPosition()I
 
     move-result v1
 
     if-eq v1, v0, :cond_0
 
+    .line 5
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;->getRubyPosition()I
 
     move-result p0
@@ -1371,10 +1482,12 @@
 .method private static getTagName(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object p0
 
+    .line 2
     invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
@@ -1385,6 +1498,7 @@
 
     const-string v0, "[ \\.]"
 
+    .line 3
     invoke-static {p0, v0}, Lcom/google/android/exoplayer2/util/Util;->splitAtFirst(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
@@ -1399,6 +1513,7 @@
 .method private static isSupportedTag(Ljava/lang/String;)Z
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -1579,12 +1694,15 @@
 .method public static newCueForText(Ljava/lang/CharSequence;)Lcom/google/android/exoplayer2/text/Cue;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;-><init>()V
 
+    .line 2
     iput-object p0, v0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;->text:Ljava/lang/CharSequence;
 
+    .line 3
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;->toCueBuilder()Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     move-result-object p0
@@ -2085,14 +2203,17 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Landroid/text/SpannableStringBuilder;
 
     invoke-direct {v0}, Landroid/text/SpannableStringBuilder;-><init>()V
 
+    .line 2
     new-instance v1, Ljava/util/ArrayDeque;
 
     invoke-direct {v1}, Ljava/util/ArrayDeque;-><init>()V
 
+    .line 3
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
@@ -2101,6 +2222,7 @@
 
     move v4, v3
 
+    .line 4
     :goto_0
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -2108,6 +2230,7 @@
 
     if-ge v4, v5, :cond_12
 
+    .line 5
     invoke-virtual {p1, v4}, Ljava/lang/String;->charAt(I)C
 
     move-result v5
@@ -2120,6 +2243,7 @@
 
     if-eq v5, v6, :cond_0
 
+    .line 6
     invoke-virtual {v0, v5}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
 
     add-int/lit8 v4, v4, 0x1
@@ -2129,6 +2253,7 @@
     :cond_0
     add-int/lit8 v5, v4, 0x1
 
+    .line 7
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v6
@@ -2137,6 +2262,7 @@
 
     goto :goto_4
 
+    .line 8
     :cond_1
     invoke-virtual {p1, v5}, Ljava/lang/String;->charAt(I)C
 
@@ -2155,6 +2281,7 @@
     :cond_2
     move v6, v3
 
+    .line 9
     :goto_1
     invoke-static {p1, v5}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser;->findEndOfTag(Ljava/lang/String;I)I
 
@@ -2162,6 +2289,7 @@
 
     add-int/lit8 v9, v5, -0x2
 
+    .line 10
     invoke-virtual {p1, v9}, Ljava/lang/String;->charAt(I)C
 
     move-result v10
@@ -2190,11 +2318,13 @@
     :cond_5
     add-int/lit8 v9, v5, -0x1
 
+    .line 11
     :goto_3
     invoke-virtual {p1, v4, v9}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v4
 
+    .line 12
     invoke-virtual {v4}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v8
@@ -2207,11 +2337,13 @@
 
     goto :goto_4
 
+    .line 13
     :cond_6
     invoke-static {v4}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser;->getTagName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
+    .line 14
     invoke-static {v8}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser;->isSupportedTag(Ljava/lang/String;)Z
 
     move-result v9
@@ -2227,6 +2359,7 @@
     :cond_8
     if-eqz v6, :cond_c
 
+    .line 15
     :cond_9
     invoke-virtual {v1}, Ljava/util/ArrayDeque;->isEmpty()Z
 
@@ -2236,6 +2369,7 @@
 
     goto :goto_4
 
+    .line 16
     :cond_a
     invoke-virtual {v1}, Ljava/util/ArrayDeque;->pop()Ljava/lang/Object;
 
@@ -2243,14 +2377,17 @@
 
     check-cast v4, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$StartTag;
 
+    .line 17
     invoke-static {p0, v4, v2, v0, p2}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser;->applySpansForTag(Ljava/lang/String;Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$StartTag;Ljava/util/List;Landroid/text/SpannableStringBuilder;Ljava/util/List;)V
 
+    .line 18
     invoke-virtual {v1}, Ljava/util/ArrayDeque;->isEmpty()Z
 
     move-result v6
 
     if-nez v6, :cond_b
 
+    .line 19
     new-instance v6, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$Element;
 
     invoke-virtual {v0}, Landroid/text/SpannableStringBuilder;->length()I
@@ -2265,9 +2402,11 @@
 
     goto :goto_5
 
+    .line 20
     :cond_b
     invoke-interface {v2}, Ljava/util/List;->clear()V
 
+    .line 21
     :goto_5
     iget-object v4, v4, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$StartTag;->name:Ljava/lang/String;
 
@@ -2282,6 +2421,7 @@
     :cond_c
     if-nez v7, :cond_7
 
+    .line 22
     invoke-virtual {v0}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v6
@@ -2295,16 +2435,18 @@
     goto :goto_4
 
     :cond_d
-    add-int/lit8 v4, v4, 0x1
-
     const/16 v6, 0x3b
 
+    add-int/lit8 v4, v4, 0x1
+
+    .line 23
     invoke-virtual {p1, v6, v4}, Ljava/lang/String;->indexOf(II)I
 
     move-result v6
 
     const/16 v7, 0x20
 
+    .line 24
     invoke-virtual {p1, v7, v4}, Ljava/lang/String;->indexOf(II)I
 
     move-result v7
@@ -2322,6 +2464,7 @@
 
     goto :goto_6
 
+    .line 25
     :cond_f
     invoke-static {v6, v7}, Ljava/lang/Math;->min(II)I
 
@@ -2330,6 +2473,7 @@
     :goto_6
     if-eq v6, v8, :cond_11
 
+    .line 26
     invoke-virtual {p1, v4, v6}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v4
@@ -2340,6 +2484,7 @@
 
     const-string v4, " "
 
+    .line 27
     invoke-virtual {v0, v4}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
     :cond_10
@@ -2349,11 +2494,13 @@
 
     goto/16 :goto_0
 
+    .line 28
     :cond_11
     invoke-virtual {v0, v5}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
 
     goto/16 :goto_0
 
+    .line 29
     :cond_12
     :goto_7
     invoke-virtual {v1}, Ljava/util/ArrayDeque;->isEmpty()Z
@@ -2362,6 +2509,7 @@
 
     if-nez p1, :cond_13
 
+    .line 30
     invoke-virtual {v1}, Ljava/util/ArrayDeque;->pop()Ljava/lang/Object;
 
     move-result-object p1
@@ -2372,17 +2520,21 @@
 
     goto :goto_7
 
+    .line 31
     :cond_13
     invoke-static {}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$StartTag;->buildWholeCueVirtualTag()Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$StartTag;
 
     move-result-object p1
 
+    .line 32
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v1
 
+    .line 33
     invoke-static {p0, p1, v1, v0, p2}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser;->applySpansForTag(Ljava/lang/String;Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$StartTag;Ljava/util/List;Landroid/text/SpannableStringBuilder;Ljava/util/List;)V
 
+    .line 34
     invoke-static {v0}, Landroid/text/SpannedString;->valueOf(Ljava/lang/CharSequence;)Landroid/text/SpannedString;
 
     move-result-object p0
@@ -2393,6 +2545,7 @@
 .method private static parseLineAnchor(Ljava/lang/String;)I
     .locals 5
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -2476,6 +2629,7 @@
     :goto_0
     packed-switch v4, :pswitch_data_0
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2531,51 +2685,58 @@
 
     const/16 v0, 0x2c
 
+    .line 1
     invoke-virtual {p0, v0}, Ljava/lang/String;->indexOf(I)I
 
     move-result v0
 
-    const/4 v1, -0x1
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const/4 v2, -0x1
 
-    if-eq v0, v1, :cond_0
+    if-eq v0, v2, :cond_0
 
-    add-int/lit8 v1, v0, 0x1
+    add-int/lit8 v2, v0, 0x1
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    .line 2
+    invoke-virtual {p0, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-static {v1}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser;->parseLineAnchor(Ljava/lang/String;)I
+    invoke-static {v2}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser;->parseLineAnchor(Ljava/lang/String;)I
 
-    move-result v1
+    move-result v2
 
-    iput v1, p1, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;->lineAnchor:I
+    iput v2, p1, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;->lineAnchor:I
 
-    invoke-virtual {p0, v2, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    .line 3
+    invoke-virtual {p0, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0
 
     :cond_0
     const-string v0, "%"
 
+    .line 4
     invoke-virtual {p0, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 5
     invoke-static {p0}, Lcom/google/android/exoplayer2/text/webvtt/WebvttParserUtil;->parsePercentage(Ljava/lang/String;)F
 
     move-result p0
 
     iput p0, p1, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;->line:F
 
-    iput v2, p1, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;->lineType:I
+    .line 6
+    iput v1, p1, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;->lineType:I
 
     goto :goto_0
 
+    .line 7
     :cond_1
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -2587,6 +2748,7 @@
 
     const/4 p0, 0x1
 
+    .line 8
     iput p0, p1, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;->lineType:I
 
     :goto_0
@@ -2596,6 +2758,7 @@
 .method private static parsePositionAnchor(Ljava/lang/String;)I
     .locals 5
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -2711,6 +2874,7 @@
     :goto_0
     packed-switch v4, :pswitch_data_0
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2770,6 +2934,7 @@
 
     const/16 v0, 0x2c
 
+    .line 1
     invoke-virtual {p0, v0}, Ljava/lang/String;->indexOf(I)I
 
     move-result v0
@@ -2780,6 +2945,7 @@
 
     add-int/lit8 v1, v0, 0x1
 
+    .line 2
     invoke-virtual {p0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v1
@@ -2792,10 +2958,12 @@
 
     const/4 v1, 0x0
 
+    .line 3
     invoke-virtual {p0, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 4
     :cond_0
     invoke-static {p0}, Lcom/google/android/exoplayer2/text/webvtt/WebvttParserUtil;->parsePercentage(Ljava/lang/String;)F
 
@@ -2809,6 +2977,7 @@
 .method private static parseTextAlignment(Ljava/lang/String;)I
     .locals 7
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -2928,6 +3097,7 @@
     :goto_0
     packed-switch v6, :pswitch_data_0
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2989,6 +3159,7 @@
 .method private static parseVerticalAttribute(Ljava/lang/String;)I
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     const-string v0, "lr"
@@ -3007,6 +3178,7 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

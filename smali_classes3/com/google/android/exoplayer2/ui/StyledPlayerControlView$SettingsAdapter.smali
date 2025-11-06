@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/ui/StyledPlayerControlView$SettingsAdapter;
+.class public Lcom/google/android/exoplayer2/ui/StyledPlayerControlView$SettingsAdapter;
 .super Landroidx/recyclerview/widget/RecyclerView$Adapter;
 .source "SourceFile"
 
@@ -29,25 +29,29 @@
 
 .field private final subTexts:[Ljava/lang/String;
 
-.field final synthetic this$0:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
+.field public final synthetic this$0:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;[Ljava/lang/String;[Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView$SettingsAdapter;->this$0:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
 
+    .line 2
     iput-object p2, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView$SettingsAdapter;->mainTexts:[Ljava/lang/String;
 
+    .line 3
     array-length p1, p2
 
     new-array p1, p1, [Ljava/lang/String;
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView$SettingsAdapter;->subTexts:[Ljava/lang/String;
 
+    .line 4
     iput-object p3, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView$SettingsAdapter;->iconIds:[Landroid/graphics/drawable/Drawable;
 
     return-void
@@ -58,6 +62,7 @@
 .method public getItemCount()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView$SettingsAdapter;->mainTexts:[Ljava/lang/String;
 
     array-length p0, p0
@@ -112,7 +117,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto :goto_0
 
@@ -179,7 +184,7 @@
     iget-object p2, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView$SettingsAdapter;->this$0:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     .line 3
-    invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p2}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object p2
 
@@ -209,6 +214,7 @@
 .method public setSubTextAtPosition(ILjava/lang/String;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView$SettingsAdapter;->subTexts:[Ljava/lang/String;
 
     aput-object p2, p0, p1

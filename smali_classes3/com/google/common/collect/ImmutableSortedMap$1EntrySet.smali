@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ImmutableSortedMap$1EntrySet;
+.class public Lcom/google/common/collect/ImmutableSortedMap$1EntrySet;
 .super Lcom/google/common/collect/ImmutableMapEntrySet;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/ImmutableSortedMap;
+.field public final synthetic this$0:Lcom/google/common/collect/ImmutableSortedMap;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/ImmutableSortedMap;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/ImmutableSortedMap$1EntrySet;->this$0:Lcom/google/common/collect/ImmutableSortedMap;
 
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableMapEntrySet;-><init>()V
@@ -49,6 +50,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ImmutableSortedMap$1EntrySet$1;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/ImmutableSortedMap$1EntrySet$1;-><init>(Lcom/google/common/collect/ImmutableSortedMap$1EntrySet;)V
@@ -100,6 +102,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableSortedMap$1EntrySet;->this$0:Lcom/google/common/collect/ImmutableSortedMap;
 
     return-object p0

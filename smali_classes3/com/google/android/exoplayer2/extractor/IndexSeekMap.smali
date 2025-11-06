@@ -20,8 +20,10 @@
 .method public constructor <init>([J[JJ)V
     .locals 8
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     array-length v0, p1
 
     array-length v1, p2
@@ -42,6 +44,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 3
     array-length v0, p2
 
     if-lez v0, :cond_1
@@ -53,11 +56,13 @@
     :cond_1
     move v1, v3
 
+    .line 4
     :goto_1
     iput-boolean v1, p0, Lcom/google/android/exoplayer2/extractor/IndexSeekMap;->isSeekable:Z
 
     if-eqz v1, :cond_2
 
+    .line 5
     aget-wide v4, p2, v3
 
     const-wide/16 v6, 0x0
@@ -68,25 +73,32 @@
 
     add-int/lit8 v1, v0, 0x1
 
+    .line 6
     new-array v4, v1, [J
 
     iput-object v4, p0, Lcom/google/android/exoplayer2/extractor/IndexSeekMap;->positions:[J
 
+    .line 7
     new-array v1, v1, [J
 
     iput-object v1, p0, Lcom/google/android/exoplayer2/extractor/IndexSeekMap;->timesUs:[J
 
+    .line 8
     invoke-static {p1, v3, v4, v2, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 9
     invoke-static {p2, v3, v1, v2, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     goto :goto_2
 
+    .line 10
     :cond_2
     iput-object p1, p0, Lcom/google/android/exoplayer2/extractor/IndexSeekMap;->positions:[J
 
+    .line 11
     iput-object p2, p0, Lcom/google/android/exoplayer2/extractor/IndexSeekMap;->timesUs:[J
 
+    .line 12
     :goto_2
     iput-wide p3, p0, Lcom/google/android/exoplayer2/extractor/IndexSeekMap;->durationUs:J
 
@@ -98,6 +110,7 @@
 .method public getDurationUs()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/extractor/IndexSeekMap;->durationUs:J
 
     return-wide v0
@@ -106,10 +119,12 @@
 .method public getSeekPoints(J)Lcom/google/android/exoplayer2/extractor/SeekMap$SeekPoints;
     .locals 7
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/extractor/IndexSeekMap;->isSeekable:Z
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance p0, Lcom/google/android/exoplayer2/extractor/SeekMap$SeekPoints;
 
     sget-object p1, Lcom/google/android/exoplayer2/extractor/SeekPoint;->START:Lcom/google/android/exoplayer2/extractor/SeekPoint;
@@ -118,15 +133,18 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/IndexSeekMap;->timesUs:[J
 
     const/4 v1, 0x1
 
+    .line 4
     invoke-static {v0, p1, p2, v1, v1}, Lcom/google/android/exoplayer2/util/Util;->binarySearchFloor([JJZZ)I
 
     move-result v0
 
+    .line 5
     new-instance v2, Lcom/google/android/exoplayer2/extractor/SeekPoint;
 
     iget-object v3, p0, Lcom/google/android/exoplayer2/extractor/IndexSeekMap;->timesUs:[J
@@ -139,6 +157,7 @@
 
     invoke-direct {v2, v3, v4, v5, v6}, Lcom/google/android/exoplayer2/extractor/SeekPoint;-><init>(JJ)V
 
+    .line 6
     iget-wide v3, v2, Lcom/google/android/exoplayer2/extractor/SeekPoint;->timeUs:J
 
     cmp-long p1, v3, p1
@@ -155,6 +174,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_1
     new-instance p1, Lcom/google/android/exoplayer2/extractor/SeekPoint;
 
@@ -170,12 +190,14 @@
 
     invoke-direct {p1, v3, v4, v0, v1}, Lcom/google/android/exoplayer2/extractor/SeekPoint;-><init>(JJ)V
 
+    .line 8
     new-instance p0, Lcom/google/android/exoplayer2/extractor/SeekMap$SeekPoints;
 
     invoke-direct {p0, v2, p1}, Lcom/google/android/exoplayer2/extractor/SeekMap$SeekPoints;-><init>(Lcom/google/android/exoplayer2/extractor/SeekPoint;Lcom/google/android/exoplayer2/extractor/SeekPoint;)V
 
     return-object p0
 
+    .line 9
     :cond_2
     :goto_0
     new-instance p0, Lcom/google/android/exoplayer2/extractor/SeekMap$SeekPoints;
@@ -188,6 +210,7 @@
 .method public isSeekable()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/extractor/IndexSeekMap;->isSeekable:Z
 
     return p0

@@ -1,4 +1,4 @@
-.class Lcom/bumptech/glide/load/engine/ActiveResources$1$1;
+.class public Lcom/bumptech/glide/load/engine/ActiveResources$1$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,15 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/bumptech/glide/load/engine/ActiveResources$1;
+.field public final synthetic this$1:Lcom/bumptech/glide/load/engine/ActiveResources$1;
 
-.field final synthetic val$r:Ljava/lang/Runnable;
+.field public final synthetic val$r:Ljava/lang/Runnable;
 
 
 # direct methods
 .method public constructor <init>(Lcom/bumptech/glide/load/engine/ActiveResources$1;Ljava/lang/Runnable;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/ActiveResources$1$1;->this$1:Lcom/bumptech/glide/load/engine/ActiveResources$1;
 
     iput-object p2, p0, Lcom/bumptech/glide/load/engine/ActiveResources$1$1;->val$r:Ljava/lang/Runnable;
@@ -43,8 +44,10 @@
 
     const/16 v0, 0xa
 
+    .line 1
     invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
+    .line 2
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/ActiveResources$1$1;->val$r:Ljava/lang/Runnable;
 
     invoke-interface {p0}, Ljava/lang/Runnable;->run()V

@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/hash/AbstractNonStreamingHashFunction;
+.class public abstract Lcom/google/common/hash/AbstractNonStreamingHashFunction;
 .super Lcom/google/common/hash/AbstractHashFunction;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/hash/AbstractHashFunction;-><init>()V
 
     return-void
@@ -32,7 +33,8 @@
 .method public hashBytes(Ljava/nio/ByteBuffer;)Lcom/google/common/hash/HashCode;
     .locals 1
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+    .line 1
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v0
 
@@ -59,6 +61,7 @@
 
     const/4 v0, 0x4
 
+    .line 1
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
@@ -89,6 +92,7 @@
 
     const/16 v0, 0x8
 
+    .line 1
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
@@ -117,6 +121,7 @@
 .method public hashString(Ljava/lang/CharSequence;Ljava/nio/charset/Charset;)Lcom/google/common/hash/HashCode;
     .locals 0
 
+    .line 1
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -135,12 +140,14 @@
 .method public hashUnencodedChars(Ljava/lang/CharSequence;)Lcom/google/common/hash/HashCode;
     .locals 4
 
+    .line 1
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
 
     mul-int/lit8 v1, v0, 0x2
 
+    .line 2
     invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v1
@@ -156,6 +163,7 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
+    .line 3
     invoke-interface {p1, v2}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v3
@@ -166,6 +174,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->array()[B
 

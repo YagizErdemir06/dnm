@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/extractor/mp3/XingSeeker;
+.class public final Lcom/google/android/exoplayer2/extractor/mp3/XingSeeker;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -101,10 +101,13 @@
 
     move-object/from16 v2, p4
 
+    .line 1
     iget v3, v2, Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;->samplesPerFrame:I
 
+    .line 2
     iget v4, v2, Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;->sampleRate:I
 
+    .line 3
     invoke-virtual/range {p5 .. p5}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v5
@@ -115,6 +118,7 @@
 
     if-ne v6, v7, :cond_4
 
+    .line 4
     invoke-virtual/range {p5 .. p5}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedIntToInt()I
 
     move-result v6
@@ -134,6 +138,7 @@
 
     int-to-long v11, v4
 
+    .line 5
     invoke-static/range {v7 .. v12}, Lcom/google/android/exoplayer2/util/Util;->scaleLargeTimestamp(JJJ)J
 
     move-result-wide v17
@@ -144,6 +149,7 @@
 
     if-eq v4, v3, :cond_1
 
+    .line 6
     new-instance v0, Lcom/google/android/exoplayer2/extractor/mp3/XingSeeker;
 
     iget v1, v2, Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;->frameSize:I
@@ -158,6 +164,7 @@
 
     return-object v0
 
+    .line 7
     :cond_1
     invoke-virtual/range {p5 .. p5}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedInt()J
 
@@ -172,6 +179,7 @@
     :goto_0
     if-ge v5, v3, :cond_2
 
+    .line 8
     invoke-virtual/range {p5 .. p5}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v6
@@ -197,6 +205,7 @@
 
     if-eqz v3, :cond_3
 
+    .line 9
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -221,6 +230,7 @@
 
     invoke-static {v1, v0}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 10
     :cond_3
     new-instance v0, Lcom/google/android/exoplayer2/extractor/mp3/XingSeeker;
 
@@ -248,6 +258,7 @@
 .method private getTimeUsForTableIndex(I)J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/XingSeeker;->durationUs:J
 
     int-to-long p0, p1
@@ -266,6 +277,7 @@
 .method public getDataEndPosition()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/XingSeeker;->dataEndPosition:J
 
     return-wide v0
@@ -274,6 +286,7 @@
 .method public getDurationUs()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/XingSeeker;->durationUs:J
 
     return-wide v0
@@ -282,27 +295,29 @@
 .method public getSeekPoints(J)Lcom/google/android/exoplayer2/extractor/SeekMap$SeekPoints;
     .locals 12
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/extractor/mp3/XingSeeker;->isSeekable()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance p1, Lcom/google/android/exoplayer2/extractor/SeekMap$SeekPoints;
 
     new-instance p2, Lcom/google/android/exoplayer2/extractor/SeekPoint;
 
-    iget-wide v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/XingSeeker;->dataStartPosition:J
+    const-wide/16 v0, 0x0
+
+    iget-wide v2, p0, Lcom/google/android/exoplayer2/extractor/mp3/XingSeeker;->dataStartPosition:J
 
     iget p0, p0, Lcom/google/android/exoplayer2/extractor/mp3/XingSeeker;->xingFrameSize:I
 
-    int-to-long v2, p0
+    int-to-long v4, p0
 
-    add-long/2addr v0, v2
+    add-long/2addr v2, v4
 
-    const-wide/16 v2, 0x0
-
-    invoke-direct {p2, v2, v3, v0, v1}, Lcom/google/android/exoplayer2/extractor/SeekPoint;-><init>(JJ)V
+    invoke-direct {p2, v0, v1, v2, v3}, Lcom/google/android/exoplayer2/extractor/SeekPoint;-><init>(JJ)V
 
     invoke-direct {p1, p2}, Lcom/google/android/exoplayer2/extractor/SeekMap$SeekPoints;-><init>(Lcom/google/android/exoplayer2/extractor/SeekPoint;)V
 
@@ -311,6 +326,7 @@
     :cond_0
     const-wide/16 v6, 0x0
 
+    .line 3
     iget-wide v8, p0, Lcom/google/android/exoplayer2/extractor/mp3/XingSeeker;->durationUs:J
 
     move-wide v4, p1
@@ -325,6 +341,7 @@
 
     mul-double/2addr v0, v2
 
+    .line 4
     iget-wide v4, p0, Lcom/google/android/exoplayer2/extractor/mp3/XingSeeker;->durationUs:J
 
     long-to-double v4, v4
@@ -353,6 +370,7 @@
     :cond_2
     double-to-int v2, v0
 
+    .line 5
     iget-object v3, p0, Lcom/google/android/exoplayer2/extractor/mp3/XingSeeker;->tableOfContents:[J
 
     invoke-static {v3}, Lcom/google/android/exoplayer2/util/Assertions;->checkStateNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -361,6 +379,7 @@
 
     check-cast v3, [J
 
+    .line 6
     aget-wide v4, v3, v2
 
     long-to-double v4, v4
@@ -376,6 +395,7 @@
     :cond_3
     add-int/lit8 v6, v2, 0x1
 
+    .line 7
     aget-wide v9, v3, v6
 
     long-to-double v9, v9
@@ -394,6 +414,7 @@
     :goto_1
     div-double/2addr v4, v7
 
+    .line 8
     iget-wide v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/XingSeeker;->dataSize:J
 
     long-to-double v0, v0
@@ -404,6 +425,7 @@
 
     move-result-wide v6
 
+    .line 9
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/XingSeeker;->xingFrameSize:I
 
     int-to-long v8, v0
@@ -418,6 +440,7 @@
 
     move-result-wide v0
 
+    .line 10
     new-instance v2, Lcom/google/android/exoplayer2/extractor/SeekMap$SeekPoints;
 
     new-instance v3, Lcom/google/android/exoplayer2/extractor/SeekPoint;
@@ -436,10 +459,12 @@
 .method public getTimeUs(J)J
     .locals 11
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/XingSeeker;->dataStartPosition:J
 
     sub-long/2addr p1, v0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/extractor/mp3/XingSeeker;->isSeekable()Z
 
     move-result v0
@@ -456,6 +481,7 @@
 
     goto :goto_2
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/XingSeeker;->tableOfContents:[J
 
@@ -471,6 +497,7 @@
 
     mul-double/2addr p1, v1
 
+    .line 4
     iget-wide v1, p0, Lcom/google/android/exoplayer2/extractor/mp3/XingSeeker;->dataSize:J
 
     long-to-double v1, v1
@@ -481,18 +508,22 @@
 
     const/4 v3, 0x1
 
+    .line 5
     invoke-static {v0, v1, v2, v3, v3}, Lcom/google/android/exoplayer2/util/Util;->binarySearchFloor([JJZZ)I
 
     move-result v1
 
+    .line 6
     invoke-direct {p0, v1}, Lcom/google/android/exoplayer2/extractor/mp3/XingSeeker;->getTimeUsForTableIndex(I)J
 
     move-result-wide v2
 
+    .line 7
     aget-wide v4, v0, v1
 
     add-int/lit8 v6, v1, 0x1
 
+    .line 8
     invoke-direct {p0, v6}, Lcom/google/android/exoplayer2/extractor/mp3/XingSeeker;->getTimeUsForTableIndex(I)J
 
     move-result-wide v7
@@ -505,6 +536,7 @@
 
     goto :goto_0
 
+    .line 9
     :cond_1
     aget-wide v0, v0, v6
 
@@ -535,6 +567,7 @@
 
     mul-double/2addr p0, v0
 
+    .line 10
     invoke-static {p0, p1}, Ljava/lang/Math;->round(D)J
 
     move-result-wide p0
@@ -553,6 +586,7 @@
 .method public isSeekable()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/mp3/XingSeeker;->tableOfContents:[J
 
     if-eqz p0, :cond_0

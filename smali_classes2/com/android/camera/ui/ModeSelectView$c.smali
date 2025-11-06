@@ -15,5 +15,15 @@
 
 
 # virtual methods
-.method public abstract w0(ILjava/lang/String;)V
+.method public abstract f0(ILjava/lang/String;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "mode",
+            "modeName"
+        }
+    .end annotation
 .end method

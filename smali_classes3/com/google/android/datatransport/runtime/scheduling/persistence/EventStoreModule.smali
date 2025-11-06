@@ -12,6 +12,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,7 +23,7 @@
     .annotation runtime Lcom/google/android/datatransport/runtime/dagger/Provides;
     .end annotation
 
-    .annotation runtime Lmm/b;
+    .annotation runtime Lg/a/b;
         value = "SQLITE_DB_NAME"
     .end annotation
 
@@ -36,13 +37,14 @@
     .annotation runtime Lcom/google/android/datatransport/runtime/dagger/Provides;
     .end annotation
 
-    .annotation runtime Lmm/b;
+    .annotation runtime Lg/a/b;
         value = "PACKAGE_NAME"
     .end annotation
 
-    .annotation runtime Lmm/f;
+    .annotation runtime Lg/a/f;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object p0
@@ -55,10 +57,11 @@
     .annotation runtime Lcom/google/android/datatransport/runtime/dagger/Provides;
     .end annotation
 
-    .annotation runtime Lmm/b;
+    .annotation runtime Lg/a/b;
         value = "SCHEMA_VERSION"
     .end annotation
 
+    .line 1
     sget v0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager;->SCHEMA_VERSION:I
 
     return v0
@@ -69,6 +72,7 @@
     .annotation runtime Lcom/google/android/datatransport/runtime/dagger/Provides;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig;->DEFAULT:Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig;
 
     return-object v0

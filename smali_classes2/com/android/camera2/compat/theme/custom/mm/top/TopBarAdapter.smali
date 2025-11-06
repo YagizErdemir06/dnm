@@ -45,13 +45,13 @@
 
 
 # instance fields
-.field protected final TAG:Ljava/lang/String;
+.field public final TAG:Ljava/lang/String;
 
 .field private mChangeTopItems:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lw6/p2;",
+            "Ld/d/a/u6/a5/q/k4;",
             ">;"
         }
     .end annotation
@@ -71,7 +71,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lw6/p2;",
+            "Ld/d/a/u6/a5/q/k4;",
             ">;"
         }
     .end annotation
@@ -83,27 +83,40 @@
 # direct methods
 .method public constructor <init>(Landroid/view/View$OnClickListener;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "clickListener"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
 
+    .line 2
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->getTag()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->TAG:Ljava/lang/String;
 
+    .line 3
     new-instance v0, Landroid/util/SparseBooleanArray;
 
     invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mStrikethroughShowings:Landroid/util/SparseBooleanArray;
 
+    .line 4
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mTopItemAnimIds:Landroid/util/SparseIntArray;
 
+    .line 5
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mOnClickListener:Landroid/view/View$OnClickListener;
 
     return-void
@@ -112,6 +125,7 @@
 .method public static synthetic access$000(Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;)Landroid/util/SparseBooleanArray;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mStrikethroughShowings:Landroid/util/SparseBooleanArray;
 
     return-object p0
@@ -120,6 +134,7 @@
 .method public static synthetic access$100(Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;)Ljava/util/List;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mChangeTopItems:Ljava/util/List;
 
     return-object p0
@@ -128,6 +143,7 @@
 .method public static synthetic access$200(Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;Ljava/util/List;I)I
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->getArrayIndex(Ljava/util/List;I)I
 
     move-result p0
@@ -138,6 +154,7 @@
 .method public static synthetic access$300(Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mCurrentMode:I
 
     return p0
@@ -145,15 +162,25 @@
 
 .method private applyChange(I)Z
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "changeIndex"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mChangeTopItems:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lw6/p2;
+    check-cast v0, Ld/d/a/u6/a5/q/k4;
 
+    .line 2
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -164,7 +191,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lw6/p2;->a()I
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/k4;->a()I
 
     move-result v0
 
@@ -182,6 +209,7 @@
 
     const/4 v0, -0x1
 
+    .line 3
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -195,7 +223,16 @@
 
 .method private applyInsert(I)Z
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "configItem"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -218,14 +255,17 @@
 
     invoke-static {v0, v1, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->updateChangeList()V
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mChangeTopItems:Ljava/util/List;
 
     invoke-direct {p0, v0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->getArrayIndex(Ljava/util/List;I)I
 
     move-result p1
 
+    .line 4
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -246,10 +286,12 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 5
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemInserted(I)V
 
     const/4 v0, -0x1
 
+    .line 6
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -263,7 +305,16 @@
 
 .method private applyRemove(I)Z
     .locals 10
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "changeIndex"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
     const/4 v1, 0x0
@@ -272,6 +323,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mChangeTopItems:Ljava/util/List;
 
@@ -279,12 +331,14 @@
 
     move-result-object v0
 
-    check-cast v0, Lw6/p2;
+    check-cast v0, Ld/d/a/u6/a5/q/k4;
 
-    invoke-virtual {v0}, Lw6/p2;->a()I
+    .line 3
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/k4;->a()I
 
     move-result v2
 
+    .line 4
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -305,54 +359,61 @@
 
     invoke-static {v3, v4, v5}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Lw6/p2;->f()Lw6/p2$d;
+    .line 5
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/k4;->f()Ld/d/a/u6/a5/q/k4$d;
 
     move-result-object v3
 
     iget v4, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mCurrentMode:I
 
-    invoke-interface {v3, v4}, Lw6/p2$d;->updateResource(I)Lw6/l4;
+    invoke-interface {v3, v4}, Ld/d/a/u6/a5/q/k4$d;->updateResource(I)Ld/d/a/u6/a5/q/m4;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lw6/l4;->l()Z
+    .line 6
+    invoke-virtual {v3}, Ld/d/a/u6/a5/q/m4;->l()Z
 
     move-result v4
 
+    .line 7
     invoke-direct {p0, v2}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->findViewByConfigItem(I)Landroid/view/View;
 
     move-result-object v5
 
     if-nez v5, :cond_1
 
+    .line 8
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->TAG:Ljava/lang/String;
 
-    const-string p1, "view is null"
+    new-array p1, v1, [Ljava/lang/Object;
 
-    new-array v0, v1, [Ljava/lang/Object;
+    const-string v0, "view is null"
 
-    invoke-static {p0, p1, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {p0, v0, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return v1
 
+    .line 9
     :cond_1
     invoke-virtual {v5}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
 
-    invoke-static {}, Lcom/android/camera/a6;->u2()Z
+    .line 10
+    invoke-static {}, Ld/d/a/z5;->k2()Z
 
     move-result v7
 
     if-eqz v7, :cond_2
 
-    invoke-virtual {v3}, Lw6/l4;->g()I
+    invoke-virtual {v3}, Ld/d/a/u6/a5/q/m4;->g()I
 
     move-result v7
 
     if-lez v7, :cond_2
 
-    invoke-virtual {v3}, Lw6/l4;->g()I
+    .line 11
+    invoke-virtual {v3}, Ld/d/a/u6/a5/q/m4;->g()I
 
     move-result v3
 
@@ -364,15 +425,19 @@
 
     const/16 v3, 0x80
 
+    .line 12
     invoke-virtual {v5, v3}, Landroid/view/View;->sendAccessibilityEvent(I)V
 
+    .line 13
     :cond_2
     check-cast v5, Lcom/android/camera2/compat/theme/custom/mm/top/IStrikethrough;
 
+    .line 14
     new-instance v3, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter$StrikethroughCallable;
 
     invoke-direct {v3, p0, v2}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter$StrikethroughCallable;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;I)V
 
+    .line 15
     iget-object v6, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->TAG:Ljava/lang/String;
 
     const/4 v7, 0x3
@@ -415,13 +480,15 @@
 
     invoke-static {v6, p1, v7}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 16
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mStrikethroughShowings:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {p0, v2, v9}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
     if-eqz v4, :cond_4
 
-    invoke-virtual {v0}, Lw6/p2;->h()Z
+    .line 17
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/k4;->h()Z
 
     move-result p0
 
@@ -434,6 +501,7 @@
 
     goto :goto_0
 
+    .line 18
     :cond_4
     invoke-virtual {v3}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter$StrikethroughCallable;->onShowEnd()V
 
@@ -441,15 +509,26 @@
     return v9
 .end method
 
-.method private contains(Ljava/util/List;Lw6/p2;)Z
+.method private contains(Ljava/util/List;Ld/d/a/u6/a5/q/k4;)Z
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "items",
+            "item"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
-            "Lw6/p2;",
+            "Ld/d/a/u6/a5/q/k4;",
             ">;",
-            "Lw6/p2;",
+            "Ld/d/a/u6/a5/q/k4;",
             ")Z"
         }
     .end annotation
@@ -458,6 +537,7 @@
 
     if-eqz p1, :cond_2
 
+    .line 1
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
@@ -468,6 +548,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -484,13 +565,14 @@
 
     move-result-object v0
 
-    check-cast v0, Lw6/p2;
+    check-cast v0, Ld/d/a/u6/a5/q/k4;
 
-    invoke-virtual {v0}, Lw6/p2;->a()I
+    .line 3
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/k4;->a()I
 
     move-result v0
 
-    invoke-virtual {p2}, Lw6/p2;->a()I
+    invoke-virtual {p2}, Ld/d/a/u6/a5/q/k4;->a()I
 
     move-result v1
 
@@ -505,7 +587,16 @@
 
 .method private findViewByConfigItem(I)Landroid/view/View;
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "configItem"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
     const/4 v1, 0x0
@@ -514,6 +605,7 @@
 
     return-object v1
 
+    .line 2
     :cond_0
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -523,6 +615,7 @@
 
     return-object v1
 
+    .line 3
     :cond_1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
@@ -537,6 +630,7 @@
     :cond_2
     const/4 v0, 0x0
 
+    .line 4
     :goto_0
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
@@ -546,21 +640,24 @@
 
     if-ge v0, v2, :cond_4
 
+    .line 5
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
     invoke-virtual {v2, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
+    .line 6
     invoke-virtual {v2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Lw6/p2;
+    check-cast v3, Ld/d/a/u6/a5/q/k4;
 
     if-eqz v3, :cond_3
 
-    invoke-virtual {v3}, Lw6/p2;->a()I
+    .line 7
+    invoke-virtual {v3}, Ld/d/a/u6/a5/q/k4;->a()I
 
     move-result v3
 
@@ -582,11 +679,22 @@
 
 .method private getArrayIndex(Ljava/util/List;I)I
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "items",
+            "item"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
-            "Lw6/p2;",
+            "Ld/d/a/u6/a5/q/k4;",
             ">;I)I"
         }
     .end annotation
@@ -595,6 +703,7 @@
 
     if-eqz p1, :cond_2
 
+    .line 1
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -606,6 +715,7 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 2
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -613,13 +723,15 @@
 
     if-ge v0, v1, :cond_2
 
+    .line 3
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lw6/p2;
+    check-cast v1, Ld/d/a/u6/a5/q/k4;
 
-    invoke-virtual {v1}, Lw6/p2;->a()I
+    .line 4
+    invoke-virtual {v1}, Ld/d/a/u6/a5/q/k4;->a()I
 
     move-result v1
 
@@ -637,58 +749,21 @@
     return p0
 .end method
 
-.method public static synthetic h(Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughImageView;Lw6/p2;ILcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->lambda$showJsonAnimation$2(Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughImageView;Lw6/p2;ILcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;)V
-
-    return-void
-.end method
-
-.method public static synthetic i(Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;Lw6/p2;)Z
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->lambda$setData$0(Lw6/p2;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static synthetic j(Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;Lw6/p2;)Z
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->lambda$updateChangeList$3(Lw6/p2;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static synthetic k(ILv/b;)Ljava/lang/Integer;
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->lambda$showJsonAnimation$1(ILv/b;)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method private synthetic lambda$setData$0(Lw6/p2;)Z
+.method private synthetic lambda$setData$0(Ld/d/a/u6/a5/q/k4;)Z
     .locals 3
 
-    invoke-virtual {p1}, Lw6/p2;->f()Lw6/p2$d;
+    .line 1
+    invoke-virtual {p1}, Ld/d/a/u6/a5/q/k4;->f()Ld/d/a/u6/a5/q/k4$d;
 
     move-result-object v0
 
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mCurrentMode:I
 
-    invoke-interface {v0, v1}, Lw6/p2$d;->updateResource(I)Lw6/l4;
+    invoke-interface {v0, v1}, Ld/d/a/u6/a5/q/k4$d;->updateResource(I)Ld/d/a/u6/a5/q/m4;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lw6/l4;->f()I
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/m4;->f()I
 
     move-result v0
 
@@ -705,10 +780,11 @@
     :cond_0
     move v0, v2
 
+    .line 2
     :goto_0
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mStrikethroughShowings:Landroid/util/SparseBooleanArray;
 
-    invoke-virtual {p1}, Lw6/p2;->a()I
+    invoke-virtual {p1}, Ld/d/a/u6/a5/q/k4;->a()I
 
     move-result p1
 
@@ -730,9 +806,10 @@
     return v1
 .end method
 
-.method private static synthetic lambda$showJsonAnimation$1(ILv/b;)Ljava/lang/Integer;
+.method public static synthetic lambda$showJsonAnimation$1(ILd/b/a/b0/b;)Ljava/lang/Integer;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -740,9 +817,10 @@
     return-object p0
 .end method
 
-.method private synthetic lambda$showJsonAnimation$2(Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughImageView;Lw6/p2;ILcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;)V
+.method private synthetic lambda$showJsonAnimation$2(Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughImageView;Ld/d/a/u6/a5/q/k4;ILcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;)V
     .locals 11
 
+    .line 1
     invoke-virtual {p1}, Lcom/airbnb/lottie/LottieAnimationView;->isAnimating()Z
 
     move-result v0
@@ -751,24 +829,26 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->TAG:Ljava/lang/String;
 
-    const-string p1, "image view is animating!"
+    new-array p1, v1, [Ljava/lang/Object;
 
-    new-array p2, v1, [Ljava/lang/Object;
+    const-string p2, "image view is animating!"
 
-    invoke-static {p0, p1, p2}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {p0, p2, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
+    .line 3
     :cond_0
-    invoke-virtual {p2}, Lw6/p2;->f()Lw6/p2$d;
+    invoke-virtual {p2}, Ld/d/a/u6/a5/q/k4;->f()Ld/d/a/u6/a5/q/k4$d;
 
     move-result-object v0
 
     iget v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mCurrentMode:I
 
-    invoke-interface {v0, v2}, Lw6/p2$d;->updateResource(I)Lw6/l4;
+    invoke-interface {v0, v2}, Ld/d/a/u6/a5/q/k4$d;->updateResource(I)Ld/d/a/u6/a5/q/m4;
 
     move-result-object v5
 
@@ -776,30 +856,34 @@
 
     return-void
 
+    .line 4
     :cond_1
-    invoke-virtual {v5}, Lw6/l4;->h()Z
+    invoke-virtual {v5}, Ld/d/a/u6/a5/q/m4;->h()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    invoke-static {}, Lf2/f;->j()I
+    .line 5
+    invoke-static {}, Ld/d/a/k6/g;->j()I
 
     move-result v0
 
     goto :goto_0
 
+    .line 6
     :cond_2
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object v0
 
-    const v2, 0x7f0608d2
+    const v2, 0x7f06046a
 
-    invoke-virtual {v0, v2}, Lf2/e;->b(I)I
+    invoke-virtual {v0, v2}, Ld/d/a/k6/f;->b(I)I
 
     move-result v0
 
+    .line 7
     :goto_0
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mTopItemAnimIds:Landroid/util/SparseIntArray;
 
@@ -807,6 +891,7 @@
 
     move-result v7
 
+    .line 8
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -827,12 +912,15 @@
 
     invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 9
     invoke-virtual {p1, v7}, Lcom/airbnb/lottie/LottieAnimationView;->setAnimation(I)V
 
     const/high16 v1, 0x3f800000    # 1.0f
 
+    .line 10
     invoke-virtual {p1, v1}, Lcom/airbnb/lottie/LottieAnimationView;->setProgress(F)V
 
+    .line 11
     new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter$1;
 
     move-object v3, v1
@@ -847,15 +935,17 @@
 
     move-object v10, p4
 
-    invoke-direct/range {v3 .. v10}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter$1;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;Lw6/l4;IILcom/android/camera2/compat/theme/custom/mm/top/StrikethroughImageView;Lw6/p2;Lcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;)V
+    invoke-direct/range {v3 .. v10}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter$1;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;Ld/d/a/u6/a5/q/m4;IILcom/android/camera2/compat/theme/custom/mm/top/StrikethroughImageView;Ld/d/a/u6/a5/q/k4;Lcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;)V
 
     invoke-virtual {p1, v1}, Lcom/airbnb/lottie/LottieAnimationView;->addAnimatorListener(Landroid/animation/Animator$AnimatorListener;)V
 
+    .line 12
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
-    new-instance p2, Ln/e;
+    .line 13
+    new-instance p2, Ld/b/a/x/e;
 
     const-string p3, "Vector"
 
@@ -865,11 +955,12 @@
 
     move-result-object p3
 
-    invoke-direct {p2, p3}, Ln/e;-><init>([Ljava/lang/String;)V
+    invoke-direct {p2, p3}, Ld/b/a/x/e;-><init>([Ljava/lang/String;)V
 
     invoke-virtual {p0, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    new-instance p2, Ln/e;
+    .line 14
+    new-instance p2, Ld/b/a/x/e;
 
     const-string p3, "Vector 2"
 
@@ -877,11 +968,12 @@
 
     move-result-object p3
 
-    invoke-direct {p2, p3}, Ln/e;-><init>([Ljava/lang/String;)V
+    invoke-direct {p2, p3}, Ld/b/a/x/e;-><init>([Ljava/lang/String;)V
 
     invoke-virtual {p0, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    new-instance p2, Ln/e;
+    .line 15
+    new-instance p2, Ld/b/a/x/e;
 
     const-string p3, "Vector 3"
 
@@ -889,11 +981,12 @@
 
     move-result-object p3
 
-    invoke-direct {p2, p3}, Ln/e;-><init>([Ljava/lang/String;)V
+    invoke-direct {p2, p3}, Ld/b/a/x/e;-><init>([Ljava/lang/String;)V
 
     invoke-virtual {p0, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    new-instance p2, Ln/e;
+    .line 16
+    new-instance p2, Ld/b/a/x/e;
 
     const-string p3, "Vector 4"
 
@@ -901,11 +994,12 @@
 
     move-result-object p3
 
-    invoke-direct {p2, p3}, Ln/e;-><init>([Ljava/lang/String;)V
+    invoke-direct {p2, p3}, Ld/b/a/x/e;-><init>([Ljava/lang/String;)V
 
     invoke-virtual {p0, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    new-instance p2, Ln/e;
+    .line 17
+    new-instance p2, Ld/b/a/x/e;
 
     const-string p3, "Vector 5"
 
@@ -913,11 +1007,12 @@
 
     move-result-object p3
 
-    invoke-direct {p2, p3}, Ln/e;-><init>([Ljava/lang/String;)V
+    invoke-direct {p2, p3}, Ld/b/a/x/e;-><init>([Ljava/lang/String;)V
 
     invoke-virtual {p0, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    new-instance p2, Ln/e;
+    .line 18
+    new-instance p2, Ld/b/a/x/e;
 
     const-string p3, "Vector 6"
 
@@ -925,11 +1020,12 @@
 
     move-result-object p3
 
-    invoke-direct {p2, p3}, Ln/e;-><init>([Ljava/lang/String;)V
+    invoke-direct {p2, p3}, Ld/b/a/x/e;-><init>([Ljava/lang/String;)V
 
     invoke-virtual {p0, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    new-instance p2, Ln/e;
+    .line 19
+    new-instance p2, Ld/b/a/x/e;
 
     const-string p3, "Rectangle 2184"
 
@@ -937,10 +1033,11 @@
 
     move-result-object p3
 
-    invoke-direct {p2, p3}, Ln/e;-><init>([Ljava/lang/String;)V
+    invoke-direct {p2, p3}, Ld/b/a/x/e;-><init>([Ljava/lang/String;)V
 
     invoke-virtual {p0, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 20
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -956,28 +1053,31 @@
 
     move-result-object p2
 
-    check-cast p2, Ln/e;
+    check-cast p2, Ld/b/a/x/e;
 
-    sget-object p3, Li/m;->a:Ljava/lang/Integer;
+    .line 21
+    sget-object p3, Ld/b/a/m;->a:Ljava/lang/Integer;
 
-    new-instance p4, Lcom/android/camera2/compat/theme/custom/mm/top/m1;
+    new-instance p4, Ld/d/b/x5/a/b/b/m/s1;
 
-    invoke-direct {p4, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/m1;-><init>(I)V
+    invoke-direct {p4, v0}, Ld/d/b/x5/a/b/b/m/s1;-><init>(I)V
 
-    invoke-virtual {p1, p2, p3, p4}, Lcom/airbnb/lottie/LottieAnimationView;->addValueCallback(Ln/e;Ljava/lang/Object;Lv/l;)V
+    invoke-virtual {p1, p2, p3, p4}, Lcom/airbnb/lottie/LottieAnimationView;->addValueCallback(Ld/b/a/x/e;Ljava/lang/Object;Ld/b/a/b0/l;)V
 
     goto :goto_1
 
+    .line 22
     :cond_3
     invoke-virtual {p1}, Lcom/airbnb/lottie/LottieAnimationView;->playAnimation()V
 
     return-void
 .end method
 
-.method private synthetic lambda$updateChangeList$3(Lw6/p2;)Z
+.method private synthetic lambda$updateChangeList$3(Ld/d/a/u6/a5/q/k4;)Z
     .locals 3
 
-    invoke-virtual {p1}, Lw6/p2;->f()Lw6/p2$d;
+    .line 1
+    invoke-virtual {p1}, Ld/d/a/u6/a5/q/k4;->f()Ld/d/a/u6/a5/q/k4$d;
 
     move-result-object v0
 
@@ -987,14 +1087,15 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
-    invoke-virtual {p1}, Lw6/p2;->f()Lw6/p2$d;
+    invoke-virtual {p1}, Ld/d/a/u6/a5/q/k4;->f()Ld/d/a/u6/a5/q/k4$d;
 
     move-result-object v0
 
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mCurrentMode:I
 
-    invoke-interface {v0, v1}, Lw6/p2$d;->updateResource(I)Lw6/l4;
+    invoke-interface {v0, v1}, Ld/d/a/u6/a5/q/k4$d;->updateResource(I)Ld/d/a/u6/a5/q/m4;
 
     move-result-object v0
 
@@ -1005,7 +1106,8 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lw6/l4;->f()I
+    .line 3
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/m4;->f()I
 
     move-result v0
 
@@ -1018,10 +1120,11 @@
     :cond_1
     move v0, v2
 
+    .line 4
     :goto_1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mStrikethroughShowings:Landroid/util/SparseBooleanArray;
 
-    invoke-virtual {p1}, Lw6/p2;->a()I
+    invoke-virtual {p1}, Ld/d/a/u6/a5/q/k4;->a()I
 
     move-result p1
 
@@ -1043,13 +1146,25 @@
     return v1
 .end method
 
-.method private showJsonAnimation(Lcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;Lw6/p2;)V
+.method private showJsonAnimation(Lcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;Ld/d/a/u6/a5/q/k4;)V
     .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "holder",
+            "topConfigItem"
+        }
+    .end annotation
 
-    invoke-virtual {p2}, Lw6/p2;->a()I
+    .line 1
+    invoke-virtual {p2}, Ld/d/a/u6/a5/q/k4;->a()I
 
     move-result v4
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1072,13 +1187,15 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 3
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     move-object v6, v0
 
     check-cast v6, Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughImageView;
 
-    new-instance v7, Lcom/android/camera2/compat/theme/custom/mm/top/l1;
+    .line 4
+    new-instance v7, Ld/d/b/x5/a/b/b/m/p1;
 
     move-object v0, v7
 
@@ -1090,9 +1207,9 @@
 
     move-object v5, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/android/camera2/compat/theme/custom/mm/top/l1;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughImageView;Lw6/p2;ILcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;)V
+    invoke-direct/range {v0 .. v5}, Ld/d/b/x5/a/b/b/m/p1;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughImageView;Ld/d/a/u6/a5/q/k4;ILcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;)V
 
-    invoke-virtual {v6, v7}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v6, v7}, Landroid/widget/ImageView;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
@@ -1100,25 +1217,28 @@
 .method private updateChangeList()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mSupportedTopItems:Ljava/util/List;
 
     if-nez v0, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
-    invoke-interface {v0}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
+    invoke-interface {v0}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
 
     move-result-object v0
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/top/o1;
+    new-instance v1, Ld/d/b/x5/a/b/b/m/r1;
 
-    invoke-direct {v1, p0}, Lcom/android/camera2/compat/theme/custom/mm/top/o1;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;)V
+    invoke-direct {v1, p0}, Ld/d/b/x5/a/b/b/m/r1;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;)V
 
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object v0
 
+    .line 3
     invoke-static {}, Ljava/util/stream/Collectors;->toList()Ljava/util/stream/Collector;
 
     move-result-object v1
@@ -1134,36 +1254,51 @@
     return-void
 .end method
 
-.method private updateView(Lcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;Lw6/p2;)V
+.method private updateView(Lcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;Ld/d/a/u6/a5/q/k4;)V
     .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "holder",
+            "topConfigItem"
+        }
+    .end annotation
 
-    invoke-virtual {p2}, Lw6/p2;->f()Lw6/p2$d;
+    .line 1
+    invoke-virtual {p2}, Ld/d/a/u6/a5/q/k4;->f()Ld/d/a/u6/a5/q/k4$d;
 
     move-result-object v0
 
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mCurrentMode:I
 
-    invoke-interface {v0, v1}, Lw6/p2$d;->updateResource(I)Lw6/l4;
+    invoke-interface {v0, v1}, Ld/d/a/u6/a5/q/k4$d;->updateResource(I)Ld/d/a/u6/a5/q/m4;
 
     move-result-object v0
 
+    .line 2
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
-    invoke-virtual {v1}, Landroid/view/View;->isShown()Z
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->isShown()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    invoke-virtual {p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;->updateView(Lw6/l4;)V
+    .line 3
+    invoke-virtual {p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;->updateView(Ld/d/a/u6/a5/q/m4;)V
 
     return-void
 
+    .line 4
     :cond_0
-    invoke-virtual {v0}, Lw6/l4;->e()I
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/m4;->e()I
 
     move-result v1
 
+    .line 5
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1188,27 +1323,31 @@
 
     if-gtz v1, :cond_1
 
-    invoke-virtual {p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;->updateView(Lw6/l4;)V
+    .line 6
+    invoke-virtual {p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;->updateView(Ld/d/a/u6/a5/q/m4;)V
 
     return-void
 
+    .line 7
     :cond_1
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lm2/h1;->p0()Lj2/y0;
+    invoke-virtual {v2}, Ld/d/a/l6/e/m/g1;->h0()Ld/d/a/l6/e/j/x0;
 
     move-result-object v2
 
-    invoke-virtual {p2}, Lw6/p2;->a()I
+    .line 8
+    invoke-virtual {p2}, Ld/d/a/u6/a5/q/k4;->a()I
 
     move-result v3
 
-    invoke-virtual {v2, v3, v1}, Lj2/y0;->i(II)Z
+    invoke-virtual {v2, v3, v1}, Ld/d/a/l6/e/j/x0;->i(II)Z
 
     move-result v2
 
+    .line 9
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1231,20 +1370,23 @@
 
     if-eqz v2, :cond_2
 
+    .line 10
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mTopItemAnimIds:Landroid/util/SparseIntArray;
 
-    invoke-virtual {p2}, Lw6/p2;->a()I
+    invoke-virtual {p2}, Ld/d/a/u6/a5/q/k4;->a()I
 
     move-result v2
 
     invoke-virtual {v0, v2, v1}, Landroid/util/SparseIntArray;->put(II)V
 
-    invoke-direct {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->showJsonAnimation(Lcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;Lw6/p2;)V
+    .line 11
+    invoke-direct {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->showJsonAnimation(Lcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;Ld/d/a/u6/a5/q/k4;)V
 
     goto :goto_0
 
+    .line 12
     :cond_2
-    invoke-virtual {p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;->updateView(Lw6/l4;)V
+    invoke-virtual {p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;->updateView(Ld/d/a/u6/a5/q/m4;)V
 
     :goto_0
     return-void
@@ -1254,7 +1396,16 @@
 # virtual methods
 .method public applyResumeInsert(I)Z
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "changeIndex"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
     const/4 v1, 0x0
@@ -1263,6 +1414,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mChangeTopItems:Ljava/util/List;
 
@@ -1270,12 +1422,14 @@
 
     move-result-object v0
 
-    check-cast v0, Lw6/p2;
+    check-cast v0, Ld/d/a/u6/a5/q/k4;
 
-    invoke-virtual {v0}, Lw6/p2;->a()I
+    .line 3
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/k4;->a()I
 
     move-result v2
 
+    .line 4
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1296,16 +1450,18 @@
 
     invoke-static {v3, v4, v5}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Lw6/p2;->f()Lw6/p2$d;
+    .line 5
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/k4;->f()Ld/d/a/u6/a5/q/k4$d;
 
     move-result-object v0
 
     iget v3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mCurrentMode:I
 
-    invoke-interface {v0, v3}, Lw6/p2$d;->updateResource(I)Lw6/l4;
+    invoke-interface {v0, v3}, Ld/d/a/u6/a5/q/k4$d;->updateResource(I)Ld/d/a/u6/a5/q/m4;
 
     move-result-object v0
 
+    .line 6
     invoke-direct {p0, v2}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->findViewByConfigItem(I)Landroid/view/View;
 
     move-result-object v3
@@ -1314,12 +1470,14 @@
 
     return v1
 
+    .line 7
     :cond_1
     invoke-virtual {v3}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    invoke-static {}, Lcom/android/camera/a6;->u2()Z
+    .line 8
+    invoke-static {}, Ld/d/a/z5;->k2()Z
 
     move-result v4
 
@@ -1327,13 +1485,14 @@
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lw6/l4;->g()I
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/m4;->g()I
 
     move-result v4
 
     if-lez v4, :cond_2
 
-    invoke-virtual {v0}, Lw6/l4;->g()I
+    .line 9
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/m4;->g()I
 
     move-result v0
 
@@ -1345,24 +1504,30 @@
 
     const/16 v0, 0x80
 
+    .line 10
     invoke-virtual {v3, v0}, Landroid/view/View;->sendAccessibilityEvent(I)V
 
+    .line 11
     :cond_2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mStrikethroughShowings:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v0, v2}, Landroid/util/SparseBooleanArray;->delete(I)V
 
+    .line 12
     instance-of v0, v3, Lcom/android/camera2/compat/theme/custom/mm/top/IStrikethrough;
 
     if-eqz v0, :cond_3
 
+    .line 13
     check-cast v3, Lcom/android/camera2/compat/theme/custom/mm/top/IStrikethrough;
 
+    .line 14
     invoke-interface {v3}, Lcom/android/camera2/compat/theme/custom/mm/top/IStrikethrough;->reset()V
 
     :cond_3
     const/4 v0, -0x1
 
+    .line 15
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -1377,6 +1542,7 @@
 .method public getItemCount()I
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mChangeTopItems:Ljava/util/List;
 
     if-eqz v0, :cond_0
@@ -1387,6 +1553,7 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mChangeTopItems:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->size()I
@@ -1404,6 +1571,14 @@
 
 .method public getItemId(I)J
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "position"
+        }
+    .end annotation
 
     int-to-long p0, p1
 
@@ -1412,7 +1587,16 @@
 
 .method public getItemViewType(I)I
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "position"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mChangeTopItems:Ljava/util/List;
 
     if-eqz v0, :cond_4
@@ -1425,6 +1609,7 @@
 
     goto :goto_1
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mChangeTopItems:Ljava/util/List;
 
@@ -1432,9 +1617,10 @@
 
     move-result-object p0
 
-    check-cast p0, Lw6/p2;
+    check-cast p0, Ld/d/a/u6/a5/q/k4;
 
-    invoke-virtual {p0}, Lw6/p2;->a()I
+    .line 3
+    invoke-virtual {p0}, Ld/d/a/u6/a5/q/k4;->a()I
 
     move-result p0
 
@@ -1478,6 +1664,7 @@
     :goto_0
     return p0
 
+    .line 4
     :cond_4
     :goto_1
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->getItemViewType(I)I
@@ -1490,9 +1677,28 @@
 .method public abstract getTag()Ljava/lang/String;
 .end method
 
+.method public synthetic h(Ld/d/a/u6/a5/q/k4;)Z
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->lambda$setData$0(Ld/d/a/u6/a5/q/k4;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public synthetic i(Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughImageView;Ld/d/a/u6/a5/q/k4;ILcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->lambda$showJsonAnimation$2(Lcom/android/camera2/compat/theme/custom/mm/top/StrikethroughImageView;Ld/d/a/u6/a5/q/k4;ILcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;)V
+
+    return-void
+.end method
+
 .method public isStrikethroughShowing()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mStrikethroughShowings:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {p0}, Landroid/util/SparseBooleanArray;->size()I
@@ -1512,9 +1718,28 @@
     return p0
 .end method
 
+.method public synthetic j(Ld/d/a/u6/a5/q/k4;)Z
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->lambda$updateChangeList$3(Ld/d/a/u6/a5/q/k4;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
 .method public notifyTopBarItemChanged(I)Z
     .locals 9
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "configItem"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mSupportedTopItems:Ljava/util/List;
 
     const/4 v1, 0x0
@@ -1529,6 +1754,7 @@
 
     goto/16 :goto_3
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mSupportedTopItems:Ljava/util/List;
 
@@ -1542,6 +1768,7 @@
 
     return v1
 
+    .line 3
     :cond_1
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->TAG:Ljava/lang/String;
 
@@ -1563,12 +1790,14 @@
 
     invoke-static {v3, v4, v5}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 4
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mChangeTopItems:Ljava/util/List;
 
     invoke-direct {p0, v3, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->getArrayIndex(Ljava/util/List;I)I
 
     move-result v3
 
+    .line 5
     iget-object v4, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1600,6 +1829,7 @@
     :cond_2
     move v5, v1
 
+    .line 6
     :goto_0
     iget-object v6, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mSupportedTopItems:Ljava/util/List;
 
@@ -1607,15 +1837,15 @@
 
     move-result-object v0
 
-    check-cast v0, Lw6/p2;
+    check-cast v0, Ld/d/a/u6/a5/q/k4;
 
-    invoke-virtual {v0}, Lw6/p2;->f()Lw6/p2$d;
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/k4;->f()Ld/d/a/u6/a5/q/k4$d;
 
     move-result-object v0
 
     iget v6, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mCurrentMode:I
 
-    invoke-interface {v0, v6}, Lw6/p2$d;->updateResource(I)Lw6/l4;
+    invoke-interface {v0, v6}, Ld/d/a/u6/a5/q/k4$d;->updateResource(I)Ld/d/a/u6/a5/q/m4;
 
     move-result-object v0
 
@@ -1623,11 +1853,13 @@
 
     return v1
 
+    .line 7
     :cond_3
-    invoke-virtual {v0}, Lw6/l4;->f()I
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/m4;->f()I
 
     move-result v0
 
+    .line 8
     iget-object v6, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mStrikethroughShowings:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v6, p1, v1}, Landroid/util/SparseBooleanArray;->get(IZ)Z
@@ -1681,6 +1913,7 @@
 
     goto :goto_2
 
+    .line 9
     :cond_8
     invoke-virtual {p0, v3}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->applyResumeInsert(I)Z
 
@@ -1688,6 +1921,7 @@
 
     goto :goto_2
 
+    .line 10
     :cond_9
     invoke-direct {p0, v3}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->applyChange(I)Z
 
@@ -1695,6 +1929,7 @@
 
     goto :goto_2
 
+    .line 11
     :cond_a
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mStrikethroughShowings:Landroid/util/SparseBooleanArray;
 
@@ -1704,12 +1939,14 @@
 
     if-nez p1, :cond_c
 
+    .line 12
     invoke-direct {p0, v3}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->applyRemove(I)Z
 
     move-result v1
 
     goto :goto_2
 
+    .line 13
     :cond_b
     invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->applyInsert(I)Z
 
@@ -1719,15 +1956,16 @@
     :goto_2
     return v1
 
+    .line 14
     :cond_d
     :goto_3
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->TAG:Ljava/lang/String;
 
-    const-string p1, "support config item is null or empty!"
+    new-array p1, v1, [Ljava/lang/Object;
 
-    new-array v0, v1, [Ljava/lang/Object;
+    const-string v0, "support config item is null or empty!"
 
-    invoke-static {p0, p1, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {p0, v0, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return v1
 .end method
@@ -1738,13 +1976,24 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "recyclerView"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->onAttachedToRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
 
+    .line 2
     instance-of v0, p1, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
     if-eqz v0, :cond_0
 
+    .line 3
     check-cast p1, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
@@ -1759,6 +2008,16 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "holder",
+            "position"
+        }
+    .end annotation
 
     .line 1
     check-cast p1, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;
@@ -1774,6 +2033,16 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "holder",
+            "position"
+        }
+    .end annotation
 
     .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->TAG:Ljava/lang/String;
@@ -1812,11 +2081,11 @@
     .line 5
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->TAG:Ljava/lang/String;
 
-    const-string p1, "position is larger than the supported config\uff01"
+    new-array p1, v1, [Ljava/lang/Object;
 
-    new-array p2, v1, [Ljava/lang/Object;
+    const-string p2, "position is larger than the supported config\uff01"
 
-    invoke-static {p0, p1, p2}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {p0, p2, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
@@ -1854,19 +2123,19 @@
 
     move-result-object p2
 
-    check-cast p2, Lw6/p2;
+    check-cast p2, Ld/d/a/u6/a5/q/k4;
 
     .line 10
-    invoke-virtual {p2, v1}, Lw6/p2;->k(Z)V
+    invoke-virtual {p2, v1}, Ld/d/a/u6/a5/q/k4;->k(Z)V
 
     .line 11
-    invoke-virtual {p2}, Lw6/p2;->f()Lw6/p2$d;
+    invoke-virtual {p2}, Ld/d/a/u6/a5/q/k4;->f()Ld/d/a/u6/a5/q/k4$d;
 
     move-result-object v0
 
     iget v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mCurrentMode:I
 
-    invoke-interface {v0, v2}, Lw6/p2$d;->updateResource(I)Lw6/l4;
+    invoke-interface {v0, v2}, Ld/d/a/u6/a5/q/k4$d;->updateResource(I)Ld/d/a/u6/a5/q/m4;
 
     move-result-object v0
 
@@ -1875,11 +2144,11 @@
     .line 12
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->TAG:Ljava/lang/String;
 
-    const-string p1, "top item resource is null!"
+    new-array p1, v1, [Ljava/lang/Object;
 
-    new-array p2, v1, [Ljava/lang/Object;
+    const-string p2, "top item resource is null!"
 
-    invoke-static {p0, p1, p2}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {p0, p2, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
@@ -1892,7 +2161,7 @@
     move-result-object v2
 
     .line 14
-    invoke-virtual {v0}, Lw6/l4;->g()I
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/m4;->g()I
 
     move-result v3
 
@@ -1901,7 +2170,7 @@
     .line 15
     iget-object v3, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-virtual {v0}, Lw6/l4;->g()I
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/m4;->g()I
 
     move-result v4
 
@@ -1915,7 +2184,7 @@
 
     .line 16
     :cond_4
-    invoke-virtual {v0}, Lw6/l4;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/m4;->a()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1928,7 +2197,7 @@
     .line 17
     iget-object v2, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-virtual {v0}, Lw6/l4;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/m4;->a()Ljava/lang/String;
 
     move-result-object v3
 
@@ -1937,7 +2206,7 @@
     .line 18
     :cond_5
     :goto_0
-    invoke-direct {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->updateView(Lcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;Lw6/p2;)V
+    invoke-direct {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->updateView(Lcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;Ld/d/a/u6/a5/q/k4;)V
 
     .line 19
     iget-object v2, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -1953,7 +2222,7 @@
 
     .line 21
     :cond_6
-    invoke-virtual {v0}, Lw6/l4;->j()Z
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/m4;->j()Z
 
     move-result v2
 
@@ -1978,7 +2247,7 @@
 
     .line 24
     :goto_1
-    invoke-virtual {v0}, Lw6/l4;->f()I
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/m4;->f()I
 
     move-result v0
 
@@ -2026,7 +2295,7 @@
     .line 31
     iget-object p0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p0}, Lz1/f;->z(Landroid/view/View;)V
+    invoke-static {p0}, Ld/d/a/f6/f;->z(Landroid/view/View;)V
 
     :goto_2
     return-void
@@ -2036,11 +2305,11 @@
     :goto_3
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->TAG:Ljava/lang/String;
 
-    const-string p1, "support config is null!"
+    new-array p1, v1, [Ljava/lang/Object;
 
-    new-array p2, v1, [Ljava/lang/Object;
+    const-string p2, "support config is null!"
 
-    invoke-static {p0, p1, p2}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {p0, p2, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -2052,6 +2321,17 @@
         .end annotation
     .end param
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "parent",
+            "viewType"
+        }
     .end annotation
 
     .line 1
@@ -2071,6 +2351,17 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "parent",
+            "viewType"
+        }
+    .end annotation
+
     .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mHandler:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter$TopBarHandler;
 
@@ -2079,7 +2370,7 @@
     .line 3
     new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter$TopBarHandler;
 
-    invoke-virtual {p1}, Landroid/view/View;->getHandler()Landroid/os/Handler;
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getHandler()Landroid/os/Handler;
 
     move-result-object v1
 
@@ -2106,6 +2397,14 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "holder"
+        }
+    .end annotation
 
     .line 1
     check-cast p1, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;
@@ -2121,6 +2420,14 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "holder"
+        }
+    .end annotation
 
     .line 2
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->onViewRecycled(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
@@ -2133,7 +2440,7 @@
     const/4 p0, 0x0
 
     .line 4
-    invoke-virtual {p1, p0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;->updateView(Lw6/l4;)V
+    invoke-virtual {p1, p0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;->updateView(Ld/d/a/u6/a5/q/m4;)V
 
     :cond_0
     return-void
@@ -2142,17 +2449,21 @@
 .method public resetData()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mSupportedTopItems:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mChangeTopItems:Ljava/util/List;
 
     if-eqz p0, :cond_1
 
+    .line 4
     invoke-interface {p0}, Ljava/util/List;->clear()V
 
     :cond_1
@@ -2161,15 +2472,27 @@
 
 .method public setData(Ljava/util/List;Z)V
     .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "supportedConfigs",
+            "resetStrikethrough"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
-            "Lw6/p2;",
+            "Ld/d/a/u6/a5/q/k4;",
             ">;Z)V"
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2204,6 +2527,7 @@
 
     move p2, v2
 
+    .line 2
     :goto_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mStrikethroughShowings:Landroid/util/SparseBooleanArray;
 
@@ -2213,26 +2537,32 @@
 
     if-ge p2, v0, :cond_1
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mStrikethroughShowings:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v0, p2}, Landroid/util/SparseBooleanArray;->keyAt(I)I
 
     move-result v0
 
+    .line 4
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mStrikethroughShowings:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v1, v0}, Landroid/util/SparseBooleanArray;->delete(I)V
 
+    .line 5
     invoke-direct {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->findViewByConfigItem(I)Landroid/view/View;
 
     move-result-object v1
 
+    .line 6
     instance-of v3, v1, Lcom/android/camera2/compat/theme/custom/mm/top/IStrikethrough;
 
     if-eqz v3, :cond_0
 
+    .line 7
     check-cast v1, Lcom/android/camera2/compat/theme/custom/mm/top/IStrikethrough;
 
+    .line 8
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2253,6 +2583,7 @@
 
     invoke-static {v3, v0, v4}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 9
     invoke-interface {v1}, Lcom/android/camera2/compat/theme/custom/mm/top/IStrikethrough;->reset()V
 
     :cond_0
@@ -2260,6 +2591,7 @@
 
     goto :goto_0
 
+    .line 10
     :cond_1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mSupportedTopItems:Ljava/util/List;
 
@@ -2267,6 +2599,7 @@
 
     if-eqz p1, :cond_12
 
+    .line 11
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result p1
@@ -2275,6 +2608,7 @@
 
     goto/16 :goto_9
 
+    .line 12
     :cond_2
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mChangeTopItems:Ljava/util/List;
 
@@ -2288,21 +2622,23 @@
 
     goto/16 :goto_8
 
+    .line 13
     :cond_3
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mSupportedTopItems:Ljava/util/List;
 
-    invoke-interface {p1}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
+    invoke-interface {p1}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
 
     move-result-object p1
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/top/n1;
+    new-instance v0, Ld/d/b/x5/a/b/b/m/q1;
 
-    invoke-direct {v0, p0}, Lcom/android/camera2/compat/theme/custom/mm/top/n1;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;)V
+    invoke-direct {v0, p0}, Ld/d/b/x5/a/b/b/m/q1;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;)V
 
     invoke-interface {p1, v0}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object p1
 
+    .line 14
     invoke-static {}, Ljava/util/stream/Collectors;->toList()Ljava/util/stream/Collector;
 
     move-result-object v0
@@ -2315,6 +2651,7 @@
 
     if-eqz p1, :cond_10
 
+    .line 15
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
@@ -2323,25 +2660,30 @@
 
     goto/16 :goto_7
 
+    .line 16
     :cond_4
     new-instance p2, Landroid/util/SparseArray;
 
     invoke-direct {p2}, Landroid/util/SparseArray;-><init>()V
 
+    .line 17
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
+    .line 18
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 19
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result v3
 
     if-nez v3, :cond_6
 
+    .line 20
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mChangeTopItems:Ljava/util/List;
 
     if-eqz v3, :cond_6
@@ -2352,6 +2694,7 @@
 
     if-nez v3, :cond_6
 
+    .line 21
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -2368,20 +2711,23 @@
 
     move-result-object v4
 
-    check-cast v4, Lw6/p2;
+    check-cast v4, Ld/d/a/u6/a5/q/k4;
 
+    .line 22
     iget-object v5, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mChangeTopItems:Ljava/util/List;
 
-    invoke-direct {p0, v5, v4}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->contains(Ljava/util/List;Lw6/p2;)Z
+    invoke-direct {p0, v5, v4}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->contains(Ljava/util/List;Ld/d/a/u6/a5/q/k4;)Z
 
     move-result v5
 
     if-eqz v5, :cond_5
 
+    .line 23
     invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
+    .line 24
     :cond_6
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mChangeTopItems:Ljava/util/List;
 
@@ -2395,6 +2741,7 @@
 
     move v3, v2
 
+    .line 25
     :goto_2
     iget-object v4, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mChangeTopItems:Ljava/util/List;
 
@@ -2404,20 +2751,23 @@
 
     if-ge v3, v4, :cond_8
 
+    .line 26
     iget-object v4, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mChangeTopItems:Ljava/util/List;
 
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lw6/p2;
+    check-cast v4, Ld/d/a/u6/a5/q/k4;
 
-    invoke-direct {p0, v1, v4}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->contains(Ljava/util/List;Lw6/p2;)Z
+    .line 27
+    invoke-direct {p0, v1, v4}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->contains(Ljava/util/List;Ld/d/a/u6/a5/q/k4;)Z
 
     move-result v5
 
     if-nez v5, :cond_7
 
+    .line 28
     invoke-virtual {p2, v3, v4}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     :cond_7
@@ -2425,6 +2775,7 @@
 
     goto :goto_2
 
+    .line 29
     :cond_8
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
@@ -2434,6 +2785,7 @@
 
     move v3, v2
 
+    .line 30
     :goto_3
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -2441,18 +2793,21 @@
 
     if-ge v3, v4, :cond_a
 
+    .line 31
     invoke-interface {p1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lw6/p2;
+    check-cast v4, Ld/d/a/u6/a5/q/k4;
 
-    invoke-direct {p0, v1, v4}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->contains(Ljava/util/List;Lw6/p2;)Z
+    .line 32
+    invoke-direct {p0, v1, v4}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->contains(Ljava/util/List;Ld/d/a/u6/a5/q/k4;)Z
 
     move-result v5
 
     if-nez v5, :cond_9
 
+    .line 33
     invoke-virtual {v0, v3, v4}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     :cond_9
@@ -2460,6 +2815,7 @@
 
     goto :goto_3
 
+    .line 34
     :cond_a
     invoke-virtual {p2}, Landroid/util/SparseArray;->size()I
 
@@ -2469,6 +2825,7 @@
 
     move v3, v2
 
+    .line 35
     :goto_4
     invoke-virtual {p2}, Landroid/util/SparseArray;->size()I
 
@@ -2476,19 +2833,22 @@
 
     if-ge v3, v4, :cond_c
 
+    .line 36
     invoke-virtual {p2, v3}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v4
 
+    .line 37
     invoke-virtual {p2, v4}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lw6/p2;
+    check-cast v5, Ld/d/a/u6/a5/q/k4;
 
+    .line 38
     iget-object v6, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mStrikethroughShowings:Landroid/util/SparseBooleanArray;
 
-    invoke-virtual {v5}, Lw6/p2;->a()I
+    invoke-virtual {v5}, Ld/d/a/u6/a5/q/k4;->a()I
 
     move-result v7
 
@@ -2498,10 +2858,12 @@
 
     if-nez v6, :cond_b
 
+    .line 39
     iget-object v6, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mChangeTopItems:Ljava/util/List;
 
     invoke-interface {v6, v5}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
+    .line 40
     invoke-virtual {p0, v4}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemRemoved(I)V
 
     :cond_b
@@ -2509,6 +2871,7 @@
 
     goto :goto_4
 
+    .line 41
     :cond_c
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
 
@@ -2518,6 +2881,7 @@
 
     move p2, v2
 
+    .line 42
     :goto_5
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
 
@@ -2525,26 +2889,30 @@
 
     if-ge p2, v3, :cond_d
 
+    .line 43
     invoke-virtual {v0, p2}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v3
 
+    .line 44
     iget-object v4, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mChangeTopItems:Ljava/util/List;
 
     invoke-virtual {v0, v3}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lw6/p2;
+    check-cast v5, Ld/d/a/u6/a5/q/k4;
 
     invoke-interface {v4, v3, v5}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
+    .line 45
     invoke-virtual {p0, v3}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemInserted(I)V
 
     add-int/lit8 p2, p2, 0x1
 
     goto :goto_5
 
+    .line 46
     :cond_d
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
@@ -2554,6 +2922,7 @@
 
     move p2, v2
 
+    .line 47
     :goto_6
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -2561,13 +2930,15 @@
 
     if-ge p2, v0, :cond_f
 
+    .line 48
     invoke-interface {p1, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lw6/p2;
+    check-cast v0, Ld/d/a/u6/a5/q/k4;
 
-    invoke-direct {p0, v1, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->contains(Ljava/util/List;Lw6/p2;)Z
+    .line 49
+    invoke-direct {p0, v1, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->contains(Ljava/util/List;Ld/d/a/u6/a5/q/k4;)Z
 
     move-result v3
 
@@ -2575,7 +2946,7 @@
 
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mStrikethroughShowings:Landroid/util/SparseBooleanArray;
 
-    invoke-virtual {v0}, Lw6/p2;->a()I
+    invoke-virtual {v0}, Ld/d/a/u6/a5/q/k4;->a()I
 
     move-result v0
 
@@ -2587,6 +2958,7 @@
 
     const/4 v0, -0x1
 
+    .line 50
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -2601,26 +2973,32 @@
     :cond_f
     return-void
 
+    .line 51
     :cond_10
     :goto_7
     iput-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mChangeTopItems:Ljava/util/List;
 
+    .line 52
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
     return-void
 
+    .line 53
     :cond_11
     :goto_8
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->updateChangeList()V
 
+    .line 54
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
     return-void
 
+    .line 55
     :cond_12
     :goto_9
     iput-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mChangeTopItems:Ljava/util/List;
 
+    .line 56
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
     return-void
@@ -2628,7 +3006,16 @@
 
 .method public setMode(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mode"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mCurrentMode:I
 
     return-void
@@ -2637,12 +3024,14 @@
 .method public updateTheme()V
     .locals 9
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mChangeTopItems:Ljava/util/List;
 
     if-nez v0, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2660,12 +3049,14 @@
 
     move-result-object v1
 
-    check-cast v1, Lw6/p2;
+    check-cast v1, Ld/d/a/u6/a5/q/k4;
 
-    invoke-virtual {v1}, Lw6/p2;->a()I
+    .line 3
+    invoke-virtual {v1}, Ld/d/a/u6/a5/q/k4;->a()I
 
     move-result v2
 
+    .line 4
     invoke-direct {p0, v2}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->findViewByConfigItem(I)Landroid/view/View;
 
     move-result-object v3
@@ -2674,25 +3065,29 @@
 
     goto :goto_0
 
+    .line 5
     :cond_2
-    invoke-virtual {v1}, Lw6/p2;->f()Lw6/p2$d;
+    invoke-virtual {v1}, Ld/d/a/u6/a5/q/k4;->f()Ld/d/a/u6/a5/q/k4$d;
 
     move-result-object v4
 
     iget v5, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mCurrentMode:I
 
-    invoke-interface {v4, v5}, Lw6/p2$d;->updateResource(I)Lw6/l4;
+    invoke-interface {v4, v5}, Ld/d/a/u6/a5/q/k4$d;->updateResource(I)Ld/d/a/u6/a5/q/m4;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lw6/l4;->e()I
+    .line 6
+    invoke-virtual {v4}, Ld/d/a/u6/a5/q/m4;->e()I
 
     move-result v5
 
+    .line 7
     iget-object v6, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mTopItemAnimIds:Landroid/util/SparseIntArray;
 
     invoke-virtual {v6, v2, v5}, Landroid/util/SparseIntArray;->put(II)V
 
+    .line 8
     iget-object v6, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -2721,22 +3116,25 @@
 
     invoke-static {v6, v2, v7}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    .line 9
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lm2/h1;->p0()Lj2/y0;
+    invoke-virtual {v2}, Ld/d/a/l6/e/m/g1;->h0()Ld/d/a/l6/e/j/x0;
 
     move-result-object v2
 
-    invoke-virtual {v1}, Lw6/p2;->a()I
+    .line 10
+    invoke-virtual {v1}, Ld/d/a/u6/a5/q/k4;->a()I
 
     move-result v1
 
-    invoke-virtual {v2, v1, v5}, Lj2/y0;->i(II)Z
+    invoke-virtual {v2, v1, v5}, Ld/d/a/l6/e/j/x0;->i(II)Z
 
     move-result v1
 
+    .line 11
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;->mRecyclerView:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarRecyclerView;
 
     invoke-virtual {v2, v3}, Landroidx/recyclerview/widget/RecyclerView;->getChildViewHolder(Landroid/view/View;)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
@@ -2745,13 +3143,16 @@
 
     if-nez v1, :cond_1
 
+    .line 12
     instance-of v1, v2, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;
 
     if-eqz v1, :cond_1
 
+    .line 13
     check-cast v2, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;
 
-    invoke-virtual {v2, v4}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;->updateView(Lw6/l4;)V
+    .line 14
+    invoke-virtual {v2, v4}, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarViewHolder;->updateView(Ld/d/a/u6/a5/q/m4;)V
 
     goto :goto_0
 

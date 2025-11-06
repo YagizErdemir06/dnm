@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/engine/Util;
+.class public Lcom/xiaomi/engine/Util;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -17,6 +17,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -51,10 +52,12 @@
 
     if-eqz p0, :cond_0
 
+    .line 1
     invoke-static {p0}, Lcom/xiaomi/engine/Util;->toStatusDescription(I)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 2
     sget-object v2, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     const/4 v3, 0x2
@@ -75,6 +78,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     sget-object p0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
@@ -105,12 +109,14 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/xiaomi/engine/Util;->TAG:Ljava/lang/String;
 
     const-string v1, "dumpMetaDataToLog: ==============================================="
 
     invoke-static {v0, v1}, Lcom/xiaomi/engine/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -122,12 +128,14 @@
 
     new-array v4, v3, [Ljava/lang/Class;
 
+    .line 3
     invoke-virtual {v0, v2, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
 
     new-array v2, v3, [Ljava/lang/Object;
 
+    .line 4
     invoke-virtual {v0, p0, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -137,12 +145,14 @@
     :catch_0
     move-exception p0
 
+    .line 5
     sget-object v0, Lcom/xiaomi/engine/Util;->TAG:Ljava/lang/String;
 
     const-string v2, "dumpMetaDataToLog: "
 
     invoke-static {v0, v2, p0}, Lcom/xiaomi/engine/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 6
     :goto_0
     sget-object p0, Lcom/xiaomi/engine/Util;->TAG:Ljava/lang/String;
 
@@ -166,6 +176,7 @@
 
     packed-switch p0, :pswitch_data_0
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

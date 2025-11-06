@@ -4,22 +4,30 @@
 
 
 # instance fields
-.field mColors:[I
+.field public mColors:[I
 
-.field mHeight:I
+.field public mHeight:I
 
-.field mLinearGradient:Landroid/graphics/LinearGradient;
+.field public mLinearGradient:Landroid/graphics/LinearGradient;
 
-.field mPaint:Landroid/graphics/Paint;
+.field public mPaint:Landroid/graphics/Paint;
 
-.field mPositions:[F
+.field public mPositions:[F
 
-.field mWidth:I
+.field public mWidth:I
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     .line 1
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
@@ -46,6 +54,16 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     .line 5
     invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -72,6 +90,18 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr"
+        }
+    .end annotation
 
     .line 9
     invoke-direct {p0, p1, p2, p3}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -98,6 +128,20 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr",
+            "defStyleRes"
+        }
+    .end annotation
 
     .line 13
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
@@ -121,7 +165,8 @@
 .method private getSlideBottomHeight()I
     .locals 2
 
-    invoke-static {}, Ly2/b;->t()I
+    .line 1
+    invoke-static {}, Ld/d/a/n6/b;->t()I
 
     move-result v0
 
@@ -131,7 +176,7 @@
 
     move-result-object p0
 
-    const v1, 0x7f070149
+    const v1, 0x7f070145
 
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -147,13 +192,15 @@
 .method private initView()V
     .locals 15
 
+    .line 1
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/SlideMaskView;->mPaint:Landroid/graphics/Paint;
 
-    invoke-static {}, Lcom/android/camera/CameraAppImpl;->o()Landroid/content/Context;
+    .line 2
+    invoke-static {}, Lcom/android/camera/CameraAppImpl;->d()Landroid/content/Context;
 
     move-result-object v0
 
@@ -161,13 +208,14 @@
 
     move-result-object v0
 
-    invoke-static {}, Ly2/b;->t()I
+    .line 3
+    invoke-static {}, Ld/d/a/n6/b;->t()I
 
     move-result v1
 
     int-to-float v1, v1
 
-    const v2, 0x7f070d90
+    const v2, 0x7f070b02
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -175,7 +223,7 @@
 
     add-float/2addr v1, v2
 
-    const v2, 0x7f070149
+    const v2, 0x7f070145
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -191,13 +239,14 @@
 
     new-array v1, v0, [I
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    .line 4
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object v2
 
-    const v3, 0x7f0608e2
+    const v3, 0x7f06047a
 
-    invoke-virtual {v2, v3}, Lf2/e;->b(I)I
+    invoke-virtual {v2, v3}, Ld/d/a/k6/f;->b(I)I
 
     move-result v2
 
@@ -205,13 +254,13 @@
 
     aput v2, v1, v3
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object v2
 
-    const v4, 0x7f060885
+    const v4, 0x7f06041d
 
-    invoke-virtual {v2, v4}, Lf2/e;->b(I)I
+    invoke-virtual {v2, v4}, Ld/d/a/k6/f;->b(I)I
 
     move-result v2
 
@@ -219,11 +268,11 @@
 
     aput v2, v1, v5
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object v2
 
-    invoke-virtual {v2, v4}, Lf2/e;->b(I)I
+    invoke-virtual {v2, v4}, Ld/d/a/k6/f;->b(I)I
 
     move-result v2
 
@@ -233,6 +282,7 @@
 
     iput-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/SlideMaskView;->mColors:[I
 
+    .line 5
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/beauty/SlideMaskView;->getSlideBottomHeight()I
 
     move-result v1
@@ -259,15 +309,11 @@
 
     aput v2, v0, v4
 
+    .line 6
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/SlideMaskView;->mPositions:[F
 
+    .line 7
     new-instance v0, Landroid/graphics/LinearGradient;
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    const/4 v10, 0x0
 
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/SlideMaskView;->mHeight:I
 
@@ -278,6 +324,12 @@
     iget-object v13, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/SlideMaskView;->mPositions:[F
 
     sget-object v14, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
 
     move-object v7, v0
 
@@ -291,45 +343,66 @@
 
 # virtual methods
 .method public onDraw(Landroid/graphics/Canvas;)V
-    .locals 8
+    .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "canvas"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/SlideMaskView;->mPaint:Landroid/graphics/Paint;
 
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/SlideMaskView;->mLinearGradient:Landroid/graphics/LinearGradient;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
+    .line 3
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v0
 
-    int-to-float v5, v0
+    int-to-float v4, v0
 
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/SlideMaskView;->mHeight:I
 
-    int-to-float v6, v0
+    int-to-float v5, v0
 
-    iget-object v7, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/SlideMaskView;->mPaint:Landroid/graphics/Paint;
+    iget-object v6, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/SlideMaskView;->mPaint:Landroid/graphics/Paint;
 
-    move-object v2, p1
+    const/4 v2, 0x0
 
-    invoke-virtual/range {v2 .. v7}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
+    const/4 v3, 0x0
+
+    move-object v1, p1
+
+    invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
     return-void
 .end method
 
 .method public setColor([I)V
     .locals 10
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "colors"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/SlideMaskView;->mColors:[I
 
-    invoke-static {}, Ly2/b;->M0()Z
+    .line 2
+    invoke-static {}, Ld/d/a/n6/b;->M0()Z
 
     move-result p1
 
@@ -337,15 +410,17 @@
 
     if-eqz p1, :cond_1
 
+    .line 3
     iget p1, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/SlideMaskView;->mWidth:I
 
     if-nez p1, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const v1, 0x7f070c91
+    const v1, 0x7f070a06
 
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -353,8 +428,9 @@
 
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/SlideMaskView;->mWidth:I
 
+    .line 5
     :cond_0
-    invoke-static {}, Ly2/b;->n()I
+    invoke-static {}, Ld/d/a/n6/b;->n()I
 
     move-result p1
 
@@ -362,10 +438,12 @@
 
     new-array p1, v0, [F
 
+    .line 6
     fill-array-data p1, :array_0
 
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/SlideMaskView;->mPositions:[F
 
+    .line 7
     new-instance p1, Landroid/graphics/LinearGradient;
 
     const/4 v1, 0x0
@@ -392,8 +470,9 @@
 
     goto :goto_0
 
+    .line 8
     :cond_1
-    invoke-static {}, Lcom/android/camera/CameraAppImpl;->o()Landroid/content/Context;
+    invoke-static {}, Lcom/android/camera/CameraAppImpl;->d()Landroid/content/Context;
 
     move-result-object p1
 
@@ -401,13 +480,14 @@
 
     move-result-object p1
 
-    invoke-static {}, Ly2/b;->t()I
+    .line 9
+    invoke-static {}, Ld/d/a/n6/b;->t()I
 
     move-result v1
 
     int-to-float v1, v1
 
-    const v2, 0x7f070d90
+    const v2, 0x7f070b02
 
     invoke-virtual {p1, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -415,7 +495,7 @@
 
     add-float/2addr v1, v2
 
-    const v2, 0x7f070149
+    const v2, 0x7f070145
 
     invoke-virtual {p1, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -427,6 +507,7 @@
 
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/SlideMaskView;->mHeight:I
 
+    .line 10
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/mm/beauty/SlideMaskView;->getSlideBottomHeight()I
 
     move-result p1
@@ -459,8 +540,10 @@
 
     aput v1, v0, p1
 
+    .line 11
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/SlideMaskView;->mPositions:[F
 
+    .line 12
     new-instance p1, Landroid/graphics/LinearGradient;
 
     const/4 v4, 0x0
@@ -483,6 +566,7 @@
 
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/SlideMaskView;->mLinearGradient:Landroid/graphics/LinearGradient;
 
+    .line 13
     :goto_0
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
@@ -498,7 +582,16 @@
 
 .method public setWidth(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mWidth"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/SlideMaskView;->mWidth:I
 
     return-void

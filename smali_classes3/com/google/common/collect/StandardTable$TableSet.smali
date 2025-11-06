@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/collect/StandardTable$TableSet;
+.class public abstract Lcom/google/common/collect/StandardTable$TableSet;
 .super Lcom/google/common/collect/Sets$ImprovedAbstractSet;
 .source "SourceFile"
 
@@ -25,7 +25,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/StandardTable;
+.field public final synthetic this$0:Lcom/google/common/collect/StandardTable;
 
 
 # direct methods
@@ -54,6 +54,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/StandardTable$TableSet;->this$0:Lcom/google/common/collect/StandardTable;
 
     iget-object p0, p0, Lcom/google/common/collect/StandardTable;->backingMap:Ljava/util/Map;
@@ -66,6 +67,7 @@
 .method public isEmpty()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/StandardTable$TableSet;->this$0:Lcom/google/common/collect/StandardTable;
 
     iget-object p0, p0, Lcom/google/common/collect/StandardTable;->backingMap:Ljava/util/Map;

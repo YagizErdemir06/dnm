@@ -1,4 +1,4 @@
-.class interface abstract Lcom/google/android/exoplayer2/mediacodec/MediaCodecUtil$ScoreProvider;
+.class public interface abstract Lcom/google/android/exoplayer2/mediacodec/MediaCodecUtil$ScoreProvider;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

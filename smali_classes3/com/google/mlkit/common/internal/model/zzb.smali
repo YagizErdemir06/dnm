@@ -26,6 +26,7 @@
 .method public final then(Ljava/lang/Object;)Lcom/google/android/gms/tasks/Task;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/common/internal/model/zzb;->zza:Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;
 
     invoke-virtual {p0}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->ensureModelDownloaded()Lcom/google/android/gms/tasks/Task;

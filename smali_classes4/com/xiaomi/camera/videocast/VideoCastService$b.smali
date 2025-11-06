@@ -21,7 +21,16 @@
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/camera/videocast/VideoCastService;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/videocast/VideoCastService$b;->a:Lcom/xiaomi/camera/videocast/VideoCastService;
 
     invoke-direct {p0}, Landroid/net/ConnectivityManager$NetworkCallback;-><init>()V
@@ -37,7 +46,16 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "network"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/camera/videocast/VideoCastService;->a()Ljava/lang/String;
 
     move-result-object p0
@@ -56,23 +74,24 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Lbg/a;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Ld/o/f/r/m/a;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method public onUnavailable()V
     .locals 1
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/camera/videocast/VideoCastService;->a()Ljava/lang/String;
 
     move-result-object p0
 
     const-string v0, "WiFi connection unavailable"
 
-    invoke-static {p0, v0}, Lbg/a;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Ld/o/f/r/m/a;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

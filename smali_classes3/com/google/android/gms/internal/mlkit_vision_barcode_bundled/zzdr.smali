@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdr;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdr;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -13,6 +13,7 @@
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdq;
 
     invoke-direct {v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdq;-><init>()V
@@ -30,6 +31,7 @@
 
     new-array v2, v1, [Ljava/lang/Class;
 
+    .line 2
     invoke-virtual {v0, v2}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object v0
@@ -58,6 +60,7 @@
 .method public static zza()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdp;
     .locals 2
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdr;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdp;
 
     if-eqz v0, :cond_0

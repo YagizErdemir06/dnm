@@ -15,6 +15,7 @@
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance p2, Ljava/util/concurrent/atomic/AtomicLong;
@@ -25,6 +26,7 @@
 
     iput-object p2, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrn;->zzb:Ljava/util/concurrent/atomic/AtomicLong;
 
+    .line 2
     invoke-static {}, Lcom/google/android/gms/common/internal/TelemetryLoggingOptions;->builder()Lcom/google/android/gms/common/internal/TelemetryLoggingOptions$Builder;
 
     move-result-object p2
@@ -39,6 +41,7 @@
 
     move-result-object p2
 
+    .line 3
     invoke-static {p1, p2}, Lcom/google/android/gms/common/internal/TelemetryLogging;->getClient(Landroid/content/Context;Lcom/google/android/gms/common/internal/TelemetryLoggingOptions;)Lcom/google/android/gms/common/internal/TelemetryLoggingClient;
 
     move-result-object p1
@@ -51,6 +54,7 @@
 .method public static zza(Landroid/content/Context;)Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrn;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrn;
 
     const-string v1, "mlkit:vision"
@@ -65,6 +69,7 @@
 .method public final synthetic zzb(JLjava/lang/Exception;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrn;->zzb:Ljava/util/concurrent/atomic/AtomicLong;
 
     invoke-virtual {p0, p1, p2}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
@@ -79,6 +84,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -86,6 +92,7 @@
 
     iget-object v0, v1, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrn;->zzb:Ljava/util/concurrent/atomic/AtomicLong;
 
+    .line 2
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
 
     move-result-wide v4
@@ -98,9 +105,11 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object v0, v1, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrn;->zzb:Ljava/util/concurrent/atomic/AtomicLong;
 
+    .line 4
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
 
     move-result-wide v4
@@ -125,11 +134,13 @@
 
     return-void
 
+    .line 5
     :cond_1
     :goto_0
     :try_start_1
     iget-object v0, v1, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrn;->zza:Lcom/google/android/gms/common/internal/TelemetryLoggingClient;
 
+    .line 6
     new-instance v4, Lcom/google/android/gms/common/internal/TelemetryData;
 
     const/4 v5, 0x1
@@ -162,16 +173,19 @@
 
     aput-object v17, v5, v6
 
+    .line 7
     invoke-static {v5}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v5
 
     invoke-direct {v4, v6, v5}, Lcom/google/android/gms/common/internal/TelemetryData;-><init>(ILjava/util/List;)V
 
+    .line 8
     invoke-interface {v0, v4}, Lcom/google/android/gms/common/internal/TelemetryLoggingClient;->log(Lcom/google/android/gms/common/internal/TelemetryData;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object v0
 
+    .line 9
     new-instance v4, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrm;
 
     invoke-direct {v4, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrm;-><init>(Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrn;J)V

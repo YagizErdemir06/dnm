@@ -1,4 +1,4 @@
-.class final Landroidx/core/app/JobIntentService$JobWorkEnqueuer;
+.class public final Landroidx/core/app/JobIntentService$JobWorkEnqueuer;
 .super Landroidx/core/app/JobIntentService$WorkEnqueuer;
 .source "SourceFile"
 
@@ -28,10 +28,13 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/content/ComponentName;I)V
     .locals 2
 
+    .line 1
     invoke-direct {p0, p2}, Landroidx/core/app/JobIntentService$WorkEnqueuer;-><init>(Landroid/content/ComponentName;)V
 
+    .line 2
     invoke-virtual {p0, p3}, Landroidx/core/app/JobIntentService$WorkEnqueuer;->ensureJobId(I)V
 
+    .line 3
     new-instance p2, Landroid/app/job/JobInfo$Builder;
 
     iget-object v0, p0, Landroidx/core/app/JobIntentService$WorkEnqueuer;->mComponentName:Landroid/content/ComponentName;
@@ -40,6 +43,7 @@
 
     const-wide/16 v0, 0x0
 
+    .line 4
     invoke-virtual {p2, v0, v1}, Landroid/app/job/JobInfo$Builder;->setOverrideDeadline(J)Landroid/app/job/JobInfo$Builder;
 
     move-result-object p2
@@ -50,6 +54,7 @@
 
     iput-object p2, p0, Landroidx/core/app/JobIntentService$JobWorkEnqueuer;->mJobInfo:Landroid/app/job/JobInfo;
 
+    .line 5
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
@@ -72,6 +77,7 @@
 .method public enqueueWork(Landroid/content/Intent;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/core/app/JobIntentService$JobWorkEnqueuer;->mJobScheduler:Landroid/app/job/JobScheduler;
 
     iget-object p0, p0, Landroidx/core/app/JobIntentService$JobWorkEnqueuer;->mJobInfo:Landroid/app/job/JobInfo;

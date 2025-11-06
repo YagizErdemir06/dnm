@@ -22,6 +22,7 @@
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Lcom/android/camera/display/layout/CamLayoutManager$b;->values()[Lcom/android/camera/display/layout/CamLayoutManager$b;
 
     move-result-object v0
@@ -33,7 +34,7 @@
     sput-object v0, Lcom/android/camera/provider/SplashProvider$a;->a:[I
 
     :try_start_0
-    sget-object v1, Lcom/android/camera/display/layout/CamLayoutManager$b;->b:Lcom/android/camera/display/layout/CamLayoutManager$b;
+    sget-object v1, Lcom/android/camera/display/layout/CamLayoutManager$b;->d:Lcom/android/camera/display/layout/CamLayoutManager$b;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -49,7 +50,7 @@
     :try_start_1
     sget-object v0, Lcom/android/camera/provider/SplashProvider$a;->a:[I
 
-    sget-object v1, Lcom/android/camera/display/layout/CamLayoutManager$b;->c:Lcom/android/camera/display/layout/CamLayoutManager$b;
+    sget-object v1, Lcom/android/camera/display/layout/CamLayoutManager$b;->f:Lcom/android/camera/display/layout/CamLayoutManager$b;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -65,7 +66,7 @@
     :try_start_2
     sget-object v0, Lcom/android/camera/provider/SplashProvider$a;->a:[I
 
-    sget-object v1, Lcom/android/camera/display/layout/CamLayoutManager$b;->d:Lcom/android/camera/display/layout/CamLayoutManager$b;
+    sget-object v1, Lcom/android/camera/display/layout/CamLayoutManager$b;->g:Lcom/android/camera/display/layout/CamLayoutManager$b;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -81,7 +82,7 @@
     :try_start_3
     sget-object v0, Lcom/android/camera/provider/SplashProvider$a;->a:[I
 
-    sget-object v1, Lcom/android/camera/display/layout/CamLayoutManager$b;->g:Lcom/android/camera/display/layout/CamLayoutManager$b;
+    sget-object v1, Lcom/android/camera/display/layout/CamLayoutManager$b;->n:Lcom/android/camera/display/layout/CamLayoutManager$b;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -97,7 +98,7 @@
     :try_start_4
     sget-object v0, Lcom/android/camera/provider/SplashProvider$a;->a:[I
 
-    sget-object v1, Lcom/android/camera/display/layout/CamLayoutManager$b;->h:Lcom/android/camera/display/layout/CamLayoutManager$b;
+    sget-object v1, Lcom/android/camera/display/layout/CamLayoutManager$b;->p:Lcom/android/camera/display/layout/CamLayoutManager$b;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -113,7 +114,7 @@
     :try_start_5
     sget-object v0, Lcom/android/camera/provider/SplashProvider$a;->a:[I
 
-    sget-object v1, Lcom/android/camera/display/layout/CamLayoutManager$b;->e:Lcom/android/camera/display/layout/CamLayoutManager$b;
+    sget-object v1, Lcom/android/camera/display/layout/CamLayoutManager$b;->j:Lcom/android/camera/display/layout/CamLayoutManager$b;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 

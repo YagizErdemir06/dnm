@@ -8,32 +8,42 @@
     value = "SMAP\nPropController.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PropController.kt\ncom/faceunity/core/controller/prop/PropController\n+ 2 _Maps.kt\nkotlin/collections/MapsKt___MapsKt\n*L\n1#1,296:1\n181#2,2:297\n181#2,2:299\n181#2,2:301\n*E\n*S KotlinDebug\n*F\n+ 1 PropController.kt\ncom/faceunity/core/controller/prop/PropController\n*L\n87#1,2:297\n107#1,2:299\n289#1,2:301\n*E\n"
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000P\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0003\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0000\n\u0002\u0008\n\n\u0002\u0010\u0012\n\u0002\u0008\t\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0018\u00002\u00020\u0001B\u0007\u00a2\u0006\u0004\u00080\u0010\u001eJ\u0010\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0002J\u0010\u0010\u0006\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0002J\u0018\u0010\t\u001a\u00020\u00042\u0006\u0010\u0007\u001a\u00020\u00022\u0006\u0010\u0008\u001a\u00020\u0002H\u0002J\u0018\u0010\r\u001a\u00020\u00042\u0006\u0010\u000b\u001a\u00020\n2\u0006\u0010\u000c\u001a\u00020\u0002H\u0002J\u001a\u0010\u000f\u001a\u00020\u00042\u0008\u0010\u0007\u001a\u0004\u0018\u00010\u000e2\u0008\u0010\u0008\u001a\u0004\u0018\u00010\u000eJ\u0016\u0010\u0014\u001a\u00020\u00042\u0006\u0010\u0011\u001a\u00020\u00102\u0006\u0010\u0013\u001a\u00020\u0012J\'\u0010\u001c\u001a\u00020\u00042\u0006\u0010\u0015\u001a\u00020\u00102\u0006\u0010\u0017\u001a\u00020\u00162\u0006\u0010\u0019\u001a\u00020\u0018H\u0000\u00a2\u0006\u0004\u0008\u001a\u0010\u001bJ\u000f\u0010\u001f\u001a\u00020\u0004H\u0000\u00a2\u0006\u0004\u0008\u001d\u0010\u001eJ\u000f\u0010!\u001a\u00020\u0004H\u0000\u00a2\u0006\u0004\u0008 \u0010\u001eJ7\u0010)\u001a\u00020\u00042\u0006\u0010\u0015\u001a\u00020\u00102\u0006\u0010\"\u001a\u00020\u00162\u0006\u0010$\u001a\u00020#2\u0006\u0010%\u001a\u00020\n2\u0006\u0010&\u001a\u00020\nH\u0000\u00a2\u0006\u0004\u0008\'\u0010(J\u001f\u0010,\u001a\u00020\u00042\u0006\u0010\u0015\u001a\u00020\u00102\u0006\u0010\"\u001a\u00020\u0016H\u0000\u00a2\u0006\u0004\u0008*\u0010+J\u0010\u0010/\u001a\u00020\u00042\u0006\u0010.\u001a\u00020-H\u0016\u00a8\u00061"
+        "\u0000R\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0010\u0008\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\t\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0004\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0000\n\u0002\u0008\n\n\u0002\u0010\u0012\n\u0002\u0008\t\n\u0002\u0018\u0002\n\u0002\u0008\u0005\u0018\u00002\u00020\u0001B\u0007\u00a2\u0006\u0004\u00086\u0010#J\u0017\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0002\u00a2\u0006\u0004\u0008\u0005\u0010\u0006J\u0017\u0010\u0007\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0002\u00a2\u0006\u0004\u0008\u0007\u0010\u0006J\u001f\u0010\n\u001a\u00020\u00042\u0006\u0010\u0008\u001a\u00020\u00022\u0006\u0010\t\u001a\u00020\u0002H\u0002\u00a2\u0006\u0004\u0008\n\u0010\u000bJ\u001f\u0010\u000f\u001a\u00020\u00042\u0006\u0010\r\u001a\u00020\u000c2\u0006\u0010\u000e\u001a\u00020\u0002H\u0002\u00a2\u0006\u0004\u0008\u000f\u0010\u0010J!\u0010\u0012\u001a\u00020\u00042\u0008\u0010\u0008\u001a\u0004\u0018\u00010\u00112\u0008\u0010\t\u001a\u0004\u0018\u00010\u0011\u00a2\u0006\u0004\u0008\u0012\u0010\u0013J\u001d\u0010\u0018\u001a\u00020\u00042\u0006\u0010\u0015\u001a\u00020\u00142\u0006\u0010\u0017\u001a\u00020\u0016\u00a2\u0006\u0004\u0008\u0018\u0010\u0019J\'\u0010!\u001a\u00020\u00042\u0006\u0010\u001a\u001a\u00020\u00142\u0006\u0010\u001c\u001a\u00020\u001b2\u0006\u0010\u001e\u001a\u00020\u001dH\u0000\u00a2\u0006\u0004\u0008\u001f\u0010 J\u000f\u0010$\u001a\u00020\u0004H\u0000\u00a2\u0006\u0004\u0008\"\u0010#J\u000f\u0010&\u001a\u00020\u0004H\u0000\u00a2\u0006\u0004\u0008%\u0010#J7\u0010.\u001a\u00020\u00042\u0006\u0010\u001a\u001a\u00020\u00142\u0006\u0010\'\u001a\u00020\u001b2\u0006\u0010)\u001a\u00020(2\u0006\u0010*\u001a\u00020\u000c2\u0006\u0010+\u001a\u00020\u000cH\u0000\u00a2\u0006\u0004\u0008,\u0010-J\u001f\u00101\u001a\u00020\u00042\u0006\u0010\u001a\u001a\u00020\u00142\u0006\u0010\'\u001a\u00020\u001bH\u0000\u00a2\u0006\u0004\u0008/\u00100J\u0017\u00104\u001a\u00020\u00042\u0006\u00103\u001a\u000202H\u0016\u00a2\u0006\u0004\u00084\u00105\u00a8\u00067"
     }
     d2 = {
         "Lcom/faceunity/core/controller/prop/PropController;",
         "Lcom/faceunity/core/controller/prop/BasePropController;",
         "Lcom/faceunity/core/entity/FUFeaturesData;",
         "fuFeaturesData",
-        "Lnm/l2;",
+        "Lh/l2;",
         "applyAddProp",
+        "(Lcom/faceunity/core/entity/FUFeaturesData;)V",
         "applyRemoveProp",
         "oldData",
         "newData",
         "applyReplaceProp",
+        "(Lcom/faceunity/core/entity/FUFeaturesData;Lcom/faceunity/core/entity/FUFeaturesData;)V",
         "",
         "handle",
         "data",
         "setPropParams",
+        "(ILcom/faceunity/core/entity/FUFeaturesData;)V",
         "Lcom/faceunity/core/model/prop/Prop;",
         "replaceProp",
+        "(Lcom/faceunity/core/model/prop/Prop;Lcom/faceunity/core/model/prop/Prop;)V",
         "",
         "modelId",
         "",
         "enable",
         "setBundleEnable",
+        "(JZ)V",
         "propId",
         "",
         "key",
@@ -61,6 +71,7 @@
         "Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;",
         "queue",
         "applyThreadQueue",
+        "(Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;)V",
         "<init>",
         "lib_core_release"
     }
@@ -77,6 +88,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/core/controller/prop/BasePropController;-><init>()V
 
     return-void
@@ -85,10 +97,12 @@
 .method private final applyAddProp(Lcom/faceunity/core/entity/FUFeaturesData;)V
     .locals 5
 
+    .line 1
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FUFeaturesData;->getBundle()Lcom/faceunity/core/entity/FUBundleData;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMBundleManager()Lcom/faceunity/core/bundle/FUBundleManager;
 
     move-result-object v1
@@ -99,6 +113,7 @@
 
     if-gtz v1, :cond_0
 
+    .line 3
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -125,6 +140,7 @@
 
     return-void
 
+    .line 4
     :cond_0
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMPropIdMap()Ljava/util/HashMap;
 
@@ -144,6 +160,7 @@
 
     invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 5
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMPropTypeMap()Ljava/util/HashMap;
 
     move-result-object v0
@@ -162,24 +179,27 @@
 
     invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 6
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FUFeaturesData;->getEnable()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 7
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMBundleManager()Lcom/faceunity/core/bundle/FUBundleManager;
 
     move-result-object v0
 
-    const/4 v2, 0x2
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    const/4 v3, 0x2
 
     const/4 v4, 0x0
 
-    invoke-static {v0, v1, v4, v2, v3}, Lcom/faceunity/core/bundle/FUBundleManager;->bindControllerBundle$default(Lcom/faceunity/core/bundle/FUBundleManager;IZILjava/lang/Object;)V
+    invoke-static {v0, v1, v2, v3, v4}, Lcom/faceunity/core/bundle/FUBundleManager;->bindControllerBundle$default(Lcom/faceunity/core/bundle/FUBundleManager;IZILjava/lang/Object;)V
 
+    .line 8
     :cond_1
     invoke-direct {p0, v1, p1}, Lcom/faceunity/core/controller/prop/PropController;->setPropParams(ILcom/faceunity/core/entity/FUFeaturesData;)V
 
@@ -189,6 +209,7 @@
 .method private final applyRemoveProp(Lcom/faceunity/core/entity/FUFeaturesData;)V
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMPropIdMap()Ljava/util/HashMap;
 
     move-result-object v0
@@ -209,16 +230,19 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
 
     move-result v0
 
+    .line 3
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMBundleManager()Lcom/faceunity/core/bundle/FUBundleManager;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Lcom/faceunity/core/bundle/FUBundleManager;->unbindAndDestroyControllerBundle(I)V
 
+    .line 4
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMPropIdMap()Ljava/util/HashMap;
 
     move-result-object v0
@@ -233,6 +257,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 5
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMPropTypeMap()Ljava/util/HashMap;
 
     move-result-object p0
@@ -258,6 +283,7 @@
 .method private final applyReplaceProp(Lcom/faceunity/core/entity/FUFeaturesData;Lcom/faceunity/core/entity/FUFeaturesData;)V
     .locals 8
 
+    .line 1
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FUFeaturesData;->getBundle()Lcom/faceunity/core/entity/FUBundleData;
 
     move-result-object v0
@@ -274,7 +300,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lh/d3/x/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -286,6 +312,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 2
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMPropIdMap()Ljava/util/HashMap;
 
     move-result-object v0
@@ -306,10 +333,12 @@
 
     if-eqz v0, :cond_1
 
+    .line 3
     invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
 
     move-result v0
 
+    .line 4
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMPropIdMap()Ljava/util/HashMap;
 
     move-result-object v4
@@ -324,6 +353,7 @@
 
     invoke-virtual {v4, v5}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 5
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMPropTypeMap()Ljava/util/HashMap;
 
     move-result-object v4
@@ -338,6 +368,7 @@
 
     invoke-virtual {v4, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 6
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMPropIdMap()Ljava/util/HashMap;
 
     move-result-object p1
@@ -356,6 +387,7 @@
 
     invoke-interface {p1, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 7
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMPropTypeMap()Ljava/util/HashMap;
 
     move-result-object p1
@@ -374,12 +406,14 @@
 
     invoke-interface {p1, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 8
     invoke-virtual {p2}, Lcom/faceunity/core/entity/FUFeaturesData;->getEnable()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
+    .line 9
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMBundleManager()Lcom/faceunity/core/bundle/FUBundleManager;
 
     move-result-object p1
@@ -388,6 +422,7 @@
 
     goto :goto_0
 
+    .line 10
     :cond_0
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMBundleManager()Lcom/faceunity/core/bundle/FUBundleManager;
 
@@ -395,17 +430,20 @@
 
     invoke-virtual {p1, v0}, Lcom/faceunity/core/bundle/FUBundleManager;->unbindControllerBundle(I)V
 
+    .line 11
     :goto_0
     invoke-direct {p0, v0, p2}, Lcom/faceunity/core/controller/prop/PropController;->setPropParams(ILcom/faceunity/core/entity/FUFeaturesData;)V
 
     :cond_1
     return-void
 
+    .line 12
     :cond_2
     invoke-virtual {p2}, Lcom/faceunity/core/entity/FUFeaturesData;->getBundle()Lcom/faceunity/core/entity/FUBundleData;
 
     move-result-object v0
 
+    .line 13
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMBundleManager()Lcom/faceunity/core/bundle/FUBundleManager;
 
     move-result-object v4
@@ -414,6 +452,7 @@
 
     move-result v4
 
+    .line 14
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMPropIdMap()Ljava/util/HashMap;
 
     move-result-object v5
@@ -434,16 +473,19 @@
 
     if-eqz v5, :cond_3
 
+    .line 15
     invoke-virtual {v5}, Ljava/lang/Number;->intValue()I
 
     move-result v5
 
+    .line 16
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMBundleManager()Lcom/faceunity/core/bundle/FUBundleManager;
 
     move-result-object v6
 
     invoke-virtual {v6, v5}, Lcom/faceunity/core/bundle/FUBundleManager;->unbindAndDestroyControllerBundle(I)V
 
+    .line 17
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMPropIdMap()Ljava/util/HashMap;
 
     move-result-object v5
@@ -458,6 +500,7 @@
 
     invoke-virtual {v5, v6}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 18
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMPropTypeMap()Ljava/util/HashMap;
 
     move-result-object v5
@@ -479,6 +522,7 @@
     :cond_3
     if-gtz v4, :cond_4
 
+    .line 19
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getTAG()Ljava/lang/String;
 
     move-result-object p0
@@ -505,6 +549,7 @@
 
     return-void
 
+    .line 20
     :cond_4
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMPropIdMap()Ljava/util/HashMap;
 
@@ -524,6 +569,7 @@
 
     invoke-interface {p1, v0, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 21
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMPropTypeMap()Ljava/util/HashMap;
 
     move-result-object p1
@@ -542,18 +588,21 @@
 
     invoke-interface {p1, v0, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 22
     invoke-virtual {p2}, Lcom/faceunity/core/entity/FUFeaturesData;->getEnable()Z
 
     move-result p1
 
     if-eqz p1, :cond_5
 
+    .line 23
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMBundleManager()Lcom/faceunity/core/bundle/FUBundleManager;
 
     move-result-object p1
 
     invoke-static {p1, v4, v3, v2, v1}, Lcom/faceunity/core/bundle/FUBundleManager;->bindControllerBundle$default(Lcom/faceunity/core/bundle/FUBundleManager;IZILjava/lang/Object;)V
 
+    .line 24
     :cond_5
     invoke-direct {p0, v4, p2}, Lcom/faceunity/core/controller/prop/PropController;->setPropParams(ILcom/faceunity/core/entity/FUFeaturesData;)V
 
@@ -563,12 +612,14 @@
 .method private final setPropParams(ILcom/faceunity/core/entity/FUFeaturesData;)V
     .locals 6
 
+    .line 1
     invoke-virtual {p2}, Lcom/faceunity/core/entity/FUFeaturesData;->getParams()Ljava/util/LinkedHashMap;
 
     move-result-object v0
 
     const-string v1, "propType"
 
+    .line 2
     invoke-virtual {v0, v1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
@@ -579,7 +630,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Lh/d3/x/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -587,6 +638,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 3
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMFURenderBridge()Lcom/faceunity/core/support/FURenderBridge;
 
     move-result-object p2
@@ -597,6 +649,7 @@
 
     int-to-double v0, p2
 
+    .line 4
     invoke-static {v0, v1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object p2
@@ -605,16 +658,18 @@
 
     invoke-virtual {p0, p1, v0, p2}, Lcom/faceunity/core/controller/prop/BasePropController;->itemSetParam$lib_core_release(ILjava/lang/String;Ljava/lang/Object;)V
 
-    const-string p2, "bg_align_type"
-
+    .line 5
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v0
+    move-result-object p2
 
-    invoke-virtual {p0, p1, p2, v0}, Lcom/faceunity/core/controller/prop/BasePropController;->itemSetParam$lib_core_release(ILjava/lang/String;Ljava/lang/Object;)V
+    const-string v0, "bg_align_type"
+
+    invoke-virtual {p0, p1, v0, p2}, Lcom/faceunity/core/controller/prop/BasePropController;->itemSetParam$lib_core_release(ILjava/lang/String;Ljava/lang/Object;)V
 
     goto/16 :goto_3
 
+    .line 6
     :cond_0
     invoke-virtual {v0, v1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -626,15 +681,16 @@
 
     move-result-object v4
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v4}, Lh/d3/x/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_6
+    if-eqz v2, :cond_5
 
     const-string p2, "is_flip_points"
 
-    invoke-virtual {v0, p2}, Ljava/util/AbstractMap;->containsKey(Ljava/lang/Object;)Z
+    .line 7
+    invoke-virtual {v0, p2}, Ljava/util/LinkedHashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -642,6 +698,7 @@
 
     if-eqz v1, :cond_3
 
+    .line 8
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMFURenderBridge()Lcom/faceunity/core/support/FURenderBridge;
 
     move-result-object v1
@@ -689,6 +746,7 @@
     :goto_0
     move-wide v4, v2
 
+    .line 9
     :goto_1
     invoke-static {v4, v5}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
@@ -699,12 +757,14 @@
     :cond_3
     const-string p2, "is3DFlipH"
 
-    invoke-virtual {v0, p2}, Ljava/util/AbstractMap;->containsKey(Ljava/lang/Object;)Z
+    .line 10
+    invoke-virtual {v0, p2}, Ljava/util/LinkedHashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
+    .line 11
     invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v1
@@ -714,17 +774,21 @@
     :cond_4
     const-string p2, "force_portrait"
 
-    invoke-virtual {v0, p2}, Ljava/util/AbstractMap;->containsKey(Ljava/lang/Object;)Z
+    .line 12
+    invoke-virtual {v0, p2}, Ljava/util/LinkedHashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_8
+    if-eqz v1, :cond_7
 
+    .line 13
     invoke-virtual {v0, p2}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    if-eqz v0, :cond_5
+    const-string v1, "null cannot be cast to non-null type kotlin.Int"
+
+    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Integer;
 
@@ -732,20 +796,13 @@
 
     goto :goto_3
 
+    .line 14
     :cond_5
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string p1, "null cannot be cast to non-null type kotlin.Int"
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_6
     invoke-virtual {p2}, Lcom/faceunity/core/entity/FUFeaturesData;->getParams()Ljava/util/LinkedHashMap;
 
     move-result-object p2
 
+    .line 15
     invoke-interface {p2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p2
@@ -754,13 +811,13 @@
 
     move-result-object p2
 
-    :cond_7
+    :cond_6
     :goto_2
     invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_7
 
     invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -778,19 +835,21 @@
 
     move-result-object v0
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .line 16
+    invoke-static {v2, v1}, Lh/d3/x/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v4
 
     xor-int/2addr v4, v3
 
-    if-eqz v4, :cond_7
+    if-eqz v4, :cond_6
 
+    .line 17
     invoke-virtual {p0, p1, v2, v0}, Lcom/faceunity/core/controller/prop/BasePropController;->itemSetParam$lib_core_release(ILjava/lang/String;Ljava/lang/Object;)V
 
     goto :goto_2
 
-    :cond_8
+    :cond_7
     :goto_3
     return-void
 .end method
@@ -800,14 +859,15 @@
 .method public applyThreadQueue(Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;)V
     .locals 2
     .param p1    # Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "queue"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-virtual {p1}, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;->getType()Lcom/faceunity/core/controller/prop/PropQueuePool$QueueType;
 
     move-result-object v0
@@ -838,21 +898,23 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
-    invoke-virtual {p1}, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;->getUnit()Ljn/a;
+    invoke-virtual {p1}, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;->getUnit()Lh/d3/w/a;
 
     move-result-object p0
 
     if-eqz p0, :cond_4
 
-    invoke-interface {p0}, Ljn/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lh/d3/w/a;->invoke()Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Lnm/l2;
+    check-cast p0, Lh/l2;
 
     goto :goto_0
 
+    .line 3
     :cond_1
     invoke-virtual {p1}, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;->getData()Lcom/faceunity/core/entity/FUFeaturesData;
 
@@ -860,16 +922,19 @@
 
     if-eqz v0, :cond_4
 
+    .line 4
     invoke-virtual {p1}, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;->getReplaceData()Lcom/faceunity/core/entity/FUFeaturesData;
 
     move-result-object p1
 
     if-eqz p1, :cond_4
 
+    .line 5
     invoke-direct {p0, v0, p1}, Lcom/faceunity/core/controller/prop/PropController;->applyReplaceProp(Lcom/faceunity/core/entity/FUFeaturesData;Lcom/faceunity/core/entity/FUFeaturesData;)V
 
     goto :goto_0
 
+    .line 6
     :cond_2
     invoke-virtual {p1}, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;->getData()Lcom/faceunity/core/entity/FUFeaturesData;
 
@@ -877,10 +942,12 @@
 
     if-eqz p1, :cond_4
 
+    .line 7
     invoke-direct {p0, p1}, Lcom/faceunity/core/controller/prop/PropController;->applyRemoveProp(Lcom/faceunity/core/entity/FUFeaturesData;)V
 
     goto :goto_0
 
+    .line 8
     :cond_3
     invoke-virtual {p1}, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;->getData()Lcom/faceunity/core/entity/FUFeaturesData;
 
@@ -888,6 +955,7 @@
 
     if-eqz p1, :cond_4
 
+    .line 9
     invoke-direct {p0, p1}, Lcom/faceunity/core/controller/prop/PropController;->applyAddProp(Lcom/faceunity/core/entity/FUFeaturesData;)V
 
     :cond_4
@@ -898,22 +966,23 @@
 .method public final createItemTex$lib_core_release(JLjava/lang/String;[BII)V
     .locals 9
     .param p3    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p4    # [B
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "name"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "rgba"
 
-    invoke-static {p4, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     new-instance v0, Lcom/faceunity/core/controller/prop/PropController$createItemTex$unit$1;
 
     move-object v1, v0
@@ -932,6 +1001,7 @@
 
     invoke-direct/range {v1 .. v8}, Lcom/faceunity/core/controller/prop/PropController$createItemTex$unit$1;-><init>(Lcom/faceunity/core/controller/prop/PropController;JLjava/lang/String;[BII)V
 
+    .line 2
     new-instance p1, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;
 
     sget-object v2, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueType;->UNIT:Lcom/faceunity/core/controller/prop/PropQueuePool$QueueType;
@@ -948,8 +1018,9 @@
 
     move-object v5, v0
 
-    invoke-direct/range {v1 .. v7}, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;-><init>(Lcom/faceunity/core/controller/prop/PropQueuePool$QueueType;Lcom/faceunity/core/entity/FUFeaturesData;Lcom/faceunity/core/entity/FUFeaturesData;Ljn/a;ILkotlin/jvm/internal/w;)V
+    invoke-direct/range {v1 .. v7}, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;-><init>(Lcom/faceunity/core/controller/prop/PropQueuePool$QueueType;Lcom/faceunity/core/entity/FUFeaturesData;Lcom/faceunity/core/entity/FUFeaturesData;Lh/d3/w/a;ILh/d3/x/w;)V
 
+    .line 3
     invoke-virtual {p0, p1}, Lcom/faceunity/core/controller/prop/BasePropController;->doBackgroundAction(Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;)V
 
     return-void
@@ -958,18 +1029,20 @@
 .method public final deleteItemTex$lib_core_release(JLjava/lang/String;)V
     .locals 8
     .param p3    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "name"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     new-instance v5, Lcom/faceunity/core/controller/prop/PropController$deleteItemTex$unit$1;
 
     invoke-direct {v5, p0, p1, p2, p3}, Lcom/faceunity/core/controller/prop/PropController$deleteItemTex$unit$1;-><init>(Lcom/faceunity/core/controller/prop/PropController;JLjava/lang/String;)V
 
+    .line 2
     new-instance p1, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;
 
     sget-object v2, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueType;->UNIT:Lcom/faceunity/core/controller/prop/PropQueuePool$QueueType;
@@ -984,8 +1057,9 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v1 .. v7}, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;-><init>(Lcom/faceunity/core/controller/prop/PropQueuePool$QueueType;Lcom/faceunity/core/entity/FUFeaturesData;Lcom/faceunity/core/entity/FUFeaturesData;Ljn/a;ILkotlin/jvm/internal/w;)V
+    invoke-direct/range {v1 .. v7}, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;-><init>(Lcom/faceunity/core/controller/prop/PropQueuePool$QueueType;Lcom/faceunity/core/entity/FUFeaturesData;Lcom/faceunity/core/entity/FUFeaturesData;Lh/d3/w/a;ILh/d3/x/w;)V
 
+    .line 3
     invoke-virtual {p0, p1}, Lcom/faceunity/core/controller/prop/BasePropController;->doBackgroundAction(Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;)V
 
     return-void
@@ -994,11 +1068,11 @@
 .method public final replaceProp(Lcom/faceunity/core/model/prop/Prop;Lcom/faceunity/core/model/prop/Prop;)V
     .locals 11
     .param p1    # Lcom/faceunity/core/model/prop/Prop;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
     .param p2    # Lcom/faceunity/core/model/prop/Prop;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
 
@@ -1006,6 +1080,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     invoke-virtual {p1}, Lcom/faceunity/core/model/prop/Prop;->buildFUFeaturesData$lib_core_release()Lcom/faceunity/core/entity/FUFeaturesData;
 
     move-result-object p1
@@ -1020,6 +1095,7 @@
     :goto_0
     if-eqz p2, :cond_1
 
+    .line 2
     invoke-virtual {p2}, Lcom/faceunity/core/model/prop/Prop;->buildFUFeaturesData$lib_core_release()Lcom/faceunity/core/entity/FUFeaturesData;
 
     move-result-object p1
@@ -1043,6 +1119,7 @@
 
     if-eqz v6, :cond_3
 
+    .line 3
     new-instance v0, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;
 
     sget-object v5, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueType;->ADD:Lcom/faceunity/core/controller/prop/PropQueuePool$QueueType;
@@ -1057,7 +1134,7 @@
 
     move-object v4, v0
 
-    invoke-direct/range {v4 .. v10}, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;-><init>(Lcom/faceunity/core/controller/prop/PropQueuePool$QueueType;Lcom/faceunity/core/entity/FUFeaturesData;Lcom/faceunity/core/entity/FUFeaturesData;Ljn/a;ILkotlin/jvm/internal/w;)V
+    invoke-direct/range {v4 .. v10}, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;-><init>(Lcom/faceunity/core/controller/prop/PropQueuePool$QueueType;Lcom/faceunity/core/entity/FUFeaturesData;Lcom/faceunity/core/entity/FUFeaturesData;Lh/d3/w/a;ILh/d3/x/w;)V
 
     goto :goto_2
 
@@ -1066,6 +1143,7 @@
 
     if-nez v6, :cond_4
 
+    .line 4
     new-instance v0, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;
 
     sget-object v2, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueType;->REMOVE:Lcom/faceunity/core/controller/prop/PropQueuePool$QueueType;
@@ -1080,7 +1158,7 @@
 
     move-object v1, v0
 
-    invoke-direct/range {v1 .. v7}, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;-><init>(Lcom/faceunity/core/controller/prop/PropQueuePool$QueueType;Lcom/faceunity/core/entity/FUFeaturesData;Lcom/faceunity/core/entity/FUFeaturesData;Ljn/a;ILkotlin/jvm/internal/w;)V
+    invoke-direct/range {v1 .. v7}, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;-><init>(Lcom/faceunity/core/controller/prop/PropQueuePool$QueueType;Lcom/faceunity/core/entity/FUFeaturesData;Lcom/faceunity/core/entity/FUFeaturesData;Lh/d3/w/a;ILh/d3/x/w;)V
 
     goto :goto_2
 
@@ -1089,6 +1167,7 @@
 
     if-eqz v6, :cond_5
 
+    .line 5
     new-instance v0, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;
 
     sget-object v2, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueType;->REPLACE:Lcom/faceunity/core/controller/prop/PropQueuePool$QueueType;
@@ -1105,12 +1184,13 @@
 
     move v6, p1
 
-    invoke-direct/range {v1 .. v7}, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;-><init>(Lcom/faceunity/core/controller/prop/PropQueuePool$QueueType;Lcom/faceunity/core/entity/FUFeaturesData;Lcom/faceunity/core/entity/FUFeaturesData;Ljn/a;ILkotlin/jvm/internal/w;)V
+    invoke-direct/range {v1 .. v7}, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;-><init>(Lcom/faceunity/core/controller/prop/PropQueuePool$QueueType;Lcom/faceunity/core/entity/FUFeaturesData;Lcom/faceunity/core/entity/FUFeaturesData;Lh/d3/w/a;ILh/d3/x/w;)V
 
     :cond_5
     :goto_2
     if-eqz v0, :cond_6
 
+    .line 6
     invoke-virtual {p0, v0}, Lcom/faceunity/core/controller/prop/BasePropController;->doBackgroundAction(Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;)V
 
     :cond_6
@@ -1120,6 +1200,7 @@
 .method public final setBundleEnable(JZ)V
     .locals 9
 
+    .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getTAG()Ljava/lang/String;
 
     move-result-object v0
@@ -1150,10 +1231,12 @@
 
     invoke-static {v0, v1}, Lcom/faceunity/toolbox/utils/FULogger;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 2
     new-instance v6, Lcom/faceunity/core/controller/prop/PropController$setBundleEnable$unit$1;
 
     invoke-direct {v6, p0, p1, p2, p3}, Lcom/faceunity/core/controller/prop/PropController$setBundleEnable$unit$1;-><init>(Lcom/faceunity/core/controller/prop/PropController;JZ)V
 
+    .line 3
     new-instance p1, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;
 
     sget-object v3, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueType;->UNIT:Lcom/faceunity/core/controller/prop/PropQueuePool$QueueType;
@@ -1168,8 +1251,9 @@
 
     move-object v2, p1
 
-    invoke-direct/range {v2 .. v8}, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;-><init>(Lcom/faceunity/core/controller/prop/PropQueuePool$QueueType;Lcom/faceunity/core/entity/FUFeaturesData;Lcom/faceunity/core/entity/FUFeaturesData;Ljn/a;ILkotlin/jvm/internal/w;)V
+    invoke-direct/range {v2 .. v8}, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;-><init>(Lcom/faceunity/core/controller/prop/PropQueuePool$QueueType;Lcom/faceunity/core/entity/FUFeaturesData;Lcom/faceunity/core/entity/FUFeaturesData;Lh/d3/w/a;ILh/d3/x/w;)V
 
+    .line 4
     invoke-virtual {p0, p1}, Lcom/faceunity/core/controller/prop/BasePropController;->doBackgroundAction(Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;)V
 
     return-void
@@ -1178,22 +1262,23 @@
 .method public final setItemParam$lib_core_release(JLjava/lang/String;Ljava/lang/Object;)V
     .locals 8
     .param p3    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p4    # Ljava/lang/Object;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "key"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "value"
 
-    invoke-static {p4, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     new-instance v0, Lcom/faceunity/core/controller/prop/PropController$setItemParam$unit$1;
 
     move-object v1, v0
@@ -1208,6 +1293,7 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/faceunity/core/controller/prop/PropController$setItemParam$unit$1;-><init>(Lcom/faceunity/core/controller/prop/PropController;JLjava/lang/String;Ljava/lang/Object;)V
 
+    .line 2
     new-instance p1, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;
 
     sget-object v2, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueType;->UNIT:Lcom/faceunity/core/controller/prop/PropQueuePool$QueueType;
@@ -1224,8 +1310,9 @@
 
     move-object v5, v0
 
-    invoke-direct/range {v1 .. v7}, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;-><init>(Lcom/faceunity/core/controller/prop/PropQueuePool$QueueType;Lcom/faceunity/core/entity/FUFeaturesData;Lcom/faceunity/core/entity/FUFeaturesData;Ljn/a;ILkotlin/jvm/internal/w;)V
+    invoke-direct/range {v1 .. v7}, Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;-><init>(Lcom/faceunity/core/controller/prop/PropQueuePool$QueueType;Lcom/faceunity/core/entity/FUFeaturesData;Lcom/faceunity/core/entity/FUFeaturesData;Lh/d3/w/a;ILh/d3/x/w;)V
 
+    .line 3
     invoke-virtual {p0, p1}, Lcom/faceunity/core/controller/prop/BasePropController;->doBackgroundAction(Lcom/faceunity/core/controller/prop/PropQueuePool$QueueItem;)V
 
     return-void
@@ -1234,10 +1321,12 @@
 .method public final updateFlipMode$lib_core_release()V
     .locals 6
 
+    .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMPropIdMap()Ljava/util/HashMap;
 
     move-result-object v0
 
+    .line 2
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v0
@@ -1280,6 +1369,7 @@
 
     move-result v1
 
+    .line 3
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMPropTypeMap()Ljava/util/HashMap;
 
     move-result-object v4
@@ -1298,6 +1388,7 @@
 
     const-string v3, "propType"
 
+    .line 4
     invoke-virtual {v2, v3}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
@@ -1308,12 +1399,13 @@
 
     move-result-object v5
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v4, v5}, Lh/d3/x/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
+    .line 5
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMFURenderBridge()Lcom/faceunity/core/support/FURenderBridge;
 
     move-result-object v2
@@ -1324,6 +1416,7 @@
 
     int-to-double v2, v2
 
+    .line 6
     invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v2
@@ -1334,6 +1427,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_1
     invoke-virtual {v2, v3}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1345,7 +1439,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v4}, Lh/d3/x/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -1353,12 +1447,13 @@
 
     const-string v3, "is_flip_points"
 
-    invoke-virtual {v2, v3}, Ljava/util/AbstractMap;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v3}, Ljava/util/LinkedHashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
+    .line 8
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMFURenderBridge()Lcom/faceunity/core/support/FURenderBridge;
 
     move-result-object v2
@@ -1406,6 +1501,7 @@
     :goto_1
     const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
 
+    .line 9
     :goto_2
     invoke-static {v4, v5}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
@@ -1422,10 +1518,12 @@
 .method public final updateRotationMode$lib_core_release()V
     .locals 5
 
+    .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMPropIdMap()Ljava/util/HashMap;
 
     move-result-object v0
 
+    .line 2
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v0
@@ -1468,6 +1566,7 @@
 
     move-result v1
 
+    .line 3
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMPropTypeMap()Ljava/util/HashMap;
 
     move-result-object v4
@@ -1486,6 +1585,7 @@
 
     const-string v3, "propType"
 
+    .line 4
     invoke-virtual {v2, v3}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
@@ -1496,12 +1596,13 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Lh/d3/x/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
+    .line 5
     invoke-virtual {p0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMFURenderBridge()Lcom/faceunity/core/support/FURenderBridge;
 
     move-result-object v2
@@ -1512,6 +1613,7 @@
 
     int-to-double v2, v2
 
+    .line 6
     invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v2

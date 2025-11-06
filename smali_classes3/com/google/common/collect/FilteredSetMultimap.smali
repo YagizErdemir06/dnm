@@ -1,4 +1,4 @@
-.class interface abstract Lcom/google/common/collect/FilteredSetMultimap;
+.class public interface abstract Lcom/google/common/collect/FilteredSetMultimap;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -34,6 +34,7 @@
 .method public bridge synthetic unfiltered()Lcom/google/common/collect/Multimap;
     .locals 0
 
+    .line 1
     invoke-interface {p0}, Lcom/google/common/collect/FilteredSetMultimap;->unfiltered()Lcom/google/common/collect/SetMultimap;
 
     move-result-object p0

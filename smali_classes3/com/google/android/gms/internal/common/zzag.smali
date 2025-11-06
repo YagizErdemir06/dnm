@@ -20,6 +20,7 @@
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/common/zzae;
 
     sget-object v1, Lcom/google/android/gms/internal/common/zzai;->zza:Lcom/google/android/gms/internal/common/zzag;
@@ -36,6 +37,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/internal/common/zzac;-><init>()V
 
     return-void
@@ -46,10 +48,12 @@
 
     if-nez p1, :cond_0
 
+    .line 1
     sget-object p0, Lcom/google/android/gms/internal/common/zzai;->zza:Lcom/google/android/gms/internal/common/zzag;
 
     return-object p0
 
+    .line 2
     :cond_0
     new-instance v0, Lcom/google/android/gms/internal/common/zzai;
 
@@ -61,12 +65,15 @@
 .method public static zzj(Ljava/lang/Iterable;)Lcom/google/android/gms/internal/common/zzag;
     .locals 3
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 1
+    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     instance-of v0, p0, Ljava/util/Collection;
 
     if-eqz v0, :cond_0
 
+    .line 3
     check-cast p0, Ljava/util/Collection;
 
     invoke-static {p0}, Lcom/google/android/gms/internal/common/zzag;->zzk(Ljava/util/Collection;)Lcom/google/android/gms/internal/common/zzag;
@@ -75,38 +82,45 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
+    .line 5
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
+    .line 6
     sget-object p0, Lcom/google/android/gms/internal/common/zzai;->zza:Lcom/google/android/gms/internal/common/zzag;
 
     goto :goto_0
 
+    .line 7
     :cond_1
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 8
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
+    .line 9
     invoke-static {v0}, Lcom/google/android/gms/internal/common/zzag;->zzm(Ljava/lang/Object;)Lcom/google/android/gms/internal/common/zzag;
 
     move-result-object p0
 
     goto :goto_0
 
+    .line 10
     :cond_2
     new-instance v1, Lcom/google/android/gms/internal/common/zzad;
 
@@ -114,6 +128,7 @@
 
     invoke-direct {v1, v2}, Lcom/google/android/gms/internal/common/zzad;-><init>(I)V
 
+    .line 11
     invoke-virtual {v1, v0}, Lcom/google/android/gms/internal/common/zzad;->zzb(Ljava/lang/Object;)Lcom/google/android/gms/internal/common/zzad;
 
     invoke-virtual {v1, p0}, Lcom/google/android/gms/internal/common/zzad;->zzc(Ljava/util/Iterator;)Lcom/google/android/gms/internal/common/zzad;
@@ -126,6 +141,7 @@
 
     iget v0, v1, Lcom/google/android/gms/internal/common/zzaa;->zzb:I
 
+    .line 12
     invoke-static {p0, v0}, Lcom/google/android/gms/internal/common/zzag;->zzi([Ljava/lang/Object;I)Lcom/google/android/gms/internal/common/zzag;
 
     move-result-object p0
@@ -137,10 +153,12 @@
 .method public static zzk(Ljava/util/Collection;)Lcom/google/android/gms/internal/common/zzag;
     .locals 1
 
+    .line 1
     instance-of v0, p0, Lcom/google/android/gms/internal/common/zzac;
 
     if-eqz v0, :cond_1
 
+    .line 2
     check-cast p0, Lcom/google/android/gms/internal/common/zzac;
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/common/zzac;->zzd()Lcom/google/android/gms/internal/common/zzag;
@@ -153,10 +171,12 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/gms/internal/common/zzac;->toArray()[Ljava/lang/Object;
 
     move-result-object p0
 
+    .line 4
     array-length v0, p0
 
     invoke-static {p0, v0}, Lcom/google/android/gms/internal/common/zzag;->zzi([Ljava/lang/Object;I)Lcom/google/android/gms/internal/common/zzag;
@@ -166,15 +186,18 @@
     :cond_0
     return-object p0
 
+    .line 5
     :cond_1
     invoke-interface {p0}, Ljava/util/Collection;->toArray()[Ljava/lang/Object;
 
     move-result-object p0
 
+    .line 6
     array-length v0, p0
 
     invoke-static {p0, v0}, Lcom/google/android/gms/internal/common/zzah;->zza([Ljava/lang/Object;I)[Ljava/lang/Object;
 
+    .line 7
     invoke-static {p0, v0}, Lcom/google/android/gms/internal/common/zzag;->zzi([Ljava/lang/Object;I)Lcom/google/android/gms/internal/common/zzag;
 
     move-result-object p0
@@ -185,6 +208,7 @@
 .method public static zzl()Lcom/google/android/gms/internal/common/zzag;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/internal/common/zzai;->zza:Lcom/google/android/gms/internal/common/zzag;
 
     return-object v0
@@ -201,8 +225,10 @@
 
     aput-object p0, v1, v2
 
+    .line 1
     invoke-static {v1, v0}, Lcom/google/android/gms/internal/common/zzah;->zza([Ljava/lang/Object;I)[Ljava/lang/Object;
 
+    .line 2
     invoke-static {v1, v0}, Lcom/google/android/gms/internal/common/zzag;->zzi([Ljava/lang/Object;I)Lcom/google/android/gms/internal/common/zzag;
 
     move-result-object p0
@@ -225,8 +251,10 @@
 
     aput-object p1, v1, p0
 
+    .line 1
     invoke-static {v1, v0}, Lcom/google/android/gms/internal/common/zzah;->zza([Ljava/lang/Object;I)[Ljava/lang/Object;
 
+    .line 2
     invoke-static {v1, v0}, Lcom/google/android/gms/internal/common/zzag;->zzi([Ljava/lang/Object;I)Lcom/google/android/gms/internal/common/zzag;
 
     move-result-object p0
@@ -245,6 +273,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -264,6 +293,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -278,6 +308,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/common/zzag;->indexOf(Ljava/lang/Object;)I
 
     move-result p0
@@ -303,48 +334,53 @@
 
     const/4 v0, 0x1
 
+    const/4 v1, 0x0
+
     if-ne p1, p0, :cond_0
 
     goto :goto_2
 
+    .line 1
     :cond_0
-    instance-of v1, p1, Ljava/util/List;
+    instance-of v2, p1, Ljava/util/List;
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_2
+    if-nez v2, :cond_2
 
     :cond_1
     :goto_0
-    move v0, v2
+    move v0, v1
 
     goto :goto_2
 
+    .line 2
     :cond_2
     check-cast p1, Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->size()I
 
-    move-result v1
+    move-result v2
 
+    .line 3
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v3
 
-    if-eq v1, v3, :cond_3
+    if-eq v2, v3, :cond_3
 
     goto :goto_0
 
+    .line 4
     :cond_3
     instance-of v3, p1, Ljava/util/RandomAccess;
 
     if-eqz v3, :cond_5
 
-    move v3, v2
+    move v3, v1
 
     :goto_1
-    if-ge v3, v1, :cond_9
+    if-ge v3, v2, :cond_9
 
+    .line 5
     invoke-interface {p0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -366,6 +402,7 @@
 
     goto :goto_1
 
+    .line 6
     :cond_5
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -375,38 +412,44 @@
 
     move-result-object p1
 
+    .line 7
     :cond_6
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_8
+    if-eqz v2, :cond_8
 
+    .line 8
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v1
+    move-result v2
 
-    if-nez v1, :cond_7
+    if-nez v2, :cond_7
 
     goto :goto_0
 
+    .line 9
     :cond_7
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
+    .line 10
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lcom/google/android/gms/internal/common/zzr;->zza(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .line 11
+    invoke-static {v2, v3}, Lcom/google/android/gms/internal/common/zzr;->zza(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result v2
 
-    if-nez v1, :cond_6
+    if-nez v2, :cond_6
 
     goto :goto_0
 
+    .line 12
     :cond_8
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -422,6 +465,7 @@
 .method public final hashCode()I
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
 
     move-result v0
@@ -466,6 +510,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -505,6 +550,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/common/zzag;->zzo(I)Lcom/google/android/gms/internal/common/zzak;
 
     move-result-object p0
@@ -525,6 +571,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -595,6 +642,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -614,6 +662,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -624,6 +673,7 @@
 .method public bridge synthetic subList(II)Ljava/util/List;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/google/android/gms/internal/common/zzag;->zzh(II)Lcom/google/android/gms/internal/common/zzag;
 
     move-result-object p0
@@ -634,6 +684,7 @@
 .method public zza([Ljava/lang/Object;I)I
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
 
     move-result p2
@@ -674,6 +725,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/common/zzag;->zzo(I)Lcom/google/android/gms/internal/common/zzak;
 
     move-result-object p0
@@ -684,6 +736,7 @@
 .method public zzh(II)Lcom/google/android/gms/internal/common/zzag;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
 
     move-result v0
@@ -703,6 +756,7 @@
     :cond_0
     if-nez p2, :cond_1
 
+    .line 2
     sget-object p0, Lcom/google/android/gms/internal/common/zzai;->zza:Lcom/google/android/gms/internal/common/zzag;
 
     return-object p0
@@ -710,6 +764,7 @@
     :cond_1
     new-instance v0, Lcom/google/android/gms/internal/common/zzaf;
 
+    .line 3
     invoke-direct {v0, p0, p1, p2}, Lcom/google/android/gms/internal/common/zzaf;-><init>(Lcom/google/android/gms/internal/common/zzag;II)V
 
     return-object v0
@@ -718,6 +773,7 @@
 .method public final zzo(I)Lcom/google/android/gms/internal/common/zzak;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
 
     move-result v0
@@ -726,6 +782,7 @@
 
     invoke-static {p1, v0, v1}, Lcom/google/android/gms/internal/common/zzs;->zzb(IILjava/lang/String;)I
 
+    .line 2
     invoke-virtual {p0}, Ljava/util/AbstractCollection;->isEmpty()Z
 
     move-result v0
@@ -739,6 +796,7 @@
     :cond_0
     new-instance v0, Lcom/google/android/gms/internal/common/zzae;
 
+    .line 3
     invoke-direct {v0, p0, p1}, Lcom/google/android/gms/internal/common/zzae;-><init>(Lcom/google/android/gms/internal/common/zzag;I)V
 
     return-object v0

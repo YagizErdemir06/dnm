@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/ImmutableMultimap$Values;
+.class public final Lcom/google/common/collect/ImmutableMultimap$Values;
 .super Lcom/google/common/collect/ImmutableCollection;
 .source "SourceFile"
 
@@ -55,8 +55,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableCollection;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/ImmutableMultimap$Values;->multimap:Lcom/google/common/collect/ImmutableMultimap;
 
     return-void
@@ -71,6 +73,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMultimap$Values;->multimap:Lcom/google/common/collect/ImmutableMultimap;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableMultimap;->containsValue(Ljava/lang/Object;)Z
@@ -85,6 +88,7 @@
     .annotation build Lcom/google/common/annotations/GwtIncompatible;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMultimap$Values;->multimap:Lcom/google/common/collect/ImmutableMultimap;
 
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMultimap;->map:Lcom/google/common/collect/ImmutableMap;
@@ -110,6 +114,7 @@
 
     check-cast v0, Lcom/google/common/collect/ImmutableCollection;
 
+    .line 2
     invoke-virtual {v0, p1, p2}, Lcom/google/common/collect/ImmutableCollection;->copyIntoArray([Ljava/lang/Object;I)I
 
     move-result p2
@@ -162,6 +167,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMultimap$Values;->multimap:Lcom/google/common/collect/ImmutableMultimap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMultimap;->size()I

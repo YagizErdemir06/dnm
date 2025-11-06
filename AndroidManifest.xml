@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="34" android:compileSdkVersionCodename="14" package="com.android.camera" platformBuildVersionCode="34" platformBuildVersionName="14">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="33" android:compileSdkVersionCodename="13" package="com.android.camera" platformBuildVersionCode="33" platformBuildVersionName="13">
     <original-package android:name="com.android.camera"/>
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-feature android:name="android.hardware.camera"/>
@@ -16,7 +16,6 @@
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
     <uses-permission android:name="com.android.settings.permission.CLOUD_SETTINGS_PROVIDER"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CAMERA"/>
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
     <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
     <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
@@ -73,8 +72,6 @@
     <uses-permission android:name="android.permission.TURN_SCREEN_ON"/>
     <queries>
         <package android:name="com.android.contacts"/>
-        <package android:name="com.android.email"/>
-        <package android:name="com.android.mms"/>
     </queries>
     <queries>
         <intent>
@@ -86,7 +83,7 @@
         <package android:name="com.miui.gallery"/>
         <package android:name="com.xiaomi.wearable"/>
     </queries>
-    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="false" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher_camera_cv" android:label="@string/camera_label" android:largeHeap="true" android:name="com.android.camera.CameraAppImpl" android:resizeableActivity="false" android:supportsRtl="true" android:theme="@style/ThemeCamera">
+    <application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="false" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher_camera_cv" android:label="@string/camera_label" android:largeHeap="true" android:name="com.android.camera.CameraAppImpl" android:networkSecurityConfig="@xml/network_security_config" android:resizeableActivity="false" android:supportsRtl="true" android:theme="@style/ThemeCamera">
         <meta-data android:name="required_permissions" android:value="@string/required_permissions_supportModifiable"/>
         <meta-data android:name="miui.supportRequiredModifiable" android:value="true"/>
         <meta-data android:name="com.miui.bugreport.LOG_DIR" android:resource="@xml/log_paths"/>
@@ -147,13 +144,6 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity-alias android:exported="true" android:name="com.android.camera.AgentCamera" android:targetActivity="com.android.camera.Camera">
-            <meta-data android:name="com.hyperos.AI_ACTION_PROPERTY" android:resource="@xml/aiaction_data_ui"/>
-            <intent-filter>
-                <action android:name="hyperos.action.AIACTION_ACTIVITY"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity-alias>
         <activity-alias android:exported="true" android:label="@string/video_camera_label" android:name="com.android.camera.VideoCamera" android:screenOrientation="portrait" android:targetActivity="com.android.camera.Camera">
             <intent-filter>
                 <action android:name="android.media.action.VIDEO_CAMERA"/>
@@ -187,21 +177,7 @@
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.VOICE"/>
             </intent-filter>
-            <intent-filter>
-                <action android:name="android.media.action.STILL_IMAGE_CAMERA_SECURE"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.VOICE"/>
-            </intent-filter>
         </activity>
-        <meta-data android:name="com.hyperos.AI_ACTION_DESCRIPTION" android:resource="@raw/ddf"/>
-        <provider android:authorities="com.android.camera.agentProvider" android:exported="true" android:name="com.android.camera.provider.CameraAgentProvider">
-            <meta-data android:name="com.hyperos.AI_DYNAMIC_DDFID" android:value="true"/>
-            <meta-data android:name="com.hyperos.AI_ACTION_PROPERTY" android:resource="@xml/aiaction_data_noui"/>
-            <intent-filter>
-                <action android:name="hyperos.action.AIACTION_PROVIDER"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </provider>
         <activity android:configChanges="mcc|mnc|keyboardHidden|orientation|screenSize" android:exported="true" android:label="@string/camera_label" android:name="com.android.camera.CameraPreferenceActivity" android:screenOrientation="behind" android:theme="@style/ThemeCameraSettingsMiuiX">
             <intent-filter android:priority="60">
                 <action android:name="miui.intent.action.APP_SETTINGS"/>
@@ -236,7 +212,7 @@
                 <action android:name="com.xiaomi.camera.REMOTE_CONTROL_SERVICE_BIND"/>
             </intent-filter>
         </service>
-        <service android:exported="false" android:foregroundServiceType="camera" android:name="com.xiaomi.camera.videocast.VideoCastService"/>
+        <service android:exported="false" android:name="com.xiaomi.camera.videocast.VideoCastService"/>
         <service android:enabled="true" android:exported="true" android:name="com.xiaomi.camera.mivi.MIVIParallelService"/>
         <activity android:configChanges="keyboardHidden|orientation|uiMode|screenSize" android:excludeFromRecents="true" android:label="@string/video_cast_service_name" android:name="com.xiaomi.camera.videocast.DiagnoseActivity" android:showOnLockScreen="true" android:taskAffinity="com.xiaomi.camera.videocast" android:theme="@style/Theme.VideoCast.AlertActivity"/>
         <activity android:configChanges="keyboardHidden|orientation|uiMode|screenSize" android:label="@string/video_cast_service_name" android:name="com.xiaomi.camera.videocast.AuthoriseActivity" android:taskAffinity="com.xiaomi.camera.videocast" android:theme="@style/Theme.VideoCast.AlertActivity"/>
@@ -247,7 +223,7 @@
             <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
         </provider>
         <provider android:authorities="@string/provider_authority" android:exported="true" android:grantUriPermissions="true" android:name="com.xiaomi.camera.parallelservice.provider.ParallelProcessProvider" android:syncable="false"/>
-        <provider android:authorities="com.android.camera.provider.bugreport" android:exported="true" android:name="com.miui.bugreport.logprovider.DumpLogProvider" android:permission="com.miui.bugreport.permission.DUMP_CACHED_LOG">
+        <provider android:authorities="com.android.camera.provider.bugreport" android:exported="true" android:name="com.miui.bugreport.logprovider.DumpLogProvider" android:permission="com.miui.bugreport.permission.DUMP_CACHED_LOG" android:readPermission="com.miui.bugreport.permission.DUMP_CACHED_LOG">
             <intent-filter>
                 <action android:name="com.miui.bugreport.intent.ACTION_DUMP_CACHED_LOG"/>
             </intent-filter>
@@ -282,7 +258,11 @@
         <uses-native-library android:name="libneuron_adapter_mgvi.so" android:required="false"/>
         <uses-native-library android:name="libneuron_adapter.so" android:required="false"/>
         <uses-native-library android:name="libneuronusdk_adapter.mtk.so" android:required="false"/>
-        <uses-library android:name="miui-cameraopt" android:required="false"/>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.ndk.CrashlyticsNdkRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
         <meta-data android:name="miuiWidgetVersion" android:value="5"/>
         <receiver android:enabled="false" android:exported="true" android:label="@string/widget_camera_label" android:name="com.android.camera2.compat.theme.custom.cv.widget.CameraFiltersWidgetProvider" android:process=":widgetProvider">
             <intent-filter>
@@ -308,40 +288,24 @@
             <meta-data android:name="miuiWidgetTransitionAnimation" android:value="true"/>
             <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_camera_lens2_info"/>
         </receiver>
-        <meta-data android:name="miuixpreference" android:value="3.1"/>
-        <meta-data android:name="os_private_label" android:value="PRIVATE_OS020"/>
-        <meta-data android:name="appcompat" android:value="3.1"/>
-        <meta-data android:name="visualcheck" android:value="1.0"/>
-        <meta-data android:name="popupwidget" android:value="1.0"/>
-        <meta-data android:name="miuixbasewidget" android:value="1.0"/>
-        <meta-data android:name="flexible" android:value="1.0"/>
-        <meta-data android:name="androidbasewidget" android:value="1.0"/>
-        <meta-data android:name="miuixstretchablewidget" android:value="1.0"/>
-        <meta-data android:name="slidingwidget" android:value="1.0"/>
-        <meta-data android:name="pickerwidget" android:value="1.0"/>
-        <meta-data android:name="viewpager" android:value="2.0"/>
-        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
-            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.ndk.CrashlyticsNdkRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
-            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
-            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
-        </service>
         <service android:directBootAware="true" android:exported="false" android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService">
             <meta-data android:name="com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
             <meta-data android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
             <meta-data android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
         </service>
-        <provider android:authorities="com.android.camera.firebaseinitprovider" android:directBootAware="true" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
-        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
-        <uses-library android:name="androidx.window.extensions" android:required="false"/>
-        <uses-library android:name="androidx.window.sidecar" android:required="false"/>
-        <meta-data android:name="recyclerview_card" android:value="1.0"/>
-        <meta-data android:name="cardview" android:value="1.0"/>
+        <meta-data android:name="miuixpreference" android:value="1.0"/>
         <meta-data android:name="recyclerview" android:value="2.0"/>
         <meta-data android:name="recyclerview_animator" android:value="2.0"/>
-        <meta-data android:name="nestedheader" android:value="3.1"/>
-        <meta-data android:name="log" android:value="1.0"/>
-        <meta-data android:name="springback" android:value="3.1"/>
+        <meta-data android:name="appcompat" android:value="1.0"/>
+        <meta-data android:name="nestedheader" android:value="2.0"/>
+        <meta-data android:name="popupwidget" android:value="1.0"/>
+        <meta-data android:name="visualcheck" android:value="1.0"/>
+        <meta-data android:name="springback" android:value="2.0"/>
+        <meta-data android:name="miuixstretchablewidget" android:value="1.0"/>
+        <meta-data android:name="slidingwidget" android:value="1.0"/>
+        <meta-data android:name="pickerwidget" android:value="1.0"/>
+        <meta-data android:name="androidbasewidget" android:value="1.0"/>
+        <meta-data android:name="miuixbasewidget" android:value="1.0"/>
         <meta-data android:name="nest" android:value="2.0"/>
         <meta-data android:name="dynamicoverscroller" android:value="2.0"/>
         <meta-data android:name="folme" android:value="2.0"/>
@@ -352,15 +316,19 @@
         </service>
         <service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
         <receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"/>
-        <provider android:authorities="com.android.camera.androidx-startup" android:exported="false" android:name="androidx.startup.InitializationProvider">
-            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
-            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
-        </provider>
-        <meta-data android:name="graphics" android:value="2.0"/>
-        <meta-data android:name="smooth" android:value="1.0"/>
-        <meta-data android:name="core" android:value="2.0"/>
+        <provider android:authorities="com.android.camera.firebaseinitprovider" android:directBootAware="true" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="viewpager" android:value="2.0"/>
+        <meta-data android:name="log" android:value="1.0"/>
         <meta-data android:name="spring" android:value="1.0"/>
         <meta-data android:name="animation" android:value="1.0"/>
+        <meta-data android:name="graphics" android:value="2.0"/>
+        <meta-data android:name="core" android:value="2.0"/>
+        <meta-data android:name="com.miui.bugreport.DEFAULT_LOG_DIR" android:resource="@xml/default_log_paths"/>
+        <meta-data android:name="smooth" android:value="1.0"/>
+        <meta-data android:name="devicebaseinfo" android:value="1.0"/>
+        <meta-data android:name="blurdrawable" android:value="1.0"/>
         <service android:exported="false" android:name="com.iqiyi.android.qigsaw.core.splitrequest.splitinfo.SplitUpdateService"/>
         <service android:exported="false" android:name="com.iqiyi.android.qigsaw.core.splitinstall.remote.SplitInstallService">
             <intent-filter>
@@ -368,8 +336,5 @@
             </intent-filter>
         </service>
         <service android:exported="false" android:name="com.iqiyi.android.qigsaw.core.splitinstall.SplitCleanService"/>
-        <meta-data android:name="com.miui.bugreport.DEFAULT_LOG_DIR" android:resource="@xml/default_log_paths"/>
-        <meta-data android:name="devicebaseinfo" android:value="1.0"/>
-        <meta-data android:name="theme" android:value="1.0"/>
     </application>
 </manifest>

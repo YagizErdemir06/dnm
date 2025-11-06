@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil;
+.class public final Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -40,6 +40,7 @@
 
     const-string v0, "([A-Z_]+) (.*) RTSP/1\\.0"
 
+    .line 1
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -48,6 +49,7 @@
 
     const-string v0, "RTSP/1\\.0 (\\d+) (.+)"
 
+    .line 2
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -58,6 +60,7 @@
 
     const/4 v1, 0x2
 
+    .line 3
     invoke-static {v0, v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -66,6 +69,7 @@
 
     const-string v0, "([\\w$\\-_.+]+)(?:;\\s?timeout=(\\d+))?"
 
+    .line 4
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -74,6 +78,7 @@
 
     const-string v0, "Digest realm=\"([^\"\\x00-\\x08\\x0A-\\x1f\\x7f]+)\",\\s?(?:domain=\"(.+)\",\\s?)?nonce=\"([^\"\\x00-\\x08\\x0A-\\x1f\\x7f]+)\"(?:,\\s?opaque=\"([^\"\\x00-\\x08\\x0A-\\x1f\\x7f]+)\")?"
 
+    .line 5
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -82,12 +87,14 @@
 
     const-string v0, "Basic realm=\"([^\"\\x00-\\x08\\x0A-\\x1f\\x7f]+)\""
 
+    .line 6
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil;->WWW_AUTHENTICATION_HEADER_BASIC_PATTERN:Ljava/util/regex/Pattern;
 
+    .line 7
     new-instance v0, Ljava/lang/String;
 
     const/4 v2, 0x1
@@ -104,6 +111,7 @@
 
     sput-object v0, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil;->LF:Ljava/lang/String;
 
+    .line 8
     new-instance v0, Ljava/lang/String;
 
     new-array v1, v1, [B
@@ -128,6 +136,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -152,6 +161,7 @@
     :cond_0
     const/4 p0, 0x0
 
+    .line 1
     invoke-static {p1, p0}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedManifest(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
     move-result-object p0
@@ -170,6 +180,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil;->CRLF:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/common/base/Joiner;->on(Ljava/lang/String;)Lcom/google/common/base/Joiner;
@@ -234,6 +245,7 @@
 
     packed-switch p0, :pswitch_data_0
 
+    .line 1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
@@ -324,6 +336,7 @@
 .method public static getStringBytes(Ljava/lang/String;)[B
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;->CHARSET:Ljava/nio/charset/Charset;
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
@@ -344,6 +357,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil;->STATUS_LINE_PATTERN:Ljava/util/regex/Pattern;
 
     const/4 v1, 0x0
@@ -368,6 +382,7 @@
 .method public static isRtspStartLine(Ljava/lang/String;)Z
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil;->REQUEST_LINE_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
@@ -382,6 +397,7 @@
 
     sget-object v0, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil;->STATUS_LINE_PATTERN:Ljava/util/regex/Pattern;
 
+    .line 2
     invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object p0
@@ -415,6 +431,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     sget-object v0, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil;->CONTENT_LENGTH_HEADER_PATTERN:Ljava/util/regex/Pattern;
 
@@ -422,6 +439,7 @@
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
 
     move-result v1
@@ -430,6 +448,7 @@
 
     const/4 v1, 0x1
 
+    .line 3
     invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v0
@@ -456,6 +475,7 @@
     :catch_0
     move-exception v0
 
+    .line 4
     invoke-static {p0, v0}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedManifest(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
     move-result-object p0
@@ -471,6 +491,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -483,6 +504,7 @@
     :catch_0
     move-exception v0
 
+    .line 2
     invoke-static {p0, v0}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedManifest(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
     move-result-object p0
@@ -493,6 +515,7 @@
 .method private static parseMethodString(Ljava/lang/String;)I
     .locals 13
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -720,6 +743,7 @@
     :goto_0
     packed-switch v12, :pswitch_data_0
 
+    .line 2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
@@ -818,12 +842,14 @@
 
     if-nez p0, :cond_0
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
 
     move-result-object p0
 
     return-object p0
 
+    .line 2
     :cond_0
     new-instance v0, Lcom/google/common/collect/ImmutableList$Builder;
 
@@ -831,6 +857,7 @@
 
     const-string v1, ",\\s?"
 
+    .line 3
     invoke-static {p0, v1}, Lcom/google/android/exoplayer2/util/Util;->split(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
@@ -844,6 +871,7 @@
 
     aget-object v3, p0, v2
 
+    .line 4
     invoke-static {v3}, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil;->parseMethodString(Ljava/lang/String;)I
 
     move-result v3
@@ -858,6 +886,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     invoke-virtual {v0}, Lcom/google/common/collect/ImmutableList$Builder;->build()Lcom/google/common/collect/ImmutableList;
 
@@ -878,6 +907,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil;->REQUEST_LINE_PATTERN:Ljava/util/regex/Pattern;
 
     const/4 v1, 0x0
@@ -892,6 +922,7 @@
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v2
@@ -900,6 +931,7 @@
 
     const/4 v2, 0x1
 
+    .line 3
     invoke-virtual {v0, v2}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v3
@@ -916,6 +948,7 @@
 
     const/4 v4, 0x2
 
+    .line 4
     invoke-virtual {v0, v4}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v0
@@ -932,6 +965,7 @@
 
     const-string v4, ""
 
+    .line 5
     invoke-interface {p0, v4}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
 
     move-result v4
@@ -940,13 +974,16 @@
 
     move v1, v2
 
+    .line 6
     :cond_0
     invoke-static {v1}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 7
     invoke-interface {p0, v2, v4}, Ljava/util/List;->subList(II)Ljava/util/List;
 
     move-result-object v1
 
+    .line 8
     new-instance v5, Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders$Builder;
 
     invoke-direct {v5}, Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders$Builder;-><init>()V
@@ -959,6 +996,7 @@
 
     move-result-object v1
 
+    .line 9
     sget-object v5, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil;->CRLF:Ljava/lang/String;
 
     invoke-static {v5}, Lcom/google/common/base/Joiner;->on(Ljava/lang/String;)Lcom/google/common/base/Joiner;
@@ -979,6 +1017,7 @@
 
     move-result-object p0
 
+    .line 10
     new-instance v2, Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;
 
     invoke-direct {v2, v0, v3, v1, p0}, Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;-><init>(Landroid/net/Uri;ILcom/google/android/exoplayer2/source/rtsp/RtspHeaders;Ljava/lang/String;)V
@@ -998,6 +1037,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil;->STATUS_LINE_PATTERN:Ljava/util/regex/Pattern;
 
     const/4 v1, 0x0
@@ -1012,6 +1052,7 @@
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v2
@@ -1020,6 +1061,7 @@
 
     const/4 v2, 0x1
 
+    .line 3
     invoke-virtual {v0, v2}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v0
@@ -1036,6 +1078,7 @@
 
     const-string v3, ""
 
+    .line 4
     invoke-interface {p0, v3}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
 
     move-result v3
@@ -1044,13 +1087,16 @@
 
     move v1, v2
 
+    .line 5
     :cond_0
     invoke-static {v1}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 6
     invoke-interface {p0, v2, v3}, Ljava/util/List;->subList(II)Ljava/util/List;
 
     move-result-object v1
 
+    .line 7
     new-instance v4, Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders$Builder;
 
     invoke-direct {v4}, Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders$Builder;-><init>()V
@@ -1063,6 +1109,7 @@
 
     move-result-object v1
 
+    .line 8
     sget-object v4, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil;->CRLF:Ljava/lang/String;
 
     invoke-static {v4}, Lcom/google/common/base/Joiner;->on(Ljava/lang/String;)Lcom/google/common/base/Joiner;
@@ -1083,6 +1130,7 @@
 
     move-result-object p0
 
+    .line 9
     new-instance v2, Lcom/google/android/exoplayer2/source/rtsp/RtspResponse;
 
     invoke-direct {v2, v0, v1, p0}, Lcom/google/android/exoplayer2/source/rtsp/RtspResponse;-><init>(ILcom/google/android/exoplayer2/source/rtsp/RtspHeaders;Ljava/lang/String;)V
@@ -1098,12 +1146,14 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil;->SESSION_HEADER_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v1
@@ -1112,6 +1162,7 @@
 
     const/4 v1, 0x1
 
+    .line 3
     invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1122,14 +1173,18 @@
 
     check-cast v1, Ljava/lang/String;
 
-    const/4 v2, 0x2
+    const-wide/32 v2, 0xea60
 
-    invoke-virtual {v0, v2}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+    const/4 v4, 0x2
+
+    .line 4
+    invoke-virtual {v0, v4}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 5
     :try_start_0
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -1148,15 +1203,15 @@
     :catch_0
     move-exception v0
 
+    .line 6
     invoke-static {p0, v0}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedManifest(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
     move-result-object p0
 
     throw p0
 
+    .line 7
     :cond_0
-    const-wide/32 v2, 0xea60
-
     :goto_0
     new-instance p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil$RtspSessionHeader;
 
@@ -1167,6 +1222,7 @@
     :cond_1
     const/4 v0, 0x0
 
+    .line 8
     invoke-static {p0, v0}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedManifest(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
     move-result-object p0
@@ -1179,6 +1235,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/net/Uri;->getUserInfo()Ljava/lang/String;
 
     move-result-object p0
@@ -1192,16 +1249,19 @@
     :cond_0
     const-string v1, ":"
 
+    .line 2
     invoke-virtual {p0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
+    .line 3
     invoke-static {p0, v1}, Lcom/google/android/exoplayer2/util/Util;->splitAtFirst(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
+    .line 4
     new-instance v0, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil$RtspAuthUserInfo;
 
     const/4 v1, 0x0
@@ -1219,19 +1279,21 @@
 .end method
 
 .method public static parseWwwAuthenticateHeader(Ljava/lang/String;)Lcom/google/android/exoplayer2/source/rtsp/RtspAuthenticationInfo;
-    .locals 4
+    .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/google/android/exoplayer2/ParserException;
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil;->WWW_AUTHENTICATION_HEADER_DIGEST_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
 
     move-result v1
@@ -1240,20 +1302,12 @@
 
     if-eqz v1, :cond_0
 
+    .line 3
     new-instance p0, Lcom/google/android/exoplayer2/source/rtsp/RtspAuthenticationInfo;
 
-    invoke-virtual {v0, v2}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+    const/4 v1, 0x2
 
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    const/4 v2, 0x3
-
+    .line 4
     invoke-virtual {v0, v2}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v2
@@ -1264,9 +1318,23 @@
 
     check-cast v2, Ljava/lang/String;
 
-    const/4 v3, 0x4
+    const/4 v3, 0x3
 
+    .line 5
     invoke-virtual {v0, v3}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/String;
+
+    const/4 v4, 0x4
+
+    .line 6
+    invoke-virtual {v0, v4}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1274,12 +1342,11 @@
 
     move-result-object v0
 
-    const/4 v3, 0x2
-
-    invoke-direct {p0, v3, v1, v2, v0}, Lcom/google/android/exoplayer2/source/rtsp/RtspAuthenticationInfo;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v1, v2, v3, v0}, Lcom/google/android/exoplayer2/source/rtsp/RtspAuthenticationInfo;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-object p0
 
+    .line 7
     :cond_0
     sget-object v0, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil;->WWW_AUTHENTICATION_HEADER_BASIC_PATTERN:Ljava/util/regex/Pattern;
 
@@ -1287,14 +1354,17 @@
 
     move-result-object v0
 
+    .line 8
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
+    .line 9
     new-instance p0, Lcom/google/android/exoplayer2/source/rtsp/RtspAuthenticationInfo;
 
+    .line 10
     invoke-virtual {v0, v2}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v0
@@ -1311,6 +1381,7 @@
 
     return-object p0
 
+    .line 11
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1338,6 +1409,7 @@
 .method public static removeUserInfo(Landroid/net/Uri;)Landroid/net/Uri;
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Landroid/net/Uri;->getUserInfo()Ljava/lang/String;
 
     move-result-object v0
@@ -1346,6 +1418,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
 
@@ -1359,12 +1432,14 @@
 
     const-string v1, "@"
 
+    .line 3
     invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     invoke-static {v2}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 4
     invoke-static {v0, v1}, Lcom/google/android/exoplayer2/util/Util;->split(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
@@ -1373,6 +1448,7 @@
 
     aget-object v0, v0, v1
 
+    .line 5
     invoke-virtual {p0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object p0
@@ -1401,6 +1477,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;->headers:Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders;
 
     const-string v1, "CSeq"
@@ -1425,6 +1502,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/ImmutableList$Builder;
 
     invoke-direct {v0}, Lcom/google/common/collect/ImmutableList$Builder;-><init>()V
@@ -1433,8 +1511,10 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
+    .line 3
     iget v4, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;->method:I
 
+    .line 4
     invoke-static {v4}, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil;->toMethodString(I)Ljava/lang/String;
 
     move-result-object v4
@@ -1453,18 +1533,22 @@
 
     const-string v4, "%s %s %s"
 
+    .line 5
     invoke-static {v4, v3}, Lcom/google/android/exoplayer2/util/Util;->formatInvariant(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
+    .line 6
     invoke-virtual {v0, v3}, Lcom/google/common/collect/ImmutableList$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
 
+    .line 7
     iget-object v3, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;->headers:Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders;
 
     invoke-virtual {v3}, Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders;->asMultiMap()Lcom/google/common/collect/ImmutableListMultimap;
 
     move-result-object v3
 
+    .line 8
     invoke-virtual {v3}, Lcom/google/common/collect/ImmutableMultimap;->keySet()Lcom/google/common/collect/ImmutableSet;
 
     move-result-object v4
@@ -1486,12 +1570,14 @@
 
     check-cast v6, Ljava/lang/String;
 
+    .line 9
     invoke-virtual {v3, v6}, Lcom/google/common/collect/ImmutableListMultimap;->get(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object v7
 
     move v8, v2
 
+    .line 10
     :goto_1
     invoke-virtual {v7}, Ljava/util/AbstractCollection;->size()I
 
@@ -1503,6 +1589,7 @@
 
     aput-object v6, v9, v2
 
+    .line 11
     invoke-interface {v7, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v10
@@ -1524,12 +1611,15 @@
     :cond_2
     const-string v1, ""
 
+    .line 12
     invoke-virtual {v0, v1}, Lcom/google/common/collect/ImmutableList$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
 
+    .line 13
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspRequest;->messageBody:Ljava/lang/String;
 
     invoke-virtual {v0, p0}, Lcom/google/common/collect/ImmutableList$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
 
+    .line 14
     invoke-virtual {v0}, Lcom/google/common/collect/ImmutableList$Builder;->build()Lcom/google/common/collect/ImmutableList;
 
     move-result-object p0
@@ -1550,6 +1640,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspResponse;->headers:Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders;
 
     const-string v1, "CSeq"
@@ -1574,6 +1665,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/ImmutableList$Builder;
 
     invoke-direct {v0}, Lcom/google/common/collect/ImmutableList$Builder;-><init>()V
@@ -1586,8 +1678,10 @@
 
     aput-object v4, v3, v2
 
+    .line 3
     iget v4, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspResponse;->status:I
 
+    .line 4
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -1606,18 +1700,22 @@
 
     const-string v4, "%s %s %s"
 
+    .line 5
     invoke-static {v4, v3}, Lcom/google/android/exoplayer2/util/Util;->formatInvariant(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
+    .line 6
     invoke-virtual {v0, v3}, Lcom/google/common/collect/ImmutableList$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
 
+    .line 7
     iget-object v3, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspResponse;->headers:Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders;
 
     invoke-virtual {v3}, Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders;->asMultiMap()Lcom/google/common/collect/ImmutableListMultimap;
 
     move-result-object v3
 
+    .line 8
     invoke-virtual {v3}, Lcom/google/common/collect/ImmutableMultimap;->keySet()Lcom/google/common/collect/ImmutableSet;
 
     move-result-object v4
@@ -1639,12 +1737,14 @@
 
     check-cast v6, Ljava/lang/String;
 
+    .line 9
     invoke-virtual {v3, v6}, Lcom/google/common/collect/ImmutableListMultimap;->get(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object v7
 
     move v8, v2
 
+    .line 10
     :goto_1
     invoke-virtual {v7}, Ljava/util/AbstractCollection;->size()I
 
@@ -1656,6 +1756,7 @@
 
     aput-object v6, v9, v2
 
+    .line 11
     invoke-interface {v7, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v10
@@ -1677,12 +1778,15 @@
     :cond_2
     const-string v1, ""
 
+    .line 12
     invoke-virtual {v0, v1}, Lcom/google/common/collect/ImmutableList$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
 
+    .line 13
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspResponse;->messageBody:Ljava/lang/String;
 
     invoke-virtual {v0, p0}, Lcom/google/common/collect/ImmutableList$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
 
+    .line 14
     invoke-virtual {v0}, Lcom/google/common/collect/ImmutableList$Builder;->build()Lcom/google/common/collect/ImmutableList;
 
     move-result-object p0
@@ -1693,6 +1797,7 @@
 .method public static splitRtspMessageBody(Ljava/lang/String;)[Ljava/lang/String;
     .locals 2
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil;->CRLF:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -1719,6 +1824,7 @@
 
     packed-switch p0, :pswitch_data_0
 
+    .line 1
     new-instance p0, Ljava/lang/IllegalStateException;
 
     invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/offline/SegmentDownloader$SegmentDownloadRunnable;
+.class public final Lcom/google/android/exoplayer2/offline/SegmentDownloader$SegmentDownloadRunnable;
 .super Lcom/google/android/exoplayer2/util/RunnableFutureTask;
 .source "SourceFile"
 
@@ -46,16 +46,22 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/util/RunnableFutureTask;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/offline/SegmentDownloader$SegmentDownloadRunnable;->segment:Lcom/google/android/exoplayer2/offline/SegmentDownloader$Segment;
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/exoplayer2/offline/SegmentDownloader$SegmentDownloadRunnable;->dataSource:Lcom/google/android/exoplayer2/upstream/cache/CacheDataSource;
 
+    .line 4
     iput-object p3, p0, Lcom/google/android/exoplayer2/offline/SegmentDownloader$SegmentDownloadRunnable;->progressNotifier:Lcom/google/android/exoplayer2/offline/SegmentDownloader$ProgressNotifier;
 
+    .line 5
     iput-object p4, p0, Lcom/google/android/exoplayer2/offline/SegmentDownloader$SegmentDownloadRunnable;->temporaryBuffer:[B
 
+    .line 6
     new-instance v0, Lcom/google/android/exoplayer2/upstream/cache/CacheWriter;
 
     iget-object p1, p1, Lcom/google/android/exoplayer2/offline/SegmentDownloader$Segment;->dataSpec:Lcom/google/android/exoplayer2/upstream/DataSpec;
@@ -72,6 +78,7 @@
 .method public cancelWork()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/offline/SegmentDownloader$SegmentDownloadRunnable;->cacheWriter:Lcom/google/android/exoplayer2/upstream/cache/CacheWriter;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/upstream/cache/CacheWriter;->cancel()V

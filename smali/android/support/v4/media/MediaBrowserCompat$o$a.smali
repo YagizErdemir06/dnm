@@ -34,6 +34,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroid/support/v4/media/MediaBrowserCompat$o$a;->a:Landroid/support/v4/media/MediaBrowserCompat$o;
 
     invoke-direct {p0}, Landroid/media/browse/MediaBrowser$SubscriptionCallback;-><init>()V
@@ -81,12 +82,14 @@
 
     const/4 v0, -0x1
 
+    .line 1
     invoke-virtual {p2, p0, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p0
 
     const-string v1, "android.media.browse.extra.PAGE_SIZE"
 
+    .line 2
     invoke-virtual {p2, v1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p2
@@ -108,6 +111,7 @@
 
     if-lt p2, p0, :cond_4
 
+    .line 3
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result p0
@@ -116,6 +120,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_2
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -123,10 +128,12 @@
 
     if-le v1, p0, :cond_3
 
+    .line 5
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v1
 
+    .line 6
     :cond_3
     invoke-interface {p1, v0, v1}, Ljava/util/List;->subList(II)Ljava/util/List;
 
@@ -134,6 +141,7 @@
 
     return-object p0
 
+    .line 7
     :cond_4
     :goto_0
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
@@ -170,6 +178,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$o$a;->a:Landroid/support/v4/media/MediaBrowserCompat$o;
 
     iget-object v0, v0, Landroid/support/v4/media/MediaBrowserCompat$o;->c:Ljava/lang/ref/WeakReference;
@@ -181,7 +190,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -190,31 +199,38 @@
     :goto_0
     if-nez v0, :cond_1
 
+    .line 2
     iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$o$a;->a:Landroid/support/v4/media/MediaBrowserCompat$o;
 
-    invoke-static {p2}, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->c(Ljava/util/List;)Ljava/util/List;
+    .line 3
+    invoke-static {p2}, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->b(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p2
 
+    .line 4
     invoke-virtual {p0, p1, p2}, Landroid/support/v4/media/MediaBrowserCompat$o;->a(Ljava/lang/String;Ljava/util/List;)V
 
     goto :goto_3
 
+    .line 5
     :cond_1
-    invoke-static {p2}, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->c(Ljava/util/List;)Ljava/util/List;
+    invoke-static {p2}, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->b(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p2
 
+    .line 6
     invoke-virtual {v0}, Landroid/support/v4/media/MediaBrowserCompat$n;->b()Ljava/util/List;
 
     move-result-object v1
 
+    .line 7
     invoke-virtual {v0}, Landroid/support/v4/media/MediaBrowserCompat$n;->c()Ljava/util/List;
 
     move-result-object v0
 
     const/4 v2, 0x0
 
+    .line 8
     :goto_1
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -222,6 +238,7 @@
 
     if-ge v2, v3, :cond_3
 
+    .line 9
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -230,19 +247,23 @@
 
     if-nez v3, :cond_2
 
+    .line 10
     iget-object v3, p0, Landroid/support/v4/media/MediaBrowserCompat$o$a;->a:Landroid/support/v4/media/MediaBrowserCompat$o;
 
     invoke-virtual {v3, p1, p2}, Landroid/support/v4/media/MediaBrowserCompat$o;->a(Ljava/lang/String;Ljava/util/List;)V
 
     goto :goto_2
 
+    .line 11
     :cond_2
     iget-object v4, p0, Landroid/support/v4/media/MediaBrowserCompat$o$a;->a:Landroid/support/v4/media/MediaBrowserCompat$o;
 
+    .line 12
     invoke-virtual {p0, p2, v3}, Landroid/support/v4/media/MediaBrowserCompat$o$a;->a(Ljava/util/List;Landroid/os/Bundle;)Ljava/util/List;
 
     move-result-object v5
 
+    .line 13
     invoke-virtual {v4, p1, v5, v3}, Landroid/support/v4/media/MediaBrowserCompat$o;->b(Ljava/lang/String;Ljava/util/List;Landroid/os/Bundle;)V
 
     :goto_2
@@ -270,6 +291,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$o$a;->a:Landroid/support/v4/media/MediaBrowserCompat$o;
 
     invoke-virtual {p0, p1}, Landroid/support/v4/media/MediaBrowserCompat$o;->c(Ljava/lang/String;)V

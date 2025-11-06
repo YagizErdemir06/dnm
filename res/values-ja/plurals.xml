@@ -42,12 +42,6 @@
     <plurals name="accessibility_vv_duartion">
         <item quantity="other">時間：%d秒</item>
     </plurals>
-    <plurals name="accessibility_watermark_characters_inputted">
-        <item quantity="other">%d 文字を入力しました。</item>
-    </plurals>
-    <plurals name="accessibility_watermark_characters_max">
-        <item quantity="other">最大 %d 文字まで入力してください。</item>
-    </plurals>
     <plurals name="cinemaster_toast_camera_overflow">
         <item quantity="other">最大%d台のカメラを同じネットワークに接続できます</item>
     </plurals>
@@ -106,10 +100,6 @@
     </plurals>
     <plurals name="miuix_appcompat_items_selected">
         <item quantity="other">%d個を選択済み</item>
-    </plurals>
-    <plurals name="mtrl_badge_content_description">
-        <item quantity="other">%d 件の新しい通知</item>
-        <item quantity="one">%d 件の新しい通知</item>
     </plurals>
     <plurals name="num_minutes_ago">
         <item quantity="other">%d分前</item>

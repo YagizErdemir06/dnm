@@ -12,56 +12,65 @@
     }
 .end annotation
 
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
     bv = {
         0x1,
         0x0,
         0x3
     }
     d1 = {
-        "\u0000:\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u000b\n\u0002\u0010\u000b\n\u0002\u0008\u0003\n\u0002\u0010\u000e\n\u0002\u0008\u0004\u0008\u0086\u0008\u0018\u00002\u00020\u0001:\u0003()*B\u0015\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0005J\u0006\u0010\u001e\u001a\u00020\u0000J\t\u0010\u001f\u001a\u00020\u0003H\u00c6\u0003J\t\u0010 \u001a\u00020\u0003H\u00c6\u0003J\u001d\u0010!\u001a\u00020\u00002\u0008\u0008\u0002\u0010\u0002\u001a\u00020\u00032\u0008\u0008\u0002\u0010\u0004\u001a\u00020\u0003H\u00c6\u0001J\u0013\u0010\"\u001a\u00020#2\u0008\u0010$\u001a\u0004\u0018\u00010\u0001H\u00d6\u0003J\t\u0010%\u001a\u00020\u0003H\u00d6\u0001J\t\u0010&\u001a\u00020\'H\u00d6\u0001R\u001a\u0010\u0004\u001a\u00020\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0006\u0010\u0007\"\u0004\u0008\u0008\u0010\tR\u001c\u0010\n\u001a\u0004\u0018\u00010\u000bX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u000c\u0010\r\"\u0004\u0008\u000e\u0010\u000fR\u001a\u0010\u0010\u001a\u00020\u0011X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0012\u0010\u0013\"\u0004\u0008\u0014\u0010\u0015R\u001c\u0010\u0016\u001a\u0004\u0018\u00010\u0017X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0018\u0010\u0019\"\u0004\u0008\u001a\u0010\u001bR\u001a\u0010\u0002\u001a\u00020\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u001c\u0010\u0007\"\u0004\u0008\u001d\u0010\t\u00a8\u0006+"
+        "\u0000<\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0007\n\u0002\u0010\u000e\n\u0002\u0008\u0004\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0012\u0008\u0086\u0008\u0018\u00002\u00020\u0001:\u0003123B\u0017\u0012\u0006\u0010\u0008\u001a\u00020\u0004\u0012\u0006\u0010\t\u001a\u00020\u0004\u00a2\u0006\u0004\u0008/\u00100J\r\u0010\u0002\u001a\u00020\u0000\u00a2\u0006\u0004\u0008\u0002\u0010\u0003J\u0010\u0010\u0005\u001a\u00020\u0004H\u00c6\u0003\u00a2\u0006\u0004\u0008\u0005\u0010\u0006J\u0010\u0010\u0007\u001a\u00020\u0004H\u00c6\u0003\u00a2\u0006\u0004\u0008\u0007\u0010\u0006J$\u0010\n\u001a\u00020\u00002\u0008\u0008\u0002\u0010\u0008\u001a\u00020\u00042\u0008\u0008\u0002\u0010\t\u001a\u00020\u0004H\u00c6\u0001\u00a2\u0006\u0004\u0008\n\u0010\u000bJ\u0010\u0010\r\u001a\u00020\u000cH\u00d6\u0001\u00a2\u0006\u0004\u0008\r\u0010\u000eJ\u0010\u0010\u000f\u001a\u00020\u0004H\u00d6\u0001\u00a2\u0006\u0004\u0008\u000f\u0010\u0006J\u001a\u0010\u0012\u001a\u00020\u00112\u0008\u0010\u0010\u001a\u0004\u0018\u00010\u0001H\u00d6\u0003\u00a2\u0006\u0004\u0008\u0012\u0010\u0013R$\u0010\u0015\u001a\u0004\u0018\u00010\u00148\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0015\u0010\u0016\u001a\u0004\u0008\u0017\u0010\u0018\"\u0004\u0008\u0019\u0010\u001aR\"\u0010\u001c\u001a\u00020\u001b8\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u001c\u0010\u001d\u001a\u0004\u0008\u001e\u0010\u001f\"\u0004\u0008 \u0010!R$\u0010#\u001a\u0004\u0018\u00010\"8\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008#\u0010$\u001a\u0004\u0008%\u0010&\"\u0004\u0008\'\u0010(R\"\u0010\t\u001a\u00020\u00048\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\t\u0010)\u001a\u0004\u0008*\u0010\u0006\"\u0004\u0008+\u0010,R\"\u0010\u0008\u001a\u00020\u00048\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0008\u0010)\u001a\u0004\u0008-\u0010\u0006\"\u0004\u0008.\u0010,\u00a8\u00064"
     }
     d2 = {
         "Lcom/faceunity/core/entity/FURenderInputData;",
         "",
-        "width",
+        "clone",
+        "()Lcom/faceunity/core/entity/FURenderInputData;",
         "",
-        "height",
-        "(II)V",
-        "getHeight",
+        "component1",
         "()I",
-        "setHeight",
-        "(I)V",
-        "imageBuffer",
-        "Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;",
-        "getImageBuffer",
-        "()Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;",
-        "setImageBuffer",
-        "(Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;)V",
-        "renderConfig",
-        "Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;",
-        "getRenderConfig",
-        "()Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;",
-        "setRenderConfig",
-        "(Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;)V",
+        "component2",
+        "width",
+        "height",
+        "copy",
+        "(II)Lcom/faceunity/core/entity/FURenderInputData;",
+        "",
+        "toString",
+        "()Ljava/lang/String;",
+        "hashCode",
+        "other",
+        "",
+        "equals",
+        "(Ljava/lang/Object;)Z",
+        "Lcom/faceunity/core/entity/FURenderInputData$FUTexture;",
         "texture",
         "Lcom/faceunity/core/entity/FURenderInputData$FUTexture;",
         "getTexture",
         "()Lcom/faceunity/core/entity/FURenderInputData$FUTexture;",
         "setTexture",
         "(Lcom/faceunity/core/entity/FURenderInputData$FUTexture;)V",
+        "Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;",
+        "renderConfig",
+        "Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;",
+        "getRenderConfig",
+        "()Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;",
+        "setRenderConfig",
+        "(Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;)V",
+        "Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;",
+        "imageBuffer",
+        "Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;",
+        "getImageBuffer",
+        "()Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;",
+        "setImageBuffer",
+        "(Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;)V",
+        "I",
+        "getHeight",
+        "setHeight",
+        "(I)V",
         "getWidth",
         "setWidth",
-        "clone",
-        "component1",
-        "component2",
-        "copy",
-        "equals",
-        "",
-        "other",
-        "hashCode",
-        "toString",
-        "",
+        "<init>",
+        "(II)V",
         "FUImageBuffer",
         "FURenderConfig",
         "FUTexture",
@@ -80,17 +89,17 @@
 .field private height:I
 
 .field private imageBuffer:Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 .end field
 
 .field private renderConfig:Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field private texture:Lcom/faceunity/core/entity/FURenderInputData$FUTexture;
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 .end field
 
@@ -101,12 +110,14 @@
 .method public constructor <init>(II)V
     .locals 12
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput p1, p0, Lcom/faceunity/core/entity/FURenderInputData;->width:I
 
     iput p2, p0, Lcom/faceunity/core/entity/FURenderInputData;->height:I
 
+    .line 2
     new-instance p1, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
 
     const/4 v1, 0x0
@@ -133,7 +144,7 @@
 
     move-object v0, p1
 
-    invoke-direct/range {v0 .. v11}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;-><init>(Lcom/faceunity/core/enumeration/FUExternalInputEnum;IILcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;ZZILkotlin/jvm/internal/w;)V
+    invoke-direct/range {v0 .. v11}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;-><init>(Lcom/faceunity/core/enumeration/FUExternalInputEnum;IILcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;ZZILh/d3/x/w;)V
 
     iput-object p1, p0, Lcom/faceunity/core/entity/FURenderInputData;->renderConfig:Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
 
@@ -168,9 +179,10 @@
 # virtual methods
 .method public final clone()Lcom/faceunity/core/entity/FURenderInputData;
     .locals 6
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/faceunity/core/entity/FURenderInputData;
 
     iget v1, p0, Lcom/faceunity/core/entity/FURenderInputData;->width:I
@@ -179,10 +191,12 @@
 
     invoke-direct {v0, v1, v2}, Lcom/faceunity/core/entity/FURenderInputData;-><init>(II)V
 
+    .line 2
     iget-object v1, p0, Lcom/faceunity/core/entity/FURenderInputData;->texture:Lcom/faceunity/core/entity/FURenderInputData$FUTexture;
 
     if-eqz v1, :cond_0
 
+    .line 3
     new-instance v2, Lcom/faceunity/core/entity/FURenderInputData$FUTexture;
 
     invoke-virtual {v1}, Lcom/faceunity/core/entity/FURenderInputData$FUTexture;->getInputTextureType()Lcom/faceunity/core/enumeration/FUInputTextureEnum;
@@ -197,11 +211,13 @@
 
     iput-object v2, v0, Lcom/faceunity/core/entity/FURenderInputData;->texture:Lcom/faceunity/core/entity/FURenderInputData$FUTexture;
 
+    .line 4
     :cond_0
     iget-object v1, p0, Lcom/faceunity/core/entity/FURenderInputData;->imageBuffer:Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;
 
     if-eqz v1, :cond_1
 
+    .line 5
     new-instance v2, Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;
 
     invoke-virtual {v1}, Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;->getInputBufferType()Lcom/faceunity/core/enumeration/FUInputBufferEnum;
@@ -224,6 +240,7 @@
 
     iput-object v2, v0, Lcom/faceunity/core/entity/FURenderInputData;->imageBuffer:Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;
 
+    .line 6
     :cond_1
     iget-object v1, v0, Lcom/faceunity/core/entity/FURenderInputData;->renderConfig:Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
 
@@ -235,6 +252,7 @@
 
     invoke-virtual {v1, v2}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;->setExternalInputType(Lcom/faceunity/core/enumeration/FUExternalInputEnum;)V
 
+    .line 7
     iget-object v1, v0, Lcom/faceunity/core/entity/FURenderInputData;->renderConfig:Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
 
     iget-object v2, p0, Lcom/faceunity/core/entity/FURenderInputData;->renderConfig:Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
@@ -245,6 +263,7 @@
 
     invoke-virtual {v1, v2}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;->setInputOrientation(I)V
 
+    .line 8
     iget-object v1, v0, Lcom/faceunity/core/entity/FURenderInputData;->renderConfig:Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
 
     iget-object v2, p0, Lcom/faceunity/core/entity/FURenderInputData;->renderConfig:Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
@@ -255,6 +274,7 @@
 
     invoke-virtual {v1, v2}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;->setDeviceOrientation(I)V
 
+    .line 9
     iget-object v1, v0, Lcom/faceunity/core/entity/FURenderInputData;->renderConfig:Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
 
     iget-object v2, p0, Lcom/faceunity/core/entity/FURenderInputData;->renderConfig:Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
@@ -265,6 +285,7 @@
 
     invoke-virtual {v1, v2}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;->setCameraFacing(Lcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;)V
 
+    .line 10
     iget-object v1, v0, Lcom/faceunity/core/entity/FURenderInputData;->renderConfig:Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
 
     iget-object v2, p0, Lcom/faceunity/core/entity/FURenderInputData;->renderConfig:Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
@@ -275,6 +296,7 @@
 
     invoke-virtual {v1, v2}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;->setInputTextureMatrix(Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;)V
 
+    .line 11
     iget-object v1, v0, Lcom/faceunity/core/entity/FURenderInputData;->renderConfig:Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
 
     iget-object v2, p0, Lcom/faceunity/core/entity/FURenderInputData;->renderConfig:Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
@@ -285,6 +307,7 @@
 
     invoke-virtual {v1, v2}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;->setInputBufferMatrix(Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;)V
 
+    .line 12
     iget-object v1, v0, Lcom/faceunity/core/entity/FURenderInputData;->renderConfig:Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
 
     iget-object v2, p0, Lcom/faceunity/core/entity/FURenderInputData;->renderConfig:Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
@@ -295,6 +318,7 @@
 
     invoke-virtual {v1, v2}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;->setOutputMatrix(Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;)V
 
+    .line 13
     iget-object v1, v0, Lcom/faceunity/core/entity/FURenderInputData;->renderConfig:Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
 
     iget-object v2, p0, Lcom/faceunity/core/entity/FURenderInputData;->renderConfig:Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
@@ -305,6 +329,7 @@
 
     invoke-virtual {v1, v2}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;->setRenderFaceBeautyOnly(Z)V
 
+    .line 14
     iget-object v1, v0, Lcom/faceunity/core/entity/FURenderInputData;->renderConfig:Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
 
     iget-object p0, p0, Lcom/faceunity/core/entity/FURenderInputData;->renderConfig:Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
@@ -336,7 +361,7 @@
 
 .method public final copy(II)Lcom/faceunity/core/entity/FURenderInputData;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     new-instance p0, Lcom/faceunity/core/entity/FURenderInputData;
@@ -349,7 +374,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
     .param p1    # Ljava/lang/Object;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
 
@@ -390,6 +415,7 @@
 .method public final getHeight()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/faceunity/core/entity/FURenderInputData;->height:I
 
     return p0
@@ -397,9 +423,10 @@
 
 .method public final getImageBuffer()Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;
     .locals 0
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/entity/FURenderInputData;->imageBuffer:Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;
 
     return-object p0
@@ -407,9 +434,10 @@
 
 .method public final getRenderConfig()Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/entity/FURenderInputData;->renderConfig:Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
 
     return-object p0
@@ -417,9 +445,10 @@
 
 .method public final getTexture()Lcom/faceunity/core/entity/FURenderInputData$FUTexture;
     .locals 0
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/entity/FURenderInputData;->texture:Lcom/faceunity/core/entity/FURenderInputData$FUTexture;
 
     return-object p0
@@ -428,6 +457,7 @@
 .method public final getWidth()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/faceunity/core/entity/FURenderInputData;->width:I
 
     return p0
@@ -458,6 +488,7 @@
 .method public final setHeight(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/faceunity/core/entity/FURenderInputData;->height:I
 
     return-void
@@ -466,10 +497,11 @@
 .method public final setImageBuffer(Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;)V
     .locals 0
     .param p1    # Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/core/entity/FURenderInputData;->imageBuffer:Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;
 
     return-void
@@ -478,14 +510,15 @@
 .method public final setRenderConfig(Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;)V
     .locals 1
     .param p1    # Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "<set-?>"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/core/entity/FURenderInputData;->renderConfig:Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
 
     return-void
@@ -494,10 +527,11 @@
 .method public final setTexture(Lcom/faceunity/core/entity/FURenderInputData$FUTexture;)V
     .locals 0
     .param p1    # Lcom/faceunity/core/entity/FURenderInputData$FUTexture;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/core/entity/FURenderInputData;->texture:Lcom/faceunity/core/entity/FURenderInputData$FUTexture;
 
     return-void
@@ -506,6 +540,7 @@
 .method public final setWidth(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/faceunity/core/entity/FURenderInputData;->width:I
 
     return-void
@@ -513,7 +548,7 @@
 
 .method public toString()Ljava/lang/String;
     .locals 2
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     new-instance v0, Ljava/lang/StringBuilder;

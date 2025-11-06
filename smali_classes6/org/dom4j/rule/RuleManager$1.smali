@@ -1,4 +1,4 @@
-.class Lorg/dom4j/rule/RuleManager$1;
+.class public Lorg/dom4j/rule/RuleManager$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -21,6 +21,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/dom4j/rule/RuleManager$1;->this$0:Lorg/dom4j/rule/RuleManager;
@@ -40,10 +41,12 @@
         }
     .end annotation
 
+    .line 1
     instance-of v0, p1, Lorg/dom4j/Element;
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lorg/dom4j/rule/RuleManager$1;->val$mode:Lorg/dom4j/rule/Mode;
 
     check-cast p1, Lorg/dom4j/Element;
@@ -52,11 +55,13 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     instance-of v0, p1, Lorg/dom4j/Document;
 
     if-eqz v0, :cond_1
 
+    .line 4
     iget-object p0, p0, Lorg/dom4j/rule/RuleManager$1;->val$mode:Lorg/dom4j/rule/Mode;
 
     check-cast p1, Lorg/dom4j/Document;

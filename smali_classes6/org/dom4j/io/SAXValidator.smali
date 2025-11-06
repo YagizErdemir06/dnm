@@ -41,6 +41,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/SAXValidator;->xmlReader:Lorg/xml/sax/XMLReader;
 
     invoke-interface {v0}, Lorg/xml/sax/XMLReader;->getContentHandler()Lorg/xml/sax/ContentHandler;
@@ -49,6 +50,7 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lorg/dom4j/io/SAXValidator;->xmlReader:Lorg/xml/sax/XMLReader;
 
     new-instance v1, Lorg/xml/sax/helpers/DefaultHandler;
@@ -57,6 +59,7 @@
 
     invoke-interface {v0, v1}, Lorg/xml/sax/XMLReader;->setContentHandler(Lorg/xml/sax/ContentHandler;)V
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lorg/dom4j/io/SAXValidator;->xmlReader:Lorg/xml/sax/XMLReader;
 
@@ -66,19 +69,21 @@
 
     invoke-interface {v0, v1, v2}, Lorg/xml/sax/XMLReader;->setFeature(Ljava/lang/String;Z)V
 
+    .line 4
     iget-object v0, p0, Lorg/dom4j/io/SAXValidator;->xmlReader:Lorg/xml/sax/XMLReader;
 
     const-string v1, "http://xml.org/sax/features/namespaces"
 
     invoke-interface {v0, v1, v2}, Lorg/xml/sax/XMLReader;->setFeature(Ljava/lang/String;Z)V
 
+    .line 5
     iget-object p0, p0, Lorg/dom4j/io/SAXValidator;->xmlReader:Lorg/xml/sax/XMLReader;
 
-    const-string v0, "http://xml.org/sax/features/namespace-prefixes"
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    const-string v1, "http://xml.org/sax/features/namespace-prefixes"
 
-    invoke-interface {p0, v0, v1}, Lorg/xml/sax/XMLReader;->setFeature(Ljava/lang/String;Z)V
+    invoke-interface {p0, v1, v0}, Lorg/xml/sax/XMLReader;->setFeature(Ljava/lang/String;Z)V
 
     return-void
 .end method
@@ -93,6 +98,7 @@
 
     const/4 p0, 0x1
 
+    .line 1
     invoke-static {p0}, Lorg/dom4j/io/SAXHelper;->createXMLReader(Z)Lorg/xml/sax/XMLReader;
 
     move-result-object p0
@@ -103,6 +109,7 @@
 .method public getErrorHandler()Lorg/xml/sax/ErrorHandler;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/SAXValidator;->errorHandler:Lorg/xml/sax/ErrorHandler;
 
     return-object p0
@@ -116,18 +123,22 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/SAXValidator;->xmlReader:Lorg/xml/sax/XMLReader;
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/io/SAXValidator;->createXMLReader()Lorg/xml/sax/XMLReader;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/dom4j/io/SAXValidator;->xmlReader:Lorg/xml/sax/XMLReader;
 
+    .line 3
     invoke-virtual {p0}, Lorg/dom4j/io/SAXValidator;->configureReader()V
 
+    .line 4
     :cond_0
     iget-object p0, p0, Lorg/dom4j/io/SAXValidator;->xmlReader:Lorg/xml/sax/XMLReader;
 
@@ -137,6 +148,7 @@
 .method public setErrorHandler(Lorg/xml/sax/ErrorHandler;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/io/SAXValidator;->errorHandler:Lorg/xml/sax/ErrorHandler;
 
     return-void
@@ -150,8 +162,10 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/io/SAXValidator;->xmlReader:Lorg/xml/sax/XMLReader;
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/io/SAXValidator;->configureReader()V
 
     return-void
@@ -167,16 +181,20 @@
 
     if-eqz p1, :cond_1
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/io/SAXValidator;->getXMLReader()Lorg/xml/sax/XMLReader;
 
     move-result-object v0
 
+    .line 2
     iget-object p0, p0, Lorg/dom4j/io/SAXValidator;->errorHandler:Lorg/xml/sax/ErrorHandler;
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-interface {v0, p0}, Lorg/xml/sax/XMLReader;->setErrorHandler(Lorg/xml/sax/ErrorHandler;)V
 
+    .line 4
     :cond_0
     :try_start_0
     new-instance p0, Lorg/dom4j/io/DocumentInputSource;
@@ -192,6 +210,7 @@
     :catch_0
     move-exception p0
 
+    .line 5
     new-instance p1, Ljava/lang/RuntimeException;
 
     new-instance v0, Ljava/lang/StringBuffer;

@@ -28,6 +28,15 @@
 # direct methods
 .method public constructor <init>(Lorg/greenrobot/greendao/AbstractDao;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "abstractDao"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -36,8 +45,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lorg/greenrobot/greendao/InternalQueryDaoAccess;->dao:Lorg/greenrobot/greendao/AbstractDao;
 
     return-void
@@ -45,6 +56,15 @@
 
 .method public static getStatements(Lorg/greenrobot/greendao/AbstractDao;)Lorg/greenrobot/greendao/internal/TableStatements;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "dao"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T2:",
@@ -81,6 +101,15 @@
 
 .method public loadAllAndCloseCursor(Landroid/database/Cursor;)Ljava/util/List;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "cursor"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -91,6 +120,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lorg/greenrobot/greendao/InternalQueryDaoAccess;->dao:Lorg/greenrobot/greendao/AbstractDao;
 
     invoke-virtual {p0, p1}, Lorg/greenrobot/greendao/AbstractDao;->loadAllAndCloseCursor(Landroid/database/Cursor;)Ljava/util/List;
@@ -102,6 +132,19 @@
 
 .method public loadCurrent(Landroid/database/Cursor;IZ)Ljava/lang/Object;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "cursor",
+            "offset",
+            "lock"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -110,6 +153,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lorg/greenrobot/greendao/InternalQueryDaoAccess;->dao:Lorg/greenrobot/greendao/AbstractDao;
 
     invoke-virtual {p0, p1, p2, p3}, Lorg/greenrobot/greendao/AbstractDao;->loadCurrent(Landroid/database/Cursor;IZ)Ljava/lang/Object;
@@ -121,6 +165,15 @@
 
 .method public loadUniqueAndCloseCursor(Landroid/database/Cursor;)Ljava/lang/Object;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "cursor"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -129,6 +182,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lorg/greenrobot/greendao/InternalQueryDaoAccess;->dao:Lorg/greenrobot/greendao/AbstractDao;
 
     invoke-virtual {p0, p1}, Lorg/greenrobot/greendao/AbstractDao;->loadUniqueAndCloseCursor(Landroid/database/Cursor;)Ljava/lang/Object;

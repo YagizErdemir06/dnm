@@ -1,4 +1,4 @@
-.class Landroidx/fragment/app/FragmentAnim$2;
+.class public Landroidx/fragment/app/FragmentAnim$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,19 +18,20 @@
 
 
 # instance fields
-.field final synthetic val$callback:Landroidx/fragment/app/FragmentTransition$Callback;
+.field public final synthetic val$callback:Landroidx/fragment/app/FragmentTransition$Callback;
 
-.field final synthetic val$container:Landroid/view/ViewGroup;
+.field public final synthetic val$container:Landroid/view/ViewGroup;
 
-.field final synthetic val$fragment:Landroidx/fragment/app/Fragment;
+.field public final synthetic val$fragment:Landroidx/fragment/app/Fragment;
 
-.field final synthetic val$signal:Landroidx/core/os/CancellationSignal;
+.field public final synthetic val$signal:Landroidx/core/os/CancellationSignal;
 
 
 # direct methods
 .method public constructor <init>(Landroid/view/ViewGroup;Landroidx/fragment/app/Fragment;Landroidx/fragment/app/FragmentTransition$Callback;Landroidx/core/os/CancellationSignal;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/fragment/app/FragmentAnim$2;->val$container:Landroid/view/ViewGroup;
 
     iput-object p2, p0, Landroidx/fragment/app/FragmentAnim$2;->val$fragment:Landroidx/fragment/app/Fragment;
@@ -49,13 +50,14 @@
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 1
 
+    .line 1
     iget-object p1, p0, Landroidx/fragment/app/FragmentAnim$2;->val$container:Landroid/view/ViewGroup;
 
     new-instance v0, Landroidx/fragment/app/FragmentAnim$2$1;
 
     invoke-direct {v0, p0}, Landroidx/fragment/app/FragmentAnim$2$1;-><init>(Landroidx/fragment/app/FragmentAnim$2;)V
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method

@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/collect/TransformedListIterator;
+.class public abstract Lcom/google/common/collect/TransformedListIterator;
 .super Lcom/google/common/collect/TransformedIterator;
 .source "SourceFile"
 
@@ -39,6 +39,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/TransformedIterator;-><init>(Ljava/util/Iterator;)V
 
     return-void
@@ -54,6 +55,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/TransformedIterator;->backingIterator:Ljava/util/Iterator;
 
     invoke-static {p0}, Lcom/google/common/collect/Iterators;->cast(Ljava/util/Iterator;)Ljava/util/ListIterator;
@@ -77,6 +79,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -87,6 +90,7 @@
 .method public final hasPrevious()Z
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/TransformedListIterator;->backingIterator()Ljava/util/ListIterator;
 
     move-result-object p0
@@ -101,6 +105,7 @@
 .method public final nextIndex()I
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/TransformedListIterator;->backingIterator()Ljava/util/ListIterator;
 
     move-result-object p0
@@ -123,6 +128,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/TransformedListIterator;->backingIterator()Ljava/util/ListIterator;
 
     move-result-object v0
@@ -141,6 +147,7 @@
 .method public final previousIndex()I
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/TransformedListIterator;->backingIterator()Ljava/util/ListIterator;
 
     move-result-object p0
@@ -164,6 +171,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V

@@ -1,4 +1,4 @@
-.class Lcom/google/common/cache/LocalCache$2;
+.class public Lcom/google/common/cache/LocalCache$2;
 .super Ljava/util/AbstractQueue;
 .source "SourceFile"
 
@@ -26,6 +26,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/util/AbstractQueue;-><init>()V
 
     return-void
@@ -44,6 +45,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/ImmutableSet;->of()Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p0

@@ -1,4 +1,4 @@
-.class Lcom/bumptech/glide/load/engine/Engine$EngineJobFactory$1;
+.class public Lcom/bumptech/glide/load/engine/Engine$EngineJobFactory$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,13 +27,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/bumptech/glide/load/engine/Engine$EngineJobFactory;
+.field public final synthetic this$0:Lcom/bumptech/glide/load/engine/Engine$EngineJobFactory;
 
 
 # direct methods
 .method public constructor <init>(Lcom/bumptech/glide/load/engine/Engine$EngineJobFactory;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/Engine$EngineJobFactory$1;->this$0:Lcom/bumptech/glide/load/engine/Engine$EngineJobFactory;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

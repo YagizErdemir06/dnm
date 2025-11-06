@@ -61,10 +61,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/offline/FilteringManifestParser;->parser:Lcom/google/android/exoplayer2/upstream/ParsingLoadable$Parser;
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/exoplayer2/offline/FilteringManifestParser;->streamKeys:Ljava/util/List;
 
     return-void

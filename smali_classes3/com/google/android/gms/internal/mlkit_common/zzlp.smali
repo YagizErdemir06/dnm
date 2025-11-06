@@ -83,6 +83,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/android/gms/internal/mlkit_common/zzlp;
 
@@ -92,11 +93,13 @@
 
     return v2
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/gms/internal/mlkit_common/zzlp;
 
     iget-object v1, p0, Lcom/google/android/gms/internal/mlkit_common/zzlp;->zza:Ljava/lang/String;
 
+    .line 3
     iget-object v3, p1, Lcom/google/android/gms/internal/mlkit_common/zzlp;->zza:Ljava/lang/String;
 
     invoke-static {v1, v3}, Lcom/google/android/gms/common/internal/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -180,11 +183,12 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    .line 1
+    iget-object v1, p0, Lcom/google/android/gms/internal/mlkit_common/zzlp;->zza:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/google/android/gms/internal/mlkit_common/zzlp;->zza:Ljava/lang/String;
+    const/4 v2, 0x0
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
     const/4 v1, 0x1
 
@@ -192,25 +196,25 @@
 
     aput-object v2, v0, v1
 
-    const/4 v1, 0x2
+    iget-object v1, p0, Lcom/google/android/gms/internal/mlkit_common/zzlp;->zzc:Lcom/google/android/gms/internal/mlkit_common/zzln;
 
-    iget-object v3, p0, Lcom/google/android/gms/internal/mlkit_common/zzlp;->zzc:Lcom/google/android/gms/internal/mlkit_common/zzln;
+    const/4 v3, 0x2
 
-    aput-object v3, v0, v1
+    aput-object v1, v0, v3
 
     const/4 v1, 0x3
 
     aput-object v2, v0, v1
 
-    const/4 v1, 0x4
+    iget-object v1, p0, Lcom/google/android/gms/internal/mlkit_common/zzlp;->zze:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/google/android/gms/internal/mlkit_common/zzlp;->zze:Ljava/lang/String;
+    const/4 v3, 0x4
 
-    aput-object v3, v0, v1
-
-    const/4 v1, 0x5
+    aput-object v1, v0, v3
 
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_common/zzlp;->zzf:Lcom/google/android/gms/internal/mlkit_common/zzlm;
+
+    const/4 v1, 0x5
 
     aput-object p0, v0, v1
 

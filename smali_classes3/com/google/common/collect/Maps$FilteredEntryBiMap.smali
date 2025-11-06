@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/Maps$FilteredEntryBiMap;
+.class public final Lcom/google/common/collect/Maps$FilteredEntryBiMap;
 .super Lcom/google/common/collect/Maps$FilteredEntryMap;
 .source "SourceFile"
 
@@ -126,6 +126,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/Maps$FilteredEntryBiMap$1;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/Maps$FilteredEntryBiMap$1;-><init>(Lcom/google/common/base/Predicate;)V
@@ -154,12 +155,14 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/Maps$AbstractFilteredMap;->apply(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$FilteredEntryBiMap;->unfiltered()Lcom/google/common/collect/BiMap;
 
     move-result-object p0
@@ -181,6 +184,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Maps$FilteredEntryBiMap;->inverse:Lcom/google/common/collect/BiMap;
 
     return-object p0
@@ -196,6 +200,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Maps$AbstractFilteredMap;->unfiltered:Ljava/util/Map;
 
     check-cast p0, Lcom/google/common/collect/BiMap;

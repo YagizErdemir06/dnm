@@ -4,9 +4,9 @@
 
 
 # static fields
-.field static final synthetic $assertionsDisabled:Z
+.field public static final synthetic $assertionsDisabled:Z
 
-.field static synthetic class$org$apache$xmlbeans$impl$tool$SchemaCodeGenerator:Ljava/lang/Class;
+.field public static synthetic class$org$apache$xmlbeans$impl$tool$SchemaCodeGenerator:Ljava/lang/Class;
 
 .field private static deleteFileQueue:Ljava/util/Set;
 
@@ -17,6 +17,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/tool/SchemaCodeGenerator;->class$org$apache$xmlbeans$impl$tool$SchemaCodeGenerator:Ljava/lang/Class;
 
     if-nez v0, :cond_0
@@ -34,6 +35,7 @@
 
     sput-boolean v0, Lorg/apache/xmlbeans/impl/tool/SchemaCodeGenerator;->$assertionsDisabled:Z
 
+    .line 2
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -42,6 +44,7 @@
 
     const/4 v0, 0x0
 
+    .line 3
     sput v0, Lorg/apache/xmlbeans/impl/tool/SchemaCodeGenerator;->triesRemaining:I
 
     return-void
@@ -50,6 +53,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -58,6 +62,7 @@
 .method public static synthetic access$000()Z
     .locals 1
 
+    .line 1
     invoke-static {}, Lorg/apache/xmlbeans/impl/tool/SchemaCodeGenerator;->tryNowThatItsLater()Z
 
     move-result v0
@@ -68,6 +73,7 @@
 .method public static synthetic access$100()V
     .locals 0
 
+    .line 1
     invoke-static {}, Lorg/apache/xmlbeans/impl/tool/SchemaCodeGenerator;->giveUp()V
 
     return-void
@@ -76,6 +82,7 @@
 .method public static synthetic class$(Ljava/lang/String;)Ljava/lang/Class;
     .locals 1
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -92,7 +99,7 @@
 
     invoke-direct {v0}, Ljava/lang/NoClassDefFoundError;-><init>()V
 
-    invoke-virtual {v0, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v0, p0}, Ljava/lang/NoClassDefFoundError;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -107,6 +114,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     new-instance v0, Ljava/io/File;
 
@@ -118,6 +126,7 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
+    .line 2
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -127,29 +136,34 @@
     :catch_0
     move-exception v0
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 3
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
     const-string v0, "xbean"
 
     const/4 v1, 0x0
 
+    .line 4
     invoke-static {v0, v1}, Ljava/io/File;->createTempFile(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
 
+    .line 5
     invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, ".tmp"
 
+    .line 6
     invoke-virtual {v2, v3}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_5
 
+    .line 7
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -167,6 +181,7 @@
 
     if-ge v4, v3, :cond_4
 
+    .line 8
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -203,20 +218,24 @@
 
     move-result-object v1
 
+    .line 9
     new-instance v3, Ljava/io/File;
 
     invoke-direct {v3, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
+    .line 10
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
     move-result v1
 
     if-nez v1, :cond_3
 
+    .line 11
     invoke-virtual {v3}, Ljava/io/File;->mkdirs()Z
 
     move-result v1
 
+    .line 12
     sget-boolean v2, Lorg/apache/xmlbeans/impl/tool/SchemaCodeGenerator;->$assertionsDisabled:Z
 
     if-nez v2, :cond_2
@@ -263,12 +282,14 @@
 
     goto :goto_1
 
+    .line 13
     :cond_4
     :goto_4
     invoke-virtual {v0}, Ljava/io/File;->deleteOnExit()V
 
     return-object v1
 
+    .line 14
     :cond_5
     new-instance v0, Ljava/io/IOException;
 
@@ -282,6 +303,7 @@
 .method private static deleteDirRecursively(Ljava/io/File;Ljava/io/File;)V
     .locals 1
 
+    .line 1
     invoke-virtual {p1}, Ljava/io/File;->list()[Ljava/lang/String;
 
     move-result-object v0
@@ -289,6 +311,7 @@
     :goto_0
     if-eqz v0, :cond_0
 
+    .line 2
     array-length v0, v0
 
     if-nez v0, :cond_0
@@ -299,12 +322,15 @@
 
     if-nez v0, :cond_0
 
+    .line 3
     invoke-virtual {p1}, Ljava/io/File;->delete()Z
 
+    .line 4
     invoke-virtual {p1}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
     move-result-object p1
 
+    .line 5
     invoke-virtual {p1}, Ljava/io/File;->list()[Ljava/lang/String;
 
     move-result-object v0
@@ -318,6 +344,7 @@
 .method public static deleteObsoleteFiles(Ljava/io/File;Ljava/io/File;Ljava/util/Set;)V
     .locals 5
 
+    .line 1
     invoke-virtual {p0}, Ljava/io/File;->isDirectory()Z
 
     move-result v0
@@ -330,10 +357,12 @@
 
     if-eqz v0, :cond_6
 
+    .line 2
     invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 3
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -347,6 +376,7 @@
     :cond_0
     const-string v1, "/home/"
 
+    .line 4
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -378,6 +408,7 @@
     :cond_1
     return-void
 
+    .line 5
     :cond_2
     invoke-virtual {p1}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
@@ -385,11 +416,13 @@
 
     const/4 v0, 0x0
 
+    .line 6
     :goto_0
     array-length v1, p1
 
     if-ge v0, v1, :cond_5
 
+    .line 7
     aget-object v1, p1, v0
 
     invoke-virtual {v1}, Ljava/io/File;->isDirectory()Z
@@ -398,12 +431,14 @@
 
     if-eqz v1, :cond_3
 
+    .line 8
     aget-object v1, p1, v0
 
     invoke-static {p0, v1, p2}, Lorg/apache/xmlbeans/impl/tool/SchemaCodeGenerator;->deleteObsoleteFiles(Ljava/io/File;Ljava/io/File;Ljava/util/Set;)V
 
     goto :goto_1
 
+    .line 9
     :cond_3
     aget-object v1, p1, v0
 
@@ -415,11 +450,13 @@
 
     goto :goto_1
 
+    .line 10
     :cond_4
     aget-object v1, p1, v0
 
     invoke-static {v1}, Lorg/apache/xmlbeans/impl/tool/SchemaCodeGenerator;->deleteXmlBeansFile(Ljava/io/File;)V
 
+    .line 11
     aget-object v1, p1, v0
 
     invoke-virtual {v1}, Ljava/io/File;->getParentFile()Ljava/io/File;
@@ -436,6 +473,7 @@
     :cond_5
     return-void
 
+    .line 12
     :cond_6
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -447,6 +485,7 @@
 .method private static deleteXmlBeansFile(Ljava/io/File;)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -459,6 +498,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Ljava/io/File;->delete()Z
 
     :cond_0
@@ -468,10 +508,12 @@
 .method private static giveUp()V
     .locals 2
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/tool/SchemaCodeGenerator;->deleteFileQueue:Ljava/util/Set;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     sget-object v1, Lorg/apache/xmlbeans/impl/tool/SchemaCodeGenerator;->deleteFileQueue:Ljava/util/Set;
 
@@ -479,8 +521,10 @@
 
     const/4 v1, 0x0
 
+    .line 3
     sput v1, Lorg/apache/xmlbeans/impl/tool/SchemaCodeGenerator;->triesRemaining:I
 
+    .line 4
     monitor-exit v0
 
     return-void
@@ -495,7 +539,7 @@
     throw v1
 .end method
 
-.method public static saveTypeSystem(Lorg/apache/xmlbeans/SchemaTypeSystem;Ljava/io/File;Ljava/io/File;Llv/c;Lorg/apache/xmlbeans/XmlOptions;)V
+.method public static saveTypeSystem(Lorg/apache/xmlbeans/SchemaTypeSystem;Ljava/io/File;Ljava/io/File;Lo/c;Lorg/apache/xmlbeans/XmlOptions;)V
     .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -503,6 +547,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p2, Lorg/apache/xmlbeans/impl/util/FilerImpl;
 
     const/4 v2, 0x0
@@ -517,8 +562,9 @@
 
     move-object v3, p3
 
-    invoke-direct/range {v0 .. v5}, Lorg/apache/xmlbeans/impl/util/FilerImpl;-><init>(Ljava/io/File;Ljava/io/File;Llv/c;ZZ)V
+    invoke-direct/range {v0 .. v5}, Lorg/apache/xmlbeans/impl/util/FilerImpl;-><init>(Ljava/io/File;Ljava/io/File;Lo/c;ZZ)V
 
+    .line 2
     invoke-interface {p0, p2}, Lorg/apache/xmlbeans/SchemaTypeSystem;->save(Lorg/apache/xmlbeans/Filer;)V
 
     return-void
@@ -527,14 +573,17 @@
 .method public static tryHardToDelete(Ljava/io/File;)V
     .locals 1
 
+    .line 1
     invoke-static {p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCodeGenerator;->tryToDelete(Ljava/io/File;)V
 
+    .line 2
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-static {p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCodeGenerator;->tryToDeleteLater(Ljava/io/File;)V
 
     :cond_0
@@ -544,10 +593,12 @@
 .method private static tryNowThatItsLater()Z
     .locals 5
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/tool/SchemaCodeGenerator;->deleteFileQueue:Ljava/util/Set;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     new-instance v1, Ljava/util/ArrayList;
 
@@ -555,18 +606,22 @@
 
     invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
+    .line 3
     sget-object v2, Lorg/apache/xmlbeans/impl/tool/SchemaCodeGenerator;->deleteFileQueue:Ljava/util/Set;
 
     invoke-interface {v2}, Ljava/util/Set;->clear()V
 
+    .line 4
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
+    .line 5
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 6
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -579,29 +634,35 @@
 
     if-eqz v2, :cond_1
 
+    .line 7
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/io/File;
 
+    .line 8
     invoke-static {v2}, Lorg/apache/xmlbeans/impl/tool/SchemaCodeGenerator;->tryToDelete(Ljava/io/File;)V
 
+    .line 9
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
+    .line 10
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 11
     :cond_1
     sget-object v1, Lorg/apache/xmlbeans/impl/tool/SchemaCodeGenerator;->deleteFileQueue:Ljava/util/Set;
 
     monitor-enter v1
 
+    .line 12
     :try_start_1
     sget v2, Lorg/apache/xmlbeans/impl/tool/SchemaCodeGenerator;->triesRemaining:I
 
@@ -611,8 +672,10 @@
 
     sub-int/2addr v2, v3
 
+    .line 13
     sput v2, Lorg/apache/xmlbeans/impl/tool/SchemaCodeGenerator;->triesRemaining:I
 
+    .line 14
     :cond_2
     sget v2, Lorg/apache/xmlbeans/impl/tool/SchemaCodeGenerator;->triesRemaining:I
 
@@ -628,6 +691,7 @@
 
     goto :goto_1
 
+    .line 15
     :cond_3
     sget-object v2, Lorg/apache/xmlbeans/impl/tool/SchemaCodeGenerator;->deleteFileQueue:Ljava/util/Set;
 
@@ -635,10 +699,12 @@
 
     goto :goto_2
 
+    .line 16
     :cond_4
     :goto_1
     sput v4, Lorg/apache/xmlbeans/impl/tool/SchemaCodeGenerator;->triesRemaining:I
 
+    .line 17
     :goto_2
     sget v0, Lorg/apache/xmlbeans/impl/tool/SchemaCodeGenerator;->triesRemaining:I
 
@@ -657,6 +723,7 @@
     :catchall_0
     move-exception v0
 
+    .line 18
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -666,6 +733,7 @@
     :catchall_1
     move-exception v1
 
+    .line 19
     :try_start_2
     monitor-exit v0
     :try_end_2
@@ -677,18 +745,21 @@
 .method private static tryToDelete(Ljava/io/File;)V
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 2
     invoke-virtual {p0}, Ljava/io/File;->isDirectory()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {p0}, Ljava/io/File;->list()[Ljava/lang/String;
 
     move-result-object v0
@@ -697,11 +768,13 @@
 
     const/4 v1, 0x0
 
+    .line 4
     :goto_0
     array-length v2, v0
 
     if-ge v1, v2, :cond_0
 
+    .line 5
     new-instance v2, Ljava/io/File;
 
     aget-object v3, v0, v1
@@ -714,8 +787,13 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-virtual {p0}, Ljava/io/File;->delete()Z
+
+    move-result p0
+
+    if-nez p0, :cond_1
 
     :cond_1
     return-void
@@ -724,23 +802,28 @@
 .method private static tryToDeleteLater(Ljava/io/File;)V
     .locals 2
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/tool/SchemaCodeGenerator;->deleteFileQueue:Ljava/util/Set;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     sget-object v1, Lorg/apache/xmlbeans/impl/tool/SchemaCodeGenerator;->deleteFileQueue:Ljava/util/Set;
 
     invoke-interface {v1, p0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 3
     sget p0, Lorg/apache/xmlbeans/impl/tool/SchemaCodeGenerator;->triesRemaining:I
 
     if-nez p0, :cond_0
 
+    .line 4
     new-instance p0, Lorg/apache/xmlbeans/impl/tool/SchemaCodeGenerator$1;
 
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/tool/SchemaCodeGenerator$1;-><init>()V
 
+    .line 5
     :cond_0
     sget p0, Lorg/apache/xmlbeans/impl/tool/SchemaCodeGenerator;->triesRemaining:I
 
@@ -748,8 +831,10 @@
 
     if-ge p0, v1, :cond_1
 
+    .line 6
     sput v1, Lorg/apache/xmlbeans/impl/tool/SchemaCodeGenerator;->triesRemaining:I
 
+    .line 7
     :cond_1
     monitor-exit v0
 

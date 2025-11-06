@@ -25,13 +25,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/ForwardingMultiset;
+.field public final synthetic this$0:Lcom/google/common/collect/ForwardingMultiset;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/ForwardingMultiset;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/ForwardingMultiset$StandardElementSet;->this$0:Lcom/google/common/collect/ForwardingMultiset;
 
     invoke-direct {p0}, Lcom/google/common/collect/Multisets$ElementSet;-><init>()V
@@ -51,6 +52,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingMultiset$StandardElementSet;->multiset()Lcom/google/common/collect/Multiset;
 
     move-result-object p0
@@ -80,6 +82,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ForwardingMultiset$StandardElementSet;->this$0:Lcom/google/common/collect/ForwardingMultiset;
 
     return-object p0

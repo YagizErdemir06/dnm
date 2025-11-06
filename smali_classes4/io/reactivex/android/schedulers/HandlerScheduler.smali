@@ -1,4 +1,4 @@
-.class final Lio/reactivex/android/schedulers/HandlerScheduler;
+.class public final Lio/reactivex/android/schedulers/HandlerScheduler;
 .super Lio/reactivex/Scheduler;
 .source "SourceFile"
 
@@ -20,8 +20,10 @@
 .method public constructor <init>(Landroid/os/Handler;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lio/reactivex/Scheduler;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lio/reactivex/android/schedulers/HandlerScheduler;->handler:Landroid/os/Handler;
 
     return-void
@@ -32,6 +34,7 @@
 .method public createWorker()Lio/reactivex/Scheduler$Worker;
     .locals 1
 
+    .line 1
     new-instance v0, Lio/reactivex/android/schedulers/HandlerScheduler$HandlerWorker;
 
     iget-object p0, p0, Lio/reactivex/android/schedulers/HandlerScheduler;->handler:Landroid/os/Handler;
@@ -44,20 +47,29 @@
 .method public scheduleDirect(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/Disposable;
     .locals 3
 
-    if-eqz p1, :cond_1
+    const-string v0, "run == null"
 
-    if-eqz p4, :cond_0
+    .line 1
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    const-string v0, "unit == null"
+
+    .line 2
+    invoke-static {p4, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 3
     invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->onSchedule(Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
     move-result-object p1
 
+    .line 4
     new-instance v0, Lio/reactivex/android/schedulers/HandlerScheduler$ScheduledRunnable;
 
     iget-object v1, p0, Lio/reactivex/android/schedulers/HandlerScheduler;->handler:Landroid/os/Handler;
 
     invoke-direct {v0, v1, p1}, Lio/reactivex/android/schedulers/HandlerScheduler$ScheduledRunnable;-><init>(Landroid/os/Handler;Ljava/lang/Runnable;)V
 
+    .line 5
     iget-object p0, p0, Lio/reactivex/android/schedulers/HandlerScheduler;->handler:Landroid/os/Handler;
 
     const-wide/16 v1, 0x0
@@ -73,22 +85,4 @@
     invoke-virtual {p0, v0, p1, p2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     return-object v0
-
-    :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string p1, "unit == null"
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string p1, "run == null"
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method

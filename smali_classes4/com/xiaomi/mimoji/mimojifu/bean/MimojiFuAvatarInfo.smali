@@ -62,6 +62,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -72,6 +73,7 @@
 .method public getAge()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->age:I
 
     return p0
@@ -80,6 +82,7 @@
 .method public getBeard()Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->beard:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object p0
@@ -88,6 +91,7 @@
 .method public getBrow()Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->brow:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object p0
@@ -96,6 +100,7 @@
 .method public getDir()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->dir:Ljava/lang/String;
 
     return-object p0
@@ -104,6 +109,7 @@
 .method public getEar()Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->ear:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object p0
@@ -112,6 +118,7 @@
 .method public getEarring()Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->earring:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object p0
@@ -120,6 +127,7 @@
 .method public getEye()Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->eye:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object p0
@@ -128,6 +136,7 @@
 .method public getEyelash()Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->eyelash:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object p0
@@ -136,6 +145,7 @@
 .method public getEyelid()Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->eyelid:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object p0
@@ -144,6 +154,7 @@
 .method public getFace()Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->face:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object p0
@@ -152,6 +163,7 @@
 .method public getFreckle()Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->freckle:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object p0
@@ -160,6 +172,7 @@
 .method public getGender()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->gender:I
 
     return p0
@@ -168,6 +181,7 @@
 .method public getGlasses()Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->glasses:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object p0
@@ -176,6 +190,7 @@
 .method public getHair()Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->hair:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object p0
@@ -184,6 +199,7 @@
 .method public getHead()Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->head:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object p0
@@ -192,6 +208,7 @@
 .method public getHeadwear()Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->headwear:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object p0
@@ -200,6 +217,7 @@
 .method public getLiplash()Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->liplash:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object p0
@@ -208,6 +226,7 @@
 .method public getMouth()Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->mouth:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object p0
@@ -216,6 +235,7 @@
 .method public getNevus()Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->nevus:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object p0
@@ -224,6 +244,7 @@
 .method public getNose()Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->nose:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-object p0
@@ -232,6 +253,7 @@
 .method public isEidted()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->isEidted:Z
 
     return p0
@@ -239,7 +261,16 @@
 
 .method public setAge(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "age"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->age:I
 
     return-void
@@ -247,7 +278,16 @@
 
 .method public setBeard(Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "beard"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->beard:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void
@@ -255,7 +295,16 @@
 
 .method public setBrow(Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "brow"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->brow:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void
@@ -263,7 +312,16 @@
 
 .method public setDir(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "dir"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->dir:Ljava/lang/String;
 
     return-void
@@ -271,7 +329,16 @@
 
 .method public setEar(Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "ear"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->ear:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void
@@ -279,7 +346,16 @@
 
 .method public setEarring(Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "earring"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->earring:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void
@@ -287,7 +363,16 @@
 
 .method public setEidted(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "eidted"
+        }
+    .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->isEidted:Z
 
     return-void
@@ -295,7 +380,16 @@
 
 .method public setEye(Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "eye"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->eye:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void
@@ -303,7 +397,16 @@
 
 .method public setEyelash(Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "eyelash"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->eyelash:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void
@@ -311,7 +414,16 @@
 
 .method public setEyelid(Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "eyelid"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->eyelid:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void
@@ -319,7 +431,16 @@
 
 .method public setFace(Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "face"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->face:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void
@@ -327,7 +448,16 @@
 
 .method public setFreckle(Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "freckle"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->freckle:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void
@@ -335,7 +465,16 @@
 
 .method public setGender(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "gender"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->gender:I
 
     return-void
@@ -343,7 +482,16 @@
 
 .method public setGlasses(Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "glasses"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->glasses:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void
@@ -351,7 +499,16 @@
 
 .method public setHair(Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "hair"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->hair:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void
@@ -359,7 +516,16 @@
 
 .method public setHead(Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "head"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->head:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void
@@ -367,7 +533,16 @@
 
 .method public setHeadwear(Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "headwear"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->headwear:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void
@@ -375,7 +550,16 @@
 
 .method public setLiplash(Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "liplash"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->liplash:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void
@@ -383,7 +567,16 @@
 
 .method public setMouth(Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mouth"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->mouth:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void
@@ -391,7 +584,16 @@
 
 .method public setNevus(Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "nevus"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->nevus:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void
@@ -399,7 +601,16 @@
 
 .method public setNose(Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "nose"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;->nose:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;
 
     return-void

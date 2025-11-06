@@ -7,13 +7,14 @@
 
 
 # instance fields
-.field protected encoding:Ljava/lang/String;
+.field public encoding:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/dom4j/tree/AbstractBranch;-><init>()V
 
     return-void
@@ -24,16 +25,20 @@
 .method public accept(Lorg/dom4j/Visitor;)V
     .locals 3
 
+    .line 1
     invoke-interface {p1, p0}, Lorg/dom4j/Visitor;->visit(Lorg/dom4j/Document;)V
 
+    .line 2
     invoke-interface {p0}, Lorg/dom4j/Document;->getDocType()Lorg/dom4j/DocumentType;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-interface {p1, v0}, Lorg/dom4j/Visitor;->visit(Lorg/dom4j/DocumentType;)V
 
+    .line 4
     :cond_0
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractBranch;->content()Ljava/util/List;
 
@@ -41,6 +46,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 5
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -52,14 +58,17 @@
 
     if-eqz v1, :cond_2
 
+    .line 6
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
+    .line 7
     instance-of v2, v1, Ljava/lang/String;
 
     if-eqz v2, :cond_1
 
+    .line 8
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractNode;->getDocumentFactory()Lorg/dom4j/DocumentFactory;
 
     move-result-object v2
@@ -70,13 +79,16 @@
 
     move-result-object v1
 
+    .line 9
     invoke-interface {p1, v1}, Lorg/dom4j/Visitor;->visit(Lorg/dom4j/Text;)V
 
     goto :goto_0
 
+    .line 10
     :cond_1
     check-cast v1, Lorg/dom4j/Node;
 
+    .line 11
     invoke-interface {v1, p1}, Lorg/dom4j/Node;->accept(Lorg/dom4j/Visitor;)V
 
     goto :goto_0
@@ -88,10 +100,13 @@
 .method public add(Lorg/dom4j/Element;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/AbstractDocument;->checkAddElementAllowed(Lorg/dom4j/Element;)V
 
+    .line 2
     invoke-super {p0, p1}, Lorg/dom4j/tree/AbstractBranch;->add(Lorg/dom4j/Element;)V
 
+    .line 3
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/AbstractDocument;->rootElementAdded(Lorg/dom4j/Element;)V
 
     return-void
@@ -100,6 +115,7 @@
 .method public addComment(Ljava/lang/String;)Lorg/dom4j/Document;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractNode;->getDocumentFactory()Lorg/dom4j/DocumentFactory;
 
     move-result-object v0
@@ -108,6 +124,7 @@
 
     move-result-object p1
 
+    .line 2
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/AbstractBranch;->add(Lorg/dom4j/Comment;)V
 
     return-object p0
@@ -206,27 +223,34 @@
 .method public asXML()Ljava/lang/String;
     .locals 3
 
+    .line 1
     new-instance v0, Lorg/dom4j/io/OutputFormat;
 
     invoke-direct {v0}, Lorg/dom4j/io/OutputFormat;-><init>()V
 
+    .line 2
     iget-object v1, p0, Lorg/dom4j/tree/AbstractDocument;->encoding:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lorg/dom4j/io/OutputFormat;->setEncoding(Ljava/lang/String;)V
 
+    .line 3
     :try_start_0
     new-instance v1, Ljava/io/StringWriter;
 
     invoke-direct {v1}, Ljava/io/StringWriter;-><init>()V
 
+    .line 4
     new-instance v2, Lorg/dom4j/io/XMLWriter;
 
     invoke-direct {v2, v1, v0}, Lorg/dom4j/io/XMLWriter;-><init>(Ljava/io/Writer;Lorg/dom4j/io/OutputFormat;)V
 
+    .line 5
     invoke-virtual {v2, p0}, Lorg/dom4j/io/XMLWriter;->write(Lorg/dom4j/Document;)V
 
+    .line 6
     invoke-virtual {v2}, Lorg/dom4j/io/XMLWriter;->flush()V
 
+    .line 7
     invoke-virtual {v1}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -238,6 +262,7 @@
     :catch_0
     move-exception p0
 
+    .line 8
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuffer;
@@ -248,7 +273,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
 
@@ -272,6 +297,7 @@
 .method public checkAddElementAllowed(Lorg/dom4j/Element;)V
     .locals 4
 
+    .line 1
     invoke-interface {p0}, Lorg/dom4j/Document;->getRootElement()Lorg/dom4j/Element;
 
     move-result-object v0
@@ -280,6 +306,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     new-instance v1, Lorg/dom4j/IllegalAddException;
 
@@ -311,6 +338,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     invoke-interface {p1, p0}, Lorg/dom4j/Node;->setDocument(Lorg/dom4j/Document;)V
 
     :cond_0
@@ -324,6 +352,7 @@
 
     const/4 p0, 0x0
 
+    .line 1
     invoke-interface {p1, p0}, Lorg/dom4j/Node;->setDocument(Lorg/dom4j/Document;)V
 
     :cond_0
@@ -355,12 +384,14 @@
 .method public getStringValue()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-interface {p0}, Lorg/dom4j/Document;->getRootElement()Lorg/dom4j/Element;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0}, Lorg/dom4j/Element;->getStringValue()Ljava/lang/String;
 
     move-result-object p0
@@ -393,12 +424,14 @@
 .method public normalize()V
     .locals 0
 
+    .line 1
     invoke-interface {p0}, Lorg/dom4j/Document;->getRootElement()Lorg/dom4j/Element;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0}, Lorg/dom4j/Branch;->normalize()V
 
     :cond_0
@@ -408,10 +441,12 @@
 .method public remove(Lorg/dom4j/Element;)Z
     .locals 3
 
+    .line 1
     invoke-super {p0, p1}, Lorg/dom4j/tree/AbstractBranch;->remove(Lorg/dom4j/Element;)Z
 
     move-result v0
 
+    .line 2
     invoke-interface {p0}, Lorg/dom4j/Document;->getRootElement()Lorg/dom4j/Element;
 
     move-result-object v1
@@ -422,8 +457,10 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {p0, v2}, Lorg/dom4j/tree/AbstractDocument;->setRootElement(Lorg/dom4j/Element;)V
 
+    .line 4
     :cond_0
     invoke-interface {p1, v2}, Lorg/dom4j/Node;->setDocument(Lorg/dom4j/Document;)V
 
@@ -436,12 +473,15 @@
 .method public setRootElement(Lorg/dom4j/Element;)V
     .locals 0
 
+    .line 1
     invoke-interface {p0}, Lorg/dom4j/Branch;->clearContent()V
 
     if-eqz p1, :cond_0
 
+    .line 2
     invoke-super {p0, p1}, Lorg/dom4j/tree/AbstractBranch;->add(Lorg/dom4j/Element;)V
 
+    .line 3
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/AbstractDocument;->rootElementAdded(Lorg/dom4j/Element;)V
 
     :cond_0
@@ -451,6 +491,7 @@
 .method public setXMLEncoding(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/tree/AbstractDocument;->encoding:Ljava/lang/String;
 
     return-void
@@ -459,6 +500,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -498,18 +540,22 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lorg/dom4j/io/OutputFormat;
 
     invoke-direct {v0}, Lorg/dom4j/io/OutputFormat;-><init>()V
 
+    .line 2
     iget-object v1, p0, Lorg/dom4j/tree/AbstractDocument;->encoding:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lorg/dom4j/io/OutputFormat;->setEncoding(Ljava/lang/String;)V
 
+    .line 3
     new-instance v1, Lorg/dom4j/io/XMLWriter;
 
     invoke-direct {v1, p1, v0}, Lorg/dom4j/io/XMLWriter;-><init>(Ljava/io/Writer;Lorg/dom4j/io/OutputFormat;)V
 
+    .line 4
     invoke-virtual {v1, p0}, Lorg/dom4j/io/XMLWriter;->write(Lorg/dom4j/Document;)V
 
     return-void

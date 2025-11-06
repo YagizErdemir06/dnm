@@ -39,12 +39,15 @@
 .method public constructor <init>(Z)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     sget-object v0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$UncaughtThrowableStrategy;->DEFAULT:Lcom/bumptech/glide/load/engine/executor/GlideExecutor$UncaughtThrowableStrategy;
 
     iput-object v0, p0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;->uncaughtThrowableStrategy:Lcom/bumptech/glide/load/engine/executor/GlideExecutor$UncaughtThrowableStrategy;
 
+    .line 3
     iput-boolean p1, p0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;->preventNetworkOperations:Z
 
     return-void
@@ -55,6 +58,7 @@
 .method public build()Lcom/bumptech/glide/load/engine/executor/GlideExecutor;
     .locals 11
 
+    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;->name:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -63,6 +67,7 @@
 
     if-nez v0, :cond_1
 
+    .line 2
     new-instance v0, Ljava/util/concurrent/ThreadPoolExecutor;
 
     iget v2, p0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;->corePoolSize:I
@@ -91,6 +96,7 @@
 
     invoke-direct/range {v1 .. v8}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
 
+    .line 3
     iget-wide v1, p0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;->threadTimeoutMillis:J
 
     const-wide/16 v3, 0x0
@@ -101,8 +107,10 @@
 
     const/4 p0, 0x1
 
+    .line 4
     invoke-virtual {v0, p0}, Ljava/util/concurrent/ThreadPoolExecutor;->allowCoreThreadTimeOut(Z)V
 
+    .line 5
     :cond_0
     new-instance p0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor;
 
@@ -110,6 +118,7 @@
 
     return-object p0
 
+    .line 6
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -137,6 +146,7 @@
 .method public setName(Ljava/lang/String;)Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;->name:Ljava/lang/String;
 
     return-object p0
@@ -150,8 +160,10 @@
         .end annotation
     .end param
 
+    .line 1
     iput p1, p0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;->corePoolSize:I
 
+    .line 2
     iput p1, p0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;->maximumPoolSize:I
 
     return-object p0
@@ -160,6 +172,7 @@
 .method public setThreadTimeoutMillis(J)Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;->threadTimeoutMillis:J
 
     return-object p0
@@ -172,6 +185,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;->uncaughtThrowableStrategy:Lcom/bumptech/glide/load/engine/executor/GlideExecutor$UncaughtThrowableStrategy;
 
     return-object p0

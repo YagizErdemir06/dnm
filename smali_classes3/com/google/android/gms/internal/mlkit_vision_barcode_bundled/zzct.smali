@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzct;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzct;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -20,14 +20,17 @@
 .method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 3
 
+    .line 1
     check-cast p1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;
 
     check-cast p2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;->zzq()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcw;
 
     move-result-object p0
 
+    .line 3
     invoke-virtual {p2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;->zzq()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcw;
 
     move-result-object v0
@@ -45,6 +48,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 4
     invoke-interface {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcw;->zza()B
 
     move-result v1
@@ -55,6 +59,7 @@
 
     move-result-object v1
 
+    .line 5
     invoke-interface {v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcw;->zza()B
 
     move-result v2
@@ -73,6 +78,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_1
     invoke-virtual {p1}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;->zzd()I
 

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/data/zab;
+.class public final Lcom/google/android/gms/common/data/zab;
 .super Lcom/google/android/gms/common/data/DataHolder$Builder;
 .source "SourceFile"
 
@@ -9,6 +9,7 @@
 
     const/4 p2, 0x0
 
+    .line 1
     invoke-direct {p0, p1, p2, p2}, Lcom/google/android/gms/common/data/DataHolder$Builder;-><init>([Ljava/lang/String;Ljava/lang/String;Lcom/google/android/gms/common/data/zac;)V
 
     return-void
@@ -19,6 +20,7 @@
 .method public final withRow(Landroid/content/ContentValues;)Lcom/google/android/gms/common/data/DataHolder$Builder;
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Cannot add data to empty builder"
@@ -31,6 +33,7 @@
 .method public final zaa(Ljava/util/HashMap;)Lcom/google/android/gms/common/data/DataHolder$Builder;
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Cannot add data to empty builder"

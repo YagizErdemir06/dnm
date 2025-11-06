@@ -1,14 +1,14 @@
-.class final Lokio/ForwardingFileSystem$listRecursively$1;
-.super Lkotlin/jvm/internal/n0;
+.class public final Lokio/ForwardingFileSystem$listRecursively$1;
+.super Lh/d3/x/n0;
 .source "SourceFile"
 
 # interfaces
-.implements Ljn/l;
+.implements Lh/d3/w/l;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lokio/ForwardingFileSystem;->listRecursively(Lokio/Path;Z)Lun/m;
+    value = Lokio/ForwardingFileSystem;->listRecursively(Lokio/Path;Z)Lh/j3/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,22 +18,28 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lkotlin/jvm/internal/n0;",
-        "Ljn/l<",
+        "Lh/d3/x/n0;",
+        "Lh/d3/w/l<",
         "Lokio/Path;",
         "Lokio/Path;",
         ">;"
     }
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0010\u0002\u001a\u00020\u00002\u0006\u0010\u0001\u001a\u00020\u0000H\n"
+        "\u0000\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0002\u001a\u00020\u00002\u0006\u0010\u0001\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0002\u0010\u0003"
     }
     d2 = {
         "Lokio/Path;",
         "it",
-        "<anonymous>"
+        "<anonymous>",
+        "(Lokio/Path;)Lokio/Path;"
     }
     k = 0x3
     mv = {
@@ -45,7 +51,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lokio/ForwardingFileSystem;
+.field public final synthetic this$0:Lokio/ForwardingFileSystem;
 
 
 # direct methods
@@ -56,7 +62,7 @@
 
     const/4 p1, 0x1
 
-    invoke-direct {p0, p1}, Lkotlin/jvm/internal/n0;-><init>(I)V
+    invoke-direct {p0, p1}, Lh/d3/x/n0;-><init>(I)V
 
     return-void
 .end method
@@ -79,15 +85,15 @@
 .method public final invoke(Lokio/Path;)Lokio/Path;
     .locals 1
     .param p1    # Lokio/Path;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "it"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     iget-object p0, p0, Lokio/ForwardingFileSystem$listRecursively$1;->this$0:Lokio/ForwardingFileSystem;

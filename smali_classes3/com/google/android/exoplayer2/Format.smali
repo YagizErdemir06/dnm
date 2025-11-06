@@ -199,6 +199,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/Format$Builder;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/Format$Builder;-><init>()V
@@ -209,9 +210,8 @@
 
     sput-object v0, Lcom/google/android/exoplayer2/Format;->DEFAULT:Lcom/google/android/exoplayer2/Format;
 
-    new-instance v0, Lcom/google/android/exoplayer2/t1;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/t1;-><init>()V
+    .line 2
+    sget-object v0, Ld/j/a/b/m1;->a:Ld/j/a/b/m1;
 
     sput-object v0, Lcom/google/android/exoplayer2/Format;->CREATOR:Lcom/google/android/exoplayer2/Bundleable$Creator;
 
@@ -826,50 +826,62 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/Format$Builder;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/Format$Builder;-><init>()V
 
+    .line 2
     invoke-virtual {v0, p0}, Lcom/google/android/exoplayer2/Format$Builder;->setId(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 3
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/Format$Builder;->setLabel(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 4
     invoke-virtual {p0, p8}, Lcom/google/android/exoplayer2/Format$Builder;->setLanguage(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 5
     invoke-virtual {p0, p6}, Lcom/google/android/exoplayer2/Format$Builder;->setSelectionFlags(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 6
     invoke-virtual {p0, p7}, Lcom/google/android/exoplayer2/Format$Builder;->setRoleFlags(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 7
     invoke-virtual {p0, p5}, Lcom/google/android/exoplayer2/Format$Builder;->setAverageBitrate(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 8
     invoke-virtual {p0, p5}, Lcom/google/android/exoplayer2/Format$Builder;->setPeakBitrate(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 9
     invoke-virtual {p0, p4}, Lcom/google/android/exoplayer2/Format$Builder;->setCodecs(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 10
     invoke-virtual {p0, p2}, Lcom/google/android/exoplayer2/Format$Builder;->setContainerMimeType(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 11
     invoke-virtual {p0, p3}, Lcom/google/android/exoplayer2/Format$Builder;->setSampleMimeType(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 12
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Format$Builder;->build()Lcom/google/android/exoplayer2/Format;
 
     move-result-object p0
@@ -890,6 +902,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/Format$Builder;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/Format$Builder;-><init>()V
@@ -1170,14 +1183,17 @@
 .method private static fromBundle(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/Format;
     .locals 6
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/Format$Builder;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/Format$Builder;-><init>()V
 
+    .line 2
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/BundleableUtil;->ensureClassLoader(Landroid/os/Bundle;)V
 
     const/4 v1, 0x0
 
+    .line 3
     invoke-static {v1}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -1202,6 +1218,7 @@
 
     const/4 v4, 0x1
 
+    .line 4
     invoke-static {v4}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v4
@@ -1224,6 +1241,7 @@
 
     const/4 v4, 0x2
 
+    .line 5
     invoke-static {v4}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v4
@@ -1246,6 +1264,7 @@
 
     const/4 v4, 0x3
 
+    .line 6
     invoke-static {v4}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v4
@@ -1256,12 +1275,14 @@
 
     move-result v4
 
+    .line 7
     invoke-virtual {v2, v4}, Lcom/google/android/exoplayer2/Format$Builder;->setSelectionFlags(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v2
 
     const/4 v4, 0x4
 
+    .line 8
     invoke-static {v4}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v4
@@ -1278,6 +1299,7 @@
 
     const/4 v4, 0x5
 
+    .line 9
     invoke-static {v4}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v4
@@ -1288,12 +1310,14 @@
 
     move-result v4
 
+    .line 10
     invoke-virtual {v2, v4}, Lcom/google/android/exoplayer2/Format$Builder;->setAverageBitrate(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v2
 
     const/4 v4, 0x6
 
+    .line 11
     invoke-static {v4}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v4
@@ -1310,6 +1334,7 @@
 
     const/4 v4, 0x7
 
+    .line 12
     invoke-static {v4}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v4
@@ -1332,6 +1357,7 @@
 
     const/16 v4, 0x8
 
+    .line 13
     invoke-static {v4}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v4
@@ -1350,12 +1376,14 @@
 
     check-cast v4, Lcom/google/android/exoplayer2/metadata/Metadata;
 
+    .line 14
     invoke-virtual {v2, v4}, Lcom/google/android/exoplayer2/Format$Builder;->setMetadata(Lcom/google/android/exoplayer2/metadata/Metadata;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v2
 
     const/16 v4, 0x9
 
+    .line 15
     invoke-static {v4}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v4
@@ -1366,18 +1394,21 @@
 
     iget-object v5, v3, Lcom/google/android/exoplayer2/Format;->containerMimeType:Ljava/lang/String;
 
+    .line 16
     invoke-static {v4, v5}, Lcom/google/android/exoplayer2/Format;->defaultIfNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Ljava/lang/String;
 
+    .line 17
     invoke-virtual {v2, v4}, Lcom/google/android/exoplayer2/Format$Builder;->setContainerMimeType(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v2
 
     const/16 v4, 0xa
 
+    .line 18
     invoke-static {v4}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v4
@@ -1388,18 +1419,21 @@
 
     iget-object v5, v3, Lcom/google/android/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
+    .line 19
     invoke-static {v4, v5}, Lcom/google/android/exoplayer2/Format;->defaultIfNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Ljava/lang/String;
 
+    .line 20
     invoke-virtual {v2, v4}, Lcom/google/android/exoplayer2/Format$Builder;->setSampleMimeType(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v2
 
     const/16 v4, 0xb
 
+    .line 21
     invoke-static {v4}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v4
@@ -1412,10 +1446,12 @@
 
     invoke-virtual {v2, v3}, Lcom/google/android/exoplayer2/Format$Builder;->setMaxInputSize(I)Lcom/google/android/exoplayer2/Format$Builder;
 
+    .line 22
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
+    .line 23
     :goto_0
     invoke-static {v1}, Lcom/google/android/exoplayer2/Format;->keyForInitializationData(I)Ljava/lang/String;
 
@@ -1427,12 +1463,14 @@
 
     if-nez v3, :cond_1
 
+    .line 24
     invoke-virtual {v0, v2}, Lcom/google/android/exoplayer2/Format$Builder;->setInitializationData(Ljava/util/List;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v1
 
     const/16 v2, 0xd
 
+    .line 25
     invoke-static {v2}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -1449,6 +1487,7 @@
 
     const/16 v2, 0xe
 
+    .line 26
     invoke-static {v2}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -1461,12 +1500,14 @@
 
     move-result-wide v4
 
+    .line 27
     invoke-virtual {v1, v4, v5}, Lcom/google/android/exoplayer2/Format$Builder;->setSubsampleOffsetUs(J)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v1
 
     const/16 v2, 0xf
 
+    .line 28
     invoke-static {v2}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -1483,6 +1524,7 @@
 
     const/16 v2, 0x10
 
+    .line 29
     invoke-static {v2}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -1499,6 +1541,7 @@
 
     const/16 v2, 0x11
 
+    .line 30
     invoke-static {v2}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -1515,6 +1558,7 @@
 
     const/16 v2, 0x12
 
+    .line 31
     invoke-static {v2}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -1525,28 +1569,33 @@
 
     move-result v2
 
+    .line 32
     invoke-virtual {v1, v2}, Lcom/google/android/exoplayer2/Format$Builder;->setRotationDegrees(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v1
 
     const/16 v2, 0x13
 
+    .line 33
     invoke-static {v2}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
 
     iget v4, v3, Lcom/google/android/exoplayer2/Format;->pixelWidthHeightRatio:F
 
+    .line 34
     invoke-virtual {p0, v2, v4}, Landroid/os/Bundle;->getFloat(Ljava/lang/String;F)F
 
     move-result v2
 
+    .line 35
     invoke-virtual {v1, v2}, Lcom/google/android/exoplayer2/Format$Builder;->setPixelWidthHeightRatio(F)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v1
 
     const/16 v2, 0x14
 
+    .line 36
     invoke-static {v2}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -1561,6 +1610,7 @@
 
     const/16 v2, 0x15
 
+    .line 37
     invoke-static {v2}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -1575,6 +1625,7 @@
 
     const/16 v1, 0x16
 
+    .line 38
     invoke-static {v1}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1585,6 +1636,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 39
     sget-object v2, Lcom/google/android/exoplayer2/video/ColorInfo;->CREATOR:Lcom/google/android/exoplayer2/Bundleable$Creator;
 
     invoke-interface {v2, v1}, Lcom/google/android/exoplayer2/Bundleable$Creator;->fromBundle(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/Bundleable;
@@ -1598,6 +1650,7 @@
     :cond_0
     const/16 v1, 0x17
 
+    .line 40
     invoke-static {v1}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1614,6 +1667,7 @@
 
     const/16 v2, 0x18
 
+    .line 41
     invoke-static {v2}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -1630,6 +1684,7 @@
 
     const/16 v2, 0x19
 
+    .line 42
     invoke-static {v2}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -1646,6 +1701,7 @@
 
     const/16 v2, 0x1a
 
+    .line 43
     invoke-static {v2}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -1662,6 +1718,7 @@
 
     const/16 v2, 0x1b
 
+    .line 44
     invoke-static {v2}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -1672,12 +1729,14 @@
 
     move-result v2
 
+    .line 45
     invoke-virtual {v1, v2}, Lcom/google/android/exoplayer2/Format$Builder;->setEncoderPadding(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v1
 
     const/16 v2, 0x1c
 
+    .line 46
     invoke-static {v2}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -1688,12 +1747,14 @@
 
     move-result v2
 
+    .line 47
     invoke-virtual {v1, v2}, Lcom/google/android/exoplayer2/Format$Builder;->setAccessibilityChannel(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v1
 
     const/16 v2, 0x1d
 
+    .line 48
     invoke-static {v2}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -1706,12 +1767,14 @@
 
     invoke-virtual {v1, p0}, Lcom/google/android/exoplayer2/Format$Builder;->setCryptoType(I)Lcom/google/android/exoplayer2/Format$Builder;
 
+    .line 49
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/Format$Builder;->build()Lcom/google/android/exoplayer2/Format;
 
     move-result-object p0
 
     return-object p0
 
+    .line 50
     :cond_1
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1725,6 +1788,7 @@
 
     const/16 v0, 0x24
 
+    .line 1
     invoke-static {p0, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
     move-result-object p0
@@ -1735,6 +1799,7 @@
 .method private static keyForInitializationData(I)Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1753,6 +1818,7 @@
 
     const/16 v1, 0x24
 
+    .line 2
     invoke-static {p0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
     move-result-object p0
@@ -1779,6 +1845,7 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1786,6 +1853,7 @@
 
     const-string v1, "id="
 
+    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/Format;->id:Ljava/lang/String;
@@ -1800,6 +1868,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 3
     iget v1, p0, Lcom/google/android/exoplayer2/Format;->bitrate:I
 
     const/4 v2, -0x1
@@ -1808,12 +1877,14 @@
 
     const-string v1, ", bitrate="
 
+    .line 4
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/google/android/exoplayer2/Format;->bitrate:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
+    .line 5
     :cond_1
     iget-object v1, p0, Lcom/google/android/exoplayer2/Format;->codecs:Ljava/lang/String;
 
@@ -1821,12 +1892,14 @@
 
     const-string v1, ", codecs="
 
+    .line 6
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/Format;->codecs:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 7
     :cond_2
     iget-object v1, p0, Lcom/google/android/exoplayer2/Format;->drmInitData:Lcom/google/android/exoplayer2/drm/DrmInitData;
 
@@ -1834,12 +1907,14 @@
 
     if-eqz v1, :cond_9
 
+    .line 8
     new-instance v1, Ljava/util/LinkedHashSet;
 
     invoke-direct {v1}, Ljava/util/LinkedHashSet;-><init>()V
 
     const/4 v4, 0x0
 
+    .line 9
     :goto_0
     iget-object v5, p0, Lcom/google/android/exoplayer2/Format;->drmInitData:Lcom/google/android/exoplayer2/drm/DrmInitData;
 
@@ -1847,12 +1922,14 @@
 
     if-ge v4, v6, :cond_8
 
+    .line 10
     invoke-virtual {v5, v4}, Lcom/google/android/exoplayer2/drm/DrmInitData;->get(I)Lcom/google/android/exoplayer2/drm/DrmInitData$SchemeData;
 
     move-result-object v5
 
     iget-object v5, v5, Lcom/google/android/exoplayer2/drm/DrmInitData$SchemeData;->uuid:Ljava/util/UUID;
 
+    .line 11
     sget-object v6, Lcom/google/android/exoplayer2/C;->COMMON_PSSH_UUID:Ljava/util/UUID;
 
     invoke-virtual {v5, v6}, Ljava/util/UUID;->equals(Ljava/lang/Object;)Z
@@ -1863,10 +1940,12 @@
 
     const-string v5, "cenc"
 
+    .line 12
     invoke-interface {v1, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
+    .line 13
     :cond_3
     sget-object v6, Lcom/google/android/exoplayer2/C;->CLEARKEY_UUID:Ljava/util/UUID;
 
@@ -1878,10 +1957,12 @@
 
     const-string v5, "clearkey"
 
+    .line 14
     invoke-interface {v1, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
+    .line 15
     :cond_4
     sget-object v6, Lcom/google/android/exoplayer2/C;->PLAYREADY_UUID:Ljava/util/UUID;
 
@@ -1893,10 +1974,12 @@
 
     const-string v5, "playready"
 
+    .line 16
     invoke-interface {v1, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
+    .line 17
     :cond_5
     sget-object v6, Lcom/google/android/exoplayer2/C;->WIDEVINE_UUID:Ljava/util/UUID;
 
@@ -1908,10 +1991,12 @@
 
     const-string v5, "widevine"
 
+    .line 18
     invoke-interface {v1, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
+    .line 19
     :cond_6
     sget-object v6, Lcom/google/android/exoplayer2/C;->UUID_NIL:Ljava/util/UUID;
 
@@ -1923,10 +2008,12 @@
 
     const-string v5, "universal"
 
+    .line 20
     invoke-interface {v1, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
+    .line 21
     :cond_7
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -1956,8 +2043,10 @@
     :cond_8
     const-string v4, ", drm=["
 
+    .line 22
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 23
     invoke-static {v3}, Lcom/google/common/base/Joiner;->on(C)Lcom/google/common/base/Joiner;
 
     move-result-object v4
@@ -1966,8 +2055,10 @@
 
     const/16 v1, 0x5d
 
+    .line 24
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 25
     :cond_9
     iget v1, p0, Lcom/google/android/exoplayer2/Format;->width:I
 
@@ -1979,6 +2070,7 @@
 
     const-string v1, ", res="
 
+    .line 26
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/google/android/exoplayer2/Format;->width:I
@@ -1993,6 +2085,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
+    .line 27
     :cond_a
     iget v1, p0, Lcom/google/android/exoplayer2/Format;->frameRate:F
 
@@ -2004,12 +2097,14 @@
 
     const-string v1, ", fps="
 
+    .line 28
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/google/android/exoplayer2/Format;->frameRate:F
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
+    .line 29
     :cond_b
     iget v1, p0, Lcom/google/android/exoplayer2/Format;->channelCount:I
 
@@ -2017,12 +2112,14 @@
 
     const-string v1, ", channels="
 
+    .line 30
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/google/android/exoplayer2/Format;->channelCount:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
+    .line 31
     :cond_c
     iget v1, p0, Lcom/google/android/exoplayer2/Format;->sampleRate:I
 
@@ -2030,12 +2127,14 @@
 
     const-string v1, ", sample_rate="
 
+    .line 32
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/google/android/exoplayer2/Format;->sampleRate:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
+    .line 33
     :cond_d
     iget-object v1, p0, Lcom/google/android/exoplayer2/Format;->language:Ljava/lang/String;
 
@@ -2043,12 +2142,14 @@
 
     const-string v1, ", language="
 
+    .line 34
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/Format;->language:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 35
     :cond_e
     iget-object v1, p0, Lcom/google/android/exoplayer2/Format;->label:Ljava/lang/String;
 
@@ -2056,12 +2157,14 @@
 
     const-string v1, ", label="
 
+    .line 36
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/Format;->label:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 37
     :cond_f
     iget v1, p0, Lcom/google/android/exoplayer2/Format;->selectionFlags:I
 
@@ -2069,10 +2172,12 @@
 
     if-eqz v1, :cond_13
 
+    .line 38
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 39
     iget v4, p0, Lcom/google/android/exoplayer2/Format;->selectionFlags:I
 
     and-int/lit8 v4, v4, 0x4
@@ -2081,8 +2186,10 @@
 
     const-string v4, "auto"
 
+    .line 40
     invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 41
     :cond_10
     iget v4, p0, Lcom/google/android/exoplayer2/Format;->selectionFlags:I
 
@@ -2092,8 +2199,10 @@
 
     const-string v4, "default"
 
+    .line 42
     invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 43
     :cond_11
     iget v4, p0, Lcom/google/android/exoplayer2/Format;->selectionFlags:I
 
@@ -2103,30 +2212,37 @@
 
     const-string v4, "forced"
 
+    .line 44
     invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_12
     const-string v4, ", selectionFlags=["
 
+    .line 45
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 46
     invoke-static {v3}, Lcom/google/common/base/Joiner;->on(C)Lcom/google/common/base/Joiner;
 
     move-result-object v4
 
     invoke-virtual {v4, v0, v1}, Lcom/google/common/base/Joiner;->appendTo(Ljava/lang/StringBuilder;Ljava/lang/Iterable;)Ljava/lang/StringBuilder;
 
+    .line 47
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 48
     :cond_13
     iget v1, p0, Lcom/google/android/exoplayer2/Format;->roleFlags:I
 
     if-eqz v1, :cond_23
 
+    .line 49
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 50
     iget v4, p0, Lcom/google/android/exoplayer2/Format;->roleFlags:I
 
     and-int/lit8 v4, v4, 0x1
@@ -2135,8 +2251,10 @@
 
     const-string v4, "main"
 
+    .line 51
     invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 52
     :cond_14
     iget v4, p0, Lcom/google/android/exoplayer2/Format;->roleFlags:I
 
@@ -2146,8 +2264,10 @@
 
     const-string v4, "alt"
 
+    .line 53
     invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 54
     :cond_15
     iget v4, p0, Lcom/google/android/exoplayer2/Format;->roleFlags:I
 
@@ -2157,8 +2277,10 @@
 
     const-string v4, "supplementary"
 
+    .line 55
     invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 56
     :cond_16
     iget v4, p0, Lcom/google/android/exoplayer2/Format;->roleFlags:I
 
@@ -2168,8 +2290,10 @@
 
     const-string v4, "commentary"
 
+    .line 57
     invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 58
     :cond_17
     iget v4, p0, Lcom/google/android/exoplayer2/Format;->roleFlags:I
 
@@ -2179,8 +2303,10 @@
 
     const-string v4, "dub"
 
+    .line 59
     invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 60
     :cond_18
     iget v4, p0, Lcom/google/android/exoplayer2/Format;->roleFlags:I
 
@@ -2190,8 +2316,10 @@
 
     const-string v4, "emergency"
 
+    .line 61
     invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 62
     :cond_19
     iget v4, p0, Lcom/google/android/exoplayer2/Format;->roleFlags:I
 
@@ -2201,8 +2329,10 @@
 
     const-string v4, "caption"
 
+    .line 63
     invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 64
     :cond_1a
     iget v4, p0, Lcom/google/android/exoplayer2/Format;->roleFlags:I
 
@@ -2212,8 +2342,10 @@
 
     const-string v4, "subtitle"
 
+    .line 65
     invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 66
     :cond_1b
     iget v4, p0, Lcom/google/android/exoplayer2/Format;->roleFlags:I
 
@@ -2223,8 +2355,10 @@
 
     const-string v4, "sign"
 
+    .line 67
     invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 68
     :cond_1c
     iget v4, p0, Lcom/google/android/exoplayer2/Format;->roleFlags:I
 
@@ -2234,8 +2368,10 @@
 
     const-string v4, "describes-video"
 
+    .line 69
     invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 70
     :cond_1d
     iget v4, p0, Lcom/google/android/exoplayer2/Format;->roleFlags:I
 
@@ -2245,8 +2381,10 @@
 
     const-string v4, "describes-music"
 
+    .line 71
     invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 72
     :cond_1e
     iget v4, p0, Lcom/google/android/exoplayer2/Format;->roleFlags:I
 
@@ -2256,8 +2394,10 @@
 
     const-string v4, "enhanced-intelligibility"
 
+    .line 73
     invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 74
     :cond_1f
     iget v4, p0, Lcom/google/android/exoplayer2/Format;->roleFlags:I
 
@@ -2267,8 +2407,10 @@
 
     const-string v4, "transcribes-dialog"
 
+    .line 75
     invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 76
     :cond_20
     iget v4, p0, Lcom/google/android/exoplayer2/Format;->roleFlags:I
 
@@ -2278,8 +2420,10 @@
 
     const-string v4, "easy-read"
 
+    .line 77
     invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 78
     :cond_21
     iget p0, p0, Lcom/google/android/exoplayer2/Format;->roleFlags:I
 
@@ -2289,21 +2433,26 @@
 
     const-string p0, "trick-play"
 
+    .line 79
     invoke-interface {v1, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_22
     const-string p0, ", roleFlags=["
 
+    .line 80
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 81
     invoke-static {v3}, Lcom/google/common/base/Joiner;->on(C)Lcom/google/common/base/Joiner;
 
     move-result-object p0
 
     invoke-virtual {p0, v0, v1}, Lcom/google/common/base/Joiner;->appendTo(Ljava/lang/StringBuilder;Ljava/lang/Iterable;)Ljava/lang/StringBuilder;
 
+    .line 82
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 83
     :cond_23
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -2317,6 +2466,7 @@
 .method public buildUpon()Lcom/google/android/exoplayer2/Format$Builder;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/Format$Builder;
 
     const/4 v1, 0x0
@@ -2331,6 +2481,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Format;->buildUpon()Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
@@ -2353,6 +2504,7 @@
 .method public copyWithCryptoType(I)Lcom/google/android/exoplayer2/Format;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Format;->buildUpon()Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
@@ -2377,6 +2529,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Format;->buildUpon()Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
@@ -2397,6 +2550,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Format;->buildUpon()Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
@@ -2417,6 +2571,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Format;->buildUpon()Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
@@ -2445,6 +2600,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Format;->buildUpon()Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
@@ -2465,6 +2621,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/Format;->withManifestFormatInfo(Lcom/google/android/exoplayer2/Format;)Lcom/google/android/exoplayer2/Format;
 
     move-result-object p0
@@ -2477,6 +2634,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Format;->buildUpon()Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
@@ -2501,6 +2659,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Format;->buildUpon()Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
@@ -2521,6 +2680,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Format;->buildUpon()Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
@@ -2541,6 +2701,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Format;->buildUpon()Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
@@ -2578,6 +2739,7 @@
 
     if-eqz p1, :cond_4
 
+    .line 1
     const-class v2, Lcom/google/android/exoplayer2/Format;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -2588,9 +2750,11 @@
 
     goto/16 :goto_1
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/Format;
 
+    .line 3
     iget v2, p0, Lcom/google/android/exoplayer2/Format;->hashCode:I
 
     if-eqz v2, :cond_2
@@ -2603,6 +2767,7 @@
 
     return v1
 
+    .line 4
     :cond_2
     iget v2, p0, Lcom/google/android/exoplayer2/Format;->selectionFlags:I
 
@@ -2712,6 +2877,7 @@
 
     iget v3, p1, Lcom/google/android/exoplayer2/Format;->frameRate:F
 
+    .line 5
     invoke-static {v2, v3}, Ljava/lang/Float;->compare(FF)I
 
     move-result v2
@@ -2722,6 +2888,7 @@
 
     iget v3, p1, Lcom/google/android/exoplayer2/Format;->pixelWidthHeightRatio:F
 
+    .line 6
     invoke-static {v2, v3}, Ljava/lang/Float;->compare(FF)I
 
     move-result v2
@@ -2732,6 +2899,7 @@
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/Format;->id:Ljava/lang/String;
 
+    .line 7
     invoke-static {v2, v3}, Lcom/google/android/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -2742,6 +2910,7 @@
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/Format;->label:Ljava/lang/String;
 
+    .line 8
     invoke-static {v2, v3}, Lcom/google/android/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -2752,6 +2921,7 @@
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/Format;->codecs:Ljava/lang/String;
 
+    .line 9
     invoke-static {v2, v3}, Lcom/google/android/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -2762,6 +2932,7 @@
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/Format;->containerMimeType:Ljava/lang/String;
 
+    .line 10
     invoke-static {v2, v3}, Lcom/google/android/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -2772,6 +2943,7 @@
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
+    .line 11
     invoke-static {v2, v3}, Lcom/google/android/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -2782,6 +2954,7 @@
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/Format;->language:Ljava/lang/String;
 
+    .line 12
     invoke-static {v2, v3}, Lcom/google/android/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -2792,6 +2965,7 @@
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/Format;->projectionData:[B
 
+    .line 13
     invoke-static {v2, v3}, Ljava/util/Arrays;->equals([B[B)Z
 
     move-result v2
@@ -2802,6 +2976,7 @@
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/Format;->metadata:Lcom/google/android/exoplayer2/metadata/Metadata;
 
+    .line 14
     invoke-static {v2, v3}, Lcom/google/android/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -2812,6 +2987,7 @@
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/Format;->colorInfo:Lcom/google/android/exoplayer2/video/ColorInfo;
 
+    .line 15
     invoke-static {v2, v3}, Lcom/google/android/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -2822,12 +2998,14 @@
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/Format;->drmInitData:Lcom/google/android/exoplayer2/drm/DrmInitData;
 
+    .line 16
     invoke-static {v2, v3}, Lcom/google/android/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
+    .line 17
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/Format;->initializationDataEquals(Lcom/google/android/exoplayer2/Format;)Z
 
     move-result p0
@@ -2850,6 +3028,7 @@
 .method public getPixelCount()I
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/Format;->width:I
 
     const/4 v1, -0x1
@@ -2873,262 +3052,291 @@
 .method public hashCode()I
     .locals 3
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/Format;->hashCode:I
 
     if-nez v0, :cond_7
 
-    iget-object v0, p0, Lcom/google/android/exoplayer2/Format;->id:Ljava/lang/String;
+    const/16 v0, 0x20f
 
-    const/4 v1, 0x0
+    .line 2
+    iget-object v1, p0, Lcom/google/android/exoplayer2/Format;->id:Ljava/lang/String;
 
-    if-nez v0, :cond_0
+    const/4 v2, 0x0
 
-    move v0, v1
+    if-nez v1, :cond_0
+
+    move v1, v2
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    move-result v0
+    move-result v1
 
     :goto_0
-    const/16 v2, 0x20f
+    add-int/2addr v0, v1
 
-    add-int/2addr v2, v0
+    mul-int/lit8 v0, v0, 0x1f
 
-    mul-int/lit8 v2, v2, 0x1f
+    .line 3
+    iget-object v1, p0, Lcom/google/android/exoplayer2/Format;->label:Ljava/lang/String;
 
-    iget-object v0, p0, Lcom/google/android/exoplayer2/Format;->label:Ljava/lang/String;
+    if-eqz v1, :cond_1
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
+    move-result v1
 
     goto :goto_1
 
     :cond_1
-    move v0, v1
+    move v1, v2
 
     :goto_1
-    add-int/2addr v2, v0
+    add-int/2addr v0, v1
 
-    mul-int/lit8 v2, v2, 0x1f
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v0, p0, Lcom/google/android/exoplayer2/Format;->language:Ljava/lang/String;
+    .line 4
+    iget-object v1, p0, Lcom/google/android/exoplayer2/Format;->language:Ljava/lang/String;
 
-    if-nez v0, :cond_2
+    if-nez v1, :cond_2
 
-    move v0, v1
+    move v1, v2
 
     goto :goto_2
 
     :cond_2
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    move-result v0
+    move-result v1
 
     :goto_2
-    add-int/2addr v2, v0
+    add-int/2addr v0, v1
 
-    mul-int/lit8 v2, v2, 0x1f
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget v0, p0, Lcom/google/android/exoplayer2/Format;->selectionFlags:I
+    .line 5
+    iget v1, p0, Lcom/google/android/exoplayer2/Format;->selectionFlags:I
 
-    add-int/2addr v2, v0
+    add-int/2addr v0, v1
 
-    mul-int/lit8 v2, v2, 0x1f
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget v0, p0, Lcom/google/android/exoplayer2/Format;->roleFlags:I
+    .line 6
+    iget v1, p0, Lcom/google/android/exoplayer2/Format;->roleFlags:I
 
-    add-int/2addr v2, v0
+    add-int/2addr v0, v1
 
-    mul-int/lit8 v2, v2, 0x1f
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget v0, p0, Lcom/google/android/exoplayer2/Format;->averageBitrate:I
+    .line 7
+    iget v1, p0, Lcom/google/android/exoplayer2/Format;->averageBitrate:I
 
-    add-int/2addr v2, v0
+    add-int/2addr v0, v1
 
-    mul-int/lit8 v2, v2, 0x1f
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget v0, p0, Lcom/google/android/exoplayer2/Format;->peakBitrate:I
+    .line 8
+    iget v1, p0, Lcom/google/android/exoplayer2/Format;->peakBitrate:I
 
-    add-int/2addr v2, v0
+    add-int/2addr v0, v1
 
-    mul-int/lit8 v2, v2, 0x1f
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v0, p0, Lcom/google/android/exoplayer2/Format;->codecs:Ljava/lang/String;
+    .line 9
+    iget-object v1, p0, Lcom/google/android/exoplayer2/Format;->codecs:Ljava/lang/String;
 
-    if-nez v0, :cond_3
+    if-nez v1, :cond_3
 
-    move v0, v1
+    move v1, v2
 
     goto :goto_3
 
     :cond_3
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    move-result v0
+    move-result v1
 
     :goto_3
-    add-int/2addr v2, v0
+    add-int/2addr v0, v1
 
-    mul-int/lit8 v2, v2, 0x1f
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v0, p0, Lcom/google/android/exoplayer2/Format;->metadata:Lcom/google/android/exoplayer2/metadata/Metadata;
+    .line 10
+    iget-object v1, p0, Lcom/google/android/exoplayer2/Format;->metadata:Lcom/google/android/exoplayer2/metadata/Metadata;
 
-    if-nez v0, :cond_4
+    if-nez v1, :cond_4
 
-    move v0, v1
+    move v1, v2
 
     goto :goto_4
 
     :cond_4
-    invoke-virtual {v0}, Lcom/google/android/exoplayer2/metadata/Metadata;->hashCode()I
+    invoke-virtual {v1}, Lcom/google/android/exoplayer2/metadata/Metadata;->hashCode()I
 
-    move-result v0
+    move-result v1
 
     :goto_4
-    add-int/2addr v2, v0
+    add-int/2addr v0, v1
 
-    mul-int/lit8 v2, v2, 0x1f
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v0, p0, Lcom/google/android/exoplayer2/Format;->containerMimeType:Ljava/lang/String;
+    .line 11
+    iget-object v1, p0, Lcom/google/android/exoplayer2/Format;->containerMimeType:Ljava/lang/String;
 
-    if-nez v0, :cond_5
+    if-nez v1, :cond_5
 
-    move v0, v1
+    move v1, v2
 
     goto :goto_5
 
     :cond_5
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    move-result v0
+    move-result v1
 
     :goto_5
-    add-int/2addr v2, v0
+    add-int/2addr v0, v1
 
-    mul-int/lit8 v2, v2, 0x1f
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v0, p0, Lcom/google/android/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
+    .line 12
+    iget-object v1, p0, Lcom/google/android/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
-    if-nez v0, :cond_6
+    if-nez v1, :cond_6
 
     goto :goto_6
 
     :cond_6
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    :goto_6
+    add-int/2addr v0, v2
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    .line 13
+    iget v1, p0, Lcom/google/android/exoplayer2/Format;->maxInputSize:I
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    .line 14
+    iget-wide v1, p0, Lcom/google/android/exoplayer2/Format;->subsampleOffsetUs:J
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    .line 15
+    iget v1, p0, Lcom/google/android/exoplayer2/Format;->width:I
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    .line 16
+    iget v1, p0, Lcom/google/android/exoplayer2/Format;->height:I
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    .line 17
+    iget v1, p0, Lcom/google/android/exoplayer2/Format;->frameRate:F
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
 
     move-result v1
 
-    :goto_6
-    add-int/2addr v2, v1
+    add-int/2addr v0, v1
 
-    mul-int/lit8 v2, v2, 0x1f
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget v0, p0, Lcom/google/android/exoplayer2/Format;->maxInputSize:I
+    .line 18
+    iget v1, p0, Lcom/google/android/exoplayer2/Format;->rotationDegrees:I
 
-    add-int/2addr v2, v0
+    add-int/2addr v0, v1
 
-    mul-int/lit8 v2, v2, 0x1f
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-wide v0, p0, Lcom/google/android/exoplayer2/Format;->subsampleOffsetUs:J
+    .line 19
+    iget v1, p0, Lcom/google/android/exoplayer2/Format;->pixelWidthHeightRatio:F
 
-    long-to-int v0, v0
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
 
-    add-int/2addr v2, v0
+    move-result v1
 
-    mul-int/lit8 v2, v2, 0x1f
+    add-int/2addr v0, v1
 
-    iget v0, p0, Lcom/google/android/exoplayer2/Format;->width:I
+    mul-int/lit8 v0, v0, 0x1f
 
-    add-int/2addr v2, v0
+    .line 20
+    iget v1, p0, Lcom/google/android/exoplayer2/Format;->stereoMode:I
 
-    mul-int/lit8 v2, v2, 0x1f
+    add-int/2addr v0, v1
 
-    iget v0, p0, Lcom/google/android/exoplayer2/Format;->height:I
+    mul-int/lit8 v0, v0, 0x1f
 
-    add-int/2addr v2, v0
+    .line 21
+    iget v1, p0, Lcom/google/android/exoplayer2/Format;->channelCount:I
 
-    mul-int/lit8 v2, v2, 0x1f
+    add-int/2addr v0, v1
 
-    iget v0, p0, Lcom/google/android/exoplayer2/Format;->frameRate:F
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+    .line 22
+    iget v1, p0, Lcom/google/android/exoplayer2/Format;->sampleRate:I
 
-    move-result v0
+    add-int/2addr v0, v1
 
-    add-int/2addr v2, v0
+    mul-int/lit8 v0, v0, 0x1f
 
-    mul-int/lit8 v2, v2, 0x1f
+    .line 23
+    iget v1, p0, Lcom/google/android/exoplayer2/Format;->pcmEncoding:I
 
-    iget v0, p0, Lcom/google/android/exoplayer2/Format;->rotationDegrees:I
+    add-int/2addr v0, v1
 
-    add-int/2addr v2, v0
+    mul-int/lit8 v0, v0, 0x1f
 
-    mul-int/lit8 v2, v2, 0x1f
+    .line 24
+    iget v1, p0, Lcom/google/android/exoplayer2/Format;->encoderDelay:I
 
-    iget v0, p0, Lcom/google/android/exoplayer2/Format;->pixelWidthHeightRatio:F
+    add-int/2addr v0, v1
 
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+    mul-int/lit8 v0, v0, 0x1f
 
-    move-result v0
+    .line 25
+    iget v1, p0, Lcom/google/android/exoplayer2/Format;->encoderPadding:I
 
-    add-int/2addr v2, v0
+    add-int/2addr v0, v1
 
-    mul-int/lit8 v2, v2, 0x1f
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget v0, p0, Lcom/google/android/exoplayer2/Format;->stereoMode:I
+    .line 26
+    iget v1, p0, Lcom/google/android/exoplayer2/Format;->accessibilityChannel:I
 
-    add-int/2addr v2, v0
+    add-int/2addr v0, v1
 
-    mul-int/lit8 v2, v2, 0x1f
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget v0, p0, Lcom/google/android/exoplayer2/Format;->channelCount:I
+    .line 27
+    iget v1, p0, Lcom/google/android/exoplayer2/Format;->cryptoType:I
 
-    add-int/2addr v2, v0
+    add-int/2addr v0, v1
 
-    mul-int/lit8 v2, v2, 0x1f
+    .line 28
+    iput v0, p0, Lcom/google/android/exoplayer2/Format;->hashCode:I
 
-    iget v0, p0, Lcom/google/android/exoplayer2/Format;->sampleRate:I
-
-    add-int/2addr v2, v0
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget v0, p0, Lcom/google/android/exoplayer2/Format;->pcmEncoding:I
-
-    add-int/2addr v2, v0
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget v0, p0, Lcom/google/android/exoplayer2/Format;->encoderDelay:I
-
-    add-int/2addr v2, v0
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget v0, p0, Lcom/google/android/exoplayer2/Format;->encoderPadding:I
-
-    add-int/2addr v2, v0
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget v0, p0, Lcom/google/android/exoplayer2/Format;->accessibilityChannel:I
-
-    add-int/2addr v2, v0
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget v0, p0, Lcom/google/android/exoplayer2/Format;->cryptoType:I
-
-    add-int/2addr v2, v0
-
-    iput v2, p0, Lcom/google/android/exoplayer2/Format;->hashCode:I
-
+    .line 29
     :cond_7
     iget p0, p0, Lcom/google/android/exoplayer2/Format;->hashCode:I
 
@@ -3138,6 +3346,7 @@
 .method public initializationDataEquals(Lcom/google/android/exoplayer2/Format;)Z
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/Format;->initializationData:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -3159,6 +3368,7 @@
     :cond_0
     move v0, v2
 
+    .line 2
     :goto_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/Format;->initializationData:Ljava/util/List;
 
@@ -3168,6 +3378,7 @@
 
     if-ge v0, v1, :cond_2
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/Format;->initializationData:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -3206,12 +3417,14 @@
 .method public toBundle()Landroid/os/Bundle;
     .locals 4
 
+    .line 1
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-static {v1}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -3222,6 +3435,7 @@
 
     const/4 v2, 0x1
 
+    .line 3
     invoke-static {v2}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -3232,6 +3446,7 @@
 
     const/4 v2, 0x2
 
+    .line 4
     invoke-static {v2}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -3242,6 +3457,7 @@
 
     const/4 v2, 0x3
 
+    .line 5
     invoke-static {v2}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -3252,6 +3468,7 @@
 
     const/4 v2, 0x4
 
+    .line 6
     invoke-static {v2}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -3262,6 +3479,7 @@
 
     const/4 v2, 0x5
 
+    .line 7
     invoke-static {v2}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -3272,6 +3490,7 @@
 
     const/4 v2, 0x6
 
+    .line 8
     invoke-static {v2}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -3282,6 +3501,7 @@
 
     const/4 v2, 0x7
 
+    .line 9
     invoke-static {v2}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -3292,6 +3512,7 @@
 
     const/16 v2, 0x8
 
+    .line 10
     invoke-static {v2}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -3302,6 +3523,7 @@
 
     const/16 v2, 0x9
 
+    .line 11
     invoke-static {v2}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -3312,6 +3534,7 @@
 
     const/16 v2, 0xa
 
+    .line 12
     invoke-static {v2}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -3322,6 +3545,7 @@
 
     const/16 v2, 0xb
 
+    .line 13
     invoke-static {v2}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -3330,6 +3554,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
+    .line 14
     :goto_0
     iget-object v2, p0, Lcom/google/android/exoplayer2/Format;->initializationData:Ljava/util/List;
 
@@ -3339,6 +3564,7 @@
 
     if-ge v1, v2, :cond_0
 
+    .line 15
     invoke-static {v1}, Lcom/google/android/exoplayer2/Format;->keyForInitializationData(I)Ljava/lang/String;
 
     move-result-object v2
@@ -3360,6 +3586,7 @@
     :cond_0
     const/16 v1, 0xd
 
+    .line 16
     invoke-static {v1}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -3370,6 +3597,7 @@
 
     const/16 v1, 0xe
 
+    .line 17
     invoke-static {v1}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -3380,6 +3608,7 @@
 
     const/16 v1, 0xf
 
+    .line 18
     invoke-static {v1}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -3390,6 +3619,7 @@
 
     const/16 v1, 0x10
 
+    .line 19
     invoke-static {v1}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -3400,6 +3630,7 @@
 
     const/16 v1, 0x11
 
+    .line 20
     invoke-static {v1}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -3410,6 +3641,7 @@
 
     const/16 v1, 0x12
 
+    .line 21
     invoke-static {v1}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -3420,6 +3652,7 @@
 
     const/16 v1, 0x13
 
+    .line 22
     invoke-static {v1}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -3430,6 +3663,7 @@
 
     const/16 v1, 0x14
 
+    .line 23
     invoke-static {v1}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -3440,6 +3674,7 @@
 
     const/16 v1, 0x15
 
+    .line 24
     invoke-static {v1}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -3448,12 +3683,14 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
+    .line 25
     iget-object v1, p0, Lcom/google/android/exoplayer2/Format;->colorInfo:Lcom/google/android/exoplayer2/video/ColorInfo;
 
     if-eqz v1, :cond_1
 
     const/16 v1, 0x16
 
+    .line 26
     invoke-static {v1}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -3469,6 +3706,7 @@
     :cond_1
     const/16 v1, 0x17
 
+    .line 27
     invoke-static {v1}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -3479,6 +3717,7 @@
 
     const/16 v1, 0x18
 
+    .line 28
     invoke-static {v1}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -3489,6 +3728,7 @@
 
     const/16 v1, 0x19
 
+    .line 29
     invoke-static {v1}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -3499,6 +3739,7 @@
 
     const/16 v1, 0x1a
 
+    .line 30
     invoke-static {v1}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -3509,6 +3750,7 @@
 
     const/16 v1, 0x1b
 
+    .line 31
     invoke-static {v1}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -3519,6 +3761,7 @@
 
     const/16 v1, 0x1c
 
+    .line 32
     invoke-static {v1}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -3529,6 +3772,7 @@
 
     const/16 v1, 0x1d
 
+    .line 33
     invoke-static {v1}, Lcom/google/android/exoplayer2/Format;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -3543,6 +3787,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3645,6 +3890,7 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
@@ -3652,8 +3898,10 @@
 
     move-result v0
 
+    .line 2
     iget-object v1, p1, Lcom/google/android/exoplayer2/Format;->id:Ljava/lang/String;
 
+    .line 3
     iget-object v2, p1, Lcom/google/android/exoplayer2/Format;->label:Ljava/lang/String;
 
     if-eqz v2, :cond_1
@@ -3663,6 +3911,7 @@
     :cond_1
     iget-object v2, p0, Lcom/google/android/exoplayer2/Format;->label:Ljava/lang/String;
 
+    .line 4
     :goto_0
     iget-object v3, p0, Lcom/google/android/exoplayer2/Format;->language:Ljava/lang/String;
 
@@ -3674,6 +3923,7 @@
 
     if-ne v0, v5, :cond_3
 
+    .line 5
     :cond_2
     iget-object v4, p1, Lcom/google/android/exoplayer2/Format;->language:Ljava/lang/String;
 
@@ -3681,6 +3931,7 @@
 
     move-object v3, v4
 
+    .line 6
     :cond_3
     iget v4, p0, Lcom/google/android/exoplayer2/Format;->averageBitrate:I
 
@@ -3690,6 +3941,7 @@
 
     iget v4, p1, Lcom/google/android/exoplayer2/Format;->averageBitrate:I
 
+    .line 7
     :cond_4
     iget v7, p0, Lcom/google/android/exoplayer2/Format;->peakBitrate:I
 
@@ -3697,17 +3949,20 @@
 
     iget v7, p1, Lcom/google/android/exoplayer2/Format;->peakBitrate:I
 
+    .line 8
     :cond_5
     iget-object v6, p0, Lcom/google/android/exoplayer2/Format;->codecs:Ljava/lang/String;
 
     if-nez v6, :cond_6
 
+    .line 9
     iget-object v8, p1, Lcom/google/android/exoplayer2/Format;->codecs:Ljava/lang/String;
 
     invoke-static {v8, v0}, Lcom/google/android/exoplayer2/util/Util;->getCodecsOfType(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v8
 
+    .line 10
     invoke-static {v8}, Lcom/google/android/exoplayer2/util/Util;->splitCodecs(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v9
@@ -3718,15 +3973,18 @@
 
     move-object v6, v8
 
+    .line 11
     :cond_6
     iget-object v5, p0, Lcom/google/android/exoplayer2/Format;->metadata:Lcom/google/android/exoplayer2/metadata/Metadata;
 
     if-nez v5, :cond_7
 
+    .line 12
     iget-object v5, p1, Lcom/google/android/exoplayer2/Format;->metadata:Lcom/google/android/exoplayer2/metadata/Metadata;
 
     goto :goto_1
 
+    .line 13
     :cond_7
     iget-object v8, p1, Lcom/google/android/exoplayer2/Format;->metadata:Lcom/google/android/exoplayer2/metadata/Metadata;
 
@@ -3734,6 +3992,7 @@
 
     move-result-object v5
 
+    .line 14
     :goto_1
     iget v8, p0, Lcom/google/android/exoplayer2/Format;->frameRate:F
 
@@ -3747,8 +4006,10 @@
 
     if-ne v0, v9, :cond_8
 
+    .line 15
     iget v8, p1, Lcom/google/android/exoplayer2/Format;->frameRate:F
 
+    .line 16
     :cond_8
     iget v0, p0, Lcom/google/android/exoplayer2/Format;->selectionFlags:I
 
@@ -3756,68 +4017,84 @@
 
     or-int/2addr v0, v9
 
+    .line 17
     iget v9, p0, Lcom/google/android/exoplayer2/Format;->roleFlags:I
 
     iget v10, p1, Lcom/google/android/exoplayer2/Format;->roleFlags:I
 
     or-int/2addr v9, v10
 
+    .line 18
     iget-object p1, p1, Lcom/google/android/exoplayer2/Format;->drmInitData:Lcom/google/android/exoplayer2/drm/DrmInitData;
 
     iget-object v10, p0, Lcom/google/android/exoplayer2/Format;->drmInitData:Lcom/google/android/exoplayer2/drm/DrmInitData;
 
+    .line 19
     invoke-static {p1, v10}, Lcom/google/android/exoplayer2/drm/DrmInitData;->createSessionCreationData(Lcom/google/android/exoplayer2/drm/DrmInitData;Lcom/google/android/exoplayer2/drm/DrmInitData;)Lcom/google/android/exoplayer2/drm/DrmInitData;
 
     move-result-object p1
 
+    .line 20
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Format;->buildUpon()Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 21
     invoke-virtual {p0, v1}, Lcom/google/android/exoplayer2/Format$Builder;->setId(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 22
     invoke-virtual {p0, v2}, Lcom/google/android/exoplayer2/Format$Builder;->setLabel(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 23
     invoke-virtual {p0, v3}, Lcom/google/android/exoplayer2/Format$Builder;->setLanguage(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 24
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/Format$Builder;->setSelectionFlags(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 25
     invoke-virtual {p0, v9}, Lcom/google/android/exoplayer2/Format$Builder;->setRoleFlags(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 26
     invoke-virtual {p0, v4}, Lcom/google/android/exoplayer2/Format$Builder;->setAverageBitrate(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 27
     invoke-virtual {p0, v7}, Lcom/google/android/exoplayer2/Format$Builder;->setPeakBitrate(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 28
     invoke-virtual {p0, v6}, Lcom/google/android/exoplayer2/Format$Builder;->setCodecs(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 29
     invoke-virtual {p0, v5}, Lcom/google/android/exoplayer2/Format$Builder;->setMetadata(Lcom/google/android/exoplayer2/metadata/Metadata;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 30
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/Format$Builder;->setDrmInitData(Lcom/google/android/exoplayer2/drm/DrmInitData;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 31
     invoke-virtual {p0, v8}, Lcom/google/android/exoplayer2/Format$Builder;->setFrameRate(F)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 32
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Format$Builder;->build()Lcom/google/android/exoplayer2/Format;
 
     move-result-object p0

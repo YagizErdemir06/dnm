@@ -52,20 +52,28 @@
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->rendererNames:[Ljava/lang/String;
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->rendererTrackTypes:[I
 
+    .line 4
     iput-object p3, p0, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->rendererTrackGroups:[Lcom/google/android/exoplayer2/source/TrackGroupArray;
 
+    .line 5
     iput-object p5, p0, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->rendererFormatSupports:[[[I
 
+    .line 6
     iput-object p4, p0, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->rendererMixedMimeTypeAdaptiveSupports:[I
 
+    .line 7
     iput-object p6, p0, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->unmappedTrackGroups:Lcom/google/android/exoplayer2/source/TrackGroupArray;
 
+    .line 8
     array-length p1, p2
 
     iput p1, p0, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->rendererCount:I
@@ -246,6 +254,7 @@
 .method public getCapabilities(III)I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->rendererFormatSupports:[[[I
 
     aget-object p0, p0, p1
@@ -260,6 +269,7 @@
 .method public getRendererCount()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->rendererCount:I
 
     return p0
@@ -268,6 +278,7 @@
 .method public getRendererName(I)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->rendererNames:[Ljava/lang/String;
 
     aget-object p0, p0, p1
@@ -278,10 +289,12 @@
 .method public getRendererSupport(I)I
     .locals 9
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->rendererFormatSupports:[[[I
 
     aget-object p0, p0, p1
 
+    .line 2
     array-length p1, p0
 
     const/4 v0, 0x0
@@ -295,6 +308,7 @@
 
     aget-object v3, p0, v1
 
+    .line 3
     array-length v4, v3
 
     move v5, v0
@@ -304,30 +318,32 @@
 
     aget v6, v3, v5
 
+    .line 4
     invoke-static {v6}, Lcom/google/android/exoplayer2/RendererCapabilities;->getFormatSupport(I)I
 
     move-result v6
 
-    const/4 v7, 0x1
+    const/4 v7, 0x2
 
-    if-eqz v6, :cond_2
+    const/4 v8, 0x1
 
-    if-eq v6, v7, :cond_2
+    if-eqz v6, :cond_1
 
-    const/4 v8, 0x2
-
-    if-eq v6, v8, :cond_2
-
-    const/4 v7, 0x3
+    if-eq v6, v8, :cond_1
 
     if-eq v6, v7, :cond_1
+
+    const/4 v8, 0x3
+
+    if-eq v6, v8, :cond_2
 
     const/4 p0, 0x4
 
     if-ne v6, p0, :cond_0
 
-    return v7
+    return v8
 
+    .line 5
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -338,6 +354,7 @@
     :cond_1
     move v7, v8
 
+    .line 6
     :cond_2
     invoke-static {v2, v7}, Ljava/lang/Math;->max(II)I
 
@@ -359,6 +376,7 @@
 .method public getRendererType(I)I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->rendererTrackTypes:[I
 
     aget p0, p0, p1
@@ -369,6 +387,7 @@
 .method public getTrackGroups(I)Lcom/google/android/exoplayer2/source/TrackGroupArray;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->rendererTrackGroups:[Lcom/google/android/exoplayer2/source/TrackGroupArray;
 
     aget-object p0, p0, p1
@@ -379,10 +398,12 @@
 .method public getTrackSupport(III)I
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->getCapabilities(III)I
 
     move-result p0
 
+    .line 2
     invoke-static {p0}, Lcom/google/android/exoplayer2/RendererCapabilities;->getFormatSupport(I)I
 
     move-result p0
@@ -397,17 +418,20 @@
 
     move v1, v0
 
+    .line 1
     :goto_0
     iget v2, p0, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->rendererCount:I
 
     if-ge v0, v2, :cond_1
 
+    .line 2
     iget-object v2, p0, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->rendererTrackTypes:[I
 
     aget v2, v2, v0
 
     if-ne v2, p1, :cond_0
 
+    .line 3
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->getRendererSupport(I)I
 
     move-result v2
@@ -428,6 +452,7 @@
 .method public getUnmappedTrackGroups()Lcom/google/android/exoplayer2/source/TrackGroupArray;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->unmappedTrackGroups:Lcom/google/android/exoplayer2/source/TrackGroupArray;
 
     return-object p0

@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/MapMakerInternalMap$WeakKeyStrongValueSegment;
+.class public final Lcom/google/common/collect/MapMakerInternalMap$WeakKeyStrongValueSegment;
 .super Lcom/google/common/collect/MapMakerInternalMap$Segment;
 .source "SourceFile"
 
@@ -56,8 +56,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/google/common/collect/MapMakerInternalMap$Segment;-><init>(Lcom/google/common/collect/MapMakerInternalMap;II)V
 
+    .line 2
     new-instance p1, Ljava/lang/ref/ReferenceQueue;
 
     invoke-direct {p1}, Ljava/lang/ref/ReferenceQueue;-><init>()V
@@ -70,6 +72,7 @@
 .method public static synthetic access$300(Lcom/google/common/collect/MapMakerInternalMap$WeakKeyStrongValueSegment;)Ljava/lang/ref/ReferenceQueue;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/MapMakerInternalMap$WeakKeyStrongValueSegment;->queueForKeys:Ljava/lang/ref/ReferenceQueue;
 
     return-object p0
@@ -116,6 +119,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/MapMakerInternalMap$WeakKeyStrongValueSegment;->queueForKeys:Ljava/lang/ref/ReferenceQueue;
 
     return-object p0
@@ -124,6 +128,7 @@
 .method public maybeClearReferenceQueues()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/MapMakerInternalMap$WeakKeyStrongValueSegment;->queueForKeys:Ljava/lang/ref/ReferenceQueue;
 
     invoke-virtual {p0, v0}, Lcom/google/common/collect/MapMakerInternalMap$Segment;->clearReferenceQueue(Ljava/lang/ref/ReferenceQueue;)V
@@ -134,6 +139,7 @@
 .method public maybeDrainReferenceQueues()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/MapMakerInternalMap$WeakKeyStrongValueSegment;->queueForKeys:Ljava/lang/ref/ReferenceQueue;
 
     invoke-virtual {p0, v0}, Lcom/google/common/collect/MapMakerInternalMap$Segment;->drainKeyReferenceQueue(Ljava/lang/ref/ReferenceQueue;)V
@@ -144,6 +150,7 @@
 .method public bridge synthetic self()Lcom/google/common/collect/MapMakerInternalMap$Segment;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/MapMakerInternalMap$WeakKeyStrongValueSegment;->self()Lcom/google/common/collect/MapMakerInternalMap$WeakKeyStrongValueSegment;
 
     move-result-object p0

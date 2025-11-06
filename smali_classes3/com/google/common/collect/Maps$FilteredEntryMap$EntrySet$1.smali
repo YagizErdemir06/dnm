@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Maps$FilteredEntryMap$EntrySet$1;
+.class public Lcom/google/common/collect/Maps$FilteredEntryMap$EntrySet$1;
 .super Lcom/google/common/collect/TransformedIterator;
 .source "SourceFile"
 
@@ -25,13 +25,14 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/google/common/collect/Maps$FilteredEntryMap$EntrySet;
+.field public final synthetic this$1:Lcom/google/common/collect/Maps$FilteredEntryMap$EntrySet;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/Maps$FilteredEntryMap$EntrySet;Ljava/util/Iterator;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/Maps$FilteredEntryMap$EntrySet$1;->this$1:Lcom/google/common/collect/Maps$FilteredEntryMap$EntrySet;
 
     invoke-direct {p0, p2}, Lcom/google/common/collect/TransformedIterator;-><init>(Ljava/util/Iterator;)V

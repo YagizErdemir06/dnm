@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/graph/Traverser$Traversal;
+.class public abstract Lcom/google/common/graph/Traverser$Traversal;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -24,7 +24,7 @@
 
 
 # instance fields
-.field final successorFunction:Lcom/google/common/graph/SuccessorsFunction;
+.field public final successorFunction:Lcom/google/common/graph/SuccessorsFunction;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/graph/SuccessorsFunction<",
@@ -45,8 +45,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/graph/Traverser$Traversal;->successorFunction:Lcom/google/common/graph/SuccessorsFunction;
 
     return-void
@@ -66,10 +68,12 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
+    .line 2
     new-instance v1, Lcom/google/common/graph/Traverser$Traversal$1;
 
     invoke-direct {v1, p0, v0}, Lcom/google/common/graph/Traverser$Traversal$1;-><init>(Lcom/google/common/graph/SuccessorsFunction;Ljava/util/Set;)V
@@ -91,6 +95,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/graph/Traverser$Traversal$2;
 
     invoke-direct {v0, p0}, Lcom/google/common/graph/Traverser$Traversal$2;-><init>(Lcom/google/common/graph/SuccessorsFunction;)V
@@ -112,12 +117,15 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayDeque;
 
     invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
 
+    .line 2
     invoke-interface {v0, p1}, Ljava/util/Deque;->add(Ljava/lang/Object;)Z
 
+    .line 3
     new-instance p1, Lcom/google/common/graph/Traverser$Traversal$3;
 
     invoke-direct {p1, p0, v0, p2}, Lcom/google/common/graph/Traverser$Traversal$3;-><init>(Lcom/google/common/graph/Traverser$Traversal;Ljava/util/Deque;Lcom/google/common/graph/Traverser$InsertionOrder;)V
@@ -139,6 +147,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/common/graph/Traverser$InsertionOrder;->BACK:Lcom/google/common/graph/Traverser$InsertionOrder;
 
     invoke-direct {p0, p1, v0}, Lcom/google/common/graph/Traverser$Traversal;->topDown(Ljava/util/Iterator;Lcom/google/common/graph/Traverser$InsertionOrder;)Ljava/util/Iterator;
@@ -160,16 +169,20 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayDeque;
 
     invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
 
+    .line 2
     new-instance v1, Ljava/util/ArrayDeque;
 
     invoke-direct {v1}, Ljava/util/ArrayDeque;-><init>()V
 
+    .line 3
     invoke-interface {v1, p1}, Ljava/util/Deque;->add(Ljava/lang/Object;)Z
 
+    .line 4
     new-instance p1, Lcom/google/common/graph/Traverser$Traversal$4;
 
     invoke-direct {p1, p0, v1, v0}, Lcom/google/common/graph/Traverser$Traversal$4;-><init>(Lcom/google/common/graph/Traverser$Traversal;Ljava/util/Deque;Ljava/util/Deque;)V
@@ -189,6 +202,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/common/graph/Traverser$InsertionOrder;->FRONT:Lcom/google/common/graph/Traverser$InsertionOrder;
 
     invoke-direct {p0, p1, v0}, Lcom/google/common/graph/Traverser$Traversal;->topDown(Ljava/util/Iterator;Lcom/google/common/graph/Traverser$InsertionOrder;)Ljava/util/Iterator;

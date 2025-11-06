@@ -1,9 +1,9 @@
-.class final Lcom/faceunity/core/schedule/FUThreadSchedule$mCachedThreadPool$2;
-.super Lkotlin/jvm/internal/n0;
+.class public final Lcom/faceunity/core/schedule/FUThreadSchedule$mCachedThreadPool$2;
+.super Lh/d3/x/n0;
 .source "SourceFile"
 
 # interfaces
-.implements Ljn/a;
+.implements Lh/d3/w/a;
 
 
 # annotations
@@ -18,26 +18,27 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lkotlin/jvm/internal/n0;",
-        "Ljn/a<",
+        "Lh/d3/x/n0;",
+        "Lh/d3/w/a<",
         "Ljava/util/concurrent/ThreadPoolExecutor;",
         ">;"
     }
 .end annotation
 
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
     bv = {
         0x1,
         0x0,
         0x3
     }
     d1 = {
-        "\u0000\u0008\n\u0000\n\u0002\u0018\u0002\n\u0000\u0010\u0000\u001a\u00020\u0001H\n\u00a2\u0006\u0002\u0008\u0002"
+        "\u0000\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0003\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0001\u0010\u0002"
     }
     d2 = {
-        "<anonymous>",
         "Ljava/util/concurrent/ThreadPoolExecutor;",
-        "invoke"
+        "invoke",
+        "()Ljava/util/concurrent/ThreadPoolExecutor;",
+        "<anonymous>"
     }
     k = 0x3
     mv = {
@@ -70,7 +71,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lkotlin/jvm/internal/n0;-><init>(I)V
+    invoke-direct {p0, v0}, Lh/d3/x/n0;-><init>(I)V
 
     return-void
 .end method
@@ -90,23 +91,23 @@
 
 .method public final invoke()Ljava/util/concurrent/ThreadPoolExecutor;
     .locals 7
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     .line 2
     new-instance p0, Ljava/util/concurrent/ThreadPoolExecutor;
-
-    const/4 v1, 0x0
-
-    const v2, 0x7fffffff
-
-    const-wide/16 v3, 0x1e
 
     sget-object v5, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     new-instance v6, Ljava/util/concurrent/SynchronousQueue;
 
     invoke-direct {v6}, Ljava/util/concurrent/SynchronousQueue;-><init>()V
+
+    const/4 v1, 0x0
+
+    const v2, 0x7fffffff
+
+    const-wide/16 v3, 0x1e
 
     move-object v0, p0
 

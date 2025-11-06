@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field final synthetic zze:Lcom/google/android/gms/common/internal/BaseGmsClient;
+.field public final synthetic zze:Lcom/google/android/gms/common/internal/BaseGmsClient;
 
 
 # direct methods
@@ -17,6 +17,7 @@
     .annotation build Landroidx/annotation/BinderThread;
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/common/internal/zzg;->zze:Lcom/google/android/gms/common/internal/BaseGmsClient;
 
     const/4 p3, 0x0
@@ -31,6 +32,7 @@
 .method public final zzb(Lcom/google/android/gms/common/ConnectionResult;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/internal/zzg;->zze:Lcom/google/android/gms/common/internal/BaseGmsClient;
 
     invoke-virtual {v0}, Lcom/google/android/gms/common/internal/BaseGmsClient;->enableLocalFallback()Z
@@ -51,6 +53,7 @@
 
     const/16 p1, 0x10
 
+    .line 2
     invoke-static {p0, p1}, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzk(Lcom/google/android/gms/common/internal/BaseGmsClient;I)V
 
     return-void
@@ -60,10 +63,12 @@
 
     iget-object v0, v0, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzc:Lcom/google/android/gms/common/internal/BaseGmsClient$ConnectionProgressReportCallbacks;
 
+    .line 3
     invoke-interface {v0, p1}, Lcom/google/android/gms/common/internal/BaseGmsClient$ConnectionProgressReportCallbacks;->onReportServiceBinding(Lcom/google/android/gms/common/ConnectionResult;)V
 
     iget-object p0, p0, Lcom/google/android/gms/common/internal/zzg;->zze:Lcom/google/android/gms/common/internal/BaseGmsClient;
 
+    .line 4
     invoke-virtual {p0, p1}, Lcom/google/android/gms/common/internal/BaseGmsClient;->onConnectionFailed(Lcom/google/android/gms/common/ConnectionResult;)V
 
     return-void
@@ -72,6 +77,7 @@
 .method public final zzd()Z
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/internal/zzg;->zze:Lcom/google/android/gms/common/internal/BaseGmsClient;
 
     iget-object p0, p0, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzc:Lcom/google/android/gms/common/internal/BaseGmsClient$ConnectionProgressReportCallbacks;

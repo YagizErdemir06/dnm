@@ -32,6 +32,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {p0, v0}, Landroidx/core/content/ContextCompat;->getExternalFilesDirs(Landroid/content/Context;Ljava/lang/String;)[Ljava/io/File;
 
     move-result-object p0

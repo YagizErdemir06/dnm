@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/milab/videosdk/XmsContext$1;
+.class public Lcom/xiaomi/milab/videosdk/XmsContext$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,13 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/xiaomi/milab/videosdk/XmsContext;
+.field public final synthetic this$0:Lcom/xiaomi/milab/videosdk/XmsContext;
 
-.field final synthetic val$fps:I
+.field public final synthetic val$fps:I
 
-.field final synthetic val$surface:Lcom/xiaomi/milab/videosdk/XmsSurface;
+.field public final synthetic val$surface:Lcom/xiaomi/milab/videosdk/XmsSurface;
 
-.field final synthetic val$xmsTimeline:Lcom/xiaomi/milab/videosdk/XmsTimeline;
+.field public final synthetic val$xmsTimeline:Lcom/xiaomi/milab/videosdk/XmsTimeline;
 
 
 # direct methods
@@ -45,6 +45,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/milab/videosdk/XmsContext$1;->this$0:Lcom/xiaomi/milab/videosdk/XmsContext;
 
     iput-object p2, p0, Lcom/xiaomi/milab/videosdk/XmsContext$1;->val$xmsTimeline:Lcom/xiaomi/milab/videosdk/XmsTimeline;
@@ -77,6 +78,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p2, p0, Lcom/xiaomi/milab/videosdk/XmsContext$1;->this$0:Lcom/xiaomi/milab/videosdk/XmsContext;
 
     invoke-interface {p1}, Landroid/view/SurfaceHolder;->getSurface()Landroid/view/Surface;
@@ -85,6 +87,7 @@
 
     invoke-static {p2, v0}, Lcom/xiaomi/milab/videosdk/XmsContext;->access$002(Lcom/xiaomi/milab/videosdk/XmsContext;Landroid/view/Surface;)Landroid/view/Surface;
 
+    .line 2
     iget-object p2, p0, Lcom/xiaomi/milab/videosdk/XmsContext$1;->val$xmsTimeline:Lcom/xiaomi/milab/videosdk/XmsTimeline;
 
     invoke-interface {p1}, Landroid/view/SurfaceHolder;->getSurface()Landroid/view/Surface;
@@ -93,17 +96,18 @@
 
     invoke-virtual {p2, p1}, Lcom/xiaomi/milab/videosdk/XmsTimeline;->attachSurface(Landroid/view/Surface;)V
 
+    .line 3
     iget-object p1, p0, Lcom/xiaomi/milab/videosdk/XmsContext$1;->val$xmsTimeline:Lcom/xiaomi/milab/videosdk/XmsTimeline;
 
     iget-object p2, p0, Lcom/xiaomi/milab/videosdk/XmsContext$1;->val$surface:Lcom/xiaomi/milab/videosdk/XmsSurface;
 
-    invoke-virtual {p2}, Landroid/view/View;->getWidth()I
+    invoke-virtual {p2}, Landroid/view/SurfaceView;->getWidth()I
 
     move-result p2
 
     iget-object v0, p0, Lcom/xiaomi/milab/videosdk/XmsContext$1;->val$surface:Lcom/xiaomi/milab/videosdk/XmsSurface;
 
-    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+    invoke-virtual {v0}, Landroid/view/SurfaceView;->getHeight()I
 
     move-result v0
 
@@ -113,10 +117,12 @@
 
     invoke-virtual {p1, p2, v0, v1, v2}, Lcom/xiaomi/milab/videosdk/XmsTimeline;->setProfile(IID)V
 
+    .line 4
     iget-object p1, p0, Lcom/xiaomi/milab/videosdk/XmsContext$1;->this$0:Lcom/xiaomi/milab/videosdk/XmsContext;
 
     invoke-virtual {p1}, Lcom/xiaomi/milab/videosdk/XmsContext;->initContext()V
 
+    .line 5
     iget-object p1, p0, Lcom/xiaomi/milab/videosdk/XmsContext$1;->val$xmsTimeline:Lcom/xiaomi/milab/videosdk/XmsTimeline;
 
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/XmsContext$1;->val$surface:Lcom/xiaomi/milab/videosdk/XmsSurface;

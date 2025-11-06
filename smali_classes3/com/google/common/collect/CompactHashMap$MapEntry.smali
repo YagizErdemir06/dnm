@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/CompactHashMap$MapEntry;
+.class public final Lcom/google/common/collect/CompactHashMap$MapEntry;
 .super Lcom/google/common/collect/AbstractMapEntry;
 .source "SourceFile"
 
@@ -35,23 +35,26 @@
 
 .field private lastKnownIndex:I
 
-.field final synthetic this$0:Lcom/google/common/collect/CompactHashMap;
+.field public final synthetic this$0:Lcom/google/common/collect/CompactHashMap;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/CompactHashMap;I)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/CompactHashMap$MapEntry;->this$0:Lcom/google/common/collect/CompactHashMap;
 
     invoke-direct {p0}, Lcom/google/common/collect/AbstractMapEntry;-><init>()V
 
+    .line 2
     invoke-static {p1, p2}, Lcom/google/common/collect/CompactHashMap;->access$100(Lcom/google/common/collect/CompactHashMap;I)Ljava/lang/Object;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/common/collect/CompactHashMap$MapEntry;->key:Ljava/lang/Object;
 
+    .line 3
     iput p2, p0, Lcom/google/common/collect/CompactHashMap$MapEntry;->lastKnownIndex:I
 
     return-void
@@ -60,6 +63,7 @@
 .method private updateLastKnownIndex()V
     .locals 3
 
+    .line 1
     iget v0, p0, Lcom/google/common/collect/CompactHashMap$MapEntry;->lastKnownIndex:I
 
     const/4 v1, -0x1
@@ -68,6 +72,7 @@
 
     iget-object v1, p0, Lcom/google/common/collect/CompactHashMap$MapEntry;->this$0:Lcom/google/common/collect/CompactHashMap;
 
+    .line 2
     invoke-virtual {v1}, Lcom/google/common/collect/CompactHashMap;->size()I
 
     move-result v1
@@ -80,6 +85,7 @@
 
     iget v2, p0, Lcom/google/common/collect/CompactHashMap$MapEntry;->lastKnownIndex:I
 
+    .line 3
     invoke-static {v1, v2}, Lcom/google/common/collect/CompactHashMap;->access$100(Lcom/google/common/collect/CompactHashMap;I)Ljava/lang/Object;
 
     move-result-object v1
@@ -90,6 +96,7 @@
 
     if-nez v0, :cond_1
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lcom/google/common/collect/CompactHashMap$MapEntry;->this$0:Lcom/google/common/collect/CompactHashMap;
 
@@ -118,6 +125,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/CompactHashMap$MapEntry;->key:Ljava/lang/Object;
 
     return-object p0
@@ -134,6 +142,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/CompactHashMap$MapEntry;->this$0:Lcom/google/common/collect/CompactHashMap;
 
     invoke-virtual {v0}, Lcom/google/common/collect/CompactHashMap;->delegateOrNull()Ljava/util/Map;
@@ -142,6 +151,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/CompactHashMap$MapEntry;->key:Ljava/lang/Object;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -154,9 +164,11 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-direct {p0}, Lcom/google/common/collect/CompactHashMap$MapEntry;->updateLastKnownIndex()V
 
+    .line 4
     iget v0, p0, Lcom/google/common/collect/CompactHashMap$MapEntry;->lastKnownIndex:I
 
     const/4 v1, -0x1
@@ -195,6 +207,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/CompactHashMap$MapEntry;->this$0:Lcom/google/common/collect/CompactHashMap;
 
     invoke-virtual {v0}, Lcom/google/common/collect/CompactHashMap;->delegateOrNull()Ljava/util/Map;
@@ -203,6 +216,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/CompactHashMap$MapEntry;->key:Ljava/lang/Object;
 
     invoke-interface {v0, p0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -215,27 +229,32 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-direct {p0}, Lcom/google/common/collect/CompactHashMap$MapEntry;->updateLastKnownIndex()V
 
+    .line 4
     iget v0, p0, Lcom/google/common/collect/CompactHashMap$MapEntry;->lastKnownIndex:I
 
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_1
 
+    .line 5
     iget-object v0, p0, Lcom/google/common/collect/CompactHashMap$MapEntry;->this$0:Lcom/google/common/collect/CompactHashMap;
 
     iget-object p0, p0, Lcom/google/common/collect/CompactHashMap$MapEntry;->key:Ljava/lang/Object;
 
     invoke-virtual {v0, p0, p1}, Lcom/google/common/collect/CompactHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 6
     invoke-static {}, Lcom/google/common/collect/NullnessCasts;->unsafeNull()Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 
+    .line 7
     :cond_1
     iget-object v1, p0, Lcom/google/common/collect/CompactHashMap$MapEntry;->this$0:Lcom/google/common/collect/CompactHashMap;
 
@@ -243,6 +262,7 @@
 
     move-result-object v0
 
+    .line 8
     iget-object v1, p0, Lcom/google/common/collect/CompactHashMap$MapEntry;->this$0:Lcom/google/common/collect/CompactHashMap;
 
     iget p0, p0, Lcom/google/common/collect/CompactHashMap$MapEntry;->lastKnownIndex:I

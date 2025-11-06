@@ -9,7 +9,7 @@
 
 
 # instance fields
-.field protected final mLifecycleFragment:Lcom/google/android/gms/common/api/internal/LifecycleFragment;
+.field public final mLifecycleFragment:Lcom/google/android/gms/common/api/internal/LifecycleFragment;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -40,6 +40,7 @@
     .annotation build Landroidx/annotation/Keep;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string v0, "Method not available in SDK."
@@ -191,6 +192,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/LifecycleCallback;->mLifecycleFragment:Lcom/google/android/gms/common/api/internal/LifecycleFragment;
 
     invoke-interface {p0}, Lcom/google/android/gms/common/api/internal/LifecycleFragment;->getLifecycleActivity()Landroid/app/Activity;

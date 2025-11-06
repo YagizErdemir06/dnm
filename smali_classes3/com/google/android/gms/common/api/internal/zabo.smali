@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/api/internal/zabo;
+.class public final Lcom/google/android/gms/common/api/internal/zabo;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field final synthetic zaa:Lcom/google/android/gms/common/api/internal/zabp;
+.field public final synthetic zaa:Lcom/google/android/gms/common/api/internal/zabp;
 
 
 # direct methods
@@ -26,6 +26,7 @@
 .method public final run()V
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zabo;->zaa:Lcom/google/android/gms/common/api/internal/zabp;
 
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zabp;->zaa:Lcom/google/android/gms/common/api/internal/zabq;
@@ -52,6 +53,7 @@
 
     move-result-object p0
 
+    .line 2
     invoke-interface {v0, p0}, Lcom/google/android/gms/common/api/Api$Client;->disconnect(Ljava/lang/String;)V
 
     return-void

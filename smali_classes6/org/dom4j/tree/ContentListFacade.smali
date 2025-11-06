@@ -13,10 +13,13 @@
 .method public constructor <init>(Lorg/dom4j/tree/AbstractBranch;Ljava/util/List;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lorg/dom4j/tree/ContentListFacade;->branch:Lorg/dom4j/tree/AbstractBranch;
 
+    .line 3
     iput-object p2, p0, Lorg/dom4j/tree/ContentListFacade;->branchContent:Ljava/util/List;
 
     return-void
@@ -181,14 +184,17 @@
 .method public asNode(Ljava/lang/Object;)Lorg/dom4j/Node;
     .locals 2
 
+    .line 1
     instance-of p0, p1, Lorg/dom4j/Node;
 
     if-eqz p0, :cond_0
 
+    .line 2
     check-cast p1, Lorg/dom4j/Node;
 
     return-object p1
 
+    .line 3
     :cond_0
     new-instance p0, Lorg/dom4j/IllegalAddException;
 
@@ -214,7 +220,8 @@
 .method public clear()V
     .locals 3
 
-    invoke-virtual {p0}, Ljava/util/AbstractCollection;->iterator()Ljava/util/Iterator;
+    .line 1
+    invoke-virtual {p0}, Ljava/util/AbstractList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
@@ -225,10 +232,12 @@
 
     if-eqz v1, :cond_0
 
+    .line 2
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
+    .line 3
     iget-object v2, p0, Lorg/dom4j/tree/ContentListFacade;->branch:Lorg/dom4j/tree/AbstractBranch;
 
     invoke-virtual {p0, v1}, Lorg/dom4j/tree/ContentListFacade;->asNode(Ljava/lang/Object;)Lorg/dom4j/Node;
@@ -239,6 +248,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-object p0, p0, Lorg/dom4j/tree/ContentListFacade;->branchContent:Ljava/util/List;
 
@@ -250,6 +260,7 @@
 .method public contains(Ljava/lang/Object;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/ContentListFacade;->branchContent:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
@@ -262,6 +273,7 @@
 .method public containsAll(Ljava/util/Collection;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/ContentListFacade;->branchContent:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->containsAll(Ljava/util/Collection;)Z
@@ -274,6 +286,7 @@
 .method public get(I)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/ContentListFacade;->branchContent:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -286,6 +299,7 @@
 .method public getBackingList()Ljava/util/List;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/ContentListFacade;->branchContent:Ljava/util/List;
 
     return-object p0
@@ -294,6 +308,7 @@
 .method public indexOf(Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/ContentListFacade;->branchContent:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
@@ -306,6 +321,7 @@
 .method public isEmpty()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/ContentListFacade;->branchContent:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
@@ -318,6 +334,7 @@
 .method public lastIndexOf(Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/ContentListFacade;->branchContent:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->lastIndexOf(Ljava/lang/Object;)I
@@ -377,6 +394,7 @@
 .method public removeAll(Ljava/util/Collection;)Z
     .locals 3
 
+    .line 1
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -388,10 +406,12 @@
 
     if-eqz v1, :cond_0
 
+    .line 2
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
+    .line 3
     iget-object v2, p0, Lorg/dom4j/tree/ContentListFacade;->branch:Lorg/dom4j/tree/AbstractBranch;
 
     invoke-virtual {p0, v1}, Lorg/dom4j/tree/ContentListFacade;->asNode(Ljava/lang/Object;)Lorg/dom4j/Node;
@@ -402,6 +422,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-object p0, p0, Lorg/dom4j/tree/ContentListFacade;->branchContent:Ljava/util/List;
 
@@ -415,6 +436,7 @@
 .method public set(ILjava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/tree/ContentListFacade;->branch:Lorg/dom4j/tree/AbstractBranch;
 
     invoke-virtual {p0, p2}, Lorg/dom4j/tree/ContentListFacade;->asNode(Ljava/lang/Object;)Lorg/dom4j/Node;
@@ -423,6 +445,7 @@
 
     invoke-virtual {v0, v1}, Lorg/dom4j/tree/AbstractBranch;->childAdded(Lorg/dom4j/Node;)V
 
+    .line 2
     iget-object p0, p0, Lorg/dom4j/tree/ContentListFacade;->branchContent:Ljava/util/List;
 
     invoke-interface {p0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
@@ -435,6 +458,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/ContentListFacade;->branchContent:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->size()I

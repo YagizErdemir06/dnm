@@ -16,18 +16,18 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerViewHolder<",
-        "Lsh/d;",
+        "Ld/o/v/a/z/d;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field public final a:Landroid/widget/ImageView;
+.field private final a:Landroid/widget/ImageView;
 
-.field public final b:Landroid/widget/ImageView;
+.field private final b:Landroid/widget/ImageView;
 
-.field public final c:Landroid/view/View;
+.field private final c:Landroid/view/View;
 
 
 # direct methods
@@ -37,13 +37,24 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "itemView"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerViewHolder;-><init>(Landroid/view/View;)V
 
-    invoke-static {p1}, Lz1/f;->o(Landroid/view/View;)V
+    .line 2
+    invoke-static {p1}, Ld/d/a/f6/f;->o(Landroid/view/View;)V
 
-    const v0, 0x7f0b049a
+    const v0, 0x7f0b0426
 
+    .line 3
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -52,16 +63,18 @@
 
     iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu2/ui/adapter/MimojiFilterAdapter$a;->a:Landroid/widget/ImageView;
 
-    const v0, 0x7f0b0499
+    const v0, 0x7f0b0425
 
+    .line 4
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu2/ui/adapter/MimojiFilterAdapter$a;->c:Landroid/view/View;
 
-    const v0, 0x7f0b049b
+    const v0, 0x7f0b0427
 
+    .line 5
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -82,28 +95,28 @@
 
     new-array v0, v0, [Landroid/view/View;
 
-    const/4 v1, 0x0
-
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
+
+    const/4 v1, 0x0
 
     aput-object p0, v0, v1
 
     return-object v0
 .end method
 
-.method public bridge synthetic setData(Ljava/lang/Object;I)V
-    .locals 0
-
-    .line 1
-    check-cast p1, Lsh/d;
-
-    invoke-virtual {p0, p1, p2}, Lcom/xiaomi/mimoji/mimojifu2/ui/adapter/MimojiFilterAdapter$a;->setData(Lsh/d;I)V
-
-    return-void
-.end method
-
-.method public setData(Lsh/d;I)V
+.method public setData(Ld/o/v/a/z/d;I)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "data",
+            "position"
+        }
+    .end annotation
 
     .line 2
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -118,26 +131,26 @@
 
     iget-object v3, p0, Lcom/xiaomi/mimoji/mimojifu2/ui/adapter/MimojiFilterAdapter$a;->a:Landroid/widget/ImageView;
 
-    invoke-static {p1, v0, v1, v2, v3}, Lcom/xiaomi/mimoji/mimojifu2/ui/adapter/MimojiFilterAdapter;->initMimojiFilterColor(Lsh/d;Landroid/content/Context;Landroid/view/View;Landroid/view/View;Landroid/widget/ImageView;)V
+    invoke-static {p1, v0, v1, v2, v3}, Lcom/xiaomi/mimoji/mimojifu2/ui/adapter/MimojiFilterAdapter;->initMimojiFilterColor(Ld/o/v/a/z/d;Landroid/content/Context;Landroid/view/View;Landroid/view/View;Landroid/widget/ImageView;)V
 
     .line 3
     iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu2/ui/adapter/MimojiFilterAdapter$a;->a:Landroid/widget/ImageView;
 
-    invoke-virtual {p1}, Lsh/d;->e()Z
+    invoke-virtual {p1}, Ld/o/v/a/z/d;->d()Z
 
     move-result v1
 
-    invoke-static {v0, v1}, Lcom/android/camera/a6;->T(Landroid/view/View;Z)V
+    invoke-static {v0, v1}, Ld/d/a/z5;->L(Landroid/view/View;Z)V
 
     .line 4
-    invoke-static {}, Lcj/c;->a()[Ljava/lang/String;
+    invoke-static {}, Ld/o/v/e/m0/a/c/c;->a()[Ljava/lang/String;
 
     move-result-object v0
 
     aget-object p2, v0, p2
 
     .line 5
-    invoke-virtual {p1}, Lsh/d;->e()Z
+    invoke-virtual {p1}, Ld/o/v/a/z/d;->d()Z
 
     move-result p1
 
@@ -148,22 +161,22 @@
     .line 6
     iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu2/ui/adapter/MimojiFilterAdapter$a;->b:Landroid/widget/ImageView;
 
-    invoke-static {}, Lf2/a;->e()Lf2/a;
+    invoke-static {}, Ld/d/a/k6/c;->e()Ld/d/a/k6/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lf2/a;->c()Z
+    invoke-virtual {v1}, Ld/d/a/k6/c;->c()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f080224
+    const v1, 0x7f080208
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f080220
+    const v1, 0x7f080204
 
     :goto_0
     invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -171,7 +184,7 @@
     .line 7
     iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu2/ui/adapter/MimojiFilterAdapter$a;->b:Landroid/widget/ImageView;
 
-    invoke-static {p1, v0, v0}, Lcom/android/camera/a6;->Y4(Landroid/view/View;ZZ)V
+    invoke-static {p1, v0, v0}, Ld/d/a/z5;->K4(Landroid/view/View;ZZ)V
 
     goto :goto_1
 
@@ -181,13 +194,34 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p1, v1, v0}, Lcom/android/camera/a6;->Y4(Landroid/view/View;ZZ)V
+    invoke-static {p1, v1, v0}, Ld/d/a/z5;->K4(Landroid/view/View;ZZ)V
 
     .line 9
     :goto_1
     iget-object p0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {p0, p2}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public bridge synthetic setData(Ljava/lang/Object;I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "data",
+            "position"
+        }
+    .end annotation
+
+    .line 1
+    check-cast p1, Ld/o/v/a/z/d;
+
+    invoke-virtual {p0, p1, p2}, Lcom/xiaomi/mimoji/mimojifu2/ui/adapter/MimojiFilterAdapter$a;->setData(Ld/o/v/a/z/d;I)V
 
     return-void
 .end method

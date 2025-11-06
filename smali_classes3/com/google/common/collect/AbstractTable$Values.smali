@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/AbstractTable$Values;
+.class public Lcom/google/common/collect/AbstractTable$Values;
 .super Ljava/util/AbstractCollection;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/AbstractTable;
+.field public final synthetic this$0:Lcom/google/common/collect/AbstractTable;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/AbstractTable;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/AbstractTable$Values;->this$0:Lcom/google/common/collect/AbstractTable;
 
     invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
@@ -41,6 +42,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/AbstractTable$Values;->this$0:Lcom/google/common/collect/AbstractTable;
 
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractTable;->clear()V
@@ -55,6 +57,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/AbstractTable$Values;->this$0:Lcom/google/common/collect/AbstractTable;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/AbstractTable;->containsValue(Ljava/lang/Object;)Z
@@ -74,6 +77,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/AbstractTable$Values;->this$0:Lcom/google/common/collect/AbstractTable;
 
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractTable;->valuesIterator()Ljava/util/Iterator;
@@ -86,6 +90,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/AbstractTable$Values;->this$0:Lcom/google/common/collect/AbstractTable;
 
     invoke-interface {p0}, Lcom/google/common/collect/Table;->size()I

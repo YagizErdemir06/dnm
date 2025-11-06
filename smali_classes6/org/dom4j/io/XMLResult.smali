@@ -103,6 +103,7 @@
 .method public getHandler()Lorg/xml/sax/ContentHandler;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/XMLResult;->xmlWriter:Lorg/dom4j/io/XMLWriter;
 
     return-object p0
@@ -111,6 +112,7 @@
 .method public getLexicalHandler()Lorg/xml/sax/ext/LexicalHandler;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/XMLResult;->xmlWriter:Lorg/dom4j/io/XMLWriter;
 
     return-object p0
@@ -119,6 +121,7 @@
 .method public getXMLWriter()Lorg/dom4j/io/XMLWriter;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/XMLResult;->xmlWriter:Lorg/dom4j/io/XMLWriter;
 
     return-object p0
@@ -127,10 +130,13 @@
 .method public setXMLWriter(Lorg/dom4j/io/XMLWriter;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/io/XMLResult;->xmlWriter:Lorg/dom4j/io/XMLWriter;
 
+    .line 2
     invoke-virtual {p0, p1}, Ljavax/xml/transform/sax/SAXResult;->setHandler(Lorg/xml/sax/ContentHandler;)V
 
+    .line 3
     iget-object p1, p0, Lorg/dom4j/io/XMLResult;->xmlWriter:Lorg/dom4j/io/XMLWriter;
 
     invoke-virtual {p0, p1}, Ljavax/xml/transform/sax/SAXResult;->setLexicalHandler(Lorg/xml/sax/ext/LexicalHandler;)V

@@ -30,19 +30,34 @@
 
 .field private index:I
 
-.field final synthetic this$0:Lorg/greenrobot/greendao/query/LazyList;
+.field public final synthetic this$0:Lorg/greenrobot/greendao/query/LazyList;
 
 
 # direct methods
 .method public constructor <init>(Lorg/greenrobot/greendao/query/LazyList;IZ)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x0,
+            0x0
+        }
+        names = {
+            "this$0",
+            "startLocation",
+            "closeWhenDone"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lorg/greenrobot/greendao/query/LazyList$LazyIterator;->this$0:Lorg/greenrobot/greendao/query/LazyList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p2, p0, Lorg/greenrobot/greendao/query/LazyList$LazyIterator;->index:I
 
+    .line 3
     iput-boolean p3, p0, Lorg/greenrobot/greendao/query/LazyList$LazyIterator;->closeWhenDone:Z
 
     return-void
@@ -52,12 +67,22 @@
 # virtual methods
 .method public add(Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "object"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TE;)V"
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -68,6 +93,7 @@
 .method public close()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/greenrobot/greendao/query/LazyList$LazyIterator;->this$0:Lorg/greenrobot/greendao/query/LazyList;
 
     invoke-virtual {p0}, Lorg/greenrobot/greendao/query/LazyList;->close()V
@@ -78,6 +104,7 @@
 .method public hasNext()Z
     .locals 1
 
+    .line 1
     iget v0, p0, Lorg/greenrobot/greendao/query/LazyList$LazyIterator;->index:I
 
     iget-object p0, p0, Lorg/greenrobot/greendao/query/LazyList$LazyIterator;->this$0:Lorg/greenrobot/greendao/query/LazyList;
@@ -102,6 +129,7 @@
 .method public hasPrevious()Z
     .locals 0
 
+    .line 1
     iget p0, p0, Lorg/greenrobot/greendao/query/LazyList$LazyIterator;->index:I
 
     if-lez p0, :cond_0
@@ -125,6 +153,7 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Lorg/greenrobot/greendao/query/LazyList$LazyIterator;->index:I
 
     iget-object v1, p0, Lorg/greenrobot/greendao/query/LazyList$LazyIterator;->this$0:Lorg/greenrobot/greendao/query/LazyList;
@@ -135,6 +164,7 @@
 
     if-ge v0, v1, :cond_1
 
+    .line 2
     iget-object v0, p0, Lorg/greenrobot/greendao/query/LazyList$LazyIterator;->this$0:Lorg/greenrobot/greendao/query/LazyList;
 
     iget v1, p0, Lorg/greenrobot/greendao/query/LazyList$LazyIterator;->index:I
@@ -143,12 +173,14 @@
 
     move-result-object v0
 
+    .line 3
     iget v1, p0, Lorg/greenrobot/greendao/query/LazyList$LazyIterator;->index:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Lorg/greenrobot/greendao/query/LazyList$LazyIterator;->index:I
 
+    .line 4
     iget-object v2, p0, Lorg/greenrobot/greendao/query/LazyList$LazyIterator;->this$0:Lorg/greenrobot/greendao/query/LazyList;
 
     invoke-static {v2}, Lorg/greenrobot/greendao/query/LazyList;->access$000(Lorg/greenrobot/greendao/query/LazyList;)I
@@ -161,11 +193,13 @@
 
     if-eqz v1, :cond_0
 
+    .line 5
     invoke-virtual {p0}, Lorg/greenrobot/greendao/query/LazyList$LazyIterator;->close()V
 
     :cond_0
     return-object v0
 
+    .line 6
     :cond_1
     new-instance p0, Ljava/util/NoSuchElementException;
 
@@ -177,6 +211,7 @@
 .method public nextIndex()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lorg/greenrobot/greendao/query/LazyList$LazyIterator;->index:I
 
     return p0
@@ -190,14 +225,17 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Lorg/greenrobot/greendao/query/LazyList$LazyIterator;->index:I
 
     if-lez v0, :cond_0
 
     add-int/lit8 v0, v0, -0x1
 
+    .line 2
     iput v0, p0, Lorg/greenrobot/greendao/query/LazyList$LazyIterator;->index:I
 
+    .line 3
     iget-object p0, p0, Lorg/greenrobot/greendao/query/LazyList$LazyIterator;->this$0:Lorg/greenrobot/greendao/query/LazyList;
 
     invoke-virtual {p0, v0}, Lorg/greenrobot/greendao/query/LazyList;->get(I)Ljava/lang/Object;
@@ -206,6 +244,7 @@
 
     return-object p0
 
+    .line 4
     :cond_0
     new-instance p0, Ljava/util/NoSuchElementException;
 
@@ -217,6 +256,7 @@
 .method public previousIndex()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lorg/greenrobot/greendao/query/LazyList$LazyIterator;->index:I
 
     add-int/lit8 p0, p0, -0x1
@@ -227,6 +267,7 @@
 .method public remove()V
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -236,12 +277,22 @@
 
 .method public set(Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "object"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TE;)V"
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V

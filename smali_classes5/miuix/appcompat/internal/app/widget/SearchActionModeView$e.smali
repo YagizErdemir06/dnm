@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmiuix/view/a;
+.implements Lk/j0/a;
 
 
 # annotations
@@ -18,14 +18,15 @@
 
 
 # instance fields
-.field public final synthetic a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+.field public final synthetic c:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/appcompat/internal/app/widget/SearchActionModeView;)V
     .locals 0
 
-    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$e;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+    .line 1
+    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$e;->c:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -34,7 +35,7 @@
 
 
 # virtual methods
-.method public j(ZF)V
+.method public i(ZF)V
     .locals 0
 
     if-nez p1, :cond_0
@@ -43,8 +44,9 @@
 
     sub-float p2, p1, p2
 
+    .line 1
     :cond_0
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$e;->a:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/SearchActionModeView$e;->c:Lmiuix/appcompat/internal/app/widget/SearchActionModeView;
 
     invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/SearchActionModeView;->getSplitActionBarContainer()Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
 
@@ -52,6 +54,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result p1
@@ -66,13 +69,13 @@
     return-void
 .end method
 
-.method public k(Z)V
+.method public j(Z)V
     .locals 0
 
     return-void
 .end method
 
-.method public m(Z)V
+.method public l(Z)V
     .locals 0
 
     return-void

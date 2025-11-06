@@ -1,11 +1,11 @@
-.class final Lokio/internal/_FileSystemKt$collectRecursively$1;
-.super Lzm/d;
+.class public final Lokio/internal/_FileSystemKt$collectRecursively$1;
+.super Lh/x2/n/a/d;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lokio/internal/_FileSystemKt;->collectRecursively(Lun/o;Lokio/FileSystem;Lpm/k;Lokio/Path;ZZLwm/d;)Ljava/lang/Object;
+    value = Lokio/internal/_FileSystemKt;->collectRecursively(Lh/j3/o;Lokio/FileSystem;Lh/t2/k;Lokio/Path;ZZLh/x2/d;)Ljava/lang/Object;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -13,17 +13,23 @@
     name = null
 .end annotation
 
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
+    d1 = {}
+    d2 = {}
     k = 0x3
     mv = {
         0x1,
         0x5,
         0x1
     }
-    xi = 0x30
 .end annotation
 
-.annotation runtime Lzm/f;
+.annotation runtime Lh/x2/n/a/f;
     c = "okio.internal._FileSystemKt"
     f = "-FileSystem.kt"
     i = {
@@ -78,39 +84,39 @@
 
 
 # instance fields
-.field L$0:Ljava/lang/Object;
+.field public L$0:Ljava/lang/Object;
 
-.field L$1:Ljava/lang/Object;
+.field public L$1:Ljava/lang/Object;
 
-.field L$2:Ljava/lang/Object;
+.field public L$2:Ljava/lang/Object;
 
-.field L$3:Ljava/lang/Object;
+.field public L$3:Ljava/lang/Object;
 
-.field L$4:Ljava/lang/Object;
+.field public L$4:Ljava/lang/Object;
 
-.field Z$0:Z
+.field public Z$0:Z
 
-.field Z$1:Z
+.field public Z$1:Z
 
-.field label:I
+.field public label:I
 
-.field synthetic result:Ljava/lang/Object;
+.field public synthetic result:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lwm/d;)V
+.method public constructor <init>(Lh/x2/d;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lwm/d<",
+            "Lh/x2/d<",
             "-",
             "Lokio/internal/_FileSystemKt$collectRecursively$1;",
             ">;)V"
         }
     .end annotation
 
-    invoke-direct {p0, p1}, Lzm/d;-><init>(Lwm/d;)V
+    invoke-direct {p0, p1}, Lh/x2/n/a/d;-><init>(Lh/x2/d;)V
 
     return-void
 .end method
@@ -120,10 +126,10 @@
 .method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 7
     .param p1    # Ljava/lang/Object;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
     iput-object p1, p0, Lokio/internal/_FileSystemKt$collectRecursively$1;->result:Ljava/lang/Object;
@@ -150,7 +156,7 @@
 
     move-object v6, p0
 
-    invoke-static/range {v0 .. v6}, Lokio/internal/_FileSystemKt;->collectRecursively(Lun/o;Lokio/FileSystem;Lpm/k;Lokio/Path;ZZLwm/d;)Ljava/lang/Object;
+    invoke-static/range {v0 .. v6}, Lokio/internal/_FileSystemKt;->collectRecursively(Lh/j3/o;Lokio/FileSystem;Lh/t2/k;Lokio/Path;ZZLh/x2/d;)Ljava/lang/Object;
 
     move-result-object p0
 

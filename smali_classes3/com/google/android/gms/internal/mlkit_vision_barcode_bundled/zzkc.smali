@@ -18,6 +18,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzkc;
 
     invoke-direct {v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzkc;-><init>()V
@@ -26,6 +27,7 @@
 
     const-class v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzkc;
 
+    .line 2
     invoke-static {v1, v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;->zzU(Ljava/lang/Class;Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;)V
 
     return-void
@@ -34,6 +36,7 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdz;-><init>()V
 
     const/4 v0, 0x2
@@ -95,16 +98,19 @@
     :cond_0
     const/4 p1, 0x1
 
+    .line 1
     :goto_0
     iput-byte p1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzkc;->zze:B
 
     return-object v0
 
+    .line 2
     :cond_1
     sget-object p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzkc;->zzd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzkc;
 
     return-object p0
 
+    .line 3
     :cond_2
     new-instance p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzkb;
 
@@ -112,27 +118,33 @@
 
     return-object p0
 
+    .line 4
     :cond_3
     new-instance p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzkc;
 
+    .line 5
     invoke-direct {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzkc;-><init>()V
 
     return-object p0
 
+    .line 6
     :cond_4
     sget-object p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzkc;->zzd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzkc;
 
     const-string p1, "\u0003\u0000"
 
+    .line 7
     invoke-static {p0, p1, v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;->zzR(Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfo;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 
+    .line 8
     :cond_5
     iget-byte p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzkc;->zze:B
 
+    .line 9
     invoke-static {p0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object p0

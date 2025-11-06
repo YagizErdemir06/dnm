@@ -40,15 +40,16 @@
 
 
 # instance fields
-.field public final a:I
+.field private final f:I
 
-.field public final b:Landroid/support/v4/media/MediaDescriptionCompat;
+.field private final g:Landroid/support/v4/media/MediaDescriptionCompat;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem$a;
 
     invoke-direct {v0}, Landroid/support/v4/media/MediaBrowserCompat$MediaItem$a;-><init>()V
@@ -77,7 +78,7 @@
 
     move-result v0
 
-    iput v0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->a:I
+    iput v0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->f:I
 
     .line 9
     sget-object v0, Landroid/support/v4/media/MediaDescriptionCompat;->CREATOR:Landroid/os/Parcelable$Creator;
@@ -88,7 +89,7 @@
 
     check-cast p1, Landroid/support/v4/media/MediaDescriptionCompat;
 
-    iput-object p1, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->b:Landroid/support/v4/media/MediaDescriptionCompat;
+    iput-object p1, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->g:Landroid/support/v4/media/MediaDescriptionCompat;
 
     return-void
 .end method
@@ -116,7 +117,7 @@
     if-eqz p1, :cond_1
 
     .line 2
-    invoke-virtual {p1}, Landroid/support/v4/media/MediaDescriptionCompat;->h()Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/support/v4/media/MediaDescriptionCompat;->g()Ljava/lang/String;
 
     move-result-object v0
 
@@ -127,10 +128,10 @@
     if-nez v0, :cond_0
 
     .line 3
-    iput p2, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->a:I
+    iput p2, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->f:I
 
     .line 4
-    iput-object p1, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->b:Landroid/support/v4/media/MediaDescriptionCompat;
+    iput-object p1, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->g:Landroid/support/v4/media/MediaDescriptionCompat;
 
     return-void
 
@@ -155,7 +156,7 @@
     throw p0
 .end method
 
-.method public static b(Ljava/lang/Object;)Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
+.method public static a(Ljava/lang/Object;)Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -166,35 +167,50 @@
         }
     .end annotation
 
-    if-eqz p0, :cond_0
+    if-eqz p0, :cond_1
 
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x15
+
+    if-ge v0, v1, :cond_0
+
+    goto :goto_0
+
+    .line 2
+    :cond_0
     check-cast p0, Landroid/media/browse/MediaBrowser$MediaItem;
 
+    .line 3
     invoke-static {p0}, Landroid/support/v4/media/MediaBrowserCompat$a;->b(Landroid/media/browse/MediaBrowser$MediaItem;)I
 
     move-result v0
 
+    .line 4
     invoke-static {p0}, Landroid/support/v4/media/MediaBrowserCompat$a;->a(Landroid/media/browse/MediaBrowser$MediaItem;)Landroid/media/MediaDescription;
 
     move-result-object p0
 
-    invoke-static {p0}, Landroid/support/v4/media/MediaDescriptionCompat;->b(Ljava/lang/Object;)Landroid/support/v4/media/MediaDescriptionCompat;
+    invoke-static {p0}, Landroid/support/v4/media/MediaDescriptionCompat;->a(Ljava/lang/Object;)Landroid/support/v4/media/MediaDescriptionCompat;
 
     move-result-object p0
 
+    .line 5
     new-instance v1, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
 
     invoke-direct {v1, p0, v0}, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;-><init>(Landroid/support/v4/media/MediaDescriptionCompat;I)V
 
     return-object v1
 
-    :cond_0
+    :cond_1
+    :goto_0
     const/4 p0, 0x0
 
     return-object p0
 .end method
 
-.method public static c(Ljava/util/List;)Ljava/util/List;
+.method public static b(Ljava/util/List;)Ljava/util/List;
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -216,8 +232,19 @@
         }
     .end annotation
 
-    if-eqz p0, :cond_1
+    if-eqz p0, :cond_2
 
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x15
+
+    if-ge v0, v1, :cond_0
+
+    goto :goto_1
+
+    .line 2
+    :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-interface {p0}, Ljava/util/List;->size()I
@@ -226,6 +253,7 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
+    .line 3
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -235,13 +263,14 @@
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-static {v1}, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->b(Ljava/lang/Object;)Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
+    .line 4
+    invoke-static {v1}, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->a(Ljava/lang/Object;)Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
 
     move-result-object v1
 
@@ -249,10 +278,11 @@
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     return-object v0
 
-    :cond_1
+    :cond_2
+    :goto_1
     const/4 p0, 0x0
 
     return-object p0
@@ -260,14 +290,24 @@
 
 
 # virtual methods
-.method public d()Landroid/support/v4/media/MediaDescriptionCompat;
+.method public c()Landroid/support/v4/media/MediaDescriptionCompat;
     .locals 0
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
-    iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->b:Landroid/support/v4/media/MediaDescriptionCompat;
+    .line 1
+    iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->g:Landroid/support/v4/media/MediaDescriptionCompat;
 
     return-object p0
+.end method
+
+.method public d()I
+    .locals 0
+
+    .line 1
+    iget p0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->f:I
+
+    return p0
 .end method
 
 .method public describeContents()I
@@ -278,32 +318,26 @@
     return p0
 .end method
 
-.method public e()I
-    .locals 0
-
-    iget p0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->a:I
-
-    return p0
-.end method
-
-.method public f()Ljava/lang/String;
+.method public e()Ljava/lang/String;
     .locals 0
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->b:Landroid/support/v4/media/MediaDescriptionCompat;
+    .line 1
+    iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->g:Landroid/support/v4/media/MediaDescriptionCompat;
 
-    invoke-virtual {p0}, Landroid/support/v4/media/MediaDescriptionCompat;->h()Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/support/v4/media/MediaDescriptionCompat;->g()Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public g()Z
+.method public f()Z
     .locals 1
 
-    iget p0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->a:I
+    .line 1
+    iget p0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->f:I
 
     const/4 v0, 0x1
 
@@ -320,10 +354,11 @@
     return v0
 .end method
 
-.method public h()Z
+.method public g()Z
     .locals 0
 
-    iget p0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->a:I
+    .line 1
+    iget p0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->f:I
 
     and-int/lit8 p0, p0, 0x2
 
@@ -345,6 +380,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "MediaItem{"
@@ -353,24 +389,28 @@
 
     const-string v1, "mFlags="
 
+    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->a:I
+    iget v1, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->f:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v1, ", mDescription="
 
+    .line 3
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->b:Landroid/support/v4/media/MediaDescriptionCompat;
+    iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->g:Landroid/support/v4/media/MediaDescriptionCompat;
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const/16 p0, 0x7d
 
+    .line 4
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 5
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -391,11 +431,13 @@
         }
     .end annotation
 
-    iget v0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->a:I
+    .line 1
+    iget v0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->f:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->b:Landroid/support/v4/media/MediaDescriptionCompat;
+    .line 2
+    iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->g:Landroid/support/v4/media/MediaDescriptionCompat;
 
     invoke-virtual {p0, p1, p2}, Landroid/support/v4/media/MediaDescriptionCompat;->writeToParcel(Landroid/os/Parcel;I)V
 

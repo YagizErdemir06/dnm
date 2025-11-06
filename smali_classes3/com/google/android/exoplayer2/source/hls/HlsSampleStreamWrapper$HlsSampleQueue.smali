@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/hls/HlsSampleStreamWrapper$HlsSampleQueue;
+.class public final Lcom/google/android/exoplayer2/source/hls/HlsSampleStreamWrapper$HlsSampleQueue;
 .super Lcom/google/android/exoplayer2/source/SampleQueue;
 .source "SourceFile"
 
@@ -81,6 +81,7 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/metadata/Metadata;->length()I
 
@@ -95,19 +96,23 @@
 
     if-ge v2, v0, :cond_2
 
+    .line 2
     invoke-virtual {p1, v2}, Lcom/google/android/exoplayer2/metadata/Metadata;->get(I)Lcom/google/android/exoplayer2/metadata/Metadata$Entry;
 
     move-result-object v4
 
+    .line 3
     instance-of v5, v4, Lcom/google/android/exoplayer2/metadata/id3/PrivFrame;
 
     if-eqz v5, :cond_1
 
+    .line 4
     check-cast v4, Lcom/google/android/exoplayer2/metadata/id3/PrivFrame;
 
-    const-string v5, "com.apple.streaming.transportStreamTimestamp"
-
+    .line 5
     iget-object v4, v4, Lcom/google/android/exoplayer2/metadata/id3/PrivFrame;->owner:Ljava/lang/String;
+
+    const-string v5, "com.apple.streaming.transportStreamTimestamp"
 
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -140,6 +145,7 @@
     :cond_4
     add-int/lit8 p0, v0, -0x1
 
+    .line 6
     new-array p0, p0, [Lcom/google/android/exoplayer2/metadata/Metadata$Entry;
 
     :goto_2
@@ -156,6 +162,7 @@
     :cond_5
     add-int/lit8 v3, v1, -0x1
 
+    .line 7
     :goto_3
     invoke-virtual {p1, v1}, Lcom/google/android/exoplayer2/metadata/Metadata;->get(I)Lcom/google/android/exoplayer2/metadata/Metadata$Entry;
 
@@ -168,6 +175,7 @@
 
     goto :goto_2
 
+    .line 8
     :cond_7
     new-instance p1, Lcom/google/android/exoplayer2/metadata/Metadata;
 
@@ -181,6 +189,7 @@
 .method public getAdjustedUpstreamFormat(Lcom/google/android/exoplayer2/Format;)Lcom/google/android/exoplayer2/Format;
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/hls/HlsSampleStreamWrapper$HlsSampleQueue;->drmInitData:Lcom/google/android/exoplayer2/drm/DrmInitData;
 
     if-eqz v0, :cond_0
@@ -193,6 +202,7 @@
     :goto_0
     if-eqz v0, :cond_1
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/hls/HlsSampleStreamWrapper$HlsSampleQueue;->overridingDrmInitData:Ljava/util/Map;
 
     iget-object v2, v0, Lcom/google/android/exoplayer2/drm/DrmInitData;->schemeType:Ljava/lang/String;
@@ -207,6 +217,7 @@
 
     move-object v0, v1
 
+    .line 3
     :cond_1
     iget-object v1, p1, Lcom/google/android/exoplayer2/Format;->metadata:Lcom/google/android/exoplayer2/metadata/Metadata;
 
@@ -214,6 +225,7 @@
 
     move-result-object v1
 
+    .line 4
     iget-object v2, p1, Lcom/google/android/exoplayer2/Format;->drmInitData:Lcom/google/android/exoplayer2/drm/DrmInitData;
 
     if-ne v0, v2, :cond_2
@@ -222,6 +234,7 @@
 
     if-eq v1, v2, :cond_3
 
+    .line 5
     :cond_2
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/Format;->buildUpon()Lcom/google/android/exoplayer2/Format$Builder;
 
@@ -239,6 +252,7 @@
 
     move-result-object p1
 
+    .line 6
     :cond_3
     invoke-super {p0, p1}, Lcom/google/android/exoplayer2/source/SampleQueue;->getAdjustedUpstreamFormat(Lcom/google/android/exoplayer2/Format;)Lcom/google/android/exoplayer2/Format;
 
@@ -254,6 +268,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super/range {p0 .. p6}, Lcom/google/android/exoplayer2/source/SampleQueue;->sampleMetadata(JIIILcom/google/android/exoplayer2/extractor/TrackOutput$CryptoData;)V
 
     return-void
@@ -266,8 +281,10 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/hls/HlsSampleStreamWrapper$HlsSampleQueue;->drmInitData:Lcom/google/android/exoplayer2/drm/DrmInitData;
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/source/SampleQueue;->invalidateUpstreamFormatAdjustment()V
 
     return-void
@@ -276,6 +293,7 @@
 .method public setSourceChunk(Lcom/google/android/exoplayer2/source/hls/HlsMediaChunk;)V
     .locals 0
 
+    .line 1
     iget p1, p1, Lcom/google/android/exoplayer2/source/hls/HlsMediaChunk;->uid:I
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/source/SampleQueue;->sourceId(I)V

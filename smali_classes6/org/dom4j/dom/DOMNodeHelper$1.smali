@@ -1,4 +1,4 @@
-.class Lorg/dom4j/dom/DOMNodeHelper$1;
+.class public Lorg/dom4j/dom/DOMNodeHelper$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -14,6 +14,7 @@
 .method public constructor <init>(Ljava/util/List;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/dom4j/dom/DOMNodeHelper$1;->val$list:Ljava/util/List;
@@ -26,6 +27,7 @@
 .method public getLength()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/dom/DOMNodeHelper$1;->val$list:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->size()I
@@ -38,6 +40,7 @@
 .method public item(I)Lorg/w3c/dom/Node;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/dom/DOMNodeHelper$1;->getLength()I
 
     move-result v0
@@ -48,6 +51,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lorg/dom4j/dom/DOMNodeHelper$1;->val$list:Ljava/util/List;
 

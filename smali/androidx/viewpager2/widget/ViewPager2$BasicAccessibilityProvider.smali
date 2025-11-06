@@ -1,4 +1,4 @@
-.class Landroidx/viewpager2/widget/ViewPager2$BasicAccessibilityProvider;
+.class public Landroidx/viewpager2/widget/ViewPager2$BasicAccessibilityProvider;
 .super Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/viewpager2/widget/ViewPager2;
+.field public final synthetic this$0:Landroidx/viewpager2/widget/ViewPager2;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/viewpager2/widget/ViewPager2;)V
     .locals 1
 
+    .line 1
     iput-object p1, p0, Landroidx/viewpager2/widget/ViewPager2$BasicAccessibilityProvider;->this$0:Landroidx/viewpager2/widget/ViewPager2;
 
     const/4 v0, 0x0
@@ -44,9 +45,11 @@
 
     if-ne p1, v0, :cond_1
 
+    .line 1
     :cond_0
     iget-object p0, p0, Landroidx/viewpager2/widget/ViewPager2$BasicAccessibilityProvider;->this$0:Landroidx/viewpager2/widget/ViewPager2;
 
+    .line 2
     invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->isUserInputEnabled()Z
 
     move-result p0
@@ -79,6 +82,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Landroidx/viewpager2/widget/ViewPager2$BasicAccessibilityProvider;->this$0:Landroidx/viewpager2/widget/ViewPager2;
 
     invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->isUserInputEnabled()Z
@@ -87,16 +91,19 @@
 
     if-nez p0, :cond_0
 
+    .line 2
     sget-object p0, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->ACTION_SCROLL_BACKWARD:Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
     invoke-virtual {p1, p0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->removeAction(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;)Z
 
+    .line 3
     sget-object p0, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;->ACTION_SCROLL_FORWARD:Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;
 
     invoke-virtual {p1, p0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->removeAction(Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityActionCompat;)Z
 
     const/4 p0, 0x0
 
+    .line 4
     invoke-virtual {p1, p0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->setScrollable(Z)V
 
     :cond_0
@@ -106,6 +113,7 @@
 .method public onLmPerformAccessibilityAction(I)Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/viewpager2/widget/ViewPager2$BasicAccessibilityProvider;->handlesLmPerformAccessibilityAction(I)Z
 
     move-result p0
@@ -116,6 +124,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -127,6 +136,7 @@
 .method public onRvGetAccessibilityClassName()Ljava/lang/CharSequence;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2$BasicAccessibilityProvider;->handlesRvGetAccessibilityClassName()Z
 
     move-result p0
@@ -137,6 +147,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 

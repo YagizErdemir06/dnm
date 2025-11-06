@@ -1,4 +1,4 @@
-.class Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase$2;
+.class public Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field final synthetic this$1:Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase;
+.field public final synthetic this$1:Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase;
 
-.field final synthetic val$options:Landroid/os/Bundle;
+.field public final synthetic val$options:Landroid/os/Bundle;
 
-.field final synthetic val$parentId:Ljava/lang/String;
+.field public final synthetic val$parentId:Ljava/lang/String;
 
 
 # direct methods
@@ -41,6 +41,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase$2;->this$1:Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase;
 
     iput-object p2, p0, Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase$2;->val$parentId:Ljava/lang/String;
@@ -57,6 +58,7 @@
 .method public run()V
     .locals 5
 
+    .line 1
     iget-object v0, p0, Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase$2;->this$1:Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase;
 
     iget-object v0, v0, Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase;->this$0:Landroidx/media/MediaBrowserServiceCompat;
@@ -84,6 +86,7 @@
 
     check-cast v1, Landroid/os/IBinder;
 
+    .line 2
     iget-object v2, p0, Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase$2;->this$1:Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase;
 
     iget-object v2, v2, Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase;->this$0:Landroidx/media/MediaBrowserServiceCompat;
@@ -96,6 +99,7 @@
 
     check-cast v1, Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;
 
+    .line 3
     iget-object v2, p0, Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase$2;->this$1:Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase;
 
     iget-object v3, p0, Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase$2;->val$parentId:Ljava/lang/String;

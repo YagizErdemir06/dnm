@@ -23,17 +23,18 @@
 
 
 # static fields
-.field public static final enum a:Lcom/xiaomi/camera/videocast/VideoCastService$f;
+.field public static final enum c:Lcom/xiaomi/camera/videocast/VideoCastService$f;
 
-.field public static final enum b:Lcom/xiaomi/camera/videocast/VideoCastService$f;
+.field public static final enum d:Lcom/xiaomi/camera/videocast/VideoCastService$f;
 
-.field public static final synthetic c:[Lcom/xiaomi/camera/videocast/VideoCastService$f;
+.field private static final synthetic f:[Lcom/xiaomi/camera/videocast/VideoCastService$f;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 5
 
+    .line 1
     new-instance v0, Lcom/xiaomi/camera/videocast/VideoCastService$f;
 
     const-string v1, "IDLE"
@@ -42,8 +43,9 @@
 
     invoke-direct {v0, v1, v2}, Lcom/xiaomi/camera/videocast/VideoCastService$f;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/xiaomi/camera/videocast/VideoCastService$f;->a:Lcom/xiaomi/camera/videocast/VideoCastService$f;
+    sput-object v0, Lcom/xiaomi/camera/videocast/VideoCastService$f;->c:Lcom/xiaomi/camera/videocast/VideoCastService$f;
 
+    .line 2
     new-instance v1, Lcom/xiaomi/camera/videocast/VideoCastService$f;
 
     const-string v3, "ACTIVE"
@@ -52,7 +54,7 @@
 
     invoke-direct {v1, v3, v4}, Lcom/xiaomi/camera/videocast/VideoCastService$f;-><init>(Ljava/lang/String;I)V
 
-    sput-object v1, Lcom/xiaomi/camera/videocast/VideoCastService$f;->b:Lcom/xiaomi/camera/videocast/VideoCastService$f;
+    sput-object v1, Lcom/xiaomi/camera/videocast/VideoCastService$f;->d:Lcom/xiaomi/camera/videocast/VideoCastService$f;
 
     const/4 v3, 0x2
 
@@ -62,19 +64,26 @@
 
     aput-object v1, v3, v4
 
-    sput-object v3, Lcom/xiaomi/camera/videocast/VideoCastService$f;->c:[Lcom/xiaomi/camera/videocast/VideoCastService$f;
+    .line 3
+    sput-object v3, Lcom/xiaomi/camera/videocast/VideoCastService$f;->f:[Lcom/xiaomi/camera/videocast/VideoCastService$f;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;I)V
+.method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "$enum$name",
+            "$enum$ordinal"
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -82,7 +91,16 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/camera/videocast/VideoCastService$f;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8000
+        }
+        names = {
+            "name"
+        }
+    .end annotation
 
+    .line 1
     const-class v0, Lcom/xiaomi/camera/videocast/VideoCastService$f;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -97,7 +115,8 @@
 .method public static values()[Lcom/xiaomi/camera/videocast/VideoCastService$f;
     .locals 1
 
-    sget-object v0, Lcom/xiaomi/camera/videocast/VideoCastService$f;->c:[Lcom/xiaomi/camera/videocast/VideoCastService$f;
+    .line 1
+    sget-object v0, Lcom/xiaomi/camera/videocast/VideoCastService$f;->f:[Lcom/xiaomi/camera/videocast/VideoCastService$f;
 
     invoke-virtual {v0}, [Lcom/xiaomi/camera/videocast/VideoCastService$f;->clone()Ljava/lang/Object;
 

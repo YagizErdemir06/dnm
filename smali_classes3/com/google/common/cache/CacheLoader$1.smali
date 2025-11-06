@@ -1,4 +1,4 @@
-.class Lcom/google/common/cache/CacheLoader$1;
+.class public Lcom/google/common/cache/CacheLoader$1;
 .super Lcom/google/common/cache/CacheLoader;
 .source "SourceFile"
 
@@ -22,15 +22,16 @@
 
 
 # instance fields
-.field final synthetic val$executor:Ljava/util/concurrent/Executor;
+.field public final synthetic val$executor:Ljava/util/concurrent/Executor;
 
-.field final synthetic val$loader:Lcom/google/common/cache/CacheLoader;
+.field public final synthetic val$loader:Lcom/google/common/cache/CacheLoader;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/cache/CacheLoader;Ljava/util/concurrent/Executor;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/cache/CacheLoader$1;->val$loader:Lcom/google/common/cache/CacheLoader;
 
     iput-object p2, p0, Lcom/google/common/cache/CacheLoader$1;->val$executor:Ljava/util/concurrent/Executor;
@@ -56,6 +57,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/cache/CacheLoader$1;->val$loader:Lcom/google/common/cache/CacheLoader;
 
     invoke-virtual {p0, p1}, Lcom/google/common/cache/CacheLoader;->load(Ljava/lang/Object;)Ljava/lang/Object;
@@ -83,6 +85,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/cache/CacheLoader$1;->val$loader:Lcom/google/common/cache/CacheLoader;
 
     invoke-virtual {p0, p1}, Lcom/google/common/cache/CacheLoader;->loadAll(Ljava/lang/Iterable;)Ljava/util/Map;
@@ -108,14 +111,17 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/cache/CacheLoader$1$1;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/google/common/cache/CacheLoader$1$1;-><init>(Lcom/google/common/cache/CacheLoader$1;Ljava/lang/Object;Ljava/lang/Object;)V
 
+    .line 2
     invoke-static {v0}, Lcom/google/common/util/concurrent/ListenableFutureTask;->create(Ljava/util/concurrent/Callable;)Lcom/google/common/util/concurrent/ListenableFutureTask;
 
     move-result-object p1
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/cache/CacheLoader$1;->val$executor:Ljava/util/concurrent/Executor;
 
     invoke-interface {p0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V

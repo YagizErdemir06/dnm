@@ -18,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroid/app/job/JobService;-><init>()V
 
     return-void
@@ -28,10 +29,12 @@
 .method public onStartJob(Landroid/app/job/JobParameters;)Z
     .locals 3
 
+    .line 1
     invoke-virtual {p1}, Landroid/app/job/JobParameters;->getExtras()Landroid/os/PersistableBundle;
 
     move-result-object v0
 
+    .line 2
     new-instance v1, Lcom/google/android/exoplayer2/scheduler/Requirements;
 
     const-string v2, "requirements"
@@ -42,6 +45,7 @@
 
     invoke-direct {v1, v2}, Lcom/google/android/exoplayer2/scheduler/Requirements;-><init>(I)V
 
+    .line 3
     invoke-virtual {v1, p0}, Lcom/google/android/exoplayer2/scheduler/Requirements;->getNotMetRequirements(Landroid/content/Context;)I
 
     move-result v1
@@ -50,6 +54,7 @@
 
     const-string p1, "service_action"
 
+    .line 4
     invoke-virtual {v0, p1}, Landroid/os/PersistableBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -62,6 +67,7 @@
 
     const-string v1, "service_package"
 
+    .line 5
     invoke-virtual {v0, v1}, Landroid/os/PersistableBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -72,6 +78,7 @@
 
     check-cast v0, Ljava/lang/String;
 
+    .line 6
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
@@ -80,10 +87,12 @@
 
     move-result-object p1
 
+    .line 7
     invoke-static {p0, p1}, Lcom/google/android/exoplayer2/util/Util;->startForegroundService(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;
 
     goto :goto_0
 
+    .line 8
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -105,6 +114,7 @@
 
     const/4 v0, 0x1
 
+    .line 9
     invoke-virtual {p0, p1, v0}, Landroid/app/job/JobService;->jobFinished(Landroid/app/job/JobParameters;Z)V
 
     :goto_0

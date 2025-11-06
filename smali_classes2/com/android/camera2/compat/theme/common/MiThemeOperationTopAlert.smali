@@ -10,6 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,6 +20,24 @@
 # virtual methods
 .method public drawChildRoundRect(Landroid/graphics/Canvas;Landroid/graphics/RectF;FFLandroid/graphics/Paint;Landroid/content/Context;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "canvas",
+            "rectF",
+            "rx",
+            "ry",
+            "paint",
+            "context"
+        }
+    .end annotation
 
     const/high16 p0, 0x40000000    # 2.0f
 
@@ -26,6 +45,7 @@
 
     div-float/2addr p4, p0
 
+    .line 1
     invoke-virtual {p1, p2, p3, p4, p5}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
     return-void
@@ -33,6 +53,24 @@
 
 .method public drawMainRoundRect(Landroid/graphics/Canvas;Landroid/graphics/RectF;FFLandroid/graphics/Paint;Landroid/content/Context;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "canvas",
+            "rectF",
+            "rx",
+            "ry",
+            "paint",
+            "context"
+        }
+    .end annotation
 
     const/high16 p0, 0x40000000    # 2.0f
 
@@ -40,6 +78,7 @@
 
     div-float/2addr p4, p0
 
+    .line 1
     invoke-virtual {p1, p2, p3, p4, p5}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
     return-void
@@ -55,12 +94,28 @@
 
 .method public getFastMotionTopAlertOtherSpace(I)I
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "others"
+        }
+    .end annotation
 
     return p1
 .end method
 
 .method public getFastMotionTopAlertSpace(Landroid/content/Context;)I
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     const/4 p0, 0x0
 
@@ -69,6 +124,16 @@
 
 .method public getFastmotionTopAlert(Landroid/content/Context;I)F
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "textSize"
+        }
+    .end annotation
 
     int-to-float p0, p2
 
@@ -77,12 +142,21 @@
 
 .method public getIndicatorColor(Landroid/view/View;)I
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "view"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const p1, 0x7f060922
+    const p1, 0x7f0604b8
 
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -102,13 +176,14 @@
 .method public getRecordingTimeDenominatorColor()I
     .locals 1
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    .line 1
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object p0
 
-    const v0, 0x7f06086d
+    const v0, 0x7f060405
 
-    invoke-virtual {p0, v0}, Lf2/e;->b(I)I
+    invoke-virtual {p0, v0}, Ld/d/a/k6/f;->b(I)I
 
     move-result p0
 
@@ -117,12 +192,30 @@
 
 .method public getTopAlertBgRes(I)I
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "res"
+        }
+    .end annotation
 
     return p1
 .end method
 
 .method public getTopAlertBgRes(Landroid/content/Context;I)I
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "res"
+        }
+    .end annotation
 
     return p2
 .end method
@@ -130,9 +223,10 @@
 .method public getTopAlertInterpolator()Landroid/animation/TimeInterpolator;
     .locals 0
 
-    new-instance p0, Lps/m;
+    .line 1
+    new-instance p0, Lk/j0/k/l;
 
-    invoke-direct {p0}, Lps/m;-><init>()V
+    invoke-direct {p0}, Lk/j0/k/l;-><init>()V
 
     return-object p0
 .end method
@@ -140,13 +234,14 @@
 .method public getTopAlertRecordingInfinityDenominatorColor()I
     .locals 1
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    .line 1
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object p0
 
-    const v0, 0x7f0608c2
+    const v0, 0x7f06045a
 
-    invoke-virtual {p0, v0}, Lf2/e;->b(I)I
+    invoke-virtual {p0, v0}, Ld/d/a/k6/f;->b(I)I
 
     move-result p0
 
@@ -155,12 +250,30 @@
 
 .method public getTopAlertRes(I)I
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "res"
+        }
+    .end annotation
 
     return p1
 .end method
 
 .method public getTopAlertRes(Landroid/content/Context;I)I
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "res"
+        }
+    .end annotation
 
     return p2
 .end method
@@ -173,6 +286,18 @@
         }
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "value"
+        }
+    .end annotation
+
+    .line 1
     invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
@@ -312,24 +437,24 @@
     const/4 p1, 0x0
 
     :goto_0
-    const p0, 0x7f080495
+    const p0, 0x7f08049a
 
     packed-switch p1, :pswitch_data_0
 
     goto :goto_1
 
     :pswitch_0
-    const p0, 0x7f08049a
+    const p0, 0x7f08049f
 
     goto :goto_1
 
     :pswitch_1
-    const p0, 0x7f08059d
+    const p0, 0x7f080599
 
     goto :goto_1
 
     :pswitch_2
-    const p0, 0x7f080595
+    const p0, 0x7f080591
 
     :goto_1
     :pswitch_3
@@ -372,15 +497,41 @@
 
 .method public setChildMargin(Landroid/widget/LinearLayout$LayoutParams;III)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "layoutParams",
+            "margin",
+            "count",
+            "index"
+        }
+    .end annotation
 
-    invoke-virtual {p1, p2, p2, p2, p2}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
+    .line 1
+    invoke-virtual {p1, p2, p2, p2, p2}, Landroid/widget/LinearLayout$LayoutParams;->setMargins(IIII)V
 
     return-void
 .end method
 
 .method public setColorAndRefresh(Lcom/android/camera/ui/ColorImageView;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "colorImageView",
+            "color"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p1, p2}, Lcom/android/camera/ui/ColorImageView;->setColorAndRefresh(I)V
 
     return-void
@@ -388,13 +539,30 @@
 
 .method public setPaintAlpha(Landroid/graphics/Paint;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "paint"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public setPaintStyle(Landroid/graphics/Paint;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "paint"
+        }
+    .end annotation
 
+    .line 1
     sget-object p0, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {p1, p0}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
@@ -404,12 +572,30 @@
 
 .method public setTextShadow(Landroid/widget/TextView;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "textView",
+            "radius"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public setTopAlertTextSize(Landroid/widget/TextView;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "tv"
+        }
+    .end annotation
 
     return-void
 .end method

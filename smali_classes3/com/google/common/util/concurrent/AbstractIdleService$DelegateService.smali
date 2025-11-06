@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/AbstractIdleService$DelegateService;
+.class public final Lcom/google/common/util/concurrent/AbstractIdleService$DelegateService;
 .super Lcom/google/common/util/concurrent/AbstractService;
 .source "SourceFile"
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/util/concurrent/AbstractIdleService;
+.field public final synthetic this$0:Lcom/google/common/util/concurrent/AbstractIdleService;
 
 
 # direct methods
@@ -44,6 +44,7 @@
 .method public final doStart()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/util/concurrent/AbstractIdleService$DelegateService;->this$0:Lcom/google/common/util/concurrent/AbstractIdleService;
 
     invoke-virtual {v0}, Lcom/google/common/util/concurrent/AbstractIdleService;->executor()Ljava/util/concurrent/Executor;
@@ -64,6 +65,7 @@
 
     invoke-direct {v1, p0}, Lcom/google/common/util/concurrent/AbstractIdleService$DelegateService$1;-><init>(Lcom/google/common/util/concurrent/AbstractIdleService$DelegateService;)V
 
+    .line 2
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-void
@@ -72,6 +74,7 @@
 .method public final doStop()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/util/concurrent/AbstractIdleService$DelegateService;->this$0:Lcom/google/common/util/concurrent/AbstractIdleService;
 
     invoke-virtual {v0}, Lcom/google/common/util/concurrent/AbstractIdleService;->executor()Ljava/util/concurrent/Executor;
@@ -92,6 +95,7 @@
 
     invoke-direct {v1, p0}, Lcom/google/common/util/concurrent/AbstractIdleService$DelegateService$2;-><init>(Lcom/google/common/util/concurrent/AbstractIdleService$DelegateService;)V
 
+    .line 2
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-void
@@ -100,6 +104,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/AbstractIdleService$DelegateService;->this$0:Lcom/google/common/util/concurrent/AbstractIdleService;
 
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/AbstractIdleService;->toString()Ljava/lang/String;

@@ -1,4 +1,4 @@
-.class interface abstract annotation Lcom/google/common/collect/GwtTransient;
+.class public interface abstract annotation Lcom/google/common/collect/GwtTransient;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

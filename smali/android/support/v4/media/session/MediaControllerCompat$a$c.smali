@@ -1,5 +1,5 @@
 .class public Landroid/support/v4/media/session/MediaControllerCompat$a$c;
-.super Landroid/support/v4/media/session/a$b;
+.super Lb/b/a/b/a/a$b;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public final r:Ljava/lang/ref/WeakReference;
+.field private final r:Ljava/lang/ref/WeakReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference<",
@@ -38,8 +38,10 @@
         }
     .end annotation
 
-    invoke-direct {p0}, Landroid/support/v4/media/session/a$b;-><init>()V
+    .line 1
+    invoke-direct {p0}, Lb/b/a/b/a/a$b;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -51,7 +53,7 @@
 
 
 # virtual methods
-.method public A(Landroid/support/v4/media/MediaMetadataCompat;)V
+.method public G(Landroid/support/v4/media/MediaMetadataCompat;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -68,9 +70,10 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->r:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -82,13 +85,14 @@
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-virtual {p0, v0, p1, v1}, Landroid/support/v4/media/session/MediaControllerCompat$a;->n(ILjava/lang/Object;Landroid/os/Bundle;)V
 
     :cond_0
     return-void
 .end method
 
-.method public B(I)V
+.method public H(I)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -105,9 +109,10 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->r:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -115,21 +120,23 @@
 
     if-eqz p0, :cond_0
 
+    const/16 v0, 0xc
+
+    .line 2
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    const/16 v1, 0xc
-
-    invoke-virtual {p0, v1, p1, v0}, Landroid/support/v4/media/session/MediaControllerCompat$a;->n(ILjava/lang/Object;Landroid/os/Bundle;)V
+    .line 3
+    invoke-virtual {p0, v0, p1, v1}, Landroid/support/v4/media/session/MediaControllerCompat$a;->n(ILjava/lang/Object;Landroid/os/Bundle;)V
 
     :cond_0
     return-void
 .end method
 
-.method public D(Landroid/support/v4/media/session/ParcelableVolumeInfo;)V
+.method public J(Landroid/support/v4/media/session/ParcelableVolumeInfo;)V
     .locals 8
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -146,9 +153,10 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->r:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -160,17 +168,18 @@
 
     if-eqz p1, :cond_0
 
+    .line 2
     new-instance v7, Landroid/support/v4/media/session/MediaControllerCompat$e;
 
-    iget v2, p1, Landroid/support/v4/media/session/ParcelableVolumeInfo;->a:I
+    iget v2, p1, Landroid/support/v4/media/session/ParcelableVolumeInfo;->c:I
 
-    iget v3, p1, Landroid/support/v4/media/session/ParcelableVolumeInfo;->b:I
+    iget v3, p1, Landroid/support/v4/media/session/ParcelableVolumeInfo;->d:I
 
-    iget v4, p1, Landroid/support/v4/media/session/ParcelableVolumeInfo;->c:I
+    iget v4, p1, Landroid/support/v4/media/session/ParcelableVolumeInfo;->f:I
 
-    iget v5, p1, Landroid/support/v4/media/session/ParcelableVolumeInfo;->d:I
+    iget v5, p1, Landroid/support/v4/media/session/ParcelableVolumeInfo;->g:I
 
-    iget v6, p1, Landroid/support/v4/media/session/ParcelableVolumeInfo;->e:I
+    iget v6, p1, Landroid/support/v4/media/session/ParcelableVolumeInfo;->j:I
 
     move-object v1, v7
 
@@ -184,13 +193,14 @@
     :goto_0
     const/4 p1, 0x4
 
+    .line 3
     invoke-virtual {p0, p1, v7, v0}, Landroid/support/v4/media/session/MediaControllerCompat$a;->n(ILjava/lang/Object;Landroid/os/Bundle;)V
 
     :cond_1
     return-void
 .end method
 
-.method public G(Landroid/os/Bundle;)V
+.method public M(Landroid/os/Bundle;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -207,9 +217,10 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->r:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -221,13 +232,14 @@
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-virtual {p0, v0, p1, v1}, Landroid/support/v4/media/session/MediaControllerCompat$a;->n(ILjava/lang/Object;Landroid/os/Bundle;)V
 
     :cond_0
     return-void
 .end method
 
-.method public I(Landroid/support/v4/media/session/PlaybackStateCompat;)V
+.method public O(Landroid/support/v4/media/session/PlaybackStateCompat;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -244,9 +256,10 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->r:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -258,13 +271,14 @@
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-virtual {p0, v0, p1, v1}, Landroid/support/v4/media/session/MediaControllerCompat$a;->n(ILjava/lang/Object;Landroid/os/Bundle;)V
 
     :cond_0
     return-void
 .end method
 
-.method public M()V
+.method public T()V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -272,9 +286,10 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->r:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -286,13 +301,14 @@
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-virtual {p0, v0, v1, v1}, Landroid/support/v4/media/session/MediaControllerCompat$a;->n(ILjava/lang/Object;Landroid/os/Bundle;)V
 
     :cond_0
     return-void
 .end method
 
-.method public O(Ljava/util/List;)V
+.method public U(Ljava/util/List;)V
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -318,9 +334,10 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->r:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -332,13 +349,14 @@
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-virtual {p0, v0, p1, v1}, Landroid/support/v4/media/session/MediaControllerCompat$a;->n(ILjava/lang/Object;Landroid/os/Bundle;)V
 
     :cond_0
     return-void
 .end method
 
-.method public S()V
+.method public W()V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -346,9 +364,10 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->r:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -360,105 +379,8 @@
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-virtual {p0, v0, v1, v1}, Landroid/support/v4/media/session/MediaControllerCompat$a;->n(ILjava/lang/Object;Landroid/os/Bundle;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public k0(Z)V
-    .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "enabled"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->r:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/support/v4/media/session/MediaControllerCompat$a;
-
-    if-eqz p0, :cond_0
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    const/4 v0, 0x0
-
-    const/16 v1, 0xb
-
-    invoke-virtual {p0, v1, p1, v0}, Landroid/support/v4/media/session/MediaControllerCompat$a;->n(ILjava/lang/Object;Landroid/os/Bundle;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public l0(Z)V
-    .locals 0
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "enabled"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    return-void
-.end method
-
-.method public m0(Ljava/lang/CharSequence;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "title"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->r:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/support/v4/media/session/MediaControllerCompat$a;
-
-    if-eqz p0, :cond_0
-
-    const/4 v0, 0x6
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v0, p1, v1}, Landroid/support/v4/media/session/MediaControllerCompat$a;->n(ILjava/lang/Object;Landroid/os/Bundle;)V
 
     :cond_0
     return-void
@@ -483,9 +405,10 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->r:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -495,6 +418,7 @@
 
     const/4 v0, 0x1
 
+    .line 2
     invoke-virtual {p0, v0, p1, p2}, Landroid/support/v4/media/session/MediaControllerCompat$a;->n(ILjava/lang/Object;Landroid/os/Bundle;)V
 
     :cond_0
@@ -518,9 +442,10 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->r:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -528,15 +453,119 @@
 
     if-eqz p0, :cond_0
 
+    const/16 v0, 0x9
+
+    .line 2
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    const/16 v1, 0x9
+    invoke-virtual {p0, v0, p1, v1}, Landroid/support/v4/media/session/MediaControllerCompat$a;->n(ILjava/lang/Object;Landroid/os/Bundle;)V
 
-    invoke-virtual {p0, v1, p1, v0}, Landroid/support/v4/media/session/MediaControllerCompat$a;->n(ILjava/lang/Object;Landroid/os/Bundle;)V
+    :cond_0
+    return-void
+.end method
+
+.method public q0(Z)V
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "enabled"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->r:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/support/v4/media/session/MediaControllerCompat$a;
+
+    if-eqz p0, :cond_0
+
+    const/16 v0, 0xb
+
+    .line 2
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    const/4 v1, 0x0
+
+    .line 3
+    invoke-virtual {p0, v0, p1, v1}, Landroid/support/v4/media/session/MediaControllerCompat$a;->n(ILjava/lang/Object;Landroid/os/Bundle;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public r0(Z)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "enabled"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    return-void
+.end method
+
+.method public s0(Ljava/lang/CharSequence;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "title"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$a$c;->r:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/support/v4/media/session/MediaControllerCompat$a;
+
+    if-eqz p0, :cond_0
+
+    const/4 v0, 0x6
+
+    const/4 v1, 0x0
+
+    .line 2
+    invoke-virtual {p0, v0, p1, v1}, Landroid/support/v4/media/session/MediaControllerCompat$a;->n(ILjava/lang/Object;Landroid/os/Bundle;)V
 
     :cond_0
     return-void

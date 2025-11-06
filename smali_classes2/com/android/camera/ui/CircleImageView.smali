@@ -4,19 +4,19 @@
 
 
 # instance fields
-.field public a:Landroid/content/Context;
+.field private c:Landroid/content/Context;
 
-.field public b:Landroid/graphics/Paint;
+.field public d:Landroid/graphics/Paint;
 
-.field public c:Landroid/graphics/Paint;
+.field public f:Landroid/graphics/Paint;
 
-.field public d:Z
+.field public g:Z
 
-.field public e:I
+.field private j:I
 
-.field public f:I
+.field private m:I
 
-.field public g:I
+.field private n:I
 
 
 # direct methods
@@ -26,16 +26,30 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/camera/ui/CircleImageView;->d:Z
+    .line 2
+    iput-boolean v0, p0, Lcom/android/camera/ui/CircleImageView;->g:Z
 
-    iput-object p1, p0, Lcom/android/camera/ui/CircleImageView;->a:Landroid/content/Context;
+    .line 3
+    iput-object p1, p0, Lcom/android/camera/ui/CircleImageView;->c:Landroid/content/Context;
 
-    sget-object v1, Lcom/android/camera/n4$u;->CircleImageView:[I
+    .line 4
+    sget-object v1, Ld/d/a/k5$u;->CircleImageView:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -43,7 +57,8 @@
 
     const p2, 0x418d5c29    # 17.67f
 
-    invoke-static {p2}, Lcom/android/camera/a6;->e0(F)I
+    .line 5
+    invoke-static {p2}, Ld/d/a/z5;->W(F)I
 
     move-result p2
 
@@ -51,11 +66,12 @@
 
     move-result p2
 
-    iput p2, p0, Lcom/android/camera/ui/CircleImageView;->f:I
+    iput p2, p0, Lcom/android/camera/ui/CircleImageView;->m:I
 
     const p2, 0x41b2a3d7    # 22.33f
 
-    invoke-static {p2}, Lcom/android/camera/a6;->e0(F)I
+    .line 6
+    invoke-static {p2}, Ld/d/a/z5;->W(F)I
 
     move-result p2
 
@@ -65,43 +81,51 @@
 
     move-result p2
 
-    iput p2, p0, Lcom/android/camera/ui/CircleImageView;->g:I
+    iput p2, p0, Lcom/android/camera/ui/CircleImageView;->n:I
 
+    .line 7
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
+    .line 8
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/CircleImageView;->b:Landroid/graphics/Paint;
+    iput-object p1, p0, Lcom/android/camera/ui/CircleImageView;->d:Landroid/graphics/Paint;
 
+    .line 9
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/CircleImageView;->c:Landroid/graphics/Paint;
+    iput-object p1, p0, Lcom/android/camera/ui/CircleImageView;->f:Landroid/graphics/Paint;
 
-    iget-object p1, p0, Lcom/android/camera/ui/CircleImageView;->b:Landroid/graphics/Paint;
+    .line 10
+    iget-object p1, p0, Lcom/android/camera/ui/CircleImageView;->d:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/CircleImageView;->b:Landroid/graphics/Paint;
+    .line 11
+    iget-object p1, p0, Lcom/android/camera/ui/CircleImageView;->d:Landroid/graphics/Paint;
 
     sget-object p2, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/CircleImageView;->c:Landroid/graphics/Paint;
+    .line 12
+    iget-object p1, p0, Lcom/android/camera/ui/CircleImageView;->f:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/CircleImageView;->c:Landroid/graphics/Paint;
+    .line 13
+    iget-object p1, p0, Lcom/android/camera/ui/CircleImageView;->f:Landroid/graphics/Paint;
 
     const/high16 p2, 0x40c00000    # 6.0f
 
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    iget-object p0, p0, Lcom/android/camera/ui/CircleImageView;->c:Landroid/graphics/Paint;
+    .line 14
+    iget-object p0, p0, Lcom/android/camera/ui/CircleImageView;->f:Landroid/graphics/Paint;
 
     sget-object p1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
@@ -114,77 +138,119 @@
 # virtual methods
 .method public a(Z)V
     .locals 0
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isSupportMimoji2"
         type = 0x0
     .end annotation
 
-    iput-boolean p1, p0, Lcom/android/camera/ui/CircleImageView;->d:Z
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "showOutter"
+        }
+    .end annotation
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    .line 1
+    iput-boolean p1, p0, Lcom/android/camera/ui/CircleImageView;->g:Z
+
+    .line 2
+    invoke-virtual {p0}, Landroid/widget/ImageView;->invalidate()V
 
     return-void
 .end method
 
 .method public b(ZI)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "showOutter",
+            "colorRGBA"
+        }
+    .end annotation
 
-    iput-boolean p1, p0, Lcom/android/camera/ui/CircleImageView;->d:Z
+    .line 1
+    iput-boolean p1, p0, Lcom/android/camera/ui/CircleImageView;->g:Z
 
-    iput p2, p0, Lcom/android/camera/ui/CircleImageView;->e:I
+    .line 2
+    iput p2, p0, Lcom/android/camera/ui/CircleImageView;->j:I
 
-    iget-object p1, p0, Lcom/android/camera/ui/CircleImageView;->b:Landroid/graphics/Paint;
+    .line 3
+    iget-object p1, p0, Lcom/android/camera/ui/CircleImageView;->d:Landroid/graphics/Paint;
 
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setColor(I)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/CircleImageView;->c:Landroid/graphics/Paint;
+    .line 4
+    iget-object p1, p0, Lcom/android/camera/ui/CircleImageView;->f:Landroid/graphics/Paint;
 
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setColor(I)V
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    .line 5
+    invoke-virtual {p0}, Landroid/widget/ImageView;->invalidate()V
 
     return-void
 .end method
 
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "canvas"
+        }
+    .end annotation
 
-    invoke-super {p0, p1}, Landroid/view/View;->draw(Landroid/graphics/Canvas;)V
+    .line 1
+    invoke-super {p0, p1}, Landroid/widget/ImageView;->draw(Landroid/graphics/Canvas;)V
 
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+    .line 2
+    invoke-virtual {p0}, Landroid/widget/ImageView;->getWidth()I
 
     move-result v0
 
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+    .line 3
+    invoke-virtual {p0}, Landroid/widget/ImageView;->getHeight()I
 
     move-result v1
 
+    .line 4
     div-int/lit8 v0, v0, 0x2
 
+    .line 5
     div-int/lit8 v1, v1, 0x2
 
     int-to-float v0, v0
 
     int-to-float v1, v1
 
-    iget v2, p0, Lcom/android/camera/ui/CircleImageView;->f:I
+    .line 6
+    iget v2, p0, Lcom/android/camera/ui/CircleImageView;->m:I
 
     int-to-float v2, v2
 
-    iget-object v3, p0, Lcom/android/camera/ui/CircleImageView;->b:Landroid/graphics/Paint;
+    iget-object v3, p0, Lcom/android/camera/ui/CircleImageView;->d:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    iget-boolean v2, p0, Lcom/android/camera/ui/CircleImageView;->d:Z
+    .line 7
+    iget-boolean v2, p0, Lcom/android/camera/ui/CircleImageView;->g:Z
 
     if-eqz v2, :cond_0
 
-    iget v2, p0, Lcom/android/camera/ui/CircleImageView;->g:I
+    .line 8
+    iget v2, p0, Lcom/android/camera/ui/CircleImageView;->n:I
 
     int-to-float v2, v2
 
-    iget-object p0, p0, Lcom/android/camera/ui/CircleImageView;->c:Landroid/graphics/Paint;
+    iget-object p0, p0, Lcom/android/camera/ui/CircleImageView;->f:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1, v2, p0}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
@@ -194,7 +260,18 @@
 
 .method public onMeasure(II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "widthMeasureSpec",
+            "heightMeasureSpec"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroid/widget/ImageView;->onMeasure(II)V
 
     return-void

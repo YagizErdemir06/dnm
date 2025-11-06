@@ -37,9 +37,8 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/google/android/exoplayer2/i2;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/i2;-><init>()V
+    .line 1
+    sget-object v0, Ld/j/a/b/a2;->a:Ld/j/a/b/a2;
 
     sput-object v0, Lcom/google/android/exoplayer2/StarRating;->CREATOR:Lcom/google/android/exoplayer2/Bundleable$Creator;
 
@@ -165,6 +164,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {v0}, Lcom/google/android/exoplayer2/StarRating;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -183,9 +183,11 @@
 
     move v0, v2
 
+    .line 2
     :cond_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 3
     invoke-static {v2}, Lcom/google/android/exoplayer2/StarRating;->keyForField(I)Ljava/lang/String;
 
     move-result-object v0
@@ -196,6 +198,7 @@
 
     move-result v0
 
+    .line 4
     invoke-static {v3}, Lcom/google/android/exoplayer2/StarRating;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -210,12 +213,14 @@
 
     if-nez v1, :cond_1
 
+    .line 5
     new-instance p0, Lcom/google/android/exoplayer2/StarRating;
 
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/StarRating;-><init>(I)V
 
     goto :goto_0
 
+    .line 6
     :cond_1
     new-instance v1, Lcom/google/android/exoplayer2/StarRating;
 
@@ -232,6 +237,7 @@
 
     const/16 v0, 0x24
 
+    .line 1
     invoke-static {p0, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
     move-result-object p0
@@ -248,6 +254,7 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/android/exoplayer2/StarRating;
 
     const/4 v1, 0x0
@@ -256,9 +263,11 @@
 
     return v1
 
+    .line 2
     :cond_0
     check-cast p1, Lcom/google/android/exoplayer2/StarRating;
 
+    .line 3
     iget v0, p0, Lcom/google/android/exoplayer2/StarRating;->maxStars:I
 
     iget v2, p1, Lcom/google/android/exoplayer2/StarRating;->maxStars:I
@@ -285,6 +294,7 @@
         from = 0x1L
     .end annotation
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/StarRating;->maxStars:I
 
     return p0
@@ -293,6 +303,7 @@
 .method public getStarRating()F
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/StarRating;->starRating:F
 
     return p0
@@ -305,6 +316,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 1
     iget v1, p0, Lcom/google/android/exoplayer2/StarRating;->maxStars:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -335,6 +347,7 @@
 .method public isRated()Z
     .locals 1
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/StarRating;->starRating:F
 
     const/high16 v0, -0x40800000    # -1.0f
@@ -357,12 +370,14 @@
 .method public toBundle()Landroid/os/Bundle;
     .locals 4
 
+    .line 1
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-static {v1}, Lcom/google/android/exoplayer2/StarRating;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -373,6 +388,7 @@
 
     const/4 v1, 0x1
 
+    .line 3
     invoke-static {v1}, Lcom/google/android/exoplayer2/StarRating;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -381,6 +397,7 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
+    .line 4
     invoke-static {v2}, Lcom/google/android/exoplayer2/StarRating;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1

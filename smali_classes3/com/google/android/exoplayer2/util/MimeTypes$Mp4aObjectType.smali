@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/util/MimeTypes$Mp4aObjectType;
+.class public final Lcom/google/android/exoplayer2/util/MimeTypes$Mp4aObjectType;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,10 +27,13 @@
 .method public constructor <init>(II)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/util/MimeTypes$Mp4aObjectType;->objectTypeIndication:I
 
+    .line 3
     iput p2, p0, Lcom/google/android/exoplayer2/util/MimeTypes$Mp4aObjectType;->audioObjectTypeIndication:I
 
     return-void
@@ -41,6 +44,7 @@
 .method public getEncoding()I
     .locals 1
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/util/MimeTypes$Mp4aObjectType;->audioObjectTypeIndication:I
 
     const/4 v0, 0x2

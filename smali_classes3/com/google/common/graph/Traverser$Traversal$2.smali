@@ -1,4 +1,4 @@
-.class Lcom/google/common/graph/Traverser$Traversal$2;
+.class public Lcom/google/common/graph/Traverser$Traversal$2;
 .super Lcom/google/common/graph/Traverser$Traversal;
 .source "SourceFile"
 
@@ -25,6 +25,7 @@
 .method public constructor <init>(Lcom/google/common/graph/SuccessorsFunction;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/graph/Traverser$Traversal;-><init>(Lcom/google/common/graph/SuccessorsFunction;)V
 
     return-void
@@ -46,18 +47,21 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Ljava/util/Deque;->getFirst()Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Ljava/util/Iterator;
 
+    .line 2
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object p0
@@ -68,6 +72,7 @@
 
     return-object p0
 
+    .line 4
     :cond_0
     invoke-interface {p1}, Ljava/util/Deque;->removeFirst()Ljava/lang/Object;
 

@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/LinkedListMultimap$1KeySetImpl;
+.class public Lcom/google/common/collect/LinkedListMultimap$1KeySetImpl;
 .super Lcom/google/common/collect/Sets$ImprovedAbstractSet;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/LinkedListMultimap;
+.field public final synthetic this$0:Lcom/google/common/collect/LinkedListMultimap;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/LinkedListMultimap;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/LinkedListMultimap$1KeySetImpl;->this$0:Lcom/google/common/collect/LinkedListMultimap;
 
     invoke-direct {p0}, Lcom/google/common/collect/Sets$ImprovedAbstractSet;-><init>()V
@@ -45,6 +46,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/LinkedListMultimap$1KeySetImpl;->this$0:Lcom/google/common/collect/LinkedListMultimap;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/LinkedListMultimap;->containsKey(Ljava/lang/Object;)Z
@@ -64,6 +66,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/LinkedListMultimap$DistinctKeyIterator;
 
     iget-object p0, p0, Lcom/google/common/collect/LinkedListMultimap$1KeySetImpl;->this$0:Lcom/google/common/collect/LinkedListMultimap;
@@ -82,6 +85,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/LinkedListMultimap$1KeySetImpl;->this$0:Lcom/google/common/collect/LinkedListMultimap;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/LinkedListMultimap;->removeAll(Ljava/lang/Object;)Ljava/util/List;
@@ -100,6 +104,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/LinkedListMultimap$1KeySetImpl;->this$0:Lcom/google/common/collect/LinkedListMultimap;
 
     invoke-static {p0}, Lcom/google/common/collect/LinkedListMultimap;->access$500(Lcom/google/common/collect/LinkedListMultimap;)Ljava/util/Map;

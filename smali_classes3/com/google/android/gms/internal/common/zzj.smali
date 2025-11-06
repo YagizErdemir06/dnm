@@ -1,4 +1,4 @@
-.class abstract Lcom/google/android/gms/internal/common/zzj;
+.class public abstract Lcom/google/android/gms/internal/common/zzj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -38,6 +38,7 @@
 .method public final hasNext()Z
     .locals 5
 
+    .line 1
     iget v0, p0, Lcom/google/android/gms/internal/common/zzj;->zzb:I
 
     const/4 v1, 0x4
@@ -85,11 +86,13 @@
     :cond_2
     const/4 p0, 0x0
 
+    .line 2
     throw p0
 
     :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 
+    .line 3
     invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
 
     throw p0
@@ -98,6 +101,7 @@
 .method public final next()Ljava/lang/Object;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/common/zzj;->hasNext()Z
 
     move-result v0
@@ -106,6 +110,7 @@
 
     const/4 v0, 0x2
 
+    .line 2
     iput v0, p0, Lcom/google/android/gms/internal/common/zzj;->zzb:I
 
     iget-object v0, p0, Lcom/google/android/gms/internal/common/zzj;->zza:Ljava/lang/Object;
@@ -116,9 +121,11 @@
 
     return-object v0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/util/NoSuchElementException;
 
+    .line 4
     invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
 
     throw p0
@@ -127,6 +134,7 @@
 .method public final remove()V
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V

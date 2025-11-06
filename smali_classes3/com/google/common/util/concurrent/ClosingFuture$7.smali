@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/ClosingFuture$7;
+.class public Lcom/google/common/util/concurrent/ClosingFuture$7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,15 +26,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/util/concurrent/ClosingFuture;
+.field public final synthetic this$0:Lcom/google/common/util/concurrent/ClosingFuture;
 
-.field final synthetic val$fallback:Lcom/google/common/util/concurrent/ClosingFuture$ClosingFunction;
+.field public final synthetic val$fallback:Lcom/google/common/util/concurrent/ClosingFuture$ClosingFunction;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/util/concurrent/ClosingFuture;Lcom/google/common/util/concurrent/ClosingFuture$ClosingFunction;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/ClosingFuture$7;->this$0:Lcom/google/common/util/concurrent/ClosingFuture;
 
     iput-object p2, p0, Lcom/google/common/util/concurrent/ClosingFuture$7;->val$fallback:Lcom/google/common/util/concurrent/ClosingFuture$ClosingFunction;
@@ -99,6 +100,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/ClosingFuture$7;->val$fallback:Lcom/google/common/util/concurrent/ClosingFuture$ClosingFunction;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;

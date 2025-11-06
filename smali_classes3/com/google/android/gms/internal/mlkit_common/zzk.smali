@@ -26,6 +26,7 @@
 .method public final call()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_common/zzk;->zza:Ljava/lang/String;
 
     invoke-static {p0}, Landroid/system/Os;->lstat(Ljava/lang/String;)Landroid/system/StructStat;

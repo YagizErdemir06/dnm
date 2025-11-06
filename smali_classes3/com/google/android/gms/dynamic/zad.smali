@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/dynamic/zad;
+.class public final Lcom/google/android/gms/dynamic/zad;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,15 +7,15 @@
 
 
 # instance fields
-.field final synthetic zaa:Landroid/widget/FrameLayout;
+.field public final synthetic zaa:Landroid/widget/FrameLayout;
 
-.field final synthetic zab:Landroid/view/LayoutInflater;
+.field public final synthetic zab:Landroid/view/LayoutInflater;
 
-.field final synthetic zac:Landroid/view/ViewGroup;
+.field public final synthetic zac:Landroid/view/ViewGroup;
 
-.field final synthetic zad:Landroid/os/Bundle;
+.field public final synthetic zad:Landroid/os/Bundle;
 
-.field final synthetic zae:Lcom/google/android/gms/dynamic/DeferredLifecycleHelper;
+.field public final synthetic zae:Lcom/google/android/gms/dynamic/DeferredLifecycleHelper;
 
 
 # direct methods
@@ -50,9 +50,10 @@
 .method public final zab(Lcom/google/android/gms/dynamic/LifecycleDelegate;)V
     .locals 3
 
+    .line 1
     iget-object p1, p0, Lcom/google/android/gms/dynamic/zad;->zaa:Landroid/widget/FrameLayout;
 
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->removeAllViews()V
+    invoke-virtual {p1}, Landroid/widget/FrameLayout;->removeAllViews()V
 
     iget-object p1, p0, Lcom/google/android/gms/dynamic/zad;->zaa:Landroid/widget/FrameLayout;
 
@@ -68,11 +69,12 @@
 
     iget-object p0, p0, Lcom/google/android/gms/dynamic/zad;->zad:Landroid/os/Bundle;
 
+    .line 2
     invoke-interface {v0, v1, v2, p0}, Lcom/google/android/gms/dynamic/LifecycleDelegate;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object p0
 
-    invoke-virtual {p1, p0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    invoke-virtual {p1, p0}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
     return-void
 .end method

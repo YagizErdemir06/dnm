@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhn;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhn;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -13,6 +13,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhi;->zzx()Z
 
     move-result v0
@@ -25,6 +26,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     sget v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcn;->zza:I
 
     :cond_0
@@ -64,6 +66,7 @@
 
     add-int/lit8 v0, p1, -0x1
 
+    .line 1
     aget-byte v0, p0, v0
 
     if-eqz p2, :cond_2
@@ -76,6 +79,7 @@
 
     if-ne p2, v2, :cond_0
 
+    .line 2
     aget-byte p2, p0, p1
 
     add-int/2addr p1, v1
@@ -91,10 +95,12 @@
     :cond_0
     new-instance p0, Ljava/lang/AssertionError;
 
+    .line 3
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
 
     throw p0
 
+    .line 4
     :cond_1
     aget-byte p0, p0, p1
 
@@ -119,6 +125,7 @@
 .method public static zzd(Ljava/lang/CharSequence;[BII)I
     .locals 7
 
+    .line 1
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
@@ -136,6 +143,7 @@
 
     if-ge v4, v2, :cond_0
 
+    .line 2
     invoke-interface {p0, v1}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v5
@@ -144,6 +152,7 @@
 
     int-to-byte v2, v5
 
+    .line 3
     aput-byte v2, p1, v4
 
     add-int/lit8 v1, v1, 0x1
@@ -163,6 +172,7 @@
     :goto_1
     if-ge v1, v0, :cond_b
 
+    .line 4
     invoke-interface {p0, v1}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result p3
@@ -175,6 +185,7 @@
 
     int-to-byte p3, p3
 
+    .line 5
     aput-byte p3, p1, p2
 
     :goto_2
@@ -199,6 +210,7 @@
 
     int-to-byte v5, v5
 
+    .line 6
     aput-byte v5, p1, p2
 
     add-int/lit8 p2, v4, 0x1
@@ -209,6 +221,7 @@
 
     int-to-byte p3, p3
 
+    .line 7
     aput-byte p3, p1, v4
 
     goto :goto_3
@@ -235,6 +248,7 @@
 
     int-to-byte v5, v5
 
+    .line 8
     aput-byte v5, p1, p2
 
     add-int/lit8 p2, v4, 0x1
@@ -247,6 +261,7 @@
 
     int-to-byte v5, v5
 
+    .line 9
     aput-byte v5, p1, v4
 
     add-int/lit8 v4, p2, 0x1
@@ -257,6 +272,7 @@
 
     int-to-byte p3, p3
 
+    .line 10
     aput-byte p3, p1, p2
 
     goto :goto_2
@@ -268,6 +284,7 @@
 
     add-int/lit8 v4, v1, 0x1
 
+    .line 11
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
     move-result v5
@@ -284,6 +301,7 @@
 
     if-eqz v5, :cond_6
 
+    .line 12
     invoke-static {p3, v1}, Ljava/lang/Character;->toCodePoint(CC)I
 
     move-result p3
@@ -296,6 +314,7 @@
 
     int-to-byte v5, v5
 
+    .line 13
     aput-byte v5, p1, p2
 
     add-int/lit8 p2, v1, 0x1
@@ -308,6 +327,7 @@
 
     int-to-byte v5, v5
 
+    .line 14
     aput-byte v5, p1, v1
 
     add-int/lit8 v1, p2, 0x1
@@ -320,6 +340,7 @@
 
     int-to-byte v5, v5
 
+    .line 15
     aput-byte v5, p1, p2
 
     add-int/lit8 p2, v1, 0x1
@@ -330,6 +351,7 @@
 
     int-to-byte p3, p3
 
+    .line 16
     aput-byte p3, p1, v1
 
     move v1, v4
@@ -342,11 +364,13 @@
     :cond_6
     move v1, v4
 
+    .line 17
     :cond_7
     new-instance p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhm;
 
     add-int/lit8 v1, v1, -0x1
 
+    .line 18
     invoke-direct {p0, v1, v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhm;-><init>(II)V
 
     throw p0
@@ -358,6 +382,7 @@
 
     add-int/lit8 p1, v1, 0x1
 
+    .line 19
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
     move-result v2
@@ -377,6 +402,7 @@
     :cond_9
     new-instance p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhm;
 
+    .line 20
     invoke-direct {p0, v1, v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhm;-><init>(II)V
 
     throw p0
@@ -386,6 +412,7 @@
 
     new-instance p1, Ljava/lang/StringBuilder;
 
+    .line 21
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v0, "Failed writing "
@@ -416,6 +443,7 @@
 .method public static zze(Ljava/lang/CharSequence;)I
     .locals 8
 
+    .line 1
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
@@ -427,6 +455,7 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
+    .line 2
     invoke-interface {p0, v2}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v3
@@ -445,6 +474,7 @@
     :goto_1
     if-ge v2, v0, :cond_6
 
+    .line 3
     invoke-interface {p0, v2}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v4
@@ -463,6 +493,7 @@
 
     goto :goto_1
 
+    .line 4
     :cond_1
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
@@ -471,6 +502,7 @@
     :goto_2
     if-ge v2, v4, :cond_5
 
+    .line 5
     invoke-interface {p0, v2}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v6
@@ -496,6 +528,7 @@
 
     if-gt v6, v7, :cond_4
 
+    .line 6
     invoke-static {p0, v2}, Ljava/lang/Character;->codePointAt(Ljava/lang/CharSequence;I)I
 
     move-result v6
@@ -511,6 +544,7 @@
     :cond_3
     new-instance p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhm;
 
+    .line 7
     invoke-direct {p0, v2, v4}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhm;-><init>(II)V
 
     throw p0
@@ -536,6 +570,7 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    .line 8
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v3, "UTF-8 length does not fit in int: "
@@ -560,6 +595,7 @@
 .method public static zzf(I[BII)I
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhn;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhk;
 
     invoke-virtual {v0, p0, p1, p2, p3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhk;->zza(I[BII)I
@@ -572,6 +608,7 @@
 .method public static zzg([B)Z
     .locals 3
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhn;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhk;
 
     array-length v1, p0
@@ -588,6 +625,7 @@
 .method public static zzh([BII)Z
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhn;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhk;
 
     invoke-virtual {v0, p0, p1, p2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhk;->zzb([BII)Z

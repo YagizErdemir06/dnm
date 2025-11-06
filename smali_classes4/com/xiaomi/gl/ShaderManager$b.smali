@@ -15,19 +15,32 @@
 
 
 # instance fields
-.field public final a:Ljava/nio/ByteBuffer;
+.field private final a:Ljava/nio/ByteBuffer;
 
-.field public final b:I
+.field private final b:I
 
 
 # direct methods
 .method public constructor <init>(Ljava/nio/ByteBuffer;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "byteBuffer",
+            "format"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/xiaomi/gl/ShaderManager$b;->a:Ljava/nio/ByteBuffer;
 
+    .line 3
     iput p2, p0, Lcom/xiaomi/gl/ShaderManager$b;->b:I
 
     return-void
@@ -38,6 +51,7 @@
 .method public a()Ljava/nio/ByteBuffer;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/gl/ShaderManager$b;->a:Ljava/nio/ByteBuffer;
 
     return-object p0
@@ -46,6 +60,7 @@
 .method public b()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/gl/ShaderManager$b;->b:I
 
     return p0

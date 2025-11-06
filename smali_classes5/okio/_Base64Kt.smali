@@ -4,24 +4,32 @@
 
 
 # annotations
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000\u0012\n\u0000\n\u0002\u0010\u0012\n\u0002\u0008\u0008\n\u0002\u0010\u000e\n\u0002\u0008\u0003\u001a\u000e\u0010\t\u001a\u0004\u0018\u00010\u0001*\u00020\nH\u0000\u001a\u0016\u0010\u000b\u001a\u00020\n*\u00020\u00012\u0008\u0008\u0002\u0010\u000c\u001a\u00020\u0001H\u0000\"\u001c\u0010\u0000\u001a\u00020\u00018\u0000X\u0081\u0004\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008\u0002\u0010\u0003\u001a\u0004\u0008\u0004\u0010\u0005\"\u001c\u0010\u0006\u001a\u00020\u00018\u0000X\u0081\u0004\u00a2\u0006\u000e\n\u0000\u0012\u0004\u0008\u0007\u0010\u0003\u001a\u0004\u0008\u0008\u0010\u0005\u00a8\u0006\r"
+        "\u0000\u000c\n\u0002\u0010\u000e\n\u0002\u0010\u0012\n\u0002\u0008\u000f\u001a\u0015\u0010\u0002\u001a\u0004\u0018\u00010\u0001*\u00020\u0000H\u0000\u00a2\u0006\u0004\u0008\u0002\u0010\u0003\u001a\u001d\u0010\u0005\u001a\u00020\u0000*\u00020\u00012\u0008\u0008\u0002\u0010\u0004\u001a\u00020\u0001H\u0000\u00a2\u0006\u0004\u0008\u0005\u0010\u0006\"\"\u0010\u0007\u001a\u00020\u00018\u0000@\u0001X\u0081\u0004\u00a2\u0006\u0012\n\u0004\u0008\u0007\u0010\u0008\u0012\u0004\u0008\u000b\u0010\u000c\u001a\u0004\u0008\t\u0010\n\"\"\u0010\r\u001a\u00020\u00018\u0000@\u0001X\u0081\u0004\u00a2\u0006\u0012\n\u0004\u0008\r\u0010\u0008\u0012\u0004\u0008\u000f\u0010\u000c\u001a\u0004\u0008\u000e\u0010\n\u00a8\u0006\u0010"
     }
     d2 = {
-        "BASE64",
         "",
-        "getBASE64$annotations",
-        "()V",
+        "",
+        "decodeBase64ToArray",
+        "(Ljava/lang/String;)[B",
+        "map",
+        "encodeBase64",
+        "([B[B)Ljava/lang/String;",
+        "BASE64",
+        "[B",
         "getBASE64",
         "()[B",
+        "getBASE64$annotations",
+        "()V",
         "BASE64_URL_SAFE",
-        "getBASE64_URL_SAFE$annotations",
         "getBASE64_URL_SAFE",
-        "decodeBase64ToArray",
-        "",
-        "encodeBase64",
-        "map",
+        "getBASE64_URL_SAFE$annotations",
         "okio"
     }
     k = 0x2
@@ -30,18 +38,17 @@
         0x5,
         0x1
     }
-    xi = 0x30
 .end annotation
 
 
 # static fields
 .field private static final BASE64:[B
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field private static final BASE64_URL_SAFE:[B
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -50,6 +57,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     sget-object v0, Lokio/ByteString;->Companion:Lokio/ByteString$Companion;
 
     const-string v1, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
@@ -66,6 +74,7 @@
 
     const-string v1, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_"
 
+    .line 2
     invoke-virtual {v0, v1}, Lokio/ByteString$Companion;->encodeUtf8(Ljava/lang/String;)Lokio/ByteString;
 
     move-result-object v0
@@ -82,18 +91,19 @@
 .method public static final decodeBase64ToArray(Ljava/lang/String;)[B
     .locals 17
     .param p0    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
     move-object/from16 v0, p0
 
     const-string v1, "<this>"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-virtual/range {p0 .. p0}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -111,6 +121,7 @@
 
     add-int/lit8 v6, v1, -0x1
 
+    .line 2
     invoke-virtual {v0, v6}, Ljava/lang/String;->charAt(I)C
 
     move-result v6
@@ -144,6 +155,7 @@
 
     const-wide/16 v8, 0x8
 
+    .line 3
     div-long/2addr v6, v8
 
     long-to-int v6, v6
@@ -167,6 +179,7 @@
     :goto_2
     add-int/lit8 v15, v11, 0x1
 
+    .line 4
     invoke-virtual {v0, v11}, Ljava/lang/String;->charAt(I)C
 
     move-result v11
@@ -292,6 +305,7 @@
 
     add-int/lit8 v13, v13, 0x1
 
+    .line 5
     rem-int/lit8 v9, v13, 0x4
 
     if-nez v9, :cond_d
@@ -302,6 +316,7 @@
 
     int-to-byte v11, v11
 
+    .line 6
     aput-byte v11, v7, v12
 
     add-int/lit8 v11, v9, 0x1
@@ -310,12 +325,14 @@
 
     int-to-byte v12, v12
 
+    .line 7
     aput-byte v12, v7, v9
 
     add-int/lit8 v12, v11, 0x1
 
     int-to-byte v9, v14
 
+    .line 8
     aput-byte v9, v7, v11
 
     :cond_d
@@ -340,6 +357,7 @@
 
     const/16 v16, 0x0
 
+    .line 9
     :goto_a
     rem-int/lit8 v9, v9, 0x4
 
@@ -364,6 +382,7 @@
 
     int-to-byte v2, v2
 
+    .line 10
     aput-byte v2, v7, v12
 
     add-int/lit8 v12, v1, 0x1
@@ -372,6 +391,7 @@
 
     int-to-byte v0, v0
 
+    .line 11
     aput-byte v0, v7, v1
 
     goto :goto_b
@@ -385,6 +405,7 @@
 
     int-to-byte v0, v0
 
+    .line 12
     aput-byte v0, v7, v12
 
     move v12, v1
@@ -394,6 +415,7 @@
 
     return-object v7
 
+    .line 13
     :cond_12
     invoke-static {v7, v12}, Ljava/util/Arrays;->copyOf([BI)[B
 
@@ -401,7 +423,7 @@
 
     const-string v1, "java.util.Arrays.copyOf(this, newSize)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 
@@ -412,24 +434,25 @@
 .method public static final encodeBase64([B[B)Ljava/lang/String;
     .locals 10
     .param p0    # [B
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p1    # [B
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "<this>"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "map"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     array-length v0, p0
 
     const/4 v1, 0x2
@@ -440,8 +463,10 @@
 
     mul-int/lit8 v0, v0, 0x4
 
+    .line 2
     new-array v0, v0, [B
 
+    .line 3
     array-length v2, p0
 
     array-length v3, p0
@@ -459,14 +484,17 @@
 
     add-int/lit8 v5, v3, 0x1
 
+    .line 4
     aget-byte v3, p0, v3
 
     add-int/lit8 v6, v5, 0x1
 
+    .line 5
     aget-byte v5, p0, v5
 
     add-int/lit8 v7, v6, 0x1
 
+    .line 6
     aget-byte v6, p0, v6
 
     add-int/lit8 v8, v4, 0x1
@@ -475,6 +503,7 @@
 
     shr-int/2addr v9, v1
 
+    .line 7
     aget-byte v9, p1, v9
 
     aput-byte v9, v0, v4
@@ -491,6 +520,7 @@
 
     or-int/2addr v3, v9
 
+    .line 8
     aget-byte v3, p1, v3
 
     aput-byte v3, v0, v8
@@ -507,6 +537,7 @@
 
     or-int/2addr v5, v8
 
+    .line 9
     aget-byte v5, p1, v5
 
     aput-byte v5, v0, v4
@@ -515,6 +546,7 @@
 
     and-int/lit8 v5, v6, 0x3f
 
+    .line 10
     aget-byte v5, p1, v5
 
     aput-byte v5, v0, v3
@@ -523,6 +555,7 @@
 
     goto :goto_0
 
+    .line 11
     :cond_0
     array-length v5, p0
 
@@ -541,8 +574,10 @@
     :cond_1
     add-int/lit8 v5, v3, 0x1
 
+    .line 12
     aget-byte v3, p0, v3
 
+    .line 13
     aget-byte p0, p0, v5
 
     add-int/lit8 v5, v4, 0x1
@@ -551,6 +586,7 @@
 
     shr-int/2addr v6, v1
 
+    .line 14
     aget-byte v6, p1, v6
 
     aput-byte v6, v0, v4
@@ -567,6 +603,7 @@
 
     or-int/2addr v3, v6
 
+    .line 15
     aget-byte v3, p1, v3
 
     aput-byte v3, v0, v5
@@ -577,16 +614,19 @@
 
     shl-int/2addr p0, v1
 
+    .line 16
     aget-byte p0, p1, p0
 
     aput-byte p0, v0, v4
 
     int-to-byte p0, v2
 
+    .line 17
     aput-byte p0, v0, v3
 
     goto :goto_1
 
+    .line 18
     :cond_2
     aget-byte p0, p0, v3
 
@@ -596,6 +636,7 @@
 
     shr-int/lit8 v1, v5, 0x2
 
+    .line 19
     aget-byte v1, p1, v1
 
     aput-byte v1, v0, v4
@@ -606,6 +647,7 @@
 
     shl-int/lit8 p0, p0, 0x4
 
+    .line 20
     aget-byte p0, p1, p0
 
     aput-byte p0, v0, v3
@@ -614,10 +656,13 @@
 
     int-to-byte p1, v2
 
+    .line 21
     aput-byte p1, v0, v1
 
+    .line 22
     aput-byte p1, v0, p0
 
+    .line 23
     :goto_1
     invoke-static {v0}, Lokio/_JvmPlatformKt;->toUtf8String([B)Ljava/lang/String;
 
@@ -633,6 +678,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 1
     sget-object p1, Lokio/_Base64Kt;->BASE64:[B
 
     :cond_0
@@ -645,9 +691,10 @@
 
 .method public static final getBASE64()[B
     .locals 1
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     sget-object v0, Lokio/_Base64Kt;->BASE64:[B
 
     return-object v0
@@ -661,9 +708,10 @@
 
 .method public static final getBASE64_URL_SAFE()[B
     .locals 1
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     sget-object v0, Lokio/_Base64Kt;->BASE64_URL_SAFE:[B
 
     return-object v0

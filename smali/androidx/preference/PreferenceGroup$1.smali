@@ -1,4 +1,4 @@
-.class Landroidx/preference/PreferenceGroup$1;
+.class public Landroidx/preference/PreferenceGroup$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/preference/PreferenceGroup;
+.field public final synthetic this$0:Landroidx/preference/PreferenceGroup;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/preference/PreferenceGroup;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/preference/PreferenceGroup$1;->this$0:Landroidx/preference/PreferenceGroup;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,8 +38,10 @@
 .method public run()V
     .locals 1
 
+    .line 1
     monitor-enter p0
 
+    .line 2
     :try_start_0
     iget-object v0, p0, Landroidx/preference/PreferenceGroup$1;->this$0:Landroidx/preference/PreferenceGroup;
 
@@ -46,6 +49,7 @@
 
     invoke-virtual {v0}, Landroidx/collection/SimpleArrayMap;->clear()V
 
+    .line 3
     monitor-exit p0
 
     return-void

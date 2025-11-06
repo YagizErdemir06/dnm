@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/MoreExecutors$5;
+.class public Lcom/google/common/util/concurrent/MoreExecutors$5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,15 +18,16 @@
 
 
 # instance fields
-.field final synthetic val$delegate:Ljava/util/concurrent/Executor;
+.field public final synthetic val$delegate:Ljava/util/concurrent/Executor;
 
-.field final synthetic val$future:Lcom/google/common/util/concurrent/AbstractFuture;
+.field public final synthetic val$future:Lcom/google/common/util/concurrent/AbstractFuture;
 
 
 # direct methods
 .method public constructor <init>(Ljava/util/concurrent/Executor;Lcom/google/common/util/concurrent/AbstractFuture;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/MoreExecutors$5;->val$delegate:Ljava/util/concurrent/Executor;
 
     iput-object p2, p0, Lcom/google/common/util/concurrent/MoreExecutors$5;->val$future:Lcom/google/common/util/concurrent/AbstractFuture;
@@ -41,6 +42,7 @@
 .method public execute(Ljava/lang/Runnable;)V
     .locals 1
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/common/util/concurrent/MoreExecutors$5;->val$delegate:Ljava/util/concurrent/Executor;
 
@@ -53,6 +55,7 @@
     :catch_0
     move-exception p1
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/util/concurrent/MoreExecutors$5;->val$future:Lcom/google/common/util/concurrent/AbstractFuture;
 
     invoke-virtual {p0, p1}, Lcom/google/common/util/concurrent/AbstractFuture;->setException(Ljava/lang/Throwable;)Z

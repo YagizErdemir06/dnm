@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/Striped$4;
+.class public Lcom/google/common/util/concurrent/Striped$4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,13 +27,14 @@
 
 
 # instance fields
-.field final synthetic val$permits:I
+.field public final synthetic val$permits:I
 
 
 # direct methods
 .method public constructor <init>(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/common/util/concurrent/Striped$4;->val$permits:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

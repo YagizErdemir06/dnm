@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/ui/DragLayout;->e0(FFFLz1/f$f;)V
+    value = Lcom/android/camera/ui/DragLayout;->Y(FFFLd/d/a/f6/f$f;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,18 +15,29 @@
 
 
 # instance fields
-.field public final synthetic a:Lz1/f$f;
+.field public final synthetic c:Ld/d/a/f6/f$f;
 
-.field public final synthetic b:Lcom/android/camera/ui/DragLayout;
+.field public final synthetic d:Lcom/android/camera/ui/DragLayout;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/camera/ui/DragLayout;Lz1/f$f;)V
+.method public constructor <init>(Lcom/android/camera/ui/DragLayout;Ld/d/a/f6/f$f;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$listener"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera/ui/DragLayout$d;->b:Lcom/android/camera/ui/DragLayout;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/ui/DragLayout$d;->d:Lcom/android/camera/ui/DragLayout;
 
-    iput-object p2, p0, Lcom/android/camera/ui/DragLayout$d;->a:Lz1/f$f;
+    iput-object p2, p0, Lcom/android/camera/ui/DragLayout$d;->c:Ld/d/a/f6/f$f;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
@@ -37,16 +48,28 @@
 # virtual methods
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
+
+    .line 1
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationCancel(Landroid/animation/Animator;)V
 
-    iget-object p0, p0, Lcom/android/camera/ui/DragLayout$d;->a:Lz1/f$f;
+    .line 2
+    iget-object p0, p0, Lcom/android/camera/ui/DragLayout$d;->c:Ld/d/a/f6/f$f;
 
     if-eqz p0, :cond_0
 
-    invoke-interface {p0}, Lz1/f$f;->onCancel()V
+    .line 3
+    invoke-interface {p0}, Ld/d/a/f6/f$f;->onCancel()V
 
     :cond_0
     return-void
@@ -54,14 +77,25 @@
 
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
 
-    iget-object p0, p0, Lcom/android/camera/ui/DragLayout$d;->a:Lz1/f$f;
+    .line 2
+    iget-object p0, p0, Lcom/android/camera/ui/DragLayout$d;->c:Ld/d/a/f6/f$f;
 
     if-eqz p0, :cond_0
 
-    invoke-interface {p0}, Lz1/f$f;->b()V
+    .line 3
+    invoke-interface {p0}, Ld/d/a/f6/f$f;->b()V
 
     :cond_0
     return-void
@@ -69,14 +103,25 @@
 
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
 
-    iget-object p0, p0, Lcom/android/camera/ui/DragLayout$d;->a:Lz1/f$f;
+    .line 2
+    iget-object p0, p0, Lcom/android/camera/ui/DragLayout$d;->c:Ld/d/a/f6/f$f;
 
     if-eqz p0, :cond_0
 
-    invoke-interface {p0}, Lz1/f$f;->onStart()V
+    .line 3
+    invoke-interface {p0}, Ld/d/a/f6/f$f;->onStart()V
 
     :cond_0
     return-void

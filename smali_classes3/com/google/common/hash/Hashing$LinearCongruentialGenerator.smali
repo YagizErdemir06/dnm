@@ -1,4 +1,4 @@
-.class final Lcom/google/common/hash/Hashing$LinearCongruentialGenerator;
+.class public final Lcom/google/common/hash/Hashing$LinearCongruentialGenerator;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,8 +22,10 @@
 .method public constructor <init>(J)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-wide p1, p0, Lcom/google/common/hash/Hashing$LinearCongruentialGenerator;->state:J
 
     return-void
@@ -34,21 +36,22 @@
 .method public nextDouble()D
     .locals 4
 
-    const-wide v0, 0x27bb2ee687b0b0fdL    # 2.694898184339827E-117
+    .line 1
+    iget-wide v0, p0, Lcom/google/common/hash/Hashing$LinearCongruentialGenerator;->state:J
 
-    iget-wide v2, p0, Lcom/google/common/hash/Hashing$LinearCongruentialGenerator;->state:J
+    const-wide v2, 0x27bb2ee687b0b0fdL    # 2.694898184339827E-117
 
-    mul-long/2addr v2, v0
+    mul-long/2addr v0, v2
 
-    const-wide/16 v0, 0x1
+    const-wide/16 v2, 0x1
 
-    add-long/2addr v2, v0
+    add-long/2addr v0, v2
 
-    iput-wide v2, p0, Lcom/google/common/hash/Hashing$LinearCongruentialGenerator;->state:J
+    iput-wide v0, p0, Lcom/google/common/hash/Hashing$LinearCongruentialGenerator;->state:J
 
     const/16 p0, 0x21
 
-    ushr-long v0, v2, p0
+    ushr-long/2addr v0, p0
 
     long-to-int p0, v0
 

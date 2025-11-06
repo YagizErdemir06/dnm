@@ -1,4 +1,4 @@
-.class Lcom/google/common/base/Joiner$3;
+.class public Lcom/google/common/base/Joiner$3;
 .super Ljava/util/AbstractList;
 .source "SourceFile"
 
@@ -23,17 +23,18 @@
 
 
 # instance fields
-.field final synthetic val$first:Ljava/lang/Object;
+.field public final synthetic val$first:Ljava/lang/Object;
 
-.field final synthetic val$rest:[Ljava/lang/Object;
+.field public final synthetic val$rest:[Ljava/lang/Object;
 
-.field final synthetic val$second:Ljava/lang/Object;
+.field public final synthetic val$second:Ljava/lang/Object;
 
 
 # direct methods
 .method public constructor <init>([Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/base/Joiner$3;->val$rest:[Ljava/lang/Object;
 
     iput-object p2, p0, Lcom/google/common/base/Joiner$3;->val$first:Ljava/lang/Object;
@@ -58,6 +59,7 @@
 
     if-eq p1, v0, :cond_0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/Joiner$3;->val$rest:[Ljava/lang/Object;
 
     add-int/lit8 p1, p1, -0x2
@@ -66,11 +68,13 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/google/common/base/Joiner$3;->val$second:Ljava/lang/Object;
 
     return-object p0
 
+    .line 3
     :cond_1
     iget-object p0, p0, Lcom/google/common/base/Joiner$3;->val$first:Ljava/lang/Object;
 
@@ -80,6 +84,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/Joiner$3;->val$rest:[Ljava/lang/Object;
 
     array-length p0, p0

@@ -25,13 +25,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/ForwardingNavigableMap;
+.field public final synthetic this$0:Lcom/google/common/collect/ForwardingNavigableMap;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/ForwardingNavigableMap;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/ForwardingNavigableMap$StandardDescendingMap;->this$0:Lcom/google/common/collect/ForwardingNavigableMap;
 
     invoke-direct {p0}, Lcom/google/common/collect/Maps$DescendingMap;-><init>()V
@@ -52,6 +53,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ForwardingNavigableMap$StandardDescendingMap$1;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/ForwardingNavigableMap$StandardDescendingMap$1;-><init>(Lcom/google/common/collect/ForwardingNavigableMap$StandardDescendingMap;)V
@@ -69,6 +71,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ForwardingNavigableMap$StandardDescendingMap;->this$0:Lcom/google/common/collect/ForwardingNavigableMap;
 
     return-object p0

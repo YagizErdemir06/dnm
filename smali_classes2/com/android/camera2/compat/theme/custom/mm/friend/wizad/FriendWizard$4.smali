@@ -1,4 +1,4 @@
-.class synthetic Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$4;
+.class public synthetic Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$com$xiaomi$mi_connect_sdk$api$ResultCode:[I
+.field public static final synthetic $SwitchMap$com$xiaomi$mi_connect_sdk$api$ResultCode:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->values()[Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     move-result-object v0

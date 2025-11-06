@@ -4,49 +4,53 @@
 
 
 # instance fields
-.field public delay:J
+.field public volatile delay:J
 
-.field public frameInterval:D
+.field public volatile initTime:J
 
-.field public initTime:J
-
-.field public justEnd:Z
+.field public volatile justEnd:Z
 
 .field public volatile op:B
 
-.field public progress:D
+.field public volatile progress:D
 
-.field public setToValue:D
+.field public volatile setToValue:D
 
-.field public startTime:J
+.field public volatile startTime:J
 
-.field public startValue:D
+.field public volatile startValue:D
 
-.field public targetValue:D
+.field public volatile targetValue:D
 
-.field public tintMode:I
+.field public volatile tintMode:I
 
-.field public value:D
+.field public volatile value:D
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
+    .line 2
     iput v0, p0, Lmiuix/animation/internal/AnimInfo;->tintMode:I
 
     const-wide v0, 0x7fefffffffffffffL    # Double.MAX_VALUE
 
+    .line 3
     iput-wide v0, p0, Lmiuix/animation/internal/AnimInfo;->startValue:D
 
+    .line 4
     iput-wide v0, p0, Lmiuix/animation/internal/AnimInfo;->targetValue:D
 
+    .line 5
     iput-wide v0, p0, Lmiuix/animation/internal/AnimInfo;->value:D
 
+    .line 6
     iput-wide v0, p0, Lmiuix/animation/internal/AnimInfo;->setToValue:D
 
     return-void
@@ -55,79 +59,47 @@
 
 # virtual methods
 .method public clear()V
-    .locals 5
+    .locals 3
 
     const/4 v0, 0x0
 
+    .line 1
     iput-byte v0, p0, Lmiuix/animation/internal/AnimInfo;->op:B
 
     const-wide/16 v1, 0x0
 
+    .line 2
     iput-wide v1, p0, Lmiuix/animation/internal/AnimInfo;->delay:J
 
+    .line 3
     iput-wide v1, p0, Lmiuix/animation/internal/AnimInfo;->initTime:J
 
+    .line 4
     iput-wide v1, p0, Lmiuix/animation/internal/AnimInfo;->startTime:J
 
     const-wide/16 v1, 0x0
 
+    .line 5
     iput-wide v1, p0, Lmiuix/animation/internal/AnimInfo;->progress:D
 
-    const/4 v3, -0x1
+    const/4 v1, -0x1
 
-    iput v3, p0, Lmiuix/animation/internal/AnimInfo;->tintMode:I
+    .line 6
+    iput v1, p0, Lmiuix/animation/internal/AnimInfo;->tintMode:I
 
-    const-wide v3, 0x7fefffffffffffffL    # Double.MAX_VALUE
+    const-wide v1, 0x7fefffffffffffffL    # Double.MAX_VALUE
 
-    iput-wide v3, p0, Lmiuix/animation/internal/AnimInfo;->startValue:D
+    .line 7
+    iput-wide v1, p0, Lmiuix/animation/internal/AnimInfo;->startValue:D
 
-    iput-wide v3, p0, Lmiuix/animation/internal/AnimInfo;->targetValue:D
+    .line 8
+    iput-wide v1, p0, Lmiuix/animation/internal/AnimInfo;->targetValue:D
 
-    iput-wide v3, p0, Lmiuix/animation/internal/AnimInfo;->value:D
+    .line 9
+    iput-wide v1, p0, Lmiuix/animation/internal/AnimInfo;->value:D
 
-    iput-wide v3, p0, Lmiuix/animation/internal/AnimInfo;->setToValue:D
-
+    .line 10
     iput-boolean v0, p0, Lmiuix/animation/internal/AnimInfo;->justEnd:Z
-
-    iput-wide v1, p0, Lmiuix/animation/internal/AnimInfo;->frameInterval:D
-
-    return-void
-.end method
-
-.method public reuse()V
-    .locals 4
-
-    const/4 v0, 0x6
-
-    iput-byte v0, p0, Lmiuix/animation/internal/AnimInfo;->op:B
-
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lmiuix/animation/internal/AnimInfo;->delay:J
-
-    iput-wide v0, p0, Lmiuix/animation/internal/AnimInfo;->initTime:J
-
-    iput-wide v0, p0, Lmiuix/animation/internal/AnimInfo;->startTime:J
-
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lmiuix/animation/internal/AnimInfo;->progress:D
-
-    const/4 v2, -0x1
-
-    iput v2, p0, Lmiuix/animation/internal/AnimInfo;->tintMode:I
-
-    const-wide v2, 0x7fefffffffffffffL    # Double.MAX_VALUE
-
-    iput-wide v2, p0, Lmiuix/animation/internal/AnimInfo;->startValue:D
-
-    iput-wide v2, p0, Lmiuix/animation/internal/AnimInfo;->targetValue:D
-
-    const/4 v2, 0x0
-
-    iput-boolean v2, p0, Lmiuix/animation/internal/AnimInfo;->justEnd:Z
-
-    iput-wide v0, p0, Lmiuix/animation/internal/AnimInfo;->frameInterval:D
 
     return-void
 .end method
@@ -135,6 +107,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -147,7 +120,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v1, ", delay="
+    const-string v1, ", delay = "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -155,39 +128,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string v1, ", v="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lmiuix/animation/internal/AnimInfo;->value:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", start-v="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lmiuix/animation/internal/AnimInfo;->startValue:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", target-v="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lmiuix/animation/internal/AnimInfo;->targetValue:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", setTo-v="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lmiuix/animation/internal/AnimInfo;->setToValue:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", init-t="
+    const-string v1, ", initTime="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -195,7 +136,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string v1, ", start-t="
+    const-string v1, ", startTime="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -219,11 +160,35 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v1, ", frameInterval="
+    const-string v1, ", startValue="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lmiuix/animation/internal/AnimInfo;->frameInterval:D
+    iget-wide v1, p0, Lmiuix/animation/internal/AnimInfo;->startValue:D
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v1, ", targetValue="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lmiuix/animation/internal/AnimInfo;->targetValue:D
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v1, ", value="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lmiuix/animation/internal/AnimInfo;->value:D
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v1, ", setToValue="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lmiuix/animation/internal/AnimInfo;->setToValue:D
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 

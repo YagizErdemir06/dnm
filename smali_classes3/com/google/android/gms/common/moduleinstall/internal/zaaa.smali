@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/moduleinstall/internal/zaaa;
+.class public final Lcom/google/android/gms/common/moduleinstall/internal/zaaa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field final synthetic zaa:Lcom/google/android/gms/common/moduleinstall/ModuleInstallStatusUpdate;
+.field public final synthetic zaa:Lcom/google/android/gms/common/moduleinstall/ModuleInstallStatusUpdate;
 
 
 # direct methods
@@ -26,10 +26,12 @@
 .method public final bridge synthetic notifyListener(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/google/android/gms/common/moduleinstall/InstallStatusListener;
 
     iget-object p0, p0, Lcom/google/android/gms/common/moduleinstall/internal/zaaa;->zaa:Lcom/google/android/gms/common/moduleinstall/ModuleInstallStatusUpdate;
 
+    .line 2
     invoke-interface {p1, p0}, Lcom/google/android/gms/common/moduleinstall/InstallStatusListener;->onInstallStatusUpdated(Lcom/google/android/gms/common/moduleinstall/ModuleInstallStatusUpdate;)V
 
     return-void

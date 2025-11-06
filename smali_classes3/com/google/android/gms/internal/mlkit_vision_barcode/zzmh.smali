@@ -79,6 +79,7 @@
 .method public final zza(Ljava/lang/Long;)Lcom/google/android/gms/internal/mlkit_vision_barcode/zzmh;
     .locals 4
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v0
@@ -99,6 +100,7 @@
 .method public final zzb(Ljava/lang/Long;)Lcom/google/android/gms/internal/mlkit_vision_barcode/zzmh;
     .locals 4
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v0
@@ -119,6 +121,7 @@
 .method public final zzc(Ljava/lang/Long;)Lcom/google/android/gms/internal/mlkit_vision_barcode/zzmh;
     .locals 4
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v0
@@ -139,6 +142,7 @@
 .method public final zzd(Ljava/lang/Long;)Lcom/google/android/gms/internal/mlkit_vision_barcode/zzmh;
     .locals 4
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v0
@@ -159,6 +163,7 @@
 .method public final zze(Ljava/lang/Long;)Lcom/google/android/gms/internal/mlkit_vision_barcode/zzmh;
     .locals 4
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v0
@@ -179,6 +184,7 @@
 .method public final zzf(Ljava/lang/Long;)Lcom/google/android/gms/internal/mlkit_vision_barcode/zzmh;
     .locals 4
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v0

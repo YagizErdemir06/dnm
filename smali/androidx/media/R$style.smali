@@ -15,15 +15,15 @@
 
 
 # static fields
-.field public static final TextAppearance_Compat_Notification_Info_Media:I = 0x7f1502c6
+.field public static final TextAppearance_Compat_Notification_Info_Media:I = 0x7f1401d5
 
-.field public static final TextAppearance_Compat_Notification_Line2_Media:I = 0x7f1502c8
+.field public static final TextAppearance_Compat_Notification_Line2_Media:I = 0x7f1401d7
 
-.field public static final TextAppearance_Compat_Notification_Media:I = 0x7f1502c9
+.field public static final TextAppearance_Compat_Notification_Media:I = 0x7f1401d8
 
-.field public static final TextAppearance_Compat_Notification_Time_Media:I = 0x7f1502cb
+.field public static final TextAppearance_Compat_Notification_Time_Media:I = 0x7f1401da
 
-.field public static final TextAppearance_Compat_Notification_Title_Media:I = 0x7f1502cd
+.field public static final TextAppearance_Compat_Notification_Title_Media:I = 0x7f1401dc
 
 
 # direct methods

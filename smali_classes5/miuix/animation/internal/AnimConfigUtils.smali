@@ -7,6 +7,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,6 +18,7 @@
 
     float-to-double v0, p0
 
+    .line 1
     invoke-static {v0, v1}, Lmiuix/animation/internal/AnimValueUtils;->isInvalid(D)Z
 
     move-result v0
@@ -28,6 +30,7 @@
     :cond_0
     float-to-double v0, p1
 
+    .line 2
     invoke-static {v0, v1}, Lmiuix/animation/internal/AnimValueUtils;->isInvalid(D)Z
 
     move-result v0
@@ -36,6 +39,7 @@
 
     return p0
 
+    .line 3
     :cond_1
     invoke-static {p0, p1}, Ljava/lang/Math;->max(FF)F
 
@@ -47,18 +51,24 @@
 .method public static getDelay(Lmiuix/animation/base/AnimConfig;Lmiuix/animation/base/AnimSpecialConfig;)J
     .locals 2
 
-    const-wide/16 v0, 0x0
+    .line 1
+    iget-wide v0, p0, Lmiuix/animation/base/AnimConfig;->delay:J
 
     if-eqz p1, :cond_0
 
     iget-wide p0, p1, Lmiuix/animation/base/AnimConfig;->delay:J
 
-    invoke-static {v0, v1, p0, p1}, Ljava/lang/Math;->max(JJ)J
-
-    move-result-wide v0
+    goto :goto_0
 
     :cond_0
-    return-wide v0
+    const-wide/16 p0, 0x0
+
+    :goto_0
+    invoke-static {v0, v1, p0, p1}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide p0
+
+    return-wide p0
 .end method
 
 .method public static getEase(Lmiuix/animation/base/AnimConfig;Lmiuix/animation/base/AnimSpecialConfig;)Lmiuix/animation/utils/EaseManager$EaseStyle;
@@ -66,6 +76,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     iget-object p1, p1, Lmiuix/animation/base/AnimConfig;->ease:Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     if-eqz p1, :cond_0
@@ -76,12 +87,14 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object p1, p0, Lmiuix/animation/base/AnimConfig;->ease:Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     :goto_0
     if-nez p1, :cond_1
 
+    .line 3
     sget-object p1, Lmiuix/animation/base/AnimConfig;->sDefEase:Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     :cond_1
@@ -93,20 +106,23 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     iget v0, p1, Lmiuix/animation/base/AnimConfig;->fromSpeed:F
 
     float-to-double v0, v0
 
-    invoke-static {v0, v1}, Lmiuix/animation/internal/AnimValueUtils;->isValid(D)Z
+    invoke-static {v0, v1}, Lmiuix/animation/internal/AnimValueUtils;->isInvalid(D)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
+    .line 2
     iget p0, p1, Lmiuix/animation/base/AnimConfig;->fromSpeed:F
 
     return p0
 
+    .line 3
     :cond_0
     iget p0, p0, Lmiuix/animation/base/AnimConfig;->fromSpeed:F
 
@@ -116,6 +132,7 @@
 .method public static getTintMode(Lmiuix/animation/base/AnimConfig;Lmiuix/animation/base/AnimSpecialConfig;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lmiuix/animation/base/AnimConfig;->tintMode:I
 
     if-eqz p1, :cond_0

@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/app/AlertController$AlertParams$4;
+.class public Landroidx/appcompat/app/AlertController$AlertParams$4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,17 +18,18 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/appcompat/app/AlertController$AlertParams;
+.field public final synthetic this$0:Landroidx/appcompat/app/AlertController$AlertParams;
 
-.field final synthetic val$dialog:Landroidx/appcompat/app/AlertController;
+.field public final synthetic val$dialog:Landroidx/appcompat/app/AlertController;
 
-.field final synthetic val$listView:Landroidx/appcompat/app/AlertController$RecycleListView;
+.field public final synthetic val$listView:Landroidx/appcompat/app/AlertController$RecycleListView;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/appcompat/app/AlertController$AlertParams;Landroidx/appcompat/app/AlertController$RecycleListView;Landroidx/appcompat/app/AlertController;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/app/AlertController$AlertParams$4;->this$0:Landroidx/appcompat/app/AlertController$AlertParams;
 
     iput-object p2, p0, Landroidx/appcompat/app/AlertController$AlertParams$4;->val$listView:Landroidx/appcompat/app/AlertController$RecycleListView;
@@ -54,20 +55,23 @@
         }
     .end annotation
 
+    .line 1
     iget-object p1, p0, Landroidx/appcompat/app/AlertController$AlertParams$4;->this$0:Landroidx/appcompat/app/AlertController$AlertParams;
 
     iget-object p1, p1, Landroidx/appcompat/app/AlertController$AlertParams;->mCheckedItems:[Z
 
     if-eqz p1, :cond_0
 
+    .line 2
     iget-object p2, p0, Landroidx/appcompat/app/AlertController$AlertParams$4;->val$listView:Landroidx/appcompat/app/AlertController$RecycleListView;
 
-    invoke-virtual {p2, p3}, Landroid/widget/AbsListView;->isItemChecked(I)Z
+    invoke-virtual {p2, p3}, Landroid/widget/ListView;->isItemChecked(I)Z
 
     move-result p2
 
     aput-boolean p2, p1, p3
 
+    .line 3
     :cond_0
     iget-object p1, p0, Landroidx/appcompat/app/AlertController$AlertParams$4;->this$0:Landroidx/appcompat/app/AlertController$AlertParams;
 
@@ -79,10 +83,12 @@
 
     iget-object p0, p0, Landroidx/appcompat/app/AlertController$AlertParams$4;->val$listView:Landroidx/appcompat/app/AlertController$RecycleListView;
 
-    invoke-virtual {p0, p3}, Landroid/widget/AbsListView;->isItemChecked(I)Z
+    .line 4
+    invoke-virtual {p0, p3}, Landroid/widget/ListView;->isItemChecked(I)Z
 
     move-result p0
 
+    .line 5
     invoke-interface {p1, p2, p3, p0}, Landroid/content/DialogInterface$OnMultiChoiceClickListener;->onClick(Landroid/content/DialogInterface;IZ)V
 
     return-void

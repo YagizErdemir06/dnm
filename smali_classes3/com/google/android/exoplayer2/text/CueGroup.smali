@@ -38,6 +38,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/text/CueGroup;
 
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
@@ -48,9 +49,8 @@
 
     sput-object v0, Lcom/google/android/exoplayer2/text/CueGroup;->EMPTY:Lcom/google/android/exoplayer2/text/CueGroup;
 
-    new-instance v0, Lcom/google/android/exoplayer2/text/b;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/text/b;-><init>()V
+    .line 2
+    sget-object v0, Ld/j/a/b/w2/b;->a:Ld/j/a/b/w2/b;
 
     sput-object v0, Lcom/google/android/exoplayer2/text/CueGroup;->CREATOR:Lcom/google/android/exoplayer2/Bundleable$Creator;
 
@@ -68,8 +68,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object p1
@@ -103,12 +105,14 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->builder()Lcom/google/common/collect/ImmutableList$Builder;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
+    .line 2
     :goto_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -116,6 +120,7 @@
 
     if-ge v1, v2, :cond_1
 
+    .line 3
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -128,6 +133,7 @@
 
     goto :goto_1
 
+    .line 4
     :cond_0
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -142,6 +148,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     invoke-virtual {v0}, Lcom/google/common/collect/ImmutableList$Builder;->build()Lcom/google/common/collect/ImmutableList;
 
@@ -155,6 +162,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {v0}, Lcom/google/android/exoplayer2/text/CueGroup;->keyForField(I)Ljava/lang/String;
 
     move-result-object v0
@@ -165,12 +173,14 @@
 
     if-nez p0, :cond_0
 
+    .line 2
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
 
     move-result-object p0
 
     goto :goto_0
 
+    .line 3
     :cond_0
     sget-object v0, Lcom/google/android/exoplayer2/text/Cue;->CREATOR:Lcom/google/android/exoplayer2/Bundleable$Creator;
 
@@ -178,6 +188,7 @@
 
     move-result-object p0
 
+    .line 4
     :goto_0
     new-instance v0, Lcom/google/android/exoplayer2/text/CueGroup;
 
@@ -191,6 +202,7 @@
 
     const/16 v0, 0x24
 
+    .line 1
     invoke-static {p0, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
     move-result-object p0
@@ -203,12 +215,14 @@
 .method public toBundle()Landroid/os/Bundle;
     .locals 2
 
+    .line 1
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-static {v1}, Lcom/google/android/exoplayer2/text/CueGroup;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -223,6 +237,7 @@
 
     move-result-object p0
 
+    .line 3
     invoke-virtual {v0, v1, p0}, Landroid/os/Bundle;->putParcelableArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
     return-object v0

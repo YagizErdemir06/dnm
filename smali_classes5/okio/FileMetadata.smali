@@ -4,18 +4,23 @@
 
 
 # annotations
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u00008\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0002\u0008\u0004\n\u0002\u0010$\n\u0002\u0008\u0003\n\u0002\u0010\u000e\n\u0002\u0008\u0012\u0018\u00002\u00020\u0001Bq\u0012\u0008\u0008\u0002\u0010\u0008\u001a\u00020\u0007\u0012\u0008\u0008\u0002\u0010\t\u001a\u00020\u0007\u0012\n\u0008\u0002\u0010\u000b\u001a\u0004\u0018\u00010\n\u0012\n\u0008\u0002\u0010\r\u001a\u0004\u0018\u00010\u000c\u0012\n\u0008\u0002\u0010\u000e\u001a\u0004\u0018\u00010\u000c\u0012\n\u0008\u0002\u0010\u000f\u001a\u0004\u0018\u00010\u000c\u0012\n\u0008\u0002\u0010\u0010\u001a\u0004\u0018\u00010\u000c\u0012\u0018\u0008\u0002\u0010\u0012\u001a\u0012\u0012\u0008\u0012\u0006\u0012\u0002\u0008\u00030\u0003\u0012\u0004\u0012\u00020\u00010\u0011\u00a2\u0006\u0004\u0008%\u0010&J)\u0010\u0005\u001a\u0004\u0018\u00018\u0000\"\u0008\u0008\u0000\u0010\u0002*\u00020\u00012\u000e\u0010\u0004\u001a\n\u0012\u0006\u0008\u0001\u0012\u00028\u00000\u0003\u00a2\u0006\u0004\u0008\u0005\u0010\u0006Jw\u0010\u0013\u001a\u00020\u00002\u0008\u0008\u0002\u0010\u0008\u001a\u00020\u00072\u0008\u0008\u0002\u0010\t\u001a\u00020\u00072\n\u0008\u0002\u0010\u000b\u001a\u0004\u0018\u00010\n2\n\u0008\u0002\u0010\r\u001a\u0004\u0018\u00010\u000c2\n\u0008\u0002\u0010\u000e\u001a\u0004\u0018\u00010\u000c2\n\u0008\u0002\u0010\u000f\u001a\u0004\u0018\u00010\u000c2\n\u0008\u0002\u0010\u0010\u001a\u0004\u0018\u00010\u000c2\u0018\u0008\u0002\u0010\u0012\u001a\u0012\u0012\u0008\u0012\u0006\u0012\u0002\u0008\u00030\u0003\u0012\u0004\u0012\u00020\u00010\u0011\u00a2\u0006\u0004\u0008\u0013\u0010\u0014J\u0008\u0010\u0016\u001a\u00020\u0015H\u0016R\u0017\u0010\u0008\u001a\u00020\u00078\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0008\u0010\u0017\u001a\u0004\u0008\u0008\u0010\u0018R\u0017\u0010\t\u001a\u00020\u00078\u0006\u00a2\u0006\u000c\n\u0004\u0008\t\u0010\u0017\u001a\u0004\u0008\t\u0010\u0018R\u0019\u0010\u000b\u001a\u0004\u0018\u00010\n8\u0006\u00a2\u0006\u000c\n\u0004\u0008\u000b\u0010\u0019\u001a\u0004\u0008\u001a\u0010\u001bR\u0019\u0010\r\u001a\u0004\u0018\u00010\u000c8\u0006\u00a2\u0006\u000c\n\u0004\u0008\r\u0010\u001c\u001a\u0004\u0008\u001d\u0010\u001eR\u0019\u0010\u000e\u001a\u0004\u0018\u00010\u000c8\u0006\u00a2\u0006\u000c\n\u0004\u0008\u000e\u0010\u001c\u001a\u0004\u0008\u001f\u0010\u001eR\u0019\u0010\u000f\u001a\u0004\u0018\u00010\u000c8\u0006\u00a2\u0006\u000c\n\u0004\u0008\u000f\u0010\u001c\u001a\u0004\u0008 \u0010\u001eR\u0019\u0010\u0010\u001a\u0004\u0018\u00010\u000c8\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0010\u0010\u001c\u001a\u0004\u0008!\u0010\u001eR\'\u0010\u0012\u001a\u0012\u0012\u0008\u0012\u0006\u0012\u0002\u0008\u00030\u0003\u0012\u0004\u0012\u00020\u00010\u00118\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0012\u0010\"\u001a\u0004\u0008#\u0010$\u00a8\u0006\'"
+        "\u00008\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0002\u0008\u0004\n\u0002\u0010$\n\u0002\u0008\u0003\n\u0002\u0010\u000e\n\u0002\u0008\u0013\u0018\u00002\u00020\u0001Bq\u0012\u0008\u0008\u0002\u0010\u0008\u001a\u00020\u0007\u0012\u0008\u0008\u0002\u0010\t\u001a\u00020\u0007\u0012\n\u0008\u0002\u0010\u000b\u001a\u0004\u0018\u00010\n\u0012\n\u0008\u0002\u0010\r\u001a\u0004\u0018\u00010\u000c\u0012\n\u0008\u0002\u0010\u000e\u001a\u0004\u0018\u00010\u000c\u0012\n\u0008\u0002\u0010\u000f\u001a\u0004\u0018\u00010\u000c\u0012\n\u0008\u0002\u0010\u0010\u001a\u0004\u0018\u00010\u000c\u0012\u0018\u0008\u0002\u0010\u0012\u001a\u0012\u0012\u0008\u0012\u0006\u0012\u0002\u0008\u00030\u0003\u0012\u0004\u0012\u00020\u00010\u0011\u00a2\u0006\u0004\u0008&\u0010\'J)\u0010\u0005\u001a\u0004\u0018\u00018\u0000\"\u0008\u0008\u0000\u0010\u0002*\u00020\u00012\u000e\u0010\u0004\u001a\n\u0012\u0006\u0008\u0001\u0012\u00028\u00000\u0003\u00a2\u0006\u0004\u0008\u0005\u0010\u0006Jw\u0010\u0013\u001a\u00020\u00002\u0008\u0008\u0002\u0010\u0008\u001a\u00020\u00072\u0008\u0008\u0002\u0010\t\u001a\u00020\u00072\n\u0008\u0002\u0010\u000b\u001a\u0004\u0018\u00010\n2\n\u0008\u0002\u0010\r\u001a\u0004\u0018\u00010\u000c2\n\u0008\u0002\u0010\u000e\u001a\u0004\u0018\u00010\u000c2\n\u0008\u0002\u0010\u000f\u001a\u0004\u0018\u00010\u000c2\n\u0008\u0002\u0010\u0010\u001a\u0004\u0018\u00010\u000c2\u0018\u0008\u0002\u0010\u0012\u001a\u0012\u0012\u0008\u0012\u0006\u0012\u0002\u0008\u00030\u0003\u0012\u0004\u0012\u00020\u00010\u0011\u00a2\u0006\u0004\u0008\u0013\u0010\u0014J\u000f\u0010\u0016\u001a\u00020\u0015H\u0016\u00a2\u0006\u0004\u0008\u0016\u0010\u0017R)\u0010\u0012\u001a\u0012\u0012\u0008\u0012\u0006\u0012\u0002\u0008\u00030\u0003\u0012\u0004\u0012\u00020\u00010\u00118\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0012\u0010\u0018\u001a\u0004\u0008\u0019\u0010\u001aR\u001b\u0010\u0010\u001a\u0004\u0018\u00010\u000c8\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0010\u0010\u001b\u001a\u0004\u0008\u001c\u0010\u001dR\u0019\u0010\t\u001a\u00020\u00078\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\t\u0010\u001e\u001a\u0004\u0008\t\u0010\u001fR\u001b\u0010\u000b\u001a\u0004\u0018\u00010\n8\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\u000b\u0010 \u001a\u0004\u0008!\u0010\"R\u0019\u0010\u0008\u001a\u00020\u00078\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0008\u0010\u001e\u001a\u0004\u0008\u0008\u0010\u001fR\u001b\u0010\r\u001a\u0004\u0018\u00010\u000c8\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\r\u0010\u001b\u001a\u0004\u0008#\u0010\u001dR\u001b\u0010\u000f\u001a\u0004\u0018\u00010\u000c8\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\u000f\u0010\u001b\u001a\u0004\u0008$\u0010\u001dR\u001b\u0010\u000e\u001a\u0004\u0018\u00010\u000c8\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\u000e\u0010\u001b\u001a\u0004\u0008%\u0010\u001d\u00a8\u0006("
     }
     d2 = {
         "Lokio/FileMetadata;",
         "",
         "T",
-        "Ltn/d;",
+        "Lh/i3/d;",
         "type",
         "extra",
-        "(Ltn/d;)Ljava/lang/Object;",
+        "(Lh/i3/d;)Ljava/lang/Object;",
         "",
         "isRegularFile",
         "isDirectory",
@@ -32,20 +37,21 @@
         "(ZZLokio/Path;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/util/Map;)Lokio/FileMetadata;",
         "",
         "toString",
+        "()Ljava/lang/String;",
+        "Ljava/util/Map;",
+        "getExtras",
+        "()Ljava/util/Map;",
+        "Ljava/lang/Long;",
+        "getLastAccessedAtMillis",
+        "()Ljava/lang/Long;",
         "Z",
         "()Z",
         "Lokio/Path;",
         "getSymlinkTarget",
         "()Lokio/Path;",
-        "Ljava/lang/Long;",
         "getSize",
-        "()Ljava/lang/Long;",
-        "getCreatedAtMillis",
         "getLastModifiedAtMillis",
-        "getLastAccessedAtMillis",
-        "Ljava/util/Map;",
-        "getExtras",
-        "()Ljava/util/Map;",
+        "getCreatedAtMillis",
         "<init>",
         "(ZZLokio/Path;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/util/Map;)V",
         "okio"
@@ -61,7 +67,7 @@
 
 # instance fields
 .field private final createdAtMillis:Ljava/lang/Long;
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 .end field
 
@@ -69,14 +75,14 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
-            "Ltn/d<",
+            "Lh/i3/d<",
             "*>;",
             "Ljava/lang/Object;",
             ">;"
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -85,22 +91,22 @@
 .field private final isRegularFile:Z
 
 .field private final lastAccessedAtMillis:Ljava/lang/Long;
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 .end field
 
 .field private final lastModifiedAtMillis:Ljava/lang/Long;
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 .end field
 
 .field private final size:Ljava/lang/Long;
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 .end field
 
 .field private final symlinkTarget:Lokio/Path;
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 .end field
 
@@ -131,7 +137,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v10}, Lokio/FileMetadata;-><init>(ZZLokio/Path;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/util/Map;ILkotlin/jvm/internal/w;)V
+    invoke-direct/range {v0 .. v10}, Lokio/FileMetadata;-><init>(ZZLokio/Path;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/util/Map;ILh/d3/x/w;)V
 
     return-void
 .end method
@@ -139,27 +145,27 @@
 .method public constructor <init>(ZZLokio/Path;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/util/Map;)V
     .locals 1
     .param p3    # Lokio/Path;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
     .param p4    # Ljava/lang/Long;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
     .param p5    # Ljava/lang/Long;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
     .param p6    # Ljava/lang/Long;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
     .param p7    # Ljava/lang/Long;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
     .param p8    # Ljava/util/Map;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
@@ -171,7 +177,7 @@
             "Ljava/lang/Long;",
             "Ljava/lang/Long;",
             "Ljava/util/Map<",
-            "Ltn/d<",
+            "Lh/i3/d<",
             "*>;+",
             "Ljava/lang/Object;",
             ">;)V"
@@ -180,7 +186,7 @@
 
     const-string v0, "extras"
 
-    invoke-static {p8, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p8, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -207,7 +213,7 @@
     iput-object p7, p0, Lokio/FileMetadata;->lastAccessedAtMillis:Ljava/lang/Long;
 
     .line 9
-    invoke-static {p8}, Lpm/c1;->D0(Ljava/util/Map;)Ljava/util/Map;
+    invoke-static {p8}, Lh/t2/c1;->D0(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object p1
 
@@ -216,7 +222,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(ZZLokio/Path;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/util/Map;ILkotlin/jvm/internal/w;)V
+.method public synthetic constructor <init>(ZZLokio/Path;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/util/Map;ILh/d3/x/w;)V
     .locals 1
 
     and-int/lit8 p10, p9, 0x1
@@ -277,7 +283,7 @@
     if-eqz p9, :cond_7
 
     .line 10
-    invoke-static {}, Lpm/c1;->z()Ljava/util/Map;
+    invoke-static {}, Lh/t2/c1;->z()Ljava/util/Map;
 
     move-result-object p8
 
@@ -299,6 +305,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 1
     iget-boolean v2, v0, Lokio/FileMetadata;->isRegularFile:Z
 
     goto :goto_0
@@ -419,27 +426,27 @@
 .method public final copy(ZZLokio/Path;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/util/Map;)Lokio/FileMetadata;
     .locals 10
     .param p3    # Lokio/Path;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
     .param p4    # Ljava/lang/Long;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
     .param p5    # Ljava/lang/Long;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
     .param p6    # Ljava/lang/Long;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
     .param p7    # Ljava/lang/Long;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
     .param p8    # Ljava/util/Map;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
@@ -451,7 +458,7 @@
             "Ljava/lang/Long;",
             "Ljava/lang/Long;",
             "Ljava/util/Map<",
-            "Ltn/d<",
+            "Lh/i3/d<",
             "*>;+",
             "Ljava/lang/Object;",
             ">;)",
@@ -459,15 +466,16 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "extras"
 
     move-object/from16 v9, p8
 
-    invoke-static {v9, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     new-instance v0, Lokio/FileMetadata;
 
     move-object v1, v0
@@ -491,10 +499,10 @@
     return-object v0
 .end method
 
-.method public final extra(Ltn/d;)Ljava/lang/Object;
+.method public final extra(Lh/i3/d;)Ljava/lang/Object;
     .locals 1
-    .param p1    # Ltn/d;
-        .annotation build Ljv/d;
+    .param p1    # Lh/i3/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
@@ -502,18 +510,19 @@
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Ltn/d<",
+            "Lh/i3/d<",
             "+TT;>;)TT;"
         }
     .end annotation
 
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
     const-string v0, "type"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-object p0, p0, Lokio/FileMetadata;->extras:Ljava/util/Map;
 
     invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -526,8 +535,9 @@
 
     return-object p0
 
+    .line 2
     :cond_0
-    invoke-static {p1, p0}, Ltn/e;->a(Ltn/d;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1, p0}, Lh/i3/e;->a(Lh/i3/d;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -536,9 +546,10 @@
 
 .method public final getCreatedAtMillis()Ljava/lang/Long;
     .locals 0
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lokio/FileMetadata;->createdAtMillis:Ljava/lang/Long;
 
     return-object p0
@@ -550,16 +561,17 @@
         value = {
             "()",
             "Ljava/util/Map<",
-            "Ltn/d<",
+            "Lh/i3/d<",
             "*>;",
             "Ljava/lang/Object;",
             ">;"
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lokio/FileMetadata;->extras:Ljava/util/Map;
 
     return-object p0
@@ -567,9 +579,10 @@
 
 .method public final getLastAccessedAtMillis()Ljava/lang/Long;
     .locals 0
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lokio/FileMetadata;->lastAccessedAtMillis:Ljava/lang/Long;
 
     return-object p0
@@ -577,9 +590,10 @@
 
 .method public final getLastModifiedAtMillis()Ljava/lang/Long;
     .locals 0
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lokio/FileMetadata;->lastModifiedAtMillis:Ljava/lang/Long;
 
     return-object p0
@@ -587,9 +601,10 @@
 
 .method public final getSize()Ljava/lang/Long;
     .locals 0
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lokio/FileMetadata;->size:Ljava/lang/Long;
 
     return-object p0
@@ -597,9 +612,10 @@
 
 .method public final getSymlinkTarget()Lokio/Path;
     .locals 0
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lokio/FileMetadata;->symlinkTarget:Lokio/Path;
 
     return-object p0
@@ -608,6 +624,7 @@
 .method public final isDirectory()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lokio/FileMetadata;->isDirectory:Z
 
     return p0
@@ -616,6 +633,7 @@
 .method public final isRegularFile()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lokio/FileMetadata;->isRegularFile:Z
 
     return p0
@@ -623,13 +641,15 @@
 
 .method public toString()Ljava/lang/String;
     .locals 9
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 2
     iget-boolean v1, p0, Lokio/FileMetadata;->isRegularFile:Z
 
     if-eqz v1, :cond_0
@@ -638,6 +658,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
+    .line 3
     :cond_0
     iget-boolean v1, p0, Lokio/FileMetadata;->isDirectory:Z
 
@@ -647,6 +668,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
+    .line 4
     :cond_1
     iget-object v1, p0, Lokio/FileMetadata;->size:Ljava/lang/Long;
 
@@ -654,12 +676,13 @@
 
     const-string v2, "byteCount="
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v2, v1}, Lh/d3/x/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
+    .line 5
     :cond_2
     iget-object v1, p0, Lokio/FileMetadata;->createdAtMillis:Ljava/lang/Long;
 
@@ -667,12 +690,13 @@
 
     const-string v2, "createdAt="
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v2, v1}, Lh/d3/x/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
+    .line 6
     :cond_3
     iget-object v1, p0, Lokio/FileMetadata;->lastModifiedAtMillis:Ljava/lang/Long;
 
@@ -680,12 +704,13 @@
 
     const-string v2, "lastModifiedAt="
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v2, v1}, Lh/d3/x/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
+    .line 7
     :cond_4
     iget-object v1, p0, Lokio/FileMetadata;->lastAccessedAtMillis:Ljava/lang/Long;
 
@@ -693,12 +718,13 @@
 
     const-string v2, "lastAccessedAt="
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v2, v1}, Lh/d3/x/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
+    .line 8
     :cond_5
     iget-object v1, p0, Lokio/FileMetadata;->extras:Ljava/util/Map;
 
@@ -710,23 +736,17 @@
 
     if-eqz v1, :cond_6
 
-    const-string v1, "extras="
-
     iget-object p0, p0, Lokio/FileMetadata;->extras:Ljava/util/Map;
 
-    invoke-static {v1, p0}, Lkotlin/jvm/internal/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
+    const-string v1, "extras="
+
+    invoke-static {v1, p0}, Lh/d3/x/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
     invoke-interface {v0, p0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     :cond_6
-    const-string v1, ", "
-
-    const-string v2, "FileMetadata("
-
-    const-string v3, ")"
-
     const/4 v4, 0x0
 
     const/4 v5, 0x0
@@ -737,7 +757,14 @@
 
     const/4 v8, 0x0
 
-    invoke-static/range {v0 .. v8}, Lpm/g0;->h3(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Ljn/l;ILjava/lang/Object;)Ljava/lang/String;
+    const-string v1, ", "
+
+    const-string v2, "FileMetadata("
+
+    const-string v3, ")"
+
+    .line 9
+    invoke-static/range {v0 .. v8}, Lh/t2/g0;->h3(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lh/d3/w/l;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 

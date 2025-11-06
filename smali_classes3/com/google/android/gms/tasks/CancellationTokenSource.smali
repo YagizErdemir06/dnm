@@ -27,6 +27,7 @@
 .method public cancel()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/tasks/CancellationTokenSource;->zza:Lcom/google/android/gms/tasks/zzb;
 
     invoke-virtual {p0}, Lcom/google/android/gms/tasks/zzb;->zza()V

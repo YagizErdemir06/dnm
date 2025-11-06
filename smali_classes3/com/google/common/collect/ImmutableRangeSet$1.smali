@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ImmutableRangeSet$1;
+.class public Lcom/google/common/collect/ImmutableRangeSet$1;
 .super Lcom/google/common/collect/ImmutableList;
 .source "SourceFile"
 
@@ -23,19 +23,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/ImmutableRangeSet;
+.field public final synthetic this$0:Lcom/google/common/collect/ImmutableRangeSet;
 
-.field final synthetic val$fromIndex:I
+.field public final synthetic val$fromIndex:I
 
-.field final synthetic val$length:I
+.field public final synthetic val$length:I
 
-.field final synthetic val$range:Lcom/google/common/collect/Range;
+.field public final synthetic val$range:Lcom/google/common/collect/Range;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/ImmutableRangeSet;IILcom/google/common/collect/Range;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/ImmutableRangeSet$1;->this$0:Lcom/google/common/collect/ImmutableRangeSet;
 
     iput p2, p0, Lcom/google/common/collect/ImmutableRangeSet$1;->val$length:I
@@ -147,6 +148,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/collect/ImmutableRangeSet$1;->val$length:I
 
     return p0

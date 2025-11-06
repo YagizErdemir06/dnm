@@ -13,27 +13,28 @@
 
 
 # instance fields
-.field appid:Ljava/lang/String;
+.field public appid:Ljava/lang/String;
 
-.field cUserId:Ljava/lang/String;
+.field public cUserId:Ljava/lang/String;
 
-.field domain:Ljava/lang/String;
+.field public domain:Ljava/lang/String;
 
-.field serviceToken:Ljava/lang/String;
+.field public serviceToken:Ljava/lang/String;
 
-.field sid:Ljava/lang/String;
+.field public sid:Ljava/lang/String;
 
-.field ssecurity:Ljava/lang/String;
+.field public ssecurity:Ljava/lang/String;
 
-.field timeDiff:Ljava/lang/String;
+.field public timeDiff:Ljava/lang/String;
 
-.field userId:Ljava/lang/String;
+.field public userId:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -136,14 +137,14 @@
     :catch_0
     move-exception p0
 
-    const-string v1, "IdentifyParam"
-
     .line 2
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-static {v1, v2, p0}, Lcom/xiaomi/idm/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    const-string v2, "IdentifyParam"
+
+    invoke-static {v2, v1, p0}, Lcom/xiaomi/idm/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 3
     :goto_0
@@ -159,6 +160,7 @@
 .method public getAppid()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/identify/IdentifyParam;->appid:Ljava/lang/String;
 
     return-object p0
@@ -167,6 +169,7 @@
 .method public getDomain()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/identify/IdentifyParam;->domain:Ljava/lang/String;
 
     return-object p0
@@ -175,6 +178,7 @@
 .method public getServiceToken()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/identify/IdentifyParam;->serviceToken:Ljava/lang/String;
 
     return-object p0
@@ -183,6 +187,7 @@
 .method public getSid()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/identify/IdentifyParam;->sid:Ljava/lang/String;
 
     return-object p0
@@ -191,6 +196,7 @@
 .method public getSsecurity()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/identify/IdentifyParam;->ssecurity:Ljava/lang/String;
 
     return-object p0
@@ -199,6 +205,7 @@
 .method public getTimeDiff()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/identify/IdentifyParam;->timeDiff:Ljava/lang/String;
 
     return-object p0
@@ -207,6 +214,7 @@
 .method public getUserId()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/identify/IdentifyParam;->userId:Ljava/lang/String;
 
     return-object p0
@@ -215,6 +223,7 @@
 .method public getcUserId()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/identify/IdentifyParam;->cUserId:Ljava/lang/String;
 
     return-object p0
@@ -223,6 +232,7 @@
 .method public setAppid(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/identify/IdentifyParam;->appid:Ljava/lang/String;
 
     return-void
@@ -231,6 +241,7 @@
 .method public setDomain(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/identify/IdentifyParam;->domain:Ljava/lang/String;
 
     return-void
@@ -239,6 +250,7 @@
 .method public setServiceToken(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/identify/IdentifyParam;->serviceToken:Ljava/lang/String;
 
     return-void
@@ -247,6 +259,7 @@
 .method public setSid(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/identify/IdentifyParam;->sid:Ljava/lang/String;
 
     return-void
@@ -255,6 +268,7 @@
 .method public setSsecurity(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/identify/IdentifyParam;->ssecurity:Ljava/lang/String;
 
     return-void
@@ -263,6 +277,7 @@
 .method public setTimeDiff(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/identify/IdentifyParam;->timeDiff:Ljava/lang/String;
 
     return-void
@@ -271,6 +286,7 @@
 .method public setUserId(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/identify/IdentifyParam;->userId:Ljava/lang/String;
 
     return-void
@@ -279,6 +295,7 @@
 .method public setcUserId(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/identify/IdentifyParam;->cUserId:Ljava/lang/String;
 
     return-void
@@ -287,65 +304,83 @@
 .method public toProto()Lcom/xiaomi/idm/compat/proto/IPCParam$IdentifyParam;
     .locals 2
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/idm/compat/proto/IPCParam$IdentifyParam;->newBuilder()Lcom/xiaomi/idm/compat/proto/IPCParam$IdentifyParam$Builder;
 
     move-result-object v0
 
+    .line 2
     iget-object v1, p0, Lcom/xiaomi/idm/identify/IdentifyParam;->serviceToken:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
+    .line 3
     invoke-virtual {v0, v1}, Lcom/xiaomi/idm/compat/proto/IPCParam$IdentifyParam$Builder;->setServiceToken(Ljava/lang/String;)Lcom/xiaomi/idm/compat/proto/IPCParam$IdentifyParam$Builder;
 
+    .line 4
     :cond_0
     iget-object v1, p0, Lcom/xiaomi/idm/identify/IdentifyParam;->userId:Ljava/lang/String;
 
     if-eqz v1, :cond_1
 
+    .line 5
     invoke-virtual {v0, v1}, Lcom/xiaomi/idm/compat/proto/IPCParam$IdentifyParam$Builder;->setUserId(Ljava/lang/String;)Lcom/xiaomi/idm/compat/proto/IPCParam$IdentifyParam$Builder;
 
+    .line 6
     :cond_1
     iget-object v1, p0, Lcom/xiaomi/idm/identify/IdentifyParam;->sid:Ljava/lang/String;
 
     if-eqz v1, :cond_2
 
+    .line 7
     invoke-virtual {v0, v1}, Lcom/xiaomi/idm/compat/proto/IPCParam$IdentifyParam$Builder;->setSid(Ljava/lang/String;)Lcom/xiaomi/idm/compat/proto/IPCParam$IdentifyParam$Builder;
 
+    .line 8
     :cond_2
     iget-object v1, p0, Lcom/xiaomi/idm/identify/IdentifyParam;->cUserId:Ljava/lang/String;
 
     if-eqz v1, :cond_3
 
+    .line 9
     invoke-virtual {v0, v1}, Lcom/xiaomi/idm/compat/proto/IPCParam$IdentifyParam$Builder;->setCUserId(Ljava/lang/String;)Lcom/xiaomi/idm/compat/proto/IPCParam$IdentifyParam$Builder;
 
+    .line 10
     :cond_3
     iget-object v1, p0, Lcom/xiaomi/idm/identify/IdentifyParam;->ssecurity:Ljava/lang/String;
 
     if-eqz v1, :cond_4
 
+    .line 11
     invoke-virtual {v0, v1}, Lcom/xiaomi/idm/compat/proto/IPCParam$IdentifyParam$Builder;->setSsecurity(Ljava/lang/String;)Lcom/xiaomi/idm/compat/proto/IPCParam$IdentifyParam$Builder;
 
+    .line 12
     :cond_4
     iget-object v1, p0, Lcom/xiaomi/idm/identify/IdentifyParam;->domain:Ljava/lang/String;
 
     if-eqz v1, :cond_5
 
+    .line 13
     invoke-virtual {v0, v1}, Lcom/xiaomi/idm/compat/proto/IPCParam$IdentifyParam$Builder;->setDomain(Ljava/lang/String;)Lcom/xiaomi/idm/compat/proto/IPCParam$IdentifyParam$Builder;
 
+    .line 14
     :cond_5
     iget-object v1, p0, Lcom/xiaomi/idm/identify/IdentifyParam;->timeDiff:Ljava/lang/String;
 
     if-eqz v1, :cond_6
 
+    .line 15
     invoke-virtual {v0, v1}, Lcom/xiaomi/idm/compat/proto/IPCParam$IdentifyParam$Builder;->setTimeDiff(Ljava/lang/String;)Lcom/xiaomi/idm/compat/proto/IPCParam$IdentifyParam$Builder;
 
+    .line 16
     :cond_6
     iget-object p0, p0, Lcom/xiaomi/idm/identify/IdentifyParam;->appid:Ljava/lang/String;
 
     if-eqz p0, :cond_7
 
+    .line 17
     invoke-virtual {v0, p0}, Lcom/xiaomi/idm/compat/proto/IPCParam$IdentifyParam$Builder;->setAppId(Ljava/lang/String;)Lcom/xiaomi/idm/compat/proto/IPCParam$IdentifyParam$Builder;
 
+    .line 18
     :cond_7
     invoke-virtual {v0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->build()Lcom/google/protobuf/GeneratedMessageLite;
 

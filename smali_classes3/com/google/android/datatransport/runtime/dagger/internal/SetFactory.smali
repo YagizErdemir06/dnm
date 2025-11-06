@@ -44,7 +44,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Ljava/util/Collection<",
             "TT;>;>;>;"
         }
@@ -55,7 +55,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lmm/c<",
+            "Lg/a/c<",
             "TT;>;>;"
         }
     .end annotation
@@ -66,6 +66,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
 
     move-result-object v0
@@ -85,10 +86,10 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lmm/c<",
+            "Lg/a/c<",
             "TT;>;>;",
             "Ljava/util/List<",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Ljava/util/Collection<",
             "TT;>;>;>;)V"
         }
@@ -127,6 +128,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/datatransport/runtime/dagger/internal/SetFactory$Builder;
 
     const/4 v1, 0x0
@@ -149,6 +151,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/android/datatransport/runtime/dagger/internal/SetFactory;->EMPTY_FACTORY:Lcom/google/android/datatransport/runtime/dagger/internal/Factory;
 
     return-object v0
@@ -217,9 +220,9 @@
 
     move-result-object v5
 
-    check-cast v5, Lmm/c;
+    check-cast v5, Lg/a/c;
 
-    invoke-interface {v5}, Lmm/c;->get()Ljava/lang/Object;
+    invoke-interface {v5}, Lg/a/c;->get()Ljava/lang/Object;
 
     move-result-object v5
 
@@ -264,9 +267,9 @@
 
     move-result-object v5
 
-    check-cast v5, Lmm/c;
+    check-cast v5, Lg/a/c;
 
-    invoke-interface {v5}, Lmm/c;->get()Ljava/lang/Object;
+    invoke-interface {v5}, Lg/a/c;->get()Ljava/lang/Object;
 
     move-result-object v5
 

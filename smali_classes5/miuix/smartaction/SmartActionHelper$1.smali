@@ -1,4 +1,4 @@
-.class Lmiuix/smartaction/SmartActionHelper$1;
+.class public Lmiuix/smartaction/SmartActionHelper$1;
 .super Landroid/view/ActionMode$Callback2;
 .source "SourceFile"
 
@@ -18,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroid/view/ActionMode$Callback2;-><init>()V
 
     return-void

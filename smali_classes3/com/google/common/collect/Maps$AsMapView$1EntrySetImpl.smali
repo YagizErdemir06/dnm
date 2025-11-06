@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Maps$AsMapView$1EntrySetImpl;
+.class public Lcom/google/common/collect/Maps$AsMapView$1EntrySetImpl;
 .super Lcom/google/common/collect/Maps$EntrySet;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/Maps$AsMapView;
+.field public final synthetic this$0:Lcom/google/common/collect/Maps$AsMapView;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/Maps$AsMapView;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/Maps$AsMapView$1EntrySetImpl;->this$0:Lcom/google/common/collect/Maps$AsMapView;
 
     invoke-direct {p0}, Lcom/google/common/collect/Maps$EntrySet;-><init>()V
@@ -49,6 +50,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Maps$AsMapView$1EntrySetImpl;->this$0:Lcom/google/common/collect/Maps$AsMapView;
 
     invoke-virtual {v0}, Lcom/google/common/collect/Maps$AsMapView;->backingSet()Ljava/util/Set;
@@ -76,6 +78,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Maps$AsMapView$1EntrySetImpl;->this$0:Lcom/google/common/collect/Maps$AsMapView;
 
     return-object p0

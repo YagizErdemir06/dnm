@@ -29,10 +29,13 @@
 .method public constructor <init>(Landroid/view/View;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/ui/AdOverlayInfo$Builder;->view:Landroid/view/View;
 
+    .line 3
     iput p2, p0, Lcom/google/android/exoplayer2/ui/AdOverlayInfo$Builder;->purpose:I
 
     return-void
@@ -43,6 +46,7 @@
 .method public build()Lcom/google/android/exoplayer2/ui/AdOverlayInfo;
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/ui/AdOverlayInfo;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/AdOverlayInfo$Builder;->view:Landroid/view/View;
@@ -63,6 +67,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/ui/AdOverlayInfo$Builder;->detailedReason:Ljava/lang/String;
 
     return-object p0

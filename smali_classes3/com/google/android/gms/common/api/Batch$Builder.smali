@@ -28,6 +28,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/util/ArrayList;
@@ -64,6 +65,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/common/api/BatchResultToken;
 
     iget-object v1, p0, Lcom/google/android/gms/common/api/Batch$Builder;->zaa:Ljava/util/List;
@@ -76,6 +78,7 @@
 
     iget-object p0, p0, Lcom/google/android/gms/common/api/Batch$Builder;->zaa:Ljava/util/List;
 
+    .line 2
     invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-object v0
@@ -86,6 +89,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/common/api/Batch;
 
     iget-object v1, p0, Lcom/google/android/gms/common/api/Batch$Builder;->zaa:Ljava/util/List;

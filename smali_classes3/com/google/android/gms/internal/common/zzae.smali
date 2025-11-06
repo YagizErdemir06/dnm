@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/common/zzae;
+.class public final Lcom/google/android/gms/internal/common/zzae;
 .super Lcom/google/android/gms/internal/common/zzz;
 .source "SourceFile"
 
@@ -11,6 +11,7 @@
 .method public constructor <init>(Lcom/google/android/gms/internal/common/zzag;I)V
     .locals 1
 
+    .line 1
     invoke-virtual {p1}, Ljava/util/AbstractCollection;->size()I
 
     move-result v0
@@ -27,6 +28,7 @@
 .method public final zza(I)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/internal/common/zzae;->zza:Lcom/google/android/gms/internal/common/zzag;
 
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;

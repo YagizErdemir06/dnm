@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/collect/ImmutableAsList;
+.class public abstract Lcom/google/common/collect/ImmutableAsList;
 .super Lcom/google/common/collect/ImmutableList;
 .source "SourceFile"
 
@@ -33,6 +33,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableList;-><init>()V
 
     return-void
@@ -49,6 +50,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/io/InvalidObjectException;
 
     const-string p1, "Use SerializedForm"
@@ -67,6 +69,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableAsList;->delegateCollection()Lcom/google/common/collect/ImmutableCollection;
 
     move-result-object p0
@@ -91,6 +94,7 @@
 .method public isEmpty()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableAsList;->delegateCollection()Lcom/google/common/collect/ImmutableCollection;
 
     move-result-object p0
@@ -105,6 +109,7 @@
 .method public isPartialView()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableAsList;->delegateCollection()Lcom/google/common/collect/ImmutableCollection;
 
     move-result-object p0
@@ -119,6 +124,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableAsList;->delegateCollection()Lcom/google/common/collect/ImmutableCollection;
 
     move-result-object p0
@@ -135,6 +141,7 @@
     .annotation build Lcom/google/common/annotations/GwtIncompatible;
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ImmutableAsList$SerializedForm;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableAsList;->delegateCollection()Lcom/google/common/collect/ImmutableCollection;

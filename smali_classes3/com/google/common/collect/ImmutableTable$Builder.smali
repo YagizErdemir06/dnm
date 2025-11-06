@@ -70,8 +70,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {}, Lcom/google/common/collect/Lists;->newArrayList()Ljava/util/ArrayList;
 
     move-result-object v0
@@ -93,6 +95,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableTable$Builder;->buildOrThrow()Lcom/google/common/collect/ImmutableTable;
 
     move-result-object p0
@@ -110,6 +113,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/ImmutableTable$Builder;->cells:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -122,6 +126,7 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/ImmutableTable$Builder;->cells:Ljava/util/List;
 
     iget-object v1, p0, Lcom/google/common/collect/ImmutableTable$Builder;->rowComparator:Ljava/util/Comparator;
@@ -134,6 +139,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance v0, Lcom/google/common/collect/SingletonImmutableTable;
 
@@ -149,6 +155,7 @@
 
     return-object v0
 
+    .line 4
     :cond_1
     invoke-static {}, Lcom/google/common/collect/ImmutableTable;->of()Lcom/google/common/collect/ImmutableTable;
 
@@ -172,6 +179,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/ImmutableTable$Builder;->cells:Ljava/util/List;
 
     iget-object p1, p1, Lcom/google/common/collect/ImmutableTable$Builder;->cells:Ljava/util/List;
@@ -198,6 +206,7 @@
 
     const-string v0, "columnComparator"
 
+    .line 1
     invoke-static {p1, v0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -226,6 +235,7 @@
 
     const-string v0, "rowComparator"
 
+    .line 1
     invoke-static {p1, v0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -351,6 +361,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Lcom/google/common/collect/Table;->cellSet()Ljava/util/Set;
 
     move-result-object p1
@@ -372,6 +383,7 @@
 
     check-cast v0, Lcom/google/common/collect/Table$Cell;
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/google/common/collect/ImmutableTable$Builder;->put(Lcom/google/common/collect/Table$Cell;)Lcom/google/common/collect/ImmutableTable$Builder;
 
     goto :goto_0

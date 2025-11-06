@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfe;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfe;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -20,6 +20,7 @@
 .method public final zzb(Ljava/lang/Class;)Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfl;
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string p1, "This should never be called."

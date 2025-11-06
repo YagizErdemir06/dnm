@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/collect/AbstractIndexedListIterator;
+.class public abstract Lcom/google/common/collect/AbstractIndexedListIterator;
 .super Lcom/google/common/collect/UnmodifiableListIterator;
 .source "SourceFile"
 
@@ -73,6 +73,7 @@
 .method public final hasNext()Z
     .locals 1
 
+    .line 1
     iget v0, p0, Lcom/google/common/collect/AbstractIndexedListIterator;->position:I
 
     iget p0, p0, Lcom/google/common/collect/AbstractIndexedListIterator;->size:I
@@ -93,6 +94,7 @@
 .method public final hasPrevious()Z
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/collect/AbstractIndexedListIterator;->position:I
 
     if-lez p0, :cond_0
@@ -119,12 +121,14 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractIndexedListIterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget v0, p0, Lcom/google/common/collect/AbstractIndexedListIterator;->position:I
 
     add-int/lit8 v1, v0, 0x1
@@ -137,6 +141,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/util/NoSuchElementException;
 
@@ -148,6 +153,7 @@
 .method public final nextIndex()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/collect/AbstractIndexedListIterator;->position:I
 
     return p0
@@ -164,12 +170,14 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractIndexedListIterator;->hasPrevious()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget v0, p0, Lcom/google/common/collect/AbstractIndexedListIterator;->position:I
 
     add-int/lit8 v0, v0, -0x1
@@ -182,6 +190,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/util/NoSuchElementException;
 
@@ -193,6 +202,7 @@
 .method public final previousIndex()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/collect/AbstractIndexedListIterator;->position:I
 
     add-int/lit8 p0, p0, -0x1

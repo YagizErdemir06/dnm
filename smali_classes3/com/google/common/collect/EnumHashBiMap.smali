@@ -53,10 +53,12 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/EnumMap;
 
     invoke-direct {v0, p1}, Ljava/util/EnumMap;-><init>(Ljava/lang/Class;)V
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/Class;->getEnumConstants()[Ljava/lang/Object;
 
     move-result-object v1
@@ -69,8 +71,10 @@
 
     move-result-object v1
 
+    .line 3
     invoke-direct {p0, v0, v1}, Lcom/google/common/collect/AbstractBiMap;-><init>(Ljava/util/Map;Ljava/util/Map;)V
 
+    .line 4
     iput-object p1, p0, Lcom/google/common/collect/EnumHashBiMap;->keyType:Ljava/lang/Class;
 
     return-void
@@ -143,8 +147,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->defaultReadObject()V
 
+    .line 2
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
     move-result-object v0
@@ -153,6 +159,7 @@
 
     iput-object v0, p0, Lcom/google/common/collect/EnumHashBiMap;->keyType:Ljava/lang/Class;
 
+    .line 3
     new-instance v0, Ljava/util/EnumMap;
 
     iget-object v1, p0, Lcom/google/common/collect/EnumHashBiMap;->keyType:Ljava/lang/Class;
@@ -163,6 +170,7 @@
 
     iget-object v2, p0, Lcom/google/common/collect/EnumHashBiMap;->keyType:Ljava/lang/Class;
 
+    .line 4
     invoke-virtual {v2}, Ljava/lang/Class;->getEnumConstants()[Ljava/lang/Object;
 
     move-result-object v2
@@ -177,8 +185,10 @@
 
     invoke-direct {v1, v2}, Ljava/util/HashMap;-><init>(I)V
 
+    .line 5
     invoke-virtual {p0, v0, v1}, Lcom/google/common/collect/AbstractBiMap;->setDelegates(Ljava/util/Map;Ljava/util/Map;)V
 
+    .line 6
     invoke-static {p0, p1}, Lcom/google/common/collect/Serialization;->populateMap(Ljava/util/Map;Ljava/io/ObjectInputStream;)V
 
     return-void
@@ -195,12 +205,15 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/io/ObjectOutputStream;->defaultWriteObject()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/EnumHashBiMap;->keyType:Ljava/lang/Class;
 
     invoke-virtual {p1, v0}, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
 
+    .line 3
     invoke-static {p0, p1}, Lcom/google/common/collect/Serialization;->writeMap(Ljava/util/Map;Ljava/io/ObjectOutputStream;)V
 
     return-void
@@ -242,6 +255,7 @@
 .method public bridge synthetic clear()V
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractBiMap;->clear()V
 
     return-void
@@ -254,6 +268,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/AbstractBiMap;->containsValue(Ljava/lang/Object;)Z
 
     move-result p0
@@ -264,6 +279,7 @@
 .method public bridge synthetic entrySet()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractBiMap;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -322,6 +338,7 @@
 .method public bridge synthetic inverse()Lcom/google/common/collect/BiMap;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractBiMap;->inverse()Lcom/google/common/collect/BiMap;
 
     move-result-object p0
@@ -332,6 +349,7 @@
 .method public bridge synthetic keySet()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractBiMap;->keySet()Ljava/util/Set;
 
     move-result-object p0
@@ -349,6 +367,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/EnumHashBiMap;->keyType:Ljava/lang/Class;
 
     return-object p0
@@ -405,6 +424,7 @@
 .method public bridge synthetic putAll(Ljava/util/Map;)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/AbstractBiMap;->putAll(Ljava/util/Map;)V
 
     return-void
@@ -422,6 +442,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/AbstractBiMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -432,6 +453,7 @@
 .method public bridge synthetic values()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractBiMap;->values()Ljava/util/Set;
 
     move-result-object p0

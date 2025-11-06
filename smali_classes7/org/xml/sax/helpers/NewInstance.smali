@@ -1,12 +1,12 @@
-.class Lorg/xml/sax/helpers/NewInstance;
+.class public Lorg/xml/sax/helpers/NewInstance;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field static synthetic class$java$lang$Thread:Ljava/lang/Class;
+.field public static synthetic class$java$lang$Thread:Ljava/lang/Class;
 
-.field static synthetic class$org$xml$sax$helpers$NewInstance:Ljava/lang/Class;
+.field public static synthetic class$org$xml$sax$helpers$NewInstance:Ljava/lang/Class;
 
 
 # direct methods
@@ -35,7 +35,7 @@
 
     new-instance v0, Ljava/lang/NoClassDefFoundError;
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/ClassNotFoundException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
 
@@ -92,7 +92,7 @@
 
     new-instance v1, Ljava/lang/UnknownError;
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/reflect/InvocationTargetException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
@@ -105,7 +105,7 @@
 
     new-instance v1, Ljava/lang/UnknownError;
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/IllegalAccessException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 

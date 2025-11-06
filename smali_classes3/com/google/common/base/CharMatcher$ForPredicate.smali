@@ -1,4 +1,4 @@
-.class final Lcom/google/common/base/CharMatcher$ForPredicate;
+.class public final Lcom/google/common/base/CharMatcher$ForPredicate;
 .super Lcom/google/common/base/CharMatcher;
 .source "SourceFile"
 
@@ -40,8 +40,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/base/CharMatcher;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -88,6 +90,7 @@
 .method public matches(C)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/CharMatcher$ForPredicate;->predicate:Lcom/google/common/base/Predicate;
 
     invoke-static {p1}, Ljava/lang/Character;->valueOf(C)Ljava/lang/Character;
@@ -104,6 +107,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/CharMatcher$ForPredicate;->predicate:Lcom/google/common/base/Predicate;
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

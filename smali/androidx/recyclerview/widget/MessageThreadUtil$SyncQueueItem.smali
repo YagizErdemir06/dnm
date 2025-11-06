@@ -1,4 +1,4 @@
-.class Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
+.class public Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -33,7 +33,7 @@
 
 .field public data:Ljava/lang/Object;
 
-.field next:Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
+.field public next:Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
 
 .field public what:I
 
@@ -42,6 +42,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -54,6 +55,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -186,10 +188,12 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;->next:Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
 
     const/4 v1, 0x0
 
+    .line 2
     iput v1, p0, Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;->arg5:I
 
     iput v1, p0, Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;->arg4:I
@@ -202,22 +206,28 @@
 
     iput v1, p0, Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;->what:I
 
+    .line 3
     iput-object v0, p0, Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;->data:Ljava/lang/Object;
 
+    .line 4
     sget-object v0, Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;->sPoolLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 5
     :try_start_0
     sget-object v1, Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;->sPool:Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
 
     if-eqz v1, :cond_0
 
+    .line 6
     iput-object v1, p0, Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;->next:Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
 
+    .line 7
     :cond_0
     sput-object p0, Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;->sPool:Landroidx/recyclerview/widget/MessageThreadUtil$SyncQueueItem;
 
+    .line 8
     monitor-exit v0
 
     return-void

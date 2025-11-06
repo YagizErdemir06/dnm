@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmr/d;
+.implements Lk/x/e;
 
 
 # annotations
@@ -25,6 +25,7 @@
 .method public constructor <init>(Lmiuix/preference/EditTextPreferenceDialogFragmentCompat;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/preference/EditTextPreferenceDialogFragmentCompat$a;->a:Lmiuix/preference/EditTextPreferenceDialogFragmentCompat;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,21 +38,23 @@
 .method public a(Landroid/content/Context;)Landroid/view/View;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/preference/EditTextPreferenceDialogFragmentCompat$a;->a:Lmiuix/preference/EditTextPreferenceDialogFragmentCompat;
 
-    invoke-static {p0, p1}, Lmiuix/preference/EditTextPreferenceDialogFragmentCompat;->rh(Lmiuix/preference/EditTextPreferenceDialogFragmentCompat;Landroid/content/Context;)Landroid/view/View;
+    invoke-static {p0, p1}, Lmiuix/preference/EditTextPreferenceDialogFragmentCompat;->Ha(Lmiuix/preference/EditTextPreferenceDialogFragmentCompat;Landroid/content/Context;)Landroid/view/View;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public b(Lmiuix/appcompat/app/AlertDialog$a;)V
+.method public b(Lmiuix/appcompat/app/AlertDialog$b;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/preference/EditTextPreferenceDialogFragmentCompat$a;->a:Lmiuix/preference/EditTextPreferenceDialogFragmentCompat;
 
-    invoke-virtual {p0, p1}, Lmiuix/preference/EditTextPreferenceDialogFragmentCompat;->Ah(Lmiuix/appcompat/app/AlertDialog$a;)V
+    invoke-virtual {p0, p1}, Lmiuix/preference/EditTextPreferenceDialogFragmentCompat;->Qa(Lmiuix/appcompat/app/AlertDialog$b;)V
 
     return-void
 .end method
@@ -67,9 +70,10 @@
 .method public d(Landroid/view/View;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/preference/EditTextPreferenceDialogFragmentCompat$a;->a:Lmiuix/preference/EditTextPreferenceDialogFragmentCompat;
 
-    invoke-static {p0, p1}, Lmiuix/preference/EditTextPreferenceDialogFragmentCompat;->th(Lmiuix/preference/EditTextPreferenceDialogFragmentCompat;Landroid/view/View;)V
+    invoke-static {p0, p1}, Lmiuix/preference/EditTextPreferenceDialogFragmentCompat;->Ma(Lmiuix/preference/EditTextPreferenceDialogFragmentCompat;Landroid/view/View;)V
 
     return-void
 .end method

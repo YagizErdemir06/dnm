@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor$Raw2YuvStatus;
+.class public Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor$Raw2YuvStatus;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -19,7 +19,7 @@
 
 .field public isYuvBufferReady:Z
 
-.field final synthetic this$0:Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;
+.field public final synthetic this$0:Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;
 
 
 # direct methods
@@ -56,6 +56,7 @@
 .method public isDone()Z
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor$Raw2YuvStatus;->isYuvBufferReady:Z
 
     if-eqz v0, :cond_0

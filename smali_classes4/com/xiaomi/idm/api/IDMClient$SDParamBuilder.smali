@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field discType:I
+.field public discType:I
 
-.field serviceFilter:Lcom/xiaomi/idm/api/IDMClient$ServiceFilter;
+.field public serviceFilter:Lcom/xiaomi/idm/api/IDMClient$ServiceFilter;
 
-.field serviceSecurityType:I
+.field public serviceSecurityType:I
 
 
 # direct methods
@@ -30,16 +30,20 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/xiaomi/idm/api/IDMClient$SDParamBuilder;->serviceFilter:Lcom/xiaomi/idm/api/IDMClient$ServiceFilter;
 
     const/16 p1, 0xc3
 
+    .line 3
     iput p1, p0, Lcom/xiaomi/idm/api/IDMClient$SDParamBuilder;->discType:I
 
     const/4 p1, 0x0
 
+    .line 4
     iput p1, p0, Lcom/xiaomi/idm/api/IDMClient$SDParamBuilder;->serviceSecurityType:I
 
     return-void
@@ -50,6 +54,7 @@
 .method public discType(I)Lcom/xiaomi/idm/api/IDMClient$SDParamBuilder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/idm/api/IDMClient$SDParamBuilder;->discType:I
 
     return-object p0
@@ -58,6 +63,7 @@
 .method public serviceSecurityType(I)Lcom/xiaomi/idm/api/IDMClient$SDParamBuilder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/idm/api/IDMClient$SDParamBuilder;->serviceSecurityType:I
 
     return-object p0
@@ -66,6 +72,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

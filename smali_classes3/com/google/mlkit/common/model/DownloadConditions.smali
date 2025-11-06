@@ -45,6 +45,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/mlkit/common/model/DownloadConditions;
 
@@ -54,11 +55,13 @@
 
     return v2
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/mlkit/common/model/DownloadConditions;
 
     iget-boolean v1, p0, Lcom/google/mlkit/common/model/DownloadConditions;->zza:Z
 
+    .line 3
     iget-boolean v3, p1, Lcom/google/mlkit/common/model/DownloadConditions;->zza:Z
 
     if-ne v1, v3, :cond_2
@@ -82,6 +85,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 1
     iget-boolean v1, p0, Lcom/google/mlkit/common/model/DownloadConditions;->zza:Z
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;

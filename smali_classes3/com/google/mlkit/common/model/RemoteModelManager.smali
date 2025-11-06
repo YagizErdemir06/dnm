@@ -34,6 +34,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/util/HashMap;
@@ -42,6 +43,7 @@
 
     iput-object v0, p0, Lcom/google/mlkit/common/model/RemoteModelManager;->zza:Ljava/util/Map;
 
+    .line 2
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -61,6 +63,7 @@
 
     iget-object v1, p0, Lcom/google/mlkit/common/model/RemoteModelManager;->zza:Ljava/util/Map;
 
+    .line 3
     invoke-virtual {v0}, Lcom/google/mlkit/common/model/RemoteModelManager$RemoteModelManagerRegistration;->zzb()Ljava/lang/Class;
 
     move-result-object v2
@@ -69,6 +72,7 @@
 
     move-result-object v0
 
+    .line 4
     invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
@@ -78,7 +82,7 @@
 .end method
 
 .method public static declared-synchronized getInstance()Lcom/google/mlkit/common/model/RemoteModelManager;
-    .locals 3
+    .locals 2
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -86,14 +90,13 @@
 
     monitor-enter v0
 
+    .line 1
     :try_start_0
     invoke-static {}, Lcom/google/mlkit/common/sdkinternal/MlKitContext;->getInstance()Lcom/google/mlkit/common/sdkinternal/MlKitContext;
 
     move-result-object v1
 
-    const-class v2, Lcom/google/mlkit/common/model/RemoteModelManager;
-
-    invoke-virtual {v1, v2}, Lcom/google/mlkit/common/sdkinternal/MlKitContext;->get(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Lcom/google/mlkit/common/sdkinternal/MlKitContext;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -116,6 +119,7 @@
 .method private final zza(Ljava/lang/Class;)Lcom/google/mlkit/common/sdkinternal/model/RemoteModelManagerInterface;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/common/model/RemoteModelManager;->zza:Ljava/util/Map;
 
     invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -163,8 +167,10 @@
 
     const-string v0, "RemoteModel cannot be null"
 
+    .line 1
     invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -207,14 +213,17 @@
 
     const-string v0, "RemoteModel cannot be null"
 
+    .line 1
     invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v0, "DownloadConditions cannot be null"
 
+    .line 2
     invoke-static {p2, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     iget-object v0, p0, Lcom/google/mlkit/common/model/RemoteModelManager;->zza:Ljava/util/Map;
 
+    .line 3
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -225,6 +234,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -233,6 +243,7 @@
 
     move-result-object p0
 
+    .line 5
     invoke-interface {p0, p1, p2}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelManagerInterface;->download(Lcom/google/mlkit/common/model/RemoteModel;Lcom/google/mlkit/common/model/DownloadConditions;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object p0
@@ -242,6 +253,7 @@
     :cond_0
     new-instance p0, Lcom/google/mlkit/common/MlKitException;
 
+    .line 6
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1
@@ -272,6 +284,7 @@
 
     invoke-direct {p0, p1, p2}, Lcom/google/mlkit/common/MlKitException;-><init>(Ljava/lang/String;I)V
 
+    .line 7
     invoke-static {p0}, Lcom/google/android/gms/tasks/Tasks;->forException(Ljava/lang/Exception;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object p0
@@ -301,6 +314,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/common/model/RemoteModelManager;->zza:Ljava/util/Map;
 
     invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -321,6 +335,7 @@
 
     check-cast p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelManagerInterface;
 
+    .line 2
     invoke-interface {p0}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelManagerInterface;->getDownloadedModels()Lcom/google/android/gms/tasks/Task;
 
     move-result-object p0
@@ -350,8 +365,10 @@
 
     const-string v0, "RemoteModel cannot be null"
 
+    .line 1
     invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0

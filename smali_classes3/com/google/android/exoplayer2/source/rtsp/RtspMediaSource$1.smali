@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$1;
+.class public Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource;
+.field public final synthetic this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$1;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,12 +38,14 @@
 .method public onSeekingUnsupported()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$1;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource;->access$102(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource;Z)Z
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$1;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource;->access$400(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource;)V
@@ -53,6 +56,7 @@
 .method public onSourceInfoRefreshed(Lcom/google/android/exoplayer2/source/rtsp/RtspSessionTiming;)V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$1;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource;
 
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspSessionTiming;->getDurationMs()J
@@ -65,6 +69,7 @@
 
     invoke-static {v0, v1, v2}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource;->access$002(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource;J)J
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$1;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource;
 
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspSessionTiming;->isLive()Z
@@ -75,6 +80,7 @@
 
     invoke-static {v0, v1}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource;->access$102(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource;Z)Z
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$1;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource;
 
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspSessionTiming;->isLive()Z
@@ -83,12 +89,14 @@
 
     invoke-static {v0, p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource;->access$202(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource;Z)Z
 
+    .line 4
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$1;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource;->access$302(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource;Z)Z
 
+    .line 5
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$1;->this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource;->access$400(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource;)V

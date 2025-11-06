@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Multimaps$CustomSetMultimap;
+.class public Lcom/google/common/collect/Multimaps$CustomSetMultimap;
 .super Lcom/google/common/collect/AbstractSetMultimap;
 .source "SourceFile"
 
@@ -34,7 +34,7 @@
 
 
 # instance fields
-.field transient factory:Lcom/google/common/base/Supplier;
+.field public transient factory:Lcom/google/common/base/Supplier;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/base/Supplier<",
@@ -63,8 +63,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/AbstractSetMultimap;-><init>(Ljava/util/Map;)V
 
+    .line 2
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -88,8 +90,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->defaultReadObject()V
 
+    .line 2
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
     move-result-object v0
@@ -98,12 +102,14 @@
 
     iput-object v0, p0, Lcom/google/common/collect/Multimaps$CustomSetMultimap;->factory:Lcom/google/common/base/Supplier;
 
+    .line 3
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Ljava/util/Map;
 
+    .line 4
     invoke-virtual {p0, p1}, Lcom/google/common/collect/AbstractMapBasedMultimap;->setMap(Ljava/util/Map;)V
 
     return-void
@@ -120,12 +126,15 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/io/ObjectOutputStream;->defaultWriteObject()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/Multimaps$CustomSetMultimap;->factory:Lcom/google/common/base/Supplier;
 
     invoke-virtual {p1, v0}, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap;->backingMap()Ljava/util/Map;
 
     move-result-object p0
@@ -149,6 +158,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap;->createMaybeNavigableAsMap()Ljava/util/Map;
 
     move-result-object p0
@@ -199,6 +209,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap;->createMaybeNavigableKeySet()Ljava/util/Set;
 
     move-result-object p0
@@ -220,10 +231,12 @@
         }
     .end annotation
 
+    .line 1
     instance-of p0, p1, Ljava/util/NavigableSet;
 
     if-eqz p0, :cond_0
 
+    .line 2
     check-cast p1, Ljava/util/NavigableSet;
 
     invoke-static {p1}, Lcom/google/common/collect/Sets;->unmodifiableNavigableSet(Ljava/util/NavigableSet;)Ljava/util/NavigableSet;
@@ -232,11 +245,13 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     instance-of p0, p1, Ljava/util/SortedSet;
 
     if-eqz p0, :cond_1
 
+    .line 4
     check-cast p1, Ljava/util/SortedSet;
 
     invoke-static {p1}, Ljava/util/Collections;->unmodifiableSortedSet(Ljava/util/SortedSet;)Ljava/util/SortedSet;
@@ -245,6 +260,7 @@
 
     return-object p0
 
+    .line 5
     :cond_1
     check-cast p1, Ljava/util/Set;
 
@@ -271,12 +287,14 @@
         }
     .end annotation
 
+    .line 1
     instance-of v0, p2, Ljava/util/NavigableSet;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedNavigableSet;
 
     check-cast p2, Ljava/util/NavigableSet;
@@ -285,11 +303,13 @@
 
     return-object v0
 
+    .line 3
     :cond_0
     instance-of v0, p2, Ljava/util/SortedSet;
 
     if-eqz v0, :cond_1
 
+    .line 4
     new-instance v0, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedSortedSet;
 
     check-cast p2, Ljava/util/SortedSet;
@@ -298,6 +318,7 @@
 
     return-object v0
 
+    .line 5
     :cond_1
     new-instance v0, Lcom/google/common/collect/AbstractMapBasedMultimap$WrappedSet;
 

@@ -82,399 +82,421 @@
 .method public static constructor <clinit>()V
     .locals 25
 
+    .line 1
     new-instance v0, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    const-string v1, "RequestCode succeed"
+    const-string v1, "REQUEST_SUCCEED"
 
-    const-string v2, "REQUEST_SUCCEED"
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    const-string v3, "RequestCode succeed"
 
-    invoke-direct {v0, v2, v3, v3, v1}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    invoke-direct {v0, v1, v2, v2, v3}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
     sput-object v0, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->REQUEST_SUCCEED:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
+    .line 2
     new-instance v1, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    const-string v2, "Ready for local request"
+    const-string v3, "READY_FOR_LOCAL_REQUEST"
 
-    const-string v4, "READY_FOR_LOCAL_REQUEST"
+    const/4 v4, 0x1
 
-    const/4 v5, 0x1
+    const-string v5, "Ready for local request"
 
-    invoke-direct {v1, v4, v5, v5, v2}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    invoke-direct {v1, v3, v4, v4, v5}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
     sput-object v1, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->READY_FOR_LOCAL_REQUEST:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    new-instance v2, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+    .line 3
+    new-instance v3, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    const-string v4, "Ready for RPC request"
+    const-string v5, "READY_FOR_RPC_REQUEST"
 
-    const-string v6, "READY_FOR_RPC_REQUEST"
+    const/4 v6, 0x2
 
-    const/4 v7, 0x2
+    const-string v7, "Ready for RPC request"
 
-    invoke-direct {v2, v6, v7, v7, v4}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    invoke-direct {v3, v5, v6, v6, v7}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    sput-object v2, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->READY_FOR_RPC_REQUEST:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+    sput-object v3, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->READY_FOR_RPC_REQUEST:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    new-instance v4, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+    .line 4
+    new-instance v5, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    const/4 v6, -0x1
+    const-string v7, "ERR_REQUEST_NULL"
 
-    const-string v8, "Error when request bytes is null"
+    const/4 v8, 0x3
 
-    const-string v9, "ERR_REQUEST_NULL"
+    const/4 v9, -0x1
 
-    const/4 v10, 0x3
+    const-string v10, "Error when request bytes is null"
 
-    invoke-direct {v4, v9, v10, v6, v8}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    invoke-direct {v5, v7, v8, v9, v10}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    sput-object v4, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_REQUEST_NULL:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+    sput-object v5, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_REQUEST_NULL:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    new-instance v6, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+    .line 5
+    new-instance v7, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    const/4 v8, -0x2
+    const-string v9, "ERR_REQUEST_PARSE"
 
-    const-string v9, "Error when parse request bytes to IDMRequest proto"
+    const/4 v10, 0x4
 
-    const-string v11, "ERR_REQUEST_PARSE"
+    const/4 v11, -0x2
 
-    const/4 v12, 0x4
+    const-string v12, "Error when parse request bytes to IDMRequest proto"
 
-    invoke-direct {v6, v11, v12, v8, v9}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    invoke-direct {v7, v9, v10, v11, v12}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    sput-object v6, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_REQUEST_PARSE:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+    sput-object v7, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_REQUEST_PARSE:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    new-instance v8, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
-
-    const/4 v9, -0x3
-
-    const-string v11, "Response bytes null when do request"
-
-    const-string v13, "ERR_RESPONSE_NULL"
-
-    const/4 v14, 0x5
-
-    invoke-direct {v8, v13, v14, v9, v11}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
-
-    sput-object v8, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_RESPONSE_NULL:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
-
+    .line 6
     new-instance v9, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    const/4 v11, -0x4
+    const-string v11, "ERR_RESPONSE_NULL"
 
-    const-string v13, "Response parse error when do request"
+    const/4 v12, 0x5
 
-    const-string v15, "ERR_RESPONSE_PARSE"
+    const/4 v13, -0x3
+
+    const-string v14, "Response bytes null when do request"
+
+    invoke-direct {v9, v11, v12, v13, v14}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    sput-object v9, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_RESPONSE_NULL:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+
+    .line 7
+    new-instance v11, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+
+    const-string v13, "ERR_RESPONSE_PARSE"
 
     const/4 v14, 0x6
 
-    invoke-direct {v9, v15, v14, v11, v13}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    const/4 v15, -0x4
 
-    sput-object v9, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_RESPONSE_PARSE:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+    const-string v12, "Response parse error when do request"
 
-    new-instance v11, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+    invoke-direct {v11, v13, v14, v15, v12}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/4 v13, -0x5
+    sput-object v11, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_RESPONSE_PARSE:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    const-string v15, "Service id is illegal"
-
-    const-string v14, "ERR_INVALID_SERVICE_ID"
-
-    const/4 v12, 0x7
-
-    invoke-direct {v11, v14, v12, v13, v15}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
-
-    sput-object v11, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_INVALID_SERVICE_ID:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
-
-    new-instance v13, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
-
-    const/4 v14, -0x6
-
-    const-string v15, "Service not found"
-
-    const-string v12, "ERR_SERVICE_NOT_FOUND"
-
-    const/16 v10, 0x8
-
-    invoke-direct {v13, v12, v10, v14, v15}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
-
-    sput-object v13, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_SERVICE_NOT_FOUND:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
-
+    .line 8
     new-instance v12, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+
+    const-string v13, "ERR_INVALID_SERVICE_ID"
+
+    const/4 v15, 0x7
+
+    const/4 v14, -0x5
+
+    const-string v10, "Service id is illegal"
+
+    invoke-direct {v12, v13, v15, v14, v10}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    sput-object v12, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_INVALID_SERVICE_ID:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+
+    .line 9
+    new-instance v10, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+
+    const-string v13, "ERR_SERVICE_NOT_FOUND"
+
+    const/16 v14, 0x8
+
+    const/4 v15, -0x6
+
+    const-string v8, "Service not found"
+
+    invoke-direct {v10, v13, v14, v15, v8}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    sput-object v10, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_SERVICE_NOT_FOUND:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+
+    .line 10
+    new-instance v8, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+
+    const-string v13, "ERR_ACTION_NOT_FOUND"
+
+    const/16 v15, 0x9
 
     const/4 v14, -0x7
 
-    const-string v15, "Action not found"
+    const-string v6, "Action not found"
 
-    const-string v10, "ERR_ACTION_NOT_FOUND"
+    invoke-direct {v8, v13, v15, v14, v6}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v7, 0x9
+    sput-object v8, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_ACTION_NOT_FOUND:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    invoke-direct {v12, v10, v7, v14, v15}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    .line 11
+    new-instance v6, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    sput-object v12, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_ACTION_NOT_FOUND:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+    const-string v13, "ERR_RESPONSE_PARSE_IN_ACTION"
 
-    new-instance v10, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+    const/16 v14, 0xa
 
-    const/4 v14, -0x8
+    const/4 v15, -0x8
 
-    const-string v15, "Response parse error in action"
+    const-string v4, "Response parse error in action"
 
-    const-string v7, "ERR_RESPONSE_PARSE_IN_ACTION"
+    invoke-direct {v6, v13, v14, v15, v4}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v5, 0xa
+    sput-object v6, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_RESPONSE_PARSE_IN_ACTION:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    invoke-direct {v10, v7, v5, v14, v15}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    .line 12
+    new-instance v4, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    sput-object v10, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_RESPONSE_PARSE_IN_ACTION:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+    const-string v13, "ERR_RMI_TIME_OUT"
 
-    new-instance v7, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+    const/16 v15, 0xb
 
     const/16 v14, -0x9
 
-    const-string v15, "RMI call time out"
+    const-string v2, "RMI call time out"
 
-    const-string v5, "ERR_RMI_TIME_OUT"
+    invoke-direct {v4, v13, v15, v14, v2}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v3, 0xb
+    sput-object v4, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_RMI_TIME_OUT:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    invoke-direct {v7, v5, v3, v14, v15}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    .line 13
+    new-instance v2, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    sput-object v7, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_RMI_TIME_OUT:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+    const-string v13, "ERR_RMI_THREAD_INTERRUPTED"
 
-    new-instance v5, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+    const/16 v14, 0xc
 
-    const/16 v14, -0xa
+    const/16 v15, -0xa
 
-    const-string v15, "Calling thread is interrupted"
+    move-object/from16 v16, v4
 
-    const-string v3, "ERR_RMI_THREAD_INTERRUPTED"
+    const-string v4, "Calling thread is interrupted"
 
-    move-object/from16 v16, v7
+    invoke-direct {v2, v13, v14, v15, v4}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v7, 0xc
+    sput-object v2, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_RMI_THREAD_INTERRUPTED:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    invoke-direct {v5, v3, v7, v14, v15}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    .line 14
+    new-instance v4, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    sput-object v5, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_RMI_THREAD_INTERRUPTED:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+    const-string v13, "ERR_RMI_CANCELED"
 
-    new-instance v3, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+    const/16 v15, 0xd
 
     const/16 v14, -0xb
 
-    const-string v15, "Call is canceled"
+    move-object/from16 v17, v2
 
-    const-string v7, "ERR_RMI_CANCELED"
+    const-string v2, "Call is canceled"
 
-    move-object/from16 v17, v5
+    invoke-direct {v4, v13, v15, v14, v2}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v5, 0xd
+    sput-object v4, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_RMI_CANCELED:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    invoke-direct {v3, v7, v5, v14, v15}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    .line 15
+    new-instance v2, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    sput-object v3, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_RMI_CANCELED:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+    const-string v13, "ERR_SERVICE_LOST"
 
-    new-instance v7, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+    const/16 v14, 0xe
 
-    const/16 v14, -0xc
+    const/16 v15, -0xc
 
-    const-string v15, "Service is lost"
+    move-object/from16 v18, v4
 
-    const-string v5, "ERR_SERVICE_LOST"
+    const-string v4, "Service is lost"
 
-    move-object/from16 v18, v3
+    invoke-direct {v2, v13, v14, v15, v4}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v3, 0xe
+    sput-object v2, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_SERVICE_LOST:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    invoke-direct {v7, v5, v3, v14, v15}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    .line 16
+    new-instance v4, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    sput-object v7, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_SERVICE_LOST:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+    const-string v13, "ERR_CLIENT_DESTROYED"
 
-    new-instance v5, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+    const/16 v15, 0xf
 
     const/16 v14, -0xd
 
-    const-string v15, "Client is destroyed"
+    move-object/from16 v19, v2
 
-    const-string v3, "ERR_CLIENT_DESTROYED"
+    const-string v2, "Client is destroyed"
 
-    move-object/from16 v19, v7
+    invoke-direct {v4, v13, v15, v14, v2}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v7, 0xf
+    sput-object v4, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_CLIENT_DESTROYED:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    invoke-direct {v5, v3, v7, v14, v15}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    .line 17
+    new-instance v2, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    sput-object v5, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_CLIENT_DESTROYED:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+    const-string v13, "ERR_REMOTE_UNREACHABLE"
 
-    new-instance v3, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+    const/16 v14, 0x10
 
-    const/16 v14, -0xe
+    const/16 v15, -0xe
 
-    const-string v15, "RPC remote unreachable"
+    move-object/from16 v20, v4
 
-    const-string v7, "ERR_REMOTE_UNREACHABLE"
+    const-string v4, "RPC remote unreachable"
 
-    move-object/from16 v20, v5
+    invoke-direct {v2, v13, v14, v15, v4}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v5, 0x10
+    sput-object v2, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_REMOTE_UNREACHABLE:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    invoke-direct {v3, v7, v5, v14, v15}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    .line 18
+    new-instance v4, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    sput-object v3, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_REMOTE_UNREACHABLE:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+    const-string v13, "ERR_SERVICE_NOT_CONNECTED"
 
-    new-instance v7, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+    const/16 v15, 0x11
 
     const/16 v14, -0xf
 
-    const-string v15, "Service not connected"
+    move-object/from16 v21, v2
 
-    const-string v5, "ERR_SERVICE_NOT_CONNECTED"
+    const-string v2, "Service not connected"
 
-    move-object/from16 v21, v3
+    invoke-direct {v4, v13, v15, v14, v2}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v3, 0x11
+    sput-object v4, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_SERVICE_NOT_CONNECTED:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    invoke-direct {v7, v5, v3, v14, v15}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    .line 19
+    new-instance v2, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    sput-object v7, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_SERVICE_NOT_CONNECTED:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+    const-string v13, "ERR_SERVICE_DISCONNECTING"
 
-    new-instance v5, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+    const/16 v14, 0x12
 
-    const/16 v14, -0x10
+    const/16 v15, -0x10
 
-    const-string v15, "Service disconnected when requesting"
+    move-object/from16 v22, v4
 
-    const-string v3, "ERR_SERVICE_DISCONNECTING"
+    const-string v4, "Service disconnected when requesting"
 
-    move-object/from16 v22, v7
+    invoke-direct {v2, v13, v14, v15, v4}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v7, 0x12
+    sput-object v2, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_SERVICE_DISCONNECTING:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    invoke-direct {v5, v3, v7, v14, v15}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    .line 20
+    new-instance v4, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    sput-object v5, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_SERVICE_DISCONNECTING:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+    const-string v13, "ERR_REQUEST_RPC"
 
-    new-instance v3, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+    const/16 v15, 0x13
 
     const/16 v14, -0x11
 
-    const-string v15, "Request failed when call RPC service"
+    move-object/from16 v23, v2
 
-    const-string v7, "ERR_REQUEST_RPC"
+    const-string v2, "Request failed when call RPC service"
 
-    move-object/from16 v23, v5
+    invoke-direct {v4, v13, v15, v14, v2}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v5, 0x13
+    sput-object v4, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_REQUEST_RPC:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    invoke-direct {v3, v7, v5, v14, v15}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    .line 21
+    new-instance v2, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    sput-object v3, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->ERR_REQUEST_RPC:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+    const-string v13, "REQ_UNKNOWN"
 
-    new-instance v7, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+    const/16 v14, 0x14
 
-    const/16 v14, -0x270f
+    const/16 v15, -0x270f
 
-    const-string v15, "Unknown request error"
+    move-object/from16 v24, v4
 
-    const-string v5, "REQ_UNKNOWN"
+    const-string v4, "Unknown request error"
 
-    move-object/from16 v24, v3
+    invoke-direct {v2, v13, v14, v15, v4}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v3, 0x14
+    sput-object v2, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->REQ_UNKNOWN:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    invoke-direct {v7, v5, v3, v14, v15}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    const/16 v4, 0x15
 
-    sput-object v7, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->REQ_UNKNOWN:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+    new-array v4, v4, [Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
-    const/16 v5, 0x15
+    const/4 v13, 0x0
 
-    new-array v5, v5, [Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
-
-    const/4 v14, 0x0
-
-    aput-object v0, v5, v14
+    aput-object v0, v4, v13
 
     const/4 v0, 0x1
 
-    aput-object v1, v5, v0
+    aput-object v1, v4, v0
 
     const/4 v0, 0x2
 
-    aput-object v2, v5, v0
+    aput-object v3, v4, v0
 
     const/4 v0, 0x3
 
-    aput-object v4, v5, v0
+    aput-object v5, v4, v0
 
     const/4 v0, 0x4
 
-    aput-object v6, v5, v0
+    aput-object v7, v4, v0
 
     const/4 v0, 0x5
 
-    aput-object v8, v5, v0
+    aput-object v9, v4, v0
 
     const/4 v0, 0x6
 
-    aput-object v9, v5, v0
+    aput-object v11, v4, v0
 
     const/4 v0, 0x7
 
-    aput-object v11, v5, v0
+    aput-object v12, v4, v0
 
     const/16 v0, 0x8
 
-    aput-object v13, v5, v0
+    aput-object v10, v4, v0
 
     const/16 v0, 0x9
 
-    aput-object v12, v5, v0
+    aput-object v8, v4, v0
 
     const/16 v0, 0xa
 
-    aput-object v10, v5, v0
+    aput-object v6, v4, v0
 
     const/16 v0, 0xb
 
-    aput-object v16, v5, v0
+    aput-object v16, v4, v0
 
     const/16 v0, 0xc
 
-    aput-object v17, v5, v0
+    aput-object v17, v4, v0
 
     const/16 v0, 0xd
 
-    aput-object v18, v5, v0
+    aput-object v18, v4, v0
 
     const/16 v0, 0xe
 
-    aput-object v19, v5, v0
+    aput-object v19, v4, v0
 
     const/16 v0, 0xf
 
-    aput-object v20, v5, v0
+    aput-object v20, v4, v0
 
     const/16 v0, 0x10
 
-    aput-object v21, v5, v0
+    aput-object v21, v4, v0
 
     const/16 v0, 0x11
 
-    aput-object v22, v5, v0
+    aput-object v22, v4, v0
 
     const/16 v0, 0x12
 
-    aput-object v23, v5, v0
+    aput-object v23, v4, v0
 
     const/16 v0, 0x13
 
-    aput-object v24, v5, v0
+    aput-object v24, v4, v0
 
-    aput-object v7, v5, v3
+    aput-object v2, v4, v14
 
-    sput-object v5, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->$VALUES:[Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
+    .line 22
+    sput-object v4, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->$VALUES:[Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
     return-void
 .end method
@@ -489,10 +511,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 2
     iput p3, p0, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->code:I
 
+    .line 3
     iput-object p4, p0, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->msg:Ljava/lang/String;
 
     return-void
@@ -501,6 +526,7 @@
 .method public static fromCode(I)Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
     .locals 5
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->values()[Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
     move-result-object v0
@@ -514,6 +540,7 @@
 
     aget-object v3, v0, v2
 
+    .line 2
     iget v4, v3, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->code:I
 
     if-ne v4, p0, :cond_0
@@ -525,6 +552,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_1
     sget-object p0, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->REQ_UNKNOWN:Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
@@ -534,6 +562,7 @@
 .method public static getResponseMsg(I)Ljava/lang/String;
     .locals 5
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->values()[Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
     move-result-object v0
@@ -547,10 +576,12 @@
 
     aget-object v3, v0, v2
 
+    .line 2
     iget v4, v3, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->code:I
 
     if-ne v4, p0, :cond_0
 
+    .line 3
     iget-object p0, v3, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->msg:Ljava/lang/String;
 
     return-object p0
@@ -560,6 +591,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -585,6 +617,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
     .locals 1
 
+    .line 1
     const-class v0, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -599,6 +632,7 @@
 .method public static values()[Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->$VALUES:[Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;
 
     invoke-virtual {v0}, [Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->clone()Ljava/lang/Object;
@@ -615,6 +649,7 @@
 .method public createException()Lcom/xiaomi/idm/exception/IDMException;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/xiaomi/idm/exception/RequestException;
 
     iget p0, p0, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->code:I
@@ -627,6 +662,7 @@
 .method public getCode()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->code:I
 
     return p0
@@ -635,6 +671,7 @@
 .method public getMsg()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/constant/ResponseCode$RequestCode;->msg:Ljava/lang/String;
 
     return-object p0

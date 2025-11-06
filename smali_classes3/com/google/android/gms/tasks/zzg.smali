@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/tasks/zzg;
+.class public final Lcom/google/android/gms/tasks/zzg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field final synthetic zza:Lcom/google/android/gms/tasks/zzh;
+.field public final synthetic zza:Lcom/google/android/gms/tasks/zzh;
 
 
 # direct methods
@@ -26,6 +26,7 @@
 .method public final run()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/tasks/zzg;->zza:Lcom/google/android/gms/tasks/zzh;
 
     invoke-static {v0}, Lcom/google/android/gms/tasks/zzh;->zzb(Lcom/google/android/gms/tasks/zzh;)Ljava/lang/Object;
@@ -49,6 +50,7 @@
 
     invoke-interface {p0}, Lcom/google/android/gms/tasks/OnCanceledListener;->onCanceled()V
 
+    .line 2
     :cond_0
     monitor-exit v0
 

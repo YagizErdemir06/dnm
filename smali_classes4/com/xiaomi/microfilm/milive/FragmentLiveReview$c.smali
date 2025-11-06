@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->Si()V
+    value = Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->Wg()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,14 +18,23 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+.field public final synthetic c:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->a:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+    .line 1
+    iput-object p1, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->c:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,10 +45,23 @@
 # virtual methods
 .method public onSurfaceTextureAvailable(Landroid/graphics/SurfaceTexture;II)V
     .locals 10
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "surface",
+            "width",
+            "height"
+        }
+    .end annotation
 
-    iget-object v0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->a:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->c:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
 
-    iget-object v0, v0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->a:Ljava/lang/String;
+    iget-object v0, v0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->k0:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -73,31 +95,35 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->a:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+    .line 2
+    iget-object v0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->c:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
 
-    invoke-static {v0}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->Di(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)V
+    invoke-static {v0}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->ke(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)V
 
-    iget-object v0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->a:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+    .line 3
+    iget-object v0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->c:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
 
-    invoke-static {v0}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->Ei(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)V
+    invoke-static {v0}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->ne(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)V
 
-    iget-object v0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->a:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+    .line 4
+    iget-object v0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->c:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
 
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->a:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+    iget-object v1, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->c:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
 
-    invoke-static {v1}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->Fi(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)I
+    invoke-static {v1}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->Ce(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)I
 
     move-result v1
 
-    invoke-static {v0, v1}, Lcom/android/camera/a6;->J4(Landroid/app/Activity;I)Lio/reactivex/disposables/Disposable;
+    invoke-static {v0, v1}, Ld/d/a/z5;->v4(Landroid/app/Activity;I)Lio/reactivex/disposables/Disposable;
 
-    iget-object v0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->a:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+    .line 5
+    iget-object v0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->c:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
 
-    invoke-static {v0}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->Gi(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)I
+    invoke-static {v0}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->ff(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)I
 
     move-result v0
 
@@ -105,39 +131,40 @@
 
     if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->a:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+    .line 6
+    iget-object v0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->c:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
 
-    invoke-static {v0}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->pi(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)Lcom/xiaomi/microfilm/milive/a$a;
+    invoke-static {v0}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->qc(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)Ld/o/t/b/t$a;
 
     move-result-object v1
 
-    iget-object v0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->a:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+    iget-object v0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->c:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
 
-    invoke-static {v0}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->Hi(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)I
+    invoke-static {v0}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->qf(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)I
 
     move-result v2
 
-    iget-object v0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->a:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+    iget-object v0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->c:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
 
-    invoke-static {v0}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->ki(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)I
+    invoke-static {v0}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->wb(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)I
 
     move-result v3
 
-    iget-object v0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->a:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+    iget-object v0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->c:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
 
-    invoke-static {v0}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->mi(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)Ljava/util/List;
+    invoke-static {v0}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->Mb(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)Ljava/util/List;
 
     move-result-object v6
 
-    iget-object v0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->a:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+    iget-object v0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->c:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
 
-    invoke-static {v0}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->ni(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->Yb(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)Ljava/lang/String;
 
     move-result-object v7
 
-    iget-object v0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->a:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+    iget-object v0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->c:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
 
-    invoke-static {v0}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->oi(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)I
+    invoke-static {v0}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->gc(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)I
 
     move-result v8
 
@@ -147,11 +174,12 @@
 
     move-object v9, p1
 
-    invoke-interface/range {v1 .. v9}, Lcom/xiaomi/microfilm/milive/a$a;->f(IIIILjava/util/List;Ljava/lang/String;ILandroid/graphics/SurfaceTexture;)V
+    invoke-interface/range {v1 .. v9}, Ld/o/t/b/t$a;->f(IIIILjava/util/List;Ljava/lang/String;ILandroid/graphics/SurfaceTexture;)V
 
-    iget-object p0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->a:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+    .line 7
+    iget-object p0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->c:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
 
-    invoke-virtual {p0, p1}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->pj(Landroid/graphics/SurfaceTexture;)V
+    invoke-virtual {p0, p1}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->ci(Landroid/graphics/SurfaceTexture;)V
 
     :cond_0
     return-void
@@ -159,10 +187,19 @@
 
 .method public onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)Z
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "surface"
+        }
+    .end annotation
 
-    iget-object v0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->a:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->c:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
 
-    iget-object v0, v0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->a:Ljava/lang/String;
+    iget-object v0, v0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->k0:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -184,7 +221,8 @@
 
     invoke-static {v0, p1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object p0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->a:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+    .line 2
+    iget-object p0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->c:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
 
     invoke-virtual {p0}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->release()V
 
@@ -193,12 +231,26 @@
 
 .method public onSurfaceTextureSizeChanged(Landroid/graphics/SurfaceTexture;II)V
     .locals 2
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
-    iget-object p0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->a:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "surface",
+            "width",
+            "height"
+        }
+    .end annotation
 
-    iget-object p0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->a:Ljava/lang/String;
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->c:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+
+    iget-object p0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->k0:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -237,10 +289,19 @@
 
 .method public onSurfaceTextureUpdated(Landroid/graphics/SurfaceTexture;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "surface"
+        }
+    .end annotation
 
-    iget-object p1, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->a:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+    .line 1
+    iget-object p1, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->c:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
 
-    invoke-static {p1}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->qi(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)Z
+    invoke-static {p1}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->uc(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)Z
 
     move-result p1
 
@@ -248,19 +309,21 @@
 
     if-nez p1, :cond_0
 
-    iget-object p1, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->a:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+    .line 2
+    iget-object p1, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->c:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
 
-    iget-object p1, p1, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->a:Ljava/lang/String;
+    iget-object p1, p1, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->k0:Ljava/lang/String;
 
-    const-string v1, "capture cover."
+    new-array v1, v0, [Ljava/lang/Object;
 
-    new-array v2, v0, [Ljava/lang/Object;
+    const-string v2, "capture cover."
 
-    invoke-static {p1, v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {p1, v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->a:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+    .line 3
+    iget-object p1, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->c:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
 
-    invoke-static {p1}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->ti(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)Landroid/view/TextureView;
+    invoke-static {p1}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->Ic(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)Landroid/view/TextureView;
 
     move-result-object v1
 
@@ -268,31 +331,34 @@
 
     move-result-object v1
 
-    invoke-static {p1, v1}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->si(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+    invoke-static {p1, v1}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->Hc(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
-    iget-object p1, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->a:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+    .line 4
+    iget-object p1, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->c:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
 
-    invoke-static {p1}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->ui(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)Landroid/widget/ImageView;
+    invoke-static {p1}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->Lc(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)Landroid/widget/ImageView;
 
     move-result-object p1
 
-    iget-object v1, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->a:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+    iget-object v1, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->c:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
 
-    invoke-static {v1}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->ri(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)Landroid/graphics/Bitmap;
+    invoke-static {v1}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->xc(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
     invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    invoke-static {}, Ly2/b;->M0()Z
+    .line 5
+    invoke-static {}, Ld/d/a/n6/b;->M0()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    iget-object p1, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->a:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+    .line 6
+    iget-object p1, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->c:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
 
-    invoke-static {p1}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->vi(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)Landroid/view/View;
+    invoke-static {p1}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->Wc(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)Landroid/view/View;
 
     move-result-object p1
 
@@ -300,10 +366,11 @@
 
     invoke-virtual {p1, v1}, Landroid/view/View;->setBackgroundColor(I)V
 
+    .line 7
     :cond_0
-    iget-object p1, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->a:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+    iget-object p1, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->c:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
 
-    invoke-static {p1}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->Gi(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)I
+    invoke-static {p1}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->ff(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)I
 
     move-result p1
 
@@ -311,9 +378,9 @@
 
     if-eq p1, v1, :cond_2
 
-    iget-object p1, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->a:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+    iget-object p1, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->c:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
 
-    invoke-static {p1}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->Gi(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)I
+    invoke-static {p1}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->ff(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)I
 
     move-result p1
 
@@ -323,10 +390,11 @@
 
     goto :goto_0
 
+    .line 8
     :cond_1
-    iget-object p1, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->a:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+    iget-object p1, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->c:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
 
-    invoke-static {p1}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->Gi(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)I
+    invoke-static {p1}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->ff(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;)I
 
     move-result p1
 
@@ -334,19 +402,21 @@
 
     if-ne p1, v1, :cond_3
 
-    iget-object p0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->a:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+    .line 9
+    iget-object p0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->c:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
 
-    invoke-virtual {p0, v0, v0}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->fj(ZZ)V
+    invoke-virtual {p0, v0, v0}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->Sh(ZZ)V
 
     goto :goto_1
 
+    .line 10
     :cond_2
     :goto_0
-    iget-object p0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->a:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
+    iget-object p0, p0, Lcom/xiaomi/microfilm/milive/FragmentLiveReview$c;->c:Lcom/xiaomi/microfilm/milive/FragmentLiveReview;
 
     const/4 p1, 0x3
 
-    invoke-static {p0, p1}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->xi(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;I)V
+    invoke-static {p0, p1}, Lcom/xiaomi/microfilm/milive/FragmentLiveReview;->sd(Lcom/xiaomi/microfilm/milive/FragmentLiveReview;I)V
 
     :cond_3
     :goto_1

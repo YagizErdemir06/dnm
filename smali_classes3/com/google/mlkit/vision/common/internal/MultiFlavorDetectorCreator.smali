@@ -25,6 +25,7 @@
 .method public constructor <init>(Ljava/util/Set;)V
     .locals 5
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/util/HashMap;
@@ -35,8 +36,10 @@
 
     new-instance v0, Ljava/util/HashMap;
 
+    .line 2
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
+    .line 3
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -55,22 +58,26 @@
 
     check-cast v1, Lcom/google/mlkit/vision/common/internal/MultiFlavorDetectorCreator$Registration;
 
+    .line 4
     invoke-virtual {v1}, Lcom/google/mlkit/vision/common/internal/MultiFlavorDetectorCreator$Registration;->zzc()Ljava/lang/Class;
 
     move-result-object v2
 
     iget-object v3, p0, Lcom/google/mlkit/vision/common/internal/MultiFlavorDetectorCreator;->zza:Ljava/util/Map;
 
+    .line 5
     invoke-interface {v3, v2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
+    .line 6
     invoke-virtual {v1}, Lcom/google/mlkit/vision/common/internal/MultiFlavorDetectorCreator$Registration;->zza()I
 
     move-result v3
 
+    .line 7
     invoke-interface {v0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
@@ -92,12 +99,14 @@
     :cond_1
     iget-object v3, p0, Lcom/google/mlkit/vision/common/internal/MultiFlavorDetectorCreator;->zza:Ljava/util/Map;
 
+    .line 8
     invoke-virtual {v1}, Lcom/google/mlkit/vision/common/internal/MultiFlavorDetectorCreator$Registration;->zzb()Lcom/google/firebase/inject/Provider;
 
     move-result-object v4
 
     invoke-interface {v3, v2, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 9
     invoke-virtual {v1}, Lcom/google/mlkit/vision/common/internal/MultiFlavorDetectorCreator$Registration;->zza()I
 
     move-result v1
@@ -115,7 +124,7 @@
 .end method
 
 .method public static declared-synchronized getInstance()Lcom/google/mlkit/vision/common/internal/MultiFlavorDetectorCreator;
-    .locals 3
+    .locals 2
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -126,14 +135,13 @@
 
     monitor-enter v0
 
+    .line 1
     :try_start_0
     invoke-static {}, Lcom/google/mlkit/common/sdkinternal/MlKitContext;->getInstance()Lcom/google/mlkit/common/sdkinternal/MlKitContext;
 
     move-result-object v1
 
-    const-class v2, Lcom/google/mlkit/vision/common/internal/MultiFlavorDetectorCreator;
-
-    invoke-virtual {v1, v2}, Lcom/google/mlkit/common/sdkinternal/MlKitContext;->get(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Lcom/google/mlkit/common/sdkinternal/MlKitContext;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -177,6 +185,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/vision/common/internal/MultiFlavorDetectorCreator;->zza:Ljava/util/Map;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -201,6 +210,7 @@
 
     check-cast p0, Lcom/google/mlkit/vision/common/internal/MultiFlavorDetectorCreator$DetectorCreator;
 
+    .line 2
     invoke-interface {p0, p1}, Lcom/google/mlkit/vision/common/internal/MultiFlavorDetectorCreator$DetectorCreator;->create(Lcom/google/mlkit/vision/common/internal/MultiFlavorDetectorCreator$DetectorOptions;)Lcom/google/mlkit/vision/common/internal/MultiFlavorDetectorCreator$MultiFlavorDetector;
 
     move-result-object p0

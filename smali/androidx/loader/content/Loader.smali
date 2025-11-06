@@ -23,15 +23,15 @@
 
 
 # instance fields
-.field mAbandoned:Z
+.field public mAbandoned:Z
 
-.field mContentChanged:Z
+.field public mContentChanged:Z
 
-.field mContext:Landroid/content/Context;
+.field public mContext:Landroid/content/Context;
 
-.field mId:I
+.field public mId:I
 
-.field mListener:Landroidx/loader/content/Loader$OnLoadCompleteListener;
+.field public mListener:Landroidx/loader/content/Loader$OnLoadCompleteListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/loader/content/Loader$OnLoadCompleteListener<",
@@ -40,7 +40,7 @@
     .end annotation
 .end field
 
-.field mOnLoadCanceledListener:Landroidx/loader/content/Loader$OnLoadCanceledListener;
+.field public mOnLoadCanceledListener:Landroidx/loader/content/Loader$OnLoadCanceledListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/loader/content/Loader$OnLoadCanceledListener<",
@@ -49,11 +49,11 @@
     .end annotation
 .end field
 
-.field mProcessingChange:Z
+.field public mProcessingChange:Z
 
-.field mReset:Z
+.field public mReset:Z
 
-.field mStarted:Z
+.field public mStarted:Z
 
 
 # direct methods
@@ -64,22 +64,29 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-boolean v0, p0, Landroidx/loader/content/Loader;->mStarted:Z
 
+    .line 3
     iput-boolean v0, p0, Landroidx/loader/content/Loader;->mAbandoned:Z
 
     const/4 v1, 0x1
 
+    .line 4
     iput-boolean v1, p0, Landroidx/loader/content/Loader;->mReset:Z
 
+    .line 5
     iput-boolean v0, p0, Landroidx/loader/content/Loader;->mContentChanged:Z
 
+    .line 6
     iput-boolean v0, p0, Landroidx/loader/content/Loader;->mProcessingChange:Z
 
+    .line 7
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
@@ -98,8 +105,10 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Landroidx/loader/content/Loader;->mAbandoned:Z
 
+    .line 2
     invoke-virtual {p0}, Landroidx/loader/content/Loader;->onAbandon()V
 
     return-void
@@ -110,6 +119,7 @@
     .annotation build Landroidx/annotation/MainThread;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroidx/loader/content/Loader;->onCancelLoad()Z
 
     move-result p0
@@ -122,6 +132,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-boolean v0, p0, Landroidx/loader/content/Loader;->mProcessingChange:Z
 
     return-void
@@ -143,18 +154,22 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/StringBuilder;
 
     const/16 v0, 0x40
 
     invoke-direct {p0, v0}, Ljava/lang/StringBuilder;-><init>(I)V
 
+    .line 2
     invoke-static {p1, p0}, Landroidx/core/util/DebugUtils;->buildShortClassTag(Ljava/lang/Object;Ljava/lang/StringBuilder;)V
 
     const-string/jumbo p1, "}"
 
+    .line 3
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 4
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -167,10 +182,12 @@
     .annotation build Landroidx/annotation/MainThread;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/loader/content/Loader;->mOnLoadCanceledListener:Landroidx/loader/content/Loader$OnLoadCanceledListener;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {v0, p0}, Landroidx/loader/content/Loader$OnLoadCanceledListener;->onLoadCanceled(Landroidx/loader/content/Loader;)V
 
     :cond_0
@@ -192,10 +209,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/loader/content/Loader;->mListener:Landroidx/loader/content/Loader$OnLoadCompleteListener;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {v0, p0, p1}, Landroidx/loader/content/Loader$OnLoadCompleteListener;->onLoadComplete(Landroidx/loader/content/Loader;Ljava/lang/Object;)V
 
     :cond_0
@@ -207,6 +226,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string p2, "mId="
@@ -219,12 +239,14 @@
 
     const-string p2, " mListener="
 
+    .line 2
     invoke-virtual {p3, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-object p2, p0, Landroidx/loader/content/Loader;->mListener:Landroidx/loader/content/Loader$OnLoadCompleteListener;
 
     invoke-virtual {p3, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
+    .line 3
     iget-boolean p2, p0, Landroidx/loader/content/Loader;->mStarted:Z
 
     if-nez p2, :cond_0
@@ -237,6 +259,7 @@
 
     if-eqz p2, :cond_1
 
+    .line 4
     :cond_0
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -250,6 +273,7 @@
 
     const-string p2, " mContentChanged="
 
+    .line 5
     invoke-virtual {p3, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-boolean p2, p0, Landroidx/loader/content/Loader;->mContentChanged:Z
@@ -258,12 +282,14 @@
 
     const-string p2, " mProcessingChange="
 
+    .line 6
     invoke-virtual {p3, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-boolean p2, p0, Landroidx/loader/content/Loader;->mProcessingChange:Z
 
     invoke-virtual {p3, p2}, Ljava/io/PrintWriter;->println(Z)V
 
+    .line 7
     :cond_1
     iget-boolean p2, p0, Landroidx/loader/content/Loader;->mAbandoned:Z
 
@@ -273,6 +299,7 @@
 
     if-eqz p2, :cond_3
 
+    .line 8
     :cond_2
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
@@ -286,6 +313,7 @@
 
     const-string p1, " mReset="
 
+    .line 9
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     iget-boolean p0, p0, Landroidx/loader/content/Loader;->mReset:Z
@@ -301,6 +329,7 @@
     .annotation build Landroidx/annotation/MainThread;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroidx/loader/content/Loader;->onForceLoad()V
 
     return-void
@@ -311,6 +340,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/loader/content/Loader;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -319,6 +349,7 @@
 .method public getId()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/loader/content/Loader;->mId:I
 
     return p0
@@ -327,6 +358,7 @@
 .method public isAbandoned()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Landroidx/loader/content/Loader;->mAbandoned:Z
 
     return p0
@@ -335,6 +367,7 @@
 .method public isReset()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Landroidx/loader/content/Loader;->mReset:Z
 
     return p0
@@ -343,6 +376,7 @@
 .method public isStarted()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Landroidx/loader/content/Loader;->mStarted:Z
 
     return p0
@@ -371,10 +405,12 @@
     .annotation build Landroidx/annotation/MainThread;
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Landroidx/loader/content/Loader;->mStarted:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Landroidx/loader/content/Loader;->forceLoad()V
 
     goto :goto_0
@@ -382,6 +418,7 @@
     :cond_0
     const/4 v0, 0x1
 
+    .line 3
     iput-boolean v0, p0, Landroidx/loader/content/Loader;->mContentChanged:Z
 
     :goto_0
@@ -437,16 +474,20 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/loader/content/Loader;->mListener:Landroidx/loader/content/Loader$OnLoadCompleteListener;
 
     if-nez v0, :cond_0
 
+    .line 2
     iput-object p2, p0, Landroidx/loader/content/Loader;->mListener:Landroidx/loader/content/Loader$OnLoadCompleteListener;
 
+    .line 3
     iput p1, p0, Landroidx/loader/content/Loader;->mId:I
 
     return-void
 
+    .line 4
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -474,14 +515,17 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/loader/content/Loader;->mOnLoadCanceledListener:Landroidx/loader/content/Loader$OnLoadCanceledListener;
 
     if-nez v0, :cond_0
 
+    .line 2
     iput-object p1, p0, Landroidx/loader/content/Loader;->mOnLoadCanceledListener:Landroidx/loader/content/Loader$OnLoadCanceledListener;
 
     return-void
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -497,20 +541,26 @@
     .annotation build Landroidx/annotation/MainThread;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroidx/loader/content/Loader;->onReset()V
 
     const/4 v0, 0x1
 
+    .line 2
     iput-boolean v0, p0, Landroidx/loader/content/Loader;->mReset:Z
 
     const/4 v0, 0x0
 
+    .line 3
     iput-boolean v0, p0, Landroidx/loader/content/Loader;->mStarted:Z
 
+    .line 4
     iput-boolean v0, p0, Landroidx/loader/content/Loader;->mAbandoned:Z
 
+    .line 5
     iput-boolean v0, p0, Landroidx/loader/content/Loader;->mContentChanged:Z
 
+    .line 6
     iput-boolean v0, p0, Landroidx/loader/content/Loader;->mProcessingChange:Z
 
     return-void
@@ -519,10 +569,12 @@
 .method public rollbackContentChanged()V
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Landroidx/loader/content/Loader;->mProcessingChange:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Landroidx/loader/content/Loader;->onContentChanged()V
 
     :cond_0
@@ -536,14 +588,18 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Landroidx/loader/content/Loader;->mStarted:Z
 
     const/4 v0, 0x0
 
+    .line 2
     iput-boolean v0, p0, Landroidx/loader/content/Loader;->mReset:Z
 
+    .line 3
     iput-boolean v0, p0, Landroidx/loader/content/Loader;->mAbandoned:Z
 
+    .line 4
     invoke-virtual {p0}, Landroidx/loader/content/Loader;->onStartLoading()V
 
     return-void
@@ -556,8 +612,10 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-boolean v0, p0, Landroidx/loader/content/Loader;->mStarted:Z
 
+    .line 2
     invoke-virtual {p0}, Landroidx/loader/content/Loader;->onStopLoading()V
 
     return-void
@@ -566,12 +624,15 @@
 .method public takeContentChanged()Z
     .locals 2
 
+    .line 1
     iget-boolean v0, p0, Landroidx/loader/content/Loader;->mContentChanged:Z
 
     const/4 v1, 0x0
 
+    .line 2
     iput-boolean v1, p0, Landroidx/loader/content/Loader;->mContentChanged:Z
 
+    .line 3
     iget-boolean v1, p0, Landroidx/loader/content/Loader;->mProcessingChange:Z
 
     or-int/2addr v1, v0
@@ -584,26 +645,32 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x40
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
+    .line 2
     invoke-static {p0, v0}, Landroidx/core/util/DebugUtils;->buildShortClassTag(Ljava/lang/Object;Ljava/lang/StringBuilder;)V
 
     const-string v1, " id="
 
+    .line 3
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 4
     iget p0, p0, Landroidx/loader/content/Loader;->mId:I
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string/jumbo p0, "}"
 
+    .line 5
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 6
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -628,6 +695,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/loader/content/Loader;->mListener:Landroidx/loader/content/Loader$OnLoadCompleteListener;
 
     if-eqz v0, :cond_1
@@ -636,10 +704,12 @@
 
     const/4 p1, 0x0
 
+    .line 2
     iput-object p1, p0, Landroidx/loader/content/Loader;->mListener:Landroidx/loader/content/Loader$OnLoadCompleteListener;
 
     return-void
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -649,6 +719,7 @@
 
     throw p0
 
+    .line 4
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -676,6 +747,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/loader/content/Loader;->mOnLoadCanceledListener:Landroidx/loader/content/Loader$OnLoadCanceledListener;
 
     if-eqz v0, :cond_1
@@ -684,10 +756,12 @@
 
     const/4 p1, 0x0
 
+    .line 2
     iput-object p1, p0, Landroidx/loader/content/Loader;->mOnLoadCanceledListener:Landroidx/loader/content/Loader$OnLoadCanceledListener;
 
     return-void
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -697,6 +771,7 @@
 
     throw p0
 
+    .line 4
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 

@@ -1,4 +1,4 @@
-.class final Lcom/google/common/base/Absent;
+.class public final Lcom/google/common/base/Absent;
 .super Lcom/google/common/base/Optional;
 .source "SourceFile"
 
@@ -22,7 +22,7 @@
 
 
 # static fields
-.field static final INSTANCE:Lcom/google/common/base/Absent;
+.field public static final INSTANCE:Lcom/google/common/base/Absent;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/base/Absent<",
@@ -39,6 +39,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/base/Absent;
 
     invoke-direct {v0}, Lcom/google/common/base/Absent;-><init>()V
@@ -51,6 +52,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/base/Optional;-><init>()V
 
     return-void
@@ -59,6 +61,7 @@
 .method private readResolve()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     sget-object p0, Lcom/google/common/base/Absent;->INSTANCE:Lcom/google/common/base/Absent;
 
     return-object p0
@@ -76,6 +79,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/common/base/Absent;->INSTANCE:Lcom/google/common/base/Absent;
 
     return-object v0
@@ -93,6 +97,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
 
     move-result-object p0
@@ -128,6 +133,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string v0, "Optional.get() cannot be called on an absent value"
@@ -256,8 +262,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-static {}, Lcom/google/common/base/Optional;->absent()Lcom/google/common/base/Optional;
 
     move-result-object p0

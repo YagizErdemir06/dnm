@@ -1,4 +1,4 @@
-.class Lcom/faceunity/pta_helper/gif/GifDecoder$1;
+.class public Lcom/faceunity/pta_helper/gif/GifDecoder$1;
 .super Lcom/faceunity/pta_helper/gif/GifImageIterator;
 .source "SourceFile"
 
@@ -15,19 +15,20 @@
 
 
 # instance fields
-.field isClosed:Z
+.field public isClosed:Z
 
-.field final synthetic this$0:Lcom/faceunity/pta_helper/gif/GifDecoder;
+.field public final synthetic this$0:Lcom/faceunity/pta_helper/gif/GifDecoder;
 
-.field final synthetic val$handle:J
+.field public final synthetic val$handle:J
 
-.field final synthetic val$iteratorHandle:J
+.field public final synthetic val$iteratorHandle:J
 
 
 # direct methods
 .method public constructor <init>(Lcom/faceunity/pta_helper/gif/GifDecoder;JJ)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/pta_helper/gif/GifDecoder$1;->this$0:Lcom/faceunity/pta_helper/gif/GifDecoder;
 
     iput-wide p2, p0, Lcom/faceunity/pta_helper/gif/GifDecoder$1;->val$iteratorHandle:J
@@ -38,6 +39,7 @@
 
     const/4 p1, 0x0
 
+    .line 2
     iput-boolean p1, p0, Lcom/faceunity/pta_helper/gif/GifDecoder$1;->isClosed:Z
 
     return-void
@@ -48,16 +50,19 @@
 .method public close()V
     .locals 3
 
+    .line 1
     iget-boolean v0, p0, Lcom/faceunity/pta_helper/gif/GifDecoder$1;->isClosed:Z
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/faceunity/pta_helper/gif/GifDecoder$1;->this$0:Lcom/faceunity/pta_helper/gif/GifDecoder;
 
     iget-wide v1, p0, Lcom/faceunity/pta_helper/gif/GifDecoder$1;->val$handle:J
 
     invoke-static {v0, v1, v2}, Lcom/faceunity/pta_helper/gif/GifDecoder;->access$200(Lcom/faceunity/pta_helper/gif/GifDecoder;J)V
 
+    .line 3
     iget-object v0, p0, Lcom/faceunity/pta_helper/gif/GifDecoder$1;->this$0:Lcom/faceunity/pta_helper/gif/GifDecoder;
 
     const/4 v1, 0x0
@@ -66,6 +71,7 @@
 
     const/4 v0, 0x1
 
+    .line 4
     iput-boolean v0, p0, Lcom/faceunity/pta_helper/gif/GifDecoder$1;->isClosed:Z
 
     :cond_0
@@ -75,6 +81,7 @@
 .method public hasNext()Z
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/pta_helper/gif/GifDecoder$1;->this$0:Lcom/faceunity/pta_helper/gif/GifDecoder;
 
     iget-wide v1, p0, Lcom/faceunity/pta_helper/gif/GifDecoder$1;->val$iteratorHandle:J

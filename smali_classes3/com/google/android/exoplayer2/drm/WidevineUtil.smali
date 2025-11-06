@@ -13,6 +13,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,6 +35,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 1
     :try_start_0
     invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -43,6 +45,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide p0
@@ -75,6 +78,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/drm/DrmSession;->queryKeyStatus()Ljava/util/Map;
 
     move-result-object p0
@@ -85,11 +89,13 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     new-instance v0, Landroid/util/Pair;
 
     const-string v1, "LicenseDurationRemaining"
 
+    .line 3
     invoke-static {p0, v1}, Lcom/google/android/exoplayer2/drm/WidevineUtil;->getDurationRemainingSec(Ljava/util/Map;Ljava/lang/String;)J
 
     move-result-wide v1
@@ -100,6 +106,7 @@
 
     const-string v2, "PlaybackDurationRemaining"
 
+    .line 4
     invoke-static {p0, v2}, Lcom/google/android/exoplayer2/drm/WidevineUtil;->getDurationRemainingSec(Ljava/util/Map;Ljava/lang/String;)J
 
     move-result-wide v2

@@ -4,59 +4,75 @@
 
 
 # annotations
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000r\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\n\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0008\u0003\n\u0002\u0008\u0006*\u0002>A\u0018\u00002\u00020\u0001B\u0007\u00a2\u0006\u0004\u0008D\u0010EJ\u0008\u0010\u0003\u001a\u00020\u0002H\u0002J\u0008\u0010\u0004\u001a\u00020\u0002H\u0002J\u0008\u0010\u0005\u001a\u00020\u0002H\u0002J\u0008\u0010\u0007\u001a\u00020\u0006H\u0002J\u000e\u0010\n\u001a\u00020\u00002\u0006\u0010\t\u001a\u00020\u0008J\u0008\u0010\u000b\u001a\u00020\u0002H\u0016J\u0008\u0010\u000c\u001a\u00020\u0002H\u0016J\u0012\u0010\u000f\u001a\u00020\u00022\u0008\u0010\u000e\u001a\u0004\u0018\u00010\rH\u0014J\u0018\u0010\u0013\u001a\u00020\u00022\u0006\u0010\u0011\u001a\u00020\u00102\u0006\u0010\u0012\u001a\u00020\u0010H\u0014J\u0008\u0010\u0015\u001a\u00020\u0014H\u0014J\u0008\u0010\u0016\u001a\u00020\u0006H\u0014J\u0008\u0010\u0017\u001a\u00020\u0002H\u0014J\u0008\u0010\u0018\u001a\u00020\u0002H\u0016J\u0008\u0010\u0019\u001a\u00020\u0002H\u0014J\u0006\u0010\u001a\u001a\u00020\u0002R\u0018\u0010\u001c\u001a\u0004\u0018\u00010\u001b8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u001c\u0010\u001dR\u0018\u0010\u001f\u001a\u0004\u0018\u00010\u001e8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u001f\u0010 R\u0016\u0010!\u001a\u00020\u00108\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008!\u0010\"R\u0018\u0010#\u001a\u0004\u0018\u00010\u00088\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008#\u0010$R\u0016\u0010&\u001a\u00020%8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008&\u0010\'R\u0016\u0010(\u001a\u00020\u00108\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008(\u0010\"R\u0016\u0010)\u001a\u00020\u00148\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008)\u0010*R\u001b\u0010/\u001a\u00020\u00068BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008+\u0010,\u001a\u0004\u0008-\u0010.R\u0014\u00101\u001a\u0002008\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u00081\u00102R\u001b\u00107\u001a\u0002038BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u00084\u0010,\u001a\u0004\u00085\u00106R#\u0010=\u001a\n 9*\u0004\u0018\u000108088BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008:\u0010,\u001a\u0004\u0008;\u0010<R\u0014\u0010?\u001a\u00020>8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008?\u0010@R\u0014\u0010B\u001a\u00020A8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008B\u0010C\u00a8\u0006F"
+        "\u0000t\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0008\n\u0002\u0008\u0004\n\u0002\u0010\u000b\n\u0002\u0008\u0007\n\u0002\u0008\u000b\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0008\u0005*\u0002!F\u0018\u00002\u00020\u0001B\u0007\u00a2\u0006\u0004\u0008I\u0010\u0004J\u000f\u0010\u0003\u001a\u00020\u0002H\u0002\u00a2\u0006\u0004\u0008\u0003\u0010\u0004J\u000f\u0010\u0005\u001a\u00020\u0002H\u0002\u00a2\u0006\u0004\u0008\u0005\u0010\u0004J\u000f\u0010\u0006\u001a\u00020\u0002H\u0002\u00a2\u0006\u0004\u0008\u0006\u0010\u0004J\u000f\u0010\u0008\u001a\u00020\u0007H\u0002\u00a2\u0006\u0004\u0008\u0008\u0010\tJ\u0015\u0010\u000c\u001a\u00020\u00002\u0006\u0010\u000b\u001a\u00020\n\u00a2\u0006\u0004\u0008\u000c\u0010\rJ\u000f\u0010\u000e\u001a\u00020\u0002H\u0016\u00a2\u0006\u0004\u0008\u000e\u0010\u0004J\u000f\u0010\u000f\u001a\u00020\u0002H\u0016\u00a2\u0006\u0004\u0008\u000f\u0010\u0004J\u0019\u0010\u0012\u001a\u00020\u00022\u0008\u0010\u0011\u001a\u0004\u0018\u00010\u0010H\u0014\u00a2\u0006\u0004\u0008\u0012\u0010\u0013J\u001f\u0010\u0017\u001a\u00020\u00022\u0006\u0010\u0015\u001a\u00020\u00142\u0006\u0010\u0016\u001a\u00020\u0014H\u0014\u00a2\u0006\u0004\u0008\u0017\u0010\u0018J\u000f\u0010\u001a\u001a\u00020\u0019H\u0014\u00a2\u0006\u0004\u0008\u001a\u0010\u001bJ\u000f\u0010\u001c\u001a\u00020\u0007H\u0014\u00a2\u0006\u0004\u0008\u001c\u0010\tJ\u000f\u0010\u001d\u001a\u00020\u0002H\u0014\u00a2\u0006\u0004\u0008\u001d\u0010\u0004J\u000f\u0010\u001e\u001a\u00020\u0002H\u0016\u00a2\u0006\u0004\u0008\u001e\u0010\u0004J\u000f\u0010\u001f\u001a\u00020\u0002H\u0014\u00a2\u0006\u0004\u0008\u001f\u0010\u0004J\r\u0010 \u001a\u00020\u0002\u00a2\u0006\u0004\u0008 \u0010\u0004R\u0016\u0010\"\u001a\u00020!8\u0002@\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\"\u0010#R\u0016\u0010$\u001a\u00020\u00148\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008$\u0010%R\u001d\u0010)\u001a\u00020\u00078B@\u0002X\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008&\u0010\'\u001a\u0004\u0008(\u0010\tR\u0016\u0010*\u001a\u00020\u00198\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008*\u0010+R%\u00101\u001a\n -*\u0004\u0018\u00010,0,8B@\u0002X\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008.\u0010\'\u001a\u0004\u0008/\u00100R\u0016\u00102\u001a\u00020\u00148\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u00082\u0010%R\u0018\u00103\u001a\u0004\u0018\u00010\n8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u00083\u00104R\u0016\u00106\u001a\u0002058\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u00086\u00107R\u0018\u00109\u001a\u0004\u0018\u0001088\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u00089\u0010:R\u0016\u0010<\u001a\u00020;8\u0002@\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008<\u0010=R\u001d\u0010B\u001a\u00020>8B@\u0002X\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008?\u0010\'\u001a\u0004\u0008@\u0010AR\u0018\u0010D\u001a\u0004\u0018\u00010C8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008D\u0010ER\u0016\u0010G\u001a\u00020F8\u0002@\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008G\u0010H\u00a8\u0006J"
     }
     d2 = {
         "Lcom/faceunity/core/renderer/impl/FUCameraRenderer;",
         "Lcom/faceunity/core/renderer/base/FUAbstractRenderer;",
-        "Lnm/l2;",
+        "Lh/l2;",
         "openCamera",
+        "()V",
         "closeCamera",
         "releaseCamera",
         "Lcom/faceunity/core/entity/FURenderInputData;",
         "getCameraInputData",
+        "()Lcom/faceunity/core/entity/FURenderInputData;",
         "Lcom/faceunity/core/camera/entity/FUCameraConfig;",
         "cameraConfig",
         "bindCameraConfig",
+        "(Lcom/faceunity/core/camera/entity/FUCameraConfig;)Lcom/faceunity/core/renderer/impl/FUCameraRenderer;",
         "pauseRender",
         "resumeRender",
         "Landroid/opengl/EGLConfig;",
         "config",
         "surfaceCreated",
+        "(Landroid/opengl/EGLConfig;)V",
         "",
         "width",
         "height",
         "surfaceChanged",
+        "(II)V",
         "",
         "isRenderEnvironmentPrepare",
+        "()Z",
         "buildFURenderInputData",
         "drawRenderFrame",
         "release",
         "releaseGLResource",
         "switchCamera",
-        "Lcom/faceunity/toolbox/program/FUProgramTexture2d;",
-        "mProgramTexture2d",
-        "Lcom/faceunity/toolbox/program/FUProgramTexture2d;",
-        "Lcom/faceunity/toolbox/program/FUProgramTextureOES;",
-        "mProgramTextureOES",
-        "Lcom/faceunity/toolbox/program/FUProgramTextureOES;",
+        "com/faceunity/core/renderer/impl/FUCameraRenderer$mSensorEventListener$1",
+        "mSensorEventListener",
+        "Lcom/faceunity/core/renderer/impl/FUCameraRenderer$mSensorEventListener$1;",
         "mCameraTextId",
         "I",
+        "mFUCameraInputData$delegate",
+        "Lh/d0;",
+        "getMFUCameraInputData",
+        "mFUCameraInputData",
+        "mFUCameraPrepare",
+        "Z",
+        "Landroid/hardware/Sensor;",
+        "kotlin.jvm.PlatformType",
+        "mSensor$delegate",
+        "getMSensor",
+        "()Landroid/hardware/Sensor;",
+        "mSensor",
+        "mDeviceOrientation",
         "mFUCameraConfig",
         "Lcom/faceunity/core/camera/entity/FUCameraConfig;",
         "Lcom/faceunity/core/camera/FUCamera;",
         "mFUCamera",
         "Lcom/faceunity/core/camera/FUCamera;",
-        "mDeviceOrientation",
-        "mFUCameraPrepare",
-        "Z",
-        "mFUCameraInputData$delegate",
-        "Lnm/d0;",
-        "getMFUCameraInputData",
-        "()Lcom/faceunity/core/entity/FURenderInputData;",
-        "mFUCameraInputData",
+        "Lcom/faceunity/toolbox/program/FUProgramTexture2d;",
+        "mProgramTexture2d",
+        "Lcom/faceunity/toolbox/program/FUProgramTexture2d;",
         "Ljava/lang/Object;",
         "mFUCameraInputDataLock",
         "Ljava/lang/Object;",
@@ -65,20 +81,13 @@
         "getMSensorManager",
         "()Landroid/hardware/SensorManager;",
         "mSensorManager",
-        "Landroid/hardware/Sensor;",
-        "kotlin.jvm.PlatformType",
-        "mSensor$delegate",
-        "getMSensor",
-        "()Landroid/hardware/Sensor;",
-        "mSensor",
+        "Lcom/faceunity/toolbox/program/FUProgramTextureOES;",
+        "mProgramTextureOES",
+        "Lcom/faceunity/toolbox/program/FUProgramTextureOES;",
         "com/faceunity/core/renderer/impl/FUCameraRenderer$mOnFUCameraListener$1",
         "mOnFUCameraListener",
         "Lcom/faceunity/core/renderer/impl/FUCameraRenderer$mOnFUCameraListener$1;",
-        "com/faceunity/core/renderer/impl/FUCameraRenderer$mSensorEventListener$1",
-        "mSensorEventListener",
-        "Lcom/faceunity/core/renderer/impl/FUCameraRenderer$mSensorEventListener$1;",
         "<init>",
-        "()V",
         "lib_core_release"
     }
     k = 0x1
@@ -99,7 +108,7 @@
 
 .field private mFUCameraConfig:Lcom/faceunity/core/camera/entity/FUCameraConfig;
 
-.field private final mFUCameraInputData$delegate:Lnm/d0;
+.field private final mFUCameraInputData$delegate:Lh/d0;
 
 .field private final mFUCameraInputDataLock:Ljava/lang/Object;
 
@@ -111,19 +120,21 @@
 
 .field private mProgramTextureOES:Lcom/faceunity/toolbox/program/FUProgramTextureOES;
 
-.field private final mSensor$delegate:Lnm/d0;
+.field private final mSensor$delegate:Lh/d0;
 
 .field private final mSensorEventListener:Lcom/faceunity/core/renderer/impl/FUCameraRenderer$mSensorEventListener$1;
 
-.field private final mSensorManager$delegate:Lnm/d0;
+.field private final mSensorManager$delegate:Lh/d0;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/core/renderer/base/FUAbstractRenderer;-><init>()V
 
+    .line 2
     new-instance v0, Lcom/faceunity/core/camera/FUCamera;
 
     invoke-direct {v0}, Lcom/faceunity/core/camera/FUCamera;-><init>()V
@@ -132,48 +143,55 @@
 
     const/16 v0, 0x5a
 
+    .line 3
     iput v0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mDeviceOrientation:I
 
+    .line 4
     new-instance v0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer$mFUCameraInputData$2;
 
     invoke-direct {v0, p0}, Lcom/faceunity/core/renderer/impl/FUCameraRenderer$mFUCameraInputData$2;-><init>(Lcom/faceunity/core/renderer/impl/FUCameraRenderer;)V
 
-    invoke-static {v0}, Lnm/f0;->b(Ljn/a;)Lnm/d0;
+    invoke-static {v0}, Lh/f0;->c(Lh/d3/w/a;)Lh/d0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mFUCameraInputData$delegate:Lnm/d0;
+    iput-object v0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mFUCameraInputData$delegate:Lh/d0;
 
+    .line 5
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mFUCameraInputDataLock:Ljava/lang/Object;
 
+    .line 6
     sget-object v0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer$mSensorManager$2;->INSTANCE:Lcom/faceunity/core/renderer/impl/FUCameraRenderer$mSensorManager$2;
 
-    invoke-static {v0}, Lnm/f0;->b(Ljn/a;)Lnm/d0;
+    invoke-static {v0}, Lh/f0;->c(Lh/d3/w/a;)Lh/d0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mSensorManager$delegate:Lnm/d0;
+    iput-object v0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mSensorManager$delegate:Lh/d0;
 
+    .line 7
     new-instance v0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer$mSensor$2;
 
     invoke-direct {v0, p0}, Lcom/faceunity/core/renderer/impl/FUCameraRenderer$mSensor$2;-><init>(Lcom/faceunity/core/renderer/impl/FUCameraRenderer;)V
 
-    invoke-static {v0}, Lnm/f0;->b(Ljn/a;)Lnm/d0;
+    invoke-static {v0}, Lh/f0;->c(Lh/d3/w/a;)Lh/d0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mSensor$delegate:Lnm/d0;
+    iput-object v0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mSensor$delegate:Lh/d0;
 
+    .line 8
     new-instance v0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer$mOnFUCameraListener$1;
 
     invoke-direct {v0, p0}, Lcom/faceunity/core/renderer/impl/FUCameraRenderer$mOnFUCameraListener$1;-><init>(Lcom/faceunity/core/renderer/impl/FUCameraRenderer;)V
 
     iput-object v0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mOnFUCameraListener:Lcom/faceunity/core/renderer/impl/FUCameraRenderer$mOnFUCameraListener$1;
 
+    .line 9
     new-instance v0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer$mSensorEventListener$1;
 
     invoke-direct {v0, p0}, Lcom/faceunity/core/renderer/impl/FUCameraRenderer$mSensorEventListener$1;-><init>(Lcom/faceunity/core/renderer/impl/FUCameraRenderer;)V
@@ -186,6 +204,7 @@
 .method public static final synthetic access$getMCameraTextId$p(Lcom/faceunity/core/renderer/impl/FUCameraRenderer;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mCameraTextId:I
 
     return p0
@@ -194,6 +213,7 @@
 .method public static final synthetic access$getMDeviceOrientation$p(Lcom/faceunity/core/renderer/impl/FUCameraRenderer;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mDeviceOrientation:I
 
     return p0
@@ -202,6 +222,7 @@
 .method public static final synthetic access$getMFUCameraConfig$p(Lcom/faceunity/core/renderer/impl/FUCameraRenderer;)Lcom/faceunity/core/camera/entity/FUCameraConfig;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mFUCameraConfig:Lcom/faceunity/core/camera/entity/FUCameraConfig;
 
     return-object p0
@@ -210,6 +231,7 @@
 .method public static final synthetic access$getMFUCameraInputData$p(Lcom/faceunity/core/renderer/impl/FUCameraRenderer;)Lcom/faceunity/core/entity/FURenderInputData;
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->getMFUCameraInputData()Lcom/faceunity/core/entity/FURenderInputData;
 
     move-result-object p0
@@ -220,6 +242,7 @@
 .method public static final synthetic access$getMFUCameraInputDataLock$p(Lcom/faceunity/core/renderer/impl/FUCameraRenderer;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mFUCameraInputDataLock:Ljava/lang/Object;
 
     return-object p0
@@ -228,6 +251,7 @@
 .method public static final synthetic access$getMFUCameraPrepare$p(Lcom/faceunity/core/renderer/impl/FUCameraRenderer;)Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mFUCameraPrepare:Z
 
     return p0
@@ -236,6 +260,7 @@
 .method public static final synthetic access$getMGLTextureView$p(Lcom/faceunity/core/renderer/impl/FUCameraRenderer;)Lcom/faceunity/core/weight/GLTextureView;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/renderer/base/FUAbstractRenderer;->getMGLTextureView()Lcom/faceunity/core/weight/GLTextureView;
 
     move-result-object p0
@@ -246,6 +271,7 @@
 .method public static final synthetic access$getMSensorManager$p(Lcom/faceunity/core/renderer/impl/FUCameraRenderer;)Landroid/hardware/SensorManager;
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->getMSensorManager()Landroid/hardware/SensorManager;
 
     move-result-object p0
@@ -256,6 +282,7 @@
 .method public static final synthetic access$setMCameraTextId$p(Lcom/faceunity/core/renderer/impl/FUCameraRenderer;I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mCameraTextId:I
 
     return-void
@@ -264,6 +291,7 @@
 .method public static final synthetic access$setMDeviceOrientation$p(Lcom/faceunity/core/renderer/impl/FUCameraRenderer;I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mDeviceOrientation:I
 
     return-void
@@ -272,6 +300,7 @@
 .method public static final synthetic access$setMFUCameraConfig$p(Lcom/faceunity/core/renderer/impl/FUCameraRenderer;Lcom/faceunity/core/camera/entity/FUCameraConfig;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mFUCameraConfig:Lcom/faceunity/core/camera/entity/FUCameraConfig;
 
     return-void
@@ -280,6 +309,7 @@
 .method public static final synthetic access$setMFUCameraPrepare$p(Lcom/faceunity/core/renderer/impl/FUCameraRenderer;Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mFUCameraPrepare:Z
 
     return-void
@@ -288,6 +318,7 @@
 .method public static final synthetic access$setMGLTextureView$p(Lcom/faceunity/core/renderer/impl/FUCameraRenderer;Lcom/faceunity/core/weight/GLTextureView;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/faceunity/core/renderer/base/FUAbstractRenderer;->setMGLTextureView(Lcom/faceunity/core/weight/GLTextureView;)V
 
     return-void
@@ -296,6 +327,7 @@
 .method private final closeCamera()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mFUCamera:Lcom/faceunity/core/camera/FUCamera;
 
     invoke-virtual {p0}, Lcom/faceunity/core/camera/FUCamera;->closeCamera()V
@@ -306,10 +338,12 @@
 .method private final getCameraInputData()Lcom/faceunity/core/entity/FURenderInputData;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mFUCameraInputDataLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-direct {p0}, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->getMFUCameraInputData()Lcom/faceunity/core/entity/FURenderInputData;
 
@@ -328,6 +362,7 @@
     :catchall_0
     move-exception p0
 
+    .line 3
     monitor-exit v0
 
     throw p0
@@ -336,9 +371,9 @@
 .method private final getMFUCameraInputData()Lcom/faceunity/core/entity/FURenderInputData;
     .locals 0
 
-    iget-object p0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mFUCameraInputData$delegate:Lnm/d0;
+    iget-object p0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mFUCameraInputData$delegate:Lh/d0;
 
-    invoke-interface {p0}, Lnm/d0;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lh/d0;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -350,9 +385,9 @@
 .method private final getMSensor()Landroid/hardware/Sensor;
     .locals 0
 
-    iget-object p0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mSensor$delegate:Lnm/d0;
+    iget-object p0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mSensor$delegate:Lh/d0;
 
-    invoke-interface {p0}, Lnm/d0;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lh/d0;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -364,9 +399,9 @@
 .method private final getMSensorManager()Landroid/hardware/SensorManager;
     .locals 0
 
-    iget-object p0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mSensorManager$delegate:Lnm/d0;
+    iget-object p0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mSensorManager$delegate:Lh/d0;
 
-    invoke-interface {p0}, Lnm/d0;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lh/d0;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -380,12 +415,15 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-boolean v0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mFUCameraPrepare:Z
 
+    .line 2
     iget-object v0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mFUCameraConfig:Lcom/faceunity/core/camera/entity/FUCameraConfig;
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object v1, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mFUCamera:Lcom/faceunity/core/camera/FUCamera;
 
     iget v2, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mCameraTextId:I
@@ -401,6 +439,7 @@
 .method private final releaseCamera()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mFUCamera:Lcom/faceunity/core/camera/FUCamera;
 
     invoke-virtual {p0}, Lcom/faceunity/core/camera/FUCamera;->releaseCamera()V
@@ -413,18 +452,20 @@
 .method public final bindCameraConfig(Lcom/faceunity/core/camera/entity/FUCameraConfig;)Lcom/faceunity/core/renderer/impl/FUCameraRenderer;
     .locals 3
     .param p1    # Lcom/faceunity/core/camera/entity/FUCameraConfig;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "cameraConfig"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mFUCameraConfig:Lcom/faceunity/core/camera/entity/FUCameraConfig;
 
+    .line 2
     invoke-direct {p0}, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->getMSensorManager()Landroid/hardware/SensorManager;
 
     move-result-object p1
@@ -444,9 +485,10 @@
 
 .method public buildFURenderInputData()Lcom/faceunity/core/entity/FURenderInputData;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->getCameraInputData()Lcom/faceunity/core/entity/FURenderInputData;
 
     move-result-object p0
@@ -457,6 +499,7 @@
 .method public drawRenderFrame()V
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/renderer/base/FUAbstractRenderer;->getMCurrentInputData()Lcom/faceunity/core/entity/FURenderInputData;
 
     move-result-object v0
@@ -465,6 +508,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Lcom/faceunity/core/entity/FURenderInputData;->getTexture()Lcom/faceunity/core/entity/FURenderInputData$FUTexture;
 
     move-result-object v2
@@ -474,6 +518,7 @@
     :cond_0
     move-object v2, v1
 
+    .line 3
     :goto_0
     invoke-virtual {p0}, Lcom/faceunity/core/renderer/base/FUAbstractRenderer;->getMCurrentOutputData()Lcom/faceunity/core/entity/FURenderOutputData;
 
@@ -488,12 +533,14 @@
     :cond_1
     if-eqz v1, :cond_2
 
+    .line 4
     invoke-virtual {v1}, Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;->getTexId()I
 
     move-result v3
 
     if-lez v3, :cond_2
 
+    .line 5
     invoke-virtual {v1}, Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;->getWidth()I
 
     move-result v0
@@ -506,6 +553,7 @@
 
     move-result-object v0
 
+    .line 6
     iget-object v2, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mProgramTexture2d:Lcom/faceunity/toolbox/program/FUProgramTexture2d;
 
     if-eqz v2, :cond_4
@@ -525,6 +573,7 @@
     :cond_2
     if-eqz v2, :cond_4
 
+    .line 7
     invoke-virtual {v0}, Lcom/faceunity/core/entity/FURenderInputData;->getHeight()I
 
     move-result v1
@@ -537,6 +586,7 @@
 
     move-result-object v0
 
+    .line 8
     invoke-virtual {p0}, Lcom/faceunity/core/renderer/base/FUAbstractRenderer;->getMCurrentInputData()Lcom/faceunity/core/entity/FURenderInputData;
 
     move-result-object v1
@@ -565,6 +615,7 @@
 
     move-result-object v1
 
+    .line 9
     iget-object v2, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mProgramTextureOES:Lcom/faceunity/toolbox/program/FUProgramTextureOES;
 
     if-eqz v2, :cond_4
@@ -581,6 +632,7 @@
 .method public isRenderEnvironmentPrepare()Z
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mProgramTexture2d:Lcom/faceunity/toolbox/program/FUProgramTexture2d;
 
     const/4 v1, 0x0
@@ -593,11 +645,13 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-boolean v0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mFUCameraPrepare:Z
 
     if-eqz v0, :cond_1
 
+    .line 3
     iget-object p0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mFUCamera:Lcom/faceunity/core/camera/FUCamera;
 
     invoke-virtual {p0}, Lcom/faceunity/core/camera/FUCamera;->getSurfaceTexture()Landroid/graphics/SurfaceTexture;
@@ -606,6 +660,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 4
     invoke-virtual {p0}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
 
     const/4 p0, 0x1
@@ -620,6 +675,7 @@
 .method public pauseRender()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->getMSensorManager()Landroid/hardware/SensorManager;
 
     move-result-object v0
@@ -630,8 +686,10 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/faceunity/core/renderer/base/FUAbstractRenderer;->setDrawFrameSwitch(Z)V
 
+    .line 3
     invoke-direct {p0}, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->closeCamera()V
 
     return-void
@@ -640,8 +698,10 @@
 .method public release()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->releaseCamera()V
 
+    .line 2
     invoke-super {p0}, Lcom/faceunity/core/renderer/base/FUAbstractRenderer;->release()V
 
     return-void
@@ -650,8 +710,10 @@
 .method public releaseGLResource()V
     .locals 3
 
+    .line 1
     invoke-super {p0}, Lcom/faceunity/core/renderer/base/FUAbstractRenderer;->releaseGLResource()V
 
+    .line 2
     iget v0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mCameraTextId:I
 
     if-lez v0, :cond_0
@@ -664,10 +726,13 @@
 
     aput v0, v1, v2
 
+    .line 3
     invoke-static {v1}, Lcom/faceunity/toolbox/utils/FUGLUtils;->deleteTextures([I)V
 
+    .line 4
     iput v2, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mCameraTextId:I
 
+    .line 5
     :cond_0
     iget-object v0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mProgramTexture2d:Lcom/faceunity/toolbox/program/FUProgramTexture2d;
 
@@ -678,14 +743,17 @@
     :cond_1
     const/4 v0, 0x0
 
+    .line 6
     iput-object v0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mProgramTexture2d:Lcom/faceunity/toolbox/program/FUProgramTexture2d;
 
+    .line 7
     iget-object v1, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mProgramTextureOES:Lcom/faceunity/toolbox/program/FUProgramTextureOES;
 
     if-eqz v1, :cond_2
 
     invoke-virtual {v1}, Lcom/faceunity/toolbox/program/core/FUProgram;->release()V
 
+    .line 8
     :cond_2
     iput-object v0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mProgramTextureOES:Lcom/faceunity/toolbox/program/FUProgramTextureOES;
 
@@ -695,6 +763,7 @@
 .method public resumeRender()V
     .locals 4
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->getMSensorManager()Landroid/hardware/SensorManager;
 
     move-result-object v0
@@ -711,8 +780,10 @@
 
     const/4 v0, 0x1
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/faceunity/core/renderer/base/FUAbstractRenderer;->setDrawFrameSwitch(Z)V
 
+    .line 3
     invoke-direct {p0}, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->openCamera()V
 
     return-void
@@ -727,30 +798,34 @@
 .method public surfaceCreated(Landroid/opengl/EGLConfig;)V
     .locals 0
     .param p1    # Landroid/opengl/EGLConfig;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
 
     const p1, 0x8d65
 
+    .line 1
     invoke-static {p1}, Lcom/faceunity/toolbox/utils/FUGLUtils;->createTextureObject(I)I
 
     move-result p1
 
     iput p1, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mCameraTextId:I
 
+    .line 2
     new-instance p1, Lcom/faceunity/toolbox/program/FUProgramTexture2d;
 
     invoke-direct {p1}, Lcom/faceunity/toolbox/program/FUProgramTexture2d;-><init>()V
 
     iput-object p1, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mProgramTexture2d:Lcom/faceunity/toolbox/program/FUProgramTexture2d;
 
+    .line 3
     new-instance p1, Lcom/faceunity/toolbox/program/FUProgramTextureOES;
 
     invoke-direct {p1}, Lcom/faceunity/toolbox/program/FUProgramTextureOES;-><init>()V
 
     iput-object p1, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mProgramTextureOES:Lcom/faceunity/toolbox/program/FUProgramTextureOES;
 
+    .line 4
     invoke-direct {p0}, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->openCamera()V
 
     return-void
@@ -759,12 +834,14 @@
 .method public final switchCamera()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mFUCamera:Lcom/faceunity/core/camera/FUCamera;
 
     invoke-virtual {v0}, Lcom/faceunity/core/camera/FUCamera;->switchCamera()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-boolean v0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->mFUCameraPrepare:Z
 
     return-void

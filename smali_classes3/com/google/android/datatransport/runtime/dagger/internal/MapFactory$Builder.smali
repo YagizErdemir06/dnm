@@ -57,6 +57,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/datatransport/runtime/dagger/internal/MapFactory;
 
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;->map:Ljava/util/LinkedHashMap;
@@ -68,23 +69,23 @@
     return-object v0
 .end method
 
-.method public bridge synthetic put(Ljava/lang/Object;Lmm/c;)Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;
+.method public bridge synthetic put(Ljava/lang/Object;Lg/a/c;)Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/google/android/datatransport/runtime/dagger/internal/MapFactory$Builder;->put(Ljava/lang/Object;Lmm/c;)Lcom/google/android/datatransport/runtime/dagger/internal/MapFactory$Builder;
+    invoke-virtual {p0, p1, p2}, Lcom/google/android/datatransport/runtime/dagger/internal/MapFactory$Builder;->put(Ljava/lang/Object;Lg/a/c;)Lcom/google/android/datatransport/runtime/dagger/internal/MapFactory$Builder;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public put(Ljava/lang/Object;Lmm/c;)Lcom/google/android/datatransport/runtime/dagger/internal/MapFactory$Builder;
+.method public put(Ljava/lang/Object;Lg/a/c;)Lcom/google/android/datatransport/runtime/dagger/internal/MapFactory$Builder;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TK;",
-            "Lmm/c<",
+            "Lg/a/c<",
             "TV;>;)",
             "Lcom/google/android/datatransport/runtime/dagger/internal/MapFactory$Builder<",
             "TK;TV;>;"
@@ -92,28 +93,28 @@
     .end annotation
 
     .line 2
-    invoke-super {p0, p1, p2}, Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;->put(Ljava/lang/Object;Lmm/c;)Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;
+    invoke-super {p0, p1, p2}, Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;->put(Ljava/lang/Object;Lg/a/c;)Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;
 
     return-object p0
 .end method
 
-.method public bridge synthetic putAll(Lmm/c;)Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;
+.method public bridge synthetic putAll(Lg/a/c;)Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/google/android/datatransport/runtime/dagger/internal/MapFactory$Builder;->putAll(Lmm/c;)Lcom/google/android/datatransport/runtime/dagger/internal/MapFactory$Builder;
+    invoke-virtual {p0, p1}, Lcom/google/android/datatransport/runtime/dagger/internal/MapFactory$Builder;->putAll(Lg/a/c;)Lcom/google/android/datatransport/runtime/dagger/internal/MapFactory$Builder;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public putAll(Lmm/c;)Lcom/google/android/datatransport/runtime/dagger/internal/MapFactory$Builder;
+.method public putAll(Lg/a/c;)Lcom/google/android/datatransport/runtime/dagger/internal/MapFactory$Builder;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Ljava/util/Map<",
             "TK;TV;>;>;)",
             "Lcom/google/android/datatransport/runtime/dagger/internal/MapFactory$Builder<",
@@ -122,7 +123,7 @@
     .end annotation
 
     .line 2
-    invoke-super {p0, p1}, Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;->putAll(Lmm/c;)Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;
+    invoke-super {p0, p1}, Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;->putAll(Lg/a/c;)Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory$Builder;
 
     return-object p0
 .end method

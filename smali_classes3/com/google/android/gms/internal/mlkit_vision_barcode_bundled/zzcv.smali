@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcv;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcv;
 .super Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcy;
 .source "SourceFile"
 
@@ -13,12 +13,14 @@
 .method public constructor <init>([BII)V
     .locals 1
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcy;-><init>([B)V
 
     add-int v0, p2, p3
 
     array-length p1, p1
 
+    .line 2
     invoke-static {p2, v0, p1}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;->zzo(III)I
 
     iput p2, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcv;->zzc:I
@@ -33,6 +35,7 @@
 .method public final zza(I)B
     .locals 1
 
+    .line 1
     iget v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcv;->zzd:I
 
     invoke-static {p1, v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;->zzv(II)V
@@ -43,6 +46,7 @@
 
     add-int/2addr p0, p1
 
+    .line 2
     aget-byte p0, v0, p0
 
     return p0
@@ -51,6 +55,7 @@
 .method public final zzb(I)B
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcy;->zza:[B
 
     iget p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcv;->zzc:I
@@ -81,6 +86,7 @@
 .method public final zze([BIII)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcy;->zza:[B
 
     iget p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcv;->zzc:I

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lyh/a$c;
+.implements Ld/o/v/a/d0/a/c/a$c;
 .implements Landroid/view/View$OnClickListener;
 
 
@@ -16,55 +16,119 @@
 
 
 # static fields
-.field public static final R9:I = 0x8
+.field private static final K0:I = 0x4
 
-.field public static final S9:I = 0x1
+.field private static final f:Ljava/lang/String; = "MIMOJI_FragmentMimojiFuEdit"
 
-.field public static final T9:I = 0x3
+.field private static final g:I = 0xfff1
 
-.field public static final U9:I = 0x4
+.field public static final j:I = 0x2
 
-.field public static final V9:I = 0x5
+.field private static final k0:I = 0x3
 
-.field public static final p6:Ljava/lang/String; = "MIMOJI_FragmentMimojiFuEdit"
+.field private static final k1:I = 0x5
 
-.field public static final p7:I = 0x2
+.field public static final m:I = 0x4
 
-.field public static final p8:I = 0x3
+.field public static final n:I = 0x3
 
-.field public static final p9:I = 0x6
+.field public static final p:I = 0x5
 
-.field public static final q6:I = 0xfff1
+.field public static final s:I = 0x6
 
-.field public static final q7:I = 0x4
+.field public static final t:I = 0x7
 
-.field public static final q8:I = 0x5
+.field public static final u:I = 0x8
 
-.field public static final q9:I = 0x7
+.field private static final w:I = 0x1
 
 
 # instance fields
-.field public A:I
+.field private A9:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field public C:Ljava/lang/String;
+.field private volatile B9:I
 
-.field public C1:Z
+.field private C1:Landroid/widget/TextView;
 
-.field public C2:I
+.field private C2:Landroid/widget/TextView;
 
-.field public D:Ljava/lang/String;
+.field private C9:J
 
-.field public F:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field private D9:Ld/o/v/a/x;
 
-.field public G:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field private E9:I
 
-.field public volatile H:Z
+.field private F9:Ld/o/v/a/y;
 
-.field public volatile I:Z
+.field private G9:Ld/o/v/d/b/a/a/h$v;
 
-.field public J:I
+.field private H9:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$a;
 
-.field public K:Landroid/util/SparseArray;
+.field private K1:Landroid/widget/TextView;
+
+.field private K2:Landroid/widget/LinearLayout;
+
+.field private K8:Landroid/widget/RelativeLayout;
+
+.field private L8:Landroid/widget/RelativeLayout;
+
+.field private M8:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
+
+.field private N8:Landroid/view/View;
+
+.field private O8:Landroid/widget/FrameLayout;
+
+.field private P8:Landroid/widget/LinearLayout;
+
+.field private Q8:Landroid/view/View;
+
+.field private R8:Lmiuix/appcompat/app/ProgressDialog;
+
+.field private S8:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectHorizontalView;
+
+.field private T8:Landroid/widget/TextView;
+
+.field private U8:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter<",
+            "Ld/o/v/d/a/a;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private V8:Lmiuix/appcompat/app/AlertDialog;
+
+.field private W8:I
+
+.field private X8:I
+
+.field private Y8:Ld/o/v/d/a/a;
+
+.field private Z8:Ld/o/v/d/a/b;
+
+.field private a9:Ld/o/v/d/b/a/a/i;
+
+.field private b9:Ld/o/v/d/b/a/a/g;
+
+.field private c9:I
+
+.field private d9:Ljava/lang/String;
+
+.field private e9:Ljava/lang/String;
+
+.field private f9:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field private g9:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field private volatile h9:Z
+
+.field private volatile i9:Z
+
+.field private j9:I
+
+.field private k9:Landroid/util/SparseArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/SparseArray<",
@@ -74,159 +138,108 @@
     .end annotation
 .end field
 
-.field public K0:Ljava/util/concurrent/CountDownLatch;
+.field private l9:Ld/o/v/c/e/a/c;
 
-.field public K1:Z
+.field private m9:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$g;
 
-.field public K2:Ljava/util/concurrent/atomic/AtomicInteger;
+.field private n9:Lcom/google/gson/Gson;
 
-.field public V1:Ljava/lang/String;
+.field private o9:Ljava/util/concurrent/CountDownLatch;
 
-.field public volatile V2:I
+.field private volatile p9:Z
 
-.field public Y:Lji/c;
+.field private final q9:Landroid/os/Handler;
 
-.field public Z:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$g;
+.field public r9:Z
 
-.field public c:Landroid/content/Context;
+.field private s9:Z
 
-.field public d:Landroid/widget/TextView;
+.field private t9:Z
 
-.field public e:Landroid/widget/TextView;
+.field private u9:Z
 
-.field public f:Landroid/widget/TextView;
+.field private v1:Landroid/content/Context;
 
-.field public g:Landroid/widget/TextView;
+.field private v2:Landroid/widget/TextView;
 
-.field public h:Landroid/widget/LinearLayout;
+.field private v9:Ljava/lang/String;
 
-.field public i:Landroid/widget/RelativeLayout;
+.field private w9:Ld/o/v/d/b/a/a/d;
 
-.field public j:Landroid/widget/RelativeLayout;
+.field private x9:Ld/o/v/d/b/a/a/l/b$d;
 
-.field public k:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
+.field private y9:Ld/o/v/d/b/a/a/l/b$d;
 
-.field public k0:Lcom/google/gson/Gson;
-
-.field public volatile k1:Z
-
-.field public l:Landroid/view/View;
-
-.field public m:Landroid/widget/FrameLayout;
-
-.field public n:Landroid/widget/LinearLayout;
-
-.field public o:Landroid/view/View;
-
-.field public p:Lmiuix/appcompat/app/ProgressDialog;
-
-.field public final p1:Landroid/os/Handler;
-
-.field public p2:Lki/c;
-
-.field public p3:J
-
-.field public p4:I
-
-.field public p5:Lki/h$v;
-
-.field public q:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectHorizontalView;
-
-.field public q1:Z
-
-.field public q2:Lli/b$d;
-
-.field public q3:Lrh/x;
-
-.field public q4:Lrh/y;
-
-.field public q5:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$a;
-
-.field public r:Landroid/widget/TextView;
-
-.field public s:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter<",
-            "Lcom/xiaomi/mimoji/mimojifu/bean/a;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public t:Lmiuix/appcompat/app/AlertDialog;
-
-.field public u:I
-
-.field public v:I
-
-.field public v1:Z
-
-.field public v2:Lli/b$d;
-
-.field public w:Lcom/xiaomi/mimoji/mimojifu/bean/a;
-
-.field public x:Lcom/xiaomi/mimoji/mimojifu/bean/b;
-
-.field public y:Lki/i;
-
-.field public z:Lki/f;
+.field private z9:I
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 4
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji;-><init>()V
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->u:I
+    .line 2
+    iput v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->W8:I
 
-    iput v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v:I
+    .line 3
+    iput v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->X8:I
 
     const/16 v0, 0xcb
 
-    iput v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->A:I
+    .line 4
+    iput v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->c9:I
 
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C:Ljava/lang/String;
+    .line 5
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->d9:Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->D:Ljava/lang/String;
+    .line 6
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->e9:Ljava/lang/String;
 
+    .line 7
     new-instance v1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v2, 0x0
 
     invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    iput-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->F:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iput-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->f9:Ljava/util/concurrent/atomic/AtomicBoolean;
 
+    .line 8
     new-instance v1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v3, 0x1
 
     invoke-direct {v1, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    iput-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->G:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iput-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->g9:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    iput-boolean v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->H:Z
+    .line 9
+    iput-boolean v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->h9:Z
 
-    iput-boolean v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->I:Z
+    .line 10
+    iput-boolean v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->i9:Z
 
+    .line 11
     new-instance v1, Landroid/util/SparseArray;
 
     invoke-direct {v1}, Landroid/util/SparseArray;-><init>()V
 
-    iput-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K:Landroid/util/SparseArray;
+    iput-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k9:Landroid/util/SparseArray;
 
+    .line 12
     new-instance v1, Lcom/google/gson/Gson;
 
     invoke-direct {v1}, Lcom/google/gson/Gson;-><init>()V
 
-    iput-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k0:Lcom/google/gson/Gson;
+    iput-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->n9:Lcom/google/gson/Gson;
 
+    .line 13
     new-instance v1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -235,271 +248,490 @@
 
     invoke-direct {v1, v3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    iput-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->p1:Landroid/os/Handler;
+    iput-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q9:Landroid/os/Handler;
 
-    iput-boolean v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q1:Z
+    .line 14
+    iput-boolean v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->r9:Z
 
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->V1:Ljava/lang/String;
+    .line 15
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v9:Ljava/lang/String;
 
+    .line 16
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {v0, v2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K2:Ljava/util/concurrent/atomic/AtomicInteger;
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->A9:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    iput v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->V2:I
+    .line 17
+    iput v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->B9:I
 
+    .line 18
     new-instance v0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$d;
 
     invoke-direct {v0, p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$d;-><init>(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)V
 
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q4:Lrh/y;
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->F9:Ld/o/v/a/y;
 
+    .line 19
     new-instance v0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$e;
 
     invoke-direct {v0, p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$e;-><init>(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)V
 
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->p5:Lki/h$v;
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->G9:Ld/o/v/d/b/a/a/h$v;
 
+    .line 20
     new-instance v0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$f;
 
     invoke-direct {v0, p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$f;-><init>(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)V
 
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q5:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$a;
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->H9:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$a;
 
     return-void
 .end method
 
-.method public static synthetic Ai(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)Lli/b$d;
+.method public static synthetic Af(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;Ld/o/v/d/a/b;)Ld/o/v/d/a/b;
     .locals 0
 
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q2:Lli/b$d;
-
-    return-object p0
-.end method
-
-.method public static synthetic Bi(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)J
-    .locals 2
-
-    iget-wide v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->p3:J
-
-    return-wide v0
-.end method
-
-.method public static synthetic Ci(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;J)J
-    .locals 0
-
-    iput-wide p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->p3:J
-
-    return-wide p1
-.end method
-
-.method public static synthetic Di(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;Z)Z
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K1:Z
-
-    return p1
-.end method
-
-.method public static synthetic Ei(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)Lki/i;
-    .locals 0
-
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->y:Lki/i;
-
-    return-object p0
-.end method
-
-.method public static synthetic Fi(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;Lki/i;)Lki/i;
-    .locals 0
-
-    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->y:Lki/i;
+    .line 1
+    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Z8:Ld/o/v/d/a/b;
 
     return-object p1
 .end method
 
-.method public static synthetic Gi(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)Lki/f;
-    .locals 0
+.method private Bh(Landroid/view/View;)V
+    .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->z:Lki/f;
+    const v0, 0x7f0b054f
 
-    return-object p0
-.end method
+    .line 1
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-.method public static synthetic Hi(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;Lki/f;)Lki/f;
-    .locals 0
+    move-result-object v0
 
-    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->z:Lki/f;
+    check-cast v0, Landroid/widget/RelativeLayout;
 
-    return-object p1
-.end method
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K8:Landroid/widget/RelativeLayout;
 
-.method public static synthetic Ii(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)Lcom/xiaomi/mimoji/mimojifu/bean/b;
-    .locals 0
+    const v0, 0x7f0b0570
 
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->x:Lcom/xiaomi/mimoji/mimojifu/bean/b;
+    .line 2
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    return-object p0
-.end method
+    move-result-object v0
 
-.method public static synthetic Ji(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;Lcom/xiaomi/mimoji/mimojifu/bean/b;)Lcom/xiaomi/mimoji/mimojifu/bean/b;
-    .locals 0
+    check-cast v0, Landroid/widget/RelativeLayout;
 
-    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->x:Lcom/xiaomi/mimoji/mimojifu/bean/b;
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->L8:Landroid/widget/RelativeLayout;
 
-    return-object p1
-.end method
+    .line 3
+    invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-.method public static synthetic Ki(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)I
-    .locals 0
+    const v0, 0x7f0b054c
 
-    iget p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->A:I
+    .line 4
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    return p0
-.end method
+    move-result-object v0
 
-.method public static synthetic Li(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)V
-    .locals 0
+    check-cast v0, Landroid/widget/RelativeLayout;
 
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Vi()V
+    .line 5
+    invoke-virtual {v0, p0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    return-void
-.end method
+    const v0, 0x7f0b03aa
 
-.method public static synthetic Mi(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)I
-    .locals 0
+    .line 6
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    iget p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->p4:I
+    move-result-object v0
 
-    return p0
-.end method
+    check-cast v0, Landroid/widget/LinearLayout;
 
-.method public static synthetic Ni(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)I
-    .locals 2
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K2:Landroid/widget/LinearLayout;
 
-    iget v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->p4:I
+    const v0, 0x7f0b069e
 
-    add-int/lit8 v1, v0, 0x1
+    .line 7
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    iput v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->p4:I
+    move-result-object v0
 
-    return v0
-.end method
+    check-cast v0, Landroid/widget/TextView;
 
-.method public static synthetic Oi(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
-    .locals 0
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C1:Landroid/widget/TextView;
 
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
+    .line 8
+    invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    return-object p0
-.end method
+    const v0, 0x7f0b06bd
 
-.method public static synthetic Pi(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)Ljava/util/concurrent/atomic/AtomicBoolean;
-    .locals 0
+    .line 9
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->F:Ljava/util/concurrent/atomic/AtomicBoolean;
+    move-result-object v0
 
-    return-object p0
-.end method
+    check-cast v0, Landroid/widget/TextView;
 
-.method public static synthetic Qi(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)Landroid/os/Handler;
-    .locals 0
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K1:Landroid/widget/TextView;
 
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->p1:Landroid/os/Handler;
+    .line 10
+    invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    return-object p0
-.end method
+    const v0, 0x7f0b0695
 
-.method public static synthetic Ri(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)Ljava/lang/String;
-    .locals 0
+    .line 11
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->V1:Ljava/lang/String;
+    move-result-object v0
 
-    return-object p0
-.end method
+    check-cast v0, Landroid/widget/TextView;
 
-.method public static synthetic Si(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)Z
-    .locals 0
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v2:Landroid/widget/TextView;
 
-    iget-boolean p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k1:Z
+    .line 12
+    invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    return p0
-.end method
+    const v0, 0x7f0b00f0
 
-.method public static synthetic Ti(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;Z)Z
-    .locals 0
+    .line 13
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    iput-boolean p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k1:Z
+    move-result-object v0
 
-    return p1
-.end method
+    check-cast v0, Landroid/widget/TextView;
 
-.method public static synthetic bi(Lv8/b1;)V
-    .locals 0
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C2:Landroid/widget/TextView;
 
-    invoke-static {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->dj(Lv8/b1;)V
+    .line 14
+    invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    return-void
-.end method
+    const v0, 0x7f0b041f
 
-.method public static synthetic ci(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;Lcom/xiaomi/mimoji/mimojifu/bean/a;I)V
-    .locals 0
+    .line 15
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    invoke-direct {p0, p1, p2}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->fj(Lcom/xiaomi/mimoji/mimojifu/bean/a;I)V
+    move-result-object v0
 
-    return-void
-.end method
+    check-cast v0, Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
 
-.method public static synthetic di(Lv8/b1;)V
-    .locals 0
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->M8:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
 
-    invoke-static {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->lj(Lv8/b1;)V
+    const v0, 0x7f0b0420
 
-    return-void
-.end method
+    .line 16
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-.method public static synthetic dj(Lv8/b1;)V
-    .locals 4
+    move-result-object v0
 
-    new-instance v0, Lm6/x;
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->N8:Landroid/view/View;
 
-    invoke-direct {v0}, Lm6/x;-><init>()V
+    .line 17
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->m9:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$g;
 
     const/4 v1, 0x0
 
-    const/16 v2, 0xa
+    if-nez v0, :cond_0
 
-    const/16 v3, 0x16
+    .line 18
+    new-instance v0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$g;
 
-    invoke-virtual {v0, v3, v1, v2}, Lm6/x;->d(III)Lm6/u;
+    invoke-direct {v0, p0, v1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$g;-><init>(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$a;)V
 
-    invoke-static {}, Lm6/i0;->l()Lm6/i0;
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->m9:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$g;
+
+    .line 19
+    :cond_0
+    invoke-static {}, Ld/o/v/a/d0/a/c/a$g;->impl2()Ld/o/v/a/d0/a/c/a$g;
+
+    move-result-object v0
+
+    .line 20
+    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->M8:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v3}, Landroid/view/TextureView;->setOpaque(Z)V
+
+    .line 21
+    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->M8:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
+
+    new-instance v4, Ld/o/v/d/c/a/e0;
+
+    invoke-direct {v4, v0}, Ld/o/v/d/c/a/e0;-><init>(Ld/o/v/a/d0/a/c/a$g;)V
+
+    invoke-virtual {v2, v4}, Lcom/android/camera/ui/GLTextureView;->setEGLShareContextGetter(Lcom/android/camera/ui/GLTextureView$h;)V
+
+    .line 22
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->M8:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
+
+    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->m9:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$g;
+
+    invoke-virtual {v0, v2}, Lcom/android/camera/ui/GLTextureView;->setRenderer(Landroid/opengl/GLSurfaceView$Renderer;)V
+
+    .line 23
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->M8:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
+
+    invoke-virtual {v0, v3}, Lcom/android/camera/ui/GLTextureView;->setRenderMode(I)V
+
+    const v0, 0x7f0b02ca
+
+    .line 24
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/FrameLayout;
+
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->O8:Landroid/widget/FrameLayout;
+
+    const v0, 0x7f0b04c6
+
+    .line 25
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/LinearLayout;
+
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->P8:Landroid/widget/LinearLayout;
+
+    const/16 v2, 0x8
+
+    .line 26
+    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    .line 27
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->P8:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/RelativeLayout$LayoutParams;
+
+    .line 28
+    invoke-static {}, Ld/d/a/n6/b;->X()I
+
+    move-result v2
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    const v5, 0x7f070669
+
+    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+
+    move-result v4
+
+    add-int/2addr v2, v4
+
+    iput v2, v0, Landroid/widget/RelativeLayout$LayoutParams;->bottomMargin:I
+
+    .line 29
+    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->P8:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v2, v0}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    const v0, 0x7f060147
+
+    const/4 v2, 0x2
+
+    new-array v4, v2, [Landroid/view/View;
+
+    .line 30
+    iget-object v5, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K1:Landroid/widget/TextView;
+
+    aput-object v5, v4, v3
+
+    const/4 v5, 0x1
+
+    iget-object v6, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C1:Landroid/widget/TextView;
+
+    aput-object v6, v4, v5
+
+    invoke-static {v0, v4}, Ld/d/a/f6/f;->t(I[Landroid/view/View;)V
+
+    .line 31
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->T8:Landroid/widget/TextView;
+
+    if-nez v0, :cond_1
+
+    .line 32
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object v0
+
+    const v4, 0x7f0e0190
+
+    invoke-virtual {v0, v4, v1, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object v0
+
+    const v1, 0x7f0b06c5
+
+    .line 33
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->T8:Landroid/widget/TextView;
+
+    :cond_1
+    const v0, 0x7f0b0430
+
+    .line 34
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectHorizontalView;
+
+    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->S8:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectHorizontalView;
+
+    .line 35
+    invoke-virtual {p1, v3}, Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectHorizontalView;->setInitScroll(Z)V
+
+    .line 36
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->S8:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectHorizontalView;
+
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getItemAnimator()Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;
+
+    move-result-object p1
+
+    const-wide/16 v0, 0x0
+
+    invoke-virtual {p1, v0, v1}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->setChangeDuration(J)V
+
+    .line 37
+    new-instance p1, Ld/o/v/c/e/a/c;
+
+    invoke-direct {p1}, Ld/o/v/c/e/a/c;-><init>()V
+
+    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->l9:Ld/o/v/c/e/a/c;
+
+    .line 38
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v1:Landroid/content/Context;
+
+    iget-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->M8:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
+
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K2:Landroid/widget/LinearLayout;
+
+    invoke-virtual {p1, v0, v1, p0, v2}, Ld/o/v/c/e/a/c;->e(Landroid/content/Context;Landroid/view/View;Landroid/widget/LinearLayout;I)V
+
+    return-void
+.end method
+
+.method public static synthetic Ce(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;Ld/o/v/d/b/a/a/i;)Ld/o/v/d/b/a/a/i;
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->a9:Ld/o/v/d/b/a/a/i;
+
+    return-object p1
+.end method
+
+.method private Eh()Z
+    .locals 1
+
+    .line 1
+    invoke-static {}, Ld/o/v/d/d/y;->u()Ld/o/v/d/d/y;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ld/o/v/d/d/y;->M()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->A9:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    .line 2
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result p0
+
+    if-lez p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 p0, 0x1
+
+    :goto_1
+    return p0
+.end method
+
+.method public static synthetic Ff(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)I
+    .locals 0
+
+    .line 1
+    iget p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->c9:I
+
+    return p0
+.end method
+
+.method public static synthetic Fh(Ld/d/a/m7/g/e1;)V
+    .locals 4
+
+    .line 1
+    new-instance v0, Ld/d/a/u6/w4/c0;
+
+    invoke-direct {v0}, Ld/d/a/u6/w4/c0;-><init>()V
+
+    const/16 v1, 0x16
+
+    const/4 v2, 0x0
+
+    const/16 v3, 0xa
+
+    .line 2
+    invoke-virtual {v0, v1, v2, v3}, Ld/d/a/u6/w4/c0;->b(III)Ld/d/a/u6/w4/b0;
+
+    .line 3
+    invoke-static {}, Ld/d/a/u6/w4/i0;->e()Ld/d/a/u6/w4/i0;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lm6/x;->j(Lm6/y;)V
+    invoke-virtual {v0, v1}, Ld/d/a/u6/w4/c0;->h(Ld/d/a/u6/w4/d0;)V
 
-    invoke-interface {p0, v0}, Lv8/b1;->cb(Lm6/x;)V
-
-    return-void
-.end method
-
-.method public static synthetic ei(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;ZZ)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->ej(ZZ)V
+    .line 4
+    invoke-interface {p0, v0}, Ld/d/a/m7/g/e1;->O9(Ld/d/a/u6/w4/c0;)V
 
     return-void
 .end method
 
-.method private synthetic ej(ZZ)V
+.method private synthetic Gh(ZZ)V
     .locals 16
 
     move-object/from16 v1, p0
 
     const-string v2, "human.json"
 
-    iget-object v0, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K:Landroid/util/SparseArray;
+    .line 1
+    iget-object v0, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k9:Landroid/util/SparseArray;
 
     const-string v3, "MIMOJI_FragmentMimojiFuEdit"
 
@@ -509,19 +741,22 @@
 
     if-eqz v0, :cond_2
 
+    .line 2
     :try_start_0
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/Fragment;->getChildFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
 
+    .line 3
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->beginTransaction()Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object v0
 
     move v6, v5
 
+    .line 4
     :goto_0
-    iget-object v7, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K:Landroid/util/SparseArray;
+    iget-object v7, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k9:Landroid/util/SparseArray;
 
     invoke-virtual {v7}, Landroid/util/SparseArray;->size()I
 
@@ -529,7 +764,8 @@
 
     if-ge v6, v7, :cond_0
 
-    iget-object v7, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K:Landroid/util/SparseArray;
+    .line 5
+    iget-object v7, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k9:Landroid/util/SparseArray;
 
     invoke-virtual {v7, v6}, Landroid/util/SparseArray;->keyAt(I)I
 
@@ -541,14 +777,17 @@
 
     check-cast v7, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEditBottomList;
 
-    invoke-virtual {v7}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEditBottomList;->bi()I
+    .line 6
+    invoke-virtual {v7}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEditBottomList;->Yb()I
 
+    .line 7
     invoke-virtual {v0, v7}, Landroidx/fragment/app/FragmentTransaction;->remove(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
 
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
+    .line 8
     :cond_0
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentTransaction;->commitAllowingStateLoss()I
     :try_end_0
@@ -559,7 +798,8 @@
     :catch_0
     move-exception v0
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 9
+    invoke-virtual {v0}, Ljava/lang/IllegalStateException;->getMessage()Ljava/lang/String;
 
     move-result-object v6
 
@@ -570,7 +810,7 @@
     goto :goto_1
 
     :cond_1
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/IllegalStateException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
@@ -579,40 +819,51 @@
 
     invoke-static {v3, v0, v6}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 10
     :goto_2
-    iget-object v0, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K:Landroid/util/SparseArray;
+    iget-object v0, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k9:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
-    iget-object v0, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->m:Landroid/widget/FrameLayout;
+    .line 11
+    iget-object v0, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->O8:Landroid/widget/FrameLayout;
 
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->removeAllViews()V
 
+    .line 12
     :cond_2
-    iget-object v0, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->s:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
+    iget-object v0, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->U8:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
 
     const/4 v6, 0x0
 
     if-eqz v0, :cond_3
 
+    .line 13
     invoke-virtual {v0, v6}, Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;->setDataList(Ljava/util/List;)V
 
-    iput-object v6, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->s:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
+    .line 14
+    iput-object v6, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->U8:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
 
+    .line 15
     :cond_3
-    iput-object v6, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K0:Ljava/util/concurrent/CountDownLatch;
+    iput-object v6, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->o9:Ljava/util/concurrent/CountDownLatch;
 
-    iput-object v6, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->w:Lcom/xiaomi/mimoji/mimojifu/bean/a;
+    .line 16
+    iput-object v6, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Y8:Ld/o/v/d/a/a;
 
     const/4 v0, -0x1
 
-    iput v0, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v:I
+    .line 17
+    iput v0, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->X8:I
 
-    invoke-virtual/range {p0 .. p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->F()V
+    .line 18
+    invoke-virtual/range {p0 .. p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->G()V
 
-    invoke-virtual/range {p0 .. p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Vi()V
+    .line 19
+    invoke-direct/range {p0 .. p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->eh()V
 
-    iput v0, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->u:I
+    .line 20
+    iput v0, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->W8:I
 
     const/16 v0, 0xcb
 
@@ -622,41 +873,45 @@
 
     if-eqz p1, :cond_8
 
+    .line 21
     new-instance v8, Ljava/util/HashMap;
 
     invoke-direct {v8}, Ljava/util/HashMap;-><init>()V
 
-    invoke-static {}, Lvi/y;->u()Lvi/y;
+    .line 22
+    invoke-static {}, Ld/o/v/d/d/y;->w()Ld/o/v/d/d/y;
 
     move-result-object v9
 
-    invoke-virtual {v9}, Lvi/y;->o()Lki/c;
+    invoke-virtual {v9}, Ld/o/v/d/d/y;->q()Ld/o/v/d/b/a/a/d;
 
     move-result-object v9
 
-    invoke-virtual {v9}, Lki/c;->m()Ljava/lang/String;
+    invoke-virtual {v9}, Ld/o/v/d/b/a/a/d;->m()Ljava/lang/String;
 
     move-result-object v9
 
+    .line 23
     invoke-static {v9}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v10
 
     if-eqz v10, :cond_4
 
+    .line 24
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lvi/y;->u()Lvi/y;
+    invoke-static {}, Ld/o/v/d/d/y;->w()Ld/o/v/d/d/y;
 
     move-result-object v10
 
-    invoke-virtual {v10}, Lvi/y;->o()Lki/c;
+    invoke-virtual {v10}, Ld/o/v/d/d/y;->q()Ld/o/v/d/b/a/a/d;
 
     move-result-object v10
 
-    invoke-virtual {v10}, Lki/c;->getDir()Ljava/lang/String;
+    invoke-virtual {v10}, Ld/o/v/d/b/a/a/d;->getDir()Ljava/lang/String;
 
     move-result-object v10
 
@@ -670,12 +925,13 @@
 
     move-result-object v9
 
-    invoke-static {v9}, Lqi/b;->l(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v9}, Ld/o/v/d/b/a/c/b;->l(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
+    .line 25
     :cond_4
-    iget-object v10, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k0:Lcom/google/gson/Gson;
+    iget-object v10, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->n9:Lcom/google/gson/Gson;
 
     const-class v11, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;
 
@@ -685,33 +941,38 @@
 
     check-cast v9, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;
 
-    invoke-static {v8, v9}, Lrh/w;->f(Ljava/util/Map;Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;)Ljava/util/Map;
+    .line 26
+    invoke-static {v8, v9}, Ld/o/v/a/w;->f(Ljava/util/Map;Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;)Ljava/util/Map;
 
-    const-string v9, "attr_mimoji_type"
-
-    invoke-virtual/range {p0 .. p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Xi()Ljava/lang/String;
-
-    move-result-object v10
-
-    invoke-interface {v8, v9, v10}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-static {}, Lvi/y;->s()Lvi/y;
+    .line 27
+    invoke-direct/range {p0 .. p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->ih()Ljava/lang/String;
 
     move-result-object v9
 
-    invoke-virtual {v9}, Lvi/y;->o()Lki/c;
+    const-string v10, "attr_mimoji_type"
+
+    invoke-interface {v8, v10, v9}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 28
+    invoke-static {}, Ld/o/v/d/d/y;->u()Ld/o/v/d/d/y;
 
     move-result-object v9
 
-    invoke-virtual {v9}, Lki/c;->getDir()Ljava/lang/String;
+    invoke-virtual {v9}, Ld/o/v/d/d/y;->q()Ld/o/v/d/b/a/a/d;
 
     move-result-object v9
 
-    new-instance v10, Lsh/a$b;
+    invoke-virtual {v9}, Ld/o/v/d/b/a/a/d;->getDir()Ljava/lang/String;
 
-    invoke-direct {v10}, Lsh/a$b;-><init>()V
+    move-result-object v9
 
-    iget v11, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->A:I
+    .line 29
+    new-instance v10, Ld/o/v/a/z/a$b;
+
+    invoke-direct {v10}, Ld/o/v/a/z/a$b;-><init>()V
+
+    .line 30
+    iget v11, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->c9:I
 
     const-string v12, "key_mimoji_edit_save"
 
@@ -721,21 +982,25 @@
 
     const-string v9, " from create"
 
+    .line 31
     invoke-interface {v8, v13, v9}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v12, v8}, Lk9/a;->e2(Ljava/lang/String;Ljava/util/Map;)V
+    .line 32
+    invoke-static {v12, v8}, Ld/d/a/v7/f;->a2(Ljava/lang/String;Ljava/util/Map;)V
 
     const-string v8, "MIMOJI_CREATE"
 
-    invoke-static {v8, v4}, Ly7/m6;->n(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .line 33
+    invoke-static {v8, v4}, Ld/d/a/d7/m8/b/z9;->n(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
+    .line 34
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v11, Lrh/w;->u:Ljava/lang/String;
+    sget-object v11, Ld/o/v/a/w;->u:Ljava/lang/String;
 
     invoke-virtual {v8, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -749,18 +1014,19 @@
 
     move-result-object v8
 
+    .line 35
     :try_start_1
     new-instance v12, Ljava/io/File;
 
-    invoke-static {}, Lvi/y;->s()Lvi/y;
+    invoke-static {}, Ld/o/v/d/d/y;->u()Ld/o/v/d/d/y;
 
     move-result-object v13
 
-    invoke-virtual {v13}, Lvi/y;->o()Lki/c;
+    invoke-virtual {v13}, Ld/o/v/d/d/y;->q()Ld/o/v/d/b/a/a/d;
 
     move-result-object v13
 
-    invoke-virtual {v13}, Lki/c;->getDir()Ljava/lang/String;
+    invoke-virtual {v13}, Ld/o/v/d/b/a/a/d;->getDir()Ljava/lang/String;
 
     move-result-object v13
 
@@ -770,8 +1036,9 @@
 
     invoke-direct {v13, v8}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v12, v13}, Ly7/m6;->h(Ljava/io/File;Ljava/io/File;)V
+    invoke-static {v12, v13}, Ld/d/a/d7/m8/b/z9;->h(Ljava/io/File;Ljava/io/File;)V
 
+    .line 36
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
@@ -784,55 +1051,67 @@
 
     move-result-object v12
 
+    .line 37
     new-instance v13, Ljava/io/File;
 
     invoke-direct {v13, v12}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
+    .line 38
     invoke-virtual {v13}, Ljava/io/File;->exists()Z
 
     move-result v14
 
     if-nez v14, :cond_5
 
-    iget-object v14, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->c:Landroid/content/Context;
+    .line 39
+    iget-object v14, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v1:Landroid/content/Context;
 
-    invoke-static {v14, v11, v2, v2}, Ly7/m6;->l(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {v14, v11, v2, v2}, Ld/d/a/d7/m8/b/z9;->l(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
     const-wide/16 v14, 0x0
 
-    invoke-static {v14, v15}, Lcom/android/camera/v2;->O8(J)V
+    .line 40
+    invoke-static {v14, v15}, Ld/d/a/d4;->K8(J)V
 
+    .line 41
     :cond_5
-    invoke-static {v13}, Ly7/m6;->I(Ljava/io/File;)Ljava/lang/String;
+    invoke-static {v13}, Ld/d/a/d7/m8/b/z9;->I(Ljava/io/File;)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 42
     new-instance v11, Lorg/json/JSONObject;
 
     invoke-direct {v11, v2}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
     const-string v2, "data"
 
+    .line 43
     invoke-virtual {v11, v2}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v2
 
+    .line 44
     new-instance v13, Lorg/json/JSONObject;
 
     invoke-direct {v13}, Lorg/json/JSONObject;-><init>()V
 
     const-string v14, "id"
 
+    .line 45
     invoke-virtual {v13, v14, v9}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string v14, "placeholder"
 
+    .line 46
     invoke-virtual {v13, v14, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string v4, "downloadState"
 
+    .line 47
     invoke-virtual {v13, v4, v7}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
+    .line 48
     invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
 
     move-result v4
@@ -844,6 +1123,7 @@
 
     add-int/lit8 v14, v4, 0x1
 
+    .line 49
     invoke-virtual {v2, v4}, Lorg/json/JSONArray;->get(I)Ljava/lang/Object;
 
     move-result-object v15
@@ -854,13 +1134,16 @@
 
     goto :goto_3
 
+    .line 50
     :cond_6
     invoke-virtual {v2, v6, v13}, Lorg/json/JSONArray;->put(ILjava/lang/Object;)Lorg/json/JSONArray;
 
+    .line 51
     new-instance v2, Ljava/io/FileOutputStream;
 
     invoke-direct {v2, v12}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
 
+    .line 52
     invoke-virtual {v11}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object v4
@@ -871,14 +1154,17 @@
 
     invoke-virtual {v2, v4}, Ljava/io/FileOutputStream;->write([B)V
 
+    .line 53
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
 
-    iget-object v2, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q3:Lrh/x;
+    .line 54
+    iget-object v2, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->D9:Ld/o/v/a/x;
 
-    invoke-virtual {v2}, Lrh/x;->g()Lcom/xiaomi/mimoji/mimojifu/bean/c;
+    invoke-virtual {v2}, Ld/o/v/a/x;->g()Ld/o/v/d/a/c;
 
     move-result-object v2
 
+    .line 55
     invoke-virtual {v2}, Lcom/android/camera/resource/BaseResourceList;->setDeparted()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
@@ -886,11 +1172,12 @@
     goto :goto_4
 
     :catch_1
-    const-string v2, "mimojifu  copy create fail"
+    new-array v2, v5, [Ljava/lang/Object;
 
-    new-array v4, v5, [Ljava/lang/Object;
+    const-string v4, "mimojifu  copy create fail"
 
-    invoke-static {v3, v2, v4}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 56
+    invoke-static {v3, v4, v2}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :goto_4
     move-object v2, v9
@@ -902,14 +1189,17 @@
     :cond_7
     const-string v2, "from edit"
 
+    .line 57
     invoke-interface {v8, v13, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v12, v8}, Lk9/a;->e2(Ljava/lang/String;Ljava/util/Map;)V
+    .line 58
+    invoke-static {v12, v8}, Ld/d/a/v7/f;->a2(Ljava/lang/String;Ljava/util/Map;)V
 
     move-object v2, v9
 
+    .line 59
     :goto_5
-    invoke-virtual {v10, v9}, Lsh/a$b;->x(Ljava/lang/String;)Lsh/a$b;
+    invoke-virtual {v10, v9}, Ld/o/v/a/z/a$b;->x(Ljava/lang/String;)Ld/o/v/a/z/a$b;
 
     move-result-object v3
 
@@ -927,32 +1217,38 @@
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Lsh/a$b;->y(Ljava/lang/String;)Lsh/a$b;
+    .line 60
+    invoke-virtual {v3, v4}, Ld/o/v/a/z/a$b;->y(Ljava/lang/String;)Ld/o/v/a/z/a$b;
 
     move-result-object v3
 
-    invoke-virtual {v3, v2}, Lsh/a$b;->F(Ljava/lang/String;)Lsh/a$b;
+    .line 61
+    invoke-virtual {v3, v2}, Ld/o/v/a/z/a$b;->F(Ljava/lang/String;)Ld/o/v/a/z/a$b;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lsh/a$b;->t()Lsh/a;
+    .line 62
+    invoke-virtual {v2}, Ld/o/v/a/z/a$b;->t()Ld/o/v/a/z/a;
 
     move-result-object v2
 
     const/4 v3, 0x7
 
+    .line 63
     invoke-virtual {v2, v3}, Lcom/android/camera/resource/BaseResourceItem;->setState(I)V
 
-    iget-object v3, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q3:Lrh/x;
+    .line 64
+    iget-object v3, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->D9:Ld/o/v/a/x;
 
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
 
-    invoke-virtual {v3, v2, v4}, Lrh/x;->R(Lsh/e;Ljava/lang/Integer;)V
+    invoke-virtual {v3, v2, v4}, Ld/o/v/a/x;->R(Ld/o/v/a/z/e;Ljava/lang/Integer;)V
 
+    .line 65
     :cond_8
-    invoke-static {}, Lyh/a$g;->impl2()Lyh/a$g;
+    invoke-static {}, Ld/o/v/a/d0/a/c/a$g;->impl2()Ld/o/v/a/d0/a/c/a$g;
 
     move-result-object v2
 
@@ -960,28 +1256,32 @@
 
     if-eqz p2, :cond_9
 
-    iget-object v0, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q3:Lrh/x;
+    .line 66
+    iget-object v0, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->D9:Ld/o/v/a/x;
 
-    invoke-virtual {v0, v7}, Lrh/x;->l(I)I
+    invoke-virtual {v0, v7}, Ld/o/v/a/x;->l(I)I
 
     move-result v0
 
-    invoke-interface {v2, v0}, Lyh/a$g;->j1(I)V
+    invoke-interface {v2, v0}, Ld/o/v/a/d0/a/c/a$g;->j1(I)V
 
-    invoke-interface {v2}, Lcom/android/camera/g5$a;->F()V
+    .line 67
+    invoke-interface {v2}, Ld/d/a/s5$a;->G()V
 
-    invoke-static {}, Lvi/y;->s()Lvi/y;
+    .line 68
+    invoke-static {}, Ld/o/v/d/d/y;->u()Ld/o/v/d/d/y;
 
     move-result-object v0
 
-    sget-object v2, Lki/a$e;->b:Lki/a$e;
+    sget-object v2, Ld/o/v/d/b/a/a/b$e;->d:Ld/o/v/d/b/a/a/b$e;
 
-    invoke-virtual {v0, v2}, Lvi/y;->l0(Lki/a$e;)V
+    invoke-virtual {v0, v2}, Ld/o/v/d/d/y;->l0(Ld/o/v/d/b/a/a/b$e;)V
 
     goto :goto_7
 
+    .line 69
     :cond_9
-    iget v3, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->A:I
+    iget v3, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->c9:I
 
     if-ne v0, v3, :cond_a
 
@@ -990,65 +1290,83 @@
     :cond_a
     move v6, v7
 
+    .line 70
     :goto_6
-    invoke-interface {v2, v6, v5}, Lyh/a$g;->P0(IZ)V
+    invoke-interface {v2, v6, v5}, Ld/o/v/a/d0/a/c/a$g;->P0(IZ)V
 
+    .line 71
     :cond_b
     :goto_7
-    invoke-static {}, Lv8/p;->impl2()Lv8/p;
+    invoke-static {}, Ld/d/a/m7/g/s;->impl2()Ld/d/a/m7/g/s;
 
     move-result-object v0
 
     if-eqz v0, :cond_c
 
-    invoke-interface {v0}, Lv8/p;->Ze()V
+    .line 72
+    invoke-interface {v0}, Ld/d/a/m7/g/s;->Le()V
 
+    .line 73
     :cond_c
-    iget-object v0, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->o:Landroid/view/View;
+    iget-object v0, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Q8:Landroid/view/View;
 
     if-eqz v0, :cond_d
 
     const/16 v2, 0x8
 
+    .line 74
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object v0, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->n:Landroid/widget/LinearLayout;
+    .line 75
+    iget-object v0, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->P8:Landroid/widget/LinearLayout;
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    iget-object v0, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->h:Landroid/widget/LinearLayout;
+    .line 76
+    iget-object v0, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K2:Landroid/widget/LinearLayout;
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
+    .line 77
     :cond_d
-    iget-object v0, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
+    iget-object v0, v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->M8:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
 
-    invoke-static {v0, v5}, Lai/d;->b(Landroid/view/View;Z)Z
+    invoke-static {v0, v5}, Ld/o/v/a/f0/d;->b(Landroid/view/View;Z)Z
 
-    invoke-static {}, Lv8/b1;->impl()Ljava/util/Optional;
+    .line 78
+    invoke-static {}, Ld/d/a/m7/g/e1;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lti/y;
-
-    invoke-direct {v1}, Lti/y;-><init>()V
+    sget-object v1, Ld/o/v/d/c/a/v;->c:Ld/o/v/d/c/a/v;
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
     return-void
 .end method
 
-.method public static synthetic fi(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)V
+.method public static synthetic Hc(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)I
     .locals 0
 
-    invoke-direct {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->jj()V
+    .line 1
+    iget p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->z9:I
 
-    return-void
+    return p0
 .end method
 
-.method private synthetic fj(Lcom/xiaomi/mimoji/mimojifu/bean/a;I)V
+.method public static synthetic Ic(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)Ld/o/v/d/b/a/a/l/b$d;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->y9:Ld/o/v/d/b/a/a/l/b$d;
+
+    return-object p0
+.end method
+
+.method private synthetic Ih(Ld/o/v/d/a/a;I)V
     .locals 4
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1071,42 +1389,47 @@
 
     invoke-static {v3, v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Y:Lji/c;
+    .line 2
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->l9:Ld/o/v/c/e/a/c;
 
-    invoke-virtual {v0}, Lji/c;->m()V
+    invoke-virtual {v0}, Ld/o/v/c/e/a/c;->m()V
 
-    invoke-virtual {p0, p1, p2, v1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->f9(Lcom/xiaomi/mimoji/mimojifu/bean/a;IZ)V
-
-    return-void
-.end method
-
-.method public static synthetic gi(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->mj()V
+    .line 3
+    invoke-virtual {p0, p1, p2, v1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->S8(Ld/o/v/d/a/a;IZ)V
 
     return-void
 .end method
 
-.method public static synthetic gj(Lyh/a$g;)Ljavax/microedition/khronos/egl/EGLContext;
+.method public static synthetic Jf(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)V
     .locals 0
 
-    invoke-interface {p0}, Lyh/a$g;->uh()Ljavax/microedition/khronos/egl/EGLContext;
+    .line 1
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->eh()V
+
+    return-void
+.end method
+
+.method public static synthetic Kh(Ld/o/v/a/d0/a/c/a$g;)Ljavax/microedition/khronos/egl/EGLContext;
+    .locals 0
+
+    .line 1
+    invoke-interface {p0}, Ld/o/v/a/d0/a/c/a$g;->Xg()Ljavax/microedition/khronos/egl/EGLContext;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static synthetic hi(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)V
+.method public static synthetic Lc(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;ILd/o/v/d/b/a/a/l/b$d;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->hj()V
+    .line 1
+    invoke-direct {p0, p1, p2}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Xh(ILd/o/v/d/b/a/a/l/b$d;)V
 
     return-void
 .end method
 
-.method private synthetic hj()V
+.method private synthetic Lh()V
     .locals 4
 
     const/4 v0, 0x0
@@ -1117,258 +1440,310 @@
 
     const-string v3, " onAvatarBindEnd "
 
+    .line 1
     invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-boolean v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C1:Z
+    .line 2
+    iget-boolean v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->t9:Z
 
     if-eqz v1, :cond_0
 
-    iput-boolean v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C1:Z
+    .line 3
+    iput-boolean v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->t9:Z
 
-    invoke-static {}, Lvi/y;->s()Lvi/y;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lvi/y;->X()V
-
-    invoke-static {}, Lvi/y;->s()Lvi/y;
+    .line 4
+    invoke-static {}, Ld/o/v/d/d/y;->u()Ld/o/v/d/d/y;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lvi/y;->P()V
+    invoke-virtual {v1}, Ld/o/v/d/d/y;->X()V
 
-    iget-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->w:Lcom/xiaomi/mimoji/mimojifu/bean/a;
+    .line 5
+    invoke-static {}, Ld/o/v/d/d/y;->u()Ld/o/v/d/d/y;
 
-    invoke-virtual {v1}, Lcom/xiaomi/mimoji/mimojifu/bean/a;->m()[Lcom/xiaomi/mimoji/mimojifu/bean/a$a;
+    move-result-object v1
+
+    invoke-virtual {v1}, Ld/o/v/d/d/y;->P()V
+
+    .line 6
+    iget-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Y8:Ld/o/v/d/a/a;
+
+    invoke-virtual {v1}, Ld/o/v/d/a/a;->m()[Ld/o/v/d/a/a$a;
 
     move-result-object v1
 
     aget-object v1, v1, v0
 
-    invoke-virtual {v1}, Lcom/xiaomi/mimoji/mimojifu/bean/a$a;->b()Lli/b$d;
+    invoke-virtual {v1}, Ld/o/v/d/a/a$a;->b()Ld/o/v/d/b/a/a/l/b$d;
 
     move-result-object v1
 
-    invoke-virtual {p0, v0, v1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->oj(ILli/b$d;)V
+    invoke-direct {p0, v0, v1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Xh(ILd/o/v/d/b/a/a/l/b$d;)V
 
     goto :goto_0
 
+    .line 7
     :cond_0
-    iput-boolean v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K1:Z
+    iput-boolean v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->u9:Z
 
+    .line 8
     :goto_0
-    iget v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->u:I
+    iget v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->W8:I
 
     const/16 v2, 0x8
 
     if-ne v1, v2, :cond_1
 
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->l:Landroid/view/View;
+    .line 9
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->N8:Landroid/view/View;
 
-    invoke-static {p0, v0}, Lai/d;->b(Landroid/view/View;Z)Z
+    invoke-static {p0, v0}, Ld/o/v/a/f0/d;->b(Landroid/view/View;Z)Z
 
     :cond_1
     return-void
 .end method
 
-.method public static synthetic ii()V
+.method public static synthetic Mf(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)I
     .locals 0
 
-    invoke-static {}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->nj()V
+    .line 1
+    iget p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->E9:I
 
-    return-void
+    return p0
 .end method
 
-.method private synthetic ij()V
+.method private synthetic Nh()V
     .locals 1
 
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->l:Landroid/view/View;
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->N8:Landroid/view/View;
 
     const/4 v0, 0x1
 
-    invoke-static {p0, v0}, Lai/d;->b(Landroid/view/View;Z)Z
+    invoke-static {p0, v0}, Ld/o/v/a/f0/d;->b(Landroid/view/View;Z)Z
 
     return-void
 .end method
 
-.method public static synthetic ji(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)V
+.method public static synthetic Of(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)I
+    .locals 2
+
+    .line 1
+    iget v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->E9:I
+
+    add-int/lit8 v1, v0, 0x1
+
+    iput v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->E9:I
+
+    return v0
+.end method
+
+.method public static synthetic Pg(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)Landroid/os/Handler;
     .locals 0
 
-    invoke-direct {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->ij()V
-
-    return-void
-.end method
-
-.method private synthetic jj()V
-    .locals 1
-
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->l:Landroid/view/View;
-
-    const/4 v0, 0x1
-
-    invoke-static {p0, v0}, Lai/d;->b(Landroid/view/View;Z)Z
-
-    return-void
-.end method
-
-.method public static synthetic ki(Lyh/a$g;)Ljavax/microedition/khronos/egl/EGLContext;
-    .locals 0
-
-    invoke-static {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->gj(Lyh/a$g;)Ljavax/microedition/khronos/egl/EGLContext;
-
-    move-result-object p0
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q9:Landroid/os/Handler;
 
     return-object p0
 .end method
 
-.method private synthetic kj()V
+.method private synthetic Ph()V
+    .locals 1
+
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->N8:Landroid/view/View;
+
+    const/4 v0, 0x1
+
+    invoke-static {p0, v0}, Ld/o/v/a/f0/d;->b(Landroid/view/View;Z)Z
+
+    return-void
+.end method
+
+.method private synthetic Rh()V
     .locals 5
 
-    invoke-static {}, Lvi/y;->s()Lvi/y;
+    .line 1
+    invoke-static {}, Ld/o/v/d/d/y;->u()Ld/o/v/d/d/y;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lvi/y;->p()Lki/a$e;
+    invoke-virtual {v0}, Ld/o/v/d/d/y;->r()Ld/o/v/d/b/a/a/b$e;
 
     move-result-object v0
 
-    sget-object v1, Lki/a$e;->c:Lki/a$e;
+    sget-object v1, Ld/o/v/d/b/a/a/b$e;->f:Ld/o/v/d/b/a/a/b$e;
 
     if-eq v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q3:Lrh/x;
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->D9:Ld/o/v/a/x;
 
-    invoke-virtual {v0}, Lrh/x;->v()Z
+    .line 2
+    invoke-virtual {v0}, Ld/o/v/a/x;->v()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Wi()V
+    .line 3
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->hh()V
 
     return-void
 
+    .line 4
     :cond_0
-    invoke-static {}, Lvi/y;->s()Lvi/y;
+    invoke-static {}, Ld/o/v/d/d/y;->u()Ld/o/v/d/d/y;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lvi/y;->o()Lki/c;
+    invoke-virtual {v0}, Ld/o/v/d/d/y;->q()Ld/o/v/d/b/a/a/d;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->p2:Lki/c;
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->w9:Ld/o/v/d/b/a/a/d;
 
-    invoke-static {}, Lvi/y;->s()Lvi/y;
+    .line 5
+    invoke-static {}, Ld/o/v/d/d/y;->u()Ld/o/v/d/d/y;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lvi/y;->e()Z
+    invoke-virtual {v0}, Ld/o/v/d/d/y;->g()Z
 
-    invoke-static {}, Lvi/y;->s()Lvi/y;
+    .line 6
+    invoke-static {}, Ld/o/v/d/d/y;->u()Ld/o/v/d/d/y;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lvi/y;->i0(Z)V
+    invoke-virtual {v0, v1}, Ld/o/v/d/d/y;->i0(Z)V
 
-    const-string v0, " cover gone "
+    const/4 v0, 0x0
 
-    const/4 v2, 0x0
+    new-array v2, v0, [Ljava/lang/Object;
 
-    new-array v3, v2, [Ljava/lang/Object;
+    const-string v3, "MIMOJI_FragmentMimojiFuEdit"
 
-    const-string v4, "MIMOJI_FragmentMimojiFuEdit"
+    const-string v4, " cover gone "
 
-    invoke-static {v4, v0, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 7
+    invoke-static {v3, v4, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->l:Landroid/view/View;
+    .line 8
+    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->N8:Landroid/view/View;
 
     const/16 v3, 0x8
 
-    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v2, v3}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->s:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
+    .line 9
+    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->U8:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
 
-    if-eqz v0, :cond_2
+    if-eqz v2, :cond_2
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
-    move-result v0
+    move-result v2
 
-    if-eqz v0, :cond_2
+    if-eqz v2, :cond_2
 
-    iput-boolean v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->H:Z
+    .line 10
+    iput-boolean v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->h9:Z
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->w:Lcom/xiaomi/mimoji/mimojifu/bean/a;
+    .line 11
+    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Y8:Ld/o/v/d/a/a;
 
-    if-nez v0, :cond_1
+    if-nez v2, :cond_1
 
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->s:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
+    .line 12
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->U8:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
 
-    invoke-virtual {p0, v2}, Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;->g(I)V
+    invoke-virtual {p0, v0}, Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;->g(I)V
 
     goto :goto_0
 
+    .line 13
     :cond_1
-    iget v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v:I
+    iget v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->X8:I
 
-    invoke-virtual {p0, v0, v2, v1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->f9(Lcom/xiaomi/mimoji/mimojifu/bean/a;IZ)V
+    invoke-virtual {p0, v2, v0, v1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->S8(Ld/o/v/d/a/a;IZ)V
 
     :cond_2
     :goto_0
     return-void
 .end method
 
-.method public static synthetic li(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)V
+.method public static synthetic Sd(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)I
     .locals 0
 
-    invoke-direct {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->kj()V
+    .line 1
+    iget p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->B9:I
 
-    return-void
+    return p0
 .end method
 
-.method public static synthetic lj(Lv8/b1;)V
+.method public static synthetic Th(Ld/d/a/m7/g/e1;)V
     .locals 4
 
-    new-instance v0, Lm6/x;
+    .line 1
+    new-instance v0, Ld/d/a/u6/w4/c0;
 
-    invoke-direct {v0}, Lm6/x;-><init>()V
+    invoke-direct {v0}, Ld/d/a/u6/w4/c0;-><init>()V
 
-    const v1, 0xfff2
+    const/16 v1, 0x16
 
-    const/4 v2, 0x7
+    const v2, 0xfff2
 
-    const/16 v3, 0x16
+    const/4 v3, 0x7
 
-    invoke-virtual {v0, v3, v1, v2}, Lm6/x;->d(III)Lm6/u;
+    .line 2
+    invoke-virtual {v0, v1, v2, v3}, Ld/d/a/u6/w4/c0;->b(III)Ld/d/a/u6/w4/b0;
 
-    invoke-static {}, Lm6/i0;->l()Lm6/i0;
+    .line 3
+    invoke-static {}, Ld/d/a/u6/w4/i0;->e()Ld/d/a/u6/w4/i0;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lm6/x;->j(Lm6/y;)V
+    invoke-virtual {v0, v1}, Ld/d/a/u6/w4/c0;->h(Ld/d/a/u6/w4/d0;)V
 
-    invoke-interface {p0, v0}, Lv8/b1;->cb(Lm6/x;)V
+    .line 4
+    invoke-interface {p0, v0}, Ld/d/a/m7/g/e1;->O9(Ld/d/a/u6/w4/c0;)V
 
     return-void
 .end method
 
-.method private synthetic mj()V
+.method public static synthetic Ud(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)Ld/o/v/d/b/a/a/l/b$d;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->x9:Ld/o/v/d/b/a/a/l/b$d;
+
+    return-object p0
+.end method
+
+.method public static synthetic Ug(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)Ljava/lang/String;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v9:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method private synthetic Uh()V
     .locals 3
 
-    invoke-static {}, Lv8/b1;->impl()Ljava/util/Optional;
+    .line 1
+    invoke-static {}, Ld/d/a/m7/g/e1;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lti/w;
-
-    invoke-direct {v1}, Lti/w;-><init>()V
+    sget-object v1, Ld/o/v/d/c/a/x;->c:Ld/o/v/d/c/a/x;
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Xi()Ljava/lang/String;
+    .line 2
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->ih()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1376,33 +1751,47 @@
 
     const-string v2, "edit"
 
-    invoke-static {v0, v1, v2}, Lk9/a;->a2(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Ld/d/a/v7/f;->W1(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lyh/a$b;->impl2()Lyh/a$b;
+    .line 3
+    invoke-static {}, Ld/o/v/a/d0/a/c/a$b;->impl2()Ld/o/v/a/d0/a/c/a$b;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lyh/a$b;->t7()V
+    .line 4
+    invoke-interface {v0}, Ld/o/v/a/d0/a/c/a$b;->h7()V
 
     const/4 v0, 0x5
 
-    invoke-virtual {p0, v0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->wj(I)V
+    .line 5
+    invoke-virtual {p0, v0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->fi(I)V
 
     return-void
 .end method
 
-.method public static synthetic ni(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)Landroid/view/View;
+.method public static synthetic Wc(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)Z
     .locals 0
 
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->o:Landroid/view/View;
+    .line 1
+    iget-boolean p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->t9:Z
 
-    return-object p0
+    return p0
 .end method
 
-.method public static synthetic nj()V
+.method public static synthetic Wg(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)Z
+    .locals 0
+
+    .line 1
+    iget-boolean p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->p9:Z
+
+    return p0
+.end method
+
+.method public static synthetic Wh()V
     .locals 2
 
-    invoke-static {}, Lyh/a$c$a;->impl2()Lyh/a$c$a;
+    .line 1
+    invoke-static {}, Ld/o/v/a/d0/a/c/a$c$a;->impl2()Ld/o/v/a/d0/a/c/a$c$a;
 
     move-result-object v0
 
@@ -1410,427 +1799,675 @@
 
     const/4 v1, 0x0
 
-    invoke-interface {v0, v1}, Lyh/a$c$a;->zd(Z)V
+    .line 2
+    invoke-interface {v0, v1}, Ld/o/v/a/d0/a/c/a$c$a;->jd(Z)V
 
     :cond_0
     return-void
 .end method
 
-.method public static synthetic oi(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)Lji/c;
-    .locals 0
-
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Y:Lji/c;
-
-    return-object p0
-.end method
-
-.method public static synthetic pi(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)Ljava/util/concurrent/atomic/AtomicInteger;
-    .locals 0
-
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K2:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    return-object p0
-.end method
-
-.method public static synthetic qi(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v1:Z
-
-    return p0
-.end method
-
-.method public static synthetic ri(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;Z)Z
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v1:Z
-
-    return p1
-.end method
-
-.method public static synthetic si(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)I
-    .locals 0
-
-    iget p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C2:I
-
-    return p0
-.end method
-
-.method public static synthetic ti(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)Lli/b$d;
-    .locals 0
-
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v2:Lli/b$d;
-
-    return-object p0
-.end method
-
-.method public static synthetic ui(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;ILli/b$d;)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->oj(ILli/b$d;)V
-
-    return-void
-.end method
-
-.method public static synthetic vi(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C1:Z
-
-    return p0
-.end method
-
-.method public static synthetic wi(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)V
-    .locals 0
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->rj()V
-
-    return-void
-.end method
-
-.method public static synthetic xi(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)Landroid/util/SparseArray;
-    .locals 0
-
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K:Landroid/util/SparseArray;
-
-    return-object p0
-.end method
-
-.method public static synthetic yi(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)I
-    .locals 0
-
-    iget p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v:I
-
-    return p0
-.end method
-
-.method public static synthetic zi(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)I
-    .locals 0
-
-    iget p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->V2:I
-
-    return p0
-.end method
-
-
-# virtual methods
-.method public F()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->p2:Lki/c;
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    invoke-static {}, Lvi/y;->u()Lvi/y;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    invoke-static {}, Lvi/y;->u()Lvi/y;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v0}, Lvi/y;->r0(Lki/c;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public G1(I)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->wj(I)V
-
-    return-void
-.end method
-
-.method public G5()I
-    .locals 0
-
-    iget p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->J:I
-
-    return p0
-.end method
-
-.method public H7(Ljava/util/List;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Lcom/arcsoft/avatar2/emoticon/EmoInfo;",
-            ">;)V"
+.method private Xh(ILd/o/v/d/b/a/a/l/b$d;)V
+    .locals 10
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "row",
+            "itemType"
         }
     .end annotation
 
-    .annotation build Lh7/c;
-    .end annotation
+    .line 1
+    invoke-static {}, Ld/o/v/a/f0/c;->j()Ld/o/v/a/f0/c;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public If(Z)V
-    .locals 1
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
+    move-result-wide v1
 
-    if-eqz p1, :cond_0
+    const/4 v3, 0x0
 
-    invoke-virtual {p1}, Landroid/view/View;->isAttachedToWindow()Z
+    invoke-virtual {v0, v1, v2, v3}, Ld/o/v/a/f0/c;->c(JI)V
 
-    move-result p1
+    .line 2
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->f9:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    if-eqz p1, :cond_0
+    invoke-virtual {v0, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
+    .line 3
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    invoke-virtual {p1}, Landroid/view/TextureView;->isAvailable()Z
+    move-result-wide v0
 
-    move-result p1
+    iput-wide v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C9:J
 
-    if-eqz p1, :cond_0
+    .line 4
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->x9:Ld/o/v/d/b/a/a/l/b$d;
 
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
+    if-nez v0, :cond_0
 
-    invoke-virtual {p1}, Lcom/android/camera/ui/GLTextureView;->q()V
-
-    invoke-static {}, Lvi/y;->s()Lvi/y;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lvi/y;->E()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-boolean p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->H:Z
-
-    if-nez p1, :cond_0
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->p1:Landroid/os/Handler;
-
-    new-instance v0, Lti/v;
-
-    invoke-direct {v0, p0}, Lti/v;-><init>(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)V
-
-    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :cond_0
-    return-void
-.end method
-
-.method public Je(ILli/b$d;)V
-    .locals 2
-
-    iget-boolean v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->H:Z
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0, p1, p2, v1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->pj(ILli/b$d;Z)V
+    const/4 v0, 0x0
 
     goto :goto_0
 
     :cond_0
-    const-string p0, "refreshIcon: wait setupCompleted"
+    invoke-static {v0}, Ld/o/v/d/b/a/a/l/b;->a(Ld/o/v/d/b/a/a/l/b$d;)Ld/o/v/d/b/a/a/l/b$c;
 
-    new-array p1, v1, [Ljava/lang/Object;
-
-    const-string p2, "MIMOJI_FragmentMimojiFuEdit"
-
-    invoke-static {p2, p0, p1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    move-result-object v0
 
     :goto_0
+    move-object v9, v0
+
+    .line 5
+    invoke-static {p2}, Ld/o/v/d/b/a/a/l/b;->a(Ld/o/v/d/b/a/a/l/b$d;)Ld/o/v/d/b/a/a/l/b$c;
+
+    move-result-object v7
+
+    .line 6
+    invoke-static {}, Ld/o/v/d/b/b/a/a;->j()Ld/o/v/d/b/b/a/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p2, v3}, Ld/o/v/d/b/b/a/a;->i(Ld/o/v/d/b/a/a/l/b$d;I)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->B9:I
+
+    .line 7
+    invoke-static {}, Ld/o/v/d/d/y;->u()Ld/o/v/d/d/y;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->G9:Ld/o/v/d/b/a/a/h$v;
+
+    invoke-virtual {v0, v1}, Ld/o/v/d/d/y;->k0(Ld/o/v/d/b/a/a/h$v;)V
+
+    .line 8
+    invoke-static {}, Ld/o/v/d/d/y;->u()Ld/o/v/d/d/y;
+
+    move-result-object v4
+
+    iget-object v8, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->x9:Ld/o/v/d/b/a/a/l/b$d;
+
+    move v5, p1
+
+    move-object v6, p2
+
+    invoke-virtual/range {v4 .. v9}, Ld/o/v/d/d/y;->T(ILd/o/v/d/b/a/a/l/b$d;Ld/o/v/d/b/a/a/l/b$c;Ld/o/v/d/b/a/a/l/b$d;Ld/o/v/d/b/a/a/l/b$c;)V
+
+    .line 9
+    iput-object p2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->x9:Ld/o/v/d/b/a/a/l/b$d;
+
     return-void
 .end method
 
-.method public Mc(I)V
+.method public static synthetic Yb(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)Landroid/view/View;
     .locals 0
-    .annotation build Lh7/c;
+
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Q8:Landroid/view/View;
+
+    return-object p0
+.end method
+
+.method public static synthetic Yg(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;Z)Z
+    .locals 0
+
+    .line 1
+    iput-boolean p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->p9:Z
+
+    return p1
+.end method
+
+.method private Yh(ILd/o/v/d/b/a/a/l/b$d;Z)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "row",
+            "itemType",
+            "isColor"
+        }
     .end annotation
 
+    .line 1
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Eh()Z
+
+    move-result p3
+
+    if-eqz p3, :cond_0
+
+    .line 2
+    iput p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->z9:I
+
+    const/4 p1, 0x1
+
+    .line 3
+    iput-boolean p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->s9:Z
+
+    .line 4
+    iput-object p2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->y9:Ld/o/v/d/b/a/a/l/b$d;
+
+    const/4 p0, 0x0
+
+    new-array p0, p0, [Ljava/lang/Object;
+
+    const-string p1, "MIMOJI_FragmentMimojiFuEdit"
+
+    const-string p2, "renderIcon: isNeedWait"
+
+    .line 5
+    invoke-static {p1, p2, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    .line 6
+    :cond_0
+    invoke-direct {p0, p1, p2}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Xh(ILd/o/v/d/b/a/a/l/b$d;)V
+
     return-void
 .end method
 
-.method public Q0()V
+.method private Zh()V
     .locals 2
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->p1:Landroid/os/Handler;
+    .line 1
+    invoke-static {}, Ld/o/v/d/d/y;->u()Ld/o/v/d/d/y;
 
-    new-instance v1, Lti/t;
+    move-result-object v0
 
-    invoke-direct {v1, p0}, Lti/t;-><init>(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)V
+    invoke-virtual {v0}, Ld/o/v/d/d/y;->z()I
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    move-result v0
 
-    return-void
-.end method
+    iget-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->x9:Ld/o/v/d/b/a/a/l/b$d;
 
-.method public Q6()V
-    .locals 0
-    .annotation build Lh7/c;
-    .end annotation
+    invoke-direct {p0, v0, v1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Xh(ILd/o/v/d/b/a/a/l/b$d;)V
 
     return-void
 .end method
 
-.method public R(I)V
-    .locals 0
+.method private ai()V
+    .locals 2
 
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
+    const/4 v0, 0x1
+
+    .line 1
+    iput-boolean v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->u9:Z
+
+    const/4 v0, 0x0
+
+    .line 2
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->a9:Ld/o/v/d/b/a/a/i;
+
+    .line 3
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->b9:Ld/o/v/d/b/a/a/g;
+
+    .line 4
+    invoke-static {}, Ld/o/v/d/d/y;->u()Ld/o/v/d/d/y;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ld/o/v/d/d/y;->Y(Z)V
+
+    .line 5
+    invoke-static {}, Ld/o/v/d/d/y;->u()Ld/o/v/d/d/y;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ld/o/v/d/d/y;->q()Ld/o/v/d/b/a/a/d;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->w9:Ld/o/v/d/b/a/a/d;
+
+    .line 6
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k9:Landroid/util/SparseArray;
+
+    if-eqz v0, :cond_0
+
+    iget p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->X8:I
+
+    if-ltz p0, :cond_0
+
+    .line 7
+    invoke-virtual {v0, p0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEditBottomList;
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0, p1}, Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;->s(I)V
+    .line 8
+    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEditBottomList;->wb()V
 
     :cond_0
     return-void
 .end method
 
-.method public R8()V
-    .locals 2
+.method public static synthetic bd(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)V
+    .locals 0
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->c:Landroid/content/Context;
+    .line 1
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->ai()V
+
+    return-void
+.end method
+
+.method public static synthetic cg(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->M8:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
+
+    return-object p0
+.end method
+
+.method private ci(I)V
+    .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "backType"
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v0
 
     if-nez v0, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
-    check-cast v0, Landroid/app/Activity;
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->eh()V
 
-    new-instance v1, Lti/z;
+    const/4 v0, 0x1
 
-    invoke-direct {v1, p0}, Lti/z;-><init>(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)V
+    const/4 v1, -0x1
 
-    invoke-virtual {v0, v1}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
+    if-eq p1, v0, :cond_3
 
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->p1:Landroid/os/Handler;
+    const/4 v2, 0x3
 
-    new-instance v0, Lti/a0;
+    if-eq p1, v2, :cond_2
 
-    invoke-direct {v0}, Lti/a0;-><init>()V
+    const/4 v2, 0x4
 
-    invoke-virtual {p0, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    if-eq p1, v2, :cond_1
 
-    return-void
-.end method
+    const/4 v2, 0x5
 
-.method public Ui()V
-    .locals 4
+    if-eq p1, v2, :cond_1
 
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->cj()Z
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_0
-
-    iput-boolean v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k1:Z
-
-    return-void
-
-    :cond_0
-    iget v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->A:I
-
-    const/16 v2, 0xcb
-
-    const/4 v3, 0x0
-
-    if-ne v0, v2, :cond_1
-
-    iget v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->u:I
-
-    const/4 v2, 0x2
-
-    if-ne v0, v2, :cond_1
+    move v2, v1
 
     goto :goto_0
 
     :cond_1
-    move v1, v3
+    const v2, 0x7f130638
+
+    goto :goto_0
+
+    :cond_2
+    const v2, 0x7f130639
+
+    goto :goto_0
+
+    :cond_3
+    const v2, 0x7f13063b
 
     :goto_0
-    invoke-virtual {p0, v1, v3}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Yi(ZZ)V
+    if-ne v2, v1, :cond_4
+
+    return-void
+
+    .line 3
+    :cond_4
+    new-instance v1, Lmiuix/appcompat/app/AlertDialog$b;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v3
+
+    invoke-direct {v1, v3}, Lmiuix/appcompat/app/AlertDialog$b;-><init>(Landroid/content/Context;)V
+
+    .line 4
+    invoke-virtual {p0, v2}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lmiuix/appcompat/app/AlertDialog$b;->x(Ljava/lang/CharSequence;)Lmiuix/appcompat/app/AlertDialog$b;
+
+    move-result-object v2
+
+    .line 5
+    invoke-virtual {v2, v0}, Lmiuix/appcompat/app/AlertDialog$b;->i(Z)Lmiuix/appcompat/app/AlertDialog$b;
+
+    move-result-object v0
+
+    const v2, 0x7f13061f
+
+    new-instance v3, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$c;
+
+    invoke-direct {v3, p0, p1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$c;-><init>(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;I)V
+
+    .line 6
+    invoke-virtual {v0, v2, v3}, Lmiuix/appcompat/app/AlertDialog$b;->M(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$b;
+
+    move-result-object p1
+
+    const v0, 0x7f130602
+
+    new-instance v2, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$b;
+
+    invoke-direct {v2, p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$b;-><init>(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)V
+
+    .line 7
+    invoke-virtual {p1, v0, v2}, Lmiuix/appcompat/app/AlertDialog$b;->B(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$b;
+
+    .line 8
+    invoke-virtual {v1}, Lmiuix/appcompat/app/AlertDialog$b;->Z()Lmiuix/appcompat/app/AlertDialog;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->V8:Lmiuix/appcompat/app/AlertDialog;
 
     return-void
 .end method
 
-.method public final Vi()V
+.method private di()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public static synthetic ee(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)J
     .locals 2
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->p:Lmiuix/appcompat/app/ProgressDialog;
+    .line 1
+    iget-wide v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C9:J
+
+    return-wide v0
+.end method
+
+.method private eh()V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->R8:Lmiuix/appcompat/app/ProgressDialog;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
 
-    iput-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->p:Lmiuix/appcompat/app/ProgressDialog;
+    .line 3
+    iput-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->R8:Lmiuix/appcompat/app/ProgressDialog;
 
+    .line 4
     :cond_0
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->t:Lmiuix/appcompat/app/AlertDialog;
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->V8:Lmiuix/appcompat/app/AlertDialog;
 
     if-eqz v0, :cond_1
 
+    .line 5
     invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
 
-    iput-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->t:Lmiuix/appcompat/app/AlertDialog;
+    .line 6
+    iput-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->V8:Lmiuix/appcompat/app/AlertDialog;
 
     :cond_1
     return-void
 .end method
 
-.method public final Wi()V
+.method private ei()I
+    .locals 5
+
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->U8:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
+
+    invoke-virtual {v0}, Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;->getItemCount()I
+
+    move-result v0
+
+    sget-object v1, Ld/o/v/d/a/a;->p:[[Ld/o/v/d/a/a$a;
+
+    array-length v1, v1
+
+    if-ne v0, v1, :cond_0
+
+    .line 2
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->U8:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
+
+    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;->getItemCount()I
+
+    move-result p0
+
+    return p0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    .line 3
+    :goto_0
+    sget-object v2, Ld/o/v/d/a/a;->p:[[Ld/o/v/d/a/a$a;
+
+    array-length v3, v2
+
+    if-ge v1, v3, :cond_2
+
+    .line 4
+    aget-object v2, v2, v1
+
+    .line 5
+    new-instance v3, Ld/o/v/d/a/a;
+
+    invoke-direct {v3, v2}, Ld/o/v/d/a/a;-><init>([Ld/o/v/d/a/a$a;)V
+
+    .line 6
+    iget-object v4, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->d9:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Ld/o/v/d/a/a;->o(Ljava/lang/String;)V
+
+    .line 7
+    iget-object v4, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v1:Landroid/content/Context;
+
+    invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    aget-object v2, v2, v0
+
+    invoke-virtual {v2}, Ld/o/v/d/a/a$a;->c()I
+
+    move-result v2
+
+    invoke-virtual {v4, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v3, v2}, Ld/o/v/a/g0/b/d;->j(Ljava/lang/String;)V
+
+    .line 8
+    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->T8:Landroid/widget/TextView;
+
+    invoke-virtual {v2}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
+
+    move-result-object v2
+
+    invoke-virtual {v3}, Ld/o/v/a/g0/b/d;->d()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v2, v4}, Landroid/text/TextPaint;->measureText(Ljava/lang/String;)F
+
+    move-result v2
+
+    .line 9
+    invoke-virtual {v3, v2}, Ld/o/v/a/g0/b/d;->g(F)V
+
+    .line 10
+    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->U8:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
+
+    invoke-virtual {v2}, Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;->getItemCount()I
+
+    move-result v2
+
+    if-lez v2, :cond_1
+
+    .line 11
+    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->U8:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
+
+    invoke-virtual {v2}, Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;->getDataList()Ljava/util/List;
+
+    move-result-object v2
+
+    iget-object v4, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->U8:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
+
+    invoke-virtual {v4}, Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;->getDataList()Ljava/util/List;
+
+    move-result-object v4
+
+    invoke-interface {v4}, Ljava/util/List;->size()I
+
+    move-result v4
+
+    add-int/lit8 v4, v4, -0x1
+
+    invoke-interface {v2, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ld/o/v/d/a/a;
+
+    invoke-virtual {v2}, Ld/o/v/a/g0/b/d;->c()F
+
+    move-result v2
+
+    invoke-virtual {v3}, Ld/o/v/a/g0/b/d;->b()F
+
+    move-result v4
+
+    add-float/2addr v2, v4
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v3}, Ld/o/v/a/g0/b/d;->b()F
+
+    move-result v2
+
+    .line 12
+    :goto_1
+    invoke-virtual {v3, v2}, Ld/o/v/a/g0/b/d;->h(F)V
+
+    .line 13
+    invoke-virtual {v3, v0}, Ld/o/v/a/g0/b/d;->f(I)V
+
+    .line 14
+    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->U8:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
+
+    invoke-virtual {v2, v3}, Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;->h(Ld/o/v/a/g0/b/d;)V
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    .line 15
+    :cond_2
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->U8:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
+
+    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;->getItemCount()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static synthetic ff(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)Ld/o/v/d/b/a/a/g;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->b9:Ld/o/v/d/b/a/a/g;
+
+    return-object p0
+.end method
+
+.method public static synthetic gc(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)Ld/o/v/c/e/a/c;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->l9:Ld/o/v/c/e/a/c;
+
+    return-object p0
+.end method
+
+.method private hh()V
     .locals 4
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->G:Ljava/util/concurrent/atomic/AtomicBoolean;
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->g9:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->l:Landroid/view/View;
+    .line 2
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->N8:Landroid/view/View;
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lai/d;->b(Landroid/view/View;Z)Z
+    invoke-static {v0, v1}, Ld/o/v/a/f0/d;->b(Landroid/view/View;Z)Z
 
-    iget v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->A:I
+    .line 3
+    iget v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->c9:I
 
     const/16 v2, 0xcb
 
     if-ne v0, v2, :cond_0
 
-    invoke-static {}, Lvi/y;->s()Lvi/y;
+    .line 4
+    invoke-static {}, Ld/o/v/d/d/y;->u()Ld/o/v/d/d/y;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lvi/y;->o()Lki/c;
+    invoke-virtual {v0}, Ld/o/v/d/d/y;->q()Ld/o/v/d/b/a/a/d;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->p2:Lki/c;
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->w9:Ld/o/v/d/b/a/a/d;
 
-    invoke-virtual {v0}, Lki/c;->getDir()Ljava/lang/String;
+    .line 5
+    invoke-virtual {v0}, Ld/o/v/d/b/a/a/d;->getDir()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C:Ljava/lang/String;
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->d9:Ljava/lang/String;
 
+    .line 6
     :cond_0
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C:Ljava/lang/String;
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->d9:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1838,124 +2475,135 @@
 
     if-nez v0, :cond_1
 
-    invoke-static {}, Lvi/y;->s()Lvi/y;
+    .line 7
+    invoke-static {}, Ld/o/v/d/d/y;->u()Ld/o/v/d/d/y;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lvi/y;->o()Lki/c;
+    invoke-virtual {v0}, Ld/o/v/d/d/y;->q()Ld/o/v/d/b/a/a/d;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->p2:Lki/c;
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->w9:Ld/o/v/d/b/a/a/d;
 
-    invoke-static {}, Lvi/y;->s()Lvi/y;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Lvi/y;->i0(Z)V
-
-    invoke-static {}, Lvi/y;->s()Lvi/y;
+    .line 8
+    invoke-static {}, Ld/o/v/d/d/y;->u()Ld/o/v/d/d/y;
 
     move-result-object v0
 
-    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->c:Landroid/content/Context;
+    invoke-virtual {v0, v1}, Ld/o/v/d/d/y;->i0(Z)V
+
+    .line 9
+    invoke-static {}, Ld/o/v/d/d/y;->u()Ld/o/v/d/d/y;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v1:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    const v3, 0x7f060311
+    const v3, 0x7f06014a
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v2
 
-    invoke-virtual {v0, v2}, Lvi/y;->m0(I)V
+    invoke-virtual {v0, v2}, Ld/o/v/d/d/y;->m0(I)V
 
-    invoke-static {}, Lvi/y;->s()Lvi/y;
+    .line 10
+    invoke-static {}, Ld/o/v/d/d/y;->u()Ld/o/v/d/d/y;
 
     move-result-object v0
 
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C:Ljava/lang/String;
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->d9:Ljava/lang/String;
 
-    invoke-virtual {v0, p0, v1}, Lvi/y;->s0(Ljava/lang/String;Z)V
+    invoke-virtual {v0, p0, v1}, Ld/o/v/d/d/y;->s0(Ljava/lang/String;Z)V
 
     :cond_1
     return-void
 .end method
 
-.method public final Xi()Ljava/lang/String;
-    .locals 3
+.method private ih()Ljava/lang/String;
+    .locals 4
 
-    invoke-static {}, Lvi/y;->s()Lvi/y;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lvi/y;->o()Lki/c;
+    .line 1
+    invoke-static {}, Ld/o/v/d/d/y;->u()Ld/o/v/d/d/y;
 
     move-result-object p0
 
-    const-string v0, "custom"
+    invoke-virtual {p0}, Ld/o/v/d/d/y;->q()Ld/o/v/d/b/a/a/d;
+
+    move-result-object p0
+
+    const-string v0, "cartoon"
+
+    const-string v1, "custom"
 
     if-eqz p0, :cond_4
 
-    invoke-virtual {p0}, Lki/c;->getDir()Ljava/lang/String;
+    .line 2
+    invoke-virtual {p0}, Ld/o/v/d/b/a/a/d;->getDir()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v1
+    move-result v2
 
-    if-nez v1, :cond_4
+    if-nez v2, :cond_4
 
-    invoke-virtual {p0}, Lki/c;->getDir()Ljava/lang/String;
+    .line 3
+    invoke-virtual {p0}, Ld/o/v/d/b/a/a/d;->getDir()Ljava/lang/String;
 
     move-result-object p0
 
-    sget-object v1, Ljava/io/File;->separator:Ljava/lang/String;
+    sget-object v2, Ljava/io/File;->separator:Ljava/lang/String;
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    invoke-virtual {p0, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
     if-eqz p0, :cond_2
 
-    array-length v1, p0
+    .line 4
+    array-length v2, p0
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    if-gt v1, v2, :cond_0
+    if-gt v2, v3, :cond_0
 
     goto :goto_0
 
+    .line 5
     :cond_0
-    array-length v1, p0
+    array-length v2, p0
 
-    sub-int/2addr v1, v2
+    sub-int/2addr v2, v3
 
-    aget-object v1, p0, v1
+    aget-object v2, p0, v2
 
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_1
+    if-eqz v2, :cond_1
 
-    array-length v1, p0
+    array-length v2, p0
 
-    add-int/lit8 v1, v1, -0x2
+    add-int/lit8 v2, v2, -0x2
 
-    aget-object p0, p0, v1
+    aget-object p0, p0, v2
 
     goto :goto_1
 
     :cond_1
-    array-length v1, p0
+    array-length v2, p0
 
-    sub-int/2addr v1, v2
+    sub-int/2addr v2, v3
 
-    aget-object p0, p0, v1
+    aget-object p0, p0, v2
 
     goto :goto_1
 
@@ -1963,27 +2611,25 @@
     :goto_0
     const-string p0, " "
 
+    .line 6
     :goto_1
-    const-string v1, "cartoon"
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    move-object v0, v1
-
     goto :goto_2
 
     :cond_3
-    const-string v1, "human"
+    const-string v0, "human"
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    .line 7
+    invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_5
+    if-eqz v0, :cond_5
 
     const-string v0, "person"
 
@@ -1993,6 +2639,9 @@
     const-string p0, ""
 
     :cond_5
+    move-object v0, v1
+
+    .line 8
     :goto_2
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -2002,6 +2651,7 @@
 
     return-object v0
 
+    .line 9
     :cond_6
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2013,7 +2663,7 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p0}, Lrh/w;->j(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Ld/o/v/a/w;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -2026,9 +2676,1584 @@
     return-object p0
 .end method
 
-.method public Yi(ZZ)V
+.method public static synthetic je(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;J)J
+    .locals 0
+
+    .line 1
+    iput-wide p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C9:J
+
+    return-wide p1
+.end method
+
+.method public static synthetic ke(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;Z)Z
+    .locals 0
+
+    .line 1
+    iput-boolean p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->u9:Z
+
+    return p1
+.end method
+
+.method private lh()V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->U8:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
+
+    if-nez v0, :cond_0
+
+    .line 2
+    new-instance v0, Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;-><init>(Ljava/util/List;)V
+
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->U8:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
+
+    .line 3
+    new-instance v1, Ld/o/v/d/c/a/w;
+
+    invoke-direct {v1, p0}, Ld/o/v/d/c/a/w;-><init>(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)V
+
+    invoke-virtual {v0, v1}, Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;->k(Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter$a;)V
+
+    .line 4
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->S8:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectHorizontalView;
+
+    iget-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->U8:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
+
+    invoke-virtual {v0, v1}, Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectHorizontalView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+
+    .line 5
+    :cond_0
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->U8:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
+
+    const/4 v1, -0x1
+
+    invoke-virtual {v0, v1}, Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;->setLastSelectPosition(I)V
+
+    .line 6
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->ei()I
+
+    const/16 v0, 0xc9
+
+    .line 7
+    iget v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->c9:I
+
+    if-ne v0, v1, :cond_1
+
+    const/4 v0, 0x4
+
+    .line 8
+    invoke-virtual {p0, v0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->fi(I)V
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x2
+
+    .line 9
+    invoke-virtual {p0, v0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->fi(I)V
+
+    :goto_0
+    return-void
+.end method
+
+.method public static synthetic ne(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)Ld/o/v/d/b/a/a/i;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->a9:Ld/o/v/d/b/a/a/i;
+
+    return-object p0
+.end method
+
+.method public static synthetic og(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)Ljava/util/concurrent/atomic/AtomicBoolean;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->f9:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    return-object p0
+.end method
+
+.method public static synthetic qc(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)Ljava/util/concurrent/atomic/AtomicInteger;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->A9:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    return-object p0
+.end method
+
+.method public static synthetic qf(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;Ld/o/v/d/b/a/a/g;)Ld/o/v/d/b/a/a/g;
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->b9:Ld/o/v/d/b/a/a/g;
+
+    return-object p1
+.end method
+
+.method public static synthetic sd(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)Landroid/util/SparseArray;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k9:Landroid/util/SparseArray;
+
+    return-object p0
+.end method
+
+.method public static synthetic uc(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)Z
+    .locals 0
+
+    .line 1
+    iget-boolean p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->s9:Z
+
+    return p0
+.end method
+
+.method public static synthetic vf(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)Ld/o/v/d/a/b;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Z8:Ld/o/v/d/a/b;
+
+    return-object p0
+.end method
+
+.method public static synthetic xc(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;Z)Z
+    .locals 0
+
+    .line 1
+    iput-boolean p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->s9:Z
+
+    return p1
+.end method
+
+.method public static synthetic yd(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)I
+    .locals 0
+
+    .line 1
+    iget p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->X8:I
+
+    return p0
+.end method
+
+
+# virtual methods
+.method public C6()V
+    .locals 0
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    return-void
+.end method
+
+.method public Dh()Z
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->lf()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-boolean p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->u9:Z
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+.end method
+
+.method public F8()V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v1:Landroid/content/Context;
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 2
+    :cond_0
+    check-cast v0, Landroid/app/Activity;
+
+    new-instance v1, Ld/o/v/d/c/a/a0;
+
+    invoke-direct {v1, p0}, Ld/o/v/d/c/a/a0;-><init>(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)V
+
+    invoke-virtual {v0, v1}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
+
+    .line 3
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q9:Landroid/os/Handler;
+
+    sget-object v0, Ld/o/v/d/c/a/c0;->c:Ld/o/v/d/c/a/c0;
+
+    invoke-virtual {p0, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public G()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 1
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->w9:Ld/o/v/d/b/a/a/d;
+
+    .line 2
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    invoke-static {}, Ld/o/v/d/d/y;->w()Ld/o/v/d/d/y;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    .line 3
+    invoke-static {}, Ld/o/v/d/d/y;->w()Ld/o/v/d/d/y;
+
+    move-result-object p0
+
+    invoke-virtual {p0, v0}, Ld/o/v/d/d/y;->r0(Ld/o/v/d/b/a/a/d;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public G1(I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "state"
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0, p1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->fi(I)V
+
+    return-void
+.end method
+
+.method public synthetic Hh(ZZ)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Gh(ZZ)V
+
+    return-void
+.end method
+
+.method public synthetic Jh(Ld/o/v/d/a/a;I)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Ih(Ld/o/v/d/a/a;I)V
+
+    return-void
+.end method
+
+.method public Mb()V
     .locals 5
 
+    .line 1
+    iget-boolean v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->r9:Z
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    .line 2
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->w9:Ld/o/v/d/b/a/a/d;
+
+    if-eqz v0, :cond_0
+
+    .line 3
+    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->x9:Ld/o/v/d/b/a/a/l/b$d;
+
+    invoke-virtual {v0, v2}, Ld/o/v/d/b/a/a/d;->e(Ld/o/v/d/b/a/a/l/b$d;)Ld/o/v/d/b/a/a/i;
+
+    move-result-object v0
+
+    .line 4
+    invoke-static {}, Ld/o/v/d/d/y;->u()Ld/o/v/d/d/y;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->x9:Ld/o/v/d/b/a/a/l/b$d;
+
+    invoke-virtual {v2, v0, v3}, Ld/o/v/d/d/y;->U(Ld/o/v/d/b/a/a/i;Ld/o/v/d/b/a/a/l/b$d;)Z
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v1
+
+    goto :goto_0
+
+    .line 5
+    :cond_1
+    invoke-static {}, Ld/o/v/d/d/y;->u()Ld/o/v/d/d/y;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->x9:Ld/o/v/d/b/a/a/l/b$d;
+
+    invoke-static {}, Ld/o/v/d/b/b/a/a;->j()Ld/o/v/d/b/b/a/a;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->x9:Ld/o/v/d/b/a/a/l/b$d;
+
+    invoke-virtual {v3, v4, v1}, Ld/o/v/d/b/b/a/a;->m(Ld/o/v/d/b/a/a/l/b$d;I)Ljava/util/List;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v2, v3}, Ld/o/v/d/d/y;->h(Ld/o/v/d/b/a/a/l/b$d;Ljava/util/List;)Z
+
+    move-result v0
+
+    :goto_0
+    if-nez v0, :cond_2
+
+    .line 6
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "EachRendIcon fuAvatar isCommitSuccess false . generateAvatarIcon :"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->r9:Z
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    new-array v0, v1, [Ljava/lang/Object;
+
+    const-string v1, "MIMOJI_FragmentMimojiFuEdit"
+
+    invoke-static {v1, p0, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    .line 7
+    :cond_2
+    invoke-static {}, Ld/o/v/a/d0/a/c/a$b;->impl2()Ld/o/v/a/d0/a/c/a$b;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_3
+
+    .line 8
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->F9:Ld/o/v/a/y;
+
+    invoke-interface {v0, p0}, Ld/o/v/a/d0/a/c/a$b;->U2(Ld/o/v/a/y;)V
+
+    :cond_3
+    return-void
+.end method
+
+.method public Me(Ld/o/v/a/z/a;I)V
+    .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "avatarItem",
+            "from"
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "configPath = "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->d9:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    new-array v2, v1, [Ljava/lang/Object;
+
+    const-string v3, "MIMOJI_FragmentMimojiFuEdit"
+
+    invoke-static {v3, v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 2
+    invoke-virtual {p1}, Ld/o/v/a/z/a;->h()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->d9:Ljava/lang/String;
+
+    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->e9:Ljava/lang/String;
+
+    .line 3
+    iput-boolean v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->h9:Z
+
+    .line 4
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->hh()V
+
+    .line 5
+    invoke-static {}, Ld/d/a/m7/g/w;->impl2()Ld/d/a/m7/g/w;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    .line 6
+    invoke-interface {p1}, Ld/d/a/m7/g/w;->x6()Z
+
+    .line 7
+    :cond_0
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl2()Ld/d/a/m7/g/a3;
+
+    move-result-object p1
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x2
+
+    new-array v1, v1, [I
+
+    .line 8
+    fill-array-data v1, :array_0
+
+    invoke-interface {p1, v0, v1}, Ld/d/a/m7/g/a3;->disableMenuItem(Z[I)V
+
+    .line 9
+    invoke-virtual {p0, p2}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->kc(I)V
+
+    return-void
+
+    nop
+
+    :array_0
+    .array-data 4
+        0xc5
+        0xc1
+    .end array-data
+.end method
+
+.method public synthetic Mh()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Lh()V
+
+    return-void
+.end method
+
+.method public synthetic Oh()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Nh()V
+
+    return-void
+.end method
+
+.method public synthetic Qh()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Ph()V
+
+    return-void
+.end method
+
+.method public R(I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "rotation"
+        }
+    .end annotation
+
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->M8:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
+
+    if-eqz p0, :cond_0
+
+    .line 2
+    invoke-virtual {p0, p1}, Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;->s(I)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public R0()V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q9:Landroid/os/Handler;
+
+    new-instance v1, Ld/o/v/d/c/a/d0;
+
+    invoke-direct {v1, p0}, Ld/o/v/d/c/a/d0;-><init>(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public S8(Ld/o/v/d/a/a;IZ)V
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "mimojiFuType",
+            "configType",
+            "force"
+        }
+    .end annotation
+
+    .line 1
+    iget v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->X8:I
+
+    if-ne v0, p2, :cond_0
+
+    if-nez p3, :cond_0
+
+    return-void
+
+    .line 2
+    :cond_0
+    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Y8:Ld/o/v/d/a/a;
+
+    .line 3
+    new-instance p3, Ljava/lang/StringBuilder;
+
+    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "onTypeConfigSelect = "
+
+    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p3
+
+    const/4 v0, 0x0
+
+    new-array v0, v0, [Ljava/lang/Object;
+
+    const-string v1, "MIMOJI_FragmentMimojiFuEdit"
+
+    invoke-static {v1, p3, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 4
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getChildFragmentManager()Landroidx/fragment/app/FragmentManager;
+
+    move-result-object p3
+
+    .line 5
+    invoke-virtual {p3}, Landroidx/fragment/app/FragmentManager;->beginTransaction()Landroidx/fragment/app/FragmentTransaction;
+
+    move-result-object p3
+
+    .line 6
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k9:Landroid/util/SparseArray;
+
+    invoke-virtual {v0, p2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEditBottomList;
+
+    .line 7
+    iget-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k9:Landroid/util/SparseArray;
+
+    iget v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->X8:I
+
+    invoke-virtual {v1, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    .line 8
+    iget-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k9:Landroid/util/SparseArray;
+
+    iget v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->X8:I
+
+    invoke-virtual {v1, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/fragment/app/Fragment;
+
+    invoke-virtual {p3, v1}, Landroidx/fragment/app/FragmentTransaction;->hide(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
+
+    :cond_1
+    if-nez v0, :cond_2
+
+    .line 9
+    new-instance v0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEditBottomList;
+
+    invoke-direct {v0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEditBottomList;-><init>()V
+
+    .line 10
+    iget-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k9:Landroid/util/SparseArray;
+
+    invoke-virtual {v1, p2, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    .line 11
+    iget v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->c9:I
+
+    invoke-virtual {v0, v1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEditBottomList;->qc(I)V
+
+    .line 12
+    iget-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->H9:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$a;
+
+    invoke-virtual {v0, v1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEditBottomList;->uc(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$a;)V
+
+    .line 13
+    new-instance v1, Landroid/os/Bundle;
+
+    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
+
+    const-string v2, "MIMOJI_FragmentMimojiFuEditBottomList"
+
+    .line 14
+    invoke-virtual {v1, v2, p1}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
+
+    .line 15
+    invoke-virtual {v0, v1}, Landroidx/fragment/app/Fragment;->setArguments(Landroid/os/Bundle;)V
+
+    const p1, 0x7f0b02ca
+
+    .line 16
+    invoke-virtual {p3, p1, v0}, Landroidx/fragment/app/FragmentTransaction;->add(ILandroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
+
+    goto :goto_0
+
+    .line 17
+    :cond_2
+    invoke-virtual {p3, v0}, Landroidx/fragment/app/FragmentTransaction;->show(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
+
+    .line 18
+    iget v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->c9:I
+
+    invoke-virtual {v0, v1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEditBottomList;->qc(I)V
+
+    .line 19
+    invoke-virtual {v0, p1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEditBottomList;->nb(Ld/o/v/d/a/a;)V
+
+    .line 20
+    :goto_0
+    invoke-virtual {p3}, Landroidx/fragment/app/FragmentTransaction;->commitAllowingStateLoss()I
+
+    .line 21
+    iput p2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->X8:I
+
+    return-void
+.end method
+
+.method public synthetic Sh()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Rh()V
+
+    return-void
+.end method
+
+.method public synthetic Vh()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Uh()V
+
+    return-void
+.end method
+
+.method public bi()V
+    .locals 3
+
+    .line 1
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->di()V
+
+    const/4 v0, 0x2
+
+    new-array v0, v0, [Ljava/lang/CharSequence;
+
+    .line 2
+    invoke-static {}, Ld/o/v/d/d/y;->u()Ld/o/v/d/d/y;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ld/o/v/d/d/y;->Z()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    const-string v1, "originPhoto.jpg"
+
+    const/4 v2, 0x1
+
+    aput-object v1, v0, v2
+
+    invoke-static {v0}, Landroid/text/TextUtils;->concat([Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v9:Ljava/lang/String;
+
+    .line 3
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Zh()V
+
+    .line 4
+    iput-boolean v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->r9:Z
+
+    return-void
+.end method
+
+.method public ch()V
+    .locals 4
+
+    .line 1
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Eh()Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    iput-boolean v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->p9:Z
+
+    return-void
+
+    .line 3
+    :cond_0
+    iget v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->c9:I
+
+    const/16 v2, 0xcb
+
+    const/4 v3, 0x0
+
+    if-ne v0, v2, :cond_1
+
+    iget v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->W8:I
+
+    const/4 v2, 0x2
+
+    if-ne v0, v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    move v1, v3
+
+    .line 4
+    :goto_0
+    invoke-virtual {p0, v1, v3}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->jh(ZZ)V
+
+    return-void
+.end method
+
+.method public e0()V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->A9:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    const/4 v1, -0x1
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
+
+    const/4 v0, 0x0
+
+    .line 2
+    iput-boolean v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->h9:Z
+
+    .line 3
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q9:Landroid/os/Handler;
+
+    new-instance v1, Ld/o/v/d/c/a/z;
+
+    invoke-direct {v1, p0}, Ld/o/v/d/c/a/z;-><init>(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public fg(Z)V
+    .locals 1
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isSave"
+        }
+    .end annotation
+
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-virtual {p0, v0, p1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->jh(ZZ)V
+
+    return-void
+.end method
+
+.method public fi(I)V
+    .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "state"
+        }
+    .end annotation
+
+    const/4 v0, 0x2
+
+    const/4 v1, -0x1
+
+    const v2, 0x7f070664
+
+    const/16 v3, 0x8
+
+    const/4 v4, 0x0
+
+    if-eq p1, v3, :cond_1
+
+    const/4 v5, 0x6
+
+    if-ne p1, v5, :cond_0
+
+    goto :goto_0
+
+    .line 1
+    :cond_0
+    iput v4, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->j9:I
+
+    .line 2
+    iget-object v5, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->N8:Landroid/view/View;
+
+    invoke-virtual {v5}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/widget/RelativeLayout$LayoutParams;
+
+    .line 3
+    iget-object v6, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v1:Landroid/content/Context;
+
+    invoke-virtual {v6}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v6
+
+    iput v6, v5, Landroid/widget/RelativeLayout$LayoutParams;->height:I
+
+    .line 4
+    iget-object v6, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->N8:Landroid/view/View;
+
+    invoke-virtual {v6, v5}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 5
+    iget-object v5, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->M8:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
+
+    invoke-virtual {v5}, Landroid/view/TextureView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/widget/RelativeLayout$LayoutParams;
+
+    .line 6
+    iget-object v6, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v1:Landroid/content/Context;
+
+    invoke-virtual {v6}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v2
+
+    iput v2, v5, Landroid/widget/RelativeLayout$LayoutParams;->height:I
+
+    .line 7
+    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->M8:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
+
+    invoke-virtual {v2, v5}, Landroid/view/TextureView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    goto :goto_1
+
+    .line 8
+    :cond_1
+    :goto_0
+    invoke-static {}, Ld/d/a/n6/b;->q()I
+
+    move-result v5
+
+    iget-object v6, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v1:Landroid/content/Context;
+
+    invoke-virtual {v6}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v2
+
+    sub-int/2addr v5, v2
+
+    div-int/2addr v5, v0
+
+    iput v5, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->j9:I
+
+    .line 9
+    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->N8:Landroid/view/View;
+
+    invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/RelativeLayout$LayoutParams;
+
+    .line 10
+    iput v1, v2, Landroid/widget/RelativeLayout$LayoutParams;->height:I
+
+    .line 11
+    iget-object v5, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->N8:Landroid/view/View;
+
+    invoke-virtual {v5, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 12
+    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->M8:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
+
+    invoke-virtual {v2}, Landroid/view/TextureView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/RelativeLayout$LayoutParams;
+
+    .line 13
+    iput v1, v2, Landroid/widget/RelativeLayout$LayoutParams;->height:I
+
+    .line 14
+    iget-object v5, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->M8:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
+
+    invoke-virtual {v5, v2}, Landroid/view/TextureView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    :goto_1
+    const v2, 0x7f130667
+
+    const v5, 0x7f0604b8
+
+    const/4 v6, 0x1
+
+    packed-switch p1, :pswitch_data_0
+
+    goto/16 :goto_2
+
+    :pswitch_0
+    const/4 p1, 0x7
+
+    .line 15
+    iput p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->W8:I
+
+    goto/16 :goto_2
+
+    .line 16
+    :pswitch_1
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Eh()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 17
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->A9:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
+
+    .line 18
+    :cond_2
+    invoke-static {}, Ld/o/v/d/d/y;->u()Ld/o/v/d/d/y;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ld/o/v/d/d/y;->w0()V
+
+    .line 19
+    invoke-static {}, Ld/o/v/a/d0/a/c/a$b;->impl2()Ld/o/v/a/d0/a/c/a$b;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_3
+
+    const/4 v1, 0x0
+
+    .line 20
+    invoke-interface {v0, v1}, Ld/o/v/a/d0/a/c/a$b;->U2(Ld/o/v/a/y;)V
+
+    .line 21
+    :cond_3
+    iput p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->W8:I
+
+    .line 22
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v2:Landroid/widget/TextView;
+
+    invoke-virtual {p1, v3}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 23
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C2:Landroid/widget/TextView;
+
+    invoke-virtual {p1, v3}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 24
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K2:Landroid/widget/LinearLayout;
+
+    invoke-virtual {p1, v3}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    .line 25
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->P8:Landroid/widget/LinearLayout;
+
+    if-eqz p1, :cond_4
+
+    .line 26
+    invoke-virtual {p1, v4}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    .line 27
+    :cond_4
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C1:Landroid/widget/TextView;
+
+    invoke-virtual {p1, v6}, Landroid/widget/TextView;->setClickable(Z)V
+
+    .line 28
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K1:Landroid/widget/TextView;
+
+    invoke-virtual {p0, v6}, Landroid/widget/TextView;->setClickable(Z)V
+
+    goto/16 :goto_2
+
+    .line 29
+    :pswitch_2
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->P8:Landroid/widget/LinearLayout;
+
+    if-eqz p1, :cond_5
+
+    .line 30
+    invoke-virtual {p1, v3}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    .line 31
+    :cond_5
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C2:Landroid/widget/TextView;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 32
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C2:Landroid/widget/TextView;
+
+    invoke-virtual {p0, v6}, Landroid/widget/TextView;->setClickable(Z)V
+
+    goto/16 :goto_2
+
+    :pswitch_3
+    const/4 p1, 0x4
+
+    .line 33
+    iput p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->W8:I
+
+    .line 34
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K2:Landroid/widget/LinearLayout;
+
+    invoke-virtual {p1, v4}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    .line 35
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->P8:Landroid/widget/LinearLayout;
+
+    if-eqz p1, :cond_6
+
+    .line 36
+    invoke-virtual {p1, v3}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    .line 37
+    :cond_6
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v2:Landroid/widget/TextView;
+
+    invoke-virtual {p1, v4}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 38
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C2:Landroid/widget/TextView;
+
+    invoke-virtual {p1, v4}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 39
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v2:Landroid/widget/TextView;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 40
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v2:Landroid/widget/TextView;
+
+    invoke-virtual {p1, v6}, Landroid/widget/TextView;->setClickable(Z)V
+
+    .line 41
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v2:Landroid/widget/TextView;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f130602
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 42
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C2:Landroid/widget/TextView;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 43
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C2:Landroid/widget/TextView;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f0604bf
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 44
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C2:Landroid/widget/TextView;
+
+    invoke-virtual {p0, v4}, Landroid/widget/TextView;->setClickable(Z)V
+
+    goto/16 :goto_2
+
+    :pswitch_4
+    const/4 p1, 0x3
+
+    .line 45
+    iput p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->W8:I
+
+    .line 46
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K2:Landroid/widget/LinearLayout;
+
+    invoke-virtual {p1, v4}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    .line 47
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->P8:Landroid/widget/LinearLayout;
+
+    if-eqz p1, :cond_7
+
+    .line 48
+    invoke-virtual {p1, v3}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    .line 49
+    :cond_7
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v2:Landroid/widget/TextView;
+
+    invoke-virtual {p1, v4}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 50
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C2:Landroid/widget/TextView;
+
+    invoke-virtual {p1, v4}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 51
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v2:Landroid/widget/TextView;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 52
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C2:Landroid/widget/TextView;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 53
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C2:Landroid/widget/TextView;
+
+    invoke-virtual {p1, v6}, Landroid/widget/TextView;->setClickable(Z)V
+
+    .line 54
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v2:Landroid/widget/TextView;
+
+    invoke-virtual {p1, v6}, Landroid/widget/TextView;->setClickable(Z)V
+
+    .line 55
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C2:Landroid/widget/TextView;
+
+    invoke-virtual {p1, v6}, Landroid/widget/TextView;->setClickable(Z)V
+
+    .line 56
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C2:Landroid/widget/TextView;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 57
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v2:Landroid/widget/TextView;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    const v0, 0x7f130666
+
+    invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    goto :goto_2
+
+    .line 58
+    :pswitch_5
+    iput v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->W8:I
+
+    .line 59
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K2:Landroid/widget/LinearLayout;
+
+    invoke-virtual {p1, v4}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    .line 60
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->P8:Landroid/widget/LinearLayout;
+
+    if-eqz p1, :cond_8
+
+    .line 61
+    invoke-virtual {p1, v3}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    .line 62
+    :cond_8
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v2:Landroid/widget/TextView;
+
+    invoke-virtual {p1, v4}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 63
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v2:Landroid/widget/TextView;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 64
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v2:Landroid/widget/TextView;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f130664
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 65
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v2:Landroid/widget/TextView;
+
+    invoke-virtual {p1, v6}, Landroid/widget/TextView;->setClickable(Z)V
+
+    .line 66
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C2:Landroid/widget/TextView;
+
+    invoke-virtual {p1, v4}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 67
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C2:Landroid/widget/TextView;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 68
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C2:Landroid/widget/TextView;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 69
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C2:Landroid/widget/TextView;
+
+    invoke-virtual {p0, v6}, Landroid/widget/TextView;->setClickable(Z)V
+
+    :goto_2
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public getFragmentInto()I
+    .locals 0
+
+    const p0, 0xfff1
+
+    return p0
+.end method
+
+.method public getLayoutResourceId()I
+    .locals 0
+
+    const p0, 0x7f0e00ff
+
+    return p0
+.end method
+
+.method public initView(Landroid/view/View;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
+
+    .line 1
+    invoke-static {}, Ld/d/a/l6/b;->j()Ld/d/a/l6/f/h;
+
+    move-result-object v0
+
+    const-class v1, Ld/o/v/a/x;
+
+    invoke-virtual {v0, v1}, Ld/d/a/l6/f/h;->c(Ljava/lang/Class;)Ld/d/a/l6/f/l;
+
+    move-result-object v0
+
+    check-cast v0, Ld/o/v/a/x;
+
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->D9:Ld/o/v/a/x;
+
+    .line 2
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v1:Landroid/content/Context;
+
+    .line 3
+    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Q8:Landroid/view/View;
+
+    .line 4
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->D9:Ld/o/v/a/x;
+
+    invoke-virtual {p1}, Ld/o/v/a/x;->f()I
+
+    move-result p1
+
+    .line 5
+    invoke-static {}, Ld/o/v/a/d0/a/c/a$g;->impl2()Ld/o/v/a/d0/a/c/a$g;
+
+    move-result-object v0
+
+    const/16 v1, 0xc9
+
+    const/4 v2, 0x4
+
+    if-eq p1, v1, :cond_1
+
+    const/16 v1, 0xcb
+
+    if-eq p1, v1, :cond_0
+
+    goto :goto_0
+
+    .line 6
+    :cond_0
+    invoke-interface {v0, v2}, Ld/o/v/a/d0/a/c/a$g;->j1(I)V
+
+    const/4 v1, 0x0
+
+    .line 7
+    invoke-interface {v0, v1}, Ld/o/v/a/d0/a/c/a$d;->Ad(Z)V
+
+    .line 8
+    invoke-virtual {p0, p1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->kc(I)V
+
+    goto :goto_0
+
+    .line 9
+    :cond_1
+    invoke-interface {v0, v2}, Ld/o/v/a/d0/a/c/a$g;->j1(I)V
+
+    .line 10
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->D9:Ld/o/v/a/x;
+
+    const/4 v1, 0x1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ld/o/v/a/x;->k(Ljava/lang/Integer;)Ld/o/v/a/z/e;
+
+    move-result-object v0
+
+    check-cast v0, Ld/o/v/a/z/a;
+
+    invoke-virtual {p0, v0, p1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Me(Ld/o/v/a/z/a;I)V
+
+    :goto_0
+    return-void
+.end method
+
+.method public jh(ZZ)V
+    .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "backToCreate",
+            "isSave"
+        }
+    .end annotation
+
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2057,7 +4282,8 @@
 
     invoke-static {v4, v0, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->yf()Z
+    .line 2
+    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->lf()Z
 
     move-result v0
 
@@ -2065,6 +4291,7 @@
 
     return-void
 
+    .line 3
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2088,594 +4315,32 @@
 
     invoke-static {v4, v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->p1:Landroid/os/Handler;
+    .line 4
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q9:Landroid/os/Handler;
 
-    new-instance v1, Lti/x;
+    new-instance v1, Ld/o/v/d/c/a/y;
 
-    invoke-direct {v1, p0, p2, p1}, Lti/x;-><init>(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;ZZ)V
+    invoke-direct {v1, p0, p2, p1}, Ld/o/v/d/c/a/y;-><init>(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;ZZ)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method public final Zi()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->s:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;-><init>(Ljava/util/List;)V
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->s:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
-
-    new-instance v1, Lti/d0;
-
-    invoke-direct {v1, p0}, Lti/d0;-><init>(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)V
-
-    invoke-virtual {v0, v1}, Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;->k(Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter$a;)V
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectHorizontalView;
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->s:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
-
-    invoke-virtual {v0, v1}, Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectHorizontalView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
-
-    :cond_0
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->s:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
-
-    const/4 v1, -0x1
-
-    invoke-virtual {v0, v1}, Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;->setLastSelectPosition(I)V
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->vj()I
-
-    const/16 v0, 0xc9
-
-    iget v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->A:I
-
-    if-ne v0, v1, :cond_1
-
-    const/4 v0, 0x4
-
-    invoke-virtual {p0, v0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->wj(I)V
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x2
-
-    invoke-virtual {p0, v0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->wj(I)V
-
-    :goto_0
-    return-void
-.end method
-
-.method public final aj(Landroid/view/View;)V
-    .locals 6
-
-    const v0, 0x7f0b0602
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RelativeLayout;
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->i:Landroid/widget/RelativeLayout;
-
-    const v0, 0x7f0b0627
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RelativeLayout;
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->j:Landroid/widget/RelativeLayout;
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const v0, 0x7f0b05ff
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RelativeLayout;
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const v0, 0x7f0b0400
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout;
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->h:Landroid/widget/LinearLayout;
-
-    const v0, 0x7f0b077e
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->d:Landroid/widget/TextView;
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const v0, 0x7f0b079d
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->e:Landroid/widget/TextView;
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const v0, 0x7f0b0775
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->f:Landroid/widget/TextView;
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const v0, 0x7f0b010c
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->g:Landroid/widget/TextView;
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const v0, 0x7f0b0493
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
-
-    const v0, 0x7f0b0494
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->l:Landroid/view/View;
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Z:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$g;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$g;
-
-    invoke-direct {v0, p0, v1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$g;-><init>(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$a;)V
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Z:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$g;
-
-    :cond_0
-    invoke-static {}, Lyh/a$g;->impl2()Lyh/a$g;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v2, v3}, Landroid/view/TextureView;->setOpaque(Z)V
-
-    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
-
-    new-instance v4, Lti/c0;
-
-    invoke-direct {v4, v0}, Lti/c0;-><init>(Lyh/a$g;)V
-
-    invoke-virtual {v2, v4}, Lcom/android/camera/ui/GLTextureView;->setEGLShareContextGetter(Lcom/android/camera/ui/GLTextureView$h;)V
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
-
-    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Z:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$g;
-
-    invoke-virtual {v0, v2}, Lcom/android/camera/ui/GLTextureView;->setRenderer(Landroid/opengl/GLSurfaceView$Renderer;)V
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
-
-    invoke-virtual {v0, v3}, Lcom/android/camera/ui/GLTextureView;->setRenderMode(I)V
-
-    const v0, 0x7f0b0311
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/FrameLayout;
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->m:Landroid/widget/FrameLayout;
-
-    const v0, 0x7f0b056c
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout;
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->n:Landroid/widget/LinearLayout;
-
-    const/16 v2, 0x8
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->n:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RelativeLayout$LayoutParams;
-
-    invoke-static {}, Ly2/b;->X()I
-
-    move-result v2
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    const v5, 0x7f070788
-
-    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
-
-    move-result v4
-
-    add-int/2addr v2, v4
-
-    iput v2, v0, Landroid/widget/RelativeLayout$LayoutParams;->bottomMargin:I
-
-    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->n:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v2, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    const/4 v0, 0x2
-
-    new-array v2, v0, [Landroid/view/View;
-
-    iget-object v4, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->e:Landroid/widget/TextView;
-
-    aput-object v4, v2, v3
-
-    const/4 v4, 0x1
-
-    iget-object v5, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->d:Landroid/widget/TextView;
-
-    aput-object v5, v2, v4
-
-    const v4, 0x7f06030e
-
-    invoke-static {v4, v2}, Lz1/f;->t(I[Landroid/view/View;)V
-
-    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->r:Landroid/widget/TextView;
-
-    if-nez v2, :cond_1
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
-
-    move-result-object v2
-
-    invoke-static {v2}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object v2
-
-    const v4, 0x7f0e01b2
-
-    invoke-virtual {v2, v4, v1, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object v1
-
-    const v2, 0x7f0b07a5
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/TextView;
-
-    iput-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->r:Landroid/widget/TextView;
-
-    :cond_1
-    const v1, 0x7f0b04a4
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectHorizontalView;
-
-    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectHorizontalView;
-
-    invoke-virtual {p1, v3}, Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectHorizontalView;->setInitScroll(Z)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectHorizontalView;
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getItemAnimator()Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;
-
-    move-result-object p1
-
-    const-wide/16 v1, 0x0
-
-    invoke-virtual {p1, v1, v2}, Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;->setChangeDuration(J)V
-
-    new-instance p1, Lji/c;
-
-    invoke-direct {p1}, Lji/c;-><init>()V
-
-    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Y:Lji/c;
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->c:Landroid/content/Context;
-
-    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
-
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->h:Landroid/widget/LinearLayout;
-
-    invoke-virtual {p1, v1, v2, p0, v0}, Lji/c;->e(Landroid/content/Context;Landroid/view/View;Landroid/widget/LinearLayout;I)V
-
-    return-void
-.end method
-
-.method public bj()Z
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->yf()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-boolean p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K1:Z
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    return p0
-.end method
-
-.method public final cj()Z
-    .locals 1
-
-    invoke-static {}, Lvi/y;->s()Lvi/y;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lvi/y;->M()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K2:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result p0
-
-    if-lez p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
-
-    :goto_1
-    return p0
-.end method
-
-.method public d0()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K2:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    const/4 v1, -0x1
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->H:Z
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->p1:Landroid/os/Handler;
-
-    new-instance v1, Lti/b0;
-
-    invoke-direct {v1, p0}, Lti/b0;-><init>(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-.end method
-
-.method public f9(Lcom/xiaomi/mimoji/mimojifu/bean/a;IZ)V
-    .locals 3
-
-    iget v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v:I
-
-    if-ne v0, p2, :cond_0
-
-    if-nez p3, :cond_0
-
-    return-void
-
-    :cond_0
-    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->w:Lcom/xiaomi/mimoji/mimojifu/bean/a;
-
-    new-instance p3, Ljava/lang/StringBuilder;
-
-    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "onTypeConfigSelect = "
-
-    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p3
-
-    const/4 v0, 0x0
-
-    new-array v0, v0, [Ljava/lang/Object;
-
-    const-string v1, "MIMOJI_FragmentMimojiFuEdit"
-
-    invoke-static {v1, p3, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getChildFragmentManager()Landroidx/fragment/app/FragmentManager;
-
-    move-result-object p3
-
-    invoke-virtual {p3}, Landroidx/fragment/app/FragmentManager;->beginTransaction()Landroidx/fragment/app/FragmentTransaction;
-
-    move-result-object p3
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K:Landroid/util/SparseArray;
-
-    invoke-virtual {v0, p2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEditBottomList;
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K:Landroid/util/SparseArray;
-
-    iget v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v:I
-
-    invoke-virtual {v1, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K:Landroid/util/SparseArray;
-
-    iget v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v:I
-
-    invoke-virtual {v1, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroidx/fragment/app/Fragment;
-
-    invoke-virtual {p3, v1}, Landroidx/fragment/app/FragmentTransaction;->hide(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
-
-    :cond_1
-    if-nez v0, :cond_2
-
-    new-instance v0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEditBottomList;
-
-    invoke-direct {v0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEditBottomList;-><init>()V
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K:Landroid/util/SparseArray;
-
-    invoke-virtual {v1, p2, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    iget v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->A:I
-
-    invoke-virtual {v0, v1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEditBottomList;->di(I)V
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q5:Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$a;
-
-    invoke-virtual {v0, v1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEditBottomList;->ei(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditBottomListAdapter$a;)V
-
-    new-instance v1, Landroid/os/Bundle;
-
-    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
-
-    const-string v2, "MIMOJI_FragmentMimojiFuEditBottomList"
-
-    invoke-virtual {v1, v2, p1}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
-
-    invoke-virtual {v0, v1}, Landroidx/fragment/app/Fragment;->setArguments(Landroid/os/Bundle;)V
-
-    const p1, 0x7f0b0311
-
-    invoke-virtual {p3, p1, v0}, Landroidx/fragment/app/FragmentTransaction;->add(ILandroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p3, v0}, Landroidx/fragment/app/FragmentTransaction;->show(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
-
-    iget v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->A:I
-
-    invoke-virtual {v0, v1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEditBottomList;->di(I)V
-
-    invoke-virtual {v0, p1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEditBottomList;->Gh(Lcom/xiaomi/mimoji/mimojifu/bean/a;)V
-
-    :goto_0
-    invoke-virtual {p3}, Landroidx/fragment/app/FragmentTransaction;->commitAllowingStateLoss()I
-
-    iput p2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v:I
-
-    return-void
-.end method
-
-.method public getFragmentInto()I
+.method public k2(Ljava/util/List;)V
     .locals 0
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
 
-    const p0, 0xfff1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "emoInfoList"
+        }
+    .end annotation
 
-    return p0
-.end method
-
-.method public getLayoutResourceId()I
-    .locals 0
-
-    const p0, 0x7f0e010e
-
-    return p0
-.end method
-
-.method public h2(Ljava/util/List;)V
-    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2685,286 +4350,307 @@
         }
     .end annotation
 
-    .annotation build Lh7/c;
+    return-void
+.end method
+
+.method public kc(I)V
+    .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "from"
+        }
     .end annotation
 
-    return-void
-.end method
-
-.method public initView(Landroid/view/View;)V
-    .locals 3
-
-    invoke-static {}, Lg2/b;->j()Lq2/a;
-
-    move-result-object v0
-
-    const-class v1, Lrh/x;
-
-    invoke-virtual {v0, v1}, Lq2/a;->c(Ljava/lang/Class;)Lq2/d;
-
-    move-result-object v0
-
-    check-cast v0, Lrh/x;
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q3:Lrh/x;
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->c:Landroid/content/Context;
-
-    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->o:Landroid/view/View;
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q3:Lrh/x;
-
-    invoke-virtual {p1}, Lrh/x;->f()I
-
-    move-result p1
-
-    invoke-static {}, Lyh/a$g;->impl2()Lyh/a$g;
-
-    move-result-object v0
-
-    const/16 v1, 0xc9
-
-    const/4 v2, 0x4
-
-    if-eq p1, v1, :cond_1
-
-    const/16 v1, 0xcb
-
-    if-eq p1, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-interface {v0, v2}, Lyh/a$g;->j1(I)V
-
-    const/4 v1, 0x0
-
-    invoke-interface {v0, v1}, Lyh/a$d;->Qd(Z)V
-
-    invoke-virtual {p0, p1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->zc(I)V
-
-    goto :goto_0
-
-    :cond_1
-    invoke-interface {v0, v2}, Lyh/a$g;->j1(I)V
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q3:Lrh/x;
-
-    const/4 v1, 0x1
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lrh/x;->k(Ljava/lang/Integer;)Lsh/e;
-
-    move-result-object v0
-
-    check-cast v0, Lsh/a;
-
-    invoke-virtual {p0, v0, p1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->s2(Lsh/a;I)V
-
-    :goto_0
-    return-void
-.end method
-
-.method public mi()V
-    .locals 5
-
-    iget-boolean v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q1:Z
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->p2:Lki/c;
-
-    if-eqz v0, :cond_0
-
-    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q2:Lli/b$d;
-
-    invoke-virtual {v0, v2}, Lki/c;->e(Lli/b$d;)Lki/i;
-
-    move-result-object v0
-
-    invoke-static {}, Lvi/y;->s()Lvi/y;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q2:Lli/b$d;
-
-    invoke-virtual {v2, v0, v3}, Lvi/y;->U(Lki/i;Lli/b$d;)Z
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-static {}, Lvi/y;->s()Lvi/y;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q2:Lli/b$d;
-
-    invoke-static {}, Lri/a;->j()Lri/a;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q2:Lli/b$d;
-
-    invoke-virtual {v3, v4, v1}, Lri/a;->m(Lli/b$d;I)Ljava/util/List;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v2, v3}, Lvi/y;->f(Lli/b$d;Ljava/util/List;)Z
-
-    move-result v0
-
-    :goto_0
-    if-nez v0, :cond_2
-
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "EachRendIcon fuAvatar isCommitSuccess false . generateAvatarIcon :"
+    const-string v1, "startMimojiEdit\uff1a"
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q1:Z
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    new-array v0, v1, [Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    const-string v1, "MIMOJI_FragmentMimojiFuEdit"
+    new-array v2, v1, [Ljava/lang/Object;
 
-    invoke-static {v1, p0, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    const-string v3, "MIMOJI_FragmentMimojiFuEdit"
 
-    return-void
+    invoke-static {v3, v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    :cond_2
-    invoke-static {}, Lyh/a$b;->impl2()Lyh/a$b;
+    .line 2
+    iput-boolean v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->h9:Z
+
+    .line 3
+    iput-boolean v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->r9:Z
+
+    .line 4
+    iput p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->c9:I
+
+    const/4 v0, 0x0
+
+    .line 5
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->a9:Ld/o/v/d/b/a/a/i;
+
+    .line 6
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->b9:Ld/o/v/d/b/a/a/g;
+
+    .line 7
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Y8:Ld/o/v/d/a/a;
+
+    const/4 v0, -0x1
+
+    .line 8
+    iput v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->X8:I
+
+    .line 9
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->A9:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
+
+    .line 10
+    invoke-static {}, Ld/o/v/a/d0/a/c/a$g;->impl2()Ld/o/v/a/d0/a/c/a$g;
 
     move-result-object v0
+
+    const/4 v2, 0x1
+
+    if-eqz v0, :cond_0
+
+    .line 11
+    invoke-interface {v0, v2}, Ld/o/v/a/d0/a/c/a$g;->Ze(Z)V
+
+    .line 12
+    :cond_0
+    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->G()V
+
+    .line 13
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Q8:Landroid/view/View;
+
+    invoke-direct {p0, v0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Bh(Landroid/view/View;)V
+
+    .line 14
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C1:Landroid/widget/TextView;
+
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setClickable(Z)V
+
+    .line 15
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K1:Landroid/widget/TextView;
+
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setClickable(Z)V
+
+    .line 16
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->O8:Landroid/widget/FrameLayout;
+
+    if-eqz v0, :cond_2
+
+    .line 17
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/LinearLayout$LayoutParams;
+
+    if-eqz v0, :cond_2
+
+    .line 18
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    invoke-static {v3}, Ld/d/a/z5;->v2(Landroid/content/Context;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    move v3, v1
+
+    goto :goto_0
+
+    .line 19
+    :cond_1
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    const v4, 0x7f07065b
+
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v3
+
+    :goto_0
+    iput v3, v0, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
+
+    .line 20
+    iget-object v3, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->O8:Landroid/widget/FrameLayout;
+
+    invoke-virtual {v3, v0}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    :cond_2
+    const-string v0, ""
+
+    .line 21
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v9:Ljava/lang/String;
+
+    .line 22
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K8:Landroid/widget/RelativeLayout;
+
+    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+
+    .line 23
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->L8:Landroid/widget/RelativeLayout;
+
+    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+
+    .line 24
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Q8:Landroid/view/View;
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    .line 25
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->M8:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
+
+    invoke-static {v0, v2}, Ld/o/v/a/f0/d;->b(Landroid/view/View;Z)Z
+
+    .line 26
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->N8:Landroid/view/View;
+
+    invoke-static {v0, v2}, Ld/o/v/a/f0/d;->b(Landroid/view/View;Z)Z
+
+    .line 27
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->g9:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
 
     if-eqz v0, :cond_3
 
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q4:Lrh/y;
+    .line 28
+    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->resetConfig()V
 
-    invoke-interface {v0, p0}, Lyh/a$b;->K6(Lrh/y;)V
-
+    .line 29
     :cond_3
-    return-void
-.end method
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Q8:Landroid/view/View;
 
-.method public n1(Z)V
-    .locals 0
-    .annotation build Lh7/c;
-    .end annotation
-
-    return-void
-.end method
-
-.method public final oj(ILli/b$d;)V
-    .locals 10
-
-    invoke-static {}, Lai/c;->j()Lai/c;
+    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v0
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    new-instance v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$a;
 
-    move-result-wide v1
+    invoke-direct {v1, p0, p1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$a;-><init>(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;I)V
 
-    const/4 v3, 0x0
+    invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    invoke-virtual {v0, v1, v2, v3}, Lai/c;->c(JI)V
+    const/16 v0, 0xcc
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->F:Ljava/util/concurrent/atomic/AtomicBoolean;
+    if-eq p1, v0, :cond_4
 
-    invoke-virtual {v0, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    .line 30
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->lh()V
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    goto :goto_1
 
-    move-result-wide v0
+    .line 31
+    :cond_4
+    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->F8()V
 
-    iput-wide v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->p3:J
+    :goto_1
+    return-void
+.end method
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q2:Lli/b$d;
+.method public lf()Z
+    .locals 0
 
-    if-nez v0, :cond_0
+    .line 1
+    iget-boolean p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->h9:Z
 
-    const/4 v0, 0x0
+    return p0
+.end method
+
+.method public m1(ILd/o/v/d/b/a/a/l/b$d;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "row",
+            "itemType"
+        }
+    .end annotation
+
+    .line 1
+    iget-boolean v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->h9:Z
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-direct {p0, p1, p2, v1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Yh(ILd/o/v/d/b/a/a/l/b$d;Z)V
 
     goto :goto_0
 
     :cond_0
-    invoke-static {v0}, Lli/b;->a(Lli/b$d;)Lli/b$c;
+    new-array p0, v1, [Ljava/lang/Object;
 
-    move-result-object v0
+    const-string p1, "MIMOJI_FragmentMimojiFuEdit"
+
+    const-string p2, "refreshIcon: wait setupCompleted"
+
+    .line 3
+    invoke-static {p1, p2, p0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :goto_0
-    move-object v9, v0
+    return-void
+.end method
 
-    invoke-static {p2}, Lli/b;->a(Lli/b$d;)Lli/b$c;
+.method public o1(Z)V
+    .locals 0
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
 
-    move-result-object v7
-
-    invoke-static {}, Lri/a;->j()Lri/a;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p2, v3}, Lri/a;->i(Lli/b$d;I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->V2:I
-
-    invoke-static {}, Lvi/y;->s()Lvi/y;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->p5:Lki/h$v;
-
-    invoke-virtual {v0, v1}, Lvi/y;->k0(Lki/h$v;)V
-
-    invoke-static {}, Lvi/y;->s()Lvi/y;
-
-    move-result-object v4
-
-    iget-object v8, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q2:Lli/b$d;
-
-    move v5, p1
-
-    move-object v6, p2
-
-    invoke-virtual/range {v4 .. v9}, Lvi/y;->T(ILli/b$d;Lli/b$c;Lli/b$d;Lli/b$c;)V
-
-    iput-object p2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q2:Lli/b$d;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isClickEnable"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public onBackEvent(I)Z
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "callingFrom"
+        }
+    .end annotation
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q3:Lrh/x;
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->D9:Ld/o/v/a/x;
 
-    invoke-virtual {v0}, Lrh/x;->v()Z
+    invoke-virtual {v0}, Ld/o/v/a/x;->v()Z
 
     move-result v0
 
@@ -2981,8 +4667,9 @@
 
     goto :goto_0
 
+    .line 2
     :cond_1
-    iget p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->A:I
+    iget p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->c9:I
 
     const/16 v2, 0xcb
 
@@ -2994,7 +4681,8 @@
 
     if-eq p1, v2, :cond_4
 
-    iget p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->u:I
+    .line 3
+    iget p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->W8:I
 
     if-eq p1, v4, :cond_2
 
@@ -3002,44 +4690,51 @@
 
     if-ne p1, v5, :cond_3
 
+    .line 4
     :cond_2
-    invoke-virtual {p0, v5}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->tj(I)V
+    invoke-direct {p0, v5}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->ci(I)V
 
     :cond_3
     return v0
 
+    .line 5
     :cond_4
-    iget p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->u:I
+    iget p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->W8:I
 
     const/4 v2, 0x2
 
     if-ne p1, v2, :cond_5
 
-    invoke-virtual {p0, v0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->tj(I)V
+    .line 6
+    invoke-direct {p0, v0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->ci(I)V
 
     return v0
 
     :cond_5
     if-ne p1, v3, :cond_6
 
-    invoke-virtual {p0, v5}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->tj(I)V
+    .line 7
+    invoke-direct {p0, v5}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->ci(I)V
 
     return v0
 
+    .line 8
     :cond_6
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->o:Landroid/view/View;
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Q8:Landroid/view/View;
 
     if-eqz p1, :cond_7
 
+    .line 9
     invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
 
     move-result p1
 
     if-eq p1, v4, :cond_7
 
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q3:Lrh/x;
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->D9:Ld/o/v/a/x;
 
-    invoke-virtual {p1}, Lrh/x;->v()Z
+    .line 10
+    invoke-virtual {p1}, Ld/o/v/a/x;->v()Z
 
     move-result p1
 
@@ -3047,7 +4742,8 @@
 
     const/4 p1, 0x3
 
-    invoke-virtual {p0, p1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->tj(I)V
+    .line 11
+    invoke-direct {p0, p1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->ci(I)V
 
     return v0
 
@@ -3058,8 +4754,17 @@
 
 .method public onClick(Landroid/view/View;)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->bj()Z
+    .line 1
+    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Dh()Z
 
     move-result v0
 
@@ -3067,6 +4772,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
@@ -3082,56 +4788,68 @@
 
     goto/16 :goto_0
 
+    .line 3
     :sswitch_0
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->d:Landroid/widget/TextView;
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C1:Landroid/widget/TextView;
 
-    invoke-virtual {p1, v1}, Landroid/view/View;->setClickable(Z)V
+    invoke-virtual {p1, v1}, Landroid/widget/TextView;->setClickable(Z)V
 
     const-string p1, "onClick: tv_save_finish"
 
+    .line 4
     invoke-static {v2, p1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->sj()V
+    .line 5
+    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->bi()V
 
     goto/16 :goto_0
 
+    .line 6
     :sswitch_1
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->e:Landroid/widget/TextView;
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K1:Landroid/widget/TextView;
 
-    invoke-virtual {p1, v1}, Landroid/view/View;->setClickable(Z)V
+    invoke-virtual {p1, v1}, Landroid/widget/TextView;->setClickable(Z)V
 
     const-string p1, "onClick: tv_create_emoticon"
 
+    .line 7
     invoke-static {v2, p1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p1, 0x7
 
-    invoke-virtual {p0, p1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->wj(I)V
+    .line 8
+    invoke-virtual {p0, p1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->fi(I)V
 
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->R8()V
+    .line 9
+    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->F8()V
 
-    invoke-static {}, Lyh/a$g;->impl2()Lyh/a$g;
+    .line 10
+    invoke-static {}, Ld/o/v/a/d0/a/c/a$g;->impl2()Ld/o/v/a/d0/a/c/a$g;
 
     move-result-object p0
 
     if-eqz p0, :cond_4
 
-    invoke-interface {p0, v0}, Lyh/a$g;->j1(I)V
+    .line 11
+    invoke-interface {p0, v0}, Ld/o/v/a/d0/a/c/a$g;->j1(I)V
 
     goto :goto_0
 
     :sswitch_2
     const-string p1, "onClick: tv_back"
 
+    .line 12
     invoke-static {v2, p1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->A:I
+    .line 13
+    iget p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->c9:I
 
     const/16 v3, 0xc9
 
     if-ne p1, v3, :cond_1
 
-    invoke-virtual {p0, v0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->tj(I)V
+    .line 14
+    invoke-direct {p0, v0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->ci(I)V
 
     goto :goto_0
 
@@ -3144,78 +4862,93 @@
 
     if-ne p1, v0, :cond_2
 
-    iget p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->u:I
+    .line 15
+    iget p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->W8:I
 
     if-ne p1, v3, :cond_2
 
-    invoke-virtual {p0, v4}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->tj(I)V
+    .line 16
+    invoke-direct {p0, v4}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->ci(I)V
 
     goto :goto_0
 
+    .line 17
     :cond_2
-    iget p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->u:I
+    iget p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->W8:I
 
     const/4 v0, 0x3
 
     if-ne p1, v0, :cond_4
 
-    invoke-virtual {p0, v3}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->wj(I)V
+    .line 18
+    invoke-virtual {p0, v3}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->fi(I)V
 
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->cj()Z
+    .line 19
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Eh()Z
 
     move-result p1
 
     if-eqz p1, :cond_3
 
-    const-string p1, "btn_reset: isNeedWait"
+    new-array p1, v1, [Ljava/lang/Object;
 
-    new-array v0, v1, [Ljava/lang/Object;
+    const-string v0, "btn_reset: isNeedWait"
 
-    invoke-static {v2, p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 20
+    invoke-static {v2, v0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iput-boolean v4, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C1:Z
+    .line 21
+    iput-boolean v4, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->t9:Z
 
     return-void
 
+    .line 22
     :cond_3
-    iput-boolean v4, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C1:Z
+    iput-boolean v4, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->t9:Z
 
-    const-string p1, "btn_reset: notNeedWait"
+    new-array p1, v1, [Ljava/lang/Object;
 
-    new-array v0, v1, [Ljava/lang/Object;
+    const-string v0, "btn_reset: notNeedWait"
 
-    invoke-static {v2, p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 23
+    invoke-static {v2, v0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {}, Lvi/y;->s()Lvi/y;
+    .line 24
+    invoke-static {}, Ld/o/v/d/d/y;->u()Ld/o/v/d/d/y;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lvi/y;->X()V
+    invoke-virtual {p1}, Ld/o/v/d/d/y;->X()V
 
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->rj()V
+    .line 25
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->ai()V
 
     const-string p0, "edit_reset"
 
     const-string p1, "edit"
 
-    invoke-static {p0, p1}, Lk9/a;->b2(Ljava/lang/String;Ljava/lang/String;)V
+    .line 26
+    invoke-static {p0, p1}, Ld/d/a/v7/f;->X1(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     :sswitch_3
     const-string p1, "onClick: btn_confirm"
 
+    .line 27
     invoke-static {v2, p1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p1, 0x6
 
-    invoke-virtual {p0, p1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->wj(I)V
+    .line 28
+    invoke-virtual {p0, p1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->fi(I)V
 
     const-string p0, "preview_mid_save"
 
     const-string p1, "preview_mid"
 
-    invoke-static {p0, p1}, Lk9/a;->b2(Ljava/lang/String;Ljava/lang/String;)V
+    .line 29
+    invoke-static {p0, p1}, Ld/d/a/v7/f;->X1(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_4
     :goto_0
@@ -3225,26 +4958,30 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f0b010c -> :sswitch_3
-        0x7f0b0775 -> :sswitch_2
-        0x7f0b077e -> :sswitch_1
-        0x7f0b079d -> :sswitch_0
+        0x7f0b00f0 -> :sswitch_3
+        0x7f0b0695 -> :sswitch_2
+        0x7f0b069e -> :sswitch_1
+        0x7f0b06bd -> :sswitch_0
     .end sparse-switch
 .end method
 
 .method public onDestroy()V
     .locals 1
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->t:Lmiuix/appcompat/app/AlertDialog;
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->V8:Lmiuix/appcompat/app/AlertDialog;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->t:Lmiuix/appcompat/app/AlertDialog;
+    .line 3
+    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->V8:Lmiuix/appcompat/app/AlertDialog;
 
+    .line 4
     :cond_0
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroy()V
 
@@ -3256,12 +4993,15 @@
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->p4:I
+    .line 1
+    iput v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->E9:I
 
-    iget-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
+    .line 2
+    iget-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->M8:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
 
     invoke-virtual {v1, v0}, Landroid/view/TextureView;->setOpaque(Z)V
 
+    .line 3
     invoke-super {p0}, Lcom/android/camera/fragment/BaseFragment;->onResume()V
 
     return-void
@@ -3270,48 +5010,27 @@
 .method public onStop()V
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/android/camera/fragment/BaseFragment;->onStop()V
-
-    return-void
-.end method
-
-.method public final pj(ILli/b$d;Z)V
-    .locals 0
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->cj()Z
-
-    move-result p3
-
-    if-eqz p3, :cond_0
-
-    iput p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C2:I
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v1:Z
-
-    iput-object p2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v2:Lli/b$d;
-
-    const/4 p0, 0x0
-
-    new-array p0, p0, [Ljava/lang/Object;
-
-    const-string p1, "MIMOJI_FragmentMimojiFuEdit"
-
-    const-string p2, "renderIcon: isNeedWait"
-
-    invoke-static {p1, p2, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0, p1, p2}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->oj(ILli/b$d;)V
 
     return-void
 .end method
 
 .method public provideAnimateElement(ILjava/util/List;I)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "newMode",
+            "animateInElements",
+            "resetType"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -3321,8 +5040,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2, p3}, Lcom/android/camera/fragment/BaseFragment;->provideAnimateElement(ILjava/util/List;I)V
 
+    .line 2
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3355,68 +5076,59 @@
 
     if-ne p3, p1, :cond_0
 
-    const-string p1, "mimoji edit timeout"
+    new-array p1, p2, [Ljava/lang/Object;
 
-    new-array p3, p2, [Ljava/lang/Object;
+    const-string p3, "mimoji edit timeout"
 
-    invoke-static {v1, p1, p3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 3
+    invoke-static {v1, p3, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-virtual {p0, p2, p2}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Yi(ZZ)V
+    .line 4
+    invoke-virtual {p0, p2, p2}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->jh(ZZ)V
 
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->t:Lmiuix/appcompat/app/AlertDialog;
+    .line 5
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->V8:Lmiuix/appcompat/app/AlertDialog;
 
     if-eqz p1, :cond_0
 
+    .line 6
     invoke-virtual {p1}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
 
     const/4 p1, 0x0
 
-    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->t:Lmiuix/appcompat/app/AlertDialog;
+    .line 7
+    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->V8:Lmiuix/appcompat/app/AlertDialog;
 
     :cond_0
     return-void
 .end method
 
-.method public final qj()V
-    .locals 2
-
-    invoke-static {}, Lvi/y;->s()Lvi/y;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lvi/y;->w()I
-
-    move-result v0
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q2:Lli/b$d;
-
-    invoke-virtual {p0, v0, v1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->oj(ILli/b$d;)V
-
-    return-void
-.end method
-
-.method public r2()V
-    .locals 0
-    .annotation build Lh7/c;
+.method public register(Ld/d/a/m7/c;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "modeCoordinator"
+        }
     .end annotation
 
-    return-void
-.end method
+    .line 1
+    invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->register(Ld/d/a/m7/c;)V
 
-.method public register(Lu8/d;)V
-    .locals 1
+    .line 2
+    invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->registerBackStack(Ld/d/a/m7/c;Ld/d/a/m7/g/c1;)V
 
-    invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->register(Lu8/d;)V
-
-    invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->registerBackStack(Lu8/d;Lv8/z0;)V
-
-    invoke-static {}, Lu8/e;->i()Lu8/e;
+    .line 3
+    invoke-static {}, Ld/d/a/m7/d;->i()Ld/d/a/m7/d;
 
     move-result-object p1
 
-    const-class v0, Lyh/a$c;
+    const-class v0, Ld/o/v/a/d0/a/c/a$c;
 
-    invoke-virtual {p1, v0, p0}, Lu8/e;->d(Ljava/lang/Class;Lu8/a;)V
+    .line 4
+    invoke-virtual {p1, v0, p0}, Ld/d/a/m7/d;->b(Ljava/lang/Class;Ld/d/a/m7/a;)V
 
     return-void
 .end method
@@ -3424,7 +5136,8 @@
 .method public resetConfig()V
     .locals 1
 
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->G:Ljava/util/concurrent/atomic/AtomicBoolean;
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->g9:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v0, 0x1
 
@@ -3433,956 +5146,157 @@
     return-void
 .end method
 
-.method public final rj()V
-    .locals 2
+.method public s2()V
+    .locals 0
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
 
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K1:Z
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->y:Lki/i;
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->z:Lki/f;
-
-    invoke-static {}, Lvi/y;->s()Lvi/y;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lvi/y;->Y(Z)V
-
-    invoke-static {}, Lvi/y;->s()Lvi/y;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lvi/y;->o()Lki/c;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->p2:Lki/c;
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K:Landroid/util/SparseArray;
-
-    if-eqz v0, :cond_0
-
-    iget p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v:I
-
-    if-ltz p0, :cond_0
-
-    invoke-virtual {v0, p0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEditBottomList;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEditBottomList;->Xh()V
-
-    :cond_0
     return-void
 .end method
 
-.method public s2(Lsh/a;I)V
-    .locals 4
+.method public tf(Z)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isStopRenderEdit"
+        }
+    .end annotation
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "configPath = "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    new-array v2, v1, [Ljava/lang/Object;
-
-    const-string v3, "MIMOJI_FragmentMimojiFuEdit"
-
-    invoke-static {v3, v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    invoke-virtual {p1}, Lsh/a;->h()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C:Ljava/lang/String;
-
-    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->D:Ljava/lang/String;
-
-    iput-boolean v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->H:Z
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Wi()V
-
-    invoke-static {}, Lv8/t;->impl2()Lv8/t;
-
-    move-result-object p1
+    .line 1
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->M8:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lv8/t;->I6()Z
+    .line 2
+    invoke-virtual {p1}, Landroid/view/TextureView;->isAttachedToWindow()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    .line 3
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->M8:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
+
+    invoke-virtual {p1}, Landroid/view/TextureView;->isAvailable()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    .line 4
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->M8:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
+
+    invoke-virtual {p1}, Lcom/android/camera/ui/GLTextureView;->q()V
+
+    .line 5
+    invoke-static {}, Ld/o/v/d/d/y;->u()Ld/o/v/d/d/y;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ld/o/v/d/d/y;->E()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-boolean p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->h9:Z
+
+    if-nez p1, :cond_0
+
+    .line 6
+    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q9:Landroid/os/Handler;
+
+    new-instance v0, Ld/o/v/d/c/a/f0;
+
+    invoke-direct {v0, p0}, Ld/o/v/d/c/a/f0;-><init>(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)V
+
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     :cond_0
-    invoke-static {}, Lv8/y2;->impl2()Lv8/y2;
-
-    move-result-object p1
-
-    const/4 v0, 0x2
-
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_0
-
-    const/4 v1, 0x1
-
-    invoke-interface {p1, v1, v0}, Lv8/y2;->disableMenuItem(Z[I)V
-
-    invoke-virtual {p0, p2}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->zc(I)V
-
-    return-void
-
-    nop
-
-    :array_0
-    .array-data 4
-        0xc5
-        0xc1
-    .end array-data
-.end method
-
-.method public sj()V
-    .locals 3
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->uj()V
-
-    const/4 v0, 0x2
-
-    new-array v0, v0, [Ljava/lang/CharSequence;
-
-    invoke-static {}, Lvi/y;->s()Lvi/y;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lvi/y;->Z()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    aput-object v1, v0, v2
-
-    const-string v1, "originPhoto.jpg"
-
-    const/4 v2, 0x1
-
-    aput-object v1, v0, v2
-
-    invoke-static {v0}, Landroid/text/TextUtils;->concat([Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->V1:Ljava/lang/String;
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->qj()V
-
-    iput-boolean v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q1:Z
-
     return-void
 .end method
 
-.method public final tj(I)V
-    .locals 4
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Vi()V
-
-    const/4 v0, 0x1
-
-    const/4 v1, -0x1
-
-    if-eq p1, v0, :cond_3
-
-    const/4 v2, 0x3
-
-    if-eq p1, v2, :cond_2
-
-    const/4 v2, 0x4
-
-    if-eq p1, v2, :cond_1
-
-    const/4 v2, 0x5
-
-    if-eq p1, v2, :cond_1
-
-    move v2, v1
-
-    goto :goto_0
-
-    :cond_1
-    const v2, 0x7f140676
-
-    goto :goto_0
-
-    :cond_2
-    const v2, 0x7f140677
-
-    goto :goto_0
-
-    :cond_3
-    const v2, 0x7f140679
-
-    :goto_0
-    if-ne v2, v1, :cond_4
-
-    return-void
-
-    :cond_4
-    new-instance v1, Lmiuix/appcompat/app/AlertDialog$a;
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
-
-    move-result-object v3
-
-    invoke-direct {v1, v3}, Lmiuix/appcompat/app/AlertDialog$a;-><init>(Landroid/content/Context;)V
-
-    invoke-virtual {p0, v2}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lmiuix/appcompat/app/AlertDialog$a;->z(Ljava/lang/CharSequence;)Lmiuix/appcompat/app/AlertDialog$a;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Lmiuix/appcompat/app/AlertDialog$a;->j(Z)Lmiuix/appcompat/app/AlertDialog$a;
-
-    move-result-object v0
-
-    new-instance v2, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$c;
-
-    invoke-direct {v2, p0, p1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$c;-><init>(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;I)V
-
-    const p1, 0x7f14065d
-
-    invoke-virtual {v0, p1, v2}, Lmiuix/appcompat/app/AlertDialog$a;->P(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$a;
-
-    move-result-object p1
-
-    new-instance v0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$b;
-
-    invoke-direct {v0, p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$b;-><init>(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)V
-
-    const v2, 0x7f140640
-
-    invoke-virtual {p1, v2, v0}, Lmiuix/appcompat/app/AlertDialog$a;->D(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$a;
-
-    invoke-virtual {v1}, Lmiuix/appcompat/app/AlertDialog$a;->c0()Lmiuix/appcompat/app/AlertDialog;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->t:Lmiuix/appcompat/app/AlertDialog;
-
-    return-void
-.end method
-
-.method public final uj()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public unRegister(Lu8/d;)V
+.method public unRegister(Ld/d/a/m7/c;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "modeCoordinator"
+        }
+    .end annotation
 
-    invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->unRegister(Lu8/d;)V
+    .line 1
+    invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->unRegister(Ld/d/a/m7/c;)V
 
-    invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->unRegisterBackStack(Lu8/d;Lv8/z0;)V
+    .line 2
+    invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->unRegisterBackStack(Ld/d/a/m7/c;Ld/d/a/m7/g/c1;)V
 
-    invoke-static {}, Lu8/e;->i()Lu8/e;
+    .line 3
+    invoke-static {}, Ld/d/a/m7/d;->i()Ld/d/a/m7/d;
 
     move-result-object p1
 
-    const-class v0, Lyh/a$c;
+    const-class v0, Ld/o/v/a/d0/a/c/a$c;
 
-    invoke-virtual {p1, v0, p0}, Lu8/e;->c(Ljava/lang/Class;Lu8/a;)V
+    .line 4
+    invoke-virtual {p1, v0, p0}, Ld/d/a/m7/d;->d(Ljava/lang/Class;Ld/d/a/m7/a;)V
 
     return-void
 .end method
 
-.method public final vj()I
-    .locals 5
+.method public vc(I)V
+    .locals 0
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "index"
+        }
+    .end annotation
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->s:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
-
-    invoke-virtual {v0}, Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;->getItemCount()I
-
-    move-result v0
-
-    sget-object v1, Lcom/xiaomi/mimoji/mimojifu/bean/a;->k:[[Lcom/xiaomi/mimoji/mimojifu/bean/a$a;
-
-    array-length v1, v1
-
-    if-ne v0, v1, :cond_0
-
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->s:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;->getItemCount()I
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_0
-    sget-object v2, Lcom/xiaomi/mimoji/mimojifu/bean/a;->k:[[Lcom/xiaomi/mimoji/mimojifu/bean/a$a;
-
-    array-length v3, v2
-
-    if-ge v1, v3, :cond_2
-
-    aget-object v2, v2, v1
-
-    new-instance v3, Lcom/xiaomi/mimoji/mimojifu/bean/a;
-
-    invoke-direct {v3, v2}, Lcom/xiaomi/mimoji/mimojifu/bean/a;-><init>([Lcom/xiaomi/mimoji/mimojifu/bean/a$a;)V
-
-    iget-object v4, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->C:Ljava/lang/String;
-
-    invoke-virtual {v3, v4}, Lcom/xiaomi/mimoji/mimojifu/bean/a;->o(Ljava/lang/String;)V
-
-    iget-object v4, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->c:Landroid/content/Context;
-
-    invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    aget-object v2, v2, v0
-
-    invoke-virtual {v2}, Lcom/xiaomi/mimoji/mimojifu/bean/a$a;->c()I
-
-    move-result v2
-
-    invoke-virtual {v4, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v3, v2}, Lci/d;->j(Ljava/lang/String;)V
-
-    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->r:Landroid/widget/TextView;
-
-    invoke-virtual {v2}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
-
-    move-result-object v2
-
-    invoke-virtual {v3}, Lci/d;->d()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v2, v4}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
-
-    move-result v2
-
-    invoke-virtual {v3, v2}, Lci/d;->g(F)V
-
-    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->s:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
-
-    invoke-virtual {v2}, Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;->getItemCount()I
-
-    move-result v2
-
-    if-lez v2, :cond_1
-
-    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->s:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
-
-    invoke-virtual {v2}, Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;->getDataList()Ljava/util/List;
-
-    move-result-object v2
-
-    iget-object v4, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->s:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
-
-    invoke-virtual {v4}, Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;->getDataList()Ljava/util/List;
-
-    move-result-object v4
-
-    invoke-interface {v4}, Ljava/util/List;->size()I
-
-    move-result v4
-
-    add-int/lit8 v4, v4, -0x1
-
-    invoke-interface {v2, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/xiaomi/mimoji/mimojifu/bean/a;
-
-    invoke-virtual {v2}, Lci/d;->c()F
-
-    move-result v2
-
-    invoke-virtual {v3}, Lci/d;->b()F
-
-    move-result v4
-
-    add-float/2addr v2, v4
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v3}, Lci/d;->b()F
-
-    move-result v2
-
-    :goto_1
-    invoke-virtual {v3, v2}, Lci/d;->h(F)V
-
-    invoke-virtual {v3, v0}, Lci/d;->f(I)V
-
-    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->s:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
-
-    invoke-virtual {v2, v3}, Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;->h(Lci/d;)V
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->s:Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/widget/autoselectview/AutoSelectAdapter;->getItemCount()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public wj(I)V
-    .locals 7
-
-    const/4 v0, 0x2
-
-    const/4 v1, -0x1
-
-    const v2, 0x7f070783
-
-    const/4 v3, 0x0
-
-    const/16 v4, 0x8
-
-    if-eq p1, v4, :cond_1
-
-    const/4 v5, 0x6
-
-    if-ne p1, v5, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iput v3, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->J:I
-
-    iget-object v5, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->l:Landroid/view/View;
-
-    invoke-virtual {v5}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v5
-
-    check-cast v5, Landroid/widget/RelativeLayout$LayoutParams;
-
-    iget-object v6, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->c:Landroid/content/Context;
-
-    invoke-virtual {v6}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v6
-
-    iput v6, v5, Landroid/widget/RelativeLayout$LayoutParams;->height:I
-
-    iget-object v6, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->l:Landroid/view/View;
-
-    invoke-virtual {v6, v5}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    iget-object v5, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
-
-    invoke-virtual {v5}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v5
-
-    check-cast v5, Landroid/widget/RelativeLayout$LayoutParams;
-
-    iget-object v6, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->c:Landroid/content/Context;
-
-    invoke-virtual {v6}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v2
-
-    iput v2, v5, Landroid/widget/RelativeLayout$LayoutParams;->height:I
-
-    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
-
-    invoke-virtual {v2, v5}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    invoke-static {}, Ly2/b;->q()I
-
-    move-result v5
-
-    iget-object v6, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->c:Landroid/content/Context;
-
-    invoke-virtual {v6}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v2
-
-    sub-int/2addr v5, v2
-
-    div-int/2addr v5, v0
-
-    iput v5, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->J:I
-
-    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->l:Landroid/view/View;
-
-    invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/RelativeLayout$LayoutParams;
-
-    iput v1, v2, Landroid/widget/RelativeLayout$LayoutParams;->height:I
-
-    iget-object v5, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->l:Landroid/view/View;
-
-    invoke-virtual {v5, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    iget-object v2, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
-
-    invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/RelativeLayout$LayoutParams;
-
-    iput v1, v2, Landroid/widget/RelativeLayout$LayoutParams;->height:I
-
-    iget-object v5, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
-
-    invoke-virtual {v5, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    :goto_1
-    const v2, 0x7f1406a5
-
-    const v5, 0x7f060922
-
-    const/4 v6, 0x1
-
-    packed-switch p1, :pswitch_data_0
-
-    goto/16 :goto_2
-
-    :pswitch_0
-    const/4 p1, 0x7
-
-    iput p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->u:I
-
-    goto/16 :goto_2
-
-    :pswitch_1
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->cj()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K2:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
-
-    :cond_2
-    invoke-static {}, Lvi/y;->s()Lvi/y;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lvi/y;->w0()V
-
-    invoke-static {}, Lyh/a$b;->impl2()Lyh/a$b;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_3
-
-    const/4 v1, 0x0
-
-    invoke-interface {v0, v1}, Lyh/a$b;->K6(Lrh/y;)V
-
-    :cond_3
-    iput p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->u:I
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->f:Landroid/widget/TextView;
-
-    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->g:Landroid/widget/TextView;
-
-    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->h:Landroid/widget/LinearLayout;
-
-    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->n:Landroid/widget/LinearLayout;
-
-    if-eqz p1, :cond_4
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_4
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->d:Landroid/widget/TextView;
-
-    invoke-virtual {p1, v6}, Landroid/view/View;->setClickable(Z)V
-
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->e:Landroid/widget/TextView;
-
-    invoke-virtual {p0, v6}, Landroid/view/View;->setClickable(Z)V
-
-    goto/16 :goto_2
-
-    :pswitch_2
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->n:Landroid/widget/LinearLayout;
-
-    if-eqz p1, :cond_5
-
-    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_5
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->g:Landroid/widget/TextView;
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->g:Landroid/widget/TextView;
-
-    invoke-virtual {p0, v6}, Landroid/view/View;->setClickable(Z)V
-
-    goto/16 :goto_2
-
-    :pswitch_3
-    const/4 p1, 0x4
-
-    iput p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->u:I
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->h:Landroid/widget/LinearLayout;
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->n:Landroid/widget/LinearLayout;
-
-    if-eqz p1, :cond_6
-
-    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_6
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->f:Landroid/widget/TextView;
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->g:Landroid/widget/TextView;
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->f:Landroid/widget/TextView;
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->f:Landroid/widget/TextView;
-
-    invoke-virtual {p1, v6}, Landroid/view/View;->setClickable(Z)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->f:Landroid/widget/TextView;
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f140640
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->g:Landroid/widget/TextView;
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->g:Landroid/widget/TextView;
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f060929
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->g:Landroid/widget/TextView;
-
-    invoke-virtual {p0, v3}, Landroid/view/View;->setClickable(Z)V
-
-    goto/16 :goto_2
-
-    :pswitch_4
-    const/4 p1, 0x3
-
-    iput p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->u:I
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->h:Landroid/widget/LinearLayout;
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->n:Landroid/widget/LinearLayout;
-
-    if-eqz p1, :cond_7
-
-    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_7
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->f:Landroid/widget/TextView;
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->g:Landroid/widget/TextView;
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->f:Landroid/widget/TextView;
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->g:Landroid/widget/TextView;
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->g:Landroid/widget/TextView;
-
-    invoke-virtual {p1, v6}, Landroid/view/View;->setClickable(Z)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->f:Landroid/widget/TextView;
-
-    invoke-virtual {p1, v6}, Landroid/view/View;->setClickable(Z)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->g:Landroid/widget/TextView;
-
-    invoke-virtual {p1, v6}, Landroid/view/View;->setClickable(Z)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->g:Landroid/widget/TextView;
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->f:Landroid/widget/TextView;
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    const v0, 0x7f1406a4
-
-    invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    goto :goto_2
-
-    :pswitch_5
-    iput v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->u:I
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->h:Landroid/widget/LinearLayout;
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->n:Landroid/widget/LinearLayout;
-
-    if-eqz p1, :cond_8
-
-    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_8
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->f:Landroid/widget/TextView;
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->f:Landroid/widget/TextView;
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->f:Landroid/widget/TextView;
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f1406a2
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->f:Landroid/widget/TextView;
-
-    invoke-virtual {p1, v6}, Landroid/view/View;->setClickable(Z)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->g:Landroid/widget/TextView;
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->g:Landroid/widget/TextView;
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->g:Landroid/widget/TextView;
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->g:Landroid/widget/TextView;
-
-    invoke-virtual {p0, v6}, Landroid/view/View;->setClickable(Z)V
-
-    :goto_2
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
 .end method
 
-.method public x()V
+.method public w7(Ljava/util/List;)V
+    .locals 0
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "emoInfoList"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/arcsoft/avatar2/emoticon/EmoInfo;",
+            ">;)V"
+        }
+    .end annotation
+
+    return-void
+.end method
+
+.method public y()V
     .locals 4
 
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->yf()Z
+    .line 1
+    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->lf()Z
 
     move-result v0
 
@@ -4390,12 +5304,13 @@
 
     return-void
 
+    .line 2
     :cond_0
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->p1:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q9:Landroid/os/Handler;
 
-    new-instance v1, Lti/u;
+    new-instance v1, Ld/o/v/d/c/a/b0;
 
-    invoke-direct {v1, p0}, Lti/u;-><init>(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)V
+    invoke-direct {v1, p0}, Ld/o/v/d/c/a/b0;-><init>(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;)V
 
     const-wide/16 v2, 0x32
 
@@ -4404,201 +5319,11 @@
     return-void
 .end method
 
-.method public yf()Z
+.method public y5()I
     .locals 0
 
-    iget-boolean p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->H:Z
+    .line 1
+    iget p0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->j9:I
 
     return p0
-.end method
-
-.method public yg(Z)V
-    .locals 1
-    .annotation build Lh7/c;
-    .end annotation
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0, p1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Yi(ZZ)V
-
-    return-void
-.end method
-
-.method public zc(I)V
-    .locals 5
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "startMimojiEdit\uff1a"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    new-array v2, v1, [Ljava/lang/Object;
-
-    const-string v3, "MIMOJI_FragmentMimojiFuEdit"
-
-    invoke-static {v3, v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iput-boolean v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->H:Z
-
-    iput-boolean v1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->q1:Z
-
-    iput p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->A:I
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->y:Lki/i;
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->z:Lki/f;
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->w:Lcom/xiaomi/mimoji/mimojifu/bean/a;
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->v:I
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->K2:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
-
-    invoke-static {}, Lyh/a$g;->impl2()Lyh/a$g;
-
-    move-result-object v0
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0, v2}, Lyh/a$g;->nf(Z)V
-
-    :cond_0
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->F()V
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->o:Landroid/view/View;
-
-    invoke-virtual {p0, v0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->aj(Landroid/view/View;)V
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->d:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setClickable(Z)V
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->e:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setClickable(Z)V
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->m:Landroid/widget/FrameLayout;
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout$LayoutParams;
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    invoke-static {v3}, Lcom/android/camera/a6;->G2(Landroid/content/Context;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    move v3, v1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    const v4, 0x7f07077a
-
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v3
-
-    :goto_0
-    iput v3, v0, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
-
-    iget-object v3, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->m:Landroid/widget/FrameLayout;
-
-    invoke-virtual {v3, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    :cond_2
-    const-string v0, ""
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->V1:Ljava/lang/String;
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->i:Landroid/widget/RelativeLayout;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->j:Landroid/widget/RelativeLayout;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->o:Landroid/view/View;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->k:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
-
-    invoke-static {v0, v2}, Lai/d;->b(Landroid/view/View;Z)Z
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->l:Landroid/view/View;
-
-    invoke-static {v0, v2}, Lai/d;->b(Landroid/view/View;Z)Z
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->G:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->resetConfig()V
-
-    :cond_3
-    iget-object v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->o:Landroid/view/View;
-
-    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$a;
-
-    invoke-direct {v1, p0, p1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit$a;-><init>(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;I)V
-
-    invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
-
-    const/16 v0, 0xcc
-
-    if-eq p1, v0, :cond_4
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->Zi()V
-
-    goto :goto_1
-
-    :cond_4
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/FragmentMimojiFuEdit;->R8()V
-
-    :goto_1
-    return-void
 .end method

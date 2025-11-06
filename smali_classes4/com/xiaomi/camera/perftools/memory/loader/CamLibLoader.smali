@@ -76,7 +76,7 @@
 
     const-string p0, "class loader is null"
 
-    invoke-static {v1, p0}, Los/d;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p0}, Lk/i0/c;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v2
 
@@ -105,7 +105,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v3, v5}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    invoke-virtual {v3, v5}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
     new-array v4, v5, [Ljava/lang/Object;
 
@@ -176,7 +176,7 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Los/d;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p0}, Lk/i0/c;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_1
     return-object v2
@@ -222,9 +222,11 @@
         }
     .end annotation
 
-    if-eqz p0, :cond_7
-
     const-class v0, Lcom/xiaomi/camera/perftools/memory/loader/CamLibLoader;
+
+    const-string v1, "libSimpleName can\'t be null"
+
+    invoke-static {p0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     monitor-enter v0
 
@@ -278,13 +280,13 @@
 
     invoke-virtual {v2}, Lcom/xiaomi/camera/perftools/memory/loader/CamLibLoader$a;->e()I
 
-    move-result v0
+    move-result v7
 
-    if-lez v0, :cond_2
+    if-lez v7, :cond_2
 
-    add-int/2addr v0, v4
+    add-int/2addr v7, v4
 
-    invoke-virtual {v2, v0}, Lcom/xiaomi/camera/perftools/memory/loader/CamLibLoader$a;->b(I)V
+    invoke-virtual {v2, v7}, Lcom/xiaomi/camera/perftools/memory/loader/CamLibLoader$a;->b(I)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
@@ -305,17 +307,15 @@
 
     move-result-wide v7
 
-    const-class p1, Lcom/xiaomi/camera/perftools/memory/loader/CamLibLoader;
-
-    monitor-enter p1
+    monitor-enter v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     const-wide/16 v9, 0x0
 
-    cmp-long v0, v7, v9
+    cmp-long p1, v7, v9
 
-    if-eqz v0, :cond_4
+    if-eqz p1, :cond_4
 
     :try_start_3
     invoke-virtual {v2, v4}, Lcom/xiaomi/camera/perftools/memory/loader/CamLibLoader$a;->b(I)V
@@ -324,7 +324,7 @@
 
     invoke-interface {v1, p0, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    monitor-exit p1
+    monitor-exit v0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
@@ -343,7 +343,7 @@
     :try_start_4
     invoke-interface {v1, p0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v0, Ljava/lang/UnsatisfiedLinkError;
+    new-instance p1, Ljava/lang/UnsatisfiedLinkError;
 
     sget-object v1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
     :try_end_4
@@ -360,14 +360,14 @@
 
     move-result-object p0
 
-    invoke-direct {v0, p0}, Ljava/lang/UnsatisfiedLinkError;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p0}, Ljava/lang/UnsatisfiedLinkError;-><init>(Ljava/lang/String;)V
 
-    throw v0
+    throw p1
 
     :catchall_0
     move-exception p0
 
-    monitor-exit p1
+    monitor-exit v0
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
@@ -419,15 +419,6 @@
     monitor-exit v0
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_2
-
-    throw p0
-
-    :cond_7
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string p1, "libSimpleName can\'t be null"
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw p0
 .end method
@@ -524,7 +515,7 @@
 
     if-eqz v10, :cond_1
 
-    invoke-static {v9}, Lmf/a;->b(Ljava/lang/reflect/Method;)Ljava/lang/String;
+    invoke-static {v9}, Ld/o/f/p/c/a/a;->b(Ljava/lang/reflect/Method;)Ljava/lang/String;
 
     move-result-object v10
 
@@ -615,15 +606,15 @@
 
     invoke-virtual {v2}, Lcom/xiaomi/camera/perftools/memory/loader/CamLibLoader$a;->e()I
 
-    move-result v0
+    move-result v5
 
-    const/4 v5, 0x1
+    const/4 v6, 0x1
 
-    if-le v0, v5, :cond_2
+    if-le v5, v6, :cond_2
 
-    add-int/lit8 v0, v0, -0x1
+    add-int/lit8 v5, v5, -0x1
 
-    invoke-virtual {v2, v0}, Lcom/xiaomi/camera/perftools/memory/loader/CamLibLoader$a;->b(I)V
+    invoke-virtual {v2, v5}, Lcom/xiaomi/camera/perftools/memory/loader/CamLibLoader$a;->b(I)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
@@ -639,7 +630,7 @@
     return-void
 
     :cond_2
-    if-nez v0, :cond_4
+    if-nez v5, :cond_4
 
     invoke-virtual {v4}, Ljava/util/concurrent/locks/ReentrantLock;->isHeldByCurrentThread()Z
 
@@ -656,19 +647,17 @@
     :try_start_2
     invoke-static {v3}, Lcom/xiaomi/camera/perftools/memory/loader/CamLibLoader;->unloadLibraryImpl(Ljava/lang/String;)I
 
-    move-result v0
+    move-result v3
 
-    const/4 v3, 0x0
+    const/4 v5, 0x0
 
-    if-nez v0, :cond_5
+    if-nez v3, :cond_5
 
-    invoke-virtual {v2, v3}, Lcom/xiaomi/camera/perftools/memory/loader/CamLibLoader$a;->b(I)V
+    invoke-virtual {v2, v5}, Lcom/xiaomi/camera/perftools/memory/loader/CamLibLoader$a;->b(I)V
 
     const-wide/16 v5, 0x0
 
     invoke-virtual {v2, v5, v6}, Lcom/xiaomi/camera/perftools/memory/loader/CamLibLoader$a;->c(J)V
-
-    const-class v0, Lcom/xiaomi/camera/perftools/memory/loader/CamLibLoader;
 
     monitor-enter v0
     :try_end_2
@@ -699,19 +688,19 @@
     const-string v0, "unload library fail: %s"
 
     :try_start_5
-    new-array v1, v5, [Ljava/lang/Object;
+    new-array v1, v6, [Ljava/lang/Object;
 
     invoke-virtual {v2}, Lcom/xiaomi/camera/perftools/memory/loader/CamLibLoader$a;->a()Ljava/lang/String;
 
     move-result-object v2
 
-    aput-object v2, v1, v3
+    aput-object v2, v1, v5
 
     invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Los/d;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lk/i0/c;->f(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 

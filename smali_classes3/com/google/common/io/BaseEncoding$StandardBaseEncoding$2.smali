@@ -1,4 +1,4 @@
-.class Lcom/google/common/io/BaseEncoding$StandardBaseEncoding$2;
+.class public Lcom/google/common/io/BaseEncoding$StandardBaseEncoding$2;
 .super Ljava/io/InputStream;
 .source "SourceFile"
 
@@ -15,23 +15,24 @@
 
 
 # instance fields
-.field bitBuffer:I
+.field public bitBuffer:I
 
-.field bitBufferLength:I
+.field public bitBufferLength:I
 
-.field hitPadding:Z
+.field public hitPadding:Z
 
-.field readChars:I
+.field public readChars:I
 
-.field final synthetic this$0:Lcom/google/common/io/BaseEncoding$StandardBaseEncoding;
+.field public final synthetic this$0:Lcom/google/common/io/BaseEncoding$StandardBaseEncoding;
 
-.field final synthetic val$reader:Ljava/io/Reader;
+.field public final synthetic val$reader:Ljava/io/Reader;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/io/BaseEncoding$StandardBaseEncoding;Ljava/io/Reader;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/io/BaseEncoding$StandardBaseEncoding$2;->this$0:Lcom/google/common/io/BaseEncoding$StandardBaseEncoding;
 
     iput-object p2, p0, Lcom/google/common/io/BaseEncoding$StandardBaseEncoding$2;->val$reader:Ljava/io/Reader;
@@ -40,12 +41,16 @@
 
     const/4 p1, 0x0
 
+    .line 2
     iput p1, p0, Lcom/google/common/io/BaseEncoding$StandardBaseEncoding$2;->bitBuffer:I
 
+    .line 3
     iput p1, p0, Lcom/google/common/io/BaseEncoding$StandardBaseEncoding$2;->bitBufferLength:I
 
+    .line 4
     iput p1, p0, Lcom/google/common/io/BaseEncoding$StandardBaseEncoding$2;->readChars:I
 
+    .line 5
     iput-boolean p1, p0, Lcom/google/common/io/BaseEncoding$StandardBaseEncoding$2;->hitPadding:Z
 
     return-void
@@ -61,6 +66,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/io/BaseEncoding$StandardBaseEncoding$2;->val$reader:Ljava/io/Reader;
 
     invoke-virtual {p0}, Ljava/io/Reader;->close()V
@@ -114,19 +120,19 @@
 
     iget p0, p0, Lcom/google/common/io/BaseEncoding$StandardBaseEncoding$2;->readChars:I
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const/16 v1, 0x20
 
-    const/16 v2, 0x20
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    const-string v2, "Invalid input length "
+    const-string v1, "Invalid input length "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
@@ -193,19 +199,19 @@
 
     iget p0, p0, Lcom/google/common/io/BaseEncoding$StandardBaseEncoding$2;->readChars:I
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const/16 v1, 0x29
 
-    const/16 v2, 0x29
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    const-string v2, "Padding cannot start at index "
+    const-string v1, "Padding cannot start at index "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
@@ -282,25 +288,25 @@
 
     iget p0, p0, Lcom/google/common/io/BaseEncoding$StandardBaseEncoding$2;->readChars:I
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    const/16 v2, 0x3d
 
-    const/16 v3, 0x3d
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    const-string v3, "Expected padding character but found \'"
+    const-string v2, "Expected padding character but found \'"
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     const-string v0, "\' at index "
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 

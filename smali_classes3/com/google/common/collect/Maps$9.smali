@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Maps$9;
+.class public Lcom/google/common/collect/Maps$9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,13 +26,14 @@
 
 
 # instance fields
-.field final synthetic val$function:Lcom/google/common/base/Function;
+.field public final synthetic val$function:Lcom/google/common/base/Function;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/base/Function;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/Maps$9;->val$function:Lcom/google/common/base/Function;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -61,6 +62,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Maps$9;->val$function:Lcom/google/common/base/Function;
 
     invoke-interface {p0, p2}, Lcom/google/common/base/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;

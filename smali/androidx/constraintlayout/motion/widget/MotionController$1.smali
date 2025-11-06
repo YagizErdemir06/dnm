@@ -1,4 +1,4 @@
-.class Landroidx/constraintlayout/motion/widget/MotionController$1;
+.class public Landroidx/constraintlayout/motion/widget/MotionController$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic val$easing:Landroidx/constraintlayout/core/motion/utils/Easing;
+.field public final synthetic val$easing:Landroidx/constraintlayout/core/motion/utils/Easing;
 
 
 # direct methods
@@ -33,6 +33,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroidx/constraintlayout/motion/widget/MotionController$1;->val$easing:Landroidx/constraintlayout/core/motion/utils/Easing;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,6 +54,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/motion/widget/MotionController$1;->val$easing:Landroidx/constraintlayout/core/motion/utils/Easing;
 
     float-to-double v0, p1

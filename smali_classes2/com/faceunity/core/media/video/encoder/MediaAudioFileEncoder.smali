@@ -10,7 +10,7 @@
 
 
 # instance fields
-.field TAG:Ljava/lang/String;
+.field public TAG:Ljava/lang/String;
 
 .field private mFilepath:Ljava/lang/String;
 
@@ -23,12 +23,15 @@
 .method public constructor <init>(Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;Lcom/faceunity/core/media/video/encoder/MediaEncoder$MediaEncoderListener;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/faceunity/core/media/video/encoder/MediaEncoder;-><init>(Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;Lcom/faceunity/core/media/video/encoder/MediaEncoder$MediaEncoderListener;)V
 
     const-string p1, "Video_MediaAudioFileEncoder"
 
+    .line 2
     iput-object p1, p0, Lcom/faceunity/core/media/video/encoder/MediaAudioFileEncoder;->TAG:Ljava/lang/String;
 
+    .line 3
     iput-object p3, p0, Lcom/faceunity/core/media/video/encoder/MediaAudioFileEncoder;->mFilepath:Ljava/lang/String;
 
     return-void
@@ -52,32 +55,38 @@
 
     const/4 v0, -0x1
 
+    .line 1
     iput v0, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mTrackIndex:I
 
     const/4 v0, 0x0
 
+    .line 2
     iput-boolean v0, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mIsEOS:Z
 
     iput-boolean v0, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mMuxerStarted:Z
 
+    .line 3
     new-instance v1, Landroid/media/MediaExtractor;
 
     invoke-direct {v1}, Landroid/media/MediaExtractor;-><init>()V
 
     iput-object v1, p0, Lcom/faceunity/core/media/video/encoder/MediaAudioFileEncoder;->mMediaExtractor:Landroid/media/MediaExtractor;
 
+    .line 4
     iget-object v2, p0, Lcom/faceunity/core/media/video/encoder/MediaAudioFileEncoder;->mFilepath:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Landroid/media/MediaExtractor;->setDataSource(Ljava/lang/String;)V
 
+    .line 5
     iget-object v1, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mWeakMuxer:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;
 
+    .line 6
     iget-object v2, p0, Lcom/faceunity/core/media/video/encoder/MediaAudioFileEncoder;->mMediaExtractor:Landroid/media/MediaExtractor;
 
     invoke-virtual {v2}, Landroid/media/MediaExtractor;->getTrackCount()I
@@ -87,6 +96,7 @@
     :goto_0
     if-ge v0, v2, :cond_1
 
+    .line 7
     iget-object v3, p0, Lcom/faceunity/core/media/video/encoder/MediaAudioFileEncoder;->mMediaExtractor:Landroid/media/MediaExtractor;
 
     invoke-virtual {v3, v0}, Landroid/media/MediaExtractor;->getTrackFormat(I)Landroid/media/MediaFormat;
@@ -95,12 +105,14 @@
 
     const-string v4, "mime"
 
+    .line 8
     invoke-virtual {v3, v4}, Landroid/media/MediaFormat;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     const-string v5, "audio/"
 
+    .line 9
     invoke-virtual {v4, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v4
@@ -109,20 +121,24 @@
 
     const-string v2, "max-input-size"
 
+    .line 10
     invoke-virtual {v3, v2}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;)I
 
     move-result v2
 
+    .line 11
     invoke-static {v2}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/faceunity/core/media/video/encoder/MediaAudioFileEncoder;->mInputBuffer:Ljava/nio/ByteBuffer;
 
+    .line 12
     iget-object v2, p0, Lcom/faceunity/core/media/video/encoder/MediaAudioFileEncoder;->mMediaExtractor:Landroid/media/MediaExtractor;
 
     invoke-virtual {v2, v0}, Landroid/media/MediaExtractor;->selectTrack(I)V
 
+    .line 13
     invoke-virtual {v1, v3}, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->addTrack(Landroid/media/MediaFormat;)I
 
     move-result v0
@@ -136,12 +152,14 @@
 
     goto :goto_0
 
+    .line 14
     :cond_1
     :goto_1
     iget-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mListener:Lcom/faceunity/core/media/video/encoder/MediaEncoder$MediaEncoderListener;
 
     if-eqz v0, :cond_2
 
+    .line 15
     :try_start_0
     invoke-interface {v0, p0}, Lcom/faceunity/core/media/video/encoder/MediaEncoder$MediaEncoderListener;->onPrepared(Lcom/faceunity/core/media/video/encoder/MediaEncoder;)V
     :try_end_0
@@ -152,6 +170,7 @@
     :catch_0
     move-exception v0
 
+    .line 16
     iget-object p0, p0, Lcom/faceunity/core/media/video/encoder/MediaAudioFileEncoder;->TAG:Ljava/lang/String;
 
     const-string v1, "prepare:"
@@ -166,16 +185,20 @@
 .method public release()V
     .locals 1
 
+    .line 1
     invoke-super {p0}, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->release()V
 
+    .line 2
     iget-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaAudioFileEncoder;->mMediaExtractor:Landroid/media/MediaExtractor;
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {v0}, Landroid/media/MediaExtractor;->release()V
 
     const/4 v0, 0x0
 
+    .line 4
     iput-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaAudioFileEncoder;->mMediaExtractor:Landroid/media/MediaExtractor;
 
     :cond_0
@@ -187,35 +210,42 @@
 
     move-object/from16 v0, p0
 
+    .line 1
     iget-object v1, v0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mSync:Ljava/lang/Object;
 
     monitor-enter v1
 
+    .line 2
     :try_start_0
     iget-object v2, v0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mSync:Ljava/lang/Object;
 
     invoke-virtual {v2}, Ljava/lang/Object;->notify()V
 
+    .line 3
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
+    .line 4
     iget-object v1, v0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mWeakMuxer:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;
 
+    .line 5
     invoke-virtual {v1}, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->start()Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
+    .line 6
     monitor-enter v1
 
+    .line 7
     :catch_0
     :goto_0
     :try_start_1
@@ -229,6 +259,7 @@
 
     const-wide/16 v2, 0x64
 
+    .line 8
     :try_start_2
     invoke-virtual {v1, v2, v3}, Ljava/lang/Object;->wait(J)V
     :try_end_2
@@ -237,6 +268,7 @@
 
     goto :goto_0
 
+    .line 9
     :cond_0
     :try_start_3
     monitor-exit v1
@@ -252,12 +284,14 @@
 
     throw v0
 
+    .line 10
     :cond_1
     :goto_1
     iget v2, v0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mTrackIndex:I
 
     if-gez v2, :cond_2
 
+    .line 11
     invoke-virtual/range {p0 .. p0}, Lcom/faceunity/core/media/video/encoder/MediaAudioFileEncoder;->release()V
 
     return-void
@@ -265,6 +299,7 @@
     :cond_2
     const/4 v2, 0x1
 
+    .line 12
     iput-boolean v2, v0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mMuxerStarted:Z
 
     const-wide/16 v3, 0x0
@@ -275,15 +310,18 @@
 
     move v6, v5
 
+    .line 13
     :goto_2
     iget-boolean v9, v0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mRequestStop:Z
 
     if-eqz v9, :cond_3
 
+    .line 14
     invoke-virtual/range {p0 .. p0}, Lcom/faceunity/core/media/video/encoder/MediaAudioFileEncoder;->release()V
 
     goto :goto_3
 
+    .line 15
     :cond_3
     iget-object v9, v0, Lcom/faceunity/core/media/video/encoder/MediaAudioFileEncoder;->mMediaExtractor:Landroid/media/MediaExtractor;
 
@@ -293,18 +331,21 @@
 
     move-result v13
 
+    .line 16
     iget-object v9, v0, Lcom/faceunity/core/media/video/encoder/MediaAudioFileEncoder;->mMediaExtractor:Landroid/media/MediaExtractor;
 
     invoke-virtual {v9}, Landroid/media/MediaExtractor;->getSampleTime()J
 
     move-result-wide v9
 
+    .line 17
     iget-object v11, v0, Lcom/faceunity/core/media/video/encoder/MediaAudioFileEncoder;->mMediaExtractor:Landroid/media/MediaExtractor;
 
     invoke-virtual {v11}, Landroid/media/MediaExtractor;->getSampleFlags()I
 
     move-result v16
 
+    .line 18
     iget-object v11, v0, Lcom/faceunity/core/media/video/encoder/MediaAudioFileEncoder;->mMediaExtractor:Landroid/media/MediaExtractor;
 
     invoke-virtual {v11}, Landroid/media/MediaExtractor;->advance()Z
@@ -317,6 +358,7 @@
 
     if-nez v6, :cond_4
 
+    .line 19
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v7
@@ -326,6 +368,7 @@
     :cond_4
     const-wide/16 v11, 0x3e8
 
+    .line 20
     :try_start_4
     div-long/2addr v9, v11
 
@@ -341,10 +384,12 @@
 
     if-lez v11, :cond_5
 
+    .line 21
     invoke-static {v9, v10}, Ljava/lang/Thread;->sleep(J)V
     :try_end_4
     .catch Ljava/lang/InterruptedException; {:try_start_4 .. :try_end_4} :catch_1
 
+    .line 22
     :catch_1
     :cond_5
     iget-object v11, v0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mBufferInfo:Landroid/media/MediaCodec$BufferInfo;
@@ -357,6 +402,7 @@
 
     invoke-virtual/range {v11 .. v16}, Landroid/media/MediaCodec$BufferInfo;->set(IIJI)V
 
+    .line 23
     iget v9, v0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mTrackIndex:I
 
     iget-object v10, v0, Lcom/faceunity/core/media/video/encoder/MediaAudioFileEncoder;->mInputBuffer:Ljava/nio/ByteBuffer;
@@ -365,6 +411,7 @@
 
     invoke-virtual {v1, v9, v10, v11}, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->writeSampleData(ILjava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;)V
 
+    .line 24
     iget-object v9, v0, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->mBufferInfo:Landroid/media/MediaCodec$BufferInfo;
 
     iget-wide v9, v9, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
@@ -373,6 +420,7 @@
 
     goto :goto_2
 
+    .line 25
     :cond_6
     invoke-virtual/range {p0 .. p0}, Lcom/faceunity/core/media/video/encoder/MediaAudioFileEncoder;->release()V
 
@@ -382,6 +430,7 @@
     :catchall_1
     move-exception v0
 
+    .line 26
     :try_start_5
     monitor-exit v1
     :try_end_5

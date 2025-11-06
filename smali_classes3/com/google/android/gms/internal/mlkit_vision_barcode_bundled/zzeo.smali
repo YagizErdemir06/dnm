@@ -12,7 +12,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
@@ -41,6 +41,7 @@
 .method public static zza()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzen;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzen;
 
     const-string v1, "Protocol message tag had invalid wire type."
@@ -53,6 +54,7 @@
 .method public static zzb()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;
 
     const-string v1, "Protocol message contained an invalid tag (zero)."
@@ -65,6 +67,7 @@
 .method public static zzc()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;
 
     const-string v1, "Protocol message had invalid UTF-8."
@@ -77,6 +80,7 @@
 .method public static zzd()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;
 
     const-string v1, "CodedInputStream encountered an embedded string or message which claimed to have negative size."
@@ -89,6 +93,7 @@
 .method public static zze()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;
 
     const-string v1, "Failed to parse the message."
@@ -101,6 +106,7 @@
 .method public static zzg()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;
 
     const-string v1, "While parsing a protocol message, the input ended unexpectedly in the middle of a field.  This could mean either that the input has been truncated or that an embedded message misreported its own length."

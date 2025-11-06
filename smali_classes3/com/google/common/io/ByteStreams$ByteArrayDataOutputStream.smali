@@ -1,4 +1,4 @@
-.class Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;
+.class public Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,19 +18,22 @@
 
 
 # instance fields
-.field final byteArrayOutputStream:Ljava/io/ByteArrayOutputStream;
+.field public final byteArrayOutputStream:Ljava/io/ByteArrayOutputStream;
 
-.field final output:Ljava/io/DataOutput;
+.field public final output:Ljava/io/DataOutput;
 
 
 # direct methods
 .method public constructor <init>(Ljava/io/ByteArrayOutputStream;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;->byteArrayOutputStream:Ljava/io/ByteArrayOutputStream;
 
+    .line 3
     new-instance v0, Ljava/io/DataOutputStream;
 
     invoke-direct {v0, p1}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
@@ -45,6 +48,7 @@
 .method public toByteArray()[B
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;->byteArrayOutputStream:Ljava/io/ByteArrayOutputStream;
 
     invoke-virtual {p0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
@@ -129,6 +133,7 @@
 .method public writeBoolean(Z)V
     .locals 0
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;->output:Ljava/io/DataOutput;
 
@@ -141,6 +146,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance p1, Ljava/lang/AssertionError;
 
     invoke-direct {p1, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
@@ -151,6 +157,7 @@
 .method public writeByte(I)V
     .locals 0
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;->output:Ljava/io/DataOutput;
 
@@ -163,6 +170,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance p1, Ljava/lang/AssertionError;
 
     invoke-direct {p1, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
@@ -173,6 +181,7 @@
 .method public writeBytes(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;->output:Ljava/io/DataOutput;
 
@@ -185,6 +194,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance p1, Ljava/lang/AssertionError;
 
     invoke-direct {p1, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
@@ -195,6 +205,7 @@
 .method public writeChar(I)V
     .locals 0
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;->output:Ljava/io/DataOutput;
 
@@ -207,6 +218,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance p1, Ljava/lang/AssertionError;
 
     invoke-direct {p1, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
@@ -217,6 +229,7 @@
 .method public writeChars(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;->output:Ljava/io/DataOutput;
 
@@ -229,6 +242,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance p1, Ljava/lang/AssertionError;
 
     invoke-direct {p1, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
@@ -239,6 +253,7 @@
 .method public writeDouble(D)V
     .locals 0
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;->output:Ljava/io/DataOutput;
 
@@ -251,6 +266,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance p1, Ljava/lang/AssertionError;
 
     invoke-direct {p1, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
@@ -261,6 +277,7 @@
 .method public writeFloat(F)V
     .locals 0
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;->output:Ljava/io/DataOutput;
 
@@ -273,6 +290,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance p1, Ljava/lang/AssertionError;
 
     invoke-direct {p1, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
@@ -283,6 +301,7 @@
 .method public writeInt(I)V
     .locals 0
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;->output:Ljava/io/DataOutput;
 
@@ -295,6 +314,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance p1, Ljava/lang/AssertionError;
 
     invoke-direct {p1, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
@@ -305,6 +325,7 @@
 .method public writeLong(J)V
     .locals 0
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;->output:Ljava/io/DataOutput;
 
@@ -317,6 +338,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance p1, Ljava/lang/AssertionError;
 
     invoke-direct {p1, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
@@ -327,6 +349,7 @@
 .method public writeShort(I)V
     .locals 0
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;->output:Ljava/io/DataOutput;
 
@@ -339,6 +362,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance p1, Ljava/lang/AssertionError;
 
     invoke-direct {p1, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
@@ -349,6 +373,7 @@
 .method public writeUTF(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;->output:Ljava/io/DataOutput;
 
@@ -361,6 +386,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance p1, Ljava/lang/AssertionError;
 
     invoke-direct {p1, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V

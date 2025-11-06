@@ -17,7 +17,7 @@
         Lmiuix/smartaction/R$integer;,
         Lmiuix/smartaction/R$interpolator;,
         Lmiuix/smartaction/R$layout;,
-        Lmiuix/smartaction/R$plurals;,
+        Lmiuix/smartaction/R$menu;,
         Lmiuix/smartaction/R$string;,
         Lmiuix/smartaction/R$style;,
         Lmiuix/smartaction/R$styleable;

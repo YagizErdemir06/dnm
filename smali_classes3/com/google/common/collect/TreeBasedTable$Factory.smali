@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/TreeBasedTable$Factory;
+.class public Lcom/google/common/collect/TreeBasedTable$Factory;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -38,7 +38,7 @@
 
 
 # instance fields
-.field final comparator:Ljava/util/Comparator;
+.field public final comparator:Ljava/util/Comparator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Comparator<",
@@ -59,8 +59,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/TreeBasedTable$Factory;->comparator:Ljava/util/Comparator;
 
     return-void

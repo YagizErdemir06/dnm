@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/offline/DefaultDownloadIndex$DownloadCursorImpl;
+.class public final Lcom/google/android/exoplayer2/offline/DefaultDownloadIndex$DownloadCursorImpl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -48,6 +48,7 @@
 .method public close()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/offline/DefaultDownloadIndex$DownloadCursorImpl;->cursor:Landroid/database/Cursor;
 
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
@@ -58,6 +59,7 @@
 .method public getCount()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/offline/DefaultDownloadIndex$DownloadCursorImpl;->cursor:Landroid/database/Cursor;
 
     invoke-interface {p0}, Landroid/database/Cursor;->getCount()I
@@ -70,6 +72,7 @@
 .method public getDownload()Lcom/google/android/exoplayer2/offline/Download;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/offline/DefaultDownloadIndex$DownloadCursorImpl;->cursor:Landroid/database/Cursor;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/offline/DefaultDownloadIndex;->access$100(Landroid/database/Cursor;)Lcom/google/android/exoplayer2/offline/Download;
@@ -82,6 +85,7 @@
 .method public getPosition()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/offline/DefaultDownloadIndex$DownloadCursorImpl;->cursor:Landroid/database/Cursor;
 
     invoke-interface {p0}, Landroid/database/Cursor;->getPosition()I
@@ -94,6 +98,7 @@
 .method public isClosed()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/offline/DefaultDownloadIndex$DownloadCursorImpl;->cursor:Landroid/database/Cursor;
 
     invoke-interface {p0}, Landroid/database/Cursor;->isClosed()Z
@@ -106,6 +111,7 @@
 .method public moveToPosition(I)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/offline/DefaultDownloadIndex$DownloadCursorImpl;->cursor:Landroid/database/Cursor;
 
     invoke-interface {p0, p1}, Landroid/database/Cursor;->moveToPosition(I)Z

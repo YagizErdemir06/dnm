@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzea;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzea;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field final zza:I
+.field public final zza:I
 
-.field final zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzho;
+.field public final zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzho;
 
 
 # direct methods
@@ -30,10 +30,12 @@
 .method public final synthetic compareTo(Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzea;
 
     iget p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzea;->zza:I
 
+    .line 2
     iget p1, p1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzea;->zza:I
 
     sub-int/2addr p0, p1
@@ -52,6 +54,7 @@
 .method public final zzb(Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfn;Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfo;)Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfn;
     .locals 0
 
+    .line 1
     check-cast p2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;
 
     move-object p0, p1
@@ -66,6 +69,7 @@
 .method public final zzc(Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzft;Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzft;)Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzft;
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -84,6 +88,7 @@
 .method public final zze()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhp;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzea;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzho;
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzho;->zza()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhp;

@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/AbstractTable$CellSet;
+.class public Lcom/google/common/collect/AbstractTable$CellSet;
 .super Ljava/util/AbstractSet;
 .source "SourceFile"
 
@@ -23,13 +23,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/AbstractTable;
+.field public final synthetic this$0:Lcom/google/common/collect/AbstractTable;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/AbstractTable;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/AbstractTable$CellSet;->this$0:Lcom/google/common/collect/AbstractTable;
 
     invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
@@ -42,6 +43,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/AbstractTable$CellSet;->this$0:Lcom/google/common/collect/AbstractTable;
 
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractTable;->clear()V
@@ -56,14 +58,17 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/common/collect/Table$Cell;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/common/collect/Table$Cell;
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/collect/AbstractTable$CellSet;->this$0:Lcom/google/common/collect/AbstractTable;
 
     invoke-interface {p0}, Lcom/google/common/collect/Table;->rowMap()Ljava/util/Map;
@@ -82,6 +87,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 4
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -98,6 +104,7 @@
 
     move-result-object p1
 
+    .line 5
     invoke-static {p0, p1}, Lcom/google/common/collect/Collections2;->safeContains(Ljava/util/Collection;Ljava/lang/Object;)Z
 
     move-result p0
@@ -121,6 +128,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/AbstractTable$CellSet;->this$0:Lcom/google/common/collect/AbstractTable;
 
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractTable;->cellIterator()Ljava/util/Iterator;
@@ -137,14 +145,17 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/common/collect/Table$Cell;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/common/collect/Table$Cell;
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/collect/AbstractTable$CellSet;->this$0:Lcom/google/common/collect/AbstractTable;
 
     invoke-interface {p0}, Lcom/google/common/collect/Table;->rowMap()Ljava/util/Map;
@@ -163,6 +174,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 4
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -179,6 +191,7 @@
 
     move-result-object p1
 
+    .line 5
     invoke-static {p0, p1}, Lcom/google/common/collect/Collections2;->safeRemove(Ljava/util/Collection;Ljava/lang/Object;)Z
 
     move-result p0
@@ -194,6 +207,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/AbstractTable$CellSet;->this$0:Lcom/google/common/collect/AbstractTable;
 
     invoke-interface {p0}, Lcom/google/common/collect/Table;->size()I

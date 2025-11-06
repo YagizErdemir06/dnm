@@ -1,4 +1,4 @@
-.class Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Metadata;
+.class public Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Metadata;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field final key:Ljava/lang/String;
+.field public final key:Ljava/lang/String;
 
-.field final value:Ljava/lang/String;
+.field public final value:Ljava/lang/String;
 
 
 # direct methods

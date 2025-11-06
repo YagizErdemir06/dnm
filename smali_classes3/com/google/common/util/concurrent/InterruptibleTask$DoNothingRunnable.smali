@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/InterruptibleTask$DoNothingRunnable;
+.class public final Lcom/google/common/util/concurrent/InterruptibleTask$DoNothingRunnable;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

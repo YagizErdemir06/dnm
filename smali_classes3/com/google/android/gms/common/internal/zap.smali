@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/internal/zap;
+.class public final Lcom/google/android/gms/common/internal/zap;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,13 +7,13 @@
 
 
 # instance fields
-.field final synthetic zaa:Lcom/google/android/gms/common/api/PendingResult;
+.field public final synthetic zaa:Lcom/google/android/gms/common/api/PendingResult;
 
-.field final synthetic zab:Lcom/google/android/gms/tasks/TaskCompletionSource;
+.field public final synthetic zab:Lcom/google/android/gms/tasks/TaskCompletionSource;
 
-.field final synthetic zac:Lcom/google/android/gms/common/internal/PendingResultUtil$ResultConverter;
+.field public final synthetic zac:Lcom/google/android/gms/common/internal/PendingResultUtil$ResultConverter;
 
-.field final synthetic zad:Lcom/google/android/gms/common/internal/zas;
+.field public final synthetic zad:Lcom/google/android/gms/common/internal/zas;
 
 
 # direct methods
@@ -38,6 +38,7 @@
 .method public final onComplete(Lcom/google/android/gms/common/api/Status;)V
     .locals 3
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/gms/common/api/Status;->isSuccess()Z
 
     move-result v0
@@ -50,6 +51,7 @@
 
     const-wide/16 v1, 0x0
 
+    .line 2
     invoke-virtual {p1, v1, v2, v0}, Lcom/google/android/gms/common/api/PendingResult;->await(JLjava/util/concurrent/TimeUnit;)Lcom/google/android/gms/common/api/Result;
 
     move-result-object p1
@@ -58,6 +60,7 @@
 
     iget-object p0, p0, Lcom/google/android/gms/common/internal/zap;->zac:Lcom/google/android/gms/common/internal/PendingResultUtil$ResultConverter;
 
+    .line 3
     invoke-interface {p0, p1}, Lcom/google/android/gms/common/internal/PendingResultUtil$ResultConverter;->convert(Lcom/google/android/gms/common/api/Result;)Ljava/lang/Object;
 
     move-result-object p0
@@ -69,10 +72,12 @@
     :cond_0
     iget-object p0, p0, Lcom/google/android/gms/common/internal/zap;->zab:Lcom/google/android/gms/tasks/TaskCompletionSource;
 
+    .line 4
     invoke-static {p1}, Lcom/google/android/gms/common/internal/ApiExceptionUtil;->fromStatus(Lcom/google/android/gms/common/api/Status;)Lcom/google/android/gms/common/api/ApiException;
 
     move-result-object p1
 
+    .line 5
     invoke-virtual {p0, p1}, Lcom/google/android/gms/tasks/TaskCompletionSource;->setException(Ljava/lang/Exception;)V
 
     return-void

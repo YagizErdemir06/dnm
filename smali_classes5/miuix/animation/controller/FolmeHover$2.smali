@@ -1,4 +1,4 @@
-.class synthetic Lmiuix/animation/controller/FolmeHover$2;
+.class public synthetic Lmiuix/animation/controller/FolmeHover$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$miuix$animation$IHoverStyle$HoverEffect:[I
+.field public static final synthetic $SwitchMap$miuix$animation$IHoverStyle$HoverEffect:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Lmiuix/animation/IHoverStyle$HoverEffect;->values()[Lmiuix/animation/IHoverStyle$HoverEffect;
 
     move-result-object v0

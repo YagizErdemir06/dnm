@@ -30,6 +30,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +39,7 @@
 
 # virtual methods
 .method public a(Landroid/os/Parcel;)Landroid/support/v4/media/MediaDescriptionCompat;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0
@@ -48,13 +49,29 @@
         }
     .end annotation
 
+    .line 1
+    sget p0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v0, 0x15
+
+    if-ge p0, v0, :cond_0
+
+    .line 2
+    new-instance p0, Landroid/support/v4/media/MediaDescriptionCompat;
+
+    invoke-direct {p0, p1}, Landroid/support/v4/media/MediaDescriptionCompat;-><init>(Landroid/os/Parcel;)V
+
+    return-object p0
+
+    .line 3
+    :cond_0
     sget-object p0, Landroid/media/MediaDescription;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {p0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
 
     move-result-object p0
 
-    invoke-static {p0}, Landroid/support/v4/media/MediaDescriptionCompat;->b(Ljava/lang/Object;)Landroid/support/v4/media/MediaDescriptionCompat;
+    invoke-static {p0}, Landroid/support/v4/media/MediaDescriptionCompat;->a(Ljava/lang/Object;)Landroid/support/v4/media/MediaDescriptionCompat;
 
     move-result-object p0
 
@@ -72,6 +89,7 @@
         }
     .end annotation
 
+    .line 1
     new-array p0, p1, [Landroid/support/v4/media/MediaDescriptionCompat;
 
     return-object p0
@@ -88,6 +106,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/support/v4/media/MediaDescriptionCompat$a;->a(Landroid/os/Parcel;)Landroid/support/v4/media/MediaDescriptionCompat;
 
     move-result-object p0
@@ -106,6 +125,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/support/v4/media/MediaDescriptionCompat$a;->b(I)[Landroid/support/v4/media/MediaDescriptionCompat;
 
     move-result-object p0

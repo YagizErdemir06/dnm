@@ -19,6 +19,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -100,7 +101,7 @@
 
     .line 5
     :cond_0
-    invoke-static {p2, p3}, Landroid/support/v4/media/session/PlaybackStateCompat;->p(J)I
+    invoke-static {p2, p3}, Landroid/support/v4/media/session/PlaybackStateCompat;->o(J)I
 
     move-result v2
 
@@ -147,13 +148,21 @@
 
     invoke-virtual {p2, p3, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
+    .line 10
+    sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 p3, 0x10
+
+    if-lt p1, p3, :cond_2
+
     const/high16 p1, 0x10000000
 
-    .line 10
+    .line 11
     invoke-virtual {p2, p1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 11
-    sget p1, Landroid/support/v4/media/session/MediaSessionCompat;->e:I
+    .line 12
+    :cond_2
+    sget p1, Landroid/support/v4/media/session/MediaSessionCompat;->b:I
 
     invoke-static {p0, v2, p2, p1}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
@@ -179,28 +188,33 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.MEDIA_BUTTON"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 2
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 3
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
     const/4 v1, 0x0
 
+    .line 4
     invoke-virtual {p0, v0, v1}, Landroid/content/pm/PackageManager;->queryBroadcastReceivers(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object p0
 
+    .line 5
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -209,12 +223,14 @@
 
     if-ne v0, v2, :cond_0
 
+    .line 6
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/content/pm/ResolveInfo;
 
+    .line 7
     new-instance v0, Landroid/content/ComponentName;
 
     iget-object p0, p0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
@@ -227,6 +243,7 @@
 
     return-object v0
 
+    .line 8
     :cond_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -238,6 +255,7 @@
 
     const-string v0, "More than one BroadcastReceiver that handles android.intent.action.MEDIA_BUTTON was found, returning null."
 
+    .line 9
     invoke-static {p0, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
@@ -259,14 +277,17 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
+    .line 2
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 3
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object p0
@@ -275,10 +296,12 @@
 
     const/4 p0, 0x0
 
+    .line 4
     invoke-virtual {v0, v1, p0}, Landroid/content/pm/PackageManager;->queryIntentServices(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object v0
 
+    .line 5
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -287,12 +310,14 @@
 
     if-ne v1, v2, :cond_0
 
+    .line 6
     invoke-interface {v0, p0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/content/pm/ResolveInfo;
 
+    .line 7
     new-instance p1, Landroid/content/ComponentName;
 
     iget-object p0, p0, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
@@ -305,6 +330,7 @@
 
     return-object p1
 
+    .line 8
     :cond_0
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
@@ -316,6 +342,7 @@
 
     return-object p0
 
+    .line 9
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -333,6 +360,7 @@
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 10
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result p1
@@ -365,13 +393,14 @@
 
     if-eqz p1, :cond_1
 
-    const-string v0, "android.intent.action.MEDIA_BUTTON"
-
+    .line 1
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const-string v1, "android.intent.action.MEDIA_BUTTON"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -379,6 +408,7 @@
 
     const-string v0, "android.intent.extra.KEY_EVENT"
 
+    .line 2
     invoke-virtual {p1, v0}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
 
     move-result v1
@@ -387,6 +417,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -394,10 +425,12 @@
 
     check-cast p1, Landroid/view/KeyEvent;
 
+    .line 4
     invoke-virtual {p0}, Landroid/support/v4/media/session/MediaSessionCompat;->e()Landroid/support/v4/media/session/MediaControllerCompat;
 
     move-result-object p0
 
+    .line 5
     invoke-virtual {p0, p1}, Landroid/support/v4/media/session/MediaControllerCompat;->d(Landroid/view/KeyEvent;)Z
 
     return-object p1
@@ -426,6 +459,7 @@
 
     if-eqz p2, :cond_3
 
+    .line 1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -440,6 +474,7 @@
 
     const-string v0, "android.intent.extra.KEY_EVENT"
 
+    .line 2
     invoke-virtual {p2, v0}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
 
     move-result v0
@@ -448,6 +483,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-static {p1, v1}, Landroidx/media/session/MediaButtonReceiver;->getServiceComponentByAction(Landroid/content/Context;Ljava/lang/String;)Landroid/content/ComponentName;
 
@@ -455,8 +491,10 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     invoke-virtual {p2, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
+    .line 5
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->startForegroundService(Landroid/content/Context;Landroid/content/Intent;)V
 
     return-void
@@ -464,36 +502,44 @@
     :cond_1
     const-string v0, "android.media.browse.MediaBrowserService"
 
+    .line 6
     invoke-static {p1, v0}, Landroidx/media/session/MediaButtonReceiver;->getServiceComponentByAction(Landroid/content/Context;Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
+    .line 7
     invoke-virtual {p0}, Landroid/content/BroadcastReceiver;->goAsync()Landroid/content/BroadcastReceiver$PendingResult;
 
     move-result-object p0
 
+    .line 8
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
 
+    .line 9
     new-instance v1, Landroidx/media/session/MediaButtonReceiver$MediaButtonConnectionCallback;
 
     invoke-direct {v1, p1, p2, p0}, Landroidx/media/session/MediaButtonReceiver$MediaButtonConnectionCallback;-><init>(Landroid/content/Context;Landroid/content/Intent;Landroid/content/BroadcastReceiver$PendingResult;)V
 
+    .line 10
     new-instance p0, Landroid/support/v4/media/MediaBrowserCompat;
 
     const/4 p2, 0x0
 
     invoke-direct {p0, p1, v0, v1, p2}, Landroid/support/v4/media/MediaBrowserCompat;-><init>(Landroid/content/Context;Landroid/content/ComponentName;Landroid/support/v4/media/MediaBrowserCompat$c;Landroid/os/Bundle;)V
 
+    .line 11
     invoke-virtual {v1, p0}, Landroidx/media/session/MediaButtonReceiver$MediaButtonConnectionCallback;->setMediaBrowser(Landroid/support/v4/media/MediaBrowserCompat;)V
 
+    .line 12
     invoke-virtual {p0}, Landroid/support/v4/media/MediaBrowserCompat;->a()V
 
     return-void
 
+    .line 13
     :cond_2
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -503,6 +549,7 @@
 
     throw p0
 
+    .line 14
     :cond_3
     :goto_0
     new-instance p0, Ljava/lang/StringBuilder;

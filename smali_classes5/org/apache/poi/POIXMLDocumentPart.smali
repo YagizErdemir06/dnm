@@ -31,9 +31,10 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     const-class v0, Lorg/apache/poi/POIXMLDocumentPart;
 
     invoke-static {v0}, Lorg/apache/poi/util/POILogFactory;->getLogger(Ljava/lang/Class;)Lorg/apache/poi/util/POILogger;
@@ -42,16 +43,20 @@
 
     sput-object v0, Lorg/apache/poi/POIXMLDocumentPart;->logger:Lorg/apache/poi/util/POILogger;
 
+    .line 2
     new-instance v0, Lorg/apache/xmlbeans/XmlOptions;
 
     invoke-direct {v0}, Lorg/apache/xmlbeans/XmlOptions;-><init>()V
 
     sput-object v0, Lorg/apache/poi/POIXMLDocumentPart;->DEFAULT_XML_OPTIONS:Lorg/apache/xmlbeans/XmlOptions;
 
+    .line 3
     invoke-virtual {v0}, Lorg/apache/xmlbeans/XmlOptions;->setSaveOuter()Lorg/apache/xmlbeans/XmlOptions;
 
+    .line 4
     invoke-virtual {v0}, Lorg/apache/xmlbeans/XmlOptions;->setUseDefaultNamespace()Lorg/apache/xmlbeans/XmlOptions;
 
+    .line 5
     invoke-virtual {v0}, Lorg/apache/xmlbeans/XmlOptions;->setSaveAggressiveNamespaces()Lorg/apache/xmlbeans/XmlOptions;
 
     return-void
@@ -182,10 +187,12 @@
 .method public final addRelation(Ljava/lang/String;Lorg/apache/poi/POIXMLDocumentPart;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLDocumentPart;->relations:Ljava/util/Map;
 
     invoke-interface {p0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-virtual {p2}, Lorg/apache/poi/POIXMLDocumentPart;->incrementRelationCounter()I
 
     return-void
@@ -243,25 +250,27 @@
 
     move-result-object p3
 
+    const/4 v0, 0x0
+
     .line 4
-    iget-object v0, p0, Lorg/apache/poi/POIXMLDocumentPart;->packagePart:Lorg/apache/poi/openxml4j/opc/PackagePart;
+    iget-object v1, p0, Lorg/apache/poi/POIXMLDocumentPart;->packagePart:Lorg/apache/poi/openxml4j/opc/PackagePart;
 
-    invoke-virtual {v0}, Lorg/apache/poi/openxml4j/opc/PackagePart;->getPackage()Lorg/apache/poi/openxml4j/opc/OPCPackage;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Lorg/apache/poi/POIXMLRelation;->getContentType()Ljava/lang/String;
+    invoke-virtual {v1}, Lorg/apache/poi/openxml4j/opc/PackagePart;->getPackage()Lorg/apache/poi/openxml4j/opc/OPCPackage;
 
     move-result-object v1
 
-    invoke-virtual {v0, p3, v1}, Lorg/apache/poi/openxml4j/opc/OPCPackage;->createPart(Lorg/apache/poi/openxml4j/opc/PackagePartName;Ljava/lang/String;)Lorg/apache/poi/openxml4j/opc/PackagePart;
+    invoke-virtual {p1}, Lorg/apache/poi/POIXMLRelation;->getContentType()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v2
+
+    invoke-virtual {v1, p3, v2}, Lorg/apache/poi/openxml4j/opc/OPCPackage;->createPart(Lorg/apache/poi/openxml4j/opc/PackagePartName;Ljava/lang/String;)Lorg/apache/poi/openxml4j/opc/PackagePart;
+
+    move-result-object v1
 
     if-nez p4, :cond_0
 
     .line 5
-    iget-object v1, p0, Lorg/apache/poi/POIXMLDocumentPart;->packagePart:Lorg/apache/poi/openxml4j/opc/PackagePart;
+    iget-object v0, p0, Lorg/apache/poi/POIXMLDocumentPart;->packagePart:Lorg/apache/poi/openxml4j/opc/PackagePart;
 
     sget-object v2, Lorg/apache/poi/openxml4j/opc/TargetMode;->INTERNAL:Lorg/apache/poi/openxml4j/opc/TargetMode;
 
@@ -269,26 +278,21 @@
 
     move-result-object v3
 
-    invoke-virtual {v1, p3, v2, v3}, Lorg/apache/poi/openxml4j/opc/PackagePart;->addRelationship(Lorg/apache/poi/openxml4j/opc/PackagePartName;Lorg/apache/poi/openxml4j/opc/TargetMode;Ljava/lang/String;)Lorg/apache/poi/openxml4j/opc/PackageRelationship;
+    invoke-virtual {v0, p3, v2, v3}, Lorg/apache/poi/openxml4j/opc/PackagePart;->addRelationship(Lorg/apache/poi/openxml4j/opc/PackagePartName;Lorg/apache/poi/openxml4j/opc/TargetMode;Ljava/lang/String;)Lorg/apache/poi/openxml4j/opc/PackageRelationship;
 
-    move-result-object p3
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p3, 0x0
+    move-result-object v0
 
     .line 6
-    :goto_0
+    :cond_0
     invoke-virtual {p2, p1}, Lorg/apache/poi/POIXMLFactory;->newDocumentPart(Lorg/apache/poi/POIXMLRelation;)Lorg/apache/poi/POIXMLDocumentPart;
 
     move-result-object p1
 
     .line 7
-    iput-object p3, p1, Lorg/apache/poi/POIXMLDocumentPart;->packageRel:Lorg/apache/poi/openxml4j/opc/PackageRelationship;
+    iput-object v0, p1, Lorg/apache/poi/POIXMLDocumentPart;->packageRel:Lorg/apache/poi/openxml4j/opc/PackageRelationship;
 
     .line 8
-    iput-object v0, p1, Lorg/apache/poi/POIXMLDocumentPart;->packagePart:Lorg/apache/poi/openxml4j/opc/PackagePart;
+    iput-object v1, p1, Lorg/apache/poi/POIXMLDocumentPart;->packagePart:Lorg/apache/poi/openxml4j/opc/PackagePart;
 
     .line 9
     iput-object p0, p1, Lorg/apache/poi/POIXMLDocumentPart;->parent:Lorg/apache/poi/POIXMLDocumentPart;
@@ -296,7 +300,7 @@
     if-nez p4, :cond_1
 
     .line 10
-    invoke-virtual {p3}, Lorg/apache/poi/openxml4j/opc/PackageRelationship;->getId()Ljava/lang/String;
+    invoke-virtual {v0}, Lorg/apache/poi/openxml4j/opc/PackageRelationship;->getId()Ljava/lang/String;
 
     move-result-object p2
 
@@ -328,6 +332,7 @@
 .method public decrementRelationCounter()I
     .locals 1
 
+    .line 1
     iget v0, p0, Lorg/apache/poi/POIXMLDocumentPart;->relationCounter:I
 
     add-int/lit8 v0, v0, -0x1
@@ -340,6 +345,7 @@
 .method public final getPackagePart()Lorg/apache/poi/openxml4j/opc/PackagePart;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLDocumentPart;->packagePart:Lorg/apache/poi/openxml4j/opc/PackagePart;
 
     return-object p0
@@ -348,6 +354,7 @@
 .method public final getPackageRelationship()Lorg/apache/poi/openxml4j/opc/PackageRelationship;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLDocumentPart;->packageRel:Lorg/apache/poi/openxml4j/opc/PackageRelationship;
 
     return-object p0
@@ -356,6 +363,7 @@
 .method public final getParent()Lorg/apache/poi/POIXMLDocumentPart;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLDocumentPart;->parent:Lorg/apache/poi/POIXMLDocumentPart;
 
     return-object p0
@@ -364,6 +372,7 @@
 .method public final getRelationById(Ljava/lang/String;)Lorg/apache/poi/POIXMLDocumentPart;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLDocumentPart;->relations:Ljava/util/Map;
 
     invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -378,6 +387,7 @@
 .method public getRelationCounter()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lorg/apache/poi/POIXMLDocumentPart;->relationCounter:I
 
     return p0
@@ -386,6 +396,7 @@
 .method public final getRelationId(Lorg/apache/poi/POIXMLDocumentPart;)Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLDocumentPart;->relations:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -396,6 +407,7 @@
 
     move-result-object p0
 
+    .line 2
     :cond_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -403,18 +415,21 @@
 
     if-eqz v0, :cond_1
 
+    .line 3
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/Map$Entry;
 
+    .line 4
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     if-ne v1, p1, :cond_0
 
+    .line 5
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object p0
@@ -440,6 +455,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     iget-object p0, p0, Lorg/apache/poi/POIXMLDocumentPart;->relations:Ljava/util/Map;
@@ -465,6 +481,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/poi/POIXMLDocumentPart;->getPackagePart()Lorg/apache/poi/openxml4j/opc/PackagePart;
 
     move-result-object p0
@@ -479,6 +496,7 @@
 .method public incrementRelationCounter()I
     .locals 1
 
+    .line 1
     iget v0, p0, Lorg/apache/poi/POIXMLDocumentPart;->relationCounter:I
 
     add-int/lit8 v0, v0, 0x1
@@ -538,14 +556,17 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/poi/POIXMLDocumentPart;->commit()V
 
+    .line 2
     invoke-virtual {p0}, Lorg/apache/poi/POIXMLDocumentPart;->getPackagePart()Lorg/apache/poi/openxml4j/opc/PackagePart;
 
     move-result-object v0
 
     invoke-interface {p1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 3
     iget-object p0, p0, Lorg/apache/poi/POIXMLDocumentPart;->relations:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -570,6 +591,7 @@
 
     check-cast v0, Lorg/apache/poi/POIXMLDocumentPart;
 
+    .line 4
     invoke-virtual {v0}, Lorg/apache/poi/POIXMLDocumentPart;->getPackagePart()Lorg/apache/poi/openxml4j/opc/PackagePart;
 
     move-result-object v1
@@ -580,6 +602,7 @@
 
     if-nez v1, :cond_0
 
+    .line 5
     invoke-virtual {v0, p1}, Lorg/apache/poi/POIXMLDocumentPart;->onSave(Ljava/util/Set;)V
 
     goto :goto_0
@@ -589,7 +612,7 @@
 .end method
 
 .method public read(Lorg/apache/poi/POIXMLFactory;Ljava/util/Map;)V
-    .locals 5
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -607,12 +630,14 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/apache/poi/POIXMLDocumentPart;->packagePart:Lorg/apache/poi/openxml4j/opc/PackagePart;
 
     invoke-virtual {v0}, Lorg/apache/poi/openxml4j/opc/PackagePart;->getRelationships()Lorg/apache/poi/openxml4j/opc/PackageRelationshipCollection;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Lorg/apache/poi/openxml4j/opc/PackageRelationshipCollection;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -631,6 +656,7 @@
 
     check-cast v1, Lorg/apache/poi/openxml4j/opc/PackageRelationship;
 
+    .line 3
     invoke-virtual {v1}, Lorg/apache/poi/openxml4j/opc/PackageRelationship;->getTargetMode()Lorg/apache/poi/openxml4j/opc/TargetMode;
 
     move-result-object v2
@@ -639,10 +665,12 @@
 
     if-ne v2, v3, :cond_0
 
+    .line 4
     invoke-virtual {v1}, Lorg/apache/poi/openxml4j/opc/PackageRelationship;->getTargetURI()Ljava/net/URI;
 
     move-result-object v2
 
+    .line 5
     invoke-virtual {v2}, Ljava/net/URI;->getRawFragment()Ljava/lang/String;
 
     move-result-object v3
@@ -653,11 +681,13 @@
 
     goto :goto_1
 
+    .line 6
     :cond_1
     invoke-static {v2}, Lorg/apache/poi/openxml4j/opc/PackagingURIHelper;->createPartName(Ljava/net/URI;)Lorg/apache/poi/openxml4j/opc/PackagePartName;
 
     move-result-object v2
 
+    .line 7
     iget-object v3, p0, Lorg/apache/poi/POIXMLDocumentPart;->packagePart:Lorg/apache/poi/openxml4j/opc/PackagePart;
 
     invoke-virtual {v3}, Lorg/apache/poi/openxml4j/opc/PackagePart;->getPackage()Lorg/apache/poi/openxml4j/opc/OPCPackage;
@@ -670,32 +700,34 @@
 
     if-nez v2, :cond_2
 
+    .line 8
     sget-object v2, Lorg/apache/poi/POIXMLDocumentPart;->logger:Lorg/apache/poi/util/POILogger;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    const/4 v3, 0x7
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    const-string v4, "Skipped invalid entry "
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v5, "Skipped invalid entry "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Lorg/apache/poi/openxml4j/opc/PackageRelationship;->getTargetURI()Ljava/net/URI;
 
     move-result-object v1
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
-
-    const/4 v3, 0x7
 
     invoke-virtual {v2, v3, v1}, Lorg/apache/poi/util/POILogger;->log(ILjava/lang/Object;)V
 
     goto :goto_0
 
+    .line 9
     :cond_2
     :goto_1
     invoke-interface {p2, v2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -704,12 +736,15 @@
 
     if-nez v3, :cond_3
 
+    .line 10
     invoke-virtual {p1, p0, v1, v2}, Lorg/apache/poi/POIXMLFactory;->createDocumentPart(Lorg/apache/poi/POIXMLDocumentPart;Lorg/apache/poi/openxml4j/opc/PackageRelationship;Lorg/apache/poi/openxml4j/opc/PackagePart;)Lorg/apache/poi/POIXMLDocumentPart;
 
     move-result-object v3
 
+    .line 11
     iput-object p0, v3, Lorg/apache/poi/POIXMLDocumentPart;->parent:Lorg/apache/poi/POIXMLDocumentPart;
 
+    .line 12
     invoke-virtual {v1}, Lorg/apache/poi/openxml4j/opc/PackageRelationship;->getId()Ljava/lang/String;
 
     move-result-object v1
@@ -718,8 +753,10 @@
 
     if-eqz v2, :cond_0
 
+    .line 13
     invoke-interface {p2, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 14
     invoke-virtual {v2}, Lorg/apache/poi/openxml4j/opc/PackagePart;->hasRelationships()Z
 
     move-result v1
@@ -730,6 +767,7 @@
 
     goto :goto_0
 
+    .line 15
     :cond_3
     invoke-virtual {v1}, Lorg/apache/poi/openxml4j/opc/PackageRelationship;->getId()Ljava/lang/String;
 
@@ -757,6 +795,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p1, p0, Lorg/apache/poi/POIXMLDocumentPart;->packagePart:Lorg/apache/poi/openxml4j/opc/PackagePart;
 
     const-string v0, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument"
@@ -765,6 +804,7 @@
 
     move-result-object p1
 
+    .line 2
     invoke-virtual {p1}, Lorg/apache/poi/openxml4j/opc/PackageRelationshipCollection;->size()I
 
     move-result v0
@@ -775,12 +815,14 @@
 
     const/4 v0, 0x0
 
+    .line 3
     invoke-virtual {p1, v0}, Lorg/apache/poi/openxml4j/opc/PackageRelationshipCollection;->getRelationship(I)Lorg/apache/poi/openxml4j/opc/PackageRelationship;
 
     move-result-object p1
 
     iput-object p1, p0, Lorg/apache/poi/POIXMLDocumentPart;->packageRel:Lorg/apache/poi/openxml4j/opc/PackageRelationship;
 
+    .line 4
     iget-object v0, p0, Lorg/apache/poi/POIXMLDocumentPart;->packagePart:Lorg/apache/poi/openxml4j/opc/PackagePart;
 
     invoke-virtual {v0, p1}, Lorg/apache/poi/openxml4j/opc/PackagePart;->getRelatedPart(Lorg/apache/poi/openxml4j/opc/PackageRelationship;)Lorg/apache/poi/openxml4j/opc/PackagePart;
@@ -791,6 +833,7 @@
 
     return-void
 
+    .line 5
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -914,6 +957,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLDocumentPart;->packagePart:Lorg/apache/poi/openxml4j/opc/PackagePart;
 
     if-nez p0, :cond_0

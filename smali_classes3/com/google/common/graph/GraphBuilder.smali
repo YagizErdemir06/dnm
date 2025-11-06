@@ -28,6 +28,7 @@
 .method private constructor <init>(Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/graph/AbstractGraphBuilder;-><init>(Z)V
 
     return-void
@@ -57,6 +58,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/graph/GraphBuilder;
 
     const/4 v1, 0x1
@@ -80,6 +82,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/graph/GraphBuilder;
 
     invoke-interface {p0}, Lcom/google/common/graph/Graph;->isDirected()Z
@@ -88,6 +91,7 @@
 
     invoke-direct {v0, v1}, Lcom/google/common/graph/GraphBuilder;-><init>(Z)V
 
+    .line 2
     invoke-interface {p0}, Lcom/google/common/graph/Graph;->allowsSelfLoops()Z
 
     move-result v1
@@ -96,6 +100,7 @@
 
     move-result-object v0
 
+    .line 3
     invoke-interface {p0}, Lcom/google/common/graph/Graph;->nodeOrder()Lcom/google/common/graph/ElementOrder;
 
     move-result-object v1
@@ -104,6 +109,7 @@
 
     move-result-object v0
 
+    .line 4
     invoke-interface {p0}, Lcom/google/common/graph/Graph;->incidentEdgeOrder()Lcom/google/common/graph/ElementOrder;
 
     move-result-object p0
@@ -126,6 +132,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/graph/GraphBuilder;
 
     const/4 v1, 0x0
@@ -147,6 +154,7 @@
         }
     .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lcom/google/common/graph/AbstractGraphBuilder;->allowsSelfLoops:Z
 
     return-object p0
@@ -162,6 +170,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/graph/StandardMutableGraph;
 
     invoke-direct {v0, p0}, Lcom/google/common/graph/StandardMutableGraph;-><init>(Lcom/google/common/graph/AbstractGraphBuilder;)V
@@ -179,24 +188,29 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/graph/GraphBuilder;
 
     iget-boolean v1, p0, Lcom/google/common/graph/AbstractGraphBuilder;->directed:Z
 
     invoke-direct {v0, v1}, Lcom/google/common/graph/GraphBuilder;-><init>(Z)V
 
+    .line 2
     iget-boolean v1, p0, Lcom/google/common/graph/AbstractGraphBuilder;->allowsSelfLoops:Z
 
     iput-boolean v1, v0, Lcom/google/common/graph/AbstractGraphBuilder;->allowsSelfLoops:Z
 
+    .line 3
     iget-object v1, p0, Lcom/google/common/graph/AbstractGraphBuilder;->nodeOrder:Lcom/google/common/graph/ElementOrder;
 
     iput-object v1, v0, Lcom/google/common/graph/AbstractGraphBuilder;->nodeOrder:Lcom/google/common/graph/ElementOrder;
 
+    .line 4
     iget-object v1, p0, Lcom/google/common/graph/AbstractGraphBuilder;->expectedNodeCount:Lcom/google/common/base/Optional;
 
     iput-object v1, v0, Lcom/google/common/graph/AbstractGraphBuilder;->expectedNodeCount:Lcom/google/common/base/Optional;
 
+    .line 5
     iget-object p0, p0, Lcom/google/common/graph/AbstractGraphBuilder;->incidentEdgeOrder:Lcom/google/common/graph/ElementOrder;
 
     iput-object p0, v0, Lcom/google/common/graph/AbstractGraphBuilder;->incidentEdgeOrder:Lcom/google/common/graph/ElementOrder;
@@ -214,6 +228,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/graph/Graphs;->checkNonNegative(I)I
 
     move-result p1
@@ -241,10 +256,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/graph/GraphBuilder;->cast()Lcom/google/common/graph/GraphBuilder;
 
     move-result-object p0
 
+    .line 2
     new-instance v0, Lcom/google/common/graph/ImmutableGraph$Builder;
 
     invoke-direct {v0, p0}, Lcom/google/common/graph/ImmutableGraph$Builder;-><init>(Lcom/google/common/graph/GraphBuilder;)V
@@ -264,6 +281,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/common/graph/ElementOrder;->type()Lcom/google/common/graph/ElementOrder$Type;
 
     move-result-object v0
@@ -272,6 +290,7 @@
 
     if-eq v0, v1, :cond_1
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/common/graph/ElementOrder;->type()Lcom/google/common/graph/ElementOrder$Type;
 
     move-result-object v0
@@ -294,12 +313,15 @@
     :goto_1
     const-string v1, "The given elementOrder (%s) is unsupported. incidentEdgeOrder() only supports ElementOrder.unordered() and ElementOrder.stable()."
 
+    .line 3
     invoke-static {v0, v1, p1}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;Ljava/lang/Object;)V
 
+    .line 4
     invoke-direct {p0}, Lcom/google/common/graph/GraphBuilder;->cast()Lcom/google/common/graph/GraphBuilder;
 
     move-result-object p0
 
+    .line 5
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -323,10 +345,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/graph/GraphBuilder;->cast()Lcom/google/common/graph/GraphBuilder;
 
     move-result-object p0
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1

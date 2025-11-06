@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Maps$SortedKeySet;
+.class public Lcom/google/common/collect/Maps$SortedKeySet;
 .super Lcom/google/common/collect/Maps$KeySet;
 .source "SourceFile"
 
@@ -42,6 +42,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/Maps$KeySet;-><init>(Ljava/util/Map;)V
 
     return-void
@@ -62,6 +63,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$SortedKeySet;->map()Ljava/util/SortedMap;
 
     move-result-object p0
@@ -84,6 +86,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$SortedKeySet;->map()Ljava/util/SortedMap;
 
     move-result-object p0
@@ -109,6 +112,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/Maps$SortedKeySet;
 
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$SortedKeySet;->map()Ljava/util/SortedMap;
@@ -135,6 +139,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$SortedKeySet;->map()Ljava/util/SortedMap;
 
     move-result-object p0
@@ -195,6 +200,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/Maps$SortedKeySet;
 
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$SortedKeySet;->map()Ljava/util/SortedMap;
@@ -224,6 +230,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/Maps$SortedKeySet;
 
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$SortedKeySet;->map()Ljava/util/SortedMap;

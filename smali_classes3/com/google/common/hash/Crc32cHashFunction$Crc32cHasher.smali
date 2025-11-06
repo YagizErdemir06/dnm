@@ -1,4 +1,4 @@
-.class final Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;
+.class public final Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;
 .super Lcom/google/common/hash/AbstractStreamingHasher;
 .source "SourceFile"
 
@@ -15,13 +15,13 @@
 
 
 # static fields
-.field static final BYTE_TABLE:[I
+.field public static final BYTE_TABLE:[I
 
 .field private static final EMPTY:Ljava/nio/ByteBuffer;
 
-.field static final INVERSE_COMPUTE_FOR_WORD_OF_ALL_1S:I = -0x111c2233
+.field public static final INVERSE_COMPUTE_FOR_WORD_OF_ALL_1S:I = -0x111c2233
 
-.field static final STRIDE_TABLE:[[I
+.field public static final STRIDE_TABLE:[[I
 
 
 # instance fields
@@ -44,6 +44,7 @@
 
     new-array v1, v0, [I
 
+    .line 1
     fill-array-data v1, :array_0
 
     sput-object v1, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->BYTE_TABLE:[I
@@ -54,6 +55,7 @@
 
     new-array v2, v0, [I
 
+    .line 2
     fill-array-data v2, :array_1
 
     const/4 v3, 0x0
@@ -86,6 +88,7 @@
 
     sput-object v1, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->STRIDE_TABLE:[[I
 
+    .line 3
     invoke-static {v3}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
@@ -1402,20 +1405,26 @@
 
     const/16 v0, 0x10
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/google/common/hash/AbstractStreamingHasher;-><init>(I)V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-boolean v0, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->finished:Z
 
     const v1, -0x111c2233
 
+    .line 3
     iput v1, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->crc0:I
 
+    .line 4
     iput v0, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->crc1:I
 
+    .line 5
     iput v0, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->crc2:I
 
+    .line 6
     iput v0, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->crc3:I
 
     return-void
@@ -1435,6 +1444,7 @@
 
     ushr-int/lit8 v0, p0, 0x8
 
+    .line 1
     sget-object v1, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->BYTE_TABLE:[I
 
     and-int/lit16 p0, p0, 0xff
@@ -1454,6 +1464,7 @@
 .method public static computeForWord(I)I
     .locals 4
 
+    .line 1
     sget-object v0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->STRIDE_TABLE:[[I
 
     const/4 v1, 0x3
@@ -1506,14 +1517,17 @@
 .method public makeHash()Lcom/google/common/hash/HashCode;
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->finished:Z
 
     if-nez v0, :cond_0
 
+    .line 2
     sget-object v0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->EMPTY:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p0, v0}, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->processRemaining(Ljava/nio/ByteBuffer;)V
 
+    .line 3
     :cond_0
     iget p0, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->crc0:I
 
@@ -1529,12 +1543,14 @@
 .method public process(Ljava/nio/ByteBuffer;)V
     .locals 2
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->finished:Z
 
     if-nez v0, :cond_1
 
+    .line 2
     :goto_0
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v0
 
@@ -1542,6 +1558,7 @@
 
     if-lt v0, v1, :cond_0
 
+    .line 3
     iget v0, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->crc0:I
 
     invoke-static {v0}, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->computeForWord(I)I
@@ -1550,6 +1567,7 @@
 
     iput v0, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->crc0:I
 
+    .line 4
     iget v0, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->crc1:I
 
     invoke-static {v0}, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->computeForWord(I)I
@@ -1558,6 +1576,7 @@
 
     iput v0, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->crc1:I
 
+    .line 5
     iget v0, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->crc2:I
 
     invoke-static {v0}, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->computeForWord(I)I
@@ -1566,6 +1585,7 @@
 
     iput v0, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->crc2:I
 
+    .line 6
     iget v0, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->crc3:I
 
     invoke-static {v0}, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->computeForWord(I)I
@@ -1574,6 +1594,7 @@
 
     iput v0, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->crc3:I
 
+    .line 7
     iget v0, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->crc0:I
 
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
@@ -1584,6 +1605,7 @@
 
     iput v0, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->crc0:I
 
+    .line 8
     iget v0, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->crc1:I
 
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
@@ -1594,6 +1616,7 @@
 
     iput v0, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->crc1:I
 
+    .line 9
     iget v0, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->crc2:I
 
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
@@ -1604,6 +1627,7 @@
 
     iput v0, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->crc2:I
 
+    .line 10
     iget v0, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->crc3:I
 
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
@@ -1619,6 +1643,7 @@
     :cond_0
     return-void
 
+    .line 11
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -1632,6 +1657,7 @@
 .method public processRemaining(Ljava/nio/ByteBuffer;)V
     .locals 4
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->finished:Z
 
     if-eqz v0, :cond_0
@@ -1641,6 +1667,7 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 2
     iget v1, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->crc0:I
 
     invoke-static {v0, v1}, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->combine(II)I
@@ -1649,6 +1676,7 @@
 
     iput v0, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->crc0:I
 
+    .line 3
     iget v1, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->crc1:I
 
     invoke-static {v0, v1}, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->combine(II)I
@@ -1657,6 +1685,7 @@
 
     iput v0, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->crc0:I
 
+    .line 4
     iget v1, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->crc2:I
 
     invoke-static {v0, v1}, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->combine(II)I
@@ -1665,6 +1694,7 @@
 
     iput v0, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->crc0:I
 
+    .line 5
     iget v1, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->crc3:I
 
     invoke-static {v0, v1}, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->combine(II)I
@@ -1673,13 +1703,15 @@
 
     iput v0, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->crc0:I
 
+    .line 6
     :goto_0
-    invoke-virtual {p1}, Ljava/nio/Buffer;->hasRemaining()Z
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->hasRemaining()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 7
     iget v0, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->crc0:I
 
     ushr-int/lit8 v0, v0, 0x8
@@ -1707,6 +1739,7 @@
     :cond_1
     const/4 p1, 0x1
 
+    .line 8
     iput-boolean p1, p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;->finished:Z
 
     return-void

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/text/ssa/SsaSubtitle;
+.class public final Lcom/google/android/exoplayer2/text/ssa/SsaSubtitle;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -45,10 +45,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/text/ssa/SsaSubtitle;->cues:Ljava/util/List;
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/exoplayer2/text/ssa/SsaSubtitle;->cueTimesUs:Ljava/util/List;
 
     return-void
@@ -67,6 +70,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/ssa/SsaSubtitle;->cueTimesUs:Ljava/util/List;
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -85,12 +89,14 @@
 
     if-ne p1, p2, :cond_0
 
+    .line 2
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p0
 
     return-object p0
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/ssa/SsaSubtitle;->cues:Ljava/util/List;
 
@@ -119,9 +125,11 @@
     :cond_0
     move v2, v1
 
+    .line 1
     :goto_0
     invoke-static {v2}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 2
     iget-object v2, p0, Lcom/google/android/exoplayer2/text/ssa/SsaSubtitle;->cueTimesUs:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
@@ -138,6 +146,7 @@
     :goto_1
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/ssa/SsaSubtitle;->cueTimesUs:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -156,6 +165,7 @@
 .method public getEventTimeCount()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/ssa/SsaSubtitle;->cueTimesUs:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->size()I
@@ -168,6 +178,7 @@
 .method public getNextEventTimeIndex(J)I
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/ssa/SsaSubtitle;->cueTimesUs:Ljava/util/List;
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -180,6 +191,7 @@
 
     move-result p1
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/ssa/SsaSubtitle;->cueTimesUs:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->size()I

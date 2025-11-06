@@ -1,4 +1,4 @@
-.class abstract Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcu;
+.class public abstract Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcu;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -20,6 +20,7 @@
 .method public final synthetic next()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcw;->zza()B
 
     move-result p0
@@ -34,6 +35,7 @@
 .method public final remove()V
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V

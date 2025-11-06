@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/graph/ForwardingNetwork;
+.class public abstract Lcom/google/common/graph/ForwardingNetwork;
 .super Lcom/google/common/graph/AbstractNetwork;
 .source "SourceFile"
 
@@ -24,6 +24,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/graph/AbstractNetwork;-><init>()V
 
     return-void
@@ -41,6 +42,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/ForwardingNetwork;->delegate()Lcom/google/common/graph/Network;
 
     move-result-object p0
@@ -62,6 +64,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/ForwardingNetwork;->delegate()Lcom/google/common/graph/Network;
 
     move-result-object p0
@@ -76,6 +79,7 @@
 .method public allowsParallelEdges()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/ForwardingNetwork;->delegate()Lcom/google/common/graph/Network;
 
     move-result-object p0
@@ -90,6 +94,7 @@
 .method public allowsSelfLoops()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/ForwardingNetwork;->delegate()Lcom/google/common/graph/Network;
 
     move-result-object p0
@@ -109,6 +114,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/ForwardingNetwork;->delegate()Lcom/google/common/graph/Network;
 
     move-result-object p0
@@ -188,6 +194,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/ForwardingNetwork;->delegate()Lcom/google/common/graph/Network;
 
     move-result-object p0
@@ -209,6 +216,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/ForwardingNetwork;->delegate()Lcom/google/common/graph/Network;
 
     move-result-object p0
@@ -316,6 +324,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/ForwardingNetwork;->delegate()Lcom/google/common/graph/Network;
 
     move-result-object p0
@@ -337,6 +346,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/ForwardingNetwork;->delegate()Lcom/google/common/graph/Network;
 
     move-result-object p0
@@ -358,6 +368,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/ForwardingNetwork;->delegate()Lcom/google/common/graph/Network;
 
     move-result-object p0
@@ -379,6 +390,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/ForwardingNetwork;->delegate()Lcom/google/common/graph/Network;
 
     move-result-object p0
@@ -393,6 +405,7 @@
 .method public isDirected()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/ForwardingNetwork;->delegate()Lcom/google/common/graph/Network;
 
     move-result-object p0
@@ -414,6 +427,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/ForwardingNetwork;->delegate()Lcom/google/common/graph/Network;
 
     move-result-object p0
@@ -435,6 +449,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/ForwardingNetwork;->delegate()Lcom/google/common/graph/Network;
 
     move-result-object p0
@@ -454,6 +469,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/ForwardingNetwork;->delegate()Lcom/google/common/graph/Network;
 
     move-result-object p0
@@ -475,6 +491,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/ForwardingNetwork;->delegate()Lcom/google/common/graph/Network;
 
     move-result-object p0

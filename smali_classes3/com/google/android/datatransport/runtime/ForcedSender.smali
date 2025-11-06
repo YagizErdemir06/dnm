@@ -11,6 +11,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,12 +38,15 @@
         }
     .end annotation
 
+    .line 1
     instance-of v0, p0, Lcom/google/android/datatransport/runtime/TransportImpl;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Lcom/google/android/datatransport/runtime/TransportImpl;
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/TransportImpl;->getTransportContext()Lcom/google/android/datatransport/runtime/TransportContext;
 
     move-result-object p0
@@ -51,6 +55,7 @@
 
     move-result-object p0
 
+    .line 4
     invoke-static {}, Lcom/google/android/datatransport/runtime/TransportRuntime;->getInstance()Lcom/google/android/datatransport/runtime/TransportRuntime;
 
     move-result-object p1
@@ -70,6 +75,7 @@
 
     const-string v0, "Expected instance of `TransportImpl`, got `%s`."
 
+    .line 5
     invoke-static {p1, v0, p0}, Lcom/google/android/datatransport/runtime/logging/Logging;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
 
     :goto_0

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Overrides;
+.class public final Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Overrides;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -43,6 +43,7 @@
 
     const-string v0, "\\{([^}]*)\\}"
 
+    .line 1
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -61,6 +62,7 @@
 
     const-string v4, "\\\\pos\\((%1$s),(%1$s)\\)"
 
+    .line 2
     invoke-static {v4, v1}, Lcom/google/android/exoplayer2/util/Util;->formatInvariant(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -77,10 +79,12 @@
 
     const-string v1, "\\\\move\\(%1$s,%1$s,(%1$s),(%1$s)(?:,%1$s,%1$s)?\\)"
 
+    .line 3
     invoke-static {v1, v0}, Lcom/google/android/exoplayer2/util/Util;->formatInvariant(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 4
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -89,6 +93,7 @@
 
     const-string v0, "\\\\an(\\d+)"
 
+    .line 5
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -105,10 +110,13 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Overrides;->alignment:I
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Overrides;->position:Landroid/graphics/PointF;
 
     return-void
@@ -117,12 +125,14 @@
 .method private static parseAlignmentOverride(Ljava/lang/String;)I
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Overrides;->ALIGNMENT_OVERRIDE_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object p0
 
+    .line 2
     invoke-virtual {p0}, Ljava/util/regex/Matcher;->find()Z
 
     move-result v0
@@ -131,6 +141,7 @@
 
     const/4 v0, 0x1
 
+    .line 3
     invoke-virtual {p0, v0}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object p0
@@ -157,6 +168,7 @@
 .method public static parseFromDialogue(Ljava/lang/String;)Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Overrides;
     .locals 5
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Overrides;->BRACES_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
@@ -169,6 +181,7 @@
 
     move v2, v0
 
+    .line 2
     :catch_0
     :cond_0
     :goto_0
@@ -180,6 +193,7 @@
 
     const/4 v3, 0x1
 
+    .line 3
     invoke-virtual {p0, v3}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v3
@@ -190,6 +204,7 @@
 
     check-cast v3, Ljava/lang/String;
 
+    .line 4
     :try_start_0
     invoke-static {v3}, Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Overrides;->parsePosition(Ljava/lang/String;)Landroid/graphics/PointF;
 
@@ -201,6 +216,7 @@
 
     move-object v1, v4
 
+    .line 5
     :catch_1
     :cond_1
     :try_start_1
@@ -216,6 +232,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_2
     new-instance p0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Overrides;
 
@@ -229,22 +246,26 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Overrides;->POSITION_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
+    .line 2
     sget-object v1, Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Overrides;->MOVE_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v1
 
+    .line 3
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
 
     move-result v2
 
+    .line 4
     invoke-virtual {v1}, Ljava/util/regex/Matcher;->find()Z
 
     move-result v3
@@ -257,6 +278,7 @@
 
     if-eqz v3, :cond_0
 
+    .line 5
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -279,11 +301,13 @@
 
     invoke-static {v1, p0}, Lcom/google/android/exoplayer2/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 6
     :cond_0
     invoke-virtual {v0, v5}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 7
     invoke-virtual {v0, v4}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v0
@@ -293,17 +317,21 @@
     :cond_1
     if-eqz v3, :cond_2
 
+    .line 8
     invoke-virtual {v1, v5}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 9
     invoke-virtual {v1, v4}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 10
     :goto_0
     new-instance v1, Landroid/graphics/PointF;
 
+    .line 11
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -318,6 +346,7 @@
 
     move-result p0
 
+    .line 12
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -345,6 +374,7 @@
 .method public static stripStyleOverrides(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/text/ssa/SsaStyle$Overrides;->BRACES_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;

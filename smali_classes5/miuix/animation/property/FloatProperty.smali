@@ -18,36 +18,20 @@
 
 
 # instance fields
-.field mMinVisibleChange:F
-
-.field final mPropertyName:Ljava/lang/String;
+.field public final mPropertyName:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    const/high16 v0, -0x40800000    # -1.0f
-
     .line 1
-    invoke-direct {p0, p1, v0}, Lmiuix/animation/property/FloatProperty;-><init>(Ljava/lang/String;F)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;F)V
-    .locals 1
-
-    .line 2
     const-class v0, Ljava/lang/Float;
 
     invoke-direct {p0, v0, p1}, Landroid/util/Property;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 3
+    .line 2
     iput-object p1, p0, Lmiuix/animation/property/FloatProperty;->mPropertyName:Ljava/lang/String;
-
-    .line 4
-    iput p2, p0, Lmiuix/animation/property/FloatProperty;->mMinVisibleChange:F
 
     return-void
 .end method
@@ -98,14 +82,6 @@
     return-object p0
 .end method
 
-.method public getMinVisibleChange()F
-    .locals 0
-
-    iget p0, p0, Lmiuix/animation/property/FloatProperty;->mMinVisibleChange:F
-
-    return p0
-.end method
-
 .method public abstract getValue(Ljava/lang/Object;)F
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -148,14 +124,6 @@
     return-void
 .end method
 
-.method public setMinVisibleChange(F)V
-    .locals 0
-
-    iput p1, p0, Lmiuix/animation/property/FloatProperty;->mMinVisibleChange:F
-
-    return-void
-.end method
-
 .method public abstract setValue(Ljava/lang/Object;F)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -165,8 +133,9 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -181,37 +150,17 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, "@"
+    const-string/jumbo v1, "{mPropertyName=\'"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    iget-object p0, p0, Lmiuix/animation/property/FloatProperty;->mPropertyName:Ljava/lang/String;
 
-    move-result v1
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const/16 p0, 0x27
 
-    const-string v1, "{name=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lmiuix/animation/property/FloatProperty;->mPropertyName:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x27
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    const-string v2, ",min=\'"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget p0, p0, Lmiuix/animation/property/FloatProperty;->mMinVisibleChange:F
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     const/16 p0, 0x7d
 

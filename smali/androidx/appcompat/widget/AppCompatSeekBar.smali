@@ -57,7 +57,7 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/SeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 4
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/SeekBar;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
@@ -81,8 +81,10 @@
 .method public drawableStateChanged()V
     .locals 0
 
-    invoke-super {p0}, Landroid/view/View;->drawableStateChanged()V
+    .line 1
+    invoke-super {p0}, Landroid/widget/SeekBar;->drawableStateChanged()V
 
+    .line 2
     iget-object p0, p0, Landroidx/appcompat/widget/AppCompatSeekBar;->mAppCompatSeekBarHelper:Landroidx/appcompat/widget/AppCompatSeekBarHelper;
 
     invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatSeekBarHelper;->drawableStateChanged()V
@@ -93,8 +95,10 @@
 .method public jumpDrawablesToCurrentState()V
     .locals 0
 
-    invoke-super {p0}, Landroid/view/View;->jumpDrawablesToCurrentState()V
+    .line 1
+    invoke-super {p0}, Landroid/widget/SeekBar;->jumpDrawablesToCurrentState()V
 
+    .line 2
     iget-object p0, p0, Landroidx/appcompat/widget/AppCompatSeekBar;->mAppCompatSeekBarHelper:Landroidx/appcompat/widget/AppCompatSeekBarHelper;
 
     invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatSeekBarHelper;->jumpDrawablesToCurrentState()V
@@ -107,15 +111,18 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
-    invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
+    invoke-super {p0, p1}, Landroid/widget/SeekBar;->onDraw(Landroid/graphics/Canvas;)V
 
+    .line 2
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSeekBar;->mAppCompatSeekBarHelper:Landroidx/appcompat/widget/AppCompatSeekBarHelper;
 
     invoke-virtual {v0, p1}, Landroidx/appcompat/widget/AppCompatSeekBarHelper;->drawTickMarks(Landroid/graphics/Canvas;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     monitor-exit p0
 
     return-void

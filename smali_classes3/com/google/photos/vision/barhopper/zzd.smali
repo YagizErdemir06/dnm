@@ -1,4 +1,4 @@
-.class final Lcom/google/photos/vision/barhopper/zzd;
+.class public final Lcom/google/photos/vision/barhopper/zzd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

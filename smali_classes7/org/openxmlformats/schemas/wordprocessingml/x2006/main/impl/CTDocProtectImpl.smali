@@ -44,123 +44,123 @@
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "edit"
+    const-string v1, "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
 
-    const-string v2, "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+    const-string v2, "edit"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTDocProtectImpl;->EDIT$0:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "formatting"
+    const-string v2, "formatting"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTDocProtectImpl;->FORMATTING$2:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "enforcement"
+    const-string v2, "enforcement"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTDocProtectImpl;->ENFORCEMENT$4:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "cryptProviderType"
+    const-string v2, "cryptProviderType"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTDocProtectImpl;->CRYPTPROVIDERTYPE$6:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "cryptAlgorithmClass"
+    const-string v2, "cryptAlgorithmClass"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTDocProtectImpl;->CRYPTALGORITHMCLASS$8:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "cryptAlgorithmType"
+    const-string v2, "cryptAlgorithmType"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTDocProtectImpl;->CRYPTALGORITHMTYPE$10:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "cryptAlgorithmSid"
+    const-string v2, "cryptAlgorithmSid"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTDocProtectImpl;->CRYPTALGORITHMSID$12:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "cryptSpinCount"
+    const-string v2, "cryptSpinCount"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTDocProtectImpl;->CRYPTSPINCOUNT$14:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "cryptProvider"
+    const-string v2, "cryptProvider"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTDocProtectImpl;->CRYPTPROVIDER$16:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "algIdExt"
+    const-string v2, "algIdExt"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTDocProtectImpl;->ALGIDEXT$18:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "algIdExtSource"
+    const-string v2, "algIdExtSource"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTDocProtectImpl;->ALGIDEXTSOURCE$20:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "cryptProviderTypeExt"
+    const-string v2, "cryptProviderTypeExt"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTDocProtectImpl;->CRYPTPROVIDERTYPEEXT$22:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "cryptProviderTypeExtSource"
+    const-string v2, "cryptProviderTypeExtSource"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTDocProtectImpl;->CRYPTPROVIDERTYPEEXTSOURCE$24:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "hash"
+    const-string v2, "hash"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTDocProtectImpl;->HASH$26:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "salt"
+    const-string v2, "salt"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTDocProtectImpl;->SALT$28:Ljavax/xml/namespace/QName;
 
@@ -203,9 +203,9 @@
 
     if-nez p0, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    monitor-exit v0
 
     return-object p0
 
@@ -254,9 +254,9 @@
 
     if-nez p0, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    monitor-exit v0
 
     return-object p0
 
@@ -305,9 +305,9 @@
 
     if-nez p0, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    monitor-exit v0
 
     return-object p0
 
@@ -358,9 +358,9 @@
 
     if-nez p0, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    monitor-exit v0
 
     return-object p0
 
@@ -409,9 +409,9 @@
 
     if-nez p0, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    monitor-exit v0
 
     return-object p0
 
@@ -462,9 +462,9 @@
 
     if-nez p0, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    monitor-exit v0
 
     return-object p0
 
@@ -513,9 +513,9 @@
 
     if-nez p0, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    monitor-exit v0
 
     return-object p0
 
@@ -566,9 +566,9 @@
 
     if-nez p0, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    monitor-exit v0
 
     return-object p0
 
@@ -617,9 +617,9 @@
 
     if-nez p0, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    monitor-exit v0
 
     return-object p0
 
@@ -668,9 +668,9 @@
 
     if-nez p0, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    monitor-exit v0
 
     return-object p0
 
@@ -719,9 +719,9 @@
 
     if-nez p0, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    monitor-exit v0
 
     return-object p0
 
@@ -772,9 +772,9 @@
 
     if-nez p0, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    monitor-exit v0
 
     return-object p0
 
@@ -825,9 +825,9 @@
 
     if-nez p0, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    monitor-exit v0
 
     return-object p0
 
@@ -878,9 +878,9 @@
 
     if-nez p0, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    monitor-exit v0
 
     return-object p0
 
@@ -929,9 +929,9 @@
 
     if-nez p0, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    monitor-exit v0
 
     return-object p0
 

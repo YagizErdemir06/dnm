@@ -23,6 +23,7 @@
         .end annotation
     .end param
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -51,8 +52,10 @@
 
     invoke-direct {p0, v0, p1}, Lcom/google/android/exoplayer2/decoder/DecoderException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 2
     iput-object p2, p0, Lcom/google/android/exoplayer2/mediacodec/MediaCodecDecoderException;->codecInfo:Lcom/google/android/exoplayer2/mediacodec/MediaCodecInfo;
 
+    .line 3
     sget p2, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
     const/16 v0, 0x15
@@ -78,10 +81,12 @@
         value = 0x15
     .end annotation
 
+    .line 1
     instance-of v0, p0, Landroid/media/MediaCodec$CodecException;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Landroid/media/MediaCodec$CodecException;
 
     invoke-virtual {p0}, Landroid/media/MediaCodec$CodecException;->getDiagnosticInfo()Ljava/lang/String;

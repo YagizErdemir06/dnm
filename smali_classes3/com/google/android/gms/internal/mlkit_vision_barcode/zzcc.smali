@@ -1,20 +1,21 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcc;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcc;
 .super Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcd;
 .source "SourceFile"
 
 
 # instance fields
-.field final transient zza:I
+.field public final transient zza:I
 
-.field final transient zzb:I
+.field public final transient zzb:I
 
-.field final synthetic zzc:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcd;
+.field public final synthetic zzc:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcd;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcd;II)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcc;->zzc:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcd;
 
     invoke-direct {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcd;-><init>()V
@@ -31,6 +32,7 @@
 .method public final get(I)Ljava/lang/Object;
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcc;->zzb:I
 
     const-string v1, "index"
@@ -43,6 +45,7 @@
 
     add-int/2addr p1, p0
 
+    .line 2
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -61,6 +64,7 @@
 .method public final bridge synthetic subList(II)Ljava/util/List;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcd;->zzf(II)Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcd;
 
     move-result-object p0
@@ -71,6 +75,7 @@
 .method public final zzb()I
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcc;->zzc:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcd;
 
     invoke-virtual {v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzby;->zzc()I
@@ -91,6 +96,7 @@
 .method public final zzc()I
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcc;->zzc:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcd;
 
     invoke-virtual {v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzby;->zzc()I
@@ -121,6 +127,7 @@
 .method public final zzf(II)Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcd;
     .locals 1
 
+    .line 1
     iget v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcc;->zzb:I
 
     invoke-static {p1, p2, v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzaq;->zzc(III)V
@@ -133,6 +140,7 @@
 
     add-int/2addr p2, p0
 
+    .line 2
     invoke-virtual {v0, p1, p2}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcd;->zzf(II)Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcd;
 
     move-result-object p0

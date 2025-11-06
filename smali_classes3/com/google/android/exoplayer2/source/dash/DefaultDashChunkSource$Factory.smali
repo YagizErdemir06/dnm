@@ -102,6 +102,7 @@
 
     move-object/from16 v1, p13
 
+    .line 1
     iget-object v2, v0, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource$Factory;->dataSourceFactory:Lcom/google/android/exoplayer2/upstream/DataSource$Factory;
 
     invoke-interface {v2}, Lcom/google/android/exoplayer2/upstream/DataSource$Factory;->createDataSource()Lcom/google/android/exoplayer2/upstream/DataSource;
@@ -110,8 +111,10 @@
 
     if-eqz v1, :cond_0
 
+    .line 2
     invoke-interface {v12, v1}, Lcom/google/android/exoplayer2/upstream/DataSource;->addTransferListener(Lcom/google/android/exoplayer2/upstream/TransferListener;)V
 
+    .line 3
     :cond_0
     new-instance v1, Lcom/google/android/exoplayer2/source/dash/DefaultDashChunkSource;
 

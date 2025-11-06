@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/SmoothRateLimiter$SmoothBursty;
+.class public final Lcom/google/common/util/concurrent/SmoothRateLimiter$SmoothBursty;
 .super Lcom/google/common/util/concurrent/SmoothRateLimiter;
 .source "SourceFile"
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final maxBurstSeconds:D
+.field public final maxBurstSeconds:D
 
 
 # direct methods
@@ -24,8 +24,10 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, v0}, Lcom/google/common/util/concurrent/SmoothRateLimiter;-><init>(Lcom/google/common/util/concurrent/RateLimiter$SleepingStopwatch;Lcom/google/common/util/concurrent/SmoothRateLimiter$1;)V
 
+    .line 2
     iput-wide p2, p0, Lcom/google/common/util/concurrent/SmoothRateLimiter$SmoothBursty;->maxBurstSeconds:D
 
     return-void
@@ -36,6 +38,7 @@
 .method public coolDownIntervalMicros()D
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/util/concurrent/SmoothRateLimiter;->stableIntervalMicros:D
 
     return-wide v0
@@ -44,8 +47,10 @@
 .method public doSetRate(DD)V
     .locals 3
 
+    .line 1
     iget-wide p3, p0, Lcom/google/common/util/concurrent/SmoothRateLimiter;->maxPermits:D
 
+    .line 2
     iget-wide v0, p0, Lcom/google/common/util/concurrent/SmoothRateLimiter$SmoothBursty;->maxBurstSeconds:D
 
     mul-double/2addr v0, p1
@@ -58,6 +63,7 @@
 
     if-nez p1, :cond_0
 
+    .line 3
     iput-wide v0, p0, Lcom/google/common/util/concurrent/SmoothRateLimiter;->storedPermits:D
 
     goto :goto_1
@@ -71,6 +77,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     iget-wide p1, p0, Lcom/google/common/util/concurrent/SmoothRateLimiter;->storedPermits:D
 

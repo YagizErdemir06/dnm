@@ -65,9 +65,8 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/google/android/exoplayer2/m2;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/m2;-><init>()V
+    .line 1
+    sget-object v0, Ld/j/a/b/e2;->a:Ld/j/a/b/e2;
 
     sput-object v0, Lcom/google/android/exoplayer2/Timeline$Period;->CREATOR:Lcom/google/android/exoplayer2/Bundleable$Creator;
 
@@ -77,8 +76,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     sget-object v0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->NONE:Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/Timeline$Period;->adPlaybackState:Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
@@ -99,6 +100,7 @@
 .method public static synthetic access$100(Lcom/google/android/exoplayer2/Timeline$Period;)Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Timeline$Period;->adPlaybackState:Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     return-object p0
@@ -109,6 +111,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {v0}, Lcom/google/android/exoplayer2/Timeline$Period;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -119,6 +122,7 @@
 
     const/4 v0, 0x1
 
+    .line 2
     invoke-static {v0}, Lcom/google/android/exoplayer2/Timeline$Period;->keyForField(I)Ljava/lang/String;
 
     move-result-object v0
@@ -131,6 +135,7 @@
 
     const/4 v0, 0x2
 
+    .line 3
     invoke-static {v0}, Lcom/google/android/exoplayer2/Timeline$Period;->keyForField(I)Ljava/lang/String;
 
     move-result-object v0
@@ -143,6 +148,7 @@
 
     const/4 v0, 0x3
 
+    .line 4
     invoke-static {v0}, Lcom/google/android/exoplayer2/Timeline$Period;->keyForField(I)Ljava/lang/String;
 
     move-result-object v0
@@ -153,6 +159,7 @@
 
     const/4 v0, 0x4
 
+    .line 5
     invoke-static {v0}, Lcom/google/android/exoplayer2/Timeline$Period;->keyForField(I)Ljava/lang/String;
 
     move-result-object v0
@@ -163,6 +170,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 6
     sget-object v0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->CREATOR:Lcom/google/android/exoplayer2/Bundleable$Creator;
 
     invoke-interface {v0, p0}, Lcom/google/android/exoplayer2/Bundleable$Creator;->fromBundle(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/Bundleable;
@@ -173,12 +181,14 @@
 
     goto :goto_0
 
+    .line 7
     :cond_0
     sget-object p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->NONE:Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     :goto_0
     move-object v10, p0
 
+    .line 8
     new-instance p0, Lcom/google/android/exoplayer2/Timeline$Period;
 
     invoke-direct {p0}, Lcom/google/android/exoplayer2/Timeline$Period;-><init>()V
@@ -189,6 +199,7 @@
 
     move-object v2, p0
 
+    .line 9
     invoke-virtual/range {v2 .. v11}, Lcom/google/android/exoplayer2/Timeline$Period;->set(Ljava/lang/Object;Ljava/lang/Object;IJJLcom/google/android/exoplayer2/source/ads/AdPlaybackState;Z)Lcom/google/android/exoplayer2/Timeline$Period;
 
     return-object p0
@@ -199,6 +210,7 @@
 
     const/16 v0, 0x24
 
+    .line 1
     invoke-static {p0, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
     move-result-object p0
@@ -226,6 +238,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 1
     const-class v2, Lcom/google/android/exoplayer2/Timeline$Period;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -240,9 +253,11 @@
 
     goto :goto_1
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/Timeline$Period;
 
+    .line 3
     iget-object v2, p0, Lcom/google/android/exoplayer2/Timeline$Period;->id:Ljava/lang/Object;
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/Timeline$Period;->id:Ljava/lang/Object;
@@ -257,6 +272,7 @@
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/Timeline$Period;->uid:Ljava/lang/Object;
 
+    .line 4
     invoke-static {v2, v3}, Lcom/google/android/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -295,6 +311,7 @@
 
     iget-object p1, p1, Lcom/google/android/exoplayer2/Timeline$Period;->adPlaybackState:Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
+    .line 5
     invoke-static {p0, p1}, Lcom/google/android/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -317,6 +334,7 @@
 .method public getAdCountInAdGroup(I)I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Timeline$Period;->adPlaybackState:Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->getAdGroup(I)Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
@@ -331,12 +349,14 @@
 .method public getAdDurationUs(II)J
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Timeline$Period;->adPlaybackState:Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->getAdGroup(I)Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     move-result-object p0
 
+    .line 2
     iget p1, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;->count:I
 
     const/4 v0, -0x1
@@ -359,6 +379,7 @@
 .method public getAdGroupCount()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Timeline$Period;->adPlaybackState:Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     iget p0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroupCount:I
@@ -369,6 +390,7 @@
 .method public getAdGroupIndexAfterPositionUs(J)I
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/Timeline$Period;->adPlaybackState:Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     iget-wide v1, p0, Lcom/google/android/exoplayer2/Timeline$Period;->durationUs:J
@@ -383,6 +405,7 @@
 .method public getAdGroupIndexForPositionUs(J)I
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/Timeline$Period;->adPlaybackState:Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     iget-wide v1, p0, Lcom/google/android/exoplayer2/Timeline$Period;->durationUs:J
@@ -397,6 +420,7 @@
 .method public getAdGroupTimeUs(I)J
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Timeline$Period;->adPlaybackState:Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->getAdGroup(I)Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
@@ -411,6 +435,7 @@
 .method public getAdResumePositionUs()J
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Timeline$Period;->adPlaybackState:Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adResumePositionUs:J
@@ -421,18 +446,21 @@
 .method public getAdState(II)I
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Timeline$Period;->adPlaybackState:Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->getAdGroup(I)Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     move-result-object p0
 
+    .line 2
     iget p1, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;->count:I
 
     const/4 v0, -0x1
 
     if-eq p1, v0, :cond_0
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;->states:[I
 
     aget p0, p0, p2
@@ -451,6 +479,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Timeline$Period;->adPlaybackState:Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adsId:Ljava/lang/Object;
@@ -461,6 +490,7 @@
 .method public getContentResumeOffsetUs(I)J
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Timeline$Period;->adPlaybackState:Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->getAdGroup(I)Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
@@ -475,6 +505,7 @@
 .method public getDurationMs()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/Timeline$Period;->durationUs:J
 
     invoke-static {v0, v1}, Lcom/google/android/exoplayer2/util/Util;->usToMs(J)J
@@ -487,6 +518,7 @@
 .method public getDurationUs()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/Timeline$Period;->durationUs:J
 
     return-wide v0
@@ -495,6 +527,7 @@
 .method public getFirstAdIndexToPlay(I)I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Timeline$Period;->adPlaybackState:Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->getAdGroup(I)Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
@@ -511,6 +544,7 @@
 .method public getNextAdIndexToPlay(II)I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Timeline$Period;->adPlaybackState:Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->getAdGroup(I)Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
@@ -527,6 +561,7 @@
 .method public getPositionInWindowMs()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/Timeline$Period;->positionInWindowUs:J
 
     invoke-static {v0, v1}, Lcom/google/android/exoplayer2/util/Util;->usToMs(J)J
@@ -539,6 +574,7 @@
 .method public getPositionInWindowUs()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/Timeline$Period;->positionInWindowUs:J
 
     return-wide v0
@@ -547,6 +583,7 @@
 .method public getRemovedAdGroupCount()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Timeline$Period;->adPlaybackState:Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     iget p0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->removedAdGroupCount:I
@@ -557,6 +594,7 @@
 .method public hasPlayedAdGroup(I)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Timeline$Period;->adPlaybackState:Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->getAdGroup(I)Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
@@ -575,6 +613,7 @@
 .method public hashCode()I
     .locals 6
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/Timeline$Period;->id:Ljava/lang/Object;
 
     const/4 v1, 0x0
@@ -597,6 +636,7 @@
 
     mul-int/lit8 v2, v2, 0x1f
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/Timeline$Period;->uid:Ljava/lang/Object;
 
     if-nez v0, :cond_1
@@ -613,12 +653,14 @@
 
     mul-int/lit8 v2, v2, 0x1f
 
+    .line 3
     iget v0, p0, Lcom/google/android/exoplayer2/Timeline$Period;->windowIndex:I
 
     add-int/2addr v2, v0
 
     mul-int/lit8 v2, v2, 0x1f
 
+    .line 4
     iget-wide v0, p0, Lcom/google/android/exoplayer2/Timeline$Period;->durationUs:J
 
     const/16 v3, 0x20
@@ -633,6 +675,7 @@
 
     mul-int/lit8 v2, v2, 0x1f
 
+    .line 5
     iget-wide v0, p0, Lcom/google/android/exoplayer2/Timeline$Period;->positionInWindowUs:J
 
     ushr-long v3, v0, v3
@@ -645,12 +688,14 @@
 
     mul-int/lit8 v2, v2, 0x1f
 
+    .line 6
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/Timeline$Period;->isPlaceholder:Z
 
     add-int/2addr v2, v0
 
     mul-int/lit8 v2, v2, 0x1f
 
+    .line 7
     iget-object p0, p0, Lcom/google/android/exoplayer2/Timeline$Period;->adPlaybackState:Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->hashCode()I
@@ -665,6 +710,7 @@
 .method public isServerSideInsertedAdGroup(I)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Timeline$Period;->adPlaybackState:Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->getAdGroup(I)Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
@@ -749,12 +795,14 @@
 .method public toBundle()Landroid/os/Bundle;
     .locals 4
 
+    .line 1
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-static {v1}, Lcom/google/android/exoplayer2/Timeline$Period;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -765,6 +813,7 @@
 
     const/4 v1, 0x1
 
+    .line 3
     invoke-static {v1}, Lcom/google/android/exoplayer2/Timeline$Period;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -775,6 +824,7 @@
 
     const/4 v1, 0x2
 
+    .line 4
     invoke-static {v1}, Lcom/google/android/exoplayer2/Timeline$Period;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -785,6 +835,7 @@
 
     const/4 v1, 0x3
 
+    .line 5
     invoke-static {v1}, Lcom/google/android/exoplayer2/Timeline$Period;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -795,6 +846,7 @@
 
     const/4 v1, 0x4
 
+    .line 6
     invoke-static {v1}, Lcom/google/android/exoplayer2/Timeline$Period;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1

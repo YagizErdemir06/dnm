@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdw;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdw;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -44,6 +44,7 @@
 .method public final zzb(Ljava/lang/Class;)Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfl;
     .locals 2
 
+    .line 1
     const-class p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;
 
     invoke-virtual {p0, p1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -52,11 +53,13 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     :try_start_0
     invoke-virtual {p1, p0}, Ljava/lang/Class;->asSubclass(Ljava/lang/Class;)Ljava/lang/Class;
 
     move-result-object p0
 
+    .line 3
     invoke-static {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;->zzI(Ljava/lang/Class;)Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;
 
     move-result-object p0
@@ -65,6 +68,7 @@
 
     const/4 v1, 0x0
 
+    .line 4
     invoke-virtual {p0, v0, v1, v1}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;->zzg(ILjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -80,6 +84,7 @@
 
     new-instance v0, Ljava/lang/RuntimeException;
 
+    .line 5
     invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p1
@@ -94,9 +99,11 @@
 
     throw v0
 
+    .line 6
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
+    .line 7
     invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p1
@@ -115,6 +122,7 @@
 .method public final zzc(Ljava/lang/Class;)Z
     .locals 0
 
+    .line 1
     const-class p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;
 
     invoke-virtual {p0, p1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z

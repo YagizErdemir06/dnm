@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/text/ssa/SsaDialogueFormat;
+.class public final Lcom/google/android/exoplayer2/text/ssa/SsaDialogueFormat;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -19,16 +19,22 @@
 .method private constructor <init>(IIIII)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/text/ssa/SsaDialogueFormat;->startTimeIndex:I
 
+    .line 3
     iput p2, p0, Lcom/google/android/exoplayer2/text/ssa/SsaDialogueFormat;->endTimeIndex:I
 
+    .line 4
     iput p3, p0, Lcom/google/android/exoplayer2/text/ssa/SsaDialogueFormat;->styleIndex:I
 
+    .line 5
     iput p4, p0, Lcom/google/android/exoplayer2/text/ssa/SsaDialogueFormat;->textIndex:I
 
+    .line 6
     iput p5, p0, Lcom/google/android/exoplayer2/text/ssa/SsaDialogueFormat;->length:I
 
     return-void
@@ -41,6 +47,7 @@
 
     const-string v0, "Format:"
 
+    .line 1
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -49,6 +56,7 @@
 
     const/4 v0, 0x7
 
+    .line 2
     invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p0
@@ -59,11 +67,13 @@
 
     move-result-object p0
 
-    const/4 v0, -0x1
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    const/4 v1, -0x1
 
-    move v4, v0
+    move v2, v0
+
+    move v4, v1
 
     move v5, v4
 
@@ -71,13 +81,13 @@
 
     move v7, v6
 
-    move v2, v1
-
+    .line 3
     :goto_0
     array-length v3, p0
 
     if-ge v2, v3, :cond_4
 
+    .line 4
     aget-object v3, p0, v2
 
     invoke-virtual {v3}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -97,7 +107,7 @@
     sparse-switch v8, :sswitch_data_0
 
     :goto_1
-    move v3, v0
+    move v3, v1
 
     goto :goto_2
 
@@ -161,7 +171,7 @@
     goto :goto_1
 
     :cond_3
-    move v3, v1
+    move v3, v0
 
     :goto_2
     packed-switch v3, :pswitch_data_0
@@ -192,12 +202,13 @@
     goto :goto_0
 
     :cond_4
-    if-eq v4, v0, :cond_5
+    if-eq v4, v1, :cond_5
 
-    if-eq v5, v0, :cond_5
+    if-eq v5, v1, :cond_5
 
-    if-eq v7, v0, :cond_5
+    if-eq v7, v1, :cond_5
 
+    .line 5
     new-instance v0, Lcom/google/android/exoplayer2/text/ssa/SsaDialogueFormat;
 
     array-length v8, p0

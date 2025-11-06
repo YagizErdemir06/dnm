@@ -1,4 +1,4 @@
-.class final Lcom/google/common/base/Platform;
+.class public final Lcom/google/common/base/Platform;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -28,6 +28,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     const-class v0, Lcom/google/common/base/Platform;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -40,6 +41,7 @@
 
     sput-object v0, Lcom/google/common/base/Platform;->logger:Ljava/util/logging/Logger;
 
+    .line 2
     invoke-static {}, Lcom/google/common/base/Platform;->loadPatternCompiler()Lcom/google/common/base/PatternCompiler;
 
     move-result-object v0
@@ -52,6 +54,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -66,8 +69,10 @@
 .method public static compilePattern(Ljava/lang/String;)Lcom/google/common/base/CommonPattern;
     .locals 1
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     sget-object v0, Lcom/google/common/base/Platform;->patternCompiler:Lcom/google/common/base/PatternCompiler;
 
     invoke-interface {v0, p0}, Lcom/google/common/base/PatternCompiler;->compile(Ljava/lang/String;)Lcom/google/common/base/CommonPattern;
@@ -86,6 +91,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/base/Platform;->stringIsNullOrEmpty(Ljava/lang/String;)Z
 
     move-result v0
@@ -99,21 +105,22 @@
 .end method
 
 .method public static formatCompact4Digits(D)Ljava/lang/String;
-    .locals 3
+    .locals 2
 
+    .line 1
     sget-object v0, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
 
     const/4 v1, 0x1
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    const/4 v2, 0x0
-
     invoke-static {p0, p1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object p0
 
-    aput-object p0, v1, v2
+    const/4 p1, 0x0
+
+    aput-object p0, v1, p1
 
     const-string p0, "%.4g"
 
@@ -140,6 +147,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/base/Enums;->getEnumConstants(Ljava/lang/Class;)Ljava/util/Map;
 
     move-result-object v0
@@ -152,6 +160,7 @@
 
     if-nez p1, :cond_0
 
+    .line 2
     invoke-static {}, Lcom/google/common/base/Optional;->absent()Lcom/google/common/base/Optional;
 
     move-result-object p0
@@ -159,7 +168,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -180,6 +189,7 @@
 .method private static loadPatternCompiler()Lcom/google/common/base/PatternCompiler;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/common/base/Platform$JdkPatternCompiler;
 
     const/4 v1, 0x0
@@ -192,6 +202,7 @@
 .method private static logPatternCompilerError(Ljava/util/ServiceConfigurationError;)V
     .locals 3
 
+    .line 1
     sget-object v0, Lcom/google/common/base/Platform;->logger:Ljava/util/logging/Logger;
 
     sget-object v1, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
@@ -221,6 +232,7 @@
 .method public static patternCompilerIsPcreLike()Z
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/common/base/Platform;->patternCompiler:Lcom/google/common/base/PatternCompiler;
 
     invoke-interface {v0}, Lcom/google/common/base/PatternCompiler;->isPcreLike()Z
@@ -233,6 +245,7 @@
 .method public static precomputeCharMatcher(Lcom/google/common/base/CharMatcher;)Lcom/google/common/base/CharMatcher;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/base/CharMatcher;->precomputedInternal()Lcom/google/common/base/CharMatcher;
 
     move-result-object p0
@@ -249,6 +262,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
 
     move-result p0
@@ -273,6 +287,7 @@
 .method public static systemNanoTime()J
     .locals 2
 
+    .line 1
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v0

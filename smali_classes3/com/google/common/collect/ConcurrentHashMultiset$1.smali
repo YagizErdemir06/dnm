@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ConcurrentHashMultiset$1;
+.class public Lcom/google/common/collect/ConcurrentHashMultiset$1;
 .super Lcom/google/common/collect/ForwardingSet;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic val$delegate:Ljava/util/Set;
+.field public final synthetic val$delegate:Ljava/util/Set;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/ConcurrentHashMultiset;Ljava/util/Set;)V
     .locals 0
 
+    .line 1
     iput-object p2, p0, Lcom/google/common/collect/ConcurrentHashMultiset$1;->val$delegate:Ljava/util/Set;
 
     invoke-direct {p0}, Lcom/google/common/collect/ForwardingSet;-><init>()V
@@ -47,6 +48,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ConcurrentHashMultiset$1;->val$delegate:Ljava/util/Set;
 
     invoke-static {p0, p1}, Lcom/google/common/collect/Collections2;->safeContains(Ljava/util/Collection;Ljava/lang/Object;)Z
@@ -76,6 +78,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ForwardingCollection;->standardContainsAll(Ljava/util/Collection;)Z
 
     move-result p0
@@ -130,6 +133,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ConcurrentHashMultiset$1;->val$delegate:Ljava/util/Set;
 
     invoke-static {p0, p1}, Lcom/google/common/collect/Collections2;->safeRemove(Ljava/util/Collection;Ljava/lang/Object;)Z
@@ -159,6 +163,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ForwardingSet;->standardRemoveAll(Ljava/util/Collection;)Z
 
     move-result p0

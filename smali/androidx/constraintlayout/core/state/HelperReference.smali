@@ -9,7 +9,7 @@
 # instance fields
 .field private mHelperWidget:Landroidx/constraintlayout/core/widgets/HelperWidget;
 
-.field protected mReferences:Ljava/util/ArrayList;
+.field public mReferences:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -19,25 +19,29 @@
     .end annotation
 .end field
 
-.field protected final mState:Landroidx/constraintlayout/core/state/State;
+.field public final mState:Landroidx/constraintlayout/core/state/State;
 
-.field final mType:Landroidx/constraintlayout/core/state/State$Helper;
+.field public final mType:Landroidx/constraintlayout/core/state/State$Helper;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/constraintlayout/core/state/State;Landroidx/constraintlayout/core/state/State$Helper;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/constraintlayout/core/state/ConstraintReference;-><init>(Landroidx/constraintlayout/core/state/State;)V
 
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroidx/constraintlayout/core/state/HelperReference;->mReferences:Ljava/util/ArrayList;
 
+    .line 3
     iput-object p1, p0, Landroidx/constraintlayout/core/state/HelperReference;->mState:Landroidx/constraintlayout/core/state/State;
 
+    .line 4
     iput-object p2, p0, Landroidx/constraintlayout/core/state/HelperReference;->mType:Landroidx/constraintlayout/core/state/State$Helper;
 
     return-void
@@ -48,6 +52,7 @@
 .method public varargs add([Ljava/lang/Object;)Landroidx/constraintlayout/core/state/HelperReference;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/core/state/HelperReference;->mReferences:Ljava/util/ArrayList;
 
     invoke-static {v0, p1}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
@@ -64,6 +69,7 @@
 .method public getConstraintWidget()Landroidx/constraintlayout/core/widgets/ConstraintWidget;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/constraintlayout/core/state/HelperReference;->getHelperWidget()Landroidx/constraintlayout/core/widgets/HelperWidget;
 
     move-result-object p0
@@ -74,6 +80,7 @@
 .method public getHelperWidget()Landroidx/constraintlayout/core/widgets/HelperWidget;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/state/HelperReference;->mHelperWidget:Landroidx/constraintlayout/core/widgets/HelperWidget;
 
     return-object p0
@@ -82,6 +89,7 @@
 .method public getType()Landroidx/constraintlayout/core/state/State$Helper;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/state/HelperReference;->mType:Landroidx/constraintlayout/core/state/State$Helper;
 
     return-object p0
@@ -90,6 +98,7 @@
 .method public setHelperWidget(Landroidx/constraintlayout/core/widgets/HelperWidget;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/constraintlayout/core/state/HelperReference;->mHelperWidget:Landroidx/constraintlayout/core/widgets/HelperWidget;
 
     return-void

@@ -40,8 +40,10 @@
 
     sget p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdo;->zza:I
 
+    .line 1
     new-instance p0, Lcom/google/firebase/encoders/EncodingException;
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1

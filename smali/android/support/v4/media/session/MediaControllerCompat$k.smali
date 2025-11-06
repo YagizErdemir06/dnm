@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field public b:Landroid/support/v4/media/session/b;
+.field private b:Lb/b/a/b/a/b;
 
 
 # direct methods
-.method public constructor <init>(Landroid/support/v4/media/session/b;)V
+.method public constructor <init>(Lb/b/a/b/a/b;)V
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -30,9 +30,11 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Landroid/support/v4/media/session/MediaControllerCompat$f;-><init>()V
 
-    iput-object p1, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Landroid/support/v4/media/session/b;
+    .line 2
+    iput-object p1, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Lb/b/a/b/a/b;
 
     return-void
 .end method
@@ -42,10 +44,11 @@
 .method public a()V
     .locals 2
 
+    .line 1
     :try_start_0
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Landroid/support/v4/media/session/b;
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Lb/b/a/b/a/b;
 
-    invoke-interface {p0}, Landroid/support/v4/media/session/b;->j0()V
+    invoke-interface {p0}, Lb/b/a/b/a/b;->p0()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -58,6 +61,7 @@
 
     const-string v1, "Dead object in fastForward."
 
+    .line 2
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -67,10 +71,11 @@
 .method public b()V
     .locals 2
 
+    .line 1
     :try_start_0
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Landroid/support/v4/media/session/b;
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Lb/b/a/b/a/b;
 
-    invoke-interface {p0}, Landroid/support/v4/media/session/b;->pause()V
+    invoke-interface {p0}, Lb/b/a/b/a/b;->pause()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -83,6 +88,7 @@
 
     const-string v1, "Dead object in pause."
 
+    .line 2
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -92,10 +98,11 @@
 .method public c()V
     .locals 2
 
+    .line 1
     :try_start_0
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Landroid/support/v4/media/session/b;
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Lb/b/a/b/a/b;
 
-    invoke-interface {p0}, Landroid/support/v4/media/session/b;->play()V
+    invoke-interface {p0}, Lb/b/a/b/a/b;->play()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -108,6 +115,7 @@
 
     const-string v1, "Dead object in play."
 
+    .line 2
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -127,10 +135,11 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Landroid/support/v4/media/session/b;
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Lb/b/a/b/a/b;
 
-    invoke-interface {p0, p1, p2}, Landroid/support/v4/media/session/b;->p(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {p0, p1, p2}, Lb/b/a/b/a/b;->s(Ljava/lang/String;Landroid/os/Bundle;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -143,6 +152,7 @@
 
     const-string p2, "Dead object in playFromMediaId."
 
+    .line 2
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -162,10 +172,11 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Landroid/support/v4/media/session/b;
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Lb/b/a/b/a/b;
 
-    invoke-interface {p0, p1, p2}, Landroid/support/v4/media/session/b;->a0(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {p0, p1, p2}, Lb/b/a/b/a/b;->h0(Ljava/lang/String;Landroid/os/Bundle;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -178,6 +189,7 @@
 
     const-string p2, "Dead object in playFromSearch."
 
+    .line 2
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -197,10 +209,11 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Landroid/support/v4/media/session/b;
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Lb/b/a/b/a/b;
 
-    invoke-interface {p0, p1, p2}, Landroid/support/v4/media/session/b;->b0(Landroid/net/Uri;Landroid/os/Bundle;)V
+    invoke-interface {p0, p1, p2}, Lb/b/a/b/a/b;->i0(Landroid/net/Uri;Landroid/os/Bundle;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -213,6 +226,7 @@
 
     const-string p2, "Dead object in playFromUri."
 
+    .line 2
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -222,10 +236,11 @@
 .method public g()V
     .locals 2
 
+    .line 1
     :try_start_0
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Landroid/support/v4/media/session/b;
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Lb/b/a/b/a/b;
 
-    invoke-interface {p0}, Landroid/support/v4/media/session/b;->prepare()V
+    invoke-interface {p0}, Lb/b/a/b/a/b;->prepare()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -238,6 +253,7 @@
 
     const-string v1, "Dead object in prepare."
 
+    .line 2
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -257,10 +273,11 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Landroid/support/v4/media/session/b;
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Lb/b/a/b/a/b;
 
-    invoke-interface {p0, p1, p2}, Landroid/support/v4/media/session/b;->o(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {p0, p1, p2}, Lb/b/a/b/a/b;->r(Ljava/lang/String;Landroid/os/Bundle;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -273,6 +290,7 @@
 
     const-string p2, "Dead object in prepareFromMediaId."
 
+    .line 2
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -292,10 +310,11 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Landroid/support/v4/media/session/b;
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Lb/b/a/b/a/b;
 
-    invoke-interface {p0, p1, p2}, Landroid/support/v4/media/session/b;->i0(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {p0, p1, p2}, Lb/b/a/b/a/b;->n0(Ljava/lang/String;Landroid/os/Bundle;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -308,6 +327,7 @@
 
     const-string p2, "Dead object in prepareFromSearch."
 
+    .line 2
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -327,10 +347,11 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Landroid/support/v4/media/session/b;
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Lb/b/a/b/a/b;
 
-    invoke-interface {p0, p1, p2}, Landroid/support/v4/media/session/b;->l(Landroid/net/Uri;Landroid/os/Bundle;)V
+    invoke-interface {p0, p1, p2}, Lb/b/a/b/a/b;->p(Landroid/net/Uri;Landroid/os/Bundle;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -343,6 +364,7 @@
 
     const-string p2, "Dead object in prepareFromUri."
 
+    .line 2
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -352,10 +374,11 @@
 .method public k()V
     .locals 2
 
+    .line 1
     :try_start_0
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Landroid/support/v4/media/session/b;
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Lb/b/a/b/a/b;
 
-    invoke-interface {p0}, Landroid/support/v4/media/session/b;->t()V
+    invoke-interface {p0}, Lb/b/a/b/a/b;->w()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -368,6 +391,7 @@
 
     const-string v1, "Dead object in rewind."
 
+    .line 2
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -385,10 +409,11 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Landroid/support/v4/media/session/b;
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Lb/b/a/b/a/b;
 
-    invoke-interface {p0, p1, p2}, Landroid/support/v4/media/session/b;->seekTo(J)V
+    invoke-interface {p0, p1, p2}, Lb/b/a/b/a/b;->seekTo(J)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -401,6 +426,7 @@
 
     const-string p2, "Dead object in seekTo."
 
+    .line 2
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -420,7 +446,8 @@
         }
     .end annotation
 
-    invoke-virtual {p1}, Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction;->c()Ljava/lang/String;
+    .line 1
+    invoke-virtual {p1}, Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction;->b()Ljava/lang/String;
 
     move-result-object p1
 
@@ -442,12 +469,14 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1, p2}, Landroid/support/v4/media/session/MediaControllerCompat;->G(Ljava/lang/String;Landroid/os/Bundle;)V
 
+    .line 2
     :try_start_0
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Landroid/support/v4/media/session/b;
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Lb/b/a/b/a/b;
 
-    invoke-interface {p0, p1, p2}, Landroid/support/v4/media/session/b;->J(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-interface {p0, p1, p2}, Lb/b/a/b/a/b;->P(Ljava/lang/String;Landroid/os/Bundle;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -460,6 +489,7 @@
 
     const-string p2, "Dead object in sendCustomAction."
 
+    .line 3
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -477,10 +507,11 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Landroid/support/v4/media/session/b;
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Lb/b/a/b/a/b;
 
-    invoke-interface {p0, p1}, Landroid/support/v4/media/session/b;->f(Z)V
+    invoke-interface {p0, p1}, Lb/b/a/b/a/b;->g(Z)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -493,6 +524,7 @@
 
     const-string v0, "Dead object in setCaptioningEnabled."
 
+    .line 2
     invoke-static {p1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -516,10 +548,11 @@
 
     if-eqz v0, :cond_0
 
+    .line 1
     :try_start_0
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Landroid/support/v4/media/session/b;
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Lb/b/a/b/a/b;
 
-    invoke-interface {p0, p1}, Landroid/support/v4/media/session/b;->setPlaybackSpeed(F)V
+    invoke-interface {p0, p1}, Lb/b/a/b/a/b;->setPlaybackSpeed(F)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -532,15 +565,17 @@
 
     const-string v0, "Dead object in setPlaybackSpeed."
 
+    .line 2
     invoke-static {p1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
     return-void
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo p1, "speed must not be zero"
+    const-string p1, "speed must not be zero"
 
     invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
@@ -558,10 +593,11 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Landroid/support/v4/media/session/b;
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Lb/b/a/b/a/b;
 
-    invoke-interface {p0, p1}, Landroid/support/v4/media/session/b;->E(Landroid/support/v4/media/RatingCompat;)V
+    invoke-interface {p0, p1}, Lb/b/a/b/a/b;->K(Landroid/support/v4/media/RatingCompat;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -574,6 +610,7 @@
 
     const-string v0, "Dead object in setRating."
 
+    .line 2
     invoke-static {p1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -593,10 +630,11 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Landroid/support/v4/media/session/b;
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Lb/b/a/b/a/b;
 
-    invoke-interface {p0, p1, p2}, Landroid/support/v4/media/session/b;->R(Landroid/support/v4/media/RatingCompat;Landroid/os/Bundle;)V
+    invoke-interface {p0, p1, p2}, Lb/b/a/b/a/b;->V(Landroid/support/v4/media/RatingCompat;Landroid/os/Bundle;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -609,6 +647,7 @@
 
     const-string p2, "Dead object in setRating."
 
+    .line 2
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -626,10 +665,11 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Landroid/support/v4/media/session/b;
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Lb/b/a/b/a/b;
 
-    invoke-interface {p0, p1}, Landroid/support/v4/media/session/b;->setRepeatMode(I)V
+    invoke-interface {p0, p1}, Lb/b/a/b/a/b;->setRepeatMode(I)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -642,6 +682,7 @@
 
     const-string v0, "Dead object in setRepeatMode."
 
+    .line 2
     invoke-static {p1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -659,10 +700,11 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Landroid/support/v4/media/session/b;
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Lb/b/a/b/a/b;
 
-    invoke-interface {p0, p1}, Landroid/support/v4/media/session/b;->h(I)V
+    invoke-interface {p0, p1}, Lb/b/a/b/a/b;->j(I)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -675,6 +717,7 @@
 
     const-string v0, "Dead object in setShuffleMode."
 
+    .line 2
     invoke-static {p1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -684,10 +727,11 @@
 .method public u()V
     .locals 2
 
+    .line 1
     :try_start_0
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Landroid/support/v4/media/session/b;
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Lb/b/a/b/a/b;
 
-    invoke-interface {p0}, Landroid/support/v4/media/session/b;->next()V
+    invoke-interface {p0}, Lb/b/a/b/a/b;->next()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -700,6 +744,7 @@
 
     const-string v1, "Dead object in skipToNext."
 
+    .line 2
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -709,10 +754,11 @@
 .method public v()V
     .locals 2
 
+    .line 1
     :try_start_0
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Landroid/support/v4/media/session/b;
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Lb/b/a/b/a/b;
 
-    invoke-interface {p0}, Landroid/support/v4/media/session/b;->previous()V
+    invoke-interface {p0}, Lb/b/a/b/a/b;->previous()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -725,6 +771,7 @@
 
     const-string v1, "Dead object in skipToPrevious."
 
+    .line 2
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -742,10 +789,11 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Landroid/support/v4/media/session/b;
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Lb/b/a/b/a/b;
 
-    invoke-interface {p0, p1, p2}, Landroid/support/v4/media/session/b;->C(J)V
+    invoke-interface {p0, p1, p2}, Lb/b/a/b/a/b;->I(J)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -758,6 +806,7 @@
 
     const-string p2, "Dead object in skipToQueueItem."
 
+    .line 2
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -767,10 +816,11 @@
 .method public x()V
     .locals 2
 
+    .line 1
     :try_start_0
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Landroid/support/v4/media/session/b;
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$k;->b:Lb/b/a/b/a/b;
 
-    invoke-interface {p0}, Landroid/support/v4/media/session/b;->stop()V
+    invoke-interface {p0}, Lb/b/a/b/a/b;->stop()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -783,6 +833,7 @@
 
     const-string v1, "Dead object in stop."
 
+    .line 2
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0

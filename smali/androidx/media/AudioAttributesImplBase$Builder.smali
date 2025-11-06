@@ -1,4 +1,4 @@
-.class Landroidx/media/AudioAttributesImplBase$Builder;
+.class public Landroidx/media/AudioAttributesImplBase$Builder;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -131,6 +131,7 @@
 
     packed-switch p1, :pswitch_data_0
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -155,21 +156,25 @@
 
     goto :goto_1
 
+    .line 2
     :pswitch_0
     iput v0, p0, Landroidx/media/AudioAttributesImplBase$Builder;->mContentType:I
 
     goto :goto_1
 
+    .line 3
     :pswitch_1
     iput v1, p0, Landroidx/media/AudioAttributesImplBase$Builder;->mContentType:I
 
     goto :goto_1
 
+    .line 4
     :pswitch_2
     iput v1, p0, Landroidx/media/AudioAttributesImplBase$Builder;->mContentType:I
 
     goto :goto_1
 
+    .line 5
     :pswitch_3
     iget v2, p0, Landroidx/media/AudioAttributesImplBase$Builder;->mFlags:I
 
@@ -179,9 +184,11 @@
 
     goto :goto_0
 
+    .line 6
     :pswitch_4
     iput v0, p0, Landroidx/media/AudioAttributesImplBase$Builder;->mContentType:I
 
+    .line 7
     iget v0, p0, Landroidx/media/AudioAttributesImplBase$Builder;->mFlags:I
 
     or-int/2addr v0, v1
@@ -190,11 +197,13 @@
 
     goto :goto_1
 
+    .line 8
     :pswitch_5
     iput v1, p0, Landroidx/media/AudioAttributesImplBase$Builder;->mContentType:I
 
     goto :goto_1
 
+    .line 9
     :pswitch_6
     iput v1, p0, Landroidx/media/AudioAttributesImplBase$Builder;->mContentType:I
 
@@ -203,24 +212,29 @@
     :pswitch_7
     const/4 v0, 0x2
 
+    .line 10
     iput v0, p0, Landroidx/media/AudioAttributesImplBase$Builder;->mContentType:I
 
     goto :goto_1
 
+    .line 11
     :pswitch_8
     iput v1, p0, Landroidx/media/AudioAttributesImplBase$Builder;->mContentType:I
 
     goto :goto_1
 
+    .line 12
     :goto_0
     :pswitch_9
     iput v1, p0, Landroidx/media/AudioAttributesImplBase$Builder;->mContentType:I
 
     goto :goto_1
 
+    .line 13
     :pswitch_a
     iput v0, p0, Landroidx/media/AudioAttributesImplBase$Builder;->mContentType:I
 
+    .line 14
     :goto_1
     invoke-static {p1}, Landroidx/media/AudioAttributesImplBase;->usageForStreamType(I)I
 
@@ -255,6 +269,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     new-instance v0, Landroidx/media/AudioAttributesImplBase;
 
     iget v1, p0, Landroidx/media/AudioAttributesImplBase$Builder;->mContentType:I

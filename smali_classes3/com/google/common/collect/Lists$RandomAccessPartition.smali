@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Lists$RandomAccessPartition;
+.class public Lcom/google/common/collect/Lists$RandomAccessPartition;
 .super Lcom/google/common/collect/Lists$Partition;
 .source "SourceFile"
 
@@ -39,6 +39,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/common/collect/Lists$Partition;-><init>(Ljava/util/List;I)V
 
     return-void

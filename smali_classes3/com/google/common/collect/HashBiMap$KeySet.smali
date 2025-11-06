@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/HashBiMap$KeySet;
+.class public final Lcom/google/common/collect/HashBiMap$KeySet;
 .super Lcom/google/common/collect/HashBiMap$View;
 .source "SourceFile"
 
@@ -22,15 +22,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/HashBiMap;
+.field public final synthetic this$0:Lcom/google/common/collect/HashBiMap;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/HashBiMap;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/HashBiMap$KeySet;->this$0:Lcom/google/common/collect/HashBiMap;
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/common/collect/HashBiMap$View;-><init>(Lcom/google/common/collect/HashBiMap;)V
 
     return-void
@@ -45,6 +47,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/HashBiMap$KeySet;->this$0:Lcom/google/common/collect/HashBiMap;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/HashBiMap;->containsKey(Ljava/lang/Object;)Z
@@ -65,6 +68,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/HashBiMap$KeySet;->this$0:Lcom/google/common/collect/HashBiMap;
 
     iget-object p0, p0, Lcom/google/common/collect/HashBiMap;->keys:[Ljava/lang/Object;
@@ -85,10 +89,12 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/collect/Hashing;->smearedHash(Ljava/lang/Object;)I
 
     move-result v0
 
+    .line 2
     iget-object v1, p0, Lcom/google/common/collect/HashBiMap$KeySet;->this$0:Lcom/google/common/collect/HashBiMap;
 
     invoke-virtual {v1, p1, v0}, Lcom/google/common/collect/HashBiMap;->findEntryByKey(Ljava/lang/Object;I)I
@@ -99,6 +105,7 @@
 
     if-eq p1, v1, :cond_0
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/collect/HashBiMap$KeySet;->this$0:Lcom/google/common/collect/HashBiMap;
 
     invoke-virtual {p0, p1, v0}, Lcom/google/common/collect/HashBiMap;->removeEntryKeyHashKnown(II)V

@@ -1,4 +1,4 @@
-.class final Landroidx/viewpager2/widget/AnimateLayoutChangeDetector;
+.class public final Landroidx/viewpager2/widget/AnimateLayoutChangeDetector;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,6 +15,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
     const/4 v1, -0x1
@@ -25,6 +26,7 @@
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-virtual {v0, v1, v1, v1, v1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
 
     return-void
@@ -37,8 +39,10 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/viewpager2/widget/AnimateLayoutChangeDetector;->mLayoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
 
     return-void
@@ -47,6 +51,7 @@
 .method private arePagesLaidOutContiguously()Z
     .locals 11
 
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/AnimateLayoutChangeDetector;->mLayoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getChildCount()I
@@ -59,6 +64,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     iget-object v2, p0, Landroidx/viewpager2/widget/AnimateLayoutChangeDetector;->mLayoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
 
@@ -86,7 +92,8 @@
 
     aput v0, v5, v3
 
-    sget-object v4, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+    .line 3
+    const-class v4, I
 
     invoke-static {v4, v5}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;[I)Ljava/lang/Object;
 
@@ -99,6 +106,7 @@
     :goto_1
     if-ge v5, v0, :cond_6
 
+    .line 4
     iget-object v6, p0, Landroidx/viewpager2/widget/AnimateLayoutChangeDetector;->mLayoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
 
     invoke-virtual {v6, v5}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getChildAt(I)Landroid/view/View;
@@ -107,26 +115,32 @@
 
     if-eqz v6, :cond_5
 
+    .line 5
     invoke-virtual {v6}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v7
 
+    .line 6
     instance-of v8, v7, Landroid/view/ViewGroup$MarginLayoutParams;
 
     if-eqz v8, :cond_2
 
+    .line 7
     check-cast v7, Landroid/view/ViewGroup$MarginLayoutParams;
 
     goto :goto_2
 
+    .line 8
     :cond_2
     sget-object v7, Landroidx/viewpager2/widget/AnimateLayoutChangeDetector;->ZERO_MARGIN_LAYOUT_PARAMS:Landroid/view/ViewGroup$MarginLayoutParams;
 
+    .line 9
     :goto_2
     aget-object v8, v4, v5
 
     if-eqz v2, :cond_3
 
+    .line 10
     invoke-virtual {v6}, Landroid/view/View;->getLeft()I
 
     move-result v9
@@ -135,6 +149,7 @@
 
     goto :goto_3
 
+    .line 11
     :cond_3
     invoke-virtual {v6}, Landroid/view/View;->getTop()I
 
@@ -147,10 +162,12 @@
 
     aput v9, v8, v3
 
+    .line 12
     aget-object v8, v4, v5
 
     if-eqz v2, :cond_4
 
+    .line 13
     invoke-virtual {v6}, Landroid/view/View;->getRight()I
 
     move-result v6
@@ -159,6 +176,7 @@
 
     goto :goto_4
 
+    .line 14
     :cond_4
     invoke-virtual {v6}, Landroid/view/View;->getBottom()I
 
@@ -175,6 +193,7 @@
 
     goto :goto_1
 
+    .line 15
     :cond_5
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -184,6 +203,7 @@
 
     throw p0
 
+    .line 16
     :cond_6
     new-instance v2, Landroidx/viewpager2/widget/AnimateLayoutChangeDetector$1;
 
@@ -198,6 +218,7 @@
 
     add-int/lit8 v2, p0, -0x1
 
+    .line 17
     aget-object v2, v4, v2
 
     aget v2, v2, v1
@@ -215,24 +236,32 @@
 
     goto :goto_5
 
+    .line 18
     :cond_8
     aget-object p0, v4, v3
 
-    aget v2, p0, v1
+    aget p0, p0, v1
 
-    aget p0, p0, v3
+    aget-object v2, v4, v3
 
-    sub-int/2addr v2, p0
+    aget v2, v2, v3
 
-    if-gtz p0, :cond_a
+    sub-int/2addr p0, v2
+
+    .line 19
+    aget-object v2, v4, v3
+
+    aget v2, v2, v3
+
+    if-gtz v2, :cond_a
 
     sub-int/2addr v0, v1
 
-    aget-object p0, v4, v0
+    aget-object v0, v4, v0
 
-    aget p0, p0, v1
+    aget v0, v0, v1
 
-    if-ge p0, v2, :cond_9
+    if-ge v0, p0, :cond_9
 
     goto :goto_6
 
@@ -356,6 +385,7 @@
 .method public mayHaveInterferingAnimations()Z
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Landroidx/viewpager2/widget/AnimateLayoutChangeDetector;->arePagesLaidOutContiguously()Z
 
     move-result v0
@@ -372,6 +402,7 @@
 
     if-gt v0, v1, :cond_1
 
+    .line 2
     :cond_0
     invoke-direct {p0}, Landroidx/viewpager2/widget/AnimateLayoutChangeDetector;->hasRunningChangingLayoutTransition()Z
 

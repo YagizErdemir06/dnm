@@ -7,6 +7,7 @@
 .method public static zza(Ljava/util/Set;)I
     .locals 3
 
+    .line 1
     invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -28,6 +29,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 2
     invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
     move-result v2

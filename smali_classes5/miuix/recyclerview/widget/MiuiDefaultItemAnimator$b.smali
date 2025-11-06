@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator;->runPendingAnimations()V
+    value = Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator;->animateRemoveImpl(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,18 +18,19 @@
 
 
 # instance fields
-.field public final synthetic a:Ljava/util/ArrayList;
+.field public final synthetic c:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
-.field public final synthetic b:Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator;
+.field public final synthetic d:Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator;
 
 
 # direct methods
-.method public constructor <init>(Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator;Ljava/util/ArrayList;)V
+.method public constructor <init>(Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
     .locals 0
 
-    iput-object p1, p0, Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator$b;->b:Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator;
+    .line 1
+    iput-object p1, p0, Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator$b;->d:Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator;
 
-    iput-object p2, p0, Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator$b;->a:Ljava/util/ArrayList;
+    iput-object p2, p0, Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator$b;->c:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -39,45 +40,53 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 5
 
-    iget-object v0, p0, Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator$b;->a:Ljava/util/ArrayList;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    new-array v1, v0, [Landroid/view/View;
 
-    move-result-object v0
+    .line 1
+    iget-object v2, p0, Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator$b;->c:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    iget-object v2, v2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    move-result v1
+    const/4 v3, 0x0
 
-    if-eqz v1, :cond_0
+    aput-object v2, v1, v3
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {v1}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object v1
 
-    check-cast v1, Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator$i;
+    invoke-interface {v1}, Lmiuix/animation/IFolme;->state()Lmiuix/animation/IStateStyle;
 
-    iget-object v2, p0, Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator$b;->b:Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator;
+    move-result-object v1
 
-    invoke-virtual {v2, v1}, Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator;->a(Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator$i;)V
+    const/4 v2, 0x2
 
-    goto :goto_0
+    new-array v2, v2, [Ljava/lang/Object;
 
-    :cond_0
-    iget-object v0, p0, Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator$b;->a:Ljava/util/ArrayList;
+    sget-object v4, Lmiuix/animation/property/ViewProperty;->ALPHA:Lmiuix/animation/property/ViewProperty;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+    aput-object v4, v2, v3
 
-    iget-object v0, p0, Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator$b;->b:Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator;
+    const/high16 v3, 0x3f800000    # 1.0f
 
-    iget-object v0, v0, Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator;->g:Ljava/util/ArrayList;
+    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    iget-object p0, p0, Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator$b;->a:Ljava/util/ArrayList;
+    move-result-object v3
 
-    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+    aput-object v3, v2, v0
+
+    invoke-interface {v1, v2}, Lmiuix/animation/IStateStyle;->setTo([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
+
+    .line 2
+    iget-object v0, p0, Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator$b;->d:Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator;
+
+    iget-object p0, p0, Lmiuix/recyclerview/widget/MiuiDefaultItemAnimator$b;->c:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
+
+    invoke-virtual {v0, p0}, Lmiuix/recyclerview/widget/MiuiBaseDefaultItemAnimator;->n(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
     return-void
 .end method

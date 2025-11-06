@@ -1,16 +1,17 @@
-.class final synthetic Lcom/google/android/odml/image/zzd;
+.class public final synthetic Lcom/google/android/odml/image/zzd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field static final synthetic zza:[I
+.field public static final synthetic zza:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Landroid/graphics/Bitmap$Config;->values()[Landroid/graphics/Bitmap$Config;
 
     move-result-object v0
@@ -24,7 +25,7 @@
     :try_start_0
     sget-object v1, Landroid/graphics/Bitmap$Config;->ALPHA_8:Landroid/graphics/Bitmap$Config;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Landroid/graphics/Bitmap$Config;->ordinal()I
 
     move-result v1
 
@@ -40,7 +41,7 @@
 
     sget-object v1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Landroid/graphics/Bitmap$Config;->ordinal()I
 
     move-result v1
 

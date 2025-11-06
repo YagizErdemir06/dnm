@@ -18,15 +18,23 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/android/camera/Camera;
+.field public final synthetic c:Lcom/android/camera/Camera;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/camera/Camera;)V
+.method private constructor <init>(Lcom/android/camera/Camera;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/android/camera/Camera$r;->a:Lcom/android/camera/Camera;
+    iput-object p1, p0, Lcom/android/camera/Camera$r;->c:Lcom/android/camera/Camera;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,18 +58,35 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "holder",
+            "format",
+            "width",
+            "height"
+        }
+    .end annotation
 
-    iget-object v0, p0, Lcom/android/camera/Camera$r;->a:Lcom/android/camera/Camera;
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/Camera$r;->c:Lcom/android/camera/Camera;
 
-    invoke-static {v0, p3, p4}, Lcom/android/camera/Camera;->hl(Lcom/android/camera/Camera;II)V
+    invoke-static {v0, p3, p4}, Lcom/android/camera/Camera;->Vi(Lcom/android/camera/Camera;II)V
 
-    iget-object v0, p0, Lcom/android/camera/Camera$r;->a:Lcom/android/camera/Camera;
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/Camera$r;->c:Lcom/android/camera/Camera;
 
-    iget-object v1, v0, Lcom/android/camera/ActivityBase;->I:Lcom/android/camera/ui/a1;
+    iget-object v1, v0, Lcom/android/camera/ActivityBase;->g9:Ld/d/a/d8/x1;
 
     if-eqz v1, :cond_0
 
-    invoke-static {v0}, Lcom/android/camera/Camera;->Pk(Lcom/android/camera/Camera;)Ljava/lang/String;
+    .line 3
+    invoke-static {v0}, Lcom/android/camera/Camera;->Di(Lcom/android/camera/Camera;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -97,11 +122,12 @@
 
     invoke-static {v0, p2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object p0, p0, Lcom/android/camera/Camera$r;->a:Lcom/android/camera/Camera;
+    .line 4
+    iget-object p0, p0, Lcom/android/camera/Camera$r;->c:Lcom/android/camera/Camera;
 
-    iget-object p0, p0, Lcom/android/camera/ActivityBase;->I:Lcom/android/camera/ui/a1;
+    iget-object p0, p0, Lcom/android/camera/ActivityBase;->g9:Ld/d/a/d8/x1;
 
-    invoke-interface {p0, p1, p3, p4}, Lcom/android/camera/ui/a1;->w1(Landroid/view/SurfaceHolder;II)V
+    invoke-interface {p0, p1, p3, p4}, Ld/d/a/d8/x1;->e0(Landroid/view/SurfaceHolder;II)V
 
     :cond_0
     return-void
@@ -113,28 +139,40 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "holder"
+        }
+    .end annotation
 
-    invoke-static {}, Lp8/m;->x()Lp8/m;
+    .line 1
+    invoke-static {}, Ld/d/a/h7/n;->n()Ld/d/a/h7/n;
 
     move-result-object p1
 
     const-string v0, "5.1:surfaceViewCreate"
 
-    invoke-virtual {p1, v0}, Lp8/m;->s(Ljava/lang/String;)J
+    invoke-virtual {p1, v0}, Ld/d/a/h7/n;->i(Ljava/lang/String;)J
 
-    iget-object p1, p0, Lcom/android/camera/Camera$r;->a:Lcom/android/camera/Camera;
+    .line 2
+    iget-object p1, p0, Lcom/android/camera/Camera$r;->c:Lcom/android/camera/Camera;
 
-    iget-object p1, p1, Lcom/android/camera/ActivityBase;->G:Landroid/view/SurfaceView;
+    iget-object p1, p1, Lcom/android/camera/ActivityBase;->e9:Landroid/view/SurfaceView;
 
     invoke-static {p1}, Lcom/android/camera/display/device/ScreenOrientationManager;->k(Landroid/view/SurfaceView;)V
 
-    iget-object p0, p0, Lcom/android/camera/Camera$r;->a:Lcom/android/camera/Camera;
+    .line 3
+    iget-object p0, p0, Lcom/android/camera/Camera$r;->c:Lcom/android/camera/Camera;
 
-    iget-object p0, p0, Lcom/android/camera/ActivityBase;->I:Lcom/android/camera/ui/a1;
+    iget-object p0, p0, Lcom/android/camera/ActivityBase;->g9:Ld/d/a/d8/x1;
 
     if-eqz p0, :cond_0
 
-    invoke-interface {p0}, Lcom/android/camera/ui/a1;->onSurfaceCreated()V
+    .line 4
+    invoke-interface {p0}, Ld/d/a/d8/x1;->onSurfaceCreated()V
 
     :cond_0
     return-void
@@ -146,14 +184,24 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "holder"
+        }
+    .end annotation
 
-    iget-object p0, p0, Lcom/android/camera/Camera$r;->a:Lcom/android/camera/Camera;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/Camera$r;->c:Lcom/android/camera/Camera;
 
-    iget-object p0, p0, Lcom/android/camera/ActivityBase;->I:Lcom/android/camera/ui/a1;
+    iget-object p0, p0, Lcom/android/camera/ActivityBase;->g9:Ld/d/a/d8/x1;
 
     if-eqz p0, :cond_0
 
-    invoke-interface {p0}, Lcom/android/camera/ui/a1;->M()V
+    .line 2
+    invoke-interface {p0}, Ld/d/a/d8/x1;->c()V
 
     :cond_0
     return-void

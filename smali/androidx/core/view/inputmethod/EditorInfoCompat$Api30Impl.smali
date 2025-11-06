@@ -1,4 +1,4 @@
-.class Landroidx/core/view/inputmethod/EditorInfoCompat$Api30Impl;
+.class public Landroidx/core/view/inputmethod/EditorInfoCompat$Api30Impl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +35,8 @@
         .end annotation
     .end param
 
-    invoke-static {p0, p1}, Landroidx/core/view/inputmethod/d;->a(Landroid/view/inputmethod/EditorInfo;I)Ljava/lang/CharSequence;
+    .line 1
+    invoke-virtual {p0, p1}, Landroid/view/inputmethod/EditorInfo;->getInitialSelectedText(I)Ljava/lang/CharSequence;
 
     move-result-object p0
 
@@ -48,7 +50,8 @@
         .end annotation
     .end param
 
-    invoke-static {p0, p1, p2}, Landroidx/core/view/inputmethod/a;->a(Landroid/view/inputmethod/EditorInfo;II)Ljava/lang/CharSequence;
+    .line 1
+    invoke-virtual {p0, p1, p2}, Landroid/view/inputmethod/EditorInfo;->getInitialTextAfterCursor(II)Ljava/lang/CharSequence;
 
     move-result-object p0
 
@@ -62,7 +65,8 @@
         .end annotation
     .end param
 
-    invoke-static {p0, p1, p2}, Landroidx/core/view/inputmethod/c;->a(Landroid/view/inputmethod/EditorInfo;II)Ljava/lang/CharSequence;
+    .line 1
+    invoke-virtual {p0, p1, p2}, Landroid/view/inputmethod/EditorInfo;->getInitialTextBeforeCursor(II)Ljava/lang/CharSequence;
 
     move-result-object p0
 
@@ -76,7 +80,8 @@
         .end annotation
     .end param
 
-    invoke-static {p0, p1, p2}, Landroidx/core/view/inputmethod/b;->a(Landroid/view/inputmethod/EditorInfo;Ljava/lang/CharSequence;I)V
+    .line 1
+    invoke-virtual {p0, p1, p2}, Landroid/view/inputmethod/EditorInfo;->setInitialSurroundingSubText(Ljava/lang/CharSequence;I)V
 
     return-void
 .end method

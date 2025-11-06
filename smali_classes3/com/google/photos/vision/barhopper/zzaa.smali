@@ -36,6 +36,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/photos/vision/barhopper/zzaa;
 
     invoke-direct {v0}, Lcom/google/photos/vision/barhopper/zzaa;-><init>()V
@@ -52,6 +53,7 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;-><init>()V
 
     const-string v0, ""
@@ -116,6 +118,7 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     sget-object p0, Lcom/google/photos/vision/barhopper/zzaa;->zza:Lcom/google/photos/vision/barhopper/zzaa;
 
@@ -124,6 +127,7 @@
     :cond_1
     new-instance p1, Lcom/google/photos/vision/barhopper/zzz;
 
+    .line 2
     invoke-direct {p1, p0}, Lcom/google/photos/vision/barhopper/zzz;-><init>(Lcom/google/photos/vision/barhopper/zza;)V
 
     return-object p1
@@ -190,6 +194,7 @@
 
     aput-object p2, p1, p0
 
+    .line 3
     sget-object p0, Lcom/google/photos/vision/barhopper/zzaa;->zza:Lcom/google/photos/vision/barhopper/zzaa;
 
     const-string p2, "\u0001\t\u0000\u0001\u0001\t\t\u0000\u0000\u0000\u0001\u1008\u0000\u0002\u1008\u0001\u0003\u1008\u0002\u0004\u1008\u0003\u0005\u1008\u0004\u0006\u1008\u0005\u0007\u1008\u0006\u0008\u1008\u0007\t\u1008\u0008"
@@ -200,6 +205,7 @@
 
     return-object p0
 
+    .line 4
     :cond_4
     invoke-static {p0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 

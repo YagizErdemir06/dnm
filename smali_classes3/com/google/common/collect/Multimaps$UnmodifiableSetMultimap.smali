@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Multimaps$UnmodifiableSetMultimap;
+.class public Lcom/google/common/collect/Multimaps$UnmodifiableSetMultimap;
 .super Lcom/google/common/collect/Multimaps$UnmodifiableMultimap;
 .source "SourceFile"
 
@@ -46,6 +46,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/Multimaps$UnmodifiableMultimap;-><init>(Lcom/google/common/collect/Multimap;)V
 
     return-void

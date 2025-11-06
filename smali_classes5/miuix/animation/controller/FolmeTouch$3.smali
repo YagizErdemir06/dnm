@@ -1,4 +1,4 @@
-.class Lmiuix/animation/controller/FolmeTouch$3;
+.class public Lmiuix/animation/controller/FolmeTouch$3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,21 +18,22 @@
 
 
 # instance fields
-.field final synthetic this$0:Lmiuix/animation/controller/FolmeTouch;
+.field public final synthetic this$0:Lmiuix/animation/controller/FolmeTouch;
 
-.field final synthetic val$clickListenerSet:Z
+.field public final synthetic val$clickListenerSet:Z
 
-.field final synthetic val$config:[Lmiuix/animation/base/AnimConfig;
+.field public final synthetic val$config:[Lmiuix/animation/base/AnimConfig;
 
-.field final synthetic val$isClickable:Z
+.field public final synthetic val$isClickable:Z
 
-.field final synthetic val$view:Landroid/view/View;
+.field public final synthetic val$view:Landroid/view/View;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/animation/controller/FolmeTouch;ZLandroid/view/View;[Lmiuix/animation/base/AnimConfig;Z)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/animation/controller/FolmeTouch$3;->this$0:Lmiuix/animation/controller/FolmeTouch;
 
     iput-boolean p2, p0, Lmiuix/animation/controller/FolmeTouch$3;->val$clickListenerSet:Z
@@ -53,6 +54,7 @@
 .method public run()V
     .locals 4
 
+    .line 1
     iget-boolean v0, p0, Lmiuix/animation/controller/FolmeTouch$3;->val$clickListenerSet:Z
 
     if-nez v0, :cond_0
@@ -71,6 +73,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch$3;->this$0:Lmiuix/animation/controller/FolmeTouch;
 
     iget-object v1, p0, Lmiuix/animation/controller/FolmeTouch$3;->val$view:Landroid/view/View;

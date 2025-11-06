@@ -1,4 +1,4 @@
-.class Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord$1;
+.class public Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic this$1:Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;
+.field public final synthetic this$1:Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;
 
 
 # direct methods
@@ -33,6 +33,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord$1;->this$1:Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,6 +46,7 @@
 .method public run()V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord$1;->this$1:Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;
 
     iget-object v0, p0, Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;->this$0:Landroidx/media/MediaBrowserServiceCompat;

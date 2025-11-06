@@ -13,8 +13,10 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, v0}, Lorg/apache/poi/POITextExtractor;-><init>(Lorg/apache/poi/POIDocument;)V
 
+    .line 2
     iput-object p1, p0, Lorg/apache/poi/POIXMLTextExtractor;->_document:Lorg/apache/poi/POIXMLDocument;
 
     return-void
@@ -25,6 +27,7 @@
 .method public getCoreProperties()Lorg/apache/poi/POIXMLProperties$CoreProperties;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLTextExtractor;->_document:Lorg/apache/poi/POIXMLDocument;
 
     invoke-virtual {p0}, Lorg/apache/poi/POIXMLDocument;->getProperties()Lorg/apache/poi/POIXMLProperties;
@@ -41,6 +44,7 @@
 .method public getCustomProperties()Lorg/apache/poi/POIXMLProperties$CustomProperties;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLTextExtractor;->_document:Lorg/apache/poi/POIXMLDocument;
 
     invoke-virtual {p0}, Lorg/apache/poi/POIXMLDocument;->getProperties()Lorg/apache/poi/POIXMLProperties;
@@ -57,6 +61,7 @@
 .method public final getDocument()Lorg/apache/poi/POIXMLDocument;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLTextExtractor;->_document:Lorg/apache/poi/POIXMLDocument;
 
     return-object p0
@@ -65,6 +70,7 @@
 .method public getExtendedProperties()Lorg/apache/poi/POIXMLProperties$ExtendedProperties;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLTextExtractor;->_document:Lorg/apache/poi/POIXMLDocument;
 
     invoke-virtual {p0}, Lorg/apache/poi/POIXMLDocument;->getProperties()Lorg/apache/poi/POIXMLProperties;
@@ -105,6 +111,7 @@
 .method public getPackage()Lorg/apache/poi/openxml4j/opc/OPCPackage;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLTextExtractor;->_document:Lorg/apache/poi/POIXMLDocument;
 
     invoke-virtual {p0}, Lorg/apache/poi/POIXMLDocument;->getPackage()Lorg/apache/poi/openxml4j/opc/OPCPackage;

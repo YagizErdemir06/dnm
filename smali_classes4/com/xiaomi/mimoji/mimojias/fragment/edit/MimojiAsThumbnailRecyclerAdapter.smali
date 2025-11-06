@@ -20,16 +20,28 @@
 
 
 # instance fields
-.field public a:Landroid/content/Context;
+.field private a:Landroid/content/Context;
 
-.field public b:F
+.field private b:F
 
-.field public c:Ljava/lang/String;
+.field private c:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;ILjava/lang/String;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "configType",
+            "name"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -54,6 +66,15 @@
 
 .method public constructor <init>(Ljava/util/ArrayList;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mDdataList"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -76,12 +97,22 @@
 
 .method public static h(I)F
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "configType"
+        }
+    .end annotation
 
-    invoke-static {}, Lji/a;->n()Lji/a;
+    .line 1
+    invoke-static {}, Ld/o/v/c/e/a/a;->n()Ld/o/v/c/e/a/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lji/a;->m(I)F
+    .line 2
+    invoke-virtual {v0, p0}, Ld/o/v/c/e/a/a;->m(I)F
 
     move-result p0
 
@@ -92,8 +123,19 @@
 # virtual methods
 .method public i(II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "configType",
+            "selectItem"
+        }
+    .end annotation
 
-    invoke-static {}, Lji/a;->n()Lji/a;
+    .line 1
+    invoke-static {}, Ld/o/v/c/e/a/a;->n()Ld/o/v/c/e/a/a;
 
     move-result-object p0
 
@@ -104,7 +146,8 @@
     :cond_0
     int-to-float p2, p2
 
-    invoke-virtual {p0, p1, p2}, Lji/a;->N(IF)V
+    .line 2
+    invoke-virtual {p0, p1, p2}, Ld/o/v/c/e/a/a;->N(IF)V
 
     return-void
 .end method
@@ -115,6 +158,17 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "viewGroup",
+            "i"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -126,7 +180,8 @@
         }
     .end annotation
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    .line 1
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object p2
 
@@ -134,7 +189,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0e01b0
+    const v0, 0x7f0e018e
 
     const/4 v1, 0x0
 
@@ -142,6 +197,7 @@
 
     move-result-object p1
 
+    .line 2
     new-instance p2, Lcom/xiaomi/mimoji/mimojias/fragment/edit/MimojiAsThumbnailRecyclerAdapter$a;
 
     iget-object p0, p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/MimojiAsThumbnailRecyclerAdapter;->c:Ljava/lang/String;

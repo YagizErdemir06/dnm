@@ -40,9 +40,10 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/xb/xsdschema/DerivationControl$1;->class$org$apache$xmlbeans$impl$xb$xsdschema$DerivationControl:Ljava/lang/Class;
 
     if-nez v0, :cond_0
@@ -78,6 +79,7 @@
 
     const-string v0, "substitution"
 
+    .line 2
     invoke-static {v0}, Lorg/apache/xmlbeans/impl/xb/xsdschema/DerivationControl$Enum;->forString(Ljava/lang/String;)Lorg/apache/xmlbeans/impl/xb/xsdschema/DerivationControl$Enum;
 
     move-result-object v0
@@ -86,6 +88,7 @@
 
     const-string v0, "extension"
 
+    .line 3
     invoke-static {v0}, Lorg/apache/xmlbeans/impl/xb/xsdschema/DerivationControl$Enum;->forString(Ljava/lang/String;)Lorg/apache/xmlbeans/impl/xb/xsdschema/DerivationControl$Enum;
 
     move-result-object v0
@@ -94,6 +97,7 @@
 
     const-string v0, "restriction"
 
+    .line 4
     invoke-static {v0}, Lorg/apache/xmlbeans/impl/xb/xsdschema/DerivationControl$Enum;->forString(Ljava/lang/String;)Lorg/apache/xmlbeans/impl/xb/xsdschema/DerivationControl$Enum;
 
     move-result-object v0
@@ -102,6 +106,7 @@
 
     const-string v0, "list"
 
+    .line 5
     invoke-static {v0}, Lorg/apache/xmlbeans/impl/xb/xsdschema/DerivationControl$Enum;->forString(Ljava/lang/String;)Lorg/apache/xmlbeans/impl/xb/xsdschema/DerivationControl$Enum;
 
     move-result-object v0
@@ -110,6 +115,7 @@
 
     const-string v0, "union"
 
+    .line 6
     invoke-static {v0}, Lorg/apache/xmlbeans/impl/xb/xsdschema/DerivationControl$Enum;->forString(Ljava/lang/String;)Lorg/apache/xmlbeans/impl/xb/xsdschema/DerivationControl$Enum;
 
     move-result-object v0

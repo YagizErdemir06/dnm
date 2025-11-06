@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/Futures$NonCancellationPropagatingFuture;
+.class public final Lcom/google/common/util/concurrent/Futures$NonCancellationPropagatingFuture;
 .super Lcom/google/common/util/concurrent/AbstractFuture$TrustedFuture;
 .source "SourceFile"
 
@@ -53,8 +53,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/util/concurrent/AbstractFuture$TrustedFuture;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/util/concurrent/Futures$NonCancellationPropagatingFuture;->delegate:Lcom/google/common/util/concurrent/ListenableFuture;
 
     return-void
@@ -67,6 +69,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Lcom/google/common/util/concurrent/Futures$NonCancellationPropagatingFuture;->delegate:Lcom/google/common/util/concurrent/ListenableFuture;
 
     return-void
@@ -77,10 +80,12 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/Futures$NonCancellationPropagatingFuture;->delegate:Lcom/google/common/util/concurrent/ListenableFuture;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -120,10 +125,12 @@
 .method public run()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/util/concurrent/Futures$NonCancellationPropagatingFuture;->delegate:Lcom/google/common/util/concurrent/ListenableFuture;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/google/common/util/concurrent/AbstractFuture;->setFuture(Lcom/google/common/util/concurrent/ListenableFuture;)Z
 
     :cond_0

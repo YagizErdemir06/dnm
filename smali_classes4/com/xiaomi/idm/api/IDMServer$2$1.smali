@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/idm/api/IDMServer$2$1;
+.class public Lcom/xiaomi/idm/api/IDMServer$2$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,21 +26,22 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/xiaomi/idm/api/IDMServer$2;
+.field public final synthetic this$1:Lcom/xiaomi/idm/api/IDMServer$2;
 
-.field final synthetic val$blockId:I
+.field public final synthetic val$blockId:I
 
-.field final synthetic val$clientId:Ljava/lang/String;
+.field public final synthetic val$clientId:Ljava/lang/String;
 
-.field final synthetic val$recvTaskKey:Ljava/lang/String;
+.field public final synthetic val$recvTaskKey:Ljava/lang/String;
 
-.field final synthetic val$service:Lcom/xiaomi/idm/api/IDMService;
+.field public final synthetic val$service:Lcom/xiaomi/idm/api/IDMService;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/idm/api/IDMServer$2;Ljava/lang/String;ILjava/lang/String;Lcom/xiaomi/idm/api/IDMService;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/api/IDMServer$2$1;->this$1:Lcom/xiaomi/idm/api/IDMServer$2;
 
     iput-object p2, p0, Lcom/xiaomi/idm/api/IDMServer$2$1;->val$clientId:Ljava/lang/String;
@@ -70,6 +71,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -102,16 +104,19 @@
 
     invoke-static {v2, p1, v1}, Lcom/xiaomi/idm/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     instance-of p1, p2, Lcom/xiaomi/idm/exception/IDMException;
 
     if-eqz p1, :cond_0
 
+    .line 3
     check-cast p2, Lcom/xiaomi/idm/exception/IDMException;
 
     invoke-virtual {p2}, Lcom/xiaomi/idm/exception/IDMException;->getCode()I
 
     move-result p1
 
+    .line 4
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -130,6 +135,7 @@
 
     invoke-static {v2, p1, p2}, Lcom/xiaomi/idm/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 5
     :cond_0
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMServer$2$1;->this$1:Lcom/xiaomi/idm/api/IDMServer$2;
 

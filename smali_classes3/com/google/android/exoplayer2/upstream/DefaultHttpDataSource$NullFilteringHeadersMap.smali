@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/upstream/DefaultHttpDataSource$NullFilteringHeadersMap;
+.class public Lcom/google/android/exoplayer2/upstream/DefaultHttpDataSource$NullFilteringHeadersMap;
 .super Lcom/google/common/collect/ForwardingMap;
 .source "SourceFile"
 
@@ -52,36 +52,19 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ForwardingMap;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/upstream/DefaultHttpDataSource$NullFilteringHeadersMap;->headers:Ljava/util/Map;
 
     return-void
 .end method
 
-.method public static synthetic c(Ljava/util/Map$Entry;)Z
+.method public static synthetic lambda$entrySet$1(Ljava/util/Map$Entry;)Z
     .locals 0
 
-    invoke-static {p0}, Lcom/google/android/exoplayer2/upstream/DefaultHttpDataSource$NullFilteringHeadersMap;->lambda$entrySet$1(Ljava/util/Map$Entry;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static synthetic d(Ljava/lang/String;)Z
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/upstream/DefaultHttpDataSource$NullFilteringHeadersMap;->lambda$keySet$0(Ljava/lang/String;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method private static synthetic lambda$entrySet$1(Ljava/util/Map$Entry;)Z
-    .locals 0
-
+    .line 1
     invoke-interface {p0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object p0
@@ -99,7 +82,7 @@
     return p0
 .end method
 
-.method private static synthetic lambda$keySet$0(Ljava/lang/String;)Z
+.method public static synthetic lambda$keySet$0(Ljava/lang/String;)Z
     .locals 0
 
     if-eqz p0, :cond_0
@@ -126,6 +109,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/ForwardingMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result p0
@@ -150,6 +134,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/ForwardingMap;->standardContainsValue(Ljava/lang/Object;)Z
 
     move-result p0
@@ -201,13 +186,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/ForwardingMap;->entrySet()Ljava/util/Set;
 
     move-result-object p0
 
-    new-instance v0, Lcom/google/android/exoplayer2/upstream/d;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/upstream/d;-><init>()V
+    sget-object v0, Ld/j/a/b/z2/c;->c:Ld/j/a/b/z2/c;
 
     invoke-static {p0, v0}, Lcom/google/common/collect/Sets;->filter(Ljava/util/Set;Lcom/google/common/base/Predicate;)Ljava/util/Set;
 
@@ -225,6 +209,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/ForwardingMap;->standardEquals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -300,6 +285,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/ForwardingMap;->standardHashCode()I
 
     move-result p0
@@ -310,6 +296,7 @@
 .method public isEmpty()Z
     .locals 2
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/ForwardingMap;->isEmpty()Z
 
     move-result v0
@@ -353,13 +340,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/ForwardingMap;->keySet()Ljava/util/Set;
 
     move-result-object p0
 
-    new-instance v0, Lcom/google/android/exoplayer2/upstream/c;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/upstream/c;-><init>()V
+    sget-object v0, Ld/j/a/b/z2/d;->c:Ld/j/a/b/z2/d;
 
     invoke-static {p0, v0}, Lcom/google/common/collect/Sets;->filter(Ljava/util/Set;Lcom/google/common/base/Predicate;)Ljava/util/Set;
 
@@ -371,6 +357,7 @@
 .method public size()I
     .locals 2
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/ForwardingMap;->size()I
 
     move-result v0

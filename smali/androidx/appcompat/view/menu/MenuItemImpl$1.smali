@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/view/menu/MenuItemImpl$1;
+.class public Landroidx/appcompat/view/menu/MenuItemImpl$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/appcompat/view/menu/MenuItemImpl;
+.field public final synthetic this$0:Landroidx/appcompat/view/menu/MenuItemImpl;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/appcompat/view/menu/MenuItemImpl;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/view/menu/MenuItemImpl$1;->this$0:Landroidx/appcompat/view/menu/MenuItemImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,6 +38,7 @@
 .method public onActionProviderVisibilityChanged(Z)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/menu/MenuItemImpl$1;->this$0:Landroidx/appcompat/view/menu/MenuItemImpl;
 
     iget-object p1, p0, Landroidx/appcompat/view/menu/MenuItemImpl;->mMenu:Landroidx/appcompat/view/menu/MenuBuilder;

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/dash/manifest/SingleSegmentIndex;
+.class public final Lcom/google/android/exoplayer2/source/dash/manifest/SingleSegmentIndex;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -14,8 +14,10 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/source/dash/manifest/RangedUri;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/dash/manifest/SingleSegmentIndex;->uri:Lcom/google/android/exoplayer2/source/dash/manifest/RangedUri;
 
     return-void
@@ -80,6 +82,7 @@
 .method public getSegmentUrl(J)Lcom/google/android/exoplayer2/source/dash/manifest/RangedUri;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/dash/manifest/SingleSegmentIndex;->uri:Lcom/google/android/exoplayer2/source/dash/manifest/RangedUri;
 
     return-object p0

@@ -1,4 +1,4 @@
-.class Landroidx/constraintlayout/motion/widget/ViewTransition$1;
+.class public Landroidx/constraintlayout/motion/widget/ViewTransition$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,7 +18,9 @@
 
 
 # instance fields
-.field final synthetic val$easing:Landroidx/constraintlayout/core/motion/utils/Easing;
+.field public final synthetic this$0:Landroidx/constraintlayout/motion/widget/ViewTransition;
+
+.field public final synthetic val$easing:Landroidx/constraintlayout/core/motion/utils/Easing;
 
 
 # direct methods
@@ -34,6 +36,9 @@
             "val$easing"
         }
     .end annotation
+
+    .line 1
+    iput-object p1, p0, Landroidx/constraintlayout/motion/widget/ViewTransition$1;->this$0:Landroidx/constraintlayout/motion/widget/ViewTransition;
 
     iput-object p2, p0, Landroidx/constraintlayout/motion/widget/ViewTransition$1;->val$easing:Landroidx/constraintlayout/core/motion/utils/Easing;
 
@@ -55,6 +60,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/motion/widget/ViewTransition$1;->val$easing:Landroidx/constraintlayout/core/motion/utils/Easing;
 
     float-to-double v0, p1

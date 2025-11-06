@@ -41,6 +41,7 @@
 
     new-array v0, v0, [F
 
+    .line 1
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/faceunity/toolbox/program/FUProgramLandmarks;->POINT_COLOR:[F
@@ -65,12 +66,14 @@
 
     const-string v1, "precision mediump float;uniform vec4 vColor;void main() {  gl_FragColor = vColor;}"
 
+    .line 1
     invoke-direct {p0, v0, v1}, Lcom/faceunity/toolbox/program/core/FUProgram;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     const/16 v0, 0x10
 
     new-array v0, v0, [F
 
+    .line 2
     iput-object v0, p0, Lcom/faceunity/toolbox/program/FUProgramLandmarks;->mMvpMatrix:[F
 
     return-void
@@ -81,12 +84,12 @@
 .method public drawFrame(IIII)V
     .locals 8
 
+    .line 12
+    iget-object v3, p0, Lcom/faceunity/toolbox/program/FUProgramLandmarks;->mMvpMatrix:[F
+
     const/4 v1, 0x0
 
     const/4 v2, 0x0
-
-    .line 12
-    iget-object v3, p0, Lcom/faceunity/toolbox/program/FUProgramLandmarks;->mMvpMatrix:[F
 
     move-object v0, p0
 
@@ -119,6 +122,13 @@
     .line 3
     iget v0, p0, Lcom/faceunity/toolbox/program/FUProgramLandmarks;->mPositionHandle:I
 
+    iget-object p1, p0, Lcom/faceunity/toolbox/program/core/FUProgram;->mDrawable2d:Lcom/faceunity/toolbox/program/core/FUDrawable2d;
+
+    .line 4
+    invoke-virtual {p1}, Lcom/faceunity/toolbox/program/core/FUDrawable2d;->vertexArray()Ljava/nio/FloatBuffer;
+
+    move-result-object v5
+
     const/4 v1, 0x2
 
     const/16 v2, 0x1406
@@ -126,13 +136,6 @@
     const/4 v3, 0x0
 
     const/16 v4, 0x8
-
-    iget-object p1, p0, Lcom/faceunity/toolbox/program/core/FUProgram;->mDrawable2d:Lcom/faceunity/toolbox/program/core/FUDrawable2d;
-
-    .line 4
-    invoke-virtual {p1}, Lcom/faceunity/toolbox/program/core/FUDrawable2d;->vertexArray()Ljava/nio/FloatBuffer;
-
-    move-result-object v5
 
     .line 5
     invoke-static/range {v0 .. v5}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
@@ -183,6 +186,7 @@
 .method public getDrawable2d()Lcom/faceunity/toolbox/program/core/FUDrawable2d;
     .locals 1
 
+    .line 1
     new-instance p0, Lcom/faceunity/toolbox/program/core/FUDrawable2d;
 
     const/16 v0, 0x96
@@ -197,6 +201,7 @@
 .method public getLocations()V
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/faceunity/toolbox/program/core/FUProgram;->mProgramHandle:I
 
     const-string v1, "vPosition"
@@ -207,8 +212,10 @@
 
     iput v0, p0, Lcom/faceunity/toolbox/program/FUProgramLandmarks;->mPositionHandle:I
 
+    .line 2
     invoke-static {v1}, Lcom/faceunity/toolbox/utils/FUGLUtils;->checkGlError(Ljava/lang/String;)V
 
+    .line 3
     iget v0, p0, Lcom/faceunity/toolbox/program/core/FUProgram;->mProgramHandle:I
 
     const-string v1, "vColor"
@@ -219,8 +226,10 @@
 
     iput v0, p0, Lcom/faceunity/toolbox/program/FUProgramLandmarks;->mColorHandle:I
 
+    .line 4
     invoke-static {v1}, Lcom/faceunity/toolbox/utils/FUGLUtils;->checkGlError(Ljava/lang/String;)V
 
+    .line 5
     iget v0, p0, Lcom/faceunity/toolbox/program/core/FUProgram;->mProgramHandle:I
 
     const-string v1, "uMVPMatrix"
@@ -233,8 +242,10 @@
 
     const-string v0, "glGetUniformLocation"
 
+    .line 6
     invoke-static {v0}, Lcom/faceunity/toolbox/utils/FUGLUtils;->checkGlError(Ljava/lang/String;)V
 
+    .line 7
     iget v0, p0, Lcom/faceunity/toolbox/program/core/FUProgram;->mProgramHandle:I
 
     const-string v1, "uPointSize"
@@ -245,6 +256,7 @@
 
     iput v0, p0, Lcom/faceunity/toolbox/program/FUProgramLandmarks;->mPointSizeHandle:I
 
+    .line 8
     invoke-static {v1}, Lcom/faceunity/toolbox/utils/FUGLUtils;->checkGlError(Ljava/lang/String;)V
 
     return-void
@@ -263,6 +275,7 @@
 
     move/from16 v4, p5
 
+    .line 1
     iget v5, v0, Lcom/faceunity/toolbox/program/FUProgramLandmarks;->mCameraWidth:I
 
     if-ne v5, v1, :cond_0
@@ -300,6 +313,7 @@
 
     move-object v6, v14
 
+    .line 2
     invoke-static/range {v6 .. v13}, Landroid/opengl/Matrix;->orthoM([FIFFFFFF)V
 
     new-array v8, v5, [F
@@ -320,6 +334,7 @@
 
     move/from16 v17, v6
 
+    .line 3
     invoke-static/range {v15 .. v20}, Landroid/opengl/Matrix;->setRotateM([FIFFFF)V
 
     if-nez v4, :cond_1
@@ -336,6 +351,7 @@
 
     move-object v15, v8
 
+    .line 4
     invoke-static/range {v15 .. v20}, Landroid/opengl/Matrix;->rotateM([FIFFFF)V
 
     :cond_1
@@ -351,8 +367,10 @@
 
     move-object v10, v14
 
+    .line 5
     invoke-static/range {v6 .. v11}, Landroid/opengl/Matrix;->multiplyMM([FI[FI[FI)V
 
+    .line 6
     iget-object v6, v0, Lcom/faceunity/toolbox/program/FUProgramLandmarks;->mMvpMatrix:[F
 
     const/16 v22, 0x0
@@ -369,14 +387,19 @@
 
     invoke-static/range {v21 .. v26}, Landroid/opengl/Matrix;->multiplyMM([FI[FI[FI)V
 
+    .line 7
     iput v1, v0, Lcom/faceunity/toolbox/program/FUProgramLandmarks;->mCameraWidth:I
 
+    .line 8
     iput v2, v0, Lcom/faceunity/toolbox/program/FUProgramLandmarks;->mCameraHeight:I
 
+    .line 9
     iput v3, v0, Lcom/faceunity/toolbox/program/FUProgramLandmarks;->mCameraOrientation:I
 
+    .line 10
     iput v4, v0, Lcom/faceunity/toolbox/program/FUProgramLandmarks;->mCameraType:I
 
+    .line 11
     :cond_2
     invoke-virtual/range {p0 .. p1}, Lcom/faceunity/toolbox/program/core/FUProgram;->updateVertexArray([F)V
 

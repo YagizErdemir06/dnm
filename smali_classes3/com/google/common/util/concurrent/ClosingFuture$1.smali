@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/ClosingFuture$1;
+.class public Lcom/google/common/util/concurrent/ClosingFuture$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,15 +27,16 @@
 
 
 # instance fields
-.field final synthetic val$closingExecutor:Ljava/util/concurrent/Executor;
+.field public final synthetic val$closingExecutor:Ljava/util/concurrent/Executor;
 
-.field final synthetic val$closingFuture:Lcom/google/common/util/concurrent/ClosingFuture;
+.field public final synthetic val$closingFuture:Lcom/google/common/util/concurrent/ClosingFuture;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/util/concurrent/ClosingFuture;Ljava/util/concurrent/Executor;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/ClosingFuture$1;->val$closingFuture:Lcom/google/common/util/concurrent/ClosingFuture;
 
     iput-object p2, p0, Lcom/google/common/util/concurrent/ClosingFuture$1;->val$closingExecutor:Ljava/util/concurrent/Executor;

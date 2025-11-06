@@ -1,4 +1,4 @@
-.class Lcom/google/common/cache/LocalCache$LoadingValueReference$1;
+.class public Lcom/google/common/cache/LocalCache$LoadingValueReference$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,13 +26,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/cache/LocalCache$LoadingValueReference;
+.field public final synthetic this$0:Lcom/google/common/cache/LocalCache$LoadingValueReference;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/cache/LocalCache$LoadingValueReference;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/cache/LocalCache$LoadingValueReference$1;->this$0:Lcom/google/common/cache/LocalCache$LoadingValueReference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,6 +51,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/cache/LocalCache$LoadingValueReference$1;->this$0:Lcom/google/common/cache/LocalCache$LoadingValueReference;
 
     invoke-virtual {p0, p1}, Lcom/google/common/cache/LocalCache$LoadingValueReference;->set(Ljava/lang/Object;)Z

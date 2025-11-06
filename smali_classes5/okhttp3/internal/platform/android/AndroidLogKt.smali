@@ -4,7 +4,7 @@
 
 
 # annotations
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
     d1 = {
         "\u0000\u000e\n\u0000\n\u0002\u0010\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0003\"\u0018\u0010\u0000\u001a\u00020\u0001*\u00020\u00028BX\u0082\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u0003\u0010\u0004\u00a8\u0006\u0005"
     }
@@ -30,6 +30,7 @@
 .method public static final synthetic access$getAndroidLevel(Ljava/util/logging/LogRecord;)I
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lokhttp3/internal/platform/android/AndroidLogKt;->getAndroidLevel(Ljava/util/logging/LogRecord;)I
 
     move-result p0
@@ -40,6 +41,7 @@
 .method private static final getAndroidLevel(Ljava/util/logging/LogRecord;)I
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Ljava/util/logging/LogRecord;->getLevel()Ljava/util/logging/Level;
 
     move-result-object v0
@@ -60,6 +62,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Ljava/util/logging/LogRecord;->getLevel()Ljava/util/logging/Level;
 

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/text/cea/CeaDecoder$CeaInputBuffer;
+.class public final Lcom/google/android/exoplayer2/text/cea/CeaDecoder$CeaInputBuffer;
 .super Lcom/google/android/exoplayer2/text/SubtitleInputBuffer;
 .source "SourceFile"
 
@@ -52,6 +52,7 @@
 .method public static synthetic access$102(Lcom/google/android/exoplayer2/text/cea/CeaDecoder$CeaInputBuffer;J)J
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lcom/google/android/exoplayer2/text/cea/CeaDecoder$CeaInputBuffer;->queuedInputBufferCount:J
 
     return-wide p1

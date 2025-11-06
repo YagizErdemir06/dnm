@@ -1,4 +1,4 @@
-.class Landroidx/core/content/SharedPreferencesCompat$EditorCompat$Helper;
+.class public Landroidx/core/content/SharedPreferencesCompat$EditorCompat$Helper;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,6 +33,7 @@
         .end annotation
     .end param
 
+    .line 1
     :try_start_0
     invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
     :try_end_0
@@ -39,6 +41,7 @@
 
     goto :goto_0
 
+    .line 2
     :catch_0
     invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 

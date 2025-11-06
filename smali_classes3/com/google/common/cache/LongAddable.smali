@@ -1,4 +1,4 @@
-.class interface abstract Lcom/google/common/cache/LongAddable;
+.class public interface abstract Lcom/google/common/cache/LongAddable;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

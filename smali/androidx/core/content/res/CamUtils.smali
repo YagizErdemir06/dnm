@@ -1,16 +1,16 @@
-.class final Landroidx/core/content/res/CamUtils;
+.class public final Landroidx/core/content/res/CamUtils;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field static final CAM16RGB_TO_XYZ:[[F
+.field public static final CAM16RGB_TO_XYZ:[[F
 
-.field static final SRGB_TO_XYZ:[[F
+.field public static final SRGB_TO_XYZ:[[F
 
-.field static final WHITE_POINT_D65:[F
+.field public static final WHITE_POINT_D65:[F
 
-.field static final XYZ_TO_CAM16RGB:[[F
+.field public static final XYZ_TO_CAM16RGB:[[F
 
 
 # direct methods
@@ -23,6 +23,7 @@
 
     new-array v2, v0, [F
 
+    .line 1
     fill-array-data v2, :array_0
 
     const/4 v3, 0x0
@@ -51,6 +52,7 @@
 
     new-array v2, v0, [F
 
+    .line 2
     fill-array-data v2, :array_3
 
     aput-object v2, v1, v3
@@ -71,6 +73,7 @@
 
     new-array v1, v0, [F
 
+    .line 3
     fill-array-data v1, :array_6
 
     sput-object v1, Landroidx/core/content/res/CamUtils;->WHITE_POINT_D65:[F
@@ -79,6 +82,7 @@
 
     new-array v2, v0, [F
 
+    .line 4
     fill-array-data v2, :array_7
 
     aput-object v2, v1, v3
@@ -175,6 +179,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -213,27 +218,29 @@
 
     div-float/2addr v1, v2
 
-    const/high16 v3, 0x41000000    # 8.0f
+    const v3, 0x4461d2f7
 
-    cmpl-float v3, p0, v3
+    const v4, 0x3c111aa7
 
-    const/4 v4, 0x1
+    const/high16 v5, 0x41000000    # 8.0f
 
-    const/4 v5, 0x0
+    cmpl-float v5, p0, v5
 
-    if-lez v3, :cond_2
+    const/4 v6, 0x1
 
-    move v3, v4
+    const/4 v7, 0x0
+
+    if-lez v5, :cond_2
+
+    move v5, v6
 
     goto :goto_0
 
     :cond_2
-    move v3, v5
+    move v5, v7
 
     :goto_0
-    const v6, 0x4461d2f7
-
-    if-eqz v3, :cond_3
+    if-eqz v5, :cond_3
 
     mul-float p0, v1, v1
 
@@ -242,30 +249,28 @@
     goto :goto_1
 
     :cond_3
-    div-float/2addr p0, v6
+    div-float/2addr p0, v3
 
     :goto_1
-    mul-float v3, v1, v1
+    mul-float v5, v1, v1
 
-    mul-float/2addr v3, v1
+    mul-float/2addr v5, v1
 
-    const v7, 0x3c111aa7
+    cmpl-float v4, v5, v4
 
-    cmpl-float v7, v3, v7
+    if-lez v4, :cond_4
 
-    if-lez v7, :cond_4
-
-    move v7, v4
+    move v4, v6
 
     goto :goto_2
 
     :cond_4
-    move v7, v5
+    move v4, v7
 
     :goto_2
-    if-eqz v7, :cond_5
+    if-eqz v4, :cond_5
 
-    move v8, v3
+    move v8, v5
 
     goto :goto_3
 
@@ -274,10 +279,10 @@
 
     sub-float/2addr v8, v0
 
-    div-float/2addr v8, v6
+    div-float/2addr v8, v3
 
     :goto_3
-    if-eqz v7, :cond_6
+    if-eqz v4, :cond_6
 
     goto :goto_4
 
@@ -286,18 +291,19 @@
 
     sub-float/2addr v1, v0
 
-    div-float v3, v1, v6
+    div-float v5, v1, v3
 
+    .line 1
     :goto_4
     sget-object v0, Landroidx/core/content/res/CamUtils;->WHITE_POINT_D65:[F
 
-    aget v1, v0, v5
+    aget v1, v0, v7
 
     mul-float/2addr v8, v1
 
     float-to-double v9, v8
 
-    aget v1, v0, v4
+    aget v1, v0, v6
 
     mul-float/2addr p0, v1
 
@@ -307,9 +313,9 @@
 
     aget p0, v0, p0
 
-    mul-float/2addr v3, p0
+    mul-float/2addr v5, p0
 
-    float-to-double v13, v3
+    float-to-double v13, v5
 
     invoke-static/range {v9 .. v14}, Landroidx/core/graphics/ColorUtils;->XYZToColor(DDD)I
 
@@ -321,6 +327,7 @@
 .method public static lStarFromInt(I)F
     .locals 0
 
+    .line 1
     invoke-static {p0}, Landroidx/core/content/res/CamUtils;->yFromInt(I)F
 
     move-result p0
@@ -354,6 +361,7 @@
     :cond_0
     float-to-double v0, p0
 
+    .line 1
     invoke-static {v0, v1}, Ljava/lang/Math;->cbrt(D)D
 
     move-result-wide v0
@@ -422,6 +430,7 @@
 
     const-wide v4, 0x4003333340000000L    # 2.4000000953674316
 
+    .line 1
     invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v2
@@ -432,10 +441,11 @@
 .end method
 
 .method public static xyzFromInt(I)[F
-    .locals 10
+    .locals 9
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     invoke-static {p0}, Landroid/graphics/Color;->red(I)I
 
     move-result v0
@@ -444,6 +454,7 @@
 
     move-result v0
 
+    .line 2
     invoke-static {p0}, Landroid/graphics/Color;->green(I)I
 
     move-result v1
@@ -452,6 +463,7 @@
 
     move-result v1
 
+    .line 3
     invoke-static {p0}, Landroid/graphics/Color;->blue(I)I
 
     move-result p0
@@ -460,63 +472,79 @@
 
     move-result p0
 
+    .line 4
     sget-object v2, Landroidx/core/content/res/CamUtils;->SRGB_TO_XYZ:[[F
 
     const/4 v3, 0x0
 
+    .line 5
     aget-object v4, v2, v3
 
-    aget v5, v4, v3
+    aget v4, v4, v3
 
-    mul-float/2addr v5, v0
+    mul-float/2addr v4, v0
+
+    aget-object v5, v2, v3
 
     const/4 v6, 0x1
 
-    aget v7, v4, v6
+    aget v5, v5, v6
 
-    mul-float/2addr v7, v1
+    mul-float/2addr v5, v1
 
-    add-float/2addr v5, v7
+    add-float/2addr v4, v5
+
+    aget-object v5, v2, v3
 
     const/4 v7, 0x2
 
-    aget v4, v4, v7
+    aget v5, v5, v7
 
-    mul-float/2addr v4, p0
+    mul-float/2addr v5, p0
 
-    add-float/2addr v5, v4
+    add-float/2addr v4, v5
 
-    aget-object v4, v2, v6
+    .line 6
+    aget-object v5, v2, v6
 
-    aget v8, v4, v3
+    aget v5, v5, v3
 
-    mul-float/2addr v8, v0
+    mul-float/2addr v5, v0
 
-    aget v9, v4, v6
+    aget-object v8, v2, v6
 
-    mul-float/2addr v9, v1
+    aget v8, v8, v6
 
-    add-float/2addr v8, v9
+    mul-float/2addr v8, v1
 
-    aget v4, v4, v7
+    add-float/2addr v5, v8
 
-    mul-float/2addr v4, p0
+    aget-object v8, v2, v6
 
-    add-float/2addr v8, v4
+    aget v8, v8, v7
 
-    aget-object v2, v2, v7
+    mul-float/2addr v8, p0
 
-    aget v4, v2, v3
+    add-float/2addr v5, v8
 
-    mul-float/2addr v0, v4
+    .line 7
+    aget-object v8, v2, v7
 
-    aget v4, v2, v6
+    aget v8, v8, v3
 
-    mul-float/2addr v1, v4
+    mul-float/2addr v0, v8
+
+    aget-object v8, v2, v7
+
+    aget v8, v8, v6
+
+    mul-float/2addr v1, v8
 
     add-float/2addr v0, v1
 
-    aget v1, v2, v7
+    aget-object v1, v2, v7
+
+    aget v1, v1, v7
 
     mul-float/2addr p0, v1
 
@@ -526,9 +554,9 @@
 
     new-array p0, p0, [F
 
-    aput v5, p0, v3
+    aput v4, p0, v3
 
-    aput v8, p0, v6
+    aput v5, p0, v6
 
     aput v0, p0, v7
 
@@ -536,8 +564,9 @@
 .end method
 
 .method public static yFromInt(I)F
-    .locals 5
+    .locals 6
 
+    .line 1
     invoke-static {p0}, Landroid/graphics/Color;->red(I)I
 
     move-result v0
@@ -546,6 +575,7 @@
 
     move-result v0
 
+    .line 2
     invoke-static {p0}, Landroid/graphics/Color;->green(I)I
 
     move-result v1
@@ -554,6 +584,7 @@
 
     move-result v1
 
+    .line 3
     invoke-static {p0}, Landroid/graphics/Color;->blue(I)I
 
     move-result p0
@@ -562,27 +593,33 @@
 
     move-result p0
 
+    .line 4
     sget-object v2, Landroidx/core/content/res/CamUtils;->SRGB_TO_XYZ:[[F
 
     const/4 v3, 0x1
 
-    aget-object v2, v2, v3
+    .line 5
+    aget-object v4, v2, v3
 
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
-    aget v4, v2, v4
+    aget v4, v4, v5
 
     mul-float/2addr v0, v4
 
-    aget v3, v2, v3
+    aget-object v4, v2, v3
 
-    mul-float/2addr v1, v3
+    aget v4, v4, v3
+
+    mul-float/2addr v1, v4
 
     add-float/2addr v0, v1
 
-    const/4 v1, 0x2
+    aget-object v1, v2, v3
 
-    aget v1, v2, v1
+    const/4 v2, 0x2
+
+    aget v1, v1, v2
 
     mul-float/2addr p0, v1
 
@@ -614,6 +651,7 @@
 
     const-wide/high16 v4, 0x4008000000000000L    # 3.0
 
+    .line 1
     invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v2

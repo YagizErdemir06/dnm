@@ -24,7 +24,7 @@
 
 
 # instance fields
-.field action:Lcom/xiaomi/idm/api/IDMService$Action;
+.field public action:Lcom/xiaomi/idm/api/IDMService$Action;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/xiaomi/idm/api/IDMService$Action<",
@@ -33,7 +33,7 @@
     .end annotation
 .end field
 
-.field future:Lcom/xiaomi/idm/task/CallFuture;
+.field public future:Lcom/xiaomi/idm/task/CallFuture;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/xiaomi/idm/task/CallFuture<",
@@ -42,7 +42,7 @@
     .end annotation
 .end field
 
-.field request:Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMRequest;
+.field public request:Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMRequest;
 
 
 # direct methods
@@ -58,12 +58,16 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/xiaomi/idm/api/IDMClient$RmiCall;->action:Lcom/xiaomi/idm/api/IDMService$Action;
 
+    .line 3
     iput-object p2, p0, Lcom/xiaomi/idm/api/IDMClient$RmiCall;->request:Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMRequest;
 
+    .line 4
     new-instance p1, Lcom/xiaomi/idm/task/CallFuture;
 
     invoke-direct {p1}, Lcom/xiaomi/idm/task/CallFuture;-><init>()V

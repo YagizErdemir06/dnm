@@ -4,24 +4,26 @@
 
 
 # static fields
-.field public static final c:Ljava/lang/String; = "ModeEditor"
+.field private static final c:Ljava/lang/String; = "ModeEditor"
 
 
 # instance fields
-.field public a:Lcom/android/camera/fragment/mode/FragmentMoreModeBase;
+.field private d:Lcom/android/camera/fragment/mode/FragmentMoreModeBase;
 
-.field public b:Z
+.field private f:Z
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Landroidx/appcompat/app/AppCompatActivity;-><init>()V
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/camera/ModeEditorActivity;->b:Z
+    .line 2
+    iput-boolean v0, p0, Lcom/android/camera/ModeEditorActivity;->f:Z
 
     return-void
 .end method
@@ -30,10 +32,11 @@
 # virtual methods
 .method public onBackPressed()V
     .locals 1
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
-    iget-object p0, p0, Lcom/android/camera/ModeEditorActivity;->a:Lcom/android/camera/fragment/mode/FragmentMoreModeBase;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/ModeEditorActivity;->d:Lcom/android/camera/fragment/mode/FragmentMoreModeBase;
 
     const/4 v0, 0x1
 
@@ -50,6 +53,7 @@
 
     const-string v0, "onBackPressed"
 
+    .line 2
     invoke-static {p0, v0}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -61,25 +65,46 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "newConfig"
+        }
+    .end annotation
 
-    invoke-static {p0}, Ly2/b;->r0(Landroid/content/Context;)V
+    .line 1
+    invoke-static {p0}, Ld/d/a/n6/b;->r0(Landroid/content/Context;)V
 
+    .line 2
     invoke-super {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     return-void
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 2
+    .locals 1
     .param p1    # Landroid/os/Bundle;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "savedInstanceState"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/android/camera2/compat/theme/MiThemeCompat;->setTheme(Landroid/app/Activity;)V
 
-    invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
+    .line 2
+    invoke-super {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->onCreate(Landroid/os/Bundle;)V
 
+    .line 3
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object p1
@@ -92,20 +117,23 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setSystemUiVisibility(I)V
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 4
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lid/b;->e7()Z
+    invoke-virtual {p1}, Ld/k/a/b;->S6()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    invoke-static {p0}, Ly2/b;->r0(Landroid/content/Context;)V
+    .line 5
+    invoke-static {p0}, Ld/d/a/n6/b;->r0(Landroid/content/Context;)V
 
+    .line 6
     :cond_0
-    invoke-static {p0}, Ly2/b;->f(Landroid/app/Activity;)Z
+    invoke-static {p0}, Ld/d/a/n6/b;->f(Landroid/app/Activity;)Z
 
     move-result p1
 
@@ -113,28 +141,32 @@
 
     return-void
 
+    .line 7
     :cond_1
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/android/camera/s2;->L(Landroid/content/Intent;)Z
+    invoke-static {p1}, Ld/d/a/b4;->K(Landroid/content/Intent;)Z
 
     move-result p1
 
-    iput-boolean p1, p0, Lcom/android/camera/ModeEditorActivity;->b:Z
+    iput-boolean p1, p0, Lcom/android/camera/ModeEditorActivity;->f:Z
 
     const/4 v0, 0x1
 
     if-eqz p1, :cond_2
 
+    .line 8
     invoke-virtual {p0, v0}, Landroid/app/Activity;->setShowWhenLocked(Z)V
 
     :cond_2
-    const p1, 0x7f0e0020
+    const p1, 0x7f0e001f
 
+    .line 9
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->setContentView(I)V
 
+    .line 10
     const-class p1, Lcom/android/camera/fragment/mode/more/FragmentMoreMode;
 
     invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -147,10 +179,12 @@
 
     check-cast p1, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;
 
-    iput-object p1, p0, Lcom/android/camera/ModeEditorActivity;->a:Lcom/android/camera/fragment/mode/FragmentMoreModeBase;
+    iput-object p1, p0, Lcom/android/camera/ModeEditorActivity;->d:Lcom/android/camera/fragment/mode/FragmentMoreModeBase;
 
-    invoke-virtual {p1, v0}, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->si(Z)V
+    .line 11
+    invoke-virtual {p1, v0}, Lcom/android/camera/fragment/mode/FragmentMoreModeBase;->ke(Z)V
 
+    .line 12
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object p1
@@ -159,17 +193,15 @@
 
     move-result-object p1
 
-    const v0, 0x7f0b04d9
+    const v0, 0x7f0b045e
 
-    iget-object v1, p0, Lcom/android/camera/ModeEditorActivity;->a:Lcom/android/camera/fragment/mode/FragmentMoreModeBase;
+    iget-object p0, p0, Lcom/android/camera/ModeEditorActivity;->d:Lcom/android/camera/fragment/mode/FragmentMoreModeBase;
 
-    invoke-virtual {p1, v0, v1}, Landroidx/fragment/app/FragmentTransaction;->add(ILandroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
+    invoke-virtual {p1, v0, p0}, Landroidx/fragment/app/FragmentTransaction;->add(ILandroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-virtual {p1}, Landroidx/fragment/app/FragmentTransaction;->commit()I
-
-    invoke-static {p0}, Lmiuix/appcompat/app/d0;->a(Landroid/app/Activity;)V
+    invoke-virtual {p0}, Landroidx/fragment/app/FragmentTransaction;->commit()I
 
     return-void
 .end method
@@ -177,11 +209,13 @@
 .method public onStop()V
     .locals 1
 
+    .line 1
     invoke-super {p0}, Landroidx/appcompat/app/AppCompatActivity;->onStop()V
 
-    iget-boolean v0, p0, Lcom/android/camera/ModeEditorActivity;->b:Z
+    .line 2
+    iget-boolean v0, p0, Lcom/android/camera/ModeEditorActivity;->f:Z
 
-    invoke-static {v0, p0}, Lcom/android/camera/a6;->Y3(ZLandroid/app/Activity;)V
+    invoke-static {v0, p0}, Ld/d/a/z5;->L3(ZLandroid/app/Activity;)V
 
     return-void
 .end method

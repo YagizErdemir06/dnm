@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/ClosingFuture$2;
+.class public Lcom/google/common/util/concurrent/ClosingFuture$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,15 +26,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/util/concurrent/ClosingFuture;
+.field public final synthetic this$0:Lcom/google/common/util/concurrent/ClosingFuture;
 
-.field final synthetic val$callable:Lcom/google/common/util/concurrent/ClosingFuture$ClosingCallable;
+.field public final synthetic val$callable:Lcom/google/common/util/concurrent/ClosingFuture$ClosingCallable;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/util/concurrent/ClosingFuture;Lcom/google/common/util/concurrent/ClosingFuture$ClosingCallable;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/ClosingFuture$2;->this$0:Lcom/google/common/util/concurrent/ClosingFuture;
 
     iput-object p2, p0, Lcom/google/common/util/concurrent/ClosingFuture$2;->val$callable:Lcom/google/common/util/concurrent/ClosingFuture$ClosingCallable;
@@ -63,6 +64,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/util/concurrent/ClosingFuture$2;->val$callable:Lcom/google/common/util/concurrent/ClosingFuture$ClosingCallable;
 
     iget-object p0, p0, Lcom/google/common/util/concurrent/ClosingFuture$2;->this$0:Lcom/google/common/util/concurrent/ClosingFuture;
@@ -85,6 +87,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/ClosingFuture$2;->val$callable:Lcom/google/common/util/concurrent/ClosingFuture$ClosingCallable;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;

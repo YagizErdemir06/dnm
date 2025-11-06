@@ -7,6 +7,9 @@
 .annotation build Landroidx/annotation/Keep;
 .end annotation
 
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
+
 
 # static fields
 .field public static final PROP_NAME_MAX:I = 0x1f
@@ -32,6 +35,7 @@
 .method public static constructor <clinit>()V
     .locals 8
 
+    .line 1
     const-class v0, Ljava/lang/String;
 
     :try_start_0
@@ -50,8 +54,10 @@
     :catch_0
     const/4 v1, 0x0
 
+    .line 2
     sput-object v1, Lmiuix/core/util/SystemProperties;->classSystemProperties:Ljava/lang/Class;
 
+    .line 3
     :goto_0
     sget-object v1, Lmiuix/core/util/SystemProperties;->classSystemProperties:Ljava/lang/Class;
 
@@ -72,6 +78,7 @@
 
     aput-object v0, v6, v3
 
+    .line 4
     invoke-virtual {v1, v5, v6}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v1
@@ -92,9 +99,11 @@
 
     goto :goto_2
 
+    .line 5
     :catch_1
     sput-boolean v4, Lmiuix/core/util/SystemProperties;->isSupportGet:Z
 
+    .line 6
     :goto_2
     :try_start_2
     sget-object v1, Lmiuix/core/util/SystemProperties;->classSystemProperties:Ljava/lang/Class;
@@ -129,9 +138,11 @@
 
     goto :goto_4
 
+    .line 7
     :catch_2
     sput-boolean v4, Lmiuix/core/util/SystemProperties;->isSupportGetInt:Z
 
+    .line 8
     :goto_4
     :try_start_3
     sget-object v1, Lmiuix/core/util/SystemProperties;->classSystemProperties:Ljava/lang/Class;
@@ -166,9 +177,11 @@
 
     goto :goto_6
 
+    .line 9
     :catch_3
     sput-boolean v4, Lmiuix/core/util/SystemProperties;->isSupportGetLong:Z
 
+    .line 10
     :goto_6
     :try_start_4
     sget-object v1, Lmiuix/core/util/SystemProperties;->classSystemProperties:Ljava/lang/Class;
@@ -203,9 +216,11 @@
 
     goto :goto_8
 
+    .line 11
     :catch_4
     sput-boolean v4, Lmiuix/core/util/SystemProperties;->isSupportGetBoolean:Z
 
+    .line 12
     :goto_8
     :try_start_5
     sget-object v1, Lmiuix/core/util/SystemProperties;->classSystemProperties:Ljava/lang/Class;
@@ -236,6 +251,7 @@
 
     goto :goto_a
 
+    .line 13
     :catch_5
     sput-boolean v4, Lmiuix/core/util/SystemProperties;->isSupportSet:Z
 
@@ -247,6 +263,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -301,7 +318,7 @@
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/IllegalArgumentException;->toString()Ljava/lang/String;
 
     move-result-object p0
 
@@ -322,10 +339,12 @@
 .method public static getBoolean(Ljava/lang/String;Z)Z
     .locals 3
 
+    .line 1
     sget-boolean v0, Lmiuix/core/util/SystemProperties;->isSupportGetBoolean:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     :try_start_0
     invoke-static {p0, p1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
@@ -338,6 +357,7 @@
     :catch_0
     move-exception v0
 
+    .line 3
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -352,7 +372,7 @@
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/IllegalArgumentException;->toString()Ljava/lang/String;
 
     move-result-object p0
 
@@ -373,10 +393,12 @@
 .method public static getInt(Ljava/lang/String;I)I
     .locals 3
 
+    .line 1
     sget-boolean v0, Lmiuix/core/util/SystemProperties;->isSupportGetInt:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     :try_start_0
     invoke-static {p0, p1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
@@ -389,6 +411,7 @@
     :catch_0
     move-exception v0
 
+    .line 3
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -403,7 +426,7 @@
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/IllegalArgumentException;->toString()Ljava/lang/String;
 
     move-result-object p0
 
@@ -424,10 +447,12 @@
 .method public static getLong(Ljava/lang/String;J)J
     .locals 3
 
+    .line 1
     sget-boolean v0, Lmiuix/core/util/SystemProperties;->isSupportGetLong:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     :try_start_0
     invoke-static {p0, p1, p2}, Landroid/os/SystemProperties;->getLong(Ljava/lang/String;J)J
 
@@ -440,6 +465,7 @@
     :catch_0
     move-exception v0
 
+    .line 3
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -454,7 +480,7 @@
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/IllegalArgumentException;->toString()Ljava/lang/String;
 
     move-result-object p0
 
@@ -532,7 +558,7 @@
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "val.length > 91"
+    const-string/jumbo p1, "val.length > 91"
 
     invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 

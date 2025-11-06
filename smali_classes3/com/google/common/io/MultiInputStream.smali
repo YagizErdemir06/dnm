@@ -1,4 +1,4 @@
-.class final Lcom/google/common/io/MultiInputStream;
+.class public final Lcom/google/common/io/MultiInputStream;
 .super Ljava/io/InputStream;
 .source "SourceFile"
 
@@ -48,8 +48,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -58,6 +60,7 @@
 
     iput-object p1, p0, Lcom/google/common/io/MultiInputStream;->it:Ljava/util/Iterator;
 
+    .line 3
     invoke-direct {p0}, Lcom/google/common/io/MultiInputStream;->advance()V
 
     return-void
@@ -71,8 +74,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/io/MultiInputStream;->close()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/io/MultiInputStream;->it:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -81,6 +86,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/io/MultiInputStream;->it:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -109,6 +115,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/io/MultiInputStream;->in:Ljava/io/InputStream;
 
     if-nez p0, :cond_0
@@ -117,6 +124,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Ljava/io/InputStream;->available()I
 
@@ -133,17 +141,20 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/io/MultiInputStream;->in:Ljava/io/InputStream;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x0
 
+    .line 2
     :try_start_0
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     iput-object v1, p0, Lcom/google/common/io/MultiInputStream;->in:Ljava/io/InputStream;
 
     goto :goto_0
@@ -153,6 +164,7 @@
 
     iput-object v1, p0, Lcom/google/common/io/MultiInputStream;->in:Ljava/io/InputStream;
 
+    .line 4
     throw v0
 
     :cond_0
@@ -249,6 +261,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/io/MultiInputStream;->in:Ljava/io/InputStream;
 
     const-wide/16 v1, 0x0
@@ -261,6 +274,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-virtual {v0, p1, p2}, Ljava/io/InputStream;->skip(J)J
 
@@ -272,6 +286,7 @@
 
     return-wide v3
 
+    .line 3
     :cond_1
     invoke-virtual {p0}, Lcom/google/common/io/MultiInputStream;->read()I
 
@@ -283,6 +298,7 @@
 
     return-wide v1
 
+    .line 4
     :cond_2
     iget-object p0, p0, Lcom/google/common/io/MultiInputStream;->in:Ljava/io/InputStream;
 

@@ -1,4 +1,4 @@
-.class Landroidx/core/view/WindowInsetsControllerCompat$Impl20;
+.class public Landroidx/core/view/WindowInsetsControllerCompat$Impl20;
 .super Landroidx/core/view/WindowInsetsControllerCompat$Impl;
 .source "SourceFile"
 
@@ -20,11 +20,11 @@
 
 # instance fields
 .field private final mView:Landroid/view/View;
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field protected final mWindow:Landroid/view/Window;
+.field public final mWindow:Landroid/view/Window;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
@@ -38,23 +38,18 @@
         .end annotation
     .end param
     .param p2    # Landroid/view/View;
-        .annotation build Landroidx/annotation/NonNull;
+        .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Landroidx/core/view/WindowInsetsControllerCompat$Impl;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/core/view/WindowInsetsControllerCompat$Impl20;->mWindow:Landroid/view/Window;
 
+    .line 3
     iput-object p2, p0, Landroidx/core/view/WindowInsetsControllerCompat$Impl20;->mView:Landroid/view/View;
-
-    return-void
-.end method
-
-.method public static synthetic a(Landroid/view/View;)V
-    .locals 0
-
-    invoke-static {p0}, Landroidx/core/view/WindowInsetsControllerCompat$Impl20;->lambda$showForType$0(Landroid/view/View;)V
 
     return-void
 .end method
@@ -76,6 +71,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     iget-object p1, p0, Landroidx/core/view/WindowInsetsControllerCompat$Impl20;->mWindow:Landroid/view/Window;
 
@@ -85,6 +81,7 @@
 
     const-string v0, "input_method"
 
+    .line 2
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -93,6 +90,7 @@
 
     iget-object p0, p0, Landroidx/core/view/WindowInsetsControllerCompat$Impl20;->mWindow:Landroid/view/Window;
 
+    .line 3
     invoke-virtual {p0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
     move-result-object p0
@@ -108,6 +106,7 @@
     :goto_0
     return-void
 
+    .line 4
     :cond_1
     invoke-virtual {p0, v0}, Landroidx/core/view/WindowInsetsControllerCompat$Impl20;->setSystemUiFlag(I)V
 
@@ -116,29 +115,8 @@
     :cond_2
     const/4 p1, 0x4
 
+    .line 5
     invoke-virtual {p0, p1}, Landroidx/core/view/WindowInsetsControllerCompat$Impl20;->setSystemUiFlag(I)V
-
-    return-void
-.end method
-
-.method private static synthetic lambda$showForType$0(Landroid/view/View;)V
-    .locals 2
-
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    const-string v1, "input_method"
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/inputmethod/InputMethodManager;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p0, v1}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;I)Z
 
     return-void
 .end method
@@ -158,68 +136,75 @@
 
     if-eq p1, v0, :cond_0
 
-    goto :goto_2
+    goto :goto_1
 
+    .line 1
     :cond_0
     iget-object p1, p0, Landroidx/core/view/WindowInsetsControllerCompat$Impl20;->mView:Landroid/view/View;
 
+    if-eqz p1, :cond_2
+
+    .line 2
     invoke-virtual {p1}, Landroid/view/View;->isInEditMode()Z
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_1
 
     invoke-virtual {p1}, Landroid/view/View;->onCheckIsTextEditor()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
+
+    .line 3
+    :cond_1
+    invoke-virtual {p1}, Landroid/view/View;->requestFocus()Z
 
     goto :goto_0
 
-    :cond_1
+    .line 4
+    :cond_2
     iget-object p1, p0, Landroidx/core/view/WindowInsetsControllerCompat$Impl20;->mWindow:Landroid/view/Window;
 
     invoke-virtual {p1}, Landroid/view/Window;->getCurrentFocus()Landroid/view/View;
 
     move-result-object p1
 
-    goto :goto_1
-
-    :cond_2
     :goto_0
-    invoke-virtual {p1}, Landroid/view/View;->requestFocus()Z
-
-    :goto_1
     if-nez p1, :cond_3
 
-    iget-object p0, p0, Landroidx/core/view/WindowInsetsControllerCompat$Impl20;->mWindow:Landroid/view/Window;
+    .line 5
+    iget-object p1, p0, Landroidx/core/view/WindowInsetsControllerCompat$Impl20;->mWindow:Landroid/view/Window;
 
-    const p1, 0x1020002
+    const v0, 0x1020002
 
-    invoke-virtual {p0, p1}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p1, v0}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
     :cond_3
     if-eqz p1, :cond_4
 
+    .line 6
     invoke-virtual {p1}, Landroid/view/View;->hasWindowFocus()Z
 
-    move-result p0
+    move-result v0
 
-    if-eqz p0, :cond_4
+    if-eqz v0, :cond_4
 
-    new-instance p0, Landroidx/core/view/k1;
+    .line 7
+    new-instance v0, Landroidx/core/view/WindowInsetsControllerCompat$Impl20$1;
 
-    invoke-direct {p0, p1}, Landroidx/core/view/k1;-><init>(Landroid/view/View;)V
+    invoke-direct {v0, p0, p1}, Landroidx/core/view/WindowInsetsControllerCompat$Impl20$1;-><init>(Landroidx/core/view/WindowInsetsControllerCompat$Impl20;Landroid/view/View;)V
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {p1, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     :cond_4
-    :goto_2
+    :goto_1
     return-void
 
+    .line 8
     :cond_5
     invoke-virtual {p0, v0}, Landroidx/core/view/WindowInsetsControllerCompat$Impl20;->unsetSystemUiFlag(I)V
 
@@ -228,10 +213,12 @@
     :cond_6
     const/4 p1, 0x4
 
+    .line 9
     invoke-virtual {p0, p1}, Landroidx/core/view/WindowInsetsControllerCompat$Impl20;->unsetSystemUiFlag(I)V
 
     const/16 p1, 0x400
 
+    .line 10
     invoke-virtual {p0, p1}, Landroidx/core/view/WindowInsetsControllerCompat$Impl20;->unsetWindowFlag(I)V
 
     return-void
@@ -275,6 +262,7 @@
 
     goto :goto_1
 
+    .line 1
     :cond_0
     invoke-direct {p0, v0}, Landroidx/core/view/WindowInsetsControllerCompat$Impl20;->hideForType(I)V
 
@@ -316,16 +304,20 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     invoke-virtual {p0, v1}, Landroidx/core/view/WindowInsetsControllerCompat$Impl20;->unsetSystemUiFlag(I)V
 
+    .line 2
     invoke-virtual {p0, v2}, Landroidx/core/view/WindowInsetsControllerCompat$Impl20;->setSystemUiFlag(I)V
 
     goto :goto_0
 
+    .line 3
     :cond_1
     invoke-virtual {p0, v2}, Landroidx/core/view/WindowInsetsControllerCompat$Impl20;->unsetSystemUiFlag(I)V
 
+    .line 4
     invoke-virtual {p0, v1}, Landroidx/core/view/WindowInsetsControllerCompat$Impl20;->setSystemUiFlag(I)V
 
     goto :goto_0
@@ -333,6 +325,7 @@
     :cond_2
     const/16 p1, 0x1800
 
+    .line 5
     invoke-virtual {p0, p1}, Landroidx/core/view/WindowInsetsControllerCompat$Impl20;->unsetSystemUiFlag(I)V
 
     :goto_0
@@ -342,18 +335,21 @@
 .method public setSystemUiFlag(I)V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/WindowInsetsControllerCompat$Impl20;->mWindow:Landroid/view/Window;
 
     invoke-virtual {p0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
     move-result-object p0
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getSystemUiVisibility()I
 
     move-result v0
 
     or-int/2addr p1, v0
 
+    .line 3
     invoke-virtual {p0, p1}, Landroid/view/View;->setSystemUiVisibility(I)V
 
     return-void
@@ -362,6 +358,7 @@
 .method public setWindowFlag(I)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/WindowInsetsControllerCompat$Impl20;->mWindow:Landroid/view/Window;
 
     invoke-virtual {p0, p1}, Landroid/view/Window;->addFlags(I)V
@@ -385,6 +382,7 @@
 
     goto :goto_1
 
+    .line 1
     :cond_0
     invoke-direct {p0, v0}, Landroidx/core/view/WindowInsetsControllerCompat$Impl20;->showForType(I)V
 
@@ -400,12 +398,14 @@
 .method public unsetSystemUiFlag(I)V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/WindowInsetsControllerCompat$Impl20;->mWindow:Landroid/view/Window;
 
     invoke-virtual {p0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
     move-result-object p0
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getSystemUiVisibility()I
 
     move-result v0
@@ -414,6 +414,7 @@
 
     and-int/2addr p1, v0
 
+    .line 3
     invoke-virtual {p0, p1}, Landroid/view/View;->setSystemUiVisibility(I)V
 
     return-void
@@ -422,6 +423,7 @@
 .method public unsetWindowFlag(I)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/WindowInsetsControllerCompat$Impl20;->mWindow:Landroid/view/Window;
 
     invoke-virtual {p0, p1}, Landroid/view/Window;->clearFlags(I)V

@@ -36,6 +36,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/support/v4/media/MediaBrowserCompat$g;-><init>(Landroid/content/Context;Landroid/content/ComponentName;Landroid/support/v4/media/MediaBrowserCompat$c;Landroid/os/Bundle;)V
 
     return-void
@@ -64,10 +65,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$g;->g:Landroid/support/v4/media/MediaBrowserCompat$m;
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$g;->b:Landroid/media/browse/MediaBrowser;
 
     iget-object p2, p2, Landroid/support/v4/media/MediaBrowserCompat$e;->a:Landroid/media/browse/MediaBrowser$ItemCallback;
@@ -76,6 +79,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/support/v4/media/MediaBrowserCompat$g;->n(Ljava/lang/String;Landroid/support/v4/media/MediaBrowserCompat$e;)V
 

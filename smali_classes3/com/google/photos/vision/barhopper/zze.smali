@@ -1,4 +1,4 @@
-.class final Lcom/google/photos/vision/barhopper/zze;
+.class public final Lcom/google/photos/vision/barhopper/zze;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,7 +7,7 @@
 
 
 # static fields
-.field static final zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeh;
+.field public static final zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeh;
 
 
 # direct methods

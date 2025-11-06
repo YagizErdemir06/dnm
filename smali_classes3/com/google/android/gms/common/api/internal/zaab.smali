@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/api/internal/zaab;
+.class public final Lcom/google/android/gms/common/api/internal/zaab;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field final synthetic zaa:Lcom/google/android/gms/common/api/internal/BasePendingResult;
+.field public final synthetic zaa:Lcom/google/android/gms/common/api/internal/BasePendingResult;
 
-.field final synthetic zab:Lcom/google/android/gms/common/api/internal/zaad;
+.field public final synthetic zab:Lcom/google/android/gms/common/api/internal/zaad;
 
 
 # direct methods
@@ -30,6 +30,7 @@
 .method public final onComplete(Lcom/google/android/gms/common/api/Status;)V
     .locals 0
 
+    .line 1
     iget-object p1, p0, Lcom/google/android/gms/common/api/internal/zaab;->zab:Lcom/google/android/gms/common/api/internal/zaad;
 
     invoke-static {p1}, Lcom/google/android/gms/common/api/internal/zaad;->zaa(Lcom/google/android/gms/common/api/internal/zaad;)Ljava/util/Map;

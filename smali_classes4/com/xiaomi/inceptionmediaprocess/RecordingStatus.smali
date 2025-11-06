@@ -31,6 +31,7 @@
 .method public static constructor <clinit>()V
     .locals 7
 
+    .line 1
     new-instance v0, Lcom/xiaomi/inceptionmediaprocess/RecordingStatus;
 
     const-string v1, "RecordingStopped"
@@ -41,6 +42,7 @@
 
     sput-object v0, Lcom/xiaomi/inceptionmediaprocess/RecordingStatus;->RecordingStopped:Lcom/xiaomi/inceptionmediaprocess/RecordingStatus;
 
+    .line 2
     new-instance v1, Lcom/xiaomi/inceptionmediaprocess/RecordingStatus;
 
     const-string v3, "RecordingPlaying"
@@ -51,6 +53,7 @@
 
     sput-object v1, Lcom/xiaomi/inceptionmediaprocess/RecordingStatus;->RecordingPlaying:Lcom/xiaomi/inceptionmediaprocess/RecordingStatus;
 
+    .line 3
     new-instance v3, Lcom/xiaomi/inceptionmediaprocess/RecordingStatus;
 
     const-string v5, "RecordingPaused"
@@ -71,6 +74,7 @@
 
     aput-object v3, v5, v6
 
+    .line 4
     sput-object v5, Lcom/xiaomi/inceptionmediaprocess/RecordingStatus;->$VALUES:[Lcom/xiaomi/inceptionmediaprocess/RecordingStatus;
 
     return-void
@@ -84,8 +88,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 2
     iput p3, p0, Lcom/xiaomi/inceptionmediaprocess/RecordingStatus;->nCode:I
 
     return-void
@@ -94,8 +100,10 @@
 .method public static int2enum(I)Lcom/xiaomi/inceptionmediaprocess/RecordingStatus;
     .locals 6
 
+    .line 1
     sget-object v0, Lcom/xiaomi/inceptionmediaprocess/RecordingStatus;->RecordingStopped:Lcom/xiaomi/inceptionmediaprocess/RecordingStatus;
 
+    .line 2
     invoke-static {}, Lcom/xiaomi/inceptionmediaprocess/RecordingStatus;->values()[Lcom/xiaomi/inceptionmediaprocess/RecordingStatus;
 
     move-result-object v1
@@ -109,6 +117,7 @@
 
     aget-object v4, v1, v3
 
+    .line 3
     invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
 
     move-result v5
@@ -129,6 +138,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/inceptionmediaprocess/RecordingStatus;
     .locals 1
 
+    .line 1
     const-class v0, Lcom/xiaomi/inceptionmediaprocess/RecordingStatus;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -143,6 +153,7 @@
 .method public static values()[Lcom/xiaomi/inceptionmediaprocess/RecordingStatus;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/inceptionmediaprocess/RecordingStatus;->$VALUES:[Lcom/xiaomi/inceptionmediaprocess/RecordingStatus;
 
     invoke-virtual {v0}, [Lcom/xiaomi/inceptionmediaprocess/RecordingStatus;->clone()Ljava/lang/Object;
@@ -159,6 +170,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/inceptionmediaprocess/RecordingStatus;->nCode:I
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;

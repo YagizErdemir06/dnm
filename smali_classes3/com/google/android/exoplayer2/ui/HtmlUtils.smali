@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/ui/HtmlUtils;
+.class public final Lcom/google/android/exoplayer2/ui/HtmlUtils;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,6 +7,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -15,6 +16,7 @@
 .method public static cssAllClassDescendantsSelector(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -53,6 +55,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 1
     invoke-static {p0}, Landroid/graphics/Color;->red(I)I
 
     move-result v1
@@ -109,6 +112,7 @@
 
     const-string p0, "rgba(%d,%d,%d,%.3f)"
 
+    .line 2
     invoke-static {p0, v0}, Lcom/google/android/exoplayer2/util/Util;->formatInvariant(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0

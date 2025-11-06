@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Ordering$ArbitraryOrderingHolder;
+.class public Lcom/google/common/collect/Ordering$ArbitraryOrderingHolder;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final ARBITRARY_ORDERING:Lcom/google/common/collect/Ordering;
+.field public static final ARBITRARY_ORDERING:Lcom/google/common/collect/Ordering;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/Ordering<",
@@ -30,6 +30,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/Ordering$ArbitraryOrdering;
 
     invoke-direct {v0}, Lcom/google/common/collect/Ordering$ArbitraryOrdering;-><init>()V
@@ -42,6 +43,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

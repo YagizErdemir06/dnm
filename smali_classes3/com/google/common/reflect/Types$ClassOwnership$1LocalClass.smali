@@ -1,4 +1,4 @@
-.class Lcom/google/common/reflect/Types$ClassOwnership$1LocalClass;
+.class public Lcom/google/common/reflect/Types$ClassOwnership$1LocalClass;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,6 +27,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

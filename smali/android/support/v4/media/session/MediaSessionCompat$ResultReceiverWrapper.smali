@@ -1,4 +1,4 @@
-.class final Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;
+.class public final Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -36,13 +36,14 @@
 
 
 # instance fields
-.field public a:Landroid/os/ResultReceiver;
+.field public c:Landroid/os/ResultReceiver;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper$a;
 
     invoke-direct {v0}, Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper$a;-><init>()V
@@ -75,7 +76,7 @@
 
     check-cast p1, Landroid/os/ResultReceiver;
 
-    iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;->a:Landroid/os/ResultReceiver;
+    iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;->c:Landroid/os/ResultReceiver;
 
     return-void
 .end method
@@ -99,7 +100,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;->a:Landroid/os/ResultReceiver;
+    iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;->c:Landroid/os/ResultReceiver;
 
     return-void
 .end method
@@ -127,7 +128,8 @@
         }
     .end annotation
 
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;->a:Landroid/os/ResultReceiver;
+    .line 1
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;->c:Landroid/os/ResultReceiver;
 
     invoke-virtual {p0, p1, p2}, Landroid/os/ResultReceiver;->writeToParcel(Landroid/os/Parcel;I)V
 

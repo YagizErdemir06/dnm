@@ -197,6 +197,7 @@
 
     move-object/from16 v7, p1
 
+    .line 1
     array-length v1, v7
 
     const/4 v8, 0x0
@@ -217,16 +218,19 @@
 
     invoke-static {v1, v3}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 2
     invoke-static/range {p1 .. p1}, Lcom/google/common/math/Quantiles;->access$600([D)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
+    .line 3
     new-instance v1, Ljava/util/LinkedHashMap;
 
     invoke-direct {v1}, Ljava/util/LinkedHashMap;-><init>()V
 
+    .line 4
     iget-object v0, v0, Lcom/google/common/math/Quantiles$ScaleAndIndexes;->indexes:[I
 
     array-length v2, v0
@@ -236,6 +240,7 @@
 
     aget v3, v0, v8
 
+    .line 5
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -252,6 +257,7 @@
 
     goto :goto_1
 
+    .line 6
     :cond_1
     invoke-static {v1}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
@@ -259,6 +265,7 @@
 
     return-object v0
 
+    .line 7
     :cond_2
     iget-object v1, v0, Lcom/google/common/math/Quantiles$ScaleAndIndexes;->indexes:[I
 
@@ -266,10 +273,12 @@
 
     new-array v9, v3, [I
 
+    .line 8
     array-length v3, v1
 
     new-array v10, v3, [I
 
+    .line 9
     array-length v1, v1
 
     mul-int/lit8 v1, v1, 0x2
@@ -280,6 +289,7 @@
 
     move v4, v3
 
+    .line 10
     :goto_2
     iget-object v5, v0, Lcom/google/common/math/Quantiles$ScaleAndIndexes;->indexes:[I
 
@@ -287,6 +297,7 @@
 
     if-ge v3, v6, :cond_4
 
+    .line 11
     aget v5, v5, v3
 
     int-to-long v5, v5
@@ -299,6 +310,7 @@
 
     mul-long/2addr v5, v11
 
+    .line 12
     iget v11, v0, Lcom/google/common/math/Quantiles$ScaleAndIndexes;->scale:I
 
     int-to-long v11, v11
@@ -313,6 +325,7 @@
 
     int-to-long v12, v11
 
+    .line 13
     iget v14, v0, Lcom/google/common/math/Quantiles$ScaleAndIndexes;->scale:I
 
     int-to-long v14, v14
@@ -323,10 +336,13 @@
 
     long-to-int v5, v5
 
+    .line 14
     aput v11, v9, v3
 
+    .line 15
     aput v5, v10, v3
 
+    .line 16
     aput v11, v1, v4
 
     add-int/lit8 v4, v4, 0x1
@@ -335,6 +351,7 @@
 
     add-int/lit8 v11, v11, 0x1
 
+    .line 17
     aput v11, v1, v4
 
     add-int/lit8 v4, v4, 0x1
@@ -344,6 +361,7 @@
 
     goto :goto_2
 
+    .line 18
     :cond_4
     invoke-static {v1, v8, v4}, Ljava/util/Arrays;->sort([III)V
 
@@ -353,6 +371,7 @@
 
     const/4 v5, 0x0
 
+    .line 19
     array-length v6, v7
 
     sub-int/2addr v6, v2
@@ -365,10 +384,12 @@
 
     invoke-static/range {v1 .. v6}, Lcom/google/common/math/Quantiles;->access$900([III[DII)V
 
+    .line 20
     new-instance v1, Ljava/util/LinkedHashMap;
 
     invoke-direct {v1}, Ljava/util/LinkedHashMap;-><init>()V
 
+    .line 21
     :goto_3
     iget-object v2, v0, Lcom/google/common/math/Quantiles$ScaleAndIndexes;->indexes:[I
 
@@ -376,12 +397,15 @@
 
     if-ge v8, v3, :cond_6
 
+    .line 22
     aget v3, v9, v8
 
+    .line 23
     aget v4, v10, v8
 
     if-nez v4, :cond_5
 
+    .line 24
     aget v2, v2, v8
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -398,9 +422,11 @@
 
     goto :goto_4
 
+    .line 25
     :cond_5
     aget v2, v2, v8
 
+    .line 26
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -429,6 +455,7 @@
 
     move-result-object v3
 
+    .line 27
     invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :goto_4
@@ -436,6 +463,7 @@
 
     goto :goto_3
 
+    .line 28
     :cond_6
     invoke-static {v1}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 

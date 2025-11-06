@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature;->ni()V
+    value = Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature;->yd()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,14 +18,23 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature;
+.field public final synthetic c:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature$c;->a:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature;
+    .line 1
+    iput-object p1, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature$c;->c:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,12 +45,21 @@
 # virtual methods
 .method public onDismiss(Landroid/content/DialogInterface;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "dialog"
+        }
+    .end annotation
 
-    iget-object p0, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature$c;->a:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature;
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature$c;->c:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature;
 
     const/4 p1, 0x0
 
-    invoke-static {p0, p1}, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature;->ai(Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature;Lmiuix/appcompat/app/AlertDialog;)Lmiuix/appcompat/app/AlertDialog;
+    invoke-static {p0, p1}, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature;->qb(Lcom/xiaomi/microfilm/vlog/vv/FragmentVVFeature;Lmiuix/appcompat/app/AlertDialog;)Lmiuix/appcompat/app/AlertDialog;
 
     return-void
 .end method

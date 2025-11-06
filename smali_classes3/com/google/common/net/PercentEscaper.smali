@@ -40,10 +40,12 @@
 
     aput-char v2, v0, v1
 
+    .line 1
     sput-object v0, Lcom/google/common/net/PercentEscaper;->PLUS_SIGN:[C
 
     const-string v0, "0123456789ABCDEF"
 
+    .line 2
     invoke-virtual {v0}, Ljava/lang/String;->toCharArray()[C
 
     move-result-object v0
@@ -56,12 +58,15 @@
 .method public constructor <init>(Ljava/lang/String;Z)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/escape/UnicodeEscaper;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v0, ".*[0-9A-Za-z].*"
 
+    .line 3
     invoke-virtual {p1, v0}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
 
     move-result v0
@@ -70,6 +75,7 @@
 
     const-string v0, "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 
+    .line 4
     invoke-virtual {p1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -78,6 +84,7 @@
 
     const-string v0, " "
 
+    .line 5
     invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -86,6 +93,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -95,10 +103,12 @@
 
     throw p0
 
+    .line 7
     :cond_1
     :goto_0
     iput-boolean p2, p0, Lcom/google/common/net/PercentEscaper;->plusForSpace:Z
 
+    .line 8
     invoke-static {p1}, Lcom/google/common/net/PercentEscaper;->createSafeOctets(Ljava/lang/String;)[Z
 
     move-result-object p1
@@ -107,6 +117,7 @@
 
     return-void
 
+    .line 9
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -120,26 +131,29 @@
 .method private static createSafeOctets(Ljava/lang/String;)[Z
     .locals 5
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->toCharArray()[C
 
     move-result-object p0
 
+    .line 2
     array-length v0, p0
 
-    const/4 v1, -0x1
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const/4 v2, -0x1
 
-    move v3, v2
+    move v3, v1
 
     :goto_0
     if-ge v3, v0, :cond_0
 
     aget-char v4, p0, v3
 
-    invoke-static {v4, v1}, Ljava/lang/Math;->max(II)I
+    .line 3
+    invoke-static {v4, v2}, Ljava/lang/Math;->max(II)I
 
-    move-result v1
+    move-result v2
 
     add-int/lit8 v3, v3, 0x1
 
@@ -148,25 +162,28 @@
     :cond_0
     const/4 v0, 0x1
 
-    add-int/2addr v1, v0
+    add-int/2addr v2, v0
 
-    new-array v1, v1, [Z
+    .line 4
+    new-array v2, v2, [Z
 
+    .line 5
     array-length v3, p0
 
     :goto_1
-    if-ge v2, v3, :cond_1
+    if-ge v1, v3, :cond_1
 
-    aget-char v4, p0, v2
+    aget-char v4, p0, v1
 
-    aput-boolean v0, v1, v4
+    .line 6
+    aput-boolean v0, v2, v4
 
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
     :cond_1
-    return-object v1
+    return-object v2
 .end method
 
 
@@ -445,76 +462,76 @@
 
     aput-char v3, p0, v10
 
+    const/16 v0, 0xb
+
     .line 20
-    sget-object v0, Lcom/google/common/net/PercentEscaper;->UPPER_HEX_DIGITS:[C
+    sget-object v1, Lcom/google/common/net/PercentEscaper;->UPPER_HEX_DIGITS:[C
 
-    and-int/lit8 v1, p1, 0xf
+    and-int/lit8 v3, p1, 0xf
 
-    aget-char v1, v0, v1
+    aget-char v3, v1, v3
 
-    const/16 v3, 0xb
-
-    aput-char v1, p0, v3
+    aput-char v3, p0, v0
 
     ushr-int/2addr p1, v5
 
-    and-int/lit8 v1, p1, 0x3
+    const/16 v0, 0xa
 
-    or-int/2addr v1, v9
+    and-int/lit8 v3, p1, 0x3
+
+    or-int/2addr v3, v9
 
     .line 21
-    aget-char v1, v0, v1
+    aget-char v3, v1, v3
 
-    const/16 v3, 0xa
-
-    aput-char v1, p0, v3
+    aput-char v3, p0, v0
 
     ushr-int/2addr p1, v2
 
-    and-int/lit8 v1, p1, 0xf
+    and-int/lit8 v0, p1, 0xf
 
     .line 22
-    aget-char v1, v0, v1
+    aget-char v0, v1, v0
 
-    aput-char v1, p0, v9
+    aput-char v0, p0, v9
 
     ushr-int/2addr p1, v5
 
-    and-int/lit8 v1, p1, 0x3
+    and-int/lit8 v0, p1, 0x3
 
-    or-int/2addr v1, v9
+    or-int/2addr v0, v9
 
     .line 23
-    aget-char v1, v0, v1
+    aget-char v0, v1, v0
 
-    aput-char v1, p0, v11
+    aput-char v0, p0, v11
 
     ushr-int/2addr p1, v2
 
-    and-int/lit8 v1, p1, 0xf
+    and-int/lit8 v0, p1, 0xf
 
     .line 24
-    aget-char v1, v0, v1
+    aget-char v0, v1, v0
 
-    aput-char v1, p0, v7
+    aput-char v0, p0, v7
 
     ushr-int/2addr p1, v5
 
-    and-int/lit8 v1, p1, 0x3
+    and-int/lit8 v0, p1, 0x3
 
-    or-int/2addr v1, v9
+    or-int/2addr v0, v9
 
     .line 25
-    aget-char v1, v0, v1
+    aget-char v0, v1, v0
 
-    aput-char v1, p0, v5
+    aput-char v0, p0, v5
 
     ushr-int/2addr p1, v2
 
     and-int/2addr p1, v11
 
     .line 26
-    aget-char p1, v0, p1
+    aget-char p1, v1, p1
 
     aput-char p1, p0, v2
 
@@ -524,19 +541,19 @@
     :cond_5
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/16 v0, 0x2b
 
-    const/16 v1, 0x2b
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    const-string v1, "Invalid unicode character value "
+    const-string v0, "Invalid unicode character value "
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
@@ -548,15 +565,18 @@
 .method public nextEscapeIndex(Ljava/lang/CharSequence;II)I
     .locals 3
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     :goto_0
     if-ge p2, p3, :cond_1
 
+    .line 2
     invoke-interface {p1, p2}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v0
 
+    .line 3
     iget-object v1, p0, Lcom/google/common/net/PercentEscaper;->safeOctets:[Z
 
     array-length v2, v1

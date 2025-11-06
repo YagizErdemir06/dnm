@@ -46,6 +46,7 @@
 .method public static constructor <clinit>()V
     .locals 19
 
+    .line 1
     new-instance v6, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;
 
     const-string v1, "TIMER_TYPE_CANCEL_DISCOVERY"
@@ -62,6 +63,7 @@
 
     sput-object v6, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;->TIMER_TYPE_CANCEL_DISCOVERY:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;
 
+    .line 2
     new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;
 
     const-string v8, "TIMER_TYPE_CANCEL_CONNECTION"
@@ -78,6 +80,7 @@
 
     sput-object v0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;->TIMER_TYPE_CANCEL_CONNECTION:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;
 
+    .line 3
     new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;
 
     const-string v14, "TIMER_TYPE_RESET_STATE"
@@ -94,6 +97,7 @@
 
     sput-object v1, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;->TIMER_TYPE_RESET_STATE:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;
 
+    .line 4
     new-instance v2, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;
 
     const-string v8, "TIMER_TYPE_RESET_CONNECTION"
@@ -110,6 +114,7 @@
 
     sput-object v2, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;->TIMER_TYPE_RESET_CONNECTION:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;
 
+    .line 5
     new-instance v3, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;
 
     const-string v14, "TIMER_TYPE_CONNECT_ACK"
@@ -148,6 +153,7 @@
 
     aput-object v3, v4, v0
 
+    .line 6
     sput-object v4, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;->$VALUES:[Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;
 
     return-void
@@ -155,16 +161,34 @@
 
 .method private constructor <init>(Ljava/lang/String;IIJ)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000,
+            0x0,
+            0x0
+        }
+        names = {
+            "$enum$name",
+            "$enum$ordinal",
+            "type",
+            "delayMillis"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(IJ)V"
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 2
     iput p3, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;->type:I
 
+    .line 3
     iput-wide p4, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;->delayMillis:J
 
     return-void
@@ -172,7 +196,16 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8000
+        }
+        names = {
+            "name"
+        }
+    .end annotation
 
+    .line 1
     const-class v0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -187,6 +220,7 @@
 .method public static values()[Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;->$VALUES:[Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;
 
     invoke-virtual {v0}, [Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;->clone()Ljava/lang/Object;

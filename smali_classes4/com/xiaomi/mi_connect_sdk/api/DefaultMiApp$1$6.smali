@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1$6;
+.class public Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1$6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,21 +18,22 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;
+.field public final synthetic this$1:Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;
 
-.field final synthetic val$appConnResult:I
+.field public final synthetic val$appConnResult:I
 
-.field final synthetic val$appEndPointId:I
+.field public final synthetic val$appEndPointId:I
 
-.field final synthetic val$appEndPointInfo:Ljava/lang/String;
+.field public final synthetic val$appEndPointInfo:Ljava/lang/String;
 
-.field final synthetic val$appId:I
+.field public final synthetic val$appId:I
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;IILjava/lang/String;I)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1$6;->this$1:Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;
 
     iput p2, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1$6;->val$appId:I
@@ -53,6 +54,7 @@
 .method public run()V
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1$6;->this$1:Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;
 
     iget-object v0, v0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;->this$0:Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;

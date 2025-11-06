@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/FilteredEntryMultimap$AsMap$1KeySetImpl;
+.class public Lcom/google/common/collect/FilteredEntryMultimap$AsMap$1KeySetImpl;
 .super Lcom/google/common/collect/Maps$KeySet;
 .source "SourceFile"
 
@@ -24,15 +24,17 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/google/common/collect/FilteredEntryMultimap$AsMap;
+.field public final synthetic this$1:Lcom/google/common/collect/FilteredEntryMultimap$AsMap;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/FilteredEntryMultimap$AsMap;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/FilteredEntryMultimap$AsMap$1KeySetImpl;->this$1:Lcom/google/common/collect/FilteredEntryMultimap$AsMap;
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/common/collect/Maps$KeySet;-><init>(Ljava/util/Map;)V
 
     return-void
@@ -47,6 +49,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/FilteredEntryMultimap$AsMap$1KeySetImpl;->this$1:Lcom/google/common/collect/FilteredEntryMultimap$AsMap;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/FilteredEntryMultimap$AsMap;->remove(Ljava/lang/Object;)Ljava/util/Collection;
@@ -76,6 +79,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/FilteredEntryMultimap$AsMap$1KeySetImpl;->this$1:Lcom/google/common/collect/FilteredEntryMultimap$AsMap;
 
     iget-object p0, p0, Lcom/google/common/collect/FilteredEntryMultimap$AsMap;->this$0:Lcom/google/common/collect/FilteredEntryMultimap;
@@ -105,6 +109,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/FilteredEntryMultimap$AsMap$1KeySetImpl;->this$1:Lcom/google/common/collect/FilteredEntryMultimap$AsMap;
 
     iget-object p0, p0, Lcom/google/common/collect/FilteredEntryMultimap$AsMap;->this$0:Lcom/google/common/collect/FilteredEntryMultimap;

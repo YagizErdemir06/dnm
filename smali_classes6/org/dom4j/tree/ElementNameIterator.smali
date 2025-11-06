@@ -11,8 +11,10 @@
 .method public constructor <init>(Ljava/util/Iterator;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lorg/dom4j/tree/FilterIterator;-><init>(Ljava/util/Iterator;)V
 
+    .line 2
     iput-object p2, p0, Lorg/dom4j/tree/ElementNameIterator;->name:Ljava/lang/String;
 
     return-void
@@ -23,12 +25,15 @@
 .method public matches(Ljava/lang/Object;)Z
     .locals 1
 
+    .line 1
     instance-of v0, p1, Lorg/dom4j/Element;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lorg/dom4j/Element;
 
+    .line 3
     iget-object p0, p0, Lorg/dom4j/tree/ElementNameIterator;->name:Ljava/lang/String;
 
     invoke-interface {p1}, Lorg/dom4j/Node;->getName()Ljava/lang/String;

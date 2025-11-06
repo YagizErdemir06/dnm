@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/camera/mivi/ImageReceiverExecutor$2;
+.class public Lcom/xiaomi/camera/mivi/ImageReceiverExecutor$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,22 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;
+.field public final synthetic this$0:Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor$2;->this$0:Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +45,16 @@
 # virtual methods
 .method public onError(Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "reason"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -55,6 +73,7 @@
 
     invoke-static {v0, p1}, Lcom/android/camera/log/LogK;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 2
     iget-object p0, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor$2;->this$0:Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;
 
     invoke-static {p0}, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->access$000(Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;)Ljava/util/concurrent/Semaphore;
@@ -68,8 +87,17 @@
 
 .method public onSuccess(Lcom/xiaomi/camera/mivi/bean/ResultOutputData;)V
     .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "result"
+        }
+    .end annotation
 
-    invoke-static {}, Lse/d;->l()Lse/d;
+    .line 1
+    invoke-static {}, Ld/o/f/d;->i()Ld/o/f/d;
 
     move-result-object v0
 
@@ -83,13 +111,14 @@
 
     const/4 v4, 0x0
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Lse/d;->n(Ljava/lang/String;JZ)Lye/w;
+    invoke-virtual {v0, v1, v2, v3, v4}, Ld/o/f/d;->k(Ljava/lang/String;JZ)Ld/o/f/i/a0;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lp8/m;->x()Lp8/m;
+    .line 2
+    invoke-static {}, Ld/d/a/h7/n;->n()Ld/d/a/h7/n;
 
     move-result-object v1
 
@@ -101,7 +130,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lye/w;->N()J
+    invoke-virtual {v0}, Ld/o/f/i/a0;->N()J
 
     move-result-wide v5
 
@@ -111,8 +140,9 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lp8/m;->s(Ljava/lang/String;)J
+    invoke-virtual {v1, v0}, Ld/d/a/h7/n;->i(Ljava/lang/String;)J
 
+    .line 3
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -134,16 +164,19 @@
 
     invoke-static {v2, v0, v1}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {}, Lse/d;->l()Lse/d;
+    .line 4
+    invoke-static {}, Ld/o/f/d;->i()Ld/o/f/d;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lse/d;->w(Lcom/xiaomi/camera/mivi/bean/ResultOutputData;)V
+    invoke-virtual {v0, p1}, Ld/o/f/d;->w(Lcom/xiaomi/camera/mivi/bean/ResultOutputData;)V
 
     const-string p1, "[3] onReprocessSuccess: start notify next reprocess task."
 
+    .line 5
     invoke-static {v2, p1}, Lcom/android/camera/log/LogK;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 6
     iget-object p0, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor$2;->this$0:Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;
 
     invoke-static {p0}, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->access$000(Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;)Ljava/util/concurrent/Semaphore;

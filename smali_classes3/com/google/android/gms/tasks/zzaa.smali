@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/tasks/zzaa;
+.class public final Lcom/google/android/gms/tasks/zzaa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field final synthetic zza:Ljava/util/Collection;
+.field public final synthetic zza:Ljava/util/Collection;
 
 
 # direct methods
@@ -35,12 +35,14 @@
         }
     .end annotation
 
+    .line 1
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iget-object p0, p0, Lcom/google/android/gms/tasks/zzaa;->zza:Ljava/util/Collection;
 
+    .line 2
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -58,6 +60,7 @@
 
     check-cast v0, Lcom/google/android/gms/tasks/Task;
 
+    .line 3
     invoke-virtual {v0}, Lcom/google/android/gms/tasks/Task;->getResult()Ljava/lang/Object;
 
     move-result-object v0

@@ -205,7 +205,6 @@
     <string name="accessibility_video_capture_button">ປຸ່ມສຳລັບຖ່າຍຮູບໃນຂະນະທີ່ຖ່າຍວິດີໂອ</string>
     <string name="accessibility_video_pause_button">ຢຸດບັນທຶກວິດີໂອຊົ່ວຄາວ</string>
     <string name="accessibility_video_resume_button">ສືບຕໍ່ບັນທຶກວິດີໂອ</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">ລາຍນ້ຳປິດຢູ່</string>
     <string name="accessibility_watermark_image_on">ລາຍນ້ຳເປີດຢູ່</string>
     <string name="accessibility_watermark_text">ເປີດແຜງການປັບລາຍນ້ຳ</string>
@@ -213,16 +212,6 @@
     <string name="accessibility_zoom_button">ໂໝດການຊູມ</string>
     <string name="actionbar_button_up_description">​ກັບ​ຄືນ</string>
     <string name="afternoon">ຕອນບ່າຍ</string>
-    <string name="agent_flip_tbc">ສືບຕໍ່ຢູ່ໃນໜ້າຈໍພາຍໃນ</string>
-    <string name="agent_function_max">ປັບເປັນຄ່າສູງສຸດ</string>
-    <string name="agent_function_min">ປັບເປັນຄ່າຕໍ່າສຸດ</string>
-    <string name="agent_workspace_mode_not_supported">ບໍ່ຮອງຮັບຄຸນສົມບັດນີ້</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"ບໍ່ຮອງຮັບຄຸນສົມບັດນີ້.
-ເປີດໂໝດຖ່າຍຮູບແທນ."</string>
-    <string name="agent_workspace_on">ຊຸດພາຣາມິເຕີສໍາລັບການຖ່າຍຮູບ \"%1$s\"</string>
-    <string name="agent_workspace_tbc">ຮຽນຮູ້ສາກ</string>
-    <string name="agent_workspace_tbc_use_default">"ຮຽນຮູ້ສາກ…
-ພາຣາມິເຕີກ້ອງຖ່າຍຮູບຕັ້ງເປັນຄ່າເລີ່ມຕົ້ນ"</string>
     <string name="ai_agra_fort">ປ້ອມ Agra</string>
     <string name="ai_amber_fort">ພະລາຊະວັງ Amber</string>
     <string name="ai_baby">ເດັກນ້ອຍ</string>
@@ -781,7 +770,6 @@
     <string name="download_hint_cn">"Looks like your device isn't connected to WLAN. Use %1$s MB of mobile data to download items now?"</string>
     <string name="download_hint_wifi">ອຸປະກອນຂອງທ່ານບໍ່ໄດ້ເຊື່ອມຕໍ່ກັບ Wi-Fi. ໃຊ້ເນັດມືຖື %1$s MB ເພື່ອດາວໂຫຼດລາຍການໃໝ່ຕອນນີ້?</string>
     <string name="download_in_progress">​ກຳ​ລັງ​ດາວ​ໂຫຼດ…</string>
-    <string name="download_network_error">ບໍ່ສາມາດດາວໂຫຼດໄດ້. ກວດສອບການຕັ້ງຄ່າເຄືອຂ່າຍຂອງທ່ານ.</string>
     <string name="download_title">​ແຈ້ງເຕືອນ​ການນຳໃຊ້​ຂໍ້​ມູນ</string>
     <string name="download_waiting">ລໍຖ້າດຳເນີນການ…</string>
     <string name="dual_camera_lens_covered_toast">ເລນຖືກບັງ.</string>
@@ -1260,7 +1248,6 @@
     <string name="miuix_appcompat_delete_description">ລົບ</string>
     <string name="miuix_appcompat_deselect_all">​ຍົກ​ເລີກ​ການ​ເລືອກ​ທັງ​ໝົດ</string>
     <string name="miuix_appcompat_deselect_all_description">​ຍົກ​ເລີກ​ການ​ເລືອກ​ທັງ​ໝົດ</string>
-    <string name="miuix_appcompat_edit">​ແກ້​ໄຂ</string>
     <string name="miuix_appcompat_search_action_mode_cancel">ຍົກເລີກ</string>
     <string name="miuix_appcompat_search_input_description">​ຄົ້ນ​ຫາ</string>
     <string name="miuix_appcompat_select_all">​ເລືອກ​ທັງ​ໝົດ</string>
@@ -2199,7 +2186,6 @@
     <string name="time_picker_label_hour">H</string>
     <string name="time_picker_label_minute">M</string>
     <string name="time_stamp_date_format">dd/MM/yyyy</string>
-    <string name="time_stamp_date_format_minute">dd/MM/yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">ທ່ານສາມາດແຊ່ແຂງແລະຍົກເລີກແຊ່ແຂງພື້ນຫຼັງໄດ້ທຸກໃນເວລາກ່ອນຫຼືລະຫວ່າງການຖ່າຍ.</string>
     <string name="timefreeze_guide_tip3">ໃຫ້ວັດຖຸຂອງທ່ານຢູ່ກາງເຟຣມ.</string>
     <string name="timefreeze_guide_tip4">ເຮັດໃຫ້ຮູບການຈະລາຈອນຢຸດ</string>
@@ -2237,7 +2223,7 @@
     <string name="tip_flash_screen_light_on">Flash ອ່ອນ: ເປີດ</string>
     <string name="tip_flash_soft_light_off">Flash ອ່ອນ: ປິດ</string>
     <string name="tip_flash_soft_light_torch">flash ອ່ອນ: ໂໝດໄຟສາຍ</string>
-    <string name="tip_flash_torch">Flash: ໄຟສາຍ</string>
+    <string name="tip_flash_torch">Flash: ເປີດຕະຫຼອດ</string>
     <string name="tip_friend_mode_connect_when_24GHz">ໃຊ້ການເຊື່ອມຕໍ່ %s GHz ເພື່ອເພີ່ມຄຸນນະພາບການສະແດງຕົວຢ່າງ</string>
     <string name="tip_friend_mode_display_device_name_connect">ເບິ່ງຕົວຢ່າງຢູ່ແຊຣ໌</string>
     <string name="tip_friend_mode_display_device_name_disconnect">ອູປະກອນອື່ນອອກຈາກເຊັດສ໌ຊັ່ນນີ້</string>

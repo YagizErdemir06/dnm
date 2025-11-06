@@ -15,49 +15,49 @@
 
 
 # static fields
-.field public static final alpha:I = 0x7f040088
+.field public static final alpha:I = 0x7f040077
 
-.field public static final fastScrollEnabled:I = 0x7f0402e4
+.field public static final fastScrollEnabled:I = 0x7f0401bc
 
-.field public static final fastScrollHorizontalThumbDrawable:I = 0x7f0402e5
+.field public static final fastScrollHorizontalThumbDrawable:I = 0x7f0401bd
 
-.field public static final fastScrollHorizontalTrackDrawable:I = 0x7f0402e6
+.field public static final fastScrollHorizontalTrackDrawable:I = 0x7f0401be
 
-.field public static final fastScrollVerticalThumbDrawable:I = 0x7f0402e7
+.field public static final fastScrollVerticalThumbDrawable:I = 0x7f0401bf
 
-.field public static final fastScrollVerticalTrackDrawable:I = 0x7f0402e8
+.field public static final fastScrollVerticalTrackDrawable:I = 0x7f0401c0
 
-.field public static final font:I = 0x7f04031f
+.field public static final font:I = 0x7f0401dc
 
-.field public static final fontProviderAuthority:I = 0x7f040321
+.field public static final fontProviderAuthority:I = 0x7f0401de
 
-.field public static final fontProviderCerts:I = 0x7f040322
+.field public static final fontProviderCerts:I = 0x7f0401df
 
-.field public static final fontProviderFetchStrategy:I = 0x7f040323
+.field public static final fontProviderFetchStrategy:I = 0x7f0401e0
 
-.field public static final fontProviderFetchTimeout:I = 0x7f040324
+.field public static final fontProviderFetchTimeout:I = 0x7f0401e1
 
-.field public static final fontProviderPackage:I = 0x7f040325
+.field public static final fontProviderPackage:I = 0x7f0401e2
 
-.field public static final fontProviderQuery:I = 0x7f040326
+.field public static final fontProviderQuery:I = 0x7f0401e3
 
-.field public static final fontStyle:I = 0x7f040328
+.field public static final fontStyle:I = 0x7f0401e5
 
-.field public static final fontVariationSettings:I = 0x7f040329
+.field public static final fontVariationSettings:I = 0x7f0401e6
 
-.field public static final fontWeight:I = 0x7f04032a
+.field public static final fontWeight:I = 0x7f0401e7
 
-.field public static final layoutManager:I = 0x7f0403d5
+.field public static final layoutManager:I = 0x7f04023c
 
-.field public static final recyclerViewStyle:I = 0x7f0405d6
+.field public static final recyclerViewStyle:I = 0x7f040386
 
-.field public static final reverseLayout:I = 0x7f0405e2
+.field public static final reverseLayout:I = 0x7f04038f
 
-.field public static final spanCount:I = 0x7f040658
+.field public static final spanCount:I = 0x7f0403de
 
-.field public static final stackFromEnd:I = 0x7f040672
+.field public static final stackFromEnd:I = 0x7f0403f1
 
-.field public static final ttcIndex:I = 0x7f040794
+.field public static final ttcIndex:I = 0x7f04048f
 
 
 # direct methods

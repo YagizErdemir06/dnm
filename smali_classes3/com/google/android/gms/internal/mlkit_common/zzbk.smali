@@ -13,6 +13,7 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     sget-object v0, Lcom/google/android/gms/internal/mlkit_common/zzbn;->zza:Lcom/google/android/gms/internal/mlkit_common/zzbn;

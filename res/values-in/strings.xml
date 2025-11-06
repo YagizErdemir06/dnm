@@ -232,7 +232,6 @@
     <string name="accessibility_video_capture_button">Tombol untuk mengambil foto saat merekam video</string>
     <string name="accessibility_video_pause_button">Perekaman video dijeda</string>
     <string name="accessibility_video_resume_button">Perekaman video dilanjutkan</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">Watermark dimatikan</string>
     <string name="accessibility_watermark_image_on">Watermark dihidupkan</string>
     <string name="accessibility_watermark_text">Buka panel pengaturan watermark</string>
@@ -240,16 +239,6 @@
     <string name="accessibility_zoom_button">Mode zoom</string>
     <string name="actionbar_button_up_description">Kembali</string>
     <string name="afternoon">Siang</string>
-    <string name="agent_flip_tbc">Lanjutkan di layar dalam</string>
-    <string name="agent_function_max">Disesuaikan dengan nilai maksimum</string>
-    <string name="agent_function_min">Disesuaikan dengan nilai minimum</string>
-    <string name="agent_workspace_mode_not_supported">Fitur ini tidak didukung</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"Fitur ini tidak didukung.
-Mode Foto telah dibuka."</string>
-    <string name="agent_workspace_on">Setelan parameter untuk fotografi \"%1$s\"</string>
-    <string name="agent_workspace_tbc">Mempelajari suasana</string>
-    <string name="agent_workspace_tbc_use_default">"Mempelajari suasana…
-Parameter kamera disetel sebagai default"</string>
     <string name="ai_agra_fort">Agra Fort</string>
     <string name="ai_amber_fort">Istana Amber</string>
     <string name="ai_baby">Bayi</string>
@@ -476,7 +465,6 @@ dan otomatis menyesuaikan preferensi"</string>
     <string name="bluetooth_headset_permission_des">Untuk menentukan status koneksi earphone Bluetooth dan merekam audio menggunakan mikrofon earphone</string>
     <string name="bluetooth_permission_not_ask_again">Izinkan apl ini terhubung ke perangkat sekitar di Setelan agar dapat terhubung ke earphone Bluetooth.</string>
     <string name="bokeh_use_hint">Efek kedalaman</string>
-    <string name="bottomsheet_action_expand_halfway">Luaskan setengah</string>
     <string name="burst_shoot_exit_button_text">Matikan Foto beruntun</string>
     <string name="button_fisheye_camera_title">Mata ikan</string>
     <string name="button_front_camera_title">Foto selfie</string>
@@ -517,8 +505,6 @@ dan otomatis menyesuaikan preferensi"</string>
     <string name="ccc_temperature_warning_msg">Perangkat Anda terlalu panas. Kamera akan ditutup dalam %d detik. Foto dan video Anda akan otomatis disimpan.</string>
     <string name="ccc_temperature_warning_title">Perangkat terlalu panas</string>
     <string name="center_mark">Tanda tengah</string>
-    <string name="character_counter_content_description">Karakter yang dimasukkan %1$d dari %2$d</string>
-    <string name="character_counter_overflowed_content_description">Melebihi batas karakter %1$d dari %2$d</string>
     <string name="cinemaster_cancel">Batal</string>
     <string name="cinemaster_confirm">Keluar</string>
     <string name="cinemaster_connect_exit_message">Keluar dari pengaturan multi kamera?</string>
@@ -537,7 +523,6 @@ dan otomatis menyesuaikan preferensi"</string>
     <string name="cinemaster_toast_monitor_disconnect">Monitor terputus dari pengaturan multi kamera</string>
     <string name="cinemaster_toast_monitor_play_error">Kamera %s terputus dari pengaturan multi kamera karena ada kesalahan</string>
     <string name="cinemaster_wifi_24g_tips">Berganti ke jaringan %s GHz untuk meningkatkan kestabilan umpan monitor</string>
-    <string name="clear_text_end_icon_content_description">Menghapus teks</string>
     <string name="clearable_edittext_clear_description">Bersihkan</string>
     <string name="clone_adjust">Atur</string>
     <string name="clone_copy_mode">Freeze frame</string>
@@ -831,7 +816,6 @@ meningkatkan dokumen yang dipindai"</string>
     <string name="download_hint_cn">Sepertinya perangkat Anda tidak terhubung ke WLAN. Gunakan %1$s MB data seluler untuk mengunduh item sekarang?</string>
     <string name="download_hint_wifi">Sepertinya perangkat Anda tidak terhubung ke Wi-Fi. Gunakan %1$s MB data seluler untuk mengunduh item sekarang?</string>
     <string name="download_in_progress">Mengunduh…</string>
-    <string name="download_network_error">Tidak dapat mengunduh. Periksa setelan jaringan.</string>
     <string name="download_title">Peringatan penggunaan data</string>
     <string name="download_waiting">Dijeda…</string>
     <string name="dual_camera_lens_covered_toast">Lensa tertutup.</string>
@@ -882,7 +866,6 @@ Perekaman ponsel ganda juga memungkinkan Anda untuk terhubung ke perangkat di se
     <string name="eras_ad">Masehi</string>
     <string name="eras_bc">Sebelum Masehi</string>
     <string name="error_fail_to_start_audio_capture">Tidak dapat mulai pengambilan audio</string>
-    <string name="error_icon_content_description">Error</string>
     <string name="esp_tip">Pratinjau tampilan luar</string>
     <string name="evening">Siang</string>
     <string name="exo_controls_cc_disabled_description">Aktifkan subtitel</string>
@@ -937,7 +920,6 @@ Perekaman ponsel ganda juga memungkinkan Anda untuk terhubung ke perangkat di se
     <string name="exo_track_surround_7_point_1">7.1 surround sound</string>
     <string name="exo_track_unknown">Tidak diketahui</string>
     <string name="expand_button_title">Lanjutan</string>
-    <string name="exposed_dropdown_menu_content_description">Tampilkan menu dropdown</string>
     <string name="exposure_mode_adjust_title">Mode Exposure</string>
     <string name="eye_light">Mata berbinar</string>
     <string name="eye_light_angel">Malaikat</string>
@@ -1094,7 +1076,6 @@ dan membuat satu foto yang mana setiap orang terlihat paling bagus."</string>
     <string name="hint_subtitle_prompt">Anda dapat mendikte subtitle sekarang</string>
     <string name="histogram_summary_tip">Tampilkan umpan balik pencahayaan waktu nyata</string>
     <string name="hunt_dual_water_mark">Watermark (label) dual kamera akan otomatis ditambahkan.</string>
-    <string name="icon_content_description">Ikon Dialog</string>
     <string name="id_card_mode_hint_back">Foto bagian belakang kartu identitas Anda</string>
     <string name="id_card_mode_hint_front">Foto bagian depan kartu identitas Anda</string>
     <string name="id_card_mode_use_hint_text_body">"Menggabungkan dua sisi kartu identitas Anda di satu gambar.
@@ -1105,7 +1086,6 @@ Cetak salinannya pada kertas A4."</string>
     <string name="invisible_mode_dialog_summary">Tidak dapat menggunakan kamera. Matikan mode Penyamaran di Setelan agar dapat menggunakan kamera.</string>
     <string name="invisible_mode_dialog_title">Anda dalam mode Penyamaran</string>
     <string name="invisible_mode_dialog_to_close">Setelan</string>
-    <string name="item_view_role_description">Tab</string>
     <string name="kaleidoscope_fragment_tab_name">Kaledoskop</string>
     <string name="lens_dirty_detected_content">"Sepertinya lensa kamera sedikit kotor.
 Untuk efek yang lebih baik, bersihkan terlebih dahulu."</string>
@@ -1228,18 +1208,6 @@ objek kecil terlihat besar pada foto"</string>
     <string name="manually_raw_tip">Tidak dapat zoom dengan format RAW</string>
     <string name="manually_ultra_raw_tip">Tidak dapat menggunakan zoom dengan Ultra RAW</string>
     <string name="masterfilter_description_title">Filter film</string>
-    <string name="material_clock_toggle_content_description">Pilih AM atau PM</string>
-    <string name="material_hour_selection">Pilih jam</string>
-    <string name="material_hour_suffix">Pukul %1$s</string>
-    <string name="material_minute_selection">Pilih menit</string>
-    <string name="material_minute_suffix">%1$s menit</string>
-    <string name="material_timepicker_am">AM</string>
-    <string name="material_timepicker_clock_mode_description">Beralih ke mode jam untuk masukan waktu.</string>
-    <string name="material_timepicker_hour">Jam</string>
-    <string name="material_timepicker_minute">Menit</string>
-    <string name="material_timepicker_pm">PM</string>
-    <string name="material_timepicker_select_time">Pilih waktu</string>
-    <string name="material_timepicker_text_input_mode_description">Beralih ke mode masukan teks untuk masukan waktu.</string>
     <string name="message_snap_double_confirm">Tekan lama tombol Volume dapat memicu NFC sekarang. Ganti fitur ini?</string>
     <string name="midnight">Malam</string>
     <string name="mimoji_app_name">Fun Cam</string>
@@ -1378,7 +1346,6 @@ objek kecil terlihat besar pada foto"</string>
     <string name="miuix_appcompat_delete_description">Hapus</string>
     <string name="miuix_appcompat_deselect_all">Batal pilih</string>
     <string name="miuix_appcompat_deselect_all_description">Batal pilih</string>
-    <string name="miuix_appcompat_edit">Ubah</string>
     <string name="miuix_appcompat_search_action_mode_cancel">Batal</string>
     <string name="miuix_appcompat_search_input_description">Cari</string>
     <string name="miuix_appcompat_select_all">Pilih semua</string>
@@ -1486,42 +1453,6 @@ objek kecil terlihat besar pada foto"</string>
     <string name="msg_bubble_doc4_first_use">Ketuk untuk mengenali teks</string>
     <string name="msg_toast_doc4_recognition_failed">Terjadi kesalahan. Coba lagi.</string>
     <string name="msg_toast_doc4_text_not_found">Tidak dapat mendeteksi teks</string>
-    <string name="mtrl_badge_numberless_content_description">Notifikasi baru</string>
-    <string name="mtrl_chip_close_icon_content_description">Menghapus %1$s</string>
-    <string name="mtrl_exceed_max_badge_number_content_description">Lebih dari %1$d notifikasi baru</string>
-    <string name="mtrl_picker_a11y_next_month">Ubah ke bulan berikutnya</string>
-    <string name="mtrl_picker_a11y_prev_month">Ubah ke bulan sebelumnya</string>
-    <string name="mtrl_picker_announce_current_selection">Pilihan saat ini: %1$s</string>
-    <string name="mtrl_picker_cancel">Batal</string>
-    <string name="mtrl_picker_confirm">Oke</string>
-    <string name="mtrl_picker_date_header_selected">%1$s</string>
-    <string name="mtrl_picker_date_header_title">Pilih Tanggal</string>
-    <string name="mtrl_picker_date_header_unselected">Tanggal yang dipilih</string>
-    <string name="mtrl_picker_day_of_week_column_header">Kolom hari: %1$s</string>
-    <string name="mtrl_picker_invalid_format">Format tidak valid.</string>
-    <string name="mtrl_picker_invalid_format_example">Contoh: %1$s</string>
-    <string name="mtrl_picker_invalid_format_use">Gunakan: %1$s</string>
-    <string name="mtrl_picker_invalid_range">Rentang tidak valid.</string>
-    <string name="mtrl_picker_navigate_to_year_description">Buka tahun %1$s</string>
-    <string name="mtrl_picker_out_of_range">Di luar rentang: %1$s</string>
-    <string name="mtrl_picker_range_header_only_end_selected">Tanggal mulai – %1$s</string>
-    <string name="mtrl_picker_range_header_only_start_selected">%1$s – Tanggal akhir</string>
-    <string name="mtrl_picker_range_header_selected">%1$s – %2$s</string>
-    <string name="mtrl_picker_range_header_title">Pilih Rentang</string>
-    <string name="mtrl_picker_range_header_unselected">Tanggal mulai – Tanggal akhir</string>
-    <string name="mtrl_picker_save">Simpan</string>
-    <string name="mtrl_picker_text_input_date_hint">Tanggal</string>
-    <string name="mtrl_picker_text_input_date_range_end_hint">Tanggal akhir</string>
-    <string name="mtrl_picker_text_input_date_range_start_hint">Tanggal mulai</string>
-    <string name="mtrl_picker_text_input_day_abbr">h</string>
-    <string name="mtrl_picker_text_input_month_abbr">b</string>
-    <string name="mtrl_picker_text_input_year_abbr">t</string>
-    <string name="mtrl_picker_toggle_to_calendar_input_mode">Beralih ke mode masukan kalender</string>
-    <string name="mtrl_picker_toggle_to_day_selection">Ketuk untuk beralih ke memilih hari</string>
-    <string name="mtrl_picker_toggle_to_text_input_mode">Beralih ke mode masukan teks</string>
-    <string name="mtrl_picker_toggle_to_year_selection">Ketuk untuk beralih ke memilih tahun</string>
-    <string name="mtrl_timepicker_cancel">Batal</string>
-    <string name="mtrl_timepicker_confirm">Oke</string>
     <string name="multi_window_mode_not_supported">Kamera tidak dapat digunakan di mode multi-jendela</string>
     <string name="network_access_user_notice_agree">Setuju</string>
     <string name="network_access_user_notice_message_live_video">&lt;Data>Kamera butuh terhubung ke internet untuk menyediakan fitur efek, musik, dan lainnya untuk video pendek.&lt;br/>&lt;br/>Dengan mengetuk \"Setuju\" di bawah ini, Anda menyetujui &lt;a href =%1$s>Perjanjian Pengguna&lt;/a> dan &lt;a href =%2$s>Kebijakan Privasi&lt;/a> kami, dan mengizinkan Kamera untuk terhubung ke internet.&lt;/Data></string>
@@ -1616,7 +1547,6 @@ Gambar Ultra RAW menyimpan %d bit data, lebih banyak detail yang disimpan."</str
     <string name="parameter_wb_title">Keseimbangan putih</string>
     <string name="parameter_zoom_slider_description">Seret penggeser zoom secara horisontal untuk mengubah bidikan Anda dengan lancar dari bidikan panjang menjadi close-up.</string>
     <string name="parameter_zoom_slider_title">Zoom</string>
-    <string name="password_toggle_content_description">Tampilkan sandi</string>
     <string name="path_settings">Aplikasi sistem/Kamera/Setelan</string>
     <string name="photo_assistance_tips_title">Tips saat live</string>
     <string name="pic_flaw_blink_more">Sepertinya beberapa orang dalam bingkai menutup mata mereka</string>
@@ -2359,7 +2289,6 @@ Pastikan subjek jelas saat layar belakang dibuat menjadi blur."</string>
     <string name="time_picker_label_hour">J</string>
     <string name="time_picker_label_minute">M</string>
     <string name="time_stamp_date_format">dd/MM/yyyy</string>
-    <string name="time_stamp_date_format_minute">dd/MM/yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">Anda dapat freeze dan membatalkan freeze latar belakang kapan saja sebelum atau selama perekaman.</string>
     <string name="timefreeze_guide_tip3">Pastikan subjek Anda tetap berada di tengah-tengah bingkai.</string>
     <string name="timefreeze_guide_tip4">Membuat lalu lintas berhenti.</string>
@@ -2397,7 +2326,7 @@ Pastikan subjek jelas saat layar belakang dibuat menjadi blur."</string>
     <string name="tip_flash_screen_light_on">Flash depan: Hidup</string>
     <string name="tip_flash_soft_light_off">Flash depan: Mati</string>
     <string name="tip_flash_soft_light_torch">Flash depan: Mode Senter</string>
-    <string name="tip_flash_torch">Flash: Senter</string>
+    <string name="tip_flash_torch">Flash: Selalu hidup</string>
     <string name="tip_friend_mode_connect_when_24GHz">Gunakan koneksi %s GHz untuk meningkatkan kualitas pratinjau</string>
     <string name="tip_friend_mode_display_device_name_connect">Pratinjau bersama</string>
     <string name="tip_friend_mode_display_device_name_disconnect">Perangkat satunya meninggalkan sesi ini</string>

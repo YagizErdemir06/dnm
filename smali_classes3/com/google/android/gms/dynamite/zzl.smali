@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/dynamite/zzl;
+.class public final Lcom/google/android/gms/dynamite/zzl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -25,6 +25,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy$SelectionResult;
 
     invoke-direct {p0}, Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy$SelectionResult;-><init>()V
@@ -41,6 +42,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {p3, p1, p2, v2}, Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy$IVersions;->zzb(Landroid/content/Context;Ljava/lang/String;Z)I
 
     move-result p1
@@ -49,6 +51,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-interface {p3, p1, p2, v1}, Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy$IVersions;->zzb(Landroid/content/Context;Ljava/lang/String;Z)I
 
@@ -56,6 +59,7 @@
 
     iput p1, p0, Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy$SelectionResult;->remoteVersion:I
 
+    .line 4
     :goto_0
     iget p2, p0, Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy$SelectionResult;->localVersion:I
 

@@ -18,14 +18,15 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/android/camera/videoplayer/ui/VideoPlayerView;
+.field public final synthetic c:Lcom/android/camera/videoplayer/ui/VideoPlayerView;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView$a;->a:Lcom/android/camera/videoplayer/ui/VideoPlayerView;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView$a;->c:Lcom/android/camera/videoplayer/ui/VideoPlayerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,15 +38,16 @@
 .method public run()V
     .locals 2
 
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView$a;->a:Lcom/android/camera/videoplayer/ui/VideoPlayerView;
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView$a;->c:Lcom/android/camera/videoplayer/ui/VideoPlayerView;
 
-    invoke-static {v0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->j(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)Lcom/android/camera/videoplayer/ui/VideoPlayerView$g;
+    invoke-static {v0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->i(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)Lcom/android/camera/videoplayer/ui/VideoPlayerView$g;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView$a;->a:Lcom/android/camera/videoplayer/ui/VideoPlayerView;
+    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView$a;->c:Lcom/android/camera/videoplayer/ui/VideoPlayerView;
 
-    invoke-virtual {v1}, Lcom/android/camera/videoplayer/ui/b;->getContentHeight()Ljava/lang/Integer;
+    invoke-virtual {v1}, Ld/d/a/f8/j/d;->getContentHeight()Ljava/lang/Integer;
 
     move-result-object v1
 
@@ -53,9 +55,9 @@
 
     move-result v1
 
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView$a;->a:Lcom/android/camera/videoplayer/ui/VideoPlayerView;
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView$a;->c:Lcom/android/camera/videoplayer/ui/VideoPlayerView;
 
-    invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/b;->getContentWidth()Ljava/lang/Integer;
+    invoke-virtual {p0}, Ld/d/a/f8/j/d;->getContentWidth()Ljava/lang/Integer;
 
     move-result-object p0
 

@@ -1,4 +1,4 @@
-.class Landroidx/fragment/app/DefaultSpecialEffectsController$6;
+.class public Landroidx/fragment/app/DefaultSpecialEffectsController$6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/fragment/app/DefaultSpecialEffectsController;->startTransitions(Ljava/util/List;Ljava/util/List;ZLandroidx/fragment/app/SpecialEffectsController$Operation;Landroidx/fragment/app/SpecialEffectsController$Operation;)Ljava/util/Map;
+    value = Landroidx/fragment/app/DefaultSpecialEffectsController;->startTransitions(Ljava/util/List;ZLandroidx/fragment/app/SpecialEffectsController$Operation;Landroidx/fragment/app/SpecialEffectsController$Operation;)Ljava/util/Map;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,21 +18,22 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/fragment/app/DefaultSpecialEffectsController;
+.field public final synthetic this$0:Landroidx/fragment/app/DefaultSpecialEffectsController;
 
-.field final synthetic val$firstOut:Landroidx/fragment/app/SpecialEffectsController$Operation;
+.field public final synthetic val$firstOut:Landroidx/fragment/app/SpecialEffectsController$Operation;
 
-.field final synthetic val$isPop:Z
+.field public final synthetic val$isPop:Z
 
-.field final synthetic val$lastIn:Landroidx/fragment/app/SpecialEffectsController$Operation;
+.field public final synthetic val$lastIn:Landroidx/fragment/app/SpecialEffectsController$Operation;
 
-.field final synthetic val$lastInViews:Landroidx/collection/ArrayMap;
+.field public final synthetic val$lastInViews:Landroidx/collection/ArrayMap;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/fragment/app/DefaultSpecialEffectsController;Landroidx/fragment/app/SpecialEffectsController$Operation;Landroidx/fragment/app/SpecialEffectsController$Operation;ZLandroidx/collection/ArrayMap;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$6;->this$0:Landroidx/fragment/app/DefaultSpecialEffectsController;
 
     iput-object p2, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$6;->val$lastIn:Landroidx/fragment/app/SpecialEffectsController$Operation;
@@ -53,8 +54,10 @@
 .method public run()V
     .locals 4
 
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/DefaultSpecialEffectsController$6;->val$lastIn:Landroidx/fragment/app/SpecialEffectsController$Operation;
 
+    .line 2
     invoke-virtual {v0}, Landroidx/fragment/app/SpecialEffectsController$Operation;->getFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v0
@@ -71,6 +74,7 @@
 
     const/4 v3, 0x0
 
+    .line 3
     invoke-static {v0, v1, v2, p0, v3}, Landroidx/fragment/app/FragmentTransition;->callSharedElementStartEnd(Landroidx/fragment/app/Fragment;Landroidx/fragment/app/Fragment;ZLandroidx/collection/ArrayMap;Z)V
 
     return-void

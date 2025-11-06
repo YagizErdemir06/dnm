@@ -21,7 +21,7 @@
 
 .field private static final PHYSICAL_CAPTURE_RESULT_CLASS:Ljava/lang/String; = "android.hardware.camera2.impl.PhysicalCaptureResultInfo"
 
-.field private static final TAG:Ljava/lang/String; = "ICustomCaptureResult"
+.field private static final TAG:Ljava/lang/String;
 
 
 # instance fields
@@ -50,6 +50,16 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
+    const-class v0, Lcom/xiaomi/protocol/ICustomCaptureResult;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/xiaomi/protocol/ICustomCaptureResult;->TAG:Ljava/lang/String;
+
+    .line 2
     new-instance v0, Lcom/xiaomi/protocol/ICustomCaptureResult$1;
 
     invoke-direct {v0}, Lcom/xiaomi/protocol/ICustomCaptureResult$1;-><init>()V
@@ -202,15 +212,17 @@
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
-    move-result-object v1
+    move-result-object v0
 
-    iput-object v1, p0, Lcom/xiaomi/protocol/ICustomCaptureResult;->mResults:Landroid/os/Parcelable;
+    iput-object v0, p0, Lcom/xiaomi/protocol/ICustomCaptureResult;->mResults:Landroid/os/Parcelable;
 
     .line 21
+    const-class v0, Landroid/os/Parcelable;
+
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v0
@@ -240,6 +252,7 @@
     :try_start_0
     const-string v0, "android.hardware.camera2.impl.CameraMetadataNative"
 
+    .line 1
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -256,10 +269,12 @@
 
     aput-object p0, v1, v3
 
+    .line 2
     invoke-virtual {v0, v2}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object p0
 
+    .line 3
     invoke-virtual {p0, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -275,6 +290,7 @@
     :catch_0
     move-exception p0
 
+    .line 4
     sget-object v0, Lcom/xiaomi/protocol/ICustomCaptureResult;->TAG:Ljava/lang/String;
 
     const-string v1, "getCameraMetaDataCopy: failed"
@@ -297,6 +313,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     const-class v0, Landroid/hardware/camera2/CaptureRequest;
 
@@ -306,6 +323,7 @@
 
     new-array v3, v2, [Ljava/lang/Class;
 
+    .line 2
     invoke-virtual {v0, v1, v3}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
@@ -314,16 +332,19 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    .line 3
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
     new-array v1, v2, [Ljava/lang/Object;
 
+    .line 4
     invoke-virtual {v0, p0, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 5
     check-cast p0, Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_2
@@ -332,6 +353,7 @@
 
     return-object p0
 
+    .line 6
     :catch_0
     sget-object p0, Lcom/xiaomi/protocol/ICustomCaptureResult;->TAG:Ljava/lang/String;
 
@@ -341,6 +363,7 @@
 
     goto :goto_0
 
+    .line 7
     :catch_1
     sget-object p0, Lcom/xiaomi/protocol/ICustomCaptureResult;->TAG:Ljava/lang/String;
 
@@ -350,6 +373,7 @@
 
     goto :goto_0
 
+    .line 8
     :catch_2
     sget-object p0, Lcom/xiaomi/protocol/ICustomCaptureResult;->TAG:Ljava/lang/String;
 
@@ -388,7 +412,7 @@
 .end method
 
 .method public static toTotalCaptureResult(Lcom/xiaomi/protocol/ICustomCaptureResult;IZ)Landroid/hardware/camera2/TotalCaptureResult;
-    .locals 22
+    .locals 23
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0,
@@ -402,472 +426,567 @@
         }
     .end annotation
 
-    const-string v0, "|"
+    const-string v0, "android.hardware.camera2.impl.PhysicalCaptureResultInfo"
+
+    const-string v1, "|"
 
     .line 2
+    const-class v2, Ljava/lang/String;
+
     :try_start_0
     invoke-virtual/range {p0 .. p0}, Lcom/xiaomi/protocol/ICustomCaptureResult;->getSequenceId()I
 
-    move-result v2
+    move-result v4
 
     .line 3
     invoke-virtual/range {p0 .. p0}, Lcom/xiaomi/protocol/ICustomCaptureResult;->getFrameNumber()J
 
-    move-result-wide v3
+    move-result-wide v5
 
     .line 4
-    sget-object v5, Lcom/xiaomi/protocol/ICustomCaptureResult;->TAG:Ljava/lang/String;
+    sget-object v7, Lcom/xiaomi/protocol/ICustomCaptureResult;->TAG:Ljava/lang/String;
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v7, "toTotalCaptureResult: "
+    const-string v9, "toTotalCaptureResult: "
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move/from16 v7, p1
+    move/from16 v9, p1
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string v0, ", sdk int "
+    const-string v1, ", sdk int "
 
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v8
 
-    invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-string v5, "android.hardware.camera2.impl.CaptureResultExtras"
+    const-string v7, "android.hardware.camera2.impl.CaptureResultExtras"
 
     .line 5
-    invoke-static {v5}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+    invoke-static {v7}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
-    move-result-object v5
+    move-result-object v7
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
-    const/16 v6, 0x1e
+    const/16 v8, 0x1e
 
-    .line 6
-    const-class v8, Ljava/lang/String;
+    const/4 v11, 0x7
 
-    const/4 v9, 0x7
+    const/4 v12, 0x6
 
-    const/16 v10, 0x8
+    const/4 v13, 0x5
 
-    const/4 v11, 0x6
+    const/4 v14, 0x4
 
-    const/4 v12, 0x5
+    const/4 v15, 0x3
 
-    const/4 v13, 0x4
+    const/4 v3, 0x2
 
-    const/4 v14, 0x3
+    const/16 v17, 0x1
 
-    const/4 v15, 0x2
+    const/4 v10, 0x0
 
-    const/16 v16, 0x1
+    if-lt v1, v8, :cond_0
 
-    const/4 v1, 0x0
-
-    if-lt v0, v6, :cond_0
-
-    const/16 v0, 0xb
+    const/16 v1, 0xb
 
     :try_start_1
-    new-array v6, v0, [Ljava/lang/Class;
+    new-array v8, v1, [Ljava/lang/Class;
+
+    .line 6
+    sget-object v19, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    aput-object v19, v8, v10
+
+    aput-object v19, v8, v17
+
+    aput-object v19, v8, v3
+
+    aput-object v19, v8, v15
+
+    sget-object v20, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
+
+    aput-object v20, v8, v14
+
+    aput-object v19, v8, v13
+
+    aput-object v19, v8, v12
+
+    aput-object v2, v8, v11
+
+    const/16 v18, 0x8
+
+    aput-object v20, v8, v18
+
+    const/16 v19, 0x9
+
+    aput-object v20, v8, v19
+
+    const/16 v21, 0xa
+
+    aput-object v20, v8, v21
 
     .line 7
-    sget-object v18, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+    invoke-virtual {v7, v8}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
-    aput-object v18, v6, v1
+    move-result-object v8
 
-    aput-object v18, v6, v16
-
-    aput-object v18, v6, v15
-
-    aput-object v18, v6, v14
-
-    sget-object v19, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
-
-    aput-object v19, v6, v13
-
-    aput-object v18, v6, v12
-
-    aput-object v18, v6, v11
-
-    aput-object v8, v6, v9
-
-    aput-object v19, v6, v10
-
-    const/16 v18, 0x9
-
-    aput-object v19, v6, v18
-
-    const/16 v20, 0xa
-
-    aput-object v19, v6, v20
+    new-array v1, v1, [Ljava/lang/Object;
 
     .line 8
-    invoke-virtual {v5, v6}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v6
+    move-result-object v20
 
-    new-array v0, v0, [Ljava/lang/Object;
+    aput-object v20, v1, v10
+
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v20
+
+    aput-object v20, v1, v17
+
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v20
+
+    aput-object v20, v1, v3
 
     .line 9
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v20
+
+    aput-object v20, v1, v15
+
+    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v20
+
+    aput-object v20, v1, v14
+
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v20
+
+    aput-object v20, v1, v13
+
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v20
+
+    aput-object v20, v1, v12
+
+    const/16 v16, 0x0
+
+    aput-object v16, v1, v11
+
+    const/16 v20, -0x1
+
+    invoke-static/range {v20 .. v20}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v22
+
+    const/16 v18, 0x8
+
+    aput-object v22, v1, v18
+
+    invoke-static/range {v20 .. v20}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v22
+
+    aput-object v22, v1, v19
+
+    invoke-static/range {v20 .. v20}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v19
 
-    aput-object v19, v0, v1
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v19
-
-    aput-object v19, v0, v16
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v19
-
-    aput-object v19, v0, v15
+    aput-object v19, v1, v21
 
     .line 10
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v8, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v19
-
-    aput-object v19, v0, v14
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v19
-
-    aput-object v19, v0, v13
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v19
-
-    aput-object v19, v0, v12
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v19
-
-    aput-object v19, v0, v11
-
-    const/16 v17, 0x0
-
-    aput-object v17, v0, v9
-
-    const/16 v19, -0x1
-
-    invoke-static/range {v19 .. v19}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v21
-
-    aput-object v21, v0, v10
-
-    invoke-static/range {v19 .. v19}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v21
-
-    aput-object v21, v0, v18
-
-    invoke-static/range {v19 .. v19}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v18
-
-    aput-object v18, v0, v20
-
-    .line 11
-    invoke-virtual {v6, v0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
+    move-result-object v1
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
     goto/16 :goto_0
 
-    .line 12
+    .line 11
     :catch_0
     :try_start_2
-    sget-object v0, Lcom/xiaomi/protocol/ICustomCaptureResult;->TAG:Ljava/lang/String;
+    sget-object v1, Lcom/xiaomi/protocol/ICustomCaptureResult;->TAG:Ljava/lang/String;
 
-    const-string v6, "could not reflect constructor with more params, try anthor"
+    const-string v8, "could not reflect constructor with more params, try anthor"
 
-    invoke-static {v0, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    new-array v0, v10, [Ljava/lang/Class;
+    const/16 v1, 0x8
+
+    new-array v8, v1, [Ljava/lang/Class;
+
+    .line 12
+    sget-object v1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    aput-object v1, v8, v10
+
+    aput-object v1, v8, v17
+
+    aput-object v1, v8, v3
+
+    aput-object v1, v8, v15
+
+    sget-object v19, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
+
+    aput-object v19, v8, v14
+
+    aput-object v1, v8, v13
+
+    aput-object v1, v8, v12
+
+    aput-object v2, v8, v11
 
     .line 13
-    sget-object v6, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+    invoke-virtual {v7, v8}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
-    aput-object v6, v0, v1
+    move-result-object v8
 
-    aput-object v6, v0, v16
+    const/16 v1, 0x8
 
-    aput-object v6, v0, v15
-
-    aput-object v6, v0, v14
-
-    sget-object v18, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
-
-    aput-object v18, v0, v13
-
-    aput-object v6, v0, v12
-
-    aput-object v6, v0, v11
-
-    aput-object v8, v0, v9
+    new-array v2, v1, [Ljava/lang/Object;
 
     .line 14
-    invoke-virtual {v5, v0}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v6
+    move-result-object v1
 
-    new-array v0, v10, [Ljava/lang/Object;
+    aput-object v1, v2, v10
+
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    aput-object v1, v2, v17
+
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    aput-object v1, v2, v3
 
     .line 15
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v5
+    move-result-object v1
 
-    aput-object v5, v0, v1
+    aput-object v1, v2, v15
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v5
+    move-result-object v1
 
-    aput-object v5, v0, v16
+    aput-object v1, v2, v14
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v5
+    move-result-object v1
 
-    aput-object v5, v0, v15
+    aput-object v1, v2, v13
+
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    aput-object v1, v2, v12
+
+    const/4 v1, 0x0
+
+    aput-object v1, v2, v11
 
     .line 16
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v8, v2}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v5
+    move-result-object v1
 
-    aput-object v5, v0, v14
+    goto/16 :goto_0
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    :cond_0
+    const/16 v8, 0x1d
 
-    move-result-object v5
+    if-lt v1, v8, :cond_1
 
-    aput-object v5, v0, v13
+    const/16 v1, 0x8
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    aput-object v5, v0, v12
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    aput-object v5, v0, v11
-
-    const/4 v5, 0x0
-
-    aput-object v5, v0, v9
+    new-array v8, v1, [Ljava/lang/Class;
 
     .line 17
-    invoke-virtual {v6, v0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object v1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    move-result-object v0
+    aput-object v1, v8, v10
+
+    aput-object v1, v8, v17
+
+    aput-object v1, v8, v3
+
+    aput-object v1, v8, v15
+
+    sget-object v19, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
+
+    aput-object v19, v8, v14
+
+    aput-object v1, v8, v13
+
+    aput-object v1, v8, v12
+
+    aput-object v2, v8, v11
+
+    .line 18
+    invoke-virtual {v7, v8}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    move-result-object v8
+
+    const/16 v1, 0x8
+
+    new-array v2, v1, [Ljava/lang/Object;
+
+    .line 19
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    aput-object v1, v2, v10
+
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    aput-object v1, v2, v17
+
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    aput-object v1, v2, v3
+
+    .line 20
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    aput-object v1, v2, v15
+
+    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    aput-object v1, v2, v14
+
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    aput-object v1, v2, v13
+
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    aput-object v1, v2, v12
+
+    const/4 v1, 0x0
+
+    aput-object v1, v2, v11
+
+    .line 21
+    invoke-virtual {v8, v2}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
 
     goto :goto_0
 
-    :cond_0
-    new-array v0, v10, [Ljava/lang/Class;
-
-    .line 18
-    sget-object v6, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    aput-object v6, v0, v1
-
-    aput-object v6, v0, v16
-
-    aput-object v6, v0, v15
-
-    aput-object v6, v0, v14
-
-    sget-object v18, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
-
-    aput-object v18, v0, v13
-
-    aput-object v6, v0, v12
-
-    aput-object v6, v0, v11
-
-    aput-object v8, v0, v9
-
-    .line 19
-    invoke-virtual {v5, v0}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
-
-    move-result-object v6
-
-    new-array v0, v10, [Ljava/lang/Object;
-
-    .line 20
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    aput-object v5, v0, v1
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    aput-object v5, v0, v16
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    aput-object v5, v0, v15
-
-    .line 21
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    aput-object v5, v0, v14
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v5
-
-    aput-object v5, v0, v13
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    aput-object v5, v0, v12
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    aput-object v5, v0, v11
-
-    const/4 v5, 0x0
-
-    aput-object v5, v0, v9
+    :cond_1
+    new-array v1, v11, [Ljava/lang/Class;
 
     .line 22
-    invoke-virtual {v6, v0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    move-result-object v0
+    aput-object v2, v1, v10
+
+    aput-object v2, v1, v17
+
+    aput-object v2, v1, v3
+
+    aput-object v2, v1, v15
+
+    sget-object v8, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
+
+    aput-object v8, v1, v14
+
+    aput-object v2, v1, v13
+
+    aput-object v2, v1, v12
 
     .line 23
-    :goto_0
-    const-class v5, Landroid/hardware/camera2/TotalCaptureResult;
+    invoke-virtual {v7, v1}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
-    invoke-virtual {v5}, Ljava/lang/Class;->getDeclaredConstructors()[Ljava/lang/reflect/Constructor;
+    move-result-object v8
 
-    move-result-object v5
+    new-array v1, v11, [Ljava/lang/Object;
 
     .line 24
-    array-length v8, v5
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move v9, v1
+    move-result-object v2
 
-    :goto_1
-    if-ge v9, v8, :cond_2
+    aput-object v2, v1, v10
 
-    aget-object v19, v5, v9
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    aput-object v2, v1, v17
+
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    aput-object v2, v1, v3
 
     .line 25
-    invoke-virtual/range {v19 .. v19}, Ljava/lang/reflect/Executable;->getParameters()[Ljava/lang/reflect/Parameter;
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v10
+    move-result-object v2
 
-    array-length v10, v10
+    aput-object v2, v1, v15
 
-    if-le v10, v15, :cond_1
+    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-object/from16 v6, v19
+    move-result-object v2
+
+    aput-object v2, v1, v14
+
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    aput-object v2, v1, v13
+
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    aput-object v2, v1, v12
+
+    .line 26
+    invoke-virtual {v8, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    .line 27
+    :goto_0
+    const-class v2, Landroid/hardware/camera2/TotalCaptureResult;
+
+    invoke-virtual {v2}, Ljava/lang/Class;->getDeclaredConstructors()[Ljava/lang/reflect/Constructor;
+
+    move-result-object v2
+
+    .line 28
+    array-length v7, v2
+
+    move v11, v10
+
+    :goto_1
+    if-ge v11, v7, :cond_3
+
+    aget-object v20, v2, v11
+
+    .line 29
+    invoke-virtual/range {v20 .. v20}, Ljava/lang/reflect/Constructor;->getParameters()[Ljava/lang/reflect/Parameter;
+
+    move-result-object v12
+
+    array-length v12, v12
+
+    if-le v12, v3, :cond_2
+
+    move-object/from16 v8, v20
 
     goto :goto_2
 
-    :cond_1
-    add-int/lit8 v9, v9, 0x1
+    :cond_2
+    add-int/lit8 v11, v11, 0x1
 
-    const/16 v10, 0x8
+    const/4 v12, 0x6
 
     goto :goto_1
 
-    :cond_2
+    :cond_3
     :goto_2
-    if-eqz p2, :cond_3
+    if-eqz p2, :cond_4
 
-    .line 26
-    sget-object v5, Lcom/xiaomi/protocol/ICustomCaptureResult;->TAG:Ljava/lang/String;
+    .line 30
+    sget-object v2, Lcom/xiaomi/protocol/ICustomCaptureResult;->TAG:Ljava/lang/String;
 
-    const-string v8, "prefer physical meta"
+    const-string v7, "prefer physical meta"
 
-    invoke-static {v5, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 27
+    .line 31
     invoke-virtual/range {p0 .. p0}, Lcom/xiaomi/protocol/ICustomCaptureResult;->getMainPhysicalResult()Landroid/os/Parcelable;
 
-    move-result-object v8
+    move-result-object v7
 
-    if-nez v8, :cond_4
+    if-nez v7, :cond_5
 
-    const-string v8, "no physical meta, use logical"
+    const-string v7, "no physical meta, use logical"
 
-    .line 28
-    invoke-static {v5, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    .line 32
+    invoke-static {v2, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 29
+    .line 33
     invoke-virtual/range {p0 .. p0}, Lcom/xiaomi/protocol/ICustomCaptureResult;->getResults()Landroid/os/Parcelable;
 
-    move-result-object v8
+    move-result-object v7
 
     goto :goto_3
 
-    .line 30
-    :cond_3
+    .line 34
+    :cond_4
     invoke-virtual/range {p0 .. p0}, Lcom/xiaomi/protocol/ICustomCaptureResult;->getResults()Landroid/os/Parcelable;
 
-    move-result-object v8
+    move-result-object v7
 
-    .line 31
-    :cond_4
+    .line 35
+    :cond_5
     :goto_3
-    invoke-static {v8}, Lcom/xiaomi/protocol/ICustomCaptureResult;->getCameraMetaDataCopy(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v7}, Lcom/xiaomi/protocol/ICustomCaptureResult;->getCameraMetaDataCopy(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v5
+    move-result-object v2
 
-    if-nez v5, :cond_5
+    if-nez v2, :cond_6
 
-    .line 32
+    .line 36
     sget-object v0, Lcom/xiaomi/protocol/ICustomCaptureResult;->TAG:Ljava/lang/String;
 
     const-string v1, "null native metadata"
@@ -882,143 +1001,39 @@
 
     return-object v1
 
-    .line 33
-    :cond_5
-    sget v8, Landroid/os/Build$VERSION;->SDK_INT:I
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
-
-    const-string v9, "android.hardware.camera2.impl.PhysicalCaptureResultInfo"
-
-    const/16 v10, 0x1e
-
-    if-gt v8, v10, :cond_6
-
-    .line 34
-    :try_start_3
-    invoke-static {v9}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v8
-
-    .line 35
-    invoke-static {v8, v1}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
-
-    move-result-object v8
-    :try_end_3
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
-
-    :try_start_4
-    new-array v9, v11, [Ljava/lang/Object;
-
-    aput-object v5, v9, v1
-
-    .line 36
-    invoke-virtual/range {p0 .. p0}, Lcom/xiaomi/protocol/ICustomCaptureResult;->getRequest()Landroid/hardware/camera2/CaptureRequest;
-
-    move-result-object v10
-
-    aput-object v10, v9, v16
-
-    aput-object v0, v9, v15
-
-    const/4 v10, 0x0
-
-    aput-object v10, v9, v14
-
-    invoke-static/range {p1 .. p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    aput-object v0, v9, v13
-
-    aput-object v8, v9, v12
-
     .line 37
-    invoke-virtual {v6, v9}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_6
+    sget v7, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    move-result-object v0
+    const/16 v11, 0x1c
 
-    check-cast v0, Landroid/hardware/camera2/TotalCaptureResult;
-    :try_end_4
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_4 .. :try_end_4} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
+    if-ge v7, v11, :cond_7
 
-    return-object v0
+    new-array v0, v13, [Ljava/lang/Object;
+
+    aput-object v2, v0, v10
 
     .line 38
-    :catch_1
-    :try_start_5
     invoke-virtual/range {p0 .. p0}, Lcom/xiaomi/protocol/ICustomCaptureResult;->getRequest()Landroid/hardware/camera2/CaptureRequest;
 
-    move-result-object v0
+    move-result-object v2
 
-    .line 39
-    invoke-static {v0}, Lcom/xiaomi/protocol/ICustomCaptureResult;->retrieveLogicalCameraId(Landroid/hardware/camera2/CaptureRequest;)Ljava/lang/String;
+    aput-object v2, v0, v17
 
-    move-result-object v9
-
-    .line 40
-    sget-object v10, Lcom/xiaomi/protocol/ICustomCaptureResult;->TAG:Ljava/lang/String;
-
-    new-instance v11, Ljava/lang/StringBuilder;
-
-    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v12, "Still sdk 30: logicalCameraId is "
-
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v11, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v11
-
-    invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    const/16 v10, 0x8
-
-    new-array v10, v10, [Ljava/lang/Object;
-
-    aput-object v9, v10, v1
-
-    aput-object v5, v10, v16
-
-    aput-object v0, v10, v15
-
-    .line 41
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    aput-object v0, v10, v14
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    aput-object v0, v10, v13
-
-    const/4 v0, 0x5
+    aput-object v1, v0, v3
 
     const/4 v1, 0x0
 
-    aput-object v1, v10, v0
+    aput-object v1, v0, v15
 
     invoke-static/range {p1 .. p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v0
+    move-result-object v1
 
-    const/4 v1, 0x6
+    aput-object v1, v0, v14
 
-    aput-object v0, v10, v1
-
-    const/4 v0, 0x7
-
-    aput-object v8, v10, v0
-
-    .line 42
-    invoke-virtual {v6, v10}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+    .line 39
+    invoke-virtual {v8, v0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1026,74 +1041,122 @@
 
     return-object v0
 
-    .line 43
-    :cond_6
-    invoke-static {v9}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+    :cond_7
+    const/16 v11, 0x1e
+
+    if-gt v7, v11, :cond_8
+
+    .line 40
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 44
-    invoke-static {v0, v1}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
+    .line 41
+    invoke-static {v0, v10}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
 
     move-result-object v0
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 45
+    const/4 v7, 0x6
+
+    :try_start_3
+    new-array v11, v7, [Ljava/lang/Object;
+
+    aput-object v2, v11, v10
+
+    .line 42
     invoke-virtual/range {p0 .. p0}, Lcom/xiaomi/protocol/ICustomCaptureResult;->getRequest()Landroid/hardware/camera2/CaptureRequest;
 
-    move-result-object v8
+    move-result-object v7
+
+    aput-object v7, v11, v17
+
+    aput-object v1, v11, v3
+
+    const/4 v1, 0x0
+
+    aput-object v1, v11, v15
+
+    invoke-static/range {p1 .. p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    aput-object v1, v11, v14
+
+    aput-object v0, v11, v13
+
+    .line 43
+    invoke-virtual {v8, v11}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/TotalCaptureResult;
+    :try_end_3
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_3 .. :try_end_3} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
+
+    return-object v1
+
+    .line 44
+    :catch_1
+    :try_start_4
+    invoke-virtual/range {p0 .. p0}, Lcom/xiaomi/protocol/ICustomCaptureResult;->getRequest()Landroid/hardware/camera2/CaptureRequest;
+
+    move-result-object v1
+
+    .line 45
+    invoke-static {v1}, Lcom/xiaomi/protocol/ICustomCaptureResult;->retrieveLogicalCameraId(Landroid/hardware/camera2/CaptureRequest;)Ljava/lang/String;
+
+    move-result-object v7
 
     .line 46
-    invoke-static {v8}, Lcom/xiaomi/protocol/ICustomCaptureResult;->retrieveLogicalCameraId(Landroid/hardware/camera2/CaptureRequest;)Ljava/lang/String;
+    sget-object v11, Lcom/xiaomi/protocol/ICustomCaptureResult;->TAG:Ljava/lang/String;
 
-    move-result-object v9
+    new-instance v12, Ljava/lang/StringBuilder;
+
+    invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v13, "Still sdk 30: logicalCameraId is "
+
+    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v12, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v12
+
+    invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/16 v11, 0x8
+
+    new-array v11, v11, [Ljava/lang/Object;
+
+    aput-object v7, v11, v10
+
+    aput-object v2, v11, v17
+
+    aput-object v1, v11, v3
 
     .line 47
-    sget-object v10, Lcom/xiaomi/protocol/ICustomCaptureResult;->TAG:Ljava/lang/String;
-
-    new-instance v11, Ljava/lang/StringBuilder;
-
-    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v12, "logicalCameraId is "
-
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v11, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v11
-
-    invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    const/16 v10, 0x8
-
-    new-array v10, v10, [Ljava/lang/Object;
-
-    aput-object v9, v10, v1
-
-    aput-object v5, v10, v16
-
-    aput-object v8, v10, v15
-
-    .line 48
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    aput-object v1, v10, v14
+    aput-object v1, v11, v15
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
 
-    aput-object v1, v10, v13
+    aput-object v1, v11, v14
 
     const/4 v1, 0x0
 
     const/4 v2, 0x5
 
-    aput-object v1, v10, v2
+    aput-object v1, v11, v2
 
     invoke-static/range {p1 .. p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1101,30 +1164,120 @@
 
     const/4 v2, 0x6
 
-    aput-object v1, v10, v2
+    aput-object v1, v11, v2
 
     const/4 v1, 0x7
 
-    aput-object v0, v10, v1
+    aput-object v0, v11, v1
 
-    .line 49
-    invoke-virtual {v6, v10}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+    .line 48
+    invoke-virtual {v8, v11}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/hardware/camera2/TotalCaptureResult;
-    :try_end_5
-    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
+
+    return-object v0
+
+    .line 49
+    :cond_8
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v0
+
+    .line 50
+    invoke-static {v0, v10}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    .line 51
+    invoke-virtual/range {p0 .. p0}, Lcom/xiaomi/protocol/ICustomCaptureResult;->getRequest()Landroid/hardware/camera2/CaptureRequest;
+
+    move-result-object v1
+
+    .line 52
+    invoke-static {v1}, Lcom/xiaomi/protocol/ICustomCaptureResult;->retrieveLogicalCameraId(Landroid/hardware/camera2/CaptureRequest;)Ljava/lang/String;
+
+    move-result-object v7
+
+    .line 53
+    sget-object v11, Lcom/xiaomi/protocol/ICustomCaptureResult;->TAG:Ljava/lang/String;
+
+    new-instance v12, Ljava/lang/StringBuilder;
+
+    invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v13, "logicalCameraId is "
+
+    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v12, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v12
+
+    invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/16 v11, 0x8
+
+    new-array v11, v11, [Ljava/lang/Object;
+
+    aput-object v7, v11, v10
+
+    aput-object v2, v11, v17
+
+    aput-object v1, v11, v3
+
+    .line 54
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    aput-object v1, v11, v15
+
+    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    aput-object v1, v11, v14
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x5
+
+    aput-object v1, v11, v2
+
+    invoke-static/range {p1 .. p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const/4 v2, 0x6
+
+    aput-object v1, v11, v2
+
+    const/4 v1, 0x7
+
+    aput-object v0, v11, v1
+
+    .line 55
+    invoke-virtual {v8, v11}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/hardware/camera2/TotalCaptureResult;
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
 
     return-object v0
 
     :catch_2
     move-exception v0
 
-    .line 50
-    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 56
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 51
+    .line 57
     sget-object v0, Lcom/xiaomi/protocol/ICustomCaptureResult;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/RuntimeException;
@@ -1153,6 +1306,7 @@
 .method public getCaptureId()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/protocol/ICustomCaptureResult;->mCaptureId:Ljava/lang/String;
 
     return-object p0
@@ -1161,6 +1315,7 @@
 .method public getFrameNumber()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/protocol/ICustomCaptureResult;->mFrameNumber:J
 
     return-wide v0
@@ -1169,6 +1324,7 @@
 .method public getMainPhysicalResult()Landroid/os/Parcelable;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/protocol/ICustomCaptureResult;->mMainPhysicalResult:Landroid/os/Parcelable;
 
     return-object p0
@@ -1177,6 +1333,7 @@
 .method public getParcelRequest()Landroid/os/Parcelable;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/protocol/ICustomCaptureResult;->mParcelRequest:Landroid/os/Parcelable;
 
     return-object p0
@@ -1185,6 +1342,7 @@
 .method public getRequest()Landroid/hardware/camera2/CaptureRequest;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/protocol/ICustomCaptureResult;->mRequest:Landroid/hardware/camera2/CaptureRequest;
 
     return-object p0
@@ -1193,6 +1351,7 @@
 .method public getResults()Landroid/os/Parcelable;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/protocol/ICustomCaptureResult;->mResults:Landroid/os/Parcelable;
 
     return-object p0
@@ -1201,6 +1360,7 @@
 .method public getSequenceId()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/protocol/ICustomCaptureResult;->mSequenceId:I
 
     return p0
@@ -1209,6 +1369,7 @@
 .method public getSessionId()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/protocol/ICustomCaptureResult;->mSessionId:I
 
     return p0
@@ -1217,6 +1378,7 @@
 .method public getSubPhysicalResult()Landroid/os/Parcelable;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/protocol/ICustomCaptureResult;->mSubPhysicalResult:Landroid/os/Parcelable;
 
     return-object p0
@@ -1225,6 +1387,7 @@
 .method public getTimeStamp()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/protocol/ICustomCaptureResult;->mTimestamp:J
 
     return-wide v0
@@ -1241,6 +1404,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/protocol/ICustomCaptureResult;->mCaptureId:Ljava/lang/String;
 
     return-void
@@ -1257,6 +1421,7 @@
         }
     .end annotation
 
+    .line 1
     iput-wide p1, p0, Lcom/xiaomi/protocol/ICustomCaptureResult;->mFrameNumber:J
 
     return-void
@@ -1273,6 +1438,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/protocol/ICustomCaptureResult;->mMainPhysicalResult:Landroid/os/Parcelable;
 
     return-void
@@ -1289,6 +1455,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/protocol/ICustomCaptureResult;->mParcelRequest:Landroid/os/Parcelable;
 
     return-void
@@ -1305,6 +1472,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/protocol/ICustomCaptureResult;->mRequest:Landroid/hardware/camera2/CaptureRequest;
 
     return-void
@@ -1321,6 +1489,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/protocol/ICustomCaptureResult;->mResults:Landroid/os/Parcelable;
 
     return-void
@@ -1337,6 +1506,7 @@
         }
     .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/protocol/ICustomCaptureResult;->mSequenceId:I
 
     return-void
@@ -1353,6 +1523,7 @@
         }
     .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/protocol/ICustomCaptureResult;->mSessionId:I
 
     return-void
@@ -1369,6 +1540,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/protocol/ICustomCaptureResult;->mSubPhysicalResult:Landroid/os/Parcelable;
 
     return-void
@@ -1385,6 +1557,7 @@
         }
     .end annotation
 
+    .line 1
     iput-wide p1, p0, Lcom/xiaomi/protocol/ICustomCaptureResult;->mTimestamp:J
 
     return-void
@@ -1393,6 +1566,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1461,30 +1635,37 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/xiaomi/protocol/ICustomCaptureResult;->mSessionId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 2
     iget v0, p0, Lcom/xiaomi/protocol/ICustomCaptureResult;->mSequenceId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 3
     iget-wide v0, p0, Lcom/xiaomi/protocol/ICustomCaptureResult;->mFrameNumber:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
+    .line 4
     iget-wide v0, p0, Lcom/xiaomi/protocol/ICustomCaptureResult;->mTimestamp:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
+    .line 5
     iget-object v0, p0, Lcom/xiaomi/protocol/ICustomCaptureResult;->mCaptureId:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 6
     iget-object v0, p0, Lcom/xiaomi/protocol/ICustomCaptureResult;->mResults:Landroid/os/Parcelable;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
+    .line 7
     iget-object p0, p0, Lcom/xiaomi/protocol/ICustomCaptureResult;->mRequest:Landroid/hardware/camera2/CaptureRequest;
 
     invoke-virtual {p1, p0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V

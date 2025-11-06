@@ -58,6 +58,7 @@
 .method public accept(Ljava/io/File;Ljava/lang/String;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/io/PatternFilenameFilter;->pattern:Ljava/util/regex/Pattern;
 
     invoke-virtual {p0, p2}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;

@@ -34,6 +34,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/metadata/mp4/MotionPhotoMetadata$1;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/metadata/mp4/MotionPhotoMetadata$1;-><init>()V
@@ -148,6 +149,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 1
     const-class v2, Lcom/google/android/exoplayer2/metadata/mp4/MotionPhotoMetadata;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -158,9 +160,11 @@
 
     goto :goto_1
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/metadata/mp4/MotionPhotoMetadata;
 
+    .line 3
     iget-wide v2, p0, Lcom/google/android/exoplayer2/metadata/mp4/MotionPhotoMetadata;->photoStartPosition:J
 
     iget-wide v4, p1, Lcom/google/android/exoplayer2/metadata/mp4/MotionPhotoMetadata;->photoStartPosition:J
@@ -217,6 +221,7 @@
 .method public hashCode()I
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/metadata/mp4/MotionPhotoMetadata;->photoStartPosition:J
 
     invoke-static {v0, v1}, Lcom/google/common/primitives/Longs;->hashCode(J)I
@@ -229,6 +234,7 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
+    .line 2
     iget-wide v2, p0, Lcom/google/android/exoplayer2/metadata/mp4/MotionPhotoMetadata;->photoSize:J
 
     invoke-static {v2, v3}, Lcom/google/common/primitives/Longs;->hashCode(J)I
@@ -239,6 +245,7 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
+    .line 3
     iget-wide v2, p0, Lcom/google/android/exoplayer2/metadata/mp4/MotionPhotoMetadata;->photoPresentationTimestampUs:J
 
     invoke-static {v2, v3}, Lcom/google/common/primitives/Longs;->hashCode(J)I
@@ -249,6 +256,7 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
+    .line 4
     iget-wide v2, p0, Lcom/google/android/exoplayer2/metadata/mp4/MotionPhotoMetadata;->videoStartPosition:J
 
     invoke-static {v2, v3}, Lcom/google/common/primitives/Longs;->hashCode(J)I
@@ -259,6 +267,7 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
+    .line 5
     iget-wide v2, p0, Lcom/google/android/exoplayer2/metadata/mp4/MotionPhotoMetadata;->videoSize:J
 
     invoke-static {v2, v3}, Lcom/google/common/primitives/Longs;->hashCode(J)I
@@ -273,6 +282,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -327,22 +337,27 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/metadata/mp4/MotionPhotoMetadata;->photoStartPosition:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
+    .line 2
     iget-wide v0, p0, Lcom/google/android/exoplayer2/metadata/mp4/MotionPhotoMetadata;->photoSize:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
+    .line 3
     iget-wide v0, p0, Lcom/google/android/exoplayer2/metadata/mp4/MotionPhotoMetadata;->photoPresentationTimestampUs:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
+    .line 4
     iget-wide v0, p0, Lcom/google/android/exoplayer2/metadata/mp4/MotionPhotoMetadata;->videoStartPosition:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
+    .line 5
     iget-wide v0, p0, Lcom/google/android/exoplayer2/metadata/mp4/MotionPhotoMetadata;->videoSize:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V

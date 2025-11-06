@@ -1,4 +1,4 @@
-.class Lcom/google/gson/internal/LinkedHashTreeMap$KeySet$1;
+.class public Lcom/google/gson/internal/LinkedHashTreeMap$KeySet$1;
 .super Lcom/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;
 .source "SourceFile"
 
@@ -24,13 +24,14 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/google/gson/internal/LinkedHashTreeMap$KeySet;
+.field public final synthetic this$1:Lcom/google/gson/internal/LinkedHashTreeMap$KeySet;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/gson/internal/LinkedHashTreeMap$KeySet;)V
     .locals 1
 
+    .line 1
     iput-object p1, p0, Lcom/google/gson/internal/LinkedHashTreeMap$KeySet$1;->this$1:Lcom/google/gson/internal/LinkedHashTreeMap$KeySet;
 
     iget-object p1, p1, Lcom/google/gson/internal/LinkedHashTreeMap$KeySet;->this$0:Lcom/google/gson/internal/LinkedHashTreeMap;
@@ -52,6 +53,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator;->nextNode()Lcom/google/gson/internal/LinkedHashTreeMap$Node;
 
     move-result-object p0

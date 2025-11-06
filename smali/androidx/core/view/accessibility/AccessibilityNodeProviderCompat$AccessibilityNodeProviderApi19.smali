@@ -1,4 +1,4 @@
-.class Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat$AccessibilityNodeProviderApi19;
+.class public Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat$AccessibilityNodeProviderApi19;
 .super Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat$AccessibilityNodeProviderApi16;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method public constructor <init>(Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat$AccessibilityNodeProviderApi16;-><init>(Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;)V
 
     return-void
@@ -32,6 +33,7 @@
 .method public findFocus(I)Landroid/view/accessibility/AccessibilityNodeInfo;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat$AccessibilityNodeProviderApi16;->mCompat:Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;
 
     invoke-virtual {p0, p1}, Landroidx/core/view/accessibility/AccessibilityNodeProviderCompat;->findFocus(I)Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;
@@ -44,6 +46,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->unwrap()Landroid/view/accessibility/AccessibilityNodeInfo;
 

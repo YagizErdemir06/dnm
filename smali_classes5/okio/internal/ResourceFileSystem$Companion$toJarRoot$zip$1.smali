@@ -1,14 +1,14 @@
-.class final Lokio/internal/ResourceFileSystem$Companion$toJarRoot$zip$1;
-.super Lkotlin/jvm/internal/n0;
+.class public final Lokio/internal/ResourceFileSystem$Companion$toJarRoot$zip$1;
+.super Lh/d3/x/n0;
 .source "SourceFile"
 
 # interfaces
-.implements Ljn/l;
+.implements Lh/d3/w/l;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lokio/internal/ResourceFileSystem$Companion;->toJarRoot(Ljava/net/URL;)Lnm/u0;
+    value = Lokio/internal/ResourceFileSystem$Companion;->toJarRoot(Ljava/net/URL;)Lh/u0;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,23 +18,29 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lkotlin/jvm/internal/n0;",
-        "Ljn/l<",
+        "Lh/d3/x/n0;",
+        "Lh/d3/w/l<",
         "Lokio/internal/ZipEntry;",
         "Ljava/lang/Boolean;",
         ">;"
     }
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000\u000c\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0001\u001a\u00020\u0000H\n"
+        "\u0000\u000e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0002\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0001\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0003\u0010\u0004"
     }
     d2 = {
         "Lokio/internal/ZipEntry;",
         "entry",
         "",
-        "<anonymous>"
+        "<anonymous>",
+        "(Lokio/internal/ZipEntry;)Z"
     }
     k = 0x3
     mv = {
@@ -67,7 +73,7 @@
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lkotlin/jvm/internal/n0;-><init>(I)V
+    invoke-direct {p0, v0}, Lh/d3/x/n0;-><init>(I)V
 
     return-void
 .end method
@@ -77,15 +83,15 @@
 .method public final invoke(Lokio/internal/ZipEntry;)Ljava/lang/Boolean;
     .locals 0
     .param p1    # Lokio/internal/ZipEntry;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string p0, "entry"
 
-    invoke-static {p1, p0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     invoke-static {}, Lokio/internal/ResourceFileSystem;->access$getCompanion$p()Lokio/internal/ResourceFileSystem$Companion;

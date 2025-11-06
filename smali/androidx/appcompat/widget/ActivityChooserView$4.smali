@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/widget/ActivityChooserView$4;
+.class public Landroidx/appcompat/widget/ActivityChooserView$4;
 .super Landroidx/appcompat/widget/ForwardingListener;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/appcompat/widget/ActivityChooserView;
+.field public final synthetic this$0:Landroidx/appcompat/widget/ActivityChooserView;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/appcompat/widget/ActivityChooserView;Landroid/view/View;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/widget/ActivityChooserView$4;->this$0:Landroidx/appcompat/widget/ActivityChooserView;
 
     invoke-direct {p0, p2}, Landroidx/appcompat/widget/ForwardingListener;-><init>(Landroid/view/View;)V
@@ -34,6 +35,7 @@
 .method public getPopup()Landroidx/appcompat/view/menu/ShowableListMenu;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/widget/ActivityChooserView$4;->this$0:Landroidx/appcompat/widget/ActivityChooserView;
 
     invoke-virtual {p0}, Landroidx/appcompat/widget/ActivityChooserView;->getListPopupWindow()Landroidx/appcompat/widget/ListPopupWindow;
@@ -46,6 +48,7 @@
 .method public onForwardingStarted()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/widget/ActivityChooserView$4;->this$0:Landroidx/appcompat/widget/ActivityChooserView;
 
     invoke-virtual {p0}, Landroidx/appcompat/widget/ActivityChooserView;->showPopup()Z
@@ -58,6 +61,7 @@
 .method public onForwardingStopped()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/widget/ActivityChooserView$4;->this$0:Landroidx/appcompat/widget/ActivityChooserView;
 
     invoke-virtual {p0}, Landroidx/appcompat/widget/ActivityChooserView;->dismissPopup()Z

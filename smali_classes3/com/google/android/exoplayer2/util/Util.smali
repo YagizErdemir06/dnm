@@ -57,22 +57,27 @@
 .method public static constructor <clinit>()V
     .locals 89
 
+    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     sput v0, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
+    .line 2
     sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
 
     sput-object v1, Lcom/google/android/exoplayer2/util/Util;->DEVICE:Ljava/lang/String;
 
+    .line 3
     sget-object v2, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
 
     sput-object v2, Lcom/google/android/exoplayer2/util/Util;->MANUFACTURER:Ljava/lang/String;
 
+    .line 4
     sget-object v3, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     sput-object v3, Lcom/google/android/exoplayer2/util/Util;->MODEL:Ljava/lang/String;
 
+    .line 5
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -103,10 +108,12 @@
 
     new-array v0, v0, [B
 
+    .line 6
     sput-object v0, Lcom/google/android/exoplayer2/util/Util;->EMPTY_BYTE_ARRAY:[B
 
     const-string v0, "(\\d\\d\\d\\d)\\-(\\d\\d)\\-(\\d\\d)[Tt](\\d\\d):(\\d\\d):(\\d\\d)([\\.,](\\d+))?([Zz]|((\\+|\\-)(\\d?\\d):?(\\d\\d)))?"
 
+    .line 7
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -115,6 +122,7 @@
 
     const-string v0, "^(-)?P(([0-9]*)Y)?(([0-9]*)M)?(([0-9]*)D)?(T(([0-9]*)H)?(([0-9]*)M)?(([0-9.]*)S)?)?$"
 
+    .line 8
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -123,6 +131,7 @@
 
     const-string v0, "%([A-Fa-f0-9]{2})"
 
+    .line 9
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -133,6 +142,7 @@
 
     const/4 v1, 0x2
 
+    .line 10
     invoke-static {v0, v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -315,6 +325,7 @@
 
     const-string v88, "zh-hsn"
 
+    .line 11
     filled-new-array/range {v1 .. v88}, [Ljava/lang/String;
 
     move-result-object v0
@@ -357,6 +368,7 @@
 
     const-string v18, "zh-hsn"
 
+    .line 12
     filled-new-array/range {v1 .. v18}, [Ljava/lang/String;
 
     move-result-object v0
@@ -367,12 +379,14 @@
 
     new-array v1, v0, [I
 
+    .line 13
     fill-array-data v1, :array_0
 
     sput-object v1, Lcom/google/android/exoplayer2/util/Util;->CRC32_BYTES_MSBF:[I
 
     new-array v0, v0, [I
 
+    .line 14
     fill-array-data v0, :array_1
 
     sput-object v0, Lcom/google/android/exoplayer2/util/Util;->CRC8_BYTES_MSBF:[I
@@ -905,19 +919,10 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-.method public static synthetic a(Ljava/lang/String;Ljava/lang/Runnable;)Ljava/lang/Thread;
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/google/android/exoplayer2/util/Util;->lambda$newSingleThreadExecutor$0(Ljava/lang/String;Ljava/lang/Runnable;)Ljava/lang/Thread;
-
-    move-result-object p0
-
-    return-object p0
 .end method
 
 .method public static addWithOverflowDefault(JJJ)J
@@ -967,6 +972,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_1
     invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1501,34 +1507,38 @@
 .method public static varargs checkCleartextTrafficPermitted([Lcom/google/android/exoplayer2/MediaItem;)Z
     .locals 7
 
+    .line 1
     sget v0, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
-    const/16 v1, 0x18
+    const/4 v1, 0x1
 
-    const/4 v2, 0x1
+    const/16 v2, 0x18
 
-    if-ge v0, v1, :cond_0
+    if-ge v0, v2, :cond_0
 
-    return v2
+    return v1
 
+    .line 2
     :cond_0
     array-length v0, p0
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    move v3, v1
+    move v3, v2
 
     :goto_0
     if-ge v3, v0, :cond_5
 
     aget-object v4, p0, v3
 
+    .line 3
     iget-object v5, v4, Lcom/google/android/exoplayer2/MediaItem;->localConfiguration:Lcom/google/android/exoplayer2/MediaItem$LocalConfiguration;
 
     if-nez v5, :cond_1
 
     goto :goto_2
 
+    .line 4
     :cond_1
     iget-object v5, v5, Lcom/google/android/exoplayer2/MediaItem$LocalConfiguration;->uri:Landroid/net/Uri;
 
@@ -1538,11 +1548,12 @@
 
     if-eqz v5, :cond_2
 
-    return v1
+    return v2
 
     :cond_2
-    move v5, v1
+    move v5, v2
 
+    .line 5
     :goto_1
     iget-object v6, v4, Lcom/google/android/exoplayer2/MediaItem;->localConfiguration:Lcom/google/android/exoplayer2/MediaItem$LocalConfiguration;
 
@@ -1554,6 +1565,7 @@
 
     if-ge v5, v6, :cond_4
 
+    .line 6
     iget-object v6, v4, Lcom/google/android/exoplayer2/MediaItem;->localConfiguration:Lcom/google/android/exoplayer2/MediaItem$LocalConfiguration;
 
     iget-object v6, v6, Lcom/google/android/exoplayer2/MediaItem$LocalConfiguration;->subtitleConfigurations:Lcom/google/common/collect/ImmutableList;
@@ -1572,7 +1584,7 @@
 
     if-eqz v6, :cond_3
 
-    return v1
+    return v2
 
     :cond_3
     add-int/lit8 v5, v5, 0x1
@@ -1586,7 +1598,7 @@
     goto :goto_0
 
     :cond_5
-    return v2
+    return v1
 .end method
 
 .method public static closeQuietly(Ljava/io/Closeable;)V
@@ -1598,6 +1610,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 1
     :try_start_0
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
     :try_end_0
@@ -1685,6 +1698,7 @@
         .end annotation
     .end param
 
+    .line 1
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -1696,6 +1710,7 @@
 
     aget-object v3, p0, v2
 
+    .line 2
     invoke-static {v3, p1}, Lcom/google/android/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
@@ -1723,6 +1738,7 @@
 
     shl-int/lit8 v0, p3, 0x8
 
+    .line 1
     sget-object v1, Lcom/google/android/exoplayer2/util/Util;->CRC32_BYTES_MSBF:[I
 
     ushr-int/lit8 p3, p3, 0x18
@@ -1753,6 +1769,7 @@
     :goto_0
     if-ge p1, p2, :cond_0
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/util/Util;->CRC8_BYTES_MSBF:[I
 
     aget-byte v1, p0, p1
@@ -1778,6 +1795,7 @@
         .end annotation
     .end param
 
+    .line 1
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0, p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
@@ -1867,10 +1885,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Ljava/util/Locale;->getISOLanguages()[Ljava/lang/String;
 
     move-result-object v0
 
+    .line 2
     new-instance v1, Ljava/util/HashMap;
 
     array-length v2, v0
@@ -1883,6 +1903,7 @@
 
     invoke-direct {v1, v2}, Ljava/util/HashMap;-><init>(I)V
 
+    .line 3
     array-length v2, v0
 
     const/4 v3, 0x0
@@ -1894,6 +1915,7 @@
 
     aget-object v5, v0, v4
 
+    .line 4
     :try_start_0
     new-instance v6, Ljava/util/Locale;
 
@@ -1903,12 +1925,14 @@
 
     move-result-object v6
 
+    .line 5
     invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v7
 
     if-nez v7, :cond_0
 
+    .line 6
     invoke-virtual {v1, v6, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/util/MissingResourceException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1919,6 +1943,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_1
     :goto_1
     sget-object v0, Lcom/google/android/exoplayer2/util/Util;->additionalIsoLanguageReplacements:[Ljava/lang/String;
@@ -1927,6 +1952,7 @@
 
     if-ge v3, v2, :cond_2
 
+    .line 8
     aget-object v2, v0, v3
 
     add-int/lit8 v4, v3, 0x1
@@ -1951,12 +1977,15 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/android/exoplayer2/util/Util;->createTempFile(Landroid/content/Context;Ljava/lang/String;)Ljava/io/File;
 
     move-result-object p0
 
+    .line 2
     invoke-virtual {p0}, Ljava/io/File;->delete()Z
 
+    .line 3
     invoke-virtual {p0}, Ljava/io/File;->mkdir()Z
 
     return-object p0
@@ -1970,6 +1999,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
 
     move-result-object p0
@@ -1992,6 +2022,7 @@
 .method public static escapeFileName(Ljava/lang/String;)Ljava/lang/String;
     .locals 6
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -2005,6 +2036,7 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
+    .line 2
     invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v4
@@ -2027,6 +2059,7 @@
 
     return-object p0
 
+    .line 3
     :cond_2
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -2041,10 +2074,12 @@
 
     add-int/lit8 v4, v1, 0x1
 
+    .line 4
     invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
 
+    .line 5
     invoke-static {v1}, Lcom/google/android/exoplayer2/util/Util;->shouldEscapeCharacter(C)Z
 
     move-result v5
@@ -2053,6 +2088,7 @@
 
     const/16 v5, 0x25
 
+    .line 6
     invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
@@ -2065,6 +2101,7 @@
 
     goto :goto_2
 
+    .line 7
     :cond_3
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
@@ -2076,8 +2113,10 @@
     :cond_4
     if-ge v1, v0, :cond_5
 
+    .line 8
     invoke-virtual {v2, p0, v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
 
+    .line 9
     :cond_5
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -2089,6 +2128,7 @@
 .method public static fixSmoothStreamingIsmManifestUri(Landroid/net/Uri;)Landroid/net/Uri;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
     move-result-object v0
@@ -2097,6 +2137,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     sget-object v1, Lcom/google/android/exoplayer2/util/Util;->ISM_PATH_PATTERN:Ljava/util/regex/Pattern;
 
@@ -2104,6 +2145,7 @@
 
     move-result-object v0
 
+    .line 3
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v1
@@ -2120,6 +2162,7 @@
 
     const-string v0, "Manifest"
 
+    .line 4
     invoke-static {p0, v0}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p0
@@ -2131,6 +2174,7 @@
 .method public static varargs formatInvariant(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
     .locals 1
 
+    .line 1
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     invoke-static {v0, p0, p1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
@@ -2174,6 +2218,7 @@
 
     const-string v0, "audio"
 
+    .line 1
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -2186,6 +2231,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Landroid/media/AudioManager;->generateAudioSessionId()I
 
@@ -2277,6 +2323,7 @@
 
     return v1
 
+    .line 1
     :pswitch_0
     sget p0, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
@@ -2331,6 +2378,7 @@
 
     return p0
 
+    .line 2
     :cond_2
     sget p0, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
@@ -2408,30 +2456,37 @@
 .method public static getAvailableCommands(Lcom/google/android/exoplayer2/Player;Lcom/google/android/exoplayer2/Player$Commands;)Lcom/google/android/exoplayer2/Player$Commands;
     .locals 10
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->isPlayingAd()Z
 
     move-result v0
 
+    .line 2
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->isCurrentMediaItemSeekable()Z
 
     move-result v1
 
+    .line 3
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->hasPreviousMediaItem()Z
 
     move-result v2
 
+    .line 4
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->hasNextMediaItem()Z
 
     move-result v3
 
+    .line 5
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->isCurrentMediaItemLive()Z
 
     move-result v4
 
+    .line 6
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->isCurrentMediaItemDynamic()Z
 
     move-result v5
 
+    .line 7
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentTimeline()Lcom/google/android/exoplayer2/Timeline;
 
     move-result-object p0
@@ -2440,10 +2495,12 @@
 
     move-result p0
 
+    .line 8
     new-instance v6, Lcom/google/android/exoplayer2/Player$Commands$Builder;
 
     invoke-direct {v6}, Lcom/google/android/exoplayer2/Player$Commands$Builder;-><init>()V
 
+    .line 9
     invoke-virtual {v6, p1}, Lcom/google/android/exoplayer2/Player$Commands$Builder;->addAll(Lcom/google/android/exoplayer2/Player$Commands;)Lcom/google/android/exoplayer2/Player$Commands$Builder;
 
     move-result-object p1
@@ -2452,49 +2509,54 @@
 
     const/4 v7, 0x4
 
+    .line 10
     invoke-virtual {p1, v7, v6}, Lcom/google/android/exoplayer2/Player$Commands$Builder;->addIf(IZ)Lcom/google/android/exoplayer2/Player$Commands$Builder;
 
     move-result-object p1
 
-    const/4 v6, 0x0
+    const/4 v6, 0x5
 
-    const/4 v7, 0x1
+    const/4 v7, 0x0
+
+    const/4 v8, 0x1
 
     if-eqz v1, :cond_0
 
     if-nez v0, :cond_0
 
-    move v8, v7
+    move v9, v8
 
     goto :goto_0
 
     :cond_0
-    move v8, v6
+    move v9, v7
 
+    .line 11
     :goto_0
-    const/4 v9, 0x5
-
-    invoke-virtual {p1, v9, v8}, Lcom/google/android/exoplayer2/Player$Commands$Builder;->addIf(IZ)Lcom/google/android/exoplayer2/Player$Commands$Builder;
+    invoke-virtual {p1, v6, v9}, Lcom/google/android/exoplayer2/Player$Commands$Builder;->addIf(IZ)Lcom/google/android/exoplayer2/Player$Commands$Builder;
 
     move-result-object p1
+
+    const/4 v6, 0x6
 
     if-eqz v2, :cond_1
 
     if-nez v0, :cond_1
 
-    move v8, v7
+    move v9, v8
 
     goto :goto_1
 
     :cond_1
-    move v8, v6
+    move v9, v7
 
+    .line 12
     :goto_1
-    const/4 v9, 0x6
-
-    invoke-virtual {p1, v9, v8}, Lcom/google/android/exoplayer2/Player$Commands$Builder;->addIf(IZ)Lcom/google/android/exoplayer2/Player$Commands$Builder;
+    invoke-virtual {p1, v6, v9}, Lcom/google/android/exoplayer2/Player$Commands$Builder;->addIf(IZ)Lcom/google/android/exoplayer2/Player$Commands$Builder;
 
     move-result-object p1
+
+    const/4 v6, 0x7
 
     if-nez p0, :cond_3
 
@@ -2507,37 +2569,39 @@
     :cond_2
     if-nez v0, :cond_3
 
-    move v2, v7
+    move v2, v8
 
     goto :goto_2
 
     :cond_3
-    move v2, v6
+    move v2, v7
 
+    .line 13
     :goto_2
-    const/4 v8, 0x7
-
-    invoke-virtual {p1, v8, v2}, Lcom/google/android/exoplayer2/Player$Commands$Builder;->addIf(IZ)Lcom/google/android/exoplayer2/Player$Commands$Builder;
+    invoke-virtual {p1, v6, v2}, Lcom/google/android/exoplayer2/Player$Commands$Builder;->addIf(IZ)Lcom/google/android/exoplayer2/Player$Commands$Builder;
 
     move-result-object p1
+
+    const/16 v2, 0x8
 
     if-eqz v3, :cond_4
 
     if-nez v0, :cond_4
 
-    move v2, v7
+    move v6, v8
 
     goto :goto_3
 
     :cond_4
-    move v2, v6
+    move v6, v7
 
+    .line 14
     :goto_3
-    const/16 v8, 0x8
-
-    invoke-virtual {p1, v8, v2}, Lcom/google/android/exoplayer2/Player$Commands$Builder;->addIf(IZ)Lcom/google/android/exoplayer2/Player$Commands$Builder;
+    invoke-virtual {p1, v2, v6}, Lcom/google/android/exoplayer2/Player$Commands$Builder;->addIf(IZ)Lcom/google/android/exoplayer2/Player$Commands$Builder;
 
     move-result-object p1
+
+    const/16 v2, 0x9
 
     if-nez p0, :cond_6
 
@@ -2550,59 +2614,62 @@
     :cond_5
     if-nez v0, :cond_6
 
-    move p0, v7
+    move p0, v8
 
     goto :goto_4
 
     :cond_6
-    move p0, v6
+    move p0, v7
 
+    .line 15
     :goto_4
-    const/16 v2, 0x9
-
     invoke-virtual {p1, v2, p0}, Lcom/google/android/exoplayer2/Player$Commands$Builder;->addIf(IZ)Lcom/google/android/exoplayer2/Player$Commands$Builder;
 
     move-result-object p0
 
-    xor-int/lit8 p1, v0, 0x1
+    const/16 p1, 0xa
 
-    const/16 v2, 0xa
+    xor-int/lit8 v2, v0, 0x1
 
-    invoke-virtual {p0, v2, p1}, Lcom/google/android/exoplayer2/Player$Commands$Builder;->addIf(IZ)Lcom/google/android/exoplayer2/Player$Commands$Builder;
+    .line 16
+    invoke-virtual {p0, p1, v2}, Lcom/google/android/exoplayer2/Player$Commands$Builder;->addIf(IZ)Lcom/google/android/exoplayer2/Player$Commands$Builder;
 
     move-result-object p0
+
+    const/16 p1, 0xb
 
     if-eqz v1, :cond_7
 
     if-nez v0, :cond_7
 
-    move p1, v7
+    move v2, v8
 
     goto :goto_5
 
     :cond_7
-    move p1, v6
+    move v2, v7
 
+    .line 17
     :goto_5
-    const/16 v2, 0xb
-
-    invoke-virtual {p0, v2, p1}, Lcom/google/android/exoplayer2/Player$Commands$Builder;->addIf(IZ)Lcom/google/android/exoplayer2/Player$Commands$Builder;
+    invoke-virtual {p0, p1, v2}, Lcom/google/android/exoplayer2/Player$Commands$Builder;->addIf(IZ)Lcom/google/android/exoplayer2/Player$Commands$Builder;
 
     move-result-object p0
+
+    const/16 p1, 0xc
 
     if-eqz v1, :cond_8
 
     if-nez v0, :cond_8
 
-    move v6, v7
+    move v7, v8
 
+    .line 18
     :cond_8
-    const/16 p1, 0xc
-
-    invoke-virtual {p0, p1, v6}, Lcom/google/android/exoplayer2/Player$Commands$Builder;->addIf(IZ)Lcom/google/android/exoplayer2/Player$Commands$Builder;
+    invoke-virtual {p0, p1, v7}, Lcom/google/android/exoplayer2/Player$Commands$Builder;->addIf(IZ)Lcom/google/android/exoplayer2/Player$Commands$Builder;
 
     move-result-object p0
 
+    .line 19
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Player$Commands$Builder;->build()Lcom/google/android/exoplayer2/Player$Commands;
 
     move-result-object p0
@@ -2613,10 +2680,12 @@
 .method public static getBigEndianInt(Ljava/nio/ByteBuffer;I)I
     .locals 1
 
+    .line 1
     invoke-virtual {p0, p1}, Ljava/nio/ByteBuffer;->getInt(I)I
 
     move-result p1
 
+    .line 2
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->order()Ljava/nio/ByteOrder;
 
     move-result-object p0
@@ -2639,6 +2708,7 @@
 .method public static getBytesFromHexString(Ljava/lang/String;)[B
     .locals 6
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -2654,6 +2724,7 @@
 
     mul-int/lit8 v3, v2, 0x2
 
+    .line 2
     invoke-virtual {p0, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v4
@@ -2668,6 +2739,7 @@
 
     add-int/lit8 v3, v3, 0x1
 
+    .line 3
     invoke-virtual {p0, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
@@ -2697,10 +2769,12 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Util;->splitCodecs(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
+    .line 2
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -2712,6 +2786,7 @@
 
     aget-object v3, p0, v1
 
+    .line 3
     invoke-static {v3}, Lcom/google/android/exoplayer2/util/MimeTypes;->getTrackTypeOfCodec(Ljava/lang/String;)I
 
     move-result v3
@@ -2738,10 +2813,12 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Util;->splitCodecs(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
+    .line 2
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -2750,11 +2827,13 @@
 
     return-object v1
 
+    .line 3
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 4
     array-length v2, p0
 
     const/4 v3, 0x0
@@ -2764,12 +2843,14 @@
 
     aget-object v4, p0, v3
 
+    .line 5
     invoke-static {v4}, Lcom/google/android/exoplayer2/util/MimeTypes;->getTrackTypeOfCodec(Ljava/lang/String;)I
 
     move-result v5
 
     if-ne p1, v5, :cond_2
 
+    .line 6
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
     move-result v5
@@ -2778,8 +2859,10 @@
 
     const-string v5, ","
 
+    .line 7
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 8
     :cond_1
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2788,6 +2871,7 @@
 
     goto :goto_0
 
+    .line 9
     :cond_3
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
@@ -2806,17 +2890,20 @@
 .method public static getCommaDelimitedSimpleClassNames([Ljava/lang/Object;)Ljava/lang/String;
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const/4 v1, 0x0
 
+    .line 2
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_1
 
+    .line 3
     aget-object v2, p0, v1
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -2829,6 +2916,7 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 4
     array-length v2, p0
 
     add-int/lit8 v2, v2, -0x1
@@ -2837,6 +2925,7 @@
 
     const-string v2, ", "
 
+    .line 5
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_0
@@ -2844,6 +2933,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -2863,6 +2953,7 @@
 
     const-string v0, "phone"
 
+    .line 1
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -2871,22 +2962,26 @@
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Landroid/telephony/TelephonyManager;->getNetworkCountryIso()Ljava/lang/String;
 
     move-result-object p0
 
+    .line 3
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 4
     invoke-static {p0}, Lcom/google/common/base/Ascii;->toUpperCase(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
+    .line 5
     :cond_0
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
@@ -3087,13 +3182,13 @@
 
     invoke-static {v1, v0}, Lcom/google/android/exoplayer2/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_2
-    const-string v0, "Sony"
-
     .line 18
-    sget-object v1, Lcom/google/android/exoplayer2/util/Util;->MANUFACTURER:Ljava/lang/String;
+    :cond_2
+    sget-object v0, Lcom/google/android/exoplayer2/util/Util;->MANUFACTURER:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const-string v1, "Sony"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -3173,6 +3268,7 @@
 .method public static getCurrentOrMainLooper()Landroid/os/Looper;
     .locals 1
 
+    .line 1
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -3181,6 +3277,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
@@ -3193,6 +3290,7 @@
 .method public static getDataUriForString(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3207,6 +3305,7 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
 
     move-result-object p0
@@ -3223,6 +3322,7 @@
 
     move-result-object p0
 
+    .line 3
     invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p0
@@ -3233,6 +3333,7 @@
 .method public static getDefaultDisplayLocale()Ljava/util/Locale;
     .locals 2
 
+    .line 1
     sget v0, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
     const/16 v1, 0x18
@@ -3259,6 +3360,7 @@
 .method private static getDisplaySizeV16(Landroid/view/Display;Landroid/graphics/Point;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/Display;->getSize(Landroid/graphics/Point;)V
 
     return-void
@@ -3270,6 +3372,7 @@
         value = 0x11
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/Display;->getRealSize(Landroid/graphics/Point;)V
 
     return-void
@@ -3281,16 +3384,19 @@
         value = 0x17
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/Display;->getMode()Landroid/view/Display$Mode;
 
     move-result-object p0
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/Display$Mode;->getPhysicalWidth()I
 
     move-result v0
 
     iput v0, p1, Landroid/graphics/Point;->x:I
 
+    .line 3
     invoke-virtual {p0}, Landroid/view/Display$Mode;->getPhysicalHeight()I
 
     move-result p0
@@ -3305,6 +3411,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/base/Ascii;->toLowerCase(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -3370,6 +3477,7 @@
     :goto_0
     packed-switch v2, :pswitch_data_0
 
+    .line 2
     :try_start_0
     invoke-static {p0}, Ljava/util/UUID;->fromString(Ljava/lang/String;)Ljava/util/UUID;
 
@@ -3384,16 +3492,19 @@
 
     return-object p0
 
+    .line 3
     :pswitch_0
     sget-object p0, Lcom/google/android/exoplayer2/C;->CLEARKEY_UUID:Ljava/util/UUID;
 
     return-object p0
 
+    .line 4
     :pswitch_1
     sget-object p0, Lcom/google/android/exoplayer2/C;->WIDEVINE_UUID:Ljava/util/UUID;
 
     return-object p0
 
+    .line 5
     :pswitch_2
     sget-object p0, Lcom/google/android/exoplayer2/C;->PLAYREADY_UUID:Ljava/util/UUID;
 
@@ -3508,10 +3619,12 @@
     :cond_0
     const-string v1, "_"
 
+    .line 1
     invoke-static {p0, v1}, Lcom/google/android/exoplayer2/util/Util;->split(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
+    .line 2
     array-length v1, p0
 
     const/4 v2, 0x2
@@ -3523,6 +3636,7 @@
     :cond_1
     add-int/lit8 v3, v1, -0x1
 
+    .line 3
     aget-object v3, p0, v3
 
     const/4 v4, 0x3
@@ -3531,6 +3645,7 @@
 
     sub-int/2addr v1, v2
 
+    .line 4
     aget-object p0, p0, v1
 
     const-string v1, "neg"
@@ -3548,6 +3663,7 @@
     :cond_2
     move p0, v0
 
+    .line 5
     :goto_0
     :try_start_0
     invoke-static {v3}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -3596,6 +3712,7 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -3627,50 +3744,54 @@
 .method public static getIntegerCodeForString(Ljava/lang/String;)I
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    const/4 v1, 0x4
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const/4 v2, 0x4
 
-    if-gt v0, v1, :cond_0
+    if-gt v0, v2, :cond_0
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
     goto :goto_0
 
     :cond_0
-    move v1, v2
+    move v2, v1
 
+    .line 2
     :goto_0
-    invoke-static {v1}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
+    invoke-static {v2}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
-    move v1, v2
+    move v2, v1
 
     :goto_1
-    if-ge v2, v0, :cond_1
+    if-ge v1, v0, :cond_1
 
-    shl-int/lit8 v1, v1, 0x8
+    shl-int/lit8 v2, v2, 0x8
 
-    invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
+    .line 3
+    invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
 
-    or-int/2addr v1, v3
+    or-int/2addr v2, v3
 
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
     :cond_1
-    return v1
+    return v2
 .end method
 
 .method public static getLocaleLanguageTag(Ljava/util/Locale;)Ljava/lang/String;
     .locals 2
 
+    .line 1
     sget v0, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
     const/16 v1, 0x15
@@ -3698,6 +3819,7 @@
         value = 0x15
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Ljava/util/Locale;->toLanguageTag()Ljava/lang/String;
 
     move-result-object p0
@@ -3723,6 +3845,7 @@
 
     mul-double/2addr p0, v0
 
+    .line 1
     invoke-static {p0, p1}, Ljava/lang/Math;->round(D)J
 
     move-result-wide p0
@@ -3739,12 +3862,14 @@
 
     if-nez v0, :cond_0
 
+    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p0
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -3803,28 +3928,34 @@
 .method public static getPcmFormat(III)Lcom/google/android/exoplayer2/Format;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/Format$Builder;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/Format$Builder;-><init>()V
 
     const-string v1, "audio/raw"
 
+    .line 2
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/Format$Builder;->setSampleMimeType(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v0
 
+    .line 3
     invoke-virtual {v0, p1}, Lcom/google/android/exoplayer2/Format$Builder;->setChannelCount(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p1
 
+    .line 4
     invoke-virtual {p1, p2}, Lcom/google/android/exoplayer2/Format$Builder;->setSampleRate(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p1
 
+    .line 5
     invoke-virtual {p1, p0}, Lcom/google/android/exoplayer2/Format$Builder;->setPcmEncoding(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p0
 
+    .line 6
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Format$Builder;->build()Lcom/google/android/exoplayer2/Format;
 
     move-result-object p0
@@ -3861,6 +3992,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -3904,6 +4036,7 @@
 
     div-double/2addr p0, v0
 
+    .line 1
     invoke-static {p0, p1}, Ljava/lang/Math;->round(D)J
 
     move-result-wide p0
@@ -3993,6 +4126,7 @@
     :cond_1
     const-string v0, ""
 
+    .line 1
     :goto_0
     invoke-static {p2, p3}, Ljava/lang/Math;->abs(J)J
 
@@ -4004,22 +4138,27 @@
 
     const-wide/16 v3, 0x3e8
 
+    .line 2
     div-long/2addr p2, v3
 
     const-wide/16 v3, 0x3c
 
+    .line 3
     rem-long v5, p2, v3
 
+    .line 4
     div-long v7, p2, v3
 
     rem-long/2addr v7, v3
 
     const-wide/16 v3, 0xe10
 
+    .line 5
     div-long/2addr p2, v3
 
     const/4 v3, 0x0
 
+    .line 6
     invoke-virtual {p0, v3}, Ljava/lang/StringBuilder;->setLength(I)V
 
     cmp-long p0, p2, v1
@@ -4038,6 +4177,7 @@
 
     aput-object v0, p0, v3
 
+    .line 7
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p2
@@ -4073,6 +4213,7 @@
 
     aput-object v0, p0, v3
 
+    .line 8
     invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p2
@@ -4102,17 +4243,20 @@
 .method public static getSystemLanguageCodes()[Ljava/lang/String;
     .locals 3
 
+    .line 1
     invoke-static {}, Lcom/google/android/exoplayer2/util/Util;->getSystemLocales()[Ljava/lang/String;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
+    .line 2
     :goto_0
     array-length v2, v0
 
     if-ge v1, v2, :cond_0
 
+    .line 3
     aget-object v2, v0, v1
 
     invoke-static {v2}, Lcom/google/android/exoplayer2/util/Util;->normalizeLanguageCode(Ljava/lang/String;)Ljava/lang/String;
@@ -4132,6 +4276,7 @@
 .method private static getSystemLocales()[Ljava/lang/String;
     .locals 3
 
+    .line 1
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -4140,12 +4285,14 @@
 
     move-result-object v0
 
+    .line 2
     sget v1, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
     const/16 v2, 0x18
 
     if-lt v1, v2, :cond_0
 
+    .line 3
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Util;->getSystemLocalesV24(Landroid/content/res/Configuration;)[Ljava/lang/String;
 
     move-result-object v0
@@ -4157,13 +4304,14 @@
 
     new-array v1, v1, [Ljava/lang/String;
 
+    const/4 v2, 0x0
+
+    .line 4
     iget-object v0, v0, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Util;->getLocaleLanguageTag(Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object v0
-
-    const/4 v2, 0x0
 
     aput-object v0, v1, v2
 
@@ -4179,6 +4327,7 @@
         value = 0x18
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/content/res/Configuration;->getLocales()Landroid/os/LocaleList;
 
     move-result-object p0
@@ -4204,6 +4353,7 @@
     :try_start_0
     const-string v0, "android.os.SystemProperties"
 
+    .line 1
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -4214,6 +4364,7 @@
 
     new-array v3, v2, [Ljava/lang/Class;
 
+    .line 2
     const-class v4, Ljava/lang/String;
 
     const/4 v5, 0x0
@@ -4228,6 +4379,7 @@
 
     aput-object p0, v2, v5
 
+    .line 3
     invoke-virtual {v1, v0, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -4241,6 +4393,7 @@
     :catch_0
     move-exception v0
 
+    .line 4
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4273,6 +4426,7 @@
 
     if-lt p0, v0, :cond_0
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4361,11 +4515,13 @@
 .method public static getUserAgent(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
@@ -4376,6 +4532,7 @@
 
     move-result-object p0
 
+    .line 3
     iget-object p0, p0, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
@@ -4385,6 +4542,7 @@
     :catch_0
     const-string p0, "?"
 
+    .line 4
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -4424,6 +4582,7 @@
 .method public static getUtf8Bytes(Ljava/lang/String;)[B
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/common/base/Charsets;->UTF_8:Ljava/nio/charset/Charset;
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
@@ -4436,10 +4595,12 @@
 .method public static gzip([B)[B
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
+    .line 2
     :try_start_0
     new-instance v1, Ljava/util/zip/GZIPOutputStream;
 
@@ -4447,16 +4608,19 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 3
     :try_start_1
-    invoke-virtual {v1, p0}, Ljava/io/OutputStream;->write([B)V
+    invoke-virtual {v1, p0}, Ljava/util/zip/GZIPOutputStream;->write([B)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 4
     :try_start_2
-    invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
+    invoke-virtual {v1}, Ljava/util/zip/GZIPOutputStream;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
+    .line 5
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p0
@@ -4466,8 +4630,9 @@
     :catchall_0
     move-exception p0
 
+    .line 6
     :try_start_3
-    invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
+    invoke-virtual {v1}, Ljava/util/zip/GZIPOutputStream;->close()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
@@ -4487,6 +4652,7 @@
     :catch_0
     move-exception p0
 
+    .line 7
     new-instance v0, Ljava/lang/IllegalStateException;
 
     invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
@@ -4689,10 +4855,12 @@
 .method public static inferContentTypeForExtension(Ljava/lang/String;)I
     .locals 5
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/base/Ascii;->toLowerCase(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 2
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -4815,6 +4983,7 @@
 
     if-nez p1, :cond_0
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Util;->inferContentType(Landroid/net/Uri;)I
 
     move-result p0
@@ -4822,104 +4991,105 @@
     return p0
 
     :cond_0
+    const/4 p0, -0x1
+
+    .line 2
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
-    move-result p0
+    move-result v0
 
-    const/4 v0, 0x3
+    const/4 v1, 0x3
 
-    const/4 v1, 0x2
+    const/4 v2, 0x2
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
-    const/4 v4, -0x1
-
-    sparse-switch p0, :sswitch_data_0
+    sparse-switch v0, :sswitch_data_0
 
     goto :goto_0
 
     :sswitch_0
-    const-string p0, "application/x-rtsp"
+    const-string v0, "application/x-rtsp"
 
-    invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    if-nez p0, :cond_1
+    if-nez p1, :cond_1
 
     goto :goto_0
 
     :cond_1
-    move v4, v0
+    move p0, v1
 
     goto :goto_0
 
     :sswitch_1
-    const-string p0, "application/dash+xml"
+    const-string v0, "application/dash+xml"
 
-    invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    if-nez p0, :cond_2
+    if-nez p1, :cond_2
 
     goto :goto_0
 
     :cond_2
-    move v4, v1
+    move p0, v2
 
     goto :goto_0
 
     :sswitch_2
-    const-string p0, "application/vnd.ms-sstr+xml"
+    const-string v0, "application/vnd.ms-sstr+xml"
 
-    invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    if-nez p0, :cond_3
+    if-nez p1, :cond_3
 
     goto :goto_0
 
     :cond_3
-    move v4, v2
+    move p0, v3
 
     goto :goto_0
 
     :sswitch_3
-    const-string p0, "application/x-mpegURL"
+    const-string v0, "application/x-mpegURL"
 
-    invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    if-nez p0, :cond_4
+    if-nez p1, :cond_4
 
     goto :goto_0
 
     :cond_4
-    move v4, v3
+    move p0, v4
 
     :goto_0
-    packed-switch v4, :pswitch_data_0
+    packed-switch p0, :pswitch_data_0
 
     const/4 p0, 0x4
 
     return p0
 
     :pswitch_0
-    return v0
+    return v1
 
     :pswitch_1
-    return v3
+    return v4
 
     :pswitch_2
-    return v2
+    return v3
 
     :pswitch_3
-    return v1
+    return v2
 
     :sswitch_data_0
     .sparse-switch
@@ -4945,6 +5115,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
     move-result v0
@@ -4955,6 +5126,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->capacity()I
 
@@ -4966,6 +5138,7 @@
 
     if-ge v0, v2, :cond_1
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
     move-result v0
@@ -4977,10 +5150,12 @@
     :cond_1
     if-nez p2, :cond_2
 
+    .line 4
     new-instance p2, Ljava/util/zip/Inflater;
 
     invoke-direct {p2}, Ljava/util/zip/Inflater;-><init>()V
 
+    .line 5
     :cond_2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
@@ -4998,6 +5173,7 @@
 
     move p0, v1
 
+    .line 6
     :cond_3
     :goto_0
     :try_start_0
@@ -5017,23 +5193,27 @@
 
     add-int/2addr p0, v0
 
+    .line 7
     invoke-virtual {p2}, Ljava/util/zip/Inflater;->finished()Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
+    .line 8
     invoke-virtual {p1, p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setLimit(I)V
     :try_end_0
     .catch Ljava/util/zip/DataFormatException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {p2}, Ljava/util/zip/Inflater;->reset()V
-
     const/4 p0, 0x1
+
+    .line 9
+    invoke-virtual {p2}, Ljava/util/zip/Inflater;->reset()V
 
     return p0
 
+    .line 10
     :cond_4
     :try_start_1
     invoke-virtual {p2}, Ljava/util/zip/Inflater;->needsDictionary()Z
@@ -5050,6 +5230,7 @@
 
     goto :goto_1
 
+    .line 11
     :cond_5
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->capacity()I
 
@@ -5057,6 +5238,7 @@
 
     if-ne p0, v0, :cond_3
 
+    .line 12
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->capacity()I
 
     move-result v0
@@ -5070,6 +5252,7 @@
 
     goto :goto_0
 
+    .line 13
     :cond_6
     :goto_1
     invoke-virtual {p2}, Ljava/util/zip/Inflater;->reset()V
@@ -5081,8 +5264,10 @@
 
     invoke-virtual {p2}, Ljava/util/zip/Inflater;->reset()V
 
+    .line 14
     throw p0
 
+    .line 15
     :catch_0
     invoke-virtual {p2}, Ljava/util/zip/Inflater;->reset()V
 
@@ -5092,12 +5277,14 @@
 .method public static isAutomotive(Landroid/content/Context;)Z
     .locals 2
 
+    .line 1
     sget v0, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
     const/16 v1, 0x17
 
     if-lt v0, v1, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
@@ -5222,10 +5409,12 @@
 .method public static isLocalFileUri(Landroid/net/Uri;)Z
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object p0
 
+    .line 2
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -5261,6 +5450,7 @@
         api = 0x18
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object v0
@@ -5273,10 +5463,12 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-static {}, Landroid/security/NetworkSecurityPolicy;->getInstance()Landroid/security/NetworkSecurityPolicy;
 
     move-result-object v0
 
+    .line 3
     invoke-virtual {p0}, Landroid/net/Uri;->getHost()Ljava/lang/String;
 
     move-result-object p0
@@ -5307,6 +5499,7 @@
 .method public static isTv(Landroid/content/Context;)Z
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p0
@@ -5321,6 +5514,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Landroid/app/UiModeManager;->getCurrentModeType()I
 
     move-result p0
@@ -5340,9 +5534,10 @@
     return p0
 .end method
 
-.method private static synthetic lambda$newSingleThreadExecutor$0(Ljava/lang/String;Ljava/lang/Runnable;)Ljava/lang/Thread;
+.method public static synthetic lambda$newSingleThreadExecutor$0(Ljava/lang/String;Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/lang/Thread;
 
     invoke-direct {v0, p1, p0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
@@ -5416,6 +5611,7 @@
         value = 0x12
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/util/SparseLongArray;->size()I
 
     move-result v0
@@ -5426,6 +5622,7 @@
 
     const/4 v2, 0x0
 
+    .line 2
     :goto_0
     invoke-virtual {p0}, Landroid/util/SparseLongArray;->size()I
 
@@ -5433,6 +5630,7 @@
 
     if-ge v2, v3, :cond_0
 
+    .line 3
     invoke-virtual {p0, v2}, Landroid/util/SparseLongArray;->valueAt(I)J
 
     move-result-wide v3
@@ -5448,6 +5646,7 @@
     :cond_0
     return-wide v0
 
+    .line 4
     :cond_1
     new-instance p0, Ljava/util/NoSuchElementException;
 
@@ -5461,6 +5660,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     sget-object v1, Lcom/google/android/exoplayer2/util/Util;->isoLegacyTagReplacements:[Ljava/lang/String;
 
@@ -5468,6 +5668,7 @@
 
     if-ge v0, v2, :cond_1
 
+    .line 2
     aget-object v2, v1, v0
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -5476,6 +5677,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 3
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -5488,6 +5690,7 @@
 
     aget-object v0, v1, v0
 
+    .line 4
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -5519,24 +5722,24 @@
     .line 1
     sget v0, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
-    const/16 v1, 0x17
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const/16 v2, 0x17
 
-    if-ge v0, v1, :cond_0
+    if-ge v0, v2, :cond_0
 
-    return v2
+    return v1
 
     .line 2
     :cond_0
     array-length v0, p1
 
-    move v1, v2
+    move v2, v1
 
     :goto_0
-    if-ge v1, v0, :cond_2
+    if-ge v2, v0, :cond_2
 
-    aget-object v3, p1, v1
+    aget-object v3, p1, v2
 
     .line 3
     invoke-static {v3}, Lcom/google/android/exoplayer2/util/Util;->isLocalFileUri(Landroid/net/Uri;)Z
@@ -5553,12 +5756,12 @@
     return p0
 
     :cond_1
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     :cond_2
-    return v2
+    return v1
 .end method
 
 .method public static varargs maybeRequestReadExternalStoragePermission(Landroid/app/Activity;[Lcom/google/android/exoplayer2/MediaItem;)Z
@@ -5567,24 +5770,24 @@
     .line 5
     sget v0, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
-    const/16 v1, 0x17
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const/16 v2, 0x17
 
-    if-ge v0, v1, :cond_0
+    if-ge v0, v2, :cond_0
 
-    return v2
+    return v1
 
     .line 6
     :cond_0
     array-length v0, p1
 
-    move v1, v2
+    move v2, v1
 
     :goto_0
-    if-ge v1, v0, :cond_5
+    if-ge v2, v0, :cond_5
 
-    aget-object v3, p1, v1
+    aget-object v3, p1, v2
 
     .line 7
     iget-object v4, v3, Lcom/google/android/exoplayer2/MediaItem;->localConfiguration:Lcom/google/android/exoplayer2/MediaItem$LocalConfiguration;
@@ -5611,7 +5814,7 @@
     return p0
 
     :cond_2
-    move v4, v2
+    move v4, v1
 
     .line 10
     :goto_1
@@ -5658,12 +5861,12 @@
 
     :cond_4
     :goto_2
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     :cond_5
-    return v2
+    return v1
 .end method
 
 .method public static minValue(Landroid/util/SparseLongArray;)J
@@ -5672,6 +5875,7 @@
         value = 0x12
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/util/SparseLongArray;->size()I
 
     move-result v0
@@ -5682,6 +5886,7 @@
 
     const/4 v2, 0x0
 
+    .line 2
     :goto_0
     invoke-virtual {p0}, Landroid/util/SparseLongArray;->size()I
 
@@ -5689,6 +5894,7 @@
 
     if-ge v2, v3, :cond_0
 
+    .line 3
     invoke-virtual {p0, v2}, Landroid/util/SparseLongArray;->valueAt(I)J
 
     move-result-wide v3
@@ -5704,6 +5910,7 @@
     :cond_0
     return-wide v0
 
+    .line 4
     :cond_1
     new-instance p0, Ljava/util/NoSuchElementException;
 
@@ -5724,6 +5931,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayDeque;
 
     invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
@@ -5737,6 +5945,7 @@
 
     add-int v1, p1, p2
 
+    .line 2
     invoke-interface {p0, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -5747,6 +5956,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -5791,9 +6001,10 @@
 .method public static newSingleThreadExecutor(Ljava/lang/String;)Ljava/util/concurrent/ExecutorService;
     .locals 1
 
-    new-instance v0, Lcom/google/android/exoplayer2/util/g;
+    .line 1
+    new-instance v0, Ld/j/a/b/a3/d;
 
-    invoke-direct {v0, p0}, Lcom/google/android/exoplayer2/util/g;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Ld/j/a/b/a3/d;-><init>(Ljava/lang/String;)V
 
     invoke-static {v0}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
 
@@ -5816,10 +6027,12 @@
 
     const/16 v1, 0x2d
 
+    .line 1
     invoke-virtual {p0, v0, v1}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v1
@@ -5839,6 +6052,7 @@
     :cond_1
     move-object p0, v0
 
+    .line 3
     :cond_2
     :goto_0
     invoke-static {p0}, Lcom/google/common/base/Ascii;->toLowerCase(Ljava/lang/String;)Ljava/lang/String;
@@ -5847,6 +6061,7 @@
 
     const-string v0, "-"
 
+    .line 4
     invoke-static {p0, v0}, Lcom/google/android/exoplayer2/util/Util;->splitAtFirst(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
@@ -5855,16 +6070,19 @@
 
     aget-object v0, v0, v1
 
+    .line 5
     sget-object v1, Lcom/google/android/exoplayer2/util/Util;->languageTagReplacementMap:Ljava/util/HashMap;
 
     if-nez v1, :cond_3
 
+    .line 6
     invoke-static {}, Lcom/google/android/exoplayer2/util/Util;->createIsoLanguageReplacementMap()Ljava/util/HashMap;
 
     move-result-object v1
 
     sput-object v1, Lcom/google/android/exoplayer2/util/Util;->languageTagReplacementMap:Ljava/util/HashMap;
 
+    .line 7
     :cond_3
     sget-object v1, Lcom/google/android/exoplayer2/util/Util;->languageTagReplacementMap:Ljava/util/HashMap;
 
@@ -5876,12 +6094,14 @@
 
     if-eqz v1, :cond_4
 
+    .line 8
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 9
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -5901,6 +6121,7 @@
     :cond_4
     const-string v1, "no"
 
+    .line 10
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -5923,6 +6144,7 @@
 
     if-eqz v0, :cond_6
 
+    .line 11
     :cond_5
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Util;->maybeReplaceLegacyLanguageTags(Ljava/lang/String;)Ljava/lang/String;
 
@@ -5942,6 +6164,7 @@
         }
     .end annotation
 
+    .line 1
     array-length v0, p0
 
     add-int/lit8 v0, v0, 0x1
@@ -5950,10 +6173,12 @@
 
     move-result-object v0
 
+    .line 2
     array-length p0, p0
 
     aput-object p1, v0, p0
 
+    .line 3
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Util;->castNonNullTypeArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p0
@@ -5971,6 +6196,7 @@
         }
     .end annotation
 
+    .line 1
     array-length v0, p0
 
     array-length v1, p1
@@ -5981,6 +6207,7 @@
 
     move-result-object v0
 
+    .line 2
     array-length p0, p0
 
     array-length v1, p1
@@ -6002,6 +6229,7 @@
         }
     .end annotation
 
+    .line 1
     array-length v0, p0
 
     if-gt p1, v0, :cond_0
@@ -6016,6 +6244,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 2
     invoke-static {p0, p1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     move-result-object p0
@@ -6046,9 +6275,11 @@
     :cond_0
     move v2, v1
 
+    .line 1
     :goto_0
     invoke-static {v2}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 2
     array-length v2, p0
 
     if-gt p2, v2, :cond_1
@@ -6061,6 +6292,7 @@
     :goto_1
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 3
     invoke-static {p0, p1, p2}, Ljava/util/Arrays;->copyOfRange([Ljava/lang/Object;II)[Ljava/lang/Object;
 
     move-result-object p0
@@ -6080,6 +6312,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -6098,6 +6331,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     invoke-interface {p0, p1}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     return-void
@@ -6111,12 +6345,14 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/util/Util;->XS_DATE_TIME_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v1
@@ -6125,6 +6361,7 @@
 
     const/16 p0, 0x9
 
+    .line 3
     invoke-virtual {v0, p0}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v1
@@ -6135,6 +6372,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-virtual {v0, p0}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
@@ -6153,6 +6391,7 @@
     :cond_1
     const/16 p0, 0xc
 
+    .line 5
     invoke-virtual {v0, p0}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object p0
@@ -6177,6 +6416,7 @@
 
     const/16 p0, 0xb
 
+    .line 6
     invoke-virtual {v0, p0}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object p0
@@ -6191,6 +6431,7 @@
 
     mul-int/lit8 v2, v2, -0x1
 
+    .line 7
     :cond_2
     :goto_0
     new-instance p0, Ljava/util/GregorianCalendar;
@@ -6203,10 +6444,12 @@
 
     invoke-direct {p0, v1}, Ljava/util/GregorianCalendar;-><init>(Ljava/util/TimeZone;)V
 
+    .line 8
     invoke-virtual {p0}, Ljava/util/Calendar;->clear()V
 
     const/4 v1, 0x1
 
+    .line 9
     invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v3
@@ -6217,6 +6460,7 @@
 
     const/4 v3, 0x2
 
+    .line 10
     invoke-virtual {v0, v3}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v3
@@ -6229,6 +6473,7 @@
 
     const/4 v1, 0x3
 
+    .line 11
     invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v3
@@ -6239,6 +6484,7 @@
 
     const/4 v3, 0x4
 
+    .line 12
     invoke-virtual {v0, v3}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v3
@@ -6249,6 +6495,7 @@
 
     const/4 v3, 0x5
 
+    .line 13
     invoke-virtual {v0, v3}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v3
@@ -6259,6 +6506,7 @@
 
     const/4 v3, 0x6
 
+    .line 14
     invoke-virtual {v0, v3}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v3
@@ -6269,10 +6517,12 @@
 
     move-object v3, p0
 
+    .line 15
     invoke-virtual/range {v3 .. v9}, Ljava/util/Calendar;->set(IIIIII)V
 
     const/16 v3, 0x8
 
+    .line 16
     invoke-virtual {v0, v3}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v4
@@ -6283,6 +6533,7 @@
 
     if-nez v4, :cond_3
 
+    .line 17
     new-instance v4, Ljava/math/BigDecimal;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -6305,18 +6556,20 @@
 
     invoke-direct {v4, v0}, Ljava/math/BigDecimal;-><init>(Ljava/lang/String;)V
 
+    const/16 v0, 0xe
+
+    .line 18
     invoke-virtual {v4, v1}, Ljava/math/BigDecimal;->movePointRight(I)Ljava/math/BigDecimal;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Ljava/math/BigDecimal;->intValue()I
+    invoke-virtual {v1}, Ljava/math/BigDecimal;->intValue()I
 
-    move-result v0
+    move-result v1
 
-    const/16 v1, 0xe
+    invoke-virtual {p0, v0, v1}, Ljava/util/Calendar;->set(II)V
 
-    invoke-virtual {p0, v1, v0}, Ljava/util/Calendar;->set(II)V
-
+    .line 19
     :cond_3
     invoke-virtual {p0}, Ljava/util/Calendar;->getTimeInMillis()J
 
@@ -6335,6 +6588,7 @@
     :cond_4
     return-wide v0
 
+    .line 20
     :cond_5
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -6362,12 +6616,14 @@
 .method public static parseXsDuration(Ljava/lang/String;)J
     .locals 14
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/util/Util;->XS_DURATION_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v1
@@ -6380,6 +6636,7 @@
 
     const/4 p0, 0x1
 
+    .line 3
     invoke-virtual {v0, p0}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v1
@@ -6392,6 +6649,7 @@
 
     const/4 v1, 0x3
 
+    .line 4
     invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v1
@@ -6400,6 +6658,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 5
     invoke-static {v1}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
     move-result-wide v8
@@ -6416,12 +6675,14 @@
     :goto_0
     const/4 v1, 0x5
 
+    .line 6
     invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
+    .line 7
     invoke-static {v1}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
     move-result-wide v10
@@ -6440,12 +6701,14 @@
 
     const/4 v1, 0x7
 
+    .line 8
     invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_2
 
+    .line 9
     invoke-static {v1}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
     move-result-wide v10
@@ -6464,12 +6727,14 @@
 
     const/16 v1, 0xa
 
+    .line 10
     invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_3
 
+    .line 11
     invoke-static {v1}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
     move-result-wide v10
@@ -6486,12 +6751,14 @@
 
     const/16 v1, 0xc
 
+    .line 12
     invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_4
 
+    .line 13
     invoke-static {v1}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
     move-result-wide v4
@@ -6510,12 +6777,14 @@
 
     const/16 v1, 0xe
 
+    .line 14
     invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_5
 
+    .line 15
     invoke-static {v0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
     move-result-wide v6
@@ -6534,6 +6803,7 @@
     :cond_6
     return-wide v0
 
+    .line 16
     :cond_7
     invoke-static {p0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
@@ -6551,10 +6821,12 @@
 .method public static postOrRun(Landroid/os/Handler;Ljava/lang/Runnable;)Z
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
 
     move-result-object v0
@@ -6569,6 +6841,7 @@
 
     return p0
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
@@ -6580,12 +6853,14 @@
 
     if-ne v0, v1, :cond_1
 
+    .line 4
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     const/4 p0, 0x1
 
     return p0
 
+    .line 5
     :cond_1
     invoke-virtual {p0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -6597,6 +6872,7 @@
 .method public static readBoolean(Landroid/os/Parcel;)Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result p0
@@ -6617,12 +6893,14 @@
 .method public static recursiveDelete(Ljava/io/File;)V
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     array-length v1, v0
 
     const/4 v2, 0x0
@@ -6632,12 +6910,14 @@
 
     aget-object v3, v0, v2
 
+    .line 3
     invoke-static {v3}, Lcom/google/android/exoplayer2/util/Util;->recursiveDelete(Ljava/io/File;)V
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-virtual {p0}, Ljava/io/File;->delete()Z
 
@@ -6658,6 +6938,7 @@
 
     if-ltz p1, :cond_1
 
+    .line 1
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -6668,6 +6949,7 @@
 
     if-eq p1, p2, :cond_0
 
+    .line 2
     invoke-interface {p0, p1, p2}, Ljava/util/List;->subList(II)Ljava/util/List;
 
     move-result-object p0
@@ -6677,6 +6959,7 @@
     :cond_0
     return-void
 
+    .line 3
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -6693,6 +6976,7 @@
 
     const-string v0, "android.permission.READ_EXTERNAL_STORAGE"
 
+    .line 1
     invoke-virtual {p0, v0}, Landroid/app/Activity;->checkSelfPermission(Ljava/lang/String;)I
 
     move-result v1
@@ -6701,6 +6985,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 2
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
@@ -6724,14 +7009,17 @@
 
     if-ltz v0, :cond_0
 
+    .line 1
     rem-long v3, p4, p2
 
     cmp-long v3, v3, v1
 
     if-nez v3, :cond_0
 
+    .line 2
     div-long/2addr p4, p2
 
+    .line 3
     div-long/2addr p0, p4
 
     return-wide p0
@@ -6739,12 +7027,14 @@
     :cond_0
     if-gez v0, :cond_1
 
+    .line 4
     rem-long v3, p2, p4
 
     cmp-long v0, v3, v1
 
     if-nez v0, :cond_1
 
+    .line 5
     div-long/2addr p2, p4
 
     mul-long/2addr p0, p2
@@ -6778,6 +7068,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -6792,17 +7083,20 @@
 
     if-ltz v2, :cond_0
 
+    .line 2
     rem-long v6, p3, p1
 
     cmp-long v6, v6, v3
 
     if-nez v6, :cond_0
 
+    .line 3
     div-long/2addr p3, p1
 
     :goto_0
     if-ge v5, v0, :cond_2
 
+    .line 4
     invoke-interface {p0, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -6824,17 +7118,20 @@
     :cond_0
     if-gez v2, :cond_1
 
+    .line 5
     rem-long v6, p1, p3
 
     cmp-long v2, v6, v3
 
     if-nez v2, :cond_1
 
+    .line 6
     div-long/2addr p1, p3
 
     :goto_1
     if-ge v5, v0, :cond_2
 
+    .line 7
     invoke-interface {p0, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p3
@@ -6863,6 +7160,7 @@
     :goto_2
     if-ge v5, v0, :cond_2
 
+    .line 8
     invoke-interface {p0, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p3
@@ -6900,19 +7198,23 @@
 
     if-ltz v0, :cond_0
 
+    .line 1
     rem-long v4, p3, p1
 
     cmp-long v4, v4, v1
 
     if-nez v4, :cond_0
 
+    .line 2
     div-long/2addr p3, p1
 
+    .line 3
     :goto_0
     array-length p1, p0
 
     if-ge v3, p1, :cond_2
 
+    .line 4
     aget-wide p1, p0, v3
 
     div-long/2addr p1, p3
@@ -6926,19 +7228,23 @@
     :cond_0
     if-gez v0, :cond_1
 
+    .line 5
     rem-long v4, p1, p3
 
     cmp-long v0, v4, v1
 
     if-nez v0, :cond_1
 
+    .line 6
     div-long/2addr p1, p3
 
+    .line 7
     :goto_1
     array-length p3, p0
 
     if-ge v3, p3, :cond_2
 
+    .line 8
     aget-wide p3, p0, v3
 
     mul-long/2addr p3, p1
@@ -6956,11 +7262,13 @@
 
     div-double/2addr p1, p3
 
+    .line 9
     :goto_2
     array-length p3, p0
 
     if-ge v3, p3, :cond_2
 
+    .line 10
     aget-wide p3, p0, v3
 
     long-to-double p3, p3
@@ -7035,6 +7343,7 @@
 .method public static sneakyThrow(Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Util;->sneakyThrowInternal(Ljava/lang/Throwable;)V
 
     return-void
@@ -7058,6 +7367,7 @@
         }
     .end annotation
 
+    .line 1
     throw p0
 .end method
 
@@ -7066,6 +7376,7 @@
 
     const/4 v0, -0x1
 
+    .line 1
     invoke-virtual {p0, p1, v0}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
 
     move-result-object p0
@@ -7078,6 +7389,7 @@
 
     const/4 v0, 0x2
 
+    .line 1
     invoke-virtual {p0, p1, v0}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
 
     move-result-object p0
@@ -7092,6 +7404,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -7104,6 +7417,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -7123,18 +7437,21 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     sget v0, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
     const/16 v1, 0x1a
 
     if-lt v0, v1, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Landroid/content/Context;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
     move-result-object p0
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-virtual {p0, p1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
@@ -7169,6 +7486,7 @@
 .method public static varargs sum([J)J
     .locals 6
 
+    .line 1
     array-length v0, p0
 
     const-wide/16 v1, 0x0
@@ -7205,6 +7523,7 @@
 
     const-string v3, "tbl_name = ?"
 
+    .line 1
     invoke-static {p0, p1, v3, v1}, Landroid/database/DatabaseUtils;->queryNumEntries(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)J
 
     move-result-wide p0
@@ -7236,10 +7555,12 @@
 
     new-array v0, v0, [B
 
+    .line 1
     new-instance v1, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v1}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
+    .line 2
     :goto_0
     invoke-virtual {p0, v0}, Ljava/io/InputStream;->read([B)I
 
@@ -7251,10 +7572,12 @@
 
     const/4 v3, 0x0
 
+    .line 3
     invoke-virtual {v1, v0, v3, v2}, Ljava/io/ByteArrayOutputStream;->write([BII)V
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
@@ -7266,6 +7589,7 @@
 .method public static toHexString([B)Ljava/lang/String;
     .locals 4
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     array-length v1, p0
@@ -7276,11 +7600,13 @@
 
     const/4 v1, 0x0
 
+    .line 2
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_0
 
+    .line 3
     aget-byte v2, p0, v1
 
     shr-int/lit8 v2, v2, 0x4
@@ -7289,6 +7615,7 @@
 
     const/16 v3, 0x10
 
+    .line 4
     invoke-static {v2, v3}, Ljava/lang/Character;->forDigit(II)C
 
     move-result v2
@@ -7299,6 +7626,7 @@
 
     and-int/lit8 v2, v2, 0xf
 
+    .line 5
     invoke-static {v2, v3}, Ljava/lang/Character;->forDigit(II)C
 
     move-result v2
@@ -7309,6 +7637,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -7320,6 +7649,7 @@
 .method public static toLong(II)J
     .locals 2
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Util;->toUnsignedLong(I)J
 
     move-result-wide v0
@@ -7352,6 +7682,7 @@
 .method public static truncateAscii(Ljava/lang/CharSequence;I)Ljava/lang/CharSequence;
     .locals 1
 
+    .line 1
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
@@ -7376,6 +7707,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -7389,6 +7721,7 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
+    .line 2
     invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v4
@@ -7414,10 +7747,12 @@
 
     sub-int v2, v0, v2
 
+    .line 3
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
+    .line 4
     sget-object v5, Lcom/google/android/exoplayer2/util/Util;->ESCAPED_CHARACTER_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v5, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
@@ -7427,6 +7762,7 @@
     :goto_1
     if-lez v3, :cond_3
 
+    .line 5
     invoke-virtual {v5}, Ljava/util/regex/Matcher;->find()Z
 
     move-result v6
@@ -7435,6 +7771,7 @@
 
     const/4 v6, 0x1
 
+    .line 6
     invoke-virtual {v5, v6}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v6
@@ -7453,6 +7790,7 @@
 
     int-to-char v6, v6
 
+    .line 7
     invoke-virtual {v5}, Ljava/util/regex/Matcher;->start()I
 
     move-result v7
@@ -7461,6 +7799,7 @@
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 8
     invoke-virtual {v5}, Ljava/util/regex/Matcher;->end()I
 
     move-result v1
@@ -7472,8 +7811,10 @@
     :cond_3
     if-ge v1, v0, :cond_4
 
+    .line 9
     invoke-virtual {v4, p0, v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
 
+    .line 10
     :cond_4
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->length()I
 
@@ -7485,6 +7826,7 @@
 
     return-object p0
 
+    .line 11
     :cond_5
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -7513,6 +7855,7 @@
     :cond_0
     const-wide/16 v0, 0x3e8
 
+    .line 1
     div-long/2addr p0, v0
 
     :cond_1
@@ -7523,6 +7866,7 @@
 .method public static writeBoolean(Landroid/os/Parcel;Z)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void

@@ -1,4 +1,4 @@
-.class interface abstract Landroidx/media/MediaSessionManager$MediaSessionManagerImpl;
+.class public interface abstract Landroidx/media/MediaSessionManager$MediaSessionManagerImpl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

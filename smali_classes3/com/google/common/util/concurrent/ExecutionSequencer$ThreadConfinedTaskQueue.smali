@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/ExecutionSequencer$ThreadConfinedTaskQueue;
+.class public final Lcom/google/common/util/concurrent/ExecutionSequencer$ThreadConfinedTaskQueue;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field nextExecutor:Ljava/util/concurrent/Executor;
+.field public nextExecutor:Ljava/util/concurrent/Executor;
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 .end field
 
-.field nextTask:Ljava/lang/Runnable;
+.field public nextTask:Ljava/lang/Runnable;
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 .end field
 
-.field thread:Ljava/lang/Thread;
+.field public thread:Ljava/lang/Thread;
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 .end field

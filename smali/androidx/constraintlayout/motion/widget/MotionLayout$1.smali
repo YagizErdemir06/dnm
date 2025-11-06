@@ -1,4 +1,4 @@
-.class Landroidx/constraintlayout/motion/widget/MotionLayout$1;
+.class public Landroidx/constraintlayout/motion/widget/MotionLayout$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/constraintlayout/motion/widget/MotionLayout;
+.field public final synthetic this$0:Landroidx/constraintlayout/motion/widget/MotionLayout;
 
 
 # direct methods
@@ -33,6 +33,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroidx/constraintlayout/motion/widget/MotionLayout$1;->this$0:Landroidx/constraintlayout/motion/widget/MotionLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,6 +46,7 @@
 .method public run()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/motion/widget/MotionLayout$1;->this$0:Landroidx/constraintlayout/motion/widget/MotionLayout;
 
     invoke-static {p0}, Landroidx/constraintlayout/motion/widget/MotionLayout;->access$000(Landroidx/constraintlayout/motion/widget/MotionLayout;)Landroidx/constraintlayout/motion/widget/MotionLayout$StateCache;

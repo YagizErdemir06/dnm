@@ -41,6 +41,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableMap;-><init>()V
 
     return-void
@@ -60,6 +61,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ImmutableBiMap$Builder;
 
     invoke-direct {v0}, Lcom/google/common/collect/ImmutableBiMap$Builder;-><init>()V
@@ -86,8 +88,10 @@
 
     const-string v0, "expectedSize"
 
+    .line 1
     invoke-static {p0, v0}, Lcom/google/common/collect/CollectPreconditions;->checkNonnegative(ILjava/lang/String;)I
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/ImmutableBiMap$Builder;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/ImmutableBiMap$Builder;-><init>(I)V
@@ -1104,6 +1108,7 @@
     .annotation runtime Ljava/lang/SafeVarargs;
     .end annotation
 
+    .line 1
     invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
@@ -1169,6 +1174,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -1179,6 +1185,7 @@
 .method public bridge synthetic inverse()Lcom/google/common/collect/BiMap;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableBiMap;->inverse()Lcom/google/common/collect/ImmutableBiMap;
 
     move-result-object p0
@@ -1254,6 +1261,7 @@
 .method public writeReplace()Ljava/lang/Object;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ImmutableBiMap$SerializedForm;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/ImmutableBiMap$SerializedForm;-><init>(Lcom/google/common/collect/ImmutableBiMap;)V

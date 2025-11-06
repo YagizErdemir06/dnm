@@ -1,4 +1,4 @@
-.class final Lcom/google/common/io/Files$FileByteSink;
+.class public final Lcom/google/common/io/Files$FileByteSink;
 .super Lcom/google/common/io/ByteSink;
 .source "SourceFile"
 
@@ -110,6 +110,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/io/Files$FileByteSink;->file:Ljava/io/File;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

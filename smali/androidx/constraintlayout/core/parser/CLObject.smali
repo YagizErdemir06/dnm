@@ -27,6 +27,7 @@
 .method public constructor <init>([C)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/constraintlayout/core/parser/CLContainer;-><init>([C)V
 
     return-void
@@ -35,6 +36,7 @@
 .method public static allocate([C)Landroidx/constraintlayout/core/parser/CLObject;
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/constraintlayout/core/parser/CLObject;
 
     invoke-direct {v0, p0}, Landroidx/constraintlayout/core/parser/CLObject;-><init>([C)V
@@ -47,6 +49,7 @@
 .method public iterator()Ljava/util/Iterator;
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/constraintlayout/core/parser/CLObject$CLObjectIterator;
 
     invoke-direct {v0, p0, p0}, Landroidx/constraintlayout/core/parser/CLObject$CLObjectIterator;-><init>(Landroidx/constraintlayout/core/parser/CLObject;Landroidx/constraintlayout/core/parser/CLObject;)V
@@ -161,6 +164,7 @@
 .method public toJSON()Ljava/lang/String;
     .locals 4
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -183,6 +187,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
+    .line 2
     iget-object p0, p0, Landroidx/constraintlayout/core/parser/CLContainer;->mElements:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -208,6 +213,7 @@
 
     const-string v3, ", "
 
+    .line 3
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
@@ -215,6 +221,7 @@
     :cond_0
     const/4 v1, 0x0
 
+    .line 4
     :goto_1
     invoke-virtual {v2}, Landroidx/constraintlayout/core/parser/CLElement;->toJSON()Ljava/lang/String;
 
@@ -227,8 +234,10 @@
     :cond_1
     const-string p0, " }"
 
+    .line 5
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 6
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

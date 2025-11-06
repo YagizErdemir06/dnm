@@ -32,12 +32,14 @@
 
     sget p1, Lcom/google/android/gms/common/moduleinstall/internal/zay;->zab:I
 
+    .line 1
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object p0
@@ -50,6 +52,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     new-instance p0, Lcom/google/android/gms/common/api/ApiException;
 

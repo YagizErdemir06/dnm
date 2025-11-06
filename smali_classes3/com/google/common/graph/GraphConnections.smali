@@ -1,4 +1,4 @@
-.class interface abstract Lcom/google/common/graph/GraphConnections;
+.class public interface abstract Lcom/google/common/graph/GraphConnections;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

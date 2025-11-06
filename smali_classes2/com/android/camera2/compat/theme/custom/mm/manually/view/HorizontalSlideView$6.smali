@@ -1,4 +1,4 @@
-.class Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView$6;
+.class public Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView$6;
 .super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
 
@@ -15,17 +15,30 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;
+.field public final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;
 
-.field final synthetic val$isDown:Z
+.field public final synthetic val$isDown:Z
 
-.field final synthetic val$state:I
+.field public final synthetic val$state:I
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;IZ)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$state",
+            "val$isDown"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView$6;->this$0:Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;
 
     iput p2, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView$6;->val$state:I
@@ -41,13 +54,23 @@
 # virtual methods
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
 
+    .line 1
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView$6;->this$0:Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;
 
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView$6;->val$state:I
 
     invoke-static {p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->access$702(Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;I)I
 
+    .line 2
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView$6;->this$0:Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;
 
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView$6;->val$isDown:Z
@@ -64,6 +87,7 @@
     :goto_0
     invoke-static {p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->access$602(Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;F)F
 
+    .line 3
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView$6;->this$0:Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;
 
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView$6;->val$isDown:Z
@@ -72,6 +96,7 @@
 
     invoke-static {p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;->access$102(Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;Z)Z
 
+    .line 4
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView$6;->this$0:Lcom/android/camera2/compat/theme/custom/mm/manually/view/HorizontalSlideView;
 
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V

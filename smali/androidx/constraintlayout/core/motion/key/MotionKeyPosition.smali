@@ -4,11 +4,11 @@
 
 
 # static fields
-.field static final KEY_TYPE:I = 0x2
+.field public static final KEY_TYPE:I = 0x2
 
-.field static final NAME:Ljava/lang/String; = "KeyPosition"
+.field public static final NAME:Ljava/lang/String; = "KeyPosition"
 
-.field protected static final SELECTION_SLOPE:F = 20.0f
+.field public static final SELECTION_SLOPE:F = 20.0f
 
 .field public static final TYPE_CARTESIAN:I = 0x0
 
@@ -49,44 +49,59 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Landroidx/constraintlayout/core/motion/key/MotionKey;-><init>()V
 
+    .line 2
     sget v0, Landroidx/constraintlayout/core/motion/key/MotionKey;->UNSET:I
 
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mCurveFit:I
 
     const/4 v1, 0x0
 
+    .line 3
     iput-object v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mTransitionEasing:Ljava/lang/String;
 
+    .line 4
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mPathMotionArc:I
 
     const/4 v0, 0x0
 
+    .line 5
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mDrawPath:I
 
     const/high16 v1, 0x7fc00000    # Float.NaN
 
+    .line 6
     iput v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mPercentWidth:F
 
+    .line 7
     iput v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mPercentHeight:F
 
+    .line 8
     iput v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mPercentX:F
 
+    .line 9
     iput v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mPercentY:F
 
+    .line 10
     iput v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mAltPercentX:F
 
+    .line 11
     iput v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mAltPercentY:F
 
+    .line 12
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mPositionType:I
 
+    .line 13
     iput v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mCalculatedPositionX:F
 
+    .line 14
     iput v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mCalculatedPositionY:F
 
     const/4 v0, 0x2
 
+    .line 15
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mType:I
 
     return-void
@@ -99,6 +114,7 @@
 
     sub-float/2addr p4, p2
 
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mPercentX:F
 
     invoke-static {v0}, Ljava/lang/Float;->isNaN(F)Z
@@ -116,6 +132,7 @@
     :cond_0
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mPercentX:F
 
+    .line 2
     :goto_0
     iget v2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mAltPercentY:F
 
@@ -132,6 +149,7 @@
     :cond_1
     iget v2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mAltPercentY:F
 
+    .line 3
     :goto_1
     iget v3, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mPercentY:F
 
@@ -148,6 +166,7 @@
     :cond_2
     iget v3, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mPercentY:F
 
+    .line 4
     :goto_2
     iget v4, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mAltPercentX:F
 
@@ -175,6 +194,7 @@
 
     int-to-float p1, p1
 
+    .line 5
     iput p1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mCalculatedPositionX:F
 
     mul-float/2addr p3, v2
@@ -189,6 +209,7 @@
 
     int-to-float p1, p1
 
+    .line 6
     iput p1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mCalculatedPositionY:F
 
     return-void
@@ -203,6 +224,7 @@
 
     neg-float v0, p4
 
+    .line 1
     iget v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mPercentX:F
 
     mul-float v2, p3, v1
@@ -225,6 +247,7 @@
 
     add-float/2addr p2, p3
 
+    .line 2
     iput p2, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mCalculatedPositionY:F
 
     return-void
@@ -239,6 +262,7 @@
 
     int-to-float p1, p1
 
+    .line 1
     iget v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mPercentX:F
 
     mul-float/2addr p1, v1
@@ -257,6 +281,7 @@
 
     add-float/2addr p1, v2
 
+    .line 2
     iput p1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mCalculatedPositionY:F
 
     return-void
@@ -282,6 +307,7 @@
 .method public calcPosition(IIFFFF)V
     .locals 2
 
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mPositionType:I
 
     const/4 v1, 0x1
@@ -292,15 +318,18 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 2
     invoke-direct {p0, p3, p4, p5, p6}, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->calcCartesianPosition(FFFF)V
 
     return-void
 
+    .line 3
     :cond_0
     invoke-direct {p0, p1, p2}, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->calcScreenPosition(II)V
 
     return-void
 
+    .line 4
     :cond_1
     invoke-direct {p0, p3, p4, p5, p6}, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->calcPathPosition(FFFF)V
 
@@ -341,50 +370,63 @@
 .method public copy(Landroidx/constraintlayout/core/motion/key/MotionKey;)Landroidx/constraintlayout/core/motion/key/MotionKey;
     .locals 1
 
+    .line 1
     invoke-super {p0, p1}, Landroidx/constraintlayout/core/motion/key/MotionKey;->copy(Landroidx/constraintlayout/core/motion/key/MotionKey;)Landroidx/constraintlayout/core/motion/key/MotionKey;
 
+    .line 2
     check-cast p1, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;
 
+    .line 3
     iget-object v0, p1, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mTransitionEasing:Ljava/lang/String;
 
     iput-object v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mTransitionEasing:Ljava/lang/String;
 
+    .line 4
     iget v0, p1, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mPathMotionArc:I
 
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mPathMotionArc:I
 
+    .line 5
     iget v0, p1, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mDrawPath:I
 
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mDrawPath:I
 
+    .line 6
     iget v0, p1, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mPercentWidth:F
 
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mPercentWidth:F
 
     const/high16 v0, 0x7fc00000    # Float.NaN
 
+    .line 7
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mPercentHeight:F
 
+    .line 8
     iget v0, p1, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mPercentX:F
 
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mPercentX:F
 
+    .line 9
     iget v0, p1, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mPercentY:F
 
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mPercentY:F
 
+    .line 10
     iget v0, p1, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mAltPercentX:F
 
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mAltPercentX:F
 
+    .line 11
     iget v0, p1, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mAltPercentY:F
 
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mAltPercentY:F
 
+    .line 12
     iget v0, p1, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mCalculatedPositionX:F
 
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mCalculatedPositionX:F
 
+    .line 13
     iget p1, p1, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mCalculatedPositionY:F
 
     iput p1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mCalculatedPositionY:F
@@ -409,6 +451,7 @@
 .method public getId(Ljava/lang/String;)I
     .locals 0
 
+    .line 1
     invoke-static {p1}, Landroidx/constraintlayout/core/motion/utils/TypedValues$PositionType;->getId(Ljava/lang/String;)I
 
     move-result p0
@@ -419,6 +462,7 @@
 .method public getPositionX()F
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mCalculatedPositionX:F
 
     return p0
@@ -427,6 +471,7 @@
 .method public getPositionY()F
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mCalculatedPositionY:F
 
     return p0
@@ -435,6 +480,7 @@
 .method public intersects(IILandroidx/constraintlayout/core/motion/utils/FloatRect;Landroidx/constraintlayout/core/motion/utils/FloatRect;FF)Z
     .locals 7
 
+    .line 1
     invoke-virtual {p3}, Landroidx/constraintlayout/core/motion/utils/FloatRect;->centerX()F
 
     move-result v3
@@ -459,6 +505,7 @@
 
     invoke-virtual/range {v0 .. v6}, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->calcPosition(IIFFFF)V
 
+    .line 2
     iget p1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mCalculatedPositionX:F
 
     sub-float/2addr p5, p1
@@ -477,6 +524,7 @@
 
     sub-float/2addr p6, p0
 
+    .line 3
     invoke-static {p6}, Ljava/lang/Math;->abs(F)F
 
     move-result p0
@@ -498,6 +546,7 @@
 .method public positionAttributes(Landroidx/constraintlayout/core/motion/MotionWidget;Landroidx/constraintlayout/core/motion/utils/FloatRect;Landroidx/constraintlayout/core/motion/utils/FloatRect;FF[Ljava/lang/String;[F)V
     .locals 7
 
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->mPositionType:I
 
     const/4 v1, 0x1
@@ -522,10 +571,12 @@
 
     move-object v6, p7
 
+    .line 2
     invoke-virtual/range {v0 .. v6}, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->positionCartAttributes(Landroidx/constraintlayout/core/motion/utils/FloatRect;Landroidx/constraintlayout/core/motion/utils/FloatRect;FF[Ljava/lang/String;[F)V
 
     return-void
 
+    .line 3
     :cond_0
     invoke-virtual/range {p0 .. p7}, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->positionScreenAttributes(Landroidx/constraintlayout/core/motion/MotionWidget;Landroidx/constraintlayout/core/motion/utils/FloatRect;Landroidx/constraintlayout/core/motion/utils/FloatRect;FF[Ljava/lang/String;[F)V
 
@@ -546,6 +597,7 @@
 
     move-object v6, p7
 
+    .line 4
     invoke-virtual/range {v0 .. v6}, Landroidx/constraintlayout/core/motion/key/MotionKeyPosition;->positionPathAttributes(Landroidx/constraintlayout/core/motion/utils/FloatRect;Landroidx/constraintlayout/core/motion/utils/FloatRect;FF[Ljava/lang/String;[F)V
 
     return-void
@@ -554,18 +606,22 @@
 .method public positionCartAttributes(Landroidx/constraintlayout/core/motion/utils/FloatRect;Landroidx/constraintlayout/core/motion/utils/FloatRect;FF[Ljava/lang/String;[F)V
     .locals 5
 
+    .line 1
     invoke-virtual {p1}, Landroidx/constraintlayout/core/motion/utils/FloatRect;->centerX()F
 
     move-result p0
 
+    .line 2
     invoke-virtual {p1}, Landroidx/constraintlayout/core/motion/utils/FloatRect;->centerY()F
 
     move-result p1
 
+    .line 3
     invoke-virtual {p2}, Landroidx/constraintlayout/core/motion/utils/FloatRect;->centerX()F
 
     move-result v0
 
+    .line 4
     invoke-virtual {p2}, Landroidx/constraintlayout/core/motion/utils/FloatRect;->centerY()F
 
     move-result p2
@@ -576,6 +632,7 @@
 
     const/4 v1, 0x0
 
+    .line 5
     aget-object v2, p5, v1
 
     const-string v3, "percentX"
@@ -584,7 +641,10 @@
 
     if-eqz v2, :cond_1
 
-    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 6
+    aget-object p5, p5, v1
+
+    invoke-virtual {v3, p5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p5
 
@@ -594,12 +654,14 @@
 
     div-float/2addr p3, v0
 
+    .line 7
     aput p3, p6, v1
 
     sub-float/2addr p4, p1
 
     div-float/2addr p4, p2
 
+    .line 8
     aput p4, p6, v4
 
     goto :goto_0
@@ -609,16 +671,19 @@
 
     div-float/2addr p3, v0
 
+    .line 9
     aput p3, p6, v4
 
     sub-float/2addr p4, p1
 
     div-float/2addr p4, p2
 
+    .line 10
     aput p4, p6, v1
 
     goto :goto_0
 
+    .line 11
     :cond_1
     aput-object v3, p5, v1
 
@@ -626,16 +691,19 @@
 
     div-float/2addr p3, v0
 
+    .line 12
     aput p3, p6, v1
 
     const-string p0, "percentY"
 
+    .line 13
     aput-object p0, p5, v4
 
     sub-float/2addr p4, p1
 
     div-float/2addr p4, p2
 
+    .line 14
     aput p4, p6, v4
 
     :goto_0
@@ -645,18 +713,22 @@
 .method public positionPathAttributes(Landroidx/constraintlayout/core/motion/utils/FloatRect;Landroidx/constraintlayout/core/motion/utils/FloatRect;FF[Ljava/lang/String;[F)V
     .locals 6
 
+    .line 1
     invoke-virtual {p1}, Landroidx/constraintlayout/core/motion/utils/FloatRect;->centerX()F
 
     move-result p0
 
+    .line 2
     invoke-virtual {p1}, Landroidx/constraintlayout/core/motion/utils/FloatRect;->centerY()F
 
     move-result p1
 
+    .line 3
     invoke-virtual {p2}, Landroidx/constraintlayout/core/motion/utils/FloatRect;->centerX()F
 
     move-result v0
 
+    .line 4
     invoke-virtual {p2}, Landroidx/constraintlayout/core/motion/utils/FloatRect;->centerY()F
 
     move-result p2
@@ -669,6 +741,7 @@
 
     float-to-double v3, p2
 
+    .line 5
     invoke-static {v1, v2, v3, v4}, Ljava/lang/Math;->hypot(DD)D
 
     move-result-wide v1
@@ -687,6 +760,7 @@
 
     if-gez v2, :cond_0
 
+    .line 6
     sget-object p0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string p1, "distance ~ 0"
@@ -695,8 +769,10 @@
 
     const/4 p0, 0x0
 
+    .line 7
     aput p0, p6, v4
 
+    .line 8
     aput p0, p6, v3
 
     return-void
@@ -726,11 +802,15 @@
 
     div-float/2addr v0, v1
 
+    .line 9
     aget-object p0, p5, v4
 
     const-string p2, "percentX"
 
     if-eqz p0, :cond_1
+
+    .line 10
+    aget-object p0, p5, v4
 
     invoke-virtual {p2, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -738,21 +818,27 @@
 
     if-eqz p0, :cond_2
 
+    .line 11
     aput v0, p6, v4
 
+    .line 12
     aput p1, p6, v3
 
     goto :goto_0
 
+    .line 13
     :cond_1
     aput-object p2, p5, v4
 
     const-string p0, "percentY"
 
+    .line 14
     aput-object p0, p5, v3
 
+    .line 15
     aput v0, p6, v4
 
+    .line 16
     aput p1, p6, v3
 
     :cond_2
@@ -763,28 +849,36 @@
 .method public positionScreenAttributes(Landroidx/constraintlayout/core/motion/MotionWidget;Landroidx/constraintlayout/core/motion/utils/FloatRect;Landroidx/constraintlayout/core/motion/utils/FloatRect;FF[Ljava/lang/String;[F)V
     .locals 2
 
+    .line 1
     invoke-virtual {p2}, Landroidx/constraintlayout/core/motion/utils/FloatRect;->centerX()F
 
+    .line 2
     invoke-virtual {p2}, Landroidx/constraintlayout/core/motion/utils/FloatRect;->centerY()F
 
+    .line 3
     invoke-virtual {p3}, Landroidx/constraintlayout/core/motion/utils/FloatRect;->centerX()F
 
+    .line 4
     invoke-virtual {p3}, Landroidx/constraintlayout/core/motion/utils/FloatRect;->centerY()F
 
+    .line 5
     invoke-virtual {p1}, Landroidx/constraintlayout/core/motion/MotionWidget;->getParent()Landroidx/constraintlayout/core/motion/MotionWidget;
 
     move-result-object p0
 
+    .line 6
     invoke-virtual {p0}, Landroidx/constraintlayout/core/motion/MotionWidget;->getWidth()I
 
     move-result p1
 
+    .line 7
     invoke-virtual {p0}, Landroidx/constraintlayout/core/motion/MotionWidget;->getHeight()I
 
     move-result p0
 
     const/4 p2, 0x0
 
+    .line 8
     aget-object p3, p6, p2
 
     const-string v0, "percentX"
@@ -792,6 +886,9 @@
     const/4 v1, 0x1
 
     if-eqz p3, :cond_1
+
+    .line 9
+    aget-object p3, p6, p2
 
     invoke-virtual {v0, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -803,12 +900,14 @@
 
     div-float/2addr p4, p1
 
+    .line 10
     aput p4, p7, p2
 
     int-to-float p0, p0
 
     div-float/2addr p5, p0
 
+    .line 11
     aput p5, p7, v1
 
     goto :goto_0
@@ -818,16 +917,19 @@
 
     div-float/2addr p4, p1
 
+    .line 12
     aput p4, p7, v1
 
     int-to-float p0, p0
 
     div-float/2addr p5, p0
 
+    .line 13
     aput p5, p7, p2
 
     goto :goto_0
 
+    .line 14
     :cond_1
     aput-object v0, p6, p2
 
@@ -835,16 +937,19 @@
 
     div-float/2addr p4, p1
 
+    .line 15
     aput p4, p7, p2
 
     const-string p1, "percentY"
 
+    .line 16
     aput-object p1, p6, v1
 
     int-to-float p0, p0
 
     div-float/2addr p5, p0
 
+    .line 17
     aput p5, p7, v1
 
     :goto_0

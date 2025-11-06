@@ -40,6 +40,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct/range {p0 .. p6}, Landroid/support/v4/media/session/MediaSessionCompat$d;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;Landroid/app/PendingIntent;Landroidx/versionedparcelable/VersionedParcelable;Landroid/os/Bundle;)V
 
     return-void
@@ -60,11 +61,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroid/support/v4/media/session/MediaSessionCompat$d;->c(Landroid/support/v4/media/session/MediaSessionCompat$b;Landroid/os/Handler;)V
 
     if-nez p1, :cond_0
 
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaSessionCompat$j;->j:Landroid/media/RemoteControlClient;
+    .line 2
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaSessionCompat$j;->k:Landroid/media/RemoteControlClient;
 
     const/4 p1, 0x0
 
@@ -72,12 +75,14 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     new-instance p1, Landroid/support/v4/media/session/MediaSessionCompat$e$a;
 
     invoke-direct {p1, p0}, Landroid/support/v4/media/session/MediaSessionCompat$e$a;-><init>(Landroid/support/v4/media/session/MediaSessionCompat$e;)V
 
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaSessionCompat$j;->j:Landroid/media/RemoteControlClient;
+    .line 4
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaSessionCompat$j;->k:Landroid/media/RemoteControlClient;
 
     invoke-virtual {p0, p1}, Landroid/media/RemoteControlClient;->setMetadataUpdateListener(Landroid/media/RemoteControlClient$OnMetadataUpdateListener;)V
 
@@ -85,7 +90,7 @@
     return-void
 .end method
 
-.method public s(Landroid/os/Bundle;)Landroid/media/RemoteControlClient$MetadataEditor;
+.method public w(Landroid/os/Bundle;)Landroid/media/RemoteControlClient$MetadataEditor;
     .locals 7
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -96,11 +101,13 @@
         }
     .end annotation
 
-    invoke-super {p0, p1}, Landroid/support/v4/media/session/MediaSessionCompat$j;->s(Landroid/os/Bundle;)Landroid/media/RemoteControlClient$MetadataEditor;
+    .line 1
+    invoke-super {p0, p1}, Landroid/support/v4/media/session/MediaSessionCompat$j;->w(Landroid/os/Bundle;)Landroid/media/RemoteControlClient$MetadataEditor;
 
     move-result-object v0
 
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaSessionCompat$j;->t:Landroid/support/v4/media/session/PlaybackStateCompat;
+    .line 2
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaSessionCompat$j;->u:Landroid/support/v4/media/session/PlaybackStateCompat;
 
     const-wide/16 v1, 0x0
 
@@ -111,7 +118,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Landroid/support/v4/media/session/PlaybackStateCompat;->c()J
+    invoke-virtual {p0}, Landroid/support/v4/media/session/PlaybackStateCompat;->b()J
 
     move-result-wide v3
 
@@ -126,6 +133,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 3
     invoke-virtual {v0, v1}, Landroid/media/RemoteControlClient$MetadataEditor;->addEditableKey(I)V
 
     :cond_1
@@ -136,6 +144,7 @@
     :cond_2
     const-string p0, "android.media.metadata.YEAR"
 
+    .line 4
     invoke-virtual {p1, p0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v2
@@ -144,15 +153,18 @@
 
     const/16 v2, 0x8
 
+    .line 5
     invoke-virtual {p1, p0}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
 
     move-result-wide v3
 
+    .line 6
     invoke-virtual {v0, v2, v3, v4}, Landroid/media/RemoteControlClient$MetadataEditor;->putLong(IJ)Landroid/media/RemoteControlClient$MetadataEditor;
 
     :cond_3
     const-string p0, "android.media.metadata.RATING"
 
+    .line 7
     invoke-virtual {p1, p0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v2
@@ -161,32 +173,37 @@
 
     const/16 v2, 0x65
 
+    .line 8
     invoke-virtual {p1, p0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p0
 
+    .line 9
     invoke-virtual {v0, v2, p0}, Landroid/media/MediaMetadataEditor;->putObject(ILjava/lang/Object;)Landroid/media/MediaMetadataEditor;
 
     :cond_4
     const-string p0, "android.media.metadata.USER_RATING"
 
+    .line 10
     invoke-virtual {p1, p0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_5
 
+    .line 11
     invoke-virtual {p1, p0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p0
 
+    .line 12
     invoke-virtual {v0, v1, p0}, Landroid/media/MediaMetadataEditor;->putObject(ILjava/lang/Object;)Landroid/media/MediaMetadataEditor;
 
     :cond_5
     return-object v0
 .end method
 
-.method public v(J)I
+.method public z(J)I
     .locals 2
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -197,7 +214,8 @@
         }
     .end annotation
 
-    invoke-super {p0, p1, p2}, Landroid/support/v4/media/session/MediaSessionCompat$d;->v(J)I
+    .line 1
+    invoke-super {p0, p1, p2}, Landroid/support/v4/media/session/MediaSessionCompat$d;->z(J)I
 
     move-result p0
 

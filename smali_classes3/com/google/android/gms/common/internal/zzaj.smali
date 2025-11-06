@@ -25,7 +25,7 @@
 
 
 # instance fields
-.field final zza:I
+.field public final zza:I
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$VersionField;
         id = 0x1
     .end annotation
@@ -67,16 +67,19 @@
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->beginObjectHeader(Landroid/os/Parcel;)I
 
     move-result p2
 
-    const/4 v0, 0x1
-
     iget p0, p0, Lcom/google/android/gms/common/internal/zzaj;->zza:I
 
+    const/4 v0, 0x1
+
+    .line 2
     invoke-static {p1, v0, p0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
+    .line 3
     invoke-static {p1, p2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->finishObjectHeader(Landroid/os/Parcel;I)V
 
     return-void

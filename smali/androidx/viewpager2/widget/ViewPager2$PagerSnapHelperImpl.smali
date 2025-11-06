@@ -1,4 +1,4 @@
-.class Landroidx/viewpager2/widget/ViewPager2$PagerSnapHelperImpl;
+.class public Landroidx/viewpager2/widget/ViewPager2$PagerSnapHelperImpl;
 .super Landroidx/recyclerview/widget/PagerSnapHelper;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/viewpager2/widget/ViewPager2;
+.field public final synthetic this$0:Landroidx/viewpager2/widget/ViewPager2;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/viewpager2/widget/ViewPager2;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/viewpager2/widget/ViewPager2$PagerSnapHelperImpl;->this$0:Landroidx/viewpager2/widget/ViewPager2;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/PagerSnapHelper;-><init>()V
@@ -36,6 +37,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2$PagerSnapHelperImpl;->this$0:Landroidx/viewpager2/widget/ViewPager2;
 
     invoke-virtual {v0}, Landroidx/viewpager2/widget/ViewPager2;->isFakeDragging()Z

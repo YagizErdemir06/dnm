@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/ClosingFuture$Combiner3$1;
+.class public Lcom/google/common/util/concurrent/ClosingFuture$Combiner3$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,15 +26,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/util/concurrent/ClosingFuture$Combiner3;
+.field public final synthetic this$0:Lcom/google/common/util/concurrent/ClosingFuture$Combiner3;
 
-.field final synthetic val$function:Lcom/google/common/util/concurrent/ClosingFuture$Combiner3$ClosingFunction3;
+.field public final synthetic val$function:Lcom/google/common/util/concurrent/ClosingFuture$Combiner3$ClosingFunction3;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/util/concurrent/ClosingFuture$Combiner3;Lcom/google/common/util/concurrent/ClosingFuture$Combiner3$ClosingFunction3;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/ClosingFuture$Combiner3$1;->this$0:Lcom/google/common/util/concurrent/ClosingFuture$Combiner3;
 
     iput-object p2, p0, Lcom/google/common/util/concurrent/ClosingFuture$Combiner3$1;->val$function:Lcom/google/common/util/concurrent/ClosingFuture$Combiner3$ClosingFunction3;
@@ -66,10 +67,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/util/concurrent/ClosingFuture$Combiner3$1;->val$function:Lcom/google/common/util/concurrent/ClosingFuture$Combiner3$ClosingFunction3;
 
     iget-object v1, p0, Lcom/google/common/util/concurrent/ClosingFuture$Combiner3$1;->this$0:Lcom/google/common/util/concurrent/ClosingFuture$Combiner3;
 
+    .line 2
     invoke-static {v1}, Lcom/google/common/util/concurrent/ClosingFuture$Combiner3;->access$2000(Lcom/google/common/util/concurrent/ClosingFuture$Combiner3;)Lcom/google/common/util/concurrent/ClosingFuture;
 
     move-result-object v1
@@ -80,6 +83,7 @@
 
     iget-object v2, p0, Lcom/google/common/util/concurrent/ClosingFuture$Combiner3$1;->this$0:Lcom/google/common/util/concurrent/ClosingFuture$Combiner3;
 
+    .line 3
     invoke-static {v2}, Lcom/google/common/util/concurrent/ClosingFuture$Combiner3;->access$2100(Lcom/google/common/util/concurrent/ClosingFuture$Combiner3;)Lcom/google/common/util/concurrent/ClosingFuture;
 
     move-result-object v2
@@ -90,6 +94,7 @@
 
     iget-object p0, p0, Lcom/google/common/util/concurrent/ClosingFuture$Combiner3$1;->this$0:Lcom/google/common/util/concurrent/ClosingFuture$Combiner3;
 
+    .line 4
     invoke-static {p0}, Lcom/google/common/util/concurrent/ClosingFuture$Combiner3;->access$2200(Lcom/google/common/util/concurrent/ClosingFuture$Combiner3;)Lcom/google/common/util/concurrent/ClosingFuture;
 
     move-result-object p0
@@ -98,6 +103,7 @@
 
     move-result-object p0
 
+    .line 5
     invoke-interface {v0, p1, v1, v2, p0}, Lcom/google/common/util/concurrent/ClosingFuture$Combiner3$ClosingFunction3;->apply(Lcom/google/common/util/concurrent/ClosingFuture$DeferredCloser;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -108,6 +114,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/ClosingFuture$Combiner3$1;->val$function:Lcom/google/common/util/concurrent/ClosingFuture$Combiner3$ClosingFunction3;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;

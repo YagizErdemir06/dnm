@@ -26,22 +26,39 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/DiverseAdapter;
+.field public final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/DiverseAdapter;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/DiverseAdapter;Landroid/view/View;Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/DiverseAdapter;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x0,
+            0x10
+        }
+        names = {
+            "this$0",
+            "itemView",
+            "mAdapter"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/DiverseAdapter$DiverseViewHolder;->this$0:Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/DiverseAdapter;
 
+    .line 2
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
+    .line 3
     iput-object p3, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/DiverseAdapter$DiverseViewHolder;->mAdapter:Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/DiverseAdapter;
 
+    .line 4
     iput-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/DiverseAdapter$DiverseViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p2}, Lz1/f;->o(Landroid/view/View;)V
+    .line 5
+    invoke-static {p2}, Ld/d/a/f6/f;->o(Landroid/view/View;)V
 
     return-void
 .end method
@@ -53,12 +70,24 @@
 
 .method public setDataToView(Ljava/lang/Object;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "item",
+            "position"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TE;I)V"
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/DiverseAdapter$DiverseViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {p0, p1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V

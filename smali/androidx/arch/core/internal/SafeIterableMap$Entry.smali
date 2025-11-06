@@ -1,4 +1,4 @@
-.class Landroidx/arch/core/internal/SafeIterableMap$Entry;
+.class public Landroidx/arch/core/internal/SafeIterableMap$Entry;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -31,7 +31,7 @@
 
 
 # instance fields
-.field final mKey:Ljava/lang/Object;
+.field public final mKey:Ljava/lang/Object;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -42,7 +42,7 @@
     .end annotation
 .end field
 
-.field mNext:Landroidx/arch/core/internal/SafeIterableMap$Entry;
+.field public mNext:Landroidx/arch/core/internal/SafeIterableMap$Entry;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/arch/core/internal/SafeIterableMap$Entry<",
@@ -51,7 +51,7 @@
     .end annotation
 .end field
 
-.field mPrevious:Landroidx/arch/core/internal/SafeIterableMap$Entry;
+.field public mPrevious:Landroidx/arch/core/internal/SafeIterableMap$Entry;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/arch/core/internal/SafeIterableMap$Entry<",
@@ -60,7 +60,7 @@
     .end annotation
 .end field
 
-.field final mValue:Ljava/lang/Object;
+.field public final mValue:Ljava/lang/Object;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -89,10 +89,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/arch/core/internal/SafeIterableMap$Entry;->mKey:Ljava/lang/Object;
 
+    .line 3
     iput-object p2, p0, Landroidx/arch/core/internal/SafeIterableMap$Entry;->mValue:Ljava/lang/Object;
 
     return-void
@@ -109,6 +112,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Landroidx/arch/core/internal/SafeIterableMap$Entry;
 
@@ -118,9 +122,11 @@
 
     return v2
 
+    .line 2
     :cond_1
     check-cast p1, Landroidx/arch/core/internal/SafeIterableMap$Entry;
 
+    .line 3
     iget-object v1, p0, Landroidx/arch/core/internal/SafeIterableMap$Entry;->mKey:Ljava/lang/Object;
 
     iget-object v3, p1, Landroidx/arch/core/internal/SafeIterableMap$Entry;->mKey:Ljava/lang/Object;
@@ -161,6 +167,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/arch/core/internal/SafeIterableMap$Entry;->mKey:Ljava/lang/Object;
 
     return-object p0
@@ -177,6 +184,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/arch/core/internal/SafeIterableMap$Entry;->mValue:Ljava/lang/Object;
 
     return-object p0
@@ -185,6 +193,7 @@
 .method public hashCode()I
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/arch/core/internal/SafeIterableMap$Entry;->mKey:Ljava/lang/Object;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -210,6 +219,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "An entry modification is not supported"
@@ -222,6 +232,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

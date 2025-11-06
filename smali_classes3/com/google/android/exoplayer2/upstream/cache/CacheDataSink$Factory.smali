@@ -29,14 +29,17 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/32 v0, 0x500000
 
+    .line 2
     iput-wide v0, p0, Lcom/google/android/exoplayer2/upstream/cache/CacheDataSink$Factory;->fragmentSize:J
 
     const/16 v0, 0x5000
 
+    .line 3
     iput v0, p0, Lcom/google/android/exoplayer2/upstream/cache/CacheDataSink$Factory;->bufferSize:I
 
     return-void
@@ -47,6 +50,7 @@
 .method public createDataSink()Lcom/google/android/exoplayer2/upstream/DataSink;
     .locals 4
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/upstream/cache/CacheDataSink;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/upstream/cache/CacheDataSink$Factory;->cache:Lcom/google/android/exoplayer2/upstream/cache/Cache;
@@ -69,6 +73,7 @@
 .method public setBufferSize(I)Lcom/google/android/exoplayer2/upstream/cache/CacheDataSink$Factory;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/upstream/cache/CacheDataSink$Factory;->bufferSize:I
 
     return-object p0
@@ -77,6 +82,7 @@
 .method public setCache(Lcom/google/android/exoplayer2/upstream/cache/Cache;)Lcom/google/android/exoplayer2/upstream/cache/CacheDataSink$Factory;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/upstream/cache/CacheDataSink$Factory;->cache:Lcom/google/android/exoplayer2/upstream/cache/Cache;
 
     return-object p0
@@ -85,6 +91,7 @@
 .method public setFragmentSize(J)Lcom/google/android/exoplayer2/upstream/cache/CacheDataSink$Factory;
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lcom/google/android/exoplayer2/upstream/cache/CacheDataSink$Factory;->fragmentSize:J
 
     return-object p0

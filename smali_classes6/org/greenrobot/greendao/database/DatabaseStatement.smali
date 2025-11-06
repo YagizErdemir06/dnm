@@ -5,18 +5,66 @@
 
 # virtual methods
 .method public abstract bindBlob(I[B)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "index",
+            "value"
+        }
+    .end annotation
 .end method
 
 .method public abstract bindDouble(ID)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "index",
+            "value"
+        }
+    .end annotation
 .end method
 
 .method public abstract bindLong(IJ)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "index",
+            "value"
+        }
+    .end annotation
 .end method
 
 .method public abstract bindNull(I)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "index"
+        }
+    .end annotation
 .end method
 
 .method public abstract bindString(ILjava/lang/String;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "index",
+            "value"
+        }
+    .end annotation
 .end method
 
 .method public abstract clearBindings()V

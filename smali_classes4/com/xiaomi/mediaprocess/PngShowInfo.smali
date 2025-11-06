@@ -47,6 +47,8 @@
 
     invoke-direct {v0}, Ljava/lang/String;-><init>()V
 
+    iput-object v0, p0, Lcom/xiaomi/mediaprocess/PngShowInfo;->a:Ljava/lang/String;
+
     .line 5
     iput-object p1, p0, Lcom/xiaomi/mediaprocess/PngShowInfo;->a:Ljava/lang/String;
 

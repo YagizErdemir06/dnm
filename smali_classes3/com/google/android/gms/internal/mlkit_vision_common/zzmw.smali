@@ -59,6 +59,7 @@
 
     const-string v0, "mlkit-dev-profiling"
 
+    .line 1
     invoke-static {v0}, Lcom/google/android/gms/internal/mlkit_vision_common/zzmv;->zza(Ljava/lang/String;)Z
 
     move-result v0

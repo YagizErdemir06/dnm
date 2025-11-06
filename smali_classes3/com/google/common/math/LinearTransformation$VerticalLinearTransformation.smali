@@ -1,4 +1,4 @@
-.class final Lcom/google/common/math/LinearTransformation$VerticalLinearTransformation;
+.class public final Lcom/google/common/math/LinearTransformation$VerticalLinearTransformation;
 .super Lcom/google/common/math/LinearTransformation;
 .source "SourceFile"
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field inverse:Lcom/google/common/math/LinearTransformation;
+.field public inverse:Lcom/google/common/math/LinearTransformation;
     .annotation runtime Lcom/google/errorprone/annotations/concurrent/LazyInit;
     .end annotation
 
@@ -23,7 +23,7 @@
     .end annotation
 .end field
 
-.field final x:D
+.field public final x:D
 
 
 # direct methods
@@ -62,11 +62,12 @@
 .method private createInverse()Lcom/google/common/math/LinearTransformation;
     .locals 7
 
+    .line 1
     new-instance v6, Lcom/google/common/math/LinearTransformation$RegularLinearTransformation;
 
-    const-wide/16 v1, 0x0
-
     iget-wide v3, p0, Lcom/google/common/math/LinearTransformation$VerticalLinearTransformation;->x:D
+
+    const-wide/16 v1, 0x0
 
     move-object v0, v6
 
@@ -82,10 +83,12 @@
 .method public inverse()Lcom/google/common/math/LinearTransformation;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/math/LinearTransformation$VerticalLinearTransformation;->inverse:Lcom/google/common/math/LinearTransformation;
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-direct {p0}, Lcom/google/common/math/LinearTransformation$VerticalLinearTransformation;->createInverse()Lcom/google/common/math/LinearTransformation;
 
     move-result-object v0
@@ -115,6 +118,7 @@
 .method public slope()D
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/IllegalStateException;
 
     invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
@@ -129,6 +133,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 1
     iget-wide v1, p0, Lcom/google/common/math/LinearTransformation$VerticalLinearTransformation;->x:D
 
     invoke-static {v1, v2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
@@ -151,6 +156,7 @@
 .method public transform(D)D
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/IllegalStateException;
 
     invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V

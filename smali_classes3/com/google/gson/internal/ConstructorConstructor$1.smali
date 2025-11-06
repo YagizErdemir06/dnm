@@ -1,4 +1,4 @@
-.class Lcom/google/gson/internal/ConstructorConstructor$1;
+.class public Lcom/google/gson/internal/ConstructorConstructor$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,17 +26,18 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/gson/internal/ConstructorConstructor;
+.field public final synthetic this$0:Lcom/google/gson/internal/ConstructorConstructor;
 
-.field final synthetic val$type:Ljava/lang/reflect/Type;
+.field public final synthetic val$type:Ljava/lang/reflect/Type;
 
-.field final synthetic val$typeCreator:Lcom/google/gson/InstanceCreator;
+.field public final synthetic val$typeCreator:Lcom/google/gson/InstanceCreator;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/gson/internal/ConstructorConstructor;Lcom/google/gson/InstanceCreator;Ljava/lang/reflect/Type;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/gson/internal/ConstructorConstructor$1;->this$0:Lcom/google/gson/internal/ConstructorConstructor;
 
     iput-object p2, p0, Lcom/google/gson/internal/ConstructorConstructor$1;->val$typeCreator:Lcom/google/gson/InstanceCreator;
@@ -58,6 +59,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/gson/internal/ConstructorConstructor$1;->val$typeCreator:Lcom/google/gson/InstanceCreator;
 
     iget-object p0, p0, Lcom/google/gson/internal/ConstructorConstructor$1;->val$type:Ljava/lang/reflect/Type;

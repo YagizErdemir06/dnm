@@ -13,7 +13,7 @@
 
 
 # instance fields
-.field protected final mDataHolder:Lcom/google/android/gms/common/data/DataHolder;
+.field public final mDataHolder:Lcom/google/android/gms/common/data/DataHolder;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -21,7 +21,7 @@
     .end annotation
 .end field
 
-.field protected final mStatus:Lcom/google/android/gms/common/api/Status;
+.field public final mStatus:Lcom/google/android/gms/common/api/Status;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -40,6 +40,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/common/api/Status;
 
     invoke-virtual {p1}, Lcom/google/android/gms/common/data/DataHolder;->getStatusCode()I
@@ -95,6 +96,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/DataHolderResult;->mDataHolder:Lcom/google/android/gms/common/data/DataHolder;
 
     if-eqz p0, :cond_0

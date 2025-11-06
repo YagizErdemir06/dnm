@@ -1,4 +1,4 @@
-.class Lcom/google/common/primitives/ImmutableDoubleArray$AsList;
+.class public Lcom/google/common/primitives/ImmutableDoubleArray$AsList;
 .super Ljava/util/AbstractList;
 .source "SourceFile"
 
@@ -63,6 +63,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/primitives/ImmutableDoubleArray$AsList;->indexOf(Ljava/lang/Object;)I
 
     move-result p0
@@ -87,12 +88,15 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/common/primitives/ImmutableDoubleArray$AsList;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/common/primitives/ImmutableDoubleArray$AsList;
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/primitives/ImmutableDoubleArray$AsList;->parent:Lcom/google/common/primitives/ImmutableDoubleArray;
 
     iget-object p1, p1, Lcom/google/common/primitives/ImmutableDoubleArray$AsList;->parent:Lcom/google/common/primitives/ImmutableDoubleArray;
@@ -103,6 +107,7 @@
 
     return p0
 
+    .line 4
     :cond_0
     instance-of v0, p1, Ljava/util/List;
 
@@ -112,9 +117,11 @@
 
     return v1
 
+    .line 5
     :cond_1
     check-cast p1, Ljava/util/List;
 
+    .line 6
     invoke-virtual {p0}, Lcom/google/common/primitives/ImmutableDoubleArray$AsList;->size()I
 
     move-result v0
@@ -127,6 +134,7 @@
 
     return v1
 
+    .line 7
     :cond_2
     iget-object v0, p0, Lcom/google/common/primitives/ImmutableDoubleArray$AsList;->parent:Lcom/google/common/primitives/ImmutableDoubleArray;
 
@@ -134,6 +142,7 @@
 
     move-result v0
 
+    .line 8
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -149,6 +158,7 @@
 
     move-result-object v2
 
+    .line 9
     instance-of v3, v2, Ljava/lang/Double;
 
     if-eqz v3, :cond_4
@@ -223,6 +233,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/primitives/ImmutableDoubleArray$AsList;->parent:Lcom/google/common/primitives/ImmutableDoubleArray;
 
     invoke-virtual {p0}, Lcom/google/common/primitives/ImmutableDoubleArray;->hashCode()I
@@ -239,6 +250,7 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Ljava/lang/Double;
 
     if-eqz v0, :cond_0
@@ -271,6 +283,7 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Ljava/lang/Double;
 
     if-eqz v0, :cond_0
@@ -299,6 +312,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/primitives/ImmutableDoubleArray$AsList;->parent:Lcom/google/common/primitives/ImmutableDoubleArray;
 
     invoke-virtual {p0}, Lcom/google/common/primitives/ImmutableDoubleArray;->length()I
@@ -319,6 +333,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/primitives/ImmutableDoubleArray$AsList;->parent:Lcom/google/common/primitives/ImmutableDoubleArray;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/common/primitives/ImmutableDoubleArray;->subArray(II)Lcom/google/common/primitives/ImmutableDoubleArray;
@@ -335,6 +350,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/primitives/ImmutableDoubleArray$AsList;->parent:Lcom/google/common/primitives/ImmutableDoubleArray;
 
     invoke-virtual {p0}, Lcom/google/common/primitives/ImmutableDoubleArray;->toString()Ljava/lang/String;

@@ -4,7 +4,7 @@
 
 
 # annotations
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
     d1 = {
         "\u0000\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0000\"\u000e\u0010\u0000\u001a\u00020\u0001X\u0082\u0004\u00a2\u0006\u0002\n\u0000\"\u000e\u0010\u0002\u001a\u00020\u0003X\u0082T\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u0004"
     }
@@ -27,7 +27,7 @@
 
 # static fields
 .field private static final EMPTY_DEFLATE_BLOCK:Lokio/ByteString;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -38,6 +38,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     sget-object v0, Lokio/ByteString;->Companion:Lokio/ByteString$Companion;
 
     const-string v1, "000000ffff"
@@ -54,6 +55,7 @@
 .method public static final synthetic access$getEMPTY_DEFLATE_BLOCK$p()Lokio/ByteString;
     .locals 1
 
+    .line 1
     sget-object v0, Lokhttp3/internal/ws/MessageDeflaterKt;->EMPTY_DEFLATE_BLOCK:Lokio/ByteString;
 
     return-object v0

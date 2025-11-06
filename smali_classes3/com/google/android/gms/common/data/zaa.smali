@@ -20,6 +20,7 @@
 .method public final bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 6
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->validateObjectHeader(Landroid/os/Parcel;)I
 
     move-result p0
@@ -32,6 +33,7 @@
 
     move v1, v0
 
+    .line 2
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
@@ -39,10 +41,12 @@
 
     if-ge v3, p0, :cond_3
 
+    .line 3
     invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->readHeader(Landroid/os/Parcel;)I
 
     move-result v3
 
+    .line 4
     invoke-static {v3}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->getFieldId(I)I
 
     move-result v4
@@ -59,10 +63,12 @@
 
     if-eq v4, v5, :cond_0
 
+    .line 5
     invoke-static {p1, v3}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->skipUnknownField(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-static {p1, v3}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->readInt(Landroid/os/Parcel;I)I
 
@@ -73,6 +79,7 @@
     :cond_1
     sget-object v2, Landroid/os/ParcelFileDescriptor;->CREATOR:Landroid/os/Parcelable$Creator;
 
+    .line 7
     invoke-static {p1, v3, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->createParcelable(Landroid/os/Parcel;ILandroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
 
     move-result-object v2
@@ -81,6 +88,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_2
     invoke-static {p1, v3}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->readInt(Landroid/os/Parcel;I)I
 
@@ -88,9 +96,11 @@
 
     goto :goto_0
 
+    .line 9
     :cond_3
     invoke-static {p1, p0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->ensureAtEnd(Landroid/os/Parcel;I)V
 
+    .line 10
     new-instance p0, Lcom/google/android/gms/common/data/BitmapTeleporter;
 
     invoke-direct {p0, v0, v2, v1}, Lcom/google/android/gms/common/data/BitmapTeleporter;-><init>(ILandroid/os/ParcelFileDescriptor;I)V
@@ -101,6 +111,7 @@
 .method public final synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
+    .line 1
     new-array p0, p1, [Lcom/google/android/gms/common/data/BitmapTeleporter;
 
     return-object p0

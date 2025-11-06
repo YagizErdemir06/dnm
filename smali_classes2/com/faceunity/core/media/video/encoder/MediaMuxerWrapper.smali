@@ -36,26 +36,32 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "Video_MediaMuxerWrapper"
 
+    .line 2
     iput-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->TAG:Ljava/lang/String;
 
     const/4 v0, 0x0
 
+    .line 3
     iput-boolean v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mHasStopEncoder:Z
 
+    .line 4
     new-instance v1, Landroid/media/MediaMuxer;
 
     invoke-direct {v1, p1, v0}, Landroid/media/MediaMuxer;-><init>(Ljava/lang/String;I)V
 
     iput-object v1, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mMediaMuxer:Landroid/media/MediaMuxer;
 
+    .line 5
     iput v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mStatredCount:I
 
     iput v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mEncoderCount:I
 
+    .line 6
     iput-boolean v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mIsStarted:Z
 
     return-void
@@ -66,20 +72,24 @@
 .method public addEncoder(Lcom/faceunity/core/media/video/encoder/MediaEncoder;)V
     .locals 3
 
+    .line 1
     instance-of v0, p1, Lcom/faceunity/core/media/video/encoder/MediaVideoEncoder;
 
     const-string v1, "Video encoder already added."
 
     if-eqz v0, :cond_1
 
+    .line 2
     iget-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mVideoEncoder:Lcom/faceunity/core/media/video/encoder/MediaEncoder;
 
     if-nez v0, :cond_0
 
+    .line 3
     iput-object p1, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mVideoEncoder:Lcom/faceunity/core/media/video/encoder/MediaEncoder;
 
     goto :goto_0
 
+    .line 4
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -87,19 +97,23 @@
 
     throw p0
 
+    .line 5
     :cond_1
     instance-of v0, p1, Lcom/faceunity/core/media/video/encoder/MediaAudioEncoder;
 
     if-eqz v0, :cond_3
 
+    .line 6
     iget-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mAudioEncoder:Lcom/faceunity/core/media/video/encoder/MediaEncoder;
 
     if-nez v0, :cond_2
 
+    .line 7
     iput-object p1, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mAudioEncoder:Lcom/faceunity/core/media/video/encoder/MediaEncoder;
 
     goto :goto_0
 
+    .line 8
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -107,17 +121,21 @@
 
     throw p0
 
+    .line 9
     :cond_3
     instance-of v0, p1, Lcom/faceunity/core/media/video/encoder/MediaAudioFileEncoder;
 
     if-eqz v0, :cond_8
 
+    .line 10
     iget-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mAudioFileEncoder:Lcom/faceunity/core/media/video/encoder/MediaEncoder;
 
     if-nez v0, :cond_7
 
+    .line 11
     iput-object p1, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mAudioFileEncoder:Lcom/faceunity/core/media/video/encoder/MediaEncoder;
 
+    .line 12
     :goto_0
     iget-object p1, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mVideoEncoder:Lcom/faceunity/core/media/video/encoder/MediaEncoder;
 
@@ -165,6 +183,7 @@
 
     return-void
 
+    .line 13
     :cond_7
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -172,6 +191,7 @@
 
     throw p0
 
+    .line 14
     :cond_8
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -187,11 +207,13 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-boolean v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mIsStarted:Z
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mMediaMuxer:Landroid/media/MediaMuxer;
 
     invoke-virtual {v0, p1}, Landroid/media/MediaMuxer;->addTrack(Landroid/media/MediaFormat;)I
@@ -200,10 +222,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     monitor-exit p0
 
     return p1
 
+    .line 4
     :cond_0
     :try_start_1
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -229,6 +253,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-boolean v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mHasStopEncoder:Z
     :try_end_0
@@ -251,6 +276,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-boolean v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mIsStarted:Z
     :try_end_0
@@ -276,24 +302,30 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mVideoEncoder:Lcom/faceunity/core/media/video/encoder/MediaEncoder;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->prepare()V
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mAudioEncoder:Lcom/faceunity/core/media/video/encoder/MediaEncoder;
 
     if-eqz v0, :cond_1
 
+    .line 4
     invoke-virtual {v0}, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->prepare()V
 
+    .line 5
     :cond_1
     iget-object p0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mAudioFileEncoder:Lcom/faceunity/core/media/video/encoder/MediaEncoder;
 
     if-eqz p0, :cond_2
 
+    .line 6
     invoke-virtual {p0}, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->prepare()V
 
     :cond_2
@@ -305,6 +337,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mStatredCount:I
 
@@ -314,20 +347,25 @@
 
     iput v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mStatredCount:I
 
+    .line 2
     iget v2, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mEncoderCount:I
 
     if-lez v2, :cond_0
 
     if-ne v0, v2, :cond_0
 
+    .line 3
     iget-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mMediaMuxer:Landroid/media/MediaMuxer;
 
     invoke-virtual {v0}, Landroid/media/MediaMuxer;->start()V
 
+    .line 4
     iput-boolean v1, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mIsStarted:Z
 
+    .line 5
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
+    .line 6
     :cond_0
     iget-boolean v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mIsStarted:Z
     :try_end_0
@@ -350,26 +388,33 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-boolean v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mHasStopEncoder:Z
 
+    .line 2
     iget-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mVideoEncoder:Lcom/faceunity/core/media/video/encoder/MediaEncoder;
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {v0}, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->startRecording()V
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mAudioEncoder:Lcom/faceunity/core/media/video/encoder/MediaEncoder;
 
     if-eqz v0, :cond_1
 
+    .line 5
     invoke-virtual {v0}, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->startRecording()V
 
+    .line 6
     :cond_1
     iget-object p0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mAudioFileEncoder:Lcom/faceunity/core/media/video/encoder/MediaEncoder;
 
     if-eqz p0, :cond_2
 
+    .line 7
     invoke-virtual {p0}, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->startRecording()V
 
     :cond_2
@@ -381,6 +426,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mStatredCount:I
 
@@ -388,26 +434,31 @@
 
     iput v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mStatredCount:I
 
+    .line 2
     iget v1, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mEncoderCount:I
 
     if-lez v1, :cond_0
 
     if-gtz v0, :cond_0
 
+    .line 3
     iget-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mMediaMuxer:Landroid/media/MediaMuxer;
 
     invoke-virtual {v0}, Landroid/media/MediaMuxer;->stop()V
 
+    .line 4
     iget-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mMediaMuxer:Landroid/media/MediaMuxer;
 
     invoke-virtual {v0}, Landroid/media/MediaMuxer;->release()V
 
     const/4 v0, 0x0
 
+    .line 5
     iput-boolean v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mIsStarted:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 6
     :cond_0
     monitor-exit p0
 
@@ -426,34 +477,44 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mHasStopEncoder:Z
 
+    .line 2
     iget-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mVideoEncoder:Lcom/faceunity/core/media/video/encoder/MediaEncoder;
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {v0}, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->stopRecording()V
 
     :cond_0
     const/4 v0, 0x0
 
+    .line 4
     iput-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mVideoEncoder:Lcom/faceunity/core/media/video/encoder/MediaEncoder;
 
+    .line 5
     iget-object v1, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mAudioEncoder:Lcom/faceunity/core/media/video/encoder/MediaEncoder;
 
     if-eqz v1, :cond_1
 
+    .line 6
     invoke-virtual {v1}, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->stopRecording()V
 
+    .line 7
     :cond_1
     iput-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mAudioEncoder:Lcom/faceunity/core/media/video/encoder/MediaEncoder;
 
+    .line 8
     iget-object v1, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mAudioFileEncoder:Lcom/faceunity/core/media/video/encoder/MediaEncoder;
 
     if-eqz v1, :cond_2
 
+    .line 9
     invoke-virtual {v1}, Lcom/faceunity/core/media/video/encoder/MediaEncoder;->stopRecording()V
 
+    .line 10
     :cond_2
     iput-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mAudioFileEncoder:Lcom/faceunity/core/media/video/encoder/MediaEncoder;
 
@@ -465,17 +526,20 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mStatredCount:I
 
     if-lez v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/faceunity/core/media/video/encoder/MediaMuxerWrapper;->mMediaMuxer:Landroid/media/MediaMuxer;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/media/MediaMuxer;->writeSampleData(ILjava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     :cond_0
     monitor-exit p0
 

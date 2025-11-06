@@ -44,6 +44,7 @@
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v1, 0xa
@@ -62,8 +63,10 @@
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor;->delegate:Ljava/util/concurrent/ExecutorService;
 
     return-void
@@ -72,12 +75,14 @@
 .method public static calculateBestThreadCount()I
     .locals 2
 
+    .line 1
     sget v0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor;->bestThreadCount:I
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x4
 
+    .line 2
     invoke-static {}, Lcom/bumptech/glide/load/engine/executor/RuntimeCompat;->availableProcessors()I
 
     move-result v1
@@ -88,6 +93,7 @@
 
     sput v0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor;->bestThreadCount:I
 
+    .line 3
     :cond_0
     sget v0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor;->bestThreadCount:I
 
@@ -97,34 +103,38 @@
 .method public static newAnimationBuilder()Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;
     .locals 3
 
+    .line 1
     invoke-static {}, Lcom/bumptech/glide/load/engine/executor/GlideExecutor;->calculateBestThreadCount()I
 
     move-result v0
 
-    const/4 v1, 0x4
+    const/4 v1, 0x1
 
-    const/4 v2, 0x1
+    const/4 v2, 0x4
 
-    if-lt v0, v1, :cond_0
+    if-lt v0, v2, :cond_0
 
     const/4 v0, 0x2
 
     goto :goto_0
 
     :cond_0
-    move v0, v2
+    move v0, v1
 
+    .line 2
     :goto_0
-    new-instance v1, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;
+    new-instance v2, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;
 
-    invoke-direct {v1, v2}, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;-><init>(Z)V
+    invoke-direct {v2, v1}, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;-><init>(Z)V
 
-    invoke-virtual {v1, v0}, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;->setThreadCount(I)Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;
+    .line 3
+    invoke-virtual {v2, v0}, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;->setThreadCount(I)Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;
 
     move-result-object v0
 
     const-string v1, "animation"
 
+    .line 4
     invoke-virtual {v0, v1}, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;->setName(Ljava/lang/String;)Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;
 
     move-result-object v0
@@ -178,18 +188,21 @@
 .method public static newDiskCacheBuilder()Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;
 
     const/4 v1, 0x1
 
     invoke-direct {v0, v1}, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;-><init>(Z)V
 
+    .line 2
     invoke-virtual {v0, v1}, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;->setThreadCount(I)Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;
 
     move-result-object v0
 
     const-string v1, "disk-cache"
 
+    .line 3
     invoke-virtual {v0, v1}, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;->setName(Ljava/lang/String;)Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;
 
     move-result-object v0
@@ -269,12 +282,14 @@
 .method public static newSourceBuilder()Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;-><init>(Z)V
 
+    .line 2
     invoke-static {}, Lcom/bumptech/glide/load/engine/executor/GlideExecutor;->calculateBestThreadCount()I
 
     move-result v1
@@ -285,6 +300,7 @@
 
     const-string v1, "source"
 
+    .line 3
     invoke-virtual {v0, v1}, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;->setName(Ljava/lang/String;)Lcom/bumptech/glide/load/engine/executor/GlideExecutor$Builder;
 
     move-result-object v0
@@ -362,15 +378,12 @@
 .end method
 
 .method public static newUnlimitedSourceExecutor()Lcom/bumptech/glide/load/engine/executor/GlideExecutor;
-    .locals 12
+    .locals 10
 
+    .line 1
     new-instance v0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor;
 
     new-instance v9, Ljava/util/concurrent/ThreadPoolExecutor;
-
-    const/4 v2, 0x0
-
-    const v3, 0x7fffffff
 
     sget-wide v4, Lcom/bumptech/glide/load/engine/executor/GlideExecutor;->KEEP_ALIVE_TIME_MS:J
 
@@ -384,11 +397,15 @@
 
     sget-object v1, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$UncaughtThrowableStrategy;->DEFAULT:Lcom/bumptech/glide/load/engine/executor/GlideExecutor$UncaughtThrowableStrategy;
 
-    const/4 v10, 0x0
+    const-string v2, "source-unlimited"
 
-    const-string v11, "source-unlimited"
+    const/4 v3, 0x0
 
-    invoke-direct {v8, v11, v1, v10}, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$DefaultThreadFactory;-><init>(Ljava/lang/String;Lcom/bumptech/glide/load/engine/executor/GlideExecutor$UncaughtThrowableStrategy;Z)V
+    invoke-direct {v8, v2, v1, v3}, Lcom/bumptech/glide/load/engine/executor/GlideExecutor$DefaultThreadFactory;-><init>(Ljava/lang/String;Lcom/bumptech/glide/load/engine/executor/GlideExecutor$UncaughtThrowableStrategy;Z)V
+
+    const/4 v2, 0x0
+
+    const v3, 0x7fffffff
 
     move-object v1, v9
 
@@ -413,6 +430,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor;->delegate:Ljava/util/concurrent/ExecutorService;
 
     invoke-interface {p0, p1, p2, p3}, Ljava/util/concurrent/ExecutorService;->awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
@@ -429,9 +447,10 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor;->delegate:Ljava/util/concurrent/ExecutorService;
 
-    invoke-interface {p0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-interface {p0, p1}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -605,6 +624,7 @@
 .method public isShutdown()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor;->delegate:Ljava/util/concurrent/ExecutorService;
 
     invoke-interface {p0}, Ljava/util/concurrent/ExecutorService;->isShutdown()Z
@@ -617,6 +637,7 @@
 .method public isTerminated()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor;->delegate:Ljava/util/concurrent/ExecutorService;
 
     invoke-interface {p0}, Ljava/util/concurrent/ExecutorService;->isTerminated()Z
@@ -629,6 +650,7 @@
 .method public shutdown()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor;->delegate:Ljava/util/concurrent/ExecutorService;
 
     invoke-interface {p0}, Ljava/util/concurrent/ExecutorService;->shutdown()V
@@ -650,6 +672,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor;->delegate:Ljava/util/concurrent/ExecutorService;
 
     invoke-interface {p0}, Ljava/util/concurrent/ExecutorService;->shutdownNow()Ljava/util/List;
@@ -750,6 +773,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/executor/GlideExecutor;->delegate:Ljava/util/concurrent/ExecutorService;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;

@@ -14,6 +14,16 @@
 # virtual methods
 .method public drawStrikethrough(Landroid/graphics/Canvas;Landroid/graphics/ColorFilter;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "canvas",
+            "colorFilter"
+        }
+    .end annotation
 
     return-void
 .end method
@@ -39,4 +49,14 @@
 .end method
 
 .method public abstract showStrikethrough(Lcom/android/camera2/compat/theme/custom/mm/top/IStrikethrough$IStrikethroughCallable;I)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "callable",
+            "delay"
+        }
+    .end annotation
 .end method

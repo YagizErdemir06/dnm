@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_common/zzas;
+.class public final Lcom/google/android/gms/internal/mlkit_common/zzas;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -31,6 +31,7 @@
 .method public final zza()Ljava/lang/IllegalArgumentException;
     .locals 6
 
+    .line 1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     iget-object v1, p0, Lcom/google/android/gms/internal/mlkit_common/zzas;->zza:Ljava/lang/Object;

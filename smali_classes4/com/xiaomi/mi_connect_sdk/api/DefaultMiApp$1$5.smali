@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1$5;
+.class public Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1$5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,23 +18,24 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;
+.field public final synthetic this$1:Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;
 
-.field final synthetic val$appCommData:[B
+.field public final synthetic val$appCommData:[B
 
-.field final synthetic val$appCompNum:[B
+.field public final synthetic val$appCompNum:[B
 
-.field final synthetic val$appEndPointId:I
+.field public final synthetic val$appEndPointId:I
 
-.field final synthetic val$appEndPointInfo:Ljava/lang/String;
+.field public final synthetic val$appEndPointInfo:Ljava/lang/String;
 
-.field final synthetic val$appId:I
+.field public final synthetic val$appId:I
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;IILjava/lang/String;[B[B)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1$5;->this$1:Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;
 
     iput p2, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1$5;->val$appId:I
@@ -57,6 +58,7 @@
 .method public run()V
     .locals 7
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1$5;->this$1:Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;
 
     iget-object v0, v0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1;->this$0:Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp;
@@ -67,6 +69,7 @@
 
     iget v3, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1$5;->val$appEndPointId:I
 
+    .line 2
     iget-object v0, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1$5;->val$appEndPointInfo:Ljava/lang/String;
 
     if-nez v0, :cond_0
@@ -76,6 +79,7 @@
     :cond_0
     move-object v4, v0
 
+    .line 3
     iget-object v0, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1$5;->val$appCompNum:[B
 
     const/4 v5, 0x0
@@ -84,6 +88,7 @@
 
     new-array v0, v5, [B
 
+    .line 4
     :cond_1
     iget-object p0, p0, Lcom/xiaomi/mi_connect_sdk/api/DefaultMiApp$1$5;->val$appCommData:[B
 
@@ -96,6 +101,7 @@
 
     move-object v5, v0
 
+    .line 5
     invoke-interface/range {v1 .. v6}, Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;->onConnectionInitiated(IILjava/lang/String;[B[B)V
 
     return-void

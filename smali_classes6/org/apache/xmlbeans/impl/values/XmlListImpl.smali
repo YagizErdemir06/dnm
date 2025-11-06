@@ -19,13 +19,14 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
     const/4 v0, 0x0
 
     new-array v0, v0, [Ljava/lang/String;
 
+    .line 1
     sput-object v0, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->EMPTY_STRINGARRAY:[Ljava/lang/String;
 
     return-void
@@ -34,6 +35,7 @@
 .method public constructor <init>(Lorg/apache/xmlbeans/SchemaType;Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;-><init>()V
 
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
@@ -48,6 +50,7 @@
 .method private static compute_list_text(Ljava/util/List;)Ljava/lang/String;
     .locals 3
 
+    .line 1
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -58,6 +61,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     new-instance v0, Ljava/lang/StringBuffer;
 
@@ -65,6 +69,7 @@
 
     const/4 v1, 0x0
 
+    .line 3
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -83,6 +88,7 @@
 
     const/4 v1, 0x1
 
+    .line 4
     :goto_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -92,8 +98,10 @@
 
     const/16 v2, 0x20
 
+    .line 5
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
+    .line 6
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -114,6 +122,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -127,6 +136,7 @@
 
     const/16 v0, 0x20
 
+    .line 1
     invoke-virtual {p0, v0}, Ljava/lang/String;->indexOf(I)I
 
     move-result v0
@@ -175,6 +185,7 @@
 .method private static equal_xmlLists(Ljava/util/List;Ljava/util/List;)Z
     .locals 4
 
+    .line 1
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -192,6 +203,7 @@
     :cond_0
     move v0, v2
 
+    .line 2
     :goto_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -199,6 +211,7 @@
 
     if-ge v0, v1, :cond_2
 
+    .line 3
     invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -229,10 +242,12 @@
 .method public static lex(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/impl/common/ValidationContext;Lorg/apache/xmlbeans/impl/common/PrefixResolver;)Lorg/apache/xmlbeans/XmlSimpleList;
     .locals 8
 
+    .line 1
     invoke-static {p0}, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->split_list(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
+    .line 2
     array-length v0, p0
 
     new-array v0, v0, [Lorg/apache/xmlbeans/XmlAnySimpleType;
@@ -243,6 +258,7 @@
 
     if-eqz p3, :cond_0
 
+    .line 3
     new-instance v3, Lorg/apache/xmlbeans/impl/values/NamespaceContext;
 
     invoke-direct {v3, p3}, Lorg/apache/xmlbeans/impl/values/NamespaceContext;-><init>(Lorg/apache/xmlbeans/impl/common/PrefixResolver;)V
@@ -259,6 +275,7 @@
     :goto_0
     move v3, v2
 
+    .line 4
     :goto_1
     :try_start_0
     array-length v4, p0
@@ -267,6 +284,7 @@
 
     if-ge v3, v4, :cond_1
 
+    .line 5
     :try_start_1
     aget-object v4, p0, v3
 
@@ -287,6 +305,7 @@
 
     new-array v5, v1, [Ljava/lang/Object;
 
+    .line 6
     new-instance v6, Ljava/lang/StringBuffer;
 
     invoke-direct {v6}, Ljava/lang/StringBuffer;-><init>()V
@@ -327,8 +346,10 @@
     :cond_1
     if-eqz p3, :cond_2
 
+    .line 7
     invoke-static {}, Lorg/apache/xmlbeans/impl/values/NamespaceContext;->pop()V
 
+    .line 8
     :cond_2
     new-instance p0, Lorg/apache/xmlbeans/XmlSimpleList;
 
@@ -345,6 +366,7 @@
 
     if-eqz p3, :cond_3
 
+    .line 9
     invoke-static {}, Lorg/apache/xmlbeans/impl/values/NamespaceContext;->pop()V
 
     :cond_3
@@ -365,6 +387,7 @@
 .method private static permits_inner_space(Lorg/apache/xmlbeans/XmlObject;)Z
     .locals 2
 
+    .line 1
     check-cast p0, Lorg/apache/xmlbeans/SimpleValue;
 
     invoke-interface {p0}, Lorg/apache/xmlbeans/SimpleValue;->instanceType()Lorg/apache/xmlbeans/SchemaType;
@@ -406,16 +429,19 @@
 .method public static split_list(Ljava/lang/String;)[Ljava/lang/String;
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 2
     sget-object p0, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->EMPTY_STRINGARRAY:[Ljava/lang/String;
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -423,6 +449,7 @@
 
     const/4 v1, 0x0
 
+    .line 4
     :goto_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -444,6 +471,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -451,6 +479,7 @@
 
     if-lt v1, v2, :cond_2
 
+    .line 6
     sget-object p0, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->EMPTY_STRINGARRAY:[Ljava/lang/String;
 
     invoke-interface {v0, p0}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
@@ -464,6 +493,7 @@
     :cond_2
     move v2, v1
 
+    .line 7
     :goto_1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -485,6 +515,7 @@
 
     goto :goto_1
 
+    .line 8
     :cond_3
     invoke-virtual {p0, v1, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
@@ -500,6 +531,7 @@
 .method public static validateValue(Lorg/apache/xmlbeans/XmlSimpleList;Lorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/impl/common/ValidationContext;)V
     .locals 9
 
+    .line 1
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaType;->getEnumerationValues()[Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v0
@@ -516,11 +548,13 @@
 
     move v5, v4
 
+    .line 2
     :goto_0
     array-length v6, v0
 
     if-ge v5, v6, :cond_1
 
+    .line 3
     aget-object v6, v0, v5
 
     check-cast v6, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
@@ -551,6 +585,7 @@
 
     aput-object p0, v0, v3
 
+    .line 4
     invoke-static {p1}, Lorg/apache/xmlbeans/impl/common/QNameHelper;->readable(Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object v5
@@ -561,6 +596,7 @@
 
     invoke-interface {p2, v5, v0}, Lorg/apache/xmlbeans/impl/common/ValidationContext;->invalid(Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 5
     :cond_2
     :goto_1
     invoke-interface {p1, v4}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
@@ -571,6 +607,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 6
     check-cast v0, Lorg/apache/xmlbeans/SimpleValue;
 
     invoke-interface {v0}, Lorg/apache/xmlbeans/SimpleValue;->getIntValue()I
@@ -587,6 +624,7 @@
 
     aput-object p0, v6, v4
 
+    .line 7
     new-instance v7, Ljava/lang/Integer;
 
     invoke-virtual {p0}, Lorg/apache/xmlbeans/XmlSimpleList;->size()I
@@ -613,6 +651,7 @@
 
     invoke-interface {p2, v0, v6}, Lorg/apache/xmlbeans/impl/common/ValidationContext;->invalid(Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 8
     :cond_3
     invoke-interface {p1, v3}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
@@ -620,6 +659,7 @@
 
     if-eqz v0, :cond_4
 
+    .line 9
     check-cast v0, Lorg/apache/xmlbeans/SimpleValue;
 
     invoke-interface {v0}, Lorg/apache/xmlbeans/SimpleValue;->getIntValue()I
@@ -636,6 +676,7 @@
 
     aput-object p0, v6, v4
 
+    .line 10
     new-instance v7, Ljava/lang/Integer;
 
     invoke-virtual {p0}, Lorg/apache/xmlbeans/XmlSimpleList;->size()I
@@ -662,6 +703,7 @@
 
     invoke-interface {p2, v0, v6}, Lorg/apache/xmlbeans/impl/common/ValidationContext;->invalid(Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 11
     :cond_4
     invoke-interface {p1, v2}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
@@ -669,6 +711,7 @@
 
     if-eqz v0, :cond_5
 
+    .line 12
     check-cast v0, Lorg/apache/xmlbeans/SimpleValue;
 
     invoke-interface {v0}, Lorg/apache/xmlbeans/SimpleValue;->getIntValue()I
@@ -685,6 +728,7 @@
 
     aput-object p0, v5, v4
 
+    .line 13
     new-instance v4, Ljava/lang/Integer;
 
     invoke-virtual {p0}, Lorg/apache/xmlbeans/XmlSimpleList;->size()I
@@ -720,6 +764,7 @@
 .method public compute_text(Lorg/apache/xmlbeans/impl/values/NamespaceManager;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->_value:Lorg/apache/xmlbeans/XmlSimpleList;
 
     invoke-static {p0}, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->compute_list_text(Ljava/util/List;)Ljava/lang/String;
@@ -732,6 +777,7 @@
 .method public equal_to(Lorg/apache/xmlbeans/XmlObject;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->_value:Lorg/apache/xmlbeans/XmlSimpleList;
 
     check-cast p1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
@@ -750,11 +796,14 @@
 .method public is_defaultable_ws(Ljava/lang/String;)Z
     .locals 1
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->_value:Lorg/apache/xmlbeans/XmlSimpleList;
 
+    .line 2
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->set_text(Ljava/lang/String;)V
 
+    .line 3
     iput-object v0, p0, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->_value:Lorg/apache/xmlbeans/XmlSimpleList;
     :try_end_0
     .catch Lorg/apache/xmlbeans/impl/values/XmlValueOutOfRangeException; {:try_start_0 .. :try_end_0} :catch_0
@@ -772,8 +821,10 @@
 .method public listValue()Ljava/util/List;
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
+    .line 2
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->_value:Lorg/apache/xmlbeans/XmlSimpleList;
 
     if-nez v0, :cond_0
@@ -782,6 +833,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->_jvalue:Lorg/apache/xmlbeans/XmlSimpleList;
 
@@ -789,6 +841,7 @@
 
     return-object v0
 
+    .line 4
     :cond_1
     new-instance v0, Ljava/util/ArrayList;
 
@@ -796,6 +849,7 @@
 
     const/4 v1, 0x0
 
+    .line 5
     :goto_0
     iget-object v2, p0, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->_value:Lorg/apache/xmlbeans/XmlSimpleList;
 
@@ -805,6 +859,7 @@
 
     if-ge v1, v2, :cond_2
 
+    .line 6
     iget-object v2, p0, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->_value:Lorg/apache/xmlbeans/XmlSimpleList;
 
     invoke-virtual {v2, v1}, Lorg/apache/xmlbeans/XmlSimpleList;->get(I)Ljava/lang/Object;
@@ -823,6 +878,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_2
     new-instance v1, Lorg/apache/xmlbeans/XmlSimpleList;
 
@@ -836,6 +892,7 @@
 .method public schemaType()Lorg/apache/xmlbeans/SchemaType;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     return-object p0
@@ -844,12 +901,14 @@
 .method public set_list(Ljava/util/List;)V
     .locals 6
 
+    .line 1
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     invoke-interface {v0}, Lorg/apache/xmlbeans/SchemaType;->getListItemType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->has_store()Z
 
     move-result v1
@@ -858,6 +917,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 3
     new-instance v1, Lorg/apache/xmlbeans/impl/values/NamespaceContext;
 
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
@@ -875,6 +935,7 @@
     :cond_0
     move v1, v2
 
+    .line 4
     :goto_0
     :try_start_0
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -883,6 +944,7 @@
 
     new-array v3, v3, [Lorg/apache/xmlbeans/XmlAnySimpleType;
 
+    .line 5
     :goto_1
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -890,10 +952,12 @@
 
     if-ge v2, v4, :cond_3
 
+    .line 6
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
+    .line 7
     instance-of v5, v4, Lorg/apache/xmlbeans/XmlObject;
 
     if-eqz v5, :cond_2
@@ -910,6 +974,7 @@
 
     if-eqz v5, :cond_2
 
+    .line 8
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -918,6 +983,7 @@
 
     move-result-object v5
 
+    .line 9
     invoke-static {v5}, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->contains_white_space(Ljava/lang/String;)Z
 
     move-result v5
@@ -926,6 +992,7 @@
 
     goto :goto_2
 
+    .line 10
     :cond_1
     new-instance p0, Lorg/apache/xmlbeans/impl/values/XmlValueOutOfRangeException;
 
@@ -933,6 +1000,7 @@
 
     throw p0
 
+    .line 11
     :cond_2
     :goto_2
     invoke-interface {v0, v4}, Lorg/apache/xmlbeans/SchemaType;->newValue(Ljava/lang/Object;)Lorg/apache/xmlbeans/XmlAnySimpleType;
@@ -945,6 +1013,7 @@
 
     goto :goto_1
 
+    .line 12
     :cond_3
     new-instance p1, Lorg/apache/xmlbeans/XmlSimpleList;
 
@@ -958,8 +1027,10 @@
 
     if-eqz v1, :cond_4
 
+    .line 13
     invoke-static {}, Lorg/apache/xmlbeans/impl/values/NamespaceContext;->pop()V
 
+    .line 14
     :cond_4
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_validateOnSet()Z
 
@@ -967,17 +1038,20 @@
 
     if-eqz v0, :cond_5
 
+    .line 15
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     sget-object v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_voorVc:Lorg/apache/xmlbeans/impl/common/ValidationContext;
 
     invoke-static {p1, v0, v1}, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->validateValue(Lorg/apache/xmlbeans/XmlSimpleList;Lorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/impl/common/ValidationContext;)V
 
+    .line 16
     :cond_5
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->_value:Lorg/apache/xmlbeans/XmlSimpleList;
 
     const/4 p1, 0x0
 
+    .line 17
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->_jvalue:Lorg/apache/xmlbeans/XmlSimpleList;
 
     return-void
@@ -987,6 +1061,7 @@
 
     if-eqz v1, :cond_6
 
+    .line 18
     invoke-static {}, Lorg/apache/xmlbeans/impl/values/NamespaceContext;->pop()V
 
     :cond_6
@@ -998,6 +1073,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->_value:Lorg/apache/xmlbeans/XmlSimpleList;
 
     return-void
@@ -1006,6 +1082,7 @@
 .method public set_text(Ljava/lang/String;)V
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_validateOnSet()Z
 
     move-result v0
@@ -1022,6 +1099,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     new-instance v0, Lorg/apache/xmlbeans/impl/values/XmlValueOutOfRangeException;
 
@@ -1039,13 +1117,13 @@
 
     aput-object p1, v1, v2
 
+    const/4 p1, 0x2
+
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     invoke-static {p0}, Lorg/apache/xmlbeans/impl/common/QNameHelper;->readable(Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object p0
-
-    const/4 p1, 0x2
 
     aput-object p0, v1, p1
 
@@ -1055,6 +1133,7 @@
 
     throw v0
 
+    .line 3
     :cond_1
     :goto_0
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
@@ -1063,6 +1142,7 @@
 
     move-result-object v0
 
+    .line 4
     sget-object v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_voorVc:Lorg/apache/xmlbeans/impl/common/ValidationContext;
 
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->has_store()Z
@@ -1087,19 +1167,23 @@
 
     move-result-object p1
 
+    .line 5
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_validateOnSet()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
+    .line 6
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     invoke-static {p1, v0, v1}, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->validateValue(Lorg/apache/xmlbeans/XmlSimpleList;Lorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/impl/common/ValidationContext;)V
 
+    .line 7
     :cond_3
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->_value:Lorg/apache/xmlbeans/XmlSimpleList;
 
+    .line 8
     iput-object v3, p0, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->_jvalue:Lorg/apache/xmlbeans/XmlSimpleList;
 
     return-void
@@ -1108,6 +1192,7 @@
 .method public validate_simpleval(Ljava/lang/String;Lorg/apache/xmlbeans/impl/common/ValidationContext;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->xlistValue()Ljava/util/List;
 
     move-result-object p1
@@ -1126,6 +1211,7 @@
 .method public value_hash_code()I
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->_value:Lorg/apache/xmlbeans/XmlSimpleList;
 
     const/4 v1, 0x0
@@ -1134,11 +1220,13 @@
 
     return v1
 
+    .line 2
     :cond_0
     invoke-virtual {v0}, Lorg/apache/xmlbeans/XmlSimpleList;->size()I
 
     move-result v0
 
+    .line 3
     iget-object v2, p0, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->_value:Lorg/apache/xmlbeans/XmlSimpleList;
 
     invoke-virtual {v2}, Lorg/apache/xmlbeans/XmlSimpleList;->size()I
@@ -1153,6 +1241,7 @@
 
     move v2, v3
 
+    .line 4
     :cond_1
     :goto_0
     iget-object v3, p0, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->_value:Lorg/apache/xmlbeans/XmlSimpleList;
@@ -1165,6 +1254,7 @@
 
     mul-int/lit8 v0, v0, 0x13
 
+    .line 5
     iget-object v3, p0, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->_value:Lorg/apache/xmlbeans/XmlSimpleList;
 
     invoke-virtual {v3, v1}, Lorg/apache/xmlbeans/XmlSimpleList;->get(I)Ljava/lang/Object;
@@ -1181,6 +1271,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_2
     iget-object v2, p0, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->_value:Lorg/apache/xmlbeans/XmlSimpleList;
 
@@ -1192,6 +1283,7 @@
 
     mul-int/lit8 v0, v0, 0x13
 
+    .line 7
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->_value:Lorg/apache/xmlbeans/XmlSimpleList;
 
     invoke-virtual {p0, v1}, Lorg/apache/xmlbeans/XmlSimpleList;->get(I)Ljava/lang/Object;
@@ -1211,8 +1303,10 @@
 .method public xlistValue()Ljava/util/List;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
+    .line 2
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlListImpl;->_value:Lorg/apache/xmlbeans/XmlSimpleList;
 
     return-object p0

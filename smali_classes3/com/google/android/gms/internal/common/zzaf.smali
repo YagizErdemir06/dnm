@@ -1,20 +1,21 @@
-.class final Lcom/google/android/gms/internal/common/zzaf;
+.class public final Lcom/google/android/gms/internal/common/zzaf;
 .super Lcom/google/android/gms/internal/common/zzag;
 .source "SourceFile"
 
 
 # instance fields
-.field final transient zza:I
+.field public final transient zza:I
 
-.field final transient zzb:I
+.field public final transient zzb:I
 
-.field final synthetic zzc:Lcom/google/android/gms/internal/common/zzag;
+.field public final synthetic zzc:Lcom/google/android/gms/internal/common/zzag;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/gms/internal/common/zzag;II)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/internal/common/zzaf;->zzc:Lcom/google/android/gms/internal/common/zzag;
 
     invoke-direct {p0}, Lcom/google/android/gms/internal/common/zzag;-><init>()V
@@ -31,6 +32,7 @@
 .method public final get(I)Ljava/lang/Object;
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/android/gms/internal/common/zzaf;->zzb:I
 
     const-string v1, "index"
@@ -43,6 +45,7 @@
 
     add-int/2addr p1, p0
 
+    .line 2
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -61,6 +64,7 @@
 .method public final bridge synthetic subList(II)Ljava/util/List;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/google/android/gms/internal/common/zzag;->zzh(II)Lcom/google/android/gms/internal/common/zzag;
 
     move-result-object p0
@@ -129,6 +133,7 @@
 .method public final zzh(II)Lcom/google/android/gms/internal/common/zzag;
     .locals 1
 
+    .line 1
     iget v0, p0, Lcom/google/android/gms/internal/common/zzaf;->zzb:I
 
     invoke-static {p1, p2, v0}, Lcom/google/android/gms/internal/common/zzs;->zzc(III)V
@@ -141,6 +146,7 @@
 
     add-int/2addr p2, p0
 
+    .line 2
     invoke-virtual {v0, p1, p2}, Lcom/google/android/gms/internal/common/zzag;->zzh(II)Lcom/google/android/gms/internal/common/zzag;
 
     move-result-object p0

@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/StandardTable$Column$Values;
+.class public Lcom/google/common/collect/StandardTable$Column$Values;
 .super Lcom/google/common/collect/Maps$Values;
 .source "SourceFile"
 
@@ -22,15 +22,17 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/google/common/collect/StandardTable$Column;
+.field public final synthetic this$1:Lcom/google/common/collect/StandardTable$Column;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/StandardTable$Column;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/StandardTable$Column$Values;->this$1:Lcom/google/common/collect/StandardTable$Column;
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/common/collect/Maps$Values;-><init>(Ljava/util/Map;)V
 
     return-void
@@ -47,6 +49,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/StandardTable$Column$Values;->this$1:Lcom/google/common/collect/StandardTable$Column;
 
     invoke-static {p1}, Lcom/google/common/base/Predicates;->equalTo(Ljava/lang/Object;)Lcom/google/common/base/Predicate;
@@ -84,6 +87,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/StandardTable$Column$Values;->this$1:Lcom/google/common/collect/StandardTable$Column;
 
     invoke-static {p1}, Lcom/google/common/base/Predicates;->in(Ljava/util/Collection;)Lcom/google/common/base/Predicate;
@@ -111,6 +115,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/StandardTable$Column$Values;->this$1:Lcom/google/common/collect/StandardTable$Column;
 
     invoke-static {p1}, Lcom/google/common/base/Predicates;->in(Ljava/util/Collection;)Lcom/google/common/base/Predicate;

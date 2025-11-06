@@ -446,6 +446,7 @@
 
     new-array v0, v0, [Lcom/google/android/gms/common/Feature;
 
+    .line 1
     sput-object v0, Lcom/google/mlkit/common/sdkinternal/OptionalModuleUtils;->EMPTY_FEATURES:[Lcom/google/android/gms/common/Feature;
 
     new-instance v0, Lcom/google/android/gms/common/Feature;
@@ -462,6 +463,7 @@
 
     const-string v4, "vision.custom.ica"
 
+    .line 2
     invoke-direct {v1, v4, v2, v3}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
 
     sput-object v1, Lcom/google/mlkit/common/sdkinternal/OptionalModuleUtils;->FEATURE_CUSTOM_ICA:Lcom/google/android/gms/common/Feature;
@@ -470,6 +472,7 @@
 
     const-string v5, "vision.face"
 
+    .line 3
     invoke-direct {v4, v5, v2, v3}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
 
     sput-object v4, Lcom/google/mlkit/common/sdkinternal/OptionalModuleUtils;->FEATURE_FACE:Lcom/google/android/gms/common/Feature;
@@ -478,6 +481,7 @@
 
     const-string v6, "vision.ica"
 
+    .line 4
     invoke-direct {v5, v6, v2, v3}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
 
     sput-object v5, Lcom/google/mlkit/common/sdkinternal/OptionalModuleUtils;->FEATURE_ICA:Lcom/google/android/gms/common/Feature;
@@ -486,6 +490,7 @@
 
     const-string v7, "vision.ocr"
 
+    .line 5
     invoke-direct {v6, v7, v2, v3}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
 
     sput-object v6, Lcom/google/mlkit/common/sdkinternal/OptionalModuleUtils;->FEATURE_OCR:Lcom/google/android/gms/common/Feature;
@@ -494,6 +499,7 @@
 
     const-string v8, "mlkit.ocr.chinese"
 
+    .line 6
     invoke-direct {v7, v8, v2, v3}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
 
     sput-object v7, Lcom/google/mlkit/common/sdkinternal/OptionalModuleUtils;->FEATURE_OCR_CHINESE:Lcom/google/android/gms/common/Feature;
@@ -502,6 +508,7 @@
 
     const-string v8, "mlkit.ocr.common"
 
+    .line 7
     invoke-direct {v7, v8, v2, v3}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
 
     sput-object v7, Lcom/google/mlkit/common/sdkinternal/OptionalModuleUtils;->FEATURE_OCR_COMMON:Lcom/google/android/gms/common/Feature;
@@ -510,6 +517,7 @@
 
     const-string v8, "mlkit.ocr.devanagari"
 
+    .line 8
     invoke-direct {v7, v8, v2, v3}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
 
     sput-object v7, Lcom/google/mlkit/common/sdkinternal/OptionalModuleUtils;->FEATURE_OCR_DEVANAGARI:Lcom/google/android/gms/common/Feature;
@@ -518,6 +526,7 @@
 
     const-string v8, "mlkit.ocr.japanese"
 
+    .line 9
     invoke-direct {v7, v8, v2, v3}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
 
     sput-object v7, Lcom/google/mlkit/common/sdkinternal/OptionalModuleUtils;->FEATURE_OCR_JAPANESE:Lcom/google/android/gms/common/Feature;
@@ -526,6 +535,7 @@
 
     const-string v8, "mlkit.ocr.korean"
 
+    .line 10
     invoke-direct {v7, v8, v2, v3}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
 
     sput-object v7, Lcom/google/mlkit/common/sdkinternal/OptionalModuleUtils;->FEATURE_OCR_KOREAN:Lcom/google/android/gms/common/Feature;
@@ -534,6 +544,7 @@
 
     const-string v8, "mlkit.langid"
 
+    .line 11
     invoke-direct {v7, v8, v2, v3}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
 
     sput-object v7, Lcom/google/mlkit/common/sdkinternal/OptionalModuleUtils;->FEATURE_LANGID:Lcom/google/android/gms/common/Feature;
@@ -542,6 +553,7 @@
 
     const-string v9, "mlkit.nlclassifier"
 
+    .line 12
     invoke-direct {v8, v9, v2, v3}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
 
     sput-object v8, Lcom/google/mlkit/common/sdkinternal/OptionalModuleUtils;->FEATURE_NLCLASSIFIER:Lcom/google/android/gms/common/Feature;
@@ -550,6 +562,7 @@
 
     const-string v10, "tflite_dynamite"
 
+    .line 13
     invoke-direct {v9, v10, v2, v3}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
 
     sput-object v9, Lcom/google/mlkit/common/sdkinternal/OptionalModuleUtils;->FEATURE_TFLITE_DYNAMITE:Lcom/google/android/gms/common/Feature;
@@ -558,6 +571,7 @@
 
     const-string v12, "mlkit.barcode.ui"
 
+    .line 14
     invoke-direct {v11, v12, v2, v3}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
 
     sput-object v11, Lcom/google/mlkit/common/sdkinternal/OptionalModuleUtils;->FEATURE_MLKIT_BARCODE_UI:Lcom/google/android/gms/common/Feature;
@@ -566,6 +580,7 @@
 
     const-string v13, "mlkit.smartreply"
 
+    .line 15
     invoke-direct {v12, v13, v2, v3}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
 
     sput-object v12, Lcom/google/mlkit/common/sdkinternal/OptionalModuleUtils;->FEATURE_SMART_REPLY:Lcom/google/android/gms/common/Feature;
@@ -574,6 +589,7 @@
 
     const-string v14, "mlkit.image.caption"
 
+    .line 16
     invoke-direct {v13, v14, v2, v3}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
 
     sput-object v13, Lcom/google/mlkit/common/sdkinternal/OptionalModuleUtils;->FEATURE_IMAGE_CAPTION:Lcom/google/android/gms/common/Feature;
@@ -582,6 +598,7 @@
 
     const-string v14, "mlkit.docscan.detect"
 
+    .line 17
     invoke-direct {v13, v14, v2, v3}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
 
     sput-object v13, Lcom/google/mlkit/common/sdkinternal/OptionalModuleUtils;->FEATURE_DOCSCAN_DETECT:Lcom/google/android/gms/common/Feature;
@@ -590,6 +607,7 @@
 
     const-string v14, "mlkit.docscan.crop"
 
+    .line 18
     invoke-direct {v13, v14, v2, v3}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
 
     sput-object v13, Lcom/google/mlkit/common/sdkinternal/OptionalModuleUtils;->FEATURE_DOCSCAN_CROP:Lcom/google/android/gms/common/Feature;
@@ -598,6 +616,7 @@
 
     const-string v14, "mlkit.docscan.enhance"
 
+    .line 19
     invoke-direct {v13, v14, v2, v3}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
 
     sput-object v13, Lcom/google/mlkit/common/sdkinternal/OptionalModuleUtils;->FEATURE_DOCSCAN_ENHANCE:Lcom/google/android/gms/common/Feature;
@@ -606,6 +625,7 @@
 
     const-string v14, "mlkit.quality.aesthetic"
 
+    .line 20
     invoke-direct {v13, v14, v2, v3}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
 
     sput-object v13, Lcom/google/mlkit/common/sdkinternal/OptionalModuleUtils;->FEATURE_IMAGE_QUALITY_AESTHETIC:Lcom/google/android/gms/common/Feature;
@@ -614,6 +634,7 @@
 
     const-string v14, "mlkit.quality.technical"
 
+    .line 21
     invoke-direct {v13, v14, v2, v3}, Lcom/google/android/gms/common/Feature;-><init>(Ljava/lang/String;J)V
 
     sput-object v13, Lcom/google/mlkit/common/sdkinternal/OptionalModuleUtils;->FEATURE_IMAGE_QUALITY_TECHNICAL:Lcom/google/android/gms/common/Feature;
@@ -624,42 +645,53 @@
 
     const-string v3, "barcode"
 
+    .line 22
     invoke-virtual {v2, v3, v0}, Lcom/google/android/gms/internal/mlkit_common/zzat;->zza(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzat;
 
     const-string v3, "custom_ica"
 
+    .line 23
     invoke-virtual {v2, v3, v1}, Lcom/google/android/gms/internal/mlkit_common/zzat;->zza(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzat;
 
     const-string v3, "face"
 
+    .line 24
     invoke-virtual {v2, v3, v4}, Lcom/google/android/gms/internal/mlkit_common/zzat;->zza(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzat;
 
     const-string v3, "ica"
 
+    .line 25
     invoke-virtual {v2, v3, v5}, Lcom/google/android/gms/internal/mlkit_common/zzat;->zza(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzat;
 
     const-string v3, "ocr"
 
+    .line 26
     invoke-virtual {v2, v3, v6}, Lcom/google/android/gms/internal/mlkit_common/zzat;->zza(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzat;
 
     const-string v3, "langid"
 
+    .line 27
     invoke-virtual {v2, v3, v7}, Lcom/google/android/gms/internal/mlkit_common/zzat;->zza(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzat;
 
     const-string v3, "nlclassifier"
 
+    .line 28
     invoke-virtual {v2, v3, v8}, Lcom/google/android/gms/internal/mlkit_common/zzat;->zza(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzat;
 
+    .line 29
     invoke-virtual {v2, v10, v9}, Lcom/google/android/gms/internal/mlkit_common/zzat;->zza(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzat;
 
     const-string v3, "barcode_ui"
 
+    .line 30
     invoke-virtual {v2, v3, v11}, Lcom/google/android/gms/internal/mlkit_common/zzat;->zza(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzat;
 
     const-string v3, "smart_reply"
 
+    .line 31
     invoke-virtual {v2, v3, v12}, Lcom/google/android/gms/internal/mlkit_common/zzat;->zza(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzat;
 
+    .line 32
     invoke-virtual {v2}, Lcom/google/android/gms/internal/mlkit_common/zzat;->zzb()Lcom/google/android/gms/internal/mlkit_common/zzau;
 
     move-result-object v2
@@ -672,40 +704,50 @@
 
     const-string v3, "com.google.android.gms.vision.barcode"
 
+    .line 33
     invoke-virtual {v2, v3, v0}, Lcom/google/android/gms/internal/mlkit_common/zzat;->zza(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzat;
 
     const-string v0, "com.google.android.gms.vision.custom.ica"
 
+    .line 34
     invoke-virtual {v2, v0, v1}, Lcom/google/android/gms/internal/mlkit_common/zzat;->zza(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzat;
 
     const-string v0, "com.google.android.gms.vision.face"
 
+    .line 35
     invoke-virtual {v2, v0, v4}, Lcom/google/android/gms/internal/mlkit_common/zzat;->zza(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzat;
 
     const-string v0, "com.google.android.gms.vision.ica"
 
+    .line 36
     invoke-virtual {v2, v0, v5}, Lcom/google/android/gms/internal/mlkit_common/zzat;->zza(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzat;
 
     const-string v0, "com.google.android.gms.vision.ocr"
 
+    .line 37
     invoke-virtual {v2, v0, v6}, Lcom/google/android/gms/internal/mlkit_common/zzat;->zza(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzat;
 
     const-string v0, "com.google.android.gms.mlkit.langid"
 
+    .line 38
     invoke-virtual {v2, v0, v7}, Lcom/google/android/gms/internal/mlkit_common/zzat;->zza(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzat;
 
     const-string v0, "com.google.android.gms.mlkit.nlclassifier"
 
+    .line 39
     invoke-virtual {v2, v0, v8}, Lcom/google/android/gms/internal/mlkit_common/zzat;->zza(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzat;
 
     const-string v0, "com.google.android.gms.tflite_dynamite"
 
+    .line 40
     invoke-virtual {v2, v0, v9}, Lcom/google/android/gms/internal/mlkit_common/zzat;->zza(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzat;
 
     const-string v0, "com.google.android.gms.mlkit_smartreply"
 
+    .line 41
     invoke-virtual {v2, v0, v12}, Lcom/google/android/gms/internal/mlkit_common/zzat;->zza(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzat;
 
+    .line 42
     invoke-virtual {v2}, Lcom/google/android/gms/internal/mlkit_common/zzat;->zzb()Lcom/google/android/gms/internal/mlkit_common/zzau;
 
     move-result-object v0
@@ -1069,6 +1111,7 @@
 .method private static zza(Ljava/util/Map;Ljava/util/List;)[Lcom/google/android/gms/common/Feature;
     .locals 3
 
+    .line 1
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -1077,6 +1120,7 @@
 
     const/4 v1, 0x0
 
+    .line 2
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -1084,6 +1128,7 @@
 
     if-ge v1, v2, :cond_0
 
+    .line 3
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2

@@ -1,4 +1,4 @@
-.class final Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$StreamReader;
+.class public final Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$StreamReader;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -25,8 +25,10 @@
 .method public constructor <init>(Ljava/io/InputStream;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$StreamReader;->is:Ljava/io/InputStream;
 
     return-void
@@ -42,6 +44,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$StreamReader;->getUInt8()S
 
     move-result v0
@@ -65,6 +68,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$StreamReader;->is:Ljava/io/InputStream;
 
     invoke-virtual {p0}, Ljava/io/InputStream;->read()I
@@ -79,6 +83,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     new-instance p0, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader$EndOfFileException;
 
@@ -104,10 +109,12 @@
 
     if-ge v0, p2, :cond_0
 
+    .line 1
     iget-object v1, p0, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$StreamReader;->is:Ljava/io/InputStream;
 
     sub-int v3, p2, v0
 
+    .line 2
     invoke-virtual {v1, p1, v0, v3}, Ljava/io/InputStream;->read([BII)I
 
     move-result v1
@@ -125,6 +132,7 @@
 
     goto :goto_1
 
+    .line 3
     :cond_1
     new-instance p0, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader$EndOfFileException;
 
@@ -161,6 +169,7 @@
 
     if-lez v4, :cond_3
 
+    .line 1
     iget-object v4, p0, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$StreamReader;->is:Ljava/io/InputStream;
 
     invoke-virtual {v4, v2, v3}, Ljava/io/InputStream;->skip(J)J
@@ -176,6 +185,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_1
     iget-object v4, p0, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$StreamReader;->is:Ljava/io/InputStream;
 

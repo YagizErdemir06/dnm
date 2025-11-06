@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/tasks/zzi;
+.class public final Lcom/google/android/gms/tasks/zzi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field final synthetic zza:Lcom/google/android/gms/tasks/Task;
+.field public final synthetic zza:Lcom/google/android/gms/tasks/Task;
 
-.field final synthetic zzb:Lcom/google/android/gms/tasks/zzj;
+.field public final synthetic zzb:Lcom/google/android/gms/tasks/zzj;
 
 
 # direct methods
@@ -30,6 +30,7 @@
 .method public final run()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/tasks/zzi;->zzb:Lcom/google/android/gms/tasks/zzj;
 
     invoke-static {v0}, Lcom/google/android/gms/tasks/zzj;->zzb(Lcom/google/android/gms/tasks/zzj;)Ljava/lang/Object;
@@ -55,6 +56,7 @@
 
     invoke-interface {v1, p0}, Lcom/google/android/gms/tasks/OnCompleteListener;->onComplete(Lcom/google/android/gms/tasks/Task;)V
 
+    .line 2
     :cond_0
     monitor-exit v0
 

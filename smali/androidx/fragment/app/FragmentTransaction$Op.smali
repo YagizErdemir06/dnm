@@ -1,4 +1,4 @@
-.class final Landroidx/fragment/app/FragmentTransaction$Op;
+.class public final Landroidx/fragment/app/FragmentTransaction$Op;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,21 +15,21 @@
 
 
 # instance fields
-.field mCmd:I
+.field public mCmd:I
 
-.field mCurrentMaxState:Landroidx/lifecycle/Lifecycle$State;
+.field public mCurrentMaxState:Landroidx/lifecycle/Lifecycle$State;
 
-.field mEnterAnim:I
+.field public mEnterAnim:I
 
-.field mExitAnim:I
+.field public mExitAnim:I
 
-.field mFragment:Landroidx/fragment/app/Fragment;
+.field public mFragment:Landroidx/fragment/app/Fragment;
 
-.field mOldMaxState:Landroidx/lifecycle/Lifecycle$State;
+.field public mOldMaxState:Landroidx/lifecycle/Lifecycle$State;
 
-.field mPopEnterAnim:I
+.field public mPopEnterAnim:I
 
-.field mPopExitAnim:I
+.field public mPopExitAnim:I
 
 
 # direct methods

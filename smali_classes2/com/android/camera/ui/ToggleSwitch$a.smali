@@ -24,7 +24,16 @@
 # direct methods
 .method public constructor <init>(Lcom/android/camera/ui/ToggleSwitch;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/ui/ToggleSwitch$a;->a:Lcom/android/camera/ui/ToggleSwitch;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +45,16 @@
 # virtual methods
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera/ui/ToggleSwitch$a;->a:Lcom/android/camera/ui/ToggleSwitch;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
@@ -51,9 +69,10 @@
 
     invoke-static {v0, p1}, Lcom/android/camera/ui/ToggleSwitch;->a(Lcom/android/camera/ui/ToggleSwitch;F)F
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera/ui/ToggleSwitch$a;->a:Lcom/android/camera/ui/ToggleSwitch;
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->invalidate()V
 
     return-void
 .end method

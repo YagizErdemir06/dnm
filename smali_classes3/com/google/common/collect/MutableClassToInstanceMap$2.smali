@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/MutableClassToInstanceMap$2;
+.class public Lcom/google/common/collect/MutableClassToInstanceMap$2;
 .super Lcom/google/common/collect/ForwardingSet;
 .source "SourceFile"
 
@@ -24,13 +24,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/MutableClassToInstanceMap;
+.field public final synthetic this$0:Lcom/google/common/collect/MutableClassToInstanceMap;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/MutableClassToInstanceMap;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/MutableClassToInstanceMap$2;->this$0:Lcom/google/common/collect/MutableClassToInstanceMap;
 
     invoke-direct {p0}, Lcom/google/common/collect/ForwardingSet;-><init>()V
@@ -100,8 +101,10 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/MutableClassToInstanceMap$2$1;
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/MutableClassToInstanceMap$2;->delegate()Ljava/util/Set;
 
     move-result-object v1

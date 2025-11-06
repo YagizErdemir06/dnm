@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/graph/DirectedGraphConnections$NodeConnection;
+.class public abstract Lcom/google/common/graph/DirectedGraphConnections$NodeConnection;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -31,7 +31,7 @@
 
 
 # instance fields
-.field final node:Ljava/lang/Object;
+.field public final node:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TN;"
@@ -49,8 +49,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1

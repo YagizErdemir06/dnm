@@ -1,4 +1,4 @@
-.class final Lcom/google/android/odml/image/zze;
+.class public final Lcom/google/android/odml/image/zze;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -24,13 +24,15 @@
 
     invoke-direct {v0}, Lcom/google/android/odml/image/zzb;-><init>()V
 
+    .line 1
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     move-result-object p1
 
+    .line 2
     sget-object v1, Lcom/google/android/odml/image/zzd;->zza:[I
 
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {p1}, Landroid/graphics/Bitmap$Config;->ordinal()I
 
     move-result p1
 
@@ -56,11 +58,14 @@
     :cond_1
     const/16 p1, 0x8
 
+    .line 3
     :goto_0
     invoke-virtual {v0, p1}, Lcom/google/android/odml/image/zzh;->zza(I)Lcom/google/android/odml/image/zzh;
 
+    .line 4
     invoke-virtual {v0, v1}, Lcom/google/android/odml/image/zzh;->zzb(I)Lcom/google/android/odml/image/zzh;
 
+    .line 5
     invoke-virtual {v0}, Lcom/google/android/odml/image/zzh;->zzc()Lcom/google/android/odml/image/ImageProperties;
 
     move-result-object p1
@@ -93,6 +98,7 @@
 
     iget-object p0, p0, Lcom/google/android/odml/image/zze;->zza:Landroid/graphics/Bitmap;
 
+    .line 1
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->recycle()V
 
     return-void

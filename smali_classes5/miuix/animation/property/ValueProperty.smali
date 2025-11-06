@@ -3,237 +3,16 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Ljava/lang/Object;",
-        ">",
-        "Lmiuix/animation/property/FloatProperty<",
-        "TT;>;"
-    }
-.end annotation
-
-
-# static fields
-.field public static final ALPHA:Lmiuix/animation/property/ValueProperty;
-
-.field public static final ALPHA_INT:Lmiuix/animation/property/ValueProperty;
-
-.field public static final COLOR_INT:Lmiuix/animation/property/ColorProperty;
-
-.field public static final FRACTION:Lmiuix/animation/property/ValueProperty;
-
-.field public static final HEIGHT:Lmiuix/animation/property/ValueProperty;
-
-.field public static final ROTATION:Lmiuix/animation/property/ValueProperty;
-
-.field public static final ROTATION_X:Lmiuix/animation/property/ValueProperty;
-
-.field public static final ROTATION_Y:Lmiuix/animation/property/ValueProperty;
-
-.field public static final SCALE:Lmiuix/animation/property/ValueProperty;
-
-.field public static final SCALE_X:Lmiuix/animation/property/ValueProperty;
-
-.field public static final SCALE_Y:Lmiuix/animation/property/ValueProperty;
-
-.field public static final TRANSLATION_X:Lmiuix/animation/property/ValueProperty;
-
-.field public static final TRANSLATION_Y:Lmiuix/animation/property/ValueProperty;
-
-.field public static final TRANSLATION_Z:Lmiuix/animation/property/ValueProperty;
-
-.field public static final WIDTH:Lmiuix/animation/property/ValueProperty;
-
-.field public static final X:Lmiuix/animation/property/ValueProperty;
-
-.field public static final Y:Lmiuix/animation/property/ValueProperty;
-
-.field public static final Z:Lmiuix/animation/property/ValueProperty;
-
-
 # instance fields
 .field private volatile mName:Ljava/lang/String;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Lmiuix/animation/property/ValueProperty;
-
-    const-string v1, "fraction"
-
-    const v2, 0x3b03126f    # 0.002f
-
-    invoke-direct {v0, v1, v2}, Lmiuix/animation/property/ValueProperty;-><init>(Ljava/lang/String;F)V
-
-    sput-object v0, Lmiuix/animation/property/ValueProperty;->FRACTION:Lmiuix/animation/property/ValueProperty;
-
-    new-instance v0, Lmiuix/animation/property/ValueProperty;
-
-    const-string v1, "translationX"
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    invoke-direct {v0, v1, v2}, Lmiuix/animation/property/ValueProperty;-><init>(Ljava/lang/String;F)V
-
-    sput-object v0, Lmiuix/animation/property/ValueProperty;->TRANSLATION_X:Lmiuix/animation/property/ValueProperty;
-
-    new-instance v0, Lmiuix/animation/property/ValueProperty;
-
-    const-string v1, "translationY"
-
-    invoke-direct {v0, v1, v2}, Lmiuix/animation/property/ValueProperty;-><init>(Ljava/lang/String;F)V
-
-    sput-object v0, Lmiuix/animation/property/ValueProperty;->TRANSLATION_Y:Lmiuix/animation/property/ValueProperty;
-
-    new-instance v0, Lmiuix/animation/property/ValueProperty;
-
-    const-string v1, "translationZ"
-
-    invoke-direct {v0, v1, v2}, Lmiuix/animation/property/ValueProperty;-><init>(Ljava/lang/String;F)V
-
-    sput-object v0, Lmiuix/animation/property/ValueProperty;->TRANSLATION_Z:Lmiuix/animation/property/ValueProperty;
-
-    new-instance v0, Lmiuix/animation/property/ValueProperty;
-
-    const-string v1, "scale"
-
-    const v3, 0x3b83126f    # 0.004f
-
-    invoke-direct {v0, v1, v3}, Lmiuix/animation/property/ValueProperty;-><init>(Ljava/lang/String;F)V
-
-    sput-object v0, Lmiuix/animation/property/ValueProperty;->SCALE:Lmiuix/animation/property/ValueProperty;
-
-    new-instance v0, Lmiuix/animation/property/ValueProperty;
-
-    const-string v1, "scaleX"
-
-    invoke-direct {v0, v1, v3}, Lmiuix/animation/property/ValueProperty;-><init>(Ljava/lang/String;F)V
-
-    sput-object v0, Lmiuix/animation/property/ValueProperty;->SCALE_X:Lmiuix/animation/property/ValueProperty;
-
-    new-instance v0, Lmiuix/animation/property/ValueProperty;
-
-    const-string v1, "scaleY"
-
-    invoke-direct {v0, v1, v3}, Lmiuix/animation/property/ValueProperty;-><init>(Ljava/lang/String;F)V
-
-    sput-object v0, Lmiuix/animation/property/ValueProperty;->SCALE_Y:Lmiuix/animation/property/ValueProperty;
-
-    new-instance v0, Lmiuix/animation/property/ValueProperty;
-
-    const-string v1, "rotation"
-
-    const v3, 0x3dcccccd    # 0.1f
-
-    invoke-direct {v0, v1, v3}, Lmiuix/animation/property/ValueProperty;-><init>(Ljava/lang/String;F)V
-
-    sput-object v0, Lmiuix/animation/property/ValueProperty;->ROTATION:Lmiuix/animation/property/ValueProperty;
-
-    new-instance v0, Lmiuix/animation/property/ValueProperty;
-
-    const-string v1, "rotationX"
-
-    invoke-direct {v0, v1, v3}, Lmiuix/animation/property/ValueProperty;-><init>(Ljava/lang/String;F)V
-
-    sput-object v0, Lmiuix/animation/property/ValueProperty;->ROTATION_X:Lmiuix/animation/property/ValueProperty;
-
-    new-instance v0, Lmiuix/animation/property/ValueProperty;
-
-    const-string v1, "rotationY"
-
-    invoke-direct {v0, v1, v3}, Lmiuix/animation/property/ValueProperty;-><init>(Ljava/lang/String;F)V
-
-    sput-object v0, Lmiuix/animation/property/ValueProperty;->ROTATION_Y:Lmiuix/animation/property/ValueProperty;
-
-    new-instance v0, Lmiuix/animation/property/ValueProperty;
-
-    const-string v1, "x"
-
-    invoke-direct {v0, v1, v2}, Lmiuix/animation/property/ValueProperty;-><init>(Ljava/lang/String;F)V
-
-    sput-object v0, Lmiuix/animation/property/ValueProperty;->X:Lmiuix/animation/property/ValueProperty;
-
-    new-instance v0, Lmiuix/animation/property/ValueProperty;
-
-    const-string v1, "y"
-
-    invoke-direct {v0, v1, v2}, Lmiuix/animation/property/ValueProperty;-><init>(Ljava/lang/String;F)V
-
-    sput-object v0, Lmiuix/animation/property/ValueProperty;->Y:Lmiuix/animation/property/ValueProperty;
-
-    new-instance v0, Lmiuix/animation/property/ValueProperty;
-
-    const-string v1, "z"
-
-    invoke-direct {v0, v1, v2}, Lmiuix/animation/property/ValueProperty;-><init>(Ljava/lang/String;F)V
-
-    sput-object v0, Lmiuix/animation/property/ValueProperty;->Z:Lmiuix/animation/property/ValueProperty;
-
-    new-instance v0, Lmiuix/animation/property/ValueProperty;
-
-    const-string v1, "height"
-
-    invoke-direct {v0, v1, v2}, Lmiuix/animation/property/ValueProperty;-><init>(Ljava/lang/String;F)V
-
-    sput-object v0, Lmiuix/animation/property/ValueProperty;->HEIGHT:Lmiuix/animation/property/ValueProperty;
-
-    new-instance v0, Lmiuix/animation/property/ValueProperty;
-
-    const-string v1, "width"
-
-    invoke-direct {v0, v1, v2}, Lmiuix/animation/property/ValueProperty;-><init>(Ljava/lang/String;F)V
-
-    sput-object v0, Lmiuix/animation/property/ValueProperty;->WIDTH:Lmiuix/animation/property/ValueProperty;
-
-    new-instance v0, Lmiuix/animation/property/ValueProperty$1;
-
-    const-string v1, "alpha"
-
-    const/high16 v3, 0x3b800000    # 0.00390625f
-
-    invoke-direct {v0, v1, v3}, Lmiuix/animation/property/ValueProperty$1;-><init>(Ljava/lang/String;F)V
-
-    sput-object v0, Lmiuix/animation/property/ValueProperty;->ALPHA:Lmiuix/animation/property/ValueProperty;
-
-    new-instance v0, Lmiuix/animation/property/ValueProperty$2;
-
-    const-string v1, "alphaInt"
-
-    invoke-direct {v0, v1, v2}, Lmiuix/animation/property/ValueProperty$2;-><init>(Ljava/lang/String;F)V
-
-    sput-object v0, Lmiuix/animation/property/ValueProperty;->ALPHA_INT:Lmiuix/animation/property/ValueProperty;
-
-    new-instance v0, Lmiuix/animation/property/ColorProperty;
-
-    const-string v1, "colorInt"
-
-    invoke-direct {v0, v1}, Lmiuix/animation/property/ColorProperty;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lmiuix/animation/property/ValueProperty;->COLOR_INT:Lmiuix/animation/property/ColorProperty;
-
-    return-void
-.end method
-
 .method public constructor <init>(Ljava/lang/String;)V
-    .locals 1
-
-    const/high16 v0, -0x40800000    # -1.0f
-
-    .line 1
-    invoke-direct {p0, p1, v0}, Lmiuix/animation/property/ValueProperty;-><init>(Ljava/lang/String;F)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;F)V
     .locals 0
 
-    .line 2
-    invoke-direct {p0, p1, p2}, Lmiuix/animation/property/FloatProperty;-><init>(Ljava/lang/String;F)V
+    .line 1
+    invoke-direct {p0, p1}, Lmiuix/animation/property/FloatProperty;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -252,13 +31,14 @@
     :cond_0
     if-eqz p1, :cond_2
 
+    .line 1
+    const-class v0, Lmiuix/animation/property/ValueProperty;
+
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v0
+    move-result-object v1
 
-    const-class v1, Lmiuix/animation/property/ValueProperty;
-
-    invoke-virtual {v1, v0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
     move-result v0
 
@@ -266,9 +46,11 @@
 
     goto :goto_0
 
+    .line 2
     :cond_1
     check-cast p1, Lmiuix/animation/property/ValueProperty;
 
+    .line 3
     invoke-virtual {p0}, Lmiuix/animation/property/ValueProperty;->getName()Ljava/lang/String;
 
     move-result-object p0
@@ -293,6 +75,7 @@
 .method public getName()Ljava/lang/String;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/property/ValueProperty;->mName:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -312,16 +95,13 @@
 
 .method public getValue(Ljava/lang/Object;)F
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;)F"
-        }
-    .end annotation
 
+    .line 1
     instance-of v0, p1, Lmiuix/animation/property/ValueTargetObject;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lmiuix/animation/property/ValueTargetObject;
 
     invoke-virtual {p0}, Lmiuix/animation/property/ValueProperty;->getName()Ljava/lang/String;
@@ -338,6 +118,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {p0}, Ljava/lang/Float;->floatValue()F
 
     move-result p0
@@ -345,7 +126,7 @@
     return p0
 
     :cond_0
-    const p0, 0x7f7fffff    # Float.MAX_VALUE
+    const/4 p0, 0x0
 
     return p0
 .end method
@@ -357,11 +138,12 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    const/4 v1, 0x0
-
+    .line 1
     invoke-virtual {p0}, Lmiuix/animation/property/ValueProperty;->getName()Ljava/lang/String;
 
     move-result-object p0
+
+    const/4 v1, 0x0
 
     aput-object p0, v0, v1
 
@@ -375,6 +157,7 @@
 .method public setName(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/animation/property/ValueProperty;->mName:Ljava/lang/String;
 
     return-void
@@ -382,16 +165,13 @@
 
 .method public setValue(Ljava/lang/Object;F)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;F)V"
-        }
-    .end annotation
 
+    .line 1
     instance-of v0, p1, Lmiuix/animation/property/ValueTargetObject;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lmiuix/animation/property/ValueTargetObject;
 
     invoke-virtual {p0}, Lmiuix/animation/property/ValueProperty;->getName()Ljava/lang/String;
@@ -411,45 +191,23 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "ValueProperty@"
+    const-string v1, "ValueProperty{name="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Lmiuix/animation/property/ValueProperty;->hashCode()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, "{name=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
+    .line 2
     invoke-virtual {p0}, Lmiuix/animation/property/ValueProperty;->getName()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x27
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    const-string v2, ",min=\'"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget p0, p0, Lmiuix/animation/property/FloatProperty;->mMinVisibleChange:F
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const/16 p0, 0x7d
 

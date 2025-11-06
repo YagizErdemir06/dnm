@@ -1,4 +1,4 @@
-.class abstract Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbf;
+.class public abstract Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -24,18 +24,21 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Ljava/util/Map$Entry;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Ljava/util/Map$Entry;
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbf;->getKey()Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 3
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -46,6 +49,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbf;->getValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -77,6 +81,7 @@
 .method public final hashCode()I
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbf;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -93,6 +98,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
@@ -117,6 +123,7 @@
 .method public setValue(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -127,6 +134,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbf;->getKey()Ljava/lang/Object;
 
     move-result-object v0

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/rtsp/TransferRtpDataChannelFactory;
+.class public final Lcom/google/android/exoplayer2/source/rtsp/TransferRtpDataChannelFactory;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,8 +18,10 @@
 .method public constructor <init>(J)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/rtsp/TransferRtpDataChannelFactory;->timeoutMs:J
 
     return-void
@@ -30,6 +32,7 @@
 .method public createAndOpenDataChannel(I)Lcom/google/android/exoplayer2/source/rtsp/RtpDataChannel;
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/source/rtsp/TransferRtpDataChannel;
 
     iget-wide v1, p0, Lcom/google/android/exoplayer2/source/rtsp/TransferRtpDataChannelFactory;->timeoutMs:J
@@ -38,6 +41,7 @@
 
     mul-int/lit8 p1, p1, 0x2
 
+    .line 2
     invoke-static {p1}, Lcom/google/android/exoplayer2/source/rtsp/RtpUtils;->getIncomingRtpDataSpec(I)Lcom/google/android/exoplayer2/upstream/DataSpec;
 
     move-result-object p0

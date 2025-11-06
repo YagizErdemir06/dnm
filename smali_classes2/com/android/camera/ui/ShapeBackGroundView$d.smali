@@ -36,7 +36,28 @@
 # direct methods
 .method public constructor <init>(Lcom/android/camera/ui/ShapeBackGroundView;IIIIII)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010,
+            0x1010,
+            0x1010,
+            0x1010,
+            0x1010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$oldHeight",
+            "val$newHeight",
+            "val$oldRadius",
+            "val$newRadius",
+            "val$newAlpha",
+            "val$oldAlpha"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/ui/ShapeBackGroundView$d;->g:Lcom/android/camera/ui/ShapeBackGroundView;
 
     iput p2, p0, Lcom/android/camera/ui/ShapeBackGroundView$d;->a:I
@@ -60,7 +81,16 @@
 # virtual methods
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -71,6 +101,7 @@
 
     move-result p1
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera/ui/ShapeBackGroundView$d;->g:Lcom/android/camera/ui/ShapeBackGroundView;
 
     iget v1, p0, Lcom/android/camera/ui/ShapeBackGroundView$d;->a:I
@@ -91,6 +122,7 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/ui/ShapeBackGroundView;->d(Lcom/android/camera/ui/ShapeBackGroundView;I)I
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera/ui/ShapeBackGroundView$d;->g:Lcom/android/camera/ui/ShapeBackGroundView;
 
     iget v1, p0, Lcom/android/camera/ui/ShapeBackGroundView$d;->c:I
@@ -111,12 +143,14 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/ui/ShapeBackGroundView;->e(Lcom/android/camera/ui/ShapeBackGroundView;I)I
 
+    .line 4
     iget v0, p0, Lcom/android/camera/ui/ShapeBackGroundView$d;->e:I
 
     const/16 v1, 0xff
 
     if-ne v0, v1, :cond_0
 
+    .line 5
     iget-object p1, p0, Lcom/android/camera/ui/ShapeBackGroundView$d;->g:Lcom/android/camera/ui/ShapeBackGroundView;
 
     invoke-static {p1}, Lcom/android/camera/ui/ShapeBackGroundView;->c(Lcom/android/camera/ui/ShapeBackGroundView;)I
@@ -127,6 +161,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     iget-object v1, p0, Lcom/android/camera/ui/ShapeBackGroundView$d;->g:Lcom/android/camera/ui/ShapeBackGroundView;
 
@@ -146,9 +181,10 @@
 
     invoke-static {v1, p1}, Lcom/android/camera/ui/ShapeBackGroundView;->h(Lcom/android/camera/ui/ShapeBackGroundView;I)I
 
+    .line 7
     iget-object p1, p0, Lcom/android/camera/ui/ShapeBackGroundView$d;->g:Lcom/android/camera/ui/ShapeBackGroundView;
 
-    iget-object v0, p1, Lcom/android/camera/ui/ShapeBackGroundView;->e:Landroid/graphics/Paint;
+    iget-object v0, p1, Lcom/android/camera/ui/ShapeBackGroundView;->p:Landroid/graphics/Paint;
 
     invoke-static {p1}, Lcom/android/camera/ui/ShapeBackGroundView;->g(Lcom/android/camera/ui/ShapeBackGroundView;)I
 
@@ -156,16 +192,18 @@
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
 
+    .line 8
     iget-object p1, p0, Lcom/android/camera/ui/ShapeBackGroundView$d;->g:Lcom/android/camera/ui/ShapeBackGroundView;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/android/camera/ui/ShapeBackGroundView;->f(Lcom/android/camera/ui/ShapeBackGroundView;I)I
 
+    .line 9
     :goto_0
     iget-object p0, p0, Lcom/android/camera/ui/ShapeBackGroundView$d;->g:Lcom/android/camera/ui/ShapeBackGroundView;
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     return-void
 .end method

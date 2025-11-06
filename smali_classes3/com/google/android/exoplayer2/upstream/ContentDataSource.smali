@@ -40,8 +40,10 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/upstream/BaseDataSource;-><init>(Z)V
 
+    .line 2
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
@@ -63,44 +65,54 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Lcom/google/android/exoplayer2/upstream/ContentDataSource;->uri:Landroid/net/Uri;
 
     const/16 v1, 0x7d0
 
     const/4 v2, 0x0
 
+    .line 2
     :try_start_0
     iget-object v3, p0, Lcom/google/android/exoplayer2/upstream/ContentDataSource;->inputStream:Ljava/io/FileInputStream;
 
     if-eqz v3, :cond_0
 
+    .line 3
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
+    .line 4
     :cond_0
     iput-object v0, p0, Lcom/google/android/exoplayer2/upstream/ContentDataSource;->inputStream:Ljava/io/FileInputStream;
 
+    .line 5
     :try_start_1
     iget-object v3, p0, Lcom/google/android/exoplayer2/upstream/ContentDataSource;->assetFileDescriptor:Landroid/content/res/AssetFileDescriptor;
 
     if-eqz v3, :cond_1
 
+    .line 6
     invoke-virtual {v3}, Landroid/content/res/AssetFileDescriptor;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 7
     :cond_1
     iput-object v0, p0, Lcom/google/android/exoplayer2/upstream/ContentDataSource;->assetFileDescriptor:Landroid/content/res/AssetFileDescriptor;
 
+    .line 8
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/upstream/ContentDataSource;->opened:Z
 
     if-eqz v0, :cond_2
 
+    .line 9
     iput-boolean v2, p0, Lcom/google/android/exoplayer2/upstream/ContentDataSource;->opened:Z
 
+    .line 10
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/upstream/BaseDataSource;->transferEnded()V
 
     :cond_2
@@ -114,6 +126,7 @@
     :catch_0
     move-exception v3
 
+    .line 11
     :try_start_2
     new-instance v4, Lcom/google/android/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;
 
@@ -123,17 +136,22 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 12
     :goto_0
     iput-object v0, p0, Lcom/google/android/exoplayer2/upstream/ContentDataSource;->assetFileDescriptor:Landroid/content/res/AssetFileDescriptor;
 
+    .line 13
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/upstream/ContentDataSource;->opened:Z
 
     if-eqz v0, :cond_3
 
+    .line 14
     iput-boolean v2, p0, Lcom/google/android/exoplayer2/upstream/ContentDataSource;->opened:Z
 
+    .line 15
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/upstream/BaseDataSource;->transferEnded()V
 
+    .line 16
     :cond_3
     throw v1
 
@@ -145,6 +163,7 @@
     :catch_1
     move-exception v3
 
+    .line 17
     :try_start_3
     new-instance v4, Lcom/google/android/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;
 
@@ -154,30 +173,38 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
+    .line 18
     :goto_1
     iput-object v0, p0, Lcom/google/android/exoplayer2/upstream/ContentDataSource;->inputStream:Ljava/io/FileInputStream;
 
+    .line 19
     :try_start_4
     iget-object v4, p0, Lcom/google/android/exoplayer2/upstream/ContentDataSource;->assetFileDescriptor:Landroid/content/res/AssetFileDescriptor;
 
     if-eqz v4, :cond_4
 
+    .line 20
     invoke-virtual {v4}, Landroid/content/res/AssetFileDescriptor;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
+    .line 21
     :cond_4
     iput-object v0, p0, Lcom/google/android/exoplayer2/upstream/ContentDataSource;->assetFileDescriptor:Landroid/content/res/AssetFileDescriptor;
 
+    .line 22
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/upstream/ContentDataSource;->opened:Z
 
     if-eqz v0, :cond_5
 
+    .line 23
     iput-boolean v2, p0, Lcom/google/android/exoplayer2/upstream/ContentDataSource;->opened:Z
 
+    .line 24
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/upstream/BaseDataSource;->transferEnded()V
 
+    .line 25
     :cond_5
     throw v3
 
@@ -189,6 +216,7 @@
     :catch_2
     move-exception v3
 
+    .line 26
     :try_start_5
     new-instance v4, Lcom/google/android/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;
 
@@ -198,17 +226,22 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
+    .line 27
     :goto_2
     iput-object v0, p0, Lcom/google/android/exoplayer2/upstream/ContentDataSource;->assetFileDescriptor:Landroid/content/res/AssetFileDescriptor;
 
+    .line 28
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/upstream/ContentDataSource;->opened:Z
 
     if-eqz v0, :cond_6
 
+    .line 29
     iput-boolean v2, p0, Lcom/google/android/exoplayer2/upstream/ContentDataSource;->opened:Z
 
+    .line 30
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/upstream/BaseDataSource;->transferEnded()V
 
+    .line 31
     :cond_6
     throw v1
 .end method
@@ -218,6 +251,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/upstream/ContentDataSource;->uri:Landroid/net/Uri;
 
     return-object p0
@@ -237,15 +271,19 @@
 
     const/16 v2, 0x7d0
 
+    .line 1
     :try_start_0
     iget-object v3, v1, Lcom/google/android/exoplayer2/upstream/DataSpec;->uri:Landroid/net/Uri;
 
+    .line 2
     iput-object v3, v0, Lcom/google/android/exoplayer2/upstream/ContentDataSource;->uri:Landroid/net/Uri;
 
+    .line 3
     invoke-virtual/range {p0 .. p1}, Lcom/google/android/exoplayer2/upstream/BaseDataSource;->transferInitializing(Lcom/google/android/exoplayer2/upstream/DataSpec;)V
 
     const-string v4, "content"
 
+    .line 4
     iget-object v5, v1, Lcom/google/android/exoplayer2/upstream/DataSpec;->uri:Landroid/net/Uri;
 
     invoke-virtual {v5}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
@@ -260,24 +298,29 @@
 
     if-eqz v4, :cond_0
 
+    .line 5
     new-instance v4, Landroid/os/Bundle;
 
     invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
 
     const-string v6, "android.provider.extra.ACCEPT_ORIGINAL_MEDIA_FORMAT"
 
+    .line 6
     invoke-virtual {v4, v6, v5}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
+    .line 7
     iget-object v6, v0, Lcom/google/android/exoplayer2/upstream/ContentDataSource;->resolver:Landroid/content/ContentResolver;
 
     const-string v7, "*/*"
 
+    .line 8
     invoke-virtual {v6, v3, v7, v4}, Landroid/content/ContentResolver;->openTypedAssetFileDescriptor(Landroid/net/Uri;Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/res/AssetFileDescriptor;
 
     move-result-object v4
 
     goto :goto_0
 
+    .line 9
     :cond_0
     iget-object v4, v0, Lcom/google/android/exoplayer2/upstream/ContentDataSource;->resolver:Landroid/content/ContentResolver;
 
@@ -287,15 +330,18 @@
 
     move-result-object v4
 
+    .line 10
     :goto_0
     iput-object v4, v0, Lcom/google/android/exoplayer2/upstream/ContentDataSource;->assetFileDescriptor:Landroid/content/res/AssetFileDescriptor;
 
     if-eqz v4, :cond_b
 
+    .line 11
     invoke-virtual {v4}, Landroid/content/res/AssetFileDescriptor;->getLength()J
 
     move-result-wide v6
 
+    .line 12
     new-instance v3, Ljava/io/FileInputStream;
 
     invoke-virtual {v4}, Landroid/content/res/AssetFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
@@ -304,6 +350,7 @@
 
     invoke-direct {v3, v8}, Ljava/io/FileInputStream;-><init>(Ljava/io/FileDescriptor;)V
 
+    .line 13
     iput-object v3, v0, Lcom/google/android/exoplayer2/upstream/ContentDataSource;->inputStream:Ljava/io/FileInputStream;
 
     const-wide/16 v8, -0x1
@@ -316,6 +363,7 @@
 
     if-eqz v10, :cond_2
 
+    .line 14
     iget-wide v13, v1, Lcom/google/android/exoplayer2/upstream/DataSpec;->position:J
 
     cmp-long v13, v13, v6
@@ -324,6 +372,7 @@
 
     goto :goto_1
 
+    .line 15
     :cond_1
     new-instance v0, Lcom/google/android/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;
 
@@ -331,6 +380,7 @@
 
     throw v0
 
+    .line 16
     :cond_2
     :goto_1
     invoke-virtual {v4}, Landroid/content/res/AssetFileDescriptor;->getStartOffset()J
@@ -339,16 +389,19 @@
 
     move-wide v15, v6
 
+    .line 17
     iget-wide v5, v1, Lcom/google/android/exoplayer2/upstream/DataSpec;->position:J
 
     add-long/2addr v5, v13
 
+    .line 18
     invoke-virtual {v3, v5, v6}, Ljava/io/FileInputStream;->skip(J)J
 
     move-result-wide v5
 
     sub-long/2addr v5, v13
 
+    .line 19
     iget-wide v13, v1, Lcom/google/android/exoplayer2/upstream/DataSpec;->position:J
 
     cmp-long v7, v5, v13
@@ -359,10 +412,12 @@
 
     if-nez v10, :cond_5
 
+    .line 20
     invoke-virtual {v3}, Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
 
     move-result-object v3
 
+    .line 21
     invoke-virtual {v3}, Ljava/nio/channels/FileChannel;->size()J
 
     move-result-wide v5
@@ -371,10 +426,12 @@
 
     if-nez v7, :cond_3
 
+    .line 22
     iput-wide v8, v0, Lcom/google/android/exoplayer2/upstream/ContentDataSource;->bytesRemaining:J
 
     goto :goto_2
 
+    .line 23
     :cond_3
     invoke-virtual {v3}, Ljava/nio/channels/FileChannel;->position()J
 
@@ -390,6 +447,7 @@
 
     goto :goto_2
 
+    .line 24
     :cond_4
     new-instance v0, Lcom/google/android/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;
 
@@ -400,6 +458,7 @@
     :cond_5
     sub-long v6, v15, v5
 
+    .line 25
     iput-wide v6, v0, Lcom/google/android/exoplayer2/upstream/ContentDataSource;->bytesRemaining:J
     :try_end_0
     .catch Lcom/google/android/exoplayer2/upstream/ContentDataSource$ContentDataSourceException; {:try_start_0 .. :try_end_0} :catch_1
@@ -409,6 +468,7 @@
 
     if-ltz v3, :cond_9
 
+    .line 26
     :goto_2
     iget-wide v2, v1, Lcom/google/android/exoplayer2/upstream/DataSpec;->length:J
 
@@ -416,6 +476,7 @@
 
     if-eqz v5, :cond_7
 
+    .line 27
     iget-wide v5, v0, Lcom/google/android/exoplayer2/upstream/ContentDataSource;->bytesRemaining:J
 
     cmp-long v7, v5, v8
@@ -435,10 +496,13 @@
     :cond_7
     const/4 v2, 0x1
 
+    .line 28
     iput-boolean v2, v0, Lcom/google/android/exoplayer2/upstream/ContentDataSource;->opened:Z
 
+    .line 29
     invoke-virtual/range {p0 .. p1}, Lcom/google/android/exoplayer2/upstream/BaseDataSource;->transferStarted(Lcom/google/android/exoplayer2/upstream/DataSpec;)V
 
+    .line 30
     iget-wide v1, v1, Lcom/google/android/exoplayer2/upstream/DataSpec;->length:J
 
     cmp-long v3, v1, v8
@@ -453,6 +517,7 @@
     :goto_4
     return-wide v1
 
+    .line 31
     :cond_9
     :try_start_1
     new-instance v0, Lcom/google/android/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;
@@ -461,6 +526,7 @@
 
     throw v0
 
+    .line 32
     :cond_a
     new-instance v0, Lcom/google/android/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;
 
@@ -468,6 +534,7 @@
 
     throw v0
 
+    .line 33
     :cond_b
     new-instance v0, Lcom/google/android/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;
 
@@ -499,14 +566,17 @@
     :catch_0
     move-exception v0
 
+    .line 34
     new-instance v1, Lcom/google/android/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;
 
+    .line 35
     instance-of v3, v0, Ljava/io/FileNotFoundException;
 
     if-eqz v3, :cond_c
 
     const/16 v2, 0x7d5
 
+    .line 36
     :cond_c
     invoke-direct {v1, v0, v2}, Lcom/google/android/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;-><init>(Ljava/io/IOException;I)V
 
@@ -515,6 +585,7 @@
     :catch_1
     move-exception v0
 
+    .line 37
     throw v0
 .end method
 
@@ -532,6 +603,7 @@
 
     return p0
 
+    .line 1
     :cond_0
     iget-wide v0, p0, Lcom/google/android/exoplayer2/upstream/ContentDataSource;->bytesRemaining:J
 
@@ -557,6 +629,7 @@
     :cond_2
     int-to-long v6, p3
 
+    .line 2
     :try_start_0
     invoke-static {v0, v1, v6, v7}, Ljava/lang/Math;->min(JJ)J
 
@@ -564,6 +637,7 @@
 
     long-to-int p3, v0
 
+    .line 3
     :goto_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/upstream/ContentDataSource;->inputStream:Ljava/io/FileInputStream;
 
@@ -583,6 +657,7 @@
 
     return v3
 
+    .line 4
     :cond_3
     iget-wide p2, p0, Lcom/google/android/exoplayer2/upstream/ContentDataSource;->bytesRemaining:J
 
@@ -594,8 +669,10 @@
 
     sub-long/2addr p2, v0
 
+    .line 5
     iput-wide p2, p0, Lcom/google/android/exoplayer2/upstream/ContentDataSource;->bytesRemaining:J
 
+    .line 6
     :cond_4
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/upstream/BaseDataSource;->bytesTransferred(I)V
 
@@ -604,6 +681,7 @@
     :catch_0
     move-exception p0
 
+    .line 7
     new-instance p1, Lcom/google/android/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;
 
     const/16 p2, 0x7d0

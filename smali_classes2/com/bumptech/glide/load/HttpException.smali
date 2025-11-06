@@ -80,6 +80,7 @@
 .method public getStatusCode()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/bumptech/glide/load/HttpException;->statusCode:I
 
     return p0

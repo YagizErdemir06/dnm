@@ -22,6 +22,7 @@
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Lcom/android/camera/ui/GradienterDrawer$b;->values()[Lcom/android/camera/ui/GradienterDrawer$b;
 
     move-result-object v0
@@ -33,7 +34,7 @@
     sput-object v0, Lcom/android/camera/ui/GradienterDrawer$a;->a:[I
 
     :try_start_0
-    sget-object v1, Lcom/android/camera/ui/GradienterDrawer$b;->b:Lcom/android/camera/ui/GradienterDrawer$b;
+    sget-object v1, Lcom/android/camera/ui/GradienterDrawer$b;->d:Lcom/android/camera/ui/GradienterDrawer$b;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -49,7 +50,7 @@
     :try_start_1
     sget-object v0, Lcom/android/camera/ui/GradienterDrawer$a;->a:[I
 
-    sget-object v1, Lcom/android/camera/ui/GradienterDrawer$b;->c:Lcom/android/camera/ui/GradienterDrawer$b;
+    sget-object v1, Lcom/android/camera/ui/GradienterDrawer$b;->f:Lcom/android/camera/ui/GradienterDrawer$b;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -65,7 +66,7 @@
     :try_start_2
     sget-object v0, Lcom/android/camera/ui/GradienterDrawer$a;->a:[I
 
-    sget-object v1, Lcom/android/camera/ui/GradienterDrawer$b;->e:Lcom/android/camera/ui/GradienterDrawer$b;
+    sget-object v1, Lcom/android/camera/ui/GradienterDrawer$b;->j:Lcom/android/camera/ui/GradienterDrawer$b;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -81,7 +82,7 @@
     :try_start_3
     sget-object v0, Lcom/android/camera/ui/GradienterDrawer$a;->a:[I
 
-    sget-object v1, Lcom/android/camera/ui/GradienterDrawer$b;->d:Lcom/android/camera/ui/GradienterDrawer$b;
+    sget-object v1, Lcom/android/camera/ui/GradienterDrawer$b;->g:Lcom/android/camera/ui/GradienterDrawer$b;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 

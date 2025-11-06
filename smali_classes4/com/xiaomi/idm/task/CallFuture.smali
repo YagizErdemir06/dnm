@@ -36,10 +36,12 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/task/TaskFuture;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Lcom/xiaomi/idm/task/CallFuture;->mCallBck:Lcom/xiaomi/idm/task/CallFuture$Callback;
 
     return-void
@@ -59,6 +61,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/xiaomi/idm/task/CallFuture;
 
     invoke-direct {v0}, Lcom/xiaomi/idm/task/CallFuture;-><init>()V
@@ -82,6 +85,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/xiaomi/idm/task/CallFuture;
 
     invoke-direct {v0}, Lcom/xiaomi/idm/task/CallFuture;-><init>()V
@@ -105,14 +109,17 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/task/CallFuture;->mCallBck:Lcom/xiaomi/idm/task/CallFuture$Callback;
 
+    .line 2
     invoke-super {p0}, Lcom/xiaomi/idm/task/TaskFuture;->isDone()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
+    .line 3
     :try_start_0
     invoke-super {p0}, Lcom/xiaomi/idm/task/TaskFuture;->get()Ljava/lang/Object;
 
@@ -128,6 +135,7 @@
     :catch_0
     move-exception p1
 
+    .line 4
     invoke-static {p1}, Lcom/xiaomi/idm/exception/IDMException;->asIDMException(Ljava/lang/Exception;)Lcom/xiaomi/idm/exception/IDMException;
 
     move-result-object p1
@@ -149,19 +157,23 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/task/CallFuture;->mCallBck:Lcom/xiaomi/idm/task/CallFuture$Callback;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {v0, p0, p1}, Lcom/xiaomi/idm/task/CallFuture$Callback;->onResponse(Lcom/xiaomi/idm/task/CallFuture;Ljava/lang/Object;)V
 
     :cond_0
     const/4 v0, 0x0
 
+    .line 3
     invoke-super {p0, p1, v0}, Lcom/xiaomi/idm/task/TaskFuture;->obtrudeValue(Ljava/lang/Object;Z)V
 
     const/4 p1, 0x0
 
+    .line 4
     iput-object p1, p0, Lcom/xiaomi/idm/task/CallFuture;->mCallBck:Lcom/xiaomi/idm/task/CallFuture$Callback;
 
     return-object p0
@@ -179,19 +191,23 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/task/CallFuture;->mCallBck:Lcom/xiaomi/idm/task/CallFuture$Callback;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {v0, p0, p1}, Lcom/xiaomi/idm/task/CallFuture$Callback;->onFailed(Lcom/xiaomi/idm/task/CallFuture;Ljava/lang/Throwable;)V
 
     :cond_0
     const/4 v0, 0x0
 
+    .line 3
     invoke-super {p0, p1, v0}, Lcom/xiaomi/idm/task/TaskFuture;->obtrudeException(Ljava/lang/Throwable;Z)V
 
     const/4 p1, 0x0
 
+    .line 4
     iput-object p1, p0, Lcom/xiaomi/idm/task/CallFuture;->mCallBck:Lcom/xiaomi/idm/task/CallFuture$Callback;
 
     return-object p0

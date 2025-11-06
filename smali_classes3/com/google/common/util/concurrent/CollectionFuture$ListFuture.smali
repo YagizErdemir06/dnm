@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/CollectionFuture$ListFuture;
+.class public final Lcom/google/common/util/concurrent/CollectionFuture$ListFuture;
 .super Lcom/google/common/util/concurrent/CollectionFuture;
 .source "SourceFile"
 
@@ -39,8 +39,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/common/util/concurrent/CollectionFuture;-><init>(Lcom/google/common/collect/ImmutableCollection;Z)V
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/AggregateFuture;->init()V
 
     return-void

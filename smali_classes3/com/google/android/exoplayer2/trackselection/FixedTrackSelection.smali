@@ -87,6 +87,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/trackselection/FixedTrackSelection;->data:Ljava/lang/Object;
 
     return-object p0
@@ -95,6 +96,7 @@
 .method public getSelectionReason()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/trackselection/FixedTrackSelection;->reason:I
 
     return p0

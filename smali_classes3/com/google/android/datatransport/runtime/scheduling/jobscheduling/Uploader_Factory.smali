@@ -18,90 +18,90 @@
 
 
 # instance fields
-.field private final backendRegistryProvider:Lmm/c;
+.field private final backendRegistryProvider:Lg/a/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/backends/BackendRegistry;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final clientHealthMetricsStoreProvider:Lmm/c;
+.field private final clientHealthMetricsStoreProvider:Lg/a/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/scheduling/persistence/ClientHealthMetricsStore;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final clockProvider:Lmm/c;
+.field private final clockProvider:Lg/a/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/time/Clock;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final contextProvider:Lmm/c;
+.field private final contextProvider:Lg/a/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lmm/c<",
+            "Lg/a/c<",
             "Landroid/content/Context;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final eventStoreProvider:Lmm/c;
+.field private final eventStoreProvider:Lg/a/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final executorProvider:Lmm/c;
+.field private final executorProvider:Lg/a/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lmm/c<",
+            "Lg/a/c<",
             "Ljava/util/concurrent/Executor;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final guardProvider:Lmm/c;
+.field private final guardProvider:Lg/a/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/synchronization/SynchronizationGuard;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final uptimeClockProvider:Lmm/c;
+.field private final uptimeClockProvider:Lg/a/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/time/Clock;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final workSchedulerProvider:Lmm/c;
+.field private final workSchedulerProvider:Lg/a/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkScheduler;",
             ">;"
         }
@@ -110,100 +110,111 @@
 
 
 # direct methods
-.method public constructor <init>(Lmm/c;Lmm/c;Lmm/c;Lmm/c;Lmm/c;Lmm/c;Lmm/c;Lmm/c;Lmm/c;)V
+.method public constructor <init>(Lg/a/c;Lg/a/c;Lg/a/c;Lg/a/c;Lg/a/c;Lg/a/c;Lg/a/c;Lg/a/c;Lg/a/c;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Landroid/content/Context;",
             ">;",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/backends/BackendRegistry;",
             ">;",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;",
             ">;",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkScheduler;",
             ">;",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Ljava/util/concurrent/Executor;",
             ">;",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/synchronization/SynchronizationGuard;",
             ">;",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/time/Clock;",
             ">;",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/time/Clock;",
             ">;",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/scheduling/persistence/ClientHealthMetricsStore;",
             ">;)V"
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->contextProvider:Lmm/c;
+    .line 2
+    iput-object p1, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->contextProvider:Lg/a/c;
 
-    iput-object p2, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->backendRegistryProvider:Lmm/c;
+    .line 3
+    iput-object p2, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->backendRegistryProvider:Lg/a/c;
 
-    iput-object p3, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->eventStoreProvider:Lmm/c;
+    .line 4
+    iput-object p3, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->eventStoreProvider:Lg/a/c;
 
-    iput-object p4, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->workSchedulerProvider:Lmm/c;
+    .line 5
+    iput-object p4, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->workSchedulerProvider:Lg/a/c;
 
-    iput-object p5, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->executorProvider:Lmm/c;
+    .line 6
+    iput-object p5, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->executorProvider:Lg/a/c;
 
-    iput-object p6, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->guardProvider:Lmm/c;
+    .line 7
+    iput-object p6, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->guardProvider:Lg/a/c;
 
-    iput-object p7, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->clockProvider:Lmm/c;
+    .line 8
+    iput-object p7, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->clockProvider:Lg/a/c;
 
-    iput-object p8, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->uptimeClockProvider:Lmm/c;
+    .line 9
+    iput-object p8, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->uptimeClockProvider:Lg/a/c;
 
-    iput-object p9, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->clientHealthMetricsStoreProvider:Lmm/c;
+    .line 10
+    iput-object p9, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->clientHealthMetricsStoreProvider:Lg/a/c;
 
     return-void
 .end method
 
-.method public static create(Lmm/c;Lmm/c;Lmm/c;Lmm/c;Lmm/c;Lmm/c;Lmm/c;Lmm/c;Lmm/c;)Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;
+.method public static create(Lg/a/c;Lg/a/c;Lg/a/c;Lg/a/c;Lg/a/c;Lg/a/c;Lg/a/c;Lg/a/c;Lg/a/c;)Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;
     .locals 11
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Landroid/content/Context;",
             ">;",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/backends/BackendRegistry;",
             ">;",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;",
             ">;",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkScheduler;",
             ">;",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Ljava/util/concurrent/Executor;",
             ">;",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/synchronization/SynchronizationGuard;",
             ">;",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/time/Clock;",
             ">;",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/time/Clock;",
             ">;",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/scheduling/persistence/ClientHealthMetricsStore;",
             ">;)",
             "Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;"
         }
     .end annotation
 
+    .line 1
     new-instance v10, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;
 
     move-object v0, v10
@@ -226,7 +237,7 @@
 
     move-object/from16 v9, p8
 
-    invoke-direct/range {v0 .. v9}, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;-><init>(Lmm/c;Lmm/c;Lmm/c;Lmm/c;Lmm/c;Lmm/c;Lmm/c;Lmm/c;Lmm/c;)V
+    invoke-direct/range {v0 .. v9}, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;-><init>(Lg/a/c;Lg/a/c;Lg/a/c;Lg/a/c;Lg/a/c;Lg/a/c;Lg/a/c;Lg/a/c;Lg/a/c;)V
 
     return-object v10
 .end method
@@ -234,6 +245,7 @@
 .method public static newInstance(Landroid/content/Context;Lcom/google/android/datatransport/runtime/backends/BackendRegistry;Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkScheduler;Ljava/util/concurrent/Executor;Lcom/google/android/datatransport/runtime/synchronization/SynchronizationGuard;Lcom/google/android/datatransport/runtime/time/Clock;Lcom/google/android/datatransport/runtime/time/Clock;Lcom/google/android/datatransport/runtime/scheduling/persistence/ClientHealthMetricsStore;)Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader;
     .locals 11
 
+    .line 1
     new-instance v10, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader;
 
     move-object v0, v10
@@ -267,9 +279,9 @@
     .locals 10
 
     .line 2
-    iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->contextProvider:Lmm/c;
+    iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->contextProvider:Lg/a/c;
 
-    invoke-interface {v0}, Lmm/c;->get()Ljava/lang/Object;
+    invoke-interface {v0}, Lg/a/c;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -277,9 +289,9 @@
 
     check-cast v1, Landroid/content/Context;
 
-    iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->backendRegistryProvider:Lmm/c;
+    iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->backendRegistryProvider:Lg/a/c;
 
-    invoke-interface {v0}, Lmm/c;->get()Ljava/lang/Object;
+    invoke-interface {v0}, Lg/a/c;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -287,9 +299,9 @@
 
     check-cast v2, Lcom/google/android/datatransport/runtime/backends/BackendRegistry;
 
-    iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->eventStoreProvider:Lmm/c;
+    iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->eventStoreProvider:Lg/a/c;
 
-    invoke-interface {v0}, Lmm/c;->get()Ljava/lang/Object;
+    invoke-interface {v0}, Lg/a/c;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -297,9 +309,9 @@
 
     check-cast v3, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;
 
-    iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->workSchedulerProvider:Lmm/c;
+    iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->workSchedulerProvider:Lg/a/c;
 
-    invoke-interface {v0}, Lmm/c;->get()Ljava/lang/Object;
+    invoke-interface {v0}, Lg/a/c;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -307,9 +319,9 @@
 
     check-cast v4, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/WorkScheduler;
 
-    iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->executorProvider:Lmm/c;
+    iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->executorProvider:Lg/a/c;
 
-    invoke-interface {v0}, Lmm/c;->get()Ljava/lang/Object;
+    invoke-interface {v0}, Lg/a/c;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -317,9 +329,9 @@
 
     check-cast v5, Ljava/util/concurrent/Executor;
 
-    iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->guardProvider:Lmm/c;
+    iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->guardProvider:Lg/a/c;
 
-    invoke-interface {v0}, Lmm/c;->get()Ljava/lang/Object;
+    invoke-interface {v0}, Lg/a/c;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -327,9 +339,9 @@
 
     check-cast v6, Lcom/google/android/datatransport/runtime/synchronization/SynchronizationGuard;
 
-    iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->clockProvider:Lmm/c;
+    iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->clockProvider:Lg/a/c;
 
-    invoke-interface {v0}, Lmm/c;->get()Ljava/lang/Object;
+    invoke-interface {v0}, Lg/a/c;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -337,9 +349,9 @@
 
     check-cast v7, Lcom/google/android/datatransport/runtime/time/Clock;
 
-    iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->uptimeClockProvider:Lmm/c;
+    iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->uptimeClockProvider:Lg/a/c;
 
-    invoke-interface {v0}, Lmm/c;->get()Ljava/lang/Object;
+    invoke-interface {v0}, Lg/a/c;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -347,9 +359,9 @@
 
     check-cast v8, Lcom/google/android/datatransport/runtime/time/Clock;
 
-    iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->clientHealthMetricsStoreProvider:Lmm/c;
+    iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/Uploader_Factory;->clientHealthMetricsStoreProvider:Lg/a/c;
 
-    invoke-interface {p0}, Lmm/c;->get()Ljava/lang/Object;
+    invoke-interface {p0}, Lg/a/c;->get()Ljava/lang/Object;
 
     move-result-object p0
 

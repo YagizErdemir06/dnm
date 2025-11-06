@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;
+.class public final Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -71,29 +71,33 @@
 
     new-array v1, v0, [F
 
+    .line 1
     fill-array-data v1, :array_0
 
     sput-object v1, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->kColorConversion601:[F
 
     new-array v1, v0, [F
 
+    .line 2
     fill-array-data v1, :array_1
 
     sput-object v1, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->kColorConversion709:[F
 
     new-array v0, v0, [F
 
+    .line 3
     fill-array-data v0, :array_2
 
     sput-object v0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->kColorConversion2020:[F
 
-    const-string v0, "u_tex"
+    const-string v0, "y_tex"
 
-    const-string v1, "v_tex"
+    const-string v1, "u_tex"
 
-    const-string v2, "y_tex"
+    const-string v2, "v_tex"
 
-    filled-new-array {v2, v0, v1}, [Ljava/lang/String;
+    .line 4
+    filled-new-array {v0, v1, v2}, [Ljava/lang/String;
 
     move-result-object v0
 
@@ -103,8 +107,10 @@
 
     new-array v0, v0, [F
 
+    .line 5
     fill-array-data v0, :array_3
 
+    .line 6
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/GlUtil;->createBuffer([F)Ljava/nio/FloatBuffer;
 
     move-result-object v0
@@ -170,28 +176,35 @@
 .method public constructor <init>(Landroid/opengl/GLSurfaceView;)V
     .locals 4
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->surfaceView:Landroid/opengl/GLSurfaceView;
 
     const/4 p1, 0x3
 
     new-array v0, p1, [I
 
+    .line 3
     iput-object v0, p0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->yuvTextures:[I
 
     new-array v0, p1, [I
 
+    .line 4
     iput-object v0, p0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->texLocations:[I
 
     new-array v0, p1, [I
 
+    .line 5
     iput-object v0, p0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->previousWidths:[I
 
     new-array v0, p1, [I
 
+    .line 6
     iput-object v0, p0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->previousStrides:[I
 
+    .line 7
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
@@ -200,6 +213,7 @@
 
     new-array v0, p1, [Ljava/nio/FloatBuffer;
 
+    .line 8
     iput-object v0, p0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->textureCoords:[Ljava/nio/FloatBuffer;
 
     const/4 v0, 0x0
@@ -207,6 +221,7 @@
     :goto_0
     if-ge v0, p1, :cond_0
 
+    .line 9
     iget-object v1, p0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->previousWidths:[I
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->previousStrides:[I
@@ -233,6 +248,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->yuvTextures:[I
 
     const/4 v1, 0x3
@@ -244,6 +260,7 @@
     :goto_0
     if-ge v2, v1, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->program:Lcom/google/android/exoplayer2/util/GlProgram;
 
     sget-object v3, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->TEXTURE_UNIFORMS:[Ljava/lang/String;
@@ -260,20 +277,23 @@
 
     add-int/2addr v0, v2
 
+    .line 3
     invoke-static {v0}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
-    iget-object v0, p0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->yuvTextures:[I
+    const/16 v0, 0xde1
 
-    aget v0, v0, v2
+    .line 4
+    iget-object v3, p0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->yuvTextures:[I
 
-    const/16 v3, 0xde1
+    aget v3, v3, v2
 
-    invoke-static {v3, v0}, Lcom/google/android/exoplayer2/util/GlUtil;->bindTexture(II)V
+    invoke-static {v0, v3}, Lcom/google/android/exoplayer2/util/GlUtil;->bindTexture(II)V
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-static {}, Lcom/google/android/exoplayer2/util/GlUtil;->checkGlError()V
 
@@ -287,10 +307,12 @@
 
     move-object/from16 v0, p0
 
+    .line 1
     iget-object v1, v0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->pendingOutputBufferReference:Ljava/util/concurrent/atomic/AtomicReference;
 
     const/4 v2, 0x0
 
+    .line 2
     invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -299,6 +321,7 @@
 
     if-nez v1, :cond_0
 
+    .line 3
     iget-object v2, v0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->renderedOutputBuffer:Lcom/google/android/exoplayer2/decoder/VideoDecoderOutputBuffer;
 
     if-nez v2, :cond_0
@@ -308,15 +331,19 @@
     :cond_0
     if-eqz v1, :cond_2
 
+    .line 4
     iget-object v2, v0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->renderedOutputBuffer:Lcom/google/android/exoplayer2/decoder/VideoDecoderOutputBuffer;
 
     if-eqz v2, :cond_1
 
+    .line 5
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/decoder/VideoDecoderOutputBuffer;->release()V
 
+    .line 6
     :cond_1
     iput-object v1, v0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->renderedOutputBuffer:Lcom/google/android/exoplayer2/decoder/VideoDecoderOutputBuffer;
 
+    .line 7
     :cond_2
     iget-object v1, v0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->renderedOutputBuffer:Lcom/google/android/exoplayer2/decoder/VideoDecoderOutputBuffer;
 
@@ -326,8 +353,10 @@
 
     check-cast v1, Lcom/google/android/exoplayer2/decoder/VideoDecoderOutputBuffer;
 
+    .line 8
     sget-object v2, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->kColorConversion709:[F
 
+    .line 9
     iget v3, v1, Lcom/google/android/exoplayer2/decoder/VideoDecoderOutputBuffer;->colorspace:I
 
     const/4 v4, 0x3
@@ -340,14 +369,17 @@
 
     goto :goto_0
 
+    .line 10
     :cond_3
     sget-object v2, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->kColorConversion2020:[F
 
     goto :goto_0
 
+    .line 11
     :cond_4
     sget-object v2, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->kColorConversion601:[F
 
+    .line 12
     :goto_0
     iget v3, v0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->colorMatrixLocation:I
 
@@ -355,6 +387,7 @@
 
     invoke-static {v3, v5, v6, v2, v6}, Landroid/opengl/GLES20;->glUniformMatrix3fv(IIZ[FI)V
 
+    .line 13
     iget-object v2, v1, Lcom/google/android/exoplayer2/decoder/VideoDecoderOutputBuffer;->yuvStrides:[I
 
     invoke-static {v2}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -363,6 +396,7 @@
 
     check-cast v2, [I
 
+    .line 14
     iget-object v3, v1, Lcom/google/android/exoplayer2/decoder/VideoDecoderOutputBuffer;->yuvPlanes:[Ljava/nio/ByteBuffer;
 
     invoke-static {v3}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -380,6 +414,7 @@
 
     if-nez v7, :cond_5
 
+    .line 15
     iget v8, v1, Lcom/google/android/exoplayer2/decoder/VideoDecoderOutputBuffer;->height:I
 
     goto :goto_2
@@ -398,24 +433,30 @@
 
     add-int/2addr v8, v7
 
+    .line 16
     invoke-static {v8}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
-    iget-object v8, v0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->yuvTextures:[I
+    const/16 v8, 0xde1
 
-    aget v8, v8, v7
+    .line 17
+    iget-object v9, v0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->yuvTextures:[I
 
-    const/16 v9, 0xde1
+    aget v9, v9, v7
 
-    invoke-static {v9, v8}, Landroid/opengl/GLES20;->glBindTexture(II)V
+    invoke-static {v8, v9}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
     const/16 v8, 0xcf5
 
+    .line 18
     invoke-static {v8, v5}, Landroid/opengl/GLES20;->glPixelStorei(II)V
+
+    const/16 v9, 0xde1
 
     const/4 v10, 0x0
 
     const/16 v11, 0x1909
 
+    .line 19
     aget v12, v2, v7
 
     const/4 v14, 0x0
@@ -435,9 +476,13 @@
     :cond_6
     new-array v3, v4, [I
 
+    .line 20
     iget v1, v1, Lcom/google/android/exoplayer2/decoder/VideoDecoderOutputBuffer;->width:I
 
     aput v1, v3, v6
+
+    .line 21
+    aget v1, v3, v6
 
     add-int/2addr v1, v5
 
@@ -456,6 +501,7 @@
 
     if-ge v1, v4, :cond_a
 
+    .line 22
     iget-object v10, v0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->previousWidths:[I
 
     aget v10, v10, v1
@@ -472,6 +518,7 @@
 
     if-eq v10, v11, :cond_9
 
+    .line 23
     :cond_7
     aget v10, v2, v1
 
@@ -487,6 +534,7 @@
     :goto_4
     invoke-static {v10}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 24
     aget v10, v3, v1
 
     int-to-float v10, v10
@@ -497,6 +545,7 @@
 
     div-float/2addr v10, v11
 
+    .line 25
     iget-object v11, v0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->textureCoords:[Ljava/nio/FloatBuffer;
 
     const/16 v12, 0x8
@@ -527,12 +576,14 @@
 
     aput v14, v12, v7
 
+    .line 26
     invoke-static {v12}, Lcom/google/android/exoplayer2/util/GlUtil;->createBuffer([F)Ljava/nio/FloatBuffer;
 
     move-result-object v7
 
     aput-object v7, v11, v1
 
+    .line 27
     iget-object v7, v0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->texLocations:[I
 
     aget v9, v7, v1
@@ -551,12 +602,14 @@
 
     invoke-static/range {v9 .. v14}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
+    .line 28
     iget-object v7, v0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->previousWidths:[I
 
     aget v9, v3, v1
 
     aput v9, v7, v1
 
+    .line 29
     iget-object v7, v0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->previousStrides:[I
 
     aget v9, v2, v1
@@ -571,10 +624,13 @@
     :cond_a
     const/16 v0, 0x4000
 
+    .line 30
     invoke-static {v0}, Landroid/opengl/GLES20;->glClear(I)V
 
+    .line 31
     invoke-static {v9, v6, v7}, Landroid/opengl/GLES20;->glDrawArrays(III)V
 
+    .line 32
     invoke-static {}, Lcom/google/android/exoplayer2/util/GlUtil;->checkGlError()V
 
     return-void
@@ -585,6 +641,7 @@
 
     const/4 p0, 0x0
 
+    .line 1
     invoke-static {p0, p0, p2, p3}, Landroid/opengl/GLES20;->glViewport(IIII)V
 
     return-void
@@ -593,6 +650,7 @@
 .method public onSurfaceCreated(Ljavax/microedition/khronos/opengles/GL10;Ljavax/microedition/khronos/egl/EGLConfig;)V
     .locals 6
 
+    .line 1
     new-instance p1, Lcom/google/android/exoplayer2/util/GlProgram;
 
     const-string p2, "varying vec2 interp_tc_y;\nvarying vec2 interp_tc_u;\nvarying vec2 interp_tc_v;\nattribute vec4 in_pos;\nattribute vec2 in_tc_y;\nattribute vec2 in_tc_u;\nattribute vec2 in_tc_v;\nvoid main() {\n  gl_Position = in_pos;\n  interp_tc_y = in_tc_y;\n  interp_tc_u = in_tc_u;\n  interp_tc_v = in_tc_v;\n}\n"
@@ -605,9 +663,13 @@
 
     const-string p2, "in_pos"
 
+    .line 2
     invoke-virtual {p1, p2}, Lcom/google/android/exoplayer2/util/GlProgram;->getAttributeArrayLocationAndEnable(Ljava/lang/String;)I
 
     move-result v0
+
+    .line 3
+    sget-object v5, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->TEXTURE_VERTICES:Ljava/nio/FloatBuffer;
 
     const/4 v1, 0x2
 
@@ -617,10 +679,9 @@
 
     const/4 v4, 0x0
 
-    sget-object v5, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->TEXTURE_VERTICES:Ljava/nio/FloatBuffer;
-
     invoke-static/range {v0 .. v5}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
+    .line 4
     iget-object p1, p0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->texLocations:[I
 
     iget-object p2, p0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->program:Lcom/google/android/exoplayer2/util/GlProgram;
@@ -635,6 +696,7 @@
 
     aput p2, p1, v0
 
+    .line 5
     iget-object p1, p0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->texLocations:[I
 
     iget-object p2, p0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->program:Lcom/google/android/exoplayer2/util/GlProgram;
@@ -649,6 +711,7 @@
 
     aput p2, p1, v0
 
+    .line 6
     iget-object p1, p0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->texLocations:[I
 
     iget-object p2, p0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->program:Lcom/google/android/exoplayer2/util/GlProgram;
@@ -663,6 +726,7 @@
 
     aput p2, p1, v0
 
+    .line 7
     iget-object p1, p0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->program:Lcom/google/android/exoplayer2/util/GlProgram;
 
     const-string p2, "mColorConversion"
@@ -673,10 +737,13 @@
 
     iput p1, p0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->colorMatrixLocation:I
 
+    .line 8
     invoke-static {}, Lcom/google/android/exoplayer2/util/GlUtil;->checkGlError()V
 
+    .line 9
     invoke-direct {p0}, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->setupTextures()V
 
+    .line 10
     invoke-static {}, Lcom/google/android/exoplayer2/util/GlUtil;->checkGlError()V
 
     return-void
@@ -685,8 +752,10 @@
 .method public setOutputBuffer(Lcom/google/android/exoplayer2/decoder/VideoDecoderOutputBuffer;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->pendingOutputBufferReference:Ljava/util/concurrent/atomic/AtomicReference;
 
+    .line 2
     invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -695,8 +764,10 @@
 
     if-eqz p1, :cond_0
 
+    .line 3
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/decoder/VideoDecoderOutputBuffer;->release()V
 
+    .line 4
     :cond_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/video/VideoDecoderGLSurfaceView$Renderer;->surfaceView:Landroid/opengl/GLSurfaceView;
 

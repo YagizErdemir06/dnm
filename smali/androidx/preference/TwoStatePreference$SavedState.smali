@@ -1,4 +1,4 @@
-.class Landroidx/preference/TwoStatePreference$SavedState;
+.class public Landroidx/preference/TwoStatePreference$SavedState;
 .super Landroidx/preference/Preference$BaseSavedState;
 .source "SourceFile"
 
@@ -27,13 +27,14 @@
 
 
 # instance fields
-.field mChecked:Z
+.field public mChecked:Z
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/preference/TwoStatePreference$SavedState$1;
 
     invoke-direct {v0}, Landroidx/preference/TwoStatePreference$SavedState$1;-><init>()V
@@ -83,8 +84,10 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroid/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
+    .line 2
     iget-boolean p0, p0, Landroidx/preference/TwoStatePreference$SavedState;->mChecked:Z
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V

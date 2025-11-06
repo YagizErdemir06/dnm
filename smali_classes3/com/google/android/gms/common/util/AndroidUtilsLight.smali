@@ -55,6 +55,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/gms/common/wrappers/Wrappers;->packageManager(Landroid/content/Context;)Lcom/google/android/gms/common/wrappers/PackageManagerWrapper;
 
     move-result-object p0
@@ -65,6 +66,7 @@
 
     move-result-object p0
 
+    .line 2
     iget-object p1, p0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     if-eqz p1, :cond_1
@@ -77,6 +79,7 @@
 
     const-string p1, "SHA1"
 
+    .line 3
     invoke-static {p1}, Lcom/google/android/gms/common/util/AndroidUtilsLight;->zza(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object p1
@@ -85,6 +88,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-object p0, p0, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
@@ -125,6 +129,7 @@
 
     if-ge v0, v1, :cond_1
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 

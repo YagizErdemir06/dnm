@@ -16,7 +16,23 @@
 
 # virtual methods
 .method public abstract onFail(Lcom/xiaomi/camera/mivi/bean/ResultImageData;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "resultData"
+        }
+    .end annotation
 .end method
 
 .method public abstract onSuccess(Lcom/xiaomi/camera/mivi/bean/ResultImageData;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "resultData"
+        }
+    .end annotation
 .end method

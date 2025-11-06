@@ -1,4 +1,4 @@
-.class Landroidx/core/view/ViewCompat$Api26Impl;
+.class public Landroidx/core/view/ViewCompat$Api26Impl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,6 +47,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroid/view/View;->addKeyboardNavigationClusters(Ljava/util/Collection;I)V
 
     return-void
@@ -56,6 +58,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getImportantForAutofill()I
 
     move-result p0
@@ -72,6 +75,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getNextClusterForwardId()I
 
     move-result p0
@@ -88,6 +92,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->hasExplicitFocusable()Z
 
     move-result p0
@@ -104,6 +109,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->isFocusedByDefault()Z
 
     move-result p0
@@ -116,6 +122,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->isImportantForAutofill()Z
 
     move-result p0
@@ -132,6 +139,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->isKeyboardNavigationCluster()Z
 
     move-result p0
@@ -148,6 +156,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroid/view/View;->keyboardNavigationClusterSearch(Landroid/view/View;I)Landroid/view/View;
 
     move-result-object p0
@@ -164,6 +173,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->restoreDefaultFocus()Z
 
     move-result p0
@@ -180,6 +190,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/View;->setAutofillHints([Ljava/lang/String;)V
 
     return-void
@@ -194,6 +205,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/View;->setFocusedByDefault(Z)V
 
     return-void
@@ -204,6 +216,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/View;->setImportantForAutofill(I)V
 
     return-void
@@ -218,6 +231,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/View;->setKeyboardNavigationCluster(Z)V
 
     return-void
@@ -228,6 +242,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/View;->setNextClusterForwardId(I)V
 
     return-void
@@ -242,6 +257,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/View;->setTooltipText(Ljava/lang/CharSequence;)V
 
     return-void

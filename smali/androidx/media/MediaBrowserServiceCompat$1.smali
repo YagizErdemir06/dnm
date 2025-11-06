@@ -1,4 +1,4 @@
-.class Landroidx/media/MediaBrowserServiceCompat$1;
+.class public Landroidx/media/MediaBrowserServiceCompat$1;
 .super Landroidx/media/MediaBrowserServiceCompat$Result;
 .source "SourceFile"
 
@@ -24,15 +24,15 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/media/MediaBrowserServiceCompat;
+.field public final synthetic this$0:Landroidx/media/MediaBrowserServiceCompat;
 
-.field final synthetic val$connection:Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;
+.field public final synthetic val$connection:Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;
 
-.field final synthetic val$notifyChildrenChangedOptions:Landroid/os/Bundle;
+.field public final synthetic val$notifyChildrenChangedOptions:Landroid/os/Bundle;
 
-.field final synthetic val$parentId:Ljava/lang/String;
+.field public final synthetic val$parentId:Ljava/lang/String;
 
-.field final synthetic val$subscribeOptions:Landroid/os/Bundle;
+.field public final synthetic val$subscribeOptions:Landroid/os/Bundle;
 
 
 # direct methods
@@ -57,6 +57,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroidx/media/MediaBrowserServiceCompat$1;->this$0:Landroidx/media/MediaBrowserServiceCompat;
 
     iput-object p3, p0, Landroidx/media/MediaBrowserServiceCompat$1;->val$connection:Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;

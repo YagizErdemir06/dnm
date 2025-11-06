@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Multimaps$CustomSortedSetMultimap;
+.class public Lcom/google/common/collect/Multimaps$CustomSortedSetMultimap;
 .super Lcom/google/common/collect/AbstractSortedSetMultimap;
 .source "SourceFile"
 
@@ -34,7 +34,7 @@
 
 
 # instance fields
-.field transient factory:Lcom/google/common/base/Supplier;
+.field public transient factory:Lcom/google/common/base/Supplier;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/base/Supplier<",
@@ -45,7 +45,7 @@
     .end annotation
 .end field
 
-.field transient valueComparator:Ljava/util/Comparator;
+.field public transient valueComparator:Ljava/util/Comparator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Comparator<",
@@ -75,8 +75,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/AbstractSortedSetMultimap;-><init>(Ljava/util/Map;)V
 
+    .line 2
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -85,6 +87,7 @@
 
     iput-object p1, p0, Lcom/google/common/collect/Multimaps$CustomSortedSetMultimap;->factory:Lcom/google/common/base/Supplier;
 
+    .line 3
     invoke-interface {p2}, Lcom/google/common/base/Supplier;->get()Ljava/lang/Object;
 
     move-result-object p1
@@ -112,8 +115,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->defaultReadObject()V
 
+    .line 2
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
     move-result-object v0
@@ -122,6 +127,7 @@
 
     iput-object v0, p0, Lcom/google/common/collect/Multimaps$CustomSortedSetMultimap;->factory:Lcom/google/common/base/Supplier;
 
+    .line 3
     invoke-interface {v0}, Lcom/google/common/base/Supplier;->get()Ljava/lang/Object;
 
     move-result-object v0
@@ -134,12 +140,14 @@
 
     iput-object v0, p0, Lcom/google/common/collect/Multimaps$CustomSortedSetMultimap;->valueComparator:Ljava/util/Comparator;
 
+    .line 4
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Ljava/util/Map;
 
+    .line 5
     invoke-virtual {p0, p1}, Lcom/google/common/collect/AbstractMapBasedMultimap;->setMap(Ljava/util/Map;)V
 
     return-void
@@ -156,12 +164,15 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/io/ObjectOutputStream;->defaultWriteObject()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/Multimaps$CustomSortedSetMultimap;->factory:Lcom/google/common/base/Supplier;
 
     invoke-virtual {p1, v0}, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap;->backingMap()Ljava/util/Map;
 
     move-result-object p0
@@ -185,6 +196,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap;->createMaybeNavigableAsMap()Ljava/util/Map;
 
     move-result-object p0
@@ -246,6 +258,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap;->createMaybeNavigableKeySet()Ljava/util/Set;
 
     move-result-object p0
@@ -266,6 +279,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Multimaps$CustomSortedSetMultimap;->valueComparator:Ljava/util/Comparator;
 
     return-object p0

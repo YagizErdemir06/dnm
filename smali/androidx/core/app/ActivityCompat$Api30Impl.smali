@@ -1,4 +1,4 @@
-.class Landroidx/core/app/ActivityCompat$Api30Impl;
+.class public Landroidx/core/app/ActivityCompat$Api30Impl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,21 +22,10 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-.method public static getDisplay(Landroid/content/ContextWrapper;)Landroid/view/Display;
-    .locals 0
-    .annotation build Landroidx/annotation/DoNotInline;
-    .end annotation
-
-    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getDisplay()Landroid/view/Display;
-
-    move-result-object p0
-
-    return-object p0
 .end method
 
 .method public static setLocusContext(Landroid/app/Activity;Landroidx/core/content/LocusIdCompat;Landroid/os/Bundle;)V
@@ -53,8 +42,6 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation build Landroidx/annotation/DoNotInline;
-    .end annotation
 
     if-nez p1, :cond_0
 
@@ -62,13 +49,14 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     invoke-virtual {p1}, Landroidx/core/content/LocusIdCompat;->toLocusId()Landroid/content/LocusId;
 
     move-result-object p1
 
     :goto_0
-    invoke-static {p0, p1, p2}, Landroidx/core/app/b;->a(Landroid/app/Activity;Landroid/content/LocusId;Landroid/os/Bundle;)V
+    invoke-virtual {p0, p1, p2}, Landroid/app/Activity;->setLocusContext(Landroid/content/LocusId;Landroid/os/Bundle;)V
 
     return-void
 .end method

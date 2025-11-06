@@ -1,4 +1,4 @@
-.class Lcom/google/gson/internal/Excluder$1;
+.class public Lcom/google/gson/internal/Excluder$1;
 .super Lcom/google/gson/TypeAdapter;
 .source "SourceFile"
 
@@ -31,21 +31,22 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Lcom/google/gson/internal/Excluder;
+.field public final synthetic this$0:Lcom/google/gson/internal/Excluder;
 
-.field final synthetic val$gson:Lcom/google/gson/Gson;
+.field public final synthetic val$gson:Lcom/google/gson/Gson;
 
-.field final synthetic val$skipDeserialize:Z
+.field public final synthetic val$skipDeserialize:Z
 
-.field final synthetic val$skipSerialize:Z
+.field public final synthetic val$skipSerialize:Z
 
-.field final synthetic val$type:Lcom/google/gson/reflect/TypeToken;
+.field public final synthetic val$type:Lcom/google/gson/reflect/TypeToken;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/gson/internal/Excluder;ZZLcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/gson/internal/Excluder$1;->this$0:Lcom/google/gson/internal/Excluder;
 
     iput-boolean p2, p0, Lcom/google/gson/internal/Excluder$1;->val$skipDeserialize:Z
@@ -71,12 +72,14 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/gson/internal/Excluder$1;->delegate:Lcom/google/gson/TypeAdapter;
 
     if-eqz v0, :cond_0
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/gson/internal/Excluder$1;->val$gson:Lcom/google/gson/Gson;
 
@@ -84,6 +87,7 @@
 
     iget-object v2, p0, Lcom/google/gson/internal/Excluder$1;->val$type:Lcom/google/gson/reflect/TypeToken;
 
+    .line 3
     invoke-virtual {v0, v1, v2}, Lcom/google/gson/Gson;->getDelegateAdapter(Lcom/google/gson/TypeAdapterFactory;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;
 
     move-result-object v0
@@ -112,16 +116,19 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/gson/internal/Excluder$1;->val$skipDeserialize:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->skipValue()V
 
     const/4 p0, 0x0
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-direct {p0}, Lcom/google/gson/internal/Excluder$1;->delegate()Lcom/google/gson/TypeAdapter;
 
@@ -150,14 +157,17 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/gson/internal/Excluder$1;->val$skipSerialize:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonWriter;->nullValue()Lcom/google/gson/stream/JsonWriter;
 
     return-void
 
+    .line 3
     :cond_0
     invoke-direct {p0}, Lcom/google/gson/internal/Excluder$1;->delegate()Lcom/google/gson/TypeAdapter;
 

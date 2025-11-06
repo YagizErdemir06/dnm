@@ -123,6 +123,7 @@
 .method private final zza(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/internal/GmsLogger;->zzb:Ljava/lang/String;
 
     if-nez p0, :cond_0
@@ -142,6 +143,7 @@
     .annotation build Lcom/google/errorprone/annotations/FormatMethod;
     .end annotation
 
+    .line 1
     invoke-static {p1, p2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -152,6 +154,7 @@
 
     return-object p1
 
+    .line 2
     :cond_0
     invoke-virtual {p0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
@@ -167,6 +170,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/internal/GmsLogger;->zza:Ljava/lang/String;
 
     invoke-static {p0, p1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
@@ -351,12 +355,14 @@
 
     const/4 v0, 0x6
 
+    .line 1
     invoke-virtual {p0, v0}, Lcom/google/android/gms/common/internal/GmsLogger;->canLog(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-direct {p0, p2, p3}, Lcom/google/android/gms/common/internal/GmsLogger;->zzb(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -638,6 +644,7 @@
 
     const/4 p1, 0x5
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/android/gms/common/internal/GmsLogger;->canLog(I)Z
 
     move-result p1
@@ -646,6 +653,7 @@
 
     iget-object p1, p0, Lcom/google/android/gms/common/internal/GmsLogger;->zza:Ljava/lang/String;
 
+    .line 2
     invoke-direct {p0, p2, p3}, Lcom/google/android/gms/common/internal/GmsLogger;->zzb(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -675,18 +683,21 @@
 
     const/4 v0, 0x7
 
+    .line 1
     invoke-virtual {p0, v0}, Lcom/google/android/gms/common/internal/GmsLogger;->canLog(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-direct {p0, p2}, Lcom/google/android/gms/common/internal/GmsLogger;->zza(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {p1, v0, p3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 3
     invoke-direct {p0, p2}, Lcom/google/android/gms/common/internal/GmsLogger;->zza(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0

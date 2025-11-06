@@ -1,4 +1,4 @@
-.class Landroidx/core/provider/DocumentsContractCompat$DocumentsContractApi24Impl;
+.class public Landroidx/core/provider/DocumentsContractCompat$DocumentsContractApi24Impl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,6 +37,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-static {p0}, Landroid/provider/DocumentsContract;->isTreeUri(Landroid/net/Uri;)Z
 
     move-result p0
@@ -54,6 +56,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0, p1, p2}, Landroid/provider/DocumentsContract;->removeDocument(Landroid/content/ContentResolver;Landroid/net/Uri;Landroid/net/Uri;)Z
 
     move-result p0

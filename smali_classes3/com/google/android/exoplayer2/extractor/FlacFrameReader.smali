@@ -15,6 +15,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,6 +24,7 @@
 .method private static checkAndReadBlockSizeSamples(Lcom/google/android/exoplayer2/util/ParsableByteArray;Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;I)Z
     .locals 0
 
+    .line 1
     invoke-static {p0, p2}, Lcom/google/android/exoplayer2/extractor/FlacFrameReader;->readFrameBlockSizeSamplesFromKey(Lcom/google/android/exoplayer2/util/ParsableByteArray;I)I
 
     move-result p0
@@ -31,6 +33,7 @@
 
     if-eq p0, p2, :cond_0
 
+    .line 2
     iget p1, p1, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;->maxBlockSizeSamples:I
 
     if-gt p0, p1, :cond_0
@@ -49,14 +52,17 @@
 .method private static checkAndReadCrc(Lcom/google/android/exoplayer2/util/ParsableByteArray;I)Z
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getPosition()I
 
     move-result v1
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
     move-result-object p0
@@ -85,6 +91,7 @@
 .method private static checkAndReadFirstSampleNumber(Lcom/google/android/exoplayer2/util/ParsableByteArray;Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;ZLcom/google/android/exoplayer2/extractor/FlacFrameReader$SampleNumberHolder;)Z
     .locals 2
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUtf8EncodedLong()J
 
@@ -96,6 +103,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget p0, p1, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;->maxBlockSizeSamples:I
 
@@ -123,10 +131,12 @@
 
     move-object/from16 v1, p1
 
+    .line 1
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getPosition()I
 
     move-result v2
 
+    .line 2
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedInt()J
 
     move-result-wide v3
@@ -213,6 +223,7 @@
     :cond_2
     move v3, v8
 
+    .line 3
     :goto_1
     invoke-static {v12, v1}, Lcom/google/android/exoplayer2/extractor/FlacFrameReader;->checkChannelAssignment(ILcom/google/android/exoplayer2/extractor/FlacStreamMetadata;)Z
 
@@ -220,6 +231,7 @@
 
     if-eqz v4, :cond_3
 
+    .line 4
     invoke-static {v13, v1}, Lcom/google/android/exoplayer2/extractor/FlacFrameReader;->checkBitsPerSample(ILcom/google/android/exoplayer2/extractor/FlacStreamMetadata;)Z
 
     move-result v4
@@ -230,24 +242,28 @@
 
     move-object/from16 v3, p3
 
+    .line 5
     invoke-static {v0, v1, v5, v3}, Lcom/google/android/exoplayer2/extractor/FlacFrameReader;->checkAndReadFirstSampleNumber(Lcom/google/android/exoplayer2/util/ParsableByteArray;Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;ZLcom/google/android/exoplayer2/extractor/FlacFrameReader$SampleNumberHolder;)Z
 
     move-result v3
 
     if-eqz v3, :cond_3
 
+    .line 6
     invoke-static {v0, v1, v7}, Lcom/google/android/exoplayer2/extractor/FlacFrameReader;->checkAndReadBlockSizeSamples(Lcom/google/android/exoplayer2/util/ParsableByteArray;Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;I)Z
 
     move-result v3
 
     if-eqz v3, :cond_3
 
+    .line 7
     invoke-static {v0, v1, v11}, Lcom/google/android/exoplayer2/extractor/FlacFrameReader;->checkAndReadSampleRate(Lcom/google/android/exoplayer2/util/ParsableByteArray;Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;I)Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
+    .line 8
     invoke-static {v0, v2}, Lcom/google/android/exoplayer2/extractor/FlacFrameReader;->checkAndReadCrc(Lcom/google/android/exoplayer2/util/ParsableByteArray;I)Z
 
     move-result v0
@@ -263,6 +279,7 @@
 .method private static checkAndReadSampleRate(Lcom/google/android/exoplayer2/util/ParsableByteArray;Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;I)Z
     .locals 4
 
+    .line 1
     iget v0, p1, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;->sampleRate:I
 
     const/4 v1, 0x1
@@ -278,6 +295,7 @@
 
     if-gt p2, v2, :cond_2
 
+    .line 2
     iget p0, p1, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;->sampleRateLookupKey:I
 
     if-ne p2, p0, :cond_1
@@ -295,6 +313,7 @@
 
     if-ne p2, p1, :cond_4
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result p0
@@ -316,6 +335,7 @@
 
     if-gt p2, p1, :cond_7
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedShort()I
 
     move-result p0
@@ -348,6 +368,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     iget p1, p1, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;->bitsPerSampleLookupKey:I
 
@@ -365,40 +386,42 @@
 .method private static checkChannelAssignment(ILcom/google/android/exoplayer2/extractor/FlacStreamMetadata;)Z
     .locals 3
 
-    const/4 v0, 0x7
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
-    const/4 v2, 0x1
+    const/4 v2, 0x7
 
-    if-gt p0, v0, :cond_1
+    if-gt p0, v2, :cond_1
 
+    .line 1
     iget p1, p1, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;->channels:I
 
-    sub-int/2addr p1, v2
+    sub-int/2addr p1, v1
 
     if-ne p0, p1, :cond_0
 
-    move v1, v2
+    move v0, v1
 
     :cond_0
-    return v1
+    return v0
 
     :cond_1
-    const/16 v0, 0xa
+    const/16 v2, 0xa
 
-    if-gt p0, v0, :cond_2
+    if-gt p0, v2, :cond_2
 
+    .line 2
     iget p0, p1, Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;->channels:I
 
     const/4 p1, 0x2
 
     if-ne p0, p1, :cond_2
 
-    move v1, v2
+    move v0, v1
 
     :cond_2
-    return v1
+    return v0
 .end method
 
 .method public static checkFrameHeaderFromPeek(Lcom/google/android/exoplayer2/extractor/ExtractorInput;Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;ILcom/google/android/exoplayer2/extractor/FlacFrameReader$SampleNumberHolder;)Z
@@ -409,6 +432,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPeekPosition()J
 
     move-result-wide v0
@@ -419,8 +443,10 @@
 
     const/4 v4, 0x0
 
+    .line 2
     invoke-interface {p0, v3, v4, v2}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->peekFully([BII)V
 
+    .line 3
     aget-byte v5, v3, v4
 
     and-int/lit16 v5, v5, 0xff
@@ -437,8 +463,10 @@
 
     if-eq v5, p2, :cond_0
 
+    .line 4
     invoke-interface {p0}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
 
+    .line 5
     invoke-interface {p0}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
     move-result-wide p1
@@ -451,6 +479,7 @@
 
     return v4
 
+    .line 6
     :cond_0
     new-instance v5, Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
@@ -458,26 +487,33 @@
 
     invoke-direct {v5, v6}, Lcom/google/android/exoplayer2/util/ParsableByteArray;-><init>(I)V
 
+    .line 7
     invoke-virtual {v5}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
     move-result-object v6
 
+    .line 8
     invoke-static {v3, v4, v6, v4, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 9
     invoke-virtual {v5}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
     move-result-object v3
 
     const/16 v4, 0xe
 
+    .line 10
     invoke-static {p0, v3, v2, v4}, Lcom/google/android/exoplayer2/extractor/ExtractorUtil;->peekToLength(Lcom/google/android/exoplayer2/extractor/ExtractorInput;[BII)I
 
     move-result v2
 
+    .line 11
     invoke-virtual {v5, v2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setLimit(I)V
 
+    .line 12
     invoke-interface {p0}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
 
+    .line 13
     invoke-interface {p0}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
     move-result-wide v2
@@ -488,6 +524,7 @@
 
     invoke-interface {p0, v0}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->advancePeekPosition(I)V
 
+    .line 14
     invoke-static {v5, p1, p2, p3}, Lcom/google/android/exoplayer2/extractor/FlacFrameReader;->checkAndReadFrameHeader(Lcom/google/android/exoplayer2/util/ParsableByteArray;Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;ILcom/google/android/exoplayer2/extractor/FlacFrameReader$SampleNumberHolder;)Z
 
     move-result p0
@@ -503,18 +540,22 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
 
     const/4 v0, 0x1
 
+    .line 2
     invoke-interface {p0, v0}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->advancePeekPosition(I)V
 
     new-array v1, v0, [B
 
     const/4 v2, 0x0
 
+    .line 3
     invoke-interface {p0, v1, v2, v0}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->peekFully([BII)V
 
+    .line 4
     aget-byte v1, v1, v2
 
     and-int/2addr v1, v0
@@ -529,6 +570,7 @@
     :goto_0
     const/4 v1, 0x2
 
+    .line 5
     invoke-interface {p0, v1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->advancePeekPosition(I)V
 
     if-eqz v0, :cond_1
@@ -540,11 +582,13 @@
     :cond_1
     const/4 v1, 0x6
 
+    .line 6
     :goto_1
     new-instance v3, Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-direct {v3, v1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;-><init>(I)V
 
+    .line 7
     invoke-virtual {v3}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
     move-result-object v4
@@ -553,20 +597,25 @@
 
     move-result v1
 
+    .line 8
     invoke-virtual {v3, v1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setLimit(I)V
 
+    .line 9
     invoke-interface {p0}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
 
+    .line 10
     new-instance p0, Lcom/google/android/exoplayer2/extractor/FlacFrameReader$SampleNumberHolder;
 
     invoke-direct {p0}, Lcom/google/android/exoplayer2/extractor/FlacFrameReader$SampleNumberHolder;-><init>()V
 
+    .line 11
     invoke-static {v3, p1, v0, p0}, Lcom/google/android/exoplayer2/extractor/FlacFrameReader;->checkAndReadFirstSampleNumber(Lcom/google/android/exoplayer2/util/ParsableByteArray;Lcom/google/android/exoplayer2/extractor/FlacStreamMetadata;ZLcom/google/android/exoplayer2/extractor/FlacFrameReader$SampleNumberHolder;)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
+    .line 12
     iget-wide p0, p0, Lcom/google/android/exoplayer2/extractor/FlacFrameReader$SampleNumberHolder;->sampleNumber:J
 
     return-wide p0
@@ -574,6 +623,7 @@
     :cond_2
     const/4 p0, 0x0
 
+    .line 13
     invoke-static {p0, p0}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedContainer(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
     move-result-object p0
@@ -591,14 +641,15 @@
     return p0
 
     :pswitch_0
-    add-int/lit8 p1, p1, -0x8
-
     const/16 p0, 0x100
+
+    add-int/lit8 p1, p1, -0x8
 
     shl-int/2addr p0, p1
 
     return p0
 
+    .line 1
     :pswitch_1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedShort()I
 
@@ -608,6 +659,7 @@
 
     return p0
 
+    .line 2
     :pswitch_2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
@@ -618,9 +670,9 @@
     return p0
 
     :pswitch_3
-    add-int/lit8 p1, p1, -0x2
-
     const/16 p0, 0x240
+
+    add-int/lit8 p1, p1, -0x2
 
     shl-int/2addr p0, p1
 

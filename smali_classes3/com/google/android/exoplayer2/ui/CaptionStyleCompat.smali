@@ -48,6 +48,7 @@
 .method public static constructor <clinit>()V
     .locals 8
 
+    .line 1
     new-instance v7, Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;
 
     const/4 v1, -0x1
@@ -78,18 +79,25 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;->foregroundColor:I
 
+    .line 3
     iput p2, p0, Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;->backgroundColor:I
 
+    .line 4
     iput p3, p0, Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;->windowColor:I
 
+    .line 5
     iput p4, p0, Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;->edgeType:I
 
+    .line 6
     iput p5, p0, Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;->edgeColor:I
 
+    .line 7
     iput-object p6, p0, Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;->typeface:Landroid/graphics/Typeface;
 
     return-void
@@ -101,18 +109,21 @@
         value = 0x13
     .end annotation
 
+    .line 1
     sget v0, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-lt v0, v1, :cond_0
 
+    .line 2
     invoke-static {p0}, Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;->createFromCaptionStyleV21(Landroid/view/accessibility/CaptioningManager$CaptionStyle;)Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;
 
     move-result-object p0
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-static {p0}, Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;->createFromCaptionStyleV19(Landroid/view/accessibility/CaptioningManager$CaptionStyle;)Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;
 
@@ -127,21 +138,23 @@
         value = 0x13
     .end annotation
 
+    .line 1
     new-instance v7, Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;
 
     iget v1, p0, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->foregroundColor:I
 
     iget v2, p0, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->backgroundColor:I
 
-    const/4 v3, 0x0
-
     iget v4, p0, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->edgeType:I
 
     iget v5, p0, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->edgeColor:I
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->getTypeface()Landroid/graphics/Typeface;
 
     move-result-object v6
+
+    const/4 v3, 0x0
 
     move-object v0, v7
 
@@ -156,8 +169,10 @@
         value = 0x15
     .end annotation
 
+    .line 1
     new-instance v7, Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->hasForegroundColor()Z
 
     move-result v0
@@ -176,6 +191,7 @@
     :goto_0
     move v1, v0
 
+    .line 3
     invoke-virtual {p0}, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->hasBackgroundColor()Z
 
     move-result v0
@@ -194,6 +210,7 @@
     :goto_1
     move v2, v0
 
+    .line 4
     invoke-virtual {p0}, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->hasWindowColor()Z
 
     move-result v0
@@ -212,6 +229,7 @@
     :goto_2
     move v3, v0
 
+    .line 5
     invoke-virtual {p0}, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->hasEdgeType()Z
 
     move-result v0
@@ -230,6 +248,7 @@
     :goto_3
     move v4, v0
 
+    .line 6
     invoke-virtual {p0}, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->hasEdgeColor()Z
 
     move-result v0
@@ -248,6 +267,7 @@
     :goto_4
     move v5, v0
 
+    .line 7
     invoke-virtual {p0}, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->getTypeface()Landroid/graphics/Typeface;
 
     move-result-object v6

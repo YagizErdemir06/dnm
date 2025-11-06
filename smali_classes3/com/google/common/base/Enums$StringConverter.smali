@@ -1,4 +1,4 @@
-.class final Lcom/google/common/base/Enums$StringConverter;
+.class public final Lcom/google/common/base/Enums$StringConverter;
 .super Lcom/google/common/base/Converter;
 .source "SourceFile"
 
@@ -55,8 +55,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/base/Converter;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -140,12 +142,15 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/common/base/Enums$StringConverter;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/common/base/Enums$StringConverter;
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/base/Enums$StringConverter;->enumClass:Ljava/lang/Class;
 
     iget-object p1, p1, Lcom/google/common/base/Enums$StringConverter;->enumClass:Ljava/lang/Class;
@@ -165,6 +170,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/Enums$StringConverter;->enumClass:Ljava/lang/Class;
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
@@ -177,6 +183,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/Enums$StringConverter;->enumClass:Ljava/lang/Class;
 
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;

@@ -1,4 +1,4 @@
-.class final Lcom/google/gson/internal/UnsafeAllocator$3;
+.class public final Lcom/google/gson/internal/UnsafeAllocator$3;
 .super Lcom/google/gson/internal/UnsafeAllocator;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic val$newInstance:Ljava/lang/reflect/Method;
+.field public final synthetic val$newInstance:Ljava/lang/reflect/Method;
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/reflect/Method;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/gson/internal/UnsafeAllocator$3;->val$newInstance:Ljava/lang/reflect/Method;
 
     invoke-direct {p0}, Lcom/google/gson/internal/UnsafeAllocator;-><init>()V
@@ -49,6 +50,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/gson/internal/UnsafeAllocator$3;->val$newInstance:Ljava/lang/reflect/Method;
 
     const/4 v0, 0x2

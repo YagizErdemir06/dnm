@@ -15,8 +15,10 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v1, 0x0
@@ -33,6 +35,7 @@
 .method public addTransitMemory()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/TransitMemoryManager;->mTransitFileCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
@@ -45,6 +48,7 @@
 .method public clear()V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/TransitMemoryManager;->mTransitFileCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v0, 0x0
@@ -57,6 +61,7 @@
 .method public getTransitQueueValue()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/TransitMemoryManager;->mTransitFileCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
@@ -69,6 +74,7 @@
 .method public isTransitQueueFull()Z
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/TransitMemoryManager;->mTransitFileCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
@@ -93,6 +99,7 @@
 .method public reduceTransitMemory()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/TransitMemoryManager;->mTransitFileCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I

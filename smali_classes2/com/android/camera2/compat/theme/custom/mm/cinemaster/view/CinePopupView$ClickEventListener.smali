@@ -16,4 +16,16 @@
 
 # virtual methods
 .method public abstract onStartBtnClick(IZZ)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "checkedType",
+            "isRemoteControl",
+            "isStop"
+        }
+    .end annotation
 .end method

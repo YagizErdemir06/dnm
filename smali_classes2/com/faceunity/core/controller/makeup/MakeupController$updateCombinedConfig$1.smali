@@ -1,9 +1,9 @@
-.class final Lcom/faceunity/core/controller/makeup/MakeupController$updateCombinedConfig$1;
-.super Lkotlin/jvm/internal/n0;
+.class public final Lcom/faceunity/core/controller/makeup/MakeupController$updateCombinedConfig$1;
+.super Lh/d3/x/n0;
 .source "SourceFile"
 
 # interfaces
-.implements Ljn/l;
+.implements Lh/d3/w/l;
 
 
 # annotations
@@ -18,10 +18,10 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lkotlin/jvm/internal/n0;",
-        "Ljn/l<",
+        "Lh/d3/x/n0;",
+        "Lh/d3/w/l<",
         "Ljava/lang/Integer;",
-        "Lnm/l2;",
+        "Lh/l2;",
         ">;"
     }
 .end annotation
@@ -30,14 +30,19 @@
     value = "SMAP\nMakeupController.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MakeupController.kt\ncom/faceunity/core/controller/makeup/MakeupController$updateCombinedConfig$1\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 _Maps.kt\nkotlin/collections/MapsKt___MapsKt\n*L\n1#1,96:1\n1819#2,2:97\n181#3,2:99\n*E\n*S KotlinDebug\n*F\n+ 1 MakeupController.kt\ncom/faceunity/core/controller/makeup/MakeupController$updateCombinedConfig$1\n*L\n34#1,2:97\n47#1,2:99\n*E\n"
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
         "\u0000\u000e\n\u0002\u0010\u0008\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0005\u001a\u00020\u00022\u0006\u0010\u0001\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0003\u0010\u0004"
     }
     d2 = {
         "",
         "controlHandle",
-        "Lnm/l2;",
+        "Lh/l2;",
         "invoke",
         "(I)V",
         "<anonymous>"
@@ -52,15 +57,15 @@
 
 
 # instance fields
-.field final synthetic $childBundle:Ljava/util/ArrayList;
+.field public final synthetic $childBundle:Ljava/util/ArrayList;
 
-.field final synthetic $newCombinedBundle:Lcom/faceunity/core/entity/FUBundleData;
+.field public final synthetic $newCombinedBundle:Lcom/faceunity/core/entity/FUBundleData;
 
-.field final synthetic $oldCombinedBundle:Lcom/faceunity/core/entity/FUBundleData;
+.field public final synthetic $oldCombinedBundle:Lcom/faceunity/core/entity/FUBundleData;
 
-.field final synthetic $params:Ljava/util/LinkedHashMap;
+.field public final synthetic $params:Ljava/util/LinkedHashMap;
 
-.field final synthetic this$0:Lcom/faceunity/core/controller/makeup/MakeupController;
+.field public final synthetic this$0:Lcom/faceunity/core/controller/makeup/MakeupController;
 
 
 # direct methods
@@ -79,7 +84,7 @@
 
     const/4 p1, 0x1
 
-    invoke-direct {p0, p1}, Lkotlin/jvm/internal/n0;-><init>(I)V
+    invoke-direct {p0, p1}, Lh/d3/x/n0;-><init>(I)V
 
     return-void
 .end method
@@ -98,7 +103,7 @@
 
     invoke-virtual {p0, p1}, Lcom/faceunity/core/controller/makeup/MakeupController$updateCombinedConfig$1;->invoke(I)V
 
-    sget-object p0, Lnm/l2;->a:Lnm/l2;
+    sget-object p0, Lh/l2;->a:Lh/l2;
 
     return-object p0
 .end method
@@ -177,7 +182,7 @@
     .line 9
     iget-object v1, p0, Lcom/faceunity/core/controller/makeup/MakeupController$updateCombinedConfig$1;->this$0:Lcom/faceunity/core/controller/makeup/MakeupController;
 
-    invoke-static {v0}, Lpm/g0;->P5(Ljava/util/Collection;)[I
+    invoke-static {v0}, Lh/t2/g0;->P5(Ljava/util/Collection;)[I
 
     move-result-object v2
 
@@ -196,7 +201,7 @@
     .line 11
     iget-object v1, p0, Lcom/faceunity/core/controller/makeup/MakeupController$updateCombinedConfig$1;->this$0:Lcom/faceunity/core/controller/makeup/MakeupController;
 
-    invoke-static {v0}, Lpm/g0;->P5(Ljava/util/Collection;)[I
+    invoke-static {v0}, Lh/t2/g0;->P5(Ljava/util/Collection;)[I
 
     move-result-object v0
 

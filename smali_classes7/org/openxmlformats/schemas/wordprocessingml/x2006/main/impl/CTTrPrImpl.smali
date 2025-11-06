@@ -20,27 +20,27 @@
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "ins"
+    const-string v1, "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
 
-    const-string v2, "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+    const-string v2, "ins"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTTrPrImpl;->INS$0:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "del"
+    const-string v2, "del"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTTrPrImpl;->DEL$2:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "trPrChange"
+    const-string v2, "trPrChange"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTTrPrImpl;->TRPRCHANGE$4:Ljavax/xml/namespace/QName;
 
@@ -199,9 +199,9 @@
 
     if-nez p0, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    monitor-exit v0
 
     return-object p0
 
@@ -248,9 +248,9 @@
 
     if-nez p0, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    monitor-exit v0
 
     return-object p0
 
@@ -297,9 +297,9 @@
 
     if-nez p0, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    monitor-exit v0
 
     return-object p0
 

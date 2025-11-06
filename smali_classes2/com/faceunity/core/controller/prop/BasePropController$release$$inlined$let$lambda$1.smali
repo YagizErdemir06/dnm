@@ -1,4 +1,4 @@
-.class final Lcom/faceunity/core/controller/prop/BasePropController$release$$inlined$let$lambda$1;
+.class public final Lcom/faceunity/core/controller/prop/BasePropController$release$$inlined$let$lambda$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/faceunity/core/controller/prop/BasePropController;->release$lib_core_release(Ljn/a;)V
+    value = Lcom/faceunity/core/controller/prop/BasePropController;->release$lib_core_release(Lh/d3/w/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,12 +20,17 @@
     value = "SMAP\nBasePropController.kt\nKotlin\n*S Kotlin\n*F\n+ 1 BasePropController.kt\ncom/faceunity/core/controller/prop/BasePropController$release$1$1\n+ 2 _Maps.kt\nkotlin/collections/MapsKt___MapsKt\n*L\n1#1,153:1\n181#2,2:154\n*E\n*S KotlinDebug\n*F\n+ 1 BasePropController.kt\ncom/faceunity/core/controller/prop/BasePropController$release$1$1\n*L\n75#1,2:154\n*E\n"
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
         "\u0000\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0010\u0004\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0001\u0010\u0002\u00a8\u0006\u0003"
     }
     d2 = {
-        "Lnm/l2;",
+        "Lh/l2;",
         "run",
         "()V",
         "com/faceunity/core/controller/prop/BasePropController$release$1$1",
@@ -41,9 +46,9 @@
 
 
 # instance fields
-.field final synthetic $countDownLatch:Ljava/util/concurrent/CountDownLatch;
+.field public final synthetic $countDownLatch:Ljava/util/concurrent/CountDownLatch;
 
-.field final synthetic this$0:Lcom/faceunity/core/controller/prop/BasePropController;
+.field public final synthetic this$0:Lcom/faceunity/core/controller/prop/BasePropController;
 
 
 # direct methods
@@ -64,12 +69,14 @@
 .method public final run()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/controller/prop/BasePropController$release$$inlined$let$lambda$1;->this$0:Lcom/faceunity/core/controller/prop/BasePropController;
 
     invoke-virtual {v0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMPropIdMap()Ljava/util/HashMap;
 
     move-result-object v0
 
+    .line 2
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v0
@@ -101,6 +108,7 @@
 
     move-result v1
 
+    .line 3
     iget-object v2, p0, Lcom/faceunity/core/controller/prop/BasePropController$release$$inlined$let$lambda$1;->this$0:Lcom/faceunity/core/controller/prop/BasePropController;
 
     invoke-virtual {v2}, Lcom/faceunity/core/controller/prop/BasePropController;->getMBundleManager()Lcom/faceunity/core/bundle/FUBundleManager;
@@ -111,6 +119,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lcom/faceunity/core/controller/prop/BasePropController$release$$inlined$let$lambda$1;->this$0:Lcom/faceunity/core/controller/prop/BasePropController;
 
@@ -120,6 +129,7 @@
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
+    .line 5
     iget-object v0, p0, Lcom/faceunity/core/controller/prop/BasePropController$release$$inlined$let$lambda$1;->this$0:Lcom/faceunity/core/controller/prop/BasePropController;
 
     invoke-virtual {v0}, Lcom/faceunity/core/controller/prop/BasePropController;->getMPropTypeMap()Ljava/util/HashMap;
@@ -128,12 +138,14 @@
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
+    .line 6
     iget-object v0, p0, Lcom/faceunity/core/controller/prop/BasePropController$release$$inlined$let$lambda$1;->this$0:Lcom/faceunity/core/controller/prop/BasePropController;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/faceunity/core/controller/prop/BasePropController;->setMOnPropCallBack(Lcom/faceunity/core/callback/OnPropCallBack;)V
 
+    .line 7
     iget-object p0, p0, Lcom/faceunity/core/controller/prop/BasePropController$release$$inlined$let$lambda$1;->$countDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V

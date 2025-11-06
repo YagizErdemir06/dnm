@@ -13,14 +13,20 @@
     name = "WhenMappings"
 .end annotation
 
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
+    d1 = {}
+    d2 = {}
     k = 0x3
     mv = {
         0x1,
         0x5,
         0x1
     }
-    xi = 0x30
 .end annotation
 
 

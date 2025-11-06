@@ -1,4 +1,4 @@
-.class Lcom/bumptech/glide/load/model/ModelLoaderRegistry$ModelLoaderCache$Entry;
+.class public Lcom/bumptech/glide/load/model/ModelLoaderRegistry$ModelLoaderCache$Entry;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -24,7 +24,7 @@
 
 
 # instance fields
-.field final loaders:Ljava/util/List;
+.field public final loaders:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -47,8 +47,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/bumptech/glide/load/model/ModelLoaderRegistry$ModelLoaderCache$Entry;->loaders:Ljava/util/List;
 
     return-void

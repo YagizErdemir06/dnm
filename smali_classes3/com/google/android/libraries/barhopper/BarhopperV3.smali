@@ -7,9 +7,9 @@
 
 
 # static fields
-.field private static final NULL_NATIVE_CONTEXT:J = 0x0L
+.field private static final NULL_NATIVE_CONTEXT:J
 
-.field private static final TAG:Ljava/lang/String; = "BarhopperV3"
+.field private static final TAG:Ljava/lang/String;
 
 
 # instance fields
@@ -18,7 +18,16 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 0
+    .locals 1
+
+    .line 1
+    const-class v0, Lcom/google/android/libraries/barhopper/BarhopperV3;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/google/android/libraries/barhopper/BarhopperV3;->TAG:Ljava/lang/String;
 
     return-void
 .end method
@@ -26,6 +35,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string p0, "barhopper_v3"
@@ -62,8 +72,10 @@
 .method private static toProto([B)Lcom/google/photos/vision/barhopper/BarhopperProto$BarhopperResponse;
     .locals 2
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 1
+    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     :try_start_0
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdo;->zza()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdo;
 
@@ -84,6 +96,7 @@
 
     const-string v1, "Received unexpected BarhopperResponse buffer: {0}"
 
+    .line 3
     invoke-direct {v0, v1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     throw v0
@@ -94,6 +107,7 @@
 .method public close()V
     .locals 5
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/libraries/barhopper/BarhopperV3;->nativeContext:J
 
     const-wide/16 v2, 0x0

@@ -1,4 +1,4 @@
-.class final Lcom/google/common/io/BaseEncoding$Base16Encoding;
+.class public final Lcom/google/common/io/BaseEncoding$Base16Encoding;
 .super Lcom/google/common/io/BaseEncoding$StandardBaseEncoding;
 .source "SourceFile"
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final encoding:[C
+.field public final encoding:[C
 
 
 # direct methods
@@ -41,18 +41,18 @@
 
     array-length v0, v0
 
-    const/16 v1, 0x10
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const/16 v2, 0x10
 
-    if-ne v0, v1, :cond_0
+    if-ne v0, v2, :cond_0
 
     const/4 v0, 0x1
 
     goto :goto_0
 
     :cond_0
-    move v0, v2
+    move v0, v1
 
     :goto_0
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
@@ -60,33 +60,33 @@
     :goto_1
     const/16 v0, 0x100
 
-    if-ge v2, v0, :cond_1
+    if-ge v1, v0, :cond_1
 
     .line 5
     iget-object v0, p0, Lcom/google/common/io/BaseEncoding$Base16Encoding;->encoding:[C
 
-    ushr-int/lit8 v1, v2, 0x4
+    ushr-int/lit8 v2, v1, 0x4
 
-    invoke-virtual {p1, v1}, Lcom/google/common/io/BaseEncoding$Alphabet;->encode(I)C
+    invoke-virtual {p1, v2}, Lcom/google/common/io/BaseEncoding$Alphabet;->encode(I)C
 
-    move-result v1
+    move-result v2
 
-    aput-char v1, v0, v2
+    aput-char v2, v0, v1
 
     .line 6
     iget-object v0, p0, Lcom/google/common/io/BaseEncoding$Base16Encoding;->encoding:[C
 
-    or-int/lit16 v1, v2, 0x100
+    or-int/lit16 v2, v1, 0x100
 
-    and-int/lit8 v3, v2, 0xf
+    and-int/lit8 v3, v1, 0xf
 
     invoke-virtual {p1, v3}, Lcom/google/common/io/BaseEncoding$Alphabet;->encode(I)C
 
     move-result v3
 
-    aput-char v3, v0, v1
+    aput-char v3, v0, v2
 
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
@@ -121,8 +121,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-interface {p2}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
@@ -137,6 +139,7 @@
 
     move v1, v0
 
+    .line 3
     :goto_0
     invoke-interface {p2}, Ljava/lang/CharSequence;->length()I
 
@@ -144,6 +147,7 @@
 
     if-ge v0, v2, :cond_0
 
+    .line 4
     iget-object v2, p0, Lcom/google/common/io/BaseEncoding$StandardBaseEncoding;->alphabet:Lcom/google/common/io/BaseEncoding$Alphabet;
 
     invoke-interface {p2, v0}, Ljava/lang/CharSequence;->charAt(I)C
@@ -174,6 +178,7 @@
 
     int-to-byte v2, v2
 
+    .line 5
     aput-byte v2, p1, v1
 
     add-int/lit8 v0, v0, 0x2
@@ -185,6 +190,7 @@
     :cond_0
     return v1
 
+    .line 6
     :cond_1
     new-instance p0, Lcom/google/common/io/BaseEncoding$DecodingException;
 
@@ -192,19 +198,19 @@
 
     move-result p1
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    const/16 p2, 0x20
 
-    const/16 v0, 0x20
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v0, p2}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    const-string v0, "Invalid input length "
+    const-string p2, "Invalid input length "
 
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
@@ -221,10 +227,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     add-int v0, p3, p4
 
+    .line 2
     array-length v1, p2
 
     invoke-static {p3, v0, v1}, Lcom/google/common/base/Preconditions;->checkPositionIndexes(III)V
@@ -236,16 +244,19 @@
 
     add-int v1, p3, v0
 
+    .line 3
     aget-byte v1, p2, v1
 
     and-int/lit16 v1, v1, 0xff
 
+    .line 4
     iget-object v2, p0, Lcom/google/common/io/BaseEncoding$Base16Encoding;->encoding:[C
 
     aget-char v2, v2, v1
 
     invoke-interface {p1, v2}, Ljava/lang/Appendable;->append(C)Ljava/lang/Appendable;
 
+    .line 5
     iget-object v2, p0, Lcom/google/common/io/BaseEncoding$Base16Encoding;->encoding:[C
 
     or-int/lit16 v1, v1, 0x100
@@ -269,6 +280,7 @@
         .end annotation
     .end param
 
+    .line 1
     new-instance p0, Lcom/google/common/io/BaseEncoding$Base16Encoding;
 
     invoke-direct {p0, p1}, Lcom/google/common/io/BaseEncoding$Base16Encoding;-><init>(Lcom/google/common/io/BaseEncoding$Alphabet;)V

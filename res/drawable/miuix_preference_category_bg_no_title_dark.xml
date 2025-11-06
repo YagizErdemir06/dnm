@@ -7,5 +7,5 @@
             <size android:height="@dimen/miuix_preference_category_no_title_height" />
         </shape>
     </item>
-    <item android:gravity="center" android:drawable="@drawable/miuix_preference_first_last_divider_line_dark" android:left="?preferenceCategoryPaddingStart" android:right="?preferenceCategoryPaddingEnd" />
+    <item android:gravity="center" android:drawable="@drawable/miuix_preference_first_last_divider_line_dark" android:left="?preferenceItemPaddingStart" android:right="?preferenceItemPaddingEnd" />
 </layer-list>

@@ -1,4 +1,4 @@
-.class abstract Lcom/google/android/gms/common/internal/zza;
+.class public abstract Lcom/google/android/gms/common/internal/zza;
 .super Lcom/google/android/gms/common/internal/zzc;
 .source "SourceFile"
 
@@ -11,7 +11,7 @@
     .end annotation
 .end field
 
-.field final synthetic zzc:Lcom/google/android/gms/common/internal/BaseGmsClient;
+.field public final synthetic zzc:Lcom/google/android/gms/common/internal/BaseGmsClient;
 
 
 # direct methods
@@ -24,6 +24,7 @@
     .annotation build Landroidx/annotation/BinderThread;
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/common/internal/zza;->zzc:Lcom/google/android/gms/common/internal/BaseGmsClient;
 
     sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
@@ -42,6 +43,7 @@
 .method public final bridge synthetic zza(Ljava/lang/Object;)V
     .locals 2
 
+    .line 1
     iget p1, p0, Lcom/google/android/gms/common/internal/zza;->zza:I
 
     const/4 v0, 0x1
@@ -58,6 +60,7 @@
 
     iget-object p1, p0, Lcom/google/android/gms/common/internal/zza;->zzc:Lcom/google/android/gms/common/internal/BaseGmsClient;
 
+    .line 2
     invoke-static {p1, v0, v1}, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzi(Lcom/google/android/gms/common/internal/BaseGmsClient;ILandroid/os/IInterface;)V
 
     new-instance p1, Lcom/google/android/gms/common/ConnectionResult;
@@ -66,6 +69,7 @@
 
     invoke-direct {p1, v0, v1}, Lcom/google/android/gms/common/ConnectionResult;-><init>(ILandroid/app/PendingIntent;)V
 
+    .line 3
     invoke-virtual {p0, p1}, Lcom/google/android/gms/common/internal/zza;->zzb(Lcom/google/android/gms/common/ConnectionResult;)V
 
     :cond_0
@@ -74,6 +78,7 @@
     :cond_1
     iget-object p1, p0, Lcom/google/android/gms/common/internal/zza;->zzc:Lcom/google/android/gms/common/internal/BaseGmsClient;
 
+    .line 4
     invoke-static {p1, v0, v1}, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzi(Lcom/google/android/gms/common/internal/BaseGmsClient;ILandroid/os/IInterface;)V
 
     iget-object p1, p0, Lcom/google/android/gms/common/internal/zza;->zzb:Landroid/os/Bundle;
@@ -82,6 +87,7 @@
 
     const-string v0, "pendingIntent"
 
+    .line 5
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p1
@@ -97,6 +103,7 @@
 
     invoke-direct {p1, v0, v1}, Lcom/google/android/gms/common/ConnectionResult;-><init>(ILandroid/app/PendingIntent;)V
 
+    .line 6
     invoke-virtual {p0, p1}, Lcom/google/android/gms/common/internal/zza;->zzb(Lcom/google/android/gms/common/ConnectionResult;)V
 
     return-void

@@ -1,4 +1,4 @@
-.class Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationZoomCV$1;
+.class public Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationZoomCV$1;
 .super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
 
@@ -15,17 +15,30 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationZoomCV;
+.field public final synthetic this$0:Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationZoomCV;
 
-.field final synthetic val$end:F
+.field public final synthetic val$end:F
 
-.field final synthetic val$zoomRatioToggleView:Lcom/android/camera/ui/zoom/ZoomRatioToggleView;
+.field public final synthetic val$zoomRatioToggleView:Lcom/android/camera/ui/zoom/ZoomRatioToggleView;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationZoomCV;Lcom/android/camera/ui/zoom/ZoomRatioToggleView;F)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$zoomRatioToggleView",
+            "val$end"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationZoomCV$1;->this$0:Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationZoomCV;
 
     iput-object p2, p0, Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationZoomCV$1;->val$zoomRatioToggleView:Lcom/android/camera/ui/zoom/ZoomRatioToggleView;
@@ -41,7 +54,16 @@
 # virtual methods
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
 
+    .line 1
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationZoomCV$1;->val$zoomRatioToggleView:Lcom/android/camera/ui/zoom/ZoomRatioToggleView;
 
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationZoomCV$1;->val$end:F

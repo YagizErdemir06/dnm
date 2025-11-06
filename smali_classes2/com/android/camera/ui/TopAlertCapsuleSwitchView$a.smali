@@ -19,4 +19,16 @@
 .end method
 
 .method public abstract b(ILjava/lang/String;Ljava/lang/String;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "parentKey",
+            "child",
+            "contentDescription"
+        }
+    .end annotation
 .end method

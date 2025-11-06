@@ -1,4 +1,4 @@
-.class Lmiuix/appcompat/app/AlertController$AlertParams$4;
+.class public Lmiuix/appcompat/app/AlertController$AlertParams$4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,15 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lmiuix/appcompat/app/AlertController$AlertParams;
+.field public final synthetic this$0:Lmiuix/appcompat/app/AlertController$AlertParams;
 
-.field final synthetic val$dialog:Lmiuix/appcompat/app/AlertController;
+.field public final synthetic val$dialog:Lmiuix/appcompat/app/AlertController;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/appcompat/app/AlertController$AlertParams;Lmiuix/appcompat/app/AlertController;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/appcompat/app/AlertController$AlertParams$4;->this$0:Lmiuix/appcompat/app/AlertController$AlertParams;
 
     iput-object p2, p0, Lmiuix/appcompat/app/AlertController$AlertParams$4;->val$dialog:Lmiuix/appcompat/app/AlertController;
@@ -50,25 +51,28 @@
         }
     .end annotation
 
+    .line 1
     iget-object p1, p0, Lmiuix/appcompat/app/AlertController$AlertParams$4;->this$0:Lmiuix/appcompat/app/AlertController$AlertParams;
 
     iget-object p1, p1, Lmiuix/appcompat/app/AlertController$AlertParams;->mOnClickListener:Landroid/content/DialogInterface$OnClickListener;
 
     iget-object p2, p0, Lmiuix/appcompat/app/AlertController$AlertParams$4;->val$dialog:Lmiuix/appcompat/app/AlertController;
 
-    iget-object p2, p2, Lmiuix/appcompat/app/AlertController;->d:Landroidx/appcompat/app/AppCompatDialog;
+    iget-object p2, p2, Lmiuix/appcompat/app/AlertController;->e:Landroidx/appcompat/app/AppCompatDialog;
 
     invoke-interface {p1, p2, p3}, Landroid/content/DialogInterface$OnClickListener;->onClick(Landroid/content/DialogInterface;I)V
 
+    .line 2
     iget-object p1, p0, Lmiuix/appcompat/app/AlertController$AlertParams$4;->this$0:Lmiuix/appcompat/app/AlertController$AlertParams;
 
     iget-boolean p1, p1, Lmiuix/appcompat/app/AlertController$AlertParams;->mIsSingleChoice:Z
 
     if-nez p1, :cond_0
 
+    .line 3
     iget-object p0, p0, Lmiuix/appcompat/app/AlertController$AlertParams$4;->val$dialog:Lmiuix/appcompat/app/AlertController;
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AlertController;->d:Landroidx/appcompat/app/AppCompatDialog;
+    iget-object p0, p0, Lmiuix/appcompat/app/AlertController;->e:Landroidx/appcompat/app/AppCompatDialog;
 
     invoke-virtual {p0}, Landroidx/appcompat/app/AppCompatDialog;->dismiss()V
 

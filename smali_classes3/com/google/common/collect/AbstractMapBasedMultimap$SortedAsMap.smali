@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/AbstractMapBasedMultimap$SortedAsMap;
+.class public Lcom/google/common/collect/AbstractMapBasedMultimap$SortedAsMap;
 .super Lcom/google/common/collect/AbstractMapBasedMultimap$AsMap;
 .source "SourceFile"
 
@@ -29,7 +29,7 @@
 
 
 # instance fields
-.field sortedKeySet:Ljava/util/SortedSet;
+.field public sortedKeySet:Ljava/util/SortedSet;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/SortedSet<",
@@ -41,7 +41,7 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Lcom/google/common/collect/AbstractMapBasedMultimap;
+.field public final synthetic this$0:Lcom/google/common/collect/AbstractMapBasedMultimap;
 
 
 # direct methods
@@ -57,8 +57,10 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$SortedAsMap;->this$0:Lcom/google/common/collect/AbstractMapBasedMultimap;
 
+    .line 2
     invoke-direct {p0, p1, p2}, Lcom/google/common/collect/AbstractMapBasedMultimap$AsMap;-><init>(Lcom/google/common/collect/AbstractMapBasedMultimap;Ljava/util/Map;)V
 
     return-void
@@ -79,6 +81,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$SortedAsMap;->sortedMap()Ljava/util/SortedMap;
 
     move-result-object p0
@@ -136,6 +139,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$SortedAsMap;->sortedMap()Ljava/util/SortedMap;
 
     move-result-object p0
@@ -163,6 +167,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/AbstractMapBasedMultimap$SortedAsMap;
 
     iget-object v1, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$SortedAsMap;->this$0:Lcom/google/common/collect/AbstractMapBasedMultimap;
@@ -228,6 +233,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultimap$SortedAsMap;->sortedMap()Ljava/util/SortedMap;
 
     move-result-object p0
@@ -251,6 +257,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$AsMap;->submap:Ljava/util/Map;
 
     check-cast p0, Ljava/util/SortedMap;
@@ -278,6 +285,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/AbstractMapBasedMultimap$SortedAsMap;
 
     iget-object v1, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$SortedAsMap;->this$0:Lcom/google/common/collect/AbstractMapBasedMultimap;
@@ -311,6 +319,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/AbstractMapBasedMultimap$SortedAsMap;
 
     iget-object v1, p0, Lcom/google/common/collect/AbstractMapBasedMultimap$SortedAsMap;->this$0:Lcom/google/common/collect/AbstractMapBasedMultimap;

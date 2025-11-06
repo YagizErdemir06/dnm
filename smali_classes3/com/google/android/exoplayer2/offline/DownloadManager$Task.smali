@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/offline/DownloadManager$Task;
+.class public Lcom/google/android/exoplayer2/offline/DownloadManager$Task;
 .super Ljava/lang/Thread;
 .source "SourceFile"
 
@@ -88,6 +88,7 @@
 .method public static synthetic access$000(Lcom/google/android/exoplayer2/offline/DownloadManager$Task;)Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/offline/DownloadManager$Task;->isRemove:Z
 
     return p0
@@ -96,6 +97,7 @@
 .method public static synthetic access$200(Lcom/google/android/exoplayer2/offline/DownloadManager$Task;)Lcom/google/android/exoplayer2/offline/DownloadRequest;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/offline/DownloadManager$Task;->request:Lcom/google/android/exoplayer2/offline/DownloadRequest;
 
     return-object p0
@@ -104,6 +106,7 @@
 .method public static synthetic access$300(Lcom/google/android/exoplayer2/offline/DownloadManager$Task;)Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/offline/DownloadManager$Task;->isCanceled:Z
 
     return p0
@@ -112,6 +115,7 @@
 .method public static synthetic access$400(Lcom/google/android/exoplayer2/offline/DownloadManager$Task;)Ljava/lang/Exception;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/offline/DownloadManager$Task;->finalException:Ljava/lang/Exception;
 
     return-object p0
@@ -126,6 +130,7 @@
 
     const/16 v0, 0x1388
 
+    .line 1
     invoke-static {p0, v0}, Ljava/lang/Math;->min(II)I
 
     move-result p0
@@ -142,8 +147,10 @@
 
     const/4 p1, 0x0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/offline/DownloadManager$Task;->internalHandler:Lcom/google/android/exoplayer2/offline/DownloadManager$InternalHandler;
 
+    .line 2
     :cond_0
     iget-boolean p1, p0, Lcom/google/android/exoplayer2/offline/DownloadManager$Task;->isCanceled:Z
 
@@ -151,12 +158,15 @@
 
     const/4 p1, 0x1
 
+    .line 3
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/offline/DownloadManager$Task;->isCanceled:Z
 
+    .line 4
     iget-object p1, p0, Lcom/google/android/exoplayer2/offline/DownloadManager$Task;->downloader:Lcom/google/android/exoplayer2/offline/Downloader;
 
     invoke-interface {p1}, Lcom/google/android/exoplayer2/offline/Downloader;->cancel()V
 
+    .line 5
     invoke-virtual {p0}, Ljava/lang/Thread;->interrupt()V
 
     :cond_1
@@ -164,42 +174,49 @@
 .end method
 
 .method public onProgress(JJF)V
-    .locals 1
+    .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/offline/DownloadManager$Task;->downloadProgress:Lcom/google/android/exoplayer2/offline/DownloadProgress;
 
     iput-wide p3, v0, Lcom/google/android/exoplayer2/offline/DownloadProgress;->bytesDownloaded:J
 
+    .line 2
     iget-object p3, p0, Lcom/google/android/exoplayer2/offline/DownloadManager$Task;->downloadProgress:Lcom/google/android/exoplayer2/offline/DownloadProgress;
 
     iput p5, p3, Lcom/google/android/exoplayer2/offline/DownloadProgress;->percentDownloaded:F
 
+    .line 3
     iget-wide p3, p0, Lcom/google/android/exoplayer2/offline/DownloadManager$Task;->contentLength:J
 
     cmp-long p3, p1, p3
 
     if-eqz p3, :cond_0
 
+    .line 4
     iput-wide p1, p0, Lcom/google/android/exoplayer2/offline/DownloadManager$Task;->contentLength:J
 
+    .line 5
     iget-object p3, p0, Lcom/google/android/exoplayer2/offline/DownloadManager$Task;->internalHandler:Lcom/google/android/exoplayer2/offline/DownloadManager$InternalHandler;
 
     if-eqz p3, :cond_0
 
-    const/16 p4, 0x20
+    const/16 p4, 0xa
 
-    shr-long p4, p1, p4
+    const/16 p5, 0x20
 
-    long-to-int p4, p4
+    shr-long v0, p1, p5
+
+    long-to-int p5, v0
 
     long-to-int p1, p1
 
-    const/16 p2, 0xa
-
-    invoke-virtual {p3, p2, p4, p1, p0}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
+    .line 6
+    invoke-virtual {p3, p4, p5, p1, p0}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object p0
 
+    .line 7
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     :cond_0
@@ -209,11 +226,13 @@
 .method public run()V
     .locals 8
 
+    .line 1
     :try_start_0
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/offline/DownloadManager$Task;->isRemove:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/offline/DownloadManager$Task;->downloader:Lcom/google/android/exoplayer2/offline/Downloader;
 
     invoke-interface {v0}, Lcom/google/android/exoplayer2/offline/Downloader;->remove()V
@@ -221,12 +240,13 @@
     goto :goto_1
 
     :cond_0
-    const/4 v0, 0x0
+    const-wide/16 v0, -0x1
 
-    const-wide/16 v1, -0x1
+    const/4 v2, 0x0
 
-    move v3, v0
+    move v3, v2
 
+    .line 3
     :cond_1
     :goto_0
     iget-boolean v4, p0, Lcom/google/android/exoplayer2/offline/DownloadManager$Task;->isCanceled:Z
@@ -236,6 +256,7 @@
 
     if-nez v4, :cond_4
 
+    .line 4
     :try_start_1
     iget-object v4, p0, Lcom/google/android/exoplayer2/offline/DownloadManager$Task;->downloader:Lcom/google/android/exoplayer2/offline/Downloader;
 
@@ -250,30 +271,34 @@
     :catch_0
     move-exception v4
 
+    .line 5
     :try_start_2
     iget-boolean v5, p0, Lcom/google/android/exoplayer2/offline/DownloadManager$Task;->isCanceled:Z
 
     if-nez v5, :cond_1
 
+    .line 6
     iget-object v5, p0, Lcom/google/android/exoplayer2/offline/DownloadManager$Task;->downloadProgress:Lcom/google/android/exoplayer2/offline/DownloadProgress;
 
     iget-wide v5, v5, Lcom/google/android/exoplayer2/offline/DownloadProgress;->bytesDownloaded:J
 
-    cmp-long v7, v5, v1
+    cmp-long v7, v5, v0
 
     if-eqz v7, :cond_2
 
-    move v3, v0
+    move v3, v2
 
-    move-wide v1, v5
+    move-wide v0, v5
 
     :cond_2
     add-int/lit8 v3, v3, 0x1
 
+    .line 7
     iget v5, p0, Lcom/google/android/exoplayer2/offline/DownloadManager$Task;->minRetryCount:I
 
     if-gt v3, v5, :cond_3
 
+    .line 8
     invoke-static {v3}, Lcom/google/android/exoplayer2/offline/DownloadManager$Task;->getRetryDelayMillis(I)I
 
     move-result v4
@@ -284,6 +309,7 @@
 
     goto :goto_0
 
+    .line 9
     :cond_3
     throw v4
     :try_end_2
@@ -293,10 +319,12 @@
     :catch_1
     move-exception v0
 
+    .line 10
     iput-object v0, p0, Lcom/google/android/exoplayer2/offline/DownloadManager$Task;->finalException:Ljava/lang/Exception;
 
     goto :goto_1
 
+    .line 11
     :catch_2
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -304,6 +332,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
 
+    .line 12
     :cond_4
     :goto_1
     iget-object v0, p0, Lcom/google/android/exoplayer2/offline/DownloadManager$Task;->internalHandler:Lcom/google/android/exoplayer2/offline/DownloadManager$InternalHandler;
@@ -312,6 +341,7 @@
 
     const/16 v1, 0x9
 
+    .line 13
     invoke-virtual {v0, v1, p0}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object p0

@@ -1,4 +1,4 @@
-.class synthetic Lorg/apache/poi/POIXMLProperties$1;
+.class public synthetic Lorg/apache/poi/POIXMLProperties$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

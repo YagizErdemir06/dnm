@@ -16,12 +16,4 @@
 
 # virtual methods
 .method public abstract onDragStart(Landroid/view/View;Landroidx/core/view/DragStartHelper;)Z
-    .param p1    # Landroid/view/View;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroidx/core/view/DragStartHelper;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 .end method

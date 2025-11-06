@@ -1,4 +1,4 @@
-.class Landroidx/loader/content/ModernAsyncTask$3;
+.class public Landroidx/loader/content/ModernAsyncTask$3;
 .super Ljava/util/concurrent/FutureTask;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/loader/content/ModernAsyncTask;
+.field public final synthetic this$0:Landroidx/loader/content/ModernAsyncTask;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/loader/content/ModernAsyncTask;Ljava/util/concurrent/Callable;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/loader/content/ModernAsyncTask$3;->this$0:Landroidx/loader/content/ModernAsyncTask;
 
     invoke-direct {p0, p2}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/util/concurrent/Callable;)V
@@ -43,11 +44,13 @@
 
     const-string v0, "An error occurred while executing doInBackground()"
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Ljava/util/concurrent/FutureTask;->get()Ljava/lang/Object;
 
     move-result-object v1
 
+    .line 2
     iget-object v2, p0, Landroidx/loader/content/ModernAsyncTask$3;->this$0:Landroidx/loader/content/ModernAsyncTask;
 
     invoke-virtual {v2, v1}, Landroidx/loader/content/ModernAsyncTask;->postResultIfNotInvoked(Ljava/lang/Object;)V
@@ -62,12 +65,14 @@
     :catchall_0
     move-exception p0
 
+    .line 3
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     throw v1
 
+    .line 4
     :catch_0
     iget-object p0, p0, Landroidx/loader/content/ModernAsyncTask$3;->this$0:Landroidx/loader/content/ModernAsyncTask;
 
@@ -80,9 +85,11 @@
     :catch_1
     move-exception p0
 
+    .line 5
     new-instance v1, Ljava/lang/RuntimeException;
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    .line 6
+    invoke-virtual {p0}, Ljava/util/concurrent/ExecutionException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -95,6 +102,7 @@
 
     const-string v0, "AsyncTask"
 
+    .line 7
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0

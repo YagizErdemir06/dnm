@@ -1,14 +1,14 @@
-.class final Lcom/google/android/gms/internal/mlkit_common/zzq;
+.class public final Lcom/google/android/gms/internal/mlkit_common/zzq;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field final zza:J
+.field public final zza:J
 
-.field final zzb:J
+.field public final zzb:J
 
-.field final zzc:Z
+.field public final zzc:Z
 
 
 # direct methods
@@ -42,6 +42,13 @@
         }
     .end annotation
 
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x15
+
+    if-lt v0, v1, :cond_0
+
     new-instance v0, Lcom/google/android/gms/internal/mlkit_common/zzl;
 
     invoke-direct {v0, p0}, Lcom/google/android/gms/internal/mlkit_common/zzl;-><init>(Ljava/io/FileDescriptor;)V
@@ -54,6 +61,7 @@
 
     new-instance v6, Lcom/google/android/gms/internal/mlkit_common/zzq;
 
+    .line 2
     iget-wide v1, p0, Landroid/system/StructStat;->st_dev:J
 
     iget-wide v3, p0, Landroid/system/StructStat;->st_ino:J
@@ -69,6 +77,14 @@
     invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/internal/mlkit_common/zzq;-><init>(JJZ)V
 
     return-object v6
+
+    .line 3
+    :cond_0
+    invoke-static {p0}, Lcom/google/android/gms/internal/mlkit_common/zzo;->zza(Ljava/io/FileDescriptor;)Lcom/google/android/gms/internal/mlkit_common/zzq;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method public static zzb(Ljava/lang/String;)Lcom/google/android/gms/internal/mlkit_common/zzq;
@@ -78,6 +94,13 @@
             Ljava/io/IOException;
         }
     .end annotation
+
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x15
+
+    if-lt v0, v1, :cond_0
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_common/zzk;
 
@@ -91,6 +114,7 @@
 
     new-instance v6, Lcom/google/android/gms/internal/mlkit_common/zzq;
 
+    .line 2
     iget-wide v1, p0, Landroid/system/StructStat;->st_dev:J
 
     iget-wide v3, p0, Landroid/system/StructStat;->st_ino:J
@@ -106,6 +130,14 @@
     invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/internal/mlkit_common/zzq;-><init>(JJZ)V
 
     return-object v6
+
+    .line 3
+    :cond_0
+    invoke-static {p0}, Lcom/google/android/gms/internal/mlkit_common/zzo;->zzd(Ljava/lang/String;)Lcom/google/android/gms/internal/mlkit_common/zzq;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method private static zzc(Ljava/util/concurrent/Callable;)Ljava/lang/Object;
@@ -116,6 +148,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     invoke-interface {p0}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
 
@@ -130,6 +163,7 @@
 
     new-instance v0, Ljava/io/IOException;
 
+    .line 2
     invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
 
     throw v0

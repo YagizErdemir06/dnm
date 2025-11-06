@@ -128,10 +128,10 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    const/4 v3, 0x0
-
     .line 2
     sget-object v6, Lcom/google/android/exoplayer2/util/Util;->EMPTY_BYTE_ARRAY:[B
+
+    const/4 v3, 0x0
 
     move-object v0, p0
 
@@ -166,12 +166,12 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
+    sget-object v6, Lcom/google/android/exoplayer2/util/Util;->EMPTY_BYTE_ARRAY:[B
+
     const/4 v2, 0x0
 
     const/4 v3, 0x0
-
-    .line 1
-    sget-object v6, Lcom/google/android/exoplayer2/util/Util;->EMPTY_BYTE_ARRAY:[B
 
     move-object v0, p0
 

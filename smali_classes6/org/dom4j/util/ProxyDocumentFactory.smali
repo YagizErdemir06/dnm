@@ -67,6 +67,7 @@
 .method public createCDATA(Ljava/lang/String;)Lorg/dom4j/CDATA;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/util/ProxyDocumentFactory;->proxy:Lorg/dom4j/DocumentFactory;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/DocumentFactory;->createCDATA(Ljava/lang/String;)Lorg/dom4j/CDATA;
@@ -79,6 +80,7 @@
 .method public createComment(Ljava/lang/String;)Lorg/dom4j/Comment;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/util/ProxyDocumentFactory;->proxy:Lorg/dom4j/DocumentFactory;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/DocumentFactory;->createComment(Ljava/lang/String;)Lorg/dom4j/Comment;
@@ -91,6 +93,7 @@
 .method public createDocType(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/dom4j/DocumentType;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/util/ProxyDocumentFactory;->proxy:Lorg/dom4j/DocumentFactory;
 
     invoke-virtual {p0, p1, p2, p3}, Lorg/dom4j/DocumentFactory;->createDocType(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/dom4j/DocumentType;
@@ -155,6 +158,7 @@
 .method public createEntity(Ljava/lang/String;Ljava/lang/String;)Lorg/dom4j/Entity;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/util/ProxyDocumentFactory;->proxy:Lorg/dom4j/DocumentFactory;
 
     invoke-virtual {p0, p1, p2}, Lorg/dom4j/DocumentFactory;->createEntity(Ljava/lang/String;Ljava/lang/String;)Lorg/dom4j/Entity;
@@ -167,6 +171,7 @@
 .method public createNamespace(Ljava/lang/String;Ljava/lang/String;)Lorg/dom4j/Namespace;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/util/ProxyDocumentFactory;->proxy:Lorg/dom4j/DocumentFactory;
 
     invoke-virtual {p0, p1, p2}, Lorg/dom4j/DocumentFactory;->createNamespace(Ljava/lang/String;Ljava/lang/String;)Lorg/dom4j/Namespace;
@@ -179,6 +184,7 @@
 .method public createPattern(Ljava/lang/String;)Lorg/dom4j/rule/Pattern;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/util/ProxyDocumentFactory;->proxy:Lorg/dom4j/DocumentFactory;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/DocumentFactory;->createPattern(Ljava/lang/String;)Lorg/dom4j/rule/Pattern;
@@ -269,6 +275,7 @@
 .method public createText(Ljava/lang/String;)Lorg/dom4j/Text;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/util/ProxyDocumentFactory;->proxy:Lorg/dom4j/DocumentFactory;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/DocumentFactory;->createText(Ljava/lang/String;)Lorg/dom4j/Text;
@@ -333,6 +340,7 @@
 .method public getProxy()Lorg/dom4j/DocumentFactory;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/util/ProxyDocumentFactory;->proxy:Lorg/dom4j/DocumentFactory;
 
     return-object p0
@@ -343,10 +351,12 @@
 
     if-nez p1, :cond_0
 
+    .line 1
     invoke-static {}, Lorg/dom4j/DocumentFactory;->getInstance()Lorg/dom4j/DocumentFactory;
 
     move-result-object p1
 
+    .line 2
     :cond_0
     iput-object p1, p0, Lorg/dom4j/util/ProxyDocumentFactory;->proxy:Lorg/dom4j/DocumentFactory;
 

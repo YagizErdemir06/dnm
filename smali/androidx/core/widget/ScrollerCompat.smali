@@ -9,17 +9,19 @@
 
 
 # instance fields
-.field mScroller:Landroid/widget/OverScroller;
+.field public mScroller:Landroid/widget/OverScroller;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/view/animation/Interpolator;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-eqz p2, :cond_0
 
+    .line 2
     new-instance v0, Landroid/widget/OverScroller;
 
     invoke-direct {v0, p1, p2}, Landroid/widget/OverScroller;-><init>(Landroid/content/Context;Landroid/view/animation/Interpolator;)V
@@ -72,6 +74,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/widget/ScrollerCompat;->mScroller:Landroid/widget/OverScroller;
 
     invoke-virtual {p0}, Landroid/widget/OverScroller;->abortAnimation()V
@@ -84,6 +87,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/widget/ScrollerCompat;->mScroller:Landroid/widget/OverScroller;
 
     invoke-virtual {p0}, Landroid/widget/OverScroller;->computeScrollOffset()Z
@@ -164,6 +168,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/widget/ScrollerCompat;->mScroller:Landroid/widget/OverScroller;
 
     invoke-virtual {p0}, Landroid/widget/OverScroller;->getCurrVelocity()F
@@ -178,6 +183,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/widget/ScrollerCompat;->mScroller:Landroid/widget/OverScroller;
 
     invoke-virtual {p0}, Landroid/widget/OverScroller;->getCurrX()I
@@ -192,6 +198,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/widget/ScrollerCompat;->mScroller:Landroid/widget/OverScroller;
 
     invoke-virtual {p0}, Landroid/widget/OverScroller;->getCurrY()I
@@ -206,6 +213,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/widget/ScrollerCompat;->mScroller:Landroid/widget/OverScroller;
 
     invoke-virtual {p0}, Landroid/widget/OverScroller;->getFinalX()I
@@ -220,6 +228,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/widget/ScrollerCompat;->mScroller:Landroid/widget/OverScroller;
 
     invoke-virtual {p0}, Landroid/widget/OverScroller;->getFinalY()I
@@ -234,6 +243,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/widget/ScrollerCompat;->mScroller:Landroid/widget/OverScroller;
 
     invoke-virtual {p0}, Landroid/widget/OverScroller;->isFinished()Z
@@ -248,6 +258,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/widget/ScrollerCompat;->mScroller:Landroid/widget/OverScroller;
 
     invoke-virtual {p0}, Landroid/widget/OverScroller;->isOverScrolled()Z
@@ -262,6 +273,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/widget/ScrollerCompat;->mScroller:Landroid/widget/OverScroller;
 
     invoke-virtual {p0, p1, p2, p3}, Landroid/widget/OverScroller;->notifyHorizontalEdgeReached(III)V
@@ -274,6 +286,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/widget/ScrollerCompat;->mScroller:Landroid/widget/OverScroller;
 
     invoke-virtual {p0, p1, p2, p3}, Landroid/widget/OverScroller;->notifyVerticalEdgeReached(III)V
@@ -286,6 +299,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/core/widget/ScrollerCompat;->mScroller:Landroid/widget/OverScroller;
 
     move v1, p1

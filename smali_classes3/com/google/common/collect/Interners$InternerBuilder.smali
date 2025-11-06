@@ -65,14 +65,17 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/common/collect/Interners$InternerBuilder;->strong:Z
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/Interners$InternerBuilder;->mapMaker:Lcom/google/common/collect/MapMaker;
 
     invoke-virtual {v0}, Lcom/google/common/collect/MapMaker;->weakKeys()Lcom/google/common/collect/MapMaker;
 
+    .line 3
     :cond_0
     new-instance v0, Lcom/google/common/collect/Interners$InternerImpl;
 
@@ -88,6 +91,7 @@
 .method public concurrencyLevel(I)Lcom/google/common/collect/Interners$InternerBuilder;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Interners$InternerBuilder;->mapMaker:Lcom/google/common/collect/MapMaker;
 
     invoke-virtual {v0, p1}, Lcom/google/common/collect/MapMaker;->concurrencyLevel(I)Lcom/google/common/collect/MapMaker;
@@ -100,6 +104,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/common/collect/Interners$InternerBuilder;->strong:Z
 
     return-object p0
@@ -113,6 +118,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/common/collect/Interners$InternerBuilder;->strong:Z
 
     return-object p0

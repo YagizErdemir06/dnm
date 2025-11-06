@@ -1,4 +1,4 @@
-.class abstract Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$Factory;
+.class public abstract Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$Factory;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -54,10 +54,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$Factory;->context:Landroid/content/Context;
 
+    .line 3
     iput-object p2, p0, Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$Factory;->dataClass:Ljava/lang/Class;
 
     return-void
@@ -85,6 +88,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader;
 
     iget-object v1, p0, Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$Factory;->context:Landroid/content/Context;
@@ -93,6 +97,7 @@
 
     iget-object v3, p0, Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$Factory;->dataClass:Ljava/lang/Class;
 
+    .line 2
     invoke-virtual {p1, v2, v3}, Lcom/bumptech/glide/load/model/MultiModelLoaderFactory;->build(Ljava/lang/Class;Ljava/lang/Class;)Lcom/bumptech/glide/load/model/ModelLoader;
 
     move-result-object v2
@@ -101,6 +106,7 @@
 
     iget-object v4, p0, Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$Factory;->dataClass:Ljava/lang/Class;
 
+    .line 3
     invoke-virtual {p1, v3, v4}, Lcom/bumptech/glide/load/model/MultiModelLoaderFactory;->build(Ljava/lang/Class;Ljava/lang/Class;)Lcom/bumptech/glide/load/model/ModelLoader;
 
     move-result-object p1

@@ -8,7 +8,7 @@
 
 
 # instance fields
-.field final zab:Ljava/util/Set;
+.field public final zab:Ljava/util/Set;
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
     .end annotation
 .end field
@@ -20,6 +20,7 @@
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/common/api/Status;
 
     const/16 v1, 0x8
@@ -36,16 +37,19 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/util/WeakHashMap;
 
     invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
 
+    .line 2
     invoke-static {v0}, Ljava/util/Collections;->newSetFromMap(Ljava/util/Map;)Ljava/util/Set;
 
     move-result-object v0
 
+    .line 3
     invoke-static {v0}, Ljava/util/Collections;->synchronizedSet(Ljava/util/Set;)Ljava/util/Set;
 
     move-result-object v0
@@ -66,12 +70,14 @@
 .method public final zaa(Lcom/google/android/gms/common/api/internal/BasePendingResult;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zadc;->zab:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zadc;->zac:Lcom/google/android/gms/common/api/internal/zadb;
 
+    .line 2
     invoke-virtual {p1, p0}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->zan(Lcom/google/android/gms/common/api/internal/zadb;)V
 
     return-void
@@ -80,6 +86,7 @@
 .method public final zab()V
     .locals 5
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zadc;->zab:Ljava/util/Set;
 
     const/4 v1, 0x0
@@ -92,6 +99,7 @@
 
     check-cast v0, [Lcom/google/android/gms/common/api/internal/BasePendingResult;
 
+    .line 2
     array-length v2, v0
 
     :goto_0
@@ -101,8 +109,10 @@
 
     const/4 v4, 0x0
 
+    .line 3
     invoke-virtual {v3, v4}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->zan(Lcom/google/android/gms/common/api/internal/zadb;)V
 
+    .line 4
     invoke-virtual {v3}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->zam()Z
 
     move-result v4
@@ -111,6 +121,7 @@
 
     iget-object v4, p0, Lcom/google/android/gms/common/api/internal/zadc;->zab:Ljava/util/Set;
 
+    .line 5
     invoke-interface {v4, v3}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
     :cond_0

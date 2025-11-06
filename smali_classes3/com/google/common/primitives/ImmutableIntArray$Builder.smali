@@ -27,12 +27,15 @@
 .method public constructor <init>(I)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput v0, p0, Lcom/google/common/primitives/ImmutableIntArray$Builder;->count:I
 
+    .line 3
     new-array p1, p1, [I
 
     iput-object p1, p0, Lcom/google/common/primitives/ImmutableIntArray$Builder;->array:[I
@@ -43,16 +46,19 @@
 .method private ensureRoomFor(I)V
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/common/primitives/ImmutableIntArray$Builder;->count:I
 
     add-int/2addr v0, p1
 
+    .line 2
     iget-object p1, p0, Lcom/google/common/primitives/ImmutableIntArray$Builder;->array:[I
 
     array-length v1, p1
 
     if-le v0, v1, :cond_0
 
+    .line 3
     array-length v1, p1
 
     invoke-static {v1, v0}, Lcom/google/common/primitives/ImmutableIntArray$Builder;->expandedCapacity(II)I
@@ -84,6 +90,7 @@
 
     add-int/lit8 p1, p1, -0x1
 
+    .line 1
     invoke-static {p1}, Ljava/lang/Integer;->highestOneBit(I)I
 
     move-result p0
@@ -98,6 +105,7 @@
     :cond_1
     return p0
 
+    .line 2
     :cond_2
     new-instance p0, Ljava/lang/AssertionError;
 
@@ -115,8 +123,10 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/google/common/primitives/ImmutableIntArray$Builder;->ensureRoomFor(I)V
 
+    .line 2
     iget-object v1, p0, Lcom/google/common/primitives/ImmutableIntArray$Builder;->array:[I
 
     iget v2, p0, Lcom/google/common/primitives/ImmutableIntArray$Builder;->count:I
@@ -125,6 +135,7 @@
 
     add-int/2addr v2, v0
 
+    .line 3
     iput v2, p0, Lcom/google/common/primitives/ImmutableIntArray$Builder;->count:I
 
     return-object p0
@@ -325,6 +336,7 @@
     .annotation runtime Lcom/google/errorprone/annotations/CheckReturnValue;
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/common/primitives/ImmutableIntArray$Builder;->count:I
 
     if-nez v0, :cond_0
@@ -340,13 +352,13 @@
 
     iget-object v1, p0, Lcom/google/common/primitives/ImmutableIntArray$Builder;->array:[I
 
-    iget p0, p0, Lcom/google/common/primitives/ImmutableIntArray$Builder;->count:I
-
     const/4 v2, 0x0
+
+    iget p0, p0, Lcom/google/common/primitives/ImmutableIntArray$Builder;->count:I
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, v1, v3, p0, v2}, Lcom/google/common/primitives/ImmutableIntArray;-><init>([IIILcom/google/common/primitives/ImmutableIntArray$1;)V
+    invoke-direct {v0, v1, v2, p0, v3}, Lcom/google/common/primitives/ImmutableIntArray;-><init>([IIILcom/google/common/primitives/ImmutableIntArray$1;)V
 
     move-object p0, v0
 

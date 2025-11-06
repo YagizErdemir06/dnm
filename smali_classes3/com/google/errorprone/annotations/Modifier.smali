@@ -45,6 +45,7 @@
 .method public static constructor <clinit>()V
     .locals 16
 
+    .line 1
     new-instance v0, Lcom/google/errorprone/annotations/Modifier;
 
     const-string v1, "PUBLIC"
@@ -55,6 +56,7 @@
 
     sput-object v0, Lcom/google/errorprone/annotations/Modifier;->PUBLIC:Lcom/google/errorprone/annotations/Modifier;
 
+    .line 2
     new-instance v1, Lcom/google/errorprone/annotations/Modifier;
 
     const-string v3, "PROTECTED"
@@ -65,6 +67,7 @@
 
     sput-object v1, Lcom/google/errorprone/annotations/Modifier;->PROTECTED:Lcom/google/errorprone/annotations/Modifier;
 
+    .line 3
     new-instance v3, Lcom/google/errorprone/annotations/Modifier;
 
     const-string v5, "PRIVATE"
@@ -75,6 +78,7 @@
 
     sput-object v3, Lcom/google/errorprone/annotations/Modifier;->PRIVATE:Lcom/google/errorprone/annotations/Modifier;
 
+    .line 4
     new-instance v5, Lcom/google/errorprone/annotations/Modifier;
 
     const-string v7, "ABSTRACT"
@@ -85,6 +89,7 @@
 
     sput-object v5, Lcom/google/errorprone/annotations/Modifier;->ABSTRACT:Lcom/google/errorprone/annotations/Modifier;
 
+    .line 5
     new-instance v7, Lcom/google/errorprone/annotations/Modifier;
 
     const-string v9, "DEFAULT"
@@ -95,6 +100,7 @@
 
     sput-object v7, Lcom/google/errorprone/annotations/Modifier;->DEFAULT:Lcom/google/errorprone/annotations/Modifier;
 
+    .line 6
     new-instance v9, Lcom/google/errorprone/annotations/Modifier;
 
     const-string v11, "STATIC"
@@ -105,6 +111,7 @@
 
     sput-object v9, Lcom/google/errorprone/annotations/Modifier;->STATIC:Lcom/google/errorprone/annotations/Modifier;
 
+    .line 7
     new-instance v11, Lcom/google/errorprone/annotations/Modifier;
 
     const-string v13, "FINAL"
@@ -115,6 +122,7 @@
 
     sput-object v11, Lcom/google/errorprone/annotations/Modifier;->FINAL:Lcom/google/errorprone/annotations/Modifier;
 
+    .line 8
     new-instance v13, Lcom/google/errorprone/annotations/Modifier;
 
     const-string v15, "TRANSIENT"
@@ -125,6 +133,7 @@
 
     sput-object v13, Lcom/google/errorprone/annotations/Modifier;->TRANSIENT:Lcom/google/errorprone/annotations/Modifier;
 
+    .line 9
     new-instance v15, Lcom/google/errorprone/annotations/Modifier;
 
     const-string v14, "VOLATILE"
@@ -135,6 +144,7 @@
 
     sput-object v15, Lcom/google/errorprone/annotations/Modifier;->VOLATILE:Lcom/google/errorprone/annotations/Modifier;
 
+    .line 10
     new-instance v14, Lcom/google/errorprone/annotations/Modifier;
 
     const-string v12, "SYNCHRONIZED"
@@ -145,6 +155,7 @@
 
     sput-object v14, Lcom/google/errorprone/annotations/Modifier;->SYNCHRONIZED:Lcom/google/errorprone/annotations/Modifier;
 
+    .line 11
     new-instance v12, Lcom/google/errorprone/annotations/Modifier;
 
     const-string v10, "NATIVE"
@@ -155,6 +166,7 @@
 
     sput-object v12, Lcom/google/errorprone/annotations/Modifier;->NATIVE:Lcom/google/errorprone/annotations/Modifier;
 
+    .line 12
     new-instance v10, Lcom/google/errorprone/annotations/Modifier;
 
     const-string v8, "STRICTFP"
@@ -211,6 +223,7 @@
 
     aput-object v10, v8, v6
 
+    .line 13
     sput-object v8, Lcom/google/errorprone/annotations/Modifier;->$VALUES:[Lcom/google/errorprone/annotations/Modifier;
 
     return-void
@@ -218,12 +231,8 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -232,6 +241,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/errorprone/annotations/Modifier;
     .locals 1
 
+    .line 1
     const-class v0, Lcom/google/errorprone/annotations/Modifier;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -246,6 +256,7 @@
 .method public static values()[Lcom/google/errorprone/annotations/Modifier;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/errorprone/annotations/Modifier;->$VALUES:[Lcom/google/errorprone/annotations/Modifier;
 
     invoke-virtual {v0}, [Lcom/google/errorprone/annotations/Modifier;->clone()Ljava/lang/Object;

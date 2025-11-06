@@ -1,4 +1,4 @@
-.class final Lcom/google/common/graph/UndirectedNetworkConnections;
+.class public final Lcom/google/common/graph/UndirectedNetworkConnections;
 .super Lcom/google/common/graph/AbstractUndirectedNetworkConnections;
 .source "SourceFile"
 
@@ -31,6 +31,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/graph/AbstractUndirectedNetworkConnections;-><init>(Ljava/util/Map;)V
 
     return-void
@@ -50,6 +51,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/graph/UndirectedNetworkConnections;
 
     const/4 v1, 0x2
@@ -79,6 +81,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/graph/UndirectedNetworkConnections;
 
     invoke-static {p0}, Lcom/google/common/collect/ImmutableBiMap;->copyOf(Ljava/util/Map;)Lcom/google/common/collect/ImmutableBiMap;
@@ -102,6 +105,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/AbstractUndirectedNetworkConnections;->incidentEdgeMap:Ljava/util/Map;
 
     check-cast p0, Lcom/google/common/collect/BiMap;
@@ -127,6 +131,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/graph/EdgesConnecting;
 
     iget-object p0, p0, Lcom/google/common/graph/AbstractUndirectedNetworkConnections;->incidentEdgeMap:Ljava/util/Map;

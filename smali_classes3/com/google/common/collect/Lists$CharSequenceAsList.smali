@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/Lists$CharSequenceAsList;
+.class public final Lcom/google/common/collect/Lists$CharSequenceAsList;
 .super Ljava/util/AbstractList;
 .source "SourceFile"
 
@@ -30,8 +30,10 @@
 .method public constructor <init>(Ljava/lang/CharSequence;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/Lists$CharSequenceAsList;->sequence:Ljava/lang/CharSequence;
 
     return-void
@@ -77,6 +79,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Lists$CharSequenceAsList;->sequence:Ljava/lang/CharSequence;
 
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I

@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Lists$ReverseList;
+.class public Lcom/google/common/collect/Lists$ReverseList;
 .super Ljava/util/AbstractList;
 .source "SourceFile"
 
@@ -46,8 +46,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -62,6 +64,7 @@
 .method public static synthetic access$000(Lcom/google/common/collect/Lists$ReverseList;I)I
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/Lists$ReverseList;->reversePosition(I)I
 
     move-result p0
@@ -72,10 +75,12 @@
 .method private reverseIndex(I)I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Lists$ReverseList;->size()I
 
     move-result p0
 
+    .line 2
     invoke-static {p1, p0}, Lcom/google/common/base/Preconditions;->checkElementIndex(II)I
 
     add-int/lit8 p0, p0, -0x1
@@ -88,10 +93,12 @@
 .method private reversePosition(I)I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Lists$ReverseList;->size()I
 
     move-result p0
 
+    .line 2
     invoke-static {p1, p0}, Lcom/google/common/base/Preconditions;->checkPositionIndex(II)I
 
     sub-int/2addr p0, p1
@@ -113,6 +120,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Lists$ReverseList;->forwardList:Ljava/util/List;
 
     invoke-direct {p0, p1}, Lcom/google/common/collect/Lists$ReverseList;->reversePosition(I)I
@@ -127,6 +135,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Lists$ReverseList;->forwardList:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->clear()V
@@ -145,6 +154,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Lists$ReverseList;->forwardList:Ljava/util/List;
 
     invoke-direct {p0, p1}, Lcom/google/common/collect/Lists$ReverseList;->reverseIndex(I)I
@@ -168,6 +178,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Lists$ReverseList;->forwardList:Ljava/util/List;
 
     return-object p0
@@ -183,6 +194,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Ljava/util/AbstractList;->listIterator()Ljava/util/ListIterator;
 
     move-result-object p0
@@ -200,16 +212,19 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/Lists$ReverseList;->reversePosition(I)I
 
     move-result p1
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/Lists$ReverseList;->forwardList:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->listIterator(I)Ljava/util/ListIterator;
 
     move-result-object p1
 
+    .line 3
     new-instance v0, Lcom/google/common/collect/Lists$ReverseList$1;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/collect/Lists$ReverseList$1;-><init>(Lcom/google/common/collect/Lists$ReverseList;Ljava/util/ListIterator;)V
@@ -228,6 +243,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Lists$ReverseList;->forwardList:Ljava/util/List;
 
     invoke-direct {p0, p1}, Lcom/google/common/collect/Lists$ReverseList;->reverseIndex(I)I
@@ -244,6 +260,7 @@
 .method public removeRange(II)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/Lists$ReverseList;->subList(II)Ljava/util/List;
 
     move-result-object p0
@@ -268,6 +285,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Lists$ReverseList;->forwardList:Ljava/util/List;
 
     invoke-direct {p0, p1}, Lcom/google/common/collect/Lists$ReverseList;->reverseIndex(I)I
@@ -284,6 +302,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Lists$ReverseList;->forwardList:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->size()I
@@ -303,12 +322,14 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Lists$ReverseList;->size()I
 
     move-result v0
 
     invoke-static {p1, p2, v0}, Lcom/google/common/base/Preconditions;->checkPositionIndexes(III)V
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/Lists$ReverseList;->forwardList:Ljava/util/List;
 
     invoke-direct {p0, p2}, Lcom/google/common/collect/Lists$ReverseList;->reversePosition(I)I

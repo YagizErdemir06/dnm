@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ImmutableAsList$SerializedForm;
+.class public Lcom/google/common/collect/ImmutableAsList$SerializedForm;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -25,7 +25,7 @@
 
 
 # instance fields
-.field final collection:Lcom/google/common/collect/ImmutableCollection;
+.field public final collection:Lcom/google/common/collect/ImmutableCollection;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/ImmutableCollection<",
@@ -46,8 +46,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/ImmutableAsList$SerializedForm;->collection:Lcom/google/common/collect/ImmutableCollection;
 
     return-void
@@ -58,6 +60,7 @@
 .method public readResolve()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableAsList$SerializedForm;->collection:Lcom/google/common/collect/ImmutableCollection;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableCollection;->asList()Lcom/google/common/collect/ImmutableList;

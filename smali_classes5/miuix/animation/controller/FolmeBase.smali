@@ -7,15 +7,17 @@
 
 
 # instance fields
-.field mState:Lmiuix/animation/controller/IFolmeStateStyle;
+.field public mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
 
 # direct methods
 .method public varargs constructor <init>([Lmiuix/animation/IAnimTarget;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lmiuix/animation/controller/StateComposer;->composeStyle([Lmiuix/animation/IAnimTarget;)Lmiuix/animation/controller/IFolmeStateStyle;
 
     move-result-object p1
@@ -30,10 +32,12 @@
 .method public varargs addConfig(Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/animation/controller/FolmeBase;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0, p1, p2}, Lmiuix/animation/IStateContainer;->addConfig(Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)V
 
     :cond_0
@@ -88,10 +92,12 @@
 .method public clean()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/animation/controller/FolmeBase;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0}, Lmiuix/animation/IStateContainer;->clean()V
 
     :cond_0
@@ -101,10 +107,12 @@
 .method public enableDefaultAnim(Z)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/animation/controller/FolmeBase;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0, p1}, Lmiuix/animation/IStateContainer;->enableDefaultAnim(Z)V
 
     :cond_0
@@ -114,10 +122,12 @@
 .method public varargs end([Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/animation/controller/FolmeBase;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0, p1}, Lmiuix/animation/ICancelableStyle;->end([Ljava/lang/Object;)V
 
     :cond_0

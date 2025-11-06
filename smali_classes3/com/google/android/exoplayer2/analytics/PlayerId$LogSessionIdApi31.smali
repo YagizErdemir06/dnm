@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/analytics/PlayerId$LogSessionIdApi31;
+.class public final Lcom/google/android/exoplayer2/analytics/PlayerId$LogSessionIdApi31;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -30,11 +30,10 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/analytics/PlayerId$LogSessionIdApi31;
 
-    invoke-static {}, Lcom/google/android/exoplayer2/g1;->a()Landroid/media/metrics/LogSessionId;
-
-    move-result-object v1
+    sget-object v1, Landroid/media/metrics/LogSessionId;->LOG_SESSION_ID_NONE:Landroid/media/metrics/LogSessionId;
 
     invoke-direct {v0, v1}, Lcom/google/android/exoplayer2/analytics/PlayerId$LogSessionIdApi31;-><init>(Landroid/media/metrics/LogSessionId;)V
 
@@ -46,8 +45,10 @@
 .method public constructor <init>(Landroid/media/metrics/LogSessionId;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/analytics/PlayerId$LogSessionIdApi31;->logSessionId:Landroid/media/metrics/LogSessionId;
 
     return-void

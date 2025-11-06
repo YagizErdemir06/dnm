@@ -28,6 +28,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     invoke-static {v0}, Ljava/text/NumberFormat;->getInstance(Ljava/util/Locale;)Ljava/text/NumberFormat;
@@ -38,12 +39,15 @@
 
     const/4 v1, 0x2
 
+    .line 2
     invoke-virtual {v0, v1}, Ljava/text/NumberFormat;->setMinimumFractionDigits(I)V
 
+    .line 3
     invoke-virtual {v0, v1}, Ljava/text/NumberFormat;->setMaximumFractionDigits(I)V
 
     const/4 v1, 0x0
 
+    .line 4
     invoke-virtual {v0, v1}, Ljava/text/NumberFormat;->setGroupingUsed(Z)V
 
     return-void
@@ -196,6 +200,7 @@
         .end annotation
     .end param
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -216,10 +221,12 @@
 
     move-result-object p0
 
+    .line 2
     instance-of p1, p4, Lcom/google/android/exoplayer2/PlaybackException;
 
     if-eqz p1, :cond_0
 
+    .line 3
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -247,6 +254,7 @@
     :cond_0
     if-eqz p3, :cond_1
 
+    .line 4
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -263,17 +271,20 @@
 
     move-result-object p0
 
+    .line 5
     :cond_1
     invoke-static {p4}, Lcom/google/android/exoplayer2/util/Log;->getThrowableString(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 6
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p2
 
     if-nez p2, :cond_2
 
+    .line 7
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -300,6 +311,7 @@
 
     move-result-object p0
 
+    .line 8
     :cond_2
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -321,6 +333,7 @@
 .method private getEventTimeString(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;)Ljava/lang/String;
     .locals 6
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -337,10 +350,12 @@
 
     move-result-object v0
 
+    .line 2
     iget-object v1, p1, Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;->mediaPeriodId:Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;
 
     if-eqz v1, :cond_0
 
+    .line 3
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -357,6 +372,7 @@
 
     iget-object v2, v2, Lcom/google/android/exoplayer2/source/MediaPeriodId;->periodUid:Ljava/lang/Object;
 
+    .line 4
     invoke-virtual {v0, v2}, Lcom/google/android/exoplayer2/Timeline;->getIndexOfPeriod(Ljava/lang/Object;)I
 
     move-result v0
@@ -367,6 +383,7 @@
 
     move-result-object v0
 
+    .line 5
     iget-object v1, p1, Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;->mediaPeriodId:Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;
 
     invoke-virtual {v1}, Lcom/google/android/exoplayer2/source/MediaPeriodId;->isAd()Z
@@ -375,6 +392,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 6
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -395,6 +413,7 @@
 
     move-result-object v0
 
+    .line 7
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -415,6 +434,7 @@
 
     move-result-object v0
 
+    .line 8
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -430,6 +450,7 @@
 
     sub-long/2addr v2, v4
 
+    .line 9
     invoke-static {v2, v3}, Lcom/google/android/exoplayer2/util/EventLogger;->getTimeString(J)Ljava/lang/String;
 
     move-result-object p0
@@ -442,6 +463,7 @@
 
     iget-wide p0, p1, Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;->eventPlaybackPositionMs:J
 
+    .line 10
     invoke-static {p0, p1}, Lcom/google/android/exoplayer2/util/EventLogger;->getTimeString(J)Ljava/lang/String;
 
     move-result-object p0
@@ -670,6 +692,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     sget-object v0, Lcom/google/android/exoplayer2/util/EventLogger;->TIME_FORMAT:Ljava/text/NumberFormat;
 
@@ -800,6 +823,7 @@
 
     const-string v0, "internalError"
 
+    .line 1
     invoke-direct {p0, p1, v0, p2, p3}, Lcom/google/android/exoplayer2/util/EventLogger;->loge(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
@@ -810,6 +834,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/metadata/Metadata;->length()I
 
@@ -817,6 +842,7 @@
 
     if-ge v0, v1, :cond_0
 
+    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -870,6 +896,7 @@
 .method public onAudioAttributesChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/audio/AudioAttributes;)V
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -914,6 +941,7 @@
 
     const-string p3, "audioDecoderInitialized"
 
+    .line 1
     invoke-direct {p0, p1, p3, p2}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -924,6 +952,7 @@
 
     const-string v0, "audioDecoderReleased"
 
+    .line 1
     invoke-direct {p0, p1, v0, p2}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -934,6 +963,7 @@
 
     const-string p2, "audioDisabled"
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;)V
 
     return-void
@@ -944,6 +974,7 @@
 
     const-string p2, "audioEnabled"
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;)V
 
     return-void
@@ -956,11 +987,12 @@
         .end annotation
     .end param
 
-    const-string p3, "audioInputFormat"
-
+    .line 1
     invoke-static {p2}, Lcom/google/android/exoplayer2/Format;->toLogString(Lcom/google/android/exoplayer2/Format;)Ljava/lang/String;
 
     move-result-object p2
+
+    const-string p3, "audioInputFormat"
 
     invoke-direct {p0, p1, p3, p2}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -970,11 +1002,12 @@
 .method public onAudioSessionIdChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;I)V
     .locals 1
 
-    const-string v0, "audioSessionId"
-
+    .line 1
     invoke-static {p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p2
+
+    const-string v0, "audioSessionId"
 
     invoke-direct {p0, p1, v0, p2}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -984,6 +1017,7 @@
 .method public onAudioUnderrun(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IJJ)V
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1004,11 +1038,11 @@
 
     move-result-object p2
 
-    const/4 p3, 0x0
+    const-string p3, "audioTrackUnderrun"
 
-    const-string p4, "audioTrackUnderrun"
+    const/4 p4, 0x0
 
-    invoke-direct {p0, p1, p4, p2, p3}, Lcom/google/android/exoplayer2/util/EventLogger;->loge(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {p0, p1, p3, p2, p4}, Lcom/google/android/exoplayer2/util/EventLogger;->loge(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -1022,6 +1056,7 @@
 .method public onDownstreamFormatChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/MediaLoadData;)V
     .locals 1
 
+    .line 1
     iget-object p2, p2, Lcom/google/android/exoplayer2/source/MediaLoadData;->trackFormat:Lcom/google/android/exoplayer2/Format;
 
     invoke-static {p2}, Lcom/google/android/exoplayer2/Format;->toLogString(Lcom/google/android/exoplayer2/Format;)Ljava/lang/String;
@@ -1040,6 +1075,7 @@
 
     const-string v0, "drmKeysLoaded"
 
+    .line 1
     invoke-direct {p0, p1, v0}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;)V
 
     return-void
@@ -1050,6 +1086,7 @@
 
     const-string v0, "drmKeysRemoved"
 
+    .line 1
     invoke-direct {p0, p1, v0}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;)V
 
     return-void
@@ -1060,6 +1097,7 @@
 
     const-string v0, "drmKeysRestored"
 
+    .line 1
     invoke-direct {p0, p1, v0}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;)V
 
     return-void
@@ -1068,6 +1106,7 @@
 .method public onDrmSessionAcquired(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;I)V
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1094,6 +1133,7 @@
 
     const-string v0, "drmSessionManagerError"
 
+    .line 1
     invoke-direct {p0, p1, v0, p2}, Lcom/google/android/exoplayer2/util/EventLogger;->printInternalError(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Ljava/lang/Exception;)V
 
     return-void
@@ -1104,6 +1144,7 @@
 
     const-string v0, "drmSessionReleased"
 
+    .line 1
     invoke-direct {p0, p1, v0}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;)V
 
     return-void
@@ -1112,11 +1153,12 @@
 .method public onDroppedVideoFrames(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IJ)V
     .locals 0
 
-    const-string p3, "droppedFrames"
-
+    .line 1
     invoke-static {p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p2
+
+    const-string p3, "droppedFrames"
 
     invoke-direct {p0, p1, p3, p2}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -1126,11 +1168,12 @@
 .method public onIsLoadingChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Z)V
     .locals 1
 
-    const-string v0, "loading"
-
+    .line 1
     invoke-static {p2}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
 
     move-result-object p2
+
+    const-string v0, "loading"
 
     invoke-direct {p0, p1, v0, p2}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -1140,11 +1183,12 @@
 .method public onIsPlayingChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Z)V
     .locals 1
 
-    const-string v0, "isPlaying"
-
+    .line 1
     invoke-static {p2}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
 
     move-result-object p2
+
+    const-string v0, "isPlaying"
 
     invoke-direct {p0, p1, v0, p2}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -1168,6 +1212,7 @@
 
     const-string p2, "loadError"
 
+    .line 1
     invoke-direct {p0, p1, p2, p4}, Lcom/google/android/exoplayer2/util/EventLogger;->printInternalError(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Ljava/lang/Exception;)V
 
     return-void
@@ -1186,6 +1231,7 @@
         .end annotation
     .end param
 
+    .line 1
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1194,6 +1240,7 @@
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/util/EventLogger;->getEventTimeString(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;)Ljava/lang/String;
 
     move-result-object p1
@@ -1204,6 +1251,7 @@
 
     invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 3
     invoke-static {p3}, Lcom/google/android/exoplayer2/util/EventLogger;->getMediaItemTransitionReasonString(I)Ljava/lang/String;
 
     move-result-object p1
@@ -1218,6 +1266,7 @@
 
     move-result-object p1
 
+    .line 4
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Ljava/lang/String;)V
 
     return-void
@@ -1226,6 +1275,7 @@
 .method public onMetadata(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/metadata/Metadata;)V
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1248,10 +1298,12 @@
 
     const-string p1, "  "
 
+    .line 2
     invoke-direct {p0, p2, p1}, Lcom/google/android/exoplayer2/util/EventLogger;->printMetadata(Lcom/google/android/exoplayer2/metadata/Metadata;Ljava/lang/String;)V
 
     const-string p1, "]"
 
+    .line 3
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Ljava/lang/String;)V
 
     return-void
@@ -1260,6 +1312,7 @@
 .method public onPlayWhenReadyChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ZI)V
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1270,6 +1323,7 @@
 
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 2
     invoke-static {p3}, Lcom/google/android/exoplayer2/util/EventLogger;->getPlayWhenReadyChangeReasonString(I)Ljava/lang/String;
 
     move-result-object p2
@@ -1282,6 +1336,7 @@
 
     const-string p3, "playWhenReady"
 
+    .line 3
     invoke-direct {p0, p1, p3, p2}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -1290,11 +1345,12 @@
 .method public onPlaybackParametersChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/PlaybackParameters;)V
     .locals 1
 
-    const-string v0, "playbackParameters"
-
+    .line 1
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/PlaybackParameters;->toString()Ljava/lang/String;
 
     move-result-object p2
+
+    const-string v0, "playbackParameters"
 
     invoke-direct {p0, p1, v0, p2}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -1304,11 +1360,12 @@
 .method public onPlaybackStateChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;I)V
     .locals 1
 
-    const-string v0, "state"
-
+    .line 1
     invoke-static {p2}, Lcom/google/android/exoplayer2/util/EventLogger;->getStateString(I)Ljava/lang/String;
 
     move-result-object p2
+
+    const-string v0, "state"
 
     invoke-direct {p0, p1, v0, p2}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -1318,12 +1375,14 @@
 .method public onPlaybackSuppressionReasonChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;I)V
     .locals 1
 
-    const-string v0, "playbackSuppressionReason"
-
+    .line 1
     invoke-static {p2}, Lcom/google/android/exoplayer2/util/EventLogger;->getPlaybackSuppressionReasonString(I)Ljava/lang/String;
 
     move-result-object p2
 
+    const-string v0, "playbackSuppressionReason"
+
+    .line 2
     invoke-direct {p0, p1, v0, p2}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -1334,6 +1393,7 @@
 
     const-string v0, "playerFailed"
 
+    .line 1
     invoke-direct {p0, p1, v0, p2}, Lcom/google/android/exoplayer2/util/EventLogger;->loge(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
@@ -1342,14 +1402,17 @@
 .method public onPositionDiscontinuity(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Player$PositionInfo;Lcom/google/android/exoplayer2/Player$PositionInfo;I)V
     .locals 10
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v1, "reason="
 
+    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 3
     invoke-static {p4}, Lcom/google/android/exoplayer2/util/EventLogger;->getDiscontinuityReasonString(I)Ljava/lang/String;
 
     move-result-object p4
@@ -1358,32 +1421,40 @@
 
     const-string p4, ", PositionInfo:old ["
 
+    .line 4
     invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string p4, "mediaItem="
 
+    .line 5
     invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p2, Lcom/google/android/exoplayer2/Player$PositionInfo;->mediaItemIndex:I
 
+    .line 6
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v1, ", period="
 
+    .line 7
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v2, p2, Lcom/google/android/exoplayer2/Player$PositionInfo;->periodIndex:I
 
+    .line 8
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v2, ", pos="
 
+    .line 9
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-wide v3, p2, Lcom/google/android/exoplayer2/Player$PositionInfo;->positionMs:J
 
+    .line 10
     invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
+    .line 11
     iget v3, p2, Lcom/google/android/exoplayer2/Player$PositionInfo;->adGroupIndex:I
 
     const-string v4, ", ad="
@@ -1396,81 +1467,103 @@
 
     if-eq v3, v7, :cond_0
 
+    .line 12
     invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-wide v8, p2, Lcom/google/android/exoplayer2/Player$PositionInfo;->contentPositionMs:J
 
+    .line 13
     invoke-virtual {v0, v8, v9}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
+    .line 14
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v3, p2, Lcom/google/android/exoplayer2/Player$PositionInfo;->adGroupIndex:I
 
+    .line 15
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
+    .line 16
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget p2, p2, Lcom/google/android/exoplayer2/Player$PositionInfo;->adIndexInAdGroup:I
 
+    .line 17
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     :cond_0
     const-string p2, "], PositionInfo:new ["
 
+    .line 18
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 19
     invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget p2, p3, Lcom/google/android/exoplayer2/Player$PositionInfo;->mediaItemIndex:I
 
+    .line 20
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
+    .line 21
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget p2, p3, Lcom/google/android/exoplayer2/Player$PositionInfo;->periodIndex:I
 
+    .line 22
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
+    .line 23
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-wide v1, p3, Lcom/google/android/exoplayer2/Player$PositionInfo;->positionMs:J
 
+    .line 24
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
+    .line 25
     iget p2, p3, Lcom/google/android/exoplayer2/Player$PositionInfo;->adGroupIndex:I
 
     if-eq p2, v7, :cond_1
 
+    .line 26
     invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-wide v1, p3, Lcom/google/android/exoplayer2/Player$PositionInfo;->contentPositionMs:J
 
+    .line 27
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
+    .line 28
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget p2, p3, Lcom/google/android/exoplayer2/Player$PositionInfo;->adGroupIndex:I
 
+    .line 29
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
+    .line 30
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget p2, p3, Lcom/google/android/exoplayer2/Player$PositionInfo;->adIndexInAdGroup:I
 
+    .line 31
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     :cond_1
     const-string p2, "]"
 
+    .line 32
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string p2, "positionDiscontinuity"
-
+    .line 33
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p3
+    move-result-object p2
 
-    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Ljava/lang/String;)V
+    const-string p3, "positionDiscontinuity"
+
+    invoke-direct {p0, p1, p3, p2}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1478,6 +1571,7 @@
 .method public onRenderedFirstFrame(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Object;J)V
     .locals 0
 
+    .line 1
     invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p2
@@ -1492,11 +1586,12 @@
 .method public onRepeatModeChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;I)V
     .locals 1
 
-    const-string v0, "repeatMode"
-
+    .line 1
     invoke-static {p2}, Lcom/google/android/exoplayer2/util/EventLogger;->getRepeatModeString(I)Ljava/lang/String;
 
     move-result-object p2
+
+    const-string v0, "repeatMode"
 
     invoke-direct {p0, p1, v0, p2}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -1506,11 +1601,12 @@
 .method public onShuffleModeChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Z)V
     .locals 1
 
-    const-string v0, "shuffleModeEnabled"
-
+    .line 1
     invoke-static {p2}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
 
     move-result-object p2
+
+    const-string v0, "shuffleModeEnabled"
 
     invoke-direct {p0, p1, v0, p2}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -1520,11 +1616,12 @@
 .method public onSkipSilenceEnabledChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Z)V
     .locals 1
 
-    const-string v0, "skipSilenceEnabled"
-
+    .line 1
     invoke-static {p2}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
 
     move-result-object p2
+
+    const-string v0, "skipSilenceEnabled"
 
     invoke-direct {p0, p1, v0, p2}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -1534,6 +1631,7 @@
 .method public onSurfaceSizeChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;II)V
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1560,18 +1658,21 @@
 .method public onTimelineChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;I)V
     .locals 8
 
+    .line 1
     iget-object v0, p1, Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;->timeline:Lcom/google/android/exoplayer2/Timeline;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/Timeline;->getPeriodCount()I
 
     move-result v0
 
+    .line 2
     iget-object v1, p1, Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;->timeline:Lcom/google/android/exoplayer2/Timeline;
 
     invoke-virtual {v1}, Lcom/google/android/exoplayer2/Timeline;->getWindowCount()I
 
     move-result v1
 
+    .line 3
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1580,6 +1681,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 4
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/util/EventLogger;->getEventTimeString(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;)Ljava/lang/String;
 
     move-result-object v3
@@ -1602,6 +1704,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 5
     invoke-static {p2}, Lcom/google/android/exoplayer2/util/EventLogger;->getTimelineChangeReasonString(I)Ljava/lang/String;
 
     move-result-object p2
@@ -1612,6 +1715,7 @@
 
     move-result-object p2
 
+    .line 6
     invoke-virtual {p0, p2}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Ljava/lang/String;)V
 
     const/4 p2, 0x0
@@ -1621,6 +1725,7 @@
     :goto_0
     const/4 v3, 0x3
 
+    .line 7
     invoke-static {v0, v3}, Ljava/lang/Math;->min(II)I
 
     move-result v4
@@ -1629,12 +1734,14 @@
 
     if-ge v2, v4, :cond_0
 
+    .line 8
     iget-object v3, p1, Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;->timeline:Lcom/google/android/exoplayer2/Timeline;
 
     iget-object v4, p0, Lcom/google/android/exoplayer2/util/EventLogger;->period:Lcom/google/android/exoplayer2/Timeline$Period;
 
     invoke-virtual {v3, v2, v4}, Lcom/google/android/exoplayer2/Timeline;->getPeriod(ILcom/google/android/exoplayer2/Timeline$Period;)Lcom/google/android/exoplayer2/Timeline$Period;
 
+    .line 9
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1672,8 +1779,10 @@
 
     if-le v0, v3, :cond_1
 
+    .line 10
     invoke-virtual {p0, v2}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Ljava/lang/String;)V
 
+    .line 11
     :cond_1
     :goto_1
     invoke-static {v1, v3}, Ljava/lang/Math;->min(II)I
@@ -1682,12 +1791,14 @@
 
     if-ge p2, v0, :cond_2
 
+    .line 12
     iget-object v0, p1, Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;->timeline:Lcom/google/android/exoplayer2/Timeline;
 
     iget-object v4, p0, Lcom/google/android/exoplayer2/util/EventLogger;->window:Lcom/google/android/exoplayer2/Timeline$Window;
 
     invoke-virtual {v0, p2, v4}, Lcom/google/android/exoplayer2/Timeline;->getWindow(ILcom/google/android/exoplayer2/Timeline$Window;)Lcom/google/android/exoplayer2/Timeline$Window;
 
+    .line 13
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1698,6 +1809,7 @@
 
     iget-object v4, p0, Lcom/google/android/exoplayer2/util/EventLogger;->window:Lcom/google/android/exoplayer2/Timeline$Window;
 
+    .line 14
     invoke-virtual {v4}, Lcom/google/android/exoplayer2/Timeline$Window;->getDurationMs()J
 
     move-result-wide v6
@@ -1734,6 +1846,7 @@
 
     move-result-object v0
 
+    .line 15
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Ljava/lang/String;)V
 
     add-int/lit8 p2, p2, 0x1
@@ -1743,8 +1856,10 @@
     :cond_2
     if-le v1, v3, :cond_3
 
+    .line 16
     invoke-virtual {p0, v2}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Ljava/lang/String;)V
 
+    .line 17
     :cond_3
     invoke-virtual {p0, v5}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Ljava/lang/String;)V
 
@@ -1754,6 +1869,7 @@
 .method public onTracksChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Tracks;)V
     .locals 8
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1774,6 +1890,7 @@
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Ljava/lang/String;)V
 
+    .line 2
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/Tracks;->getGroups()Lcom/google/common/collect/ImmutableList;
 
     move-result-object p1
@@ -1782,6 +1899,7 @@
 
     move v0, p2
 
+    .line 3
     :goto_0
     invoke-virtual {p1}, Ljava/util/AbstractCollection;->size()I
 
@@ -1793,6 +1911,7 @@
 
     if-ge v0, v1, :cond_1
 
+    .line 4
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -1801,15 +1920,18 @@
 
     const-string v4, "  group ["
 
+    .line 5
     invoke-virtual {p0, v4}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Ljava/lang/String;)V
 
     move v4, p2
 
+    .line 6
     :goto_1
     iget v5, v1, Lcom/google/android/exoplayer2/Tracks$Group;->length:I
 
     if-ge v4, v5, :cond_0
 
+    .line 7
     invoke-virtual {v1, v4}, Lcom/google/android/exoplayer2/Tracks$Group;->isTrackSelected(I)Z
 
     move-result v5
@@ -1818,6 +1940,7 @@
 
     move-result-object v5
 
+    .line 8
     invoke-virtual {v1, v4}, Lcom/google/android/exoplayer2/Tracks$Group;->getTrackSupport(I)I
 
     move-result v6
@@ -1826,6 +1949,7 @@
 
     move-result-object v6
 
+    .line 9
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1844,6 +1968,7 @@
 
     invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 10
     invoke-virtual {v1, v4}, Lcom/google/android/exoplayer2/Tracks$Group;->getTrackFormat(I)Lcom/google/android/exoplayer2/Format;
 
     move-result-object v5
@@ -1864,12 +1989,14 @@
 
     move-result-object v5
 
+    .line 11
     invoke-virtual {p0, v5}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Ljava/lang/String;)V
 
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
+    .line 12
     :cond_0
     invoke-virtual {p0, v3}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Ljava/lang/String;)V
 
@@ -1885,12 +2012,14 @@
     :goto_2
     if-nez v0, :cond_4
 
+    .line 13
     invoke-virtual {p1}, Ljava/util/AbstractCollection;->size()I
 
     move-result v4
 
     if-ge v1, v4, :cond_4
 
+    .line 14
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -1902,16 +2031,19 @@
     :goto_3
     if-nez v0, :cond_3
 
+    .line 15
     iget v6, v4, Lcom/google/android/exoplayer2/Tracks$Group;->length:I
 
     if-ge v5, v6, :cond_3
 
+    .line 16
     invoke-virtual {v4, v5}, Lcom/google/android/exoplayer2/Tracks$Group;->isTrackSelected(I)Z
 
     move-result v6
 
     if-eqz v6, :cond_2
 
+    .line 17
     invoke-virtual {v4, v5}, Lcom/google/android/exoplayer2/Tracks$Group;->getTrackFormat(I)Lcom/google/android/exoplayer2/Format;
 
     move-result-object v6
@@ -1920,6 +2052,7 @@
 
     if-eqz v6, :cond_2
 
+    .line 18
     invoke-virtual {v6}, Lcom/google/android/exoplayer2/metadata/Metadata;->length()I
 
     move-result v7
@@ -1928,10 +2061,13 @@
 
     const-string v0, "  Metadata ["
 
+    .line 19
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Ljava/lang/String;)V
 
+    .line 20
     invoke-direct {p0, v6, v2}, Lcom/google/android/exoplayer2/util/EventLogger;->printMetadata(Lcom/google/android/exoplayer2/metadata/Metadata;Ljava/lang/String;)V
 
+    .line 21
     invoke-virtual {p0, v3}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Ljava/lang/String;)V
 
     const/4 v0, 0x1
@@ -1949,6 +2085,7 @@
     :cond_4
     const-string p1, "]"
 
+    .line 22
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Ljava/lang/String;)V
 
     return-void
@@ -1957,6 +2094,7 @@
 .method public onUpstreamDiscarded(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/MediaLoadData;)V
     .locals 1
 
+    .line 1
     iget-object p2, p2, Lcom/google/android/exoplayer2/source/MediaLoadData;->trackFormat:Lcom/google/android/exoplayer2/Format;
 
     invoke-static {p2}, Lcom/google/android/exoplayer2/Format;->toLogString(Lcom/google/android/exoplayer2/Format;)Ljava/lang/String;
@@ -1975,6 +2113,7 @@
 
     const-string p3, "videoDecoderInitialized"
 
+    .line 1
     invoke-direct {p0, p1, p3, p2}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -1985,6 +2124,7 @@
 
     const-string v0, "videoDecoderReleased"
 
+    .line 1
     invoke-direct {p0, p1, v0, p2}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -1995,6 +2135,7 @@
 
     const-string p2, "videoDisabled"
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;)V
 
     return-void
@@ -2005,6 +2146,7 @@
 
     const-string p2, "videoEnabled"
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;)V
 
     return-void
@@ -2017,11 +2159,12 @@
         .end annotation
     .end param
 
-    const-string p3, "videoInputFormat"
-
+    .line 1
     invoke-static {p2}, Lcom/google/android/exoplayer2/Format;->toLogString(Lcom/google/android/exoplayer2/Format;)Ljava/lang/String;
 
     move-result-object p2
+
+    const-string p3, "videoInputFormat"
 
     invoke-direct {p0, p1, p3, p2}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -2031,6 +2174,7 @@
 .method public onVideoSizeChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/video/VideoSize;)V
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2061,11 +2205,12 @@
 .method public onVolumeChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;F)V
     .locals 1
 
-    const-string v0, "volume"
-
+    .line 1
     invoke-static {p2}, Ljava/lang/Float;->toString(F)Ljava/lang/String;
 
     move-result-object p2
+
+    const-string v0, "volume"
 
     invoke-direct {p0, p1, v0, p2}, Lcom/google/android/exoplayer2/util/EventLogger;->logd(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Ljava/lang/String;)V
 

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_common/zze;
+.class public final Lcom/google/android/gms/internal/mlkit_common/zze;
 .super Lcom/google/android/gms/internal/mlkit_common/zzs;
 .source "SourceFile"
 
@@ -17,6 +17,7 @@
 .method public final zza(Landroid/content/Context;Lcom/google/android/gms/internal/mlkit_common/zzr;Z)I
     .locals 0
 
+    .line 1
     iget-object p0, p2, Lcom/google/android/gms/internal/mlkit_common/zzr;->zza:Landroid/net/Uri;
 
     invoke-virtual {p0}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
@@ -33,6 +34,7 @@
 
     const-string p0, "android.permission.INTERACT_ACROSS_USERS"
 
+    .line 2
     invoke-static {p1, p0}, Landroidx/core/content/PermissionChecker;->checkSelfPermission(Landroid/content/Context;Ljava/lang/String;)I
 
     move-result p0

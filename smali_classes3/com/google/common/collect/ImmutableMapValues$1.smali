@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ImmutableMapValues$1;
+.class public Lcom/google/common/collect/ImmutableMapValues$1;
 .super Lcom/google/common/collect/UnmodifiableIterator;
 .source "SourceFile"
 
@@ -22,7 +22,7 @@
 
 
 # instance fields
-.field final entryItr:Lcom/google/common/collect/UnmodifiableIterator;
+.field public final entryItr:Lcom/google/common/collect/UnmodifiableIterator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/UnmodifiableIterator<",
@@ -32,17 +32,19 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Lcom/google/common/collect/ImmutableMapValues;
+.field public final synthetic this$0:Lcom/google/common/collect/ImmutableMapValues;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/ImmutableMapValues;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/ImmutableMapValues$1;->this$0:Lcom/google/common/collect/ImmutableMapValues;
 
     invoke-direct {p0}, Lcom/google/common/collect/UnmodifiableIterator;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/collect/ImmutableMapValues;->access$000(Lcom/google/common/collect/ImmutableMapValues;)Lcom/google/common/collect/ImmutableMap;
 
     move-result-object p1
@@ -65,6 +67,7 @@
 .method public hasNext()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMapValues$1;->entryItr:Lcom/google/common/collect/UnmodifiableIterator;
 
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
@@ -82,6 +85,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMapValues$1;->entryItr:Lcom/google/common/collect/UnmodifiableIterator;
 
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;

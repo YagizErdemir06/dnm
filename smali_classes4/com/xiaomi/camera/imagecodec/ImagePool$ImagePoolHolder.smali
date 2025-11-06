@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/camera/imagecodec/ImagePool$ImagePoolHolder;
+.class public Lcom/xiaomi/camera/imagecodec/ImagePool$ImagePoolHolder;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # static fields
-.field static sInstance:Lcom/xiaomi/camera/imagecodec/ImagePool;
+.field public static sInstance:Lcom/xiaomi/camera/imagecodec/ImagePool;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/xiaomi/camera/imagecodec/ImagePool;
 
     const-string v1, "AlgoImagePool"
@@ -38,6 +39,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

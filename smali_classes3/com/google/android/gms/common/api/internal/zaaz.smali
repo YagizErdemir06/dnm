@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/api/internal/zaaz;
+.class public final Lcom/google/android/gms/common/api/internal/zaaz;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,11 +7,11 @@
 
 
 # instance fields
-.field final synthetic zaa:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final synthetic zaa:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field final synthetic zab:Lcom/google/android/gms/common/api/internal/StatusPendingResult;
+.field public final synthetic zab:Lcom/google/android/gms/common/api/internal/StatusPendingResult;
 
-.field final synthetic zac:Lcom/google/android/gms/common/api/internal/zabe;
+.field public final synthetic zac:Lcom/google/android/gms/common/api/internal/zabe;
 
 
 # direct methods
@@ -38,6 +38,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p1, p0, Lcom/google/android/gms/common/api/internal/zaaz;->zac:Lcom/google/android/gms/common/api/internal/zabe;
 
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zaaz;->zaa:Ljava/util/concurrent/atomic/AtomicReference;
@@ -58,6 +59,7 @@
 
     const/4 v1, 0x1
 
+    .line 2
     invoke-static {p1, v0, p0, v1}, Lcom/google/android/gms/common/api/internal/zabe;->zah(Lcom/google/android/gms/common/api/internal/zabe;Lcom/google/android/gms/common/api/GoogleApiClient;Lcom/google/android/gms/common/api/internal/StatusPendingResult;Z)V
 
     return-void

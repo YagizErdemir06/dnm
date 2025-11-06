@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/MediaSourceList;
+.class public final Lcom/google/android/exoplayer2/MediaSourceList;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -94,12 +94,16 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceListInfoRefreshListener;Lcom/google/android/exoplayer2/analytics/AnalyticsCollector;Landroid/os/Handler;Lcom/google/android/exoplayer2/analytics/PlayerId;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p4, p0, Lcom/google/android/exoplayer2/MediaSourceList;->playerId:Lcom/google/android/exoplayer2/analytics/PlayerId;
 
+    .line 3
     iput-object p1, p0, Lcom/google/android/exoplayer2/MediaSourceList;->mediaSourceListInfoListener:Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceListInfoRefreshListener;
 
+    .line 4
     new-instance p1, Lcom/google/android/exoplayer2/source/ShuffleOrder$DefaultShuffleOrder;
 
     const/4 p4, 0x0
@@ -108,59 +112,60 @@
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/MediaSourceList;->shuffleOrder:Lcom/google/android/exoplayer2/source/ShuffleOrder;
 
+    .line 5
     new-instance p1, Ljava/util/IdentityHashMap;
 
     invoke-direct {p1}, Ljava/util/IdentityHashMap;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/MediaSourceList;->mediaSourceByMediaPeriod:Ljava/util/IdentityHashMap;
 
+    .line 6
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/MediaSourceList;->mediaSourceByUid:Ljava/util/Map;
 
+    .line 7
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/MediaSourceList;->mediaSourceHolders:Ljava/util/List;
 
+    .line 8
     new-instance p1, Lcom/google/android/exoplayer2/source/MediaSourceEventListener$EventDispatcher;
 
     invoke-direct {p1}, Lcom/google/android/exoplayer2/source/MediaSourceEventListener$EventDispatcher;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/MediaSourceList;->mediaSourceEventDispatcher:Lcom/google/android/exoplayer2/source/MediaSourceEventListener$EventDispatcher;
 
+    .line 9
     new-instance p4, Lcom/google/android/exoplayer2/drm/DrmSessionEventListener$EventDispatcher;
 
     invoke-direct {p4}, Lcom/google/android/exoplayer2/drm/DrmSessionEventListener$EventDispatcher;-><init>()V
 
     iput-object p4, p0, Lcom/google/android/exoplayer2/MediaSourceList;->drmEventDispatcher:Lcom/google/android/exoplayer2/drm/DrmSessionEventListener$EventDispatcher;
 
+    .line 10
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/MediaSourceList;->childSources:Ljava/util/HashMap;
 
+    .line 11
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/MediaSourceList;->enabledMediaSourceHolders:Ljava/util/Set;
 
+    .line 12
     invoke-virtual {p1, p3, p2}, Lcom/google/android/exoplayer2/source/MediaSourceEventListener$EventDispatcher;->addEventListener(Landroid/os/Handler;Lcom/google/android/exoplayer2/source/MediaSourceEventListener;)V
 
+    .line 13
     invoke-virtual {p4, p3, p2}, Lcom/google/android/exoplayer2/drm/DrmSessionEventListener$EventDispatcher;->addEventListener(Landroid/os/Handler;Lcom/google/android/exoplayer2/drm/DrmSessionEventListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic a(Lcom/google/android/exoplayer2/MediaSourceList;Lcom/google/android/exoplayer2/source/MediaSource;Lcom/google/android/exoplayer2/Timeline;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/MediaSourceList;->lambda$prepareChildSource$0(Lcom/google/android/exoplayer2/source/MediaSource;Lcom/google/android/exoplayer2/Timeline;)V
 
     return-void
 .end method
@@ -168,6 +173,7 @@
 .method public static synthetic access$000(Lcom/google/android/exoplayer2/MediaSourceList;)Lcom/google/android/exoplayer2/source/MediaSourceEventListener$EventDispatcher;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/MediaSourceList;->mediaSourceEventDispatcher:Lcom/google/android/exoplayer2/source/MediaSourceEventListener$EventDispatcher;
 
     return-object p0
@@ -176,6 +182,7 @@
 .method public static synthetic access$100(Lcom/google/android/exoplayer2/MediaSourceList;)Lcom/google/android/exoplayer2/drm/DrmSessionEventListener$EventDispatcher;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/MediaSourceList;->drmEventDispatcher:Lcom/google/android/exoplayer2/drm/DrmSessionEventListener$EventDispatcher;
 
     return-object p0
@@ -184,6 +191,7 @@
 .method public static synthetic access$200(Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;)Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;
     .locals 0
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/android/exoplayer2/MediaSourceList;->getMediaPeriodIdForChildMediaPeriodId(Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;)Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;
 
     move-result-object p0
@@ -194,6 +202,7 @@
 .method public static synthetic access$300(Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;I)I
     .locals 0
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/android/exoplayer2/MediaSourceList;->getWindowIndexForChildWindowIndex(Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;I)I
 
     move-result p0
@@ -204,6 +213,7 @@
 .method private correctOffsets(II)V
     .locals 2
 
+    .line 1
     :goto_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/MediaSourceList;->mediaSourceHolders:Ljava/util/List;
 
@@ -213,6 +223,7 @@
 
     if-ge p1, v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/MediaSourceList;->mediaSourceHolders:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -221,6 +232,7 @@
 
     check-cast v0, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;
 
+    .line 3
     iget v1, v0, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;->firstWindowIndexInChild:I
 
     add-int/2addr v1, p2
@@ -238,6 +250,7 @@
 .method private disableChildSource(Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/MediaSourceList;->childSources:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -248,6 +261,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 2
     iget-object p1, p0, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceAndListener;->mediaSource:Lcom/google/android/exoplayer2/source/MediaSource;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceAndListener;->caller:Lcom/google/android/exoplayer2/source/MediaSource$MediaSourceCaller;
@@ -261,12 +275,14 @@
 .method private disableUnusedMediaSources()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/MediaSourceList;->enabledMediaSourceHolders:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
+    .line 2
     :cond_0
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -275,12 +291,14 @@
 
     if-eqz v1, :cond_1
 
+    .line 3
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;
 
+    .line 4
     iget-object v2, v1, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;->activeMediaPeriodIds:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
@@ -289,8 +307,10 @@
 
     if-eqz v2, :cond_0
 
+    .line 5
     invoke-direct {p0, v1}, Lcom/google/android/exoplayer2/MediaSourceList;->disableChildSource(Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;)V
 
+    .line 6
     invoke-interface {v0}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
@@ -302,10 +322,12 @@
 .method private enableMediaSource(Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/MediaSourceList;->enabledMediaSourceHolders:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/MediaSourceList;->childSources:Ljava/util/HashMap;
 
     invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -316,6 +338,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 3
     iget-object p1, p0, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceAndListener;->mediaSource:Lcom/google/android/exoplayer2/source/MediaSource;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceAndListener;->caller:Lcom/google/android/exoplayer2/source/MediaSource$MediaSourceCaller;
@@ -329,6 +352,7 @@
 .method private static getChildPeriodUid(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/AbstractConcatenatedTimeline;->getChildPeriodUidFromConcatenatedUid(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -343,6 +367,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;->activeMediaPeriodIds:Ljava/util/List;
 
@@ -352,6 +377,7 @@
 
     if-ge v0, v1, :cond_1
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;->activeMediaPeriodIds:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -368,12 +394,14 @@
 
     if-nez v1, :cond_0
 
+    .line 3
     iget-object v0, p1, Lcom/google/android/exoplayer2/source/MediaPeriodId;->periodUid:Ljava/lang/Object;
 
     invoke-static {p0, v0}, Lcom/google/android/exoplayer2/MediaSourceList;->getPeriodUid(Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
+    .line 4
     invoke-virtual {p1, p0}, Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;->copyWithPeriodUid(Ljava/lang/Object;)Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;
 
     move-result-object p0
@@ -394,6 +422,7 @@
 .method private static getMediaSourceHolderUid(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/AbstractConcatenatedTimeline;->getChildTimelineUidFromConcatenatedUid(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -404,6 +433,7 @@
 .method private static getPeriodUid(Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;->uid:Ljava/lang/Object;
 
     invoke-static {p0, p1}, Lcom/google/android/exoplayer2/AbstractConcatenatedTimeline;->getConcatenatedUid(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -416,6 +446,7 @@
 .method private static getWindowIndexForChildWindowIndex(Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;I)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;->firstWindowIndexInChild:I
 
     add-int/2addr p1, p0
@@ -426,6 +457,7 @@
 .method private synthetic lambda$prepareChildSource$0(Lcom/google/android/exoplayer2/source/MediaSource;Lcom/google/android/exoplayer2/Timeline;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/MediaSourceList;->mediaSourceListInfoListener:Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceListInfoRefreshListener;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceListInfoRefreshListener;->onPlaylistUpdateRequested()V
@@ -436,6 +468,7 @@
 .method private maybeReleaseChildSource(Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;)V
     .locals 3
 
+    .line 1
     iget-boolean v0, p1, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;->isRemoved:Z
 
     if-eqz v0, :cond_0
@@ -448,8 +481,10 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/MediaSourceList;->childSources:Ljava/util/HashMap;
 
+    .line 3
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -462,24 +497,28 @@
 
     check-cast v0, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceAndListener;
 
+    .line 4
     iget-object v1, v0, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceAndListener;->mediaSource:Lcom/google/android/exoplayer2/source/MediaSource;
 
     iget-object v2, v0, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceAndListener;->caller:Lcom/google/android/exoplayer2/source/MediaSource$MediaSourceCaller;
 
     invoke-interface {v1, v2}, Lcom/google/android/exoplayer2/source/MediaSource;->releaseSource(Lcom/google/android/exoplayer2/source/MediaSource$MediaSourceCaller;)V
 
+    .line 5
     iget-object v1, v0, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceAndListener;->mediaSource:Lcom/google/android/exoplayer2/source/MediaSource;
 
     iget-object v2, v0, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceAndListener;->eventListener:Lcom/google/android/exoplayer2/MediaSourceList$ForwardingEventListener;
 
     invoke-interface {v1, v2}, Lcom/google/android/exoplayer2/source/MediaSource;->removeEventListener(Lcom/google/android/exoplayer2/source/MediaSourceEventListener;)V
 
+    .line 6
     iget-object v1, v0, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceAndListener;->mediaSource:Lcom/google/android/exoplayer2/source/MediaSource;
 
     iget-object v0, v0, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceAndListener;->eventListener:Lcom/google/android/exoplayer2/MediaSourceList$ForwardingEventListener;
 
     invoke-interface {v1, v0}, Lcom/google/android/exoplayer2/source/MediaSource;->removeDrmEventListener(Lcom/google/android/exoplayer2/drm/DrmSessionEventListener;)V
 
+    .line 7
     iget-object p0, p0, Lcom/google/android/exoplayer2/MediaSourceList;->enabledMediaSourceHolders:Ljava/util/Set;
 
     invoke-interface {p0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
@@ -491,16 +530,20 @@
 .method private prepareChildSource(Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;)V
     .locals 5
 
+    .line 1
     iget-object v0, p1, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;->mediaSource:Lcom/google/android/exoplayer2/source/MaskingMediaSource;
 
-    new-instance v1, Lcom/google/android/exoplayer2/b2;
+    .line 2
+    new-instance v1, Ld/j/a/b/u1;
 
-    invoke-direct {v1, p0}, Lcom/google/android/exoplayer2/b2;-><init>(Lcom/google/android/exoplayer2/MediaSourceList;)V
+    invoke-direct {v1, p0}, Ld/j/a/b/u1;-><init>(Lcom/google/android/exoplayer2/MediaSourceList;)V
 
+    .line 3
     new-instance v2, Lcom/google/android/exoplayer2/MediaSourceList$ForwardingEventListener;
 
     invoke-direct {v2, p0, p1}, Lcom/google/android/exoplayer2/MediaSourceList$ForwardingEventListener;-><init>(Lcom/google/android/exoplayer2/MediaSourceList;Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;)V
 
+    .line 4
     iget-object v3, p0, Lcom/google/android/exoplayer2/MediaSourceList;->childSources:Ljava/util/HashMap;
 
     new-instance v4, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceAndListener;
@@ -509,18 +552,21 @@
 
     invoke-virtual {v3, p1, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 5
     invoke-static {}, Lcom/google/android/exoplayer2/util/Util;->createHandlerForCurrentOrMainLooper()Landroid/os/Handler;
 
     move-result-object p1
 
     invoke-interface {v0, p1, v2}, Lcom/google/android/exoplayer2/source/MediaSource;->addEventListener(Landroid/os/Handler;Lcom/google/android/exoplayer2/source/MediaSourceEventListener;)V
 
+    .line 6
     invoke-static {}, Lcom/google/android/exoplayer2/util/Util;->createHandlerForCurrentOrMainLooper()Landroid/os/Handler;
 
     move-result-object p1
 
     invoke-interface {v0, p1, v2}, Lcom/google/android/exoplayer2/source/MediaSource;->addDrmEventListener(Landroid/os/Handler;Lcom/google/android/exoplayer2/drm/DrmSessionEventListener;)V
 
+    .line 7
     iget-object p1, p0, Lcom/google/android/exoplayer2/MediaSourceList;->mediaTransferListener:Lcom/google/android/exoplayer2/upstream/TransferListener;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/MediaSourceList;->playerId:Lcom/google/android/exoplayer2/analytics/PlayerId;
@@ -540,6 +586,7 @@
     :goto_0
     if-lt p2, p1, :cond_1
 
+    .line 1
     iget-object v1, p0, Lcom/google/android/exoplayer2/MediaSourceList;->mediaSourceHolders:Ljava/util/List;
 
     invoke-interface {v1, p2}, Ljava/util/List;->remove(I)Ljava/lang/Object;
@@ -548,32 +595,39 @@
 
     check-cast v1, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;
 
+    .line 2
     iget-object v2, p0, Lcom/google/android/exoplayer2/MediaSourceList;->mediaSourceByUid:Ljava/util/Map;
 
     iget-object v3, v1, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;->uid:Ljava/lang/Object;
 
     invoke-interface {v2, v3}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     iget-object v2, v1, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;->mediaSource:Lcom/google/android/exoplayer2/source/MaskingMediaSource;
 
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/source/MaskingMediaSource;->getTimeline()Lcom/google/android/exoplayer2/Timeline;
 
     move-result-object v2
 
+    .line 4
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/Timeline;->getWindowCount()I
 
     move-result v2
 
     neg-int v2, v2
 
+    .line 5
     invoke-direct {p0, p2, v2}, Lcom/google/android/exoplayer2/MediaSourceList;->correctOffsets(II)V
 
+    .line 6
     iput-boolean v0, v1, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;->isRemoved:Z
 
+    .line 7
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/MediaSourceList;->isPrepared:Z
 
     if-eqz v2, :cond_0
 
+    .line 8
     invoke-direct {p0, v1}, Lcom/google/android/exoplayer2/MediaSourceList;->maybeReleaseChildSource(Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;)V
 
     :cond_0
@@ -587,6 +641,14 @@
 
 
 # virtual methods
+.method public synthetic a(Lcom/google/android/exoplayer2/source/MediaSource;Lcom/google/android/exoplayer2/Timeline;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/MediaSourceList;->lambda$prepareChildSource$0(Lcom/google/android/exoplayer2/source/MediaSource;Lcom/google/android/exoplayer2/Timeline;)V
+
+    return-void
+.end method
+
 .method public addMediaSources(ILjava/util/List;Lcom/google/android/exoplayer2/source/ShuffleOrder;)Lcom/google/android/exoplayer2/Timeline;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
@@ -601,16 +663,19 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p2}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
+    .line 2
     iput-object p3, p0, Lcom/google/android/exoplayer2/MediaSourceList;->shuffleOrder:Lcom/google/android/exoplayer2/source/ShuffleOrder;
 
     move p3, p1
 
+    .line 3
     :goto_0
     invoke-interface {p2}, Ljava/util/List;->size()I
 
@@ -622,6 +687,7 @@
 
     sub-int v0, p3, p1
 
+    .line 4
     invoke-interface {p2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -630,6 +696,7 @@
 
     if-lez p3, :cond_0
 
+    .line 5
     iget-object v1, p0, Lcom/google/android/exoplayer2/MediaSourceList;->mediaSourceHolders:Ljava/util/List;
 
     add-int/lit8 v2, p3, -0x1
@@ -640,20 +707,24 @@
 
     check-cast v1, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;
 
+    .line 6
     iget-object v2, v1, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;->mediaSource:Lcom/google/android/exoplayer2/source/MaskingMediaSource;
 
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/source/MaskingMediaSource;->getTimeline()Lcom/google/android/exoplayer2/Timeline;
 
     move-result-object v2
 
+    .line 7
     iget v1, v1, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;->firstWindowIndexInChild:I
 
+    .line 8
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/Timeline;->getWindowCount()I
 
     move-result v2
 
     add-int/2addr v1, v2
 
+    .line 9
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;->reset(I)V
 
     goto :goto_1
@@ -661,8 +732,10 @@
     :cond_0
     const/4 v1, 0x0
 
+    .line 10
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;->reset(I)V
 
+    .line 11
     :goto_1
     iget-object v1, v0, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;->mediaSource:Lcom/google/android/exoplayer2/source/MaskingMediaSource;
 
@@ -670,28 +743,35 @@
 
     move-result-object v1
 
+    .line 12
     invoke-virtual {v1}, Lcom/google/android/exoplayer2/Timeline;->getWindowCount()I
 
     move-result v1
 
+    .line 13
     invoke-direct {p0, p3, v1}, Lcom/google/android/exoplayer2/MediaSourceList;->correctOffsets(II)V
 
+    .line 14
     iget-object v1, p0, Lcom/google/android/exoplayer2/MediaSourceList;->mediaSourceHolders:Ljava/util/List;
 
     invoke-interface {v1, p3, v0}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
+    .line 15
     iget-object v1, p0, Lcom/google/android/exoplayer2/MediaSourceList;->mediaSourceByUid:Ljava/util/Map;
 
     iget-object v2, v0, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;->uid:Ljava/lang/Object;
 
     invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 16
     iget-boolean v1, p0, Lcom/google/android/exoplayer2/MediaSourceList;->isPrepared:Z
 
     if-eqz v1, :cond_2
 
+    .line 17
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/MediaSourceList;->prepareChildSource(Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;)V
 
+    .line 18
     iget-object v1, p0, Lcom/google/android/exoplayer2/MediaSourceList;->mediaSourceByMediaPeriod:Ljava/util/IdentityHashMap;
 
     invoke-virtual {v1}, Ljava/util/IdentityHashMap;->isEmpty()Z
@@ -700,12 +780,14 @@
 
     if-eqz v1, :cond_1
 
+    .line 19
     iget-object v1, p0, Lcom/google/android/exoplayer2/MediaSourceList;->enabledMediaSourceHolders:Ljava/util/Set;
 
     invoke-interface {v1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
 
+    .line 20
     :cond_1
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/MediaSourceList;->disableChildSource(Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;)V
 
@@ -715,6 +797,7 @@
 
     goto :goto_0
 
+    .line 21
     :cond_3
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/MediaSourceList;->createTimeline()Lcom/google/android/exoplayer2/Timeline;
 
@@ -734,6 +817,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     iget-object p1, p0, Lcom/google/android/exoplayer2/MediaSourceList;->shuffleOrder:Lcom/google/android/exoplayer2/source/ShuffleOrder;
 
@@ -746,12 +830,14 @@
 
     const/4 p1, 0x0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/MediaSourceList;->getSize()I
 
     move-result v0
 
     invoke-direct {p0, p1, v0}, Lcom/google/android/exoplayer2/MediaSourceList;->removeMediaSourcesInternal(II)V
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/MediaSourceList;->createTimeline()Lcom/google/android/exoplayer2/Timeline;
 
     move-result-object p0
@@ -762,14 +848,17 @@
 .method public createPeriod(Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;Lcom/google/android/exoplayer2/upstream/Allocator;J)Lcom/google/android/exoplayer2/source/MediaPeriod;
     .locals 2
 
+    .line 1
     iget-object v0, p1, Lcom/google/android/exoplayer2/source/MediaPeriodId;->periodUid:Ljava/lang/Object;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/MediaSourceList;->getMediaSourceHolderUid(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 2
     iget-object v1, p1, Lcom/google/android/exoplayer2/source/MediaPeriodId;->periodUid:Ljava/lang/Object;
 
+    .line 3
     invoke-static {v1}, Lcom/google/android/exoplayer2/MediaSourceList;->getChildPeriodUid(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -778,6 +867,7 @@
 
     move-result-object p1
 
+    .line 4
     iget-object v1, p0, Lcom/google/android/exoplayer2/MediaSourceList;->mediaSourceByUid:Ljava/util/Map;
 
     invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -792,22 +882,28 @@
 
     check-cast v0, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;
 
+    .line 5
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/MediaSourceList;->enableMediaSource(Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;)V
 
+    .line 6
     iget-object v1, v0, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;->activeMediaPeriodIds:Ljava/util/List;
 
     invoke-interface {v1, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 7
     iget-object v1, v0, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;->mediaSource:Lcom/google/android/exoplayer2/source/MaskingMediaSource;
 
+    .line 8
     invoke-virtual {v1, p1, p2, p3, p4}, Lcom/google/android/exoplayer2/source/MaskingMediaSource;->createPeriod(Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;Lcom/google/android/exoplayer2/upstream/Allocator;J)Lcom/google/android/exoplayer2/source/MaskingMediaPeriod;
 
     move-result-object p1
 
+    .line 9
     iget-object p2, p0, Lcom/google/android/exoplayer2/MediaSourceList;->mediaSourceByMediaPeriod:Ljava/util/IdentityHashMap;
 
     invoke-virtual {p2, p1, v0}, Ljava/util/IdentityHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 10
     invoke-direct {p0}, Lcom/google/android/exoplayer2/MediaSourceList;->disableUnusedMediaSources()V
 
     return-object p1
@@ -816,6 +912,7 @@
 .method public createTimeline()Lcom/google/android/exoplayer2/Timeline;
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/MediaSourceList;->mediaSourceHolders:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
@@ -824,6 +921,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     sget-object p0, Lcom/google/android/exoplayer2/Timeline;->EMPTY:Lcom/google/android/exoplayer2/Timeline;
 
     return-object p0
@@ -833,6 +931,7 @@
 
     move v1, v0
 
+    .line 3
     :goto_0
     iget-object v2, p0, Lcom/google/android/exoplayer2/MediaSourceList;->mediaSourceHolders:Ljava/util/List;
 
@@ -842,6 +941,7 @@
 
     if-ge v0, v2, :cond_1
 
+    .line 4
     iget-object v2, p0, Lcom/google/android/exoplayer2/MediaSourceList;->mediaSourceHolders:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -850,8 +950,10 @@
 
     check-cast v2, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;
 
+    .line 5
     iput v1, v2, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;->firstWindowIndexInChild:I
 
+    .line 6
     iget-object v2, v2, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;->mediaSource:Lcom/google/android/exoplayer2/source/MaskingMediaSource;
 
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/source/MaskingMediaSource;->getTimeline()Lcom/google/android/exoplayer2/Timeline;
@@ -868,6 +970,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_1
     new-instance v0, Lcom/google/android/exoplayer2/PlaylistTimeline;
 
@@ -883,6 +986,7 @@
 .method public getSize()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/MediaSourceList;->mediaSourceHolders:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->size()I
@@ -895,6 +999,7 @@
 .method public isPrepared()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/MediaSourceList;->isPrepared:Z
 
     return p0
@@ -905,6 +1010,7 @@
 
     add-int/lit8 v0, p1, 0x1
 
+    .line 1
     invoke-virtual {p0, p1, v0, p2, p3}, Lcom/google/android/exoplayer2/MediaSourceList;->moveMediaSourceRange(IIILcom/google/android/exoplayer2/source/ShuffleOrder;)Lcom/google/android/exoplayer2/Timeline;
 
     move-result-object p0
@@ -921,6 +1027,7 @@
 
     if-gt p1, p2, :cond_0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/MediaSourceList;->getSize()I
 
     move-result v1
@@ -936,9 +1043,11 @@
     :cond_0
     const/4 v1, 0x0
 
+    .line 2
     :goto_0
     invoke-static {v1}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 3
     iput-object p4, p0, Lcom/google/android/exoplayer2/MediaSourceList;->shuffleOrder:Lcom/google/android/exoplayer2/source/ShuffleOrder;
 
     if-eq p1, p2, :cond_3
@@ -947,6 +1056,7 @@
 
     goto :goto_2
 
+    .line 4
     :cond_1
     invoke-static {p1, p3}, Ljava/lang/Math;->min(II)I
 
@@ -960,10 +1070,12 @@
 
     add-int/lit8 v0, p2, -0x1
 
+    .line 5
     invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
 
     move-result v0
 
+    .line 6
     iget-object v1, p0, Lcom/google/android/exoplayer2/MediaSourceList;->mediaSourceHolders:Ljava/util/List;
 
     invoke-interface {v1, p4}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -974,6 +1086,7 @@
 
     iget v1, v1, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;->firstWindowIndexInChild:I
 
+    .line 7
     iget-object v2, p0, Lcom/google/android/exoplayer2/MediaSourceList;->mediaSourceHolders:Ljava/util/List;
 
     invoke-static {v2, p1, p2, p3}, Lcom/google/android/exoplayer2/util/Util;->moveItems(Ljava/util/List;III)V
@@ -981,6 +1094,7 @@
     :goto_1
     if-gt p4, v0, :cond_2
 
+    .line 8
     iget-object p1, p0, Lcom/google/android/exoplayer2/MediaSourceList;->mediaSourceHolders:Ljava/util/List;
 
     invoke-interface {p1, p4}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -989,8 +1103,10 @@
 
     check-cast p1, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;
 
+    .line 9
     iput v1, p1, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;->firstWindowIndexInChild:I
 
+    .line 10
     iget-object p1, p1, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;->mediaSource:Lcom/google/android/exoplayer2/source/MaskingMediaSource;
 
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/source/MaskingMediaSource;->getTimeline()Lcom/google/android/exoplayer2/Timeline;
@@ -1007,6 +1123,7 @@
 
     goto :goto_1
 
+    .line 11
     :cond_2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/MediaSourceList;->createTimeline()Lcom/google/android/exoplayer2/Timeline;
 
@@ -1014,6 +1131,7 @@
 
     return-object p0
 
+    .line 12
     :cond_3
     :goto_2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/MediaSourceList;->createTimeline()Lcom/google/android/exoplayer2/Timeline;
@@ -1030,6 +1148,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/MediaSourceList;->isPrepared:Z
 
     const/4 v1, 0x1
@@ -1038,10 +1157,12 @@
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/MediaSourceList;->mediaTransferListener:Lcom/google/android/exoplayer2/upstream/TransferListener;
 
     const/4 p1, 0x0
 
+    .line 3
     :goto_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/MediaSourceList;->mediaSourceHolders:Ljava/util/List;
 
@@ -1051,6 +1172,7 @@
 
     if-ge p1, v0, :cond_0
 
+    .line 4
     iget-object v0, p0, Lcom/google/android/exoplayer2/MediaSourceList;->mediaSourceHolders:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1059,8 +1181,10 @@
 
     check-cast v0, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;
 
+    .line 5
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/MediaSourceList;->prepareChildSource(Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;)V
 
+    .line 6
     iget-object v2, p0, Lcom/google/android/exoplayer2/MediaSourceList;->enabledMediaSourceHolders:Ljava/util/Set;
 
     invoke-interface {v2, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
@@ -1069,6 +1193,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_0
     iput-boolean v1, p0, Lcom/google/android/exoplayer2/MediaSourceList;->isPrepared:Z
 
@@ -1078,6 +1203,7 @@
 .method public release()V
     .locals 5
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/MediaSourceList;->childSources:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -1101,6 +1227,7 @@
 
     check-cast v1, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceAndListener;
 
+    .line 2
     :try_start_0
     iget-object v2, v1, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceAndListener;->mediaSource:Lcom/google/android/exoplayer2/source/MediaSource;
 
@@ -1119,8 +1246,10 @@
 
     const-string v4, "Failed to release child source."
 
+    .line 3
     invoke-static {v3, v4, v2}, Lcom/google/android/exoplayer2/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 4
     :goto_1
     iget-object v2, v1, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceAndListener;->mediaSource:Lcom/google/android/exoplayer2/source/MediaSource;
 
@@ -1128,6 +1257,7 @@
 
     invoke-interface {v2, v3}, Lcom/google/android/exoplayer2/source/MediaSource;->removeEventListener(Lcom/google/android/exoplayer2/source/MediaSourceEventListener;)V
 
+    .line 5
     iget-object v2, v1, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceAndListener;->mediaSource:Lcom/google/android/exoplayer2/source/MediaSource;
 
     iget-object v1, v1, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceAndListener;->eventListener:Lcom/google/android/exoplayer2/MediaSourceList$ForwardingEventListener;
@@ -1136,17 +1266,20 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/MediaSourceList;->childSources:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
+    .line 7
     iget-object v0, p0, Lcom/google/android/exoplayer2/MediaSourceList;->enabledMediaSourceHolders:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
 
     const/4 v0, 0x0
 
+    .line 8
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/MediaSourceList;->isPrepared:Z
 
     return-void
@@ -1155,8 +1288,10 @@
 .method public releasePeriod(Lcom/google/android/exoplayer2/source/MediaPeriod;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/MediaSourceList;->mediaSourceByMediaPeriod:Ljava/util/IdentityHashMap;
 
+    .line 2
     invoke-virtual {v0, p1}, Ljava/util/IdentityHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -1169,10 +1304,12 @@
 
     check-cast v0, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;
 
+    .line 3
     iget-object v1, v0, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;->mediaSource:Lcom/google/android/exoplayer2/source/MaskingMediaSource;
 
     invoke-virtual {v1, p1}, Lcom/google/android/exoplayer2/source/MaskingMediaSource;->releasePeriod(Lcom/google/android/exoplayer2/source/MediaPeriod;)V
 
+    .line 4
     iget-object v1, v0, Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;->activeMediaPeriodIds:Ljava/util/List;
 
     check-cast p1, Lcom/google/android/exoplayer2/source/MaskingMediaPeriod;
@@ -1181,6 +1318,7 @@
 
     invoke-interface {v1, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
+    .line 5
     iget-object p1, p0, Lcom/google/android/exoplayer2/MediaSourceList;->mediaSourceByMediaPeriod:Ljava/util/IdentityHashMap;
 
     invoke-virtual {p1}, Ljava/util/IdentityHashMap;->isEmpty()Z
@@ -1189,8 +1327,10 @@
 
     if-nez p1, :cond_0
 
+    .line 6
     invoke-direct {p0}, Lcom/google/android/exoplayer2/MediaSourceList;->disableUnusedMediaSources()V
 
+    .line 7
     :cond_0
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/MediaSourceList;->maybeReleaseChildSource(Lcom/google/android/exoplayer2/MediaSourceList$MediaSourceHolder;)V
 
@@ -1204,6 +1344,7 @@
 
     if-gt p1, p2, :cond_0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/MediaSourceList;->getSize()I
 
     move-result v0
@@ -1220,10 +1361,13 @@
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 2
     iput-object p3, p0, Lcom/google/android/exoplayer2/MediaSourceList;->shuffleOrder:Lcom/google/android/exoplayer2/source/ShuffleOrder;
 
+    .line 3
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/MediaSourceList;->removeMediaSourcesInternal(II)V
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/MediaSourceList;->createTimeline()Lcom/google/android/exoplayer2/Timeline;
 
     move-result-object p0
@@ -1245,6 +1389,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/MediaSourceList;->mediaSourceHolders:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -1255,6 +1400,7 @@
 
     invoke-direct {p0, v1, v0}, Lcom/google/android/exoplayer2/MediaSourceList;->removeMediaSourcesInternal(II)V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/MediaSourceList;->mediaSourceHolders:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -1271,29 +1417,35 @@
 .method public setShuffleOrder(Lcom/google/android/exoplayer2/source/ShuffleOrder;)Lcom/google/android/exoplayer2/Timeline;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/MediaSourceList;->getSize()I
 
     move-result v0
 
+    .line 2
     invoke-interface {p1}, Lcom/google/android/exoplayer2/source/ShuffleOrder;->getLength()I
 
     move-result v1
 
     if-eq v1, v0, :cond_0
 
+    .line 3
     invoke-interface {p1}, Lcom/google/android/exoplayer2/source/ShuffleOrder;->cloneAndClear()Lcom/google/android/exoplayer2/source/ShuffleOrder;
 
     move-result-object p1
 
     const/4 v1, 0x0
 
+    .line 4
     invoke-interface {p1, v1, v0}, Lcom/google/android/exoplayer2/source/ShuffleOrder;->cloneAndInsert(II)Lcom/google/android/exoplayer2/source/ShuffleOrder;
 
     move-result-object p1
 
+    .line 5
     :cond_0
     iput-object p1, p0, Lcom/google/android/exoplayer2/MediaSourceList;->shuffleOrder:Lcom/google/android/exoplayer2/source/ShuffleOrder;
 
+    .line 6
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/MediaSourceList;->createTimeline()Lcom/google/android/exoplayer2/Timeline;
 
     move-result-object p0

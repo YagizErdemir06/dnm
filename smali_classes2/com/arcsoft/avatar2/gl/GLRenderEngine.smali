@@ -933,16 +933,21 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->D:I
 
+    .line 2
     iput-boolean v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->B:Z
 
+    .line 3
     iput v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->C:I
 
+    .line 4
     iput v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->A:I
 
     iput v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->z:I
 
+    .line 5
     iput v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->o:I
 
     return-void
@@ -957,22 +962,26 @@
 
     const v1, 0x812f
 
+    .line 1
     invoke-static {p0, v0, v1}, Landroid/opengl/GLES20;->glTexParameteri(III)V
 
     const/16 v0, 0x2803
 
+    .line 2
     invoke-static {p0, v0, v1}, Landroid/opengl/GLES20;->glTexParameteri(III)V
 
     const/16 v0, 0x2801
 
     const/16 v1, 0x2600
 
+    .line 3
     invoke-static {p0, v0, v1}, Landroid/opengl/GLES20;->glTexParameteri(III)V
 
     const/16 v0, 0x2800
 
     const/16 v1, 0x2601
 
+    .line 4
     invoke-static {p0, v0, v1}, Landroid/opengl/GLES20;->glTexParameteri(III)V
 
     return-void
@@ -983,6 +992,7 @@
 .method public initNv21TextureIds()V
     .locals 5
 
+    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->i:[I
 
     const/4 v1, 0x2
@@ -991,6 +1001,7 @@
 
     invoke-static {v1, v0, v2}, Landroid/opengl/GLES20;->glGenTextures(I[II)V
 
+    .line 2
     iget-object v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->i:[I
 
     aget v0, v0, v2
@@ -999,10 +1010,13 @@
 
     invoke-static {v1, v0}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
+    .line 3
     invoke-direct {p0}, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->c()V
 
+    .line 4
     invoke-static {v1, v2}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
+    .line 5
     iget-object v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->i:[I
 
     const/4 v3, 0x1
@@ -1011,10 +1025,13 @@
 
     invoke-static {v1, v0}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
+    .line 6
     invoke-direct {p0}, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->c()V
 
+    .line 7
     invoke-static {v1, v2}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
+    .line 8
     sget-object v0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->VERTEX_SHADER:Ljava/lang/String;
 
     sget-object v1, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->FRAGMENT_SHADER_NV21:Ljava/lang/String;
@@ -1025,6 +1042,7 @@
 
     iput v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->o:I
 
+    .line 9
     iget-object v1, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->k:[I
 
     const-string v4, "y_sampler"
@@ -1035,6 +1053,7 @@
 
     aput v0, v1, v2
 
+    .line 10
     iget-object v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->k:[I
 
     iget v1, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->o:I
@@ -1047,6 +1066,7 @@
 
     aput v1, v0, v3
 
+    .line 11
     iget v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->o:I
 
     const-string v1, "needFlipY"
@@ -1057,6 +1077,7 @@
 
     iput v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->m:I
 
+    .line 12
     iget v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->o:I
 
     const-string v1, "depth_value"
@@ -1073,6 +1094,7 @@
 .method public initRgbaTextureIds()V
     .locals 3
 
+    .line 1
     sget-object v0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->VERTEX_SHADER:Ljava/lang/String;
 
     sget-object v1, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->FRAGMENT_SHADER_RGBA8:Ljava/lang/String;
@@ -1083,6 +1105,7 @@
 
     iput v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->o:I
 
+    .line 2
     iget-object v1, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->l:[I
 
     const-string v2, "rgba_sampler"
@@ -1095,6 +1118,7 @@
 
     aput v0, v1, v2
 
+    .line 3
     iget v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->o:I
 
     const-string v1, "needFlipY"
@@ -1105,6 +1129,7 @@
 
     iput v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->m:I
 
+    .line 4
     iget v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->o:I
 
     const-string v1, "depth_value"
@@ -1123,8 +1148,10 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->F:F
 
+    .line 2
     iget-object v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->q:[I
 
     const/4 v1, 0x1
@@ -1133,18 +1160,21 @@
 
     invoke-static {v1, v0, v2}, Landroid/opengl/GLES30;->glGenVertexArrays(I[II)V
 
+    .line 3
     iget-object v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->q:[I
 
     aget v0, v0, v2
 
     invoke-static {v0}, Landroid/opengl/GLES30;->glBindVertexArray(I)V
 
-    const/4 v0, 0x2
+    .line 4
+    iget-object v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->p:[I
 
-    iget-object v3, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->p:[I
+    const/4 v3, 0x2
 
-    invoke-static {v0, v3, v2}, Landroid/opengl/GLES20;->glGenBuffers(I[II)V
+    invoke-static {v3, v0, v2}, Landroid/opengl/GLES20;->glGenBuffers(I[II)V
 
+    .line 5
     iget-object v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->p:[I
 
     aget v0, v0, v2
@@ -1153,36 +1183,43 @@
 
     invoke-static {v3, v0}, Landroid/opengl/GLES20;->glBindBuffer(II)V
 
+    .line 6
     iget v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->w:I
 
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
+    .line 7
     invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
 
     move-result-object v4
 
     invoke-virtual {v0, v4}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
+    .line 8
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->r:Ljava/nio/FloatBuffer;
 
+    .line 9
     invoke-virtual {v0, v2}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
 
+    .line 10
     iget-object v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->r:Ljava/nio/FloatBuffer;
 
     iget-object v4, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->u:[F
 
     invoke-virtual {v0, v4}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
 
+    .line 11
     iget-object v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->r:Ljava/nio/FloatBuffer;
 
     invoke-virtual {v0, v2}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
 
+    .line 12
     iget v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->w:I
 
     iget-object v4, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->r:Ljava/nio/FloatBuffer;
@@ -1191,6 +1228,7 @@
 
     invoke-static {v3, v0, v4, v5}, Landroid/opengl/GLES20;->glBufferData(IILjava/nio/Buffer;I)V
 
+    .line 13
     invoke-static {v2}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
     const/4 v6, 0x0
@@ -1205,50 +1243,60 @@
 
     const/4 v11, 0x0
 
+    .line 14
     invoke-static/range {v6 .. v11}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZII)V
 
+    .line 15
     iget-object v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->p:[I
 
     aget v0, v0, v1
 
     invoke-static {v3, v0}, Landroid/opengl/GLES20;->glBindBuffer(II)V
 
+    .line 16
     iget v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->x:I
 
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
+    .line 17
     invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
 
     move-result-object v4
 
     invoke-virtual {v0, v4}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
+    .line 18
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->s:Ljava/nio/FloatBuffer;
 
+    .line 19
     invoke-virtual {v0, v2}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
 
+    .line 20
     iget-object v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->s:Ljava/nio/FloatBuffer;
 
     iget-object v4, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->v:[F
 
     invoke-virtual {v0, v4}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
 
+    .line 21
     iget-object v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->s:Ljava/nio/FloatBuffer;
 
     invoke-virtual {v0, v2}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
 
+    .line 22
     iget v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->x:I
 
     iget-object p0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->s:Ljava/nio/FloatBuffer;
 
     invoke-static {v3, v0, p0, v5}, Landroid/opengl/GLES20;->glBufferData(IILjava/nio/Buffer;I)V
 
+    .line 23
     invoke-static {v1}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
     const/4 v6, 0x1
@@ -1257,10 +1305,13 @@
 
     const/16 v10, 0x8
 
+    .line 24
     invoke-static/range {v6 .. v11}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZII)V
 
+    .line 25
     invoke-static {v3, v2}, Landroid/opengl/GLES20;->glBindBuffer(II)V
 
+    .line 26
     invoke-static {v2}, Landroid/opengl/GLES30;->glBindVertexArray(I)V
 
     return-void
@@ -1271,6 +1322,7 @@
 
     move-object/from16 v0, p0
 
+    .line 1
     iget v1, v0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->t:I
 
     const/16 v2, 0x802
@@ -1279,6 +1331,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     invoke-virtual/range {p1 .. p1}, Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;->getRowStride()[I
 
@@ -1288,12 +1341,14 @@
 
     aget v1, v1, v2
 
+    .line 3
     invoke-virtual/range {p1 .. p1}, Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;->getHeight()I
 
     move-result v3
 
     mul-int/2addr v3, v1
 
+    .line 4
     invoke-virtual/range {p1 .. p1}, Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;->getYData()[B
 
     move-result-object v4
@@ -1302,26 +1357,32 @@
 
     move-result-object v11
 
+    .line 5
     invoke-virtual {v11, v2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     shr-int/lit8 v4, v3, 0x1
 
+    .line 6
     invoke-static {v4}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v15
 
+    .line 7
     invoke-virtual/range {p1 .. p1}, Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;->getYData()[B
 
     move-result-object v5
 
     invoke-virtual {v15, v5, v3, v4}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
 
+    .line 8
     invoke-virtual {v15, v2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     const v3, 0x84c0
 
+    .line 9
     invoke-static {v3}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
+    .line 10
     iget-object v3, v0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->i:[I
 
     aget v2, v3, v2
@@ -1336,6 +1397,7 @@
 
     const/16 v5, 0x1909
 
+    .line 11
     invoke-virtual/range {p1 .. p1}, Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;->getHeight()I
 
     move-result v7
@@ -1352,8 +1414,10 @@
 
     const v2, 0x84c1
 
+    .line 12
     invoke-static {v2}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
+    .line 13
     iget-object v2, v0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->i:[I
 
     const/4 v3, 0x1
@@ -1368,6 +1432,7 @@
 
     shr-int/2addr v1, v3
 
+    .line 14
     invoke-virtual/range {p1 .. p1}, Lcom/arcsoft/avatar2/util/ASVLOFFSCREEN;->getHeight()I
 
     move-result v2
@@ -1388,6 +1453,7 @@
 
     invoke-static/range {v12 .. v20}, Landroid/opengl/GLES20;->glTexImage2D(IIIIIIIILjava/nio/Buffer;)V
 
+    .line 15
     invoke-direct/range {p0 .. p0}, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->a()V
 
     return-void
@@ -1396,6 +1462,7 @@
 .method public renderWithTextureId(I)V
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->t:I
 
     const/16 v1, 0x305
@@ -1407,12 +1474,15 @@
     :cond_0
     const v0, 0x84c3
 
+    .line 2
     invoke-static {v0}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
     const/16 v0, 0xde1
 
+    .line 3
     invoke-static {v0, p1}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
+    .line 4
     :goto_0
     invoke-direct {p0}, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->a()V
 
@@ -1422,6 +1492,7 @@
 .method public setDepthValue(F)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->F:F
 
     return-void
@@ -1430,6 +1501,7 @@
 .method public setEnableFlipY(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->D:I
 
     return-void
@@ -1438,16 +1510,21 @@
 .method public setMirrorAndDegree(ZI)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->B:Z
 
+    .line 2
     iput p2, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->C:I
 
+    .line 3
     iget-object p1, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->v:[F
 
     array-length p1, p1
 
+    .line 4
     new-array p1, p1, [F
 
+    .line 5
     invoke-direct {p0, p1}, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->a([F)V
 
     return-void
@@ -1462,6 +1539,7 @@
 
     if-nez p1, :cond_0
 
+    .line 1
     iget-object p1, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->y:[I
 
     iget p0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->z:I
@@ -1472,6 +1550,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-object v2, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->y:[I
 
@@ -1479,49 +1558,64 @@
 
     aput v3, v2, v1
 
+    .line 3
     aget p1, p1, v0
 
     aput p1, v2, v0
 
-    const/4 v0, 0x3
+    const/4 p1, 0x2
 
-    aput p1, v2, v0
+    const/4 v3, 0x3
 
-    const/4 v0, 0x2
+    .line 4
+    aget v0, v2, v0
 
-    aput p1, v2, v0
+    aput v0, v2, v3
 
+    aput v0, v2, p1
+
+    .line 5
     iget p1, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->z:I
 
-    if-ne p1, v3, :cond_1
+    aget v0, v2, v1
+
+    if-ne p1, v0, :cond_1
 
     return-void
 
+    .line 6
     :cond_1
-    sub-int p1, v3, p1
+    aget v0, v2, v1
 
-    int-to-float p1, p1
+    sub-int/2addr v0, p1
+
+    int-to-float p1, v0
 
     const/high16 v0, 0x3f800000    # 1.0f
 
     add-float/2addr p1, v0
 
-    int-to-float v1, v3
+    .line 7
+    aget v1, v2, v1
+
+    int-to-float v1, v1
 
     div-float/2addr p1, v1
 
     sub-float/2addr v0, p1
 
+    .line 8
     iget-object p1, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->v:[F
-
-    const/4 v1, 0x6
-
-    aput v0, p1, v1
 
     const/4 v1, 0x4
 
+    const/4 v2, 0x6
+
+    aput v0, p1, v2
+
     aput v0, p1, v1
 
+    .line 9
     iput v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->h:F
 
     return-void
@@ -1530,16 +1624,20 @@
 .method public unInit()V
     .locals 5
 
+    .line 1
     iget v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->o:I
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-static {v0}, Landroid/opengl/GLES20;->glDeleteProgram(I)V
 
+    .line 3
     iput v1, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->o:I
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->q:[I
 
@@ -1549,12 +1647,15 @@
 
     if-eqz v2, :cond_1
 
+    .line 5
     invoke-static {v3, v0, v1}, Landroid/opengl/GLES30;->glDeleteVertexArrays(I[II)V
 
+    .line 6
     iget-object v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->q:[I
 
     aput v1, v0, v1
 
+    .line 7
     :cond_1
     iget-object v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->i:[I
 
@@ -1564,14 +1665,17 @@
 
     if-eqz v2, :cond_2
 
+    .line 8
     invoke-static {v4, v0, v1}, Landroid/opengl/GLES20;->glDeleteTextures(I[II)V
 
+    .line 9
     iget-object v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->i:[I
 
     aput v1, v0, v3
 
     aput v1, v0, v1
 
+    .line 10
     :cond_2
     iget-object v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->j:[I
 
@@ -1579,12 +1683,15 @@
 
     if-eqz v2, :cond_3
 
+    .line 11
     invoke-static {v3, v0, v1}, Landroid/opengl/GLES20;->glDeleteTextures(I[II)V
 
+    .line 12
     iget-object v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->j:[I
 
     aput v1, v0, v1
 
+    .line 13
     :cond_3
     iget-object v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->p:[I
 
@@ -1592,14 +1699,17 @@
 
     if-eqz v2, :cond_4
 
+    .line 14
     invoke-static {v4, v0, v1}, Landroid/opengl/GLES20;->glDeleteBuffers(I[II)V
 
+    .line 15
     iget-object v0, p0, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->p:[I
 
     aput v1, v0, v3
 
     aput v1, v0, v1
 
+    .line 16
     :cond_4
     invoke-direct {p0}, Lcom/arcsoft/avatar2/gl/GLRenderEngine;->b()V
 

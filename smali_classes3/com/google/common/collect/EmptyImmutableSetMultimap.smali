@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/EmptyImmutableSetMultimap;
+.class public Lcom/google/common/collect/EmptyImmutableSetMultimap;
 .super Lcom/google/common/collect/ImmutableSetMultimap;
 .source "SourceFile"
 
@@ -22,7 +22,7 @@
 
 
 # static fields
-.field static final INSTANCE:Lcom/google/common/collect/EmptyImmutableSetMultimap;
+.field public static final INSTANCE:Lcom/google/common/collect/EmptyImmutableSetMultimap;
 
 .field private static final serialVersionUID:J
 
@@ -31,6 +31,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/EmptyImmutableSetMultimap;
 
     invoke-direct {v0}, Lcom/google/common/collect/EmptyImmutableSetMultimap;-><init>()V
@@ -43,6 +44,7 @@
 .method private constructor <init>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/ImmutableMap;->of()Lcom/google/common/collect/ImmutableMap;
 
     move-result-object v0
@@ -59,6 +61,7 @@
 .method private readResolve()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     sget-object p0, Lcom/google/common/collect/EmptyImmutableSetMultimap;->INSTANCE:Lcom/google/common/collect/EmptyImmutableSetMultimap;
 
     return-object p0

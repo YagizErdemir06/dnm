@@ -1,11 +1,11 @@
 .class public Lcom/android/camera/videoplayer/ui/VideoPlayerView;
-.super Lcom/android/camera/videoplayer/ui/b;
+.super Ld/d/a/f8/j/d;
 .source "SourceFile"
 
 # interfaces
 .implements Landroid/view/TextureView$SurfaceTextureListener;
-.implements Lcom/android/camera/videoplayer/ui/a$f;
-.implements Lcom/android/camera/videoplayer/ui/a$h;
+.implements Ld/d/a/f8/j/a$f;
+.implements Ld/d/a/f8/j/a$h;
 
 
 # annotations
@@ -18,54 +18,55 @@
 
 
 # static fields
-.field public static final C:Z
+.field private static final k1:Z
 
-.field public static final D:Ljava/lang/String; = "IS_VIDEO_MUTED"
+.field private static final v1:Ljava/lang/String; = "IS_VIDEO_MUTED"
 
 
 # instance fields
-.field public final A:Ljava/lang/Runnable;
+.field private C1:Ljava/lang/String;
 
-.field public o:Ljava/lang/String;
+.field private C2:Lcom/android/camera/videoplayer/ui/VideoPlayerView$g;
 
-.field public p:Lcom/android/camera/videoplayer/ui/a;
+.field private K1:Ld/d/a/f8/j/a;
 
-.field public q:Lla/a;
+.field private K2:Ld/d/a/f8/j/a$h;
 
-.field public r:Lcom/android/camera/videoplayer/ui/VideoPlayerView$g;
+.field private K8:Landroid/view/TextureView$SurfaceTextureListener;
 
-.field public s:Lcom/android/camera/videoplayer/ui/a$h;
+.field private L8:Landroid/content/res/AssetFileDescriptor;
 
-.field public t:Landroid/view/TextureView$SurfaceTextureListener;
+.field private M8:Ljava/lang/String;
 
-.field public u:Landroid/content/res/AssetFileDescriptor;
+.field private final N8:Ld/d/a/f8/j/c;
 
-.field public v:Ljava/lang/String;
-
-.field public final w:Lka/b;
-
-.field public final x:Ljava/util/Set;
+.field private final O8:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
-            "Lcom/android/camera/videoplayer/ui/a$f;",
+            "Ld/d/a/f8/j/a$f;",
             ">;"
         }
     .end annotation
 .end field
 
-.field public final y:Ljava/lang/Runnable;
+.field private final P8:Ljava/lang/Runnable;
 
-.field public final z:Ljava/lang/Runnable;
+.field private final Q8:Ljava/lang/Runnable;
+
+.field private final R8:Ljava/lang/Runnable;
+
+.field private v2:Ld/d/a/f8/k/a;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
-    sget-boolean v0, Lga/b;->a:Z
+    .line 1
+    sget-boolean v0, Ld/d/a/f8/b;->a:Z
 
-    sput-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C:Z
+    sput-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->k1:Z
 
     return-void
 .end method
@@ -74,45 +75,45 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/android/camera/videoplayer/ui/b;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Ld/d/a/f8/j/d;-><init>(Landroid/content/Context;)V
 
     .line 2
-    new-instance p1, Lka/b;
+    new-instance p1, Ld/d/a/f8/j/c;
 
-    invoke-direct {p1}, Lka/b;-><init>()V
+    invoke-direct {p1}, Ld/d/a/f8/j/c;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
+    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
 
     .line 3
     new-instance p1, Ljava/util/HashSet;
 
     invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->x:Ljava/util/Set;
+    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->O8:Ljava/util/Set;
 
     .line 4
     new-instance p1, Lcom/android/camera/videoplayer/ui/VideoPlayerView$a;
 
     invoke-direct {p1, p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView$a;-><init>(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)V
 
-    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->y:Ljava/lang/Runnable;
+    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->P8:Ljava/lang/Runnable;
 
     .line 5
     new-instance p1, Lcom/android/camera/videoplayer/ui/VideoPlayerView$b;
 
     invoke-direct {p1, p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView$b;-><init>(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)V
 
-    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->z:Ljava/lang/Runnable;
+    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->Q8:Ljava/lang/Runnable;
 
     .line 6
     new-instance p1, Lcom/android/camera/videoplayer/ui/VideoPlayerView$d;
 
     invoke-direct {p1, p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView$d;-><init>(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)V
 
-    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->A:Ljava/lang/Runnable;
+    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->R8:Ljava/lang/Runnable;
 
     .line 7
-    invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->u()V
+    invoke-direct {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->u()V
 
     return-void
 .end method
@@ -121,45 +122,45 @@
     .locals 0
 
     .line 8
-    invoke-direct {p0, p1, p2}, Lcom/android/camera/videoplayer/ui/b;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Ld/d/a/f8/j/d;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 9
-    new-instance p1, Lka/b;
+    new-instance p1, Ld/d/a/f8/j/c;
 
-    invoke-direct {p1}, Lka/b;-><init>()V
+    invoke-direct {p1}, Ld/d/a/f8/j/c;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
+    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
 
     .line 10
     new-instance p1, Ljava/util/HashSet;
 
     invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->x:Ljava/util/Set;
+    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->O8:Ljava/util/Set;
 
     .line 11
     new-instance p1, Lcom/android/camera/videoplayer/ui/VideoPlayerView$a;
 
     invoke-direct {p1, p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView$a;-><init>(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)V
 
-    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->y:Ljava/lang/Runnable;
+    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->P8:Ljava/lang/Runnable;
 
     .line 12
     new-instance p1, Lcom/android/camera/videoplayer/ui/VideoPlayerView$b;
 
     invoke-direct {p1, p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView$b;-><init>(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)V
 
-    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->z:Ljava/lang/Runnable;
+    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->Q8:Ljava/lang/Runnable;
 
     .line 13
     new-instance p1, Lcom/android/camera/videoplayer/ui/VideoPlayerView$d;
 
     invoke-direct {p1, p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView$d;-><init>(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)V
 
-    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->A:Ljava/lang/Runnable;
+    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->R8:Ljava/lang/Runnable;
 
     .line 14
-    invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->u()V
+    invoke-direct {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->u()V
 
     return-void
 .end method
@@ -168,45 +169,45 @@
     .locals 0
 
     .line 15
-    invoke-direct {p0, p1, p2, p3}, Lcom/android/camera/videoplayer/ui/b;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, Ld/d/a/f8/j/d;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 16
-    new-instance p1, Lka/b;
+    new-instance p1, Ld/d/a/f8/j/c;
 
-    invoke-direct {p1}, Lka/b;-><init>()V
+    invoke-direct {p1}, Ld/d/a/f8/j/c;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
+    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
 
     .line 17
     new-instance p1, Ljava/util/HashSet;
 
     invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->x:Ljava/util/Set;
+    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->O8:Ljava/util/Set;
 
     .line 18
     new-instance p1, Lcom/android/camera/videoplayer/ui/VideoPlayerView$a;
 
     invoke-direct {p1, p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView$a;-><init>(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)V
 
-    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->y:Ljava/lang/Runnable;
+    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->P8:Ljava/lang/Runnable;
 
     .line 19
     new-instance p1, Lcom/android/camera/videoplayer/ui/VideoPlayerView$b;
 
     invoke-direct {p1, p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView$b;-><init>(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)V
 
-    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->z:Ljava/lang/Runnable;
+    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->Q8:Ljava/lang/Runnable;
 
     .line 20
     new-instance p1, Lcom/android/camera/videoplayer/ui/VideoPlayerView$d;
 
     invoke-direct {p1, p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView$d;-><init>(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)V
 
-    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->A:Ljava/lang/Runnable;
+    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->R8:Ljava/lang/Runnable;
 
     .line 21
-    invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->u()V
+    invoke-direct {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->u()V
 
     return-void
 .end method
@@ -218,157 +219,83 @@
     .end annotation
 
     .line 22
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/camera/videoplayer/ui/b;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+    invoke-direct {p0, p1, p2, p3, p4}, Ld/d/a/f8/j/d;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     .line 23
-    new-instance p1, Lka/b;
+    new-instance p1, Ld/d/a/f8/j/c;
 
-    invoke-direct {p1}, Lka/b;-><init>()V
+    invoke-direct {p1}, Ld/d/a/f8/j/c;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
+    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
 
     .line 24
     new-instance p1, Ljava/util/HashSet;
 
     invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->x:Ljava/util/Set;
+    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->O8:Ljava/util/Set;
 
     .line 25
     new-instance p1, Lcom/android/camera/videoplayer/ui/VideoPlayerView$a;
 
     invoke-direct {p1, p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView$a;-><init>(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)V
 
-    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->y:Ljava/lang/Runnable;
+    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->P8:Ljava/lang/Runnable;
 
     .line 26
     new-instance p1, Lcom/android/camera/videoplayer/ui/VideoPlayerView$b;
 
     invoke-direct {p1, p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView$b;-><init>(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)V
 
-    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->z:Ljava/lang/Runnable;
+    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->Q8:Ljava/lang/Runnable;
 
     .line 27
     new-instance p1, Lcom/android/camera/videoplayer/ui/VideoPlayerView$d;
 
     invoke-direct {p1, p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView$d;-><init>(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)V
 
-    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->A:Ljava/lang/Runnable;
+    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->R8:Ljava/lang/Runnable;
 
     .line 28
-    invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->u()V
+    invoke-direct {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->u()V
 
     return-void
 .end method
 
-.method public static N(I)Ljava/lang/String;
-    .locals 1
-
-    if-eqz p0, :cond_2
-
-    const/4 v0, 0x4
-
-    if-eq p0, v0, :cond_1
-
-    const/16 v0, 0x8
-
-    if-ne p0, v0, :cond_0
-
-    const-string p0, "GONE"
-
-    return-object p0
-
-    :cond_0
-    new-instance p0, Ljava/lang/RuntimeException;
-
-    const-string v0, "unexpected"
-
-    invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    const-string p0, "INVISIBLE"
-
-    return-object p0
-
-    :cond_2
-    const-string p0, "VISIBLE"
-
-    return-object p0
-.end method
-
-.method public static synthetic j(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)Lcom/android/camera/videoplayer/ui/VideoPlayerView$g;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->r:Lcom/android/camera/videoplayer/ui/VideoPlayerView$g;
-
-    return-object p0
-.end method
-
-.method public static synthetic l()Z
-    .locals 1
-
-    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C:Z
-
-    return v0
-.end method
-
-.method public static synthetic n(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)Ljava/lang/String;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public static synthetic o(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)Lka/b;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
-
-    return-object p0
-.end method
-
-.method public static synthetic p(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)Lcom/android/camera/videoplayer/ui/a;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->p:Lcom/android/camera/videoplayer/ui/a;
-
-    return-object p0
-.end method
-
-
-# virtual methods
-.method public final A()V
+.method private A()V
     .locals 2
 
-    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C:Z
+    .line 1
+    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->k1:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     const-string v1, "notifyOnVideoPreparedMainThread"
 
-    invoke-static {v0, v1}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     :cond_0
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->x:Ljava/util/Set;
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->O8:Ljava/util/Set;
 
     monitor-enter v0
 
+    .line 3
     :try_start_0
     new-instance v1, Ljava/util/ArrayList;
 
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->x:Ljava/util/Set;
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->O8:Ljava/util/Set;
 
     invoke-direct {v1, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
+    .line 4
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 5
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -384,9 +311,10 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/camera/videoplayer/ui/a$f;
+    check-cast v0, Ld/d/a/f8/j/a$f;
 
-    invoke-interface {v0}, Lcom/android/camera/videoplayer/ui/a$f;->a()V
+    .line 6
+    invoke-interface {v0}, Ld/d/a/f8/j/a$f;->a()V
 
     goto :goto_0
 
@@ -396,6 +324,7 @@
     :catchall_0
     move-exception p0
 
+    .line 7
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -404,14 +333,15 @@
     throw p0
 .end method
 
-.method public final B(II)V
+.method private B(II)V
     .locals 3
 
-    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C:Z
+    .line 1
+    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->k1:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -433,24 +363,28 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     :cond_0
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->x:Ljava/util/Set;
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->O8:Ljava/util/Set;
 
     monitor-enter v0
 
+    .line 3
     :try_start_0
     new-instance v1, Ljava/util/ArrayList;
 
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->x:Ljava/util/Set;
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->O8:Ljava/util/Set;
 
     invoke-direct {v1, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
+    .line 4
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 5
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -466,9 +400,10 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/camera/videoplayer/ui/a$f;
+    check-cast v0, Ld/d/a/f8/j/a$f;
 
-    invoke-interface {v0, p1, p2}, Lcom/android/camera/videoplayer/ui/a$f;->i(II)V
+    .line 6
+    invoke-interface {v0, p1, p2}, Ld/d/a/f8/j/a$f;->j(II)V
 
     goto :goto_0
 
@@ -478,6 +413,7 @@
     :catchall_0
     move-exception p0
 
+    .line 7
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -486,35 +422,40 @@
     throw p0
 .end method
 
-.method public final C()V
+.method private C()V
     .locals 2
 
-    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C:Z
+    .line 1
+    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->k1:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     const-string v1, "notifyOnVideoStopped"
 
-    invoke-static {v0, v1}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     :cond_0
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->x:Ljava/util/Set;
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->O8:Ljava/util/Set;
 
     monitor-enter v0
 
+    .line 3
     :try_start_0
     new-instance v1, Ljava/util/ArrayList;
 
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->x:Ljava/util/Set;
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->O8:Ljava/util/Set;
 
     invoke-direct {v1, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
+    .line 4
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 5
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -530,9 +471,10 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/camera/videoplayer/ui/a$f;
+    check-cast v0, Ld/d/a/f8/j/a$f;
 
-    invoke-interface {v0}, Lcom/android/camera/videoplayer/ui/a$f;->e()V
+    .line 6
+    invoke-interface {v0}, Ld/d/a/f8/j/a$f;->f()V
 
     goto :goto_0
 
@@ -542,6 +484,7 @@
     :catchall_0
     move-exception p0
 
+    .line 7
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -550,159 +493,90 @@
     throw p0
 .end method
 
-.method public final D()V
+.method private D()V
     .locals 3
 
-    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C:Z
+    .line 1
+    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->k1:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     const-string v2, ">> notifyTextureAvailable"
 
-    invoke-static {v1, v2}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     :cond_0
-    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->q:Lla/a;
+    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->v2:Ld/d/a/f8/k/a;
 
     new-instance v2, Lcom/android/camera/videoplayer/ui/VideoPlayerView$e;
 
     invoke-direct {v2, p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView$e;-><init>(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)V
 
-    invoke-virtual {v1, v2}, Lla/a;->d(Ljava/lang/Runnable;)V
+    invoke-virtual {v1, v2}, Ld/d/a/f8/k/a;->d(Ljava/lang/Runnable;)V
 
     if-eqz v0, :cond_1
 
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    .line 3
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     const-string v0, "<< notifyTextureAvailable"
 
-    invoke-static {p0, v0}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, v0}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
     return-void
 .end method
 
-.method public final E()V
+.method private E()V
     .locals 3
 
-    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C:Z
+    .line 1
+    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->k1:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     const-string v2, ">> onVideoSizeAvailable"
 
-    invoke-static {v1, v2}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     :cond_0
-    invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/b;->h()V
+    invoke-virtual {p0}, Ld/d/a/f8/j/d;->h()V
 
+    .line 3
     invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->isAttachedToWindow()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->q:Lla/a;
+    .line 4
+    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->v2:Ld/d/a/f8/k/a;
 
-    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->A:Ljava/lang/Runnable;
+    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->R8:Ljava/lang/Runnable;
 
-    invoke-virtual {v1, v2}, Lla/a;->d(Ljava/lang/Runnable;)V
+    invoke-virtual {v1, v2}, Ld/d/a/f8/k/a;->d(Ljava/lang/Runnable;)V
 
     :cond_1
     if-eqz v0, :cond_2
 
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    .line 5
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     const-string v0, "<< onVideoSizeAvailable"
 
-    invoke-static {p0, v0}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, v0}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
     return-void
 .end method
 
-.method public F()V
-    .locals 3
-
-    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
-
-    const-string v2, ">> pause "
-
-    invoke-static {v1, v2}, Lla/b;->b(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
-
-    monitor-enter v1
-
-    :try_start_0
-    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->p:Lcom/android/camera/videoplayer/ui/a;
-
-    invoke-virtual {v2}, Lcom/android/camera/videoplayer/ui/a;->p()V
-
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v0, :cond_1
-
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
-
-    const-string v0, "<< pause"
-
-    invoke-static {p0, v0}, Lla/b;->b(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_1
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    :try_start_1
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p0
-.end method
-
-.method public G()V
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->r()V
-
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->p:Lcom/android/camera/videoplayer/ui/a;
-
-    invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/a;->s()V
-
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
-.end method
-
-.method public final H(I)V
+.method private H(I)V
     .locals 1
 
     const/16 v0, -0x3f2
@@ -723,77 +597,527 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
-    sget-boolean p1, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C:Z
+    sget-boolean p1, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->k1:Z
 
     if-eqz p1, :cond_4
 
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     const-string p1, "error extra MEDIA_ERROR_TIMED_OUT"
 
-    invoke-static {p0, p1}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, p1}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
+    .line 2
     :cond_1
-    sget-boolean p1, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C:Z
+    sget-boolean p1, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->k1:Z
 
     if-eqz p1, :cond_4
 
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     const-string p1, "error extra MEDIA_ERROR_IO"
 
-    invoke-static {p0, p1}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, p1}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
+    .line 3
     :cond_2
-    sget-boolean p1, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C:Z
+    sget-boolean p1, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->k1:Z
 
     if-eqz p1, :cond_4
 
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     const-string p1, "error extra MEDIA_ERROR_MALFORMED"
 
-    invoke-static {p0, p1}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, p1}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
+    .line 4
     :cond_3
-    sget-boolean p1, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C:Z
+    sget-boolean p1, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->k1:Z
 
     if-eqz p1, :cond_4
 
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     const-string p1, "error extra MEDIA_ERROR_UNSUPPORTED"
 
-    invoke-static {p0, p1}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, p1}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_4
     :goto_0
     return-void
 .end method
 
-.method public I()V
+.method private static N(I)Ljava/lang/String;
     .locals 1
 
-    invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->r()V
+    if-eqz p0, :cond_2
 
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
+    const/4 v0, 0x4
+
+    if-eq p0, v0, :cond_1
+
+    const/16 v0, 0x8
+
+    if-ne p0, v0, :cond_0
+
+    const-string p0, "GONE"
+
+    return-object p0
+
+    .line 1
+    :cond_0
+    new-instance p0, Ljava/lang/RuntimeException;
+
+    const-string v0, "unexpected"
+
+    invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    const-string p0, "INVISIBLE"
+
+    return-object p0
+
+    :cond_2
+    const-string p0, "VISIBLE"
+
+    return-object p0
+.end method
+
+.method public static synthetic i(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)Lcom/android/camera/videoplayer/ui/VideoPlayerView$g;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C2:Lcom/android/camera/videoplayer/ui/VideoPlayerView$g;
+
+    return-object p0
+.end method
+
+.method public static synthetic l()Z
+    .locals 1
+
+    .line 1
+    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->k1:Z
+
+    return v0
+.end method
+
+.method public static synthetic n(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)Ljava/lang/String;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method public static synthetic o(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)Ld/d/a/f8/j/c;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
+
+    return-object p0
+.end method
+
+.method public static synthetic p(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)Ld/d/a/f8/j/a;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->K1:Ld/d/a/f8/j/a;
+
+    return-object p0
+.end method
+
+.method private r()V
+    .locals 1
+
+    .line 1
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object p0
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    if-eq p0, v0, :cond_0
+
+    return-void
+
+    .line 2
+    :cond_0
+    new-instance p0, Ljava/lang/RuntimeException;
+
+    const-string v0, "cannot be in main thread"
+
+    invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method private u()V
+    .locals 2
+
+    .line 1
+    invoke-virtual {p0}, Landroid/view/TextureView;->isInEditMode()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 2
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
+
+    .line 3
+    sget-boolean v1, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->k1:Z
+
+    if-eqz v1, :cond_0
+
+    const-string v1, "initView"
+
+    invoke-static {v0, v1}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 4
+    :cond_0
+    sget-object v0, Ld/d/a/f8/j/d$b;->c:Ld/d/a/f8/j/d$b;
+
+    invoke-virtual {p0, v0}, Ld/d/a/f8/j/d;->setScaleType(Ld/d/a/f8/j/d$b;)V
+
+    .line 5
+    invoke-super {p0, p0}, Landroid/view/TextureView;->setSurfaceTextureListener(Landroid/view/TextureView$SurfaceTextureListener;)V
+
+    :cond_1
+    return-void
+.end method
+
+.method private w()Z
+    .locals 3
+
+    .line 1
+    invoke-virtual {p0}, Ld/d/a/f8/j/d;->getContentHeight()Ljava/lang/Integer;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Ld/d/a/f8/j/d;->getContentWidth()Ljava/lang/Integer;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 2
+    :goto_0
+    sget-boolean v1, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->k1:Z
+
+    if-eqz v1, :cond_1
+
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "isVideoSizeAvailable "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {p0, v1}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    return v0
+.end method
+
+.method private y(II)V
+    .locals 2
+
+    .line 1
+    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->k1:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
+
+    const-string v1, "notifyOnErrorMainThread"
+
+    invoke-static {v0, v1}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 2
+    :cond_0
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->O8:Ljava/util/Set;
 
     monitor-enter v0
 
+    .line 3
     :try_start_0
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->p:Lcom/android/camera/videoplayer/ui/a;
+    new-instance v1, Ljava/util/ArrayList;
+
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->O8:Ljava/util/Set;
+
+    invoke-direct {v1, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    .line 4
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 5
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ld/d/a/f8/j/a$f;
+
+    .line 6
+    invoke-interface {v0, p1, p2}, Ld/d/a/f8/j/a$f;->b(II)V
+
+    goto :goto_0
+
+    :cond_1
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    .line 7
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p0
+.end method
+
+.method private z()V
+    .locals 2
+
+    .line 1
+    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->k1:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
+
+    const-string v1, "notifyVideoCompletionMainThread"
+
+    invoke-static {v0, v1}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 2
+    :cond_0
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->O8:Ljava/util/Set;
+
+    monitor-enter v0
+
+    .line 3
+    :try_start_0
+    new-instance v1, Ljava/util/ArrayList;
+
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->O8:Ljava/util/Set;
+
+    invoke-direct {v1, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    .line 4
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 5
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ld/d/a/f8/j/a$f;
+
+    .line 6
+    invoke-interface {v0}, Ld/d/a/f8/j/a$f;->m()V
+
+    goto :goto_0
+
+    :cond_1
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    .line 7
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p0
+.end method
+
+
+# virtual methods
+.method public F()V
+    .locals 3
+
+    .line 1
+    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->k1:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
+
+    const-string v2, ">> pause "
+
+    invoke-static {v1, v2}, Ld/d/a/f8/k/b;->b(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 2
+    :cond_0
+    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
+
+    monitor-enter v1
+
+    .line 3
+    :try_start_0
+    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->K1:Ld/d/a/f8/j/a;
+
+    invoke-virtual {v2}, Ld/d/a/f8/j/a;->p()V
+
+    .line 4
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v0, :cond_1
+
+    .line 5
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
+
+    const-string v0, "<< pause"
+
+    invoke-static {p0, v0}, Ld/d/a/f8/k/b;->b(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    .line 6
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p0
+.end method
+
+.method public G()V
+    .locals 1
+
+    .line 1
+    invoke-direct {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->r()V
+
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
+
+    monitor-enter v0
+
+    .line 3
+    :try_start_0
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->K1:Ld/d/a/f8/j/a;
+
+    invoke-virtual {p0}, Ld/d/a/f8/j/a;->s()V
+
+    .line 4
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public I()V
+    .locals 1
+
+    .line 1
+    invoke-direct {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->r()V
+
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
+
+    monitor-enter v0
+
+    .line 3
+    :try_start_0
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->K1:Ld/d/a/f8/j/a;
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/a;->u()V
+    .line 4
+    invoke-virtual {p0}, Ld/d/a/f8/j/a;->u()V
 
+    .line 5
     :cond_0
     monitor-exit v0
 
@@ -812,19 +1136,24 @@
 .method public J()V
     .locals 1
 
-    invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->r()V
+    .line 1
+    invoke-direct {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->r()V
 
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
 
     monitor-enter v0
 
+    .line 3
     :try_start_0
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->p:Lcom/android/camera/videoplayer/ui/a;
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->K1:Ld/d/a/f8/j/a;
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/a;->v()V
+    .line 4
+    invoke-virtual {p0}, Ld/d/a/f8/j/a;->v()V
 
+    .line 5
     :cond_0
     monitor-exit v0
 
@@ -848,101 +1177,114 @@
         }
     .end annotation
 
-    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C:Z
+    .line 1
+    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->k1:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     const-string v2, ">> start"
 
-    invoke-static {v1, v2}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     :cond_0
-    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
+    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
 
     monitor-enter v1
 
+    .line 3
     :try_start_0
-    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
+    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
 
-    invoke-virtual {v2}, Lka/b;->b()Z
+    invoke-virtual {v2}, Ld/d/a/f8/j/c;->b()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->p:Lcom/android/camera/videoplayer/ui/a;
+    .line 4
+    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->K1:Ld/d/a/f8/j/a;
 
-    invoke-virtual {v2}, Lcom/android/camera/videoplayer/ui/a;->E()V
+    invoke-virtual {v2}, Ld/d/a/f8/j/a;->E()V
 
     goto :goto_0
 
     :cond_1
     if-eqz v0, :cond_2
 
-    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    .line 5
+    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     const-string v3, "start, >> wait"
 
-    invoke-static {v2, v3}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 6
     :cond_2
-    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
+    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
 
-    invoke-virtual {v2}, Lka/b;->a()Z
+    invoke-virtual {v2}, Ld/d/a/f8/j/c;->a()Z
 
     move-result v2
 
     if-nez v2, :cond_5
 
-    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
+    .line 7
+    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
 
     invoke-virtual {v2}, Ljava/lang/Object;->wait()V
 
     if-eqz v0, :cond_3
 
-    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    .line 8
+    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     const-string v3, "start, << wait"
 
-    invoke-static {v2, v3}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 9
     :cond_3
-    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
+    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
 
-    invoke-virtual {v2}, Lka/b;->b()Z
+    invoke-virtual {v2}, Ld/d/a/f8/j/c;->b()Z
 
     move-result v2
 
     if-eqz v2, :cond_4
 
-    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->p:Lcom/android/camera/videoplayer/ui/a;
+    .line 10
+    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->K1:Ld/d/a/f8/j/a;
 
-    invoke-virtual {v2}, Lcom/android/camera/videoplayer/ui/a;->E()V
+    invoke-virtual {v2}, Ld/d/a/f8/j/a;->E()V
 
     goto :goto_0
 
     :cond_4
     if-eqz v0, :cond_6
 
-    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    .line 11
+    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     const-string v3, "start, movie is not ready, Player become STARTED state, but it will actually don\'t play"
 
-    invoke-static {v2, v3}, Lla/b;->g(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Ld/d/a/f8/k/b;->g(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
     :cond_5
     if-eqz v0, :cond_6
 
-    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    .line 12
+    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     const-string v3, "start, movie is not ready. Video size will not become available"
 
-    invoke-static {v2, v3}, Lla/b;->g(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Ld/d/a/f8/k/b;->g(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 13
     :cond_6
     :goto_0
     monitor-exit v1
@@ -951,11 +1293,12 @@
 
     if-eqz v0, :cond_7
 
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    .line 14
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     const-string v0, "<< start"
 
-    invoke-static {p0, v0}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, v0}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_7
     return-void
@@ -963,6 +1306,7 @@
     :catchall_0
     move-exception p0
 
+    .line 15
     :try_start_1
     monitor-exit v1
     :try_end_1
@@ -974,19 +1318,24 @@
 .method public L()V
     .locals 1
 
-    invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->r()V
+    .line 1
+    invoke-direct {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->r()V
 
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
 
     monitor-enter v0
 
+    .line 3
     :try_start_0
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->p:Lcom/android/camera/videoplayer/ui/a;
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->K1:Ld/d/a/f8/j/a;
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/a;->G()V
+    .line 4
+    invoke-virtual {p0}, Ld/d/a/f8/j/a;->G()V
 
+    .line 5
     :cond_0
     monitor-exit v0
 
@@ -1005,12 +1354,14 @@
 .method public M()V
     .locals 4
 
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/TextureView;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -1032,12 +1383,14 @@
 
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->p:Lcom/android/camera/videoplayer/ui/a;
+    .line 3
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->K1:Ld/d/a/f8/j/a;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    invoke-virtual {p0, v1, v1}, Lcom/android/camera/videoplayer/ui/a;->D(FF)V
+    invoke-virtual {p0, v1, v1}, Ld/d/a/f8/j/a;->D(FF)V
 
+    .line 4
     monitor-exit v0
 
     return-void
@@ -1055,17 +1408,20 @@
 .method public a()V
     .locals 1
 
-    invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->A()V
+    .line 1
+    invoke-direct {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->A()V
 
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->r:Lcom/android/camera/videoplayer/ui/VideoPlayerView$g;
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C2:Lcom/android/camera/videoplayer/ui/VideoPlayerView$g;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->q:Lla/a;
+    .line 3
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->v2:Ld/d/a/f8/k/a;
 
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->z:Ljava/lang/Runnable;
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->Q8:Ljava/lang/Runnable;
 
-    invoke-virtual {v0, p0}, Lla/a;->d(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, p0}, Ld/d/a/f8/k/a;->d(Ljava/lang/Runnable;)V
 
     :cond_0
     return-void
@@ -1074,11 +1430,12 @@
 .method public b(II)V
     .locals 4
 
-    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C:Z
+    .line 1
+    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->k1:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1094,7 +1451,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
     const/4 v1, 0x1
@@ -1110,43 +1467,50 @@
     :cond_1
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     const-string v1, "onErrorMainThread, what MEDIA_ERROR_SERVER_DIED"
 
-    invoke-static {v0, v1}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 3
     :cond_2
-    invoke-virtual {p0, p2}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->H(I)V
+    invoke-direct {p0, p2}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->H(I)V
 
     goto :goto_0
 
     :cond_3
     if-eqz v0, :cond_4
 
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    .line 4
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     const-string v1, "onErrorMainThread, what MEDIA_ERROR_UNKNOWN"
 
-    invoke-static {v0, v1}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 5
     :cond_4
-    invoke-virtual {p0, p2}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->H(I)V
+    invoke-direct {p0, p2}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->H(I)V
 
+    .line 6
     :goto_0
-    invoke-virtual {p0, p1, p2}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->y(II)V
+    invoke-direct {p0, p1, p2}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->y(II)V
 
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->r:Lcom/android/camera/videoplayer/ui/VideoPlayerView$g;
+    .line 7
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C2:Lcom/android/camera/videoplayer/ui/VideoPlayerView$g;
 
     if-eqz v0, :cond_5
 
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->q:Lla/a;
+    .line 8
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->v2:Ld/d/a/f8/k/a;
 
     new-instance v1, Lcom/android/camera/videoplayer/ui/VideoPlayerView$c;
 
     invoke-direct {v1, p0, p1, p2}, Lcom/android/camera/videoplayer/ui/VideoPlayerView$c;-><init>(Lcom/android/camera/videoplayer/ui/VideoPlayerView;II)V
 
-    invoke-virtual {v0, v1}, Lla/a;->d(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Ld/d/a/f8/k/a;->d(Ljava/lang/Runnable;)V
 
     :cond_5
     return-void
@@ -1158,10 +1522,11 @@
     return-void
 .end method
 
-.method public e()V
+.method public f()V
     .locals 0
 
-    invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C()V
+    .line 1
+    invoke-direct {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C()V
 
     return-void
 .end method
@@ -1169,22 +1534,25 @@
 .method public getAssetFileDescriptorDataSource()Landroid/content/res/AssetFileDescriptor;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->u:Landroid/content/res/AssetFileDescriptor;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->L8:Landroid/content/res/AssetFileDescriptor;
 
     return-object p0
 .end method
 
-.method public getCurrentState()Lcom/android/camera/videoplayer/ui/a$g;
+.method public getCurrentState()Ld/d/a/f8/j/a$g;
     .locals 1
 
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->p:Lcom/android/camera/videoplayer/ui/a;
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->K1:Ld/d/a/f8/j/a;
 
-    invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/a;->g()Lcom/android/camera/videoplayer/ui/a$g;
+    invoke-virtual {p0}, Ld/d/a/f8/j/a;->g()Ld/d/a/f8/j/a$g;
 
     move-result-object p0
 
@@ -1195,6 +1563,7 @@
     :catchall_0
     move-exception p0
 
+    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1205,14 +1574,16 @@
 .method public getDuration()I
     .locals 1
 
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->p:Lcom/android/camera/videoplayer/ui/a;
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->K1:Ld/d/a/f8/j/a;
 
-    invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/a;->h()I
+    invoke-virtual {p0}, Ld/d/a/f8/j/a;->h()I
 
     move-result p0
 
@@ -1223,6 +1594,7 @@
     :catchall_0
     move-exception p0
 
+    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1233,19 +1605,40 @@
 .method public getVideoUrlDataSource()Ljava/lang/String;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->v:Ljava/lang/String;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->M8:Ljava/lang/String;
 
     return-object p0
 .end method
 
-.method public i(II)V
+.method public isAttachedToWindow()Z
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->v2:Ld/d/a/f8/k/a;
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+.end method
+
+.method public j(II)V
     .locals 4
 
-    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C:Z
+    .line 1
+    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->k1:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1267,56 +1660,66 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
     if-eqz p1, :cond_1
 
     if-eqz p2, :cond_1
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/videoplayer/ui/b;->setContentWidth(I)V
+    .line 2
+    invoke-virtual {p0, p1}, Ld/d/a/f8/j/d;->setContentWidth(I)V
 
-    invoke-virtual {p0, p2}, Lcom/android/camera/videoplayer/ui/b;->setContentHeight(I)V
+    .line 3
+    invoke-virtual {p0, p2}, Ld/d/a/f8/j/d;->setContentHeight(I)V
 
-    invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->E()V
+    .line 4
+    invoke-direct {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->E()V
 
     goto :goto_0
 
     :cond_1
     if-eqz v0, :cond_2
 
-    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    .line 5
+    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     const-string v2, "onVideoSizeChangedMainThread, size 0. Probably will be unable to start video"
 
-    invoke-static {v1, v2}, Lla/b;->g(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Ld/d/a/f8/k/b;->g(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 6
     :cond_2
-    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
+    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
 
     monitor-enter v1
 
+    .line 7
     :try_start_0
-    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
+    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
 
     const/4 v3, 0x1
 
-    invoke-virtual {v2, v3}, Lka/b;->e(Z)V
+    invoke-virtual {v2, v3}, Ld/d/a/f8/j/c;->e(Z)V
 
-    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
+    .line 8
+    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
 
     invoke-virtual {v2}, Ljava/lang/Object;->notifyAll()V
 
+    .line 9
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 10
     :goto_0
-    invoke-virtual {p0, p1, p2}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->B(II)V
+    invoke-direct {p0, p1, p2}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->B(II)V
 
     if-eqz v0, :cond_3
 
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    .line 11
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1338,7 +1741,7 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, p1}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_3
     return-void
@@ -1346,30 +1749,13 @@
     :catchall_0
     move-exception p0
 
+    .line 12
     :try_start_1
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     throw p0
-.end method
-
-.method public isAttachedToWindow()Z
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->q:Lla/a;
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    return p0
 .end method
 
 .method public k(I)V
@@ -1381,17 +1767,20 @@
 .method public m()V
     .locals 1
 
-    invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->z()V
+    .line 1
+    invoke-direct {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->z()V
 
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->r:Lcom/android/camera/videoplayer/ui/VideoPlayerView$g;
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C2:Lcom/android/camera/videoplayer/ui/VideoPlayerView$g;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->q:Lla/a;
+    .line 3
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->v2:Ld/d/a/f8/k/a;
 
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->y:Ljava/lang/Runnable;
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->P8:Ljava/lang/Runnable;
 
-    invoke-virtual {v0, p0}, Lla/a;->d(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, p0}, Ld/d/a/f8/k/a;->d(Ljava/lang/Runnable;)V
 
     :cond_0
     return-void
@@ -1400,17 +1789,20 @@
 .method public onAttachedToWindow()V
     .locals 5
 
-    invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
+    .line 1
+    invoke-super {p0}, Landroid/view/TextureView;->onAttachedToWindow()V
 
-    invoke-virtual {p0}, Landroid/view/View;->isInEditMode()Z
+    .line 2
+    invoke-virtual {p0}, Landroid/view/TextureView;->isInEditMode()Z
 
     move-result v0
 
-    sget-boolean v1, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C:Z
+    .line 3
+    sget-boolean v1, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->k1:Z
 
     if-eqz v1, :cond_0
 
-    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1426,31 +1818,34 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
     if-nez v0, :cond_1
 
-    new-instance v0, Lla/a;
+    .line 4
+    new-instance v0, Ld/d/a/f8/k/a;
 
-    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, v2, v3}, Lla/a;-><init>(Ljava/lang/String;Z)V
+    invoke-direct {v0, v2, v3}, Ld/d/a/f8/k/a;-><init>(Ljava/lang/String;Z)V
 
-    iput-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->q:Lla/a;
+    iput-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->v2:Ld/d/a/f8/k/a;
 
-    invoke-virtual {v0}, Lla/a;->g()V
+    .line 5
+    invoke-virtual {v0}, Ld/d/a/f8/k/a;->g()V
 
     :cond_1
     if-eqz v1, :cond_2
 
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    .line 6
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     const-string v0, "<< onAttachedToWindow"
 
-    invoke-static {p0, v0}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, v0}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
     return-void
@@ -1459,17 +1854,20 @@
 .method public onDetachedFromWindow()V
     .locals 5
 
-    invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
+    .line 1
+    invoke-super {p0}, Landroid/view/TextureView;->onDetachedFromWindow()V
 
-    invoke-virtual {p0}, Landroid/view/View;->isInEditMode()Z
+    .line 2
+    invoke-virtual {p0}, Landroid/view/TextureView;->isInEditMode()Z
 
     move-result v0
 
-    sget-boolean v1, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C:Z
+    .line 3
+    sget-boolean v1, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->k1:Z
 
     if-eqz v1, :cond_0
 
-    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1485,36 +1883,40 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
     if-nez v0, :cond_2
 
     if-eqz v1, :cond_1
 
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    .line 4
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     const-string v2, "postQuit, run"
 
     invoke-static {v0, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 5
     :cond_1
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->q:Lla/a;
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->v2:Ld/d/a/f8/k/a;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->quit()Z
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->q:Lla/a;
+    .line 6
+    iput-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->v2:Ld/d/a/f8/k/a;
 
     :cond_2
     if-eqz v1, :cond_3
 
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    .line 7
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     const-string v0, "<< onDetachedFromWindow"
 
-    invoke-static {p0, v0}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, v0}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_3
     return-void
@@ -1523,11 +1925,13 @@
 .method public onSurfaceTextureAvailable(Landroid/graphics/SurfaceTexture;II)V
     .locals 3
 
-    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C:Z
+    .line 1
+    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->k1:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1555,17 +1959,20 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 3
     :cond_0
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->t:Landroid/view/TextureView$SurfaceTextureListener;
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->K8:Landroid/view/TextureView$SurfaceTextureListener;
 
     if-eqz v0, :cond_1
 
+    .line 4
     invoke-interface {v0, p1, p2, p3}, Landroid/view/TextureView$SurfaceTextureListener;->onSurfaceTextureAvailable(Landroid/graphics/SurfaceTexture;II)V
 
+    .line 5
     :cond_1
-    invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->D()V
+    invoke-direct {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->D()V
 
     return-void
 .end method
@@ -1573,11 +1980,12 @@
 .method public onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)Z
     .locals 3
 
-    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C:Z
+    .line 1
+    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->k1:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1593,15 +2001,18 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     :cond_0
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->t:Landroid/view/TextureView$SurfaceTextureListener;
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->K8:Landroid/view/TextureView$SurfaceTextureListener;
 
     if-eqz v0, :cond_1
 
+    .line 3
     invoke-interface {v0, p1}, Landroid/view/TextureView$SurfaceTextureListener;->onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)Z
 
+    .line 4
     :cond_1
     invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->isAttachedToWindow()Z
 
@@ -1609,14 +2020,16 @@
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->q:Lla/a;
+    .line 5
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->v2:Ld/d/a/f8/k/a;
 
     new-instance v1, Lcom/android/camera/videoplayer/ui/VideoPlayerView$f;
 
     invoke-direct {v1, p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView$f;-><init>(Lcom/android/camera/videoplayer/ui/VideoPlayerView;)V
 
-    invoke-virtual {v0, v1}, Lla/a;->d(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Ld/d/a/f8/k/a;->d(Ljava/lang/Runnable;)V
 
+    .line 6
     :cond_2
     invoke-virtual {p1}, Landroid/graphics/SurfaceTexture;->release()V
 
@@ -1628,10 +2041,12 @@
 .method public onSurfaceTextureSizeChanged(Landroid/graphics/SurfaceTexture;II)V
     .locals 0
 
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->t:Landroid/view/TextureView$SurfaceTextureListener;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->K8:Landroid/view/TextureView$SurfaceTextureListener;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0, p1, p2, p3}, Landroid/view/TextureView$SurfaceTextureListener;->onSurfaceTextureSizeChanged(Landroid/graphics/SurfaceTexture;II)V
 
     :cond_0
@@ -1641,10 +2056,12 @@
 .method public onSurfaceTextureUpdated(Landroid/graphics/SurfaceTexture;)V
     .locals 0
 
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->t:Landroid/view/TextureView$SurfaceTextureListener;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->K8:Landroid/view/TextureView$SurfaceTextureListener;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0, p1}, Landroid/view/TextureView$SurfaceTextureListener;->onSurfaceTextureUpdated(Landroid/graphics/SurfaceTexture;)V
 
     :cond_0
@@ -1654,17 +2071,20 @@
 .method public onVisibilityChanged(Landroid/view/View;I)V
     .locals 4
 
-    invoke-super {p0, p1, p2}, Landroid/view/View;->onVisibilityChanged(Landroid/view/View;I)V
+    .line 1
+    invoke-super {p0, p1, p2}, Landroid/view/TextureView;->onVisibilityChanged(Landroid/view/View;I)V
 
-    invoke-virtual {p0}, Landroid/view/View;->isInEditMode()Z
+    .line 2
+    invoke-virtual {p0}, Landroid/view/TextureView;->isInEditMode()Z
 
     move-result p1
 
-    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C:Z
+    .line 3
+    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->k1:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1690,7 +2110,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
     if-nez p1, :cond_2
@@ -1705,16 +2125,19 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
-    iget-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
+    iget-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
 
     monitor-enter p1
 
+    .line 5
     :try_start_0
-    iget-object p2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
+    iget-object p2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
 
     invoke-virtual {p2}, Ljava/lang/Object;->notifyAll()V
 
+    .line 6
     monitor-exit p1
 
     goto :goto_0
@@ -1732,28 +2155,32 @@
     :goto_0
     if-eqz v0, :cond_3
 
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    .line 7
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     const-string p1, "<< onVisibilityChanged"
 
-    invoke-static {p0, p1}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, p1}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_3
     return-void
 .end method
 
-.method public q(Lcom/android/camera/videoplayer/ui/a$f;)V
+.method public q(Ld/d/a/f8/j/a$f;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->x:Ljava/util/Set;
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->O8:Ljava/util/Set;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->x:Ljava/util/Set;
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->O8:Ljava/util/Set;
 
     invoke-interface {p0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 3
     monitor-exit v0
 
     return-void
@@ -1764,31 +2191,6 @@
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
-.end method
-
-.method public final r()V
-    .locals 1
-
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
-
-    move-result-object p0
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v0
-
-    if-eq p0, v0, :cond_0
-
-    return-void
-
-    :cond_0
-    new-instance p0, Ljava/lang/RuntimeException;
-
-    const-string v0, "cannot be in main thread"
-
-    invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     throw p0
 .end method
@@ -1796,38 +2198,46 @@
 .method public s()V
     .locals 4
 
-    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C:Z
+    .line 1
+    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->k1:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     const-string v2, ">> clearPlayerInstance"
 
-    invoke-static {v1, v2}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     :cond_0
-    invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->r()V
+    invoke-direct {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->r()V
 
-    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
+    .line 3
+    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
 
     monitor-enter v1
 
+    .line 4
     :try_start_0
-    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
+    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
 
     const/4 v3, 0x0
 
-    invoke-virtual {v2, v3, v3}, Lka/b;->g(Ljava/lang/Integer;Ljava/lang/Integer;)V
+    invoke-virtual {v2, v3, v3}, Ld/d/a/f8/j/c;->g(Ljava/lang/Integer;Ljava/lang/Integer;)V
 
-    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->p:Lcom/android/camera/videoplayer/ui/a;
+    .line 5
+    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->K1:Ld/d/a/f8/j/a;
 
     if-eqz v2, :cond_1
 
-    invoke-virtual {v2}, Lcom/android/camera/videoplayer/ui/a;->e()V
+    .line 6
+    invoke-virtual {v2}, Ld/d/a/f8/j/a;->e()V
 
-    iput-object v3, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->p:Lcom/android/camera/videoplayer/ui/a;
+    .line 7
+    iput-object v3, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->K1:Ld/d/a/f8/j/a;
 
+    .line 8
     :cond_1
     monitor-exit v1
     :try_end_0
@@ -1835,11 +2245,12 @@
 
     if-eqz v0, :cond_2
 
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    .line 9
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     const-string v0, "<< clearPlayerInstance"
 
-    invoke-static {p0, v0}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, v0}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
     return-void
@@ -1847,6 +2258,7 @@
     :catchall_0
     move-exception p0
 
+    .line 10
     :try_start_1
     monitor-exit v1
     :try_end_1
@@ -1858,7 +2270,8 @@
 .method public setBackgroundThreadMediaPlayerListener(Lcom/android/camera/videoplayer/ui/VideoPlayerView$g;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->r:Lcom/android/camera/videoplayer/ui/VideoPlayerView$g;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C2:Lcom/android/camera/videoplayer/ui/VideoPlayerView$g;
 
     return-void
 .end method
@@ -1867,21 +2280,21 @@
     .locals 4
 
     .line 10
-    invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->r()V
+    invoke-direct {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->r()V
 
     .line 11
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
 
     monitor-enter v0
 
     .line 12
     :try_start_0
-    sget-boolean v1, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C:Z
+    sget-boolean v1, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->k1:Z
 
     if-eqz v1, :cond_0
 
     .line 13
-    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1903,23 +2316,23 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 14
     :cond_0
     :try_start_1
-    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->p:Lcom/android/camera/videoplayer/ui/a;
+    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->K1:Ld/d/a/f8/j/a;
 
-    invoke-virtual {v1, p1}, Lcom/android/camera/videoplayer/ui/a;->x(Landroid/content/res/AssetFileDescriptor;)V
+    invoke-virtual {v1, p1}, Ld/d/a/f8/j/a;->x(Landroid/content/res/AssetFileDescriptor;)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 15
     :try_start_2
-    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->u:Landroid/content/res/AssetFileDescriptor;
+    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->L8:Landroid/content/res/AssetFileDescriptor;
 
     .line 16
     monitor-exit v0
@@ -1930,13 +2343,13 @@
     move-exception p1
 
     .line 17
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {p0, v1}, Lla/b;->b(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, v1}, Ld/d/a/f8/k/b;->b(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 18
     new-instance p0, Ljava/lang/RuntimeException;
@@ -1960,20 +2373,20 @@
     .locals 4
 
     .line 1
-    invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->r()V
+    invoke-direct {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->r()V
 
     .line 2
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
 
     monitor-enter v0
 
     .line 3
     :try_start_0
-    sget-boolean v1, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C:Z
+    sget-boolean v1, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->k1:Z
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1995,23 +2408,23 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 4
     :cond_0
     :try_start_1
-    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->p:Lcom/android/camera/videoplayer/ui/a;
+    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->K1:Ld/d/a/f8/j/a;
 
-    invoke-virtual {v1, p1}, Lcom/android/camera/videoplayer/ui/a;->y(Ljava/lang/String;)V
+    invoke-virtual {v1, p1}, Ld/d/a/f8/j/a;->y(Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 5
     :try_start_2
-    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->v:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->M8:Ljava/lang/String;
 
     .line 6
     monitor-exit v0
@@ -2022,13 +2435,13 @@
     move-exception p1
 
     .line 7
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {p0, v1}, Lla/b;->b(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, v1}, Ld/d/a/f8/k/b;->b(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 8
     new-instance p0, Ljava/lang/RuntimeException;
@@ -2048,22 +2461,27 @@
     throw p0
 .end method
 
-.method public setOnVideoStateChangedListener(Lcom/android/camera/videoplayer/ui/a$h;)V
+.method public setOnVideoStateChangedListener(Ld/d/a/f8/j/a$h;)V
     .locals 1
 
-    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->s:Lcom/android/camera/videoplayer/ui/a$h;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->K2:Ld/d/a/f8/j/a$h;
 
-    invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->r()V
+    .line 2
+    invoke-direct {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->r()V
 
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
+    .line 3
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
 
     monitor-enter v0
 
+    .line 4
     :try_start_0
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->p:Lcom/android/camera/videoplayer/ui/a;
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->K1:Ld/d/a/f8/j/a;
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/videoplayer/ui/a;->C(Lcom/android/camera/videoplayer/ui/a$h;)V
+    invoke-virtual {p0, p1}, Ld/d/a/f8/j/a;->C(Ld/d/a/f8/j/a$h;)V
 
+    .line 5
     monitor-exit v0
 
     return-void
@@ -2081,7 +2499,8 @@
 .method public final setSurfaceTextureListener(Landroid/view/TextureView$SurfaceTextureListener;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->t:Landroid/view/TextureView$SurfaceTextureListener;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->K8:Landroid/view/TextureView$SurfaceTextureListener;
 
     return-void
 .end method
@@ -2089,20 +2508,22 @@
 .method public t()V
     .locals 6
 
-    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C:Z
+    .line 1
+    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->k1:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     const-string v2, ">> createNewPlayerInstance"
 
-    invoke-static {v1, v2}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
     if-eqz v0, :cond_1
 
-    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    .line 2
+    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -2122,12 +2543,13 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
     if-eqz v0, :cond_2
 
-    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    .line 3
+    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -2147,53 +2569,62 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 4
     :cond_2
-    invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->r()V
+    invoke-direct {p0}, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->r()V
 
-    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
+    .line 5
+    iget-object v1, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
 
     monitor-enter v1
 
+    .line 6
     :try_start_0
-    new-instance v2, Lka/a;
+    new-instance v2, Ld/d/a/f8/j/b;
 
-    invoke-direct {v2}, Lka/a;-><init>()V
+    invoke-direct {v2}, Ld/d/a/f8/j/b;-><init>()V
 
-    iput-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->p:Lcom/android/camera/videoplayer/ui/a;
+    iput-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->K1:Ld/d/a/f8/j/a;
 
     const/4 v3, 0x1
 
-    invoke-virtual {v2, v3}, Lcom/android/camera/videoplayer/ui/a;->z(Z)V
+    .line 7
+    invoke-virtual {v2, v3}, Ld/d/a/f8/j/a;->z(Z)V
 
-    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v2, v3, v3}, Lka/b;->g(Ljava/lang/Integer;Ljava/lang/Integer;)V
-
-    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
+    .line 8
+    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
 
     const/4 v3, 0x0
 
-    invoke-virtual {v2, v3}, Lka/b;->e(Z)V
+    invoke-virtual {v2, v3, v3}, Ld/d/a/f8/j/c;->g(Ljava/lang/Integer;Ljava/lang/Integer;)V
 
-    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
+    .line 9
+    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
 
-    invoke-virtual {v2}, Lka/b;->c()Z
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v3}, Ld/d/a/f8/j/c;->e(Z)V
+
+    .line 10
+    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
+
+    invoke-virtual {v2}, Ld/d/a/f8/j/c;->c()Z
 
     move-result v2
 
     if-eqz v2, :cond_4
 
+    .line 11
     invoke-virtual {p0}, Landroid/view/TextureView;->getSurfaceTexture()Landroid/graphics/SurfaceTexture;
 
     move-result-object v2
 
     if-eqz v0, :cond_3
 
-    iget-object v3, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    .line 12
+    iget-object v3, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -2209,45 +2640,51 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v4}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 13
     :cond_3
-    iget-object v3, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->p:Lcom/android/camera/videoplayer/ui/a;
+    iget-object v3, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->K1:Ld/d/a/f8/j/a;
 
-    invoke-virtual {v3, v2}, Lcom/android/camera/videoplayer/ui/a;->B(Landroid/graphics/SurfaceTexture;)V
+    invoke-virtual {v3, v2}, Ld/d/a/f8/j/a;->B(Landroid/graphics/SurfaceTexture;)V
 
     goto :goto_0
 
     :cond_4
     if-eqz v0, :cond_5
 
-    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    .line 14
+    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     const-string v3, "texture not available"
 
-    invoke-static {v2, v3}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 15
     :cond_5
     :goto_0
-    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->p:Lcom/android/camera/videoplayer/ui/a;
+    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->K1:Ld/d/a/f8/j/a;
 
-    invoke-virtual {v2, p0}, Lcom/android/camera/videoplayer/ui/a;->A(Lcom/android/camera/videoplayer/ui/a$f;)V
+    invoke-virtual {v2, p0}, Ld/d/a/f8/j/a;->A(Ld/d/a/f8/j/a$f;)V
 
-    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->p:Lcom/android/camera/videoplayer/ui/a;
+    .line 16
+    iget-object v2, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->K1:Ld/d/a/f8/j/a;
 
-    invoke-virtual {v2, p0}, Lcom/android/camera/videoplayer/ui/a;->C(Lcom/android/camera/videoplayer/ui/a$h;)V
+    invoke-virtual {v2, p0}, Ld/d/a/f8/j/a;->C(Ld/d/a/f8/j/a$h;)V
 
+    .line 17
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eqz v0, :cond_6
 
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
+    .line 18
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C1:Ljava/lang/String;
 
     const-string v0, "<< createNewPlayerInstance"
 
-    invoke-static {p0, v0}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p0, v0}, Ld/d/a/f8/k/b;->f(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_6
     return-void
@@ -2255,6 +2692,7 @@
     :catchall_0
     move-exception p0
 
+    .line 19
     :try_start_1
     monitor-exit v1
     :try_end_1
@@ -2266,6 +2704,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2297,54 +2736,11 @@
     return-object p0
 .end method
 
-.method public final u()V
-    .locals 2
-
-    invoke-virtual {p0}, Landroid/view/View;->isInEditMode()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, ""
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
-
-    sget-boolean v1, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C:Z
-
-    if-eqz v1, :cond_0
-
-    const-string v1, "initView"
-
-    invoke-static {v0, v1}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    sget-object v0, Lcom/android/camera/videoplayer/ui/b$b;->a:Lcom/android/camera/videoplayer/ui/b$b;
-
-    invoke-virtual {p0, v0}, Lcom/android/camera/videoplayer/ui/b;->setScaleType(Lcom/android/camera/videoplayer/ui/b$b;)V
-
-    invoke-super {p0, p0}, Landroid/view/TextureView;->setSurfaceTextureListener(Landroid/view/TextureView$SurfaceTextureListener;)V
-
-    :cond_1
-    return-void
-.end method
-
 .method public v()Z
     .locals 2
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    .line 1
+    invoke-virtual {p0}, Landroid/view/TextureView;->getContext()Landroid/content/Context;
 
     move-result-object p0
 
@@ -2363,64 +2759,17 @@
     return p0
 .end method
 
-.method public final w()Z
-    .locals 3
-
-    invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/b;->getContentHeight()Ljava/lang/Integer;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lcom/android/camera/videoplayer/ui/b;->getContentWidth()Ljava/lang/Integer;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    sget-boolean v1, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C:Z
-
-    if-eqz v1, :cond_1
-
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "isVideoSizeAvailable "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {p0, v1}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_1
-    return v0
-.end method
-
 .method public x()V
     .locals 4
 
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->w:Lka/b;
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->N8:Ld/d/a/f8/j/c;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/view/TextureView;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -2442,12 +2791,14 @@
 
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->p:Lcom/android/camera/videoplayer/ui/a;
+    .line 3
+    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->K1:Ld/d/a/f8/j/a;
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0, v1, v1}, Lcom/android/camera/videoplayer/ui/a;->D(FF)V
+    invoke-virtual {p0, v1, v1}, Ld/d/a/f8/j/a;->D(FF)V
 
+    .line 4
     monitor-exit v0
 
     return-void
@@ -2458,134 +2809,6 @@
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
-.end method
-
-.method public final y(II)V
-    .locals 2
-
-    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
-
-    const-string v1, "notifyOnErrorMainThread"
-
-    invoke-static {v0, v1}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->x:Ljava/util/Set;
-
-    monitor-enter v0
-
-    :try_start_0
-    new-instance v1, Ljava/util/ArrayList;
-
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->x:Ljava/util/Set;
-
-    invoke-direct {v1, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/camera/videoplayer/ui/a$f;
-
-    invoke-interface {v0, p1, p2}, Lcom/android/camera/videoplayer/ui/a$f;->b(II)V
-
-    goto :goto_0
-
-    :cond_1
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p0
-.end method
-
-.method public final z()V
-    .locals 2
-
-    sget-boolean v0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->C:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->o:Ljava/lang/String;
-
-    const-string v1, "notifyVideoCompletionMainThread"
-
-    invoke-static {v0, v1}, Lla/b;->f(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    iget-object v0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->x:Ljava/util/Set;
-
-    monitor-enter v0
-
-    :try_start_0
-    new-instance v1, Ljava/util/ArrayList;
-
-    iget-object p0, p0, Lcom/android/camera/videoplayer/ui/VideoPlayerView;->x:Ljava/util/Set;
-
-    invoke-direct {v1, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/camera/videoplayer/ui/a$f;
-
-    invoke-interface {v0}, Lcom/android/camera/videoplayer/ui/a$f;->m()V
-
-    goto :goto_0
-
-    :cond_1
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     throw p0
 .end method

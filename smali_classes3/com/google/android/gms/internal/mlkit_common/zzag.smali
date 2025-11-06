@@ -19,6 +19,7 @@
 
     move v1, v0
 
+    .line 1
     :goto_0
     array-length v2, p1
 
@@ -32,6 +33,7 @@
 
     goto :goto_1
 
+    .line 2
     :cond_0
     :try_start_0
     invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -45,10 +47,12 @@
     :catch_0
     move-exception v9
 
+    .line 3
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v3
 
+    .line 4
     invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v3
@@ -79,30 +83,33 @@
 
     const-string v3, "com.google.common.base.Strings"
 
+    .line 5
     invoke-static {v3}, Ljava/util/logging/Logger;->getLogger(Ljava/lang/String;)Ljava/util/logging/Logger;
 
     move-result-object v3
 
     sget-object v4, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
 
+    const-string v5, "Exception during lenientFormat for "
+
+    invoke-virtual {v5, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
     const-string v5, "com.google.common.base.Strings"
 
     const-string v6, "lenientToString"
 
-    const-string v7, "Exception during lenientFormat for "
-
-    invoke-virtual {v7, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v7
-
     move-object v8, v9
 
+    .line 6
     invoke-virtual/range {v3 .. v8}, Ljava/util/logging/Logger;->logp(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     invoke-virtual {v9}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v3
 
+    .line 7
     invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v3
@@ -131,6 +138,7 @@
 
     move-result-object v2
 
+    .line 8
     :goto_1
     aput-object v2, p1, v1
 
@@ -138,6 +146,7 @@
 
     goto :goto_0
 
+    .line 9
     :cond_1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -149,6 +158,7 @@
 
     add-int/2addr v1, v2
 
+    .line 10
     invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
     move v1, v0
@@ -160,6 +170,7 @@
 
     const-string v4, "%s"
 
+    .line 11
     invoke-virtual {p0, v4, v1}, Ljava/lang/String;->indexOf(Ljava/lang/String;I)I
 
     move-result v4
@@ -170,11 +181,13 @@
 
     goto :goto_3
 
+    .line 12
     :cond_2
     invoke-virtual {v3, p0, v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
 
     add-int/lit8 v1, v0, 0x1
 
+    .line 13
     aget-object v0, p1, v0
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
@@ -189,22 +202,26 @@
 
     goto :goto_2
 
+    .line 14
     :cond_3
     :goto_3
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v4
 
+    .line 15
     invoke-virtual {v3, p0, v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
 
     if-ge v0, v2, :cond_5
 
     const-string p0, " ["
 
+    .line 16
     invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     add-int/lit8 p0, v0, 0x1
 
+    .line 17
     aget-object v0, p1, v0
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
@@ -216,10 +233,12 @@
 
     const-string v0, ", "
 
+    .line 18
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     add-int/lit8 v0, p0, 0x1
 
+    .line 19
     aget-object p0, p1, p0
 
     invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
@@ -231,6 +250,7 @@
     :cond_4
     const/16 p0, 0x5d
 
+    .line 20
     invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     :cond_5
@@ -248,6 +268,7 @@
         .end annotation
     .end param
 
+    .line 1
     sget v0, Lcom/google/android/gms/internal/mlkit_common/zzae;->zza:I
 
     if-nez p0, :cond_0
@@ -265,10 +286,12 @@
         .end annotation
     .end param
 
+    .line 1
     sget v0, Lcom/google/android/gms/internal/mlkit_common/zzae;->zza:I
 
     if-eqz p0, :cond_1
 
+    .line 2
     invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
 
     move-result p0

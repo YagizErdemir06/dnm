@@ -1,4 +1,4 @@
-.class final Lcom/google/common/graph/EdgesConnecting;
+.class public final Lcom/google/common/graph/EdgesConnecting;
 .super Ljava/util/AbstractSet;
 .source "SourceFile"
 
@@ -44,8 +44,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -54,6 +56,7 @@
 
     iput-object p1, p0, Lcom/google/common/graph/EdgesConnecting;->nodeToOutEdge:Ljava/util/Map;
 
+    .line 3
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -74,6 +77,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/graph/EdgesConnecting;->nodeToOutEdge:Ljava/util/Map;
 
     iget-object p0, p0, Lcom/google/common/graph/EdgesConnecting;->targetNode:Ljava/lang/Object;
@@ -94,12 +98,14 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/graph/EdgesConnecting;->getConnectingEdge()Ljava/lang/Object;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -169,6 +175,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/graph/EdgesConnecting;->getConnectingEdge()Ljava/lang/Object;
 
     move-result-object p0

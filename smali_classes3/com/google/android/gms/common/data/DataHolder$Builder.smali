@@ -29,6 +29,7 @@
 .method public synthetic constructor <init>([Ljava/lang/String;Ljava/lang/String;Lcom/google/android/gms/common/data/zac;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     invoke-static {p1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -41,12 +42,14 @@
 
     new-instance p1, Ljava/util/ArrayList;
 
+    .line 2
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/gms/common/data/DataHolder$Builder;->zab:Ljava/util/ArrayList;
 
     new-instance p1, Ljava/util/HashMap;
 
+    .line 3
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/gms/common/data/DataHolder$Builder;->zac:Ljava/util/HashMap;
@@ -134,20 +137,24 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/internal/Asserts;->checkNotNull(Ljava/lang/Object;)V
 
     new-instance v0, Ljava/util/HashMap;
 
+    .line 2
     invoke-virtual {p1}, Landroid/content/ContentValues;->size()I
 
     move-result v1
 
     invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(I)V
 
+    .line 3
     invoke-virtual {p1}, Landroid/content/ContentValues;->valueSet()Ljava/util/Set;
 
     move-result-object p1
 
+    .line 4
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -165,6 +172,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
+    .line 5
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -179,6 +187,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-virtual {p0, v0}, Lcom/google/android/gms/common/data/DataHolder$Builder;->zaa(Ljava/util/HashMap;)Lcom/google/android/gms/common/data/DataHolder$Builder;
 
@@ -199,10 +208,12 @@
     .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/internal/Asserts;->checkNotNull(Ljava/lang/Object;)V
 
     iget-object v0, p0, Lcom/google/android/gms/common/data/DataHolder$Builder;->zab:Ljava/util/ArrayList;
 
+    .line 2
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-object p0

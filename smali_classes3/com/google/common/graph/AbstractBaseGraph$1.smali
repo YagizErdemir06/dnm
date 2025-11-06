@@ -1,4 +1,4 @@
-.class Lcom/google/common/graph/AbstractBaseGraph$1;
+.class public Lcom/google/common/graph/AbstractBaseGraph$1;
 .super Ljava/util/AbstractSet;
 .source "SourceFile"
 
@@ -23,13 +23,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/graph/AbstractBaseGraph;
+.field public final synthetic this$0:Lcom/google/common/graph/AbstractBaseGraph;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/graph/AbstractBaseGraph;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/graph/AbstractBaseGraph$1;->this$0:Lcom/google/common/graph/AbstractBaseGraph;
 
     invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
@@ -46,6 +47,7 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/common/graph/EndpointPair;
 
     const/4 v1, 0x0
@@ -54,9 +56,11 @@
 
     return v1
 
+    .line 2
     :cond_0
     check-cast p1, Lcom/google/common/graph/EndpointPair;
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/graph/AbstractBaseGraph$1;->this$0:Lcom/google/common/graph/AbstractBaseGraph;
 
     invoke-virtual {v0, p1}, Lcom/google/common/graph/AbstractBaseGraph;->isOrderingCompatible(Lcom/google/common/graph/EndpointPair;)Z
@@ -67,6 +71,7 @@
 
     iget-object v0, p0, Lcom/google/common/graph/AbstractBaseGraph$1;->this$0:Lcom/google/common/graph/AbstractBaseGraph;
 
+    .line 4
     invoke-interface {v0}, Lcom/google/common/graph/BaseGraph;->nodes()Ljava/util/Set;
 
     move-result-object v0
@@ -83,6 +88,7 @@
 
     iget-object p0, p0, Lcom/google/common/graph/AbstractBaseGraph$1;->this$0:Lcom/google/common/graph/AbstractBaseGraph;
 
+    .line 5
     invoke-virtual {p1}, Lcom/google/common/graph/EndpointPair;->nodeU()Ljava/lang/Object;
 
     move-result-object v0
@@ -146,6 +152,7 @@
         .end annotation
     .end param
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -156,6 +163,7 @@
 .method public size()I
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/AbstractBaseGraph$1;->this$0:Lcom/google/common/graph/AbstractBaseGraph;
 
     invoke-virtual {p0}, Lcom/google/common/graph/AbstractBaseGraph;->edgeCount()J

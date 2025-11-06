@@ -1,4 +1,4 @@
-.class final Lcom/google/common/base/CharMatcher$AnyOf;
+.class public final Lcom/google/common/base/CharMatcher$AnyOf;
 .super Lcom/google/common/base/CharMatcher;
 .source "SourceFile"
 
@@ -22,8 +22,10 @@
 .method public constructor <init>(Ljava/lang/CharSequence;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/base/CharMatcher;-><init>()V
 
+    .line 2
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -34,6 +36,7 @@
 
     iput-object p1, p0, Lcom/google/common/base/CharMatcher$AnyOf;->chars:[C
 
+    .line 3
     invoke-static {p1}, Ljava/util/Arrays;->sort([C)V
 
     return-void
@@ -46,6 +49,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     check-cast p1, Ljava/lang/Character;
 
     invoke-super {p0, p1}, Lcom/google/common/base/CharMatcher;->apply(Ljava/lang/Character;)Z
@@ -58,6 +62,7 @@
 .method public matches(C)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/CharMatcher$AnyOf;->chars:[C
 
     invoke-static {p0, p1}, Ljava/util/Arrays;->binarySearch([CC)I
@@ -82,6 +87,7 @@
     .annotation build Lcom/google/common/annotations/GwtIncompatible;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/CharMatcher$AnyOf;->chars:[C
 
     array-length v0, p0
@@ -93,6 +99,7 @@
 
     aget-char v2, p0, v1
 
+    .line 2
     invoke-virtual {p1, v2}, Ljava/util/BitSet;->set(I)V
 
     add-int/lit8 v1, v1, 0x1
@@ -106,12 +113,14 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "CharMatcher.anyOf(\""
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/base/CharMatcher$AnyOf;->chars:[C
 
     array-length v1, p0
@@ -123,6 +132,7 @@
 
     aget-char v3, p0, v2
 
+    .line 3
     invoke-static {v3}, Lcom/google/common/base/CharMatcher;->access$100(C)Ljava/lang/String;
 
     move-result-object v3
@@ -136,8 +146,10 @@
     :cond_0
     const-string p0, "\")"
 
+    .line 4
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 5
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

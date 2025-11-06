@@ -42,12 +42,6 @@
     <plurals name="accessibility_vv_duartion">
         <item quantity="other">기간: %d초</item>
     </plurals>
-    <plurals name="accessibility_watermark_characters_inputted">
-        <item quantity="other">%d자리 문자를 입력하셨습니다.</item>
-    </plurals>
-    <plurals name="accessibility_watermark_characters_max">
-        <item quantity="other">최대 %d자리 문자를 입력하십시오.</item>
-    </plurals>
     <plurals name="cinemaster_toast_camera_overflow">
         <item quantity="other">카메라 최대 %d대를 동일한 네트워크에 연결 가능</item>
     </plurals>
@@ -106,10 +100,6 @@
     </plurals>
     <plurals name="miuix_appcompat_items_selected">
         <item quantity="other">%d개 항목 선택됨</item>
-    </plurals>
-    <plurals name="mtrl_badge_content_description">
-        <item quantity="other">새 알림 %d개</item>
-        <item quantity="one">새 알림 %d개</item>
     </plurals>
     <plurals name="num_minutes_ago">
         <item quantity="other">%d분 전</item>

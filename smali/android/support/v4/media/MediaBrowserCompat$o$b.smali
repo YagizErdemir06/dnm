@@ -34,6 +34,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroid/support/v4/media/MediaBrowserCompat$o$b;->b:Landroid/support/v4/media/MediaBrowserCompat$o;
 
     invoke-direct {p0, p1}, Landroid/support/v4/media/MediaBrowserCompat$o$a;-><init>(Landroid/support/v4/media/MediaBrowserCompat$o;)V
@@ -82,14 +83,18 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p3}, Landroid/support/v4/media/session/MediaSessionCompat;->b(Landroid/os/Bundle;)V
 
+    .line 2
     iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$o$b;->b:Landroid/support/v4/media/MediaBrowserCompat$o;
 
-    invoke-static {p2}, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->c(Ljava/util/List;)Ljava/util/List;
+    .line 3
+    invoke-static {p2}, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->b(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p2
 
+    .line 4
     invoke-virtual {p0, p1, p2, p3}, Landroid/support/v4/media/MediaBrowserCompat$o;->b(Ljava/lang/String;Ljava/util/List;Landroid/os/Bundle;)V
 
     return-void
@@ -116,8 +121,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p2}, Landroid/support/v4/media/session/MediaSessionCompat;->b(Landroid/os/Bundle;)V
 
+    .line 2
     iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$o$b;->b:Landroid/support/v4/media/MediaBrowserCompat$o;
 
     invoke-virtual {p0, p1, p2}, Landroid/support/v4/media/MediaBrowserCompat$o;->d(Ljava/lang/String;Landroid/os/Bundle;)V

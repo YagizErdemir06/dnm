@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/AbstractScheduledService$FutureAsCancellable;
+.class public final Lcom/google/common/util/concurrent/AbstractScheduledService$FutureAsCancellable;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -39,8 +39,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/util/concurrent/AbstractScheduledService$FutureAsCancellable;->delegate:Ljava/util/concurrent/Future;
 
     return-void
@@ -51,6 +53,7 @@
 .method public cancel(Z)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/AbstractScheduledService$FutureAsCancellable;->delegate:Ljava/util/concurrent/Future;
 
     invoke-interface {p0, p1}, Ljava/util/concurrent/Future;->cancel(Z)Z
@@ -61,6 +64,7 @@
 .method public isCancelled()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/AbstractScheduledService$FutureAsCancellable;->delegate:Ljava/util/concurrent/Future;
 
     invoke-interface {p0}, Ljava/util/concurrent/Future;->isCancelled()Z

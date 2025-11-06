@@ -1,4 +1,4 @@
-.class interface abstract Landroidx/cardview/widget/CardViewImpl;
+.class public interface abstract Landroidx/cardview/widget/CardViewImpl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

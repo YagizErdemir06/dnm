@@ -1,16 +1,16 @@
-.class final Lcom/google/android/gms/common/api/internal/zace;
+.class public final Lcom/google/android/gms/common/api/internal/zace;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field final zaa:Lcom/google/android/gms/common/internal/MethodInvocation;
+.field public final zaa:Lcom/google/android/gms/common/internal/MethodInvocation;
 
-.field final zab:I
+.field public final zab:I
 
-.field final zac:J
+.field public final zac:J
 
-.field final zad:I
+.field public final zad:I
 
 
 # direct methods

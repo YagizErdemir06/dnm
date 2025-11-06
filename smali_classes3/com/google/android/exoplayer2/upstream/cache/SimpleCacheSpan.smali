@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/upstream/cache/SimpleCacheSpan;
+.class public final Lcom/google/android/exoplayer2/upstream/cache/SimpleCacheSpan;
 .super Lcom/google/android/exoplayer2/upstream/cache/CacheSpan;
 .source "SourceFile"
 
@@ -10,7 +10,7 @@
 
 .field private static final CACHE_FILE_PATTERN_V3:Ljava/util/regex/Pattern;
 
-.field static final COMMON_SUFFIX:Ljava/lang/String; = ".exo"
+.field public static final COMMON_SUFFIX:Ljava/lang/String; = ".exo"
 
 .field private static final SUFFIX:Ljava/lang/String; = ".v3.exo"
 
@@ -23,6 +23,7 @@
 
     const/16 v1, 0x20
 
+    .line 1
     invoke-static {v0, v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -31,6 +32,7 @@
 
     const-string v0, "^(.+)\\.(\\d+)\\.(\\d+)\\.v2\\.exo$"
 
+    .line 2
     invoke-static {v0, v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -39,6 +41,7 @@
 
     const-string v0, "^(\\d+)\\.(\\d+)\\.(\\d+)\\.v3\\.exo$"
 
+    .line 3
     invoke-static {v0, v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -55,6 +58,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct/range {p0 .. p8}, Lcom/google/android/exoplayer2/upstream/cache/CacheSpan;-><init>(Ljava/lang/String;JJJLjava/io/File;)V
 
     return-void
@@ -266,6 +270,7 @@
 .method public static createHole(Ljava/lang/String;JJ)Lcom/google/android/exoplayer2/upstream/cache/SimpleCacheSpan;
     .locals 10
 
+    .line 1
     new-instance v9, Lcom/google/android/exoplayer2/upstream/cache/SimpleCacheSpan;
 
     const-wide v6, -0x7fffffffffffffffL    # -4.9E-324
@@ -288,6 +293,7 @@
 .method public static createLookup(Ljava/lang/String;J)Lcom/google/android/exoplayer2/upstream/cache/SimpleCacheSpan;
     .locals 10
 
+    .line 1
     new-instance v9, Lcom/google/android/exoplayer2/upstream/cache/SimpleCacheSpan;
 
     const-wide/16 v4, -0x1
@@ -310,6 +316,7 @@
 .method public static getCacheFile(Ljava/io/File;IJJ)Ljava/io/File;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/io/File;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -346,16 +353,19 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 2
     sget-object v1, Lcom/google/android/exoplayer2/upstream/cache/SimpleCacheSpan;->CACHE_FILE_PATTERN_V2:Ljava/util/regex/Pattern;
 
     invoke-virtual {v1, v0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v1
 
+    .line 3
     invoke-virtual {v1}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v2
@@ -366,6 +376,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 4
     invoke-virtual {v1, v3}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v0
@@ -382,6 +393,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     sget-object v1, Lcom/google/android/exoplayer2/upstream/cache/SimpleCacheSpan;->CACHE_FILE_PATTERN_V1:Ljava/util/regex/Pattern;
 
@@ -389,12 +401,14 @@
 
     move-result-object v1
 
+    .line 6
     invoke-virtual {v1}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 7
     invoke-virtual {v1, v3}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v0
@@ -415,6 +429,7 @@
 
     return-object v4
 
+    .line 8
     :cond_2
     invoke-virtual {p0}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
@@ -428,12 +443,14 @@
 
     check-cast v5, Ljava/io/File;
 
+    .line 9
     invoke-virtual {p1, v0}, Lcom/google/android/exoplayer2/upstream/cache/CachedContentIndex;->assignIdForKey(Ljava/lang/String;)I
 
     move-result v6
 
     const/4 p1, 0x2
 
+    .line 10
     invoke-virtual {v1, p1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object p1
@@ -450,6 +467,7 @@
 
     const/4 p1, 0x3
 
+    .line 11
     invoke-virtual {v1, p1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object p1
@@ -464,10 +482,12 @@
 
     move-result-wide v9
 
+    .line 12
     invoke-static/range {v5 .. v10}, Lcom/google/android/exoplayer2/upstream/cache/SimpleCacheSpan;->getCacheFile(Ljava/io/File;IJJ)Ljava/io/File;
 
     move-result-object p1
 
+    .line 13
     invoke-virtual {p0, p1}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
     move-result p0
@@ -485,10 +505,12 @@
 .method public copyWithFileAndLastTouchTimestamp(Ljava/io/File;J)Lcom/google/android/exoplayer2/upstream/cache/SimpleCacheSpan;
     .locals 10
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/upstream/cache/CacheSpan;->isCached:Z
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     new-instance v0, Lcom/google/android/exoplayer2/upstream/cache/SimpleCacheSpan;
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/upstream/cache/CacheSpan;->key:Ljava/lang/String;

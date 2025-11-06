@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Lists$RandomAccessReverseList;
+.class public Lcom/google/common/collect/Lists$RandomAccessReverseList;
 .super Lcom/google/common/collect/Lists$ReverseList;
 .source "SourceFile"
 
@@ -39,6 +39,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/Lists$ReverseList;-><init>(Ljava/util/List;)V
 
     return-void

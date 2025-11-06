@@ -55,6 +55,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/tasks/NativeOnCompleteListener;
 
     invoke-direct {v0, p1, p2}, Lcom/google/android/gms/tasks/NativeOnCompleteListener;-><init>(J)V
@@ -97,6 +98,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->isSuccessful()Z
 
     move-result v0
@@ -105,6 +107,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->getResult()Ljava/lang/Object;
 
     move-result-object v0
@@ -115,6 +118,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->isCanceled()Z
 
@@ -122,13 +126,15 @@
 
     if-nez v0, :cond_1
 
+    .line 4
     invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->getException()Ljava/lang/Exception;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 5
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
@@ -143,9 +149,11 @@
 
     move-object v8, v5
 
+    .line 6
     :goto_0
     iget-wide v3, p0, Lcom/google/android/gms/tasks/NativeOnCompleteListener;->zza:J
 
+    .line 7
     invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->isSuccessful()Z
 
     move-result v6

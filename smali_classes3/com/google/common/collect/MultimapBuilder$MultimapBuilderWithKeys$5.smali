@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/MultimapBuilder$MultimapBuilderWithKeys$5;
+.class public Lcom/google/common/collect/MultimapBuilder$MultimapBuilderWithKeys$5;
 .super Lcom/google/common/collect/MultimapBuilder$SortedSetMultimapBuilder;
 .source "SourceFile"
 
@@ -22,15 +22,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/MultimapBuilder$MultimapBuilderWithKeys;
+.field public final synthetic this$0:Lcom/google/common/collect/MultimapBuilder$MultimapBuilderWithKeys;
 
-.field final synthetic val$comparator:Ljava/util/Comparator;
+.field public final synthetic val$comparator:Ljava/util/Comparator;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/MultimapBuilder$MultimapBuilderWithKeys;Ljava/util/Comparator;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/MultimapBuilder$MultimapBuilderWithKeys$5;->this$0:Lcom/google/common/collect/MultimapBuilder$MultimapBuilderWithKeys;
 
     iput-object p2, p0, Lcom/google/common/collect/MultimapBuilder$MultimapBuilderWithKeys$5;->val$comparator:Ljava/util/Comparator;

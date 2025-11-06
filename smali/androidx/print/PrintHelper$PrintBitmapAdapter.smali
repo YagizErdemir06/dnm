@@ -1,4 +1,4 @@
-.class Landroidx/print/PrintHelper$PrintBitmapAdapter;
+.class public Landroidx/print/PrintHelper$PrintBitmapAdapter;
 .super Landroid/print/PrintDocumentAdapter;
 .source "SourceFile"
 
@@ -29,23 +29,28 @@
 
 .field private final mJobName:Ljava/lang/String;
 
-.field final synthetic this$0:Landroidx/print/PrintHelper;
+.field public final synthetic this$0:Landroidx/print/PrintHelper;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/print/PrintHelper;Ljava/lang/String;ILandroid/graphics/Bitmap;Landroidx/print/PrintHelper$OnPrintFinishCallback;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/print/PrintHelper$PrintBitmapAdapter;->this$0:Landroidx/print/PrintHelper;
 
     invoke-direct {p0}, Landroid/print/PrintDocumentAdapter;-><init>()V
 
+    .line 2
     iput-object p2, p0, Landroidx/print/PrintHelper$PrintBitmapAdapter;->mJobName:Ljava/lang/String;
 
+    .line 3
     iput p3, p0, Landroidx/print/PrintHelper$PrintBitmapAdapter;->mFittingMode:I
 
+    .line 4
     iput-object p4, p0, Landroidx/print/PrintHelper$PrintBitmapAdapter;->mBitmap:Landroid/graphics/Bitmap;
 
+    .line 5
     iput-object p5, p0, Landroidx/print/PrintHelper$PrintBitmapAdapter;->mCallback:Landroidx/print/PrintHelper$OnPrintFinishCallback;
 
     return-void
@@ -56,10 +61,12 @@
 .method public onFinish()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/print/PrintHelper$PrintBitmapAdapter;->mCallback:Landroidx/print/PrintHelper$OnPrintFinishCallback;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0}, Landroidx/print/PrintHelper$OnPrintFinishCallback;->onFinish()V
 
     :cond_0
@@ -69,8 +76,10 @@
 .method public onLayout(Landroid/print/PrintAttributes;Landroid/print/PrintAttributes;Landroid/os/CancellationSignal;Landroid/print/PrintDocumentAdapter$LayoutResultCallback;Landroid/os/Bundle;)V
     .locals 0
 
+    .line 1
     iput-object p2, p0, Landroidx/print/PrintHelper$PrintBitmapAdapter;->mAttributes:Landroid/print/PrintAttributes;
 
+    .line 2
     new-instance p3, Landroid/print/PrintDocumentInfo$Builder;
 
     iget-object p0, p0, Landroidx/print/PrintHelper$PrintBitmapAdapter;->mJobName:Ljava/lang/String;
@@ -79,24 +88,29 @@
 
     const/4 p0, 0x1
 
+    .line 3
     invoke-virtual {p3, p0}, Landroid/print/PrintDocumentInfo$Builder;->setContentType(I)Landroid/print/PrintDocumentInfo$Builder;
 
     move-result-object p3
 
+    .line 4
     invoke-virtual {p3, p0}, Landroid/print/PrintDocumentInfo$Builder;->setPageCount(I)Landroid/print/PrintDocumentInfo$Builder;
 
     move-result-object p3
 
+    .line 5
     invoke-virtual {p3}, Landroid/print/PrintDocumentInfo$Builder;->build()Landroid/print/PrintDocumentInfo;
 
     move-result-object p3
 
+    .line 6
     invoke-virtual {p2, p1}, Landroid/print/PrintAttributes;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     xor-int/2addr p0, p1
 
+    .line 7
     invoke-virtual {p4, p3, p0}, Landroid/print/PrintDocumentAdapter$LayoutResultCallback;->onLayoutFinished(Landroid/print/PrintDocumentInfo;Z)V
 
     return-void
@@ -105,6 +119,7 @@
 .method public onWrite([Landroid/print/PageRange;Landroid/os/ParcelFileDescriptor;Landroid/os/CancellationSignal;Landroid/print/PrintDocumentAdapter$WriteResultCallback;)V
     .locals 7
 
+    .line 1
     iget-object v0, p0, Landroidx/print/PrintHelper$PrintBitmapAdapter;->this$0:Landroidx/print/PrintHelper;
 
     iget-object v1, p0, Landroidx/print/PrintHelper$PrintBitmapAdapter;->mAttributes:Landroid/print/PrintAttributes;

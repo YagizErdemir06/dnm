@@ -22,6 +22,7 @@
 .method public constructor <init>(Lmiuix/spring/view/SpringHelper;I)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/spring/view/SpringHelper$a;->j:Lmiuix/spring/view/SpringHelper;
 
     invoke-direct {p0, p1, p2}, Lmiuix/spring/view/SpringHelper$c;-><init>(Lmiuix/spring/view/SpringHelper;I)V
@@ -34,6 +35,7 @@
 .method public a()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/spring/view/SpringHelper$a;->j:Lmiuix/spring/view/SpringHelper;
 
     invoke-virtual {p0}, Lmiuix/spring/view/SpringHelper;->canScrollHorizontally()Z
@@ -46,6 +48,7 @@
 .method public b()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/spring/view/SpringHelper$a;->j:Lmiuix/spring/view/SpringHelper;
 
     invoke-virtual {p0}, Lmiuix/spring/view/SpringHelper;->getWidth()I
@@ -58,6 +61,7 @@
 .method public f()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/spring/view/SpringHelper$a;->j:Lmiuix/spring/view/SpringHelper;
 
     invoke-virtual {p0}, Lmiuix/spring/view/SpringHelper;->vibrate()V

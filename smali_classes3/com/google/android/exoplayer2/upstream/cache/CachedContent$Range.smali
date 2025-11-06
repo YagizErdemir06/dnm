@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/upstream/cache/CachedContent$Range;
+.class public final Lcom/google/android/exoplayer2/upstream/cache/CachedContent$Range;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -24,10 +24,13 @@
 .method public constructor <init>(JJ)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-wide p1, p0, Lcom/google/android/exoplayer2/upstream/cache/CachedContent$Range;->position:J
 
+    .line 3
     iput-wide p3, p0, Lcom/google/android/exoplayer2/upstream/cache/CachedContent$Range;->length:J
 
     return-void
@@ -38,6 +41,7 @@
 .method public contains(JJ)Z
     .locals 7
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/upstream/cache/CachedContent$Range;->length:J
 
     const-wide/16 v2, -0x1
@@ -50,6 +54,7 @@
 
     if-nez v4, :cond_1
 
+    .line 2
     iget-wide p3, p0, Lcom/google/android/exoplayer2/upstream/cache/CachedContent$Range;->position:J
 
     cmp-long p0, p1, p3
@@ -71,6 +76,7 @@
 
     return v6
 
+    .line 3
     :cond_2
     iget-wide v2, p0, Lcom/google/android/exoplayer2/upstream/cache/CachedContent$Range;->position:J
 
@@ -98,6 +104,7 @@
 .method public intersects(JJ)Z
     .locals 7
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/upstream/cache/CachedContent$Range;->position:J
 
     cmp-long v2, v0, p1
@@ -110,6 +117,7 @@
 
     if-gtz v2, :cond_2
 
+    .line 2
     iget-wide p3, p0, Lcom/google/android/exoplayer2/upstream/cache/CachedContent$Range;->length:J
 
     cmp-long p0, p3, v5

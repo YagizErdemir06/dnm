@@ -15,9 +15,15 @@
 
 
 # static fields
-.field public static final preferences_detail_pane_weight:I = 0x7f0c0082
+.field public static final abc_config_activityDefaultDur:I = 0x7f0c0000
 
-.field public static final preferences_header_pane_weight:I = 0x7f0c0083
+.field public static final abc_config_activityShortDur:I = 0x7f0c0001
+
+.field public static final cancel_button_image_alpha:I = 0x7f0c000e
+
+.field public static final config_tooltipAnimTime:I = 0x7f0c0019
+
+.field public static final status_bar_notification_info_maxnum:I = 0x7f0c0049
 
 
 # direct methods

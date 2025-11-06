@@ -13,7 +13,7 @@
     name = "Companion"
 .end annotation
 
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
     d1 = {
         "\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\u0008\u0086\u0003\u0018\u00002\u00020\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002J\u0006\u0010\u0003\u001a\u00020\u0004\u00a8\u0006\u0005"
     }
@@ -39,12 +39,13 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/w;)V
+.method public synthetic constructor <init>(Lh/d3/x/w;)V
     .locals 0
 
     invoke-direct {p0}, Lokhttp3/internal/platform/android/CloseGuard$Companion;-><init>()V
@@ -55,64 +56,73 @@
 
 # virtual methods
 .method public final get()Lokhttp3/internal/platform/android/CloseGuard;
-    .locals 5
-    .annotation build Ljv/d;
+    .locals 6
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    const/4 p0, 0x0
+
     :try_start_0
-    const-string p0, "dalvik.system.CloseGuard"
+    const-string v0, "dalvik.system.CloseGuard"
 
-    invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object p0
-
-    const-string v0, "get"
-
-    const/4 v1, 0x0
-
-    new-array v2, v1, [Ljava/lang/Class;
-
-    invoke-virtual {p0, v0, v2}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    .line 1
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
-    const-string v2, "open"
+    const-string v1, "get"
 
-    const/4 v3, 0x1
+    const/4 v2, 0x0
 
-    new-array v3, v3, [Ljava/lang/Class;
+    new-array v3, v2, [Ljava/lang/Class;
 
-    const-class v4, Ljava/lang/String;
+    .line 2
+    invoke-virtual {v0, v1, v3}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    aput-object v4, v3, v1
+    move-result-object v1
 
-    invoke-virtual {p0, v2, v3}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    const-string v3, "open"
 
-    move-result-object v2
+    const/4 v4, 0x1
 
-    const-string v3, "warnIfOpen"
+    new-array v4, v4, [Ljava/lang/Class;
 
-    new-array v1, v1, [Ljava/lang/Class;
+    .line 3
+    const-class v5, Ljava/lang/String;
 
-    invoke-virtual {p0, v3, v1}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    aput-object v5, v4, v2
+
+    invoke-virtual {v0, v3, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v3
+
+    const-string/jumbo v4, "warnIfOpen"
+
+    new-array v2, v2, [Ljava/lang/Class;
+
+    .line 4
+    invoke-virtual {v0, v4, v2}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object p0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    move-object v0, p0
+
+    move-object p0, v1
+
     goto :goto_0
 
     :catch_0
-    const/4 v0, 0x0
+    move-object v0, p0
 
-    move-object p0, v0
+    move-object v3, v0
 
-    move-object v2, p0
-
+    .line 5
     :goto_0
     new-instance v1, Lokhttp3/internal/platform/android/CloseGuard;
 
-    invoke-direct {v1, v0, v2, p0}, Lokhttp3/internal/platform/android/CloseGuard;-><init>(Ljava/lang/reflect/Method;Ljava/lang/reflect/Method;Ljava/lang/reflect/Method;)V
+    invoke-direct {v1, p0, v3, v0}, Lokhttp3/internal/platform/android/CloseGuard;-><init>(Ljava/lang/reflect/Method;Ljava/lang/reflect/Method;Ljava/lang/reflect/Method;)V
 
     return-object v1
 .end method

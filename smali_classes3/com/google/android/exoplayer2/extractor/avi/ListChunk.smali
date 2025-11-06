@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/extractor/avi/ListChunk;
+.class public final Lcom/google/android/exoplayer2/extractor/avi/ListChunk;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -32,10 +32,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/avi/ListChunk;->type:I
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/exoplayer2/extractor/avi/ListChunk;->children:Lcom/google/common/collect/ImmutableList;
 
     return-void
@@ -52,6 +55,7 @@
 
     return-object p0
 
+    .line 1
     :sswitch_0
     invoke-static {p2}, Lcom/google/android/exoplayer2/extractor/avi/StreamNameChunk;->parseFrom(Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/extractor/avi/StreamNameChunk;
 
@@ -59,6 +63,7 @@
 
     return-object p0
 
+    .line 2
     :sswitch_1
     invoke-static {p2}, Lcom/google/android/exoplayer2/extractor/avi/AviStreamHeaderChunk;->parseFrom(Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/extractor/avi/AviStreamHeaderChunk;
 
@@ -66,6 +71,7 @@
 
     return-object p0
 
+    .line 3
     :sswitch_2
     invoke-static {p2}, Lcom/google/android/exoplayer2/extractor/avi/AviMainHeaderChunk;->parseFrom(Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/extractor/avi/AviMainHeaderChunk;
 
@@ -73,6 +79,7 @@
 
     return-object p0
 
+    .line 4
     :sswitch_3
     invoke-static {p1, p2}, Lcom/google/android/exoplayer2/extractor/avi/StreamFormatChunk;->parseFrom(ILcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/extractor/avi/AviChunk;
 
@@ -94,16 +101,19 @@
 .method public static parseFrom(ILcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/extractor/avi/ListChunk;
     .locals 7
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ImmutableList$Builder;
 
     invoke-direct {v0}, Lcom/google/common/collect/ImmutableList$Builder;-><init>()V
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->limit()I
 
     move-result v1
 
     const/4 v2, -0x2
 
+    .line 3
     :goto_0
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
@@ -113,36 +123,43 @@
 
     if-le v3, v4, :cond_3
 
+    .line 4
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLittleEndianInt()I
 
     move-result v3
 
+    .line 5
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLittleEndianInt()I
 
     move-result v4
 
+    .line 6
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getPosition()I
 
     move-result v5
 
     add-int/2addr v5, v4
 
+    .line 7
     invoke-virtual {p1, v5}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setLimit(I)V
 
     const v4, 0x5453494c
 
     if-ne v3, v4, :cond_0
 
+    .line 8
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLittleEndianInt()I
 
     move-result v3
 
+    .line 9
     invoke-static {v3, p1}, Lcom/google/android/exoplayer2/extractor/avi/ListChunk;->parseFrom(ILcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/extractor/avi/ListChunk;
 
     move-result-object v3
 
     goto :goto_1
 
+    .line 10
     :cond_0
     invoke-static {v3, v2, p1}, Lcom/google/android/exoplayer2/extractor/avi/ListChunk;->createBox(IILcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/extractor/avi/AviChunk;
 
@@ -151,6 +168,7 @@
     :goto_1
     if-eqz v3, :cond_2
 
+    .line 11
     invoke-interface {v3}, Lcom/google/android/exoplayer2/extractor/avi/AviChunk;->getType()I
 
     move-result v4
@@ -159,6 +177,7 @@
 
     if-ne v4, v6, :cond_1
 
+    .line 12
     move-object v2, v3
 
     check-cast v2, Lcom/google/android/exoplayer2/extractor/avi/AviStreamHeaderChunk;
@@ -167,16 +186,20 @@
 
     move-result v2
 
+    .line 13
     :cond_1
     invoke-virtual {v0, v3}, Lcom/google/common/collect/ImmutableList$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
 
+    .line 14
     :cond_2
     invoke-virtual {p1, v5}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
+    .line 15
     invoke-virtual {p1, v1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setLimit(I)V
 
     goto :goto_0
 
+    .line 16
     :cond_3
     new-instance p1, Lcom/google/android/exoplayer2/extractor/avi/ListChunk;
 
@@ -206,6 +229,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/avi/ListChunk;->children:Lcom/google/common/collect/ImmutableList;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableList;->iterator()Lcom/google/common/collect/UnmodifiableIterator;
@@ -225,6 +249,7 @@
 
     check-cast v0, Lcom/google/android/exoplayer2/extractor/avi/AviChunk;
 
+    .line 2
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -242,6 +267,7 @@
 .method public getType()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/extractor/avi/ListChunk;->type:I
 
     return p0

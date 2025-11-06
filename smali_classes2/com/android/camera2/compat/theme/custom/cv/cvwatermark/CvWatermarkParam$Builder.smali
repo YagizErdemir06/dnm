@@ -25,6 +25,18 @@
         .annotation build Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/PreviewType;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "src",
+            "type",
+            "orientation"
+        }
+    .end annotation
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,6 +53,16 @@
 
 .method public constructor <init>(Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/I420Image;I)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "origin",
+            "orientation"
+        }
+    .end annotation
 
     .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -62,6 +84,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam$Builder;->mParameter:Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;
 
     return-object p0
@@ -69,7 +92,16 @@
 
 .method public set35mmFocalLength(S)Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam$Builder;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "focalLength35mm"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam$Builder;->mParameter:Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;
 
     invoke-static {v0, p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->access$002(Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;S)S
@@ -79,7 +111,16 @@
 
 .method public setAperture(F)Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam$Builder;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "aperture"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam$Builder;->mParameter:Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;
 
     invoke-static {v0, p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->access$102(Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;F)F
@@ -89,7 +130,16 @@
 
 .method public setExposureTime(J)Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam$Builder;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "exposureTime"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam$Builder;->mParameter:Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;
 
     invoke-static {v0, p1, p2}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->access$202(Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;J)J
@@ -99,7 +149,16 @@
 
 .method public setFileName(Ljava/lang/String;)Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam$Builder;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "fileName"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam$Builder;->mParameter:Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;
 
     invoke-static {v0, p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->access$902(Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;Ljava/lang/String;)Ljava/lang/String;
@@ -109,7 +168,16 @@
 
 .method public setIso(I)Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam$Builder;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "iso"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam$Builder;->mParameter:Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;
 
     invoke-static {v0, p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->access$302(Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;I)I
@@ -119,7 +187,16 @@
 
 .method public setLocation(Landroid/location/Location;)Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam$Builder;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "location"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam$Builder;->mParameter:Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;
 
     invoke-static {v0, p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->access$502(Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;Landroid/location/Location;)Landroid/location/Location;
@@ -129,7 +206,16 @@
 
 .method public setLocationOn(Z)Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam$Builder;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isLocationOn"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam$Builder;->mParameter:Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;
 
     invoke-static {v0, p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->access$602(Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;Z)Z
@@ -139,7 +225,16 @@
 
 .method public setNeedIcc(Z)Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam$Builder;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isNeedIcc"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam$Builder;->mParameter:Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;
 
     invoke-static {v0, p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->access$802(Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;Z)Z
@@ -149,7 +244,16 @@
 
 .method public setTakenTime(J)Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam$Builder;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "takenTime"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam$Builder;->mParameter:Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;
 
     invoke-static {v0, p1, p2}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->access$402(Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;J)J
@@ -159,20 +263,19 @@
 
 .method public setTimestampOn(Z)Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam$Builder;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isTimestampOn"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam$Builder;->mParameter:Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;
 
     invoke-static {v0, p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->access$702(Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;Z)Z
-
-    return-object p0
-.end method
-
-.method public setWhiteBackground(Z)Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam$Builder;
-    .locals 1
-
-    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam$Builder;->mParameter:Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;
-
-    invoke-static {v0, p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->access$1002(Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;Z)Z
 
     return-object p0
 .end method

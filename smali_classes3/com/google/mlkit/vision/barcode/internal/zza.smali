@@ -26,6 +26,7 @@
 .method public final zza()Lcom/google/android/gms/internal/mlkit_vision_barcode/zzra;
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/vision/barcode/internal/zza;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznd;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznf;
@@ -52,14 +53,17 @@
 
     invoke-direct {v1}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznu;-><init>()V
 
+    .line 2
     invoke-virtual {v1, p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznu;->zzb(Lcom/google/android/gms/internal/mlkit_vision_barcode/zznd;)Lcom/google/android/gms/internal/mlkit_vision_barcode/zznu;
 
     invoke-virtual {v1}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznu;->zzc()Lcom/google/android/gms/internal/mlkit_vision_barcode/zznw;
 
     move-result-object p0
 
+    .line 3
     invoke-virtual {v0, p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznf;->zzh(Lcom/google/android/gms/internal/mlkit_vision_barcode/zznw;)Lcom/google/android/gms/internal/mlkit_vision_barcode/zznf;
 
+    .line 4
     invoke-static {v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzro;->zzf(Lcom/google/android/gms/internal/mlkit_vision_barcode/zznf;)Lcom/google/android/gms/internal/mlkit_vision_barcode/zzra;
 
     move-result-object p0

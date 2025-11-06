@@ -207,12 +207,14 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/gms/common/api/Api;->zac()Lcom/google/android/gms/common/api/Api$BaseClientBuilder;
 
     move-result-object v0
 
     const-string v1, "Base client builder must not be null"
 
+    .line 2
     invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -221,12 +223,14 @@
 
     new-instance v1, Ljava/util/HashSet;
 
+    .line 3
     invoke-virtual {v0, p2}, Lcom/google/android/gms/common/api/Api$BaseClientBuilder;->getImpliedScopes(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p2
 
     invoke-direct {v1, p2}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
+    .line 4
     array-length p2, p3
 
     const/4 v0, 0x0
@@ -236,6 +240,7 @@
 
     aget-object v2, p3, v0
 
+    .line 5
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v0, v0, 0x1
@@ -247,6 +252,7 @@
 
     new-instance p2, Lcom/google/android/gms/common/internal/zab;
 
+    .line 6
     invoke-direct {p2, v1}, Lcom/google/android/gms/common/internal/zab;-><init>(Ljava/util/Set;)V
 
     invoke-interface {p0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -514,10 +520,12 @@
 
     const-string v0, "Listener must not be null"
 
+    .line 1
     invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     iget-object v0, p0, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;->zaq:Ljava/util/ArrayList;
 
+    .line 2
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-object p0
@@ -537,10 +545,12 @@
 
     const-string v0, "Listener must not be null"
 
+    .line 1
     invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     iget-object v0, p0, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;->zar:Ljava/util/ArrayList;
 
+    .line 2
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-object p0
@@ -560,10 +570,12 @@
 
     const-string v0, "Scope must not be null"
 
+    .line 1
     invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     iget-object v0, p0, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;->zab:Ljava/util/Set;
 
+    .line 2
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     return-object p0
@@ -576,6 +588,7 @@
 
     move-object/from16 v0, p0
 
+    .line 1
     iget-object v1, v0, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;->zaj:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->isEmpty()Z
@@ -590,6 +603,7 @@
 
     invoke-static {v1, v3}, Lcom/google/android/gms/common/internal/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 2
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;->zaa()Lcom/google/android/gms/common/internal/ClientSettings;
 
     move-result-object v1
@@ -600,18 +614,22 @@
 
     new-instance v11, Landroidx/collection/ArrayMap;
 
+    .line 3
     invoke-direct {v11}, Landroidx/collection/ArrayMap;-><init>()V
 
     new-instance v14, Landroidx/collection/ArrayMap;
 
+    .line 4
     invoke-direct {v14}, Landroidx/collection/ArrayMap;-><init>()V
 
     new-instance v15, Ljava/util/ArrayList;
 
+    .line 5
     invoke-direct {v15}, Ljava/util/ArrayList;-><init>()V
 
     iget-object v4, v0, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;->zaj:Ljava/util/Map;
 
+    .line 6
     invoke-interface {v4}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v4
@@ -620,9 +638,9 @@
 
     move-result-object v12
 
-    const/4 v4, 0x0
-
     const/4 v13, 0x0
+
+    const/4 v4, 0x0
 
     move-object/from16 v16, v4
 
@@ -646,10 +664,12 @@
 
     iget-object v4, v0, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;->zaj:Ljava/util/Map;
 
+    .line 7
     invoke-interface {v4, v10}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v18
 
+    .line 8
     invoke-interface {v3, v10}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
@@ -663,6 +683,7 @@
     :cond_1
     move v4, v13
 
+    .line 9
     :goto_1
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -674,8 +695,10 @@
 
     invoke-direct {v9, v10, v4}, Lcom/google/android/gms/common/api/internal/zat;-><init>(Lcom/google/android/gms/common/api/Api;Z)V
 
+    .line 10
     invoke-virtual {v15, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 11
     invoke-virtual {v10}, Lcom/google/android/gms/common/api/Api;->zaa()Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;
 
     move-result-object v4
@@ -704,16 +727,19 @@
 
     move-object/from16 v10, v20
 
+    .line 12
     invoke-virtual/range {v4 .. v10}, Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;->buildClient(Landroid/content/Context;Landroid/os/Looper;Lcom/google/android/gms/common/internal/ClientSettings;Ljava/lang/Object;Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;)Lcom/google/android/gms/common/api/Api$Client;
 
     move-result-object v4
 
+    .line 13
     invoke-virtual/range {v21 .. v21}, Lcom/google/android/gms/common/api/Api;->zab()Lcom/google/android/gms/common/api/Api$AnyClientKey;
 
     move-result-object v5
 
     invoke-interface {v14, v5, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 14
     invoke-virtual/range {v19 .. v19}, Lcom/google/android/gms/common/api/Api$BaseClientBuilder;->getPriority()I
 
     move-result v5
@@ -729,6 +755,7 @@
     :cond_2
     move/from16 v17, v13
 
+    .line 15
     :cond_3
     :goto_2
     invoke-interface {v4}, Lcom/google/android/gms/common/api/Api$Client;->providesSignIn()Z
@@ -743,9 +770,11 @@
 
     goto :goto_0
 
+    .line 16
     :cond_4
     new-instance v0, Ljava/lang/IllegalStateException;
 
+    .line 17
     invoke-virtual/range {v21 .. v21}, Lcom/google/android/gms/common/api/Api;->zad()Ljava/lang/String;
 
     move-result-object v1
@@ -779,6 +808,7 @@
 
     if-nez v17, :cond_7
 
+    .line 18
     iget-object v3, v0, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;->zaa:Landroid/accounts/Account;
 
     if-nez v3, :cond_6
@@ -801,12 +831,14 @@
 
     const-string v5, "Must not set an account in GoogleApiClient.Builder when using %s. Set account in GoogleSignInOptions.Builder instead"
 
+    .line 19
     invoke-static {v3, v5, v4}, Lcom/google/android/gms/common/internal/Preconditions;->checkState(ZLjava/lang/String;[Ljava/lang/Object;)V
 
     iget-object v3, v0, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;->zab:Ljava/util/Set;
 
     iget-object v4, v0, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;->zac:Ljava/util/Set;
 
+    .line 20
     invoke-virtual {v3, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -821,10 +853,12 @@
 
     const-string v5, "Must not set scopes in GoogleApiClient.Builder when using %s. Set account in GoogleSignInOptions.Builder instead."
 
+    .line 21
     invoke-static {v3, v5, v4}, Lcom/google/android/gms/common/internal/Preconditions;->checkState(ZLjava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_4
 
+    .line 22
     :cond_7
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -834,6 +868,7 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    .line 23
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v3, "With using "
@@ -854,12 +889,14 @@
 
     throw v0
 
+    .line 24
     :cond_8
     :goto_4
     invoke-interface {v14}, Ljava/util/Map;->values()Ljava/util/Collection;
 
     move-result-object v3
 
+    .line 25
     invoke-static {v3, v2}, Lcom/google/android/gms/common/api/internal/zabe;->zad(Ljava/lang/Iterable;Z)I
 
     move-result v16
@@ -870,6 +907,7 @@
 
     new-instance v6, Ljava/util/concurrent/locks/ReentrantLock;
 
+    .line 26
     invoke-direct {v6}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
     iget-object v7, v0, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;->zan:Landroid/os/Looper;
@@ -900,6 +938,7 @@
 
     move-result-object v1
 
+    .line 27
     monitor-enter v1
 
     :try_start_0
@@ -907,8 +946,10 @@
 
     move-result-object v3
 
+    .line 28
     invoke-interface {v3, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 29
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -919,6 +960,7 @@
 
     iget-object v1, v0, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;->zak:Lcom/google/android/gms/common/api/internal/LifecycleActivity;
 
+    .line 30
     invoke-static {v1}, Lcom/google/android/gms/common/api/internal/zak;->zaa(Lcom/google/android/gms/common/api/internal/LifecycleActivity;)Lcom/google/android/gms/common/api/internal/zak;
 
     move-result-object v1
@@ -927,6 +969,7 @@
 
     iget-object v0, v0, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;->zam:Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;
 
+    .line 31
     invoke-virtual {v1, v3, v2, v0}, Lcom/google/android/gms/common/api/internal/zak;->zad(ILcom/google/android/gms/common/api/GoogleApiClient;Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;)V
 
     :cond_9
@@ -935,6 +978,7 @@
     :catchall_0
     move-exception v0
 
+    .line 32
     :try_start_1
     monitor-exit v1
     :try_end_1
@@ -1024,6 +1068,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     new-instance v0, Landroid/accounts/Account;
 
@@ -1066,8 +1111,10 @@
 
     const-string v0, "Handler must not be null"
 
+    .line 1
     invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-virtual {p1}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
     move-result-object p1
@@ -1091,6 +1138,7 @@
 
     const-string v0, "View must not be null"
 
+    .line 1
     invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p1, p0, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;->zae:Landroid/view/View;
@@ -1105,6 +1153,7 @@
 
     const-string v0, "<<default account>>"
 
+    .line 1
     invoke-virtual {p0, v0}, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;->setAccountName(Ljava/lang/String;)Lcom/google/android/gms/common/api/GoogleApiClient$Builder;
 
     return-object p0
@@ -1118,6 +1167,7 @@
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/signin/SignInOptions;->zaa:Lcom/google/android/gms/signin/SignInOptions;
 
     iget-object v1, p0, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;->zaj:Ljava/util/Map;
@@ -1132,6 +1182,7 @@
 
     iget-object v0, p0, Lcom/google/android/gms/common/api/GoogleApiClient$Builder;->zaj:Ljava/util/Map;
 
+    .line 2
     invoke-interface {v0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -1161,6 +1212,7 @@
 
     move-object v1, v0
 
+    .line 3
     invoke-direct/range {v1 .. v10}, Lcom/google/android/gms/common/internal/ClientSettings;-><init>(Landroid/accounts/Account;Ljava/util/Set;Ljava/util/Map;ILandroid/view/View;Ljava/lang/String;Ljava/lang/String;Lcom/google/android/gms/signin/SignInOptions;Z)V
 
     return-object v0

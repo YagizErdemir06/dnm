@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/source/dash/DashMediaSource$1;
+.class public Lcom/google/android/exoplayer2/source/dash/DashMediaSource$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/android/exoplayer2/source/dash/DashMediaSource;
+.field public final synthetic this$0:Lcom/google/android/exoplayer2/source/dash/DashMediaSource;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/exoplayer2/source/dash/DashMediaSource;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$1;->this$0:Lcom/google/android/exoplayer2/source/dash/DashMediaSource;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,6 +38,7 @@
 .method public onInitializationFailed(Ljava/io/IOException;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$1;->this$0:Lcom/google/android/exoplayer2/source/dash/DashMediaSource;
 
     invoke-static {p0, p1}, Lcom/google/android/exoplayer2/source/dash/DashMediaSource;->access$600(Lcom/google/android/exoplayer2/source/dash/DashMediaSource;Ljava/io/IOException;)V
@@ -47,6 +49,7 @@
 .method public onInitialized()V
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$1;->this$0:Lcom/google/android/exoplayer2/source/dash/DashMediaSource;
 
     invoke-static {}, Lcom/google/android/exoplayer2/util/SntpClient;->getElapsedRealtimeOffsetMs()J

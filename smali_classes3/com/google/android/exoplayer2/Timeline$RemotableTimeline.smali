@@ -55,8 +55,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/Timeline;-><init>()V
 
+    .line 2
     invoke-virtual {p1}, Ljava/util/AbstractCollection;->size()I
 
     move-result v0
@@ -77,23 +79,29 @@
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 3
     iput-object p1, p0, Lcom/google/android/exoplayer2/Timeline$RemotableTimeline;->windows:Lcom/google/common/collect/ImmutableList;
 
+    .line 4
     iput-object p2, p0, Lcom/google/android/exoplayer2/Timeline$RemotableTimeline;->periods:Lcom/google/common/collect/ImmutableList;
 
+    .line 5
     iput-object p3, p0, Lcom/google/android/exoplayer2/Timeline$RemotableTimeline;->shuffledWindowIndices:[I
 
+    .line 6
     array-length p1, p3
 
     new-array p1, p1, [I
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/Timeline$RemotableTimeline;->windowIndicesInShuffled:[I
 
+    .line 7
     :goto_1
     array-length p1, p3
 
     if-ge v2, p1, :cond_1
 
+    .line 8
     iget-object p1, p0, Lcom/google/android/exoplayer2/Timeline$RemotableTimeline;->windowIndicesInShuffled:[I
 
     aget p2, p3, v2
@@ -113,6 +121,7 @@
 .method public getFirstWindowIndex(Z)I
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Timeline;->isEmpty()Z
 
     move-result v0
@@ -128,6 +137,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/Timeline$RemotableTimeline;->shuffledWindowIndices:[I
 
     aget v0, p0, v0
@@ -139,6 +149,7 @@
 .method public getIndexOfPeriod(Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -149,6 +160,7 @@
 .method public getLastWindowIndex(Z)I
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Timeline;->isEmpty()Z
 
     move-result v0
@@ -162,6 +174,7 @@
     :cond_0
     if-eqz p1, :cond_1
 
+    .line 2
     iget-object p1, p0, Lcom/google/android/exoplayer2/Timeline$RemotableTimeline;->shuffledWindowIndices:[I
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Timeline$RemotableTimeline;->getWindowCount()I
@@ -174,6 +187,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Timeline$RemotableTimeline;->getWindowCount()I
 
@@ -194,6 +208,7 @@
 
     return p1
 
+    .line 1
     :cond_0
     invoke-virtual {p0, p3}, Lcom/google/android/exoplayer2/Timeline$RemotableTimeline;->getLastWindowIndex(Z)I
 
@@ -205,6 +220,7 @@
 
     if-ne p2, p1, :cond_1
 
+    .line 2
     invoke-virtual {p0, p3}, Lcom/google/android/exoplayer2/Timeline$RemotableTimeline;->getFirstWindowIndex(Z)I
 
     move-result p0
@@ -220,6 +236,7 @@
     :cond_2
     if-eqz p3, :cond_3
 
+    .line 3
     iget-object p2, p0, Lcom/google/android/exoplayer2/Timeline$RemotableTimeline;->shuffledWindowIndices:[I
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/Timeline$RemotableTimeline;->windowIndicesInShuffled:[I
@@ -242,6 +259,7 @@
 .method public getPeriod(ILcom/google/android/exoplayer2/Timeline$Period;Z)Lcom/google/android/exoplayer2/Timeline$Period;
     .locals 10
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Timeline$RemotableTimeline;->periods:Lcom/google/common/collect/ImmutableList;
 
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -250,6 +268,7 @@
 
     check-cast p0, Lcom/google/android/exoplayer2/Timeline$Period;
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/Timeline$Period;->id:Ljava/lang/Object;
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/Timeline$Period;->uid:Ljava/lang/Object;
@@ -260,6 +279,7 @@
 
     iget-wide v6, p0, Lcom/google/android/exoplayer2/Timeline$Period;->positionInWindowUs:J
 
+    .line 3
     invoke-static {p0}, Lcom/google/android/exoplayer2/Timeline$Period;->access$100(Lcom/google/android/exoplayer2/Timeline$Period;)Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     move-result-object v8
@@ -268,6 +288,7 @@
 
     move-object v0, p2
 
+    .line 4
     invoke-virtual/range {v0 .. v9}, Lcom/google/android/exoplayer2/Timeline$Period;->set(Ljava/lang/Object;Ljava/lang/Object;IJJLcom/google/android/exoplayer2/source/ads/AdPlaybackState;Z)Lcom/google/android/exoplayer2/Timeline$Period;
 
     return-object p2
@@ -276,6 +297,7 @@
 .method public getPeriodCount()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Timeline$RemotableTimeline;->periods:Lcom/google/common/collect/ImmutableList;
 
     invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
@@ -294,6 +316,7 @@
 
     return p1
 
+    .line 1
     :cond_0
     invoke-virtual {p0, p3}, Lcom/google/android/exoplayer2/Timeline$RemotableTimeline;->getFirstWindowIndex(Z)I
 
@@ -305,6 +328,7 @@
 
     if-ne p2, p1, :cond_1
 
+    .line 2
     invoke-virtual {p0, p3}, Lcom/google/android/exoplayer2/Timeline$RemotableTimeline;->getLastWindowIndex(Z)I
 
     move-result p0
@@ -320,6 +344,7 @@
     :cond_2
     if-eqz p3, :cond_3
 
+    .line 3
     iget-object p2, p0, Lcom/google/android/exoplayer2/Timeline$RemotableTimeline;->shuffledWindowIndices:[I
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/Timeline$RemotableTimeline;->windowIndicesInShuffled:[I
@@ -342,6 +367,7 @@
 .method public getUidOfPeriod(I)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -358,6 +384,7 @@
 
     move-object/from16 v1, p0
 
+    .line 1
     iget-object v1, v1, Lcom/google/android/exoplayer2/Timeline$RemotableTimeline;->windows:Lcom/google/common/collect/ImmutableList;
 
     move/from16 v2, p1
@@ -370,6 +397,7 @@
 
     check-cast v13, Lcom/google/android/exoplayer2/Timeline$Window;
 
+    .line 2
     iget-object v1, v13, Lcom/google/android/exoplayer2/Timeline$Window;->uid:Ljava/lang/Object;
 
     iget-object v2, v13, Lcom/google/android/exoplayer2/Timeline$Window;->mediaItem:Lcom/google/android/exoplayer2/MediaItem;
@@ -428,6 +456,7 @@
 
     move-object/from16 v1, v21
 
+    .line 3
     iget-boolean v0, v1, Lcom/google/android/exoplayer2/Timeline$Window;->isPlaceholder:Z
 
     move-object/from16 v1, p2
@@ -440,6 +469,7 @@
 .method public getWindowCount()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Timeline$RemotableTimeline;->windows:Lcom/google/common/collect/ImmutableList;
 
     invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I

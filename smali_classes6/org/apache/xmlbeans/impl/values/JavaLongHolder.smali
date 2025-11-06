@@ -14,11 +14,12 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
     const-wide v0, 0x7fffffffffffffffL
 
+    .line 1
     invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object v0
@@ -27,6 +28,7 @@
 
     const-wide/high16 v0, -0x8000000000000000L
 
+    .line 2
     invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object v0
@@ -39,6 +41,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;-><init>()V
 
     return-void
@@ -49,6 +52,7 @@
 .method public bigDecimalValue()Ljava/math/BigDecimal;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
     iget-wide v0, p0, Lorg/apache/xmlbeans/impl/values/JavaLongHolder;->_value:J
@@ -63,6 +67,7 @@
 .method public bigIntegerValue()Ljava/math/BigInteger;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
     iget-wide v0, p0, Lorg/apache/xmlbeans/impl/values/JavaLongHolder;->_value:J
@@ -77,6 +82,7 @@
 .method public compare_to(Lorg/apache/xmlbeans/XmlObject;)I
     .locals 4
 
+    .line 1
     move-object v0, p1
 
     check-cast v0, Lorg/apache/xmlbeans/SimpleValue;
@@ -93,6 +99,7 @@
 
     if-le v0, v1, :cond_0
 
+    .line 2
     invoke-interface {p1, p0}, Lorg/apache/xmlbeans/XmlObject;->compareTo(Ljava/lang/Object;)I
 
     move-result p0
@@ -101,6 +108,7 @@
 
     return p0
 
+    .line 3
     :cond_0
     iget-wide v0, p0, Lorg/apache/xmlbeans/impl/values/JavaLongHolder;->_value:J
 
@@ -143,6 +151,7 @@
 .method public compute_text(Lorg/apache/xmlbeans/impl/values/NamespaceManager;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-wide p0, p0, Lorg/apache/xmlbeans/impl/values/JavaLongHolder;->_value:J
 
     invoke-static {p0, p1}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
@@ -155,6 +164,7 @@
 .method public equal_to(Lorg/apache/xmlbeans/XmlObject;)Z
     .locals 2
 
+    .line 1
     move-object v0, p1
 
     check-cast v0, Lorg/apache/xmlbeans/SimpleValue;
@@ -171,12 +181,14 @@
 
     if-le v0, v1, :cond_0
 
+    .line 2
     invoke-interface {p1, p0}, Lorg/apache/xmlbeans/XmlObject;->valueEquals(Lorg/apache/xmlbeans/XmlObject;)Z
 
     move-result p0
 
     return p0
 
+    .line 3
     :cond_0
     iget-wide v0, p0, Lorg/apache/xmlbeans/impl/values/JavaLongHolder;->_value:J
 
@@ -204,6 +216,7 @@
 .method public longValue()J
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
     iget-wide v0, p0, Lorg/apache/xmlbeans/impl/values/JavaLongHolder;->_value:J
@@ -214,6 +227,7 @@
 .method public schemaType()Lorg/apache/xmlbeans/SchemaType;
     .locals 0
 
+    .line 1
     sget-object p0, Lorg/apache/xmlbeans/impl/schema/BuiltinSchemaTypeSystem;->ST_LONG:Lorg/apache/xmlbeans/impl/schema/SchemaTypeImpl;
 
     return-object p0
@@ -222,6 +236,7 @@
 .method public set_BigDecimal(Ljava/math/BigDecimal;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Ljava/math/BigDecimal;->toBigInteger()Ljava/math/BigInteger;
 
     move-result-object p1
@@ -234,6 +249,7 @@
 .method public set_BigInteger(Ljava/math/BigInteger;)V
     .locals 2
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/values/JavaLongHolder;->_max:Ljava/math/BigInteger;
 
     invoke-virtual {p1, v0}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
@@ -250,6 +266,7 @@
 
     if-ltz v0, :cond_0
 
+    .line 2
     invoke-virtual {p1}, Ljava/math/BigInteger;->longValue()J
 
     move-result-wide v0
@@ -258,6 +275,7 @@
 
     return-void
 
+    .line 3
     :cond_0
     new-instance p0, Lorg/apache/xmlbeans/impl/values/XmlValueOutOfRangeException;
 
@@ -269,6 +287,7 @@
 .method public set_long(J)V
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lorg/apache/xmlbeans/impl/values/JavaLongHolder;->_value:J
 
     return-void
@@ -279,6 +298,7 @@
 
     const-wide/16 v0, 0x0
 
+    .line 1
     iput-wide v0, p0, Lorg/apache/xmlbeans/impl/values/JavaLongHolder;->_value:J
 
     return-void
@@ -287,6 +307,7 @@
 .method public set_text(Ljava/lang/String;)V
     .locals 2
 
+    .line 1
     :try_start_0
     invoke-static {p1}, Lorg/apache/xmlbeans/impl/util/XsTypeConverter;->lexLong(Ljava/lang/CharSequence;)J
 
@@ -298,6 +319,7 @@
 
     return-void
 
+    .line 2
     :catch_0
     new-instance p0, Lorg/apache/xmlbeans/impl/values/XmlValueOutOfRangeException;
 
@@ -319,6 +341,7 @@
 .method public value_hash_code()I
     .locals 6
 
+    .line 1
     iget-wide v0, p0, Lorg/apache/xmlbeans/impl/values/JavaLongHolder;->_value:J
 
     const/16 p0, 0x20

@@ -1,4 +1,4 @@
-.class interface abstract Lcom/google/android/play/core/tasks/InvocationListener;
+.class public interface abstract Lcom/google/android/play/core/tasks/InvocationListener;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

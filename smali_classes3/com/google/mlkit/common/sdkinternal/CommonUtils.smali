@@ -16,6 +16,7 @@
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/common/internal/GmsLogger;
 
     const-string v1, "CommonUtils"
@@ -49,6 +50,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -64,6 +66,7 @@
 
     move-result-object p0
 
+    .line 2
     iget p0, p0, Landroid/content/pm/PackageInfo;->versionCode:I
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -79,6 +82,7 @@
 
     sget-object v0, Lcom/google/mlkit/common/sdkinternal/CommonUtils;->zza:Lcom/google/android/gms/common/internal/GmsLogger;
 
+    .line 3
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -111,12 +115,14 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/android/gms/common/util/PlatformVersion;->isAtLeastLollipop()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Ljava/util/Locale;->toLanguageTag()Ljava/lang/String;
 
     move-result-object p0
@@ -126,12 +132,14 @@
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
+    .line 3
     invoke-virtual {p0}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
+    .line 4
     invoke-virtual {p0}, Ljava/util/Locale;->getCountry()Ljava/lang/String;
 
     move-result-object v1
@@ -144,6 +152,7 @@
 
     if-nez v1, :cond_1
 
+    .line 5
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Ljava/util/Locale;->getCountry()Ljava/lang/String;
@@ -152,6 +161,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 6
     :cond_1
     invoke-virtual {p0}, Ljava/util/Locale;->getVariant()Ljava/lang/String;
 
@@ -163,6 +173,7 @@
 
     if-nez v1, :cond_2
 
+    .line 7
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Ljava/util/Locale;->getVariant()Ljava/lang/String;

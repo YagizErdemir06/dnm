@@ -18,6 +18,7 @@
 
     monitor-enter v0
 
+    .line 1
     :try_start_0
     sget-object v1, Lcom/google/android/gms/internal/mlkit_common/zzpy;->zza:Lcom/google/android/gms/internal/mlkit_common/zzpx;
 
@@ -34,6 +35,7 @@
     :cond_0
     sget-object v1, Lcom/google/android/gms/internal/mlkit_common/zzpy;->zza:Lcom/google/android/gms/internal/mlkit_common/zzpx;
 
+    .line 2
     invoke-virtual {v1, p0}, Lcom/google/mlkit/common/sdkinternal/LazyInstanceMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -64,14 +66,17 @@
     :try_start_0
     const-string v0, "common"
 
+    .line 1
     invoke-static {v0}, Lcom/google/android/gms/internal/mlkit_common/zzph;->zzd(Ljava/lang/String;)Lcom/google/android/gms/internal/mlkit_common/zzpg;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Lcom/google/android/gms/internal/mlkit_common/zzpg;->zzd()Lcom/google/android/gms/internal/mlkit_common/zzph;
 
     move-result-object v0
 
+    .line 3
     invoke-static {v0}, Lcom/google/android/gms/internal/mlkit_common/zzpy;->zza(Lcom/google/android/gms/internal/mlkit_common/zzph;)Lcom/google/android/gms/internal/mlkit_common/zzpn;
 
     move-result-object v0

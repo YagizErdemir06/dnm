@@ -1,4 +1,4 @@
-.class interface abstract Lcom/google/common/hash/ImmutableSupplier;
+.class public interface abstract Lcom/google/common/hash/ImmutableSupplier;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

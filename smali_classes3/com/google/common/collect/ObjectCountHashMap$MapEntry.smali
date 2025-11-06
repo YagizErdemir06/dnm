@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ObjectCountHashMap$MapEntry;
+.class public Lcom/google/common/collect/ObjectCountHashMap$MapEntry;
 .super Lcom/google/common/collect/Multisets$AbstractEntry;
 .source "SourceFile"
 
@@ -22,7 +22,7 @@
 
 
 # instance fields
-.field final key:Ljava/lang/Object;
+.field public final key:Ljava/lang/Object;
     .annotation runtime Lcom/google/common/collect/ParametricNullness;
     .end annotation
 
@@ -33,25 +33,28 @@
     .end annotation
 .end field
 
-.field lastKnownIndex:I
+.field public lastKnownIndex:I
 
-.field final synthetic this$0:Lcom/google/common/collect/ObjectCountHashMap;
+.field public final synthetic this$0:Lcom/google/common/collect/ObjectCountHashMap;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/ObjectCountHashMap;I)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/ObjectCountHashMap$MapEntry;->this$0:Lcom/google/common/collect/ObjectCountHashMap;
 
     invoke-direct {p0}, Lcom/google/common/collect/Multisets$AbstractEntry;-><init>()V
 
+    .line 2
     iget-object p1, p1, Lcom/google/common/collect/ObjectCountHashMap;->keys:[Ljava/lang/Object;
 
     aget-object p1, p1, p2
 
     iput-object p1, p0, Lcom/google/common/collect/ObjectCountHashMap$MapEntry;->key:Ljava/lang/Object;
 
+    .line 3
     iput p2, p0, Lcom/google/common/collect/ObjectCountHashMap$MapEntry;->lastKnownIndex:I
 
     return-void
@@ -62,8 +65,10 @@
 .method public getCount()I
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ObjectCountHashMap$MapEntry;->updateLastKnownIndex()V
 
+    .line 2
     iget v0, p0, Lcom/google/common/collect/ObjectCountHashMap$MapEntry;->lastKnownIndex:I
 
     const/4 v1, -0x1
@@ -96,6 +101,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ObjectCountHashMap$MapEntry;->key:Ljava/lang/Object;
 
     return-object p0
@@ -106,14 +112,17 @@
     .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ObjectCountHashMap$MapEntry;->updateLastKnownIndex()V
 
+    .line 2
     iget v0, p0, Lcom/google/common/collect/ObjectCountHashMap$MapEntry;->lastKnownIndex:I
 
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_0
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/collect/ObjectCountHashMap$MapEntry;->this$0:Lcom/google/common/collect/ObjectCountHashMap;
 
     iget-object p0, p0, Lcom/google/common/collect/ObjectCountHashMap$MapEntry;->key:Ljava/lang/Object;
@@ -124,6 +133,7 @@
 
     return p0
 
+    .line 4
     :cond_0
     iget-object p0, p0, Lcom/google/common/collect/ObjectCountHashMap$MapEntry;->this$0:Lcom/google/common/collect/ObjectCountHashMap;
 
@@ -131,6 +141,7 @@
 
     aget v1, p0, v0
 
+    .line 5
     aput p1, p0, v0
 
     return v1
@@ -139,6 +150,7 @@
 .method public updateLastKnownIndex()V
     .locals 3
 
+    .line 1
     iget v0, p0, Lcom/google/common/collect/ObjectCountHashMap$MapEntry;->lastKnownIndex:I
 
     const/4 v1, -0x1
@@ -147,6 +159,7 @@
 
     iget-object v1, p0, Lcom/google/common/collect/ObjectCountHashMap$MapEntry;->this$0:Lcom/google/common/collect/ObjectCountHashMap;
 
+    .line 2
     invoke-virtual {v1}, Lcom/google/common/collect/ObjectCountHashMap;->size()I
 
     move-result v1
@@ -163,12 +176,14 @@
 
     aget-object v1, v1, v2
 
+    .line 3
     invoke-static {v0, v1}, Lcom/google/common/base/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lcom/google/common/collect/ObjectCountHashMap$MapEntry;->this$0:Lcom/google/common/collect/ObjectCountHashMap;
 

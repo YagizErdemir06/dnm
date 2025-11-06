@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmm/c;
+.implements Lg/a/c;
 
 
 # annotations
@@ -13,7 +13,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lmm/c<",
+        "Lg/a/c<",
         "Lcom/google/android/datatransport/runtime/dagger/Lazy<",
         "TT;>;>;"
     }
@@ -21,14 +21,14 @@
 
 
 # static fields
-.field static final synthetic $assertionsDisabled:Z
+.field public static final synthetic $assertionsDisabled:Z
 
 
 # instance fields
-.field private final provider:Lmm/c;
+.field private final provider:Lg/a/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lmm/c<",
+            "Lg/a/c<",
             "TT;>;"
         }
     .end annotation
@@ -42,47 +42,50 @@
     return-void
 .end method
 
-.method private constructor <init>(Lmm/c;)V
+.method private constructor <init>(Lg/a/c;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lmm/c<",
+            "Lg/a/c<",
             "TT;>;)V"
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/datatransport/runtime/dagger/internal/ProviderOfLazy;->provider:Lmm/c;
+    .line 2
+    iput-object p1, p0, Lcom/google/android/datatransport/runtime/dagger/internal/ProviderOfLazy;->provider:Lg/a/c;
 
     return-void
 .end method
 
-.method public static create(Lmm/c;)Lmm/c;
+.method public static create(Lg/a/c;)Lg/a/c;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lmm/c<",
+            "Lg/a/c<",
             "TT;>;)",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/dagger/Lazy<",
             "TT;>;>;"
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/datatransport/runtime/dagger/internal/ProviderOfLazy;
 
     invoke-static {p0}, Lcom/google/android/datatransport/runtime/dagger/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Lmm/c;
+    check-cast p0, Lg/a/c;
 
-    invoke-direct {v0, p0}, Lcom/google/android/datatransport/runtime/dagger/internal/ProviderOfLazy;-><init>(Lmm/c;)V
+    invoke-direct {v0, p0}, Lcom/google/android/datatransport/runtime/dagger/internal/ProviderOfLazy;-><init>(Lg/a/c;)V
 
     return-object v0
 .end method
@@ -100,9 +103,9 @@
     .end annotation
 
     .line 2
-    iget-object p0, p0, Lcom/google/android/datatransport/runtime/dagger/internal/ProviderOfLazy;->provider:Lmm/c;
+    iget-object p0, p0, Lcom/google/android/datatransport/runtime/dagger/internal/ProviderOfLazy;->provider:Lg/a/c;
 
-    invoke-static {p0}, Lcom/google/android/datatransport/runtime/dagger/internal/DoubleCheck;->lazy(Lmm/c;)Lcom/google/android/datatransport/runtime/dagger/Lazy;
+    invoke-static {p0}, Lcom/google/android/datatransport/runtime/dagger/internal/DoubleCheck;->lazy(Lg/a/c;)Lcom/google/android/datatransport/runtime/dagger/Lazy;
 
     move-result-object p0
 

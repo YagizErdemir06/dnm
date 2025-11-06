@@ -1,4 +1,4 @@
-.class Lcom/google/common/cache/LocalCache$LocalManualCache$1;
+.class public Lcom/google/common/cache/LocalCache$LocalManualCache$1;
 .super Lcom/google/common/cache/CacheLoader;
 .source "SourceFile"
 
@@ -23,13 +23,14 @@
 
 
 # instance fields
-.field final synthetic val$valueLoader:Ljava/util/concurrent/Callable;
+.field public final synthetic val$valueLoader:Ljava/util/concurrent/Callable;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/cache/LocalCache$LocalManualCache;Ljava/util/concurrent/Callable;)V
     .locals 0
 
+    .line 1
     iput-object p2, p0, Lcom/google/common/cache/LocalCache$LocalManualCache$1;->val$valueLoader:Ljava/util/concurrent/Callable;
 
     invoke-direct {p0}, Lcom/google/common/cache/CacheLoader;-><init>()V
@@ -55,6 +56,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/cache/LocalCache$LocalManualCache$1;->val$valueLoader:Ljava/util/concurrent/Callable;
 
     invoke-interface {p0}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;

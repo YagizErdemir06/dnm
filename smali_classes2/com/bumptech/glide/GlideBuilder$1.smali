@@ -1,4 +1,4 @@
-.class Lcom/bumptech/glide/GlideBuilder$1;
+.class public Lcom/bumptech/glide/GlideBuilder$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/bumptech/glide/GlideBuilder;
+.field public final synthetic this$0:Lcom/bumptech/glide/GlideBuilder;
 
 
 # direct methods
 .method public constructor <init>(Lcom/bumptech/glide/GlideBuilder;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/bumptech/glide/GlideBuilder$1;->this$0:Lcom/bumptech/glide/GlideBuilder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,6 +40,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     new-instance p0, Lcom/bumptech/glide/request/RequestOptions;
 
     invoke-direct {p0}, Lcom/bumptech/glide/request/RequestOptions;-><init>()V

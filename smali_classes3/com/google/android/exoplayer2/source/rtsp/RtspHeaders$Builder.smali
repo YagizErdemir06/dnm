@@ -89,14 +89,14 @@
     .line 5
     invoke-virtual {p0, v0, p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders$Builder;->add(Ljava/lang/String;Ljava/lang/String;)Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders$Builder;
 
-    const-string p1, "CSeq"
-
     .line 6
     invoke-static {p3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-    move-result-object p3
+    move-result-object p1
 
-    invoke-virtual {p0, p1, p3}, Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders$Builder;->add(Ljava/lang/String;Ljava/lang/String;)Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders$Builder;
+    const-string p3, "CSeq"
+
+    invoke-virtual {p0, p3, p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders$Builder;->add(Ljava/lang/String;Ljava/lang/String;)Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders$Builder;
 
     if-eqz p2, :cond_0
 
@@ -112,6 +112,7 @@
 .method public static synthetic access$300(Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders$Builder;)Lcom/google/common/collect/ImmutableListMultimap$Builder;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders$Builder;->namesAndValuesBuilder:Lcom/google/common/collect/ImmutableListMultimap$Builder;
 
     return-object p0
@@ -122,6 +123,7 @@
 .method public add(Ljava/lang/String;Ljava/lang/String;)Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders$Builder;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders$Builder;->namesAndValuesBuilder:Lcom/google/common/collect/ImmutableListMultimap$Builder;
 
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -262,6 +264,7 @@
 .method public build()Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders;
 
     const/4 v1, 0x0

@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/ui/ModeSelectView;->p(Lcom/android/camera/ui/ModeSelectView$ModeSelectViewHolder;Z)V
+    value = Lcom/android/camera/ui/ModeSelectView;->n(Lcom/android/camera/ui/ModeSelectView$ModeSelectViewHolder;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -23,7 +23,18 @@
 # direct methods
 .method public constructor <init>(Lcom/android/camera/ui/ModeSelectView;Lcom/android/camera/ui/ModeSelectView$ModeSelectViewHolder;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$holder"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/ui/ModeSelectView$a;->b:Lcom/android/camera/ui/ModeSelectView;
 
     iput-object p2, p0, Lcom/android/camera/ui/ModeSelectView$a;->a:Lcom/android/camera/ui/ModeSelectView$ModeSelectViewHolder;
@@ -37,13 +48,23 @@
 # virtual methods
 .method public onComplete(Ljava/lang/Object;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "toTag"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lmiuix/animation/listener/TransitionListener;->onComplete(Ljava/lang/Object;)V
 
     const/4 p1, 0x1
 
     new-array p1, p1, [Landroid/widget/TextView;
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera/ui/ModeSelectView$a;->a:Lcom/android/camera/ui/ModeSelectView$ModeSelectViewHolder;
 
     iget-object p0, p0, Lcom/android/camera/ui/ModeSelectView$ModeSelectViewHolder;->a:Landroid/widget/TextView;

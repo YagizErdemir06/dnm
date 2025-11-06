@@ -22,6 +22,7 @@
 .method public constructor <init>(Lmiuix/popupwidget/internal/widget/ArrowPopupView;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$d;->a:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
@@ -34,6 +35,7 @@
 .method public getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
     .locals 4
 
+    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result v0
@@ -48,6 +50,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     new-instance v0, Landroid/graphics/Rect;
 
@@ -63,6 +66,7 @@
 
     invoke-direct {v0, v3, v3, v1, v2}, Landroid/graphics/Rect;-><init>(IIII)V
 
+    .line 3
     iget v1, v0, Landroid/graphics/Rect;->bottom:I
 
     invoke-virtual {p1}, Landroid/view/View;->getPaddingBottom()I
@@ -73,6 +77,7 @@
 
     iput v1, v0, Landroid/graphics/Rect;->bottom:I
 
+    .line 4
     iget v1, v0, Landroid/graphics/Rect;->top:I
 
     invoke-virtual {p1}, Landroid/view/View;->getPaddingTop()I
@@ -83,6 +88,7 @@
 
     iput v1, v0, Landroid/graphics/Rect;->top:I
 
+    .line 5
     iget v1, v0, Landroid/graphics/Rect;->right:I
 
     invoke-virtual {p1}, Landroid/view/View;->getPaddingRight()I
@@ -93,6 +99,7 @@
 
     iput v1, v0, Landroid/graphics/Rect;->right:I
 
+    .line 6
     iget v1, v0, Landroid/graphics/Rect;->left:I
 
     invoke-virtual {p1}, Landroid/view/View;->getPaddingLeft()I
@@ -103,9 +110,10 @@
 
     iput v1, v0, Landroid/graphics/Rect;->left:I
 
+    .line 7
     iget-object p0, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$d;->a:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object p0
 
@@ -113,7 +121,7 @@
 
     move-result-object p0
 
-    sget p1, Lir/b$f;->miuix_appcompat_arrow_popup_view_round_corners:I
+    sget p1, Lk/w/b$e;->miuix_appcompat_arrow_popup_view_round_corners:I
 
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -121,6 +129,7 @@
 
     int-to-float p0, p0
 
+    .line 8
     invoke-virtual {p2, v0, p0}, Landroid/graphics/Outline;->setRoundRect(Landroid/graphics/Rect;F)V
 
     :cond_1

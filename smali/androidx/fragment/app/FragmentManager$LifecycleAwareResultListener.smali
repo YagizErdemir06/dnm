@@ -1,4 +1,4 @@
-.class Landroidx/fragment/app/FragmentManager$LifecycleAwareResultListener;
+.class public Landroidx/fragment/app/FragmentManager$LifecycleAwareResultListener;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -41,12 +41,16 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/fragment/app/FragmentManager$LifecycleAwareResultListener;->mLifecycle:Landroidx/lifecycle/Lifecycle;
 
+    .line 3
     iput-object p2, p0, Landroidx/fragment/app/FragmentManager$LifecycleAwareResultListener;->mListener:Landroidx/fragment/app/FragmentResultListener;
 
+    .line 4
     iput-object p3, p0, Landroidx/fragment/app/FragmentManager$LifecycleAwareResultListener;->mObserver:Landroidx/lifecycle/LifecycleEventObserver;
 
     return-void
@@ -57,6 +61,7 @@
 .method public isAtLeast(Landroidx/lifecycle/Lifecycle$State;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/fragment/app/FragmentManager$LifecycleAwareResultListener;->mLifecycle:Landroidx/lifecycle/Lifecycle;
 
     invoke-virtual {p0}, Landroidx/lifecycle/Lifecycle;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
@@ -81,6 +86,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Landroidx/fragment/app/FragmentManager$LifecycleAwareResultListener;->mListener:Landroidx/fragment/app/FragmentResultListener;
 
     invoke-interface {p0, p1, p2}, Landroidx/fragment/app/FragmentResultListener;->onFragmentResult(Ljava/lang/String;Landroid/os/Bundle;)V
@@ -91,6 +97,7 @@
 .method public removeObserver()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/FragmentManager$LifecycleAwareResultListener;->mLifecycle:Landroidx/lifecycle/Lifecycle;
 
     iget-object p0, p0, Landroidx/fragment/app/FragmentManager$LifecycleAwareResultListener;->mObserver:Landroidx/lifecycle/LifecycleEventObserver;

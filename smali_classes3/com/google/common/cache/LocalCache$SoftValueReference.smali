@@ -1,4 +1,4 @@
-.class Lcom/google/common/cache/LocalCache$SoftValueReference;
+.class public Lcom/google/common/cache/LocalCache$SoftValueReference;
 .super Ljava/lang/ref/SoftReference;
 .source "SourceFile"
 
@@ -32,7 +32,7 @@
 
 
 # instance fields
-.field final entry:Lcom/google/common/cache/ReferenceEntry;
+.field public final entry:Lcom/google/common/cache/ReferenceEntry;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/cache/ReferenceEntry<",
@@ -55,8 +55,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p2, p1}, Ljava/lang/ref/SoftReference;-><init>(Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V
 
+    .line 2
     iput-object p3, p0, Lcom/google/common/cache/LocalCache$SoftValueReference;->entry:Lcom/google/common/cache/ReferenceEntry;
 
     return-void
@@ -78,6 +80,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Lcom/google/common/cache/LocalCache$SoftValueReference;
 
     invoke-direct {p0, p1, p2, p3}, Lcom/google/common/cache/LocalCache$SoftValueReference;-><init>(Ljava/lang/ref/ReferenceQueue;Ljava/lang/Object;Lcom/google/common/cache/ReferenceEntry;)V
@@ -95,6 +98,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/cache/LocalCache$SoftValueReference;->entry:Lcom/google/common/cache/ReferenceEntry;
 
     return-object p0
@@ -143,7 +147,8 @@
         }
     .end annotation
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    .line 1
+    invoke-virtual {p0}, Ljava/lang/ref/SoftReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 

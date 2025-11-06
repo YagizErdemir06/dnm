@@ -1,4 +1,4 @@
-.class Lmiuix/appcompat/app/AlertController$AlertParams$5;
+.class public Lmiuix/appcompat/app/AlertController$AlertParams$5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,17 +18,18 @@
 
 
 # instance fields
-.field final synthetic this$0:Lmiuix/appcompat/app/AlertController$AlertParams;
+.field public final synthetic this$0:Lmiuix/appcompat/app/AlertController$AlertParams;
 
-.field final synthetic val$dialog:Lmiuix/appcompat/app/AlertController;
+.field public final synthetic val$dialog:Lmiuix/appcompat/app/AlertController;
 
-.field final synthetic val$listView:Landroid/widget/ListView;
+.field public final synthetic val$listView:Landroid/widget/ListView;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/appcompat/app/AlertController$AlertParams;Landroid/widget/ListView;Lmiuix/appcompat/app/AlertController;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/appcompat/app/AlertController$AlertParams$5;->this$0:Lmiuix/appcompat/app/AlertController$AlertParams;
 
     iput-object p2, p0, Lmiuix/appcompat/app/AlertController$AlertParams$5;->val$listView:Landroid/widget/ListView;
@@ -54,20 +55,23 @@
         }
     .end annotation
 
+    .line 1
     iget-object p1, p0, Lmiuix/appcompat/app/AlertController$AlertParams$5;->this$0:Lmiuix/appcompat/app/AlertController$AlertParams;
 
     iget-object p1, p1, Lmiuix/appcompat/app/AlertController$AlertParams;->mCheckedItems:[Z
 
     if-eqz p1, :cond_0
 
+    .line 2
     iget-object p2, p0, Lmiuix/appcompat/app/AlertController$AlertParams$5;->val$listView:Landroid/widget/ListView;
 
-    invoke-virtual {p2, p3}, Landroid/widget/AbsListView;->isItemChecked(I)Z
+    invoke-virtual {p2, p3}, Landroid/widget/ListView;->isItemChecked(I)Z
 
     move-result p2
 
     aput-boolean p2, p1, p3
 
+    .line 3
     :cond_0
     iget-object p1, p0, Lmiuix/appcompat/app/AlertController$AlertParams$5;->this$0:Lmiuix/appcompat/app/AlertController$AlertParams;
 
@@ -75,14 +79,16 @@
 
     iget-object p2, p0, Lmiuix/appcompat/app/AlertController$AlertParams$5;->val$dialog:Lmiuix/appcompat/app/AlertController;
 
-    iget-object p2, p2, Lmiuix/appcompat/app/AlertController;->d:Landroidx/appcompat/app/AppCompatDialog;
+    iget-object p2, p2, Lmiuix/appcompat/app/AlertController;->e:Landroidx/appcompat/app/AppCompatDialog;
 
     iget-object p0, p0, Lmiuix/appcompat/app/AlertController$AlertParams$5;->val$listView:Landroid/widget/ListView;
 
-    invoke-virtual {p0, p3}, Landroid/widget/AbsListView;->isItemChecked(I)Z
+    .line 4
+    invoke-virtual {p0, p3}, Landroid/widget/ListView;->isItemChecked(I)Z
 
     move-result p0
 
+    .line 5
     invoke-interface {p1, p2, p3, p0}, Landroid/content/DialogInterface$OnMultiChoiceClickListener;->onClick(Landroid/content/DialogInterface;IZ)V
 
     return-void

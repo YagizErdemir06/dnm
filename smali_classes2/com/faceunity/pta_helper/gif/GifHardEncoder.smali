@@ -35,6 +35,7 @@
 
     const-string v0, "FUP2AHelper"
 
+    .line 1
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     return-void
@@ -43,20 +44,24 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
+    .line 2
     iput-wide v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->instance:J
 
     const/4 v0, 0x1
 
+    .line 3
     iput v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->threadCount:I
 
     const/4 v0, 0x4
 
     new-array v0, v0, [I
 
+    .line 4
     iput-object v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->viewport_bk:[I
 
     return-void
@@ -94,10 +99,12 @@
 .method public cancel()V
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->instance:J
 
     invoke-direct {p0, v0, v1}, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->cancel(J)V
 
+    .line 2
     iget-object v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->fboId:[I
 
     const/4 v1, 0x0
@@ -106,19 +113,24 @@
 
     const/4 v2, 0x1
 
+    .line 3
     invoke-static {v2, v0, v1}, Landroid/opengl/GLES20;->glDeleteFramebuffers(I[II)V
 
     :cond_0
     const-wide/16 v2, 0x0
 
+    .line 4
     iput-wide v2, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->instance:J
 
+    .line 5
     iput v1, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->mFrameId:I
 
+    .line 6
     iget-object p0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->mProgramTexture2d:Lcom/faceunity/pta_helper/gles/ProgramTexture2d;
 
     if-eqz p0, :cond_1
 
+    .line 7
     invoke-virtual {p0}, Lcom/faceunity/pta_helper/gles/core/Program;->release()V
 
     :cond_1
@@ -128,10 +140,12 @@
 .method public close()V
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->instance:J
 
     invoke-direct {p0, v0, v1}, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->nativeClose(J)V
 
+    .line 2
     iget-object v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->fboId:[I
 
     const/4 v1, 0x0
@@ -140,19 +154,24 @@
 
     const/4 v2, 0x1
 
+    .line 3
     invoke-static {v2, v0, v1}, Landroid/opengl/GLES20;->glDeleteFramebuffers(I[II)V
 
     :cond_0
     const-wide/16 v2, 0x0
 
+    .line 4
     iput-wide v2, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->instance:J
 
+    .line 5
     iput v1, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->mFrameId:I
 
+    .line 6
     iget-object p0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->mProgramTexture2d:Lcom/faceunity/pta_helper/gles/ProgramTexture2d;
 
     if-eqz p0, :cond_1
 
+    .line 7
     invoke-virtual {p0}, Lcom/faceunity/pta_helper/gles/core/Program;->release()V
 
     :cond_1
@@ -162,6 +181,7 @@
 .method public encodeFrame(JI)Z
     .locals 6
 
+    .line 1
     iget-wide v1, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->instance:J
 
     const-wide/16 v3, 0x0
@@ -181,6 +201,7 @@
 
     move v5, p3
 
+    .line 2
     invoke-direct/range {v0 .. v5}, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->nativeEncodeFrame(JJI)Z
 
     const/4 p0, 0x1
@@ -277,12 +298,12 @@
 .method public init(IILjava/lang/String;)V
     .locals 10
 
+    .line 1
+    sget-object v8, Lcom/faceunity/pta_helper/gif/EncodingType;->ENCODING_TYPE_NORMAL_LOW_MEMORY:Lcom/faceunity/pta_helper/gif/EncodingType;
+
     const/4 v3, 0x0
 
     const/4 v4, 0x0
-
-    .line 1
-    sget-object v8, Lcom/faceunity/pta_helper/gif/EncodingType;->ENCODING_TYPE_NORMAL_LOW_MEMORY:Lcom/faceunity/pta_helper/gif/EncodingType;
 
     const/16 v9, 0xa
 
@@ -367,11 +388,12 @@
 .method public readBuffer(I[B[F[F)[B
     .locals 6
 
-    const-wide/16 v0, 0x0
+    .line 1
+    iget-wide v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->instance:J
 
-    iget-wide v2, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->instance:J
+    const-wide/16 v2, 0x0
 
-    cmp-long v0, v0, v2
+    cmp-long v0, v2, v0
 
     if-nez v0, :cond_0
 
@@ -379,17 +401,20 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->mProgramTexture2d:Lcom/faceunity/pta_helper/gles/ProgramTexture2d;
 
     if-nez v0, :cond_1
 
+    .line 3
     new-instance v0, Lcom/faceunity/pta_helper/gles/ProgramTexture2d;
 
     invoke-direct {v0}, Lcom/faceunity/pta_helper/gles/ProgramTexture2d;-><init>()V
 
     iput-object v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->mProgramTexture2d:Lcom/faceunity/pta_helper/gles/ProgramTexture2d;
 
+    .line 4
     :cond_1
     iget v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->mFrameId:I
 
@@ -401,6 +426,7 @@
 
     if-nez v0, :cond_2
 
+    .line 5
     iget-wide v4, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->instance:J
 
     invoke-direct {p0, v4, v5}, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->nativeGetTexture(J)I
@@ -409,10 +435,13 @@
 
     new-array v4, v1, [I
 
+    .line 6
     iput-object v4, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->fboId:[I
 
+    .line 7
     invoke-static {v1, v4, v3}, Landroid/opengl/GLES20;->glGenFramebuffers(I[II)V
 
+    .line 8
     iget-object v4, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->fboId:[I
 
     aget v4, v4, v3
@@ -423,18 +452,23 @@
 
     const/16 v5, 0xde1
 
+    .line 9
     invoke-static {v2, v4, v5, v0, v3}, Landroid/opengl/GLES20;->glFramebufferTexture2D(IIIII)V
 
+    .line 10
     invoke-static {v5, v3}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
+    .line 11
     invoke-static {v2, v3}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
 
+    .line 12
     iget-object v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->fboId:[I
 
     aget v0, v0, v3
 
     iput v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->mFrameId:I
 
+    .line 13
     :cond_2
     iget v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->mFrameId:I
 
@@ -446,8 +480,10 @@
 
     const/16 v4, 0xba2
 
+    .line 14
     invoke-static {v4, v0, v3}, Landroid/opengl/GLES20;->glGetIntegerv(I[II)V
 
+    .line 15
     iget v4, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->width:I
 
     iget v5, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->height:I
@@ -458,24 +494,31 @@
 
     const/4 v5, 0x0
 
+    .line 16
     invoke-static {v4, v5, v5, v4}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
 
     const/16 v4, 0x4000
 
+    .line 17
     invoke-static {v4}, Landroid/opengl/GLES20;->glClear(I)V
 
+    .line 18
     iget-object v4, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->mProgramTexture2d:Lcom/faceunity/pta_helper/gles/ProgramTexture2d;
 
     invoke-virtual {v4, p1, p3, p4}, Lcom/faceunity/pta_helper/gles/ProgramTexture2d;->drawFrame(I[F[F)V
 
+    .line 19
     invoke-static {}, Landroid/opengl/GLES20;->glFinish()V
 
+    .line 20
     iget-wide p3, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->instance:J
 
     invoke-direct {p0, p3, p4, p2, v3}, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->nativeReadTextureToBytes(J[BZ)Z
 
+    .line 21
     invoke-static {v2, v3}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
 
+    .line 22
     aget p0, v0, v3
 
     aget p1, v0, v1
@@ -496,6 +539,7 @@
 .method public readBufferV2([B)V
     .locals 3
 
+    .line 1
     iget-wide v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->instance:J
 
     const/4 v2, 0x1
@@ -508,6 +552,7 @@
 .method public setDither(Z)V
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->instance:J
 
     const-wide/16 v2, 0x0
@@ -518,6 +563,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     invoke-direct {p0, v0, v1, p1}, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->nativeSetDither(JZ)V
 
@@ -527,6 +573,7 @@
 .method public setImageSizeToComputeColorTable(II)V
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->instance:J
 
     const-wide/16 v2, 0x0
@@ -537,6 +584,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     invoke-virtual {p0, v0, v1, p1, p2}, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->nativeSetImageSizeToComputeColorTable(JII)V
 
@@ -546,8 +594,10 @@
 .method public setThreadCount(I)V
     .locals 4
 
+    .line 1
     iput p1, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->threadCount:I
 
+    .line 2
     iget-wide v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->instance:J
 
     const-wide/16 v2, 0x0
@@ -558,6 +608,7 @@
 
     return-void
 
+    .line 3
     :cond_0
     invoke-direct {p0, v0, v1, p1}, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->nativeSetThreadCount(JI)V
 
@@ -571,8 +622,10 @@
 
     const/4 v1, 0x0
 
+    .line 1
     invoke-static {v0, v1}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
 
+    .line 2
     iget-object p0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->viewport_bk:[I
 
     aget v0, p0, v1
@@ -597,6 +650,7 @@
 .method public updateTexture(I[F[F)J
     .locals 8
 
+    .line 1
     iget-wide v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->instance:J
 
     const-wide/16 v2, 0x0
@@ -607,17 +661,20 @@
 
     return-wide v2
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->mProgramTexture2d:Lcom/faceunity/pta_helper/gles/ProgramTexture2d;
 
     if-nez v0, :cond_1
 
+    .line 3
     new-instance v0, Lcom/faceunity/pta_helper/gles/ProgramTexture2d;
 
     invoke-direct {v0}, Lcom/faceunity/pta_helper/gles/ProgramTexture2d;-><init>()V
 
     iput-object v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->mProgramTexture2d:Lcom/faceunity/pta_helper/gles/ProgramTexture2d;
 
+    .line 4
     :cond_1
     iget v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->mFrameId:I
 
@@ -629,6 +686,7 @@
 
     if-nez v0, :cond_2
 
+    .line 5
     iget-wide v4, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->instance:J
 
     invoke-direct {p0, v4, v5}, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->nativeGetTexture(J)I
@@ -637,10 +695,13 @@
 
     new-array v4, v1, [I
 
+    .line 6
     iput-object v4, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->fboId:[I
 
+    .line 7
     invoke-static {v1, v4, v3}, Landroid/opengl/GLES20;->glGenFramebuffers(I[II)V
 
+    .line 8
     iget-object v4, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->fboId:[I
 
     aget v4, v4, v3
@@ -651,18 +712,23 @@
 
     const/16 v5, 0xde1
 
+    .line 9
     invoke-static {v2, v4, v5, v0, v3}, Landroid/opengl/GLES20;->glFramebufferTexture2D(IIIII)V
 
+    .line 10
     invoke-static {v5, v3}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
+    .line 11
     invoke-static {v2, v3}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
 
+    .line 12
     iget-object v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->fboId:[I
 
     aget v0, v0, v3
 
     iput v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->mFrameId:I
 
+    .line 13
     :cond_2
     iget v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->mFrameId:I
 
@@ -674,8 +740,10 @@
 
     const/16 v4, 0xba2
 
+    .line 14
     invoke-static {v4, v0, v3}, Landroid/opengl/GLES20;->glGetIntegerv(I[II)V
 
+    .line 15
     iget v4, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->cropX:I
 
     iget v5, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->cropY:I
@@ -690,26 +758,33 @@
 
     const/4 v5, 0x0
 
+    .line 16
     invoke-static {v5, v5, v5, v4}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
 
     const/16 v4, 0x4000
 
+    .line 17
     invoke-static {v4}, Landroid/opengl/GLES20;->glClear(I)V
 
+    .line 18
     iget-object v4, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->mProgramTexture2d:Lcom/faceunity/pta_helper/gles/ProgramTexture2d;
 
     invoke-virtual {v4, p1, p2, p3}, Lcom/faceunity/pta_helper/gles/ProgramTexture2d;->drawFrame(I[F[F)V
 
+    .line 19
     iget-wide p1, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->instance:J
 
     invoke-direct {p0, p1, p2}, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->nativeTextureToBytes(J)J
 
     move-result-wide p0
 
+    .line 20
     invoke-static {}, Landroid/opengl/GLES20;->glFinish()V
 
+    .line 21
     invoke-static {v2, v3}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
 
+    .line 22
     aget p2, v0, v3
 
     aget p3, v0, v1
@@ -730,11 +805,12 @@
 .method public useFBO()Z
     .locals 6
 
-    const-wide/16 v0, 0x0
+    .line 1
+    iget-wide v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->instance:J
 
-    iget-wide v2, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->instance:J
+    const-wide/16 v2, 0x0
 
-    cmp-long v0, v0, v2
+    cmp-long v0, v2, v0
 
     const/4 v1, 0x0
 
@@ -742,17 +818,20 @@
 
     return v1
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->mProgramTexture2d:Lcom/faceunity/pta_helper/gles/ProgramTexture2d;
 
     if-nez v0, :cond_1
 
+    .line 3
     new-instance v0, Lcom/faceunity/pta_helper/gles/ProgramTexture2d;
 
     invoke-direct {v0}, Lcom/faceunity/pta_helper/gles/ProgramTexture2d;-><init>()V
 
     iput-object v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->mProgramTexture2d:Lcom/faceunity/pta_helper/gles/ProgramTexture2d;
 
+    .line 4
     :cond_1
     iget v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->mFrameId:I
 
@@ -762,6 +841,7 @@
 
     if-nez v0, :cond_2
 
+    .line 5
     iget-wide v4, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->instance:J
 
     invoke-direct {p0, v4, v5}, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->nativeGetTexture(J)I
@@ -770,10 +850,13 @@
 
     new-array v4, v2, [I
 
+    .line 6
     iput-object v4, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->fboId:[I
 
+    .line 7
     invoke-static {v2, v4, v1}, Landroid/opengl/GLES20;->glGenFramebuffers(I[II)V
 
+    .line 8
     iget-object v4, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->fboId:[I
 
     aget v4, v4, v1
@@ -784,18 +867,23 @@
 
     const/16 v5, 0xde1
 
+    .line 9
     invoke-static {v3, v4, v5, v0, v1}, Landroid/opengl/GLES20;->glFramebufferTexture2D(IIIII)V
 
+    .line 10
     invoke-static {v5, v1}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
+    .line 11
     invoke-static {v3, v1}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
 
+    .line 12
     iget-object v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->fboId:[I
 
     aget v0, v0, v1
 
     iput v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->mFrameId:I
 
+    .line 13
     :cond_2
     iget v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->mFrameId:I
 
@@ -803,10 +891,12 @@
 
     const/16 v0, 0xba2
 
+    .line 14
     iget-object v3, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->viewport_bk:[I
 
     invoke-static {v0, v3, v1}, Landroid/opengl/GLES20;->glGetIntegerv(I[II)V
 
+    .line 15
     iget v0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->width:I
 
     iget p0, p0, Lcom/faceunity/pta_helper/gif/GifHardEncoder;->height:I
@@ -817,10 +907,12 @@
 
     const/4 v0, 0x0
 
+    .line 16
     invoke-static {p0, v0, v0, p0}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
 
     const/16 p0, 0x4000
 
+    .line 17
     invoke-static {p0}, Landroid/opengl/GLES20;->glClear(I)V
 
     return v2

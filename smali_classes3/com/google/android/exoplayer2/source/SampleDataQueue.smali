@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/source/SampleDataQueue;
+.class public Lcom/google/android/exoplayer2/source/SampleDataQueue;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -35,16 +35,20 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/upstream/Allocator;)V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->allocator:Lcom/google/android/exoplayer2/upstream/Allocator;
 
+    .line 3
     invoke-interface {p1}, Lcom/google/android/exoplayer2/upstream/Allocator;->getIndividualAllocationLength()I
 
     move-result p1
 
     iput p1, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->allocationLength:I
 
+    .line 4
     new-instance v0, Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     const/16 v1, 0x20
@@ -53,6 +57,7 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
+    .line 5
     new-instance v0, Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
     const-wide/16 v1, 0x0
@@ -61,8 +66,10 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->firstAllocationNode:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
+    .line 6
     iput-object v0, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->readAllocationNode:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
+    .line 7
     iput-object v0, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->writeAllocationNode:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
     return-void
@@ -71,17 +78,20 @@
 .method private clearAllocationNodes(Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;)V
     .locals 1
 
+    .line 1
     iget-object v0, p1, Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;->allocation:Lcom/google/android/exoplayer2/upstream/Allocation;
 
     if-nez v0, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->allocator:Lcom/google/android/exoplayer2/upstream/Allocator;
 
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/upstream/Allocator;->release(Lcom/google/android/exoplayer2/upstream/Allocator$AllocationNode;)V
 
+    .line 3
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;->clear()Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
     return-void
@@ -90,6 +100,7 @@
 .method private static getNodeContainingPosition(Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;J)Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
     .locals 2
 
+    .line 1
     :goto_0
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;->endPosition:J
 
@@ -97,6 +108,7 @@
 
     if-ltz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;->next:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
     goto :goto_0
@@ -108,6 +120,7 @@
 .method private postAppend(I)V
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->totalBytesWritten:J
 
     int-to-long v2, p1
@@ -116,6 +129,7 @@
 
     iput-wide v0, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->totalBytesWritten:J
 
+    .line 2
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->writeAllocationNode:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
     iget-wide v2, p1, Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;->endPosition:J
@@ -124,6 +138,7 @@
 
     if-nez v0, :cond_0
 
+    .line 3
     iget-object p1, p1, Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;->next:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->writeAllocationNode:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
@@ -135,14 +150,17 @@
 .method private preAppend(I)I
     .locals 6
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->writeAllocationNode:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
     iget-object v1, v0, Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;->allocation:Lcom/google/android/exoplayer2/upstream/Allocation;
 
     if-nez v1, :cond_0
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->allocator:Lcom/google/android/exoplayer2/upstream/Allocator;
 
+    .line 3
     invoke-interface {v1}, Lcom/google/android/exoplayer2/upstream/Allocator;->allocate()Lcom/google/android/exoplayer2/upstream/Allocation;
 
     move-result-object v1
@@ -157,8 +175,10 @@
 
     invoke-direct {v2, v3, v4, v5}, Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;-><init>(JI)V
 
+    .line 4
     invoke-virtual {v0, v1, v2}, Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;->initialize(Lcom/google/android/exoplayer2/upstream/Allocation;Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;)V
 
+    .line 5
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->writeAllocationNode:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
@@ -304,12 +324,15 @@
 
     move-object/from16 v1, p3
 
+    .line 1
     iget-wide v2, v0, Lcom/google/android/exoplayer2/source/SampleQueue$SampleExtrasHolder;->offset:J
 
     const/4 v4, 0x1
 
+    .line 2
     invoke-virtual {v1, v4}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->reset(I)V
 
+    .line 3
     invoke-virtual/range {p3 .. p3}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
     move-result-object v5
@@ -324,6 +347,7 @@
 
     add-long/2addr v2, v6
 
+    .line 4
     invoke-virtual/range {p3 .. p3}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
     move-result-object v6
@@ -348,8 +372,10 @@
 
     move-object/from16 v9, p1
 
+    .line 5
     iget-object v9, v9, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->cryptoInfo:Lcom/google/android/exoplayer2/decoder/CryptoInfo;
 
+    .line 6
     iget-object v10, v9, Lcom/google/android/exoplayer2/decoder/CryptoInfo;->iv:[B
 
     if-nez v10, :cond_1
@@ -358,13 +384,16 @@
 
     new-array v10, v10, [B
 
+    .line 7
     iput-object v10, v9, Lcom/google/android/exoplayer2/decoder/CryptoInfo;->iv:[B
 
     goto :goto_1
 
+    .line 8
     :cond_1
     invoke-static {v10, v7}, Ljava/util/Arrays;->fill([BB)V
 
+    .line 9
     :goto_1
     iget-object v10, v9, Lcom/google/android/exoplayer2/decoder/CryptoInfo;->iv:[B
 
@@ -380,8 +409,10 @@
 
     const/4 v4, 0x2
 
+    .line 10
     invoke-virtual {v1, v4}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->reset(I)V
 
+    .line 11
     invoke-virtual/range {p3 .. p3}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
     move-result-object v6
@@ -394,6 +425,7 @@
 
     add-long/2addr v2, v10
 
+    .line 12
     invoke-virtual/range {p3 .. p3}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedShort()I
 
     move-result v4
@@ -401,28 +433,34 @@
     :cond_2
     move v10, v4
 
+    .line 13
     iget-object v4, v9, Lcom/google/android/exoplayer2/decoder/CryptoInfo;->numBytesOfClearData:[I
 
     if-eqz v4, :cond_3
 
+    .line 14
     array-length v6, v4
 
     if-ge v6, v10, :cond_4
 
+    .line 15
     :cond_3
     new-array v4, v10, [I
 
     :cond_4
     move-object v11, v4
 
+    .line 16
     iget-object v4, v9, Lcom/google/android/exoplayer2/decoder/CryptoInfo;->numBytesOfEncryptedData:[I
 
     if-eqz v4, :cond_5
 
+    .line 17
     array-length v6, v4
 
     if-ge v6, v10, :cond_6
 
+    .line 18
     :cond_5
     new-array v4, v10, [I
 
@@ -433,8 +471,10 @@
 
     mul-int/lit8 v4, v10, 0x6
 
+    .line 19
     invoke-virtual {v1, v4}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->reset(I)V
 
+    .line 20
     invoke-virtual/range {p3 .. p3}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
     move-result-object v6
@@ -447,17 +487,20 @@
 
     add-long/2addr v2, v13
 
+    .line 21
     invoke-virtual {v1, v7}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     :goto_2
     if-ge v7, v10, :cond_8
 
+    .line 22
     invoke-virtual/range {p3 .. p3}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedShort()I
 
     move-result v4
 
     aput v4, v11, v7
 
+    .line 23
     invoke-virtual/range {p3 .. p3}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedIntToInt()I
 
     move-result v4
@@ -468,9 +511,11 @@
 
     goto :goto_2
 
+    .line 24
     :cond_7
     aput v7, v11, v7
 
+    .line 25
     iget v1, v0, Lcom/google/android/exoplayer2/source/SampleQueue$SampleExtrasHolder;->size:I
 
     iget-wide v13, v0, Lcom/google/android/exoplayer2/source/SampleQueue$SampleExtrasHolder;->offset:J
@@ -483,6 +528,7 @@
 
     aput v1, v12, v7
 
+    .line 26
     :cond_8
     iget-object v1, v0, Lcom/google/android/exoplayer2/source/SampleQueue$SampleExtrasHolder;->cryptoData:Lcom/google/android/exoplayer2/extractor/TrackOutput$CryptoData;
 
@@ -492,6 +538,7 @@
 
     check-cast v1, Lcom/google/android/exoplayer2/extractor/TrackOutput$CryptoData;
 
+    .line 27
     iget-object v13, v1, Lcom/google/android/exoplayer2/extractor/TrackOutput$CryptoData;->encryptionKey:[B
 
     iget-object v14, v9, Lcom/google/android/exoplayer2/decoder/CryptoInfo;->iv:[B
@@ -508,6 +555,7 @@
 
     invoke-virtual/range {v9 .. v17}, Lcom/google/android/exoplayer2/decoder/CryptoInfo;->set(I[I[I[B[BIII)V
 
+    .line 28
     iget-wide v6, v0, Lcom/google/android/exoplayer2/source/SampleQueue$SampleExtrasHolder;->offset:J
 
     sub-long/2addr v2, v6
@@ -518,8 +566,10 @@
 
     add-long/2addr v6, v2
 
+    .line 29
     iput-wide v6, v0, Lcom/google/android/exoplayer2/source/SampleQueue$SampleExtrasHolder;->offset:J
 
+    .line 30
     iget v2, v0, Lcom/google/android/exoplayer2/source/SampleQueue$SampleExtrasHolder;->size:I
 
     sub-int/2addr v2, v1
@@ -532,16 +582,19 @@
 .method private static readSampleData(Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;Lcom/google/android/exoplayer2/source/SampleQueue$SampleExtrasHolder;Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
     .locals 5
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->isEncrypted()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-static {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/source/SampleDataQueue;->readEncryptionData(Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;Lcom/google/android/exoplayer2/source/SampleQueue$SampleExtrasHolder;Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
     move-result-object p0
 
+    .line 3
     :cond_0
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/decoder/Buffer;->hasSupplementalData()Z
 
@@ -551,8 +604,10 @@
 
     const/4 v0, 0x4
 
+    .line 4
     invoke-virtual {p3, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->reset(I)V
 
+    .line 5
     iget-wide v1, p2, Lcom/google/android/exoplayer2/source/SampleQueue$SampleExtrasHolder;->offset:J
 
     invoke-virtual {p3}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
@@ -563,10 +618,12 @@
 
     move-result-object p0
 
+    .line 6
     invoke-virtual {p3}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedIntToInt()I
 
     move-result p3
 
+    .line 7
     iget-wide v1, p2, Lcom/google/android/exoplayer2/source/SampleQueue$SampleExtrasHolder;->offset:J
 
     const-wide/16 v3, 0x4
@@ -575,14 +632,17 @@
 
     iput-wide v1, p2, Lcom/google/android/exoplayer2/source/SampleQueue$SampleExtrasHolder;->offset:J
 
+    .line 8
     iget v1, p2, Lcom/google/android/exoplayer2/source/SampleQueue$SampleExtrasHolder;->size:I
 
     sub-int/2addr v1, v0
 
     iput v1, p2, Lcom/google/android/exoplayer2/source/SampleQueue$SampleExtrasHolder;->size:I
 
+    .line 9
     invoke-virtual {p1, p3}, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->ensureSpaceForWrite(I)V
 
+    .line 10
     iget-wide v0, p2, Lcom/google/android/exoplayer2/source/SampleQueue$SampleExtrasHolder;->offset:J
 
     iget-object v2, p1, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->data:Ljava/nio/ByteBuffer;
@@ -591,6 +651,7 @@
 
     move-result-object p0
 
+    .line 11
     iget-wide v0, p2, Lcom/google/android/exoplayer2/source/SampleQueue$SampleExtrasHolder;->offset:J
 
     int-to-long v2, p3
@@ -599,37 +660,44 @@
 
     iput-wide v0, p2, Lcom/google/android/exoplayer2/source/SampleQueue$SampleExtrasHolder;->offset:J
 
+    .line 12
     iget v0, p2, Lcom/google/android/exoplayer2/source/SampleQueue$SampleExtrasHolder;->size:I
 
     sub-int/2addr v0, p3
 
     iput v0, p2, Lcom/google/android/exoplayer2/source/SampleQueue$SampleExtrasHolder;->size:I
 
+    .line 13
     invoke-virtual {p1, v0}, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->resetSupplementalData(I)V
 
+    .line 14
     iget-wide v0, p2, Lcom/google/android/exoplayer2/source/SampleQueue$SampleExtrasHolder;->offset:J
 
     iget-object p1, p1, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->supplementalData:Ljava/nio/ByteBuffer;
 
     iget p2, p2, Lcom/google/android/exoplayer2/source/SampleQueue$SampleExtrasHolder;->size:I
 
+    .line 15
     invoke-static {p0, v0, v1, p1, p2}, Lcom/google/android/exoplayer2/source/SampleDataQueue;->readData(Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;JLjava/nio/ByteBuffer;I)Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
     move-result-object p0
 
     goto :goto_0
 
+    .line 16
     :cond_1
     iget p3, p2, Lcom/google/android/exoplayer2/source/SampleQueue$SampleExtrasHolder;->size:I
 
     invoke-virtual {p1, p3}, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->ensureSpaceForWrite(I)V
 
+    .line 17
     iget-wide v0, p2, Lcom/google/android/exoplayer2/source/SampleQueue$SampleExtrasHolder;->offset:J
 
     iget-object p1, p1, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->data:Ljava/nio/ByteBuffer;
 
     iget p2, p2, Lcom/google/android/exoplayer2/source/SampleQueue$SampleExtrasHolder;->size:I
 
+    .line 18
     invoke-static {p0, v0, v1, p1, p2}, Lcom/google/android/exoplayer2/source/SampleDataQueue;->readData(Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;JLjava/nio/ByteBuffer;I)Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
     move-result-object p0
@@ -651,6 +719,7 @@
 
     return-void
 
+    .line 1
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->firstAllocationNode:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
@@ -661,12 +730,14 @@
 
     if-ltz v1, :cond_1
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->allocator:Lcom/google/android/exoplayer2/upstream/Allocator;
 
     iget-object v0, v0, Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;->allocation:Lcom/google/android/exoplayer2/upstream/Allocation;
 
     invoke-interface {v1, v0}, Lcom/google/android/exoplayer2/upstream/Allocator;->release(Lcom/google/android/exoplayer2/upstream/Allocation;)V
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->firstAllocationNode:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;->clear()Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
@@ -677,6 +748,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->readAllocationNode:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
@@ -688,6 +760,7 @@
 
     if-gez p1, :cond_2
 
+    .line 5
     iput-object v0, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->readAllocationNode:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
     :cond_2
@@ -697,6 +770,7 @@
 .method public discardUpstreamSampleBytes(J)V
     .locals 5
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->totalBytesWritten:J
 
     cmp-long v0, p1, v0
@@ -713,6 +787,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 2
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->totalBytesWritten:J
 
     const-wide/16 v0, 0x0
@@ -721,6 +796,7 @@
 
     if-eqz v0, :cond_4
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->firstAllocationNode:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
     iget-wide v1, v0, Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;->startPosition:J
@@ -731,6 +807,7 @@
 
     goto :goto_2
 
+    .line 4
     :cond_1
     :goto_1
     iget-wide p1, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->totalBytesWritten:J
@@ -741,10 +818,12 @@
 
     if-lez p1, :cond_2
 
+    .line 5
     iget-object v0, v0, Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;->next:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
     goto :goto_1
 
+    .line 6
     :cond_2
     iget-object p1, v0, Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;->next:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
@@ -754,8 +833,10 @@
 
     check-cast p1, Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
+    .line 7
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/source/SampleDataQueue;->clearAllocationNodes(Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;)V
 
+    .line 8
     new-instance p2, Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
     iget-wide v1, v0, Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;->endPosition:J
@@ -766,6 +847,7 @@
 
     iput-object p2, v0, Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;->next:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
+    .line 9
     iget-wide v1, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->totalBytesWritten:J
 
     iget-wide v3, v0, Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;->endPosition:J
@@ -776,23 +858,28 @@
 
     move-object v0, p2
 
+    .line 10
     :cond_3
     iput-object v0, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->writeAllocationNode:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
+    .line 11
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->readAllocationNode:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
     if-ne v0, p1, :cond_5
 
+    .line 12
     iput-object p2, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->readAllocationNode:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
     goto :goto_3
 
+    .line 13
     :cond_4
     :goto_2
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->firstAllocationNode:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/source/SampleDataQueue;->clearAllocationNodes(Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;)V
 
+    .line 14
     new-instance p1, Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->totalBytesWritten:J
@@ -803,8 +890,10 @@
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->firstAllocationNode:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
+    .line 15
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->readAllocationNode:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
+    .line 16
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->writeAllocationNode:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
     :cond_5
@@ -815,6 +904,7 @@
 .method public getTotalBytesWritten()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->totalBytesWritten:J
 
     return-wide v0
@@ -823,6 +913,7 @@
 .method public peekToBuffer(Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;Lcom/google/android/exoplayer2/source/SampleQueue$SampleExtrasHolder;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->readAllocationNode:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
@@ -835,6 +926,7 @@
 .method public readToBuffer(Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;Lcom/google/android/exoplayer2/source/SampleQueue$SampleExtrasHolder;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->readAllocationNode:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->scratch:Lcom/google/android/exoplayer2/util/ParsableByteArray;
@@ -851,10 +943,12 @@
 .method public reset()V
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->firstAllocationNode:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/source/SampleDataQueue;->clearAllocationNodes(Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;)V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->firstAllocationNode:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
     iget v1, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->allocationLength:I
@@ -863,14 +957,18 @@
 
     invoke-virtual {v0, v2, v3, v1}, Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;->reset(JI)V
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->firstAllocationNode:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->readAllocationNode:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
+    .line 4
     iput-object v0, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->writeAllocationNode:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
+    .line 5
     iput-wide v2, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->totalBytesWritten:J
 
+    .line 6
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->allocator:Lcom/google/android/exoplayer2/upstream/Allocator;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/upstream/Allocator;->trim()V
@@ -881,6 +979,7 @@
 .method public rewind()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->firstAllocationNode:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/source/SampleDataQueue;->readAllocationNode:Lcom/google/android/exoplayer2/source/SampleDataQueue$AllocationNode;

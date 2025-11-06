@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/collect/IndexedImmutableSet;
+.class public abstract Lcom/google/common/collect/IndexedImmutableSet;
 .super Lcom/google/common/collect/ImmutableSet;
 .source "SourceFile"
 
@@ -26,6 +26,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableSet;-><init>()V
 
     return-void
@@ -38,6 +39,7 @@
     .annotation build Lcom/google/common/annotations/GwtIncompatible;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableSet;->asList()Lcom/google/common/collect/ImmutableList;
 
     move-result-object p0
@@ -59,6 +61,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/IndexedImmutableSet$1;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/IndexedImmutableSet$1;-><init>(Lcom/google/common/collect/IndexedImmutableSet;)V

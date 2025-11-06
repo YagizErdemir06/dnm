@@ -1,10 +1,10 @@
-.class final Lcom/google/android/gms/common/api/internal/zas;
+.class public final Lcom/google/android/gms/common/api/internal/zas;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field final synthetic zaa:Lcom/google/android/gms/common/api/internal/BasePendingResult;
+.field public final synthetic zaa:Lcom/google/android/gms/common/api/internal/BasePendingResult;
 
 
 # direct methods
@@ -28,6 +28,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zas;->zaa:Lcom/google/android/gms/common/api/internal/BasePendingResult;
 
     invoke-static {v0}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->zaj(Lcom/google/android/gms/common/api/internal/BasePendingResult;)Lcom/google/android/gms/common/api/Result;
@@ -36,6 +37,7 @@
 
     invoke-static {v0}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->zal(Lcom/google/android/gms/common/api/Result;)V
 
+    .line 2
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
     return-void

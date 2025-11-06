@@ -1,18 +1,19 @@
-.class final Lcom/google/android/gms/common/api/internal/zaam;
+.class public final Lcom/google/android/gms/common/api/internal/zaam;
 .super Lcom/google/android/gms/common/api/internal/zabg;
 .source "SourceFile"
 
 
 # instance fields
-.field final synthetic zaa:Lcom/google/android/gms/common/ConnectionResult;
+.field public final synthetic zaa:Lcom/google/android/gms/common/ConnectionResult;
 
-.field final synthetic zab:Lcom/google/android/gms/common/api/internal/zaao;
+.field public final synthetic zab:Lcom/google/android/gms/common/api/internal/zaao;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/gms/common/api/internal/zaao;Lcom/google/android/gms/common/api/internal/zabf;Lcom/google/android/gms/common/ConnectionResult;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/common/api/internal/zaam;->zab:Lcom/google/android/gms/common/api/internal/zaao;
 
     iput-object p3, p0, Lcom/google/android/gms/common/api/internal/zaam;->zaa:Lcom/google/android/gms/common/ConnectionResult;
@@ -30,6 +31,7 @@
         value = "mLock"
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zaam;->zab:Lcom/google/android/gms/common/api/internal/zaao;
 
     iget-object v0, v0, Lcom/google/android/gms/common/api/internal/zaao;->zaa:Lcom/google/android/gms/common/api/internal/zaaw;

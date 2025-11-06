@@ -1,4 +1,4 @@
-.class final Lorg/apache/xmlbeans/impl/values/XmlObjectBase$ValueOutOfRangeValidationContext;
+.class public final Lorg/apache/xmlbeans/impl/values/XmlObjectBase$ValueOutOfRangeValidationContext;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

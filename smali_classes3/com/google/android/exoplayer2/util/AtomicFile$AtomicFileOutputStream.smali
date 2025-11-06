@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/util/AtomicFile$AtomicFileOutputStream;
+.class public final Lcom/google/android/exoplayer2/util/AtomicFile$AtomicFileOutputStream;
 .super Ljava/io/OutputStream;
 .source "SourceFile"
 
@@ -29,12 +29,15 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/util/AtomicFile$AtomicFileOutputStream;->closed:Z
 
+    .line 3
     new-instance v0, Ljava/io/FileOutputStream;
 
     invoke-direct {v0, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
@@ -54,6 +57,7 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/util/AtomicFile$AtomicFileOutputStream;->closed:Z
 
     if-eqz v0, :cond_0
@@ -63,10 +67,13 @@
     :cond_0
     const/4 v0, 0x1
 
+    .line 2
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/util/AtomicFile$AtomicFileOutputStream;->closed:Z
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/AtomicFile$AtomicFileOutputStream;->flush()V
 
+    .line 4
     :try_start_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/AtomicFile$AtomicFileOutputStream;->fileOutputStream:Ljava/io/FileOutputStream;
 
@@ -87,8 +94,10 @@
 
     const-string v2, "Failed to sync file descriptor:"
 
+    .line 5
     invoke-static {v1, v2, v0}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 6
     :goto_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/AtomicFile$AtomicFileOutputStream;->fileOutputStream:Ljava/io/FileOutputStream;
 
@@ -105,9 +114,10 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/AtomicFile$AtomicFileOutputStream;->fileOutputStream:Ljava/io/FileOutputStream;
 
-    invoke-virtual {p0}, Ljava/io/OutputStream;->flush()V
+    invoke-virtual {p0}, Ljava/io/FileOutputStream;->flush()V
 
     return-void
 .end method

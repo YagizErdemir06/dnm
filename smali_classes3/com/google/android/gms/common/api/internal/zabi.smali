@@ -8,27 +8,27 @@
 
 
 # instance fields
-.field final zaa:Ljava/util/Map;
+.field public final zaa:Ljava/util/Map;
 
-.field final zab:Ljava/util/Map;
+.field public final zab:Ljava/util/Map;
 
-.field final zac:Lcom/google/android/gms/common/internal/ClientSettings;
+.field public final zac:Lcom/google/android/gms/common/internal/ClientSettings;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field final zad:Ljava/util/Map;
+.field public final zad:Ljava/util/Map;
 
-.field final zae:Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;
+.field public final zae:Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field zaf:I
+.field public zaf:I
 
-.field final zag:Lcom/google/android/gms/common/api/internal/zabe;
+.field public final zag:Lcom/google/android/gms/common/api/internal/zabe;
 
-.field final zah:Lcom/google/android/gms/common/api/internal/zabz;
+.field public final zah:Lcom/google/android/gms/common/api/internal/zabz;
 
 .field private final zai:Ljava/util/concurrent/locks/Lock;
 
@@ -63,6 +63,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/util/HashMap;
@@ -106,8 +107,10 @@
 
     move-result-object p5
 
+    .line 2
     check-cast p5, Lcom/google/android/gms/common/api/internal/zat;
 
+    .line 3
     invoke-virtual {p5, p0}, Lcom/google/android/gms/common/api/internal/zat;->zaa(Lcom/google/android/gms/common/api/internal/zau;)V
 
     add-int/lit8 p2, p2, 0x1
@@ -117,10 +120,12 @@
     :cond_0
     new-instance p1, Lcom/google/android/gms/common/api/internal/zabh;
 
+    .line 4
     invoke-direct {p1, p0, p4}, Lcom/google/android/gms/common/api/internal/zabh;-><init>(Lcom/google/android/gms/common/api/internal/zabi;Landroid/os/Looper;)V
 
     iput-object p1, p0, Lcom/google/android/gms/common/api/internal/zabi;->zam:Lcom/google/android/gms/common/api/internal/zabh;
 
+    .line 5
     invoke-interface {p3}, Ljava/util/concurrent/locks/Lock;->newCondition()Ljava/util/concurrent/locks/Condition;
 
     move-result-object p1
@@ -161,6 +166,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zai:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
@@ -168,12 +174,15 @@
     :try_start_0
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zan:Lcom/google/android/gms/common/api/internal/zabf;
 
+    .line 2
     invoke-interface {v0, p1}, Lcom/google/android/gms/common/api/internal/zabf;->zag(Landroid/os/Bundle;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zai:Ljava/util/concurrent/locks/Lock;
 
+    .line 4
     invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return-void
@@ -181,16 +190,20 @@
     :catchall_0
     move-exception p1
 
+    .line 5
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zai:Ljava/util/concurrent/locks/Lock;
 
+    .line 6
     invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
+    .line 7
     throw p1
 .end method
 
 .method public final onConnectionSuspended(I)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zai:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
@@ -198,12 +211,15 @@
     :try_start_0
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zan:Lcom/google/android/gms/common/api/internal/zabf;
 
+    .line 2
     invoke-interface {v0, p1}, Lcom/google/android/gms/common/api/internal/zabf;->zai(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zai:Ljava/util/concurrent/locks/Lock;
 
+    .line 4
     invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return-void
@@ -211,10 +227,13 @@
     :catchall_0
     move-exception p1
 
+    .line 5
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zai:Ljava/util/concurrent/locks/Lock;
 
+    .line 6
     invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
+    .line 7
     throw p1
 .end method
 
@@ -229,6 +248,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zai:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
@@ -236,12 +256,15 @@
     :try_start_0
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zan:Lcom/google/android/gms/common/api/internal/zabf;
 
+    .line 2
     invoke-interface {v0, p1, p2, p3}, Lcom/google/android/gms/common/api/internal/zabf;->zah(Lcom/google/android/gms/common/ConnectionResult;Lcom/google/android/gms/common/api/Api;Z)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zai:Ljava/util/concurrent/locks/Lock;
 
+    .line 4
     invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return-void
@@ -249,10 +272,13 @@
     :catchall_0
     move-exception p1
 
+    .line 5
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zai:Ljava/util/concurrent/locks/Lock;
 
+    .line 6
     invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
+    .line 7
     throw p1
 .end method
 
@@ -262,11 +288,13 @@
         value = "mLock"
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/internal/zabi;->zaq()V
 
     :goto_0
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zan:Lcom/google/android/gms/common/api/internal/zabf;
 
+    .line 2
     instance-of v0, v0, Lcom/google/android/gms/common/api/internal/zaaw;
 
     const/4 v1, 0x0
@@ -276,12 +304,14 @@
     :try_start_0
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zaj:Ljava/util/concurrent/locks/Condition;
 
+    .line 3
     invoke-interface {v0}, Ljava/util/concurrent/locks/Condition;->await()V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
+    .line 4
     :catch_0
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -289,6 +319,7 @@
 
     invoke-virtual {p0}, Ljava/lang/Thread;->interrupt()V
 
+    .line 5
     new-instance p0, Lcom/google/android/gms/common/ConnectionResult;
 
     const/16 v0, 0xf
@@ -297,13 +328,16 @@
 
     return-object p0
 
+    .line 6
     :cond_0
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zan:Lcom/google/android/gms/common/api/internal/zabf;
 
+    .line 7
     instance-of v0, v0, Lcom/google/android/gms/common/api/internal/zaaj;
 
     if-eqz v0, :cond_1
 
+    .line 8
     sget-object p0, Lcom/google/android/gms/common/ConnectionResult;->RESULT_SUCCESS:Lcom/google/android/gms/common/ConnectionResult;
 
     return-object p0
@@ -315,6 +349,7 @@
 
     return-object p0
 
+    .line 9
     :cond_2
     new-instance p0, Lcom/google/android/gms/common/ConnectionResult;
 
@@ -331,8 +366,10 @@
         value = "mLock"
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/internal/zabi;->zaq()V
 
+    .line 2
     invoke-virtual {p3, p1, p2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
 
     move-result-wide p1
@@ -340,6 +377,7 @@
     :goto_0
     iget-object p3, p0, Lcom/google/android/gms/common/api/internal/zabi;->zan:Lcom/google/android/gms/common/api/internal/zabf;
 
+    .line 3
     instance-of p3, p3, Lcom/google/android/gms/common/api/internal/zaaw;
 
     const/4 v0, 0x0
@@ -352,9 +390,11 @@
 
     if-gtz p3, :cond_0
 
+    .line 4
     :try_start_0
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/internal/zabi;->zar()V
 
+    .line 5
     new-instance p0, Lcom/google/android/gms/common/ConnectionResult;
 
     const/16 p1, 0xe
@@ -366,6 +406,7 @@
     :cond_0
     iget-object p3, p0, Lcom/google/android/gms/common/api/internal/zabi;->zaj:Ljava/util/concurrent/locks/Condition;
 
+    .line 6
     invoke-interface {p3, p1, p2}, Ljava/util/concurrent/locks/Condition;->awaitNanos(J)J
 
     move-result-wide p1
@@ -374,6 +415,7 @@
 
     goto :goto_0
 
+    .line 7
     :catch_0
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -381,6 +423,7 @@
 
     invoke-virtual {p0}, Ljava/lang/Thread;->interrupt()V
 
+    .line 8
     new-instance p0, Lcom/google/android/gms/common/ConnectionResult;
 
     const/16 p1, 0xf
@@ -389,13 +432,16 @@
 
     return-object p0
 
+    .line 9
     :cond_1
     iget-object p1, p0, Lcom/google/android/gms/common/api/internal/zabi;->zan:Lcom/google/android/gms/common/api/internal/zabf;
 
+    .line 10
     instance-of p1, p1, Lcom/google/android/gms/common/api/internal/zaaj;
 
     if-eqz p1, :cond_2
 
+    .line 11
     sget-object p0, Lcom/google/android/gms/common/ConnectionResult;->RESULT_SUCCESS:Lcom/google/android/gms/common/ConnectionResult;
 
     return-object p0
@@ -407,6 +453,7 @@
 
     return-object p0
 
+    .line 12
     :cond_3
     new-instance p0, Lcom/google/android/gms/common/ConnectionResult;
 
@@ -430,12 +477,14 @@
         value = "mLock"
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/gms/common/api/Api;->zab()Lcom/google/android/gms/common/api/Api$AnyClientKey;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zaa:Ljava/util/Map;
 
+    .line 2
     invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v0
@@ -444,6 +493,7 @@
 
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zaa:Ljava/util/Map;
 
+    .line 3
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -456,6 +506,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 4
     sget-object p0, Lcom/google/android/gms/common/ConnectionResult;->RESULT_SUCCESS:Lcom/google/android/gms/common/ConnectionResult;
 
     return-object p0
@@ -463,6 +514,7 @@
     :cond_0
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zab:Ljava/util/Map;
 
+    .line 5
     invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v0
@@ -471,6 +523,7 @@
 
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zab:Ljava/util/Map;
 
+    .line 6
     invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -495,10 +548,12 @@
         value = "mLock"
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->zak()V
 
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zan:Lcom/google/android/gms/common/api/internal/zabf;
 
+    .line 2
     invoke-interface {p0, p1}, Lcom/google/android/gms/common/api/internal/zabf;->zaa(Lcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl;)Lcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl;
 
     return-object p1
@@ -514,10 +569,12 @@
         value = "mLock"
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->zak()V
 
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zan:Lcom/google/android/gms/common/api/internal/zabf;
 
+    .line 2
     invoke-interface {p0, p1}, Lcom/google/android/gms/common/api/internal/zabf;->zab(Lcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl;)Lcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl;
 
     move-result-object p0
@@ -528,6 +585,7 @@
 .method public final zai()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zai:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
@@ -535,6 +593,7 @@
     :try_start_0
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zag:Lcom/google/android/gms/common/api/internal/zabe;
 
+    .line 2
     invoke-virtual {v0}, Lcom/google/android/gms/common/api/internal/zabe;->zak()Z
 
     new-instance v0, Lcom/google/android/gms/common/api/internal/zaaj;
@@ -545,16 +604,20 @@
 
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zan:Lcom/google/android/gms/common/api/internal/zabf;
 
+    .line 3
     invoke-interface {v0}, Lcom/google/android/gms/common/api/internal/zabf;->zad()V
 
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zaj:Ljava/util/concurrent/locks/Condition;
 
+    .line 4
     invoke-interface {v0}, Ljava/util/concurrent/locks/Condition;->signalAll()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 5
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zai:Ljava/util/concurrent/locks/Lock;
 
+    .line 6
     invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return-void
@@ -562,16 +625,20 @@
     :catchall_0
     move-exception v0
 
+    .line 7
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zai:Ljava/util/concurrent/locks/Lock;
 
+    .line 8
     invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
+    .line 9
     throw v0
 .end method
 
 .method public final zaj()V
     .locals 9
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zai:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
@@ -595,22 +662,27 @@
 
     move-object v2, p0
 
+    .line 2
     invoke-direct/range {v1 .. v8}, Lcom/google/android/gms/common/api/internal/zaaw;-><init>(Lcom/google/android/gms/common/api/internal/zabi;Lcom/google/android/gms/common/internal/ClientSettings;Ljava/util/Map;Lcom/google/android/gms/common/GoogleApiAvailabilityLight;Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;Ljava/util/concurrent/locks/Lock;Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zan:Lcom/google/android/gms/common/api/internal/zabf;
 
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zan:Lcom/google/android/gms/common/api/internal/zabf;
 
+    .line 3
     invoke-interface {v0}, Lcom/google/android/gms/common/api/internal/zabf;->zad()V
 
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zaj:Ljava/util/concurrent/locks/Condition;
 
+    .line 4
     invoke-interface {v0}, Ljava/util/concurrent/locks/Condition;->signalAll()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 5
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zai:Ljava/util/concurrent/locks/Lock;
 
+    .line 6
     invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return-void
@@ -618,10 +690,13 @@
     :catchall_0
     move-exception v0
 
+    .line 7
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zai:Ljava/util/concurrent/locks/Lock;
 
+    .line 8
     invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
+    .line 9
     throw v0
 .end method
 
@@ -632,6 +707,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zai:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
@@ -647,16 +723,20 @@
 
     iget-object p1, p0, Lcom/google/android/gms/common/api/internal/zabi;->zan:Lcom/google/android/gms/common/api/internal/zabf;
 
+    .line 2
     invoke-interface {p1}, Lcom/google/android/gms/common/api/internal/zabf;->zad()V
 
     iget-object p1, p0, Lcom/google/android/gms/common/api/internal/zabi;->zaj:Ljava/util/concurrent/locks/Condition;
 
+    .line 3
     invoke-interface {p1}, Ljava/util/concurrent/locks/Condition;->signalAll()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zai:Ljava/util/concurrent/locks/Lock;
 
+    .line 5
     invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return-void
@@ -664,16 +744,20 @@
     :catchall_0
     move-exception p1
 
+    .line 6
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zai:Ljava/util/concurrent/locks/Lock;
 
+    .line 7
     invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
+    .line 8
     throw p1
 .end method
 
 .method public final zal(Lcom/google/android/gms/common/api/internal/zabg;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zam:Lcom/google/android/gms/common/api/internal/zabh;
 
     const/4 v1, 0x1
@@ -684,6 +768,7 @@
 
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zam:Lcom/google/android/gms/common/api/internal/zabh;
 
+    .line 2
     invoke-virtual {p0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     return-void
@@ -692,6 +777,7 @@
 .method public final zam(Ljava/lang/RuntimeException;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zam:Lcom/google/android/gms/common/api/internal/zabh;
 
     const/4 v1, 0x2
@@ -702,6 +788,7 @@
 
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zam:Lcom/google/android/gms/common/api/internal/zabh;
 
+    .line 2
     invoke-virtual {p0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     return-void
@@ -713,6 +800,7 @@
         value = "mLock"
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zan:Lcom/google/android/gms/common/api/internal/zabf;
 
     invoke-interface {p0}, Lcom/google/android/gms/common/api/internal/zabf;->zae()V
@@ -726,6 +814,7 @@
         value = "mLock"
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zan:Lcom/google/android/gms/common/api/internal/zabf;
 
     invoke-interface {v0}, Lcom/google/android/gms/common/api/internal/zabf;->zaj()Z
@@ -736,6 +825,7 @@
 
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zab:Ljava/util/Map;
 
+    .line 2
     invoke-interface {p0}, Ljava/util/Map;->clear()V
 
     :cond_0
@@ -753,6 +843,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -779,6 +870,7 @@
 
     iget-object v1, p0, Lcom/google/android/gms/common/api/internal/zabi;->zad:Ljava/util/Map;
 
+    .line 2
     invoke-interface {v1}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v1
@@ -800,6 +892,7 @@
 
     check-cast v2, Lcom/google/android/gms/common/api/Api;
 
+    .line 3
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v3
@@ -818,6 +911,7 @@
 
     iget-object v3, p0, Lcom/google/android/gms/common/api/internal/zabi;->zaa:Ljava/util/Map;
 
+    .line 4
     invoke-virtual {v2}, Lcom/google/android/gms/common/api/Api;->zab()Lcom/google/android/gms/common/api/Api$AnyClientKey;
 
     move-result-object v2
@@ -834,6 +928,7 @@
 
     check-cast v2, Lcom/google/android/gms/common/api/Api$Client;
 
+    .line 5
     invoke-interface {v2, v0, p2, p3, p4}, Lcom/google/android/gms/common/api/Api$Client;->dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
     goto :goto_0
@@ -848,6 +943,7 @@
         value = "mLock"
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zan:Lcom/google/android/gms/common/api/internal/zabf;
 
     instance-of v0, v0, Lcom/google/android/gms/common/api/internal/zaaj;
@@ -856,6 +952,7 @@
 
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zan:Lcom/google/android/gms/common/api/internal/zabf;
 
+    .line 2
     check-cast p0, Lcom/google/android/gms/common/api/internal/zaaj;
 
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/internal/zaaj;->zaf()V
@@ -873,6 +970,7 @@
 .method public final zaw()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zan:Lcom/google/android/gms/common/api/internal/zabf;
 
     instance-of p0, p0, Lcom/google/android/gms/common/api/internal/zaaj;
@@ -883,6 +981,7 @@
 .method public final zax()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zan:Lcom/google/android/gms/common/api/internal/zabf;
 
     instance-of p0, p0, Lcom/google/android/gms/common/api/internal/zaaw;

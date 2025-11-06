@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/ui/FlashHaloView;->I(IIIILjava/util/List;Z)V
+    value = Lcom/android/camera/ui/FlashHaloView;->H(IIIILjava/util/List;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -34,7 +34,26 @@
 # direct methods
 .method public constructor <init>(Lcom/android/camera/ui/FlashHaloView;IIIILandroid/widget/FrameLayout$LayoutParams;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010,
+            0x1010,
+            0x1010,
+            0x1010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$originalTop",
+            "val$top",
+            "val$originalBottom",
+            "val$bottom",
+            "val$params"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView$a;->f:Lcom/android/camera/ui/FlashHaloView;
 
     iput p2, p0, Lcom/android/camera/ui/FlashHaloView$a;->a:I
@@ -56,7 +75,16 @@
 # virtual methods
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -67,6 +95,7 @@
 
     move-result p1
 
+    .line 2
     iget v0, p0, Lcom/android/camera/ui/FlashHaloView$a;->a:I
 
     int-to-float v1, v0
@@ -83,6 +112,7 @@
 
     float-to-int v0, v1
 
+    .line 3
     iget v1, p0, Lcom/android/camera/ui/FlashHaloView$a;->c:I
 
     int-to-float v2, v1
@@ -99,21 +129,24 @@
 
     float-to-int v1, v2
 
+    .line 4
     iget-object v2, p0, Lcom/android/camera/ui/FlashHaloView$a;->e:Landroid/widget/FrameLayout$LayoutParams;
 
     const/4 v3, 0x0
 
-    invoke-virtual {v2, v3, v0, v3, v1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
+    invoke-virtual {v2, v3, v0, v3, v1}, Landroid/widget/FrameLayout$LayoutParams;->setMargins(IIII)V
 
+    .line 5
     iget-object v2, p0, Lcom/android/camera/ui/FlashHaloView$a;->f:Lcom/android/camera/ui/FlashHaloView;
 
     iget-object v3, p0, Lcom/android/camera/ui/FlashHaloView$a;->e:Landroid/widget/FrameLayout$LayoutParams;
 
-    invoke-virtual {v2, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v2, v3}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
+    .line 6
     iget-object p0, p0, Lcom/android/camera/ui/FlashHaloView$a;->f:Lcom/android/camera/ui/FlashHaloView;
 
-    invoke-static {p0, v0, v1, p1}, Lcom/android/camera/ui/FlashHaloView;->A(Lcom/android/camera/ui/FlashHaloView;IIF)V
+    invoke-static {p0, v0, v1, p1}, Lcom/android/camera/ui/FlashHaloView;->z(Lcom/android/camera/ui/FlashHaloView;IIF)V
 
     return-void
 .end method

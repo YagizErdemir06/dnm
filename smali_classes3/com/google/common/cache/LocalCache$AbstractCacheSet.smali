@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/cache/LocalCache$AbstractCacheSet;
+.class public abstract Lcom/google/common/cache/LocalCache$AbstractCacheSet;
 .super Ljava/util/AbstractSet;
 .source "SourceFile"
 
@@ -25,13 +25,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/cache/LocalCache;
+.field public final synthetic this$0:Lcom/google/common/cache/LocalCache;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/cache/LocalCache;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/cache/LocalCache$AbstractCacheSet;->this$0:Lcom/google/common/cache/LocalCache;
 
     invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
@@ -44,6 +45,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/cache/LocalCache$AbstractCacheSet;->this$0:Lcom/google/common/cache/LocalCache;
 
     invoke-virtual {p0}, Lcom/google/common/cache/LocalCache;->clear()V
@@ -54,6 +56,7 @@
 .method public isEmpty()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/cache/LocalCache$AbstractCacheSet;->this$0:Lcom/google/common/cache/LocalCache;
 
     invoke-virtual {p0}, Lcom/google/common/cache/LocalCache;->isEmpty()Z
@@ -66,6 +69,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/cache/LocalCache$AbstractCacheSet;->this$0:Lcom/google/common/cache/LocalCache;
 
     invoke-virtual {p0}, Lcom/google/common/cache/LocalCache;->size()I

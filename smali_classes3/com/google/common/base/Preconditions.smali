@@ -15,6 +15,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,6 +36,7 @@
 
     aput-object p2, p1, v1
 
+    .line 1
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -58,6 +60,7 @@
 
     aput-object p2, v3, v1
 
+    .line 2
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -78,22 +81,23 @@
 
     return-object p0
 
+    .line 3
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    const/16 p2, 0x1a
 
-    const/16 v0, 0x1a
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v0, p2}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    const-string v0, "negative size: "
+    const-string p2, "negative size: "
 
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
@@ -117,6 +121,7 @@
 
     aput-object p2, p1, v1
 
+    .line 1
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -140,6 +145,7 @@
 
     aput-object p2, v3, v1
 
+    .line 2
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -160,22 +166,23 @@
 
     return-object p0
 
+    .line 3
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    const/16 p2, 0x1a
 
-    const/16 v0, 0x1a
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v0, p2}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    const-string v0, "negative size: "
+    const-string p2, "negative size: "
 
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
@@ -207,6 +214,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -233,6 +241,7 @@
     :goto_0
     const-string p0, "end index"
 
+    .line 2
     invoke-static {p1, p2, p0}, Lcom/google/common/base/Preconditions;->badPositionIndex(IILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -243,6 +252,7 @@
     :goto_1
     const-string p1, "start index"
 
+    .line 3
     invoke-static {p0, p2, p1}, Lcom/google/common/base/Preconditions;->badPositionIndex(IILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -1243,7 +1253,7 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object p0
 .end method
@@ -2623,6 +2633,7 @@
 
     return-void
 
+    .line 1
     :cond_0
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 

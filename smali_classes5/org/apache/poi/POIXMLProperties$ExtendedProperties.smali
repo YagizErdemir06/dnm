@@ -17,7 +17,7 @@
 # instance fields
 .field private props:Lorg/openxmlformats/schemas/officeDocument/x2006/extendedProperties/PropertiesDocument;
 
-.field final synthetic this$0:Lorg/apache/poi/POIXMLProperties;
+.field public final synthetic this$0:Lorg/apache/poi/POIXMLProperties;
 
 
 # direct methods
@@ -47,6 +47,7 @@
 .method public static synthetic access$300(Lorg/apache/poi/POIXMLProperties$ExtendedProperties;)Lorg/openxmlformats/schemas/officeDocument/x2006/extendedProperties/PropertiesDocument;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLProperties$ExtendedProperties;->props:Lorg/openxmlformats/schemas/officeDocument/x2006/extendedProperties/PropertiesDocument;
 
     return-object p0
@@ -57,6 +58,7 @@
 .method public getUnderlyingProperties()Lorg/openxmlformats/schemas/officeDocument/x2006/extendedProperties/CTProperties;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLProperties$ExtendedProperties;->props:Lorg/openxmlformats/schemas/officeDocument/x2006/extendedProperties/PropertiesDocument;
 
     invoke-interface {p0}, Lorg/openxmlformats/schemas/officeDocument/x2006/extendedProperties/PropertiesDocument;->getProperties()Lorg/openxmlformats/schemas/officeDocument/x2006/extendedProperties/CTProperties;

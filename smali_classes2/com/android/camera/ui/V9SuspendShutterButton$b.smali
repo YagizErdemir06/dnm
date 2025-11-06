@@ -15,11 +15,29 @@
 
 
 # virtual methods
-.method public abstract a(I)V
+.method public abstract a(Ld/d/a/u6/i4/c;I)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "animationConfig",
+            "time"
+        }
+    .end annotation
 .end method
 
-.method public abstract b()Z
+.method public abstract b(I)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "time"
+        }
+    .end annotation
 .end method
 
-.method public abstract c(Lz5/c;I)V
+.method public abstract c()Z
 .end method

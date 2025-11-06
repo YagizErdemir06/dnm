@@ -11,10 +11,13 @@
 .method public constructor <init>(Ljava/io/File;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaResourceManager;->_directory:Ljava/io/File;
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager;->init()V
 
     return-void
@@ -23,29 +26,35 @@
 .method private static collectXSDFiles([Ljava/io/File;)Ljava/util/List;
     .locals 4
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v1, 0x0
 
+    .line 2
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_1
 
+    .line 3
     aget-object v2, p0, v1
 
+    .line 4
     invoke-virtual {v2}, Ljava/io/File;->isDirectory()Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
+    .line 5
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
+    .line 6
     :cond_0
     new-instance v3, Lorg/apache/xmlbeans/impl/tool/SchemaResourceManager$1;
 
@@ -79,6 +88,7 @@
 
     return p0
 
+    .line 1
     :cond_0
     invoke-virtual {p0, p1}, Ljava/io/File;->equals(Ljava/lang/Object;)Z
 
@@ -90,6 +100,7 @@
 
     return p0
 
+    .line 2
     :cond_1
     invoke-virtual {p0}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
@@ -107,6 +118,7 @@
 
     const-string v0, "http:"
 
+    .line 1
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -162,18 +174,22 @@
 
     move-object/from16 v0, p0
 
+    .line 1
     array-length v1, v0
 
     const/4 v2, 0x0
 
     if-nez v1, :cond_0
 
+    .line 2
     invoke-static {}, Lorg/apache/xmlbeans/impl/tool/SchemaResourceManager;->printUsage()V
 
+    .line 3
     invoke-static {v2}, Ljava/lang/System;->exit(I)V
 
     return-void
 
+    .line 4
     :cond_0
     new-instance v1, Ljava/util/HashSet;
 
@@ -181,48 +197,60 @@
 
     const-string v3, "h"
 
+    .line 5
     invoke-interface {v1, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v4, "help"
 
+    .line 6
     invoke-interface {v1, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v5, "usage"
 
+    .line 7
     invoke-interface {v1, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v6, "license"
 
+    .line 8
     invoke-interface {v1, v6}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v7, "version"
 
+    .line 9
     invoke-interface {v1, v7}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v8, "sync"
 
+    .line 10
     invoke-interface {v1, v8}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v9, "refresh"
 
+    .line 11
     invoke-interface {v1, v9}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v10, "recurse"
 
+    .line 12
     invoke-interface {v1, v10}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 13
     new-instance v11, Ljava/util/HashSet;
 
     invoke-direct {v11}, Ljava/util/HashSet;-><init>()V
 
     const-string v12, "dir"
 
+    .line 14
     invoke-interface {v11, v12}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 15
     new-instance v13, Lorg/apache/xmlbeans/impl/tool/CommandLine;
 
     invoke-direct {v13, v0, v1, v11}, Lorg/apache/xmlbeans/impl/tool/CommandLine;-><init>([Ljava/lang/String;Ljava/util/Collection;Ljava/util/Collection;)V
 
+    .line 16
     invoke-virtual {v13, v3}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -243,22 +271,26 @@
 
     goto/16 :goto_9
 
+    .line 17
     :cond_1
     invoke-virtual {v13}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getBadOpts()[Ljava/lang/String;
 
     move-result-object v0
 
+    .line 18
     array-length v1, v0
 
     if-lez v1, :cond_3
 
     move v1, v2
 
+    .line 19
     :goto_0
     array-length v3, v0
 
     if-ge v1, v3, :cond_2
 
+    .line 20
     sget-object v3, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v4, Ljava/lang/StringBuffer;
@@ -283,13 +315,16 @@
 
     goto :goto_0
 
+    .line 21
     :cond_2
     invoke-static {}, Lorg/apache/xmlbeans/impl/tool/SchemaResourceManager;->printUsage()V
 
+    .line 22
     invoke-static {v2}, Ljava/lang/System;->exit(I)V
 
     return-void
 
+    .line 23
     :cond_3
     invoke-virtual {v13, v6}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
@@ -297,12 +332,15 @@
 
     if-eqz v0, :cond_4
 
+    .line 24
     invoke-static {}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->printLicense()V
 
+    .line 25
     invoke-static {v2}, Ljava/lang/System;->exit(I)V
 
     return-void
 
+    .line 26
     :cond_4
     invoke-virtual {v13, v7}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
@@ -310,17 +348,21 @@
 
     if-eqz v0, :cond_5
 
+    .line 27
     invoke-static {}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->printVersion()V
 
+    .line 28
     invoke-static {v2}, Ljava/lang/System;->exit(I)V
 
     return-void
 
+    .line 29
     :cond_5
     invoke-virtual {v13}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->args()[Ljava/lang/String;
 
     move-result-object v0
 
+    .line 30
     invoke-virtual {v13, v8}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -336,6 +378,7 @@
     :cond_6
     move v1, v2
 
+    .line 31
     :goto_1
     invoke-virtual {v13, v9}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
@@ -350,6 +393,7 @@
     :cond_7
     move v4, v2
 
+    .line 32
     :goto_2
     invoke-virtual {v13, v10}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
@@ -364,6 +408,7 @@
     :cond_8
     move v5, v2
 
+    .line 33
     :goto_3
     invoke-virtual {v13, v12}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
@@ -373,11 +418,13 @@
 
     const-string v6, "."
 
+    .line 34
     :cond_9
     new-instance v7, Ljava/io/File;
 
     invoke-direct {v7, v6}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
+    .line 35
     :try_start_0
     new-instance v6, Lorg/apache/xmlbeans/impl/tool/SchemaResourceManager;
 
@@ -385,21 +432,25 @@
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 36
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
+    .line 37
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
     move v9, v2
 
+    .line 38
     :goto_4
     array-length v10, v0
 
     if-ge v9, v10, :cond_b
 
+    .line 39
     aget-object v10, v0, v9
 
     invoke-static {v10}, Lorg/apache/xmlbeans/impl/tool/SchemaResourceManager;->looksLikeURL(Ljava/lang/String;)Z
@@ -408,12 +459,14 @@
 
     if-eqz v10, :cond_a
 
+    .line 40
     aget-object v10, v0, v9
 
     invoke-interface {v3, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_5
 
+    .line 41
     :cond_a
     new-instance v10, Ljava/io/File;
 
@@ -428,6 +481,7 @@
 
     goto :goto_4
 
+    .line 42
     :cond_b
     invoke-interface {v8}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -441,18 +495,21 @@
 
     if-eqz v9, :cond_d
 
+    .line 43
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v9
 
     check-cast v9, Ljava/io/File;
 
+    .line 44
     invoke-static {v9, v7}, Lorg/apache/xmlbeans/impl/tool/SchemaResourceManager;->isInDirectory(Ljava/io/File;Ljava/io/File;)Z
 
     move-result v10
 
     if-nez v10, :cond_c
 
+    .line 45
     sget-object v10, Ljava/lang/System;->err:Ljava/io/PrintStream;
 
     new-instance v11, Ljava/lang/StringBuffer;
@@ -471,6 +528,7 @@
 
     invoke-virtual {v10, v9}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 46
     invoke-interface {v0}, Ljava/util/Iterator;->remove()V
 
     goto :goto_6
@@ -478,6 +536,7 @@
     :cond_d
     new-array v0, v2, [Ljava/io/File;
 
+    .line 47
     invoke-interface {v8, v0}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
@@ -490,6 +549,7 @@
 
     new-array v8, v2, [Ljava/lang/String;
 
+    .line 48
     invoke-interface {v3, v8}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v3
@@ -500,16 +560,19 @@
 
     new-array v3, v2, [Ljava/io/File;
 
+    .line 49
     invoke-interface {v0, v3}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [Ljava/io/File;
 
+    .line 50
     invoke-static {v0, v7}, Lorg/apache/xmlbeans/impl/tool/SchemaResourceManager;->relativeFilenames([Ljava/io/File;Ljava/io/File;)[Ljava/lang/String;
 
     move-result-object v0
 
+    .line 51
     array-length v3, v15
 
     array-length v7, v0
@@ -528,16 +591,20 @@
 
     move/from16 v19, v5
 
+    .line 52
     invoke-virtual/range {v14 .. v19}, Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager;->process([Ljava/lang/String;[Ljava/lang/String;ZZZ)V
 
     goto :goto_7
 
+    .line 53
     :cond_e
     invoke-virtual {v6, v1, v4, v5}, Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager;->processAll(ZZZ)V
 
+    .line 54
     :goto_7
     invoke-virtual {v6}, Lorg/apache/xmlbeans/impl/tool/BaseSchemaResourceManager;->writeCache()V
 
+    .line 55
     invoke-static {v2}, Ljava/lang/System;->exit(I)V
 
     return-void
@@ -545,15 +612,17 @@
     :catch_0
     move-exception v0
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 56
+    invoke-virtual {v0}, Ljava/lang/IllegalStateException;->getMessage()Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_f
 
+    .line 57
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/IllegalStateException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
@@ -561,18 +630,22 @@
 
     goto :goto_8
 
+    .line 58
     :cond_f
-    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/IllegalStateException;->printStackTrace()V
 
+    .line 59
     :goto_8
     invoke-static {v3}, Ljava/lang/System;->exit(I)V
 
     return-void
 
+    .line 60
     :cond_10
     :goto_9
     invoke-static {}, Lorg/apache/xmlbeans/impl/tool/SchemaResourceManager;->printUsage()V
 
+    .line 61
     invoke-static {v2}, Ljava/lang/System;->exit(I)V
 
     return-void
@@ -581,60 +654,70 @@
 .method public static printUsage()V
     .locals 2
 
+    .line 1
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "Maintains \"xsdownload.xml\", an index of locally downloaded .xsd files"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 2
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "usage: sdownload [-dir directory] [-refresh] [-recurse] [-sync] [url/file...]"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 3
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, ""
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 4
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "URLs that are specified are downloaded if they aren\'t already cached."
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 5
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "In addition:"
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 6
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "  -dir specifies the directory for the xsdownload.xml file (default .)."
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 7
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "  -sync synchronizes the index to any local .xsd files in the tree."
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 8
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "  -recurse recursively downloads imported and included .xsd files."
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 9
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "  -refresh redownloads all indexed .xsd files."
 
     invoke-virtual {v0, v1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 10
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "If no files or URLs are specified, all indexed files are relevant."
@@ -649,6 +732,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 1
     invoke-virtual {p0, p1}, Ljava/io/File;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -657,6 +741,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     new-instance v0, Ljava/lang/StringBuffer;
 
@@ -698,17 +783,20 @@
 .method private static relativeFilenames([Ljava/io/File;Ljava/io/File;)[Ljava/lang/String;
     .locals 3
 
+    .line 1
     array-length v0, p0
 
     new-array v0, v0, [Ljava/lang/String;
 
     const/4 v1, 0x0
 
+    .line 2
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_0
 
+    .line 3
     aget-object v2, p0, v1
 
     invoke-static {v2, p1}, Lorg/apache/xmlbeans/impl/tool/SchemaResourceManager;->relativeFilename(Ljava/io/File;Ljava/io/File;)Ljava/lang/String;
@@ -730,6 +818,7 @@
 .method public deleteFile(Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/io/File;
 
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaResourceManager;->_directory:Ljava/io/File;
@@ -744,6 +833,7 @@
 .method public fileExists(Ljava/lang/String;)Z
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/io/File;
 
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaResourceManager;->_directory:Ljava/io/File;
@@ -764,6 +854,7 @@
 
     new-array v0, v0, [Ljava/io/File;
 
+    .line 1
     iget-object v1, p0, Lorg/apache/xmlbeans/impl/tool/SchemaResourceManager;->_directory:Ljava/io/File;
 
     const/4 v2, 0x0
@@ -782,6 +873,7 @@
 
     check-cast v0, [Ljava/io/File;
 
+    .line 2
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaResourceManager;->_directory:Ljava/io/File;
 
     invoke-static {v0, p0}, Lorg/apache/xmlbeans/impl/tool/SchemaResourceManager;->relativeFilenames([Ljava/io/File;Ljava/io/File;)[Ljava/lang/String;
@@ -799,6 +891,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/io/FileInputStream;
 
     new-instance v1, Ljava/io/File;
@@ -815,6 +908,7 @@
 .method public warning(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     sget-object p0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     invoke-virtual {p0, p1}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
@@ -830,29 +924,35 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/io/File;
 
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/SchemaResourceManager;->_directory:Ljava/io/File;
 
     invoke-direct {v0, p0, p2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
+    .line 2
     invoke-virtual {v0}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
     move-result-object p0
 
+    .line 3
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result p2
 
     if-nez p2, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Ljava/io/File;->mkdirs()Z
 
+    .line 5
     :cond_0
     new-instance p0, Ljava/io/FileOutputStream;
 
     invoke-direct {p0, v0}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
+    .line 6
     invoke-static {p1, p0}, Lorg/apache/xmlbeans/impl/common/IOUtil;->copyCompletely(Ljava/io/InputStream;Ljava/io/OutputStream;)V
 
     return-void

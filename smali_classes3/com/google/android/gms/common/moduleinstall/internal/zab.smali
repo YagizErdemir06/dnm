@@ -42,6 +42,7 @@
 
     sget-object p0, Lcom/google/android/gms/common/moduleinstall/internal/ApiFeatureRequest;->CREATOR:Landroid/os/Parcelable$Creator;
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/gms/common/Feature;->getName()Ljava/lang/String;
 
     move-result-object p0
@@ -56,6 +57,7 @@
 
     if-nez p0, :cond_0
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/android/gms/common/Feature;->getName()Ljava/lang/String;
 
     move-result-object p0
@@ -70,6 +72,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-virtual {p1}, Lcom/google/android/gms/common/Feature;->getVersion()J
 

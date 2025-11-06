@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/source/dash/offline/DashDownloader$1;
+.class public Lcom/google/android/exoplayer2/source/dash/offline/DashDownloader$1;
 .super Lcom/google/android/exoplayer2/util/RunnableFutureTask;
 .source "SourceFile"
 
@@ -24,17 +24,18 @@
 
 
 # instance fields
-.field final synthetic val$dataSource:Lcom/google/android/exoplayer2/upstream/DataSource;
+.field public final synthetic val$dataSource:Lcom/google/android/exoplayer2/upstream/DataSource;
 
-.field final synthetic val$representation:Lcom/google/android/exoplayer2/source/dash/manifest/Representation;
+.field public final synthetic val$representation:Lcom/google/android/exoplayer2/source/dash/manifest/Representation;
 
-.field final synthetic val$trackType:I
+.field public final synthetic val$trackType:I
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/exoplayer2/source/dash/offline/DashDownloader;Lcom/google/android/exoplayer2/upstream/DataSource;ILcom/google/android/exoplayer2/source/dash/manifest/Representation;)V
     .locals 0
 
+    .line 1
     iput-object p2, p0, Lcom/google/android/exoplayer2/source/dash/offline/DashDownloader$1;->val$dataSource:Lcom/google/android/exoplayer2/upstream/DataSource;
 
     iput p3, p0, Lcom/google/android/exoplayer2/source/dash/offline/DashDownloader$1;->val$trackType:I

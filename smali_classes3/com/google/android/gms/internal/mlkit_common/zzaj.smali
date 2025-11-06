@@ -17,6 +17,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_common/zzaj;->zza()Ljava/lang/Object;
 
     move-result-object p0

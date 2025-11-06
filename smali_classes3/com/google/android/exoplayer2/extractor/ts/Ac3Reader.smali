@@ -106,6 +106,7 @@
 .method private continueRead(Lcom/google/android/exoplayer2/util/ParsableByteArray;[BI)Z
     .locals 2
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
     move-result v0
@@ -118,10 +119,12 @@
 
     move-result v0
 
+    .line 2
     iget v1, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->bytesRead:I
 
     invoke-virtual {p1, p2, v1, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readBytes([BII)V
 
+    .line 3
     iget p1, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->bytesRead:I
 
     add-int/2addr p1, v0
@@ -142,25 +145,28 @@
 .end method
 
 .method private parseHeader()V
-    .locals 4
+    .locals 5
     .annotation runtime Lorg/checkerframework/checker/nullness/qual/RequiresNonNull;
         value = {
             "output"
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->headerScratchBits:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->setPosition(I)V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->headerScratchBits:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/audio/Ac3Util;->parseAc3SyncframeInfo(Lcom/google/android/exoplayer2/util/ParsableBitArray;)Lcom/google/android/exoplayer2/audio/Ac3Util$SyncFrameInfo;
 
     move-result-object v0
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->format:Lcom/google/android/exoplayer2/Format;
 
     if-eqz v1, :cond_0
@@ -181,12 +187,14 @@
 
     iget-object v1, v1, Lcom/google/android/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
+    .line 4
     invoke-static {v2, v1}, Lcom/google/android/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
+    .line 5
     :cond_0
     new-instance v1, Lcom/google/android/exoplayer2/Format$Builder;
 
@@ -194,66 +202,75 @@
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->formatId:Ljava/lang/String;
 
+    .line 6
     invoke-virtual {v1, v2}, Lcom/google/android/exoplayer2/Format$Builder;->setId(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v1
 
     iget-object v2, v0, Lcom/google/android/exoplayer2/audio/Ac3Util$SyncFrameInfo;->mimeType:Ljava/lang/String;
 
+    .line 7
     invoke-virtual {v1, v2}, Lcom/google/android/exoplayer2/Format$Builder;->setSampleMimeType(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v1
 
     iget v2, v0, Lcom/google/android/exoplayer2/audio/Ac3Util$SyncFrameInfo;->channelCount:I
 
+    .line 8
     invoke-virtual {v1, v2}, Lcom/google/android/exoplayer2/Format$Builder;->setChannelCount(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v1
 
     iget v2, v0, Lcom/google/android/exoplayer2/audio/Ac3Util$SyncFrameInfo;->sampleRate:I
 
+    .line 9
     invoke-virtual {v1, v2}, Lcom/google/android/exoplayer2/Format$Builder;->setSampleRate(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->language:Ljava/lang/String;
 
+    .line 10
     invoke-virtual {v1, v2}, Lcom/google/android/exoplayer2/Format$Builder;->setLanguage(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v1
 
+    .line 11
     invoke-virtual {v1}, Lcom/google/android/exoplayer2/Format$Builder;->build()Lcom/google/android/exoplayer2/Format;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->format:Lcom/google/android/exoplayer2/Format;
 
+    .line 12
     iget-object v2, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->output:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     invoke-interface {v2, v1}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->format(Lcom/google/android/exoplayer2/Format;)V
 
+    .line 13
     :cond_1
     iget v1, v0, Lcom/google/android/exoplayer2/audio/Ac3Util$SyncFrameInfo;->frameSize:I
 
     iput v1, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->sampleSize:I
 
+    const-wide/32 v1, 0xf4240
+
+    .line 14
     iget v0, v0, Lcom/google/android/exoplayer2/audio/Ac3Util$SyncFrameInfo;->sampleCount:I
+
+    int-to-long v3, v0
+
+    mul-long/2addr v3, v1
+
+    iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->format:Lcom/google/android/exoplayer2/Format;
+
+    iget v0, v0, Lcom/google/android/exoplayer2/Format;->sampleRate:I
 
     int-to-long v0, v0
 
-    const-wide/32 v2, 0xf4240
+    div-long/2addr v3, v0
 
-    mul-long/2addr v0, v2
-
-    iget-object v2, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->format:Lcom/google/android/exoplayer2/Format;
-
-    iget v2, v2, Lcom/google/android/exoplayer2/Format;->sampleRate:I
-
-    int-to-long v2, v2
-
-    div-long/2addr v0, v2
-
-    iput-wide v0, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->sampleDurationUs:J
+    iput-wide v3, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->sampleDurationUs:J
 
     return-void
 .end method
@@ -261,6 +278,7 @@
 .method private skipToNextSync(Lcom/google/android/exoplayer2/util/ParsableByteArray;)Z
     .locals 5
 
+    .line 1
     :goto_0
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
@@ -270,6 +288,7 @@
 
     if-lez v0, :cond_4
 
+    .line 2
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->lastByteWas0B:Z
 
     const/16 v2, 0xb
@@ -278,6 +297,7 @@
 
     if-nez v0, :cond_1
 
+    .line 3
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v0
@@ -291,6 +311,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
@@ -300,6 +321,7 @@
 
     if-ne v0, v4, :cond_2
 
+    .line 5
     iput-boolean v1, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->lastByteWas0B:Z
 
     return v3
@@ -309,6 +331,7 @@
 
     move v1, v3
 
+    .line 6
     :cond_3
     iput-boolean v1, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->lastByteWas0B:Z
 
@@ -323,10 +346,12 @@
 .method public consume(Lcom/google/android/exoplayer2/util/ParsableByteArray;)V
     .locals 10
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->output:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkStateNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     :cond_0
     :goto_0
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
@@ -335,6 +360,7 @@
 
     if-lez v0, :cond_5
 
+    .line 3
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->state:I
 
     const/4 v1, 0x0
@@ -351,6 +377,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
@@ -366,20 +393,24 @@
 
     move-result v0
 
+    .line 5
     iget-object v2, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->output:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     invoke-interface {v2, p1, v0}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->sampleData(Lcom/google/android/exoplayer2/util/ParsableByteArray;I)V
 
+    .line 6
     iget v2, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->bytesRead:I
 
     add-int/2addr v2, v0
 
     iput v2, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->bytesRead:I
 
+    .line 7
     iget v7, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->sampleSize:I
 
     if-ne v2, v7, :cond_0
 
+    .line 8
     iget-wide v4, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->timeUs:J
 
     const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
@@ -388,6 +419,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 9
     iget-object v3, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->output:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     const/4 v6, 0x1
@@ -398,6 +430,7 @@
 
     invoke-interface/range {v3 .. v9}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->sampleMetadata(JIIILcom/google/android/exoplayer2/extractor/TrackOutput$CryptoData;)V
 
+    .line 10
     iget-wide v2, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->timeUs:J
 
     iget-wide v4, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->sampleDurationUs:J
@@ -406,11 +439,13 @@
 
     iput-wide v2, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->timeUs:J
 
+    .line 11
     :cond_2
     iput v1, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->state:I
 
     goto :goto_0
 
+    .line 12
     :cond_3
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->headerScratchBytes:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
@@ -426,22 +461,27 @@
 
     if-eqz v0, :cond_0
 
+    .line 13
     invoke-direct {p0}, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->parseHeader()V
 
+    .line 14
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->headerScratchBytes:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
+    .line 15
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->output:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->headerScratchBytes:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-interface {v0, v1, v3}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->sampleData(Lcom/google/android/exoplayer2/util/ParsableByteArray;I)V
 
+    .line 16
     iput v2, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->state:I
 
     goto :goto_0
 
+    .line 17
     :cond_4
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->skipToNextSync(Lcom/google/android/exoplayer2/util/ParsableByteArray;)Z
 
@@ -449,8 +489,10 @@
 
     if-eqz v0, :cond_0
 
+    .line 18
     iput v3, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->state:I
 
+    .line 19
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->headerScratchBytes:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
@@ -461,6 +503,7 @@
 
     aput-byte v4, v0, v1
 
+    .line 20
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->headerScratchBytes:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
@@ -471,6 +514,7 @@
 
     aput-byte v1, v0, v3
 
+    .line 21
     iput v2, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->bytesRead:I
 
     goto/16 :goto_0
@@ -482,14 +526,17 @@
 .method public createTracks(Lcom/google/android/exoplayer2/extractor/ExtractorOutput;Lcom/google/android/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;)V
     .locals 1
 
+    .line 1
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;->generateNewId()V
 
+    .line 2
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;->getFormatId()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->formatId:Ljava/lang/String;
 
+    .line 3
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;->getTrackId()I
 
     move-result p2
@@ -520,6 +567,7 @@
 
     if-eqz p3, :cond_0
 
+    .line 1
     iput-wide p1, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->timeUs:J
 
     :cond_0
@@ -531,14 +579,18 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->state:I
 
+    .line 2
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->bytesRead:I
 
+    .line 3
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->lastByteWas0B:Z
 
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 4
     iput-wide v0, p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Reader;->timeUs:J
 
     return-void

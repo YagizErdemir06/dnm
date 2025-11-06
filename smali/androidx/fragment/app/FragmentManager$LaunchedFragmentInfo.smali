@@ -1,4 +1,4 @@
-.class Landroidx/fragment/app/FragmentManager$LaunchedFragmentInfo;
+.class public Landroidx/fragment/app/FragmentManager$LaunchedFragmentInfo;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -36,15 +36,16 @@
 
 
 # instance fields
-.field mRequestCode:I
+.field public mRequestCode:I
 
-.field mWho:Ljava/lang/String;
+.field public mWho:Ljava/lang/String;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/fragment/app/FragmentManager$LaunchedFragmentInfo$1;
 
     invoke-direct {v0}, Landroidx/fragment/app/FragmentManager$LaunchedFragmentInfo$1;-><init>()V
@@ -113,10 +114,12 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
+    .line 1
     iget-object p2, p0, Landroidx/fragment/app/FragmentManager$LaunchedFragmentInfo;->mWho:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 2
     iget p0, p0, Landroidx/fragment/app/FragmentManager$LaunchedFragmentInfo;->mRequestCode:I
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V

@@ -84,6 +84,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/reflect/ImmutableTypeToInstanceMap$Builder;
 
     const/4 v1, 0x0
@@ -105,6 +106,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/reflect/ImmutableTypeToInstanceMap;
 
     invoke-static {}, Lcom/google/common/collect/ImmutableMap;->of()Lcom/google/common/collect/ImmutableMap;
@@ -126,6 +128,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/ImmutableTypeToInstanceMap;->delegate:Lcom/google/common/collect/ImmutableMap;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -278,6 +281,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V

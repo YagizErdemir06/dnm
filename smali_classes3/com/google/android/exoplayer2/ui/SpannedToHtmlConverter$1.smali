@@ -1,4 +1,4 @@
-.class synthetic Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$1;
+.class public synthetic Lcom/google/android/exoplayer2/ui/SpannedToHtmlConverter$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

@@ -34,6 +34,7 @@
 .method public static constructor <clinit>()V
     .locals 5
 
+    .line 1
     new-instance v0, Lcom/xiaomi/milab/videosdk/MediaTranscode$DecoderType;
 
     const-string v1, "SOFTWARE_DECODER"
@@ -44,6 +45,7 @@
 
     sput-object v0, Lcom/xiaomi/milab/videosdk/MediaTranscode$DecoderType;->SOFTWARE_DECODER:Lcom/xiaomi/milab/videosdk/MediaTranscode$DecoderType;
 
+    .line 2
     new-instance v1, Lcom/xiaomi/milab/videosdk/MediaTranscode$DecoderType;
 
     const-string v3, "HARDWARE_DECODER"
@@ -62,6 +64,7 @@
 
     aput-object v1, v3, v4
 
+    .line 3
     sput-object v3, Lcom/xiaomi/milab/videosdk/MediaTranscode$DecoderType;->$VALUES:[Lcom/xiaomi/milab/videosdk/MediaTranscode$DecoderType;
 
     return-void
@@ -80,12 +83,7 @@
         }
     .end annotation
 
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
-
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -102,6 +100,7 @@
         }
     .end annotation
 
+    .line 1
     const-class v0, Lcom/xiaomi/milab/videosdk/MediaTranscode$DecoderType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -116,6 +115,7 @@
 .method public static values()[Lcom/xiaomi/milab/videosdk/MediaTranscode$DecoderType;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/milab/videosdk/MediaTranscode$DecoderType;->$VALUES:[Lcom/xiaomi/milab/videosdk/MediaTranscode$DecoderType;
 
     invoke-virtual {v0}, [Lcom/xiaomi/milab/videosdk/MediaTranscode$DecoderType;->clone()Ljava/lang/Object;

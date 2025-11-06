@@ -205,7 +205,6 @@
     <string name="accessibility_video_capture_button">വീഡിയോകൾ ഷൂട്ടുചെയ്യുമ്പോൾ ഫോട്ടോകൾ എടുക്കുന്നതിനുള്ള ബട്ടൺ</string>
     <string name="accessibility_video_pause_button">വീഡിയോ റെക്കോർഡുചെയ്യൽ താൽക്കാലികമായി നിർത്തി</string>
     <string name="accessibility_video_resume_button">വീഡിയോ റെക്കോർഡുചെയ്യൽ പുനരാരംഭിച്ചു</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">വാട്ടർമാർക്ക് ഓഫാണ്</string>
     <string name="accessibility_watermark_image_on">വാട്ടർമാർക്ക് ഓണാണ്</string>
     <string name="accessibility_watermark_text">വാട്ടർമാർക്ക് ക്രമീകരണ പാനൽ തുറക്കുക</string>
@@ -213,16 +212,6 @@
     <string name="accessibility_zoom_button">സൂം മോഡ്</string>
     <string name="actionbar_button_up_description">മടങ്ങുക</string>
     <string name="afternoon">ഉച്ചകഴിഞ്ഞ്</string>
-    <string name="agent_flip_tbc">അകത്തെ സ്ക്രീനിൽ തുടരുക</string>
-    <string name="agent_function_max">പരമാവധി മൂല്യത്തിലേക്ക് ക്രമീകരിച്ചു</string>
-    <string name="agent_function_min">കുറഞ്ഞ മൂല്യത്തിലേക്ക് ക്രമീകരിച്ചു</string>
-    <string name="agent_workspace_mode_not_supported">ഈ ഫീച്ചർ പിന്തുണയ്ക്കുന്നില്ല</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"ഈ ഫീച്ചർ പിന്തുണയ്ക്കുന്നില്ല.
-പകരം ഫോട്ടോ മോഡ് തുറന്നു."</string>
-    <string name="agent_workspace_on">\"%1$s\" ഫോട്ടോ എടുക്കുന്നതിന് പാരാമീറ്ററുകൾ ക്രമീകരിച്ചു</string>
-    <string name="agent_workspace_tbc">പഠിക്കുന്ന രംഗം</string>
-    <string name="agent_workspace_tbc_use_default">"പഠിക്കുന്ന രംഗം…
-ക്യാമറ പാരാമീറ്ററുകൾ ഡിഫോൾട്ടായി ക്രമീകരിച്ചിരിക്കുന്നു"</string>
     <string name="ai_agra_fort">ആഗ്ര ഫോർട്ട്</string>
     <string name="ai_amber_fort">അംബർ പാലസ്</string>
     <string name="ai_baby">കുഞ്ഞ്</string>
@@ -781,7 +770,6 @@
     <string name="download_hint_cn">"Looks like your device isn't connected to WLAN. Use %1$s MB of mobile data to download items now?"</string>
     <string name="download_hint_wifi">നിങ്ങളുടെ ഉപകരണം വൈ-ഫൈയിലേക്ക് കണക്റ്റുചെയ്തിട്ടില്ലെന്ന് തോന്നുന്നു. ഇപ്പോൾ ഇനങ്ങൾ ഡൗൺലോഡുചെയ്യുന്നതിന് %1$s MB മൊബൈൽ ഡാറ്റ ഉപയോഗിക്കണോ?</string>
     <string name="download_in_progress">ഡൗൺലോഡുചെയ്യുന്നു…</string>
-    <string name="download_network_error">ഡൗൺലോഡുചെയ്യാനായില്ല. നെറ്റ്‌വര്‍ക്ക് ക്രമീകരണം പരിശോധിക്കുക.</string>
     <string name="download_title">ഡാറ്റ ഉപയോഗ മുന്നറിയിപ്പ്</string>
     <string name="download_waiting">അവശേഷിക്കുന്നു…</string>
     <string name="dual_camera_lens_covered_toast">ലെൻസ് മൂടിയിരിക്കുന്നു.</string>
@@ -1260,7 +1248,6 @@ A4 പേപ്പറിൽ വയർലസ്സായി കോപ്പി �
     <string name="miuix_appcompat_delete_description">മായ്ക്കുക</string>
     <string name="miuix_appcompat_deselect_all">തിരഞ്ഞെടുത്തതെല്ലാം മാറ്റുക</string>
     <string name="miuix_appcompat_deselect_all_description">തിരഞ്ഞെടുത്തതെല്ലാം മാറ്റുക</string>
-    <string name="miuix_appcompat_edit">എഡിറ്റുചെയ്യുക</string>
     <string name="miuix_appcompat_search_action_mode_cancel">റദ്ദാക്കുക</string>
     <string name="miuix_appcompat_search_input_description">തിരയുക </string>
     <string name="miuix_appcompat_select_all">എല്ലാം തിരഞ്ഞെടുക്കുക</string>
@@ -2199,7 +2186,6 @@ A4 പേപ്പറിൽ വയർലസ്സായി കോപ്പി �
     <string name="time_picker_label_hour">മ</string>
     <string name="time_picker_label_minute">മി</string>
     <string name="time_stamp_date_format">dd/MM/yyyy</string>
-    <string name="time_stamp_date_format_minute">dd/MM/yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">ഷൂട്ടിംഗിന് മുമ്പോ ഷൂട്ടിംഗ് സമയത്തോ എപ്പോൾ വേണമെങ്കിലും നിങ്ങൾക്ക് പശ്ചാത്തലം ഫ്രീസുചെയ്യാനും അൺഫ്രീസുചെയ്യാനും കഴിയും.</string>
     <string name="timefreeze_guide_tip3">ഫ്രെയിമിന്റെ മധ്യഭാഗത്ത് തുടരാൻ നിങ്ങളുടെ സബ്ജക്റ്റിനോട് ആവശ്യപ്പെടുക.</string>
     <string name="timefreeze_guide_tip4">ട്രാഫിക് നിർത്തുക.</string>
@@ -2219,8 +2205,8 @@ A4 പേപ്പറിൽ വയർലസ്സായി കോപ്പി �
     <string name="tip_ai_off">AI ക്യാമറ: ഓഫ്</string>
     <string name="tip_beauty_mode_title1">പോർട്രെയ്റ്റ് ശൈലി: പുതുമയുള്ളത്</string>
     <string name="tip_beauty_mode_title2">പോർട്രെയ്റ്റ് ശൈലി: ഫിലിം</string>
-    <string name="tip_cvtype_title1">ശൈലി: Leica ഓതന്റിക്</string>
-    <string name="tip_cvtype_title2">ശൈലി: Leica Vibrant</string>
+    <string name="tip_cvtype_title1">ശൈലി: ലെയ്ക ഓതന്റിക്</string>
+    <string name="tip_cvtype_title2">ശൈലി: ലെയ്ക വൈബ്രന്റ്</string>
     <string name="tip_eis_off">സ്ഥിരമായ വീഡിയോ: ഓഫ്</string>
     <string name="tip_eis_pro_off">സ്ഥിരമായ വീഡിയോ പ്രോ: ഓഫ്</string>
     <string name="tip_flash_auto">ഫ്ലാഷ്:സ്വയം</string>
@@ -2237,7 +2223,7 @@ A4 പേപ്പറിൽ വയർലസ്സായി കോപ്പി �
     <string name="tip_flash_screen_light_on">സോഫ്റ്റ് ഫ്ലാഷ്: ഓൺ</string>
     <string name="tip_flash_soft_light_off">സോഫ്റ്റ് ഫ്ലാഷ്: ഓഫ്</string>
     <string name="tip_flash_soft_light_torch">സോഫ്റ്റ് ഫ്ലാഷ്: ഫ്ലാഷ്‌ലൈറ്റ് മോഡ്</string>
-    <string name="tip_flash_torch">ഫ്ലാഷ്: ഫ്ലാഷ്‌ലൈറ്റ്</string>
+    <string name="tip_flash_torch">ഫ്ലാഷ്: എല്ലായ്‌പ്പോഴും ഓൺ</string>
     <string name="tip_friend_mode_connect_when_24GHz">പ്രിവ്യൂ നിലവാരം ഉയർത്താൻ ഒരു %s GHz കണക്ഷൻ ഉപയോഗിക്കുക</string>
     <string name="tip_friend_mode_display_device_name_connect">പങ്കിട്ട പ്രിവ്യൂ</string>
     <string name="tip_friend_mode_display_device_name_disconnect">ഇതര ഉപകരണം ഈ സെഷൻ ഉപേക്ഷിച്ചു</string>

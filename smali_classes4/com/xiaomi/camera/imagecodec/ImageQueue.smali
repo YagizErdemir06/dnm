@@ -59,32 +59,38 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->mImageLock:Ljava/lang/Object;
 
+    .line 3
     new-instance v0, Landroid/util/LongSparseArray;
 
     invoke-direct {v0}, Landroid/util/LongSparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->mImageLongSparseArray:Landroid/util/LongSparseArray;
 
+    .line 4
     new-instance v0, Lcom/xiaomi/camera/imagecodec/ImageQueue$1;
 
     invoke-direct {v0, p0}, Lcom/xiaomi/camera/imagecodec/ImageQueue$1;-><init>(Lcom/xiaomi/camera/imagecodec/ImageQueue;)V
 
     iput-object v0, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->mImageAvailableListener:Landroid/media/ImageReader$OnImageAvailableListener;
 
+    .line 5
     sget-object v1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     const/4 v2, 0x3
 
     new-array v2, v2, [Ljava/lang/Object;
 
+    .line 6
     invoke-virtual {p1}, Lcom/xiaomi/camera/imagecodec/ImagePool$ImageFormat;->getWidth()I
 
     move-result v3
@@ -123,14 +129,17 @@
 
     const-string v3, "BQ_%dx%d_%d"
 
+    .line 7
     invoke-static {v1, v3, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->TAG:Ljava/lang/String;
 
+    .line 8
     iput p4, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->mMaxAcquireImageCount:I
 
+    .line 9
     invoke-virtual {p1}, Lcom/xiaomi/camera/imagecodec/ImagePool$ImageFormat;->getWidth()I
 
     move-result v1
@@ -139,24 +148,29 @@
 
     move-result v2
 
+    .line 10
     invoke-virtual {p1}, Lcom/xiaomi/camera/imagecodec/ImagePool$ImageFormat;->getFormat()I
 
     move-result p1
 
+    .line 11
     invoke-static {v1, v2, p1, p4}, Landroid/media/ImageReader;->newInstance(IIII)Landroid/media/ImageReader;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->mImageReader:Landroid/media/ImageReader;
 
+    .line 12
     sget-object p4, Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;->IMAGEPOOL:Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;
 
     invoke-static {p1, p4, v4}, Lcom/xiaomi/camera/imagecodec/ImageReaderHelper;->setImageReaderNameDepends(Landroid/media/ImageReader;Lcom/xiaomi/camera/imagecodec/ImageReaderHelper$ImageReaderType;Z)V
 
+    .line 13
     iget-object p1, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->mImageReader:Landroid/media/ImageReader;
 
     invoke-virtual {p1, v0, p2}, Landroid/media/ImageReader;->setOnImageAvailableListener(Landroid/media/ImageReader$OnImageAvailableListener;Landroid/os/Handler;)V
 
+    .line 14
     iget-object p1, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->mImageReader:Landroid/media/ImageReader;
 
     invoke-virtual {p1}, Landroid/media/ImageReader;->getSurface()Landroid/view/Surface;
@@ -171,6 +185,7 @@
 
     const/4 p0, 0x0
 
+    .line 15
     invoke-virtual {p1, p0, p3}, Landroid/media/ImageWriter;->setOnImageReleasedListener(Landroid/media/ImageWriter$OnImageReleasedListener;Landroid/os/Handler;)V
 
     return-void
@@ -179,6 +194,7 @@
 .method public static synthetic access$000(Lcom/xiaomi/camera/imagecodec/ImageQueue;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->mImageLock:Ljava/lang/Object;
 
     return-object p0
@@ -187,6 +203,7 @@
 .method public static synthetic access$100(Lcom/xiaomi/camera/imagecodec/ImageQueue;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->TAG:Ljava/lang/String;
 
     return-object p0
@@ -195,6 +212,7 @@
 .method public static synthetic access$200(Lcom/xiaomi/camera/imagecodec/ImageQueue;)Landroid/util/LongSparseArray;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->mImageLongSparseArray:Landroid/util/LongSparseArray;
 
     return-object p0
@@ -205,12 +223,14 @@
 .method public close()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->TAG:Ljava/lang/String;
 
     const-string v1, "close: E"
 
     invoke-static {v0, v1}, Lcom/xiaomi/engine/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->mImageLock:Ljava/lang/Object;
 
@@ -220,6 +240,7 @@
 
     const/4 v1, 0x0
 
+    .line 3
     :goto_0
     :try_start_1
     iget-object v2, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->mImageLongSparseArray:Landroid/util/LongSparseArray;
@@ -230,6 +251,7 @@
 
     if-ge v1, v2, :cond_0
 
+    .line 4
     iget-object v2, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->mImageLongSparseArray:Landroid/util/LongSparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/LongSparseArray;->valueAt(I)Ljava/lang/Object;
@@ -244,16 +266,19 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 6
     :try_start_2
     iget-object v0, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->mImageReader:Landroid/media/ImageReader;
 
     invoke-virtual {v0}, Landroid/media/ImageReader;->close()V
 
+    .line 7
     iget-object v0, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->mImageWriter:Landroid/media/ImageWriter;
 
     invoke-virtual {v0}, Landroid/media/ImageWriter;->close()V
@@ -265,6 +290,7 @@
     :catchall_0
     move-exception v1
 
+    .line 8
     :try_start_3
     monitor-exit v0
     :try_end_3
@@ -278,12 +304,14 @@
     :catch_0
     move-exception v0
 
+    .line 9
     iget-object v1, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->TAG:Ljava/lang/String;
 
     const-string v2, "close ImageQueue error"
 
     invoke-static {v1, v2, v0}, Lcom/xiaomi/engine/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 10
     :goto_1
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->TAG:Ljava/lang/String;
 
@@ -297,10 +325,12 @@
 .method public dequeueImage()Landroid/media/Image;
     .locals 5
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->mImageLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->mImageWriter:Landroid/media/ImageWriter;
 
@@ -308,12 +338,14 @@
 
     move-result-object v1
 
+    .line 3
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
     invoke-virtual {v1, v2, v3}, Landroid/media/Image;->setTimestamp(J)V
 
+    .line 4
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -342,6 +374,7 @@
 
     invoke-static {p0, v2}, Lcom/xiaomi/engine/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 5
     monitor-exit v0
 
     return-object v1
@@ -349,6 +382,7 @@
     :catchall_0
     move-exception p0
 
+    .line 6
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -359,12 +393,14 @@
 .method public discardFreeBuffers()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->TAG:Ljava/lang/String;
 
     const-string v1, "discardFreeBuffers"
 
     invoke-static {v0, v1}, Lcom/xiaomi/engine/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->mImageReader:Landroid/media/ImageReader;
 
     invoke-virtual {p0}, Landroid/media/ImageReader;->discardFreeBuffers()V
@@ -383,10 +419,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->mImageLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->mImageLongSparseArray:Landroid/util/LongSparseArray;
 
@@ -398,10 +436,12 @@
 
     if-eqz v1, :cond_0
 
+    .line 3
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->mImageLongSparseArray:Landroid/util/LongSparseArray;
 
     invoke-virtual {p0, p1, p2}, Landroid/util/LongSparseArray;->remove(J)V
 
+    .line 4
     :cond_0
     monitor-exit v0
 
@@ -410,6 +450,7 @@
     :catchall_0
     move-exception p0
 
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -420,6 +461,7 @@
 .method public getMaxAcquireImageCount()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->mMaxAcquireImageCount:I
 
     return p0
@@ -436,15 +478,18 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->mImageLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p1}, Landroid/media/Image;->getTimestamp()J
 
     move-result-wide v1
 
+    .line 3
     iget-object v3, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->mImageLongSparseArray:Landroid/util/LongSparseArray;
 
     invoke-virtual {v3, v1, v2}, Landroid/util/LongSparseArray;->get(J)Ljava/lang/Object;
@@ -453,6 +498,7 @@
 
     if-nez v3, :cond_0
 
+    .line 4
     iget-object v3, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -477,12 +523,14 @@
 
     invoke-static {v3, v1}, Lcom/xiaomi/engine/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 5
     iget-object v1, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->mImageWriter:Landroid/media/ImageWriter;
 
     invoke-virtual {v1, p1}, Landroid/media/ImageWriter;->queueInputImage(Landroid/media/Image;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 6
     :try_start_1
     iget-object p1, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->mImageLock:Ljava/lang/Object;
 
@@ -498,9 +546,11 @@
     :catch_0
     move-exception p1
 
+    .line 7
     :try_start_2
-    invoke-virtual {p1}, Ljava/lang/Throwable;->printStackTrace()V
+    invoke-virtual {p1}, Ljava/lang/InterruptedException;->printStackTrace()V
 
+    .line 8
     :goto_0
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue;->TAG:Ljava/lang/String;
 
@@ -508,10 +558,12 @@
 
     invoke-static {p0, p1}, Lcom/xiaomi/engine/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 9
     monitor-exit v0
 
     return-void
 
+    .line 10
     :cond_0
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -536,6 +588,7 @@
     :catchall_0
     move-exception p0
 
+    .line 11
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0

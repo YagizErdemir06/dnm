@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/api/internal/zaak;
+.class public final Lcom/google/android/gms/common/api/internal/zaak;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field final synthetic zaa:Lcom/google/android/gms/common/api/internal/zaaw;
+.field public final synthetic zaa:Lcom/google/android/gms/common/api/internal/zaaw;
 
 
 # direct methods
@@ -26,6 +26,7 @@
 .method public final run()V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zaak;->zaa:Lcom/google/android/gms/common/api/internal/zaaw;
 
     invoke-static {p0}, Lcom/google/android/gms/common/api/internal/zaaw;->zaf(Lcom/google/android/gms/common/api/internal/zaaw;)Lcom/google/android/gms/common/GoogleApiAvailabilityLight;

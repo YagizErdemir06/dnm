@@ -23,6 +23,16 @@
 # direct methods
 .method public constructor <init>(J[D)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "timeStamp",
+            "values"
+        }
+    .end annotation
 
     .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,6 +54,16 @@
 
 .method public constructor <init>(J[F)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "timeStamp",
+            "values"
+        }
+    .end annotation
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

@@ -23,23 +23,24 @@
 
 
 # static fields
-.field public static final enum a:Lcom/android/camera/ui/GradienterDrawer$b;
-
-.field public static final enum b:Lcom/android/camera/ui/GradienterDrawer$b;
-
 .field public static final enum c:Lcom/android/camera/ui/GradienterDrawer$b;
 
 .field public static final enum d:Lcom/android/camera/ui/GradienterDrawer$b;
 
-.field public static final enum e:Lcom/android/camera/ui/GradienterDrawer$b;
+.field public static final enum f:Lcom/android/camera/ui/GradienterDrawer$b;
 
-.field public static final synthetic f:[Lcom/android/camera/ui/GradienterDrawer$b;
+.field public static final enum g:Lcom/android/camera/ui/GradienterDrawer$b;
+
+.field public static final enum j:Lcom/android/camera/ui/GradienterDrawer$b;
+
+.field private static final synthetic m:[Lcom/android/camera/ui/GradienterDrawer$b;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 11
 
+    .line 1
     new-instance v0, Lcom/android/camera/ui/GradienterDrawer$b;
 
     const-string v1, "NONE"
@@ -48,7 +49,7 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/camera/ui/GradienterDrawer$b;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/camera/ui/GradienterDrawer$b;->a:Lcom/android/camera/ui/GradienterDrawer$b;
+    sput-object v0, Lcom/android/camera/ui/GradienterDrawer$b;->c:Lcom/android/camera/ui/GradienterDrawer$b;
 
     new-instance v1, Lcom/android/camera/ui/GradienterDrawer$b;
 
@@ -58,7 +59,7 @@
 
     invoke-direct {v1, v3, v4}, Lcom/android/camera/ui/GradienterDrawer$b;-><init>(Ljava/lang/String;I)V
 
-    sput-object v1, Lcom/android/camera/ui/GradienterDrawer$b;->b:Lcom/android/camera/ui/GradienterDrawer$b;
+    sput-object v1, Lcom/android/camera/ui/GradienterDrawer$b;->d:Lcom/android/camera/ui/GradienterDrawer$b;
 
     new-instance v3, Lcom/android/camera/ui/GradienterDrawer$b;
 
@@ -68,7 +69,7 @@
 
     invoke-direct {v3, v5, v6}, Lcom/android/camera/ui/GradienterDrawer$b;-><init>(Ljava/lang/String;I)V
 
-    sput-object v3, Lcom/android/camera/ui/GradienterDrawer$b;->c:Lcom/android/camera/ui/GradienterDrawer$b;
+    sput-object v3, Lcom/android/camera/ui/GradienterDrawer$b;->f:Lcom/android/camera/ui/GradienterDrawer$b;
 
     new-instance v5, Lcom/android/camera/ui/GradienterDrawer$b;
 
@@ -78,7 +79,7 @@
 
     invoke-direct {v5, v7, v8}, Lcom/android/camera/ui/GradienterDrawer$b;-><init>(Ljava/lang/String;I)V
 
-    sput-object v5, Lcom/android/camera/ui/GradienterDrawer$b;->d:Lcom/android/camera/ui/GradienterDrawer$b;
+    sput-object v5, Lcom/android/camera/ui/GradienterDrawer$b;->g:Lcom/android/camera/ui/GradienterDrawer$b;
 
     new-instance v7, Lcom/android/camera/ui/GradienterDrawer$b;
 
@@ -88,7 +89,7 @@
 
     invoke-direct {v7, v9, v10}, Lcom/android/camera/ui/GradienterDrawer$b;-><init>(Ljava/lang/String;I)V
 
-    sput-object v7, Lcom/android/camera/ui/GradienterDrawer$b;->e:Lcom/android/camera/ui/GradienterDrawer$b;
+    sput-object v7, Lcom/android/camera/ui/GradienterDrawer$b;->j:Lcom/android/camera/ui/GradienterDrawer$b;
 
     const/4 v9, 0x5
 
@@ -104,19 +105,26 @@
 
     aput-object v7, v9, v10
 
-    sput-object v9, Lcom/android/camera/ui/GradienterDrawer$b;->f:[Lcom/android/camera/ui/GradienterDrawer$b;
+    .line 2
+    sput-object v9, Lcom/android/camera/ui/GradienterDrawer$b;->m:[Lcom/android/camera/ui/GradienterDrawer$b;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;I)V
+.method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "$enum$name",
+            "$enum$ordinal"
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -124,7 +132,16 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/android/camera/ui/GradienterDrawer$b;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8000
+        }
+        names = {
+            "name"
+        }
+    .end annotation
 
+    .line 1
     const-class v0, Lcom/android/camera/ui/GradienterDrawer$b;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -139,7 +156,8 @@
 .method public static values()[Lcom/android/camera/ui/GradienterDrawer$b;
     .locals 1
 
-    sget-object v0, Lcom/android/camera/ui/GradienterDrawer$b;->f:[Lcom/android/camera/ui/GradienterDrawer$b;
+    .line 1
+    sget-object v0, Lcom/android/camera/ui/GradienterDrawer$b;->m:[Lcom/android/camera/ui/GradienterDrawer$b;
 
     invoke-virtual {v0}, [Lcom/android/camera/ui/GradienterDrawer$b;->clone()Ljava/lang/Object;
 

@@ -1,4 +1,4 @@
-.class final Lcom/google/common/base/Converter$IdentityConverter;
+.class public final Lcom/google/common/base/Converter$IdentityConverter;
 .super Lcom/google/common/base/Converter;
 .source "SourceFile"
 
@@ -29,7 +29,7 @@
 
 
 # static fields
-.field static final INSTANCE:Lcom/google/common/base/Converter$IdentityConverter;
+.field public static final INSTANCE:Lcom/google/common/base/Converter$IdentityConverter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/base/Converter$IdentityConverter<",
@@ -45,6 +45,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/base/Converter$IdentityConverter;
 
     invoke-direct {v0}, Lcom/google/common/base/Converter$IdentityConverter;-><init>()V
@@ -57,6 +58,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/base/Converter;-><init>()V
 
     return-void
@@ -65,6 +67,7 @@
 .method private readResolve()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     sget-object p0, Lcom/google/common/base/Converter$IdentityConverter;->INSTANCE:Lcom/google/common/base/Converter$IdentityConverter;
 
     return-object p0
@@ -88,6 +91,7 @@
 
     const-string p0, "otherConverter"
 
+    .line 1
     invoke-static {p1, p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -135,6 +139,7 @@
 .method public bridge synthetic reverse()Lcom/google/common/base/Converter;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/base/Converter$IdentityConverter;->reverse()Lcom/google/common/base/Converter$IdentityConverter;
 
     move-result-object p0

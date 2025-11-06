@@ -56,14 +56,15 @@
 
     const-string v1, "color"
 
-    const-string/jumbo v2, "string"
+    const-string v2, "string"
 
     const-string v3, "boolean"
 
     const-string v4, "dimension"
 
-    const-string/jumbo v5, "refrence"
+    const-string v5, "refrence"
 
+    .line 1
     filled-new-array/range {v0 .. v5}, [Ljava/lang/String;
 
     move-result-object v0
@@ -76,6 +77,7 @@
 .method public static getId(Ljava/lang/String;)I
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -156,7 +158,7 @@
     goto :goto_1
 
     :sswitch_4
-    const-string/jumbo v0, "refrence"
+    const-string v0, "refrence"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -172,7 +174,7 @@
     goto :goto_1
 
     :sswitch_5
-    const-string/jumbo v0, "string"
+    const-string v0, "string"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

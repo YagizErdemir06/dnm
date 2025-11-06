@@ -13,31 +13,33 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter<",
-        "Lki/i;",
+        "Ld/o/v/d/b/a/a/i;",
         ">;"
     }
 .end annotation
 
 
 # static fields
-.field public static final b:Ljava/lang/String; = "MIMOJI_MimojiEditThumbnailAdapter"
+.field private static final a:Ljava/lang/String; = "MIMOJI_MimojiEditThumbnailAdapter"
 
-.field public static final c:I = 0x3
+.field public static final b:I = 0x3
 
 
 # instance fields
-.field public a:I
+.field private c:I
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;-><init>()V
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter;->a:I
+    .line 2
+    iput v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter;->c:I
 
     return-void
 .end method
@@ -46,6 +48,14 @@
 # virtual methods
 .method public getItemViewType(I)I
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "position"
+        }
+    .end annotation
 
     return p1
 .end method
@@ -56,18 +66,30 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "viewGroup",
+            "i"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             "I)",
             "Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerViewHolder<",
-            "Lki/i;",
+            "Ld/o/v/d/b/a/a/i;",
             ">;"
         }
     .end annotation
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    .line 1
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object p2
 
@@ -75,7 +97,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0e0181
+    const v0, 0x7f0e0172
 
     const/4 v1, 0x0
 
@@ -83,6 +105,7 @@
 
     move-result-object p1
 
+    .line 2
     new-instance p2, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter$MimojiThumbnailHolder;
 
     invoke-direct {p2, p0, p1}, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter$MimojiThumbnailHolder;-><init>(Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter;Landroid/view/View;)V
@@ -92,16 +115,34 @@
 
 .method public setLastSelectPosition(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mLastSelectPosition"
+        }
+    .end annotation
 
-    iput p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter;->a:I
+    .line 1
+    iput p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter;->c:I
 
     return-void
 .end method
 
 .method public setSelectState(I)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "positon"
+        }
+    .end annotation
 
-    iget v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter;->a:I
+    .line 1
+    iget v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter;->c:I
 
     if-ne v0, p1, :cond_0
 
@@ -111,6 +152,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     invoke-virtual {p0, p1, v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemChanged(ILjava/lang/Object;)V
@@ -122,6 +164,7 @@
 
     move v1, v0
 
+    .line 3
     :goto_0
     invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->getItemCount()I
 
@@ -129,6 +172,7 @@
 
     if-ge v1, v2, :cond_2
 
+    .line 4
     invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->getDataList()Ljava/util/List;
 
     move-result-object v2
@@ -137,23 +181,26 @@
 
     move-result-object v2
 
-    check-cast v2, Lci/d;
+    check-cast v2, Ld/o/v/a/g0/b/d;
 
-    invoke-virtual {v2}, Lci/d;->e()Z
+    .line 5
+    invoke-virtual {v2}, Ld/o/v/a/g0/b/d;->e()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    invoke-virtual {v2, v0}, Lci/d;->i(Z)V
+    .line 6
+    invoke-virtual {v2, v0}, Ld/o/v/a/g0/b/d;->i(Z)V
 
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 7
     :cond_2
-    iget v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter;->a:I
+    iget v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter;->c:I
 
     invoke-virtual {p0, v0}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->isAvailablePosion(I)Z
 
@@ -161,12 +208,14 @@
 
     if-eqz v0, :cond_3
 
-    iget v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter;->a:I
+    .line 8
+    iget v0, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter;->c:I
 
     sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     invoke-virtual {p0, v0, v1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemChanged(ILjava/lang/Object;)V
 
+    .line 9
     :cond_3
     invoke-virtual {p0, p1}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->isAvailablePosion(I)Z
 
@@ -174,6 +223,7 @@
 
     if-eqz v0, :cond_4
 
+    .line 10
     invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseRecyclerAdapter;->getDataList()Ljava/util/List;
 
     move-result-object v0
@@ -182,17 +232,19 @@
 
     move-result-object v0
 
-    check-cast v0, Lki/i;
+    check-cast v0, Ld/o/v/d/b/a/a/i;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lci/d;->i(Z)V
+    invoke-virtual {v0, v1}, Ld/o/v/a/g0/b/d;->i(Z)V
 
+    .line 11
     sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     invoke-virtual {p0, p1, v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemChanged(ILjava/lang/Object;)V
 
-    iput p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter;->a:I
+    .line 12
+    iput p1, p0, Lcom/xiaomi/mimoji/mimojifu/fragment/edit/adapter/MimojiEditThumbnailAdapter;->c:I
 
     :cond_4
     return-void

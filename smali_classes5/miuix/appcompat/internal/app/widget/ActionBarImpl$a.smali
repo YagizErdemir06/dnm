@@ -21,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,22 +32,26 @@
 .method public onTabReselected(Landroidx/appcompat/app/ActionBar$Tab;Landroidx/fragment/app/FragmentTransaction;)V
     .locals 1
 
+    .line 1
     move-object p0, p1
 
     check-cast p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
 
+    .line 2
     invoke-static {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->a(Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;)Landroidx/appcompat/app/ActionBar$TabListener;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-static {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->a(Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;)Landroidx/appcompat/app/ActionBar$TabListener;
 
     move-result-object v0
 
     invoke-interface {v0, p1, p2}, Landroidx/appcompat/app/ActionBar$TabListener;->onTabReselected(Landroidx/appcompat/app/ActionBar$Tab;Landroidx/fragment/app/FragmentTransaction;)V
 
+    .line 4
     :cond_0
     invoke-static {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->b(Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;)Landroidx/appcompat/app/ActionBar$TabListener;
 
@@ -54,6 +59,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 5
     invoke-static {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->b(Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;)Landroidx/appcompat/app/ActionBar$TabListener;
 
     move-result-object p0
@@ -67,22 +73,26 @@
 .method public onTabSelected(Landroidx/appcompat/app/ActionBar$Tab;Landroidx/fragment/app/FragmentTransaction;)V
     .locals 1
 
+    .line 1
     move-object p0, p1
 
     check-cast p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
 
+    .line 2
     invoke-static {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->a(Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;)Landroidx/appcompat/app/ActionBar$TabListener;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-static {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->a(Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;)Landroidx/appcompat/app/ActionBar$TabListener;
 
     move-result-object v0
 
     invoke-interface {v0, p1, p2}, Landroidx/appcompat/app/ActionBar$TabListener;->onTabSelected(Landroidx/appcompat/app/ActionBar$Tab;Landroidx/fragment/app/FragmentTransaction;)V
 
+    .line 4
     :cond_0
     invoke-static {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->b(Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;)Landroidx/appcompat/app/ActionBar$TabListener;
 
@@ -90,6 +100,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 5
     invoke-static {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->b(Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;)Landroidx/appcompat/app/ActionBar$TabListener;
 
     move-result-object p0
@@ -103,22 +114,26 @@
 .method public onTabUnselected(Landroidx/appcompat/app/ActionBar$Tab;Landroidx/fragment/app/FragmentTransaction;)V
     .locals 1
 
+    .line 1
     move-object p0, p1
 
     check-cast p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;
 
+    .line 2
     invoke-static {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->a(Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;)Landroidx/appcompat/app/ActionBar$TabListener;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-static {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->a(Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;)Landroidx/appcompat/app/ActionBar$TabListener;
 
     move-result-object v0
 
     invoke-interface {v0, p1, p2}, Landroidx/appcompat/app/ActionBar$TabListener;->onTabUnselected(Landroidx/appcompat/app/ActionBar$Tab;Landroidx/fragment/app/FragmentTransaction;)V
 
+    .line 4
     :cond_0
     invoke-static {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->b(Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;)Landroidx/appcompat/app/ActionBar$TabListener;
 
@@ -126,6 +141,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 5
     invoke-static {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->b(Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;)Landroidx/appcompat/app/ActionBar$TabListener;
 
     move-result-object p0

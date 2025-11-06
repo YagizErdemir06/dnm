@@ -33,12 +33,12 @@
     .end annotation
 .end field
 
-.field static final TRACKING_SOURCE_DIALOG:Ljava/lang/String; = "d"
+.field public static final TRACKING_SOURCE_DIALOG:Ljava/lang/String; = "d"
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 .end field
 
-.field static final TRACKING_SOURCE_NOTIFICATION:Ljava/lang/String; = "n"
+.field public static final TRACKING_SOURCE_NOTIFICATION:Ljava/lang/String; = "n"
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 .end field
@@ -50,6 +50,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     sget v0, Lcom/google/android/gms/common/GooglePlayServicesUtilLight;->GOOGLE_PLAY_SERVICES_VERSION_CODE:I
 
     sput v0, Lcom/google/android/gms/common/GoogleApiAvailabilityLight;->GOOGLE_PLAY_SERVICES_VERSION_CODE:I
@@ -97,6 +98,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/GooglePlayServicesUtilLight;->cancelAvailabilityErrorNotifications(Landroid/content/Context;)V
 
     return-void
@@ -114,6 +116,7 @@
     .annotation build Lcom/google/android/gms/common/internal/ShowFirstParty;
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/GooglePlayServicesUtilLight;->getApkVersion(Landroid/content/Context;)I
 
     move-result p0
@@ -133,6 +136,7 @@
     .annotation build Lcom/google/android/gms/common/internal/ShowFirstParty;
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/GooglePlayServicesUtilLight;->getClientVersion(Landroid/content/Context;)I
 
     move-result p0
@@ -394,6 +398,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/GooglePlayServicesUtilLight;->getErrorString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -462,6 +467,7 @@
     .annotation build Lcom/google/android/gms/common/internal/ShowFirstParty;
     .end annotation
 
+    .line 1
     invoke-static {p1, p2}, Lcom/google/android/gms/common/GooglePlayServicesUtilLight;->isPlayServicesPossiblyUpdating(Landroid/content/Context;I)Z
 
     move-result p0
@@ -481,6 +487,7 @@
     .annotation build Lcom/google/android/gms/common/internal/ShowFirstParty;
     .end annotation
 
+    .line 1
     invoke-static {p1, p2}, Lcom/google/android/gms/common/GooglePlayServicesUtilLight;->isPlayStorePossiblyUpdating(Landroid/content/Context;I)Z
 
     move-result p0
@@ -501,6 +508,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     invoke-static {p1, p2}, Lcom/google/android/gms/common/GooglePlayServicesUtilLight;->zza(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result p0
@@ -513,6 +521,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/GooglePlayServicesUtilLight;->isUserRecoverableError(I)Z
 
     move-result p0
@@ -536,6 +545,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1, p2}, Lcom/google/android/gms/common/GooglePlayServicesUtilLight;->ensurePlayServicesAvailable(Landroid/content/Context;I)V
 
     return-void

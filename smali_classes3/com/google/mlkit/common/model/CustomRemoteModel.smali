@@ -19,6 +19,7 @@
 .method public synthetic constructor <init>(Lcom/google/mlkit/common/model/RemoteModelSource;Lcom/google/mlkit/common/model/zza;)V
     .locals 2
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/mlkit/common/model/RemoteModelSource;->zza()Ljava/lang/String;
 
     move-result-object p2
@@ -33,6 +34,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-virtual {p1}, Lcom/google/mlkit/common/model/RemoteModelSource;->zza()Ljava/lang/String;
 
@@ -43,6 +45,7 @@
 
     sget-object v1, Lcom/google/mlkit/common/sdkinternal/ModelType;->CUSTOM:Lcom/google/mlkit/common/sdkinternal/ModelType;
 
+    .line 3
     invoke-direct {p0, p2, v0, v1}, Lcom/google/mlkit/common/model/RemoteModel;-><init>(Ljava/lang/String;Lcom/google/mlkit/common/sdkinternal/model/BaseModel;Lcom/google/mlkit/common/sdkinternal/ModelType;)V
 
     iput-object p1, p0, Lcom/google/mlkit/common/model/CustomRemoteModel;->zzb:Lcom/google/mlkit/common/model/RemoteModelSource;

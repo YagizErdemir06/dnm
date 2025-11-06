@@ -1,4 +1,4 @@
-.class abstract Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VObject;
+.class public abstract Landroidx/vectordrawable/graphics/drawable/VectorDrawableCompat$VObject;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

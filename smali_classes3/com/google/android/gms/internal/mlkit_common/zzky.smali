@@ -22,6 +22,7 @@
 .method public static constructor <clinit>()V
     .locals 5
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_common/zzky;
 
     const-string v1, "UNKNOWN"
@@ -38,6 +39,7 @@
 
     const/4 v4, 0x1
 
+    .line 2
     invoke-direct {v1, v3, v4, v4}, Lcom/google/android/gms/internal/mlkit_common/zzky;-><init>(Ljava/lang/String;II)V
 
     sput-object v1, Lcom/google/android/gms/internal/mlkit_common/zzky;->zzb:Lcom/google/android/gms/internal/mlkit_common/zzky;
@@ -58,6 +60,7 @@
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     iput p3, p0, Lcom/google/android/gms/internal/mlkit_common/zzky;->zzd:I
@@ -68,6 +71,7 @@
 .method public static values()[Lcom/google/android/gms/internal/mlkit_common/zzky;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/internal/mlkit_common/zzky;->zzc:[Lcom/google/android/gms/internal/mlkit_common/zzky;
 
     invoke-virtual {v0}, [Lcom/google/android/gms/internal/mlkit_common/zzky;->clone()Ljava/lang/Object;
@@ -82,6 +86,7 @@
 .method public static zzb(I)Lcom/google/android/gms/internal/mlkit_common/zzky;
     .locals 5
 
+    .line 1
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_common/zzky;->values()[Lcom/google/android/gms/internal/mlkit_common/zzky;
 
     move-result-object v0
@@ -95,6 +100,7 @@
 
     aget-object v3, v0, v2
 
+    .line 2
     iget v4, v3, Lcom/google/android/gms/internal/mlkit_common/zzky;->zzd:I
 
     if-ne v4, p0, :cond_0

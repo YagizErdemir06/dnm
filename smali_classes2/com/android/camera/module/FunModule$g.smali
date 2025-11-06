@@ -19,7 +19,7 @@
 
 .field public b:Landroid/content/ContentValues;
 
-.field public c:Landroid/net/Uri;
+.field private c:Landroid/net/Uri;
 
 .field public final synthetic d:Lcom/android/camera/module/FunModule;
 
@@ -27,6 +27,20 @@
 # direct methods
 .method public constructor <init>(Lcom/android/camera/module/FunModule;Landroid/net/Uri;Ljava/lang/String;Landroid/content/ContentValues;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1010,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "this$0",
+            "uri",
+            "videoPath",
+            "values"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/android/camera/module/FunModule$g;->d:Lcom/android/camera/module/FunModule;
@@ -47,6 +61,18 @@
 
 .method public constructor <init>(Lcom/android/camera/module/FunModule;Ljava/lang/String;Landroid/content/ContentValues;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1010,
+            0x0,
+            0x0
+        }
+        names = {
+            "this$0",
+            "videoPath",
+            "values"
+        }
+    .end annotation
 
     .line 5
     iput-object p1, p0, Lcom/android/camera/module/FunModule$g;->d:Lcom/android/camera/module/FunModule;
@@ -65,6 +91,7 @@
 .method public static synthetic a(Lcom/android/camera/module/FunModule$g;)Landroid/net/Uri;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera/module/FunModule$g;->c:Landroid/net/Uri;
 
     return-object p0

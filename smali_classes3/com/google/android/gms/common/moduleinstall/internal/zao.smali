@@ -38,10 +38,12 @@
 
     check-cast p2, Lcom/google/android/gms/tasks/TaskCompletionSource;
 
+    .line 1
     new-instance v1, Lcom/google/android/gms/common/moduleinstall/internal/zat;
 
     invoke-direct {v1, v0, p2}, Lcom/google/android/gms/common/moduleinstall/internal/zat;-><init>(Lcom/google/android/gms/common/moduleinstall/internal/zay;Lcom/google/android/gms/tasks/TaskCompletionSource;)V
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/android/gms/common/internal/BaseGmsClient;->getService()Landroid/os/IInterface;
 
     move-result-object p1

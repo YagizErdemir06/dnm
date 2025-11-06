@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/video/spherical/TouchTracker;
+.class public final Lcom/google/android/exoplayer2/video/spherical/TouchTracker;
 .super Landroid/view/GestureDetector$SimpleOnGestureListener;
 .source "SourceFile"
 
@@ -16,7 +16,7 @@
 
 
 # static fields
-.field static final MAX_PITCH_DEGREES:F = 45.0f
+.field public static final MAX_PITCH_DEGREES:F = 45.0f
 
 
 # instance fields
@@ -37,24 +37,30 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/google/android/exoplayer2/video/spherical/TouchTracker$Listener;F)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
 
+    .line 2
     new-instance v0, Landroid/graphics/PointF;
 
     invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/video/spherical/TouchTracker;->previousTouchPointPx:Landroid/graphics/PointF;
 
+    .line 3
     new-instance v0, Landroid/graphics/PointF;
 
     invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/video/spherical/TouchTracker;->accumulatedTouchOffsetDegrees:Landroid/graphics/PointF;
 
+    .line 4
     iput-object p2, p0, Lcom/google/android/exoplayer2/video/spherical/TouchTracker;->listener:Lcom/google/android/exoplayer2/video/spherical/TouchTracker$Listener;
 
+    .line 5
     iput p3, p0, Lcom/google/android/exoplayer2/video/spherical/TouchTracker;->pxPerDegrees:F
 
+    .line 6
     new-instance p2, Landroid/view/GestureDetector;
 
     invoke-direct {p2, p1, p0}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
@@ -63,6 +69,7 @@
 
     const p1, 0x40490fdb    # (float)Math.PI
 
+    .line 7
     iput p1, p0, Lcom/google/android/exoplayer2/video/spherical/TouchTracker;->roll:F
 
     return-void
@@ -73,6 +80,7 @@
 .method public onDown(Landroid/view/MotionEvent;)Z
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/video/spherical/TouchTracker;->previousTouchPointPx:Landroid/graphics/PointF;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
@@ -97,6 +105,7 @@
 
     neg-float p1, p2
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/video/spherical/TouchTracker;->roll:F
 
     return-void
@@ -105,6 +114,7 @@
 .method public onScroll(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
     .locals 4
 
+    .line 1
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
     move-result p1
@@ -119,6 +129,7 @@
 
     div-float/2addr p1, p3
 
+    .line 2
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
     move-result p3
@@ -133,6 +144,7 @@
 
     div-float/2addr p3, v0
 
+    .line 3
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
@@ -143,22 +155,26 @@
 
     invoke-virtual {p4, v0, p2}, Landroid/graphics/PointF;->set(FF)V
 
+    .line 4
     iget p2, p0, Lcom/google/android/exoplayer2/video/spherical/TouchTracker;->roll:F
 
     float-to-double v0, p2
 
+    .line 5
     invoke-static {v0, v1}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v2
 
     double-to-float p2, v2
 
+    .line 6
     invoke-static {v0, v1}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v0
 
     double-to-float p4, v0
 
+    .line 7
     iget-object v0, p0, Lcom/google/android/exoplayer2/video/spherical/TouchTracker;->accumulatedTouchOffsetDegrees:Landroid/graphics/PointF;
 
     iget v1, v0, Landroid/graphics/PointF;->x:F
@@ -173,6 +189,7 @@
 
     iput v1, v0, Landroid/graphics/PointF;->x:F
 
+    .line 8
     iget v1, v0, Landroid/graphics/PointF;->y:F
 
     mul-float/2addr p4, p1
@@ -187,6 +204,7 @@
 
     const/high16 p1, 0x42340000    # 45.0f
 
+    .line 9
     invoke-static {p1, v1}, Ljava/lang/Math;->min(FF)F
 
     move-result p1
@@ -199,6 +217,7 @@
 
     iput p1, v0, Landroid/graphics/PointF;->y:F
 
+    .line 10
     iget-object p1, p0, Lcom/google/android/exoplayer2/video/spherical/TouchTracker;->listener:Lcom/google/android/exoplayer2/video/spherical/TouchTracker$Listener;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/video/spherical/TouchTracker;->accumulatedTouchOffsetDegrees:Landroid/graphics/PointF;
@@ -213,6 +232,7 @@
 .method public onSingleTapUp(Landroid/view/MotionEvent;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/video/spherical/TouchTracker;->listener:Lcom/google/android/exoplayer2/video/spherical/TouchTracker$Listener;
 
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/video/spherical/TouchTracker$Listener;->onSingleTapUp(Landroid/view/MotionEvent;)Z
@@ -225,6 +245,7 @@
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/video/spherical/TouchTracker;->gestureDetector:Landroid/view/GestureDetector;
 
     invoke-virtual {p0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z

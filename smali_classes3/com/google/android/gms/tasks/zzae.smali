@@ -1,4 +1,4 @@
-.class interface abstract Lcom/google/android/gms/tasks/zzae;
+.class public interface abstract Lcom/google/android/gms/tasks/zzae;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

@@ -1,4 +1,4 @@
-.class final Lorg/apache/xmlbeans/impl/values/XmlObjectBase$ImmutableValueValidationContext;
+.class public final Lorg/apache/xmlbeans/impl/values/XmlObjectBase$ImmutableValueValidationContext;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,10 +27,13 @@
 .method public constructor <init>(Ljava/util/Collection;Lorg/apache/xmlbeans/XmlObject;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase$ImmutableValueValidationContext;->_coll:Ljava/util/Collection;
 
+    .line 3
     iput-object p2, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase$ImmutableValueValidationContext;->_loc:Lorg/apache/xmlbeans/XmlObject;
 
     return-void

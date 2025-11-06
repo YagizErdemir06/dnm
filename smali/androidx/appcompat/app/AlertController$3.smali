@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/app/AlertController$3;
+.class public Landroidx/appcompat/app/AlertController$3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,17 +18,18 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/appcompat/app/AlertController;
+.field public final synthetic this$0:Landroidx/appcompat/app/AlertController;
 
-.field final synthetic val$bottom:Landroid/view/View;
+.field public final synthetic val$bottom:Landroid/view/View;
 
-.field final synthetic val$top:Landroid/view/View;
+.field public final synthetic val$top:Landroid/view/View;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/appcompat/app/AlertController;Landroid/view/View;Landroid/view/View;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/app/AlertController$3;->this$0:Landroidx/appcompat/app/AlertController;
 
     iput-object p2, p0, Landroidx/appcompat/app/AlertController$3;->val$top:Landroid/view/View;
@@ -45,6 +46,7 @@
 .method public run()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/app/AlertController$3;->this$0:Landroidx/appcompat/app/AlertController;
 
     iget-object v0, v0, Landroidx/appcompat/app/AlertController;->mScrollView:Landroidx/core/widget/NestedScrollView;

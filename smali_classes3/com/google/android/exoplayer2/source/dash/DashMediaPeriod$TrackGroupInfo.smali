@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/dash/DashMediaPeriod$TrackGroupInfo;
+.class public final Lcom/google/android/exoplayer2/source/dash/DashMediaPeriod$TrackGroupInfo;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -48,20 +48,28 @@
 .method private constructor <init>(II[IIIII)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaPeriod$TrackGroupInfo;->trackType:I
 
+    .line 3
     iput-object p3, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaPeriod$TrackGroupInfo;->adaptationSetIndices:[I
 
+    .line 4
     iput p2, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaPeriod$TrackGroupInfo;->trackGroupCategory:I
 
+    .line 5
     iput p4, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaPeriod$TrackGroupInfo;->primaryTrackGroupIndex:I
 
+    .line 6
     iput p5, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaPeriod$TrackGroupInfo;->embeddedEventMessageTrackGroupIndex:I
 
+    .line 7
     iput p6, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaPeriod$TrackGroupInfo;->embeddedClosedCaptionTrackGroupIndex:I
 
+    .line 8
     iput p7, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaPeriod$TrackGroupInfo;->eventStreamGroupIndex:I
 
     return-void
@@ -70,6 +78,7 @@
 .method public static embeddedClosedCaptionTrack([II)Lcom/google/android/exoplayer2/source/dash/DashMediaPeriod$TrackGroupInfo;
     .locals 9
 
+    .line 1
     new-instance v8, Lcom/google/android/exoplayer2/source/dash/DashMediaPeriod$TrackGroupInfo;
 
     const/4 v1, 0x3
@@ -96,6 +105,7 @@
 .method public static embeddedEmsgTrack([II)Lcom/google/android/exoplayer2/source/dash/DashMediaPeriod$TrackGroupInfo;
     .locals 9
 
+    .line 1
     new-instance v8, Lcom/google/android/exoplayer2/source/dash/DashMediaPeriod$TrackGroupInfo;
 
     const/4 v1, 0x5
@@ -122,15 +132,16 @@
 .method public static mpdEventTrack(I)Lcom/google/android/exoplayer2/source/dash/DashMediaPeriod$TrackGroupInfo;
     .locals 9
 
+    .line 1
     new-instance v8, Lcom/google/android/exoplayer2/source/dash/DashMediaPeriod$TrackGroupInfo;
-
-    const/4 v1, 0x5
-
-    const/4 v2, 0x2
 
     const/4 v0, 0x0
 
     new-array v3, v0, [I
+
+    const/4 v1, 0x5
+
+    const/4 v2, 0x2
 
     const/4 v4, -0x1
 
@@ -150,6 +161,7 @@
 .method public static primaryTrack(I[IIII)Lcom/google/android/exoplayer2/source/dash/DashMediaPeriod$TrackGroupInfo;
     .locals 9
 
+    .line 1
     new-instance v8, Lcom/google/android/exoplayer2/source/dash/DashMediaPeriod$TrackGroupInfo;
 
     const/4 v2, 0x0

@@ -188,12 +188,14 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
 
+    .line 1
     instance-of v0, p1, Lorg/dom4j/rule/Rule;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lorg/dom4j/rule/Rule;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/rule/Rule;->compareTo(Lorg/dom4j/rule/Rule;)I
@@ -211,6 +213,7 @@
 .method public getAction()Lorg/dom4j/rule/Action;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/rule/Rule;->action:Lorg/dom4j/rule/Action;
 
     return-object p0
@@ -219,6 +222,7 @@
 .method public getAppearenceCount()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lorg/dom4j/rule/Rule;->appearenceCount:I
 
     return p0
@@ -227,6 +231,7 @@
 .method public getImportPrecedence()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lorg/dom4j/rule/Rule;->importPrecedence:I
 
     return p0
@@ -235,6 +240,7 @@
 .method public final getMatchType()S
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/rule/Rule;->pattern:Lorg/dom4j/rule/Pattern;
 
     invoke-interface {p0}, Lorg/dom4j/rule/Pattern;->getMatchType()S
@@ -247,6 +253,7 @@
 .method public final getMatchesNodeName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/rule/Rule;->pattern:Lorg/dom4j/rule/Pattern;
 
     invoke-interface {p0}, Lorg/dom4j/rule/Pattern;->getMatchesNodeName()Ljava/lang/String;
@@ -259,6 +266,7 @@
 .method public getMode()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/rule/Rule;->mode:Ljava/lang/String;
 
     return-object p0
@@ -267,6 +275,7 @@
 .method public getPattern()Lorg/dom4j/rule/Pattern;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/rule/Rule;->pattern:Lorg/dom4j/rule/Pattern;
 
     return-object p0
@@ -275,6 +284,7 @@
 .method public getPriority()D
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lorg/dom4j/rule/Rule;->priority:D
 
     return-wide v0
@@ -283,6 +293,7 @@
 .method public getUnionRules()[Lorg/dom4j/rule/Rule;
     .locals 6
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/rule/Rule;->pattern:Lorg/dom4j/rule/Pattern;
 
     invoke-interface {v0}, Lorg/dom4j/rule/Pattern;->getUnionPatterns()[Lorg/dom4j/rule/Pattern;
@@ -295,9 +306,11 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     array-length v1, v0
 
+    .line 3
     new-array v2, v1, [Lorg/dom4j/rule/Rule;
 
     const/4 v3, 0x0
@@ -305,6 +318,7 @@
     :goto_0
     if-ge v3, v1, :cond_1
 
+    .line 4
     new-instance v4, Lorg/dom4j/rule/Rule;
 
     aget-object v5, v0, v3
@@ -324,6 +338,7 @@
 .method public hashCode()I
     .locals 1
 
+    .line 1
     iget v0, p0, Lorg/dom4j/rule/Rule;->importPrecedence:I
 
     iget p0, p0, Lorg/dom4j/rule/Rule;->appearenceCount:I
@@ -336,6 +351,7 @@
 .method public final matches(Lorg/dom4j/Node;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/rule/Rule;->pattern:Lorg/dom4j/rule/Pattern;
 
     invoke-interface {p0, p1}, Lorg/dom4j/rule/Pattern;->matches(Lorg/dom4j/Node;)Z
@@ -348,6 +364,7 @@
 .method public setAction(Lorg/dom4j/rule/Action;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/rule/Rule;->action:Lorg/dom4j/rule/Action;
 
     return-void
@@ -356,6 +373,7 @@
 .method public setAppearenceCount(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lorg/dom4j/rule/Rule;->appearenceCount:I
 
     return-void
@@ -364,6 +382,7 @@
 .method public setImportPrecedence(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lorg/dom4j/rule/Rule;->importPrecedence:I
 
     return-void
@@ -372,6 +391,7 @@
 .method public setMode(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/rule/Rule;->mode:Ljava/lang/String;
 
     return-void
@@ -380,6 +400,7 @@
 .method public setPattern(Lorg/dom4j/rule/Pattern;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/rule/Rule;->pattern:Lorg/dom4j/rule/Pattern;
 
     return-void
@@ -388,6 +409,7 @@
 .method public setPriority(D)V
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lorg/dom4j/rule/Rule;->priority:D
 
     return-void
@@ -396,6 +418,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V

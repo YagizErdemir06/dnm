@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ImmutableMultimap$Keys;
+.class public Lcom/google/common/collect/ImmutableMultimap$Keys;
 .super Lcom/google/common/collect/ImmutableMultiset;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/ImmutableMultimap;
+.field public final synthetic this$0:Lcom/google/common/collect/ImmutableMultimap;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/ImmutableMultimap;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/ImmutableMultimap$Keys;->this$0:Lcom/google/common/collect/ImmutableMultimap;
 
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableMultiset;-><init>()V
@@ -45,6 +46,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMultimap$Keys;->this$0:Lcom/google/common/collect/ImmutableMultimap;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableMultimap;->containsKey(Ljava/lang/Object;)Z
@@ -61,6 +63,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMultimap$Keys;->this$0:Lcom/google/common/collect/ImmutableMultimap;
 
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMultimap;->map:Lcom/google/common/collect/ImmutableMap;
@@ -77,6 +80,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-interface {p0}, Ljava/util/Collection;->size()I
 
@@ -127,6 +131,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMultimap$Keys;->this$0:Lcom/google/common/collect/ImmutableMultimap;
 
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMultimap;->map:Lcom/google/common/collect/ImmutableMap;
@@ -145,6 +150,7 @@
 
     check-cast p0, Ljava/util/Map$Entry;
 
+    .line 2
     invoke-interface {p0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object p1
@@ -177,6 +183,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMultimap$Keys;->this$0:Lcom/google/common/collect/ImmutableMultimap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMultimap;->size()I
@@ -191,6 +198,7 @@
     .annotation build Lcom/google/common/annotations/GwtIncompatible;
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ImmutableMultimap$KeysSerializedForm;
 
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMultimap$Keys;->this$0:Lcom/google/common/collect/ImmutableMultimap;

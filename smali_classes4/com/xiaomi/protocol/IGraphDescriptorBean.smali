@@ -32,6 +32,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/xiaomi/protocol/IGraphDescriptorBean$1;
 
     invoke-direct {v0}, Lcom/xiaomi/protocol/IGraphDescriptorBean$1;-><init>()V
@@ -181,6 +182,7 @@
 .method public getOperationModeID()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/protocol/IGraphDescriptorBean;->mOperationModeID:I
 
     return p0
@@ -189,6 +191,7 @@
 .method public getStreamNumber()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/protocol/IGraphDescriptorBean;->mStreamNumber:I
 
     return p0
@@ -197,6 +200,7 @@
 .method public isFrontCamera()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/protocol/IGraphDescriptorBean;->mIsFrontCamera:Z
 
     return p0
@@ -205,6 +209,7 @@
 .method public isSnapshot()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/protocol/IGraphDescriptorBean;->mIsSnapshot:Z
 
     return p0
@@ -221,6 +226,7 @@
         }
     .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/protocol/IGraphDescriptorBean;->mIsFrontCamera:Z
 
     return-void
@@ -237,6 +243,7 @@
         }
     .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/protocol/IGraphDescriptorBean;->mOperationModeID:I
 
     return-void
@@ -253,6 +260,7 @@
         }
     .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/protocol/IGraphDescriptorBean;->mIsSnapshot:Z
 
     return-void
@@ -269,6 +277,7 @@
         }
     .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/protocol/IGraphDescriptorBean;->mStreamNumber:I
 
     return-void
@@ -287,18 +296,22 @@
         }
     .end annotation
 
+    .line 1
     iget p2, p0, Lcom/xiaomi/protocol/IGraphDescriptorBean;->mOperationModeID:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 2
     iget p2, p0, Lcom/xiaomi/protocol/IGraphDescriptorBean;->mStreamNumber:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 3
     iget-boolean p2, p0, Lcom/xiaomi/protocol/IGraphDescriptorBean;->mIsSnapshot:Z
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
 
+    .line 4
     iget-boolean p0, p0, Lcom/xiaomi/protocol/IGraphDescriptorBean;->mIsFrontCamera:Z
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeByte(B)V

@@ -1,4 +1,4 @@
-.class synthetic Landroidx/constraintlayout/core/widgets/analyzer/HorizontalWidgetRun$1;
+.class public synthetic Landroidx/constraintlayout/core/widgets/analyzer/HorizontalWidgetRun$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$androidx$constraintlayout$core$widgets$analyzer$WidgetRun$RunType:[I
+.field public static final synthetic $SwitchMap$androidx$constraintlayout$core$widgets$analyzer$WidgetRun$RunType:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Landroidx/constraintlayout/core/widgets/analyzer/WidgetRun$RunType;->values()[Landroidx/constraintlayout/core/widgets/analyzer/WidgetRun$RunType;
 
     move-result-object v0

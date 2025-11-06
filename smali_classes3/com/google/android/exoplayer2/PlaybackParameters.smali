@@ -36,6 +36,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/PlaybackParameters;
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -44,9 +45,8 @@
 
     sput-object v0, Lcom/google/android/exoplayer2/PlaybackParameters;->DEFAULT:Lcom/google/android/exoplayer2/PlaybackParameters;
 
-    new-instance v0, Lcom/google/android/exoplayer2/e2;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/e2;-><init>()V
+    .line 2
+    sget-object v0, Ld/j/a/b/w1;->a:Ld/j/a/b/w1;
 
     sput-object v0, Lcom/google/android/exoplayer2/PlaybackParameters;->CREATOR:Lcom/google/android/exoplayer2/Bundleable$Creator;
 
@@ -136,21 +136,12 @@
     return-void
 .end method
 
-.method public static synthetic a(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/PlaybackParameters;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/PlaybackParameters;->lambda$static$0(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/PlaybackParameters;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 .method private static keyForField(I)Ljava/lang/String;
     .locals 1
 
     const/16 v0, 0x24
 
+    .line 1
     invoke-static {p0, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
     move-result-object p0
@@ -158,11 +149,12 @@
     return-object p0
 .end method
 
-.method private static synthetic lambda$static$0(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/PlaybackParameters;
+.method public static synthetic lambda$static$0(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/PlaybackParameters;
     .locals 3
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {v0}, Lcom/google/android/exoplayer2/PlaybackParameters;->keyForField(I)Ljava/lang/String;
 
     move-result-object v0
@@ -175,6 +167,7 @@
 
     const/4 v2, 0x1
 
+    .line 2
     invoke-static {v2}, Lcom/google/android/exoplayer2/PlaybackParameters;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -183,6 +176,7 @@
 
     move-result p0
 
+    .line 3
     new-instance v1, Lcom/google/android/exoplayer2/PlaybackParameters;
 
     invoke-direct {v1, v0, p0}, Lcom/google/android/exoplayer2/PlaybackParameters;-><init>(FF)V
@@ -210,6 +204,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 1
     const-class v2, Lcom/google/android/exoplayer2/PlaybackParameters;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -220,9 +215,11 @@
 
     goto :goto_1
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/PlaybackParameters;
 
+    .line 3
     iget v2, p0, Lcom/google/android/exoplayer2/PlaybackParameters;->speed:F
 
     iget v3, p1, Lcom/google/android/exoplayer2/PlaybackParameters;->speed:F
@@ -255,6 +252,7 @@
 .method public getMediaTimeUsForPlayoutTimeMs(J)J
     .locals 2
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/PlaybackParameters;->scaledUsPerMs:I
 
     int-to-long v0, p0
@@ -267,6 +265,7 @@
 .method public hashCode()I
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/PlaybackParameters;->speed:F
 
     invoke-static {v0}, Ljava/lang/Float;->floatToRawIntBits(F)I
@@ -279,6 +278,7 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
+    .line 2
     iget p0, p0, Lcom/google/android/exoplayer2/PlaybackParameters;->pitch:F
 
     invoke-static {p0}, Ljava/lang/Float;->floatToRawIntBits(F)I
@@ -293,12 +293,14 @@
 .method public toBundle()Landroid/os/Bundle;
     .locals 3
 
+    .line 1
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-static {v1}, Lcom/google/android/exoplayer2/PlaybackParameters;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -309,6 +311,7 @@
 
     const/4 v1, 0x1
 
+    .line 3
     invoke-static {v1}, Lcom/google/android/exoplayer2/PlaybackParameters;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -327,6 +330,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 1
     iget v1, p0, Lcom/google/android/exoplayer2/PlaybackParameters;->speed:F
 
     invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -367,6 +371,7 @@
     .annotation build Landroidx/annotation/CheckResult;
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/PlaybackParameters;
 
     iget p0, p0, Lcom/google/android/exoplayer2/PlaybackParameters;->pitch:F

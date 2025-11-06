@@ -1,4 +1,4 @@
-.class Lorg/dom4j/jaxb/JAXBReader$PruningElementHandler;
+.class public Lorg/dom4j/jaxb/JAXBReader$PruningElementHandler;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -25,6 +25,7 @@
 .method public constructor <init>(Lorg/dom4j/jaxb/JAXBReader;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/dom4j/jaxb/JAXBReader$PruningElementHandler;->this$0:Lorg/dom4j/jaxb/JAXBReader;
@@ -37,10 +38,12 @@
 .method public onEnd(Lorg/dom4j/ElementPath;)V
     .locals 0
 
+    .line 1
     invoke-interface {p1}, Lorg/dom4j/ElementPath;->getCurrent()Lorg/dom4j/Element;
 
     move-result-object p0
 
+    .line 2
     invoke-interface {p0}, Lorg/dom4j/Node;->detach()Lorg/dom4j/Node;
 
     return-void

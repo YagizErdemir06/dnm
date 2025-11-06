@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/extractor/ts/PsBinarySearchSeeker;
+.class public final Lcom/google/android/exoplayer2/extractor/ts/PsBinarySearchSeeker;
 .super Lcom/google/android/exoplayer2/extractor/BinarySearchSeeker;
 .source "SourceFile"
 
@@ -23,6 +23,7 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/util/TimestampAdjuster;JJ)V
     .locals 16
 
+    .line 1
     new-instance v1, Lcom/google/android/exoplayer2/extractor/BinarySearchSeeker$DefaultSeekTimestampConverter;
 
     invoke-direct {v1}, Lcom/google/android/exoplayer2/extractor/BinarySearchSeeker$DefaultSeekTimestampConverter;-><init>()V
@@ -35,11 +36,11 @@
 
     invoke-direct {v2, v3, v0}, Lcom/google/android/exoplayer2/extractor/ts/PsBinarySearchSeeker$PsScrSeeker;-><init>(Lcom/google/android/exoplayer2/util/TimestampAdjuster;Lcom/google/android/exoplayer2/extractor/ts/PsBinarySearchSeeker$1;)V
 
-    const-wide/16 v5, 0x0
-
     const-wide/16 v3, 0x1
 
     add-long v7, p2, v3
+
+    const-wide/16 v5, 0x0
 
     const-wide/16 v9, 0x0
 
@@ -61,6 +62,7 @@
 .method public static synthetic access$100([BI)I
     .locals 0
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/android/exoplayer2/extractor/ts/PsBinarySearchSeeker;->peekIntAtPosition([BI)I
 
     move-result p0
@@ -71,6 +73,7 @@
 .method private static peekIntAtPosition([BI)I
     .locals 2
 
+    .line 1
     aget-byte v0, p0, p1
 
     and-int/lit16 v0, v0, 0xff

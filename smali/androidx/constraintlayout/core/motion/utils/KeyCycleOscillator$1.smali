@@ -1,4 +1,4 @@
-.class Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator$1;
+.class public Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,13 +27,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;
+.field public final synthetic this$0:Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator$1;->this$0:Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

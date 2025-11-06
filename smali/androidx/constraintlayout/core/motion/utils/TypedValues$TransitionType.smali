@@ -60,7 +60,7 @@
 
     const-string v1, "from"
 
-    const-string/jumbo v2, "to"
+    const-string v2, "to"
 
     const-string v3, "pathMotionArc"
 
@@ -68,12 +68,13 @@
 
     const-string v5, "motionInterpolator"
 
-    const-string/jumbo v6, "staggered"
+    const-string v6, "staggered"
 
     const-string v7, "from"
 
     const-string/jumbo v8, "transitionFlags"
 
+    .line 1
     filled-new-array/range {v0 .. v8}, [Ljava/lang/String;
 
     move-result-object v0
@@ -86,6 +87,7 @@
 .method public static getId(Ljava/lang/String;)I
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -102,7 +104,7 @@
     goto/16 :goto_1
 
     :sswitch_0
-    const-string/jumbo v0, "staggered"
+    const-string v0, "staggered"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -150,7 +152,7 @@
     goto :goto_1
 
     :sswitch_3
-    const-string/jumbo v0, "to"
+    const-string v0, "to"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

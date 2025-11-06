@@ -16,7 +16,7 @@
 
 .field private mReProcessProxy:Lcom/xiaomi/camera/mivi/IReProcessor;
 
-.field protected mReceiveImageQueue:Ljava/util/concurrent/LinkedBlockingQueue;
+.field public mReceiveImageQueue:Ljava/util/concurrent/LinkedBlockingQueue;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/LinkedBlockingQueue<",
@@ -34,7 +34,7 @@
 
 .field private mReprocessThread:Ljava/lang/Thread;
 
-.field protected mResultImageDataQueue:Ljava/util/concurrent/ArrayBlockingQueue;
+.field public mResultImageDataQueue:Ljava/util/concurrent/ArrayBlockingQueue;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/ArrayBlockingQueue<",
@@ -50,15 +50,26 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
 
     invoke-direct {v0}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
 
     iput-object v0, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->mReceiveImageQueue:Ljava/util/concurrent/LinkedBlockingQueue;
 
+    .line 3
     new-instance v0, Ljava/util/concurrent/ArrayBlockingQueue;
 
     const/16 v1, 0x3c
@@ -67,6 +78,7 @@
 
     iput-object v0, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->mResultImageDataQueue:Ljava/util/concurrent/ArrayBlockingQueue;
 
+    .line 4
     new-instance v0, Ljava/util/concurrent/Semaphore;
 
     const/4 v2, 0x1
@@ -77,26 +89,32 @@
 
     const/4 v0, 0x0
 
+    .line 5
     iput-object v0, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->mReProcessProxy:Lcom/xiaomi/camera/mivi/IReProcessor;
 
     const/4 v0, 0x0
 
+    .line 6
     iput-boolean v0, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->mStop:Z
 
+    .line 7
     new-instance v2, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor$1;
 
     invoke-direct {v2, p0}, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor$1;-><init>(Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;)V
 
     iput-object v2, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->mMockCameraListener:Lcom/xiaomi/camera/mivi/ICameraImageReceiver$RequestCallback;
 
+    .line 8
     new-instance v2, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor$2;
 
     invoke-direct {v2, p0}, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor$2;-><init>(Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;)V
 
     iput-object v2, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->mReprocessCallback:Lcom/xiaomi/camera/mivi/IReProcessor$Callback;
 
+    .line 9
     iput-boolean v0, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->mStop:Z
 
+    .line 10
     invoke-static {}, Lcom/xiaomi/camera/mivi/ImageReceiverFactory;->getInstance()Lcom/xiaomi/camera/mivi/ImageReceiverFactory;
 
     move-result-object v0
@@ -105,6 +123,7 @@
 
     invoke-virtual {v0, p1, v1, v2}, Lcom/xiaomi/camera/mivi/ImageReceiverFactory;->init(Landroid/content/Context;ILcom/xiaomi/camera/mivi/ICameraImageReceiver$RequestCallback;)V
 
+    .line 11
     new-instance p1, Lcom/xiaomi/camera/mivi/ImageProcessor;
 
     invoke-direct {p1}, Lcom/xiaomi/camera/mivi/ImageProcessor;-><init>()V
@@ -114,36 +133,13 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->lambda$release$2()V
-
-    return-void
-.end method
-
 .method public static synthetic access$000(Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;)Ljava/util/concurrent/Semaphore;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->mReprocessSemaphore:Ljava/util/concurrent/Semaphore;
 
     return-object p0
-.end method
-
-.method public static synthetic b(Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->lambda$startReprocessLoop$1()V
-
-    return-void
-.end method
-
-.method public static synthetic c(Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->lambda$start$0()V
-
-    return-void
 .end method
 
 .method private synthetic lambda$release$2()V
@@ -151,16 +147,20 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->mStop:Z
 
+    .line 2
     iget-object v0, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->mReceiveThread:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
 
+    .line 3
     iget-object p0, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->mReprocessThread:Ljava/lang/Thread;
 
     invoke-virtual {p0}, Ljava/lang/Thread;->interrupt()V
 
+    .line 4
     invoke-static {}, Lcom/xiaomi/camera/mivi/ImageReceiverFactory;->getInstance()Lcom/xiaomi/camera/mivi/ImageReceiverFactory;
 
     move-result-object p0
@@ -173,6 +173,7 @@
 .method private synthetic lambda$start$0()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->loop()V
 
     return-void
@@ -189,6 +190,7 @@
     :goto_0
     const/4 v2, 0x0
 
+    .line 1
     :try_start_0
     iget-boolean v3, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->mStop:Z
 
@@ -196,10 +198,12 @@
 
     new-array v3, v2, [Ljava/lang/Object;
 
+    .line 2
     invoke-static {v1, v0, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_3
 
+    .line 3
     :cond_1
     iget-object v3, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->mResultImageDataQueue:Ljava/util/concurrent/ArrayBlockingQueue;
 
@@ -209,6 +213,7 @@
 
     check-cast v3, Lcom/xiaomi/camera/mivi/bean/ResultImageData;
 
+    .line 4
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -233,6 +238,7 @@
 
     invoke-static {v1, v4, v5}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 5
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -251,7 +257,8 @@
 
     invoke-static {v1, v4, v5}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {}, Lse/d;->l()Lse/d;
+    .line 6
+    invoke-static {}, Ld/o/f/d;->i()Ld/o/f/d;
 
     move-result-object v4
 
@@ -265,7 +272,7 @@
 
     const/4 v8, 0x1
 
-    invoke-virtual {v4, v5, v6, v7, v8}, Lse/d;->n(Ljava/lang/String;JZ)Lye/w;
+    invoke-virtual {v4, v5, v6, v7, v8}, Ld/o/f/d;->k(Ljava/lang/String;JZ)Ld/o/f/i/a0;
 
     move-result-object v4
 
@@ -275,17 +282,20 @@
 
     new-array v4, v2, [Ljava/lang/Object;
 
+    .line 7
     invoke-static {v1, v3, v4}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
+    .line 8
     :cond_2
-    invoke-virtual {v4}, Lye/w;->Q()Z
+    invoke-virtual {v4}, Ld/o/f/i/a0;->Q()Z
 
     move-result v5
 
     if-eqz v5, :cond_4
 
+    .line 9
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -302,6 +312,7 @@
 
     invoke-static {v1, v4}, Lcom/android/camera/log/LogK;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 10
     invoke-virtual {v3}, Lcom/xiaomi/camera/mivi/bean/ResultImageData;->getImages()[Landroid/media/Image;
 
     move-result-object v4
@@ -315,8 +326,10 @@
 
     aget-object v7, v4, v6
 
+    .line 11
     invoke-virtual {v7}, Landroid/media/Image;->close()V
 
+    .line 12
     invoke-static {}, Lcom/xiaomi/camera/imagecodec/ImagePool;->getInstance()Lcom/xiaomi/camera/imagecodec/ImagePool;
 
     move-result-object v8
@@ -327,8 +340,9 @@
 
     goto :goto_1
 
+    .line 13
     :cond_3
-    invoke-static {}, Lse/d;->l()Lse/d;
+    invoke-static {}, Ld/o/f/d;->i()Ld/o/f/d;
 
     move-result-object v4
 
@@ -340,16 +354,18 @@
 
     move-result-wide v6
 
-    invoke-virtual {v4, v5, v6, v7}, Lse/d;->y(Ljava/lang/String;J)V
+    invoke-virtual {v4, v5, v6, v7}, Ld/o/f/d;->y(Ljava/lang/String;J)V
 
     goto/16 :goto_0
 
+    .line 14
     :cond_4
     iget-object v5, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->mReprocessSemaphore:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v5}, Ljava/util/concurrent/Semaphore;->acquire()V
 
-    invoke-static {}, Lcom/android/camera/a6;->C2()Z
+    .line 15
+    invoke-static {}, Ld/d/a/z5;->r2()Z
 
     move-result v5
     :try_end_0
@@ -361,6 +377,7 @@
 
     if-eqz v5, :cond_5
 
+    .line 16
     :try_start_1
     invoke-virtual {v3}, Lcom/xiaomi/camera/mivi/bean/ResultImageData;->getImages()[Landroid/media/Image;
 
@@ -368,13 +385,14 @@
 
     if-eqz v5, :cond_5
 
+    .line 17
     invoke-virtual {v3}, Lcom/xiaomi/camera/mivi/bean/ResultImageData;->getImages()[Landroid/media/Image;
 
     move-result-object v5
 
     aget-object v5, v5, v2
 
-    invoke-virtual {v4}, Lye/w;->w()Ljava/lang/String;
+    invoke-virtual {v4}, Ld/o/f/i/a0;->w()Ljava/lang/String;
 
     move-result-object v8
 
@@ -384,32 +402,36 @@
 
     const-string v9, "algo_done"
 
-    invoke-static {v5, v8, v9}, Lte/d;->e(Landroid/media/Image;Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {v5, v8, v9}, Ld/o/f/e/d;->e(Landroid/media/Image;Ljava/lang/String;Ljava/lang/String;)Z
 
+    .line 18
     :cond_5
     iget-object v5, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->mIProcessor:Lcom/xiaomi/camera/mivi/IProcessor;
 
     invoke-virtual {v5, v3}, Lcom/xiaomi/camera/mivi/IProcessor;->process(Lcom/xiaomi/camera/mivi/bean/ResultImageData;)V
 
-    invoke-static {}, Lcom/android/camera/a6;->C2()Z
+    .line 19
+    invoke-static {}, Ld/d/a/z5;->r2()Z
 
     move-result v5
 
     if-eqz v5, :cond_6
 
+    .line 20
     invoke-virtual {v3}, Lcom/xiaomi/camera/mivi/bean/ResultImageData;->getImages()[Landroid/media/Image;
 
     move-result-object v5
 
     if-eqz v5, :cond_6
 
+    .line 21
     invoke-virtual {v3}, Lcom/xiaomi/camera/mivi/bean/ResultImageData;->getImages()[Landroid/media/Image;
 
     move-result-object v5
 
     aget-object v5, v5, v2
 
-    invoke-virtual {v4}, Lye/w;->w()Ljava/lang/String;
+    invoke-virtual {v4}, Ld/o/f/i/a0;->w()Ljava/lang/String;
 
     move-result-object v8
 
@@ -419,19 +441,21 @@
 
     const-string v7, "filter_done"
 
-    invoke-static {v5, v6, v7}, Lte/d;->e(Landroid/media/Image;Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {v5, v6, v7}, Ld/o/f/e/d;->e(Landroid/media/Image;Ljava/lang/String;Ljava/lang/String;)Z
 
+    .line 22
     :cond_6
-    invoke-virtual {v4}, Lye/w;->s()Lye/x;
+    invoke-virtual {v4}, Ld/o/f/i/a0;->s()Ld/o/f/i/b0;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lye/x;->F0()Z
+    invoke-virtual {v5}, Ld/o/f/i/b0;->F0()Z
 
     move-result v5
 
     if-eqz v5, :cond_9
 
+    .line 23
     iget-object v5, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->mReProcessProxy:Lcom/xiaomi/camera/mivi/IReProcessor;
 
     if-eqz v5, :cond_7
@@ -440,6 +464,7 @@
 
     if-nez v5, :cond_8
 
+    .line 24
     :cond_7
     new-instance v5, Lcom/xiaomi/camera/mivi/CvReProcessor;
 
@@ -450,10 +475,12 @@
     :cond_8
     const-string v5, "[2] reprocess with CvReProcessor"
 
+    .line 25
     invoke-static {v1, v5}, Lcom/android/camera/log/LogK;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_2
 
+    .line 26
     :cond_9
     iget-object v5, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->mReProcessProxy:Lcom/xiaomi/camera/mivi/IReProcessor;
 
@@ -463,6 +490,7 @@
 
     if-nez v5, :cond_b
 
+    .line 27
     :cond_a
     new-instance v5, Lcom/xiaomi/camera/mivi/VtReProcessorProxy;
 
@@ -473,10 +501,12 @@
     :cond_b
     const-string v5, "[2] reprocess with VtReProcessorProxy"
 
+    .line 28
     invoke-static {v1, v5}, Lcom/android/camera/log/LogK;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 29
     :goto_2
-    invoke-static {}, Lp8/m;->x()Lp8/m;
+    invoke-static {}, Ld/d/a/h7/n;->n()Ld/d/a/h7/n;
 
     move-result-object v5
 
@@ -488,7 +518,7 @@
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Lye/w;->N()J
+    invoke-virtual {v4}, Ld/o/f/i/a0;->N()J
 
     move-result-wide v7
 
@@ -498,8 +528,9 @@
 
     move-result-object v4
 
-    invoke-virtual {v5, v4}, Lp8/m;->W(Ljava/lang/String;)V
+    invoke-virtual {v5, v4}, Ld/d/a/h7/n;->T(Ljava/lang/String;)V
 
+    .line 30
     iget-object v4, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->mReProcessProxy:Lcom/xiaomi/camera/mivi/IReProcessor;
 
     iget-object v5, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->mReprocessCallback:Lcom/xiaomi/camera/mivi/IReProcessor$Callback;
@@ -513,14 +544,17 @@
     :catch_0
     move-exception v3
 
-    invoke-virtual {v3}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 31
+    invoke-virtual {v3}, Ljava/lang/InterruptedException;->printStackTrace()V
 
+    .line 32
     iget-boolean v3, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->mStop:Z
 
     if-eqz v3, :cond_0
 
     new-array p0, v2, [Ljava/lang/Object;
 
+    .line 33
     invoke-static {v1, v0, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :goto_3
@@ -530,30 +564,34 @@
 .method private loop()V
     .locals 7
 
-    const-string v0, "loop: start"
+    const-string v0, "ImageReceiverExecutor"
 
-    const-string v1, "ImageReceiverExecutor"
+    const-string v1, "loop: start"
 
-    invoke-static {v1, v0}, Lcom/android/camera/log/LogK;->d(Ljava/lang/String;Ljava/lang/String;)V
+    .line 1
+    invoke-static {v0, v1}, Lcom/android/camera/log/LogK;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 2
     :goto_0
-    iget-boolean v0, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->mStop:Z
+    iget-boolean v1, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->mStop:Z
 
     const-string v2, "stopReceiveLoop: "
 
     const/4 v3, 0x0
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
     new-array p0, v3, [Ljava/lang/Object;
 
-    invoke-static {v1, v2, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 3
+    invoke-static {v0, v2, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_2
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
+    .line 4
     :try_start_0
     iget-object v4, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->mReceiveImageQueue:Ljava/util/concurrent/LinkedBlockingQueue;
 
@@ -565,14 +603,15 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_1
 
+    .line 5
     :try_start_1
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v5, "loop: after take receiver data from queue, the size is > "
 
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v5, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->mReceiveImageQueue:Ljava/util/concurrent/LinkedBlockingQueue;
 
@@ -580,22 +619,22 @@
 
     move-result v5
 
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
     new-array v5, v3, [Ljava/lang/Object;
 
-    invoke-static {v1, v0, v5}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v5}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_1
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
 
     goto :goto_3
 
     :catch_0
-    move-exception v0
+    move-exception v1
 
     goto :goto_1
 
@@ -604,20 +643,23 @@
 
     move-object v6, v4
 
-    move-object v4, v0
+    move-object v4, v1
 
-    move-object v0, v6
+    move-object v1, v6
 
+    .line 6
     :goto_1
-    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/InterruptedException;->printStackTrace()V
 
-    iget-boolean v0, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->mStop:Z
+    .line 7
+    iget-boolean v1, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->mStop:Z
 
-    if-eqz v0, :cond_1
+    if-eqz v1, :cond_1
 
     new-array p0, v3, [Ljava/lang/Object;
 
-    invoke-static {v1, v2, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 8
+    invoke-static {v0, v2, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :goto_2
     return-void
@@ -628,48 +670,52 @@
 
     const-string p0, "loop: requestData is null"
 
-    invoke-static {v1, p0}, Lcom/android/camera/log/LogK;->w(Ljava/lang/String;Ljava/lang/String;)V
+    .line 9
+    invoke-static {v0, p0}, Lcom/android/camera/log/LogK;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
+    .line 10
     :cond_2
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v2, "[1] loop: start submitRequest data: "
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-static {v1, v0}, Lcom/android/camera/log/LogK;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/android/camera/log/LogK;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 11
     invoke-static {}, Lcom/xiaomi/camera/mivi/ImageReceiverFactory;->getInstance()Lcom/xiaomi/camera/mivi/ImageReceiverFactory;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0, v4}, Lcom/xiaomi/camera/mivi/ImageReceiverFactory;->submitRequest(Lcom/xiaomi/camera/mivi/bean/RequestData;)V
+    invoke-virtual {v1, v4}, Lcom/xiaomi/camera/mivi/ImageReceiverFactory;->submitRequest(Lcom/xiaomi/camera/mivi/bean/RequestData;)V
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 12
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v2, "[1] loop: end submitRequest data: "
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-static {v1, v0}, Lcom/android/camera/log/LogK;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/android/camera/log/LogK;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -677,11 +723,12 @@
 .method private startReprocessLoop()V
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/Thread;
 
-    new-instance v1, Lcom/xiaomi/camera/mivi/f;
+    new-instance v1, Ld/o/f/n/g;
 
-    invoke-direct {v1, p0}, Lcom/xiaomi/camera/mivi/f;-><init>(Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;)V
+    invoke-direct {v1, p0}, Ld/o/f/n/g;-><init>(Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;)V
 
     const-string v2, "MockCameraReprocessThread"
 
@@ -689,6 +736,7 @@
 
     iput-object v0, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->mReprocessThread:Ljava/lang/Thread;
 
+    .line 2
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     return-void
@@ -696,9 +744,33 @@
 
 
 # virtual methods
+.method public synthetic a()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->lambda$release$2()V
+
+    return-void
+.end method
+
+.method public synthetic b()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->lambda$start$0()V
+
+    return-void
+.end method
+
+.method public synthetic c()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->lambda$startReprocessLoop$1()V
+
+    return-void
+.end method
+
 .method public release()V
     .locals 3
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
     const/4 v0, 0x0
@@ -709,16 +781,19 @@
 
     const-string v2, "release: "
 
+    .line 1
     invoke-static {v1, v2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     new-instance v0, Ljava/lang/Thread;
 
-    new-instance v1, Lcom/xiaomi/camera/mivi/d;
+    new-instance v1, Ld/o/f/n/f;
 
-    invoke-direct {v1, p0}, Lcom/xiaomi/camera/mivi/d;-><init>(Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;)V
+    invoke-direct {v1, p0}, Ld/o/f/n/f;-><init>(Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;)V
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
+    .line 3
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     return-void
@@ -727,11 +802,12 @@
 .method public start()V
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/Thread;
 
-    new-instance v1, Lcom/xiaomi/camera/mivi/e;
+    new-instance v1, Ld/o/f/n/h;
 
-    invoke-direct {v1, p0}, Lcom/xiaomi/camera/mivi/e;-><init>(Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;)V
+    invoke-direct {v1, p0}, Ld/o/f/n/h;-><init>(Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;)V
 
     const-string v2, "MockCameraReceiveThread"
 
@@ -739,8 +815,10 @@
 
     iput-object v0, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->mReceiveThread:Ljava/lang/Thread;
 
+    .line 2
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
+    .line 3
     invoke-direct {p0}, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->startReprocessLoop()V
 
     return-void
@@ -748,7 +826,16 @@
 
 .method public submit(Lcom/xiaomi/camera/mivi/bean/RequestData;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "requestData"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -767,6 +854,7 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/LogK;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 2
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;->mReceiveImageQueue:Ljava/util/concurrent/LinkedBlockingQueue;
 
@@ -779,8 +867,10 @@
     :catch_0
     move-exception p1
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 3
+    invoke-virtual {p1}, Ljava/lang/InterruptedException;->printStackTrace()V
 
+    .line 4
     :goto_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -806,6 +896,7 @@
 
     const-string p0, "submit: X"
 
+    .line 5
     invoke-static {v1, p0}, Lcom/android/camera/log/LogK;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void

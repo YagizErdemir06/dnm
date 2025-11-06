@@ -18,8 +18,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;
 
     invoke-direct {v0}, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;-><init>()V
@@ -48,6 +50,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -78,6 +81,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/DirectHandler;->defaultHandler:Lcom/xiaomi/milab/videosdk/message/DefaultHandler;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->handle(IIILjava/lang/Object;)V
@@ -102,6 +106,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/DirectHandler;->defaultHandler:Lcom/xiaomi/milab/videosdk/message/DefaultHandler;
 
     invoke-virtual {p0, p1}, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->setAudioExtractCallback(Lcom/xiaomi/milab/videosdk/interfaces/AudioExtractCallback;)V
@@ -120,6 +125,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/DirectHandler;->defaultHandler:Lcom/xiaomi/milab/videosdk/message/DefaultHandler;
 
     invoke-virtual {p0, p1}, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->setExportCallback(Lcom/xiaomi/milab/videosdk/interfaces/ExportCallback;)V
@@ -138,6 +144,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/DirectHandler;->defaultHandler:Lcom/xiaomi/milab/videosdk/message/DefaultHandler;
 
     invoke-virtual {p0, p1}, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->setPlayCallback(Lcom/xiaomi/milab/videosdk/interfaces/PlayCallback;)V
@@ -156,6 +163,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/DirectHandler;->defaultHandler:Lcom/xiaomi/milab/videosdk/message/DefaultHandler;
 
     invoke-virtual {p0, p1}, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->setPreviewExportCallback(Lcom/xiaomi/milab/videosdk/interfaces/ExportCallback;)V
@@ -174,6 +182,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/DirectHandler;->defaultHandler:Lcom/xiaomi/milab/videosdk/message/DefaultHandler;
 
     invoke-virtual {p0, p1}, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->setTimelineCallback(Lcom/xiaomi/milab/videosdk/interfaces/TimelineCallback;)V
@@ -192,6 +201,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/DirectHandler;->defaultHandler:Lcom/xiaomi/milab/videosdk/message/DefaultHandler;
 
     invoke-virtual {p0, p1}, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->setTranscodeCallback(Lcom/xiaomi/milab/videosdk/message/TranscodeCallback;)V

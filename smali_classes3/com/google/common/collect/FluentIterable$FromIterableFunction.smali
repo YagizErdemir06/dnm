@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/FluentIterable$FromIterableFunction;
+.class public Lcom/google/common/collect/FluentIterable$FromIterableFunction;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -35,6 +35,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

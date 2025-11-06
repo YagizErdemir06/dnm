@@ -30,6 +30,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -96,6 +97,7 @@
 .method public static zze(Ljava/lang/String;)Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;
     .locals 2
 
+    .line 1
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_vision_common/zzmw;->zza()Lcom/google/android/gms/internal/mlkit_vision_common/zzmw;
 
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_vision_common/zzmw;->zzb()Z
@@ -104,6 +106,7 @@
 
     if-nez p0, :cond_0
 
+    .line 2
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_vision_common/zzlv;->zza()Lcom/google/android/gms/internal/mlkit_vision_common/zzlv;
 
     move-result-object p0
@@ -115,6 +118,7 @@
 
     const-string v0, "detectorTaskWithResource#run"
 
+    .line 3
     invoke-interface {p0, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -125,8 +129,10 @@
 
     invoke-direct {v1, v0}, Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;-><init>(Ljava/lang/String;)V
 
+    .line 4
     invoke-interface {p0, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 5
     :cond_1
     invoke-interface {p0, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -142,6 +148,7 @@
 .method public close()V
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;->zze:J
 
     const-wide/16 v2, 0x0
@@ -150,10 +157,12 @@
 
     if-eqz v2, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0, v1}, Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;->zzd(J)V
 
     return-void
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -167,6 +176,7 @@
 .method public zzb()Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;
     .locals 4
 
+    .line 1
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v0
@@ -181,8 +191,9 @@
 .end method
 
 .method public zzc(J)V
-    .locals 6
+    .locals 7
 
+    .line 1
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v0
@@ -207,6 +218,7 @@
 
     if-ltz v2, :cond_0
 
+    .line 2
     invoke-direct {p0}, Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;->zza()V
 
     :cond_0
@@ -230,6 +242,7 @@
 
     iget-wide v2, p0, Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;->zzg:J
 
+    .line 3
     invoke-static {v2, v3, p1, p2}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v2
@@ -238,6 +251,7 @@
 
     iget-wide v2, p0, Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;->zzh:J
 
+    .line 4
     invoke-static {v2, v3, p1, p2}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide v2
@@ -262,64 +276,71 @@
 
     aput-object v4, v2, v3
 
+    .line 5
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
 
     aput-object p1, v2, v1
 
-    iget p1, p0, Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;->zzc:I
+    const/4 p1, 0x2
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget p2, p0, Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;->zzc:I
 
-    move-result-object p1
+    .line 6
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const/4 p2, 0x2
+    move-result-object p2
 
-    aput-object p1, v2, p2
+    aput-object p2, v2, p1
 
-    iget-wide p1, p0, Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;->zzg:J
+    const/4 p1, 0x3
 
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iget-wide v3, p0, Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;->zzg:J
 
-    move-result-object p1
+    .line 7
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    const/4 p2, 0x3
+    move-result-object p2
 
-    aput-object p1, v2, p2
+    aput-object p2, v2, p1
 
-    iget-wide p1, p0, Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;->zzh:J
+    const/4 p1, 0x4
 
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iget-wide v3, p0, Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;->zzh:J
 
-    move-result-object p1
+    .line 8
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    const/4 p2, 0x4
+    move-result-object p2
 
-    aput-object p1, v2, p2
+    aput-object p2, v2, p1
 
-    iget-wide p1, p0, Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;->zzd:D
+    const/4 p1, 0x5
 
-    iget v1, p0, Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;->zzc:I
+    iget-wide v3, p0, Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;->zzd:D
 
-    int-to-double v3, v1
+    iget p2, p0, Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;->zzc:I
 
-    div-double/2addr p1, v3
+    int-to-double v5, p2
 
-    double-to-int p1, p1
+    div-double/2addr v3, v5
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    double-to-int p2, v3
 
-    move-result-object p1
+    .line 9
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const/4 p2, 0x5
+    move-result-object p2
 
-    aput-object p1, v2, p2
+    aput-object p2, v2, p1
 
     const-string p1, "[%s] cur=%dus, counts=%d, min=%dus, max=%dus, avg=%dus"
 
+    .line 10
     invoke-static {v0, p1, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
+    .line 11
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_vision_common/zzmw;->zza()Lcom/google/android/gms/internal/mlkit_vision_common/zzmw;
 
     :cond_1
@@ -329,6 +350,7 @@
 
     if-nez p1, :cond_2
 
+    .line 12
     invoke-direct {p0}, Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;->zza()V
 
     :cond_2
@@ -338,6 +360,7 @@
 .method public zzd(J)V
     .locals 4
 
+    .line 1
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v0
@@ -348,6 +371,7 @@
 
     sub-long/2addr v0, p1
 
+    .line 2
     invoke-virtual {p0, v0, v1}, Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;->zzc(J)V
 
     return-void

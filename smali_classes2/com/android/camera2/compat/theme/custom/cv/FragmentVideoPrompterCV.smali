@@ -7,6 +7,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter;-><init>()V
 
     return-void
@@ -17,7 +18,7 @@
 .method public getLayoutResourceId()I
     .locals 0
 
-    const p0, 0x7f0e014f
+    const p0, 0x7f0e0140
 
     return p0
 .end method
@@ -25,7 +26,7 @@
 .method public getPlayAnimId()I
     .locals 0
 
-    const p0, 0x7f13019a
+    const p0, 0x7f120199
 
     return p0
 .end method
@@ -33,7 +34,7 @@
 .method public getStopAnimId()I
     .locals 0
 
-    const p0, 0x7f13019c
+    const p0, 0x7f12019b
 
     return p0
 .end method
@@ -41,7 +42,7 @@
 .method public getZoomInAnimId()I
     .locals 0
 
-    const p0, 0x7f13019e
+    const p0, 0x7f12019d
 
     return p0
 .end method
@@ -49,7 +50,7 @@
 .method public getZoomOutAnimId()I
     .locals 0
 
-    const p0, 0x7f1301a1
+    const p0, 0x7f1201a0
 
     return p0
 .end method
@@ -57,15 +58,14 @@
 .method public setCharacterStyle()V
     .locals 7
 
+    .line 1
     new-instance v6, Landroid/text/style/TextAppearanceSpan;
-
-    const/4 v1, 0x0
 
     const-string v0, "sans-serif-medium"
 
-    const/4 v2, 0x1
+    const/4 v1, 0x1
 
-    invoke-static {v0, v2}, Landroid/graphics/Typeface;->create(Ljava/lang/String;I)Landroid/graphics/Typeface;
+    invoke-static {v0, v1}, Landroid/graphics/Typeface;->create(Ljava/lang/String;I)Landroid/graphics/Typeface;
 
     move-result-object v0
 
@@ -73,13 +73,16 @@
 
     move-result v2
 
-    const/4 v3, 0x0
-
     const/4 v0, -0x1
 
+    .line 2
     invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
     move-result-object v4
+
+    const/4 v1, 0x0
+
+    const/4 v3, 0x0
 
     const/4 v5, 0x0
 

@@ -65,6 +65,7 @@
 .method public final close()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/Response;->getResult()Lcom/google/android/gms/common/api/Result;
 
     move-result-object p0
@@ -87,6 +88,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/Response;->getResult()Lcom/google/android/gms/common/api/Result;
 
     move-result-object p0
@@ -103,6 +105,7 @@
 .method public final getCount()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/Response;->getResult()Lcom/google/android/gms/common/api/Result;
 
     move-result-object p0
@@ -121,6 +124,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/Response;->getResult()Lcom/google/android/gms/common/api/Result;
 
     move-result-object p0
@@ -137,6 +141,7 @@
 .method public final isClosed()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/Response;->getResult()Lcom/google/android/gms/common/api/Result;
 
     move-result-object p0
@@ -163,6 +168,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/Response;->getResult()Lcom/google/android/gms/common/api/Result;
 
     move-result-object p0
@@ -179,6 +185,7 @@
 .method public final release()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/Response;->getResult()Lcom/google/android/gms/common/api/Result;
 
     move-result-object p0
@@ -203,6 +210,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/Response;->getResult()Lcom/google/android/gms/common/api/Result;
 
     move-result-object p0

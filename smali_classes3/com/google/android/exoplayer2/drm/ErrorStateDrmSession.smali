@@ -14,8 +14,10 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/drm/DrmSession$DrmSessionException;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -54,6 +56,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/drm/ErrorStateDrmSession;->error:Lcom/google/android/exoplayer2/drm/DrmSession$DrmSessionException;
 
     return-object p0
@@ -72,6 +75,7 @@
 .method public final getSchemeUuid()Ljava/util/UUID;
     .locals 0
 
+    .line 1
     sget-object p0, Lcom/google/android/exoplayer2/C;->UUID_NIL:Ljava/util/UUID;
 
     return-object p0

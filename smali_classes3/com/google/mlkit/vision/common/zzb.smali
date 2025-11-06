@@ -1,4 +1,4 @@
-.class final Lcom/google/mlkit/vision/common/zzb;
+.class public final Lcom/google/mlkit/vision/common/zzb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -31,6 +31,7 @@
 .method public final zzb()[Landroid/media/Image$Plane;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/vision/common/zzb;->zza:Landroid/media/Image;
 
     invoke-virtual {p0}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;

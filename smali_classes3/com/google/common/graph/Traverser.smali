@@ -91,6 +91,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/graph/Traverser$1;
 
     invoke-direct {v0, p0, p0}, Lcom/google/common/graph/Traverser$1;-><init>(Lcom/google/common/graph/SuccessorsFunction;Lcom/google/common/graph/SuccessorsFunction;)V
@@ -112,10 +113,12 @@
         }
     .end annotation
 
+    .line 1
     instance-of v0, p0, Lcom/google/common/graph/BaseGraph;
 
     if-eqz v0, :cond_0
 
+    .line 2
     move-object v0, p0
 
     check-cast v0, Lcom/google/common/graph/BaseGraph;
@@ -128,11 +131,13 @@
 
     invoke-static {v0, v1}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 3
     :cond_0
     instance-of v0, p0, Lcom/google/common/graph/Network;
 
     if-eqz v0, :cond_1
 
+    .line 4
     move-object v0, p0
 
     check-cast v0, Lcom/google/common/graph/Network;
@@ -145,6 +150,7 @@
 
     invoke-static {v0, v1}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 5
     :cond_1
     new-instance v0, Lcom/google/common/graph/Traverser$2;
 
@@ -165,10 +171,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/collect/ImmutableSet;->copyOf(Ljava/lang/Iterable;)Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p1
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/common/collect/ImmutableSet;->iterator()Lcom/google/common/collect/UnmodifiableIterator;
 
     move-result-object v0
@@ -184,6 +192,7 @@
 
     move-result-object v1
 
+    .line 3
     iget-object v2, p0, Lcom/google/common/graph/Traverser;->successorFunction:Lcom/google/common/graph/SuccessorsFunction;
 
     invoke-interface {v2, v1}, Lcom/google/common/graph/SuccessorsFunction;->successors(Ljava/lang/Object;)Ljava/lang/Iterable;

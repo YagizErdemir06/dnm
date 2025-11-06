@@ -77,6 +77,7 @@
 .method public getData()[B
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/drm/ExoMediaDrm$KeyRequest;->data:[B
 
     return-object p0
@@ -85,6 +86,7 @@
 .method public getLicenseServerUrl()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/drm/ExoMediaDrm$KeyRequest;->licenseServerUrl:Ljava/lang/String;
 
     return-object p0
@@ -93,6 +95,7 @@
 .method public getRequestType()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/drm/ExoMediaDrm$KeyRequest;->requestType:I
 
     return p0

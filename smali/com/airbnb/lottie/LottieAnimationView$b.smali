@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Li/j;
+.implements Ld/b/a/j;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Li/j<",
-        "Li/f;",
+        "Ld/b/a/j<",
+        "Ld/b/a/f;",
         ">;"
     }
 .end annotation
@@ -34,6 +34,7 @@
 .method public constructor <init>(Lcom/airbnb/lottie/LottieAnimationView;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/airbnb/lottie/LottieAnimationView$b;->a:Lcom/airbnb/lottie/LottieAnimationView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,22 +44,24 @@
 
 
 # virtual methods
-.method public a(Li/f;)V
+.method public bridge synthetic a(Ljava/lang/Object;)V
     .locals 0
 
-    iget-object p0, p0, Lcom/airbnb/lottie/LottieAnimationView$b;->a:Lcom/airbnb/lottie/LottieAnimationView;
+    .line 1
+    check-cast p1, Ld/b/a/f;
 
-    invoke-virtual {p0, p1}, Lcom/airbnb/lottie/LottieAnimationView;->setComposition(Li/f;)V
+    invoke-virtual {p0, p1}, Lcom/airbnb/lottie/LottieAnimationView$b;->b(Ld/b/a/f;)V
 
     return-void
 .end method
 
-.method public bridge synthetic onResult(Ljava/lang/Object;)V
+.method public b(Ld/b/a/f;)V
     .locals 0
 
-    check-cast p1, Li/f;
+    .line 1
+    iget-object p0, p0, Lcom/airbnb/lottie/LottieAnimationView$b;->a:Lcom/airbnb/lottie/LottieAnimationView;
 
-    invoke-virtual {p0, p1}, Lcom/airbnb/lottie/LottieAnimationView$b;->a(Li/f;)V
+    invoke-virtual {p0, p1}, Lcom/airbnb/lottie/LottieAnimationView;->setComposition(Ld/b/a/f;)V
 
     return-void
 .end method

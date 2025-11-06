@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/util/SystemHandlerWrapper;
+.class public final Lcom/google/android/exoplayer2/util/SystemHandlerWrapper;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -40,6 +40,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     const/16 v1, 0x32
@@ -54,8 +55,10 @@
 .method public constructor <init>(Landroid/os/Handler;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/util/SystemHandlerWrapper;->handler:Landroid/os/Handler;
 
     return-void
@@ -64,6 +67,7 @@
 .method public static synthetic access$100(Lcom/google/android/exoplayer2/util/SystemHandlerWrapper$SystemMessage;)V
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/SystemHandlerWrapper;->recycleMessage(Lcom/google/android/exoplayer2/util/SystemHandlerWrapper$SystemMessage;)V
 
     return-void
@@ -72,10 +76,12 @@
 .method private static obtainSystemMessage()Lcom/google/android/exoplayer2/util/SystemHandlerWrapper$SystemMessage;
     .locals 3
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/util/SystemHandlerWrapper;->messagePool:Ljava/util/List;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
@@ -83,6 +89,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 3
     new-instance v1, Lcom/google/android/exoplayer2/util/SystemHandlerWrapper$SystemMessage;
 
     const/4 v2, 0x0
@@ -91,6 +98,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -112,6 +120,7 @@
     :catchall_0
     move-exception v1
 
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -122,10 +131,12 @@
 .method private static recycleMessage(Lcom/google/android/exoplayer2/util/SystemHandlerWrapper$SystemMessage;)V
     .locals 3
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/util/SystemHandlerWrapper;->messagePool:Ljava/util/List;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -135,8 +146,10 @@
 
     if-ge v1, v2, :cond_0
 
+    .line 3
     invoke-interface {v0, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 4
     :cond_0
     monitor-exit v0
 
@@ -157,6 +170,7 @@
 .method public getLooper()Landroid/os/Looper;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/SystemHandlerWrapper;->handler:Landroid/os/Handler;
 
     invoke-virtual {p0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
@@ -169,6 +183,7 @@
 .method public hasMessages(I)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/SystemHandlerWrapper;->handler:Landroid/os/Handler;
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->hasMessages(I)Z
@@ -275,6 +290,7 @@
 .method public post(Ljava/lang/Runnable;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/SystemHandlerWrapper;->handler:Landroid/os/Handler;
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
@@ -287,6 +303,7 @@
 .method public postAtFrontOfQueue(Ljava/lang/Runnable;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/SystemHandlerWrapper;->handler:Landroid/os/Handler;
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
@@ -299,6 +316,7 @@
 .method public postDelayed(Ljava/lang/Runnable;J)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/SystemHandlerWrapper;->handler:Landroid/os/Handler;
 
     invoke-virtual {p0, p1, p2, p3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
@@ -315,6 +333,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/SystemHandlerWrapper;->handler:Landroid/os/Handler;
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
@@ -325,6 +344,7 @@
 .method public removeMessages(I)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/SystemHandlerWrapper;->handler:Landroid/os/Handler;
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->removeMessages(I)V
@@ -335,6 +355,7 @@
 .method public sendEmptyMessage(I)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/SystemHandlerWrapper;->handler:Landroid/os/Handler;
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
@@ -347,6 +368,7 @@
 .method public sendEmptyMessageAtTime(IJ)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/SystemHandlerWrapper;->handler:Landroid/os/Handler;
 
     invoke-virtual {p0, p1, p2, p3}, Landroid/os/Handler;->sendEmptyMessageAtTime(IJ)Z
@@ -359,6 +381,7 @@
 .method public sendEmptyMessageDelayed(II)Z
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/SystemHandlerWrapper;->handler:Landroid/os/Handler;
 
     int-to-long v0, p2
@@ -373,6 +396,7 @@
 .method public sendMessageAtFrontOfQueue(Lcom/google/android/exoplayer2/util/HandlerWrapper$Message;)Z
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/google/android/exoplayer2/util/SystemHandlerWrapper$SystemMessage;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/SystemHandlerWrapper;->handler:Landroid/os/Handler;

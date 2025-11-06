@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Tables$TransformedTable;
+.class public Lcom/google/common/collect/Tables$TransformedTable;
 .super Lcom/google/common/collect/AbstractTable;
 .source "SourceFile"
 
@@ -31,7 +31,7 @@
 
 
 # instance fields
-.field final fromTable:Lcom/google/common/collect/Table;
+.field public final fromTable:Lcom/google/common/collect/Table;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/Table<",
@@ -40,7 +40,7 @@
     .end annotation
 .end field
 
-.field final function:Lcom/google/common/base/Function;
+.field public final function:Lcom/google/common/base/Function;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/base/Function<",
@@ -63,8 +63,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/AbstractTable;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -73,6 +75,7 @@
 
     iput-object p1, p0, Lcom/google/common/collect/Tables$TransformedTable;->fromTable:Lcom/google/common/collect/Table;
 
+    .line 3
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -99,6 +102,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/Tables$TransformedTable$1;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/Tables$TransformedTable$1;-><init>(Lcom/google/common/collect/Tables$TransformedTable;)V
@@ -117,6 +121,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Tables$TransformedTable;->fromTable:Lcom/google/common/collect/Table;
 
     invoke-interface {v0}, Lcom/google/common/collect/Table;->cellSet()Ljava/util/Set;
@@ -141,6 +146,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Tables$TransformedTable;->fromTable:Lcom/google/common/collect/Table;
 
     invoke-interface {p0}, Lcom/google/common/collect/Table;->clear()V
@@ -162,6 +168,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Tables$TransformedTable;->fromTable:Lcom/google/common/collect/Table;
 
     invoke-interface {v0, p1}, Lcom/google/common/collect/Table;->column(Ljava/lang/Object;)Ljava/util/Map;
@@ -187,6 +194,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Tables$TransformedTable;->fromTable:Lcom/google/common/collect/Table;
 
     invoke-interface {p0}, Lcom/google/common/collect/Table;->columnKeySet()Ljava/util/Set;
@@ -208,10 +216,12 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/Tables$TransformedTable$3;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/Tables$TransformedTable$3;-><init>(Lcom/google/common/collect/Tables$TransformedTable;)V
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/Tables$TransformedTable;->fromTable:Lcom/google/common/collect/Table;
 
     invoke-interface {p0}, Lcom/google/common/collect/Table;->columnMap()Ljava/util/Map;
@@ -236,6 +246,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Tables$TransformedTable;->fromTable:Lcom/google/common/collect/Table;
 
     invoke-interface {p0, p1, p2}, Lcom/google/common/collect/Table;->contains(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -255,6 +266,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Tables$TransformedTable;->fromTable:Lcom/google/common/collect/Table;
 
     invoke-interface {v0}, Lcom/google/common/collect/Table;->values()Ljava/util/Collection;
@@ -292,12 +304,14 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/Tables$TransformedTable;->contains(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/Tables$TransformedTable;->function:Lcom/google/common/base/Function;
 
     iget-object p0, p0, Lcom/google/common/collect/Tables$TransformedTable;->fromTable:Lcom/google/common/collect/Table;
@@ -346,6 +360,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -363,6 +378,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -392,12 +408,14 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/Tables$TransformedTable;->contains(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/Tables$TransformedTable;->function:Lcom/google/common/base/Function;
 
     iget-object p0, p0, Lcom/google/common/collect/Tables$TransformedTable;->fromTable:Lcom/google/common/collect/Table;
@@ -437,6 +455,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Tables$TransformedTable;->fromTable:Lcom/google/common/collect/Table;
 
     invoke-interface {v0, p1}, Lcom/google/common/collect/Table;->row(Ljava/lang/Object;)Ljava/util/Map;
@@ -462,6 +481,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Tables$TransformedTable;->fromTable:Lcom/google/common/collect/Table;
 
     invoke-interface {p0}, Lcom/google/common/collect/Table;->rowKeySet()Ljava/util/Set;
@@ -483,10 +503,12 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/Tables$TransformedTable$2;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/Tables$TransformedTable$2;-><init>(Lcom/google/common/collect/Tables$TransformedTable;)V
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/Tables$TransformedTable;->fromTable:Lcom/google/common/collect/Table;
 
     invoke-interface {p0}, Lcom/google/common/collect/Table;->rowMap()Ljava/util/Map;
@@ -503,6 +525,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Tables$TransformedTable;->fromTable:Lcom/google/common/collect/Table;
 
     invoke-interface {p0}, Lcom/google/common/collect/Table;->size()I

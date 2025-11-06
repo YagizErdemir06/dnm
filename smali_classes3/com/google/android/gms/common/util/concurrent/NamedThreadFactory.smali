@@ -27,6 +27,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     invoke-static {}, Ljava/util/concurrent/Executors;->defaultThreadFactory()Ljava/util/concurrent/ThreadFactory;
@@ -37,6 +38,7 @@
 
     const-string v0, "Name must not be null"
 
+    .line 2
     invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p1, p0, Lcom/google/android/gms/common/util/concurrent/NamedThreadFactory;->zza:Ljava/lang/String;
@@ -55,6 +57,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/util/concurrent/NamedThreadFactory;->zzb:Ljava/util/concurrent/ThreadFactory;
 
     new-instance v1, Lcom/google/android/gms/common/util/concurrent/zza;
@@ -69,6 +72,7 @@
 
     iget-object p0, p0, Lcom/google/android/gms/common/util/concurrent/NamedThreadFactory;->zza:Ljava/lang/String;
 
+    .line 2
     invoke-virtual {p1, p0}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
 
     return-object p1

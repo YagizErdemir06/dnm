@@ -128,6 +128,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of p0, p1, Lcom/google/android/gms/signin/SignInOptions;
 
@@ -137,37 +138,44 @@
 
     return v1
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/gms/signin/SignInOptions;
 
+    .line 3
     iget-boolean p0, p1, Lcom/google/android/gms/signin/SignInOptions;->zab:Z
 
     const/4 p0, 0x0
 
+    .line 4
     invoke-static {p0, p0}, Lcom/google/android/gms/common/internal/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
+    .line 5
     invoke-static {p0, p0}, Lcom/google/android/gms/common/internal/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
+    .line 6
     invoke-static {p0, p0}, Lcom/google/android/gms/common/internal/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
+    .line 7
     invoke-static {p0, p0}, Lcom/google/android/gms/common/internal/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
+    .line 8
     invoke-static {p0, p0}, Lcom/google/android/gms/common/internal/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -187,6 +195,7 @@
 
     new-array p0, p0, [Ljava/lang/Object;
 
+    .line 1
     sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     const/4 v1, 0x0
@@ -227,6 +236,7 @@
 
     aput-object v2, p0, v0
 
+    .line 2
     invoke-static {p0}, Lcom/google/android/gms/common/internal/Objects;->hashCode([Ljava/lang/Object;)I
 
     move-result p0

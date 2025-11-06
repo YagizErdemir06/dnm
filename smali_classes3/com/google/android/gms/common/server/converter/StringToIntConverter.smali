@@ -41,7 +41,7 @@
 
 
 # instance fields
-.field final zaa:I
+.field public final zaa:I
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$VersionField;
         id = 0x1
     .end annotation
@@ -177,6 +177,7 @@
     .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/server/converter/StringToIntConverter;->zab:Ljava/util/HashMap;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -187,6 +188,7 @@
 
     iget-object v0, p0, Lcom/google/android/gms/common/server/converter/StringToIntConverter;->zac:Landroid/util/SparseArray;
 
+    .line 2
     invoke-virtual {v0, p2, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     return-object p0
@@ -199,22 +201,26 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->beginObjectHeader(Landroid/os/Parcel;)I
 
     move-result p2
 
-    const/4 v0, 0x1
+    iget v0, p0, Lcom/google/android/gms/common/server/converter/StringToIntConverter;->zaa:I
 
-    iget v1, p0, Lcom/google/android/gms/common/server/converter/StringToIntConverter;->zaa:I
+    const/4 v1, 0x1
 
-    invoke-static {p1, v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
+    .line 2
+    invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
     new-instance v0, Ljava/util/ArrayList;
 
+    .line 3
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iget-object v1, p0, Lcom/google/android/gms/common/server/converter/StringToIntConverter;->zab:Ljava/util/HashMap;
 
+    .line 4
     invoke-virtual {v1}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
     move-result-object v1
@@ -236,6 +242,7 @@
 
     check-cast v2, Ljava/lang/String;
 
+    .line 5
     new-instance v3, Lcom/google/android/gms/common/server/converter/zac;
 
     iget-object v4, p0, Lcom/google/android/gms/common/server/converter/StringToIntConverter;->zab:Ljava/util/HashMap;
@@ -261,8 +268,10 @@
 
     const/4 v1, 0x0
 
+    .line 6
     invoke-static {p1, p0, v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeTypedList(Landroid/os/Parcel;ILjava/util/List;Z)V
 
+    .line 7
     invoke-static {p1, p2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->finishObjectHeader(Landroid/os/Parcel;I)V
 
     return-void
@@ -293,10 +302,12 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     check-cast p1, Ljava/lang/String;
 
     iget-object v0, p0, Lcom/google/android/gms/common/server/converter/StringToIntConverter;->zab:Ljava/util/HashMap;
 
+    .line 2
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -309,6 +320,7 @@
 
     const-string p1, "gms_unknown"
 
+    .line 3
     invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -330,10 +342,12 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     check-cast p1, Ljava/lang/Integer;
 
     iget-object v0, p0, Lcom/google/android/gms/common/server/converter/StringToIntConverter;->zac:Landroid/util/SparseArray;
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -350,6 +364,7 @@
 
     const-string v0, "gms_unknown"
 
+    .line 3
     invoke-virtual {p0, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result p0

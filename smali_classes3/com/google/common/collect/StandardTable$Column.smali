@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/StandardTable$Column;
+.class public Lcom/google/common/collect/StandardTable$Column;
 .super Lcom/google/common/collect/Maps$ViewCachingAbstractMap;
 .source "SourceFile"
 
@@ -31,7 +31,7 @@
 
 
 # instance fields
-.field final columnKey:Ljava/lang/Object;
+.field public final columnKey:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TC;"
@@ -39,7 +39,7 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Lcom/google/common/collect/StandardTable;
+.field public final synthetic this$0:Lcom/google/common/collect/StandardTable;
 
 
 # direct methods
@@ -51,10 +51,12 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/StandardTable$Column;->this$0:Lcom/google/common/collect/StandardTable;
 
     invoke-direct {p0}, Lcom/google/common/collect/Maps$ViewCachingAbstractMap;-><init>()V
 
+    .line 2
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -73,6 +75,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/StandardTable$Column;->this$0:Lcom/google/common/collect/StandardTable;
 
     iget-object p0, p0, Lcom/google/common/collect/StandardTable$Column;->columnKey:Ljava/lang/Object;
@@ -95,6 +98,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/StandardTable$Column$EntrySet;
 
     const/4 v1, 0x0
@@ -114,6 +118,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/StandardTable$Column$KeySet;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/StandardTable$Column$KeySet;-><init>(Lcom/google/common/collect/StandardTable$Column;)V
@@ -131,6 +136,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/StandardTable$Column$Values;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/StandardTable$Column$Values;-><init>(Lcom/google/common/collect/StandardTable$Column;)V
@@ -155,6 +161,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/StandardTable$Column;->this$0:Lcom/google/common/collect/StandardTable;
 
     iget-object p0, p0, Lcom/google/common/collect/StandardTable$Column;->columnKey:Ljava/lang/Object;
@@ -177,6 +184,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/StandardTable$Column;->this$0:Lcom/google/common/collect/StandardTable;
 
     iget-object p0, p0, Lcom/google/common/collect/StandardTable$Column;->columnKey:Ljava/lang/Object;
@@ -205,6 +213,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/StandardTable$Column;->this$0:Lcom/google/common/collect/StandardTable;
 
     iget-object p0, p0, Lcom/google/common/collect/StandardTable$Column;->columnKey:Ljava/lang/Object;
@@ -231,6 +240,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/StandardTable$Column;->this$0:Lcom/google/common/collect/StandardTable;
 
     iget-object v0, v0, Lcom/google/common/collect/StandardTable;->backingMap:Ljava/util/Map;
@@ -245,26 +255,30 @@
 
     const/4 v1, 0x0
 
+    .line 2
     :cond_0
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_1
 
+    .line 3
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/util/Map$Entry;
 
+    .line 4
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Ljava/util/Map;
 
+    .line 5
     iget-object v4, p0, Lcom/google/common/collect/StandardTable$Column;->columnKey:Ljava/lang/Object;
 
     invoke-interface {v3, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -273,6 +287,7 @@
 
     if-eqz v4, :cond_0
 
+    .line 6
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -287,23 +302,25 @@
 
     if-eqz v2, :cond_0
 
+    .line 7
     iget-object v1, p0, Lcom/google/common/collect/StandardTable$Column;->columnKey:Ljava/lang/Object;
 
     invoke-interface {v3, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
+    const/4 v1, 0x1
+
+    .line 8
     invoke-interface {v3}, Ljava/util/Map;->isEmpty()Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_1
+    if-eqz v2, :cond_0
 
+    .line 9
     invoke-interface {v0}, Ljava/util/Iterator;->remove()V
-
-    :cond_1
-    const/4 v1, 0x1
 
     goto :goto_0
 
-    :cond_2
+    :cond_1
     return v1
 .end method

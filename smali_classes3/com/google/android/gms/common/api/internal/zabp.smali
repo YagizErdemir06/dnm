@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/api/internal/zabp;
+.class public final Lcom/google/android/gms/common/api/internal/zabp;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field final synthetic zaa:Lcom/google/android/gms/common/api/internal/zabq;
+.field public final synthetic zaa:Lcom/google/android/gms/common/api/internal/zabq;
 
 
 # direct methods
@@ -26,6 +26,7 @@
 .method public final onSignOutComplete()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabp;->zaa:Lcom/google/android/gms/common/api/internal/zabq;
 
     iget-object v0, v0, Lcom/google/android/gms/common/api/internal/zabq;->zaa:Lcom/google/android/gms/common/api/internal/GoogleApiManager;

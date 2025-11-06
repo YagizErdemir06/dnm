@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/idm/api/IDMServer$3;
+.class public Lcom/xiaomi/idm/api/IDMServer$3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/xiaomi/idm/api/IDMServer;
+.field public final synthetic this$0:Lcom/xiaomi/idm/api/IDMServer;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/idm/api/IDMServer;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/api/IDMServer$3;->this$0:Lcom/xiaomi/idm/api/IDMServer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -58,6 +59,7 @@
 
     if-eqz p2, :cond_1
 
+    .line 1
     invoke-virtual {p2}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
@@ -66,6 +68,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMServer$3;->this$0:Lcom/xiaomi/idm/api/IDMServer;
 
@@ -75,6 +78,7 @@
 
     return-object p0
 
+    .line 3
     :cond_1
     :goto_0
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMServer$3;->this$0:Lcom/xiaomi/idm/api/IDMServer;

@@ -26,45 +26,47 @@
 # static fields
 .field private static final DESCRIPTOR:Ljava/lang/String; = "com.xiaomi.mi_connect_service.IIDMClientCallback"
 
-.field static final TRANSACTION_onAccountChanged:I = 0x9
+.field public static final TRANSACTION_onAccountChanged:I = 0x9
 
-.field static final TRANSACTION_onBlockReceived:I = 0xc
+.field public static final TRANSACTION_onBlockReceived:I = 0xc
 
-.field static final TRANSACTION_onBlockSendResult:I = 0xb
+.field public static final TRANSACTION_onBlockSendResult:I = 0xb
 
-.field static final TRANSACTION_onConfigurationReceived:I = 0xd
+.field public static final TRANSACTION_onConfigurationReceived:I = 0xd
 
-.field static final TRANSACTION_onDiscoveryResult:I = 0x8
+.field public static final TRANSACTION_onDiscoveryResult:I = 0x8
 
-.field static final TRANSACTION_onEvent:I = 0x3
+.field public static final TRANSACTION_onEvent:I = 0x3
 
-.field static final TRANSACTION_onInvitationAccepted:I = 0x7
+.field public static final TRANSACTION_onInvitationAccepted:I = 0x7
 
-.field static final TRANSACTION_onInviteConnection:I = 0x6
+.field public static final TRANSACTION_onInviteConnection:I = 0x6
 
-.field static final TRANSACTION_onResponse:I = 0x2
+.field public static final TRANSACTION_onResponse:I = 0x2
 
-.field static final TRANSACTION_onRpcChannelConnected:I = 0xe
+.field public static final TRANSACTION_onRpcChannelConnected:I = 0xe
 
-.field static final TRANSACTION_onRpcChannelDisconnected:I = 0xf
+.field public static final TRANSACTION_onRpcChannelDisconnected:I = 0xf
 
-.field static final TRANSACTION_onServiceConnectStatus:I = 0x4
+.field public static final TRANSACTION_onServiceConnectStatus:I = 0x4
 
-.field static final TRANSACTION_onServiceFound:I = 0x1
+.field public static final TRANSACTION_onServiceFound:I = 0x1
 
-.field static final TRANSACTION_onServiceLost:I = 0x5
+.field public static final TRANSACTION_onServiceLost:I = 0x5
 
-.field static final TRANSACTION_onSubscribeEventResult:I = 0xa
+.field public static final TRANSACTION_onSubscribeEventResult:I = 0xa
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
     const-string v0, "com.xiaomi.mi_connect_service.IIDMClientCallback"
 
+    .line 2
     invoke-virtual {p0, p0, v0}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
     return-void
@@ -82,20 +84,24 @@
     :cond_0
     const-string v0, "com.xiaomi.mi_connect_service.IIDMClientCallback"
 
+    .line 1
     invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
+    .line 2
     instance-of v1, v0, Lcom/xiaomi/mi_connect_service/IIDMClientCallback;
 
     if-eqz v1, :cond_1
 
+    .line 3
     check-cast v0, Lcom/xiaomi/mi_connect_service/IIDMClientCallback;
 
     return-object v0
 
+    .line 4
     :cond_1
     new-instance v0, Lcom/xiaomi/mi_connect_service/IIDMClientCallback$Stub$Proxy;
 
@@ -107,6 +113,7 @@
 .method public static getDefaultImpl()Lcom/xiaomi/mi_connect_service/IIDMClientCallback;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/IIDMClientCallback$Stub$Proxy;->sDefaultImpl:Lcom/xiaomi/mi_connect_service/IIDMClientCallback;
 
     return-object v0
@@ -115,12 +122,14 @@
 .method public static setDefaultImpl(Lcom/xiaomi/mi_connect_service/IIDMClientCallback;)Z
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/mi_connect_service/IIDMClientCallback$Stub$Proxy;->sDefaultImpl:Lcom/xiaomi/mi_connect_service/IIDMClientCallback;
 
     if-nez v0, :cond_1
 
     if-eqz p0, :cond_0
 
+    .line 2
     sput-object p0, Lcom/xiaomi/mi_connect_service/IIDMClientCallback$Stub$Proxy;->sDefaultImpl:Lcom/xiaomi/mi_connect_service/IIDMClientCallback;
 
     const/4 p0, 0x1
@@ -132,6 +141,7 @@
 
     return p0
 
+    .line 3
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -168,181 +178,229 @@
 
     packed-switch p1, :pswitch_data_0
 
+    .line 1
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result p0
 
     return p0
 
+    .line 2
     :pswitch_0
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 3
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object p1
 
+    .line 4
     invoke-interface {p0, p1}, Lcom/xiaomi/mi_connect_service/IIDMClientCallback;->onRpcChannelDisconnected([B)V
 
     return v1
 
+    .line 5
     :pswitch_1
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 6
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object p1
 
+    .line 7
     invoke-interface {p0, p1}, Lcom/xiaomi/mi_connect_service/IIDMClientCallback;->onRpcChannelConnected([B)V
 
     return v1
 
+    .line 8
     :pswitch_2
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 9
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object p1
 
+    .line 10
     invoke-interface {p0, p1}, Lcom/xiaomi/mi_connect_service/IIDMClientCallback;->onConfigurationReceived([B)V
 
     return v1
 
+    .line 11
     :pswitch_3
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 12
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object p1
 
+    .line 13
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object p2
 
+    .line 14
     invoke-interface {p0, p1, p2}, Lcom/xiaomi/mi_connect_service/IIDMClientCallback;->onBlockReceived([B[B)V
 
     return v1
 
+    .line 15
     :pswitch_4
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 16
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object p1
 
+    .line 17
     invoke-interface {p0, p1}, Lcom/xiaomi/mi_connect_service/IIDMClientCallback;->onBlockSendResult([B)V
 
     return v1
 
+    .line 18
     :pswitch_5
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 19
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object p1
 
+    .line 20
     invoke-interface {p0, p1}, Lcom/xiaomi/mi_connect_service/IIDMClientCallback;->onSubscribeEventResult([B)V
 
     return v1
 
+    .line 21
     :pswitch_6
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 22
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object p1
 
+    .line 23
     invoke-interface {p0, p1}, Lcom/xiaomi/mi_connect_service/IIDMClientCallback;->onAccountChanged([B)V
 
     return v1
 
+    .line 24
     :pswitch_7
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 25
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object p1
 
+    .line 26
     invoke-interface {p0, p1}, Lcom/xiaomi/mi_connect_service/IIDMClientCallback;->onDiscoveryResult([B)V
 
     return v1
 
+    .line 27
     :pswitch_8
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 28
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object p1
 
+    .line 29
     invoke-interface {p0, p1}, Lcom/xiaomi/mi_connect_service/IIDMClientCallback;->onInvitationAccepted([B)V
 
     return v1
 
+    .line 30
     :pswitch_9
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 31
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object p1
 
+    .line 32
     invoke-interface {p0, p1}, Lcom/xiaomi/mi_connect_service/IIDMClientCallback;->onInviteConnection([B)V
 
     return v1
 
+    .line 33
     :pswitch_a
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 34
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object p1
 
+    .line 35
     invoke-interface {p0, p1}, Lcom/xiaomi/mi_connect_service/IIDMClientCallback;->onServiceLost([B)V
 
     return v1
 
+    .line 36
     :pswitch_b
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 37
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object p1
 
+    .line 38
     invoke-interface {p0, p1}, Lcom/xiaomi/mi_connect_service/IIDMClientCallback;->onServiceConnectStatus([B)V
 
     return v1
 
+    .line 39
     :pswitch_c
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 40
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object p1
 
+    .line 41
     invoke-interface {p0, p1}, Lcom/xiaomi/mi_connect_service/IIDMClientCallback;->onEvent([B)V
 
     return v1
 
+    .line 42
     :pswitch_d
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 43
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object p1
 
+    .line 44
     invoke-interface {p0, p1}, Lcom/xiaomi/mi_connect_service/IIDMClientCallback;->onResponse([B)V
 
     return v1
 
+    .line 45
     :pswitch_e
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    .line 46
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object p1
 
+    .line 47
     invoke-interface {p0, p1}, Lcom/xiaomi/mi_connect_service/IIDMClientCallback;->onServiceFound([B)V
 
     return v1
 
+    .line 48
     :cond_0
     invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 

@@ -1,4 +1,4 @@
-.class final Landroidx/loader/content/AsyncTaskLoader$LoadTask;
+.class public final Landroidx/loader/content/AsyncTaskLoader$LoadTask;
 .super Landroidx/loader/content/ModernAsyncTask;
 .source "SourceFile"
 
@@ -30,19 +30,21 @@
 # instance fields
 .field private final mDone:Ljava/util/concurrent/CountDownLatch;
 
-.field final synthetic this$0:Landroidx/loader/content/AsyncTaskLoader;
+.field public final synthetic this$0:Landroidx/loader/content/AsyncTaskLoader;
 
-.field waiting:Z
+.field public waiting:Z
 
 
 # direct methods
 .method public constructor <init>(Landroidx/loader/content/AsyncTaskLoader;)V
     .locals 1
 
+    .line 1
     iput-object p1, p0, Landroidx/loader/content/AsyncTaskLoader$LoadTask;->this$0:Landroidx/loader/content/AsyncTaskLoader;
 
     invoke-direct {p0}, Landroidx/loader/content/ModernAsyncTask;-><init>()V
 
+    .line 2
     new-instance p1, Ljava/util/concurrent/CountDownLatch;
 
     const/4 v0, 0x1
@@ -118,6 +120,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroidx/loader/content/AsyncTaskLoader$LoadTask;->this$0:Landroidx/loader/content/AsyncTaskLoader;
 
@@ -125,6 +128,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     iget-object p0, p0, Landroidx/loader/content/AsyncTaskLoader$LoadTask;->mDone:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -149,6 +153,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroidx/loader/content/AsyncTaskLoader$LoadTask;->this$0:Landroidx/loader/content/AsyncTaskLoader;
 
@@ -156,6 +161,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     iget-object p0, p0, Landroidx/loader/content/AsyncTaskLoader$LoadTask;->mDone:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -177,8 +183,10 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-boolean v0, p0, Landroidx/loader/content/AsyncTaskLoader$LoadTask;->waiting:Z
 
+    .line 2
     iget-object p0, p0, Landroidx/loader/content/AsyncTaskLoader$LoadTask;->this$0:Landroidx/loader/content/AsyncTaskLoader;
 
     invoke-virtual {p0}, Landroidx/loader/content/AsyncTaskLoader;->executePendingTask()V
@@ -189,6 +197,7 @@
 .method public waitForLoader()V
     .locals 0
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Landroidx/loader/content/AsyncTaskLoader$LoadTask;->mDone:Ljava/util/concurrent/CountDownLatch;
 

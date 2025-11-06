@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnLayoutChangeListener;
+.implements Lmiuix/nestedheader/widget/NestedScrollingLayout$a;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lmiuix/nestedheader/widget/NestedHeaderLayout;->onFinishInflate()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lmiuix/nestedheader/widget/NestedHeaderLayout;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,6 +25,7 @@
 .method public constructor <init>(Lmiuix/nestedheader/widget/NestedHeaderLayout;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$a;->a:Lmiuix/nestedheader/widget/NestedHeaderLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -34,50 +35,64 @@
 
 
 # virtual methods
-.method public onLayoutChange(Landroid/view/View;IIIIIIII)V
+.method public a(I)V
     .locals 0
 
-    sub-int/2addr p5, p3
-
-    sub-int/2addr p9, p7
-
-    sub-int/2addr p5, p9
-
-    if-eqz p5, :cond_0
-
+    .line 1
     iget-object p1, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$a;->a:Lmiuix/nestedheader/widget/NestedHeaderLayout;
 
-    iget-boolean p2, p1, Lmiuix/nestedheader/widget/NestedScrollingLayout;->e:Z
+    invoke-static {p1}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->m(Lmiuix/nestedheader/widget/NestedHeaderLayout;)Z
 
-    if-eqz p2, :cond_0
+    move-result p1
 
-    const/4 p2, 0x1
+    if-nez p1, :cond_0
 
-    const/4 p3, 0x0
+    return-void
 
-    invoke-static {p1, p2, p3, p3, p3}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->F(Lmiuix/nestedheader/widget/NestedHeaderLayout;ZZZZ)V
-
-    iget-object p1, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$a;->a:Lmiuix/nestedheader/widget/NestedHeaderLayout;
-
-    invoke-virtual {p1}, Lmiuix/nestedheader/widget/NestedScrollingLayout;->getScrollingProgress()I
-
-    move-result p2
-
-    add-int/2addr p2, p5
-
+    .line 2
+    :cond_0
     iget-object p0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$a;->a:Lmiuix/nestedheader/widget/NestedHeaderLayout;
 
-    invoke-static {p0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->G(Lmiuix/nestedheader/widget/NestedHeaderLayout;)I
+    invoke-static {p0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->n(Lmiuix/nestedheader/widget/NestedHeaderLayout;)V
 
-    move-result p0
+    return-void
+.end method
 
-    neg-int p0, p0
+.method public b(I)V
+    .locals 0
 
-    invoke-static {p2, p0}, Ljava/lang/Math;->min(II)I
+    if-nez p1, :cond_0
 
-    move-result p0
+    .line 1
+    iget-object p0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$a;->a:Lmiuix/nestedheader/widget/NestedHeaderLayout;
 
-    invoke-virtual {p1, p0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->p0(I)V
+    const/4 p1, 0x1
+
+    invoke-static {p0, p1}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->k(Lmiuix/nestedheader/widget/NestedHeaderLayout;Z)V
+
+    goto :goto_0
+
+    .line 2
+    :cond_0
+    iget-object p0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$a;->a:Lmiuix/nestedheader/widget/NestedHeaderLayout;
+
+    invoke-static {p0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->l(Lmiuix/nestedheader/widget/NestedHeaderLayout;)V
+
+    :goto_0
+    return-void
+.end method
+
+.method public c(I)V
+    .locals 0
+
+    if-nez p1, :cond_0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$a;->a:Lmiuix/nestedheader/widget/NestedHeaderLayout;
+
+    const/4 p1, 0x0
+
+    invoke-static {p0, p1}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->k(Lmiuix/nestedheader/widget/NestedHeaderLayout;Z)V
 
     :cond_0
     return-void

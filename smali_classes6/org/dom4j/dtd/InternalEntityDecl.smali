@@ -37,12 +37,14 @@
 .method private escapeEntityValue(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
+    .line 1
     new-instance p0, Ljava/lang/StringBuffer;
 
     invoke-direct {p0}, Ljava/lang/StringBuffer;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     :goto_0
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -50,6 +52,7 @@
 
     if-ge v0, v1, :cond_6
 
+    .line 3
     invoke-virtual {p1, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
@@ -78,6 +81,7 @@
 
     if-ge v1, v2, :cond_0
 
+    .line 4
     new-instance v2, Ljava/lang/StringBuffer;
 
     invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
@@ -100,6 +104,7 @@
 
     goto :goto_1
 
+    .line 5
     :cond_0
     invoke-virtual {p0, v1}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
@@ -108,6 +113,7 @@
     :cond_1
     const-string v1, "&#39;"
 
+    .line 6
     invoke-virtual {p0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     goto :goto_1
@@ -115,6 +121,7 @@
     :cond_2
     const-string v1, "&#38;#38;"
 
+    .line 7
     invoke-virtual {p0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     goto :goto_1
@@ -122,6 +129,7 @@
     :cond_3
     const-string v1, "&#62;"
 
+    .line 8
     invoke-virtual {p0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     goto :goto_1
@@ -129,6 +137,7 @@
     :cond_4
     const-string v1, "&#38;#60;"
 
+    .line 9
     invoke-virtual {p0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     goto :goto_1
@@ -136,6 +145,7 @@
     :cond_5
     const-string v1, "&#34;"
 
+    .line 10
     invoke-virtual {p0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :goto_1
@@ -143,6 +153,7 @@
 
     goto :goto_0
 
+    .line 11
     :cond_6
     invoke-virtual {p0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -156,6 +167,7 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/dtd/InternalEntityDecl;->name:Ljava/lang/String;
 
     return-object p0
@@ -164,6 +176,7 @@
 .method public getValue()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/dtd/InternalEntityDecl;->value:Ljava/lang/String;
 
     return-object p0
@@ -172,6 +185,7 @@
 .method public setName(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/dtd/InternalEntityDecl;->name:Ljava/lang/String;
 
     return-void
@@ -180,6 +194,7 @@
 .method public setValue(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/dtd/InternalEntityDecl;->value:Ljava/lang/String;
 
     return-void
@@ -188,12 +203,14 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     const-string v1, "<!ENTITY "
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuffer;-><init>(Ljava/lang/String;)V
 
+    .line 2
     iget-object v1, p0, Lorg/dom4j/dtd/InternalEntityDecl;->name:Ljava/lang/String;
 
     const-string v2, "%"
@@ -206,8 +223,10 @@
 
     const-string v1, "% "
 
+    .line 3
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    .line 4
     iget-object v1, p0, Lorg/dom4j/dtd/InternalEntityDecl;->name:Ljava/lang/String;
 
     const/4 v2, 0x1
@@ -220,6 +239,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     iget-object v1, p0, Lorg/dom4j/dtd/InternalEntityDecl;->name:Ljava/lang/String;
 
@@ -228,8 +248,10 @@
     :goto_0
     const-string v1, " \""
 
+    .line 6
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    .line 7
     iget-object v1, p0, Lorg/dom4j/dtd/InternalEntityDecl;->value:Ljava/lang/String;
 
     invoke-direct {p0, v1}, Lorg/dom4j/dtd/InternalEntityDecl;->escapeEntityValue(Ljava/lang/String;)Ljava/lang/String;
@@ -240,8 +262,10 @@
 
     const-string p0, "\">"
 
+    .line 8
     invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    .line 9
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object p0

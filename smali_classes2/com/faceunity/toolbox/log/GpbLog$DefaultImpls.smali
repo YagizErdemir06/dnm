@@ -13,17 +13,19 @@
     name = "DefaultImpls"
 .end annotation
 
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
     bv = {
         0x1,
         0x0,
         0x3
     }
+    d1 = {}
+    d2 = {}
     k = 0x3
     mv = {
         0x1,
-        0x1,
-        0xf
+        0x4,
+        0x0
     }
 .end annotation
 
@@ -32,22 +34,23 @@
 .method public static logD(Lcom/faceunity/toolbox/log/GpbLog;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "message"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->q(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "tag"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/l0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lh/d3/x/l0;->q(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     sget-object v0, Lcom/faceunity/toolbox/log/GpbLog$LogLevel;->Debug:Lcom/faceunity/toolbox/log/GpbLog$LogLevel;
 
     invoke-interface {p0, p1, v0, p2}, Lcom/faceunity/toolbox/log/GpbLog;->log(Ljava/lang/String;Lcom/faceunity/toolbox/log/GpbLog$LogLevel;Ljava/lang/String;)V
@@ -66,11 +69,13 @@
 
     const-string p2, ""
 
+    .line 1
     :cond_0
     invoke-interface {p0, p1, p2}, Lcom/faceunity/toolbox/log/GpbLog;->logD(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
+    .line 2
     :cond_1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -84,22 +89,23 @@
 .method public static logE(Lcom/faceunity/toolbox/log/GpbLog;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "message"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->q(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "tag"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/l0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lh/d3/x/l0;->q(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     sget-object v0, Lcom/faceunity/toolbox/log/GpbLog$LogLevel;->Error:Lcom/faceunity/toolbox/log/GpbLog$LogLevel;
 
     invoke-interface {p0, p1, v0, p2}, Lcom/faceunity/toolbox/log/GpbLog;->log(Ljava/lang/String;Lcom/faceunity/toolbox/log/GpbLog$LogLevel;Ljava/lang/String;)V
@@ -118,11 +124,13 @@
 
     const-string p2, ""
 
+    .line 1
     :cond_0
     invoke-interface {p0, p1, p2}, Lcom/faceunity/toolbox/log/GpbLog;->logE(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
+    .line 2
     :cond_1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -136,22 +144,23 @@
 .method public static logI(Lcom/faceunity/toolbox/log/GpbLog;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "message"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->q(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "tag"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/l0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lh/d3/x/l0;->q(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     sget-object v0, Lcom/faceunity/toolbox/log/GpbLog$LogLevel;->Info:Lcom/faceunity/toolbox/log/GpbLog$LogLevel;
 
     invoke-interface {p0, p1, v0, p2}, Lcom/faceunity/toolbox/log/GpbLog;->log(Ljava/lang/String;Lcom/faceunity/toolbox/log/GpbLog$LogLevel;Ljava/lang/String;)V
@@ -170,11 +179,13 @@
 
     const-string p2, ""
 
+    .line 1
     :cond_0
     invoke-interface {p0, p1, p2}, Lcom/faceunity/toolbox/log/GpbLog;->logI(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
+    .line 2
     :cond_1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -188,22 +199,23 @@
 .method public static logV(Lcom/faceunity/toolbox/log/GpbLog;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "message"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->q(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "tag"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/l0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lh/d3/x/l0;->q(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     sget-object v0, Lcom/faceunity/toolbox/log/GpbLog$LogLevel;->Verbose:Lcom/faceunity/toolbox/log/GpbLog$LogLevel;
 
     invoke-interface {p0, p1, v0, p2}, Lcom/faceunity/toolbox/log/GpbLog;->log(Ljava/lang/String;Lcom/faceunity/toolbox/log/GpbLog$LogLevel;Ljava/lang/String;)V
@@ -222,11 +234,13 @@
 
     const-string p2, ""
 
+    .line 1
     :cond_0
     invoke-interface {p0, p1, p2}, Lcom/faceunity/toolbox/log/GpbLog;->logV(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
+    .line 2
     :cond_1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -240,22 +254,23 @@
 .method public static logW(Lcom/faceunity/toolbox/log/GpbLog;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "message"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->q(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "tag"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/l0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lh/d3/x/l0;->q(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     sget-object v0, Lcom/faceunity/toolbox/log/GpbLog$LogLevel;->Warn:Lcom/faceunity/toolbox/log/GpbLog$LogLevel;
 
     invoke-interface {p0, p1, v0, p2}, Lcom/faceunity/toolbox/log/GpbLog;->log(Ljava/lang/String;Lcom/faceunity/toolbox/log/GpbLog$LogLevel;Ljava/lang/String;)V
@@ -274,11 +289,13 @@
 
     const-string p2, ""
 
+    .line 1
     :cond_0
     invoke-interface {p0, p1, p2}, Lcom/faceunity/toolbox/log/GpbLog;->logW(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
+    .line 2
     :cond_1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 

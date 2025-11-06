@@ -1,12 +1,12 @@
-.class final Lcom/google/android/gms/internal/base/zaj;
+.class public final Lcom/google/android/gms/internal/base/zaj;
 .super Landroid/graphics/drawable/Drawable$ConstantState;
 .source "SourceFile"
 
 
 # instance fields
-.field zaa:I
+.field public zaa:I
 
-.field zab:I
+.field public zab:I
 
 
 # direct methods
@@ -17,6 +17,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
 
     if-eqz p1, :cond_0
@@ -46,6 +47,7 @@
 .method public final newDrawable()Landroid/graphics/drawable/Drawable;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/base/zak;
 
     invoke-direct {v0, p0}, Lcom/google/android/gms/internal/base/zak;-><init>(Lcom/google/android/gms/internal/base/zaj;)V

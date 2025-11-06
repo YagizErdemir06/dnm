@@ -1,4 +1,4 @@
-.class Lcom/google/common/reflect/TypeToken$4;
+.class public Lcom/google/common/reflect/TypeToken$4;
 .super Lcom/google/common/reflect/TypeVisitor;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic val$builder:Lcom/google/common/collect/ImmutableSet$Builder;
+.field public final synthetic val$builder:Lcom/google/common/collect/ImmutableSet$Builder;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/reflect/TypeToken;Lcom/google/common/collect/ImmutableSet$Builder;)V
     .locals 0
 
+    .line 1
     iput-object p2, p0, Lcom/google/common/reflect/TypeToken$4;->val$builder:Lcom/google/common/collect/ImmutableSet$Builder;
 
     invoke-direct {p0}, Lcom/google/common/reflect/TypeVisitor;-><init>()V
@@ -41,6 +42,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/TypeToken$4;->val$builder:Lcom/google/common/collect/ImmutableSet$Builder;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ImmutableSet$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableSet$Builder;
@@ -51,6 +53,7 @@
 .method public visitGenericArrayType(Ljava/lang/reflect/GenericArrayType;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/TypeToken$4;->val$builder:Lcom/google/common/collect/ImmutableSet$Builder;
 
     invoke-interface {p1}, Ljava/lang/reflect/GenericArrayType;->getGenericComponentType()Ljava/lang/reflect/Type;
@@ -77,6 +80,7 @@
 .method public visitParameterizedType(Ljava/lang/reflect/ParameterizedType;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/TypeToken$4;->val$builder:Lcom/google/common/collect/ImmutableSet$Builder;
 
     invoke-interface {p1}, Ljava/lang/reflect/ParameterizedType;->getRawType()Ljava/lang/reflect/Type;
@@ -100,6 +104,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Ljava/lang/reflect/TypeVariable;->getBounds()[Ljava/lang/reflect/Type;
 
     move-result-object p1
@@ -112,6 +117,7 @@
 .method public visitWildcardType(Ljava/lang/reflect/WildcardType;)V
     .locals 0
 
+    .line 1
     invoke-interface {p1}, Ljava/lang/reflect/WildcardType;->getUpperBounds()[Ljava/lang/reflect/Type;
 
     move-result-object p1

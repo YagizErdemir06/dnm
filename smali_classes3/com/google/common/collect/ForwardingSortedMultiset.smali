@@ -41,6 +41,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ForwardingMultiset;-><init>()V
 
     return-void
@@ -58,6 +59,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingSortedMultiset;->delegate()Lcom/google/common/collect/SortedMultiset;
 
     move-result-object p0
@@ -122,6 +124,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingSortedMultiset;->delegate()Lcom/google/common/collect/SortedMultiset;
 
     move-result-object p0
@@ -190,6 +193,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingSortedMultiset;->delegate()Lcom/google/common/collect/SortedMultiset;
 
     move-result-object p0
@@ -217,6 +221,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingSortedMultiset;->delegate()Lcom/google/common/collect/SortedMultiset;
 
     move-result-object p0
@@ -241,6 +246,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingSortedMultiset;->delegate()Lcom/google/common/collect/SortedMultiset;
 
     move-result-object p0
@@ -265,6 +271,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingSortedMultiset;->delegate()Lcom/google/common/collect/SortedMultiset;
 
     move-result-object p0
@@ -289,6 +296,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingSortedMultiset;->delegate()Lcom/google/common/collect/SortedMultiset;
 
     move-result-object p0
@@ -313,6 +321,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingMultiset;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -321,6 +330,7 @@
 
     move-result-object p0
 
+    .line 2
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
@@ -331,6 +341,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -338,6 +349,7 @@
 
     check-cast p0, Lcom/google/common/collect/Multiset$Entry;
 
+    .line 4
     invoke-interface {p0}, Lcom/google/common/collect/Multiset$Entry;->getElement()Ljava/lang/Object;
 
     move-result-object v0
@@ -366,6 +378,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingSortedMultiset;->descendingMultiset()Lcom/google/common/collect/SortedMultiset;
 
     move-result-object p0
@@ -378,6 +391,7 @@
 
     move-result-object p0
 
+    .line 2
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
@@ -388,6 +402,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -395,6 +410,7 @@
 
     check-cast p0, Lcom/google/common/collect/Multiset$Entry;
 
+    .line 4
     invoke-interface {p0}, Lcom/google/common/collect/Multiset$Entry;->getElement()Ljava/lang/Object;
 
     move-result-object v0
@@ -423,6 +439,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingMultiset;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -431,6 +448,7 @@
 
     move-result-object p0
 
+    .line 2
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
@@ -441,6 +459,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -448,6 +467,7 @@
 
     check-cast v0, Lcom/google/common/collect/Multiset$Entry;
 
+    .line 4
     invoke-interface {v0}, Lcom/google/common/collect/Multiset$Entry;->getElement()Ljava/lang/Object;
 
     move-result-object v1
@@ -460,6 +480,7 @@
 
     move-result-object v0
 
+    .line 5
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V
 
     return-object v0
@@ -478,6 +499,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingSortedMultiset;->descendingMultiset()Lcom/google/common/collect/SortedMultiset;
 
     move-result-object p0
@@ -490,6 +512,7 @@
 
     move-result-object p0
 
+    .line 2
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
@@ -500,6 +523,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -507,6 +531,7 @@
 
     check-cast v0, Lcom/google/common/collect/Multiset$Entry;
 
+    .line 4
     invoke-interface {v0}, Lcom/google/common/collect/Multiset$Entry;->getElement()Ljava/lang/Object;
 
     move-result-object v1
@@ -519,6 +544,7 @@
 
     move-result-object v0
 
+    .line 5
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V
 
     return-object v0
@@ -546,6 +572,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/ForwardingSortedMultiset;->tailMultiset(Ljava/lang/Object;Lcom/google/common/collect/BoundType;)Lcom/google/common/collect/SortedMultiset;
 
     move-result-object p0
@@ -579,6 +606,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingSortedMultiset;->delegate()Lcom/google/common/collect/SortedMultiset;
 
     move-result-object p0
@@ -606,6 +634,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingSortedMultiset;->delegate()Lcom/google/common/collect/SortedMultiset;
 
     move-result-object p0

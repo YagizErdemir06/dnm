@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/collect/ImmutableMultisetGwtSerializationDependencies;
+.class public abstract Lcom/google/common/collect/ImmutableMultisetGwtSerializationDependencies;
 .super Lcom/google/common/collect/ImmutableCollection;
 .source "SourceFile"
 
@@ -26,6 +26,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableCollection;-><init>()V
 
     return-void

@@ -48,6 +48,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/datatransport/runtime/dagger/internal/InstanceFactory;
 
     const/4 v1, 0x0
@@ -67,8 +68,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/dagger/internal/InstanceFactory;->instance:Ljava/lang/Object;
 
     return-void
@@ -86,6 +89,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/datatransport/runtime/dagger/internal/InstanceFactory;
 
     const-string v1, "instance cannot be null"
@@ -113,12 +117,14 @@
 
     if-nez p0, :cond_0
 
+    .line 1
     invoke-static {}, Lcom/google/android/datatransport/runtime/dagger/internal/InstanceFactory;->nullInstanceFactory()Lcom/google/android/datatransport/runtime/dagger/internal/InstanceFactory;
 
     move-result-object p0
 
     goto :goto_0
 
+    .line 2
     :cond_0
     new-instance v0, Lcom/google/android/datatransport/runtime/dagger/internal/InstanceFactory;
 
@@ -142,6 +148,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/android/datatransport/runtime/dagger/internal/InstanceFactory;->NULL_INSTANCE_FACTORY:Lcom/google/android/datatransport/runtime/dagger/internal/InstanceFactory;
 
     return-object v0
@@ -157,6 +164,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/dagger/internal/InstanceFactory;->instance:Ljava/lang/Object;
 
     return-object p0

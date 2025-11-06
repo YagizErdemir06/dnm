@@ -1,4 +1,4 @@
-.class final Landroidx/core/provider/FontRequestWorker$TypefaceResult;
+.class public final Landroidx/core/provider/FontRequestWorker$TypefaceResult;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field final mResult:I
+.field public final mResult:I
 
-.field final mTypeface:Landroid/graphics/Typeface;
+.field public final mTypeface:Landroid/graphics/Typeface;
 
 
 # direct methods
@@ -74,6 +74,7 @@
         }
     .end annotation
 
+    .line 1
     iget p0, p0, Landroidx/core/provider/FontRequestWorker$TypefaceResult;->mResult:I
 
     if-nez p0, :cond_0

@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/Striped$PaddedSemaphore;
+.class public Lcom/google/common/util/concurrent/Striped$PaddedSemaphore;
 .super Ljava/util/concurrent/Semaphore;
 .source "SourceFile"
 
@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field unused1:J
+.field public unused1:J
 
-.field unused2:J
+.field public unused2:J
 
-.field unused3:J
+.field public unused3:J
 
 
 # direct methods
@@ -28,6 +28,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, v0}, Ljava/util/concurrent/Semaphore;-><init>(IZ)V
 
     return-void

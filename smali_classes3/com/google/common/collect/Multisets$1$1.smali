@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Multisets$1$1;
+.class public Lcom/google/common/collect/Multisets$1$1;
 .super Lcom/google/common/collect/AbstractIterator;
 .source "SourceFile"
 
@@ -23,17 +23,18 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/Multisets$1;
+.field public final synthetic this$0:Lcom/google/common/collect/Multisets$1;
 
-.field final synthetic val$iterator1:Ljava/util/Iterator;
+.field public final synthetic val$iterator1:Ljava/util/Iterator;
 
-.field final synthetic val$iterator2:Ljava/util/Iterator;
+.field public final synthetic val$iterator2:Ljava/util/Iterator;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/Multisets$1;Ljava/util/Iterator;Ljava/util/Iterator;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/Multisets$1$1;->this$0:Lcom/google/common/collect/Multisets$1;
 
     iput-object p2, p0, Lcom/google/common/collect/Multisets$1$1;->val$iterator1:Ljava/util/Iterator;

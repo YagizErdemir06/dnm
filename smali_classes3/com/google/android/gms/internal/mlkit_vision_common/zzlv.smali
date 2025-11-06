@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_common/zzlv;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_common/zzlv;
 .super Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;
 .source "SourceFile"
 
@@ -29,6 +29,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, v0}, Lcom/google/android/gms/internal/mlkit_vision_common/zzlx;-><init>(Ljava/lang/String;Lcom/google/android/gms/internal/mlkit_vision_common/zzlw;)V
 
     return-void

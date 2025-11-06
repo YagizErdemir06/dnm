@@ -1,4 +1,4 @@
-.class abstract Landroidx/appcompat/view/menu/MenuPopup;
+.class public abstract Landroidx/appcompat/view/menu/MenuPopup;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -16,6 +16,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,15 +27,18 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {v0, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v1
 
+    .line 2
     invoke-static {v0, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v2
 
-    invoke-interface {p0}, Landroid/widget/Adapter;->getCount()I
+    .line 3
+    invoke-interface {p0}, Landroid/widget/ListAdapter;->getCount()I
 
     move-result v3
 
@@ -49,7 +53,8 @@
     :goto_0
     if-ge v0, v3, :cond_4
 
-    invoke-interface {p0, v0}, Landroid/widget/Adapter;->getItemViewType(I)I
+    .line 4
+    invoke-interface {p0, v0}, Landroid/widget/ListAdapter;->getItemViewType(I)I
 
     move-result v8
 
@@ -62,17 +67,21 @@
     :cond_0
     if-nez p1, :cond_1
 
+    .line 5
     new-instance p1, Landroid/widget/FrameLayout;
 
     invoke-direct {p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
+    .line 6
     :cond_1
-    invoke-interface {p0, v0, v7, p1}, Landroid/widget/Adapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    invoke-interface {p0, v0, v7, p1}, Landroid/widget/ListAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v7
 
+    .line 7
     invoke-virtual {v7, v1, v2}, Landroid/view/View;->measure(II)V
 
+    .line 8
     invoke-virtual {v7}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v8
@@ -98,6 +107,7 @@
 .method public static shouldPreserveIconSpacing(Landroidx/appcompat/view/menu/MenuBuilder;)Z
     .locals 5
 
+    .line 1
     invoke-virtual {p0}, Landroidx/appcompat/view/menu/MenuBuilder;->size()I
 
     move-result v0
@@ -109,10 +119,12 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
+    .line 2
     invoke-virtual {p0, v2}, Landroidx/appcompat/view/menu/MenuBuilder;->getItem(I)Landroid/view/MenuItem;
 
     move-result-object v3
 
+    .line 3
     invoke-interface {v3}, Landroid/view/MenuItem;->isVisible()Z
 
     move-result v4
@@ -142,10 +154,12 @@
 .method public static toMenuAdapter(Landroid/widget/ListAdapter;)Landroidx/appcompat/view/menu/MenuAdapter;
     .locals 1
 
+    .line 1
     instance-of v0, p0, Landroid/widget/HeaderViewListAdapter;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Landroid/widget/HeaderViewListAdapter;
 
     invoke-virtual {p0}, Landroid/widget/HeaderViewListAdapter;->getWrappedAdapter()Landroid/widget/ListAdapter;
@@ -156,6 +170,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     check-cast p0, Landroidx/appcompat/view/menu/MenuAdapter;
 
@@ -194,6 +209,7 @@
 .method public getEpicenterBounds()Landroid/graphics/Rect;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/view/menu/MenuPopup;->mEpicenterBounds:Landroid/graphics/Rect;
 
     return-object p0
@@ -210,6 +226,7 @@
 .method public getMenuView(Landroid/view/ViewGroup;)Landroidx/appcompat/view/menu/MenuView;
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "MenuPopups manage their own views"
@@ -245,24 +262,29 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
 
     move-result-object p1
 
     check-cast p1, Landroid/widget/ListAdapter;
 
+    .line 2
     invoke-static {p1}, Landroidx/appcompat/view/menu/MenuPopup;->toMenuAdapter(Landroid/widget/ListAdapter;)Landroidx/appcompat/view/menu/MenuAdapter;
 
     move-result-object p2
 
+    .line 3
     iget-object p2, p2, Landroidx/appcompat/view/menu/MenuAdapter;->mAdapterMenu:Landroidx/appcompat/view/menu/MenuBuilder;
 
-    invoke-interface {p1, p3}, Landroid/widget/Adapter;->getItem(I)Ljava/lang/Object;
+    .line 4
+    invoke-interface {p1, p3}, Landroid/widget/ListAdapter;->getItem(I)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Landroid/view/MenuItem;
 
+    .line 5
     invoke-virtual {p0}, Landroidx/appcompat/view/menu/MenuPopup;->closeMenuOnSubMenuOpened()Z
 
     move-result p3
@@ -276,6 +298,7 @@
     :cond_0
     const/4 p3, 0x4
 
+    .line 6
     :goto_0
     invoke-virtual {p2, p1, p0, p3}, Landroidx/appcompat/view/menu/MenuBuilder;->performItemAction(Landroid/view/MenuItem;Landroidx/appcompat/view/menu/MenuPresenter;I)Z
 
@@ -288,6 +311,7 @@
 .method public setEpicenterBounds(Landroid/graphics/Rect;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/view/menu/MenuPopup;->mEpicenterBounds:Landroid/graphics/Rect;
 
     return-void

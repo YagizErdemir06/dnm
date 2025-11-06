@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Maps$8;
+.class public Lcom/google/common/collect/Maps$8;
 .super Lcom/google/common/collect/UnmodifiableIterator;
 .source "SourceFile"
 
@@ -23,13 +23,14 @@
 
 
 # instance fields
-.field final synthetic val$entryIterator:Ljava/util/Iterator;
+.field public final synthetic val$entryIterator:Ljava/util/Iterator;
 
 
 # direct methods
 .method public constructor <init>(Ljava/util/Iterator;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/Maps$8;->val$entryIterator:Ljava/util/Iterator;
 
     invoke-direct {p0}, Lcom/google/common/collect/UnmodifiableIterator;-><init>()V
@@ -42,6 +43,7 @@
 .method public hasNext()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Maps$8;->val$entryIterator:Ljava/util/Iterator;
 
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z

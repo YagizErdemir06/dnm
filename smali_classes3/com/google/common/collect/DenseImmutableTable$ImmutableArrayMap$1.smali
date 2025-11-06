@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/DenseImmutableTable$ImmutableArrayMap$1;
+.class public Lcom/google/common/collect/DenseImmutableTable$ImmutableArrayMap$1;
 .super Lcom/google/common/collect/AbstractIterator;
 .source "SourceFile"
 
@@ -27,21 +27,24 @@
 
 .field private final maxIndex:I
 
-.field final synthetic this$0:Lcom/google/common/collect/DenseImmutableTable$ImmutableArrayMap;
+.field public final synthetic this$0:Lcom/google/common/collect/DenseImmutableTable$ImmutableArrayMap;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/DenseImmutableTable$ImmutableArrayMap;)V
     .locals 1
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/DenseImmutableTable$ImmutableArrayMap$1;->this$0:Lcom/google/common/collect/DenseImmutableTable$ImmutableArrayMap;
 
     invoke-direct {p0}, Lcom/google/common/collect/AbstractIterator;-><init>()V
 
     const/4 v0, -0x1
 
+    .line 2
     iput v0, p0, Lcom/google/common/collect/DenseImmutableTable$ImmutableArrayMap$1;->index:I
 
+    .line 3
     invoke-virtual {p1}, Lcom/google/common/collect/DenseImmutableTable$ImmutableArrayMap;->keyToIndex()Lcom/google/common/collect/ImmutableMap;
 
     move-result-object p1

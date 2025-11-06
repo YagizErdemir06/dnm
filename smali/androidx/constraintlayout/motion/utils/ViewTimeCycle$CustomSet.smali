@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field mAttributeName:Ljava/lang/String;
+.field public mAttributeName:Ljava/lang/String;
 
-.field mCache:[F
+.field public mCache:[F
 
-.field mConstraintAttributeList:Landroid/util/SparseArray;
+.field public mConstraintAttributeList:Landroid/util/SparseArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/SparseArray<",
@@ -29,9 +29,9 @@
     .end annotation
 .end field
 
-.field mTempValues:[F
+.field public mTempValues:[F
 
-.field mWaveProperties:Landroid/util/SparseArray;
+.field public mWaveProperties:Landroid/util/SparseArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/SparseArray<",
@@ -65,8 +65,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Landroidx/constraintlayout/motion/utils/ViewTimeCycle;-><init>()V
 
+    .line 2
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
@@ -75,6 +77,7 @@
 
     const-string v0, ","
 
+    .line 3
     invoke-virtual {p1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p1
@@ -85,6 +88,7 @@
 
     iput-object p1, p0, Landroidx/constraintlayout/motion/utils/ViewTimeCycle$CustomSet;->mAttributeName:Ljava/lang/String;
 
+    .line 4
     iput-object p2, p0, Landroidx/constraintlayout/motion/utils/ViewTimeCycle$CustomSet;->mConstraintAttributeList:Landroid/util/SparseArray;
 
     return-void
@@ -197,6 +201,7 @@
 
     move-wide/from16 v2, p3
 
+    .line 1
     iget-object v4, v0, Landroidx/constraintlayout/core/motion/utils/TimeCycleSplineSet;->mCurveFit:Landroidx/constraintlayout/core/motion/utils/CurveFit;
 
     move/from16 v5, p2
@@ -207,6 +212,7 @@
 
     invoke-virtual {v4, v5, v6, v7}, Landroidx/constraintlayout/core/motion/utils/CurveFit;->getPos(D[F)V
 
+    .line 2
     iget-object v4, v0, Landroidx/constraintlayout/motion/utils/ViewTimeCycle$CustomSet;->mTempValues:[F
 
     array-length v5, v4
@@ -215,6 +221,7 @@
 
     aget v5, v4, v5
 
+    .line 3
     array-length v6, v4
 
     const/4 v7, 0x1
@@ -223,10 +230,12 @@
 
     aget v4, v4, v6
 
+    .line 4
     iget-wide v8, v0, Landroidx/constraintlayout/core/motion/utils/TimeCycleSplineSet;->last_time:J
 
     sub-long v8, v2, v8
 
+    .line 5
     iget v6, v0, Landroidx/constraintlayout/core/motion/utils/TimeCycleSplineSet;->last_cycle:F
 
     invoke-static {v6}, Ljava/lang/Float;->isNaN(F)Z
@@ -239,6 +248,7 @@
 
     if-eqz v6, :cond_0
 
+    .line 6
     iget-object v6, v0, Landroidx/constraintlayout/motion/utils/ViewTimeCycle$CustomSet;->mAttributeName:Ljava/lang/String;
 
     move-object/from16 v12, p5
@@ -249,14 +259,17 @@
 
     iput v6, v0, Landroidx/constraintlayout/core/motion/utils/TimeCycleSplineSet;->last_cycle:F
 
+    .line 7
     invoke-static {v6}, Ljava/lang/Float;->isNaN(F)Z
 
     move-result v6
 
     if-eqz v6, :cond_0
 
+    .line 8
     iput v10, v0, Landroidx/constraintlayout/core/motion/utils/TimeCycleSplineSet;->last_cycle:F
 
+    .line 9
     :cond_0
     iget v6, v0, Landroidx/constraintlayout/core/motion/utils/TimeCycleSplineSet;->last_cycle:F
 
@@ -282,16 +295,20 @@
 
     iput v6, v0, Landroidx/constraintlayout/core/motion/utils/TimeCycleSplineSet;->last_cycle:F
 
+    .line 10
     iput-wide v2, v0, Landroidx/constraintlayout/core/motion/utils/TimeCycleSplineSet;->last_time:J
 
+    .line 11
     invoke-virtual {v0, v6}, Landroidx/constraintlayout/core/motion/utils/TimeCycleSplineSet;->calcWave(F)F
 
     move-result v2
 
+    .line 12
     iput-boolean v11, v0, Landroidx/constraintlayout/core/motion/utils/TimeCycleSplineSet;->mContinue:Z
 
     move v3, v11
 
+    .line 13
     :goto_0
     iget-object v6, v0, Landroidx/constraintlayout/motion/utils/ViewTimeCycle$CustomSet;->mCache:[F
 
@@ -299,13 +316,14 @@
 
     if-ge v3, v8, :cond_2
 
+    .line 14
     iget-boolean v8, v0, Landroidx/constraintlayout/core/motion/utils/TimeCycleSplineSet;->mContinue:Z
 
     iget-object v9, v0, Landroidx/constraintlayout/motion/utils/ViewTimeCycle$CustomSet;->mTempValues:[F
 
-    aget v9, v9, v3
+    aget v12, v9, v3
 
-    float-to-double v12, v9
+    float-to-double v12, v12
 
     const-wide/16 v14, 0x0
 
@@ -325,16 +343,20 @@
 
     iput-boolean v8, v0, Landroidx/constraintlayout/core/motion/utils/TimeCycleSplineSet;->mContinue:Z
 
-    mul-float/2addr v9, v2
+    .line 15
+    aget v8, v9, v3
 
-    add-float/2addr v9, v4
+    mul-float/2addr v8, v2
 
-    aput v9, v6, v3
+    add-float/2addr v8, v4
+
+    aput v8, v6, v3
 
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
+    .line 16
     :cond_2
     iget-object v2, v0, Landroidx/constraintlayout/motion/utils/ViewTimeCycle$CustomSet;->mConstraintAttributeList:Landroid/util/SparseArray;
 
@@ -352,8 +374,10 @@
 
     if-eqz v1, :cond_3
 
+    .line 17
     iput-boolean v7, v0, Landroidx/constraintlayout/core/motion/utils/TimeCycleSplineSet;->mContinue:Z
 
+    .line 18
     :cond_3
     iget-boolean v0, v0, Landroidx/constraintlayout/core/motion/utils/TimeCycleSplineSet;->mContinue:Z
 
@@ -371,12 +395,14 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/motion/utils/ViewTimeCycle$CustomSet;->mConstraintAttributeList:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
 
     move-result v0
 
+    .line 2
     iget-object v1, p0, Landroidx/constraintlayout/motion/utils/ViewTimeCycle$CustomSet;->mConstraintAttributeList:Landroid/util/SparseArray;
 
     const/4 v2, 0x0
@@ -391,14 +417,17 @@
 
     move-result v1
 
+    .line 3
     new-array v3, v0, [D
 
     add-int/lit8 v4, v1, 0x2
 
+    .line 4
     new-array v5, v4, [F
 
     iput-object v5, p0, Landroidx/constraintlayout/motion/utils/ViewTimeCycle$CustomSet;->mTempValues:[F
 
+    .line 5
     new-array v5, v1, [F
 
     iput-object v5, p0, Landroidx/constraintlayout/motion/utils/ViewTimeCycle$CustomSet;->mCache:[F
@@ -413,7 +442,8 @@
 
     aput v0, v5, v2
 
-    sget-object v4, Ljava/lang/Double;->TYPE:Ljava/lang/Class;
+    .line 6
+    const-class v4, D
 
     invoke-static {v4, v5}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;[I)Ljava/lang/Object;
 
@@ -426,12 +456,14 @@
     :goto_0
     if-ge v5, v0, :cond_1
 
+    .line 7
     iget-object v7, p0, Landroidx/constraintlayout/motion/utils/ViewTimeCycle$CustomSet;->mConstraintAttributeList:Landroid/util/SparseArray;
 
     invoke-virtual {v7, v5}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v7
 
+    .line 8
     iget-object v8, p0, Landroidx/constraintlayout/motion/utils/ViewTimeCycle$CustomSet;->mConstraintAttributeList:Landroid/util/SparseArray;
 
     invoke-virtual {v8, v5}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -440,6 +472,7 @@
 
     check-cast v8, Landroidx/constraintlayout/widget/ConstraintAttribute;
 
+    .line 9
     iget-object v9, p0, Landroidx/constraintlayout/motion/utils/ViewTimeCycle$CustomSet;->mWaveProperties:Landroid/util/SparseArray;
 
     invoke-virtual {v9, v5}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -454,14 +487,17 @@
 
     mul-double/2addr v10, v12
 
+    .line 10
     aput-wide v10, v3, v5
 
+    .line 11
     iget-object v7, p0, Landroidx/constraintlayout/motion/utils/ViewTimeCycle$CustomSet;->mTempValues:[F
 
     invoke-virtual {v8, v7}, Landroidx/constraintlayout/widget/ConstraintAttribute;->getValuesToInterpolate([F)V
 
     move v7, v2
 
+    .line 12
     :goto_1
     iget-object v8, p0, Landroidx/constraintlayout/motion/utils/ViewTimeCycle$CustomSet;->mTempValues:[F
 
@@ -469,6 +505,7 @@
 
     if-ge v7, v10, :cond_0
 
+    .line 13
     aget-object v10, v4, v5
 
     aget v8, v8, v7
@@ -481,6 +518,7 @@
 
     goto :goto_1
 
+    .line 14
     :cond_0
     aget-object v7, v4, v5
 
@@ -489,6 +527,9 @@
     float-to-double v10, v8
 
     aput-wide v10, v7, v1
+
+    .line 15
+    aget-object v7, v4, v5
 
     add-int/lit8 v8, v1, 0x1
 
@@ -502,6 +543,7 @@
 
     goto :goto_0
 
+    .line 16
     :cond_1
     invoke-static {p1, v3, v4}, Landroidx/constraintlayout/core/motion/utils/CurveFit;->get(I[D[[D)Landroidx/constraintlayout/core/motion/utils/CurveFit;
 

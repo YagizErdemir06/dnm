@@ -82,6 +82,7 @@
 .method public getSurface()Landroid/view/Surface;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/XmsSurface;->mSurface:Landroid/view/Surface;
 
     return-object p0
@@ -90,6 +91,7 @@
 .method public isCreated()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/milab/videosdk/XmsSurface;->isCreated:Z
 
     return p0
@@ -98,6 +100,7 @@
 .method public onAttachedToWindow()V
     .locals 0
 
+    .line 1
     invoke-super {p0}, Landroid/view/SurfaceView;->onAttachedToWindow()V
 
     return-void
@@ -120,14 +123,17 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Landroid/view/SurfaceHolder;->getSurface()Landroid/view/Surface;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/xiaomi/milab/videosdk/XmsSurface;->mSurface:Landroid/view/Surface;
 
+    .line 2
     iput p3, p0, Lcom/xiaomi/milab/videosdk/XmsSurface;->mWidth:I
 
+    .line 3
     iput p4, p0, Lcom/xiaomi/milab/videosdk/XmsSurface;->mHeight:I
 
     return-void
@@ -146,6 +152,7 @@
 
     const/4 p1, 0x1
 
+    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/milab/videosdk/XmsSurface;->isCreated:Z
 
     return-void

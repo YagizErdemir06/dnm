@@ -35,16 +35,22 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/xiaomi/engine/PreProcessData;->mCameraId:I
 
+    .line 3
     iput p2, p0, Lcom/xiaomi/engine/PreProcessData;->mWidth:I
 
+    .line 4
     iput p3, p0, Lcom/xiaomi/engine/PreProcessData;->mHeight:I
 
+    .line 5
     iput p4, p0, Lcom/xiaomi/engine/PreProcessData;->mFormat:I
 
+    .line 6
     iput-object p5, p0, Lcom/xiaomi/engine/PreProcessData;->mCaptureRequestMetadataNative:Landroid/os/Parcelable;
 
     return-void
@@ -55,6 +61,7 @@
 .method public getCameraId()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/engine/PreProcessData;->mCameraId:I
 
     return p0
@@ -63,6 +70,7 @@
 .method public getCaptureRequestMetaDataNative()Landroid/os/Parcelable;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/engine/PreProcessData;->mCaptureRequestMetadataNative:Landroid/os/Parcelable;
 
     return-object p0
@@ -71,6 +79,7 @@
 .method public getFormat()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/engine/PreProcessData;->mFormat:I
 
     return p0
@@ -79,6 +88,7 @@
 .method public getHeight()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/engine/PreProcessData;->mHeight:I
 
     return p0
@@ -87,6 +97,7 @@
 .method public getWidth()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/engine/PreProcessData;->mWidth:I
 
     return p0
@@ -103,6 +114,7 @@
         }
     .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/engine/PreProcessData;->mCameraId:I
 
     return-void
@@ -119,6 +131,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/engine/PreProcessData;->mCaptureRequestMetadataNative:Landroid/os/Parcelable;
 
     return-void
@@ -135,6 +148,7 @@
         }
     .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/engine/PreProcessData;->mFormat:I
 
     return-void
@@ -151,6 +165,7 @@
         }
     .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/engine/PreProcessData;->mHeight:I
 
     return-void
@@ -167,6 +182,7 @@
         }
     .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/engine/PreProcessData;->mWidth:I
 
     return-void
@@ -175,6 +191,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

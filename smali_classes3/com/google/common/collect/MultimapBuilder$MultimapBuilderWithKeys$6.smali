@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/MultimapBuilder$MultimapBuilderWithKeys$6;
+.class public Lcom/google/common/collect/MultimapBuilder$MultimapBuilderWithKeys$6;
 .super Lcom/google/common/collect/MultimapBuilder$SetMultimapBuilder;
 .source "SourceFile"
 
@@ -22,15 +22,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/MultimapBuilder$MultimapBuilderWithKeys;
+.field public final synthetic this$0:Lcom/google/common/collect/MultimapBuilder$MultimapBuilderWithKeys;
 
-.field final synthetic val$valueClass:Ljava/lang/Class;
+.field public final synthetic val$valueClass:Ljava/lang/Class;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/MultimapBuilder$MultimapBuilderWithKeys;Ljava/lang/Class;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/MultimapBuilder$MultimapBuilderWithKeys$6;->this$0:Lcom/google/common/collect/MultimapBuilder$MultimapBuilderWithKeys;
 
     iput-object p2, p0, Lcom/google/common/collect/MultimapBuilder$MultimapBuilderWithKeys$6;->val$valueClass:Ljava/lang/Class;

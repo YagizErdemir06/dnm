@@ -36,6 +36,7 @@
 .method public final create(Lcom/google/firebase/components/ComponentContainer;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     const-class p0, Lcom/google/mlkit/vision/common/internal/MultiFlavorDetectorCreator$Registration;
 
     invoke-interface {p1, p0}, Lcom/google/firebase/components/ComponentContainer;->setOf(Ljava/lang/Class;)Ljava/util/Set;
@@ -44,6 +45,7 @@
 
     new-instance p1, Lcom/google/mlkit/vision/common/internal/MultiFlavorDetectorCreator;
 
+    .line 2
     invoke-direct {p1, p0}, Lcom/google/mlkit/vision/common/internal/MultiFlavorDetectorCreator;-><init>(Ljava/util/Set;)V
 
     return-object p1

@@ -14,9 +14,9 @@
 
 
 # static fields
-.field public static final o:Ljava/lang/String; = "DropDownPreference"
+.field private static final c:Ljava/lang/String; = "DropDownPreference"
 
-.field public static final p:[Ljava/lang/Class;
+.field private static final d:[Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "[",
@@ -26,37 +26,29 @@
     .end annotation
 .end field
 
-.field public static final q:[Ljava/lang/CharSequence;
+.field private static final f:[Ljava/lang/CharSequence;
 
 
 # instance fields
-.field public a:Landroid/widget/ArrayAdapter;
+.field private g:Landroid/widget/ArrayAdapter;
 
-.field public b:Landroid/widget/ArrayAdapter;
+.field private j:Landroid/widget/ArrayAdapter;
 
-.field public c:Ljava/lang/String;
+.field private final k0:Landroid/widget/AdapterView$OnItemSelectedListener;
 
-.field public d:Z
+.field private m:Ljava/lang/String;
 
-.field public e:Lmiuix/appcompat/widget/Spinner;
+.field private n:Z
 
-.field public f:[Ljava/lang/CharSequence;
+.field private p:Lmiuix/appcompat/widget/Spinner;
 
-.field public g:[Ljava/lang/CharSequence;
+.field private s:[Ljava/lang/CharSequence;
 
-.field public h:[Landroid/graphics/drawable/Drawable;
+.field private t:[Ljava/lang/CharSequence;
 
-.field public i:Landroidx/preference/PreferenceViewHolder;
+.field private u:[Landroid/graphics/drawable/Drawable;
 
-.field public j:Z
-
-.field public k:F
-
-.field public l:Z
-
-.field public m:Landroid/os/Handler;
-
-.field public final n:Landroid/widget/AdapterView$OnItemSelectedListener;
+.field private w:Landroid/os/Handler;
 
 
 # direct methods
@@ -67,6 +59,7 @@
 
     new-array v0, v0, [Ljava/lang/Class;
 
+    .line 1
     const-class v1, Landroid/content/Context;
 
     const/4 v2, 0x0
@@ -79,11 +72,12 @@
 
     aput-object v3, v0, v1
 
-    sput-object v0, Lmiuix/preference/DropDownPreference;->p:[Ljava/lang/Class;
+    sput-object v0, Lmiuix/preference/DropDownPreference;->d:[Ljava/lang/Class;
 
     new-array v0, v2, [Ljava/lang/CharSequence;
 
-    sput-object v0, Lmiuix/preference/DropDownPreference;->q:[Ljava/lang/CharSequence;
+    .line 2
+    sput-object v0, Lmiuix/preference/DropDownPreference;->f:[Ljava/lang/CharSequence;
 
     return-void
 .end method
@@ -103,7 +97,7 @@
     .locals 1
 
     .line 2
-    sget v0, Lmiuix/preference/c$d;->dropdownPreferenceStyle:I
+    sget v0, Lk/x/i$d;->dropdownPreferenceStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Lmiuix/preference/DropDownPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -122,375 +116,243 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
-    .locals 4
+    .locals 2
 
     .line 4
     invoke-direct {p0, p1, p2, p3, p4}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    const/4 v0, 0x0
-
     .line 5
-    iput-boolean v0, p0, Lmiuix/preference/DropDownPreference;->j:Z
+    new-instance v0, Landroid/os/Handler;
 
-    const v0, 0x7f7fffff    # Float.MAX_VALUE
+    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
+
+    iput-object v0, p0, Lmiuix/preference/DropDownPreference;->w:Landroid/os/Handler;
 
     .line 6
-    iput v0, p0, Lmiuix/preference/DropDownPreference;->k:F
+    new-instance v0, Lmiuix/preference/DropDownPreference$a;
 
-    const/4 v0, 0x1
+    invoke-direct {v0, p0}, Lmiuix/preference/DropDownPreference$a;-><init>(Lmiuix/preference/DropDownPreference;)V
+
+    iput-object v0, p0, Lmiuix/preference/DropDownPreference;->k0:Landroid/widget/AdapterView$OnItemSelectedListener;
 
     .line 7
-    iput-boolean v0, p0, Lmiuix/preference/DropDownPreference;->l:Z
+    sget-object v0, Lk/x/i$r;->DropDownPreference:[I
+
+    invoke-virtual {p1, p2, v0, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+
+    move-result-object v0
 
     .line 8
-    new-instance v1, Landroid/os/Handler;
+    sget v1, Lk/x/i$r;->DropDownPreference_adapter:I
 
-    invoke-direct {v1}, Landroid/os/Handler;-><init>()V
-
-    iput-object v1, p0, Lmiuix/preference/DropDownPreference;->m:Landroid/os/Handler;
-
-    .line 9
-    new-instance v1, Lmiuix/preference/DropDownPreference$a;
-
-    invoke-direct {v1, p0}, Lmiuix/preference/DropDownPreference$a;-><init>(Lmiuix/preference/DropDownPreference;)V
-
-    iput-object v1, p0, Lmiuix/preference/DropDownPreference;->n:Landroid/widget/AdapterView$OnItemSelectedListener;
-
-    .line 10
-    sget-object v1, Lmiuix/preference/c$r;->DropDownPreference:[I
-
-    invoke-virtual {p1, p2, v1, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+    invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 11
-    sget v2, Lmiuix/preference/c$r;->DropDownPreference_adapter:I
+    .line 9
+    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    invoke-virtual {v1, v2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 12
-    sget v3, Lmiuix/preference/c$r;->DropDownPreference_dimVisible:I
-
-    invoke-virtual {v1, v3, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    .line 10
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    .line 13
-    invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
+    if-nez v0, :cond_0
 
-    .line 14
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    .line 15
-    invoke-virtual {p0, p1, p2, v2}, Lmiuix/preference/DropDownPreference;->t(Landroid/content/Context;Landroid/util/AttributeSet;Ljava/lang/String;)Landroid/widget/ArrayAdapter;
+    .line 11
+    invoke-direct {p0, p1, p2, v1}, Lmiuix/preference/DropDownPreference;->k(Landroid/content/Context;Landroid/util/AttributeSet;Ljava/lang/String;)Landroid/widget/ArrayAdapter;
 
     move-result-object p1
 
-    iput-object p1, p0, Lmiuix/preference/DropDownPreference;->b:Landroid/widget/ArrayAdapter;
+    iput-object p1, p0, Lmiuix/preference/DropDownPreference;->j:Landroid/widget/ArrayAdapter;
 
     goto :goto_0
 
-    .line 16
+    .line 12
     :cond_0
-    new-instance v1, Lmiuix/preference/DropDownPreference$f;
+    new-instance v0, Lmiuix/preference/DropDownPreference$f;
 
-    invoke-direct {v1, p1, p2, p3, p4}, Lmiuix/preference/DropDownPreference$f;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+    invoke-direct {v0, p1, p2, p3, p4}, Lmiuix/preference/DropDownPreference$f;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    iput-object v1, p0, Lmiuix/preference/DropDownPreference;->b:Landroid/widget/ArrayAdapter;
+    iput-object v0, p0, Lmiuix/preference/DropDownPreference;->j:Landroid/widget/ArrayAdapter;
 
-    .line 17
+    .line 13
     :goto_0
     invoke-virtual {p0}, Lmiuix/preference/DropDownPreference;->createAdapter()Landroid/widget/ArrayAdapter;
 
     move-result-object p1
 
-    iput-object p1, p0, Lmiuix/preference/DropDownPreference;->a:Landroid/widget/ArrayAdapter;
+    iput-object p1, p0, Lmiuix/preference/DropDownPreference;->g:Landroid/widget/ArrayAdapter;
 
-    .line 18
-    invoke-virtual {p0}, Lmiuix/preference/DropDownPreference;->m()V
-
-    .line 19
-    invoke-virtual {p0, v0}, Lmiuix/preference/DropDownPreference;->y(Z)V
+    .line 14
+    invoke-direct {p0}, Lmiuix/preference/DropDownPreference;->f()V
 
     return-void
 .end method
 
-.method public static synthetic d(Lmiuix/preference/DropDownPreference;I)V
+.method public static synthetic a(Lmiuix/preference/DropDownPreference;)[Ljava/lang/CharSequence;
     .locals 0
 
-    invoke-virtual {p0, p1}, Lmiuix/preference/DropDownPreference;->D(I)V
-
-    return-void
-.end method
-
-.method public static synthetic e(Lmiuix/preference/DropDownPreference;)[Ljava/lang/CharSequence;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/preference/DropDownPreference;->g:[Ljava/lang/CharSequence;
+    .line 1
+    iget-object p0, p0, Lmiuix/preference/DropDownPreference;->t:[Ljava/lang/CharSequence;
 
     return-object p0
 .end method
 
-.method public static synthetic f(Lmiuix/preference/DropDownPreference;)Landroid/os/Handler;
+.method public static synthetic b(Lmiuix/preference/DropDownPreference;)Landroid/os/Handler;
     .locals 0
 
-    iget-object p0, p0, Lmiuix/preference/DropDownPreference;->m:Landroid/os/Handler;
+    .line 1
+    iget-object p0, p0, Lmiuix/preference/DropDownPreference;->w:Landroid/os/Handler;
 
     return-object p0
 .end method
 
-.method public static synthetic g(Lmiuix/preference/DropDownPreference;)Landroid/widget/ArrayAdapter;
+.method public static synthetic c(Lmiuix/preference/DropDownPreference;)Landroid/widget/ArrayAdapter;
     .locals 0
 
-    iget-object p0, p0, Lmiuix/preference/DropDownPreference;->a:Landroid/widget/ArrayAdapter;
+    .line 1
+    iget-object p0, p0, Lmiuix/preference/DropDownPreference;->g:Landroid/widget/ArrayAdapter;
 
     return-object p0
 .end method
 
-.method public static synthetic h(Lmiuix/preference/DropDownPreference;Landroidx/preference/PreferenceViewHolder;)V
+.method public static synthetic d(Lmiuix/preference/DropDownPreference;)Landroid/widget/AdapterView$OnItemSelectedListener;
     .locals 0
 
-    invoke-virtual {p0, p1}, Lmiuix/preference/DropDownPreference;->C(Landroidx/preference/PreferenceViewHolder;)V
-
-    return-void
-.end method
-
-.method public static synthetic i(Lmiuix/preference/DropDownPreference;)Landroid/widget/AdapterView$OnItemSelectedListener;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/preference/DropDownPreference;->n:Landroid/widget/AdapterView$OnItemSelectedListener;
+    .line 1
+    iget-object p0, p0, Lmiuix/preference/DropDownPreference;->k0:Landroid/widget/AdapterView$OnItemSelectedListener;
 
     return-object p0
 .end method
 
-.method public static synthetic k(Lmiuix/preference/DropDownPreference;)Lmiuix/appcompat/widget/Spinner;
+.method public static synthetic e(Lmiuix/preference/DropDownPreference;)Lmiuix/appcompat/widget/Spinner;
     .locals 0
 
-    iget-object p0, p0, Lmiuix/preference/DropDownPreference;->e:Lmiuix/appcompat/widget/Spinner;
+    .line 1
+    iget-object p0, p0, Lmiuix/preference/DropDownPreference;->p:Lmiuix/appcompat/widget/Spinner;
 
     return-object p0
 .end method
 
+.method private f()V
+    .locals 4
 
-# virtual methods
-.method public A([Landroid/graphics/drawable/Drawable;)V
-    .locals 2
-
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->b:Landroid/widget/ArrayAdapter;
+    .line 1
+    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->j:Landroid/widget/ArrayAdapter;
 
     instance-of v1, v0, Lmiuix/preference/DropDownPreference$f;
 
     if-eqz v1, :cond_0
 
+    .line 2
     check-cast v0, Lmiuix/preference/DropDownPreference$f;
 
-    invoke-virtual {v0, p1}, Lto/a;->i([Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0}, Lk/b/c/a;->a()[Ljava/lang/CharSequence;
 
-    iget-object p1, p0, Lmiuix/preference/DropDownPreference;->b:Landroid/widget/ArrayAdapter;
+    move-result-object v0
 
-    check-cast p1, Lmiuix/preference/DropDownPreference$f;
+    iput-object v0, p0, Lmiuix/preference/DropDownPreference;->s:[Ljava/lang/CharSequence;
 
-    invoke-virtual {p1}, Lto/a;->c()[Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lmiuix/preference/DropDownPreference;->h:[Landroid/graphics/drawable/Drawable;
-
-    :cond_0
-    invoke-virtual {p0}, Lmiuix/preference/DropDownPreference;->notifyChanged()V
-
-    return-void
-.end method
-
-.method public B([Ljava/lang/CharSequence;)V
-    .locals 2
-
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->b:Landroid/widget/ArrayAdapter;
-
-    instance-of v1, v0, Lmiuix/preference/DropDownPreference$f;
-
-    if-eqz v1, :cond_0
+    .line 3
+    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->j:Landroid/widget/ArrayAdapter;
 
     check-cast v0, Lmiuix/preference/DropDownPreference$f;
 
-    invoke-virtual {v0, p1}, Lto/a;->j([Ljava/lang/CharSequence;)V
+    invoke-virtual {v0}, Lmiuix/preference/DropDownPreference$f;->k()[Ljava/lang/CharSequence;
 
-    invoke-virtual {p0}, Lmiuix/preference/DropDownPreference;->notifyChanged()V
+    move-result-object v0
 
-    :cond_0
-    return-void
-.end method
+    iput-object v0, p0, Lmiuix/preference/DropDownPreference;->t:[Ljava/lang/CharSequence;
 
-.method public final C(Landroidx/preference/PreferenceViewHolder;)V
-    .locals 1
+    .line 4
+    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->j:Landroid/widget/ArrayAdapter;
 
-    if-eqz p1, :cond_0
+    check-cast v0, Lmiuix/preference/DropDownPreference$f;
 
-    iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
+    invoke-virtual {v0}, Lk/b/c/a;->c()[Landroid/graphics/drawable/Drawable;
 
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
-
-    instance-of v0, p1, Lmiuix/flexible/view/HyperCellLayout;
-
-    if-eqz v0, :cond_1
-
-    iget-boolean v0, p0, Lmiuix/preference/DropDownPreference;->j:Z
-
-    if-eqz v0, :cond_1
-
-    const v0, 0x1020014
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/widget/TextView;
-
-    if-eqz p1, :cond_1
-
-    iget-object p0, p0, Lmiuix/preference/DropDownPreference;->e:Lmiuix/appcompat/widget/Spinner;
-
-    invoke-virtual {p0}, Landroid/widget/AdapterView;->getSelectedItem()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/CharSequence;
-
-    invoke-virtual {p1, p0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final D(I)V
-    .locals 2
-
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->i:Landroidx/preference/PreferenceViewHolder;
-
-    if-eqz v0, :cond_0
-
-    iget-object v1, v0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
-
-    if-eqz v1, :cond_0
-
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    if-eqz v1, :cond_2
-
-    iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
-
-    instance-of v1, v0, Lmiuix/flexible/view/HyperCellLayout;
-
-    if-eqz v1, :cond_2
-
-    iget-boolean v1, p0, Lmiuix/preference/DropDownPreference;->j:Z
-
-    if-eqz v1, :cond_2
-
-    if-ltz p1, :cond_1
-
-    iget-object p0, p0, Lmiuix/preference/DropDownPreference;->f:[Ljava/lang/CharSequence;
-
-    if-eqz p0, :cond_1
-
-    array-length v1, p0
-
-    if-ge p1, v1, :cond_1
-
-    aget-object p0, p0, p1
+    iput-object v0, p0, Lmiuix/preference/DropDownPreference;->u:[Landroid/graphics/drawable/Drawable;
 
     goto :goto_1
 
+    .line 5
+    :cond_0
+    invoke-virtual {v0}, Landroid/widget/ArrayAdapter;->getCount()I
+
+    move-result v0
+
+    .line 6
+    iget-object v1, p0, Lmiuix/preference/DropDownPreference;->j:Landroid/widget/ArrayAdapter;
+
+    invoke-virtual {v1}, Landroid/widget/ArrayAdapter;->getCount()I
+
+    move-result v1
+
+    new-array v1, v1, [Ljava/lang/CharSequence;
+
+    iput-object v1, p0, Lmiuix/preference/DropDownPreference;->s:[Ljava/lang/CharSequence;
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v0, :cond_1
+
+    .line 7
+    iget-object v2, p0, Lmiuix/preference/DropDownPreference;->s:[Ljava/lang/CharSequence;
+
+    iget-object v3, p0, Lmiuix/preference/DropDownPreference;->j:Landroid/widget/ArrayAdapter;
+
+    invoke-virtual {v3, v1}, Landroid/widget/ArrayAdapter;->getItem(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    aput-object v3, v2, v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    .line 8
     :cond_1
-    const/4 p0, 0x0
+    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->s:[Ljava/lang/CharSequence;
+
+    iput-object v0, p0, Lmiuix/preference/DropDownPreference;->t:[Ljava/lang/CharSequence;
+
+    const/4 v0, 0x0
+
+    .line 9
+    iput-object v0, p0, Lmiuix/preference/DropDownPreference;->u:[Landroid/graphics/drawable/Drawable;
 
     :goto_1
-    const p1, 0x1020014
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/widget/TextView;
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1, p0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    :cond_2
     return-void
 .end method
 
-.method public createAdapter()Landroid/widget/ArrayAdapter;
-    .locals 4
-
-    new-instance v0, Lyo/a;
-
-    invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lmiuix/preference/DropDownPreference;->b:Landroid/widget/ArrayAdapter;
-
-    new-instance v3, Lmiuix/preference/DropDownPreference$g;
-
-    invoke-direct {v3, p0, v2}, Lmiuix/preference/DropDownPreference$g;-><init>(Lmiuix/preference/DropDownPreference;Landroid/widget/ArrayAdapter;)V
-
-    invoke-direct {v0, v1, v2, v3}, Lyo/a;-><init>(Landroid/content/Context;Landroid/widget/ArrayAdapter;Lyo/a$b;)V
-
-    return-object v0
-.end method
-
-.method public findIndexOfValue(Ljava/lang/String;)I
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lmiuix/preference/DropDownPreference;->findSpinnerIndexOfValue(Ljava/lang/String;)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final findSpinnerIndexOfValue(Ljava/lang/String;)I
+.method private findSpinnerIndexOfValue(Ljava/lang/String;)I
     .locals 3
 
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->g:[Ljava/lang/CharSequence;
+    .line 1
+    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->t:[Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_1
 
     const/4 v0, 0x0
 
+    .line 2
     :goto_0
-    iget-object v1, p0, Lmiuix/preference/DropDownPreference;->g:[Ljava/lang/CharSequence;
+    iget-object v1, p0, Lmiuix/preference/DropDownPreference;->t:[Ljava/lang/CharSequence;
 
     array-length v2, v1
 
     if-ge v0, v2, :cond_1
 
+    .line 3
     aget-object v1, v1, v0
 
     invoke-static {v1, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -512,10 +374,225 @@
     return p0
 .end method
 
+.method private h(Lmiuix/appcompat/widget/Spinner;)V
+    .locals 2
+
+    const/4 p0, 0x0
+
+    .line 1
+    invoke-virtual {p1, p0}, Landroid/widget/Spinner;->setClickable(Z)V
+
+    .line 2
+    invoke-virtual {p1, p0}, Landroid/widget/Spinner;->setLongClickable(Z)V
+
+    .line 3
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x17
+
+    if-lt v0, v1, :cond_0
+
+    .line 4
+    invoke-virtual {p1, p0}, Landroid/widget/Spinner;->setContextClickable(Z)V
+
+    :cond_0
+    return-void
+.end method
+
+.method private k(Landroid/content/Context;Landroid/util/AttributeSet;Ljava/lang/String;)Landroid/widget/ArrayAdapter;
+    .locals 2
+
+    .line 1
+    :try_start_0
+    invoke-virtual {p1}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
+
+    move-result-object p0
+
+    .line 2
+    invoke-virtual {p0, p3}, Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object p0
+
+    const-class v0, Landroid/widget/ArrayAdapter;
+
+    invoke-virtual {p0, v0}, Ljava/lang/Class;->asSubclass(Ljava/lang/Class;)Ljava/lang/Class;
+
+    move-result-object p0
+
+    .line 3
+    sget-object v0, Lmiuix/preference/DropDownPreference;->d:[Ljava/lang/Class;
+
+    .line 4
+    invoke-virtual {p0, v0}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    move-result-object p0
+
+    const/4 v0, 0x2
+
+    new-array v0, v0, [Ljava/lang/Object;
+
+    const/4 v1, 0x0
+
+    aput-object p1, v0, v1
+
+    const/4 p1, 0x1
+
+    aput-object p2, v0, p1
+
+    .line 5
+    invoke-virtual {p0, p1}, Ljava/lang/reflect/Constructor;->setAccessible(Z)V
+
+    .line 6
+    invoke-virtual {p0, v0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/widget/ArrayAdapter;
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p0
+
+    :catch_0
+    move-exception p0
+
+    .line 7
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "Can\'t find Adapter: "
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p1
+
+    :catch_1
+    move-exception p0
+
+    .line 8
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "Can\'t access non-public constructor "
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p1
+
+    :catch_2
+    move-exception p0
+
+    .line 9
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "Could not instantiate the Adapter: "
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p1
+
+    :catch_3
+    move-exception p0
+
+    .line 10
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "Error creating Adapter "
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p1
+.end method
+
+
+# virtual methods
+.method public createAdapter()Landroid/widget/ArrayAdapter;
+    .locals 4
+
+    .line 1
+    new-instance v0, Lk/b/e/a/a;
+
+    invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lmiuix/preference/DropDownPreference;->j:Landroid/widget/ArrayAdapter;
+
+    new-instance v3, Lmiuix/preference/DropDownPreference$g;
+
+    invoke-direct {v3, p0, v2}, Lmiuix/preference/DropDownPreference$g;-><init>(Lmiuix/preference/DropDownPreference;Landroid/widget/ArrayAdapter;)V
+
+    invoke-direct {v0, v1, v2, v3}, Lk/b/e/a/a;-><init>(Landroid/content/Context;Landroid/widget/ArrayAdapter;Lk/b/e/a/a$b;)V
+
+    return-object v0
+.end method
+
+.method public findIndexOfValue(Ljava/lang/String;)I
+    .locals 0
+
+    .line 1
+    invoke-direct {p0, p1}, Lmiuix/preference/DropDownPreference;->findSpinnerIndexOfValue(Ljava/lang/String;)I
+
+    move-result p0
+
+    return p0
+.end method
+
 .method public getEntries()[Ljava/lang/CharSequence;
     .locals 0
 
-    iget-object p0, p0, Lmiuix/preference/DropDownPreference;->f:[Ljava/lang/CharSequence;
+    .line 1
+    iget-object p0, p0, Lmiuix/preference/DropDownPreference;->s:[Ljava/lang/CharSequence;
 
     return-object p0
 .end method
@@ -523,12 +600,14 @@
 .method public getEntryValues()[Ljava/lang/CharSequence;
     .locals 1
 
-    iget-object p0, p0, Lmiuix/preference/DropDownPreference;->b:Landroid/widget/ArrayAdapter;
+    .line 1
+    iget-object p0, p0, Lmiuix/preference/DropDownPreference;->j:Landroid/widget/ArrayAdapter;
 
     instance-of v0, p0, Lmiuix/preference/DropDownPreference$f;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Lmiuix/preference/DropDownPreference$f;
 
     invoke-virtual {p0}, Lmiuix/preference/DropDownPreference$f;->k()[Ljava/lang/CharSequence;
@@ -537,8 +616,9 @@
 
     return-object p0
 
+    .line 3
     :cond_0
-    sget-object p0, Lmiuix/preference/DropDownPreference;->q:[Ljava/lang/CharSequence;
+    sget-object p0, Lmiuix/preference/DropDownPreference;->f:[Ljava/lang/CharSequence;
 
     return-object p0
 .end method
@@ -546,7 +626,8 @@
 .method public getValue()Ljava/lang/String;
     .locals 0
 
-    iget-object p0, p0, Lmiuix/preference/DropDownPreference;->c:Ljava/lang/String;
+    .line 1
+    iget-object p0, p0, Lmiuix/preference/DropDownPreference;->m:Ljava/lang/String;
 
     return-object p0
 .end method
@@ -554,7 +635,8 @@
 .method public getValueIndex()I
     .locals 1
 
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->c:Ljava/lang/String;
+    .line 1
+    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->m:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lmiuix/preference/DropDownPreference;->findIndexOfValue(Ljava/lang/String;)I
 
@@ -563,106 +645,118 @@
     return p0
 .end method
 
-.method public final m()V
-    .locals 4
+.method public i()[Landroid/graphics/drawable/Drawable;
+    .locals 0
 
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->b:Landroid/widget/ArrayAdapter;
+    .line 1
+    iget-object p0, p0, Lmiuix/preference/DropDownPreference;->u:[Landroid/graphics/drawable/Drawable;
+
+    return-object p0
+.end method
+
+.method public j()[Ljava/lang/CharSequence;
+    .locals 1
+
+    .line 1
+    iget-object p0, p0, Lmiuix/preference/DropDownPreference;->j:Landroid/widget/ArrayAdapter;
+
+    instance-of v0, p0, Lmiuix/preference/DropDownPreference$f;
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    check-cast p0, Lmiuix/preference/DropDownPreference$f;
+
+    invoke-virtual {p0}, Lk/b/c/a;->e()[Ljava/lang/CharSequence;
+
+    .line 3
+    :cond_0
+    sget-object p0, Lmiuix/preference/DropDownPreference;->f:[Ljava/lang/CharSequence;
+
+    return-object p0
+.end method
+
+.method public l(Landroid/widget/ArrayAdapter;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lmiuix/preference/DropDownPreference;->j:Landroid/widget/ArrayAdapter;
+
+    .line 2
+    invoke-virtual {p0}, Lmiuix/preference/DropDownPreference;->createAdapter()Landroid/widget/ArrayAdapter;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lmiuix/preference/DropDownPreference;->g:Landroid/widget/ArrayAdapter;
+
+    .line 3
+    invoke-direct {p0}, Lmiuix/preference/DropDownPreference;->f()V
+
+    return-void
+.end method
+
+.method public m([I)V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->j:Landroid/widget/ArrayAdapter;
 
     instance-of v1, v0, Lmiuix/preference/DropDownPreference$f;
 
     if-eqz v1, :cond_0
 
+    .line 2
     check-cast v0, Lmiuix/preference/DropDownPreference$f;
 
-    invoke-virtual {v0}, Lto/a;->a()[Ljava/lang/CharSequence;
+    invoke-virtual {v0, p1}, Lk/b/c/a;->h([I)V
 
-    move-result-object v0
+    .line 3
+    iget-object p1, p0, Lmiuix/preference/DropDownPreference;->j:Landroid/widget/ArrayAdapter;
 
-    iput-object v0, p0, Lmiuix/preference/DropDownPreference;->f:[Ljava/lang/CharSequence;
+    check-cast p1, Lmiuix/preference/DropDownPreference$f;
 
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->b:Landroid/widget/ArrayAdapter;
+    invoke-virtual {p1}, Lk/b/c/a;->c()[Landroid/graphics/drawable/Drawable;
 
-    check-cast v0, Lmiuix/preference/DropDownPreference$f;
+    move-result-object p1
 
-    invoke-virtual {v0}, Lmiuix/preference/DropDownPreference$f;->k()[Ljava/lang/CharSequence;
+    iput-object p1, p0, Lmiuix/preference/DropDownPreference;->u:[Landroid/graphics/drawable/Drawable;
 
-    move-result-object v0
-
-    iput-object v0, p0, Lmiuix/preference/DropDownPreference;->g:[Ljava/lang/CharSequence;
-
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->b:Landroid/widget/ArrayAdapter;
-
-    check-cast v0, Lmiuix/preference/DropDownPreference$f;
-
-    invoke-virtual {v0}, Lto/a;->c()[Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lmiuix/preference/DropDownPreference;->h:[Landroid/graphics/drawable/Drawable;
-
-    goto :goto_1
-
+    .line 4
     :cond_0
-    invoke-virtual {v0}, Landroid/widget/ArrayAdapter;->getCount()I
+    invoke-virtual {p0}, Lmiuix/preference/DropDownPreference;->notifyChanged()V
 
-    move-result v0
-
-    iget-object v1, p0, Lmiuix/preference/DropDownPreference;->b:Landroid/widget/ArrayAdapter;
-
-    invoke-virtual {v1}, Landroid/widget/ArrayAdapter;->getCount()I
-
-    move-result v1
-
-    new-array v1, v1, [Ljava/lang/CharSequence;
-
-    iput-object v1, p0, Lmiuix/preference/DropDownPreference;->f:[Ljava/lang/CharSequence;
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_1
-
-    iget-object v2, p0, Lmiuix/preference/DropDownPreference;->f:[Ljava/lang/CharSequence;
-
-    iget-object v3, p0, Lmiuix/preference/DropDownPreference;->b:Landroid/widget/ArrayAdapter;
-
-    invoke-virtual {v3, v1}, Landroid/widget/ArrayAdapter;->getItem(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    aput-object v3, v2, v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->f:[Ljava/lang/CharSequence;
-
-    iput-object v0, p0, Lmiuix/preference/DropDownPreference;->g:[Ljava/lang/CharSequence;
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lmiuix/preference/DropDownPreference;->h:[Landroid/graphics/drawable/Drawable;
-
-    :goto_1
     return-void
 .end method
 
-.method public final n(Lmiuix/appcompat/widget/Spinner;)V
-    .locals 0
+.method public n([Landroid/graphics/drawable/Drawable;)V
+    .locals 2
 
-    const/4 p0, 0x0
+    .line 1
+    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->j:Landroid/widget/ArrayAdapter;
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->setClickable(Z)V
+    instance-of v1, v0, Lmiuix/preference/DropDownPreference$f;
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->setLongClickable(Z)V
+    if-eqz v1, :cond_0
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->setContextClickable(Z)V
+    .line 2
+    check-cast v0, Lmiuix/preference/DropDownPreference$f;
+
+    invoke-virtual {v0, p1}, Lk/b/c/a;->i([Landroid/graphics/drawable/Drawable;)V
+
+    .line 3
+    iget-object p1, p0, Lmiuix/preference/DropDownPreference;->j:Landroid/widget/ArrayAdapter;
+
+    check-cast p1, Lmiuix/preference/DropDownPreference$f;
+
+    invoke-virtual {p1}, Lk/b/c/a;->c()[Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lmiuix/preference/DropDownPreference;->u:[Landroid/graphics/drawable/Drawable;
+
+    .line 4
+    :cond_0
+    invoke-virtual {p0}, Lmiuix/preference/DropDownPreference;->notifyChanged()V
 
     return-void
 .end method
@@ -670,13 +764,16 @@
 .method public notifyChanged()V
     .locals 2
 
+    .line 1
     invoke-super {p0}, Landroidx/preference/Preference;->notifyChanged()V
 
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->a:Landroid/widget/ArrayAdapter;
+    .line 2
+    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->g:Landroid/widget/ArrayAdapter;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->m:Landroid/os/Handler;
+    .line 3
+    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->w:Landroid/os/Handler;
 
     new-instance v1, Lmiuix/preference/DropDownPreference$b;
 
@@ -688,225 +785,97 @@
     return-void
 .end method
 
-.method public o()Z
-    .locals 0
-
-    iget-boolean p0, p0, Lmiuix/preference/DropDownPreference;->l:Z
-
-    return p0
-.end method
-
-.method public onAttached()V
-    .locals 5
-
-    invoke-super {p0}, Landroidx/preference/Preference;->onAttached()V
-
-    invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lmp/k;->f(Landroid/content/Context;)I
-
-    move-result v0
-
-    const/4 v1, 0x2
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    if-ne v0, v1, :cond_0
-
-    move v0, v2
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v3
-
-    :goto_0
-    iput-boolean v0, p0, Lmiuix/preference/DropDownPreference;->j:Z
-
-    invoke-virtual {p0}, Landroidx/preference/Preference;->getLayoutResource()I
-
-    move-result v0
-
-    sget v1, Lmiuix/preference/c$m;->miuix_preference_flexible_layout:I
-
-    if-eq v0, v1, :cond_2
-
-    sget v4, Lmiuix/preference/c$m;->miuix_dropdown_preference_flexible_layout:I
-
-    if-ne v0, v4, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    move v2, v3
-
-    :cond_2
-    :goto_1
-    if-eqz v2, :cond_4
-
-    iget-boolean v0, p0, Lmiuix/preference/DropDownPreference;->j:Z
-
-    if-eqz v0, :cond_3
-
-    sget v1, Lmiuix/preference/c$m;->miuix_dropdown_preference_flexible_layout:I
-
-    :cond_3
-    invoke-virtual {p0, v1}, Landroidx/preference/Preference;->setLayoutResource(I)V
-
-    :cond_4
-    return-void
-.end method
-
 .method public onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
-    .locals 3
+    .locals 2
 
-    iput-object p1, p0, Lmiuix/preference/DropDownPreference;->i:Landroidx/preference/PreferenceViewHolder;
-
-    invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lmp/k;->f(Landroid/content/Context;)I
-
-    move-result v0
-
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iput-boolean v0, p0, Lmiuix/preference/DropDownPreference;->j:Z
-
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->a:Landroid/widget/ArrayAdapter;
+    .line 1
+    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->g:Landroid/widget/ArrayAdapter;
 
     invoke-virtual {v0}, Landroid/widget/ArrayAdapter;->getCount()I
 
     move-result v0
 
-    if-lez v0, :cond_2
+    if-lez v0, :cond_0
 
+    .line 2
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    sget v2, Lmiuix/preference/c$j;->spinner:I
+    sget v1, Lk/x/i$j;->spinner:I
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Lmiuix/appcompat/widget/Spinner;
 
-    iput-object v0, p0, Lmiuix/preference/DropDownPreference;->e:Lmiuix/appcompat/widget/Spinner;
+    iput-object v0, p0, Lmiuix/preference/DropDownPreference;->p:Lmiuix/appcompat/widget/Spinner;
 
-    invoke-virtual {p0, p1}, Lmiuix/preference/DropDownPreference;->u(Landroidx/preference/PreferenceViewHolder;)V
+    const/4 v1, 0x2
 
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->e:Lmiuix/appcompat/widget/Spinner;
+    .line 3
+    invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setImportantForAccessibility(I)V
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setImportantForAccessibility(I)V
+    .line 4
+    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->p:Lmiuix/appcompat/widget/Spinner;
 
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->e:Lmiuix/appcompat/widget/Spinner;
+    invoke-direct {p0, v0}, Lmiuix/preference/DropDownPreference;->h(Lmiuix/appcompat/widget/Spinner;)V
 
-    invoke-virtual {p0, v0}, Lmiuix/preference/DropDownPreference;->n(Lmiuix/appcompat/widget/Spinner;)V
+    .line 5
+    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->p:Lmiuix/appcompat/widget/Spinner;
 
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->e:Lmiuix/appcompat/widget/Spinner;
+    iget-object v1, p0, Lmiuix/preference/DropDownPreference;->g:Landroid/widget/ArrayAdapter;
 
-    iget-object v2, p0, Lmiuix/preference/DropDownPreference;->a:Landroid/widget/ArrayAdapter;
+    invoke-virtual {v0, v1}, Lmiuix/appcompat/widget/Spinner;->setAdapter(Landroid/widget/SpinnerAdapter;)V
 
-    invoke-virtual {v0, v2}, Lmiuix/appcompat/widget/Spinner;->setAdapter(Landroid/widget/SpinnerAdapter;)V
+    .line 6
+    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->p:Lmiuix/appcompat/widget/Spinner;
 
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->e:Lmiuix/appcompat/widget/Spinner;
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
 
-    invoke-virtual {v0, v2}, Landroid/widget/AdapterView;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
-
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->e:Lmiuix/appcompat/widget/Spinner;
+    .line 7
+    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->p:Lmiuix/appcompat/widget/Spinner;
 
     invoke-virtual {p0}, Lmiuix/preference/DropDownPreference;->getValue()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {p0, v2}, Lmiuix/preference/DropDownPreference;->findSpinnerIndexOfValue(Ljava/lang/String;)I
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Lmiuix/appcompat/widget/Spinner;->setSelection(I)V
-
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->e:Lmiuix/appcompat/widget/Spinner;
-
-    new-instance v2, Lmiuix/preference/DropDownPreference$c;
-
-    invoke-direct {v2, p0, p1}, Lmiuix/preference/DropDownPreference$c;-><init>(Lmiuix/preference/DropDownPreference;Landroidx/preference/PreferenceViewHolder;)V
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->e:Lmiuix/appcompat/widget/Spinner;
-
-    new-instance v2, Lmiuix/preference/DropDownPreference$d;
-
-    invoke-direct {v2, p0, p1}, Lmiuix/preference/DropDownPreference$d;-><init>(Lmiuix/preference/DropDownPreference;Landroidx/preference/PreferenceViewHolder;)V
-
-    invoke-virtual {v0, v2}, Lmiuix/appcompat/widget/Spinner;->setOnSpinnerDismissListener(Lmiuix/appcompat/widget/Spinner$h;)V
-
-    iget-boolean v0, p0, Lmiuix/preference/DropDownPreference;->l:Z
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->e:Lmiuix/appcompat/widget/Spinner;
-
-    invoke-virtual {v0}, Lmiuix/appcompat/widget/Spinner;->getWindowManagerFlag()I
-
-    move-result v2
-
-    or-int/2addr v1, v2
-
-    invoke-virtual {v0, v1}, Lmiuix/appcompat/widget/Spinner;->setWindowManagerFlags(I)V
-
-    goto :goto_1
-
-    :cond_1
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->e:Lmiuix/appcompat/widget/Spinner;
-
-    invoke-virtual {v0}, Lmiuix/appcompat/widget/Spinner;->getWindowManagerFlag()I
+    invoke-direct {p0, v1}, Lmiuix/preference/DropDownPreference;->findSpinnerIndexOfValue(Ljava/lang/String;)I
 
     move-result v1
 
-    and-int/lit8 v1, v1, -0x3
+    invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setSelection(I)V
 
-    invoke-virtual {v0, v1}, Lmiuix/appcompat/widget/Spinner;->setWindowManagerFlags(I)V
+    .line 8
+    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->p:Lmiuix/appcompat/widget/Spinner;
 
-    :goto_1
-    iget v0, p0, Lmiuix/preference/DropDownPreference;->k:F
+    new-instance v1, Lmiuix/preference/DropDownPreference$c;
 
-    const v1, 0x7f7fffff    # Float.MAX_VALUE
+    invoke-direct {v1, p0}, Lmiuix/preference/DropDownPreference$c;-><init>(Lmiuix/preference/DropDownPreference;)V
 
-    cmpl-float v1, v0, v1
+    invoke-virtual {v0, v1}, Landroid/widget/Spinner;->post(Ljava/lang/Runnable;)Z
 
-    if-eqz v1, :cond_2
+    .line 9
+    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->p:Lmiuix/appcompat/widget/Spinner;
 
-    iget-object v1, p0, Lmiuix/preference/DropDownPreference;->e:Lmiuix/appcompat/widget/Spinner;
+    new-instance v1, Lmiuix/preference/DropDownPreference$d;
 
-    invoke-virtual {v1, v0}, Lmiuix/appcompat/widget/Spinner;->setDimAmount(F)V
+    invoke-direct {v1, p0, p1}, Lmiuix/preference/DropDownPreference$d;-><init>(Lmiuix/preference/DropDownPreference;Landroidx/preference/PreferenceViewHolder;)V
 
-    :cond_2
+    invoke-virtual {v0, v1}, Lmiuix/appcompat/widget/Spinner;->setOnSpinnerDismissListener(Lmiuix/appcompat/widget/Spinner$g;)V
+
+    .line 10
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     new-instance v1, Lmiuix/preference/DropDownPreference$e;
 
-    invoke-direct {v1, p0, p1}, Lmiuix/preference/DropDownPreference$e;-><init>(Lmiuix/preference/DropDownPreference;Landroidx/preference/PreferenceViewHolder;)V
+    invoke-direct {v1, p0}, Lmiuix/preference/DropDownPreference$e;-><init>(Lmiuix/preference/DropDownPreference;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
+    .line 11
+    :cond_0
     invoke-super {p0, p1}, Landroidx/preference/Preference;->onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
 
     return-void
@@ -915,6 +884,7 @@
 .method public onGetDefaultValue(Landroid/content/res/TypedArray;I)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -927,6 +897,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -941,21 +912,25 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     check-cast p1, Lmiuix/preference/DropDownPreference$h;
 
+    .line 3
     invoke-virtual {p1}, Landroid/view/AbsSavedState;->getSuperState()Landroid/os/Parcelable;
 
     move-result-object v0
 
     invoke-super {p0, v0}, Landroidx/preference/Preference;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
-    iget-object p1, p1, Lmiuix/preference/DropDownPreference$h;->a:Ljava/lang/String;
+    .line 4
+    iget-object p1, p1, Lmiuix/preference/DropDownPreference$h;->c:Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lmiuix/preference/DropDownPreference;->setValue(Ljava/lang/String;)V
 
     return-void
 
+    .line 5
     :cond_1
     :goto_0
     invoke-super {p0, p1}, Landroidx/preference/Preference;->onRestoreInstanceState(Landroid/os/Parcelable;)V
@@ -966,10 +941,12 @@
 .method public onSaveInstanceState()Landroid/os/Parcelable;
     .locals 2
 
+    .line 1
     invoke-super {p0}, Landroidx/preference/Preference;->onSaveInstanceState()Landroid/os/Parcelable;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0}, Landroidx/preference/Preference;->isPersistent()Z
 
     move-result v1
@@ -978,16 +955,18 @@
 
     return-object v0
 
+    .line 3
     :cond_0
     new-instance v1, Lmiuix/preference/DropDownPreference$h;
 
     invoke-direct {v1, v0}, Lmiuix/preference/DropDownPreference$h;-><init>(Landroid/os/Parcelable;)V
 
+    .line 4
     invoke-virtual {p0}, Lmiuix/preference/DropDownPreference;->getValue()Ljava/lang/String;
 
     move-result-object p0
 
-    iput-object p0, v1, Lmiuix/preference/DropDownPreference$h;->a:Ljava/lang/String;
+    iput-object p0, v1, Lmiuix/preference/DropDownPreference$h;->c:Ljava/lang/String;
 
     return-object v1
 .end method
@@ -995,6 +974,7 @@
 .method public onSetInitialValue(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Landroidx/preference/Preference;->getPersistedString(Ljava/lang/String;)Ljava/lang/String;
@@ -1009,47 +989,45 @@
 .method public performClick(Landroid/view/View;)V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/preference/DropDownPreference;->e:Lmiuix/appcompat/widget/Spinner;
+    .line 1
+    iget-object p0, p0, Lmiuix/preference/DropDownPreference;->p:Lmiuix/appcompat/widget/Spinner;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lmiuix/appcompat/widget/Spinner;->performClick()Z
 
     const-string p0, "DropDownPreference"
 
     const-string p1, "trigger from perform click"
 
+    .line 3
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
     return-void
 .end method
 
-.method public r()[Landroid/graphics/drawable/Drawable;
-    .locals 0
+.method public q([Ljava/lang/CharSequence;)V
+    .locals 2
 
-    iget-object p0, p0, Lmiuix/preference/DropDownPreference;->h:[Landroid/graphics/drawable/Drawable;
+    .line 1
+    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->j:Landroid/widget/ArrayAdapter;
 
-    return-object p0
-.end method
+    instance-of v1, v0, Lmiuix/preference/DropDownPreference$f;
 
-.method public s()[Ljava/lang/CharSequence;
-    .locals 1
+    if-eqz v1, :cond_0
 
-    iget-object p0, p0, Lmiuix/preference/DropDownPreference;->b:Landroid/widget/ArrayAdapter;
+    .line 2
+    check-cast v0, Lmiuix/preference/DropDownPreference$f;
 
-    instance-of v0, p0, Lmiuix/preference/DropDownPreference$f;
+    invoke-virtual {v0, p1}, Lk/b/c/a;->j([Ljava/lang/CharSequence;)V
 
-    if-eqz v0, :cond_0
-
-    check-cast p0, Lmiuix/preference/DropDownPreference$f;
-
-    invoke-virtual {p0}, Lto/a;->e()[Ljava/lang/CharSequence;
+    .line 3
+    invoke-virtual {p0}, Lmiuix/preference/DropDownPreference;->notifyChanged()V
 
     :cond_0
-    sget-object p0, Lmiuix/preference/DropDownPreference;->q:[Ljava/lang/CharSequence;
-
-    return-object p0
+    return-void
 .end method
 
 .method public setEntries(I)V
@@ -1081,10 +1059,10 @@
     .locals 2
 
     .line 1
-    iput-object p1, p0, Lmiuix/preference/DropDownPreference;->f:[Ljava/lang/CharSequence;
+    iput-object p1, p0, Lmiuix/preference/DropDownPreference;->s:[Ljava/lang/CharSequence;
 
     .line 2
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->b:Landroid/widget/ArrayAdapter;
+    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->j:Landroid/widget/ArrayAdapter;
 
     instance-of v1, v0, Lmiuix/preference/DropDownPreference$f;
 
@@ -1093,7 +1071,7 @@
     .line 3
     check-cast v0, Lmiuix/preference/DropDownPreference$f;
 
-    invoke-virtual {v0, p1}, Lto/a;->g([Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, p1}, Lk/b/c/a;->g([Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
@@ -1102,18 +1080,18 @@
     invoke-virtual {v0}, Landroid/widget/ArrayAdapter;->clear()V
 
     .line 5
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->b:Landroid/widget/ArrayAdapter;
+    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->j:Landroid/widget/ArrayAdapter;
 
     invoke-virtual {v0, p1}, Landroid/widget/ArrayAdapter;->addAll([Ljava/lang/Object;)V
 
     .line 6
-    iget-object p1, p0, Lmiuix/preference/DropDownPreference;->f:[Ljava/lang/CharSequence;
+    iget-object p1, p0, Lmiuix/preference/DropDownPreference;->s:[Ljava/lang/CharSequence;
 
-    iput-object p1, p0, Lmiuix/preference/DropDownPreference;->g:[Ljava/lang/CharSequence;
+    iput-object p1, p0, Lmiuix/preference/DropDownPreference;->t:[Ljava/lang/CharSequence;
 
     .line 7
     :goto_0
-    iget-object p1, p0, Lmiuix/preference/DropDownPreference;->e:Lmiuix/appcompat/widget/Spinner;
+    iget-object p1, p0, Lmiuix/preference/DropDownPreference;->p:Lmiuix/appcompat/widget/Spinner;
 
     if-eqz p1, :cond_1
 
@@ -1122,11 +1100,11 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lmiuix/preference/DropDownPreference;->findSpinnerIndexOfValue(Ljava/lang/String;)I
+    invoke-direct {p0, v0}, Lmiuix/preference/DropDownPreference;->findSpinnerIndexOfValue(Ljava/lang/String;)I
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Lmiuix/appcompat/widget/Spinner;->setSelection(I)V
+    invoke-virtual {p1, v0}, Landroid/widget/Spinner;->setSelection(I)V
 
     .line 9
     :cond_1
@@ -1164,7 +1142,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->b:Landroid/widget/ArrayAdapter;
+    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->j:Landroid/widget/ArrayAdapter;
 
     instance-of v1, v0, Lmiuix/preference/DropDownPreference$f;
 
@@ -1176,12 +1154,12 @@
     invoke-virtual {v0, p1}, Lmiuix/preference/DropDownPreference$f;->l([Ljava/lang/CharSequence;)V
 
     .line 3
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->a:Landroid/widget/ArrayAdapter;
+    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->g:Landroid/widget/ArrayAdapter;
 
     invoke-virtual {v0}, Landroid/widget/ArrayAdapter;->notifyDataSetChanged()V
 
     .line 4
-    iput-object p1, p0, Lmiuix/preference/DropDownPreference;->g:[Ljava/lang/CharSequence;
+    iput-object p1, p0, Lmiuix/preference/DropDownPreference;->t:[Ljava/lang/CharSequence;
 
     :cond_0
     return-void
@@ -1190,7 +1168,8 @@
 .method public setValue(Ljava/lang/String;)V
     .locals 3
 
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->c:Ljava/lang/String;
+    .line 1
+    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->m:Ljava/lang/String;
 
     invoke-static {v0, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
@@ -1202,19 +1181,24 @@
 
     if-nez v0, :cond_0
 
-    iget-boolean v2, p0, Lmiuix/preference/DropDownPreference;->d:Z
+    .line 2
+    iget-boolean v2, p0, Lmiuix/preference/DropDownPreference;->n:Z
 
     if-nez v2, :cond_1
 
+    .line 3
     :cond_0
-    iput-object p1, p0, Lmiuix/preference/DropDownPreference;->c:Ljava/lang/String;
+    iput-object p1, p0, Lmiuix/preference/DropDownPreference;->m:Ljava/lang/String;
 
-    iput-boolean v1, p0, Lmiuix/preference/DropDownPreference;->d:Z
+    .line 4
+    iput-boolean v1, p0, Lmiuix/preference/DropDownPreference;->n:Z
 
+    .line 5
     invoke-virtual {p0, p1}, Landroidx/preference/Preference;->persistString(Ljava/lang/String;)Z
 
     if-eqz v0, :cond_1
 
+    .line 6
     invoke-virtual {p0}, Lmiuix/preference/DropDownPreference;->notifyChanged()V
 
     :cond_1
@@ -1224,7 +1208,8 @@
 .method public setValueIndex(I)V
     .locals 1
 
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->g:[Ljava/lang/CharSequence;
+    .line 1
+    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->t:[Ljava/lang/CharSequence;
 
     aget-object v0, v0, p1
 
@@ -1234,269 +1219,14 @@
 
     invoke-virtual {p0, v0}, Lmiuix/preference/DropDownPreference;->setValue(Ljava/lang/String;)V
 
-    iget-object p0, p0, Lmiuix/preference/DropDownPreference;->e:Lmiuix/appcompat/widget/Spinner;
+    .line 2
+    iget-object p0, p0, Lmiuix/preference/DropDownPreference;->p:Lmiuix/appcompat/widget/Spinner;
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/widget/Spinner;->setSelection(I)V
+    .line 3
+    invoke-virtual {p0, p1}, Landroid/widget/Spinner;->setSelection(I)V
 
     :cond_0
-    return-void
-.end method
-
-.method public final t(Landroid/content/Context;Landroid/util/AttributeSet;Ljava/lang/String;)Landroid/widget/ArrayAdapter;
-    .locals 2
-
-    :try_start_0
-    invoke-virtual {p1}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p3}, Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object p0
-
-    const-class v0, Landroid/widget/ArrayAdapter;
-
-    invoke-virtual {p0, v0}, Ljava/lang/Class;->asSubclass(Ljava/lang/Class;)Ljava/lang/Class;
-
-    move-result-object p0
-
-    sget-object v0, Lmiuix/preference/DropDownPreference;->p:[Ljava/lang/Class;
-
-    invoke-virtual {p0, v0}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
-
-    move-result-object p0
-
-    const/4 v0, 0x2
-
-    new-array v0, v0, [Ljava/lang/Object;
-
-    const/4 v1, 0x0
-
-    aput-object p1, v0, v1
-
-    const/4 p1, 0x1
-
-    aput-object p2, v0, p1
-
-    invoke-virtual {p0, p1}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-
-    invoke-virtual {p0, v0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/widget/ArrayAdapter;
-    :try_end_0
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_3
-    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p0
-
-    :catch_0
-    move-exception p0
-
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "Can\'t find Adapter: "
-
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw p1
-
-    :catch_1
-    move-exception p0
-
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "Can\'t access non-public constructor "
-
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw p1
-
-    :catch_2
-    move-exception p0
-
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "Could not instantiate the Adapter: "
-
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw p1
-
-    :catch_3
-    move-exception p0
-
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "Error creating Adapter "
-
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw p1
-.end method
-
-.method public final u(Landroidx/preference/PreferenceViewHolder;)V
-    .locals 4
-
-    if-eqz p1, :cond_0
-
-    iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
-
-    instance-of p1, p1, Lmiuix/flexible/view/HyperCellLayout;
-
-    if-eqz p1, :cond_1
-
-    iget-boolean p1, p0, Lmiuix/preference/DropDownPreference;->j:Z
-
-    if-eqz p1, :cond_1
-
-    new-instance p1, Lyo/a;
-
-    invoke-virtual {p0}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    sget v1, Lmiuix/preference/c$m;->miuix_appcompat_simple_spinner_flexible_layout_integrated:I
-
-    iget-object v2, p0, Lmiuix/preference/DropDownPreference;->b:Landroid/widget/ArrayAdapter;
-
-    new-instance v3, Lmiuix/preference/DropDownPreference$g;
-
-    invoke-direct {v3, p0, v2}, Lmiuix/preference/DropDownPreference$g;-><init>(Lmiuix/preference/DropDownPreference;Landroid/widget/ArrayAdapter;)V
-
-    invoke-direct {p1, v0, v1, v2, v3}, Lyo/a;-><init>(Landroid/content/Context;ILandroid/widget/ArrayAdapter;Lyo/a$b;)V
-
-    iput-object p1, p0, Lmiuix/preference/DropDownPreference;->a:Landroid/widget/ArrayAdapter;
-
-    :cond_1
-    return-void
-.end method
-
-.method public v(Landroid/widget/ArrayAdapter;)V
-    .locals 0
-
-    iput-object p1, p0, Lmiuix/preference/DropDownPreference;->b:Landroid/widget/ArrayAdapter;
-
-    invoke-virtual {p0}, Lmiuix/preference/DropDownPreference;->createAdapter()Landroid/widget/ArrayAdapter;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lmiuix/preference/DropDownPreference;->a:Landroid/widget/ArrayAdapter;
-
-    invoke-virtual {p0}, Lmiuix/preference/DropDownPreference;->m()V
-
-    return-void
-.end method
-
-.method public x(F)V
-    .locals 0
-
-    iput p1, p0, Lmiuix/preference/DropDownPreference;->k:F
-
-    return-void
-.end method
-
-.method public y(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lmiuix/preference/DropDownPreference;->l:Z
-
-    return-void
-.end method
-
-.method public z([I)V
-    .locals 2
-
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference;->b:Landroid/widget/ArrayAdapter;
-
-    instance-of v1, v0, Lmiuix/preference/DropDownPreference$f;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Lmiuix/preference/DropDownPreference$f;
-
-    invoke-virtual {v0, p1}, Lto/a;->h([I)V
-
-    iget-object p1, p0, Lmiuix/preference/DropDownPreference;->b:Landroid/widget/ArrayAdapter;
-
-    check-cast p1, Lmiuix/preference/DropDownPreference$f;
-
-    invoke-virtual {p1}, Lto/a;->c()[Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lmiuix/preference/DropDownPreference;->h:[Landroid/graphics/drawable/Drawable;
-
-    :cond_0
-    invoke-virtual {p0}, Lmiuix/preference/DropDownPreference;->notifyChanged()V
-
     return-void
 .end method

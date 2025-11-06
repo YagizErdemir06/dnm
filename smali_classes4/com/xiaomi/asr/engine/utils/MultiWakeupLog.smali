@@ -19,6 +19,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,6 +28,7 @@
 .method public static d(Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     sget-boolean v0, Lcom/xiaomi/asr/engine/utils/MultiWakeupLog;->isPrintLog:Z
 
     if-eqz v0, :cond_0
@@ -42,6 +44,7 @@
 .method public static e(Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     sget-boolean v0, Lcom/xiaomi/asr/engine/utils/MultiWakeupLog;->isPrintLog:Z
 
     if-eqz v0, :cond_0
@@ -57,6 +60,7 @@
 .method public static i(Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     sget-boolean v0, Lcom/xiaomi/asr/engine/utils/MultiWakeupLog;->isPrintLog:Z
 
     if-eqz v0, :cond_0
@@ -72,6 +76,7 @@
 .method public static openLog(Z)V
     .locals 0
 
+    .line 1
     sput-boolean p0, Lcom/xiaomi/asr/engine/utils/MultiWakeupLog;->isPrintLog:Z
 
     return-void
@@ -80,6 +85,7 @@
 .method public static w(Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     sget-boolean v0, Lcom/xiaomi/asr/engine/utils/MultiWakeupLog;->isPrintLog:Z
 
     if-eqz v0, :cond_0

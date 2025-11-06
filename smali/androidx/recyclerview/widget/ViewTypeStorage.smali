@@ -1,4 +1,4 @@
-.class interface abstract Landroidx/recyclerview/widget/ViewTypeStorage;
+.class public interface abstract Landroidx/recyclerview/widget/ViewTypeStorage;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

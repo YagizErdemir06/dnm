@@ -1,4 +1,4 @@
-.class Lcom/google/common/io/CharSource$CharSequenceCharSource$1;
+.class public Lcom/google/common/io/CharSource$CharSequenceCharSource$1;
 .super Lcom/google/common/collect/AbstractIterator;
 .source "SourceFile"
 
@@ -23,7 +23,7 @@
 
 
 # instance fields
-.field lines:Ljava/util/Iterator;
+.field public lines:Ljava/util/Iterator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Iterator<",
@@ -33,17 +33,19 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Lcom/google/common/io/CharSource$CharSequenceCharSource;
+.field public final synthetic this$0:Lcom/google/common/io/CharSource$CharSequenceCharSource;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/io/CharSource$CharSequenceCharSource;)V
     .locals 1
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/io/CharSource$CharSequenceCharSource$1;->this$0:Lcom/google/common/io/CharSource$CharSequenceCharSource;
 
     invoke-direct {p0}, Lcom/google/common/collect/AbstractIterator;-><init>()V
 
+    .line 2
     invoke-static {}, Lcom/google/common/io/CharSource$CharSequenceCharSource;->access$100()Lcom/google/common/base/Splitter;
 
     move-result-object v0

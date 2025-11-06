@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ConcurrentHashMultiset$2;
+.class public Lcom/google/common/collect/ConcurrentHashMultiset$2;
 .super Lcom/google/common/collect/AbstractIterator;
 .source "SourceFile"
 
@@ -35,22 +35,24 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Lcom/google/common/collect/ConcurrentHashMultiset;
+.field public final synthetic this$0:Lcom/google/common/collect/ConcurrentHashMultiset;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/ConcurrentHashMultiset;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/ConcurrentHashMultiset$2;->this$0:Lcom/google/common/collect/ConcurrentHashMultiset;
 
     invoke-direct {p0}, Lcom/google/common/collect/AbstractIterator;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/collect/ConcurrentHashMultiset;->access$100(Lcom/google/common/collect/ConcurrentHashMultiset;)Ljava/util/concurrent/ConcurrentMap;
 
     move-result-object p1
 
-    invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+    invoke-interface {p1}, Ljava/util/concurrent/ConcurrentMap;->entrySet()Ljava/util/Set;
 
     move-result-object p1
 

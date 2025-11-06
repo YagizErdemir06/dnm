@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/graph/AbstractBaseGraph;
+.class public abstract Lcom/google/common/graph/AbstractBaseGraph;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,6 +26,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,12 +42,14 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Lcom/google/common/graph/BaseGraph;->isDirected()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {p0, p1}, Lcom/google/common/graph/BaseGraph;->predecessors(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object v0
@@ -69,11 +72,13 @@
 
     return p0
 
+    .line 3
     :cond_0
     invoke-interface {p0, p1}, Lcom/google/common/graph/BaseGraph;->adjacentNodes(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object v0
 
+    .line 4
     invoke-interface {p0}, Lcom/google/common/graph/BaseGraph;->allowsSelfLoops()Z
 
     move-result p0
@@ -93,6 +98,7 @@
     :cond_1
     const/4 p0, 0x0
 
+    .line 5
     :goto_0
     invoke-interface {v0}, Ljava/util/Set;->size()I
 
@@ -108,6 +114,7 @@
 .method public edgeCount()J
     .locals 7
 
+    .line 1
     invoke-interface {p0}, Lcom/google/common/graph/BaseGraph;->nodes()Ljava/util/Set;
 
     move-result-object v0
@@ -131,6 +138,7 @@
 
     move-result-object v5
 
+    .line 2
     invoke-virtual {p0, v5}, Lcom/google/common/graph/AbstractBaseGraph;->degree(Ljava/lang/Object;)I
 
     move-result v5
@@ -159,6 +167,7 @@
     :cond_1
     const/4 p0, 0x0
 
+    .line 3
     :goto_1
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
@@ -178,6 +187,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/graph/AbstractBaseGraph$1;
 
     invoke-direct {v0, p0}, Lcom/google/common/graph/AbstractBaseGraph$1;-><init>(Lcom/google/common/graph/AbstractBaseGraph;)V
@@ -301,6 +311,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Lcom/google/common/graph/BaseGraph;->isDirected()Z
 
     move-result v0
@@ -336,6 +347,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/graph/ElementOrder;->unordered()Lcom/google/common/graph/ElementOrder;
 
     move-result-object p0
@@ -354,8 +366,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-interface {p0}, Lcom/google/common/graph/BaseGraph;->nodes()Ljava/util/Set;
 
     move-result-object v0
@@ -368,6 +382,7 @@
 
     invoke-static {v0, v1, p1}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;Ljava/lang/Object;)V
 
+    .line 3
     new-instance v0, Lcom/google/common/graph/AbstractBaseGraph$2;
 
     invoke-direct {v0, p0, p0, p1}, Lcom/google/common/graph/AbstractBaseGraph$2;-><init>(Lcom/google/common/graph/AbstractBaseGraph;Lcom/google/common/graph/BaseGraph;Ljava/lang/Object;)V
@@ -385,6 +400,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/common/graph/EndpointPair;->isOrdered()Z
 
     move-result p1
@@ -420,6 +436,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Lcom/google/common/graph/BaseGraph;->isDirected()Z
 
     move-result v0
@@ -455,8 +472,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/google/common/graph/AbstractBaseGraph;->isOrderingCompatible(Lcom/google/common/graph/EndpointPair;)Z
 
     move-result p0

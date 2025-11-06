@@ -1,4 +1,4 @@
-.class Landroidx/versionedparcelable/VersionedParcel$1;
+.class public Landroidx/versionedparcelable/VersionedParcel$1;
 .super Ljava/io/ObjectInputStream;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/versionedparcelable/VersionedParcel;
+.field public final synthetic this$0:Landroidx/versionedparcelable/VersionedParcel;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/versionedparcelable/VersionedParcel;Ljava/io/InputStream;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/versionedparcelable/VersionedParcel$1;->this$0:Landroidx/versionedparcelable/VersionedParcel;
 
     invoke-direct {p0, p2}, Ljava/io/ObjectInputStream;-><init>(Ljava/io/InputStream;)V
@@ -50,10 +51,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/io/ObjectStreamClass;->getName()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -64,6 +67,7 @@
 
     const/4 v2, 0x0
 
+    .line 3
     invoke-static {v0, v2, v1}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
 
     move-result-object v0
@@ -72,6 +76,7 @@
 
     return-object v0
 
+    .line 4
     :cond_0
     invoke-super {p0, p1}, Ljava/io/ObjectInputStream;->resolveClass(Ljava/io/ObjectStreamClass;)Ljava/lang/Class;
 

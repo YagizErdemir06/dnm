@@ -1,4 +1,4 @@
-.class Lcom/google/common/io/ByteStreams$1;
+.class public Lcom/google/common/io/ByteStreams$1;
 .super Ljava/io/OutputStream;
 .source "SourceFile"
 
@@ -18,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
 
     return-void

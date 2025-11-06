@@ -1,4 +1,4 @@
-.class Landroidx/preference/MultiSelectListPreferenceDialogFragment$1;
+.class public Landroidx/preference/MultiSelectListPreferenceDialogFragment$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/preference/MultiSelectListPreferenceDialogFragment;
+.field public final synthetic this$0:Landroidx/preference/MultiSelectListPreferenceDialogFragment;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/preference/MultiSelectListPreferenceDialogFragment;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/preference/MultiSelectListPreferenceDialogFragment$1;->this$0:Landroidx/preference/MultiSelectListPreferenceDialogFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,6 +40,7 @@
 
     if-eqz p3, :cond_0
 
+    .line 1
     iget-object p0, p0, Landroidx/preference/MultiSelectListPreferenceDialogFragment$1;->this$0:Landroidx/preference/MultiSelectListPreferenceDialogFragment;
 
     iget-boolean p1, p0, Landroidx/preference/MultiSelectListPreferenceDialogFragment;->mPreferenceChanged:Z
@@ -49,10 +51,12 @@
 
     aget-object p2, v0, p2
 
+    .line 2
     invoke-interface {p2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object p2
 
+    .line 3
     invoke-interface {p3, p2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     move-result p2
@@ -63,6 +67,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-object p0, p0, Landroidx/preference/MultiSelectListPreferenceDialogFragment$1;->this$0:Landroidx/preference/MultiSelectListPreferenceDialogFragment;
 
@@ -74,10 +79,12 @@
 
     aget-object p2, v0, p2
 
+    .line 5
     invoke-interface {p2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object p2
 
+    .line 6
     invoke-interface {p3, p2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
     move-result p2

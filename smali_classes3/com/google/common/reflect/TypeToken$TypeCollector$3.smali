@@ -1,4 +1,4 @@
-.class Lcom/google/common/reflect/TypeToken$TypeCollector$3;
+.class public Lcom/google/common/reflect/TypeToken$TypeCollector$3;
 .super Lcom/google/common/reflect/TypeToken$TypeCollector$ForwardingTypeCollector;
 .source "SourceFile"
 
@@ -25,6 +25,7 @@
 .method public constructor <init>(Lcom/google/common/reflect/TypeToken$TypeCollector;Lcom/google/common/reflect/TypeToken$TypeCollector;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p2}, Lcom/google/common/reflect/TypeToken$TypeCollector$ForwardingTypeCollector;-><init>(Lcom/google/common/reflect/TypeToken$TypeCollector;)V
 
     return-void
@@ -44,10 +45,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->builder()Lcom/google/common/collect/ImmutableList$Builder;
 
     move-result-object v0
 
+    .line 2
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -64,6 +67,7 @@
 
     move-result-object v1
 
+    .line 3
     invoke-virtual {p0, v1}, Lcom/google/common/reflect/TypeToken$TypeCollector$ForwardingTypeCollector;->getRawType(Ljava/lang/Object;)Ljava/lang/Class;
 
     move-result-object v2
@@ -74,10 +78,12 @@
 
     if-nez v2, :cond_0
 
+    .line 4
     invoke-virtual {v0, v1}, Lcom/google/common/collect/ImmutableList$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
 
     goto :goto_0
 
+    .line 5
     :cond_1
     invoke-virtual {v0}, Lcom/google/common/collect/ImmutableList$Builder;->build()Lcom/google/common/collect/ImmutableList;
 
@@ -100,6 +106,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/ImmutableSet;->of()Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p0

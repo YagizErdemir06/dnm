@@ -7,6 +7,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -15,10 +16,12 @@
 .method private static getCurTargetValue(Lmiuix/animation/IAnimTarget;Lmiuix/animation/property/FloatProperty;D)D
     .locals 4
 
+    .line 1
     invoke-static {p2, p3}, Ljava/lang/Math;->signum(D)D
 
     move-result-wide v0
 
+    .line 2
     invoke-static {p2, p3}, Ljava/lang/Math;->abs(D)D
 
     move-result-wide p2
@@ -29,6 +32,7 @@
 
     if-nez v2, :cond_0
 
+    .line 3
     invoke-static {p0, p1}, Lmiuix/animation/utils/CommonUtils;->getSize(Lmiuix/animation/IAnimTarget;Lmiuix/animation/property/FloatProperty;)F
 
     move-result p0
@@ -39,15 +43,13 @@
 
     return-wide v0
 
+    .line 4
     :cond_0
-    instance-of v2, p0, Lmiuix/animation/ViewTarget;
-
-    if-eqz v2, :cond_2
-
     instance-of v2, p1, Lmiuix/animation/property/IIntValueProperty;
 
     if-eqz v2, :cond_1
 
+    .line 5
     check-cast p1, Lmiuix/animation/property/IIntValueProperty;
 
     invoke-virtual {p0, p1}, Lmiuix/animation/IAnimTarget;->getIntValue(Lmiuix/animation/property/IIntValueProperty;)I
@@ -65,33 +67,28 @@
 
     float-to-double p0, p0
 
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p0, p1}, Lmiuix/animation/IAnimTarget;->getDoubleValue(Lmiuix/animation/property/FloatProperty;)D
-
-    move-result-wide p0
-
     :goto_0
     const-wide v2, 0x412e854800000000L    # 1000100.0
 
     cmpl-double p2, p2, v2
 
-    if-nez p2, :cond_3
+    if-nez p2, :cond_2
 
     mul-double/2addr p0, v0
 
-    :cond_3
+    :cond_2
     return-wide p0
 .end method
 
 .method public static getValue(Lmiuix/animation/IAnimTarget;Lmiuix/animation/property/FloatProperty;D)D
     .locals 1
 
+    .line 1
     instance-of v0, p1, Lmiuix/animation/property/ISpecificProperty;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lmiuix/animation/property/ISpecificProperty;
 
     double-to-float p0, p2
@@ -104,6 +101,7 @@
 
     return-wide p0
 
+    .line 3
     :cond_0
     invoke-static {p0, p1, p2, p3}, Lmiuix/animation/internal/AnimValueUtils;->getCurTargetValue(Lmiuix/animation/IAnimTarget;Lmiuix/animation/property/FloatProperty;D)D
 
@@ -121,6 +119,7 @@
 
     if-nez v0, :cond_0
 
+    .line 1
     check-cast p1, Lmiuix/animation/property/IIntValueProperty;
 
     invoke-virtual {p0, p1}, Lmiuix/animation/IAnimTarget;->getIntValue(Lmiuix/animation/property/IIntValueProperty;)I
@@ -138,6 +137,7 @@
 
     if-nez v0, :cond_1
 
+    .line 2
     invoke-virtual {p0, p1}, Lmiuix/animation/IAnimTarget;->getValue(Lmiuix/animation/property/FloatProperty;)F
 
     move-result p0
@@ -146,6 +146,7 @@
 
     return-wide p0
 
+    .line 3
     :cond_1
     invoke-static {p0, p1, p2, p3}, Lmiuix/animation/internal/AnimValueUtils;->getValue(Lmiuix/animation/IAnimTarget;Lmiuix/animation/property/FloatProperty;D)D
 
@@ -155,21 +156,28 @@
 .end method
 
 .method public static handleSetToValue(Lmiuix/animation/listener/UpdateInfo;)Z
-    .locals 2
+    .locals 3
 
-    iget-object p0, p0, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
+    .line 1
+    iget-object v0, p0, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
 
-    iget-wide v0, p0, Lmiuix/animation/internal/AnimInfo;->setToValue:D
+    iget-wide v0, v0, Lmiuix/animation/internal/AnimInfo;->setToValue:D
 
-    invoke-static {v0, v1}, Lmiuix/animation/internal/AnimValueUtils;->isValid(D)Z
+    invoke-static {v0, v1}, Lmiuix/animation/internal/AnimValueUtils;->isInvalid(D)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
-    iget-wide v0, p0, Lmiuix/animation/internal/AnimInfo;->setToValue:D
+    .line 2
+    iget-object v0, p0, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
 
-    iput-wide v0, p0, Lmiuix/animation/internal/AnimInfo;->value:D
+    iget-wide v1, v0, Lmiuix/animation/internal/AnimInfo;->setToValue:D
+
+    iput-wide v1, v0, Lmiuix/animation/internal/AnimInfo;->value:D
+
+    .line 3
+    iget-object p0, p0, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
 
     const-wide v0, 0x7fefffffffffffffL    # Double.MAX_VALUE
 
@@ -218,17 +226,5 @@
     const/4 p0, 0x1
 
     :goto_1
-    return p0
-.end method
-
-.method public static isValid(D)Z
-    .locals 0
-
-    invoke-static {p0, p1}, Lmiuix/animation/internal/AnimValueUtils;->isInvalid(D)Z
-
-    move-result p0
-
-    xor-int/lit8 p0, p0, 0x1
-
     return p0
 .end method

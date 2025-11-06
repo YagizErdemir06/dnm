@@ -15,8 +15,10 @@
 .method public constructor <init>(Lorg/dom4j/Element;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lorg/dom4j/xpath/DefaultNamespaceContext;->element:Lorg/dom4j/Element;
 
     return-void
@@ -25,34 +27,41 @@
 .method public static create(Ljava/lang/Object;)Lorg/dom4j/xpath/DefaultNamespaceContext;
     .locals 2
 
+    .line 1
     instance-of v0, p0, Lorg/dom4j/Element;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Lorg/dom4j/Element;
 
     goto :goto_0
 
+    .line 3
     :cond_0
     instance-of v0, p0, Lorg/dom4j/Document;
 
     if-eqz v0, :cond_1
 
+    .line 4
     check-cast p0, Lorg/dom4j/Document;
 
+    .line 5
     invoke-interface {p0}, Lorg/dom4j/Document;->getRootElement()Lorg/dom4j/Element;
 
     move-result-object p0
 
     goto :goto_0
 
+    .line 6
     :cond_1
     instance-of v0, p0, Lorg/dom4j/Node;
 
     if-eqz v0, :cond_2
 
+    .line 7
     check-cast p0, Lorg/dom4j/Node;
 
     invoke-interface {p0}, Lorg/dom4j/Node;->getParent()Lorg/dom4j/Element;
@@ -67,6 +76,7 @@
     :goto_0
     if-eqz p0, :cond_3
 
+    .line 8
     new-instance v0, Lorg/dom4j/xpath/DefaultNamespaceContext;
 
     invoke-direct {v0, p0}, Lorg/dom4j/xpath/DefaultNamespaceContext;-><init>(Lorg/dom4j/Element;)V
@@ -84,12 +94,14 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
 
     if-lez v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lorg/dom4j/xpath/DefaultNamespaceContext;->element:Lorg/dom4j/Element;
 
     invoke-interface {p0, p1}, Lorg/dom4j/Element;->getNamespaceForPrefix(Ljava/lang/String;)Lorg/dom4j/Namespace;
@@ -98,6 +110,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {p0}, Lorg/dom4j/Namespace;->getURI()Ljava/lang/String;
 
     move-result-object p0

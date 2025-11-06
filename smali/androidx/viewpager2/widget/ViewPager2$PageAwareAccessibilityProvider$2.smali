@@ -1,4 +1,4 @@
-.class Landroidx/viewpager2/widget/ViewPager2$PageAwareAccessibilityProvider$2;
+.class public Landroidx/viewpager2/widget/ViewPager2$PageAwareAccessibilityProvider$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$1:Landroidx/viewpager2/widget/ViewPager2$PageAwareAccessibilityProvider;
+.field public final synthetic this$1:Landroidx/viewpager2/widget/ViewPager2$PageAwareAccessibilityProvider;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/viewpager2/widget/ViewPager2$PageAwareAccessibilityProvider;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/viewpager2/widget/ViewPager2$PageAwareAccessibilityProvider$2;->this$1:Landroidx/viewpager2/widget/ViewPager2$PageAwareAccessibilityProvider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,8 +46,10 @@
         .end annotation
     .end param
 
+    .line 1
     check-cast p1, Landroidx/viewpager2/widget/ViewPager2;
 
+    .line 2
     iget-object p0, p0, Landroidx/viewpager2/widget/ViewPager2$PageAwareAccessibilityProvider$2;->this$1:Landroidx/viewpager2/widget/ViewPager2$PageAwareAccessibilityProvider;
 
     invoke-virtual {p1}, Landroidx/viewpager2/widget/ViewPager2;->getCurrentItem()I

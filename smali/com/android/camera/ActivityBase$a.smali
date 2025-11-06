@@ -15,14 +15,23 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/android/camera/ActivityBase;
+.field public final synthetic c:Lcom/android/camera/ActivityBase;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera/ActivityBase;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera/ActivityBase$a;->a:Lcom/android/camera/ActivityBase;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/ActivityBase$a;->c:Lcom/android/camera/ActivityBase;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
@@ -33,23 +42,34 @@
 # virtual methods
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isSupportPureSurfaceView"
         type = 0x0
     .end annotation
 
-    iget-object p1, p0, Lcom/android/camera/ActivityBase$a;->a:Lcom/android/camera/ActivityBase;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
 
-    iget-object p1, p1, Lcom/android/camera/ActivityBase;->K:Landroid/widget/ImageView;
+    .line 1
+    iget-object p1, p0, Lcom/android/camera/ActivityBase$a;->c:Lcom/android/camera/ActivityBase;
+
+    iget-object p1, p1, Lcom/android/camera/ActivityBase;->i9:Landroid/widget/ImageView;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    iget-object p0, p0, Lcom/android/camera/ActivityBase$a;->a:Lcom/android/camera/ActivityBase;
+    .line 2
+    iget-object p0, p0, Lcom/android/camera/ActivityBase$a;->c:Lcom/android/camera/ActivityBase;
 
-    iget-object p0, p0, Lcom/android/camera/ActivityBase;->K:Landroid/widget/ImageView;
+    iget-object p0, p0, Lcom/android/camera/ActivityBase;->i9:Landroid/widget/ImageView;
 
     const/16 p1, 0x8
 

@@ -1,4 +1,4 @@
-.class final Lcom/google/common/hash/ChecksumHashFunction;
+.class public final Lcom/google/common/hash/ChecksumHashFunction;
 .super Lcom/google/common/hash/AbstractHashFunction;
 .source "SourceFile"
 
@@ -56,8 +56,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/hash/AbstractHashFunction;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -88,10 +90,13 @@
     :goto_1
     const-string v0, "bits (%s) must be either 32 or 64"
 
+    .line 3
     invoke-static {p1, v0, p2}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;I)V
 
+    .line 4
     iput p2, p0, Lcom/google/common/hash/ChecksumHashFunction;->bits:I
 
+    .line 5
     invoke-static {p3}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -106,6 +111,7 @@
 .method public static synthetic access$100(Lcom/google/common/hash/ChecksumHashFunction;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/hash/ChecksumHashFunction;->bits:I
 
     return p0
@@ -116,6 +122,7 @@
 .method public bits()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/hash/ChecksumHashFunction;->bits:I
 
     return p0
@@ -124,6 +131,7 @@
 .method public newHasher()Lcom/google/common/hash/Hasher;
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/common/hash/ChecksumHashFunction$ChecksumHasher;
 
     iget-object v1, p0, Lcom/google/common/hash/ChecksumHashFunction;->checksumSupplier:Lcom/google/common/hash/ImmutableSupplier;
@@ -144,6 +152,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/hash/ChecksumHashFunction;->toString:Ljava/lang/String;
 
     return-object p0

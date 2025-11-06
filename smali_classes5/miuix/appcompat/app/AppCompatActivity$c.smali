@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Luo/j;
+.implements Lk/b/d/s/k;
 
 
 # annotations
@@ -22,7 +22,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lmiuix/appcompat/app/AppCompatActivity;)V
+.method private constructor <init>(Lmiuix/appcompat/app/AppCompatActivity;)V
     .locals 0
 
     .line 1
@@ -47,9 +47,10 @@
 .method public a(Z)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity$c;->a:Lmiuix/appcompat/app/AppCompatActivity;
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/AppCompatActivity;->Eb(Z)V
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/AppCompatActivity;->e6(Z)V
 
     return-void
 .end method
@@ -57,9 +58,10 @@
 .method public b(Z)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity$c;->a:Lmiuix/appcompat/app/AppCompatActivity;
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/AppCompatActivity;->Ib(Z)Z
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/AppCompatActivity;->g6(Z)Z
 
     move-result p0
 

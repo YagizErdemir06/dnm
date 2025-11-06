@@ -1,4 +1,4 @@
-.class Landroidx/fragment/app/FragmentManager$FragmentIntentSenderContract;
+.class public Landroidx/fragment/app/FragmentManager$FragmentIntentSenderContract;
 .super Landroidx/activity/result/contract/ActivityResultContract;
 .source "SourceFile"
 
@@ -27,6 +27,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroidx/activity/result/contract/ActivityResultContract;-><init>()V
 
     return-void
@@ -72,12 +73,12 @@
     .line 6
     invoke-virtual {p1, v0}, Landroid/content/Intent;->removeExtra(Ljava/lang/String;)V
 
-    const-string v0, "androidx.fragment.extra.ACTIVITY_OPTIONS_BUNDLE"
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    const-string v1, "androidx.fragment.extra.ACTIVITY_OPTIONS_BUNDLE"
 
     .line 7
-    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+    invoke-virtual {p1, v1, v0}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p1
 

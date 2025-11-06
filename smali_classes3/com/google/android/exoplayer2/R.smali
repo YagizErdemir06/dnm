@@ -15,6 +15,7 @@
         Lcom/google/android/exoplayer2/R$id;,
         Lcom/google/android/exoplayer2/R$integer;,
         Lcom/google/android/exoplayer2/R$layout;,
+        Lcom/google/android/exoplayer2/R$menu;,
         Lcom/google/android/exoplayer2/R$plurals;,
         Lcom/google/android/exoplayer2/R$string;,
         Lcom/google/android/exoplayer2/R$style;,

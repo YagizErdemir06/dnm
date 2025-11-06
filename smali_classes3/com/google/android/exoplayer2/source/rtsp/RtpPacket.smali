@@ -59,6 +59,7 @@
 
     new-array v0, v0, [B
 
+    .line 1
     sput-object v0, Lcom/google/android/exoplayer2/source/rtsp/RtpPacket;->EMPTY:[B
 
     return-void
@@ -160,6 +161,7 @@
 .method public static synthetic access$000()[B
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/source/rtsp/RtpPacket;->EMPTY:[B
 
     return-object v0
@@ -172,6 +174,7 @@
 
     const/high16 v0, 0x10000
 
+    .line 1
     invoke-static {p0, v0}, Lcom/google/common/math/IntMath;->mod(II)I
 
     move-result p0
@@ -186,6 +189,7 @@
 
     const/high16 v0, 0x10000
 
+    .line 1
     invoke-static {p0, v0}, Lcom/google/common/math/IntMath;->mod(II)I
 
     move-result p0
@@ -203,13 +207,13 @@
 
     move-result v0
 
-    const/16 v1, 0xc
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const/16 v2, 0xc
 
-    if-ge v0, v1, :cond_0
+    if-ge v0, v2, :cond_0
 
-    return-object v2
+    return-object v1
 
     .line 2
     :cond_0
@@ -217,9 +221,9 @@
 
     move-result v0
 
-    shr-int/lit8 v1, v0, 0x6
+    shr-int/lit8 v2, v0, 0x6
 
-    int-to-byte v1, v1
+    int-to-byte v2, v2
 
     shr-int/lit8 v3, v0, 0x5
 
@@ -245,9 +249,9 @@
 
     const/4 v6, 0x2
 
-    if-eq v1, v6, :cond_2
+    if-eq v2, v6, :cond_2
 
-    return-object v2
+    return-object v1
 
     .line 3
     :cond_2
@@ -418,6 +422,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 1
     const-class v2, Lcom/google/android/exoplayer2/source/rtsp/RtpPacket;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -428,9 +433,11 @@
 
     goto :goto_1
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/source/rtsp/RtpPacket;
 
+    .line 3
     iget-byte v2, p0, Lcom/google/android/exoplayer2/source/rtsp/RtpPacket;->payloadType:B
 
     iget-byte v3, p1, Lcom/google/android/exoplayer2/source/rtsp/RtpPacket;->payloadType:B
@@ -477,47 +484,52 @@
 .end method
 
 .method public hashCode()I
-    .locals 5
+    .locals 6
 
-    const/16 v0, 0x20f
+    .line 1
+    iget-byte v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtpPacket;->payloadType:B
 
-    iget-byte v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtpPacket;->payloadType:B
+    const/16 v1, 0x20f
 
-    add-int/2addr v0, v1
+    add-int/2addr v1, v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    mul-int/lit8 v1, v1, 0x1f
 
-    iget v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtpPacket;->sequenceNumber:I
+    .line 2
+    iget v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtpPacket;->sequenceNumber:I
 
-    add-int/2addr v0, v1
+    add-int/2addr v1, v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    mul-int/lit8 v1, v1, 0x1f
 
-    iget-boolean v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtpPacket;->marker:Z
+    .line 3
+    iget-boolean v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtpPacket;->marker:Z
 
-    add-int/2addr v0, v1
+    add-int/2addr v1, v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    mul-int/lit8 v1, v1, 0x1f
 
-    iget-wide v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtpPacket;->timestamp:J
+    .line 4
+    iget-wide v2, p0, Lcom/google/android/exoplayer2/source/rtsp/RtpPacket;->timestamp:J
 
-    const/16 v3, 0x20
+    const/16 v0, 0x20
 
-    ushr-long v3, v1, v3
+    ushr-long v4, v2, v0
 
-    xor-long/2addr v1, v3
+    xor-long/2addr v2, v4
 
-    long-to-int v1, v1
+    long-to-int v0, v2
 
-    add-int/2addr v0, v1
+    add-int/2addr v1, v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    mul-int/lit8 v1, v1, 0x1f
 
+    .line 5
     iget p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtpPacket;->ssrc:I
 
-    add-int/2addr v0, p0
+    add-int/2addr v1, p0
 
-    return v0
+    return v1
 .end method
 
 .method public toString()Ljava/lang/String;
@@ -527,8 +539,10 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 1
     iget-byte v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtpPacket;->payloadType:B
 
+    .line 2
     invoke-static {v1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object v1
@@ -579,6 +593,7 @@
 
     const-string p0, "RtpPacket(payloadType=%d, seq=%d, timestamp=%d, ssrc=%x, marker=%b)"
 
+    .line 3
     invoke-static {p0, v0}, Lcom/google/android/exoplayer2/util/Util;->formatInvariant(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -589,6 +604,7 @@
 .method public writeToBuffer([BII)I
     .locals 2
 
+    .line 1
     iget-byte v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtpPacket;->csrcCount:B
 
     mul-int/lit8 v0, v0, 0x4
@@ -603,6 +619,7 @@
 
     if-lt p3, v0, :cond_1
 
+    .line 2
     array-length v1, p1
 
     sub-int/2addr v1, p2
@@ -611,17 +628,20 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-static {p1, p2, p3}, Ljava/nio/ByteBuffer;->wrap([BII)Ljava/nio/ByteBuffer;
 
     move-result-object p1
 
+    .line 4
     iget-boolean p2, p0, Lcom/google/android/exoplayer2/source/rtsp/RtpPacket;->padding:Z
 
     shl-int/lit8 p2, p2, 0x5
 
     or-int/lit16 p2, p2, 0x80
 
+    .line 5
     iget-boolean p3, p0, Lcom/google/android/exoplayer2/source/rtsp/RtpPacket;->extension:Z
 
     shl-int/lit8 p3, p3, 0x4
@@ -636,6 +656,7 @@
 
     int-to-byte p2, p2
 
+    .line 6
     iget-boolean p3, p0, Lcom/google/android/exoplayer2/source/rtsp/RtpPacket;->marker:Z
 
     shl-int/lit8 p3, p3, 0x7
@@ -648,10 +669,12 @@
 
     int-to-byte p3, p3
 
+    .line 7
     invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
     move-result-object p1
 
+    .line 8
     invoke-virtual {p1, p3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
     move-result-object p1
@@ -660,6 +683,7 @@
 
     int-to-short p2, p2
 
+    .line 9
     invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
     move-result-object p1
@@ -668,24 +692,28 @@
 
     long-to-int p2, p2
 
+    .line 10
     invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
     move-result-object p1
 
     iget p2, p0, Lcom/google/android/exoplayer2/source/rtsp/RtpPacket;->ssrc:I
 
+    .line 11
     invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
     move-result-object p1
 
     iget-object p2, p0, Lcom/google/android/exoplayer2/source/rtsp/RtpPacket;->csrc:[B
 
+    .line 12
     invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
     move-result-object p1
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtpPacket;->payloadData:[B
 
+    .line 13
     invoke-virtual {p1, p0}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
     return v0

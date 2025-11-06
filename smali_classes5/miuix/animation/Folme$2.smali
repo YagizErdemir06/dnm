@@ -1,14 +1,11 @@
-.class Lmiuix/animation/Folme$2;
-.super Ljava/lang/Object;
+.class public Lmiuix/animation/Folme$2;
+.super Landroid/os/Handler;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lmiuix/animation/Folme;->sleepAnimTarget(Lmiuix/animation/IAnimTarget;)V
+    value = Lmiuix/animation/Folme;->createMainHandler(Landroid/os/Looper;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,43 +14,50 @@
 .end annotation
 
 
-# instance fields
-.field final synthetic val$impl:Lmiuix/animation/Folme$FolmeImpl;
-
-.field final synthetic val$target:Lmiuix/animation/IAnimTarget;
-
-
 # direct methods
-.method public constructor <init>(Lmiuix/animation/IAnimTarget;Lmiuix/animation/Folme$FolmeImpl;)V
+.method public constructor <init>(Landroid/os/Looper;)V
     .locals 0
 
-    iput-object p1, p0, Lmiuix/animation/Folme$2;->val$target:Lmiuix/animation/IAnimTarget;
-
-    iput-object p2, p0, Lmiuix/animation/Folme$2;->val$impl:Lmiuix/animation/Folme$FolmeImpl;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1
+    invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public handleMessage(Landroid/os/Message;)V
+    .locals 1
 
-    iget-object v0, p0, Lmiuix/animation/Folme$2;->val$target:Lmiuix/animation/IAnimTarget;
+    .line 1
+    iget p0, p1, Landroid/os/Message;->what:I
 
-    invoke-virtual {v0}, Lmiuix/animation/IAnimTarget;->sleep()V
+    const/4 v0, 0x1
 
-    invoke-static {}, Lmiuix/animation/Folme;->access$300()Ljava/util/concurrent/ConcurrentHashMap;
+    if-eq p0, v0, :cond_1
 
-    move-result-object v0
+    const/4 v0, 0x2
 
-    iget-object v1, p0, Lmiuix/animation/Folme$2;->val$target:Lmiuix/animation/IAnimTarget;
+    if-eq p0, v0, :cond_0
 
-    iget-object p0, p0, Lmiuix/animation/Folme$2;->val$impl:Lmiuix/animation/Folme$FolmeImpl;
+    return-void
 
-    invoke-virtual {v0, v1, p0}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 2
+    :cond_0
+    iget-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    check-cast p0, Ljava/util/List;
+
+    invoke-static {p0}, Lmiuix/animation/Folme;->access$400(Ljava/util/List;)V
+
+    return-void
+
+    .line 3
+    :cond_1
+    invoke-static {}, Lmiuix/animation/Folme;->access$300()V
+
+    .line 4
+    invoke-static {v0}, Lmiuix/animation/Folme;->access$000(Z)V
 
     return-void
 .end method

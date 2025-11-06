@@ -28,9 +28,10 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/xb/xsdschema/NarrowMaxMin$1;->class$org$apache$xmlbeans$impl$xb$xsdschema$NarrowMaxMin$MinOccurs:Ljava/lang/Class;
 
     if-nez v0, :cond_0

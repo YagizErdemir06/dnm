@@ -2,9 +2,6 @@
 .super Landroidx/preference/PreferenceFragmentCompat;
 .source "SourceFile"
 
-# interfaces
-.implements Lmiuix/appcompat/app/a0;
-
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
@@ -16,1572 +13,542 @@
 
 
 # static fields
-.field public static final s:Ljava/lang/String; = "androidx.preference.PreferenceFragment.DIALOG"
-
-.field public static final t:I = 0x0
-
-.field public static final u:I = 0x1
-
-.field public static final v:I = 0x2
+.field private static final c:Ljava/lang/String; = "androidx.preference.PreferenceFragment.DIALOG"
 
 
 # instance fields
-.field public a:Z
+.field private d:Lk/x/h;
 
-.field public b:Landroid/graphics/Rect;
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-.end field
+.field private f:Lmiuix/preference/PreferenceFragment$c;
 
-.field public c:Landroid/view/View;
+.field private g:Z
 
-.field public d:Lmiuix/preference/b;
+.field private j:Z
 
-.field public e:Lmiuix/preference/PreferenceFragment$c;
+.field private k0:I
 
-.field public f:I
+.field private m:I
 
-.field public g:Z
+.field private n:I
 
-.field public h:Z
+.field private p:I
 
-.field public i:I
+.field private s:Z
 
-.field public j:Z
+.field private t:Z
 
-.field public k:Z
+.field private u:I
 
-.field public l:Z
-
-.field public m:Ljp/b;
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-.end field
-
-.field public n:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Ljp/a;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public o:I
-
-.field public p:Z
-
-.field public q:Z
-
-.field public r:I
+.field private w:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>()V
     .locals 2
 
-    const-string v0, "dropdownPreference"
-
-    const-class v1, Lmiuix/preference/flexible/DropdownPreferenceTemplate;
-
-    invoke-static {v0, v1}, Lmiuix/flexible/template/TemplateFactory;->registerTemplate(Ljava/lang/String;Ljava/lang/Class;)V
-
-    const-string v0, "textPreference"
-
-    const-class v1, Lmiuix/preference/flexible/TextPreferenceTemplate;
-
-    invoke-static {v0, v1}, Lmiuix/flexible/template/TemplateFactory;->registerTemplate(Ljava/lang/String;Ljava/lang/Class;)V
-
-    const-string v0, "radioButtonPreference"
-
-    const-class v1, Lmiuix/preference/flexible/RadioButtonPreferenceTemplate;
-
-    invoke-static {v0, v1}, Lmiuix/flexible/template/TemplateFactory;->registerTemplate(Ljava/lang/String;Ljava/lang/Class;)V
-
-    const-string v0, "preference"
-
-    const-class v1, Lmiuix/preference/flexible/MiuixPreferenceTemplate;
-
-    invoke-static {v0, v1}, Lmiuix/flexible/template/TemplateFactory;->registerTemplate(Ljava/lang/String;Ljava/lang/Class;)V
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 3
-
+    .line 1
     invoke-direct {p0}, Landroidx/preference/PreferenceFragmentCompat;-><init>()V
 
+    const/4 v0, 0x1
+
+    .line 2
+    iput-boolean v0, p0, Lmiuix/preference/PreferenceFragment;->g:Z
+
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lmiuix/preference/PreferenceFragment;->a:Z
+    .line 3
+    iput-boolean v0, p0, Lmiuix/preference/PreferenceFragment;->j:Z
 
-    const/4 v1, 0x1
+    const/4 v1, -0x1
 
-    iput-boolean v1, p0, Lmiuix/preference/PreferenceFragment;->g:Z
+    .line 4
+    iput v1, p0, Lmiuix/preference/PreferenceFragment;->m:I
 
-    iput-boolean v0, p0, Lmiuix/preference/PreferenceFragment;->h:Z
-
-    const/4 v2, -0x1
-
-    iput v2, p0, Lmiuix/preference/PreferenceFragment;->i:I
-
-    iput-boolean v1, p0, Lmiuix/preference/PreferenceFragment;->j:Z
-
-    iput-boolean v0, p0, Lmiuix/preference/PreferenceFragment;->k:Z
-
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lmiuix/preference/PreferenceFragment;->n:Ljava/util/List;
-
-    iput v0, p0, Lmiuix/preference/PreferenceFragment;->o:I
+    .line 5
+    iput v0, p0, Lmiuix/preference/PreferenceFragment;->n:I
 
     return-void
 .end method
 
-.method public static synthetic Ah(Lmiuix/preference/PreferenceFragment;)I
-    .locals 0
-
-    iget p0, p0, Lmiuix/preference/PreferenceFragment;->o:I
-
-    return p0
-.end method
-
-.method public static synthetic Ch(Lmiuix/preference/PreferenceFragment;)Ljp/b;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/preference/PreferenceFragment;->m:Ljp/b;
-
-    return-object p0
-.end method
-
-.method public static synthetic Fh(Lmiuix/preference/PreferenceFragment;Landroid/content/Context;Ljp/b;II)Z
-    .locals 0
-
-    invoke-virtual {p0, p1, p2, p3, p4}, Lmiuix/preference/PreferenceFragment;->ji(Landroid/content/Context;Ljp/b;II)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static synthetic Gh(Lmiuix/preference/PreferenceFragment;)Ljava/util/List;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/preference/PreferenceFragment;->n:Ljava/util/List;
-
-    return-object p0
-.end method
-
-.method public static synthetic Hh(Lmiuix/preference/PreferenceFragment;)Lmiuix/preference/b;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/preference/PreferenceFragment;->d:Lmiuix/preference/b;
-
-    return-object p0
-.end method
-
-.method private Xh()V
+.method private Fb()V
     .locals 3
 
-    iget v0, p0, Lmiuix/preference/PreferenceFragment;->f:I
+    .line 1
+    iget-object v0, p0, Lmiuix/preference/PreferenceFragment;->d:Lk/x/h;
 
-    sget v1, Lms/b;->f:I
+    if-eqz v0, :cond_0
 
-    sget v2, Lms/b;->g:I
+    .line 2
+    iget v1, p0, Lmiuix/preference/PreferenceFragment;->n:I
 
-    invoke-static {v0, v1, v2}, Ljp/b$a;->b(III)Ljp/b;
+    iget v2, p0, Lmiuix/preference/PreferenceFragment;->p:I
 
-    move-result-object v0
+    iget-boolean p0, p0, Lmiuix/preference/PreferenceFragment;->s:Z
 
-    iput-object v0, p0, Lmiuix/preference/PreferenceFragment;->m:Ljp/b;
-
-    if-eqz v0, :cond_1
-
-    iget-boolean v1, p0, Lmiuix/preference/PreferenceFragment;->j:Z
-
-    invoke-virtual {v0, v1}, Ljp/b;->n(Z)V
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    iget-object v1, p0, Lmiuix/preference/PreferenceFragment;->m:Ljp/b;
-
-    invoke-virtual {v1}, Ljp/b;->l()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, p0, Lmiuix/preference/PreferenceFragment;->m:Ljp/b;
-
-    invoke-virtual {v1}, Ljp/b;->h()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    mul-float/2addr v1, v0
-
-    const/high16 v0, 0x3f000000    # 0.5f
-
-    add-float/2addr v1, v0
-
-    float-to-int v0, v1
-
-    iput v0, p0, Lmiuix/preference/PreferenceFragment;->o:I
-
-    goto :goto_0
+    invoke-virtual {v0, v1, v2, p0}, Lk/x/h;->F(IIZ)V
 
     :cond_0
-    const/4 v0, 0x0
-
-    iput v0, p0, Lmiuix/preference/PreferenceFragment;->o:I
-
-    :cond_1
-    :goto_0
     return-void
 .end method
 
-.method public static synthetic rh(Lmiuix/preference/PreferenceFragment;)Lmiuix/preference/PreferenceFragment$c;
+.method public static synthetic Ha(Lmiuix/preference/PreferenceFragment;)Z
     .locals 0
 
-    iget-object p0, p0, Lmiuix/preference/PreferenceFragment;->e:Lmiuix/preference/PreferenceFragment$c;
-
-    return-object p0
-.end method
-
-.method public static synthetic th(Lmiuix/preference/PreferenceFragment;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lmiuix/preference/PreferenceFragment;->q:Z
+    .line 1
+    iget-boolean p0, p0, Lmiuix/preference/PreferenceFragment;->s:Z
 
     return p0
 .end method
 
-.method public static synthetic vh(Lmiuix/preference/PreferenceFragment;)Z
+.method public static synthetic Ma(Lmiuix/preference/PreferenceFragment;)I
     .locals 0
 
+    .line 1
+    iget p0, p0, Lmiuix/preference/PreferenceFragment;->p:I
+
+    return p0
+.end method
+
+.method public static synthetic Na(Lmiuix/preference/PreferenceFragment;)Lk/x/h;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/preference/PreferenceFragment;->d:Lk/x/h;
+
+    return-object p0
+.end method
+
+.method public static synthetic Qa(Lmiuix/preference/PreferenceFragment;)Z
+    .locals 0
+
+    .line 1
     iget-boolean p0, p0, Lmiuix/preference/PreferenceFragment;->g:Z
 
     return p0
 .end method
 
-
-# virtual methods
-.method public A3()Z
+.method private wb()Z
     .locals 0
 
+    .line 1
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lk/l/c/e;->e(Landroid/content/Context;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_1
+
+    invoke-static {}, Lk/l/c/e;->b()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
     const/4 p0, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 p0, 0x1
+
+    :goto_1
+    return p0
+.end method
+
+
+# virtual methods
+.method public Hc()V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/preference/PreferenceFragment;->d:Lk/x/h;
+
+    if-eqz p0, :cond_0
+
+    .line 2
+    invoke-virtual {p0}, Lk/x/h;->I()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public Mb(Ljava/lang/String;)V
+    .locals 2
+
+    .line 1
+    invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getListView()Landroidx/recyclerview/widget/RecyclerView;
+
+    move-result-object v0
+
+    new-instance v1, Lmiuix/preference/PreferenceFragment$a;
+
+    invoke-direct {v1, p0, p1}, Lmiuix/preference/PreferenceFragment$a;-><init>(Lmiuix/preference/PreferenceFragment;Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public Yb(Z)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    .line 1
+    invoke-virtual {p0, p1, v0}, Lmiuix/preference/PreferenceFragment;->gc(ZZ)V
+
+    return-void
+.end method
+
+.method public bb()I
+    .locals 0
+
+    .line 1
+    iget p0, p0, Lmiuix/preference/PreferenceFragment;->n:I
 
     return p0
 .end method
 
-.method public C0(I)Z
+.method public eb()Z
+    .locals 0
+
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public gc(ZZ)V
     .locals 1
 
-    iget v0, p0, Lmiuix/preference/PreferenceFragment;->o:I
+    .line 1
+    iget-boolean v0, p0, Lmiuix/preference/PreferenceFragment;->s:Z
 
     if-eq v0, p1, :cond_0
 
-    iput p1, p0, Lmiuix/preference/PreferenceFragment;->o:I
+    .line 2
+    iput-boolean p1, p0, Lmiuix/preference/PreferenceFragment;->s:Z
 
-    const/4 p0, 0x1
+    if-eqz p2, :cond_0
 
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public C3(Landroid/view/View;Landroid/os/Bundle;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public G0(Ljp/a;)V
-    .locals 1
-
-    iget-object v0, p0, Lmiuix/preference/PreferenceFragment;->n:Ljava/util/List;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
-
-    iput-object v0, p0, Lmiuix/preference/PreferenceFragment;->n:Ljava/util/List;
+    .line 3
+    invoke-direct {p0}, Lmiuix/preference/PreferenceFragment;->Fb()V
 
     :cond_0
-    iget-object v0, p0, Lmiuix/preference/PreferenceFragment;->n:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lmiuix/preference/PreferenceFragment;->n:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    iget p0, p0, Lmiuix/preference/PreferenceFragment;->o:I
-
-    invoke-interface {p1, p0}, Ljp/a;->C0(I)Z
-
-    :cond_1
     return-void
 .end method
 
-.method public H(Landroid/graphics/Rect;)V
-    .locals 5
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getView()Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getListView()Landroidx/recyclerview/widget/RecyclerView;
-
-    move-result-object v1
-
-    if-eqz v0, :cond_1
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {p0}, Lmiuix/preference/PreferenceFragment;->getActionBar()Lmiuix/appcompat/app/ActionBar;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_0
-
-    check-cast v2, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;
-
-    invoke-virtual {v2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t1()Landroid/view/View;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_0
-
-    new-instance v3, Landroid/graphics/Rect;
-
-    invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
-
-    new-instance v4, Landroid/graphics/Rect;
-
-    invoke-direct {v4}, Landroid/graphics/Rect;-><init>()V
-
-    invoke-virtual {v2}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->t1()Landroid/view/View;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v3}, Landroid/view/View;->getGlobalVisibleRect(Landroid/graphics/Rect;)Z
-
-    invoke-virtual {v0, v4}, Landroid/view/View;->getGlobalVisibleRect(Landroid/graphics/Rect;)Z
-
-    iget v0, v3, Landroid/graphics/Rect;->bottom:I
-
-    iget v2, v4, Landroid/graphics/Rect;->bottom:I
-
-    sub-int/2addr v0, v2
-
-    const/4 v2, 0x0
-
-    invoke-static {v2, v0}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    iget p1, p1, Landroid/graphics/Rect;->bottom:I
-
-    sub-int/2addr p1, v0
-
-    invoke-static {v2, p1}, Ljava/lang/Math;->max(II)I
-
-    move-result p1
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingLeft()I
-
-    move-result v0
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingTop()I
-
-    move-result v2
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingRight()I
-
-    move-result v3
-
-    iget p0, p0, Lmiuix/preference/PreferenceFragment;->r:I
-
-    add-int/2addr p1, p0
-
-    invoke-virtual {v1, v0, v2, v3, p1}, Landroid/view/View;->setPadding(IIII)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingLeft()I
-
-    move-result v0
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingTop()I
-
-    move-result v2
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingRight()I
-
-    move-result v3
-
-    iget p1, p1, Landroid/graphics/Rect;->bottom:I
-
-    iget p0, p0, Lmiuix/preference/PreferenceFragment;->r:I
-
-    add-int/2addr p1, p0
-
-    invoke-virtual {v1, v0, v2, v3, p1}, Landroid/view/View;->setPadding(IIII)V
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method public Id(Landroid/view/View;Landroid/view/ViewGroup;)V
+.method public nb()Z
     .locals 0
 
-    return-void
-.end method
-
-.method public Ig()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public K4([I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public Od(Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public Pg(Landroid/graphics/Rect;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public S()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public S3()Z
-    .locals 0
-
-    const/4 p0, 0x0
+    .line 1
+    iget-boolean p0, p0, Lmiuix/preference/PreferenceFragment;->s:Z
 
     return p0
-.end method
-
-.method public V4()I
-    .locals 0
-
-    iget p0, p0, Lmiuix/preference/PreferenceFragment;->o:I
-
-    return p0
-.end method
-
-.method public Xc()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public Zh()Z
-    .locals 0
-
-    iget-boolean p0, p0, Lmiuix/preference/PreferenceFragment;->a:Z
-
-    return p0
-.end method
-
-.method public ai()Z
-    .locals 0
-
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public bi()Z
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/preference/PreferenceFragment;->d:Lmiuix/preference/b;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Lmiuix/preference/b;->G()Z
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public bindViewWithContentInset(Landroid/view/View;)V
-    .locals 2
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getParentFragment()Landroidx/fragment/app/Fragment;
-
-    move-result-object v0
-
-    instance-of v1, v0, Lmiuix/appcompat/app/a0;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Lmiuix/appcompat/app/a0;
-
-    invoke-interface {v0, p1}, Lmiuix/appcompat/app/z;->bindViewWithContentInset(Landroid/view/View;)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
-
-    move-result-object p0
-
-    instance-of v0, p0, Lmiuix/appcompat/app/AppCompatActivity;
-
-    if-eqz v0, :cond_1
-
-    check-cast p0, Lmiuix/appcompat/app/AppCompatActivity;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/AppCompatActivity;->bindViewWithContentInset(Landroid/view/View;)V
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method public c1()Z
-    .locals 1
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
-
-    move-result-object p0
-
-    instance-of v0, p0, Lmiuix/appcompat/app/AppCompatActivity;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Lmiuix/appcompat/app/AppCompatActivity;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/app/AppCompatActivity;->c1()Z
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public ci()Z
-    .locals 0
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lmp/h;->b(Landroid/content/Intent;)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public d7()Z
-    .locals 0
-
-    iget-boolean p0, p0, Lmiuix/preference/PreferenceFragment;->j:Z
-
-    return p0
-.end method
-
-.method public final di()Z
-    .locals 1
-
-    iget p0, p0, Lmiuix/preference/PreferenceFragment;->f:I
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x3
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x5
-
-    if-ne p0, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
-
-    :goto_1
-    return p0
-.end method
-
-.method public ei(Ljava/lang/String;)V
-    .locals 2
-
-    invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getListView()Landroidx/recyclerview/widget/RecyclerView;
-
-    move-result-object v0
-
-    new-instance v1, Lmiuix/preference/PreferenceFragment$b;
-
-    invoke-direct {v1, p0, p1}, Lmiuix/preference/PreferenceFragment$b;-><init>(Lmiuix/preference/PreferenceFragment;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-.end method
-
-.method public final fi()V
-    .locals 6
-
-    iget-boolean v0, p0, Lmiuix/preference/PreferenceFragment;->q:Z
-
-    if-eqz v0, :cond_6
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v1
-
-    sget v2, Lso/b$j;->action_bar_overlay_layout:I
-
-    invoke-virtual {v0, v2}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    sget v3, Lmiuix/preference/c$d;->preferenceCardPageBackground:I
-
-    invoke-static {v2, v3}, Lnq/e;->i(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v2
-
-    invoke-virtual {p0}, Lmiuix/preference/PreferenceFragment;->c1()Z
-
-    move-result v3
-
-    if-nez v3, :cond_1
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    sget v4, Lmiuix/preference/c$d;->preferenceCardPageNoFloatingBackground:I
-
-    invoke-static {v3, v4}, Lnq/e;->i(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_1
-
-    move-object v2, v3
-
-    :cond_1
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {v1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object v0
-
-    const v3, 0x1020002
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_3
-
-    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v3
-
-    instance-of v3, v3, Landroid/view/View;
-
-    if-eqz v3, :cond_3
-
-    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/View;
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {v1, v2}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    :goto_0
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lmp/d;->r(Landroid/content/Context;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_6
-
-    invoke-virtual {v1}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
-
-    move-result-object p0
-
-    iget p0, p0, Landroid/view/WindowManager$LayoutParams;->flags:I
-
-    const/high16 v0, -0x80000000
-
-    and-int/2addr v0, p0
-
-    const/4 v3, 0x1
-
-    const/4 v4, 0x0
-
-    if-eqz v0, :cond_4
-
-    move v0, v3
-
-    goto :goto_1
-
-    :cond_4
-    move v0, v4
-
-    :goto_1
-    const/high16 v5, 0x8000000
-
-    and-int/2addr p0, v5
-
-    if-eqz p0, :cond_5
-
-    goto :goto_2
-
-    :cond_5
-    move v3, v4
-
-    :goto_2
-    if-eqz v0, :cond_6
-
-    if-nez v3, :cond_6
-
-    instance-of p0, v2, Landroid/graphics/drawable/ColorDrawable;
-
-    if-eqz p0, :cond_6
-
-    check-cast v2, Landroid/graphics/drawable/ColorDrawable;
-
-    invoke-virtual {v2}, Landroid/graphics/drawable/ColorDrawable;->getColor()I
-
-    move-result p0
-
-    invoke-virtual {v1, p0}, Landroid/view/Window;->setNavigationBarColor(I)V
-
-    :cond_6
-    return-void
-.end method
-
-.method public getActionBar()Lmiuix/appcompat/app/ActionBar;
-    .locals 2
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getParentFragment()Landroidx/fragment/app/Fragment;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
-
-    move-result-object p0
-
-    if-nez v0, :cond_0
-
-    instance-of v1, p0, Lmiuix/appcompat/app/AppCompatActivity;
-
-    if-eqz v1, :cond_0
-
-    check-cast p0, Lmiuix/appcompat/app/AppCompatActivity;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/app/AppCompatActivity;->h9()Lmiuix/appcompat/app/ActionBar;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    instance-of p0, v0, Lmiuix/appcompat/app/a0;
-
-    if-eqz p0, :cond_1
-
-    check-cast v0, Lmiuix/appcompat/app/a0;
-
-    invoke-interface {v0}, Lmiuix/appcompat/app/a0;->getActionBar()Lmiuix/appcompat/app/ActionBar;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_1
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public getExtraPaddingPolicy()Ljp/b;
-    .locals 0
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    iget-object p0, p0, Lmiuix/preference/PreferenceFragment;->m:Ljp/b;
-
-    return-object p0
-.end method
-
-.method public gi(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lmiuix/preference/PreferenceFragment;->h:Z
-
-    iget-object p0, p0, Lmiuix/preference/PreferenceFragment;->d:Lmiuix/preference/b;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0, p1}, Lmiuix/preference/b;->Q(Z)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public he()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public hi()V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/preference/PreferenceFragment;->d:Lmiuix/preference/b;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Lmiuix/preference/b;->V()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public hideOverflowMenu()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public i4(Ljp/a;)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/preference/PreferenceFragment;->n:Ljava/util/List;
-
-    if-eqz p0, :cond_0
-
-    invoke-interface {p0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
-
-    :cond_0
-    return-void
-.end method
-
-.method public i9()Z
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final ii()V
-    .locals 3
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getParentFragment()Landroidx/fragment/app/Fragment;
-
-    move-result-object v0
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    instance-of v1, v0, Lmiuix/appcompat/app/a0;
-
-    if-eqz v1, :cond_0
-
-    move-object v1, v0
-
-    check-cast v1, Lmiuix/appcompat/app/a0;
-
-    invoke-interface {v1}, Lmiuix/appcompat/app/a0;->S3()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getParentFragment()Landroidx/fragment/app/Fragment;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x0
-
-    :goto_1
-    if-eqz v1, :cond_2
-
-    invoke-interface {v1}, Lmiuix/appcompat/app/a0;->vc()Landroid/content/Context;
-
-    move-result-object v0
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
-
-    move-result-object v0
-
-    :goto_2
-    if-eqz v0, :cond_3
-
-    sget v1, Lmiuix/preference/c$d;->windowActionBarOverlay:I
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2}, Lnq/e;->d(Landroid/content/Context;IZ)Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lmiuix/preference/PreferenceFragment;->a:Z
-
-    :cond_3
-    return-void
-.end method
-
-.method public j3()Z
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public je()Z
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final ji(Landroid/content/Context;Ljp/b;II)Z
-    .locals 8
-    .param p1    # Landroid/content/Context;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Ljp/b;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v1
-
-    invoke-static {p1, v1}, Lmp/d;->j(Landroid/content/Context;Landroid/content/res/Configuration;)Lmp/s;
-
-    move-result-object p1
-
-    if-nez p3, :cond_0
-
-    iget-object p3, p1, Lmp/s;->c:Landroid/graphics/Point;
-
-    iget p3, p3, Landroid/graphics/Point;->x:I
-
-    :cond_0
-    move v4, p3
-
-    if-nez p4, :cond_1
-
-    iget-object p3, p1, Lmp/s;->c:Landroid/graphics/Point;
-
-    iget p4, p3, Landroid/graphics/Point;->y:I
-
-    :cond_1
-    move v5, p4
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p3
-
-    iget p3, p3, Landroid/util/DisplayMetrics;->density:F
-
-    iget-object p1, p1, Lmp/s;->d:Landroid/graphics/Point;
-
-    iget v2, p1, Landroid/graphics/Point;->x:I
-
-    iget v3, p1, Landroid/graphics/Point;->y:I
-
-    invoke-virtual {p0}, Lmiuix/preference/PreferenceFragment;->c1()Z
-
-    move-result v7
-
-    move-object v1, p2
-
-    move v6, p3
-
-    invoke-virtual/range {v1 .. v7}, Ljp/b;->m(IIIIFZ)V
-
-    invoke-virtual {p2}, Ljp/b;->l()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p2}, Ljp/b;->h()I
-
-    move-result p1
-
-    int-to-float p1, p1
-
-    mul-float/2addr p1, p3
-
-    const/high16 p2, 0x3f000000    # 0.5f
-
-    add-float/2addr p1, p2
-
-    float-to-int p1, p1
-
-    goto :goto_0
-
-    :cond_2
-    const/4 p1, 0x0
-
-    :goto_0
-    invoke-virtual {p0, p1}, Lmiuix/preference/PreferenceFragment;->C0(I)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public l0(Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public m6()Landroid/graphics/Rect;
-    .locals 2
-
-    iget-boolean v0, p0, Lmiuix/preference/PreferenceFragment;->a:Z
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lmiuix/preference/PreferenceFragment;->b:Landroid/graphics/Rect;
-
-    if-nez v0, :cond_1
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getParentFragment()Landroidx/fragment/app/Fragment;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
-
-    move-result-object v1
-
-    instance-of v1, v1, Lmiuix/appcompat/app/AppCompatActivity;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
-
-    move-result-object v0
-
-    check-cast v0, Lmiuix/appcompat/app/AppCompatActivity;
-
-    invoke-virtual {v0}, Lmiuix/appcompat/app/AppCompatActivity;->m6()Landroid/graphics/Rect;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lmiuix/preference/PreferenceFragment;->b:Landroid/graphics/Rect;
-
-    goto :goto_0
-
-    :cond_0
-    instance-of v1, v0, Lmiuix/appcompat/app/a0;
-
-    if-eqz v1, :cond_1
-
-    check-cast v0, Lmiuix/appcompat/app/a0;
-
-    invoke-interface {v0}, Lmiuix/appcompat/app/z;->m6()Landroid/graphics/Rect;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lmiuix/preference/PreferenceFragment;->b:Landroid/graphics/Rect;
-
-    :cond_1
-    :goto_0
-    iget-object p0, p0, Lmiuix/preference/PreferenceFragment;->b:Landroid/graphics/Rect;
-
-    return-object p0
-.end method
-
-.method public o6(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public onActionModeFinished(Landroid/view/ActionMode;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onActionModeStarted(Landroid/view/ActionMode;)V
-    .locals 0
-
-    return-void
 .end method
 
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 8
 
+    .line 1
     invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
+    .line 2
+    iget v0, p1, Landroid/content/res/Configuration;->orientation:I
+
+    iget v1, p0, Lmiuix/preference/PreferenceFragment;->u:I
+
+    if-ne v0, v1, :cond_0
+
+    iget v1, p1, Landroid/content/res/Configuration;->screenWidthDp:I
+
+    iget v2, p0, Lmiuix/preference/PreferenceFragment;->w:I
+
+    if-ne v1, v2, :cond_0
+
+    iget v1, p1, Landroid/content/res/Configuration;->screenHeightDp:I
+
+    iget v2, p0, Lmiuix/preference/PreferenceFragment;->k0:I
+
+    if-ne v1, v2, :cond_0
+
+    return-void
+
+    .line 3
+    :cond_0
+    iput v0, p0, Lmiuix/preference/PreferenceFragment;->u:I
+
+    .line 4
+    iget v0, p1, Landroid/content/res/Configuration;->screenWidthDp:I
+
+    iput v0, p0, Lmiuix/preference/PreferenceFragment;->w:I
+
+    .line 5
+    iget p1, p1, Landroid/content/res/Configuration;->screenHeightDp:I
+
+    iput p1, p0, Lmiuix/preference/PreferenceFragment;->k0:I
+
+    .line 6
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
 
-    if-nez p1, :cond_0
+    if-eqz p1, :cond_6
 
-    return-void
+    invoke-direct {p0}, Lmiuix/preference/PreferenceFragment;->wb()Z
 
-    :cond_0
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
-
-    move-result-object p1
+    move-result p1
 
     if-eqz p1, :cond_6
 
-    invoke-virtual {p0}, Lmiuix/preference/PreferenceFragment;->fi()V
+    iget-boolean p1, p0, Lmiuix/preference/PreferenceFragment;->t:Z
 
-    invoke-static {p1}, Lbr/b;->a(Landroid/content/Context;)I
+    if-nez p1, :cond_1
 
-    move-result v0
+    goto/16 :goto_0
 
-    iget v1, p0, Lmiuix/preference/PreferenceFragment;->f:I
-
-    if-eq v1, v0, :cond_6
-
-    iput v0, p0, Lmiuix/preference/PreferenceFragment;->f:I
-
-    iget-boolean v1, p0, Lmiuix/preference/PreferenceFragment;->l:Z
-
-    if-nez v1, :cond_1
-
-    sget v1, Lms/b;->f:I
-
-    sget v2, Lms/b;->g:I
-
-    invoke-static {v0, v1, v2}, Ljp/b$a;->b(III)Ljp/b;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lmiuix/preference/PreferenceFragment;->m:Ljp/b;
-
+    .line 7
     :cond_1
-    iget-object v0, p0, Lmiuix/preference/PreferenceFragment;->m:Ljp/b;
-
-    if-eqz v0, :cond_6
-
-    iget-boolean v1, p0, Lmiuix/preference/PreferenceFragment;->j:Z
-
-    invoke-virtual {v0, v1}, Ljp/b;->n(Z)V
-
-    iget-boolean v0, p0, Lmiuix/preference/PreferenceFragment;->k:Z
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lmiuix/preference/PreferenceFragment;->m:Ljp/b;
-
-    const/4 v2, -0x1
-
-    invoke-virtual {p0, p1, v0, v2, v2}, Lmiuix/preference/PreferenceFragment;->ji(Landroid/content/Context;Ljp/b;II)Z
-
-    move-result p1
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p1
-
-    iget p1, p1, Landroid/util/DisplayMetrics;->density:F
-
-    iget-object v0, p0, Lmiuix/preference/PreferenceFragment;->m:Ljp/b;
-
-    invoke-virtual {v0}, Ljp/b;->l()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lmiuix/preference/PreferenceFragment;->m:Ljp/b;
-
-    invoke-virtual {v0}, Ljp/b;->h()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    mul-float/2addr v0, p1
-
-    float-to-int p1, v0
-
-    goto :goto_0
-
-    :cond_3
-    move p1, v1
-
-    :goto_0
-    invoke-virtual {p0, p1}, Lmiuix/preference/PreferenceFragment;->C0(I)Z
-
-    move-result p1
-
-    :goto_1
-    if-eqz p1, :cond_6
-
-    invoke-virtual {p0}, Lmiuix/preference/PreferenceFragment;->V4()I
-
-    move-result p1
-
-    iget-object v0, p0, Lmiuix/preference/PreferenceFragment;->d:Lmiuix/preference/b;
-
-    if-eqz v0, :cond_4
-
-    invoke-virtual {v0, p1}, Lmiuix/preference/b;->C0(I)Z
-
-    :cond_4
-    iget-object v0, p0, Lmiuix/preference/PreferenceFragment;->n:Ljava/util/List;
-
-    if-eqz v0, :cond_5
-
-    :goto_2
-    iget-object v0, p0, Lmiuix/preference/PreferenceFragment;->n:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-ge v1, v0, :cond_5
-
-    iget-object v0, p0, Lmiuix/preference/PreferenceFragment;->n:Ljava/util/List;
-
-    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljp/a;
-
-    invoke-interface {v0, p1}, Ljp/a;->tb(I)V
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_2
-
-    :cond_5
-    invoke-virtual {p0, p1}, Lmiuix/preference/PreferenceFragment;->tb(I)V
-
-    :cond_6
-    invoke-virtual {p0}, Lmiuix/preference/PreferenceFragment;->di()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_9
-
-    iget-boolean p1, p0, Lmiuix/preference/PreferenceFragment;->p:Z
-
-    if-nez p1, :cond_7
-
-    goto :goto_3
-
-    :cond_7
     invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
 
     move-result-object p1
 
-    if-nez p1, :cond_8
+    if-nez p1, :cond_2
 
     return-void
 
-    :cond_8
-    iget-object v0, p0, Lmiuix/preference/PreferenceFragment;->e:Lmiuix/preference/PreferenceFragment$c;
-
-    if-eqz v0, :cond_9
+    .line 8
+    :cond_2
+    iget-object v0, p0, Lmiuix/preference/PreferenceFragment;->f:Lmiuix/preference/PreferenceFragment$c;
 
     invoke-virtual {p1}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lmiuix/preference/PreferenceFragment$c;->t(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lmiuix/preference/PreferenceFragment$c;->k(Landroid/content/Context;)V
 
-    iget-object v0, p0, Lmiuix/preference/PreferenceFragment;->e:Lmiuix/preference/PreferenceFragment$c;
+    .line 9
+    iget-object v0, p0, Lmiuix/preference/PreferenceFragment;->f:Lmiuix/preference/PreferenceFragment$c;
 
-    invoke-virtual {v0}, Lmiuix/preference/PreferenceFragment$c;->w()V
+    invoke-virtual {v0}, Lmiuix/preference/PreferenceFragment$c;->l()V
 
-    iget-object v0, p0, Lmiuix/preference/PreferenceFragment;->d:Lmiuix/preference/b;
+    .line 10
+    iget-object v0, p0, Lmiuix/preference/PreferenceFragment;->d:Lk/x/h;
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_3
 
+    .line 11
     invoke-virtual {p1}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lmiuix/preference/b;->E(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lk/x/h;->y(Landroid/content/Context;)V
 
-    iget-object v1, p0, Lmiuix/preference/PreferenceFragment;->d:Lmiuix/preference/b;
+    .line 12
+    iget-object v1, p0, Lmiuix/preference/PreferenceFragment;->d:Lk/x/h;
 
-    iget-object p1, p0, Lmiuix/preference/PreferenceFragment;->e:Lmiuix/preference/PreferenceFragment$c;
+    iget-object p1, p0, Lmiuix/preference/PreferenceFragment;->f:Lmiuix/preference/PreferenceFragment$c;
 
-    iget-object v2, p1, Lmiuix/recyclerview/card/base/BaseDecoration;->a:Landroid/graphics/Paint;
+    invoke-static {p1}, Lmiuix/preference/PreferenceFragment$c;->a(Lmiuix/preference/PreferenceFragment$c;)Landroid/graphics/Paint;
 
-    invoke-static {p1}, Lmiuix/preference/PreferenceFragment$c;->f(Lmiuix/preference/PreferenceFragment$c;)I
+    move-result-object v2
+
+    iget-object p1, p0, Lmiuix/preference/PreferenceFragment;->f:Lmiuix/preference/PreferenceFragment$c;
+
+    invoke-static {p1}, Lmiuix/preference/PreferenceFragment$c;->b(Lmiuix/preference/PreferenceFragment$c;)I
 
     move-result v3
 
-    iget-object p1, p0, Lmiuix/preference/PreferenceFragment;->e:Lmiuix/preference/PreferenceFragment$c;
+    iget-object p1, p0, Lmiuix/preference/PreferenceFragment;->f:Lmiuix/preference/PreferenceFragment$c;
 
-    invoke-static {p1}, Lmiuix/preference/PreferenceFragment$c;->g(Lmiuix/preference/PreferenceFragment$c;)I
+    .line 13
+    invoke-static {p1}, Lmiuix/preference/PreferenceFragment$c;->c(Lmiuix/preference/PreferenceFragment$c;)I
 
     move-result v4
 
-    iget-object p1, p0, Lmiuix/preference/PreferenceFragment;->e:Lmiuix/preference/PreferenceFragment$c;
+    iget-object p1, p0, Lmiuix/preference/PreferenceFragment;->f:Lmiuix/preference/PreferenceFragment$c;
 
-    invoke-static {p1}, Lmiuix/preference/PreferenceFragment$c;->h(Lmiuix/preference/PreferenceFragment$c;)I
+    invoke-static {p1}, Lmiuix/preference/PreferenceFragment$c;->d(Lmiuix/preference/PreferenceFragment$c;)I
 
     move-result v5
 
-    iget-object p1, p0, Lmiuix/preference/PreferenceFragment;->e:Lmiuix/preference/PreferenceFragment$c;
+    iget-object p1, p0, Lmiuix/preference/PreferenceFragment;->f:Lmiuix/preference/PreferenceFragment$c;
 
-    invoke-static {p1}, Lmiuix/preference/PreferenceFragment$c;->i(Lmiuix/preference/PreferenceFragment$c;)I
+    invoke-static {p1}, Lmiuix/preference/PreferenceFragment$c;->e(Lmiuix/preference/PreferenceFragment$c;)I
 
     move-result v6
 
-    iget-object p0, p0, Lmiuix/preference/PreferenceFragment;->e:Lmiuix/preference/PreferenceFragment$c;
+    iget-object p1, p0, Lmiuix/preference/PreferenceFragment;->f:Lmiuix/preference/PreferenceFragment$c;
 
-    iget v7, p0, Lmiuix/recyclerview/card/base/BaseDecoration;->c:I
+    .line 14
+    invoke-static {p1}, Lmiuix/preference/PreferenceFragment$c;->f(Lmiuix/preference/PreferenceFragment$c;)I
 
-    invoke-virtual/range {v1 .. v7}, Lmiuix/preference/b;->O(Landroid/graphics/Paint;IIIII)V
+    move-result v7
 
-    :cond_9
-    :goto_3
+    .line 15
+    invoke-virtual/range {v1 .. v7}, Lk/x/h;->E(Landroid/graphics/Paint;IIIII)V
+
+    .line 16
+    :cond_3
+    invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getListView()Landroidx/recyclerview/widget/RecyclerView;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
+
+    move-result-object p1
+
+    .line 17
+    instance-of v0, p1, Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    if-eqz v0, :cond_4
+
+    .line 18
+    move-object v0, p1
+
+    check-cast v0, Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/LinearLayoutManager;->findFirstVisibleItemPosition()I
+
+    move-result v1
+
+    .line 19
+    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/LinearLayoutManager;->findViewByPosition(I)Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_4
+
+    .line 20
+    invoke-virtual {v0}, Landroid/view/View;->getTop()I
+
+    move-result v0
+
+    .line 21
+    invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getListView()Landroidx/recyclerview/widget/RecyclerView;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/view/ViewGroup;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object v2
+
+    new-instance v3, Lmiuix/preference/PreferenceFragment$b;
+
+    invoke-direct {v3, p0, p1, v1, v0}, Lmiuix/preference/PreferenceFragment$b;-><init>(Lmiuix/preference/PreferenceFragment;Landroidx/recyclerview/widget/RecyclerView$LayoutManager;II)V
+
+    invoke-virtual {v2, v3}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
+
+    .line 22
+    :cond_4
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    iget v0, p0, Lmiuix/preference/PreferenceFragment;->n:I
+
+    invoke-static {p1, v0}, Lk/x/j/a;->a(Landroid/content/Context;I)I
+
+    move-result p1
+
+    iput p1, p0, Lmiuix/preference/PreferenceFragment;->p:I
+
+    .line 23
+    iget-object v0, p0, Lmiuix/preference/PreferenceFragment;->d:Lk/x/h;
+
+    if-eqz v0, :cond_5
+
+    .line 24
+    iget v1, p0, Lmiuix/preference/PreferenceFragment;->n:I
+
+    iget-boolean v2, p0, Lmiuix/preference/PreferenceFragment;->s:Z
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v0, v1, p1, v2, v3}, Lk/x/h;->G(IIZZ)V
+
+    .line 25
+    :cond_5
+    invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getListView()Landroidx/recyclerview/widget/RecyclerView;
+
+    move-result-object p1
+
+    iget-object p0, p0, Lmiuix/preference/PreferenceFragment;->d:Lk/x/h;
+
+    invoke-virtual {p1, p0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+
+    :cond_6
+    :goto_0
     return-void
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 3
+    .locals 1
 
+    .line 1
     invoke-super {p0, p1}, Landroidx/preference/PreferenceFragmentCompat;->onCreate(Landroid/os/Bundle;)V
 
-    invoke-virtual {p0}, Lmiuix/preference/PreferenceFragment;->ai()Z
+    .line 2
+    invoke-virtual {p0}, Lmiuix/preference/PreferenceFragment;->eb()Z
 
     move-result p1
 
-    iput-boolean p1, p0, Lmiuix/preference/PreferenceFragment;->p:Z
+    iput-boolean p1, p0, Lmiuix/preference/PreferenceFragment;->t:Z
 
-    invoke-virtual {p0}, Lmiuix/preference/PreferenceFragment;->vc()Landroid/content/Context;
+    .line 3
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    if-eqz p1, :cond_2
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
-    sget-object v0, Lso/b$r;->Window:[I
+    move-result-object p1
 
-    invoke-virtual {p1, v0}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
+    .line 4
+    iget v0, p1, Landroid/content/res/Configuration;->orientation:I
 
-    move-result-object v0
+    iput v0, p0, Lmiuix/preference/PreferenceFragment;->u:I
 
-    sget v1, Lso/b$r;->Window_windowExtraPaddingHorizontalEnable:I
+    .line 5
+    iget v0, p1, Landroid/content/res/Configuration;->screenWidthDp:I
 
-    iget-boolean v2, p0, Lmiuix/preference/PreferenceFragment;->j:Z
+    iput v0, p0, Lmiuix/preference/PreferenceFragment;->w:I
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    .line 6
+    iget p1, p1, Landroid/content/res/Configuration;->screenHeightDp:I
 
-    move-result v1
+    iput p1, p0, Lmiuix/preference/PreferenceFragment;->k0:I
 
-    invoke-virtual {p0, v1}, Lmiuix/preference/PreferenceFragment;->setExtraHorizontalPaddingEnable(Z)V
-
-    sget v1, Lso/b$r;->Window_windowExtraPaddingHorizontalInitEnable:I
-
-    iget-boolean v2, p0, Lmiuix/preference/PreferenceFragment;->k:Z
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
-
-    move-result v1
-
-    invoke-virtual {p0, v1}, Lmiuix/preference/PreferenceFragment;->setExtraHorizontalPaddingInitEnable(Z)V
-
-    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
-
-    sget v0, Lmiuix/preference/c$d;->preferenceCardStyleEnable:I
-
-    const/4 v1, 0x1
-
-    invoke-static {p1, v0, v1}, Lnq/e;->k(Landroid/content/Context;II)I
-
-    move-result p1
-
-    const/4 v0, 0x2
-
-    if-eq p1, v0, :cond_1
-
-    invoke-static {}, Lmp/o;->a()I
-
-    move-result v0
-
-    if-le v0, v1, :cond_0
-
-    if-ne p1, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :cond_1
-    :goto_0
-    iput-boolean v1, p0, Lmiuix/preference/PreferenceFragment;->q:Z
-
-    :cond_2
     return-void
 .end method
 
 .method public final onCreateAdapter(Landroidx/preference/PreferenceScreen;)Landroidx/recyclerview/widget/RecyclerView$Adapter;
-    .locals 7
+    .locals 8
 
-    new-instance v0, Lmiuix/preference/b;
+    .line 1
+    new-instance v0, Lk/x/h;
 
-    iget-boolean v1, p0, Lmiuix/preference/PreferenceFragment;->q:Z
+    invoke-direct {v0, p1}, Lk/x/h;-><init>(Landroidx/preference/PreferenceGroup;)V
 
-    invoke-direct {v0, p1, v1}, Lmiuix/preference/b;-><init>(Landroidx/preference/PreferenceGroup;Z)V
+    iput-object v0, p0, Lmiuix/preference/PreferenceFragment;->d:Lk/x/h;
 
-    iput-object v0, p0, Lmiuix/preference/PreferenceFragment;->d:Lmiuix/preference/b;
+    .line 2
+    iget p1, p0, Lmiuix/preference/PreferenceFragment;->n:I
 
-    iget-boolean p1, p0, Lmiuix/preference/PreferenceFragment;->h:Z
+    iget v1, p0, Lmiuix/preference/PreferenceFragment;->p:I
 
-    invoke-virtual {v0, p1}, Lmiuix/preference/b;->Q(Z)V
+    iget-boolean v2, p0, Lmiuix/preference/PreferenceFragment;->s:Z
 
-    iget-object p1, p0, Lmiuix/preference/PreferenceFragment;->d:Lmiuix/preference/b;
+    invoke-virtual {v0, p1, v1, v2}, Lk/x/h;->F(IIZ)V
 
-    iget v0, p0, Lmiuix/preference/PreferenceFragment;->o:I
-
-    invoke-virtual {p1, v0}, Lmiuix/preference/b;->C0(I)Z
-
-    iget-object p1, p0, Lmiuix/preference/PreferenceFragment;->d:Lmiuix/preference/b;
+    .line 3
+    iget-object p1, p0, Lmiuix/preference/PreferenceFragment;->d:Lk/x/h;
 
     invoke-virtual {p1}, Landroidx/preference/PreferenceGroupAdapter;->getItemCount()I
 
@@ -1599,68 +566,61 @@
     :goto_0
     iput-boolean v0, p0, Lmiuix/preference/PreferenceFragment;->g:Z
 
-    iget-object p1, p0, Lmiuix/preference/PreferenceFragment;->e:Lmiuix/preference/PreferenceFragment$c;
+    .line 4
+    iget-object v1, p0, Lmiuix/preference/PreferenceFragment;->d:Lk/x/h;
 
-    if-eqz p1, :cond_1
+    iget-object p1, p0, Lmiuix/preference/PreferenceFragment;->f:Lmiuix/preference/PreferenceFragment$c;
 
-    iget-object v0, p0, Lmiuix/preference/PreferenceFragment;->d:Lmiuix/preference/b;
+    invoke-static {p1}, Lmiuix/preference/PreferenceFragment$c;->a(Lmiuix/preference/PreferenceFragment$c;)Landroid/graphics/Paint;
 
-    iget-object v1, p1, Lmiuix/recyclerview/card/base/BaseDecoration;->a:Landroid/graphics/Paint;
+    move-result-object v2
 
-    invoke-static {p1}, Lmiuix/preference/PreferenceFragment$c;->f(Lmiuix/preference/PreferenceFragment$c;)I
+    iget-object p1, p0, Lmiuix/preference/PreferenceFragment;->f:Lmiuix/preference/PreferenceFragment$c;
 
-    move-result v2
-
-    iget-object p1, p0, Lmiuix/preference/PreferenceFragment;->e:Lmiuix/preference/PreferenceFragment$c;
-
-    invoke-static {p1}, Lmiuix/preference/PreferenceFragment$c;->g(Lmiuix/preference/PreferenceFragment$c;)I
+    invoke-static {p1}, Lmiuix/preference/PreferenceFragment$c;->b(Lmiuix/preference/PreferenceFragment$c;)I
 
     move-result v3
 
-    iget-object p1, p0, Lmiuix/preference/PreferenceFragment;->e:Lmiuix/preference/PreferenceFragment$c;
+    iget-object p1, p0, Lmiuix/preference/PreferenceFragment;->f:Lmiuix/preference/PreferenceFragment$c;
 
-    invoke-static {p1}, Lmiuix/preference/PreferenceFragment$c;->h(Lmiuix/preference/PreferenceFragment$c;)I
+    .line 5
+    invoke-static {p1}, Lmiuix/preference/PreferenceFragment$c;->c(Lmiuix/preference/PreferenceFragment$c;)I
 
     move-result v4
 
-    iget-object p1, p0, Lmiuix/preference/PreferenceFragment;->e:Lmiuix/preference/PreferenceFragment$c;
+    iget-object p1, p0, Lmiuix/preference/PreferenceFragment;->f:Lmiuix/preference/PreferenceFragment$c;
 
-    invoke-static {p1}, Lmiuix/preference/PreferenceFragment$c;->i(Lmiuix/preference/PreferenceFragment$c;)I
+    invoke-static {p1}, Lmiuix/preference/PreferenceFragment$c;->d(Lmiuix/preference/PreferenceFragment$c;)I
 
     move-result v5
 
-    iget-object p1, p0, Lmiuix/preference/PreferenceFragment;->e:Lmiuix/preference/PreferenceFragment$c;
+    iget-object p1, p0, Lmiuix/preference/PreferenceFragment;->f:Lmiuix/preference/PreferenceFragment$c;
 
-    iget v6, p1, Lmiuix/recyclerview/card/base/BaseDecoration;->c:I
+    invoke-static {p1}, Lmiuix/preference/PreferenceFragment$c;->e(Lmiuix/preference/PreferenceFragment$c;)I
 
-    invoke-virtual/range {v0 .. v6}, Lmiuix/preference/b;->O(Landroid/graphics/Paint;IIIII)V
+    move-result v6
 
-    :cond_1
-    iget-object p0, p0, Lmiuix/preference/PreferenceFragment;->d:Lmiuix/preference/b;
+    iget-object p1, p0, Lmiuix/preference/PreferenceFragment;->f:Lmiuix/preference/PreferenceFragment$c;
+
+    .line 6
+    invoke-static {p1}, Lmiuix/preference/PreferenceFragment$c;->f(Lmiuix/preference/PreferenceFragment$c;)I
+
+    move-result v7
+
+    .line 7
+    invoke-virtual/range {v1 .. v7}, Lk/x/h;->E(Landroid/graphics/Paint;IIIII)V
+
+    .line 8
+    iget-object p0, p0, Lmiuix/preference/PreferenceFragment;->d:Lk/x/h;
 
     return-object p0
-.end method
-
-.method public onCreateOptionsMenu(Landroid/view/Menu;)Z
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public onCreatePanelMenu(ILandroid/view/Menu;)Z
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
 .end method
 
 .method public onCreateRecyclerView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroidx/recyclerview/widget/RecyclerView;
     .locals 2
 
-    sget p3, Lmiuix/preference/c$m;->miuix_preference_recyclerview:I
+    .line 1
+    sget p3, Lk/x/i$m;->miuix_preference_recyclerview:I
 
     const/4 v0, 0x0
 
@@ -1670,16 +630,19 @@
 
     check-cast p1, Landroidx/recyclerview/widget/RecyclerView;
 
+    .line 2
     instance-of p3, p1, Lmiuix/recyclerview/widget/RecyclerView;
 
     if-eqz p3, :cond_0
 
+    .line 3
     move-object p3, p1
 
     check-cast p3, Lmiuix/recyclerview/widget/RecyclerView;
 
     invoke-virtual {p3, v0}, Landroidx/recyclerview/widget/SpringRecyclerView;->setSpringEnabled(Z)V
 
+    .line 4
     :cond_0
     invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->onCreateLayoutManager()Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
@@ -1687,19 +650,10 @@
 
     invoke-virtual {p1, p3}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
-    invoke-virtual {p1}, Landroid/view/View;->getPaddingBottom()I
-
-    move-result p3
-
-    iput p3, p0, Lmiuix/preference/PreferenceFragment;->r:I
-
-    const/4 p3, 0x1
-
-    invoke-static {p1, p3}, Lmiuix/smooth/d;->f(Landroid/view/View;Z)V
-
+    .line 5
     new-instance p3, Lmiuix/preference/PreferenceFragment$c;
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -1707,28 +661,17 @@
 
     invoke-direct {p3, p0, v0, v1}, Lmiuix/preference/PreferenceFragment$c;-><init>(Lmiuix/preference/PreferenceFragment;Landroid/content/Context;Lmiuix/preference/PreferenceFragment$a;)V
 
-    iput-object p3, p0, Lmiuix/preference/PreferenceFragment;->e:Lmiuix/preference/PreferenceFragment$c;
+    iput-object p3, p0, Lmiuix/preference/PreferenceFragment;->f:Lmiuix/preference/PreferenceFragment$c;
 
+    .line 6
     invoke-virtual {p1, p3}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
-    new-instance p3, Lmiuix/recyclerview/card/CardDefaultItemAnimator;
-
-    invoke-direct {p3}, Lmiuix/recyclerview/card/CardDefaultItemAnimator;-><init>()V
-
-    invoke-virtual {p1, p3}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;)V
-
-    iput-object p2, p0, Lmiuix/preference/PreferenceFragment;->c:Landroid/view/View;
-
-    new-instance p3, Lmiuix/preference/PreferenceFragment$a;
-
-    invoke-direct {p3, p0}, Lmiuix/preference/PreferenceFragment$a;-><init>(Lmiuix/preference/PreferenceFragment;)V
-
-    invoke-virtual {p2, p3}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
-
+    .line 7
     instance-of p0, p2, Lmiuix/springback/view/SpringBackLayout;
 
     if-eqz p0, :cond_1
 
+    .line 8
     check-cast p2, Lmiuix/springback/view/SpringBackLayout;
 
     invoke-virtual {p2, p1}, Lmiuix/springback/view/SpringBackLayout;->setTarget(Landroid/view/View;)V
@@ -1752,67 +695,46 @@
         .end annotation
     .end param
 
-    invoke-virtual {p0}, Lmiuix/preference/PreferenceFragment;->ii()V
-
-    invoke-virtual {p0}, Lmiuix/preference/PreferenceFragment;->fi()V
-
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lbr/b;->a(Landroid/content/Context;)I
+    .line 2
+    instance-of v1, v0, Lmiuix/appcompat/app/AppCompatActivity;
 
-    move-result v0
+    if-eqz v1, :cond_1
 
-    iput v0, p0, Lmiuix/preference/PreferenceFragment;->f:I
+    .line 3
+    check-cast v0, Lmiuix/appcompat/app/AppCompatActivity;
 
-    iget-boolean v0, p0, Lmiuix/preference/PreferenceFragment;->l:Z
-
-    if-nez v0, :cond_0
-
-    invoke-direct {p0}, Lmiuix/preference/PreferenceFragment;->Xh()V
-
-    :cond_0
-    iget-boolean v0, p0, Lmiuix/preference/PreferenceFragment;->k:Z
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lmiuix/preference/PreferenceFragment;->m:Ljp/b;
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {p0}, Lmiuix/preference/PreferenceFragment;->vc()Landroid/content/Context;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_3
-
-    const/4 v1, 0x0
-
-    if-eqz p2, :cond_1
-
-    invoke-virtual {p2}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result v2
-
-    goto :goto_0
-
-    :cond_1
-    move v2, v1
-
-    :goto_0
-    if-eqz p2, :cond_2
-
-    invoke-virtual {p2}, Landroid/view/View;->getMeasuredHeight()I
+    invoke-virtual {v0}, Lmiuix/appcompat/app/AppCompatActivity;->C5()I
 
     move-result v1
 
-    :cond_2
-    iget-object v3, p0, Lmiuix/preference/PreferenceFragment;->m:Ljp/b;
+    const/4 v2, 0x0
 
-    invoke-virtual {p0, v0, v3, v2, v1}, Lmiuix/preference/PreferenceFragment;->ji(Landroid/content/Context;Ljp/b;II)Z
+    if-eqz v1, :cond_0
 
-    :cond_3
+    const/4 v3, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    move v3, v2
+
+    .line 4
+    :goto_0
+    iput-boolean v3, p0, Lmiuix/preference/PreferenceFragment;->s:Z
+
+    .line 5
+    invoke-virtual {p0, v1, v2}, Lmiuix/preference/PreferenceFragment;->uc(IZ)V
+
+    .line 6
+    invoke-virtual {v0, v2}, Lmiuix/appcompat/app/AppCompatActivity;->v6(Z)V
+
+    .line 7
+    :cond_1
     invoke-super {p0, p1, p2, p3}, Landroidx/preference/PreferenceFragmentCompat;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object p0
@@ -1820,28 +742,10 @@
     return-object p0
 .end method
 
-.method public onDestroyView()V
-    .locals 1
-
-    invoke-super {p0}, Landroidx/preference/PreferenceFragmentCompat;->onDestroyView()V
-
-    iget-object v0, p0, Lmiuix/preference/PreferenceFragment;->n:Ljava/util/List;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Ljava/util/List;->clear()V
-
-    :cond_0
-    iget-object v0, p0, Lmiuix/preference/PreferenceFragment;->c:Landroid/view/View;
-
-    invoke-virtual {p0, v0}, Lmiuix/preference/PreferenceFragment;->unregisterCoordinateScrollView(Landroid/view/View;)V
-
-    return-void
-.end method
-
 .method public onDisplayPreferenceDialog(Landroidx/preference/Preference;)V
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getCallbackFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v0
@@ -1852,12 +756,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getCallbackFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v0
 
     check-cast v0, Landroidx/preference/PreferenceFragmentCompat$OnPreferenceDisplayDialogCallback;
 
+    .line 3
     invoke-interface {v0, p0, p1}, Landroidx/preference/PreferenceFragmentCompat$OnPreferenceDisplayDialogCallback;->onPreferenceDisplayDialog(Landroidx/preference/PreferenceFragmentCompat;Landroidx/preference/Preference;)Z
 
     move-result v0
@@ -1870,6 +776,7 @@
     :goto_0
     if-nez v0, :cond_1
 
+    .line 4
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v2
@@ -1878,12 +785,14 @@
 
     if-eqz v2, :cond_1
 
+    .line 5
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
     check-cast v0, Landroidx/preference/PreferenceFragmentCompat$OnPreferenceDisplayDialogCallback;
 
+    .line 6
     invoke-interface {v0, p0, p1}, Landroidx/preference/PreferenceFragmentCompat$OnPreferenceDisplayDialogCallback;->onPreferenceDisplayDialog(Landroidx/preference/PreferenceFragmentCompat;Landroidx/preference/Preference;)Z
 
     move-result v0
@@ -1893,6 +802,7 @@
 
     return-void
 
+    .line 7
     :cond_2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getFragmentManager()Landroidx/fragment/app/FragmentManager;
 
@@ -1908,52 +818,60 @@
 
     return-void
 
+    .line 8
     :cond_3
     instance-of v0, p1, Landroidx/preference/EditTextPreference;
 
     if-eqz v0, :cond_4
 
+    .line 9
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {p1}, Lmiuix/preference/EditTextPreferenceDialogFragmentCompat;->vh(Ljava/lang/String;)Lmiuix/preference/EditTextPreferenceDialogFragmentCompat;
+    invoke-static {p1}, Lmiuix/preference/EditTextPreferenceDialogFragmentCompat;->Na(Ljava/lang/String;)Lmiuix/preference/EditTextPreferenceDialogFragmentCompat;
 
     move-result-object p1
 
     goto :goto_1
 
+    .line 10
     :cond_4
     instance-of v0, p1, Landroidx/preference/ListPreference;
 
     if-eqz v0, :cond_5
 
+    .line 11
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {p1}, Lmiuix/preference/ListPreferenceDialogFragmentCompat;->vh(Ljava/lang/String;)Lmiuix/preference/ListPreferenceDialogFragmentCompat;
+    invoke-static {p1}, Lmiuix/preference/ListPreferenceDialogFragmentCompat;->Na(Ljava/lang/String;)Lmiuix/preference/ListPreferenceDialogFragmentCompat;
 
     move-result-object p1
 
     goto :goto_1
 
+    .line 12
     :cond_5
     instance-of v0, p1, Landroidx/preference/MultiSelectListPreference;
 
     if-eqz v0, :cond_6
 
+    .line 13
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {p1}, Lmiuix/preference/MultiSelectListPreferenceDialogFragmentCompat;->vh(Ljava/lang/String;)Lmiuix/preference/MultiSelectListPreferenceDialogFragmentCompat;
+    invoke-static {p1}, Lmiuix/preference/MultiSelectListPreferenceDialogFragmentCompat;->Na(Ljava/lang/String;)Lmiuix/preference/MultiSelectListPreferenceDialogFragmentCompat;
 
     move-result-object p1
 
+    .line 14
     :goto_1
     invoke-virtual {p1, p0, v1}, Landroidx/fragment/app/Fragment;->setTargetFragment(Landroidx/fragment/app/Fragment;I)V
 
+    .line 15
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object p0
@@ -1962,6 +880,7 @@
 
     return-void
 
+    .line 16
     :cond_6
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1973,6 +892,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 17
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1
@@ -1996,26 +916,66 @@
     throw p0
 .end method
 
-.method public onPanelClosed(ILandroid/view/Menu;)V
-    .locals 0
-
-    return-void
-.end method
-
 .method public onPreferenceTreeClick(Landroidx/preference/Preference;)Z
-    .locals 1
+    .locals 3
 
-    iget-boolean v0, p0, Lmiuix/preference/PreferenceFragment;->h:Z
+    .line 1
+    iget-boolean v0, p0, Lmiuix/preference/PreferenceFragment;->j:Z
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lmiuix/preference/PreferenceFragment;->d:Lmiuix/preference/b;
+    .line 2
+    invoke-virtual {p1}, Landroidx/preference/Preference;->getOrder()I
 
-    if-eqz v0, :cond_0
+    move-result v0
 
-    invoke-virtual {v0, p1}, Lmiuix/preference/b;->T(Landroidx/preference/Preference;)V
+    .line 3
+    iget v1, p0, Lmiuix/preference/PreferenceFragment;->m:I
 
+    if-eq v0, v1, :cond_1
+
+    if-ltz v1, :cond_0
+
+    .line 4
+    invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getListView()Landroidx/recyclerview/widget/RecyclerView;
+
+    move-result-object v1
+
+    iget v2, p0, Lmiuix/preference/PreferenceFragment;->m:I
+
+    invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v2, 0x0
+
+    .line 5
+    invoke-virtual {v1, v2}, Landroid/view/View;->setSelected(Z)V
+
+    .line 6
     :cond_0
+    invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getListView()Landroidx/recyclerview/widget/RecyclerView;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    const/4 v2, 0x1
+
+    .line 7
+    invoke-virtual {v1, v2}, Landroid/view/View;->setSelected(Z)V
+
+    .line 8
+    iput v0, p0, Lmiuix/preference/PreferenceFragment;->m:I
+
+    .line 9
+    :cond_1
     invoke-super {p0, p1}, Landroidx/preference/PreferenceFragmentCompat;->onPreferenceTreeClick(Landroidx/preference/Preference;)Z
 
     move-result p0
@@ -2023,248 +983,92 @@
     return p0
 .end method
 
-.method public onPreparePanel(ILandroid/view/View;Landroid/view/Menu;)V
-    .locals 0
-
-    return-void
-.end method
-
 .method public onStop()V
     .locals 0
 
+    .line 1
     invoke-super {p0}, Landroidx/preference/PreferenceFragmentCompat;->onStop()V
 
-    invoke-virtual {p0}, Lmiuix/preference/PreferenceFragment;->hi()V
+    .line 2
+    invoke-virtual {p0}, Lmiuix/preference/PreferenceFragment;->Hc()V
 
     return-void
 .end method
 
-.method public onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
-    .locals 0
-    .param p1    # Landroid/view/View;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroid/os/Bundle;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-
-    invoke-super {p0, p1, p2}, Landroidx/preference/PreferenceFragmentCompat;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
-
-    iget-boolean p1, p0, Lmiuix/preference/PreferenceFragment;->a:Z
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Lmiuix/preference/PreferenceFragment;->c:Landroid/view/View;
-
-    invoke-virtual {p0, p1}, Lmiuix/preference/PreferenceFragment;->registerCoordinateScrollView(Landroid/view/View;)V
-
-    invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getListView()Landroidx/recyclerview/widget/RecyclerView;
-
-    move-result-object p1
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->setClipToPadding(Z)V
-
-    invoke-virtual {p0}, Lmiuix/preference/PreferenceFragment;->m6()Landroid/graphics/Rect;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Landroid/graphics/Rect;->isEmpty()Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    invoke-virtual {p0, p1}, Lmiuix/preference/PreferenceFragment;->H(Landroid/graphics/Rect;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public registerCoordinateScrollView(Landroid/view/View;)V
+.method public qb()Z
     .locals 0
 
-    invoke-virtual {p0}, Lmiuix/preference/PreferenceFragment;->getActionBar()Lmiuix/appcompat/app/ActionBar;
-
-    move-result-object p0
+    .line 1
+    iget-object p0, p0, Lmiuix/preference/PreferenceFragment;->d:Lk/x/h;
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/ActionBar;->H(Landroid/view/View;)V
+    .line 2
+    invoke-virtual {p0}, Lk/x/h;->A()Z
+
+    move-result p0
+
+    return p0
 
     :cond_0
-    return-void
-.end method
-
-.method public se(I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public setExtraHorizontalPaddingEnable(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lmiuix/preference/PreferenceFragment;->j:Z
-
-    iget-object p0, p0, Lmiuix/preference/PreferenceFragment;->m:Ljp/b;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0, p1}, Ljp/b;->n(Z)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public setExtraHorizontalPaddingInitEnable(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lmiuix/preference/PreferenceFragment;->k:Z
-
-    return-void
-.end method
-
-.method public setExtraPaddingPolicy(Ljp/b;)V
-    .locals 0
-
-    if-eqz p1, :cond_0
-
-    iput-object p1, p0, Lmiuix/preference/PreferenceFragment;->m:Ljp/b;
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lmiuix/preference/PreferenceFragment;->l:Z
-
-    goto :goto_0
-
-    :cond_0
-    iget-boolean p1, p0, Lmiuix/preference/PreferenceFragment;->l:Z
-
-    if-eqz p1, :cond_1
-
-    iget-object p1, p0, Lmiuix/preference/PreferenceFragment;->m:Ljp/b;
-
-    if-eqz p1, :cond_1
-
-    const/4 p1, 0x0
-
-    iput-boolean p1, p0, Lmiuix/preference/PreferenceFragment;->l:Z
-
-    invoke-direct {p0}, Lmiuix/preference/PreferenceFragment;->Xh()V
-
-    :cond_1
-    :goto_0
-    iget-object p0, p0, Lmiuix/preference/PreferenceFragment;->c:Landroid/view/View;
-
-    if-eqz p0, :cond_2
-
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
-
-    :cond_2
-    return-void
-.end method
-
-.method public setNestedScrollingParentEnabled(Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public sf(Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public showOverflowMenu()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public startActionMode(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
-    .locals 0
-
     const/4 p0, 0x0
 
-    return-object p0
+    return p0
 .end method
 
-.method public tb(I)V
-    .locals 0
+.method public qc(I)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    .line 1
+    invoke-virtual {p0, p1, v0}, Lmiuix/preference/PreferenceFragment;->uc(IZ)V
 
     return-void
 .end method
 
-.method public unregisterCoordinateScrollView(Landroid/view/View;)V
-    .locals 0
+.method public uc(IZ)V
+    .locals 1
 
-    invoke-virtual {p0}, Lmiuix/preference/PreferenceFragment;->getActionBar()Lmiuix/appcompat/app/ActionBar;
+    .line 1
+    invoke-static {p1}, Lk/b/e/d/f;->b(I)Z
 
-    move-result-object p0
+    move-result v0
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/ActionBar;->F0(Landroid/view/View;)V
+    iget v0, p0, Lmiuix/preference/PreferenceFragment;->n:I
 
-    :cond_0
-    return-void
-.end method
+    if-eq v0, p1, :cond_0
 
-.method public vc()Landroid/content/Context;
-    .locals 0
+    .line 2
+    iput p1, p0, Lmiuix/preference/PreferenceFragment;->n:I
 
+    .line 3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public z6()Z
-    .locals 2
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getParentFragment()Landroidx/fragment/app/Fragment;
 
     move-result-object v0
 
-    instance-of v1, v0, Lmiuix/appcompat/app/a0;
+    invoke-static {v0, p1}, Lk/x/j/a;->a(Landroid/content/Context;I)I
 
-    if-eqz v1, :cond_0
+    move-result p1
 
-    check-cast v0, Lmiuix/appcompat/app/a0;
+    iput p1, p0, Lmiuix/preference/PreferenceFragment;->p:I
 
-    invoke-interface {v0}, Lmiuix/appcompat/app/z;->z6()Z
+    if-eqz p2, :cond_0
 
-    move-result p0
-
-    return p0
+    .line 4
+    invoke-direct {p0}, Lmiuix/preference/PreferenceFragment;->Fb()V
 
     :cond_0
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+    return-void
+.end method
 
-    move-result-object p0
+.method public xc(Z)V
+    .locals 0
 
-    instance-of v0, p0, Lmiuix/appcompat/app/AppCompatActivity;
+    .line 1
+    iput-boolean p1, p0, Lmiuix/preference/PreferenceFragment;->j:Z
 
-    if-eqz v0, :cond_1
-
-    check-cast p0, Lmiuix/appcompat/app/AppCompatActivity;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/app/AppCompatActivity;->z6()Z
-
-    move-result p0
-
-    return p0
-
-    :cond_1
-    const/4 p0, 0x0
-
-    return p0
+    return-void
 .end method

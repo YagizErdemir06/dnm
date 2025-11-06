@@ -44,11 +44,11 @@
     .end annotation
 .end field
 
-.field protected static final SELECTION_ELIGIBILITY_ADAPTIVE:I = 0x2
+.field public static final SELECTION_ELIGIBILITY_ADAPTIVE:I = 0x2
 
-.field protected static final SELECTION_ELIGIBILITY_FIXED:I = 0x1
+.field public static final SELECTION_ELIGIBILITY_FIXED:I = 0x1
 
-.field protected static final SELECTION_ELIGIBILITY_NO:I = 0x0
+.field public static final SELECTION_ELIGIBILITY_NO:I = 0x0
 
 .field private static final TAG:Ljava/lang/String; = "DefaultTrackSelector"
 
@@ -91,19 +91,18 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/google/android/exoplayer2/trackselection/d;
+    .line 1
+    sget-object v0, Ld/j/a/b/x2/l;->c:Ld/j/a/b/x2/l;
 
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/trackselection/d;-><init>()V
-
+    .line 2
     invoke-static {v0}, Lcom/google/common/collect/Ordering;->from(Ljava/util/Comparator;)Lcom/google/common/collect/Ordering;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->FORMAT_VALUE_ORDERING:Lcom/google/common/collect/Ordering;
 
-    new-instance v0, Lcom/google/android/exoplayer2/trackselection/e;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/trackselection/e;-><init>()V
+    .line 3
+    sget-object v0, Ld/j/a/b/x2/c;->c:Ld/j/a/b/x2/c;
 
     invoke-static {v0}, Lcom/google/common/collect/Ordering;->from(Ljava/util/Comparator;)Lcom/google/common/collect/Ordering;
 
@@ -332,10 +331,10 @@
     return-void
 .end method
 
-.method public static synthetic a(Ljava/lang/Integer;Ljava/lang/Integer;)I
+.method public static synthetic a(Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;Lcom/google/android/exoplayer2/Format;)Z
     .locals 0
 
-    invoke-static {p0, p1}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->lambda$static$1(Ljava/lang/Integer;Ljava/lang/Integer;)I
+    invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->isAudioFormatWithinAudioChannelCountConstraints(Lcom/google/android/exoplayer2/Format;)Z
 
     move-result p0
 
@@ -345,6 +344,7 @@
 .method public static synthetic access$2000(Lcom/google/android/exoplayer2/source/TrackGroup;IIZ)I
     .locals 0
 
+    .line 1
     invoke-static {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->getMaxVideoPixelsToRetainForViewport(Lcom/google/android/exoplayer2/source/TrackGroup;IIZ)I
 
     move-result p0
@@ -355,6 +355,7 @@
 .method public static synthetic access$2100(II)I
     .locals 0
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->getRoleFlagMatchScore(II)I
 
     move-result p0
@@ -365,6 +366,7 @@
 .method public static synthetic access$2200(Ljava/lang/String;)I
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->getVideoCodecPreferenceScore(Ljava/lang/String;)I
 
     move-result p0
@@ -375,6 +377,7 @@
 .method public static synthetic access$2300()Lcom/google/common/collect/Ordering;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->FORMAT_VALUE_ORDERING:Lcom/google/common/collect/Ordering;
 
     return-object v0
@@ -383,6 +386,7 @@
 .method public static synthetic access$2400()Lcom/google/common/collect/Ordering;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->NO_ORDER:Lcom/google/common/collect/Ordering;
 
     return-object v0
@@ -391,6 +395,7 @@
 .method public static synthetic access$2500(Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->maybeInvalidateForAudioChannelCountConstraints()V
 
     return-void
@@ -399,6 +404,7 @@
 .method private static applyLegacyRendererOverrides(Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;[Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;)V
     .locals 6
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->getRendererCount()I
 
     move-result v0
@@ -408,10 +414,12 @@
     :goto_0
     if-ge v1, v0, :cond_2
 
+    .line 2
     invoke-virtual {p0, v1}, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->getTrackGroups(I)Lcom/google/android/exoplayer2/source/TrackGroupArray;
 
     move-result-object v2
 
+    .line 3
     invoke-virtual {p1, v1, v2}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->hasSelectionOverride(ILcom/google/android/exoplayer2/source/TrackGroupArray;)Z
 
     move-result v3
@@ -420,6 +428,7 @@
 
     goto :goto_2
 
+    .line 4
     :cond_0
     invoke-virtual {p1, v1, v2}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->getSelectionOverride(ILcom/google/android/exoplayer2/source/TrackGroupArray;)Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;
 
@@ -427,16 +436,19 @@
 
     if-eqz v3, :cond_1
 
+    .line 5
     iget-object v4, v3, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;->tracks:[I
 
     array-length v4, v4
 
     if-eqz v4, :cond_1
 
+    .line 6
     new-instance v4, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;
 
     iget v5, v3, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;->groupIndex:I
 
+    .line 7
     invoke-virtual {v2, v5}, Lcom/google/android/exoplayer2/source/TrackGroupArray;->get(I)Lcom/google/android/exoplayer2/source/TrackGroup;
 
     move-result-object v2
@@ -452,6 +464,7 @@
     :cond_1
     const/4 v4, 0x0
 
+    .line 8
     :goto_1
     aput-object v4, p2, v1
 
@@ -467,10 +480,12 @@
 .method private static applyTrackSelectionOverrides(Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;[Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;)V
     .locals 5
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->getRendererCount()I
 
     move-result v0
 
+    .line 2
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
@@ -482,30 +497,36 @@
     :goto_0
     if-ge v3, v0, :cond_0
 
+    .line 3
     invoke-virtual {p0, v3}, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->getTrackGroups(I)Lcom/google/android/exoplayer2/source/TrackGroupArray;
 
     move-result-object v4
 
+    .line 4
     invoke-static {v4, p1, v1}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->collectTrackSelectionOverrides(Lcom/google/android/exoplayer2/source/TrackGroupArray;Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;Ljava/util/Map;)V
 
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->getUnmappedTrackGroups()Lcom/google/android/exoplayer2/source/TrackGroupArray;
 
     move-result-object v3
 
+    .line 6
     invoke-static {v3, p1, v1}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->collectTrackSelectionOverrides(Lcom/google/android/exoplayer2/source/TrackGroupArray;Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;Ljava/util/Map;)V
 
     :goto_1
     if-ge v2, v0, :cond_3
 
+    .line 7
     invoke-virtual {p0, v2}, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->getRendererType(I)I
 
     move-result p1
 
+    .line 8
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -520,6 +541,7 @@
 
     goto :goto_3
 
+    .line 9
     :cond_1
     iget-object v3, p1, Lcom/google/android/exoplayer2/trackselection/TrackSelectionOverride;->trackIndices:Lcom/google/common/collect/ImmutableList;
 
@@ -529,6 +551,7 @@
 
     if-nez v3, :cond_2
 
+    .line 10
     invoke-virtual {p0, v2}, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->getTrackGroups(I)Lcom/google/android/exoplayer2/source/TrackGroupArray;
 
     move-result-object v3
@@ -543,12 +566,14 @@
 
     if-eq v3, v4, :cond_2
 
+    .line 11
     new-instance v3, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;
 
     iget-object v4, p1, Lcom/google/android/exoplayer2/trackselection/TrackSelectionOverride;->mediaTrackGroup:Lcom/google/android/exoplayer2/source/TrackGroup;
 
     iget-object p1, p1, Lcom/google/android/exoplayer2/trackselection/TrackSelectionOverride;->trackIndices:Lcom/google/common/collect/ImmutableList;
 
+    .line 12
     invoke-static {p1}, Lcom/google/common/primitives/Ints;->toArray(Ljava/util/Collection;)[I
 
     move-result-object p1
@@ -560,6 +585,7 @@
     :cond_2
     const/4 v3, 0x0
 
+    .line 13
     :goto_2
     aput-object v3, p2, v2
 
@@ -570,26 +596,6 @@
 
     :cond_3
     return-void
-.end method
-
-.method public static synthetic b(Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;Lcom/google/android/exoplayer2/Format;)Z
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->isAudioFormatWithinAudioChannelCountConstraints(Lcom/google/android/exoplayer2/Format;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static synthetic c(Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;[IILcom/google/android/exoplayer2/source/TrackGroup;[I)Ljava/util/List;
-    .locals 0
-
-    invoke-static {p0, p1, p2, p3, p4}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->lambda$selectVideoTrack$2(Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;[IILcom/google/android/exoplayer2/source/TrackGroup;[I)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
 .end method
 
 .method private static collectTrackSelectionOverrides(Lcom/google/android/exoplayer2/source/TrackGroupArray;Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;Ljava/util/Map;)V
@@ -608,15 +614,18 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     iget v1, p0, Lcom/google/android/exoplayer2/source/TrackGroupArray;->length:I
 
     if-ge v0, v1, :cond_3
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/source/TrackGroupArray;->get(I)Lcom/google/android/exoplayer2/source/TrackGroup;
 
     move-result-object v1
 
+    .line 3
     iget-object v2, p1, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->overrides:Lcom/google/common/collect/ImmutableMap;
 
     invoke-virtual {v2, v1}, Lcom/google/common/collect/ImmutableMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -629,6 +638,7 @@
 
     goto :goto_1
 
+    .line 4
     :cond_0
     invoke-virtual {v1}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionOverride;->getType()I
 
@@ -646,8 +656,10 @@
 
     if-eqz v2, :cond_1
 
+    .line 5
     iget-object v2, v2, Lcom/google/android/exoplayer2/trackselection/TrackSelectionOverride;->trackIndices:Lcom/google/common/collect/ImmutableList;
 
+    .line 6
     invoke-virtual {v2}, Ljava/util/AbstractCollection;->isEmpty()Z
 
     move-result v2
@@ -662,6 +674,7 @@
 
     if-nez v2, :cond_2
 
+    .line 7
     :cond_1
     invoke-virtual {v1}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionOverride;->getType()I
 
@@ -683,36 +696,6 @@
     return-void
 .end method
 
-.method public static synthetic d(Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;Ljava/lang/String;ILcom/google/android/exoplayer2/source/TrackGroup;[I)Ljava/util/List;
-    .locals 0
-
-    invoke-static {p0, p1, p2, p3, p4}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->lambda$selectTextTrack$4(Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;Ljava/lang/String;ILcom/google/android/exoplayer2/source/TrackGroup;[I)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic e(Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;ZILcom/google/android/exoplayer2/source/TrackGroup;[I)Ljava/util/List;
-    .locals 0
-
-    invoke-direct/range {p0 .. p5}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->lambda$selectAudioTrack$3(Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;ZILcom/google/android/exoplayer2/source/TrackGroup;[I)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic f(Ljava/lang/Integer;Ljava/lang/Integer;)I
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->lambda$static$0(Ljava/lang/Integer;Ljava/lang/Integer;)I
-
-    move-result p0
-
-    return p0
-.end method
-
 .method public static getFormatLanguageScore(Lcom/google/android/exoplayer2/Format;Ljava/lang/String;Z)I
     .locals 1
     .param p1    # Ljava/lang/String;
@@ -720,6 +703,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -738,11 +722,13 @@
 
     return p0
 
+    .line 2
     :cond_0
     invoke-static {p1}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->normalizeUndeterminedLanguageToNull(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/Format;->language:Ljava/lang/String;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->normalizeUndeterminedLanguageToNull(Ljava/lang/String;)Ljava/lang/String;
@@ -757,6 +743,7 @@
 
     goto :goto_1
 
+    .line 4
     :cond_1
     invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -775,18 +762,21 @@
     :cond_2
     const-string p2, "-"
 
+    .line 5
     invoke-static {p0, p2}, Lcom/google/android/exoplayer2/util/Util;->splitAtFirst(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
     aget-object p0, p0, v0
 
+    .line 6
     invoke-static {p1, p2}, Lcom/google/android/exoplayer2/util/Util;->splitAtFirst(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p1
 
     aget-object p1, p1, v0
 
+    .line 7
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -832,15 +822,18 @@
     :cond_0
     const/4 v1, 0x0
 
+    .line 1
     :goto_0
     iget v2, p0, Lcom/google/android/exoplayer2/source/TrackGroup;->length:I
 
     if-ge v1, v2, :cond_2
 
+    .line 2
     invoke-virtual {p0, v1}, Lcom/google/android/exoplayer2/source/TrackGroup;->getFormat(I)Lcom/google/android/exoplayer2/Format;
 
     move-result-object v2
 
+    .line 3
     iget v3, v2, Lcom/google/android/exoplayer2/Format;->width:I
 
     if-lez v3, :cond_1
@@ -849,16 +842,19 @@
 
     if-lez v4, :cond_1
 
+    .line 4
     invoke-static {p3, p1, p2, v3, v4}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->getMaxVideoSizeInViewport(ZIIII)Landroid/graphics/Point;
 
     move-result-object v3
 
+    .line 5
     iget v4, v2, Lcom/google/android/exoplayer2/Format;->width:I
 
     iget v2, v2, Lcom/google/android/exoplayer2/Format;->height:I
 
     mul-int v5, v4, v2
 
+    .line 6
     iget v6, v3, Landroid/graphics/Point;->x:I
 
     int-to-float v6, v6
@@ -940,6 +936,7 @@
 
     if-lt p0, v0, :cond_3
 
+    .line 1
     new-instance p0, Landroid/graphics/Point;
 
     invoke-static {v0, p3}, Lcom/google/android/exoplayer2/util/Util;->ceilDivide(II)I
@@ -950,6 +947,7 @@
 
     return-object p0
 
+    .line 2
     :cond_3
     new-instance p2, Landroid/graphics/Point;
 
@@ -976,6 +974,7 @@
     :cond_0
     and-int/2addr p0, p1
 
+    .line 1
     invoke-static {p0}, Ljava/lang/Integer;->bitCount(I)I
 
     move-result p0
@@ -997,26 +996,27 @@
     return v0
 
     :cond_0
+    const/4 v1, -0x1
+
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
-    move-result v1
+    move-result v2
 
-    const/4 v2, 0x3
+    const/4 v3, 0x3
 
-    const/4 v3, 0x2
+    const/4 v4, 0x2
 
-    const/4 v4, 0x1
+    const/4 v5, 0x1
 
-    const/4 v5, -0x1
-
-    sparse-switch v1, :sswitch_data_0
+    sparse-switch v2, :sswitch_data_0
 
     goto :goto_0
 
     :sswitch_0
-    const-string v1, "video/x-vnd.on2.vp9"
+    const-string v2, "video/x-vnd.on2.vp9"
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -1025,14 +1025,14 @@
     goto :goto_0
 
     :cond_1
-    move v5, v2
+    move v1, v3
 
     goto :goto_0
 
     :sswitch_1
-    const-string v1, "video/avc"
+    const-string v2, "video/avc"
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -1041,14 +1041,14 @@
     goto :goto_0
 
     :cond_2
-    move v5, v3
+    move v1, v4
 
     goto :goto_0
 
     :sswitch_2
-    const-string v1, "video/hevc"
+    const-string v2, "video/hevc"
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -1057,14 +1057,14 @@
     goto :goto_0
 
     :cond_3
-    move v5, v4
+    move v1, v5
 
     goto :goto_0
 
     :sswitch_3
-    const-string v1, "video/av01"
+    const-string v2, "video/av01"
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -1073,21 +1073,21 @@
     goto :goto_0
 
     :cond_4
-    move v5, v0
+    move v1, v0
 
     :goto_0
-    packed-switch v5, :pswitch_data_0
+    packed-switch v1, :pswitch_data_0
 
     return v0
 
     :pswitch_0
-    return v3
-
-    :pswitch_1
     return v4
 
+    :pswitch_1
+    return v5
+
     :pswitch_2
-    return v2
+    return v3
 
     :pswitch_3
     const/4 p0, 0x4
@@ -1114,10 +1114,12 @@
 .method private isAudioFormatWithinAudioChannelCountConstraints(Lcom/google/android/exoplayer2/Format;)Z
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->parameters:Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
 
@@ -1135,6 +1137,7 @@
 
     if-le v1, v2, :cond_2
 
+    .line 3
     invoke-static {p1}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->isDolbyAudio(Lcom/google/android/exoplayer2/Format;)Z
 
     move-result v1
@@ -1151,6 +1154,7 @@
 
     if-eqz v1, :cond_2
 
+    .line 4
     invoke-virtual {v1}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$SpatializerWrapperV32;->isSpatializationSupported()Z
 
     move-result v1
@@ -1166,6 +1170,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 5
     invoke-virtual {v1}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$SpatializerWrapperV32;->isSpatializationSupported()Z
 
     move-result v1
@@ -1174,6 +1179,7 @@
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->spatializer:Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$SpatializerWrapperV32;
 
+    .line 6
     invoke-virtual {v1}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$SpatializerWrapperV32;->isAvailable()Z
 
     move-result v1
@@ -1182,6 +1188,7 @@
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->spatializer:Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$SpatializerWrapperV32;
 
+    .line 7
     invoke-virtual {v1}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$SpatializerWrapperV32;->isEnabled()Z
 
     move-result v1
@@ -1192,6 +1199,7 @@
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->audioAttributes:Lcom/google/android/exoplayer2/audio/AudioAttributes;
 
+    .line 8
     invoke-virtual {v1, p0, p1}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$SpatializerWrapperV32;->canBeSpatialized(Lcom/google/android/exoplayer2/audio/AudioAttributes;Lcom/google/android/exoplayer2/Format;)Z
 
     move-result p0
@@ -1217,6 +1225,7 @@
     :catchall_0
     move-exception p0
 
+    .line 9
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1227,6 +1236,7 @@
 .method private static isDolbyAudio(Lcom/google/android/exoplayer2/Format;)Z
     .locals 4
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
     const/4 v0, 0x0
@@ -1235,25 +1245,26 @@
 
     return v0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
+    const/4 v1, -0x1
+
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
-    move-result v1
+    move-result v2
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    const/4 v3, -0x1
-
-    sparse-switch v1, :sswitch_data_0
+    sparse-switch v2, :sswitch_data_0
 
     goto :goto_0
 
     :sswitch_0
-    const-string v1, "audio/eac3"
+    const-string v2, "audio/eac3"
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -1262,14 +1273,14 @@
     goto :goto_0
 
     :cond_1
-    const/4 v3, 0x3
+    const/4 v1, 0x3
 
     goto :goto_0
 
     :sswitch_1
-    const-string v1, "audio/ac4"
+    const-string v2, "audio/ac4"
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -1278,14 +1289,14 @@
     goto :goto_0
 
     :cond_2
-    const/4 v3, 0x2
+    const/4 v1, 0x2
 
     goto :goto_0
 
     :sswitch_2
-    const-string v1, "audio/ac3"
+    const-string v2, "audio/ac3"
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -1294,14 +1305,14 @@
     goto :goto_0
 
     :cond_3
-    move v3, v2
+    move v1, v3
 
     goto :goto_0
 
     :sswitch_3
-    const-string v1, "audio/eac3-joc"
+    const-string v2, "audio/eac3-joc"
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -1310,15 +1321,15 @@
     goto :goto_0
 
     :cond_4
-    move v3, v0
+    move v1, v0
 
     :goto_0
-    packed-switch v3, :pswitch_data_0
+    packed-switch v1, :pswitch_data_0
 
     return v0
 
     :pswitch_0
-    return v2
+    return v3
 
     nop
 
@@ -1342,6 +1353,7 @@
 .method public static isSupported(IZ)Z
     .locals 1
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/RendererCapabilities;->getFormatSupport(I)I
 
     move-result p0
@@ -1374,9 +1386,10 @@
 .method private synthetic lambda$selectAudioTrack$3(Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;ZILcom/google/android/exoplayer2/source/TrackGroup;[I)Ljava/util/List;
     .locals 6
 
-    new-instance v5, Lcom/google/android/exoplayer2/trackselection/f;
+    .line 1
+    new-instance v5, Ld/j/a/b/x2/d;
 
-    invoke-direct {v5, p0}, Lcom/google/android/exoplayer2/trackselection/f;-><init>(Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;)V
+    invoke-direct {v5, p0}, Ld/j/a/b/x2/d;-><init>(Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;)V
 
     move v0, p3
 
@@ -1395,9 +1408,10 @@
     return-object p0
 .end method
 
-.method private static synthetic lambda$selectTextTrack$4(Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;Ljava/lang/String;ILcom/google/android/exoplayer2/source/TrackGroup;[I)Ljava/util/List;
+.method public static synthetic lambda$selectTextTrack$4(Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;Ljava/lang/String;ILcom/google/android/exoplayer2/source/TrackGroup;[I)Ljava/util/List;
     .locals 0
 
+    .line 1
     invoke-static {p2, p3, p0, p4, p1}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TextTrackInfo;->createForTrackGroup(ILcom/google/android/exoplayer2/source/TrackGroup;Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;[ILjava/lang/String;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object p0
@@ -1405,9 +1419,10 @@
     return-object p0
 .end method
 
-.method private static synthetic lambda$selectVideoTrack$2(Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;[IILcom/google/android/exoplayer2/source/TrackGroup;[I)Ljava/util/List;
+.method public static synthetic lambda$selectVideoTrack$2(Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;[IILcom/google/android/exoplayer2/source/TrackGroup;[I)Ljava/util/List;
     .locals 0
 
+    .line 1
     aget p1, p1, p2
 
     invoke-static {p2, p3, p0, p4, p1}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$VideoTrackInfo;->createForTrackGroup(ILcom/google/android/exoplayer2/source/TrackGroup;Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;[II)Lcom/google/common/collect/ImmutableList;
@@ -1417,9 +1432,10 @@
     return-object p0
 .end method
 
-.method private static synthetic lambda$static$0(Ljava/lang/Integer;Ljava/lang/Integer;)I
+.method public static synthetic lambda$static$0(Ljava/lang/Integer;Ljava/lang/Integer;)I
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
@@ -1428,6 +1444,7 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -1438,6 +1455,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
@@ -1465,7 +1483,7 @@
     return v1
 .end method
 
-.method private static synthetic lambda$static$1(Ljava/lang/Integer;Ljava/lang/Integer;)I
+.method public static synthetic lambda$static$1(Ljava/lang/Integer;Ljava/lang/Integer;)I
     .locals 0
 
     const/4 p0, 0x0
@@ -1476,16 +1494,17 @@
 .method private static maybeConfigureRenderersForTunneling(Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;[[[I[Lcom/google/android/exoplayer2/RendererConfiguration;[Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;)V
     .locals 10
 
-    const/4 v0, -0x1
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    const/4 v1, -0x1
 
-    move v3, v0
+    move v2, v0
+
+    move v3, v1
 
     move v4, v3
 
-    move v2, v1
-
+    .line 1
     :goto_0
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->getRendererCount()I
 
@@ -1495,10 +1514,12 @@
 
     if-ge v2, v5, :cond_5
 
+    .line 2
     invoke-virtual {p0, v2}, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->getRendererType(I)I
 
     move-result v5
 
+    .line 3
     aget-object v7, p3, v2
 
     if-eq v5, v6, :cond_0
@@ -1510,12 +1531,15 @@
     :cond_0
     if-eqz v7, :cond_4
 
+    .line 4
     aget-object v8, p1, v2
 
+    .line 5
     invoke-virtual {p0, v2}, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->getTrackGroups(I)Lcom/google/android/exoplayer2/source/TrackGroupArray;
 
     move-result-object v9
 
+    .line 6
     invoke-static {v8, v9, v7}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->rendererSupportsTunneling([[ILcom/google/android/exoplayer2/source/TrackGroupArray;Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;)Z
 
     move-result v7
@@ -1524,7 +1548,7 @@
 
     if-ne v5, v6, :cond_2
 
-    if-eq v4, v0, :cond_1
+    if-eq v4, v1, :cond_1
 
     goto :goto_1
 
@@ -1534,10 +1558,10 @@
     goto :goto_2
 
     :cond_2
-    if-eq v3, v0, :cond_3
+    if-eq v3, v1, :cond_3
 
     :goto_1
-    move p0, v1
+    move p0, v0
 
     goto :goto_3
 
@@ -1554,23 +1578,26 @@
     move p0, v6
 
     :goto_3
-    if-eq v4, v0, :cond_6
+    if-eq v4, v1, :cond_6
 
-    if-eq v3, v0, :cond_6
+    if-eq v3, v1, :cond_6
 
-    move v1, v6
+    move v0, v6
 
     :cond_6
-    and-int/2addr p0, v1
+    and-int/2addr p0, v0
 
     if-eqz p0, :cond_7
 
+    .line 7
     new-instance p0, Lcom/google/android/exoplayer2/RendererConfiguration;
 
     invoke-direct {p0, v6}, Lcom/google/android/exoplayer2/RendererConfiguration;-><init>(Z)V
 
+    .line 8
     aput-object p0, p2, v4
 
+    .line 9
     aput-object p0, p2, v3
 
     :cond_7
@@ -1580,10 +1607,12 @@
 .method private maybeInvalidateForAudioChannelCountConstraints()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->parameters:Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
 
@@ -1605,6 +1634,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 3
     invoke-virtual {v1}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$SpatializerWrapperV32;->isSpatializationSupported()Z
 
     move-result v1
@@ -1618,6 +1648,7 @@
     :cond_0
     const/4 v1, 0x0
 
+    .line 4
     :goto_0
     monitor-exit v0
     :try_end_0
@@ -1625,6 +1656,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/trackselection/TrackSelector;->invalidate()V
 
     :cond_1
@@ -1633,6 +1665,7 @@
     :catchall_0
     move-exception p0
 
+    .line 6
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -1650,6 +1683,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1680,6 +1714,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     invoke-interface {p2}, Lcom/google/android/exoplayer2/trackselection/TrackSelection;->getTrackGroup()Lcom/google/android/exoplayer2/source/TrackGroup;
 
@@ -1691,6 +1726,7 @@
 
     move v1, v0
 
+    .line 2
     :goto_0
     invoke-interface {p2}, Lcom/google/android/exoplayer2/trackselection/TrackSelection;->length()I
 
@@ -1698,6 +1734,7 @@
 
     if-ge v1, v2, :cond_2
 
+    .line 3
     aget-object v2, p0, p1
 
     invoke-interface {p2, v1}, Lcom/google/android/exoplayer2/trackselection/TrackSelection;->getIndexInTrackGroup(I)I
@@ -1706,6 +1743,7 @@
 
     aget v2, v2, v3
 
+    .line 4
     invoke-static {v2}, Lcom/google/android/exoplayer2/RendererCapabilities;->getTunnelingSupport(I)I
 
     move-result v2
@@ -1753,10 +1791,12 @@
 
     move-object/from16 v0, p2
 
+    .line 1
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 2
     invoke-virtual/range {p2 .. p2}, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->getRendererCount()I
 
     move-result v2
@@ -1766,6 +1806,7 @@
     :goto_0
     if-ge v4, v2, :cond_7
 
+    .line 3
     invoke-virtual {v0, v4}, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->getRendererType(I)I
 
     move-result v5
@@ -1774,52 +1815,62 @@
 
     if-ne v6, v5, :cond_6
 
+    .line 4
     invoke-virtual {v0, v4}, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->getTrackGroups(I)Lcom/google/android/exoplayer2/source/TrackGroupArray;
 
     move-result-object v5
 
     const/4 v7, 0x0
 
+    .line 5
     :goto_1
     iget v8, v5, Lcom/google/android/exoplayer2/source/TrackGroupArray;->length:I
 
     if-ge v7, v8, :cond_6
 
+    .line 6
     invoke-virtual {v5, v7}, Lcom/google/android/exoplayer2/source/TrackGroupArray;->get(I)Lcom/google/android/exoplayer2/source/TrackGroup;
 
     move-result-object v8
 
+    .line 7
     aget-object v9, p3, v4
 
     aget-object v9, v9, v7
 
     move-object/from16 v10, p4
 
+    .line 8
     invoke-interface {v10, v4, v8, v9}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo$Factory;->create(ILcom/google/android/exoplayer2/source/TrackGroup;[I)Ljava/util/List;
 
     move-result-object v9
 
+    .line 9
     iget v11, v8, Lcom/google/android/exoplayer2/source/TrackGroup;->length:I
 
     new-array v11, v11, [Z
 
     const/4 v12, 0x0
 
+    .line 10
     :goto_2
     iget v13, v8, Lcom/google/android/exoplayer2/source/TrackGroup;->length:I
 
     if-ge v12, v13, :cond_5
 
+    .line 11
     invoke-interface {v9, v12}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v13
 
     check-cast v13, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo;
 
+    .line 12
     invoke-virtual {v13}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo;->getSelectionEligibility()I
 
     move-result v14
 
+    .line 13
     aget-boolean v15, v11, v12
 
     if-nez v15, :cond_4
@@ -1833,6 +1884,7 @@
 
     if-ne v14, v15, :cond_1
 
+    .line 14
     invoke-static {v13}, Lcom/google/common/collect/ImmutableList;->of(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object v13
@@ -1841,28 +1893,33 @@
 
     goto :goto_5
 
+    .line 15
     :cond_1
     new-instance v14, Ljava/util/ArrayList;
 
     invoke-direct {v14}, Ljava/util/ArrayList;-><init>()V
 
+    .line 16
     invoke-interface {v14, v13}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v16, v12, 0x1
 
     move/from16 v3, v16
 
+    .line 17
     :goto_3
     iget v15, v8, Lcom/google/android/exoplayer2/source/TrackGroup;->length:I
 
     if-ge v3, v15, :cond_3
 
+    .line 18
     invoke-interface {v9, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v15
 
     check-cast v15, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo;
 
+    .line 19
     invoke-virtual {v15}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo;->getSelectionEligibility()I
 
     move-result v0
@@ -1873,16 +1930,19 @@
 
     if-ne v0, v2, :cond_2
 
+    .line 20
     invoke-virtual {v13, v15}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo;->isCompatibleForAdaptationWith(Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
+    .line 21
     invoke-interface {v14, v15}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     const/4 v0, 0x1
 
+    .line 22
     aput-boolean v0, v11, v3
 
     goto :goto_4
@@ -1904,6 +1964,7 @@
 
     move-object v13, v14
 
+    .line 23
     :goto_5
     invoke-virtual {v1, v13}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -1944,6 +2005,7 @@
 
     goto/16 :goto_0
 
+    .line 24
     :cond_7
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -1958,12 +2020,14 @@
     :cond_8
     move-object/from16 v0, p5
 
+    .line 25
     invoke-static {v1, v0}, Ljava/util/Collections;->max(Ljava/util/Collection;Ljava/util/Comparator;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/List;
 
+    .line 26
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -1972,6 +2036,7 @@
 
     const/4 v2, 0x0
 
+    .line 27
     :goto_8
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -1979,6 +2044,7 @@
 
     if-ge v2, v3, :cond_9
 
+    .line 28
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -1996,12 +2062,14 @@
     :cond_9
     const/4 v2, 0x0
 
+    .line 29
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo;
 
+    .line 30
     new-instance v2, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;
 
     iget-object v3, v0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo;->trackGroup:Lcom/google/android/exoplayer2/source/TrackGroup;
@@ -2010,10 +2078,12 @@
 
     iget v0, v0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo;->rendererIndex:I
 
+    .line 31
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
+    .line 32
     invoke-static {v2, v0}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
     move-result-object v0
@@ -2024,12 +2094,15 @@
 .method private setParametersInternal(Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;)V
     .locals 2
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 3
     :try_start_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->parameters:Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
 
@@ -2046,15 +2119,18 @@
     :cond_0
     const/4 v1, 0x0
 
+    .line 4
     :goto_0
     iput-object p1, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->parameters:Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
 
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eqz v1, :cond_2
 
+    .line 6
     iget-boolean p1, p1, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->constrainAudioChannelCountToDeviceCapabilities:Z
 
     if-eqz p1, :cond_1
@@ -2067,8 +2143,10 @@
 
     const-string v0, "Audio channel count constraints cannot be applied without reference to Context. Build the track selector instance with one of the non-deprecated constructors that take a Context argument."
 
+    .line 7
     invoke-static {p1, v0}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 8
     :cond_1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/trackselection/TrackSelector;->invalidate()V
 
@@ -2078,6 +2156,7 @@
     :catchall_0
     move-exception p0
 
+    .line 9
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -2088,9 +2167,20 @@
 
 
 # virtual methods
+.method public synthetic b(Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;ZILcom/google/android/exoplayer2/source/TrackGroup;[I)Ljava/util/List;
+    .locals 0
+
+    invoke-direct/range {p0 .. p5}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->lambda$selectAudioTrack$3(Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;ZILcom/google/android/exoplayer2/source/TrackGroup;[I)Ljava/util/List;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method public buildUponParameters()Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->getParameters()Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
 
     move-result-object p0
@@ -2151,10 +2241,12 @@
 .method public release()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     sget v1, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
@@ -2166,13 +2258,16 @@
 
     if-eqz v1, :cond_0
 
+    .line 3
     invoke-virtual {v1}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$SpatializerWrapperV32;->release()V
 
+    .line 4
     :cond_0
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 5
     invoke-super {p0}, Lcom/google/android/exoplayer2/trackselection/TrackSelector;->release()V
 
     return-void
@@ -2180,6 +2275,7 @@
     :catchall_0
     move-exception p0
 
+    .line 6
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -2196,18 +2292,22 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->getRendererCount()I
 
     move-result v0
 
+    .line 2
     new-array v1, v0, [Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;
 
+    .line 3
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->selectVideoTrack(Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;[[[I[ILcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;)Landroid/util/Pair;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
+    .line 4
     iget-object v3, v2, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v3, Ljava/lang/Integer;
@@ -2222,6 +2322,7 @@
 
     aput-object v2, v1, v3
 
+    .line 5
     :cond_0
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->selectAudioTrack(Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;[[[I[ILcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;)Landroid/util/Pair;
 
@@ -2229,6 +2330,7 @@
 
     if-eqz p3, :cond_1
 
+    .line 6
     iget-object v2, p3, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v2, Ljava/lang/Integer;
@@ -2252,6 +2354,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_2
     iget-object p3, p3, Landroid/util/Pair;->first:Ljava/lang/Object;
 
@@ -2273,6 +2376,7 @@
 
     iget-object p3, p3, Lcom/google/android/exoplayer2/Format;->language:Ljava/lang/String;
 
+    .line 8
     :goto_0
     invoke-virtual {p0, p1, p2, p4, p3}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->selectTextTrack(Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;[[[ILcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;Ljava/lang/String;)Landroid/util/Pair;
 
@@ -2280,6 +2384,7 @@
 
     if-eqz p3, :cond_3
 
+    .line 9
     iget-object v3, p3, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v3, Ljava/lang/Integer;
@@ -2298,6 +2403,7 @@
     :goto_1
     if-ge v2, v0, :cond_5
 
+    .line 10
     invoke-virtual {p1, v2}, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->getRendererType(I)I
 
     move-result p3
@@ -2314,12 +2420,14 @@
 
     if-eq p3, v3, :cond_4
 
+    .line 11
     invoke-virtual {p1, v2}, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->getTrackGroups(I)Lcom/google/android/exoplayer2/source/TrackGroupArray;
 
     move-result-object v3
 
     aget-object v4, p2, v2
 
+    .line 12
     invoke-virtual {p0, p3, v3, v4, p4}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->selectOtherTrack(ILcom/google/android/exoplayer2/source/TrackGroupArray;[[ILcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;)Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;
 
     move-result-object p3
@@ -2364,6 +2472,7 @@
 
     move v0, p3
 
+    .line 1
     :goto_0
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->getRendererCount()I
 
@@ -2373,12 +2482,14 @@
 
     const/4 v1, 0x2
 
+    .line 2
     invoke-virtual {p1, v0}, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->getRendererType(I)I
 
     move-result v2
 
     if-ne v1, v2, :cond_0
 
+    .line 3
     invoke-virtual {p1, v0}, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->getTrackGroups(I)Lcom/google/android/exoplayer2/source/TrackGroupArray;
 
     move-result-object v1
@@ -2400,13 +2511,12 @@
     :goto_1
     const/4 v1, 0x1
 
-    new-instance v4, Lcom/google/android/exoplayer2/trackselection/i;
+    .line 4
+    new-instance v4, Ld/j/a/b/x2/k;
 
-    invoke-direct {v4, p0, p4, p3}, Lcom/google/android/exoplayer2/trackselection/i;-><init>(Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;Z)V
+    invoke-direct {v4, p0, p4, p3}, Ld/j/a/b/x2/k;-><init>(Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;Z)V
 
-    new-instance v5, Lcom/google/android/exoplayer2/trackselection/j;
-
-    invoke-direct {v5}, Lcom/google/android/exoplayer2/trackselection/j;-><init>()V
+    sget-object v5, Ld/j/a/b/x2/m;->c:Ld/j/a/b/x2/m;
 
     move-object v0, p0
 
@@ -2444,24 +2554,29 @@
 
     move v2, v0
 
+    .line 1
     :goto_0
     iget v4, p2, Lcom/google/android/exoplayer2/source/TrackGroupArray;->length:I
 
     if-ge v0, v4, :cond_3
 
+    .line 2
     invoke-virtual {p2, v0}, Lcom/google/android/exoplayer2/source/TrackGroupArray;->get(I)Lcom/google/android/exoplayer2/source/TrackGroup;
 
     move-result-object v4
 
+    .line 3
     aget-object v5, p3, v0
 
     move v6, p1
 
+    .line 4
     :goto_1
     iget v7, v4, Lcom/google/android/exoplayer2/source/TrackGroup;->length:I
 
     if-ge v6, v7, :cond_2
 
+    .line 5
     aget v7, v5, v6
 
     iget-boolean v8, p4, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->exceedRendererCapabilitiesIfNecessary:Z
@@ -2472,10 +2587,12 @@
 
     if-eqz v7, :cond_1
 
+    .line 6
     invoke-virtual {v4, v6}, Lcom/google/android/exoplayer2/source/TrackGroup;->getFormat(I)Lcom/google/android/exoplayer2/Format;
 
     move-result-object v7
 
+    .line 7
     new-instance v8, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$OtherTrackScore;
 
     aget v9, v5, v6
@@ -2484,6 +2601,7 @@
 
     if-eqz v3, :cond_0
 
+    .line 8
     invoke-virtual {v8, v3}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$OtherTrackScore;->compareTo(Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$OtherTrackScore;)I
 
     move-result v7
@@ -2512,6 +2630,7 @@
 
     goto :goto_2
 
+    .line 9
     :cond_4
     new-instance p0, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;
 
@@ -2557,15 +2676,14 @@
         }
     .end annotation
 
+    .line 1
+    new-instance v4, Ld/j/a/b/x2/j;
+
+    invoke-direct {v4, p3, p4}, Ld/j/a/b/x2/j;-><init>(Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;Ljava/lang/String;)V
+
+    sget-object v5, Ld/j/a/b/x2/a;->c:Ld/j/a/b/x2/a;
+
     const/4 v1, 0x3
-
-    new-instance v4, Lcom/google/android/exoplayer2/trackselection/b;
-
-    invoke-direct {v4, p3, p4}, Lcom/google/android/exoplayer2/trackselection/b;-><init>(Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;Ljava/lang/String;)V
-
-    new-instance v5, Lcom/google/android/exoplayer2/trackselection/c;
-
-    invoke-direct {v5}, Lcom/google/android/exoplayer2/trackselection/c;-><init>()V
 
     move-object v0, p0
 
@@ -2605,13 +2723,16 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->parameters:Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
 
+    .line 3
     iget-boolean v2, v1, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->constrainAudioChannelCountToDeviceCapabilities:Z
 
     if-eqz v2, :cond_0
@@ -2626,6 +2747,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 4
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v3
@@ -2638,21 +2760,26 @@
 
     invoke-virtual {v2, p0, v3}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$SpatializerWrapperV32;->ensureInitialized(Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;Landroid/os/Looper;)V
 
+    .line 5
     :cond_0
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 6
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->getRendererCount()I
 
     move-result v0
 
+    .line 7
     invoke-virtual {p0, p1, p2, p3, v1}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->selectAllTracks(Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;[[[I[ILcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;)[Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;
 
     move-result-object p3
 
+    .line 8
     invoke-static {p1, v1, p3}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->applyTrackSelectionOverrides(Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;[Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;)V
 
+    .line 9
     invoke-static {p1, v1, p3}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->applyLegacyRendererOverrides(Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;[Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;)V
 
     const/4 v2, 0x0
@@ -2664,10 +2791,12 @@
 
     if-ge v3, v0, :cond_3
 
+    .line 10
     invoke-virtual {p1, v3}, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->getRendererType(I)I
 
     move-result v5
 
+    .line 11
     invoke-virtual {v1, v3}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->getRendererDisabled(I)Z
 
     move-result v6
@@ -2676,6 +2805,7 @@
 
     iget-object v6, v1, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->disabledTrackTypes:Lcom/google/common/collect/ImmutableSet;
 
+    .line 12
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -2686,6 +2816,7 @@
 
     if-eqz v5, :cond_2
 
+    .line 13
     :cond_1
     aput-object v4, p3, v3
 
@@ -2694,17 +2825,21 @@
 
     goto :goto_0
 
+    .line 14
     :cond_3
     iget-object v3, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->trackSelectionFactory:Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Factory;
 
+    .line 15
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/trackselection/TrackSelector;->getBandwidthMeter()Lcom/google/android/exoplayer2/upstream/BandwidthMeter;
 
     move-result-object p0
 
+    .line 16
     invoke-interface {v3, p3, p0, p4, p5}, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Factory;->createTrackSelections([Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;Lcom/google/android/exoplayer2/upstream/BandwidthMeter;Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;Lcom/google/android/exoplayer2/Timeline;)[Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;
 
     move-result-object p0
 
+    .line 17
     new-array p3, v0, [Lcom/google/android/exoplayer2/RendererConfiguration;
 
     move p4, v2
@@ -2712,10 +2847,12 @@
     :goto_1
     if-ge p4, v0, :cond_9
 
+    .line 18
     invoke-virtual {p1, p4}, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->getRendererType(I)I
 
     move-result p5
 
+    .line 19
     invoke-virtual {v1, p4}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->getRendererDisabled(I)Z
 
     move-result v3
@@ -2750,6 +2887,7 @@
     :goto_3
     if-nez p5, :cond_6
 
+    .line 20
     invoke-virtual {p1, p4}, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->getRendererType(I)I
 
     move-result p5
@@ -2771,6 +2909,7 @@
     :goto_4
     if-eqz v5, :cond_8
 
+    .line 21
     sget-object p5, Lcom/google/android/exoplayer2/RendererConfiguration;->DEFAULT:Lcom/google/android/exoplayer2/RendererConfiguration;
 
     goto :goto_5
@@ -2785,13 +2924,16 @@
 
     goto :goto_1
 
+    .line 22
     :cond_9
     iget-boolean p4, v1, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->tunnelingEnabled:Z
 
     if-eqz p4, :cond_a
 
+    .line 23
     invoke-static {p1, p2, p3, p0}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->maybeConfigureRenderersForTunneling(Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;[[[I[Lcom/google/android/exoplayer2/RendererConfiguration;[Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;)V
 
+    .line 24
     :cond_a
     invoke-static {p3, p0}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
@@ -2802,6 +2944,7 @@
     :catchall_0
     move-exception p0
 
+    .line 25
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -2835,15 +2978,14 @@
         }
     .end annotation
 
+    .line 1
+    new-instance v4, Ld/j/a/b/x2/f;
+
+    invoke-direct {v4, p4, p3}, Ld/j/a/b/x2/f;-><init>(Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;[I)V
+
+    sget-object v5, Ld/j/a/b/x2/q;->c:Ld/j/a/b/x2/q;
+
     const/4 v1, 0x2
-
-    new-instance v4, Lcom/google/android/exoplayer2/trackselection/g;
-
-    invoke-direct {v4, p4, p3}, Lcom/google/android/exoplayer2/trackselection/g;-><init>(Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;[I)V
-
-    new-instance v5, Lcom/google/android/exoplayer2/trackselection/h;
-
-    invoke-direct {v5}, Lcom/google/android/exoplayer2/trackselection/h;-><init>()V
 
     move-object v0, p0
 
@@ -2861,10 +3003,12 @@
 .method public setAudioAttributes(Lcom/google/android/exoplayer2/audio/AudioAttributes;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->audioAttributes:Lcom/google/android/exoplayer2/audio/AudioAttributes;
 
@@ -2881,15 +3025,18 @@
     :cond_0
     const/4 v1, 0x0
 
+    .line 3
     :goto_0
     iput-object p1, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->audioAttributes:Lcom/google/android/exoplayer2/audio/AudioAttributes;
 
+    .line 4
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eqz v1, :cond_1
 
+    .line 5
     invoke-direct {p0}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->maybeInvalidateForAudioChannelCountConstraints()V
 
     :cond_1
@@ -2898,6 +3045,7 @@
     :catchall_0
     move-exception p0
 
+    .line 6
     :try_start_1
     monitor-exit v0
     :try_end_1

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/api/internal/zabn;
+.class public final Lcom/google/android/gms/common/api/internal/zabn;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field final synthetic zaa:I
+.field public final synthetic zaa:I
 
-.field final synthetic zab:Lcom/google/android/gms/common/api/internal/zabq;
+.field public final synthetic zab:Lcom/google/android/gms/common/api/internal/zabq;
 
 
 # direct methods
@@ -30,6 +30,7 @@
 .method public final run()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zabn;->zab:Lcom/google/android/gms/common/api/internal/zabq;
 
     iget p0, p0, Lcom/google/android/gms/common/api/internal/zabn;->zaa:I

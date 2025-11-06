@@ -1,4 +1,4 @@
-.class Lcom/google/common/base/FinalizableReferenceQueue$SystemLoader;
+.class public Lcom/google/common/base/FinalizableReferenceQueue$SystemLoader;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,7 +18,7 @@
 
 
 # static fields
-.field static disabled:Z
+.field public static disabled:Z
     .annotation build Lcom/google/common/annotations/VisibleForTesting;
     .end annotation
 .end field
@@ -28,6 +28,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -48,6 +49,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     sget-boolean p0, Lcom/google/common/base/FinalizableReferenceQueue$SystemLoader;->disabled:Z
 
     const/4 v0, 0x0
@@ -56,6 +58,7 @@
 
     return-object v0
 
+    .line 2
     :cond_0
     :try_start_0
     invoke-static {}, Ljava/lang/ClassLoader;->getSystemClassLoader()Ljava/lang/ClassLoader;
@@ -69,6 +72,7 @@
     :try_start_1
     const-string v1, "com.google.common.base.internal.Finalizer"
 
+    .line 3
     invoke-virtual {p0, v1}, Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object p0
@@ -81,6 +85,7 @@
     :cond_1
     return-object v0
 
+    .line 4
     :catch_1
     invoke-static {}, Lcom/google/common/base/FinalizableReferenceQueue;->access$000()Ljava/util/logging/Logger;
 

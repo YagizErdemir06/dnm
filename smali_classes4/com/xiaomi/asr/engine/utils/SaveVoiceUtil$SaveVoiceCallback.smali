@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil$SaveVoiceCallback;
+.class public Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil$SaveVoiceCallback;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;
+.field public final synthetic this$0:Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil$SaveVoiceCallback;->this$0:Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,6 +38,7 @@
 .method public handleMessage(Landroid/os/Message;)Z
     .locals 5
 
+    .line 1
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
@@ -55,6 +57,7 @@
 
     goto/16 :goto_0
 
+    .line 2
     :cond_0
     iget-object p1, p0, Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil$SaveVoiceCallback;->this$0:Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;
 
@@ -64,6 +67,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 3
     :try_start_0
     iget-object p1, p0, Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil$SaveVoiceCallback;->this$0:Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;
 
@@ -73,6 +77,7 @@
 
     invoke-virtual {p1}, Ljava/io/FileOutputStream;->close()V
 
+    .line 4
     iget-object p0, p0, Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil$SaveVoiceCallback;->this$0:Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;
 
     const/4 p1, 0x0
@@ -86,8 +91,10 @@
     :catch_0
     move-exception p0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 5
+    invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
+    .line 6
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -96,7 +103,7 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
 
@@ -110,6 +117,7 @@
 
     goto/16 :goto_0
 
+    .line 7
     :cond_1
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
@@ -117,10 +125,12 @@
 
     const-string v0, "data"
 
+    .line 8
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getByteArray(Ljava/lang/String;)[B
 
     move-result-object p1
 
+    .line 9
     iget-object v0, p0, Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil$SaveVoiceCallback;->this$0:Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;
 
     invoke-static {v0}, Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;->access$200(Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;)Ljava/io/FileOutputStream;
@@ -129,6 +139,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 10
     :try_start_1
     iget-object p0, p0, Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil$SaveVoiceCallback;->this$0:Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;
 
@@ -145,8 +156,10 @@
     :catch_1
     move-exception p0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 11
+    invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
+    .line 12
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -155,7 +168,7 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
 
@@ -169,6 +182,7 @@
 
     goto :goto_0
 
+    .line 13
     :cond_2
     iget-object v0, p0, Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil$SaveVoiceCallback;->this$0:Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;
 
@@ -182,6 +196,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 14
     :try_start_2
     iget-object v0, p0, Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil$SaveVoiceCallback;->this$0:Lcom/xiaomi/asr/engine/utils/SaveVoiceUtil;
 
@@ -238,8 +253,10 @@
     :catch_2
     move-exception p0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 15
+    invoke-virtual {p0}, Ljava/io/FileNotFoundException;->printStackTrace()V
 
+    .line 16
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -248,7 +265,7 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/io/FileNotFoundException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
 

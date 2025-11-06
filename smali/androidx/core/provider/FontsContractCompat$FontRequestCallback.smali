@@ -46,13 +46,14 @@
     .end annotation
 .end field
 
-.field static final RESULT_SUCCESS:I
+.field public static final RESULT_SUCCESS:I
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

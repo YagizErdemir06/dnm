@@ -11,31 +11,34 @@
     }
 .end annotation
 
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
     bv = {
         0x1,
         0x0,
         0x3
     }
     d1 = {
-        "\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u000c\u0018\u00002\u00020\u0001:\u0002\u000f\u0010B\u001d\u0012\n\u0008\u0002\u0010\u0002\u001a\u0004\u0018\u00010\u0003\u0012\n\u0008\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u0005\u00a2\u0006\u0002\u0010\u0006R\u001c\u0010\u0004\u001a\u0004\u0018\u00010\u0005X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0007\u0010\u0008\"\u0004\u0008\t\u0010\nR\u001c\u0010\u0002\u001a\u0004\u0018\u00010\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u000b\u0010\u000c\"\u0004\u0008\r\u0010\u000e\u00a8\u0006\u0011"
+        "\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u000b\u0018\u00002\u00020\u0001:\u0002\u0012\u0013B\u001f\u0012\n\u0008\u0002\u0010\u0003\u001a\u0004\u0018\u00010\u0002\u0012\n\u0008\u0002\u0010\n\u001a\u0004\u0018\u00010\t\u00a2\u0006\u0004\u0008\u0010\u0010\u0011R$\u0010\u0003\u001a\u0004\u0018\u00010\u00028\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0003\u0010\u0004\u001a\u0004\u0008\u0005\u0010\u0006\"\u0004\u0008\u0007\u0010\u0008R$\u0010\n\u001a\u0004\u0018\u00010\t8\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\n\u0010\u000b\u001a\u0004\u0008\u000c\u0010\r\"\u0004\u0008\u000e\u0010\u000f\u00a8\u0006\u0014"
     }
     d2 = {
         "Lcom/faceunity/core/entity/FURenderOutputData;",
         "",
+        "Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;",
         "texture",
         "Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;",
-        "image",
-        "Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;",
-        "(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;)V",
-        "getImage",
-        "()Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;",
-        "setImage",
-        "(Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;)V",
         "getTexture",
         "()Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;",
         "setTexture",
         "(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;)V",
+        "Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;",
+        "image",
+        "Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;",
+        "getImage",
+        "()Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;",
+        "setImage",
+        "(Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;)V",
+        "<init>",
+        "(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;)V",
         "FUImageBuffer",
         "FUTexture",
         "lib_core_release"
@@ -51,12 +54,12 @@
 
 # instance fields
 .field private image:Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 .end field
 
 .field private texture:Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 .end field
 
@@ -69,7 +72,7 @@
 
     const/4 v1, 0x3
 
-    invoke-direct {p0, v0, v0, v1, v0}, Lcom/faceunity/core/entity/FURenderOutputData;-><init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;ILkotlin/jvm/internal/w;)V
+    invoke-direct {p0, v0, v0, v1, v0}, Lcom/faceunity/core/entity/FURenderOutputData;-><init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;ILh/d3/x/w;)V
 
     return-void
 .end method
@@ -77,11 +80,11 @@
 .method public constructor <init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;)V
     .locals 0
     .param p1    # Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
     .param p2    # Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
 
@@ -95,7 +98,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;ILkotlin/jvm/internal/w;)V
+.method public synthetic constructor <init>(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;ILh/d3/x/w;)V
     .locals 1
 
     and-int/lit8 p4, p3, 0x1
@@ -124,9 +127,10 @@
 # virtual methods
 .method public final getImage()Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;
     .locals 0
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/entity/FURenderOutputData;->image:Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;
 
     return-object p0
@@ -134,9 +138,10 @@
 
 .method public final getTexture()Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;
     .locals 0
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/entity/FURenderOutputData;->texture:Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;
 
     return-object p0
@@ -145,10 +150,11 @@
 .method public final setImage(Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;)V
     .locals 0
     .param p1    # Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/core/entity/FURenderOutputData;->image:Lcom/faceunity/core/entity/FURenderOutputData$FUImageBuffer;
 
     return-void
@@ -157,10 +163,11 @@
 .method public final setTexture(Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;)V
     .locals 0
     .param p1    # Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/core/entity/FURenderOutputData;->texture:Lcom/faceunity/core/entity/FURenderOutputData$FUTexture;
 
     return-void

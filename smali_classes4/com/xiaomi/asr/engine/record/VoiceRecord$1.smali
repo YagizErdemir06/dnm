@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/asr/engine/record/VoiceRecord$1;
+.class public Lcom/xiaomi/asr/engine/record/VoiceRecord$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/xiaomi/asr/engine/record/VoiceRecord;
+.field public final synthetic this$0:Lcom/xiaomi/asr/engine/record/VoiceRecord;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/asr/engine/record/VoiceRecord;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/asr/engine/record/VoiceRecord$1;->this$0:Lcom/xiaomi/asr/engine/record/VoiceRecord;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,12 +38,14 @@
 .method public run()V
     .locals 1
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/asr/engine/record/RecorderSynchronizer;->getInstance()Lcom/xiaomi/asr/engine/record/RecorderSynchronizer;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/xiaomi/asr/engine/record/RecorderSynchronizer;->stop()V
 
+    .line 2
     :try_start_0
     invoke-static {}, Lcom/xiaomi/asr/engine/record/RecorderSynchronizer;->getInstance()Lcom/xiaomi/asr/engine/record/RecorderSynchronizer;
 
@@ -61,8 +64,10 @@
     :catch_0
     move-exception v0
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 3
+    invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
 
+    .line 4
     :goto_0
     iget-object v0, p0, Lcom/xiaomi/asr/engine/record/VoiceRecord$1;->this$0:Lcom/xiaomi/asr/engine/record/VoiceRecord;
 
@@ -72,6 +77,7 @@
 
     if-lez v0, :cond_0
 
+    .line 5
     iget-object p0, p0, Lcom/xiaomi/asr/engine/record/VoiceRecord$1;->this$0:Lcom/xiaomi/asr/engine/record/VoiceRecord;
 
     invoke-static {p0}, Lcom/xiaomi/asr/engine/record/VoiceRecord;->access$100(Lcom/xiaomi/asr/engine/record/VoiceRecord;)V

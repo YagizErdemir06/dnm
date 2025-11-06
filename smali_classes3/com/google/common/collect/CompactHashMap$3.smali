@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/CompactHashMap$3;
+.class public Lcom/google/common/collect/CompactHashMap$3;
 .super Lcom/google/common/collect/CompactHashMap$Itr;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/CompactHashMap;
+.field public final synthetic this$0:Lcom/google/common/collect/CompactHashMap;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/CompactHashMap;)V
     .locals 1
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/CompactHashMap$3;->this$0:Lcom/google/common/collect/CompactHashMap;
 
     const/4 v0, 0x0
@@ -51,6 +52,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/CompactHashMap$3;->this$0:Lcom/google/common/collect/CompactHashMap;
 
     invoke-static {p0, p1}, Lcom/google/common/collect/CompactHashMap;->access$600(Lcom/google/common/collect/CompactHashMap;I)Ljava/lang/Object;

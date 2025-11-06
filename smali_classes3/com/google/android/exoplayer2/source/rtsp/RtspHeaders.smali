@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders;
+.class public final Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -96,6 +96,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders$Builder;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders$Builder;-><init>()V
@@ -141,6 +142,7 @@
 .method public static synthetic access$000(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders;->convertToStandardHeaderName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -153,6 +155,7 @@
 
     const-string v0, "Accept"
 
+    .line 1
     invoke-static {p0, v0}, Lcom/google/common/base/Ascii;->equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -164,6 +167,7 @@
     :cond_0
     const-string v0, "Allow"
 
+    .line 2
     invoke-static {p0, v0}, Lcom/google/common/base/Ascii;->equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -175,6 +179,7 @@
     :cond_1
     const-string v0, "Authorization"
 
+    .line 3
     invoke-static {p0, v0}, Lcom/google/common/base/Ascii;->equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -186,6 +191,7 @@
     :cond_2
     const-string v0, "Bandwidth"
 
+    .line 4
     invoke-static {p0, v0}, Lcom/google/common/base/Ascii;->equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -197,6 +203,7 @@
     :cond_3
     const-string v0, "Blocksize"
 
+    .line 5
     invoke-static {p0, v0}, Lcom/google/common/base/Ascii;->equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -208,6 +215,7 @@
     :cond_4
     const-string v0, "Cache-Control"
 
+    .line 6
     invoke-static {p0, v0}, Lcom/google/common/base/Ascii;->equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -219,6 +227,7 @@
     :cond_5
     const-string v0, "Connection"
 
+    .line 7
     invoke-static {p0, v0}, Lcom/google/common/base/Ascii;->equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -230,6 +239,7 @@
     :cond_6
     const-string v0, "Content-Base"
 
+    .line 8
     invoke-static {p0, v0}, Lcom/google/common/base/Ascii;->equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -241,6 +251,7 @@
     :cond_7
     const-string v0, "Content-Encoding"
 
+    .line 9
     invoke-static {p0, v0}, Lcom/google/common/base/Ascii;->equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -252,6 +263,7 @@
     :cond_8
     const-string v0, "Content-Language"
 
+    .line 10
     invoke-static {p0, v0}, Lcom/google/common/base/Ascii;->equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -263,6 +275,7 @@
     :cond_9
     const-string v0, "Content-Length"
 
+    .line 11
     invoke-static {p0, v0}, Lcom/google/common/base/Ascii;->equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -274,6 +287,7 @@
     :cond_a
     const-string v0, "Content-Location"
 
+    .line 12
     invoke-static {p0, v0}, Lcom/google/common/base/Ascii;->equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -285,6 +299,7 @@
     :cond_b
     const-string v0, "Content-Type"
 
+    .line 13
     invoke-static {p0, v0}, Lcom/google/common/base/Ascii;->equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -296,6 +311,7 @@
     :cond_c
     const-string v0, "CSeq"
 
+    .line 14
     invoke-static {p0, v0}, Lcom/google/common/base/Ascii;->equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -307,6 +323,7 @@
     :cond_d
     const-string v0, "Date"
 
+    .line 15
     invoke-static {p0, v0}, Lcom/google/common/base/Ascii;->equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -318,6 +335,7 @@
     :cond_e
     const-string v0, "Expires"
 
+    .line 16
     invoke-static {p0, v0}, Lcom/google/common/base/Ascii;->equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -329,6 +347,7 @@
     :cond_f
     const-string v0, "Location"
 
+    .line 17
     invoke-static {p0, v0}, Lcom/google/common/base/Ascii;->equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -340,6 +359,7 @@
     :cond_10
     const-string v0, "Proxy-Authenticate"
 
+    .line 18
     invoke-static {p0, v0}, Lcom/google/common/base/Ascii;->equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -351,6 +371,7 @@
     :cond_11
     const-string v0, "Proxy-Require"
 
+    .line 19
     invoke-static {p0, v0}, Lcom/google/common/base/Ascii;->equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -362,6 +383,7 @@
     :cond_12
     const-string v0, "Public"
 
+    .line 20
     invoke-static {p0, v0}, Lcom/google/common/base/Ascii;->equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -373,6 +395,7 @@
     :cond_13
     const-string v0, "Range"
 
+    .line 21
     invoke-static {p0, v0}, Lcom/google/common/base/Ascii;->equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -384,6 +407,7 @@
     :cond_14
     const-string v0, "RTP-Info"
 
+    .line 22
     invoke-static {p0, v0}, Lcom/google/common/base/Ascii;->equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -395,6 +419,7 @@
     :cond_15
     const-string v0, "RTCP-Interval"
 
+    .line 23
     invoke-static {p0, v0}, Lcom/google/common/base/Ascii;->equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -408,6 +433,7 @@
     :cond_16
     const-string v0, "Scale"
 
+    .line 24
     invoke-static {p0, v0}, Lcom/google/common/base/Ascii;->equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -421,6 +447,7 @@
     :cond_17
     const-string v0, "Session"
 
+    .line 25
     invoke-static {p0, v0}, Lcom/google/common/base/Ascii;->equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -434,6 +461,7 @@
     :cond_18
     const-string v0, "Speed"
 
+    .line 26
     invoke-static {p0, v0}, Lcom/google/common/base/Ascii;->equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -447,6 +475,7 @@
     :cond_19
     const-string v0, "Supported"
 
+    .line 27
     invoke-static {p0, v0}, Lcom/google/common/base/Ascii;->equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -460,6 +489,7 @@
     :cond_1a
     const-string v0, "Timestamp"
 
+    .line 28
     invoke-static {p0, v0}, Lcom/google/common/base/Ascii;->equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -473,6 +503,7 @@
     :cond_1b
     const-string v0, "Transport"
 
+    .line 29
     invoke-static {p0, v0}, Lcom/google/common/base/Ascii;->equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -486,6 +517,7 @@
     :cond_1c
     const-string v0, "User-Agent"
 
+    .line 30
     invoke-static {p0, v0}, Lcom/google/common/base/Ascii;->equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -499,6 +531,7 @@
     :cond_1d
     const-string v0, "Via"
 
+    .line 31
     invoke-static {p0, v0}, Lcom/google/common/base/Ascii;->equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -512,6 +545,7 @@
     :cond_1e
     const-string v0, "WWW-Authenticate"
 
+    .line 32
     invoke-static {p0, v0}, Lcom/google/common/base/Ascii;->equalsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -538,6 +572,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders;->namesAndValues:Lcom/google/common/collect/ImmutableListMultimap;
 
     return-object p0
@@ -546,14 +581,17 @@
 .method public buildUpon()Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders$Builder;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ImmutableListMultimap$Builder;
 
     invoke-direct {v0}, Lcom/google/common/collect/ImmutableListMultimap$Builder;-><init>()V
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders;->namesAndValues:Lcom/google/common/collect/ImmutableListMultimap;
 
     invoke-virtual {v0, p0}, Lcom/google/common/collect/ImmutableListMultimap$Builder;->putAll(Lcom/google/common/collect/Multimap;)Lcom/google/common/collect/ImmutableListMultimap$Builder;
 
+    .line 3
     new-instance p0, Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders$Builder;
 
     const/4 v1, 0x0
@@ -576,6 +614,7 @@
 
     return p0
 
+    .line 1
     :cond_0
     instance-of v0, p1, Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders;
 
@@ -585,9 +624,11 @@
 
     return p0
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders;
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders;->namesAndValues:Lcom/google/common/collect/ImmutableListMultimap;
 
     iget-object p1, p1, Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders;->namesAndValues:Lcom/google/common/collect/ImmutableListMultimap;
@@ -604,10 +645,12 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders;->values(Ljava/lang/String;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object p0
 
+    .line 2
     invoke-virtual {p0}, Ljava/util/AbstractCollection;->isEmpty()Z
 
     move-result p1
@@ -618,6 +661,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-static {p0}, Lcom/google/common/collect/Iterables;->getLast(Ljava/lang/Iterable;)Ljava/lang/Object;
 
@@ -631,6 +675,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders;->namesAndValues:Lcom/google/common/collect/ImmutableListMultimap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMultimap;->hashCode()I
@@ -653,6 +698,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders;->namesAndValues:Lcom/google/common/collect/ImmutableListMultimap;
 
     invoke-static {p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspHeaders;->convertToStandardHeaderName(Ljava/lang/String;)Ljava/lang/String;

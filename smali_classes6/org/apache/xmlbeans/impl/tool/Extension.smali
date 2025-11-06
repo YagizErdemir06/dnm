@@ -21,8 +21,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -37,10 +39,12 @@
 .method public createParam()Lorg/apache/xmlbeans/impl/tool/Extension$Param;
     .locals 1
 
+    .line 1
     new-instance v0, Lorg/apache/xmlbeans/impl/tool/Extension$Param;
 
     invoke-direct {v0, p0}, Lorg/apache/xmlbeans/impl/tool/Extension$Param;-><init>(Lorg/apache/xmlbeans/impl/tool/Extension;)V
 
+    .line 2
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/Extension;->params:Ljava/util/List;
 
     invoke-interface {p0, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -51,6 +55,7 @@
 .method public getClassName()Ljava/lang/Class;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/Extension;->className:Ljava/lang/Class;
 
     return-object p0
@@ -59,6 +64,7 @@
 .method public getParams()Ljava/util/List;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/Extension;->params:Ljava/util/List;
 
     return-object p0
@@ -67,6 +73,7 @@
 .method public setClassName(Ljava/lang/Class;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/Extension;->className:Ljava/lang/Class;
 
     return-void

@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Iterators$10;
+.class public Lcom/google/common/collect/Iterators$10;
 .super Lcom/google/common/collect/UnmodifiableIterator;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic val$enumeration:Ljava/util/Enumeration;
+.field public final synthetic val$enumeration:Ljava/util/Enumeration;
 
 
 # direct methods
 .method public constructor <init>(Ljava/util/Enumeration;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/Iterators$10;->val$enumeration:Ljava/util/Enumeration;
 
     invoke-direct {p0}, Lcom/google/common/collect/UnmodifiableIterator;-><init>()V
@@ -41,6 +42,7 @@
 .method public hasNext()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Iterators$10;->val$enumeration:Ljava/util/Enumeration;
 
     invoke-interface {p0}, Ljava/util/Enumeration;->hasMoreElements()Z
@@ -61,6 +63,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Iterators$10;->val$enumeration:Ljava/util/Enumeration;
 
     invoke-interface {p0}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;

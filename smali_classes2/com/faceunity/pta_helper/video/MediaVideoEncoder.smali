@@ -12,9 +12,9 @@
 
 .field private static final MIME_TYPE:Ljava/lang/String; = "video/avc"
 
-.field private static final TAG:Ljava/lang/String; = "MediaVideoEncoder"
+.field private static final TAG:Ljava/lang/String;
 
-.field protected static recognizedFormats:[I
+.field public static recognizedFormats:[I
 
 
 # instance fields
@@ -58,6 +58,15 @@
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
+    const-class v0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->TAG:Ljava/lang/String;
+
     const/4 v0, 0x1
 
     new-array v0, v0, [I
@@ -68,6 +77,7 @@
 
     aput v2, v0, v1
 
+    .line 2
     sput-object v0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->recognizedFormats:[I
 
     return-void
@@ -139,6 +149,7 @@
 .method private calcBitRate()I
     .locals 4
 
+    .line 1
     iget v0, p0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->mWidth:I
 
     int-to-float v0, v0
@@ -155,6 +166,7 @@
 
     float-to-int p0, v0
 
+    .line 2
     sget-object v0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->TAG:Ljava/lang/String;
 
     const/4 v1, 0x1
@@ -191,16 +203,19 @@
 .method private getValueOrDefault(Ljava/lang/String;I)Ljava/lang/Integer;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->config:Ljava/util/Map;
 
     if-nez p0, :cond_0
 
+    .line 2
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -210,6 +225,7 @@
 
     if-nez p0, :cond_1
 
+    .line 4
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -221,6 +237,7 @@
 .method private static final isRecognizedViewoFormat(I)Z
     .locals 4
 
+    .line 1
     sget-object v0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->recognizedFormats:[I
 
     const/4 v1, 0x0
@@ -240,6 +257,7 @@
     :goto_1
     if-ge v2, v0, :cond_2
 
+    .line 2
     sget-object v3, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->recognizedFormats:[I
 
     aget v3, v3, v2
@@ -264,6 +282,7 @@
 
     const/4 v0, 0x5
 
+    .line 1
     :try_start_0
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -273,12 +292,14 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/Thread;->setPriority(I)V
 
+    .line 2
     invoke-virtual {p0, p1}, Landroid/media/MediaCodecInfo;->getCapabilitiesForType(Ljava/lang/String;)Landroid/media/MediaCodecInfo$CodecCapabilities;
 
     move-result-object v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v2
@@ -289,6 +310,7 @@
 
     move v2, v0
 
+    .line 4
     :goto_0
     iget-object v3, v1, Landroid/media/MediaCodecInfo$CodecCapabilities;->colorFormats:[I
 
@@ -296,8 +318,10 @@
 
     if-ge v2, v4, :cond_1
 
+    .line 5
     aget v3, v3, v2
 
+    .line 6
     invoke-static {v3}, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->isRecognizedViewoFormat(I)Z
 
     move-result v4
@@ -317,6 +341,7 @@
     :goto_1
     if-nez v0, :cond_2
 
+    .line 7
     sget-object v1, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -351,6 +376,7 @@
     :catchall_0
     move-exception p0
 
+    .line 8
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object p1
@@ -363,6 +389,7 @@
 .method public static final selectVideoCodec(Ljava/lang/String;)Landroid/media/MediaCodecInfo;
     .locals 7
 
+    .line 1
     invoke-static {}, Landroid/media/MediaCodecList;->getCodecCount()I
 
     move-result v0
@@ -374,10 +401,12 @@
     :goto_0
     if-ge v2, v0, :cond_3
 
+    .line 2
     invoke-static {v2}, Landroid/media/MediaCodecList;->getCodecInfoAt(I)Landroid/media/MediaCodecInfo;
 
     move-result-object v3
 
+    .line 3
     invoke-virtual {v3}, Landroid/media/MediaCodecInfo;->isEncoder()Z
 
     move-result v4
@@ -386,6 +415,7 @@
 
     goto :goto_2
 
+    .line 4
     :cond_0
     invoke-virtual {v3}, Landroid/media/MediaCodecInfo;->getSupportedTypes()[Ljava/lang/String;
 
@@ -393,11 +423,13 @@
 
     move v5, v1
 
+    .line 5
     :goto_1
     array-length v6, v4
 
     if-ge v5, v6, :cond_2
 
+    .line 6
     aget-object v6, v4, v5
 
     invoke-virtual {v6, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -406,6 +438,7 @@
 
     if-eqz v6, :cond_1
 
+    .line 7
     invoke-static {v3, p0}, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->selectColorFormat(Landroid/media/MediaCodecInfo;Ljava/lang/String;)I
 
     move-result v6
@@ -436,6 +469,7 @@
 .method public frameAvailableSoon(I[F[F)Z
     .locals 8
 
+    .line 1
     invoke-super {p0}, Lcom/faceunity/pta_helper/video/MediaEncoder;->frameAvailableSoon()Z
 
     move-result v0
@@ -450,8 +484,10 @@
 
     const/4 v3, 0x0
 
+    .line 2
     invoke-static {v2, v1, v3}, Landroid/opengl/GLES20;->glGetIntegerv(I[II)V
 
+    .line 3
     iget-object v2, p0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->mFBOId:[I
 
     aget v2, v2, v3
@@ -460,6 +496,7 @@
 
     invoke-static {v4, v2}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
 
+    .line 4
     iget v2, p0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->cropX:I
 
     iget v5, p0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->cropY:I
@@ -474,18 +511,23 @@
 
     const/4 v5, 0x0
 
+    .line 5
     invoke-static {v5, v5, v5, v2}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
 
     const/16 v2, 0x4000
 
+    .line 6
     invoke-static {v2}, Landroid/opengl/GLES20;->glClear(I)V
 
+    .line 7
     iget-object v2, p0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->program:Lcom/faceunity/pta_helper/gles/ProgramTexture2d;
 
     invoke-virtual {v2, p1, p2, p3}, Lcom/faceunity/pta_helper/gles/ProgramTexture2d;->drawFrame(I[F[F)V
 
+    .line 8
     invoke-static {v4, v3}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
 
+    .line 9
     aget p1, v1, v3
 
     const/4 p2, 0x1
@@ -502,6 +544,7 @@
 
     invoke-static {p1, v2, v4, v1}, Landroid/opengl/GLES20;->glViewport(IIII)V
 
+    .line 10
     iget p1, p0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->mFrameCount:I
 
     add-int/lit8 v1, p1, 0x1
@@ -512,9 +555,11 @@
 
     return p2
 
+    .line 11
     :cond_0
     iput-boolean p2, p0, Lcom/faceunity/pta_helper/video/MediaEncoder;->isEncode:Z
 
+    .line 12
     iget-wide p1, p0, Lcom/faceunity/pta_helper/video/MediaEncoder;->interval:J
 
     const-wide/16 v1, 0x0
@@ -523,8 +568,10 @@
 
     if-eqz p1, :cond_1
 
+    .line 13
     invoke-virtual {p0}, Lcom/faceunity/pta_helper/video/MediaEncoder;->getPTSUs()J
 
+    .line 14
     :cond_1
     iget-object p1, p0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->mRenderHandler:Lcom/faceunity/pta_helper/video/RenderHandler;
 
@@ -536,6 +583,7 @@
 
     invoke-virtual {p1, p0, p2, p3}, Lcom/faceunity/pta_helper/video/RenderHandler;->draw(I[F[F)V
 
+    .line 15
     invoke-static {}, Landroid/opengl/GLES20;->glFinish()V
 
     :cond_2
@@ -552,22 +600,26 @@
 
     const/4 v0, -0x1
 
+    .line 1
     iput v0, p0, Lcom/faceunity/pta_helper/video/MediaEncoder;->mTrackIndex:I
 
     const/4 v0, 0x0
 
+    .line 2
     iput-boolean v0, p0, Lcom/faceunity/pta_helper/video/MediaEncoder;->mIsEOS:Z
 
     iput-boolean v0, p0, Lcom/faceunity/pta_helper/video/MediaEncoder;->mMuxerStarted:Z
 
     const-string v0, "video/avc"
 
+    .line 3
     invoke-static {v0}, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->selectVideoCodec(Ljava/lang/String;)Landroid/media/MediaCodecInfo;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
+    .line 4
     sget-object p0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->TAG:Ljava/lang/String;
 
     const-string v0, "Unable to find an appropriate codec for video/avc"
@@ -576,6 +628,7 @@
 
     return-void
 
+    .line 5
     :cond_0
     iget v1, p0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->mWidth:I
 
@@ -589,6 +642,7 @@
 
     const-string v3, "color-format"
 
+    .line 6
     invoke-direct {p0, v3, v2}, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->getValueOrDefault(Ljava/lang/String;I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -599,6 +653,7 @@
 
     invoke-virtual {v1, v3, v2}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
 
+    .line 7
     invoke-direct {p0}, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->calcBitRate()I
 
     move-result v2
@@ -619,6 +674,7 @@
 
     const-string v3, "frame-rate"
 
+    .line 8
     invoke-direct {p0, v3, v2}, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->getValueOrDefault(Ljava/lang/String;I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -633,6 +689,7 @@
 
     const-string v3, "i-frame-interval"
 
+    .line 9
     invoke-direct {p0, v3, v2}, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->getValueOrDefault(Ljava/lang/String;I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -643,6 +700,7 @@
 
     invoke-virtual {v1, v3, v2}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
 
+    .line 10
     invoke-static {v0}, Landroid/media/MediaCodec;->createEncoderByType(Ljava/lang/String;)Landroid/media/MediaCodec;
 
     move-result-object v0
@@ -653,8 +711,10 @@
 
     const/4 v3, 0x0
 
+    .line 11
     invoke-virtual {v0, v1, v3, v3, v2}, Landroid/media/MediaCodec;->configure(Landroid/media/MediaFormat;Landroid/view/Surface;Landroid/media/MediaCrypto;I)V
 
+    .line 12
     iget-object v0, p0, Lcom/faceunity/pta_helper/video/MediaEncoder;->mMediaCodec:Landroid/media/MediaCodec;
 
     invoke-virtual {v0}, Landroid/media/MediaCodec;->createInputSurface()Landroid/view/Surface;
@@ -663,14 +723,17 @@
 
     iput-object v0, p0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->mSurface:Landroid/view/Surface;
 
+    .line 13
     iget-object v0, p0, Lcom/faceunity/pta_helper/video/MediaEncoder;->mMediaCodec:Landroid/media/MediaCodec;
 
     invoke-virtual {v0}, Landroid/media/MediaCodec;->start()V
 
+    .line 14
     iget-object v0, p0, Lcom/faceunity/pta_helper/video/MediaEncoder;->mListener:Lcom/faceunity/pta_helper/video/MediaEncoder$MediaEncoderListener;
 
     if-eqz v0, :cond_1
 
+    .line 15
     :try_start_0
     invoke-interface {v0, p0}, Lcom/faceunity/pta_helper/video/MediaEncoder$MediaEncoderListener;->onPrepared(Lcom/faceunity/pta_helper/video/MediaEncoder;)V
     :try_end_0
@@ -681,6 +744,7 @@
     :catch_0
     move-exception p0
 
+    .line 16
     sget-object v0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->TAG:Ljava/lang/String;
 
     const-string v1, "prepare:"
@@ -695,45 +759,57 @@
 .method public release()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->mSurface:Landroid/view/Surface;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Landroid/view/Surface;->release()V
 
+    .line 3
     iput-object v1, p0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->mSurface:Landroid/view/Surface;
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->mRenderHandler:Lcom/faceunity/pta_helper/video/RenderHandler;
 
     if-eqz v0, :cond_1
 
+    .line 5
     invoke-virtual {v0}, Lcom/faceunity/pta_helper/video/RenderHandler;->release()V
 
+    .line 6
     iput-object v1, p0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->mRenderHandler:Lcom/faceunity/pta_helper/video/RenderHandler;
 
+    .line 7
     :cond_1
     iget-object v0, p0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->mFBOId:[I
 
     invoke-static {v0}, Lcom/faceunity/pta_helper/gles/core/GlUtil;->deleteFBO([I)V
 
+    .line 8
     iget-object v0, p0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->mTextureId:[I
 
     invoke-static {v0}, Lcom/faceunity/pta_helper/gles/core/GlUtil;->deleteTextureId([I)V
 
+    .line 9
     iget-object v0, p0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->program:Lcom/faceunity/pta_helper/gles/ProgramTexture2d;
 
     if-eqz v0, :cond_2
 
+    .line 10
     invoke-virtual {v0}, Lcom/faceunity/pta_helper/gles/core/Program;->release()V
 
     :cond_2
     const/4 v0, 0x0
 
+    .line 11
     iput v0, p0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->mFrameCount:I
 
+    .line 12
     invoke-super {p0}, Lcom/faceunity/pta_helper/video/MediaEncoder;->release()V
 
     return-void
@@ -746,24 +822,29 @@
 
     new-array v1, v0, [I
 
+    .line 1
     iput-object v1, p0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->mTextureId:[I
 
     new-array v2, v0, [I
 
+    .line 2
     iput-object v2, p0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->mFBOId:[I
 
+    .line 3
     iget v3, p0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->mWidth:I
 
     iget v4, p0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->mHeight:I
 
     invoke-static {v1, v2, v3, v4}, Lcom/faceunity/pta_helper/gles/core/GlUtil;->createFBO([I[III)V
 
+    .line 4
     new-instance v1, Lcom/faceunity/pta_helper/gles/ProgramTexture2d;
 
     invoke-direct {v1}, Lcom/faceunity/pta_helper/gles/ProgramTexture2d;-><init>()V
 
     iput-object v1, p0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->program:Lcom/faceunity/pta_helper/gles/ProgramTexture2d;
 
+    .line 5
     iget-object v1, p0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->mRenderHandler:Lcom/faceunity/pta_helper/video/RenderHandler;
 
     iget-object p0, p0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->mSurface:Landroid/view/Surface;
@@ -785,6 +866,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/pta_helper/video/MediaVideoEncoder;->config:Ljava/util/Map;
 
     return-void
@@ -793,12 +875,14 @@
 .method public signalEndOfInputStream()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/pta_helper/video/MediaEncoder;->mMediaCodec:Landroid/media/MediaCodec;
 
     invoke-virtual {v0}, Landroid/media/MediaCodec;->signalEndOfInputStream()V
 
     const/4 v0, 0x1
 
+    .line 2
     iput-boolean v0, p0, Lcom/faceunity/pta_helper/video/MediaEncoder;->mIsEOS:Z
 
     return-void

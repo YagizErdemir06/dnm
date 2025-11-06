@@ -1,4 +1,4 @@
-.class abstract Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcy;
+.class public abstract Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcy;
 .super Ljava/util/AbstractSet;
 .source "SourceFile"
 
@@ -7,6 +7,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
 
     return-void
@@ -17,6 +18,7 @@
 .method public removeAll(Ljava/util/Collection;)Z
     .locals 0
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcz;->zzb(Ljava/util/Set;Ljava/util/Collection;)Z
 
     move-result p0
@@ -27,9 +29,11 @@
 .method public retainAll(Ljava/util/Collection;)Z
     .locals 0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 1
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->retainAll(Ljava/util/Collection;)Z
+    .line 2
+    invoke-super {p0, p1}, Ljava/util/AbstractSet;->retainAll(Ljava/util/Collection;)Z
 
     move-result p0
 

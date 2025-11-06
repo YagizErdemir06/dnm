@@ -1,4 +1,4 @@
-.class final Landroidx/core/view/ContentInfoCompat$Compat31Impl;
+.class public final Landroidx/core/view/ContentInfoCompat$Compat31Impl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,10 +7,6 @@
 
 
 # annotations
-.annotation build Landroidx/annotation/RequiresApi;
-    value = 0x1f
-.end annotation
-
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/core/view/ContentInfoCompat;
 .end annotation
@@ -36,8 +32,10 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -56,9 +54,10 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/ContentInfoCompat$Compat31Impl;->mWrapped:Landroid/view/ContentInfo;
 
-    invoke-static {p0}, Landroidx/core/view/a;->a(Landroid/view/ContentInfo;)Landroid/content/ClipData;
+    invoke-virtual {p0}, Landroid/view/ContentInfo;->getClip()Landroid/content/ClipData;
 
     move-result-object p0
 
@@ -70,9 +69,10 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/ContentInfoCompat$Compat31Impl;->mWrapped:Landroid/view/ContentInfo;
 
-    invoke-static {p0}, Landroidx/core/view/i;->a(Landroid/view/ContentInfo;)Landroid/os/Bundle;
+    invoke-virtual {p0}, Landroid/view/ContentInfo;->getExtras()Landroid/os/Bundle;
 
     move-result-object p0
 
@@ -82,9 +82,10 @@
 .method public getFlags()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/ContentInfoCompat$Compat31Impl;->mWrapped:Landroid/view/ContentInfo;
 
-    invoke-static {p0}, Landroidx/core/view/k;->a(Landroid/view/ContentInfo;)I
+    invoke-virtual {p0}, Landroid/view/ContentInfo;->getFlags()I
 
     move-result p0
 
@@ -96,9 +97,10 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/ContentInfoCompat$Compat31Impl;->mWrapped:Landroid/view/ContentInfo;
 
-    invoke-static {p0}, Landroidx/core/view/j;->a(Landroid/view/ContentInfo;)Landroid/net/Uri;
+    invoke-virtual {p0}, Landroid/view/ContentInfo;->getLinkUri()Landroid/net/Uri;
 
     move-result-object p0
 
@@ -108,9 +110,10 @@
 .method public getSource()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/ContentInfoCompat$Compat31Impl;->mWrapped:Landroid/view/ContentInfo;
 
-    invoke-static {p0}, Landroidx/core/view/l;->a(Landroid/view/ContentInfo;)I
+    invoke-virtual {p0}, Landroid/view/ContentInfo;->getSource()I
 
     move-result p0
 
@@ -122,6 +125,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/ContentInfoCompat$Compat31Impl;->mWrapped:Landroid/view/ContentInfo;
 
     return-object p0
@@ -132,6 +136,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

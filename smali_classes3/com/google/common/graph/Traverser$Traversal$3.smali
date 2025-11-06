@@ -1,4 +1,4 @@
-.class Lcom/google/common/graph/Traverser$Traversal$3;
+.class public Lcom/google/common/graph/Traverser$Traversal$3;
 .super Lcom/google/common/collect/AbstractIterator;
 .source "SourceFile"
 
@@ -22,17 +22,18 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/graph/Traverser$Traversal;
+.field public final synthetic this$0:Lcom/google/common/graph/Traverser$Traversal;
 
-.field final synthetic val$horizon:Ljava/util/Deque;
+.field public final synthetic val$horizon:Ljava/util/Deque;
 
-.field final synthetic val$order:Lcom/google/common/graph/Traverser$InsertionOrder;
+.field public final synthetic val$order:Lcom/google/common/graph/Traverser$InsertionOrder;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/graph/Traverser$Traversal;Ljava/util/Deque;Lcom/google/common/graph/Traverser$InsertionOrder;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/graph/Traverser$Traversal$3;->this$0:Lcom/google/common/graph/Traverser$Traversal;
 
     iput-object p2, p0, Lcom/google/common/graph/Traverser$Traversal$3;->val$horizon:Ljava/util/Deque;
@@ -57,6 +58,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     :cond_0
     iget-object v0, p0, Lcom/google/common/graph/Traverser$Traversal$3;->this$0:Lcom/google/common/graph/Traverser$Traversal;
 
@@ -68,6 +70,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 2
     iget-object v1, p0, Lcom/google/common/graph/Traverser$Traversal$3;->this$0:Lcom/google/common/graph/Traverser$Traversal;
 
     iget-object v1, v1, Lcom/google/common/graph/Traverser$Traversal;->successorFunction:Lcom/google/common/graph/SuccessorsFunction;
@@ -80,12 +83,14 @@
 
     move-result-object v1
 
+    .line 3
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
+    .line 4
     iget-object v2, p0, Lcom/google/common/graph/Traverser$Traversal$3;->val$order:Lcom/google/common/graph/Traverser$InsertionOrder;
 
     iget-object p0, p0, Lcom/google/common/graph/Traverser$Traversal$3;->val$horizon:Ljava/util/Deque;
@@ -95,15 +100,17 @@
     :cond_1
     return-object v0
 
+    .line 5
     :cond_2
     iget-object v0, p0, Lcom/google/common/graph/Traverser$Traversal$3;->val$horizon:Ljava/util/Deque;
 
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+    invoke-interface {v0}, Ljava/util/Deque;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 6
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractIterator;->endOfData()Ljava/lang/Object;
 
     move-result-object p0

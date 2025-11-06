@@ -12,23 +12,23 @@
 
 
 # instance fields
-.field public n:Lfr/a;
+.field private C1:Z
 
-.field public o:Lmiuix/pickerwidget/widget/DateTimePicker$c;
+.field private C2:I
 
-.field public p:Landroid/content/Context;
+.field private K0:Lk/v/c/a;
 
-.field public q:Z
+.field private K1:Z
 
-.field public r:Z
+.field private K2:J
 
-.field public s:Ljava/lang/CharSequence;
+.field private K8:Lmiuix/preference/StretchablePickerPreference$c;
 
-.field public t:I
+.field private k1:Lmiuix/pickerwidget/widget/DateTimePicker$c;
 
-.field public u:J
+.field private v1:Landroid/content/Context;
 
-.field public v:Lmiuix/preference/StretchablePickerPreference$c;
+.field private v2:Ljava/lang/CharSequence;
 
 
 # direct methods
@@ -47,7 +47,7 @@
     .locals 1
 
     .line 9
-    sget v0, Lmiuix/preference/c$d;->stretchablePickerPreferenceStyle:I
+    sget v0, Lk/x/i$d;->stretchablePickerPreferenceStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Lmiuix/preference/StretchablePickerPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -61,31 +61,31 @@
     invoke-direct {p0, p1, p2, p3}, Lmiuix/preference/StretchableWidgetPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 2
-    new-instance v0, Lfr/a;
+    new-instance v0, Lk/v/c/a;
 
-    invoke-direct {v0}, Lfr/a;-><init>()V
+    invoke-direct {v0}, Lk/v/c/a;-><init>()V
 
-    iput-object v0, p0, Lmiuix/preference/StretchablePickerPreference;->n:Lfr/a;
+    iput-object v0, p0, Lmiuix/preference/StretchablePickerPreference;->K0:Lk/v/c/a;
 
     .line 3
-    invoke-virtual {v0}, Lfr/a;->Z0()J
+    invoke-virtual {v0}, Lk/v/c/a;->Z0()J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lmiuix/preference/StretchablePickerPreference;->u:J
+    iput-wide v0, p0, Lmiuix/preference/StretchablePickerPreference;->K2:J
 
     .line 4
-    iput-object p1, p0, Lmiuix/preference/StretchablePickerPreference;->p:Landroid/content/Context;
+    iput-object p1, p0, Lmiuix/preference/StretchablePickerPreference;->v1:Landroid/content/Context;
 
     .line 5
     new-instance v0, Lmiuix/pickerwidget/widget/DateTimePicker$c;
 
     invoke-direct {v0, p1}, Lmiuix/pickerwidget/widget/DateTimePicker$c;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lmiuix/preference/StretchablePickerPreference;->o:Lmiuix/pickerwidget/widget/DateTimePicker$c;
+    iput-object v0, p0, Lmiuix/preference/StretchablePickerPreference;->k1:Lmiuix/pickerwidget/widget/DateTimePicker$c;
 
     .line 6
-    sget-object v0, Lmiuix/preference/c$r;->StretchablePickerPreference:[I
+    sget-object v0, Lk/x/i$r;->StretchablePickerPreference:[I
 
     const/4 v1, 0x0
 
@@ -94,13 +94,13 @@
     move-result-object p1
 
     .line 7
-    sget p2, Lmiuix/preference/c$r;->StretchablePickerPreference_show_lunar:I
+    sget p2, Lk/x/i$r;->StretchablePickerPreference_show_lunar:I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result p2
 
-    iput-boolean p2, p0, Lmiuix/preference/StretchablePickerPreference;->q:Z
+    iput-boolean p2, p0, Lmiuix/preference/StretchablePickerPreference;->C1:Z
 
     .line 8
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
@@ -108,237 +108,41 @@
     return-void
 .end method
 
-.method private synthetic E(Lmiuix/slidingwidget/widget/SlidingButton;Lmiuix/pickerwidget/widget/DateTimePicker;Landroid/view/View;)V
+.method private D(J)V
     .locals 0
 
-    invoke-virtual {p1}, Landroid/widget/CompoundButton;->isChecked()Z
-
-    move-result p3
-
-    xor-int/lit8 p3, p3, 0x1
-
-    invoke-virtual {p1, p3}, Lmiuix/slidingwidget/widget/SlidingButton;->setChecked(Z)V
-
-    invoke-virtual {p0, p2, p3}, Lmiuix/preference/StretchablePickerPreference;->I(Lmiuix/pickerwidget/widget/DateTimePicker;Z)V
-
-    return-void
-.end method
-
-.method public static synthetic m(Lmiuix/preference/StretchablePickerPreference;Lmiuix/slidingwidget/widget/SlidingButton;Lmiuix/pickerwidget/widget/DateTimePicker;Landroid/view/View;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2, p3}, Lmiuix/preference/StretchablePickerPreference;->E(Lmiuix/slidingwidget/widget/SlidingButton;Lmiuix/pickerwidget/widget/DateTimePicker;Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method public static synthetic n(Lmiuix/preference/StretchablePickerPreference;)Lfr/a;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/preference/StretchablePickerPreference;->n:Lfr/a;
-
-    return-object p0
-.end method
-
-.method public static synthetic o(Lmiuix/preference/StretchablePickerPreference;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lmiuix/preference/StretchablePickerPreference;->r:Z
-
-    return p0
-.end method
-
-.method public static synthetic r(Lmiuix/preference/StretchablePickerPreference;ZJ)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2, p3}, Lmiuix/preference/StretchablePickerPreference;->L(ZJ)V
-
-    return-void
-.end method
-
-.method public static synthetic s(Lmiuix/preference/StretchablePickerPreference;)J
-    .locals 2
-
-    iget-wide v0, p0, Lmiuix/preference/StretchablePickerPreference;->u:J
-
-    return-wide v0
-.end method
-
-.method public static synthetic t(Lmiuix/preference/StretchablePickerPreference;J)J
-    .locals 0
-
-    iput-wide p1, p0, Lmiuix/preference/StretchablePickerPreference;->u:J
-
-    return-wide p1
-.end method
-
-.method public static synthetic u(Lmiuix/preference/StretchablePickerPreference;)Lmiuix/preference/StretchablePickerPreference$c;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/preference/StretchablePickerPreference;->v:Lmiuix/preference/StretchablePickerPreference$c;
-
-    return-object p0
-.end method
-
-.method public static synthetic v(Lmiuix/preference/StretchablePickerPreference;)V
-    .locals 0
-
-    invoke-virtual {p0}, Landroidx/preference/Preference;->notifyChanged()V
-
-    return-void
-.end method
-
-.method public static synthetic x(Lmiuix/preference/StretchablePickerPreference;Lmiuix/pickerwidget/widget/DateTimePicker;Z)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Lmiuix/preference/StretchablePickerPreference;->I(Lmiuix/pickerwidget/widget/DateTimePicker;Z)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final A(J)Ljava/lang/String;
-    .locals 1
-
-    iget-object p0, p0, Lmiuix/preference/StretchablePickerPreference;->p:Landroid/content/Context;
-
-    const/16 v0, 0x38c
-
-    invoke-static {p0, p1, p2, v0}, Lfr/c;->a(Landroid/content/Context;JI)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final B()Ljava/lang/CharSequence;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/preference/StretchablePickerPreference;->s:Ljava/lang/CharSequence;
-
-    return-object p0
-.end method
-
-.method public final C()I
-    .locals 0
-
-    iget p0, p0, Lmiuix/preference/StretchablePickerPreference;->t:I
-
-    return p0
-.end method
-
-.method public D()J
-    .locals 2
-
-    iget-wide v0, p0, Lmiuix/preference/StretchablePickerPreference;->u:J
-
-    return-wide v0
-.end method
-
-.method public F(Ljava/lang/String;)V
-    .locals 1
-
-    iget-object v0, p0, Lmiuix/preference/StretchablePickerPreference;->s:Ljava/lang/CharSequence;
-
-    invoke-static {p1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iput-object p1, p0, Lmiuix/preference/StretchablePickerPreference;->s:Ljava/lang/CharSequence;
-
-    invoke-virtual {p0}, Landroidx/preference/Preference;->notifyChanged()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public G(I)V
-    .locals 1
-
-    iget v0, p0, Lmiuix/preference/StretchablePickerPreference;->t:I
-
-    if-eq p1, v0, :cond_0
-
-    iput p1, p0, Lmiuix/preference/StretchablePickerPreference;->t:I
-
-    invoke-virtual {p0}, Landroidx/preference/Preference;->notifyChanged()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public H(Lmiuix/preference/StretchablePickerPreference$c;)V
-    .locals 0
-
-    iput-object p1, p0, Lmiuix/preference/StretchablePickerPreference;->v:Lmiuix/preference/StretchablePickerPreference$c;
-
-    return-void
-.end method
-
-.method public final I(Lmiuix/pickerwidget/widget/DateTimePicker;Z)V
-    .locals 2
-
-    invoke-virtual {p1, p2}, Lmiuix/pickerwidget/widget/DateTimePicker;->setLunarMode(Z)V
-
-    invoke-virtual {p1}, Lmiuix/pickerwidget/widget/DateTimePicker;->getTimeInMillis()J
-
-    move-result-wide v0
-
-    invoke-virtual {p0, p2, v0, v1}, Lmiuix/preference/StretchablePickerPreference;->L(ZJ)V
-
-    iput-boolean p2, p0, Lmiuix/preference/StretchablePickerPreference;->r:Z
-
-    return-void
-.end method
-
-.method public J(J)V
-    .locals 1
-
-    iget-object v0, p0, Lmiuix/preference/StretchablePickerPreference;->p:Landroid/content/Context;
-
-    invoke-virtual {p0, p1, p2, v0}, Lmiuix/preference/StretchablePickerPreference;->z(JLandroid/content/Context;)Ljava/lang/String;
+    .line 1
+    invoke-direct {p0, p1, p2}, Lmiuix/preference/StretchablePickerPreference;->u(J)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lmiuix/preference/StretchableWidgetPreference;->f(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lmiuix/preference/StretchableWidgetPreference;->c(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public final K(J)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Lmiuix/preference/StretchablePickerPreference;->A(J)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lmiuix/preference/StretchableWidgetPreference;->f(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final L(ZJ)V
+.method private E(ZJ)V
     .locals 0
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p0, p2, p3}, Lmiuix/preference/StretchablePickerPreference;->J(J)V
+    .line 1
+    invoke-virtual {p0, p2, p3}, Lmiuix/preference/StretchablePickerPreference;->C(J)V
 
     goto :goto_0
 
+    .line 2
     :cond_0
-    invoke-virtual {p0, p2, p3}, Lmiuix/preference/StretchablePickerPreference;->K(J)V
+    invoke-direct {p0, p2, p3}, Lmiuix/preference/StretchablePickerPreference;->D(J)V
 
     :goto_0
     return-void
 .end method
 
-.method public final M(Lmiuix/pickerwidget/widget/DateTimePicker;)V
+.method private F(Lmiuix/pickerwidget/widget/DateTimePicker;)V
     .locals 1
 
+    .line 1
     new-instance v0, Lmiuix/preference/StretchablePickerPreference$a;
 
     invoke-direct {v0, p0}, Lmiuix/preference/StretchablePickerPreference$a;-><init>(Lmiuix/preference/StretchablePickerPreference;)V
@@ -348,131 +152,82 @@
     return-void
 .end method
 
-.method public onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
-    .locals 6
+.method public static synthetic i(Lmiuix/preference/StretchablePickerPreference;)Lk/v/c/a;
+    .locals 0
 
-    iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
+    .line 1
+    iget-object p0, p0, Lmiuix/preference/StretchablePickerPreference;->K0:Lk/v/c/a;
 
-    sget v1, Lmiuix/preference/c$j;->lunar_layout:I
+    return-object p0
+.end method
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+.method public static synthetic j(Lmiuix/preference/StretchablePickerPreference;)Z
+    .locals 0
 
-    move-result-object v1
+    .line 1
+    iget-boolean p0, p0, Lmiuix/preference/StretchablePickerPreference;->K1:Z
 
-    check-cast v1, Landroid/widget/RelativeLayout;
+    return p0
+.end method
 
-    sget v2, Lmiuix/preference/c$j;->datetime_picker:I
+.method public static synthetic k(Lmiuix/preference/StretchablePickerPreference;Z)Z
+    .locals 0
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    .line 1
+    iput-boolean p1, p0, Lmiuix/preference/StretchablePickerPreference;->K1:Z
 
-    move-result-object v2
+    return p1
+.end method
 
-    check-cast v2, Lmiuix/pickerwidget/widget/DateTimePicker;
+.method public static synthetic l(Lmiuix/preference/StretchablePickerPreference;ZJ)V
+    .locals 0
 
-    sget v3, Lmiuix/preference/c$j;->lunar_button:I
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v3
-
-    check-cast v3, Lmiuix/slidingwidget/widget/SlidingButton;
-
-    sget v4, Lmiuix/preference/c$j;->lunar_text:I
-
-    invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iget-boolean v4, p0, Lmiuix/preference/StretchablePickerPreference;->q:Z
-
-    if-nez v4, :cond_0
-
-    const/16 v0, 0x8
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    goto :goto_1
-
-    :cond_0
-    if-eqz v0, :cond_3
-
-    invoke-virtual {p0}, Lmiuix/preference/StretchablePickerPreference;->B()Ljava/lang/CharSequence;
-
-    move-result-object v4
-
-    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_1
-
-    invoke-virtual {v0, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-virtual {v1, v0}, Landroid/view/View;->setFocusable(Z)V
-
-    xor-int/lit8 v4, v0, 0x1
-
-    invoke-virtual {v3, v4}, Landroid/view/View;->setFocusable(Z)V
-
-    if-eqz v0, :cond_2
-
-    new-instance v0, Lmr/k;
-
-    invoke-direct {v0, p0, v3, v2}, Lmr/k;-><init>(Lmiuix/preference/StretchablePickerPreference;Lmiuix/slidingwidget/widget/SlidingButton;Lmiuix/pickerwidget/widget/DateTimePicker;)V
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    goto :goto_1
-
-    :cond_2
-    const/4 v0, 0x0
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    :cond_3
-    :goto_1
-    invoke-virtual {p0}, Lmiuix/preference/StretchablePickerPreference;->C()I
-
-    move-result v0
-
-    invoke-virtual {v2, v0}, Lmiuix/pickerwidget/widget/DateTimePicker;->setMinuteInterval(I)V
-
-    invoke-virtual {v2}, Lmiuix/pickerwidget/widget/DateTimePicker;->getTimeInMillis()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lmiuix/preference/StretchablePickerPreference;->u:J
-
-    invoke-super {p0, p1}, Lmiuix/preference/StretchableWidgetPreference;->onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
-
-    invoke-virtual {p0, v3, v2}, Lmiuix/preference/StretchablePickerPreference;->y(Lmiuix/slidingwidget/widget/SlidingButton;Lmiuix/pickerwidget/widget/DateTimePicker;)V
-
-    iget-boolean p1, p0, Lmiuix/preference/StretchablePickerPreference;->r:Z
-
-    invoke-virtual {v2}, Lmiuix/pickerwidget/widget/DateTimePicker;->getTimeInMillis()J
-
-    move-result-wide v0
-
-    invoke-virtual {p0, p1, v0, v1}, Lmiuix/preference/StretchablePickerPreference;->L(ZJ)V
-
-    invoke-virtual {p0, v2}, Lmiuix/preference/StretchablePickerPreference;->M(Lmiuix/pickerwidget/widget/DateTimePicker;)V
+    .line 1
+    invoke-direct {p0, p1, p2, p3}, Lmiuix/preference/StretchablePickerPreference;->E(ZJ)V
 
     return-void
 .end method
 
-.method public final y(Lmiuix/slidingwidget/widget/SlidingButton;Lmiuix/pickerwidget/widget/DateTimePicker;)V
+.method public static synthetic m(Lmiuix/preference/StretchablePickerPreference;)J
+    .locals 2
+
+    .line 1
+    iget-wide v0, p0, Lmiuix/preference/StretchablePickerPreference;->K2:J
+
+    return-wide v0
+.end method
+
+.method public static synthetic n(Lmiuix/preference/StretchablePickerPreference;J)J
+    .locals 0
+
+    .line 1
+    iput-wide p1, p0, Lmiuix/preference/StretchablePickerPreference;->K2:J
+
+    return-wide p1
+.end method
+
+.method public static synthetic q(Lmiuix/preference/StretchablePickerPreference;)Lmiuix/preference/StretchablePickerPreference$c;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/preference/StretchablePickerPreference;->K8:Lmiuix/preference/StretchablePickerPreference$c;
+
+    return-object p0
+.end method
+
+.method public static synthetic r(Lmiuix/preference/StretchablePickerPreference;)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Landroidx/preference/Preference;->notifyChanged()V
+
+    return-void
+.end method
+
+.method private s(Lmiuix/slidingwidget/widget/SlidingButton;Lmiuix/pickerwidget/widget/DateTimePicker;)V
     .locals 1
 
+    .line 1
     new-instance v0, Lmiuix/preference/StretchablePickerPreference$b;
 
     invoke-direct {v0, p0, p2}, Lmiuix/preference/StretchablePickerPreference$b;-><init>(Lmiuix/preference/StretchablePickerPreference;Lmiuix/pickerwidget/widget/DateTimePicker;)V
@@ -482,32 +237,33 @@
     return-void
 .end method
 
-.method public final z(JLandroid/content/Context;)Ljava/lang/String;
+.method private t(JLandroid/content/Context;)Ljava/lang/String;
     .locals 4
 
-    iget-object v0, p0, Lmiuix/preference/StretchablePickerPreference;->o:Lmiuix/pickerwidget/widget/DateTimePicker$c;
+    .line 1
+    iget-object v0, p0, Lmiuix/preference/StretchablePickerPreference;->k1:Lmiuix/pickerwidget/widget/DateTimePicker$c;
 
-    iget-object v1, p0, Lmiuix/preference/StretchablePickerPreference;->n:Lfr/a;
+    iget-object v1, p0, Lmiuix/preference/StretchablePickerPreference;->K0:Lk/v/c/a;
 
     const/4 v2, 0x1
 
-    invoke-virtual {v1, v2}, Lfr/a;->U0(I)I
+    invoke-virtual {v1, v2}, Lk/v/c/a;->U0(I)I
 
     move-result v1
 
-    iget-object v2, p0, Lmiuix/preference/StretchablePickerPreference;->n:Lfr/a;
+    iget-object v2, p0, Lmiuix/preference/StretchablePickerPreference;->K0:Lk/v/c/a;
 
     const/4 v3, 0x5
 
-    invoke-virtual {v2, v3}, Lfr/a;->U0(I)I
+    invoke-virtual {v2, v3}, Lk/v/c/a;->U0(I)I
 
     move-result v2
 
-    iget-object p0, p0, Lmiuix/preference/StretchablePickerPreference;->n:Lfr/a;
+    iget-object p0, p0, Lmiuix/preference/StretchablePickerPreference;->K0:Lk/v/c/a;
 
     const/16 v3, 0x9
 
-    invoke-virtual {p0, v3}, Lfr/a;->U0(I)I
+    invoke-virtual {p0, v3}, Lk/v/c/a;->U0(I)I
 
     move-result p0
 
@@ -517,10 +273,12 @@
 
     const/16 v0, 0xc
 
-    invoke-static {p3, p1, p2, v0}, Lfr/c;->a(Landroid/content/Context;JI)Ljava/lang/String;
+    .line 2
+    invoke-static {p3, p1, p2, v0}, Lk/v/c/c;->a(Landroid/content/Context;JI)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 3
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -538,4 +296,222 @@
     move-result-object p0
 
     return-object p0
+.end method
+
+.method private u(J)Ljava/lang/String;
+    .locals 1
+
+    .line 1
+    iget-object p0, p0, Lmiuix/preference/StretchablePickerPreference;->v1:Landroid/content/Context;
+
+    const/16 v0, 0x38c
+
+    invoke-static {p0, p1, p2, v0}, Lk/v/c/c;->a(Landroid/content/Context;JI)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method private v()Ljava/lang/CharSequence;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/preference/StretchablePickerPreference;->v2:Ljava/lang/CharSequence;
+
+    return-object p0
+.end method
+
+.method private x()I
+    .locals 0
+
+    .line 1
+    iget p0, p0, Lmiuix/preference/StretchablePickerPreference;->C2:I
+
+    return p0
+.end method
+
+
+# virtual methods
+.method public A(I)V
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lmiuix/preference/StretchablePickerPreference;->C2:I
+
+    if-eq p1, v0, :cond_0
+
+    .line 2
+    iput p1, p0, Lmiuix/preference/StretchablePickerPreference;->C2:I
+
+    .line 3
+    invoke-virtual {p0}, Landroidx/preference/Preference;->notifyChanged()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public B(Lmiuix/preference/StretchablePickerPreference$c;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lmiuix/preference/StretchablePickerPreference;->K8:Lmiuix/preference/StretchablePickerPreference$c;
+
+    return-void
+.end method
+
+.method public C(J)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lmiuix/preference/StretchablePickerPreference;->v1:Landroid/content/Context;
+
+    invoke-direct {p0, p1, p2, v0}, Lmiuix/preference/StretchablePickerPreference;->t(JLandroid/content/Context;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lmiuix/preference/StretchableWidgetPreference;->c(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
+    .locals 5
+
+    .line 1
+    iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
+
+    .line 2
+    sget v1, Lk/x/i$j;->lunar_layout:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/RelativeLayout;
+
+    .line 3
+    sget v2, Lk/x/i$j;->datetime_picker:I
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Lmiuix/pickerwidget/widget/DateTimePicker;
+
+    .line 4
+    sget v3, Lk/x/i$j;->lunar_button:I
+
+    invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v3
+
+    check-cast v3, Lmiuix/slidingwidget/widget/SlidingButton;
+
+    .line 5
+    sget v4, Lk/x/i$j;->lunar_text:I
+
+    invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    .line 6
+    iget-boolean v4, p0, Lmiuix/preference/StretchablePickerPreference;->C1:Z
+
+    if-nez v4, :cond_0
+
+    const/16 v0, 0x8
+
+    .line 7
+    invoke-virtual {v1, v0}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+
+    goto :goto_0
+
+    :cond_0
+    if-eqz v0, :cond_1
+
+    .line 8
+    invoke-direct {p0}, Lmiuix/preference/StretchablePickerPreference;->v()Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    .line 9
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_1
+
+    .line 10
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 11
+    :cond_1
+    :goto_0
+    invoke-direct {p0}, Lmiuix/preference/StretchablePickerPreference;->x()I
+
+    move-result v0
+
+    .line 12
+    invoke-virtual {v2, v0}, Lmiuix/pickerwidget/widget/DateTimePicker;->setMinuteInterval(I)V
+
+    .line 13
+    invoke-virtual {v2}, Lmiuix/pickerwidget/widget/DateTimePicker;->getTimeInMillis()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lmiuix/preference/StretchablePickerPreference;->K2:J
+
+    .line 14
+    invoke-super {p0, p1}, Lmiuix/preference/StretchableWidgetPreference;->onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
+
+    .line 15
+    invoke-direct {p0, v3, v2}, Lmiuix/preference/StretchablePickerPreference;->s(Lmiuix/slidingwidget/widget/SlidingButton;Lmiuix/pickerwidget/widget/DateTimePicker;)V
+
+    .line 16
+    iget-boolean p1, p0, Lmiuix/preference/StretchablePickerPreference;->K1:Z
+
+    invoke-virtual {v2}, Lmiuix/pickerwidget/widget/DateTimePicker;->getTimeInMillis()J
+
+    move-result-wide v0
+
+    invoke-direct {p0, p1, v0, v1}, Lmiuix/preference/StretchablePickerPreference;->E(ZJ)V
+
+    .line 17
+    invoke-direct {p0, v2}, Lmiuix/preference/StretchablePickerPreference;->F(Lmiuix/pickerwidget/widget/DateTimePicker;)V
+
+    return-void
+.end method
+
+.method public y()J
+    .locals 2
+
+    .line 1
+    iget-wide v0, p0, Lmiuix/preference/StretchablePickerPreference;->K2:J
+
+    return-wide v0
+.end method
+
+.method public z(Ljava/lang/String;)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lmiuix/preference/StretchablePickerPreference;->v2:Ljava/lang/CharSequence;
+
+    invoke-static {p1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 2
+    iput-object p1, p0, Lmiuix/preference/StretchablePickerPreference;->v2:Ljava/lang/CharSequence;
+
+    .line 3
+    invoke-virtual {p0}, Landroidx/preference/Preference;->notifyChanged()V
+
+    :cond_0
+    return-void
 .end method

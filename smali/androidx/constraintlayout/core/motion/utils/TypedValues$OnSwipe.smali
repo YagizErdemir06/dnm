@@ -72,7 +72,7 @@
 
     const-string v2, "autoCompleteToEnd"
 
-    const-string/jumbo v3, "stop"
+    const-string v3, "stop"
 
     const-string v4, "decelerate"
 
@@ -82,21 +82,23 @@
 
     const-string v7, "neverCompleteToEnd"
 
+    .line 1
     filled-new-array/range {v0 .. v7}, [Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Landroidx/constraintlayout/core/motion/utils/TypedValues$OnSwipe;->ON_TOUCH_UP_ENUM:[Ljava/lang/String;
 
-    const-string v0, "bounceEnd"
+    const-string v0, "overshoot"
 
-    const-string v1, "bounceBoth"
+    const-string v1, "bounceStart"
 
-    const-string v2, "overshoot"
+    const-string v2, "bounceEnd"
 
-    const-string v3, "bounceStart"
+    const-string v3, "bounceBoth"
 
-    filled-new-array {v2, v3, v0, v1}, [Ljava/lang/String;
+    .line 2
+    filled-new-array {v0, v1, v2, v3}, [Ljava/lang/String;
 
     move-result-object v0
 
@@ -104,23 +106,25 @@
 
     const-string v0, "continuousVelocity"
 
-    const-string/jumbo v1, "spring"
+    const-string v1, "spring"
 
+    .line 3
     filled-new-array {v0, v1}, [Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Landroidx/constraintlayout/core/motion/utils/TypedValues$OnSwipe;->AUTOCOMPLETE_MODE_ENUM:[Ljava/lang/String;
 
-    const-string v0, "disableScroll"
+    const-string v0, "none"
 
-    const-string/jumbo v1, "supportScrollUp"
+    const-string v1, "disablePostScroll"
 
-    const-string v2, "none"
+    const-string v2, "disableScroll"
 
-    const-string v3, "disablePostScroll"
+    const-string v3, "supportScrollUp"
 
-    filled-new-array {v2, v3, v0, v1}, [Ljava/lang/String;
+    .line 4
+    filled-new-array {v0, v1, v2, v3}, [Ljava/lang/String;
 
     move-result-object v0
 

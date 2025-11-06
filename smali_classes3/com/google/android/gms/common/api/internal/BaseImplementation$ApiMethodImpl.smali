@@ -216,15 +216,15 @@
     .line 1
     new-instance v0, Lcom/google/android/gms/common/api/Status;
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getLocalizedMessage()Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/os/RemoteException;->getLocalizedMessage()Ljava/lang/String;
 
     move-result-object p1
 
-    const/4 v1, 0x0
+    const/16 v1, 0x8
 
-    const/16 v2, 0x8
+    const/4 v2, 0x0
 
-    invoke-direct {v0, v2, p1, v1}, Lcom/google/android/gms/common/api/Status;-><init>(ILjava/lang/String;Landroid/app/PendingIntent;)V
+    invoke-direct {v0, v1, p1, v2}, Lcom/google/android/gms/common/api/Status;-><init>(ILjava/lang/String;Landroid/app/PendingIntent;)V
 
     .line 2
     invoke-virtual {p0, v0}, Lcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl;->setFailedResult(Lcom/google/android/gms/common/api/Status;)V
@@ -336,6 +336,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl;->doExecute(Lcom/google/android/gms/common/api/Api$AnyClient;)V
     :try_end_0
@@ -347,6 +348,7 @@
     :catch_0
     move-exception p1
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl;->setFailedResult(Landroid/os/RemoteException;)V
 
     return-void
@@ -354,8 +356,10 @@
     :catch_1
     move-exception p1
 
+    .line 3
     invoke-direct {p0, p1}, Lcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl;->setFailedResult(Landroid/os/RemoteException;)V
 
+    .line 4
     throw p1
 .end method
 
@@ -402,6 +406,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     check-cast p1, Lcom/google/android/gms/common/api/Result;
 
     invoke-super {p0, p1}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->setResult(Lcom/google/android/gms/common/api/Result;)V

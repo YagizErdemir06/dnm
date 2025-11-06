@@ -21,8 +21,6 @@
 
 .field public static final ACCELERATE_INTERPOLATOR:I = 0x16
 
-.field public static final BEZIER:I = 0x64
-
 .field public static final BOUNCE:I = 0x17
 
 .field public static final BOUNCE_EASE_IN:I = 0x18
@@ -37,8 +35,6 @@
 
 .field public static final CUBIC_OUT:I = 0x6
 
-.field public static final DAMPING:I = 0x67
-
 .field public static final DECELERATE:I = 0x14
 
 .field public static final DURATION:I = -0x1
@@ -52,10 +48,6 @@
 .field public static final FRICTION:I = -0x4
 
 .field public static final LINEAR:I = 0x1
-
-.field public static final PERLIN:I = 0xc9
-
-.field public static final PERLIN2:I = 0xc8
 
 .field public static final QUAD_IN:I = 0x2
 
@@ -77,12 +69,6 @@
 
 .field public static final REBOUND:I = -0x6
 
-.field public static final SINE_IN:I = 0xe
-
-.field public static final SINE_INOUT:I = 0x10
-
-.field public static final SINE_OUT:I = 0xf
-
 .field public static final SIN_IN:I = 0xe
 
 .field public static final SIN_INOUT:I = 0x10
@@ -90,10 +76,6 @@
 .field public static final SIN_OUT:I = 0xf
 
 .field public static final SPRING:I = 0x0
-
-.field public static final SPRING_FUNCTION:I = 0x66
-
-.field public static final SPRING_GRAVITY:I = 0x65
 
 .field public static final SPRING_PHY:I = -0x2
 

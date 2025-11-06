@@ -1,14 +1,14 @@
-.class Landroidx/collection/ContainerHelpers;
+.class public Landroidx/collection/ContainerHelpers;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field static final EMPTY_INTS:[I
+.field public static final EMPTY_INTS:[I
 
-.field static final EMPTY_LONGS:[J
+.field public static final EMPTY_LONGS:[J
 
-.field static final EMPTY_OBJECTS:[Ljava/lang/Object;
+.field public static final EMPTY_OBJECTS:[Ljava/lang/Object;
 
 
 # direct methods
@@ -19,14 +19,17 @@
 
     new-array v1, v0, [I
 
+    .line 1
     sput-object v1, Landroidx/collection/ContainerHelpers;->EMPTY_INTS:[I
 
     new-array v1, v0, [J
 
+    .line 2
     sput-object v1, Landroidx/collection/ContainerHelpers;->EMPTY_LONGS:[J
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 3
     sput-object v0, Landroidx/collection/ContainerHelpers;->EMPTY_OBJECTS:[Ljava/lang/Object;
 
     return-void
@@ -35,6 +38,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -135,6 +139,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 1
     invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -190,6 +195,7 @@
 
     mul-int/lit8 p0, p0, 0x4
 
+    .line 1
     invoke-static {p0}, Landroidx/collection/ContainerHelpers;->idealByteArraySize(I)I
 
     move-result p0
@@ -204,6 +210,7 @@
 
     mul-int/lit8 p0, p0, 0x8
 
+    .line 1
     invoke-static {p0}, Landroidx/collection/ContainerHelpers;->idealByteArraySize(I)I
 
     move-result p0

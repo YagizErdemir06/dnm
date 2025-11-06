@@ -1,4 +1,4 @@
-.class Landroidx/core/view/MenuItemCompat$1;
+.class public Landroidx/core/view/MenuItemCompat$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic val$listener:Landroidx/core/view/MenuItemCompat$OnActionExpandListener;
+.field public final synthetic val$listener:Landroidx/core/view/MenuItemCompat$OnActionExpandListener;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/core/view/MenuItemCompat$OnActionExpandListener;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/core/view/MenuItemCompat$1;->val$listener:Landroidx/core/view/MenuItemCompat$OnActionExpandListener;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,6 +38,7 @@
 .method public onMenuItemActionCollapse(Landroid/view/MenuItem;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/MenuItemCompat$1;->val$listener:Landroidx/core/view/MenuItemCompat$OnActionExpandListener;
 
     invoke-interface {p0, p1}, Landroidx/core/view/MenuItemCompat$OnActionExpandListener;->onMenuItemActionCollapse(Landroid/view/MenuItem;)Z
@@ -49,6 +51,7 @@
 .method public onMenuItemActionExpand(Landroid/view/MenuItem;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/MenuItemCompat$1;->val$listener:Landroidx/core/view/MenuItemCompat$OnActionExpandListener;
 
     invoke-interface {p0, p1}, Landroidx/core/view/MenuItemCompat$OnActionExpandListener;->onMenuItemActionExpand(Landroid/view/MenuItem;)Z

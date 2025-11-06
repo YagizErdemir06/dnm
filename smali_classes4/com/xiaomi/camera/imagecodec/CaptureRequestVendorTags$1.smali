@@ -1,4 +1,4 @@
-.class final Lcom/xiaomi/camera/imagecodec/CaptureRequestVendorTags$1;
+.class public final Lcom/xiaomi/camera/imagecodec/CaptureRequestVendorTags$1;
 .super Lcom/xiaomi/camera/imagecodec/VendorTag;
 .source "SourceFile"
 
@@ -23,9 +23,9 @@
 
 
 # instance fields
-.field final synthetic val$klass:Ljava/lang/Class;
+.field public final synthetic val$klass:Ljava/lang/Class;
 
-.field final synthetic val$nameSupplier:Ljava/util/function/Supplier;
+.field public final synthetic val$nameSupplier:Ljava/util/function/Supplier;
 
 
 # direct methods
@@ -42,6 +42,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/imagecodec/CaptureRequestVendorTags$1;->val$klass:Ljava/lang/Class;
 
     iput-object p2, p0, Lcom/xiaomi/camera/imagecodec/CaptureRequestVendorTags$1;->val$nameSupplier:Ljava/util/function/Supplier;
@@ -91,6 +92,7 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/CaptureRequestVendorTags$1;->val$nameSupplier:Ljava/util/function/Supplier;
 
     invoke-interface {p0}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;

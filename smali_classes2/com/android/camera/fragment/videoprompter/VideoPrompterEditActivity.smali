@@ -4,13 +4,14 @@
 
 
 # instance fields
-.field public d:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompterEdit;
+.field private d:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompterEdit;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lmiuix/appcompat/app/AppCompatActivity;-><init>()V
 
     return-void
@@ -21,11 +22,13 @@
 .method public onBackPressed()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera/fragment/videoprompter/VideoPrompterEditActivity;->d:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompterEdit;
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompterEdit;->ii()V
+    .line 2
+    invoke-virtual {p0}, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompterEdit;->qc()V
 
     :cond_0
     return-void
@@ -37,23 +40,35 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "savedInstanceState"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lmiuix/appcompat/app/AppCompatActivity;->onCreate(Landroid/os/Bundle;)V
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 2
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lid/b;->e7()Z
+    invoke-virtual {p1}, Ld/k/a/b;->S6()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    invoke-static {p0}, Ly2/b;->r0(Landroid/content/Context;)V
+    .line 3
+    invoke-static {p0}, Ld/d/a/n6/b;->r0(Landroid/content/Context;)V
 
+    .line 4
     :cond_0
-    invoke-static {p0}, Ly2/b;->f(Landroid/app/Activity;)Z
+    invoke-static {p0}, Ld/d/a/n6/b;->f(Landroid/app/Activity;)Z
 
     move-result p1
 
@@ -61,12 +76,13 @@
 
     return-void
 
+    .line 5
     :cond_1
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/android/camera/s2;->L(Landroid/content/Intent;)Z
+    invoke-static {p1}, Ld/d/a/b4;->K(Landroid/content/Intent;)Z
 
     move-result p1
 
@@ -74,13 +90,16 @@
 
     const/4 p1, 0x1
 
+    .line 6
     invoke-virtual {p0, p1}, Landroid/app/Activity;->setShowWhenLocked(Z)V
 
     :cond_2
-    const p1, 0x7f0e0020
+    const p1, 0x7f0e001f
 
+    .line 7
     invoke-virtual {p0, p1}, Lmiuix/appcompat/app/AppCompatActivity;->setContentView(I)V
 
+    .line 8
     invoke-static {}, Lcom/android/camera2/compat/theme/MiThemeCompat;->getOperationFragment()Lcom/android/camera2/compat/theme/common/MiThemeOperationFragmentIf;
 
     move-result-object p1
@@ -97,6 +116,7 @@
 
     iput-object p1, p0, Lcom/android/camera/fragment/videoprompter/VideoPrompterEditActivity;->d:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompterEdit;
 
+    .line 9
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object p1
@@ -105,7 +125,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f0b04d9
+    const v0, 0x7f0b045e
 
     iget-object p0, p0, Lcom/android/camera/fragment/videoprompter/VideoPrompterEditActivity;->d:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompterEdit;
 
@@ -121,13 +141,15 @@
 .method public onPause()V
     .locals 0
 
+    .line 1
     invoke-super {p0}, Landroidx/fragment/app/FragmentActivity;->onPause()V
 
-    invoke-static {}, Lg2/b;->h()Ll2/g;
+    .line 2
+    invoke-static {}, Ld/d/a/l6/b;->h()Ld/d/a/l6/e/l/g;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Ll2/g;->B0()V
+    invoke-virtual {p0}, Ld/d/a/l6/e/l/g;->x0()V
 
     return-void
 .end method

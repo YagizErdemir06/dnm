@@ -10,59 +10,72 @@
     }
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000F\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u0008\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\u000b\n\u0002\u0008\u0008\n\u0002\u0010\u0015\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000e\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u000b\u0018\u0000 02\u00020\u0001:\u00010B\t\u0008\u0002\u00a2\u0006\u0004\u0008.\u0010/J\u0010\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0002J\u0018\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0006\u001a\u00020\u00022\u0006\u0010\u0003\u001a\u00020\u0002H\u0002J\u0010\u0010\u0007\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0002J\u0008\u0010\u0008\u001a\u00020\u0004H\u0002J\u0018\u0010\u000b\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u00022\u0008\u0008\u0002\u0010\n\u001a\u00020\tJ\u000e\u0010\u000c\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002J\u000e\u0010\r\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002J \u0010\u0010\u001a\u00020\u00042\u0006\u0010\u000e\u001a\u00020\u00022\u0006\u0010\u000f\u001a\u00020\u00022\u0008\u0008\u0002\u0010\n\u001a\u00020\tJ\u0016\u0010\u0014\u001a\u00020\u00042\u0006\u0010\u0011\u001a\u00020\u00022\u0006\u0010\u0013\u001a\u00020\u0012J\u0016\u0010\u0014\u001a\u00020\u00042\u0006\u0010\u0011\u001a\u00020\u00022\u0006\u0010\u0015\u001a\u00020\u0002J\u0016\u0010\u0016\u001a\u00020\u00042\u0006\u0010\u0011\u001a\u00020\u00022\u0006\u0010\u0013\u001a\u00020\u0012J\u0016\u0010\u0016\u001a\u00020\u00042\u0006\u0010\u0011\u001a\u00020\u00022\u0006\u0010\u0015\u001a\u00020\u0002J\u000e\u0010\u0019\u001a\u00020\u00022\u0006\u0010\u0018\u001a\u00020\u0017J\u000e\u0010\u001a\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002J\u000e\u0010\u001a\u001a\u00020\u00042\u0006\u0010\u001c\u001a\u00020\u001bJ\u000e\u0010\u001d\u001a\u00020\u00022\u0006\u0010\u001c\u001a\u00020\u001bJ\u0006\u0010\u001e\u001a\u00020\u0004R\u0016\u0010 \u001a\u00020\u001f8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008 \u0010!R\u0016\u0010\"\u001a\u00020\t8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\"\u0010#R\u0014\u0010$\u001a\u00020\u00018\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008$\u0010%R\u001c\u0010\'\u001a\u0008\u0012\u0004\u0012\u00020\u00020&8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\'\u0010(R\u0016\u0010)\u001a\u00020\u00128\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008)\u0010*R\u0014\u0010-\u001a\u00020\u00128@X\u0080\u0004\u00a2\u0006\u0006\u001a\u0004\u0008+\u0010,\u00a8\u00061"
+        "\u0000F\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u0008\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0010\u000b\n\u0002\u0008\n\n\u0002\u0010\u0015\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\u000e\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0008\t\n\u0002\u0018\u0002\n\u0002\u0008\u0005\u0018\u0000 82\u00020\u0001:\u00018B\t\u0008\u0002\u00a2\u0006\u0004\u00087\u0010\u000bJ\u0017\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0002\u00a2\u0006\u0004\u0008\u0005\u0010\u0006J\u001f\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0007\u001a\u00020\u00022\u0006\u0010\u0003\u001a\u00020\u0002H\u0002\u00a2\u0006\u0004\u0008\u0005\u0010\u0008J\u0017\u0010\t\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0002\u00a2\u0006\u0004\u0008\t\u0010\u0006J\u000f\u0010\n\u001a\u00020\u0004H\u0002\u00a2\u0006\u0004\u0008\n\u0010\u000bJ\u001f\u0010\u000e\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u00022\u0008\u0008\u0002\u0010\r\u001a\u00020\u000c\u00a2\u0006\u0004\u0008\u000e\u0010\u000fJ\u0015\u0010\u0010\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002\u00a2\u0006\u0004\u0008\u0010\u0010\u0006J\u0015\u0010\u0011\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002\u00a2\u0006\u0004\u0008\u0011\u0010\u0006J\'\u0010\u0014\u001a\u00020\u00042\u0006\u0010\u0012\u001a\u00020\u00022\u0006\u0010\u0013\u001a\u00020\u00022\u0008\u0008\u0002\u0010\r\u001a\u00020\u000c\u00a2\u0006\u0004\u0008\u0014\u0010\u0015J\u001d\u0010\u0019\u001a\u00020\u00042\u0006\u0010\u0016\u001a\u00020\u00022\u0006\u0010\u0018\u001a\u00020\u0017\u00a2\u0006\u0004\u0008\u0019\u0010\u001aJ\u001d\u0010\u0019\u001a\u00020\u00042\u0006\u0010\u0016\u001a\u00020\u00022\u0006\u0010\u001b\u001a\u00020\u0002\u00a2\u0006\u0004\u0008\u0019\u0010\u0008J\u001d\u0010\u001c\u001a\u00020\u00042\u0006\u0010\u0016\u001a\u00020\u00022\u0006\u0010\u0018\u001a\u00020\u0017\u00a2\u0006\u0004\u0008\u001c\u0010\u001aJ\u001d\u0010\u001c\u001a\u00020\u00042\u0006\u0010\u0016\u001a\u00020\u00022\u0006\u0010\u001b\u001a\u00020\u0002\u00a2\u0006\u0004\u0008\u001c\u0010\u0008J\u0015\u0010\u001f\u001a\u00020\u00022\u0006\u0010\u001e\u001a\u00020\u001d\u00a2\u0006\u0004\u0008\u001f\u0010 J\u0015\u0010!\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002\u00a2\u0006\u0004\u0008!\u0010\u0006J\u0015\u0010!\u001a\u00020\u00042\u0006\u0010#\u001a\u00020\"\u00a2\u0006\u0004\u0008!\u0010$J\u0015\u0010%\u001a\u00020\u00022\u0006\u0010#\u001a\u00020\"\u00a2\u0006\u0004\u0008%\u0010&J\r\u0010\'\u001a\u00020\u0004\u00a2\u0006\u0004\u0008\'\u0010\u000bR\u0016\u0010(\u001a\u00020\u000c8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008(\u0010)R\u0016\u0010+\u001a\u00020*8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008+\u0010,R\u0016\u0010-\u001a\u00020\u00018\u0002@\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008-\u0010.R\u0016\u00101\u001a\u00020\u00178@@\u0000X\u0080\u0004\u00a2\u0006\u0006\u001a\u0004\u0008/\u00100R\u0016\u00102\u001a\u00020\u00178\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u00082\u00103R\u001c\u00105\u001a\u0008\u0012\u0004\u0012\u00020\u0002048\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u00085\u00106\u00a8\u00069"
     }
     d2 = {
         "Lcom/faceunity/core/bundle/FUBundleManager;",
         "",
         "",
         "handle",
-        "Lnm/l2;",
+        "Lh/l2;",
         "renderBundlesAdd",
+        "(I)V",
         "index",
+        "(II)V",
         "renderBundlesRemove",
         "renderBundlesClear",
+        "()V",
         "",
         "isFaceBeauty",
         "bindControllerBundle",
+        "(IZ)V",
         "unbindControllerBundle",
         "unbindAndDestroyControllerBundle",
         "oldHandle",
         "newHandle",
         "updateControllerBundle",
+        "(IIZ)V",
         "controlHandle",
         "",
         "items",
         "bindControllerItem",
+        "(I[I)V",
         "item",
         "unbindControllerItem",
         "Lcom/faceunity/core/entity/FUBundleData;",
         "bundle",
         "loadBundle",
+        "(Lcom/faceunity/core/entity/FUBundleData;)I",
         "destroyBundle",
         "",
         "path",
+        "(Ljava/lang/String;)V",
         "getBundleHandle",
+        "(Ljava/lang/String;)I",
         "release",
+        "mRenderBundleUpdateFlag",
+        "Z",
         "Lcom/faceunity/core/bundle/FUBundleFactory;",
         "mFUBundleFactory",
         "Lcom/faceunity/core/bundle/FUBundleFactory;",
-        "mRenderBundleUpdateFlag",
-        "Z",
         "mListLock",
         "Ljava/lang/Object;",
-        "Ljava/util/LinkedList;",
-        "mRenderBundlesList",
-        "Ljava/util/LinkedList;",
-        "_renderBindBundles",
-        "[I",
         "getRenderBindBundles$lib_core_release",
         "()[I",
         "renderBindBundles",
+        "_renderBindBundles",
+        "[I",
+        "Ljava/util/LinkedList;",
+        "mRenderBundlesList",
+        "Ljava/util/LinkedList;",
         "<init>",
-        "()V",
         "Companion",
         "lib_core_release"
     }
@@ -77,14 +90,14 @@
 
 # static fields
 .field public static final Companion:Lcom/faceunity/core/bundle/FUBundleManager$Companion;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field private static volatile INSTANCE:Lcom/faceunity/core/bundle/FUBundleManager; = null
 
 .field public static final TAG:Ljava/lang/String; = "KIT_FUBundleManager"
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -117,7 +130,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/faceunity/core/bundle/FUBundleManager$Companion;-><init>(Lkotlin/jvm/internal/w;)V
+    invoke-direct {v0, v1}, Lcom/faceunity/core/bundle/FUBundleManager$Companion;-><init>(Lh/d3/x/w;)V
 
     sput-object v0, Lcom/faceunity/core/bundle/FUBundleManager;->Companion:Lcom/faceunity/core/bundle/FUBundleManager$Companion;
 
@@ -161,7 +174,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/w;)V
+.method public synthetic constructor <init>(Lh/d3/x/w;)V
     .locals 0
 
     .line 6
@@ -173,6 +186,7 @@
 .method public static final synthetic access$getINSTANCE$cp()Lcom/faceunity/core/bundle/FUBundleManager;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/faceunity/core/bundle/FUBundleManager;->INSTANCE:Lcom/faceunity/core/bundle/FUBundleManager;
 
     return-object v0
@@ -181,6 +195,7 @@
 .method public static final synthetic access$setINSTANCE$cp(Lcom/faceunity/core/bundle/FUBundleManager;)V
     .locals 0
 
+    .line 1
     sput-object p0, Lcom/faceunity/core/bundle/FUBundleManager;->INSTANCE:Lcom/faceunity/core/bundle/FUBundleManager;
 
     return-void
@@ -195,6 +210,7 @@
 
     const/4 p2, 0x0
 
+    .line 1
     :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/faceunity/core/bundle/FUBundleManager;->bindControllerBundle(IZ)V
 
@@ -203,10 +219,10 @@
 
 .method public static final getInstance$lib_core_release()Lcom/faceunity/core/bundle/FUBundleManager;
     .locals 1
-    .annotation runtime Lin/l;
+    .annotation runtime Lh/d3/l;
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     sget-object v0, Lcom/faceunity/core/bundle/FUBundleManager;->Companion:Lcom/faceunity/core/bundle/FUBundleManager$Companion;
@@ -256,7 +272,7 @@
 
     .line 5
     :cond_0
-    sget-object p0, Lnm/l2;->a:Lnm/l2;
+    sget-object p0, Lh/l2;->a:Lh/l2;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -311,7 +327,7 @@
 
     .line 11
     :cond_0
-    sget-object p0, Lnm/l2;->a:Lnm/l2;
+    sget-object p0, Lh/l2;->a:Lh/l2;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -331,10 +347,12 @@
 .method private final renderBundlesClear()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/bundle/FUBundleManager;->mListLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/faceunity/core/bundle/FUBundleManager;->mRenderBundlesList:Ljava/util/LinkedList;
 
@@ -342,12 +360,15 @@
 
     const/4 v1, 0x1
 
+    .line 3
     iput-boolean v1, p0, Lcom/faceunity/core/bundle/FUBundleManager;->mRenderBundleUpdateFlag:Z
 
-    sget-object p0, Lnm/l2;->a:Lnm/l2;
+    .line 4
+    sget-object p0, Lh/l2;->a:Lh/l2;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 5
     monitor-exit v0
 
     return-void
@@ -363,10 +384,12 @@
 .method private final renderBundlesRemove(I)V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/bundle/FUBundleManager;->mListLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/faceunity/core/bundle/FUBundleManager;->mRenderBundlesList:Ljava/util/LinkedList;
 
@@ -380,6 +403,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 3
     iget-object v1, p0, Lcom/faceunity/core/bundle/FUBundleManager;->mRenderBundlesList:Ljava/util/LinkedList;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -390,13 +414,16 @@
 
     const/4 p1, 0x1
 
+    .line 4
     iput-boolean p1, p0, Lcom/faceunity/core/bundle/FUBundleManager;->mRenderBundleUpdateFlag:Z
 
+    .line 5
     :cond_0
-    sget-object p0, Lnm/l2;->a:Lnm/l2;
+    sget-object p0, Lh/l2;->a:Lh/l2;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 6
     monitor-exit v0
 
     return-void
@@ -418,6 +445,7 @@
 
     const/4 p3, 0x0
 
+    .line 1
     :cond_0
     invoke-virtual {p0, p1, p2, p3}, Lcom/faceunity/core/bundle/FUBundleManager;->updateControllerBundle(IIZ)V
 
@@ -438,10 +466,12 @@
 
     const/4 p2, 0x0
 
+    .line 1
     invoke-direct {p0, p2, p1}, Lcom/faceunity/core/bundle/FUBundleManager;->renderBundlesAdd(II)V
 
     goto :goto_0
 
+    .line 2
     :cond_1
     invoke-direct {p0, p1}, Lcom/faceunity/core/bundle/FUBundleManager;->renderBundlesAdd(I)V
 
@@ -469,13 +499,13 @@
 .method public final bindControllerItem(I[I)V
     .locals 1
     .param p2    # [I
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string p0, "items"
 
-    invoke-static {p2, p0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-lez p1, :cond_1
 
@@ -526,13 +556,13 @@
 .method public final destroyBundle(Ljava/lang/String;)V
     .locals 1
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "path"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     invoke-static {p1}, Lcom/faceunity/toolbox/utils/FUVerifyUtils;->isNotBlank(Ljava/lang/CharSequence;)Z
@@ -553,14 +583,15 @@
 .method public final getBundleHandle(Ljava/lang/String;)I
     .locals 1
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "path"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/bundle/FUBundleManager;->mFUBundleFactory:Lcom/faceunity/core/bundle/FUBundleFactory;
 
     invoke-virtual {p0, p1}, Lcom/faceunity/core/bundle/FUBundleFactory;->getBundleHandle(Ljava/lang/String;)I
@@ -572,17 +603,20 @@
 
 .method public final getRenderBindBundles$lib_core_release()[I
     .locals 2
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/faceunity/core/bundle/FUBundleManager;->mRenderBundleUpdateFlag:Z
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/faceunity/core/bundle/FUBundleManager;->_renderBindBundles:[I
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/faceunity/core/bundle/FUBundleManager;->mListLock:Ljava/lang/Object;
 
@@ -590,21 +624,25 @@
 
     const/4 v1, 0x0
 
+    .line 4
     :try_start_0
     iput-boolean v1, p0, Lcom/faceunity/core/bundle/FUBundleManager;->mRenderBundleUpdateFlag:Z
 
+    .line 5
     iget-object v1, p0, Lcom/faceunity/core/bundle/FUBundleManager;->mRenderBundlesList:Ljava/util/LinkedList;
 
-    invoke-static {v1}, Lpm/g0;->P5(Ljava/util/Collection;)[I
+    invoke-static {v1}, Lh/t2/g0;->P5(Ljava/util/Collection;)[I
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/faceunity/core/bundle/FUBundleManager;->_renderBindBundles:[I
 
-    sget-object p0, Lnm/l2;->a:Lnm/l2;
+    .line 6
+    sget-object p0, Lh/l2;->a:Lh/l2;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 7
     monitor-exit v0
 
     move-object p0, v1
@@ -623,14 +661,15 @@
 .method public final loadBundle(Lcom/faceunity/core/entity/FUBundleData;)I
     .locals 1
     .param p1    # Lcom/faceunity/core/entity/FUBundleData;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "bundle"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/bundle/FUBundleManager;->mFUBundleFactory:Lcom/faceunity/core/bundle/FUBundleFactory;
 
     invoke-virtual {p0, p1}, Lcom/faceunity/core/bundle/FUBundleFactory;->loadBundleFile(Lcom/faceunity/core/entity/FUBundleData;)I
@@ -647,14 +686,18 @@
 
     const-string v1, "release"
 
+    .line 1
     invoke-static {v0, v1}, Lcom/faceunity/toolbox/utils/FULogger;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 2
     invoke-direct {p0}, Lcom/faceunity/core/bundle/FUBundleManager;->renderBundlesClear()V
 
+    .line 3
     iget-object p0, p0, Lcom/faceunity/core/bundle/FUBundleManager;->mFUBundleFactory:Lcom/faceunity/core/bundle/FUBundleFactory;
 
     invoke-virtual {p0}, Lcom/faceunity/core/bundle/FUBundleFactory;->clear()V
 
+    .line 4
     sget-object p0, Lcom/faceunity/core/support/FUSDKController;->INSTANCE:Lcom/faceunity/core/support/FUSDKController;
 
     invoke-virtual {p0}, Lcom/faceunity/core/support/FUSDKController;->destroyAllItems()V
@@ -665,8 +708,10 @@
 .method public final unbindAndDestroyControllerBundle(I)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/faceunity/core/bundle/FUBundleManager;->unbindControllerBundle(I)V
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/faceunity/core/bundle/FUBundleManager;->destroyBundle(I)V
 
     return-void
@@ -679,6 +724,7 @@
 
     return-void
 
+    .line 1
     :cond_0
     invoke-direct {p0, p1}, Lcom/faceunity/core/bundle/FUBundleManager;->renderBundlesRemove(I)V
 
@@ -705,13 +751,13 @@
 .method public final unbindControllerItem(I[I)V
     .locals 0
     .param p2    # [I
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string p0, "items"
 
-    invoke-static {p2, p0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     sget-object p0, Lcom/faceunity/core/support/FUSDKController;->INSTANCE:Lcom/faceunity/core/support/FUSDKController;
@@ -726,8 +772,10 @@
 
     if-eq p1, p2, :cond_0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/faceunity/core/bundle/FUBundleManager;->unbindAndDestroyControllerBundle(I)V
 
+    .line 2
     invoke-virtual {p0, p2, p3}, Lcom/faceunity/core/bundle/FUBundleManager;->bindControllerBundle(IZ)V
 
     :cond_0

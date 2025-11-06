@@ -1,4 +1,4 @@
-.class interface abstract Landroidx/core/graphics/TypefaceCompatBaseImpl$StyleExtractor;
+.class public interface abstract Landroidx/core/graphics/TypefaceCompatBaseImpl$StyleExtractor;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

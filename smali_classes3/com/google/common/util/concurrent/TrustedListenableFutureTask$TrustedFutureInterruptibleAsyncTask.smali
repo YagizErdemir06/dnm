@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/TrustedListenableFutureTask$TrustedFutureInterruptibleAsyncTask;
+.class public final Lcom/google/common/util/concurrent/TrustedListenableFutureTask$TrustedFutureInterruptibleAsyncTask;
 .super Lcom/google/common/util/concurrent/InterruptibleTask;
 .source "SourceFile"
 
@@ -32,7 +32,7 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Lcom/google/common/util/concurrent/TrustedListenableFutureTask;
+.field public final synthetic this$0:Lcom/google/common/util/concurrent/TrustedListenableFutureTask;
 
 
 # direct methods
@@ -46,10 +46,12 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/TrustedListenableFutureTask$TrustedFutureInterruptibleAsyncTask;->this$0:Lcom/google/common/util/concurrent/TrustedListenableFutureTask;
 
     invoke-direct {p0}, Lcom/google/common/util/concurrent/InterruptibleTask;-><init>()V
 
+    .line 2
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -66,6 +68,7 @@
 .method public afterRanInterruptiblyFailure(Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/TrustedListenableFutureTask$TrustedFutureInterruptibleAsyncTask;->this$0:Lcom/google/common/util/concurrent/TrustedListenableFutureTask;
 
     invoke-virtual {p0, p1}, Lcom/google/common/util/concurrent/AbstractFuture;->setException(Ljava/lang/Throwable;)Z
@@ -105,6 +108,7 @@
 .method public final isDone()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/TrustedListenableFutureTask$TrustedFutureInterruptibleAsyncTask;->this$0:Lcom/google/common/util/concurrent/TrustedListenableFutureTask;
 
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/FluentFuture$TrustedFuture;->isDone()Z
@@ -138,9 +142,9 @@
 
     move-result-object v0
 
-    const-string v1, "AsyncCallable.call returned null instead of a Future. Did you mean to return immediateFuture(null)? %s"
-
     iget-object p0, p0, Lcom/google/common/util/concurrent/TrustedListenableFutureTask$TrustedFutureInterruptibleAsyncTask;->callable:Lcom/google/common/util/concurrent/AsyncCallable;
+
+    const-string v1, "AsyncCallable.call returned null instead of a Future. Did you mean to return immediateFuture(null)? %s"
 
     .line 4
     invoke-static {v0, v1, p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
@@ -171,6 +175,7 @@
 .method public toPendingString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/TrustedListenableFutureTask$TrustedFutureInterruptibleAsyncTask;->callable:Lcom/google/common/util/concurrent/AsyncCallable;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;

@@ -57,7 +57,7 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/RatingBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 4
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/RatingBar;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
@@ -83,9 +83,11 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     invoke-super {p0, p1, p2}, Landroid/widget/RatingBar;->onMeasure(II)V
 
+    .line 2
     iget-object p2, p0, Landroidx/appcompat/widget/AppCompatRatingBar;->mAppCompatProgressBarHelper:Landroidx/appcompat/widget/AppCompatProgressBarHelper;
 
     invoke-virtual {p2}, Landroidx/appcompat/widget/AppCompatProgressBarHelper;->getSampleTile()Landroid/graphics/Bitmap;
@@ -94,6 +96,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 3
     invoke-virtual {p2}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result p2
@@ -106,18 +109,22 @@
 
     const/4 v0, 0x0
 
+    .line 4
     invoke-static {p2, p1, v0}, Landroid/view/View;->resolveSizeAndState(III)I
 
     move-result p1
 
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
+    .line 5
+    invoke-virtual {p0}, Landroid/widget/RatingBar;->getMeasuredHeight()I
 
     move-result p2
 
-    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setMeasuredDimension(II)V
+    .line 6
+    invoke-virtual {p0, p1, p2}, Landroid/widget/RatingBar;->setMeasuredDimension(II)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 7
     :cond_0
     monitor-exit p0
 

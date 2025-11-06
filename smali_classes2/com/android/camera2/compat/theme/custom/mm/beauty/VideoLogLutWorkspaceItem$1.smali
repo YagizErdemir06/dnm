@@ -1,4 +1,4 @@
-.class Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem$1;
+.class public Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,22 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;
+.field public final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem$1;->this$0:Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,6 +46,7 @@
 .method public run()V
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/io/File;
 
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem$1;->this$0:Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem;
@@ -47,13 +57,15 @@
 
     invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
+    .line 2
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    invoke-static {v0}, Ly7/m6;->p(Ljava/io/File;)Z
+    .line 3
+    invoke-static {v0}, Ld/d/a/d7/m8/b/z9;->p(Ljava/io/File;)Z
 
     :cond_0
     return-void

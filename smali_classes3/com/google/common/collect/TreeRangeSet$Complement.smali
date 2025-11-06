@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/TreeRangeSet$Complement;
+.class public final Lcom/google/common/collect/TreeRangeSet$Complement;
 .super Lcom/google/common/collect/TreeRangeSet;
 .source "SourceFile"
 
@@ -22,15 +22,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/TreeRangeSet;
+.field public final synthetic this$0:Lcom/google/common/collect/TreeRangeSet;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/TreeRangeSet;)V
     .locals 1
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/TreeRangeSet$Complement;->this$0:Lcom/google/common/collect/TreeRangeSet;
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/TreeRangeSet$ComplementRangesByLowerBound;
 
     iget-object p1, p1, Lcom/google/common/collect/TreeRangeSet;->rangesByLowerBound:Ljava/util/NavigableMap;
@@ -56,6 +58,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/TreeRangeSet$Complement;->this$0:Lcom/google/common/collect/TreeRangeSet;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/TreeRangeSet;->remove(Lcom/google/common/collect/Range;)V
@@ -73,6 +76,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/TreeRangeSet$Complement;->this$0:Lcom/google/common/collect/TreeRangeSet;
 
     return-object p0
@@ -86,6 +90,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/TreeRangeSet$Complement;->this$0:Lcom/google/common/collect/TreeRangeSet;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/TreeRangeSet;->contains(Ljava/lang/Comparable;)Z
@@ -107,6 +112,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/TreeRangeSet$Complement;->this$0:Lcom/google/common/collect/TreeRangeSet;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/TreeRangeSet;->add(Lcom/google/common/collect/Range;)V

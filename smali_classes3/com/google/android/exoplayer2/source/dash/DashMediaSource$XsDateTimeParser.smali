@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/dash/DashMediaSource$XsDateTimeParser;
+.class public final Lcom/google/android/exoplayer2/source/dash/DashMediaSource$XsDateTimeParser;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

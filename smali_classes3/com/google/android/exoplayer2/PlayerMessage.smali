@@ -49,26 +49,35 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/PlayerMessage$Sender;Lcom/google/android/exoplayer2/PlayerMessage$Target;Lcom/google/android/exoplayer2/Timeline;ILcom/google/android/exoplayer2/util/Clock;Landroid/os/Looper;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/PlayerMessage;->sender:Lcom/google/android/exoplayer2/PlayerMessage$Sender;
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/exoplayer2/PlayerMessage;->target:Lcom/google/android/exoplayer2/PlayerMessage$Target;
 
+    .line 4
     iput-object p3, p0, Lcom/google/android/exoplayer2/PlayerMessage;->timeline:Lcom/google/android/exoplayer2/Timeline;
 
+    .line 5
     iput-object p6, p0, Lcom/google/android/exoplayer2/PlayerMessage;->looper:Landroid/os/Looper;
 
+    .line 6
     iput-object p5, p0, Lcom/google/android/exoplayer2/PlayerMessage;->clock:Lcom/google/android/exoplayer2/util/Clock;
 
+    .line 7
     iput p4, p0, Lcom/google/android/exoplayer2/PlayerMessage;->mediaItemIndex:I
 
     const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 8
     iput-wide p1, p0, Lcom/google/android/exoplayer2/PlayerMessage;->positionMs:J
 
     const/4 p1, 0x1
 
+    .line 9
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/PlayerMessage;->deleteAfterDelivery:Z
 
     return-void
@@ -262,6 +271,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/PlayerMessage;->isSent:Z
 
@@ -269,14 +279,17 @@
 
     const/4 v0, 0x1
 
+    .line 2
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/PlayerMessage;->isCanceled:Z
 
     const/4 v0, 0x0
 
+    .line 3
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/PlayerMessage;->markAsProcessed(Z)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
     monitor-exit p0
 
     return-object p0
@@ -292,6 +305,7 @@
 .method public getDeleteAfterDelivery()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/PlayerMessage;->deleteAfterDelivery:Z
 
     return p0
@@ -300,6 +314,7 @@
 .method public getLooper()Landroid/os/Looper;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/PlayerMessage;->looper:Landroid/os/Looper;
 
     return-object p0
@@ -308,6 +323,7 @@
 .method public getMediaItemIndex()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/PlayerMessage;->mediaItemIndex:I
 
     return p0
@@ -318,6 +334,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/PlayerMessage;->payload:Ljava/lang/Object;
 
     return-object p0
@@ -326,6 +343,7 @@
 .method public getPositionMs()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/PlayerMessage;->positionMs:J
 
     return-wide v0
@@ -334,6 +352,7 @@
 .method public getTarget()Lcom/google/android/exoplayer2/PlayerMessage$Target;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/PlayerMessage;->target:Lcom/google/android/exoplayer2/PlayerMessage$Target;
 
     return-object p0
@@ -342,6 +361,7 @@
 .method public getTimeline()Lcom/google/android/exoplayer2/Timeline;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/PlayerMessage;->timeline:Lcom/google/android/exoplayer2/Timeline;
 
     return-object p0
@@ -350,6 +370,7 @@
 .method public getType()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/PlayerMessage;->type:I
 
     return p0
@@ -360,6 +381,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/PlayerMessage;->isCanceled:Z
     :try_end_0
@@ -382,6 +404,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/PlayerMessage;->isDelivered:Z
 
@@ -391,12 +414,15 @@
 
     const/4 p1, 0x1
 
+    .line 2
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/PlayerMessage;->isProcessed:Z
 
+    .line 3
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
     monitor-exit p0
 
     return-void
@@ -412,6 +438,7 @@
 .method public send()Lcom/google/android/exoplayer2/PlayerMessage;
     .locals 6
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/PlayerMessage;->isSent:Z
 
     const/4 v1, 0x1
@@ -420,6 +447,7 @@
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iget-wide v2, p0, Lcom/google/android/exoplayer2/PlayerMessage;->positionMs:J
 
     const-wide v4, -0x7fffffffffffffffL    # -4.9E-324
@@ -428,13 +456,16 @@
 
     if-nez v0, :cond_0
 
+    .line 3
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/PlayerMessage;->deleteAfterDelivery:Z
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 4
     :cond_0
     iput-boolean v1, p0, Lcom/google/android/exoplayer2/PlayerMessage;->isSent:Z
 
+    .line 5
     iget-object v0, p0, Lcom/google/android/exoplayer2/PlayerMessage;->sender:Lcom/google/android/exoplayer2/PlayerMessage$Sender;
 
     invoke-interface {v0, p0}, Lcom/google/android/exoplayer2/PlayerMessage$Sender;->sendMessage(Lcom/google/android/exoplayer2/PlayerMessage;)V
@@ -445,12 +476,14 @@
 .method public setDeleteAfterDelivery(Z)Lcom/google/android/exoplayer2/PlayerMessage;
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/PlayerMessage;->isSent:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/PlayerMessage;->deleteAfterDelivery:Z
 
     return-object p0
@@ -461,6 +494,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
     move-result-object p1
@@ -475,12 +509,14 @@
 .method public setLooper(Landroid/os/Looper;)Lcom/google/android/exoplayer2/PlayerMessage;
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/PlayerMessage;->isSent:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/PlayerMessage;->looper:Landroid/os/Looper;
 
     return-object p0
@@ -493,12 +529,14 @@
         .end annotation
     .end param
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/PlayerMessage;->isSent:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/PlayerMessage;->payload:Ljava/lang/Object;
 
     return-object p0
@@ -590,12 +628,14 @@
 .method public setType(I)Lcom/google/android/exoplayer2/PlayerMessage;
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/PlayerMessage;->isSent:Z
 
     xor-int/lit8 v0, v0, 0x1
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/PlayerMessage;->type:I
 
     return-object p0

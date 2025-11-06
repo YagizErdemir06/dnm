@@ -1,4 +1,4 @@
-.class final Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;
+.class public final Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,39 +15,44 @@
 
 
 # static fields
-.field static final ADD:I = 0x1
+.field public static final ADD:I = 0x1
 
-.field static final MOVE:I = 0x8
+.field public static final MOVE:I = 0x8
 
-.field static final POOL_SIZE:I = 0x1e
+.field public static final POOL_SIZE:I = 0x1e
 
-.field static final REMOVE:I = 0x2
+.field public static final REMOVE:I = 0x2
 
-.field static final UPDATE:I = 0x4
+.field public static final UPDATE:I = 0x4
 
 
 # instance fields
-.field cmd:I
+.field public cmd:I
 
-.field itemCount:I
+.field public itemCount:I
 
-.field payload:Ljava/lang/Object;
+.field public payload:Ljava/lang/Object;
 
-.field positionStart:I
+.field public positionStart:I
 
 
 # direct methods
 .method public constructor <init>(IIILjava/lang/Object;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->cmd:I
 
+    .line 3
     iput p2, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->positionStart:I
 
+    .line 4
     iput p3, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->itemCount:I
 
+    .line 5
     iput-object p4, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->payload:Ljava/lang/Object;
 
     return-void
@@ -58,6 +63,7 @@
 .method public cmdToString()Ljava/lang/String;
     .locals 1
 
+    .line 1
     iget p0, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->cmd:I
 
     const/4 v0, 0x1
@@ -91,7 +97,7 @@
     return-object p0
 
     :cond_2
-    const-string/jumbo p0, "rm"
+    const-string p0, "rm"
 
     return-object p0
 
@@ -110,6 +116,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;
 
@@ -119,9 +126,11 @@
 
     return v2
 
+    .line 2
     :cond_1
     check-cast p1, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;
 
+    .line 3
     iget v1, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->cmd:I
 
     iget v3, p1, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->cmd:I
@@ -135,6 +144,7 @@
 
     if-ne v1, v3, :cond_3
 
+    .line 4
     iget v1, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->itemCount:I
 
     iget v3, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->positionStart:I
@@ -147,6 +157,7 @@
 
     if-ne v1, v0, :cond_3
 
+    .line 5
     iget v1, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->itemCount:I
 
     iget v3, p1, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->positionStart:I
@@ -161,6 +172,7 @@
 
     return v0
 
+    .line 6
     :cond_3
     iget v1, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->itemCount:I
 
@@ -170,6 +182,7 @@
 
     return v2
 
+    .line 7
     :cond_4
     iget v1, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->positionStart:I
 
@@ -179,11 +192,13 @@
 
     return v2
 
+    .line 8
     :cond_5
     iget-object p0, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->payload:Ljava/lang/Object;
 
     if-eqz p0, :cond_6
 
+    .line 9
     iget-object p1, p1, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->payload:Ljava/lang/Object;
 
     invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -194,6 +209,7 @@
 
     return v2
 
+    .line 10
     :cond_6
     iget-object p0, p1, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->payload:Ljava/lang/Object;
 
@@ -208,16 +224,19 @@
 .method public hashCode()I
     .locals 2
 
+    .line 1
     iget v0, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->cmd:I
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 2
     iget v1, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->positionStart:I
 
     add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 3
     iget p0, p0, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->itemCount:I
 
     add-int/2addr v0, p0
@@ -228,6 +247,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -246,6 +266,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 2
     invoke-virtual {p0}, Landroidx/recyclerview/widget/AdapterHelper$UpdateOp;->cmdToString()Ljava/lang/String;
 
     move-result-object v1

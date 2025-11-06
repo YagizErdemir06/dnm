@@ -1,4 +1,4 @@
-.class Landroidx/recyclerview/widget/DiffUtil$CenteredArray;
+.class public Landroidx/recyclerview/widget/DiffUtil$CenteredArray;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -24,12 +24,15 @@
 .method public constructor <init>(I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-array p1, p1, [I
 
     iput-object p1, p0, Landroidx/recyclerview/widget/DiffUtil$CenteredArray;->mData:[I
 
+    .line 3
     array-length p1, p1
 
     div-int/lit8 p1, p1, 0x2
@@ -44,6 +47,7 @@
 .method public backingData()[I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/DiffUtil$CenteredArray;->mData:[I
 
     return-object p0
@@ -52,6 +56,7 @@
 .method public fill(I)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/DiffUtil$CenteredArray;->mData:[I
 
     invoke-static {p0, p1}, Ljava/util/Arrays;->fill([II)V
@@ -62,6 +67,7 @@
 .method public get(I)I
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/DiffUtil$CenteredArray;->mData:[I
 
     iget p0, p0, Landroidx/recyclerview/widget/DiffUtil$CenteredArray;->mMid:I
@@ -76,6 +82,7 @@
 .method public set(II)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/DiffUtil$CenteredArray;->mData:[I
 
     iget p0, p0, Landroidx/recyclerview/widget/DiffUtil$CenteredArray;->mMid:I

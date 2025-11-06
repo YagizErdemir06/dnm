@@ -4,6 +4,12 @@
 
 
 # annotations
+.annotation build Ld/d/a/x6/d;
+    ignore = false
+    key = "!isSupportThemeCV"
+    type = 0x0
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Lcom/android/camera/ui/DragLayout;
 .end annotation
@@ -13,17 +19,11 @@
     name = "e"
 .end annotation
 
-.annotation build Lh7/d;
-    ignore = false
-    key = "!isSupportThemeCV"
-    type = 0x0
-.end annotation
-
 
 # instance fields
-.field protected mAlphaThreshold:F
+.field public mAlphaThreshold:F
 
-.field protected mBgAlphaRange:Landroid/util/Range;
+.field public mBgAlphaRange:Landroid/util/Range;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/Range<",
@@ -33,9 +33,9 @@
     .end annotation
 .end field
 
-.field protected mBottomMargin:I
+.field public mBottomMargin:I
 
-.field protected mCornerRadiusRange:Landroid/util/Range;
+.field public mCornerRadiusRange:Landroid/util/Range;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/Range<",
@@ -45,7 +45,7 @@
     .end annotation
 .end field
 
-.field protected mDisappearAlphaRange:Landroid/util/Range;
+.field public mDisappearAlphaRange:Landroid/util/Range;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/Range<",
@@ -55,7 +55,7 @@
     .end annotation
 .end field
 
-.field protected mDisappearRange:Landroid/util/Range;
+.field public mDisappearRange:Landroid/util/Range;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/Range<",
@@ -65,7 +65,7 @@
     .end annotation
 .end field
 
-.field protected mDisplayAlphaRange:Landroid/util/Range;
+.field public mDisplayAlphaRange:Landroid/util/Range;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/Range<",
@@ -75,7 +75,7 @@
     .end annotation
 .end field
 
-.field protected mDisplayRange:Landroid/util/Range;
+.field public mDisplayRange:Landroid/util/Range;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/Range<",
@@ -85,26 +85,36 @@
     .end annotation
 .end field
 
-.field protected mDragThreshold:F
+.field public mDragThreshold:F
 
-.field protected mDuration:I
+.field public mDuration:I
 
-.field protected mSpringDistance:F
+.field public mSpringDistance:F
 
-.field protected mTotalDragDistance:F
+.field public mTotalDragDistance:F
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f0c0025
+    const v1, 0x7f0c001f
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -112,11 +122,12 @@
 
     iput v0, p0, Lcom/android/camera/ui/DragLayout$e;->mDuration:I
 
+    .line 3
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f070b24
+    const v1, 0x7f07095d
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -124,11 +135,12 @@
 
     iput v0, p0, Lcom/android/camera/ui/DragLayout$e;->mTotalDragDistance:F
 
+    .line 4
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f0703c8
+    const v1, 0x7f070392
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -136,6 +148,7 @@
 
     iput v0, p0, Lcom/android/camera/ui/DragLayout$e;->mDragThreshold:F
 
+    .line 5
     new-instance v0, Landroid/util/Range;
 
     const/4 v1, 0x0
@@ -148,7 +161,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f070b22
+    const v3, 0x7f07095b
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -162,6 +175,7 @@
 
     iput-object v0, p0, Lcom/android/camera/ui/DragLayout$e;->mDisappearRange:Landroid/util/Range;
 
+    .line 6
     new-instance v0, Landroid/util/Range;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -176,11 +190,12 @@
 
     move-result-object v2
 
+    .line 7
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    const v5, 0x7f070b23
+    const v5, 0x7f07095c
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -194,13 +209,14 @@
 
     iput-object v0, p0, Lcom/android/camera/ui/DragLayout$e;->mDisplayRange:Landroid/util/Range;
 
+    .line 8
     new-instance v0, Landroid/util/Range;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    const v4, 0x7f070b21
+    const v4, 0x7f07095a
 
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -214,6 +230,7 @@
 
     iput-object v0, p0, Lcom/android/camera/ui/DragLayout$e;->mCornerRadiusRange:Landroid/util/Range;
 
+    .line 9
     new-instance v0, Landroid/util/Range;
 
     const/high16 v2, 0x3f800000    # 1.0f
@@ -226,6 +243,7 @@
 
     iput-object v0, p0, Lcom/android/camera/ui/DragLayout$e;->mDisappearAlphaRange:Landroid/util/Range;
 
+    .line 10
     new-instance v0, Landroid/util/Range;
 
     const v4, 0x3dcccccd    # 0.1f
@@ -238,12 +256,14 @@
 
     iput-object v0, p0, Lcom/android/camera/ui/DragLayout$e;->mDisplayAlphaRange:Landroid/util/Range;
 
+    .line 11
     new-instance v0, Landroid/util/Range;
 
     invoke-direct {v0, v1, v2}, Landroid/util/Range;-><init>(Ljava/lang/Comparable;Ljava/lang/Comparable;)V
 
     iput-object v0, p0, Lcom/android/camera/ui/DragLayout$e;->mBgAlphaRange:Landroid/util/Range;
 
+    .line 12
     iget v0, p0, Lcom/android/camera/ui/DragLayout$e;->mTotalDragDistance:F
 
     const/high16 v1, 0x40000000    # 2.0f
@@ -252,6 +272,7 @@
 
     iput v0, p0, Lcom/android/camera/ui/DragLayout$e;->mSpringDistance:F
 
+    .line 13
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -268,78 +289,104 @@
 
 # virtual methods
 .method public calDragLayoutHeight(Landroid/content/Context;I)V
-    .locals 9
+    .locals 10
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "itemCount"
+        }
+    .end annotation
 
     if-nez p1, :cond_0
 
     return-void
 
+    .line 1
     :cond_0
-    invoke-static {p1}, Lp6/e;->b(Landroid/content/Context;)I
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f0702fe
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera/ui/DragLayout$e;->getPopupTopMargin(Landroid/content/Context;)I
 
     move-result v1
 
-    invoke-static {p2}, Lp6/e;->e(I)I
+    .line 3
+    invoke-static {p2}, Ld/d/a/u6/y4/e;->e(I)I
 
     move-result p2
 
-    invoke-static {}, Ly2/b;->k()Z
+    .line 4
+    invoke-static {}, Ld/d/a/n6/b;->k()Z
 
     move-result v2
 
+    const/4 v3, 0x0
+
     if-eqz v2, :cond_5
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lid/b;->n4()Z
+    invoke-virtual {v2}, Ld/k/a/b;->c4()Z
 
     move-result v2
 
     if-eqz v2, :cond_5
 
+    .line 5
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    const v3, 0x7f07030b
+    const v4, 0x7f070306
 
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v2
 
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    .line 6
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {v3}, Lm2/h1;->G0()I
-
-    move-result v3
-
-    invoke-static {}, Ly2/b;->F0()Z
+    invoke-virtual {v4}, Ld/d/a/l6/e/m/g1;->x0()I
 
     move-result v4
 
-    const v5, 0x7f070ab2
+    .line 7
+    invoke-static {}, Ld/d/a/n6/b;->F0()Z
 
-    const/4 v6, 0x1
+    move-result v5
 
-    const v7, 0x7f070ab3
+    const v6, 0x7f0708eb
 
-    if-eqz v4, :cond_3
+    const/4 v7, 0x1
 
-    if-ne v3, v6, :cond_1
+    const v8, 0x7f0708ec
 
+    if-eqz v5, :cond_3
+
+    if-ne v4, v7, :cond_1
+
+    .line 8
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    invoke-virtual {p1, v7}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+    invoke-virtual {p1, v8}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
     move-result p1
 
@@ -348,30 +395,32 @@
     goto :goto_0
 
     :cond_1
-    const/4 v4, 0x5
+    const/4 v5, 0x5
 
-    if-ne v3, v4, :cond_2
+    if-ne v4, v5, :cond_2
 
+    .line 9
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    invoke-virtual {p1, v7}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+    invoke-virtual {p1, v8}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
     move-result p1
 
     iput p1, p0, Lcom/android/camera/ui/DragLayout$e;->mBottomMargin:I
 
-    const/4 v3, 0x3
+    const/4 v4, 0x3
 
     goto :goto_0
 
+    .line 10
     :cond_2
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    invoke-virtual {p1, v5}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+    invoke-virtual {p1, v6}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
     move-result p1
 
@@ -379,26 +428,28 @@
 
     goto :goto_0
 
+    .line 11
     :cond_3
-    invoke-static {}, Ly2/b;->n()I
+    invoke-static {}, Ld/d/a/n6/b;->n()I
 
-    move-result v4
+    move-result v5
 
-    invoke-static {v3}, Ly2/b;->E(I)Landroid/graphics/Rect;
+    invoke-static {v4}, Ld/d/a/n6/b;->E(I)Landroid/graphics/Rect;
 
-    move-result-object v8
+    move-result-object v9
 
-    invoke-virtual {v8}, Landroid/graphics/Rect;->height()I
+    invoke-virtual {v9}, Landroid/graphics/Rect;->height()I
 
-    move-result v8
+    move-result v9
 
-    if-le v4, v8, :cond_4
+    if-le v5, v9, :cond_4
 
+    .line 12
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    invoke-virtual {p1, v7}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+    invoke-virtual {p1, v8}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
     move-result p1
 
@@ -406,39 +457,41 @@
 
     goto :goto_0
 
+    .line 13
     :cond_4
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    invoke-virtual {p1, v5}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+    invoke-virtual {p1, v6}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
     move-result p1
 
     iput p1, p0, Lcom/android/camera/ui/DragLayout$e;->mBottomMargin:I
 
+    .line 14
     :goto_0
     iget p1, p0, Lcom/android/camera/ui/DragLayout$e;->mBottomMargin:I
 
-    invoke-static {}, Ly2/b;->n()I
+    invoke-static {}, Ld/d/a/n6/b;->n()I
 
-    move-result v4
+    move-result v5
 
-    invoke-static {v3}, Ly2/b;->E(I)Landroid/graphics/Rect;
+    invoke-static {v4}, Ld/d/a/n6/b;->E(I)Landroid/graphics/Rect;
 
-    move-result-object v3
+    move-result-object v4
 
-    iget v3, v3, Landroid/graphics/Rect;->bottom:I
+    iget v4, v4, Landroid/graphics/Rect;->bottom:I
 
-    sub-int/2addr v4, v3
+    sub-int/2addr v5, v4
 
-    add-int/2addr p1, v4
+    add-int/2addr p1, v5
 
     iput p1, p0, Lcom/android/camera/ui/DragLayout$e;->mBottomMargin:I
 
     mul-int/2addr v0, p2
 
-    sub-int/2addr p2, v6
+    sub-int/2addr p2, v7
 
     mul-int/2addr v2, p2
 
@@ -450,7 +503,8 @@
 
     add-int/2addr v0, p1
 
-    invoke-static {}, Ly2/b;->H()I
+    .line 15
+    invoke-static {}, Ld/d/a/n6/b;->H()I
 
     move-result p1
 
@@ -460,6 +514,7 @@
 
     iput p1, p0, Lcom/android/camera/ui/DragLayout$e;->mTotalDragDistance:F
 
+    .line 16
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -476,9 +531,7 @@
 
     move-result-object p0
 
-    const/4 p1, 0x0
-
-    new-array p1, p1, [Ljava/lang/Object;
+    new-array p1, v3, [Ljava/lang/Object;
 
     const-string p2, "DragLayout"
 
@@ -486,22 +539,38 @@
 
     goto :goto_1
 
+    .line 17
     :cond_5
-    invoke-static {}, Ly2/b;->X()I
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ld/d/a/l6/e/m/g1;->x0()I
+
+    move-result v1
+
+    invoke-static {p1, v1, v3}, Ld/d/a/n6/b;->V(Landroid/content/Context;IZ)I
 
     move-result p1
 
+    .line 18
+    invoke-static {}, Ld/d/a/n6/b;->X()I
+
+    move-result v1
+
+    add-int/2addr v0, p1
+
     mul-int/2addr v0, p2
 
-    add-int/2addr p1, v0
+    add-int/2addr v1, v0
 
-    invoke-static {}, Ly2/b;->H()I
+    invoke-static {}, Ld/d/a/n6/b;->H()I
 
-    move-result p2
+    move-result p1
 
-    sub-int/2addr p1, p2
+    sub-int/2addr v1, p1
 
-    int-to-float p1, p1
+    int-to-float p1, v1
 
     iput p1, p0, Lcom/android/camera/ui/DragLayout$e;->mTotalDragDistance:F
 
@@ -520,6 +589,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera/ui/DragLayout$e;->mBgAlphaRange:Landroid/util/Range;
 
     return-object p0
@@ -528,6 +598,7 @@
 .method public getBottomMargin()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera/ui/DragLayout$e;->mBottomMargin:I
 
     return p0
@@ -544,6 +615,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera/ui/DragLayout$e;->mCornerRadiusRange:Landroid/util/Range;
 
     return-object p0
@@ -560,6 +632,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera/ui/DragLayout$e;->mDisappearAlphaRange:Landroid/util/Range;
 
     return-object p0
@@ -568,6 +641,7 @@
 .method public getDisappearDistance()F
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera/ui/DragLayout$e;->mDisappearRange:Landroid/util/Range;
 
     invoke-virtual {v0}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
@@ -608,6 +682,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera/ui/DragLayout$e;->mDisappearRange:Landroid/util/Range;
 
     return-object p0
@@ -624,6 +699,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera/ui/DragLayout$e;->mDisplayAlphaRange:Landroid/util/Range;
 
     return-object p0
@@ -632,6 +708,7 @@
 .method public getDisplayDistance()F
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera/ui/DragLayout$e;->mDisplayRange:Landroid/util/Range;
 
     invoke-virtual {v0}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
@@ -672,6 +749,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera/ui/DragLayout$e;->mDisplayRange:Landroid/util/Range;
 
     return-object p0
@@ -680,6 +758,7 @@
 .method public getDragThreshold()F
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera/ui/DragLayout$e;->mDragThreshold:F
 
     return p0
@@ -688,6 +767,7 @@
 .method public getDuration()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera/ui/DragLayout$e;->mDuration:I
 
     return p0
@@ -696,6 +776,7 @@
 .method public getMaxDragDistance()F
     .locals 1
 
+    .line 1
     iget v0, p0, Lcom/android/camera/ui/DragLayout$e;->mSpringDistance:F
 
     iget p0, p0, Lcom/android/camera/ui/DragLayout$e;->mTotalDragDistance:F
@@ -707,12 +788,21 @@
 
 .method public getPopupTopMargin(Landroid/content/Context;)I
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const p1, 0x7f070abd
+    const p1, 0x7f0708f6
 
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -724,6 +814,7 @@
 .method public getPromptAnimConfig()Lmiuix/animation/base/AnimConfig;
     .locals 2
 
+    .line 1
     new-instance p0, Lmiuix/animation/base/AnimConfig;
 
     invoke-direct {p0}, Lmiuix/animation/base/AnimConfig;-><init>()V
@@ -754,6 +845,7 @@
 .method public getSpringDistance()F
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera/ui/DragLayout$e;->mSpringDistance:F
 
     return p0
@@ -762,6 +854,7 @@
 .method public getTotalDragDistance()F
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera/ui/DragLayout$e;->mTotalDragDistance:F
 
     return p0

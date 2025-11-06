@@ -15,7 +15,7 @@
 
 
 # static fields
-.field public static final cancel_button_image_alpha:I = 0x7f0c0011
+.field public static final cancel_button_image_alpha:I = 0x7f0c000e
 
 
 # direct methods

@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Lists$Partition;
+.class public Lcom/google/common/collect/Lists$Partition;
 .super Ljava/util/AbstractList;
 .source "SourceFile"
 
@@ -26,7 +26,7 @@
 
 
 # instance fields
-.field final list:Ljava/util/List;
+.field public final list:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -35,7 +35,7 @@
     .end annotation
 .end field
 
-.field final size:I
+.field public final size:I
 
 
 # direct methods
@@ -49,10 +49,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/Lists$Partition;->list:Ljava/util/List;
 
+    .line 3
     iput p2, p0, Lcom/google/common/collect/Lists$Partition;->size:I
 
     return-void
@@ -119,6 +122,7 @@
 .method public isEmpty()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Lists$Partition;->list:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
@@ -131,6 +135,7 @@
 .method public size()I
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Lists$Partition;->list:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I

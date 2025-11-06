@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/Platform;
+.class public final Lcom/google/common/util/concurrent/Platform;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -16,6 +16,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,6 +39,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1, p0}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
 
     move-result p0

@@ -63,6 +63,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration$Builder;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration$Builder;-><init>()V
@@ -73,9 +74,8 @@
 
     sput-object v0, Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration;->UNSET:Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration;
 
-    new-instance v0, Lcom/google/android/exoplayer2/x1;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/x1;-><init>()V
+    .line 2
+    sget-object v0, Ld/j/a/b/p1;->a:Ld/j/a/b/p1;
 
     sput-object v0, Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration;->CREATOR:Lcom/google/android/exoplayer2/Bundleable$Creator;
 
@@ -153,21 +153,12 @@
     return-void
 .end method
 
-.method public static synthetic a(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration;->lambda$static$0(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 .method private static keyForField(I)Ljava/lang/String;
     .locals 1
 
     const/16 v0, 0x24
 
+    .line 1
     invoke-static {p0, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
     move-result-object p0
@@ -175,25 +166,29 @@
     return-object p0
 .end method
 
-.method private static synthetic lambda$static$0(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration;
+.method public static synthetic lambda$static$0(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration;
     .locals 11
 
+    .line 1
     new-instance v9, Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration;
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-static {v0}, Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration;->keyForField(I)Ljava/lang/String;
 
     move-result-object v0
 
     const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 3
     invoke-virtual {p0, v0, v1, v2}, Landroid/os/Bundle;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v3
 
     const/4 v0, 0x1
 
+    .line 4
     invoke-static {v0}, Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration;->keyForField(I)Ljava/lang/String;
 
     move-result-object v0
@@ -204,6 +199,7 @@
 
     const/4 v0, 0x2
 
+    .line 5
     invoke-static {v0}, Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration;->keyForField(I)Ljava/lang/String;
 
     move-result-object v0
@@ -214,22 +210,26 @@
 
     const/4 v0, 0x3
 
+    .line 6
     invoke-static {v0}, Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration;->keyForField(I)Ljava/lang/String;
 
     move-result-object v0
 
     const v1, -0x800001
 
+    .line 7
     invoke-virtual {p0, v0, v1}, Landroid/os/Bundle;->getFloat(Ljava/lang/String;F)F
 
     move-result v10
 
     const/4 v0, 0x4
 
+    .line 8
     invoke-static {v0}, Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration;->keyForField(I)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 9
     invoke-virtual {p0, v0, v1}, Landroid/os/Bundle;->getFloat(Ljava/lang/String;F)F
 
     move-result p0
@@ -256,6 +256,7 @@
 .method public buildUpon()Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration$Builder;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration$Builder;
 
     const/4 v1, 0x0
@@ -278,6 +279,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration;
 
@@ -287,9 +289,11 @@
 
     return v2
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration;
 
+    .line 3
     iget-wide v3, p0, Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration;->targetOffsetMs:J
 
     iget-wide v5, p1, Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration;->targetOffsetMs:J
@@ -342,6 +346,7 @@
 .method public hashCode()I
     .locals 7
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration;->targetOffsetMs:J
 
     const/16 v2, 0x20
@@ -354,6 +359,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 2
     iget-wide v3, p0, Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration;->minOffsetMs:J
 
     ushr-long v5, v3, v2
@@ -366,6 +372,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 3
     iget-wide v3, p0, Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration;->maxOffsetMs:J
 
     ushr-long v1, v3, v2
@@ -378,6 +385,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 4
     iget v1, p0, Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration;->minPlaybackSpeed:F
 
     const/4 v2, 0x0
@@ -402,6 +410,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 5
     iget p0, p0, Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration;->maxPlaybackSpeed:F
 
     cmpl-float v1, p0, v2
@@ -421,12 +430,14 @@
 .method public toBundle()Landroid/os/Bundle;
     .locals 4
 
+    .line 1
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-static {v1}, Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -437,6 +448,7 @@
 
     const/4 v1, 0x1
 
+    .line 3
     invoke-static {v1}, Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -447,6 +459,7 @@
 
     const/4 v1, 0x2
 
+    .line 4
     invoke-static {v1}, Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -457,6 +470,7 @@
 
     const/4 v1, 0x3
 
+    .line 5
     invoke-static {v1}, Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -467,6 +481,7 @@
 
     const/4 v1, 0x4
 
+    .line 6
     invoke-static {v1}, Lcom/google/android/exoplayer2/MediaItem$LiveConfiguration;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1

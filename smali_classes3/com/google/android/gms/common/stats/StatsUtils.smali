@@ -36,6 +36,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v0
@@ -54,17 +55,19 @@
 
     or-long/2addr v0, v2
 
+    .line 2
     invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object p0
 
-    const/4 v0, 0x1
-
+    .line 3
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v1
+    move-result v0
 
-    if-eq v0, v1, :cond_0
+    const/4 v1, 0x1
+
+    if-eq v1, v0, :cond_0
 
     goto :goto_0
 

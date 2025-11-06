@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/Collections2$OrderedPermutationCollection;
+.class public final Lcom/google/common/collect/Collections2$OrderedPermutationCollection;
 .super Ljava/util/AbstractCollection;
 .source "SourceFile"
 
@@ -26,7 +26,7 @@
 
 
 # instance fields
-.field final comparator:Ljava/util/Comparator;
+.field public final comparator:Ljava/util/Comparator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Comparator<",
@@ -35,7 +35,7 @@
     .end annotation
 .end field
 
-.field final inputList:Lcom/google/common/collect/ImmutableList;
+.field public final inputList:Lcom/google/common/collect/ImmutableList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/ImmutableList<",
@@ -44,7 +44,7 @@
     .end annotation
 .end field
 
-.field final size:I
+.field public final size:I
 
 
 # direct methods
@@ -60,16 +60,20 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
+    .line 2
     invoke-static {p2, p1}, Lcom/google/common/collect/ImmutableList;->sortedCopyOf(Ljava/util/Comparator;Ljava/lang/Iterable;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/common/collect/Collections2$OrderedPermutationCollection;->inputList:Lcom/google/common/collect/ImmutableList;
 
+    .line 3
     iput-object p2, p0, Lcom/google/common/collect/Collections2$OrderedPermutationCollection;->comparator:Ljava/util/Comparator;
 
+    .line 4
     invoke-static {p1, p2}, Lcom/google/common/collect/Collections2$OrderedPermutationCollection;->calculateSize(Ljava/util/List;Ljava/util/Comparator;)I
 
     move-result p1
@@ -101,15 +105,17 @@
 
     move v3, v2
 
+    .line 1
     :goto_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v4
 
-    if-ge v1, v4, :cond_2
+    if-ge v1, v4, :cond_1
 
     add-int/lit8 v4, v1, -0x1
 
+    .line 2
     invoke-interface {p0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -122,8 +128,9 @@
 
     move-result v4
 
-    if-gez v4, :cond_1
+    if-gez v4, :cond_0
 
+    .line 3
     invoke-static {v1, v3}, Lcom/google/common/math/IntMath;->binomial(II)I
 
     move-result v3
@@ -132,23 +139,23 @@
 
     move-result v2
 
-    const v3, 0x7fffffff
-
-    if-ne v2, v3, :cond_0
-
-    return v3
-
-    :cond_0
     const/4 v3, 0x0
 
-    :cond_1
+    const v4, 0x7fffffff
+
+    if-ne v2, v4, :cond_0
+
+    return v4
+
+    :cond_0
     add-int/lit8 v1, v1, 0x1
 
     add-int/2addr v3, v0
 
     goto :goto_0
 
-    :cond_2
+    .line 4
+    :cond_1
     invoke-static {v1, v3}, Lcom/google/common/math/IntMath;->binomial(II)I
 
     move-result p0
@@ -169,12 +176,15 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Ljava/util/List;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Ljava/util/List;
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/collect/Collections2$OrderedPermutationCollection;->inputList:Lcom/google/common/collect/ImmutableList;
 
     invoke-static {p0, p1}, Lcom/google/common/collect/Collections2;->access$000(Ljava/util/List;Ljava/util/List;)Z
@@ -208,6 +218,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/Collections2$OrderedPermutationIterator;
 
     iget-object v1, p0, Lcom/google/common/collect/Collections2$OrderedPermutationCollection;->inputList:Lcom/google/common/collect/ImmutableList;
@@ -222,6 +233,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/collect/Collections2$OrderedPermutationCollection;->size:I
 
     return p0
@@ -230,6 +242,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Collections2$OrderedPermutationCollection;->inputList:Lcom/google/common/collect/ImmutableList;
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

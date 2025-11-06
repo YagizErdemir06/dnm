@@ -58,6 +58,7 @@
 
     const/16 v0, 0x9c4
 
+    .line 1
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -227,6 +228,7 @@
         .end annotation
     .end param
 
+    .line 1
     check-cast p1, Lcom/bumptech/glide/load/model/GlideUrl;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/load/model/stream/HttpGlideUrlLoader;->handles(Lcom/bumptech/glide/load/model/GlideUrl;)Z

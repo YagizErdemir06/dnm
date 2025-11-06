@@ -7,6 +7,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -15,6 +16,7 @@
 .method public static getScreenHeight()I
     .locals 2
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/milab/videosdk/XmsContext;->getInstance()Lcom/xiaomi/milab/videosdk/XmsContext;
 
     move-result-object v0
@@ -31,6 +33,7 @@
 
     move-result-object v0
 
+    .line 2
     iget v1, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
     iget v0, v0, Landroid/util/DisplayMetrics;->heightPixels:I
@@ -45,6 +48,7 @@
 .method public static getScreenWidth()I
     .locals 2
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/milab/videosdk/XmsContext;->getInstance()Lcom/xiaomi/milab/videosdk/XmsContext;
 
     move-result-object v0
@@ -61,6 +65,7 @@
 
     move-result-object v0
 
+    .line 2
     iget v1, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
     iget v0, v0, Landroid/util/DisplayMetrics;->heightPixels:I

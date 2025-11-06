@@ -3,11 +3,9 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmiuix/appcompat/app/y;
-.implements Luo/f;
-.implements Luo/e;
-.implements Lyr/a;
-.implements Ljp/c;
+.implements Lk/b/d/n;
+.implements Lk/b/d/s/g;
+.implements Lk/b/d/s/f;
 
 
 # annotations
@@ -24,35 +22,20 @@
     }
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Landroidx/fragment/app/FragmentActivity;",
-        "Lmiuix/appcompat/app/y;",
-        "Luo/f;",
-        "Luo/e;",
-        "Lyr/a<",
-        "Landroid/app/Activity;",
-        ">;",
-        "Ljp/c;"
-    }
-.end annotation
-
 
 # instance fields
-.field public a:Lmp/s;
-
-.field public b:Lmiuix/appcompat/app/t;
-
-.field public c:I
+.field private c:Lk/b/d/l;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 4
 
+    .line 1
     invoke-direct {p0}, Landroidx/fragment/app/FragmentActivity;-><init>()V
 
-    new-instance v0, Lmiuix/appcompat/app/t;
+    .line 2
+    new-instance v0, Lk/b/d/l;
 
     new-instance v1, Lmiuix/appcompat/app/AppCompatActivity$b;
 
@@ -64,50 +47,17 @@
 
     invoke-direct {v3, p0, v2}, Lmiuix/appcompat/app/AppCompatActivity$c;-><init>(Lmiuix/appcompat/app/AppCompatActivity;Lmiuix/appcompat/app/AppCompatActivity$a;)V
 
-    invoke-direct {v0, p0, v1, v3}, Lmiuix/appcompat/app/t;-><init>(Lmiuix/appcompat/app/AppCompatActivity;Lmiuix/appcompat/app/e;Luo/j;)V
+    invoke-direct {v0, p0, v1, v3}, Lk/b/d/l;-><init>(Lmiuix/appcompat/app/AppCompatActivity;Lk/b/d/k;Lk/b/d/s/k;)V
 
-    iput-object v0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    return-void
-.end method
-
-.method public static synthetic B6(Lmiuix/appcompat/app/AppCompatActivity;Landroid/content/res/Configuration;)V
-    .locals 0
-
-    invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    iput-object v0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
     return-void
 .end method
 
-.method public static synthetic F7(Lmiuix/appcompat/app/AppCompatActivity;ILandroid/view/MenuItem;)Z
+.method public static synthetic F4(Lmiuix/appcompat/app/AppCompatActivity;I)Landroid/view/View;
     .locals 0
 
-    invoke-super {p0, p1, p2}, Landroidx/fragment/app/FragmentActivity;->onMenuItemSelected(ILandroid/view/MenuItem;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static synthetic G6(Lmiuix/appcompat/app/AppCompatActivity;Landroid/os/Bundle;)V
-    .locals 0
-
-    invoke-super {p0, p1}, Landroidx/activity/ComponentActivity;->onSaveInstanceState(Landroid/os/Bundle;)V
-
-    return-void
-.end method
-
-.method public static synthetic I7(Lmiuix/appcompat/app/AppCompatActivity;ILandroid/view/Menu;)V
-    .locals 0
-
-    invoke-super {p0, p1, p2}, Landroidx/fragment/app/FragmentActivity;->onPanelClosed(ILandroid/view/Menu;)V
-
-    return-void
-.end method
-
-.method public static synthetic P7(Lmiuix/appcompat/app/AppCompatActivity;I)Landroid/view/View;
-    .locals 0
-
+    .line 1
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreatePanelView(I)Landroid/view/View;
 
     move-result-object p0
@@ -115,9 +65,10 @@
     return-object p0
 .end method
 
-.method public static synthetic Q7(Lmiuix/appcompat/app/AppCompatActivity;ILandroid/view/Menu;)Z
+.method public static synthetic Q4(Lmiuix/appcompat/app/AppCompatActivity;ILandroid/view/Menu;)Z
     .locals 0
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroidx/fragment/app/FragmentActivity;->onCreatePanelMenu(ILandroid/view/Menu;)Z
 
     move-result p0
@@ -125,25 +76,19 @@
     return p0
 .end method
 
-.method public static synthetic Y6(Lmiuix/appcompat/app/AppCompatActivity;Landroid/os/Bundle;)V
+.method public static synthetic R3(Lmiuix/appcompat/app/AppCompatActivity;Landroid/content/res/Configuration;)V
     .locals 0
 
-    invoke-super {p0, p1}, Landroid/app/Activity;->onRestoreInstanceState(Landroid/os/Bundle;)V
+    .line 1
+    invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     return-void
 .end method
 
-.method public static synthetic a6(Lmiuix/appcompat/app/AppCompatActivity;)V
+.method public static synthetic T4(Lmiuix/appcompat/app/AppCompatActivity;ILandroid/view/View;Landroid/view/Menu;)Z
     .locals 0
 
-    invoke-direct {p0}, Lmiuix/appcompat/app/AppCompatActivity;->vb()V
-
-    return-void
-.end method
-
-.method public static synthetic a8(Lmiuix/appcompat/app/AppCompatActivity;ILandroid/view/View;Landroid/view/Menu;)Z
-    .locals 0
-
+    .line 1
     invoke-super {p0, p1, p2, p3}, Landroidx/fragment/app/FragmentActivity;->onPreparePanel(ILandroid/view/View;Landroid/view/Menu;)Z
 
     move-result p0
@@ -151,519 +96,285 @@
     return p0
 .end method
 
-.method public static synthetic n7(Lmiuix/appcompat/app/AppCompatActivity;Landroid/os/Bundle;)V
+.method public static synthetic Y4(Lmiuix/appcompat/app/AppCompatActivity;)V
     .locals 0
 
+    .line 1
+    invoke-super {p0}, Landroidx/activity/ComponentActivity;->onBackPressed()V
+
+    return-void
+.end method
+
+.method public static synthetic Z3(Lmiuix/appcompat/app/AppCompatActivity;Landroid/os/Bundle;)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1}, Landroidx/activity/ComponentActivity;->onSaveInstanceState(Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public static synthetic d4(Lmiuix/appcompat/app/AppCompatActivity;Landroid/os/Bundle;)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1}, Landroid/app/Activity;->onRestoreInstanceState(Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public static synthetic k4(Lmiuix/appcompat/app/AppCompatActivity;Landroid/os/Bundle;)V
+    .locals 0
+
+    .line 1
     invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
 
     return-void
 .end method
 
-.method public static synthetic v7(Lmiuix/appcompat/app/AppCompatActivity;)V
+.method public static synthetic l4(Lmiuix/appcompat/app/AppCompatActivity;)V
     .locals 0
 
+    .line 1
     invoke-super {p0}, Landroidx/fragment/app/FragmentActivity;->onPostResume()V
 
     return-void
 .end method
 
-.method private synthetic vb()V
-    .locals 2
-
-    invoke-virtual {p0}, Landroid/view/ContextThemeWrapper;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    sget v1, Lso/b$j;->search_mode_stub:I
-
-    invoke-virtual {p0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    iget p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:I
-
-    invoke-static {v0, v1, p0}, Lcp/h;->c(Landroid/content/res/Resources;Landroid/view/View;I)V
-
-    return-void
-.end method
-
-.method public static synthetic z7(Lmiuix/appcompat/app/AppCompatActivity;)V
+.method public static synthetic o4(Lmiuix/appcompat/app/AppCompatActivity;)V
     .locals 0
 
+    .line 1
     invoke-super {p0}, Landroidx/fragment/app/FragmentActivity;->onStop()V
 
     return-void
 .end method
 
+.method public static synthetic s4(Lmiuix/appcompat/app/AppCompatActivity;ILandroid/view/MenuItem;)Z
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1, p2}, Landroidx/fragment/app/FragmentActivity;->onMenuItemSelected(ILandroid/view/MenuItem;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
 
 # virtual methods
-.method public C0(I)Z
+.method public C5()I
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/c;->C0(I)Z
+    invoke-virtual {p0}, Lk/b/d/l;->R()I
 
     move-result p0
 
     return p0
 .end method
 
-.method public Ce(Luo/h;)V
+.method public E0()Z
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/t;->O0(Luo/h;)V
-
-    return-void
-.end method
-
-.method public E8()V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/app/t;->g0()V
-
-    return-void
-.end method
-
-.method public Eb(Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public Ff()V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Lmiuix/appcompat/app/AppCompatActivity;->Kf(Z)V
-
-    return-void
-.end method
-
-.method public G0(Ljp/a;)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/t;->G0(Ljp/a;)V
-
-    return-void
-.end method
-
-.method public Gc(I)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/t;->H0(I)V
-
-    return-void
-.end method
-
-.method public H(Landroid/graphics/Rect;)V
-    .locals 1
-
-    iget-object v0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {v0, p1}, Lmiuix/appcompat/app/t;->H(Landroid/graphics/Rect;)V
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/AppCompatActivity;->Pg(Landroid/graphics/Rect;)V
-
-    return-void
-.end method
-
-.method public Ib(Z)Z
-    .locals 0
-
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public Id(Landroid/view/View;Landroid/view/ViewGroup;)V
-    .locals 0
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0, p1, p2}, Lmiuix/appcompat/app/c;->O(Landroid/view/View;Landroid/view/ViewGroup;)V
-
-    return-void
-.end method
-
-.method public Ig()V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/app/c;->q()V
-
-    return-void
-.end method
-
-.method public J9()Landroid/app/Activity;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public K4([I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public Kf(Z)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/t;->U0(Z)V
-
-    return-void
-.end method
-
-.method public L5(Landroid/content/res/Configuration;Lzr/e;Z)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0, p1, p2, p3}, Lmiuix/appcompat/app/t;->L5(Landroid/content/res/Configuration;Lzr/e;Z)V
-
-    return-void
-.end method
-
-.method public Lc(Z)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/t;->L0(Z)V
-
-    return-void
-.end method
-
-.method public M9()Lmp/s;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->a:Lmp/s;
-
-    return-object p0
-.end method
-
-.method public Mb()V
-    .locals 0
-
-    invoke-super {p0}, Landroid/app/Activity;->finish()V
-
-    return-void
-.end method
-
-.method public Oa()V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/app/t;->q0()V
-
-    return-void
-.end method
-
-.method public Oc(Z)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/c;->D(Z)V
-
-    return-void
-.end method
-
-.method public Od(Z)V
-    .locals 0
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/c;->g(Z)V
-
-    return-void
-.end method
-
-.method public Pf()V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/app/t;->V0()V
-
-    return-void
-.end method
-
-.method public Pg(Landroid/graphics/Rect;)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/c;->Pg(Landroid/graphics/Rect;)V
-
-    return-void
-.end method
-
-.method public Q9()I
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->a:Lmp/s;
-
-    if-eqz p0, :cond_0
-
-    iget p0, p0, Lmp/s;->f:I
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public S()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public Sa()V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/app/t;->r0()V
-
-    return-void
-.end method
-
-.method public Se(Lmiuix/appcompat/app/e0;)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/t;->P0(Lmiuix/appcompat/app/e0;)V
-
-    return-void
-.end method
-
-.method public U2()V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/app/t;->f0()V
-
-    return-void
-.end method
-
-.method public Ua()Z
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/app/c;->u()Z
+    invoke-virtual {p0}, Lk/b/d/l;->b0()Z
 
     move-result p0
 
     return p0
 .end method
 
-.method public Uf()V
+.method public E7()V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0}, Lmiuix/appcompat/app/t;->W0()V
+    invoke-virtual {p0}, Lk/b/d/i;->E()V
 
     return-void
 .end method
 
-.method public V3()Ljava/lang/String;
+.method public E9(Z)V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0}, Lmiuix/appcompat/app/t;->i0()Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lk/b/d/i;->B(Z)V
+
+    return-void
+.end method
+
+.method public N5()Landroid/view/View;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
+
+    invoke-virtual {p0}, Lk/b/d/l;->S()Landroid/view/View;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public V4()I
+.method public N6(I)V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0}, Lmiuix/appcompat/app/c;->V4()I
+    invoke-virtual {p0, p1}, Lk/b/d/l;->n0(I)V
+
+    return-void
+.end method
+
+.method public P3(Z)V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
+
+    invoke-virtual {p0, p1}, Lk/b/d/l;->p0(Z)V
+
+    return-void
+.end method
+
+.method public Q5()V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
+
+    invoke-virtual {p0}, Lk/b/d/l;->T()V
+
+    return-void
+.end method
+
+.method public Q6(Lk/b/d/s/j;)V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
+
+    invoke-virtual {p0, p1}, Lk/b/d/l;->r0(Lk/b/d/s/j;)V
+
+    return-void
+.end method
+
+.method public R5()V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
+
+    invoke-virtual {p0}, Lk/b/d/l;->U()V
+
+    return-void
+.end method
+
+.method public S2()Ljava/lang/String;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
+
+    invoke-virtual {p0}, Lk/b/d/l;->P()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public T6(Lk/b/d/s/i;)V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
+
+    invoke-virtual {p0, p1}, Lk/b/d/l;->s0(Lk/b/d/s/i;)V
+
+    return-void
+.end method
+
+.method public U5(Z)V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
+
+    invoke-virtual {p0, p1}, Lk/b/d/l;->o0(Z)V
+
+    return-void
+.end method
+
+.method public a4()Z
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
+
+    invoke-virtual {p0}, Lk/b/d/l;->a0()Z
 
     move-result p0
 
     return p0
 .end method
 
-.method public Vf(I)V
-    .locals 0
-    .annotation build Landroidx/annotation/VisibleForTesting;
-    .end annotation
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/t;->X0(I)V
-
-    return-void
-.end method
-
-.method public Wb()I
+.method public a6()Z
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0}, Lmiuix/appcompat/app/c;->Wb()I
+    invoke-virtual {p0}, Lk/b/d/l;->Z()Z
 
     move-result p0
 
     return p0
-.end method
-
-.method public Wc()I
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/app/t;->Wc()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public X(Landroid/content/res/Configuration;Lzr/e;Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public Xc()V
-    .locals 0
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/app/c;->N()V
-
-    return-void
-.end method
-
-.method public Zf(I)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/c;->Zf(I)V
-
-    return-void
 .end method
 
 .method public addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0, p1, p2}, Lmiuix/appcompat/app/t;->W(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    return-void
-.end method
-
-.method public bd(I)V
-    .locals 0
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/c;->G(I)V
+    invoke-virtual {p0, p1, p2}, Lk/b/d/l;->H(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
 .end method
 
-.method public bindViewWithContentInset(Landroid/view/View;)V
+.method public b7(Lk/b/d/r;)V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/c;->bindViewWithContentInset(Landroid/view/View;)V
+    invoke-virtual {p0, p1}, Lk/b/d/l;->t0(Lk/b/d/r;)V
 
     return-void
 .end method
 
-.method public c1()Z
+.method public c8(Landroid/view/View;Landroid/view/ViewGroup;)V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0}, Lmiuix/appcompat/app/t;->c1()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public c7()Z
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/app/t;->w0()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public d4(I)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/t;->d4(I)V
+    invoke-virtual {p0, p1, p2}, Lk/b/d/i;->F(Landroid/view/View;Landroid/view/ViewGroup;)V
 
     return-void
 .end method
 
-.method public d7()Z
+.method public e6(Z)V
     .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/app/c;->d7()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public dc()V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/app/t;->E0()V
 
     return-void
 .end method
@@ -671,148 +382,61 @@
 .method public finish()V
     .locals 1
 
-    iget-object v0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {v0}, Lmiuix/appcompat/app/t;->S0()Z
+    invoke-virtual {v0}, Lk/b/d/l;->v0()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Lmiuix/appcompat/app/AppCompatActivity;->Mb()V
+    .line 2
+    invoke-virtual {p0}, Lmiuix/appcompat/app/AppCompatActivity;->m6()V
 
     :cond_0
     return-void
 .end method
 
-.method public g8(Landroid/content/res/Configuration;)V
+.method public g6(Z)Z
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    const/4 p0, 0x1
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/t;->Y(Landroid/content/res/Configuration;)V
-
-    return-void
-.end method
-
-.method public getExtraPaddingPolicy()Ljp/b;
-    .locals 0
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/app/c;->getExtraPaddingPolicy()Ljp/b;
-
-    move-result-object p0
-
-    return-object p0
+    return p0
 .end method
 
 .method public getMenuInflater()Landroid/view/MenuInflater;
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0}, Lmiuix/appcompat/app/c;->n()Landroid/view/MenuInflater;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public h9()Lmiuix/appcompat/app/ActionBar;
-    .locals 0
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/app/c;->getActionBar()Lmiuix/appcompat/app/ActionBar;
+    invoke-virtual {p0}, Lk/b/d/i;->p()Landroid/view/MenuInflater;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public he()V
+.method public h3()V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0}, Lmiuix/appcompat/app/c;->M()V
+    invoke-virtual {p0}, Lk/b/d/l;->K()V
 
     return-void
-.end method
-
-.method public bridge synthetic hg()Ljava/lang/Object;
-    .locals 0
-
-    invoke-virtual {p0}, Lmiuix/appcompat/app/AppCompatActivity;->J9()Landroid/app/Activity;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public hideOverflowMenu()V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/app/c;->r()V
-
-    return-void
-.end method
-
-.method public i4(Ljp/a;)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/t;->i4(Ljp/a;)V
-
-    return-void
-.end method
-
-.method public i6()Lzr/b;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/app/t;->i6()Lzr/b;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public i9()Z
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/app/t;->i9()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public ib()Z
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
 .end method
 
 .method public invalidateOptionsMenu()V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0}, Lmiuix/appcompat/app/t;->invalidateOptionsMenu()V
+    invoke-virtual {p0}, Lk/b/d/l;->d()V
 
     return-void
 .end method
@@ -820,9 +444,10 @@
 .method public isFinishing()Z
     .locals 1
 
-    iget-object v0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {v0}, Lmiuix/appcompat/app/t;->v0()Z
+    invoke-virtual {v0}, Lk/b/d/l;->Y()Z
 
     move-result v0
 
@@ -849,56 +474,83 @@
     return p0
 .end method
 
-.method public final l0(Z)V
+.method public j5()V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/t;->l0(Z)V
+    invoke-virtual {p0}, Lk/b/d/l;->O()V
 
     return-void
 .end method
 
-.method public m6()Landroid/graphics/Rect;
+.method public j7()I
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0}, Lmiuix/appcompat/app/t;->m6()Landroid/graphics/Rect;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public oa()V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Lmiuix/appcompat/app/AppCompatActivity;->ya(Z)V
-
-    return-void
-.end method
-
-.method public oc(I)Z
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/c;->requestWindowFeature(I)Z
+    invoke-virtual {p0}, Lk/b/d/i;->r()I
 
     move-result p0
 
     return p0
 .end method
 
+.method public m3()V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
+
+    invoke-virtual {p0}, Lk/b/d/l;->L()V
+
+    return-void
+.end method
+
+.method public m6()V
+    .locals 0
+
+    .line 1
+    invoke-super {p0}, Landroid/app/Activity;->finish()V
+
+    return-void
+.end method
+
+.method public n5()Lmiuix/appcompat/app/ActionBar;
+    .locals 0
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
+
+    invoke-virtual {p0}, Lk/b/d/i;->m()Lmiuix/appcompat/app/ActionBar;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public o7()V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
+
+    invoke-virtual {p0}, Lk/b/d/l;->x0()V
+
+    return-void
+.end method
+
 .method public onActionModeFinished(Landroid/view/ActionMode;)V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/c;->onActionModeFinished(Landroid/view/ActionMode;)V
+    invoke-virtual {p0, p1}, Lk/b/d/l;->onActionModeFinished(Landroid/view/ActionMode;)V
 
     return-void
 .end method
@@ -906,108 +558,47 @@
 .method public onActionModeStarted(Landroid/view/ActionMode;)V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/c;->onActionModeStarted(Landroid/view/ActionMode;)V
+    invoke-virtual {p0, p1}, Lk/b/d/l;->onActionModeStarted(Landroid/view/ActionMode;)V
+
+    return-void
+.end method
+
+.method public onBackPressed()V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
+
+    invoke-virtual {p0}, Lk/b/d/l;->f0()V
 
     return-void
 .end method
 
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
-    .locals 1
+    .locals 0
 
-    invoke-virtual {p0}, Landroid/view/ContextThemeWrapper;->getResources()Landroid/content/res/Resources;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lmiuix/appcompat/app/AppCompatActivity;->z8(Landroid/content/res/Configuration;)V
-
-    iget-object v0, p0, Lmiuix/appcompat/app/AppCompatActivity;->a:Lmp/s;
-
-    invoke-virtual {v0}, Lmp/s;->a()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lmiuix/appcompat/app/AppCompatActivity;->a:Lmp/s;
-
-    invoke-static {v0}, Lmp/d;->w(Lmp/s;)V
-
-    :cond_0
-    iget-object v0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {v0, p1}, Lmiuix/appcompat/app/t;->onConfigurationChanged(Landroid/content/res/Configuration;)V
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/AppCompatActivity;->g8(Landroid/content/res/Configuration;)V
+    invoke-virtual {p0, p1}, Lk/b/d/l;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     return-void
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 2
+    .locals 0
     .param p1    # Landroid/os/Bundle;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
 
-    invoke-static {p0}, Lmp/d;->v(Landroid/content/Context;)V
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    iget-object v0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/app/AppCompatActivity;->ib()Z
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lmiuix/appcompat/app/t;->Q0(Z)V
-
-    iget-object v0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {v0, p1}, Lmiuix/appcompat/app/t;->y(Landroid/os/Bundle;)V
-
-    const/4 p1, 0x0
-
-    const/4 v0, 0x1
-
-    invoke-static {p0, p1, v0}, Lmp/d;->k(Landroid/content/Context;Landroid/content/res/Configuration;Z)Lmp/s;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lmiuix/appcompat/app/AppCompatActivity;->a:Lmp/s;
-
-    invoke-static {p0}, Lmp/k;->u(Landroid/content/Context;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/16 p1, 0x10
-
-    goto :goto_0
-
-    :cond_0
-    const/16 p1, 0x1b
-
-    :goto_0
-    iput p1, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:I
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object p1
-
-    new-instance v0, Lmiuix/appcompat/app/r;
-
-    invoke-direct {v0, p0}, Lmiuix/appcompat/app/r;-><init>(Lmiuix/appcompat/app/AppCompatActivity;)V
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {p0, p1}, Lk/b/d/l;->w(Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -1015,9 +606,10 @@
 .method public onCreatePanelMenu(ILandroid/view/Menu;)Z
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0, p1, p2}, Lmiuix/appcompat/app/t;->onCreatePanelMenu(ILandroid/view/Menu;)Z
+    invoke-virtual {p0, p1, p2}, Lk/b/d/l;->onCreatePanelMenu(ILandroid/view/Menu;)Z
 
     move-result p0
 
@@ -1029,131 +621,14 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/t;->onCreatePanelView(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Lk/b/d/l;->onCreatePanelView(I)Landroid/view/View;
 
     move-result-object p0
 
     return-object p0
-.end method
-
-.method public onDestroy()V
-    .locals 1
-
-    iget-object v0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {v0}, Lmiuix/appcompat/app/c;->onDestroy()V
-
-    invoke-static {p0}, Lmp/d;->x(Landroid/content/Context;)V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lmiuix/appcompat/app/AppCompatActivity;->a:Lmp/s;
-
-    invoke-super {p0}, Landroidx/fragment/app/FragmentActivity;->onDestroy()V
-
-    return-void
-.end method
-
-.method public onKeyDown(ILandroid/view/KeyEvent;)Z
-    .locals 1
-
-    invoke-virtual {p0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
-
-    move-result-object v0
-
-    invoke-static {v0, p1, p2}, Lmiuix/appcompat/app/f0;->Kf(Landroidx/fragment/app/FragmentManager;ILandroid/view/KeyEvent;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    invoke-super {p0, p1, p2}, Landroid/app/Activity;->onKeyDown(ILandroid/view/KeyEvent;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public onKeyLongPress(ILandroid/view/KeyEvent;)Z
-    .locals 1
-
-    invoke-virtual {p0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
-
-    move-result-object v0
-
-    invoke-static {v0, p1, p2}, Lmiuix/appcompat/app/f0;->z9(Landroidx/fragment/app/FragmentManager;ILandroid/view/KeyEvent;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    invoke-super {p0, p1, p2}, Landroid/app/Activity;->onKeyLongPress(ILandroid/view/KeyEvent;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public onKeyMultiple(IILandroid/view/KeyEvent;)Z
-    .locals 1
-
-    invoke-virtual {p0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
-
-    move-result-object v0
-
-    invoke-static {v0, p1, p2, p3}, Lmiuix/appcompat/app/f0;->fg(Landroidx/fragment/app/FragmentManager;IILandroid/view/KeyEvent;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    invoke-super {p0, p1, p2, p3}, Landroid/app/Activity;->onKeyMultiple(IILandroid/view/KeyEvent;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public onKeyUp(ILandroid/view/KeyEvent;)Z
-    .locals 1
-
-    invoke-virtual {p0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
-
-    move-result-object v0
-
-    invoke-static {v0, p1, p2}, Lmiuix/appcompat/app/f0;->a8(Landroidx/fragment/app/FragmentManager;ILandroid/view/KeyEvent;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    invoke-super {p0, p1, p2}, Landroid/app/Activity;->onKeyUp(ILandroid/view/KeyEvent;)Z
-
-    move-result p0
-
-    return p0
 .end method
 
 .method public onMenuItemSelected(ILandroid/view/MenuItem;)Z
@@ -1163,35 +638,23 @@
         .end annotation
     .end param
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0, p1, p2}, Lmiuix/appcompat/app/t;->onMenuItemSelected(ILandroid/view/MenuItem;)Z
+    invoke-virtual {p0, p1, p2}, Lk/b/d/l;->onMenuItemSelected(ILandroid/view/MenuItem;)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method public onPanelClosed(ILandroid/view/Menu;)V
-    .locals 0
-    .param p2    # Landroid/view/Menu;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0, p1, p2}, Lmiuix/appcompat/app/t;->onPanelClosed(ILandroid/view/Menu;)V
-
-    return-void
-.end method
-
 .method public onPostResume()V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0}, Lmiuix/appcompat/app/t;->onPostResume()V
+    invoke-virtual {p0}, Lk/b/d/l;->b()V
 
     return-void
 .end method
@@ -1199,9 +662,10 @@
 .method public onPreparePanel(ILandroid/view/View;Landroid/view/Menu;)Z
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0, p1, p2, p3}, Lmiuix/appcompat/app/t;->onPreparePanel(ILandroid/view/View;Landroid/view/Menu;)Z
+    invoke-virtual {p0, p1, p2, p3}, Lk/b/d/l;->onPreparePanel(ILandroid/view/View;Landroid/view/Menu;)Z
 
     move-result p0
 
@@ -1211,9 +675,10 @@
 .method public onRestoreInstanceState(Landroid/os/Bundle;)V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/t;->B0(Landroid/os/Bundle;)V
+    invoke-virtual {p0, p1}, Lk/b/d/l;->g0(Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -1221,9 +686,10 @@
 .method public onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/t;->D0(Landroid/os/Bundle;)V
+    invoke-virtual {p0, p1}, Lk/b/d/l;->h0(Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -1231,9 +697,10 @@
 .method public onStop()V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0}, Lmiuix/appcompat/app/t;->onStop()V
+    invoke-virtual {p0}, Lk/b/d/l;->onStop()V
 
     return-void
 .end method
@@ -1241,11 +708,13 @@
 .method public onTitleChanged(Ljava/lang/CharSequence;I)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroid/app/Activity;->onTitleChanged(Ljava/lang/CharSequence;I)V
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 2
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/t;->R0(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, p1}, Lk/b/d/l;->u0(Ljava/lang/CharSequence;)V
 
     return-void
 .end method
@@ -1254,9 +723,9 @@
     .locals 0
 
     .line 2
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/t;->onWindowStartingActionMode(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
+    invoke-virtual {p0, p1}, Lk/b/d/l;->onWindowStartingActionMode(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
 
     move-result-object p0
 
@@ -1267,77 +736,57 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0, p1, p2}, Lmiuix/appcompat/app/c;->B(Landroid/view/ActionMode$Callback;I)Landroid/view/ActionMode;
+    invoke-virtual {p0, p1, p2}, Lk/b/d/i;->z(Landroid/view/ActionMode$Callback;I)Landroid/view/ActionMode;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public p8(I)V
+.method public p2()V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/t;->p8(I)V
+    invoke-virtual {p0}, Lk/b/d/l;->N()V
 
     return-void
 .end method
 
-.method public p9()I
+.method public q0()V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0}, Lmiuix/appcompat/app/t;->j0()I
+    invoke-virtual {p0}, Lk/b/d/l;->M()V
+
+    return-void
+.end method
+
+.method public q6(I)Z
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
+
+    invoke-virtual {p0, p1}, Lk/b/d/i;->g(I)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method public r9()I
-    .locals 0
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/app/c;->l()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public registerCoordinateScrollView(Landroid/view/View;)V
+.method public s6(Z)V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/c;->registerCoordinateScrollView(Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method public sd(Z)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/t;->I(Z)V
-
-    return-void
-.end method
-
-.method public setBottomMenuCustomView(Landroid/view/View;)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/t;->F0(Landroid/view/View;)V
+    invoke-virtual {p0, p1}, Lk/b/d/l;->l0(Z)V
 
     return-void
 .end method
@@ -1346,9 +795,9 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/t;->I0(I)V
+    invoke-virtual {p0, p1}, Lk/b/d/l;->i0(I)V
 
     return-void
 .end method
@@ -1357,9 +806,9 @@
     .locals 0
 
     .line 2
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/t;->J0(Landroid/view/View;)V
+    invoke-virtual {p0, p1}, Lk/b/d/l;->j0(Landroid/view/View;)V
 
     return-void
 .end method
@@ -1368,61 +817,9 @@
     .locals 0
 
     .line 3
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0, p1, p2}, Lmiuix/appcompat/app/t;->K0(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    return-void
-.end method
-
-.method public setExtraHorizontalPaddingEnable(Z)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/t;->setExtraHorizontalPaddingEnable(Z)V
-
-    return-void
-.end method
-
-.method public setExtraHorizontalPaddingInitEnable(Z)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/t;->setExtraHorizontalPaddingInitEnable(Z)V
-
-    return-void
-.end method
-
-.method public setExtraPaddingPolicy(Ljp/b;)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/t;->setExtraPaddingPolicy(Ljp/b;)V
-
-    return-void
-.end method
-
-.method public sf(Z)V
-    .locals 0
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/c;->K(Z)V
-
-    return-void
-.end method
-
-.method public showOverflowMenu()V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/app/c;->P()V
+    invoke-virtual {p0, p1, p2}, Lk/b/d/l;->k0(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
 .end method
@@ -1430,155 +827,45 @@
 .method public startActionMode(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/t;->startActionMode(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
+    invoke-virtual {p0, p1}, Lk/b/d/l;->startActionMode(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
 
     move-result-object p0
 
     return-object p0
-.end method
-
-.method public t4()V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/app/t;->c0()V
-
-    return-void
-.end method
-
-.method public tb(I)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/t;->tb(I)V
-
-    return-void
-.end method
-
-.method public u0()V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/app/t;->e0()V
-
-    return-void
-.end method
-
-.method public unregisterCoordinateScrollView(Landroid/view/View;)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/c;->unregisterCoordinateScrollView(Landroid/view/View;)V
-
-    return-void
 .end method
 
 .method public v6(Z)V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/t;->v6(Z)V
-
-    return-void
-.end method
-
-.method public x4()V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/app/t;->d0()V
+    invoke-virtual {p0, p1}, Lk/b/d/l;->m0(Z)V
 
     return-void
 .end method
 
-.method public xa(Z)V
+.method public y8(Z)V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/t;->xa(Z)V
+    invoke-virtual {p0, p1}, Lk/b/d/i;->l(Z)V
 
     return-void
 .end method
 
-.method public ya(Z)V
+.method public za(I)V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->c:Lk/b/d/l;
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/t;->o0(Z)V
-
-    return-void
-.end method
-
-.method public ye(Z)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/c;->J(Z)V
-
-    return-void
-.end method
-
-.method public z6()Z
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/app/t;->z6()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public z8(Landroid/content/res/Configuration;)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/t;->a0(Landroid/content/res/Configuration;)V
-
-    return-void
-.end method
-
-.method public z9()Landroid/view/View;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/app/t;->m0()Landroid/view/View;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public za()V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/app/t;->p0()V
-
-    return-void
-.end method
-
-.method public ze(Luo/i;)V
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/appcompat/app/AppCompatActivity;->b:Lmiuix/appcompat/app/t;
-
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/t;->N0(Luo/i;)V
+    invoke-virtual {p0, p1}, Lk/b/d/i;->D(I)V
 
     return-void
 .end method

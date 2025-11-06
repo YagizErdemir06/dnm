@@ -26,7 +26,7 @@
 
 
 # instance fields
-.field final mConfig:Landroidx/recyclerview/widget/AsyncDifferConfig;
+.field public final mConfig:Landroidx/recyclerview/widget/AsyncDifferConfig;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/recyclerview/widget/AsyncDifferConfig<",
@@ -57,9 +57,9 @@
     .end annotation
 .end field
 
-.field mMainThreadExecutor:Ljava/util/concurrent/Executor;
+.field public mMainThreadExecutor:Ljava/util/concurrent/Executor;
 
-.field mMaxScheduledGeneration:I
+.field public mMaxScheduledGeneration:I
 
 .field private mReadOnlyList:Ljava/util/List;
     .annotation build Landroidx/annotation/NonNull;
@@ -80,6 +80,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/recyclerview/widget/AsyncListDiffer$MainThreadExecutor;
 
     invoke-direct {v0}, Landroidx/recyclerview/widget/AsyncListDiffer$MainThreadExecutor;-><init>()V
@@ -216,6 +217,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/AsyncListDiffer;->mListeners:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -235,6 +237,7 @@
 
     check-cast v1, Landroidx/recyclerview/widget/AsyncListDiffer$ListListener;
 
+    .line 2
     iget-object v2, p0, Landroidx/recyclerview/widget/AsyncListDiffer;->mReadOnlyList:Ljava/util/List;
 
     invoke-interface {v1, p1, v2}, Landroidx/recyclerview/widget/AsyncListDiffer$ListListener;->onCurrentListChanged(Ljava/util/List;Ljava/util/List;)V
@@ -244,6 +247,7 @@
     :cond_0
     if-eqz p2, :cond_1
 
+    .line 3
     invoke-interface {p2}, Ljava/lang/Runnable;->run()V
 
     :cond_1
@@ -266,6 +270,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/AsyncListDiffer;->mListeners:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -286,6 +291,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/AsyncListDiffer;->mReadOnlyList:Ljava/util/List;
 
     return-object p0
@@ -316,20 +322,25 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/AsyncListDiffer;->mReadOnlyList:Ljava/util/List;
 
+    .line 2
     iput-object p1, p0, Landroidx/recyclerview/widget/AsyncListDiffer;->mList:Ljava/util/List;
 
+    .line 3
     invoke-static {p1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p1
 
     iput-object p1, p0, Landroidx/recyclerview/widget/AsyncListDiffer;->mReadOnlyList:Ljava/util/List;
 
+    .line 4
     iget-object p1, p0, Landroidx/recyclerview/widget/AsyncListDiffer;->mUpdateCallback:Landroidx/recyclerview/widget/ListUpdateCallback;
 
     invoke-virtual {p2, p1}, Landroidx/recyclerview/widget/DiffUtil$DiffResult;->dispatchUpdatesTo(Landroidx/recyclerview/widget/ListUpdateCallback;)V
 
+    .line 5
     invoke-direct {p0, v0, p3}, Landroidx/recyclerview/widget/AsyncListDiffer;->onCurrentListChanged(Ljava/util/List;Ljava/lang/Runnable;)V
 
     return-void
@@ -349,6 +360,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/AsyncListDiffer;->mListeners:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/tasks/zze;
+.class public final Lcom/google/android/gms/tasks/zze;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field final synthetic zza:Lcom/google/android/gms/tasks/Task;
+.field public final synthetic zza:Lcom/google/android/gms/tasks/Task;
 
-.field final synthetic zzb:Lcom/google/android/gms/tasks/zzf;
+.field public final synthetic zzb:Lcom/google/android/gms/tasks/zzf;
 
 
 # direct methods
@@ -30,6 +30,7 @@
 .method public final run()V
     .locals 3
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/android/gms/tasks/zze;->zzb:Lcom/google/android/gms/tasks/zzf;
 
@@ -56,12 +57,14 @@
 
     const-string v1, "Continuation returned null"
 
+    .line 2
     invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {p0, v0}, Lcom/google/android/gms/tasks/zzf;->onFailure(Ljava/lang/Exception;)V
 
     return-void
 
+    .line 3
     :cond_0
     sget-object v1, Lcom/google/android/gms/tasks/TaskExecutors;->zza:Ljava/util/concurrent/Executor;
 
@@ -71,10 +74,12 @@
 
     iget-object v2, p0, Lcom/google/android/gms/tasks/zze;->zzb:Lcom/google/android/gms/tasks/zzf;
 
+    .line 4
     invoke-virtual {v0, v1, v2}, Lcom/google/android/gms/tasks/Task;->addOnFailureListener(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/OnFailureListener;)Lcom/google/android/gms/tasks/Task;
 
     iget-object p0, p0, Lcom/google/android/gms/tasks/zze;->zzb:Lcom/google/android/gms/tasks/zzf;
 
+    .line 5
     invoke-virtual {v0, v1, p0}, Lcom/google/android/gms/tasks/Task;->addOnCanceledListener(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/OnCanceledListener;)Lcom/google/android/gms/tasks/Task;
 
     return-void
@@ -82,12 +87,14 @@
     :catch_0
     move-exception v0
 
+    .line 6
     iget-object p0, p0, Lcom/google/android/gms/tasks/zze;->zzb:Lcom/google/android/gms/tasks/zzf;
 
     invoke-static {p0}, Lcom/google/android/gms/tasks/zzf;->zzb(Lcom/google/android/gms/tasks/zzf;)Lcom/google/android/gms/tasks/zzw;
 
     move-result-object p0
 
+    .line 7
     invoke-virtual {p0, v0}, Lcom/google/android/gms/tasks/zzw;->zza(Ljava/lang/Exception;)V
 
     return-void
@@ -95,7 +102,8 @@
     :catch_1
     move-exception v0
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    .line 8
+    invoke-virtual {v0}, Ljava/lang/RuntimeException;->getCause()Ljava/lang/Throwable;
 
     move-result-object v1
 
@@ -109,7 +117,8 @@
 
     move-result-object p0
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    .line 9
+    invoke-virtual {v0}, Ljava/lang/RuntimeException;->getCause()Ljava/lang/Throwable;
 
     move-result-object v0
 
@@ -119,6 +128,7 @@
 
     return-void
 
+    .line 10
     :cond_1
     iget-object p0, p0, Lcom/google/android/gms/tasks/zze;->zzb:Lcom/google/android/gms/tasks/zzf;
 
@@ -126,6 +136,7 @@
 
     move-result-object p0
 
+    .line 11
     invoke-virtual {p0, v0}, Lcom/google/android/gms/tasks/zzw;->zza(Ljava/lang/Exception;)V
 
     return-void

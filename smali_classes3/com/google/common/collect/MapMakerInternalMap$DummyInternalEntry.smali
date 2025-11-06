@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/MapMakerInternalMap$DummyInternalEntry;
+.class public final Lcom/google/common/collect/MapMakerInternalMap$DummyInternalEntry;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -32,8 +32,10 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -46,6 +48,7 @@
 .method public getHash()I
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -56,6 +59,7 @@
 .method public getKey()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -88,6 +92,7 @@
 .method public getValue()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V

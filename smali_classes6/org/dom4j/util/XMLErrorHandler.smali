@@ -7,11 +7,11 @@
 
 
 # static fields
-.field protected static final ERROR_QNAME:Lorg/dom4j/QName;
+.field public static final ERROR_QNAME:Lorg/dom4j/QName;
 
-.field protected static final FATALERROR_QNAME:Lorg/dom4j/QName;
+.field public static final FATALERROR_QNAME:Lorg/dom4j/QName;
 
-.field protected static final WARNING_QNAME:Lorg/dom4j/QName;
+.field public static final WARNING_QNAME:Lorg/dom4j/QName;
 
 
 # instance fields
@@ -30,6 +30,7 @@
 
     const-string v0, "error"
 
+    .line 1
     invoke-static {v0}, Lorg/dom4j/QName;->get(Ljava/lang/String;)Lorg/dom4j/QName;
 
     move-result-object v0
@@ -38,6 +39,7 @@
 
     const-string v0, "fatalError"
 
+    .line 2
     invoke-static {v0}, Lorg/dom4j/QName;->get(Ljava/lang/String;)Lorg/dom4j/QName;
 
     move-result-object v0
@@ -46,6 +48,7 @@
 
     const-string v0, "warning"
 
+    .line 3
     invoke-static {v0}, Lorg/dom4j/QName;->get(Ljava/lang/String;)Lorg/dom4j/QName;
 
     move-result-object v0
@@ -120,6 +123,7 @@
 .method public addException(Lorg/dom4j/Element;Lorg/xml/sax/SAXParseException;)V
     .locals 1
 
+    .line 1
     invoke-virtual {p2}, Lorg/xml/sax/SAXParseException;->getColumnNumber()I
 
     move-result p0
@@ -132,6 +136,7 @@
 
     invoke-interface {p1, v0, p0}, Lorg/dom4j/Element;->addAttribute(Ljava/lang/String;Ljava/lang/String;)Lorg/dom4j/Element;
 
+    .line 2
     invoke-virtual {p2}, Lorg/xml/sax/SAXParseException;->getLineNumber()I
 
     move-result p0
@@ -144,12 +149,14 @@
 
     invoke-interface {p1, v0, p0}, Lorg/dom4j/Element;->addAttribute(Ljava/lang/String;Ljava/lang/String;)Lorg/dom4j/Element;
 
+    .line 3
     invoke-virtual {p2}, Lorg/xml/sax/SAXParseException;->getPublicId()Ljava/lang/String;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -158,8 +165,10 @@
 
     const-string v0, "publicID"
 
+    .line 5
     invoke-interface {p1, v0, p0}, Lorg/dom4j/Element;->addAttribute(Ljava/lang/String;Ljava/lang/String;)Lorg/dom4j/Element;
 
+    .line 6
     :cond_0
     invoke-virtual {p2}, Lorg/xml/sax/SAXParseException;->getSystemId()Ljava/lang/String;
 
@@ -167,6 +176,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 7
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -175,8 +185,10 @@
 
     const-string v0, "systemID"
 
+    .line 8
     invoke-interface {p1, v0, p0}, Lorg/dom4j/Element;->addAttribute(Ljava/lang/String;Ljava/lang/String;)Lorg/dom4j/Element;
 
+    .line 9
     :cond_1
     invoke-virtual {p2}, Lorg/xml/sax/SAXException;->getMessage()Ljava/lang/String;
 
@@ -190,6 +202,7 @@
 .method public error(Lorg/xml/sax/SAXParseException;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/util/XMLErrorHandler;->errors:Lorg/dom4j/Element;
 
     iget-object v1, p0, Lorg/dom4j/util/XMLErrorHandler;->errorQName:Lorg/dom4j/QName;
@@ -198,6 +211,7 @@
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0, v0, p1}, Lorg/dom4j/util/XMLErrorHandler;->addException(Lorg/dom4j/Element;Lorg/xml/sax/SAXParseException;)V
 
     return-void
@@ -206,6 +220,7 @@
 .method public fatalError(Lorg/xml/sax/SAXParseException;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/util/XMLErrorHandler;->errors:Lorg/dom4j/Element;
 
     iget-object v1, p0, Lorg/dom4j/util/XMLErrorHandler;->fatalErrorQName:Lorg/dom4j/QName;
@@ -214,6 +229,7 @@
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0, v0, p1}, Lorg/dom4j/util/XMLErrorHandler;->addException(Lorg/dom4j/Element;Lorg/xml/sax/SAXParseException;)V
 
     return-void
@@ -222,6 +238,7 @@
 .method public getErrorQName()Lorg/dom4j/QName;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/util/XMLErrorHandler;->errorQName:Lorg/dom4j/QName;
 
     return-object p0
@@ -230,6 +247,7 @@
 .method public getErrors()Lorg/dom4j/Element;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/util/XMLErrorHandler;->errors:Lorg/dom4j/Element;
 
     return-object p0
@@ -238,6 +256,7 @@
 .method public getFatalErrorQName()Lorg/dom4j/QName;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/util/XMLErrorHandler;->fatalErrorQName:Lorg/dom4j/QName;
 
     return-object p0
@@ -246,6 +265,7 @@
 .method public getWarningQName()Lorg/dom4j/QName;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/util/XMLErrorHandler;->warningQName:Lorg/dom4j/QName;
 
     return-object p0
@@ -254,6 +274,7 @@
 .method public setErrorQName(Lorg/dom4j/QName;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/util/XMLErrorHandler;->errorQName:Lorg/dom4j/QName;
 
     return-void
@@ -262,6 +283,7 @@
 .method public setErrors(Lorg/dom4j/Element;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/util/XMLErrorHandler;->errors:Lorg/dom4j/Element;
 
     return-void
@@ -270,6 +292,7 @@
 .method public setFatalErrorQName(Lorg/dom4j/QName;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/util/XMLErrorHandler;->fatalErrorQName:Lorg/dom4j/QName;
 
     return-void
@@ -278,6 +301,7 @@
 .method public setWarningQName(Lorg/dom4j/QName;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/util/XMLErrorHandler;->warningQName:Lorg/dom4j/QName;
 
     return-void
@@ -286,6 +310,7 @@
 .method public warning(Lorg/xml/sax/SAXParseException;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/util/XMLErrorHandler;->errors:Lorg/dom4j/Element;
 
     iget-object v1, p0, Lorg/dom4j/util/XMLErrorHandler;->warningQName:Lorg/dom4j/QName;
@@ -294,6 +319,7 @@
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0, v0, p1}, Lorg/dom4j/util/XMLErrorHandler;->addException(Lorg/dom4j/Element;Lorg/xml/sax/SAXParseException;)V
 
     return-void

@@ -1,4 +1,4 @@
-.class Landroidx/constraintlayout/utils/widget/ImageFilterView$1;
+.class public Landroidx/constraintlayout/utils/widget/ImageFilterView$1;
 .super Landroid/view/ViewOutlineProvider;
 .source "SourceFile"
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/constraintlayout/utils/widget/ImageFilterView;
+.field public final synthetic this$0:Landroidx/constraintlayout/utils/widget/ImageFilterView;
 
 
 # direct methods
@@ -30,6 +30,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$1;->this$0:Landroidx/constraintlayout/utils/widget/ImageFilterView;
 
     invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
@@ -52,18 +53,21 @@
         }
     .end annotation
 
+    .line 1
     iget-object p1, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$1;->this$0:Landroidx/constraintlayout/utils/widget/ImageFilterView;
 
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+    invoke-virtual {p1}, Landroid/widget/ImageView;->getWidth()I
 
     move-result v3
 
+    .line 2
     iget-object p1, p0, Landroidx/constraintlayout/utils/widget/ImageFilterView$1;->this$0:Landroidx/constraintlayout/utils/widget/ImageFilterView;
 
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+    invoke-virtual {p1}, Landroid/widget/ImageView;->getHeight()I
 
     move-result v4
 
+    .line 3
     invoke-static {v3, v4}, Ljava/lang/Math;->min(II)I
 
     move-result p1
@@ -88,6 +92,7 @@
 
     move-object v0, p2
 
+    .line 4
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Outline;->setRoundRect(IIIIF)V
 
     return-void

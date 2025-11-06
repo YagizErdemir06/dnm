@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/Striped$WeakSafeReadWriteLock;
+.class public final Lcom/google/common/util/concurrent/Striped$WeakSafeReadWriteLock;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -25,8 +25,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
     invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;-><init>()V
@@ -41,6 +43,7 @@
 .method public readLock()Ljava/util/concurrent/locks/Lock;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/Striped$WeakSafeLock;
 
     iget-object v1, p0, Lcom/google/common/util/concurrent/Striped$WeakSafeReadWriteLock;->delegate:Ljava/util/concurrent/locks/ReadWriteLock;
@@ -57,6 +60,7 @@
 .method public writeLock()Ljava/util/concurrent/locks/Lock;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/Striped$WeakSafeLock;
 
     iget-object v1, p0, Lcom/google/common/util/concurrent/Striped$WeakSafeReadWriteLock;->delegate:Ljava/util/concurrent/locks/ReadWriteLock;

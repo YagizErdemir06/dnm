@@ -26,6 +26,7 @@
 .method public final run()V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/tasks/zzx;->zza:Lcom/google/android/gms/tasks/TaskCompletionSource;
 
     new-instance v0, Ljava/util/concurrent/TimeoutException;

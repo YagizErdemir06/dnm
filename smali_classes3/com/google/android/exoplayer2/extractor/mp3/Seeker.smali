@@ -1,4 +1,4 @@
-.class interface abstract Lcom/google/android/exoplayer2/extractor/mp3/Seeker;
+.class public interface abstract Lcom/google/android/exoplayer2/extractor/mp3/Seeker;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

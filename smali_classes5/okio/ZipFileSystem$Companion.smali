@@ -1,4 +1,4 @@
-.class final Lokio/ZipFileSystem$Companion;
+.class public final Lokio/ZipFileSystem$Companion;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -13,18 +13,25 @@
     name = "Companion"
 .end annotation
 
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0008\u0082\u0003\u0018\u00002\u00020\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002R\u0011\u0010\u0003\u001a\u00020\u0004\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0005\u0010\u0006\u00a8\u0006\u0007"
+        "\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0007\u0008\u0082\u0003\u0018\u00002\u00020\u0001B\t\u0008\u0002\u00a2\u0006\u0004\u0008\u0007\u0010\u0008R\u0019\u0010\u0003\u001a\u00020\u00028\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0003\u0010\u0004\u001a\u0004\u0008\u0005\u0010\u0006\u00a8\u0006\t"
     }
     d2 = {
         "Lokio/ZipFileSystem$Companion;",
         "",
-        "()V",
+        "Lokio/Path;",
         "ROOT",
         "Lokio/Path;",
         "getROOT",
         "()Lokio/Path;",
+        "<init>",
+        "()V",
         "okio"
     }
     k = 0x1
@@ -33,7 +40,6 @@
         0x5,
         0x1
     }
-    xi = 0x30
 .end annotation
 
 
@@ -41,12 +47,13 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/w;)V
+.method public synthetic constructor <init>(Lh/d3/x/w;)V
     .locals 0
 
     invoke-direct {p0}, Lokio/ZipFileSystem$Companion;-><init>()V
@@ -58,9 +65,10 @@
 # virtual methods
 .method public final getROOT()Lokio/Path;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     invoke-static {}, Lokio/ZipFileSystem;->access$getROOT$cp()Lokio/Path;
 
     move-result-object p0

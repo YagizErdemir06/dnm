@@ -1,4 +1,4 @@
-.class final Lcom/google/common/hash/MessageDigestHashFunction;
+.class public final Lcom/google/common/hash/MessageDigestHashFunction;
 .super Lcom/google/common/hash/AbstractHashFunction;
 .source "SourceFile"
 
@@ -133,6 +133,7 @@
 .method private static getMessageDigest(Ljava/lang/String;)Ljava/security/MessageDigest;
     .locals 1
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
@@ -145,6 +146,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance v0, Ljava/lang/AssertionError;
 
     invoke-direct {v0, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
@@ -155,6 +157,7 @@
 .method private static supportsClone(Ljava/security/MessageDigest;)Z
     .locals 0
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Ljava/security/MessageDigest;->clone()Ljava/lang/Object;
     :try_end_0
@@ -175,6 +178,7 @@
 .method public bits()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/hash/MessageDigestHashFunction;->bytes:I
 
     mul-int/lit8 p0, p0, 0x8
@@ -185,12 +189,14 @@
 .method public newHasher()Lcom/google/common/hash/Hasher;
     .locals 4
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/common/hash/MessageDigestHashFunction;->supportsClone:Z
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     :try_start_0
     new-instance v0, Lcom/google/common/hash/MessageDigestHashFunction$MessageDigestHasher;
 
@@ -210,6 +216,7 @@
 
     return-object v0
 
+    .line 3
     :catch_0
     :cond_0
     new-instance v0, Lcom/google/common/hash/MessageDigestHashFunction$MessageDigestHasher;
@@ -234,6 +241,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/hash/MessageDigestHashFunction;->toString:Ljava/lang/String;
 
     return-object p0
@@ -242,6 +250,7 @@
 .method public writeReplace()Ljava/lang/Object;
     .locals 4
 
+    .line 1
     new-instance v0, Lcom/google/common/hash/MessageDigestHashFunction$SerializedForm;
 
     iget-object v1, p0, Lcom/google/common/hash/MessageDigestHashFunction;->prototype:Ljava/security/MessageDigest;

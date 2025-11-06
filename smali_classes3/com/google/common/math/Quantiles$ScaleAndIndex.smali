@@ -124,6 +124,7 @@
 .method public varargs computeInPlace([D)D
     .locals 13
 
+    .line 1
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -144,6 +145,7 @@
 
     invoke-static {v0, v3}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/math/Quantiles;->access$600([D)Z
 
     move-result v0
@@ -154,6 +156,7 @@
 
     return-wide p0
 
+    .line 3
     :cond_1
     iget v0, p0, Lcom/google/common/math/Quantiles$ScaleAndIndex;->index:I
 
@@ -167,6 +170,7 @@
 
     mul-long/2addr v3, v5
 
+    .line 4
     iget v0, p0, Lcom/google/common/math/Quantiles$ScaleAndIndex;->scale:I
 
     int-to-long v5, v0
@@ -181,6 +185,7 @@
 
     int-to-long v5, v0
 
+    .line 5
     iget v7, p0, Lcom/google/common/math/Quantiles$ScaleAndIndex;->scale:I
 
     int-to-long v7, v7
@@ -191,6 +196,7 @@
 
     long-to-int v3, v3
 
+    .line 6
     array-length v4, p1
 
     sub-int/2addr v4, v2
@@ -199,6 +205,7 @@
 
     if-nez v3, :cond_2
 
+    .line 7
     aget-wide p0, p1, v0
 
     return-wide p0
@@ -206,12 +213,14 @@
     :cond_2
     add-int/lit8 v1, v0, 0x1
 
+    .line 8
     array-length v4, p1
 
     sub-int/2addr v4, v2
 
     invoke-static {v1, p1, v1, v4}, Lcom/google/common/math/Quantiles;->access$700(I[DII)V
 
+    .line 9
     aget-wide v5, p1, v0
 
     aget-wide v7, p1, v1

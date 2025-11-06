@@ -1,4 +1,4 @@
-.class synthetic Lcom/faceunity/pta_helper/video/MediaAudioEncoder$1;
+.class public synthetic Lcom/faceunity/pta_helper/video/MediaAudioEncoder$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

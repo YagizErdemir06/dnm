@@ -31,6 +31,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;-><init>()V
 
     return-void
@@ -49,12 +50,14 @@
 
     const-string v0, "CUSTOM"
 
+    .line 1
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$CustomSet;
 
     invoke-direct {p0}, Landroidx/constraintlayout/motion/utils/ViewOscillator$CustomSet;-><init>()V
@@ -62,20 +65,21 @@
     return-object p0
 
     :cond_0
+    const/4 v0, -0x1
+
+    .line 3
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
-    move-result v0
+    move-result v1
 
-    const/4 v1, -0x1
-
-    sparse-switch v0, :sswitch_data_0
+    sparse-switch v1, :sswitch_data_0
 
     goto/16 :goto_0
 
     :sswitch_0
-    const-string/jumbo v0, "waveOffset"
+    const-string/jumbo v1, "waveOffset"
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -84,14 +88,14 @@
     goto/16 :goto_0
 
     :cond_1
-    const/16 v1, 0xd
+    const/16 v0, 0xd
 
     goto/16 :goto_0
 
     :sswitch_1
-    const-string v0, "alpha"
+    const-string v1, "alpha"
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -100,14 +104,14 @@
     goto/16 :goto_0
 
     :cond_2
-    const/16 v1, 0xc
+    const/16 v0, 0xc
 
     goto/16 :goto_0
 
     :sswitch_2
-    const-string/jumbo v0, "transitionPathRotate"
+    const-string/jumbo v1, "transitionPathRotate"
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -116,14 +120,14 @@
     goto/16 :goto_0
 
     :cond_3
-    const/16 v1, 0xb
+    const/16 v0, 0xb
 
     goto/16 :goto_0
 
     :sswitch_3
-    const-string v0, "elevation"
+    const-string v1, "elevation"
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -132,14 +136,14 @@
     goto/16 :goto_0
 
     :cond_4
-    const/16 v1, 0xa
+    const/16 v0, 0xa
 
     goto/16 :goto_0
 
     :sswitch_4
-    const-string/jumbo v0, "rotation"
+    const-string v1, "rotation"
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -148,14 +152,14 @@
     goto/16 :goto_0
 
     :cond_5
-    const/16 v1, 0x9
+    const/16 v0, 0x9
 
     goto/16 :goto_0
 
     :sswitch_5
-    const-string/jumbo v0, "waveVariesBy"
+    const-string/jumbo v1, "waveVariesBy"
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -164,14 +168,14 @@
     goto/16 :goto_0
 
     :cond_6
-    const/16 v1, 0x8
+    const/16 v0, 0x8
 
     goto/16 :goto_0
 
     :sswitch_6
-    const-string/jumbo v0, "scaleY"
+    const-string v1, "scaleY"
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -180,14 +184,14 @@
     goto :goto_0
 
     :cond_7
-    const/4 v1, 0x7
+    const/4 v0, 0x7
 
     goto :goto_0
 
     :sswitch_7
-    const-string/jumbo v0, "scaleX"
+    const-string v1, "scaleX"
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -196,14 +200,14 @@
     goto :goto_0
 
     :cond_8
-    const/4 v1, 0x6
+    const/4 v0, 0x6
 
     goto :goto_0
 
     :sswitch_8
-    const-string/jumbo v0, "progress"
+    const-string v1, "progress"
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -212,14 +216,14 @@
     goto :goto_0
 
     :cond_9
-    const/4 v1, 0x5
+    const/4 v0, 0x5
 
     goto :goto_0
 
     :sswitch_9
-    const-string/jumbo v0, "translationZ"
+    const-string/jumbo v1, "translationZ"
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -228,14 +232,14 @@
     goto :goto_0
 
     :cond_a
-    const/4 v1, 0x4
+    const/4 v0, 0x4
 
     goto :goto_0
 
     :sswitch_a
-    const-string/jumbo v0, "translationY"
+    const-string/jumbo v1, "translationY"
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -244,14 +248,14 @@
     goto :goto_0
 
     :cond_b
-    const/4 v1, 0x3
+    const/4 v0, 0x3
 
     goto :goto_0
 
     :sswitch_b
-    const-string/jumbo v0, "translationX"
+    const-string/jumbo v1, "translationX"
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -260,14 +264,14 @@
     goto :goto_0
 
     :cond_c
-    const/4 v1, 0x2
+    const/4 v0, 0x2
 
     goto :goto_0
 
     :sswitch_c
-    const-string/jumbo v0, "rotationY"
+    const-string v1, "rotationY"
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -276,14 +280,14 @@
     goto :goto_0
 
     :cond_d
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
     goto :goto_0
 
     :sswitch_d
-    const-string/jumbo v0, "rotationX"
+    const-string v1, "rotationX"
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -292,15 +296,16 @@
     goto :goto_0
 
     :cond_e
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
     :goto_0
-    packed-switch v1, :pswitch_data_0
+    packed-switch v0, :pswitch_data_0
 
     const/4 p0, 0x0
 
     return-object p0
 
+    .line 4
     :pswitch_0
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$AlphaSet;
 
@@ -308,6 +313,7 @@
 
     return-object p0
 
+    .line 5
     :pswitch_1
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$AlphaSet;
 
@@ -315,6 +321,7 @@
 
     return-object p0
 
+    .line 6
     :pswitch_2
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$PathRotateSet;
 
@@ -322,6 +329,7 @@
 
     return-object p0
 
+    .line 7
     :pswitch_3
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$ElevationSet;
 
@@ -329,6 +337,7 @@
 
     return-object p0
 
+    .line 8
     :pswitch_4
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$RotationSet;
 
@@ -336,6 +345,7 @@
 
     return-object p0
 
+    .line 9
     :pswitch_5
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$AlphaSet;
 
@@ -343,6 +353,7 @@
 
     return-object p0
 
+    .line 10
     :pswitch_6
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$ScaleYset;
 
@@ -350,6 +361,7 @@
 
     return-object p0
 
+    .line 11
     :pswitch_7
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$ScaleXset;
 
@@ -357,6 +369,7 @@
 
     return-object p0
 
+    .line 12
     :pswitch_8
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$ProgressSet;
 
@@ -364,6 +377,7 @@
 
     return-object p0
 
+    .line 13
     :pswitch_9
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$TranslationZset;
 
@@ -371,6 +385,7 @@
 
     return-object p0
 
+    .line 14
     :pswitch_a
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$TranslationYset;
 
@@ -378,6 +393,7 @@
 
     return-object p0
 
+    .line 15
     :pswitch_b
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$TranslationXset;
 
@@ -385,6 +401,7 @@
 
     return-object p0
 
+    .line 16
     :pswitch_c
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$RotationYset;
 
@@ -392,6 +409,7 @@
 
     return-object p0
 
+    .line 17
     :pswitch_d
     new-instance p0, Landroidx/constraintlayout/motion/utils/ViewOscillator$RotationXset;
 

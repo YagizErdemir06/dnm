@@ -96,13 +96,24 @@
 # direct methods
 .method private constructor <init>(I)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "targetMode"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
+    .line 2
     iput-boolean v0, p0, Lcom/android/camera/module/loader/base/StartControl;->isNeedSwitch:Z
 
+    .line 3
     new-instance v1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v2, 0x0
@@ -113,28 +124,38 @@
 
     const/16 v1, 0xa0
 
+    .line 4
     iput v1, p0, Lcom/android/camera/module/loader/base/StartControl;->mTransMode:I
 
+    .line 5
     iput v2, p0, Lcom/android/camera/module/loader/base/StartControl;->mStartDelay:I
 
     const/4 v1, 0x2
 
+    .line 6
     iput v1, p0, Lcom/android/camera/module/loader/base/StartControl;->mResetType:I
 
+    .line 7
     iput v0, p0, Lcom/android/camera/module/loader/base/StartControl;->mViewConfigType:I
 
+    .line 8
     iput-boolean v0, p0, Lcom/android/camera/module/loader/base/StartControl;->mNeedReConfigureCamera:Z
 
+    .line 9
     iput-boolean v0, p0, Lcom/android/camera/module/loader/base/StartControl;->mNeedReConfigureData:Z
 
+    .line 10
     iput-boolean v2, p0, Lcom/android/camera/module/loader/base/StartControl;->mFromScreenSlide:Z
 
+    .line 11
     iput-boolean v2, p0, Lcom/android/camera/module/loader/base/StartControl;->mSkipChangeModule:Z
 
     const/4 v0, 0x0
 
+    .line 12
     iput-object v0, p0, Lcom/android/camera/module/loader/base/StartControl;->mLunchSource:Ljava/lang/String;
 
+    .line 13
     iput p1, p0, Lcom/android/camera/module/loader/base/StartControl;->mTargetMode:I
 
     return-void
@@ -142,7 +163,16 @@
 
 .method public static final create(I)Lcom/android/camera/module/loader/base/StartControl;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "targetMode"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Lcom/android/camera/module/loader/base/StartControl;
 
     invoke-direct {v0, p0}, Lcom/android/camera/module/loader/base/StartControl;-><init>(I)V
@@ -155,6 +185,7 @@
 .method public needNotifyUI()Z
     .locals 1
 
+    .line 1
     iget p0, p0, Lcom/android/camera/module/loader/base/StartControl;->mViewConfigType:I
 
     const/4 v0, 0x3
@@ -175,6 +206,7 @@
 .method public needReset()Z
     .locals 1
 
+    .line 1
     iget p0, p0, Lcom/android/camera/module/loader/base/StartControl;->mResetType:I
 
     const/4 v0, 0x4
@@ -202,12 +234,22 @@
 
 .method public setFromScreenSlide(Z)Lcom/android/camera/module/loader/base/StartControl;
     .locals 0
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isScreenSlideSupported"
         type = 0x0
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "fromScreenSlide"
+        }
+    .end annotation
+
+    .line 1
     iput-boolean p1, p0, Lcom/android/camera/module/loader/base/StartControl;->mFromScreenSlide:Z
 
     return-object p0
@@ -215,7 +257,16 @@
 
 .method public setLastMode(I)Lcom/android/camera/module/loader/base/StartControl;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "lastMode"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/android/camera/module/loader/base/StartControl;->mLastMode:I
 
     return-object p0
@@ -223,7 +274,16 @@
 
 .method public setLunchSource(Ljava/lang/String;)Lcom/android/camera/module/loader/base/StartControl;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "lunchSource"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/module/loader/base/StartControl;->mLunchSource:Ljava/lang/String;
 
     return-object p0
@@ -231,7 +291,16 @@
 
 .method public setNeedBlurAnimation(Z)Lcom/android/camera/module/loader/base/StartControl;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "needBlurAnimation"
+        }
+    .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lcom/android/camera/module/loader/base/StartControl;->mNeedBlurAnimation:Z
 
     return-object p0
@@ -239,9 +308,19 @@
 
 .method public setNeedReConfigureCamera(Z)Lcom/android/camera/module/loader/base/StartControl;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "needReConfigureCamera"
+        }
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lcom/android/camera/module/loader/base/StartControl;->mNeedReConfigureCamera:Z
 
     return-object p0
@@ -249,12 +328,22 @@
 
 .method public setNeedReConfigureData(Z)Lcom/android/camera/module/loader/base/StartControl;
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "needReConfigureData"
+        }
     .end annotation
 
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lcom/android/camera/module/loader/base/StartControl;->mNeedReConfigureData:Z
 
     return-object p0
@@ -262,7 +351,16 @@
 
 .method public setResetType(I)Lcom/android/camera/module/loader/base/StartControl;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "resetType"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/android/camera/module/loader/base/StartControl;->mResetType:I
 
     return-object p0
@@ -270,7 +368,16 @@
 
 .method public setSkipChangeModule(Z)Lcom/android/camera/module/loader/base/StartControl;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "skipChangeModule"
+        }
+    .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lcom/android/camera/module/loader/base/StartControl;->mSkipChangeModule:Z
 
     return-object p0
@@ -278,7 +385,16 @@
 
 .method public setStartDelay(I)Lcom/android/camera/module/loader/base/StartControl;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "startDelay"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/android/camera/module/loader/base/StartControl;->mStartDelay:I
 
     return-object p0
@@ -286,7 +402,16 @@
 
 .method public setTransMode(I)Lcom/android/camera/module/loader/base/StartControl;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "transMode"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/android/camera/module/loader/base/StartControl;->mTransMode:I
 
     return-object p0
@@ -294,7 +419,16 @@
 
 .method public setViewConfigType(I)Lcom/android/camera/module/loader/base/StartControl;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "type"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/android/camera/module/loader/base/StartControl;->mViewConfigType:I
 
     return-object p0

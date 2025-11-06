@@ -25,6 +25,7 @@
     .annotation build Lcom/google/android/gms/common/internal/ShowFirstParty;
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "Status must not be null"
@@ -64,6 +65,7 @@
 
     return v1
 
+    .line 1
     :cond_1
     instance-of v2, p1, Lcom/google/android/gms/common/api/BooleanResult;
 
@@ -71,6 +73,7 @@
 
     return v0
 
+    .line 2
     :cond_2
     check-cast p1, Lcom/google/android/gms/common/api/BooleanResult;
 
@@ -78,6 +81,7 @@
 
     iget-object v3, p1, Lcom/google/android/gms/common/api/BooleanResult;->zaa:Lcom/google/android/gms/common/api/Status;
 
+    .line 3
     invoke-virtual {v2, v3}, Lcom/google/android/gms/common/api/Status;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -117,6 +121,7 @@
 .method public final hashCode()I
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/BooleanResult;->zaa:Lcom/google/android/gms/common/api/Status;
 
     invoke-virtual {v0}, Lcom/google/android/gms/common/api/Status;->hashCode()I

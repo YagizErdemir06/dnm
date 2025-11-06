@@ -56,14 +56,17 @@
 .method public measureChild(Landroid/view/View;II)V
     .locals 1
 
+    .line 1
     move-object v0, p1
 
     check-cast v0, Lmiuix/appcompat/internal/widget/NestedScrollViewExpander;
 
     invoke-virtual {v0, p3}, Lmiuix/appcompat/internal/widget/NestedScrollViewExpander;->setParentHeightMeasureSpec(I)V
 
+    .line 2
     invoke-virtual {p1}, Landroid/view/View;->forceLayout()V
 
+    .line 3
     invoke-super {p0, p1, p2, p3}, Landroidx/core/widget/NestedScrollView;->measureChild(Landroid/view/View;II)V
 
     return-void
@@ -72,14 +75,17 @@
 .method public measureChildWithMargins(Landroid/view/View;IIII)V
     .locals 1
 
+    .line 1
     move-object v0, p1
 
     check-cast v0, Lmiuix/appcompat/internal/widget/NestedScrollViewExpander;
 
     invoke-virtual {v0, p4}, Lmiuix/appcompat/internal/widget/NestedScrollViewExpander;->setParentHeightMeasureSpec(I)V
 
+    .line 2
     invoke-virtual {p1}, Landroid/view/View;->forceLayout()V
 
+    .line 3
     invoke-super/range {p0 .. p5}, Landroidx/core/widget/NestedScrollView;->measureChildWithMargins(Landroid/view/View;IIII)V
 
     return-void

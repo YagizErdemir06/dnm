@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->setFiltered(Z)V
+    value = Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,18 +18,19 @@
 
 
 # instance fields
-.field public final synthetic a:Z
+.field public final synthetic c:Landroid/view/View$OnClickListener;
 
-.field public final synthetic b:Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;
+.field public final synthetic d:Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;
 
 
 # direct methods
-.method public constructor <init>(Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;Z)V
+.method public constructor <init>(Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;Landroid/view/View$OnClickListener;)V
     .locals 0
 
-    iput-object p1, p0, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView$a;->b:Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;
+    .line 1
+    iput-object p1, p0, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView$a;->d:Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;
 
-    iput-boolean p2, p0, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView$a;->a:Z
+    iput-object p2, p0, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView$a;->c:Landroid/view/View$OnClickListener;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,33 +39,83 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public onClick(Landroid/view/View;)V
+    .locals 3
 
-    iget-object v0, p0, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView$a;->b:Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;
+    .line 1
+    iget-object v0, p0, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView$a;->d:Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;
 
-    invoke-static {v0}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->j(Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;)Lmiuix/miuixbasewidget/widget/FilterSortView$TabView$d;
+    invoke-static {v0}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->j(Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;)Z
 
-    move-result-object v0
+    move-result v0
+
+    const/4 v1, 0x1
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView$a;->a:Z
+    .line 2
+    iget-object v0, p0, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView$a;->d:Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;
 
-    if-eqz v0, :cond_0
+    invoke-static {v0}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->c(Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;)Z
 
-    iget-object v0, p0, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView$a;->b:Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;
+    move-result v0
 
-    invoke-static {v0}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->j(Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;)Lmiuix/miuixbasewidget/widget/FilterSortView$TabView$d;
+    if-eqz v0, :cond_1
 
-    move-result-object v0
+    .line 3
+    iget-object v0, p0, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView$a;->d:Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;
 
-    iget-object v1, p0, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView$a;->b:Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;
+    invoke-static {v0}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->d(Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;)Z
 
-    iget-boolean p0, p0, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView$a;->a:Z
+    move-result v2
 
-    invoke-interface {v0, v1, p0}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView$d;->a(Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;Z)V
+    xor-int/2addr v1, v2
 
+    invoke-static {v0, v1}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->e(Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;Z)V
+
+    goto :goto_0
+
+    .line 4
     :cond_0
+    iget-object v0, p0, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView$a;->d:Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;
+
+    invoke-static {v0, v1}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->i(Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;Z)V
+
+    .line 5
+    :cond_1
+    :goto_0
+    iget-object v0, p0, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView$a;->c:Landroid/view/View$OnClickListener;
+
+    invoke-interface {v0, p1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
+
+    const-string v0, "2.0"
+
+    .line 6
+    invoke-static {v0}, Lmiuix/view/HapticCompat;->c(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 7
+    iget-object p0, p0, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView$a;->d:Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;
+
+    invoke-static {p0}, Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;->f(Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;)Lk/i0/b;
+
+    move-result-object p0
+
+    const/16 p1, 0xcc
+
+    invoke-virtual {p0, p1}, Lk/i0/b;->d(I)Z
+
+    goto :goto_1
+
+    .line 8
+    :cond_2
+    sget p0, Lk/j0/f;->m:I
+
+    invoke-static {p1, p0}, Lmiuix/view/HapticCompat;->performHapticFeedback(Landroid/view/View;I)Z
+
+    :goto_1
     return-void
 .end method

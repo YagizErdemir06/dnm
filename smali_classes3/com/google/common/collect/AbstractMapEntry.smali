@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/collect/AbstractMapEntry;
+.class public abstract Lcom/google/common/collect/AbstractMapEntry;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -31,6 +31,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,14 +46,17 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Ljava/util/Map$Entry;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Ljava/util/Map$Entry;
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapEntry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -67,6 +71,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapEntry;->getValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -112,10 +117,12 @@
 .method public hashCode()I
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapEntry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapEntry;->getValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -128,6 +135,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
@@ -164,6 +172,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -174,6 +183,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapEntry;->getKey()Ljava/lang/Object;
 
     move-result-object v0

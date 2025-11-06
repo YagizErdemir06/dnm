@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/extractor/mp4/SefReader;
+.class public final Lcom/google/android/exoplayer2/extractor/mp4/SefReader;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -67,6 +67,7 @@
 
     const/16 v0, 0x3a
 
+    .line 1
     invoke-static {v0}, Lcom/google/common/base/Splitter;->on(C)Lcom/google/common/base/Splitter;
 
     move-result-object v0
@@ -75,6 +76,7 @@
 
     const/16 v0, 0x2a
 
+    .line 2
     invoke-static {v0}, Lcom/google/common/base/Splitter;->on(C)Lcom/google/common/base/Splitter;
 
     move-result-object v0
@@ -87,8 +89,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -97,6 +101,7 @@
 
     const/4 v0, 0x0
 
+    .line 3
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/SefReader;->readerState:I
 
     return-void
@@ -110,12 +115,14 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     const/16 v1, 0x8
 
     invoke-direct {v0, v1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;-><init>(I)V
 
+    .line 2
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
     move-result-object v2
@@ -124,6 +131,7 @@
 
     invoke-interface {p1, v2, v3, v1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->readFully([BII)V
 
+    .line 3
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLittleEndianInt()I
 
     move-result v2
@@ -132,6 +140,7 @@
 
     iput v2, p0, Lcom/google/android/exoplayer2/extractor/mp4/SefReader;->tailLength:I
 
+    .line 4
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v0
@@ -142,10 +151,12 @@
 
     const-wide/16 p0, 0x0
 
+    .line 5
     iput-wide p0, p2, Lcom/google/android/exoplayer2/extractor/PositionHolder;->position:J
 
     return-void
 
+    .line 6
     :cond_0
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
@@ -163,6 +174,7 @@
 
     const/4 p1, 0x2
 
+    .line 7
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/mp4/SefReader;->readerState:I
 
     return-void
@@ -176,6 +188,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -269,11 +282,12 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
-    const-string p0, "Invalid SEF name"
+    const/4 p0, 0x0
 
-    const/4 v0, 0x0
+    const-string v0, "Invalid SEF name"
 
-    invoke-static {p0, v0}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedContainer(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
+    .line 2
+    invoke-static {v0, p0}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedContainer(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
     move-result-object p0
 
@@ -331,10 +345,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getLength()J
 
     move-result-wide v0
 
+    .line 2
     iget v2, p0, Lcom/google/android/exoplayer2/extractor/mp4/SefReader;->tailLength:I
 
     add-int/lit8 v2, v2, -0xc
@@ -343,10 +359,12 @@
 
     sub-int/2addr v2, v3
 
+    .line 3
     new-instance v4, Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-direct {v4, v2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;-><init>(I)V
 
+    .line 4
     invoke-virtual {v4}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
     move-result-object v5
@@ -357,6 +375,7 @@
 
     move p1, v6
 
+    .line 5
     :goto_0
     div-int/lit8 v5, v2, 0xc
 
@@ -364,8 +383,10 @@
 
     const/4 v5, 0x2
 
+    .line 6
     invoke-virtual {v4, v5}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
+    .line 7
     invoke-virtual {v4}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLittleEndianShort()S
 
     move-result v5
@@ -390,10 +411,12 @@
 
     if-eq v5, v7, :cond_0
 
+    .line 8
     invoke-virtual {v4, v3}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
     goto :goto_1
 
+    .line 9
     :cond_0
     iget v7, p0, Lcom/google/android/exoplayer2/extractor/mp4/SefReader;->tailLength:I
 
@@ -409,10 +432,12 @@
 
     sub-long/2addr v7, v9
 
+    .line 10
     invoke-virtual {v4}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLittleEndianInt()I
 
     move-result v9
 
+    .line 11
     iget-object v10, p0, Lcom/google/android/exoplayer2/extractor/mp4/SefReader;->dataReferences:Ljava/util/List;
 
     new-instance v11, Lcom/google/android/exoplayer2/extractor/mp4/SefReader$DataReference;
@@ -426,6 +451,7 @@
 
     goto :goto_0
 
+    .line 12
     :cond_1
     iget-object p1, p0, Lcom/google/android/exoplayer2/extractor/mp4/SefReader;->dataReferences:Ljava/util/List;
 
@@ -437,6 +463,7 @@
 
     const-wide/16 p0, 0x0
 
+    .line 13
     iput-wide p0, p2, Lcom/google/android/exoplayer2/extractor/PositionHolder;->position:J
 
     return-void
@@ -444,8 +471,10 @@
     :cond_2
     const/4 p1, 0x3
 
+    .line 14
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/mp4/SefReader;->readerState:I
 
+    .line 15
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/mp4/SefReader;->dataReferences:Ljava/util/List;
 
     invoke-interface {p0, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -479,10 +508,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
     move-result-wide v0
 
+    .line 2
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getLength()J
 
     move-result-wide v2
@@ -501,10 +532,12 @@
 
     long-to-int v2, v2
 
+    .line 3
     new-instance v3, Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-direct {v3, v2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;-><init>(I)V
 
+    .line 4
     invoke-virtual {v3}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
     move-result-object v4
@@ -513,6 +546,7 @@
 
     invoke-interface {p1, v4, v5, v2}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->readFully([BII)V
 
+    .line 5
     :goto_0
     iget-object p1, p0, Lcom/google/android/exoplayer2/extractor/mp4/SefReader;->dataReferences:Ljava/util/List;
 
@@ -522,6 +556,7 @@
 
     if-ge v5, p1, :cond_3
 
+    .line 6
     iget-object p1, p0, Lcom/google/android/exoplayer2/extractor/mp4/SefReader;->dataReferences:Ljava/util/List;
 
     invoke-interface {p1, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -530,30 +565,37 @@
 
     check-cast p1, Lcom/google/android/exoplayer2/extractor/mp4/SefReader$DataReference;
 
+    .line 7
     iget-wide v6, p1, Lcom/google/android/exoplayer2/extractor/mp4/SefReader$DataReference;->startOffset:J
 
     sub-long/2addr v6, v0
 
     long-to-int v2, v6
 
+    .line 8
     invoke-virtual {v3, v2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     const/4 v2, 0x4
 
+    .line 9
     invoke-virtual {v3, v2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
+    .line 10
     invoke-virtual {v3}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLittleEndianInt()I
 
     move-result v2
 
+    .line 11
     invoke-virtual {v3, v2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readString(I)Ljava/lang/String;
 
     move-result-object v4
 
+    .line 12
     invoke-static {v4}, Lcom/google/android/exoplayer2/extractor/mp4/SefReader;->nameToDataType(Ljava/lang/String;)I
 
     move-result v4
 
+    .line 13
     iget p1, p1, Lcom/google/android/exoplayer2/extractor/mp4/SefReader$DataReference;->size:I
 
     add-int/lit8 v2, v2, 0x8
@@ -582,6 +624,7 @@
 
     goto :goto_1
 
+    .line 14
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -589,6 +632,7 @@
 
     throw p0
 
+    .line 15
     :cond_1
     invoke-static {v3, p1}, Lcom/google/android/exoplayer2/extractor/mp4/SefReader;->readSlowMotionData(Lcom/google/android/exoplayer2/util/ParsableByteArray;I)Lcom/google/android/exoplayer2/metadata/mp4/SlowMotionData;
 
@@ -614,14 +658,17 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readString(I)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 3
     sget-object p1, Lcom/google/android/exoplayer2/extractor/mp4/SefReader;->ASTERISK_SPLITTER:Lcom/google/common/base/Splitter;
 
     invoke-virtual {p1, p0}, Lcom/google/common/base/Splitter;->splitToList(Ljava/lang/CharSequence;)Ljava/util/List;
@@ -632,6 +679,7 @@
 
     move v1, p1
 
+    .line 4
     :goto_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -639,6 +687,7 @@
 
     if-ge v1, v2, :cond_1
 
+    .line 5
     sget-object v2, Lcom/google/android/exoplayer2/extractor/mp4/SefReader;->COLON_SPLITTER:Lcom/google/common/base/Splitter;
 
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -651,6 +700,7 @@
 
     move-result-object v2
 
+    .line 6
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v3
@@ -661,6 +711,7 @@
 
     if-ne v3, v4, :cond_0
 
+    .line 7
     :try_start_0
     invoke-interface {v2, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -674,6 +725,7 @@
 
     const/4 v3, 0x1
 
+    .line 8
     invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -686,6 +738,7 @@
 
     const/4 v4, 0x2
 
+    .line 9
     invoke-interface {v2, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -700,6 +753,7 @@
 
     shl-int v11, v3, v2
 
+    .line 10
     new-instance v2, Lcom/google/android/exoplayer2/metadata/mp4/SlowMotionData$Segment;
 
     move-object v6, v2
@@ -717,12 +771,14 @@
     :catch_0
     move-exception p0
 
+    .line 11
     invoke-static {v5, p0}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedContainer(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
     move-result-object p0
 
     throw p0
 
+    .line 12
     :cond_0
     invoke-static {v5, v5}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedContainer(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
@@ -730,6 +786,7 @@
 
     throw p0
 
+    .line 13
     :cond_1
     new-instance p0, Lcom/google/android/exoplayer2/metadata/mp4/SlowMotionData;
 
@@ -759,6 +816,7 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/SefReader;->readerState:I
 
     const-wide/16 v1, 0x0
@@ -777,12 +835,15 @@
 
     if-ne v0, v4, :cond_0
 
+    .line 2
     invoke-direct {p0, p1, p3}, Lcom/google/android/exoplayer2/extractor/mp4/SefReader;->readSefData(Lcom/google/android/exoplayer2/extractor/ExtractorInput;Ljava/util/List;)V
 
+    .line 3
     iput-wide v1, p2, Lcom/google/android/exoplayer2/extractor/PositionHolder;->position:J
 
     goto :goto_1
 
+    .line 4
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -790,16 +851,19 @@
 
     throw p0
 
+    .line 5
     :cond_1
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/extractor/mp4/SefReader;->readSdrs(Lcom/google/android/exoplayer2/extractor/ExtractorInput;Lcom/google/android/exoplayer2/extractor/PositionHolder;)V
 
     goto :goto_1
 
+    .line 6
     :cond_2
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/extractor/mp4/SefReader;->checkForSefData(Lcom/google/android/exoplayer2/extractor/ExtractorInput;Lcom/google/android/exoplayer2/extractor/PositionHolder;)V
 
     goto :goto_1
 
+    .line 7
     :cond_3
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->getLength()J
 
@@ -822,10 +886,12 @@
     :cond_4
     sub-long v1, v4, v6
 
+    .line 8
     :cond_5
     :goto_0
     iput-wide v1, p2, Lcom/google/android/exoplayer2/extractor/PositionHolder;->position:J
 
+    .line 9
     iput v3, p0, Lcom/google/android/exoplayer2/extractor/mp4/SefReader;->readerState:I
 
     :goto_1
@@ -835,12 +901,14 @@
 .method public reset()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/SefReader;->dataReferences:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/mp4/SefReader;->readerState:I
 
     return-void

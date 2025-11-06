@@ -11,6 +11,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -35,6 +36,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,6 +45,7 @@
 .method private static getTag(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -63,6 +66,7 @@
 .method private static logv(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
+    .line 1
     sget-object v0, Lcom/android/camera/log/LogC;->CONTINUAL:Ljava/lang/String;
 
     const/4 v1, 0x2
@@ -73,6 +77,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-static {p0}, Lcom/android/camera/log/LogC;->getTag(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -86,14 +91,17 @@
 .method public static varargs v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
+    .line 1
     array-length v0, p2
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-static {p0, p1}, Lcom/android/camera/log/LogC;->logv(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
+    .line 3
     :cond_0
     sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
@@ -101,6 +109,7 @@
 
     move-result-object p1
 
+    .line 4
     invoke-static {p0, p1}, Lcom/android/camera/log/LogC;->logv(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0

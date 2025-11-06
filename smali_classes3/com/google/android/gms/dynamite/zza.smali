@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/dynamite/zza;
+.class public final Lcom/google/android/gms/dynamite/zza;
 .super Ljava/lang/Thread;
 .source "SourceFile"
 
@@ -9,6 +9,7 @@
 
     const-string p2, "GmsDynamite"
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/ThreadGroup;Ljava/lang/String;)V
 
     return-void
@@ -21,10 +22,12 @@
 
     const/16 v0, 0x13
 
+    .line 1
     invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
     monitor-enter p0
 
+    .line 2
     :goto_0
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/Object;->wait()V
@@ -39,12 +42,14 @@
 
     goto :goto_1
 
+    .line 3
     :catch_0
     :try_start_1
     monitor-exit p0
 
     return-void
 
+    .line 4
     :goto_1
     monitor-exit p0
     :try_end_1

@@ -206,7 +206,6 @@
     <string name="accessibility_video_capture_button">سىن ئېلىۋاتقاندە سۈرەتكە تارتىش كونۇپكىسى</string>
     <string name="accessibility_video_pause_button">سىن ئېلىشنى توختۇتۇش</string>
     <string name="accessibility_video_resume_button">داۋاملىق سىنغا ئېلىش</string>
-    <string name="accessibility_watermark_count_tip">%1$s，%2$s</string>
     <string name="accessibility_watermark_image_off">سۇ باسمىسى، تاقاق</string>
     <string name="accessibility_watermark_image_on">سۇ باسمىسى، ئوچۇق</string>
     <string name="accessibility_watermark_text">سۇ باسمىسى تەڭشەش بېتىنى ئېچىش</string>
@@ -214,16 +213,6 @@
     <string name="accessibility_zoom_button">فوكۇس تەڭشەش</string>
     <string name="actionbar_button_up_description">قايتىش</string>
     <string name="afternoon">چ ك</string>
-    <string name="agent_flip_tbc">ئىچكى ئېكراننى ئېچىپ ئىشلىتىڭ</string>
-    <string name="agent_function_max">ئەڭ چوڭ قىممەتكە تەڭشەلدى</string>
-    <string name="agent_function_min">ئەڭ كىچىك قىممەتكە تەڭشەلدى</string>
-    <string name="agent_workspace_mode_not_supported">ھازىرچە بۇ ئىقتىدارنى قوللىمايدۇ</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"ھازىرچە بۇ ئىقتىدارنى قوللىمايدۇ، 
-رەسىم تارتىش ھالىتى ئېچىلدى"</string>
-    <string name="agent_workspace_on">%1$s نى تارتىدىغان پارامېتىر تەڭشەلدى</string>
-    <string name="agent_workspace_tbc">مەنزىرىنى ئۆگۈنىۋاتىدۇ</string>
-    <string name="agent_workspace_tbc_use_default">"مەنزىرە ئۆگۈنىۋاتىدۇ، 
-كامېرا پارامېتىرى سۈكۈتتىكى قىممەتتە"</string>
     <string name="ai_agra_fort">ئاگرا قورغىنى</string>
     <string name="ai_amber_fort">كەھرىۋا قورغىنى</string>
     <string name="ai_baby">بوۋاق</string>
@@ -789,7 +778,6 @@
     <string name="download_hint_cn">ھازىر WLAN مۇھىتىدا ئەمەس، تەخمىنەن %1$sMB ئېقىم مىقدارىنى خورىتىدۇ، چۈشۈرەمسىز؟</string>
     <string name="download_hint_wifi">@string/download_hint</string>
     <string name="download_in_progress">چۈشۈۋاتىدۇ</string>
-    <string name="download_network_error">چۈشۈرەلمىدى،تورنى تەكشۈرۈڭ</string>
     <string name="download_title">ئېقىم مىقدارى ئەسكەرتمىسى</string>
     <string name="download_waiting">ساقلاۋاتىدۇ</string>
     <string name="dual_camera_lens_covered_toast">سىتېرولۇق تەسۋىرتوسۇلغان</string>
@@ -1246,7 +1234,7 @@
     <string name="mimoji_recapture_alert">قايتا تارتسىڭىز ھازىرقى ھالىتى تازىلىنىپ كېتىدۇ،قايتا تارتامسىز؟</string>
     <string name="mimoji_reset">ئەسلىگە قايتۇرۇش</string>
     <string name="mimoji_save">ساقلاش</string>
-    <string name="mimoji_save_finish">تامام</string>
+    <string name="mimoji_save_finish">完成</string>
     <string name="mimoji_save_gif_emoticon">GIF فورماتتىكى چىراي ئىپادىسىنى ئالبومدا ساقلاش</string>
     <string name="mimoji_save_success">ساقلاندى</string>
     <string name="mimoji_select_number_error">ئەڭ ئاز بولغاندا بىر ئىپادىنى تاللاڭ</string>
@@ -1266,7 +1254,6 @@
     <string name="miuix_appcompat_delete_description">ئۆچۈرۈش</string>
     <string name="miuix_appcompat_deselect_all">ھەممىنى تاللاشنى بىكارلاش</string>
     <string name="miuix_appcompat_deselect_all_description">ھەممىنى تاللاشنى بىكارلاش</string>
-    <string name="miuix_appcompat_edit">تەھرىرلەش</string>
     <string name="miuix_appcompat_search_action_mode_cancel">بىكار قىلىش</string>
     <string name="miuix_appcompat_search_input_description">ئىزدەش</string>
     <string name="miuix_appcompat_select_all">ھەممىنى تاللاش</string>
@@ -2228,7 +2215,6 @@
     <string name="time_picker_label_hour">سائەت</string>
     <string name="time_picker_label_minute">مىنۇت</string>
     <string name="time_stamp_date_format">yyyy.MM.dd</string>
-    <string name="time_stamp_date_format_minute">yyyy.MM.dd HH:mm</string>
     <string name="timefreeze_guide_tip2">تارتىشتىن بۇرۇن،تارتىۋاتقاندا خالىغان چاغدا ئارقا كۆرۈنۈشنى توختىتىش ئۈنۈمىنى ئاچقىلى بولىدۇ</string>
     <string name="timefreeze_guide_tip3">تارتقان شەيئىنى ئوڭ-سولغا يۆتكەشتىن ساقلىنىڭ</string>
     <string name="timefreeze_guide_tip4">ئارقا كۆرۈنۈشتىكى ماشىنا ئېقىمىنى قاتۇرۇش</string>
@@ -2248,8 +2234,8 @@
     <string name="tip_ai_off">AI كامېرا: تاقاق</string>
     <string name="tip_beauty_mode_title1">پورترېت: تەبىئىي</string>
     <string name="tip_beauty_mode_title2">پورترېت: سۈپەتلىك</string>
-    <string name="tip_cvtype_title1">تارتىش ئۇسلۇبى: Leica كىلاسسك</string>
-    <string name="tip_cvtype_title2">تارتىش ئۇسلۇبى: Leica جانلىق</string>
+    <string name="tip_cvtype_title1">تارتىش ئۇسلۇبى: لەيكا كىلاسسك</string>
+    <string name="tip_cvtype_title2">تارتىش ئۇسلۇبى: لەيكا جانلىق</string>
     <string name="tip_eis_off">ئالاھىدە تىترەشتىن ساقلىنىش: تاقاق</string>
     <string name="tip_eis_pro_off">ئالاھىدە تىترەشتىن ساقلىنىش Pro: تاقاق</string>
     <string name="tip_flash_auto">چاقماق لامپا: ئاپتوماتىك</string>

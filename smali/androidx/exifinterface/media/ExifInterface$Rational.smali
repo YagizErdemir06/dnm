@@ -1,4 +1,4 @@
-.class Landroidx/exifinterface/media/ExifInterface$Rational;
+.class public Landroidx/exifinterface/media/ExifInterface$Rational;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -75,6 +75,7 @@
 .method public calculate()D
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Landroidx/exifinterface/media/ExifInterface$Rational;->numerator:J
 
     long-to-double v0, v0
@@ -91,6 +92,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

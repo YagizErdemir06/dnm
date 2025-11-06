@@ -1,4 +1,4 @@
-.class final Lorg/apache/xmlbeans/impl/values/NamespaceContext$NamespaceContextStack;
+.class public final Lorg/apache/xmlbeans/impl/values/NamespaceContext$NamespaceContextStack;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field current:Lorg/apache/xmlbeans/impl/values/NamespaceContext;
+.field public current:Lorg/apache/xmlbeans/impl/values/NamespaceContext;
 
-.field stack:Ljava/util/ArrayList;
+.field public stack:Ljava/util/ArrayList;
 
 
 # direct methods
@@ -51,6 +51,7 @@
 .method public final pop()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/NamespaceContext$NamespaceContextStack;->stack:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -67,6 +68,7 @@
 
     iput-object v0, p0, Lorg/apache/xmlbeans/impl/values/NamespaceContext$NamespaceContextStack;->current:Lorg/apache/xmlbeans/impl/values/NamespaceContext;
 
+    .line 2
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/NamespaceContext$NamespaceContextStack;->stack:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
@@ -83,12 +85,14 @@
 .method public final push(Lorg/apache/xmlbeans/impl/values/NamespaceContext;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/NamespaceContext$NamespaceContextStack;->stack:Ljava/util/ArrayList;
 
     iget-object v1, p0, Lorg/apache/xmlbeans/impl/values/NamespaceContext$NamespaceContextStack;->current:Lorg/apache/xmlbeans/impl/values/NamespaceContext;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 2
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/values/NamespaceContext$NamespaceContextStack;->current:Lorg/apache/xmlbeans/impl/values/NamespaceContext;
 
     return-void

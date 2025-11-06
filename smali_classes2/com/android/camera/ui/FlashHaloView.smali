@@ -4,35 +4,35 @@
 
 
 # static fields
-.field public static final q1:Ljava/lang/String; = "FlashHaloView"
+.field private static final Q8:Ljava/lang/String; = "FlashHaloView"
 
-.field public static final v1:I
+.field private static final R8:I
 
 
 # instance fields
-.field public final C:Landroid/graphics/Path;
+.field private final S8:Landroid/graphics/Path;
 
-.field public final D:Landroid/graphics/Paint;
+.field private final T8:Landroid/graphics/Paint;
 
-.field public F:I
+.field private U8:I
 
-.field public G:I
+.field private V8:I
 
-.field public H:I
+.field private W8:I
 
-.field public I:I
+.field private X8:I
 
-.field public J:Landroid/graphics/Rect;
+.field private Y8:Landroid/graphics/Rect;
 
-.field public K:[F
+.field private Z8:[F
 
-.field public K0:Landroid/animation/ObjectAnimator;
+.field private a9:Landroid/animation/ObjectAnimator;
 
-.field public k0:Landroid/animation/ObjectAnimator;
+.field private b9:Landroid/animation/ObjectAnimator;
 
-.field public k1:Landroid/animation/AnimatorSet;
+.field private c9:Landroid/animation/AnimatorSet;
 
-.field public p1:Landroid/animation/AnimatorSet;
+.field private d9:Landroid/animation/AnimatorSet;
 
 
 # direct methods
@@ -43,17 +43,28 @@
 
     const/4 v1, 0x0
 
+    .line 1
     invoke-static {v0, v1, v1, v1}, Landroid/graphics/Color;->argb(IIII)I
 
     move-result v0
 
-    sput v0, Lcom/android/camera/ui/FlashHaloView;->v1:I
+    sput v0, Lcom/android/camera/ui/FlashHaloView;->R8:I
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     .line 1
     invoke-direct {p0, p1, p2}, Lcom/android/camera/ui/ShapeBackGroundView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -63,66 +74,79 @@
 
     invoke-direct {p1}, Landroid/graphics/Path;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->C:Landroid/graphics/Path;
+    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->S8:Landroid/graphics/Path;
 
     .line 3
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->D:Landroid/graphics/Paint;
+    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->T8:Landroid/graphics/Paint;
 
     .line 4
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->J:Landroid/graphics/Rect;
+    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->Y8:Landroid/graphics/Rect;
 
     const/4 p1, 0x4
 
     new-array p1, p1, [F
 
     .line 5
-    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->K:[F
+    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->Z8:[F
 
     .line 6
     new-instance p1, Landroid/animation/ObjectAnimator;
 
     invoke-direct {p1}, Landroid/animation/ObjectAnimator;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->k0:Landroid/animation/ObjectAnimator;
+    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->a9:Landroid/animation/ObjectAnimator;
 
     .line 7
     new-instance p1, Landroid/animation/ObjectAnimator;
 
     invoke-direct {p1}, Landroid/animation/ObjectAnimator;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->K0:Landroid/animation/ObjectAnimator;
+    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->b9:Landroid/animation/ObjectAnimator;
 
     .line 8
     new-instance p1, Landroid/animation/AnimatorSet;
 
     invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->k1:Landroid/animation/AnimatorSet;
+    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->c9:Landroid/animation/AnimatorSet;
 
     .line 9
     new-instance p1, Landroid/animation/AnimatorSet;
 
     invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->p1:Landroid/animation/AnimatorSet;
+    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->d9:Landroid/animation/AnimatorSet;
 
     .line 10
-    invoke-virtual {p0}, Lcom/android/camera/ui/FlashHaloView;->E()V
+    invoke-direct {p0}, Lcom/android/camera/ui/FlashHaloView;->D()V
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr"
+        }
     .end annotation
 
     .line 11
@@ -133,66 +157,81 @@
 
     invoke-direct {p1}, Landroid/graphics/Path;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->C:Landroid/graphics/Path;
+    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->S8:Landroid/graphics/Path;
 
     .line 13
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->D:Landroid/graphics/Paint;
+    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->T8:Landroid/graphics/Paint;
 
     .line 14
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->J:Landroid/graphics/Rect;
+    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->Y8:Landroid/graphics/Rect;
 
     const/4 p1, 0x4
 
     new-array p1, p1, [F
 
     .line 15
-    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->K:[F
+    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->Z8:[F
 
     .line 16
     new-instance p1, Landroid/animation/ObjectAnimator;
 
     invoke-direct {p1}, Landroid/animation/ObjectAnimator;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->k0:Landroid/animation/ObjectAnimator;
+    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->a9:Landroid/animation/ObjectAnimator;
 
     .line 17
     new-instance p1, Landroid/animation/ObjectAnimator;
 
     invoke-direct {p1}, Landroid/animation/ObjectAnimator;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->K0:Landroid/animation/ObjectAnimator;
+    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->b9:Landroid/animation/ObjectAnimator;
 
     .line 18
     new-instance p1, Landroid/animation/AnimatorSet;
 
     invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->k1:Landroid/animation/AnimatorSet;
+    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->c9:Landroid/animation/AnimatorSet;
 
     .line 19
     new-instance p1, Landroid/animation/AnimatorSet;
 
     invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->p1:Landroid/animation/AnimatorSet;
+    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->d9:Landroid/animation/AnimatorSet;
 
     .line 20
-    invoke-virtual {p0}, Lcom/android/camera/ui/FlashHaloView;->E()V
+    invoke-direct {p0}, Lcom/android/camera/ui/FlashHaloView;->D()V
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr",
+            "defStyleRes"
+        }
     .end annotation
 
     .line 21
@@ -203,128 +242,92 @@
 
     invoke-direct {p1}, Landroid/graphics/Path;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->C:Landroid/graphics/Path;
+    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->S8:Landroid/graphics/Path;
 
     .line 23
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->D:Landroid/graphics/Paint;
+    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->T8:Landroid/graphics/Paint;
 
     .line 24
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->J:Landroid/graphics/Rect;
+    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->Y8:Landroid/graphics/Rect;
 
     const/4 p1, 0x4
 
     new-array p1, p1, [F
 
     .line 25
-    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->K:[F
+    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->Z8:[F
 
     .line 26
     new-instance p1, Landroid/animation/ObjectAnimator;
 
     invoke-direct {p1}, Landroid/animation/ObjectAnimator;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->k0:Landroid/animation/ObjectAnimator;
+    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->a9:Landroid/animation/ObjectAnimator;
 
     .line 27
     new-instance p1, Landroid/animation/ObjectAnimator;
 
     invoke-direct {p1}, Landroid/animation/ObjectAnimator;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->K0:Landroid/animation/ObjectAnimator;
+    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->b9:Landroid/animation/ObjectAnimator;
 
     .line 28
     new-instance p1, Landroid/animation/AnimatorSet;
 
     invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->k1:Landroid/animation/AnimatorSet;
+    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->c9:Landroid/animation/AnimatorSet;
 
     .line 29
     new-instance p1, Landroid/animation/AnimatorSet;
 
     invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->p1:Landroid/animation/AnimatorSet;
+    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->d9:Landroid/animation/AnimatorSet;
 
     .line 30
-    invoke-virtual {p0}, Lcom/android/camera/ui/FlashHaloView;->E()V
+    invoke-direct {p0}, Lcom/android/camera/ui/FlashHaloView;->D()V
 
     return-void
 .end method
 
-.method public static synthetic A(Lcom/android/camera/ui/FlashHaloView;IIF)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2, p3}, Lcom/android/camera/ui/FlashHaloView;->K(IIF)V
-
-    return-void
-.end method
-
-.method public static synthetic G(Landroid/animation/Animator;)V
-    .locals 1
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Landroid/animation/Animator;->isRunning()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Landroid/animation/Animator;->cancel()V
-
-    invoke-virtual {p0}, Landroid/animation/Animator;->removeAllListeners()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public static synthetic z(Landroid/animation/Animator;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera/ui/FlashHaloView;->G(Landroid/animation/Animator;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final B()V
+.method private A()V
     .locals 3
 
     const/4 v0, 0x4
 
     new-array v0, v0, [Landroid/animation/Animator;
 
-    const/4 v1, 0x0
+    .line 1
+    iget-object v1, p0, Lcom/android/camera/ui/FlashHaloView;->b9:Landroid/animation/ObjectAnimator;
 
-    iget-object v2, p0, Lcom/android/camera/ui/FlashHaloView;->K0:Landroid/animation/ObjectAnimator;
+    const/4 v2, 0x0
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/4 v1, 0x1
+    iget-object v1, p0, Lcom/android/camera/ui/FlashHaloView;->a9:Landroid/animation/ObjectAnimator;
 
-    iget-object v2, p0, Lcom/android/camera/ui/FlashHaloView;->k0:Landroid/animation/ObjectAnimator;
+    const/4 v2, 0x1
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/4 v1, 0x2
+    iget-object v1, p0, Lcom/android/camera/ui/FlashHaloView;->d9:Landroid/animation/AnimatorSet;
 
-    iget-object v2, p0, Lcom/android/camera/ui/FlashHaloView;->p1:Landroid/animation/AnimatorSet;
+    const/4 v2, 0x2
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
+
+    iget-object p0, p0, Lcom/android/camera/ui/FlashHaloView;->c9:Landroid/animation/AnimatorSet;
 
     const/4 v1, 0x3
-
-    iget-object p0, p0, Lcom/android/camera/ui/FlashHaloView;->k1:Landroid/animation/AnimatorSet;
 
     aput-object p0, v0, v1
 
@@ -332,18 +335,345 @@
 
     move-result-object p0
 
-    new-instance v0, Lcom/android/camera/ui/k0;
+    sget-object v0, Ld/d/a/d8/d0;->c:Ld/d/a/d8/d0;
 
-    invoke-direct {v0}, Lcom/android/camera/ui/k0;-><init>()V
-
-    invoke-interface {p0, v0}, Ljava/lang/Iterable;->forEach(Ljava/util/function/Consumer;)V
+    .line 2
+    invoke-interface {p0, v0}, Ljava/util/List;->forEach(Ljava/util/function/Consumer;)V
 
     return-void
 .end method
 
-.method public C()V
+.method private D()V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/ui/FlashHaloView;->T8:Landroid/graphics/Paint;
+
+    const v1, -0x33000001    # -1.3421772E8f
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
+
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/ui/FlashHaloView;->T8:Landroid/graphics/Paint;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
+
+    .line 3
+    iget-object v0, p0, Lcom/android/camera/ui/FlashHaloView;->T8:Landroid/graphics/Paint;
+
+    sget-object v1, Landroid/graphics/Paint$Style;->FILL_AND_STROKE:Landroid/graphics/Paint$Style;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+
+    .line 4
+    iget-object v0, p0, Lcom/android/camera/ui/FlashHaloView;->S8:Landroid/graphics/Path;
+
+    sget-object v1, Landroid/graphics/Path$FillType;->EVEN_ODD:Landroid/graphics/Path$FillType;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Path;->setFillType(Landroid/graphics/Path$FillType;)V
+
+    .line 5
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f070499
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/android/camera/ui/FlashHaloView;->U8:I
+
+    .line 6
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f070495
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/android/camera/ui/FlashHaloView;->V8:I
+
+    return-void
+.end method
+
+.method public static synthetic F(Landroid/animation/Animator;)V
+    .locals 1
+
+    if-eqz p0, :cond_0
+
+    .line 1
+    invoke-virtual {p0}, Landroid/animation/Animator;->isRunning()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-virtual {p0}, Landroid/animation/Animator;->cancel()V
+
+    .line 3
+    invoke-virtual {p0}, Landroid/animation/Animator;->removeAllListeners()V
+
+    :cond_0
+    return-void
+.end method
+
+.method private J(IIF)V
+    .locals 9
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "targetTop",
+            "targetBottom",
+            "value"
+        }
+    .end annotation
+
+    .line 1
+    invoke-static {}, Ld/d/a/n6/b;->n()I
+
+    move-result v0
+
+    sub-int/2addr v0, p2
+
+    sub-int/2addr v0, p1
+
+    .line 2
+    iget-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->S8:Landroid/graphics/Path;
+
+    invoke-virtual {p1}, Landroid/graphics/Path;->reset()V
+
+    .line 3
+    iget-object v1, p0, Lcom/android/camera/ui/FlashHaloView;->S8:Landroid/graphics/Path;
+
+    iget p1, p0, Lcom/android/camera/ui/ShapeBackGroundView;->w:I
+
+    int-to-float v4, p1
+
+    int-to-float v5, v0
+
+    sget-object v6, Landroid/graphics/Path$Direction;->CW:Landroid/graphics/Path$Direction;
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    invoke-virtual/range {v1 .. v6}, Landroid/graphics/Path;->addRect(FFFFLandroid/graphics/Path$Direction;)V
+
+    .line 4
+    iget-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->S8:Landroid/graphics/Path;
+
+    invoke-virtual {p1}, Landroid/graphics/Path;->close()V
+
+    .line 5
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ld/d/a/l6/e/m/g1;->x0()I
+
+    move-result p1
+
+    const/4 p2, 0x1
+
+    if-eq p1, p2, :cond_2
+
+    const/4 p2, 0x3
+
+    if-eq p1, p2, :cond_1
+
+    const/4 p2, 0x4
+
+    if-eq p1, p2, :cond_0
+
+    .line 6
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    const p2, 0x7f070494
+
+    invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p1
+
+    :goto_0
+    move p2, p1
+
+    goto :goto_1
+
+    .line 7
+    :cond_0
+    iget p1, p0, Lcom/android/camera/ui/FlashHaloView;->U8:I
+
+    goto :goto_0
+
+    .line 8
+    :cond_1
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    const p2, 0x7f070498
+
+    invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p1
+
+    .line 9
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p2
+
+    const v1, 0x7f070497
+
+    invoke-virtual {p2, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p2
+
+    .line 10
+    invoke-static {}, Ld/d/a/n6/b;->n()I
+
+    move-result v1
+
+    sub-int/2addr v1, p1
+
+    sub-int p2, v1, p2
+
+    goto :goto_1
+
+    .line 11
+    :cond_2
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    const p2, 0x7f070493
+
+    invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p1
+
+    .line 12
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p2
+
+    const v1, 0x7f070492
+
+    invoke-virtual {p2, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p2
+
+    .line 13
+    :goto_1
+    iget v1, p0, Lcom/android/camera/ui/FlashHaloView;->W8:I
+
+    int-to-float v2, v1
+
+    sub-int/2addr v1, p1
+
+    int-to-float p1, v1
+
+    mul-float/2addr p1, p3
+
+    sub-float/2addr v2, p1
+
+    float-to-int p1, v2
+
+    .line 14
+    iget v1, p0, Lcom/android/camera/ui/FlashHaloView;->X8:I
+
+    int-to-float v2, v1
+
+    sub-int/2addr v1, p2
+
+    int-to-float p2, v1
+
+    mul-float/2addr p2, p3
+
+    sub-float/2addr v2, p2
+
+    float-to-int p2, v2
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    .line 15
+    invoke-static {p3, v1}, Ljava/lang/Float;->compare(FF)I
+
+    move-result p3
+
+    if-nez p3, :cond_3
+
+    .line 16
+    iput p1, p0, Lcom/android/camera/ui/FlashHaloView;->W8:I
+
+    .line 17
+    iput p2, p0, Lcom/android/camera/ui/FlashHaloView;->X8:I
+
+    .line 18
+    :cond_3
+    iget-object v1, p0, Lcom/android/camera/ui/FlashHaloView;->S8:Landroid/graphics/Path;
+
+    iget p3, p0, Lcom/android/camera/ui/FlashHaloView;->U8:I
+
+    int-to-float v2, p3
+
+    int-to-float v3, p1
+
+    iget p1, p0, Lcom/android/camera/ui/ShapeBackGroundView;->w:I
+
+    sub-int/2addr p1, p3
+
+    int-to-float v4, p1
+
+    sub-int/2addr v0, p2
+
+    int-to-float v5, v0
+
+    iget p1, p0, Lcom/android/camera/ui/FlashHaloView;->V8:I
+
+    int-to-float v6, p1
+
+    int-to-float v7, p1
+
+    sget-object v8, Landroid/graphics/Path$Direction;->CW:Landroid/graphics/Path$Direction;
+
+    invoke-virtual/range {v1 .. v8}, Landroid/graphics/Path;->addRoundRect(FFFFFFLandroid/graphics/Path$Direction;)V
+
+    .line 19
+    iget-object p0, p0, Lcom/android/camera/ui/FlashHaloView;->S8:Landroid/graphics/Path;
+
+    invoke-virtual {p0}, Landroid/graphics/Path;->close()V
+
+    return-void
+.end method
+
+.method public static synthetic z(Lcom/android/camera/ui/FlashHaloView;IIF)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0, p1, p2, p3}, Lcom/android/camera/ui/FlashHaloView;->J(IIF)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public B()V
     .locals 3
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
     const/4 v0, 0x0
@@ -354,20 +684,32 @@
 
     const-string v2, "directly hide"
 
+    .line 1
     invoke-static {v1, v2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/FlashHaloView;->B()V
+    .line 2
+    invoke-direct {p0}, Lcom/android/camera/ui/FlashHaloView;->A()V
 
     const/4 v0, 0x4
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
+    .line 3
+    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
     return-void
 .end method
 
-.method public D(Z)V
+.method public C(Z)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "enableZoomAnim"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -382,7 +724,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getVisibility()I
 
     move-result v1
 
@@ -392,7 +734,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Landroid/view/View;->getAlpha()F
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getAlpha()F
 
     move-result v1
 
@@ -402,7 +744,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Landroid/view/View;->getScaleX()F
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getScaleX()F
 
     move-result v1
 
@@ -412,7 +754,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Landroid/view/View;->getScaleY()F
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getScaleY()F
 
     move-result v1
 
@@ -430,15 +772,17 @@
 
     invoke-static {v3, v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/FlashHaloView;->B()V
+    .line 2
+    invoke-direct {p0}, Lcom/android/camera/ui/FlashHaloView;->A()V
 
-    invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
+    .line 3
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getVisibility()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Landroid/view/View;->getAlpha()F
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getAlpha()F
 
     move-result v0
 
@@ -451,11 +795,12 @@
     if-eqz v0, :cond_2
 
     :cond_0
-    const-string v0, "Action hide"
+    new-array v0, v1, [Ljava/lang/Object;
 
-    new-array v1, v1, [Ljava/lang/Object;
+    const-string v1, "Action hide"
 
-    invoke-static {v3, v0, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 4
+    invoke-static {v3, v1, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     const-wide/16 v0, 0x12c
 
@@ -463,12 +808,14 @@
 
     if-eqz p1, :cond_1
 
+    .line 5
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     new-array v3, v2, [F
 
+    .line 6
     fill-array-data v3, :array_0
 
     const-string v4, "scaleX"
@@ -481,6 +828,7 @@
 
     new-array v3, v2, [F
 
+    .line 7
     fill-array-data v3, :array_1
 
     const-string v4, "scaleY"
@@ -491,35 +839,43 @@
 
     invoke-interface {p1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 8
     new-instance v3, Landroid/animation/AnimatorSet;
 
     invoke-direct {v3}, Landroid/animation/AnimatorSet;-><init>()V
 
-    iput-object v3, p0, Lcom/android/camera/ui/FlashHaloView;->p1:Landroid/animation/AnimatorSet;
+    iput-object v3, p0, Lcom/android/camera/ui/FlashHaloView;->d9:Landroid/animation/AnimatorSet;
 
+    .line 9
     invoke-virtual {v3, p1}, Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->p1:Landroid/animation/AnimatorSet;
+    .line 10
+    iget-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->d9:Landroid/animation/AnimatorSet;
 
     invoke-virtual {p1, v0, v1}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
+    .line 11
     new-instance p1, Lmiuix/animation/utils/EaseManager$SpringInterpolator;
 
     invoke-direct {p1}, Lmiuix/animation/utils/EaseManager$SpringInterpolator;-><init>()V
 
     const v3, 0x3f666666    # 0.9f
 
+    .line 12
     invoke-virtual {p1, v3}, Lmiuix/animation/utils/EaseManager$SpringInterpolator;->setDamping(F)Lmiuix/animation/utils/EaseManager$SpringInterpolator;
 
     const v3, 0x3e99999a    # 0.3f
 
+    .line 13
     invoke-virtual {p1, v3}, Lmiuix/animation/utils/EaseManager$SpringInterpolator;->setResponse(F)Lmiuix/animation/utils/EaseManager$SpringInterpolator;
 
-    iget-object v3, p0, Lcom/android/camera/ui/FlashHaloView;->p1:Landroid/animation/AnimatorSet;
+    .line 14
+    iget-object v3, p0, Lcom/android/camera/ui/FlashHaloView;->d9:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v3, p1}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->p1:Landroid/animation/AnimatorSet;
+    .line 15
+    iget-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->d9:Landroid/animation/AnimatorSet;
 
     new-instance v3, Lcom/android/camera/ui/FlashHaloView$d;
 
@@ -527,13 +883,15 @@
 
     invoke-virtual {p1, v3}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->p1:Landroid/animation/AnimatorSet;
+    .line 16
+    iget-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->d9:Landroid/animation/AnimatorSet;
 
     invoke-virtual {p1}, Landroid/animation/AnimatorSet;->start()V
 
     :cond_1
     new-array p1, v2, [F
 
+    .line 17
     fill-array-data p1, :array_2
 
     const-string v2, "alpha"
@@ -542,19 +900,22 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->K0:Landroid/animation/ObjectAnimator;
+    iput-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->b9:Landroid/animation/ObjectAnimator;
 
+    .line 18
     invoke-virtual {p1, v0, v1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    iget-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->K0:Landroid/animation/ObjectAnimator;
+    .line 19
+    iget-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->b9:Landroid/animation/ObjectAnimator;
 
-    new-instance v0, Lps/h0;
+    new-instance v0, Lk/j0/k/d0;
 
-    invoke-direct {v0}, Lps/h0;-><init>()V
+    invoke-direct {v0}, Lk/j0/k/d0;-><init>()V
 
     invoke-virtual {p1, v0}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->K0:Landroid/animation/ObjectAnimator;
+    .line 20
+    iget-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->b9:Landroid/animation/ObjectAnimator;
 
     new-instance v0, Lcom/android/camera/ui/FlashHaloView$e;
 
@@ -562,7 +923,8 @@
 
     invoke-virtual {p1, v0}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    iget-object p0, p0, Lcom/android/camera/ui/FlashHaloView;->K0:Landroid/animation/ObjectAnimator;
+    .line 21
+    iget-object p0, p0, Lcom/android/camera/ui/FlashHaloView;->b9:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {p0}, Landroid/animation/ObjectAnimator;->start()V
 
@@ -588,64 +950,11 @@
     .end array-data
 .end method
 
-.method public final E()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/android/camera/ui/FlashHaloView;->D:Landroid/graphics/Paint;
-
-    const v1, -0x33000001    # -1.3421772E8f
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
-
-    iget-object v0, p0, Lcom/android/camera/ui/FlashHaloView;->D:Landroid/graphics/Paint;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
-
-    iget-object v0, p0, Lcom/android/camera/ui/FlashHaloView;->D:Landroid/graphics/Paint;
-
-    sget-object v1, Landroid/graphics/Paint$Style;->FILL_AND_STROKE:Landroid/graphics/Paint$Style;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
-
-    iget-object v0, p0, Lcom/android/camera/ui/FlashHaloView;->C:Landroid/graphics/Path;
-
-    sget-object v1, Landroid/graphics/Path$FillType;->EVEN_ODD:Landroid/graphics/Path$FillType;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Path;->setFillType(Landroid/graphics/Path$FillType;)V
-
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0704c6
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/android/camera/ui/FlashHaloView;->F:I
-
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0704c2
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/android/camera/ui/FlashHaloView;->G:I
-
-    return-void
-.end method
-
-.method public F()Z
+.method public E()Z
     .locals 0
 
-    iget-object p0, p0, Lcom/android/camera/ui/ShapeBackGroundView;->n:Landroid/animation/ValueAnimator;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/ui/ShapeBackGroundView;->C1:Landroid/animation/ValueAnimator;
 
     if-nez p0, :cond_0
 
@@ -653,6 +962,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Landroid/animation/ValueAnimator;->isRunning()Z
 
@@ -661,46 +971,87 @@
     return p0
 .end method
 
-.method public H(Landroid/graphics/Rect;ZZI)V
+.method public G(Landroid/graphics/Rect;ZZI)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "rect",
+            "animation",
+            "isStop",
+            "uiStyle"
+        }
+    .end annotation
 
-    invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    .line 1
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
 
+    .line 2
     iget v1, p1, Landroid/graphics/Rect;->left:I
 
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout$LayoutParams;->setMarginStart(I)V
 
+    .line 3
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result v1
 
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
+    .line 4
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
     move-result v1
 
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
+    .line 5
     iget v1, p1, Landroid/graphics/Rect;->top:I
 
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    .line 6
+    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/camera/ui/FlashHaloView;->L(Landroid/graphics/Rect;ZZI)V
+    .line 7
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/camera/ui/FlashHaloView;->K(Landroid/graphics/Rect;ZZI)V
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    .line 8
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     return-void
 .end method
 
-.method public I(IIIILjava/util/List;Z)V
+.method public H(IIIILjava/util/List;Z)V
     .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "originalTop",
+            "top",
+            "originalBottom",
+            "bottom",
+            "animateInElements",
+            "animation"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(IIII",
@@ -710,9 +1061,11 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera/ui/ShapeBackGroundView;->j()V
 
-    invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    .line 2
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
@@ -733,27 +1086,31 @@
 
     new-array p6, p6, [F
 
+    .line 3
     fill-array-data p6, :array_0
 
     invoke-static {p6}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
     move-result-object p6
 
-    iput-object p6, p0, Lcom/android/camera/ui/ShapeBackGroundView;->n:Landroid/animation/ValueAnimator;
+    iput-object p6, p0, Lcom/android/camera/ui/ShapeBackGroundView;->C1:Landroid/animation/ValueAnimator;
 
     const-wide/16 v0, 0x12c
 
+    .line 4
     invoke-virtual {p6, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    iget-object p6, p0, Lcom/android/camera/ui/ShapeBackGroundView;->n:Landroid/animation/ValueAnimator;
+    .line 5
+    iget-object p6, p0, Lcom/android/camera/ui/ShapeBackGroundView;->C1:Landroid/animation/ValueAnimator;
 
-    new-instance v0, Lps/m;
+    new-instance v0, Lk/j0/k/l;
 
-    invoke-direct {v0}, Lps/m;-><init>()V
+    invoke-direct {v0}, Lk/j0/k/l;-><init>()V
 
     invoke-virtual {p6, v0}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    iget-object p6, p0, Lcom/android/camera/ui/ShapeBackGroundView;->n:Landroid/animation/ValueAnimator;
+    .line 6
+    iget-object p6, p0, Lcom/android/camera/ui/ShapeBackGroundView;->C1:Landroid/animation/ValueAnimator;
 
     new-instance v0, Lcom/android/camera/ui/FlashHaloView$a;
 
@@ -775,11 +1132,12 @@
 
     if-eqz p5, :cond_1
 
-    new-instance p1, Lz1/e;
+    .line 7
+    new-instance p1, Ld/d/a/f6/e;
 
-    iget-object p0, p0, Lcom/android/camera/ui/ShapeBackGroundView;->n:Landroid/animation/ValueAnimator;
+    iget-object p0, p0, Lcom/android/camera/ui/ShapeBackGroundView;->C1:Landroid/animation/ValueAnimator;
 
-    invoke-direct {p1, p0}, Lz1/e;-><init>(Landroid/animation/Animator;)V
+    invoke-direct {p1, p0}, Ld/d/a/f6/e;-><init>(Landroid/animation/Animator;)V
 
     invoke-static {p1}, Lio/reactivex/Completable;->create(Lio/reactivex/CompletableOnSubscribe;)Lio/reactivex/Completable;
 
@@ -789,8 +1147,9 @@
 
     goto :goto_0
 
+    .line 8
     :cond_1
-    iget-object p0, p0, Lcom/android/camera/ui/ShapeBackGroundView;->n:Landroid/animation/ValueAnimator;
+    iget-object p0, p0, Lcom/android/camera/ui/ShapeBackGroundView;->C1:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p0}, Landroid/animation/ValueAnimator;->start()V
 
@@ -801,15 +1160,19 @@
     :goto_1
     const/4 p1, 0x0
 
-    invoke-virtual {v7, p1, p2, p1, p4}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
+    .line 9
+    invoke-virtual {v7, p1, p2, p1, p4}, Landroid/widget/FrameLayout$LayoutParams;->setMargins(IIII)V
 
-    invoke-virtual {p0, v7}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    .line 10
+    invoke-virtual {p0, v7}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     const/high16 p1, 0x3f800000    # 1.0f
 
-    invoke-virtual {p0, p2, p4, p1}, Lcom/android/camera/ui/FlashHaloView;->K(IIF)V
+    .line 11
+    invoke-direct {p0, p2, p4, p1}, Lcom/android/camera/ui/FlashHaloView;->J(IIF)V
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    .line 12
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     return-void
 
@@ -822,9 +1185,20 @@
     .end array-data
 .end method
 
-.method public J(ZZ)V
+.method public I(ZZ)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "enableZoomAnim",
+            "directlyShow"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -839,7 +1213,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getVisibility()I
 
     move-result v1
 
@@ -849,7 +1223,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Landroid/view/View;->getAlpha()F
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getAlpha()F
 
     move-result v1
 
@@ -859,7 +1233,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Landroid/view/View;->getScaleX()F
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getScaleX()F
 
     move-result v1
 
@@ -869,7 +1243,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Landroid/view/View;->getScaleY()F
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getScaleY()F
 
     move-result v1
 
@@ -887,9 +1261,11 @@
 
     invoke-static {v3, v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/FlashHaloView;->B()V
+    .line 2
+    invoke-direct {p0}, Lcom/android/camera/ui/FlashHaloView;->A()V
 
-    invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
+    .line 3
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getVisibility()I
 
     move-result v0
 
@@ -897,7 +1273,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Landroid/view/View;->getAlpha()F
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getAlpha()F
 
     move-result v0
 
@@ -907,7 +1283,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Landroid/view/View;->getScaleX()F
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getScaleX()F
 
     move-result v0
 
@@ -918,31 +1294,37 @@
     if-eqz v0, :cond_3
 
     :cond_0
-    const-string v0, "Action show"
+    new-array v0, v1, [Ljava/lang/Object;
 
-    new-array v4, v1, [Ljava/lang/Object;
+    const-string v4, "Action show"
 
-    invoke-static {v3, v0, v4}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 4
+    invoke-static {v3, v4, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     const/4 v0, 0x2
 
     if-eqz p2, :cond_1
 
-    invoke-virtual {p0, v2}, Landroid/view/View;->setAlpha(F)V
+    .line 5
+    invoke-virtual {p0, v2}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
-    invoke-virtual {p0, v1}, Landroid/view/View;->setVisibility(I)V
+    .line 6
+    invoke-virtual {p0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
     goto :goto_0
 
     :cond_1
     const/4 p2, 0x0
 
-    invoke-virtual {p0, p2}, Landroid/view/View;->setAlpha(F)V
+    .line 7
+    invoke-virtual {p0, p2}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
-    invoke-virtual {p0, v1}, Landroid/view/View;->setVisibility(I)V
+    .line 8
+    invoke-virtual {p0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
     new-array p2, v0, [F
 
+    .line 9
     fill-array-data p2, :array_0
 
     const-string v1, "alpha"
@@ -951,21 +1333,24 @@
 
     move-result-object p2
 
-    iput-object p2, p0, Lcom/android/camera/ui/FlashHaloView;->k0:Landroid/animation/ObjectAnimator;
+    iput-object p2, p0, Lcom/android/camera/ui/FlashHaloView;->a9:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v3, 0x1f4
 
+    .line 10
     invoke-virtual {p2, v3, v4}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    iget-object p2, p0, Lcom/android/camera/ui/FlashHaloView;->k0:Landroid/animation/ObjectAnimator;
+    .line 11
+    iget-object p2, p0, Lcom/android/camera/ui/FlashHaloView;->a9:Landroid/animation/ObjectAnimator;
 
-    new-instance v1, Lps/h0;
+    new-instance v1, Lk/j0/k/d0;
 
-    invoke-direct {v1}, Lps/h0;-><init>()V
+    invoke-direct {v1}, Lk/j0/k/d0;-><init>()V
 
     invoke-virtual {p2, v1}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    iget-object p2, p0, Lcom/android/camera/ui/FlashHaloView;->k0:Landroid/animation/ObjectAnimator;
+    .line 12
+    iget-object p2, p0, Lcom/android/camera/ui/FlashHaloView;->a9:Landroid/animation/ObjectAnimator;
 
     new-instance v1, Lcom/android/camera/ui/FlashHaloView$b;
 
@@ -973,19 +1358,22 @@
 
     invoke-virtual {p2, v1}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    iget-object p2, p0, Lcom/android/camera/ui/FlashHaloView;->k0:Landroid/animation/ObjectAnimator;
+    .line 13
+    iget-object p2, p0, Lcom/android/camera/ui/FlashHaloView;->a9:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {p2}, Landroid/animation/ObjectAnimator;->start()V
 
     :goto_0
     if-eqz p1, :cond_2
 
+    .line 14
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     new-array p2, v0, [F
 
+    .line 15
     fill-array-data p2, :array_1
 
     const-string v1, "scaleX"
@@ -998,6 +1386,7 @@
 
     new-array p2, v0, [F
 
+    .line 16
     fill-array-data p2, :array_2
 
     const-string v0, "scaleY"
@@ -1008,37 +1397,45 @@
 
     invoke-interface {p1, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 17
     new-instance p2, Landroid/animation/AnimatorSet;
 
     invoke-direct {p2}, Landroid/animation/AnimatorSet;-><init>()V
 
-    iput-object p2, p0, Lcom/android/camera/ui/FlashHaloView;->k1:Landroid/animation/AnimatorSet;
+    iput-object p2, p0, Lcom/android/camera/ui/FlashHaloView;->c9:Landroid/animation/AnimatorSet;
 
+    .line 18
     invoke-virtual {p2, p1}, Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->k1:Landroid/animation/AnimatorSet;
+    .line 19
+    iget-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->c9:Landroid/animation/AnimatorSet;
 
     const-wide/16 v0, 0x12c
 
     invoke-virtual {p1, v0, v1}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
+    .line 20
     new-instance p1, Lmiuix/animation/utils/EaseManager$SpringInterpolator;
 
     invoke-direct {p1}, Lmiuix/animation/utils/EaseManager$SpringInterpolator;-><init>()V
 
     const p2, 0x3f666666    # 0.9f
 
+    .line 21
     invoke-virtual {p1, p2}, Lmiuix/animation/utils/EaseManager$SpringInterpolator;->setDamping(F)Lmiuix/animation/utils/EaseManager$SpringInterpolator;
 
     const p2, 0x3e99999a    # 0.3f
 
+    .line 22
     invoke-virtual {p1, p2}, Lmiuix/animation/utils/EaseManager$SpringInterpolator;->setResponse(F)Lmiuix/animation/utils/EaseManager$SpringInterpolator;
 
-    iget-object p2, p0, Lcom/android/camera/ui/FlashHaloView;->k1:Landroid/animation/AnimatorSet;
+    .line 23
+    iget-object p2, p0, Lcom/android/camera/ui/FlashHaloView;->c9:Landroid/animation/AnimatorSet;
 
     invoke-virtual {p2, p1}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->k1:Landroid/animation/AnimatorSet;
+    .line 24
+    iget-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->c9:Landroid/animation/AnimatorSet;
 
     new-instance p2, Lcom/android/camera/ui/FlashHaloView$c;
 
@@ -1046,16 +1443,19 @@
 
     invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    iget-object p0, p0, Lcom/android/camera/ui/FlashHaloView;->k1:Landroid/animation/AnimatorSet;
+    .line 25
+    iget-object p0, p0, Lcom/android/camera/ui/FlashHaloView;->c9:Landroid/animation/AnimatorSet;
 
     invoke-virtual {p0}, Landroid/animation/AnimatorSet;->start()V
 
     goto :goto_1
 
+    .line 26
     :cond_2
-    invoke-virtual {p0, v2}, Landroid/view/View;->setScaleX(F)V
+    invoke-virtual {p0, v2}, Landroid/widget/FrameLayout;->setScaleX(F)V
 
-    invoke-virtual {p0, v2}, Landroid/view/View;->setScaleY(F)V
+    .line 27
+    invoke-virtual {p0, v2}, Landroid/widget/FrameLayout;->setScaleY(F)V
 
     :cond_3
     :goto_1
@@ -1080,241 +1480,56 @@
     .end array-data
 .end method
 
-.method public final K(IIF)V
-    .locals 9
-
-    invoke-static {}, Ly2/b;->n()I
-
-    move-result v0
-
-    sub-int/2addr v0, p2
-
-    sub-int/2addr v0, p1
-
-    iget-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->C:Landroid/graphics/Path;
-
-    invoke-virtual {p1}, Landroid/graphics/Path;->reset()V
-
-    iget-object v1, p0, Lcom/android/camera/ui/FlashHaloView;->C:Landroid/graphics/Path;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    iget p1, p0, Lcom/android/camera/ui/ShapeBackGroundView;->i:I
-
-    int-to-float v4, p1
-
-    int-to-float v5, v0
-
-    sget-object v6, Landroid/graphics/Path$Direction;->CW:Landroid/graphics/Path$Direction;
-
-    invoke-virtual/range {v1 .. v6}, Landroid/graphics/Path;->addRect(FFFFLandroid/graphics/Path$Direction;)V
-
-    iget-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->C:Landroid/graphics/Path;
-
-    invoke-virtual {p1}, Landroid/graphics/Path;->close()V
-
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lm2/h1;->G0()I
-
-    move-result p1
-
-    const/4 p2, 0x1
-
-    if-eq p1, p2, :cond_2
-
-    const/4 p2, 0x3
-
-    if-eq p1, p2, :cond_1
-
-    const/4 p2, 0x4
-
-    if-eq p1, p2, :cond_0
-
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    const p2, 0x7f0704c1
-
-    invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result p1
-
-    :goto_0
-    move p2, p1
-
-    goto :goto_1
-
-    :cond_0
-    iget p1, p0, Lcom/android/camera/ui/FlashHaloView;->F:I
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    const p2, 0x7f0704c5
-
-    invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result p1
-
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p2
-
-    const v1, 0x7f0704c4
-
-    invoke-virtual {p2, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result p2
-
-    invoke-static {}, Ly2/b;->n()I
-
-    move-result v1
-
-    sub-int/2addr v1, p1
-
-    sub-int p2, v1, p2
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    const p2, 0x7f0704c0
-
-    invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result p1
-
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p2
-
-    const v1, 0x7f0704bf
-
-    invoke-virtual {p2, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result p2
-
-    :goto_1
-    iget v1, p0, Lcom/android/camera/ui/FlashHaloView;->H:I
-
-    int-to-float v2, v1
-
-    sub-int/2addr v1, p1
-
-    int-to-float p1, v1
-
-    mul-float/2addr p1, p3
-
-    sub-float/2addr v2, p1
-
-    float-to-int p1, v2
-
-    iget v1, p0, Lcom/android/camera/ui/FlashHaloView;->I:I
-
-    int-to-float v2, v1
-
-    sub-int/2addr v1, p2
-
-    int-to-float p2, v1
-
-    mul-float/2addr p2, p3
-
-    sub-float/2addr v2, p2
-
-    float-to-int p2, v2
-
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    invoke-static {p3, v1}, Ljava/lang/Float;->compare(FF)I
-
-    move-result p3
-
-    if-nez p3, :cond_3
-
-    iput p1, p0, Lcom/android/camera/ui/FlashHaloView;->H:I
-
-    iput p2, p0, Lcom/android/camera/ui/FlashHaloView;->I:I
-
-    :cond_3
-    iget-object v1, p0, Lcom/android/camera/ui/FlashHaloView;->C:Landroid/graphics/Path;
-
-    iget p3, p0, Lcom/android/camera/ui/FlashHaloView;->F:I
-
-    int-to-float v2, p3
-
-    int-to-float v3, p1
-
-    iget p1, p0, Lcom/android/camera/ui/ShapeBackGroundView;->i:I
-
-    sub-int/2addr p1, p3
-
-    int-to-float v4, p1
-
-    sub-int/2addr v0, p2
-
-    int-to-float v5, v0
-
-    iget p1, p0, Lcom/android/camera/ui/FlashHaloView;->G:I
-
-    int-to-float v6, p1
-
-    int-to-float v7, p1
-
-    sget-object v8, Landroid/graphics/Path$Direction;->CW:Landroid/graphics/Path$Direction;
-
-    invoke-virtual/range {v1 .. v8}, Landroid/graphics/Path;->addRoundRect(FFFFFFLandroid/graphics/Path$Direction;)V
-
-    iget-object p0, p0, Lcom/android/camera/ui/FlashHaloView;->C:Landroid/graphics/Path;
-
-    invoke-virtual {p0}, Landroid/graphics/Path;->close()V
-
-    return-void
-.end method
-
-.method public L(Landroid/graphics/Rect;ZZI)V
+.method public K(Landroid/graphics/Rect;ZZI)V
     .locals 22
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "rect",
+            "animation",
+            "isStop",
+            "uiStyle"
+        }
+    .end annotation
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
 
-    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    .line 1
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
     move/from16 v3, p4
 
-    invoke-static {v2, v3, v1}, Ly2/b;->J(Landroid/content/Context;ILandroid/graphics/Rect;)[F
+    invoke-static {v2, v3, v1}, Ld/d/a/n6/b;->J(Landroid/content/Context;ILandroid/graphics/Rect;)[F
 
     move-result-object v2
 
-    invoke-static/range {p4 .. p4}, Ly2/b;->E(I)Landroid/graphics/Rect;
+    .line 2
+    invoke-static/range {p4 .. p4}, Ld/d/a/n6/b;->E(I)Landroid/graphics/Rect;
 
     move-result-object v3
 
+    .line 3
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Rect;->width()I
 
     move-result v4
 
+    .line 4
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Rect;->height()I
 
     move-result v5
 
     if-eqz p3, :cond_0
 
+    .line 5
     invoke-virtual {v3}, Landroid/graphics/Rect;->width()I
 
     move-result v6
@@ -1327,16 +1542,20 @@
 
     if-ne v5, v6, :cond_0
 
-    iput-object v1, v0, Lcom/android/camera/ui/FlashHaloView;->J:Landroid/graphics/Rect;
+    .line 6
+    iput-object v1, v0, Lcom/android/camera/ui/FlashHaloView;->Y8:Landroid/graphics/Rect;
 
-    iput-object v2, v0, Lcom/android/camera/ui/FlashHaloView;->K:[F
+    .line 7
+    iput-object v2, v0, Lcom/android/camera/ui/FlashHaloView;->Z8:[F
 
+    .line 8
     :cond_0
-    iget-object v6, v0, Lcom/android/camera/ui/FlashHaloView;->C:Landroid/graphics/Path;
+    iget-object v6, v0, Lcom/android/camera/ui/FlashHaloView;->S8:Landroid/graphics/Path;
 
     invoke-virtual {v6}, Landroid/graphics/Path;->reset()V
 
-    iget-object v7, v0, Lcom/android/camera/ui/FlashHaloView;->C:Landroid/graphics/Path;
+    .line 9
+    iget-object v7, v0, Lcom/android/camera/ui/FlashHaloView;->S8:Landroid/graphics/Path;
 
     const/4 v8, 0x0
 
@@ -1358,22 +1577,26 @@
 
     invoke-virtual/range {v7 .. v12}, Landroid/graphics/Path;->addRect(FFFFLandroid/graphics/Path$Direction;)V
 
-    iget-object v6, v0, Lcom/android/camera/ui/FlashHaloView;->C:Landroid/graphics/Path;
+    .line 10
+    iget-object v6, v0, Lcom/android/camera/ui/FlashHaloView;->S8:Landroid/graphics/Path;
 
     invoke-virtual {v6}, Landroid/graphics/Path;->close()V
 
     const/4 v6, 0x0
 
+    .line 11
     aget v7, v2, v6
 
     const/4 v8, 0x1
 
+    .line 12
     aget v9, v2, v8
 
     int-to-float v4, v4
 
     const/4 v10, 0x2
 
+    .line 13
     aget v11, v2, v10
 
     sub-float v11, v4, v11
@@ -1382,19 +1605,21 @@
 
     const/4 v12, 0x3
 
+    .line 14
     aget v13, v2, v12
 
     sub-float v13, v5, v13
 
     if-eqz p2, :cond_7
 
+    .line 15
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Rect;->width()I
 
     move-result v7
 
     int-to-float v7, v7
 
-    iget-object v9, v0, Lcom/android/camera/ui/FlashHaloView;->J:Landroid/graphics/Rect;
+    iget-object v9, v0, Lcom/android/camera/ui/FlashHaloView;->Y8:Landroid/graphics/Rect;
 
     invoke-virtual {v9}, Landroid/graphics/Rect;->width()I
 
@@ -1408,7 +1633,7 @@
 
     move-result v9
 
-    iget-object v11, v0, Lcom/android/camera/ui/FlashHaloView;->J:Landroid/graphics/Rect;
+    iget-object v11, v0, Lcom/android/camera/ui/FlashHaloView;->Y8:Landroid/graphics/Rect;
 
     invoke-virtual {v11}, Landroid/graphics/Rect;->width()I
 
@@ -1420,13 +1645,14 @@
 
     div-float/2addr v7, v9
 
+    .line 16
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Rect;->height()I
 
     move-result v1
 
     int-to-float v1, v1
 
-    iget-object v9, v0, Lcom/android/camera/ui/FlashHaloView;->J:Landroid/graphics/Rect;
+    iget-object v9, v0, Lcom/android/camera/ui/FlashHaloView;->Y8:Landroid/graphics/Rect;
 
     invoke-virtual {v9}, Landroid/graphics/Rect;->height()I
 
@@ -1440,7 +1666,7 @@
 
     move-result v3
 
-    iget-object v9, v0, Lcom/android/camera/ui/FlashHaloView;->J:Landroid/graphics/Rect;
+    iget-object v9, v0, Lcom/android/camera/ui/FlashHaloView;->Y8:Landroid/graphics/Rect;
 
     invoke-virtual {v9}, Landroid/graphics/Rect;->height()I
 
@@ -1452,6 +1678,7 @@
 
     div-float/2addr v1, v3
 
+    .line 17
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1478,35 +1705,37 @@
 
     invoke-static {v11, v3, v9}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    const v3, 0x38d1b717    # 1.0E-4f
+
+    .line 18
     invoke-static {v7}, Ljava/lang/Float;->isNaN(F)Z
 
-    move-result v3
+    move-result v9
 
-    const v9, 0x38d1b717    # 1.0E-4f
-
-    if-nez v3, :cond_1
+    if-nez v9, :cond_1
 
     invoke-static {v7}, Ljava/lang/Float;->isInfinite(F)Z
 
-    move-result v3
+    move-result v9
 
-    if-nez v3, :cond_1
+    if-nez v9, :cond_1
 
     invoke-static {v7}, Ljava/lang/Math;->abs(F)F
 
-    move-result v3
+    move-result v9
 
-    cmpl-float v3, v3, v9
+    cmpl-float v9, v9, v3
 
-    if-lez v3, :cond_1
+    if-lez v9, :cond_1
 
-    move v3, v8
+    move v9, v8
 
     goto :goto_0
 
     :cond_1
-    move v3, v6
+    move v9, v6
 
+    .line 19
     :goto_0
     invoke-static {v1}, Ljava/lang/Float;->isNaN(F)Z
 
@@ -1524,42 +1753,48 @@
 
     move-result v11
 
-    cmpl-float v9, v11, v9
+    cmpl-float v3, v11, v3
 
-    if-lez v9, :cond_2
+    if-lez v3, :cond_2
 
-    move v9, v8
+    move v3, v8
 
     goto :goto_1
 
     :cond_2
-    move v9, v6
+    move v3, v6
 
     :goto_1
-    if-eqz v3, :cond_3
+    if-eqz v9, :cond_3
 
-    iget-object v11, v0, Lcom/android/camera/ui/FlashHaloView;->K:[F
+    .line 20
+    iget-object v11, v0, Lcom/android/camera/ui/FlashHaloView;->Z8:[F
 
     aget v13, v11, v6
 
-    aget v6, v2, v6
+    aget v14, v2, v6
 
-    sub-float/2addr v6, v13
+    aget v6, v11, v6
 
-    mul-float/2addr v6, v7
+    sub-float/2addr v14, v6
 
-    add-float/2addr v13, v6
+    mul-float/2addr v14, v7
 
+    add-float/2addr v13, v14
+
+    .line 21
     aget v6, v11, v10
 
-    aget v10, v2, v10
+    aget v14, v2, v10
 
-    sub-float/2addr v10, v6
+    aget v10, v11, v10
 
-    mul-float/2addr v10, v7
+    sub-float/2addr v14, v10
+
+    mul-float/2addr v14, v7
 
     :goto_2
-    add-float/2addr v6, v10
+    add-float/2addr v6, v14
 
     sub-float/2addr v4, v6
 
@@ -1568,35 +1803,43 @@
     goto :goto_3
 
     :cond_3
-    if-eqz v9, :cond_4
+    if-eqz v3, :cond_4
 
-    iget-object v11, v0, Lcom/android/camera/ui/FlashHaloView;->K:[F
+    .line 22
+    iget-object v11, v0, Lcom/android/camera/ui/FlashHaloView;->Z8:[F
 
     aget v13, v11, v6
 
-    aget v6, v2, v6
-
-    sub-float/2addr v6, v13
-
-    mul-float/2addr v6, v1
-
-    add-float/2addr v13, v6
-
-    aget v6, v11, v10
-
-    aget v10, v2, v10
-
-    sub-float/2addr v10, v6
-
-    mul-float/2addr v10, v1
-
-    goto :goto_2
-
-    :cond_4
-    iget-object v11, v0, Lcom/android/camera/ui/FlashHaloView;->K:[F
+    aget v14, v2, v6
 
     aget v6, v11, v6
 
+    sub-float/2addr v14, v6
+
+    mul-float/2addr v14, v1
+
+    add-float/2addr v13, v14
+
+    .line 23
+    aget v6, v11, v10
+
+    aget v14, v2, v10
+
+    aget v10, v11, v10
+
+    sub-float/2addr v14, v10
+
+    mul-float/2addr v14, v1
+
+    goto :goto_2
+
+    .line 24
+    :cond_4
+    iget-object v11, v0, Lcom/android/camera/ui/FlashHaloView;->Z8:[F
+
+    aget v6, v11, v6
+
+    .line 25
     aget v10, v11, v10
 
     sub-float/2addr v4, v10
@@ -1606,31 +1849,37 @@
     move v13, v6
 
     :goto_3
-    if-eqz v9, :cond_5
+    if-eqz v3, :cond_5
 
-    iget-object v3, v0, Lcom/android/camera/ui/FlashHaloView;->K:[F
+    .line 26
+    iget-object v3, v0, Lcom/android/camera/ui/FlashHaloView;->Z8:[F
 
     aget v4, v3, v8
 
     aget v6, v2, v8
 
-    sub-float/2addr v6, v4
+    aget v7, v3, v8
+
+    sub-float/2addr v6, v7
 
     mul-float/2addr v6, v1
 
     add-float v9, v4, v6
 
-    aget v3, v3, v12
+    .line 27
+    aget v4, v3, v12
 
     aget v2, v2, v12
+
+    aget v3, v3, v12
 
     sub-float/2addr v2, v3
 
     mul-float/2addr v2, v1
 
-    add-float/2addr v3, v2
+    add-float/2addr v4, v2
 
-    sub-float v1, v5, v3
+    sub-float v1, v5, v4
 
     :goto_4
     move/from16 v18, v1
@@ -1641,43 +1890,52 @@
 
     move v15, v13
 
-    goto :goto_6
+    goto :goto_5
 
     :cond_5
-    if-eqz v3, :cond_6
+    if-eqz v9, :cond_6
 
-    iget-object v1, v0, Lcom/android/camera/ui/FlashHaloView;->K:[F
+    .line 28
+    iget-object v1, v0, Lcom/android/camera/ui/FlashHaloView;->Z8:[F
 
     aget v3, v1, v8
 
     aget v4, v2, v8
 
-    sub-float/2addr v4, v3
+    aget v6, v1, v8
+
+    sub-float/2addr v4, v6
 
     mul-float/2addr v4, v7
 
     add-float v9, v3, v4
 
-    aget v1, v1, v12
+    .line 29
+    aget v3, v1, v12
 
     aget v2, v2, v12
+
+    aget v1, v1, v12
 
     sub-float/2addr v2, v1
 
     mul-float/2addr v2, v7
 
-    add-float/2addr v1, v2
+    add-float/2addr v3, v2
 
-    goto :goto_5
+    sub-float v1, v5, v3
 
+    goto :goto_4
+
+    .line 30
     :cond_6
-    iget-object v1, v0, Lcom/android/camera/ui/FlashHaloView;->K:[F
+    iget-object v1, v0, Lcom/android/camera/ui/FlashHaloView;->Z8:[F
 
     aget v9, v1, v8
 
+    .line 31
     aget v1, v1, v12
 
-    :goto_5
     sub-float v1, v5, v1
 
     goto :goto_4
@@ -1691,36 +1949,39 @@
 
     move/from16 v18, v13
 
-    :goto_6
-    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    .line 32
+    :goto_5
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f0705ae
+    const v2, 0x7f070586
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v1
 
-    invoke-static {}, Ly2/b;->G0()Z
+    .line 33
+    invoke-static {}, Ld/d/a/n6/b;->G0()Z
 
     move-result v2
 
     if-eqz v2, :cond_8
 
-    invoke-static {}, Lcom/android/camera/v2;->t4()Z
+    invoke-static {}, Ld/d/a/d4;->r4()Z
 
     move-result v2
 
     if-eqz v2, :cond_8
 
-    goto :goto_7
+    goto :goto_6
 
     :cond_8
-    iget v1, v0, Lcom/android/camera/ui/FlashHaloView;->G:I
+    iget v1, v0, Lcom/android/camera/ui/FlashHaloView;->V8:I
 
-    :goto_7
-    iget-object v14, v0, Lcom/android/camera/ui/FlashHaloView;->C:Landroid/graphics/Path;
+    .line 34
+    :goto_6
+    iget-object v14, v0, Lcom/android/camera/ui/FlashHaloView;->S8:Landroid/graphics/Path;
 
     int-to-float v1, v1
 
@@ -1732,7 +1993,8 @@
 
     invoke-virtual/range {v14 .. v21}, Landroid/graphics/Path;->addRoundRect(FFFFFFLandroid/graphics/Path$Direction;)V
 
-    iget-object v0, v0, Lcom/android/camera/ui/FlashHaloView;->C:Landroid/graphics/Path;
+    .line 35
+    iget-object v0, v0, Lcom/android/camera/ui/FlashHaloView;->S8:Landroid/graphics/Path;
 
     invoke-virtual {v0}, Landroid/graphics/Path;->close()V
 
@@ -1741,20 +2003,30 @@
 
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "canvas"
+        }
+    .end annotation
 
-    iget-object v0, p0, Lcom/android/camera/ui/FlashHaloView;->D:Landroid/graphics/Paint;
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/ui/FlashHaloView;->T8:Landroid/graphics/Paint;
 
     invoke-virtual {v0}, Landroid/graphics/Paint;->getColor()I
 
     move-result v0
 
-    sget v1, Lcom/android/camera/ui/FlashHaloView;->v1:I
+    sget v1, Lcom/android/camera/ui/FlashHaloView;->R8:I
 
     if-eq v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/android/camera/ui/FlashHaloView;->C:Landroid/graphics/Path;
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/ui/FlashHaloView;->S8:Landroid/graphics/Path;
 
-    iget-object p0, p0, Lcom/android/camera/ui/FlashHaloView;->D:Landroid/graphics/Paint;
+    iget-object p0, p0, Lcom/android/camera/ui/FlashHaloView;->T8:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, p0}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
@@ -1764,16 +2036,28 @@
 
 .method public y(II)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "alpha",
+            "resetType"
+        }
+    .end annotation
 
-    invoke-static {}, Lg2/b;->h()Ll2/g;
+    .line 1
+    invoke-static {}, Ld/d/a/l6/b;->h()Ld/d/a/l6/e/l/g;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ll2/g;->p0()Z
+    .line 2
+    invoke-virtual {p1}, Ld/d/a/l6/e/l/g;->l0()Z
 
     move-result p1
 
-    const v0, 0x7f06010d
+    const v0, 0x7f0600e9
 
     if-eqz p1, :cond_1
 
@@ -1785,8 +2069,9 @@
 
     if-ne p2, p1, :cond_1
 
+    .line 3
     :cond_0
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
@@ -1796,33 +2081,38 @@
 
     move-result p1
 
-    iget-object p2, p0, Lcom/android/camera/ui/FlashHaloView;->D:Landroid/graphics/Paint;
+    .line 4
+    iget-object p2, p0, Lcom/android/camera/ui/FlashHaloView;->T8:Landroid/graphics/Paint;
 
     invoke-virtual {p2, p1}, Landroid/graphics/Paint;->setColor(I)V
 
     goto :goto_0
 
+    .line 5
     :cond_1
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object p1
 
-    invoke-virtual {p1, v0}, Lf2/e;->b(I)I
+    invoke-virtual {p1, v0}, Ld/d/a/k6/f;->b(I)I
 
     move-result p1
 
-    iget-object p2, p0, Lcom/android/camera/ui/FlashHaloView;->D:Landroid/graphics/Paint;
+    .line 6
+    iget-object p2, p0, Lcom/android/camera/ui/FlashHaloView;->T8:Landroid/graphics/Paint;
 
     invoke-virtual {p2, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->D:Landroid/graphics/Paint;
+    .line 7
+    iget-object p1, p0, Lcom/android/camera/ui/FlashHaloView;->T8:Landroid/graphics/Paint;
 
     const/16 p2, 0xcc
 
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setAlpha(I)V
 
+    .line 8
     :goto_0
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->invalidate()V
 
     return-void
 .end method

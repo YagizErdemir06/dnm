@@ -205,7 +205,6 @@
     <string name="accessibility_video_capture_button">Копче за фотографирање за време на снимање на видеа</string>
     <string name="accessibility_video_pause_button">Снимањето е паузирано</string>
     <string name="accessibility_video_resume_button">Снимањето е во тек</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">Водениот жиг е искл.</string>
     <string name="accessibility_watermark_image_on">Водениот жиг е вкл.</string>
     <string name="accessibility_watermark_text">Отвори го панелот за прилагодување на воден печат</string>
@@ -213,16 +212,6 @@
     <string name="accessibility_zoom_button">Режим зум</string>
     <string name="actionbar_button_up_description">Назад</string>
     <string name="afternoon">Попладне</string>
-    <string name="agent_flip_tbc">Продолжете на внатрешниот екран</string>
-    <string name="agent_function_max">Се приспособи на максимална вредност</string>
-    <string name="agent_function_min">Се приспособи на минимална вредност</string>
-    <string name="agent_workspace_mode_not_supported">Оваа функција не е поддржана</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"Оваа функција не се поддржува.
-Наместо тоа се отвори Фотографскиот режим."</string>
-    <string name="agent_workspace_on">Параметри поставени за фотографирање на \"%1$s\"</string>
-    <string name="agent_workspace_tbc">Анализирање на сцена</string>
-    <string name="agent_workspace_tbc_use_default">"Анализирање на сцена…
-Параметрите на камера се поставени на стандардни"</string>
     <string name="ai_agra_fort">Тврдина Агра</string>
     <string name="ai_amber_fort">Палата Амбер</string>
     <string name="ai_baby">Бебе</string>
@@ -781,7 +770,6 @@
     <string name="download_hint_cn">"Looks like your device isn't connected to WLAN. Use %1$s MB of mobile data to download items now?"</string>
     <string name="download_hint_wifi">Изгледа вашиот уред не е поврзан со Wi-Fi. Да се ​​користат %1$s MB мобилни податоци за преземање ставки сега?</string>
     <string name="download_in_progress">Преземање…</string>
-    <string name="download_network_error">Не можеше да се преземе. Проверете ги мрежните поставки.</string>
     <string name="download_title">Предупредување за употреба на податоци</string>
     <string name="download_waiting">На чекање…</string>
     <string name="dual_camera_lens_covered_toast">Леќата е покриена.</string>
@@ -1260,7 +1248,6 @@
     <string name="miuix_appcompat_delete_description">Избриши</string>
     <string name="miuix_appcompat_deselect_all">Поништи ги сите</string>
     <string name="miuix_appcompat_deselect_all_description">Поништи ги сите</string>
-    <string name="miuix_appcompat_edit">Уреди</string>
     <string name="miuix_appcompat_search_action_mode_cancel">Откажи</string>
     <string name="miuix_appcompat_search_input_description">Пребарајте</string>
     <string name="miuix_appcompat_select_all">Одберете ги сите</string>
@@ -1901,7 +1888,7 @@
     <string name="pref_retain_camera_mode_summary">Сменете на претходниот режим на камера кога ќе ја отворите апликацијата.</string>
     <string name="pref_retain_camera_mode_title">Меморирај го претходниот режим</string>
     <string name="pref_retain_camera_status_description">Сочувајте го претходно користениот режим наместо автоматско ресетирање на претпочитани</string>
-    <string name="pref_retain_camera_status_title">Зачувај поставки</string>
+    <string name="pref_retain_camera_status_title">Сочувај нагодувања</string>
     <string name="pref_retain_live_shot">Динамични снимки</string>
     <string name="pref_retain_live_shot_description">Сочувајте го статусот на динамични снимки поставен за време на претходната сесија</string>
     <string name="pref_s_n_r_s_c">Намалете ја вревата во видеата зависно од сцената</string>
@@ -2199,7 +2186,6 @@
     <string name="time_picker_label_hour">Ч</string>
     <string name="time_picker_label_minute">М</string>
     <string name="time_stamp_date_format">dd.MM.yyyy</string>
-    <string name="time_stamp_date_format_minute">dd.MM.yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">Секогаш можете да ја замрзнете или одмрзнете позадината во било кое време пред или после снимањето.</string>
     <string name="timefreeze_guide_tip3">Субјектот мора да стои во средина на рамката.</string>
     <string name="timefreeze_guide_tip4">Сопрете го сообраќајот.</string>
@@ -2237,7 +2223,7 @@
     <string name="tip_flash_screen_light_on">Мек Блиц: Вкл.</string>
     <string name="tip_flash_soft_light_off">Преден блиц: Искл.</string>
     <string name="tip_flash_soft_light_torch">Преден блиц: Режим Светилка</string>
-    <string name="tip_flash_torch">Блиц: Светилка</string>
+    <string name="tip_flash_torch">Блиц: Секогаш вкл.</string>
     <string name="tip_friend_mode_connect_when_24GHz">Користете %s GHz мрежа за постабилно емитувачко искуство</string>
     <string name="tip_friend_mode_display_device_name_connect">Споделуван преглед</string>
     <string name="tip_friend_mode_display_device_name_disconnect">Другиот уред ја напушти сесијата</string>

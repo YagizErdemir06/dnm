@@ -10,6 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,6 +21,7 @@
 .method public getManualPictureStyleFragment()Ljava/lang/String;
     .locals 0
 
+    .line 1
     const-class p0, Lcom/android/camera2/compat/theme/custom/cv/FragmentManualPictureStyleLegacy;
 
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -32,6 +34,7 @@
 .method public getPrivacyWatermarkNewBieDialogFragment()Ljava/lang/String;
     .locals 0
 
+    .line 1
     const-class p0, Lcom/android/camera2/compat/theme/custom/cv/PrivacyWatermarkNewbieDialogFragmentCV;
 
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -44,6 +47,7 @@
 .method public getVideoPrompterFragment()Ljava/lang/String;
     .locals 0
 
+    .line 1
     const-class p0, Lcom/android/camera2/compat/theme/custom/cv/FragmentVideoPrompterCV;
 
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -56,6 +60,7 @@
 .method public getZoomViewFragment()Ljava/lang/String;
     .locals 0
 
+    .line 1
     const-class p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;
 
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;

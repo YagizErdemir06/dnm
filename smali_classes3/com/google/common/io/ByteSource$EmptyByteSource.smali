@@ -1,4 +1,4 @@
-.class final Lcom/google/common/io/ByteSource$EmptyByteSource;
+.class public final Lcom/google/common/io/ByteSource$EmptyByteSource;
 .super Lcom/google/common/io/ByteSource$ByteArrayByteSource;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # static fields
-.field static final INSTANCE:Lcom/google/common/io/ByteSource$EmptyByteSource;
+.field public static final INSTANCE:Lcom/google/common/io/ByteSource$EmptyByteSource;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/io/ByteSource$EmptyByteSource;
 
     invoke-direct {v0}, Lcom/google/common/io/ByteSource$EmptyByteSource;-><init>()V
@@ -38,6 +39,7 @@
 
     new-array v0, v0, [B
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/google/common/io/ByteSource$ByteArrayByteSource;-><init>([B)V
 
     return-void
@@ -48,8 +50,10 @@
 .method public asCharSource(Ljava/nio/charset/Charset;)Lcom/google/common/io/CharSource;
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-static {}, Lcom/google/common/io/CharSource;->empty()Lcom/google/common/io/CharSource;
 
     move-result-object p0
@@ -60,6 +64,7 @@
 .method public read()[B
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/io/ByteSource$ByteArrayByteSource;->bytes:[B
 
     return-object p0

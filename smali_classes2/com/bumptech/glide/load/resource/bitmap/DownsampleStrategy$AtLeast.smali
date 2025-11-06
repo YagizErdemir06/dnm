@@ -1,4 +1,4 @@
-.class Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy$AtLeast;
+.class public Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy$AtLeast;
 .super Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;
 .source "SourceFile"
 
@@ -18,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy;-><init>()V
 
     return-void
@@ -28,6 +29,7 @@
 .method public getSampleSizeRounding(IIII)Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy$SampleSizeRounding;
     .locals 0
 
+    .line 1
     sget-object p0, Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy$SampleSizeRounding;->QUALITY:Lcom/bumptech/glide/load/resource/bitmap/DownsampleStrategy$SampleSizeRounding;
 
     return-object p0
@@ -36,6 +38,7 @@
 .method public getScaleFactor(IIII)F
     .locals 0
 
+    .line 1
     div-int/2addr p2, p4
 
     div-int/2addr p1, p3
@@ -50,6 +53,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-static {p0}, Ljava/lang/Integer;->highestOneBit(I)I
 

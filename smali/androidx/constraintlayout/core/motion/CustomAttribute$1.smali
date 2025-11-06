@@ -1,4 +1,4 @@
-.class synthetic Landroidx/constraintlayout/core/motion/CustomAttribute$1;
+.class public synthetic Landroidx/constraintlayout/core/motion/CustomAttribute$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$androidx$constraintlayout$core$motion$CustomAttribute$AttributeType:[I
+.field public static final synthetic $SwitchMap$androidx$constraintlayout$core$motion$CustomAttribute$AttributeType:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;->values()[Landroidx/constraintlayout/core/motion/CustomAttribute$AttributeType;
 
     move-result-object v0

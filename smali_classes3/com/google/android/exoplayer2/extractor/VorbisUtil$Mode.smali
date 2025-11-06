@@ -28,14 +28,19 @@
 .method public constructor <init>(ZIII)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/extractor/VorbisUtil$Mode;->blockFlag:Z
 
+    .line 3
     iput p2, p0, Lcom/google/android/exoplayer2/extractor/VorbisUtil$Mode;->windowType:I
 
+    .line 4
     iput p3, p0, Lcom/google/android/exoplayer2/extractor/VorbisUtil$Mode;->transformType:I
 
+    .line 5
     iput p4, p0, Lcom/google/android/exoplayer2/extractor/VorbisUtil$Mode;->mapping:I
 
     return-void

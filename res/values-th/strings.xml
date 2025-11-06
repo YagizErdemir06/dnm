@@ -232,7 +232,6 @@
     <string name="accessibility_video_capture_button">ปุ่มสำหรับถ่ายภาพขณะอัดวิดีโอ</string>
     <string name="accessibility_video_pause_button">พักการถ่ายวิดีโอ</string>
     <string name="accessibility_video_resume_button">ดำเนินการถ่ายวิดีโอต่อ</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">ลายน้ำปิดอยู่</string>
     <string name="accessibility_watermark_image_on">ลายน้ำเปิดอยู่</string>
     <string name="accessibility_watermark_text">เปิดแผงการปรับลายน้ำ</string>
@@ -240,16 +239,6 @@
     <string name="accessibility_zoom_button">โหมดซูม</string>
     <string name="actionbar_button_up_description">ย้อนกลับ</string>
     <string name="afternoon">บ่าย</string>
-    <string name="agent_flip_tbc">ดำเนินการต่อบนหน้าจอด้านใน</string>
-    <string name="agent_function_max">ปรับค่าให้มีค่าสูงสุด</string>
-    <string name="agent_function_min">ปรับเป็นค่าต่ำสุด</string>
-    <string name="agent_workspace_mode_not_supported">ระบบไม่รองรับคุณลักษณะนี้</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"คุณสมบัตินี้ไม่ได้รับการรองรับ
-เปิดโหมดรูปภาพแทน"</string>
-    <string name="agent_workspace_on">พารามิเตอร์ที่ตั้งไว้สำหรับการถ่ายภาพ \"%1$s\"</string>
-    <string name="agent_workspace_tbc">กำลังเรียนรู้ฉาก</string>
-    <string name="agent_workspace_tbc_use_default">"กำลังเรียนรู้ฉาก…
-พารามิเตอร์กล้องถูกตั้งเป็นค่าเริ่มต้น"</string>
     <string name="ai_agra_fort">ป้อมอักกรา</string>
     <string name="ai_amber_fort">พระราชวังแอมเบอร์</string>
     <string name="ai_baby">เด็กน้อย</string>
@@ -476,7 +465,6 @@
     <string name="bluetooth_headset_permission_des">สำหรับกำหนดสถานะการเชื่อมต่อของหูฟังบลูทูธและบันทึกเสียงโดยใช้ไมโครโฟนของหูฟัง</string>
     <string name="bluetooth_permission_not_ask_again">อนุญาตให้แอปนี้เชื่อมต่อกับอุปกรณ์ใกล้เคียงในการตั้งค่าเพื่อให้สามารถเชื่อมต่อกับหูฟังบลูทูธได้</string>
     <string name="bokeh_use_hint">หน้าชัดหลังเบลอ</string>
-    <string name="bottomsheet_action_expand_halfway">ขยายรายการครึ่งหนึ่ง</string>
     <string name="burst_shoot_exit_button_text">ปิดใช้งานถ่ายต่อเนื่อง</string>
     <string name="button_fisheye_camera_title">ฟิชอาย</string>
     <string name="button_front_camera_title">ถ่ายเซลฟี่</string>
@@ -517,8 +505,6 @@
     <string name="ccc_temperature_warning_msg">อุปกรณ์ของคุณร้อนเกินไป กล้องจะปิดลงใน %d วินาที รูปภาพหรือวิดีโอของคุณจะถูกบันทึกโดยอัตโนมัติ</string>
     <string name="ccc_temperature_warning_title">อุปกรณ์ร้อนเกินไป</string>
     <string name="center_mark">จุดศูนย์กลาง</string>
-    <string name="character_counter_content_description">ป้อนอักขระแล้ว %1$d จาก %2$d ตัว</string>
-    <string name="character_counter_overflowed_content_description">เกินจำนวนอักขระสูงสุด %1$d จาก %2$d</string>
     <string name="cinemaster_cancel">ยกเลิก </string>
     <string name="cinemaster_confirm">ออก</string>
     <string name="cinemaster_connect_exit_message">ออกจากการตั้งค่ามัลติแคม?</string>
@@ -537,7 +523,6 @@
     <string name="cinemaster_toast_monitor_disconnect">มอนิเตอร์ไม่ได้เชื่อมต่อกับการตั้งค่ามัลติแคม</string>
     <string name="cinemaster_toast_monitor_play_error">กล้อง %s ตัดการเชื่อมต่อจากการตั้งค่ามัลติแคมเนื่องจากข้อผิดพลาด</string>
     <string name="cinemaster_wifi_24g_tips">เปลี่ยนไปใช้เครือข่าย %s GHz เพื่อเพิ่มความเสถียรของฟีดมอนิเตอร์</string>
-    <string name="clear_text_end_icon_content_description">ล้างข้อความ</string>
     <string name="clearable_edittext_clear_description">ล้าง</string>
     <string name="clone_adjust">ปรับแต่ง</string>
     <string name="clone_copy_mode">หยุดเฟรม</string>
@@ -831,7 +816,6 @@
     <string name="download_hint_cn">ดูเหมือนว่าอุปกรณ์ของคุณไม่ได้เชื่อมต่อกับ WLAN ใช้เน็ตมือถือ %1$s MB เพื่อดาวน์โหลดรายการเลยไหม?</string>
     <string name="download_hint_wifi">ดูเหมือนว่าอุปกรณ์ของคุณไม่ได้เชื่อมต่อกับ Wi-Fi ใช้เน็ตมือถือ %1$s MB เพื่อดาวน์โหลดรายการเลยไหม?</string>
     <string name="download_in_progress">กำลังดาวน์โหลด…</string>
-    <string name="download_network_error">ไม่สามารถโหลดได้ ตรวจสอบการตั้งค่าเครือข่าย</string>
     <string name="download_title">แจ้งเตือนการใช้ข้อมูล</string>
     <string name="download_waiting">รอดำเนินการ…</string>
     <string name="dual_camera_lens_covered_toast">เลนส์ถูกบดบัง</string>
@@ -882,7 +866,6 @@
     <string name="eras_ad">หลังคริสตกาล</string>
     <string name="eras_bc">ก่อนคริสตกาล</string>
     <string name="error_fail_to_start_audio_capture">ไม่สามารถเริ่มการถ่ายภาพด้วยเสียงได้</string>
-    <string name="error_icon_content_description">ข้อผิดพลาด</string>
     <string name="esp_tip">ตัวอย่างการแสดงผลด้านนอก</string>
     <string name="evening">บ่าย</string>
     <string name="exo_controls_cc_disabled_description">เปิดใช้คำบรรยาย</string>
@@ -937,7 +920,6 @@
     <string name="exo_track_surround_7_point_1">7.1 เสียงเซอร์ราวด์</string>
     <string name="exo_track_unknown">ไม่ทราบ</string>
     <string name="expand_button_title">ขั้นสูง</string>
-    <string name="exposed_dropdown_menu_content_description">แสดงเมนูแบบเลื่อนลง</string>
     <string name="exposure_mode_adjust_title">โหมดเปิดรับแสง</string>
     <string name="eye_light">ประกายตา</string>
     <string name="eye_light_angel">นางฟ้า</string>
@@ -1094,7 +1076,6 @@
     <string name="hint_subtitle_prompt">คุณสามารถกำหนดคำบรรยายตอนนี้ได้</string>
     <string name="histogram_summary_tip">แสดงผลตอบรับการเปิดรับแบบเรียลไทม์</string>
     <string name="hunt_dual_water_mark">ลายน้ำของกล้องถ่ายรูปคู่จะถูกเพิ่มโดยอัตโนมัติ</string>
-    <string name="icon_content_description">ไอคอนกล่องโต้ตอบ</string>
     <string name="id_card_mode_hint_back">สแกนด้านหลัง ID ของคุณ</string>
     <string name="id_card_mode_hint_front">สแกนด้านหน้า ID ของคุณ</string>
     <string name="id_card_mode_use_hint_text_body">"รวม ID ทั้งสองด้านไว้ในภาพเดียว
@@ -1105,7 +1086,6 @@
     <string name="invisible_mode_dialog_summary">ตอนนี้ใช้กล้องไม่ได้ ปิดโหมดไม่ระบุตัวตนในการตั้งค่าเพื่อให้สามารถใช้กล้องได้</string>
     <string name="invisible_mode_dialog_title">คุณอยู่ในโหมดไม่ระบุตัวตน</string>
     <string name="invisible_mode_dialog_to_close">การตั้งค่า</string>
-    <string name="item_view_role_description">แท็บ</string>
     <string name="kaleidoscope_fragment_tab_name">ภาพลานตา</string>
     <string name="lens_dirty_detected_content">"ดูเหมือนว่าเลนส์กล้องของคุณจะสกปรก
 ทำความสะอาดเลนส์เพื่อให้ถ่ายได้ดีขึ้น"</string>
@@ -1228,18 +1208,6 @@
     <string name="manually_raw_tip">ไม่สามารถใช้การซูมกับรูปแบบ RAW ได้</string>
     <string name="manually_ultra_raw_tip">ไม่สามารถใช้การซูมด้วย อัลตร้า RAW ได้</string>
     <string name="masterfilter_description_title">ฟิลเตอร์ภาพยนตร์</string>
-    <string name="material_clock_toggle_content_description">เลือก AM หรือ PM</string>
-    <string name="material_hour_selection">เลือกชั่วโมง</string>
-    <string name="material_hour_suffix">%1$s นาฬิกา</string>
-    <string name="material_minute_selection">เลือกนาที</string>
-    <string name="material_minute_suffix">%1$s นาที</string>
-    <string name="material_timepicker_am">AM</string>
-    <string name="material_timepicker_clock_mode_description">สลับไปโหมดนาฬิกาเพื่อป้อนเวลา</string>
-    <string name="material_timepicker_hour">ชั่วโมง</string>
-    <string name="material_timepicker_minute">นาที</string>
-    <string name="material_timepicker_pm">PM</string>
-    <string name="material_timepicker_select_time">เลือกเวลา</string>
-    <string name="material_timepicker_text_input_mode_description">สลับไปโหมดป้อนข้อความเพื่อป้อนเวลา</string>
     <string name="message_snap_double_confirm">แตะปุมเสียงค้างเพื่อเปิดใช้งาน NFC ตอนนี้ แทนที่ด้วยคุณลักษณะนี้?</string>
     <string name="midnight">กลางคืน</string>
     <string name="mimoji_app_name">Fun Cam</string>
@@ -1378,7 +1346,6 @@
     <string name="miuix_appcompat_delete_description">ลบ</string>
     <string name="miuix_appcompat_deselect_all">ไม่เลือกทั้งหมด</string>
     <string name="miuix_appcompat_deselect_all_description">ไม่เลือกทั้งหมด</string>
-    <string name="miuix_appcompat_edit">แก้ไข</string>
     <string name="miuix_appcompat_search_action_mode_cancel">ยกเลิก </string>
     <string name="miuix_appcompat_search_input_description">ค้นหา</string>
     <string name="miuix_appcompat_select_all">เลือกทั้งหมด</string>
@@ -1486,42 +1453,6 @@
     <string name="msg_bubble_doc4_first_use">แตะเพื่อตรวจจับข้อความ</string>
     <string name="msg_toast_doc4_recognition_failed">เกิดข้อผิดพลาด โปรดลองอีกครั้ง</string>
     <string name="msg_toast_doc4_text_not_found">ไม่สามารถตรวจจับข้อความได้</string>
-    <string name="mtrl_badge_numberless_content_description">การแจ้งเตือนใหม่</string>
-    <string name="mtrl_chip_close_icon_content_description">นำ %1$s ออก</string>
-    <string name="mtrl_exceed_max_badge_number_content_description">การแจ้งเตือนใหม่มากกว่า %1$d รายการ</string>
-    <string name="mtrl_picker_a11y_next_month">เปลี่ยนไปที่เดือนถัดไป</string>
-    <string name="mtrl_picker_a11y_prev_month">เปลี่ยนไปที่เดือนก่อนหน้า</string>
-    <string name="mtrl_picker_announce_current_selection">การเลือกในปัจจุบัน: %1$s</string>
-    <string name="mtrl_picker_cancel">ยกเลิก</string>
-    <string name="mtrl_picker_confirm">ตกลง</string>
-    <string name="mtrl_picker_date_header_selected">%1$s</string>
-    <string name="mtrl_picker_date_header_title">เลือกวันที่</string>
-    <string name="mtrl_picker_date_header_unselected">วันที่ที่เลือก</string>
-    <string name="mtrl_picker_day_of_week_column_header">คอลัมน์ของวัน: %1$s</string>
-    <string name="mtrl_picker_invalid_format">รูปแบบไม่ถูกต้อง</string>
-    <string name="mtrl_picker_invalid_format_example">ตัวอย่าง: %1$s</string>
-    <string name="mtrl_picker_invalid_format_use">ใช้: %1$s</string>
-    <string name="mtrl_picker_invalid_range">ช่วงไม่ถูกต้อง</string>
-    <string name="mtrl_picker_navigate_to_year_description">ไปที่ปี %1$s</string>
-    <string name="mtrl_picker_out_of_range">วันที่ไม่อยู่ในช่วงที่อนุญาต: %1$s</string>
-    <string name="mtrl_picker_range_header_only_end_selected">วันที่เริ่มต้น – %1$s</string>
-    <string name="mtrl_picker_range_header_only_start_selected">%1$s – วันที่สิ้นสุด</string>
-    <string name="mtrl_picker_range_header_selected">%1$s – %2$s</string>
-    <string name="mtrl_picker_range_header_title">เลือกช่วง</string>
-    <string name="mtrl_picker_range_header_unselected">วันที่เริ่มต้น – วันที่สิ้นสุด</string>
-    <string name="mtrl_picker_save">บันทึก</string>
-    <string name="mtrl_picker_text_input_date_hint">วันที่</string>
-    <string name="mtrl_picker_text_input_date_range_end_hint">วันที่สิ้นสุด</string>
-    <string name="mtrl_picker_text_input_date_range_start_hint">วันที่เริ่มต้น</string>
-    <string name="mtrl_picker_text_input_day_abbr">ว</string>
-    <string name="mtrl_picker_text_input_month_abbr">ด</string>
-    <string name="mtrl_picker_text_input_year_abbr">ป</string>
-    <string name="mtrl_picker_toggle_to_calendar_input_mode">สลับไปใช้โหมดป้อนข้อมูลปฏิทิน</string>
-    <string name="mtrl_picker_toggle_to_day_selection">แตะเพื่อสลับไปใช้การเลือกวัน</string>
-    <string name="mtrl_picker_toggle_to_text_input_mode">สลับไปใช้โหมดป้อนข้อมูลข้อความ</string>
-    <string name="mtrl_picker_toggle_to_year_selection">แตะเพื่อสลับไปใช้การเลือกปี</string>
-    <string name="mtrl_timepicker_cancel">ยกเลิก</string>
-    <string name="mtrl_timepicker_confirm">ตกลง</string>
     <string name="multi_window_mode_not_supported">กล้องไม่สามารถใช้ได้ในโหมดหลายหน้าต่าง</string>
     <string name="network_access_user_notice_agree">ยอมรับ</string>
     <string name="network_access_user_notice_message_live_video">&lt;Data>กล้องจำเป็นต้องเชื่อมต่ออินเทอร์เน็ตเพื่อให้เอฟเฟ็กต์เพลงและคุณสมบัติอื่นๆ สำหรับวิดีโอสั้นๆ&lt;br/>&lt;br/>โดยการแตะ \"ยอมรับ\" ด้านล่าง คุณเห็นด้วยกับ &lt;a href =%1$s>ข้อตกลงการใช้งาน&lt;/a> และ &lt;a href =%2$s>นโยบายความเป็นส่วนตัว&lt;/a>ของเรา และอนุญาตให้กล้องเชื่อมต่ออินเทอร์เน็ต&lt;/Data></string>
@@ -1616,7 +1547,6 @@
     <string name="parameter_wb_title">สมดุลสีขาว</string>
     <string name="parameter_zoom_slider_description">ลากตัวเลื่อนการซูมตามแนวนอนเพื่อเปลี่ยนภาพของคุณอย่างราบรื่นจากการถ่ายระยะไกลเป็นระยะใกล้</string>
     <string name="parameter_zoom_slider_title">ซูม</string>
-    <string name="password_toggle_content_description">แสดงรหัสผ่าน</string>
     <string name="path_settings">แอประบบ/กล้อง/การตั้งค่า</string>
     <string name="photo_assistance_tips_title">เคล็ดลับสด</string>
     <string name="pic_flaw_blink_more">ดูเหมือนว่าใครบางคนในกรอบภาพจะหลับตา</string>
@@ -2359,7 +2289,6 @@
     <string name="time_picker_label_hour">ชม.</string>
     <string name="time_picker_label_minute">น.</string>
     <string name="time_stamp_date_format">dd/MM/yyyy</string>
-    <string name="time_stamp_date_format_minute">dd/MM/yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">คุณสามารถหยุดและเลิกตรึงพื้นหลังได้ตลอดเวลาก่อนหรือระหว่างการถ่ายภาพ</string>
     <string name="timefreeze_guide_tip3">ขอให้ตัวละครของคุณอยู่ตรงกลางเฟรม</string>
     <string name="timefreeze_guide_tip4">หยุดการจราจร</string>
@@ -2397,7 +2326,7 @@
     <string name="tip_flash_screen_light_on">ซอฟต์แฟลช: เปิด</string>
     <string name="tip_flash_soft_light_off">ซอฟต์แฟลช: ปิด</string>
     <string name="tip_flash_soft_light_torch">ซอฟต์แฟลช: โหมดไฟฉาย</string>
-    <string name="tip_flash_torch">แฟลช: ไฟฉาย</string>
+    <string name="tip_flash_torch">แฟลช: เปิดตลอดเวลา</string>
     <string name="tip_friend_mode_connect_when_24GHz">ใช้การเชื่อมต่อ %s GHz เพื่อเพิ่มคุณภาพการแสดงตัวอย่าง</string>
     <string name="tip_friend_mode_display_device_name_connect">ดูตัวอย่างที่แขร์</string>
     <string name="tip_friend_mode_display_device_name_disconnect">อุปกรณ์อื่นออกจากเซสชันนี้</string>

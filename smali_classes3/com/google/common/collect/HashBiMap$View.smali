@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/collect/HashBiMap$View;
+.class public abstract Lcom/google/common/collect/HashBiMap$View;
 .super Ljava/util/AbstractSet;
 .source "SourceFile"
 
@@ -29,7 +29,7 @@
 
 
 # instance fields
-.field final biMap:Lcom/google/common/collect/HashBiMap;
+.field public final biMap:Lcom/google/common/collect/HashBiMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/HashBiMap<",
@@ -50,8 +50,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/HashBiMap$View;->biMap:Lcom/google/common/collect/HashBiMap;
 
     return-void
@@ -62,6 +64,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/HashBiMap$View;->biMap:Lcom/google/common/collect/HashBiMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/HashBiMap;->clear()V
@@ -90,6 +93,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/HashBiMap$View$1;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/HashBiMap$View$1;-><init>(Lcom/google/common/collect/HashBiMap$View;)V
@@ -100,6 +104,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/HashBiMap$View;->biMap:Lcom/google/common/collect/HashBiMap;
 
     iget p0, p0, Lcom/google/common/collect/HashBiMap;->size:I

@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/EmptyContiguousSet;
+.class public final Lcom/google/common/collect/EmptyContiguousSet;
 .super Lcom/google/common/collect/ContiguousSet;
 .source "SourceFile"
 
@@ -39,6 +39,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/ContiguousSet;-><init>(Lcom/google/common/collect/DiscreteDomain;)V
 
     return-void
@@ -56,6 +57,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
 
     move-result-object p0
@@ -88,6 +90,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/Ordering;->natural()Lcom/google/common/collect/Ordering;
 
     move-result-object p0
@@ -144,12 +147,15 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of p0, p1, Ljava/util/Set;
 
     if-eqz p0, :cond_0
 
+    .line 2
     check-cast p1, Ljava/util/Set;
 
+    .line 3
     invoke-interface {p1}, Ljava/util/Set;->isEmpty()Z
 
     move-result p0
@@ -213,6 +219,7 @@
 .method public bridge synthetic headSetImpl(Ljava/lang/Object;Z)Lcom/google/common/collect/ImmutableSortedSet;
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Comparable;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/EmptyContiguousSet;->headSetImpl(Ljava/lang/Comparable;Z)Lcom/google/common/collect/ContiguousSet;
@@ -396,6 +403,7 @@
 .method public bridge synthetic subSetImpl(Ljava/lang/Object;ZLjava/lang/Object;Z)Lcom/google/common/collect/ImmutableSortedSet;
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Comparable;
 
     check-cast p3, Ljava/lang/Comparable;
@@ -423,6 +431,7 @@
 .method public bridge synthetic tailSetImpl(Ljava/lang/Object;Z)Lcom/google/common/collect/ImmutableSortedSet;
     .locals 0
 
+    .line 1
     check-cast p1, Ljava/lang/Comparable;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/EmptyContiguousSet;->tailSetImpl(Ljava/lang/Comparable;Z)Lcom/google/common/collect/ContiguousSet;
@@ -445,6 +454,7 @@
     .annotation build Lcom/google/common/annotations/GwtIncompatible;
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/EmptyContiguousSet$SerializedForm;
 
     iget-object p0, p0, Lcom/google/common/collect/ContiguousSet;->domain:Lcom/google/common/collect/DiscreteDomain;

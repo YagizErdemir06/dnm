@@ -18,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroidx/core/view/accessibility/AccessibilityViewCommand$CommandArguments;-><init>()V
 
     return-void
@@ -28,6 +29,7 @@
 .method public getColumn()I
     .locals 1
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/accessibility/AccessibilityViewCommand$CommandArguments;->mBundle:Landroid/os/Bundle;
 
     const-string v0, "android.view.accessibility.action.ARGUMENT_COLUMN_INT"
@@ -42,6 +44,7 @@
 .method public getRow()I
     .locals 1
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/accessibility/AccessibilityViewCommand$CommandArguments;->mBundle:Landroid/os/Bundle;
 
     const-string v0, "android.view.accessibility.action.ARGUMENT_ROW_INT"

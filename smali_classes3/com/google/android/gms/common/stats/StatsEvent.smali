@@ -36,6 +36,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/common/stats/StatsEvent;->zzc()J
 
     move-result-wide v0

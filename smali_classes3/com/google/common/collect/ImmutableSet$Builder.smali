@@ -27,7 +27,7 @@
 # instance fields
 .field private hashCode:I
 
-.field hashTable:[Ljava/lang/Object;
+.field public hashTable:[Ljava/lang/Object;
     .annotation build Lcom/google/common/annotations/VisibleForTesting;
     .end annotation
 
@@ -74,20 +74,24 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/ImmutableSet$Builder;->hashTable:[Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/ImmutableSet$Builder;->hashTable:[Ljava/lang/Object;
 
     array-length v0, v0
 
     add-int/lit8 v0, v0, -0x1
 
+    .line 3
     invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
+    .line 4
     invoke-static {v1}, Lcom/google/common/collect/Hashing;->smear(I)I
 
     move-result v2
@@ -95,24 +99,29 @@
     :goto_0
     and-int/2addr v2, v0
 
+    .line 5
     iget-object v3, p0, Lcom/google/common/collect/ImmutableSet$Builder;->hashTable:[Ljava/lang/Object;
 
     aget-object v4, v3, v2
 
     if-nez v4, :cond_0
 
+    .line 6
     aput-object p1, v3, v2
 
+    .line 7
     iget v0, p0, Lcom/google/common/collect/ImmutableSet$Builder;->hashCode:I
 
     add-int/2addr v0, v1
 
     iput v0, p0, Lcom/google/common/collect/ImmutableSet$Builder;->hashCode:I
 
+    .line 8
     invoke-super {p0, p1}, Lcom/google/common/collect/ImmutableCollection$ArrayBasedBuilder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableCollection$ArrayBasedBuilder;
 
     return-void
 
+    .line 9
     :cond_0
     invoke-virtual {v4, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -540,17 +549,20 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/ImmutableSet$Builder;->hashTable:[Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
+    .line 2
     :goto_0
     iget v1, p1, Lcom/google/common/collect/ImmutableCollection$ArrayBasedBuilder;->size:I
 
     if-ge v0, v1, :cond_1
 
+    .line 3
     iget-object v1, p1, Lcom/google/common/collect/ImmutableCollection$ArrayBasedBuilder;->contents:[Ljava/lang/Object;
 
     aget-object v1, v1, v0
@@ -563,6 +575,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-object v0, p1, Lcom/google/common/collect/ImmutableCollection$ArrayBasedBuilder;->contents:[Ljava/lang/Object;
 

@@ -37,7 +37,7 @@
     .end annotation
 .end field
 
-.field protected final playCore:Lcom/google/android/play/core/splitcompat/util/PlayCore;
+.field public final playCore:Lcom/google/android/play/core/splitcompat/util/PlayCore;
 
 .field private final receiver:Lcom/google/android/play/core/listener/StateUpdatedReceiver;
 
@@ -46,8 +46,10 @@
 .method public constructor <init>(Lcom/google/android/play/core/splitcompat/util/PlayCore;Landroid/content/IntentFilter;Landroid/content/Context;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
@@ -58,22 +60,27 @@
 
     iput-object v0, p0, Lcom/google/android/play/core/listener/StateUpdateListenerRegister;->mStateUpdatedListeners:Ljava/util/Set;
 
+    .line 3
     new-instance v0, Lcom/google/android/play/core/listener/StateUpdatedReceiver;
 
     invoke-direct {v0, p0}, Lcom/google/android/play/core/listener/StateUpdatedReceiver;-><init>(Lcom/google/android/play/core/listener/StateUpdateListenerRegister;)V
 
     iput-object v0, p0, Lcom/google/android/play/core/listener/StateUpdateListenerRegister;->receiver:Lcom/google/android/play/core/listener/StateUpdatedReceiver;
 
+    .line 4
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/play/core/listener/StateUpdateListenerRegister;->mLock:Ljava/lang/Object;
 
+    .line 5
     iput-object p1, p0, Lcom/google/android/play/core/listener/StateUpdateListenerRegister;->playCore:Lcom/google/android/play/core/splitcompat/util/PlayCore;
 
+    .line 6
     iput-object p2, p0, Lcom/google/android/play/core/listener/StateUpdateListenerRegister;->intentFilter:Landroid/content/IntentFilter;
 
+    .line 7
     iput-object p3, p0, Lcom/google/android/play/core/listener/StateUpdateListenerRegister;->context:Landroid/content/Context;
 
     return-void
@@ -89,12 +96,14 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/play/core/listener/StateUpdateListenerRegister;->mStateUpdatedListeners:Ljava/util/Set;
 
     invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
+    .line 2
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -102,12 +111,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/google/android/play/core/listener/StateUpdatedListener;
 
+    .line 4
     invoke-interface {v0, p1}, Lcom/google/android/play/core/listener/StateUpdatedListener;->onStateUpdate(Ljava/lang/Object;)V
 
     goto :goto_0
@@ -117,25 +128,6 @@
 .end method
 
 .method public abstract onReceived(Landroid/content/Intent;)V
-.end method
-
-.method public receiverFlagExported()I
-    .locals 1
-
-    sget p0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v0, 0x21
-
-    if-lt p0, v0, :cond_0
-
-    const/4 p0, 0x2
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
 .end method
 
 .method public final registerListener(Lcom/google/android/play/core/listener/StateUpdatedListener;)V
@@ -148,10 +140,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/play/core/listener/StateUpdateListenerRegister;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/google/android/play/core/listener/StateUpdateListenerRegister;->playCore:Lcom/google/android/play/core/splitcompat/util/PlayCore;
 
@@ -163,6 +157,7 @@
 
     invoke-virtual {v1, v2, v4}, Lcom/google/android/play/core/splitcompat/util/PlayCore;->debug(Ljava/lang/String;[Ljava/lang/Object;)I
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/play/core/listener/StateUpdateListenerRegister;->mStateUpdatedListeners:Ljava/util/Set;
 
     invoke-interface {v1, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -171,6 +166,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/play/core/listener/StateUpdateListenerRegister;->playCore:Lcom/google/android/play/core/splitcompat/util/PlayCore;
 
     const-string p1, "listener has been registered!"
@@ -179,15 +175,18 @@
 
     invoke-virtual {p0, p1, v1}, Lcom/google/android/play/core/splitcompat/util/PlayCore;->debug(Ljava/lang/String;[Ljava/lang/Object;)I
 
+    .line 5
     monitor-exit v0
 
     return-void
 
+    .line 6
     :cond_0
     iget-object v1, p0, Lcom/google/android/play/core/listener/StateUpdateListenerRegister;->mStateUpdatedListeners:Ljava/util/Set;
 
     invoke-interface {v1, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 7
     iget-object p1, p0, Lcom/google/android/play/core/listener/StateUpdateListenerRegister;->mStateUpdatedListeners:Ljava/util/Set;
 
     invoke-interface {p1}, Ljava/util/Set;->size()I
@@ -198,18 +197,16 @@
 
     if-ne p1, v1, :cond_1
 
+    .line 8
     iget-object p1, p0, Lcom/google/android/play/core/listener/StateUpdateListenerRegister;->context:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/google/android/play/core/listener/StateUpdateListenerRegister;->receiver:Lcom/google/android/play/core/listener/StateUpdatedReceiver;
 
-    iget-object v2, p0, Lcom/google/android/play/core/listener/StateUpdateListenerRegister;->intentFilter:Landroid/content/IntentFilter;
+    iget-object p0, p0, Lcom/google/android/play/core/listener/StateUpdateListenerRegister;->intentFilter:Landroid/content/IntentFilter;
 
-    invoke-virtual {p0}, Lcom/google/android/play/core/listener/StateUpdateListenerRegister;->receiverFlagExported()I
+    invoke-virtual {p1, v1, p0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    move-result p0
-
-    invoke-virtual {p1, v1, v2, p0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;I)Landroid/content/Intent;
-
+    .line 9
     :cond_1
     monitor-exit v0
 
@@ -235,10 +232,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/play/core/listener/StateUpdateListenerRegister;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/google/android/play/core/listener/StateUpdateListenerRegister;->playCore:Lcom/google/android/play/core/splitcompat/util/PlayCore;
 
@@ -250,12 +249,14 @@
 
     invoke-virtual {v1, v2, v4}, Lcom/google/android/play/core/splitcompat/util/PlayCore;->debug(Ljava/lang/String;[Ljava/lang/Object;)I
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/play/core/listener/StateUpdateListenerRegister;->mStateUpdatedListeners:Ljava/util/Set;
 
     invoke-interface {v1, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
     move-result p1
 
+    .line 4
     iget-object v1, p0, Lcom/google/android/play/core/listener/StateUpdateListenerRegister;->mStateUpdatedListeners:Ljava/util/Set;
 
     invoke-interface {v1}, Ljava/util/Set;->isEmpty()Z
@@ -268,6 +269,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 5
     :try_start_1
     iget-object p1, p0, Lcom/google/android/play/core/listener/StateUpdateListenerRegister;->context:Landroid/content/Context;
 
@@ -283,6 +285,7 @@
     :catch_0
     move-exception p1
 
+    .line 6
     :try_start_2
     iget-object v1, p0, Lcom/google/android/play/core/listener/StateUpdateListenerRegister;->playCore:Lcom/google/android/play/core/splitcompat/util/PlayCore;
 
@@ -310,6 +313,7 @@
 
     invoke-virtual {v1, p1, p0, v2}, Lcom/google/android/play/core/splitcompat/util/PlayCore;->error(Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)I
 
+    .line 7
     :cond_0
     :goto_0
     monitor-exit v0

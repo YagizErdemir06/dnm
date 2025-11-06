@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;
+.class public final Lcom/google/android/exoplayer2/audio/DefaultAudioSink$MediaPositionParameters;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

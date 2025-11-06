@@ -64,6 +64,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/MediaItem$RequestMetadata$Builder;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/MediaItem$RequestMetadata$Builder;-><init>()V
@@ -74,9 +75,8 @@
 
     sput-object v0, Lcom/google/android/exoplayer2/MediaItem$RequestMetadata;->EMPTY:Lcom/google/android/exoplayer2/MediaItem$RequestMetadata;
 
-    new-instance v0, Lcom/google/android/exoplayer2/y1;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/y1;-><init>()V
+    .line 2
+    sget-object v0, Ld/j/a/b/q1;->a:Ld/j/a/b/q1;
 
     sput-object v0, Lcom/google/android/exoplayer2/MediaItem$RequestMetadata;->CREATOR:Lcom/google/android/exoplayer2/Bundleable$Creator;
 
@@ -122,21 +122,12 @@
     return-void
 .end method
 
-.method public static synthetic a(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/MediaItem$RequestMetadata;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/MediaItem$RequestMetadata;->lambda$static$0(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/MediaItem$RequestMetadata;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 .method private static keyForField(I)Ljava/lang/String;
     .locals 1
 
     const/16 v0, 0x24
 
+    .line 1
     invoke-static {p0, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
     move-result-object p0
@@ -144,15 +135,17 @@
     return-object p0
 .end method
 
-.method private static synthetic lambda$static$0(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/MediaItem$RequestMetadata;
+.method public static synthetic lambda$static$0(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/MediaItem$RequestMetadata;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/MediaItem$RequestMetadata$Builder;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/MediaItem$RequestMetadata$Builder;-><init>()V
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-static {v1}, Lcom/google/android/exoplayer2/MediaItem$RequestMetadata;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -169,6 +162,7 @@
 
     const/4 v1, 0x1
 
+    .line 3
     invoke-static {v1}, Lcom/google/android/exoplayer2/MediaItem$RequestMetadata;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -183,6 +177,7 @@
 
     const/4 v1, 0x2
 
+    .line 4
     invoke-static {v1}, Lcom/google/android/exoplayer2/MediaItem$RequestMetadata;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -195,6 +190,7 @@
 
     move-result-object p0
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/MediaItem$RequestMetadata$Builder;->build()Lcom/google/android/exoplayer2/MediaItem$RequestMetadata;
 
     move-result-object p0
@@ -207,6 +203,7 @@
 .method public buildUpon()Lcom/google/android/exoplayer2/MediaItem$RequestMetadata$Builder;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/MediaItem$RequestMetadata$Builder;
 
     const/4 v1, 0x0
@@ -229,6 +226,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/android/exoplayer2/MediaItem$RequestMetadata;
 
@@ -238,9 +236,11 @@
 
     return v2
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/MediaItem$RequestMetadata;
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/MediaItem$RequestMetadata;->mediaUri:Landroid/net/Uri;
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/MediaItem$RequestMetadata;->mediaUri:Landroid/net/Uri;
@@ -273,6 +273,7 @@
 .method public hashCode()I
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/MediaItem$RequestMetadata;->mediaUri:Landroid/net/Uri;
 
     const/4 v1, 0x0
@@ -291,6 +292,7 @@
     :goto_0
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/MediaItem$RequestMetadata;->searchQuery:Ljava/lang/String;
 
     if-nez p0, :cond_1
@@ -311,16 +313,19 @@
 .method public toBundle()Landroid/os/Bundle;
     .locals 3
 
+    .line 1
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/MediaItem$RequestMetadata;->mediaUri:Landroid/net/Uri;
 
     if-eqz v1, :cond_0
 
     const/4 v1, 0x0
 
+    .line 3
     invoke-static {v1}, Lcom/google/android/exoplayer2/MediaItem$RequestMetadata;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -329,6 +334,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
+    .line 4
     :cond_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/MediaItem$RequestMetadata;->searchQuery:Ljava/lang/String;
 
@@ -336,6 +342,7 @@
 
     const/4 v1, 0x1
 
+    .line 5
     invoke-static {v1}, Lcom/google/android/exoplayer2/MediaItem$RequestMetadata;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -344,6 +351,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 6
     :cond_1
     iget-object v1, p0, Lcom/google/android/exoplayer2/MediaItem$RequestMetadata;->extras:Landroid/os/Bundle;
 
@@ -351,6 +359,7 @@
 
     const/4 v1, 0x2
 
+    .line 7
     invoke-static {v1}, Lcom/google/android/exoplayer2/MediaItem$RequestMetadata;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1

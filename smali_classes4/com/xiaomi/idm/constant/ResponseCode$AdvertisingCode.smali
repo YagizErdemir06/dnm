@@ -92,501 +92,528 @@
 .method public static constructor <clinit>()V
     .locals 30
 
+    .line 1
     new-instance v0, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    const-string v1, "Start Advertising SUCCESS"
+    const-string v1, "START_ADVERTISING_SUCCESS"
 
-    const-string v2, "START_ADVERTISING_SUCCESS"
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    const/4 v3, 0x3
 
-    const/4 v4, 0x3
+    const-string v4, "Start Advertising SUCCESS"
 
-    invoke-direct {v0, v2, v3, v4, v1}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
     sput-object v0, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->START_ADVERTISING_SUCCESS:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
+    .line 2
     new-instance v1, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    const-string v2, "Stop Advertising SUCCESS"
+    const-string v4, "STOP_ADVERTISING_SUCCESS"
 
-    const-string v5, "STOP_ADVERTISING_SUCCESS"
+    const/4 v5, 0x1
 
-    const/4 v6, 0x1
+    const/4 v6, 0x4
 
-    const/4 v7, 0x4
+    const-string v7, "Stop Advertising SUCCESS"
 
-    invoke-direct {v1, v5, v6, v7, v2}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    invoke-direct {v1, v4, v5, v6, v7}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
     sput-object v1, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->STOP_ADVERTISING_SUCCESS:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    new-instance v2, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    .line 3
+    new-instance v4, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    const-string v5, "Security Manager check success"
+    const-string v7, "ADV_ADVERTISING_CHECK_SUCCESS"
 
-    const-string v8, "ADV_ADVERTISING_CHECK_SUCCESS"
+    const/4 v8, 0x2
 
-    const/4 v9, 0x2
+    const-string v9, "Security Manager check success"
 
-    invoke-direct {v2, v8, v9, v6, v5}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    invoke-direct {v4, v7, v8, v5, v9}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    sput-object v2, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ADV_ADVERTISING_CHECK_SUCCESS:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    sput-object v4, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ADV_ADVERTISING_CHECK_SUCCESS:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    new-instance v5, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    .line 4
+    new-instance v7, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    const-string v8, "Update Advertising Success"
+    const-string v9, "UPDATE_ADVERTISING_SUCCESS"
 
-    const-string v10, "UPDATE_ADVERTISING_SUCCESS"
+    const/16 v10, 0x14
 
-    const/16 v11, 0x14
+    const-string v11, "Update Advertising Success"
 
-    invoke-direct {v5, v10, v4, v11, v8}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    invoke-direct {v7, v9, v3, v10, v11}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    sput-object v5, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->UPDATE_ADVERTISING_SUCCESS:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    sput-object v7, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->UPDATE_ADVERTISING_SUCCESS:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    new-instance v8, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    .line 5
+    new-instance v9, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    const/4 v10, -0x5
+    const-string v11, "ALREADY_ADVERTISING"
 
-    const-string v12, "Already In Advertising"
+    const/4 v12, -0x5
 
-    const-string v13, "ALREADY_ADVERTISING"
+    const-string v13, "Already In Advertising"
 
-    invoke-direct {v8, v13, v7, v10, v12}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    invoke-direct {v9, v11, v6, v12, v13}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    sput-object v8, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ALREADY_ADVERTISING:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    sput-object v9, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ALREADY_ADVERTISING:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    new-instance v10, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    .line 6
+    new-instance v11, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    const/4 v12, -0x7
+    const-string v12, "START_ADVERTISING_ERROR"
 
-    const-string v13, "Start Advertising Error"
+    const/4 v13, 0x5
 
-    const-string v14, "START_ADVERTISING_ERROR"
+    const/4 v14, -0x7
 
-    const/4 v15, 0x5
+    const-string v15, "Start Advertising Error"
 
-    invoke-direct {v10, v14, v15, v12, v13}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    invoke-direct {v11, v12, v13, v14, v15}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    sput-object v10, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->START_ADVERTISING_ERROR:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    sput-object v11, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->START_ADVERTISING_ERROR:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
+    .line 7
     new-instance v12, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+
+    const-string v14, "STOP_ADVERTISING_ERROR"
+
+    const/4 v15, 0x6
 
     const/4 v13, -0x8
 
-    const-string v14, "Stop Advertising Error"
+    const-string v6, "Stop Advertising Error"
 
-    const-string v15, "STOP_ADVERTISING_ERROR"
-
-    const/4 v7, 0x6
-
-    invoke-direct {v12, v15, v7, v13, v14}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    invoke-direct {v12, v14, v15, v13, v6}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
     sput-object v12, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->STOP_ADVERTISING_ERROR:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    new-instance v13, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    .line 8
+    new-instance v6, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    const/16 v14, -0xc
+    const-string v13, "NOT_IN_ADVERTISING"
 
-    const-string v15, "Not In Advertising"
+    const/4 v14, 0x7
 
-    const-string v7, "NOT_IN_ADVERTISING"
+    const/16 v15, -0xc
 
-    const/4 v4, 0x7
+    const-string v3, "Not In Advertising"
 
-    invoke-direct {v13, v7, v4, v14, v15}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    invoke-direct {v6, v13, v14, v15, v3}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    sput-object v13, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->NOT_IN_ADVERTISING:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    sput-object v6, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->NOT_IN_ADVERTISING:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    new-instance v7, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    .line 9
+    new-instance v3, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+
+    const-string v13, "REGISTER_SERVICE_FAILED"
+
+    const/16 v15, 0x8
 
     const/16 v14, -0x45
 
-    const-string v15, "Register Service Failed"
+    const-string v8, "Register Service Failed"
 
-    const-string v4, "REGISTER_SERVICE_FAILED"
+    invoke-direct {v3, v13, v15, v14, v8}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v9, 0x8
+    sput-object v3, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->REGISTER_SERVICE_FAILED:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    invoke-direct {v7, v4, v9, v14, v15}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    .line 10
+    new-instance v8, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    sput-object v7, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->REGISTER_SERVICE_FAILED:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const-string v13, "UPDATE_SERVICE_PARAM_ILLEGAL"
 
-    new-instance v4, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const/16 v14, 0x9
 
-    const/16 v14, -0x9d
+    const/16 v15, -0x9d
 
-    const-string v15, "update service parameters are illegal"
+    const-string v5, "update service parameters are illegal"
 
-    const-string v9, "UPDATE_SERVICE_PARAM_ILLEGAL"
+    invoke-direct {v8, v13, v14, v15, v5}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v6, 0x9
+    sput-object v8, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->UPDATE_SERVICE_PARAM_ILLEGAL:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    invoke-direct {v4, v9, v6, v14, v15}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    .line 11
+    new-instance v5, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    sput-object v4, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->UPDATE_SERVICE_PARAM_ILLEGAL:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const-string v13, "UPDATE_SERVICE_UNNECESSARY"
 
-    new-instance v9, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const/16 v15, 0xa
 
     const/16 v14, -0x9e
 
-    const-string v15, "service is not necessary to be update"
+    const-string v2, "service is not necessary to be update"
 
-    const-string v6, "UPDATE_SERVICE_UNNECESSARY"
+    invoke-direct {v5, v13, v15, v14, v2}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v3, 0xa
+    sput-object v5, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->UPDATE_SERVICE_UNNECESSARY:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    invoke-direct {v9, v6, v3, v14, v15}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    .line 12
+    new-instance v2, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    sput-object v9, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->UPDATE_SERVICE_UNNECESSARY:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const-string v13, "UPDATE_SERVICE_OPERATION_DENIED"
 
-    new-instance v6, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const/16 v14, 0xb
 
-    const/16 v14, -0x9f
+    const/16 v15, -0x9f
 
-    const-string v15, "update service operation denied"
+    const-string v10, "update service operation denied"
 
-    const-string v3, "UPDATE_SERVICE_OPERATION_DENIED"
+    invoke-direct {v2, v13, v14, v15, v10}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v11, 0xb
+    sput-object v2, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->UPDATE_SERVICE_OPERATION_DENIED:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    invoke-direct {v6, v3, v11, v14, v15}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    .line 13
+    new-instance v10, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    sput-object v6, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->UPDATE_SERVICE_OPERATION_DENIED:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const-string v13, "ADVERTISING_PERMISSION_DENIED"
 
-    new-instance v3, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const/16 v15, 0xc
 
     const/16 v14, -0x2328
 
-    const-string v15, "register service permission denied"
+    move-object/from16 v16, v2
 
-    const-string v11, "ADVERTISING_PERMISSION_DENIED"
+    const-string v2, "register service permission denied"
 
-    move-object/from16 v16, v6
+    invoke-direct {v10, v13, v15, v14, v2}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v6, 0xc
+    sput-object v10, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ADVERTISING_PERMISSION_DENIED:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    invoke-direct {v3, v11, v6, v14, v15}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    .line 14
+    new-instance v2, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    sput-object v3, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ADVERTISING_PERMISSION_DENIED:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const-string v13, "ADV_ERR_REPEATED_REQUEST"
 
-    new-instance v11, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const/16 v14, 0xd
 
-    const/16 v14, -0x2329
+    const/16 v15, -0x2329
 
-    const-string v15, "repeated advertising request call, please wait for the last call to return"
+    move-object/from16 v17, v10
 
-    const-string v6, "ADV_ERR_REPEATED_REQUEST"
+    const-string v10, "repeated advertising request call, please wait for the last call to return"
 
-    move-object/from16 v17, v3
+    invoke-direct {v2, v13, v14, v15, v10}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v3, 0xd
+    sput-object v2, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ADV_ERR_REPEATED_REQUEST:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    invoke-direct {v11, v6, v3, v14, v15}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    .line 15
+    new-instance v10, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    sput-object v11, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ADV_ERR_REPEATED_REQUEST:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const-string v13, "ADV_ERR_PERSISTENT_SERVICE_ALREADY_BOUND"
 
-    new-instance v6, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const/16 v15, 0xe
 
     const/16 v14, -0x232a
 
-    const-string v15, "persistent service already bonded"
+    move-object/from16 v18, v2
 
-    const-string v3, "ADV_ERR_PERSISTENT_SERVICE_ALREADY_BOUND"
+    const-string v2, "persistent service already bonded"
 
-    move-object/from16 v18, v11
+    invoke-direct {v10, v13, v15, v14, v2}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v11, 0xe
+    sput-object v10, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ADV_ERR_PERSISTENT_SERVICE_ALREADY_BOUND:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    invoke-direct {v6, v3, v11, v14, v15}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    .line 16
+    new-instance v2, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    sput-object v6, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ADV_ERR_PERSISTENT_SERVICE_ALREADY_BOUND:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const-string v13, "ADV_ERR_PERSISTENT_SERVICE_CLIENT_ID"
 
-    new-instance v3, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const/16 v14, 0xf
 
-    const/16 v14, -0x232b
+    const/16 v15, -0x232b
 
-    const-string v15, "initial clientId of the persistent service does not match the clientId of the caller"
+    move-object/from16 v19, v10
 
-    const-string v11, "ADV_ERR_PERSISTENT_SERVICE_CLIENT_ID"
+    const-string v10, "initial clientId of the persistent service does not match the clientId of the caller"
 
-    move-object/from16 v19, v6
+    invoke-direct {v2, v13, v14, v15, v10}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v6, 0xf
+    sput-object v2, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ADV_ERR_PERSISTENT_SERVICE_CLIENT_ID:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    invoke-direct {v3, v11, v6, v14, v15}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    .line 17
+    new-instance v10, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    sput-object v3, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ADV_ERR_PERSISTENT_SERVICE_CLIENT_ID:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const-string v13, "ADV_ERR_SERVICE_NOT_AVAILABLE"
 
-    new-instance v11, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const/16 v15, 0x10
 
     const/16 v14, -0x232c
 
-    const-string v15, "mi connect service not available"
+    move-object/from16 v20, v2
 
-    const-string v6, "ADV_ERR_SERVICE_NOT_AVAILABLE"
+    const-string v2, "mi connect service not available"
 
-    move-object/from16 v20, v3
+    invoke-direct {v10, v13, v15, v14, v2}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v3, 0x10
+    sput-object v10, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ADV_ERR_SERVICE_NOT_AVAILABLE:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    invoke-direct {v11, v6, v3, v14, v15}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    .line 18
+    new-instance v2, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    sput-object v11, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ADV_ERR_SERVICE_NOT_AVAILABLE:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const-string v13, "ADV_ERR_SERVICE_ID_REPEATED"
 
-    new-instance v6, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const/16 v14, 0x11
 
-    const/16 v14, -0x232d
+    const/16 v15, -0x232d
 
-    const-string v15, "service Id already registered"
+    move-object/from16 v21, v10
 
-    const-string v3, "ADV_ERR_SERVICE_ID_REPEATED"
+    const-string v10, "service Id already registered"
 
-    move-object/from16 v21, v11
+    invoke-direct {v2, v13, v14, v15, v10}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v11, 0x11
+    sput-object v2, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ADV_ERR_SERVICE_ID_REPEATED:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    invoke-direct {v6, v3, v11, v14, v15}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    .line 19
+    new-instance v10, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    sput-object v6, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ADV_ERR_SERVICE_ID_REPEATED:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const-string v13, "ADV_ERR_SERVICE_INSTANCE_REPEATED"
 
-    new-instance v3, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const/16 v15, 0x12
 
     const/16 v14, -0x232e
 
-    const-string v15, "service instance already registered"
+    move-object/from16 v22, v2
 
-    const-string v11, "ADV_ERR_SERVICE_INSTANCE_REPEATED"
+    const-string v2, "service instance already registered"
 
-    move-object/from16 v22, v6
+    invoke-direct {v10, v13, v15, v14, v2}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v6, 0x12
+    sput-object v10, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ADV_ERR_SERVICE_INSTANCE_REPEATED:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    invoke-direct {v3, v11, v6, v14, v15}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    .line 20
+    new-instance v2, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    sput-object v3, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ADV_ERR_SERVICE_INSTANCE_REPEATED:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const-string v13, "ADV_ERR_SERVICE_ID_EMPTY"
 
-    new-instance v11, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const/16 v14, 0x13
 
-    const/16 v14, -0x232f
+    const/16 v15, -0x232f
 
-    const-string v15, "service Id is empty"
+    move-object/from16 v23, v10
 
-    const-string v6, "ADV_ERR_SERVICE_ID_EMPTY"
+    const-string v10, "service Id is empty"
 
-    move-object/from16 v23, v3
+    invoke-direct {v2, v13, v14, v15, v10}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v3, 0x13
+    sput-object v2, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ADV_ERR_SERVICE_ID_EMPTY:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    invoke-direct {v11, v6, v3, v14, v15}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    .line 21
+    new-instance v10, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    sput-object v11, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ADV_ERR_SERVICE_ID_EMPTY:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const-string v13, "ADV_ERR_SERVICE_NOT_REGISTERED"
 
-    new-instance v6, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const/16 v15, -0x2330
 
-    const/16 v14, -0x2330
+    const-string v14, "service instance not registered"
 
-    const-string v15, "service instance not registered"
+    move-object/from16 v24, v2
 
-    const-string v3, "ADV_ERR_SERVICE_NOT_REGISTERED"
+    const/16 v2, 0x14
 
-    move-object/from16 v24, v11
+    invoke-direct {v10, v13, v2, v15, v14}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v11, 0x14
+    sput-object v10, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ADV_ERR_SERVICE_NOT_REGISTERED:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    invoke-direct {v6, v3, v11, v14, v15}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    .line 22
+    new-instance v2, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    sput-object v6, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ADV_ERR_SERVICE_NOT_REGISTERED:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const-string v13, "ADV_ERR_NOT_SUPPORT_OFFLINE_ACCOUNT"
 
-    new-instance v3, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const/16 v14, 0x15
 
-    const/16 v11, -0x2331
+    const/16 v15, -0x2331
 
-    const-string v14, "Not support offline account"
+    move-object/from16 v25, v10
 
-    const-string v15, "ADV_ERR_NOT_SUPPORT_OFFLINE_ACCOUNT"
+    const-string v10, "Not support offline account"
 
-    move-object/from16 v25, v6
+    invoke-direct {v2, v13, v14, v15, v10}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v6, 0x15
+    sput-object v2, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ADV_ERR_NOT_SUPPORT_OFFLINE_ACCOUNT:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    invoke-direct {v3, v15, v6, v11, v14}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    .line 23
+    new-instance v10, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    sput-object v3, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ADV_ERR_NOT_SUPPORT_OFFLINE_ACCOUNT:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const-string v13, "ADV_ERR_NOT_SUPPORT_UPDATE_SERVICE"
 
-    new-instance v11, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const/16 v15, 0x16
 
     const/16 v14, -0x2332
 
-    const-string v15, "Not support update services"
+    move-object/from16 v26, v2
 
-    const-string v6, "ADV_ERR_NOT_SUPPORT_UPDATE_SERVICE"
+    const-string v2, "Not support update services"
 
-    move-object/from16 v26, v3
+    invoke-direct {v10, v13, v15, v14, v2}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v3, 0x16
+    sput-object v10, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ADV_ERR_NOT_SUPPORT_UPDATE_SERVICE:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    invoke-direct {v11, v6, v3, v14, v15}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    .line 24
+    new-instance v2, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    sput-object v11, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ADV_ERR_NOT_SUPPORT_UPDATE_SERVICE:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const-string v13, "ERROR_CODE_START_DISC_NOT_SUPPORTED"
 
-    new-instance v3, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const/16 v14, 0x17
 
-    const/16 v6, -0x1a
+    const/16 v15, -0x1a
 
-    const-string v14, "disc type not supported/permission denied"
+    move-object/from16 v27, v10
 
-    const-string v15, "ERROR_CODE_START_DISC_NOT_SUPPORTED"
+    const-string v10, "disc type not supported/permission denied"
 
-    move-object/from16 v27, v11
+    invoke-direct {v2, v13, v14, v15, v10}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v11, 0x17
+    sput-object v2, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ERROR_CODE_START_DISC_NOT_SUPPORTED:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    invoke-direct {v3, v15, v11, v6, v14}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    .line 25
+    new-instance v10, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    sput-object v3, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ERROR_CODE_START_DISC_NOT_SUPPORTED:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const-string v13, "ERROR_CODE_COMMTYPE_NOT_SUPPORTED"
 
-    new-instance v6, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const/16 v14, 0x18
 
-    const/16 v11, -0x1b
+    const/16 v15, -0x1b
 
-    const-string v14, "comm type not supported/permission denied"
+    move-object/from16 v28, v2
 
-    const-string v15, "ERROR_CODE_COMMTYPE_NOT_SUPPORTED"
+    const-string v2, "comm type not supported/permission denied"
 
-    move-object/from16 v28, v3
+    invoke-direct {v10, v13, v14, v15, v2}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v3, 0x18
+    sput-object v10, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ERROR_CODE_COMMTYPE_NOT_SUPPORTED:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    invoke-direct {v6, v15, v3, v11, v14}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    .line 26
+    new-instance v2, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    sput-object v6, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ERROR_CODE_COMMTYPE_NOT_SUPPORTED:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const-string v13, "ADV_UNKNOWN"
 
-    new-instance v3, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    const/16 v14, 0x19
 
-    const/16 v11, -0x270f
+    const/16 v15, -0x270f
 
-    const-string v14, "Unknown advertising code"
+    move-object/from16 v29, v10
 
-    const-string v15, "ADV_UNKNOWN"
+    const-string v10, "Unknown advertising code"
 
-    move-object/from16 v29, v6
+    invoke-direct {v2, v13, v14, v15, v10}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v6, 0x19
+    sput-object v2, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ADV_UNKNOWN:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    invoke-direct {v3, v15, v6, v11, v14}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    const/16 v10, 0x1a
 
-    sput-object v3, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ADV_UNKNOWN:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    new-array v10, v10, [Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
-    const/16 v6, 0x1a
+    const/4 v13, 0x0
 
-    new-array v6, v6, [Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
-
-    const/4 v11, 0x0
-
-    aput-object v0, v6, v11
+    aput-object v0, v10, v13
 
     const/4 v0, 0x1
 
-    aput-object v1, v6, v0
+    aput-object v1, v10, v0
 
     const/4 v0, 0x2
 
-    aput-object v2, v6, v0
+    aput-object v4, v10, v0
 
     const/4 v0, 0x3
 
-    aput-object v5, v6, v0
+    aput-object v7, v10, v0
 
     const/4 v0, 0x4
 
-    aput-object v8, v6, v0
+    aput-object v9, v10, v0
 
     const/4 v0, 0x5
 
-    aput-object v10, v6, v0
+    aput-object v11, v10, v0
 
     const/4 v0, 0x6
 
-    aput-object v12, v6, v0
+    aput-object v12, v10, v0
 
     const/4 v0, 0x7
 
-    aput-object v13, v6, v0
+    aput-object v6, v10, v0
 
     const/16 v0, 0x8
 
-    aput-object v7, v6, v0
+    aput-object v3, v10, v0
 
     const/16 v0, 0x9
 
-    aput-object v4, v6, v0
+    aput-object v8, v10, v0
 
     const/16 v0, 0xa
 
-    aput-object v9, v6, v0
+    aput-object v5, v10, v0
 
     const/16 v0, 0xb
 
-    aput-object v16, v6, v0
+    aput-object v16, v10, v0
 
     const/16 v0, 0xc
 
-    aput-object v17, v6, v0
+    aput-object v17, v10, v0
 
     const/16 v0, 0xd
 
-    aput-object v18, v6, v0
+    aput-object v18, v10, v0
 
     const/16 v0, 0xe
 
-    aput-object v19, v6, v0
+    aput-object v19, v10, v0
 
     const/16 v0, 0xf
 
-    aput-object v20, v6, v0
+    aput-object v20, v10, v0
 
     const/16 v0, 0x10
 
-    aput-object v21, v6, v0
+    aput-object v21, v10, v0
 
     const/16 v0, 0x11
 
-    aput-object v22, v6, v0
+    aput-object v22, v10, v0
 
     const/16 v0, 0x12
 
-    aput-object v23, v6, v0
+    aput-object v23, v10, v0
 
     const/16 v0, 0x13
 
-    aput-object v24, v6, v0
+    aput-object v24, v10, v0
 
     const/16 v0, 0x14
 
-    aput-object v25, v6, v0
+    aput-object v25, v10, v0
 
     const/16 v0, 0x15
 
-    aput-object v26, v6, v0
+    aput-object v26, v10, v0
 
     const/16 v0, 0x16
 
-    aput-object v27, v6, v0
+    aput-object v27, v10, v0
 
     const/16 v0, 0x17
 
-    aput-object v28, v6, v0
+    aput-object v28, v10, v0
 
     const/16 v0, 0x18
 
-    aput-object v29, v6, v0
+    aput-object v29, v10, v0
 
     const/16 v0, 0x19
 
-    aput-object v3, v6, v0
+    aput-object v2, v10, v0
 
-    sput-object v6, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->$VALUES:[Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
+    .line 27
+    sput-object v10, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->$VALUES:[Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
     return-void
 .end method
@@ -601,10 +628,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 2
     iput p3, p0, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->code:I
 
+    .line 3
     iput-object p4, p0, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->msg:Ljava/lang/String;
 
     return-void
@@ -613,6 +643,7 @@
 .method public static fromCode(I)Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
     .locals 5
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->values()[Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
     move-result-object v0
@@ -626,6 +657,7 @@
 
     aget-object v3, v0, v2
 
+    .line 2
     iget v4, v3, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->code:I
 
     if-ne v4, p0, :cond_0
@@ -637,6 +669,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_1
     sget-object p0, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->ADV_UNKNOWN:Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
@@ -646,6 +679,7 @@
 .method public static getResponseMsg(I)Ljava/lang/String;
     .locals 5
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->values()[Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
     move-result-object v0
@@ -659,10 +693,12 @@
 
     aget-object v3, v0, v2
 
+    .line 2
     iget v4, v3, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->code:I
 
     if-ne v4, p0, :cond_0
 
+    .line 3
     iget-object p0, v3, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->msg:Ljava/lang/String;
 
     return-object p0
@@ -672,6 +708,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -697,6 +734,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
     .locals 1
 
+    .line 1
     const-class v0, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -711,6 +749,7 @@
 .method public static values()[Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->$VALUES:[Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;
 
     invoke-virtual {v0}, [Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->clone()Ljava/lang/Object;
@@ -727,6 +766,7 @@
 .method public createException()Lcom/xiaomi/idm/exception/IDMException;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/xiaomi/idm/exception/IDMException;
 
     iget v1, p0, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->code:I
@@ -741,6 +781,7 @@
 .method public getCode()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->code:I
 
     return p0
@@ -749,6 +790,7 @@
 .method public getMsg()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/constant/ResponseCode$AdvertisingCode;->msg:Ljava/lang/String;
 
     return-object p0

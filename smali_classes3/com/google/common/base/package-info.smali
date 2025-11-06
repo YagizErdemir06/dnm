@@ -1,4 +1,4 @@
-.class interface abstract synthetic Lcom/google/common/base/package-info;
+.class public interface abstract synthetic Lcom/google/common/base/package-info;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

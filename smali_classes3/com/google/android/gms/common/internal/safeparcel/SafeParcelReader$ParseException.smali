@@ -26,6 +26,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p2}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v0

@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/AbstractFuture$UnsafeAtomicHelper;
+.class public final Lcom/google/common/util/concurrent/AbstractFuture$UnsafeAtomicHelper;
 .super Lcom/google/common/util/concurrent/AbstractFuture$AtomicHelper;
 .source "SourceFile"
 
@@ -15,23 +15,24 @@
 
 
 # static fields
-.field static final LISTENERS_OFFSET:J
+.field public static final LISTENERS_OFFSET:J
 
-.field static final UNSAFE:Lsun/misc/Unsafe;
+.field public static final UNSAFE:Lsun/misc/Unsafe;
 
-.field static final VALUE_OFFSET:J
+.field public static final VALUE_OFFSET:J
 
-.field static final WAITERS_OFFSET:J
+.field public static final WAITERS_OFFSET:J
 
-.field static final WAITER_NEXT_OFFSET:J
+.field public static final WAITER_NEXT_OFFSET:J
 
-.field static final WAITER_THREAD_OFFSET:J
+.field public static final WAITER_THREAD_OFFSET:J
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 5
 
+    .line 1
     const-class v0, Lcom/google/common/util/concurrent/AbstractFuture$Waiter;
 
     :try_start_0
@@ -43,12 +44,14 @@
 
     goto :goto_0
 
+    .line 2
     :catch_0
     :try_start_1
     new-instance v1, Lcom/google/common/util/concurrent/AbstractFuture$UnsafeAtomicHelper$1;
 
     invoke-direct {v1}, Lcom/google/common/util/concurrent/AbstractFuture$UnsafeAtomicHelper$1;-><init>()V
 
+    .line 3
     invoke-static {v1}, Ljava/security/AccessController;->doPrivileged(Ljava/security/PrivilegedExceptionAction;)Ljava/lang/Object;
 
     move-result-object v1
@@ -57,12 +60,14 @@
     :try_end_1
     .catch Ljava/security/PrivilegedActionException; {:try_start_1 .. :try_end_1} :catch_2
 
+    .line 4
     :goto_0
     :try_start_2
     const-class v2, Lcom/google/common/util/concurrent/AbstractFuture;
 
     const-string v3, "waiters"
 
+    .line 5
     invoke-virtual {v2, v3}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v3
@@ -75,6 +80,7 @@
 
     const-string v3, "listeners"
 
+    .line 6
     invoke-virtual {v2, v3}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v3
@@ -87,6 +93,7 @@
 
     const-string v3, "value"
 
+    .line 7
     invoke-virtual {v2, v3}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v2
@@ -99,6 +106,7 @@
 
     const-string v2, "thread"
 
+    .line 8
     invoke-virtual {v0, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v2
@@ -111,6 +119,7 @@
 
     const-string v2, "next"
 
+    .line 9
     invoke-virtual {v0, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
@@ -121,6 +130,7 @@
 
     sput-wide v2, Lcom/google/common/util/concurrent/AbstractFuture$UnsafeAtomicHelper;->WAITER_NEXT_OFFSET:J
 
+    .line 10
     sput-object v1, Lcom/google/common/util/concurrent/AbstractFuture$UnsafeAtomicHelper;->UNSAFE:Lsun/misc/Unsafe;
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
@@ -130,8 +140,10 @@
     :catch_1
     move-exception v0
 
+    .line 11
     invoke-static {v0}, Lcom/google/common/base/Throwables;->throwIfUnchecked(Ljava/lang/Throwable;)V
 
+    .line 12
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -141,13 +153,14 @@
     :catch_2
     move-exception v0
 
+    .line 13
     new-instance v1, Ljava/lang/RuntimeException;
-
-    const-string v2, "Could not initialize intrinsics"
 
     invoke-virtual {v0}, Ljava/security/PrivilegedActionException;->getCause()Ljava/lang/Throwable;
 
     move-result-object v0
+
+    const-string v2, "Could not initialize intrinsics"
 
     invoke-direct {v1, v2, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
@@ -193,6 +206,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/common/util/concurrent/AbstractFuture$UnsafeAtomicHelper;->UNSAFE:Lsun/misc/Unsafe;
 
     sget-wide v2, Lcom/google/common/util/concurrent/AbstractFuture$UnsafeAtomicHelper;->LISTENERS_OFFSET:J
@@ -203,7 +217,7 @@
 
     move-object v5, p3
 
-    invoke-static/range {v0 .. v5}, Lcom/google/common/util/concurrent/a;->a(Lsun/misc/Unsafe;Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual/range {v0 .. v5}, Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -227,6 +241,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/common/util/concurrent/AbstractFuture$UnsafeAtomicHelper;->UNSAFE:Lsun/misc/Unsafe;
 
     sget-wide v2, Lcom/google/common/util/concurrent/AbstractFuture$UnsafeAtomicHelper;->VALUE_OFFSET:J
@@ -237,7 +252,7 @@
 
     move-object v5, p3
 
-    invoke-static/range {v0 .. v5}, Lcom/google/common/util/concurrent/a;->a(Lsun/misc/Unsafe;Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual/range {v0 .. v5}, Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -265,6 +280,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/common/util/concurrent/AbstractFuture$UnsafeAtomicHelper;->UNSAFE:Lsun/misc/Unsafe;
 
     sget-wide v2, Lcom/google/common/util/concurrent/AbstractFuture$UnsafeAtomicHelper;->WAITERS_OFFSET:J
@@ -275,7 +291,7 @@
 
     move-object v5, p3
 
-    invoke-static/range {v0 .. v5}, Lcom/google/common/util/concurrent/a;->a(Lsun/misc/Unsafe;Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual/range {v0 .. v5}, Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -289,6 +305,7 @@
         .end annotation
     .end param
 
+    .line 1
     sget-object p0, Lcom/google/common/util/concurrent/AbstractFuture$UnsafeAtomicHelper;->UNSAFE:Lsun/misc/Unsafe;
 
     sget-wide v0, Lcom/google/common/util/concurrent/AbstractFuture$UnsafeAtomicHelper;->WAITER_NEXT_OFFSET:J
@@ -301,6 +318,7 @@
 .method public putThread(Lcom/google/common/util/concurrent/AbstractFuture$Waiter;Ljava/lang/Thread;)V
     .locals 2
 
+    .line 1
     sget-object p0, Lcom/google/common/util/concurrent/AbstractFuture$UnsafeAtomicHelper;->UNSAFE:Lsun/misc/Unsafe;
 
     sget-wide v0, Lcom/google/common/util/concurrent/AbstractFuture$UnsafeAtomicHelper;->WAITER_THREAD_OFFSET:J

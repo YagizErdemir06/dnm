@@ -45,6 +45,7 @@
 .method public static constructor <clinit>()V
     .locals 4
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/common/api/Api$ClientKey;
 
     invoke-direct {v0}, Lcom/google/android/gms/common/api/Api$ClientKey;-><init>()V

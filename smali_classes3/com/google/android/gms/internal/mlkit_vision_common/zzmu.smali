@@ -9,10 +9,12 @@
     .annotation build Landroidx/annotation/WorkerThread;
     .end annotation
 
+    .line 1
     invoke-static/range {p1 .. p8}, Lcom/google/android/gms/internal/mlkit_vision_common/zzmu;->zzc(IIJIIII)Lcom/google/android/gms/internal/mlkit_vision_common/zzmt;
 
     move-result-object p1
 
+    .line 2
     sget-object p2, Lcom/google/android/gms/internal/mlkit_vision_common/zziv;->zzbA:Lcom/google/android/gms/internal/mlkit_vision_common/zziv;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/android/gms/internal/mlkit_vision_common/zzmj;->zzc(Lcom/google/android/gms/internal/mlkit_vision_common/zzmt;Lcom/google/android/gms/internal/mlkit_vision_common/zziv;)V
@@ -25,10 +27,12 @@
     .annotation build Landroidx/annotation/WorkerThread;
     .end annotation
 
+    .line 1
     invoke-static/range {p1 .. p8}, Lcom/google/android/gms/internal/mlkit_vision_common/zzmu;->zzc(IIJIIII)Lcom/google/android/gms/internal/mlkit_vision_common/zzmt;
 
     move-result-object p1
 
+    .line 2
     sget-object p2, Lcom/google/android/gms/internal/mlkit_vision_common/zziv;->zzbZ:Lcom/google/android/gms/internal/mlkit_vision_common/zziv;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/android/gms/internal/mlkit_vision_common/zzmj;->zzc(Lcom/google/android/gms/internal/mlkit_vision_common/zzmt;Lcom/google/android/gms/internal/mlkit_vision_common/zziv;)V
@@ -39,6 +43,7 @@
 .method private static zzc(IIJIIII)Lcom/google/android/gms/internal/mlkit_vision_common/zzmt;
     .locals 11
 
+    .line 1
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0

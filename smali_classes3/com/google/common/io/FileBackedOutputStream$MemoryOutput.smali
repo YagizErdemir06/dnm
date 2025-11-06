@@ -1,4 +1,4 @@
-.class Lcom/google/common/io/FileBackedOutputStream$MemoryOutput;
+.class public Lcom/google/common/io/FileBackedOutputStream$MemoryOutput;
 .super Ljava/io/ByteArrayOutputStream;
 .source "SourceFile"
 
@@ -38,6 +38,7 @@
 .method public getBuffer()[B
     .locals 0
 
+    .line 1
     iget-object p0, p0, Ljava/io/ByteArrayOutputStream;->buf:[B
 
     return-object p0
@@ -46,6 +47,7 @@
 .method public getCount()I
     .locals 0
 
+    .line 1
     iget p0, p0, Ljava/io/ByteArrayOutputStream;->count:I
 
     return p0

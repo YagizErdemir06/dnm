@@ -9,7 +9,7 @@
 # static fields
 .field private static final DEBUG:Z = false
 
-.field private static final TAG:Ljava/lang/String; = "RenderHandler"
+.field private static final TAG:Ljava/lang/String;
 
 
 # instance fields
@@ -42,7 +42,16 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 0
+    .locals 1
+
+    .line 1
+    const-class v0, Lcom/faceunity/pta_helper/video/RenderHandler;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/faceunity/pta_helper/video/RenderHandler;->TAG:Ljava/lang/String;
 
     return-void
 .end method
@@ -50,8 +59,10 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -62,10 +73,12 @@
 
     new-array v1, v0, [F
 
+    .line 3
     iput-object v1, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mtx:[F
 
     new-array v0, v0, [F
 
+    .line 4
     iput-object v0, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mvp:[F
 
     return-void
@@ -74,14 +87,17 @@
 .method public static final createHandler(Ljava/lang/String;)Lcom/faceunity/pta_helper/video/RenderHandler;
     .locals 4
 
+    .line 1
     new-instance v0, Lcom/faceunity/pta_helper/video/RenderHandler;
 
     invoke-direct {v0}, Lcom/faceunity/pta_helper/video/RenderHandler;-><init>()V
 
+    .line 2
     iget-object v1, v0, Lcom/faceunity/pta_helper/video/RenderHandler;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
+    .line 3
     :try_start_0
     new-instance v2, Ljava/lang/Thread;
 
@@ -103,6 +119,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
     :try_start_1
     iget-object p0, v0, Lcom/faceunity/pta_helper/video/RenderHandler;->mLock:Ljava/lang/Object;
 
@@ -111,6 +128,7 @@
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 5
     :catch_0
     :try_start_2
     monitor-exit v1
@@ -130,8 +148,10 @@
 .method private final internalPrepare()V
     .locals 4
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/pta_helper/video/RenderHandler;->internalRelease()V
 
+    .line 2
     new-instance v0, Lcom/faceunity/pta_helper/gles/core/EglCore;
 
     iget-object v1, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mShard_context:Landroid/opengl/EGLContext;
@@ -142,6 +162,7 @@
 
     iput-object v0, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mEglCore:Lcom/faceunity/pta_helper/gles/core/EglCore;
 
+    .line 3
     new-instance v0, Lcom/faceunity/pta_helper/gles/core/WindowSurface;
 
     iget-object v1, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mEglCore:Lcom/faceunity/pta_helper/gles/core/EglCore;
@@ -152,8 +173,10 @@
 
     iput-object v0, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mInputWindowSurface:Lcom/faceunity/pta_helper/gles/core/WindowSurface;
 
+    .line 4
     invoke-virtual {v0}, Lcom/faceunity/pta_helper/gles/core/EglSurfaceBase;->makeCurrent()V
 
+    .line 5
     new-instance v0, Lcom/faceunity/pta_helper/gles/ProgramTexture2d;
 
     invoke-direct {v0}, Lcom/faceunity/pta_helper/gles/ProgramTexture2d;-><init>()V
@@ -162,8 +185,10 @@
 
     const/4 v0, 0x0
 
+    .line 6
     iput-object v0, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mSurface:Landroid/view/Surface;
 
+    .line 7
     iget-object p0, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
@@ -174,32 +199,41 @@
 .method private final internalRelease()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mInputWindowSurface:Lcom/faceunity/pta_helper/gles/core/WindowSurface;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Lcom/faceunity/pta_helper/gles/core/WindowSurface;->release()V
 
+    .line 3
     iput-object v1, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mInputWindowSurface:Lcom/faceunity/pta_helper/gles/core/WindowSurface;
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mFullScreen:Lcom/faceunity/pta_helper/gles/core/Program;
 
     if-eqz v0, :cond_1
 
+    .line 5
     invoke-virtual {v0}, Lcom/faceunity/pta_helper/gles/core/Program;->release()V
 
+    .line 6
     iput-object v1, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mFullScreen:Lcom/faceunity/pta_helper/gles/core/Program;
 
+    .line 7
     :cond_1
     iget-object v0, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mEglCore:Lcom/faceunity/pta_helper/gles/core/EglCore;
 
     if-eqz v0, :cond_2
 
+    .line 8
     invoke-virtual {v0}, Lcom/faceunity/pta_helper/gles/core/EglCore;->release()V
 
+    .line 9
     iput-object v1, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mEglCore:Lcom/faceunity/pta_helper/gles/core/EglCore;
 
     :cond_2
@@ -290,10 +324,12 @@
 .method public isValid()Z
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-object p0, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mSurface:Landroid/view/Surface;
 
@@ -326,6 +362,7 @@
     :catchall_0
     move-exception p0
 
+    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -336,10 +373,12 @@
 .method public final release()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-boolean v1, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mRequestRelease:Z
 
@@ -352,14 +391,17 @@
     :cond_0
     const/4 v1, 0x1
 
+    .line 3
     iput-boolean v1, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mRequestRelease:Z
 
+    .line 4
     iget-object v1, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {v1}, Ljava/lang/Object;->notifyAll()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 5
     :try_start_1
     iget-object p0, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mLock:Ljava/lang/Object;
 
@@ -368,6 +410,7 @@
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 6
     :catch_0
     :try_start_2
     monitor-exit v0
@@ -387,33 +430,40 @@
 .method public final run()V
     .locals 5
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
     const/4 v1, 0x0
 
+    .line 2
     :try_start_0
     iput-boolean v1, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mRequestRelease:Z
 
     iput-boolean v1, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mRequestSetEglContext:Z
 
+    .line 3
     iput v1, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mRequestDraw:I
 
+    .line 4
     iget-object v2, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {v2}, Ljava/lang/Object;->notifyAll()V
 
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_3
 
+    .line 6
     :cond_0
     :goto_0
     iget-object v2, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
+    .line 7
     :try_start_1
     iget-boolean v0, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mRequestRelease:Z
 
@@ -425,15 +475,19 @@
 
     goto :goto_2
 
+    .line 8
     :cond_1
     iget-boolean v0, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mRequestSetEglContext:Z
 
     if-eqz v0, :cond_2
 
+    .line 9
     iput-boolean v1, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mRequestSetEglContext:Z
 
+    .line 10
     invoke-direct {p0}, Lcom/faceunity/pta_helper/video/RenderHandler;->internalPrepare()V
 
+    .line 11
     :cond_2
     iget v0, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mRequestDraw:I
 
@@ -451,8 +505,10 @@
 
     add-int/lit8 v0, v0, -0x1
 
+    .line 12
     iput v0, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mRequestDraw:I
 
+    .line 13
     :cond_4
     monitor-exit v2
     :try_end_1
@@ -460,6 +516,7 @@
 
     if-eqz v4, :cond_5
 
+    .line 14
     iget-object v0, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mEglCore:Lcom/faceunity/pta_helper/gles/core/EglCore;
 
     if-eqz v0, :cond_0
@@ -468,6 +525,7 @@
 
     if-lez v0, :cond_0
 
+    .line 15
     iget-object v0, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mInputWindowSurface:Lcom/faceunity/pta_helper/gles/core/WindowSurface;
 
     invoke-virtual {v0}, Lcom/faceunity/pta_helper/gles/core/EglSurfaceBase;->makeCurrent()V
@@ -476,12 +534,15 @@
 
     const/high16 v2, 0x3f800000    # 1.0f
 
+    .line 16
     invoke-static {v2, v2, v0, v2}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
 
     const/16 v0, 0x4000
 
+    .line 17
     invoke-static {v0}, Landroid/opengl/GLES20;->glClear(I)V
 
+    .line 18
     iget-object v0, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mFullScreen:Lcom/faceunity/pta_helper/gles/core/Program;
 
     iget v2, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mTexId:I
@@ -492,17 +553,20 @@
 
     invoke-virtual {v0, v2, v3, v4}, Lcom/faceunity/pta_helper/gles/core/Program;->drawFrame(I[F[F)V
 
+    .line 19
     iget-object v0, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mInputWindowSurface:Lcom/faceunity/pta_helper/gles/core/WindowSurface;
 
     invoke-virtual {v0}, Lcom/faceunity/pta_helper/gles/core/EglSurfaceBase;->swapBuffers()Z
 
     goto :goto_0
 
+    .line 20
     :cond_5
     iget-object v0, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 21
     :try_start_2
     iget-object v2, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mLock:Ljava/lang/Object;
 
@@ -511,6 +575,7 @@
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 22
     :try_start_3
     monitor-exit v0
 
@@ -521,25 +586,31 @@
 
     goto :goto_3
 
+    .line 23
     :catch_0
     monitor-exit v0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
+    .line 24
     :goto_2
     iget-object v1, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
+    .line 25
     :try_start_4
     iput-boolean v3, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mRequestRelease:Z
 
+    .line 26
     invoke-direct {p0}, Lcom/faceunity/pta_helper/video/RenderHandler;->internalRelease()V
 
+    .line 27
     iget-object p0, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
+    .line 28
     monitor-exit v1
 
     return-void
@@ -553,6 +624,7 @@
 
     throw p0
 
+    .line 29
     :goto_3
     :try_start_5
     monitor-exit v0
@@ -564,6 +636,7 @@
     :catchall_2
     move-exception p0
 
+    .line 30
     :try_start_6
     monitor-exit v2
     :try_end_6
@@ -574,6 +647,7 @@
     :catchall_3
     move-exception p0
 
+    .line 31
     :try_start_7
     monitor-exit v0
     :try_end_7
@@ -585,10 +659,12 @@
 .method public final setEglContext(Landroid/opengl/EGLContext;Landroid/view/Surface;Z)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-boolean v1, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mRequestRelease:Z
 
@@ -598,33 +674,41 @@
 
     return-void
 
+    .line 3
     :cond_0
     iput-object p1, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mShard_context:Landroid/opengl/EGLContext;
 
+    .line 4
     iput-object p2, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mSurface:Landroid/view/Surface;
 
+    .line 5
     iput-boolean p3, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mIsRecordable:Z
 
     const/4 p1, 0x1
 
+    .line 6
     iput-boolean p1, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mRequestSetEglContext:Z
 
+    .line 7
     iget-object p1, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mtx:[F
 
     const/4 p2, 0x0
 
     invoke-static {p1, p2}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
+    .line 8
     iget-object p1, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mvp:[F
 
     invoke-static {p1, p2}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
+    .line 9
     iget-object p1, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mLock:Ljava/lang/Object;
 
     invoke-virtual {p1}, Ljava/lang/Object;->notifyAll()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 10
     :try_start_1
     iget-object p0, p0, Lcom/faceunity/pta_helper/video/RenderHandler;->mLock:Ljava/lang/Object;
 
@@ -633,6 +717,7 @@
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 11
     :catch_0
     :try_start_2
     monitor-exit v0

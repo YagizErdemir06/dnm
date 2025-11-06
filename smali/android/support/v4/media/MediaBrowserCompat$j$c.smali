@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field public final synthetic a:Landroid/support/v4/media/MediaBrowserCompat$e;
+.field public final synthetic c:Landroid/support/v4/media/MediaBrowserCompat$e;
 
-.field public final synthetic b:Ljava/lang/String;
+.field public final synthetic d:Ljava/lang/String;
 
-.field public final synthetic c:Landroid/support/v4/media/MediaBrowserCompat$j;
+.field public final synthetic f:Landroid/support/v4/media/MediaBrowserCompat$j;
 
 
 # direct methods
@@ -41,11 +41,12 @@
         }
     .end annotation
 
-    iput-object p1, p0, Landroid/support/v4/media/MediaBrowserCompat$j$c;->c:Landroid/support/v4/media/MediaBrowserCompat$j;
+    .line 1
+    iput-object p1, p0, Landroid/support/v4/media/MediaBrowserCompat$j$c;->f:Landroid/support/v4/media/MediaBrowserCompat$j;
 
-    iput-object p2, p0, Landroid/support/v4/media/MediaBrowserCompat$j$c;->a:Landroid/support/v4/media/MediaBrowserCompat$e;
+    iput-object p2, p0, Landroid/support/v4/media/MediaBrowserCompat$j$c;->c:Landroid/support/v4/media/MediaBrowserCompat$e;
 
-    iput-object p3, p0, Landroid/support/v4/media/MediaBrowserCompat$j$c;->b:Ljava/lang/String;
+    iput-object p3, p0, Landroid/support/v4/media/MediaBrowserCompat$j$c;->d:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -57,9 +58,10 @@
 .method public run()V
     .locals 1
 
-    iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$j$c;->a:Landroid/support/v4/media/MediaBrowserCompat$e;
+    .line 1
+    iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$j$c;->c:Landroid/support/v4/media/MediaBrowserCompat$e;
 
-    iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$j$c;->b:Ljava/lang/String;
+    iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$j$c;->d:Ljava/lang/String;
 
     invoke-virtual {v0, p0}, Landroid/support/v4/media/MediaBrowserCompat$e;->a(Ljava/lang/String;)V
 

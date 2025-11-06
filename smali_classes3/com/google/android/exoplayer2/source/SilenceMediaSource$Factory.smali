@@ -27,6 +27,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,6 +38,7 @@
 .method public createMediaSource()Lcom/google/android/exoplayer2/source/SilenceMediaSource;
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/SilenceMediaSource$Factory;->durationUs:J
 
     const-wide/16 v2, 0x0
@@ -55,6 +57,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     new-instance v0, Lcom/google/android/exoplayer2/source/SilenceMediaSource;
 
     iget-wide v1, p0, Lcom/google/android/exoplayer2/source/SilenceMediaSource$Factory;->durationUs:J
@@ -92,6 +95,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/SilenceMediaSource$Factory;->durationUs:J
 
     return-object p0
@@ -104,6 +108,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/SilenceMediaSource$Factory;->tag:Ljava/lang/Object;
 
     return-object p0

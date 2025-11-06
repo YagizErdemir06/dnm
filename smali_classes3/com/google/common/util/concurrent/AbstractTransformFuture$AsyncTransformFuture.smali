@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/AbstractTransformFuture$AsyncTransformFuture;
+.class public final Lcom/google/common/util/concurrent/AbstractTransformFuture$AsyncTransformFuture;
 .super Lcom/google/common/util/concurrent/AbstractTransformFuture;
 .source "SourceFile"
 
@@ -43,6 +43,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/common/util/concurrent/AbstractTransformFuture;-><init>(Lcom/google/common/util/concurrent/ListenableFuture;Ljava/lang/Object;)V
 
     return-void

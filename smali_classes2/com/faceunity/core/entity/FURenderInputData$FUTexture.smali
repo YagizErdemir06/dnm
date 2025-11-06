@@ -13,40 +13,46 @@
     name = "FUTexture"
 .end annotation
 
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
     bv = {
         0x1,
         0x0,
         0x3
     }
     d1 = {
-        "\u0000&\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\r\n\u0002\u0010\u000b\n\u0002\u0008\u0003\n\u0002\u0010\u000e\n\u0000\u0008\u0086\u0008\u0018\u00002\u00020\u0001B\u0015\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0002\u0010\u0006J\t\u0010\u000f\u001a\u00020\u0003H\u00c6\u0003J\t\u0010\u0010\u001a\u00020\u0005H\u00c6\u0003J\u001d\u0010\u0011\u001a\u00020\u00002\u0008\u0008\u0002\u0010\u0002\u001a\u00020\u00032\u0008\u0008\u0002\u0010\u0004\u001a\u00020\u0005H\u00c6\u0001J\u0013\u0010\u0012\u001a\u00020\u00132\u0008\u0010\u0014\u001a\u0004\u0018\u00010\u0001H\u00d6\u0003J\t\u0010\u0015\u001a\u00020\u0005H\u00d6\u0001J\t\u0010\u0016\u001a\u00020\u0017H\u00d6\u0001R\u001a\u0010\u0002\u001a\u00020\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0007\u0010\u0008\"\u0004\u0008\t\u0010\nR\u001a\u0010\u0004\u001a\u00020\u0005X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u000b\u0010\u000c\"\u0004\u0008\r\u0010\u000e\u00a8\u0006\u0018"
+        "\u0000(\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0006\n\u0002\u0010\u000e\n\u0002\u0008\u0004\n\u0002\u0010\u000b\n\u0002\u0008\r\u0008\u0086\u0008\u0018\u00002\u00020\u0001B\u0017\u0012\u0006\u0010\u0008\u001a\u00020\u0002\u0012\u0006\u0010\t\u001a\u00020\u0005\u00a2\u0006\u0004\u0008\u001c\u0010\u001dJ\u0010\u0010\u0003\u001a\u00020\u0002H\u00c6\u0003\u00a2\u0006\u0004\u0008\u0003\u0010\u0004J\u0010\u0010\u0006\u001a\u00020\u0005H\u00c6\u0003\u00a2\u0006\u0004\u0008\u0006\u0010\u0007J$\u0010\n\u001a\u00020\u00002\u0008\u0008\u0002\u0010\u0008\u001a\u00020\u00022\u0008\u0008\u0002\u0010\t\u001a\u00020\u0005H\u00c6\u0001\u00a2\u0006\u0004\u0008\n\u0010\u000bJ\u0010\u0010\r\u001a\u00020\u000cH\u00d6\u0001\u00a2\u0006\u0004\u0008\r\u0010\u000eJ\u0010\u0010\u000f\u001a\u00020\u0005H\u00d6\u0001\u00a2\u0006\u0004\u0008\u000f\u0010\u0007J\u001a\u0010\u0012\u001a\u00020\u00112\u0008\u0010\u0010\u001a\u0004\u0018\u00010\u0001H\u00d6\u0003\u00a2\u0006\u0004\u0008\u0012\u0010\u0013R\"\u0010\u0008\u001a\u00020\u00028\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0008\u0010\u0014\u001a\u0004\u0008\u0015\u0010\u0004\"\u0004\u0008\u0016\u0010\u0017R\"\u0010\t\u001a\u00020\u00058\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\t\u0010\u0018\u001a\u0004\u0008\u0019\u0010\u0007\"\u0004\u0008\u001a\u0010\u001b\u00a8\u0006\u001e"
     }
     d2 = {
         "Lcom/faceunity/core/entity/FURenderInputData$FUTexture;",
         "",
-        "inputTextureType",
         "Lcom/faceunity/core/enumeration/FUInputTextureEnum;",
-        "texId",
-        "",
-        "(Lcom/faceunity/core/enumeration/FUInputTextureEnum;I)V",
-        "getInputTextureType",
+        "component1",
         "()Lcom/faceunity/core/enumeration/FUInputTextureEnum;",
+        "",
+        "component2",
+        "()I",
+        "inputTextureType",
+        "texId",
+        "copy",
+        "(Lcom/faceunity/core/enumeration/FUInputTextureEnum;I)Lcom/faceunity/core/entity/FURenderInputData$FUTexture;",
+        "",
+        "toString",
+        "()Ljava/lang/String;",
+        "hashCode",
+        "other",
+        "",
+        "equals",
+        "(Ljava/lang/Object;)Z",
+        "Lcom/faceunity/core/enumeration/FUInputTextureEnum;",
+        "getInputTextureType",
         "setInputTextureType",
         "(Lcom/faceunity/core/enumeration/FUInputTextureEnum;)V",
+        "I",
         "getTexId",
-        "()I",
         "setTexId",
         "(I)V",
-        "component1",
-        "component2",
-        "copy",
-        "equals",
-        "",
-        "other",
-        "hashCode",
-        "toString",
-        "",
+        "<init>",
+        "(Lcom/faceunity/core/enumeration/FUInputTextureEnum;I)V",
         "lib_core_release"
     }
     k = 0x1
@@ -60,7 +66,7 @@
 
 # instance fields
 .field private inputTextureType:Lcom/faceunity/core/enumeration/FUInputTextureEnum;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -71,14 +77,15 @@
 .method public constructor <init>(Lcom/faceunity/core/enumeration/FUInputTextureEnum;I)V
     .locals 1
     .param p1    # Lcom/faceunity/core/enumeration/FUInputTextureEnum;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "inputTextureType"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/faceunity/core/entity/FURenderInputData$FUTexture;->inputTextureType:Lcom/faceunity/core/enumeration/FUInputTextureEnum;
@@ -116,7 +123,7 @@
 # virtual methods
 .method public final component1()Lcom/faceunity/core/enumeration/FUInputTextureEnum;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     iget-object p0, p0, Lcom/faceunity/core/entity/FURenderInputData$FUTexture;->inputTextureType:Lcom/faceunity/core/enumeration/FUInputTextureEnum;
@@ -135,15 +142,15 @@
 .method public final copy(Lcom/faceunity/core/enumeration/FUInputTextureEnum;I)Lcom/faceunity/core/entity/FURenderInputData$FUTexture;
     .locals 0
     .param p1    # Lcom/faceunity/core/enumeration/FUInputTextureEnum;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string p0, "inputTextureType"
 
-    invoke-static {p1, p0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p0, Lcom/faceunity/core/entity/FURenderInputData$FUTexture;
 
@@ -155,7 +162,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
     .param p1    # Ljava/lang/Object;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
 
@@ -171,7 +178,7 @@
 
     iget-object v1, p1, Lcom/faceunity/core/entity/FURenderInputData$FUTexture;->inputTextureType:Lcom/faceunity/core/enumeration/FUInputTextureEnum;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lh/d3/x/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -199,9 +206,10 @@
 
 .method public final getInputTextureType()Lcom/faceunity/core/enumeration/FUInputTextureEnum;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/entity/FURenderInputData$FUTexture;->inputTextureType:Lcom/faceunity/core/enumeration/FUInputTextureEnum;
 
     return-object p0
@@ -210,6 +218,7 @@
 .method public final getTexId()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/faceunity/core/entity/FURenderInputData$FUTexture;->texId:I
 
     return p0
@@ -248,14 +257,15 @@
 .method public final setInputTextureType(Lcom/faceunity/core/enumeration/FUInputTextureEnum;)V
     .locals 1
     .param p1    # Lcom/faceunity/core/enumeration/FUInputTextureEnum;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "<set-?>"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/core/entity/FURenderInputData$FUTexture;->inputTextureType:Lcom/faceunity/core/enumeration/FUInputTextureEnum;
 
     return-void
@@ -264,6 +274,7 @@
 .method public final setTexId(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/faceunity/core/entity/FURenderInputData$FUTexture;->texId:I
 
     return-void
@@ -271,7 +282,7 @@
 
 .method public toString()Ljava/lang/String;
     .locals 2
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     new-instance v0, Ljava/lang/StringBuilder;

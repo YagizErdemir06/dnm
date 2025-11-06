@@ -19,6 +19,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/xiaomi/asr/engine/record/RecorderSynchronizer;
 
     invoke-direct {v0}, Lcom/xiaomi/asr/engine/record/RecorderSynchronizer;-><init>()V
@@ -31,8 +32,10 @@
 .method private constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/concurrent/CountDownLatch;
 
     const/4 v1, 0x0
@@ -41,12 +44,14 @@
 
     iput-object v0, p0, Lcom/xiaomi/asr/engine/record/RecorderSynchronizer;->latch:Ljava/util/concurrent/CountDownLatch;
 
+    .line 3
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/xiaomi/asr/engine/record/RecorderSynchronizer;->mSyncObj:Ljava/lang/Object;
 
+    .line 4
     iput-boolean v1, p0, Lcom/xiaomi/asr/engine/record/RecorderSynchronizer;->recording:Z
 
     return-void
@@ -55,6 +60,7 @@
 .method public static getInstance()Lcom/xiaomi/asr/engine/record/RecorderSynchronizer;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/asr/engine/record/RecorderSynchronizer;->ourInstance:Lcom/xiaomi/asr/engine/record/RecorderSynchronizer;
 
     return-object v0
@@ -65,15 +71,18 @@
 .method public countDown()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/asr/engine/record/RecorderSynchronizer;->mSyncObj:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-object p0, p0, Lcom/xiaomi/asr/engine/record/RecorderSynchronizer;->latch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
+    .line 3
     monitor-exit v0
 
     return-void
@@ -91,10 +100,12 @@
 .method public getCountDownLatch()Ljava/util/concurrent/CountDownLatch;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/asr/engine/record/RecorderSynchronizer;->mSyncObj:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-object p0, p0, Lcom/xiaomi/asr/engine/record/RecorderSynchronizer;->latch:Ljava/util/concurrent/CountDownLatch;
 
@@ -105,6 +116,7 @@
     :catchall_0
     move-exception p0
 
+    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -115,6 +127,7 @@
 .method public isRecording()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/asr/engine/record/RecorderSynchronizer;->recording:Z
 
     return p0
@@ -125,12 +138,15 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/xiaomi/asr/engine/record/RecorderSynchronizer;->recording:Z
 
+    .line 2
     iget-object v1, p0, Lcom/xiaomi/asr/engine/record/RecorderSynchronizer;->mSyncObj:Ljava/lang/Object;
 
     monitor-enter v1
 
+    .line 3
     :try_start_0
     new-instance v2, Ljava/util/concurrent/CountDownLatch;
 
@@ -138,6 +154,7 @@
 
     iput-object v2, p0, Lcom/xiaomi/asr/engine/record/RecorderSynchronizer;->latch:Ljava/util/concurrent/CountDownLatch;
 
+    .line 4
     monitor-exit v1
 
     return-void
@@ -157,6 +174,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-boolean v0, p0, Lcom/xiaomi/asr/engine/record/RecorderSynchronizer;->recording:Z
 
     return-void

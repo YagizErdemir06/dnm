@@ -27,6 +27,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,6 +36,7 @@
 .method public static forNaN()Lcom/google/common/math/LinearTransformation;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/common/math/LinearTransformation$NaNLinearTransformation;->INSTANCE:Lcom/google/common/math/LinearTransformation$NaNLinearTransformation;
 
     return-object v0
@@ -43,12 +45,14 @@
 .method public static horizontal(D)Lcom/google/common/math/LinearTransformation;
     .locals 3
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/common/math/DoubleUtils;->isFinite(D)Z
 
     move-result v0
 
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
 
+    .line 2
     new-instance v0, Lcom/google/common/math/LinearTransformation$RegularLinearTransformation;
 
     const-wide/16 v1, 0x0
@@ -61,6 +65,7 @@
 .method public static mapping(DD)Lcom/google/common/math/LinearTransformation$LinearTransformationBuilder;
     .locals 7
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/common/math/DoubleUtils;->isFinite(D)Z
 
     move-result v0
@@ -83,6 +88,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
 
+    .line 2
     new-instance v0, Lcom/google/common/math/LinearTransformation$LinearTransformationBuilder;
 
     const/4 v6, 0x0
@@ -101,12 +107,14 @@
 .method public static vertical(D)Lcom/google/common/math/LinearTransformation;
     .locals 1
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/common/math/DoubleUtils;->isFinite(D)Z
 
     move-result v0
 
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
 
+    .line 2
     new-instance v0, Lcom/google/common/math/LinearTransformation$VerticalLinearTransformation;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/math/LinearTransformation$VerticalLinearTransformation;-><init>(D)V

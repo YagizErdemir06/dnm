@@ -27,6 +27,7 @@
 
     const-string v0, "FUP2AHelper"
 
+    .line 1
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     return-void
@@ -35,24 +36,30 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
+    .line 2
     iput-wide v0, p0, Lcom/faceunity/pta_helper/texture/TextureReader;->eglBufferCvt:J
 
     const/4 v0, 0x0
 
+    .line 3
     iput v0, p0, Lcom/faceunity/pta_helper/texture/TextureReader;->width:I
 
+    .line 4
     iput v0, p0, Lcom/faceunity/pta_helper/texture/TextureReader;->height:I
 
+    .line 5
     iput v0, p0, Lcom/faceunity/pta_helper/texture/TextureReader;->mFboId:I
 
     const/4 v0, 0x4
 
     new-array v0, v0, [I
 
+    .line 6
     iput-object v0, p0, Lcom/faceunity/pta_helper/texture/TextureReader;->viewport_bk:[I
 
     return-void
@@ -65,6 +72,7 @@
 
     if-gtz p1, :cond_0
 
+    .line 1
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -85,6 +93,7 @@
 
     return v0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Lcom/faceunity/pta_helper/texture/TextureReader;->useFBO()Z
 
@@ -94,13 +103,16 @@
 
     return v0
 
+    .line 3
     :cond_1
     iget-object v0, p0, Lcom/faceunity/pta_helper/texture/TextureReader;->mProgramTexture2d:Lcom/faceunity/pta_helper/gles/ProgramTexture2d;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/faceunity/pta_helper/gles/ProgramTexture2d;->drawFrame(I[F[F)V
 
+    .line 4
     invoke-static {}, Landroid/opengl/GLES20;->glFinish()V
 
+    .line 5
     invoke-virtual {p0}, Lcom/faceunity/pta_helper/texture/TextureReader;->unUseFBO()V
 
     const/4 p0, 0x1
@@ -117,6 +129,7 @@
 .method private initGL()Z
     .locals 7
 
+    .line 1
     iget v0, p0, Lcom/faceunity/pta_helper/texture/TextureReader;->mFboId:I
 
     const/4 v1, 0x1
@@ -125,6 +138,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     iget-wide v2, p0, Lcom/faceunity/pta_helper/texture/TextureReader;->eglBufferCvt:J
 
@@ -140,6 +154,7 @@
 
     const-string v0, "no EGLBufferConverter texture"
 
+    .line 3
     invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
@@ -147,8 +162,10 @@
     :cond_1
     new-array v3, v1, [I
 
+    .line 4
     invoke-static {v1, v3, v2}, Landroid/opengl/GLES20;->glGenFramebuffers(I[II)V
 
+    .line 5
     aget v4, v3, v2
 
     const v5, 0x8d40
@@ -159,16 +176,21 @@
 
     const/16 v6, 0xde1
 
+    .line 6
     invoke-static {v5, v4, v6, v0, v2}, Landroid/opengl/GLES20;->glFramebufferTexture2D(IIIII)V
 
+    .line 7
     invoke-static {v6, v2}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
+    .line 8
     invoke-static {v5, v2}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
 
+    .line 9
     aget v0, v3, v2
 
     iput v0, p0, Lcom/faceunity/pta_helper/texture/TextureReader;->mFboId:I
 
+    .line 10
     new-instance v0, Lcom/faceunity/pta_helper/gles/ProgramTexture2d;
 
     invoke-direct {v0}, Lcom/faceunity/pta_helper/gles/ProgramTexture2d;-><init>()V
@@ -187,6 +209,7 @@
 .method private releaseEglBufferCvt()V
     .locals 5
 
+    .line 1
     iget-wide v0, p0, Lcom/faceunity/pta_helper/texture/TextureReader;->eglBufferCvt:J
 
     const-wide/16 v2, 0x0
@@ -195,8 +218,10 @@
 
     if-eqz v4, :cond_0
 
+    .line 2
     invoke-direct {p0, v0, v1}, Lcom/faceunity/pta_helper/texture/TextureReader;->releaseEglBufferCvt(J)V
 
+    .line 3
     iput-wide v2, p0, Lcom/faceunity/pta_helper/texture/TextureReader;->eglBufferCvt:J
 
     :cond_0
@@ -209,6 +234,7 @@
 .method private releaseGL()V
     .locals 4
 
+    .line 1
     iget v0, p0, Lcom/faceunity/pta_helper/texture/TextureReader;->mFboId:I
 
     if-lez v0, :cond_0
@@ -221,19 +247,24 @@
 
     aput v0, v2, v3
 
+    .line 2
     invoke-static {v1, v2, v3}, Landroid/opengl/GLES20;->glDeleteFramebuffers(I[II)V
 
+    .line 3
     iput v3, p0, Lcom/faceunity/pta_helper/texture/TextureReader;->mFboId:I
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lcom/faceunity/pta_helper/texture/TextureReader;->mProgramTexture2d:Lcom/faceunity/pta_helper/gles/ProgramTexture2d;
 
     if-eqz v0, :cond_1
 
+    .line 5
     invoke-virtual {v0}, Lcom/faceunity/pta_helper/gles/core/Program;->release()V
 
     const/4 v0, 0x0
 
+    .line 6
     iput-object v0, p0, Lcom/faceunity/pta_helper/texture/TextureReader;->mProgramTexture2d:Lcom/faceunity/pta_helper/gles/ProgramTexture2d;
 
     :cond_1
@@ -286,18 +317,23 @@
 
     const/4 p1, 0x0
 
+    .line 1
     invoke-static {v4, p1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
+    .line 2
     invoke-static {v2, p1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
+    .line 3
     invoke-static {v6, p1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
     const/high16 p2, 0x3f800000    # 1.0f
 
+    .line 4
     invoke-static {v4, p1, p4, p5, p2}, Landroid/opengl/Matrix;->scaleM([FIFFF)V
 
     const/4 p2, 0x0
 
+    .line 5
     invoke-static {v2, p1, p3, p0, p2}, Landroid/opengl/Matrix;->translateM([FIFFF)V
 
     const/4 v1, 0x0
@@ -308,6 +344,7 @@
 
     move-object v0, v6
 
+    .line 6
     invoke-static/range {v0 .. v5}, Landroid/opengl/Matrix;->multiplyMM([FI[FI[FI)V
 
     return-object v6
@@ -316,12 +353,16 @@
 .method public init(II)Z
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/faceunity/pta_helper/texture/TextureReader;->width:I
 
+    .line 2
     iput p2, p0, Lcom/faceunity/pta_helper/texture/TextureReader;->height:I
 
+    .line 3
     invoke-direct {p0}, Lcom/faceunity/pta_helper/texture/TextureReader;->releaseEglBufferCvt()V
 
+    .line 4
     invoke-direct {p0, p1, p2}, Lcom/faceunity/pta_helper/texture/TextureReader;->createEglBufferCvt(II)J
 
     move-result-wide p1
@@ -402,8 +443,10 @@
 .method public release()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/pta_helper/texture/TextureReader;->releaseGL()V
 
+    .line 2
     invoke-direct {p0}, Lcom/faceunity/pta_helper/texture/TextureReader;->releaseEglBufferCvt()V
 
     return-void
@@ -412,6 +455,7 @@
 .method public releaseReadBuffer(J)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/faceunity/pta_helper/texture/TextureReader;->releaseReadResult(J)V
 
     return-void
@@ -424,8 +468,10 @@
 
     const/4 v1, 0x0
 
+    .line 1
     invoke-static {v0, v1}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
 
+    .line 2
     iget-object p0, p0, Lcom/faceunity/pta_helper/texture/TextureReader;->viewport_bk:[I
 
     aget v0, p0, v1
@@ -450,6 +496,7 @@
 .method public useFBO()Z
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/pta_helper/texture/TextureReader;->initGL()Z
 
     move-result v0
@@ -463,16 +510,19 @@
     :cond_0
     const v0, 0x8d40
 
+    .line 2
     iget v2, p0, Lcom/faceunity/pta_helper/texture/TextureReader;->mFboId:I
 
     invoke-static {v0, v2}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
 
     const/16 v0, 0xba2
 
+    .line 3
     iget-object v2, p0, Lcom/faceunity/pta_helper/texture/TextureReader;->viewport_bk:[I
 
     invoke-static {v0, v2, v1}, Landroid/opengl/GLES20;->glGetIntegerv(I[II)V
 
+    .line 4
     iget v0, p0, Lcom/faceunity/pta_helper/texture/TextureReader;->width:I
 
     iget p0, p0, Lcom/faceunity/pta_helper/texture/TextureReader;->height:I
@@ -483,10 +533,12 @@
 
     const/4 v0, 0x0
 
+    .line 5
     invoke-static {p0, v0, v0, p0}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
 
     const/16 p0, 0x4000
 
+    .line 6
     invoke-static {p0}, Landroid/opengl/GLES20;->glClear(I)V
 
     const/4 p0, 0x1

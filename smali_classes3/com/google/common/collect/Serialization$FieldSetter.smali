@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/Serialization$FieldSetter;
+.class public final Lcom/google/common/collect/Serialization$FieldSetter;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -40,7 +40,7 @@
     const/4 p0, 0x1
 
     .line 4
-    invoke-virtual {p1, p0}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    invoke-virtual {p1, p0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
     return-void
 .end method

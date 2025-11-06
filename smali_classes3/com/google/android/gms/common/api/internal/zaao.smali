@@ -1,10 +1,10 @@
-.class final Lcom/google/android/gms/common/api/internal/zaao;
+.class public final Lcom/google/android/gms/common/api/internal/zaao;
 .super Lcom/google/android/gms/common/api/internal/zaav;
 .source "SourceFile"
 
 
 # instance fields
-.field final synthetic zaa:Lcom/google/android/gms/common/api/internal/zaaw;
+.field public final synthetic zaa:Lcom/google/android/gms/common/api/internal/zaaw;
 
 .field private final zac:Ljava/util/Map;
 
@@ -13,6 +13,7 @@
 .method public constructor <init>(Lcom/google/android/gms/common/api/internal/zaaw;Ljava/util/Map;)V
     .locals 1
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/common/api/internal/zaao;->zaa:Lcom/google/android/gms/common/api/internal/zaaw;
 
     const/4 v0, 0x0
@@ -35,6 +36,7 @@
         value = "mLock"
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/common/internal/zal;
 
     iget-object v1, p0, Lcom/google/android/gms/common/api/internal/zaao;->zaa:Lcom/google/android/gms/common/api/internal/zaaw;
@@ -47,14 +49,17 @@
 
     new-instance v1, Ljava/util/ArrayList;
 
+    .line 2
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     new-instance v2, Ljava/util/ArrayList;
 
+    .line 3
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     iget-object v3, p0, Lcom/google/android/gms/common/api/internal/zaao;->zac:Ljava/util/Map;
 
+    .line 4
     invoke-interface {v3}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v3
@@ -76,6 +81,7 @@
 
     check-cast v4, Lcom/google/android/gms/common/api/Api$Client;
 
+    .line 5
     invoke-interface {v4}, Lcom/google/android/gms/common/api/Api$Client;->requiresGooglePlayServices()Z
 
     move-result v5
@@ -96,15 +102,18 @@
 
     if-nez v5, :cond_0
 
+    .line 6
     invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 7
     :cond_0
     invoke-interface {v2, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 8
     :cond_1
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
@@ -127,6 +136,7 @@
 
     move-result-object v3
 
+    .line 9
     check-cast v3, Lcom/google/android/gms/common/api/Api$Client;
 
     iget-object v4, p0, Lcom/google/android/gms/common/api/internal/zaao;->zaa:Lcom/google/android/gms/common/api/internal/zaaw;
@@ -135,6 +145,7 @@
 
     move-result-object v4
 
+    .line 10
     invoke-virtual {v0, v4, v3}, Lcom/google/android/gms/common/internal/zal;->zab(Landroid/content/Context;Lcom/google/android/gms/common/api/Api$Client;)I
 
     move-result v4
@@ -145,6 +156,7 @@
 
     goto :goto_1
 
+    .line 11
     :cond_3
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -157,6 +169,7 @@
 
     move-result-object v3
 
+    .line 12
     check-cast v3, Lcom/google/android/gms/common/api/Api$Client;
 
     iget-object v4, p0, Lcom/google/android/gms/common/api/internal/zaao;->zaa:Lcom/google/android/gms/common/api/internal/zaaw;
@@ -165,6 +178,7 @@
 
     move-result-object v4
 
+    .line 13
     invoke-virtual {v0, v4, v3}, Lcom/google/android/gms/common/internal/zal;->zab(Landroid/content/Context;Lcom/google/android/gms/common/api/Api$Client;)I
 
     move-result v4
@@ -177,6 +191,7 @@
     :goto_1
     if-eqz v4, :cond_6
 
+    .line 14
     new-instance v0, Lcom/google/android/gms/common/ConnectionResult;
 
     const/4 v1, 0x0
@@ -193,6 +208,7 @@
 
     invoke-direct {v3, p0, v1, v0}, Lcom/google/android/gms/common/api/internal/zaam;-><init>(Lcom/google/android/gms/common/api/internal/zaao;Lcom/google/android/gms/common/api/internal/zabf;Lcom/google/android/gms/common/ConnectionResult;)V
 
+    .line 15
     invoke-virtual {v2, v3}, Lcom/google/android/gms/common/api/internal/zabi;->zal(Lcom/google/android/gms/common/api/internal/zabg;)V
 
     return-void
@@ -216,11 +232,13 @@
 
     move-result-object v1
 
+    .line 16
     invoke-interface {v1}, Lcom/google/android/gms/signin/zae;->zab()V
 
     :cond_7
     iget-object v1, p0, Lcom/google/android/gms/common/api/internal/zaao;->zac:Ljava/util/Map;
 
+    .line 17
     invoke-interface {v1}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v1
@@ -244,12 +262,14 @@
 
     iget-object v3, p0, Lcom/google/android/gms/common/api/internal/zaao;->zac:Ljava/util/Map;
 
+    .line 18
     invoke-interface {v3, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/google/android/gms/common/internal/BaseGmsClient$ConnectionProgressReportCallbacks;
 
+    .line 19
     invoke-interface {v2}, Lcom/google/android/gms/common/api/Api$Client;->requiresGooglePlayServices()Z
 
     move-result v4
@@ -262,6 +282,7 @@
 
     move-result-object v4
 
+    .line 20
     invoke-virtual {v0, v4, v2}, Lcom/google/android/gms/common/internal/zal;->zab(Landroid/content/Context;Lcom/google/android/gms/common/api/Api$Client;)I
 
     move-result v4
@@ -278,10 +299,12 @@
 
     invoke-direct {v5, p0, v2, v3}, Lcom/google/android/gms/common/api/internal/zaan;-><init>(Lcom/google/android/gms/common/api/internal/zaao;Lcom/google/android/gms/common/api/internal/zabf;Lcom/google/android/gms/common/internal/BaseGmsClient$ConnectionProgressReportCallbacks;)V
 
+    .line 21
     invoke-virtual {v4, v5}, Lcom/google/android/gms/common/api/internal/zabi;->zal(Lcom/google/android/gms/common/api/internal/zabg;)V
 
     goto :goto_2
 
+    .line 22
     :cond_8
     invoke-interface {v2, v3}, Lcom/google/android/gms/common/api/Api$Client;->connect(Lcom/google/android/gms/common/internal/BaseGmsClient$ConnectionProgressReportCallbacks;)V
 

@@ -14,7 +14,7 @@
 
 
 # static fields
-.field private static final DEFAULT_FRICTION:F = 0.4761905f
+.field private static final DEFALUT_FRICTION:F = 0.4761905f
 
 .field private static DEFAULT_THRESHOLD_VELOCITY:F = 0.0f
 
@@ -23,18 +23,6 @@
 .field private static final DELAY_TIME_MSG_TARGET_CLEAN_DIE_MUCH:J = 0x3e8L
 
 .field private static final DELAY_TIME_MSG_TARGET_CLEAN_UI_FREE:J = 0x4e20L
-
-.field public static final LOG_DESIGN:I = 0x10
-
-.field public static final LOG_DETAIL:I = 0x4
-
-.field public static final LOG_FRAME:I = 0x8
-
-.field public static final LOG_MAIN:I = 0x1
-
-.field public static final LOG_MORE:I = 0x2
-
-.field public static final LOG_OFF:I = 0x0
 
 .field private static final MSG_TARGET:I = 0x1
 
@@ -45,13 +33,6 @@
 .field private static final THRESHOLD_LIMIT:J = 0x400L
 
 .field private static final USE_PHY_MIN_VELOCITY:D = 1000.0
-
-.field public static appContext:Landroid/content/Context;
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-.end field
-
-.field private static sEnableSleep:Z
 
 .field private static final sImplMap:Ljava/util/concurrent/ConcurrentHashMap;
     .annotation system Ldalvik/annotation/Signature;
@@ -66,18 +47,7 @@
 
 .field private static volatile sMainHandler:Landroid/os/Handler;
 
-.field private static volatile sMainUiLooper:Landroid/os/Looper;
-
-.field private static final sSleepImplMap:Ljava/util/concurrent/ConcurrentHashMap;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/concurrent/ConcurrentHashMap<",
-            "Lmiuix/animation/IAnimTarget;",
-            "Lmiuix/animation/Folme$FolmeImpl;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private static sRunLooper:Landroid/os/Looper;
 
 .field private static sTimeRatio:Ljava/util/concurrent/atomic/AtomicReference;
     .annotation system Ldalvik/annotation/Signature;
@@ -89,61 +59,29 @@
     .end annotation
 .end field
 
-.field private static volatile sUiHandlerMap:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Ljava/lang/Long;",
-            "Landroid/os/Handler;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private static volatile sUiLooperMap:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Ljava/lang/Long;",
-            "Landroid/os/Looper;",
-            ">;"
-        }
-    .end annotation
-.end field
-
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    sput-object v0, Lmiuix/animation/Folme;->sUiLooperMap:Ljava/util/Map;
-
-    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    sput-object v0, Lmiuix/animation/Folme;->sUiHandlerMap:Ljava/util/Map;
-
+    .line 1
     new-instance v0, Lmiuix/animation/Folme$1;
 
     invoke-direct {v0}, Lmiuix/animation/Folme$1;-><init>()V
 
     invoke-static {v0}, Lmiuix/animation/internal/ThreadPoolUtil;->post(Ljava/lang/Runnable;)V
 
+    .line 2
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
 
-    sput-object v0, Lmiuix/animation/Folme;->sMainUiLooper:Landroid/os/Looper;
+    sput-object v0, Lmiuix/animation/Folme;->sRunLooper:Landroid/os/Looper;
 
-    sget-object v0, Lmiuix/animation/Folme;->sMainUiLooper:Landroid/os/Looper;
+    .line 3
+    invoke-static {v0}, Lmiuix/animation/Folme;->createMainHandler(Landroid/os/Looper;)V
 
-    invoke-static {v0}, Lmiuix/animation/Folme;->registerUiLooper(Landroid/os/Looper;)V
-
+    .line 4
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -156,28 +94,16 @@
 
     sput-object v0, Lmiuix/animation/Folme;->sTimeRatio:Ljava/util/concurrent/atomic/AtomicReference;
 
-    const/4 v0, 0x0
-
-    sput-object v0, Lmiuix/animation/Folme;->appContext:Landroid/content/Context;
-
+    .line 5
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     sput-object v0, Lmiuix/animation/Folme;->sImplMap:Ljava/util/concurrent/ConcurrentHashMap;
 
-    const/4 v0, 0x1
-
-    sput-boolean v0, Lmiuix/animation/Folme;->sEnableSleep:Z
-
-    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    sput-object v0, Lmiuix/animation/Folme;->sSleepImplMap:Ljava/util/concurrent/ConcurrentHashMap;
-
     const/high16 v0, 0x41480000    # 12.5f
 
+    .line 6
     sput v0, Lmiuix/animation/Folme;->DEFAULT_THRESHOLD_VELOCITY:F
 
     return-void
@@ -186,6 +112,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -194,6 +121,7 @@
 .method public static synthetic access$000(Z)V
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lmiuix/animation/Folme;->sendToTargetMessage(Z)V
 
     return-void
@@ -202,41 +130,37 @@
 .method public static synthetic access$100()V
     .locals 0
 
+    .line 1
     invoke-static {}, Lmiuix/animation/Folme;->performTargetCleanForTooMuchInvalid()V
 
     return-void
 .end method
 
-.method public static synthetic access$300()Ljava/util/concurrent/ConcurrentHashMap;
-    .locals 1
-
-    sget-object v0, Lmiuix/animation/Folme;->sSleepImplMap:Ljava/util/concurrent/ConcurrentHashMap;
-
-    return-object v0
-.end method
-
-.method public static synthetic access$400()Ljava/util/concurrent/ConcurrentHashMap;
-    .locals 1
-
-    sget-object v0, Lmiuix/animation/Folme;->sImplMap:Ljava/util/concurrent/ConcurrentHashMap;
-
-    return-object v0
-.end method
-
-.method public static synthetic access$500()V
+.method public static synthetic access$300()V
     .locals 0
 
+    .line 1
     invoke-static {}, Lmiuix/animation/Folme;->clearTargets()V
 
     return-void
 .end method
 
-.method public static synthetic access$600(Ljava/util/List;)V
+.method public static synthetic access$400(Ljava/util/List;)V
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lmiuix/animation/Folme;->clearInvalidTargets(Ljava/util/List;)V
 
     return-void
+.end method
+
+.method public static synthetic access$500()Ljava/util/concurrent/ConcurrentHashMap;
+    .locals 1
+
+    .line 1
+    sget-object v0, Lmiuix/animation/Folme;->sImplMap:Ljava/util/concurrent/ConcurrentHashMap;
+
+    return-object v0
 .end method
 
 .method public static afterFrictionValue(FF)F
@@ -264,6 +188,7 @@
     :cond_1
     const/high16 v0, -0x40800000    # -1.0f
 
+    .line 1
     :goto_0
     invoke-static {p0}, Ljava/lang/Math;->abs(F)F
 
@@ -271,6 +196,7 @@
 
     div-float/2addr p0, p1
 
+    .line 2
     invoke-static {p0, v1}, Ljava/lang/Math;->min(FF)F
 
     move-result p0
@@ -294,75 +220,6 @@
     return v0
 .end method
 
-.method public static varargs awake([Ljava/lang/Object;)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">([TT;)V"
-        }
-    .end annotation
-
-    .annotation runtime Ljava/lang/SafeVarargs;
-    .end annotation
-
-    invoke-static {p0}, Lmiuix/animation/utils/CommonUtils;->isArrayEmpty([Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    array-length v0, p0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_0
-
-    aget-object v2, p0, v1
-
-    invoke-static {v2}, Lmiuix/animation/Folme;->doAwake(Ljava/lang/Object;)V
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method private static awakeAnimTarget(Lmiuix/animation/IAnimTarget;)V
-    .locals 2
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Lmiuix/animation/IAnimTarget;->isSleep()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lmiuix/animation/Folme;->sSleepImplMap:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lmiuix/animation/Folme$FolmeImpl;
-
-    if-eqz v0, :cond_0
-
-    new-instance v1, Lmiuix/animation/Folme$3;
-
-    invoke-direct {v1, p0, v0}, Lmiuix/animation/Folme$3;-><init>(Lmiuix/animation/IAnimTarget;Lmiuix/animation/Folme$FolmeImpl;)V
-
-    invoke-virtual {p0, v1}, Lmiuix/animation/IAnimTarget;->post(Ljava/lang/Runnable;)V
-
-    :cond_0
-    return-void
-.end method
-
 .method public static varargs clean([Ljava/lang/Object;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
@@ -376,53 +233,14 @@
     .annotation runtime Ljava/lang/SafeVarargs;
     .end annotation
 
-    invoke-static {}, Lmiuix/animation/utils/LogUtils;->isLogMainEnabled()Z
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Folme.clean targetObjects "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, " trace "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    new-instance v2, Ljava/lang/Throwable;
-
-    invoke-direct {v2}, Ljava/lang/Throwable;-><init>()V
-
-    invoke-static {v2}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    new-array v2, v1, [Ljava/lang/Object;
-
-    invoke-static {v0, v2}, Lmiuix/animation/utils/LogUtils;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    :cond_0
+    .line 1
     invoke-static {p0}, Lmiuix/animation/utils/CommonUtils;->isArrayEmpty([Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
+    .line 2
     sget-object p0, Lmiuix/animation/Folme;->sImplMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {p0}, Ljava/util/concurrent/ConcurrentHashMap;->keySet()Ljava/util/Set;
@@ -438,7 +256,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
 
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -446,33 +264,42 @@
 
     check-cast v0, Lmiuix/animation/IAnimTarget;
 
+    .line 3
     invoke-static {v0}, Lmiuix/animation/Folme;->cleanAnimTarget(Lmiuix/animation/IAnimTarget;)V
 
     goto :goto_0
 
-    :cond_1
+    .line 4
+    :cond_0
     array-length v0, p0
 
+    const/4 v1, 0x0
+
     :goto_1
-    if-ge v1, v0, :cond_2
+    if-ge v1, v0, :cond_1
 
     aget-object v2, p0, v1
 
+    .line 5
     invoke-static {v2}, Lmiuix/animation/Folme;->doClean(Ljava/lang/Object;)V
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    :cond_2
+    :cond_1
     return-void
 .end method
 
 .method private static cleanAnimTarget(Lmiuix/animation/IAnimTarget;)V
     .locals 2
 
-    if-eqz p0, :cond_2
+    if-eqz p0, :cond_0
 
+    .line 1
+    invoke-virtual {p0}, Lmiuix/animation/IAnimTarget;->clean()V
+
+    .line 2
     sget-object v0, Lmiuix/animation/Folme;->sImplMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0, p0}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -481,40 +308,29 @@
 
     check-cast v0, Lmiuix/animation/Folme$FolmeImpl;
 
-    new-instance v1, Lmiuix/animation/Folme$4;
+    .line 3
+    iget-object v1, p0, Lmiuix/animation/IAnimTarget;->animManager:Lmiuix/animation/internal/AnimManager;
 
-    invoke-direct {v1, v0}, Lmiuix/animation/Folme$4;-><init>(Lmiuix/animation/Folme$FolmeImpl;)V
+    invoke-virtual {v1}, Lmiuix/animation/internal/AnimManager;->clear()V
 
-    invoke-virtual {p0}, Lmiuix/animation/IAnimTarget;->getHandler()Lmiuix/animation/internal/TargetHandler;
+    .line 4
+    invoke-virtual {p0}, Lmiuix/animation/IAnimTarget;->getNotifier()Lmiuix/animation/listener/ListenerNotifier;
 
     move-result-object p0
 
-    if-eqz p0, :cond_1
-
-    invoke-virtual {p0}, Lmiuix/animation/internal/TargetHandler;->isInTargetThread()Z
-
-    move-result v0
+    invoke-virtual {p0}, Lmiuix/animation/listener/ListenerNotifier;->removeListeners()V
 
     if-eqz v0, :cond_0
 
-    goto :goto_0
+    .line 5
+    invoke-virtual {v0}, Lmiuix/animation/Folme$FolmeImpl;->clean()V
 
     :cond_0
-    invoke-virtual {p0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    invoke-interface {v1}, Ljava/lang/Runnable;->run()V
-
-    :cond_2
-    :goto_1
     return-void
 .end method
 
 .method private static clearInvalidTargets(Ljava/util/List;)V
-    .locals 3
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -524,6 +340,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -542,7 +359,35 @@
 
     check-cast v0, Lmiuix/animation/IAnimTarget;
 
-    invoke-virtual {v0}, Lmiuix/animation/IAnimTarget;->canClearInvalid()Z
+    .line 2
+    invoke-virtual {v0}, Lmiuix/animation/IAnimTarget;->isValid()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    iget-object v1, v0, Lmiuix/animation/IAnimTarget;->animManager:Lmiuix/animation/internal/AnimManager;
+
+    const/4 v2, 0x0
+
+    new-array v3, v2, [Lmiuix/animation/property/FloatProperty;
+
+    invoke-virtual {v1, v3}, Lmiuix/animation/internal/AnimManager;->isAnimRunning([Lmiuix/animation/property/FloatProperty;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    iget-object v1, v0, Lmiuix/animation/IAnimTarget;->animManager:Lmiuix/animation/internal/AnimManager;
+
+    .line 3
+    invoke-virtual {v1}, Lmiuix/animation/internal/AnimManager;->isAnimSetup()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {v0}, Lmiuix/animation/IAnimTarget;->isValidFlag()Z
 
     move-result v1
 
@@ -552,10 +397,9 @@
 
     new-array v1, v1, [Lmiuix/animation/IAnimTarget;
 
-    const/4 v2, 0x0
-
     aput-object v0, v1, v2
 
+    .line 4
     invoke-static {v1}, Lmiuix/animation/Folme;->clean([Ljava/lang/Object;)V
 
     goto :goto_0
@@ -567,12 +411,14 @@
 .method private static clearTargetMessage(I)V
     .locals 1
 
+    .line 1
     invoke-static {}, Lmiuix/animation/Folme;->getMainHandler()Landroid/os/Handler;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0, p0}, Landroid/os/Handler;->removeMessages(I)V
 
     :cond_0
@@ -580,8 +426,9 @@
 .end method
 
 .method private static clearTargets()V
-    .locals 4
+    .locals 6
 
+    .line 1
     sget-object v0, Lmiuix/animation/Folme;->sImplMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->keySet()Ljava/util/Set;
@@ -598,7 +445,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -606,59 +453,78 @@
 
     check-cast v1, Lmiuix/animation/IAnimTarget;
 
-    invoke-virtual {v1}, Lmiuix/animation/IAnimTarget;->canClear()Z
+    .line 2
+    invoke-virtual {v1}, Lmiuix/animation/IAnimTarget;->isValid()Z
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    if-eqz v2, :cond_1
+
+    const-wide/16 v4, 0x1
+
+    invoke-virtual {v1, v4, v5}, Lmiuix/animation/IAnimTarget;->hasFlags(J)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
+    iget-object v2, v1, Lmiuix/animation/IAnimTarget;->animManager:Lmiuix/animation/internal/AnimManager;
+
+    new-array v4, v3, [Lmiuix/animation/property/FloatProperty;
+
+    invoke-virtual {v2, v4}, Lmiuix/animation/internal/AnimManager;->isAnimRunning([Lmiuix/animation/property/FloatProperty;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    iget-object v2, v1, Lmiuix/animation/IAnimTarget;->animManager:Lmiuix/animation/internal/AnimManager;
+
+    .line 3
+    invoke-virtual {v2}, Lmiuix/animation/internal/AnimManager;->isAnimSetup()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    invoke-virtual {v1}, Lmiuix/animation/IAnimTarget;->isValidFlag()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    :cond_1
     const/4 v2, 0x1
 
     new-array v2, v2, [Lmiuix/animation/IAnimTarget;
 
-    const/4 v3, 0x0
-
     aput-object v1, v2, v3
 
+    .line 4
     invoke-static {v2}, Lmiuix/animation/Folme;->clean([Ljava/lang/Object;)V
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     return-void
 .end method
 
-.method private static createUiHandler(Landroid/os/Looper;)Landroid/os/Handler;
+.method private static createMainHandler(Landroid/os/Looper;)V
     .locals 1
-    .param p0    # Landroid/os/Looper;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 
-    new-instance v0, Lmiuix/animation/Folme$5;
+    if-nez p0, :cond_0
 
-    invoke-direct {v0, p0}, Lmiuix/animation/Folme$5;-><init>(Landroid/os/Looper;)V
+    return-void
 
-    return-object v0
-.end method
+    .line 1
+    :cond_0
+    new-instance v0, Lmiuix/animation/Folme$2;
 
-.method private static doAwake(Ljava/lang/Object;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(TT;)V"
-        }
-    .end annotation
+    invoke-direct {v0, p0}, Lmiuix/animation/Folme$2;-><init>(Landroid/os/Looper;)V
 
-    const/4 v0, 0x0
-
-    invoke-static {p0, v0}, Lmiuix/animation/Folme;->getTarget(Ljava/lang/Object;Lmiuix/animation/ITargetCreator;)Lmiuix/animation/IAnimTarget;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lmiuix/animation/Folme;->awakeAnimTarget(Lmiuix/animation/IAnimTarget;)V
+    sput-object v0, Lmiuix/animation/Folme;->sMainHandler:Landroid/os/Handler;
 
     return-void
 .end method
@@ -675,42 +541,15 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {p0, v0}, Lmiuix/animation/Folme;->getTarget(Ljava/lang/Object;Lmiuix/animation/ITargetCreator;)Lmiuix/animation/IAnimTarget;
 
     move-result-object p0
 
+    .line 2
     invoke-static {p0}, Lmiuix/animation/Folme;->cleanAnimTarget(Lmiuix/animation/IAnimTarget;)V
 
     return-void
-.end method
-
-.method private static doSleep(Ljava/lang/Object;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(TT;)V"
-        }
-    .end annotation
-
-    const/4 v0, 0x0
-
-    invoke-static {p0, v0}, Lmiuix/animation/Folme;->getTarget(Ljava/lang/Object;Lmiuix/animation/ITargetCreator;)Lmiuix/animation/IAnimTarget;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lmiuix/animation/Folme;->sleepAnimTarget(Lmiuix/animation/IAnimTarget;)V
-
-    return-void
-.end method
-
-.method public static enableSleep()Z
-    .locals 1
-
-    sget-boolean v0, Lmiuix/animation/Folme;->sEnableSleep:Z
-
-    return v0
 .end method
 
 .method public static varargs end([Ljava/lang/Object;)V
@@ -723,6 +562,7 @@
         }
     .end annotation
 
+    .line 1
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -734,6 +574,7 @@
 
     const/4 v3, 0x0
 
+    .line 2
     invoke-static {v2, v3}, Lmiuix/animation/Folme;->getTarget(Ljava/lang/Object;Lmiuix/animation/ITargetCreator;)Lmiuix/animation/IAnimTarget;
 
     move-result-object v2
@@ -742,6 +583,7 @@
 
     goto :goto_1
 
+    .line 3
     :cond_0
     sget-object v3, Lmiuix/animation/Folme;->sImplMap:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -753,6 +595,7 @@
 
     if-eqz v2, :cond_1
 
+    .line 4
     invoke-virtual {v2}, Lmiuix/animation/Folme$FolmeImpl;->end()V
 
     :cond_1
@@ -772,16 +615,18 @@
 
     const/4 v1, 0x0
 
-    move v2, v0
+    move-object v3, v0
 
-    move-object v3, v1
+    move v2, v1
 
+    .line 1
     :goto_0
     array-length v4, p0
 
-    if-ge v0, v4, :cond_2
+    if-ge v1, v4, :cond_2
 
-    aget-object v4, p0, v0
+    .line 2
+    aget-object v4, p0, v1
 
     sget-object v5, Lmiuix/animation/ViewTarget;->sCreator:Lmiuix/animation/ITargetCreator;
 
@@ -789,11 +634,14 @@
 
     move-result-object v4
 
-    aput-object v4, p1, v0
+    aput-object v4, p1, v1
 
-    sget-object v5, Lmiuix/animation/Folme;->sImplMap:Ljava/util/concurrent/ConcurrentHashMap;
+    .line 3
+    sget-object v4, Lmiuix/animation/Folme;->sImplMap:Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-virtual {v5, v4}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    aget-object v5, p1, v1
+
+    invoke-virtual {v4, v5}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -812,7 +660,7 @@
 
     :cond_1
     :goto_1
-    add-int/lit8 v0, v0, 0x1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
@@ -822,72 +670,39 @@
     goto :goto_2
 
     :cond_3
-    move-object v1, v3
+    move-object v0, v3
 
     :goto_2
-    return-object v1
+    return-object v0
 .end method
 
 .method public static getDefaultThresholdVelocity()F
     .locals 1
 
+    .line 1
     sget v0, Lmiuix/animation/Folme;->DEFAULT_THRESHOLD_VELOCITY:F
 
     return v0
 .end method
 
-.method public static getHandler()Landroid/os/Handler;
-    .locals 3
-
-    sget-object v0, Lmiuix/animation/Folme;->sUiHandlerMap:Ljava/util/Map;
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Thread;->getId()J
-
-    move-result-wide v1
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/os/Handler;
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Lmiuix/animation/Folme;->getMainHandler()Landroid/os/Handler;
-
-    move-result-object v0
-
-    :cond_0
-    return-object v0
-.end method
-
 .method public static getLooper()Landroid/os/Looper;
     .locals 1
 
-    sget-object v0, Lmiuix/animation/Folme;->sMainUiLooper:Landroid/os/Looper;
+    .line 1
+    sget-object v0, Lmiuix/animation/Folme;->sRunLooper:Landroid/os/Looper;
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
 
-    sput-object v0, Lmiuix/animation/Folme;->sMainUiLooper:Landroid/os/Looper;
+    sput-object v0, Lmiuix/animation/Folme;->sRunLooper:Landroid/os/Looper;
 
-    sget-object v0, Lmiuix/animation/Folme;->sMainUiLooper:Landroid/os/Looper;
-
-    invoke-static {v0}, Lmiuix/animation/Folme;->registerUiLooper(Landroid/os/Looper;)V
-
+    .line 3
     :cond_0
-    sget-object v0, Lmiuix/animation/Folme;->sMainUiLooper:Landroid/os/Looper;
+    sget-object v0, Lmiuix/animation/Folme;->sRunLooper:Landroid/os/Looper;
 
     return-object v0
 .end method
@@ -897,6 +712,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     sget-object v0, Lmiuix/animation/Folme;->sMainHandler:Landroid/os/Handler;
 
     return-object v0
@@ -919,6 +735,7 @@
 .method private static getPredict(FFF)F
     .locals 0
 
+    .line 1
     invoke-static {p0, p1}, Lmiuix/animation/Folme;->getPredict(FF)F
 
     move-result p0
@@ -982,12 +799,14 @@
 
     if-eqz p2, :cond_0
 
+    .line 1
     array-length v0, p2
 
     if-lez v0, :cond_0
 
     const/4 v0, 0x0
 
+    .line 2
     aget p2, p2, v0
 
     invoke-static {p0, p1, p2}, Lmiuix/animation/Folme;->getPredict(FFF)F
@@ -996,6 +815,7 @@
 
     return p0
 
+    .line 3
     :cond_0
     invoke-static {p0, p1}, Lmiuix/animation/Folme;->getPredict(FF)F
 
@@ -1021,6 +841,7 @@
 
     return p0
 
+    .line 1
     :cond_0
     invoke-static {p2}, Ljava/lang/Math;->signum(F)F
 
@@ -1038,10 +859,12 @@
 
     if-eqz p3, :cond_1
 
+    .line 2
     array-length v0, p3
 
     if-lez v0, :cond_1
 
+    .line 3
     invoke-static {p2}, Ljava/lang/Math;->signum(F)F
 
     move-result p0
@@ -1182,6 +1005,7 @@
 .method public static getTargetById(I)Lmiuix/animation/IAnimTarget;
     .locals 3
 
+    .line 1
     sget-object v0, Lmiuix/animation/Folme;->sImplMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->keySet()Ljava/util/Set;
@@ -1205,6 +1029,7 @@
 
     check-cast v1, Lmiuix/animation/IAnimTarget;
 
+    .line 2
     iget v2, v1, Lmiuix/animation/IAnimTarget;->id:I
 
     if-ne v2, p0, :cond_0
@@ -1218,7 +1043,7 @@
 .end method
 
 .method public static getTargets()Ljava/util/Collection;
-    .locals 6
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -1229,7 +1054,7 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Lmiuix/animation/utils/LogUtils;->isLogMainEnabled()Z
+    invoke-static {}, Lmiuix/animation/utils/LogUtils;->isLogEnabled()Z
 
     move-result v0
 
@@ -1281,7 +1106,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "current sImplMap total:"
+    const-string v3, "current sImplMap total : "
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1293,43 +1118,21 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
+    const-string v3, "  , target invalid count :  "
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    const/4 v3, 0x1
+    new-array v1, v1, [Ljava/lang/Object;
 
-    new-array v3, v3, [Ljava/lang/Object;
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "invalid count:"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    aput-object v2, v3, v1
-
-    invoke-static {v0, v3}, Lmiuix/animation/utils/LogUtils;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lmiuix/animation/utils/LogUtils;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 5
-    invoke-static {}, Lmiuix/animation/utils/LogUtils;->isLogMoreEnable()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 6
-    invoke-static {}, Lmiuix/animation/Folme;->printAllTargets()V
-
-    .line 7
     :cond_2
     sget-object v0, Lmiuix/animation/Folme;->sImplMap:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -1341,7 +1144,7 @@
 .end method
 
 .method public static getTargets(Ljava/util/Collection;)V
-    .locals 4
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1351,7 +1154,7 @@
         }
     .end annotation
 
-    .line 8
+    .line 6
     sget-object v0, Lmiuix/animation/Folme;->sImplMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->keySet()Ljava/util/Set;
@@ -1375,30 +1178,36 @@
 
     check-cast v1, Lmiuix/animation/IAnimTarget;
 
-    .line 9
+    .line 7
     invoke-virtual {v1}, Lmiuix/animation/IAnimTarget;->isValid()Z
 
     move-result v2
 
+    const/4 v3, 0x0
+
     if-eqz v2, :cond_1
 
-    const-wide/16 v2, 0x1
+    const-wide/16 v4, 0x1
 
-    invoke-virtual {v1, v2, v3}, Lmiuix/animation/IAnimTarget;->hasFlags(J)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v1}, Lmiuix/animation/IAnimTarget;->isIdle()Z
+    invoke-virtual {v1, v4, v5}, Lmiuix/animation/IAnimTarget;->hasFlags(J)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
+
+    iget-object v2, v1, Lmiuix/animation/IAnimTarget;->animManager:Lmiuix/animation/internal/AnimManager;
+
+    new-array v4, v3, [Lmiuix/animation/property/FloatProperty;
+
+    invoke-virtual {v2, v4}, Lmiuix/animation/internal/AnimManager;->isAnimRunning([Lmiuix/animation/property/FloatProperty;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
 
     goto :goto_1
 
-    .line 10
+    .line 8
     :cond_0
     invoke-interface {p0, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
@@ -1410,11 +1219,9 @@
 
     new-array v2, v2, [Lmiuix/animation/IAnimTarget;
 
-    const/4 v3, 0x0
-
     aput-object v1, v2, v3
 
-    .line 11
+    .line 9
     invoke-static {v2}, Lmiuix/animation/Folme;->clean([Ljava/lang/Object;)V
 
     goto :goto_0
@@ -1426,6 +1233,7 @@
 .method public static getTimeRatio()F
     .locals 1
 
+    .line 1
     sget-object v0, Lmiuix/animation/Folme;->sTimeRatio:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -1441,42 +1249,6 @@
     return v0
 .end method
 
-.method public static declared-synchronized getUiLooperByTid(J)Landroid/os/Looper;
-    .locals 2
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
-
-    const-class v0, Lmiuix/animation/Folme;
-
-    monitor-enter v0
-
-    :try_start_0
-    sget-object v1, Lmiuix/animation/Folme;->sUiLooperMap:Ljava/util/Map;
-
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p0
-
-    invoke-interface {v1, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/os/Looper;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return-object p0
-
-    :catchall_0
-    move-exception p0
-
-    monitor-exit v0
-
-    throw p0
-.end method
-
 .method public static getValueTarget(Ljava/lang/Object;)Lmiuix/animation/ValueTarget;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
@@ -1488,6 +1260,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lmiuix/animation/ValueTarget;->sCreator:Lmiuix/animation/ITargetCreator;
 
     invoke-static {p0, v0}, Lmiuix/animation/Folme;->getTarget(Ljava/lang/Object;Lmiuix/animation/ITargetCreator;)Lmiuix/animation/IAnimTarget;
@@ -1502,7 +1275,8 @@
 .method public static isInDraggingState(Landroid/view/View;)Z
     .locals 1
 
-    sget v0, Laq/b$b;->miuix_animation_tag_is_dragging:I
+    .line 1
+    sget v0, Lk/i/b$b;->miuix_animation_tag_is_dragging:I
 
     invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
@@ -1524,12 +1298,14 @@
 .method public static onListViewTouchEvent(Landroid/widget/AbsListView;Landroid/view/MotionEvent;)V
     .locals 1
 
+    .line 1
     invoke-static {p0}, Lmiuix/animation/controller/FolmeTouch;->getListViewTouchListener(Landroid/widget/AbsListView;)Lmiuix/animation/controller/ListViewTouchListener;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0, p0, p1}, Lmiuix/animation/controller/ListViewTouchListener;->onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
 
     :cond_0
@@ -1560,6 +1336,7 @@
 .method private static performTargetCleanForTooMuchInvalid()V
     .locals 4
 
+    .line 1
     sget-object v0, Lmiuix/animation/Folme;->sImplMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->size()I
@@ -1584,9 +1361,10 @@
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lmiuix/animation/Folme$6;
+    .line 2
+    new-instance v0, Lmiuix/animation/Folme$3;
 
-    invoke-direct {v0}, Lmiuix/animation/Folme$6;-><init>()V
+    invoke-direct {v0}, Lmiuix/animation/Folme$3;-><init>()V
 
     invoke-static {v0}, Lmiuix/animation/internal/ThreadPoolUtil;->post(Ljava/lang/Runnable;)V
 
@@ -1608,236 +1386,41 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {p0, v0}, Lmiuix/animation/Folme;->getTarget(Ljava/lang/Object;Lmiuix/animation/ITargetCreator;)Lmiuix/animation/IAnimTarget;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Lmiuix/animation/IAnimTarget;->post(Ljava/lang/Runnable;)V
 
     :cond_0
     return-void
 .end method
 
-.method public static declared-synchronized printAllTargets()V
-    .locals 7
-
-    const-class v0, Lmiuix/animation/Folme;
-
-    monitor-enter v0
-
-    :try_start_0
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    sget-object v2, Lmiuix/animation/Folme;->sImplMap:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v2}, Ljava/util/concurrent/ConcurrentHashMap;->isEmpty()Z
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    const-string v3, "Folme targets:\n"
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/util/concurrent/ConcurrentHashMap;->keySet()Ljava/util/Set;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lmiuix/animation/IAnimTarget;
-
-    const-string v4, "|-- %s\n"
-
-    const/4 v5, 0x1
-
-    new-array v5, v5, [Ljava/lang/Object;
-
-    const/4 v6, 0x0
-
-    aput-object v3, v5, v6
-
-    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    goto :goto_0
-
-    :cond_0
-    const-string v2, "Folme has no target now."
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_1
-    const-string v2, "miuix_anim"
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-
-    throw v1
-.end method
-
-.method public static declared-synchronized registerUiLooper(Landroid/os/Looper;)V
-    .locals 5
-    .param p0    # Landroid/os/Looper;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    const-class v0, Lmiuix/animation/Folme;
-
-    monitor-enter v0
-
-    :try_start_0
-    sget-object v1, Lmiuix/animation/Folme;->sUiLooperMap:Ljava/util/Map;
-
-    invoke-virtual {p0}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/Thread;->getId()J
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    invoke-interface {v1, v2, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-static {p0}, Lmiuix/animation/Folme;->createUiHandler(Landroid/os/Looper;)Landroid/os/Handler;
-
-    move-result-object v1
-
-    sget-object v2, Lmiuix/animation/Folme;->sUiHandlerMap:Ljava/util/Map;
-
-    invoke-virtual {p0}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/Thread;->getId()J
-
-    move-result-wide v3
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-interface {v2, v3, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v2, Lmiuix/animation/Folme;->sMainUiLooper:Landroid/os/Looper;
-
-    if-ne p0, v2, :cond_0
-
-    sput-object v1, Lmiuix/animation/Folme;->sMainHandler:Landroid/os/Handler;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :cond_0
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    monitor-exit v0
-
-    throw p0
-.end method
-
 .method private static sendToTargetMessage(Z)V
-    .locals 5
+    .locals 4
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-static {v0}, Lmiuix/animation/Folme;->clearTargetMessage(I)V
 
-    if-eqz p0, :cond_2
+    if-eqz p0, :cond_0
 
-    invoke-static {}, Lmiuix/animation/utils/LogUtils;->isLogMainEnabled()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    sget-object v2, Lmiuix/animation/Folme;->sImplMap:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v2}, Ljava/util/concurrent/ConcurrentHashMap;->isEmpty()Z
-
-    move-result v3
-
-    const/4 v4, 0x0
-
-    if-nez v3, :cond_0
-
-    const/4 v3, 0x2
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p0
-
-    aput-object p0, v3, v4
-
-    invoke-virtual {v2}, Ljava/util/concurrent/ConcurrentHashMap;->size()I
+    .line 2
+    invoke-static {}, Lmiuix/animation/utils/LogUtils;->isLogEnabled()Z
 
     move-result p0
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    if-eqz p0, :cond_0
 
-    move-result-object p0
+    .line 3
+    sget-object p0, Lmiuix/animation/Folme;->sImplMap:Ljava/util/concurrent/ConcurrentHashMap;
 
-    aput-object p0, v3, v0
-
-    const-string p0, "Folme.sendToTargetMessage fromAuto=%s count=%d\n"
-
-    invoke-static {p0, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/util/concurrent/ConcurrentHashMap;->keySet()Ljava/util/Set;
+    invoke-virtual {p0}, Ljava/util/concurrent/ConcurrentHashMap;->keySet()Ljava/util/Set;
 
     move-result-object p0
 
@@ -1848,69 +1431,82 @@
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_1
+    if-eqz v1, :cond_0
 
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v1
 
-    check-cast v2, Lmiuix/animation/IAnimTarget;
+    check-cast v1, Lmiuix/animation/IAnimTarget;
 
-    new-array v3, v0, [Ljava/lang/Object;
+    .line 4
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    aput-object v2, v3, v4
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, " |-exist target=%s\n"
+    const-string v3, "exist target:"
 
-    invoke-static {v2, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    invoke-virtual {v1}, Lmiuix/animation/IAnimTarget;->getTargetObject()Ljava/lang/Object;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v3, " , target isValid : "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Lmiuix/animation/IAnimTarget;->isValid()Z
+
+    move-result v1
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-static {v1, v2}, Lmiuix/animation/utils/LogUtils;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
+    .line 5
     :cond_0
-    const-string p0, "Folme.sendToTargetMessage has no target."
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_1
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    new-array v1, v4, [Ljava/lang/Object;
-
-    invoke-static {p0, v1}, Lmiuix/animation/utils/LogUtils;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    :cond_2
     sget-object p0, Lmiuix/animation/Folme;->sImplMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {p0}, Ljava/util/concurrent/ConcurrentHashMap;->size()I
 
     move-result p0
 
-    if-lez p0, :cond_3
+    if-lez p0, :cond_1
 
+    .line 6
     invoke-static {}, Lmiuix/animation/Folme;->getMainHandler()Landroid/os/Handler;
 
     move-result-object p0
 
-    if-eqz p0, :cond_4
+    if-eqz p0, :cond_2
 
     const-wide/16 v1, 0x4e20
 
+    .line 7
     invoke-virtual {p0, v0, v1, v2}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
     goto :goto_1
 
-    :cond_3
+    .line 8
+    :cond_1
     invoke-static {v0}, Lmiuix/animation/Folme;->clearTargetMessage(I)V
 
-    :cond_4
+    :cond_2
     :goto_1
     return-void
 .end method
@@ -1918,6 +1514,7 @@
 .method public static setAnimPlayRatio(F)V
     .locals 1
 
+    .line 1
     sget-object v0, Lmiuix/animation/Folme;->sTimeRatio:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -1934,7 +1531,8 @@
 
     if-eqz p1, :cond_0
 
-    sget p1, Laq/b$b;->miuix_animation_tag_is_dragging:I
+    .line 1
+    sget p1, Lk/i/b$b;->miuix_animation_tag_is_dragging:I
 
     sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
@@ -1942,8 +1540,9 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
-    sget p1, Laq/b$b;->miuix_animation_tag_is_dragging:I
+    sget p1, Lk/i/b$b;->miuix_animation_tag_is_dragging:I
 
     const/4 v0, 0x0
 
@@ -1953,40 +1552,26 @@
     return-void
 .end method
 
-.method public static setEnableSleep(Z)V
-    .locals 0
-
-    sput-boolean p0, Lmiuix/animation/Folme;->sEnableSleep:Z
-
-    return-void
-.end method
-
-.method public static setLogLevel(I)V
-    .locals 0
-
-    invoke-static {p0}, Lmiuix/animation/utils/LogUtils;->setLogLevel(I)V
-
-    return-void
-.end method
-
 .method public static setLooper(Landroid/os/Looper;)V
-    .locals 1
+    .locals 0
 
-    sget-object v0, Lmiuix/animation/Folme;->sMainUiLooper:Landroid/os/Looper;
+    .line 1
+    sput-object p0, Lmiuix/animation/Folme;->sRunLooper:Landroid/os/Looper;
 
-    if-eqz v0, :cond_0
+    .line 2
+    invoke-static {p0}, Lmiuix/animation/Folme;->createMainHandler(Landroid/os/Looper;)V
 
-    sget-object v0, Lmiuix/animation/Folme;->sMainUiLooper:Landroid/os/Looper;
+    .line 3
+    sget-object p0, Lmiuix/animation/Folme;->sRunLooper:Landroid/os/Looper;
 
-    invoke-static {v0}, Lmiuix/animation/Folme;->unregisterUiLooper(Landroid/os/Looper;)V
+    invoke-static {p0}, Lmiuix/animation/utils/ObjectPool;->createMainHandler(Landroid/os/Looper;)V
 
-    :cond_0
-    sput-object p0, Lmiuix/animation/Folme;->sMainUiLooper:Landroid/os/Looper;
+    .line 4
+    sget-object p0, Lmiuix/animation/Folme;->sRunLooper:Landroid/os/Looper;
 
-    sget-object p0, Lmiuix/animation/Folme;->sMainUiLooper:Landroid/os/Looper;
+    invoke-static {p0}, Lmiuix/animation/internal/AnimRunner;->createMainHandler(Landroid/os/Looper;)V
 
-    invoke-static {p0}, Lmiuix/animation/Folme;->registerUiLooper(Landroid/os/Looper;)V
-
+    .line 5
     invoke-static {}, Lmiuix/animation/physics/AnimationHandler;->getInstance()Lmiuix/animation/physics/AnimationHandler;
 
     move-result-object p0
@@ -1996,364 +1581,59 @@
     return-void
 .end method
 
-.method public static setThreadPriority(I)V
-    .locals 6
-
-    const-string v0, " failed: "
-
-    const-string v1, "setThreadPriority "
-
-    const-string v2, "miuix_anim"
-
-    :try_start_0
-    sget-object v3, Lmiuix/animation/Folme;->sUiLooperMap:Ljava/util/Map;
-
-    invoke-interface {v3}, Ljava/util/Map;->values()Ljava/util/Collection;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object v3
-
-    :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/os/Looper;
-
-    invoke-virtual {v4}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/Thread;->getId()J
-
-    move-result-wide v4
-
-    long-to-int v4, v4
-
-    invoke-static {v4, p0}, Landroid/os/Process;->setThreadPriority(II)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {p0}, Lmiuix/animation/internal/ThreadPoolUtil;->setThreadPriority(I)V
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v4, " success"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v3
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v2, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_1
-
-    :catch_1
-    move-exception v3
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v2, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    :goto_1
-    return-void
-.end method
-
-.method public static varargs sleep([Ljava/lang/Object;)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">([TT;)V"
-        }
-    .end annotation
-
-    .annotation runtime Ljava/lang/SafeVarargs;
-    .end annotation
-
-    invoke-static {p0}, Lmiuix/animation/utils/CommonUtils;->isArrayEmpty([Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    array-length v0, p0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_0
-
-    aget-object v2, p0, v1
-
-    invoke-static {v2}, Lmiuix/animation/Folme;->doSleep(Ljava/lang/Object;)V
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method private static sleepAnimTarget(Lmiuix/animation/IAnimTarget;)V
-    .locals 2
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Lmiuix/animation/IAnimTarget;->isSleep()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    sget-object v0, Lmiuix/animation/Folme;->sImplMap:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lmiuix/animation/Folme$FolmeImpl;
-
-    if-eqz v0, :cond_0
-
-    new-instance v1, Lmiuix/animation/Folme$2;
-
-    invoke-direct {v1, p0, v0}, Lmiuix/animation/Folme$2;-><init>(Lmiuix/animation/IAnimTarget;Lmiuix/animation/Folme$FolmeImpl;)V
-
-    invoke-virtual {p0, v1}, Lmiuix/animation/IAnimTarget;->post(Ljava/lang/Runnable;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public static declared-synchronized unregisterUiLooper(Landroid/os/Looper;)V
-    .locals 4
-    .param p0    # Landroid/os/Looper;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    const-class v0, Lmiuix/animation/Folme;
-
-    monitor-enter v0
-
-    :try_start_0
-    sget-object v1, Lmiuix/animation/Folme;->sUiLooperMap:Ljava/util/Map;
-
-    invoke-virtual {p0}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/Thread;->getId()J
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v1, Lmiuix/animation/Folme;->sUiHandlerMap:Ljava/util/Map;
-
-    invoke-virtual {p0}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/Thread;->getId()J
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p0
-
-    invoke-interface {v1, p0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    monitor-exit v0
-
-    throw p0
-.end method
-
 .method public static useAt(Lmiuix/animation/IAnimTarget;)Lmiuix/animation/IFolme;
-    .locals 5
+    .locals 4
 
     .line 1
-    invoke-static {}, Lmiuix/animation/utils/LogUtils;->isLogMoreEnable()Z
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x2
-
-    new-array v0, v0, [Ljava/lang/Object;
-
-    .line 2
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "target="
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    aput-object v3, v0, v2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "trace:"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v4, 0x6
-
-    .line 3
-    invoke-static {v4}, Lmiuix/animation/utils/LogUtils;->getStackTrace(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    aput-object v3, v0, v1
-
-    const-string v3, "Folme.useAt"
-
-    .line 4
-    invoke-static {v3, v0}, Lmiuix/animation/utils/LogUtils;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 5
-    :cond_0
     sget-object v0, Lmiuix/animation/Folme;->sImplMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0, p0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object v1
 
-    check-cast v3, Lmiuix/animation/Folme$FolmeImpl;
+    check-cast v1, Lmiuix/animation/Folme$FolmeImpl;
 
-    if-nez v3, :cond_1
+    if-nez v1, :cond_0
 
-    .line 6
-    new-instance v3, Lmiuix/animation/Folme$FolmeImpl;
+    .line 2
+    new-instance v1, Lmiuix/animation/Folme$FolmeImpl;
 
-    new-array v1, v1, [Lmiuix/animation/IAnimTarget;
+    const/4 v2, 0x1
 
-    aput-object p0, v1, v2
+    new-array v2, v2, [Lmiuix/animation/IAnimTarget;
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    invoke-direct {v3, v1, v2}, Lmiuix/animation/Folme$FolmeImpl;-><init>([Lmiuix/animation/IAnimTarget;Lmiuix/animation/Folme$1;)V
+    aput-object p0, v2, v3
 
-    .line 7
-    invoke-virtual {v0, p0, v3}, Ljava/util/concurrent/ConcurrentHashMap;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v3, 0x0
+
+    invoke-direct {v1, v2, v3}, Lmiuix/animation/Folme$FolmeImpl;-><init>([Lmiuix/animation/IAnimTarget;Lmiuix/animation/Folme$1;)V
+
+    .line 3
+    invoke-virtual {v0, p0, v1}, Ljava/util/concurrent/ConcurrentHashMap;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Lmiuix/animation/Folme$FolmeImpl;
 
-    if-eqz p0, :cond_1
+    if-eqz p0, :cond_0
 
-    move-object v3, p0
+    move-object v1, p0
 
-    :cond_1
-    return-object v3
+    :cond_0
+    return-object v1
 .end method
 
 .method public static varargs useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
     .locals 5
 
-    .line 8
+    .line 4
     array-length v0, p0
 
     if-eqz v0, :cond_3
 
-    .line 9
+    .line 5
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -2362,7 +1642,7 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 10
+    .line 6
     aget-object p0, p0, v1
 
     sget-object v0, Lmiuix/animation/ViewTarget;->sCreator:Lmiuix/animation/ITargetCreator;
@@ -2377,20 +1657,20 @@
 
     return-object p0
 
-    .line 11
+    .line 7
     :cond_0
     array-length v0, p0
 
     new-array v2, v0, [Lmiuix/animation/IAnimTarget;
 
-    .line 12
+    .line 8
     invoke-static {p0, v2}, Lmiuix/animation/Folme;->fillTargetArrayAndGetImpl([Landroid/view/View;[Lmiuix/animation/IAnimTarget;)Lmiuix/animation/Folme$FolmeImpl;
 
     move-result-object p0
 
     if-nez p0, :cond_2
 
-    .line 13
+    .line 9
     new-instance p0, Lmiuix/animation/Folme$FolmeImpl;
 
     const/4 v3, 0x0
@@ -2400,10 +1680,10 @@
     :goto_0
     if-ge v1, v0, :cond_2
 
-    .line 14
+    .line 10
     aget-object v3, v2, v1
 
-    .line 15
+    .line 11
     sget-object v4, Lmiuix/animation/Folme;->sImplMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v4, v3, p0}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -2414,7 +1694,7 @@
 
     if-eqz v3, :cond_1
 
-    .line 16
+    .line 12
     invoke-virtual {v3}, Lmiuix/animation/Folme$FolmeImpl;->clean()V
 
     :cond_1
@@ -2425,11 +1705,11 @@
     :cond_2
     return-object p0
 
-    .line 17
+    .line 13
     :cond_3
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const-string v0, "useAt can not be applied to empty views array"
+    const-string/jumbo v0, "useAt can not be applied to empty views array"
 
     invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
@@ -2439,6 +1719,7 @@
 .method public static useSystemAnimatorDurationScale(Landroid/content/Context;)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -2451,6 +1732,7 @@
 
     move-result p0
 
+    .line 2
     sget-object v0, Lmiuix/animation/Folme;->sTimeRatio:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -2463,155 +1745,18 @@
 .end method
 
 .method public static varargs useValue([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
-    .locals 6
+    .locals 2
+
+    .line 1
+    array-length v0, p0
+
+    if-lez v0, :cond_0
 
     const/4 v0, 0x0
 
-    const-string v1, "miuix_anim"
+    .line 2
+    aget-object p0, p0, v0
 
-    if-nez p0, :cond_0
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "error!! You can\'t useValue for a null targetObj!! the stack trace:"
-
-    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    new-instance v2, Ljava/lang/Throwable;
-
-    invoke-direct {v2}, Ljava/lang/Throwable;-><init>()V
-
-    invoke-static {v2}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-object v0
-
-    :cond_0
-    array-length v2, p0
-
-    const/4 v3, 0x0
-
-    if-lez v2, :cond_3
-
-    invoke-static {}, Lmiuix/animation/utils/LogUtils;->isLogMoreEnable()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    const/4 v2, 0x3
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "targetObj.length="
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    array-length v5, p0
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "targetObj[0]="
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    aget-object v5, p0, v3
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    const/4 v5, 0x1
-
-    aput-object v4, v2, v5
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "trace:"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v5, 0x5
-
-    invoke-static {v5}, Lmiuix/animation/utils/LogUtils;->getStackTrace(I)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    const/4 v5, 0x2
-
-    aput-object v4, v2, v5
-
-    const-string v4, "Folme.useValue"
-
-    invoke-static {v4, v2}, Lmiuix/animation/utils/LogUtils;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    :cond_1
-    aget-object p0, p0, v3
-
-    if-nez p0, :cond_2
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "error!! targetObj[0] is null, You can\'t useValue for a null targetObj!! the stack trace:"
-
-    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    new-instance v2, Ljava/lang/Throwable;
-
-    invoke-direct {v2}, Ljava/lang/Throwable;-><init>()V
-
-    invoke-static {v2}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-object v0
-
-    :cond_2
     sget-object v0, Lmiuix/animation/ValueTarget;->sCreator:Lmiuix/animation/ITargetCreator;
 
     invoke-static {p0, v0}, Lmiuix/animation/Folme;->getTarget(Ljava/lang/Object;Lmiuix/animation/ITargetCreator;)Lmiuix/animation/IAnimTarget;
@@ -2624,32 +1769,23 @@
 
     goto :goto_0
 
-    :cond_3
-    invoke-static {}, Lmiuix/animation/utils/LogUtils;->isLogMainEnabled()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_4
-
-    const-string p0, "Folme.useValue targetObj.length is 0"
-
-    new-array v0, v3, [Ljava/lang/Object;
-
-    invoke-static {p0, v0}, Lmiuix/animation/utils/LogUtils;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    :cond_4
+    .line 3
+    :cond_0
     new-instance p0, Lmiuix/animation/ValueTarget;
 
     invoke-direct {p0}, Lmiuix/animation/ValueTarget;-><init>()V
 
     const-wide/16 v0, 0x1
 
+    .line 4
     invoke-virtual {p0, v0, v1}, Lmiuix/animation/IAnimTarget;->setFlags(J)V
 
+    .line 5
     invoke-static {p0}, Lmiuix/animation/Folme;->useAt(Lmiuix/animation/IAnimTarget;)Lmiuix/animation/IFolme;
 
     move-result-object p0
 
+    .line 6
     :goto_0
     invoke-interface {p0}, Lmiuix/animation/IFolme;->state()Lmiuix/animation/IStateStyle;
 
@@ -2661,6 +1797,7 @@
 .method public static useVarFontAt(Landroid/widget/TextView;II)Lmiuix/animation/IVarFontStyle;
     .locals 1
 
+    .line 1
     new-instance v0, Lmiuix/animation/controller/FolmeFont;
 
     invoke-direct {v0}, Lmiuix/animation/controller/FolmeFont;-><init>()V

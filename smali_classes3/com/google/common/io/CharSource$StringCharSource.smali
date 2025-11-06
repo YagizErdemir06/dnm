@@ -1,4 +1,4 @@
-.class Lcom/google/common/io/CharSource$StringCharSource;
+.class public Lcom/google/common/io/CharSource$StringCharSource;
 .super Lcom/google/common/io/CharSource$CharSequenceCharSource;
 .source "SourceFile"
 
@@ -18,6 +18,7 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/io/CharSource$CharSequenceCharSource;-><init>(Ljava/lang/CharSequence;)V
 
     return-void
@@ -127,6 +128,7 @@
 .method public openStream()Ljava/io/Reader;
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/io/StringReader;
 
     iget-object p0, p0, Lcom/google/common/io/CharSource$CharSequenceCharSource;->seq:Ljava/lang/CharSequence;

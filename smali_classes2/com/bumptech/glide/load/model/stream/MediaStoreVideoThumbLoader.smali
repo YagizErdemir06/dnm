@@ -32,8 +32,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
@@ -46,6 +48,7 @@
 .method private isRequestingDefaultFrame(Lcom/bumptech/glide/load/Options;)Z
     .locals 2
 
+    .line 1
     sget-object p0, Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder;->TARGET_FRAME:Lcom/bumptech/glide/load/Option;
 
     invoke-virtual {p1, p0}, Lcom/bumptech/glide/load/Options;->get(Lcom/bumptech/glide/load/Option;)Ljava/lang/Object;
@@ -56,6 +59,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
 
     move-result-wide p0

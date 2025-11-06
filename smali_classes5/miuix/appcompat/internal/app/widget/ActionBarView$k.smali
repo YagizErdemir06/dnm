@@ -18,14 +18,15 @@
 
 
 # instance fields
-.field public final synthetic a:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+.field public final synthetic c:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/appcompat/internal/app/widget/ActionBarView;)V
     .locals 0
 
-    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$k;->a:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    .line 1
+    iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$k;->c:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -35,20 +36,20 @@
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$k;->a:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$k;->c:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
-    invoke-static {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->t0(Lmiuix/appcompat/internal/app/widget/ActionBarView;)Lmiuix/appcompat/internal/app/widget/ActionBarView$o;
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView;->da:Landroid/view/Window$Callback;
+
+    invoke-static {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->j0(Lmiuix/appcompat/internal/app/widget/ActionBarView;)Lk/b/e/e/f/m/b;
 
     move-result-object p0
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$o;->b:Lmiuix/appcompat/internal/view/menu/l;
+    const/4 v0, 0x0
 
-    if-eqz p0, :cond_0
+    invoke-interface {p1, v0, p0}, Landroid/view/Window$Callback;->onMenuItemSelected(ILandroid/view/MenuItem;)Z
 
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/view/menu/l;->collapseActionView()Z
-
-    :cond_0
     return-void
 .end method

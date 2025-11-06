@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field protected name:Ljava/lang/String;
+.field public name:Ljava/lang/String;
 
-.field protected text:Ljava/lang/String;
+.field public text:Ljava/lang/String;
 
 
 # direct methods
@@ -51,6 +51,7 @@
 .method public createXPathResult(Lorg/dom4j/Element;)Lorg/dom4j/Node;
     .locals 2
 
+    .line 1
     new-instance v0, Lorg/dom4j/tree/DefaultEntity;
 
     invoke-virtual {p0}, Lorg/dom4j/tree/FlyweightEntity;->getName()Ljava/lang/String;
@@ -69,6 +70,7 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/FlyweightEntity;->name:Ljava/lang/String;
 
     return-object p0
@@ -77,6 +79,7 @@
 .method public getText()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/FlyweightEntity;->text:Ljava/lang/String;
 
     return-object p0
@@ -85,14 +88,17 @@
 .method public setText(Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/tree/FlyweightEntity;->text:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
+    .line 2
     iput-object p1, p0, Lorg/dom4j/tree/FlyweightEntity;->text:Ljava/lang/String;
 
     return-void
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 

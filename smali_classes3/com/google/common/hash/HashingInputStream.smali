@@ -19,6 +19,7 @@
 .method public constructor <init>(Lcom/google/common/hash/HashFunction;Ljava/io/InputStream;)V
     .locals 0
 
+    .line 1
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
@@ -27,6 +28,7 @@
 
     invoke-direct {p0, p2}, Ljava/io/FilterInputStream;-><init>(Ljava/io/InputStream;)V
 
+    .line 2
     invoke-interface {p1}, Lcom/google/common/hash/HashFunction;->newHasher()Lcom/google/common/hash/Hasher;
 
     move-result-object p1
@@ -47,6 +49,7 @@
 .method public hash()Lcom/google/common/hash/HashCode;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/hash/HashingInputStream;->hasher:Lcom/google/common/hash/Hasher;
 
     invoke-interface {p0}, Lcom/google/common/hash/Hasher;->hash()Lcom/google/common/hash/HashCode;
@@ -142,6 +145,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/io/IOException;
 
     const-string v0, "reset not supported"

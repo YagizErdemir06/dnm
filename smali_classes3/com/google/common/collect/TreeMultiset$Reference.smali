@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/TreeMultiset$Reference;
+.class public final Lcom/google/common/collect/TreeMultiset$Reference;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -73,14 +73,17 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/TreeMultiset$Reference;->value:Ljava/lang/Object;
 
     if-ne v0, p1, :cond_0
 
+    .line 2
     iput-object p2, p0, Lcom/google/common/collect/TreeMultiset$Reference;->value:Ljava/lang/Object;
 
     return-void
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/util/ConcurrentModificationException;
 
@@ -94,6 +97,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Lcom/google/common/collect/TreeMultiset$Reference;->value:Ljava/lang/Object;
 
     return-void
@@ -110,6 +114,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/TreeMultiset$Reference;->value:Ljava/lang/Object;
 
     return-object p0

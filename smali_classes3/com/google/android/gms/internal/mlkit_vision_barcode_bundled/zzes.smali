@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzes;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzes;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,6 +26,7 @@
 .method public final hasNext()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzes;->zza:Ljava/util/Iterator;
 
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
@@ -38,6 +39,7 @@
 .method public final bridge synthetic next()Ljava/lang/Object;
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzes;->zza:Ljava/util/Iterator;
 
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -46,6 +48,7 @@
 
     check-cast p0, Ljava/util/Map$Entry;
 
+    .line 2
     invoke-interface {p0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -69,6 +72,7 @@
 .method public final remove()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzes;->zza:Ljava/util/Iterator;
 
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V

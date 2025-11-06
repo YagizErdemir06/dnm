@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/api/zag;
+.class public final Lcom/google/android/gms/common/api/zag;
 .super Lcom/google/android/gms/common/api/internal/BasePendingResult;
 .source "SourceFile"
 
@@ -23,6 +23,7 @@
 .method public constructor <init>(Lcom/google/android/gms/common/api/GoogleApiClient;Lcom/google/android/gms/common/api/Result;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/gms/common/api/internal/BasePendingResult;-><init>(Lcom/google/android/gms/common/api/GoogleApiClient;)V
 
     iput-object p2, p0, Lcom/google/android/gms/common/api/zag;->zae:Lcom/google/android/gms/common/api/Result;

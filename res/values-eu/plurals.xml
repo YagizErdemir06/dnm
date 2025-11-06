@@ -8,8 +8,4 @@
         <item quantity="other">Atzeratu %d segundo</item>
         <item quantity="one">Atzeratu %d segundo</item>
     </plurals>
-    <plurals name="mtrl_badge_content_description">
-        <item quantity="other">%d jakinarazpen berri</item>
-        <item quantity="one">%d jakinarazpen berri</item>
-    </plurals>
 </resources>

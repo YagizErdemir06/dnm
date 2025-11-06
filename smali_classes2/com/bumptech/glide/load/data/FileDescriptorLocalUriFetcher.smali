@@ -17,6 +17,7 @@
 .method public constructor <init>(Landroid/content/ContentResolver;Landroid/net/Uri;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/bumptech/glide/load/data/LocalUriFetcher;-><init>(Landroid/content/ContentResolver;Landroid/net/Uri;)V
 
     return-void
@@ -68,6 +69,7 @@
         }
     .end annotation
 
+    .line 1
     const-class p0, Landroid/os/ParcelFileDescriptor;
 
     return-object p0

@@ -15,27 +15,27 @@
 
 
 # static fields
-.field protected static final TAG:Ljava/lang/String; = "FilterSelectViewCV"
+.field public static final TAG:Ljava/lang/String; = "FilterSelectViewCV"
 
 
 # instance fields
-.field protected mCurIndex:I
+.field public mCurIndex:I
 
-.field protected mFilterSelectedListener:Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV$onFilterChangeListener;
+.field public mFilterSelectedListener:Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV$onFilterChangeListener;
 
-.field protected mFitLayoutWidth:I
+.field public mFitLayoutWidth:I
 
-.field protected mInit:Z
+.field public mInit:Z
 
-.field protected mIsModeChange:Z
+.field public mIsModeChange:Z
 
 .field private mIsOnclick:Z
 
-.field protected mItems:Ljava/util/List;
+.field public mItems:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/android/camera/data/data/c;",
+            "Ld/d/a/l6/e/c;",
             ">;"
         }
     .end annotation
@@ -43,7 +43,7 @@
 
 .field private mScrollState:I
 
-.field protected mSnapHelper:Lcom/android/camera/ui/BasePanelSnapHelper;
+.field public mSnapHelper:Lcom/android/camera/ui/BasePanelSnapHelper;
 
 
 # direct methods
@@ -53,7 +53,16 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
     .end annotation
 
     const/4 v0, 0x0
@@ -76,6 +85,16 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     const/4 v0, -0x1
 
@@ -95,6 +114,18 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr"
+        }
+    .end annotation
 
     .line 3
     invoke-direct {p0, p1, p2, p3}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -114,7 +145,18 @@
 # virtual methods
 .method public fling(II)Z
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "velocityX",
+            "velocityY"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->fling(II)Z
 
     move-result p0
@@ -124,11 +166,21 @@
 
 .method public getItemText(I)Ljava/lang/String;
     .locals 1
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "pos"
+        }
     .end annotation
 
     if-gtz p1, :cond_0
 
+    .line 1
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -155,6 +207,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->mItems:Ljava/util/List;
 
@@ -164,17 +217,19 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/android/camera/data/data/c;
+    check-cast p1, Ld/d/a/l6/e/c;
 
-    iget v0, p1, Lcom/android/camera/data/data/c;->h:I
+    .line 3
+    iget v0, p1, Ld/d/a/l6/e/c;->k:I
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    .line 4
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object p0
 
-    iget p1, p1, Lcom/android/camera/data/data/c;->h:I
+    iget p1, p1, Ld/d/a/l6/e/c;->k:I
 
     invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -182,13 +237,15 @@
 
     return-object p0
 
+    .line 5
     :cond_1
-    iget-object p0, p1, Lcom/android/camera/data/data/c;->l:Ljava/lang/String;
+    iget-object p0, p1, Ld/d/a/l6/e/c;->o:Ljava/lang/String;
 
     if-eqz p0, :cond_2
 
     return-object p0
 
+    .line 6
     :cond_2
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -201,9 +258,19 @@
 
 .method public getSelectedIndex(I)I
     .locals 2
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "defaultIndex"
+        }
+    .end annotation
+
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->mSnapHelper:Lcom/android/camera/ui/BasePanelSnapHelper;
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
@@ -218,25 +285,29 @@
 
     if-nez p0, :cond_0
 
-    const-string p0, "target is null???"
+    new-array p0, v0, [Ljava/lang/Object;
 
-    new-array v0, v0, [Ljava/lang/Object;
+    const-string v0, "FilterSelectViewCV"
 
-    const-string v1, "FilterSelectViewCV"
+    const-string v1, "target is null???"
 
-    invoke-static {v1, p0, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 2
+    invoke-static {v0, v1, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return p1
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object p0
 
+    .line 4
     instance-of p1, p0, Ljava/lang/Integer;
 
     if-eqz p1, :cond_1
 
+    .line 5
     check-cast p0, Ljava/lang/Integer;
 
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
@@ -256,34 +327,53 @@
 .method public getSnapHelper()Lcom/android/camera/ui/BasePanelSnapHelper;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->mSnapHelper:Lcom/android/camera/ui/BasePanelSnapHelper;
 
     return-object p0
 .end method
 
-.method public init(Lcom/android/camera/data/data/b;ILcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV$onFilterChangeListener;)V
+.method public init(Ld/d/a/l6/e/b;ILcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV$onFilterChangeListener;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "componentData",
+            "index",
+            "listener"
+        }
+    .end annotation
 
+    .line 1
     iput-object p3, p0, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->mFilterSelectedListener:Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV$onFilterChangeListener;
 
-    invoke-virtual {p1}, Lcom/android/camera/data/data/b;->getItems()Ljava/util/List;
+    .line 2
+    invoke-virtual {p1}, Ld/d/a/l6/e/b;->getItems()Ljava/util/List;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->mItems:Ljava/util/List;
 
+    .line 3
     iput p2, p0, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->mCurIndex:I
 
     const/4 p1, 0x0
 
+    .line 4
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->mInit:Z
 
-    invoke-virtual {p0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+    .line 5
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object p2
 
     invoke-virtual {p2, p0}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
+    .line 6
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -319,6 +409,16 @@
 
 .method public isSameIndex(II)Z
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "itemIndex",
+            "realIndex"
+        }
+    .end annotation
 
     if-ne p1, p2, :cond_0
 
@@ -336,16 +436,19 @@
 .method public onGlobalLayout()V
     .locals 3
 
-    invoke-virtual {p0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+    .line 1
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
+    .line 2
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->mInit:Z
 
     if-nez v0, :cond_1
 
+    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -370,12 +473,14 @@
 
     invoke-static {v2, v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 4
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     move-result-object v0
 
     check-cast v0, Landroidx/recyclerview/widget/LinearLayoutManager;
 
+    .line 5
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object v1
@@ -386,6 +491,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 6
     invoke-virtual {v1}, Lcom/android/camera2/compat/theme/custom/cv/EffectItemAdapterCV;->getHeaderSize()I
 
     move-result v2
@@ -396,6 +502,7 @@
 
     sub-int/2addr v2, v1
 
+    .line 7
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->mCurIndex:I
 
     invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/LinearLayoutManager;->scrollToPositionWithOffset(II)V
@@ -403,6 +510,7 @@
     :cond_0
     const/4 v0, 0x1
 
+    .line 8
     iput-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->mInit:Z
 
     :cond_1
@@ -411,9 +519,19 @@
 
 .method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "info"
+        }
+    .end annotation
 
-    invoke-super {p0, p1}, Landroid/view/View;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+    .line 1
+    invoke-super {p0, p1}, Landroid/view/ViewGroup;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
+    .line 2
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object v0
@@ -425,61 +543,71 @@
     :cond_0
     const/4 v0, 0x1
 
+    .line 3
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setScrollable(Z)V
 
+    .line 4
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->mCurIndex:I
 
+    .line 5
     sget-object v1, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_SCROLL_BACKWARD:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
 
     invoke-virtual {p1, v1}, Landroid/view/accessibility/AccessibilityNodeInfo;->addAction(Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;)V
 
+    .line 6
     sget-object v1, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_SCROLL_FORWARD:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
 
     invoke-virtual {p1, v1}, Landroid/view/accessibility/AccessibilityNodeInfo;->addAction(Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;)V
 
+    .line 7
     sget-object v1, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_SET_PROGRESS:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
 
     invoke-virtual {p1, v1}, Landroid/view/accessibility/AccessibilityNodeInfo;->addAction(Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;)V
 
+    const/4 v1, 0x0
+
+    const/high16 v2, -0x40800000    # -1.0f
+
+    .line 8
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->getItemCount()I
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->getItemCount()I
 
-    move-result v1
+    move-result v3
 
-    int-to-float v1, v1
+    int-to-float v3, v3
 
     int-to-float v0, v0
 
-    const/4 v2, 0x0
-
-    const/high16 v3, -0x40800000    # -1.0f
-
-    invoke-static {v2, v3, v1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;->obtain(IFFF)Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;
+    .line 9
+    invoke-static {v1, v2, v3, v0}, Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;->obtain(IFFF)Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;
 
     move-result-object v0
 
+    .line 10
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setRangeInfo(Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;)V
 
+    .line 11
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1e
 
     if-lt v0, v1, :cond_1
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    .line 12
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object p0
 
-    const v0, 0x7f1400d4
+    const v0, 0x7f1300d3
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-static {p1, p0}, Lm7/a;->v(Landroid/view/accessibility/AccessibilityNodeInfo;Ljava/lang/CharSequence;)V
+    invoke-static {p1, p0}, Ld/d/a/a7/a/b/a;->v(Landroid/view/accessibility/AccessibilityNodeInfo;Ljava/lang/CharSequence;)V
 
     :cond_1
     return-void
@@ -487,7 +615,16 @@
 
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "e"
+        }
+    .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->mIsOnclick:Z
 
     if-eqz v0, :cond_0
@@ -504,6 +641,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -514,9 +652,19 @@
 
 .method public onScrollStateChanged(I)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "state"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->onScrollStateChanged(I)V
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -539,14 +687,17 @@
 
     invoke-static {v3, v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 3
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->mScrollState:I
 
+    .line 4
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->mScrollState:I
 
     const/4 v2, 0x1
 
     if-nez p1, :cond_0
 
+    .line 5
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->mFilterSelectedListener:Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV$onFilterChangeListener;
 
     if-eqz v3, :cond_0
@@ -558,6 +709,7 @@
     :cond_0
     move v3, v1
 
+    .line 6
     :goto_0
     iget-boolean v4, p0, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->mIsOnclick:Z
 
@@ -567,8 +719,10 @@
 
     if-eqz v3, :cond_2
 
+    .line 7
     iput-boolean v1, p0, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->mIsOnclick:Z
 
+    .line 8
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->mFilterSelectedListener:Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV$onFilterChangeListener;
 
     invoke-interface {v1}, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV$onFilterChangeListener;->getOnClickIndex()I
@@ -583,6 +737,7 @@
 
     if-nez p1, :cond_1
 
+    .line 9
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->mFilterSelectedListener:Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV$onFilterChangeListener;
 
     iget-boolean p0, p0, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->mIsOnclick:Z
@@ -595,6 +750,7 @@
     :cond_2
     if-eqz v3, :cond_3
 
+    .line 10
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->mFilterSelectedListener:Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV$onFilterChangeListener;
 
     invoke-interface {v1}, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV$onFilterChangeListener;->setAccessibleWhenStateIdle()V
@@ -603,6 +759,7 @@
 
     if-nez p1, :cond_3
 
+    .line 11
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->mFilterSelectedListener:Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV$onFilterChangeListener;
 
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->mCurIndex:I
@@ -617,15 +774,28 @@
 
 .method public onScrolled(II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "dx",
+            "dy"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->onScrolled(II)V
 
+    .line 2
     iget-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->mInit:Z
 
     if-nez p1, :cond_0
 
     return-void
 
+    .line 3
     :cond_0
     iget-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->mIsOnclick:Z
 
@@ -633,6 +803,7 @@
 
     return-void
 
+    .line 4
     :cond_1
     iget p1, p0, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->mCurIndex:I
 
@@ -640,6 +811,7 @@
 
     move-result p1
 
+    .line 5
     iget p2, p0, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->mCurIndex:I
 
     invoke-virtual {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->isSameIndex(II)Z
@@ -648,7 +820,8 @@
 
     if-nez p2, :cond_2
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    .line 6
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object p2
 
@@ -656,20 +829,23 @@
 
     move-result-object p2
 
-    invoke-static {p2}, Lqb/e;->s(Landroid/content/Context;)Lqb/e;
+    invoke-static {p2}, Ld/d/f/e;->r(Landroid/content/Context;)Ld/d/f/e;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lqb/e;->l()V
+    invoke-virtual {p2}, Ld/d/f/e;->l()V
 
+    .line 7
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->mCurIndex:I
 
+    .line 8
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->mFilterSelectedListener:Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV$onFilterChangeListener;
 
     if-eqz p0, :cond_2
 
     const/4 p2, 0x0
 
+    .line 9
     invoke-interface {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV$onFilterChangeListener;->onFilterItemChange(IZ)V
 
     :cond_2
@@ -678,18 +854,39 @@
 
 .method public onWindowFocusChanged(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "hasWindowFocus"
+        }
+    .end annotation
 
-    invoke-super {p0, p1}, Landroid/view/View;->onWindowFocusChanged(Z)V
+    .line 1
+    invoke-super {p0, p1}, Landroid/view/ViewGroup;->onWindowFocusChanged(Z)V
 
     return-void
 .end method
 
 .method public performAccessibilityAction(ILandroid/os/Bundle;)Z
     .locals 3
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
-    invoke-virtual {p0}, Landroid/view/View;->isEnabled()Z
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "action",
+            "arguments"
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->isEnabled()Z
 
     move-result v0
 
@@ -710,12 +907,14 @@
 
     if-eq p1, v0, :cond_1
 
-    invoke-super {p0, p1, p2}, Landroid/view/View;->performAccessibilityAction(ILandroid/os/Bundle;)Z
+    .line 2
+    invoke-super {p0, p1, p2}, Landroid/view/ViewGroup;->performAccessibilityAction(ILandroid/os/Bundle;)Z
 
     move-result p0
 
     return p0
 
+    .line 3
     :cond_1
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getMinFlingVelocity()I
 
@@ -725,6 +924,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_2
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getMinFlingVelocity()I
 
@@ -744,6 +944,7 @@
 
     const/high16 v0, -0x80000000
 
+    .line 5
     invoke-virtual {p0, p1, v1, p2, v0}, Landroidx/recyclerview/widget/RecyclerView;->smoothScrollBy(IILandroid/view/animation/Interpolator;I)V
 
     return v2
@@ -759,10 +960,21 @@
         .annotation build Landroidx/annotation/Px;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "dx",
+            "dy"
+        }
+    .end annotation
 
-    new-instance v0, Lps/m;
+    .line 1
+    new-instance v0, Lk/j0/k/l;
 
-    invoke-direct {v0}, Lps/m;-><init>()V
+    invoke-direct {v0}, Lk/j0/k/l;-><init>()V
 
     invoke-virtual {p0, p1, p2, v0}, Landroidx/recyclerview/widget/RecyclerView;->smoothScrollBy(IILandroid/view/animation/Interpolator;)V
 
@@ -775,33 +987,46 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "layout"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
+    .line 2
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->mSnapHelper:Lcom/android/camera/ui/BasePanelSnapHelper;
 
     if-nez p1, :cond_0
 
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    .line 3
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const v0, 0x7f0704a3
+    const v0, 0x7f070476
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
     move-result p1
 
+    .line 4
     new-instance v0, Lcom/android/camera/ui/BasePanelSnapHelper;
 
-    mul-int/lit8 p1, p1, 0x3
-
     const/4 v1, -0x1
+
+    mul-int/lit8 p1, p1, 0x3
 
     invoke-direct {v0, v1, p1}, Lcom/android/camera/ui/BasePanelSnapHelper;-><init>(II)V
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->mSnapHelper:Lcom/android/camera/ui/BasePanelSnapHelper;
 
+    .line 5
     invoke-virtual {v0, p0}, Lcom/android/camera/ui/BasePanelSnapHelper;->attachToRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
 
     :cond_0
@@ -810,7 +1035,16 @@
 
 .method public setOnclickStatus(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isOnclick"
+        }
+    .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/cv/FilterSelectViewCV;->mIsOnclick:Z
 
     return-void

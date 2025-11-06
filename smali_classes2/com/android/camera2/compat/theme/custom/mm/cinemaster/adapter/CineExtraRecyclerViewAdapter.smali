@@ -4,18 +4,70 @@
 
 
 # static fields
-.field private static final TAG:Ljava/lang/String; = "CineExtraRecyclerViewAdapter"
+.field private static final TAG:Ljava/lang/String;
 
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 0
+    .locals 1
+
+    .line 1
+    const-class v0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/adapter/CineExtraRecyclerViewAdapter;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/adapter/CineExtraRecyclerViewAdapter;->TAG:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/android/camera/data/data/b;ILn6/z;II)V
+.method public constructor <init>(Lcom/android/camera/fragment/BaseFragment;Ld/d/a/l6/e/b;ILd/d/a/u6/x4/d0;II)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "baseFragment",
+            "componentData",
+            "currentMode",
+            "manuallyListener",
+            "itemWidth",
+            "degree"
+        }
+    .end annotation
+
+    .line 2
+    invoke-direct/range {p0 .. p6}, Lcom/android/camera/fragment/manually/adapter/ExtraRecyclerViewAdapter;-><init>(Lcom/android/camera/fragment/BaseFragment;Ld/d/a/l6/e/b;ILd/d/a/u6/x4/d0;II)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ld/d/a/l6/e/b;ILd/d/a/u6/x4/d0;II)V
     .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "componentData",
+            "currentMode",
+            "manuallyListener",
+            "itemWidth",
+            "degree"
+        }
+    .end annotation
 
     const/4 v1, 0x0
 
@@ -32,16 +84,7 @@
     move v6, p5
 
     .line 1
-    invoke-direct/range {v0 .. v6}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/adapter/CineExtraRecyclerViewAdapter;-><init>(Lcom/android/camera/fragment/BaseFragment;Lcom/android/camera/data/data/b;ILn6/z;II)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lcom/android/camera/fragment/BaseFragment;Lcom/android/camera/data/data/b;ILn6/z;II)V
-    .locals 0
-
-    .line 2
-    invoke-direct/range {p0 .. p6}, Lcom/android/camera/fragment/manually/adapter/ExtraRecyclerViewAdapter;-><init>(Lcom/android/camera/fragment/BaseFragment;Lcom/android/camera/data/data/b;ILn6/z;II)V
+    invoke-direct/range {v0 .. v6}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/adapter/CineExtraRecyclerViewAdapter;-><init>(Lcom/android/camera/fragment/BaseFragment;Ld/d/a/l6/e/b;ILd/d/a/u6/x4/d0;II)V
 
     return-void
 .end method
@@ -50,6 +93,16 @@
 # virtual methods
 .method public bridge synthetic onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "holder",
+            "position"
+        }
+    .end annotation
 
     .line 1
     check-cast p1, Lcom/android/camera/fragment/CommonRecyclerViewHolder;
@@ -61,11 +114,21 @@
 
 .method public onBindViewHolder(Lcom/android/camera/fragment/CommonRecyclerViewHolder;I)V
     .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "holder",
+            "position"
+        }
+    .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/android/camera/fragment/manually/adapter/ExtraRecyclerViewAdapter;->mComponentData:Lcom/android/camera/data/data/b;
+    iget-object v0, p0, Lcom/android/camera/fragment/manually/adapter/ExtraRecyclerViewAdapter;->mComponentData:Ld/d/a/l6/e/b;
 
-    invoke-virtual {v0}, Lcom/android/camera/data/data/b;->getItems()Ljava/util/List;
+    invoke-virtual {v0}, Ld/d/a/l6/e/b;->getItems()Ljava/util/List;
 
     move-result-object v0
 
@@ -73,10 +136,10 @@
 
     move-result-object p2
 
-    check-cast p2, Lcom/android/camera/data/data/c;
+    check-cast p2, Ld/d/a/l6/e/c;
 
     .line 3
-    iget-object v0, p2, Lcom/android/camera/data/data/c;->n:Ljava/lang/String;
+    iget-object v0, p2, Ld/d/a/l6/e/c;->q:Ljava/lang/String;
 
     .line 4
     iget-object v1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -127,7 +190,7 @@
     invoke-virtual {v1, v2}, Landroid/view/View;->setRotation(F)V
 
     :goto_1
-    const v1, 0x7f0b0142
+    const v1, 0x7f0b0122
 
     .line 9
     invoke-virtual {p1, v1}, Lcom/android/camera/fragment/CommonRecyclerViewHolder;->getView(I)Landroid/view/View;
@@ -136,7 +199,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f0b0140
+    const v2, 0x7f0b0120
 
     .line 10
     invoke-virtual {p1, v2}, Lcom/android/camera/fragment/CommonRecyclerViewHolder;->getView(I)Landroid/view/View;
@@ -146,13 +209,13 @@
     check-cast v2, Lcom/android/camera/ui/ColorImageView;
 
     .line 11
-    iget-object v3, p0, Lcom/android/camera/fragment/manually/adapter/ExtraRecyclerViewAdapter;->mComponentData:Lcom/android/camera/data/data/b;
+    iget-object v3, p0, Lcom/android/camera/fragment/manually/adapter/ExtraRecyclerViewAdapter;->mComponentData:Ld/d/a/l6/e/b;
 
-    invoke-virtual {v3}, Lcom/android/camera/data/data/b;->getDisplayTitleString()I
+    invoke-virtual {v3}, Ld/d/a/l6/e/b;->getDisplayTitleString()I
 
     move-result v3
 
-    const v4, 0x7f1409d4
+    const v4, 0x7f13094e
 
     const/16 v5, 0x8
 
@@ -162,31 +225,31 @@
 
     if-eq v3, v4, :cond_3
 
-    iget-object v3, p0, Lcom/android/camera/fragment/manually/adapter/ExtraRecyclerViewAdapter;->mComponentData:Lcom/android/camera/data/data/b;
+    iget-object v3, p0, Lcom/android/camera/fragment/manually/adapter/ExtraRecyclerViewAdapter;->mComponentData:Ld/d/a/l6/e/b;
 
     .line 12
-    invoke-virtual {v3}, Lcom/android/camera/data/data/b;->getDisplayTitleString()I
+    invoke-virtual {v3}, Ld/d/a/l6/e/b;->getDisplayTitleString()I
 
     move-result v3
 
-    const v4, 0x7f1409d6
+    const v4, 0x7f130950
 
     if-eq v3, v4, :cond_3
 
-    iget v3, p2, Lcom/android/camera/data/data/c;->a:I
+    iget v3, p2, Ld/d/a/l6/e/c;->d:I
 
     if-eq v3, v6, :cond_3
 
     .line 13
-    invoke-virtual {v2, v7}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v2, v7}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 14
-    iget v3, p2, Lcom/android/camera/data/data/c;->a:I
+    iget v3, p2, Ld/d/a/l6/e/c;->d:I
 
     invoke-virtual {v2, v3}, Lcom/airbnb/lottie/LottieAnimationView;->setImageResource(I)V
 
     .line 15
-    iget v3, p2, Lcom/android/camera/data/data/c;->c:I
+    iget v3, p2, Ld/d/a/l6/e/c;->f:I
 
     if-eq v3, v6, :cond_2
 
@@ -199,25 +262,25 @@
     const/4 v3, 0x0
 
     .line 17
-    invoke-virtual {v2, v3}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_2
 
     .line 18
     :cond_3
-    invoke-virtual {v2, v5}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v2, v5}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 19
     :goto_2
-    iget v2, p2, Lcom/android/camera/data/data/c;->h:I
+    iget v2, p2, Ld/d/a/l6/e/c;->k:I
 
     if-eq v2, v6, :cond_4
 
     .line 20
-    invoke-virtual {v1, v7}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v1, v7}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 21
-    iget v2, p2, Lcom/android/camera/data/data/c;->h:I
+    iget v2, p2, Ld/d/a/l6/e/c;->k:I
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
@@ -225,7 +288,7 @@
 
     .line 22
     :cond_4
-    iget-object v2, p2, Lcom/android/camera/data/data/c;->l:Ljava/lang/String;
+    iget-object v2, p2, Ld/d/a/l6/e/c;->o:Ljava/lang/String;
 
     if-eqz v2, :cond_5
 
@@ -236,10 +299,10 @@
     if-nez v2, :cond_5
 
     .line 23
-    invoke-virtual {v1, v7}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v1, v7}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 24
-    iget-object v2, p2, Lcom/android/camera/data/data/c;->l:Ljava/lang/String;
+    iget-object v2, p2, Ld/d/a/l6/e/c;->o:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -247,18 +310,18 @@
 
     .line 25
     :cond_5
-    invoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v1, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 26
     :goto_3
-    iget-boolean v2, p2, Lcom/android/camera/data/data/c;->q:Z
+    iget-boolean v2, p2, Ld/d/a/l6/e/c;->t:Z
 
     if-eqz v2, :cond_6
 
     const/high16 v2, 0x3f000000    # 0.5f
 
     .line 27
-    invoke-virtual {v1, v2}, Landroid/view/View;->setAlpha(F)V
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setAlpha(F)V
 
     .line 28
     iget-object v1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -267,11 +330,11 @@
 
     .line 29
     :cond_6
-    iget-object v1, p0, Lcom/android/camera/fragment/manually/adapter/ExtraRecyclerViewAdapter;->mComponentData:Lcom/android/camera/data/data/b;
+    iget-object v1, p0, Lcom/android/camera/fragment/manually/adapter/ExtraRecyclerViewAdapter;->mComponentData:Ld/d/a/l6/e/b;
 
     iget v2, p0, Lcom/android/camera/fragment/manually/adapter/ExtraRecyclerViewAdapter;->mCurrentMode:I
 
-    invoke-virtual {v1, v2}, Lcom/android/camera/data/data/b;->getComponentValue(I)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Ld/d/a/l6/e/b;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -287,7 +350,7 @@
     invoke-virtual {p0, p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/adapter/CineExtraRecyclerViewAdapter;->updateItemSelectState(Lcom/android/camera/fragment/CommonRecyclerViewHolder;Ljava/lang/Boolean;)V
 
     .line 31
-    iget p0, p2, Lcom/android/camera/data/data/c;->k:I
+    iget p0, p2, Ld/d/a/l6/e/c;->n:I
 
     if-lez p0, :cond_7
 
@@ -298,7 +361,7 @@
 
     move-result-object p1
 
-    iget p2, p2, Lcom/android/camera/data/data/c;->k:I
+    iget p2, p2, Ld/d/a/l6/e/c;->n:I
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -312,6 +375,16 @@
 
 .method public bridge synthetic onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "parent",
+            "viewType"
+        }
+    .end annotation
 
     .line 1
     invoke-virtual {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/adapter/CineExtraRecyclerViewAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/android/camera/fragment/CommonRecyclerViewHolder;
@@ -323,9 +396,19 @@
 
 .method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/android/camera/fragment/CommonRecyclerViewHolder;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "parent",
+            "viewType"
+        }
+    .end annotation
 
     .line 2
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object p0
 
@@ -333,7 +416,7 @@
 
     move-result-object p0
 
-    const p2, 0x7f0e00a9
+    const p2, 0x7f0e009a
 
     const/4 v0, 0x0
 
@@ -381,14 +464,25 @@
 
 .method public updateItemSelectState(Lcom/android/camera/fragment/CommonRecyclerViewHolder;Ljava/lang/Boolean;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "holder",
+            "isSelect"
+        }
+    .end annotation
 
+    .line 1
     iget-object p0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f0803a3
+    const v1, 0x7f0803a9
 
     invoke-static {v0, v1}, Lcom/android/camera2/compat/theme/MiThemeCompat;->getIfLeicaResBySuffix(Landroid/content/Context;I)I
 
@@ -396,6 +490,7 @@
 
     invoke-virtual {p0, v0}, Landroid/view/View;->setBackgroundResource(I)V
 
+    .line 2
     iget-object p0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z

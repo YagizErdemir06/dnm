@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/text/subrip/SubripSubtitle;
+.class public final Lcom/google/android/exoplayer2/text/subrip/SubripSubtitle;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -16,10 +16,13 @@
 .method public constructor <init>([Lcom/google/android/exoplayer2/text/Cue;[J)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/text/subrip/SubripSubtitle;->cues:[Lcom/google/android/exoplayer2/text/Cue;
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/exoplayer2/text/subrip/SubripSubtitle;->cueTimesUs:[J
 
     return-void
@@ -38,6 +41,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/subrip/SubripSubtitle;->cueTimesUs:[J
 
     const/4 v1, 0x1
@@ -52,23 +56,28 @@
 
     if-eq p1, p2, :cond_1
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/subrip/SubripSubtitle;->cues:[Lcom/google/android/exoplayer2/text/Cue;
 
-    aget-object p0, p0, p1
+    aget-object p2, p0, p1
 
-    sget-object p1, Lcom/google/android/exoplayer2/text/Cue;->EMPTY:Lcom/google/android/exoplayer2/text/Cue;
+    sget-object v0, Lcom/google/android/exoplayer2/text/Cue;->EMPTY:Lcom/google/android/exoplayer2/text/Cue;
 
-    if-ne p0, p1, :cond_0
+    if-ne p2, v0, :cond_0
 
     goto :goto_0
 
+    .line 3
     :cond_0
+    aget-object p0, p0, p1
+
     invoke-static {p0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
 
     return-object p0
 
+    .line 4
     :cond_1
     :goto_0
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
@@ -94,9 +103,11 @@
     :cond_0
     move v2, v1
 
+    .line 1
     :goto_0
     invoke-static {v2}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 2
     iget-object v2, p0, Lcom/google/android/exoplayer2/text/subrip/SubripSubtitle;->cueTimesUs:[J
 
     array-length v2, v2
@@ -111,6 +122,7 @@
     :goto_1
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/subrip/SubripSubtitle;->cueTimesUs:[J
 
     aget-wide p0, p0, p1
@@ -121,6 +133,7 @@
 .method public getEventTimeCount()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/subrip/SubripSubtitle;->cueTimesUs:[J
 
     array-length p0, p0
@@ -131,6 +144,7 @@
 .method public getNextEventTimeIndex(J)I
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/subrip/SubripSubtitle;->cueTimesUs:[J
 
     const/4 v1, 0x0
@@ -139,6 +153,7 @@
 
     move-result p1
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/subrip/SubripSubtitle;->cueTimesUs:[J
 
     array-length p0, p0

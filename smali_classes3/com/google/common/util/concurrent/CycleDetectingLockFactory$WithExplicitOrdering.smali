@@ -58,8 +58,10 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, v0}, Lcom/google/common/util/concurrent/CycleDetectingLockFactory;-><init>(Lcom/google/common/util/concurrent/CycleDetectingLockFactory$Policy;Lcom/google/common/util/concurrent/CycleDetectingLockFactory$1;)V
 
+    .line 2
     iput-object p2, p0, Lcom/google/common/util/concurrent/CycleDetectingLockFactory$WithExplicitOrdering;->lockGraphNodes:Ljava/util/Map;
 
     return-void
@@ -122,6 +124,8 @@
     check-cast p1, Lcom/google/common/util/concurrent/CycleDetectingLockFactory$LockGraphNode;
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    check-cast p1, Lcom/google/common/util/concurrent/CycleDetectingLockFactory$LockGraphNode;
 
     const/4 v1, 0x0
 
@@ -189,6 +193,8 @@
     check-cast p1, Lcom/google/common/util/concurrent/CycleDetectingLockFactory$LockGraphNode;
 
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    check-cast p1, Lcom/google/common/util/concurrent/CycleDetectingLockFactory$LockGraphNode;
 
     const/4 v1, 0x0
 

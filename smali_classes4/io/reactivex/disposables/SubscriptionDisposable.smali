@@ -1,4 +1,4 @@
-.class final Lio/reactivex/disposables/SubscriptionDisposable;
+.class public final Lio/reactivex/disposables/SubscriptionDisposable;
 .super Lio/reactivex/disposables/ReferenceDisposable;
 .source "SourceFile"
 
@@ -7,7 +7,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lio/reactivex/disposables/ReferenceDisposable<",
-        "Lkv/d;",
+        "Ln/e/d;",
         ">;"
     }
 .end annotation
@@ -18,9 +18,10 @@
 
 
 # direct methods
-.method public constructor <init>(Lkv/d;)V
+.method public constructor <init>(Ln/e/d;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lio/reactivex/disposables/ReferenceDisposable;-><init>(Ljava/lang/Object;)V
 
     return-void
@@ -36,22 +37,22 @@
     .end param
 
     .line 1
-    check-cast p1, Lkv/d;
+    check-cast p1, Ln/e/d;
 
-    invoke-virtual {p0, p1}, Lio/reactivex/disposables/SubscriptionDisposable;->onDisposed(Lkv/d;)V
+    invoke-virtual {p0, p1}, Lio/reactivex/disposables/SubscriptionDisposable;->onDisposed(Ln/e/d;)V
 
     return-void
 .end method
 
-.method public onDisposed(Lkv/d;)V
+.method public onDisposed(Ln/e/d;)V
     .locals 0
-    .param p1    # Lkv/d;
+    .param p1    # Ln/e/d;
         .annotation build Lio/reactivex/annotations/NonNull;
         .end annotation
     .end param
 
     .line 2
-    invoke-interface {p1}, Lkv/d;->cancel()V
+    invoke-interface {p1}, Ln/e/d;->cancel()V
 
     return-void
 .end method

@@ -1,5 +1,5 @@
-.class Landroidx/core/app/NotificationCompatSideChannelService$NotificationSideChannelStub;
-.super Landroid/support/v4/app/a$b;
+.class public Landroidx/core/app/NotificationCompatSideChannelService$NotificationSideChannelStub;
+.super Lb/b/a/a/a$b;
 .source "SourceFile"
 
 
@@ -15,16 +15,17 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/core/app/NotificationCompatSideChannelService;
+.field public final synthetic this$0:Landroidx/core/app/NotificationCompatSideChannelService;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/core/app/NotificationCompatSideChannelService;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/core/app/NotificationCompatSideChannelService$NotificationSideChannelStub;->this$0:Landroidx/core/app/NotificationCompatSideChannelService;
 
-    invoke-direct {p0}, Landroid/support/v4/app/a$b;-><init>()V
+    invoke-direct {p0}, Lb/b/a/a/a$b;-><init>()V
 
     return-void
 .end method
@@ -39,6 +40,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/core/app/NotificationCompatSideChannelService$NotificationSideChannelStub;->this$0:Landroidx/core/app/NotificationCompatSideChannelService;
 
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
@@ -47,10 +49,12 @@
 
     invoke-virtual {v0, v1, p1}, Landroidx/core/app/NotificationCompatSideChannelService;->checkPermission(ILjava/lang/String;)V
 
+    .line 2
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
+    .line 3
     :try_start_0
     iget-object p0, p0, Landroidx/core/app/NotificationCompatSideChannelService$NotificationSideChannelStub;->this$0:Landroidx/core/app/NotificationCompatSideChannelService;
 
@@ -58,6 +62,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -67,12 +72,14 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
+    .line 5
     throw p0
 .end method
 
 .method public cancelAll(Ljava/lang/String;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/core/app/NotificationCompatSideChannelService$NotificationSideChannelStub;->this$0:Landroidx/core/app/NotificationCompatSideChannelService;
 
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
@@ -81,10 +88,12 @@
 
     invoke-virtual {v0, v1, p1}, Landroidx/core/app/NotificationCompatSideChannelService;->checkPermission(ILjava/lang/String;)V
 
+    .line 2
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
+    .line 3
     :try_start_0
     iget-object p0, p0, Landroidx/core/app/NotificationCompatSideChannelService$NotificationSideChannelStub;->this$0:Landroidx/core/app/NotificationCompatSideChannelService;
 
@@ -92,6 +101,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -101,6 +111,7 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
+    .line 5
     throw p0
 .end method
 
@@ -112,6 +123,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/core/app/NotificationCompatSideChannelService$NotificationSideChannelStub;->this$0:Landroidx/core/app/NotificationCompatSideChannelService;
 
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
@@ -120,10 +132,12 @@
 
     invoke-virtual {v0, v1, p1}, Landroidx/core/app/NotificationCompatSideChannelService;->checkPermission(ILjava/lang/String;)V
 
+    .line 2
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
+    .line 3
     :try_start_0
     iget-object p0, p0, Landroidx/core/app/NotificationCompatSideChannelService$NotificationSideChannelStub;->this$0:Landroidx/core/app/NotificationCompatSideChannelService;
 
@@ -131,6 +145,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
@@ -140,5 +155,6 @@
 
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
+    .line 5
     throw p0
 .end method

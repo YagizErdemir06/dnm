@@ -1,4 +1,4 @@
-.class Landroidx/core/net/DatagramSocketWrapper$DatagramSocketImplWrapper;
+.class public Landroidx/core/net/DatagramSocketWrapper$DatagramSocketImplWrapper;
 .super Ljava/net/SocketImpl;
 .source "SourceFile"
 
@@ -18,14 +18,17 @@
 .method public constructor <init>(Ljava/net/DatagramSocket;Ljava/io/FileDescriptor;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/net/SocketImpl;-><init>()V
 
+    .line 2
     invoke-virtual {p1}, Ljava/net/DatagramSocket;->getLocalPort()I
 
     move-result p1
 
     iput p1, p0, Ljava/net/SocketImpl;->localport:I
 
+    .line 3
     iput-object p2, p0, Ljava/net/SocketImpl;->fd:Ljava/io/FileDescriptor;
 
     return-void
@@ -41,6 +44,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -56,6 +60,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -71,6 +76,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -86,6 +92,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -149,6 +156,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -164,6 +172,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -179,6 +188,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -194,6 +204,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -209,6 +220,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -224,6 +236,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -239,6 +252,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V

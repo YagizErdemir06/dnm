@@ -56,25 +56,24 @@
 
     new-array v0, v0, [I
 
+    .line 1
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;->DEFAULT_EXTRACTOR_ORDER:[I
 
+    .line 2
     new-instance v0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory$ExtensionLoader;
 
-    new-instance v1, Lcom/google/android/exoplayer2/extractor/a;
-
-    invoke-direct {v1}, Lcom/google/android/exoplayer2/extractor/a;-><init>()V
+    sget-object v1, Ld/j/a/b/q2/b;->a:Ld/j/a/b/q2/b;
 
     invoke-direct {v0, v1}, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory$ExtensionLoader;-><init>(Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory$ExtensionLoader$ConstructorSupplier;)V
 
     sput-object v0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;->FLAC_EXTENSION_LOADER:Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory$ExtensionLoader;
 
+    .line 3
     new-instance v0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory$ExtensionLoader;
 
-    new-instance v1, Lcom/google/android/exoplayer2/extractor/b;
-
-    invoke-direct {v1}, Lcom/google/android/exoplayer2/extractor/b;-><init>()V
+    sget-object v1, Ld/j/a/b/q2/a;->a:Ld/j/a/b/q2/a;
 
     invoke-direct {v0, v1}, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory$ExtensionLoader;-><init>(Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory$ExtensionLoader$ConstructorSupplier;)V
 
@@ -106,17 +105,30 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
+    .line 2
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;->tsMode:I
 
     const v0, 0x1b8a0
 
+    .line 3
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;->tsTimestampSearchBytes:I
 
     return-void
+.end method
+
+.method public static synthetic a()Ljava/lang/reflect/Constructor;
+    .locals 1
+
+    invoke-static {}, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;->getMidiExtractorConstructor()Ljava/lang/reflect/Constructor;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method private addExtractorsForFileType(ILjava/util/List;)V
@@ -139,6 +151,7 @@
     :pswitch_0
     goto/16 :goto_3
 
+    .line 1
     :pswitch_1
     new-instance p0, Lcom/google/android/exoplayer2/extractor/avi/AviExtractor;
 
@@ -148,6 +161,7 @@
 
     goto/16 :goto_3
 
+    .line 2
     :pswitch_2
     sget-object p0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;->MIDI_EXTENSION_LOADER:Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory$ExtensionLoader;
 
@@ -159,10 +173,12 @@
 
     if-eqz p0, :cond_4
 
+    .line 3
     invoke-interface {p2, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_3
 
+    .line 4
     :pswitch_3
     new-instance p0, Lcom/google/android/exoplayer2/extractor/jpeg/JpegExtractor;
 
@@ -172,6 +188,7 @@
 
     goto/16 :goto_3
 
+    .line 5
     :pswitch_4
     new-instance p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor;
 
@@ -181,6 +198,7 @@
 
     goto/16 :goto_3
 
+    .line 6
     :pswitch_5
     new-instance p1, Lcom/google/android/exoplayer2/extractor/ts/TsExtractor;
 
@@ -196,6 +214,7 @@
 
     goto/16 :goto_3
 
+    .line 7
     :pswitch_6
     new-instance p0, Lcom/google/android/exoplayer2/extractor/ts/PsExtractor;
 
@@ -205,6 +224,7 @@
 
     goto/16 :goto_3
 
+    .line 8
     :pswitch_7
     new-instance p0, Lcom/google/android/exoplayer2/extractor/ogg/OggExtractor;
 
@@ -214,6 +234,7 @@
 
     goto/16 :goto_3
 
+    .line 9
     :pswitch_8
     new-instance p1, Lcom/google/android/exoplayer2/extractor/mp4/FragmentedMp4Extractor;
 
@@ -223,6 +244,7 @@
 
     invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 10
     new-instance p1, Lcom/google/android/exoplayer2/extractor/mp4/Mp4Extractor;
 
     iget p0, p0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;->mp4Flags:I
@@ -233,15 +255,18 @@
 
     goto/16 :goto_3
 
+    .line 11
     :pswitch_9
     new-instance p1, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;
 
     iget v2, p0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;->mp3Flags:I
 
+    .line 12
     iget-boolean v3, p0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;->constantBitrateSeekingEnabled:Z
 
     or-int/2addr v2, v3
 
+    .line 13
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;->constantBitrateSeekingAlwaysEnabled:Z
 
     if-eqz p0, :cond_0
@@ -254,12 +279,15 @@
     :goto_0
     or-int p0, v2, v0
 
+    .line 14
     invoke-direct {p1, p0}, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;-><init>(I)V
 
+    .line 15
     invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_3
 
+    .line 16
     :pswitch_a
     new-instance p1, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor;
 
@@ -271,6 +299,7 @@
 
     goto/16 :goto_3
 
+    .line 17
     :pswitch_b
     new-instance p0, Lcom/google/android/exoplayer2/extractor/flv/FlvExtractor;
 
@@ -280,6 +309,7 @@
 
     goto :goto_3
 
+    .line 18
     :pswitch_c
     sget-object p1, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;->FLAC_EXTENSION_LOADER:Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory$ExtensionLoader;
 
@@ -301,10 +331,12 @@
 
     if-eqz p1, :cond_1
 
+    .line 19
     invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_3
 
+    .line 20
     :cond_1
     new-instance p1, Lcom/google/android/exoplayer2/extractor/flac/FlacExtractor;
 
@@ -316,15 +348,18 @@
 
     goto :goto_3
 
+    .line 21
     :pswitch_d
     new-instance p1, Lcom/google/android/exoplayer2/extractor/amr/AmrExtractor;
 
     iget v2, p0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;->amrFlags:I
 
+    .line 22
     iget-boolean v3, p0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;->constantBitrateSeekingEnabled:Z
 
     or-int/2addr v2, v3
 
+    .line 23
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;->constantBitrateSeekingAlwaysEnabled:Z
 
     if-eqz p0, :cond_2
@@ -337,21 +372,26 @@
     :goto_1
     or-int p0, v2, v0
 
+    .line 24
     invoke-direct {p1, p0}, Lcom/google/android/exoplayer2/extractor/amr/AmrExtractor;-><init>(I)V
 
+    .line 25
     invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_3
 
+    .line 26
     :pswitch_e
     new-instance p1, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;
 
     iget v2, p0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;->adtsFlags:I
 
+    .line 27
     iget-boolean v3, p0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;->constantBitrateSeekingEnabled:Z
 
     or-int/2addr v2, v3
 
+    .line 28
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;->constantBitrateSeekingAlwaysEnabled:Z
 
     if-eqz p0, :cond_3
@@ -364,12 +404,15 @@
     :goto_2
     or-int p0, v2, v0
 
+    .line 29
     invoke-direct {p1, p0}, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;-><init>(I)V
 
+    .line 30
     invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_3
 
+    .line 31
     :pswitch_f
     new-instance p0, Lcom/google/android/exoplayer2/extractor/ts/Ac4Extractor;
 
@@ -379,6 +422,7 @@
 
     goto :goto_3
 
+    .line 32
     :pswitch_10
     new-instance p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Extractor;
 
@@ -415,16 +459,6 @@
 .method public static synthetic b()Ljava/lang/reflect/Constructor;
     .locals 1
 
-    invoke-static {}, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;->getMidiExtractorConstructor()Ljava/lang/reflect/Constructor;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static synthetic c()Ljava/lang/reflect/Constructor;
-    .locals 1
-
     invoke-static {}, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;->getFlacExtractorConstructor()Ljava/lang/reflect/Constructor;
 
     move-result-object v0
@@ -456,10 +490,12 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     const-string v1, "com.google.android.exoplayer2.ext.flac.FlacLibrary"
 
+    .line 2
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
@@ -470,6 +506,7 @@
 
     const-string v4, "isAvailable"
 
+    .line 3
     invoke-virtual {v1, v4, v3}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v1
@@ -478,10 +515,12 @@
 
     const/4 v4, 0x0
 
+    .line 4
     invoke-virtual {v1, v4, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
+    .line 5
     invoke-virtual {v0, v1}, Ljava/lang/Boolean;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -490,12 +529,14 @@
 
     const-string v0, "com.google.android.exoplayer2.ext.flac.FlacExtractor"
 
+    .line 6
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
     const-class v1, Lcom/google/android/exoplayer2/extractor/Extractor;
 
+    .line 7
     invoke-virtual {v0, v1}, Ljava/lang/Class;->asSubclass(Ljava/lang/Class;)Ljava/lang/Class;
 
     move-result-object v0
@@ -508,6 +549,7 @@
 
     aput-object v3, v1, v2
 
+    .line 8
     invoke-virtual {v0, v1}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object v0
@@ -539,12 +581,14 @@
 
     const-string v0, "com.google.android.exoplayer2.decoder.midi.MidiExtractor"
 
+    .line 1
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
     const-class v1, Lcom/google/android/exoplayer2/extractor/Extractor;
 
+    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/Class;->asSubclass(Ljava/lang/Class;)Ljava/lang/Class;
 
     move-result-object v0
@@ -553,6 +597,7 @@
 
     new-array v1, v1, [Ljava/lang/Class;
 
+    .line 3
     invoke-virtual {v0, v1}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object v0
@@ -701,11 +746,13 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;->adtsFlags:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     monitor-exit p0
 
     return-object p0
@@ -723,11 +770,13 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;->amrFlags:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     monitor-exit p0
 
     return-object p0
@@ -745,11 +794,13 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;->constantBitrateSeekingAlwaysEnabled:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     monitor-exit p0
 
     return-object p0
@@ -767,11 +818,13 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;->constantBitrateSeekingEnabled:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     monitor-exit p0
 
     return-object p0
@@ -789,11 +842,13 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;->flacFlags:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     monitor-exit p0
 
     return-object p0
@@ -811,11 +866,13 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;->fragmentedMp4Flags:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     monitor-exit p0
 
     return-object p0
@@ -833,11 +890,13 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;->matroskaFlags:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     monitor-exit p0
 
     return-object p0
@@ -855,11 +914,13 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;->mp3Flags:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     monitor-exit p0
 
     return-object p0
@@ -877,11 +938,13 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;->mp4Flags:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     monitor-exit p0
 
     return-object p0
@@ -899,11 +962,13 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;->tsFlags:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     monitor-exit p0
 
     return-object p0
@@ -921,11 +986,13 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;->tsMode:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     monitor-exit p0
 
     return-object p0
@@ -943,11 +1010,13 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/DefaultExtractorsFactory;->tsTimestampSearchBytes:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     monitor-exit p0
 
     return-object p0

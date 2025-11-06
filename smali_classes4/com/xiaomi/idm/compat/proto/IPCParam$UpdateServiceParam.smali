@@ -81,12 +81,15 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;
 
     invoke-direct {v0}, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;-><init>()V
 
+    .line 2
     sput-object v0, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;
 
+    .line 3
     const-class v1, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;
 
     invoke-static {v1, v0}, Lcom/google/protobuf/GeneratedMessageLite;->registerDefaultInstance(Ljava/lang/Class;Lcom/google/protobuf/GeneratedMessageLite;)V
@@ -97,8 +100,10 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageLite;-><init>()V
 
+    .line 2
     sget-object v0, Lcom/google/protobuf/ByteString;->EMPTY:Lcom/google/protobuf/ByteString;
 
     iput-object v0, p0, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->appData_:Lcom/google/protobuf/ByteString;
@@ -109,6 +114,7 @@
 .method public static synthetic access$28700()Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;
 
     return-object v0
@@ -117,6 +123,7 @@
 .method public static synthetic access$28800(Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->setDiscType(I)V
 
     return-void
@@ -125,6 +132,7 @@
 .method public static synthetic access$28900(Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->clearDiscType()V
 
     return-void
@@ -133,6 +141,7 @@
 .method public static synthetic access$29000(Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->setAdvMode(I)V
 
     return-void
@@ -141,6 +150,7 @@
 .method public static synthetic access$29100(Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->clearAdvMode()V
 
     return-void
@@ -149,6 +159,7 @@
 .method public static synthetic access$29200(Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->setUpdateAppData(Z)V
 
     return-void
@@ -157,6 +168,7 @@
 .method public static synthetic access$29300(Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->clearUpdateAppData()V
 
     return-void
@@ -165,6 +177,7 @@
 .method public static synthetic access$29400(Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;Lcom/google/protobuf/ByteString;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->setAppData(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -173,6 +186,7 @@
 .method public static synthetic access$29500(Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->clearAppData()V
 
     return-void
@@ -181,6 +195,7 @@
 .method public static synthetic access$29600(Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->setUpdateStrategy(I)V
 
     return-void
@@ -189,6 +204,7 @@
 .method public static synthetic access$29700(Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->clearUpdateStrategy()V
 
     return-void
@@ -197,6 +213,7 @@
 .method public static synthetic access$29800(Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->setCommType(I)V
 
     return-void
@@ -205,6 +222,7 @@
 .method public static synthetic access$29900(Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->clearCommType()V
 
     return-void
@@ -213,6 +231,7 @@
 .method public static synthetic access$30000(Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->setUpdateType(I)V
 
     return-void
@@ -221,6 +240,7 @@
 .method public static synthetic access$30100(Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->clearUpdateType()V
 
     return-void
@@ -231,6 +251,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput v0, p0, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->advMode_:I
 
     return-void
@@ -239,6 +260,7 @@
 .method private clearAppData()V
     .locals 1
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->getDefaultInstance()Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;
 
     move-result-object v0
@@ -257,6 +279,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput v0, p0, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->commType_:I
 
     return-void
@@ -267,6 +290,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput v0, p0, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->discType_:I
 
     return-void
@@ -277,6 +301,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-boolean v0, p0, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->updateAppData_:Z
 
     return-void
@@ -287,6 +312,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput v0, p0, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->updateStrategy_:I
 
     return-void
@@ -297,6 +323,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput v0, p0, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->updateType_:I
 
     return-void
@@ -305,6 +332,7 @@
 .method public static getDefaultInstance()Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;
 
     return-object v0
@@ -591,6 +619,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;
 
     invoke-virtual {v0}, Lcom/google/protobuf/GeneratedMessageLite;->getParserForType()Lcom/google/protobuf/Parser;
@@ -603,6 +632,7 @@
 .method private setAdvMode(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->advMode_:I
 
     return-void
@@ -611,8 +641,10 @@
 .method private setAppData(Lcom/google/protobuf/ByteString;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 2
     iput-object p1, p0, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->appData_:Lcom/google/protobuf/ByteString;
 
     return-void
@@ -621,6 +653,7 @@
 .method private setCommType(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->commType_:I
 
     return-void
@@ -629,6 +662,7 @@
 .method private setDiscType(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->discType_:I
 
     return-void
@@ -637,6 +671,7 @@
 .method private setUpdateAppData(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->updateAppData_:Z
 
     return-void
@@ -645,6 +680,7 @@
 .method private setUpdateStrategy(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->updateStrategy_:I
 
     return-void
@@ -653,6 +689,7 @@
 .method private setUpdateType(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->updateType_:I
 
     return-void
@@ -663,6 +700,7 @@
 .method public final dynamicMethod(Lcom/google/protobuf/GeneratedMessageLite$MethodToInvoke;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     sget-object p0, Lcom/xiaomi/idm/compat/proto/IPCParam$1;->$SwitchMap$com$google$protobuf$GeneratedMessageLite$MethodToInvoke:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
@@ -677,6 +715,7 @@
 
     packed-switch p0, :pswitch_data_0
 
+    .line 2
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -686,6 +725,7 @@
     :pswitch_0
     return-object p2
 
+    .line 3
     :pswitch_1
     invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
@@ -693,28 +733,34 @@
 
     return-object p0
 
+    .line 4
     :pswitch_2
     sget-object p0, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->PARSER:Lcom/google/protobuf/Parser;
 
     if-nez p0, :cond_1
 
+    .line 5
     const-class p1, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;
 
     monitor-enter p1
 
+    .line 6
     :try_start_0
     sget-object p0, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->PARSER:Lcom/google/protobuf/Parser;
 
     if-nez p0, :cond_0
 
+    .line 7
     new-instance p0, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;
 
     sget-object p2, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;
 
     invoke-direct {p0, p2}, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;-><init>(Lcom/google/protobuf/GeneratedMessageLite;)V
 
+    .line 8
     sput-object p0, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->PARSER:Lcom/google/protobuf/Parser;
 
+    .line 9
     :cond_0
     monitor-exit p1
 
@@ -733,6 +779,7 @@
     :goto_0
     return-object p0
 
+    .line 10
     :pswitch_3
     sget-object p0, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;
 
@@ -785,6 +832,7 @@
 
     const-string p1, "\u0000\u0007\u0000\u0000\u0001\u0007\u0007\u0000\u0000\u0000\u0001\u0004\u0002\u0004\u0003\u0007\u0004\n\u0005\u0004\u0006\u0004\u0007\u0004"
 
+    .line 11
     sget-object p2, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->DEFAULT_INSTANCE:Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;
 
     invoke-static {p2, p1, p0}, Lcom/google/protobuf/GeneratedMessageLite;->newMessageInfo(Lcom/google/protobuf/MessageLite;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
@@ -793,6 +841,7 @@
 
     return-object p0
 
+    .line 12
     :pswitch_5
     new-instance p0, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam$Builder;
 
@@ -800,6 +849,7 @@
 
     return-object p0
 
+    .line 13
     :pswitch_6
     new-instance p0, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;
 
@@ -822,6 +872,7 @@
 .method public getAdvMode()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->advMode_:I
 
     return p0
@@ -830,6 +881,7 @@
 .method public getAppData()Lcom/google/protobuf/ByteString;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->appData_:Lcom/google/protobuf/ByteString;
 
     return-object p0
@@ -838,6 +890,7 @@
 .method public getCommType()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->commType_:I
 
     return p0
@@ -846,6 +899,7 @@
 .method public getDiscType()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->discType_:I
 
     return p0
@@ -854,6 +908,7 @@
 .method public getUpdateAppData()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->updateAppData_:Z
 
     return p0
@@ -862,6 +917,7 @@
 .method public getUpdateStrategy()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->updateStrategy_:I
 
     return p0
@@ -870,6 +926,7 @@
 .method public getUpdateType()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/idm/compat/proto/IPCParam$UpdateServiceParam;->updateType_:I
 
     return p0

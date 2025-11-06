@@ -22,6 +22,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     const-class v0, Lcom/google/common/io/Flushables;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -40,6 +41,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -53,6 +55,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     invoke-interface {p0}, Ljava/io/Flushable;->flush()V
     :try_end_0
@@ -65,6 +68,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 2
     sget-object p1, Lcom/google/common/io/Flushables;->logger:Ljava/util/logging/Logger;
 
     sget-object v0, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
@@ -76,6 +80,7 @@
     :goto_0
     return-void
 
+    .line 3
     :cond_0
     throw p0
 .end method
@@ -85,6 +90,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     :try_start_0
     invoke-static {p0, v0}, Lcom/google/common/io/Flushables;->flush(Ljava/io/Flushable;Z)V
     :try_end_0
@@ -95,6 +101,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     sget-object v0, Lcom/google/common/io/Flushables;->logger:Ljava/util/logging/Logger;
 
     sget-object v1, Ljava/util/logging/Level;->SEVERE:Ljava/util/logging/Level;

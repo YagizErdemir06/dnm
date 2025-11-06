@@ -1,4 +1,4 @@
-.class Lcom/bumptech/glide/disklrucache/DiskLruCache$1;
+.class public Lcom/bumptech/glide/disklrucache/DiskLruCache$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,13 +27,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/bumptech/glide/disklrucache/DiskLruCache;
+.field public final synthetic this$0:Lcom/bumptech/glide/disklrucache/DiskLruCache;
 
 
 # direct methods
 .method public constructor <init>(Lcom/bumptech/glide/disklrucache/DiskLruCache;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/bumptech/glide/disklrucache/DiskLruCache$1;->this$0:Lcom/bumptech/glide/disklrucache/DiskLruCache;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

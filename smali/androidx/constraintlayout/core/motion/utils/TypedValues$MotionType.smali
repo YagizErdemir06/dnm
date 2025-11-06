@@ -102,6 +102,7 @@
 
     const-string v12, "QuantizeInterpolatorID"
 
+    .line 1
     filled-new-array/range {v0 .. v12}, [Ljava/lang/String;
 
     move-result-object v0
@@ -114,6 +115,7 @@
 .method public static getId(Ljava/lang/String;)I
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I

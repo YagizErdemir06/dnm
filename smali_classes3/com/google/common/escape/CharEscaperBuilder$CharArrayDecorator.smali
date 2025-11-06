@@ -1,4 +1,4 @@
-.class Lcom/google/common/escape/CharEscaperBuilder$CharArrayDecorator;
+.class public Lcom/google/common/escape/CharEscaperBuilder$CharArrayDecorator;
 .super Lcom/google/common/escape/CharEscaper;
 .source "SourceFile"
 
@@ -24,10 +24,13 @@
 .method public constructor <init>([[C)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/escape/CharEscaper;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/escape/CharEscaperBuilder$CharArrayDecorator;->replacements:[[C
 
+    .line 3
     array-length p1, p1
 
     iput p1, p0, Lcom/google/common/escape/CharEscaperBuilder$CharArrayDecorator;->replaceLength:I

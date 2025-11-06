@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/collect/AbstractMapBasedMultiset$Itr;
+.class public abstract Lcom/google/common/collect/AbstractMapBasedMultiset$Itr;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -29,23 +29,25 @@
 
 
 # instance fields
-.field entryIndex:I
+.field public entryIndex:I
 
-.field expectedModCount:I
+.field public expectedModCount:I
 
-.field final synthetic this$0:Lcom/google/common/collect/AbstractMapBasedMultiset;
+.field public final synthetic this$0:Lcom/google/common/collect/AbstractMapBasedMultiset;
 
-.field toRemove:I
+.field public toRemove:I
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/AbstractMapBasedMultiset;)V
     .locals 1
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/AbstractMapBasedMultiset$Itr;->this$0:Lcom/google/common/collect/AbstractMapBasedMultiset;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iget-object v0, p1, Lcom/google/common/collect/AbstractMapBasedMultiset;->backingMap:Lcom/google/common/collect/ObjectCountHashMap;
 
     invoke-virtual {v0}, Lcom/google/common/collect/ObjectCountHashMap;->firstIndex()I
@@ -56,8 +58,10 @@
 
     const/4 v0, -0x1
 
+    .line 3
     iput v0, p0, Lcom/google/common/collect/AbstractMapBasedMultiset$Itr;->toRemove:I
 
+    .line 4
     iget-object p1, p1, Lcom/google/common/collect/AbstractMapBasedMultiset;->backingMap:Lcom/google/common/collect/ObjectCountHashMap;
 
     iget p1, p1, Lcom/google/common/collect/ObjectCountHashMap;->modCount:I
@@ -70,6 +74,7 @@
 .method private checkForConcurrentModification()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/AbstractMapBasedMultiset$Itr;->this$0:Lcom/google/common/collect/AbstractMapBasedMultiset;
 
     iget-object v0, v0, Lcom/google/common/collect/AbstractMapBasedMultiset;->backingMap:Lcom/google/common/collect/ObjectCountHashMap;
@@ -82,6 +87,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/util/ConcurrentModificationException;
 
@@ -95,8 +101,10 @@
 .method public hasNext()Z
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/AbstractMapBasedMultiset$Itr;->checkForConcurrentModification()V
 
+    .line 2
     iget p0, p0, Lcom/google/common/collect/AbstractMapBasedMultiset$Itr;->entryIndex:I
 
     if-ltz p0, :cond_0
@@ -123,22 +131,26 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMapBasedMultiset$Itr;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget v0, p0, Lcom/google/common/collect/AbstractMapBasedMultiset$Itr;->entryIndex:I
 
     invoke-virtual {p0, v0}, Lcom/google/common/collect/AbstractMapBasedMultiset$Itr;->result(I)Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 3
     iget v1, p0, Lcom/google/common/collect/AbstractMapBasedMultiset$Itr;->entryIndex:I
 
     iput v1, p0, Lcom/google/common/collect/AbstractMapBasedMultiset$Itr;->toRemove:I
 
+    .line 4
     iget-object v2, p0, Lcom/google/common/collect/AbstractMapBasedMultiset$Itr;->this$0:Lcom/google/common/collect/AbstractMapBasedMultiset;
 
     iget-object v2, v2, Lcom/google/common/collect/AbstractMapBasedMultiset;->backingMap:Lcom/google/common/collect/ObjectCountHashMap;
@@ -151,6 +163,7 @@
 
     return-object v0
 
+    .line 5
     :cond_0
     new-instance p0, Ljava/util/NoSuchElementException;
 
@@ -162,8 +175,10 @@
 .method public remove()V
     .locals 6
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/AbstractMapBasedMultiset$Itr;->checkForConcurrentModification()V
 
+    .line 2
     iget v0, p0, Lcom/google/common/collect/AbstractMapBasedMultiset$Itr;->toRemove:I
 
     const/4 v1, -0x1
@@ -180,6 +195,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/common/collect/CollectPreconditions;->checkRemove(Z)V
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/collect/AbstractMapBasedMultiset$Itr;->this$0:Lcom/google/common/collect/AbstractMapBasedMultiset;
 
     iget-wide v2, v0, Lcom/google/common/collect/AbstractMapBasedMultiset;->size:J
@@ -198,6 +214,7 @@
 
     iput-wide v2, v0, Lcom/google/common/collect/AbstractMapBasedMultiset;->size:J
 
+    .line 4
     iget-object v0, p0, Lcom/google/common/collect/AbstractMapBasedMultiset$Itr;->this$0:Lcom/google/common/collect/AbstractMapBasedMultiset;
 
     iget-object v0, v0, Lcom/google/common/collect/AbstractMapBasedMultiset;->backingMap:Lcom/google/common/collect/ObjectCountHashMap;
@@ -212,8 +229,10 @@
 
     iput v0, p0, Lcom/google/common/collect/AbstractMapBasedMultiset$Itr;->entryIndex:I
 
+    .line 5
     iput v1, p0, Lcom/google/common/collect/AbstractMapBasedMultiset$Itr;->toRemove:I
 
+    .line 6
     iget-object v0, p0, Lcom/google/common/collect/AbstractMapBasedMultiset$Itr;->this$0:Lcom/google/common/collect/AbstractMapBasedMultiset;
 
     iget-object v0, v0, Lcom/google/common/collect/AbstractMapBasedMultiset;->backingMap:Lcom/google/common/collect/ObjectCountHashMap;

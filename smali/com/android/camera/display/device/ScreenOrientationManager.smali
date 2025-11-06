@@ -4,48 +4,59 @@
 
 
 # static fields
-.field public static final e:I = 0x40000000
+.field public static final g:I = 0x40000000
 
-.field public static final f:I = 0x4
+.field public static final j:I = 0x4
 
-.field public static final g:Ljava/lang/String; = "setInverseDisplayEnable"
+.field public static final m:Ljava/lang/String; = "setInverseDisplayEnable"
 
-.field public static final h:Ljava/lang/String; = "ScreenOrientationManager"
+.field private static final n:Ljava/lang/String; = "ScreenOrientationManager"
 
-.field public static final i:Z
+.field private static final p:Z
 
 
 # instance fields
-.field public d:Z
+.field private s:Z
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     invoke-static {}, Lcom/android/camera/display/device/ScreenOrientationManager;->f()Z
 
     move-result v0
 
-    sput-boolean v0, Lcom/android/camera/display/device/ScreenOrientationManager;->i:Z
+    sput-boolean v0, Lcom/android/camera/display/device/ScreenOrientationManager;->p:Z
 
     return-void
 .end method
 
 .method public constructor <init>(Lcom/android/camera/ActivityBase;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "activity"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;-><init>(Lcom/android/camera/ActivityBase;)V
 
+    .line 2
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo p1, "sSupportSeamless "
+    const-string p1, "sSupportSeamless "
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-boolean p1, Lcom/android/camera/display/device/ScreenOrientationManager;->i:Z
+    sget-boolean p1, Lcom/android/camera/display/device/ScreenOrientationManager;->p:Z
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -64,17 +75,18 @@
     return-void
 .end method
 
-.method public static f()Z
+.method private static f()Z
     .locals 6
 
     const/4 v0, 0x0
 
+    .line 1
     :try_start_0
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lid/b;->n4()Z
+    invoke-virtual {v1}, Ld/k/a/b;->c4()Z
 
     move-result v1
 
@@ -82,10 +94,11 @@
 
     return v0
 
+    .line 2
     :cond_0
     const-class v1, Landroid/view/Surface;
 
-    const-string/jumbo v2, "setInverseDisplayEnable"
+    const-string v2, "setInverseDisplayEnable"
 
     const/4 v3, 0x1
 
@@ -105,29 +118,75 @@
     return v0
 .end method
 
+.method private g()Z
+    .locals 2
+
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->d:Lcom/android/camera/ActivityBase;
+
+    const/4 v0, 0x0
+
+    if-nez p0, :cond_0
+
+    return v0
+
+    .line 2
+    :cond_0
+    invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object p0
+
+    iget p0, p0, Landroid/content/res/Configuration;->smallestScreenWidthDp:I
+
+    const/16 v1, 0x258
+
+    if-lt p0, v1, :cond_1
+
+    const/4 v0, 0x1
+
+    :cond_1
+    return v0
+.end method
+
 .method public static h(Landroid/app/Activity;Z)V
     .locals 8
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isFoldingPhone"
         type = 0x0
     .end annotation
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "activity",
+            "enable"
+        }
+    .end annotation
+
+    .line 1
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lid/b;->c3()Z
+    invoke-virtual {v0}, Ld/k/a/b;->V2()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lid/b;->m4()Z
+    invoke-virtual {v0}, Ld/k/a/b;->b4()Z
 
     move-result v0
 
@@ -135,6 +194,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -160,17 +220,19 @@
 
     xor-int/lit8 v0, p1, 0x1
 
+    .line 3
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
 
-    const-string/jumbo v4, "setOrientationOptions"
+    const-string v4, "setOrientationOptions"
 
     const/4 v5, 0x1
 
     new-array v6, v5, [Ljava/lang/Class;
 
+    .line 4
     sget-object v7, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     aput-object v7, v6, v1
@@ -179,10 +241,12 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, v5}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    .line 5
+    invoke-virtual {v2, v5}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
     new-array v4, v5, [Ljava/lang/Object;
 
+    .line 6
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -198,8 +262,10 @@
     :catch_0
     move-exception p0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 7
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
+    .line 8
     :goto_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -222,16 +288,87 @@
     return-void
 .end method
 
+.method private i()V
+    .locals 4
+
+    .line 1
+    invoke-static {}, Lcom/android/camera/display/device/ScreenOrientationManager;->l()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->d:Lcom/android/camera/ActivityBase;
+
+    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
+
+    move-result-object v0
+
+    .line 3
+    :try_start_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    const-string v2, "extraFlags"
+
+    invoke-virtual {v1, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v1
+
+    .line 4
+    invoke-virtual {v1, v0}, Ljava/lang/reflect/Field;->getInt(Ljava/lang/Object;)I
+
+    move-result v2
+
+    const/high16 v3, 0x40000000    # 2.0f
+
+    or-int/2addr v2, v3
+
+    .line 5
+    invoke-virtual {v1, v0, v2}, Ljava/lang/reflect/Field;->setInt(Ljava/lang/Object;I)V
+
+    .line 6
+    iget-object p0, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->d:Lcom/android/camera/ActivityBase;
+
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object p0
+
+    invoke-virtual {p0, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p0
+
+    .line 7
+    invoke-virtual {p0}, Ljava/lang/ReflectiveOperationException;->printStackTrace()V
+
+    :cond_0
+    :goto_0
+    return-void
+.end method
+
 .method public static j()Z
     .locals 1
 
+    .line 1
     invoke-static {}, Lcom/android/camera/display/device/ScreenOrientationManager;->l()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-static {}, Ly2/b;->F0()Z
+    invoke-static {}, Ld/d/a/n6/b;->F0()Z
 
     move-result v0
 
@@ -250,14 +387,23 @@
 
 .method public static k(Landroid/view/SurfaceView;)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "surfaceView"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {}, Lcom/android/camera/display/device/ScreenOrientationManager;->l()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-static {}, Ly2/b;->O0()Z
+    invoke-static {}, Ld/d/a/n6/b;->O0()Z
 
     move-result v0
 
@@ -265,6 +411,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Landroid/view/SurfaceView;->getHolder()Landroid/view/SurfaceHolder;
 
@@ -274,10 +421,11 @@
 
     move-result-object p0
 
+    .line 3
     :try_start_0
     const-class v0, Landroid/view/Surface;
 
-    const-string/jumbo v1, "setInverseDisplayEnable"
+    const-string v1, "setInverseDisplayEnable"
 
     const/4 v2, 0x1
 
@@ -295,6 +443,7 @@
 
     new-array v1, v2, [Ljava/lang/Object;
 
+    .line 4
     sget-object v2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     aput-object v2, v1, v5
@@ -310,7 +459,8 @@
     :catch_0
     move-exception p0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 5
+    invoke-virtual {p0}, Ljava/lang/ReflectiveOperationException;->printStackTrace()V
 
     :cond_1
     :goto_0
@@ -320,14 +470,26 @@
 .method public static l()Z
     .locals 1
 
-    sget-boolean v0, Lcom/android/camera/display/device/ScreenOrientationManager;->i:Z
+    .line 1
+    sget-boolean v0, Lcom/android/camera/display/device/ScreenOrientationManager;->p:Z
 
     return v0
 .end method
 
 .method public static m(Landroid/view/View;Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "view",
+            "event"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getDisplay()Landroid/view/Display;
 
     move-result-object v0
@@ -350,11 +512,13 @@
 
     return-object p1
 
+    .line 2
     :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v0
 
+    .line 3
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result p0
@@ -367,6 +531,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
@@ -380,6 +545,7 @@
 
     sub-float/2addr v0, v1
 
+    .line 5
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result p0
@@ -395,6 +561,7 @@
 
     goto :goto_1
 
+    .line 6
     :cond_2
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
@@ -408,15 +575,18 @@
 
     sub-float v0, p0, v0
 
+    .line 7
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result p0
 
+    .line 8
     :goto_1
     invoke-static {p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
     move-result-object p1
 
+    .line 9
     invoke-virtual {p1, v0, p0}, Landroid/view/MotionEvent;->setLocation(FF)V
 
     return-object p1
@@ -424,17 +594,33 @@
 
 .method public static n(Landroid/graphics/Rect;ILandroid/graphics/Point;)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "displayBounds",
+            "displayRotation",
+            "point"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/graphics/Rect;->width()I
 
     move-result v0
 
+    .line 2
     invoke-virtual {p0}, Landroid/graphics/Rect;->height()I
 
     move-result p0
 
+    .line 3
     iget v1, p2, Landroid/graphics/Point;->x:I
 
+    .line 4
     iget v2, p2, Landroid/graphics/Point;->y:I
 
     const/16 v3, 0x5a
@@ -478,6 +664,7 @@
 
     move p0, v4
 
+    .line 5
     :goto_0
     invoke-virtual {p2, v1, p0}, Landroid/graphics/Point;->set(II)V
 
@@ -486,17 +673,33 @@
 
 .method public static o(Landroid/graphics/RectF;ILandroid/graphics/PointF;)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "displayBounds",
+            "displayRotation",
+            "pointF"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/graphics/RectF;->width()F
 
     move-result v0
 
+    .line 2
     invoke-virtual {p0}, Landroid/graphics/RectF;->height()F
 
     move-result p0
 
+    .line 3
     iget v1, p2, Landroid/graphics/PointF;->x:F
 
+    .line 4
     iget v2, p2, Landroid/graphics/PointF;->y:F
 
     const/16 v3, 0x5a
@@ -538,6 +741,7 @@
 
     move v1, v0
 
+    .line 5
     :goto_0
     invoke-virtual {p2, v1, p0}, Landroid/graphics/PointF;->set(FF)V
 
@@ -546,7 +750,18 @@
 
 .method public static p(Landroid/graphics/Rect;I)Landroid/graphics/Rect;
     .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "previewRect",
+            "rotation"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -575,7 +790,8 @@
 
     invoke-static {v3, v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {}, Ly2/b;->O0()Z
+    .line 2
+    invoke-static {}, Ld/d/a/n6/b;->O0()Z
 
     move-result v0
 
@@ -583,15 +799,18 @@
 
     return-object p0
 
+    .line 3
     :cond_0
-    invoke-static {}, Ly2/b;->G()I
+    invoke-static {}, Ld/d/a/n6/b;->G()I
 
     move-result v0
 
-    invoke-static {}, Ly2/b;->B()I
+    .line 4
+    invoke-static {}, Ld/d/a/n6/b;->B()I
 
     move-result v2
 
+    .line 5
     new-instance v4, Landroid/graphics/Rect;
 
     invoke-direct {v4}, Landroid/graphics/Rect;-><init>()V
@@ -612,6 +831,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_1
     iget p1, p0, Landroid/graphics/Rect;->bottom:I
 
@@ -629,6 +849,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_2
     iget p1, p0, Landroid/graphics/Rect;->right:I
 
@@ -650,6 +871,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_3
     iget p1, p0, Landroid/graphics/Rect;->top:I
 
@@ -667,9 +889,11 @@
 
     goto :goto_0
 
+    .line 9
     :cond_4
     invoke-virtual {v4, p0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
+    .line 10
     :goto_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -694,13 +918,27 @@
 
 .method public static q(Landroid/graphics/Rect;II)Landroid/graphics/Rect;
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "previewRect",
+            "startRotation",
+            "endRotation"
+        }
+    .end annotation
 
     sub-int/2addr p2, p1
 
     add-int/lit16 p2, p2, 0x168
 
+    .line 1
     rem-int/lit16 p2, p2, 0x168
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -729,7 +967,8 @@
 
     invoke-static {v3, v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {}, Ly2/b;->O0()Z
+    .line 3
+    invoke-static {}, Ld/d/a/n6/b;->O0()Z
 
     move-result v0
 
@@ -760,31 +999,34 @@
     :goto_1
     if-eqz p1, :cond_3
 
-    invoke-static {}, Ly2/b;->B()I
+    .line 4
+    invoke-static {}, Ld/d/a/n6/b;->B()I
 
     move-result v4
 
     goto :goto_2
 
     :cond_3
-    invoke-static {}, Ly2/b;->G()I
+    invoke-static {}, Ld/d/a/n6/b;->G()I
 
     move-result v4
 
     :goto_2
     if-eqz p1, :cond_4
 
-    invoke-static {}, Ly2/b;->G()I
+    .line 5
+    invoke-static {}, Ld/d/a/n6/b;->G()I
 
     move-result p1
 
     goto :goto_3
 
     :cond_4
-    invoke-static {}, Ly2/b;->B()I
+    invoke-static {}, Ld/d/a/n6/b;->B()I
 
     move-result p1
 
+    .line 6
     :goto_3
     new-instance v5, Landroid/graphics/Rect;
 
@@ -802,6 +1044,7 @@
 
     goto :goto_4
 
+    .line 7
     :cond_5
     iget p2, p0, Landroid/graphics/Rect;->bottom:I
 
@@ -819,6 +1062,7 @@
 
     goto :goto_4
 
+    .line 8
     :cond_6
     iget p2, p0, Landroid/graphics/Rect;->right:I
 
@@ -840,6 +1084,7 @@
 
     goto :goto_4
 
+    .line 9
     :cond_7
     iget p1, p0, Landroid/graphics/Rect;->top:I
 
@@ -857,9 +1102,11 @@
 
     goto :goto_4
 
+    .line 10
     :cond_8
     invoke-virtual {v5, p0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
+    .line 11
     :goto_4
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -884,14 +1131,25 @@
 
 .method public static r(II)Landroid/graphics/Point;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "w",
+            "h"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {}, Lcom/android/camera/display/device/ScreenOrientationManager;->l()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    invoke-static {}, Ly2/b;->O0()Z
+    invoke-static {}, Ld/d/a/n6/b;->O0()Z
 
     move-result v0
 
@@ -908,6 +1166,7 @@
 
     move p0, v1
 
+    .line 2
     :cond_1
     new-instance v0, Landroid/graphics/Point;
 
@@ -915,6 +1174,7 @@
 
     return-object v0
 
+    .line 3
     :cond_2
     :goto_0
     new-instance v0, Landroid/graphics/Point;
@@ -926,14 +1186,25 @@
 
 .method public static s(FF)Landroid/graphics/PointF;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "w",
+            "h"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {}, Lcom/android/camera/display/device/ScreenOrientationManager;->l()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    invoke-static {}, Ly2/b;->O0()Z
+    invoke-static {}, Ld/d/a/n6/b;->O0()Z
 
     move-result v0
 
@@ -952,6 +1223,7 @@
 
     move p0, v1
 
+    .line 2
     :cond_1
     new-instance v0, Landroid/graphics/PointF;
 
@@ -959,6 +1231,7 @@
 
     return-object v0
 
+    .line 3
     :cond_2
     :goto_0
     new-instance v0, Landroid/graphics/PointF;
@@ -970,14 +1243,25 @@
 
 .method public static t([FI)V
     .locals 9
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "matrix",
+            "rotation"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {}, Lcom/android/camera/display/device/ScreenOrientationManager;->l()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Ly2/b;->O0()Z
+    invoke-static {}, Ld/d/a/n6/b;->O0()Z
 
     move-result v0
 
@@ -989,6 +1273,7 @@
 
     const/4 v2, 0x0
 
+    .line 2
     invoke-static {p0, v0, v1, v1, v2}, Landroid/opengl/Matrix;->translateM([FIFFF)V
 
     const/4 v4, 0x0
@@ -1003,10 +1288,12 @@
 
     move-object v3, p0
 
+    .line 3
     invoke-static/range {v3 .. v8}, Landroid/opengl/Matrix;->rotateM([FIFFFF)V
 
     const/high16 p1, -0x41000000    # -0.5f
 
+    .line 4
     invoke-static {p0, v0, p1, p1, v2}, Landroid/opengl/Matrix;->translateM([FIFFF)V
 
     :cond_0
@@ -1016,58 +1303,64 @@
 
 # virtual methods
 .method public e(Landroid/content/res/Configuration;)Z
-    .locals 7
+    .locals 4
     .param p1    # Landroid/content/res/Configuration;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "newConfig"
+        }
+    .end annotation
 
-    iget-object p1, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->a:Lcom/android/camera/ActivityBase;
+    .line 1
+    iget-object p1, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->d:Lcom/android/camera/ActivityBase;
 
-    invoke-virtual {p1}, Lcom/android/camera/ActivityBase;->z2()Lq7/v4;
+    invoke-virtual {p1}, Lcom/android/camera/ActivityBase;->N1()Ld/d/a/d7/z7;
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->a:Lcom/android/camera/ActivityBase;
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->d:Lcom/android/camera/ActivityBase;
 
-    invoke-static {v0}, Lcom/android/camera/a6;->y(Landroid/app/Activity;)V
+    invoke-static {v0}, Ld/d/a/z5;->q(Landroid/app/Activity;)V
 
-    new-instance v0, Lc8/q;
+    .line 3
+    new-instance v0, Ld/d/a/d7/o8/b/v;
 
-    iget-object v1, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->a:Lcom/android/camera/ActivityBase;
+    invoke-interface {p1}, Ld/d/a/d7/z7;->U()I
 
-    invoke-virtual {v1}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
+    move-result v1
 
-    move-result-object v2
+    iget-object p0, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->d:Lcom/android/camera/ActivityBase;
 
-    invoke-interface {p1}, Lq7/v4;->U()I
-
-    move-result v3
-
-    const/4 v4, 0x2
-
-    const/4 v5, 0x0
-
-    iget-object p0, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->a:Lcom/android/camera/ActivityBase;
-
+    .line 4
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
-    move-result-object v6
+    move-result-object p0
 
-    move-object v1, v0
+    const/4 v2, 0x2
 
-    invoke-direct/range {v1 .. v6}, Lc8/q;-><init>(Landroid/content/Context;IILcom/android/camera/ui/a1;Landroid/content/Intent;)V
+    const/4 v3, 0x0
 
-    new-instance p0, Lb8/j;
+    invoke-direct {v0, v1, v2, v3, p0}, Ld/d/a/d7/o8/b/v;-><init>(IILd/d/a/d8/x1;Landroid/content/Intent;)V
 
-    invoke-interface {p1}, Lq7/v4;->U()I
+    .line 5
+    new-instance p0, Ld/d/a/d7/o8/a/j;
+
+    invoke-interface {p1}, Ld/d/a/d7/z7;->U()I
 
     move-result v1
 
     const/4 v2, 0x4
 
-    invoke-direct {p0, v1, v2}, Lb8/j;-><init>(II)V
+    invoke-direct {p0, v1, v2}, Ld/d/a/d7/o8/a/j;-><init>(II)V
 
+    .line 6
     :try_start_0
     invoke-static {v0}, Lio/reactivex/Completable;->create(Lio/reactivex/CompletableOnSubscribe;)Lio/reactivex/Completable;
 
@@ -1075,7 +1368,8 @@
 
     invoke-virtual {v0}, Lio/reactivex/Completable;->subscribe()Lio/reactivex/disposables/Disposable;
 
-    invoke-static {p1}, Lb8/p;->e(Ljava/lang/Object;)Lb8/p;
+    .line 7
+    invoke-static {p1}, Ld/d/a/d7/o8/a/p;->e(Ljava/lang/Object;)Ld/d/a/d7/o8/a/p;
 
     move-result-object p1
 
@@ -1083,10 +1377,12 @@
 
     move-result-object p1
 
+    .line 8
     invoke-virtual {p1, p0}, Lio/reactivex/Single;->map(Lio/reactivex/functions/Function;)Lio/reactivex/Single;
 
     move-result-object p0
 
+    .line 9
     invoke-virtual {p0}, Lio/reactivex/Single;->subscribe()Lio/reactivex/disposables/Disposable;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -1098,124 +1394,34 @@
     :catch_0
     move-exception p0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 10
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 p0, 0x0
 
     return p0
 .end method
 
-.method public final g()Z
-    .locals 2
-
-    iget-object p0, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->a:Lcom/android/camera/ActivityBase;
-
-    const/4 v0, 0x0
-
-    if-nez p0, :cond_0
-
-    return v0
-
-    :cond_0
-    invoke-virtual {p0}, Landroid/view/ContextThemeWrapper;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object p0
-
-    iget p0, p0, Landroid/content/res/Configuration;->smallestScreenWidthDp:I
-
-    const/16 v1, 0x258
-
-    if-lt p0, v1, :cond_1
-
-    const/4 v0, 0x1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final i()V
-    .locals 4
-
-    invoke-static {}, Lcom/android/camera/display/device/ScreenOrientationManager;->l()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->a:Lcom/android/camera/ActivityBase;
-
-    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
-
-    move-result-object v0
-
-    :try_start_0
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    const-string v2, "extraFlags"
-
-    invoke-virtual {v1, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Ljava/lang/reflect/Field;->getInt(Ljava/lang/Object;)I
-
-    move-result v2
-
-    const/high16 v3, 0x40000000    # 2.0f
-
-    or-int/2addr v2, v3
-
-    invoke-virtual {v1, v0, v2}, Ljava/lang/reflect/Field;->setInt(Ljava/lang/Object;I)V
-
-    iget-object p0, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->a:Lcom/android/camera/ActivityBase;
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p0
-
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
-
-    :cond_0
-    :goto_0
-    return-void
-.end method
-
 .method public onCreate()V
     .locals 3
 
+    .line 1
     invoke-super {p0}, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->onCreate()V
 
-    invoke-virtual {p0}, Lcom/android/camera/display/device/ScreenOrientationManager;->i()V
+    .line 2
+    invoke-direct {p0}, Lcom/android/camera/display/device/ScreenOrientationManager;->i()V
 
-    invoke-virtual {p0}, Lcom/android/camera/display/device/ScreenOrientationManager;->g()Z
+    .line 3
+    invoke-direct {p0}, Lcom/android/camera/display/device/ScreenOrientationManager;->g()Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/camera/display/device/ScreenOrientationManager;->d:Z
+    iput-boolean v0, p0, Lcom/android/camera/display/device/ScreenOrientationManager;->s:Z
 
     if-nez v0, :cond_0
 
-    iget-object v1, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->b:Landroid/content/res/Configuration;
+    .line 4
+    iget-object v1, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->f:Landroid/content/res/Configuration;
 
     iget v1, v1, Landroid/content/res/Configuration;->orientation:I
 
@@ -1223,7 +1429,8 @@
 
     if-eq v1, v2, :cond_0
 
-    iget-object p0, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->a:Lcom/android/camera/ActivityBase;
+    .line 5
+    iget-object p0, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->d:Lcom/android/camera/ActivityBase;
 
     invoke-virtual {p0, v2}, Lcom/android/camera/ActivityBase;->setRequestedOrientation(I)V
 
@@ -1232,17 +1439,19 @@
     :cond_0
     if-eqz v0, :cond_1
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 6
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lid/b;->c3()Z
+    invoke-virtual {v0}, Ld/k/a/b;->V2()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    iget-object p0, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->a:Lcom/android/camera/ActivityBase;
+    .line 7
+    iget-object p0, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->d:Lcom/android/camera/ActivityBase;
 
     const/4 v0, 0x4
 
@@ -1256,19 +1465,22 @@
 .method public onDestroy()V
     .locals 1
 
+    .line 1
     invoke-super {p0}, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->onDestroy()V
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 2
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lid/b;->c3()Z
+    invoke-virtual {v0}, Ld/k/a/b;->V2()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->a:Lcom/android/camera/ActivityBase;
+    .line 3
+    iget-object p0, p0, Lcom/android/camera/display/manager/ExtraModuleManagerImpl;->d:Lcom/android/camera/ActivityBase;
 
     const/4 v0, 0x1
 

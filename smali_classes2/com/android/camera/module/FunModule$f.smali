@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ls7/d$a;
+.implements Ld/d/a/d7/j8/d$a;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field public a:Ljava/lang/ref/WeakReference;
+.field private a:Ljava/lang/ref/WeakReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference<",
@@ -32,9 +32,19 @@
 # direct methods
 .method public constructor <init>(Lcom/android/camera/module/FunModule;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "module"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -46,10 +56,21 @@
 
 
 # virtual methods
-.method public a(Ls7/d;Z)V
+.method public d(Ld/d/a/d7/j8/d;Z)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x10,
+            0x0
+        }
+        names = {
+            "encoder",
+            "muxerStopped"
+        }
+    .end annotation
 
-    sget-object v0, Lq7/b6;->p7:Ljava/lang/String;
+    .line 1
+    sget-object v0, Ld/d/a/d7/e8;->d9:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -69,9 +90,10 @@
 
     if-eqz p2, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera/module/FunModule$f;->a:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -81,7 +103,8 @@
 
     const/4 p1, 0x1
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/module/FunModule;->Cm(Z)V
+    .line 3
+    invoke-virtual {p0, p1}, Lcom/android/camera/module/FunModule;->Kl(Z)V
 
     :cond_0
     return-void

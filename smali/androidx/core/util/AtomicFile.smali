@@ -23,10 +23,13 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/core/util/AtomicFile;->mBaseName:Ljava/io/File;
 
+    .line 3
     new-instance v0, Ljava/io/File;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -51,6 +54,7 @@
 
     iput-object v0, p0, Landroidx/core/util/AtomicFile;->mNewName:Ljava/io/File;
 
+    .line 4
     new-instance v0, Ljava/io/File;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -89,6 +93,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p1}, Ljava/io/File;->isDirectory()Z
 
     move-result v0
@@ -97,12 +102,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p1}, Ljava/io/File;->delete()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -119,6 +126,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 4
     :cond_0
     invoke-virtual {p0, p1}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
@@ -126,6 +134,7 @@
 
     if-nez v0, :cond_1
 
+    .line 5
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -159,6 +168,7 @@
         .end annotation
     .end param
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
 
@@ -183,14 +193,17 @@
 .method public delete()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/core/util/AtomicFile;->mBaseName:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
+    .line 2
     iget-object v0, p0, Landroidx/core/util/AtomicFile;->mNewName:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
+    .line 3
     iget-object p0, p0, Landroidx/core/util/AtomicFile;->mLegacyBackupName:Ljava/io/File;
 
     invoke-virtual {p0}, Ljava/io/File;->delete()Z
@@ -209,6 +222,7 @@
 
     return-void
 
+    .line 1
     :cond_0
     invoke-static {p1}, Landroidx/core/util/AtomicFile;->sync(Ljava/io/FileOutputStream;)Z
 
@@ -220,8 +234,10 @@
 
     const-string v0, "Failed to sync file output stream"
 
+    .line 2
     invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 3
     :cond_1
     :try_start_0
     invoke-virtual {p1}, Ljava/io/FileOutputStream;->close()V
@@ -235,8 +251,10 @@
 
     const-string v0, "Failed to close file output stream"
 
+    .line 4
     invoke-static {v1, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 5
     :goto_0
     iget-object p1, p0, Landroidx/core/util/AtomicFile;->mNewName:Ljava/io/File;
 
@@ -246,6 +264,7 @@
 
     if-nez p1, :cond_2
 
+    .line 6
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -279,6 +298,7 @@
 
     return-void
 
+    .line 1
     :cond_0
     invoke-static {p1}, Landroidx/core/util/AtomicFile;->sync(Ljava/io/FileOutputStream;)Z
 
@@ -290,8 +310,10 @@
 
     const-string v0, "Failed to sync file output stream"
 
+    .line 2
     invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 3
     :cond_1
     :try_start_0
     invoke-virtual {p1}, Ljava/io/FileOutputStream;->close()V
@@ -305,8 +327,10 @@
 
     const-string v0, "Failed to close file output stream"
 
+    .line 4
     invoke-static {v1, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 5
     :goto_0
     iget-object p1, p0, Landroidx/core/util/AtomicFile;->mNewName:Ljava/io/File;
 
@@ -322,6 +346,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/util/AtomicFile;->mBaseName:Ljava/io/File;
 
     return-object p0
@@ -338,6 +363,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/core/util/AtomicFile;->mLegacyBackupName:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
@@ -346,12 +372,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Landroidx/core/util/AtomicFile;->mLegacyBackupName:Ljava/io/File;
 
     iget-object v1, p0, Landroidx/core/util/AtomicFile;->mBaseName:Ljava/io/File;
 
     invoke-static {v0, v1}, Landroidx/core/util/AtomicFile;->rename(Ljava/io/File;Ljava/io/File;)V
 
+    .line 3
     :cond_0
     iget-object v0, p0, Landroidx/core/util/AtomicFile;->mNewName:Ljava/io/File;
 
@@ -369,6 +397,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     iget-object v0, p0, Landroidx/core/util/AtomicFile;->mNewName:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
@@ -377,6 +406,7 @@
 
     if-nez v0, :cond_1
 
+    .line 5
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -397,6 +427,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 6
     :cond_1
     new-instance v0, Ljava/io/FileInputStream;
 
@@ -418,21 +449,25 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroidx/core/util/AtomicFile;->openRead()Ljava/io/FileInputStream;
 
     move-result-object p0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Ljava/io/FileInputStream;->available()I
 
     move-result v0
 
+    .line 3
     new-array v0, v0, [B
 
     const/4 v1, 0x0
 
     move v2, v1
 
+    .line 4
     :cond_0
     :goto_0
     array-length v3, v0
@@ -447,6 +482,7 @@
 
     if-gtz v3, :cond_1
 
+    .line 5
     invoke-virtual {p0}, Ljava/io/FileInputStream;->close()V
 
     return-object v0
@@ -454,11 +490,13 @@
     :cond_1
     add-int/2addr v2, v3
 
+    .line 6
     :try_start_1
     invoke-virtual {p0}, Ljava/io/FileInputStream;->available()I
 
     move-result v3
 
+    .line 7
     array-length v4, v0
 
     sub-int/2addr v4, v2
@@ -467,8 +505,10 @@
 
     add-int/2addr v3, v2
 
+    .line 8
     new-array v3, v3, [B
 
+    .line 9
     invoke-static {v0, v1, v3, v1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -480,8 +520,10 @@
     :catchall_0
     move-exception v0
 
+    .line 10
     invoke-virtual {p0}, Ljava/io/FileInputStream;->close()V
 
+    .line 11
     throw v0
 .end method
 
@@ -496,6 +538,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/core/util/AtomicFile;->mLegacyBackupName:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
@@ -504,12 +547,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Landroidx/core/util/AtomicFile;->mLegacyBackupName:Ljava/io/File;
 
     iget-object v1, p0, Landroidx/core/util/AtomicFile;->mBaseName:Ljava/io/File;
 
     invoke-static {v0, v1}, Landroidx/core/util/AtomicFile;->rename(Ljava/io/File;Ljava/io/File;)V
 
+    .line 3
     :cond_0
     :try_start_0
     new-instance v0, Ljava/io/FileOutputStream;
@@ -522,6 +567,7 @@
 
     return-object v0
 
+    .line 4
     :catch_0
     iget-object v0, p0, Landroidx/core/util/AtomicFile;->mNewName:Ljava/io/File;
 
@@ -529,12 +575,14 @@
 
     move-result-object v0
 
+    .line 5
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 6
     :try_start_1
     new-instance v0, Ljava/io/FileOutputStream;
 
@@ -549,6 +597,7 @@
     :catch_1
     move-exception v0
 
+    .line 7
     new-instance v1, Ljava/io/IOException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -571,6 +620,7 @@
 
     throw v1
 
+    .line 8
     :cond_1
     new-instance v0, Ljava/io/IOException;
 

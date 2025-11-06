@@ -26,7 +26,7 @@
 # instance fields
 .field private final mAngle:I
 
-.field protected mDirection:I
+.field public mDirection:I
 
 .field private final mInputHeight:I
 
@@ -42,23 +42,49 @@
 # direct methods
 .method public constructor <init>(IIIIFI)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "mInputWidth",
+            "mInputHeight",
+            "mMaxWidth",
+            "mMaxHeight",
+            "mScale",
+            "mAngle"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
+    .line 2
     iput v0, p0, Lcom/android/camera/panorama/direction/DirectionFunction;->mDirection:I
 
+    .line 3
     iput p1, p0, Lcom/android/camera/panorama/direction/DirectionFunction;->mInputWidth:I
 
+    .line 4
     iput p2, p0, Lcom/android/camera/panorama/direction/DirectionFunction;->mInputHeight:I
 
+    .line 5
     iput p5, p0, Lcom/android/camera/panorama/direction/DirectionFunction;->mScale:F
 
+    .line 6
     iput p6, p0, Lcom/android/camera/panorama/direction/DirectionFunction;->mAngle:I
 
+    .line 7
     iput p3, p0, Lcom/android/camera/panorama/direction/DirectionFunction;->mMaxWidth:I
 
+    .line 8
     iput p4, p0, Lcom/android/camera/panorama/direction/DirectionFunction;->mMaxHeight:I
 
     return-void
@@ -76,9 +102,10 @@
 
 .method public getAngle()I
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .line 1
     iget p0, p0, Lcom/android/camera/panorama/direction/DirectionFunction;->mAngle:I
 
     return p0
@@ -87,6 +114,7 @@
 .method public getDirection()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera/panorama/direction/DirectionFunction;->mDirection:I
 
     return p0
@@ -94,9 +122,10 @@
 
 .method public getHorizontalPreviewSize()Landroid/util/Size;
     .locals 4
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/android/camera/panorama/direction/DirectionFunction;->mMaxWidth:I
 
     int-to-float v0, v0
@@ -107,6 +136,7 @@
 
     float-to-int v0, v0
 
+    .line 2
     iget v2, p0, Lcom/android/camera/panorama/direction/DirectionFunction;->mAngle:I
 
     const/16 v3, 0x5a
@@ -119,11 +149,13 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget p0, p0, Lcom/android/camera/panorama/direction/DirectionFunction;->mInputHeight:I
 
     goto :goto_1
 
+    .line 4
     :cond_1
     :goto_0
     iget p0, p0, Lcom/android/camera/panorama/direction/DirectionFunction;->mInputWidth:I
@@ -139,6 +171,7 @@
 
     and-int/lit8 p0, p0, -0x2
 
+    .line 5
     new-instance v1, Landroid/util/Size;
 
     invoke-direct {v1, v0, p0}, Landroid/util/Size;-><init>(II)V
@@ -148,9 +181,10 @@
 
 .method public getPreviewSize()Landroid/util/Size;
     .locals 2
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .line 1
     new-instance v0, Landroid/util/Size;
 
     iget v1, p0, Lcom/android/camera/panorama/direction/DirectionFunction;->mInputWidth:I
@@ -164,9 +198,10 @@
 
 .method public getScale()F
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .line 1
     iget p0, p0, Lcom/android/camera/panorama/direction/DirectionFunction;->mScale:F
 
     return p0
@@ -174,9 +209,10 @@
 
 .method public getVerticalPreviewSize()Landroid/util/Size;
     .locals 4
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/android/camera/panorama/direction/DirectionFunction;->mMaxHeight:I
 
     int-to-float v0, v0
@@ -187,6 +223,7 @@
 
     float-to-int v0, v0
 
+    .line 2
     iget v2, p0, Lcom/android/camera/panorama/direction/DirectionFunction;->mAngle:I
 
     const/16 v3, 0x5a
@@ -199,11 +236,13 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget p0, p0, Lcom/android/camera/panorama/direction/DirectionFunction;->mInputWidth:I
 
     goto :goto_1
 
+    .line 4
     :cond_1
     :goto_0
     iget p0, p0, Lcom/android/camera/panorama/direction/DirectionFunction;->mInputHeight:I
@@ -219,6 +258,7 @@
 
     and-int/lit8 v0, v0, -0x2
 
+    .line 5
     new-instance v1, Landroid/util/Size;
 
     invoke-direct {v1, p0, v0}, Landroid/util/Size;-><init>(II)V

@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/AbstractMapBasedMultimap$1;
+.class public Lcom/google/common/collect/AbstractMapBasedMultimap$1;
 .super Lcom/google/common/collect/AbstractMapBasedMultimap$Itr;
 .source "SourceFile"
 
@@ -25,6 +25,7 @@
 .method public constructor <init>(Lcom/google/common/collect/AbstractMapBasedMultimap;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/AbstractMapBasedMultimap$Itr;-><init>(Lcom/google/common/collect/AbstractMapBasedMultimap;)V
 
     return-void

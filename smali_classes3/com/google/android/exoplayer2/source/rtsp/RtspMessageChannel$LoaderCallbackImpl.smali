@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel$LoaderCallbackImpl;
+.class public final Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel$LoaderCallbackImpl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;
+.field public final synthetic this$0:Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel;
 
 
 # direct methods
@@ -62,6 +62,7 @@
 .method public bridge synthetic onLoadCanceled(Lcom/google/android/exoplayer2/upstream/Loader$Loadable;JJZ)V
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel$Receiver;
 
     invoke-virtual/range {p0 .. p6}, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel$LoaderCallbackImpl;->onLoadCanceled(Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel$Receiver;JJZ)V
@@ -78,6 +79,7 @@
 .method public bridge synthetic onLoadCompleted(Lcom/google/android/exoplayer2/upstream/Loader$Loadable;JJ)V
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel$Receiver;
 
     invoke-virtual/range {p0 .. p5}, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel$LoaderCallbackImpl;->onLoadCompleted(Lcom/google/android/exoplayer2/source/rtsp/RtspMessageChannel$Receiver;JJ)V

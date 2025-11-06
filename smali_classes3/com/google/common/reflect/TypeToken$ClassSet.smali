@@ -1,4 +1,4 @@
-.class final Lcom/google/common/reflect/TypeToken$ClassSet;
+.class public final Lcom/google/common/reflect/TypeToken$ClassSet;
 .super Lcom/google/common/reflect/TypeToken$TypeSet;
 .source "SourceFile"
 
@@ -39,7 +39,7 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Lcom/google/common/reflect/TypeToken;
+.field public final synthetic this$0:Lcom/google/common/reflect/TypeToken;
 
 
 # direct methods
@@ -66,6 +66,7 @@
 .method private readResolve()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/TypeToken$ClassSet;->this$0:Lcom/google/common/reflect/TypeToken;
 
     invoke-virtual {p0}, Lcom/google/common/reflect/TypeToken;->getTypes()Lcom/google/common/reflect/TypeToken$TypeSet;
@@ -179,6 +180,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string v0, "classes().interfaces() not supported."
@@ -199,8 +201,10 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/common/reflect/TypeToken$TypeCollector;->FOR_RAW_TYPE:Lcom/google/common/reflect/TypeToken$TypeCollector;
 
+    .line 2
     invoke-virtual {v0}, Lcom/google/common/reflect/TypeToken$TypeCollector;->classesOnly()Lcom/google/common/reflect/TypeToken$TypeCollector;
 
     move-result-object v0
@@ -215,6 +219,7 @@
 
     move-result-object p0
 
+    .line 3
     invoke-static {p0}, Lcom/google/common/collect/ImmutableSet;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p0

@@ -1,4 +1,4 @@
-.class Landroidx/core/location/GpsStatusWrapper;
+.class public Landroidx/core/location/GpsStatusWrapper;
 .super Landroidx/core/location/GnssStatusCompat;
 .source "SourceFile"
 
@@ -75,8 +75,10 @@
 .method public constructor <init>(Landroid/location/GpsStatus;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Landroidx/core/location/GnssStatusCompat;-><init>()V
 
+    .line 2
     invoke-static {p1}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -87,8 +89,10 @@
 
     const/4 v0, -0x1
 
+    .line 3
     iput v0, p0, Landroidx/core/location/GpsStatusWrapper;->mCachedSatelliteCount:I
 
+    .line 4
     invoke-virtual {p1}, Landroid/location/GpsStatus;->getSatellites()Ljava/lang/Iterable;
 
     move-result-object p1
@@ -99,10 +103,12 @@
 
     iput-object p1, p0, Landroidx/core/location/GpsStatusWrapper;->mCachedIterator:Ljava/util/Iterator;
 
+    .line 5
     iput v0, p0, Landroidx/core/location/GpsStatusWrapper;->mCachedIteratorPosition:I
 
     const/4 p1, 0x0
 
+    .line 6
     iput-object p1, p0, Landroidx/core/location/GpsStatusWrapper;->mCachedSatellite:Landroid/location/GpsSatellite;
 
     return-void
@@ -178,15 +184,18 @@
 .method private getSatellite(I)Landroid/location/GpsSatellite;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/core/location/GpsStatusWrapper;->mWrapped:Landroid/location/GpsStatus;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget v1, p0, Landroidx/core/location/GpsStatusWrapper;->mCachedIteratorPosition:I
 
     if-ge p1, v1, :cond_0
 
+    .line 3
     iget-object v1, p0, Landroidx/core/location/GpsStatusWrapper;->mWrapped:Landroid/location/GpsStatus;
 
     invoke-virtual {v1}, Landroid/location/GpsStatus;->getSatellites()Ljava/lang/Iterable;
@@ -201,8 +210,10 @@
 
     const/4 v1, -0x1
 
+    .line 4
     iput v1, p0, Landroidx/core/location/GpsStatusWrapper;->mCachedIteratorPosition:I
 
+    .line 5
     :cond_0
     :goto_0
     iget v1, p0, Landroidx/core/location/GpsStatusWrapper;->mCachedIteratorPosition:I
@@ -211,8 +222,10 @@
 
     add-int/lit8 v1, v1, 0x1
 
+    .line 6
     iput v1, p0, Landroidx/core/location/GpsStatusWrapper;->mCachedIteratorPosition:I
 
+    .line 7
     iget-object v1, p0, Landroidx/core/location/GpsStatusWrapper;->mCachedIterator:Ljava/util/Iterator;
 
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -223,10 +236,12 @@
 
     const/4 p1, 0x0
 
+    .line 8
     iput-object p1, p0, Landroidx/core/location/GpsStatusWrapper;->mCachedSatellite:Landroid/location/GpsSatellite;
 
     goto :goto_1
 
+    .line 9
     :cond_1
     iget-object v1, p0, Landroidx/core/location/GpsStatusWrapper;->mCachedIterator:Ljava/util/Iterator;
 
@@ -240,14 +255,17 @@
 
     goto :goto_0
 
+    .line 10
     :cond_2
     :goto_1
     iget-object p0, p0, Landroidx/core/location/GpsStatusWrapper;->mCachedSatellite:Landroid/location/GpsSatellite;
 
+    .line 11
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 12
     invoke-static {p0}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -259,6 +277,7 @@
     :catchall_0
     move-exception p0
 
+    .line 13
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -270,6 +289,7 @@
 .method private static getSvidFromPrn(I)I
     .locals 2
 
+    .line 1
     invoke-static {p0}, Landroidx/core/location/GpsStatusWrapper;->getConstellationFromPrn(I)I
 
     move-result v0
@@ -316,6 +336,7 @@
 
     return p0
 
+    .line 1
     :cond_0
     instance-of v0, p1, Landroidx/core/location/GpsStatusWrapper;
 
@@ -325,9 +346,11 @@
 
     return p0
 
+    .line 2
     :cond_1
     check-cast p1, Landroidx/core/location/GpsStatusWrapper;
 
+    .line 3
     iget-object p0, p0, Landroidx/core/location/GpsStatusWrapper;->mWrapped:Landroid/location/GpsStatus;
 
     iget-object p1, p1, Landroidx/core/location/GpsStatusWrapper;->mWrapped:Landroid/location/GpsStatus;
@@ -342,6 +365,7 @@
 .method public getAzimuthDegrees(I)F
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/core/location/GpsStatusWrapper;->getSatellite(I)Landroid/location/GpsSatellite;
 
     move-result-object p0
@@ -356,6 +380,7 @@
 .method public getBasebandCn0DbHz(I)F
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -366,6 +391,7 @@
 .method public getCarrierFrequencyHz(I)F
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -376,6 +402,7 @@
 .method public getCn0DbHz(I)F
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/core/location/GpsStatusWrapper;->getSatellite(I)Landroid/location/GpsSatellite;
 
     move-result-object p0
@@ -388,8 +415,21 @@
 .end method
 
 .method public getConstellationType(I)I
-    .locals 0
+    .locals 2
 
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x18
+
+    if-ge v0, v1, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    .line 2
+    :cond_0
     invoke-direct {p0, p1}, Landroidx/core/location/GpsStatusWrapper;->getSatellite(I)Landroid/location/GpsSatellite;
 
     move-result-object p0
@@ -408,6 +448,7 @@
 .method public getElevationDegrees(I)F
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/core/location/GpsStatusWrapper;->getSatellite(I)Landroid/location/GpsSatellite;
 
     move-result-object p0
@@ -422,10 +463,12 @@
 .method public getSatelliteCount()I
     .locals 3
 
+    .line 1
     iget-object v0, p0, Landroidx/core/location/GpsStatusWrapper;->mWrapped:Landroid/location/GpsStatus;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget v1, p0, Landroidx/core/location/GpsStatusWrapper;->mCachedSatelliteCount:I
 
@@ -433,6 +476,7 @@
 
     if-ne v1, v2, :cond_1
 
+    .line 3
     iget-object v1, p0, Landroidx/core/location/GpsStatusWrapper;->mWrapped:Landroid/location/GpsStatus;
 
     invoke-virtual {v1}, Landroid/location/GpsStatus;->getSatellites()Ljava/lang/Iterable;
@@ -456,6 +500,7 @@
 
     check-cast v2, Landroid/location/GpsSatellite;
 
+    .line 4
     iget v2, p0, Landroidx/core/location/GpsStatusWrapper;->mCachedSatelliteCount:I
 
     add-int/lit8 v2, v2, 0x1
@@ -464,6 +509,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     iget v1, p0, Landroidx/core/location/GpsStatusWrapper;->mCachedSatelliteCount:I
 
@@ -471,6 +517,7 @@
 
     iput v1, p0, Landroidx/core/location/GpsStatusWrapper;->mCachedSatelliteCount:I
 
+    .line 6
     :cond_1
     iget p0, p0, Landroidx/core/location/GpsStatusWrapper;->mCachedSatelliteCount:I
 
@@ -481,6 +528,7 @@
     :catchall_0
     move-exception p0
 
+    .line 7
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -489,8 +537,28 @@
 .end method
 
 .method public getSvid(I)I
-    .locals 0
+    .locals 2
 
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x18
+
+    if-ge v0, v1, :cond_0
+
+    .line 2
+    invoke-direct {p0, p1}, Landroidx/core/location/GpsStatusWrapper;->getSatellite(I)Landroid/location/GpsSatellite;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/location/GpsSatellite;->getPrn()I
+
+    move-result p0
+
+    return p0
+
+    .line 3
+    :cond_0
     invoke-direct {p0, p1}, Landroidx/core/location/GpsStatusWrapper;->getSatellite(I)Landroid/location/GpsSatellite;
 
     move-result-object p0
@@ -509,6 +577,7 @@
 .method public hasAlmanacData(I)Z
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/core/location/GpsStatusWrapper;->getSatellite(I)Landroid/location/GpsSatellite;
 
     move-result-object p0
@@ -539,6 +608,7 @@
 .method public hasEphemerisData(I)Z
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/core/location/GpsStatusWrapper;->getSatellite(I)Landroid/location/GpsSatellite;
 
     move-result-object p0
@@ -553,6 +623,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/location/GpsStatusWrapper;->mWrapped:Landroid/location/GpsStatus;
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
@@ -565,6 +636,7 @@
 .method public usedInFix(I)Z
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/core/location/GpsStatusWrapper;->getSatellite(I)Landroid/location/GpsSatellite;
 
     move-result-object p0

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbj;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbj;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -11,6 +11,7 @@
 
     return p0
 
+    .line 1
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -44,9 +45,11 @@
 
     return-void
 
+    .line 1
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
+    .line 2
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -73,6 +76,7 @@
 
     throw p1
 
+    .line 3
     :cond_1
     new-instance p0, Ljava/lang/NullPointerException;
 

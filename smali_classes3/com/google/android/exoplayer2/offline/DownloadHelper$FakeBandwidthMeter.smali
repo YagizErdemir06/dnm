@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/offline/DownloadHelper$FakeBandwidthMeter;
+.class public final Lcom/google/android/exoplayer2/offline/DownloadHelper$FakeBandwidthMeter;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

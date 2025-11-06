@@ -11,11 +11,11 @@
 # static fields
 .field private static final DOCUMENT_FACTORY:Lorg/dom4j/DocumentFactory;
 
-.field protected static final NODE_TYPE_NAMES:[Ljava/lang/String;
+.field public static final NODE_TYPE_NAMES:[Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 15
 
     const-string v0, "Node"
@@ -48,12 +48,14 @@
 
     const-string v14, "Unknown"
 
+    .line 1
     filled-new-array/range {v0 .. v14}, [Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Lorg/dom4j/tree/AbstractNode;->NODE_TYPE_NAMES:[Ljava/lang/String;
 
+    .line 2
     invoke-static {}, Lorg/dom4j/DocumentFactory;->getInstance()Lorg/dom4j/DocumentFactory;
 
     move-result-object v0
@@ -66,6 +68,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -76,6 +79,7 @@
 .method public asXPathResult(Lorg/dom4j/Element;)Lorg/dom4j/Node;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractNode;->supportsParent()Z
 
     move-result v0
@@ -84,6 +88,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/AbstractNode;->createXPathResult(Lorg/dom4j/Element;)Lorg/dom4j/Node;
 
@@ -95,6 +100,7 @@
 .method public clone()Ljava/lang/Object;
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractNode;->isReadOnly()Z
 
     move-result v0
@@ -103,6 +109,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     :try_start_0
     invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
@@ -113,8 +120,10 @@
 
     const/4 v0, 0x0
 
+    .line 3
     invoke-interface {p0, v0}, Lorg/dom4j/Node;->setParent(Lorg/dom4j/Element;)V
 
+    .line 4
     invoke-interface {p0, v0}, Lorg/dom4j/Node;->setDocument(Lorg/dom4j/Document;)V
     :try_end_0
     .catch Ljava/lang/CloneNotSupportedException; {:try_start_0 .. :try_end_0} :catch_0
@@ -124,6 +133,7 @@
     :catch_0
     move-exception p0
 
+    .line 5
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuffer;
@@ -148,6 +158,7 @@
 .method public createPattern(Ljava/lang/String;)Lorg/dom4j/rule/Pattern;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractNode;->getDocumentFactory()Lorg/dom4j/DocumentFactory;
 
     move-result-object p0
@@ -162,6 +173,7 @@
 .method public createXPath(Ljava/lang/String;)Lorg/dom4j/XPath;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractNode;->getDocumentFactory()Lorg/dom4j/DocumentFactory;
 
     move-result-object p0
@@ -176,6 +188,7 @@
 .method public createXPathFilter(Ljava/lang/String;)Lorg/dom4j/NodeFilter;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractNode;->getDocumentFactory()Lorg/dom4j/DocumentFactory;
 
     move-result-object p0
@@ -190,6 +203,7 @@
 .method public createXPathResult(Lorg/dom4j/Element;)Lorg/dom4j/Node;
     .locals 2
 
+    .line 1
     new-instance p1, Ljava/lang/RuntimeException;
 
     new-instance v0, Ljava/lang/StringBuffer;
@@ -214,16 +228,19 @@
 .method public detach()Lorg/dom4j/Node;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractNode;->getParent()Lorg/dom4j/Element;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {v0, p0}, Lorg/dom4j/Branch;->remove(Lorg/dom4j/Node;)Z
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractNode;->getDocument()Lorg/dom4j/Document;
 
@@ -231,14 +248,17 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     invoke-interface {v0, p0}, Lorg/dom4j/Branch;->remove(Lorg/dom4j/Node;)Z
 
     :cond_1
     :goto_0
     const/4 v0, 0x0
 
+    .line 5
     invoke-virtual {p0, v0}, Lorg/dom4j/tree/AbstractNode;->setParent(Lorg/dom4j/Element;)V
 
+    .line 6
     invoke-virtual {p0, v0}, Lorg/dom4j/tree/AbstractNode;->setDocument(Lorg/dom4j/Document;)V
 
     return-object p0
@@ -247,12 +267,14 @@
 .method public getDocument()Lorg/dom4j/Document;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractNode;->getParent()Lorg/dom4j/Element;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0}, Lorg/dom4j/Node;->getDocument()Lorg/dom4j/Document;
 
     move-result-object p0
@@ -269,6 +291,7 @@
 .method public getDocumentFactory()Lorg/dom4j/DocumentFactory;
     .locals 0
 
+    .line 1
     sget-object p0, Lorg/dom4j/tree/AbstractNode;->DOCUMENT_FACTORY:Lorg/dom4j/DocumentFactory;
 
     return-object p0
@@ -293,12 +316,14 @@
 .method public getNodeTypeName()Ljava/lang/String;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractNode;->getNodeType()S
 
     move-result p0
 
     if-ltz p0, :cond_1
 
+    .line 2
     sget-object v0, Lorg/dom4j/tree/AbstractNode;->NODE_TYPE_NAMES:[Ljava/lang/String;
 
     array-length v1, v0
@@ -307,6 +332,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     aget-object p0, v0, p0
 
@@ -332,6 +358,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-interface {p0, v0}, Lorg/dom4j/Node;->getPath(Lorg/dom4j/Element;)Ljava/lang/String;
 
     move-result-object p0
@@ -342,6 +369,7 @@
 .method public getStringValue()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractNode;->getText()Ljava/lang/String;
 
     move-result-object p0
@@ -362,6 +390,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-interface {p0, v0}, Lorg/dom4j/Node;->getUniquePath(Lorg/dom4j/Element;)Ljava/lang/String;
 
     move-result-object p0
@@ -388,10 +417,12 @@
 .method public matches(Ljava/lang/String;)Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/AbstractNode;->createXPathFilter(Ljava/lang/String;)Lorg/dom4j/NodeFilter;
 
     move-result-object p1
 
+    .line 2
     invoke-interface {p1, p0}, Lorg/dom4j/NodeFilter;->matches(Lorg/dom4j/Node;)Z
 
     move-result p0
@@ -402,10 +433,12 @@
 .method public numberValueOf(Ljava/lang/String;)Ljava/lang/Number;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/AbstractNode;->createXPath(Ljava/lang/String;)Lorg/dom4j/XPath;
 
     move-result-object p1
 
+    .line 2
     invoke-interface {p1, p0}, Lorg/dom4j/XPath;->numberValueOf(Ljava/lang/Object;)Ljava/lang/Number;
 
     move-result-object p0
@@ -466,10 +499,12 @@
 .method public selectObject(Ljava/lang/String;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/AbstractNode;->createXPath(Ljava/lang/String;)Lorg/dom4j/XPath;
 
     move-result-object p1
 
+    .line 2
     invoke-interface {p1, p0}, Lorg/dom4j/XPath;->evaluate(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -480,10 +515,12 @@
 .method public selectSingleNode(Ljava/lang/String;)Lorg/dom4j/Node;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/AbstractNode;->createXPath(Ljava/lang/String;)Lorg/dom4j/XPath;
 
     move-result-object p1
 
+    .line 2
     invoke-interface {p1, p0}, Lorg/dom4j/XPath;->selectSingleNode(Ljava/lang/Object;)Lorg/dom4j/Node;
 
     move-result-object p0
@@ -500,6 +537,7 @@
 .method public setName(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "This node cannot be modified"
@@ -518,6 +556,7 @@
 .method public setText(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "This node cannot be modified"
@@ -538,10 +577,12 @@
 .method public valueOf(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/AbstractNode;->createXPath(Ljava/lang/String;)Lorg/dom4j/XPath;
 
     move-result-object p1
 
+    .line 2
     invoke-interface {p1, p0}, Lorg/dom4j/XPath;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -557,6 +598,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Lorg/dom4j/Node;->asXML()Ljava/lang/String;
 
     move-result-object p0

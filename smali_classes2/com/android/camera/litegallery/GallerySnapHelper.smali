@@ -4,11 +4,11 @@
 
 
 # static fields
-.field public static final b:Ljava/lang/String;
+.field private static final a:Ljava/lang/String;
 
 
 # instance fields
-.field public a:Landroidx/recyclerview/widget/RecyclerView;
+.field private b:Landroidx/recyclerview/widget/RecyclerView;
 
 
 # direct methods
@@ -17,21 +17,32 @@
 
     const-string v0, "GallerySnapHelper"
 
-    invoke-static {v0}, Lcom/android/camera/litegallery/c;->r(Ljava/lang/String;)Ljava/lang/String;
+    .line 1
+    invoke-static {v0}, Ld/d/a/b7/j1;->k(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/camera/litegallery/GallerySnapHelper;->b:Ljava/lang/String;
+    sput-object v0, Lcom/android/camera/litegallery/GallerySnapHelper;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 .method public constructor <init>(Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "recyclerView"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/LinearSnapHelper;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/litegallery/GallerySnapHelper;->a:Landroidx/recyclerview/widget/RecyclerView;
+    .line 2
+    iput-object p1, p0, Lcom/android/camera/litegallery/GallerySnapHelper;->b:Landroidx/recyclerview/widget/RecyclerView;
 
     return-void
 .end method
@@ -39,7 +50,8 @@
 .method public static synthetic a(Lcom/android/camera/litegallery/GallerySnapHelper;)Landroidx/recyclerview/widget/RecyclerView;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/camera/litegallery/GallerySnapHelper;->a:Landroidx/recyclerview/widget/RecyclerView;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/litegallery/GallerySnapHelper;->b:Landroidx/recyclerview/widget/RecyclerView;
 
     return-object p0
 .end method
@@ -47,7 +59,8 @@
 .method public static synthetic b()Ljava/lang/String;
     .locals 1
 
-    sget-object v0, Lcom/android/camera/litegallery/GallerySnapHelper;->b:Ljava/lang/String;
+    .line 1
+    sget-object v0, Lcom/android/camera/litegallery/GallerySnapHelper;->a:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -56,12 +69,23 @@
 # virtual methods
 .method public calculateScrollDistance(II)[I
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "velocityX",
+            "velocityY"
+        }
+    .end annotation
 
     const/4 p0, 0x2
 
     new-array p0, p0, [I
 
-    invoke-static {}, Ly2/b;->K()Landroid/graphics/Rect;
+    .line 1
+    invoke-static {}, Ld/d/a/n6/b;->K()Landroid/graphics/Rect;
 
     move-result-object p2
 
@@ -93,6 +117,16 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "layoutManager"
+        }
+    .end annotation
+
+    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera/litegallery/GallerySnapHelper;->createSnapScroller(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)Landroidx/recyclerview/widget/LinearSmoothScroller;
 
     move-result-object p0
@@ -109,9 +143,19 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "layoutManager"
+        }
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     instance-of p1, p1, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller$ScrollVectorProvider;
 
     if-nez p1, :cond_0
@@ -120,12 +164,13 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     new-instance p1, Lcom/android/camera/litegallery/GallerySnapHelper$a;
 
-    iget-object v0, p0, Lcom/android/camera/litegallery/GallerySnapHelper;->a:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v0, p0, Lcom/android/camera/litegallery/GallerySnapHelper;->b:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
 

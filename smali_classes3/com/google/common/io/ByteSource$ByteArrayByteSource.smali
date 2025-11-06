@@ -1,4 +1,4 @@
-.class Lcom/google/common/io/ByteSource$ByteArrayByteSource;
+.class public Lcom/google/common/io/ByteSource$ByteArrayByteSource;
 .super Lcom/google/common/io/ByteSource;
 .source "SourceFile"
 
@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field final bytes:[B
+.field public final bytes:[B
 
-.field final length:I
+.field public final length:I
 
-.field final offset:I
+.field public final offset:I
 
 
 # direct methods
@@ -64,6 +64,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/io/ByteSource$ByteArrayByteSource;->bytes:[B
 
     iget v1, p0, Lcom/google/common/io/ByteSource$ByteArrayByteSource;->offset:I
@@ -72,6 +73,7 @@
 
     invoke-virtual {p1, v0, v1, v2}, Ljava/io/OutputStream;->write([BII)V
 
+    .line 2
     iget p0, p0, Lcom/google/common/io/ByteSource$ByteArrayByteSource;->length:I
 
     int-to-long p0, p0
@@ -87,6 +89,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/io/ByteSource$ByteArrayByteSource;->bytes:[B
 
     iget v1, p0, Lcom/google/common/io/ByteSource$ByteArrayByteSource;->offset:I
@@ -103,6 +106,7 @@
 .method public isEmpty()Z
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/io/ByteSource$ByteArrayByteSource;->length:I
 
     if-nez p0, :cond_0
@@ -126,6 +130,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/io/ByteSource$ByteArrayByteSource;->openStream()Ljava/io/InputStream;
 
     move-result-object p0
@@ -136,6 +141,7 @@
 .method public openStream()Ljava/io/InputStream;
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/io/ByteArrayInputStream;
 
     iget-object v1, p0, Lcom/google/common/io/ByteSource$ByteArrayByteSource;->bytes:[B
@@ -209,6 +215,7 @@
 .method public size()J
     .locals 2
 
+    .line 1
     iget p0, p0, Lcom/google/common/io/ByteSource$ByteArrayByteSource;->length:I
 
     int-to-long v0, p0
@@ -227,6 +234,7 @@
         }
     .end annotation
 
+    .line 1
     iget p0, p0, Lcom/google/common/io/ByteSource$ByteArrayByteSource;->length:I
 
     int-to-long v0, p0
@@ -265,6 +273,7 @@
     :goto_0
     const-string v5, "offset (%s) may not be negative"
 
+    .line 1
     invoke-static {v2, v5, p1, p2}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;J)V
 
     cmp-long v0, p3, v0
@@ -279,8 +288,10 @@
     :goto_1
     const-string v0, "length (%s) may not be negative"
 
+    .line 2
     invoke-static {v3, v0, p3, p4}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;J)V
 
+    .line 3
     iget v0, p0, Lcom/google/common/io/ByteSource$ByteArrayByteSource;->length:I
 
     int-to-long v0, v0
@@ -289,6 +300,7 @@
 
     move-result-wide p1
 
+    .line 4
     iget v0, p0, Lcom/google/common/io/ByteSource$ByteArrayByteSource;->length:I
 
     int-to-long v0, v0
@@ -299,12 +311,14 @@
 
     move-result-wide p3
 
+    .line 5
     iget v0, p0, Lcom/google/common/io/ByteSource$ByteArrayByteSource;->offset:I
 
     long-to-int p1, p1
 
     add-int/2addr v0, p1
 
+    .line 6
     new-instance p1, Lcom/google/common/io/ByteSource$ByteArrayByteSource;
 
     iget-object p0, p0, Lcom/google/common/io/ByteSource$ByteArrayByteSource;->bytes:[B
@@ -319,6 +333,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     invoke-static {}, Lcom/google/common/io/BaseEncoding;->base16()Lcom/google/common/io/BaseEncoding;
 
     move-result-object v0

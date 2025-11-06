@@ -9,7 +9,7 @@
 
 
 # static fields
-.field static zaa:I = 0x1f
+.field public static zaa:I = 0x1f
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
     .end annotation
 .end field
@@ -55,6 +55,7 @@
     .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
+    .line 1
     sget v0, Lcom/google/android/gms/auth/api/signin/internal/HashAccumulator;->zaa:I
 
     iget v1, p0, Lcom/google/android/gms/auth/api/signin/internal/HashAccumulator;->zab:I

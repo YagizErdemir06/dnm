@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/TreeBasedTable$2;
+.class public Lcom/google/common/collect/TreeBasedTable$2;
 .super Lcom/google/common/collect/AbstractIterator;
 .source "SourceFile"
 
@@ -22,7 +22,7 @@
 
 
 # instance fields
-.field lastValue:Ljava/lang/Object;
+.field public lastValue:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TC;"
@@ -33,15 +33,16 @@
     .end annotation
 .end field
 
-.field final synthetic val$comparator:Ljava/util/Comparator;
+.field public final synthetic val$comparator:Ljava/util/Comparator;
 
-.field final synthetic val$merged:Ljava/util/Iterator;
+.field public final synthetic val$merged:Ljava/util/Iterator;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/TreeBasedTable;Ljava/util/Iterator;Ljava/util/Comparator;)V
     .locals 0
 
+    .line 1
     iput-object p2, p0, Lcom/google/common/collect/TreeBasedTable$2;->val$merged:Ljava/util/Iterator;
 
     iput-object p3, p0, Lcom/google/common/collect/TreeBasedTable$2;->val$comparator:Ljava/util/Comparator;
@@ -64,6 +65,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     :cond_0
     iget-object v0, p0, Lcom/google/common/collect/TreeBasedTable$2;->val$merged:Ljava/util/Iterator;
 
@@ -73,12 +75,14 @@
 
     if-eqz v0, :cond_2
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/TreeBasedTable$2;->val$merged:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 3
     iget-object v1, p0, Lcom/google/common/collect/TreeBasedTable$2;->lastValue:Ljava/lang/Object;
 
     if-eqz v1, :cond_1
@@ -101,6 +105,7 @@
     :goto_0
     if-nez v1, :cond_0
 
+    .line 4
     iput-object v0, p0, Lcom/google/common/collect/TreeBasedTable$2;->lastValue:Ljava/lang/Object;
 
     return-object v0
@@ -108,8 +113,10 @@
     :cond_2
     const/4 v0, 0x0
 
+    .line 5
     iput-object v0, p0, Lcom/google/common/collect/TreeBasedTable$2;->lastValue:Ljava/lang/Object;
 
+    .line 6
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractIterator;->endOfData()Ljava/lang/Object;
 
     move-result-object p0

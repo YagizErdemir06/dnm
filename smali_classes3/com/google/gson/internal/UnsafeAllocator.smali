@@ -7,133 +7,162 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 .method public static create()Lcom/google/gson/internal/UnsafeAllocator;
-    .locals 10
+    .locals 9
 
     const-string v0, "newInstance"
 
-    const-class v1, Ljava/io/ObjectStreamClass;
+    const/4 v1, 0x0
 
-    const-class v2, Ljava/lang/Class;
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x1
+    const/4 v3, 0x1
 
     :try_start_0
-    const-string v6, "sun.misc.Unsafe"
+    const-string v4, "sun.misc.Unsafe"
 
-    invoke-static {v6}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+    .line 1
+    invoke-static {v4}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
-    move-result-object v6
+    move-result-object v4
 
-    const-string v7, "theUnsafe"
+    const-string v5, "theUnsafe"
 
-    invoke-virtual {v6, v7}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+    .line 2
+    invoke-virtual {v4, v5}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
-    move-result-object v7
+    move-result-object v5
 
-    invoke-virtual {v7, v5}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    .line 3
+    invoke-virtual {v5, v3}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    invoke-virtual {v7, v3}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 4
+    invoke-virtual {v5, v1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v7
+    move-result-object v5
 
-    const-string v8, "allocateInstance"
+    const-string v6, "allocateInstance"
 
-    new-array v9, v5, [Ljava/lang/Class;
+    new-array v7, v3, [Ljava/lang/Class;
 
-    aput-object v2, v9, v4
+    .line 5
+    const-class v8, Ljava/lang/Class;
 
-    invoke-virtual {v6, v8, v9}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    aput-object v8, v7, v2
 
-    move-result-object v6
+    invoke-virtual {v4, v6, v7}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    new-instance v8, Lcom/google/gson/internal/UnsafeAllocator$1;
+    move-result-object v4
 
-    invoke-direct {v8, v6, v7}, Lcom/google/gson/internal/UnsafeAllocator$1;-><init>(Ljava/lang/reflect/Method;Ljava/lang/Object;)V
+    .line 6
+    new-instance v6, Lcom/google/gson/internal/UnsafeAllocator$1;
+
+    invoke-direct {v6, v4, v5}, Lcom/google/gson/internal/UnsafeAllocator$1;-><init>(Ljava/lang/reflect/Method;Ljava/lang/Object;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-object v8
+    return-object v6
 
     :catch_0
-    const/4 v6, 0x2
+    const/4 v4, 0x2
 
+    .line 7
     :try_start_1
-    const-string v7, "getConstructorId"
+    const-class v5, Ljava/io/ObjectStreamClass;
 
-    new-array v8, v5, [Ljava/lang/Class;
+    const-string v6, "getConstructorId"
 
-    aput-object v2, v8, v4
+    new-array v7, v3, [Ljava/lang/Class;
 
-    invoke-virtual {v1, v7, v8}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    const-class v8, Ljava/lang/Class;
 
-    move-result-object v7
+    aput-object v8, v7, v2
 
-    invoke-virtual {v7, v5}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    .line 8
+    invoke-virtual {v5, v6, v7}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    new-array v8, v5, [Ljava/lang/Object;
+    move-result-object v5
 
-    const-class v9, Ljava/lang/Object;
+    .line 9
+    invoke-virtual {v5, v3}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    aput-object v9, v8, v4
+    new-array v6, v3, [Ljava/lang/Object;
 
-    invoke-virtual {v7, v3, v8}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    .line 10
+    const-class v7, Ljava/lang/Object;
 
-    move-result-object v3
+    aput-object v7, v6, v2
 
-    check-cast v3, Ljava/lang/Integer;
-
-    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
-
-    move-result v3
-
-    new-array v7, v6, [Ljava/lang/Class;
-
-    aput-object v2, v7, v4
-
-    sget-object v8, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    aput-object v8, v7, v5
-
-    invoke-virtual {v1, v0, v7}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    invoke-virtual {v5, v1, v6}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-virtual {v1, v5}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    check-cast v1, Ljava/lang/Integer;
 
-    new-instance v7, Lcom/google/gson/internal/UnsafeAllocator$2;
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
-    invoke-direct {v7, v1, v3}, Lcom/google/gson/internal/UnsafeAllocator$2;-><init>(Ljava/lang/reflect/Method;I)V
+    move-result v1
+
+    .line 11
+    const-class v5, Ljava/io/ObjectStreamClass;
+
+    new-array v6, v4, [Ljava/lang/Class;
+
+    const-class v7, Ljava/lang/Class;
+
+    aput-object v7, v6, v2
+
+    sget-object v7, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    aput-object v7, v6, v3
+
+    .line 12
+    invoke-virtual {v5, v0, v6}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v5
+
+    .line 13
+    invoke-virtual {v5, v3}, Ljava/lang/reflect/Method;->setAccessible(Z)V
+
+    .line 14
+    new-instance v6, Lcom/google/gson/internal/UnsafeAllocator$2;
+
+    invoke-direct {v6, v5, v1}, Lcom/google/gson/internal/UnsafeAllocator$2;-><init>(Ljava/lang/reflect/Method;I)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    return-object v7
+    return-object v6
 
+    .line 15
     :catch_1
     :try_start_2
     const-class v1, Ljava/io/ObjectInputStream;
 
-    new-array v3, v6, [Ljava/lang/Class;
+    new-array v4, v4, [Ljava/lang/Class;
 
-    aput-object v2, v3, v4
+    const-class v5, Ljava/lang/Class;
 
-    aput-object v2, v3, v5
+    aput-object v5, v4, v2
 
-    invoke-virtual {v1, v0, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    const-class v2, Ljava/lang/Class;
+
+    aput-object v2, v4, v3
+
+    .line 16
+    invoke-virtual {v1, v0, v4}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
 
-    invoke-virtual {v0, v5}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    .line 17
+    invoke-virtual {v0, v3}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
+    .line 18
     new-instance v1, Lcom/google/gson/internal/UnsafeAllocator$3;
 
     invoke-direct {v1, v0}, Lcom/google/gson/internal/UnsafeAllocator$3;-><init>(Ljava/lang/reflect/Method;)V
@@ -142,6 +171,7 @@
 
     return-object v1
 
+    .line 19
     :catch_2
     new-instance v0, Lcom/google/gson/internal/UnsafeAllocator$4;
 

@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ImmutableMultimap$EntryCollection;
+.class public Lcom/google/common/collect/ImmutableMultimap$EntryCollection;
 .super Lcom/google/common/collect/ImmutableCollection;
 .source "SourceFile"
 
@@ -32,7 +32,7 @@
 
 
 # instance fields
-.field final multimap:Lcom/google/common/collect/ImmutableMultimap;
+.field public final multimap:Lcom/google/common/collect/ImmutableMultimap;
     .annotation build Lcom/google/j2objc/annotations/Weak;
     .end annotation
 
@@ -56,8 +56,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableCollection;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/ImmutableMultimap$EntryCollection;->multimap:Lcom/google/common/collect/ImmutableMultimap;
 
     return-void
@@ -72,12 +74,15 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Ljava/util/Map$Entry;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Ljava/util/Map$Entry;
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMultimap$EntryCollection;->multimap:Lcom/google/common/collect/ImmutableMultimap;
 
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
@@ -103,6 +108,7 @@
 .method public isPartialView()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMultimap$EntryCollection;->multimap:Lcom/google/common/collect/ImmutableMultimap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMultimap;->isPartialView()Z
@@ -147,6 +153,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMultimap$EntryCollection;->multimap:Lcom/google/common/collect/ImmutableMultimap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMultimap;->size()I

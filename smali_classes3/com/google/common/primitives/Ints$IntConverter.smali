@@ -1,4 +1,4 @@
-.class final Lcom/google/common/primitives/Ints$IntConverter;
+.class public final Lcom/google/common/primitives/Ints$IntConverter;
 .super Lcom/google/common/base/Converter;
 .source "SourceFile"
 
@@ -28,7 +28,7 @@
 
 
 # static fields
-.field static final INSTANCE:Lcom/google/common/primitives/Ints$IntConverter;
+.field public static final INSTANCE:Lcom/google/common/primitives/Ints$IntConverter;
 
 .field private static final serialVersionUID:J = 0x1L
 
@@ -37,6 +37,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/primitives/Ints$IntConverter;
 
     invoke-direct {v0}, Lcom/google/common/primitives/Ints$IntConverter;-><init>()V
@@ -49,6 +50,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/base/Converter;-><init>()V
 
     return-void
@@ -57,6 +59,7 @@
 .method private readResolve()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     sget-object p0, Lcom/google/common/primitives/Ints$IntConverter;->INSTANCE:Lcom/google/common/primitives/Ints$IntConverter;
 
     return-object p0

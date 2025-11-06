@@ -30,6 +30,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$j$a;->a:Landroid/support/v4/media/session/MediaSessionCompat$j;
 
     invoke-direct {p0}, Landroidx/media/VolumeProviderCompat$Callback;-><init>()V
@@ -50,23 +51,26 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$j$a;->a:Landroid/support/v4/media/session/MediaSessionCompat$j;
 
-    iget-object v0, v0, Landroid/support/v4/media/session/MediaSessionCompat$j;->E:Landroidx/media/VolumeProviderCompat;
+    iget-object v0, v0, Landroid/support/v4/media/session/MediaSessionCompat$j;->F:Landroidx/media/VolumeProviderCompat;
 
     if-eq v0, p1, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     new-instance v0, Landroid/support/v4/media/session/ParcelableVolumeInfo;
 
     iget-object v1, p0, Landroid/support/v4/media/session/MediaSessionCompat$j$a;->a:Landroid/support/v4/media/session/MediaSessionCompat$j;
 
-    iget v2, v1, Landroid/support/v4/media/session/MediaSessionCompat$j;->C:I
+    iget v2, v1, Landroid/support/v4/media/session/MediaSessionCompat$j;->D:I
 
-    iget v3, v1, Landroid/support/v4/media/session/MediaSessionCompat$j;->D:I
+    iget v3, v1, Landroid/support/v4/media/session/MediaSessionCompat$j;->E:I
 
+    .line 3
     invoke-virtual {p1}, Landroidx/media/VolumeProviderCompat;->getVolumeControl()I
 
     move-result v4
@@ -75,6 +79,7 @@
 
     move-result v5
 
+    .line 4
     invoke-virtual {p1}, Landroidx/media/VolumeProviderCompat;->getCurrentVolume()I
 
     move-result v6
@@ -83,9 +88,10 @@
 
     invoke-direct/range {v1 .. v6}, Landroid/support/v4/media/session/ParcelableVolumeInfo;-><init>(IIIII)V
 
+    .line 5
     iget-object p0, p0, Landroid/support/v4/media/session/MediaSessionCompat$j$a;->a:Landroid/support/v4/media/session/MediaSessionCompat$j;
 
-    invoke-virtual {p0, v0}, Landroid/support/v4/media/session/MediaSessionCompat$j;->I(Landroid/support/v4/media/session/ParcelableVolumeInfo;)V
+    invoke-virtual {p0, v0}, Landroid/support/v4/media/session/MediaSessionCompat$j;->M(Landroid/support/v4/media/session/ParcelableVolumeInfo;)V
 
     return-void
 .end method

@@ -35,38 +35,45 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {}, Lcom/google/common/cache/LongAddables;->create()Lcom/google/common/cache/LongAddable;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/common/cache/AbstractCache$SimpleStatsCounter;->hitCount:Lcom/google/common/cache/LongAddable;
 
+    .line 3
     invoke-static {}, Lcom/google/common/cache/LongAddables;->create()Lcom/google/common/cache/LongAddable;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/common/cache/AbstractCache$SimpleStatsCounter;->missCount:Lcom/google/common/cache/LongAddable;
 
+    .line 4
     invoke-static {}, Lcom/google/common/cache/LongAddables;->create()Lcom/google/common/cache/LongAddable;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/common/cache/AbstractCache$SimpleStatsCounter;->loadSuccessCount:Lcom/google/common/cache/LongAddable;
 
+    .line 5
     invoke-static {}, Lcom/google/common/cache/LongAddables;->create()Lcom/google/common/cache/LongAddable;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/common/cache/AbstractCache$SimpleStatsCounter;->loadExceptionCount:Lcom/google/common/cache/LongAddable;
 
+    .line 6
     invoke-static {}, Lcom/google/common/cache/LongAddables;->create()Lcom/google/common/cache/LongAddable;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/common/cache/AbstractCache$SimpleStatsCounter;->totalLoadTime:Lcom/google/common/cache/LongAddable;
 
+    .line 7
     invoke-static {}, Lcom/google/common/cache/LongAddables;->create()Lcom/google/common/cache/LongAddable;
 
     move-result-object v0
@@ -99,10 +106,12 @@
 .method public incrementBy(Lcom/google/common/cache/AbstractCache$StatsCounter;)V
     .locals 3
 
+    .line 1
     invoke-interface {p1}, Lcom/google/common/cache/AbstractCache$StatsCounter;->snapshot()Lcom/google/common/cache/CacheStats;
 
     move-result-object p1
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/cache/AbstractCache$SimpleStatsCounter;->hitCount:Lcom/google/common/cache/LongAddable;
 
     invoke-virtual {p1}, Lcom/google/common/cache/CacheStats;->hitCount()J
@@ -111,6 +120,7 @@
 
     invoke-interface {v0, v1, v2}, Lcom/google/common/cache/LongAddable;->add(J)V
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/cache/AbstractCache$SimpleStatsCounter;->missCount:Lcom/google/common/cache/LongAddable;
 
     invoke-virtual {p1}, Lcom/google/common/cache/CacheStats;->missCount()J
@@ -119,6 +129,7 @@
 
     invoke-interface {v0, v1, v2}, Lcom/google/common/cache/LongAddable;->add(J)V
 
+    .line 4
     iget-object v0, p0, Lcom/google/common/cache/AbstractCache$SimpleStatsCounter;->loadSuccessCount:Lcom/google/common/cache/LongAddable;
 
     invoke-virtual {p1}, Lcom/google/common/cache/CacheStats;->loadSuccessCount()J
@@ -127,6 +138,7 @@
 
     invoke-interface {v0, v1, v2}, Lcom/google/common/cache/LongAddable;->add(J)V
 
+    .line 5
     iget-object v0, p0, Lcom/google/common/cache/AbstractCache$SimpleStatsCounter;->loadExceptionCount:Lcom/google/common/cache/LongAddable;
 
     invoke-virtual {p1}, Lcom/google/common/cache/CacheStats;->loadExceptionCount()J
@@ -135,6 +147,7 @@
 
     invoke-interface {v0, v1, v2}, Lcom/google/common/cache/LongAddable;->add(J)V
 
+    .line 6
     iget-object v0, p0, Lcom/google/common/cache/AbstractCache$SimpleStatsCounter;->totalLoadTime:Lcom/google/common/cache/LongAddable;
 
     invoke-virtual {p1}, Lcom/google/common/cache/CacheStats;->totalLoadTime()J
@@ -143,6 +156,7 @@
 
     invoke-interface {v0, v1, v2}, Lcom/google/common/cache/LongAddable;->add(J)V
 
+    .line 7
     iget-object p0, p0, Lcom/google/common/cache/AbstractCache$SimpleStatsCounter;->evictionCount:Lcom/google/common/cache/LongAddable;
 
     invoke-virtual {p1}, Lcom/google/common/cache/CacheStats;->evictionCount()J
@@ -157,6 +171,7 @@
 .method public recordEviction()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/cache/AbstractCache$SimpleStatsCounter;->evictionCount:Lcom/google/common/cache/LongAddable;
 
     invoke-interface {p0}, Lcom/google/common/cache/LongAddable;->increment()V
@@ -167,6 +182,7 @@
 .method public recordHits(I)V
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/cache/AbstractCache$SimpleStatsCounter;->hitCount:Lcom/google/common/cache/LongAddable;
 
     int-to-long v0, p1
@@ -179,10 +195,12 @@
 .method public recordLoadException(J)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/cache/AbstractCache$SimpleStatsCounter;->loadExceptionCount:Lcom/google/common/cache/LongAddable;
 
     invoke-interface {v0}, Lcom/google/common/cache/LongAddable;->increment()V
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/cache/AbstractCache$SimpleStatsCounter;->totalLoadTime:Lcom/google/common/cache/LongAddable;
 
     invoke-interface {p0, p1, p2}, Lcom/google/common/cache/LongAddable;->add(J)V
@@ -193,10 +211,12 @@
 .method public recordLoadSuccess(J)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/cache/AbstractCache$SimpleStatsCounter;->loadSuccessCount:Lcom/google/common/cache/LongAddable;
 
     invoke-interface {v0}, Lcom/google/common/cache/LongAddable;->increment()V
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/cache/AbstractCache$SimpleStatsCounter;->totalLoadTime:Lcom/google/common/cache/LongAddable;
 
     invoke-interface {p0, p1, p2}, Lcom/google/common/cache/LongAddable;->add(J)V
@@ -207,6 +227,7 @@
 .method public recordMisses(I)V
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/cache/AbstractCache$SimpleStatsCounter;->missCount:Lcom/google/common/cache/LongAddable;
 
     int-to-long v0, p1
@@ -219,10 +240,12 @@
 .method public snapshot()Lcom/google/common/cache/CacheStats;
     .locals 14
 
+    .line 1
     new-instance v13, Lcom/google/common/cache/CacheStats;
 
     iget-object v0, p0, Lcom/google/common/cache/AbstractCache$SimpleStatsCounter;->hitCount:Lcom/google/common/cache/LongAddable;
 
+    .line 2
     invoke-interface {v0}, Lcom/google/common/cache/LongAddable;->sum()J
 
     move-result-wide v0
@@ -233,6 +256,7 @@
 
     iget-object v0, p0, Lcom/google/common/cache/AbstractCache$SimpleStatsCounter;->missCount:Lcom/google/common/cache/LongAddable;
 
+    .line 3
     invoke-interface {v0}, Lcom/google/common/cache/LongAddable;->sum()J
 
     move-result-wide v3
@@ -243,6 +267,7 @@
 
     iget-object v0, p0, Lcom/google/common/cache/AbstractCache$SimpleStatsCounter;->loadSuccessCount:Lcom/google/common/cache/LongAddable;
 
+    .line 4
     invoke-interface {v0}, Lcom/google/common/cache/LongAddable;->sum()J
 
     move-result-wide v5
@@ -253,6 +278,7 @@
 
     iget-object v0, p0, Lcom/google/common/cache/AbstractCache$SimpleStatsCounter;->loadExceptionCount:Lcom/google/common/cache/LongAddable;
 
+    .line 5
     invoke-interface {v0}, Lcom/google/common/cache/LongAddable;->sum()J
 
     move-result-wide v7
@@ -263,6 +289,7 @@
 
     iget-object v0, p0, Lcom/google/common/cache/AbstractCache$SimpleStatsCounter;->totalLoadTime:Lcom/google/common/cache/LongAddable;
 
+    .line 6
     invoke-interface {v0}, Lcom/google/common/cache/LongAddable;->sum()J
 
     move-result-wide v9
@@ -273,6 +300,7 @@
 
     iget-object p0, p0, Lcom/google/common/cache/AbstractCache$SimpleStatsCounter;->evictionCount:Lcom/google/common/cache/LongAddable;
 
+    .line 7
     invoke-interface {p0}, Lcom/google/common/cache/LongAddable;->sum()J
 
     move-result-wide v11

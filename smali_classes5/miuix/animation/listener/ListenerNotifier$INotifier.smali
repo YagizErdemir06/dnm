@@ -1,4 +1,4 @@
-.class interface abstract Lmiuix/animation/listener/ListenerNotifier$INotifier;
+.class public interface abstract Lmiuix/animation/listener/ListenerNotifier$INotifier;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

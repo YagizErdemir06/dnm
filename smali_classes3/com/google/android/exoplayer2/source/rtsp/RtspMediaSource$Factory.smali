@@ -33,16 +33,20 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x1f40
 
+    .line 2
     iput-wide v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$Factory;->timeoutMs:J
 
     const-string v0, "ExoPlayerLib/2.18.0"
 
+    .line 3
     iput-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$Factory;->userAgent:Ljava/lang/String;
 
+    .line 4
     invoke-static {}, Ljavax/net/SocketFactory;->getDefault()Ljavax/net/SocketFactory;
 
     move-result-object v0
@@ -135,6 +139,7 @@
 .method public setDebugLoggingEnabled(Z)Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$Factory;
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$Factory;->debugLoggingEnabled:Z
 
     return-object p0
@@ -143,6 +148,7 @@
 .method public bridge synthetic setDrmSessionManagerProvider(Lcom/google/android/exoplayer2/drm/DrmSessionManagerProvider;)Lcom/google/android/exoplayer2/source/MediaSource$Factory;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$Factory;->setDrmSessionManagerProvider(Lcom/google/android/exoplayer2/drm/DrmSessionManagerProvider;)Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$Factory;
 
     move-result-object p0
@@ -159,6 +165,7 @@
 .method public setForceUseRtpTcp(Z)Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$Factory;
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$Factory;->forceUseRtpTcp:Z
 
     return-object p0
@@ -167,6 +174,7 @@
 .method public bridge synthetic setLoadErrorHandlingPolicy(Lcom/google/android/exoplayer2/upstream/LoadErrorHandlingPolicy;)Lcom/google/android/exoplayer2/source/MediaSource$Factory;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$Factory;->setLoadErrorHandlingPolicy(Lcom/google/android/exoplayer2/upstream/LoadErrorHandlingPolicy;)Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$Factory;
 
     move-result-object p0
@@ -183,6 +191,7 @@
 .method public setSocketFactory(Ljavax/net/SocketFactory;)Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$Factory;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$Factory;->socketFactory:Ljavax/net/SocketFactory;
 
     return-object p0
@@ -209,9 +218,11 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 2
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$Factory;->timeoutMs:J
 
     return-object p0
@@ -220,6 +231,7 @@
 .method public setUserAgent(Ljava/lang/String;)Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$Factory;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$Factory;->userAgent:Ljava/lang/String;
 
     return-object p0

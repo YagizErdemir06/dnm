@@ -1,4 +1,4 @@
-.class abstract Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbp;
+.class public abstract Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbp;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,19 +7,20 @@
 
 
 # instance fields
-.field zzb:I
+.field public zzb:I
 
-.field zzc:I
+.field public zzc:I
 
-.field zzd:I
+.field public zzd:I
 
-.field final synthetic zze:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;
+.field public final synthetic zze:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;
 
 
 # direct methods
 .method public synthetic constructor <init>(Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbo;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbp;->zze:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,6 +47,7 @@
 .method private final zzb()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbp;->zze:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;
 
     invoke-static {v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;->zza(Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;)I
@@ -88,6 +90,7 @@
 .method public final next()Ljava/lang/Object;
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbp;->zzb()V
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbp;->hasNext()Z
@@ -96,10 +99,12 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbp;->zzc:I
 
     iput v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbp;->zzd:I
 
+    .line 3
     invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbp;->zza(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -116,9 +121,11 @@
 
     return-object v0
 
+    .line 4
     :cond_0
     new-instance p0, Ljava/util/NoSuchElementException;
 
+    .line 5
     invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
 
     throw p0
@@ -127,6 +134,7 @@
 .method public final remove()V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbp;->zzb()V
 
     iget v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbp;->zzd:I
@@ -143,6 +151,7 @@
     :goto_0
     const-string v1, "no calls to next() since the last call to remove()"
 
+    .line 2
     invoke-static {v0, v1}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzaq;->zzd(ZLjava/lang/Object;)V
 
     iget v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbp;->zzb:I
@@ -157,10 +166,13 @@
 
     iget-object v2, v0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;->zzb:[Ljava/lang/Object;
 
+    .line 3
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 4
     aget-object v1, v2, v1
 
+    .line 5
     invoke-virtual {v0, v1}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbt;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     iget v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbp;->zzc:I

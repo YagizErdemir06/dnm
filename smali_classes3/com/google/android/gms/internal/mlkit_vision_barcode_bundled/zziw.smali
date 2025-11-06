@@ -36,6 +36,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zziw;
 
     invoke-direct {v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zziw;-><init>()V
@@ -52,6 +53,7 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzed;-><init>()V
 
     const/4 v0, 0x1
@@ -106,6 +108,7 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     sget-object p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zziw;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zziw;
 
@@ -114,6 +117,7 @@
     :cond_1
     new-instance p1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zziv;
 
+    .line 2
     invoke-direct {p1, p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zziv;-><init>(Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhr;)V
 
     return-object p1
@@ -144,6 +148,7 @@
 
     aput-object p0, p1, v1
 
+    .line 3
     sget-object p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zziy;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeh;
 
     aput-object p0, p1, v0
@@ -168,21 +173,23 @@
 
     aput-object p2, p1, p0
 
-    sget-object p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzix;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeh;
-
-    const/16 p2, 0x8
-
-    aput-object p0, p1, p2
-
-    const/16 p2, 0x9
-
-    const-string p3, "zzj"
-
-    aput-object p3, p1, p2
+    const/16 p0, 0xc
 
     const/16 p2, 0xa
 
-    aput-object p0, p1, p2
+    const/16 p3, 0x8
+
+    sget-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzix;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeh;
+
+    aput-object v0, p1, p3
+
+    const/16 p3, 0x9
+
+    const-string v1, "zzj"
+
+    aput-object v1, p1, p3
+
+    aput-object v0, p1, p2
 
     const/16 p2, 0xb
 
@@ -190,9 +197,7 @@
 
     aput-object p3, p1, p2
 
-    const/16 p2, 0xc
-
-    aput-object p0, p1, p2
+    aput-object v0, p1, p0
 
     const/16 p0, 0xd
 
@@ -216,6 +221,7 @@
 
     return-object p0
 
+    .line 4
     :cond_4
     invoke-static {p0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 

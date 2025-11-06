@@ -1,4 +1,4 @@
-.class final enum Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
+.class public final enum Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
 .super Ljava/lang/Enum;
 .source "SourceFile"
 
@@ -36,6 +36,7 @@
 .method public static constructor <clinit>()V
     .locals 7
 
+    .line 1
     new-instance v0, Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
 
     const-string v1, "NONE"
@@ -46,6 +47,7 @@
 
     sput-object v0, Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;->NONE:Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
 
+    .line 2
     new-instance v1, Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
 
     const-string v3, "ADDING"
@@ -56,6 +58,7 @@
 
     sput-object v1, Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;->ADDING:Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
 
+    .line 3
     new-instance v3, Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
 
     const-string v5, "REMOVING"
@@ -76,6 +79,7 @@
 
     aput-object v3, v5, v6
 
+    .line 4
     sput-object v5, Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;->$VALUES:[Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
 
     return-void
@@ -83,12 +87,8 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -97,6 +97,7 @@
 .method public static valueOf(Ljava/lang/String;)Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
     .locals 1
 
+    .line 1
     const-class v0, Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -111,6 +112,7 @@
 .method public static values()[Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
     .locals 1
 
+    .line 1
     sget-object v0, Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;->$VALUES:[Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;
 
     invoke-virtual {v0}, [Landroidx/fragment/app/SpecialEffectsController$Operation$LifecycleImpact;->clone()Ljava/lang/Object;

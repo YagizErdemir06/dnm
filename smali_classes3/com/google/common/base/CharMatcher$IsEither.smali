@@ -1,4 +1,4 @@
-.class final Lcom/google/common/base/CharMatcher$IsEither;
+.class public final Lcom/google/common/base/CharMatcher$IsEither;
 .super Lcom/google/common/base/CharMatcher$FastMatcher;
 .source "SourceFile"
 
@@ -24,10 +24,13 @@
 .method public constructor <init>(CC)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/base/CharMatcher$FastMatcher;-><init>()V
 
+    .line 2
     iput-char p1, p0, Lcom/google/common/base/CharMatcher$IsEither;->match1:C
 
+    .line 3
     iput-char p2, p0, Lcom/google/common/base/CharMatcher$IsEither;->match2:C
 
     return-void
@@ -38,6 +41,7 @@
 .method public matches(C)Z
     .locals 1
 
+    .line 1
     iget-char v0, p0, Lcom/google/common/base/CharMatcher$IsEither;->match1:C
 
     if-eq p1, v0, :cond_1
@@ -66,10 +70,12 @@
     .annotation build Lcom/google/common/annotations/GwtIncompatible;
     .end annotation
 
+    .line 1
     iget-char v0, p0, Lcom/google/common/base/CharMatcher$IsEither;->match1:C
 
     invoke-virtual {p1, v0}, Ljava/util/BitSet;->set(I)V
 
+    .line 2
     iget-char p0, p0, Lcom/google/common/base/CharMatcher$IsEither;->match2:C
 
     invoke-virtual {p1, p0}, Ljava/util/BitSet;->set(I)V
@@ -80,6 +86,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     iget-char v0, p0, Lcom/google/common/base/CharMatcher$IsEither;->match1:C
 
     invoke-static {v0}, Lcom/google/common/base/CharMatcher;->access$100(C)Ljava/lang/String;

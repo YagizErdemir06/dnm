@@ -30,6 +30,7 @@
 .method public final run()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/zza;->zza:Ljava/lang/ref/ReferenceQueue;
 
     iget-object p0, p0, Lcom/google/mlkit/common/sdkinternal/zza;->zzb:Ljava/util/Set;
@@ -42,6 +43,7 @@
 
     if-nez v1, :cond_0
 
+    .line 2
     :try_start_0
     invoke-virtual {v0}, Ljava/lang/ref/ReferenceQueue;->remove()Ljava/lang/ref/Reference;
 
@@ -49,6 +51,7 @@
 
     check-cast v1, Lcom/google/mlkit/common/sdkinternal/zzd;
 
+    .line 3
     invoke-interface {v1}, Lcom/google/mlkit/common/sdkinternal/Cleaner$Cleanable;->clean()V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0

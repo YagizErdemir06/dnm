@@ -74,24 +74,29 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->DEFAULT_WITHOUT_CONTEXT:Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
 
+    .line 2
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->buildUpon()Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
+    .line 3
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;->setForceHighestSupportedBitrate(Z)Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
+    .line 4
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;->setConstrainAudioChannelCountToDeviceCapabilities(Z)Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;
 
     move-result-object v0
 
+    .line 5
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;->build()Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
 
     move-result-object v0
@@ -108,8 +113,10 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iget-object p1, p1, Lcom/google/android/exoplayer2/MediaItem;->localConfiguration:Lcom/google/android/exoplayer2/MediaItem$LocalConfiguration;
 
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -120,8 +127,10 @@
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->localConfiguration:Lcom/google/android/exoplayer2/MediaItem$LocalConfiguration;
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->mediaSource:Lcom/google/android/exoplayer2/source/MediaSource;
 
+    .line 4
     new-instance p1, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;
 
     new-instance p2, Lcom/google/android/exoplayer2/offline/DownloadHelper$DownloadTrackSelection$Factory;
@@ -134,17 +143,18 @@
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->trackSelector:Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;
 
+    .line 5
     iput-object p4, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->rendererCapabilities:[Lcom/google/android/exoplayer2/RendererCapabilities;
 
+    .line 6
     new-instance p2, Landroid/util/SparseIntArray;
 
     invoke-direct {p2}, Landroid/util/SparseIntArray;-><init>()V
 
     iput-object p2, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->scratchSet:Landroid/util/SparseIntArray;
 
-    new-instance p2, Lcom/google/android/exoplayer2/offline/c;
-
-    invoke-direct {p2}, Lcom/google/android/exoplayer2/offline/c;-><init>()V
+    .line 7
+    sget-object p2, Ld/j/a/b/t2/e;->c:Ld/j/a/b/t2/e;
 
     new-instance p3, Lcom/google/android/exoplayer2/offline/DownloadHelper$FakeBandwidthMeter;
 
@@ -152,25 +162,19 @@
 
     invoke-virtual {p1, p2, p3}, Lcom/google/android/exoplayer2/trackselection/TrackSelector;->init(Lcom/google/android/exoplayer2/trackselection/TrackSelector$InvalidationListener;Lcom/google/android/exoplayer2/upstream/BandwidthMeter;)V
 
+    .line 8
     invoke-static {}, Lcom/google/android/exoplayer2/util/Util;->createHandlerForCurrentOrMainLooper()Landroid/os/Handler;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->callbackHandler:Landroid/os/Handler;
 
+    .line 9
     new-instance p1, Lcom/google/android/exoplayer2/Timeline$Window;
 
     invoke-direct {p1}, Lcom/google/android/exoplayer2/Timeline$Window;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->window:Lcom/google/android/exoplayer2/Timeline$Window;
-
-    return-void
-.end method
-
-.method public static synthetic a(Lcom/google/android/exoplayer2/metadata/Metadata;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->lambda$getRendererCapabilities$1(Lcom/google/android/exoplayer2/metadata/Metadata;)V
 
     return-void
 .end method
@@ -183,6 +187,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->onMediaPrepared()V
 
     return-void
@@ -191,6 +196,7 @@
 .method public static synthetic access$300(Lcom/google/android/exoplayer2/offline/DownloadHelper;Ljava/io/IOException;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->onMediaPreparationFailed(Ljava/io/IOException;)V
 
     return-void
@@ -213,12 +219,15 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->trackSelector:Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;
 
     invoke-virtual {v0, p2}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->setParameters(Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;)V
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->runTrackSelection(I)Lcom/google/android/exoplayer2/trackselection/TrackSelectorResult;
 
+    .line 3
     iget-object v0, p2, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->overrides:Lcom/google/common/collect/ImmutableMap;
 
     invoke-virtual {v0}, Lcom/google/common/collect/ImmutableMap;->values()Lcom/google/common/collect/ImmutableCollection;
@@ -242,8 +251,10 @@
 
     check-cast v1, Lcom/google/android/exoplayer2/trackselection/TrackSelectionOverride;
 
+    .line 4
     iget-object v2, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->trackSelector:Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;
 
+    .line 5
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;->buildUpon()Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters$Builder;
 
     move-result-object v3
@@ -256,8 +267,10 @@
 
     move-result-object v1
 
+    .line 6
     invoke-virtual {v2, v1}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;->setParameters(Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;)V
 
+    .line 7
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->runTrackSelection(I)Lcom/google/android/exoplayer2/trackselection/TrackSelectorResult;
 
     goto :goto_0
@@ -280,25 +293,10 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->isPreparedWithMedia:Z
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
-
-    return-void
-.end method
-
-.method public static synthetic b(Lcom/google/android/exoplayer2/offline/DownloadHelper;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->lambda$onMediaPrepared$4()V
-
-    return-void
-.end method
-
-.method public static synthetic c(Lcom/google/android/exoplayer2/offline/DownloadHelper;Ljava/io/IOException;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->lambda$onMediaPreparationFailed$5(Ljava/io/IOException;)V
 
     return-void
 .end method
@@ -343,6 +341,7 @@
         .end annotation
     .end param
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/source/DefaultMediaSourceFactory;
 
     sget-object v1, Lcom/google/android/exoplayer2/extractor/ExtractorsFactory;->EMPTY:Lcom/google/android/exoplayer2/extractor/ExtractorsFactory;
@@ -351,40 +350,16 @@
 
     if-eqz p2, :cond_0
 
-    new-instance p1, Lcom/google/android/exoplayer2/offline/a;
+    .line 2
+    new-instance p1, Ld/j/a/b/t2/g;
 
-    invoke-direct {p1, p2}, Lcom/google/android/exoplayer2/offline/a;-><init>(Lcom/google/android/exoplayer2/drm/DrmSessionManager;)V
+    invoke-direct {p1, p2}, Ld/j/a/b/t2/g;-><init>(Lcom/google/android/exoplayer2/drm/DrmSessionManager;)V
 
     invoke-virtual {v0, p1}, Lcom/google/android/exoplayer2/source/DefaultMediaSourceFactory;->setDrmSessionManagerProvider(Lcom/google/android/exoplayer2/drm/DrmSessionManagerProvider;)Lcom/google/android/exoplayer2/source/DefaultMediaSourceFactory;
 
+    .line 3
     :cond_0
     invoke-virtual {v0, p0}, Lcom/google/android/exoplayer2/source/DefaultMediaSourceFactory;->createMediaSource(Lcom/google/android/exoplayer2/MediaItem;)Lcom/google/android/exoplayer2/source/MediaSource;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic d()V
-    .locals 0
-
-    invoke-static {}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->lambda$new$2()V
-
-    return-void
-.end method
-
-.method public static synthetic e(Lcom/google/android/exoplayer2/text/CueGroup;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->lambda$getRendererCapabilities$0(Lcom/google/android/exoplayer2/text/CueGroup;)V
-
-    return-void
-.end method
-
-.method public static synthetic f(Lcom/google/android/exoplayer2/drm/DrmSessionManager;Lcom/google/android/exoplayer2/MediaItem;)Lcom/google/android/exoplayer2/drm/DrmSessionManager;
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->lambda$createMediaSourceInternal$6(Lcom/google/android/exoplayer2/drm/DrmSessionManager;Lcom/google/android/exoplayer2/MediaItem;)Lcom/google/android/exoplayer2/drm/DrmSessionManager;
 
     move-result-object p0
 
@@ -396,12 +371,12 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    const/4 v0, 0x0
-
     .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->getDefaultTrackSelectorParameters(Landroid/content/Context;)Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
 
     move-result-object p0
+
+    const/4 v0, 0x0
 
     .line 2
     invoke-static {p1, p2, p3, v0, p0}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->forDash(Landroid/net/Uri;Lcom/google/android/exoplayer2/upstream/DataSource$Factory;Lcom/google/android/exoplayer2/RenderersFactory;Lcom/google/android/exoplayer2/drm/DrmSessionManager;Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;)Lcom/google/android/exoplayer2/offline/DownloadHelper;
@@ -453,12 +428,12 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    const/4 v0, 0x0
-
     .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->getDefaultTrackSelectorParameters(Landroid/content/Context;)Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
 
     move-result-object p0
+
+    const/4 v0, 0x0
 
     .line 2
     invoke-static {p1, p2, p3, v0, p0}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->forHls(Landroid/net/Uri;Lcom/google/android/exoplayer2/upstream/DataSource$Factory;Lcom/google/android/exoplayer2/RenderersFactory;Lcom/google/android/exoplayer2/drm/DrmSessionManager;Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;)Lcom/google/android/exoplayer2/offline/DownloadHelper;
@@ -741,12 +716,12 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    const/4 v0, 0x0
-
     .line 2
     invoke-static {p0}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->getDefaultTrackSelectorParameters(Landroid/content/Context;)Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
 
     move-result-object p0
+
+    const/4 v0, 0x0
 
     .line 3
     invoke-static {p1, p2, p3, v0, p0}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->forSmoothStreaming(Landroid/net/Uri;Lcom/google/android/exoplayer2/upstream/DataSource$Factory;Lcom/google/android/exoplayer2/RenderersFactory;Lcom/google/android/exoplayer2/drm/DrmSessionManager;Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;)Lcom/google/android/exoplayer2/offline/DownloadHelper;
@@ -761,12 +736,12 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    const/4 v0, 0x0
-
     .line 1
-    sget-object v1, Lcom/google/android/exoplayer2/offline/DownloadHelper;->DEFAULT_TRACK_SELECTOR_PARAMETERS_WITHOUT_CONTEXT:Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
+    sget-object v0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->DEFAULT_TRACK_SELECTOR_PARAMETERS_WITHOUT_CONTEXT:Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
 
-    invoke-static {p0, p1, p2, v0, v1}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->forSmoothStreaming(Landroid/net/Uri;Lcom/google/android/exoplayer2/upstream/DataSource$Factory;Lcom/google/android/exoplayer2/RenderersFactory;Lcom/google/android/exoplayer2/drm/DrmSessionManager;Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;)Lcom/google/android/exoplayer2/offline/DownloadHelper;
+    const/4 v1, 0x0
+
+    invoke-static {p0, p1, p2, v1, v0}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->forSmoothStreaming(Landroid/net/Uri;Lcom/google/android/exoplayer2/upstream/DataSource$Factory;Lcom/google/android/exoplayer2/RenderersFactory;Lcom/google/android/exoplayer2/drm/DrmSessionManager;Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;)Lcom/google/android/exoplayer2/offline/DownloadHelper;
 
     move-result-object p0
 
@@ -810,37 +785,34 @@
     return-object p0
 .end method
 
-.method public static synthetic g(Lcom/google/android/exoplayer2/offline/DownloadHelper;Lcom/google/android/exoplayer2/offline/DownloadHelper$Callback;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->lambda$prepare$3(Lcom/google/android/exoplayer2/offline/DownloadHelper$Callback;)V
-
-    return-void
-.end method
-
 .method public static getDefaultTrackSelectorParameters(Landroid/content/Context;)Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
     .locals 1
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->getDefaults(Landroid/content/Context;)Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
 
     move-result-object p0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->buildUpon()Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;
 
     move-result-object p0
 
     const/4 v0, 0x1
 
+    .line 3
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;->setForceHighestSupportedBitrate(Z)Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;
 
     move-result-object p0
 
     const/4 v0, 0x0
 
+    .line 4
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;->setConstrainAudioChannelCountToDeviceCapabilities(Z)Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;
 
     move-result-object p0
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;->build()Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
 
     move-result-object p0
@@ -851,6 +823,7 @@
 .method public static getRendererCapabilities(Lcom/google/android/exoplayer2/RenderersFactory;)[Lcom/google/android/exoplayer2/RendererCapabilities;
     .locals 6
 
+    .line 1
     invoke-static {}, Lcom/google/android/exoplayer2/util/Util;->createHandlerForCurrentOrMainLooper()Landroid/os/Handler;
 
     move-result-object v1
@@ -863,31 +836,31 @@
 
     invoke-direct {v3}, Lcom/google/android/exoplayer2/offline/DownloadHelper$2;-><init>()V
 
-    new-instance v4, Lcom/google/android/exoplayer2/offline/d;
+    sget-object v4, Ld/j/a/b/t2/f;->c:Ld/j/a/b/t2/f;
 
-    invoke-direct {v4}, Lcom/google/android/exoplayer2/offline/d;-><init>()V
-
-    new-instance v5, Lcom/google/android/exoplayer2/offline/e;
-
-    invoke-direct {v5}, Lcom/google/android/exoplayer2/offline/e;-><init>()V
+    sget-object v5, Ld/j/a/b/t2/a;->c:Ld/j/a/b/t2/a;
 
     move-object v0, p0
 
+    .line 2
     invoke-interface/range {v0 .. v5}, Lcom/google/android/exoplayer2/RenderersFactory;->createRenderers(Landroid/os/Handler;Lcom/google/android/exoplayer2/video/VideoRendererEventListener;Lcom/google/android/exoplayer2/audio/AudioRendererEventListener;Lcom/google/android/exoplayer2/text/TextOutput;Lcom/google/android/exoplayer2/metadata/MetadataOutput;)[Lcom/google/android/exoplayer2/Renderer;
 
     move-result-object p0
 
+    .line 3
     array-length v0, p0
 
     new-array v0, v0, [Lcom/google/android/exoplayer2/RendererCapabilities;
 
     const/4 v1, 0x0
 
+    .line 4
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_0
 
+    .line 5
     aget-object v2, p0, v1
 
     invoke-interface {v2}, Lcom/google/android/exoplayer2/Renderer;->getCapabilities()Lcom/google/android/exoplayer2/RendererCapabilities;
@@ -907,6 +880,7 @@
 .method private static isProgressive(Lcom/google/android/exoplayer2/MediaItem$LocalConfiguration;)Z
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/MediaItem$LocalConfiguration;->uri:Landroid/net/Uri;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/MediaItem$LocalConfiguration;->mimeType:Ljava/lang/String;
@@ -930,25 +904,25 @@
     return p0
 .end method
 
-.method private static synthetic lambda$createMediaSourceInternal$6(Lcom/google/android/exoplayer2/drm/DrmSessionManager;Lcom/google/android/exoplayer2/MediaItem;)Lcom/google/android/exoplayer2/drm/DrmSessionManager;
+.method public static synthetic lambda$createMediaSourceInternal$6(Lcom/google/android/exoplayer2/drm/DrmSessionManager;Lcom/google/android/exoplayer2/MediaItem;)Lcom/google/android/exoplayer2/drm/DrmSessionManager;
     .locals 0
 
     return-object p0
 .end method
 
-.method private static synthetic lambda$getRendererCapabilities$0(Lcom/google/android/exoplayer2/text/CueGroup;)V
+.method public static synthetic lambda$getRendererCapabilities$0(Lcom/google/android/exoplayer2/text/CueGroup;)V
     .locals 0
 
     return-void
 .end method
 
-.method private static synthetic lambda$getRendererCapabilities$1(Lcom/google/android/exoplayer2/metadata/Metadata;)V
+.method public static synthetic lambda$getRendererCapabilities$1(Lcom/google/android/exoplayer2/metadata/Metadata;)V
     .locals 0
 
     return-void
 .end method
 
-.method private static synthetic lambda$new$2()V
+.method public static synthetic lambda$new$2()V
     .locals 0
 
     return-void
@@ -957,6 +931,7 @@
 .method private synthetic lambda$onMediaPreparationFailed$5(Ljava/io/IOException;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->callback:Lcom/google/android/exoplayer2/offline/DownloadHelper$Callback;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -973,6 +948,7 @@
 .method private synthetic lambda$onMediaPrepared$4()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->callback:Lcom/google/android/exoplayer2/offline/DownloadHelper$Callback;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -989,6 +965,7 @@
 .method private synthetic lambda$prepare$3(Lcom/google/android/exoplayer2/offline/DownloadHelper$Callback;)V
     .locals 0
 
+    .line 1
     invoke-interface {p1, p0}, Lcom/google/android/exoplayer2/offline/DownloadHelper$Callback;->onPrepared(Lcom/google/android/exoplayer2/offline/DownloadHelper;)V
 
     return-void
@@ -997,6 +974,7 @@
 .method private onMediaPreparationFailed(Ljava/io/IOException;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->callbackHandler:Landroid/os/Handler;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1005,9 +983,9 @@
 
     check-cast v0, Landroid/os/Handler;
 
-    new-instance v1, Lcom/google/android/exoplayer2/offline/b;
+    new-instance v1, Ld/j/a/b/t2/c;
 
-    invoke-direct {v1, p0, p1}, Lcom/google/android/exoplayer2/offline/b;-><init>(Lcom/google/android/exoplayer2/offline/DownloadHelper;Ljava/io/IOException;)V
+    invoke-direct {v1, p0, p1}, Ld/j/a/b/t2/c;-><init>(Lcom/google/android/exoplayer2/offline/DownloadHelper;Ljava/io/IOException;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -1022,28 +1000,33 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->mediaPreparer:Lcom/google/android/exoplayer2/offline/DownloadHelper$MediaPreparer;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->mediaPreparer:Lcom/google/android/exoplayer2/offline/DownloadHelper$MediaPreparer;
 
     iget-object v0, v0, Lcom/google/android/exoplayer2/offline/DownloadHelper$MediaPreparer;->mediaPeriods:[Lcom/google/android/exoplayer2/source/MediaPeriod;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->mediaPreparer:Lcom/google/android/exoplayer2/offline/DownloadHelper$MediaPreparer;
 
     iget-object v0, v0, Lcom/google/android/exoplayer2/offline/DownloadHelper$MediaPreparer;->timeline:Lcom/google/android/exoplayer2/Timeline;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     iget-object v0, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->mediaPreparer:Lcom/google/android/exoplayer2/offline/DownloadHelper$MediaPreparer;
 
     iget-object v0, v0, Lcom/google/android/exoplayer2/offline/DownloadHelper$MediaPreparer;->mediaPeriods:[Lcom/google/android/exoplayer2/source/MediaPeriod;
 
     array-length v0, v0
 
+    .line 5
     iget-object v1, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->rendererCapabilities:[Lcom/google/android/exoplayer2/RendererCapabilities;
 
     array-length v1, v1
@@ -1060,6 +1043,7 @@
 
     aput v0, v3, v5
 
+    .line 6
     const-class v6, Ljava/util/List;
 
     invoke-static {v6, v3}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;[I)Ljava/lang/Object;
@@ -1076,7 +1060,10 @@
 
     aput v0, v2, v5
 
-    invoke-static {v6, v2}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;[I)Ljava/lang/Object;
+    .line 7
+    const-class v3, Ljava/util/List;
+
+    invoke-static {v3, v2}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;[I)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -1094,6 +1081,7 @@
     :goto_1
     if-ge v3, v1, :cond_0
 
+    .line 8
     iget-object v4, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->trackSelectionsByPeriodAndRenderer:[[Ljava/util/List;
 
     aget-object v4, v4, v2
@@ -1104,6 +1092,7 @@
 
     aput-object v6, v4, v3
 
+    .line 9
     iget-object v4, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->immutableTrackSelectionsByPeriodAndRenderer:[[Ljava/util/List;
 
     aget-object v4, v4, v2
@@ -1114,6 +1103,7 @@
 
     aget-object v6, v6, v3
 
+    .line 10
     invoke-static {v6}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v6
@@ -1129,11 +1119,13 @@
 
     goto :goto_0
 
+    .line 11
     :cond_1
     new-array v1, v0, [Lcom/google/android/exoplayer2/source/TrackGroupArray;
 
     iput-object v1, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->trackGroupArrays:[Lcom/google/android/exoplayer2/source/TrackGroupArray;
 
+    .line 12
     new-array v1, v0, [Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;
 
     iput-object v1, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->mappedTrackInfos:[Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;
@@ -1141,6 +1133,7 @@
     :goto_2
     if-ge v5, v0, :cond_2
 
+    .line 13
     iget-object v1, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->trackGroupArrays:[Lcom/google/android/exoplayer2/source/TrackGroupArray;
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->mediaPreparer:Lcom/google/android/exoplayer2/offline/DownloadHelper$MediaPreparer;
@@ -1155,16 +1148,19 @@
 
     aput-object v2, v1, v5
 
+    .line 14
     invoke-direct {p0, v5}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->runTrackSelection(I)Lcom/google/android/exoplayer2/trackselection/TrackSelectorResult;
 
     move-result-object v1
 
+    .line 15
     iget-object v2, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->trackSelector:Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;
 
     iget-object v1, v1, Lcom/google/android/exoplayer2/trackselection/TrackSelectorResult;->info:Ljava/lang/Object;
 
     invoke-virtual {v2, v1}, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector;->onSelectionActivated(Ljava/lang/Object;)V
 
+    .line 16
     iget-object v1, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->mappedTrackInfos:[Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->trackSelector:Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;
@@ -1185,9 +1181,11 @@
 
     goto :goto_2
 
+    .line 17
     :cond_2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->setPreparedWithMedia()V
 
+    .line 18
     iget-object v0, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->callbackHandler:Landroid/os/Handler;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1196,9 +1194,9 @@
 
     check-cast v0, Landroid/os/Handler;
 
-    new-instance v1, Lcom/google/android/exoplayer2/offline/f;
+    new-instance v1, Ld/j/a/b/t2/b;
 
-    invoke-direct {v1, p0}, Lcom/google/android/exoplayer2/offline/f;-><init>(Lcom/google/android/exoplayer2/offline/DownloadHelper;)V
+    invoke-direct {v1, p0}, Ld/j/a/b/t2/b;-><init>(Lcom/google/android/exoplayer2/offline/DownloadHelper;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -1222,6 +1220,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->trackSelector:Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->rendererCapabilities:[Lcom/google/android/exoplayer2/RendererCapabilities;
@@ -1236,6 +1235,7 @@
 
     iget-object v4, v4, Lcom/google/android/exoplayer2/offline/DownloadHelper$MediaPreparer;->timeline:Lcom/google/android/exoplayer2/Timeline;
 
+    .line 2
     invoke-virtual {v4, p1}, Lcom/google/android/exoplayer2/Timeline;->getUidOfPeriod(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -1246,6 +1246,7 @@
 
     iget-object v4, v4, Lcom/google/android/exoplayer2/offline/DownloadHelper$MediaPreparer;->timeline:Lcom/google/android/exoplayer2/Timeline;
 
+    .line 3
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector;->selectTracks([Lcom/google/android/exoplayer2/RendererCapabilities;Lcom/google/android/exoplayer2/source/TrackGroupArray;Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;Lcom/google/android/exoplayer2/Timeline;)Lcom/google/android/exoplayer2/trackselection/TrackSelectorResult;
 
     move-result-object v0
@@ -1254,11 +1255,13 @@
 
     move v2, v1
 
+    .line 4
     :goto_0
     iget v3, v0, Lcom/google/android/exoplayer2/trackselection/TrackSelectorResult;->length:I
 
     if-ge v2, v3, :cond_7
 
+    .line 5
     iget-object v3, v0, Lcom/google/android/exoplayer2/trackselection/TrackSelectorResult;->selections:[Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;
 
     aget-object v3, v3, v2
@@ -1267,6 +1270,7 @@
 
     goto/16 :goto_6
 
+    .line 6
     :cond_0
     iget-object v4, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->trackSelectionsByPeriodAndRenderer:[[Ljava/util/List;
 
@@ -1276,6 +1280,7 @@
 
     move v5, v1
 
+    .line 7
     :goto_1
     invoke-interface {v4}, Ljava/util/List;->size()I
 
@@ -1283,12 +1288,14 @@
 
     if-ge v5, v6, :cond_5
 
+    .line 8
     invoke-interface {v4, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
 
     check-cast v6, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;
 
+    .line 9
     invoke-interface {v6}, Lcom/google/android/exoplayer2/trackselection/TrackSelection;->getTrackGroup()Lcom/google/android/exoplayer2/source/TrackGroup;
 
     move-result-object v7
@@ -1303,12 +1310,14 @@
 
     if-eqz v7, :cond_4
 
+    .line 10
     iget-object v7, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->scratchSet:Landroid/util/SparseIntArray;
 
     invoke-virtual {v7}, Landroid/util/SparseIntArray;->clear()V
 
     move v7, v1
 
+    .line 11
     :goto_2
     invoke-interface {v6}, Lcom/google/android/exoplayer2/trackselection/TrackSelection;->length()I
 
@@ -1316,6 +1325,7 @@
 
     if-ge v7, v8, :cond_1
 
+    .line 12
     iget-object v8, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->scratchSet:Landroid/util/SparseIntArray;
 
     invoke-interface {v6, v7}, Lcom/google/android/exoplayer2/trackselection/TrackSelection;->getIndexInTrackGroup(I)I
@@ -1331,6 +1341,7 @@
     :cond_1
     move v7, v1
 
+    .line 13
     :goto_3
     invoke-interface {v3}, Lcom/google/android/exoplayer2/trackselection/TrackSelection;->length()I
 
@@ -1338,6 +1349,7 @@
 
     if-ge v7, v8, :cond_2
 
+    .line 14
     iget-object v8, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->scratchSet:Landroid/util/SparseIntArray;
 
     invoke-interface {v3, v7}, Lcom/google/android/exoplayer2/trackselection/TrackSelection;->getIndexInTrackGroup(I)I
@@ -1350,6 +1362,7 @@
 
     goto :goto_3
 
+    .line 15
     :cond_2
     iget-object v7, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->scratchSet:Landroid/util/SparseIntArray;
 
@@ -1361,6 +1374,7 @@
 
     move v8, v1
 
+    .line 16
     :goto_4
     iget-object v9, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->scratchSet:Landroid/util/SparseIntArray;
 
@@ -1370,6 +1384,7 @@
 
     if-ge v8, v9, :cond_3
 
+    .line 17
     iget-object v9, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->scratchSet:Landroid/util/SparseIntArray;
 
     invoke-virtual {v9, v8}, Landroid/util/SparseIntArray;->keyAt(I)I
@@ -1382,15 +1397,18 @@
 
     goto :goto_4
 
+    .line 18
     :cond_3
     new-instance v8, Lcom/google/android/exoplayer2/offline/DownloadHelper$DownloadTrackSelection;
 
+    .line 19
     invoke-interface {v6}, Lcom/google/android/exoplayer2/trackselection/TrackSelection;->getTrackGroup()Lcom/google/android/exoplayer2/source/TrackGroup;
 
     move-result-object v6
 
     invoke-direct {v8, v6, v7}, Lcom/google/android/exoplayer2/offline/DownloadHelper$DownloadTrackSelection;-><init>(Lcom/google/android/exoplayer2/source/TrackGroup;[I)V
 
+    .line 20
     invoke-interface {v4, v5, v8}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
     const/4 v5, 0x1
@@ -1408,6 +1426,7 @@
     :goto_5
     if-nez v5, :cond_6
 
+    .line 21
     invoke-interface {v4, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_6
@@ -1436,6 +1455,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->isPreparedWithMedia:Z
 
     return-void
@@ -1443,22 +1463,35 @@
 
 
 # virtual methods
+.method public synthetic a(Ljava/io/IOException;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->lambda$onMediaPreparationFailed$5(Ljava/io/IOException;)V
+
+    return-void
+.end method
+
 .method public varargs addAudioLanguagesToSelection([Ljava/lang/String;)V
     .locals 8
 
+    .line 1
     :try_start_0
     invoke-direct {p0}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->assertPreparedWithMedia()V
 
+    .line 2
     sget-object v0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->DEFAULT_TRACK_SELECTOR_PARAMETERS_WITHOUT_CONTEXT:Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
 
+    .line 3
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->buildUpon()Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
+    .line 4
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters$Builder;->setForceHighestSupportedBitrate(Z)Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters$Builder;
 
+    .line 5
     iget-object v2, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->rendererCapabilities:[Lcom/google/android/exoplayer2/RendererCapabilities;
 
     array-length v3, v2
@@ -1472,6 +1505,7 @@
 
     aget-object v6, v2, v5
 
+    .line 6
     invoke-interface {v6}, Lcom/google/android/exoplayer2/RendererCapabilities;->getTrackType()I
 
     move-result v6
@@ -1485,6 +1519,7 @@
     :cond_0
     move v7, v4
 
+    .line 7
     :goto_1
     invoke-virtual {v0, v6, v7}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters$Builder;->setTrackTypeDisabled(IZ)Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters$Builder;
 
@@ -1492,11 +1527,13 @@
 
     goto :goto_0
 
+    .line 8
     :cond_1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->getPeriodCount()I
 
     move-result v1
 
+    .line 9
     array-length v2, p1
 
     move v3, v4
@@ -1506,6 +1543,7 @@
 
     aget-object v5, p1, v3
 
+    .line 10
     invoke-virtual {v0, v5}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters$Builder;->setPreferredAudioLanguage(Ljava/lang/String;)Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters$Builder;
 
     move-result-object v5
@@ -1519,6 +1557,7 @@
     :goto_3
     if-ge v6, v1, :cond_2
 
+    .line 11
     invoke-direct {p0, v6, v5}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->addTrackSelectionInternal(ILcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;)V
     :try_end_0
     .catch Lcom/google/android/exoplayer2/ExoPlaybackException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1538,6 +1577,7 @@
     :catch_0
     move-exception p0
 
+    .line 12
     new-instance p1, Ljava/lang/IllegalStateException;
 
     invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
@@ -1548,21 +1588,27 @@
 .method public varargs addTextLanguagesToSelection(Z[Ljava/lang/String;)V
     .locals 7
 
+    .line 1
     :try_start_0
     invoke-direct {p0}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->assertPreparedWithMedia()V
 
+    .line 2
     sget-object v0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->DEFAULT_TRACK_SELECTOR_PARAMETERS_WITHOUT_CONTEXT:Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
 
+    .line 3
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->buildUpon()Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;
 
     move-result-object v0
 
+    .line 4
     invoke-virtual {v0, p1}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters$Builder;->setSelectUndeterminedTextLanguage(Z)Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters$Builder;
 
     const/4 p1, 0x1
 
+    .line 5
     invoke-virtual {v0, p1}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters$Builder;->setForceHighestSupportedBitrate(Z)Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters$Builder;
 
+    .line 6
     iget-object v1, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->rendererCapabilities:[Lcom/google/android/exoplayer2/RendererCapabilities;
 
     array-length v2, v1
@@ -1576,6 +1622,7 @@
 
     aget-object v5, v1, v4
 
+    .line 7
     invoke-interface {v5}, Lcom/google/android/exoplayer2/RendererCapabilities;->getTrackType()I
 
     move-result v5
@@ -1591,6 +1638,7 @@
     :cond_0
     move v6, v3
 
+    .line 8
     :goto_1
     invoke-virtual {v0, v5, v6}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters$Builder;->setTrackTypeDisabled(IZ)Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters$Builder;
 
@@ -1598,11 +1646,13 @@
 
     goto :goto_0
 
+    .line 9
     :cond_1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->getPeriodCount()I
 
     move-result p1
 
+    .line 10
     array-length v1, p2
 
     move v2, v3
@@ -1612,6 +1662,7 @@
 
     aget-object v4, p2, v2
 
+    .line 11
     invoke-virtual {v0, v4}, Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters$Builder;->setPreferredTextLanguage(Ljava/lang/String;)Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters$Builder;
 
     move-result-object v4
@@ -1625,6 +1676,7 @@
     :goto_3
     if-ge v5, p1, :cond_2
 
+    .line 12
     invoke-direct {p0, v5, v4}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->addTrackSelectionInternal(ILcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;)V
     :try_end_0
     .catch Lcom/google/android/exoplayer2/ExoPlaybackException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1644,6 +1696,7 @@
     :catch_0
     move-exception p0
 
+    .line 13
     new-instance p1, Ljava/lang/IllegalStateException;
 
     invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
@@ -1654,9 +1707,11 @@
 .method public addTrackSelection(ILcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;)V
     .locals 0
 
+    .line 1
     :try_start_0
     invoke-direct {p0}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->assertPreparedWithMedia()V
 
+    .line 2
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->addTrackSelectionInternal(ILcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;)V
     :try_end_0
     .catch Lcom/google/android/exoplayer2/ExoPlaybackException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1666,6 +1721,7 @@
     :catch_0
     move-exception p0
 
+    .line 3
     new-instance p1, Ljava/lang/IllegalStateException;
 
     invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
@@ -1685,9 +1741,11 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     invoke-direct {p0}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->assertPreparedWithMedia()V
 
+    .line 2
     invoke-virtual {p3}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->buildUpon()Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;
 
     move-result-object p3
@@ -1696,6 +1754,7 @@
 
     move v1, v0
 
+    .line 3
     :goto_0
     iget-object v2, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->mappedTrackInfos:[Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;
 
@@ -1716,6 +1775,7 @@
     :cond_0
     move v2, v0
 
+    .line 4
     :goto_1
     invoke-virtual {p3, v1, v2}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;->setRendererDisabled(IZ)Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;
 
@@ -1723,6 +1783,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     invoke-interface {p4}, Ljava/util/List;->isEmpty()Z
 
@@ -1730,6 +1791,7 @@
 
     if-eqz v1, :cond_2
 
+    .line 6
     invoke-virtual {p3}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;->build()Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
 
     move-result-object p2
@@ -1738,15 +1800,18 @@
 
     goto :goto_3
 
+    .line 7
     :cond_2
     iget-object v1, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->mappedTrackInfos:[Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;
 
     aget-object v1, v1, p1
 
+    .line 8
     invoke-virtual {v1, p2}, Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;->getTrackGroups(I)Lcom/google/android/exoplayer2/source/TrackGroupArray;
 
     move-result-object v1
 
+    .line 9
     :goto_2
     invoke-interface {p4}, Ljava/util/List;->size()I
 
@@ -1754,6 +1819,7 @@
 
     if-ge v0, v2, :cond_3
 
+    .line 10
     invoke-interface {p4, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -1762,6 +1828,7 @@
 
     invoke-virtual {p3, p2, v1, v2}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;->setSelectionOverride(ILcom/google/android/exoplayer2/source/TrackGroupArray;Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$SelectionOverride;)Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;
 
+    .line 11
     invoke-virtual {p3}, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters$Builder;->build()Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
 
     move-result-object v2
@@ -1781,6 +1848,7 @@
     :catch_0
     move-exception p0
 
+    .line 12
     new-instance p1, Ljava/lang/IllegalStateException;
 
     invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
@@ -1788,13 +1856,31 @@
     throw p1
 .end method
 
+.method public synthetic b()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->lambda$onMediaPrepared$4()V
+
+    return-void
+.end method
+
+.method public synthetic c(Lcom/google/android/exoplayer2/offline/DownloadHelper$Callback;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->lambda$prepare$3(Lcom/google/android/exoplayer2/offline/DownloadHelper$Callback;)V
+
+    return-void
+.end method
+
 .method public clearTrackSelections(I)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->assertPreparedWithMedia()V
 
     const/4 v0, 0x0
 
+    .line 2
     :goto_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->rendererCapabilities:[Lcom/google/android/exoplayer2/RendererCapabilities;
 
@@ -1802,6 +1888,7 @@
 
     if-ge v0, v1, :cond_0
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->trackSelectionsByPeriodAndRenderer:[[Ljava/util/List;
 
     aget-object v1, v1, p1
@@ -2005,6 +2092,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->mediaSource:Lcom/google/android/exoplayer2/source/MediaSource;
 
     const/4 v1, 0x0
@@ -2013,9 +2101,11 @@
 
     return-object v1
 
+    .line 2
     :cond_0
     invoke-direct {p0}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->assertPreparedWithMedia()V
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->mediaPreparer:Lcom/google/android/exoplayer2/offline/DownloadHelper$MediaPreparer;
 
     iget-object v0, v0, Lcom/google/android/exoplayer2/offline/DownloadHelper$MediaPreparer;->timeline:Lcom/google/android/exoplayer2/Timeline;
@@ -2026,6 +2116,7 @@
 
     if-lez v0, :cond_1
 
+    .line 4
     iget-object v0, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->mediaPreparer:Lcom/google/android/exoplayer2/offline/DownloadHelper$MediaPreparer;
 
     iget-object v0, v0, Lcom/google/android/exoplayer2/offline/DownloadHelper$MediaPreparer;->timeline:Lcom/google/android/exoplayer2/Timeline;
@@ -2047,8 +2138,10 @@
 .method public getMappedTrackInfo(I)Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->assertPreparedWithMedia()V
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->mappedTrackInfos:[Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;
 
     aget-object p0, p0, p1
@@ -2059,6 +2152,7 @@
 .method public getPeriodCount()I
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->mediaSource:Lcom/google/android/exoplayer2/source/MediaSource;
 
     if-nez v0, :cond_0
@@ -2067,9 +2161,11 @@
 
     return p0
 
+    .line 2
     :cond_0
     invoke-direct {p0}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->assertPreparedWithMedia()V
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->trackGroupArrays:[Lcom/google/android/exoplayer2/source/TrackGroupArray;
 
     array-length p0, p0
@@ -2080,8 +2176,10 @@
 .method public getTrackGroups(I)Lcom/google/android/exoplayer2/source/TrackGroupArray;
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->assertPreparedWithMedia()V
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->trackGroupArrays:[Lcom/google/android/exoplayer2/source/TrackGroupArray;
 
     aget-object p0, p0, p1
@@ -2100,8 +2198,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->assertPreparedWithMedia()V
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->immutableTrackSelectionsByPeriodAndRenderer:[[Ljava/util/List;
 
     aget-object p0, p0, p1
@@ -2114,8 +2214,10 @@
 .method public getTracks(I)Lcom/google/android/exoplayer2/Tracks;
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->assertPreparedWithMedia()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->mappedTrackInfos:[Lcom/google/android/exoplayer2/trackselection/MappingTrackSelector$MappedTrackInfo;
 
     aget-object v0, v0, p1
@@ -2134,6 +2236,7 @@
 .method public prepare(Lcom/google/android/exoplayer2/offline/DownloadHelper$Callback;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->callback:Lcom/google/android/exoplayer2/offline/DownloadHelper$Callback;
 
     if-nez v0, :cond_0
@@ -2148,12 +2251,15 @@
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->callback:Lcom/google/android/exoplayer2/offline/DownloadHelper$Callback;
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->mediaSource:Lcom/google/android/exoplayer2/source/MediaSource;
 
     if-eqz v0, :cond_1
 
+    .line 4
     new-instance p1, Lcom/google/android/exoplayer2/offline/DownloadHelper$MediaPreparer;
 
     invoke-direct {p1, v0, p0}, Lcom/google/android/exoplayer2/offline/DownloadHelper$MediaPreparer;-><init>(Lcom/google/android/exoplayer2/source/MediaSource;Lcom/google/android/exoplayer2/offline/DownloadHelper;)V
@@ -2162,12 +2268,13 @@
 
     goto :goto_1
 
+    .line 5
     :cond_1
     iget-object v0, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->callbackHandler:Landroid/os/Handler;
 
-    new-instance v1, Lcom/google/android/exoplayer2/offline/g;
+    new-instance v1, Ld/j/a/b/t2/h;
 
-    invoke-direct {v1, p0, p1}, Lcom/google/android/exoplayer2/offline/g;-><init>(Lcom/google/android/exoplayer2/offline/DownloadHelper;Lcom/google/android/exoplayer2/offline/DownloadHelper$Callback;)V
+    invoke-direct {v1, p0, p1}, Ld/j/a/b/t2/h;-><init>(Lcom/google/android/exoplayer2/offline/DownloadHelper;Lcom/google/android/exoplayer2/offline/DownloadHelper$Callback;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -2178,12 +2285,15 @@
 .method public release()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->mediaPreparer:Lcom/google/android/exoplayer2/offline/DownloadHelper$MediaPreparer;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/offline/DownloadHelper$MediaPreparer;->release()V
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/offline/DownloadHelper;->trackSelector:Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector;
 
@@ -2195,11 +2305,14 @@
 .method public replaceTrackSelections(ILcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;)V
     .locals 0
 
+    .line 1
     :try_start_0
     invoke-direct {p0}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->assertPreparedWithMedia()V
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->clearTrackSelections(I)V
 
+    .line 3
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/offline/DownloadHelper;->addTrackSelectionInternal(ILcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;)V
     :try_end_0
     .catch Lcom/google/android/exoplayer2/ExoPlaybackException; {:try_start_0 .. :try_end_0} :catch_0
@@ -2209,6 +2322,7 @@
     :catch_0
     move-exception p0
 
+    .line 4
     new-instance p1, Ljava/lang/IllegalStateException;
 
     invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V

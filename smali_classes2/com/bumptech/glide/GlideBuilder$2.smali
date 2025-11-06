@@ -1,4 +1,4 @@
-.class Lcom/bumptech/glide/GlideBuilder$2;
+.class public Lcom/bumptech/glide/GlideBuilder$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,15 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/bumptech/glide/GlideBuilder;
+.field public final synthetic this$0:Lcom/bumptech/glide/GlideBuilder;
 
-.field final synthetic val$requestOptions:Lcom/bumptech/glide/request/RequestOptions;
+.field public final synthetic val$requestOptions:Lcom/bumptech/glide/request/RequestOptions;
 
 
 # direct methods
 .method public constructor <init>(Lcom/bumptech/glide/GlideBuilder;Lcom/bumptech/glide/request/RequestOptions;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/bumptech/glide/GlideBuilder$2;->this$0:Lcom/bumptech/glide/GlideBuilder;
 
     iput-object p2, p0, Lcom/bumptech/glide/GlideBuilder$2;->val$requestOptions:Lcom/bumptech/glide/request/RequestOptions;
@@ -43,6 +44,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/GlideBuilder$2;->val$requestOptions:Lcom/bumptech/glide/request/RequestOptions;
 
     if-eqz p0, :cond_0

@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/idm/api/IDMServer$InternalCallback;
+.class public Lcom/xiaomi/idm/api/IDMServer$InternalCallback;
 .super Lcom/xiaomi/mi_connect_service/IConnectionCallback$Stub;
 .source "SourceFile"
 
@@ -50,10 +50,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMServer$InternalCallback;->connectionCallback:Lcom/xiaomi/idm/api/IDMServer$IDMConnectionCallback;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0}, Lcom/xiaomi/idm/api/IDMServer$IDMConnectionCallback;->onDisconnected()V
 
     :cond_0
@@ -68,24 +70,29 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/xiaomi/idm/bean/ConnParam;->buildFromProto([B)Lcom/xiaomi/idm/bean/ConnParam;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
+    .line 2
     invoke-virtual {p1}, Lcom/xiaomi/idm/bean/ConnParam;->getErrCode()I
 
     move-result v0
 
+    .line 3
     invoke-virtual {p1}, Lcom/xiaomi/idm/bean/ConnParam;->getErrMsg()Ljava/lang/String;
 
     move-result-object v1
 
+    .line 4
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMServer$InternalCallback;->connectionCallback:Lcom/xiaomi/idm/api/IDMServer$IDMConnectionCallback;
 
     if-eqz p0, :cond_0
 
+    .line 5
     invoke-interface {p0, p1, v0, v1}, Lcom/xiaomi/idm/api/IDMServer$IDMConnectionCallback;->onFailure(Lcom/xiaomi/idm/bean/ConnParam;ILjava/lang/String;)V
 
     :cond_0
@@ -100,6 +107,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/xiaomi/idm/bean/ConnParam;->buildFromProto([B)Lcom/xiaomi/idm/bean/ConnParam;
 
     move-result-object p1
@@ -110,6 +118,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-virtual {p1}, Lcom/xiaomi/idm/bean/ConnParam;->getConfig()Lcom/xiaomi/idm/bean/ConnConfig;
 
@@ -120,10 +129,12 @@
 
     if-eqz v0, :cond_1
 
+    .line 3
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMServer$InternalCallback;->connectionCallback:Lcom/xiaomi/idm/api/IDMServer$IDMConnectionCallback;
 
     if-eqz p0, :cond_1
 
+    .line 4
     invoke-interface {p0, p1, v0}, Lcom/xiaomi/idm/api/IDMServer$IDMConnectionCallback;->onSuccess(Lcom/xiaomi/idm/bean/ConnParam;Ljava/lang/Object;)V
 
     :cond_1

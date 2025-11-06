@@ -25,9 +25,6 @@
 .method public abstract clearTintColor()Lmiuix/animation/IHoverStyle;
 .end method
 
-.method public abstract getDarkFeedbackColor()I
-.end method
-
 .method public abstract getFeedbackColor()I
 .end method
 
@@ -80,9 +77,6 @@
 .end method
 
 .method public abstract setCorner(F)Lmiuix/animation/IHoverStyle;
-.end method
-
-.method public abstract setDarkFeedbackColor(I)V
 .end method
 
 .method public abstract setEffect(Lmiuix/animation/IHoverStyle$HoverEffect;)Lmiuix/animation/IHoverStyle;

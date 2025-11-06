@@ -1,4 +1,4 @@
-.class final Lcom/google/android/datatransport/runtime/backends/AutoValue_BackendRequest$Builder;
+.class public final Lcom/google/android/datatransport/runtime/backends/AutoValue_BackendRequest$Builder;
 .super Lcom/google/android/datatransport/runtime/backends/BackendRequest$Builder;
 .source "SourceFile"
 
@@ -32,6 +32,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/datatransport/runtime/backends/BackendRequest$Builder;-><init>()V
 
     return-void
@@ -42,12 +43,14 @@
 .method public build()Lcom/google/android/datatransport/runtime/backends/BackendRequest;
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_BackendRequest$Builder;->events:Ljava/lang/Iterable;
 
     const-string v1, ""
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -62,6 +65,7 @@
 
     move-result-object v1
 
+    .line 3
     :cond_0
     invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
@@ -69,6 +73,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     new-instance v0, Lcom/google/android/datatransport/runtime/backends/AutoValue_BackendRequest;
 
     iget-object v1, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_BackendRequest$Builder;->events:Ljava/lang/Iterable;
@@ -81,6 +86,7 @@
 
     return-object v0
 
+    .line 5
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -104,7 +110,7 @@
 .end method
 
 .method public setEvents(Ljava/lang/Iterable;)Lcom/google/android/datatransport/runtime/backends/BackendRequest$Builder;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -115,20 +121,15 @@
         }
     .end annotation
 
-    if-eqz p1, :cond_0
+    const-string v0, "Null events"
 
+    .line 1
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 2
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_BackendRequest$Builder;->events:Ljava/lang/Iterable;
 
     return-object p0
-
-    :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string p1, "Null events"
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method
 
 .method public setExtras([B)Lcom/google/android/datatransport/runtime/backends/BackendRequest$Builder;
@@ -138,6 +139,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_BackendRequest$Builder;->extras:[B
 
     return-object p0

@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/MapMakerInternalMap$StrongKeyDummyValueEntry;
+.class public final Lcom/google/common/collect/MapMakerInternalMap$StrongKeyDummyValueEntry;
 .super Lcom/google/common/collect/MapMakerInternalMap$AbstractStrongKeyEntry;
 .source "SourceFile"
 
@@ -56,6 +56,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/google/common/collect/MapMakerInternalMap$AbstractStrongKeyEntry;-><init>(Ljava/lang/Object;ILcom/google/common/collect/MapMakerInternalMap$InternalEntry;)V
 
     return-void
@@ -75,6 +76,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/MapMakerInternalMap$StrongKeyDummyValueEntry;
 
     iget-object v1, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractStrongKeyEntry;->key:Ljava/lang/Object;

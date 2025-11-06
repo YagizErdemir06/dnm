@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/MoreExecutors$2;
+.class public Lcom/google/common/util/concurrent/MoreExecutors$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,15 +18,16 @@
 
 
 # instance fields
-.field final synthetic val$executor:Ljava/util/concurrent/Executor;
+.field public final synthetic val$executor:Ljava/util/concurrent/Executor;
 
-.field final synthetic val$nameSupplier:Lcom/google/common/base/Supplier;
+.field public final synthetic val$nameSupplier:Lcom/google/common/base/Supplier;
 
 
 # direct methods
 .method public constructor <init>(Ljava/util/concurrent/Executor;Lcom/google/common/base/Supplier;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/MoreExecutors$2;->val$executor:Ljava/util/concurrent/Executor;
 
     iput-object p2, p0, Lcom/google/common/util/concurrent/MoreExecutors$2;->val$nameSupplier:Lcom/google/common/base/Supplier;
@@ -41,6 +42,7 @@
 .method public execute(Ljava/lang/Runnable;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/util/concurrent/MoreExecutors$2;->val$executor:Ljava/util/concurrent/Executor;
 
     iget-object p0, p0, Lcom/google/common/util/concurrent/MoreExecutors$2;->val$nameSupplier:Lcom/google/common/base/Supplier;

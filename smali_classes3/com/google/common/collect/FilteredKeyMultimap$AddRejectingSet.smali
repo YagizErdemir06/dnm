@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/FilteredKeyMultimap$AddRejectingSet;
+.class public Lcom/google/common/collect/FilteredKeyMultimap$AddRejectingSet;
 .super Lcom/google/common/collect/ForwardingSet;
 .source "SourceFile"
 
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field final key:Ljava/lang/Object;
+.field public final key:Ljava/lang/Object;
     .annotation runtime Lcom/google/common/collect/ParametricNullness;
     .end annotation
 
@@ -52,8 +52,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ForwardingSet;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/FilteredKeyMultimap$AddRejectingSet;->key:Ljava/lang/Object;
 
     return-void
@@ -73,6 +75,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     iget-object p0, p0, Lcom/google/common/collect/FilteredKeyMultimap$AddRejectingSet;->key:Ljava/lang/Object;
@@ -116,8 +119,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     iget-object p0, p0, Lcom/google/common/collect/FilteredKeyMultimap$AddRejectingSet;->key:Ljava/lang/Object;

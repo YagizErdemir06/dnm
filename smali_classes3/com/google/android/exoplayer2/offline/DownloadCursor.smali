@@ -22,6 +22,7 @@
 .method public isAfterLast()Z
     .locals 2
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/offline/DownloadCursor;->getCount()I
 
     move-result v0
@@ -32,6 +33,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     invoke-interface {p0}, Lcom/google/android/exoplayer2/offline/DownloadCursor;->getPosition()I
 
@@ -55,6 +57,7 @@
 .method public isBeforeFirst()Z
     .locals 2
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/offline/DownloadCursor;->getCount()I
 
     move-result v0
@@ -65,6 +68,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     invoke-interface {p0}, Lcom/google/android/exoplayer2/offline/DownloadCursor;->getPosition()I
 
@@ -89,6 +93,7 @@
 .method public isFirst()Z
     .locals 1
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/offline/DownloadCursor;->getPosition()I
 
     move-result v0
@@ -115,10 +120,12 @@
 .method public isLast()Z
     .locals 2
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/offline/DownloadCursor;->getCount()I
 
     move-result v0
 
+    .line 2
     invoke-interface {p0}, Lcom/google/android/exoplayer2/offline/DownloadCursor;->getPosition()I
 
     move-result p0
@@ -145,6 +152,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-interface {p0, v0}, Lcom/google/android/exoplayer2/offline/DownloadCursor;->moveToPosition(I)Z
 
     move-result p0
@@ -155,6 +163,7 @@
 .method public moveToLast()Z
     .locals 1
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/offline/DownloadCursor;->getCount()I
 
     move-result v0
@@ -171,6 +180,7 @@
 .method public moveToNext()Z
     .locals 1
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/offline/DownloadCursor;->getPosition()I
 
     move-result v0
@@ -190,6 +200,7 @@
 .method public moveToPrevious()Z
     .locals 1
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/offline/DownloadCursor;->getPosition()I
 
     move-result v0

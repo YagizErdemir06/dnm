@@ -76,6 +76,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/reflect/ImmutableTypeToInstanceMap;
 
     iget-object p0, p0, Lcom/google/common/reflect/ImmutableTypeToInstanceMap$Builder;->mapBuilder:Lcom/google/common/collect/ImmutableMap$Builder;

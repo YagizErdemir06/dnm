@@ -7,6 +7,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationTopMenuCV;-><init>()V
 
     return-void
@@ -16,6 +17,16 @@
 # virtual methods
 .method public getTopMenuRes(Landroid/content/Context;I)I
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "res"
+        }
+    .end annotation
 
     const/4 v0, -0x1
 
@@ -25,6 +36,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -34,6 +46,7 @@
 
     move-result-object v0
 
+    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -56,6 +69,7 @@
 
     move-result-object v1
 
+    .line 3
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -70,6 +84,7 @@
 
     if-nez v0, :cond_1
 
+    .line 4
     invoke-super {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/cv/MiThemeOperationTopMenuCV;->getTopMenuRes(Landroid/content/Context;I)I
 
     move-result v0
@@ -84,6 +99,16 @@
 
 .method public getTopMenuResMM(Landroid/content/Context;I)I
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "res"
+        }
+    .end annotation
 
     const/4 v0, -0x1
 
@@ -93,6 +118,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -102,6 +128,7 @@
 
     move-result-object v0
 
+    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -124,6 +151,7 @@
 
     move-result-object v1
 
+    .line 3
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -138,6 +166,7 @@
 
     if-nez v0, :cond_1
 
+    .line 4
     invoke-virtual {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/top/MiThemeOperationTopMenuMM;->getTopMenuRes(Landroid/content/Context;I)I
 
     move-result v0

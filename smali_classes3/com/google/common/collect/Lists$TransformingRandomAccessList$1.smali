@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Lists$TransformingRandomAccessList$1;
+.class public Lcom/google/common/collect/Lists$TransformingRandomAccessList$1;
 .super Lcom/google/common/collect/TransformedListIterator;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/Lists$TransformingRandomAccessList;
+.field public final synthetic this$0:Lcom/google/common/collect/Lists$TransformingRandomAccessList;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/Lists$TransformingRandomAccessList;Ljava/util/ListIterator;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/Lists$TransformingRandomAccessList$1;->this$0:Lcom/google/common/collect/Lists$TransformingRandomAccessList;
 
     invoke-direct {p0, p2}, Lcom/google/common/collect/TransformedListIterator;-><init>(Ljava/util/ListIterator;)V
@@ -46,6 +47,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Lists$TransformingRandomAccessList$1;->this$0:Lcom/google/common/collect/Lists$TransformingRandomAccessList;
 
     iget-object p0, p0, Lcom/google/common/collect/Lists$TransformingRandomAccessList;->function:Lcom/google/common/base/Function;

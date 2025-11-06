@@ -16,6 +16,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -52,8 +53,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v0
@@ -72,6 +75,7 @@
 
     sub-int p4, p2, p3
 
+    .line 3
     invoke-interface {p0, p1, p4}, Ljava/util/concurrent/BlockingQueue;->drainTo(Ljava/util/Collection;I)I
 
     move-result p4
@@ -80,6 +84,7 @@
 
     if-ge p3, p2, :cond_0
 
+    .line 4
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide p4
@@ -96,6 +101,7 @@
 
     goto :goto_1
 
+    .line 5
     :cond_1
     invoke-interface {p1, p4}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
@@ -133,8 +139,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v0
@@ -155,6 +163,7 @@
 
     sub-int p5, p2, p3
 
+    .line 3
     :try_start_0
     invoke-interface {p0, p1, p5}, Ljava/util/concurrent/BlockingQueue;->drainTo(Ljava/util/Collection;I)I
 
@@ -166,6 +175,7 @@
 
     if-ge p3, p2, :cond_0
 
+    .line 4
     :goto_1
     :try_start_1
     invoke-static {}, Ljava/lang/System;->nanoTime()J
@@ -187,6 +197,7 @@
 
     goto :goto_2
 
+    .line 5
     :cond_1
     :try_start_2
     invoke-interface {p1, p5}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
@@ -207,12 +218,14 @@
 
     if-eqz p4, :cond_2
 
+    .line 6
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object p1
 
     invoke-virtual {p1}, Ljava/lang/Thread;->interrupt()V
 
+    .line 7
     :cond_2
     throw p0
 
@@ -220,6 +233,7 @@
     :goto_2
     if-eqz p4, :cond_4
 
+    .line 8
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object p0
@@ -245,6 +259,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/concurrent/ArrayBlockingQueue;
 
     invoke-direct {v0, p0}, Ljava/util/concurrent/ArrayBlockingQueue;-><init>(I)V
@@ -697,6 +712,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/concurrent/SynchronousQueue;
 
     invoke-direct {v0}, Ljava/util/concurrent/SynchronousQueue;-><init>()V
@@ -720,6 +736,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {p0, v0}, Lcom/google/common/collect/Synchronized;->deque(Ljava/util/Deque;Ljava/lang/Object;)Ljava/util/Deque;
 
     move-result-object p0
@@ -743,6 +760,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {p0, v0}, Lcom/google/common/collect/Synchronized;->queue(Ljava/util/Queue;Ljava/lang/Object;)Ljava/util/Queue;
 
     move-result-object p0

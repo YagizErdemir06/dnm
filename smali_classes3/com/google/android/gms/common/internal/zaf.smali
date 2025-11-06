@@ -1,12 +1,12 @@
-.class final Lcom/google/android/gms/common/internal/zaf;
+.class public final Lcom/google/android/gms/common/internal/zaf;
 .super Lcom/google/android/gms/common/internal/zag;
 .source "SourceFile"
 
 
 # instance fields
-.field final synthetic zaa:Landroid/content/Intent;
+.field public final synthetic zaa:Landroid/content/Intent;
 
-.field final synthetic zab:Lcom/google/android/gms/common/api/internal/LifecycleFragment;
+.field public final synthetic zab:Lcom/google/android/gms/common/api/internal/LifecycleFragment;
 
 
 # direct methods
@@ -27,6 +27,7 @@
 .method public final zaa()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/internal/zaf;->zaa:Landroid/content/Intent;
 
     if-eqz v0, :cond_0

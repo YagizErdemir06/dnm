@@ -25,13 +25,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/ForwardingMap;
+.field public final synthetic this$0:Lcom/google/common/collect/ForwardingMap;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/ForwardingMap;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/ForwardingMap$StandardEntrySet;->this$0:Lcom/google/common/collect/ForwardingMap;
 
     invoke-direct {p0}, Lcom/google/common/collect/Maps$EntrySet;-><init>()V
@@ -51,6 +52,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ForwardingMap$StandardEntrySet;->this$0:Lcom/google/common/collect/ForwardingMap;
 
     return-object p0

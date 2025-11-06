@@ -24,8 +24,10 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/extractor/ExtractorsFactory;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/BundledExtractorsAdapter;->extractorsFactory:Lcom/google/android/exoplayer2/extractor/ExtractorsFactory;
 
     return-void
@@ -36,12 +38,14 @@
 .method public disableSeekingOnMp3Streams()V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/BundledExtractorsAdapter;->extractor:Lcom/google/android/exoplayer2/extractor/Extractor;
 
     instance-of v0, p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;->disableSeeking()V
@@ -53,6 +57,7 @@
 .method public getCurrentInputPosition()J
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/BundledExtractorsAdapter;->extractorInput:Lcom/google/android/exoplayer2/extractor/ExtractorInput;
 
     if-eqz p0, :cond_0
@@ -93,6 +98,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v6, Lcom/google/android/exoplayer2/extractor/DefaultExtractorInput;
 
     move-object v0, v6
@@ -105,14 +111,17 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/google/android/exoplayer2/extractor/DefaultExtractorInput;-><init>(Lcom/google/android/exoplayer2/upstream/DataReader;JJ)V
 
+    .line 2
     iput-object v6, p0, Lcom/google/android/exoplayer2/source/BundledExtractorsAdapter;->extractorInput:Lcom/google/android/exoplayer2/extractor/ExtractorInput;
 
+    .line 3
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/BundledExtractorsAdapter;->extractor:Lcom/google/android/exoplayer2/extractor/Extractor;
 
     if-eqz p1, :cond_0
 
     return-void
 
+    .line 4
     :cond_0
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/BundledExtractorsAdapter;->extractorsFactory:Lcom/google/android/exoplayer2/extractor/ExtractorsFactory;
 
@@ -120,6 +129,7 @@
 
     move-result-object p1
 
+    .line 5
     array-length p3, p1
 
     const/4 p6, 0x0
@@ -128,12 +138,14 @@
 
     if-ne p3, p7, :cond_1
 
+    .line 6
     aget-object p1, p1, p6
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/BundledExtractorsAdapter;->extractor:Lcom/google/android/exoplayer2/extractor/Extractor;
 
     goto :goto_4
 
+    .line 7
     :cond_1
     array-length p3, p1
 
@@ -144,6 +156,7 @@
 
     aget-object v1, p1, v0
 
+    .line 8
     :try_start_0
     invoke-interface {v1, v6}, Lcom/google/android/exoplayer2/extractor/Extractor;->sniff(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)Z
 
@@ -151,17 +164,21 @@
 
     if-eqz v2, :cond_2
 
+    .line 9
     iput-object v1, p0, Lcom/google/android/exoplayer2/source/BundledExtractorsAdapter;->extractor:Lcom/google/android/exoplayer2/extractor/Extractor;
     :try_end_0
     .catch Ljava/io/EOFException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 10
     invoke-static {p7}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 11
     invoke-interface {v6}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
 
     goto :goto_3
 
+    .line 12
     :cond_2
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/BundledExtractorsAdapter;->extractor:Lcom/google/android/exoplayer2/extractor/Extractor;
 
@@ -198,10 +215,13 @@
     :cond_4
     invoke-static {p6}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 13
     invoke-interface {v6}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
 
+    .line 14
     throw p1
 
+    .line 15
     :catch_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/BundledExtractorsAdapter;->extractor:Lcom/google/android/exoplayer2/extractor/Extractor;
 
@@ -229,18 +249,21 @@
     :goto_2
     invoke-static {v1}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 16
     invoke-interface {v6}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
+    .line 17
     :cond_7
     :goto_3
     iget-object p3, p0, Lcom/google/android/exoplayer2/source/BundledExtractorsAdapter;->extractor:Lcom/google/android/exoplayer2/extractor/Extractor;
 
     if-eqz p3, :cond_8
 
+    .line 18
     :goto_4
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/BundledExtractorsAdapter;->extractor:Lcom/google/android/exoplayer2/extractor/Extractor;
 
@@ -248,6 +271,7 @@
 
     return-void
 
+    .line 19
     :cond_8
     new-instance p0, Lcom/google/android/exoplayer2/source/UnrecognizedInputFormatException;
 
@@ -259,6 +283,7 @@
 
     invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 20
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Util;->getCommaDelimitedSimpleClassNames([Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -273,6 +298,7 @@
 
     move-result-object p1
 
+    .line 21
     invoke-static {p2}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
@@ -292,6 +318,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/BundledExtractorsAdapter;->extractor:Lcom/google/android/exoplayer2/extractor/Extractor;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -302,6 +329,7 @@
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/BundledExtractorsAdapter;->extractorInput:Lcom/google/android/exoplayer2/extractor/ExtractorInput;
 
+    .line 2
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -318,16 +346,20 @@
 .method public release()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/BundledExtractorsAdapter;->extractor:Lcom/google/android/exoplayer2/extractor/Extractor;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {v0}, Lcom/google/android/exoplayer2/extractor/Extractor;->release()V
 
+    .line 3
     iput-object v1, p0, Lcom/google/android/exoplayer2/source/BundledExtractorsAdapter;->extractor:Lcom/google/android/exoplayer2/extractor/Extractor;
 
+    .line 4
     :cond_0
     iput-object v1, p0, Lcom/google/android/exoplayer2/source/BundledExtractorsAdapter;->extractorInput:Lcom/google/android/exoplayer2/extractor/ExtractorInput;
 
@@ -337,6 +369,7 @@
 .method public seek(JJ)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/BundledExtractorsAdapter;->extractor:Lcom/google/android/exoplayer2/extractor/Extractor;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;

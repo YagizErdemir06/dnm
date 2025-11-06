@@ -14,9 +14,14 @@
     value = "SMAP\nIDMBase.kt\nKotlin\n*S Kotlin\n*F\n+ 1 IDMBase.kt\ncom/xiaomi/idm/api/IDMBase\n+ 2 MapsJVM.kt\nkotlin/collections/MapsKt__MapsJVMKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,295:1\n78#2,2:296\n1#3:298\n1#3:299\n*S KotlinDebug\n*F\n+ 1 IDMBase.kt\ncom/xiaomi/idm/api/IDMBase\n*L\n84#1:296,2\n84#1:298\n*E\n"
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000\u00a8\u0001\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0004\n\u0002\u0010\u000b\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0010\u0012\n\u0002\u0008\u0007\u0008\u0010\u0018\u0000 V2\u00020\u0001:\u0001VB-\u0008\u0007\u0012\u0006\u0010\u001d\u001a\u00020\u001c\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010#\u001a\u00020\"\u0012\n\u0008\u0002\u0010%\u001a\u0004\u0018\u00010\u0016\u00a2\u0006\u0004\u0008T\u0010UJ\u0018\u0010\u0005\u001a\u00020\u00022\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0004\u001a\u00020\u0002H\u0002J\u0008\u0010\u0007\u001a\u00020\u0006H\u0002J\u0008\u0010\t\u001a\u00020\u0008H\u0002J\u001a\u0010\u000b\u001a\u0004\u0018\u00010\n2\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0004\u001a\u00020\u0002H\u0001J \u0010\u000e\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0004\u001a\u00020\u00022\u0006\u0010\r\u001a\u00020\u000cH\u0001J \u0010\u000f\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0004\u001a\u00020\u00022\u0006\u0010\r\u001a\u00020\u000cH\u0001J\u0006\u0010\u0010\u001a\u00020\u0006J\u0006\u0010\u0012\u001a\u00020\u0011J\u000f\u0010\u0013\u001a\u0004\u0018\u00010\u0011\u00a2\u0006\u0004\u0008\u0013\u0010\u0014J\u0006\u0010\u0015\u001a\u00020\u0006J\u0018\u0010\u001a\u001a\u00020\u00062\u0008\u0010\u0017\u001a\u0004\u0018\u00010\u00162\u0006\u0010\u0019\u001a\u00020\u0018J\u0008\u0010\u001b\u001a\u00020\u0006H\u0014R\u0014\u0010\u001d\u001a\u00020\u001c8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u001d\u0010\u001eR\u0017\u0010\u0003\u001a\u00020\u00028\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0003\u0010\u001f\u001a\u0004\u0008 \u0010!R\u0014\u0010#\u001a\u00020\"8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008#\u0010$R\u0018\u0010%\u001a\u0004\u0018\u00010\u00168\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008%\u0010&R\u0018\u0010(\u001a\u0004\u0018\u00010\'8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008(\u0010)R$\u0010+\u001a\u00020\u000c2\u0006\u0010*\u001a\u00020\u000c8\u0006@BX\u0086\u000e\u00a2\u0006\u000c\n\u0004\u0008+\u0010,\u001a\u0004\u0008-\u0010.R\u001a\u00101\u001a\u0008\u0012\u0004\u0012\u0002000/8\u0004X\u0085\u0004\u00a2\u0006\u0006\n\u0004\u00081\u00102R\u0016\u00104\u001a\u0002038\u0004@\u0004X\u0085\u000e\u00a2\u0006\u0006\n\u0004\u00084\u00105R,\u00108\u001a\u001a\u0012\u0004\u0012\u00020\u0002\u0012\u0010\u0012\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u000207068\u0004X\u0085\u0004\u00a2\u0006\u0006\n\u0004\u00088\u00109R \u0010;\u001a\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020:068\u0004X\u0085\u0004\u00a2\u0006\u0006\n\u0004\u0008;\u00109R \u0010<\u001a\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\n068\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008<\u00109R\u0014\u0010>\u001a\u00020=8\u0004X\u0085\u0004\u00a2\u0006\u0006\n\u0004\u0008>\u0010?R\u0018\u0010A\u001a\u0004\u0018\u00010@8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008A\u0010BR\u0014\u0010D\u001a\u00020C8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008D\u0010ER\u0016\u0010F\u001a\u00020\u00118\u0002@\u0002X\u0083\u000e\u00a2\u0006\u0006\n\u0004\u0008F\u0010GR\u0014\u0010I\u001a\u00020H8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008I\u0010JR\u0014\u0010M\u001a\u00020\'8DX\u0084\u0004\u00a2\u0006\u0006\u001a\u0004\u0008K\u0010LR\u0014\u0010O\u001a\u00020\u00028DX\u0084\u0004\u00a2\u0006\u0006\u001a\u0004\u0008N\u0010!R\u0016\u0010S\u001a\u0004\u0018\u00010P8VX\u0096\u0004\u00a2\u0006\u0006\u001a\u0004\u0008Q\u0010R\u00a8\u0006W"
+        "\u0000\u00ac\u0001\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0005\n\u0002\u0010\u000b\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\n\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0010\u0012\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0008\u0008\u0010\u0018\u0000 ]2\u00020\u0001:\u0001]B-\u0008\u0007\u0012\u0006\u0010K\u001a\u00020J\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u00108\u001a\u000207\u0012\n\u0008\u0002\u0010=\u001a\u0004\u0018\u00010\u001c\u00a2\u0006\u0004\u0008[\u0010\\J\u001f\u0010\u0005\u001a\u00020\u00022\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0004\u001a\u00020\u0002H\u0002\u00a2\u0006\u0004\u0008\u0005\u0010\u0006J\u000f\u0010\u0008\u001a\u00020\u0007H\u0002\u00a2\u0006\u0004\u0008\u0008\u0010\tJ\u000f\u0010\u000b\u001a\u00020\nH\u0002\u00a2\u0006\u0004\u0008\u000b\u0010\u000cJ!\u0010\u000e\u001a\u0004\u0018\u00010\r2\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0004\u001a\u00020\u0002H\u0001\u00a2\u0006\u0004\u0008\u000e\u0010\u000fJ\'\u0010\u0012\u001a\u00020\u00072\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0004\u001a\u00020\u00022\u0006\u0010\u0011\u001a\u00020\u0010H\u0001\u00a2\u0006\u0004\u0008\u0012\u0010\u0013J\'\u0010\u0014\u001a\u00020\u00072\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0004\u001a\u00020\u00022\u0006\u0010\u0011\u001a\u00020\u0010H\u0001\u00a2\u0006\u0004\u0008\u0014\u0010\u0013J\r\u0010\u0015\u001a\u00020\u0007\u00a2\u0006\u0004\u0008\u0015\u0010\tJ\r\u0010\u0017\u001a\u00020\u0016\u00a2\u0006\u0004\u0008\u0017\u0010\u0018J\u000f\u0010\u0019\u001a\u0004\u0018\u00010\u0016\u00a2\u0006\u0004\u0008\u0019\u0010\u001aJ\r\u0010\u001b\u001a\u00020\u0007\u00a2\u0006\u0004\u0008\u001b\u0010\tJ\u001f\u0010 \u001a\u00020\u00072\u0008\u0010\u001d\u001a\u0004\u0018\u00010\u001c2\u0006\u0010\u001f\u001a\u00020\u001e\u00a2\u0006\u0004\u0008 \u0010!J\u000f\u0010\"\u001a\u00020\u0007H\u0014\u00a2\u0006\u0004\u0008\"\u0010\tR\u001c\u0010%\u001a\u0008\u0012\u0004\u0012\u00020$0#8\u0004@\u0005X\u0085\u0004\u00a2\u0006\u0006\n\u0004\u0008%\u0010&R\"\u0010)\u001a\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020(0\'8\u0004@\u0005X\u0085\u0004\u00a2\u0006\u0006\n\u0004\u0008)\u0010*R\u0016\u0010,\u001a\u00020+8\u0004@\u0004X\u0085\u000e\u00a2\u0006\u0006\n\u0004\u0008,\u0010-R\"\u0010.\u001a\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\r0\'8\u0002@\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008.\u0010*R.\u00100\u001a\u001a\u0012\u0004\u0012\u00020\u0002\u0012\u0010\u0012\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00020/0\'8\u0004@\u0005X\u0085\u0004\u00a2\u0006\u0006\n\u0004\u00080\u0010*R\u0018\u00102\u001a\u0004\u0018\u0001018\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u00082\u00103R\u0016\u00105\u001a\u0002048\u0002@\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u00085\u00106R\u0016\u00108\u001a\u0002078\u0002@\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u00088\u00109R\u0016\u0010;\u001a\u00020:8\u0002@\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008;\u0010<R\u0018\u0010=\u001a\u0004\u0018\u00010\u001c8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008=\u0010>R\u0018\u0010@\u001a\u0004\u0018\u00010?8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008@\u0010AR\u0016\u0010D\u001a\u00020?8D@\u0004X\u0084\u0004\u00a2\u0006\u0006\u001a\u0004\u0008B\u0010CR\u0016\u0010E\u001a\u00020\u00168\u0002@\u0002X\u0083\u000e\u00a2\u0006\u0006\n\u0004\u0008E\u0010FR\u0016\u0010I\u001a\u00020\u00028D@\u0004X\u0084\u0004\u00a2\u0006\u0006\u001a\u0004\u0008G\u0010HR\u0016\u0010K\u001a\u00020J8\u0002@\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008K\u0010LR$\u0010N\u001a\u00020\u00102\u0006\u0010M\u001a\u00020\u00108\u0006@BX\u0086\u000e\u00a2\u0006\u000c\n\u0004\u0008N\u0010O\u001a\u0004\u0008P\u0010QR\u0018\u0010U\u001a\u0004\u0018\u00010R8V@\u0016X\u0096\u0004\u00a2\u0006\u0006\u001a\u0004\u0008S\u0010TR\u0016\u0010W\u001a\u00020V8\u0004@\u0005X\u0085\u0004\u00a2\u0006\u0006\n\u0004\u0008W\u0010XR\u0019\u0010\u0003\u001a\u00020\u00028\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0003\u0010Y\u001a\u0004\u0008Z\u0010H\u00a8\u0006^"
     }
     d2 = {
         "Lcom/xiaomi/idm/api/IDMBase;",
@@ -25,19 +30,25 @@
         "clientId",
         "serviceId",
         "connectionId",
-        "Lnm/l2;",
+        "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;",
+        "Lh/l2;",
         "unbindService",
+        "()V",
         "Landroid/content/Intent;",
         "createMiConnectIntent",
+        "()Landroid/content/Intent;",
         "Lcom/xiaomi/idm/internal/Connection;",
         "getConnection",
+        "(Ljava/lang/String;Ljava/lang/String;)Lcom/xiaomi/idm/internal/Connection;",
         "",
         "connLevel",
         "addConnection",
+        "(Ljava/lang/String;Ljava/lang/String;I)V",
         "removeConnection",
         "init",
         "",
         "serviceAvailable",
+        "()Z",
         "tryStartASendBlockTask",
         "()Ljava/lang/Boolean;",
         "destroy",
@@ -46,63 +57,64 @@
         "Ljava/lang/Runnable;",
         "runnable",
         "tryDoOnLooper",
+        "(Landroid/os/Looper;Ljava/lang/Runnable;)V",
         "doDestroy",
-        "Landroid/content/Context;",
-        "context",
-        "Landroid/content/Context;",
-        "Ljava/lang/String;",
-        "getClientId",
-        "()Ljava/lang/String;",
+        "Ljava/util/concurrent/ConcurrentLinkedDeque;",
+        "Lcom/xiaomi/idm/task/SendBlockTask;",
+        "sendBlockTasks",
+        "Ljava/util/concurrent/ConcurrentLinkedDeque;",
+        "Ljava/util/concurrent/ConcurrentHashMap;",
+        "Lcom/xiaomi/idm/task/RecvBlockTask;",
+        "recvBlockTasks",
+        "Ljava/util/concurrent/ConcurrentHashMap;",
+        "Ljava/util/concurrent/atomic/AtomicInteger;",
+        "sendBlockMemoryUsage",
+        "Ljava/util/concurrent/atomic/AtomicInteger;",
+        "connectionMap",
+        "Landroid/util/Pair;",
+        "seqBlockMap",
+        "Landroid/os/HandlerThread;",
+        "handlerThread",
+        "Landroid/os/HandlerThread;",
+        "Landroid/content/ServiceConnection;",
+        "mConnection",
+        "Landroid/content/ServiceConnection;",
         "Lcom/xiaomi/idm/api/IDMProcessCallback;",
         "processCallback",
         "Lcom/xiaomi/idm/api/IDMProcessCallback;",
+        "Ljava/util/concurrent/atomic/AtomicLong;",
+        "atomicLong",
+        "Ljava/util/concurrent/atomic/AtomicLong;",
         "callbackLooper",
         "Landroid/os/Looper;",
         "Lcom/xiaomi/mi_connect_service/IMiConnect;",
         "_iMiConnect",
         "Lcom/xiaomi/mi_connect_service/IMiConnect;",
+        "getIMiConnect",
+        "()Lcom/xiaomi/mi_connect_service/IMiConnect;",
+        "iMiConnect",
+        "mShouldUnbind",
+        "Z",
+        "getNextRequestId",
+        "()Ljava/lang/String;",
+        "nextRequestId",
+        "Landroid/content/Context;",
+        "context",
+        "Landroid/content/Context;",
         "<set-?>",
         "serviceApiVersion",
         "I",
         "getServiceApiVersion",
         "()I",
-        "Ljava/util/concurrent/ConcurrentLinkedDeque;",
-        "Lcom/xiaomi/idm/task/SendBlockTask;",
-        "sendBlockTasks",
-        "Ljava/util/concurrent/ConcurrentLinkedDeque;",
-        "Ljava/util/concurrent/atomic/AtomicInteger;",
-        "sendBlockMemoryUsage",
-        "Ljava/util/concurrent/atomic/AtomicInteger;",
-        "Ljava/util/concurrent/ConcurrentHashMap;",
-        "Landroid/util/Pair;",
-        "seqBlockMap",
-        "Ljava/util/concurrent/ConcurrentHashMap;",
-        "Lcom/xiaomi/idm/task/RecvBlockTask;",
-        "recvBlockTasks",
-        "connectionMap",
-        "Landroid/os/Handler;",
-        "handler",
-        "Landroid/os/Handler;",
-        "Landroid/os/HandlerThread;",
-        "handlerThread",
-        "Landroid/os/HandlerThread;",
-        "Ljava/util/concurrent/atomic/AtomicLong;",
-        "atomicLong",
-        "Ljava/util/concurrent/atomic/AtomicLong;",
-        "mShouldUnbind",
-        "Z",
-        "Landroid/content/ServiceConnection;",
-        "mConnection",
-        "Landroid/content/ServiceConnection;",
-        "getIMiConnect",
-        "()Lcom/xiaomi/mi_connect_service/IMiConnect;",
-        "iMiConnect",
-        "getNextRequestId",
-        "nextRequestId",
         "",
         "getIdHash",
         "()[B",
         "idHash",
+        "Landroid/os/Handler;",
+        "handler",
+        "Landroid/os/Handler;",
+        "Ljava/lang/String;",
+        "getClientId",
         "<init>",
         "(Landroid/content/Context;Ljava/lang/String;Lcom/xiaomi/idm/api/IDMProcessCallback;Landroid/os/Looper;)V",
         "Companion",
@@ -119,50 +131,50 @@
 
 # static fields
 .field public static final Companion:Lcom/xiaomi/idm/api/IDMBase$Companion;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
-.field protected static final MAX_SEND_BLOCK_MEMORY:I = 0x5f5e100
+.field public static final MAX_SEND_BLOCK_MEMORY:I = 0x5f5e100
 
-.field protected static final MIN_AIDL_VERSION_SUPPORT_FIXED_SERVICE_ID:I = 0xa
+.field public static final MIN_AIDL_VERSION_SUPPORT_FIXED_SERVICE_ID:I = 0xa
 
-.field protected static final MIN_AIDL_VERSION_SUPPORT_OFFLINE_ACCOUNT:I = 0xe
+.field public static final MIN_AIDL_VERSION_SUPPORT_OFFLINE_ACCOUNT:I = 0xe
 
-.field protected static final MIN_AIDL_VERSION_SUPPORT_OUT_OF_BAND_INFO:I = 0xb
+.field public static final MIN_AIDL_VERSION_SUPPORT_OUT_OF_BAND_INFO:I = 0xb
 
-.field protected static final MIN_AIDL_VERSION_SUPPORT_REI_EVENT:I = 0x9
+.field public static final MIN_AIDL_VERSION_SUPPORT_REI_EVENT:I = 0x9
 
-.field protected static final MIN_AIDL_VERSION_SUPPORT_SEND_BLOCK:I = 0xe
+.field public static final MIN_AIDL_VERSION_SUPPORT_SEND_BLOCK:I = 0xe
 
-.field protected static final MIN_AIDL_VERSION_SUPPORT_UPDATE_SERVICE:I = 0xe
+.field public static final MIN_AIDL_VERSION_SUPPORT_UPDATE_SERVICE:I = 0xe
 
 .field private static final REQUIRED_MIN_VERSION:I = 0x6
 
 .field private static final TAG:Ljava/lang/String; = "IDMBase"
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 
 # instance fields
 .field private _iMiConnect:Lcom/xiaomi/mi_connect_service/IMiConnect;
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 .end field
 
 .field private final atomicLong:Ljava/util/concurrent/atomic/AtomicLong;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field private callbackLooper:Landroid/os/Looper;
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 .end field
 
 .field private final clientId:Ljava/lang/String;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -176,30 +188,30 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field private final context:Landroid/content/Context;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
-.field protected final handler:Landroid/os/Handler;
-    .annotation build Lin/e;
+.field public final handler:Landroid/os/Handler;
+    .annotation build Lh/d3/e;
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field private handlerThread:Landroid/os/HandlerThread;
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 .end field
 
 .field private final mConnection:Landroid/content/ServiceConnection;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -210,11 +222,11 @@
 .end field
 
 .field private final processCallback:Lcom/xiaomi/idm/api/IDMProcessCallback;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
-.field protected final recvBlockTasks:Ljava/util/concurrent/ConcurrentHashMap;
+.field public final recvBlockTasks:Ljava/util/concurrent/ConcurrentHashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/ConcurrentHashMap<",
@@ -224,22 +236,22 @@
         }
     .end annotation
 
-    .annotation build Lin/e;
+    .annotation build Lh/d3/e;
     .end annotation
 
-    .annotation build Ljv/d;
-    .end annotation
-.end field
-
-.field protected sendBlockMemoryUsage:Ljava/util/concurrent/atomic/AtomicInteger;
-    .annotation build Lin/e;
-    .end annotation
-
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
-.field protected final sendBlockTasks:Ljava/util/concurrent/ConcurrentLinkedDeque;
+.field public sendBlockMemoryUsage:Ljava/util/concurrent/atomic/AtomicInteger;
+    .annotation build Lh/d3/e;
+    .end annotation
+
+    .annotation build Ln/d/a/d;
+    .end annotation
+.end field
+
+.field public final sendBlockTasks:Ljava/util/concurrent/ConcurrentLinkedDeque;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/ConcurrentLinkedDeque<",
@@ -248,14 +260,14 @@
         }
     .end annotation
 
-    .annotation build Lin/e;
+    .annotation build Lh/d3/e;
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
-.field protected final seqBlockMap:Ljava/util/concurrent/ConcurrentHashMap;
+.field public final seqBlockMap:Ljava/util/concurrent/ConcurrentHashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/ConcurrentHashMap<",
@@ -267,10 +279,10 @@
         }
     .end annotation
 
-    .annotation build Lin/e;
+    .annotation build Lh/d3/e;
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -285,7 +297,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/xiaomi/idm/api/IDMBase$Companion;-><init>(Lkotlin/jvm/internal/w;)V
+    invoke-direct {v0, v1}, Lcom/xiaomi/idm/api/IDMBase$Companion;-><init>(Lh/d3/x/w;)V
 
     sput-object v0, Lcom/xiaomi/idm/api/IDMBase;->Companion:Lcom/xiaomi/idm/api/IDMBase$Companion;
 
@@ -295,31 +307,31 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lcom/xiaomi/idm/api/IDMProcessCallback;)V
     .locals 8
     .param p1    # Landroid/content/Context;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p3    # Lcom/xiaomi/idm/api/IDMProcessCallback;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const-string v0, "context"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "clientId"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "processCallback"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v5, 0x0
 
@@ -335,7 +347,7 @@
 
     move-object v4, p3
 
-    invoke-direct/range {v1 .. v7}, Lcom/xiaomi/idm/api/IDMBase;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/xiaomi/idm/api/IDMProcessCallback;Landroid/os/Looper;ILkotlin/jvm/internal/w;)V
+    invoke-direct/range {v1 .. v7}, Lcom/xiaomi/idm/api/IDMBase;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/xiaomi/idm/api/IDMProcessCallback;Landroid/os/Looper;ILh/d3/x/w;)V
 
     return-void
 .end method
@@ -343,35 +355,35 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lcom/xiaomi/idm/api/IDMProcessCallback;Landroid/os/Looper;)V
     .locals 1
     .param p1    # Landroid/content/Context;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p3    # Lcom/xiaomi/idm/api/IDMProcessCallback;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p4    # Landroid/os/Looper;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const-string v0, "context"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "clientId"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "processCallback"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -455,7 +467,7 @@
 
     const-string p3, "-callback-thread"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p2, p3}, Lh/d3/x/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -464,14 +476,14 @@
     iput-object p1, p0, Lcom/xiaomi/idm/api/IDMBase;->handlerThread:Landroid/os/HandlerThread;
 
     .line 15
-    invoke-static {p1}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {p1}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
-    invoke-virtual {p1}, Ljava/lang/Thread;->start()V
+    invoke-virtual {p1}, Landroid/os/HandlerThread;->start()V
 
     .line 16
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMBase;->handlerThread:Landroid/os/HandlerThread;
 
-    invoke-static {p1}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {p1}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     invoke-virtual {p1}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
@@ -485,7 +497,7 @@
 
     iget-object p2, p0, Lcom/xiaomi/idm/api/IDMBase;->callbackLooper:Landroid/os/Looper;
 
-    invoke-static {p2}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {p2}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     invoke-direct {p1, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
@@ -501,7 +513,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Ljava/lang/String;Lcom/xiaomi/idm/api/IDMProcessCallback;Landroid/os/Looper;ILkotlin/jvm/internal/w;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Ljava/lang/String;Lcom/xiaomi/idm/api/IDMProcessCallback;Landroid/os/Looper;ILh/d3/x/w;)V
     .locals 0
 
     and-int/lit8 p5, p5, 0x8
@@ -528,6 +540,7 @@
 .method public static final synthetic access$getProcessCallback$p(Lcom/xiaomi/idm/api/IDMBase;)Lcom/xiaomi/idm/api/IDMProcessCallback;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMBase;->processCallback:Lcom/xiaomi/idm/api/IDMProcessCallback;
 
     return-object p0
@@ -536,6 +549,7 @@
 .method public static final synthetic access$setServiceApiVersion$p(Lcom/xiaomi/idm/api/IDMBase;I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/idm/api/IDMBase;->serviceApiVersion:I
 
     return-void
@@ -544,6 +558,7 @@
 .method public static final synthetic access$set_iMiConnect$p(Lcom/xiaomi/idm/api/IDMBase;Lcom/xiaomi/mi_connect_service/IMiConnect;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/api/IDMBase;->_iMiConnect:Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     return-void
@@ -552,6 +567,7 @@
 .method public static final synthetic access$unbindService(Lcom/xiaomi/idm/api/IDMBase;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/api/IDMBase;->unbindService()V
 
     return-void
@@ -568,6 +584,7 @@
 .method private final connectionId(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
+    .line 1
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -598,14 +615,17 @@
 .method private final createMiConnectIntent()Landroid/content/Intent;
     .locals 3
 
+    .line 1
     new-instance p0, Landroid/content/Intent;
 
     invoke-direct {p0}, Landroid/content/Intent;-><init>()V
 
     const-string v0, "com.xiaomi.mi_connect_service.MiConnectService"
 
+    .line 2
     invoke-virtual {p0, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 3
     new-instance v1, Landroid/content/ComponentName;
 
     const-string v2, "com.xiaomi.mi_connect_service"
@@ -622,8 +642,9 @@
 
     const-string v0, "this$0"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMBase;->processCallback:Lcom/xiaomi/idm/api/IDMProcessCallback;
 
     sget-object v0, Lcom/xiaomi/idm/constant/ResponseCode$MiConnectCode;->MI_CONNECT_ERR_NOT_FOUND:Lcom/xiaomi/idm/constant/ResponseCode$MiConnectCode;
@@ -638,8 +659,9 @@
 
     const-string v0, "$this_run"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/idm/task/SendBlockTask;->start()V
 
     return-void
@@ -648,31 +670,38 @@
 .method private final unbindService()V
     .locals 4
 
+    .line 1
     monitor-enter p0
 
     const/4 v0, 0x0
 
+    .line 2
     :try_start_0
     iput-object v0, p0, Lcom/xiaomi/idm/api/IDMBase;->_iMiConnect:Lcom/xiaomi/mi_connect_service/IMiConnect;
 
+    .line 3
     iget-boolean v0, p0, Lcom/xiaomi/idm/api/IDMBase;->mShouldUnbind:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     if-eqz v0, :cond_1
 
+    .line 4
     :try_start_1
-    sget-object v0, Lnm/d1;->b:Lnm/d1$a;
+    sget-object v0, Lh/d1;->c:Lh/d1$a;
 
+    .line 5
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBase;->context:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/xiaomi/idm/api/IDMBase;->mConnection:Landroid/content/ServiceConnection;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    sget-object v0, Lnm/l2;->a:Lnm/l2;
+    .line 6
+    sget-object v0, Lh/l2;->a:Lh/l2;
 
-    invoke-static {v0}, Lnm/d1;->b(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 7
+    invoke-static {v0}, Lh/d1;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
     :try_end_1
@@ -684,18 +713,19 @@
     move-exception v0
 
     :try_start_2
-    sget-object v1, Lnm/d1;->b:Lnm/d1$a;
+    sget-object v1, Lh/d1;->c:Lh/d1$a;
 
-    invoke-static {v0}, Lnm/e1;->a(Ljava/lang/Throwable;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lnm/d1;->b(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Lh/e1;->a(Ljava/lang/Throwable;)Ljava/lang/Object;
 
     move-result-object v0
 
+    invoke-static {v0}, Lh/d1;->b(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    .line 8
     :goto_0
-    invoke-static {v0}, Lnm/d1;->e(Ljava/lang/Object;)Ljava/lang/Throwable;
+    invoke-static {v0}, Lh/d1;->e(Ljava/lang/Object;)Ljava/lang/Throwable;
 
     move-result-object v0
 
@@ -707,11 +737,12 @@
 
     const-string v3, "unbindService error: "
 
+    .line 9
     invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v3, v0}, Lkotlin/jvm/internal/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v3, v0}, Lh/d3/x/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -719,14 +750,17 @@
 
     invoke-static {v2, v0, v3}, Lcom/xiaomi/idm/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 10
     :cond_0
     iput-boolean v1, p0, Lcom/xiaomi/idm/api/IDMBase;->mShouldUnbind:Z
 
+    .line 11
     :cond_1
-    sget-object v0, Lnm/l2;->a:Lnm/l2;
+    sget-object v0, Lh/l2;->a:Lh/l2;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
+    .line 12
     monitor-exit p0
 
     return-void
@@ -744,32 +778,35 @@
 .method public final addConnection(Ljava/lang/String;Ljava/lang/String;I)V
     .locals 1
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Lin/h;
+    .annotation build Lh/d3/h;
         name = "addConnection"
     .end annotation
 
     const-string v0, "clientId"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "serviceId"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/idm/api/IDMBase;->connectionId(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 2
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMBase;->connectionMap:Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 3
+    invoke-interface {p0, p1}, Ljava/util/concurrent/ConcurrentMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
 
@@ -777,11 +814,13 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     new-instance p2, Lcom/xiaomi/idm/internal/Connection;
 
     invoke-direct {p2, p1}, Lcom/xiaomi/idm/internal/Connection;-><init>(Ljava/lang/String;)V
 
+    .line 5
     invoke-interface {p0, p1, p2}, Ljava/util/concurrent/ConcurrentMap;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -790,6 +829,7 @@
 
     move-object p2, p0
 
+    .line 6
     :cond_1
     :goto_0
     check-cast p2, Lcom/xiaomi/idm/internal/Connection;
@@ -808,6 +848,7 @@
 
     if-eq p3, p1, :cond_2
 
+    .line 7
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -836,21 +877,25 @@
 
     goto :goto_1
 
+    .line 8
     :cond_2
     invoke-virtual {p2, p0}, Lcom/xiaomi/idm/internal/Connection;->setAdvancedDirectChannelConnected(Z)V
 
     goto :goto_1
 
+    .line 9
     :cond_3
     invoke-virtual {p2, p0}, Lcom/xiaomi/idm/internal/Connection;->setAdvanceChannelConnected(Z)V
 
     goto :goto_1
 
+    .line 10
     :cond_4
     invoke-virtual {p2, p0}, Lcom/xiaomi/idm/internal/Connection;->setBasicChannelConnected(Z)V
 
     goto :goto_1
 
+    .line 11
     :cond_5
     invoke-virtual {p2, p0}, Lcom/xiaomi/idm/internal/Connection;->setAutoChannelConnected(Z)V
 
@@ -866,6 +911,7 @@
     :try_start_0
     const-string v0, "IDMBase"
 
+    .line 1
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -892,14 +938,17 @@
 
     invoke-static {v0, v1, v2}, Lcom/xiaomi/idm/util/LogUtil;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBase;->doDestroy()V
 
+    .line 3
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBase;->handler:Landroid/os/Handler;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
+    .line 4
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBase;->handlerThread:Landroid/os/HandlerThread;
 
     if-nez v0, :cond_0
@@ -907,7 +956,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Ljava/lang/Thread;->isAlive()Z
+    invoke-virtual {v0}, Landroid/os/HandlerThread;->isAlive()Z
 
     move-result v1
 
@@ -915,12 +964,14 @@
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->quitSafely()Z
 
+    .line 5
     :cond_1
     :goto_0
     invoke-direct {p0}, Lcom/xiaomi/idm/api/IDMBase;->unbindService()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 6
     monitor-exit p0
 
     return-void
@@ -941,9 +992,10 @@
 
 .method public final getClientId()Ljava/lang/String;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMBase;->clientId:Ljava/lang/String;
 
     return-object p0
@@ -952,28 +1004,29 @@
 .method public final getConnection(Ljava/lang/String;Ljava/lang/String;)Lcom/xiaomi/idm/internal/Connection;
     .locals 1
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Lin/h;
+    .annotation build Lh/d3/h;
         name = "getConnection"
     .end annotation
 
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
     const-string v0, "clientId"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "serviceId"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBase;->connectionMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/idm/api/IDMBase;->connectionId(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -991,9 +1044,10 @@
 
 .method public final getIMiConnect()Lcom/xiaomi/mi_connect_service/IMiConnect;
     .locals 2
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMBase;->_iMiConnect:Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     if-nez p0, :cond_0
@@ -1006,16 +1060,19 @@
 
     const-string v1, "IMiConnect null calling"
 
+    .line 2
     invoke-static {v0, v1, p0}, Lcom/xiaomi/idm/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 3
     new-instance p0, Lcom/xiaomi/mi_connect_service/IMiConnect$Default;
 
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/IMiConnect$Default;-><init>()V
 
     goto :goto_0
 
+    .line 4
     :cond_0
-    invoke-static {p0}, Lkotlin/jvm/internal/l0;->m(Ljava/lang/Object;)V
+    invoke-static {p0}, Lh/d3/x/l0;->m(Ljava/lang/Object;)V
 
     :goto_0
     return-object p0
@@ -1023,7 +1080,7 @@
 
 .method public getIdHash()[B
     .locals 3
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
     const/4 v0, 0x0
@@ -1034,8 +1091,10 @@
 
     const-string v2, "getIdHash"
 
+    .line 1
     invoke-static {v1, v2, v0}, Lcom/xiaomi/idm/util/LogUtil;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBase;->serviceAvailable()Z
 
     move-result v0
@@ -1046,6 +1105,7 @@
 
     return-object v2
 
+    .line 3
     :cond_0
     :try_start_0
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMBase;->_iMiConnect:Lcom/xiaomi/mi_connect_service/IMiConnect;
@@ -1068,7 +1128,8 @@
     :catch_0
     move-exception p0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 4
+    invoke-virtual {p0}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1080,9 +1141,10 @@
 
 .method public final getNextRequestId()Ljava/lang/String;
     .locals 2
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMBase;->atomicLong:Ljava/util/concurrent/atomic/AtomicLong;
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
@@ -1099,6 +1161,7 @@
 .method public final getServiceApiVersion()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/idm/api/IDMBase;->serviceApiVersion:I
 
     return p0
@@ -1107,8 +1170,10 @@
 .method public final init()V
     .locals 4
 
+    .line 1
     monitor-enter p0
 
+    .line 2
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBase;->context:Landroid/content/Context;
 
@@ -1131,6 +1196,7 @@
     :cond_0
     move v0, v1
 
+    .line 3
     :goto_0
     invoke-static {v0}, Lcom/xiaomi/idm/util/LogUtil;->setDebug(Z)V
 
@@ -1140,21 +1206,26 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
+    .line 4
     invoke-static {v0, v2, v1}, Lcom/xiaomi/idm/util/LogUtil;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 5
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBase;->context:Landroid/content/Context;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     :try_start_1
-    sget-object v1, Lnm/d1;->b:Lnm/d1$a;
+    sget-object v1, Lh/d1;->c:Lh/d1$a;
 
+    .line 6
     invoke-direct {p0}, Lcom/xiaomi/idm/api/IDMBase;->createMiConnectIntent()Landroid/content/Intent;
 
     move-result-object v1
 
+    .line 7
     invoke-virtual {v0, v1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
+    .line 8
     iget-object v2, p0, Lcom/xiaomi/idm/api/IDMBase;->mConnection:Landroid/content/ServiceConnection;
 
     const/16 v3, 0x41
@@ -1165,9 +1236,11 @@
 
     iput-boolean v0, p0, Lcom/xiaomi/idm/api/IDMBase;->mShouldUnbind:Z
 
-    sget-object v0, Lnm/l2;->a:Lnm/l2;
+    .line 9
+    sget-object v0, Lh/l2;->a:Lh/l2;
 
-    invoke-static {v0}, Lnm/d1;->b(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 10
+    invoke-static {v0}, Lh/d1;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
     :try_end_1
@@ -1179,18 +1252,19 @@
     move-exception v0
 
     :try_start_2
-    sget-object v1, Lnm/d1;->b:Lnm/d1$a;
+    sget-object v1, Lh/d1;->c:Lh/d1$a;
 
-    invoke-static {v0}, Lnm/e1;->a(Ljava/lang/Throwable;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lnm/d1;->b(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Lh/e1;->a(Ljava/lang/Throwable;)Ljava/lang/Object;
 
     move-result-object v0
 
+    invoke-static {v0}, Lh/d1;->b(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    .line 11
     :goto_1
-    invoke-static {v0}, Lnm/d1;->e(Ljava/lang/Object;)Ljava/lang/Throwable;
+    invoke-static {v0}, Lh/d1;->e(Ljava/lang/Object;)Ljava/lang/Throwable;
 
     move-result-object v0
 
@@ -1198,30 +1272,35 @@
 
     const-string v1, "IDMBase"
 
+    .line 12
     invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-static {v1, v2, v0}, Lcom/xiaomi/idm/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 13
     :cond_1
     iget-boolean v0, p0, Lcom/xiaomi/idm/api/IDMBase;->mShouldUnbind:Z
 
     if-nez v0, :cond_2
 
+    .line 14
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBase;->handler:Landroid/os/Handler;
 
-    new-instance v1, Lcom/xiaomi/idm/api/b;
+    new-instance v1, Ld/o/l/a/g;
 
-    invoke-direct {v1, p0}, Lcom/xiaomi/idm/api/b;-><init>(Lcom/xiaomi/idm/api/IDMBase;)V
+    invoke-direct {v1, p0}, Ld/o/l/a/g;-><init>(Lcom/xiaomi/idm/api/IDMBase;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
+    .line 15
     :cond_2
-    sget-object v0, Lnm/l2;->a:Lnm/l2;
+    sget-object v0, Lh/l2;->a:Lh/l2;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
+    .line 16
     monitor-exit p0
 
     return-void
@@ -1237,29 +1316,31 @@
 .method public final removeConnection(Ljava/lang/String;Ljava/lang/String;I)V
     .locals 4
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Lin/h;
+    .annotation build Lh/d3/h;
         name = "removeConnection"
     .end annotation
 
     const-string v0, "clientId"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "serviceId"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/idm/api/IDMBase;->connectionId(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 2
     iget-object p2, p0, Lcom/xiaomi/idm/api/IDMBase;->connectionMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {p2, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1293,6 +1374,7 @@
 
     if-eq p3, v2, :cond_1
 
+    .line 3
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1317,24 +1399,29 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     invoke-virtual {p2, v1}, Lcom/xiaomi/idm/internal/Connection;->setAdvancedDirectChannelConnected(Z)V
 
     goto :goto_0
 
+    .line 5
     :cond_2
     invoke-virtual {p2, v1}, Lcom/xiaomi/idm/internal/Connection;->setAdvanceChannelConnected(Z)V
 
     goto :goto_0
 
+    .line 6
     :cond_3
     invoke-virtual {p2, v1}, Lcom/xiaomi/idm/internal/Connection;->setBasicChannelConnected(Z)V
 
     goto :goto_0
 
+    .line 7
     :cond_4
     invoke-virtual {p2, v1}, Lcom/xiaomi/idm/internal/Connection;->setAutoChannelConnected(Z)V
 
+    .line 8
     :goto_0
     invoke-virtual {p2}, Lcom/xiaomi/idm/internal/Connection;->getConnected()Z
 
@@ -1352,7 +1439,8 @@
 
     const-string p0, "removeConnection: could not found connection="
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
+    .line 9
+    invoke-static {p0, p1}, Lh/d3/x/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -1367,6 +1455,7 @@
 .method public final serviceAvailable()Z
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMBase;->_iMiConnect:Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     const/4 v0, 0x0
@@ -1396,17 +1485,17 @@
 .method public final tryDoOnLooper(Landroid/os/Looper;Ljava/lang/Runnable;)V
     .locals 0
     .param p1    # Landroid/os/Looper;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
     .param p2    # Ljava/lang/Runnable;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string p0, "runnable"
 
-    invoke-static {p2, p0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-nez p1, :cond_0
 
@@ -1414,6 +1503,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     new-instance p0, Landroid/os/Handler;
 
@@ -1430,6 +1520,7 @@
     :goto_0
     if-nez p0, :cond_1
 
+    .line 2
     invoke-interface {p2}, Ljava/lang/Runnable;->run()V
 
     :cond_1
@@ -1438,9 +1529,10 @@
 
 .method public final tryStartASendBlockTask()Ljava/lang/Boolean;
     .locals 2
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMBase;->sendBlockTasks:Ljava/util/concurrent/ConcurrentLinkedDeque;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedDeque;->peekLast()Ljava/lang/Object;
@@ -1458,9 +1550,9 @@
     :cond_0
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMBase;->handler:Landroid/os/Handler;
 
-    new-instance v1, Lcom/xiaomi/idm/api/a;
+    new-instance v1, Ld/o/l/a/a;
 
-    invoke-direct {v1, v0}, Lcom/xiaomi/idm/api/a;-><init>(Lcom/xiaomi/idm/task/SendBlockTask;)V
+    invoke-direct {v1, v0}, Ld/o/l/a/a;-><init>(Lcom/xiaomi/idm/task/SendBlockTask;)V
 
     invoke-virtual {p0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

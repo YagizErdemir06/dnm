@@ -232,7 +232,6 @@
     <string name="accessibility_video_capture_button">Дугме за сликање током снимања видеа</string>
     <string name="accessibility_video_pause_button">Паузирано је снимање видеа</string>
     <string name="accessibility_video_resume_button">Настављено је снимање видеа</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">Водени жиг је искључен</string>
     <string name="accessibility_watermark_image_on">Водени жиг је укључен</string>
     <string name="accessibility_watermark_text">Отвори панел за подешавање воденог жига</string>
@@ -240,16 +239,6 @@
     <string name="accessibility_zoom_button">Зум</string>
     <string name="actionbar_button_up_description">Назад</string>
     <string name="afternoon">Поподне</string>
-    <string name="agent_flip_tbc">Наставите на унутрашњем екрану</string>
-    <string name="agent_function_max">Прилагођено на максималну вредност</string>
-    <string name="agent_function_min">Прилагођено минималној вредности</string>
-    <string name="agent_workspace_mode_not_supported">Ова функција није подржана</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"Ова функција није подржана.
-Отворен је Режим за фотографије."</string>
-    <string name="agent_workspace_on">Постављени су параметри за фотографисање \"%1$s\"</string>
-    <string name="agent_workspace_tbc">Студирање сцене</string>
-    <string name="agent_workspace_tbc_use_default">"Студирање сцене…
-Параметри Камере су подешени као задати"</string>
     <string name="ai_agra_fort">Тврђава у Агри</string>
     <string name="ai_amber_fort">Амбер палата</string>
     <string name="ai_baby">Беба</string>
@@ -476,7 +465,6 @@
     <string name="bluetooth_headset_permission_des">За одређивање статуса везе Bluetooth слушалица и снимање звука помоћу микрофона у слушалицама</string>
     <string name="bluetooth_permission_not_ask_again">Дозволите овој апликацији да се повеже са уређајима у близини у Подешавањима да бисте могли да се повежете са Bluetooth слушалицама.</string>
     <string name="bokeh_use_hint">Ефекат дубине</string>
-    <string name="bottomsheet_action_expand_halfway">Проширите до пола</string>
     <string name="burst_shoot_exit_button_text">Искључи брзо сликање</string>
     <string name="button_fisheye_camera_title">Рибље око</string>
     <string name="button_front_camera_title">Направите селфи</string>
@@ -517,8 +505,6 @@
     <string name="ccc_temperature_warning_msg">Уређај је прегрејан. Камера ће се затворити за %d секунди. Ваше фотографије или видео снимци ће бити аутоматски сачувани.</string>
     <string name="ccc_temperature_warning_title">Уређај је прегрејан</string>
     <string name="center_mark">Централна ознака</string>
-    <string name="character_counter_content_description">Унети знакови: %1$d од %2$d</string>
-    <string name="character_counter_overflowed_content_description">Прекорачено је ограничење броја знакова: %1$d од %2$d</string>
     <string name="cinemaster_cancel">Откажи</string>
     <string name="cinemaster_confirm">Излаз</string>
     <string name="cinemaster_connect_exit_message">Напустити подешавање за више камера сада?</string>
@@ -537,7 +523,6 @@
     <string name="cinemaster_toast_monitor_disconnect">Веза Монитора је прекинута са подешавањем за више камера</string>
     <string name="cinemaster_toast_monitor_play_error">Веза Камере %s је прекинута са подешавањем за више камера због грешке</string>
     <string name="cinemaster_wifi_24g_tips">Пребаците на %s GHz мрежу ради побољшања стабилности фида монитора</string>
-    <string name="clear_text_end_icon_content_description">Обриши текст</string>
     <string name="clearable_edittext_clear_description">Oчисти</string>
     <string name="clone_adjust">Прилагоди</string>
     <string name="clone_copy_mode">Замрзни кадар</string>
@@ -831,7 +816,6 @@
     <string name="download_hint_cn">"Looks like your device isn't connected to WLAN. Use %1$s MB of mobile data to download items now?"</string>
     <string name="download_hint_wifi">Изгледа да ваш уређај није повезан на Wi-Fi. Користити %1$s MB мобилних података за преузимање ставки сада?</string>
     <string name="download_in_progress">Преузимање…</string>
-    <string name="download_network_error">Преузимање није успело. Проверите подешавања мреже.</string>
     <string name="download_title">Упозорење о коришћењу података</string>
     <string name="download_waiting">На чекању…</string>
     <string name="dual_camera_lens_covered_toast">Објектив је покривен.</string>
@@ -882,7 +866,6 @@
     <string name="eras_ad">Н.Е</string>
     <string name="eras_bc">П.Н.Е</string>
     <string name="error_fail_to_start_audio_capture">Неуспешно покретање снимања звука</string>
-    <string name="error_icon_content_description">Грешка</string>
     <string name="esp_tip">Приказ спољног екрана</string>
     <string name="evening">Поподне</string>
     <string name="exo_controls_cc_disabled_description">Омогући титлове</string>
@@ -937,7 +920,6 @@
     <string name="exo_track_surround_7_point_1">Просторни звук 7.1</string>
     <string name="exo_track_unknown">Непознато</string>
     <string name="expand_button_title">Напредно</string>
-    <string name="exposed_dropdown_menu_content_description">Прикажи падајући мени</string>
     <string name="exposure_mode_adjust_title">РежимЕкспозиције</string>
     <string name="eye_light">Сјај очију</string>
     <string name="eye_light_angel">Анђео</string>
@@ -1094,7 +1076,6 @@
     <string name="hint_subtitle_prompt">Сада можете диктирати превод</string>
     <string name="histogram_summary_tip">Прикажи повратну информацију о изложености у реалном времену</string>
     <string name="hunt_dual_water_mark">Водени жиг Дуалне камере ће аутоматски бити додат.</string>
-    <string name="icon_content_description">Икона дијалога</string>
     <string name="id_card_mode_hint_back">Скенирајте задњу страну ID-а</string>
     <string name="id_card_mode_hint_front">Скенирајте предњу страну ID-а</string>
     <string name="id_card_mode_use_hint_text_body">"Обе стране ID документа треба да буду на једној слици.
@@ -1105,7 +1086,6 @@
     <string name="invisible_mode_dialog_summary">Камера се сада не може користити. Искључите Инкогнито режим у Подешавањима да бисте могли да користите камеру.</string>
     <string name="invisible_mode_dialog_title">Инкогнито сте</string>
     <string name="invisible_mode_dialog_to_close">Подешавања</string>
-    <string name="item_view_role_description">Картица</string>
     <string name="kaleidoscope_fragment_tab_name">Калеидоскоп</string>
     <string name="lens_dirty_detected_content">"Изгледа да је објектив Ваше камере запрљан.
 Обришите објектив за бољи ефекат."</string>
@@ -1228,18 +1208,6 @@
     <string name="manually_raw_tip">Не може се користити zoom са RAW форматом</string>
     <string name="manually_ultra_raw_tip">Не може се користит зум са Ultra RAW</string>
     <string name="masterfilter_description_title">Филмски филтери</string>
-    <string name="material_clock_toggle_content_description">Изаберите пре подне или по подне</string>
-    <string name="material_hour_selection">Изаберите сат</string>
-    <string name="material_hour_suffix">%1$s с</string>
-    <string name="material_minute_selection">Изаберите минуте</string>
-    <string name="material_minute_suffix">%1$s мин</string>
-    <string name="material_timepicker_am">AM</string>
-    <string name="material_timepicker_clock_mode_description">Пређите у режим сата ради уноса времена.</string>
-    <string name="material_timepicker_hour">Сат</string>
-    <string name="material_timepicker_minute">Минут</string>
-    <string name="material_timepicker_pm">PM</string>
-    <string name="material_timepicker_select_time">Изаберите време</string>
-    <string name="material_timepicker_text_input_mode_description">Пређите у режим уноса текста ради уноса времена.</string>
     <string name="message_snap_double_confirm">Дуги притисак на дугме за јачину тона сада окида NFC. Заменити ову функцију?</string>
     <string name="midnight">Ноћ</string>
     <string name="mimoji_app_name">Fun Cam</string>
@@ -1378,7 +1346,6 @@
     <string name="miuix_appcompat_delete_description">Oбриши</string>
     <string name="miuix_appcompat_deselect_all">Поништи избор</string>
     <string name="miuix_appcompat_deselect_all_description">Опозови све</string>
-    <string name="miuix_appcompat_edit">Уреди</string>
     <string name="miuix_appcompat_search_action_mode_cancel">Откажи</string>
     <string name="miuix_appcompat_search_input_description">Тражи</string>
     <string name="miuix_appcompat_select_all">Изабери све</string>
@@ -1486,42 +1453,6 @@
     <string name="msg_bubble_doc4_first_use">Додирните да бисте препознали текст</string>
     <string name="msg_toast_doc4_recognition_failed">Дошло је до грешке. Покушајте опет.</string>
     <string name="msg_toast_doc4_text_not_found">Препознавање текста није успело</string>
-    <string name="mtrl_badge_numberless_content_description">Ново обавештење</string>
-    <string name="mtrl_chip_close_icon_content_description">Уклоните %1$s</string>
-    <string name="mtrl_exceed_max_badge_number_content_description">Нових обавештења: више од %1$d</string>
-    <string name="mtrl_picker_a11y_next_month">Пређите на следећи месец</string>
-    <string name="mtrl_picker_a11y_prev_month">Пређите на претходни месец</string>
-    <string name="mtrl_picker_announce_current_selection">Актуелни избор: %1$s</string>
-    <string name="mtrl_picker_cancel">Откажи</string>
-    <string name="mtrl_picker_confirm">Потврди</string>
-    <string name="mtrl_picker_date_header_selected">%1$s</string>
-    <string name="mtrl_picker_date_header_title">Изаберите датум</string>
-    <string name="mtrl_picker_date_header_unselected">Изабрани датум</string>
-    <string name="mtrl_picker_day_of_week_column_header">Колона са данима: %1$s</string>
-    <string name="mtrl_picker_invalid_format">Формат је неважећи.</string>
-    <string name="mtrl_picker_invalid_format_example">Пример: %1$s</string>
-    <string name="mtrl_picker_invalid_format_use">Користите: %1$s</string>
-    <string name="mtrl_picker_invalid_range">Неважећи период.</string>
-    <string name="mtrl_picker_navigate_to_year_description">Идите на годину %1$s</string>
-    <string name="mtrl_picker_out_of_range">Изван периода: %1$s</string>
-    <string name="mtrl_picker_range_header_only_end_selected">Датум почетка – %1$s</string>
-    <string name="mtrl_picker_range_header_only_start_selected">%1$s – Датум завршетка</string>
-    <string name="mtrl_picker_range_header_selected">%1$s–%2$s</string>
-    <string name="mtrl_picker_range_header_title">Изаберите период</string>
-    <string name="mtrl_picker_range_header_unselected">Датум почетка – Датум завршетка</string>
-    <string name="mtrl_picker_save">Сачувај</string>
-    <string name="mtrl_picker_text_input_date_hint">Датум</string>
-    <string name="mtrl_picker_text_input_date_range_end_hint">Датум завршетка</string>
-    <string name="mtrl_picker_text_input_date_range_start_hint">Датум почетка</string>
-    <string name="mtrl_picker_text_input_day_abbr">д</string>
-    <string name="mtrl_picker_text_input_month_abbr">м</string>
-    <string name="mtrl_picker_text_input_year_abbr">г</string>
-    <string name="mtrl_picker_toggle_to_calendar_input_mode">Пређите на режим уноса у Календару</string>
-    <string name="mtrl_picker_toggle_to_day_selection">Додирните да бисте прешли на избор дана</string>
-    <string name="mtrl_picker_toggle_to_text_input_mode">Пређите на режим уноса текста</string>
-    <string name="mtrl_picker_toggle_to_year_selection">Додирните да бисте прешли на избор године</string>
-    <string name="mtrl_timepicker_cancel">Откажи</string>
-    <string name="mtrl_timepicker_confirm">Потврди</string>
     <string name="multi_window_mode_not_supported">Камера се не може користити у режиму са више прозора</string>
     <string name="network_access_user_notice_agree">Прихватам</string>
     <string name="network_access_user_notice_message_live_video">&lt;Data>Камеру је потребно повезати на интернет ради приступа ефектима, музици и другим функцијама за кратке видео снимке.&lt;br/>&lt;br/>Додиром на \"Прихватам\" испод, прихватате наш &lt;a href =%1$s>Кориснички уговор&lt;/a> и &lt;a href =%2$s>Правила о приватности&lt;/a> и дозвољавате да се Камера повеже на интернет.&lt;/Data></string>
@@ -1616,7 +1547,6 @@
     <string name="parameter_wb_title">Баланс беле</string>
     <string name="parameter_zoom_slider_description">Превуците слајдер за увећање ради сликања издалека и изблиза.</string>
     <string name="parameter_zoom_slider_title">Зумирање</string>
-    <string name="password_toggle_content_description">Прикажи лозинку</string>
     <string name="path_settings">Системске апликације/Камера/Поставке</string>
     <string name="photo_assistance_tips_title">Савети уживо</string>
     <string name="pic_flaw_blink_more">Изгледа да је неко у кадру затворио очи</string>
@@ -2196,10 +2126,10 @@
     <string name="settings_camera_lens_auto_switch_title">Аутоматско подешавање објектива</string>
     <string name="settings_camera_near_range_description">Уклони замагљивање при фокусирању на равне површине изблиза</string>
     <string name="settings_camera_near_range_fallback_description">Аутоматски се пребаците на ултра широкоугаоно сочиво да бисте избегли ефекат бокеа када снимате равне објекте изблиза</string>
-    <string name="settings_camera_near_range_fallback_title">Прилагодљиви макро</string>
+    <string name="settings_camera_near_range_fallback_title">Adaptive macro</string>
     <string name="settings_camera_near_range_title">Изблиза</string>
     <string name="settings_camera_tele_fallback_description">Аутоматски се пребаците између главног и телефото-објектива на основу растојања и осветљености</string>
-    <string name="settings_camera_tele_fallback_title">Прилагодљива телефотографија</string>
+    <string name="settings_camera_tele_fallback_title">Adaptive telephoto</string>
     <string name="share">Подели</string>
     <string name="shine_hair_puffy">Коса</string>
     <string name="simple_mode_button_asd_flash">Искључи блиц</string>
@@ -2359,7 +2289,6 @@
     <string name="time_picker_label_hour">Ч</string>
     <string name="time_picker_label_minute">M</string>
     <string name="time_stamp_date_format">d. M. yyyy.</string>
-    <string name="time_stamp_date_format_minute">d. M. yyyy. HH:mm</string>
     <string name="timefreeze_guide_tip2">Увек можете заледити и одледити позадину, пре или за време снимања.</string>
     <string name="timefreeze_guide_tip3">Објекат треба да стоји у центру кадра.</string>
     <string name="timefreeze_guide_tip4">Зауставите саобраћај.</string>
@@ -2397,7 +2326,7 @@
     <string name="tip_flash_screen_light_on">Меки блиц: ук</string>
     <string name="tip_flash_soft_light_off">Меки блиц: искључен</string>
     <string name="tip_flash_soft_light_torch">Меки блиц: режим лампе</string>
-    <string name="tip_flash_torch">Блиц: Лампа</string>
+    <string name="tip_flash_torch">Блиц: увек ук</string>
     <string name="tip_friend_mode_connect_when_24GHz">Користите везу од %s GHz да бисте побољшали квалитет прегледа</string>
     <string name="tip_friend_mode_display_device_name_connect">Дељени преглед</string>
     <string name="tip_friend_mode_display_device_name_disconnect">Други уређај је напустио ову сесију</string>

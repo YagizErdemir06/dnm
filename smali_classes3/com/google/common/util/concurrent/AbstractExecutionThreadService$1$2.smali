@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1$2;
+.class public Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1;
+.field public final synthetic this$1:Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1$2;->this$1:Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,6 +38,7 @@
 .method public run()V
     .locals 5
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1$2;->this$1:Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1;
 
@@ -44,10 +46,12 @@
 
     invoke-virtual {v0}, Lcom/google/common/util/concurrent/AbstractExecutionThreadService;->startUp()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1$2;->this$1:Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1;
 
     invoke-virtual {v0}, Lcom/google/common/util/concurrent/AbstractService;->notifyStarted()V
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1$2;->this$1:Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1;
 
     invoke-virtual {v0}, Lcom/google/common/util/concurrent/AbstractService;->isRunning()Z
@@ -58,6 +62,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 4
     :try_start_1
     iget-object v0, p0, Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1$2;->this$1:Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1;
 
@@ -72,6 +77,7 @@
     :catchall_0
     move-exception v0
 
+    .line 5
     :try_start_2
     iget-object v1, p0, Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1$2;->this$1:Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1;
 
@@ -87,6 +93,7 @@
     :catch_0
     move-exception v1
 
+    .line 6
     :try_start_3
     invoke-static {}, Lcom/google/common/util/concurrent/AbstractExecutionThreadService;->access$000()Ljava/util/logging/Logger;
 
@@ -98,6 +105,7 @@
 
     invoke-virtual {v2, v3, v4, v1}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 7
     :goto_0
     iget-object v1, p0, Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1$2;->this$1:Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1;
 
@@ -105,6 +113,7 @@
 
     return-void
 
+    .line 8
     :cond_0
     :goto_1
     iget-object v0, p0, Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1$2;->this$1:Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1;
@@ -113,6 +122,7 @@
 
     invoke-virtual {v0}, Lcom/google/common/util/concurrent/AbstractExecutionThreadService;->shutDown()V
 
+    .line 9
     iget-object v0, p0, Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1$2;->this$1:Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1;
 
     invoke-virtual {v0}, Lcom/google/common/util/concurrent/AbstractService;->notifyStopped()V
@@ -124,6 +134,7 @@
     :catchall_1
     move-exception v0
 
+    .line 10
     iget-object p0, p0, Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1$2;->this$1:Lcom/google/common/util/concurrent/AbstractExecutionThreadService$1;
 
     invoke-virtual {p0, v0}, Lcom/google/common/util/concurrent/AbstractService;->notifyFailed(Ljava/lang/Throwable;)V

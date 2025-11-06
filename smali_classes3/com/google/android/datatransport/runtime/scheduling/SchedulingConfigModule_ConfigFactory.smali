@@ -18,10 +18,10 @@
 
 
 # instance fields
-.field private final clockProvider:Lmm/c;
+.field private final clockProvider:Lg/a/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/time/Clock;",
             ">;"
         }
@@ -30,20 +30,22 @@
 
 
 # direct methods
-.method public constructor <init>(Lmm/c;)V
+.method public constructor <init>(Lg/a/c;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/time/Clock;",
             ">;)V"
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/google/android/datatransport/runtime/scheduling/SchedulingConfigModule_ConfigFactory;->clockProvider:Lmm/c;
+    .line 2
+    iput-object p1, p0, Lcom/google/android/datatransport/runtime/scheduling/SchedulingConfigModule_ConfigFactory;->clockProvider:Lg/a/c;
 
     return-void
 .end method
@@ -51,6 +53,7 @@
 .method public static config(Lcom/google/android/datatransport/runtime/time/Clock;)Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig;
     .locals 1
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/datatransport/runtime/scheduling/SchedulingConfigModule;->config(Lcom/google/android/datatransport/runtime/time/Clock;)Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig;
 
     move-result-object p0
@@ -66,21 +69,22 @@
     return-object p0
 .end method
 
-.method public static create(Lmm/c;)Lcom/google/android/datatransport/runtime/scheduling/SchedulingConfigModule_ConfigFactory;
+.method public static create(Lg/a/c;)Lcom/google/android/datatransport/runtime/scheduling/SchedulingConfigModule_ConfigFactory;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Lcom/google/android/datatransport/runtime/time/Clock;",
             ">;)",
             "Lcom/google/android/datatransport/runtime/scheduling/SchedulingConfigModule_ConfigFactory;"
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/datatransport/runtime/scheduling/SchedulingConfigModule_ConfigFactory;
 
-    invoke-direct {v0, p0}, Lcom/google/android/datatransport/runtime/scheduling/SchedulingConfigModule_ConfigFactory;-><init>(Lmm/c;)V
+    invoke-direct {v0, p0}, Lcom/google/android/datatransport/runtime/scheduling/SchedulingConfigModule_ConfigFactory;-><init>(Lg/a/c;)V
 
     return-object v0
 .end method
@@ -91,9 +95,9 @@
     .locals 0
 
     .line 2
-    iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/SchedulingConfigModule_ConfigFactory;->clockProvider:Lmm/c;
+    iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/SchedulingConfigModule_ConfigFactory;->clockProvider:Lg/a/c;
 
-    invoke-interface {p0}, Lmm/c;->get()Ljava/lang/Object;
+    invoke-interface {p0}, Lg/a/c;->get()Ljava/lang/Object;
 
     move-result-object p0
 

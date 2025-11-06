@@ -3,6 +3,14 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;"
+    }
+.end annotation
+
+
 # direct methods
 .method public static $default$currentThreadTimeMillis(Lcom/google/android/gms/common/util/Clock;)J
     .locals 2
@@ -13,6 +21,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/SystemClock;->currentThreadTimeMillis()J
 
     move-result-wide v0

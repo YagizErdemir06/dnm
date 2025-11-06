@@ -19,6 +19,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,6 +28,7 @@
 .method public static d(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     sget-boolean v0, Lcom/arcsoft/supernight/LOG;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -40,6 +42,7 @@
 .method public static e(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     sget-boolean v0, Lcom/arcsoft/supernight/LOG;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -53,6 +56,7 @@
 .method public static p(Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     sget-boolean v0, Lcom/arcsoft/supernight/LOG;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -68,6 +72,7 @@
 .method public static v(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     sget-boolean v0, Lcom/arcsoft/supernight/LOG;->DEBUG:Z
 
     if-eqz v0, :cond_0

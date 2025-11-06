@@ -1,4 +1,4 @@
-.class final Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent$Builder;
+.class public final Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent$Builder;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -45,12 +45,14 @@
 .method public build()Lcom/google/android/datatransport/runtime/TransportRuntimeComponent;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent$Builder;->setApplicationContext:Landroid/content/Context;
 
     const-class v1, Landroid/content/Context;
 
     invoke-static {v0, v1}, Lcom/google/android/datatransport/runtime/dagger/internal/Preconditions;->checkBuilderRequirement(Ljava/lang/Object;Ljava/lang/Class;)V
 
+    .line 2
     new-instance v0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent;
 
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/DaggerTransportRuntimeComponent$Builder;->setApplicationContext:Landroid/content/Context;

@@ -54,8 +54,10 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/util/Clock;)V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -64,38 +66,41 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->clock:Lcom/google/android/exoplayer2/util/Clock;
 
+    .line 3
     new-instance v0, Lcom/google/android/exoplayer2/util/ListenerSet;
 
     invoke-static {}, Lcom/google/android/exoplayer2/util/Util;->getCurrentOrMainLooper()Landroid/os/Looper;
 
     move-result-object v1
 
-    new-instance v2, Lcom/google/android/exoplayer2/analytics/x0;
-
-    invoke-direct {v2}, Lcom/google/android/exoplayer2/analytics/x0;-><init>()V
+    sget-object v2, Ld/j/a/b/n2/i1;->a:Ld/j/a/b/n2/i1;
 
     invoke-direct {v0, v1, p1, v2}, Lcom/google/android/exoplayer2/util/ListenerSet;-><init>(Landroid/os/Looper;Lcom/google/android/exoplayer2/util/Clock;Lcom/google/android/exoplayer2/util/ListenerSet$IterationFinishedEvent;)V
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->listeners:Lcom/google/android/exoplayer2/util/ListenerSet;
 
+    .line 4
     new-instance p1, Lcom/google/android/exoplayer2/Timeline$Period;
 
     invoke-direct {p1}, Lcom/google/android/exoplayer2/Timeline$Period;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->period:Lcom/google/android/exoplayer2/Timeline$Period;
 
+    .line 5
     new-instance v0, Lcom/google/android/exoplayer2/Timeline$Window;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/Timeline$Window;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->window:Lcom/google/android/exoplayer2/Timeline$Window;
 
+    .line 6
     new-instance v0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector$MediaPeriodQueueTracker;
 
     invoke-direct {v0, p1}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector$MediaPeriodQueueTracker;-><init>(Lcom/google/android/exoplayer2/Timeline$Period;)V
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->mediaPeriodQueueTracker:Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector$MediaPeriodQueueTracker;
 
+    .line 7
     new-instance p1, Landroid/util/SparseArray;
 
     invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
@@ -105,322 +110,10 @@
     return-void
 .end method
 
-.method public static synthetic A(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;JLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onSeekBackIncrementChanged$45(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;JLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic B(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onSurfaceSizeChanged$22(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic C(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/MediaLoadData;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onUpstreamDiscarded$27(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/MediaLoadData;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic D(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/metadata/Metadata;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onMetadata$50(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/metadata/Metadata;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic E(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onDrmSessionAcquired$62(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic F(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Format;Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onAudioInputFormatChanged$5(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Format;Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic G(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onDrmKeysLoaded$63(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic H(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onSeekProcessed$53(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic I(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/LoadEventInfo;Lcom/google/android/exoplayer2/source/MediaLoadData;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onLoadCanceled$25(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/LoadEventInfo;Lcom/google/android/exoplayer2/source/MediaLoadData;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic J(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IJJLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static/range {p0 .. p6}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onBandwidthSample$61(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IJJLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic K(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/Player$PositionInfo;Lcom/google/android/exoplayer2/Player$PositionInfo;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2, p3, p4}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onPositionDiscontinuity$43(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/Player$PositionInfo;Lcom/google/android/exoplayer2/Player$PositionInfo;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic L(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/audio/AudioAttributes;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onAudioAttributesChanged$56(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/audio/AudioAttributes;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic M(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/LoadEventInfo;Lcom/google/android/exoplayer2/source/MediaLoadData;Ljava/io/IOException;ZLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static/range {p0 .. p5}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onLoadError$26(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/LoadEventInfo;Lcom/google/android/exoplayer2/source/MediaLoadData;Ljava/io/IOException;ZLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic N(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/text/CueGroup;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onCues$52(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/text/CueGroup;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic O(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/MediaMetadata;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onMediaMetadataChanged$48(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/MediaMetadata;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic P(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IJLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2, p3, p4}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onDroppedFrames$16(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IJLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic Q(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Exception;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onAudioSinkError$10(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Exception;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic R(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;JJLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static/range {p0 .. p6}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onAudioDecoderInitialized$4(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;JJLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic S(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Player$Commands;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onAvailableCommandsChanged$33(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Player$Commands;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic T(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onVideoDecoderReleased$17(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic U(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;JLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onMaxSeekToPreviousPositionChanged$47(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;JLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic V(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IJJLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static/range {p0 .. p6}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onAudioUnderrun$7(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IJJLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic W(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onDrmKeysRemoved$66(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic X(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ZILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onPlayWhenReadyChanged$36(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ZILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic Y(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onPlaybackStateChanged$35(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic Z(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Tracks;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onTracksChanged$31(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Tracks;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic a(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Exception;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onAudioCodecError$11(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Exception;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic a0(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/decoder/DecoderCounters;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onAudioDisabled$9(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/decoder/DecoderCounters;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic b(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IZLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onDeviceVolumeChanged$60(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IZLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic b0(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onPlaybackSuppressionReasonChanged$37(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic c(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ZLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onIsPlayingChanged$38(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ZLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic c0(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ZILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onPlayerStateChanged$34(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ZILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic d(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Format;Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onVideoInputFormatChanged$15(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Format;Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic d0(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/LoadEventInfo;Lcom/google/android/exoplayer2/source/MediaLoadData;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onLoadStarted$23(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/LoadEventInfo;Lcom/google/android/exoplayer2/source/MediaLoadData;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic e(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;JLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onSeekForwardIncrementChanged$46(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;JLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic e0(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/decoder/DecoderCounters;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onAudioEnabled$3(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/decoder/DecoderCounters;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic f(Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;)V
+.method public static synthetic a(Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->releaseInternal()V
-
-    return-void
-.end method
-
-.method public static synthetic f0(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onTimelineChanged$29(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic g(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onTrackSelectionParametersChanged$58(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic g0(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ZLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onIsLoadingChanged$32(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ZLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
 
     return-void
 .end method
@@ -530,6 +223,7 @@
 .method private generateLoadingMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->mediaPeriodQueueTracker:Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector$MediaPeriodQueueTracker;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector$MediaPeriodQueueTracker;->getLoadingMediaPeriod()Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;
@@ -550,6 +244,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -560,8 +255,10 @@
 
     if-eqz p2, :cond_2
 
+    .line 2
     iget-object v2, p0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->mediaPeriodQueueTracker:Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector$MediaPeriodQueueTracker;
 
+    .line 3
     invoke-virtual {v2, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector$MediaPeriodQueueTracker;->getMediaPeriodIdTimeline(Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;)Lcom/google/android/exoplayer2/Timeline;
 
     move-result-object v2
@@ -576,12 +273,14 @@
     :goto_0
     if-eqz v0, :cond_1
 
+    .line 4
     invoke-direct {p0, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateEventTime(Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;)Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object p0
 
     goto :goto_1
 
+    .line 5
     :cond_1
     sget-object v0, Lcom/google/android/exoplayer2/Timeline;->EMPTY:Lcom/google/android/exoplayer2/Timeline;
 
@@ -592,6 +291,7 @@
     :goto_1
     return-object p0
 
+    .line 6
     :cond_2
     iget-object p2, p0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->player:Lcom/google/android/exoplayer2/Player;
 
@@ -599,6 +299,7 @@
 
     move-result-object p2
 
+    .line 7
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/Timeline;->getWindowCount()I
 
     move-result v2
@@ -615,12 +316,14 @@
 
     goto :goto_3
 
+    .line 8
     :cond_4
     sget-object p2, Lcom/google/android/exoplayer2/Timeline;->EMPTY:Lcom/google/android/exoplayer2/Timeline;
 
     :goto_3
     const/4 v0, 0x0
 
+    .line 9
     invoke-virtual {p0, p2, p1, v0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateEventTime(Lcom/google/android/exoplayer2/Timeline;ILcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;)Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object p0
@@ -631,6 +334,7 @@
 .method private generatePlayingMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->mediaPeriodQueueTracker:Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector$MediaPeriodQueueTracker;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector$MediaPeriodQueueTracker;->getPlayingMediaPeriod()Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;
@@ -647,6 +351,7 @@
 .method private generateReadingMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->mediaPeriodQueueTracker:Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector$MediaPeriodQueueTracker;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector$MediaPeriodQueueTracker;->getReadingMediaPeriod()Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;
@@ -667,16 +372,20 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/android/exoplayer2/ExoPlaybackException;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/android/exoplayer2/ExoPlaybackException;
 
+    .line 3
     iget-object p1, p1, Lcom/google/android/exoplayer2/ExoPlaybackException;->mediaPeriodId:Lcom/google/android/exoplayer2/source/MediaPeriodId;
 
     if-eqz p1, :cond_0
 
+    .line 4
     new-instance v0, Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;
 
     invoke-direct {v0, p1}, Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;-><init>(Lcom/google/android/exoplayer2/source/MediaPeriodId;)V
@@ -687,6 +396,7 @@
 
     return-object p0
 
+    .line 5
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateCurrentPlayerMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
@@ -695,119 +405,43 @@
     return-object p0
 .end method
 
-.method public static synthetic h(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/video/VideoSize;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onVideoSizeChanged$57(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/video/VideoSize;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic h0(Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;Lcom/google/android/exoplayer2/Player;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;Lcom/google/android/exoplayer2/util/FlagSet;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$setPlayer$1(Lcom/google/android/exoplayer2/Player;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;Lcom/google/android/exoplayer2/util/FlagSet;)V
-
-    return-void
-.end method
-
-.method public static synthetic i(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onRepeatModeChanged$39(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic i0(Lcom/google/android/exoplayer2/analytics/AnalyticsListener;Lcom/google/android/exoplayer2/util/FlagSet;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$new$0(Lcom/google/android/exoplayer2/analytics/AnalyticsListener;Lcom/google/android/exoplayer2/util/FlagSet;)V
-
-    return-void
-.end method
-
-.method public static synthetic j(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/MediaLoadData;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onDownstreamFormatChanged$28(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/MediaLoadData;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic j0(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onDrmKeysRestored$65(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic k(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;JILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2, p3, p4}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onVideoFrameProcessingOffset$20(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;JILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic k0(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;JLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onAudioPositionAdvancing$6(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;JLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic l(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/decoder/DecoderCounters;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onVideoDisabled$18(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/decoder/DecoderCounters;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic l0(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/decoder/DecoderCounters;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onVideoEnabled$13(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/decoder/DecoderCounters;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method private static synthetic lambda$new$0(Lcom/google/android/exoplayer2/analytics/AnalyticsListener;Lcom/google/android/exoplayer2/util/FlagSet;)V
+.method public static synthetic lambda$new$0(Lcom/google/android/exoplayer2/analytics/AnalyticsListener;Lcom/google/android/exoplayer2/util/FlagSet;)V
     .locals 0
 
     return-void
 .end method
 
-.method private static synthetic lambda$notifySeekStarted$2(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$notifySeekStarted$2(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p1, p0}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onSeekStarted(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onAudioAttributesChanged$56(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/audio/AudioAttributes;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onAudioAttributesChanged$56(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/audio/AudioAttributes;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onAudioAttributesChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/audio/AudioAttributes;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onAudioCodecError$11(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Exception;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onAudioCodecError$11(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Exception;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onAudioCodecError(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Exception;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onAudioDecoderInitialized$4(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;JJLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onAudioDecoderInitialized$4(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;JJLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 7
 
+    .line 1
     invoke-interface {p6, p0, p1, p2, p3}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onAudioDecoderInitialized(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;J)V
 
     move-object v0, p6
@@ -820,6 +454,7 @@
 
     move-wide v5, p2
 
+    .line 2
     invoke-interface/range {v0 .. v6}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onAudioDecoderInitialized(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;JJ)V
 
     const/4 v3, 0x1
@@ -830,82 +465,94 @@
 
     move-object v4, p1
 
+    .line 3
     invoke-interface/range {v1 .. v6}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onDecoderInitialized(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILjava/lang/String;J)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onAudioDecoderReleased$8(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onAudioDecoderReleased$8(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onAudioDecoderReleased(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onAudioDisabled$9(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/decoder/DecoderCounters;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onAudioDisabled$9(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/decoder/DecoderCounters;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 1
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onAudioDisabled(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/decoder/DecoderCounters;)V
 
     const/4 v0, 0x1
 
+    .line 2
     invoke-interface {p2, p0, v0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onDecoderDisabled(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/decoder/DecoderCounters;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onAudioEnabled$3(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/decoder/DecoderCounters;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onAudioEnabled$3(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/decoder/DecoderCounters;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 1
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onAudioEnabled(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/decoder/DecoderCounters;)V
 
     const/4 v0, 0x1
 
+    .line 2
     invoke-interface {p2, p0, v0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onDecoderEnabled(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/decoder/DecoderCounters;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onAudioInputFormatChanged$5(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Format;Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onAudioInputFormatChanged$5(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Format;Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p3, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onAudioInputFormatChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Format;)V
 
+    .line 2
     invoke-interface {p3, p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onAudioInputFormatChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Format;Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;)V
 
     const/4 p2, 0x1
 
+    .line 3
     invoke-interface {p3, p0, p2, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onDecoderInputFormatChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/Format;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onAudioPositionAdvancing$6(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;JLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onAudioPositionAdvancing$6(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;JLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p3, p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onAudioPositionAdvancing(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;J)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onAudioSessionIdChanged$55(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onAudioSessionIdChanged$55(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onAudioSessionIdChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;I)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onAudioSinkError$10(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Exception;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onAudioSinkError$10(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Exception;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onAudioSinkError(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Exception;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onAudioUnderrun$7(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IJJLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onAudioUnderrun$7(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IJJLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 7
 
     move-object v0, p6
@@ -918,20 +565,22 @@
 
     move-wide v5, p4
 
+    .line 1
     invoke-interface/range {v0 .. v6}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onAudioUnderrun(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IJJ)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onAvailableCommandsChanged$33(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Player$Commands;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onAvailableCommandsChanged$33(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Player$Commands;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onAvailableCommandsChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Player$Commands;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onBandwidthSample$61(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IJJLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onBandwidthSample$61(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IJJLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 7
 
     move-object v0, p6
@@ -944,144 +593,163 @@
 
     move-wide v5, p4
 
+    .line 1
     invoke-interface/range {v0 .. v6}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onBandwidthEstimate(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IJJ)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onCues$51(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/util/List;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onCues$51(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/util/List;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onCues(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/util/List;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onCues$52(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/text/CueGroup;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onCues$52(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/text/CueGroup;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onCues(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/text/CueGroup;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onDeviceInfoChanged$59(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/DeviceInfo;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onDeviceInfoChanged$59(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/DeviceInfo;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onDeviceInfoChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/DeviceInfo;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onDeviceVolumeChanged$60(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IZLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onDeviceVolumeChanged$60(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IZLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p3, p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onDeviceVolumeChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IZ)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onDownstreamFormatChanged$28(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/MediaLoadData;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onDownstreamFormatChanged$28(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/MediaLoadData;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onDownstreamFormatChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/MediaLoadData;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onDrmKeysLoaded$63(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onDrmKeysLoaded$63(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p1, p0}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onDrmKeysLoaded(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onDrmKeysRemoved$66(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onDrmKeysRemoved$66(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p1, p0}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onDrmKeysRemoved(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onDrmKeysRestored$65(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onDrmKeysRestored$65(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p1, p0}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onDrmKeysRestored(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onDrmSessionAcquired$62(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onDrmSessionAcquired$62(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p2, p0}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onDrmSessionAcquired(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;)V
 
+    .line 2
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onDrmSessionAcquired(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;I)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onDrmSessionManagerError$64(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Exception;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onDrmSessionManagerError$64(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Exception;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onDrmSessionManagerError(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Exception;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onDrmSessionReleased$67(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onDrmSessionReleased$67(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p1, p0}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onDrmSessionReleased(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onDroppedFrames$16(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IJLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onDroppedFrames$16(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IJLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p4, p0, p1, p2, p3}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onDroppedVideoFrames(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IJ)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onIsLoadingChanged$32(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ZLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onIsLoadingChanged$32(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ZLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onLoadingChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Z)V
 
+    .line 2
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onIsLoadingChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Z)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onIsPlayingChanged$38(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ZLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onIsPlayingChanged$38(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ZLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onIsPlayingChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Z)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onLoadCanceled$25(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/LoadEventInfo;Lcom/google/android/exoplayer2/source/MediaLoadData;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onLoadCanceled$25(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/LoadEventInfo;Lcom/google/android/exoplayer2/source/MediaLoadData;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p3, p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onLoadCanceled(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/LoadEventInfo;Lcom/google/android/exoplayer2/source/MediaLoadData;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onLoadCompleted$24(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/LoadEventInfo;Lcom/google/android/exoplayer2/source/MediaLoadData;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onLoadCompleted$24(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/LoadEventInfo;Lcom/google/android/exoplayer2/source/MediaLoadData;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p3, p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onLoadCompleted(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/LoadEventInfo;Lcom/google/android/exoplayer2/source/MediaLoadData;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onLoadError$26(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/LoadEventInfo;Lcom/google/android/exoplayer2/source/MediaLoadData;Ljava/io/IOException;ZLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onLoadError$26(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/LoadEventInfo;Lcom/google/android/exoplayer2/source/MediaLoadData;Ljava/io/IOException;ZLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 6
 
     move-object v0, p5
@@ -1096,232 +764,262 @@
 
     move v5, p4
 
+    .line 1
     invoke-interface/range {v0 .. v5}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onLoadError(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/LoadEventInfo;Lcom/google/android/exoplayer2/source/MediaLoadData;Ljava/io/IOException;Z)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onLoadStarted$23(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/LoadEventInfo;Lcom/google/android/exoplayer2/source/MediaLoadData;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onLoadStarted$23(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/LoadEventInfo;Lcom/google/android/exoplayer2/source/MediaLoadData;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p3, p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onLoadStarted(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/LoadEventInfo;Lcom/google/android/exoplayer2/source/MediaLoadData;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onMaxSeekToPreviousPositionChanged$47(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;JLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onMaxSeekToPreviousPositionChanged$47(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;JLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p3, p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onMaxSeekToPreviousPositionChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;J)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onMediaItemTransition$30(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/MediaItem;ILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onMediaItemTransition$30(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/MediaItem;ILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p3, p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onMediaItemTransition(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/MediaItem;I)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onMediaMetadataChanged$48(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/MediaMetadata;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onMediaMetadataChanged$48(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/MediaMetadata;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onMediaMetadataChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/MediaMetadata;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onMetadata$50(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/metadata/Metadata;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onMetadata$50(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/metadata/Metadata;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onMetadata(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/metadata/Metadata;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onPlayWhenReadyChanged$36(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ZILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onPlayWhenReadyChanged$36(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ZILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p3, p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onPlayWhenReadyChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ZI)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onPlaybackParametersChanged$44(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/PlaybackParameters;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onPlaybackParametersChanged$44(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/PlaybackParameters;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onPlaybackParametersChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/PlaybackParameters;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onPlaybackStateChanged$35(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onPlaybackStateChanged$35(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onPlaybackStateChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;I)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onPlaybackSuppressionReasonChanged$37(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onPlaybackSuppressionReasonChanged$37(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onPlaybackSuppressionReasonChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;I)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onPlayerError$41(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/PlaybackException;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onPlayerError$41(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/PlaybackException;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onPlayerError(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/PlaybackException;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onPlayerErrorChanged$42(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/PlaybackException;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onPlayerErrorChanged$42(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/PlaybackException;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onPlayerErrorChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/PlaybackException;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onPlayerStateChanged$34(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ZILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onPlayerStateChanged$34(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ZILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p3, p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onPlayerStateChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ZI)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onPlaylistMetadataChanged$49(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/MediaMetadata;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onPlaylistMetadataChanged$49(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/MediaMetadata;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onPlaylistMetadataChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/MediaMetadata;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onPositionDiscontinuity$43(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/Player$PositionInfo;Lcom/google/android/exoplayer2/Player$PositionInfo;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onPositionDiscontinuity$43(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/Player$PositionInfo;Lcom/google/android/exoplayer2/Player$PositionInfo;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p4, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onPositionDiscontinuity(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;I)V
 
+    .line 2
     invoke-interface {p4, p0, p2, p3, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onPositionDiscontinuity(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Player$PositionInfo;Lcom/google/android/exoplayer2/Player$PositionInfo;I)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onRenderedFirstFrame$19(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Object;JLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onRenderedFirstFrame$19(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Object;JLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p4, p0, p1, p2, p3}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onRenderedFirstFrame(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Object;J)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onRepeatModeChanged$39(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onRepeatModeChanged$39(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onRepeatModeChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;I)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onSeekBackIncrementChanged$45(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;JLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onSeekBackIncrementChanged$45(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;JLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p3, p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onSeekBackIncrementChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;J)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onSeekForwardIncrementChanged$46(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;JLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onSeekForwardIncrementChanged$46(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;JLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p3, p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onSeekForwardIncrementChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;J)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onSeekProcessed$53(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onSeekProcessed$53(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p1, p0}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onSeekProcessed(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onShuffleModeEnabledChanged$40(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ZLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onShuffleModeEnabledChanged$40(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ZLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onShuffleModeChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Z)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onSkipSilenceEnabledChanged$54(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ZLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onSkipSilenceEnabledChanged$54(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ZLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onSkipSilenceEnabledChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Z)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onSurfaceSizeChanged$22(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onSurfaceSizeChanged$22(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p3, p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onSurfaceSizeChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;II)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onTimelineChanged$29(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onTimelineChanged$29(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onTimelineChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;I)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onTrackSelectionParametersChanged$58(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onTrackSelectionParametersChanged$58(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onTrackSelectionParametersChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onTracksChanged$31(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Tracks;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onTracksChanged$31(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Tracks;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onTracksChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Tracks;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onUpstreamDiscarded$27(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/MediaLoadData;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onUpstreamDiscarded$27(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/MediaLoadData;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onUpstreamDiscarded(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/MediaLoadData;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onVideoCodecError$21(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Exception;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onVideoCodecError$21(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Exception;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onVideoCodecError(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Exception;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onVideoDecoderInitialized$14(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;JJLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onVideoDecoderInitialized$14(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;JJLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 7
 
+    .line 1
     invoke-interface {p6, p0, p1, p2, p3}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onVideoDecoderInitialized(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;J)V
 
     move-object v0, p6
@@ -1334,6 +1032,7 @@
 
     move-wide v5, p2
 
+    .line 2
     invoke-interface/range {v0 .. v6}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onVideoDecoderInitialized(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;JJ)V
 
     const/4 v3, 0x2
@@ -1344,70 +1043,82 @@
 
     move-object v4, p1
 
+    .line 3
     invoke-interface/range {v1 .. v6}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onDecoderInitialized(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILjava/lang/String;J)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onVideoDecoderReleased$17(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onVideoDecoderReleased$17(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onVideoDecoderReleased(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onVideoDisabled$18(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/decoder/DecoderCounters;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onVideoDisabled$18(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/decoder/DecoderCounters;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 1
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onVideoDisabled(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/decoder/DecoderCounters;)V
 
     const/4 v0, 0x2
 
+    .line 2
     invoke-interface {p2, p0, v0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onDecoderDisabled(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/decoder/DecoderCounters;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onVideoEnabled$13(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/decoder/DecoderCounters;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onVideoEnabled$13(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/decoder/DecoderCounters;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 1
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onVideoEnabled(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/decoder/DecoderCounters;)V
 
     const/4 v0, 0x2
 
+    .line 2
     invoke-interface {p2, p0, v0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onDecoderEnabled(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/decoder/DecoderCounters;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onVideoFrameProcessingOffset$20(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;JILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onVideoFrameProcessingOffset$20(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;JILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p4, p0, p1, p2, p3}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onVideoFrameProcessingOffset(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;JI)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onVideoInputFormatChanged$15(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Format;Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onVideoInputFormatChanged$15(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Format;Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p3, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onVideoInputFormatChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Format;)V
 
+    .line 2
     invoke-interface {p3, p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onVideoInputFormatChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Format;Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;)V
 
     const/4 p2, 0x2
 
+    .line 3
     invoke-interface {p3, p0, p2, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onDecoderInputFormatChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/Format;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onVideoSizeChanged$57(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/video/VideoSize;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onVideoSizeChanged$57(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/video/VideoSize;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 6
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onVideoSizeChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/video/VideoSize;)V
 
+    .line 2
     iget v2, p1, Lcom/google/android/exoplayer2/video/VideoSize;->width:I
 
     iget v3, p1, Lcom/google/android/exoplayer2/video/VideoSize;->height:I
@@ -1425,17 +1136,19 @@
     return-void
 .end method
 
-.method private static synthetic lambda$onVolumeChanged$12(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;FLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$onVolumeChanged$12(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;FLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p2, p0, p1}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onVolumeChanged(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;F)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$releaseInternal$68(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
+.method public static synthetic lambda$releaseInternal$68(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
     .locals 0
 
+    .line 1
     invoke-interface {p1, p0}, Lcom/google/android/exoplayer2/analytics/AnalyticsListener;->onPlayerReleased(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;)V
 
     return-void
@@ -1444,6 +1157,7 @@
 .method private synthetic lambda$setPlayer$1(Lcom/google/android/exoplayer2/Player;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;Lcom/google/android/exoplayer2/util/FlagSet;)V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/analytics/AnalyticsListener$Events;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->eventTimes:Landroid/util/SparseArray;
@@ -1455,184 +1169,27 @@
     return-void
 .end method
 
-.method public static synthetic m(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/DeviceInfo;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onDeviceInfoChanged$59(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/DeviceInfo;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic m0(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onAudioDecoderReleased$8(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic n(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ZLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onShuffleModeEnabledChanged$40(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ZLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic n0(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Object;JLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2, p3, p4}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onRenderedFirstFrame$19(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Object;JLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic o(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;FLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onVolumeChanged$12(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;FLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic o0(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Exception;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onDrmSessionManagerError$64(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Exception;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic p(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onAudioSessionIdChanged$55(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic p0(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$notifySeekStarted$2(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic q(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ZLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onSkipSilenceEnabledChanged$54(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ZLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic q0(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;JJLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static/range {p0 .. p6}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onVideoDecoderInitialized$14(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;JJLcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic r(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onDrmSessionReleased$67(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic r0(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/PlaybackException;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onPlayerErrorChanged$42(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/PlaybackException;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
 .method private releaseInternal()V
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateCurrentPlayerMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/a0;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/z;
 
-    invoke-direct {v1, v0}, Lcom/google/android/exoplayer2/analytics/a0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;)V
+    invoke-direct {v1, v0}, Ld/j/a/b/n2/z;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;)V
 
     const/16 v2, 0x404
 
     invoke-virtual {p0, v0, v2, v1}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->sendEvent(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/util/ListenerSet$Event;)V
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->listeners:Lcom/google/android/exoplayer2/util/ListenerSet;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ListenerSet;->release()V
-
-    return-void
-.end method
-
-.method public static synthetic s(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/util/List;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onCues$51(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/util/List;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic t(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/PlaybackParameters;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onPlaybackParametersChanged$44(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/PlaybackParameters;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic u(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/MediaItem;ILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onMediaItemTransition$30(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/MediaItem;ILcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic v(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/PlaybackException;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onPlayerError$41(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/PlaybackException;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic w(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/MediaMetadata;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onPlaylistMetadataChanged$49(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/MediaMetadata;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic x(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Exception;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onVideoCodecError$21(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Exception;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic y(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/LoadEventInfo;Lcom/google/android/exoplayer2/source/MediaLoadData;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$onLoadCompleted$24(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/LoadEventInfo;Lcom/google/android/exoplayer2/source/MediaLoadData;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-
-    return-void
-.end method
-
-.method public static synthetic z(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$releaseInternal$68(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
 
     return-void
 .end method
@@ -1644,8 +1201,10 @@
     .annotation build Landroidx/annotation/CallSuper;
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->listeners:Lcom/google/android/exoplayer2/util/ListenerSet;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/util/ListenerSet;->add(Ljava/lang/Object;)V
@@ -1653,9 +1212,18 @@
     return-void
 .end method
 
+.method public synthetic b(Lcom/google/android/exoplayer2/Player;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;Lcom/google/android/exoplayer2/util/FlagSet;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->lambda$setPlayer$1(Lcom/google/android/exoplayer2/Player;Lcom/google/android/exoplayer2/analytics/AnalyticsListener;Lcom/google/android/exoplayer2/util/FlagSet;)V
+
+    return-void
+.end method
+
 .method public final generateCurrentPlayerMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->mediaPeriodQueueTracker:Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector$MediaPeriodQueueTracker;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector$MediaPeriodQueueTracker;->getCurrentPlayerMediaPeriod()Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;
@@ -1889,25 +1457,29 @@
 .method public final notifySeekStarted()V
     .locals 3
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->isSeeking:Z
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateCurrentPlayerMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
+    .line 3
     iput-boolean v1, p0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->isSeeking:Z
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/r1;
+    const/4 v1, -0x1
 
-    invoke-direct {v1, v0}, Lcom/google/android/exoplayer2/analytics/r1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;)V
+    .line 4
+    new-instance v2, Ld/j/a/b/n2/p1;
 
-    const/4 v2, -0x1
+    invoke-direct {v2, v0}, Ld/j/a/b/n2/p1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;)V
 
-    invoke-virtual {p0, v0, v2, v1}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->sendEvent(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/util/ListenerSet$Event;)V
+    invoke-virtual {p0, v0, v1, v2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->sendEvent(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/util/ListenerSet$Event;)V
 
     :cond_0
     return-void
@@ -1916,13 +1488,15 @@
 .method public final onAudioAttributesChanged(Lcom/google/android/exoplayer2/audio/AudioAttributes;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateReadingMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/d0;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/l0;
 
-    invoke-direct {v1, v0, p1}, Lcom/google/android/exoplayer2/analytics/d0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/audio/AudioAttributes;)V
+    invoke-direct {v1, v0, p1}, Ld/j/a/b/n2/l0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/audio/AudioAttributes;)V
 
     const/16 p1, 0x14
 
@@ -1934,13 +1508,15 @@
 .method public final onAudioCodecError(Ljava/lang/Exception;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateReadingMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/y0;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/a;
 
-    invoke-direct {v1, v0, p1}, Lcom/google/android/exoplayer2/analytics/y0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Exception;)V
+    invoke-direct {v1, v0, p1}, Ld/j/a/b/n2/a;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Exception;)V
 
     const/16 p1, 0x405
 
@@ -1952,11 +1528,13 @@
 .method public final onAudioDecoderInitialized(Ljava/lang/String;JJ)V
     .locals 9
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateReadingMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v7
 
-    new-instance v8, Lcom/google/android/exoplayer2/analytics/o;
+    .line 2
+    new-instance v8, Ld/j/a/b/n2/r0;
 
     move-object v0, v8
 
@@ -1968,7 +1546,7 @@
 
     move-wide v5, p2
 
-    invoke-direct/range {v0 .. v6}, Lcom/google/android/exoplayer2/analytics/o;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;JJ)V
+    invoke-direct/range {v0 .. v6}, Ld/j/a/b/n2/r0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;JJ)V
 
     const/16 p1, 0x3f0
 
@@ -1980,13 +1558,15 @@
 .method public final onAudioDecoderReleased(Ljava/lang/String;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateReadingMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/u;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/m1;
 
-    invoke-direct {v1, v0, p1}, Lcom/google/android/exoplayer2/analytics/u;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;)V
+    invoke-direct {v1, v0, p1}, Ld/j/a/b/n2/m1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;)V
 
     const/16 p1, 0x3f4
 
@@ -1998,13 +1578,15 @@
 .method public final onAudioDisabled(Lcom/google/android/exoplayer2/decoder/DecoderCounters;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generatePlayingMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/z0;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/a1;
 
-    invoke-direct {v1, v0, p1}, Lcom/google/android/exoplayer2/analytics/z0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/decoder/DecoderCounters;)V
+    invoke-direct {v1, v0, p1}, Ld/j/a/b/n2/a1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/decoder/DecoderCounters;)V
 
     const/16 p1, 0x3f5
 
@@ -2016,13 +1598,15 @@
 .method public final onAudioEnabled(Lcom/google/android/exoplayer2/decoder/DecoderCounters;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateReadingMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/o0;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/e1;
 
-    invoke-direct {v1, v0, p1}, Lcom/google/android/exoplayer2/analytics/o0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/decoder/DecoderCounters;)V
+    invoke-direct {v1, v0, p1}, Ld/j/a/b/n2/e1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/decoder/DecoderCounters;)V
 
     const/16 p1, 0x3ef
 
@@ -2038,13 +1622,15 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateReadingMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/m0;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/f0;
 
-    invoke-direct {v1, v0, p1, p2}, Lcom/google/android/exoplayer2/analytics/m0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Format;Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;)V
+    invoke-direct {v1, v0, p1, p2}, Ld/j/a/b/n2/f0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Format;Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;)V
 
     const/16 p1, 0x3f1
 
@@ -2056,13 +1642,15 @@
 .method public final onAudioPositionAdvancing(J)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateReadingMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/v;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/k1;
 
-    invoke-direct {v1, v0, p1, p2}, Lcom/google/android/exoplayer2/analytics/v;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;J)V
+    invoke-direct {v1, v0, p1, p2}, Ld/j/a/b/n2/k1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;J)V
 
     const/16 p1, 0x3f2
 
@@ -2074,13 +1662,15 @@
 .method public final onAudioSessionIdChanged(I)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateReadingMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/p;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/p;
 
-    invoke-direct {v1, v0, p1}, Lcom/google/android/exoplayer2/analytics/p;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;I)V
+    invoke-direct {v1, v0, p1}, Ld/j/a/b/n2/p;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;I)V
 
     const/16 p1, 0x15
 
@@ -2092,13 +1682,15 @@
 .method public final onAudioSinkError(Ljava/lang/Exception;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateReadingMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/e0;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/q0;
 
-    invoke-direct {v1, v0, p1}, Lcom/google/android/exoplayer2/analytics/e0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Exception;)V
+    invoke-direct {v1, v0, p1}, Ld/j/a/b/n2/q0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Exception;)V
 
     const/16 p1, 0x3f6
 
@@ -2110,11 +1702,13 @@
 .method public final onAudioUnderrun(IJJ)V
     .locals 9
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateReadingMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v7
 
-    new-instance v8, Lcom/google/android/exoplayer2/analytics/h0;
+    .line 2
+    new-instance v8, Ld/j/a/b/n2/v0;
 
     move-object v0, v8
 
@@ -2126,7 +1720,7 @@
 
     move-wide v5, p4
 
-    invoke-direct/range {v0 .. v6}, Lcom/google/android/exoplayer2/analytics/h0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IJJ)V
+    invoke-direct/range {v0 .. v6}, Ld/j/a/b/n2/v0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IJJ)V
 
     const/16 p1, 0x3f3
 
@@ -2138,13 +1732,15 @@
 .method public onAvailableCommandsChanged(Lcom/google/android/exoplayer2/Player$Commands;)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateCurrentPlayerMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/q0;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/s0;
 
-    invoke-direct {v1, v0, p1}, Lcom/google/android/exoplayer2/analytics/q0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Player$Commands;)V
+    invoke-direct {v1, v0, p1}, Ld/j/a/b/n2/s0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Player$Commands;)V
 
     const/16 p1, 0xd
 
@@ -2156,11 +1752,13 @@
 .method public final onBandwidthSample(IJJ)V
     .locals 9
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateLoadingMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v7
 
-    new-instance v8, Lcom/google/android/exoplayer2/analytics/a1;
+    .line 2
+    new-instance v8, Ld/j/a/b/n2/j0;
 
     move-object v0, v8
 
@@ -2172,7 +1770,7 @@
 
     move-wide v5, p4
 
-    invoke-direct/range {v0 .. v6}, Lcom/google/android/exoplayer2/analytics/a1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IJJ)V
+    invoke-direct/range {v0 .. v6}, Ld/j/a/b/n2/j0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IJJ)V
 
     const/16 p1, 0x3ee
 
@@ -2190,9 +1788,9 @@
     move-result-object v0
 
     .line 4
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/v0;
+    new-instance v1, Ld/j/a/b/n2/n0;
 
-    invoke-direct {v1, v0, p1}, Lcom/google/android/exoplayer2/analytics/v0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/text/CueGroup;)V
+    invoke-direct {v1, v0, p1}, Ld/j/a/b/n2/n0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/text/CueGroup;)V
 
     const/16 p1, 0x1b
 
@@ -2218,9 +1816,9 @@
     move-result-object v0
 
     .line 2
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/l1;
+    new-instance v1, Ld/j/a/b/n2/s;
 
-    invoke-direct {v1, v0, p1}, Lcom/google/android/exoplayer2/analytics/l1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/util/List;)V
+    invoke-direct {v1, v0, p1}, Ld/j/a/b/n2/s;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/util/List;)V
 
     const/16 p1, 0x1b
 
@@ -2232,13 +1830,15 @@
 .method public onDeviceInfoChanged(Lcom/google/android/exoplayer2/DeviceInfo;)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateCurrentPlayerMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/l;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/m;
 
-    invoke-direct {v1, v0, p1}, Lcom/google/android/exoplayer2/analytics/l;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/DeviceInfo;)V
+    invoke-direct {v1, v0, p1}, Ld/j/a/b/n2/m;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/DeviceInfo;)V
 
     const/16 p1, 0x1d
 
@@ -2250,13 +1850,15 @@
 .method public onDeviceVolumeChanged(IZ)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateCurrentPlayerMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/g;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/b;
 
-    invoke-direct {v1, v0, p1, p2}, Lcom/google/android/exoplayer2/analytics/g;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IZ)V
+    invoke-direct {v1, v0, p1, p2}, Ld/j/a/b/n2/b;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IZ)V
 
     const/16 p1, 0x1e
 
@@ -2272,13 +1874,15 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateMediaPeriodEventTime(ILcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;)Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object p1
 
-    new-instance p2, Lcom/google/android/exoplayer2/analytics/f0;
+    .line 2
+    new-instance p2, Ld/j/a/b/n2/j;
 
-    invoke-direct {p2, p1, p3}, Lcom/google/android/exoplayer2/analytics/f0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/MediaLoadData;)V
+    invoke-direct {p2, p1, p3}, Ld/j/a/b/n2/j;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/MediaLoadData;)V
 
     const/16 p3, 0x3ec
 
@@ -2294,13 +1898,15 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateMediaPeriodEventTime(ILcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;)Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object p1
 
-    new-instance p2, Lcom/google/android/exoplayer2/analytics/s;
+    .line 2
+    new-instance p2, Ld/j/a/b/n2/g0;
 
-    invoke-direct {p2, p1}, Lcom/google/android/exoplayer2/analytics/s;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;)V
+    invoke-direct {p2, p1}, Ld/j/a/b/n2/g0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;)V
 
     const/16 v0, 0x3ff
 
@@ -2316,13 +1922,15 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateMediaPeriodEventTime(ILcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;)Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object p1
 
-    new-instance p2, Lcom/google/android/exoplayer2/analytics/c0;
+    .line 2
+    new-instance p2, Ld/j/a/b/n2/w0;
 
-    invoke-direct {p2, p1}, Lcom/google/android/exoplayer2/analytics/c0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;)V
+    invoke-direct {p2, p1}, Ld/j/a/b/n2/w0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;)V
 
     const/16 v0, 0x402
 
@@ -2338,13 +1946,15 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateMediaPeriodEventTime(ILcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;)Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object p1
 
-    new-instance p2, Lcom/google/android/exoplayer2/analytics/e1;
+    .line 2
+    new-instance p2, Ld/j/a/b/n2/j1;
 
-    invoke-direct {p2, p1}, Lcom/google/android/exoplayer2/analytics/e1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;)V
+    invoke-direct {p2, p1}, Ld/j/a/b/n2/j1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;)V
 
     const/16 v0, 0x401
 
@@ -2360,13 +1970,15 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateMediaPeriodEventTime(ILcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;)Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object p1
 
-    new-instance p2, Lcom/google/android/exoplayer2/analytics/c1;
+    .line 2
+    new-instance p2, Ld/j/a/b/n2/e0;
 
-    invoke-direct {p2, p1, p3}, Lcom/google/android/exoplayer2/analytics/c1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;I)V
+    invoke-direct {p2, p1, p3}, Ld/j/a/b/n2/e0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;I)V
 
     const/16 p3, 0x3fe
 
@@ -2382,13 +1994,15 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateMediaPeriodEventTime(ILcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;)Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object p1
 
-    new-instance p2, Lcom/google/android/exoplayer2/analytics/i1;
+    .line 2
+    new-instance p2, Ld/j/a/b/n2/o1;
 
-    invoke-direct {p2, p1, p3}, Lcom/google/android/exoplayer2/analytics/i1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Exception;)V
+    invoke-direct {p2, p1, p3}, Ld/j/a/b/n2/o1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Exception;)V
 
     const/16 p3, 0x400
 
@@ -2404,13 +2018,15 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateMediaPeriodEventTime(ILcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;)Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object p1
 
-    new-instance p2, Lcom/google/android/exoplayer2/analytics/x;
+    .line 2
+    new-instance p2, Ld/j/a/b/n2/r;
 
-    invoke-direct {p2, p1}, Lcom/google/android/exoplayer2/analytics/x;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;)V
+    invoke-direct {p2, p1}, Ld/j/a/b/n2/r;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;)V
 
     const/16 v0, 0x403
 
@@ -2422,13 +2038,15 @@
 .method public final onDroppedFrames(IJ)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generatePlayingMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/k0;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/p0;
 
-    invoke-direct {v1, v0, p1, p2, p3}, Lcom/google/android/exoplayer2/analytics/k0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IJ)V
+    invoke-direct {v1, v0, p1, p2, p3}, Ld/j/a/b/n2/p0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;IJ)V
 
     const/16 p1, 0x3fa
 
@@ -2446,13 +2064,15 @@
 .method public final onIsLoadingChanged(Z)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateCurrentPlayerMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/f1;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/g1;
 
-    invoke-direct {v1, v0, p1}, Lcom/google/android/exoplayer2/analytics/f1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Z)V
+    invoke-direct {v1, v0, p1}, Ld/j/a/b/n2/g1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Z)V
 
     const/4 p1, 0x3
 
@@ -2464,13 +2084,15 @@
 .method public onIsPlayingChanged(Z)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateCurrentPlayerMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/b0;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/c;
 
-    invoke-direct {v1, v0, p1}, Lcom/google/android/exoplayer2/analytics/b0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Z)V
+    invoke-direct {v1, v0, p1}, Ld/j/a/b/n2/c;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Z)V
 
     const/4 p1, 0x7
 
@@ -2486,13 +2108,15 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateMediaPeriodEventTime(ILcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;)Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object p1
 
-    new-instance p2, Lcom/google/android/exoplayer2/analytics/r;
+    .line 2
+    new-instance p2, Ld/j/a/b/n2/i0;
 
-    invoke-direct {p2, p1, p3, p4}, Lcom/google/android/exoplayer2/analytics/r;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/LoadEventInfo;Lcom/google/android/exoplayer2/source/MediaLoadData;)V
+    invoke-direct {p2, p1, p3, p4}, Ld/j/a/b/n2/i0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/LoadEventInfo;Lcom/google/android/exoplayer2/source/MediaLoadData;)V
 
     const/16 p3, 0x3ea
 
@@ -2508,13 +2132,15 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateMediaPeriodEventTime(ILcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;)Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object p1
 
-    new-instance p2, Lcom/google/android/exoplayer2/analytics/n1;
+    .line 2
+    new-instance p2, Ld/j/a/b/n2/y;
 
-    invoke-direct {p2, p1, p3, p4}, Lcom/google/android/exoplayer2/analytics/n1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/LoadEventInfo;Lcom/google/android/exoplayer2/source/MediaLoadData;)V
+    invoke-direct {p2, p1, p3, p4}, Ld/j/a/b/n2/y;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/LoadEventInfo;Lcom/google/android/exoplayer2/source/MediaLoadData;)V
 
     const/16 p3, 0x3e9
 
@@ -2530,11 +2156,13 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateMediaPeriodEventTime(ILcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;)Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object p1
 
-    new-instance p2, Lcom/google/android/exoplayer2/analytics/w0;
+    .line 2
+    new-instance p2, Ld/j/a/b/n2/m0;
 
     move-object v0, p2
 
@@ -2548,7 +2176,7 @@
 
     move v5, p6
 
-    invoke-direct/range {v0 .. v5}, Lcom/google/android/exoplayer2/analytics/w0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/LoadEventInfo;Lcom/google/android/exoplayer2/source/MediaLoadData;Ljava/io/IOException;Z)V
+    invoke-direct/range {v0 .. v5}, Ld/j/a/b/n2/m0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/LoadEventInfo;Lcom/google/android/exoplayer2/source/MediaLoadData;Ljava/io/IOException;Z)V
 
     const/16 p3, 0x3eb
 
@@ -2564,13 +2192,15 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateMediaPeriodEventTime(ILcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;)Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object p1
 
-    new-instance p2, Lcom/google/android/exoplayer2/analytics/h1;
+    .line 2
+    new-instance p2, Ld/j/a/b/n2/d1;
 
-    invoke-direct {p2, p1, p3, p4}, Lcom/google/android/exoplayer2/analytics/h1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/LoadEventInfo;Lcom/google/android/exoplayer2/source/MediaLoadData;)V
+    invoke-direct {p2, p1, p3, p4}, Ld/j/a/b/n2/d1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/LoadEventInfo;Lcom/google/android/exoplayer2/source/MediaLoadData;)V
 
     const/16 p3, 0x3e8
 
@@ -2588,13 +2218,15 @@
 .method public onMaxSeekToPreviousPositionChanged(J)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateCurrentPlayerMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/q;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/u0;
 
-    invoke-direct {v1, v0, p1, p2}, Lcom/google/android/exoplayer2/analytics/q;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;J)V
+    invoke-direct {v1, v0, p1, p2}, Ld/j/a/b/n2/u0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;J)V
 
     const/16 p1, 0x12
 
@@ -2610,13 +2242,15 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateCurrentPlayerMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/w;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/u;
 
-    invoke-direct {v1, v0, p1, p2}, Lcom/google/android/exoplayer2/analytics/w;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/MediaItem;I)V
+    invoke-direct {v1, v0, p1, p2}, Ld/j/a/b/n2/u;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/MediaItem;I)V
 
     const/4 p1, 0x1
 
@@ -2628,13 +2262,15 @@
 .method public onMediaMetadataChanged(Lcom/google/android/exoplayer2/MediaMetadata;)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateCurrentPlayerMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/o1;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/o0;
 
-    invoke-direct {v1, v0, p1}, Lcom/google/android/exoplayer2/analytics/o1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/MediaMetadata;)V
+    invoke-direct {v1, v0, p1}, Ld/j/a/b/n2/o0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/MediaMetadata;)V
 
     const/16 p1, 0xe
 
@@ -2646,13 +2282,15 @@
 .method public final onMetadata(Lcom/google/android/exoplayer2/metadata/Metadata;)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateCurrentPlayerMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/a;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/d0;
 
-    invoke-direct {v1, v0, p1}, Lcom/google/android/exoplayer2/analytics/a;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/metadata/Metadata;)V
+    invoke-direct {v1, v0, p1}, Ld/j/a/b/n2/d0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/metadata/Metadata;)V
 
     const/16 p1, 0x1c
 
@@ -2664,13 +2302,15 @@
 .method public final onPlayWhenReadyChanged(ZI)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateCurrentPlayerMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/t0;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/x0;
 
-    invoke-direct {v1, v0, p1, p2}, Lcom/google/android/exoplayer2/analytics/t0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ZI)V
+    invoke-direct {v1, v0, p1, p2}, Ld/j/a/b/n2/x0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ZI)V
 
     const/4 p1, 0x5
 
@@ -2682,13 +2322,15 @@
 .method public final onPlaybackParametersChanged(Lcom/google/android/exoplayer2/PlaybackParameters;)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateCurrentPlayerMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/g1;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/t;
 
-    invoke-direct {v1, v0, p1}, Lcom/google/android/exoplayer2/analytics/g1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/PlaybackParameters;)V
+    invoke-direct {v1, v0, p1}, Ld/j/a/b/n2/t;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/PlaybackParameters;)V
 
     const/16 p1, 0xc
 
@@ -2700,13 +2342,15 @@
 .method public final onPlaybackStateChanged(I)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateCurrentPlayerMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/d1;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/y0;
 
-    invoke-direct {v1, v0, p1}, Lcom/google/android/exoplayer2/analytics/d1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;I)V
+    invoke-direct {v1, v0, p1}, Ld/j/a/b/n2/y0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;I)V
 
     const/4 p1, 0x4
 
@@ -2718,13 +2362,15 @@
 .method public final onPlaybackSuppressionReasonChanged(I)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateCurrentPlayerMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/i0;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/b1;
 
-    invoke-direct {v1, v0, p1}, Lcom/google/android/exoplayer2/analytics/i0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;I)V
+    invoke-direct {v1, v0, p1}, Ld/j/a/b/n2/b1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;I)V
 
     const/4 p1, 0x6
 
@@ -2736,13 +2382,15 @@
 .method public final onPlayerError(Lcom/google/android/exoplayer2/PlaybackException;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->getEventTimeForErrorEvent(Lcom/google/android/exoplayer2/PlaybackException;)Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/m;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/v;
 
-    invoke-direct {v1, v0, p1}, Lcom/google/android/exoplayer2/analytics/m;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/PlaybackException;)V
+    invoke-direct {v1, v0, p1}, Ld/j/a/b/n2/v;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/PlaybackException;)V
 
     const/16 p1, 0xa
 
@@ -2758,13 +2406,15 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->getEventTimeForErrorEvent(Lcom/google/android/exoplayer2/PlaybackException;)Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/d;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/r1;
 
-    invoke-direct {v1, v0, p1}, Lcom/google/android/exoplayer2/analytics/d;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/PlaybackException;)V
+    invoke-direct {v1, v0, p1}, Ld/j/a/b/n2/r1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/PlaybackException;)V
 
     const/16 p1, 0xa
 
@@ -2776,13 +2426,15 @@
 .method public final onPlayerStateChanged(ZI)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateCurrentPlayerMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/j0;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/c1;
 
-    invoke-direct {v1, v0, p1, p2}, Lcom/google/android/exoplayer2/analytics/j0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ZI)V
+    invoke-direct {v1, v0, p1, p2}, Ld/j/a/b/n2/c1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ZI)V
 
     const/4 p1, -0x1
 
@@ -2794,13 +2446,15 @@
 .method public onPlaylistMetadataChanged(Lcom/google/android/exoplayer2/MediaMetadata;)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateCurrentPlayerMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/u0;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/w;
 
-    invoke-direct {v1, v0, p1}, Lcom/google/android/exoplayer2/analytics/u0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/MediaMetadata;)V
+    invoke-direct {v1, v0, p1}, Ld/j/a/b/n2/w;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/MediaMetadata;)V
 
     const/16 p1, 0xf
 
@@ -2816,7 +2470,7 @@
 .end method
 
 .method public final onPositionDiscontinuity(Lcom/google/android/exoplayer2/Player$PositionInfo;Lcom/google/android/exoplayer2/Player$PositionInfo;I)V
-    .locals 2
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -2824,8 +2478,10 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->isSeeking:Z
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->mediaPeriodQueueTracker:Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector$MediaPeriodQueueTracker;
 
@@ -2839,17 +2495,19 @@
 
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector$MediaPeriodQueueTracker;->onPositionDiscontinuity(Lcom/google/android/exoplayer2/Player;)V
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateCurrentPlayerMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/m1;
+    const/16 v1, 0xb
 
-    invoke-direct {v1, v0, p3, p1, p2}, Lcom/google/android/exoplayer2/analytics/m1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/Player$PositionInfo;Lcom/google/android/exoplayer2/Player$PositionInfo;)V
+    .line 4
+    new-instance v2, Ld/j/a/b/n2/k0;
 
-    const/16 p1, 0xb
+    invoke-direct {v2, v0, p3, p1, p2}, Ld/j/a/b/n2/k0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/Player$PositionInfo;Lcom/google/android/exoplayer2/Player$PositionInfo;)V
 
-    invoke-virtual {p0, v0, p1, v1}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->sendEvent(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/util/ListenerSet$Event;)V
+    invoke-virtual {p0, v0, v1, v2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->sendEvent(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;ILcom/google/android/exoplayer2/util/ListenerSet$Event;)V
 
     return-void
 .end method
@@ -2863,13 +2521,15 @@
 .method public final onRenderedFirstFrame(Ljava/lang/Object;J)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateReadingMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/h;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/n1;
 
-    invoke-direct {v1, v0, p1, p2, p3}, Lcom/google/android/exoplayer2/analytics/h;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Object;J)V
+    invoke-direct {v1, v0, p1, p2, p3}, Ld/j/a/b/n2/n1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Object;J)V
 
     const/16 p1, 0x1a
 
@@ -2881,13 +2541,15 @@
 .method public final onRepeatModeChanged(I)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateCurrentPlayerMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/p0;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/i;
 
-    invoke-direct {v1, v0, p1}, Lcom/google/android/exoplayer2/analytics/p0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;I)V
+    invoke-direct {v1, v0, p1}, Ld/j/a/b/n2/i;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;I)V
 
     const/16 p1, 0x8
 
@@ -2899,13 +2561,15 @@
 .method public onSeekBackIncrementChanged(J)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateCurrentPlayerMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/g0;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/a0;
 
-    invoke-direct {v1, v0, p1, p2}, Lcom/google/android/exoplayer2/analytics/g0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;J)V
+    invoke-direct {v1, v0, p1, p2}, Ld/j/a/b/n2/a0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;J)V
 
     const/16 p1, 0x10
 
@@ -2917,13 +2581,15 @@
 .method public onSeekForwardIncrementChanged(J)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateCurrentPlayerMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/k;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/e;
 
-    invoke-direct {v1, v0, p1, p2}, Lcom/google/android/exoplayer2/analytics/k;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;J)V
+    invoke-direct {v1, v0, p1, p2}, Ld/j/a/b/n2/e;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;J)V
 
     const/16 p1, 0x11
 
@@ -2935,13 +2601,15 @@
 .method public final onSeekProcessed()V
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateCurrentPlayerMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/k1;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/h0;
 
-    invoke-direct {v1, v0}, Lcom/google/android/exoplayer2/analytics/k1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;)V
+    invoke-direct {v1, v0}, Ld/j/a/b/n2/h0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;)V
 
     const/4 v2, -0x1
 
@@ -2953,13 +2621,15 @@
 .method public final onShuffleModeEnabledChanged(Z)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateCurrentPlayerMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/f;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/n;
 
-    invoke-direct {v1, v0, p1}, Lcom/google/android/exoplayer2/analytics/f;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Z)V
+    invoke-direct {v1, v0, p1}, Ld/j/a/b/n2/n;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Z)V
 
     const/16 p1, 0x9
 
@@ -2971,13 +2641,15 @@
 .method public final onSkipSilenceEnabledChanged(Z)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateReadingMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/n;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/q;
 
-    invoke-direct {v1, v0, p1}, Lcom/google/android/exoplayer2/analytics/n;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Z)V
+    invoke-direct {v1, v0, p1}, Ld/j/a/b/n2/q;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Z)V
 
     const/16 p1, 0x17
 
@@ -2989,13 +2661,15 @@
 .method public final onSurfaceSizeChanged(II)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateReadingMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/r0;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/b0;
 
-    invoke-direct {v1, v0, p1, p2}, Lcom/google/android/exoplayer2/analytics/r0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;II)V
+    invoke-direct {v1, v0, p1, p2}, Ld/j/a/b/n2/b0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;II)V
 
     const/16 p1, 0x18
 
@@ -3007,6 +2681,7 @@
 .method public final onTimelineChanged(Lcom/google/android/exoplayer2/Timeline;I)V
     .locals 1
 
+    .line 1
     iget-object p1, p0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->mediaPeriodQueueTracker:Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector$MediaPeriodQueueTracker;
 
     iget-object v0, p0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->player:Lcom/google/android/exoplayer2/Player;
@@ -3019,13 +2694,15 @@
 
     invoke-virtual {p1, v0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector$MediaPeriodQueueTracker;->onTimelineChanged(Lcom/google/android/exoplayer2/Player;)V
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateCurrentPlayerMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object p1
 
-    new-instance v0, Lcom/google/android/exoplayer2/analytics/j1;
+    .line 3
+    new-instance v0, Ld/j/a/b/n2/f1;
 
-    invoke-direct {v0, p1, p2}, Lcom/google/android/exoplayer2/analytics/j1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;I)V
+    invoke-direct {v0, p1, p2}, Ld/j/a/b/n2/f1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;I)V
 
     const/4 p2, 0x0
 
@@ -3037,13 +2714,15 @@
 .method public onTrackSelectionParametersChanged(Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateCurrentPlayerMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/b;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/g;
 
-    invoke-direct {v1, v0, p1}, Lcom/google/android/exoplayer2/analytics/b;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;)V
+    invoke-direct {v1, v0, p1}, Ld/j/a/b/n2/g;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/trackselection/TrackSelectionParameters;)V
 
     const/16 p1, 0x13
 
@@ -3055,13 +2734,15 @@
 .method public onTracksChanged(Lcom/google/android/exoplayer2/Tracks;)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateCurrentPlayerMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/z;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/z0;
 
-    invoke-direct {v1, v0, p1}, Lcom/google/android/exoplayer2/analytics/z;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Tracks;)V
+    invoke-direct {v1, v0, p1}, Ld/j/a/b/n2/z0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Tracks;)V
 
     const/4 p1, 0x2
 
@@ -3077,13 +2758,15 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateMediaPeriodEventTime(ILcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;)Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object p1
 
-    new-instance p2, Lcom/google/android/exoplayer2/analytics/n0;
+    .line 2
+    new-instance p2, Ld/j/a/b/n2/c0;
 
-    invoke-direct {p2, p1, p3}, Lcom/google/android/exoplayer2/analytics/n0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/MediaLoadData;)V
+    invoke-direct {p2, p1, p3}, Ld/j/a/b/n2/c0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/source/MediaLoadData;)V
 
     const/16 p3, 0x3ed
 
@@ -3095,13 +2778,15 @@
 .method public final onVideoCodecError(Ljava/lang/Exception;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateReadingMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/p1;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/x;
 
-    invoke-direct {v1, v0, p1}, Lcom/google/android/exoplayer2/analytics/p1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Exception;)V
+    invoke-direct {v1, v0, p1}, Ld/j/a/b/n2/x;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/Exception;)V
 
     const/16 p1, 0x406
 
@@ -3113,11 +2798,13 @@
 .method public final onVideoDecoderInitialized(Ljava/lang/String;JJ)V
     .locals 9
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateReadingMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v7
 
-    new-instance v8, Lcom/google/android/exoplayer2/analytics/c;
+    .line 2
+    new-instance v8, Ld/j/a/b/n2/q1;
 
     move-object v0, v8
 
@@ -3129,7 +2816,7 @@
 
     move-wide v5, p2
 
-    invoke-direct/range {v0 .. v6}, Lcom/google/android/exoplayer2/analytics/c;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;JJ)V
+    invoke-direct/range {v0 .. v6}, Ld/j/a/b/n2/q1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;JJ)V
 
     const/16 p1, 0x3f8
 
@@ -3141,13 +2828,15 @@
 .method public final onVideoDecoderReleased(Ljava/lang/String;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateReadingMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/e;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/t0;
 
-    invoke-direct {v1, v0, p1}, Lcom/google/android/exoplayer2/analytics/e;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;)V
+    invoke-direct {v1, v0, p1}, Ld/j/a/b/n2/t0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Ljava/lang/String;)V
 
     const/16 p1, 0x3fb
 
@@ -3159,13 +2848,15 @@
 .method public final onVideoDisabled(Lcom/google/android/exoplayer2/decoder/DecoderCounters;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generatePlayingMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/l0;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/l;
 
-    invoke-direct {v1, v0, p1}, Lcom/google/android/exoplayer2/analytics/l0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/decoder/DecoderCounters;)V
+    invoke-direct {v1, v0, p1}, Ld/j/a/b/n2/l;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/decoder/DecoderCounters;)V
 
     const/16 p1, 0x3fc
 
@@ -3177,13 +2868,15 @@
 .method public final onVideoEnabled(Lcom/google/android/exoplayer2/decoder/DecoderCounters;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateReadingMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/i;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/l1;
 
-    invoke-direct {v1, v0, p1}, Lcom/google/android/exoplayer2/analytics/i;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/decoder/DecoderCounters;)V
+    invoke-direct {v1, v0, p1}, Ld/j/a/b/n2/l1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/decoder/DecoderCounters;)V
 
     const/16 p1, 0x3f7
 
@@ -3195,13 +2888,15 @@
 .method public final onVideoFrameProcessingOffset(JI)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generatePlayingMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/q1;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/k;
 
-    invoke-direct {v1, v0, p1, p2, p3}, Lcom/google/android/exoplayer2/analytics/q1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;JI)V
+    invoke-direct {v1, v0, p1, p2, p3}, Ld/j/a/b/n2/k;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;JI)V
 
     const/16 p1, 0x3fd
 
@@ -3217,13 +2912,15 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateReadingMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/b1;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/d;
 
-    invoke-direct {v1, v0, p1, p2}, Lcom/google/android/exoplayer2/analytics/b1;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Format;Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;)V
+    invoke-direct {v1, v0, p1, p2}, Ld/j/a/b/n2/d;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/Format;Lcom/google/android/exoplayer2/decoder/DecoderReuseEvaluation;)V
 
     const/16 p1, 0x3f9
 
@@ -3235,13 +2932,15 @@
 .method public final onVideoSizeChanged(Lcom/google/android/exoplayer2/video/VideoSize;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateReadingMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/y;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/h;
 
-    invoke-direct {v1, v0, p1}, Lcom/google/android/exoplayer2/analytics/y;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/video/VideoSize;)V
+    invoke-direct {v1, v0, p1}, Ld/j/a/b/n2/h;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;Lcom/google/android/exoplayer2/video/VideoSize;)V
 
     const/16 p1, 0x19
 
@@ -3253,13 +2952,15 @@
 .method public final onVolumeChanged(F)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->generateReadingMediaPeriodEventTime()Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;
 
     move-result-object v0
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/s0;
+    .line 2
+    new-instance v1, Ld/j/a/b/n2/o;
 
-    invoke-direct {v1, v0, p1}, Lcom/google/android/exoplayer2/analytics/s0;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;F)V
+    invoke-direct {v1, v0, p1}, Ld/j/a/b/n2/o;-><init>(Lcom/google/android/exoplayer2/analytics/AnalyticsListener$EventTime;F)V
 
     const/16 p1, 0x16
 
@@ -3273,6 +2974,7 @@
     .annotation build Landroidx/annotation/CallSuper;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->handler:Lcom/google/android/exoplayer2/util/HandlerWrapper;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkStateNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -3281,9 +2983,9 @@
 
     check-cast v0, Lcom/google/android/exoplayer2/util/HandlerWrapper;
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/j;
+    new-instance v1, Ld/j/a/b/n2/f;
 
-    invoke-direct {v1, p0}, Lcom/google/android/exoplayer2/analytics/j;-><init>(Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;)V
+    invoke-direct {v1, p0}, Ld/j/a/b/n2/f;-><init>(Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;)V
 
     invoke-interface {v0, v1}, Lcom/google/android/exoplayer2/util/HandlerWrapper;->post(Ljava/lang/Runnable;)Z
 
@@ -3295,6 +2997,7 @@
     .annotation build Landroidx/annotation/CallSuper;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->listeners:Lcom/google/android/exoplayer2/util/ListenerSet;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/util/ListenerSet;->remove(Ljava/lang/Object;)V
@@ -3315,10 +3018,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->eventTimes:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p2, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->listeners:Lcom/google/android/exoplayer2/util/ListenerSet;
 
     invoke-virtual {p0, p2, p3}, Lcom/google/android/exoplayer2/util/ListenerSet;->sendEvent(ILcom/google/android/exoplayer2/util/ListenerSet$Event;)V
@@ -3331,6 +3036,7 @@
     .annotation build Landroidx/annotation/CallSuper;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->player:Lcom/google/android/exoplayer2/Player;
 
     if-eqz v0, :cond_1
@@ -3361,6 +3067,7 @@
     :goto_1
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -3369,6 +3076,7 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->player:Lcom/google/android/exoplayer2/Player;
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->clock:Lcom/google/android/exoplayer2/util/Clock;
 
     const/4 v1, 0x0
@@ -3379,12 +3087,14 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->handler:Lcom/google/android/exoplayer2/util/HandlerWrapper;
 
+    .line 4
     iget-object v0, p0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->listeners:Lcom/google/android/exoplayer2/util/ListenerSet;
 
-    new-instance v1, Lcom/google/android/exoplayer2/analytics/t;
+    new-instance v1, Ld/j/a/b/n2/h1;
 
-    invoke-direct {v1, p0, p1}, Lcom/google/android/exoplayer2/analytics/t;-><init>(Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;Lcom/google/android/exoplayer2/Player;)V
+    invoke-direct {v1, p0, p1}, Ld/j/a/b/n2/h1;-><init>(Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;Lcom/google/android/exoplayer2/Player;)V
 
+    .line 5
     invoke-virtual {v0, p2, v1}, Lcom/google/android/exoplayer2/util/ListenerSet;->copy(Landroid/os/Looper;Lcom/google/android/exoplayer2/util/ListenerSet$IterationFinishedEvent;)Lcom/google/android/exoplayer2/util/ListenerSet;
 
     move-result-object p1
@@ -3411,6 +3121,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->mediaPeriodQueueTracker:Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector$MediaPeriodQueueTracker;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/analytics/DefaultAnalyticsCollector;->player:Lcom/google/android/exoplayer2/Player;

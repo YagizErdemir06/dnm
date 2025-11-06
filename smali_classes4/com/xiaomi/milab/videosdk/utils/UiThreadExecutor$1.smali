@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/milab/videosdk/utils/UiThreadExecutor$1;
+.class public Lcom/xiaomi/milab/videosdk/utils/UiThreadExecutor$1;
 .super Landroid/os/Handler;
 .source "SourceFile"
 
@@ -26,6 +26,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -44,14 +45,17 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/os/Message;->getCallback()Ljava/lang/Runnable;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
+    .line 3
     iget-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p0, Lcom/xiaomi/milab/videosdk/utils/UiThreadExecutor$Token;
@@ -60,6 +64,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 

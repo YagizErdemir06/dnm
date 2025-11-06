@@ -21,7 +21,16 @@
 # direct methods
 .method public constructor <init>(Lcom/android/camera/ui/PanoMovingIndicatorView;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/ui/PanoMovingIndicatorView$a;->a:Lcom/android/camera/ui/PanoMovingIndicatorView;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -33,7 +42,16 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "msg"
+        }
+    .end annotation
 
+    .line 1
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/4 v0, 0x1
@@ -42,6 +60,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object p1, p0, Lcom/android/camera/ui/PanoMovingIndicatorView$a;->a:Lcom/android/camera/ui/PanoMovingIndicatorView;
 
@@ -65,6 +84,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 3
     iget-object p1, p0, Lcom/android/camera/ui/PanoMovingIndicatorView$a;->a:Lcom/android/camera/ui/PanoMovingIndicatorView;
 
     invoke-static {p1}, Lcom/android/camera/ui/PanoMovingIndicatorView;->a(Lcom/android/camera/ui/PanoMovingIndicatorView;)I
@@ -73,12 +93,14 @@
 
     invoke-static {p1, v1}, Lcom/android/camera/ui/PanoMovingIndicatorView;->d(Lcom/android/camera/ui/PanoMovingIndicatorView;I)V
 
+    .line 4
     iget-object p1, p0, Lcom/android/camera/ui/PanoMovingIndicatorView$a;->a:Lcom/android/camera/ui/PanoMovingIndicatorView;
 
     invoke-static {p1}, Lcom/android/camera/ui/PanoMovingIndicatorView;->e(Lcom/android/camera/ui/PanoMovingIndicatorView;)V
 
     const-wide/16 v1, 0xa
 
+    .line 5
     invoke-virtual {p0, v0, v1, v2}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
     :cond_1

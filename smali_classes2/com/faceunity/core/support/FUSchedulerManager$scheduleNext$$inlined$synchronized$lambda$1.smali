@@ -1,4 +1,4 @@
-.class final Lcom/faceunity/core/support/FUSchedulerManager$scheduleNext$$inlined$synchronized$lambda$1;
+.class public final Lcom/faceunity/core/support/FUSchedulerManager$scheduleNext$$inlined$synchronized$lambda$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -16,12 +16,17 @@
     name = null
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
         "\u0000\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0010\u0004\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0001\u0010\u0002\u00a8\u0006\u0003"
     }
     d2 = {
-        "Lnm/l2;",
+        "Lh/l2;",
         "run",
         "()V",
         "com/faceunity/core/support/FUSchedulerManager$scheduleNext$1$1",
@@ -37,18 +42,18 @@
 
 
 # instance fields
-.field final synthetic $unit$inlined:Ljn/a;
+.field public final synthetic $unit$inlined:Lh/d3/w/a;
 
-.field final synthetic this$0:Lcom/faceunity/core/support/FUSchedulerManager;
+.field public final synthetic this$0:Lcom/faceunity/core/support/FUSchedulerManager;
 
 
 # direct methods
-.method public constructor <init>(Lcom/faceunity/core/support/FUSchedulerManager;Ljn/a;)V
+.method public constructor <init>(Lcom/faceunity/core/support/FUSchedulerManager;Lh/d3/w/a;)V
     .locals 0
 
     iput-object p1, p0, Lcom/faceunity/core/support/FUSchedulerManager$scheduleNext$$inlined$synchronized$lambda$1;->this$0:Lcom/faceunity/core/support/FUSchedulerManager;
 
-    iput-object p2, p0, Lcom/faceunity/core/support/FUSchedulerManager$scheduleNext$$inlined$synchronized$lambda$1;->$unit$inlined:Ljn/a;
+    iput-object p2, p0, Lcom/faceunity/core/support/FUSchedulerManager$scheduleNext$$inlined$synchronized$lambda$1;->$unit$inlined:Lh/d3/w/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -60,9 +65,10 @@
 .method public final run()V
     .locals 0
 
-    iget-object p0, p0, Lcom/faceunity/core/support/FUSchedulerManager$scheduleNext$$inlined$synchronized$lambda$1;->$unit$inlined:Ljn/a;
+    .line 1
+    iget-object p0, p0, Lcom/faceunity/core/support/FUSchedulerManager$scheduleNext$$inlined$synchronized$lambda$1;->$unit$inlined:Lh/d3/w/a;
 
-    invoke-interface {p0}, Ljn/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lh/d3/w/a;->invoke()Ljava/lang/Object;
 
     return-void
 .end method

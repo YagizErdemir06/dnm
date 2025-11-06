@@ -35,7 +35,7 @@
     <item type="dimen" name="menu_item_scale_size">0.293665</item>
     <dimen name="mode_select_item_text_size">16.699982sp</dimen>
     <dimen name="mode_select_item_text_size_mm">16.699982dip</dimen>
-    <dimen name="more_mode_settings_padding_hor">145.0dip</dimen>
+    <dimen name="more_mode_settings_padding_hor">217.24478dip</dimen>
     <dimen name="more_mode_settings_video_height">365.32812dip</dimen>
     <dimen name="more_mode_settings_video_width">227.90149dip</dimen>
     <dimen name="motion_detection_rect_circle_enlarge_radius">7.294281dip</dimen>

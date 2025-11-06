@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/StandardTable$Row$1;
+.class public Lcom/google/common/collect/StandardTable$Row$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,15 +27,16 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/google/common/collect/StandardTable$Row;
+.field public final synthetic this$1:Lcom/google/common/collect/StandardTable$Row;
 
-.field final synthetic val$iterator:Ljava/util/Iterator;
+.field public final synthetic val$iterator:Ljava/util/Iterator;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/StandardTable$Row;Ljava/util/Iterator;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/StandardTable$Row$1;->this$1:Lcom/google/common/collect/StandardTable$Row;
 
     iput-object p2, p0, Lcom/google/common/collect/StandardTable$Row$1;->val$iterator:Ljava/util/Iterator;
@@ -50,6 +51,7 @@
 .method public hasNext()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/StandardTable$Row$1;->val$iterator:Ljava/util/Iterator;
 
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
@@ -101,10 +103,12 @@
 .method public remove()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/StandardTable$Row$1;->val$iterator:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->remove()V
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/StandardTable$Row$1;->this$1:Lcom/google/common/collect/StandardTable$Row;
 
     invoke-virtual {p0}, Lcom/google/common/collect/StandardTable$Row;->maintainEmptyInvariant()V

@@ -25,8 +25,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;-><init>()V
 
+    .line 2
     invoke-static {p1, p2}, Lcom/xiaomi/milab/videosdk/XmsAnimProperties;->nativeCreateAnimationProperties(D)J
 
     move-result-wide p1
@@ -221,6 +223,7 @@
         }
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     invoke-static {v0, v1, p1, p2, p3}, Lcom/xiaomi/milab/videosdk/XmsAnimProperties;->nativeAnimGetDouble(JLjava/lang/String;II)D
@@ -245,6 +248,7 @@
         }
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     invoke-static {v0, v1, p1, p2, p3}, Lcom/xiaomi/milab/videosdk/XmsAnimProperties;->nativeAnimGetInt(JLjava/lang/String;II)I
@@ -265,6 +269,7 @@
         }
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     invoke-static {v0, v1, p1}, Lcom/xiaomi/milab/videosdk/XmsAnimProperties;->nativeGetDouble(JLjava/lang/String;)D
@@ -285,6 +290,7 @@
         }
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     invoke-static {v0, v1, p1}, Lcom/xiaomi/milab/videosdk/XmsAnimProperties;->nativeGetInt(JLjava/lang/String;)I
@@ -305,6 +311,7 @@
         }
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     invoke-static {v0, v1, p1}, Lcom/xiaomi/milab/videosdk/XmsAnimProperties;->nativeGetInt64(JLjava/lang/String;)J
@@ -325,6 +332,7 @@
         }
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     invoke-static {v0, v1, p1}, Lcom/xiaomi/milab/videosdk/XmsAnimProperties;->nativeGetString(JLjava/lang/String;)Ljava/lang/String;
@@ -337,6 +345,7 @@
 .method public release()V
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     invoke-static {v0, v1}, Lcom/xiaomi/milab/videosdk/XmsAnimProperties;->nativeReleaseAnimationProperties(J)V
@@ -357,6 +366,7 @@
         }
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     invoke-static {v0, v1, p1, p2, p3}, Lcom/xiaomi/milab/videosdk/XmsAnimProperties;->nativeSetDouble(JLjava/lang/String;D)V
@@ -377,6 +387,7 @@
         }
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     invoke-static {v0, v1, p1, p2}, Lcom/xiaomi/milab/videosdk/XmsAnimProperties;->nativeSetInt(JLjava/lang/String;I)V
@@ -397,6 +408,7 @@
         }
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     invoke-static {v0, v1, p1, p2, p3}, Lcom/xiaomi/milab/videosdk/XmsAnimProperties;->nativeSetInt64(JLjava/lang/String;J)V
@@ -421,6 +433,7 @@
 
     return-void
 
+    .line 1
     :cond_0
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 

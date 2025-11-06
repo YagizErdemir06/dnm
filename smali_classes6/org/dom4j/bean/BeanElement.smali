@@ -6,7 +6,7 @@
 # static fields
 .field private static final DOCUMENT_FACTORY:Lorg/dom4j/DocumentFactory;
 
-.field static synthetic class$org$dom4j$bean$BeanElement:Ljava/lang/Class;
+.field public static synthetic class$org$dom4j$bean$BeanElement:Ljava/lang/Class;
 
 
 # instance fields
@@ -17,6 +17,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     invoke-static {}, Lorg/dom4j/bean/BeanDocumentFactory;->getInstance()Lorg/dom4j/DocumentFactory;
 
     move-result-object v0
@@ -80,6 +81,7 @@
 .method public static synthetic class$(Ljava/lang/String;)Ljava/lang/Class;
     .locals 1
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -94,7 +96,7 @@
 
     new-instance v0, Ljava/lang/NoClassDefFoundError;
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/ClassNotFoundException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
 
@@ -194,6 +196,7 @@
 .method public getBeanAttributeList()Lorg/dom4j/bean/BeanAttributeList;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/DefaultElement;->attributeList()Ljava/util/List;
 
     move-result-object p0
@@ -206,6 +209,7 @@
 .method public getData()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/bean/BeanElement;->bean:Ljava/lang/Object;
 
     return-object p0
@@ -214,6 +218,7 @@
 .method public getDocumentFactory()Lorg/dom4j/DocumentFactory;
     .locals 0
 
+    .line 1
     sget-object p0, Lorg/dom4j/bean/BeanElement;->DOCUMENT_FACTORY:Lorg/dom4j/DocumentFactory;
 
     return-object p0
@@ -338,10 +343,12 @@
 .method public setData(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/bean/BeanElement;->bean:Ljava/lang/Object;
 
     const/4 p1, 0x0
 
+    .line 2
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/DefaultElement;->setAttributeList(Ljava/util/List;)V
 
     return-void

@@ -80,6 +80,7 @@
 .method public bytesLeft()I
     .locals 1
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->limit:I
 
     iget p0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
@@ -92,6 +93,7 @@
 .method public capacity()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->data:[B
 
     array-length p0, p0
@@ -102,12 +104,14 @@
 .method public ensureCapacity(I)V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->capacity()I
 
     move-result v0
 
     if-le p1, v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->data:[B
 
     invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([BI)[B
@@ -123,6 +127,7 @@
 .method public getData()[B
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->data:[B
 
     return-object p0
@@ -131,6 +136,7 @@
 .method public getPosition()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     return p0
@@ -139,6 +145,7 @@
 .method public limit()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->limit:I
 
     return p0
@@ -147,6 +154,7 @@
 .method public peekChar()C
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget p0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
@@ -173,6 +181,7 @@
 .method public peekUnsignedByte()I
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget p0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
@@ -245,6 +254,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
     move-result v0
@@ -255,9 +265,11 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     iget v0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
+    .line 3
     :goto_0
     iget v1, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->limit:I
 
@@ -273,6 +285,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     iget-object p1, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->data:[B
 
@@ -284,14 +297,17 @@
 
     move-result-object p1
 
+    .line 5
     iput v0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
+    .line 6
     iget v1, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->limit:I
 
     if-ge v0, v1, :cond_2
 
     add-int/lit8 v0, v0, 0x1
 
+    .line 7
     iput v0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     :cond_2
@@ -301,6 +317,7 @@
 .method public readDouble()D
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLong()J
 
     move-result-wide v0
@@ -315,6 +332,7 @@
 .method public readFloat()F
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result p0
@@ -329,11 +347,14 @@
 .method public readInt()I
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     aget-byte v1, v0, v1
 
@@ -342,6 +363,8 @@
     shl-int/lit8 v1, v1, 0x18
 
     add-int/lit8 v3, v2, 0x1
+
+    iput v3, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     aget-byte v2, v0, v2
 
@@ -352,6 +375,8 @@
     or-int/2addr v1, v2
 
     add-int/lit8 v2, v3, 0x1
+
+    iput v2, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     aget-byte v3, v0, v3
 
@@ -377,11 +402,14 @@
 .method public readInt24()I
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     aget-byte v1, v0, v1
 
@@ -392,6 +420,8 @@
     shr-int/lit8 v1, v1, 0x8
 
     add-int/lit8 v3, v2, 0x1
+
+    iput v3, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     aget-byte v2, v0, v2
 
@@ -419,6 +449,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
     move-result v0
@@ -429,9 +460,11 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     iget v0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
+    .line 3
     :goto_0
     iget v1, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->limit:I
 
@@ -451,6 +484,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     iget v1, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
@@ -486,8 +520,10 @@
 
     add-int/2addr v1, v3
 
+    .line 5
     iput v1, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
+    .line 6
     :cond_2
     iget-object v1, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->data:[B
 
@@ -499,14 +535,17 @@
 
     move-result-object v1
 
+    .line 7
     iput v0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
+    .line 8
     iget v2, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->limit:I
 
     if-ne v0, v2, :cond_3
 
     return-object v1
 
+    .line 9
     :cond_3
     iget-object v3, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->data:[B
 
@@ -518,12 +557,14 @@
 
     add-int/lit8 v0, v0, 0x1
 
+    .line 10
     iput v0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     if-ne v0, v2, :cond_4
 
     return-object v1
 
+    .line 11
     :cond_4
     iget v0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
@@ -535,6 +576,7 @@
 
     add-int/lit8 v0, v0, 0x1
 
+    .line 12
     iput v0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     :cond_5
@@ -544,17 +586,22 @@
 .method public readLittleEndianInt()I
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     add-int/lit8 v2, v1, 0x1
 
+    iput v2, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
+
     aget-byte v1, v0, v1
 
     and-int/lit16 v1, v1, 0xff
 
     add-int/lit8 v3, v2, 0x1
+
+    iput v3, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     aget-byte v2, v0, v2
 
@@ -565,6 +612,8 @@
     or-int/2addr v1, v2
 
     add-int/lit8 v2, v3, 0x1
+
+    iput v2, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     aget-byte v3, v0, v3
 
@@ -592,17 +641,22 @@
 .method public readLittleEndianInt24()I
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     add-int/lit8 v2, v1, 0x1
 
+    iput v2, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
+
     aget-byte v1, v0, v1
 
     and-int/lit16 v1, v1, 0xff
 
     add-int/lit8 v3, v2, 0x1
+
+    iput v3, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     aget-byte v2, v0, v2
 
@@ -630,11 +684,14 @@
 .method public readLittleEndianLong()J
     .locals 9
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     aget-byte v1, v0, v1
 
@@ -645,6 +702,8 @@
     and-long/2addr v3, v5
 
     add-int/lit8 v1, v2, 0x1
+
+    iput v1, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     aget-byte v2, v0, v2
 
@@ -660,6 +719,8 @@
 
     add-int/lit8 v4, v1, 0x1
 
+    iput v4, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
+
     aget-byte v1, v0, v1
 
     int-to-long v7, v1
@@ -673,6 +734,8 @@
     or-long v1, v2, v7
 
     add-int/lit8 v3, v4, 0x1
+
+    iput v3, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     aget-byte v4, v0, v4
 
@@ -688,6 +751,8 @@
 
     add-int/lit8 v4, v3, 0x1
 
+    iput v4, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
+
     aget-byte v3, v0, v3
 
     int-to-long v7, v3
@@ -702,6 +767,8 @@
 
     add-int/lit8 v3, v4, 0x1
 
+    iput v3, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
+
     aget-byte v4, v0, v4
 
     int-to-long v7, v4
@@ -715,6 +782,8 @@
     or-long/2addr v1, v7
 
     add-int/lit8 v4, v3, 0x1
+
+    iput v4, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     aget-byte v3, v0, v3
 
@@ -750,11 +819,14 @@
 .method public readLittleEndianShort()S
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     aget-byte v1, v0, v1
 
@@ -780,11 +852,14 @@
 .method public readLittleEndianUnsignedInt()J
     .locals 9
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     aget-byte v1, v0, v1
 
@@ -795,6 +870,8 @@
     and-long/2addr v3, v5
 
     add-int/lit8 v1, v2, 0x1
+
+    iput v1, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     aget-byte v2, v0, v2
 
@@ -809,6 +886,8 @@
     or-long v2, v3, v7
 
     add-int/lit8 v4, v1, 0x1
+
+    iput v4, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     aget-byte v1, v0, v1
 
@@ -844,17 +923,22 @@
 .method public readLittleEndianUnsignedInt24()I
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     add-int/lit8 v2, v1, 0x1
 
+    iput v2, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
+
     aget-byte v1, v0, v1
 
     and-int/lit16 v1, v1, 0xff
 
     add-int/lit8 v3, v2, 0x1
+
+    iput v3, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     aget-byte v2, v0, v2
 
@@ -882,6 +966,7 @@
 .method public readLittleEndianUnsignedIntToInt()I
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLittleEndianInt()I
 
     move-result p0
@@ -890,6 +975,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -915,11 +1001,14 @@
 .method public readLittleEndianUnsignedShort()I
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     aget-byte v1, v0, v1
 
@@ -943,11 +1032,14 @@
 .method public readLong()J
     .locals 9
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     aget-byte v1, v0, v1
 
@@ -963,6 +1055,8 @@
 
     add-int/lit8 v1, v2, 0x1
 
+    iput v1, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
+
     aget-byte v2, v0, v2
 
     int-to-long v7, v2
@@ -976,6 +1070,8 @@
     or-long v2, v3, v7
 
     add-int/lit8 v4, v1, 0x1
+
+    iput v4, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     aget-byte v1, v0, v1
 
@@ -991,6 +1087,8 @@
 
     add-int/lit8 v3, v4, 0x1
 
+    iput v3, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
+
     aget-byte v4, v0, v4
 
     int-to-long v7, v4
@@ -1004,6 +1102,8 @@
     or-long/2addr v1, v7
 
     add-int/lit8 v4, v3, 0x1
+
+    iput v4, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     aget-byte v3, v0, v3
 
@@ -1019,6 +1119,8 @@
 
     add-int/lit8 v3, v4, 0x1
 
+    iput v3, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
+
     aget-byte v4, v0, v4
 
     int-to-long v7, v4
@@ -1032,6 +1134,8 @@
     or-long/2addr v1, v7
 
     add-int/lit8 v4, v3, 0x1
+
+    iput v4, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     aget-byte v3, v0, v3
 
@@ -1131,11 +1235,14 @@
 .method public readShort()S
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     aget-byte v1, v0, v1
 
@@ -1196,18 +1303,22 @@
 .method public readSynchSafeInt()I
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v1
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v2
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result p0
@@ -1230,6 +1341,7 @@
 .method public readUnsignedByte()I
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
@@ -1248,11 +1360,14 @@
 .method public readUnsignedFixedPoint1616()I
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     aget-byte v1, v0, v1
 
@@ -1262,6 +1377,8 @@
 
     add-int/lit8 v3, v2, 0x1
 
+    iput v3, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
+
     aget-byte v0, v0, v2
 
     and-int/lit16 v0, v0, 0xff
@@ -1270,6 +1387,7 @@
 
     add-int/lit8 v3, v3, 0x2
 
+    .line 2
     iput v3, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     return v0
@@ -1278,11 +1396,14 @@
 .method public readUnsignedInt()J
     .locals 9
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     aget-byte v1, v0, v1
 
@@ -1298,6 +1419,8 @@
 
     add-int/lit8 v1, v2, 0x1
 
+    iput v1, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
+
     aget-byte v2, v0, v2
 
     int-to-long v7, v2
@@ -1311,6 +1434,8 @@
     or-long v2, v3, v7
 
     add-int/lit8 v4, v1, 0x1
+
+    iput v4, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     aget-byte v1, v0, v1
 
@@ -1342,11 +1467,14 @@
 .method public readUnsignedInt24()I
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     aget-byte v1, v0, v1
 
@@ -1355,6 +1483,8 @@
     shl-int/lit8 v1, v1, 0x10
 
     add-int/lit8 v3, v2, 0x1
+
+    iput v3, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     aget-byte v2, v0, v2
 
@@ -1380,6 +1510,7 @@
 .method public readUnsignedIntToInt()I
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result p0
@@ -1388,6 +1519,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -1413,6 +1545,7 @@
 .method public readUnsignedLongToLong()J
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLong()J
 
     move-result-wide v0
@@ -1425,6 +1558,7 @@
 
     return-wide v0
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -1450,11 +1584,14 @@
 .method public readUnsignedShort()I
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     aget-byte v1, v0, v1
 
@@ -1478,6 +1615,7 @@
 .method public readUtf8EncodedLong()J
     .locals 11
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
@@ -1542,6 +1680,7 @@
     :goto_2
     if-ge v5, v2, :cond_4
 
+    .line 2
     iget-object v3, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v6, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
@@ -1568,6 +1707,7 @@
 
     goto :goto_2
 
+    .line 3
     :cond_3
     new-instance p0, Ljava/lang/NumberFormatException;
 
@@ -1589,6 +1729,7 @@
 
     throw p0
 
+    .line 4
     :cond_4
     iget v3, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
@@ -1598,6 +1739,7 @@
 
     return-wide v0
 
+    .line 5
     :cond_5
     new-instance p0, Ljava/lang/NumberFormatException;
 
@@ -1676,6 +1818,7 @@
 
     if-ltz p1, :cond_0
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->data:[B
 
     array-length v0, v0
@@ -1692,6 +1835,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->limit:I
 
     return-void
@@ -1702,6 +1846,7 @@
 
     if-ltz p1, :cond_0
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->limit:I
 
     if-gt p1, v0, :cond_0
@@ -1716,6 +1861,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     return-void
@@ -1724,6 +1870,7 @@
 .method public skipBytes(I)V
     .locals 1
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/util/ParsableByteArray;->position:I
 
     add-int/2addr v0, p1

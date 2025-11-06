@@ -1,4 +1,4 @@
-.class final Lcom/bumptech/glide/disklrucache/DiskLruCache$DiskLruCacheThreadFactory;
+.class public final Lcom/bumptech/glide/disklrucache/DiskLruCache$DiskLruCacheThreadFactory;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -43,6 +43,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     new-instance v0, Ljava/lang/Thread;
 
@@ -52,10 +53,12 @@
 
     const/4 p1, 0x1
 
+    .line 2
     invoke-virtual {v0, p1}, Ljava/lang/Thread;->setPriority(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     monitor-exit p0
 
     return-object v0

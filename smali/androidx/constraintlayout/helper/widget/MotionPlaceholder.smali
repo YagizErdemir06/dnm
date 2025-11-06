@@ -8,7 +8,7 @@
 
 
 # instance fields
-.field mPlaceholder:Landroidx/constraintlayout/core/widgets/Placeholder;
+.field public mPlaceholder:Landroidx/constraintlayout/core/widgets/Placeholder;
 
 
 # direct methods
@@ -105,14 +105,17 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroidx/constraintlayout/widget/VirtualLayout;->init(Landroid/util/AttributeSet;)V
 
+    .line 2
     new-instance p1, Landroidx/constraintlayout/core/widgets/Placeholder;
 
     invoke-direct {p1}, Landroidx/constraintlayout/core/widgets/Placeholder;-><init>()V
 
     iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintHelper;->mHelperWidget:Landroidx/constraintlayout/core/widgets/Helper;
 
+    .line 3
     invoke-virtual {p0}, Landroidx/constraintlayout/widget/ConstraintHelper;->validateParams()V
 
     return-void

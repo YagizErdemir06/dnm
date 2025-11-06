@@ -1,4 +1,4 @@
-.class final Lcom/google/common/base/CharMatcher$Is;
+.class public final Lcom/google/common/base/CharMatcher$Is;
 .super Lcom/google/common/base/CharMatcher$FastMatcher;
 .source "SourceFile"
 
@@ -22,8 +22,10 @@
 .method public constructor <init>(C)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/base/CharMatcher$FastMatcher;-><init>()V
 
+    .line 2
     iput-char p1, p0, Lcom/google/common/base/CharMatcher$Is;->match:C
 
     return-void
@@ -34,6 +36,7 @@
 .method public and(Lcom/google/common/base/CharMatcher;)Lcom/google/common/base/CharMatcher;
     .locals 1
 
+    .line 1
     iget-char v0, p0, Lcom/google/common/base/CharMatcher$Is;->match:C
 
     invoke-virtual {p1, v0}, Lcom/google/common/base/CharMatcher;->matches(C)Z
@@ -56,6 +59,7 @@
 .method public matches(C)Z
     .locals 0
 
+    .line 1
     iget-char p0, p0, Lcom/google/common/base/CharMatcher$Is;->match:C
 
     if-ne p1, p0, :cond_0
@@ -74,6 +78,7 @@
 .method public negate()Lcom/google/common/base/CharMatcher;
     .locals 0
 
+    .line 1
     iget-char p0, p0, Lcom/google/common/base/CharMatcher$Is;->match:C
 
     invoke-static {p0}, Lcom/google/common/base/CharMatcher;->isNot(C)Lcom/google/common/base/CharMatcher;
@@ -86,6 +91,7 @@
 .method public or(Lcom/google/common/base/CharMatcher;)Lcom/google/common/base/CharMatcher;
     .locals 1
 
+    .line 1
     iget-char v0, p0, Lcom/google/common/base/CharMatcher$Is;->match:C
 
     invoke-virtual {p1, v0}, Lcom/google/common/base/CharMatcher;->matches(C)Z
@@ -108,6 +114,7 @@
 .method public replaceFrom(Ljava/lang/CharSequence;C)Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -126,6 +133,7 @@
     .annotation build Lcom/google/common/annotations/GwtIncompatible;
     .end annotation
 
+    .line 1
     iget-char p0, p0, Lcom/google/common/base/CharMatcher$Is;->match:C
 
     invoke-virtual {p1, p0}, Ljava/util/BitSet;->set(I)V
@@ -136,6 +144,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-char p0, p0, Lcom/google/common/base/CharMatcher$Is;->match:C
 
     invoke-static {p0}, Lcom/google/common/base/CharMatcher;->access$100(C)Ljava/lang/String;

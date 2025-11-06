@@ -1,9 +1,9 @@
-.class Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;
+.class public Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Luf/s;
+.implements Ld/o/f/r/i/u0;
 
 
 # annotations
@@ -18,13 +18,22 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
+.field public final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -32,21 +41,22 @@
     return-void
 .end method
 
-.method public static synthetic a(Ljava/lang/String;Ljava/lang/String;Lv8/t0;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->lambda$onExtendMsg$0(Ljava/lang/String;Ljava/lang/String;Lv8/t0;)V
-
-    return-void
-.end method
-
-.method private handleConnectivityStateChanged(Lm3/c;)V
+.method private handleConnectivityStateChanged(Ld/d/a/o6/c/c;)V
     .locals 3
-    .param p1    # Lm3/c;
+    .param p1    # Ld/d/a/o6/c/c;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "device"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -59,7 +69,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p1, Lm3/c;->d:Ljava/lang/String;
+    iget-object v2, p1, Ld/d/a/o6/c/c;->f:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -67,8 +77,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lbg/a;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Ld/o/f/r/m/a;->b(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$300(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Lcom/android/camera/ActivityBase;
@@ -89,30 +100,33 @@
 
     if-eqz p0, :cond_0
 
+    .line 3
+    const-class v0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizardFragment;
+
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v0
+    move-result-object v1
 
-    const-class v1, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizardFragment;
-
-    invoke-virtual {v1, v0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 4
     check-cast p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizardFragment;
 
-    invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizardFragment;->onConnectivityStateChanged(Lm3/c;)V
+    invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizardFragment;->onConnectivityStateChanged(Ld/d/a/o6/c/c;)V
 
     :cond_0
     return-void
 .end method
 
-.method private static synthetic lambda$onExtendMsg$0(Ljava/lang/String;Ljava/lang/String;Lv8/t0;)V
+.method public static synthetic lambda$onExtendMsg$0(Ljava/lang/String;Ljava/lang/String;Ld/d/a/m7/g/w0;)V
     .locals 0
 
-    invoke-interface {p2, p0, p1}, Lv8/t0;->onExtendMsgFromRemoteReceived(Ljava/lang/String;Ljava/lang/String;)V
+    .line 1
+    invoke-interface {p2, p0, p1}, Ld/d/a/m7/g/w0;->onExtendMsgFromRemoteReceived(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -121,7 +135,16 @@
 # virtual methods
 .method public onChannelClose(Z)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isServer"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -140,30 +163,33 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lbg/a;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Ld/o/f/r/m/a;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p1, :cond_1
 
+    .line 2
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
-    invoke-static {p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$400(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Luf/t0;
+    invoke-static {p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$400(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Ld/o/f/r/i/x0;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Luf/t0;->I()Z
+    invoke-virtual {p1}, Ld/o/f/r/i/x0;->o()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
+    .line 3
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
-    invoke-static {p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$400(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Luf/t0;
+    invoke-static {p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$400(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Ld/o/f/r/i/x0;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Luf/t0;->z()V
+    invoke-virtual {p1}, Ld/o/f/r/i/x0;->f()V
 
+    .line 4
     :cond_0
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
@@ -171,6 +197,7 @@
 
     invoke-virtual {p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->stopTimer(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;)V
 
+    .line 5
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-static {p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$100(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$ICallBack;
@@ -179,6 +206,7 @@
 
     if-eqz p1, :cond_4
 
+    .line 6
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$100(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$ICallBack;
@@ -189,6 +217,7 @@
 
     goto :goto_1
 
+    .line 7
     :cond_1
     invoke-static {}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$000()Ljava/lang/String;
 
@@ -224,6 +253,7 @@
 
     invoke-static {p1, v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 8
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-static {p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$500(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -236,18 +266,20 @@
 
     if-nez p1, :cond_3
 
+    .line 9
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
-    invoke-static {p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$400(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Luf/t0;
+    invoke-static {p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$400(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Ld/o/f/r/i/x0;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Luf/t0;->H()Z
+    invoke-virtual {p1}, Ld/o/f/r/i/x0;->n()Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
+    .line 10
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-static {p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$100(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$ICallBack;
@@ -256,6 +288,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 11
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-static {p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$100(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$ICallBack;
@@ -266,6 +299,7 @@
 
     goto :goto_0
 
+    .line 12
     :cond_2
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
@@ -273,7 +307,7 @@
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->getRemoteDeviceById(I)Lm3/c;
+    invoke-virtual {p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->getRemoteDeviceById(I)Ld/d/a/o6/c/c;
 
     move-result-object p1
 
@@ -281,16 +315,20 @@
 
     const/4 v0, 0x4
 
-    iput v0, p1, Lm3/c;->i:I
+    .line 13
+    iput v0, p1, Ld/d/a/o6/c/c;->k:I
 
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->handleConnectivityStateChanged(Lm3/c;)V
+    .line 14
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->handleConnectivityStateChanged(Ld/d/a/o6/c/c;)V
 
+    .line 15
     :cond_3
     :goto_0
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-virtual {p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->stopFriendShotService()V
 
+    .line 16
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$500(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -304,9 +342,22 @@
     return-void
 .end method
 
-.method public onChannelError(Luf/x;ZLjava/lang/String;)V
+.method public onChannelError(Ld/o/f/r/i/w0;ZLjava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "socketError",
+            "isServer",
+            "description"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$000()Ljava/lang/String;
 
     move-result-object p1
@@ -325,7 +376,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p3}, Lbg/a;->h(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p3}, Ld/o/f/r/m/a;->h(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -335,10 +386,11 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lbg/a;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Ld/o/f/r/m/a;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p2, :cond_0
 
+    .line 2
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-static {p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$100(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$ICallBack;
@@ -347,6 +399,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 3
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$100(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$ICallBack;
@@ -355,23 +408,23 @@
 
     new-instance p1, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeError;
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    const/4 p2, 0x2
 
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v0, "onChannelError:"
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, "onChannelError:"
 
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p2
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const/4 p3, 0x2
+    move-result-object p3
 
-    invoke-direct {p1, p3, p2}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeError;-><init>(ILjava/lang/String;)V
+    invoke-direct {p1, p2, p3}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeError;-><init>(ILjava/lang/String;)V
 
     invoke-interface {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$ICallBack;->onStartError(Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeError;)V
 
@@ -381,13 +434,23 @@
 
 .method public onClientCancel(Ljava/lang/String;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "ip"
+        }
+    .end annotation
 
+    .line 1
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     sget-object v0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;->TIMER_TYPE_CANCEL_CONNECTION:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;
 
     invoke-virtual {p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->stopTimer(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;)V
 
+    .line 2
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-static {p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$100(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$ICallBack;
@@ -396,6 +459,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 3
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$100(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$ICallBack;
@@ -410,7 +474,16 @@
 
 .method public onClientConnected(Ljava/lang/String;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "ip"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -423,7 +496,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p1}, Lbg/a;->h(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p1}, Ld/o/f/r/m/a;->h(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -433,15 +506,16 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lbg/a;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Ld/o/f/r/m/a;->b(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 2
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-virtual {p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->getSelectedRemoteDeviceId()I
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->getRemoteDeviceById(I)Lm3/c;
+    invoke-virtual {p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->getRemoteDeviceById(I)Ld/d/a/o6/c/c;
 
     move-result-object p1
 
@@ -449,8 +523,10 @@
 
     const/4 v0, 0x1
 
-    iput v0, p1, Lm3/c;->i:I
+    .line 3
+    iput v0, p1, Ld/d/a/o6/c/c;->k:I
 
+    .line 4
     invoke-static {}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -463,7 +539,8 @@
 
     invoke-static {v0, v2, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->handleConnectivityStateChanged(Lm3/c;)V
+    .line 5
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->handleConnectivityStateChanged(Ld/d/a/o6/c/c;)V
 
     :cond_0
     return-void
@@ -477,23 +554,34 @@
 
 .method public onClientInvite(Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "ip"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$000()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "onClientInvite"
 
-    invoke-static {v0, v1}, Lbg/a;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Ld/o/f/r/m/a;->b(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
-    invoke-static {v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$400(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Luf/t0;
+    invoke-static {v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$400(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Ld/o/f/r/i/x0;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Luf/t0;->j0()V
+    invoke-virtual {v0}, Ld/o/f/r/i/x0;->g0()V
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-static {v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$100(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$ICallBack;
@@ -502,12 +590,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 4
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-static {v0, p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$600(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 5
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$100(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$ICallBack;
@@ -522,49 +612,85 @@
 
 .method public onClientLeave(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "ip"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public onClientRejectAck(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "ip"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public onClientStreamState(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "pause"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public onConnected(Z)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "server"
+        }
+    .end annotation
 
     if-eqz p1, :cond_0
 
+    .line 1
     invoke-static {}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$000()Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "onConnected: server"
 
-    invoke-static {p1, v0}, Lbg/a;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Ld/o/f/r/m/a;->b(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 2
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
-    invoke-static {p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$400(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Luf/t0;
+    invoke-static {p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$400(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Ld/o/f/r/i/x0;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Luf/t0;->j0()V
+    invoke-virtual {p1}, Ld/o/f/r/i/x0;->g0()V
 
+    .line 3
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     sget-object v0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;->TIMER_TYPE_RESET_CONNECTION:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;
 
     invoke-virtual {p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->startTimer(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;)V
 
+    .line 4
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-static {p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$100(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$ICallBack;
@@ -573,22 +699,25 @@
 
     if-eqz p1, :cond_0
 
+    .line 5
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
-    invoke-static {p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$400(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Luf/t0;
+    invoke-static {p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$400(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Ld/o/f/r/i/x0;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Luf/t0;->G()Ljava/lang/String;
+    invoke-virtual {p1}, Ld/o/f/r/i/x0;->m()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 6
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-static {v0, p1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$600(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 7
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$100(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$ICallBack;
@@ -603,7 +732,18 @@
 
 .method public onExtendMsg(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "ip",
+            "msg"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$000()Ljava/lang/String;
 
     move-result-object p0
@@ -628,13 +768,14 @@
 
     invoke-static {p0, v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {}, Lv8/t0;->impl()Ljava/util/Optional;
+    .line 2
+    invoke-static {}, Ld/d/a/m7/g/w0;->impl()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/b;
+    new-instance v0, Ld/d/b/x5/a/b/b/j/a0/b;
 
-    invoke-direct {v0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/b;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, p1, p2}, Ld/d/b/x5/a/b/b/j/a0/b;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p0, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -643,13 +784,30 @@
 
 .method public onFriendReady(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "ip"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public onServerAcceptInvite(Ljava/lang/String;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "ip"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -662,7 +820,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p1}, Lbg/a;->h(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p1}, Ld/o/f/r/m/a;->h(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -672,14 +830,16 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lbg/a;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Ld/o/f/r/m/a;->b(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     sget-object v1, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;->TIMER_TYPE_CANCEL_CONNECTION:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;
 
     invoke-virtual {v0, v1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->stopTimer(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;)V
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-static {v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$200(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Ljava/util/Map;
@@ -705,11 +865,12 @@
 
     move-result-object v1
 
-    check-cast v1, Lm3/c;
+    check-cast v1, Ld/d/a/o6/c/c;
 
     if-eqz v1, :cond_0
 
-    iget-object v2, v1, Lm3/c;->e:Ljava/lang/String;
+    .line 4
+    iget-object v2, v1, Ld/d/a/o6/c/c;->g:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -727,10 +888,13 @@
 
     const/4 v0, 0x2
 
-    iput v0, v1, Lm3/c;->i:I
+    .line 5
+    iput v0, v1, Ld/d/a/o6/c/c;->k:I
 
-    invoke-direct {p0, v1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->handleConnectivityStateChanged(Lm3/c;)V
+    .line 6
+    invoke-direct {p0, v1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->handleConnectivityStateChanged(Ld/d/a/o6/c/c;)V
 
+    .line 7
     :cond_2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
@@ -740,6 +904,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 8
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$100(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$ICallBack;
@@ -755,6 +920,7 @@
 .method public onServerHeartBeatAck()V
     .locals 2
 
+    .line 1
     invoke-static {}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$000()Ljava/lang/String;
 
     move-result-object p0
@@ -772,7 +938,16 @@
 
 .method public onServerRejectInvite(Ljava/lang/String;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "ip"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -785,7 +960,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p1}, Lbg/a;->h(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p1}, Ld/o/f/r/m/a;->h(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -795,18 +970,21 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lbg/a;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Ld/o/f/r/m/a;->b(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     sget-object v1, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;->TIMER_TYPE_CANCEL_CONNECTION:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;
 
     invoke-virtual {v0, v1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->stopTimer(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;)V
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->sendRejectAck()V
 
+    .line 4
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-static {v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$200(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Ljava/util/Map;
@@ -832,11 +1010,12 @@
 
     move-result-object v1
 
-    check-cast v1, Lm3/c;
+    check-cast v1, Ld/d/a/o6/c/c;
 
     if-eqz v1, :cond_0
 
-    iget-object v2, v1, Lm3/c;->e:Ljava/lang/String;
+    .line 5
+    iget-object v2, v1, Ld/d/a/o6/c/c;->g:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -854,9 +1033,11 @@
 
     const/4 p1, 0x4
 
-    iput p1, v1, Lm3/c;->i:I
+    .line 6
+    iput p1, v1, Ld/d/a/o6/c/c;->k:I
 
-    invoke-direct {p0, v1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->handleConnectivityStateChanged(Lm3/c;)V
+    .line 7
+    invoke-direct {p0, v1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->handleConnectivityStateChanged(Ld/d/a/o6/c/c;)V
 
     :cond_2
     return-void
@@ -865,18 +1046,22 @@
 .method public onServerTimeOut()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->stopFriendShotService()V
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->stopTcpChannel()V
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->release()V
 
+    .line 4
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-static {v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$100(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$ICallBack;
@@ -885,6 +1070,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 5
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$100(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$ICallBack;
@@ -898,14 +1084,26 @@
 
     const-string v0, "tips_signal_lost"
 
-    invoke-static {p0, v0}, Lk9/a;->m1(Ljava/lang/String;Ljava/lang/String;)V
+    .line 6
+    invoke-static {p0, v0}, Ld/d/a/v7/f;->i1(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method public onStreamStart(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "ip",
+            "jsonStr"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -918,7 +1116,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p1}, Lbg/a;->h(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p1}, Ld/o/f/r/m/a;->h(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -930,14 +1128,16 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lbg/a;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Ld/o/f/r/m/a;->b(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     sget-object v1, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;->TIMER_TYPE_CONNECT_ACK:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;
 
     invoke-virtual {v0, v1}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->stopTimer(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$Timer;)V
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-static {v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$100(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$ICallBack;
@@ -946,10 +1146,12 @@
 
     if-eqz v0, :cond_0
 
+    .line 4
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-virtual {v0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->stopFriendShotService()V
 
+    .line 5
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;
 
     invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;->access$100(Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard;)Lcom/android/camera2/compat/theme/custom/mm/friend/wizad/FriendWizard$ICallBack;

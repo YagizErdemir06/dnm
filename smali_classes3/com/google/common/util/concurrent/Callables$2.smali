@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/Callables$2;
+.class public Lcom/google/common/util/concurrent/Callables$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,15 +26,16 @@
 
 
 # instance fields
-.field final synthetic val$callable:Ljava/util/concurrent/Callable;
+.field public final synthetic val$callable:Ljava/util/concurrent/Callable;
 
-.field final synthetic val$listeningExecutorService:Lcom/google/common/util/concurrent/ListeningExecutorService;
+.field public final synthetic val$listeningExecutorService:Lcom/google/common/util/concurrent/ListeningExecutorService;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/util/concurrent/ListeningExecutorService;Ljava/util/concurrent/Callable;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/Callables$2;->val$listeningExecutorService:Lcom/google/common/util/concurrent/ListeningExecutorService;
 
     iput-object p2, p0, Lcom/google/common/util/concurrent/Callables$2;->val$callable:Ljava/util/concurrent/Callable;
@@ -62,6 +63,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/util/concurrent/Callables$2;->val$listeningExecutorService:Lcom/google/common/util/concurrent/ListeningExecutorService;
 
     iget-object p0, p0, Lcom/google/common/util/concurrent/Callables$2;->val$callable:Ljava/util/concurrent/Callable;

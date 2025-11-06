@@ -13,84 +13,22 @@
     name = "InterpolateEaseStyle"
 .end annotation
 
-.annotation runtime Ljava/lang/Deprecated;
-.end annotation
-
 
 # instance fields
 .field public duration:J
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 4
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    const/4 v0, 0x1
-
-    new-array v0, v0, [D
-
-    const/4 v1, 0x0
-
-    const-wide/16 v2, 0x0
-
-    aput-wide v2, v0, v1
-
-    .line 1
-    invoke-direct {p0, p1, v0}, Lmiuix/animation/utils/EaseManager$EaseStyle;-><init>(I[D)V
-
-    const-wide/16 v0, 0x12c
-
-    .line 2
-    iput-wide v0, p0, Lmiuix/animation/utils/EaseManager$InterpolateEaseStyle;->duration:J
-
-    const/4 p1, 0x0
-
-    .line 3
-    iput-object p1, p0, Lmiuix/animation/utils/EaseManager$EaseStyle;->parameters:[D
-
-    return-void
-.end method
-
-.method public varargs constructor <init>(I[D)V
-    .locals 0
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .line 7
-    invoke-direct {p0, p1, p2}, Lmiuix/animation/utils/EaseManager$EaseStyle;-><init>(I[D)V
-
-    const-wide/16 p1, 0x12c
-
-    .line 8
-    iput-wide p1, p0, Lmiuix/animation/utils/EaseManager$InterpolateEaseStyle;->duration:J
-
-    const/4 p1, 0x0
-
-    .line 9
-    iput-object p1, p0, Lmiuix/animation/utils/EaseManager$EaseStyle;->parameters:[D
-
-    return-void
-.end method
-
 .method public varargs constructor <init>(I[F)V
     .locals 0
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
 
-    .line 4
+    .line 1
     invoke-direct {p0, p1, p2}, Lmiuix/animation/utils/EaseManager$EaseStyle;-><init>(I[F)V
 
     const-wide/16 p1, 0x12c
 
-    .line 5
+    .line 2
     iput-wide p1, p0, Lmiuix/animation/utils/EaseManager$InterpolateEaseStyle;->duration:J
-
-    const/4 p1, 0x0
-
-    .line 6
-    iput-object p1, p0, Lmiuix/animation/utils/EaseManager$EaseStyle;->parameters:[D
 
     return-void
 .end method
@@ -100,6 +38,7 @@
 .method public setDuration(J)Lmiuix/animation/utils/EaseManager$InterpolateEaseStyle;
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lmiuix/animation/utils/EaseManager$InterpolateEaseStyle;->duration:J
 
     return-object p0
@@ -108,11 +47,12 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "Interpolate{style="
+    const-string v1, "InterpolateEaseStyle{style="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -132,9 +72,10 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lmiuix/animation/utils/EaseManager$EaseStyle;->factors:[D
+    iget-object p0, p0, Lmiuix/animation/utils/EaseManager$EaseStyle;->factors:[F
 
-    invoke-static {p0}, Ljava/util/Arrays;->toString([D)Ljava/lang/String;
+    .line 2
+    invoke-static {p0}, Ljava/util/Arrays;->toString([F)Ljava/lang/String;
 
     move-result-object p0
 

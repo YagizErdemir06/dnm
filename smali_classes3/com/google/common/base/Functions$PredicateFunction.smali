@@ -1,4 +1,4 @@
-.class Lcom/google/common/base/Functions$PredicateFunction;
+.class public Lcom/google/common/base/Functions$PredicateFunction;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -133,12 +133,15 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/common/base/Functions$PredicateFunction;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/common/base/Functions$PredicateFunction;
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/base/Functions$PredicateFunction;->predicate:Lcom/google/common/base/Predicate;
 
     iget-object p1, p1, Lcom/google/common/base/Functions$PredicateFunction;->predicate:Lcom/google/common/base/Predicate;
@@ -158,6 +161,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/Functions$PredicateFunction;->predicate:Lcom/google/common/base/Predicate;
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
@@ -170,6 +174,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/Functions$PredicateFunction;->predicate:Lcom/google/common/base/Predicate;
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

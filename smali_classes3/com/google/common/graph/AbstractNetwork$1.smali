@@ -1,4 +1,4 @@
-.class Lcom/google/common/graph/AbstractNetwork$1;
+.class public Lcom/google/common/graph/AbstractNetwork$1;
 .super Lcom/google/common/graph/AbstractGraph;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/graph/AbstractNetwork;
+.field public final synthetic this$0:Lcom/google/common/graph/AbstractNetwork;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/graph/AbstractNetwork;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/graph/AbstractNetwork$1;->this$0:Lcom/google/common/graph/AbstractNetwork;
 
     invoke-direct {p0}, Lcom/google/common/graph/AbstractGraph;-><init>()V
@@ -48,6 +49,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/AbstractNetwork$1;->this$0:Lcom/google/common/graph/AbstractNetwork;
 
     invoke-interface {p0, p1}, Lcom/google/common/graph/Network;->adjacentNodes(Ljava/lang/Object;)Ljava/util/Set;
@@ -60,6 +62,7 @@
 .method public allowsSelfLoops()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/AbstractNetwork$1;->this$0:Lcom/google/common/graph/AbstractNetwork;
 
     invoke-interface {p0}, Lcom/google/common/graph/Network;->allowsSelfLoops()Z
@@ -80,6 +83,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/graph/AbstractNetwork$1;->this$0:Lcom/google/common/graph/AbstractNetwork;
 
     invoke-interface {v0}, Lcom/google/common/graph/Network;->allowsParallelEdges()Z
@@ -88,12 +92,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-super {p0}, Lcom/google/common/graph/AbstractGraph;->edges()Ljava/util/Set;
 
     move-result-object p0
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance v0, Lcom/google/common/graph/AbstractNetwork$1$1;
 
@@ -112,6 +118,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/graph/ElementOrder;->unordered()Lcom/google/common/graph/ElementOrder;
 
     move-result-object p0
@@ -122,6 +129,7 @@
 .method public isDirected()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/AbstractNetwork$1;->this$0:Lcom/google/common/graph/AbstractNetwork;
 
     invoke-interface {p0}, Lcom/google/common/graph/Network;->isDirected()Z
@@ -141,6 +149,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/AbstractNetwork$1;->this$0:Lcom/google/common/graph/AbstractNetwork;
 
     invoke-interface {p0}, Lcom/google/common/graph/Network;->nodeOrder()Lcom/google/common/graph/ElementOrder;
@@ -160,6 +169,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/AbstractNetwork$1;->this$0:Lcom/google/common/graph/AbstractNetwork;
 
     invoke-interface {p0}, Lcom/google/common/graph/Network;->nodes()Ljava/util/Set;

@@ -1,4 +1,4 @@
-.class Landroidx/core/content/LocusIdCompat$Api29Impl;
+.class public Landroidx/core/content/LocusIdCompat$Api29Impl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,6 +37,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     new-instance v0, Landroid/content/LocusId;
 
     invoke-direct {v0, p0}, Landroid/content/LocusId;-><init>(Ljava/lang/String;)V
@@ -52,6 +54,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/content/LocusId;->getId()Ljava/lang/String;
 
     move-result-object p0

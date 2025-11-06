@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Maps$Values;
+.class public Lcom/google/common/collect/Maps$Values;
 .super Ljava/util/AbstractCollection;
 .source "SourceFile"
 
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field final map:Ljava/util/Map;
+.field public final map:Ljava/util/Map;
     .annotation build Lcom/google/j2objc/annotations/Weak;
     .end annotation
 
@@ -51,8 +51,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -69,6 +71,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$Values;->map()Ljava/util/Map;
 
     move-result-object p0
@@ -85,6 +88,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$Values;->map()Ljava/util/Map;
 
     move-result-object p0
@@ -99,6 +103,7 @@
 .method public isEmpty()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$Values;->map()Ljava/util/Map;
 
     move-result-object p0
@@ -120,6 +125,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$Values;->map()Ljava/util/Map;
 
     move-result-object p0
@@ -149,6 +155,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Maps$Values;->map:Ljava/util/Map;
 
     return-object p0
@@ -161,6 +168,7 @@
         .end annotation
     .end param
 
+    .line 1
     :try_start_0
     invoke-super {p0, p1}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
 
@@ -170,6 +178,7 @@
 
     return p0
 
+    .line 2
     :catch_0
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$Values;->map()Ljava/util/Map;
 
@@ -196,6 +205,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
+    .line 3
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
@@ -206,6 +216,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$Values;->map()Ljava/util/Map;
 
     move-result-object p0
@@ -236,6 +247,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -251,11 +263,13 @@
 
     return p0
 
+    .line 2
     :catch_0
     invoke-static {}, Lcom/google/common/collect/Sets;->newHashSet()Ljava/util/HashSet;
 
     move-result-object v0
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$Values;->map()Ljava/util/Map;
 
     move-result-object v1
@@ -282,6 +296,7 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
+    .line 4
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
@@ -292,6 +307,7 @@
 
     if-eqz v3, :cond_0
 
+    .line 5
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -300,6 +316,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$Values;->map()Ljava/util/Map;
 
@@ -326,6 +343,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -341,11 +359,13 @@
 
     return p0
 
+    .line 2
     :catch_0
     invoke-static {}, Lcom/google/common/collect/Sets;->newHashSet()Ljava/util/HashSet;
 
     move-result-object v0
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$Values;->map()Ljava/util/Map;
 
     move-result-object v1
@@ -372,6 +392,7 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
+    .line 4
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
@@ -382,6 +403,7 @@
 
     if-eqz v3, :cond_0
 
+    .line 5
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -390,6 +412,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$Values;->map()Ljava/util/Map;
 
@@ -409,6 +432,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$Values;->map()Ljava/util/Map;
 
     move-result-object p0

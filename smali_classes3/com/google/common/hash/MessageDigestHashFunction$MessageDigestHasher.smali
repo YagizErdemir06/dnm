@@ -1,4 +1,4 @@
-.class final Lcom/google/common/hash/MessageDigestHashFunction$MessageDigestHasher;
+.class public final Lcom/google/common/hash/MessageDigestHashFunction$MessageDigestHasher;
 .super Lcom/google/common/hash/AbstractByteHasher;
 .source "SourceFile"
 
@@ -50,6 +50,7 @@
 .method private checkNotDone()V
     .locals 1
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/common/hash/MessageDigestHashFunction$MessageDigestHasher;->done:Z
 
     xor-int/lit8 p0, p0, 0x1
@@ -66,12 +67,15 @@
 .method public hash()Lcom/google/common/hash/HashCode;
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/hash/MessageDigestHashFunction$MessageDigestHasher;->checkNotDone()V
 
     const/4 v0, 0x1
 
+    .line 2
     iput-boolean v0, p0, Lcom/google/common/hash/MessageDigestHashFunction$MessageDigestHasher;->done:Z
 
+    .line 3
     iget v0, p0, Lcom/google/common/hash/MessageDigestHashFunction$MessageDigestHasher;->bytes:I
 
     iget-object v1, p0, Lcom/google/common/hash/MessageDigestHashFunction$MessageDigestHasher;->digest:Ljava/security/MessageDigest;
@@ -82,6 +86,7 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 4
     iget-object p0, p0, Lcom/google/common/hash/MessageDigestHashFunction$MessageDigestHasher;->digest:Ljava/security/MessageDigest;
 
     invoke-virtual {p0}, Ljava/security/MessageDigest;->digest()[B
@@ -94,6 +99,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     iget-object v0, p0, Lcom/google/common/hash/MessageDigestHashFunction$MessageDigestHasher;->digest:Ljava/security/MessageDigest;
 

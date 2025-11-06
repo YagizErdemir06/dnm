@@ -12,21 +12,22 @@
 
 
 # static fields
-.field protected static final ERROR_EXPIRED:I = 0x4
+.field public static final ERROR_EXPIRED:I = 0x4
 
-.field protected static final ERROR_IO:I = 0x3
+.field public static final ERROR_IO:I = 0x3
 
-.field protected static final ERROR_NET:I = 0x0
+.field public static final ERROR_NET:I = 0x0
 
-.field protected static final ERROR_PARSE:I = 0x2
+.field public static final ERROR_PARSE:I = 0x2
 
-.field protected static final ERROR_SERVER:I = 0x1
+.field public static final ERROR_SERVER:I = 0x1
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

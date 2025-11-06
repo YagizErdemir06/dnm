@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;
+.class public final Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -42,40 +42,51 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
+    .line 2
     iput-wide v0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;->startTimeUs:J
 
+    .line 3
     iput-wide v0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;->endTimeUs:J
 
     const/4 v0, 0x2
 
+    .line 4
     iput v0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;->textAlignment:I
 
     const v0, -0x800001
 
+    .line 5
     iput v0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;->line:F
 
     const/4 v1, 0x1
 
+    .line 6
     iput v1, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;->lineType:I
 
     const/4 v1, 0x0
 
+    .line 7
     iput v1, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;->lineAnchor:I
 
+    .line 8
     iput v0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;->position:F
 
     const/high16 v0, -0x80000000
 
+    .line 9
     iput v0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;->positionAnchor:I
 
     const/high16 v1, 0x3f800000    # 1.0f
 
+    .line 10
     iput v1, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;->size:F
 
+    .line 11
     iput v0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;->verticalType:I
 
     return-void
@@ -146,6 +157,7 @@
 
     if-eq p0, v0, :cond_0
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -168,16 +180,19 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     sget-object p0, Landroid/text/Layout$Alignment;->ALIGN_OPPOSITE:Landroid/text/Layout$Alignment;
 
     return-object p0
 
+    .line 3
     :cond_1
     sget-object p0, Landroid/text/Layout$Alignment;->ALIGN_CENTER:Landroid/text/Layout$Alignment;
 
     return-object p0
 
+    .line 4
     :cond_2
     sget-object p0, Landroid/text/Layout$Alignment;->ALIGN_NORMAL:Landroid/text/Layout$Alignment;
 
@@ -201,6 +216,7 @@
 
     return p1
 
+    .line 1
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -301,6 +317,7 @@
 .method public build()Lcom/google/android/exoplayer2/text/webvtt/WebvttCueInfo;
     .locals 7
 
+    .line 1
     new-instance v6, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueInfo;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;->toCueBuilder()Lcom/google/android/exoplayer2/text/Cue$Builder;
@@ -325,6 +342,7 @@
 .method public toCueBuilder()Lcom/google/android/exoplayer2/text/Cue$Builder;
     .locals 5
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;->position:F
 
     const v1, -0x800001
@@ -342,6 +360,7 @@
 
     move-result v0
 
+    .line 2
     :goto_0
     iget v1, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;->positionAnchor:I
 
@@ -351,6 +370,7 @@
 
     goto :goto_1
 
+    .line 3
     :cond_1
     iget v1, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;->textAlignment:I
 
@@ -358,6 +378,7 @@
 
     move-result v1
 
+    .line 4
     :goto_1
     new-instance v2, Lcom/google/android/exoplayer2/text/Cue$Builder;
 
@@ -365,6 +386,7 @@
 
     iget v3, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;->textAlignment:I
 
+    .line 5
     invoke-static {v3}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;->convertTextAlignment(I)Landroid/text/Layout$Alignment;
 
     move-result-object v3
@@ -377,6 +399,7 @@
 
     iget v4, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;->lineType:I
 
+    .line 6
     invoke-static {v3, v4}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;->computeLine(FI)F
 
     move-result v3
@@ -389,20 +412,24 @@
 
     iget v3, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;->lineAnchor:I
 
+    .line 7
     invoke-virtual {v2, v3}, Lcom/google/android/exoplayer2/text/Cue$Builder;->setLineAnchor(I)Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     move-result-object v2
 
+    .line 8
     invoke-virtual {v2, v0}, Lcom/google/android/exoplayer2/text/Cue$Builder;->setPosition(F)Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     move-result-object v2
 
+    .line 9
     invoke-virtual {v2, v1}, Lcom/google/android/exoplayer2/text/Cue$Builder;->setPositionAnchor(I)Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     move-result-object v2
 
     iget v3, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;->size:F
 
+    .line 10
     invoke-static {v1, v0}, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;->deriveMaxSize(IF)F
 
     move-result v0
@@ -417,14 +444,17 @@
 
     iget v1, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;->verticalType:I
 
+    .line 11
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/text/Cue$Builder;->setVerticalType(I)Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     move-result-object v0
 
+    .line 12
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$WebvttCueInfoBuilder;->text:Ljava/lang/CharSequence;
 
     if-eqz p0, :cond_2
 
+    .line 13
     invoke-virtual {v0, p0}, Lcom/google/android/exoplayer2/text/Cue$Builder;->setText(Ljava/lang/CharSequence;)Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     :cond_2

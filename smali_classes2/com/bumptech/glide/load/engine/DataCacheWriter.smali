@@ -1,4 +1,4 @@
-.class Lcom/bumptech/glide/load/engine/DataCacheWriter;
+.class public Lcom/bumptech/glide/load/engine/DataCacheWriter;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -52,12 +52,16 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/DataCacheWriter;->encoder:Lcom/bumptech/glide/load/Encoder;
 
+    .line 3
     iput-object p2, p0, Lcom/bumptech/glide/load/engine/DataCacheWriter;->data:Ljava/lang/Object;
 
+    .line 4
     iput-object p3, p0, Lcom/bumptech/glide/load/engine/DataCacheWriter;->options:Lcom/bumptech/glide/load/Options;
 
     return-void
@@ -72,6 +76,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/DataCacheWriter;->encoder:Lcom/bumptech/glide/load/Encoder;
 
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/DataCacheWriter;->data:Ljava/lang/Object;

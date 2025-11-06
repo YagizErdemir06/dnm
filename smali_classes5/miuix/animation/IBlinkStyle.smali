@@ -18,31 +18,10 @@
 .method public abstract resetConfig()Lmiuix/animation/IBlinkStyle;
 .end method
 
-.method public abstract setBlinkPadding(FFFF)Lmiuix/animation/IBlinkStyle;
-.end method
-
-.method public abstract setBlinkRadius(F)Lmiuix/animation/IBlinkStyle;
-.end method
-
-.method public abstract setBlinkRadius(FFFF)Lmiuix/animation/IBlinkStyle;
-.end method
-
-.method public abstract setBlinkRect(Landroid/graphics/RectF;Lmiuix/animation/ITouchStyle$TouchRectGravity;)Lmiuix/animation/IBlinkStyle;
-.end method
-
 .method public abstract setInterval(J)Lmiuix/animation/IBlinkStyle;
 .end method
 
 .method public abstract setLimitCount(I)Lmiuix/animation/IBlinkStyle;
-.end method
-
-.method public abstract setTintMode(I)Lmiuix/animation/IBlinkStyle;
-    .param p1    # I
-        .annotation build Landroidx/annotation/IntRange;
-            from = -0x1L
-            to = 0x3L
-        .end annotation
-    .end param
 .end method
 
 .method public abstract setToHighlightConfig(Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IBlinkStyle;

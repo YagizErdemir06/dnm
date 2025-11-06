@@ -1,10 +1,10 @@
-.class final Lcom/google/android/gms/common/api/internal/zaap;
+.class public final Lcom/google/android/gms/common/api/internal/zaap;
 .super Lcom/google/android/gms/common/api/internal/zaav;
 .source "SourceFile"
 
 
 # instance fields
-.field final synthetic zaa:Lcom/google/android/gms/common/api/internal/zaaw;
+.field public final synthetic zaa:Lcom/google/android/gms/common/api/internal/zaaw;
 
 .field private final zac:Ljava/util/ArrayList;
 
@@ -13,6 +13,7 @@
 .method public constructor <init>(Lcom/google/android/gms/common/api/internal/zaaw;Ljava/util/ArrayList;)V
     .locals 1
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/common/api/internal/zaap;->zaa:Lcom/google/android/gms/common/api/internal/zaaw;
 
     const/4 v0, 0x0
@@ -31,6 +32,7 @@
     .annotation build Landroidx/annotation/WorkerThread;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zaap;->zaa:Lcom/google/android/gms/common/api/internal/zaaw;
 
     invoke-static {v0}, Lcom/google/android/gms/common/api/internal/zaaw;->zak(Lcom/google/android/gms/common/api/internal/zaaw;)Lcom/google/android/gms/common/api/internal/zabi;
@@ -60,6 +62,7 @@
 
     move-result-object v3
 
+    .line 2
     check-cast v3, Lcom/google/android/gms/common/api/Api$Client;
 
     iget-object v4, p0, Lcom/google/android/gms/common/api/internal/zaap;->zaa:Lcom/google/android/gms/common/api/internal/zaaw;
@@ -76,6 +79,7 @@
 
     iget-object v4, v4, Lcom/google/android/gms/common/api/internal/zabe;->zad:Ljava/util/Set;
 
+    .line 3
     invoke-interface {v3, v5, v4}, Lcom/google/android/gms/common/api/Api$Client;->getRemoteService(Lcom/google/android/gms/common/internal/IAccountAccessor;Ljava/util/Set;)V
 
     add-int/lit8 v2, v2, 0x1

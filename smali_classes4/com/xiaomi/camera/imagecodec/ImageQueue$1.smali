@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/camera/imagecodec/ImageQueue$1;
+.class public Lcom/xiaomi/camera/imagecodec/ImageQueue$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/xiaomi/camera/imagecodec/ImageQueue;
+.field public final synthetic this$0:Lcom/xiaomi/camera/imagecodec/ImageQueue;
 
 
 # direct methods
@@ -33,6 +33,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue$1;->this$0:Lcom/xiaomi/camera/imagecodec/ImageQueue;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,6 +54,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue$1;->this$0:Lcom/xiaomi/camera/imagecodec/ImageQueue;
 
     invoke-static {v0}, Lcom/xiaomi/camera/imagecodec/ImageQueue;->access$000(Lcom/xiaomi/camera/imagecodec/ImageQueue;)Ljava/lang/Object;
@@ -61,6 +63,7 @@
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p1}, Landroid/media/ImageReader;->acquireNextImage()Landroid/media/Image;
 
@@ -68,10 +71,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 3
     invoke-virtual {p1}, Landroid/media/Image;->getTimestamp()J
 
     move-result-wide v1
 
+    .line 4
     iget-object v3, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue$1;->this$0:Lcom/xiaomi/camera/imagecodec/ImageQueue;
 
     invoke-static {v3}, Lcom/xiaomi/camera/imagecodec/ImageQueue;->access$100(Lcom/xiaomi/camera/imagecodec/ImageQueue;)Ljava/lang/String;
@@ -100,6 +105,7 @@
 
     invoke-static {v3, v4}, Lcom/xiaomi/engine/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 5
     iget-object v3, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue$1;->this$0:Lcom/xiaomi/camera/imagecodec/ImageQueue;
 
     invoke-static {v3}, Lcom/xiaomi/camera/imagecodec/ImageQueue;->access$200(Lcom/xiaomi/camera/imagecodec/ImageQueue;)Landroid/util/LongSparseArray;
@@ -110,6 +116,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     iget-object p1, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue$1;->this$0:Lcom/xiaomi/camera/imagecodec/ImageQueue;
 
@@ -121,6 +128,7 @@
 
     invoke-static {p1, v1}, Lcom/xiaomi/engine/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 7
     :goto_0
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/ImageQueue$1;->this$0:Lcom/xiaomi/camera/imagecodec/ImageQueue;
 
@@ -130,6 +138,7 @@
 
     invoke-virtual {p0}, Ljava/lang/Object;->notify()V
 
+    .line 8
     monitor-exit v0
 
     return-void

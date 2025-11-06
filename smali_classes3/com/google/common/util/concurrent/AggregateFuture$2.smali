@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/AggregateFuture$2;
+.class public Lcom/google/common/util/concurrent/AggregateFuture$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,15 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/util/concurrent/AggregateFuture;
+.field public final synthetic this$0:Lcom/google/common/util/concurrent/AggregateFuture;
 
-.field final synthetic val$localFutures:Lcom/google/common/collect/ImmutableCollection;
+.field public final synthetic val$localFutures:Lcom/google/common/collect/ImmutableCollection;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/util/concurrent/AggregateFuture;Lcom/google/common/collect/ImmutableCollection;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/AggregateFuture$2;->this$0:Lcom/google/common/util/concurrent/AggregateFuture;
 
     iput-object p2, p0, Lcom/google/common/util/concurrent/AggregateFuture$2;->val$localFutures:Lcom/google/common/collect/ImmutableCollection;
@@ -41,6 +42,7 @@
 .method public run()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/util/concurrent/AggregateFuture$2;->this$0:Lcom/google/common/util/concurrent/AggregateFuture;
 
     iget-object p0, p0, Lcom/google/common/util/concurrent/AggregateFuture$2;->val$localFutures:Lcom/google/common/collect/ImmutableCollection;

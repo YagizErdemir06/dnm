@@ -25,9 +25,9 @@
 
 
 # instance fields
-.field buildInvoked:Z
+.field public buildInvoked:Z
 
-.field contents:Lcom/google/common/collect/ObjectCountHashMap;
+.field public contents:Lcom/google/common/collect/ObjectCountHashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/ObjectCountHashMap<",
@@ -39,7 +39,7 @@
     .end annotation
 .end field
 
-.field isLinkedHash:Z
+.field public isLinkedHash:Z
 
 
 # direct methods
@@ -117,21 +117,25 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     instance-of v0, p0, Lcom/google/common/collect/RegularImmutableMultiset;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Lcom/google/common/collect/RegularImmutableMultiset;
 
     iget-object p0, p0, Lcom/google/common/collect/RegularImmutableMultiset;->contents:Lcom/google/common/collect/ObjectCountHashMap;
 
     return-object p0
 
+    .line 3
     :cond_0
     instance-of v0, p0, Lcom/google/common/collect/AbstractMapBasedMultiset;
 
     if-eqz v0, :cond_1
 
+    .line 4
     check-cast p0, Lcom/google/common/collect/AbstractMapBasedMultiset;
 
     iget-object p0, p0, Lcom/google/common/collect/AbstractMapBasedMultiset;->backingMap:Lcom/google/common/collect/ObjectCountHashMap;
@@ -420,6 +424,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->contents:Lcom/google/common/collect/ObjectCountHashMap;
 
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -428,6 +433,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     iget-boolean v0, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->buildInvoked:Z
 
@@ -435,6 +441,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 3
     new-instance v0, Lcom/google/common/collect/ObjectCountHashMap;
 
     iget-object v2, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->contents:Lcom/google/common/collect/ObjectCountHashMap;
@@ -443,13 +450,17 @@
 
     iput-object v0, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->contents:Lcom/google/common/collect/ObjectCountHashMap;
 
+    .line 4
     iput-boolean v1, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->isLinkedHash:Z
 
+    .line 5
     :cond_1
     iput-boolean v1, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->buildInvoked:Z
 
+    .line 6
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 7
     iget-object v0, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->contents:Lcom/google/common/collect/ObjectCountHashMap;
 
     invoke-virtual {v0, p1}, Lcom/google/common/collect/ObjectCountHashMap;->get(Ljava/lang/Object;)I
@@ -554,6 +565,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->contents:Lcom/google/common/collect/ObjectCountHashMap;
 
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -562,10 +574,12 @@
 
     if-nez p2, :cond_0
 
+    .line 2
     iget-boolean v1, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->isLinkedHash:Z
 
     if-nez v1, :cond_0
 
+    .line 3
     new-instance v1, Lcom/google/common/collect/ObjectCountLinkedHashMap;
 
     iget-object v2, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->contents:Lcom/google/common/collect/ObjectCountHashMap;
@@ -576,15 +590,18 @@
 
     const/4 v1, 0x1
 
+    .line 4
     iput-boolean v1, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->isLinkedHash:Z
 
     goto :goto_0
 
+    .line 5
     :cond_0
     iget-boolean v1, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->buildInvoked:Z
 
     if-eqz v1, :cond_1
 
+    .line 6
     new-instance v1, Lcom/google/common/collect/ObjectCountHashMap;
 
     iget-object v2, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->contents:Lcom/google/common/collect/ObjectCountHashMap;
@@ -593,22 +610,27 @@
 
     iput-object v1, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->contents:Lcom/google/common/collect/ObjectCountHashMap;
 
+    .line 7
     iput-boolean v0, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->isLinkedHash:Z
 
+    .line 8
     :cond_1
     :goto_0
     iput-boolean v0, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->buildInvoked:Z
 
+    .line 9
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     if-nez p2, :cond_2
 
+    .line 10
     iget-object p2, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->contents:Lcom/google/common/collect/ObjectCountHashMap;
 
     invoke-virtual {p2, p1}, Lcom/google/common/collect/ObjectCountHashMap;->remove(Ljava/lang/Object;)I
 
     goto :goto_1
 
+    .line 11
     :cond_2
     iget-object v0, p0, Lcom/google/common/collect/ImmutableMultiset$Builder;->contents:Lcom/google/common/collect/ObjectCountHashMap;
 

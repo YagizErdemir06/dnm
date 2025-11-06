@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Lists$RandomAccessListWrapper;
+.class public Lcom/google/common/collect/Lists$RandomAccessListWrapper;
 .super Lcom/google/common/collect/Lists$AbstractListWrapper;
 .source "SourceFile"
 
@@ -39,6 +39,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/Lists$AbstractListWrapper;-><init>(Ljava/util/List;)V
 
     return-void

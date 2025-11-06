@@ -15,6 +15,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,6 +24,7 @@
 .method public static enableDebugLogging(Z)V
     .locals 0
 
+    .line 1
     sput-boolean p0, Landroidx/loader/app/LoaderManagerImpl;->DEBUG:Z
 
     return-void
@@ -48,6 +50,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Landroidx/loader/app/LoaderManagerImpl;
 
     move-object v1, p0

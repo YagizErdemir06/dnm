@@ -391,10 +391,12 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/android/gms/common/internal/GmsClient;->validateScopes(Ljava/util/Set;)Ljava/util/Set;
 
     move-result-object p0
 
+    .line 2
     invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -412,6 +414,7 @@
 
     check-cast v1, Lcom/google/android/gms/common/api/Scope;
 
+    .line 3
     invoke-interface {p1, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v1
@@ -425,6 +428,7 @@
 
     const-string p1, "Expanding scopes is not permitted, use implied scopes instead"
 
+    .line 4
     invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p0
@@ -522,6 +526,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/common/internal/BaseGmsClient;->requiresSignIn()Z
 
     move-result v0

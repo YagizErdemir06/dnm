@@ -1,4 +1,4 @@
-.class abstract Lcom/google/android/gms/internal/common/zzm;
+.class public abstract Lcom/google/android/gms/internal/common/zzm;
 .super Lcom/google/android/gms/internal/common/zzk;
 .source "SourceFile"
 

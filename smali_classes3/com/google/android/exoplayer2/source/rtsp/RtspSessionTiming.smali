@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/rtsp/RtspSessionTiming;
+.class public final Lcom/google/android/exoplayer2/source/rtsp/RtspSessionTiming;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -23,6 +23,7 @@
 .method public static constructor <clinit>()V
     .locals 5
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/source/rtsp/RtspSessionTiming;
 
     const-wide/16 v1, 0x0
@@ -35,6 +36,7 @@
 
     const-string v0, "npt[:=]([.\\d]+|now)\\s?-\\s?([.\\d]+)?"
 
+    .line 2
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -47,10 +49,13 @@
 .method private constructor <init>(JJ)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspSessionTiming;->startTimeMs:J
 
+    .line 3
     iput-wide p3, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspSessionTiming;->stopTimeMs:J
 
     return-void
@@ -69,13 +74,14 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    const/4 v1, 0x0
-
+    .line 1
     invoke-static {p0, p1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object p0
 
-    aput-object p0, v0, v1
+    const/4 p1, 0x0
+
+    aput-object p0, v0, p1
 
     const-string p0, "npt=%.3f-"
 
@@ -94,12 +100,14 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/source/rtsp/RtspSessionTiming;->NPT_RANGE_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v1
@@ -108,6 +116,7 @@
 
     const/4 v1, 0x1
 
+    .line 3
     invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v2
@@ -123,9 +132,11 @@
     :cond_0
     move v4, v3
 
+    .line 4
     :goto_0
     invoke-static {v4, p0}, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil;->checkManifestExpression(ZLjava/lang/String;)V
 
+    .line 5
     invoke-static {v2}, Lcom/google/android/exoplayer2/util/Util;->castNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
@@ -146,6 +157,7 @@
 
     goto :goto_1
 
+    .line 6
     :cond_1
     invoke-static {v2}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
@@ -158,12 +170,14 @@
     :goto_1
     const/4 v2, 0x2
 
+    .line 7
     invoke-virtual {v0, v2}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
+    .line 8
     :try_start_0
     invoke-static {v0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
@@ -184,6 +198,7 @@
     :cond_2
     move v1, v3
 
+    .line 9
     :goto_2
     invoke-static {v1, p0}, Lcom/google/android/exoplayer2/source/rtsp/RtspMessageUtil;->checkManifestExpression(ZLjava/lang/String;)V
 
@@ -192,6 +207,7 @@
     :catch_0
     move-exception p0
 
+    .line 10
     invoke-static {v0, p0}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedManifest(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
     move-result-object p0
@@ -201,6 +217,7 @@
     :cond_3
     const-wide v4, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 11
     :goto_3
     new-instance p0, Lcom/google/android/exoplayer2/source/rtsp/RtspSessionTiming;
 
@@ -214,6 +231,7 @@
 .method public getDurationMs()J
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspSessionTiming;->stopTimeMs:J
 
     iget-wide v2, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspSessionTiming;->startTimeMs:J
@@ -226,6 +244,7 @@
 .method public isLive()Z
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspSessionTiming;->stopTimeMs:J
 
     const-wide v2, -0x7fffffffffffffffL    # -4.9E-324

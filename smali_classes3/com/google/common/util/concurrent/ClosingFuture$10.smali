@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/ClosingFuture$10;
+.class public Lcom/google/common/util/concurrent/ClosingFuture$10;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,15 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/util/concurrent/ClosingFuture;
+.field public final synthetic this$0:Lcom/google/common/util/concurrent/ClosingFuture;
 
-.field final synthetic val$consumer:Lcom/google/common/util/concurrent/ClosingFuture$ValueAndCloserConsumer;
+.field public final synthetic val$consumer:Lcom/google/common/util/concurrent/ClosingFuture$ValueAndCloserConsumer;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/util/concurrent/ClosingFuture;Lcom/google/common/util/concurrent/ClosingFuture$ValueAndCloserConsumer;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/ClosingFuture$10;->this$0:Lcom/google/common/util/concurrent/ClosingFuture;
 
     iput-object p2, p0, Lcom/google/common/util/concurrent/ClosingFuture$10;->val$consumer:Lcom/google/common/util/concurrent/ClosingFuture$ValueAndCloserConsumer;
@@ -41,6 +42,7 @@
 .method public run()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/util/concurrent/ClosingFuture$10;->val$consumer:Lcom/google/common/util/concurrent/ClosingFuture$ValueAndCloserConsumer;
 
     iget-object p0, p0, Lcom/google/common/util/concurrent/ClosingFuture$10;->this$0:Lcom/google/common/util/concurrent/ClosingFuture;

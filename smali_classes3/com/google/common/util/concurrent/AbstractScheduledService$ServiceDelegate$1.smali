@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/AbstractScheduledService$ServiceDelegate$1;
+.class public Lcom/google/common/util/concurrent/AbstractScheduledService$ServiceDelegate$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,13 +27,14 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/google/common/util/concurrent/AbstractScheduledService$ServiceDelegate;
+.field public final synthetic this$1:Lcom/google/common/util/concurrent/AbstractScheduledService$ServiceDelegate;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/util/concurrent/AbstractScheduledService$ServiceDelegate;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/AbstractScheduledService$ServiceDelegate$1;->this$1:Lcom/google/common/util/concurrent/AbstractScheduledService$ServiceDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

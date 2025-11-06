@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Maps$FilteredEntryMap$EntrySet;
+.class public Lcom/google/common/collect/Maps$FilteredEntryMap$EntrySet;
 .super Lcom/google/common/collect/ForwardingSet;
 .source "SourceFile"
 
@@ -23,7 +23,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/Maps$FilteredEntryMap;
+.field public final synthetic this$0:Lcom/google/common/collect/Maps$FilteredEntryMap;
 
 
 # direct methods
@@ -101,6 +101,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/Maps$FilteredEntryMap$EntrySet$1;
 
     iget-object v1, p0, Lcom/google/common/collect/Maps$FilteredEntryMap$EntrySet;->this$0:Lcom/google/common/collect/Maps$FilteredEntryMap;

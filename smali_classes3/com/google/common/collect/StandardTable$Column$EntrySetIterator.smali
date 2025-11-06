@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/StandardTable$Column$EntrySetIterator;
+.class public Lcom/google/common/collect/StandardTable$Column$EntrySetIterator;
 .super Lcom/google/common/collect/AbstractIterator;
 .source "SourceFile"
 
@@ -23,7 +23,7 @@
 
 
 # instance fields
-.field final iterator:Ljava/util/Iterator;
+.field public final iterator:Ljava/util/Iterator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Iterator<",
@@ -35,7 +35,7 @@
     .end annotation
 .end field
 
-.field final synthetic this$1:Lcom/google/common/collect/StandardTable$Column;
+.field public final synthetic this$1:Lcom/google/common/collect/StandardTable$Column;
 
 
 # direct methods

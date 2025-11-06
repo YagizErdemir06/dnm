@@ -15,19 +15,22 @@
 
 
 # instance fields
-.field type:Ljava/lang/String;
+.field public type:Ljava/lang/String;
 
-.field typeId:I
+.field public typeId:I
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator$PathRotateSet;->type:Ljava/lang/String;
 
+    .line 3
     invoke-static {p1}, Landroidx/constraintlayout/core/motion/utils/TypedValues$CycleType;->getId(Ljava/lang/String;)I
 
     move-result p1
@@ -42,6 +45,7 @@
 .method public setPathRotate(Landroidx/constraintlayout/core/motion/MotionWidget;FDD)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p2}, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;->get(F)F
 
     move-result p0
@@ -66,6 +70,7 @@
 .method public setProperty(Landroidx/constraintlayout/core/motion/MotionWidget;F)V
     .locals 1
 
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator$PathRotateSet;->typeId:I
 
     invoke-virtual {p0, p2}, Landroidx/constraintlayout/core/motion/utils/KeyCycleOscillator;->get(F)F

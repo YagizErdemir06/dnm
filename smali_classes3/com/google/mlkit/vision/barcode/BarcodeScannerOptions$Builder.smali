@@ -99,6 +99,7 @@
 
     if-ge p1, v0, :cond_0
 
+    .line 1
     aget v0, p2, p1
 
     iget v1, p0, Lcom/google/mlkit/vision/barcode/BarcodeScannerOptions$Builder;->zza:I

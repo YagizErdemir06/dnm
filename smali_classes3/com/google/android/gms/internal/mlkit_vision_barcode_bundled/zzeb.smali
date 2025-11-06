@@ -4,25 +4,27 @@
 
 
 # instance fields
-.field final zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfo;
+.field public final zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfo;
 
-.field final zzb:Ljava/lang/Object;
+.field public final zzb:Ljava/lang/Object;
 
-.field final zzc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfo;
+.field public final zzc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfo;
 
-.field final zzd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzea;
+.field public final zzd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzea;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfo;Ljava/lang/Object;Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfo;Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzea;Ljava/lang/Class;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdm;-><init>()V
 
     if-eqz p1, :cond_2
 
     iget-object p5, p4, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzea;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzho;
 
+    .line 2
     sget-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzho;->zzk:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzho;
 
     if-ne p5, v0, :cond_1
@@ -36,6 +38,7 @@
 
     const-string p1, "Null messageDefaultInstance"
 
+    .line 3
     invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p0
@@ -52,6 +55,7 @@
 
     return-void
 
+    .line 4
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

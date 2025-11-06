@@ -443,6 +443,7 @@
 .method public useForNull(Ljava/lang/String;)Lcom/google/common/base/Joiner$MapJoiner;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/common/base/Joiner$MapJoiner;
 
     iget-object v1, p0, Lcom/google/common/base/Joiner$MapJoiner;->joiner:Lcom/google/common/base/Joiner;

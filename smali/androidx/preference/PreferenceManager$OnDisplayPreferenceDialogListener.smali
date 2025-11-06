@@ -16,8 +16,4 @@
 
 # virtual methods
 .method public abstract onDisplayPreferenceDialog(Landroidx/preference/Preference;)V
-    .param p1    # Landroidx/preference/Preference;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 .end method

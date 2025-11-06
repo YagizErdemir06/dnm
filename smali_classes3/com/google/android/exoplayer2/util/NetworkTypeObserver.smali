@@ -47,8 +47,10 @@
 .method private constructor <init>(Landroid/content/Context;)V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -59,12 +61,14 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/util/NetworkTypeObserver;->mainHandler:Landroid/os/Handler;
 
+    .line 3
     new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/util/NetworkTypeObserver;->listeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
+    .line 4
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -73,16 +77,20 @@
 
     const/4 v0, 0x0
 
+    .line 5
     iput v0, p0, Lcom/google/android/exoplayer2/util/NetworkTypeObserver;->networkType:I
 
+    .line 6
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "android.net.conn.CONNECTIVITY_CHANGE"
 
+    .line 7
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    .line 8
     new-instance v1, Lcom/google/android/exoplayer2/util/NetworkTypeObserver$Receiver;
 
     const/4 v2, 0x0
@@ -94,17 +102,10 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/google/android/exoplayer2/util/NetworkTypeObserver;Lcom/google/android/exoplayer2/util/NetworkTypeObserver$Listener;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/util/NetworkTypeObserver;->lambda$register$0(Lcom/google/android/exoplayer2/util/NetworkTypeObserver$Listener;)V
-
-    return-void
-.end method
-
 .method public static synthetic access$100(Landroid/content/Context;)I
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/NetworkTypeObserver;->getNetworkTypeFromConnectivityManager(Landroid/content/Context;)I
 
     move-result p0
@@ -115,6 +116,7 @@
 .method public static synthetic access$200(Lcom/google/android/exoplayer2/util/NetworkTypeObserver;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/util/NetworkTypeObserver;->updateNetworkType(I)V
 
     return-void
@@ -127,17 +129,20 @@
 
     monitor-enter v0
 
+    .line 1
     :try_start_0
     sget-object v1, Lcom/google/android/exoplayer2/util/NetworkTypeObserver;->staticInstance:Lcom/google/android/exoplayer2/util/NetworkTypeObserver;
 
     if-nez v1, :cond_0
 
+    .line 2
     new-instance v1, Lcom/google/android/exoplayer2/util/NetworkTypeObserver;
 
     invoke-direct {v1, p0}, Lcom/google/android/exoplayer2/util/NetworkTypeObserver;-><init>(Landroid/content/Context;)V
 
     sput-object v1, Lcom/google/android/exoplayer2/util/NetworkTypeObserver;->staticInstance:Lcom/google/android/exoplayer2/util/NetworkTypeObserver;
 
+    .line 3
     :cond_0
     sget-object p0, Lcom/google/android/exoplayer2/util/NetworkTypeObserver;->staticInstance:Lcom/google/android/exoplayer2/util/NetworkTypeObserver;
     :try_end_0
@@ -158,6 +163,7 @@
 .method private static getMobileNetworkType(Landroid/net/NetworkInfo;)I
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Landroid/net/NetworkInfo;->getSubtype()I
 
     move-result p0
@@ -169,6 +175,7 @@
 
     return p0
 
+    .line 2
     :pswitch_1
     sget p0, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
@@ -236,6 +243,7 @@
 
     const-string v0, "connectivity"
 
+    .line 1
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -248,6 +256,7 @@
 
     return v0
 
+    .line 2
     :cond_0
     :try_start_0
     invoke-virtual {p0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
@@ -260,6 +269,7 @@
 
     if-eqz p0, :cond_6
 
+    .line 3
     invoke-virtual {p0}, Landroid/net/NetworkInfo;->isConnected()Z
 
     move-result v1
@@ -268,6 +278,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     invoke-virtual {p0}, Landroid/net/NetworkInfo;->getType()I
 
@@ -310,6 +321,7 @@
 
     return p0
 
+    .line 5
     :cond_5
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/NetworkTypeObserver;->getMobileNetworkType(Landroid/net/NetworkInfo;)I
 
@@ -326,6 +338,7 @@
 .method private synthetic lambda$register$0(Lcom/google/android/exoplayer2/util/NetworkTypeObserver$Listener;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/NetworkTypeObserver;->getNetworkType()I
 
     move-result p0
@@ -338,6 +351,7 @@
 .method private removeClearedReferences()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/NetworkTypeObserver;->listeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -358,12 +372,14 @@
 
     check-cast v1, Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    .line 2
+    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v2
 
     if-nez v2, :cond_0
 
+    .line 3
     iget-object v2, p0, Lcom/google/android/exoplayer2/util/NetworkTypeObserver;->listeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
@@ -385,11 +401,13 @@
 
     const/4 v1, 0x0
 
+    .line 1
     :try_start_0
     sput-object v1, Lcom/google/android/exoplayer2/util/NetworkTypeObserver;->staticInstance:Lcom/google/android/exoplayer2/util/NetworkTypeObserver;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     monitor-exit v0
 
     return-void
@@ -405,26 +423,32 @@
 .method private updateNetworkType(I)V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/NetworkTypeObserver;->networkTypeLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget v1, p0, Lcom/google/android/exoplayer2/util/NetworkTypeObserver;->networkType:I
 
     if-ne v1, p1, :cond_0
 
+    .line 3
     monitor-exit v0
 
     return-void
 
+    .line 4
     :cond_0
     iput p1, p0, Lcom/google/android/exoplayer2/util/NetworkTypeObserver;->networkType:I
 
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 6
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/NetworkTypeObserver;->listeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -444,7 +468,8 @@
 
     check-cast v1, Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    .line 7
+    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v2
 
@@ -452,10 +477,12 @@
 
     if-eqz v2, :cond_1
 
+    .line 8
     invoke-interface {v2, p1}, Lcom/google/android/exoplayer2/util/NetworkTypeObserver$Listener;->onNetworkTypeChanged(I)V
 
     goto :goto_0
 
+    .line 9
     :cond_1
     iget-object v2, p0, Lcom/google/android/exoplayer2/util/NetworkTypeObserver;->listeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -469,6 +496,7 @@
     :catchall_0
     move-exception p0
 
+    .line 10
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -479,13 +507,23 @@
 
 
 # virtual methods
+.method public synthetic a(Lcom/google/android/exoplayer2/util/NetworkTypeObserver$Listener;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/util/NetworkTypeObserver;->lambda$register$0(Lcom/google/android/exoplayer2/util/NetworkTypeObserver$Listener;)V
+
+    return-void
+.end method
+
 .method public getNetworkType()I
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/NetworkTypeObserver;->networkTypeLock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget p0, p0, Lcom/google/android/exoplayer2/util/NetworkTypeObserver;->networkType:I
 
@@ -496,6 +534,7 @@
     :catchall_0
     move-exception p0
 
+    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -506,8 +545,10 @@
 .method public register(Lcom/google/android/exoplayer2/util/NetworkTypeObserver$Listener;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/util/NetworkTypeObserver;->removeClearedReferences()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/NetworkTypeObserver;->listeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     new-instance v1, Ljava/lang/ref/WeakReference;
@@ -516,11 +557,12 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/NetworkTypeObserver;->mainHandler:Landroid/os/Handler;
 
-    new-instance v1, Lcom/google/android/exoplayer2/util/c;
+    new-instance v1, Ld/j/a/b/a3/c;
 
-    invoke-direct {v1, p0, p1}, Lcom/google/android/exoplayer2/util/c;-><init>(Lcom/google/android/exoplayer2/util/NetworkTypeObserver;Lcom/google/android/exoplayer2/util/NetworkTypeObserver$Listener;)V
+    invoke-direct {v1, p0, p1}, Ld/j/a/b/a3/c;-><init>(Lcom/google/android/exoplayer2/util/NetworkTypeObserver;Lcom/google/android/exoplayer2/util/NetworkTypeObserver$Listener;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

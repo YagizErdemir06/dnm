@@ -1,4 +1,4 @@
-.class Lcom/bumptech/glide/load/engine/ActiveResources$1;
+.class public Lcom/bumptech/glide/load/engine/ActiveResources$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -21,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,6 +36,7 @@
         .end annotation
     .end param
 
+    .line 1
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/bumptech/glide/load/engine/ActiveResources$1$1;

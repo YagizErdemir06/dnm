@@ -1,4 +1,4 @@
-.class Lcom/google/common/hash/AbstractCompositeHashFunction$1;
+.class public Lcom/google/common/hash/AbstractCompositeHashFunction$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,15 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/hash/AbstractCompositeHashFunction;
+.field public final synthetic this$0:Lcom/google/common/hash/AbstractCompositeHashFunction;
 
-.field final synthetic val$hashers:[Lcom/google/common/hash/Hasher;
+.field public final synthetic val$hashers:[Lcom/google/common/hash/Hasher;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/hash/AbstractCompositeHashFunction;[Lcom/google/common/hash/Hasher;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/hash/AbstractCompositeHashFunction$1;->this$0:Lcom/google/common/hash/AbstractCompositeHashFunction;
 
     iput-object p2, p0, Lcom/google/common/hash/AbstractCompositeHashFunction$1;->val$hashers:[Lcom/google/common/hash/Hasher;
@@ -41,6 +42,7 @@
 .method public hash()Lcom/google/common/hash/HashCode;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/hash/AbstractCompositeHashFunction$1;->this$0:Lcom/google/common/hash/AbstractCompositeHashFunction;
 
     iget-object p0, p0, Lcom/google/common/hash/AbstractCompositeHashFunction$1;->val$hashers:[Lcom/google/common/hash/Hasher;
@@ -130,7 +132,7 @@
     .locals 5
 
     .line 8
-    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v0
 
@@ -447,6 +449,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/hash/AbstractCompositeHashFunction$1;->val$hashers:[Lcom/google/common/hash/Hasher;
 
     array-length v1, v0
@@ -458,6 +461,7 @@
 
     aget-object v3, v0, v2
 
+    .line 2
     invoke-interface {v3, p1, p2}, Lcom/google/common/hash/Hasher;->putObject(Ljava/lang/Object;Lcom/google/common/hash/Funnel;)Lcom/google/common/hash/Hasher;
 
     add-int/lit8 v2, v2, 0x1

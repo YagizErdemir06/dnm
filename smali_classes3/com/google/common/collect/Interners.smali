@@ -23,6 +23,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,6 +43,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/Interners$InternerFunction;
 
     invoke-static {p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -58,6 +60,7 @@
 .method public static newBuilder()Lcom/google/common/collect/Interners$InternerBuilder;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/Interners$InternerBuilder;
 
     const/4 v1, 0x0
@@ -79,6 +82,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/Interners;->newBuilder()Lcom/google/common/collect/Interners$InternerBuilder;
 
     move-result-object v0
@@ -110,6 +114,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/Interners;->newBuilder()Lcom/google/common/collect/Interners$InternerBuilder;
 
     move-result-object v0

@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/util/concurrent/GwtFluentFutureCatchingSpecialization;
+.class public abstract Lcom/google/common/util/concurrent/GwtFluentFutureCatchingSpecialization;
 .super Lcom/google/common/util/concurrent/AbstractFuture;
 .source "SourceFile"
 
@@ -26,6 +26,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/util/concurrent/AbstractFuture;-><init>()V
 
     return-void

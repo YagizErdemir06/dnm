@@ -25,6 +25,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/common/internal/zzab;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/gms/common/internal/zzd;->zza:Lcom/google/android/gms/common/internal/BaseGmsClient;
@@ -49,6 +50,7 @@
     .annotation build Landroidx/annotation/BinderThread;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/internal/zzd;->zza:Lcom/google/android/gms/common/internal/BaseGmsClient;
 
     const-string v1, "onPostInitComplete can be called only once per call to getRemoteService"
@@ -59,6 +61,7 @@
 
     iget v1, p0, Lcom/google/android/gms/common/internal/zzd;->zzb:I
 
+    .line 2
     invoke-virtual {v0, p1, p2, p3, v1}, Lcom/google/android/gms/common/internal/BaseGmsClient;->onPostInitHandler(ILandroid/os/IBinder;Landroid/os/Bundle;I)V
 
     const/4 p1, 0x0
@@ -77,6 +80,7 @@
     .annotation build Landroidx/annotation/BinderThread;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/Exception;
 
     invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
@@ -103,18 +107,22 @@
     .annotation build Landroidx/annotation/BinderThread;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/internal/zzd;->zza:Lcom/google/android/gms/common/internal/BaseGmsClient;
 
     const-string v1, "onPostInitCompleteWithConnectionInfo can be called only once per call togetRemoteService"
 
     invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-static {p3}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     invoke-static {v0, p3}, Lcom/google/android/gms/common/internal/BaseGmsClient;->zzj(Lcom/google/android/gms/common/internal/BaseGmsClient;Lcom/google/android/gms/common/internal/zzj;)V
 
     iget-object p3, p3, Lcom/google/android/gms/common/internal/zzj;->zza:Landroid/os/Bundle;
 
+    .line 4
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/android/gms/common/internal/zzd;->onPostInitComplete(ILandroid/os/IBinder;Landroid/os/Bundle;)V
 
     return-void

@@ -20,9 +20,9 @@
 # static fields
 .field private static final BYTES_PER_FORMAT:[I
 
-.field static final EXIF_MAGIC_NUMBER:I = 0xffd8
+.field public static final EXIF_MAGIC_NUMBER:I = 0xffd8
 
-.field static final EXIF_SEGMENT_TYPE:I = 0xe1
+.field public static final EXIF_SEGMENT_TYPE:I = 0xe1
 
 .field private static final GIF_HEADER:I = 0x474946
 
@@ -30,7 +30,7 @@
 
 .field private static final JPEG_EXIF_SEGMENT_PREAMBLE:Ljava/lang/String; = "Exif\u0000\u0000"
 
-.field static final JPEG_EXIF_SEGMENT_PREAMBLE_BYTES:[B
+.field public static final JPEG_EXIF_SEGMENT_PREAMBLE_BYTES:[B
 
 .field private static final MARKER_EOI:I = 0xd9
 
@@ -44,7 +44,7 @@
 
 .field private static final SEGMENT_SOS:I = 0xda
 
-.field static final SEGMENT_START_ID:I = 0xff
+.field public static final SEGMENT_START_ID:I = 0xff
 
 .field private static final TAG:Ljava/lang/String; = "DfltImageHeaderParser"
 
@@ -71,6 +71,7 @@
 
     const-string v0, "UTF-8"
 
+    .line 1
     invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
     move-result-object v0
@@ -87,6 +88,7 @@
 
     new-array v0, v0, [I
 
+    .line 2
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser;->BYTES_PER_FORMAT:[I
@@ -114,6 +116,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -522,6 +525,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     sget-object v0, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser;->JPEG_EXIF_SEGMENT_PREAMBLE_BYTES:[B
 
     array-length v0, v0
@@ -540,6 +544,7 @@
 
     move v0, p0
 
+    .line 2
     :goto_1
     sget-object v1, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser;->JPEG_EXIF_SEGMENT_PREAMBLE_BYTES:[B
 
@@ -547,6 +552,7 @@
 
     if-ge v0, v2, :cond_2
 
+    .line 3
     aget-byte v2, p1, v0
 
     aget-byte v1, v1, v0
@@ -575,6 +581,7 @@
         }
     .end annotation
 
+    .line 1
     :cond_0
     invoke-interface {p1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->getUInt8()S
 
@@ -590,12 +597,14 @@
 
     if-eq p0, v0, :cond_2
 
+    .line 2
     invoke-static {v3, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
+    .line 3
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -615,6 +624,7 @@
     :cond_1
     return v2
 
+    .line 4
     :cond_2
     invoke-interface {p1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->getUInt8()S
 
@@ -631,6 +641,7 @@
 
     if-ne p0, v0, :cond_5
 
+    .line 5
     invoke-static {v3, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result p0
@@ -639,11 +650,13 @@
 
     const-string p0, "Found MARKER_EOI in exif segment"
 
+    .line 6
     invoke-static {v3, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_4
     return v2
 
+    .line 7
     :cond_5
     invoke-interface {p1}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->getUInt16()I
 
@@ -657,6 +670,7 @@
 
     int-to-long v4, v0
 
+    .line 8
     invoke-interface {p1, v4, v5}, Lcom/bumptech/glide/load/resource/bitmap/DefaultImageHeaderParser$Reader;->skip(J)J
 
     move-result-wide v6
@@ -665,12 +679,14 @@
 
     if-eqz v4, :cond_0
 
+    .line 9
     invoke-static {v3, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result p1
 
     if-eqz p1, :cond_6
 
+    .line 10
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V

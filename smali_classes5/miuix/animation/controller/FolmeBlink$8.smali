@@ -1,4 +1,4 @@
-.class Lmiuix/animation/controller/FolmeBlink$8;
+.class public Lmiuix/animation/controller/FolmeBlink$8;
 .super Lmiuix/animation/listener/TransitionListener;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lmiuix/animation/controller/FolmeBlink;
+.field public final synthetic this$0:Lmiuix/animation/controller/FolmeBlink;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/animation/controller/FolmeBlink;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/animation/controller/FolmeBlink$8;->this$0:Lmiuix/animation/controller/FolmeBlink;
 
     invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
@@ -34,8 +35,10 @@
 .method public onCancel(Ljava/lang/Object;)V
     .locals 3
 
+    .line 1
     invoke-super {p0, p1}, Lmiuix/animation/listener/TransitionListener;->onCancel(Ljava/lang/Object;)V
 
+    .line 2
     iget-object p1, p0, Lmiuix/animation/controller/FolmeBlink$8;->this$0:Lmiuix/animation/controller/FolmeBlink;
 
     iget-object p1, p1, Lmiuix/animation/controller/FolmeBase;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
@@ -52,19 +55,12 @@
 
     invoke-interface {p1, v0}, Lmiuix/animation/ICancelableStyle;->cancel([Lmiuix/animation/property/FloatProperty;)V
 
-    iget-object p1, p0, Lmiuix/animation/controller/FolmeBlink$8;->this$0:Lmiuix/animation/controller/FolmeBlink;
-
-    iput v2, p1, Lmiuix/animation/controller/FolmeBlink;->mFlashCount:I
-
-    invoke-static {p1, v2}, Lmiuix/animation/controller/FolmeBlink;->access$002(Lmiuix/animation/controller/FolmeBlink;Z)Z
-
+    .line 3
     iget-object p0, p0, Lmiuix/animation/controller/FolmeBlink$8;->this$0:Lmiuix/animation/controller/FolmeBlink;
 
-    invoke-static {p0}, Lmiuix/animation/controller/FolmeBlink;->access$400(Lmiuix/animation/controller/FolmeBlink;)[Lmiuix/animation/IAnimTarget;
+    iget-object p0, p0, Lmiuix/animation/controller/FolmeBase;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
-    move-result-object p1
-
-    invoke-static {p0, p1}, Lmiuix/animation/controller/FolmeBlink;->access$500(Lmiuix/animation/controller/FolmeBlink;[Lmiuix/animation/IAnimTarget;)V
+    invoke-interface {p0}, Lmiuix/animation/IStateContainer;->clean()V
 
     return-void
 .end method
@@ -72,8 +68,10 @@
 .method public onComplete(Ljava/lang/Object;)V
     .locals 3
 
+    .line 1
     invoke-super {p0, p1}, Lmiuix/animation/listener/TransitionListener;->onComplete(Ljava/lang/Object;)V
 
+    .line 2
     iget-object p1, p0, Lmiuix/animation/controller/FolmeBlink$8;->this$0:Lmiuix/animation/controller/FolmeBlink;
 
     iget-object p1, p1, Lmiuix/animation/controller/FolmeBase;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
@@ -90,19 +88,12 @@
 
     invoke-interface {p1, v0}, Lmiuix/animation/ICancelableStyle;->cancel([Lmiuix/animation/property/FloatProperty;)V
 
-    iget-object p1, p0, Lmiuix/animation/controller/FolmeBlink$8;->this$0:Lmiuix/animation/controller/FolmeBlink;
-
-    iput v2, p1, Lmiuix/animation/controller/FolmeBlink;->mFlashCount:I
-
-    invoke-static {p1, v2}, Lmiuix/animation/controller/FolmeBlink;->access$002(Lmiuix/animation/controller/FolmeBlink;Z)Z
-
+    .line 3
     iget-object p0, p0, Lmiuix/animation/controller/FolmeBlink$8;->this$0:Lmiuix/animation/controller/FolmeBlink;
 
-    invoke-static {p0}, Lmiuix/animation/controller/FolmeBlink;->access$400(Lmiuix/animation/controller/FolmeBlink;)[Lmiuix/animation/IAnimTarget;
+    iget-object p0, p0, Lmiuix/animation/controller/FolmeBase;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
-    move-result-object p1
-
-    invoke-static {p0, p1}, Lmiuix/animation/controller/FolmeBlink;->access$500(Lmiuix/animation/controller/FolmeBlink;[Lmiuix/animation/IAnimTarget;)V
+    invoke-interface {p0}, Lmiuix/animation/IStateContainer;->clean()V
 
     return-void
 .end method

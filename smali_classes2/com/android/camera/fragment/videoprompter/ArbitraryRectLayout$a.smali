@@ -21,7 +21,18 @@
 # direct methods
 .method public constructor <init>(Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout;Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x0
+        }
+        names = {
+            "this$0",
+            "name"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout$a;->a:Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout;
 
     invoke-direct {p0, p2}, Lmiuix/animation/property/ViewProperty;-><init>(Ljava/lang/String;)V
@@ -32,31 +43,20 @@
 
 # virtual methods
 .method public getValue(Landroid/view/View;)F
-    .locals 1
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "view"
+        }
+    .end annotation
 
     .line 2
-    iget-object p1, p0, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout$a;->a:Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout;
-
-    iget-object v0, p1, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout;->e:Landroid/view/ViewGroup$MarginLayoutParams;
-
-    if-nez v0, :cond_0
-
-    .line 3
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    iput-object v0, p1, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout;->e:Landroid/view/ViewGroup$MarginLayoutParams;
-
-    .line 4
-    :cond_0
     iget-object p0, p0, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout$a;->a:Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout;
 
-    iget-object p0, p0, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout;->e:Landroid/view/ViewGroup$MarginLayoutParams;
-
-    if-eqz p0, :cond_1
+    iget-object p0, p0, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout;->u:Landroid/view/ViewGroup$MarginLayoutParams;
 
     invoke-virtual {p0}, Landroid/view/ViewGroup$MarginLayoutParams;->getMarginStart()I
 
@@ -64,17 +64,19 @@
 
     int-to-float p0, p0
 
-    goto :goto_0
-
-    :cond_1
-    const/4 p0, 0x0
-
-    :goto_0
     return p0
 .end method
 
 .method public bridge synthetic getValue(Ljava/lang/Object;)F
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "view"
+        }
+    .end annotation
 
     .line 1
     check-cast p1, Landroid/view/View;
@@ -88,11 +90,21 @@
 
 .method public setValue(Landroid/view/View;F)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "view",
+            "v"
+        }
+    .end annotation
 
     .line 2
     iget-object p1, p0, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout$a;->a:Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout;
 
-    iget-object p1, p1, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout;->e:Landroid/view/ViewGroup$MarginLayoutParams;
+    iget-object p1, p1, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout;->u:Landroid/view/ViewGroup$MarginLayoutParams;
 
     invoke-static {p2}, Ljava/lang/Math;->round(F)I
 
@@ -103,15 +115,25 @@
     .line 3
     iget-object p0, p0, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout$a;->a:Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout;
 
-    iget-object p1, p0, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout;->e:Landroid/view/ViewGroup$MarginLayoutParams;
+    iget-object p1, p0, Lcom/android/camera/fragment/videoprompter/ArbitraryRectLayout;->u:Landroid/view/ViewGroup$MarginLayoutParams;
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
 .end method
 
 .method public bridge synthetic setValue(Ljava/lang/Object;F)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "view",
+            "v"
+        }
+    .end annotation
 
     .line 1
     check-cast p1, Landroid/view/View;

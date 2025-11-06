@@ -1,4 +1,4 @@
-.class Landroidx/recyclerview/widget/SpringRecyclerView$SpringFlinger;
+.class public Landroidx/recyclerview/widget/SpringRecyclerView$SpringFlinger;
 .super Landroidx/recyclerview/widget/RemixRecyclerView$ViewFlinger;
 .source "SourceFile"
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
+.field public final synthetic this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
 
 # direct methods
@@ -44,6 +44,7 @@
 .method public fling(II)V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$SpringFlinger;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     invoke-static {v0}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$100(Landroidx/recyclerview/widget/SpringRecyclerView;)Lmiuix/spring/view/SpringHelper;
@@ -54,6 +55,7 @@
 
     move-result v0
 
+    .line 2
     iget-object v1, p0, Landroidx/recyclerview/widget/SpringRecyclerView$SpringFlinger;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     invoke-static {v1}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$100(Landroidx/recyclerview/widget/SpringRecyclerView;)Lmiuix/spring/view/SpringHelper;
@@ -64,6 +66,7 @@
 
     move-result v1
 
+    .line 3
     iget-object v2, p0, Landroidx/recyclerview/widget/SpringRecyclerView$SpringFlinger;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     invoke-static {v2}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$200(Landroidx/recyclerview/widget/SpringRecyclerView;)Z
@@ -76,11 +79,13 @@
 
     if-eqz v1, :cond_1
 
+    .line 4
     :cond_0
     invoke-virtual {p0, p1, p2, v0, v1}, Landroidx/recyclerview/widget/SpringRecyclerView$SpringFlinger;->overFling(IIII)V
 
     goto :goto_0
 
+    .line 5
     :cond_1
     invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/RemixRecyclerView$ViewFlinger;->fling(II)V
 
@@ -91,33 +96,37 @@
 .method public notifyHorizontalEdgeReached(I)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$SpringFlinger;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$302(Landroidx/recyclerview/widget/SpringRecyclerView;Z)Z
 
+    .line 2
     iget-object v0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$SpringFlinger;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/SpringRecyclerView;->setScrollState(I)V
 
+    .line 3
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RemixRecyclerView$ViewFlinger;->resetFlingPosition()V
 
-    iget-object v0, p0, Landroidx/recyclerview/widget/RemixRecyclerView$ViewFlinger;->mOverScroller:Ldr/d;
+    .line 4
+    iget-object v0, p0, Landroidx/recyclerview/widget/RemixRecyclerView$ViewFlinger;->mOverScroller:Lk/u/b/c;
 
     neg-int p1, p1
 
     iget-object p0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$SpringFlinger;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getWidth()I
 
     move-result p0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1, p1, p0}, Ldr/d;->u(III)V
+    invoke-virtual {v0, v1, p1, p0}, Lk/u/b/c;->u(III)V
 
     return-void
 .end method
@@ -125,33 +134,37 @@
 .method public notifyVerticalEdgeReached(I)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$SpringFlinger;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$402(Landroidx/recyclerview/widget/SpringRecyclerView;Z)Z
 
+    .line 2
     iget-object v0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$SpringFlinger;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/SpringRecyclerView;->setScrollState(I)V
 
+    .line 3
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RemixRecyclerView$ViewFlinger;->resetFlingPosition()V
 
-    iget-object v0, p0, Landroidx/recyclerview/widget/RemixRecyclerView$ViewFlinger;->mOverScroller:Ldr/d;
+    .line 4
+    iget-object v0, p0, Landroidx/recyclerview/widget/RemixRecyclerView$ViewFlinger;->mOverScroller:Lk/u/b/c;
 
     neg-int p1, p1
 
     iget-object p0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$SpringFlinger;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getHeight()I
 
     move-result p0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1, p1, p0}, Ldr/d;->v(III)V
+    invoke-virtual {v0, v1, p1, p0}, Lk/u/b/c;->v(III)V
 
     return-void
 .end method
@@ -165,6 +178,7 @@
 
     move/from16 v2, p4
 
+    .line 1
     iget-object v3, v0, Landroidx/recyclerview/widget/SpringRecyclerView$SpringFlinger;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     const/4 v4, 0x1
@@ -183,6 +197,7 @@
     :goto_0
     invoke-static {v3, v6}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$302(Landroidx/recyclerview/widget/SpringRecyclerView;Z)Z
 
+    .line 2
     iget-object v3, v0, Landroidx/recyclerview/widget/SpringRecyclerView$SpringFlinger;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     if-eqz v2, :cond_1
@@ -195,14 +210,17 @@
     :goto_1
     invoke-static {v3, v4}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$402(Landroidx/recyclerview/widget/SpringRecyclerView;Z)Z
 
+    .line 3
     iget-object v3, v0, Landroidx/recyclerview/widget/SpringRecyclerView$SpringFlinger;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     const/4 v4, 0x2
 
     invoke-virtual {v3, v4}, Landroidx/recyclerview/widget/SpringRecyclerView;->setScrollState(I)V
 
+    .line 4
     invoke-virtual/range {p0 .. p0}, Landroidx/recyclerview/widget/RemixRecyclerView$ViewFlinger;->resetFlingPosition()V
 
+    .line 5
     invoke-static/range {p1 .. p1}, Ljava/lang/Integer;->signum(I)I
 
     move-result v3
@@ -241,6 +259,7 @@
 
     move v12, v5
 
+    .line 6
     :goto_2
     invoke-static/range {p2 .. p2}, Ljava/lang/Integer;->signum(I)I
 
@@ -273,8 +292,9 @@
 
     move v14, v5
 
+    .line 7
     :goto_4
-    iget-object v6, v0, Landroidx/recyclerview/widget/RemixRecyclerView$ViewFlinger;->mOverScroller:Ldr/d;
+    iget-object v6, v0, Landroidx/recyclerview/widget/RemixRecyclerView$ViewFlinger;->mOverScroller:Lk/u/b/c;
 
     const/4 v7, 0x0
 
@@ -282,13 +302,14 @@
 
     iget-object v1, v0, Landroidx/recyclerview/widget/SpringRecyclerView$SpringFlinger;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
-    invoke-virtual {v1}, Landroid/view/View;->getWidth()I
+    .line 8
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->getWidth()I
 
     move-result v15
 
     iget-object v1, v0, Landroidx/recyclerview/widget/SpringRecyclerView$SpringFlinger;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
-    invoke-virtual {v1}, Landroid/view/View;->getHeight()I
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->getHeight()I
 
     move-result v16
 
@@ -296,8 +317,10 @@
 
     move/from16 v10, p2
 
-    invoke-virtual/range {v6 .. v16}, Ldr/d;->e(IIIIIIIIII)V
+    .line 9
+    invoke-virtual/range {v6 .. v16}, Lk/u/b/c;->e(IIIIIIIIII)V
 
+    .line 10
     invoke-virtual/range {p0 .. p0}, Landroidx/recyclerview/widget/RemixRecyclerView$ViewFlinger;->postOnAnimation()V
 
     return-void
@@ -310,6 +333,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     iget-object v1, p0, Landroidx/recyclerview/widget/SpringRecyclerView$SpringFlinger;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     invoke-static {v1, v0}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$302(Landroidx/recyclerview/widget/SpringRecyclerView;Z)Z
@@ -317,10 +341,12 @@
     :cond_0
     if-eqz p2, :cond_1
 
+    .line 2
     iget-object v1, p0, Landroidx/recyclerview/widget/SpringRecyclerView$SpringFlinger;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     invoke-static {v1, v0}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$402(Landroidx/recyclerview/widget/SpringRecyclerView;Z)Z
 
+    .line 3
     :cond_1
     iget-object v0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$SpringFlinger;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
@@ -328,9 +354,11 @@
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/SpringRecyclerView;->setScrollState(I)V
 
+    .line 4
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RemixRecyclerView$ViewFlinger;->resetFlingPosition()V
 
-    iget-object v2, p0, Landroidx/recyclerview/widget/RemixRecyclerView$ViewFlinger;->mOverScroller:Ldr/d;
+    .line 5
+    iget-object v2, p0, Landroidx/recyclerview/widget/RemixRecyclerView$ViewFlinger;->mOverScroller:Lk/u/b/c;
 
     const/4 v3, 0x0
 
@@ -344,8 +372,9 @@
 
     move v7, v8
 
-    invoke-virtual/range {v2 .. v8}, Ldr/d;->C(IIIIII)Z
+    invoke-virtual/range {v2 .. v8}, Lk/u/b/c;->C(IIIIII)Z
 
+    .line 6
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RemixRecyclerView$ViewFlinger;->postOnAnimation()V
 
     return-void

@@ -4,116 +4,154 @@
 
 
 # static fields
-.field public static final o:I = 0x100
+.field private static final c:I = 0x100
 
-.field public static final p:I = 0x1
+.field private static final d:I = 0x1
 
-.field public static final q:I = 0x10
+.field private static final f:I = 0x10
 
 
 # instance fields
-.field public a:I
+.field private C1:F
 
-.field public b:I
+.field private K0:[I
 
-.field public c:I
+.field private g:I
 
-.field public d:I
+.field private j:I
 
-.field public e:I
+.field private k0:[I
 
-.field public f:I
+.field private k1:[I
 
-.field public g:Landroid/graphics/Paint;
+.field private m:I
 
-.field public h:Landroid/graphics/Path;
+.field private n:I
 
-.field public i:[I
+.field private p:I
 
-.field public j:[I
+.field private s:I
 
-.field public k:[I
+.field private t:Landroid/graphics/Paint;
 
-.field public l:[I
+.field private u:Landroid/graphics/Path;
 
-.field public m:Landroid/graphics/RectF;
+.field private v1:Landroid/graphics/RectF;
 
-.field public n:F
+.field private w:[I
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/16 p1, 0x11
 
-    iput p1, p0, Lcom/android/camera/ui/HistogramView;->a:I
+    .line 2
+    iput p1, p0, Lcom/android/camera/ui/HistogramView;->g:I
 
     const/high16 p1, -0x10000
 
-    iput p1, p0, Lcom/android/camera/ui/HistogramView;->b:I
+    .line 3
+    iput p1, p0, Lcom/android/camera/ui/HistogramView;->j:I
 
     const p1, -0xff0100
 
-    iput p1, p0, Lcom/android/camera/ui/HistogramView;->c:I
+    .line 4
+    iput p1, p0, Lcom/android/camera/ui/HistogramView;->m:I
 
     const p1, -0xffff01
 
-    iput p1, p0, Lcom/android/camera/ui/HistogramView;->d:I
+    .line 5
+    iput p1, p0, Lcom/android/camera/ui/HistogramView;->n:I
 
     const/4 p1, -0x1
 
-    iput p1, p0, Lcom/android/camera/ui/HistogramView;->e:I
+    .line 6
+    iput p1, p0, Lcom/android/camera/ui/HistogramView;->p:I
 
+    .line 7
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/HistogramView;->g:Landroid/graphics/Paint;
+    iput-object p1, p0, Lcom/android/camera/ui/HistogramView;->t:Landroid/graphics/Paint;
 
+    .line 8
     new-instance p1, Landroid/graphics/Path;
 
     invoke-direct {p1}, Landroid/graphics/Path;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/HistogramView;->h:Landroid/graphics/Path;
+    iput-object p1, p0, Lcom/android/camera/ui/HistogramView;->u:Landroid/graphics/Path;
 
     const/16 p1, 0x100
 
     new-array p2, p1, [I
 
-    iput-object p2, p0, Lcom/android/camera/ui/HistogramView;->i:[I
+    .line 9
+    iput-object p2, p0, Lcom/android/camera/ui/HistogramView;->w:[I
 
     new-array p2, p1, [I
 
-    iput-object p2, p0, Lcom/android/camera/ui/HistogramView;->j:[I
+    .line 10
+    iput-object p2, p0, Lcom/android/camera/ui/HistogramView;->k0:[I
 
     new-array p2, p1, [I
 
-    iput-object p2, p0, Lcom/android/camera/ui/HistogramView;->k:[I
+    .line 11
+    iput-object p2, p0, Lcom/android/camera/ui/HistogramView;->K0:[I
 
     new-array p1, p1, [I
 
-    iput-object p1, p0, Lcom/android/camera/ui/HistogramView;->l:[I
+    .line 12
+    iput-object p1, p0, Lcom/android/camera/ui/HistogramView;->k1:[I
 
+    .line 13
     new-instance p1, Landroid/graphics/RectF;
 
     invoke-direct {p1}, Landroid/graphics/RectF;-><init>()V
 
-    iput-object p1, p0, Lcom/android/camera/ui/HistogramView;->m:Landroid/graphics/RectF;
+    iput-object p1, p0, Lcom/android/camera/ui/HistogramView;->v1:Landroid/graphics/RectF;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(Landroid/graphics/Canvas;I[IILandroid/graphics/PorterDuff$Mode;)V
+.method private a(Landroid/graphics/Canvas;I[IILandroid/graphics/PorterDuff$Mode;)V
     .locals 17
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "!isAppSideColorHistogramStatsSupported"
         type = 0x0
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "canvas",
+            "max",
+            "histogram",
+            "color",
+            "mode"
+        }
     .end annotation
 
     move-object/from16 v0, p0
@@ -122,18 +160,21 @@
 
     move-object/from16 v2, p3
 
+    .line 1
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getWidth()I
 
     move-result v3
 
     int-to-float v3, v3
 
+    .line 2
     invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getHeight()I
 
     move-result v4
 
     int-to-float v4, v4
 
+    .line 3
     array-length v5, v2
 
     int-to-float v5, v5
@@ -146,29 +187,34 @@
 
     div-float v6, v4, v6
 
-    iget-object v7, v0, Lcom/android/camera/ui/HistogramView;->g:Landroid/graphics/Paint;
+    .line 4
+    iget-object v7, v0, Lcom/android/camera/ui/HistogramView;->t:Landroid/graphics/Paint;
 
     invoke-virtual {v7}, Landroid/graphics/Paint;->reset()V
 
-    iget-object v7, v0, Lcom/android/camera/ui/HistogramView;->g:Landroid/graphics/Paint;
+    .line 5
+    iget-object v7, v0, Lcom/android/camera/ui/HistogramView;->t:Landroid/graphics/Paint;
 
     const/4 v8, 0x1
 
     invoke-virtual {v7, v8}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    iget-object v7, v0, Lcom/android/camera/ui/HistogramView;->g:Landroid/graphics/Paint;
+    .line 6
+    iget-object v7, v0, Lcom/android/camera/ui/HistogramView;->t:Landroid/graphics/Paint;
 
     sget-object v9, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v7, v9}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    iget-object v7, v0, Lcom/android/camera/ui/HistogramView;->g:Landroid/graphics/Paint;
+    .line 7
+    iget-object v7, v0, Lcom/android/camera/ui/HistogramView;->t:Landroid/graphics/Paint;
 
     move/from16 v9, p4
 
     invoke-virtual {v7, v9}, Landroid/graphics/Paint;->setColor(I)V
 
-    iget-object v7, v0, Lcom/android/camera/ui/HistogramView;->g:Landroid/graphics/Paint;
+    .line 8
+    iget-object v7, v0, Lcom/android/camera/ui/HistogramView;->t:Landroid/graphics/Paint;
 
     new-instance v9, Landroid/graphics/PorterDuffXfermode;
 
@@ -178,43 +224,51 @@
 
     invoke-virtual {v7, v9}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    iget-object v7, v0, Lcom/android/camera/ui/HistogramView;->h:Landroid/graphics/Path;
+    .line 9
+    iget-object v7, v0, Lcom/android/camera/ui/HistogramView;->u:Landroid/graphics/Path;
 
     invoke-virtual {v7}, Landroid/graphics/Path;->reset()V
 
-    iget-object v7, v0, Lcom/android/camera/ui/HistogramView;->m:Landroid/graphics/RectF;
+    .line 10
+    iget-object v7, v0, Lcom/android/camera/ui/HistogramView;->v1:Landroid/graphics/RectF;
 
     const/4 v9, 0x0
 
     invoke-virtual {v7, v9, v9, v3, v4}, Landroid/graphics/RectF;->set(FFFF)V
 
-    iget-object v7, v0, Lcom/android/camera/ui/HistogramView;->h:Landroid/graphics/Path;
+    .line 11
+    iget-object v7, v0, Lcom/android/camera/ui/HistogramView;->u:Landroid/graphics/Path;
 
-    iget-object v10, v0, Lcom/android/camera/ui/HistogramView;->m:Landroid/graphics/RectF;
+    iget-object v10, v0, Lcom/android/camera/ui/HistogramView;->v1:Landroid/graphics/RectF;
 
-    iget v11, v0, Lcom/android/camera/ui/HistogramView;->n:F
+    iget v11, v0, Lcom/android/camera/ui/HistogramView;->C1:F
 
     sget-object v12, Landroid/graphics/Path$Direction;->CCW:Landroid/graphics/Path$Direction;
 
     invoke-virtual {v7, v10, v11, v11, v12}, Landroid/graphics/Path;->addRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Path$Direction;)V
 
-    iget-object v7, v0, Lcom/android/camera/ui/HistogramView;->h:Landroid/graphics/Path;
+    .line 12
+    iget-object v7, v0, Lcom/android/camera/ui/HistogramView;->u:Landroid/graphics/Path;
 
     invoke-virtual {v7}, Landroid/graphics/Path;->close()V
 
+    .line 13
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v7
 
-    iget-object v10, v0, Lcom/android/camera/ui/HistogramView;->h:Landroid/graphics/Path;
+    .line 14
+    iget-object v10, v0, Lcom/android/camera/ui/HistogramView;->u:Landroid/graphics/Path;
 
     invoke-virtual {v1, v10}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;)Z
 
-    iget-object v10, v0, Lcom/android/camera/ui/HistogramView;->h:Landroid/graphics/Path;
+    .line 15
+    iget-object v10, v0, Lcom/android/camera/ui/HistogramView;->u:Landroid/graphics/Path;
 
     invoke-virtual {v10}, Landroid/graphics/Path;->reset()V
 
-    iget-object v10, v0, Lcom/android/camera/ui/HistogramView;->h:Landroid/graphics/Path;
+    .line 16
+    iget-object v10, v0, Lcom/android/camera/ui/HistogramView;->u:Landroid/graphics/Path;
 
     invoke-virtual {v10, v9, v4}, Landroid/graphics/Path;->moveTo(FF)V
 
@@ -226,6 +280,7 @@
 
     move v11, v10
 
+    .line 17
     :goto_0
     array-length v14, v2
 
@@ -237,6 +292,7 @@
 
     add-float/2addr v14, v9
 
+    .line 18
     aget v15, v2, v10
 
     int-to-float v15, v15
@@ -257,14 +313,16 @@
 
     if-nez v11, :cond_0
 
-    iget-object v11, v0, Lcom/android/camera/ui/HistogramView;->h:Landroid/graphics/Path;
+    .line 19
+    iget-object v11, v0, Lcom/android/camera/ui/HistogramView;->u:Landroid/graphics/Path;
 
     invoke-virtual {v11, v14, v4}, Landroid/graphics/Path;->lineTo(FF)V
 
     move v11, v8
 
+    .line 20
     :cond_0
-    iget-object v13, v0, Lcom/android/camera/ui/HistogramView;->h:Landroid/graphics/Path;
+    iget-object v13, v0, Lcom/android/camera/ui/HistogramView;->u:Landroid/graphics/Path;
 
     invoke-virtual {v13, v14, v12}, Landroid/graphics/Path;->lineTo(FF)V
 
@@ -277,46 +335,71 @@
 
     goto :goto_0
 
+    .line 21
     :cond_2
-    iget-object v2, v0, Lcom/android/camera/ui/HistogramView;->h:Landroid/graphics/Path;
+    iget-object v2, v0, Lcom/android/camera/ui/HistogramView;->u:Landroid/graphics/Path;
 
     invoke-virtual {v2, v12, v4}, Landroid/graphics/Path;->lineTo(FF)V
 
-    iget-object v2, v0, Lcom/android/camera/ui/HistogramView;->h:Landroid/graphics/Path;
+    .line 22
+    iget-object v2, v0, Lcom/android/camera/ui/HistogramView;->u:Landroid/graphics/Path;
 
     invoke-virtual {v2, v3, v4}, Landroid/graphics/Path;->lineTo(FF)V
 
-    iget-object v2, v0, Lcom/android/camera/ui/HistogramView;->h:Landroid/graphics/Path;
+    .line 23
+    iget-object v2, v0, Lcom/android/camera/ui/HistogramView;->u:Landroid/graphics/Path;
 
     invoke-virtual {v2}, Landroid/graphics/Path;->close()V
 
-    iget-object v2, v0, Lcom/android/camera/ui/HistogramView;->h:Landroid/graphics/Path;
+    .line 24
+    iget-object v2, v0, Lcom/android/camera/ui/HistogramView;->u:Landroid/graphics/Path;
 
-    iget-object v0, v0, Lcom/android/camera/ui/HistogramView;->g:Landroid/graphics/Paint;
+    iget-object v0, v0, Lcom/android/camera/ui/HistogramView;->t:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v2, v0}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
+    .line 25
     invoke-virtual {v1, v7}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
     return-void
 .end method
 
-.method public final b(Landroid/graphics/Canvas;I[IILandroid/graphics/PorterDuff$Mode;)V
+.method private b(Landroid/graphics/Canvas;I[IILandroid/graphics/PorterDuff$Mode;)V
     .locals 7
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isAppSideColorHistogramStatsSupported"
         type = 0x0
     .end annotation
 
-    iget v0, p0, Lcom/android/camera/ui/HistogramView;->n:F
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "canvas",
+            "max",
+            "histogram",
+            "color",
+            "mode"
+        }
+    .end annotation
 
+    .line 1
+    iget v0, p0, Lcom/android/camera/ui/HistogramView;->C1:F
+
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v1
 
     int-to-float v1, v1
 
+    .line 3
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v2
@@ -325,6 +408,7 @@
 
     sub-float v3, v1, v0
 
+    .line 4
     array-length v4, p3
 
     const/4 v5, 0x1
@@ -339,25 +423,30 @@
 
     div-float p2, v2, p2
 
-    iget-object v4, p0, Lcom/android/camera/ui/HistogramView;->g:Landroid/graphics/Paint;
+    .line 5
+    iget-object v4, p0, Lcom/android/camera/ui/HistogramView;->t:Landroid/graphics/Paint;
 
     invoke-virtual {v4}, Landroid/graphics/Paint;->reset()V
 
-    iget-object v4, p0, Lcom/android/camera/ui/HistogramView;->g:Landroid/graphics/Paint;
+    .line 6
+    iget-object v4, p0, Lcom/android/camera/ui/HistogramView;->t:Landroid/graphics/Paint;
 
     invoke-virtual {v4, v5}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    iget-object v4, p0, Lcom/android/camera/ui/HistogramView;->g:Landroid/graphics/Paint;
+    .line 7
+    iget-object v4, p0, Lcom/android/camera/ui/HistogramView;->t:Landroid/graphics/Paint;
 
     sget-object v5, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v4, v5}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    iget-object v4, p0, Lcom/android/camera/ui/HistogramView;->g:Landroid/graphics/Paint;
+    .line 8
+    iget-object v4, p0, Lcom/android/camera/ui/HistogramView;->t:Landroid/graphics/Paint;
 
     invoke-virtual {v4, p4}, Landroid/graphics/Paint;->setColor(I)V
 
-    iget-object p4, p0, Lcom/android/camera/ui/HistogramView;->g:Landroid/graphics/Paint;
+    .line 9
+    iget-object p4, p0, Lcom/android/camera/ui/HistogramView;->t:Landroid/graphics/Paint;
 
     new-instance v4, Landroid/graphics/PorterDuffXfermode;
 
@@ -365,46 +454,55 @@
 
     invoke-virtual {p4, v4}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    iget-object p4, p0, Lcom/android/camera/ui/HistogramView;->h:Landroid/graphics/Path;
+    .line 10
+    iget-object p4, p0, Lcom/android/camera/ui/HistogramView;->u:Landroid/graphics/Path;
 
     invoke-virtual {p4}, Landroid/graphics/Path;->reset()V
 
-    iget-object p4, p0, Lcom/android/camera/ui/HistogramView;->m:Landroid/graphics/RectF;
+    .line 11
+    iget-object p4, p0, Lcom/android/camera/ui/HistogramView;->v1:Landroid/graphics/RectF;
 
     const/4 p5, 0x0
 
     invoke-virtual {p4, p5, p5, v1, v2}, Landroid/graphics/RectF;->set(FFFF)V
 
-    iget-object p4, p0, Lcom/android/camera/ui/HistogramView;->h:Landroid/graphics/Path;
+    .line 12
+    iget-object p4, p0, Lcom/android/camera/ui/HistogramView;->u:Landroid/graphics/Path;
 
-    iget-object v4, p0, Lcom/android/camera/ui/HistogramView;->m:Landroid/graphics/RectF;
+    iget-object v4, p0, Lcom/android/camera/ui/HistogramView;->v1:Landroid/graphics/RectF;
 
     sget-object v5, Landroid/graphics/Path$Direction;->CCW:Landroid/graphics/Path$Direction;
 
     invoke-virtual {p4, v4, p5, p5, v5}, Landroid/graphics/Path;->addRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Path$Direction;)V
 
-    iget-object p4, p0, Lcom/android/camera/ui/HistogramView;->h:Landroid/graphics/Path;
+    .line 13
+    iget-object p4, p0, Lcom/android/camera/ui/HistogramView;->u:Landroid/graphics/Path;
 
     invoke-virtual {p4}, Landroid/graphics/Path;->close()V
 
+    .line 14
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     move-result p4
 
-    iget-object v4, p0, Lcom/android/camera/ui/HistogramView;->h:Landroid/graphics/Path;
+    .line 15
+    iget-object v4, p0, Lcom/android/camera/ui/HistogramView;->u:Landroid/graphics/Path;
 
     invoke-virtual {p1, v4}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;)Z
 
-    iget-object v4, p0, Lcom/android/camera/ui/HistogramView;->h:Landroid/graphics/Path;
+    .line 16
+    iget-object v4, p0, Lcom/android/camera/ui/HistogramView;->u:Landroid/graphics/Path;
 
     invoke-virtual {v4}, Landroid/graphics/Path;->reset()V
 
-    iget-object v4, p0, Lcom/android/camera/ui/HistogramView;->h:Landroid/graphics/Path;
+    .line 17
+    iget-object v4, p0, Lcom/android/camera/ui/HistogramView;->u:Landroid/graphics/Path;
 
     invoke-virtual {v4, p5, v2}, Landroid/graphics/Path;->moveTo(FF)V
 
     const/4 p5, 0x0
 
+    .line 18
     :goto_0
     array-length v4, p3
 
@@ -416,6 +514,7 @@
 
     add-float/2addr v4, v0
 
+    .line 19
     aget v5, p3, p5
 
     int-to-float v5, v5
@@ -424,7 +523,8 @@
 
     sub-float v5, v2, v5
 
-    iget-object v6, p0, Lcom/android/camera/ui/HistogramView;->h:Landroid/graphics/Path;
+    .line 20
+    iget-object v6, p0, Lcom/android/camera/ui/HistogramView;->u:Landroid/graphics/Path;
 
     invoke-virtual {v6, v4, v5}, Landroid/graphics/Path;->lineTo(FF)V
 
@@ -432,29 +532,36 @@
 
     goto :goto_0
 
+    .line 21
     :cond_0
-    iget-object p2, p0, Lcom/android/camera/ui/HistogramView;->h:Landroid/graphics/Path;
+    iget-object p2, p0, Lcom/android/camera/ui/HistogramView;->u:Landroid/graphics/Path;
 
     invoke-virtual {p2, v1, v2}, Landroid/graphics/Path;->lineTo(FF)V
 
-    iget-object p2, p0, Lcom/android/camera/ui/HistogramView;->h:Landroid/graphics/Path;
+    .line 22
+    iget-object p2, p0, Lcom/android/camera/ui/HistogramView;->u:Landroid/graphics/Path;
 
     invoke-virtual {p2}, Landroid/graphics/Path;->close()V
 
-    iget-object p2, p0, Lcom/android/camera/ui/HistogramView;->h:Landroid/graphics/Path;
+    .line 23
+    iget-object p2, p0, Lcom/android/camera/ui/HistogramView;->u:Landroid/graphics/Path;
 
-    iget-object p0, p0, Lcom/android/camera/ui/HistogramView;->g:Landroid/graphics/Paint;
+    iget-object p0, p0, Lcom/android/camera/ui/HistogramView;->t:Landroid/graphics/Paint;
 
     invoke-virtual {p1, p2, p0}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
+    .line 24
     invoke-virtual {p1, p4}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
     return-void
 .end method
 
+
+# virtual methods
 .method public c()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     return-void
@@ -463,20 +570,25 @@
 .method public d()V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     const/4 v1, -0x1
 
+    .line 2
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
+    .line 3
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
+    .line 4
     invoke-virtual {p0, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     const/4 v0, 0x0
 
+    .line 5
     invoke-virtual {p0, v0}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     return-void
@@ -484,10 +596,22 @@
 
 .method public e(IZ)V
     .locals 2
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
-    iget v0, p0, Lcom/android/camera/ui/HistogramView;->f:I
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "orientation",
+            "animation"
+        }
+    .end annotation
+
+    .line 1
+    iget v0, p0, Lcom/android/camera/ui/HistogramView;->s:I
 
     if-eq v0, p1, :cond_2
 
@@ -504,11 +628,13 @@
     :cond_0
     move v0, p1
 
+    .line 2
     :goto_0
-    iput p1, p0, Lcom/android/camera/ui/HistogramView;->f:I
+    iput p1, p0, Lcom/android/camera/ui/HistogramView;->s:I
 
     if-eqz p2, :cond_1
 
+    .line 3
     invoke-static {p0}, Landroidx/core/view/ViewCompat;->animate(Landroid/view/View;)Landroidx/core/view/ViewPropertyAnimatorCompat;
 
     move-result-object p0
@@ -528,6 +654,7 @@
     :cond_1
     int-to-float p1, p1
 
+    .line 4
     invoke-virtual {p0, p1}, Landroid/view/View;->setRotation(F)V
 
     :cond_2
@@ -537,34 +664,53 @@
 
 .method public f([I)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "y"
+        }
+    .end annotation
 
-    iget-object p0, p0, Lcom/android/camera/ui/HistogramView;->i:[I
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/ui/HistogramView;->w:[I
 
-    const/16 v0, 0x100
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    const/16 v1, 0x100
 
-    invoke-static {p1, v1, p0, v1, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-static {p1, v0, p0, v0, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     return-void
 .end method
 
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 9
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "canvas"
+        }
+    .end annotation
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 1
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lid/b;->F2()Z
+    invoke-virtual {v0}, Ld/k/a/b;->y2()Z
 
     move-result v0
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 2
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lid/b;->F2()Z
+    invoke-virtual {v1}, Ld/k/a/b;->y2()Z
 
     move-result v1
 
@@ -585,7 +731,8 @@
     :goto_1
     if-ge v0, v1, :cond_1
 
-    iget-object v3, p0, Lcom/android/camera/ui/HistogramView;->i:[I
+    .line 3
+    iget-object v3, p0, Lcom/android/camera/ui/HistogramView;->w:[I
 
     aget v3, v3, v0
 
@@ -593,7 +740,8 @@
 
     move-result v3
 
-    iget-object v4, p0, Lcom/android/camera/ui/HistogramView;->j:[I
+    .line 4
+    iget-object v4, p0, Lcom/android/camera/ui/HistogramView;->k0:[I
 
     aget v4, v4, v0
 
@@ -601,7 +749,8 @@
 
     move-result v3
 
-    iget-object v4, p0, Lcom/android/camera/ui/HistogramView;->k:[I
+    .line 5
+    iget-object v4, p0, Lcom/android/camera/ui/HistogramView;->K0:[I
 
     aget v4, v4, v0
 
@@ -609,7 +758,8 @@
 
     move-result v3
 
-    iget-object v4, p0, Lcom/android/camera/ui/HistogramView;->l:[I
+    .line 6
+    iget-object v4, p0, Lcom/android/camera/ui/HistogramView;->k1:[I
 
     aget v4, v4, v0
 
@@ -621,26 +771,29 @@
 
     goto :goto_1
 
+    .line 7
     :cond_1
-    iget v0, p0, Lcom/android/camera/ui/HistogramView;->a:I
+    iget v0, p0, Lcom/android/camera/ui/HistogramView;->g:I
 
     and-int/2addr v0, v2
 
     if-eqz v0, :cond_3
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 8
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lid/b;->F2()Z
+    invoke-virtual {v0}, Ld/k/a/b;->y2()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    iget-object v6, p0, Lcom/android/camera/ui/HistogramView;->i:[I
+    .line 9
+    iget-object v6, p0, Lcom/android/camera/ui/HistogramView;->w:[I
 
-    iget v7, p0, Lcom/android/camera/ui/HistogramView;->e:I
+    iget v7, p0, Lcom/android/camera/ui/HistogramView;->p:I
 
     sget-object v8, Landroid/graphics/PorterDuff$Mode;->SCREEN:Landroid/graphics/PorterDuff$Mode;
 
@@ -648,14 +801,15 @@
 
     move-object v4, p1
 
-    invoke-virtual/range {v3 .. v8}, Lcom/android/camera/ui/HistogramView;->b(Landroid/graphics/Canvas;I[IILandroid/graphics/PorterDuff$Mode;)V
+    invoke-direct/range {v3 .. v8}, Lcom/android/camera/ui/HistogramView;->b(Landroid/graphics/Canvas;I[IILandroid/graphics/PorterDuff$Mode;)V
 
     goto :goto_2
 
+    .line 10
     :cond_2
-    iget-object v6, p0, Lcom/android/camera/ui/HistogramView;->i:[I
+    iget-object v6, p0, Lcom/android/camera/ui/HistogramView;->w:[I
 
-    iget v7, p0, Lcom/android/camera/ui/HistogramView;->e:I
+    iget v7, p0, Lcom/android/camera/ui/HistogramView;->p:I
 
     sget-object v8, Landroid/graphics/PorterDuff$Mode;->SCREEN:Landroid/graphics/PorterDuff$Mode;
 
@@ -663,7 +817,7 @@
 
     move-object v4, p1
 
-    invoke-virtual/range {v3 .. v8}, Lcom/android/camera/ui/HistogramView;->a(Landroid/graphics/Canvas;I[IILandroid/graphics/PorterDuff$Mode;)V
+    invoke-direct/range {v3 .. v8}, Lcom/android/camera/ui/HistogramView;->a(Landroid/graphics/Canvas;I[IILandroid/graphics/PorterDuff$Mode;)V
 
     :cond_3
     :goto_2
@@ -672,8 +826,17 @@
 
 .method public setRoundRadius(F)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "Radius"
+        }
+    .end annotation
 
-    iput p1, p0, Lcom/android/camera/ui/HistogramView;->n:F
+    .line 1
+    iput p1, p0, Lcom/android/camera/ui/HistogramView;->C1:F
 
     return-void
 .end method

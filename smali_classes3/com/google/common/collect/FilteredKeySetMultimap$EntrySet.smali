@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/FilteredKeySetMultimap$EntrySet;
+.class public Lcom/google/common/collect/FilteredKeySetMultimap$EntrySet;
 .super Lcom/google/common/collect/FilteredKeyMultimap$Entries;
 .source "SourceFile"
 
@@ -31,6 +31,7 @@
 .method public constructor <init>(Lcom/google/common/collect/FilteredKeySetMultimap;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/FilteredKeyMultimap$Entries;-><init>(Lcom/google/common/collect/FilteredKeyMultimap;)V
 
     return-void
@@ -45,6 +46,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/common/collect/Sets;->equalsImpl(Ljava/util/Set;Ljava/lang/Object;)Z
 
     move-result p0
@@ -55,6 +57,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/collect/Sets;->hashCodeImpl(Ljava/util/Set;)I
 
     move-result p0

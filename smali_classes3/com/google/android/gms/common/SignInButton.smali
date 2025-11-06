@@ -156,11 +156,12 @@
 .method private final zaa(Landroid/content/Context;)V
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/SignInButton;->zac:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->removeView(Landroid/view/View;)V
 
     :cond_0
     :try_start_0
@@ -168,6 +169,7 @@
 
     iget v1, p0, Lcom/google/android/gms/common/SignInButton;->zab:I
 
+    .line 2
     invoke-static {p1, v0, v1}, Lcom/google/android/gms/common/internal/zaz;->zaa(Landroid/content/Context;II)Landroid/view/View;
 
     move-result-object v0
@@ -183,6 +185,7 @@
 
     const-string v1, "Sign in button not found, using placeholder instead"
 
+    .line 3
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     iget v0, p0, Lcom/google/android/gms/common/SignInButton;->zaa:I
@@ -193,8 +196,10 @@
 
     const/4 v3, 0x0
 
+    .line 4
     invoke-direct {v2, p1, v3}, Lcom/google/android/gms/common/internal/zaaa;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
+    .line 5
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -203,14 +208,17 @@
 
     iput-object v2, p0, Lcom/google/android/gms/common/SignInButton;->zac:Landroid/view/View;
 
+    .line 6
     :goto_0
     iget-object p1, p0, Lcom/google/android/gms/common/SignInButton;->zac:Landroid/view/View;
 
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    .line 7
+    invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
     iget-object p1, p0, Lcom/google/android/gms/common/SignInButton;->zac:Landroid/view/View;
 
-    invoke-virtual {p0}, Landroid/view/View;->isEnabled()Z
+    .line 8
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->isEnabled()Z
 
     move-result v0
 
@@ -218,6 +226,7 @@
 
     iget-object p1, p0, Lcom/google/android/gms/common/SignInButton;->zac:Landroid/view/View;
 
+    .line 9
     invoke-virtual {p1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     return-void
@@ -232,6 +241,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/SignInButton;->zad:Landroid/view/View$OnClickListener;
 
     if-eqz v0, :cond_0
@@ -249,6 +259,7 @@
 .method public setColorScheme(I)V
     .locals 1
 
+    .line 1
     iget v0, p0, Lcom/google/android/gms/common/SignInButton;->zaa:I
 
     invoke-virtual {p0, v0, p1}, Lcom/google/android/gms/common/SignInButton;->setStyle(II)V
@@ -259,10 +270,12 @@
 .method public setEnabled(Z)V
     .locals 0
 
-    invoke-super {p0, p1}, Landroid/view/View;->setEnabled(Z)V
+    .line 1
+    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->setEnabled(Z)V
 
     iget-object p0, p0, Lcom/google/android/gms/common/SignInButton;->zac:Landroid/view/View;
 
+    .line 2
     invoke-virtual {p0, p1}, Landroid/view/View;->setEnabled(Z)V
 
     return-void
@@ -275,6 +288,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/gms/common/SignInButton;->zad:Landroid/view/View$OnClickListener;
 
     iget-object p1, p0, Lcom/google/android/gms/common/SignInButton;->zac:Landroid/view/View;
@@ -296,6 +310,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget p1, p0, Lcom/google/android/gms/common/SignInButton;->zaa:I
 
     iget v0, p0, Lcom/google/android/gms/common/SignInButton;->zab:I
@@ -308,6 +323,7 @@
 .method public setSize(I)V
     .locals 1
 
+    .line 1
     iget v0, p0, Lcom/google/android/gms/common/SignInButton;->zab:I
 
     invoke-virtual {p0, p1, v0}, Lcom/google/android/gms/common/SignInButton;->setStyle(II)V
@@ -323,7 +339,7 @@
 
     iput p2, p0, Lcom/google/android/gms/common/SignInButton;->zab:I
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object p1
 

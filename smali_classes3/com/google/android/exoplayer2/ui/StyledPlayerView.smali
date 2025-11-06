@@ -206,7 +206,7 @@
     iput-object v3, v0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->componentListener:Lcom/google/android/exoplayer2/ui/StyledPlayerView$ComponentListener;
 
     .line 5
-    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->isInEditMode()Z
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/FrameLayout;->isInEditMode()Z
 
     move-result v4
 
@@ -262,7 +262,7 @@
     if-lt v1, v3, :cond_0
 
     .line 19
-    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -272,7 +272,7 @@
 
     .line 20
     :cond_0
-    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -280,7 +280,7 @@
 
     .line 21
     :goto_0
-    invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
     return-void
 
@@ -288,9 +288,9 @@
     :cond_1
     sget v4, Lcom/google/android/exoplayer2/ui/R$layout;->exo_styled_player_view:I
 
-    const/4 v7, 0x1
+    const/16 v7, 0x1388
 
-    const/16 v8, 0x1388
+    const/4 v8, 0x1
 
     if-eqz v2, :cond_2
 
@@ -332,7 +332,7 @@
     .line 29
     sget v12, Lcom/google/android/exoplayer2/ui/R$styleable;->StyledPlayerView_use_artwork:I
 
-    invoke-virtual {v9, v12, v7}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    invoke-virtual {v9, v12, v8}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v12
 
@@ -347,14 +347,14 @@
     .line 32
     sget v14, Lcom/google/android/exoplayer2/ui/R$styleable;->StyledPlayerView_use_controller:I
 
-    invoke-virtual {v9, v14, v7}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    invoke-virtual {v9, v14, v8}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v14
 
     .line 33
     sget v15, Lcom/google/android/exoplayer2/ui/R$styleable;->StyledPlayerView_surface_type:I
 
-    invoke-virtual {v9, v15, v7}, Landroid/content/res/TypedArray;->getInt(II)I
+    invoke-virtual {v9, v15, v8}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v15
 
@@ -369,15 +369,15 @@
     sget v6, Lcom/google/android/exoplayer2/ui/R$styleable;->StyledPlayerView_show_timeout:I
 
     .line 36
-    invoke-virtual {v9, v6, v8}, Landroid/content/res/TypedArray;->getInt(II)I
+    invoke-virtual {v9, v6, v7}, Landroid/content/res/TypedArray;->getInt(II)I
 
-    move-result v8
+    move-result v7
 
     .line 37
     sget v6, Lcom/google/android/exoplayer2/ui/R$styleable;->StyledPlayerView_hide_on_touch:I
 
     .line 38
-    invoke-virtual {v9, v6, v7}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    invoke-virtual {v9, v6, v8}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v6
 
@@ -387,20 +387,20 @@
     sget v4, Lcom/google/android/exoplayer2/ui/R$styleable;->StyledPlayerView_auto_show:I
 
     .line 40
-    invoke-virtual {v9, v4, v7}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    invoke-virtual {v9, v4, v8}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v4
 
     .line 41
-    sget v7, Lcom/google/android/exoplayer2/ui/R$styleable;->StyledPlayerView_show_buffering:I
+    sget v8, Lcom/google/android/exoplayer2/ui/R$styleable;->StyledPlayerView_show_buffering:I
 
     move/from16 v17, v4
 
     const/4 v4, 0x0
 
-    invoke-virtual {v9, v7, v4}, Landroid/content/res/TypedArray;->getInteger(II)I
+    invoke-virtual {v9, v8, v4}, Landroid/content/res/TypedArray;->getInteger(II)I
 
-    move-result v7
+    move-result v8
 
     .line 42
     sget v4, Lcom/google/android/exoplayer2/ui/R$styleable;->StyledPlayerView_keep_content_on_player_reset:I
@@ -453,9 +453,9 @@
 
     move/from16 v4, p3
 
-    move/from16 p3, v8
+    move/from16 p3, v7
 
-    move/from16 v8, v19
+    move/from16 v7, v19
 
     goto :goto_1
 
@@ -468,15 +468,15 @@
     throw v0
 
     :cond_2
-    move/from16 p3, v8
+    move/from16 p3, v7
 
     const/4 v5, 0x1
 
     const/4 v6, 0x0
 
-    const/4 v7, 0x0
+    const/4 v7, 0x1
 
-    const/4 v8, 0x1
+    const/4 v8, 0x0
 
     const/4 v9, 0x1
 
@@ -503,12 +503,12 @@
     const/high16 v4, 0x40000
 
     .line 49
-    invoke-virtual {v0, v4}, Landroid/view/ViewGroup;->setDescendantFocusability(I)V
+    invoke-virtual {v0, v4}, Landroid/widget/FrameLayout;->setDescendantFocusability(I)V
 
     .line 50
     sget v4, Lcom/google/android/exoplayer2/ui/R$id;->exo_content_frame:I
 
-    invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v4}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v4
 
@@ -525,7 +525,7 @@
     :cond_3
     sget v6, Lcom/google/android/exoplayer2/ui/R$id;->exo_shutter:I
 
-    invoke-virtual {v0, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v6}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v6
 
@@ -556,16 +556,13 @@
 
     const/4 v11, 0x3
 
-    .line 55
-    const-class v12, Landroid/content/Context;
-
     if-eq v10, v11, :cond_6
 
     const/4 v11, 0x4
 
     if-eq v10, v11, :cond_5
 
-    .line 56
+    .line 55
     new-instance v10, Landroid/view/SurfaceView;
 
     invoke-direct {v10, v1}, Landroid/view/SurfaceView;-><init>(Landroid/content/Context;)V
@@ -578,21 +575,23 @@
     :try_start_1
     const-string v10, "com.google.android.exoplayer2.video.VideoDecoderGLSurfaceView"
 
-    .line 57
+    .line 56
     invoke-static {v10}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v10
 
     const/4 v11, 0x1
 
-    new-array v15, v11, [Ljava/lang/Class;
+    new-array v12, v11, [Ljava/lang/Class;
+
+    .line 57
+    const-class v15, Landroid/content/Context;
 
     const/16 v16, 0x0
 
-    aput-object v12, v15, v16
+    aput-object v15, v12, v16
 
-    .line 58
-    invoke-virtual {v10, v15}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+    invoke-virtual {v10, v12}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object v10
 
@@ -615,7 +614,7 @@
     :catch_0
     move-exception v0
 
-    .line 59
+    .line 58
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "video_decoder_gl_surface_view requires an ExoPlayer dependency"
@@ -628,21 +627,23 @@
     :try_start_2
     const-string v10, "com.google.android.exoplayer2.video.spherical.SphericalGLSurfaceView"
 
-    .line 60
+    .line 59
     invoke-static {v10}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v10
 
     const/4 v11, 0x1
 
-    new-array v15, v11, [Ljava/lang/Class;
+    new-array v12, v11, [Ljava/lang/Class;
+
+    .line 60
+    const-class v15, Landroid/content/Context;
 
     const/16 v16, 0x0
 
-    aput-object v12, v15, v16
+    aput-object v15, v12, v16
 
-    .line 61
-    invoke-virtual {v10, v15}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+    invoke-virtual {v10, v12}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object v10
 
@@ -667,7 +668,7 @@
     :catch_1
     move-exception v0
 
-    .line 62
+    .line 61
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "spherical_gl_surface_view requires an ExoPlayer dependency"
@@ -676,7 +677,7 @@
 
     throw v1
 
-    .line 63
+    .line 62
     :cond_7
     new-instance v10, Landroid/view/TextureView;
 
@@ -687,28 +688,28 @@
     :goto_2
     const/4 v10, 0x0
 
-    .line 64
+    .line 63
     :goto_3
     iget-object v11, v0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->surfaceView:Landroid/view/View;
 
     invoke-virtual {v11, v6}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 65
+    .line 64
     iget-object v6, v0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->surfaceView:Landroid/view/View;
 
     invoke-virtual {v6, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 66
+    .line 65
     iget-object v6, v0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->surfaceView:Landroid/view/View;
 
     const/4 v11, 0x0
 
     invoke-virtual {v6, v11}, Landroid/view/View;->setClickable(Z)V
 
-    .line 67
+    .line 66
     iget-object v6, v0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->surfaceView:Landroid/view/View;
 
-    invoke-virtual {v4, v6, v11}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
+    invoke-virtual {v4, v6, v11}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;I)V
 
     move v4, v10
 
@@ -717,19 +718,19 @@
     :cond_8
     const/4 v4, 0x0
 
-    .line 68
+    .line 67
     iput-object v4, v0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->surfaceView:Landroid/view/View;
 
     const/4 v4, 0x0
 
-    .line 69
+    .line 68
     :goto_4
     iput-boolean v4, v0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->surfaceViewIgnoresVideoAspectRatio:Z
 
-    .line 70
+    .line 69
     sget v4, Lcom/google/android/exoplayer2/ui/R$id;->exo_ad_overlay:I
 
-    invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v4}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v4
 
@@ -737,10 +738,10 @@
 
     iput-object v4, v0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->adOverlayFrameLayout:Landroid/widget/FrameLayout;
 
-    .line 71
+    .line 70
     sget v4, Lcom/google/android/exoplayer2/ui/R$id;->exo_overlay:I
 
-    invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v4}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v4
 
@@ -748,10 +749,10 @@
 
     iput-object v4, v0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->overlayFrameLayout:Landroid/widget/FrameLayout;
 
-    .line 72
+    .line 71
     sget v4, Lcom/google/android/exoplayer2/ui/R$id;->exo_artwork:I
 
-    invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v4}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v4
 
@@ -770,14 +771,14 @@
     :cond_9
     const/4 v4, 0x0
 
-    .line 73
+    .line 72
     :goto_5
     iput-boolean v4, v0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->useArtwork:Z
 
     if-eqz v14, :cond_a
 
-    .line 74
-    invoke-virtual/range {p0 .. p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    .line 73
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
@@ -787,11 +788,11 @@
 
     iput-object v4, v0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->defaultArtwork:Landroid/graphics/drawable/Drawable;
 
-    .line 75
+    .line 74
     :cond_a
     sget v4, Lcom/google/android/exoplayer2/ui/R$id;->exo_subtitles:I
 
-    invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v4}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v4
 
@@ -801,17 +802,17 @@
 
     if-eqz v4, :cond_b
 
-    .line 76
+    .line 75
     invoke-virtual {v4}, Lcom/google/android/exoplayer2/ui/SubtitleView;->setUserDefaultStyle()V
 
-    .line 77
+    .line 76
     invoke-virtual {v4}, Lcom/google/android/exoplayer2/ui/SubtitleView;->setUserDefaultTextSize()V
 
-    .line 78
+    .line 77
     :cond_b
     sget v4, Lcom/google/android/exoplayer2/ui/R$id;->exo_buffering:I
 
-    invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v4}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v4
 
@@ -821,17 +822,17 @@
 
     if-eqz v4, :cond_c
 
-    .line 79
+    .line 78
     invoke-virtual {v4, v6}, Landroid/view/View;->setVisibility(I)V
 
-    .line 80
+    .line 79
     :cond_c
-    iput v7, v0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->showBuffering:I
+    iput v8, v0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->showBuffering:I
 
-    .line 81
+    .line 80
     sget v4, Lcom/google/android/exoplayer2/ui/R$id;->exo_error_message:I
 
-    invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v4}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v4
 
@@ -841,29 +842,29 @@
 
     if-eqz v4, :cond_d
 
-    .line 82
-    invoke-virtual {v4, v6}, Landroid/view/View;->setVisibility(I)V
+    .line 81
+    invoke-virtual {v4, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 83
+    .line 82
     :cond_d
     sget v4, Lcom/google/android/exoplayer2/ui/R$id;->exo_controller:I
 
-    invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v4}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v6
 
     check-cast v6, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
-    .line 84
-    sget v7, Lcom/google/android/exoplayer2/ui/R$id;->exo_controller_placeholder:I
+    .line 83
+    sget v8, Lcom/google/android/exoplayer2/ui/R$id;->exo_controller_placeholder:I
 
-    invoke-virtual {v0, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v8}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
-    move-result-object v7
+    move-result-object v8
 
     if-eqz v6, :cond_e
 
-    .line 85
+    .line 84
     iput-object v6, v0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     const/4 v10, 0x0
@@ -871,9 +872,9 @@
     goto :goto_6
 
     :cond_e
-    if-eqz v7, :cond_f
+    if-eqz v8, :cond_f
 
-    .line 86
+    .line 85
     new-instance v6, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     const/4 v10, 0x0
@@ -884,32 +885,32 @@
 
     iput-object v6, v0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
-    .line 87
-    invoke-virtual {v6, v4}, Landroid/view/View;->setId(I)V
+    .line 86
+    invoke-virtual {v6, v4}, Landroid/widget/FrameLayout;->setId(I)V
 
-    .line 88
-    invoke-virtual {v7}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    .line 87
+    invoke-virtual {v8}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
-    invoke-virtual {v6, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v6, v1}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 89
-    invoke-virtual {v7}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    .line 88
+    invoke-virtual {v8}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
 
     check-cast v1, Landroid/view/ViewGroup;
 
-    .line 90
-    invoke-virtual {v1, v7}, Landroid/view/ViewGroup;->indexOfChild(Landroid/view/View;)I
+    .line 89
+    invoke-virtual {v1, v8}, Landroid/view/ViewGroup;->indexOfChild(Landroid/view/View;)I
 
     move-result v2
 
-    .line 91
-    invoke-virtual {v1, v7}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+    .line 90
+    invoke-virtual {v1, v8}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 92
+    .line 91
     invoke-virtual {v1, v6, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
 
     goto :goto_6
@@ -919,10 +920,10 @@
 
     const/4 v11, 0x0
 
-    .line 93
+    .line 92
     iput-object v11, v0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
-    .line 94
+    .line 93
     :goto_6
     iget-object v1, v0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
@@ -938,14 +939,14 @@
     :goto_7
     iput v4, v0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controllerShowTimeoutMs:I
 
-    .line 95
+    .line 94
     iput-boolean v9, v0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controllerHideOnTouch:Z
 
-    .line 96
+    .line 95
     iput-boolean v5, v0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controllerAutoShow:Z
 
-    .line 97
-    iput-boolean v8, v0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controllerHideDuringAds:Z
+    .line 96
+    iput-boolean v7, v0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controllerHideDuringAds:Z
 
     if-eqz v17, :cond_11
 
@@ -958,16 +959,16 @@
     :cond_11
     move v6, v10
 
-    .line 98
+    .line 97
     :goto_8
     iput-boolean v6, v0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->useController:Z
 
     if-eqz v1, :cond_12
 
-    .line 99
+    .line 98
     invoke-virtual {v1}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->hideImmediately()V
 
-    .line 100
+    .line 99
     iget-object v1, v0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-virtual {v1, v3}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->addVisibilityListener(Lcom/google/android/exoplayer2/ui/StyledPlayerControlView$VisibilityListener;)V
@@ -977,10 +978,10 @@
 
     const/4 v1, 0x1
 
-    .line 101
-    invoke-virtual {v0, v1}, Landroid/view/View;->setClickable(Z)V
+    .line 100
+    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setClickable(Z)V
 
-    .line 102
+    .line 101
     :cond_13
     invoke-direct/range {p0 .. p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->updateContentDescription()V
 
@@ -990,6 +991,7 @@
 .method public static synthetic access$000(Lcom/google/android/exoplayer2/ui/StyledPlayerView;)Lcom/google/android/exoplayer2/ui/SubtitleView;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->subtitleView:Lcom/google/android/exoplayer2/ui/SubtitleView;
 
     return-object p0
@@ -998,6 +1000,7 @@
 .method public static synthetic access$100(Lcom/google/android/exoplayer2/ui/StyledPlayerView;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->updateAspectRatio()V
 
     return-void
@@ -1006,6 +1009,7 @@
 .method public static synthetic access$1000(Lcom/google/android/exoplayer2/ui/StyledPlayerView;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->textureViewRotation:I
 
     return p0
@@ -1014,6 +1018,7 @@
 .method public static synthetic access$1100(Landroid/view/TextureView;I)V
     .locals 0
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->applyTextureViewRotation(Landroid/view/TextureView;I)V
 
     return-void
@@ -1022,6 +1027,7 @@
 .method public static synthetic access$1200(Lcom/google/android/exoplayer2/ui/StyledPlayerView;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->toggleControllerVisibility()V
 
     return-void
@@ -1030,6 +1036,7 @@
 .method public static synthetic access$1300(Lcom/google/android/exoplayer2/ui/StyledPlayerView;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->updateContentDescription()V
 
     return-void
@@ -1038,6 +1045,7 @@
 .method public static synthetic access$1400(Lcom/google/android/exoplayer2/ui/StyledPlayerView;)Lcom/google/android/exoplayer2/ui/StyledPlayerView$ControllerVisibilityListener;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controllerVisibilityListener:Lcom/google/android/exoplayer2/ui/StyledPlayerView$ControllerVisibilityListener;
 
     return-object p0
@@ -1046,6 +1054,7 @@
 .method public static synthetic access$1500(Lcom/google/android/exoplayer2/ui/StyledPlayerView;)Lcom/google/android/exoplayer2/ui/StyledPlayerView$FullscreenButtonClickListener;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->fullscreenButtonClickListener:Lcom/google/android/exoplayer2/ui/StyledPlayerView$FullscreenButtonClickListener;
 
     return-object p0
@@ -1054,6 +1063,7 @@
 .method public static synthetic access$200(Lcom/google/android/exoplayer2/ui/StyledPlayerView;)Landroid/view/View;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->shutterView:Landroid/view/View;
 
     return-object p0
@@ -1062,6 +1072,7 @@
 .method public static synthetic access$300(Lcom/google/android/exoplayer2/ui/StyledPlayerView;)Lcom/google/android/exoplayer2/Player;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->player:Lcom/google/android/exoplayer2/Player;
 
     return-object p0
@@ -1070,6 +1081,7 @@
 .method public static synthetic access$400(Lcom/google/android/exoplayer2/ui/StyledPlayerView;Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->updateForCurrentTrackSelections(Z)V
 
     return-void
@@ -1078,6 +1090,7 @@
 .method public static synthetic access$500(Lcom/google/android/exoplayer2/ui/StyledPlayerView;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->updateBuffering()V
 
     return-void
@@ -1086,6 +1099,7 @@
 .method public static synthetic access$600(Lcom/google/android/exoplayer2/ui/StyledPlayerView;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->updateErrorMessage()V
 
     return-void
@@ -1094,6 +1108,7 @@
 .method public static synthetic access$700(Lcom/google/android/exoplayer2/ui/StyledPlayerView;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->updateControllerVisibility()V
 
     return-void
@@ -1102,6 +1117,7 @@
 .method public static synthetic access$800(Lcom/google/android/exoplayer2/ui/StyledPlayerView;)Z
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->isPlayingAd()Z
 
     move-result p0
@@ -1112,6 +1128,7 @@
 .method public static synthetic access$900(Lcom/google/android/exoplayer2/ui/StyledPlayerView;)Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controllerHideDuringAds:Z
 
     return p0
@@ -1120,17 +1137,20 @@
 .method private static applyTextureViewRotation(Landroid/view/TextureView;I)V
     .locals 6
 
+    .line 1
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+    .line 2
+    invoke-virtual {p0}, Landroid/view/TextureView;->getWidth()I
 
     move-result v1
 
     int-to-float v1, v1
 
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+    .line 3
+    invoke-virtual {p0}, Landroid/view/TextureView;->getHeight()I
 
     move-result v2
 
@@ -1156,32 +1176,40 @@
 
     int-to-float p1, p1
 
+    .line 4
     invoke-virtual {v0, p1, v5, v4}, Landroid/graphics/Matrix;->postRotate(FFF)Z
 
+    .line 5
     new-instance p1, Landroid/graphics/RectF;
 
     invoke-direct {p1, v3, v3, v1, v2}, Landroid/graphics/RectF;-><init>(FFFF)V
 
+    .line 6
     new-instance v3, Landroid/graphics/RectF;
 
     invoke-direct {v3}, Landroid/graphics/RectF;-><init>()V
 
+    .line 7
     invoke-virtual {v0, v3, p1}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;Landroid/graphics/RectF;)Z
 
+    .line 8
     invoke-virtual {v3}, Landroid/graphics/RectF;->width()F
 
     move-result p1
 
     div-float/2addr v1, p1
 
+    .line 9
     invoke-virtual {v3}, Landroid/graphics/RectF;->height()F
 
     move-result p1
 
     div-float/2addr v2, p1
 
+    .line 10
     invoke-virtual {v0, v1, v2, v5, v4}, Landroid/graphics/Matrix;->postScale(FFFF)Z
 
+    .line 11
     :cond_0
     invoke-virtual {p0, v0}, Landroid/view/TextureView;->setTransform(Landroid/graphics/Matrix;)V
 
@@ -1191,12 +1219,14 @@
 .method private closeShutter()V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->shutterView:Landroid/view/View;
 
     if-eqz p0, :cond_0
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
 
     :cond_0
@@ -1206,6 +1236,7 @@
 .method private static configureEditModeLogo(Landroid/content/res/Resources;Landroid/widget/ImageView;)V
     .locals 1
 
+    .line 1
     sget v0, Lcom/google/android/exoplayer2/ui/R$drawable;->exo_edit_mode_logo:I
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -1214,13 +1245,14 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
+    .line 2
     sget v0, Lcom/google/android/exoplayer2/ui/R$color;->exo_edit_mode_background_color:I
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result p0
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->setBackgroundColor(I)V
+    invoke-virtual {p1, p0}, Landroid/widget/ImageView;->setBackgroundColor(I)V
 
     return-void
 .end method
@@ -1231,6 +1263,7 @@
         value = 0x17
     .end annotation
 
+    .line 1
     sget v0, Lcom/google/android/exoplayer2/ui/R$drawable;->exo_edit_mode_logo:I
 
     const/4 v1, 0x0
@@ -1241,13 +1274,14 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
+    .line 2
     sget v0, Lcom/google/android/exoplayer2/ui/R$color;->exo_edit_mode_background_color:I
 
     invoke-virtual {p0, v0, v1}, Landroid/content/res/Resources;->getColor(ILandroid/content/res/Resources$Theme;)I
 
     move-result p0
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->setBackgroundColor(I)V
+    invoke-virtual {p1, p0}, Landroid/widget/ImageView;->setBackgroundColor(I)V
 
     return-void
 .end method
@@ -1255,14 +1289,17 @@
 .method private hideArtwork()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->artworkView:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_0
 
     const v1, 0x106000d
 
+    .line 2
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->artworkView:Landroid/widget/ImageView;
 
     const/4 v0, 0x4
@@ -1335,6 +1372,7 @@
 .method private isPlayingAd()Z
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->player:Lcom/google/android/exoplayer2/Player;
 
     if-eqz v0, :cond_0
@@ -1367,6 +1405,7 @@
 .method private maybeShowController(Z)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->isPlayingAd()Z
 
     move-result v0
@@ -1379,6 +1418,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->useController()Z
 
@@ -1386,8 +1426,10 @@
 
     if-eqz v0, :cond_3
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
+    .line 4
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->isFullyVisible()Z
 
     move-result v0
@@ -1409,6 +1451,7 @@
     :cond_1
     const/4 v0, 0x0
 
+    .line 5
     :goto_0
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->shouldShowControllerIndefinitely()Z
 
@@ -1420,6 +1463,7 @@
 
     if-eqz v1, :cond_3
 
+    .line 6
     :cond_2
     invoke-direct {p0, v1}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->showController(Z)V
 
@@ -1435,6 +1479,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p1, p1, Lcom/google/android/exoplayer2/MediaMetadata;->artworkData:[B
 
     const/4 v0, 0x0
@@ -1443,16 +1488,19 @@
 
     return v0
 
+    .line 2
     :cond_0
     array-length v1, p1
 
+    .line 3
     invoke-static {p1, v0, v1}, Landroid/graphics/BitmapFactory;->decodeByteArray([BII)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
+    .line 4
     new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
 
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -1481,10 +1529,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v1
 
+    .line 2
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v2
@@ -1499,14 +1549,17 @@
 
     div-float/2addr v1, v2
 
+    .line 3
     iget-object v2, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->contentFrame:Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;
 
     invoke-virtual {p0, v2, v1}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->onContentAspectRatioChanged(Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;F)V
 
+    .line 4
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->artworkView:Landroid/widget/ImageView;
 
     invoke-virtual {v1, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
+    .line 5
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->artworkView:Landroid/widget/ImageView;
 
     invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setVisibility(I)V
@@ -1522,6 +1575,7 @@
 .method private static setResizeModeRaw(Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;I)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;->setResizeMode(I)V
 
     return-void
@@ -1530,6 +1584,7 @@
 .method private shouldShowControllerIndefinitely()Z
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->player:Lcom/google/android/exoplayer2/Player;
 
     const/4 v1, 0x1
@@ -1538,17 +1593,20 @@
 
     return v1
 
+    .line 2
     :cond_0
     invoke-interface {v0}, Lcom/google/android/exoplayer2/Player;->getPlaybackState()I
 
     move-result v0
 
+    .line 3
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controllerAutoShow:Z
 
     if-eqz v2, :cond_1
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->player:Lcom/google/android/exoplayer2/Player;
 
+    .line 4
     invoke-interface {v2}, Lcom/google/android/exoplayer2/Player;->getCurrentTimeline()Lcom/google/android/exoplayer2/Timeline;
 
     move-result-object v2
@@ -1567,6 +1625,7 @@
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->player:Lcom/google/android/exoplayer2/Player;
 
+    .line 5
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1643,6 +1702,7 @@
     :cond_0
     if-eqz p2, :cond_1
 
+    .line 1
     invoke-virtual {p2, p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->setPlayer(Lcom/google/android/exoplayer2/Player;)V
 
     :cond_1
@@ -1650,6 +1710,7 @@
 
     const/4 p0, 0x0
 
+    .line 2
     invoke-virtual {p1, p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->setPlayer(Lcom/google/android/exoplayer2/Player;)V
 
     :cond_2
@@ -1659,6 +1720,7 @@
 .method private toggleControllerVisibility()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->useController()Z
 
     move-result v0
@@ -1671,6 +1733,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
@@ -1682,15 +1745,18 @@
 
     const/4 v0, 0x1
 
+    .line 3
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->maybeShowController(Z)V
 
     goto :goto_0
 
+    .line 4
     :cond_1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controllerHideOnTouch:Z
 
     if-eqz v0, :cond_2
 
+    .line 5
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->hide()V
@@ -1703,6 +1769,7 @@
 .method private updateAspectRatio()V
     .locals 5
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->player:Lcom/google/android/exoplayer2/Player;
 
     if-eqz v0, :cond_0
@@ -1716,11 +1783,14 @@
     :cond_0
     sget-object v0, Lcom/google/android/exoplayer2/video/VideoSize;->UNKNOWN:Lcom/google/android/exoplayer2/video/VideoSize;
 
+    .line 2
     :goto_0
     iget v1, v0, Lcom/google/android/exoplayer2/video/VideoSize;->width:I
 
+    .line 3
     iget v2, v0, Lcom/google/android/exoplayer2/video/VideoSize;->height:I
 
+    .line 4
     iget v3, v0, Lcom/google/android/exoplayer2/video/VideoSize;->unappliedRotationDegrees:I
 
     const/4 v4, 0x0
@@ -1734,6 +1804,7 @@
     :cond_1
     int-to-float v1, v1
 
+    .line 5
     iget v0, v0, Lcom/google/android/exoplayer2/video/VideoSize;->pixelWidthHeightRatio:F
 
     mul-float/2addr v1, v0
@@ -1748,6 +1819,7 @@
     :goto_1
     move v1, v4
 
+    .line 6
     :goto_2
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->surfaceView:Landroid/view/View;
 
@@ -1774,26 +1846,31 @@
 
     move v1, v2
 
+    .line 7
     :cond_4
     iget v2, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->textureViewRotation:I
 
     if-eqz v2, :cond_5
 
+    .line 8
     iget-object v2, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->componentListener:Lcom/google/android/exoplayer2/ui/StyledPlayerView$ComponentListener;
 
     invoke-virtual {v0, v2}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
+    .line 9
     :cond_5
     iput v3, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->textureViewRotation:I
 
     if-eqz v3, :cond_6
 
+    .line 10
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->surfaceView:Landroid/view/View;
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->componentListener:Lcom/google/android/exoplayer2/ui/StyledPlayerView$ComponentListener;
 
     invoke-virtual {v0, v2}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
+    .line 11
     :cond_6
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->surfaceView:Landroid/view/View;
 
@@ -1803,9 +1880,11 @@
 
     invoke-static {v0, v2}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->applyTextureViewRotation(Landroid/view/TextureView;I)V
 
+    .line 12
     :cond_7
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->contentFrame:Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;
 
+    .line 13
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->surfaceViewIgnoresVideoAspectRatio:Z
 
     if-eqz v2, :cond_8
@@ -1815,6 +1894,7 @@
     :cond_8
     move v4, v1
 
+    .line 14
     :goto_3
     invoke-virtual {p0, v0, v4}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->onContentAspectRatioChanged(Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;F)V
 
@@ -1824,34 +1904,38 @@
 .method private updateBuffering()V
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->bufferingView:Landroid/view/View;
 
     if-eqz v0, :cond_3
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->player:Lcom/google/android/exoplayer2/Player;
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-interface {v0}, Lcom/google/android/exoplayer2/Player;->getPlaybackState()I
 
     move-result v0
 
-    const/4 v2, 0x2
-
-    if-ne v0, v2, :cond_0
-
-    iget v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->showBuffering:I
-
-    const/4 v3, 0x1
-
-    if-eq v0, v2, :cond_1
+    const/4 v3, 0x2
 
     if-ne v0, v3, :cond_0
 
+    iget v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->showBuffering:I
+
+    if-eq v0, v3, :cond_1
+
+    if-ne v0, v1, :cond_0
+
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->player:Lcom/google/android/exoplayer2/Player;
 
+    .line 4
     invoke-interface {v0}, Lcom/google/android/exoplayer2/Player;->getPlayWhenReady()Z
 
     move-result v0
@@ -1861,21 +1945,22 @@
     goto :goto_0
 
     :cond_0
-    move v3, v1
+    move v1, v2
 
+    .line 5
     :cond_1
     :goto_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->bufferingView:Landroid/view/View;
 
-    if-eqz v3, :cond_2
+    if-eqz v1, :cond_2
 
     goto :goto_1
 
     :cond_2
-    const/16 v1, 0x8
+    const/16 v2, 0x8
 
     :goto_1
-    invoke-virtual {p0, v1}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {p0, v2}, Landroid/view/View;->setVisibility(I)V
 
     :cond_3
     return-void
@@ -1884,6 +1969,7 @@
 .method private updateContentDescription()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     const/4 v1, 0x0
@@ -1896,6 +1982,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->isFullyVisible()Z
 
@@ -1903,11 +1990,13 @@
 
     if-eqz v0, :cond_2
 
+    .line 3
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controllerHideOnTouch:Z
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    .line 4
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -1917,13 +2006,15 @@
 
     move-result-object v1
 
+    .line 5
     :cond_1
-    invoke-virtual {p0, v1}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v1}, Landroid/widget/FrameLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
     goto :goto_1
 
+    .line 6
     :cond_2
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -1933,13 +2024,15 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
+    .line 7
+    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
     goto :goto_1
 
+    .line 8
     :cond_3
     :goto_0
-    invoke-virtual {p0, v1}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v1}, Landroid/widget/FrameLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
     :goto_1
     return-void
@@ -1948,6 +2041,7 @@
 .method private updateControllerVisibility()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->isPlayingAd()Z
 
     move-result v0
@@ -1958,6 +2052,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->hideController()V
 
     goto :goto_0
@@ -1965,6 +2060,7 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 3
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->maybeShowController(Z)V
 
     :goto_0
@@ -1974,24 +2070,29 @@
 .method private updateErrorMessage()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->errorMessageView:Landroid/widget/TextView;
 
     if-eqz v0, :cond_3
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->customErrorMessage:Ljava/lang/CharSequence;
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_0
 
+    .line 3
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->errorMessageView:Landroid/widget/TextView;
 
-    invoke-virtual {p0, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {p0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
     return-void
 
+    .line 5
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->player:Lcom/google/android/exoplayer2/Player;
 
@@ -2009,10 +2110,12 @@
     :goto_0
     if-eqz v0, :cond_2
 
+    .line 6
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->errorMessageProvider:Lcom/google/android/exoplayer2/util/ErrorMessageProvider;
 
     if-eqz v1, :cond_2
 
+    .line 7
     invoke-interface {v1, v0}, Lcom/google/android/exoplayer2/util/ErrorMessageProvider;->getErrorMessage(Ljava/lang/Throwable;)Landroid/util/Pair;
 
     move-result-object v0
@@ -2021,22 +2124,25 @@
 
     check-cast v0, Ljava/lang/CharSequence;
 
+    .line 8
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->errorMessageView:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 9
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->errorMessageView:Landroid/widget/TextView;
 
-    invoke-virtual {p0, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {p0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto :goto_1
 
+    .line 10
     :cond_2
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->errorMessageView:Landroid/widget/TextView;
 
     const/16 v0, 0x8
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
     :cond_3
     :goto_1
@@ -2046,10 +2152,12 @@
 .method private updateForCurrentTrackSelections(Z)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->player:Lcom/google/android/exoplayer2/Player;
 
     if-eqz v0, :cond_5
 
+    .line 2
     invoke-interface {v0}, Lcom/google/android/exoplayer2/Player;->getCurrentTracks()Lcom/google/android/exoplayer2/Tracks;
 
     move-result-object v1
@@ -2065,12 +2173,15 @@
     :cond_0
     if-eqz p1, :cond_1
 
+    .line 3
     iget-boolean p1, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->keepContentOnPlayerReset:Z
 
     if-nez p1, :cond_1
 
+    .line 4
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->closeShutter()V
 
+    .line 5
     :cond_1
     invoke-interface {v0}, Lcom/google/android/exoplayer2/Player;->getCurrentTracks()Lcom/google/android/exoplayer2/Tracks;
 
@@ -2084,19 +2195,23 @@
 
     if-eqz p1, :cond_2
 
+    .line 6
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->hideArtwork()V
 
     return-void
 
+    .line 7
     :cond_2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->closeShutter()V
 
+    .line 8
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->useArtwork()Z
 
     move-result p1
 
     if-eqz p1, :cond_4
 
+    .line 9
     invoke-interface {v0}, Lcom/google/android/exoplayer2/Player;->getMediaMetadata()Lcom/google/android/exoplayer2/MediaMetadata;
 
     move-result-object p1
@@ -2109,6 +2224,7 @@
 
     return-void
 
+    .line 10
     :cond_3
     iget-object p1, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->defaultArtwork:Landroid/graphics/drawable/Drawable;
 
@@ -2120,19 +2236,23 @@
 
     return-void
 
+    .line 11
     :cond_4
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->hideArtwork()V
 
     return-void
 
+    .line 12
     :cond_5
     :goto_0
     iget-boolean p1, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->keepContentOnPlayerReset:Z
 
     if-nez p1, :cond_6
 
+    .line 13
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->hideArtwork()V
 
+    .line 14
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->closeShutter()V
 
     :cond_6
@@ -2148,10 +2268,12 @@
         result = true
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->useArtwork:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->artworkView:Landroid/widget/ImageView;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Assertions;->checkStateNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2175,10 +2297,12 @@
         result = true
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->useController:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Assertions;->checkStateNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2196,8 +2320,9 @@
 
 # virtual methods
 .method public dispatchKeyEvent(Landroid/view/KeyEvent;)Z
-    .locals 3
+    .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->player:Lcom/google/android/exoplayer2/Player;
 
     if-eqz v0, :cond_0
@@ -2208,12 +2333,14 @@
 
     if-eqz v0, :cond_0
 
-    invoke-super {p0, p1}, Landroid/view/View;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
+    .line 2
+    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
     move-result p0
 
     return p0
 
+    .line 3
     :cond_0
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
@@ -2223,36 +2350,41 @@
 
     move-result v0
 
-    const/4 v1, 0x1
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
 
     if-eqz v0, :cond_1
 
+    .line 4
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->useController()Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_1
+    if-eqz v3, :cond_1
 
-    iget-object v2, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
+    iget-object v3, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
-    invoke-virtual {v2}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->isFullyVisible()Z
+    invoke-virtual {v3}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->isFullyVisible()Z
 
-    move-result v2
+    move-result v3
 
-    if-nez v2, :cond_1
+    if-nez v3, :cond_1
 
-    invoke-direct {p0, v1}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->maybeShowController(Z)V
+    .line 5
+    invoke-direct {p0, v2}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->maybeShowController(Z)V
 
     goto :goto_1
 
+    .line 6
     :cond_1
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->dispatchMediaKeyEvent(Landroid/view/KeyEvent;)Z
 
-    move-result v2
+    move-result v3
 
-    if-nez v2, :cond_4
+    if-nez v3, :cond_3
 
-    invoke-super {p0, p1}, Landroid/view/View;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
+    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
     move-result p1
 
@@ -2261,32 +2393,37 @@
     goto :goto_0
 
     :cond_2
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
+    .line 7
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->useController()Z
 
     move-result p1
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_4
 
-    invoke-direct {p0, v1}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->maybeShowController(Z)V
+    .line 8
+    invoke-direct {p0, v2}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->maybeShowController(Z)V
 
+    goto :goto_2
+
+    .line 9
     :cond_3
-    const/4 v1, 0x0
-
-    goto :goto_1
-
-    :cond_4
     :goto_0
-    invoke-direct {p0, v1}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->maybeShowController(Z)V
+    invoke-direct {p0, v2}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->maybeShowController(Z)V
 
     :goto_1
+    move v1, v2
+
+    :cond_4
+    :goto_2
     return v1
 .end method
 
 .method public dispatchMediaKeyEvent(Landroid/view/KeyEvent;)Z
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->useController()Z
 
     move-result v0
@@ -2323,14 +2460,17 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->overlayFrameLayout:Landroid/widget/FrameLayout;
 
     if-eqz v1, :cond_0
 
+    .line 3
     new-instance v2, Lcom/google/android/exoplayer2/ui/AdOverlayInfo;
 
     const/4 v3, 0x4
@@ -2341,11 +2481,13 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 4
     :cond_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     if-eqz p0, :cond_1
 
+    .line 5
     new-instance v1, Lcom/google/android/exoplayer2/ui/AdOverlayInfo;
 
     const/4 v2, 0x1
@@ -2354,6 +2496,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 6
     :cond_1
     invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
 
@@ -2365,6 +2508,7 @@
 .method public getAdViewGroup()Landroid/view/ViewGroup;
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->adOverlayFrameLayout:Landroid/widget/FrameLayout;
 
     const-string v0, "exo_ad_overlay must be present for ad playback"
@@ -2381,6 +2525,7 @@
 .method public getControllerAutoShow()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controllerAutoShow:Z
 
     return p0
@@ -2389,6 +2534,7 @@
 .method public getControllerHideOnTouch()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controllerHideOnTouch:Z
 
     return p0
@@ -2397,6 +2543,7 @@
 .method public getControllerShowTimeoutMs()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controllerShowTimeoutMs:I
 
     return p0
@@ -2407,6 +2554,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->defaultArtwork:Landroid/graphics/drawable/Drawable;
 
     return-object p0
@@ -2417,6 +2565,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->overlayFrameLayout:Landroid/widget/FrameLayout;
 
     return-object p0
@@ -2427,6 +2576,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->player:Lcom/google/android/exoplayer2/Player;
 
     return-object p0
@@ -2435,10 +2585,12 @@
 .method public getResizeMode()I
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->contentFrame:Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkStateNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->contentFrame:Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;->getResizeMode()I
@@ -2453,6 +2605,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->subtitleView:Lcom/google/android/exoplayer2/ui/SubtitleView;
 
     return-object p0
@@ -2461,6 +2614,7 @@
 .method public getUseArtwork()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->useArtwork:Z
 
     return p0
@@ -2469,6 +2623,7 @@
 .method public getUseController()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->useController:Z
 
     return p0
@@ -2479,6 +2634,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->surfaceView:Landroid/view/View;
 
     return-object p0
@@ -2487,10 +2643,12 @@
 .method public hideController()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->hide()V
 
     :cond_0
@@ -2500,6 +2658,7 @@
 .method public isControllerFullyVisible()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     if-eqz p0, :cond_0
@@ -2530,6 +2689,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     invoke-virtual {p1, p2}, Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;->setAspectRatio(F)V
 
     :cond_0
@@ -2539,12 +2699,14 @@
 .method public onPause()V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->surfaceView:Landroid/view/View;
 
     instance-of v0, p0, Landroid/opengl/GLSurfaceView;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Landroid/opengl/GLSurfaceView;
 
     invoke-virtual {p0}, Landroid/opengl/GLSurfaceView;->onPause()V
@@ -2556,12 +2718,14 @@
 .method public onResume()V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->surfaceView:Landroid/view/View;
 
     instance-of v0, p0, Landroid/opengl/GLSurfaceView;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Landroid/opengl/GLSurfaceView;
 
     invoke-virtual {p0}, Landroid/opengl/GLSurfaceView;->onResume()V
@@ -2573,6 +2737,7 @@
 .method public onTrackballEvent(Landroid/view/MotionEvent;)Z
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->useController()Z
 
     move-result p1
@@ -2588,6 +2753,7 @@
     :cond_0
     const/4 p1, 0x1
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->maybeShowController(Z)V
 
     return p1
@@ -2602,9 +2768,11 @@
 .method public performClick()Z
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->toggleControllerVisibility()V
 
-    invoke-super {p0}, Landroid/view/View;->performClick()Z
+    .line 2
+    invoke-super {p0}, Landroid/widget/FrameLayout;->performClick()Z
 
     move-result p0
 
@@ -2618,10 +2786,12 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->contentFrame:Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkStateNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->contentFrame:Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;->setAspectRatioListener(Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout$AspectRatioListener;)V
@@ -2632,6 +2802,7 @@
 .method public setControllerAutoShow(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controllerAutoShow:Z
 
     return-void
@@ -2640,6 +2811,7 @@
 .method public setControllerHideDuringAds(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controllerHideDuringAds:Z
 
     return-void
@@ -2648,12 +2820,15 @@
 .method public setControllerHideOnTouch(Z)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkStateNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controllerHideOnTouch:Z
 
+    .line 3
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->updateContentDescription()V
 
     return-void
@@ -2668,14 +2843,17 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkStateNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->fullscreenButtonClickListener:Lcom/google/android/exoplayer2/ui/StyledPlayerView$FullscreenButtonClickListener;
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->setOnFullScreenModeChangedListener(Lcom/google/android/exoplayer2/ui/StyledPlayerControlView$OnFullScreenModeChangedListener;)V
@@ -2686,12 +2864,15 @@
 .method public setControllerShowTimeoutMs(I)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkStateNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controllerShowTimeoutMs:I
 
+    .line 3
     iget-object p1, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->isFullyVisible()Z
@@ -2700,6 +2881,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->showController()V
 
     :cond_0
@@ -2780,6 +2962,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->errorMessageView:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
@@ -2794,8 +2977,10 @@
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->customErrorMessage:Ljava/lang/CharSequence;
 
+    .line 3
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->updateErrorMessage()V
 
     return-void
@@ -2808,14 +2993,17 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->defaultArtwork:Landroid/graphics/drawable/Drawable;
 
     if-eq v0, p1, :cond_0
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->defaultArtwork:Landroid/graphics/drawable/Drawable;
 
     const/4 p1, 0x0
 
+    .line 3
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->updateForCurrentTrackSelections(Z)V
 
     :cond_0
@@ -2838,12 +3026,15 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->errorMessageProvider:Lcom/google/android/exoplayer2/util/ErrorMessageProvider;
 
     if-eq v0, p1, :cond_0
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->errorMessageProvider:Lcom/google/android/exoplayer2/util/ErrorMessageProvider;
 
+    .line 3
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->updateErrorMessage()V
 
     :cond_0
@@ -2861,10 +3052,12 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkStateNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->setExtraAdGroupMarkers([J[Z)V
@@ -2879,12 +3072,15 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkStateNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->fullscreenButtonClickListener:Lcom/google/android/exoplayer2/ui/StyledPlayerView$FullscreenButtonClickListener;
 
+    .line 3
     iget-object p1, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->componentListener:Lcom/google/android/exoplayer2/ui/StyledPlayerView$ComponentListener;
@@ -2897,14 +3093,17 @@
 .method public setKeepContentOnPlayerReset(Z)V
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->keepContentOnPlayerReset:Z
 
     if-eq v0, p1, :cond_0
 
+    .line 2
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->keepContentOnPlayerReset:Z
 
     const/4 p1, 0x0
 
+    .line 3
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->updateForCurrentTrackSelections(Z)V
 
     :cond_0
@@ -2918,6 +3117,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -2944,6 +3144,7 @@
 
     if-eqz p1, :cond_2
 
+    .line 2
     invoke-interface {p1}, Lcom/google/android/exoplayer2/Player;->getApplicationLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -2965,9 +3166,11 @@
     :goto_1
     move v0, v2
 
+    .line 3
     :goto_2
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 4
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->player:Lcom/google/android/exoplayer2/Player;
 
     if-ne v0, p1, :cond_3
@@ -2977,31 +3180,37 @@
     :cond_3
     if-eqz v0, :cond_5
 
+    .line 5
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->componentListener:Lcom/google/android/exoplayer2/ui/StyledPlayerView$ComponentListener;
 
     invoke-interface {v0, v1}, Lcom/google/android/exoplayer2/Player;->removeListener(Lcom/google/android/exoplayer2/Player$Listener;)V
 
+    .line 6
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->surfaceView:Landroid/view/View;
 
     instance-of v4, v1, Landroid/view/TextureView;
 
     if-eqz v4, :cond_4
 
+    .line 7
     check-cast v1, Landroid/view/TextureView;
 
     invoke-interface {v0, v1}, Lcom/google/android/exoplayer2/Player;->clearVideoTextureView(Landroid/view/TextureView;)V
 
     goto :goto_3
 
+    .line 8
     :cond_4
     instance-of v4, v1, Landroid/view/SurfaceView;
 
     if-eqz v4, :cond_5
 
+    .line 9
     check-cast v1, Landroid/view/SurfaceView;
 
     invoke-interface {v0, v1}, Lcom/google/android/exoplayer2/Player;->clearVideoSurfaceView(Landroid/view/SurfaceView;)V
 
+    .line 10
     :cond_5
     :goto_3
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->subtitleView:Lcom/google/android/exoplayer2/ui/SubtitleView;
@@ -3010,63 +3219,77 @@
 
     const/4 v1, 0x0
 
+    .line 11
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/ui/SubtitleView;->setCues(Ljava/util/List;)V
 
+    .line 12
     :cond_6
     iput-object p1, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->player:Lcom/google/android/exoplayer2/Player;
 
+    .line 13
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->useController()Z
 
     move-result v0
 
     if-eqz v0, :cond_7
 
+    .line 14
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-virtual {v0, p1}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->setPlayer(Lcom/google/android/exoplayer2/Player;)V
 
+    .line 15
     :cond_7
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->updateBuffering()V
 
+    .line 16
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->updateErrorMessage()V
 
+    .line 17
     invoke-direct {p0, v2}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->updateForCurrentTrackSelections(Z)V
 
     if-eqz p1, :cond_c
 
     const/16 v0, 0x1b
 
+    .line 18
     invoke-interface {p1, v0}, Lcom/google/android/exoplayer2/Player;->isCommandAvailable(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_a
 
+    .line 19
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->surfaceView:Landroid/view/View;
 
     instance-of v1, v0, Landroid/view/TextureView;
 
     if-eqz v1, :cond_8
 
+    .line 20
     check-cast v0, Landroid/view/TextureView;
 
     invoke-interface {p1, v0}, Lcom/google/android/exoplayer2/Player;->setVideoTextureView(Landroid/view/TextureView;)V
 
     goto :goto_4
 
+    .line 21
     :cond_8
     instance-of v1, v0, Landroid/view/SurfaceView;
 
     if-eqz v1, :cond_9
 
+    .line 22
     check-cast v0, Landroid/view/SurfaceView;
 
     invoke-interface {p1, v0}, Lcom/google/android/exoplayer2/Player;->setVideoSurfaceView(Landroid/view/SurfaceView;)V
 
+    .line 23
     :cond_9
     :goto_4
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->updateAspectRatio()V
 
+    .line 24
     :cond_a
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->subtitleView:Lcom/google/android/exoplayer2/ui/SubtitleView;
 
@@ -3080,6 +3303,7 @@
 
     if-eqz v0, :cond_b
 
+    .line 25
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->subtitleView:Lcom/google/android/exoplayer2/ui/SubtitleView;
 
     invoke-interface {p1}, Lcom/google/android/exoplayer2/Player;->getCurrentCues()Lcom/google/android/exoplayer2/text/CueGroup;
@@ -3090,15 +3314,18 @@
 
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/ui/SubtitleView;->setCues(Ljava/util/List;)V
 
+    .line 26
     :cond_b
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->componentListener:Lcom/google/android/exoplayer2/ui/StyledPlayerView$ComponentListener;
 
     invoke-interface {p1, v0}, Lcom/google/android/exoplayer2/Player;->addListener(Lcom/google/android/exoplayer2/Player$Listener;)V
 
+    .line 27
     invoke-direct {p0, v3}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->maybeShowController(Z)V
 
     goto :goto_5
 
+    .line 28
     :cond_c
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->hideController()V
 
@@ -3109,10 +3336,12 @@
 .method public setRepeatToggleModes(I)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkStateNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->setRepeatToggleModes(I)V
@@ -3123,10 +3352,12 @@
 .method public setResizeMode(I)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->contentFrame:Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkStateNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->contentFrame:Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/ui/AspectRatioFrameLayout;->setResizeMode(I)V
@@ -3137,12 +3368,15 @@
 .method public setShowBuffering(I)V
     .locals 1
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->showBuffering:I
 
     if-eq v0, p1, :cond_0
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->showBuffering:I
 
+    .line 3
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->updateBuffering()V
 
     :cond_0
@@ -3152,10 +3386,12 @@
 .method public setShowFastForwardButton(Z)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkStateNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->setShowFastForwardButton(Z)V
@@ -3166,10 +3402,12 @@
 .method public setShowMultiWindowTimeBar(Z)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkStateNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->setShowMultiWindowTimeBar(Z)V
@@ -3180,10 +3418,12 @@
 .method public setShowNextButton(Z)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkStateNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->setShowNextButton(Z)V
@@ -3194,10 +3434,12 @@
 .method public setShowPreviousButton(Z)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkStateNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->setShowPreviousButton(Z)V
@@ -3208,10 +3450,12 @@
 .method public setShowRewindButton(Z)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkStateNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->setShowRewindButton(Z)V
@@ -3222,10 +3466,12 @@
 .method public setShowShuffleButton(Z)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkStateNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->setShowShuffleButton(Z)V
@@ -3236,10 +3482,12 @@
 .method public setShowSubtitleButton(Z)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkStateNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->setShowSubtitleButton(Z)V
@@ -3250,10 +3498,12 @@
 .method public setShowVrButton(Z)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkStateNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->setShowVrButton(Z)V
@@ -3268,10 +3518,12 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->shutterView:Landroid/view/View;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Landroid/view/View;->setBackgroundColor(I)V
 
     :cond_0
@@ -3285,6 +3537,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 1
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->artworkView:Landroid/widget/ImageView;
 
     if-eqz v1, :cond_0
@@ -3303,12 +3556,15 @@
     :goto_1
     invoke-static {v1}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iget-boolean v1, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->useArtwork:Z
 
     if-eq v1, p1, :cond_2
 
+    .line 3
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->useArtwork:Z
 
+    .line 4
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->updateForCurrentTrackSelections(Z)V
 
     :cond_2
@@ -3324,6 +3580,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 1
     iget-object v2, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     if-eqz v2, :cond_0
@@ -3344,7 +3601,8 @@
 
     if-nez p1, :cond_2
 
-    invoke-virtual {p0}, Landroid/view/View;->hasOnClickListeners()Z
+    .line 2
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->hasOnClickListeners()Z
 
     move-result v2
 
@@ -3354,23 +3612,27 @@
     move v0, v1
 
     :cond_3
-    invoke-virtual {p0, v0}, Landroid/view/View;->setClickable(Z)V
+    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setClickable(Z)V
 
+    .line 3
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->useController:Z
 
     if-ne v0, p1, :cond_4
 
     return-void
 
+    .line 4
     :cond_4
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->useController:Z
 
+    .line 5
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->useController()Z
 
     move-result p1
 
     if-eqz p1, :cond_5
 
+    .line 6
     iget-object p1, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->player:Lcom/google/android/exoplayer2/Player;
@@ -3379,19 +3641,23 @@
 
     goto :goto_2
 
+    .line 7
     :cond_5
     iget-object p1, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     if-eqz p1, :cond_6
 
+    .line 8
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->hide()V
 
+    .line 9
     iget-object p1, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->controller:Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView;->setPlayer(Lcom/google/android/exoplayer2/Player;)V
 
+    .line 10
     :cond_6
     :goto_2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->updateContentDescription()V
@@ -3402,14 +3668,17 @@
 .method public setVisibility(I)V
     .locals 1
 
-    invoke-super {p0, p1}, Landroid/view/View;->setVisibility(I)V
+    .line 1
+    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerView;->surfaceView:Landroid/view/View;
 
     instance-of v0, p0, Landroid/view/SurfaceView;
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
 
     :cond_0

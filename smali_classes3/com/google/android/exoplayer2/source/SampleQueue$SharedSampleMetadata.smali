@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/SampleQueue$SharedSampleMetadata;
+.class public final Lcom/google/android/exoplayer2/source/SampleQueue$SharedSampleMetadata;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

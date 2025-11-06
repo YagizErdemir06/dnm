@@ -1,4 +1,4 @@
-.class interface abstract Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutAdapter$LoglutItemListener;
+.class public interface abstract Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutAdapter$LoglutItemListener;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -16,10 +16,38 @@
 
 # virtual methods
 .method public abstract hideDeleteBubble(I)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "position"
+        }
+    .end annotation
 .end method
 
 .method public abstract onSelectedItem(IZ)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "index",
+            "fromUser"
+        }
+    .end annotation
 .end method
 
 .method public abstract showDeleteBubble(Landroid/view/View;I)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "view",
+            "position"
+        }
+    .end annotation
 .end method

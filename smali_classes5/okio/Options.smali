@@ -1,5 +1,5 @@
 .class public final Lokio/Options;
-.super Lpm/c;
+.super Lh/t2/c;
 .source "SourceFile"
 
 # interfaces
@@ -15,39 +15,45 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lpm/c<",
+        "Lh/t2/c<",
         "Lokio/ByteString;",
         ">;",
         "Ljava/util/RandomAccess;"
     }
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000,\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0010\u0011\n\u0002\u0008\u0004\n\u0002\u0010\u0015\n\u0002\u0008\u000b\u0018\u0000 \u00172\u0008\u0012\u0004\u0012\u00020\u00020\u00012\u00060\u0003j\u0002`\u0004:\u0001\u0017B!\u0008\u0002\u0012\u000e\u0010\t\u001a\n\u0012\u0006\u0008\u0001\u0012\u00020\u00020\u0008\u0012\u0006\u0010\u000e\u001a\u00020\r\u00a2\u0006\u0004\u0008\u0015\u0010\u0016J\u0011\u0010\u0007\u001a\u00020\u00022\u0006\u0010\u0006\u001a\u00020\u0005H\u0096\u0002R\"\u0010\t\u001a\n\u0012\u0006\u0008\u0001\u0012\u00020\u00020\u00088\u0000X\u0080\u0004\u00a2\u0006\u000c\n\u0004\u0008\t\u0010\n\u001a\u0004\u0008\u000b\u0010\u000cR\u001a\u0010\u000e\u001a\u00020\r8\u0000X\u0080\u0004\u00a2\u0006\u000c\n\u0004\u0008\u000e\u0010\u000f\u001a\u0004\u0008\u0010\u0010\u0011R\u0014\u0010\u0014\u001a\u00020\u00058VX\u0096\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u0012\u0010\u0013\u00a8\u0006\u0018"
+        "\u0000,\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0010\u0011\n\u0002\u0008\u0007\n\u0002\u0010\u0015\n\u0002\u0008\u0008\u0018\u0000 \u00182\u0008\u0012\u0004\u0012\u00020\u00020\u00012\u00060\u0003j\u0002`\u0004:\u0001\u0018B!\u0008\u0002\u0012\u000e\u0010\n\u001a\n\u0012\u0006\u0008\u0001\u0012\u00020\u00020\t\u0012\u0006\u0010\u0012\u001a\u00020\u0011\u00a2\u0006\u0004\u0008\u0016\u0010\u0017J\u0018\u0010\u0007\u001a\u00020\u00022\u0006\u0010\u0006\u001a\u00020\u0005H\u0096\u0002\u00a2\u0006\u0004\u0008\u0007\u0010\u0008R$\u0010\n\u001a\n\u0012\u0006\u0008\u0001\u0012\u00020\u00020\t8\u0000@\u0000X\u0080\u0004\u00a2\u0006\u000c\n\u0004\u0008\n\u0010\u000b\u001a\u0004\u0008\u000c\u0010\rR\u0016\u0010\u0010\u001a\u00020\u00058V@\u0016X\u0096\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u000e\u0010\u000fR\u001c\u0010\u0012\u001a\u00020\u00118\u0000@\u0000X\u0080\u0004\u00a2\u0006\u000c\n\u0004\u0008\u0012\u0010\u0013\u001a\u0004\u0008\u0014\u0010\u0015\u00a8\u0006\u0019"
     }
     d2 = {
         "Lokio/Options;",
-        "Lpm/c;",
+        "Lh/t2/c;",
         "Lokio/ByteString;",
         "Ljava/util/RandomAccess;",
         "Lkotlin/collections/RandomAccess;",
         "",
         "index",
         "get",
+        "(I)Lokio/ByteString;",
         "",
         "byteStrings",
         "[Lokio/ByteString;",
         "getByteStrings$okio",
         "()[Lokio/ByteString;",
+        "getSize",
+        "()I",
+        "size",
         "",
         "trie",
         "[I",
         "getTrie$okio",
         "()[I",
-        "getSize",
-        "()I",
-        "size",
         "<init>",
         "([Lokio/ByteString;[I)V",
         "Companion",
@@ -64,19 +70,19 @@
 
 # static fields
 .field public static final Companion:Lokio/Options$Companion;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 
 # instance fields
 .field private final byteStrings:[Lokio/ByteString;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field private final trie:[I
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -89,7 +95,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lokio/Options$Companion;-><init>(Lkotlin/jvm/internal/w;)V
+    invoke-direct {v0, v1}, Lokio/Options$Companion;-><init>(Lh/d3/x/w;)V
 
     sput-object v0, Lokio/Options;->Companion:Lokio/Options$Companion;
 
@@ -99,16 +105,19 @@
 .method private constructor <init>([Lokio/ByteString;[I)V
     .locals 0
 
-    invoke-direct {p0}, Lpm/c;-><init>()V
+    .line 1
+    invoke-direct {p0}, Lh/t2/c;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lokio/Options;->byteStrings:[Lokio/ByteString;
 
+    .line 3
     iput-object p2, p0, Lokio/Options;->trie:[I
 
     return-void
 .end method
 
-.method public synthetic constructor <init>([Lokio/ByteString;[ILkotlin/jvm/internal/w;)V
+.method public synthetic constructor <init>([Lokio/ByteString;[ILh/d3/x/w;)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lokio/Options;-><init>([Lokio/ByteString;[I)V
@@ -119,13 +128,13 @@
 .method public static final varargs of([Lokio/ByteString;)Lokio/Options;
     .locals 1
     .param p0    # [Lokio/ByteString;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation runtime Lin/l;
+    .annotation runtime Lh/d3/l;
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     sget-object v0, Lokio/Options;->Companion:Lokio/Options$Companion;
@@ -165,7 +174,7 @@
     .locals 0
 
     .line 2
-    invoke-super {p0, p1}, Lpm/a;->contains(Ljava/lang/Object;)Z
+    invoke-super {p0, p1}, Lh/t2/a;->contains(Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -185,7 +194,7 @@
 
 .method public get(I)Lokio/ByteString;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     .line 2
@@ -198,9 +207,10 @@
 
 .method public final getByteStrings$okio()[Lokio/ByteString;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lokio/Options;->byteStrings:[Lokio/ByteString;
 
     return-object p0
@@ -209,6 +219,7 @@
 .method public getSize()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lokio/Options;->byteStrings:[Lokio/ByteString;
 
     array-length p0, p0
@@ -218,9 +229,10 @@
 
 .method public final getTrie$okio()[I
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lokio/Options;->trie:[I
 
     return-object p0
@@ -252,7 +264,7 @@
     .locals 0
 
     .line 2
-    invoke-super {p0, p1}, Lpm/c;->indexOf(Ljava/lang/Object;)I
+    invoke-super {p0, p1}, Lh/t2/c;->indexOf(Ljava/lang/Object;)I
 
     move-result p0
 
@@ -285,7 +297,7 @@
     .locals 0
 
     .line 2
-    invoke-super {p0, p1}, Lpm/c;->lastIndexOf(Ljava/lang/Object;)I
+    invoke-super {p0, p1}, Lh/t2/c;->lastIndexOf(Ljava/lang/Object;)I
 
     move-result p0
 

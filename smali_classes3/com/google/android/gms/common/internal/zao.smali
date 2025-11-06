@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/internal/zao;
+.class public final Lcom/google/android/gms/common/internal/zao;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

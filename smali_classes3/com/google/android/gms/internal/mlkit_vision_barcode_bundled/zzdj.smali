@@ -12,13 +12,14 @@
 
 
 # instance fields
-.field zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdk;
+.field public zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdk;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     const-class v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdj;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -31,6 +32,7 @@
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdj;->zzc:Ljava/util/logging/Logger;
 
+    .line 2
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhi;->zzx()Z
 
     move-result v0
@@ -59,6 +61,7 @@
 .method public static zzA([BII)Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdj;
     .locals 1
 
+    .line 1
     new-instance p1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdg;
 
     const/4 v0, 0x0
@@ -81,6 +84,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     check-cast p1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzck;
 
     invoke-virtual {p1, p2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzck;->zzB(Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgh;)I
@@ -120,6 +124,7 @@
 .method public static zzv(Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfo;)I
     .locals 1
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfo;->zzE()I
 
     move-result p0
@@ -136,6 +141,7 @@
 .method public static zzw(Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfo;Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgh;)I
     .locals 0
 
+    .line 1
     check-cast p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzck;
 
     invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzck;->zzB(Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgh;)I
@@ -154,6 +160,7 @@
 .method public static zzx(Ljava/lang/String;)I
     .locals 1
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhn;->zze(Ljava/lang/CharSequence;)I
 
@@ -163,6 +170,7 @@
 
     goto :goto_0
 
+    .line 2
     :catch_0
     sget-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzem;->zzb:Ljava/nio/charset/Charset;
 
@@ -170,8 +178,10 @@
 
     move-result-object p0
 
+    .line 3
     array-length p0, p0
 
+    .line 4
     :goto_0
     invoke-static {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdj;->zzy(I)I
 
@@ -265,11 +275,11 @@
 
     if-eqz v0, :cond_2
 
-    const/16 v0, 0x1c
-
-    ushr-long/2addr p0, v0
-
     const/4 v0, 0x6
+
+    const/16 v4, 0x1c
+
+    ushr-long/2addr p0, v4
 
     goto :goto_0
 
@@ -311,6 +321,7 @@
 .method public final zzB()V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdj;->zza()I
 
     move-result p0
@@ -337,6 +348,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdj;->zzc:Ljava/util/logging/Logger;
 
     sget-object v1, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
@@ -351,12 +363,14 @@
 
     invoke-virtual/range {v0 .. v5}, Ljava/util/logging/Logger;->logp(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 2
     sget-object p2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzem;->zzb:Ljava/nio/charset/Charset;
 
     invoke-virtual {p1, p2}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
     move-result-object p1
 
+    .line 3
     :try_start_0
     array-length p2, p1
 
@@ -364,6 +378,7 @@
 
     const/4 v0, 0x0
 
+    .line 4
     invoke-virtual {p0, p1, v0, p2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdj;->zzl([BII)V
     :try_end_0
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
@@ -373,8 +388,10 @@
     :catch_0
     move-exception p0
 
+    .line 5
     new-instance p1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdh;
 
+    .line 6
     invoke-direct {p1, p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdh;-><init>(Ljava/lang/Throwable;)V
 
     throw p1

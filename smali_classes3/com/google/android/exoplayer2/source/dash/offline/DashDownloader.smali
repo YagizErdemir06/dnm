@@ -50,9 +50,7 @@
     .locals 1
 
     .line 1
-    new-instance v0, Landroidx/window/layout/e;
-
-    invoke-direct {v0}, Landroidx/window/layout/e;-><init>()V
+    sget-object v0, Ld/j/a/b/v2/z/d/a;->c:Ld/j/a/b/v2/z/d/a;
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/exoplayer2/source/dash/offline/DashDownloader;-><init>(Lcom/google/android/exoplayer2/MediaItem;Lcom/google/android/exoplayer2/upstream/cache/CacheDataSource$Factory;Ljava/util/concurrent/Executor;)V
 
@@ -105,6 +103,7 @@
 
     move v11, v0
 
+    .line 1
     :goto_0
     iget-object v0, v8, Lcom/google/android/exoplayer2/source/dash/manifest/AdaptationSet;->representations:Ljava/util/List;
 
@@ -114,6 +113,7 @@
 
     if-ge v11, v0, :cond_6
 
+    .line 2
     iget-object v0, v8, Lcom/google/android/exoplayer2/source/dash/manifest/AdaptationSet;->representations:Ljava/util/List;
 
     invoke-interface {v0, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -122,6 +122,7 @@
 
     check-cast v0, Lcom/google/android/exoplayer2/source/dash/manifest/Representation;
 
+    .line 3
     :try_start_0
     iget v1, v8, Lcom/google/android/exoplayer2/source/dash/manifest/AdaptationSet;->type:I
     :try_end_0
@@ -140,6 +141,7 @@
 
     move-wide/from16 v14, p5
 
+    .line 4
     invoke-interface {v13, v14, v15}, Lcom/google/android/exoplayer2/source/dash/DashSegmentIndex;->getSegmentCount(J)J
 
     move-result-wide v16
@@ -150,6 +152,7 @@
 
     if-eqz v1, :cond_2
 
+    .line 5
     iget-object v1, v7, Lcom/google/android/exoplayer2/source/dash/offline/DashDownloader;->baseUrlExclusionList:Lcom/google/android/exoplayer2/source/dash/BaseUrlExclusionList;
 
     iget-object v2, v0, Lcom/google/android/exoplayer2/source/dash/manifest/Representation;->baseUrls:Lcom/google/common/collect/ImmutableList;
@@ -166,6 +169,7 @@
 
     iget-object v6, v1, Lcom/google/android/exoplayer2/source/dash/manifest/BaseUrl;->url:Ljava/lang/String;
 
+    .line 6
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/source/dash/manifest/Representation;->getInitializationUri()Lcom/google/android/exoplayer2/source/dash/manifest/RangedUri;
 
     move-result-object v18
@@ -184,6 +188,7 @@
 
     move-object/from16 v6, v18
 
+    .line 7
     invoke-direct/range {v1 .. v6}, Lcom/google/android/exoplayer2/source/dash/offline/DashDownloader;->createSegment(Lcom/google/android/exoplayer2/source/dash/manifest/Representation;Ljava/lang/String;JLcom/google/android/exoplayer2/source/dash/manifest/RangedUri;)Lcom/google/android/exoplayer2/offline/SegmentDownloader$Segment;
 
     move-result-object v1
@@ -195,6 +200,7 @@
     :cond_0
     move-object/from16 v19, v6
 
+    .line 8
     :goto_1
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/source/dash/manifest/Representation;->getIndexUri()Lcom/google/android/exoplayer2/source/dash/manifest/RangedUri;
 
@@ -210,12 +216,14 @@
 
     move-wide/from16 v4, p3
 
+    .line 9
     invoke-direct/range {v1 .. v6}, Lcom/google/android/exoplayer2/source/dash/offline/DashDownloader;->createSegment(Lcom/google/android/exoplayer2/source/dash/manifest/Representation;Ljava/lang/String;JLcom/google/android/exoplayer2/source/dash/manifest/RangedUri;)Lcom/google/android/exoplayer2/offline/SegmentDownloader$Segment;
 
     move-result-object v1
 
     invoke-virtual {v10, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 10
     :cond_1
     invoke-interface {v13}, Lcom/google/android/exoplayer2/source/dash/DashSegmentIndex;->getFirstSegmentNum()J
 
@@ -234,12 +242,14 @@
 
     if-gtz v1, :cond_4
 
+    .line 11
     invoke-interface {v13, v4, v5}, Lcom/google/android/exoplayer2/source/dash/DashSegmentIndex;->getTimeUs(J)J
 
     move-result-wide v1
 
     add-long v22, p3, v1
 
+    .line 12
     invoke-interface {v13, v4, v5}, Lcom/google/android/exoplayer2/source/dash/DashSegmentIndex;->getSegmentUrl(J)Lcom/google/android/exoplayer2/source/dash/manifest/RangedUri;
 
     move-result-object v6
@@ -254,16 +264,19 @@
 
     move-wide/from16 v4, v22
 
+    .line 13
     invoke-direct/range {v1 .. v6}, Lcom/google/android/exoplayer2/source/dash/offline/DashDownloader;->createSegment(Lcom/google/android/exoplayer2/source/dash/manifest/Representation;Ljava/lang/String;JLcom/google/android/exoplayer2/source/dash/manifest/RangedUri;)Lcom/google/android/exoplayer2/offline/SegmentDownloader$Segment;
 
     move-result-object v1
 
+    .line 14
     invoke-virtual {v10, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     add-long v4, v24, v20
 
     goto :goto_2
 
+    .line 15
     :cond_2
     new-instance v0, Lcom/google/android/exoplayer2/offline/DownloadException;
 
@@ -276,6 +289,7 @@
     :cond_3
     move-wide/from16 v14, p5
 
+    .line 16
     :try_start_2
     new-instance v0, Lcom/google/android/exoplayer2/offline/DownloadException;
 
@@ -313,6 +327,7 @@
 
     goto/16 :goto_0
 
+    .line 17
     :cond_5
     throw v0
 
@@ -325,10 +340,12 @@
 
     const/4 p0, 0x0
 
+    .line 1
     invoke-static {p1, p2, p5, p0}, Lcom/google/android/exoplayer2/source/dash/DashUtil;->buildDataSpec(Lcom/google/android/exoplayer2/source/dash/manifest/Representation;Ljava/lang/String;Lcom/google/android/exoplayer2/source/dash/manifest/RangedUri;I)Lcom/google/android/exoplayer2/upstream/DataSpec;
 
     move-result-object p0
 
+    .line 2
     new-instance p1, Lcom/google/android/exoplayer2/offline/SegmentDownloader$Segment;
 
     invoke-direct {p1, p3, p4, p0}, Lcom/google/android/exoplayer2/offline/SegmentDownloader$Segment;-><init>(JLcom/google/android/exoplayer2/upstream/DataSpec;)V
@@ -348,6 +365,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p3}, Lcom/google/android/exoplayer2/source/dash/manifest/Representation;->getIndex()Lcom/google/android/exoplayer2/source/dash/DashSegmentIndex;
 
     move-result-object v0
@@ -356,11 +374,13 @@
 
     return-object v0
 
+    .line 2
     :cond_0
     new-instance v0, Lcom/google/android/exoplayer2/source/dash/offline/DashDownloader$1;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/google/android/exoplayer2/source/dash/offline/DashDownloader$1;-><init>(Lcom/google/android/exoplayer2/source/dash/offline/DashDownloader;Lcom/google/android/exoplayer2/upstream/DataSource;ILcom/google/android/exoplayer2/source/dash/manifest/Representation;)V
 
+    .line 3
     invoke-virtual {p0, v0, p4}, Lcom/google/android/exoplayer2/offline/SegmentDownloader;->execute(Lcom/google/android/exoplayer2/util/RunnableFutureTask;Z)Ljava/lang/Object;
 
     move-result-object p0
@@ -373,6 +393,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     new-instance p1, Lcom/google/android/exoplayer2/source/dash/DashWrappingSegmentIndex;
 

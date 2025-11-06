@@ -18,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroidx/constraintlayout/motion/utils/ViewTimeCycle;-><init>()V
 
     return-void
@@ -56,6 +57,7 @@
 
     move-object v5, p2
 
+    .line 1
     invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/motion/utils/ViewTimeCycle;->get(FJLandroid/view/View;Landroidx/constraintlayout/core/motion/utils/KeyCache;)F
 
     move-result p2
@@ -74,6 +76,7 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setRotation(F)V
 
+    .line 2
     iget-boolean p0, p0, Landroidx/constraintlayout/core/motion/utils/TimeCycleSplineSet;->mContinue:Z
 
     return p0
@@ -96,6 +99,7 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean p0, p0, Landroidx/constraintlayout/core/motion/utils/TimeCycleSplineSet;->mContinue:Z
 
     return p0

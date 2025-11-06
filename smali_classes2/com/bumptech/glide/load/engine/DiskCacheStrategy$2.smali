@@ -1,4 +1,4 @@
-.class final Lcom/bumptech/glide/load/engine/DiskCacheStrategy$2;
+.class public final Lcom/bumptech/glide/load/engine/DiskCacheStrategy$2;
 .super Lcom/bumptech/glide/load/engine/DiskCacheStrategy;
 .source "SourceFile"
 
@@ -18,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/bumptech/glide/load/engine/DiskCacheStrategy;-><init>()V
 
     return-void

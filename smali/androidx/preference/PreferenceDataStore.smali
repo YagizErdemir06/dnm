@@ -7,6 +7,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -78,6 +79,7 @@
 .method public putBoolean(Ljava/lang/String;Z)V
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Not implemented on this data store"
@@ -90,6 +92,7 @@
 .method public putFloat(Ljava/lang/String;F)V
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Not implemented on this data store"
@@ -102,6 +105,7 @@
 .method public putInt(Ljava/lang/String;I)V
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Not implemented on this data store"
@@ -114,6 +118,7 @@
 .method public putLong(Ljava/lang/String;J)V
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Not implemented on this data store"
@@ -130,6 +135,7 @@
         .end annotation
     .end param
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Not implemented on this data store"
@@ -155,6 +161,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Not implemented on this data store"

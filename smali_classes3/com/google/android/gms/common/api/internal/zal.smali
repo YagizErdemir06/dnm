@@ -19,6 +19,7 @@
 .method public constructor <init>(Ljava/lang/Iterable;)V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Landroidx/collection/ArrayMap;
@@ -27,6 +28,7 @@
 
     iput-object v0, p0, Lcom/google/android/gms/common/api/internal/zal;->zab:Landroidx/collection/ArrayMap;
 
+    .line 2
     new-instance v0, Lcom/google/android/gms/tasks/TaskCompletionSource;
 
     invoke-direct {v0}, Lcom/google/android/gms/tasks/TaskCompletionSource;-><init>()V
@@ -39,10 +41,12 @@
 
     new-instance v0, Landroidx/collection/ArrayMap;
 
+    .line 3
     invoke-direct {v0}, Landroidx/collection/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/gms/common/api/internal/zal;->zaa:Landroidx/collection/ArrayMap;
 
+    .line 4
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -62,6 +66,7 @@
 
     iget-object v1, p0, Lcom/google/android/gms/common/api/internal/zal;->zaa:Landroidx/collection/ArrayMap;
 
+    .line 5
     invoke-interface {v0}, Lcom/google/android/gms/common/api/HasApiKey;->getApiKey()Lcom/google/android/gms/common/api/internal/ApiKey;
 
     move-result-object v0
@@ -75,6 +80,7 @@
     :cond_0
     iget-object p1, p0, Lcom/google/android/gms/common/api/internal/zal;->zaa:Landroidx/collection/ArrayMap;
 
+    .line 6
     invoke-virtual {p1}, Landroidx/collection/ArrayMap;->keySet()Ljava/util/Set;
 
     move-result-object p1
@@ -93,6 +99,7 @@
 .method public final zaa()Lcom/google/android/gms/tasks/Task;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zal;->zac:Lcom/google/android/gms/tasks/TaskCompletionSource;
 
     invoke-virtual {p0}, Lcom/google/android/gms/tasks/TaskCompletionSource;->getTask()Lcom/google/android/gms/tasks/Task;
@@ -105,6 +112,7 @@
 .method public final zab()Ljava/util/Set;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zal;->zaa:Landroidx/collection/ArrayMap;
 
     invoke-virtual {p0}, Landroidx/collection/ArrayMap;->keySet()Ljava/util/Set;
@@ -121,12 +129,14 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zal;->zaa:Landroidx/collection/ArrayMap;
 
     invoke-virtual {v0, p1, p2}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zal;->zab:Landroidx/collection/ArrayMap;
 
+    .line 2
     invoke-virtual {v0, p1, p3}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     iget p1, p0, Lcom/google/android/gms/common/api/internal/zal;->zad:I
@@ -135,6 +145,7 @@
 
     iput p1, p0, Lcom/google/android/gms/common/api/internal/zal;->zad:I
 
+    .line 3
     invoke-virtual {p2}, Lcom/google/android/gms/common/ConnectionResult;->isSuccess()Z
 
     move-result p1
@@ -158,10 +169,12 @@
 
     iget-object p2, p0, Lcom/google/android/gms/common/api/internal/zal;->zaa:Landroidx/collection/ArrayMap;
 
+    .line 4
     invoke-direct {p1, p2}, Lcom/google/android/gms/common/api/AvailabilityException;-><init>(Landroidx/collection/ArrayMap;)V
 
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zal;->zac:Lcom/google/android/gms/tasks/TaskCompletionSource;
 
+    .line 5
     invoke-virtual {p0, p1}, Lcom/google/android/gms/tasks/TaskCompletionSource;->setException(Ljava/lang/Exception;)V
 
     return-void
@@ -171,6 +184,7 @@
 
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zal;->zab:Landroidx/collection/ArrayMap;
 
+    .line 6
     invoke-virtual {p1, p0}, Lcom/google/android/gms/tasks/TaskCompletionSource;->setResult(Ljava/lang/Object;)V
 
     :cond_2

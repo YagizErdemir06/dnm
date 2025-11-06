@@ -21,7 +21,18 @@
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/camera/videocast/AuthoriseActivity;Landroid/os/Looper;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x0
+        }
+        names = {
+            "this$0",
+            "looper"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/videocast/AuthoriseActivity$b;->a:Lcom/xiaomi/camera/videocast/AuthoriseActivity;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -33,12 +44,21 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "msg"
+        }
+    .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/camera/videocast/AuthoriseActivity$b;->a:Lcom/xiaomi/camera/videocast/AuthoriseActivity;
 
-    sget-object p1, Lcom/xiaomi/camera/videocast/VideoCastService$e;->b:Lcom/xiaomi/camera/videocast/VideoCastService$e;
+    sget-object p1, Lcom/xiaomi/camera/videocast/VideoCastService$e;->d:Lcom/xiaomi/camera/videocast/VideoCastService$e;
 
-    invoke-static {p0, p1}, Lcom/xiaomi/camera/videocast/AuthoriseActivity;->th(Lcom/xiaomi/camera/videocast/AuthoriseActivity;Lcom/xiaomi/camera/videocast/VideoCastService$e;)V
+    invoke-static {p0, p1}, Lcom/xiaomi/camera/videocast/AuthoriseActivity;->O7(Lcom/xiaomi/camera/videocast/AuthoriseActivity;Lcom/xiaomi/camera/videocast/VideoCastService$e;)V
 
     return-void
 .end method

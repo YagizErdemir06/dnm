@@ -59,6 +59,7 @@
 
     const/4 v0, 0x5
 
+    .line 1
     invoke-virtual {p1, p0, v0}, Ljava/lang/String;->indexOf(II)I
 
     move-result p0
@@ -69,6 +70,7 @@
 
     add-int/lit8 p0, p0, 0x1
 
+    .line 2
     invoke-virtual {p1, p0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p0
@@ -86,10 +88,12 @@
 .method public clearNamespaceStack()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/DOMReader;->namespaceStack:Lorg/dom4j/tree/NamespaceStack;
 
     invoke-virtual {v0}, Lorg/dom4j/tree/NamespaceStack;->clear()V
 
+    .line 2
     iget-object v0, p0, Lorg/dom4j/io/DOMReader;->namespaceStack:Lorg/dom4j/tree/NamespaceStack;
 
     sget-object v1, Lorg/dom4j/Namespace;->XML_NAMESPACE:Lorg/dom4j/Namespace;
@@ -100,6 +104,7 @@
 
     if-nez v0, :cond_0
 
+    .line 3
     iget-object p0, p0, Lorg/dom4j/io/DOMReader;->namespaceStack:Lorg/dom4j/tree/NamespaceStack;
 
     invoke-virtual {p0, v1}, Lorg/dom4j/tree/NamespaceStack;->push(Lorg/dom4j/Namespace;)V
@@ -111,6 +116,7 @@
 .method public createDocument()Lorg/dom4j/Document;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/io/DOMReader;->getDocumentFactory()Lorg/dom4j/DocumentFactory;
 
     move-result-object p0
@@ -125,6 +131,7 @@
 .method public getDocumentFactory()Lorg/dom4j/DocumentFactory;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/DOMReader;->factory:Lorg/dom4j/DocumentFactory;
 
     return-object p0
@@ -133,6 +140,7 @@
 .method public getNamespace(Ljava/lang/String;Ljava/lang/String;)Lorg/dom4j/Namespace;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/io/DOMReader;->getDocumentFactory()Lorg/dom4j/DocumentFactory;
 
     move-result-object p0
@@ -147,41 +155,48 @@
 .method public read(Lorg/w3c/dom/Document;)Lorg/dom4j/Document;
     .locals 4
 
+    .line 1
     instance-of v0, p1, Lorg/dom4j/Document;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lorg/dom4j/Document;
 
     return-object p1
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Lorg/dom4j/io/DOMReader;->createDocument()Lorg/dom4j/Document;
 
     move-result-object v0
 
+    .line 4
     invoke-virtual {p0}, Lorg/dom4j/io/DOMReader;->clearNamespaceStack()V
 
+    .line 5
     invoke-interface {p1}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object p1
 
+    const/4 v1, 0x0
+
+    .line 6
     invoke-interface {p1}, Lorg/w3c/dom/NodeList;->getLength()I
 
-    move-result v1
-
-    const/4 v2, 0x0
+    move-result v2
 
     :goto_0
-    if-ge v2, v1, :cond_1
+    if-ge v1, v2, :cond_1
 
-    invoke-interface {p1, v2}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
+    .line 7
+    invoke-interface {p1, v1}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v3
 
     invoke-virtual {p0, v3, v0}, Lorg/dom4j/io/DOMReader;->readTree(Lorg/w3c/dom/Node;Lorg/dom4j/Branch;)V
 
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
@@ -192,18 +207,24 @@
 .method public readElement(Lorg/w3c/dom/Node;Lorg/dom4j/Branch;)V
     .locals 10
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/DOMReader;->namespaceStack:Lorg/dom4j/tree/NamespaceStack;
 
     invoke-virtual {v0}, Lorg/dom4j/tree/NamespaceStack;->size()I
 
     move-result v0
 
+    .line 2
     invoke-interface {p1}, Lorg/w3c/dom/Node;->getNamespaceURI()Ljava/lang/String;
 
     move-result-object v1
 
+    .line 3
     invoke-interface {p1}, Lorg/w3c/dom/Node;->getPrefix()Ljava/lang/String;
 
+    move-result-object v2
+
+    .line 4
     invoke-interface {p1}, Lorg/w3c/dom/Node;->getAttributes()Lorg/w3c/dom/NamedNodeMap;
 
     move-result-object v2
@@ -214,16 +235,19 @@
 
     if-nez v1, :cond_0
 
+    .line 5
     invoke-interface {v2, v3}, Lorg/w3c/dom/NamedNodeMap;->getNamedItem(Ljava/lang/String;)Lorg/w3c/dom/Node;
 
     move-result-object v4
 
     if-eqz v4, :cond_0
 
+    .line 6
     invoke-interface {v4}, Lorg/w3c/dom/Node;->getNodeValue()Ljava/lang/String;
 
     move-result-object v1
 
+    .line 7
     :cond_0
     iget-object v4, p0, Lorg/dom4j/io/DOMReader;->namespaceStack:Lorg/dom4j/tree/NamespaceStack;
 
@@ -239,6 +263,7 @@
 
     move-result-object v1
 
+    .line 8
     invoke-interface {p2, v1}, Lorg/dom4j/Branch;->addElement(Lorg/dom4j/QName;)Lorg/dom4j/Element;
 
     move-result-object p2
@@ -247,10 +272,12 @@
 
     if-eqz v2, :cond_3
 
+    .line 9
     invoke-interface {v2}, Lorg/w3c/dom/NamedNodeMap;->getLength()I
 
     move-result v4
 
+    .line 10
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5, v4}, Ljava/util/ArrayList;-><init>(I)V
@@ -260,38 +287,46 @@
     :goto_0
     if-ge v6, v4, :cond_2
 
+    .line 11
     invoke-interface {v2, v6}, Lorg/w3c/dom/NamedNodeMap;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v7
 
+    .line 12
     invoke-interface {v7}, Lorg/w3c/dom/Node;->getNodeName()Ljava/lang/String;
 
     move-result-object v8
 
+    .line 13
     invoke-virtual {v8, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v9
 
     if-eqz v9, :cond_1
 
+    .line 14
     invoke-direct {p0, v8}, Lorg/dom4j/io/DOMReader;->getPrefix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
+    .line 15
     invoke-interface {v7}, Lorg/w3c/dom/Node;->getNodeValue()Ljava/lang/String;
 
     move-result-object v7
 
+    .line 16
     iget-object v9, p0, Lorg/dom4j/io/DOMReader;->namespaceStack:Lorg/dom4j/tree/NamespaceStack;
 
     invoke-virtual {v9, v8, v7}, Lorg/dom4j/tree/NamespaceStack;->addNamespace(Ljava/lang/String;Ljava/lang/String;)Lorg/dom4j/Namespace;
 
     move-result-object v7
 
+    .line 17
     invoke-interface {p2, v7}, Lorg/dom4j/Element;->add(Lorg/dom4j/Namespace;)V
 
     goto :goto_1
 
+    .line 18
     :cond_1
     invoke-interface {v5, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -300,6 +335,7 @@
 
     goto :goto_0
 
+    .line 19
     :cond_2
     invoke-interface {v5}, Ljava/util/List;->size()I
 
@@ -310,12 +346,14 @@
     :goto_2
     if-ge v3, v2, :cond_3
 
+    .line 20
     invoke-interface {v5, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Lorg/w3c/dom/Node;
 
+    .line 21
     iget-object v6, p0, Lorg/dom4j/io/DOMReader;->namespaceStack:Lorg/dom4j/tree/NamespaceStack;
 
     invoke-interface {v4}, Lorg/w3c/dom/Node;->getNamespaceURI()Ljava/lang/String;
@@ -334,6 +372,7 @@
 
     move-result-object v6
 
+    .line 22
     invoke-interface {v4}, Lorg/w3c/dom/Node;->getNodeValue()Ljava/lang/String;
 
     move-result-object v4
@@ -344,11 +383,13 @@
 
     goto :goto_2
 
+    .line 23
     :cond_3
     invoke-interface {p1}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object p1
 
+    .line 24
     invoke-interface {p1}, Lorg/w3c/dom/NodeList;->getLength()I
 
     move-result v2
@@ -356,16 +397,19 @@
     :goto_3
     if-ge v1, v2, :cond_4
 
+    .line 25
     invoke-interface {p1, v1}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v3
 
+    .line 26
     invoke-virtual {p0, v3, p2}, Lorg/dom4j/io/DOMReader;->readTree(Lorg/w3c/dom/Node;Lorg/dom4j/Branch;)V
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_3
 
+    .line 27
     :cond_4
     :goto_4
     iget-object p1, p0, Lorg/dom4j/io/DOMReader;->namespaceStack:Lorg/dom4j/tree/NamespaceStack;
@@ -376,6 +420,7 @@
 
     if-le p1, v0, :cond_5
 
+    .line 28
     iget-object p1, p0, Lorg/dom4j/io/DOMReader;->namespaceStack:Lorg/dom4j/tree/NamespaceStack;
 
     invoke-virtual {p1}, Lorg/dom4j/tree/NamespaceStack;->pop()Lorg/dom4j/Namespace;
@@ -389,12 +434,14 @@
 .method public readTree(Lorg/w3c/dom/Node;Lorg/dom4j/Branch;)V
     .locals 5
 
+    .line 1
     instance-of v0, p2, Lorg/dom4j/Element;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     move-object v2, p2
 
     check-cast v2, Lorg/dom4j/Element;
@@ -407,11 +454,13 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     move-object v2, p2
 
     check-cast v2, Lorg/dom4j/Document;
 
+    .line 4
     :goto_0
     invoke-interface {p1}, Lorg/w3c/dom/Node;->getNodeType()S
 
@@ -419,6 +468,7 @@
 
     packed-switch v3, :pswitch_data_0
 
+    .line 5
     :pswitch_0
     sget-object p0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
@@ -444,9 +494,11 @@
 
     goto/16 :goto_1
 
+    .line 6
     :pswitch_1
     check-cast p1, Lorg/w3c/dom/DocumentType;
 
+    .line 7
     invoke-interface {p1}, Lorg/w3c/dom/DocumentType;->getName()Ljava/lang/String;
 
     move-result-object p0
@@ -466,6 +518,7 @@
     :pswitch_2
     if-eqz v0, :cond_1
 
+    .line 8
     check-cast p2, Lorg/dom4j/Element;
 
     invoke-interface {p1}, Lorg/w3c/dom/Node;->getNodeValue()Ljava/lang/String;
@@ -476,6 +529,7 @@
 
     goto :goto_1
 
+    .line 9
     :cond_1
     check-cast p2, Lorg/dom4j/Document;
 
@@ -490,8 +544,10 @@
     :pswitch_3
     if-eqz v0, :cond_2
 
+    .line 10
     check-cast p2, Lorg/dom4j/Element;
 
+    .line 11
     invoke-interface {p1}, Lorg/w3c/dom/Node;->getNodeName()Ljava/lang/String;
 
     move-result-object p0
@@ -504,9 +560,11 @@
 
     goto :goto_1
 
+    .line 12
     :cond_2
     check-cast p2, Lorg/dom4j/Document;
 
+    .line 13
     invoke-interface {p1}, Lorg/w3c/dom/Node;->getNodeName()Ljava/lang/String;
 
     move-result-object p0
@@ -519,6 +577,7 @@
 
     goto :goto_1
 
+    .line 14
     :pswitch_4
     invoke-interface {p1}, Lorg/w3c/dom/Node;->getNodeName()Ljava/lang/String;
 
@@ -532,6 +591,7 @@
 
     goto :goto_1
 
+    .line 15
     :pswitch_5
     invoke-interface {p1}, Lorg/w3c/dom/Node;->getFirstChild()Lorg/w3c/dom/Node;
 
@@ -539,6 +599,7 @@
 
     if-eqz p0, :cond_3
 
+    .line 16
     invoke-interface {p1}, Lorg/w3c/dom/Node;->getNodeName()Ljava/lang/String;
 
     move-result-object p1
@@ -551,6 +612,7 @@
 
     goto :goto_1
 
+    .line 17
     :cond_3
     invoke-interface {p1}, Lorg/w3c/dom/Node;->getNodeName()Ljava/lang/String;
 
@@ -562,6 +624,7 @@
 
     goto :goto_1
 
+    .line 18
     :pswitch_6
     invoke-interface {p1}, Lorg/w3c/dom/Node;->getNodeValue()Ljava/lang/String;
 
@@ -571,6 +634,7 @@
 
     goto :goto_1
 
+    .line 19
     :pswitch_7
     invoke-interface {p1}, Lorg/w3c/dom/Node;->getNodeValue()Ljava/lang/String;
 
@@ -580,6 +644,7 @@
 
     goto :goto_1
 
+    .line 20
     :pswitch_8
     invoke-virtual {p0, p1, p2}, Lorg/dom4j/io/DOMReader;->readElement(Lorg/w3c/dom/Node;Lorg/dom4j/Branch;)V
 
@@ -606,8 +671,10 @@
 .method public setDocumentFactory(Lorg/dom4j/DocumentFactory;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/io/DOMReader;->factory:Lorg/dom4j/DocumentFactory;
 
+    .line 2
     iget-object p0, p0, Lorg/dom4j/io/DOMReader;->namespaceStack:Lorg/dom4j/tree/NamespaceStack;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/NamespaceStack;->setDocumentFactory(Lorg/dom4j/DocumentFactory;)V

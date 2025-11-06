@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field public a:Ljava/lang/ref/WeakReference;
+.field private c:Ljava/lang/ref/WeakReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference<",
@@ -28,22 +28,25 @@
     .end annotation
 .end field
 
-.field public b:I
+.field private d:I
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;I)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$c;->a:Ljava/lang/ref/WeakReference;
+    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$c;->c:Ljava/lang/ref/WeakReference;
 
-    iput p2, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$c;->b:I
+    .line 3
+    iput p2, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$c;->d:I
 
     return-void
 .end method
@@ -53,13 +56,14 @@
 .method public run()V
     .locals 4
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$c;->a:Ljava/lang/ref/WeakReference;
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$c;->c:Ljava/lang/ref/WeakReference;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -75,12 +79,13 @@
 
     return-void
 
+    .line 2
     :cond_1
-    iget-object v2, v0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->f:Landroid/widget/LinearLayout;
+    iget-object v2, v0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->s:Landroid/widget/LinearLayout;
 
-    iget p0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$c;->b:I
+    iget p0, p0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView$c;->d:I
 
-    invoke-virtual {v2, p0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v2, p0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object p0
 
@@ -88,12 +93,13 @@
 
     return-void
 
+    .line 3
     :cond_2
     invoke-virtual {p0}, Landroid/view/View;->getLeft()I
 
     move-result v2
 
-    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
+    invoke-virtual {v0}, Landroid/widget/HorizontalScrollView;->getWidth()I
 
     move-result v3
 
@@ -109,9 +115,11 @@
 
     const/4 p0, 0x0
 
+    .line 4
     invoke-virtual {v0, v2, p0}, Landroid/widget/HorizontalScrollView;->smoothScrollTo(II)V
 
-    iput-object v1, v0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->b:Ljava/lang/Runnable;
+    .line 5
+    iput-object v1, v0, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->j:Ljava/lang/Runnable;
 
     return-void
 .end method

@@ -83,6 +83,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/util/ViewPreloadSizeProvider;->size:[I
 
     if-nez p0, :cond_0
@@ -91,6 +92,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     array-length p1, p0
 
@@ -116,10 +118,12 @@
 
     aput p2, v0, p1
 
+    .line 1
     iput-object v0, p0, Lcom/bumptech/glide/util/ViewPreloadSizeProvider;->size:[I
 
     const/4 p1, 0x0
 
+    .line 2
     iput-object p1, p0, Lcom/bumptech/glide/util/ViewPreloadSizeProvider;->viewTarget:Lcom/bumptech/glide/util/ViewPreloadSizeProvider$SizeViewTarget;
 
     return-void
@@ -132,6 +136,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/util/ViewPreloadSizeProvider;->size:[I
 
     if-nez v0, :cond_1
@@ -142,6 +147,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     new-instance v0, Lcom/bumptech/glide/util/ViewPreloadSizeProvider$SizeViewTarget;
 
@@ -149,6 +155,7 @@
 
     iput-object v0, p0, Lcom/bumptech/glide/util/ViewPreloadSizeProvider;->viewTarget:Lcom/bumptech/glide/util/ViewPreloadSizeProvider$SizeViewTarget;
 
+    .line 3
     invoke-virtual {v0, p0}, Lcom/bumptech/glide/request/target/CustomViewTarget;->getSize(Lcom/bumptech/glide/request/target/SizeReadyCallback;)V
 
     :cond_1

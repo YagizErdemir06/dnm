@@ -46,6 +46,7 @@
 .method public static constructor <clinit>()V
     .locals 17
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
 
     const-string v1, "FORMAT_UNKNOWN"
@@ -62,6 +63,7 @@
 
     const/4 v4, 0x1
 
+    .line 2
     invoke-direct {v1, v3, v4, v4}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;-><init>(Ljava/lang/String;II)V
 
     sput-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
@@ -72,6 +74,7 @@
 
     const/4 v6, 0x2
 
+    .line 3
     invoke-direct {v3, v5, v6, v6}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;-><init>(Ljava/lang/String;II)V
 
     sput-object v3, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;->zzc:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
@@ -84,6 +87,7 @@
 
     const/4 v9, 0x4
 
+    .line 4
     invoke-direct {v5, v7, v8, v9}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;-><init>(Ljava/lang/String;II)V
 
     sput-object v5, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;->zzd:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
@@ -94,177 +98,187 @@
 
     const/16 v11, 0x8
 
+    .line 5
     invoke-direct {v7, v10, v9, v11}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;-><init>(Ljava/lang/String;II)V
 
     sput-object v7, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;->zze:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
 
     new-instance v10, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
 
-    const/16 v12, 0x10
+    const-string v12, "FORMAT_DATA_MATRIX"
 
-    const-string v13, "FORMAT_DATA_MATRIX"
+    const/4 v13, 0x5
 
-    const/4 v14, 0x5
+    const/16 v14, 0x10
 
-    invoke-direct {v10, v13, v14, v12}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;-><init>(Ljava/lang/String;II)V
+    .line 6
+    invoke-direct {v10, v12, v13, v14}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;-><init>(Ljava/lang/String;II)V
 
     sput-object v10, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;->zzf:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
 
     new-instance v12, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
 
+    const-string v14, "FORMAT_EAN_13"
+
+    const/4 v15, 0x6
+
     const/16 v13, 0x20
 
-    const-string v15, "FORMAT_EAN_13"
-
-    const/4 v14, 0x6
-
-    invoke-direct {v12, v15, v14, v13}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;-><init>(Ljava/lang/String;II)V
+    .line 7
+    invoke-direct {v12, v14, v15, v13}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;-><init>(Ljava/lang/String;II)V
 
     sput-object v12, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;->zzg:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
 
     new-instance v13, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
 
-    const/16 v15, 0x40
-
     const-string v14, "FORMAT_EAN_8"
 
-    const/4 v9, 0x7
+    const/4 v15, 0x7
 
-    invoke-direct {v13, v14, v9, v15}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;-><init>(Ljava/lang/String;II)V
+    const/16 v9, 0x40
+
+    .line 8
+    invoke-direct {v13, v14, v15, v9}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;-><init>(Ljava/lang/String;II)V
 
     sput-object v13, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;->zzh:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
 
-    new-instance v14, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
-
-    const-string v15, "FORMAT_ITF"
-
-    const/16 v9, 0x80
-
-    invoke-direct {v14, v15, v11, v9}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;-><init>(Ljava/lang/String;II)V
-
-    sput-object v14, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;->zzi:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
-
     new-instance v9, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
 
-    const/16 v15, 0x100
+    const-string v14, "FORMAT_ITF"
 
-    const-string v11, "FORMAT_QR_CODE"
+    const/16 v15, 0x80
 
-    const/16 v8, 0x9
+    .line 9
+    invoke-direct {v9, v14, v11, v15}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;-><init>(Ljava/lang/String;II)V
 
-    invoke-direct {v9, v11, v8, v15}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;-><init>(Ljava/lang/String;II)V
+    sput-object v9, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;->zzi:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
 
-    sput-object v9, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;->zzj:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
+    new-instance v14, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
 
-    new-instance v11, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
+    const-string v15, "FORMAT_QR_CODE"
 
-    const/16 v15, 0x200
+    const/16 v11, 0x9
 
-    const-string v8, "FORMAT_UPC_A"
+    const/16 v8, 0x100
 
-    const/16 v6, 0xa
+    .line 10
+    invoke-direct {v14, v15, v11, v8}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;-><init>(Ljava/lang/String;II)V
 
-    invoke-direct {v11, v8, v6, v15}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;-><init>(Ljava/lang/String;II)V
-
-    sput-object v11, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;->zzk:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
+    sput-object v14, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;->zzj:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
 
     new-instance v8, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
 
-    const/16 v15, 0x400
+    const-string v15, "FORMAT_UPC_A"
 
-    const-string v6, "FORMAT_UPC_E"
+    const/16 v11, 0xa
 
-    const/16 v4, 0xb
+    const/16 v6, 0x200
 
-    invoke-direct {v8, v6, v4, v15}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;-><init>(Ljava/lang/String;II)V
+    .line 11
+    invoke-direct {v8, v15, v11, v6}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;-><init>(Ljava/lang/String;II)V
 
-    sput-object v8, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;->zzl:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
+    sput-object v8, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;->zzk:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
 
     new-instance v6, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
 
-    const/16 v15, 0x800
+    const-string v15, "FORMAT_UPC_E"
 
-    const-string v4, "FORMAT_PDF417"
+    const/16 v11, 0xb
 
-    const/16 v2, 0xc
+    const/16 v4, 0x400
 
-    invoke-direct {v6, v4, v2, v15}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;-><init>(Ljava/lang/String;II)V
+    .line 12
+    invoke-direct {v6, v15, v11, v4}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;-><init>(Ljava/lang/String;II)V
 
-    sput-object v6, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;->zzm:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
+    sput-object v6, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;->zzl:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
 
     new-instance v4, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
 
-    const/16 v15, 0x1000
+    const-string v15, "FORMAT_PDF417"
 
-    const-string v2, "FORMAT_AZTEC"
+    const/16 v11, 0xc
 
-    move-object/from16 v16, v6
+    const/16 v2, 0x800
 
-    const/16 v6, 0xd
+    .line 13
+    invoke-direct {v4, v15, v11, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;-><init>(Ljava/lang/String;II)V
 
-    invoke-direct {v4, v2, v6, v15}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;-><init>(Ljava/lang/String;II)V
+    sput-object v4, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;->zzm:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
 
-    sput-object v4, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;->zzn:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
+    new-instance v2, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
 
-    const/16 v2, 0xe
+    const-string v15, "FORMAT_AZTEC"
 
-    new-array v2, v2, [Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
+    const/16 v11, 0xd
+
+    move-object/from16 v16, v4
+
+    const/16 v4, 0x1000
+
+    .line 14
+    invoke-direct {v2, v15, v11, v4}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;-><init>(Ljava/lang/String;II)V
+
+    sput-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;->zzn:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
+
+    const/16 v4, 0xe
+
+    new-array v4, v4, [Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
 
     const/4 v15, 0x0
 
-    aput-object v0, v2, v15
+    aput-object v0, v4, v15
 
     const/4 v0, 0x1
 
-    aput-object v1, v2, v0
+    aput-object v1, v4, v0
 
     const/4 v0, 0x2
 
-    aput-object v3, v2, v0
+    aput-object v3, v4, v0
 
     const/4 v0, 0x3
 
-    aput-object v5, v2, v0
+    aput-object v5, v4, v0
 
     const/4 v0, 0x4
 
-    aput-object v7, v2, v0
+    aput-object v7, v4, v0
 
     const/4 v0, 0x5
 
-    aput-object v10, v2, v0
+    aput-object v10, v4, v0
 
     const/4 v0, 0x6
 
-    aput-object v12, v2, v0
+    aput-object v12, v4, v0
 
     const/4 v0, 0x7
 
-    aput-object v13, v2, v0
+    aput-object v13, v4, v0
 
     const/16 v0, 0x8
 
-    aput-object v14, v2, v0
+    aput-object v9, v4, v0
 
     const/16 v0, 0x9
 
-    aput-object v9, v2, v0
+    aput-object v14, v4, v0
 
     const/16 v0, 0xa
 
-    aput-object v11, v2, v0
+    aput-object v8, v4, v0
 
     const/16 v0, 0xb
 
-    aput-object v8, v2, v0
+    aput-object v6, v4, v0
 
     const/16 v0, 0xc
 
-    aput-object v16, v2, v0
+    aput-object v16, v4, v0
 
-    aput-object v4, v2, v6
+    aput-object v2, v4, v11
 
-    sput-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;->zzo:[Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
+    sput-object v4, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;->zzo:[Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
 
     return-void
 .end method
@@ -272,6 +286,7 @@
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     iput p3, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;->zzp:I
@@ -282,6 +297,7 @@
 .method public static values()[Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;->zzo:[Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;
 
     invoke-virtual {v0}, [Lcom/google/android/gms/internal/mlkit_vision_barcode/zznp;->clone()Ljava/lang/Object;

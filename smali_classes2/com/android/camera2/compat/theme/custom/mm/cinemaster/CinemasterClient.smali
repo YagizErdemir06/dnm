@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ly8/a;
+.implements Ld/d/a/m7/g/s3/a;
 
 
 # direct methods
@@ -18,13 +18,14 @@
         }
     .end annotation
 
-    invoke-static {}, Lu8/e;->i()Lu8/e;
+    .line 1
+    invoke-static {}, Ld/d/a/m7/d;->i()Ld/d/a/m7/d;
 
     move-result-object v0
 
     const-class v1, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/CinemasterClient;
 
-    invoke-virtual {v0, v1}, Lu8/e;->b(Ljava/lang/Class;)Ljava/util/Optional;
+    invoke-virtual {v0, v1}, Ld/d/a/m7/d;->c(Ljava/lang/Class;)Ljava/util/Optional;
 
     move-result-object v0
 
@@ -38,24 +39,40 @@
         value = {
             "()",
             "Ljava/util/Set<",
-            "Lm3/c;",
+            "Ld/d/a/o6/c/c;",
             ">;"
         }
     .end annotation
 .end method
 
-.method public abstract handleEndpointFound(Lm3/c;)V
-    .param p1    # Lm3/c;
+.method public abstract handleEndpointFound(Ld/d/a/o6/c/c;)V
+    .param p1    # Ld/d/a/o6/c/c;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "device"
+        }
+    .end annotation
 .end method
 
-.method public abstract handleEndpointLost(Lm3/c;)V
-    .param p1    # Lm3/c;
+.method public abstract handleEndpointLost(Ld/d/a/o6/c/c;)V
+    .param p1    # Ld/d/a/o6/c/c;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "device"
+        }
+    .end annotation
 .end method
 
 .method public abstract isRemoteRecoding()Z

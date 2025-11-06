@@ -1,4 +1,4 @@
-.class Lcom/google/common/graph/ImmutableValueGraph$1;
+.class public Lcom/google/common/graph/ImmutableValueGraph$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,15 +26,16 @@
 
 
 # instance fields
-.field final synthetic val$graph:Lcom/google/common/graph/ValueGraph;
+.field public final synthetic val$graph:Lcom/google/common/graph/ValueGraph;
 
-.field final synthetic val$node:Ljava/lang/Object;
+.field public final synthetic val$node:Ljava/lang/Object;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/graph/ValueGraph;Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/graph/ImmutableValueGraph$1;->val$graph:Lcom/google/common/graph/ValueGraph;
 
     iput-object p2, p0, Lcom/google/common/graph/ImmutableValueGraph$1;->val$node:Ljava/lang/Object;
@@ -54,6 +55,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/graph/ImmutableValueGraph$1;->val$graph:Lcom/google/common/graph/ValueGraph;
 
     iget-object p0, p0, Lcom/google/common/graph/ImmutableValueGraph$1;->val$node:Ljava/lang/Object;

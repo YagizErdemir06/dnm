@@ -1,4 +1,4 @@
-.class Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi21$2;
+.class public Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi21$2;
 .super Landroidx/media/MediaBrowserServiceCompat$Result;
 .source "SourceFile"
 
@@ -24,9 +24,9 @@
 
 
 # instance fields
-.field final synthetic this$1:Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi21;
+.field public final synthetic this$1:Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi21;
 
-.field final synthetic val$resultWrapper:Landroidx/media/MediaBrowserServiceCompat$ResultWrapper;
+.field public final synthetic val$resultWrapper:Landroidx/media/MediaBrowserServiceCompat$ResultWrapper;
 
 
 # direct methods
@@ -45,6 +45,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi21$2;->this$1:Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi21;
 
     iput-object p3, p0, Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi21$2;->val$resultWrapper:Landroidx/media/MediaBrowserServiceCompat$ResultWrapper;
@@ -59,6 +60,7 @@
 .method public detach()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplApi21$2;->val$resultWrapper:Landroidx/media/MediaBrowserServiceCompat$ResultWrapper;
 
     invoke-virtual {p0}, Landroidx/media/MediaBrowserServiceCompat$ResultWrapper;->detach()V

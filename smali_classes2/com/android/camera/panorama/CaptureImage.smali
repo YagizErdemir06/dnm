@@ -6,7 +6,7 @@
 # instance fields
 .field private mExposureTime:J
 
-.field protected mImage:Landroid/media/Image;
+.field public mImage:Landroid/media/Image;
 
 .field private final mImageTimeStamp:J
 
@@ -22,6 +22,14 @@
 # direct methods
 .method public constructor <init>(Landroid/media/Image;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "image"
+        }
+    .end annotation
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -72,7 +80,16 @@
 
 .method public constructor <init>([B)V
     .locals 2
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "raw"
+        }
     .end annotation
 
     .line 9
@@ -126,14 +143,17 @@
 .method public close()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera/panorama/CaptureImage;->mImage:Landroid/media/Image;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Landroid/media/Image;->close()V
 
     const/4 v0, 0x0
 
+    .line 3
     iput-object v0, p0, Lcom/android/camera/panorama/CaptureImage;->mImage:Landroid/media/Image;
 
     :cond_0
@@ -141,6 +161,7 @@
 
     new-array v0, v0, [B
 
+    .line 4
     iput-object v0, p0, Lcom/android/camera/panorama/CaptureImage;->mRaw:[B
 
     return-void
@@ -149,6 +170,7 @@
 .method public getExposureTime()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/CaptureImage;->mExposureTime:J
 
     return-wide v0
@@ -163,6 +185,7 @@
 .method public getRollingShutterSkew()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/CaptureImage;->mRollingShutterSkew:J
 
     return-wide v0
@@ -171,6 +194,7 @@
 .method public getSensitivity()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera/panorama/CaptureImage;->mSensitivity:I
 
     return p0
@@ -179,6 +203,7 @@
 .method public getSensorTimeStamp()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/CaptureImage;->mSensorTimeStamp:J
 
     return-wide v0
@@ -187,6 +212,7 @@
 .method public getTimestamp()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/android/camera/panorama/CaptureImage;->mImageTimeStamp:J
 
     return-wide v0
@@ -198,6 +224,7 @@
 .method public image()Landroid/media/Image;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera/panorama/CaptureImage;->mImage:Landroid/media/Image;
 
     return-object p0
@@ -205,9 +232,10 @@
 
 .method public raw()[B
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera/panorama/CaptureImage;->mRaw:[B
 
     invoke-virtual {p0}, [B->clone()Ljava/lang/Object;
@@ -221,7 +249,16 @@
 
 .method public setExposureTime(J)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
 
+    .line 1
     iput-wide p1, p0, Lcom/android/camera/panorama/CaptureImage;->mExposureTime:J
 
     return-void
@@ -229,7 +266,16 @@
 
 .method public setRollingShutterSkew(J)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
 
+    .line 1
     iput-wide p1, p0, Lcom/android/camera/panorama/CaptureImage;->mRollingShutterSkew:J
 
     return-void
@@ -237,7 +283,16 @@
 
 .method public setSensitivity(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/android/camera/panorama/CaptureImage;->mSensitivity:I
 
     return-void
@@ -245,7 +300,16 @@
 
 .method public setSensorTimeStamp(J)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
 
+    .line 1
     iput-wide p1, p0, Lcom/android/camera/panorama/CaptureImage;->mSensorTimeStamp:J
 
     return-void

@@ -23,21 +23,22 @@
 
 
 # static fields
-.field public static final enum a:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;
-
-.field public static final enum b:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;
-
 .field public static final enum c:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;
 
 .field public static final enum d:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;
 
-.field public static final synthetic e:[Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;
+.field public static final enum f:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;
+
+.field public static final enum g:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;
+
+.field private static final synthetic j:[Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 9
 
+    .line 1
     new-instance v0, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;
 
     const-string v1, "RECORDING_STATE_IDLE"
@@ -46,8 +47,9 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;->a:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;
+    sput-object v0, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;->c:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;
 
+    .line 2
     new-instance v1, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;
 
     const-string v3, "RECORDING_STATE_ON_GOING"
@@ -56,8 +58,9 @@
 
     invoke-direct {v1, v3, v4}, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;-><init>(Ljava/lang/String;I)V
 
-    sput-object v1, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;->b:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;
+    sput-object v1, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;->d:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;
 
+    .line 3
     new-instance v3, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;
 
     const-string v5, "RECORDING_STATE_PAUSE"
@@ -66,8 +69,9 @@
 
     invoke-direct {v3, v5, v6}, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;-><init>(Ljava/lang/String;I)V
 
-    sput-object v3, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;->c:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;
+    sput-object v3, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;->f:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;
 
+    .line 4
     new-instance v5, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;
 
     const-string v7, "RECORDING_STATE_STOP"
@@ -76,7 +80,7 @@
 
     invoke-direct {v5, v7, v8}, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;-><init>(Ljava/lang/String;I)V
 
-    sput-object v5, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;->d:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;
+    sput-object v5, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;->g:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;
 
     const/4 v7, 0x4
 
@@ -90,19 +94,26 @@
 
     aput-object v5, v7, v8
 
-    sput-object v7, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;->e:[Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;
+    .line 5
+    sput-object v7, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;->j:[Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;I)V
+.method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "$enum$name",
+            "$enum$ordinal"
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -110,7 +121,16 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8000
+        }
+        names = {
+            "name"
+        }
+    .end annotation
 
+    .line 1
     const-class v0, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -125,7 +145,8 @@
 .method public static values()[Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;
     .locals 1
 
-    sget-object v0, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;->e:[Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;
+    .line 1
+    sget-object v0, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;->j:[Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;
 
     invoke-virtual {v0}, [Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$f;->clone()Ljava/lang/Object;
 

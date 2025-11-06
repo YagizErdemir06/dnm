@@ -1,4 +1,4 @@
-.class Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21$ExtraBinderRequestResultReceiver;
+.class public Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21$ExtraBinderRequestResultReceiver;
 .super Landroid/os/ResultReceiver;
 .source "SourceFile"
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public a:Ljava/lang/ref/WeakReference;
+.field private c:Ljava/lang/ref/WeakReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference<",
@@ -40,13 +40,15 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, v0}, Landroid/os/ResultReceiver;-><init>(Landroid/os/Handler;)V
 
+    .line 2
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21$ExtraBinderRequestResultReceiver;->a:Ljava/lang/ref/WeakReference;
+    iput-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21$ExtraBinderRequestResultReceiver;->c:Ljava/lang/ref/WeakReference;
 
     return-void
 .end method
@@ -66,9 +68,10 @@
         }
     .end annotation
 
-    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21$ExtraBinderRequestResultReceiver;->a:Ljava/lang/ref/WeakReference;
+    .line 1
+    iget-object p0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21$ExtraBinderRequestResultReceiver;->c:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -80,38 +83,48 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object p1, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->b:Ljava/lang/Object;
 
     monitor-enter p1
 
+    .line 3
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->f:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
     const-string v1, "android.support.v4.media.session.EXTRA_BINDER"
 
+    .line 4
     invoke-static {p2, v1}, Landroidx/core/app/BundleCompat;->getBinder(Landroid/os/Bundle;Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v1
 
-    invoke-static {v1}, Landroid/support/v4/media/session/b$b;->p0(Landroid/os/IBinder;)Landroid/support/v4/media/session/b;
+    .line 5
+    invoke-static {v1}, Lb/b/a/b/a/b$b;->v0(Landroid/os/IBinder;)Lb/b/a/b/a/b;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->h(Landroid/support/v4/media/session/b;)V
+    .line 6
+    invoke-virtual {v0, v1}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->g(Lb/b/a/b/a/b;)V
 
+    .line 7
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->f:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
     const-string v1, "android.support.v4.media.session.SESSION_TOKEN2"
 
+    .line 8
     invoke-static {p2, v1}, Landroidx/versionedparcelable/ParcelUtils;->getVersionedParcelable(Landroid/os/Bundle;Ljava/lang/String;)Landroidx/versionedparcelable/VersionedParcelable;
 
     move-result-object p2
 
-    invoke-virtual {v0, p2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->i(Landroidx/versionedparcelable/VersionedParcelable;)V
+    .line 9
+    invoke-virtual {v0, p2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->h(Landroidx/versionedparcelable/VersionedParcelable;)V
 
-    invoke-virtual {p0}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->r()V
+    .line 10
+    invoke-virtual {p0}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->v()V
 
+    .line 11
     monitor-exit p1
 
     return-void

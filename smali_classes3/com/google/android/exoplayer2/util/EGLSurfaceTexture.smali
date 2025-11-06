@@ -76,6 +76,7 @@
 
     new-array v0, v0, [I
 
+    .line 1
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->EGL_CONFIG_ATTRIBUTES:[I
@@ -150,6 +151,7 @@
 
     new-array v10, v0, [I
 
+    .line 1
     sget-object v2, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->EGL_CONFIG_ATTRIBUTES:[I
 
     const/4 v3, 0x0
@@ -166,6 +168,7 @@
 
     move-object v7, v10
 
+    .line 2
     invoke-static/range {v1 .. v8}, Landroid/opengl/EGL14;->eglChooseConfig(Landroid/opengl/EGLDisplay;[II[Landroid/opengl/EGLConfig;II[II)Z
 
     move-result p0
@@ -174,6 +177,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 3
     aget v2, v10, v1
 
     if-lez v2, :cond_0
@@ -182,8 +186,12 @@
 
     if-eqz v2, :cond_0
 
-    return-object v2
+    .line 4
+    aget-object p0, v9, v1
 
+    return-object p0
+
+    .line 5
     :cond_0
     new-instance v2, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture$GlException;
 
@@ -191,6 +199,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
+    .line 6
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -213,6 +222,7 @@
 
     const-string p0, "eglChooseConfig failed: success=%b, numConfigs[0]=%d, configs[0]=%s"
 
+    .line 7
     invoke-static {p0, v3}, Lcom/google/android/exoplayer2/util/Util;->formatInvariant(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -233,6 +243,7 @@
 
     new-array p2, p2, [I
 
+    .line 1
     fill-array-data p2, :array_0
 
     goto :goto_0
@@ -242,13 +253,16 @@
 
     new-array p2, p2, [I
 
+    .line 2
     fill-array-data p2, :array_1
 
+    .line 3
     :goto_0
     sget-object v0, Landroid/opengl/EGL14;->EGL_NO_CONTEXT:Landroid/opengl/EGLContext;
 
     const/4 v1, 0x0
 
+    .line 4
     invoke-static {p0, p1, v0, p2, v1}, Landroid/opengl/EGL14;->eglCreateContext(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLConfig;Landroid/opengl/EGLContext;[II)Landroid/opengl/EGLContext;
 
     move-result-object p0
@@ -257,14 +271,15 @@
 
     return-object p0
 
+    .line 5
     :cond_1
     new-instance p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture$GlException;
 
-    const-string p1, "eglCreateContext failed"
+    const/4 p1, 0x0
 
-    const/4 p2, 0x0
+    const-string p2, "eglCreateContext failed"
 
-    invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture$GlException;-><init>(Ljava/lang/String;Lcom/google/android/exoplayer2/util/EGLSurfaceTexture$1;)V
+    invoke-direct {p0, p2, p1}, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture$GlException;-><init>(Ljava/lang/String;Lcom/google/android/exoplayer2/util/EGLSurfaceTexture$1;)V
 
     throw p0
 
@@ -288,25 +303,27 @@
 .method private static createEGLSurface(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLConfig;Landroid/opengl/EGLContext;I)Landroid/opengl/EGLSurface;
     .locals 2
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
-    if-ne p3, v0, :cond_0
+    if-ne p3, v1, :cond_0
 
+    .line 1
     sget-object p1, Landroid/opengl/EGL14;->EGL_NO_SURFACE:Landroid/opengl/EGLSurface;
 
     goto :goto_1
 
     :cond_0
-    const/4 v0, 0x2
+    const/4 v1, 0x2
 
-    if-ne p3, v0, :cond_1
+    if-ne p3, v1, :cond_1
 
     const/4 p3, 0x7
 
     new-array p3, p3, [I
 
+    .line 2
     fill-array-data p3, :array_0
 
     goto :goto_0
@@ -316,17 +333,20 @@
 
     new-array p3, p3, [I
 
+    .line 3
     fill-array-data p3, :array_1
 
     :goto_0
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    invoke-static {p0, p1, p3, v0}, Landroid/opengl/EGL14;->eglCreatePbufferSurface(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLConfig;[II)Landroid/opengl/EGLSurface;
+    .line 4
+    invoke-static {p0, p1, p3, v1}, Landroid/opengl/EGL14;->eglCreatePbufferSurface(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLConfig;[II)Landroid/opengl/EGLSurface;
 
     move-result-object p1
 
     if-eqz p1, :cond_3
 
+    .line 5
     :goto_1
     invoke-static {p0, p1, p1, p2}, Landroid/opengl/EGL14;->eglMakeCurrent(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;Landroid/opengl/EGLSurface;Landroid/opengl/EGLContext;)Z
 
@@ -336,21 +356,23 @@
 
     return-object p1
 
+    .line 6
     :cond_2
     new-instance p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture$GlException;
 
     const-string p1, "eglMakeCurrent failed"
 
-    invoke-direct {p0, p1, v1}, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture$GlException;-><init>(Ljava/lang/String;Lcom/google/android/exoplayer2/util/EGLSurfaceTexture$1;)V
+    invoke-direct {p0, p1, v0}, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture$GlException;-><init>(Ljava/lang/String;Lcom/google/android/exoplayer2/util/EGLSurfaceTexture$1;)V
 
     throw p0
 
+    .line 7
     :cond_3
     new-instance p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture$GlException;
 
     const-string p1, "eglCreatePbufferSurface failed"
 
-    invoke-direct {p0, p1, v1}, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture$GlException;-><init>(Ljava/lang/String;Lcom/google/android/exoplayer2/util/EGLSurfaceTexture$1;)V
+    invoke-direct {p0, p1, v0}, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture$GlException;-><init>(Ljava/lang/String;Lcom/google/android/exoplayer2/util/EGLSurfaceTexture$1;)V
 
     throw p0
 
@@ -380,10 +402,12 @@
 .method private dispatchOnFrameAvailable()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->callback:Lcom/google/android/exoplayer2/util/EGLSurfaceTexture$TextureImageListener;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0}, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture$TextureImageListener;->onFrameAvailable()V
 
     :cond_0
@@ -397,8 +421,10 @@
 
     const/4 v1, 0x0
 
+    .line 1
     invoke-static {v0, p0, v1}, Landroid/opengl/GLES20;->glGenTextures(I[II)V
 
+    .line 2
     invoke-static {}, Lcom/google/android/exoplayer2/util/GlUtil;->checkGlError()V
 
     return-void
@@ -409,6 +435,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {v0}, Landroid/opengl/EGL14;->eglGetDisplay(I)Landroid/opengl/EGLDisplay;
 
     move-result-object v1
@@ -423,6 +450,7 @@
 
     const/4 v4, 0x1
 
+    .line 2
     invoke-static {v1, v3, v0, v3, v4}, Landroid/opengl/EGL14;->eglInitialize(Landroid/opengl/EGLDisplay;[II[II)Z
 
     move-result v0
@@ -431,6 +459,7 @@
 
     return-object v1
 
+    .line 3
     :cond_0
     new-instance v0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture$GlException;
 
@@ -440,6 +469,7 @@
 
     throw v0
 
+    .line 4
     :cond_1
     new-instance v0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture$GlException;
 
@@ -455,6 +485,7 @@
 .method public getSurfaceTexture()Landroid/graphics/SurfaceTexture;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->texture:Landroid/graphics/SurfaceTexture;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -469,16 +500,19 @@
 .method public init(I)V
     .locals 3
 
+    .line 1
     invoke-static {}, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->getDefaultDisplay()Landroid/opengl/EGLDisplay;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->display:Landroid/opengl/EGLDisplay;
 
+    .line 2
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->chooseEGLConfig(Landroid/opengl/EGLDisplay;)Landroid/opengl/EGLConfig;
 
     move-result-object v0
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->display:Landroid/opengl/EGLDisplay;
 
     invoke-static {v1, v0, p1}, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->createEGLContext(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLConfig;I)Landroid/opengl/EGLContext;
@@ -487,6 +521,7 @@
 
     iput-object v1, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->context:Landroid/opengl/EGLContext;
 
+    .line 4
     iget-object v2, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->display:Landroid/opengl/EGLDisplay;
 
     invoke-static {v2, v0, v1, p1}, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->createEGLSurface(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLConfig;Landroid/opengl/EGLContext;I)Landroid/opengl/EGLSurface;
@@ -495,10 +530,12 @@
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->surface:Landroid/opengl/EGLSurface;
 
+    .line 5
     iget-object p1, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->textureIdHolder:[I
 
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->generateTextureIds([I)V
 
+    .line 6
     new-instance p1, Landroid/graphics/SurfaceTexture;
 
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->textureIdHolder:[I
@@ -511,6 +548,7 @@
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->texture:Landroid/graphics/SurfaceTexture;
 
+    .line 7
     invoke-virtual {p1, p0}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;)V
 
     return-void
@@ -519,6 +557,7 @@
 .method public onFrameAvailable(Landroid/graphics/SurfaceTexture;)V
     .locals 0
 
+    .line 1
     iget-object p1, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->handler:Landroid/os/Handler;
 
     invoke-virtual {p1, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
@@ -529,6 +568,7 @@
 .method public release()V
     .locals 6
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->handler:Landroid/os/Handler;
 
     invoke-virtual {v0, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
@@ -537,23 +577,27 @@
 
     const/4 v1, 0x0
 
+    .line 2
     :try_start_0
     iget-object v2, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->texture:Landroid/graphics/SurfaceTexture;
 
     if-eqz v2, :cond_0
 
+    .line 3
     invoke-virtual {v2}, Landroid/graphics/SurfaceTexture;->release()V
 
-    iget-object v2, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->textureIdHolder:[I
+    const/4 v2, 0x1
 
-    const/4 v3, 0x0
+    .line 4
+    iget-object v3, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->textureIdHolder:[I
 
-    const/4 v4, 0x1
+    const/4 v4, 0x0
 
-    invoke-static {v4, v2, v3}, Landroid/opengl/GLES20;->glDeleteTextures(I[II)V
+    invoke-static {v2, v3, v4}, Landroid/opengl/GLES20;->glDeleteTextures(I[II)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 5
     :cond_0
     iget-object v2, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->display:Landroid/opengl/EGLDisplay;
 
@@ -567,6 +611,7 @@
 
     if-nez v2, :cond_1
 
+    .line 6
     iget-object v2, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->display:Landroid/opengl/EGLDisplay;
 
     sget-object v3, Landroid/opengl/EGL14;->EGL_NO_SURFACE:Landroid/opengl/EGLSurface;
@@ -575,6 +620,7 @@
 
     invoke-static {v2, v3, v3, v4}, Landroid/opengl/EGL14;->eglMakeCurrent(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;Landroid/opengl/EGLSurface;Landroid/opengl/EGLContext;)Z
 
+    .line 7
     :cond_1
     iget-object v2, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->surface:Landroid/opengl/EGLSurface;
 
@@ -588,28 +634,34 @@
 
     if-nez v2, :cond_2
 
+    .line 8
     iget-object v2, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->display:Landroid/opengl/EGLDisplay;
 
     iget-object v3, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->surface:Landroid/opengl/EGLSurface;
 
     invoke-static {v2, v3}, Landroid/opengl/EGL14;->eglDestroySurface(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;)Z
 
+    .line 9
     :cond_2
     iget-object v2, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->context:Landroid/opengl/EGLContext;
 
     if-eqz v2, :cond_3
 
+    .line 10
     iget-object v3, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->display:Landroid/opengl/EGLDisplay;
 
     invoke-static {v3, v2}, Landroid/opengl/EGL14;->eglDestroyContext(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLContext;)Z
 
+    .line 11
     :cond_3
     sget v2, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
     if-lt v2, v0, :cond_4
 
+    .line 12
     invoke-static {}, Landroid/opengl/EGL14;->eglReleaseThread()Z
 
+    .line 13
     :cond_4
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->display:Landroid/opengl/EGLDisplay;
 
@@ -623,17 +675,22 @@
 
     if-nez v0, :cond_5
 
+    .line 14
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->display:Landroid/opengl/EGLDisplay;
 
     invoke-static {v0}, Landroid/opengl/EGL14;->eglTerminate(Landroid/opengl/EGLDisplay;)Z
 
+    .line 15
     :cond_5
     iput-object v1, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->display:Landroid/opengl/EGLDisplay;
 
+    .line 16
     iput-object v1, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->context:Landroid/opengl/EGLContext;
 
+    .line 17
     iput-object v1, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->surface:Landroid/opengl/EGLSurface;
 
+    .line 18
     iput-object v1, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->texture:Landroid/graphics/SurfaceTexture;
 
     return-void
@@ -641,6 +698,7 @@
     :catchall_0
     move-exception v2
 
+    .line 19
     iget-object v3, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->display:Landroid/opengl/EGLDisplay;
 
     if-eqz v3, :cond_6
@@ -653,6 +711,7 @@
 
     if-nez v3, :cond_6
 
+    .line 20
     iget-object v3, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->display:Landroid/opengl/EGLDisplay;
 
     sget-object v4, Landroid/opengl/EGL14;->EGL_NO_SURFACE:Landroid/opengl/EGLSurface;
@@ -661,6 +720,7 @@
 
     invoke-static {v3, v4, v4, v5}, Landroid/opengl/EGL14;->eglMakeCurrent(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;Landroid/opengl/EGLSurface;Landroid/opengl/EGLContext;)Z
 
+    .line 21
     :cond_6
     iget-object v3, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->surface:Landroid/opengl/EGLSurface;
 
@@ -674,28 +734,34 @@
 
     if-nez v3, :cond_7
 
+    .line 22
     iget-object v3, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->display:Landroid/opengl/EGLDisplay;
 
     iget-object v4, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->surface:Landroid/opengl/EGLSurface;
 
     invoke-static {v3, v4}, Landroid/opengl/EGL14;->eglDestroySurface(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;)Z
 
+    .line 23
     :cond_7
     iget-object v3, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->context:Landroid/opengl/EGLContext;
 
     if-eqz v3, :cond_8
 
+    .line 24
     iget-object v4, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->display:Landroid/opengl/EGLDisplay;
 
     invoke-static {v4, v3}, Landroid/opengl/EGL14;->eglDestroyContext(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLContext;)Z
 
+    .line 25
     :cond_8
     sget v3, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
     if-lt v3, v0, :cond_9
 
+    .line 26
     invoke-static {}, Landroid/opengl/EGL14;->eglReleaseThread()Z
 
+    .line 27
     :cond_9
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->display:Landroid/opengl/EGLDisplay;
 
@@ -709,31 +775,40 @@
 
     if-nez v0, :cond_a
 
+    .line 28
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->display:Landroid/opengl/EGLDisplay;
 
     invoke-static {v0}, Landroid/opengl/EGL14;->eglTerminate(Landroid/opengl/EGLDisplay;)Z
 
+    .line 29
     :cond_a
     iput-object v1, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->display:Landroid/opengl/EGLDisplay;
 
+    .line 30
     iput-object v1, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->context:Landroid/opengl/EGLContext;
 
+    .line 31
     iput-object v1, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->surface:Landroid/opengl/EGLSurface;
 
+    .line 32
     iput-object v1, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->texture:Landroid/graphics/SurfaceTexture;
 
+    .line 33
     throw v2
 .end method
 
 .method public run()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->dispatchOnFrameAvailable()V
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/EGLSurfaceTexture;->texture:Landroid/graphics/SurfaceTexture;
 
     if-eqz p0, :cond_0
 
+    .line 3
     :try_start_0
     invoke-virtual {p0}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
     :try_end_0

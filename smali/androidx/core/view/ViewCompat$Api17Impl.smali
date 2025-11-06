@@ -1,4 +1,4 @@
-.class Landroidx/core/view/ViewCompat$Api17Impl;
+.class public Landroidx/core/view/ViewCompat$Api17Impl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,6 +33,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/view/View;->generateViewId()I
 
     move-result v0
@@ -48,6 +50,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getDisplay()Landroid/view/Display;
 
     move-result-object p0
@@ -60,6 +63,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getLabelFor()I
 
     move-result p0
@@ -72,6 +76,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getLayoutDirection()I
 
     move-result p0
@@ -84,6 +89,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getPaddingEnd()I
 
     move-result p0
@@ -96,6 +102,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->getPaddingStart()I
 
     move-result p0
@@ -108,6 +115,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->isPaddingRelative()Z
 
     move-result p0
@@ -120,6 +128,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/View;->setLabelFor(I)V
 
     return-void
@@ -130,6 +139,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/View;->setLayerPaint(Landroid/graphics/Paint;)V
 
     return-void
@@ -140,6 +150,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/view/View;->setLayoutDirection(I)V
 
     return-void
@@ -150,6 +161,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/view/View;->setPaddingRelative(IIII)V
 
     return-void

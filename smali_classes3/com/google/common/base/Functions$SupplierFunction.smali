@@ -1,4 +1,4 @@
-.class Lcom/google/common/base/Functions$SupplierFunction;
+.class public Lcom/google/common/base/Functions$SupplierFunction;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -99,6 +99,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/Functions$SupplierFunction;->supplier:Lcom/google/common/base/Supplier;
 
     invoke-interface {p0}, Lcom/google/common/base/Supplier;->get()Ljava/lang/Object;
@@ -115,12 +116,15 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/common/base/Functions$SupplierFunction;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/common/base/Functions$SupplierFunction;
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/base/Functions$SupplierFunction;->supplier:Lcom/google/common/base/Supplier;
 
     iget-object p1, p1, Lcom/google/common/base/Functions$SupplierFunction;->supplier:Lcom/google/common/base/Supplier;
@@ -140,6 +144,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/Functions$SupplierFunction;->supplier:Lcom/google/common/base/Supplier;
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
@@ -152,6 +157,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/Functions$SupplierFunction;->supplier:Lcom/google/common/base/Supplier;
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

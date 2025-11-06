@@ -42,15 +42,16 @@
 .method public static zzc(Lcom/google/android/gms/internal/common/zzo;)Lcom/google/android/gms/internal/common/zzx;
     .locals 7
 
+    .line 1
     new-instance v6, Lcom/google/android/gms/internal/common/zzx;
 
     new-instance v1, Lcom/google/android/gms/internal/common/zzu;
 
     invoke-direct {v1, p0}, Lcom/google/android/gms/internal/common/zzu;-><init>(Lcom/google/android/gms/internal/common/zzo;)V
 
-    const/4 v2, 0x0
-
     sget-object v3, Lcom/google/android/gms/internal/common/zzn;->zza:Lcom/google/android/gms/internal/common/zzn;
+
+    const/4 v2, 0x0
 
     const v4, 0x7fffffff
 
@@ -102,9 +103,9 @@
 
     iget-object v1, p0, Lcom/google/android/gms/internal/common/zzx;->zzc:Lcom/google/android/gms/internal/common/zzu;
 
-    const/4 v2, 0x1
-
     iget-object v3, p0, Lcom/google/android/gms/internal/common/zzx;->zza:Lcom/google/android/gms/internal/common/zzo;
+
+    const/4 v2, 0x1
 
     const v4, 0x7fffffff
 
@@ -130,8 +131,10 @@
 .method public final zzf(Ljava/lang/CharSequence;)Ljava/util/List;
     .locals 1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 1
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/android/gms/internal/common/zzx;->zzh(Ljava/lang/CharSequence;)Ljava/util/Iterator;
 
     move-result-object p0
@@ -140,6 +143,7 @@
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 3
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -147,6 +151,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -157,6 +162,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-static {p1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 

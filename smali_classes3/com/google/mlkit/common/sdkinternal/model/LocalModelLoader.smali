@@ -71,6 +71,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/model/LocalModelLoader;->zzb:Landroid/content/Context;
 
     const-string v1, "Context can not be null"
@@ -81,6 +82,7 @@
 
     const-string v1, "Model source can not be null"
 
+    .line 2
     invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/model/LocalModelLoader;->zza:Ljava/nio/MappedByteBuffer;
@@ -92,18 +94,21 @@
     :cond_0
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/model/LocalModelLoader;->zzc:Lcom/google/mlkit/common/model/LocalModel;
 
+    .line 3
     invoke-virtual {v0}, Lcom/google/mlkit/common/model/LocalModel;->getAbsoluteFilePath()Ljava/lang/String;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/google/mlkit/common/sdkinternal/model/LocalModelLoader;->zzc:Lcom/google/mlkit/common/model/LocalModel;
 
+    .line 4
     invoke-virtual {v1}, Lcom/google/mlkit/common/model/LocalModel;->getAssetFilePath()Ljava/lang/String;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/google/mlkit/common/sdkinternal/model/LocalModelLoader;->zzc:Lcom/google/mlkit/common/model/LocalModel;
 
+    .line 5
     invoke-virtual {v2}, Lcom/google/mlkit/common/model/LocalModel;->getUri()Landroid/net/Uri;
 
     move-result-object v2
@@ -117,10 +122,12 @@
     :try_start_0
     new-instance v1, Ljava/io/RandomAccessFile;
 
+    .line 6
     invoke-direct {v1, v0, v3}, Ljava/io/RandomAccessFile;-><init>(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 7
     :try_start_1
     invoke-virtual {v1}, Ljava/io/RandomAccessFile;->getChannel()Ljava/nio/channels/FileChannel;
 
@@ -128,6 +135,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
+    .line 8
     :try_start_2
     sget-object v6, Ljava/nio/channels/FileChannel$MapMode;->READ_ONLY:Ljava/nio/channels/FileChannel$MapMode;
 
@@ -147,8 +155,9 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 9
     :try_start_3
-    invoke-virtual {v0}, Ljava/nio/channels/spi/AbstractInterruptibleChannel;->close()V
+    invoke-virtual {v0}, Ljava/nio/channels/FileChannel;->close()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
@@ -166,8 +175,9 @@
 
     if-eqz v0, :cond_1
 
+    .line 10
     :try_start_5
-    invoke-virtual {v0}, Ljava/nio/channels/spi/AbstractInterruptibleChannel;->close()V
+    invoke-virtual {v0}, Ljava/nio/channels/FileChannel;->close()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
@@ -209,10 +219,12 @@
     :catch_0
     move-exception v0
 
+    .line 11
     new-instance v1, Lcom/google/mlkit/common/MlKitException;
 
     iget-object p0, p0, Lcom/google/mlkit/common/sdkinternal/model/LocalModelLoader;->zzc:Lcom/google/mlkit/common/model/LocalModel;
 
+    .line 12
     invoke-virtual {p0}, Lcom/google/mlkit/common/model/LocalModel;->getAbsoluteFilePath()Ljava/lang/String;
 
     move-result-object p0
@@ -234,9 +246,11 @@
     :cond_2
     if-eqz v1, :cond_5
 
+    .line 13
     :try_start_9
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/model/LocalModelLoader;->zzb:Landroid/content/Context;
 
+    .line 14
     invoke-virtual {v0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
     move-result-object v0
@@ -250,6 +264,7 @@
     :try_start_a
     new-instance v2, Ljava/io/FileInputStream;
 
+    .line 15
     invoke-virtual {v0}, Landroid/content/res/AssetFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object v3
@@ -262,15 +277,18 @@
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_6
 
+    .line 16
     :try_start_b
     invoke-virtual {v0}, Landroid/content/res/AssetFileDescriptor;->getStartOffset()J
 
     move-result-wide v7
 
+    .line 17
     invoke-virtual {v0}, Landroid/content/res/AssetFileDescriptor;->getDeclaredLength()J
 
     move-result-wide v9
 
+    .line 18
     sget-object v6, Ljava/nio/channels/FileChannel$MapMode;->READ_ONLY:Ljava/nio/channels/FileChannel$MapMode;
 
     move-object v5, v2
@@ -283,8 +301,9 @@
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_4
 
+    .line 19
     :try_start_c
-    invoke-virtual {v2}, Ljava/nio/channels/spi/AbstractInterruptibleChannel;->close()V
+    invoke-virtual {v2}, Ljava/nio/channels/FileChannel;->close()V
     :try_end_c
     .catchall {:try_start_c .. :try_end_c} :catchall_6
 
@@ -302,8 +321,9 @@
 
     if-eqz v2, :cond_3
 
+    .line 20
     :try_start_e
-    invoke-virtual {v2}, Ljava/nio/channels/spi/AbstractInterruptibleChannel;->close()V
+    invoke-virtual {v2}, Ljava/nio/channels/FileChannel;->close()V
     :try_end_e
     .catchall {:try_start_e .. :try_end_e} :catchall_5
 
@@ -348,10 +368,12 @@
     :catch_1
     move-exception p0
 
+    .line 21
     new-instance v0, Lcom/google/mlkit/common/MlKitException;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    .line 22
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v3, "Can not load the file from asset: "
@@ -375,15 +397,18 @@
     :cond_5
     if-eqz v2, :cond_8
 
+    .line 23
     :try_start_12
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/model/LocalModelLoader;->zzb:Landroid/content/Context;
 
+    .line 24
     invoke-static {v0, v2, v3}, Lcom/google/android/gms/internal/mlkit_common/zzj;->zza(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
 
     move-result-object v0
     :try_end_12
     .catch Ljava/io/IOException; {:try_start_12 .. :try_end_12} :catch_2
 
+    .line 25
     :try_start_13
     invoke-virtual {v0}, Landroid/content/res/AssetFileDescriptor;->createInputStream()Ljava/io/FileInputStream;
 
@@ -395,15 +420,18 @@
     :try_end_13
     .catchall {:try_start_13 .. :try_end_13} :catchall_a
 
+    .line 26
     :try_start_14
     invoke-virtual {v0}, Landroid/content/res/AssetFileDescriptor;->getStartOffset()J
 
     move-result-wide v7
 
+    .line 27
     invoke-virtual {v0}, Landroid/content/res/AssetFileDescriptor;->getLength()J
 
     move-result-wide v9
 
+    .line 28
     sget-object v6, Ljava/nio/channels/FileChannel$MapMode;->READ_ONLY:Ljava/nio/channels/FileChannel$MapMode;
 
     move-object v5, v1
@@ -416,8 +444,9 @@
     :try_end_14
     .catchall {:try_start_14 .. :try_end_14} :catchall_8
 
+    .line 29
     :try_start_15
-    invoke-virtual {v1}, Ljava/nio/channels/spi/AbstractInterruptibleChannel;->close()V
+    invoke-virtual {v1}, Ljava/nio/channels/FileChannel;->close()V
     :try_end_15
     .catchall {:try_start_15 .. :try_end_15} :catchall_a
 
@@ -435,8 +464,9 @@
 
     if-eqz v1, :cond_6
 
+    .line 30
     :try_start_17
-    invoke-virtual {v1}, Ljava/nio/channels/spi/AbstractInterruptibleChannel;->close()V
+    invoke-virtual {v1}, Ljava/nio/channels/FileChannel;->close()V
     :try_end_17
     .catchall {:try_start_17 .. :try_end_17} :catchall_9
 
@@ -481,8 +511,10 @@
     :catch_2
     move-exception p0
 
+    .line 31
     new-instance v0, Lcom/google/mlkit/common/MlKitException;
 
+    .line 32
     invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -497,11 +529,13 @@
 
     throw v0
 
+    .line 33
     :cond_8
     new-instance p0, Lcom/google/mlkit/common/MlKitException;
 
     const-string v0, "Can not load the model. One of filePath, assetFilePath or URI must be set for the model."
 
+    .line 34
     invoke-direct {p0, v0, v4}, Lcom/google/mlkit/common/MlKitException;-><init>(Ljava/lang/String;I)V
 
     throw p0

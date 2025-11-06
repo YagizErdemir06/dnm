@@ -403,6 +403,7 @@
 .method public addHandler(Ljava/lang/String;Lorg/dom4j/ElementHandler;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/io/SAXReader;->getDispatchHandler()Lorg/dom4j/io/DispatchHandler;
 
     move-result-object p0
@@ -422,12 +423,15 @@
 
     const-string v0, "http://xml.org/sax/handlers/LexicalHandler"
 
+    .line 1
     invoke-static {p1, v0, p2}, Lorg/dom4j/io/SAXHelper;->setParserProperty(Lorg/xml/sax/XMLReader;Ljava/lang/String;Ljava/lang/Object;)Z
 
     const-string v0, "http://xml.org/sax/properties/lexical-handler"
 
+    .line 2
     invoke-static {p1, v0, p2}, Lorg/dom4j/io/SAXHelper;->setParserProperty(Lorg/xml/sax/XMLReader;Ljava/lang/String;Ljava/lang/Object;)Z
 
+    .line 3
     iget-boolean v0, p0, Lorg/dom4j/io/SAXReader;->includeInternalDTDDeclarations:Z
 
     if-nez v0, :cond_0
@@ -439,6 +443,7 @@
     :cond_0
     const-string v0, "http://xml.org/sax/properties/declaration-handler"
 
+    .line 4
     invoke-static {p1, v0, p2}, Lorg/dom4j/io/SAXHelper;->setParserProperty(Lorg/xml/sax/XMLReader;Ljava/lang/String;Ljava/lang/Object;)Z
 
     :cond_1
@@ -446,43 +451,51 @@
 
     const/4 v1, 0x1
 
+    .line 5
     invoke-static {p1, v0, v1}, Lorg/dom4j/io/SAXHelper;->setParserFeature(Lorg/xml/sax/XMLReader;Ljava/lang/String;Z)Z
 
-    const-string v0, "http://xml.org/sax/features/namespace-prefixes"
+    const/4 v0, 0x0
 
-    const/4 v2, 0x0
+    const-string v2, "http://xml.org/sax/features/namespace-prefixes"
 
-    invoke-static {p1, v0, v2}, Lorg/dom4j/io/SAXHelper;->setParserFeature(Lorg/xml/sax/XMLReader;Ljava/lang/String;Z)Z
+    .line 6
+    invoke-static {p1, v2, v0}, Lorg/dom4j/io/SAXHelper;->setParserFeature(Lorg/xml/sax/XMLReader;Ljava/lang/String;Z)Z
 
-    const-string v0, "http://xml.org/sax/features/string-interning"
-
+    .line 7
     invoke-virtual {p0}, Lorg/dom4j/io/SAXReader;->isStringInternEnabled()Z
 
-    move-result v2
+    move-result v0
 
-    invoke-static {p1, v0, v2}, Lorg/dom4j/io/SAXHelper;->setParserFeature(Lorg/xml/sax/XMLReader;Ljava/lang/String;Z)Z
+    const-string v2, "http://xml.org/sax/features/string-interning"
+
+    invoke-static {p1, v2, v0}, Lorg/dom4j/io/SAXHelper;->setParserFeature(Lorg/xml/sax/XMLReader;Ljava/lang/String;Z)Z
 
     const-string v0, "http://xml.org/sax/features/use-locator2"
 
+    .line 8
     invoke-static {p1, v0, v1}, Lorg/dom4j/io/SAXHelper;->setParserFeature(Lorg/xml/sax/XMLReader;Ljava/lang/String;Z)Z
 
     :try_start_0
     const-string v0, "http://xml.org/sax/features/validation"
 
+    .line 9
     invoke-virtual {p0}, Lorg/dom4j/io/SAXReader;->isValidating()Z
 
     move-result v1
 
     invoke-interface {p1, v0, v1}, Lorg/xml/sax/XMLReader;->setFeature(Ljava/lang/String;Z)V
 
+    .line 10
     iget-object v0, p0, Lorg/dom4j/io/SAXReader;->errorHandler:Lorg/xml/sax/ErrorHandler;
 
     if-eqz v0, :cond_2
 
+    .line 11
     invoke-interface {p1, v0}, Lorg/xml/sax/XMLReader;->setErrorHandler(Lorg/xml/sax/ErrorHandler;)V
 
     goto :goto_0
 
+    .line 12
     :cond_2
     invoke-interface {p1, p2}, Lorg/xml/sax/XMLReader;->setErrorHandler(Lorg/xml/sax/ErrorHandler;)V
     :try_end_0
@@ -493,6 +506,7 @@
     :catch_0
     move-exception p2
 
+    .line 13
     invoke-virtual {p0}, Lorg/dom4j/io/SAXReader;->isValidating()Z
 
     move-result p0
@@ -502,6 +516,7 @@
     :goto_0
     return-void
 
+    .line 14
     :cond_3
     new-instance p0, Lorg/dom4j/DocumentException;
 
@@ -527,6 +542,7 @@
 .method public createContentHandler(Lorg/xml/sax/XMLReader;)Lorg/dom4j/io/SAXContentHandler;
     .locals 1
 
+    .line 1
     new-instance p1, Lorg/dom4j/io/SAXContentHandler;
 
     invoke-virtual {p0}, Lorg/dom4j/io/SAXReader;->getDocumentFactory()Lorg/dom4j/DocumentFactory;
@@ -545,6 +561,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result p0
@@ -553,16 +570,18 @@
 
     const/16 p0, 0x2f
 
+    .line 2
     invoke-virtual {p1, p0}, Ljava/lang/String;->lastIndexOf(I)I
 
     move-result p0
 
     if-lez p0, :cond_0
 
-    add-int/lit8 p0, p0, 0x1
-
     const/4 v0, 0x0
 
+    add-int/lit8 p0, p0, 0x1
+
+    .line 3
     invoke-virtual {p1, v0, p0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0
@@ -572,6 +591,7 @@
     :cond_0
     const/4 p0, 0x0
 
+    .line 4
     :goto_0
     new-instance p1, Lorg/dom4j/io/SAXReader$SAXEntityResolver;
 
@@ -588,6 +608,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/io/SAXReader;->isValidating()Z
 
     move-result p0
@@ -602,16 +623,19 @@
 .method public getDispatchHandler()Lorg/dom4j/io/DispatchHandler;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/SAXReader;->dispatchHandler:Lorg/dom4j/io/DispatchHandler;
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Lorg/dom4j/io/DispatchHandler;
 
     invoke-direct {v0}, Lorg/dom4j/io/DispatchHandler;-><init>()V
 
     iput-object v0, p0, Lorg/dom4j/io/SAXReader;->dispatchHandler:Lorg/dom4j/io/DispatchHandler;
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lorg/dom4j/io/SAXReader;->dispatchHandler:Lorg/dom4j/io/DispatchHandler;
 
@@ -621,16 +645,19 @@
 .method public getDocumentFactory()Lorg/dom4j/DocumentFactory;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/SAXReader;->factory:Lorg/dom4j/DocumentFactory;
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-static {}, Lorg/dom4j/DocumentFactory;->getInstance()Lorg/dom4j/DocumentFactory;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/dom4j/io/SAXReader;->factory:Lorg/dom4j/DocumentFactory;
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lorg/dom4j/io/SAXReader;->factory:Lorg/dom4j/DocumentFactory;
 
@@ -640,6 +667,7 @@
 .method public getEncoding()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/SAXReader;->encoding:Ljava/lang/String;
 
     return-object p0
@@ -648,6 +676,7 @@
 .method public getEntityResolver()Lorg/xml/sax/EntityResolver;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/SAXReader;->entityResolver:Lorg/xml/sax/EntityResolver;
 
     return-object p0
@@ -656,6 +685,7 @@
 .method public getErrorHandler()Lorg/xml/sax/ErrorHandler;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/SAXReader;->errorHandler:Lorg/xml/sax/ErrorHandler;
 
     return-object p0
@@ -664,6 +694,7 @@
 .method public getXMLFilter()Lorg/xml/sax/XMLFilter;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/SAXReader;->xmlFilter:Lorg/xml/sax/XMLFilter;
 
     return-object p0
@@ -677,16 +708,19 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/SAXReader;->xmlReader:Lorg/xml/sax/XMLReader;
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/io/SAXReader;->createXMLReader()Lorg/xml/sax/XMLReader;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/dom4j/io/SAXReader;->xmlReader:Lorg/xml/sax/XMLReader;
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lorg/dom4j/io/SAXReader;->xmlReader:Lorg/xml/sax/XMLReader;
 
@@ -696,6 +730,7 @@
 .method public installXMLFilter(Lorg/xml/sax/XMLReader;)Lorg/xml/sax/XMLReader;
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/io/SAXReader;->getXMLFilter()Lorg/xml/sax/XMLFilter;
 
     move-result-object p0
@@ -704,21 +739,25 @@
 
     move-object v0, p0
 
+    .line 2
     :goto_0
     invoke-interface {v0}, Lorg/xml/sax/XMLFilter;->getParent()Lorg/xml/sax/XMLReader;
 
     move-result-object v1
 
+    .line 3
     instance-of v2, v1, Lorg/xml/sax/XMLFilter;
 
     if-eqz v2, :cond_0
 
+    .line 4
     move-object v0, v1
 
     check-cast v0, Lorg/xml/sax/XMLFilter;
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-interface {v0, p1}, Lorg/xml/sax/XMLFilter;->setParent(Lorg/xml/sax/XMLReader;)V
 
@@ -731,6 +770,7 @@
 .method public isIgnoreComments()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/dom4j/io/SAXReader;->ignoreComments:Z
 
     return p0
@@ -739,6 +779,7 @@
 .method public isIncludeExternalDTDDeclarations()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/dom4j/io/SAXReader;->includeExternalDTDDeclarations:Z
 
     return p0
@@ -747,6 +788,7 @@
 .method public isIncludeInternalDTDDeclarations()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/dom4j/io/SAXReader;->includeInternalDTDDeclarations:Z
 
     return p0
@@ -755,6 +797,7 @@
 .method public isMergeAdjacentText()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/dom4j/io/SAXReader;->mergeAdjacentText:Z
 
     return p0
@@ -763,6 +806,7 @@
 .method public isStringInternEnabled()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/dom4j/io/SAXReader;->stringInternEnabled:Z
 
     return p0
@@ -771,6 +815,7 @@
 .method public isStripWhitespaceText()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/dom4j/io/SAXReader;->stripWhitespaceText:Z
 
     return p0
@@ -779,6 +824,7 @@
 .method public isValidating()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/dom4j/io/SAXReader;->validating:Z
 
     return p0
@@ -875,7 +921,7 @@
     .line 12
     new-instance p1, Lorg/dom4j/DocumentException;
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/io/FileNotFoundException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1250,7 +1296,7 @@
     :cond_2
     new-instance p1, Lorg/dom4j/DocumentException;
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1262,6 +1308,7 @@
 .method public removeHandler(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/io/SAXReader;->getDispatchHandler()Lorg/dom4j/io/DispatchHandler;
 
     move-result-object p0
@@ -1274,6 +1321,7 @@
 .method public resetHandlers()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/io/SAXReader;->getDispatchHandler()Lorg/dom4j/io/DispatchHandler;
 
     move-result-object p0
@@ -1286,6 +1334,7 @@
 .method public setDefaultHandler(Lorg/dom4j/ElementHandler;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/io/SAXReader;->getDispatchHandler()Lorg/dom4j/io/DispatchHandler;
 
     move-result-object p0
@@ -1298,6 +1347,7 @@
 .method public setDispatchHandler(Lorg/dom4j/io/DispatchHandler;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/io/SAXReader;->dispatchHandler:Lorg/dom4j/io/DispatchHandler;
 
     return-void
@@ -1306,6 +1356,7 @@
 .method public setDocumentFactory(Lorg/dom4j/DocumentFactory;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/io/SAXReader;->factory:Lorg/dom4j/DocumentFactory;
 
     return-void
@@ -1314,6 +1365,7 @@
 .method public setEncoding(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/io/SAXReader;->encoding:Ljava/lang/String;
 
     return-void
@@ -1322,6 +1374,7 @@
 .method public setEntityResolver(Lorg/xml/sax/EntityResolver;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/io/SAXReader;->entityResolver:Lorg/xml/sax/EntityResolver;
 
     return-void
@@ -1330,6 +1383,7 @@
 .method public setErrorHandler(Lorg/xml/sax/ErrorHandler;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/io/SAXReader;->errorHandler:Lorg/xml/sax/ErrorHandler;
 
     return-void
@@ -1343,6 +1397,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/io/SAXReader;->getXMLReader()Lorg/xml/sax/XMLReader;
 
     move-result-object p0
@@ -1355,6 +1410,7 @@
 .method public setIgnoreComments(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lorg/dom4j/io/SAXReader;->ignoreComments:Z
 
     return-void
@@ -1363,6 +1419,7 @@
 .method public setIncludeExternalDTDDeclarations(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lorg/dom4j/io/SAXReader;->includeExternalDTDDeclarations:Z
 
     return-void
@@ -1371,6 +1428,7 @@
 .method public setIncludeInternalDTDDeclarations(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lorg/dom4j/io/SAXReader;->includeInternalDTDDeclarations:Z
 
     return-void
@@ -1379,6 +1437,7 @@
 .method public setMergeAdjacentText(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lorg/dom4j/io/SAXReader;->mergeAdjacentText:Z
 
     return-void
@@ -1392,6 +1451,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/io/SAXReader;->getXMLReader()Lorg/xml/sax/XMLReader;
 
     move-result-object p0
@@ -1404,6 +1464,7 @@
 .method public setStringInternEnabled(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lorg/dom4j/io/SAXReader;->stringInternEnabled:Z
 
     return-void
@@ -1412,6 +1473,7 @@
 .method public setStripWhitespaceText(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lorg/dom4j/io/SAXReader;->stripWhitespaceText:Z
 
     return-void
@@ -1420,6 +1482,7 @@
 .method public setValidation(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lorg/dom4j/io/SAXReader;->validating:Z
 
     return-void
@@ -1428,6 +1491,7 @@
 .method public setXMLFilter(Lorg/xml/sax/XMLFilter;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/io/SAXReader;->xmlFilter:Lorg/xml/sax/XMLFilter;
 
     return-void
@@ -1436,6 +1500,7 @@
 .method public setXMLReader(Lorg/xml/sax/XMLReader;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/io/SAXReader;->xmlReader:Lorg/xml/sax/XMLReader;
 
     return-void
@@ -1449,6 +1514,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lorg/xml/sax/helpers/XMLReaderFactory;->createXMLReader(Ljava/lang/String;)Lorg/xml/sax/XMLReader;
 
     move-result-object p1

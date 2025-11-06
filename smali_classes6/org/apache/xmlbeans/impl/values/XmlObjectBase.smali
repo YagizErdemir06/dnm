@@ -21,7 +21,7 @@
 
 
 # static fields
-.field static final synthetic $assertionsDisabled:Z
+.field public static final synthetic $assertionsDisabled:Z
 
 .field private static final EMPTY_RESULT:[Lorg/apache/xmlbeans/XmlObject;
 
@@ -75,7 +75,7 @@
 
 .field public static final _voorVc:Lorg/apache/xmlbeans/impl/common/ValidationContext;
 
-.field static synthetic class$org$apache$xmlbeans$impl$values$XmlObjectBase:Ljava/lang/Class;
+.field public static synthetic class$org$apache$xmlbeans$impl$values$XmlObjectBase:Ljava/lang/Class;
 
 
 # instance fields
@@ -85,9 +85,10 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->class$org$apache$xmlbeans$impl$values$XmlObjectBase:Ljava/lang/Class;
 
     if-nez v0, :cond_0
@@ -105,6 +106,7 @@
 
     sput-boolean v0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->$assertionsDisabled:Z
 
+    .line 2
     new-instance v0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase$ValueOutOfRangeValidationContext;
 
     const/4 v1, 0x0
@@ -115,6 +117,7 @@
 
     const-wide v0, 0x7fffffffffffffffL
 
+    .line 3
     invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object v0
@@ -123,12 +126,14 @@
 
     const-wide/high16 v0, -0x8000000000000000L
 
+    .line 4
     invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object v0
 
     sput-object v0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_min:Ljava/math/BigInteger;
 
+    .line 5
     invoke-static {}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->buildInnerPrettyOptions()Lorg/apache/xmlbeans/XmlOptions;
 
     move-result-object v0
@@ -139,6 +144,7 @@
 
     new-array v0, v0, [Lorg/apache/xmlbeans/XmlObject;
 
+    .line 6
     sput-object v0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->EMPTY_RESULT:[Lorg/apache/xmlbeans/XmlObject;
 
     return-void
@@ -147,10 +153,12 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x41
 
+    .line 2
     iput v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     return-void
@@ -159,6 +167,7 @@
 .method private static _typedArray([Lorg/apache/xmlbeans/XmlObject;)[Lorg/apache/xmlbeans/XmlObject;
     .locals 4
 
+    .line 1
     array-length v0, p0
 
     if-nez v0, :cond_0
@@ -168,12 +177,14 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 2
     aget-object v1, p0, v0
 
     invoke-interface {v1}, Lorg/apache/xmlbeans/XmlObject;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object v1
 
+    .line 3
     sget-object v2, Lorg/apache/xmlbeans/XmlObject;->type:Lorg/apache/xmlbeans/SchemaType;
 
     invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -187,11 +198,13 @@
     :cond_1
     const/4 v2, 0x1
 
+    .line 4
     :goto_0
     array-length v3, p0
 
     if-ge v2, v3, :cond_3
 
+    .line 5
     aget-object v3, p0, v2
 
     invoke-interface {v3}, Lorg/apache/xmlbeans/XmlObject;->schemaType()Lorg/apache/xmlbeans/SchemaType;
@@ -202,6 +215,7 @@
 
     move-result-object v1
 
+    .line 6
     sget-object v3, Lorg/apache/xmlbeans/XmlObject;->type:Lorg/apache/xmlbeans/SchemaType;
 
     invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -217,6 +231,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_3
     invoke-interface {v1}, Lorg/apache/xmlbeans/SchemaType;->getJavaClass()Ljava/lang/Class;
 
@@ -225,10 +240,12 @@
     :goto_1
     if-nez v2, :cond_5
 
+    .line 8
     invoke-interface {v1}, Lorg/apache/xmlbeans/SchemaType;->getBaseType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object v1
 
+    .line 9
     sget-object v2, Lorg/apache/xmlbeans/XmlObject;->type:Lorg/apache/xmlbeans/SchemaType;
 
     invoke-virtual {v2, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -239,6 +256,7 @@
 
     return-object p0
 
+    .line 10
     :cond_4
     invoke-interface {v1}, Lorg/apache/xmlbeans/SchemaType;->getJavaClass()Ljava/lang/Class;
 
@@ -246,6 +264,7 @@
 
     goto :goto_1
 
+    .line 11
     :cond_5
     array-length v1, p0
 
@@ -255,6 +274,7 @@
 
     check-cast v1, [Lorg/apache/xmlbeans/XmlObject;
 
+    .line 12
     array-length v2, p0
 
     invoke-static {p0, v0, v1, v0, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
@@ -265,6 +285,7 @@
 .method private final apply_wscanon(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_wscanon_rule()I
 
     move-result p0
@@ -279,24 +300,29 @@
 .method public static final buildInnerPrettyOptions()Lorg/apache/xmlbeans/XmlOptions;
     .locals 2
 
+    .line 1
     new-instance v0, Lorg/apache/xmlbeans/XmlOptions;
 
     invoke-direct {v0}, Lorg/apache/xmlbeans/XmlOptions;-><init>()V
 
     const-string v1, "SAVE_INNER"
 
+    .line 2
     invoke-virtual {v0, v1}, Lorg/apache/xmlbeans/XmlOptions;->put(Ljava/lang/Object;)V
 
     const-string v1, "SAVE_PRETTY_PRINT"
 
+    .line 3
     invoke-virtual {v0, v1}, Lorg/apache/xmlbeans/XmlOptions;->put(Ljava/lang/Object;)V
 
     const-string v1, "SAVE_AGGRESSIVE_NAMESPACES"
 
+    .line 4
     invoke-virtual {v0, v1}, Lorg/apache/xmlbeans/XmlOptions;->put(Ljava/lang/Object;)V
 
     const-string v1, "SAVE_USE_DEFAULT_NAMESPACE"
 
+    .line 5
     invoke-virtual {v0, v1}, Lorg/apache/xmlbeans/XmlOptions;->put(Ljava/lang/Object;)V
 
     return-object v0
@@ -305,6 +331,7 @@
 .method private final check_element_dated()V
     .locals 3
 
+    .line 1
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit16 v1, v0, 0x200
@@ -321,6 +348,7 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object v0
@@ -329,16 +357,21 @@
 
     move-result v0
 
+    .line 3
     iget v1, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit16 v1, v1, -0x208
 
+    iput v1, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
+
     or-int/2addr v0, v1
 
+    .line 4
     iput v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     goto :goto_0
 
+    .line 5
     :cond_0
     new-instance p0, Lorg/apache/xmlbeans/impl/values/XmlValueDisconnectedException;
 
@@ -346,6 +379,7 @@
 
     throw p0
 
+    .line 6
     :cond_1
     :goto_0
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
@@ -356,15 +390,17 @@
 
     and-int/lit16 v0, v0, -0x201
 
+    .line 7
     iput v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     :cond_2
     return-void
 .end method
 
-.method static synthetic class$(Ljava/lang/String;)Ljava/lang/Class;
+.method public static synthetic class$(Ljava/lang/String;)Ljava/lang/Class;
     .locals 1
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -381,7 +417,7 @@
 
     invoke-direct {v0}, Ljava/lang/NoClassDefFoundError;-><init>()V
 
-    invoke-virtual {v0, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v0, p0}, Ljava/lang/NoClassDefFoundError;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -391,6 +427,7 @@
 .method private final comparable_value_spaces(Lorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/SchemaType;)Z
     .locals 3
 
+    .line 1
     sget-boolean p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->$assertionsDisabled:Z
 
     if-nez p0, :cond_1
@@ -418,6 +455,7 @@
 
     throw p0
 
+    .line 2
     :cond_1
     :goto_0
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaType;->isSimpleType()Z
@@ -436,6 +474,7 @@
 
     if-nez p0, :cond_3
 
+    .line 3
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaType;->getContentType()I
 
     move-result p0
@@ -454,6 +493,7 @@
     :goto_1
     return v0
 
+    .line 4
     :cond_3
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaType;->isSimpleType()Z
 
@@ -469,6 +509,7 @@
 
     goto :goto_2
 
+    .line 5
     :cond_4
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaType;->getSimpleVariety()I
 
@@ -486,6 +527,7 @@
 
     return v0
 
+    .line 6
     :cond_5
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaType;->getSimpleVariety()I
 
@@ -501,6 +543,7 @@
 
     goto :goto_2
 
+    .line 7
     :cond_6
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaType;->getPrimitiveType()Lorg/apache/xmlbeans/SchemaType;
 
@@ -526,11 +569,13 @@
 
     const/4 v0, 0x2
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->instanceType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object v1
 
+    .line 2
     move-object v2, p1
 
     check-cast v2, Lorg/apache/xmlbeans/SimpleValue;
@@ -556,6 +601,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_1
     invoke-interface {v1}, Lorg/apache/xmlbeans/SchemaType;->isSimpleType()Z
 
@@ -571,6 +617,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_2
     invoke-interface {v2}, Lorg/apache/xmlbeans/SchemaType;->isSimpleType()Z
 
@@ -586,15 +633,18 @@
 
     goto :goto_0
 
+    .line 5
     :cond_3
     invoke-interface {v1}, Lorg/apache/xmlbeans/SchemaType;->getPrimitiveType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object v1
 
+    .line 6
     invoke-interface {v2}, Lorg/apache/xmlbeans/SchemaType;->getPrimitiveType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object v2
 
+    .line 7
     invoke-interface {v1}, Lorg/apache/xmlbeans/SchemaType;->getBuiltinTypeCode()I
 
     move-result v1
@@ -607,6 +657,7 @@
 
     return v0
 
+    .line 8
     :cond_4
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->compare_to(Lorg/apache/xmlbeans/XmlObject;)I
 
@@ -623,6 +674,7 @@
 .method private ensureStore()Lorg/apache/xmlbeans/XmlObject;
     .locals 2
 
+    .line 1
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit8 v0, v0, 0x10
@@ -631,9 +683,11 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
+    .line 3
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit8 v0, v0, 0x40
@@ -665,6 +719,7 @@
 
     move-result-object v0
 
+    .line 4
     :goto_1
     new-instance v1, Lorg/apache/xmlbeans/XmlOptions;
 
@@ -678,16 +733,20 @@
 
     move-result-object p0
 
+    .line 5
     invoke-static {p0}, Lorg/apache/xmlbeans/XmlObject$Factory;->newInstance(Lorg/apache/xmlbeans/XmlOptions;)Lorg/apache/xmlbeans/XmlObject;
 
     move-result-object p0
 
+    .line 6
     invoke-interface {p0}, Lorg/apache/xmlbeans/XmlTokenSource;->newCursor()Lorg/apache/xmlbeans/XmlCursor;
 
     move-result-object v1
 
+    .line 7
     invoke-interface {v1}, Lorg/apache/xmlbeans/XmlCursor;->toNextToken()Lorg/apache/xmlbeans/XmlCursor$TokenType;
 
+    .line 8
     invoke-interface {v1, v0}, Lorg/apache/xmlbeans/XmlCursor;->insertChars(Ljava/lang/String;)V
 
     return-object p0
@@ -696,10 +755,12 @@
 .method private final getPrimitiveTypeName()Ljava/lang/String;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object p0
 
+    .line 2
     invoke-interface {p0}, Lorg/apache/xmlbeans/SchemaType;->isNoType()Z
 
     move-result v0
@@ -710,6 +771,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-interface {p0}, Lorg/apache/xmlbeans/SchemaType;->getPrimitiveType()Lorg/apache/xmlbeans/SchemaType;
 
@@ -721,6 +783,7 @@
 
     return-object p0
 
+    .line 4
     :cond_1
     invoke-interface {p0}, Lorg/apache/xmlbeans/SchemaType;->getName()Ljavax/xml/namespace/QName;
 
@@ -736,6 +799,7 @@
 .method private getRootXmlObject()Lorg/apache/xmlbeans/XmlObject;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->newCursor()Lorg/apache/xmlbeans/XmlCursor;
 
     move-result-object v0
@@ -744,13 +808,16 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     invoke-interface {v0}, Lorg/apache/xmlbeans/XmlCursor;->toStartDoc()V
 
+    .line 3
     invoke-interface {v0}, Lorg/apache/xmlbeans/XmlCursor;->getObject()Lorg/apache/xmlbeans/XmlObject;
 
     move-result-object p0
 
+    .line 4
     invoke-interface {v0}, Lorg/apache/xmlbeans/XmlCursor;->dispose()V
 
     return-object p0
@@ -759,6 +826,7 @@
 .method private isRootXmlObject()Z
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->newCursor()Lorg/apache/xmlbeans/XmlCursor;
 
     move-result-object p0
@@ -769,6 +837,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     invoke-interface {p0}, Lorg/apache/xmlbeans/XmlCursor;->toParent()Z
 
@@ -776,6 +845,7 @@
 
     xor-int/lit8 v0, v0, 0x1
 
+    .line 3
     invoke-interface {p0}, Lorg/apache/xmlbeans/XmlCursor;->dispose()V
 
     return v0
@@ -784,6 +854,7 @@
 .method public static java_value(Lorg/apache/xmlbeans/XmlObject;)Ljava/lang/Object;
     .locals 4
 
+    .line 1
     invoke-interface {p0}, Lorg/apache/xmlbeans/XmlObject;->isNil()Z
 
     move-result v0
@@ -794,6 +865,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     instance-of v0, p0, Lorg/apache/xmlbeans/XmlAnySimpleType;
 
@@ -801,6 +873,7 @@
 
     return-object p0
 
+    .line 3
     :cond_1
     check-cast p0, Lorg/apache/xmlbeans/SimpleValue;
 
@@ -808,6 +881,7 @@
 
     move-result-object v0
 
+    .line 4
     sget-boolean v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->$assertionsDisabled:Z
 
     if-nez v1, :cond_3
@@ -825,6 +899,7 @@
 
     throw p0
 
+    .line 5
     :cond_3
     :goto_0
     invoke-interface {v0}, Lorg/apache/xmlbeans/SchemaType;->getSimpleVariety()I
@@ -835,12 +910,14 @@
 
     if-ne v2, v3, :cond_4
 
+    .line 6
     invoke-interface {p0}, Lorg/apache/xmlbeans/SimpleValue;->getListValue()Ljava/util/List;
 
     move-result-object p0
 
     return-object p0
 
+    .line 7
     :cond_4
     invoke-interface {v0}, Lorg/apache/xmlbeans/SchemaType;->getPrimitiveType()Lorg/apache/xmlbeans/SchemaType;
 
@@ -856,6 +933,7 @@
 
     goto/16 :goto_3
 
+    .line 8
     :pswitch_0
     invoke-interface {p0}, Lorg/apache/xmlbeans/SimpleValue;->getCalendarValue()Ljava/util/Calendar;
 
@@ -863,6 +941,7 @@
 
     return-object p0
 
+    .line 9
     :pswitch_1
     invoke-interface {p0}, Lorg/apache/xmlbeans/SimpleValue;->getGDurationValue()Lorg/apache/xmlbeans/GDuration;
 
@@ -870,6 +949,7 @@
 
     return-object p0
 
+    .line 10
     :pswitch_2
     invoke-interface {v0}, Lorg/apache/xmlbeans/SchemaType;->getDecimalSize()I
 
@@ -897,6 +977,7 @@
 
     goto :goto_1
 
+    .line 11
     :cond_5
     new-instance p0, Ljava/lang/AssertionError;
 
@@ -906,6 +987,7 @@
 
     throw p0
 
+    .line 12
     :goto_1
     :pswitch_3
     invoke-interface {p0}, Lorg/apache/xmlbeans/SimpleValue;->getBigDecimalValue()Ljava/math/BigDecimal;
@@ -914,6 +996,7 @@
 
     return-object p0
 
+    .line 13
     :pswitch_4
     invoke-interface {p0}, Lorg/apache/xmlbeans/SimpleValue;->getBigIntegerValue()Ljava/math/BigInteger;
 
@@ -921,6 +1004,7 @@
 
     return-object p0
 
+    .line 14
     :cond_6
     new-instance v0, Ljava/lang/Long;
 
@@ -932,6 +1016,7 @@
 
     return-object v0
 
+    .line 15
     :cond_7
     new-instance v0, Ljava/lang/Integer;
 
@@ -943,6 +1028,7 @@
 
     return-object v0
 
+    .line 16
     :cond_8
     new-instance v0, Ljava/lang/Short;
 
@@ -954,6 +1040,7 @@
 
     return-object v0
 
+    .line 17
     :cond_9
     new-instance v0, Ljava/lang/Byte;
 
@@ -965,6 +1052,7 @@
 
     return-object v0
 
+    .line 18
     :pswitch_5
     new-instance v0, Ljava/lang/Double;
 
@@ -976,6 +1064,7 @@
 
     return-object v0
 
+    .line 19
     :pswitch_6
     new-instance v0, Ljava/lang/Float;
 
@@ -987,6 +1076,7 @@
 
     return-object v0
 
+    .line 20
     :pswitch_7
     invoke-interface {p0}, Lorg/apache/xmlbeans/SimpleValue;->getQNameValue()Ljavax/xml/namespace/QName;
 
@@ -994,6 +1084,7 @@
 
     return-object p0
 
+    .line 21
     :pswitch_8
     invoke-interface {p0}, Lorg/apache/xmlbeans/SimpleValue;->getStringValue()Ljava/lang/String;
 
@@ -1001,6 +1092,7 @@
 
     return-object p0
 
+    .line 22
     :pswitch_9
     invoke-interface {p0}, Lorg/apache/xmlbeans/SimpleValue;->getByteArrayValue()[B
 
@@ -1008,6 +1100,7 @@
 
     return-object p0
 
+    .line 23
     :pswitch_a
     invoke-interface {p0}, Lorg/apache/xmlbeans/SimpleValue;->getBooleanValue()Z
 
@@ -1025,6 +1118,7 @@
     :goto_2
     return-object p0
 
+    .line 24
     :goto_3
     :pswitch_b
     invoke-interface {p0}, Lorg/apache/xmlbeans/SimpleValue;->getStringValue()Ljava/lang/String;
@@ -1033,6 +1127,7 @@
 
     return-object p0
 
+    .line 25
     :cond_b
     new-instance p0, Ljava/lang/AssertionError;
 
@@ -1078,12 +1173,14 @@
 .method private static makeInnerOptions(Lorg/apache/xmlbeans/XmlOptions;)Lorg/apache/xmlbeans/XmlOptions;
     .locals 1
 
+    .line 1
     new-instance v0, Lorg/apache/xmlbeans/XmlOptions;
 
     invoke-direct {v0, p0}, Lorg/apache/xmlbeans/XmlOptions;-><init>(Lorg/apache/xmlbeans/XmlOptions;)V
 
     const-string p0, "SAVE_INNER"
 
+    .line 2
     invoke-virtual {v0, p0}, Lorg/apache/xmlbeans/XmlOptions;->put(Ljava/lang/Object;)V
 
     return-object v0
@@ -1092,16 +1189,19 @@
 .method private schemaField()Lorg/apache/xmlbeans/SchemaField;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object v0
 
+    .line 2
     invoke-interface {v0}, Lorg/apache/xmlbeans/SchemaType;->getContainerField()Lorg/apache/xmlbeans/SchemaField;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -1117,6 +1217,7 @@
 .method private final set_commit()V
     .locals 3
 
+    .line 1
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit8 v1, v0, 0x40
@@ -1133,6 +1234,7 @@
     :goto_0
     and-int/lit16 v0, v0, -0x141
 
+    .line 2
     iput v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit8 v2, v0, 0x10
@@ -1141,8 +1243,10 @@
 
     and-int/lit16 v0, v0, -0x2a1
 
+    .line 3
     iput v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
+    .line 4
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object v0
@@ -1151,6 +1255,7 @@
 
     if-eqz v1, :cond_2
 
+    .line 5
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -1162,6 +1267,7 @@
     :cond_1
     const/4 v0, 0x0
 
+    .line 6
     iput-object v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_textsource:Ljava/lang/Object;
 
     :cond_2
@@ -1172,8 +1278,10 @@
 .method private final set_prepare()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_element_dated()V
 
+    .line 2
     iget p0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit16 p0, p0, 0x1000
@@ -1182,6 +1290,7 @@
 
     return-void
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -1193,10 +1302,13 @@
 .method private setterHelper(Lorg/apache/xmlbeans/impl/values/XmlObjectBase;)Lorg/apache/xmlbeans/impl/values/TypeStoreUser;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 2
     invoke-virtual {p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -1233,21 +1345,25 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     instance-of v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
 
     if-eqz v0, :cond_1
 
+    .line 2
     check-cast p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
 
     return-object p0
 
+    .line 3
     :cond_1
     :goto_0
     instance-of v0, p0, Lorg/apache/xmlbeans/DelegateXmlObject;
 
     if-eqz v0, :cond_2
 
+    .line 4
     check-cast p0, Lorg/apache/xmlbeans/DelegateXmlObject;
 
     invoke-interface {p0}, Lorg/apache/xmlbeans/DelegateXmlObject;->underlyingXmlObject()Lorg/apache/xmlbeans/XmlObject;
@@ -1256,15 +1372,18 @@
 
     goto :goto_0
 
+    .line 5
     :cond_2
     instance-of v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
 
     if-eqz v0, :cond_3
 
+    .line 6
     check-cast p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
 
     return-object p0
 
+    .line 7
     :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -1278,6 +1397,7 @@
 .method private final update_from_wscanon_text(Ljava/lang/String;)V
     .locals 2
 
+    .line 1
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit8 v1, v0, 0x2
@@ -1294,12 +1414,14 @@
 
     const-string v0, ""
 
+    .line 2
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p1
@@ -1310,25 +1432,34 @@
 
     if-eqz p1, :cond_0
 
+    .line 4
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     or-int/lit16 v0, v0, 0x400
 
     iput v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
+    .line 5
     :try_start_0
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 6
     iget p1, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit16 p1, p1, -0x401
 
+    iput p1, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
+
     and-int/lit8 p1, p1, -0x41
+
+    .line 7
+    iput p1, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     or-int/lit16 p1, p1, 0x100
 
+    .line 8
     iput p1, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     return-void
@@ -1336,6 +1467,7 @@
     :catchall_0
     move-exception p1
 
+    .line 9
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit16 v0, v0, -0x401
@@ -1344,6 +1476,7 @@
 
     throw p1
 
+    .line 10
     :cond_0
     new-instance p0, Lorg/apache/xmlbeans/impl/values/XmlValueOutOfRangeException;
 
@@ -1351,9 +1484,11 @@
 
     throw p0
 
+    .line 11
     :cond_1
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_text(Ljava/lang/String;)V
 
+    .line 12
     iget p1, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit16 p1, p1, -0x141
@@ -1375,17 +1510,20 @@
     :cond_0
     const-string v0, "ERROR_LISTENER"
 
+    .line 1
     invoke-virtual {p1, v0}, Lorg/apache/xmlbeans/XmlOptions;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/Collection;
 
+    .line 2
     :goto_0
     new-instance v1, Lorg/apache/xmlbeans/impl/common/XmlErrorWatcher;
 
     invoke-direct {v1, v0}, Lorg/apache/xmlbeans/impl/common/XmlErrorWatcher;-><init>(Ljava/util/Collection;)V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object v0
@@ -1408,6 +1546,7 @@
 
     if-nez p1, :cond_5
 
+    .line 4
     :cond_1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
@@ -1421,6 +1560,7 @@
 
     move v3, v0
 
+    .line 5
     :goto_1
     array-length v4, p1
 
@@ -1428,6 +1568,7 @@
 
     if-ge v3, v4, :cond_4
 
+    .line 6
     aget-object v4, p1, v3
 
     invoke-interface {v4}, Lorg/apache/xmlbeans/SchemaProperty;->getMinOccurs()Ljava/math/BigInteger;
@@ -1440,6 +1581,7 @@
 
     if-lez v4, :cond_3
 
+    .line 7
     aget-object v4, p1, v3
 
     invoke-interface {v4}, Lorg/apache/xmlbeans/SchemaProperty;->isAttribute()Z
@@ -1450,6 +1592,7 @@
 
     new-array v4, v2, [Ljava/lang/Object;
 
+    .line 8
     aget-object v5, p1, v3
 
     invoke-interface {v5}, Lorg/apache/xmlbeans/SchemaProperty;->getName()Ljavax/xml/namespace/QName;
@@ -1475,6 +1618,7 @@
     :cond_2
     new-array v4, v5, [Ljava/lang/Object;
 
+    .line 9
     aget-object v5, p1, v3
 
     invoke-interface {v5}, Lorg/apache/xmlbeans/SchemaProperty;->getMinOccurs()Ljava/math/BigInteger;
@@ -1509,6 +1653,7 @@
 
     goto :goto_1
 
+    .line 10
     :cond_4
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
@@ -1520,6 +1665,7 @@
 
     if-eq p1, v5, :cond_5
 
+    .line 11
     invoke-virtual {v1}, Lorg/apache/xmlbeans/impl/common/XmlErrorWatcher;->hasError()Z
 
     move-result p0
@@ -1528,6 +1674,7 @@
 
     return p0
 
+    .line 12
     :cond_5
     iget-object p1, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_textsource:Ljava/lang/Object;
 
@@ -1537,6 +1684,7 @@
 
     const-string p1, ""
 
+    .line 13
     :cond_6
     new-instance v0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase$ImmutableValueValidationContext;
 
@@ -1544,6 +1692,7 @@
 
     invoke-virtual {p0, p1, v0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->validate_simpleval(Ljava/lang/String;Lorg/apache/xmlbeans/impl/common/ValidationContext;)V
 
+    .line 14
     invoke-virtual {v1}, Lorg/apache/xmlbeans/impl/common/XmlErrorWatcher;->hasError()Z
 
     move-result p0
@@ -1556,12 +1705,15 @@
 .method private final valueEqualsImpl(Lorg/apache/xmlbeans/XmlObject;)Z
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
+    .line 2
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->instanceType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object v0
 
+    .line 3
     move-object v1, p1
 
     check-cast v1, Lorg/apache/xmlbeans/SimpleValue;
@@ -1587,6 +1739,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     invoke-direct {p0, v0, v1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->comparable_value_spaces(Lorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/SchemaType;)Z
 
@@ -1596,6 +1749,7 @@
 
     return v2
 
+    .line 5
     :cond_2
     invoke-interface {p1}, Lorg/apache/xmlbeans/XmlObject;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
@@ -1609,6 +1763,7 @@
 
     if-ne v0, v1, :cond_3
 
+    .line 6
     invoke-static {p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->underlying(Lorg/apache/xmlbeans/XmlObject;)Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
 
     move-result-object p1
@@ -1619,6 +1774,7 @@
 
     return p0
 
+    .line 7
     :cond_3
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->equal_to(Lorg/apache/xmlbeans/XmlObject;)Z
 
@@ -1636,6 +1792,7 @@
 .method public _isComplexContent()Z
     .locals 0
 
+    .line 1
     iget p0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit16 p0, p0, 0x4000
@@ -1656,6 +1813,7 @@
 .method public _isComplexType()Z
     .locals 0
 
+    .line 1
     iget p0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit16 p0, p0, 0x2000
@@ -1676,6 +1834,7 @@
 .method public _validateOnSet()Z
     .locals 1
 
+    .line 1
     iget p0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     const/high16 v0, 0x10000
@@ -1698,8 +1857,10 @@
 .method public final attach_store(Lorg/apache/xmlbeans/impl/values/TypeStore;)V
     .locals 2
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_textsource:Ljava/lang/Object;
 
+    .line 2
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit16 v1, v0, 0x1000
@@ -1708,20 +1869,24 @@
 
     or-int/lit16 v0, v0, 0x2b0
 
+    .line 3
     iput v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
+    .line 4
     invoke-interface {p1}, Lorg/apache/xmlbeans/impl/values/TypeStore;->is_attribute()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 5
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     or-int/lit8 v0, v0, 0x8
 
     iput v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
+    .line 6
     :cond_0
     invoke-interface {p1}, Lorg/apache/xmlbeans/impl/values/TypeStore;->validate_on_set()Z
 
@@ -1729,6 +1894,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 7
     iget p1, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     const/high16 v0, 0x10000
@@ -1740,6 +1906,7 @@
     :cond_1
     return-void
 
+    .line 8
     :cond_2
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -1751,17 +1918,18 @@
 .method public bigDecimalValue()Ljava/math/BigDecimal;
     .locals 3
 
+    .line 1
     new-instance v0, Lorg/apache/xmlbeans/impl/values/XmlValueNotSupportedException;
 
     const/4 v1, 0x2
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    const/4 v2, 0x0
-
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->getPrimitiveTypeName()Ljava/lang/String;
 
     move-result-object p0
+
+    const/4 v2, 0x0
 
     aput-object p0, v1, v2
 
@@ -1781,6 +1949,7 @@
 .method public bigIntegerValue()Ljava/math/BigInteger;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->bigDecimalValue()Ljava/math/BigDecimal;
 
     move-result-object p0
@@ -1803,17 +1972,18 @@
 .method public booleanValue()Z
     .locals 3
 
+    .line 1
     new-instance v0, Lorg/apache/xmlbeans/impl/values/XmlValueNotSupportedException;
 
     const/4 v1, 0x2
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    const/4 v2, 0x0
-
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->getPrimitiveTypeName()Ljava/lang/String;
 
     move-result-object p0
+
+    const/4 v2, 0x0
 
     aput-object p0, v1, v2
 
@@ -1833,6 +2003,7 @@
 .method public build_nil()Z
     .locals 2
 
+    .line 1
     sget-boolean v0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->$assertionsDisabled:Z
 
     if-nez v0, :cond_1
@@ -1856,6 +2027,7 @@
     :goto_0
     if-nez v0, :cond_3
 
+    .line 2
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit8 v0, v0, 0x20
@@ -1871,6 +2043,7 @@
 
     throw p0
 
+    .line 3
     :cond_3
     :goto_1
     iget p0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
@@ -1893,6 +2066,7 @@
 .method public final build_text(Lorg/apache/xmlbeans/impl/values/NamespaceManager;)Ljava/lang/String;
     .locals 2
 
+    .line 1
     sget-boolean v0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->$assertionsDisabled:Z
 
     if-nez v0, :cond_1
@@ -1916,6 +2090,7 @@
     :goto_0
     if-nez v0, :cond_3
 
+    .line 2
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit8 v0, v0, 0x20
@@ -1931,6 +2106,7 @@
 
     throw p0
 
+    .line 3
     :cond_3
     :goto_1
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
@@ -1946,6 +2122,7 @@
     :cond_4
     if-nez p1, :cond_6
 
+    .line 4
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->has_store()Z
 
     move-result p1
@@ -1973,17 +2150,18 @@
 .method public byteArrayValue()[B
     .locals 3
 
+    .line 1
     new-instance v0, Lorg/apache/xmlbeans/impl/values/XmlValueNotSupportedException;
 
     const/4 v1, 0x2
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    const/4 v2, 0x0
-
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->getPrimitiveTypeName()Ljava/lang/String;
 
     move-result-object p0
+
+    const/4 v2, 0x0
 
     aput-object p0, v1, v2
 
@@ -2003,6 +2181,7 @@
 .method public byteValue()B
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->intValue()I
 
     move-result p0
@@ -2027,6 +2206,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     new-instance p0, Lorg/apache/xmlbeans/impl/values/XmlValueOutOfRangeException;
 
@@ -2034,6 +2214,7 @@
 
     throw p0
 
+    .line 3
     :cond_1
     new-instance p0, Lorg/apache/xmlbeans/impl/values/XmlValueOutOfRangeException;
 
@@ -2045,17 +2226,18 @@
 .method public calendarValue()Ljava/util/Calendar;
     .locals 3
 
+    .line 1
     new-instance v0, Lorg/apache/xmlbeans/impl/values/XmlValueNotSupportedException;
 
     const/4 v1, 0x2
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    const/4 v2, 0x0
-
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->getPrimitiveTypeName()Ljava/lang/String;
 
     move-result-object p0
+
+    const/4 v2, 0x0
 
     aput-object p0, v1, v2
 
@@ -2077,21 +2259,25 @@
 
     if-eqz p1, :cond_1
 
+    .line 1
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit8 v0, v0, 0x10
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 3
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 4
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -2109,12 +2295,14 @@
     :catchall_0
     move-exception p0
 
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw p0
 
+    .line 6
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2124,6 +2312,7 @@
 
     throw p0
 
+    .line 7
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -2137,6 +2326,7 @@
 .method public final check_dated()V
     .locals 3
 
+    .line 1
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit16 v1, v0, 0x2a0
@@ -2147,6 +2337,7 @@
 
     if-nez v1, :cond_a
 
+    .line 2
     sget-boolean v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->$assertionsDisabled:Z
 
     if-nez v1, :cond_1
@@ -2164,16 +2355,19 @@
 
     throw p0
 
+    .line 3
     :cond_1
     :goto_0
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_element_dated()V
 
+    .line 4
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit16 v0, v0, 0x200
 
     if-eqz v0, :cond_2
 
+    .line 5
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object v0
@@ -2182,33 +2376,40 @@
 
     move-result v0
 
+    .line 6
     iget v1, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit16 v1, v1, -0x208
 
+    iput v1, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
+
     or-int/2addr v0, v1
 
+    .line 7
     iput v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     :cond_2
-    iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
+    const/4 v0, 0x0
 
-    and-int/lit16 v0, v0, 0x80
+    .line 8
+    iget v1, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
-    const/4 v1, 0x0
+    and-int/lit16 v1, v1, 0x80
 
-    if-eqz v0, :cond_6
+    if-eqz v1, :cond_6
 
+    .line 9
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-interface {v0}, Lorg/apache/xmlbeans/impl/values/TypeStore;->find_nil()Z
+    invoke-interface {v1}, Lorg/apache/xmlbeans/impl/values/TypeStore;->find_nil()Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_5
+    if-eqz v1, :cond_5
 
+    .line 10
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit8 v1, v0, 0x1
@@ -2223,6 +2424,7 @@
 
     goto :goto_1
 
+    .line 11
     :cond_3
     new-instance p0, Lorg/apache/xmlbeans/impl/values/XmlValueOutOfRangeException;
 
@@ -2230,10 +2432,12 @@
 
     throw p0
 
+    .line 12
     :cond_4
     :goto_1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_nil()V
 
+    .line 13
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     or-int/lit8 v0, v0, 0x40
@@ -2242,27 +2446,28 @@
 
     const/4 v0, 0x1
 
-    move v1, v0
-
     goto :goto_2
 
+    .line 14
     :cond_5
-    iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
+    iget v1, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
-    and-int/lit8 v0, v0, -0x41
+    and-int/lit8 v1, v1, -0x41
 
-    iput v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
+    iput v1, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
+    .line 15
     :goto_2
-    iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
+    iget v1, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
-    and-int/lit16 v0, v0, -0x81
+    and-int/lit16 v1, v1, -0x81
 
-    iput v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
+    iput v1, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     :cond_6
-    if-nez v1, :cond_9
+    if-nez v0, :cond_9
 
+    .line 16
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit16 v0, v0, 0x4000
@@ -2277,6 +2482,7 @@
 
     goto :goto_3
 
+    .line 17
     :cond_7
     new-instance v1, Lorg/apache/xmlbeans/impl/values/NamespaceContext;
 
@@ -2288,11 +2494,13 @@
 
     invoke-static {v1}, Lorg/apache/xmlbeans/impl/values/NamespaceContext;->push(Lorg/apache/xmlbeans/impl/values/NamespaceContext;)V
 
+    .line 18
     :try_start_0
     invoke-direct {p0, v0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->update_from_wscanon_text(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 19
     invoke-static {}, Lorg/apache/xmlbeans/impl/values/NamespaceContext;->pop()V
 
     goto :goto_4
@@ -2304,10 +2512,12 @@
 
     throw p0
 
+    .line 20
     :cond_8
     :goto_3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->update_from_complex_content()V
 
+    .line 21
     :cond_9
     :goto_4
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
@@ -2318,6 +2528,7 @@
 
     goto :goto_5
 
+    .line 22
     :cond_a
     new-instance p0, Lorg/apache/xmlbeans/impl/values/XmlValueDisconnectedException;
 
@@ -2333,6 +2544,7 @@
 .method public final check_orphaned()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->is_orphaned()Z
 
     move-result p0
@@ -2341,6 +2553,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     new-instance p0, Lorg/apache/xmlbeans/impl/values/XmlValueDisconnectedException;
 
@@ -2352,6 +2565,7 @@
 .method public final compareTo(Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     check-cast p1, Lorg/apache/xmlbeans/XmlObject;
 
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->compareValue(Lorg/apache/xmlbeans/XmlObject;)I
@@ -2364,6 +2578,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/ClassCastException;
 
@@ -2384,6 +2599,7 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->isImmutable()Z
 
@@ -2391,18 +2607,21 @@
 
     if-eqz v1, :cond_2
 
+    .line 2
     invoke-interface {p1}, Lorg/apache/xmlbeans/XmlObject;->isImmutable()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
+    .line 3
     invoke-direct {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->compareValueImpl(Lorg/apache/xmlbeans/XmlObject;)I
 
     move-result p0
 
     return p0
 
+    .line 4
     :cond_1
     invoke-interface {p1}, Lorg/apache/xmlbeans/XmlTokenSource;->monitor()Ljava/lang/Object;
 
@@ -2413,6 +2632,7 @@
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_7
 
+    .line 5
     :try_start_1
     invoke-direct {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->compareValueImpl(Lorg/apache/xmlbeans/XmlObject;)I
 
@@ -2425,6 +2645,7 @@
     :catchall_0
     move-exception p0
 
+    .line 6
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -2432,6 +2653,7 @@
     :try_start_2
     throw p0
 
+    .line 7
     :cond_2
     invoke-interface {p1}, Lorg/apache/xmlbeans/XmlObject;->isImmutable()Z
 
@@ -2451,6 +2673,7 @@
 
     goto :goto_2
 
+    .line 8
     :cond_3
     invoke-static {}, Lorg/apache/xmlbeans/impl/common/GlobalLock;->acquire()V
     :try_end_2
@@ -2459,6 +2682,7 @@
 
     const/4 v1, 0x1
 
+    .line 9
     :try_start_3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
@@ -2469,6 +2693,7 @@
     .catch Ljava/lang/InterruptedException; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_5
 
+    .line 10
     :try_start_4
     invoke-interface {p1}, Lorg/apache/xmlbeans/XmlTokenSource;->monitor()Ljava/lang/Object;
 
@@ -2478,11 +2703,13 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_3
 
+    .line 11
     :try_start_5
     invoke-static {}, Lorg/apache/xmlbeans/impl/common/GlobalLock;->release()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
+    .line 12
     :try_start_6
     invoke-direct {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->compareValueImpl(Lorg/apache/xmlbeans/XmlObject;)I
 
@@ -2509,6 +2736,7 @@
 
     move v0, v1
 
+    .line 13
     :goto_0
     :try_start_8
     monitor-exit v3
@@ -2523,6 +2751,7 @@
 
     move v0, v1
 
+    .line 14
     :goto_1
     monitor-exit v2
     :try_end_9
@@ -2550,6 +2779,7 @@
 
     goto :goto_3
 
+    .line 15
     :cond_4
     :goto_2
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
@@ -2561,6 +2791,7 @@
     .catch Ljava/lang/InterruptedException; {:try_start_a .. :try_end_a} :catch_1
     .catchall {:try_start_a .. :try_end_a} :catchall_7
 
+    .line 16
     :try_start_b
     invoke-direct {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->compareValueImpl(Lorg/apache/xmlbeans/XmlObject;)I
 
@@ -2573,6 +2804,7 @@
     :catchall_6
     move-exception p0
 
+    .line 17
     monitor-exit v1
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_6
@@ -2591,6 +2823,7 @@
     :catch_1
     move-exception p0
 
+    .line 18
     :goto_3
     :try_start_d
     new-instance p1, Lorg/apache/xmlbeans/XmlRuntimeException;
@@ -2604,6 +2837,7 @@
     :goto_4
     if-eqz v0, :cond_5
 
+    .line 19
     invoke-static {}, Lorg/apache/xmlbeans/impl/common/GlobalLock;->release()V
 
     :cond_5
@@ -2613,6 +2847,7 @@
 .method public compare_to(Lorg/apache/xmlbeans/XmlObject;)I
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->equal_to(Lorg/apache/xmlbeans/XmlObject;)Z
 
     move-result p0
@@ -2635,12 +2870,14 @@
 .method public final copy()Lorg/apache/xmlbeans/XmlObject;
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->isImmutable()Z
 
@@ -2648,13 +2885,16 @@
 
     if-eqz v1, :cond_0
 
+    .line 3
     monitor-exit v0
 
     return-object p0
 
+    .line 4
     :cond_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 5
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object v1
@@ -2663,6 +2903,7 @@
 
     move-result-object v1
 
+    .line 6
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object v2
@@ -2679,6 +2920,7 @@
 
     check-cast p0, Lorg/apache/xmlbeans/XmlObject;
 
+    .line 7
     monitor-exit v0
 
     return-object p0
@@ -2686,6 +2928,7 @@
     :catchall_0
     move-exception p0
 
+    .line 8
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -2696,6 +2939,7 @@
 .method public create_attribute_user(Ljavax/xml/namespace/QName;)Lorg/apache/xmlbeans/impl/values/TypeStoreUser;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object v0
@@ -2722,6 +2966,7 @@
 .method public create_element_user(Ljavax/xml/namespace/QName;Ljavax/xml/namespace/QName;)Lorg/apache/xmlbeans/impl/values/TypeStoreUser;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object v0
@@ -2748,17 +2993,18 @@
 .method public dateValue()Ljava/util/Date;
     .locals 3
 
+    .line 1
     new-instance v0, Lorg/apache/xmlbeans/impl/values/XmlValueNotSupportedException;
 
     const/4 v1, 0x2
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    const/4 v2, 0x0
-
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->getPrimitiveTypeName()Ljava/lang/String;
 
     move-result-object p0
+
+    const/4 v2, 0x0
 
     aput-object p0, v1, v2
 
@@ -2778,6 +3024,7 @@
 .method public disconnect_store()V
     .locals 1
 
+    .line 1
     sget-boolean v0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->$assertionsDisabled:Z
 
     if-nez v0, :cond_1
@@ -2797,6 +3044,7 @@
 
     throw p0
 
+    .line 2
     :cond_1
     :goto_0
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
@@ -2811,6 +3059,7 @@
 .method public documentProperties()Lorg/apache/xmlbeans/XmlDocumentProperties;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->newCursorForce()Lorg/apache/xmlbeans/XmlCursor;
 
     move-result-object p0
@@ -2837,6 +3086,7 @@
 .method public doubleValue()D
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->bigDecimalValue()Ljava/math/BigDecimal;
 
     move-result-object p0
@@ -2859,6 +3109,7 @@
 .method public dump()V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->newCursorForce()Lorg/apache/xmlbeans/XmlCursor;
 
     move-result-object p0
@@ -2883,8 +3134,10 @@
 .method public elementFlags()I
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_element_dated()V
 
+    .line 2
     iget p0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit8 p0, p0, 0x7
@@ -2895,17 +3148,18 @@
 .method public enumValue()Lorg/apache/xmlbeans/StringEnumAbstractBase;
     .locals 3
 
+    .line 1
     new-instance v0, Lorg/apache/xmlbeans/impl/values/XmlValueNotSupportedException;
 
     const/4 v1, 0x2
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    const/4 v2, 0x0
-
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->getPrimitiveTypeName()Ljava/lang/String;
 
     move-result-object p0
+
+    const/4 v2, 0x0
 
     aput-object p0, v1, v2
 
@@ -2928,18 +3182,21 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->isImmutable()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-super {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     return p0
 
+    .line 3
     :cond_0
     instance-of v0, p1, Lorg/apache/xmlbeans/XmlObject;
 
@@ -2949,9 +3206,11 @@
 
     return v1
 
+    .line 4
     :cond_1
     check-cast p1, Lorg/apache/xmlbeans/XmlObject;
 
+    .line 5
     invoke-interface {p1}, Lorg/apache/xmlbeans/XmlObject;->isImmutable()Z
 
     move-result v0
@@ -2960,6 +3219,7 @@
 
     return v1
 
+    .line 6
     :cond_2
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->valueEquals(Lorg/apache/xmlbeans/XmlObject;)Z
 
@@ -3053,6 +3313,7 @@
 .method public floatValue()F
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->bigDecimalValue()Ljava/math/BigDecimal;
 
     move-result-object p0
@@ -3075,17 +3336,18 @@
 .method public gDateValue()Lorg/apache/xmlbeans/GDate;
     .locals 3
 
+    .line 1
     new-instance v0, Lorg/apache/xmlbeans/impl/values/XmlValueNotSupportedException;
 
     const/4 v1, 0x2
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    const/4 v2, 0x0
-
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->getPrimitiveTypeName()Ljava/lang/String;
 
     move-result-object p0
+
+    const/4 v2, 0x0
 
     aput-object p0, v1, v2
 
@@ -3105,17 +3367,18 @@
 .method public gDurationValue()Lorg/apache/xmlbeans/GDuration;
     .locals 3
 
+    .line 1
     new-instance v0, Lorg/apache/xmlbeans/impl/values/XmlValueNotSupportedException;
 
     const/4 v1, 0x2
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    const/4 v2, 0x0
-
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->getPrimitiveTypeName()Ljava/lang/String;
 
     move-result-object p0
+
+    const/4 v2, 0x0
 
     aput-object p0, v1, v2
 
@@ -3135,6 +3398,7 @@
 .method public getBigDecimalValue()Ljava/math/BigDecimal;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->bigDecimalValue()Ljava/math/BigDecimal;
 
     move-result-object p0
@@ -3145,6 +3409,7 @@
 .method public getBigIntegerValue()Ljava/math/BigInteger;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->bigIntegerValue()Ljava/math/BigInteger;
 
     move-result-object p0
@@ -3155,6 +3420,7 @@
 .method public getBooleanValue()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->booleanValue()Z
 
     move-result p0
@@ -3165,6 +3431,7 @@
 .method public getByteArrayValue()[B
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->byteArrayValue()[B
 
     move-result-object p0
@@ -3175,6 +3442,7 @@
 .method public getByteValue()B
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->byteValue()B
 
     move-result p0
@@ -3185,6 +3453,7 @@
 .method public getCalendarValue()Ljava/util/Calendar;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->calendarValue()Ljava/util/Calendar;
 
     move-result-object p0
@@ -3195,6 +3464,7 @@
 .method public getDateValue()Ljava/util/Date;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->dateValue()Ljava/util/Date;
 
     move-result-object p0
@@ -3205,6 +3475,7 @@
 .method public getDomNode()Lorg/w3c/dom/Node;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->newCursorForce()Lorg/apache/xmlbeans/XmlCursor;
 
     move-result-object p0
@@ -3231,6 +3502,7 @@
 .method public getDoubleValue()D
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->doubleValue()D
 
     move-result-wide v0
@@ -3241,6 +3513,7 @@
 .method public getEnumValue()Lorg/apache/xmlbeans/StringEnumAbstractBase;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->enumValue()Lorg/apache/xmlbeans/StringEnumAbstractBase;
 
     move-result-object p0
@@ -3251,6 +3524,7 @@
 .method public getFloatValue()F
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->floatValue()F
 
     move-result p0
@@ -3261,6 +3535,7 @@
 .method public getGDateValue()Lorg/apache/xmlbeans/GDate;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->gDateValue()Lorg/apache/xmlbeans/GDate;
 
     move-result-object p0
@@ -3271,6 +3546,7 @@
 .method public getGDurationValue()Lorg/apache/xmlbeans/GDuration;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->gDurationValue()Lorg/apache/xmlbeans/GDuration;
 
     move-result-object p0
@@ -3281,6 +3557,7 @@
 .method public getIntValue()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->intValue()I
 
     move-result p0
@@ -3291,6 +3568,7 @@
 .method public getListValue()Ljava/util/List;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->listValue()Ljava/util/List;
 
     move-result-object p0
@@ -3301,6 +3579,7 @@
 .method public getLongValue()J
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->longValue()J
 
     move-result-wide v0
@@ -3311,6 +3590,7 @@
 .method public getObjectValue()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->objectValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -3321,6 +3601,7 @@
 .method public getQNameValue()Ljavax/xml/namespace/QName;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->qNameValue()Ljavax/xml/namespace/QName;
 
     move-result-object p0
@@ -3331,6 +3612,7 @@
 .method public getShortValue()S
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->shortValue()S
 
     move-result p0
@@ -3341,6 +3623,7 @@
 .method public getStringValue()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->stringValue()Ljava/lang/String;
 
     move-result-object p0
@@ -3351,6 +3634,7 @@
 .method public final getXmlLocale()Lorg/apache/xmlbeans/impl/common/XmlLocale;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -3365,6 +3649,7 @@
 .method public get_attribute_field(Ljavax/xml/namespace/QName;)Lorg/apache/xmlbeans/SchemaField;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object p0
@@ -3379,6 +3664,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     invoke-interface {p0, p1}, Lorg/apache/xmlbeans/SchemaAttributeModel;->getAttribute(Ljavax/xml/namespace/QName;)Lorg/apache/xmlbeans/SchemaLocalAttribute;
 
@@ -3390,6 +3676,7 @@
 .method public get_attribute_type(Ljavax/xml/namespace/QName;)Lorg/apache/xmlbeans/SchemaType;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object v0
@@ -3412,6 +3699,7 @@
 .method public get_attributeflags(Ljavax/xml/namespace/QName;)I
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_isComplexType()Z
 
     move-result v0
@@ -3422,6 +3710,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
@@ -3435,6 +3724,7 @@
 
     return v1
 
+    .line 3
     :cond_1
     invoke-interface {p0}, Lorg/apache/xmlbeans/SchemaProperty;->hasDefault()I
 
@@ -3470,6 +3760,7 @@
 .method public get_default_attribute_text(Ljavax/xml/namespace/QName;)Ljava/lang/String;
     .locals 1
 
+    .line 1
     sget-boolean v0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->$assertionsDisabled:Z
 
     if-nez v0, :cond_1
@@ -3489,6 +3780,7 @@
 
     throw p0
 
+    .line 2
     :cond_1
     :goto_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_isComplexType()Z
@@ -3497,6 +3789,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object p0
@@ -3511,6 +3804,7 @@
 
     return-object p0
 
+    .line 4
     :cond_2
     invoke-interface {p0}, Lorg/apache/xmlbeans/SchemaProperty;->getDefaultText()Ljava/lang/String;
 
@@ -3518,6 +3812,7 @@
 
     return-object p0
 
+    .line 5
     :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -3529,10 +3824,12 @@
 .method public get_default_attribute_value(Ljavax/xml/namespace/QName;)Lorg/apache/xmlbeans/XmlAnySimpleType;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object p0
 
+    .line 2
     invoke-interface {p0}, Lorg/apache/xmlbeans/SchemaType;->getAttributeModel()Lorg/apache/xmlbeans/SchemaAttributeModel;
 
     move-result-object p0
@@ -3543,6 +3840,7 @@
 
     return-object v0
 
+    .line 3
     :cond_0
     invoke-interface {p0, p1}, Lorg/apache/xmlbeans/SchemaAttributeModel;->getAttribute(Ljavax/xml/namespace/QName;)Lorg/apache/xmlbeans/SchemaLocalAttribute;
 
@@ -3552,6 +3850,7 @@
 
     return-object v0
 
+    .line 4
     :cond_1
     invoke-interface {p0}, Lorg/apache/xmlbeans/SchemaField;->getDefaultValue()Lorg/apache/xmlbeans/XmlAnySimpleType;
 
@@ -3563,6 +3862,7 @@
 .method public get_default_element_text(Ljavax/xml/namespace/QName;)Ljava/lang/String;
     .locals 1
 
+    .line 1
     sget-boolean v0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->$assertionsDisabled:Z
 
     if-nez v0, :cond_1
@@ -3582,6 +3882,7 @@
 
     throw p0
 
+    .line 2
     :cond_1
     :goto_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_isComplexContent()Z
@@ -3590,6 +3891,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object p0
@@ -3604,6 +3906,7 @@
 
     return-object p0
 
+    .line 4
     :cond_2
     invoke-interface {p0}, Lorg/apache/xmlbeans/SchemaProperty;->getDefaultText()Ljava/lang/String;
 
@@ -3611,6 +3914,7 @@
 
     return-object p0
 
+    .line 5
     :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -3622,6 +3926,7 @@
 .method public final get_element_ending_delimiters(Ljavax/xml/namespace/QName;)Lorg/apache/xmlbeans/QNameSet;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object p0
@@ -3636,6 +3941,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     invoke-interface {p0}, Lorg/apache/xmlbeans/SchemaProperty;->getJavaSetterDelimiter()Lorg/apache/xmlbeans/QNameSet;
 
@@ -3647,6 +3953,7 @@
 .method public get_element_type(Ljavax/xml/namespace/QName;Ljavax/xml/namespace/QName;)Lorg/apache/xmlbeans/SchemaType;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object v0
@@ -3669,6 +3976,7 @@
 .method public get_elementflags(Ljavax/xml/namespace/QName;)I
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_isComplexContent()Z
 
     move-result v0
@@ -3679,6 +3987,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
@@ -3692,6 +4001,7 @@
 
     return v1
 
+    .line 3
     :cond_1
     invoke-interface {p0}, Lorg/apache/xmlbeans/SchemaProperty;->hasDefault()I
 
@@ -3715,6 +4025,7 @@
 
     goto :goto_3
 
+    .line 4
     :cond_2
     invoke-interface {p0}, Lorg/apache/xmlbeans/SchemaProperty;->hasDefault()I
 
@@ -3772,6 +4083,7 @@
 .method public get_schema_type()Lorg/apache/xmlbeans/SchemaType;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object p0
@@ -3782,6 +4094,7 @@
 .method public final get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
     .locals 1
 
+    .line 1
     sget-boolean v0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->$assertionsDisabled:Z
 
     if-nez v0, :cond_1
@@ -3801,6 +4114,7 @@
 
     throw p0
 
+    .line 2
     :cond_1
     :goto_0
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_textsource:Ljava/lang/Object;
@@ -3821,12 +4135,14 @@
 .method public final get_wscanon_text()Ljava/lang/String;
     .locals 1
 
+    .line 1
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit8 v0, v0, 0x10
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_textsource:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/String;
@@ -3837,6 +4153,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
@@ -3856,6 +4173,7 @@
 .method public final has_store()Z
     .locals 0
 
+    .line 1
     iget p0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit8 p0, p0, 0x10
@@ -3876,18 +4194,21 @@
 .method public final hashCode()I
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->isImmutable()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-super {p0}, Ljava/lang/Object;->hashCode()I
 
     move-result p0
 
     return p0
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
@@ -3895,6 +4216,7 @@
 
     monitor-enter v0
 
+    .line 4
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->isNil()Z
 
@@ -3902,12 +4224,14 @@
 
     if-eqz v1, :cond_1
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    .line 5
+    monitor-exit v0
 
     return p0
 
+    .line 6
     :cond_1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->value_hash_code()I
 
@@ -3920,6 +4244,7 @@
     :catchall_0
     move-exception p0
 
+    .line 7
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -3930,6 +4255,7 @@
 .method public initComplexType(ZZ)V
     .locals 2
 
+    .line 1
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     const/4 v1, 0x0
@@ -3965,6 +4291,7 @@
 
     return-void
 
+    .line 1
     :cond_0
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaProperty;->hasDefault()I
 
@@ -3988,6 +4315,7 @@
 
     goto :goto_2
 
+    .line 2
     :cond_1
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
@@ -3995,6 +4323,7 @@
 
     iput v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
+    .line 3
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaProperty;->hasDefault()I
 
     move-result v2
@@ -4054,6 +4383,7 @@
 .method public instanceType()Lorg/apache/xmlbeans/SchemaType;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
@@ -4094,6 +4424,7 @@
 .method public intValue()I
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->longValue()J
 
     move-result-wide v0
@@ -4114,6 +4445,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     new-instance p0, Lorg/apache/xmlbeans/impl/values/XmlValueOutOfRangeException;
 
@@ -4121,6 +4453,7 @@
 
     throw p0
 
+    .line 3
     :cond_1
     new-instance p0, Lorg/apache/xmlbeans/impl/values/XmlValueOutOfRangeException;
 
@@ -4132,6 +4465,7 @@
 .method public final invalidate_element_order()V
     .locals 1
 
+    .line 1
     sget-boolean v0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->$assertionsDisabled:Z
 
     if-nez v0, :cond_1
@@ -4151,6 +4485,7 @@
 
     throw p0
 
+    .line 2
     :cond_1
     :goto_0
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
@@ -4165,6 +4500,7 @@
 .method public final invalidate_nilvalue()V
     .locals 1
 
+    .line 1
     sget-boolean v0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->$assertionsDisabled:Z
 
     if-nez v0, :cond_1
@@ -4184,6 +4520,7 @@
 
     throw p0
 
+    .line 2
     :cond_1
     :goto_0
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
@@ -4198,6 +4535,7 @@
 .method public final invalidate_value()V
     .locals 1
 
+    .line 1
     sget-boolean v0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->$assertionsDisabled:Z
 
     if-nez v0, :cond_1
@@ -4217,6 +4555,7 @@
 
     throw p0
 
+    .line 2
     :cond_1
     :goto_0
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
@@ -4231,8 +4570,10 @@
 .method public final isDefault()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
+    .line 2
     iget p0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit16 p0, p0, 0x100
@@ -4253,8 +4594,10 @@
 .method public final isDefaultable()Z
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_element_dated()V
 
+    .line 2
     iget p0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit8 p0, p0, 0x2
@@ -4275,8 +4618,10 @@
 .method public final isFixed()Z
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_element_dated()V
 
+    .line 2
     iget p0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit8 p0, p0, 0x4
@@ -4297,6 +4642,7 @@
 .method public isImmutable()Z
     .locals 0
 
+    .line 1
     iget p0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit16 p0, p0, 0x1000
@@ -4317,18 +4663,20 @@
 .method public isInstanceOf(Lorg/apache/xmlbeans/SchemaType;)Z
     .locals 4
 
+    .line 1
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaType;->getSimpleVariety()I
 
     move-result v0
 
-    const/4 v1, 0x2
+    const/4 v1, 0x1
 
-    const/4 v2, 0x1
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    const/4 v3, 0x2
 
-    if-eq v0, v1, :cond_2
+    if-eq v0, v3, :cond_2
 
+    .line 2
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->instanceType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object p0
@@ -4338,7 +4686,7 @@
 
     if-ne p1, p0, :cond_0
 
-    return v2
+    return v1
 
     :cond_0
     invoke-interface {p0}, Lorg/apache/xmlbeans/SchemaType;->getBaseType()Lorg/apache/xmlbeans/SchemaType;
@@ -4348,8 +4696,9 @@
     goto :goto_0
 
     :cond_1
-    return v3
+    return v2
 
+    .line 3
     :cond_2
     new-instance v0, Ljava/util/HashSet;
 
@@ -4363,6 +4712,7 @@
 
     invoke-direct {v0, p1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
+    .line 4
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->instanceType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object p0
@@ -4370,14 +4720,16 @@
     :goto_1
     if-eqz p0, :cond_4
 
+    .line 5
     invoke-interface {v0, p0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_3
 
-    return v2
+    return v1
 
+    .line 6
     :cond_3
     invoke-interface {p0}, Lorg/apache/xmlbeans/SchemaType;->getBaseType()Lorg/apache/xmlbeans/SchemaType;
 
@@ -4386,21 +4738,24 @@
     goto :goto_1
 
     :cond_4
-    return v3
+    return v2
 .end method
 
 .method public final isNil()Z
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
+    .line 3
     iget p0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit8 p0, p0, 0x40
@@ -4422,6 +4777,7 @@
     :catchall_0
     move-exception p0
 
+    .line 4
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -4432,8 +4788,10 @@
 .method public final isNillable()Z
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_element_dated()V
 
+    .line 2
     iget p0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     const/4 v0, 0x1
@@ -4454,6 +4812,7 @@
 .method public is_child_element_order_sensitive()Z
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_isComplexType()Z
 
     move-result v0
@@ -4464,6 +4823,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
@@ -4487,6 +4847,7 @@
 .method public final is_orphaned()Z
     .locals 0
 
+    .line 1
     iget p0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit16 p0, p0, 0x800
@@ -4507,17 +4868,18 @@
 .method public listValue()Ljava/util/List;
     .locals 3
 
+    .line 1
     new-instance v0, Lorg/apache/xmlbeans/impl/values/XmlValueNotSupportedException;
 
     const/4 v1, 0x2
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    const/4 v2, 0x0
-
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->getPrimitiveTypeName()Ljava/lang/String;
 
     move-result-object p0
+
+    const/4 v2, 0x0
 
     aput-object p0, v1, v2
 
@@ -4537,6 +4899,7 @@
 .method public longValue()J
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->bigIntegerValue()Ljava/math/BigInteger;
 
     move-result-object p0
@@ -4547,6 +4910,7 @@
 
     return-wide v0
 
+    .line 2
     :cond_0
     sget-object v0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_max:Ljava/math/BigInteger;
 
@@ -4556,6 +4920,7 @@
 
     if-gez v0, :cond_2
 
+    .line 3
     sget-object v0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_min:Ljava/math/BigInteger;
 
     invoke-virtual {p0, v0}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
@@ -4564,12 +4929,14 @@
 
     if-lez v0, :cond_1
 
+    .line 4
     invoke-virtual {p0}, Ljava/math/BigInteger;->longValue()J
 
     move-result-wide v0
 
     return-wide v0
 
+    .line 5
     :cond_1
     new-instance p0, Lorg/apache/xmlbeans/impl/values/XmlValueOutOfRangeException;
 
@@ -4577,6 +4944,7 @@
 
     throw p0
 
+    .line 6
     :cond_2
     new-instance p0, Lorg/apache/xmlbeans/impl/values/XmlValueOutOfRangeException;
 
@@ -4588,12 +4956,14 @@
 .method public final monitor()Ljava/lang/Object;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->has_store()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -4609,18 +4979,22 @@
 .method public newCursor()Lorg/apache/xmlbeans/XmlCursor;
     .locals 2
 
+    .line 1
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit8 v0, v0, 0x10
 
     if-eqz v0, :cond_1
 
+    .line 2
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->getXmlLocale()Lorg/apache/xmlbeans/impl/common/XmlLocale;
 
     move-result-object v0
 
+    .line 4
     invoke-interface {v0}, Lorg/apache/xmlbeans/impl/common/XmlLocale;->noSync()Z
 
     move-result v1
@@ -4651,6 +5025,7 @@
 
     throw p0
 
+    .line 5
     :cond_0
     monitor-enter v0
 
@@ -4693,6 +5068,7 @@
 
     throw p0
 
+    .line 6
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -4706,12 +5082,14 @@
 .method public newCursorForce()Lorg/apache/xmlbeans/XmlCursor;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->ensureStore()Lorg/apache/xmlbeans/XmlObject;
 
@@ -4728,6 +5106,7 @@
     :catchall_0
     move-exception p0
 
+    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -4958,6 +5337,7 @@
 .method public new_visitor()Lorg/apache/xmlbeans/impl/values/TypeStoreVisitor;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_isComplexContent()Z
 
     move-result v0
@@ -4968,6 +5348,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     new-instance v0, Lorg/apache/xmlbeans/impl/schema/SchemaTypeVisitorImpl;
 
@@ -4989,70 +5370,83 @@
 
     if-nez p1, :cond_0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->setNil()V
 
     return-void
 
+    .line 2
     :cond_0
     instance-of v0, p1, Lorg/apache/xmlbeans/XmlObject;
 
     if-eqz v0, :cond_1
 
+    .line 3
     check-cast p1, Lorg/apache/xmlbeans/XmlObject;
 
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set(Lorg/apache/xmlbeans/XmlObject;)Lorg/apache/xmlbeans/XmlObject;
 
     goto/16 :goto_0
 
+    .line 4
     :cond_1
     instance-of v0, p1, Ljava/lang/String;
 
     if-eqz v0, :cond_2
 
+    .line 5
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
+    .line 6
     :cond_2
     instance-of v0, p1, Lorg/apache/xmlbeans/StringEnumAbstractBase;
 
     if-eqz v0, :cond_3
 
+    .line 7
     check-cast p1, Lorg/apache/xmlbeans/StringEnumAbstractBase;
 
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set(Lorg/apache/xmlbeans/StringEnumAbstractBase;)V
 
     goto/16 :goto_0
 
+    .line 8
     :cond_3
     instance-of v0, p1, Ljava/math/BigInteger;
 
     if-eqz v0, :cond_4
 
+    .line 9
     check-cast p1, Ljava/math/BigInteger;
 
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set(Ljava/math/BigInteger;)V
 
     goto/16 :goto_0
 
+    .line 10
     :cond_4
     instance-of v0, p1, Ljava/math/BigDecimal;
 
     if-eqz v0, :cond_5
 
+    .line 11
     check-cast p1, Ljava/math/BigDecimal;
 
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set(Ljava/math/BigDecimal;)V
 
     goto/16 :goto_0
 
+    .line 12
     :cond_5
     instance-of v0, p1, Ljava/lang/Byte;
 
     if-eqz v0, :cond_6
 
+    .line 13
     check-cast p1, Ljava/lang/Byte;
 
     invoke-virtual {p1}, Ljava/lang/Byte;->byteValue()B
@@ -5063,11 +5457,13 @@
 
     goto/16 :goto_0
 
+    .line 14
     :cond_6
     instance-of v0, p1, Ljava/lang/Short;
 
     if-eqz v0, :cond_7
 
+    .line 15
     check-cast p1, Ljava/lang/Short;
 
     invoke-virtual {p1}, Ljava/lang/Short;->shortValue()S
@@ -5078,11 +5474,13 @@
 
     goto/16 :goto_0
 
+    .line 16
     :cond_7
     instance-of v0, p1, Ljava/lang/Integer;
 
     if-eqz v0, :cond_8
 
+    .line 17
     check-cast p1, Ljava/lang/Integer;
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
@@ -5093,11 +5491,13 @@
 
     goto/16 :goto_0
 
+    .line 18
     :cond_8
     instance-of v0, p1, Ljava/lang/Long;
 
     if-eqz v0, :cond_9
 
+    .line 19
     check-cast p1, Ljava/lang/Long;
 
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
@@ -5108,11 +5508,13 @@
 
     goto/16 :goto_0
 
+    .line 20
     :cond_9
     instance-of v0, p1, Ljava/lang/Boolean;
 
     if-eqz v0, :cond_a
 
+    .line 21
     check-cast p1, Ljava/lang/Boolean;
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -5123,11 +5525,13 @@
 
     goto :goto_0
 
+    .line 22
     :cond_a
     instance-of v0, p1, Ljava/lang/Float;
 
     if-eqz v0, :cond_b
 
+    .line 23
     check-cast p1, Ljava/lang/Float;
 
     invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
@@ -5138,11 +5542,13 @@
 
     goto :goto_0
 
+    .line 24
     :cond_b
     instance-of v0, p1, Ljava/lang/Double;
 
     if-eqz v0, :cond_c
 
+    .line 25
     check-cast p1, Ljava/lang/Double;
 
     invoke-virtual {p1}, Ljava/lang/Double;->doubleValue()D
@@ -5153,77 +5559,91 @@
 
     goto :goto_0
 
+    .line 26
     :cond_c
     instance-of v0, p1, Ljava/util/Calendar;
 
     if-eqz v0, :cond_d
 
+    .line 27
     check-cast p1, Ljava/util/Calendar;
 
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set(Ljava/util/Calendar;)V
 
     goto :goto_0
 
+    .line 28
     :cond_d
     instance-of v0, p1, Ljava/util/Date;
 
     if-eqz v0, :cond_e
 
+    .line 29
     check-cast p1, Ljava/util/Date;
 
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set(Ljava/util/Date;)V
 
     goto :goto_0
 
+    .line 30
     :cond_e
     instance-of v0, p1, Lorg/apache/xmlbeans/GDateSpecification;
 
     if-eqz v0, :cond_f
 
+    .line 31
     check-cast p1, Lorg/apache/xmlbeans/GDateSpecification;
 
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set(Lorg/apache/xmlbeans/GDateSpecification;)V
 
     goto :goto_0
 
+    .line 32
     :cond_f
     instance-of v0, p1, Lorg/apache/xmlbeans/GDurationSpecification;
 
     if-eqz v0, :cond_10
 
+    .line 33
     check-cast p1, Lorg/apache/xmlbeans/GDurationSpecification;
 
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set(Lorg/apache/xmlbeans/GDurationSpecification;)V
 
     goto :goto_0
 
+    .line 34
     :cond_10
     instance-of v0, p1, Ljavax/xml/namespace/QName;
 
     if-eqz v0, :cond_11
 
+    .line 35
     check-cast p1, Ljavax/xml/namespace/QName;
 
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set(Ljavax/xml/namespace/QName;)V
 
     goto :goto_0
 
+    .line 36
     :cond_11
     instance-of v0, p1, Ljava/util/List;
 
     if-eqz v0, :cond_12
 
+    .line 37
     check-cast p1, Ljava/util/List;
 
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set(Ljava/util/List;)V
 
     goto :goto_0
 
+    .line 38
     :cond_12
     instance-of v0, p1, [B
 
     if-eqz v0, :cond_13
 
+    .line 39
     check-cast p1, [B
 
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set([B)V
@@ -5231,6 +5651,7 @@
     :goto_0
     return-void
 
+    .line 40
     :cond_13
     new-instance p0, Lorg/apache/xmlbeans/impl/values/XmlValueNotSupportedException;
 
@@ -5264,6 +5685,7 @@
 .method public objectValue()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->java_value(Lorg/apache/xmlbeans/XmlObject;)Ljava/lang/Object;
 
     move-result-object p0
@@ -5274,17 +5696,18 @@
 .method public qNameValue()Ljavax/xml/namespace/QName;
     .locals 3
 
+    .line 1
     new-instance v0, Lorg/apache/xmlbeans/impl/values/XmlValueNotSupportedException;
 
     const/4 v1, 0x2
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    const/4 v2, 0x0
-
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->getPrimitiveTypeName()Ljava/lang/String;
 
     move-result-object p0
+
+    const/4 v2, 0x0
 
     aput-object p0, v1, v2
 
@@ -5607,10 +6030,12 @@
 
     if-eqz p1, :cond_5
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->newCursor()Lorg/apache/xmlbeans/XmlCursor;
 
     move-result-object p0
 
+    .line 2
     :try_start_0
     invoke-interface {p0}, Lorg/apache/xmlbeans/XmlCursor;->isContainer()Z
 
@@ -5618,26 +6043,31 @@
 
     if-nez v0, :cond_0
 
+    .line 3
     sget-object p1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->EMPTY_RESULT:[Lorg/apache/xmlbeans/XmlObject;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
     invoke-interface {p0}, Lorg/apache/xmlbeans/XmlCursor;->dispose()V
 
     return-object p1
 
+    .line 5
     :cond_0
     :try_start_1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 6
     invoke-interface {p0}, Lorg/apache/xmlbeans/XmlCursor;->toFirstAttribute()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
+    .line 7
     :cond_1
     invoke-interface {p0}, Lorg/apache/xmlbeans/XmlCursor;->getName()Ljavax/xml/namespace/QName;
 
@@ -5649,12 +6079,14 @@
 
     if-eqz v1, :cond_2
 
+    .line 8
     invoke-interface {p0}, Lorg/apache/xmlbeans/XmlCursor;->getObject()Lorg/apache/xmlbeans/XmlObject;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 9
     :cond_2
     invoke-interface {p0}, Lorg/apache/xmlbeans/XmlCursor;->toNextAttribute()Z
 
@@ -5662,6 +6094,7 @@
 
     if-nez v1, :cond_1
 
+    .line 10
     :cond_3
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -5669,14 +6102,17 @@
 
     if-nez p1, :cond_4
 
+    .line 11
     sget-object p1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->EMPTY_RESULT:[Lorg/apache/xmlbeans/XmlObject;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 12
     invoke-interface {p0}, Lorg/apache/xmlbeans/XmlCursor;->dispose()V
 
     return-object p1
 
+    .line 13
     :cond_4
     :try_start_2
     sget-object p1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->EMPTY_RESULT:[Lorg/apache/xmlbeans/XmlObject;
@@ -5689,6 +6125,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 14
     invoke-interface {p0}, Lorg/apache/xmlbeans/XmlCursor;->dispose()V
 
     return-object p1
@@ -5700,6 +6137,7 @@
 
     throw p1
 
+    .line 15
     :cond_5
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -6981,6 +7419,7 @@
 .method public setBigDecimalValue(Ljava/math/BigDecimal;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set(Ljava/math/BigDecimal;)V
 
     return-void
@@ -6989,6 +7428,7 @@
 .method public setBigIntegerValue(Ljava/math/BigInteger;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set(Ljava/math/BigInteger;)V
 
     return-void
@@ -6997,6 +7437,7 @@
 .method public setBooleanValue(Z)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set(Z)V
 
     return-void
@@ -7005,6 +7446,7 @@
 .method public setByteArrayValue([B)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set([B)V
 
     return-void
@@ -7013,6 +7455,7 @@
 .method public setByteValue(B)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set(B)V
 
     return-void
@@ -7021,6 +7464,7 @@
 .method public setCalendarValue(Ljava/util/Calendar;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set(Ljava/util/Calendar;)V
 
     return-void
@@ -7029,6 +7473,7 @@
 .method public setDateValue(Ljava/util/Date;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set(Ljava/util/Date;)V
 
     return-void
@@ -7037,6 +7482,7 @@
 .method public setDoubleValue(D)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set(D)V
 
     return-void
@@ -7045,6 +7491,7 @@
 .method public setEnumValue(Lorg/apache/xmlbeans/StringEnumAbstractBase;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set(Lorg/apache/xmlbeans/StringEnumAbstractBase;)V
 
     return-void
@@ -7053,6 +7500,7 @@
 .method public setFloatValue(F)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set(F)V
 
     return-void
@@ -7061,6 +7509,7 @@
 .method public setGDateValue(Lorg/apache/xmlbeans/GDate;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set(Lorg/apache/xmlbeans/GDateSpecification;)V
 
     return-void
@@ -7069,6 +7518,7 @@
 .method public setGDurationValue(Lorg/apache/xmlbeans/GDuration;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set(Lorg/apache/xmlbeans/GDurationSpecification;)V
 
     return-void
@@ -7077,6 +7527,7 @@
 .method public setImmutable()V
     .locals 2
 
+    .line 1
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit16 v1, v0, 0x1010
@@ -7085,10 +7536,12 @@
 
     or-int/lit16 v0, v0, 0x1000
 
+    .line 2
     iput v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     return-void
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -7100,6 +7553,7 @@
 .method public setIntValue(I)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set(I)V
 
     return-void
@@ -7108,6 +7562,7 @@
 .method public setListValue(Ljava/util/List;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set(Ljava/util/List;)V
 
     return-void
@@ -7116,6 +7571,7 @@
 .method public setLongValue(J)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set(J)V
 
     return-void
@@ -7124,15 +7580,18 @@
 .method public final setNil()V
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_prepare()V
 
+    .line 3
     iget v1, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit8 v2, v1, 0x1
@@ -7147,6 +7606,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     new-instance p0, Lorg/apache/xmlbeans/impl/values/XmlValueNotNillableException;
 
@@ -7154,10 +7614,12 @@
 
     throw p0
 
+    .line 5
     :cond_1
     :goto_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_nil()V
 
+    .line 6
     iget v1, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     or-int/lit8 v1, v1, 0x40
@@ -7168,18 +7630,21 @@
 
     if-eqz v1, :cond_2
 
+    .line 7
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object v1
 
     invoke-interface {v1}, Lorg/apache/xmlbeans/impl/values/TypeStore;->invalidate_text()V
 
+    .line 8
     iget v1, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit16 v1, v1, -0x2a1
 
     iput v1, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
+    .line 9
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -7191,8 +7656,10 @@
     :cond_2
     const/4 v1, 0x0
 
+    .line 10
     iput-object v1, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_textsource:Ljava/lang/Object;
 
+    .line 11
     :goto_1
     monitor-exit v0
 
@@ -7211,6 +7678,7 @@
 .method public setObjectValue(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->objectSet(Ljava/lang/Object;)V
 
     return-void
@@ -7219,6 +7687,7 @@
 .method public setQNameValue(Ljavax/xml/namespace/QName;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set(Ljavax/xml/namespace/QName;)V
 
     return-void
@@ -7227,6 +7696,7 @@
 .method public setShortValue(S)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set(S)V
 
     return-void
@@ -7235,6 +7705,7 @@
 .method public setStringValue(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set(Ljava/lang/String;)V
 
     return-void
@@ -7243,6 +7714,7 @@
 .method public setValidateOnSet()V
     .locals 2
 
+    .line 1
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     const/high16 v1, 0x10000
@@ -7257,6 +7729,7 @@
 .method public set_BigDecimal(Ljava/math/BigDecimal;)V
     .locals 3
 
+    .line 1
     new-instance p1, Lorg/apache/xmlbeans/impl/values/XmlValueNotSupportedException;
 
     const/4 v0, 0x2
@@ -7269,11 +7742,11 @@
 
     aput-object v2, v0, v1
 
-    const/4 v1, 0x1
-
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->getPrimitiveTypeName()Ljava/lang/String;
 
     move-result-object p0
+
+    const/4 v1, 0x1
 
     aput-object p0, v0, v1
 
@@ -7287,6 +7760,7 @@
 .method public set_BigInteger(Ljava/math/BigInteger;)V
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/math/BigDecimal;
 
     invoke-direct {v0, p1}, Ljava/math/BigDecimal;-><init>(Ljava/math/BigInteger;)V
@@ -7299,6 +7773,7 @@
 .method public set_ByteArray([B)V
     .locals 3
 
+    .line 1
     new-instance p1, Lorg/apache/xmlbeans/impl/values/XmlValueNotSupportedException;
 
     const/4 v0, 0x2
@@ -7311,11 +7786,11 @@
 
     aput-object v2, v0, v1
 
-    const/4 v1, 0x1
-
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->getPrimitiveTypeName()Ljava/lang/String;
 
     move-result-object p0
+
+    const/4 v1, 0x1
 
     aput-object p0, v0, v1
 
@@ -7329,6 +7804,7 @@
 .method public set_Calendar(Ljava/util/Calendar;)V
     .locals 3
 
+    .line 1
     new-instance p1, Lorg/apache/xmlbeans/impl/values/XmlValueNotSupportedException;
 
     const/4 v0, 0x2
@@ -7341,11 +7817,11 @@
 
     aput-object v2, v0, v1
 
-    const/4 v1, 0x1
-
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->getPrimitiveTypeName()Ljava/lang/String;
 
     move-result-object p0
+
+    const/4 v1, 0x1
 
     aput-object p0, v0, v1
 
@@ -7359,6 +7835,7 @@
 .method public set_ComplexXml(Lorg/apache/xmlbeans/XmlObject;)V
     .locals 3
 
+    .line 1
     new-instance p1, Lorg/apache/xmlbeans/impl/values/XmlValueNotSupportedException;
 
     const/4 v0, 0x2
@@ -7371,11 +7848,11 @@
 
     aput-object v2, v0, v1
 
-    const/4 v1, 0x1
-
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->getPrimitiveTypeName()Ljava/lang/String;
 
     move-result-object p0
+
+    const/4 v1, 0x1
 
     aput-object p0, v0, v1
 
@@ -7389,6 +7866,7 @@
 .method public set_Date(Ljava/util/Date;)V
     .locals 3
 
+    .line 1
     new-instance p1, Lorg/apache/xmlbeans/impl/values/XmlValueNotSupportedException;
 
     const/4 v0, 0x2
@@ -7401,11 +7879,11 @@
 
     aput-object v2, v0, v1
 
-    const/4 v1, 0x1
-
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->getPrimitiveTypeName()Ljava/lang/String;
 
     move-result-object p0
+
+    const/4 v1, 0x1
 
     aput-object p0, v0, v1
 
@@ -7419,6 +7897,7 @@
 .method public set_GDate(Lorg/apache/xmlbeans/GDateSpecification;)V
     .locals 3
 
+    .line 1
     new-instance p1, Lorg/apache/xmlbeans/impl/values/XmlValueNotSupportedException;
 
     const/4 v0, 0x2
@@ -7431,11 +7910,11 @@
 
     aput-object v2, v0, v1
 
-    const/4 v1, 0x1
-
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->getPrimitiveTypeName()Ljava/lang/String;
 
     move-result-object p0
+
+    const/4 v1, 0x1
 
     aput-object p0, v0, v1
 
@@ -7449,6 +7928,7 @@
 .method public set_GDuration(Lorg/apache/xmlbeans/GDurationSpecification;)V
     .locals 3
 
+    .line 1
     new-instance p1, Lorg/apache/xmlbeans/impl/values/XmlValueNotSupportedException;
 
     const/4 v0, 0x2
@@ -7461,11 +7941,11 @@
 
     aput-object v2, v0, v1
 
-    const/4 v1, 0x1
-
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->getPrimitiveTypeName()Ljava/lang/String;
 
     move-result-object p0
+
+    const/4 v1, 0x1
 
     aput-object p0, v0, v1
 
@@ -7479,6 +7959,7 @@
 .method public set_QName(Ljavax/xml/namespace/QName;)V
     .locals 3
 
+    .line 1
     new-instance p1, Lorg/apache/xmlbeans/impl/values/XmlValueNotSupportedException;
 
     const/4 v0, 0x2
@@ -7491,11 +7972,11 @@
 
     aput-object v2, v0, v1
 
-    const/4 v1, 0x1
-
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->getPrimitiveTypeName()Ljava/lang/String;
 
     move-result-object p0
+
+    const/4 v1, 0x1
 
     aput-object p0, v0, v1
 
@@ -7509,6 +7990,7 @@
 .method public set_String(Ljava/lang/String;)V
     .locals 3
 
+    .line 1
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit16 v1, v0, 0x1000
@@ -7526,13 +8008,16 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 2
     :goto_0
     invoke-direct {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->apply_wscanon(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 3
     invoke-direct {p0, v1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->update_from_wscanon_text(Ljava/lang/String;)V
 
+    .line 4
     iget v1, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit8 v2, v1, 0x10
@@ -7541,12 +8026,14 @@
 
     and-int/lit8 v1, v1, -0x21
 
+    .line 5
     iput v1, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit16 v1, v1, 0x400
 
     if-nez v1, :cond_1
 
+    .line 6
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object v1
@@ -7556,6 +8043,7 @@
     :cond_1
     if-eqz v0, :cond_3
 
+    .line 7
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -7564,6 +8052,7 @@
 
     goto :goto_1
 
+    .line 8
     :cond_2
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_textsource:Ljava/lang/Object;
 
@@ -7571,6 +8060,7 @@
     :goto_1
     return-void
 
+    .line 9
     :cond_4
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -7582,6 +8072,7 @@
 .method public set_b64([B)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_ByteArray([B)V
 
     return-void
@@ -7590,6 +8081,7 @@
 .method public set_boolean(Z)V
     .locals 3
 
+    .line 1
     new-instance p1, Lorg/apache/xmlbeans/impl/values/XmlValueNotSupportedException;
 
     const/4 v0, 0x2
@@ -7602,11 +8094,11 @@
 
     aput-object v2, v0, v1
 
-    const/4 v1, 0x1
-
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->getPrimitiveTypeName()Ljava/lang/String;
 
     move-result-object p0
+
+    const/4 v1, 0x1
 
     aput-object p0, v0, v1
 
@@ -7620,6 +8112,7 @@
 .method public set_byte(B)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_int(I)V
 
     return-void
@@ -7628,6 +8121,7 @@
 .method public set_char(C)V
     .locals 0
 
+    .line 1
     invoke-static {p1}, Ljava/lang/Character;->toString(C)Ljava/lang/String;
 
     move-result-object p1
@@ -7640,6 +8134,7 @@
 .method public set_double(D)V
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/math/BigDecimal;
 
     invoke-direct {v0, p1, p2}, Ljava/math/BigDecimal;-><init>(D)V
@@ -7652,6 +8147,7 @@
 .method public set_enum(Lorg/apache/xmlbeans/StringEnumAbstractBase;)V
     .locals 3
 
+    .line 1
     new-instance p1, Lorg/apache/xmlbeans/impl/values/XmlValueNotSupportedException;
 
     const/4 v0, 0x2
@@ -7664,11 +8160,11 @@
 
     aput-object v2, v0, v1
 
-    const/4 v1, 0x1
-
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->getPrimitiveTypeName()Ljava/lang/String;
 
     move-result-object p0
+
+    const/4 v1, 0x1
 
     aput-object p0, v0, v1
 
@@ -7682,6 +8178,7 @@
 .method public set_float(F)V
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/math/BigDecimal;
 
     float-to-double v1, p1
@@ -7696,6 +8193,7 @@
 .method public set_hex([B)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_ByteArray([B)V
 
     return-void
@@ -7706,6 +8204,7 @@
 
     int-to-long v0, p1
 
+    .line 1
     invoke-virtual {p0, v0, v1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_long(J)V
 
     return-void
@@ -7714,6 +8213,7 @@
 .method public set_list(Ljava/util/List;)V
     .locals 3
 
+    .line 1
     new-instance p1, Lorg/apache/xmlbeans/impl/values/XmlValueNotSupportedException;
 
     const/4 v0, 0x2
@@ -7726,11 +8226,11 @@
 
     aput-object v2, v0, v1
 
-    const/4 v1, 0x1
-
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->getPrimitiveTypeName()Ljava/lang/String;
 
     move-result-object p0
+
+    const/4 v1, 0x1
 
     aput-object p0, v0, v1
 
@@ -7744,6 +8244,7 @@
 .method public set_long(J)V
     .locals 0
 
+    .line 1
     invoke-static {p1, p2}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object p1
@@ -7758,6 +8259,7 @@
 
     if-eqz p1, :cond_10
 
+    .line 1
     invoke-interface {p1}, Lorg/apache/xmlbeans/XmlObject;->isNil()Z
 
     move-result v0
@@ -7766,13 +8268,16 @@
 
     goto/16 :goto_8
 
+    .line 2
     :cond_0
     instance-of v0, p1, Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     if-eqz v0, :cond_f
 
+    .line 3
     check-cast p1, Lorg/apache/xmlbeans/XmlAnySimpleType;
 
+    .line 4
     move-object v0, p1
 
     check-cast v0, Lorg/apache/xmlbeans/SimpleValue;
@@ -7781,6 +8286,7 @@
 
     move-result-object v0
 
+    .line 5
     sget-boolean v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->$assertionsDisabled:Z
 
     if-nez v1, :cond_2
@@ -7798,6 +8304,7 @@
 
     throw p0
 
+    .line 6
     :cond_2
     :goto_0
     invoke-interface {v0}, Lorg/apache/xmlbeans/SchemaType;->getSimpleVariety()I
@@ -7808,15 +8315,18 @@
 
     if-ne v2, v3, :cond_3
 
+    .line 7
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v2
 
     monitor-enter v2
 
+    .line 8
     :try_start_0
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_prepare()V
 
+    .line 9
     check-cast p1, Lorg/apache/xmlbeans/SimpleValue;
 
     invoke-interface {p1}, Lorg/apache/xmlbeans/SimpleValue;->xgetListValue()Ljava/util/List;
@@ -7825,8 +8335,10 @@
 
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_list(Ljava/util/List;)V
 
+    .line 10
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_commit()V
 
+    .line 11
     monitor-exit v2
 
     return-void
@@ -7834,12 +8346,14 @@
     :catchall_0
     move-exception p0
 
+    .line 12
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw p0
 
+    .line 13
     :cond_3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
@@ -7851,6 +8365,7 @@
 
     if-nez v1, :cond_5
 
+    .line 14
     :try_start_1
     invoke-interface {v0}, Lorg/apache/xmlbeans/SchemaType;->getSimpleVariety()I
 
@@ -7867,6 +8382,7 @@
 
     throw p0
 
+    .line 15
     :cond_5
     :goto_1
     invoke-interface {v0}, Lorg/apache/xmlbeans/SchemaType;->getPrimitiveType()Lorg/apache/xmlbeans/SchemaType;
@@ -7881,6 +8397,7 @@
 
     goto/16 :goto_5
 
+    .line 16
     :pswitch_0
     check-cast p1, Lorg/apache/xmlbeans/SimpleValue;
 
@@ -7888,12 +8405,15 @@
 
     move-result-object p1
 
+    .line 17
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_prepare()V
 
+    .line 18
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_GDate(Lorg/apache/xmlbeans/GDateSpecification;)V
 
     goto/16 :goto_4
 
+    .line 19
     :pswitch_1
     check-cast p1, Lorg/apache/xmlbeans/SimpleValue;
 
@@ -7901,23 +8421,29 @@
 
     move-result-object p1
 
+    .line 20
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_prepare()V
 
+    .line 21
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_GDuration(Lorg/apache/xmlbeans/GDurationSpecification;)V
 
     goto/16 :goto_4
 
+    .line 22
     :pswitch_2
     invoke-interface {p1}, Lorg/apache/xmlbeans/XmlAnySimpleType;->getStringValue()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 23
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_prepare()V
 
+    .line 24
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_String(Ljava/lang/String;)V
 
     goto/16 :goto_4
 
+    .line 25
     :pswitch_3
     invoke-interface {v0}, Lorg/apache/xmlbeans/SchemaType;->getDecimalSize()I
 
@@ -7945,6 +8471,7 @@
 
     goto :goto_2
 
+    .line 26
     :cond_6
     new-instance p0, Ljava/lang/AssertionError;
 
@@ -7954,6 +8481,7 @@
 
     throw p0
 
+    .line 27
     :goto_2
     :pswitch_4
     check-cast p1, Lorg/apache/xmlbeans/SimpleValue;
@@ -7962,12 +8490,15 @@
 
     move-result-object p1
 
+    .line 28
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_prepare()V
 
+    .line 29
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_BigDecimal(Ljava/math/BigDecimal;)V
 
     goto/16 :goto_4
 
+    .line 30
     :pswitch_5
     check-cast p1, Lorg/apache/xmlbeans/SimpleValue;
 
@@ -7975,12 +8506,15 @@
 
     move-result-object p1
 
+    .line 31
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_prepare()V
 
+    .line 32
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_BigInteger(Ljava/math/BigInteger;)V
 
     goto/16 :goto_4
 
+    .line 33
     :cond_7
     check-cast p1, Lorg/apache/xmlbeans/SimpleValue;
 
@@ -7988,12 +8522,15 @@
 
     move-result-wide v0
 
+    .line 34
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_prepare()V
 
+    .line 35
     invoke-virtual {p0, v0, v1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_long(J)V
 
     goto/16 :goto_4
 
+    .line 36
     :cond_8
     check-cast p1, Lorg/apache/xmlbeans/SimpleValue;
 
@@ -8001,12 +8538,15 @@
 
     move-result p1
 
+    .line 37
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_prepare()V
 
+    .line 38
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_int(I)V
 
     goto/16 :goto_4
 
+    .line 39
     :cond_9
     check-cast p1, Lorg/apache/xmlbeans/SimpleValue;
 
@@ -8014,12 +8554,15 @@
 
     move-result p1
 
+    .line 40
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_prepare()V
 
+    .line 41
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_short(S)V
 
     goto/16 :goto_4
 
+    .line 42
     :cond_a
     check-cast p1, Lorg/apache/xmlbeans/SimpleValue;
 
@@ -8027,12 +8570,15 @@
 
     move-result p1
 
+    .line 43
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_prepare()V
 
+    .line 44
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_byte(B)V
 
     goto/16 :goto_4
 
+    .line 45
     :pswitch_6
     check-cast p1, Lorg/apache/xmlbeans/SimpleValue;
 
@@ -8040,12 +8586,15 @@
 
     move-result-wide v0
 
+    .line 46
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_prepare()V
 
+    .line 47
     invoke-virtual {p0, v0, v1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_double(D)V
 
     goto/16 :goto_4
 
+    .line 48
     :pswitch_7
     check-cast p1, Lorg/apache/xmlbeans/SimpleValue;
 
@@ -8053,23 +8602,29 @@
 
     move-result p1
 
+    .line 49
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_prepare()V
 
+    .line 50
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_float(F)V
 
     goto :goto_4
 
+    .line 51
     :pswitch_8
     invoke-interface {p1}, Lorg/apache/xmlbeans/XmlAnySimpleType;->getStringValue()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 52
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_prepare()V
 
+    .line 53
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_notation(Ljava/lang/String;)V
 
     goto :goto_4
 
+    .line 54
     :pswitch_9
     check-cast p1, Lorg/apache/xmlbeans/SimpleValue;
 
@@ -8077,23 +8632,29 @@
 
     move-result-object p1
 
+    .line 55
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_prepare()V
 
+    .line 56
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_QName(Ljavax/xml/namespace/QName;)V
 
     goto :goto_4
 
+    .line 57
     :pswitch_a
     invoke-interface {p1}, Lorg/apache/xmlbeans/XmlAnySimpleType;->getStringValue()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 58
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_prepare()V
 
+    .line 59
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_text(Ljava/lang/String;)V
 
     goto :goto_4
 
+    .line 60
     :pswitch_b
     check-cast p1, Lorg/apache/xmlbeans/SimpleValue;
 
@@ -8101,12 +8662,15 @@
 
     move-result-object p1
 
+    .line 61
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_prepare()V
 
+    .line 62
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_hex([B)V
 
     goto :goto_4
 
+    .line 63
     :pswitch_c
     check-cast p1, Lorg/apache/xmlbeans/SimpleValue;
 
@@ -8114,12 +8678,15 @@
 
     move-result-object p1
 
+    .line 64
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_prepare()V
 
+    .line 65
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_b64([B)V
 
     goto :goto_4
 
+    .line 66
     :pswitch_d
     check-cast p1, Lorg/apache/xmlbeans/SimpleValue;
 
@@ -8127,19 +8694,25 @@
 
     move-result p1
 
+    .line 67
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_prepare()V
 
+    .line 68
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_boolean(Z)V
 
     goto :goto_4
 
     :pswitch_e
+    const/4 v0, 0x0
+
+    .line 69
     invoke-interface {p1}, Lorg/apache/xmlbeans/XmlObject;->isImmutable()Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_b
+    if-nez v1, :cond_b
 
+    .line 70
     new-instance v0, Lorg/apache/xmlbeans/impl/values/NamespaceContext;
 
     invoke-direct {v0, p1}, Lorg/apache/xmlbeans/impl/values/NamespaceContext;-><init>(Lorg/apache/xmlbeans/XmlObject;)V
@@ -8151,25 +8724,30 @@
     goto :goto_3
 
     :cond_b
-    const/4 v3, 0x0
+    move v3, v0
 
+    .line 71
     :goto_3
     :try_start_2
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_prepare()V
 
+    .line 72
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_xmlanysimple(Lorg/apache/xmlbeans/XmlAnySimpleType;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     if-eqz v3, :cond_c
 
+    .line 73
     :try_start_3
     invoke-static {}, Lorg/apache/xmlbeans/impl/values/NamespaceContext;->pop()V
 
+    .line 74
     :cond_c
     :goto_4
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_commit()V
 
+    .line 75
     monitor-exit v2
 
     return-void
@@ -8179,6 +8757,7 @@
 
     if-eqz v3, :cond_d
 
+    .line 76
     invoke-static {}, Lorg/apache/xmlbeans/impl/values/NamespaceContext;->pop()V
 
     :cond_d
@@ -8187,6 +8766,7 @@
     :goto_5
     if-nez v1, :cond_e
 
+    .line 77
     new-instance p0, Ljava/lang/AssertionError;
 
     const-string p1, "encountered nonprimitive type."
@@ -8195,11 +8775,13 @@
 
     throw p0
 
+    .line 78
     :cond_e
     monitor-exit v2
 
     goto :goto_7
 
+    .line 79
     :goto_6
     monitor-exit v2
     :try_end_3
@@ -8212,6 +8794,7 @@
 
     goto :goto_6
 
+    .line 80
     :cond_f
     :goto_7
     new-instance p0, Ljava/lang/IllegalStateException;
@@ -8222,11 +8805,14 @@
 
     throw p0
 
+    .line 81
     :cond_10
     :goto_8
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->setNil()V
 
     return-void
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x2
@@ -8265,6 +8851,7 @@
 .method public set_notation(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     new-instance p0, Lorg/apache/xmlbeans/impl/values/XmlValueNotSupportedException;
 
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlValueNotSupportedException;-><init>()V
@@ -8275,6 +8862,7 @@
 .method public set_short(S)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->set_int(I)V
 
     return-void
@@ -8286,6 +8874,7 @@
 .method public set_xmlanysimple(Lorg/apache/xmlbeans/XmlAnySimpleType;)V
     .locals 0
 
+    .line 1
     invoke-interface {p1}, Lorg/apache/xmlbeans/XmlAnySimpleType;->getStringValue()Ljava/lang/String;
 
     move-result-object p1
@@ -8298,6 +8887,7 @@
 .method public shortValue()S
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->intValue()I
 
     move-result p0
@@ -8322,6 +8912,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     new-instance p0, Lorg/apache/xmlbeans/impl/values/XmlValueOutOfRangeException;
 
@@ -8329,6 +8920,7 @@
 
     throw p0
 
+    .line 3
     :cond_1
     new-instance p0, Lorg/apache/xmlbeans/impl/values/XmlValueOutOfRangeException;
 
@@ -8340,6 +8932,7 @@
 .method public stringValue()Ljava/lang/String;
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->isImmutable()Z
 
     move-result v0
@@ -8348,6 +8941,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 2
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit8 v0, v0, 0x40
@@ -8356,6 +8950,7 @@
 
     return-object v1
 
+    .line 3
     :cond_0
     invoke-virtual {p0, v1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->compute_text(Lorg/apache/xmlbeans/impl/values/NamespaceManager;)Ljava/lang/String;
 
@@ -8363,6 +8958,7 @@
 
     return-object p0
 
+    .line 4
     :cond_1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
@@ -8370,6 +8966,7 @@
 
     monitor-enter v0
 
+    .line 5
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_isComplexContent()Z
 
@@ -8377,6 +8974,7 @@
 
     if-eqz v2, :cond_2
 
+    .line 6
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -8391,19 +8989,23 @@
 
     return-object p0
 
+    .line 7
     :cond_2
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
+    .line 8
     iget v2, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit8 v2, v2, 0x40
 
     if-eqz v2, :cond_3
 
+    .line 9
     monitor-exit v0
 
     return-object v1
 
+    .line 10
     :cond_3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->has_store()Z
 
@@ -8427,6 +9029,7 @@
     :catchall_0
     move-exception p0
 
+    .line 11
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -8441,21 +9044,25 @@
 
     if-eqz p2, :cond_1
 
+    .line 1
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_flags:I
 
     and-int/lit8 v0, v0, 0x10
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 3
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_orphaned()V
 
+    .line 4
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object p0
@@ -8473,12 +9080,14 @@
     :catchall_0
     move-exception p0
 
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw p0
 
+    .line 6
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -8488,6 +9097,7 @@
 
     throw p0
 
+    .line 7
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -8497,6 +9107,7 @@
 
     throw p0
 
+    .line 8
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -8510,12 +9121,14 @@
 .method public final toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->ensureStore()Lorg/apache/xmlbeans/XmlObject;
 
@@ -8534,6 +9147,7 @@
     :catchall_0
     move-exception p0
 
+    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -8544,6 +9158,7 @@
 .method public update_from_complex_content()V
     .locals 1
 
+    .line 1
     new-instance p0, Lorg/apache/xmlbeans/impl/values/XmlValueNotSupportedException;
 
     const-string v0, "Complex content"
@@ -8556,10 +9171,12 @@
 .method public final uses_invalidate_value()Z
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object p0
 
+    .line 2
     invoke-interface {p0}, Lorg/apache/xmlbeans/SchemaType;->isSimpleType()Z
 
     move-result v0
@@ -8713,6 +9330,7 @@
 .method public validate_now()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
     return-void
@@ -8729,6 +9347,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->isImmutable()Z
 
@@ -8736,18 +9355,21 @@
 
     if-eqz v1, :cond_1
 
+    .line 2
     invoke-interface {p1}, Lorg/apache/xmlbeans/XmlObject;->isImmutable()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 3
     invoke-direct {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->valueEqualsImpl(Lorg/apache/xmlbeans/XmlObject;)Z
 
     move-result p0
 
     return p0
 
+    .line 4
     :cond_0
     invoke-interface {p1}, Lorg/apache/xmlbeans/XmlTokenSource;->monitor()Ljava/lang/Object;
 
@@ -8758,6 +9380,7 @@
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_7
 
+    .line 5
     :try_start_1
     invoke-direct {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->valueEqualsImpl(Lorg/apache/xmlbeans/XmlObject;)Z
 
@@ -8770,6 +9393,7 @@
     :catchall_0
     move-exception p0
 
+    .line 6
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -8777,6 +9401,7 @@
     :try_start_2
     throw p0
 
+    .line 7
     :cond_1
     invoke-interface {p1}, Lorg/apache/xmlbeans/XmlObject;->isImmutable()Z
 
@@ -8796,6 +9421,7 @@
 
     goto :goto_2
 
+    .line 8
     :cond_2
     invoke-static {}, Lorg/apache/xmlbeans/impl/common/GlobalLock;->acquire()V
     :try_end_2
@@ -8804,6 +9430,7 @@
 
     const/4 v1, 0x1
 
+    .line 9
     :try_start_3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
@@ -8814,6 +9441,7 @@
     .catch Ljava/lang/InterruptedException; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_5
 
+    .line 10
     :try_start_4
     invoke-interface {p1}, Lorg/apache/xmlbeans/XmlTokenSource;->monitor()Ljava/lang/Object;
 
@@ -8823,11 +9451,13 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_3
 
+    .line 11
     :try_start_5
     invoke-static {}, Lorg/apache/xmlbeans/impl/common/GlobalLock;->release()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
+    .line 12
     :try_start_6
     invoke-direct {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->valueEqualsImpl(Lorg/apache/xmlbeans/XmlObject;)Z
 
@@ -8854,6 +9484,7 @@
 
     move v0, v1
 
+    .line 13
     :goto_0
     :try_start_8
     monitor-exit v3
@@ -8868,6 +9499,7 @@
 
     move v0, v1
 
+    .line 14
     :goto_1
     monitor-exit v2
     :try_end_9
@@ -8895,6 +9527,7 @@
 
     goto :goto_3
 
+    .line 15
     :cond_3
     :goto_2
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
@@ -8906,6 +9539,7 @@
     .catch Ljava/lang/InterruptedException; {:try_start_a .. :try_end_a} :catch_1
     .catchall {:try_start_a .. :try_end_a} :catchall_7
 
+    .line 16
     :try_start_b
     invoke-direct {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->valueEqualsImpl(Lorg/apache/xmlbeans/XmlObject;)Z
 
@@ -8918,6 +9552,7 @@
     :catchall_6
     move-exception p0
 
+    .line 17
     monitor-exit v1
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_6
@@ -8936,6 +9571,7 @@
     :catch_1
     move-exception p0
 
+    .line 18
     :goto_3
     :try_start_d
     new-instance p1, Lorg/apache/xmlbeans/XmlRuntimeException;
@@ -8949,6 +9585,7 @@
     :goto_4
     if-eqz v0, :cond_4
 
+    .line 19
     invoke-static {}, Lorg/apache/xmlbeans/impl/common/GlobalLock;->release()V
 
     :cond_4
@@ -8958,12 +9595,14 @@
 .method public valueHashCode()I
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->value_hash_code()I
 
@@ -8976,6 +9615,7 @@
     :catchall_0
     move-exception p0
 
+    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -8989,12 +9629,14 @@
 .method public writeReplace()Ljava/lang/Object;
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->monitor()Ljava/lang/Object;
 
     move-result-object v0
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->isRootXmlObject()Z
 
@@ -9004,6 +9646,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 3
     new-instance v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase$SerializedRootObject;
 
     invoke-direct {v1, p0, v2}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase$SerializedRootObject;-><init>(Lorg/apache/xmlbeans/XmlObject;Lorg/apache/xmlbeans/impl/values/XmlObjectBase$1;)V
@@ -9012,6 +9655,7 @@
 
     return-object v1
 
+    .line 4
     :cond_0
     new-instance v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase$SerializedInteriorObject;
 
@@ -9028,6 +9672,7 @@
     :catchall_0
     move-exception p0
 
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -9038,6 +9683,7 @@
 .method public xgetListValue()Ljava/util/List;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->xlistValue()Ljava/util/List;
 
     move-result-object p0
@@ -9048,17 +9694,18 @@
 .method public xlistValue()Ljava/util/List;
     .locals 3
 
+    .line 1
     new-instance v0, Lorg/apache/xmlbeans/impl/values/XmlValueNotSupportedException;
 
     const/4 v1, 0x2
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    const/4 v2, 0x0
-
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->getPrimitiveTypeName()Ljava/lang/String;
 
     move-result-object p0
+
+    const/4 v2, 0x0
 
     aput-object p0, v1, v2
 

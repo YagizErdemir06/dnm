@@ -1,4 +1,4 @@
-.class Lcom/google/common/graph/Traverser$5;
+.class public Lcom/google/common/graph/Traverser$5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,15 +26,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/graph/Traverser;
+.field public final synthetic this$0:Lcom/google/common/graph/Traverser;
 
-.field final synthetic val$validated:Lcom/google/common/collect/ImmutableSet;
+.field public final synthetic val$validated:Lcom/google/common/collect/ImmutableSet;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/graph/Traverser;Lcom/google/common/collect/ImmutableSet;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/graph/Traverser$5;->this$0:Lcom/google/common/graph/Traverser;
 
     iput-object p2, p0, Lcom/google/common/graph/Traverser$5;->val$validated:Lcom/google/common/collect/ImmutableSet;
@@ -56,6 +57,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/graph/Traverser$5;->this$0:Lcom/google/common/graph/Traverser;
 
     invoke-virtual {v0}, Lcom/google/common/graph/Traverser;->newTraversal()Lcom/google/common/graph/Traverser$Traversal;

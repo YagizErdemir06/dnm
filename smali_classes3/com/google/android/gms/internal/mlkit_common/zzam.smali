@@ -27,6 +27,7 @@
 
     add-int/lit8 p1, p1, -0x1
 
+    .line 1
     invoke-static {p1}, Ljava/lang/Integer;->highestOneBit(I)I
 
     move-result p0
@@ -41,6 +42,7 @@
     :cond_1
     return p0
 
+    .line 2
     :cond_2
     new-instance p0, Ljava/lang/AssertionError;
 

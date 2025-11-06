@@ -202,6 +202,13 @@
 
     move-object/from16 v4, p3
 
+    .line 1
+    invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
+
+    move-result-object v15
+
+    sget-object v16, Lcom/google/android/exoplayer2/util/Clock;->DEFAULT:Lcom/google/android/exoplayer2/util/Clock;
+
     const/4 v3, 0x0
 
     const-wide/16 v5, 0x2710
@@ -218,13 +225,6 @@
 
     const/high16 v14, 0x3f400000    # 0.75f
 
-    .line 1
-    invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
-
-    move-result-object v15
-
-    sget-object v16, Lcom/google/android/exoplayer2/util/Clock;->DEFAULT:Lcom/google/android/exoplayer2/util/Clock;
-
     .line 2
     invoke-direct/range {v0 .. v16}, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;-><init>(Lcom/google/android/exoplayer2/source/TrackGroup;[IILcom/google/android/exoplayer2/upstream/BandwidthMeter;JJJIIFFLjava/util/List;Lcom/google/android/exoplayer2/util/Clock;)V
 
@@ -234,6 +234,7 @@
 .method public static synthetic access$000([Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;)Lcom/google/common/collect/ImmutableList;
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->getAdaptationCheckpoints([Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object p0
@@ -253,34 +254,38 @@
         }
     .end annotation
 
-    const-wide/16 v0, 0x0
+    const/4 v0, 0x0
 
-    const/4 v2, 0x0
+    const-wide/16 v1, 0x0
 
-    move v3, v2
+    move v3, v0
 
+    .line 1
     :goto_0
     array-length v4, p1
 
     if-ge v3, v4, :cond_0
 
+    .line 2
     aget-wide v4, p1, v3
 
-    add-long/2addr v0, v4
+    add-long/2addr v1, v4
 
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
+    .line 3
     :cond_0
     :goto_1
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v3
 
-    if-ge v2, v3, :cond_2
+    if-ge v0, v3, :cond_2
 
-    invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    .line 4
+    invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -290,17 +295,18 @@
 
     goto :goto_2
 
+    .line 5
     :cond_1
     new-instance v4, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection$AdaptationCheckpoint;
 
-    aget-wide v5, p1, v2
+    aget-wide v5, p1, v0
 
-    invoke-direct {v4, v0, v1, v5, v6}, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection$AdaptationCheckpoint;-><init>(JJ)V
+    invoke-direct {v4, v1, v2, v5, v6}, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection$AdaptationCheckpoint;-><init>(JJ)V
 
     invoke-virtual {v3, v4}, Lcom/google/common/collect/ImmutableList$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
 
     :goto_2
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
@@ -311,6 +317,7 @@
 .method private determineIdealSelectedIndex(JJ)I
     .locals 4
 
+    .line 1
     invoke-direct {p0, p3, p4}, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->getAllocatedBandwidth(J)J
 
     move-result-wide p3
@@ -319,6 +326,7 @@
 
     move v1, v0
 
+    .line 2
     :goto_0
     iget v2, p0, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->length:I
 
@@ -330,17 +338,20 @@
 
     if-eqz v2, :cond_0
 
+    .line 3
     invoke-virtual {p0, v0, p1, p2}, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->isBlacklisted(IJ)Z
 
     move-result v2
 
     if-nez v2, :cond_2
 
+    .line 4
     :cond_0
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->getFormat(I)Lcom/google/android/exoplayer2/Format;
 
     move-result-object v1
 
+    .line 5
     iget v2, v1, Lcom/google/android/exoplayer2/Format;->bitrate:I
 
     invoke-virtual {p0, v1, v2, p3, p4}, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->canSelectFormat(Lcom/google/android/exoplayer2/Format;IJ)Z
@@ -377,6 +388,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -385,6 +397,7 @@
 
     move v2, v1
 
+    .line 2
     :goto_0
     array-length v3, p0
 
@@ -394,9 +407,12 @@
 
     if-ge v2, v3, :cond_1
 
+    .line 3
     aget-object v3, p0, v2
 
     if-eqz v3, :cond_0
+
+    aget-object v3, p0, v2
 
     iget-object v3, v3, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;->tracks:[I
 
@@ -404,16 +420,19 @@
 
     if-le v3, v6, :cond_0
 
+    .line 4
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->builder()Lcom/google/common/collect/ImmutableList$Builder;
 
     move-result-object v3
 
+    .line 5
     new-instance v6, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection$AdaptationCheckpoint;
 
     invoke-direct {v6, v4, v5, v4, v5}, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection$AdaptationCheckpoint;-><init>(JJ)V
 
     invoke-virtual {v3, v6}, Lcom/google/common/collect/ImmutableList$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
 
+    .line 6
     invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
@@ -421,6 +440,7 @@
     :cond_0
     const/4 v3, 0x0
 
+    .line 7
     invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :goto_1
@@ -428,37 +448,44 @@
 
     goto :goto_0
 
+    .line 8
     :cond_1
     invoke-static {p0}, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->getSortedTrackBitrates([Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;)[[J
 
     move-result-object v2
 
+    .line 9
     array-length v3, v2
 
     new-array v3, v3, [I
 
+    .line 10
     array-length v7, v2
 
     new-array v7, v7, [J
 
     move v8, v1
 
+    .line 11
     :goto_2
     array-length v9, v2
 
     if-ge v8, v9, :cond_3
 
+    .line 12
     aget-object v9, v2, v8
 
-    array-length v10, v9
+    array-length v9, v9
 
-    if-nez v10, :cond_2
+    if-nez v9, :cond_2
 
     move-wide v9, v4
 
     goto :goto_3
 
     :cond_2
+    aget-object v9, v2, v8
+
     aget-wide v9, v9, v1
 
     :goto_3
@@ -468,15 +495,18 @@
 
     goto :goto_2
 
+    .line 13
     :cond_3
     invoke-static {v0, v7}, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->addCheckpoint(Ljava/util/List;[J)V
 
+    .line 14
     invoke-static {v2}, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->getSwitchOrder([[J)Lcom/google/common/collect/ImmutableList;
 
     move-result-object v4
 
     move v5, v1
 
+    .line 15
     :goto_4
     invoke-virtual {v4}, Ljava/util/AbstractCollection;->size()I
 
@@ -484,6 +514,7 @@
 
     if-ge v5, v8, :cond_4
 
+    .line 16
     invoke-interface {v4, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v8
@@ -494,18 +525,21 @@
 
     move-result v8
 
+    .line 17
     aget v9, v3, v8
 
     add-int/2addr v9, v6
 
     aput v9, v3, v8
 
+    .line 18
     aget-object v10, v2, v8
 
     aget-wide v9, v10, v9
 
     aput-wide v9, v7, v8
 
+    .line 19
     invoke-static {v0, v7}, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->addCheckpoint(Ljava/util/List;[J)V
 
     add-int/lit8 v5, v5, 0x1
@@ -515,17 +549,20 @@
     :cond_4
     move v2, v1
 
+    .line 20
     :goto_5
     array-length v3, p0
 
     if-ge v2, v3, :cond_6
 
+    .line 21
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     if-eqz v3, :cond_5
 
+    .line 22
     aget-wide v3, v7, v2
 
     const-wide/16 v5, 0x2
@@ -539,13 +576,16 @@
 
     goto :goto_5
 
+    .line 23
     :cond_6
     invoke-static {v0, v7}, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->addCheckpoint(Ljava/util/List;[J)V
 
+    .line 24
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->builder()Lcom/google/common/collect/ImmutableList$Builder;
 
     move-result-object p0
 
+    .line 25
     :goto_6
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -553,6 +593,7 @@
 
     if-ge v1, v2, :cond_8
 
+    .line 26
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -561,6 +602,7 @@
 
     if-nez v2, :cond_7
 
+    .line 27
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
 
     move-result-object v2
@@ -579,6 +621,7 @@
 
     goto :goto_6
 
+    .line 28
     :cond_8
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableList$Builder;->build()Lcom/google/common/collect/ImmutableList;
 
@@ -590,10 +633,12 @@
 .method private getAllocatedBandwidth(J)J
     .locals 5
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->getTotalAllocatableBandwidth(J)J
 
     move-result-wide p1
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->adaptationCheckpoints:Lcom/google/common/collect/ImmutableList;
 
     invoke-virtual {v0}, Ljava/util/AbstractCollection;->isEmpty()Z
@@ -609,6 +654,7 @@
 
     move v1, v0
 
+    .line 3
     :goto_0
     iget-object v2, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->adaptationCheckpoints:Lcom/google/common/collect/ImmutableList;
 
@@ -622,6 +668,7 @@
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->adaptationCheckpoints:Lcom/google/common/collect/ImmutableList;
 
+    .line 4
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -638,6 +685,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     iget-object v0, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->adaptationCheckpoints:Lcom/google/common/collect/ImmutableList;
 
@@ -649,6 +697,7 @@
 
     check-cast v0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection$AdaptationCheckpoint;
 
+    .line 6
     iget-object p0, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->adaptationCheckpoints:Lcom/google/common/collect/ImmutableList;
 
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -657,6 +706,7 @@
 
     check-cast p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection$AdaptationCheckpoint;
 
+    .line 7
     iget-wide v1, v0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection$AdaptationCheckpoint;->totalBandwidth:J
 
     sub-long/2addr p1, v1
@@ -671,6 +721,7 @@
 
     div-float/2addr p1, p2
 
+    .line 8
     iget-wide v0, v0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection$AdaptationCheckpoint;->allocatedBandwidth:J
 
     iget-wide v2, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection$AdaptationCheckpoint;->allocatedBandwidth:J
@@ -700,6 +751,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result p0
@@ -710,6 +762,7 @@
 
     return-wide v0
 
+    .line 2
     :cond_0
     invoke-static {p1}, Lcom/google/common/collect/Iterables;->getLast(Ljava/lang/Iterable;)Ljava/lang/Object;
 
@@ -717,6 +770,7 @@
 
     check-cast p0, Lcom/google/android/exoplayer2/source/chunk/MediaChunk;
 
+    .line 3
     iget-wide v2, p0, Lcom/google/android/exoplayer2/source/chunk/Chunk;->startTimeUs:J
 
     cmp-long p1, v2, v0
@@ -748,6 +802,7 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->selectedIndex:I
 
     array-length v1, p1
@@ -762,10 +817,12 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget p0, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->selectedIndex:I
 
     aget-object p0, p1, p0
 
+    .line 3
     invoke-interface {p0}, Lcom/google/android/exoplayer2/source/chunk/MediaChunkIterator;->getChunkEndTimeUs()J
 
     move-result-wide p1
@@ -778,6 +835,7 @@
 
     return-wide p1
 
+    .line 4
     :cond_0
     array-length v0, p1
 
@@ -788,12 +846,14 @@
 
     aget-object v2, p1, v1
 
+    .line 5
     invoke-interface {v2}, Lcom/google/android/exoplayer2/source/chunk/MediaChunkIterator;->next()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
+    .line 6
     invoke-interface {v2}, Lcom/google/android/exoplayer2/source/chunk/MediaChunkIterator;->getChunkEndTimeUs()J
 
     move-result-wide p0
@@ -811,6 +871,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_2
     invoke-direct {p0, p2}, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->getLastChunkDurationUs(Ljava/util/List;)J
 
@@ -822,6 +883,7 @@
 .method private static getSortedTrackBitrates([Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;)[[J
     .locals 9
 
+    .line 1
     array-length v0, p0
 
     new-array v0, v0, [[J
@@ -830,21 +892,25 @@
 
     move v2, v1
 
+    .line 2
     :goto_0
     array-length v3, p0
 
     if-ge v2, v3, :cond_2
 
+    .line 3
     aget-object v3, p0, v2
 
     if-nez v3, :cond_0
 
     new-array v3, v1, [J
 
+    .line 4
     aput-object v3, v0, v2
 
     goto :goto_2
 
+    .line 5
     :cond_0
     iget-object v4, v3, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;->tracks:[I
 
@@ -856,6 +922,7 @@
 
     move v4, v1
 
+    .line 6
     :goto_1
     iget-object v5, v3, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;->tracks:[I
 
@@ -863,6 +930,7 @@
 
     if-ge v4, v6, :cond_1
 
+    .line 7
     aget-object v6, v0, v2
 
     iget-object v7, v3, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection$Definition;->group:Lcom/google/android/exoplayer2/source/TrackGroup;
@@ -883,6 +951,7 @@
 
     goto :goto_1
 
+    .line 8
     :cond_1
     aget-object v3, v0, v2
 
@@ -898,7 +967,7 @@
 .end method
 
 .method private static getSwitchOrder([[J)Lcom/google/common/collect/ImmutableList;
-    .locals 14
+    .locals 17
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([[J)",
@@ -908,30 +977,35 @@
         }
     .end annotation
 
+    move-object/from16 v0, p0
+
+    .line 1
     invoke-static {}, Lcom/google/common/collect/MultimapBuilder;->treeKeys()Lcom/google/common/collect/MultimapBuilder$MultimapBuilderWithKeys;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Lcom/google/common/collect/MultimapBuilder$MultimapBuilderWithKeys;->arrayListValues()Lcom/google/common/collect/MultimapBuilder$ListMultimapBuilder;
+    invoke-virtual {v1}, Lcom/google/common/collect/MultimapBuilder$MultimapBuilderWithKeys;->arrayListValues()Lcom/google/common/collect/MultimapBuilder$ListMultimapBuilder;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Lcom/google/common/collect/MultimapBuilder$ListMultimapBuilder;->build()Lcom/google/common/collect/ListMultimap;
+    invoke-virtual {v1}, Lcom/google/common/collect/MultimapBuilder$ListMultimapBuilder;->build()Lcom/google/common/collect/ListMultimap;
 
-    move-result-object v0
+    move-result-object v1
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    move v2, v1
+    move v3, v2
 
+    .line 2
     :goto_0
-    array-length v3, p0
+    array-length v4, v0
 
-    if-ge v2, v3, :cond_5
+    if-ge v3, v4, :cond_5
 
-    aget-object v3, p0, v2
+    .line 3
+    aget-object v4, v0, v3
 
-    array-length v4, v3
+    array-length v4, v4
 
     const/4 v5, 0x1
 
@@ -939,123 +1013,141 @@
 
     goto :goto_5
 
+    .line 4
     :cond_0
-    array-length v3, v3
+    aget-object v4, v0, v3
 
-    new-array v4, v3, [D
+    array-length v4, v4
 
-    move v5, v1
+    new-array v5, v4, [D
 
+    move v6, v2
+
+    .line 5
     :goto_1
-    aget-object v6, p0, v2
+    aget-object v7, v0, v3
 
-    array-length v7, v6
+    array-length v7, v7
 
     const-wide/16 v8, 0x0
 
-    if-ge v5, v7, :cond_2
+    if-ge v6, v7, :cond_2
 
-    aget-wide v6, v6, v5
+    .line 6
+    aget-object v7, v0, v3
 
-    const-wide/16 v10, -0x1
+    aget-wide v10, v7, v6
 
-    cmp-long v10, v6, v10
+    const-wide/16 v12, -0x1
 
-    if-nez v10, :cond_1
+    cmp-long v7, v10, v12
+
+    if-nez v7, :cond_1
 
     goto :goto_2
 
     :cond_1
-    long-to-double v6, v6
+    aget-object v7, v0, v3
 
-    invoke-static {v6, v7}, Ljava/lang/Math;->log(D)D
+    aget-wide v7, v7, v6
+
+    long-to-double v7, v7
+
+    invoke-static {v7, v8}, Ljava/lang/Math;->log(D)D
 
     move-result-wide v8
 
     :goto_2
-    aput-wide v8, v4, v5
+    aput-wide v8, v5, v6
 
-    add-int/lit8 v5, v5, 0x1
+    add-int/lit8 v6, v6, 0x1
 
     goto :goto_1
 
     :cond_2
-    add-int/lit8 v3, v3, -0x1
+    add-int/lit8 v4, v4, -0x1
 
-    aget-wide v5, v4, v3
+    .line 7
+    aget-wide v6, v5, v4
 
-    aget-wide v10, v4, v1
+    aget-wide v10, v5, v2
 
-    sub-double/2addr v5, v10
+    sub-double/2addr v6, v10
 
-    move v7, v1
+    move v10, v2
 
     :goto_3
-    if-ge v7, v3, :cond_4
+    if-ge v10, v4, :cond_4
 
-    aget-wide v10, v4, v7
+    const-wide/high16 v11, 0x3fe0000000000000L    # 0.5
 
-    add-int/lit8 v7, v7, 0x1
+    .line 8
+    aget-wide v13, v5, v10
 
-    aget-wide v12, v4, v7
+    add-int/lit8 v10, v10, 0x1
 
-    add-double/2addr v10, v12
+    aget-wide v15, v5, v10
 
-    const-wide/high16 v12, 0x3fe0000000000000L    # 0.5
+    add-double/2addr v13, v15
 
-    mul-double/2addr v10, v12
+    mul-double/2addr v13, v11
 
-    cmpl-double v12, v5, v8
+    cmpl-double v11, v6, v8
 
-    if-nez v12, :cond_3
+    if-nez v11, :cond_3
 
-    const-wide/high16 v10, 0x3ff0000000000000L    # 1.0
+    const-wide/high16 v11, 0x3ff0000000000000L    # 1.0
 
     goto :goto_4
 
+    .line 9
     :cond_3
-    aget-wide v12, v4, v1
+    aget-wide v11, v5, v2
 
-    sub-double/2addr v10, v12
+    sub-double/2addr v13, v11
 
-    div-double/2addr v10, v5
+    div-double v11, v13, v6
 
+    .line 10
     :goto_4
-    invoke-static {v10, v11}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v10
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v11, v12}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v11
 
-    invoke-interface {v0, v10, v11}, Lcom/google/common/collect/Multimap;->put(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v12
+
+    invoke-interface {v1, v11, v12}, Lcom/google/common/collect/Multimap;->put(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     goto :goto_3
 
     :cond_4
     :goto_5
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
+    .line 11
     :cond_5
-    invoke-interface {v0}, Lcom/google/common/collect/Multimap;->values()Ljava/util/Collection;
+    invoke-interface {v1}, Lcom/google/common/collect/Multimap;->values()Ljava/util/Collection;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-static {p0}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
+    invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method private getTotalAllocatableBandwidth(J)J
     .locals 7
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->bandwidthMeter:Lcom/google/android/exoplayer2/upstream/BandwidthMeter;
 
+    .line 2
     invoke-interface {v0}, Lcom/google/android/exoplayer2/upstream/BandwidthMeter;->getBitrateEstimate()J
 
     move-result-wide v0
@@ -1068,6 +1160,7 @@
 
     float-to-long v0, v0
 
+    .line 3
     iget-object v2, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->bandwidthMeter:Lcom/google/android/exoplayer2/upstream/BandwidthMeter;
 
     invoke-interface {v2}, Lcom/google/android/exoplayer2/upstream/BandwidthMeter;->getTimeToFirstByteEstimateUs()J
@@ -1089,6 +1182,7 @@
     :cond_0
     long-to-float p1, p1
 
+    .line 4
     iget p0, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->playbackSpeed:F
 
     div-float p0, p1, p0
@@ -1099,6 +1193,7 @@
 
     const/4 p2, 0x0
 
+    .line 5
     invoke-static {p0, p2}, Ljava/lang/Math;->max(FF)F
 
     move-result p0
@@ -1117,6 +1212,7 @@
     :goto_0
     long-to-float p1, v0
 
+    .line 6
     iget p0, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->playbackSpeed:F
 
     div-float/2addr p1, p0
@@ -1135,6 +1231,7 @@
 
     if-nez v2, :cond_0
 
+    .line 1
     iget-wide p0, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->minDurationForQualityIncreaseUs:J
 
     return-wide p0
@@ -1149,12 +1246,14 @@
     :cond_1
     long-to-float p1, p1
 
+    .line 2
     iget p2, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->bufferedFractionToLiveEdgeForQualityIncrease:F
 
     mul-float/2addr p1, p2
 
     float-to-long p1, p1
 
+    .line 3
     iget-wide p3, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->minDurationForQualityIncreaseUs:J
 
     invoke-static {p1, p2, p3, p4}, Ljava/lang/Math;->min(JJ)J
@@ -1193,6 +1292,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->lastBufferEvaluationMediaChunk:Lcom/google/android/exoplayer2/source/chunk/MediaChunk;
 
     return-void
@@ -1205,10 +1305,12 @@
 
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 1
     iput-wide v0, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->lastBufferEvaluationMs:J
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->lastBufferEvaluationMediaChunk:Lcom/google/android/exoplayer2/source/chunk/MediaChunk;
 
     return-void
@@ -1226,27 +1328,32 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->clock:Lcom/google/android/exoplayer2/util/Clock;
 
     invoke-interface {v0}, Lcom/google/android/exoplayer2/util/Clock;->elapsedRealtime()J
 
     move-result-wide v0
 
+    .line 2
     invoke-virtual {p0, v0, v1, p3}, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->shouldEvaluateQueueSize(JLjava/util/List;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
+    .line 3
     invoke-interface {p3}, Ljava/util/List;->size()I
 
     move-result p0
 
     return p0
 
+    .line 4
     :cond_0
     iput-wide v0, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->lastBufferEvaluationMs:J
 
+    .line 5
     invoke-interface {p3}, Ljava/util/List;->isEmpty()Z
 
     move-result v2
@@ -1267,6 +1374,7 @@
     :goto_0
     iput-object v2, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->lastBufferEvaluationMediaChunk:Lcom/google/android/exoplayer2/source/chunk/MediaChunk;
 
+    .line 6
     invoke-interface {p3}, Ljava/util/List;->isEmpty()Z
 
     move-result v2
@@ -1277,6 +1385,7 @@
 
     return v3
 
+    .line 7
     :cond_2
     invoke-interface {p3}, Ljava/util/List;->size()I
 
@@ -1284,22 +1393,26 @@
 
     add-int/lit8 v4, v2, -0x1
 
+    .line 8
     invoke-interface {p3, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Lcom/google/android/exoplayer2/source/chunk/MediaChunk;
 
+    .line 9
     iget-wide v4, v4, Lcom/google/android/exoplayer2/source/chunk/Chunk;->startTimeUs:J
 
     sub-long/2addr v4, p1
 
     iget v6, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->playbackSpeed:F
 
+    .line 10
     invoke-static {v4, v5, v6}, Lcom/google/android/exoplayer2/util/Util;->getPlayoutDurationForMediaDuration(JF)J
 
     move-result-wide v4
 
+    .line 11
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->getMinDurationToRetainAfterDiscardUs()J
 
     move-result-wide v6
@@ -1310,6 +1423,7 @@
 
     return v2
 
+    .line 12
     :cond_3
     invoke-direct {p0, p3}, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->getLastChunkDurationUs(Ljava/util/List;)J
 
@@ -1319,6 +1433,7 @@
 
     move-result v0
 
+    .line 13
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->getFormat(I)Lcom/google/android/exoplayer2/Format;
 
     move-result-object v0
@@ -1326,20 +1441,25 @@
     :goto_1
     if-ge v3, v2, :cond_5
 
+    .line 14
     invoke-interface {p3, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/google/android/exoplayer2/source/chunk/MediaChunk;
 
+    .line 15
     iget-object v4, v1, Lcom/google/android/exoplayer2/source/chunk/Chunk;->trackFormat:Lcom/google/android/exoplayer2/Format;
 
+    .line 16
     iget-wide v8, v1, Lcom/google/android/exoplayer2/source/chunk/Chunk;->startTimeUs:J
 
     sub-long/2addr v8, p1
 
+    .line 17
     iget v1, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->playbackSpeed:F
 
+    .line 18
     invoke-static {v8, v9, v1}, Lcom/google/android/exoplayer2/util/Util;->getPlayoutDurationForMediaDuration(JF)J
 
     move-result-wide v8
@@ -1348,6 +1468,7 @@
 
     if-ltz v1, :cond_4
 
+    .line 19
     iget v1, v4, Lcom/google/android/exoplayer2/Format;->bitrate:I
 
     iget v5, v0, Lcom/google/android/exoplayer2/Format;->bitrate:I
@@ -1390,6 +1511,7 @@
 .method public getMinDurationToRetainAfterDiscardUs()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->minDurationToRetainAfterDiscardUs:J
 
     return-wide v0
@@ -1398,6 +1520,7 @@
 .method public getSelectedIndex()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->selectedIndex:I
 
     return p0
@@ -1416,6 +1539,7 @@
 .method public getSelectionReason()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->reason:I
 
     return p0
@@ -1424,6 +1548,7 @@
 .method public onPlaybackSpeed(F)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->playbackSpeed:F
 
     return-void
@@ -1441,6 +1566,7 @@
         }
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->lastBufferEvaluationMs:J
 
     const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
@@ -1457,6 +1583,7 @@
 
     if-gez p1, :cond_1
 
+    .line 2
     invoke-interface {p3}, Ljava/util/List;->isEmpty()Z
 
     move-result p1
@@ -1506,24 +1633,29 @@
         }
     .end annotation
 
+    .line 1
     iget-object p1, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->clock:Lcom/google/android/exoplayer2/util/Clock;
 
     invoke-interface {p1}, Lcom/google/android/exoplayer2/util/Clock;->elapsedRealtime()J
 
     move-result-wide p1
 
+    .line 2
     invoke-direct {p0, p8, p7}, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->getNextChunkDurationUs([Lcom/google/android/exoplayer2/source/chunk/MediaChunkIterator;Ljava/util/List;)J
 
     move-result-wide v0
 
+    .line 3
     iget p8, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->reason:I
 
     if-nez p8, :cond_0
 
     const/4 p3, 0x1
 
+    .line 4
     iput p3, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->reason:I
 
+    .line 5
     invoke-direct {p0, p1, p2, v0, v1}, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->determineIdealSelectedIndex(JJ)I
 
     move-result p1
@@ -1532,9 +1664,11 @@
 
     return-void
 
+    .line 6
     :cond_0
     iget v2, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->selectedIndex:I
 
+    .line 7
     invoke-interface {p7}, Ljava/util/List;->isEmpty()Z
 
     move-result v3
@@ -1563,6 +1697,7 @@
     :goto_0
     if-eq v3, v4, :cond_2
 
+    .line 8
     invoke-static {p7}, Lcom/google/common/collect/Iterables;->getLast(Ljava/lang/Iterable;)Ljava/lang/Object;
 
     move-result-object p7
@@ -1573,29 +1708,35 @@
 
     move v2, v3
 
+    .line 9
     :cond_2
     invoke-direct {p0, p1, p2, v0, v1}, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->determineIdealSelectedIndex(JJ)I
 
     move-result p7
 
+    .line 10
     invoke-virtual {p0, v2, p1, p2}, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->isBlacklisted(IJ)Z
 
     move-result p1
 
     if-nez p1, :cond_4
 
+    .line 11
     invoke-virtual {p0, v2}, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->getFormat(I)Lcom/google/android/exoplayer2/Format;
 
     move-result-object p1
 
+    .line 12
     invoke-virtual {p0, p7}, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->getFormat(I)Lcom/google/android/exoplayer2/Format;
 
     move-result-object p2
 
+    .line 13
     invoke-direct {p0, p5, p6, v0, v1}, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->minDurationForQualityIncreaseUs(JJ)J
 
     move-result-wide p5
 
+    .line 14
     iget p2, p2, Lcom/google/android/exoplayer2/Format;->bitrate:I
 
     iget p1, p1, Lcom/google/android/exoplayer2/Format;->bitrate:I
@@ -1611,6 +1752,7 @@
     :cond_3
     if-ge p2, p1, :cond_4
 
+    .line 15
     iget-wide p1, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->maxDurationForQualityDecreaseUs:J
 
     cmp-long p1, p3, p1
@@ -1628,9 +1770,11 @@
     :cond_5
     const/4 p8, 0x3
 
+    .line 16
     :goto_2
     iput p8, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->reason:I
 
+    .line 17
     iput p7, p0, Lcom/google/android/exoplayer2/trackselection/AdaptiveTrackSelection;->selectedIndex:I
 
     return-void

@@ -15,23 +15,39 @@
 
 
 # instance fields
-.field public a:I
+.field private a:I
 
-.field public b:I
+.field private b:I
 
-.field public c:I
+.field private c:I
 
 
 # direct methods
 .method public constructor <init>(III)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "firstTopOffset",
+            "commonBottomOffset",
+            "lastBottomOffset"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceActivity$a;->a:I
 
+    .line 3
     iput p2, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceActivity$a;->b:I
 
+    .line 4
     iput p3, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceActivity$a;->c:I
 
     return-void
@@ -57,9 +73,25 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "outRect",
+            "view",
+            "parent",
+            "state"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2, p3, p4}, Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;->getItemOffsets(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V
 
+    .line 2
     invoke-virtual {p3, p2}, Landroidx/recyclerview/widget/RecyclerView;->getChildAdapterPosition(Landroid/view/View;)I
 
     move-result p2
@@ -83,6 +115,7 @@
     :goto_0
     move v1, p4
 
+    .line 3
     :goto_1
     invoke-virtual {p3}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
@@ -104,6 +137,7 @@
     :goto_2
     if-eqz v1, :cond_3
 
+    .line 4
     iget p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceActivity$a;->b:I
 
     invoke-virtual {p1, v0, v0, v0, p0}, Landroid/graphics/Rect;->set(IIII)V
@@ -113,12 +147,14 @@
     :cond_3
     if-eqz p4, :cond_4
 
+    .line 5
     iget p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceActivity$a;->c:I
 
     invoke-virtual {p1, v0, v0, v0, p0}, Landroid/graphics/Rect;->set(IIII)V
 
     goto :goto_3
 
+    .line 6
     :cond_4
     iget p0, p0, Lcom/xiaomi/microfilm/vlogpro/vp/VPWorkspaceActivity$a;->b:I
 

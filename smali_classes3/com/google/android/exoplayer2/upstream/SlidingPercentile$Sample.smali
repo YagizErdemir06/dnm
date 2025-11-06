@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/upstream/SlidingPercentile$Sample;
+.class public Lcom/google/android/exoplayer2/upstream/SlidingPercentile$Sample;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

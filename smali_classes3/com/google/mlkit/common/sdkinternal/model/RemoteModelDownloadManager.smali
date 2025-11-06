@@ -62,6 +62,7 @@
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/common/internal/GmsLogger;
 
     const-string v1, "ModelDownloadManager"
@@ -74,6 +75,7 @@
 
     new-instance v0, Ljava/util/HashMap;
 
+    .line 2
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzb:Ljava/util/Map;
@@ -110,6 +112,7 @@
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Landroid/util/LongSparseArray;
@@ -120,12 +123,14 @@
 
     new-instance v0, Landroid/util/LongSparseArray;
 
+    .line 2
     invoke-direct {v0}, Landroid/util/LongSparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzd:Landroid/util/LongSparseArray;
 
     iput-object p1, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zze:Lcom/google/mlkit/common/sdkinternal/MlKitContext;
 
+    .line 3
     invoke-virtual {p2}, Lcom/google/mlkit/common/model/RemoteModel;->getModelType()Lcom/google/mlkit/common/sdkinternal/ModelType;
 
     move-result-object v0
@@ -134,6 +139,7 @@
 
     iput-object p2, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzg:Lcom/google/mlkit/common/model/RemoteModel;
 
+    .line 4
     invoke-virtual {p1}, Lcom/google/mlkit/common/sdkinternal/MlKitContext;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p2
@@ -158,11 +164,13 @@
 
     const-string v0, "Download manager service is not available in the service."
 
+    .line 5
     invoke-virtual {p2, p6, v0}, Lcom/google/android/gms/common/internal/GmsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     iput-object p3, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzk:Lcom/google/mlkit/common/sdkinternal/model/ModelFileHelper;
 
+    .line 6
     invoke-static {p1}, Lcom/google/mlkit/common/sdkinternal/SharedPrefManager;->getInstance(Lcom/google/mlkit/common/sdkinternal/MlKitContext;)Lcom/google/mlkit/common/sdkinternal/SharedPrefManager;
 
     move-result-object p1
@@ -208,6 +216,7 @@
 
     monitor-enter v0
 
+    .line 1
     :try_start_0
     sget-object v1, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzb:Ljava/util/Map;
 
@@ -221,6 +230,7 @@
 
     new-instance v10, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;
 
+    .line 2
     invoke-static {v2}, Lcom/google/android/gms/internal/mlkit_common/zzpy;->zzb(Ljava/lang/String;)Lcom/google/android/gms/internal/mlkit_common/zzpn;
 
     move-result-object v9
@@ -239,8 +249,10 @@
 
     invoke-direct/range {v3 .. v9}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;-><init>(Lcom/google/mlkit/common/sdkinternal/MlKitContext;Lcom/google/mlkit/common/model/RemoteModel;Lcom/google/mlkit/common/sdkinternal/model/ModelFileHelper;Lcom/google/mlkit/common/sdkinternal/model/RemoteModelFileManager;Lcom/google/mlkit/common/sdkinternal/model/ModelInfoRetrieverInterop;Lcom/google/android/gms/internal/mlkit_common/zzpn;)V
 
+    .line 3
     invoke-interface {v1, p1, v10}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     :cond_0
     invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -323,12 +335,14 @@
 .method private final zzj(J)Lcom/google/android/gms/tasks/Task;
     .locals 5
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzm(J)Lcom/google/mlkit/common/sdkinternal/model/zzd;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zze:Lcom/google/mlkit/common/sdkinternal/MlKitContext;
 
+    .line 2
     invoke-virtual {v1}, Lcom/google/mlkit/common/sdkinternal/MlKitContext;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
@@ -337,8 +351,10 @@
 
     const-string v3, "android.intent.action.DOWNLOAD_COMPLETE"
 
+    .line 3
     invoke-direct {v2, v3}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
+    .line 4
     invoke-static {}, Lcom/google/mlkit/common/sdkinternal/MLTaskExecutor;->getInstance()Lcom/google/mlkit/common/sdkinternal/MLTaskExecutor;
 
     move-result-object v3
@@ -349,8 +365,10 @@
 
     const/4 v4, 0x0
 
+    .line 5
     invoke-virtual {v1, v0, v2, v4, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
+    .line 6
     invoke-direct {p0, p1, p2}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzk(J)Lcom/google/android/gms/tasks/TaskCompletionSource;
 
     move-result-object p0
@@ -367,6 +385,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzd:Landroid/util/LongSparseArray;
 
@@ -378,12 +397,14 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Lcom/google/android/gms/tasks/TaskCompletionSource;
 
     invoke-direct {v0}, Lcom/google/android/gms/tasks/TaskCompletionSource;-><init>()V
 
     iget-object v1, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzd:Landroid/util/LongSparseArray;
 
+    .line 3
     invoke-virtual {v1, p1, p2, v0}, Landroid/util/LongSparseArray;->put(JLjava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -412,6 +433,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzf:Landroid/app/DownloadManager;
 
     const/4 v0, 0x0
@@ -422,6 +444,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     new-instance v0, Landroid/app/DownloadManager$Query;
 
@@ -455,6 +478,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 3
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v1
@@ -463,6 +487,7 @@
 
     const-string p1, "reason"
 
+    .line 4
     invoke-interface {v0, p1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result p1
@@ -475,15 +500,17 @@
 
     if-ne p1, v0, :cond_2
 
-    const-string p1, "Model downloading failed due to insufficient space on the device."
-
     const/16 p0, 0x65
+
+    const-string p1, "Model downloading failed due to insufficient space on the device."
 
     goto :goto_1
 
+    .line 5
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 
+    .line 6
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v1, "Model downloading failed due to error code: "
@@ -500,10 +527,12 @@
 
     move-result-object p1
 
+    .line 7
     :cond_3
     :goto_1
     new-instance v0, Lcom/google/mlkit/common/MlKitException;
 
+    .line 8
     invoke-direct {v0, p1, p0}, Lcom/google/mlkit/common/MlKitException;-><init>(Ljava/lang/String;I)V
 
     return-object v0
@@ -514,6 +543,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzc:Landroid/util/LongSparseArray;
 
@@ -527,6 +557,7 @@
 
     new-instance v0, Lcom/google/mlkit/common/sdkinternal/model/zzd;
 
+    .line 2
     invoke-direct {p0, p1, p2}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzk(J)Lcom/google/android/gms/tasks/TaskCompletionSource;
 
     move-result-object v5
@@ -543,6 +574,7 @@
 
     iget-object v1, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzc:Landroid/util/LongSparseArray;
 
+    .line 3
     invoke-virtual {v1, p1, p2, v0}, Landroid/util/LongSparseArray;->put(JLjava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -579,6 +611,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzf:Landroid/app/DownloadManager;
     :try_end_0
@@ -586,11 +619,11 @@
 
     if-nez v0, :cond_0
 
+    const/4 p1, 0x0
+
     monitor-exit p0
 
-    const/4 p0, 0x0
-
-    return-object p0
+    return-object p1
 
     :cond_0
     :try_start_1
@@ -602,6 +635,7 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    .line 2
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v3, "Schedule a new downloading task: "
@@ -620,10 +654,12 @@
 
     iget-object p1, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzj:Lcom/google/mlkit/common/sdkinternal/SharedPrefManager;
 
+    .line 3
     invoke-virtual {p1, v0, v1, p2}, Lcom/google/mlkit/common/sdkinternal/SharedPrefManager;->setDownloadingModelInfo(JLcom/google/mlkit/common/sdkinternal/ModelInfo;)V
 
     iget-object v2, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzi:Lcom/google/android/gms/internal/mlkit_common/zzpn;
 
+    .line 4
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_common/zzpq;->zzg()Lcom/google/android/gms/internal/mlkit_common/zzpe;
 
     move-result-object v3
@@ -634,14 +670,17 @@
 
     const/4 v6, 0x0
 
+    .line 5
     invoke-virtual {p2}, Lcom/google/mlkit/common/sdkinternal/ModelInfo;->getModelType()Lcom/google/mlkit/common/sdkinternal/ModelType;
 
     move-result-object v7
 
     sget-object v8, Lcom/google/android/gms/internal/mlkit_common/zzli;->zzf:Lcom/google/android/gms/internal/mlkit_common/zzli;
 
+    .line 6
     invoke-virtual/range {v2 .. v8}, Lcom/google/android/gms/internal/mlkit_common/zzpn;->zzf(Lcom/google/android/gms/internal/mlkit_common/zzpe;Lcom/google/mlkit/common/model/RemoteModel;Lcom/google/android/gms/internal/mlkit_common/zzlc;ZLcom/google/mlkit/common/sdkinternal/ModelType;Lcom/google/android/gms/internal/mlkit_common/zzli;)V
 
+    .line 7
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
@@ -687,22 +726,26 @@
     :try_start_0
     const-string v0, "DownloadConditions can not be null"
 
+    .line 1
     invoke-static {p2, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzj:Lcom/google/mlkit/common/sdkinternal/SharedPrefManager;
 
     iget-object v1, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzg:Lcom/google/mlkit/common/model/RemoteModel;
 
+    .line 2
     invoke-virtual {v0, v1}, Lcom/google/mlkit/common/sdkinternal/SharedPrefManager;->getDownloadingModelHash(Lcom/google/mlkit/common/model/RemoteModel;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->getDownloadingModelStatusCode()Ljava/lang/Integer;
 
     move-result-object v1
 
     if-eqz v0, :cond_2
 
+    .line 4
     invoke-virtual {p1}, Lcom/google/mlkit/common/sdkinternal/ModelInfo;->getModelHash()Ljava/lang/String;
 
     move-result-object v2
@@ -715,12 +758,14 @@
 
     if-eqz v1, :cond_2
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->getDownloadingModelStatusCode()Ljava/lang/Integer;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
+    .line 6
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p2
@@ -729,6 +774,7 @@
 
     if-eq p2, v0, :cond_1
 
+    .line 7
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -740,6 +786,7 @@
     :cond_0
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzi:Lcom/google/android/gms/internal/mlkit_common/zzpn;
 
+    .line 8
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_common/zzpq;->zzg()Lcom/google/android/gms/internal/mlkit_common/zzpe;
 
     move-result-object v1
@@ -750,12 +797,14 @@
 
     const/4 v4, 0x0
 
+    .line 9
     invoke-virtual {v2}, Lcom/google/mlkit/common/model/RemoteModel;->getModelType()Lcom/google/mlkit/common/sdkinternal/ModelType;
 
     move-result-object v5
 
     sget-object v6, Lcom/google/android/gms/internal/mlkit_common/zzli;->zzg:Lcom/google/android/gms/internal/mlkit_common/zzli;
 
+    .line 10
     invoke-virtual/range {v0 .. v6}, Lcom/google/android/gms/internal/mlkit_common/zzpn;->zzf(Lcom/google/android/gms/internal/mlkit_common/zzpe;Lcom/google/mlkit/common/model/RemoteModel;Lcom/google/android/gms/internal/mlkit_common/zzlc;ZLcom/google/mlkit/common/sdkinternal/ModelType;Lcom/google/android/gms/internal/mlkit_common/zzli;)V
 
     :cond_1
@@ -765,15 +814,16 @@
 
     const-string v0, "New model is already in downloading, do nothing."
 
+    .line 11
     invoke-virtual {p1, p2, v0}, Lcom/google/android/gms/common/internal/GmsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    const/4 p1, 0x0
+
     monitor-exit p0
 
-    const/4 p0, 0x0
-
-    return-object p0
+    return-object p1
 
     :cond_2
     :try_start_1
@@ -783,10 +833,13 @@
 
     const-string v2, "Need to download a new model."
 
+    .line 12
     invoke-virtual {v0, v1, v2}, Lcom/google/android/gms/common/internal/GmsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 13
     invoke-virtual {p0}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->removeOrCancelDownload()V
 
+    .line 14
     new-instance v1, Landroid/app/DownloadManager$Request;
 
     invoke-virtual {p1}, Lcom/google/mlkit/common/sdkinternal/ModelInfo;->getModelUri()Landroid/net/Uri;
@@ -797,6 +850,7 @@
 
     iget-object v2, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzk:Lcom/google/mlkit/common/sdkinternal/model/ModelFileHelper;
 
+    .line 15
     invoke-virtual {p1}, Lcom/google/mlkit/common/sdkinternal/ModelInfo;->getModelNameForPersist()Ljava/lang/String;
 
     move-result-object v3
@@ -805,6 +859,7 @@
 
     move-result-object v4
 
+    .line 16
     invoke-virtual {v2, v3, v4}, Lcom/google/mlkit/common/sdkinternal/model/ModelFileHelper;->modelExistsLocally(Ljava/lang/String;Lcom/google/mlkit/common/sdkinternal/ModelType;)Z
 
     move-result v2
@@ -815,10 +870,12 @@
 
     const-string v3, "Model update is enabled and have a previous downloaded model, use download condition"
 
+    .line 17
     invoke-virtual {v0, v2, v3}, Lcom/google/android/gms/common/internal/GmsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v4, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzi:Lcom/google/android/gms/internal/mlkit_common/zzpn;
 
+    .line 18
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_common/zzpq;->zzg()Lcom/google/android/gms/internal/mlkit_common/zzpe;
 
     move-result-object v5
@@ -829,32 +886,45 @@
 
     const/4 v8, 0x0
 
+    .line 19
     invoke-virtual {p1}, Lcom/google/mlkit/common/sdkinternal/ModelInfo;->getModelType()Lcom/google/mlkit/common/sdkinternal/ModelType;
 
     move-result-object v9
 
     sget-object v10, Lcom/google/android/gms/internal/mlkit_common/zzli;->zzk:Lcom/google/android/gms/internal/mlkit_common/zzli;
 
+    .line 20
     invoke-virtual/range {v4 .. v10}, Lcom/google/android/gms/internal/mlkit_common/zzpn;->zzf(Lcom/google/android/gms/internal/mlkit_common/zzpe;Lcom/google/mlkit/common/model/RemoteModel;Lcom/google/android/gms/internal/mlkit_common/zzlc;ZLcom/google/mlkit/common/sdkinternal/ModelType;Lcom/google/android/gms/internal/mlkit_common/zzli;)V
 
     :cond_3
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v2, 0x18
+
+    if-lt v0, v2, :cond_4
+
+    .line 21
     invoke-virtual {p2}, Lcom/google/mlkit/common/model/DownloadConditions;->isChargingRequired()Z
 
     move-result v0
 
     invoke-virtual {v1, v0}, Landroid/app/DownloadManager$Request;->setRequiresCharging(Z)Landroid/app/DownloadManager$Request;
 
+    .line 22
+    :cond_4
     invoke-virtual {p2}, Lcom/google/mlkit/common/model/DownloadConditions;->isWifiRequired()Z
 
     move-result p2
 
-    if-eqz p2, :cond_4
+    if-eqz p2, :cond_5
 
     const/4 p2, 0x2
 
+    .line 23
     invoke-virtual {v1, p2}, Landroid/app/DownloadManager$Request;->setAllowedNetworkTypes(I)Landroid/app/DownloadManager$Request;
 
-    :cond_4
+    .line 24
+    :cond_5
     invoke-direct {p0, v1, p1}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzn(Landroid/app/DownloadManager$Request;Lcom/google/mlkit/common/sdkinternal/ModelInfo;)Ljava/lang/Long;
 
     move-result-object p1
@@ -895,6 +965,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzi:Lcom/google/android/gms/internal/mlkit_common/zzpn;
 
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_common/zzpq;->zzg()Lcom/google/android/gms/internal/mlkit_common/zzpe;
@@ -905,16 +976,18 @@
 
     sget-object v3, Lcom/google/android/gms/internal/mlkit_common/zzlc;->zza:Lcom/google/android/gms/internal/mlkit_common/zzlc;
 
-    const/4 v4, 0x0
-
     sget-object v5, Lcom/google/mlkit/common/sdkinternal/ModelType;->UNKNOWN:Lcom/google/mlkit/common/sdkinternal/ModelType;
 
     sget-object v6, Lcom/google/android/gms/internal/mlkit_common/zzli;->zzb:Lcom/google/android/gms/internal/mlkit_common/zzli;
 
+    const/4 v4, 0x0
+
+    .line 2
     invoke-virtual/range {v0 .. v6}, Lcom/google/android/gms/internal/mlkit_common/zzpn;->zzf(Lcom/google/android/gms/internal/mlkit_common/zzpe;Lcom/google/mlkit/common/model/RemoteModel;Lcom/google/android/gms/internal/mlkit_common/zzlc;ZLcom/google/mlkit/common/sdkinternal/ModelType;Lcom/google/android/gms/internal/mlkit_common/zzli;)V
 
     const/4 v0, 0x0
 
+    .line 3
     :try_start_0
     invoke-virtual {p0}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzg()Lcom/google/mlkit/common/sdkinternal/ModelInfo;
 
@@ -936,15 +1009,18 @@
     :goto_0
     const/16 v3, 0xd
 
+    .line 4
     :try_start_1
     invoke-virtual {p0}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->getDownloadingModelStatusCode()Ljava/lang/Integer;
 
     move-result-object v4
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->getDownloadingId()Ljava/lang/Long;
 
     move-result-object v5
 
+    .line 6
     invoke-virtual {p0}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->modelExistsLocally()Z
 
     move-result v6
@@ -953,6 +1029,7 @@
 
     if-eqz v4, :cond_0
 
+    .line 7
     invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
 
     move-result v6
@@ -966,6 +1043,7 @@
     :cond_0
     if-eqz v4, :cond_1
 
+    .line 8
     invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
 
     move-result v6
@@ -974,12 +1052,15 @@
 
     if-ne v6, v7, :cond_1
 
+    .line 9
     invoke-direct {p0, v5}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzl(Ljava/lang/Long;)Lcom/google/mlkit/common/MlKitException;
 
     move-result-object v0
 
+    .line 10
     invoke-virtual {p0}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->removeOrCancelDownload()V
 
+    .line 11
     invoke-static {v0}, Lcom/google/android/gms/tasks/Tasks;->forException(Ljava/lang/Exception;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object p0
@@ -989,6 +1070,7 @@
     :cond_1
     if-eqz v4, :cond_3
 
+    .line 12
     invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
 
     move-result v6
@@ -997,6 +1079,7 @@
 
     if-eq v6, v7, :cond_2
 
+    .line 13
     invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
 
     move-result v6
@@ -1005,6 +1088,7 @@
 
     if-eq v6, v7, :cond_2
 
+    .line 14
     invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
 
     move-result v4
@@ -1016,6 +1100,7 @@
     :cond_2
     if-eqz v5, :cond_3
 
+    .line 15
     invoke-virtual {p0}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->getDownloadingModelHash()Ljava/lang/String;
 
     move-result-object v4
@@ -1024,6 +1109,7 @@
 
     iget-object v6, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzi:Lcom/google/android/gms/internal/mlkit_common/zzpn;
 
+    .line 16
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_common/zzpq;->zzg()Lcom/google/android/gms/internal/mlkit_common/zzpe;
 
     move-result-object v7
@@ -1034,14 +1120,17 @@
 
     const/4 v10, 0x0
 
+    .line 17
     invoke-virtual {v8}, Lcom/google/mlkit/common/model/RemoteModel;->getModelType()Lcom/google/mlkit/common/sdkinternal/ModelType;
 
     move-result-object v11
 
     sget-object v12, Lcom/google/android/gms/internal/mlkit_common/zzli;->zzg:Lcom/google/android/gms/internal/mlkit_common/zzli;
 
+    .line 18
     invoke-virtual/range {v6 .. v12}, Lcom/google/android/gms/internal/mlkit_common/zzpn;->zzf(Lcom/google/android/gms/internal/mlkit_common/zzpe;Lcom/google/mlkit/common/model/RemoteModel;Lcom/google/android/gms/internal/mlkit_common/zzlc;ZLcom/google/mlkit/common/sdkinternal/ModelType;Lcom/google/android/gms/internal/mlkit_common/zzli;)V
 
+    .line 19
     invoke-virtual {v5}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v0
@@ -1057,9 +1146,11 @@
 
     goto :goto_1
 
+    .line 20
     :cond_4
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzn:Lcom/google/mlkit/common/model/DownloadConditions;
 
+    .line 21
     invoke-direct {p0, v1, v0}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzo(Lcom/google/mlkit/common/sdkinternal/ModelInfo;Lcom/google/mlkit/common/model/DownloadConditions;)Ljava/lang/Long;
 
     move-result-object v0
@@ -1067,10 +1158,12 @@
     :goto_1
     if-nez v0, :cond_5
 
+    .line 22
     new-instance p0, Lcom/google/mlkit/common/MlKitException;
 
     const-string v0, "Failed to schedule the download task"
 
+    .line 23
     invoke-direct {p0, v0, v3, v2}, Lcom/google/mlkit/common/MlKitException;-><init>(Ljava/lang/String;ILjava/lang/Throwable;)V
 
     invoke-static {p0}, Lcom/google/android/gms/tasks/Tasks;->forException(Ljava/lang/Exception;)Lcom/google/android/gms/tasks/Task;
@@ -1079,6 +1172,7 @@
 
     return-object p0
 
+    .line 24
     :cond_5
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
@@ -1094,14 +1188,17 @@
     :goto_2
     if-eqz v1, :cond_8
 
+    .line 25
     iget-object v2, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzn:Lcom/google/mlkit/common/model/DownloadConditions;
 
+    .line 26
     invoke-direct {p0, v1, v2}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzo(Lcom/google/mlkit/common/sdkinternal/ModelInfo;Lcom/google/mlkit/common/model/DownloadConditions;)Ljava/lang/Long;
 
     move-result-object v1
 
     if-eqz v1, :cond_7
 
+    .line 27
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v0
@@ -1119,8 +1216,10 @@
 
     const-string v2, "Didn\'t schedule download for the updated model"
 
+    .line 28
     invoke-virtual {p0, v1, v2}, Lcom/google/android/gms/common/internal/GmsLogger;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 29
     :cond_8
     invoke-static {v0}, Lcom/google/android/gms/tasks/Tasks;->forResult(Ljava/lang/Object;)Lcom/google/android/gms/tasks/Task;
 
@@ -1133,10 +1232,12 @@
     :catch_1
     move-exception p0
 
+    .line 30
     new-instance v0, Lcom/google/mlkit/common/MlKitException;
 
     const-string v1, "Failed to ensure the model is downloaded."
 
+    .line 31
     invoke-direct {v0, v1, v3, p0}, Lcom/google/mlkit/common/MlKitException;-><init>(Ljava/lang/String;ILjava/lang/Throwable;)V
 
     invoke-static {v0}, Lcom/google/android/gms/tasks/Tasks;->forException(Ljava/lang/Exception;)Lcom/google/android/gms/tasks/Task;
@@ -1156,6 +1257,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->getDownloadingId()Ljava/lang/Long;
 
@@ -1171,6 +1273,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     :try_start_1
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
@@ -1193,10 +1296,12 @@
 
     const-string v3, "Downloaded file is not found"
 
+    .line 3
     invoke-virtual {v0, v1, v3}, Lcom/google/android/gms/common/internal/GmsLogger;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 4
     :goto_0
     monitor-exit p0
 
@@ -1225,6 +1330,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzj:Lcom/google/mlkit/common/sdkinternal/SharedPrefManager;
 
@@ -1258,6 +1364,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzj:Lcom/google/mlkit/common/sdkinternal/SharedPrefManager;
 
@@ -1291,6 +1398,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->getDownloadingId()Ljava/lang/Long;
 
@@ -1306,6 +1414,7 @@
 
     goto/16 :goto_4
 
+    .line 2
     :cond_0
     new-instance v3, Landroid/app/DownloadManager$Query;
 
@@ -1335,6 +1444,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 3
     :try_start_1
     invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -1344,6 +1454,7 @@
 
     const-string v3, "status"
 
+    .line 4
     invoke-interface {v1, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v3
@@ -1373,6 +1484,7 @@
 
     if-eqz v1, :cond_2
 
+    .line 5
     :try_start_2
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
     :try_end_2
@@ -1383,6 +1495,7 @@
 
     return-object v2
 
+    .line 6
     :cond_3
     :try_start_3
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
@@ -1393,6 +1506,7 @@
 
     if-eq v5, v6, :cond_4
 
+    .line 7
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
     move-result v5
@@ -1401,12 +1515,14 @@
 
     if-eq v5, v6, :cond_4
 
+    .line 8
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
     move-result v5
 
     if-eq v5, v4, :cond_4
 
+    .line 9
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
     move-result v5
@@ -1415,6 +1531,7 @@
 
     if-eq v5, v6, :cond_4
 
+    .line 10
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
@@ -1430,6 +1547,7 @@
     :cond_4
     move-object v2, v3
 
+    .line 11
     :goto_1
     :try_start_4
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
@@ -1440,6 +1558,7 @@
 
     return-object v2
 
+    .line 12
     :goto_2
     :try_start_5
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
@@ -1462,6 +1581,7 @@
 
     aput-object v7, v6, v0
 
+    .line 13
     invoke-virtual {v3, v5, v6}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v3
@@ -1475,6 +1595,7 @@
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_0
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
+    .line 14
     :catch_0
     :goto_3
     :try_start_7
@@ -1482,6 +1603,7 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
+    .line 15
     :cond_5
     :goto_4
     monitor-exit p0
@@ -1505,6 +1627,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzf:Landroid/app/DownloadManager;
 
     const/4 v0, 0x0
@@ -1517,6 +1640,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     new-instance v1, Landroid/app/DownloadManager$Query;
 
@@ -1544,6 +1668,7 @@
     :goto_0
     if-eqz v1, :cond_2
 
+    .line 3
     invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result p0
@@ -1552,6 +1677,7 @@
 
     const-string p0, "reason"
 
+    .line 4
     invoke-interface {v1, p0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result p0
@@ -1560,6 +1686,7 @@
 
     if-eq p0, p1, :cond_2
 
+    .line 5
     invoke-interface {v1, p0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result p0
@@ -1588,6 +1715,7 @@
 
     const/4 v1, 0x1
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->modelExistsLocally()Z
 
@@ -1602,18 +1730,22 @@
     :cond_0
     return v1
 
+    .line 2
     :catch_0
     sget-object v2, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zza:Lcom/google/android/gms/common/internal/GmsLogger;
 
     const-string v3, "Failed to check if the model exist locally."
 
+    .line 3
     invoke-virtual {v2, v0, v3}, Lcom/google/android/gms/common/internal/GmsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 4
     :goto_0
     invoke-virtual {p0}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->getDownloadingId()Ljava/lang/Long;
 
     move-result-object v2
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->getDownloadingModelHash()Ljava/lang/String;
 
     move-result-object v3
@@ -1626,6 +1758,7 @@
 
     goto :goto_1
 
+    .line 6
     :cond_1
     invoke-virtual {p0}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->getDownloadingModelStatusCode()Ljava/lang/Integer;
 
@@ -1633,11 +1766,20 @@
 
     sget-object v5, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zza:Lcom/google/android/gms/common/internal/GmsLogger;
 
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    .line 7
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "Download Status code: "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v6
-
-    const-string v7, "Download Status code: "
 
     invoke-virtual {v7, v6}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1647,6 +1789,7 @@
 
     if-nez v2, :cond_2
 
+    .line 8
     invoke-virtual {p0}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->removeOrCancelDownload()V
 
     return v4
@@ -1654,6 +1797,7 @@
     :cond_2
     const/16 v0, 0x8
 
+    .line 9
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -1664,6 +1808,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 10
     invoke-virtual {p0, v3}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzi(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object p0
@@ -1675,14 +1820,17 @@
     :cond_3
     return v4
 
+    .line 11
     :cond_4
     :goto_1
     sget-object v1, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zza:Lcom/google/android/gms/common/internal/GmsLogger;
 
     const-string v2, "No new model is downloading."
 
+    .line 12
     invoke-virtual {v1, v0, v2}, Lcom/google/android/gms/common/internal/GmsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 13
     invoke-virtual {p0}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->removeOrCancelDownload()V
 
     return v4
@@ -1699,6 +1847,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzk:Lcom/google/mlkit/common/sdkinternal/model/ModelFileHelper;
 
     iget-object v1, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzg:Lcom/google/mlkit/common/model/RemoteModel;
@@ -1709,6 +1858,7 @@
 
     iget-object p0, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzh:Lcom/google/mlkit/common/sdkinternal/ModelType;
 
+    .line 2
     invoke-virtual {v0, v1, p0}, Lcom/google/mlkit/common/sdkinternal/model/ModelFileHelper;->modelExistsLocally(Ljava/lang/String;Lcom/google/mlkit/common/sdkinternal/ModelType;)Z
 
     move-result p0
@@ -1717,7 +1867,7 @@
 .end method
 
 .method public declared-synchronized removeOrCancelDownload()V
-    .locals 5
+    .locals 6
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
@@ -1729,6 +1879,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->getDownloadingId()Ljava/lang/Long;
 
@@ -1745,13 +1896,22 @@
     :cond_0
     sget-object v1, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zza:Lcom/google/android/gms/common/internal/GmsLogger;
 
-    const-string v2, "Cancel or remove existing downloading task: "
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    .line 2
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Cancel or remove existing downloading task: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v3, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1765,13 +1925,14 @@
 
     new-array v2, v2, [J
 
+    const/4 v3, 0x0
+
+    .line 3
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    const/4 v0, 0x0
-
-    aput-wide v3, v2, v0
+    aput-wide v4, v2, v3
 
     invoke-virtual {v1, v2}, Landroid/app/DownloadManager;->remove([J)I
 
@@ -1789,11 +1950,13 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     monitor-exit p0
 
     return-void
 
+    .line 5
     :cond_2
     :goto_0
     :try_start_1
@@ -1801,6 +1964,7 @@
 
     iget-object v1, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzg:Lcom/google/mlkit/common/model/RemoteModel;
 
+    .line 6
     invoke-virtual {v1}, Lcom/google/mlkit/common/model/RemoteModel;->getUniqueModelNameForPersist()Ljava/lang/String;
 
     move-result-object v1
@@ -1811,12 +1975,14 @@
 
     move-result-object v2
 
+    .line 7
     invoke-virtual {v0, v1, v2}, Lcom/google/mlkit/common/sdkinternal/model/ModelFileHelper;->deleteTempFilesInPrivateFolder(Ljava/lang/String;Lcom/google/mlkit/common/sdkinternal/ModelType;)V
 
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzj:Lcom/google/mlkit/common/sdkinternal/SharedPrefManager;
 
     iget-object v1, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzg:Lcom/google/mlkit/common/model/RemoteModel;
 
+    .line 8
     invoke-virtual {v0, v1}, Lcom/google/mlkit/common/sdkinternal/SharedPrefManager;->clearDownloadingModelInfo(Lcom/google/mlkit/common/model/RemoteModel;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -1825,6 +1991,7 @@
 
     return-void
 
+    .line 9
     :cond_3
     :goto_1
     monitor-exit p0
@@ -1850,6 +2017,7 @@
 
     const-string v0, "DownloadConditions can not be null"
 
+    .line 1
     invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p1, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzn:Lcom/google/mlkit/common/model/DownloadConditions;
@@ -1874,6 +2042,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzj:Lcom/google/mlkit/common/sdkinternal/SharedPrefManager;
 
@@ -1881,6 +2050,7 @@
 
     invoke-virtual {v0, v1, p1}, Lcom/google/mlkit/common/sdkinternal/SharedPrefManager;->setLatestModelHash(Lcom/google/mlkit/common/model/RemoteModel;Ljava/lang/String;)V
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->removeOrCancelDownload()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1913,6 +2083,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->modelExistsLocally()Z
 
@@ -1922,6 +2093,7 @@
 
     iget-object v1, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzi:Lcom/google/android/gms/internal/mlkit_common/zzpn;
 
+    .line 2
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_common/zzpq;->zzg()Lcom/google/android/gms/internal/mlkit_common/zzpe;
 
     move-result-object v2
@@ -1932,12 +2104,14 @@
 
     const/4 v5, 0x0
 
+    .line 3
     invoke-virtual {v3}, Lcom/google/mlkit/common/model/RemoteModel;->getModelType()Lcom/google/mlkit/common/sdkinternal/ModelType;
 
     move-result-object v6
 
     sget-object v7, Lcom/google/android/gms/internal/mlkit_common/zzli;->zzj:Lcom/google/android/gms/internal/mlkit_common/zzli;
 
+    .line 4
     invoke-virtual/range {v1 .. v7}, Lcom/google/android/gms/internal/mlkit_common/zzpn;->zzf(Lcom/google/android/gms/internal/mlkit_common/zzpe;Lcom/google/mlkit/common/model/RemoteModel;Lcom/google/android/gms/internal/mlkit_common/zzlc;ZLcom/google/mlkit/common/sdkinternal/ModelType;Lcom/google/android/gms/internal/mlkit_common/zzli;)V
 
     :cond_0
@@ -1947,6 +2121,7 @@
 
     iget-object v2, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzg:Lcom/google/mlkit/common/model/RemoteModel;
 
+    .line 5
     invoke-interface {v1, v2}, Lcom/google/mlkit/common/sdkinternal/model/ModelInfoRetrieverInterop;->retrieveRemoteModelInfo(Lcom/google/mlkit/common/model/RemoteModel;)Lcom/google/mlkit/common/sdkinternal/ModelInfo;
 
     move-result-object v1
@@ -1967,14 +2142,17 @@
 
     iget-object v4, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzg:Lcom/google/mlkit/common/model/RemoteModel;
 
+    .line 6
     invoke-virtual {v1}, Lcom/google/mlkit/common/sdkinternal/ModelInfo;->getModelHash()Ljava/lang/String;
 
     move-result-object v5
 
+    .line 7
     invoke-static {v3}, Lcom/google/mlkit/common/sdkinternal/SharedPrefManager;->getInstance(Lcom/google/mlkit/common/sdkinternal/MlKitContext;)Lcom/google/mlkit/common/sdkinternal/SharedPrefManager;
 
     move-result-object v6
 
+    .line 8
     invoke-virtual {v6, v4}, Lcom/google/mlkit/common/sdkinternal/SharedPrefManager;->getIncompatibleModelHash(Lcom/google/mlkit/common/model/RemoteModel;)Ljava/lang/String;
 
     move-result-object v4
@@ -1989,6 +2167,7 @@
 
     if-eqz v4, :cond_2
 
+    .line 9
     invoke-virtual {v3}, Lcom/google/mlkit/common/sdkinternal/MlKitContext;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v3
@@ -1997,6 +2176,7 @@
 
     move-result-object v3
 
+    .line 10
     invoke-virtual {v6}, Lcom/google/mlkit/common/sdkinternal/SharedPrefManager;->getPreviousAppVersion()Ljava/lang/String;
 
     move-result-object v4
@@ -2013,6 +2193,7 @@
 
     const-string v6, "The model is incompatible with TFLite and the app is not upgraded, do not download"
 
+    .line 11
     invoke-virtual {v3, v4, v6}, Lcom/google/android/gms/common/internal/GmsLogger;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v3, v5
@@ -2029,6 +2210,7 @@
 
     iget-object v6, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzg:Lcom/google/mlkit/common/model/RemoteModel;
 
+    .line 12
     invoke-virtual {v4, v6}, Lcom/google/mlkit/common/sdkinternal/SharedPrefManager;->clearLatestModelHash(Lcom/google/mlkit/common/model/RemoteModel;)V
 
     :cond_3
@@ -2036,10 +2218,12 @@
 
     iget-object v6, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzg:Lcom/google/mlkit/common/model/RemoteModel;
 
+    .line 13
     invoke-virtual {v1}, Lcom/google/mlkit/common/sdkinternal/ModelInfo;->getModelHash()Ljava/lang/String;
 
     move-result-object v8
 
+    .line 14
     invoke-static {v4}, Lcom/google/mlkit/common/sdkinternal/SharedPrefManager;->getInstance(Lcom/google/mlkit/common/sdkinternal/MlKitContext;)Lcom/google/mlkit/common/sdkinternal/SharedPrefManager;
 
     move-result-object v4
@@ -2048,6 +2232,7 @@
 
     move-result-object v4
 
+    .line 15
     invoke-virtual {v8, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
@@ -2089,6 +2274,7 @@
 
     iget-object v1, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzg:Lcom/google/mlkit/common/model/RemoteModel;
 
+    .line 16
     invoke-virtual {v1}, Lcom/google/mlkit/common/model/RemoteModel;->getModelName()Ljava/lang/String;
 
     move-result-object v1
@@ -2124,6 +2310,7 @@
 
     const/16 v2, 0xe
 
+    .line 17
     invoke-direct {v0, v1, v2}, Lcom/google/mlkit/common/MlKitException;-><init>(Ljava/lang/String;I)V
 
     throw v0
@@ -2153,16 +2340,18 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zza:Lcom/google/android/gms/common/internal/GmsLogger;
 
-    const-string v1, "Model downloaded successfully"
+    const-string v1, "ModelDownloadManager"
 
-    const-string v2, "ModelDownloadManager"
+    const-string v2, "Model downloaded successfully"
 
-    invoke-virtual {v0, v2, v1}, Lcom/google/android/gms/common/internal/GmsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/google/android/gms/common/internal/GmsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v3, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzi:Lcom/google/android/gms/internal/mlkit_common/zzpn;
 
+    .line 2
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_common/zzpq;->zzg()Lcom/google/android/gms/internal/mlkit_common/zzpe;
 
     move-result-object v4
@@ -2171,20 +2360,23 @@
 
     sget-object v6, Lcom/google/android/gms/internal/mlkit_common/zzlc;->zza:Lcom/google/android/gms/internal/mlkit_common/zzlc;
 
-    const/4 v7, 0x1
-
     iget-object v8, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzh:Lcom/google/mlkit/common/sdkinternal/ModelType;
 
     sget-object v9, Lcom/google/android/gms/internal/mlkit_common/zzli;->zzh:Lcom/google/android/gms/internal/mlkit_common/zzli;
 
+    const/4 v7, 0x1
+
+    .line 3
     invoke-virtual/range {v3 .. v9}, Lcom/google/android/gms/internal/mlkit_common/zzpn;->zzf(Lcom/google/android/gms/internal/mlkit_common/zzpe;Lcom/google/mlkit/common/model/RemoteModel;Lcom/google/android/gms/internal/mlkit_common/zzlc;ZLcom/google/mlkit/common/sdkinternal/ModelType;Lcom/google/android/gms/internal/mlkit_common/zzli;)V
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->getDownloadedFile()Landroid/os/ParcelFileDescriptor;
 
-    move-result-object v1
+    move-result-object v2
 
-    if-nez v1, :cond_0
+    if-nez v2, :cond_0
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->removeOrCancelDownload()V
 
     const/4 p0, 0x0
@@ -2194,19 +2386,22 @@
     :cond_0
     const-string v3, "moving downloaded model from external storage to private folder."
 
-    invoke-virtual {v0, v2, v3}, Lcom/google/android/gms/common/internal/GmsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
+    .line 6
+    invoke-virtual {v0, v1, v3}, Lcom/google/android/gms/common/internal/GmsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_0
     iget-object v0, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzm:Lcom/google/mlkit/common/sdkinternal/model/RemoteModelFileManager;
 
-    iget-object v2, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzg:Lcom/google/mlkit/common/model/RemoteModel;
+    iget-object v1, p0, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->zzg:Lcom/google/mlkit/common/model/RemoteModel;
 
-    invoke-virtual {v0, v1, p1, v2}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelFileManager;->moveModelToPrivateFolder(Landroid/os/ParcelFileDescriptor;Ljava/lang/String;Lcom/google/mlkit/common/model/RemoteModel;)Ljava/io/File;
+    .line 7
+    invoke-virtual {v0, v2, p1, v1}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelFileManager;->moveModelToPrivateFolder(Landroid/os/ParcelFileDescriptor;Ljava/lang/String;Lcom/google/mlkit/common/model/RemoteModel;)Ljava/io/File;
 
     move-result-object p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 8
     invoke-virtual {p0}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->removeOrCancelDownload()V
 
     return-object p1
@@ -2216,5 +2411,6 @@
 
     invoke-virtual {p0}, Lcom/google/mlkit/common/sdkinternal/model/RemoteModelDownloadManager;->removeOrCancelDownload()V
 
+    .line 9
     throw p1
 .end method

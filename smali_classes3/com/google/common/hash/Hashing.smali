@@ -25,13 +25,14 @@
 
 
 # static fields
-.field static final GOOD_FAST_HASH_SEED:I
+.field public static final GOOD_FAST_HASH_SEED:I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -46,6 +47,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -54,6 +56,7 @@
 .method public static adler32()Lcom/google/common/hash/HashFunction;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/common/hash/Hashing$ChecksumType;->ADLER_32:Lcom/google/common/hash/Hashing$ChecksumType;
 
     iget-object v0, v0, Lcom/google/common/hash/Hashing$ChecksumType;->hashFunction:Lcom/google/common/hash/HashFunction;
@@ -76,6 +79,7 @@
     :goto_0
     const-string v1, "Number of bits must be positive"
 
+    .line 1
     invoke-static {v0, v1}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
     add-int/lit8 p0, p0, 0x1f
@@ -97,10 +101,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
+    .line 2
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
@@ -109,6 +115,7 @@
 
     invoke-static {v1, v2}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 3
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -119,10 +126,12 @@
 
     move-result v0
 
+    .line 4
     div-int/lit8 v0, v0, 0x8
 
     new-array v1, v0, [B
 
+    .line 5
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -140,10 +149,12 @@
 
     check-cast v2, Lcom/google/common/hash/HashCode;
 
+    .line 6
     invoke-virtual {v2}, Lcom/google/common/hash/HashCode;->asBytes()[B
 
     move-result-object v2
 
+    .line 7
     array-length v3, v2
 
     const/4 v4, 0x0
@@ -162,11 +173,13 @@
 
     invoke-static {v3, v5}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 8
     :goto_1
     array-length v3, v2
 
     if-ge v4, v3, :cond_0
 
+    .line 9
     aget-byte v3, v1, v4
 
     mul-int/lit8 v3, v3, 0x25
@@ -183,6 +196,7 @@
 
     goto :goto_1
 
+    .line 10
     :cond_2
     invoke-static {v1}, Lcom/google/common/hash/HashCode;->fromBytesNoCopy([B)Lcom/google/common/hash/HashCode;
 
@@ -203,10 +217,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
+    .line 2
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
@@ -215,6 +231,7 @@
 
     invoke-static {v1, v2}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 3
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -229,6 +246,7 @@
 
     new-array v1, v0, [B
 
+    .line 4
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -246,10 +264,12 @@
 
     check-cast v2, Lcom/google/common/hash/HashCode;
 
+    .line 5
     invoke-virtual {v2}, Lcom/google/common/hash/HashCode;->asBytes()[B
 
     move-result-object v2
 
+    .line 6
     array-length v3, v2
 
     const/4 v4, 0x0
@@ -268,11 +288,13 @@
 
     invoke-static {v3, v5}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 7
     :goto_1
     array-length v3, v2
 
     if-ge v4, v3, :cond_0
 
+    .line 8
     aget-byte v3, v1, v4
 
     aget-byte v5, v2, v4
@@ -287,6 +309,7 @@
 
     goto :goto_1
 
+    .line 9
     :cond_2
     invoke-static {v1}, Lcom/google/common/hash/HashCode;->fromBytesNoCopy([B)Lcom/google/common/hash/HashCode;
 
@@ -397,13 +420,13 @@
     move p0, v1
 
     :goto_1
-    const-string v2, "number of hash functions (%s) must be > 0"
-
     invoke-interface {v0}, Ljava/util/List;->size()I
 
-    move-result v3
+    move-result v2
 
-    invoke-static {p0, v2, v3}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;I)V
+    const-string v3, "number of hash functions (%s) must be > 0"
+
+    invoke-static {p0, v3, v2}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;I)V
 
     .line 11
     new-instance p0, Lcom/google/common/hash/Hashing$ConcatenatedHashFunction;
@@ -492,6 +515,7 @@
 .method public static crc32()Lcom/google/common/hash/HashFunction;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/common/hash/Hashing$ChecksumType;->CRC_32:Lcom/google/common/hash/Hashing$ChecksumType;
 
     iget-object v0, v0, Lcom/google/common/hash/Hashing$ChecksumType;->hashFunction:Lcom/google/common/hash/HashFunction;
@@ -502,6 +526,7 @@
 .method public static crc32c()Lcom/google/common/hash/HashFunction;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/common/hash/Crc32cHashFunction;->CRC_32_C:Lcom/google/common/hash/HashFunction;
 
     return-object v0
@@ -510,6 +535,7 @@
 .method public static farmHashFingerprint64()Lcom/google/common/hash/HashFunction;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/common/hash/FarmHashFingerprint64;->FARMHASH_FINGERPRINT_64:Lcom/google/common/hash/HashFunction;
 
     return-object v0
@@ -518,6 +544,7 @@
 .method public static goodFastHash(I)Lcom/google/common/hash/HashFunction;
     .locals 4
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/hash/Hashing;->checkPositiveAndMakeMultipleOf32(I)I
 
     move-result p0
@@ -526,6 +553,7 @@
 
     if-ne p0, v0, :cond_0
 
+    .line 2
     sget-object p0, Lcom/google/common/hash/Murmur3_32HashFunction;->GOOD_FAST_HASH_32:Lcom/google/common/hash/HashFunction;
 
     return-object p0
@@ -535,6 +563,7 @@
 
     if-gt p0, v0, :cond_1
 
+    .line 3
     sget-object p0, Lcom/google/common/hash/Murmur3_128HashFunction;->GOOD_FAST_HASH_128:Lcom/google/common/hash/HashFunction;
 
     return-object p0
@@ -542,16 +571,20 @@
     :cond_1
     add-int/lit8 p0, p0, 0x7f
 
+    .line 4
     div-int/2addr p0, v0
 
+    .line 5
     new-array v0, p0, [Lcom/google/common/hash/HashFunction;
 
     const/4 v1, 0x0
 
+    .line 6
     sget-object v2, Lcom/google/common/hash/Murmur3_128HashFunction;->GOOD_FAST_HASH_128:Lcom/google/common/hash/HashFunction;
 
     aput-object v2, v0, v1
 
+    .line 7
     sget v1, Lcom/google/common/hash/Hashing;->GOOD_FAST_HASH_SEED:I
 
     const/4 v2, 0x1
@@ -563,6 +596,7 @@
 
     add-int/2addr v1, v3
 
+    .line 8
     invoke-static {v1}, Lcom/google/common/hash/Hashing;->murmur3_128(I)Lcom/google/common/hash/HashFunction;
 
     move-result-object v3
@@ -573,6 +607,7 @@
 
     goto :goto_0
 
+    .line 9
     :cond_2
     new-instance p0, Lcom/google/common/hash/Hashing$ConcatenatedHashFunction;
 
@@ -762,6 +797,7 @@
 
     aput-object p0, v0, v1
 
+    .line 1
     invoke-interface {p1}, Ljava/security/Key;->getAlgorithm()Ljava/lang/String;
 
     move-result-object p0
@@ -770,16 +806,17 @@
 
     aput-object p0, v0, v1
 
-    const/4 p0, 0x2
-
     invoke-interface {p1}, Ljava/security/Key;->getFormat()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    aput-object p1, v0, p0
+    const/4 p1, 0x2
+
+    aput-object p0, v0, p1
 
     const-string p0, "Hashing.%s(Key[algorithm=%s, format=%s])"
 
+    .line 2
     invoke-static {p0, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
@@ -792,6 +829,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/common/hash/Hashing$Md5Holder;->MD5:Lcom/google/common/hash/HashFunction;
 
     return-object v0
@@ -870,6 +908,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/common/hash/Hashing$Sha1Holder;->SHA_1:Lcom/google/common/hash/HashFunction;
 
     return-object v0
@@ -878,6 +917,7 @@
 .method public static sha256()Lcom/google/common/hash/HashFunction;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/common/hash/Hashing$Sha256Holder;->SHA_256:Lcom/google/common/hash/HashFunction;
 
     return-object v0
@@ -886,6 +926,7 @@
 .method public static sha384()Lcom/google/common/hash/HashFunction;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/common/hash/Hashing$Sha384Holder;->SHA_384:Lcom/google/common/hash/HashFunction;
 
     return-object v0
@@ -894,6 +935,7 @@
 .method public static sha512()Lcom/google/common/hash/HashFunction;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/common/hash/Hashing$Sha512Holder;->SHA_512:Lcom/google/common/hash/HashFunction;
 
     return-object v0

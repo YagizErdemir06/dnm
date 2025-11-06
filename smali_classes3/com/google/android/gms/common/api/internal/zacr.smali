@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/api/internal/zacr;
+.class public final Lcom/google/android/gms/common/api/internal/zacr;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field final synthetic zaa:Lcom/google/android/gms/signin/internal/zak;
+.field public final synthetic zaa:Lcom/google/android/gms/signin/internal/zak;
 
-.field final synthetic zab:Lcom/google/android/gms/common/api/internal/zact;
+.field public final synthetic zab:Lcom/google/android/gms/common/api/internal/zact;
 
 
 # direct methods
@@ -30,6 +30,7 @@
 .method public final run()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zacr;->zab:Lcom/google/android/gms/common/api/internal/zact;
 
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zacr;->zaa:Lcom/google/android/gms/signin/internal/zak;

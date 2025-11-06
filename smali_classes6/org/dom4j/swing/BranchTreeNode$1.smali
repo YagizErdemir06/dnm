@@ -1,4 +1,4 @@
-.class Lorg/dom4j/swing/BranchTreeNode$1;
+.class public Lorg/dom4j/swing/BranchTreeNode$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -16,12 +16,14 @@
 .method public constructor <init>(Lorg/dom4j/swing/BranchTreeNode;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lorg/dom4j/swing/BranchTreeNode$1;->this$0:Lorg/dom4j/swing/BranchTreeNode;
 
     const/4 p1, -0x1
 
+    .line 2
     iput p1, p0, Lorg/dom4j/swing/BranchTreeNode$1;->index:I
 
     return-void
@@ -32,6 +34,7 @@
 .method public hasMoreElements()Z
     .locals 2
 
+    .line 1
     iget v0, p0, Lorg/dom4j/swing/BranchTreeNode$1;->index:I
 
     const/4 v1, 0x1
@@ -58,6 +61,7 @@
 .method public nextElement()Ljava/lang/Object;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/swing/BranchTreeNode$1;->this$0:Lorg/dom4j/swing/BranchTreeNode;
 
     iget v1, p0, Lorg/dom4j/swing/BranchTreeNode$1;->index:I

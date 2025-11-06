@@ -240,10 +240,12 @@
     :goto_0
     if-ge p2, p3, :cond_2
 
+    .line 1
     invoke-interface {p1, p2}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v0
 
+    .line 2
     iget v1, p0, Lcom/google/common/escape/ArrayBasedUnicodeEscaper;->replacementsLength:I
 
     if-ge v0, v1, :cond_0

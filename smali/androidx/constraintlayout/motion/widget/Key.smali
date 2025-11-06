@@ -54,7 +54,7 @@
 
 
 # instance fields
-.field mCustomConstraints:Ljava/util/HashMap;
+.field public mCustomConstraints:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashMap<",
@@ -65,13 +65,13 @@
     .end annotation
 .end field
 
-.field mFramePosition:I
+.field public mFramePosition:I
 
-.field mTargetId:I
+.field public mTargetId:I
 
-.field mTargetString:Ljava/lang/String;
+.field public mTargetString:Ljava/lang/String;
 
-.field protected mType:I
+.field public mType:I
 
 
 # direct methods
@@ -84,16 +84,20 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     sget v0, Landroidx/constraintlayout/motion/widget/Key;->UNSET:I
 
     iput v0, p0, Landroidx/constraintlayout/motion/widget/Key;->mFramePosition:I
 
+    .line 3
     iput v0, p0, Landroidx/constraintlayout/motion/widget/Key;->mTargetId:I
 
     const/4 v0, 0x0
 
+    .line 4
     iput-object v0, p0, Landroidx/constraintlayout/motion/widget/Key;->mTargetString:Ljava/lang/String;
 
     return-void
@@ -133,6 +137,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroidx/constraintlayout/motion/widget/Key;->clone()Landroidx/constraintlayout/motion/widget/Key;
 
     move-result-object p0
@@ -151,22 +156,27 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p1, Landroidx/constraintlayout/motion/widget/Key;->mFramePosition:I
 
     iput v0, p0, Landroidx/constraintlayout/motion/widget/Key;->mFramePosition:I
 
+    .line 2
     iget v0, p1, Landroidx/constraintlayout/motion/widget/Key;->mTargetId:I
 
     iput v0, p0, Landroidx/constraintlayout/motion/widget/Key;->mTargetId:I
 
+    .line 3
     iget-object v0, p1, Landroidx/constraintlayout/motion/widget/Key;->mTargetString:Ljava/lang/String;
 
     iput-object v0, p0, Landroidx/constraintlayout/motion/widget/Key;->mTargetString:Ljava/lang/String;
 
+    .line 4
     iget v0, p1, Landroidx/constraintlayout/motion/widget/Key;->mType:I
 
     iput v0, p0, Landroidx/constraintlayout/motion/widget/Key;->mType:I
 
+    .line 5
     iget-object p1, p1, Landroidx/constraintlayout/motion/widget/Key;->mCustomConstraints:Ljava/util/HashMap;
 
     iput-object p1, p0, Landroidx/constraintlayout/motion/widget/Key;->mCustomConstraints:Ljava/util/HashMap;
@@ -197,6 +207,7 @@
 .method public getFramePosition()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/motion/widget/Key;->mFramePosition:I
 
     return p0
@@ -226,6 +237,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/motion/widget/Key;->mTargetString:Ljava/lang/String;
 
     if-eqz p0, :cond_1
@@ -234,6 +246,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-virtual {p1, p0}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
 
@@ -259,6 +272,7 @@
         }
     .end annotation
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/motion/widget/Key;->mFramePosition:I
 
     return-void
@@ -312,6 +326,7 @@
         }
     .end annotation
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/motion/widget/Key;->mTargetId:I
 
     return-object p0
@@ -328,6 +343,7 @@
         }
     .end annotation
 
+    .line 1
     instance-of p0, p1, Ljava/lang/Boolean;
 
     if-eqz p0, :cond_0
@@ -364,6 +380,7 @@
         }
     .end annotation
 
+    .line 1
     instance-of p0, p1, Ljava/lang/Float;
 
     if-eqz p0, :cond_0
@@ -400,6 +417,7 @@
         }
     .end annotation
 
+    .line 1
     instance-of p0, p1, Ljava/lang/Integer;
 
     if-eqz p0, :cond_0

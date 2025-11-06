@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/arcsoft/supernight/SuperNightProcess;
+.field public final synthetic a:Lcom/arcsoft/supernight/SuperNightProcess;
 
 .field public curveBrightness:I
 
@@ -38,6 +38,7 @@
 .method public constructor <init>(Lcom/arcsoft/supernight/SuperNightProcess;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/arcsoft/supernight/SuperNightProcess$Param;->a:Lcom/arcsoft/supernight/SuperNightProcess;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

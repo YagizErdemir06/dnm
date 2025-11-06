@@ -15,22 +15,90 @@
 .method public constructor <init>(Lmiuix/appcompat/app/AppCompatActivity;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lmiuix/appcompat/app/floatingactivity/FloatingLifecycleObserver;-><init>(Lmiuix/appcompat/app/AppCompatActivity;)V
 
     return-void
 .end method
 
-.method public static synthetic c(Lmiuix/appcompat/app/floatingactivity/SingleAppFloatingLifecycleObserver;Landroid/view/View;Lmiuix/appcompat/app/AppCompatActivity;)V
-    .locals 0
+.method private c(Lmiuix/appcompat/app/AppCompatActivity;)V
+    .locals 1
 
-    invoke-direct {p0, p1, p2}, Lmiuix/appcompat/app/floatingactivity/SingleAppFloatingLifecycleObserver;->g(Landroid/view/View;Lmiuix/appcompat/app/AppCompatActivity;)V
+    .line 1
+    invoke-static {}, Lk/b/d/s/c;->q()Lk/b/d/s/c;
 
+    move-result-object p0
+
+    .line 2
+    invoke-static {p1}, Lk/b/d/s/d;->h(Lmiuix/appcompat/app/AppCompatActivity;)I
+
+    move-result v0
+
+    if-ltz v0, :cond_0
+
+    .line 3
+    invoke-virtual {p1}, Lmiuix/appcompat/app/AppCompatActivity;->E0()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    if-eqz p0, :cond_0
+
+    .line 4
+    invoke-virtual {p0, p1}, Lk/b/d/s/c;->D(Lmiuix/appcompat/app/AppCompatActivity;)V
+
+    const/4 p0, 0x0
+
+    .line 5
+    invoke-static {p1, p0}, Lk/b/d/s/d;->j(Lmiuix/appcompat/app/AppCompatActivity;Z)V
+
+    :cond_0
     return-void
 .end method
 
-.method private synthetic g(Landroid/view/View;Lmiuix/appcompat/app/AppCompatActivity;)V
+.method private e(Lmiuix/appcompat/app/AppCompatActivity;)V
+    .locals 2
+
+    .line 1
+    invoke-static {}, Lk/b/d/s/d;->f()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    .line 2
+    :cond_0
+    invoke-static {}, Lk/b/d/s/c;->q()Lk/b/d/s/c;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    .line 3
+    invoke-virtual {v0}, Lk/b/d/s/c;->r()Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    .line 4
+    new-instance v1, Lk/b/d/s/a;
+
+    invoke-direct {v1, p0, v0, p1}, Lk/b/d/s/a;-><init>(Lmiuix/appcompat/app/floatingactivity/SingleAppFloatingLifecycleObserver;Landroid/view/View;Lmiuix/appcompat/app/AppCompatActivity;)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    :cond_1
+    return-void
+.end method
+
+.method private synthetic f(Landroid/view/View;Lmiuix/appcompat/app/AppCompatActivity;)V
     .locals 4
 
+    .line 1
     check-cast p1, Landroid/view/ViewGroup;
 
     const/4 v0, 0x0
@@ -43,7 +111,8 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Luo/d;->m(ILjava/lang/Runnable;)Lmiuix/animation/base/AnimConfig;
+    .line 2
+    invoke-static {v0, v1}, Lk/b/d/s/e;->m(ILjava/lang/Runnable;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v1
 
@@ -51,6 +120,7 @@
 
     new-array v2, v2, [Lmiuix/animation/listener/TransitionListener;
 
+    .line 3
     new-instance v3, Lmiuix/appcompat/app/floatingactivity/SingleAppFloatingLifecycleObserver$a;
 
     invoke-direct {v3, p0, p2}, Lmiuix/appcompat/app/floatingactivity/SingleAppFloatingLifecycleObserver$a;-><init>(Lmiuix/appcompat/app/floatingactivity/SingleAppFloatingLifecycleObserver;Lmiuix/appcompat/app/AppCompatActivity;)V
@@ -59,110 +129,49 @@
 
     invoke-virtual {v1, v2}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
 
-    invoke-static {p1, v1}, Luo/d;->e(Landroid/view/View;Lmiuix/animation/base/AnimConfig;)V
+    .line 4
+    invoke-static {p1, v1}, Lk/b/d/s/e;->e(Landroid/view/View;Lmiuix/animation/base/AnimConfig;)V
 
     :cond_0
     return-void
 .end method
 
-
-# virtual methods
-.method public final e(Lmiuix/appcompat/app/AppCompatActivity;)V
-    .locals 1
-
-    invoke-static {}, Luo/b;->q()Luo/b;
-
-    move-result-object p0
-
-    invoke-static {p1}, Luo/c;->h(Lmiuix/appcompat/app/AppCompatActivity;)I
-
-    move-result v0
-
-    if-ltz v0, :cond_0
-
-    invoke-virtual {p1}, Lmiuix/appcompat/app/AppCompatActivity;->c1()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0, p1}, Luo/b;->D(Lmiuix/appcompat/app/AppCompatActivity;)V
-
-    const/4 p0, 0x0
-
-    invoke-static {p1, p0}, Luo/c;->j(Lmiuix/appcompat/app/AppCompatActivity;Z)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final f(Lmiuix/appcompat/app/AppCompatActivity;)V
-    .locals 2
-
-    invoke-static {}, Luo/c;->f()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-static {}, Luo/b;->q()Luo/b;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Luo/b;->r()Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    new-instance v1, Luo/k;
-
-    invoke-direct {v1, p0, v0, p1}, Luo/k;-><init>(Lmiuix/appcompat/app/floatingactivity/SingleAppFloatingLifecycleObserver;Landroid/view/View;Lmiuix/appcompat/app/AppCompatActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    :cond_1
-    return-void
-.end method
-
-.method public final h(Lmiuix/appcompat/app/AppCompatActivity;)V
+.method private h(Lmiuix/appcompat/app/AppCompatActivity;)V
     .locals 3
 
-    invoke-static {}, Luo/b;->q()Luo/b;
+    .line 1
+    invoke-static {}, Lk/b/d/s/c;->q()Lk/b/d/s/c;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p1}, Landroid/app/Activity;->getTaskId()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Luo/b;->p(I)Ljava/util/ArrayList;
+    invoke-virtual {v0, v1}, Lk/b/d/s/c;->p(I)Ljava/util/ArrayList;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v0, p1}, Luo/b;->o(Lmiuix/appcompat/app/AppCompatActivity;)I
+    .line 3
+    invoke-virtual {v0, p1}, Lk/b/d/s/c;->o(Lmiuix/appcompat/app/AppCompatActivity;)I
 
     move-result v0
 
     add-int/lit8 v0, v0, 0x1
 
+    .line 4
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
     if-ge v0, v2, :cond_0
 
+    .line 5
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -171,27 +180,41 @@
 
     if-eqz v0, :cond_0
 
+    .line 6
     invoke-virtual {v0}, Lmiuix/appcompat/app/AppCompatActivity;->isFinishing()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/floatingactivity/SingleAppFloatingLifecycleObserver;->f(Lmiuix/appcompat/app/AppCompatActivity;)V
+    .line 7
+    invoke-direct {p0, p1}, Lmiuix/appcompat/app/floatingactivity/SingleAppFloatingLifecycleObserver;->e(Lmiuix/appcompat/app/AppCompatActivity;)V
 
     :cond_0
+    return-void
+.end method
+
+
+# virtual methods
+.method public synthetic g(Landroid/view/View;Lmiuix/appcompat/app/AppCompatActivity;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lmiuix/appcompat/app/floatingactivity/SingleAppFloatingLifecycleObserver;->f(Landroid/view/View;Lmiuix/appcompat/app/AppCompatActivity;)V
+
     return-void
 .end method
 
 .method public onCreate()V
     .locals 3
 
-    invoke-static {}, Luo/b;->q()Luo/b;
+    .line 1
+    invoke-static {}, Lk/b/d/s/c;->q()Lk/b/d/s/c;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
+    .line 2
     invoke-virtual {p0}, Lmiuix/appcompat/app/floatingactivity/FloatingLifecycleObserver;->a()Ljava/lang/String;
 
     move-result-object v1
@@ -200,47 +223,55 @@
 
     move-result v2
 
-    invoke-virtual {v0, v1, v2}, Luo/b;->m(Ljava/lang/String;I)Lmiuix/appcompat/app/AppCompatActivity;
+    invoke-virtual {v0, v1, v2}, Lk/b/d/s/c;->m(Ljava/lang/String;I)Lmiuix/appcompat/app/AppCompatActivity;
 
     move-result-object v1
 
     if-eqz v1, :cond_2
 
-    invoke-virtual {v0, v1}, Luo/b;->t(Lmiuix/appcompat/app/AppCompatActivity;)Lmiuix/appcompat/app/AppCompatActivity;
+    .line 3
+    invoke-virtual {v0, v1}, Lk/b/d/s/c;->t(Lmiuix/appcompat/app/AppCompatActivity;)Lmiuix/appcompat/app/AppCompatActivity;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    invoke-virtual {v1}, Lmiuix/appcompat/app/AppCompatActivity;->c1()Z
+    .line 4
+    invoke-virtual {v1}, Lmiuix/appcompat/app/AppCompatActivity;->E0()Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {v0, v1}, Luo/b;->B(Lmiuix/appcompat/app/AppCompatActivity;)Z
+    .line 5
+    invoke-virtual {v0, v1}, Lk/b/d/s/c;->B(Lmiuix/appcompat/app/AppCompatActivity;)Z
 
     move-result p0
 
     if-nez p0, :cond_2
 
-    invoke-virtual {v0, v1}, Luo/b;->D(Lmiuix/appcompat/app/AppCompatActivity;)V
+    .line 6
+    invoke-virtual {v0, v1}, Lk/b/d/s/c;->D(Lmiuix/appcompat/app/AppCompatActivity;)V
 
-    invoke-static {v1}, Luo/c;->k(Lmiuix/appcompat/app/AppCompatActivity;)V
+    .line 7
+    invoke-static {v1}, Lk/b/d/s/d;->k(Lmiuix/appcompat/app/AppCompatActivity;)V
 
     goto :goto_0
 
+    .line 8
     :cond_0
-    invoke-virtual {v0, v1}, Luo/b;->D(Lmiuix/appcompat/app/AppCompatActivity;)V
+    invoke-virtual {v0, v1}, Lk/b/d/s/c;->D(Lmiuix/appcompat/app/AppCompatActivity;)V
 
     const/4 p0, 0x0
 
-    invoke-static {v1, p0}, Luo/c;->j(Lmiuix/appcompat/app/AppCompatActivity;Z)V
+    .line 9
+    invoke-static {v1, p0}, Lk/b/d/s/d;->j(Lmiuix/appcompat/app/AppCompatActivity;Z)V
 
     goto :goto_0
 
+    .line 10
     :cond_1
-    invoke-virtual {p0, v1}, Lmiuix/appcompat/app/floatingactivity/SingleAppFloatingLifecycleObserver;->e(Lmiuix/appcompat/app/AppCompatActivity;)V
+    invoke-direct {p0, v1}, Lmiuix/appcompat/app/floatingactivity/SingleAppFloatingLifecycleObserver;->c(Lmiuix/appcompat/app/AppCompatActivity;)V
 
     :cond_2
     :goto_0
@@ -250,12 +281,14 @@
 .method public onDestroy()V
     .locals 2
 
-    invoke-static {}, Luo/b;->q()Luo/b;
+    .line 1
+    invoke-static {}, Lk/b/d/s/c;->q()Lk/b/d/s/c;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lmiuix/appcompat/app/floatingactivity/FloatingLifecycleObserver;->a()Ljava/lang/String;
 
     move-result-object v1
@@ -264,7 +297,7 @@
 
     move-result p0
 
-    invoke-virtual {v0, v1, p0}, Luo/b;->G(Ljava/lang/String;I)V
+    invoke-virtual {v0, v1, p0}, Lk/b/d/s/c;->G(Ljava/lang/String;I)V
 
     :cond_0
     return-void
@@ -273,12 +306,14 @@
 .method public onResume()V
     .locals 3
 
-    invoke-static {}, Luo/b;->q()Luo/b;
+    .line 1
+    invoke-static {}, Lk/b/d/s/c;->q()Lk/b/d/s/c;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
+    .line 2
     invoke-virtual {p0}, Lmiuix/appcompat/app/floatingactivity/FloatingLifecycleObserver;->a()Ljava/lang/String;
 
     move-result-object v1
@@ -287,28 +322,32 @@
 
     move-result v2
 
-    invoke-virtual {v0, v1, v2}, Luo/b;->m(Ljava/lang/String;I)Lmiuix/appcompat/app/AppCompatActivity;
+    invoke-virtual {v0, v1, v2}, Lk/b/d/s/c;->m(Ljava/lang/String;I)Lmiuix/appcompat/app/AppCompatActivity;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v1}, Lmiuix/appcompat/app/AppCompatActivity;->c1()Z
+    .line 3
+    invoke-virtual {v1}, Lmiuix/appcompat/app/AppCompatActivity;->E0()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    invoke-virtual {v0, v1}, Luo/b;->t(Lmiuix/appcompat/app/AppCompatActivity;)Lmiuix/appcompat/app/AppCompatActivity;
+    .line 4
+    invoke-virtual {v0, v1}, Lk/b/d/s/c;->t(Lmiuix/appcompat/app/AppCompatActivity;)Lmiuix/appcompat/app/AppCompatActivity;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v1}, Lmiuix/appcompat/app/AppCompatActivity;->Sa()V
+    .line 5
+    invoke-virtual {v1}, Lmiuix/appcompat/app/AppCompatActivity;->R5()V
 
+    .line 6
     :cond_0
-    invoke-virtual {p0, v1}, Lmiuix/appcompat/app/floatingactivity/SingleAppFloatingLifecycleObserver;->h(Lmiuix/appcompat/app/AppCompatActivity;)V
+    invoke-direct {p0, v1}, Lmiuix/appcompat/app/floatingactivity/SingleAppFloatingLifecycleObserver;->h(Lmiuix/appcompat/app/AppCompatActivity;)V
 
     :cond_1
     return-void

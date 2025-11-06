@@ -7,6 +7,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/cv/widget/CameraWidgetBaseProvider;-><init>()V
 
     return-void
@@ -16,67 +17,86 @@
 # virtual methods
 .method public initViewList(Landroid/content/Context;)V
     .locals 12
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     const/4 v0, 0x4
 
+    .line 1
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/cv/widget/CameraWidgetBaseProvider;->randomID:I
 
+    .line 2
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 3
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
+    .line 4
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
+    .line 5
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
+    .line 6
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
+    .line 7
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
 
-    const v7, 0x7f140d0e
+    const v7, 0x7f130c89
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
-    const v7, 0x7f0b0120
+    const v7, 0x7f0b0103
 
+    .line 8
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v7
 
     invoke-virtual {v4, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const v7, 0x7f0b0121
+    const v7, 0x7f0b0104
 
+    .line 9
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v7
 
     invoke-virtual {v4, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const v7, 0x7f0b0122
+    const v7, 0x7f0b0105
 
+    .line 10
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v7
 
     invoke-virtual {v4, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const v7, 0x7f0b0123
+    const v7, 0x7f0b0106
 
+    .line 11
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v7
@@ -85,25 +105,30 @@
 
     const-string v7, "lens_35mm"
 
+    .line 12
     invoke-virtual {v1, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const-string v7, "lens_75mm"
 
+    .line 13
     invoke-virtual {v1, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const-string v7, "lens_50mm"
 
+    .line 14
     invoke-virtual {v1, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const-string v7, "lens_90mm"
 
+    .line 15
     invoke-virtual {v1, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 16
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
 
-    const v8, 0x7f140d08
+    const v8, 0x7f130c83
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -111,11 +136,12 @@
 
     invoke-virtual {v2, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 17
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
 
-    const v8, 0x7f140d0a
+    const v8, 0x7f130c85
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -123,11 +149,12 @@
 
     invoke-virtual {v2, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 18
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
 
-    const v8, 0x7f140d09
+    const v8, 0x7f130c84
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -135,11 +162,12 @@
 
     invoke-virtual {v2, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 19
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const v7, 0x7f140d0b
+    const v7, 0x7f130c86
 
     invoke-virtual {p1, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -147,32 +175,36 @@
 
     invoke-virtual {v2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const p1, 0x7f080937
+    const p1, 0x7f08092f
 
+    .line 20
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
     invoke-virtual {v3, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const p1, 0x7f08093d
+    const p1, 0x7f080935
 
+    .line 21
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
     invoke-virtual {v3, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const p1, 0x7f08093a
+    const p1, 0x7f080932
 
+    .line 22
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
     invoke-virtual {v3, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const p1, 0x7f080940
+    const p1, 0x7f080938
 
+    .line 23
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -184,6 +216,7 @@
     :goto_0
     if-ge p1, v0, :cond_0
 
+    .line 24
     new-instance v7, Lcom/android/camera2/compat/theme/custom/cv/widget/WidgetResponse$WidgetItem;
 
     invoke-virtual {v2, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -212,16 +245,18 @@
 
     invoke-direct {v7, v8, v9, v10, v11}, Lcom/android/camera2/compat/theme/custom/cv/widget/WidgetResponse$WidgetItem;-><init>(Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;)V
 
+    .line 25
     invoke-virtual {v5, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 p1, p1, 0x1
 
     goto :goto_0
 
+    .line 26
     :cond_0
     new-instance p1, Lcom/android/camera2/compat/theme/custom/cv/widget/WidgetResponse;
 
-    const v0, 0x7f0e016b
+    const v0, 0x7f0e015c
 
     invoke-direct {p1, v6, v5, v0}, Lcom/android/camera2/compat/theme/custom/cv/widget/WidgetResponse;-><init>(Ljava/lang/String;Ljava/util/List;I)V
 
@@ -232,9 +267,20 @@
 
 .method public setWidgetIntent(Landroid/content/Context;Landroid/widget/RemoteViews;)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "views"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/cv/widget/CameraWidgetBaseProvider;->response:Lcom/android/camera2/compat/theme/custom/cv/widget/WidgetResponse;
 
@@ -248,6 +294,7 @@
 
     if-ge v0, v1, :cond_0
 
+    .line 2
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/cv/widget/CameraWidgetBaseProvider;->response:Lcom/android/camera2/compat/theme/custom/cv/widget/WidgetResponse;
 
     invoke-virtual {v1}, Lcom/android/camera2/compat/theme/custom/cv/widget/WidgetResponse;->getContentList()Ljava/util/List;
@@ -260,6 +307,7 @@
 
     check-cast v1, Lcom/android/camera2/compat/theme/custom/cv/widget/WidgetResponse$WidgetItem;
 
+    .line 3
     new-instance v2, Landroid/content/Intent;
 
     const-class v3, Lcom/android/camera/Camera;
@@ -270,8 +318,10 @@
 
     const-string v4, "PORTRAIT"
 
+    .line 4
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
+    .line 5
     iget-object v3, v1, Lcom/android/camera2/compat/theme/custom/cv/widget/WidgetResponse$WidgetItem;->mWidgetInfo:Ljava/lang/String;
 
     const-string v4, "android.intent.extra.CAMERA_LENS_MODE"
@@ -282,22 +332,27 @@
 
     const/4 v4, 0x1
 
+    .line 6
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     const-string v3, "com.android.systemui.camera_launch_source"
 
     const-string v4, "desk_widget_launch"
 
+    .line 7
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v3, "android.media.action.VOICE_COMMAND"
 
+    .line 8
     invoke-virtual {v2, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     const v3, 0x8000
 
+    .line 9
     invoke-virtual {v2, v3}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
+    .line 10
     iget v3, p0, Lcom/android/camera2/compat/theme/custom/cv/widget/CameraWidgetBaseProvider;->randomID:I
 
     mul-int/lit8 v3, v3, 0xa
@@ -310,6 +365,7 @@
 
     move-result-object v2
 
+    .line 11
     iget-object v1, v1, Lcom/android/camera2/compat/theme/custom/cv/widget/WidgetResponse$WidgetItem;->mItemId:Ljava/lang/Integer;
 
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I

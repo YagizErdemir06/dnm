@@ -1,3 +1,3 @@
-.class final synthetic Lcom/google/android/odml/image/zza;
+.class public final synthetic Lcom/google/android/odml/image/zza;
 .super Ljava/lang/Object;
 .source "SourceFile"

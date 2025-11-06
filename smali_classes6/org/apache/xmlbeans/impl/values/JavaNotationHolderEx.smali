@@ -11,6 +11,7 @@
 .method public constructor <init>(Lorg/apache/xmlbeans/SchemaType;Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/JavaNotationHolder;-><init>()V
 
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/values/JavaNotationHolderEx;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
@@ -27,12 +28,14 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-interface {p1, v0}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
+    .line 2
     check-cast v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
 
     invoke-virtual {v1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->bigIntegerValue()Ljava/math/BigInteger;
@@ -43,6 +46,7 @@
 
     move-result v1
 
+    .line 3
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -54,12 +58,14 @@
     :cond_0
     const/4 v1, 0x1
 
+    .line 4
     invoke-interface {p1, v1}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
+    .line 5
     check-cast v2, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
 
     invoke-virtual {v2}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->bigIntegerValue()Ljava/math/BigInteger;
@@ -70,6 +76,7 @@
 
     move-result v2
 
+    .line 6
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -81,12 +88,14 @@
     :cond_1
     const/4 v2, 0x2
 
+    .line 7
     invoke-interface {p1, v2}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
+    .line 8
     check-cast p1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
 
     invoke-virtual {p1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->bigIntegerValue()Ljava/math/BigInteger;
@@ -97,6 +106,7 @@
 
     move-result p1
 
+    .line 9
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result p0
@@ -114,6 +124,7 @@
 .method public get_wscanon_rule()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/JavaNotationHolderEx;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object p0
@@ -128,6 +139,7 @@
 .method public schemaType()Lorg/apache/xmlbeans/SchemaType;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaNotationHolderEx;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     return-object p0
@@ -136,6 +148,7 @@
 .method public set_notation(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/JavaNotationHolderEx;->set_text(Ljava/lang/String;)V
 
     return-void
@@ -144,12 +157,14 @@
 .method public set_text(Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_validateOnSet()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
+    .line 2
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/JavaNotationHolderEx;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     invoke-static {p1, v0}, Lorg/apache/xmlbeans/impl/values/JavaNotationHolderEx;->check(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;)Z
@@ -158,6 +173,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 3
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/JavaNotationHolderEx;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     invoke-interface {v0, p1}, Lorg/apache/xmlbeans/SchemaType;->matchPatternFacet(Ljava/lang/String;)Z
@@ -168,6 +184,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     new-instance p0, Lorg/apache/xmlbeans/impl/values/XmlValueOutOfRangeException;
 
@@ -175,6 +192,7 @@
 
     throw p0
 
+    .line 5
     :cond_1
     new-instance p0, Lorg/apache/xmlbeans/impl/values/XmlValueOutOfRangeException;
 
@@ -182,6 +200,7 @@
 
     throw p0
 
+    .line 6
     :cond_2
     :goto_0
     invoke-super {p0, p1}, Lorg/apache/xmlbeans/impl/values/JavaQNameHolder;->set_text(Ljava/lang/String;)V

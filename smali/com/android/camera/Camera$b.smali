@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/Camera;->en(Z)Z
+    value = Lcom/android/camera/Camera;->ql(Z)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,14 +18,23 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/android/camera/Camera;
+.field public final synthetic c:Lcom/android/camera/Camera;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera/Camera;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera/Camera$b;->a:Lcom/android/camera/Camera;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/Camera$b;->c:Lcom/android/camera/Camera;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,7 +46,8 @@
 .method public run()V
     .locals 0
 
-    iget-object p0, p0, Lcom/android/camera/Camera$b;->a:Lcom/android/camera/Camera;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/Camera$b;->c:Lcom/android/camera/Camera;
 
     invoke-virtual {p0}, Lcom/android/camera/Camera;->finish()V
 

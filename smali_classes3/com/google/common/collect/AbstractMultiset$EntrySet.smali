@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/AbstractMultiset$EntrySet;
+.class public Lcom/google/common/collect/AbstractMultiset$EntrySet;
 .super Lcom/google/common/collect/Multisets$EntrySet;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/AbstractMultiset;
+.field public final synthetic this$0:Lcom/google/common/collect/AbstractMultiset;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/AbstractMultiset;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/AbstractMultiset$EntrySet;->this$0:Lcom/google/common/collect/AbstractMultiset;
 
     invoke-direct {p0}, Lcom/google/common/collect/Multisets$EntrySet;-><init>()V
@@ -49,6 +50,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/AbstractMultiset$EntrySet;->this$0:Lcom/google/common/collect/AbstractMultiset;
 
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMultiset;->entryIterator()Ljava/util/Iterator;
@@ -68,6 +70,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/AbstractMultiset$EntrySet;->this$0:Lcom/google/common/collect/AbstractMultiset;
 
     return-object p0
@@ -76,6 +79,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/AbstractMultiset$EntrySet;->this$0:Lcom/google/common/collect/AbstractMultiset;
 
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMultiset;->distinctElements()I

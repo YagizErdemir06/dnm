@@ -11,6 +11,7 @@
 .method public constructor <init>(Lorg/apache/xmlbeans/SchemaType;Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/JavaDoubleHolder;-><init>()V
 
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/values/JavaDoubleHolderEx;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
@@ -25,10 +26,12 @@
 .method public static validateLexical(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/impl/common/ValidationContext;)D
     .locals 5
 
+    .line 1
     invoke-static {p0, p2}, Lorg/apache/xmlbeans/impl/values/JavaDoubleHolder;->validateLexical(Ljava/lang/String;Lorg/apache/xmlbeans/impl/common/ValidationContext;)D
 
     move-result-wide v0
 
+    .line 2
     invoke-interface {p1, p0}, Lorg/apache/xmlbeans/SchemaType;->matchPatternFacet(Ljava/lang/String;)Z
 
     move-result v2
@@ -51,6 +54,7 @@
 
     const/4 p0, 0x2
 
+    .line 3
     invoke-static {p1}, Lorg/apache/xmlbeans/impl/common/QNameHelper;->readable(Lorg/apache/xmlbeans/SchemaType;)Ljava/lang/String;
 
     move-result-object p1
@@ -70,6 +74,7 @@
 
     const/4 v0, 0x3
 
+    .line 1
     invoke-interface {p2, v0}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v1
@@ -86,6 +91,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 2
     check-cast v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
 
     invoke-virtual {v1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->doubleValue()D
@@ -102,6 +108,7 @@
 
     aput-object v3, v1, v6
 
+    .line 3
     new-instance v9, Ljava/lang/Double;
 
     invoke-direct {v9, p0, p1}, Ljava/lang/Double;-><init>(D)V
@@ -124,6 +131,7 @@
 
     invoke-interface {p3, v7, v1}, Lorg/apache/xmlbeans/impl/common/ValidationContext;->invalid(Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 4
     :cond_0
     invoke-interface {p2, v4}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
@@ -131,6 +139,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 5
     check-cast v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
 
     invoke-virtual {v1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->doubleValue()D
@@ -147,6 +156,7 @@
 
     aput-object v3, v1, v6
 
+    .line 6
     new-instance v9, Ljava/lang/Double;
 
     invoke-direct {v9, p0, p1}, Ljava/lang/Double;-><init>(D)V
@@ -172,12 +182,14 @@
     :cond_1
     const/4 v1, 0x5
 
+    .line 7
     invoke-interface {p2, v1}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v1
 
     if-eqz v1, :cond_2
 
+    .line 8
     check-cast v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
 
     invoke-virtual {v1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->doubleValue()D
@@ -194,6 +206,7 @@
 
     aput-object v3, v1, v6
 
+    .line 9
     new-instance v9, Ljava/lang/Double;
 
     invoke-direct {v9, p0, p1}, Ljava/lang/Double;-><init>(D)V
@@ -219,12 +232,14 @@
     :cond_2
     const/4 v1, 0x6
 
+    .line 10
     invoke-interface {p2, v1}, Lorg/apache/xmlbeans/SchemaType;->getFacet(I)Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object v1
 
     if-eqz v1, :cond_3
 
+    .line 11
     check-cast v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
 
     invoke-virtual {v1}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->doubleValue()D
@@ -241,6 +256,7 @@
 
     aput-object v3, v1, v6
 
+    .line 12
     new-instance v4, Ljava/lang/Double;
 
     invoke-direct {v4, p0, p1}, Ljava/lang/Double;-><init>(D)V
@@ -263,6 +279,7 @@
 
     invoke-interface {p3, v4, v1}, Lorg/apache/xmlbeans/impl/common/ValidationContext;->invalid(Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 13
     :cond_3
     invoke-interface {p2}, Lorg/apache/xmlbeans/SchemaType;->getEnumerationValues()[Lorg/apache/xmlbeans/XmlAnySimpleType;
 
@@ -272,11 +289,13 @@
 
     move v4, v6
 
+    .line 14
     :goto_0
     array-length v7, v1
 
     if-ge v4, v7, :cond_5
 
+    .line 15
     aget-object v7, v1, v4
 
     check-cast v7, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
@@ -303,6 +322,7 @@
 
     aput-object v3, v0, v6
 
+    .line 16
     new-instance v1, Ljava/lang/Double;
 
     invoke-direct {v1, p0, p1}, Ljava/lang/Double;-><init>(D)V
@@ -328,6 +348,7 @@
 .method public schemaType()Lorg/apache/xmlbeans/SchemaType;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaDoubleHolderEx;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     return-object p0
@@ -336,18 +357,21 @@
 .method public set_double(D)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_validateOnSet()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/JavaDoubleHolderEx;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     sget-object v1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_voorVc:Lorg/apache/xmlbeans/impl/common/ValidationContext;
 
     invoke-static {p1, p2, v0, v1}, Lorg/apache/xmlbeans/impl/values/JavaDoubleHolderEx;->validateValue(DLorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/impl/common/ValidationContext;)V
 
+    .line 3
     :cond_0
     invoke-super {p0, p1, p2}, Lorg/apache/xmlbeans/impl/values/JavaDoubleHolder;->set_double(D)V
 
@@ -357,12 +381,14 @@
 .method public validate_simpleval(Ljava/lang/String;Lorg/apache/xmlbeans/impl/common/ValidationContext;)V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/JavaDoubleHolderEx;->schemaType()Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object v0
 
     invoke-static {p1, v0, p2}, Lorg/apache/xmlbeans/impl/values/JavaDoubleHolderEx;->validateLexical(Ljava/lang/String;Lorg/apache/xmlbeans/SchemaType;Lorg/apache/xmlbeans/impl/common/ValidationContext;)D
 
+    .line 2
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/JavaDoubleHolder;->doubleValue()D
 
     move-result-wide v0

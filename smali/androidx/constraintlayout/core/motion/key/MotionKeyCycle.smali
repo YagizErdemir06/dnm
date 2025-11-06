@@ -6,7 +6,7 @@
 # static fields
 .field public static final KEY_TYPE:I = 0x4
 
-.field static final NAME:Ljava/lang/String; = "KeyCycle"
+.field public static final NAME:Ljava/lang/String; = "KeyCycle"
 
 .field public static final SHAPE_BOUNCE:I = 0x6
 
@@ -77,60 +77,82 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Landroidx/constraintlayout/core/motion/key/MotionKey;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mTransitionEasing:Ljava/lang/String;
 
     const/4 v1, 0x0
 
+    .line 3
     iput v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mCurveFit:I
 
     const/4 v1, -0x1
 
+    .line 4
     iput v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mWaveShape:I
 
+    .line 5
     iput-object v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mCustomWaveShape:Ljava/lang/String;
 
     const/high16 v0, 0x7fc00000    # Float.NaN
 
+    .line 6
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mWavePeriod:F
 
     const/4 v1, 0x0
 
+    .line 7
     iput v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mWaveOffset:F
 
+    .line 8
     iput v1, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mWavePhase:F
 
+    .line 9
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mProgress:F
 
+    .line 10
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mAlpha:F
 
+    .line 11
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mElevation:F
 
+    .line 12
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mRotation:F
 
+    .line 13
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mTransitionPathRotate:F
 
+    .line 14
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mRotationX:F
 
+    .line 15
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mRotationY:F
 
+    .line 16
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mScaleX:F
 
+    .line 17
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mScaleY:F
 
+    .line 18
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mTranslationX:F
 
+    .line 19
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mTranslationY:F
 
+    .line 20
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mTranslationZ:F
 
     const/4 v0, 0x4
 
+    .line 21
     iput v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mType:I
 
+    .line 22
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -158,6 +180,7 @@
 
     move-object/from16 v1, p1
 
+    .line 1
     invoke-virtual/range {p1 .. p1}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
     move-result-object v2
@@ -182,6 +205,7 @@
 
     const-string v4, "CUSTOM"
 
+    .line 2
     invoke-virtual {v3, v4}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v4
@@ -190,10 +214,12 @@
 
     const/4 v4, 0x7
 
+    .line 3
     invoke-virtual {v3, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v4
 
+    .line 4
     iget-object v5, v0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mCustom:Ljava/util/HashMap;
 
     invoke-virtual {v5, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -206,6 +232,7 @@
 
     if-eqz v14, :cond_0
 
+    .line 5
     invoke-virtual {v14}, Landroidx/constraintlayout/core/motion/CustomVariable;->getType()I
 
     move-result v4
@@ -216,6 +243,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_1
     invoke-virtual {v1, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -229,6 +257,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_2
     iget v6, v0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mFramePosition:I
 
@@ -252,11 +281,13 @@
 
     goto :goto_0
 
+    .line 8
     :cond_3
     invoke-virtual {v0, v3}, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->getValue(Ljava/lang/String;)F
 
     move-result v23
 
+    .line 9
     invoke-static/range {v23 .. v23}, Ljava/lang/Float;->isNaN(F)Z
 
     move-result v4
@@ -265,6 +296,7 @@
 
     goto :goto_0
 
+    .line 10
     :cond_4
     invoke-virtual {v1, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -278,6 +310,7 @@
 
     goto :goto_0
 
+    .line 11
     :cond_5
     iget v3, v0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mFramePosition:I
 
@@ -344,6 +377,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->clone()Landroidx/constraintlayout/core/motion/key/MotionKey;
 
     move-result-object p0
@@ -354,6 +388,7 @@
 .method public dump()V
     .locals 3
 
+    .line 1
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -424,6 +459,7 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mAlpha:F
 
     invoke-static {v0}, Ljava/lang/Float;->isNaN(F)Z
@@ -434,8 +470,10 @@
 
     const-string v0, "alpha"
 
+    .line 2
     invoke-virtual {p1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    .line 3
     :cond_0
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mElevation:F
 
@@ -447,8 +485,10 @@
 
     const-string v0, "elevation"
 
+    .line 4
     invoke-virtual {p1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    .line 5
     :cond_1
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mRotation:F
 
@@ -458,10 +498,12 @@
 
     if-nez v0, :cond_2
 
-    const-string/jumbo v0, "rotationZ"
+    const-string v0, "rotationZ"
 
+    .line 6
     invoke-virtual {p1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    .line 7
     :cond_2
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mRotationX:F
 
@@ -471,10 +513,12 @@
 
     if-nez v0, :cond_3
 
-    const-string/jumbo v0, "rotationX"
+    const-string v0, "rotationX"
 
+    .line 8
     invoke-virtual {p1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    .line 9
     :cond_3
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mRotationY:F
 
@@ -484,10 +528,12 @@
 
     if-nez v0, :cond_4
 
-    const-string/jumbo v0, "rotationY"
+    const-string v0, "rotationY"
 
+    .line 10
     invoke-virtual {p1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    .line 11
     :cond_4
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mScaleX:F
 
@@ -497,10 +543,12 @@
 
     if-nez v0, :cond_5
 
-    const-string/jumbo v0, "scaleX"
+    const-string v0, "scaleX"
 
+    .line 12
     invoke-virtual {p1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    .line 13
     :cond_5
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mScaleY:F
 
@@ -510,10 +558,12 @@
 
     if-nez v0, :cond_6
 
-    const-string/jumbo v0, "scaleY"
+    const-string v0, "scaleY"
 
+    .line 14
     invoke-virtual {p1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    .line 15
     :cond_6
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mTransitionPathRotate:F
 
@@ -525,8 +575,10 @@
 
     const-string v0, "pathRotate"
 
+    .line 16
     invoke-virtual {p1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    .line 17
     :cond_7
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mTranslationX:F
 
@@ -538,8 +590,10 @@
 
     const-string/jumbo v0, "translationX"
 
+    .line 18
     invoke-virtual {p1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    .line 19
     :cond_8
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mTranslationY:F
 
@@ -551,8 +605,10 @@
 
     const-string/jumbo v0, "translationY"
 
+    .line 20
     invoke-virtual {p1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    .line 21
     :cond_9
     iget v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mTranslationZ:F
 
@@ -564,8 +620,10 @@
 
     const-string/jumbo v0, "translationZ"
 
+    .line 22
     invoke-virtual {p1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    .line 23
     :cond_a
     iget-object v0, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mCustom:Ljava/util/HashMap;
 
@@ -575,6 +633,7 @@
 
     if-lez v0, :cond_b
 
+    .line 24
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKey;->mCustom:Ljava/util/HashMap;
 
     invoke-virtual {p0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
@@ -598,6 +657,7 @@
 
     check-cast v0, Ljava/lang/String;
 
+    .line 25
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -623,6 +683,7 @@
 .method public getId(Ljava/lang/String;)I
     .locals 1
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -735,7 +796,7 @@
     goto/16 :goto_1
 
     :sswitch_6
-    const-string/jumbo p0, "scaleY"
+    const-string p0, "scaleY"
 
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -751,7 +812,7 @@
     goto/16 :goto_1
 
     :sswitch_7
-    const-string/jumbo p0, "scaleX"
+    const-string p0, "scaleX"
 
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -815,7 +876,7 @@
     goto/16 :goto_1
 
     :sswitch_b
-    const-string/jumbo p0, "progress"
+    const-string p0, "progress"
 
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -895,7 +956,7 @@
     goto :goto_1
 
     :sswitch_10
-    const-string/jumbo p0, "rotationZ"
+    const-string p0, "rotationZ"
 
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -911,7 +972,7 @@
     goto :goto_1
 
     :sswitch_11
-    const-string/jumbo p0, "rotationY"
+    const-string p0, "rotationY"
 
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -927,7 +988,7 @@
     goto :goto_1
 
     :sswitch_12
-    const-string/jumbo p0, "rotationX"
+    const-string p0, "rotationX"
 
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1136,6 +1197,7 @@
 .method public getValue(Ljava/lang/String;)F
     .locals 2
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
@@ -1213,7 +1275,7 @@
     goto/16 :goto_0
 
     :sswitch_4
-    const-string/jumbo v0, "scaleY"
+    const-string v0, "scaleY"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1229,7 +1291,7 @@
     goto/16 :goto_0
 
     :sswitch_5
-    const-string/jumbo v0, "scaleX"
+    const-string v0, "scaleX"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1245,7 +1307,7 @@
     goto/16 :goto_0
 
     :sswitch_6
-    const-string/jumbo v0, "progress"
+    const-string v0, "progress"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1325,7 +1387,7 @@
     goto :goto_0
 
     :sswitch_b
-    const-string/jumbo v0, "rotationZ"
+    const-string v0, "rotationZ"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1341,7 +1403,7 @@
     goto :goto_0
 
     :sswitch_c
-    const-string/jumbo v0, "rotationY"
+    const-string v0, "rotationY"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1357,7 +1419,7 @@
     goto :goto_0
 
     :sswitch_d
-    const-string/jumbo v0, "rotationX"
+    const-string v0, "rotationX"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1377,71 +1439,85 @@
 
     return p0
 
+    .line 2
     :pswitch_0
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mTransitionPathRotate:F
 
     return p0
 
+    .line 3
     :pswitch_1
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mWavePhase:F
 
     return p0
 
+    .line 4
     :pswitch_2
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mAlpha:F
 
     return p0
 
+    .line 5
     :pswitch_3
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mElevation:F
 
     return p0
 
+    .line 6
     :pswitch_4
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mScaleY:F
 
     return p0
 
+    .line 7
     :pswitch_5
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mScaleX:F
 
     return p0
 
+    .line 8
     :pswitch_6
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mProgress:F
 
     return p0
 
+    .line 9
     :pswitch_7
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mWaveOffset:F
 
     return p0
 
+    .line 10
     :pswitch_8
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mTranslationZ:F
 
     return p0
 
+    .line 11
     :pswitch_9
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mTranslationY:F
 
     return p0
 
+    .line 12
     :pswitch_a
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mTranslationX:F
 
     return p0
 
+    .line 13
     :pswitch_b
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mRotation:F
 
     return p0
 
+    .line 14
     :pswitch_c
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mRotationY:F
 
     return p0
 
+    .line 15
     :pswitch_d
     iget p0, p0, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->mRotationX:F
 
@@ -1489,12 +1565,15 @@
 .method public printAttributes()V
     .locals 4
 
+    .line 1
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
+    .line 2
     invoke-virtual {p0, v0}, Landroidx/constraintlayout/core/motion/key/MotionKeyCycle;->getAttributeNames(Ljava/util/HashSet;)V
 
+    .line 3
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1517,6 +1596,7 @@
 
     invoke-static {v1}, Landroidx/constraintlayout/core/motion/utils/Utils;->log(Ljava/lang/String;)V
 
+    .line 4
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1567,21 +1647,25 @@
 
     new-array v2, v1, [Ljava/lang/String;
 
-    invoke-virtual {v0, v2}, Ljava/util/AbstractCollection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    .line 5
+    invoke-virtual {v0, v2}, Ljava/util/HashSet;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [Ljava/lang/String;
 
+    .line 6
     :goto_0
     array-length v2, v0
 
     if-ge v1, v2, :cond_0
 
+    .line 7
     aget-object v2, v0, v1
 
     invoke-static {v2}, Landroidx/constraintlayout/core/motion/utils/TypedValues$AttributesType;->getId(Ljava/lang/String;)I
 
+    .line 8
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V

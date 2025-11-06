@@ -132,40 +132,47 @@
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->beginObjectHeader(Landroid/os/Parcel;)I
 
     move-result p2
 
-    const/4 v0, 0x2
+    iget v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzaj;->zza:I
 
-    iget v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzaj;->zza:I
+    const/4 v1, 0x2
 
-    invoke-static {p1, v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
+    .line 2
+    invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
-    const/4 v0, 0x3
+    iget v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzaj;->zzb:I
 
-    iget v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzaj;->zzb:I
+    const/4 v1, 0x3
 
-    invoke-static {p1, v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
+    .line 3
+    invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
-    const/4 v0, 0x4
+    iget v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzaj;->zzc:I
 
-    iget v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzaj;->zzc:I
+    const/4 v1, 0x4
 
-    invoke-static {p1, v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
+    .line 4
+    invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
-    const/4 v0, 0x5
+    iget-wide v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzaj;->zzd:J
 
-    iget-wide v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzaj;->zzd:J
+    const/4 v2, 0x5
 
-    invoke-static {p1, v0, v1, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeLong(Landroid/os/Parcel;IJ)V
-
-    const/4 v0, 0x6
+    .line 5
+    invoke-static {p1, v2, v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeLong(Landroid/os/Parcel;IJ)V
 
     iget p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzaj;->zze:I
 
+    const/4 v0, 0x6
+
+    .line 6
     invoke-static {p1, v0, p0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
+    .line 7
     invoke-static {p1, p2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->finishObjectHeader(Landroid/os/Parcel;I)V
 
     return-void

@@ -15,12 +15,16 @@
 .method private constructor <init>(IILjava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/video/DolbyVisionConfig;->profile:I
 
+    .line 3
     iput p2, p0, Lcom/google/android/exoplayer2/video/DolbyVisionConfig;->level:I
 
+    .line 4
     iput-object p3, p0, Lcom/google/android/exoplayer2/video/DolbyVisionConfig;->codecs:Ljava/lang/String;
 
     return-void
@@ -33,8 +37,10 @@
 
     const/4 v0, 0x2
 
+    .line 1
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v0
@@ -47,6 +53,7 @@
 
     shl-int/2addr v0, v2
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result p0
@@ -96,6 +103,7 @@
     :goto_0
     const-string v0, "dvhe"
 
+    .line 4
     :goto_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -127,6 +135,7 @@
 
     move-result-object v0
 
+    .line 5
     new-instance v2, Lcom/google/android/exoplayer2/video/DolbyVisionConfig;
 
     invoke-direct {v2, v1, p0, v0}, Lcom/google/android/exoplayer2/video/DolbyVisionConfig;-><init>(IILjava/lang/String;)V

@@ -1,4 +1,4 @@
-.class abstract Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory;
+.class public abstract Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -36,7 +36,7 @@
         value = {
             "Ljava/util/Map<",
             "TK;",
-            "Lmm/c<",
+            "Lg/a/c<",
             "TV;>;>;"
         }
     .end annotation
@@ -51,13 +51,15 @@
             "(",
             "Ljava/util/Map<",
             "TK;",
-            "Lmm/c<",
+            "Lg/a/c<",
             "TV;>;>;)V"
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object p1
@@ -70,6 +72,7 @@
 .method public static synthetic access$000(Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory;)Ljava/util/Map;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory;->contributingMap:Ljava/util/Map;
 
     return-object p0
@@ -84,11 +87,12 @@
             "()",
             "Ljava/util/Map<",
             "TK;",
-            "Lmm/c<",
+            "Lg/a/c<",
             "TV;>;>;"
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/dagger/internal/AbstractMapFactory;->contributingMap:Ljava/util/Map;
 
     return-object p0

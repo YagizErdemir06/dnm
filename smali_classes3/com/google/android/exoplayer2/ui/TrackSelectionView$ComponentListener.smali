@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/ui/TrackSelectionView$ComponentListener;
+.class public Lcom/google/android/exoplayer2/ui/TrackSelectionView$ComponentListener;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/android/exoplayer2/ui/TrackSelectionView;
+.field public final synthetic this$0:Lcom/google/android/exoplayer2/ui/TrackSelectionView;
 
 
 # direct methods
@@ -47,6 +47,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/TrackSelectionView$ComponentListener;->this$0:Lcom/google/android/exoplayer2/ui/TrackSelectionView;
 
     invoke-static {p0, p1}, Lcom/google/android/exoplayer2/ui/TrackSelectionView;->access$100(Lcom/google/android/exoplayer2/ui/TrackSelectionView;Landroid/view/View;)V

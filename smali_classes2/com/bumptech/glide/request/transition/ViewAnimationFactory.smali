@@ -92,6 +92,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/bumptech/glide/load/DataSource;->MEMORY_CACHE:Lcom/bumptech/glide/load/DataSource;
 
     if-eq p1, v0, :cond_2
@@ -100,11 +101,13 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object p1, p0, Lcom/bumptech/glide/request/transition/ViewAnimationFactory;->transition:Lcom/bumptech/glide/request/transition/Transition;
 
     if-nez p1, :cond_1
 
+    .line 3
     new-instance p1, Lcom/bumptech/glide/request/transition/ViewTransition;
 
     iget-object p2, p0, Lcom/bumptech/glide/request/transition/ViewAnimationFactory;->viewTransitionAnimationFactory:Lcom/bumptech/glide/request/transition/ViewTransition$ViewTransitionAnimationFactory;
@@ -113,11 +116,13 @@
 
     iput-object p1, p0, Lcom/bumptech/glide/request/transition/ViewAnimationFactory;->transition:Lcom/bumptech/glide/request/transition/Transition;
 
+    .line 4
     :cond_1
     iget-object p0, p0, Lcom/bumptech/glide/request/transition/ViewAnimationFactory;->transition:Lcom/bumptech/glide/request/transition/Transition;
 
     return-object p0
 
+    .line 5
     :cond_2
     :goto_0
     invoke-static {}, Lcom/bumptech/glide/request/transition/NoTransition;->get()Lcom/bumptech/glide/request/transition/Transition;

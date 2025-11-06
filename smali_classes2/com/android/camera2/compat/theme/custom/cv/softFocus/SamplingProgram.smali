@@ -21,10 +21,12 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/cv/softFocus/BaseProgram;-><init>()V
 
     const/16 v0, 0x400
 
+    .line 2
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v1
@@ -33,6 +35,7 @@
 
     new-array v0, v0, [B
 
+    .line 3
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/softFocus/SamplingProgram;->mPixels:[B
 
     return-void
@@ -40,42 +43,75 @@
 
 
 # virtual methods
-.method public draw(Lt3/b;Lcom/android/gallery3d/ui/h;II)V
+.method public draw(Ld/d/a/q6/h/b;Ld/d/c/a/h;II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "texture",
+            "mCanvas",
+            "width",
+            "height"
+        }
+    .end annotation
 
-    invoke-super {p0, p1, p2, p3, p4}, Lcom/android/camera2/compat/theme/custom/cv/softFocus/BaseProgram;->drawTexture(Lt3/b;Lcom/android/gallery3d/ui/h;II)V
+    .line 1
+    invoke-super {p0, p1, p2, p3, p4}, Lcom/android/camera2/compat/theme/custom/cv/softFocus/BaseProgram;->drawTexture(Ld/d/a/q6/h/b;Ld/d/c/a/h;II)V
 
-    iget-object p1, p1, Lt3/b;->s:Lcom/android/gallery3d/ui/b;
+    .line 2
+    iget-object p1, p1, Ld/d/a/q6/h/b;->s:Ld/d/c/a/b;
 
-    invoke-virtual {p1}, Lcom/android/gallery3d/ui/b;->getId()I
+    invoke-virtual {p1}, Ld/d/c/a/b;->getId()I
 
     move-result p1
 
-    invoke-virtual {p0, p2, p1}, Lcom/android/camera2/compat/theme/custom/cv/softFocus/SamplingProgram;->initShaderValue(Lcom/android/gallery3d/ui/h;I)V
+    invoke-virtual {p0, p2, p1}, Lcom/android/camera2/compat/theme/custom/cv/softFocus/SamplingProgram;->initShaderValue(Ld/d/c/a/h;I)V
 
-    invoke-interface {p2}, Lcom/android/gallery3d/ui/h;->getState()Lcom/android/camera/effect/d;
+    .line 3
+    invoke-interface {p2}, Ld/d/c/a/h;->getState()Ld/d/a/q6/d;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/camera/effect/d;->i()V
+    invoke-virtual {p0}, Ld/d/a/q6/d;->i()V
 
     return-void
 .end method
 
-.method public getAvgBright(Lt3/b;Lcom/android/gallery3d/ui/h;)F
+.method public getAvgBright(Ld/d/a/q6/h/b;Ld/d/c/a/h;)F
     .locals 9
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "attribute",
+            "mCanvas"
+        }
+    .end annotation
 
     const/16 v0, 0x10
 
     const/4 v1, 0x0
 
+    .line 1
     invoke-virtual {p0, v0, v0, v1}, Lcom/android/camera2/compat/theme/custom/cv/softFocus/BaseProgram;->bindFrameBuffer(III)V
 
-    invoke-virtual {p0, p1, p2, v0, v0}, Lcom/android/camera2/compat/theme/custom/cv/softFocus/SamplingProgram;->draw(Lt3/b;Lcom/android/gallery3d/ui/h;II)V
+    .line 2
+    invoke-virtual {p0, p1, p2, v0, v0}, Lcom/android/camera2/compat/theme/custom/cv/softFocus/SamplingProgram;->draw(Ld/d/a/q6/h/b;Ld/d/c/a/h;II)V
 
+    .line 3
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/softFocus/SamplingProgram;->mPixelBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
+
+    .line 4
+    iget-object v8, p0, Lcom/android/camera2/compat/theme/custom/cv/softFocus/SamplingProgram;->mPixelBuffer:Ljava/nio/ByteBuffer;
 
     const/4 v2, 0x0
 
@@ -89,10 +125,9 @@
 
     const/16 v7, 0x1401
 
-    iget-object v8, p0, Lcom/android/camera2/compat/theme/custom/cv/softFocus/SamplingProgram;->mPixelBuffer:Ljava/nio/ByteBuffer;
+    invoke-static/range {v2 .. v8}, Landroid/opengl/GLES31;->glReadPixels(IIIIIILjava/nio/Buffer;)V
 
-    invoke-static/range {v2 .. v8}, Landroid/opengl/GLES20;->glReadPixels(IIIIIILjava/nio/Buffer;)V
-
+    .line 5
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/softFocus/SamplingProgram;->mPixelBuffer:Ljava/nio/ByteBuffer;
 
     iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/cv/softFocus/SamplingProgram;->mPixels:[B
@@ -108,6 +143,7 @@
 
     if-ge p2, v0, :cond_0
 
+    .line 6
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/softFocus/SamplingProgram;->mPixels:[B
 
     mul-int/lit8 v2, p2, 0x4
@@ -118,10 +154,12 @@
 
     add-int/lit8 v4, v2, 0x1
 
+    .line 7
     aget-byte v4, v0, v4
 
     add-int/lit8 v2, v2, 0x2
 
+    .line 8
     aget-byte v0, v0, v2
 
     const v2, 0x3e59b3d0    # 0.2126f
@@ -152,8 +190,9 @@
 
     goto :goto_0
 
+    .line 9
     :cond_0
-    invoke-static {v1}, Lsg/h;->p(I)V
+    invoke-static {v1}, Ld/o/k/h;->j(I)V
 
     const/high16 p0, 0x43800000    # 256.0f
 
@@ -171,6 +210,7 @@
 
     const/16 v0, 0x13
 
+    .line 1
     invoke-static {v0}, Lcom/xiaomi/gl/ShaderManager;->a(I)I
 
     move-result v0
@@ -179,8 +219,10 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-static {v0}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
+    .line 3
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/cv/softFocus/BaseProgram;->mProgram:I
 
     const-string v1, "uMVPMatrix"
@@ -191,6 +233,7 @@
 
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/cv/softFocus/BaseProgram;->mUniformMVPMatrix:I
 
+    .line 4
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/cv/softFocus/BaseProgram;->mProgram:I
 
     const-string v1, "uSTMatrix"
@@ -201,6 +244,7 @@
 
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/cv/softFocus/BaseProgram;->mUniformSTMatrix:I
 
+    .line 5
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/cv/softFocus/BaseProgram;->mProgram:I
 
     const-string v1, "sTexture"
@@ -211,6 +255,7 @@
 
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/cv/softFocus/BaseProgram;->mUniformTexture:I
 
+    .line 6
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/cv/softFocus/BaseProgram;->mProgram:I
 
     const-string v1, "aPosition"
@@ -221,6 +266,7 @@
 
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/cv/softFocus/BaseProgram;->mAttributePosition:I
 
+    .line 7
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/cv/softFocus/BaseProgram;->mProgram:I
 
     const-string v1, "aTexCoord"
@@ -233,6 +279,7 @@
 
     return-void
 
+    .line 8
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -259,18 +306,33 @@
     throw v0
 .end method
 
-.method public initShaderValue(Lcom/android/gallery3d/ui/h;I)V
+.method public initShaderValue(Ld/d/c/a/h;I)V
     .locals 13
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "mCanvas",
+            "textureId"
+        }
+    .end annotation
 
+    .line 1
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/cv/softFocus/BaseProgram;->mAttributePosition:I
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
+    .line 2
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/cv/softFocus/BaseProgram;->mAttributeTexCoor:I
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
+    .line 3
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/cv/softFocus/BaseProgram;->mAttributePosition:I
+
+    iget-object v6, p0, Lcom/android/camera2/compat/theme/custom/cv/softFocus/BaseProgram;->mVertexBuffer:Ljava/nio/FloatBuffer;
 
     const/4 v2, 0x2
 
@@ -280,11 +342,12 @@
 
     const/16 v5, 0x8
 
-    iget-object v6, p0, Lcom/android/camera2/compat/theme/custom/cv/softFocus/BaseProgram;->mVertexBuffer:Ljava/nio/FloatBuffer;
-
     invoke-static/range {v1 .. v6}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
+    .line 4
     iget v7, p0, Lcom/android/camera2/compat/theme/custom/cv/softFocus/BaseProgram;->mAttributeTexCoor:I
+
+    iget-object v12, p0, Lcom/android/camera2/compat/theme/custom/cv/softFocus/BaseProgram;->mTexCoorBuffer:Ljava/nio/FloatBuffer;
 
     const/4 v8, 0x2
 
@@ -294,31 +357,33 @@
 
     const/16 v11, 0x8
 
-    iget-object v12, p0, Lcom/android/camera2/compat/theme/custom/cv/softFocus/BaseProgram;->mTexCoorBuffer:Ljava/nio/FloatBuffer;
-
     invoke-static/range {v7 .. v12}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
     const v0, 0x84c0
 
+    .line 5
     invoke-static {v0}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
     const/16 v0, 0xde1
 
+    .line 6
     invoke-static {v0, p2}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
+    .line 7
     iget p2, p0, Lcom/android/camera2/compat/theme/custom/cv/softFocus/BaseProgram;->mUniformTexture:I
 
     const/4 v0, 0x0
 
     invoke-static {p2, v0}, Landroid/opengl/GLES20;->glUniform1i(II)V
 
+    .line 8
     iget p2, p0, Lcom/android/camera2/compat/theme/custom/cv/softFocus/BaseProgram;->mUniformMVPMatrix:I
 
-    invoke-interface {p1}, Lcom/android/gallery3d/ui/h;->getState()Lcom/android/camera/effect/d;
+    invoke-interface {p1}, Ld/d/c/a/h;->getState()Ld/d/a/q6/d;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/camera/effect/d;->c()[F
+    invoke-virtual {v1}, Ld/d/a/q6/d;->c()[F
 
     move-result-object v1
 
@@ -326,13 +391,14 @@
 
     invoke-static {p2, v2, v0, v1, v0}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZ[FI)V
 
+    .line 9
     iget p2, p0, Lcom/android/camera2/compat/theme/custom/cv/softFocus/BaseProgram;->mUniformSTMatrix:I
 
-    invoke-interface {p1}, Lcom/android/gallery3d/ui/h;->getState()Lcom/android/camera/effect/d;
+    invoke-interface {p1}, Ld/d/c/a/h;->getState()Ld/d/a/q6/d;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/android/camera/effect/d;->e()[F
+    invoke-virtual {p1}, Ld/d/a/q6/d;->e()[F
 
     move-result-object p1
 
@@ -342,12 +408,15 @@
 
     const/4 p2, 0x4
 
+    .line 10
     invoke-static {p1, v0, p2}, Landroid/opengl/GLES20;->glDrawArrays(III)V
 
+    .line 11
     iget p1, p0, Lcom/android/camera2/compat/theme/custom/cv/softFocus/BaseProgram;->mAttributePosition:I
 
     invoke-static {p1}, Landroid/opengl/GLES20;->glDisableVertexAttribArray(I)V
 
+    .line 12
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/cv/softFocus/BaseProgram;->mAttributeTexCoor:I
 
     invoke-static {p0}, Landroid/opengl/GLES20;->glDisableVertexAttribArray(I)V
@@ -358,12 +427,15 @@
 .method public releaseAll()V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/cv/softFocus/BaseProgram;->release()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/softFocus/SamplingProgram;->mPixelBuffer:Ljava/nio/ByteBuffer;
 
+    .line 3
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/softFocus/SamplingProgram;->mPixels:[B
 
     return-void

@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field mElements:Ljava/util/ArrayList;
+.field public mElements:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -19,8 +19,10 @@
 .method public constructor <init>([C)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/constraintlayout/core/parser/CLElement;-><init>([C)V
 
+    .line 2
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -33,6 +35,7 @@
 .method public static allocate([C)Landroidx/constraintlayout/core/parser/CLElement;
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/constraintlayout/core/parser/CLContainer;
 
     invoke-direct {v0, p0}, Landroidx/constraintlayout/core/parser/CLContainer;-><init>([C)V
@@ -45,14 +48,17 @@
 .method public add(Landroidx/constraintlayout/core/parser/CLElement;)V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/core/parser/CLContainer;->mElements:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 2
     sget-boolean v0, Landroidx/constraintlayout/core/parser/CLParser;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
+    .line 3
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -322,14 +328,17 @@
 .method public getArrayOrNull(Ljava/lang/String;)Landroidx/constraintlayout/core/parser/CLArray;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/constraintlayout/core/parser/CLContainer;->getOrNull(Ljava/lang/String;)Landroidx/constraintlayout/core/parser/CLElement;
 
     move-result-object p0
 
+    .line 2
     instance-of p1, p0, Landroidx/constraintlayout/core/parser/CLArray;
 
     if-eqz p1, :cond_0
 
+    .line 3
     check-cast p0, Landroidx/constraintlayout/core/parser/CLArray;
 
     return-object p0
@@ -567,14 +576,17 @@
 .method public getFloatOrNaN(Ljava/lang/String;)F
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/constraintlayout/core/parser/CLContainer;->getOrNull(Ljava/lang/String;)Landroidx/constraintlayout/core/parser/CLElement;
 
     move-result-object p0
 
+    .line 2
     instance-of p1, p0, Landroidx/constraintlayout/core/parser/CLNumber;
 
     if-eqz p1, :cond_0
 
+    .line 3
     invoke-virtual {p0}, Landroidx/constraintlayout/core/parser/CLElement;->getFloat()F
 
     move-result p0
@@ -806,14 +818,17 @@
 .method public getObjectOrNull(Ljava/lang/String;)Landroidx/constraintlayout/core/parser/CLObject;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/constraintlayout/core/parser/CLContainer;->getOrNull(Ljava/lang/String;)Landroidx/constraintlayout/core/parser/CLElement;
 
     move-result-object p0
 
+    .line 2
     instance-of p1, p0, Landroidx/constraintlayout/core/parser/CLObject;
 
     if-eqz p1, :cond_0
 
+    .line 3
     check-cast p0, Landroidx/constraintlayout/core/parser/CLObject;
 
     return-object p0
@@ -979,6 +994,8 @@
     return-object p0
 
     :cond_0
+    const/4 v1, 0x0
+
     if-eqz v0, :cond_1
 
     .line 4
@@ -986,13 +1003,8 @@
 
     move-result-object v1
 
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x0
-
     .line 5
-    :goto_0
+    :cond_1
     new-instance v2, Landroidx/constraintlayout/core/parser/CLParsingException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1081,6 +1093,7 @@
 .method public has(Ljava/lang/String;)Z
     .locals 2
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/parser/CLContainer;->mElements:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1100,12 +1113,15 @@
 
     check-cast v0, Landroidx/constraintlayout/core/parser/CLElement;
 
+    .line 2
     instance-of v1, v0, Landroidx/constraintlayout/core/parser/CLKey;
 
     if-eqz v1, :cond_0
 
+    .line 3
     check-cast v0, Landroidx/constraintlayout/core/parser/CLKey;
 
+    .line 4
     invoke-virtual {v0}, Landroidx/constraintlayout/core/parser/CLElement;->content()Ljava/lang/String;
 
     move-result-object v0
@@ -1137,10 +1153,12 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 2
     iget-object p0, p0, Landroidx/constraintlayout/core/parser/CLContainer;->mElements:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1161,12 +1179,15 @@
 
     check-cast v1, Landroidx/constraintlayout/core/parser/CLElement;
 
+    .line 3
     instance-of v2, v1, Landroidx/constraintlayout/core/parser/CLKey;
 
     if-eqz v2, :cond_0
 
+    .line 4
     check-cast v1, Landroidx/constraintlayout/core/parser/CLKey;
 
+    .line 5
     invoke-virtual {v1}, Landroidx/constraintlayout/core/parser/CLElement;->content()Ljava/lang/String;
 
     move-result-object v1
@@ -1182,6 +1203,7 @@
 .method public put(Ljava/lang/String;Landroidx/constraintlayout/core/parser/CLElement;)V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/core/parser/CLContainer;->mElements:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1201,8 +1223,10 @@
 
     check-cast v1, Landroidx/constraintlayout/core/parser/CLElement;
 
+    .line 2
     check-cast v1, Landroidx/constraintlayout/core/parser/CLKey;
 
+    .line 3
     invoke-virtual {v1}, Landroidx/constraintlayout/core/parser/CLElement;->content()Ljava/lang/String;
 
     move-result-object v2
@@ -1213,10 +1237,12 @@
 
     if-eqz v2, :cond_0
 
+    .line 4
     invoke-virtual {v1, p2}, Landroidx/constraintlayout/core/parser/CLKey;->set(Landroidx/constraintlayout/core/parser/CLElement;)V
 
     return-void
 
+    .line 5
     :cond_1
     invoke-static {p1, p2}, Landroidx/constraintlayout/core/parser/CLKey;->allocate(Ljava/lang/String;Landroidx/constraintlayout/core/parser/CLElement;)Landroidx/constraintlayout/core/parser/CLElement;
 
@@ -1224,6 +1250,7 @@
 
     check-cast p1, Landroidx/constraintlayout/core/parser/CLKey;
 
+    .line 6
     iget-object p0, p0, Landroidx/constraintlayout/core/parser/CLContainer;->mElements:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -1234,6 +1261,7 @@
 .method public putNumber(Ljava/lang/String;F)V
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/constraintlayout/core/parser/CLNumber;
 
     invoke-direct {v0, p2}, Landroidx/constraintlayout/core/parser/CLNumber;-><init>(F)V
@@ -1246,10 +1274,12 @@
 .method public remove(Ljava/lang/String;)V
     .locals 4
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 2
     iget-object v1, p0, Landroidx/constraintlayout/core/parser/CLContainer;->mElements:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1270,10 +1300,12 @@
 
     check-cast v2, Landroidx/constraintlayout/core/parser/CLElement;
 
+    .line 3
     move-object v3, v2
 
     check-cast v3, Landroidx/constraintlayout/core/parser/CLKey;
 
+    .line 4
     invoke-virtual {v3}, Landroidx/constraintlayout/core/parser/CLElement;->content()Ljava/lang/String;
 
     move-result-object v3
@@ -1284,10 +1316,12 @@
 
     if-eqz v3, :cond_0
 
+    .line 5
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 6
     :cond_1
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -1306,6 +1340,7 @@
 
     check-cast v0, Landroidx/constraintlayout/core/parser/CLElement;
 
+    .line 7
     iget-object v1, p0, Landroidx/constraintlayout/core/parser/CLContainer;->mElements:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
@@ -1319,6 +1354,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/parser/CLContainer;->mElements:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
@@ -1331,10 +1367,12 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 2
     iget-object v1, p0, Landroidx/constraintlayout/core/parser/CLContainer;->mElements:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1354,6 +1392,7 @@
 
     check-cast v2, Landroidx/constraintlayout/core/parser/CLElement;
 
+    .line 3
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
     move-result v3
@@ -1362,13 +1401,16 @@
 
     const-string v3, "; "
 
+    .line 4
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 5
     :cond_0
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
+    .line 6
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 

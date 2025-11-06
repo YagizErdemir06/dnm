@@ -1,4 +1,4 @@
-.class interface abstract Lcom/google/common/base/Splitter$Strategy;
+.class public interface abstract Lcom/google/common/base/Splitter$Strategy;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

@@ -93,6 +93,7 @@
 .method public static synthetic access$200(Lcom/google/common/collect/MinMaxPriorityQueue$Builder;)Lcom/google/common/collect/Ordering;
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/MinMaxPriorityQueue$Builder;->ordering()Lcom/google/common/collect/Ordering;
 
     move-result-object p0
@@ -103,6 +104,7 @@
 .method public static synthetic access$300(Lcom/google/common/collect/MinMaxPriorityQueue$Builder;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/collect/MinMaxPriorityQueue$Builder;->maximumSize:I
 
     return p0
@@ -118,6 +120,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/MinMaxPriorityQueue$Builder;->comparator:Ljava/util/Comparator;
 
     invoke-static {p0}, Lcom/google/common/collect/Ordering;->from(Ljava/util/Comparator;)Lcom/google/common/collect/Ordering;
@@ -226,9 +229,11 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
 
+    .line 2
     iput p1, p0, Lcom/google/common/collect/MinMaxPriorityQueue$Builder;->expectedSize:I
 
     return-object p0
@@ -256,9 +261,11 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
 
+    .line 2
     iput p1, p0, Lcom/google/common/collect/MinMaxPriorityQueue$Builder;->maximumSize:I
 
     return-object p0

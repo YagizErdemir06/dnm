@@ -33,6 +33,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$d$a;->a:Landroid/support/v4/media/session/MediaSessionCompat$d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +54,13 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$d$a;->a:Landroid/support/v4/media/session/MediaSessionCompat$d;
+
+    .line 2
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v4
 
     const/16 v1, 0x12
 
@@ -61,13 +68,10 @@
 
     const/4 v3, -0x1
 
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v4
-
     const/4 v5, 0x0
 
-    invoke-virtual/range {v0 .. v5}, Landroid/support/v4/media/session/MediaSessionCompat$j;->w(IIILjava/lang/Object;Landroid/os/Bundle;)V
+    .line 3
+    invoke-virtual/range {v0 .. v5}, Landroid/support/v4/media/session/MediaSessionCompat$j;->A(IIILjava/lang/Object;Landroid/os/Bundle;)V
 
     return-void
 .end method

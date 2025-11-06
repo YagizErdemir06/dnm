@@ -1,4 +1,4 @@
-.class Lcom/google/common/reflect/TypeResolver$WildcardCapturer$1;
+.class public Lcom/google/common/reflect/TypeResolver$WildcardCapturer$1;
 .super Lcom/google/common/reflect/TypeResolver$WildcardCapturer;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic val$typeParam:Ljava/lang/reflect/TypeVariable;
+.field public final synthetic val$typeParam:Ljava/lang/reflect/TypeVariable;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/reflect/TypeResolver$WildcardCapturer;Ljava/util/concurrent/atomic/AtomicInteger;Ljava/lang/reflect/TypeVariable;)V
     .locals 0
 
+    .line 1
     iput-object p3, p0, Lcom/google/common/reflect/TypeResolver$WildcardCapturer$1;->val$typeParam:Ljava/lang/reflect/TypeVariable;
 
     const/4 p1, 0x0
@@ -45,6 +46,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/LinkedHashSet;
 
     invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
@@ -53,6 +55,7 @@
 
     invoke-direct {v0, p1}, Ljava/util/LinkedHashSet;-><init>(Ljava/util/Collection;)V
 
+    .line 2
     iget-object p1, p0, Lcom/google/common/reflect/TypeResolver$WildcardCapturer$1;->val$typeParam:Ljava/lang/reflect/TypeVariable;
 
     invoke-interface {p1}, Ljava/lang/reflect/TypeVariable;->getBounds()[Ljava/lang/reflect/Type;
@@ -65,6 +68,7 @@
 
     invoke-interface {v0, p1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
+    .line 3
     invoke-interface {v0}, Ljava/util/Set;->size()I
 
     move-result p1
@@ -73,6 +77,7 @@
 
     if-le p1, v1, :cond_0
 
+    .line 4
     const-class p1, Ljava/lang/Object;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
@@ -82,6 +87,7 @@
 
     new-array p1, p1, [Ljava/lang/reflect/Type;
 
+    .line 5
     invoke-interface {v0, p1}, Ljava/util/Set;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p1

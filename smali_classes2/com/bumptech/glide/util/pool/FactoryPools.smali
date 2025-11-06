@@ -34,6 +34,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/bumptech/glide/util/pool/FactoryPools$1;
 
     invoke-direct {v0}, Lcom/bumptech/glide/util/pool/FactoryPools$1;-><init>()V
@@ -46,6 +47,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -146,6 +148,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/bumptech/glide/util/pool/FactoryPools;->EMPTY_RESETTER:Lcom/bumptech/glide/util/pool/FactoryPools$Resetter;
 
     return-object v0
@@ -172,6 +175,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Landroidx/core/util/Pools$SimplePool;
 
     invoke-direct {v0, p0}, Landroidx/core/util/Pools$SimplePool;-><init>(I)V
@@ -204,6 +208,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Landroidx/core/util/Pools$SynchronizedPool;
 
     invoke-direct {v0, p0}, Landroidx/core/util/Pools$SynchronizedPool;-><init>(I)V

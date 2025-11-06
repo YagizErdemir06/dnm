@@ -57,10 +57,13 @@
 .method public constructor <init>(Ljava/lang/String;Landroid/net/Uri;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/offline/DownloadRequest$Builder;->id:Ljava/lang/String;
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/exoplayer2/offline/DownloadRequest$Builder;->uri:Landroid/net/Uri;
 
     return-void
@@ -71,6 +74,7 @@
 .method public build()Lcom/google/android/exoplayer2/offline/DownloadRequest;
     .locals 10
 
+    .line 1
     new-instance v9, Lcom/google/android/exoplayer2/offline/DownloadRequest;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/offline/DownloadRequest$Builder;->id:Ljava/lang/String;
@@ -79,6 +83,7 @@
 
     iget-object v3, p0, Lcom/google/android/exoplayer2/offline/DownloadRequest$Builder;->mimeType:Ljava/lang/String;
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/offline/DownloadRequest$Builder;->streamKeys:Ljava/util/List;
 
     if-eqz v0, :cond_0
@@ -115,6 +120,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/offline/DownloadRequest$Builder;->customCacheKey:Ljava/lang/String;
 
     return-object p0
@@ -127,6 +133,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/offline/DownloadRequest$Builder;->data:[B
 
     return-object p0
@@ -139,6 +146,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/offline/DownloadRequest$Builder;->keySetId:[B
 
     return-object p0
@@ -151,6 +159,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/offline/DownloadRequest$Builder;->mimeType:Ljava/lang/String;
 
     return-object p0
@@ -172,6 +181,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/offline/DownloadRequest$Builder;->streamKeys:Ljava/util/List;
 
     return-object p0

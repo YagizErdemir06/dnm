@@ -34,6 +34,7 @@
 .method public getParent()Lorg/dom4j/Element;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/DefaultText;->parent:Lorg/dom4j/Element;
 
     return-object p0
@@ -50,6 +51,7 @@
 .method public setParent(Lorg/dom4j/Element;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/tree/DefaultText;->parent:Lorg/dom4j/Element;
 
     return-void
@@ -58,6 +60,7 @@
 .method public setText(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/tree/FlyweightText;->text:Ljava/lang/String;
 
     return-void

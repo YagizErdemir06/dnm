@@ -33,6 +33,7 @@
 .method public bridge synthetic rowKeySet()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-interface {p0}, Lcom/google/common/collect/RowSortedTable;->rowKeySet()Ljava/util/SortedSet;
 
     move-result-object p0
@@ -53,6 +54,7 @@
 .method public bridge synthetic rowMap()Ljava/util/Map;
     .locals 0
 
+    .line 1
     invoke-interface {p0}, Lcom/google/common/collect/RowSortedTable;->rowMap()Ljava/util/SortedMap;
 
     move-result-object p0

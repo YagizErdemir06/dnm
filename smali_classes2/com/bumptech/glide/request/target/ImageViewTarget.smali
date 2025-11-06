@@ -60,14 +60,17 @@
         }
     .end annotation
 
+    .line 1
     instance-of v0, p1, Landroid/graphics/drawable/Animatable;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Landroid/graphics/drawable/Animatable;
 
     iput-object p1, p0, Lcom/bumptech/glide/request/target/ImageViewTarget;->animatable:Landroid/graphics/drawable/Animatable;
 
+    .line 3
     invoke-interface {p1}, Landroid/graphics/drawable/Animatable;->start()V
 
     goto :goto_0
@@ -75,6 +78,7 @@
     :cond_0
     const/4 p1, 0x0
 
+    .line 4
     iput-object p1, p0, Lcom/bumptech/glide/request/target/ImageViewTarget;->animatable:Landroid/graphics/drawable/Animatable;
 
     :goto_0
@@ -93,8 +97,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/request/target/ImageViewTarget;->setResource(Ljava/lang/Object;)V
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/bumptech/glide/request/target/ImageViewTarget;->maybeUpdateAnimatable(Ljava/lang/Object;)V
 
     return-void
@@ -107,6 +113,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/target/ViewTarget;->view:Landroid/view/View;
 
     check-cast p0, Landroid/widget/ImageView;
@@ -125,19 +132,24 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1}, Lcom/bumptech/glide/request/target/ViewTarget;->onLoadCleared(Landroid/graphics/drawable/Drawable;)V
 
+    .line 2
     iget-object v0, p0, Lcom/bumptech/glide/request/target/ImageViewTarget;->animatable:Landroid/graphics/drawable/Animatable;
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-interface {v0}, Landroid/graphics/drawable/Animatable;->stop()V
 
     :cond_0
     const/4 v0, 0x0
 
+    .line 4
     invoke-direct {p0, v0}, Lcom/bumptech/glide/request/target/ImageViewTarget;->setResourceInternal(Ljava/lang/Object;)V
 
+    .line 5
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/request/target/ImageViewTarget;->setDrawable(Landroid/graphics/drawable/Drawable;)V
 
     return-void
@@ -150,12 +162,15 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1}, Lcom/bumptech/glide/request/target/BaseTarget;->onLoadFailed(Landroid/graphics/drawable/Drawable;)V
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-direct {p0, v0}, Lcom/bumptech/glide/request/target/ImageViewTarget;->setResourceInternal(Ljava/lang/Object;)V
 
+    .line 3
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/request/target/ImageViewTarget;->setDrawable(Landroid/graphics/drawable/Drawable;)V
 
     return-void
@@ -168,12 +183,15 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1}, Lcom/bumptech/glide/request/target/ViewTarget;->onLoadStarted(Landroid/graphics/drawable/Drawable;)V
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-direct {p0, v0}, Lcom/bumptech/glide/request/target/ImageViewTarget;->setResourceInternal(Ljava/lang/Object;)V
 
+    .line 3
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/request/target/ImageViewTarget;->setDrawable(Landroid/graphics/drawable/Drawable;)V
 
     return-void
@@ -199,6 +217,7 @@
 
     if-eqz p2, :cond_1
 
+    .line 1
     invoke-interface {p2, p1, p0}, Lcom/bumptech/glide/request/transition/Transition;->transition(Ljava/lang/Object;Lcom/bumptech/glide/request/transition/Transition$ViewAdapter;)Z
 
     move-result p2
@@ -207,11 +226,13 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-direct {p0, p1}, Lcom/bumptech/glide/request/target/ImageViewTarget;->maybeUpdateAnimatable(Ljava/lang/Object;)V
 
     goto :goto_1
 
+    .line 3
     :cond_1
     :goto_0
     invoke-direct {p0, p1}, Lcom/bumptech/glide/request/target/ImageViewTarget;->setResourceInternal(Ljava/lang/Object;)V
@@ -223,10 +244,12 @@
 .method public onStart()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/target/ImageViewTarget;->animatable:Landroid/graphics/drawable/Animatable;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0}, Landroid/graphics/drawable/Animatable;->start()V
 
     :cond_0
@@ -236,10 +259,12 @@
 .method public onStop()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/target/ImageViewTarget;->animatable:Landroid/graphics/drawable/Animatable;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0}, Landroid/graphics/drawable/Animatable;->stop()V
 
     :cond_0
@@ -249,6 +274,7 @@
 .method public setDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/target/ViewTarget;->view:Landroid/view/View;
 
     check-cast p0, Landroid/widget/ImageView;

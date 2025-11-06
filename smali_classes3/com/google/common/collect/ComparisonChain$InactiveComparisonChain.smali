@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/ComparisonChain$InactiveComparisonChain;
+.class public final Lcom/google/common/collect/ComparisonChain$InactiveComparisonChain;
 .super Lcom/google/common/collect/ComparisonChain;
 .source "SourceFile"
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final result:I
+.field public final result:I
 
 
 # direct methods
@@ -24,8 +24,10 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/google/common/collect/ComparisonChain;-><init>(Lcom/google/common/collect/ComparisonChain$1;)V
 
+    .line 2
     iput p1, p0, Lcom/google/common/collect/ComparisonChain$InactiveComparisonChain;->result:I
 
     return-void
@@ -112,6 +114,7 @@
 .method public result()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/collect/ComparisonChain$InactiveComparisonChain;->result:I
 
     return p0

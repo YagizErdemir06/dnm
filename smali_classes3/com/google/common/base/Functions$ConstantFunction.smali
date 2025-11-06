@@ -1,4 +1,4 @@
-.class Lcom/google/common/base/Functions$ConstantFunction;
+.class public Lcom/google/common/base/Functions$ConstantFunction;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -61,8 +61,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/base/Functions$ConstantFunction;->value:Ljava/lang/Object;
 
     return-void
@@ -87,6 +89,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/Functions$ConstantFunction;->value:Ljava/lang/Object;
 
     return-object p0
@@ -99,12 +102,15 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/common/base/Functions$ConstantFunction;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/common/base/Functions$ConstantFunction;
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/base/Functions$ConstantFunction;->value:Ljava/lang/Object;
 
     iget-object p1, p1, Lcom/google/common/base/Functions$ConstantFunction;->value:Ljava/lang/Object;
@@ -124,6 +130,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/Functions$ConstantFunction;->value:Ljava/lang/Object;
 
     if-nez p0, :cond_0
@@ -144,6 +151,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/Functions$ConstantFunction;->value:Ljava/lang/Object;
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

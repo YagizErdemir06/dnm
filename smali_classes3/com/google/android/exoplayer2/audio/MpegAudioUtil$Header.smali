@@ -37,6 +37,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,6 +48,7 @@
 .method public setForHeaderData(I)Z
     .locals 8
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->access$000(I)Z
 
     move-result v0
@@ -101,9 +103,11 @@
 
     return v1
 
+    .line 2
     :cond_4
     iput v0, p0, Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;->version:I
 
+    .line 3
     invoke-static {}, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->access$100()[Ljava/lang/String;
 
     move-result-object v1
@@ -114,6 +118,7 @@
 
     iput-object v1, p0, Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;->mimeType:Ljava/lang/String;
 
+    .line 4
     invoke-static {}, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->access$200()[I
 
     move-result-object v1
@@ -126,6 +131,7 @@
 
     if-ne v0, v6, :cond_5
 
+    .line 5
     div-int/2addr v1, v6
 
     iput v1, p0, Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;->sampleRate:I
@@ -135,6 +141,7 @@
     :cond_5
     if-nez v0, :cond_6
 
+    .line 6
     div-int/lit8 v1, v1, 0x4
 
     iput v1, p0, Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;->sampleRate:I
@@ -145,6 +152,7 @@
 
     and-int/2addr v1, v3
 
+    .line 7
     invoke-static {v0, v4}, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->access$300(II)I
 
     move-result v7
@@ -155,6 +163,7 @@
 
     if-ne v0, v2, :cond_7
 
+    .line 8
     invoke-static {}, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->access$400()[I
 
     move-result-object v0
@@ -179,6 +188,7 @@
 
     mul-int/lit8 v0, v0, 0xc
 
+    .line 9
     iget v4, p0, Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;->sampleRate:I
 
     div-int/2addr v0, v4
@@ -198,6 +208,7 @@
 
     if-ne v4, v6, :cond_9
 
+    .line 10
     invoke-static {}, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->access$600()[I
 
     move-result-object v0
@@ -222,6 +233,7 @@
 
     mul-int/2addr v0, v7
 
+    .line 11
     iget v4, p0, Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;->sampleRate:I
 
     div-int/2addr v0, v4
@@ -232,6 +244,7 @@
 
     goto :goto_3
 
+    .line 12
     :cond_a
     invoke-static {}, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->access$800()[I
 
@@ -250,6 +263,7 @@
     :cond_b
     mul-int/2addr v7, v0
 
+    .line 13
     iget v0, p0, Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;->sampleRate:I
 
     div-int/2addr v7, v0
@@ -267,6 +281,7 @@
 
     move v6, v3
 
+    .line 14
     :cond_c
     iput v6, p0, Lcom/google/android/exoplayer2/audio/MpegAudioUtil$Header;->channels:I
 

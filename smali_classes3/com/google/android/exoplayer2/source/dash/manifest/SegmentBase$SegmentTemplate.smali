@@ -15,14 +15,14 @@
 
 
 # instance fields
-.field final endNumber:J
+.field public final endNumber:J
 
-.field final initializationTemplate:Lcom/google/android/exoplayer2/source/dash/manifest/UrlTemplate;
+.field public final initializationTemplate:Lcom/google/android/exoplayer2/source/dash/manifest/UrlTemplate;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field final mediaTemplate:Lcom/google/android/exoplayer2/source/dash/manifest/UrlTemplate;
+.field public final mediaTemplate:Lcom/google/android/exoplayer2/source/dash/manifest/UrlTemplate;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -79,18 +79,22 @@
 
     move-wide/from16 v15, p19
 
+    .line 1
     invoke-direct/range {v0 .. v16}, Lcom/google/android/exoplayer2/source/dash/manifest/SegmentBase$MultiSegmentBase;-><init>(Lcom/google/android/exoplayer2/source/dash/manifest/RangedUri;JJJJLjava/util/List;JJJ)V
 
     move-object/from16 v1, p15
 
+    .line 2
     iput-object v1, v0, Lcom/google/android/exoplayer2/source/dash/manifest/SegmentBase$SegmentTemplate;->initializationTemplate:Lcom/google/android/exoplayer2/source/dash/manifest/UrlTemplate;
 
     move-object/from16 v1, p16
 
+    .line 3
     iput-object v1, v0, Lcom/google/android/exoplayer2/source/dash/manifest/SegmentBase$SegmentTemplate;->mediaTemplate:Lcom/google/android/exoplayer2/source/dash/manifest/UrlTemplate;
 
     move-wide/from16 v1, p8
 
+    .line 4
     iput-wide v1, v0, Lcom/google/android/exoplayer2/source/dash/manifest/SegmentBase$SegmentTemplate;->endNumber:J
 
     return-void
@@ -103,10 +107,12 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/dash/manifest/SegmentBase$SegmentTemplate;->initializationTemplate:Lcom/google/android/exoplayer2/source/dash/manifest/UrlTemplate;
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p1, Lcom/google/android/exoplayer2/source/dash/manifest/Representation;->format:Lcom/google/android/exoplayer2/Format;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/Format;->id:Ljava/lang/String;
@@ -117,10 +123,12 @@
 
     const-wide/16 v5, 0x0
 
+    .line 3
     invoke-virtual/range {v0 .. v6}, Lcom/google/android/exoplayer2/source/dash/manifest/UrlTemplate;->buildUri(Ljava/lang/String;JIJ)Ljava/lang/String;
 
     move-result-object v8
 
+    .line 4
     new-instance p0, Lcom/google/android/exoplayer2/source/dash/manifest/RangedUri;
 
     const-wide/16 v9, 0x0
@@ -133,6 +141,7 @@
 
     return-object p0
 
+    .line 5
     :cond_0
     invoke-super {p0, p1}, Lcom/google/android/exoplayer2/source/dash/manifest/SegmentBase;->getInitialization(Lcom/google/android/exoplayer2/source/dash/manifest/Representation;)Lcom/google/android/exoplayer2/source/dash/manifest/RangedUri;
 
@@ -144,10 +153,12 @@
 .method public getSegmentCount(J)J
     .locals 5
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/dash/manifest/SegmentBase$MultiSegmentBase;->segmentTimeline:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result p0
@@ -156,6 +167,7 @@
 
     return-wide p0
 
+    .line 3
     :cond_0
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/dash/manifest/SegmentBase$SegmentTemplate;->endNumber:J
 
@@ -165,6 +177,7 @@
 
     if-eqz v4, :cond_1
 
+    .line 4
     iget-wide p0, p0, Lcom/google/android/exoplayer2/source/dash/manifest/SegmentBase$MultiSegmentBase;->startNumber:J
 
     sub-long/2addr v0, p0
@@ -182,6 +195,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 5
     invoke-static {p1, p2}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object p1
@@ -196,8 +210,10 @@
 
     move-result-object p1
 
+    .line 6
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/dash/manifest/SegmentBase$MultiSegmentBase;->duration:J
 
+    .line 7
     invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object p0
@@ -212,6 +228,7 @@
 
     move-result-object p0
 
+    .line 8
     sget-object p2, Ljava/math/RoundingMode;->CEILING:Ljava/math/RoundingMode;
 
     invoke-static {p1, p0, p2}, Lcom/google/common/math/BigIntegerMath;->divide(Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/RoundingMode;)Ljava/math/BigInteger;
@@ -233,10 +250,12 @@
 
     move-object v0, p0
 
+    .line 1
     iget-object v1, v0, Lcom/google/android/exoplayer2/source/dash/manifest/SegmentBase$MultiSegmentBase;->segmentTimeline:Ljava/util/List;
 
     if-eqz v1, :cond_0
 
+    .line 2
     iget-wide v2, v0, Lcom/google/android/exoplayer2/source/dash/manifest/SegmentBase$MultiSegmentBase;->startNumber:J
 
     sub-long v2, p2, v2
@@ -253,6 +272,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-wide v1, v0, Lcom/google/android/exoplayer2/source/dash/manifest/SegmentBase$MultiSegmentBase;->startNumber:J
 
@@ -265,6 +285,7 @@
     :goto_0
     move-wide v5, v1
 
+    .line 4
     iget-object v0, v0, Lcom/google/android/exoplayer2/source/dash/manifest/SegmentBase$SegmentTemplate;->mediaTemplate:Lcom/google/android/exoplayer2/source/dash/manifest/UrlTemplate;
 
     move-object v1, p1
@@ -279,10 +300,12 @@
 
     move-wide v2, p2
 
+    .line 5
     invoke-virtual/range {v0 .. v6}, Lcom/google/android/exoplayer2/source/dash/manifest/UrlTemplate;->buildUri(Ljava/lang/String;JIJ)Ljava/lang/String;
 
     move-result-object v8
 
+    .line 6
     new-instance v0, Lcom/google/android/exoplayer2/source/dash/manifest/RangedUri;
 
     const-wide/16 v9, 0x0

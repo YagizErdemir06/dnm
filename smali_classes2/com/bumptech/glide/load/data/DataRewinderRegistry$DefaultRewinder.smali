@@ -1,4 +1,4 @@
-.class final Lcom/bumptech/glide/load/data/DataRewinderRegistry$DefaultRewinder;
+.class public final Lcom/bumptech/glide/load/data/DataRewinderRegistry$DefaultRewinder;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -38,8 +38,10 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/bumptech/glide/load/data/DataRewinderRegistry$DefaultRewinder;->data:Ljava/lang/Object;
 
     return-void
@@ -58,6 +60,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/data/DataRewinderRegistry$DefaultRewinder;->data:Ljava/lang/Object;
 
     return-object p0

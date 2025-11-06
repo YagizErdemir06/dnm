@@ -11,6 +11,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,12 +35,14 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Landroidx/versionedparcelable/VersionedParcelStream;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, p0, v1}, Landroidx/versionedparcelable/VersionedParcelStream;-><init>(Ljava/io/InputStream;Ljava/io/OutputStream;)V
 
+    .line 2
     invoke-virtual {v0}, Landroidx/versionedparcelable/VersionedParcel;->readVersionedParcelable()Landroidx/versionedparcelable/VersionedParcelable;
 
     move-result-object p0
@@ -65,10 +68,12 @@
         }
     .end annotation
 
+    .line 1
     instance-of v0, p0, Landroidx/versionedparcelable/ParcelImpl;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Landroidx/versionedparcelable/ParcelImpl;
 
     invoke-virtual {p0}, Landroidx/versionedparcelable/ParcelImpl;->getVersionedParcel()Landroidx/versionedparcelable/VersionedParcelable;
@@ -77,6 +82,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -113,6 +119,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :try_start_0
     invoke-virtual {p0, p1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -124,6 +131,7 @@
 
     return-object v0
 
+    .line 2
     :cond_0
     const-class p1, Landroidx/versionedparcelable/ParcelUtils;
 
@@ -135,6 +143,7 @@
 
     const-string p1, "a"
 
+    .line 3
     invoke-virtual {p0, p1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p0
@@ -169,10 +178,12 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 2
     :try_start_0
     invoke-virtual {p0, p1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -180,6 +191,7 @@
 
     check-cast p0, Landroid/os/Bundle;
 
+    .line 3
     const-class p1, Landroidx/versionedparcelable/ParcelUtils;
 
     invoke-virtual {p1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -190,10 +202,12 @@
 
     const-string p1, "a"
 
+    .line 4
     invoke-virtual {p0, p1}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object p0
 
+    .line 5
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -211,6 +225,7 @@
 
     check-cast p1, Landroid/os/Parcelable;
 
+    .line 6
     invoke-static {p1}, Landroidx/versionedparcelable/ParcelUtils;->fromParcelable(Landroid/os/Parcelable;)Landroidx/versionedparcelable/VersionedParcelable;
 
     move-result-object p1
@@ -249,19 +264,22 @@
 
     return-void
 
+    .line 1
     :cond_0
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    const-string v1, "a"
-
+    .line 2
     invoke-static {p2}, Landroidx/versionedparcelable/ParcelUtils;->toParcelable(Landroidx/versionedparcelable/VersionedParcelable;)Landroid/os/Parcelable;
 
     move-result-object p2
 
+    const-string v1, "a"
+
     invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
+    .line 3
     invoke-virtual {p0, p1, v0}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     return-void
@@ -293,14 +311,17 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
+    .line 2
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 3
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -318,6 +339,7 @@
 
     check-cast v2, Landroidx/versionedparcelable/VersionedParcelable;
 
+    .line 4
     invoke-static {v2}, Landroidx/versionedparcelable/ParcelUtils;->toParcelable(Landroidx/versionedparcelable/VersionedParcelable;)Landroid/os/Parcelable;
 
     move-result-object v2
@@ -329,8 +351,10 @@
     :cond_0
     const-string p2, "a"
 
+    .line 5
     invoke-virtual {v0, p2, v1}, Landroid/os/Bundle;->putParcelableArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
+    .line 6
     invoke-virtual {p0, p1, v0}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     return-void
@@ -344,14 +368,17 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Landroidx/versionedparcelable/VersionedParcelStream;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v1, p1}, Landroidx/versionedparcelable/VersionedParcelStream;-><init>(Ljava/io/InputStream;Ljava/io/OutputStream;)V
 
+    .line 2
     invoke-virtual {v0, p0}, Landroidx/versionedparcelable/VersionedParcel;->writeVersionedParcelable(Landroidx/versionedparcelable/VersionedParcelable;)V
 
+    .line 3
     invoke-virtual {v0}, Landroidx/versionedparcelable/VersionedParcelStream;->closeField()V
 
     return-void
@@ -365,6 +392,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Landroidx/versionedparcelable/ParcelImpl;
 
     invoke-direct {v0, p0}, Landroidx/versionedparcelable/ParcelImpl;-><init>(Landroidx/versionedparcelable/VersionedParcelable;)V

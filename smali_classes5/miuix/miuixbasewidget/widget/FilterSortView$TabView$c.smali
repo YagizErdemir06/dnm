@@ -15,14 +15,5 @@
 
 
 # virtual methods
-.method public abstract a()V
-.end method
-
-.method public abstract b(FF)V
-.end method
-
-.method public abstract c()V
-.end method
-
-.method public abstract d()V
+.method public abstract a(Lmiuix/miuixbasewidget/widget/FilterSortView$TabView;Z)V
 .end method

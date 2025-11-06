@@ -1,4 +1,4 @@
-.class final Lcom/google/common/graph/StandardMutableGraph;
+.class public final Lcom/google/common/graph/StandardMutableGraph;
 .super Lcom/google/common/graph/ForwardingGraph;
 .source "SourceFile"
 
@@ -47,8 +47,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/graph/ForwardingGraph;-><init>()V
 
+    .line 2
     new-instance v0, Lcom/google/common/graph/StandardMutableValueGraph;
 
     invoke-direct {v0, p1}, Lcom/google/common/graph/StandardMutableValueGraph;-><init>(Lcom/google/common/graph/AbstractGraphBuilder;)V
@@ -68,6 +70,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/StandardMutableGraph;->backingValueGraph:Lcom/google/common/graph/MutableValueGraph;
 
     invoke-interface {p0, p1}, Lcom/google/common/graph/MutableValueGraph;->addNode(Ljava/lang/Object;)Z
@@ -87,6 +90,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/StandardMutableGraph;->backingValueGraph:Lcom/google/common/graph/MutableValueGraph;
 
     return-object p0
@@ -216,6 +220,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/StandardMutableGraph;->backingValueGraph:Lcom/google/common/graph/MutableValueGraph;
 
     invoke-interface {p0, p1}, Lcom/google/common/graph/MutableValueGraph;->removeNode(Ljava/lang/Object;)Z

@@ -1,4 +1,4 @@
-.class Lmiuix/animation/controller/FolmeVisible$1;
+.class public Lmiuix/animation/controller/FolmeVisible$1;
 .super Lmiuix/animation/listener/TransitionListener;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lmiuix/animation/controller/FolmeVisible;
+.field public final synthetic this$0:Lmiuix/animation/controller/FolmeVisible;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/animation/controller/FolmeVisible;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/animation/controller/FolmeVisible$1;->this$0:Lmiuix/animation/controller/FolmeVisible;
 
     invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
@@ -43,6 +44,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lmiuix/animation/IVisibleStyle$VisibleType;->SHOW:Lmiuix/animation/IVisibleStyle$VisibleType;
 
     invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -59,6 +61,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 2
     iget-object p0, p0, Lmiuix/animation/controller/FolmeVisible$1;->this$0:Lmiuix/animation/controller/FolmeVisible;
 
     iget-object p0, p0, Lmiuix/animation/controller/FolmeBase;->mState:Lmiuix/animation/controller/IFolmeStateStyle;

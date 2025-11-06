@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/mi_connect_sdk/api/BinderBase$1;
+.class public Lcom/xiaomi/mi_connect_sdk/api/BinderBase$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -21,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,8 +36,10 @@
 
     const-string p1, "onServiceConnected"
 
+    .line 1
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {}, Lcom/xiaomi/mi_connect_sdk/api/BinderBase;->access$000()Z
 
     move-result p0
@@ -47,12 +50,15 @@
 
     const-string p1, "onServiceConnected: isPendingUnbind, unbindAll"
 
+    .line 3
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 4
     invoke-static {}, Lcom/xiaomi/mi_connect_sdk/api/BinderBase;->access$100()V
 
     return-void
 
+    .line 5
     :cond_0
     invoke-static {}, Lcom/xiaomi/mi_connect_sdk/api/BinderBase;->access$200()Ljava/lang/Object;
 
@@ -60,6 +66,7 @@
 
     monitor-enter p0
 
+    .line 6
     :try_start_0
     invoke-static {p2}, Lcom/xiaomi/mi_connect_service/IMiConnect$Stub;->asInterface(Landroid/os/IBinder;)Lcom/xiaomi/mi_connect_service/IMiConnect;
 
@@ -67,12 +74,14 @@
 
     sput-object p1, Lcom/xiaomi/mi_connect_sdk/api/BinderBase;->sService:Lcom/xiaomi/mi_connect_service/IMiConnect;
 
+    .line 7
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     const/4 p0, 0x0
 
+    .line 8
     :try_start_1
     invoke-interface {p1}, Lcom/xiaomi/mi_connect_service/IMiConnect;->getServiceApiVersion()I
 
@@ -82,6 +91,7 @@
 
     const-string p1, "IDMBinderBase"
 
+    .line 9
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -111,18 +121,21 @@
 
     const-string p2, "IDMBinderBase"
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 10
+    invoke-virtual {p1}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {p2, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 11
     sget-object p1, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_ERROR:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     invoke-virtual {p1}, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->getCode()I
 
     move-result p1
 
+    .line 12
     :goto_0
     sget p2, Lcom/xiaomi/mi_connect_sdk/api/BinderBase;->sServiceApiVersion:I
 
@@ -130,12 +143,14 @@
 
     if-ne p2, v0, :cond_1
 
+    .line 13
     sget-object p1, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->PERMISSION_DENNY:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
     invoke-virtual {p1}, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->getCode()I
 
     move-result p1
 
+    .line 14
     :cond_1
     invoke-static {}, Lcom/xiaomi/mi_connect_sdk/api/BinderBase;->access$300()Ljava/util/Set;
 
@@ -160,12 +175,14 @@
 
     if-eqz p1, :cond_2
 
+    .line 15
     iget-object v0, v0, Lcom/xiaomi/mi_connect_sdk/api/BinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     invoke-interface {v0, p1}, Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;->onServiceError(I)V
 
     goto :goto_1
 
+    .line 16
     :cond_2
     invoke-virtual {v0}, Lcom/xiaomi/mi_connect_sdk/api/BinderBase;->isVersionSatisfied()Z
 
@@ -173,22 +190,27 @@
 
     if-eqz v1, :cond_3
 
+    .line 17
     sget-object v1, Lcom/xiaomi/mi_connect_sdk/api/BinderBase;->sService:Lcom/xiaomi/mi_connect_service/IMiConnect;
 
     iput-object v1, v0, Lcom/xiaomi/mi_connect_sdk/api/BinderBase;->mService:Lcom/xiaomi/mi_connect_service/IMiConnect;
 
+    .line 18
     invoke-virtual {v0}, Lcom/xiaomi/mi_connect_sdk/api/BinderBase;->onServiceConnected()V
 
+    .line 19
     iget-object v1, v0, Lcom/xiaomi/mi_connect_sdk/api/BinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     invoke-interface {v1}, Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;->onServiceBind()V
 
     const/4 v1, 0x1
 
+    .line 20
     invoke-static {v0, v1}, Lcom/xiaomi/mi_connect_sdk/api/BinderBase;->access$402(Lcom/xiaomi/mi_connect_sdk/api/BinderBase;Z)Z
 
     goto :goto_1
 
+    .line 21
     :cond_3
     invoke-static {}, Lcom/xiaomi/mi_connect_sdk/api/BinderBase;->access$300()Ljava/util/Set;
 
@@ -196,10 +218,12 @@
 
     invoke-interface {v1, v0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
+    .line 22
     iget-object v0, v0, Lcom/xiaomi/mi_connect_sdk/api/BinderBase;->mMiAppCallback:Lcom/xiaomi/mi_connect_sdk/api/MiAppCallback;
 
     sget-object v1, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->SERVICE_API_VERSION_TOO_LOW:Lcom/xiaomi/mi_connect_sdk/api/ResultCode;
 
+    .line 23
     invoke-virtual {v1}, Lcom/xiaomi/mi_connect_sdk/api/ResultCode;->getCode()I
 
     move-result v1
@@ -208,6 +232,7 @@
 
     goto :goto_1
 
+    .line 24
     :cond_4
     invoke-static {p0}, Lcom/xiaomi/mi_connect_sdk/api/BinderBase;->access$502(Z)Z
 
@@ -216,6 +241,7 @@
     :catchall_0
     move-exception p1
 
+    .line 25
     :try_start_2
     monitor-exit p0
     :try_end_2
@@ -231,8 +257,10 @@
 
     const-string p1, "onServiceDisconnected"
 
+    .line 1
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     invoke-static {}, Lcom/xiaomi/mi_connect_sdk/api/BinderBase;->access$100()V
 
     return-void

@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Maps$IteratorBasedAbstractMap$1;
+.class public Lcom/google/common/collect/Maps$IteratorBasedAbstractMap$1;
 .super Lcom/google/common/collect/Maps$EntrySet;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/Maps$IteratorBasedAbstractMap;
+.field public final synthetic this$0:Lcom/google/common/collect/Maps$IteratorBasedAbstractMap;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/Maps$IteratorBasedAbstractMap;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/Maps$IteratorBasedAbstractMap$1;->this$0:Lcom/google/common/collect/Maps$IteratorBasedAbstractMap;
 
     invoke-direct {p0}, Lcom/google/common/collect/Maps$EntrySet;-><init>()V
@@ -49,6 +50,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Maps$IteratorBasedAbstractMap$1;->this$0:Lcom/google/common/collect/Maps$IteratorBasedAbstractMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/Maps$IteratorBasedAbstractMap;->entryIterator()Ljava/util/Iterator;
@@ -68,6 +70,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Maps$IteratorBasedAbstractMap$1;->this$0:Lcom/google/common/collect/Maps$IteratorBasedAbstractMap;
 
     return-object p0

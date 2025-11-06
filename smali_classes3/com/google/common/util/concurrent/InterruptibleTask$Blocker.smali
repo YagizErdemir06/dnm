@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/InterruptibleTask$Blocker;
+.class public final Lcom/google/common/util/concurrent/InterruptibleTask$Blocker;
 .super Ljava/util/concurrent/locks/AbstractOwnableSynchronizer;
 .source "SourceFile"
 
@@ -63,6 +63,7 @@
 .method public static synthetic access$200(Lcom/google/common/util/concurrent/InterruptibleTask$Blocker;Ljava/lang/Thread;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/util/concurrent/InterruptibleTask$Blocker;->setOwner(Ljava/lang/Thread;)V
 
     return-void
@@ -71,6 +72,7 @@
 .method private setOwner(Ljava/lang/Thread;)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Ljava/util/concurrent/locks/AbstractOwnableSynchronizer;->setExclusiveOwnerThread(Ljava/lang/Thread;)V
 
     return-void
@@ -87,6 +89,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/InterruptibleTask$Blocker;->task:Lcom/google/common/util/concurrent/InterruptibleTask;
 
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/InterruptibleTask;->toString()Ljava/lang/String;

@@ -18,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,6 +27,7 @@
 .method public static builder()Lcom/google/android/datatransport/runtime/backends/BackendRequest$Builder;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/datatransport/runtime/backends/AutoValue_BackendRequest$Builder;
 
     invoke-direct {v0}, Lcom/google/android/datatransport/runtime/backends/AutoValue_BackendRequest$Builder;-><init>()V
@@ -45,6 +47,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/android/datatransport/runtime/backends/BackendRequest;->builder()Lcom/google/android/datatransport/runtime/backends/BackendRequest$Builder;
 
     move-result-object v0

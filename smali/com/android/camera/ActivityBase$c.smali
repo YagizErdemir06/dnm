@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/ActivityBase;->Ij()V
+    value = Lcom/android/camera/ActivityBase;->ji()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,18 +27,29 @@
 
 
 # instance fields
-.field public final synthetic a:J
+.field public final synthetic c:J
 
-.field public final synthetic b:Lcom/android/camera/ActivityBase;
+.field public final synthetic d:Lcom/android/camera/ActivityBase;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera/ActivityBase;J)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$start"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera/ActivityBase$c;->b:Lcom/android/camera/ActivityBase;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/ActivityBase$c;->d:Lcom/android/camera/ActivityBase;
 
-    iput-wide p2, p0, Lcom/android/camera/ActivityBase$c;->a:J
+    iput-wide p2, p0, Lcom/android/camera/ActivityBase$c;->c:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,44 +60,57 @@
 # virtual methods
 .method public a(Landroid/graphics/Bitmap;)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "bitmap"
+        }
+    .end annotation
 
     if-eqz p1, :cond_0
 
+    .line 1
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->isRecycled()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/camera/ActivityBase$c;->b:Lcom/android/camera/ActivityBase;
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/ActivityBase$c;->d:Lcom/android/camera/ActivityBase;
 
-    invoke-static {v0, p1}, Lcom/android/camera/ActivityBase;->Gh(Lcom/android/camera/ActivityBase;Landroid/graphics/Bitmap;)V
+    invoke-static {v0, p1}, Lcom/android/camera/ActivityBase;->O7(Lcom/android/camera/ActivityBase;Landroid/graphics/Bitmap;)V
 
     goto :goto_0
 
+    .line 3
     :cond_0
-    iget-object p1, p0, Lcom/android/camera/ActivityBase$c;->b:Lcom/android/camera/ActivityBase;
+    iget-object p1, p0, Lcom/android/camera/ActivityBase$c;->d:Lcom/android/camera/ActivityBase;
 
-    iget-object p1, p1, Lcom/android/camera/ActivityBase;->K:Landroid/widget/ImageView;
+    iget-object p1, p1, Lcom/android/camera/ActivityBase;->i9:Landroid/widget/ImageView;
 
     const/16 v0, 0x8
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
 
+    .line 4
     :goto_0
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v0, "showBlurCover: show... cost time = "
+    const-string v0, "showBlurCover: show... cost time = "
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 5
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    iget-wide v2, p0, Lcom/android/camera/ActivityBase$c;->a:J
+    iget-wide v2, p0, Lcom/android/camera/ActivityBase$c;->c:J
 
     sub-long/2addr v0, v2
 
@@ -106,6 +130,7 @@
 
     const-string v0, "ActivityBase"
 
+    .line 6
     invoke-static {v0, p0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
@@ -113,12 +138,22 @@
 
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "bitmap"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
         }
     .end annotation
 
+    .line 1
     check-cast p1, Landroid/graphics/Bitmap;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/ActivityBase$c;->a(Landroid/graphics/Bitmap;)V

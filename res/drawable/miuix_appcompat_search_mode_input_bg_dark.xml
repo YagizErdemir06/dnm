@@ -4,6 +4,7 @@
     <item>
         <shape>
             <solid android:color="?miuixAppcompatColorPrimary" />
+            <padding android:top="@dimen/miuix_appcompat_search_mode_bg_padding_top" android:bottom="@dimen/miuix_appcompat_search_mode_bg_padding_bottom" />
         </shape>
     </item>
 </layer-list>

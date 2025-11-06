@@ -22,12 +22,15 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/WeakHashMap;
 
     invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
 
+    .line 3
     invoke-static {v0}, Ljava/util/Collections;->newSetFromMap(Ljava/util/Map;)Ljava/util/Set;
 
     move-result-object v0
@@ -42,6 +45,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/manager/TargetTracker;->targets:Ljava/util/Set;
 
     invoke-interface {p0}, Ljava/util/Set;->clear()V
@@ -63,6 +67,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/manager/TargetTracker;->targets:Ljava/util/Set;
 
     invoke-static {p0}, Lcom/bumptech/glide/util/Util;->getSnapshot(Ljava/util/Collection;)Ljava/util/List;
@@ -75,6 +80,7 @@
 .method public onDestroy()V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/manager/TargetTracker;->targets:Ljava/util/Set;
 
     invoke-static {p0}, Lcom/bumptech/glide/util/Util;->getSnapshot(Ljava/util/Collection;)Ljava/util/List;
@@ -98,6 +104,7 @@
 
     check-cast v0, Lcom/bumptech/glide/request/target/Target;
 
+    .line 2
     invoke-interface {v0}, Lcom/bumptech/glide/manager/LifecycleListener;->onDestroy()V
 
     goto :goto_0
@@ -109,6 +116,7 @@
 .method public onStart()V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/manager/TargetTracker;->targets:Ljava/util/Set;
 
     invoke-static {p0}, Lcom/bumptech/glide/util/Util;->getSnapshot(Ljava/util/Collection;)Ljava/util/List;
@@ -132,6 +140,7 @@
 
     check-cast v0, Lcom/bumptech/glide/request/target/Target;
 
+    .line 2
     invoke-interface {v0}, Lcom/bumptech/glide/manager/LifecycleListener;->onStart()V
 
     goto :goto_0
@@ -143,6 +152,7 @@
 .method public onStop()V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/manager/TargetTracker;->targets:Ljava/util/Set;
 
     invoke-static {p0}, Lcom/bumptech/glide/util/Util;->getSnapshot(Ljava/util/Collection;)Ljava/util/List;
@@ -166,6 +176,7 @@
 
     check-cast v0, Lcom/bumptech/glide/request/target/Target;
 
+    .line 2
     invoke-interface {v0}, Lcom/bumptech/glide/manager/LifecycleListener;->onStop()V
 
     goto :goto_0
@@ -188,6 +199,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/manager/TargetTracker;->targets:Ljava/util/Set;
 
     invoke-interface {p0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
@@ -209,6 +221,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/manager/TargetTracker;->targets:Ljava/util/Set;
 
     invoke-interface {p0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z

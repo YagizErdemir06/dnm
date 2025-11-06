@@ -149,6 +149,7 @@
 
     const-wide/32 v0, 0x493e00
 
+    .line 1
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -185,6 +186,7 @@
 
     const-wide/32 v0, 0xf4240
 
+    .line 2
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -215,6 +217,7 @@
 
     const-wide/32 v1, 0x2191c0
 
+    .line 3
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
@@ -251,6 +254,7 @@
 
     const-wide/32 v4, 0x2dc6c0
 
+    .line 4
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
@@ -275,6 +279,7 @@
 
     const-wide/32 v1, 0x5b8d80
 
+    .line 5
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
@@ -305,6 +310,7 @@
 
     const-wide/32 v0, 0x2ab980
 
+    .line 6
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -341,16 +347,16 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    const/4 v1, 0x0
-
     .line 2
     invoke-static {}, Lcom/google/common/collect/ImmutableMap;->of()Lcom/google/common/collect/ImmutableMap;
 
     move-result-object v2
 
-    const/16 v3, 0x7d0
-
     sget-object v4, Lcom/google/android/exoplayer2/util/Clock;->DEFAULT:Lcom/google/android/exoplayer2/util/Clock;
+
+    const/4 v1, 0x0
+
+    const/16 v3, 0x7d0
 
     const/4 v5, 0x0
 
@@ -433,9 +439,9 @@
     iput-wide p2, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->bitrateEstimate:J
 
     .line 13
-    new-instance p2, Lcom/google/android/exoplayer2/upstream/b;
+    new-instance p2, Ld/j/a/b/z2/b;
 
-    invoke-direct {p2, p0}, Lcom/google/android/exoplayer2/upstream/b;-><init>(Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;)V
+    invoke-direct {p2, p0}, Ld/j/a/b/z2/b;-><init>(Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;)V
 
     invoke-virtual {p1, p2}, Lcom/google/android/exoplayer2/util/NetworkTypeObserver;->register(Lcom/google/android/exoplayer2/util/NetworkTypeObserver$Listener;)V
 
@@ -478,6 +484,7 @@
 .method public static synthetic access$100(Ljava/lang/String;)[I
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->getInitialBitrateCountryGroupAssignment(Ljava/lang/String;)[I
 
     move-result-object p0
@@ -488,6 +495,7 @@
 .method private static getInitialBitrateCountryGroupAssignment(Ljava/lang/String;)[I
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -4297,6 +4305,7 @@
 
     new-array p0, v1, [I
 
+    .line 2
     fill-array-data p0, :array_0
 
     return-object p0
@@ -4304,6 +4313,7 @@
     :pswitch_0
     new-array p0, v1, [I
 
+    .line 3
     fill-array-data p0, :array_1
 
     return-object p0
@@ -4311,6 +4321,7 @@
     :pswitch_1
     new-array p0, v1, [I
 
+    .line 4
     fill-array-data p0, :array_2
 
     return-object p0
@@ -4318,6 +4329,7 @@
     :pswitch_2
     new-array p0, v1, [I
 
+    .line 5
     fill-array-data p0, :array_3
 
     return-object p0
@@ -4325,6 +4337,7 @@
     :pswitch_3
     new-array p0, v1, [I
 
+    .line 6
     fill-array-data p0, :array_4
 
     return-object p0
@@ -4332,6 +4345,7 @@
     :pswitch_4
     new-array p0, v1, [I
 
+    .line 7
     fill-array-data p0, :array_5
 
     return-object p0
@@ -4339,6 +4353,7 @@
     :pswitch_5
     new-array p0, v1, [I
 
+    .line 8
     fill-array-data p0, :array_6
 
     return-object p0
@@ -4346,6 +4361,7 @@
     :pswitch_6
     new-array p0, v1, [I
 
+    .line 9
     fill-array-data p0, :array_7
 
     return-object p0
@@ -4353,6 +4369,7 @@
     :pswitch_7
     new-array p0, v1, [I
 
+    .line 10
     fill-array-data p0, :array_8
 
     return-object p0
@@ -4360,6 +4377,7 @@
     :pswitch_8
     new-array p0, v1, [I
 
+    .line 11
     fill-array-data p0, :array_9
 
     return-object p0
@@ -4367,6 +4385,7 @@
     :pswitch_9
     new-array p0, v1, [I
 
+    .line 12
     fill-array-data p0, :array_a
 
     return-object p0
@@ -4374,6 +4393,7 @@
     :pswitch_a
     new-array p0, v1, [I
 
+    .line 13
     fill-array-data p0, :array_b
 
     return-object p0
@@ -4381,6 +4401,7 @@
     :pswitch_b
     new-array p0, v1, [I
 
+    .line 14
     fill-array-data p0, :array_c
 
     return-object p0
@@ -4388,6 +4409,7 @@
     :pswitch_c
     new-array p0, v1, [I
 
+    .line 15
     fill-array-data p0, :array_d
 
     return-object p0
@@ -4395,6 +4417,7 @@
     :pswitch_d
     new-array p0, v1, [I
 
+    .line 16
     fill-array-data p0, :array_e
 
     return-object p0
@@ -4402,6 +4425,7 @@
     :pswitch_e
     new-array p0, v1, [I
 
+    .line 17
     fill-array-data p0, :array_f
 
     return-object p0
@@ -4409,6 +4433,7 @@
     :pswitch_f
     new-array p0, v1, [I
 
+    .line 18
     fill-array-data p0, :array_10
 
     return-object p0
@@ -4416,6 +4441,7 @@
     :pswitch_10
     new-array p0, v1, [I
 
+    .line 19
     fill-array-data p0, :array_11
 
     return-object p0
@@ -4423,6 +4449,7 @@
     :pswitch_11
     new-array p0, v1, [I
 
+    .line 20
     fill-array-data p0, :array_12
 
     return-object p0
@@ -4430,6 +4457,7 @@
     :pswitch_12
     new-array p0, v1, [I
 
+    .line 21
     fill-array-data p0, :array_13
 
     return-object p0
@@ -4437,6 +4465,7 @@
     :pswitch_13
     new-array p0, v1, [I
 
+    .line 22
     fill-array-data p0, :array_14
 
     return-object p0
@@ -4444,6 +4473,7 @@
     :pswitch_14
     new-array p0, v1, [I
 
+    .line 23
     fill-array-data p0, :array_15
 
     return-object p0
@@ -4451,6 +4481,7 @@
     :pswitch_15
     new-array p0, v1, [I
 
+    .line 24
     fill-array-data p0, :array_16
 
     return-object p0
@@ -4458,6 +4489,7 @@
     :pswitch_16
     new-array p0, v1, [I
 
+    .line 25
     fill-array-data p0, :array_17
 
     return-object p0
@@ -4465,6 +4497,7 @@
     :pswitch_17
     new-array p0, v1, [I
 
+    .line 26
     fill-array-data p0, :array_18
 
     return-object p0
@@ -4472,6 +4505,7 @@
     :pswitch_18
     new-array p0, v1, [I
 
+    .line 27
     fill-array-data p0, :array_19
 
     return-object p0
@@ -4479,6 +4513,7 @@
     :pswitch_19
     new-array p0, v1, [I
 
+    .line 28
     fill-array-data p0, :array_1a
 
     return-object p0
@@ -4486,6 +4521,7 @@
     :pswitch_1a
     new-array p0, v1, [I
 
+    .line 29
     fill-array-data p0, :array_1b
 
     return-object p0
@@ -4493,6 +4529,7 @@
     :pswitch_1b
     new-array p0, v1, [I
 
+    .line 30
     fill-array-data p0, :array_1c
 
     return-object p0
@@ -4500,6 +4537,7 @@
     :pswitch_1c
     new-array p0, v1, [I
 
+    .line 31
     fill-array-data p0, :array_1d
 
     return-object p0
@@ -4507,6 +4545,7 @@
     :pswitch_1d
     new-array p0, v1, [I
 
+    .line 32
     fill-array-data p0, :array_1e
 
     return-object p0
@@ -4514,6 +4553,7 @@
     :pswitch_1e
     new-array p0, v1, [I
 
+    .line 33
     fill-array-data p0, :array_1f
 
     return-object p0
@@ -4521,6 +4561,7 @@
     :pswitch_1f
     new-array p0, v1, [I
 
+    .line 34
     fill-array-data p0, :array_20
 
     return-object p0
@@ -4528,6 +4569,7 @@
     :pswitch_20
     new-array p0, v1, [I
 
+    .line 35
     fill-array-data p0, :array_21
 
     return-object p0
@@ -4535,6 +4577,7 @@
     :pswitch_21
     new-array p0, v1, [I
 
+    .line 36
     fill-array-data p0, :array_22
 
     return-object p0
@@ -4542,6 +4585,7 @@
     :pswitch_22
     new-array p0, v1, [I
 
+    .line 37
     fill-array-data p0, :array_23
 
     return-object p0
@@ -4549,6 +4593,7 @@
     :pswitch_23
     new-array p0, v1, [I
 
+    .line 38
     fill-array-data p0, :array_24
 
     return-object p0
@@ -4556,6 +4601,7 @@
     :pswitch_24
     new-array p0, v1, [I
 
+    .line 39
     fill-array-data p0, :array_25
 
     return-object p0
@@ -4563,6 +4609,7 @@
     :pswitch_25
     new-array p0, v1, [I
 
+    .line 40
     fill-array-data p0, :array_26
 
     return-object p0
@@ -4570,6 +4617,7 @@
     :pswitch_26
     new-array p0, v1, [I
 
+    .line 41
     fill-array-data p0, :array_27
 
     return-object p0
@@ -4577,6 +4625,7 @@
     :pswitch_27
     new-array p0, v1, [I
 
+    .line 42
     fill-array-data p0, :array_28
 
     return-object p0
@@ -4584,6 +4633,7 @@
     :pswitch_28
     new-array p0, v1, [I
 
+    .line 43
     fill-array-data p0, :array_29
 
     return-object p0
@@ -4591,6 +4641,7 @@
     :pswitch_29
     new-array p0, v1, [I
 
+    .line 44
     fill-array-data p0, :array_2a
 
     return-object p0
@@ -4598,6 +4649,7 @@
     :pswitch_2a
     new-array p0, v1, [I
 
+    .line 45
     fill-array-data p0, :array_2b
 
     return-object p0
@@ -4605,6 +4657,7 @@
     :pswitch_2b
     new-array p0, v1, [I
 
+    .line 46
     fill-array-data p0, :array_2c
 
     return-object p0
@@ -4612,6 +4665,7 @@
     :pswitch_2c
     new-array p0, v1, [I
 
+    .line 47
     fill-array-data p0, :array_2d
 
     return-object p0
@@ -4619,6 +4673,7 @@
     :pswitch_2d
     new-array p0, v1, [I
 
+    .line 48
     fill-array-data p0, :array_2e
 
     return-object p0
@@ -4626,6 +4681,7 @@
     :pswitch_2e
     new-array p0, v1, [I
 
+    .line 49
     fill-array-data p0, :array_2f
 
     return-object p0
@@ -4633,6 +4689,7 @@
     :pswitch_2f
     new-array p0, v1, [I
 
+    .line 50
     fill-array-data p0, :array_30
 
     return-object p0
@@ -4640,6 +4697,7 @@
     :pswitch_30
     new-array p0, v1, [I
 
+    .line 51
     fill-array-data p0, :array_31
 
     return-object p0
@@ -4647,6 +4705,7 @@
     :pswitch_31
     new-array p0, v1, [I
 
+    .line 52
     fill-array-data p0, :array_32
 
     return-object p0
@@ -4654,6 +4713,7 @@
     :pswitch_32
     new-array p0, v1, [I
 
+    .line 53
     fill-array-data p0, :array_33
 
     return-object p0
@@ -4661,6 +4721,7 @@
     :pswitch_33
     new-array p0, v1, [I
 
+    .line 54
     fill-array-data p0, :array_34
 
     return-object p0
@@ -4668,6 +4729,7 @@
     :pswitch_34
     new-array p0, v1, [I
 
+    .line 55
     fill-array-data p0, :array_35
 
     return-object p0
@@ -4675,6 +4737,7 @@
     :pswitch_35
     new-array p0, v1, [I
 
+    .line 56
     fill-array-data p0, :array_36
 
     return-object p0
@@ -4682,6 +4745,7 @@
     :pswitch_36
     new-array p0, v1, [I
 
+    .line 57
     fill-array-data p0, :array_37
 
     return-object p0
@@ -4689,6 +4753,7 @@
     :pswitch_37
     new-array p0, v1, [I
 
+    .line 58
     fill-array-data p0, :array_38
 
     return-object p0
@@ -4696,6 +4761,7 @@
     :pswitch_38
     new-array p0, v1, [I
 
+    .line 59
     fill-array-data p0, :array_39
 
     return-object p0
@@ -4703,6 +4769,7 @@
     :pswitch_39
     new-array p0, v1, [I
 
+    .line 60
     fill-array-data p0, :array_3a
 
     return-object p0
@@ -4710,6 +4777,7 @@
     :pswitch_3a
     new-array p0, v1, [I
 
+    .line 61
     fill-array-data p0, :array_3b
 
     return-object p0
@@ -4717,6 +4785,7 @@
     :pswitch_3b
     new-array p0, v1, [I
 
+    .line 62
     fill-array-data p0, :array_3c
 
     return-object p0
@@ -4724,6 +4793,7 @@
     :pswitch_3c
     new-array p0, v1, [I
 
+    .line 63
     fill-array-data p0, :array_3d
 
     return-object p0
@@ -4731,6 +4801,7 @@
     :pswitch_3d
     new-array p0, v1, [I
 
+    .line 64
     fill-array-data p0, :array_3e
 
     return-object p0
@@ -4738,6 +4809,7 @@
     :pswitch_3e
     new-array p0, v1, [I
 
+    .line 65
     fill-array-data p0, :array_3f
 
     return-object p0
@@ -4745,6 +4817,7 @@
     :pswitch_3f
     new-array p0, v1, [I
 
+    .line 66
     fill-array-data p0, :array_40
 
     return-object p0
@@ -4752,6 +4825,7 @@
     :pswitch_40
     new-array p0, v1, [I
 
+    .line 67
     fill-array-data p0, :array_41
 
     return-object p0
@@ -4759,6 +4833,7 @@
     :pswitch_41
     new-array p0, v1, [I
 
+    .line 68
     fill-array-data p0, :array_42
 
     return-object p0
@@ -4766,6 +4841,7 @@
     :pswitch_42
     new-array p0, v1, [I
 
+    .line 69
     fill-array-data p0, :array_43
 
     return-object p0
@@ -4773,6 +4849,7 @@
     :pswitch_43
     new-array p0, v1, [I
 
+    .line 70
     fill-array-data p0, :array_44
 
     return-object p0
@@ -4780,6 +4857,7 @@
     :pswitch_44
     new-array p0, v1, [I
 
+    .line 71
     fill-array-data p0, :array_45
 
     return-object p0
@@ -4787,6 +4865,7 @@
     :pswitch_45
     new-array p0, v1, [I
 
+    .line 72
     fill-array-data p0, :array_46
 
     return-object p0
@@ -4794,6 +4873,7 @@
     :pswitch_46
     new-array p0, v1, [I
 
+    .line 73
     fill-array-data p0, :array_47
 
     return-object p0
@@ -4801,6 +4881,7 @@
     :pswitch_47
     new-array p0, v1, [I
 
+    .line 74
     fill-array-data p0, :array_48
 
     return-object p0
@@ -4808,6 +4889,7 @@
     :pswitch_48
     new-array p0, v1, [I
 
+    .line 75
     fill-array-data p0, :array_49
 
     return-object p0
@@ -4815,6 +4897,7 @@
     :pswitch_49
     new-array p0, v1, [I
 
+    .line 76
     fill-array-data p0, :array_4a
 
     return-object p0
@@ -4822,6 +4905,7 @@
     :pswitch_4a
     new-array p0, v1, [I
 
+    .line 77
     fill-array-data p0, :array_4b
 
     return-object p0
@@ -4829,6 +4913,7 @@
     :pswitch_4b
     new-array p0, v1, [I
 
+    .line 78
     fill-array-data p0, :array_4c
 
     return-object p0
@@ -4836,6 +4921,7 @@
     :pswitch_4c
     new-array p0, v1, [I
 
+    .line 79
     fill-array-data p0, :array_4d
 
     return-object p0
@@ -4843,6 +4929,7 @@
     :pswitch_4d
     new-array p0, v1, [I
 
+    .line 80
     fill-array-data p0, :array_4e
 
     return-object p0
@@ -4850,6 +4937,7 @@
     :pswitch_4e
     new-array p0, v1, [I
 
+    .line 81
     fill-array-data p0, :array_4f
 
     return-object p0
@@ -4857,6 +4945,7 @@
     :pswitch_4f
     new-array p0, v1, [I
 
+    .line 82
     fill-array-data p0, :array_50
 
     return-object p0
@@ -4864,6 +4953,7 @@
     :pswitch_50
     new-array p0, v1, [I
 
+    .line 83
     fill-array-data p0, :array_51
 
     return-object p0
@@ -4871,6 +4961,7 @@
     :pswitch_51
     new-array p0, v1, [I
 
+    .line 84
     fill-array-data p0, :array_52
 
     return-object p0
@@ -4878,6 +4969,7 @@
     :pswitch_52
     new-array p0, v1, [I
 
+    .line 85
     fill-array-data p0, :array_53
 
     return-object p0
@@ -4885,6 +4977,7 @@
     :pswitch_53
     new-array p0, v1, [I
 
+    .line 86
     fill-array-data p0, :array_54
 
     return-object p0
@@ -4892,6 +4985,7 @@
     :pswitch_54
     new-array p0, v1, [I
 
+    .line 87
     fill-array-data p0, :array_55
 
     return-object p0
@@ -4899,6 +4993,7 @@
     :pswitch_55
     new-array p0, v1, [I
 
+    .line 88
     fill-array-data p0, :array_56
 
     return-object p0
@@ -4906,6 +5001,7 @@
     :pswitch_56
     new-array p0, v1, [I
 
+    .line 89
     fill-array-data p0, :array_57
 
     return-object p0
@@ -4913,6 +5009,7 @@
     :pswitch_57
     new-array p0, v1, [I
 
+    .line 90
     fill-array-data p0, :array_58
 
     return-object p0
@@ -4920,6 +5017,7 @@
     :pswitch_58
     new-array p0, v1, [I
 
+    .line 91
     fill-array-data p0, :array_59
 
     return-object p0
@@ -4927,6 +5025,7 @@
     :pswitch_59
     new-array p0, v1, [I
 
+    .line 92
     fill-array-data p0, :array_5a
 
     return-object p0
@@ -4934,6 +5033,7 @@
     :pswitch_5a
     new-array p0, v1, [I
 
+    .line 93
     fill-array-data p0, :array_5b
 
     return-object p0
@@ -4941,6 +5041,7 @@
     :pswitch_5b
     new-array p0, v1, [I
 
+    .line 94
     fill-array-data p0, :array_5c
 
     return-object p0
@@ -4948,6 +5049,7 @@
     :pswitch_5c
     new-array p0, v1, [I
 
+    .line 95
     fill-array-data p0, :array_5d
 
     return-object p0
@@ -4955,6 +5057,7 @@
     :pswitch_5d
     new-array p0, v1, [I
 
+    .line 96
     fill-array-data p0, :array_5e
 
     return-object p0
@@ -4962,6 +5065,7 @@
     :pswitch_5e
     new-array p0, v1, [I
 
+    .line 97
     fill-array-data p0, :array_5f
 
     return-object p0
@@ -4969,6 +5073,7 @@
     :pswitch_5f
     new-array p0, v1, [I
 
+    .line 98
     fill-array-data p0, :array_60
 
     return-object p0
@@ -4976,6 +5081,7 @@
     :pswitch_60
     new-array p0, v1, [I
 
+    .line 99
     fill-array-data p0, :array_61
 
     return-object p0
@@ -4983,6 +5089,7 @@
     :pswitch_61
     new-array p0, v1, [I
 
+    .line 100
     fill-array-data p0, :array_62
 
     return-object p0
@@ -4990,6 +5097,7 @@
     :pswitch_62
     new-array p0, v1, [I
 
+    .line 101
     fill-array-data p0, :array_63
 
     return-object p0
@@ -4997,6 +5105,7 @@
     :pswitch_63
     new-array p0, v1, [I
 
+    .line 102
     fill-array-data p0, :array_64
 
     return-object p0
@@ -5004,6 +5113,7 @@
     :pswitch_64
     new-array p0, v1, [I
 
+    .line 103
     fill-array-data p0, :array_65
 
     return-object p0
@@ -5011,6 +5121,7 @@
     :pswitch_65
     new-array p0, v1, [I
 
+    .line 104
     fill-array-data p0, :array_66
 
     return-object p0
@@ -5018,6 +5129,7 @@
     :pswitch_66
     new-array p0, v1, [I
 
+    .line 105
     fill-array-data p0, :array_67
 
     return-object p0
@@ -5025,6 +5137,7 @@
     :pswitch_67
     new-array p0, v1, [I
 
+    .line 106
     fill-array-data p0, :array_68
 
     return-object p0
@@ -5032,6 +5145,7 @@
     :pswitch_68
     new-array p0, v1, [I
 
+    .line 107
     fill-array-data p0, :array_69
 
     return-object p0
@@ -5039,6 +5153,7 @@
     :pswitch_69
     new-array p0, v1, [I
 
+    .line 108
     fill-array-data p0, :array_6a
 
     return-object p0
@@ -5046,6 +5161,7 @@
     :pswitch_6a
     new-array p0, v1, [I
 
+    .line 109
     fill-array-data p0, :array_6b
 
     return-object p0
@@ -5053,6 +5169,7 @@
     :pswitch_6b
     new-array p0, v1, [I
 
+    .line 110
     fill-array-data p0, :array_6c
 
     return-object p0
@@ -5060,6 +5177,7 @@
     :pswitch_6c
     new-array p0, v1, [I
 
+    .line 111
     fill-array-data p0, :array_6d
 
     return-object p0
@@ -5067,6 +5185,7 @@
     :pswitch_6d
     new-array p0, v1, [I
 
+    .line 112
     fill-array-data p0, :array_6e
 
     return-object p0
@@ -5074,6 +5193,7 @@
     :pswitch_6e
     new-array p0, v1, [I
 
+    .line 113
     fill-array-data p0, :array_6f
 
     return-object p0
@@ -5081,6 +5201,7 @@
     :pswitch_6f
     new-array p0, v1, [I
 
+    .line 114
     fill-array-data p0, :array_70
 
     return-object p0
@@ -5088,6 +5209,7 @@
     :pswitch_70
     new-array p0, v1, [I
 
+    .line 115
     fill-array-data p0, :array_71
 
     return-object p0
@@ -5095,6 +5217,7 @@
     :pswitch_71
     new-array p0, v1, [I
 
+    .line 116
     fill-array-data p0, :array_72
 
     return-object p0
@@ -5102,6 +5225,7 @@
     :pswitch_72
     new-array p0, v1, [I
 
+    .line 117
     fill-array-data p0, :array_73
 
     return-object p0
@@ -5109,6 +5233,7 @@
     :pswitch_73
     new-array p0, v1, [I
 
+    .line 118
     fill-array-data p0, :array_74
 
     return-object p0
@@ -5116,6 +5241,7 @@
     :pswitch_74
     new-array p0, v1, [I
 
+    .line 119
     fill-array-data p0, :array_75
 
     return-object p0
@@ -5123,6 +5249,7 @@
     :pswitch_75
     new-array p0, v1, [I
 
+    .line 120
     fill-array-data p0, :array_76
 
     return-object p0
@@ -5130,6 +5257,7 @@
     :pswitch_76
     new-array p0, v1, [I
 
+    .line 121
     fill-array-data p0, :array_77
 
     return-object p0
@@ -5137,6 +5265,7 @@
     :pswitch_77
     new-array p0, v1, [I
 
+    .line 122
     fill-array-data p0, :array_78
 
     return-object p0
@@ -5144,6 +5273,7 @@
     :pswitch_78
     new-array p0, v1, [I
 
+    .line 123
     fill-array-data p0, :array_79
 
     return-object p0
@@ -5151,6 +5281,7 @@
     :pswitch_79
     new-array p0, v1, [I
 
+    .line 124
     fill-array-data p0, :array_7a
 
     return-object p0
@@ -5158,6 +5289,7 @@
     :pswitch_7a
     new-array p0, v1, [I
 
+    .line 125
     fill-array-data p0, :array_7b
 
     return-object p0
@@ -5165,6 +5297,7 @@
     :pswitch_7b
     new-array p0, v1, [I
 
+    .line 126
     fill-array-data p0, :array_7c
 
     return-object p0
@@ -5172,6 +5305,7 @@
     :pswitch_7c
     new-array p0, v1, [I
 
+    .line 127
     fill-array-data p0, :array_7d
 
     return-object p0
@@ -5179,6 +5313,7 @@
     :pswitch_7d
     new-array p0, v1, [I
 
+    .line 128
     fill-array-data p0, :array_7e
 
     return-object p0
@@ -5186,6 +5321,7 @@
     :pswitch_7e
     new-array p0, v1, [I
 
+    .line 129
     fill-array-data p0, :array_7f
 
     return-object p0
@@ -5193,6 +5329,7 @@
     :pswitch_7f
     new-array p0, v1, [I
 
+    .line 130
     fill-array-data p0, :array_80
 
     return-object p0
@@ -5200,6 +5337,7 @@
     :pswitch_80
     new-array p0, v1, [I
 
+    .line 131
     fill-array-data p0, :array_81
 
     return-object p0
@@ -5207,6 +5345,7 @@
     :pswitch_81
     new-array p0, v1, [I
 
+    .line 132
     fill-array-data p0, :array_82
 
     return-object p0
@@ -5214,6 +5353,7 @@
     :pswitch_82
     new-array p0, v1, [I
 
+    .line 133
     fill-array-data p0, :array_83
 
     return-object p0
@@ -5221,6 +5361,7 @@
     :pswitch_83
     new-array p0, v1, [I
 
+    .line 134
     fill-array-data p0, :array_84
 
     return-object p0
@@ -5228,6 +5369,7 @@
     :pswitch_84
     new-array p0, v1, [I
 
+    .line 135
     fill-array-data p0, :array_85
 
     return-object p0
@@ -5235,6 +5377,7 @@
     :pswitch_85
     new-array p0, v1, [I
 
+    .line 136
     fill-array-data p0, :array_86
 
     return-object p0
@@ -5242,6 +5385,7 @@
     :pswitch_86
     new-array p0, v1, [I
 
+    .line 137
     fill-array-data p0, :array_87
 
     return-object p0
@@ -5249,6 +5393,7 @@
     :pswitch_87
     new-array p0, v1, [I
 
+    .line 138
     fill-array-data p0, :array_88
 
     return-object p0
@@ -5256,6 +5401,7 @@
     :pswitch_88
     new-array p0, v1, [I
 
+    .line 139
     fill-array-data p0, :array_89
 
     return-object p0
@@ -5263,6 +5409,7 @@
     :pswitch_89
     new-array p0, v1, [I
 
+    .line 140
     fill-array-data p0, :array_8a
 
     return-object p0
@@ -5270,6 +5417,7 @@
     :pswitch_8a
     new-array p0, v1, [I
 
+    .line 141
     fill-array-data p0, :array_8b
 
     return-object p0
@@ -5277,6 +5425,7 @@
     :pswitch_8b
     new-array p0, v1, [I
 
+    .line 142
     fill-array-data p0, :array_8c
 
     return-object p0
@@ -5284,6 +5433,7 @@
     :pswitch_8c
     new-array p0, v1, [I
 
+    .line 143
     fill-array-data p0, :array_8d
 
     return-object p0
@@ -5291,6 +5441,7 @@
     :pswitch_8d
     new-array p0, v1, [I
 
+    .line 144
     fill-array-data p0, :array_8e
 
     return-object p0
@@ -5298,6 +5449,7 @@
     :pswitch_8e
     new-array p0, v1, [I
 
+    .line 145
     fill-array-data p0, :array_8f
 
     return-object p0
@@ -5305,6 +5457,7 @@
     :pswitch_8f
     new-array p0, v1, [I
 
+    .line 146
     fill-array-data p0, :array_90
 
     return-object p0
@@ -5312,6 +5465,7 @@
     :pswitch_90
     new-array p0, v1, [I
 
+    .line 147
     fill-array-data p0, :array_91
 
     return-object p0
@@ -5319,6 +5473,7 @@
     :pswitch_91
     new-array p0, v1, [I
 
+    .line 148
     fill-array-data p0, :array_92
 
     return-object p0
@@ -5326,6 +5481,7 @@
     :pswitch_92
     new-array p0, v1, [I
 
+    .line 149
     fill-array-data p0, :array_93
 
     return-object p0
@@ -5333,6 +5489,7 @@
     :pswitch_93
     new-array p0, v1, [I
 
+    .line 150
     fill-array-data p0, :array_94
 
     return-object p0
@@ -5340,6 +5497,7 @@
     :pswitch_94
     new-array p0, v1, [I
 
+    .line 151
     fill-array-data p0, :array_95
 
     return-object p0
@@ -5347,6 +5505,7 @@
     :pswitch_95
     new-array p0, v1, [I
 
+    .line 152
     fill-array-data p0, :array_96
 
     return-object p0
@@ -5354,6 +5513,7 @@
     :pswitch_96
     new-array p0, v1, [I
 
+    .line 153
     fill-array-data p0, :array_97
 
     return-object p0
@@ -7364,6 +7524,7 @@
 .method private getInitialBitrateEstimateForNetworkType(I)J
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->initialBitrateEstimates:Lcom/google/common/collect/ImmutableMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -7378,6 +7539,7 @@
 
     if-nez p1, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->initialBitrateEstimates:Lcom/google/common/collect/ImmutableMap;
 
     const/4 p1, 0x0
@@ -7399,10 +7561,12 @@
 
     const-wide/32 p0, 0xf4240
 
+    .line 3
     invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
 
+    .line 4
     :cond_1
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
@@ -7418,11 +7582,13 @@
 
     monitor-enter v0
 
+    .line 1
     :try_start_0
     sget-object v1, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->singletonInstance:Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;
 
     if-nez v1, :cond_0
 
+    .line 2
     new-instance v1, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter$Builder;
 
     invoke-direct {v1, p0}, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter$Builder;-><init>(Landroid/content/Context;)V
@@ -7433,6 +7599,7 @@
 
     sput-object p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->singletonInstance:Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;
 
+    .line 3
     :cond_0
     sget-object p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->singletonInstance:Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;
     :try_end_0
@@ -7457,6 +7624,7 @@
 
     const/16 p1, 0x8
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/upstream/DataSpec;->isFlagSet(I)Z
 
     move-result p0
@@ -7485,6 +7653,7 @@
 
     if-nez v0, :cond_0
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->lastReportedBitrateEstimate:J
 
     cmp-long v0, p4, v0
@@ -7493,9 +7662,11 @@
 
     return-void
 
+    .line 2
     :cond_0
     iput-wide p4, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->lastReportedBitrateEstimate:J
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->eventDispatcher:Lcom/google/android/exoplayer2/upstream/BandwidthMeter$EventListener$EventDispatcher;
 
     move v2, p1
@@ -7514,6 +7685,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget v0, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->networkType:I
 
@@ -7525,16 +7697,19 @@
 
     if-nez v1, :cond_0
 
+    .line 2
     monitor-exit p0
 
     return-void
 
+    .line 3
     :cond_0
     :try_start_1
     iget-boolean v1, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->networkTypeOverrideSet:Z
 
     if-eqz v1, :cond_1
 
+    .line 4
     iget p1, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->networkTypeOverride:I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -7542,10 +7717,12 @@
     :cond_1
     if-ne v0, p1, :cond_2
 
+    .line 5
     monitor-exit p0
 
     return-void
 
+    .line 6
     :cond_2
     :try_start_2
     iput p1, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->networkType:I
@@ -7562,6 +7739,7 @@
 
     goto :goto_1
 
+    .line 7
     :cond_3
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->getInitialBitrateEstimateForNetworkType(I)J
 
@@ -7569,12 +7747,14 @@
 
     iput-wide v0, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->bitrateEstimate:J
 
+    .line 8
     iget-object p1, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->clock:Lcom/google/android/exoplayer2/util/Clock;
 
     invoke-interface {p1}, Lcom/google/android/exoplayer2/util/Clock;->elapsedRealtime()J
 
     move-result-wide v0
 
+    .line 9
     iget p1, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->streamCount:I
 
     if-lez p1, :cond_4
@@ -7593,6 +7773,7 @@
     :goto_0
     move v3, p1
 
+    .line 10
     iget-wide v4, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->sampleBytesTransferred:J
 
     iget-wide v6, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->bitrateEstimate:J
@@ -7601,26 +7782,33 @@
 
     invoke-direct/range {v2 .. v7}, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->maybeNotifyBandwidthSample(IJJ)V
 
+    .line 11
     iput-wide v0, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->sampleStartTimeMs:J
 
     const-wide/16 v0, 0x0
 
+    .line 12
     iput-wide v0, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->sampleBytesTransferred:J
 
+    .line 13
     iput-wide v0, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->totalBytesTransferred:J
 
+    .line 14
     iput-wide v0, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->totalElapsedTimeMs:J
 
+    .line 15
     iget-object p1, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->slidingPercentile:Lcom/google/android/exoplayer2/upstream/SlidingPercentile;
 
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/upstream/SlidingPercentile;->reset()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 16
     monitor-exit p0
 
     return-void
 
+    .line 17
     :cond_5
     :goto_1
     monitor-exit p0
@@ -7640,10 +7828,13 @@
 .method public addEventListener(Landroid/os/Handler;Lcom/google/android/exoplayer2/upstream/BandwidthMeter$EventListener;)V
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-static {p2}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->eventDispatcher:Lcom/google/android/exoplayer2/upstream/BandwidthMeter$EventListener$EventDispatcher;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/android/exoplayer2/upstream/BandwidthMeter$EventListener$EventDispatcher;->addListener(Landroid/os/Handler;Lcom/google/android/exoplayer2/upstream/BandwidthMeter$EventListener;)V
@@ -7656,6 +7847,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-wide v0, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->bitrateEstimate:J
     :try_end_0
@@ -7684,6 +7876,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     invoke-static {p2, p3}, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->isTransferAtFullNetworkSpeed(Lcom/google/android/exoplayer2/upstream/DataSpec;Z)Z
 
@@ -7693,10 +7886,12 @@
 
     if-nez p1, :cond_0
 
+    .line 2
     monitor-exit p0
 
     return-void
 
+    .line 3
     :cond_0
     :try_start_1
     iget-wide p1, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->sampleBytesTransferred:J
@@ -7709,6 +7904,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 4
     monitor-exit p0
 
     return-void
@@ -7726,6 +7922,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     invoke-static {p2, p3}, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->isTransferAtFullNetworkSpeed(Lcom/google/android/exoplayer2/upstream/DataSpec;Z)Z
 
@@ -7735,10 +7932,12 @@
 
     if-nez p1, :cond_0
 
+    .line 2
     monitor-exit p0
 
     return-void
 
+    .line 3
     :cond_0
     :try_start_1
     iget p1, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->streamCount:I
@@ -7757,18 +7956,21 @@
     :goto_0
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 4
     iget-object p1, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->clock:Lcom/google/android/exoplayer2/util/Clock;
 
     invoke-interface {p1}, Lcom/google/android/exoplayer2/util/Clock;->elapsedRealtime()J
 
     move-result-wide v0
 
+    .line 5
     iget-wide v2, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->sampleStartTimeMs:J
 
     sub-long v2, v0, v2
 
     long-to-int v5, v2
 
+    .line 6
     iget-wide v2, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->totalElapsedTimeMs:J
 
     int-to-long v6, v5
@@ -7777,6 +7979,7 @@
 
     iput-wide v2, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->totalElapsedTimeMs:J
 
+    .line 7
     iget-wide v2, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->totalBytesTransferred:J
 
     iget-wide v6, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->sampleBytesTransferred:J
@@ -7797,6 +8000,7 @@
 
     div-float/2addr p1, p3
 
+    .line 8
     iget-object p3, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->slidingPercentile:Lcom/google/android/exoplayer2/upstream/SlidingPercentile;
 
     long-to-double v2, v6
@@ -7809,6 +8013,7 @@
 
     invoke-virtual {p3, v2, p1}, Lcom/google/android/exoplayer2/upstream/SlidingPercentile;->addSample(IF)V
 
+    .line 9
     iget-wide v2, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->totalElapsedTimeMs:J
 
     const-wide/16 v6, 0x7d0
@@ -7825,6 +8030,7 @@
 
     if-ltz p1, :cond_3
 
+    .line 10
     :cond_2
     iget-object p1, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->slidingPercentile:Lcom/google/android/exoplayer2/upstream/SlidingPercentile;
 
@@ -7838,6 +8044,7 @@
 
     iput-wide v2, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->bitrateEstimate:J
 
+    .line 11
     :cond_3
     iget-wide v6, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->sampleBytesTransferred:J
 
@@ -7847,12 +8054,15 @@
 
     invoke-direct/range {v4 .. v9}, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->maybeNotifyBandwidthSample(IJJ)V
 
+    .line 12
     iput-wide v0, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->sampleStartTimeMs:J
 
     const-wide/16 v0, 0x0
 
+    .line 13
     iput-wide v0, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->sampleBytesTransferred:J
 
+    .line 14
     :cond_4
     iget p1, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->streamCount:I
 
@@ -7862,6 +8072,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 15
     monitor-exit p0
 
     return-void
@@ -7885,6 +8096,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     invoke-static {p2, p3}, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->isTransferAtFullNetworkSpeed(Lcom/google/android/exoplayer2/upstream/DataSpec;Z)Z
 
@@ -7894,16 +8106,19 @@
 
     if-nez p1, :cond_0
 
+    .line 2
     monitor-exit p0
 
     return-void
 
+    .line 3
     :cond_0
     :try_start_1
     iget p1, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->streamCount:I
 
     if-nez p1, :cond_1
 
+    .line 4
     iget-object p1, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->clock:Lcom/google/android/exoplayer2/util/Clock;
 
     invoke-interface {p1}, Lcom/google/android/exoplayer2/util/Clock;->elapsedRealtime()J
@@ -7912,6 +8127,7 @@
 
     iput-wide p1, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->sampleStartTimeMs:J
 
+    .line 5
     :cond_1
     iget p1, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->streamCount:I
 
@@ -7921,6 +8137,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 6
     monitor-exit p0
 
     return-void
@@ -7936,6 +8153,7 @@
 .method public removeEventListener(Lcom/google/android/exoplayer2/upstream/BandwidthMeter$EventListener;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->eventDispatcher:Lcom/google/android/exoplayer2/upstream/BandwidthMeter$EventListener$EventDispatcher;
 
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/upstream/BandwidthMeter$EventListener$EventDispatcher;->removeListener(Lcom/google/android/exoplayer2/upstream/BandwidthMeter$EventListener;)V
@@ -7948,17 +8166,21 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iput p1, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->networkTypeOverride:I
 
     const/4 v0, 0x1
 
+    .line 2
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->networkTypeOverrideSet:Z
 
+    .line 3
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/upstream/DefaultBandwidthMeter;->onNetworkTypeChanged(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
     monitor-exit p0
 
     return-void

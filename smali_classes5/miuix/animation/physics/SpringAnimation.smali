@@ -126,16 +126,19 @@
 .method private sanityCheck()V
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/physics/SpringAnimation;->mSpring:Lmiuix/animation/physics/SpringForce;
 
     if-eqz v0, :cond_2
 
+    .line 2
     invoke-virtual {v0}, Lmiuix/animation/physics/SpringForce;->getFinalPosition()F
 
     move-result v0
 
     float-to-double v0, v0
 
+    .line 3
     iget v2, p0, Lmiuix/animation/physics/DynamicAnimation;->mMaxValue:F
 
     float-to-double v2, v2
@@ -144,6 +147,7 @@
 
     if-gtz v2, :cond_1
 
+    .line 4
     iget p0, p0, Lmiuix/animation/physics/DynamicAnimation;->mMinValue:F
 
     float-to-double v2, p0
@@ -154,6 +158,7 @@
 
     return-void
 
+    .line 5
     :cond_0
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -163,6 +168,7 @@
 
     throw p0
 
+    .line 6
     :cond_1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -172,6 +178,7 @@
 
     throw p0
 
+    .line 7
     :cond_2
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -187,32 +194,38 @@
 .method public animateToFinalPosition(F)V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lmiuix/animation/physics/DynamicAnimation;->isRunning()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     iput p1, p0, Lmiuix/animation/physics/SpringAnimation;->mPendingPosition:F
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lmiuix/animation/physics/SpringAnimation;->mSpring:Lmiuix/animation/physics/SpringForce;
 
     if-nez v0, :cond_1
 
+    .line 4
     new-instance v0, Lmiuix/animation/physics/SpringForce;
 
     invoke-direct {v0, p1}, Lmiuix/animation/physics/SpringForce;-><init>(F)V
 
     iput-object v0, p0, Lmiuix/animation/physics/SpringAnimation;->mSpring:Lmiuix/animation/physics/SpringForce;
 
+    .line 5
     :cond_1
     iget-object v0, p0, Lmiuix/animation/physics/SpringAnimation;->mSpring:Lmiuix/animation/physics/SpringForce;
 
     invoke-virtual {v0, p1}, Lmiuix/animation/physics/SpringForce;->setFinalPosition(F)Lmiuix/animation/physics/SpringForce;
 
+    .line 6
     invoke-virtual {p0}, Lmiuix/animation/physics/SpringAnimation;->start()V
 
     :goto_0
@@ -222,6 +235,7 @@
 .method public canSkipToEnd()Z
     .locals 4
 
+    .line 1
     iget-object p0, p0, Lmiuix/animation/physics/SpringAnimation;->mSpring:Lmiuix/animation/physics/SpringForce;
 
     iget-wide v0, p0, Lmiuix/animation/physics/SpringForce;->mDampingRatio:D
@@ -246,6 +260,7 @@
 .method public getAcceleration(FF)F
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/animation/physics/SpringAnimation;->mSpring:Lmiuix/animation/physics/SpringForce;
 
     invoke-virtual {p0, p1, p2}, Lmiuix/animation/physics/SpringForce;->getAcceleration(FF)F
@@ -258,6 +273,7 @@
 .method public getSpring()Lmiuix/animation/physics/SpringForce;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/animation/physics/SpringAnimation;->mSpring:Lmiuix/animation/physics/SpringForce;
 
     return-object p0
@@ -266,6 +282,7 @@
 .method public isAtEquilibrium(FF)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/animation/physics/SpringAnimation;->mSpring:Lmiuix/animation/physics/SpringForce;
 
     invoke-virtual {p0, p1, p2}, Lmiuix/animation/physics/SpringForce;->isAtEquilibrium(FF)Z
@@ -278,6 +295,7 @@
 .method public setSpring(Lmiuix/animation/physics/SpringForce;)Lmiuix/animation/physics/SpringAnimation;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/animation/physics/SpringAnimation;->mSpring:Lmiuix/animation/physics/SpringForce;
 
     return-object p0
@@ -292,12 +310,14 @@
 .method public skipToEnd()V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lmiuix/animation/physics/SpringAnimation;->canSkipToEnd()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
+    .line 2
     invoke-virtual {p0}, Lmiuix/animation/physics/DynamicAnimation;->getAnimationHandler()Lmiuix/animation/physics/AnimationHandler;
 
     move-result-object v0
@@ -308,17 +328,20 @@
 
     if-eqz v0, :cond_1
 
+    .line 3
     iget-boolean v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mRunning:Z
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
+    .line 4
     iput-boolean v0, p0, Lmiuix/animation/physics/SpringAnimation;->mEndRequested:Z
 
     :cond_0
     return-void
 
+    .line 5
     :cond_1
     new-instance p0, Landroid/util/AndroidRuntimeException;
 
@@ -328,6 +351,7 @@
 
     throw p0
 
+    .line 6
     :cond_2
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -341,8 +365,10 @@
 .method public start()V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Lmiuix/animation/physics/SpringAnimation;->sanityCheck()V
 
+    .line 2
     iget-object v0, p0, Lmiuix/animation/physics/SpringAnimation;->mSpring:Lmiuix/animation/physics/SpringForce;
 
     invoke-virtual {p0}, Lmiuix/animation/physics/DynamicAnimation;->getValueThreshold()F
@@ -353,6 +379,7 @@
 
     invoke-virtual {v0, v1, v2}, Lmiuix/animation/physics/SpringForce;->setValueThreshold(D)V
 
+    .line 3
     invoke-super {p0}, Lmiuix/animation/physics/DynamicAnimation;->start()V
 
     return-void
@@ -363,6 +390,7 @@
 
     move-object/from16 v0, p0
 
+    .line 1
     iget-boolean v1, v0, Lmiuix/animation/physics/SpringAnimation;->mEndRequested:Z
 
     const/4 v2, 0x1
@@ -375,18 +403,22 @@
 
     if-eqz v1, :cond_1
 
+    .line 2
     iget v1, v0, Lmiuix/animation/physics/SpringAnimation;->mPendingPosition:F
 
     cmpl-float v6, v1, v5
 
     if-eqz v6, :cond_0
 
+    .line 3
     iget-object v6, v0, Lmiuix/animation/physics/SpringAnimation;->mSpring:Lmiuix/animation/physics/SpringForce;
 
     invoke-virtual {v6, v1}, Lmiuix/animation/physics/SpringForce;->setFinalPosition(F)Lmiuix/animation/physics/SpringForce;
 
+    .line 4
     iput v5, v0, Lmiuix/animation/physics/SpringAnimation;->mPendingPosition:F
 
+    .line 5
     :cond_0
     iget-object v1, v0, Lmiuix/animation/physics/SpringAnimation;->mSpring:Lmiuix/animation/physics/SpringForce;
 
@@ -396,12 +428,15 @@
 
     iput v1, v0, Lmiuix/animation/physics/DynamicAnimation;->mValue:F
 
+    .line 6
     iput v4, v0, Lmiuix/animation/physics/DynamicAnimation;->mVelocity:F
 
+    .line 7
     iput-boolean v3, v0, Lmiuix/animation/physics/SpringAnimation;->mEndRequested:Z
 
     return v2
 
+    .line 8
     :cond_1
     iget v1, v0, Lmiuix/animation/physics/SpringAnimation;->mPendingPosition:F
 
@@ -409,10 +444,12 @@
 
     if-eqz v1, :cond_2
 
+    .line 9
     iget-object v1, v0, Lmiuix/animation/physics/SpringAnimation;->mSpring:Lmiuix/animation/physics/SpringForce;
 
     invoke-virtual {v1}, Lmiuix/animation/physics/SpringForce;->getFinalPosition()F
 
+    .line 10
     iget-object v6, v0, Lmiuix/animation/physics/SpringAnimation;->mSpring:Lmiuix/animation/physics/SpringForce;
 
     iget v1, v0, Lmiuix/animation/physics/DynamicAnimation;->mValue:F
@@ -433,14 +470,17 @@
 
     move-result-object v1
 
+    .line 11
     iget-object v6, v0, Lmiuix/animation/physics/SpringAnimation;->mSpring:Lmiuix/animation/physics/SpringForce;
 
     iget v7, v0, Lmiuix/animation/physics/SpringAnimation;->mPendingPosition:F
 
     invoke-virtual {v6, v7}, Lmiuix/animation/physics/SpringForce;->setFinalPosition(F)Lmiuix/animation/physics/SpringForce;
 
+    .line 12
     iput v5, v0, Lmiuix/animation/physics/SpringAnimation;->mPendingPosition:F
 
+    .line 13
     iget-object v13, v0, Lmiuix/animation/physics/SpringAnimation;->mSpring:Lmiuix/animation/physics/SpringForce;
 
     iget v5, v1, Lmiuix/animation/physics/DynamicAnimation$MassState;->mValue:F
@@ -457,16 +497,19 @@
 
     move-result-object v1
 
+    .line 14
     iget v5, v1, Lmiuix/animation/physics/DynamicAnimation$MassState;->mValue:F
 
     iput v5, v0, Lmiuix/animation/physics/DynamicAnimation;->mValue:F
 
+    .line 15
     iget v1, v1, Lmiuix/animation/physics/DynamicAnimation$MassState;->mVelocity:F
 
     iput v1, v0, Lmiuix/animation/physics/DynamicAnimation;->mVelocity:F
 
     goto :goto_0
 
+    .line 16
     :cond_2
     iget-object v13, v0, Lmiuix/animation/physics/SpringAnimation;->mSpring:Lmiuix/animation/physics/SpringForce;
 
@@ -486,14 +529,17 @@
 
     move-result-object v1
 
+    .line 17
     iget v5, v1, Lmiuix/animation/physics/DynamicAnimation$MassState;->mValue:F
 
     iput v5, v0, Lmiuix/animation/physics/DynamicAnimation;->mValue:F
 
+    .line 18
     iget v1, v1, Lmiuix/animation/physics/DynamicAnimation$MassState;->mVelocity:F
 
     iput v1, v0, Lmiuix/animation/physics/DynamicAnimation;->mVelocity:F
 
+    .line 19
     :goto_0
     iget v1, v0, Lmiuix/animation/physics/DynamicAnimation;->mValue:F
 
@@ -505,6 +551,7 @@
 
     iput v1, v0, Lmiuix/animation/physics/DynamicAnimation;->mValue:F
 
+    .line 20
     iget v5, v0, Lmiuix/animation/physics/DynamicAnimation;->mMaxValue:F
 
     invoke-static {v1, v5}, Ljava/lang/Math;->min(FF)F
@@ -513,6 +560,7 @@
 
     iput v1, v0, Lmiuix/animation/physics/DynamicAnimation;->mValue:F
 
+    .line 21
     iget v5, v0, Lmiuix/animation/physics/DynamicAnimation;->mVelocity:F
 
     invoke-virtual {v0, v1, v5}, Lmiuix/animation/physics/SpringAnimation;->isAtEquilibrium(FF)Z
@@ -521,6 +569,7 @@
 
     if-eqz v1, :cond_3
 
+    .line 22
     iget-object v1, v0, Lmiuix/animation/physics/SpringAnimation;->mSpring:Lmiuix/animation/physics/SpringForce;
 
     invoke-virtual {v1}, Lmiuix/animation/physics/SpringForce;->getFinalPosition()F
@@ -529,6 +578,7 @@
 
     iput v1, v0, Lmiuix/animation/physics/DynamicAnimation;->mValue:F
 
+    .line 23
     iput v4, v0, Lmiuix/animation/physics/DynamicAnimation;->mVelocity:F
 
     return v2

@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/upstream/cache/SimpleCache$1;
+.class public Lcom/google/android/exoplayer2/upstream/cache/SimpleCache$1;
 .super Ljava/lang/Thread;
 .source "SourceFile"
 
@@ -15,15 +15,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/android/exoplayer2/upstream/cache/SimpleCache;
+.field public final synthetic this$0:Lcom/google/android/exoplayer2/upstream/cache/SimpleCache;
 
-.field final synthetic val$conditionVariable:Landroid/os/ConditionVariable;
+.field public final synthetic val$conditionVariable:Landroid/os/ConditionVariable;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/exoplayer2/upstream/cache/SimpleCache;Ljava/lang/String;Landroid/os/ConditionVariable;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/upstream/cache/SimpleCache$1;->this$0:Lcom/google/android/exoplayer2/upstream/cache/SimpleCache;
 
     iput-object p3, p0, Lcom/google/android/exoplayer2/upstream/cache/SimpleCache$1;->val$conditionVariable:Landroid/os/ConditionVariable;
@@ -38,19 +39,23 @@
 .method public run()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/upstream/cache/SimpleCache$1;->this$0:Lcom/google/android/exoplayer2/upstream/cache/SimpleCache;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/upstream/cache/SimpleCache$1;->val$conditionVariable:Landroid/os/ConditionVariable;
 
     invoke-virtual {v1}, Landroid/os/ConditionVariable;->open()V
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/upstream/cache/SimpleCache$1;->this$0:Lcom/google/android/exoplayer2/upstream/cache/SimpleCache;
 
     invoke-static {v1}, Lcom/google/android/exoplayer2/upstream/cache/SimpleCache;->access$000(Lcom/google/android/exoplayer2/upstream/cache/SimpleCache;)V
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/exoplayer2/upstream/cache/SimpleCache$1;->this$0:Lcom/google/android/exoplayer2/upstream/cache/SimpleCache;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/upstream/cache/SimpleCache;->access$100(Lcom/google/android/exoplayer2/upstream/cache/SimpleCache;)Lcom/google/android/exoplayer2/upstream/cache/CacheEvictor;
@@ -59,6 +64,7 @@
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/upstream/cache/CacheEvictor;->onCacheInitialized()V
 
+    .line 5
     monitor-exit v0
 
     return-void

@@ -1,4 +1,4 @@
-.class final Lcom/bumptech/glide/request/transition/BitmapContainerTransitionFactory$BitmapGlideAnimation;
+.class public final Lcom/bumptech/glide/request/transition/BitmapContainerTransitionFactory$BitmapGlideAnimation;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,7 +26,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/bumptech/glide/request/transition/BitmapContainerTransitionFactory;
+.field public final synthetic this$0:Lcom/bumptech/glide/request/transition/BitmapContainerTransitionFactory;
 
 .field private final transition:Lcom/bumptech/glide/request/transition/Transition;
     .annotation system Ldalvik/annotation/Signature;
@@ -51,10 +51,12 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/bumptech/glide/request/transition/BitmapContainerTransitionFactory$BitmapGlideAnimation;->this$0:Lcom/bumptech/glide/request/transition/BitmapContainerTransitionFactory;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p2, p0, Lcom/bumptech/glide/request/transition/BitmapContainerTransitionFactory$BitmapGlideAnimation;->transition:Lcom/bumptech/glide/request/transition/Transition;
 
     return-void
@@ -72,6 +74,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p2}, Lcom/bumptech/glide/request/transition/Transition$ViewAdapter;->getView()Landroid/view/View;
 
     move-result-object v0
@@ -80,6 +83,7 @@
 
     move-result-object v0
 
+    .line 2
     new-instance v1, Landroid/graphics/drawable/BitmapDrawable;
 
     iget-object v2, p0, Lcom/bumptech/glide/request/transition/BitmapContainerTransitionFactory$BitmapGlideAnimation;->this$0:Lcom/bumptech/glide/request/transition/BitmapContainerTransitionFactory;
@@ -90,6 +94,7 @@
 
     invoke-direct {v1, v0, p1}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
+    .line 3
     iget-object p0, p0, Lcom/bumptech/glide/request/transition/BitmapContainerTransitionFactory$BitmapGlideAnimation;->transition:Lcom/bumptech/glide/request/transition/Transition;
 
     invoke-interface {p0, v1, p2}, Lcom/bumptech/glide/request/transition/Transition;->transition(Ljava/lang/Object;Lcom/bumptech/glide/request/transition/Transition$ViewAdapter;)Z

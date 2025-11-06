@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgq;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgq;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field final synthetic zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgu;
+.field public final synthetic zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgu;
 
 .field private zzb:I
 
@@ -34,6 +34,7 @@
 .method private final zza()Ljava/util/Iterator;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgq;->zzd:Ljava/util/Iterator;
 
     if-nez v0, :cond_0
@@ -63,8 +64,9 @@
 
 # virtual methods
 .method public final hasNext()Z
-    .locals 3
+    .locals 4
 
+    .line 1
     iget v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgq;->zzb:I
 
     const/4 v1, 0x1
@@ -81,6 +83,8 @@
 
     move-result v2
 
+    const/4 v3, 0x0
+
     if-lt v0, v2, :cond_2
 
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgq;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgu;
@@ -89,11 +93,10 @@
 
     move-result-object v0
 
+    .line 2
     invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
 
     move-result v0
-
-    const/4 v2, 0x0
 
     if-nez v0, :cond_1
 
@@ -110,10 +113,10 @@
     goto :goto_0
 
     :cond_0
-    return v2
+    return v3
 
     :cond_1
-    move v1, v2
+    move v1, v3
 
     :cond_2
     :goto_0
@@ -125,6 +128,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgq;->zzc:Z
 
     iget v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgq;->zzb:I
@@ -153,6 +157,7 @@
 
     iget p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgq;->zzb:I
 
+    .line 2
     invoke-interface {v0, p0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -161,6 +166,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-direct {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgq;->zza()Ljava/util/Iterator;
 
@@ -179,6 +185,7 @@
 .method public final remove()V
     .locals 3
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgq;->zzc:Z
 
     if-eqz v0, :cond_1
@@ -189,6 +196,7 @@
 
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgq;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgu;
 
+    .line 2
     invoke-static {v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgu;->zzi(Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgu;)V
 
     iget v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgq;->zzb:I
@@ -199,6 +207,7 @@
 
     move-result-object v1
 
+    .line 3
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v1
@@ -213,10 +222,12 @@
 
     iput v2, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgq;->zzb:I
 
+    .line 4
     invoke-static {v0, v1}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgu;->zzd(Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgu;I)Ljava/lang/Object;
 
     return-void
 
+    .line 5
     :cond_0
     invoke-direct {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgq;->zza()Ljava/util/Iterator;
 
@@ -226,6 +237,7 @@
 
     return-void
 
+    .line 6
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 

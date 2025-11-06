@@ -48,9 +48,9 @@
 
 .field public static final RENDERMODE_CONTINUOUSLY:I = 0x1
 
-.field public static final RENDERMODE_WHEN_DIRTY:I = 0x0
+.field public static final RENDERMODE_WHEN_DIRTY:I
 
-.field private static final TAG:Ljava/lang/String; = "GLTextureView"
+.field private static final TAG:Ljava/lang/String;
 
 .field private static final glThreadManager:Lcom/faceunity/core/weight/GLTextureView$GLThreadManager;
 
@@ -99,6 +99,16 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
+    const-class v0, Lcom/faceunity/core/weight/GLTextureView;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/faceunity/core/weight/GLTextureView;->TAG:Ljava/lang/String;
+
+    .line 2
     new-instance v0, Lcom/faceunity/core/weight/GLTextureView$GLThreadManager;
 
     const/4 v1, 0x0
@@ -191,6 +201,7 @@
 .method public static synthetic access$200(Lcom/faceunity/core/weight/GLTextureView;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/faceunity/core/weight/GLTextureView;->EGLContextClientVersion:I
 
     return p0
@@ -199,6 +210,7 @@
 .method public static synthetic access$300()Ljava/lang/String;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/faceunity/core/weight/GLTextureView;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -207,6 +219,7 @@
 .method public static synthetic access$400(Lcom/faceunity/core/weight/GLTextureView;)Lcom/faceunity/core/weight/GLTextureView$EGLConfigChooser;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/weight/GLTextureView;->eglConfigChooser:Lcom/faceunity/core/weight/GLTextureView$EGLConfigChooser;
 
     return-object p0
@@ -215,6 +228,7 @@
 .method public static synthetic access$500(Lcom/faceunity/core/weight/GLTextureView;)Lcom/faceunity/core/weight/GLTextureView$EGLContextFactory;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/weight/GLTextureView;->EGLContextFactory:Lcom/faceunity/core/weight/GLTextureView$EGLContextFactory;
 
     return-object p0
@@ -223,6 +237,7 @@
 .method public static synthetic access$600(Lcom/faceunity/core/weight/GLTextureView;)Lcom/faceunity/core/weight/GLTextureView$EGLWindowSurfaceFactory;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/weight/GLTextureView;->eglWindowSurfaceFactory:Lcom/faceunity/core/weight/GLTextureView$EGLWindowSurfaceFactory;
 
     return-object p0
@@ -231,6 +246,7 @@
 .method public static synthetic access$700()Lcom/faceunity/core/weight/GLTextureView$GLThreadManager;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/faceunity/core/weight/GLTextureView;->glThreadManager:Lcom/faceunity/core/weight/GLTextureView$GLThreadManager;
 
     return-object v0
@@ -239,6 +255,7 @@
 .method public static synthetic access$800(Lcom/faceunity/core/weight/GLTextureView;)Lcom/faceunity/core/weight/GLTextureView$Renderer;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/weight/GLTextureView;->renderer:Lcom/faceunity/core/weight/GLTextureView$Renderer;
 
     return-object p0
@@ -247,6 +264,7 @@
 .method public static synthetic access$900(Lcom/faceunity/core/weight/GLTextureView;)Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/faceunity/core/weight/GLTextureView;->preserveEGLContextOnPause:Z
 
     return p0
@@ -255,12 +273,14 @@
 .method private checkRenderThreadState()V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/weight/GLTextureView;->glThread:Lcom/faceunity/core/weight/GLTextureView$GLThread;
 
     if-nez p0, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -274,6 +294,7 @@
 .method private init()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p0}, Landroid/view/TextureView;->setSurfaceTextureListener(Landroid/view/TextureView$SurfaceTextureListener;)V
 
     return-void
@@ -284,6 +305,7 @@
 .method public addSurfaceTextureListener(Landroid/view/TextureView$SurfaceTextureListener;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/weight/GLTextureView;->surfaceTextureListeners:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -299,15 +321,18 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/faceunity/core/weight/GLTextureView;->glThread:Lcom/faceunity/core/weight/GLTextureView$GLThread;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Lcom/faceunity/core/weight/GLTextureView$GLThread;->requestExitAndWait()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     :cond_0
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
@@ -318,12 +343,14 @@
 
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
+    .line 4
     throw v0
 .end method
 
 .method public getDebugFlags()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/faceunity/core/weight/GLTextureView;->debugFlags:I
 
     return p0
@@ -332,6 +359,7 @@
 .method public getPreserveEGLContextOnPause()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/faceunity/core/weight/GLTextureView;->preserveEGLContextOnPause:Z
 
     return p0
@@ -340,6 +368,7 @@
 .method public getRenderMode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/weight/GLTextureView;->glThread:Lcom/faceunity/core/weight/GLTextureView$GLThread;
 
     invoke-virtual {p0}, Lcom/faceunity/core/weight/GLTextureView$GLThread;->getRenderMode()I
@@ -352,8 +381,10 @@
 .method public onAttachedToWindow()V
     .locals 4
 
+    .line 1
     invoke-super {p0}, Landroid/view/TextureView;->onAttachedToWindow()V
 
+    .line 2
     iget-boolean v0, p0, Lcom/faceunity/core/weight/GLTextureView;->detached:Z
 
     if-eqz v0, :cond_2
@@ -362,12 +393,14 @@
 
     if-eqz v0, :cond_2
 
+    .line 3
     iget-object v0, p0, Lcom/faceunity/core/weight/GLTextureView;->glThread:Lcom/faceunity/core/weight/GLTextureView$GLThread;
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_0
 
+    .line 4
     invoke-virtual {v0}, Lcom/faceunity/core/weight/GLTextureView$GLThread;->getRenderMode()I
 
     move-result v0
@@ -377,6 +410,7 @@
     :cond_0
     move v0, v1
 
+    .line 5
     :goto_0
     new-instance v2, Lcom/faceunity/core/weight/GLTextureView$GLThread;
 
@@ -388,8 +422,10 @@
 
     if-eq v0, v1, :cond_1
 
+    .line 6
     invoke-virtual {v2, v0}, Lcom/faceunity/core/weight/GLTextureView$GLThread;->setRenderMode(I)V
 
+    .line 7
     :cond_1
     iget-object v0, p0, Lcom/faceunity/core/weight/GLTextureView;->glThread:Lcom/faceunity/core/weight/GLTextureView$GLThread;
 
@@ -398,6 +434,7 @@
     :cond_2
     const/4 v0, 0x0
 
+    .line 8
     iput-boolean v0, p0, Lcom/faceunity/core/weight/GLTextureView;->detached:Z
 
     return-void
@@ -406,18 +443,22 @@
 .method public onDetachedFromWindow()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/weight/GLTextureView;->glThread:Lcom/faceunity/core/weight/GLTextureView$GLThread;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Lcom/faceunity/core/weight/GLTextureView$GLThread;->requestExitAndWait()V
 
     :cond_0
     const/4 v0, 0x1
 
+    .line 3
     iput-boolean v0, p0, Lcom/faceunity/core/weight/GLTextureView;->detached:Z
 
-    invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
+    .line 4
+    invoke-super {p0}, Landroid/view/TextureView;->onDetachedFromWindow()V
 
     return-void
 .end method
@@ -425,6 +466,7 @@
 .method public onLayoutChange(Landroid/view/View;IIIIIIII)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/TextureView;->getSurfaceTexture()Landroid/graphics/SurfaceTexture;
 
     move-result-object p1
@@ -443,6 +485,7 @@
 .method public onPause()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/weight/GLTextureView;->glThread:Lcom/faceunity/core/weight/GLTextureView$GLThread;
 
     invoke-virtual {p0}, Lcom/faceunity/core/weight/GLTextureView$GLThread;->onPause()V
@@ -453,6 +496,7 @@
 .method public onResume()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/weight/GLTextureView;->glThread:Lcom/faceunity/core/weight/GLTextureView$GLThread;
 
     invoke-virtual {p0}, Lcom/faceunity/core/weight/GLTextureView$GLThread;->onResume()V
@@ -463,12 +507,15 @@
 .method public onSurfaceTextureAvailable(Landroid/graphics/SurfaceTexture;II)V
     .locals 1
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/faceunity/core/weight/GLTextureView;->surfaceCreated(Landroid/graphics/SurfaceTexture;)V
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-virtual {p0, p1, v0, p2, p3}, Lcom/faceunity/core/weight/GLTextureView;->surfaceChanged(Landroid/graphics/SurfaceTexture;III)V
 
+    .line 3
     iget-object p0, p0, Lcom/faceunity/core/weight/GLTextureView;->surfaceTextureListeners:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -488,6 +535,7 @@
 
     check-cast v0, Landroid/view/TextureView$SurfaceTextureListener;
 
+    .line 4
     invoke-interface {v0, p1, p2, p3}, Landroid/view/TextureView$SurfaceTextureListener;->onSurfaceTextureAvailable(Landroid/graphics/SurfaceTexture;II)V
 
     goto :goto_0
@@ -499,8 +547,10 @@
 .method public onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)Z
     .locals 1
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/faceunity/core/weight/GLTextureView;->surfaceDestroyed(Landroid/graphics/SurfaceTexture;)V
 
+    .line 2
     iget-object p0, p0, Lcom/faceunity/core/weight/GLTextureView;->surfaceTextureListeners:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -520,6 +570,7 @@
 
     check-cast v0, Landroid/view/TextureView$SurfaceTextureListener;
 
+    .line 3
     invoke-interface {v0, p1}, Landroid/view/TextureView$SurfaceTextureListener;->onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)Z
 
     goto :goto_0
@@ -535,8 +586,10 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, v0, p2, p3}, Lcom/faceunity/core/weight/GLTextureView;->surfaceChanged(Landroid/graphics/SurfaceTexture;III)V
 
+    .line 2
     iget-object p0, p0, Lcom/faceunity/core/weight/GLTextureView;->surfaceTextureListeners:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -556,6 +609,7 @@
 
     check-cast v0, Landroid/view/TextureView$SurfaceTextureListener;
 
+    .line 3
     invoke-interface {v0, p1, p2, p3}, Landroid/view/TextureView$SurfaceTextureListener;->onSurfaceTextureSizeChanged(Landroid/graphics/SurfaceTexture;II)V
 
     goto :goto_0
@@ -567,6 +621,7 @@
 .method public onSurfaceTextureUpdated(Landroid/graphics/SurfaceTexture;)V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/weight/GLTextureView;->surfaceTextureListeners:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -586,6 +641,7 @@
 
     check-cast v0, Landroid/view/TextureView$SurfaceTextureListener;
 
+    .line 2
     invoke-interface {v0, p1}, Landroid/view/TextureView$SurfaceTextureListener;->onSurfaceTextureUpdated(Landroid/graphics/SurfaceTexture;)V
 
     goto :goto_0
@@ -597,6 +653,7 @@
 .method public queueEvent(Ljava/lang/Runnable;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/weight/GLTextureView;->glThread:Lcom/faceunity/core/weight/GLTextureView$GLThread;
 
     invoke-virtual {p0, p1}, Lcom/faceunity/core/weight/GLTextureView$GLThread;->queueEvent(Ljava/lang/Runnable;)V
@@ -607,6 +664,7 @@
 .method public requestRender()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/weight/GLTextureView;->glThread:Lcom/faceunity/core/weight/GLTextureView$GLThread;
 
     invoke-virtual {p0}, Lcom/faceunity/core/weight/GLTextureView$GLThread;->requestRender()V
@@ -615,14 +673,28 @@
 .end method
 
 .method public setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-    .locals 0
+    .locals 2
 
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x18
+
+    if-ge v0, v1, :cond_0
+
+    if-eqz p1, :cond_0
+
+    .line 2
+    invoke-super {p0, p1}, Landroid/view/TextureView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_0
     return-void
 .end method
 
 .method public setDebugFlags(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/faceunity/core/weight/GLTextureView;->debugFlags:I
 
     return-void
@@ -685,8 +757,10 @@
 .method public setEGLContextClientVersion(I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/core/weight/GLTextureView;->checkRenderThreadState()V
 
+    .line 2
     iput p1, p0, Lcom/faceunity/core/weight/GLTextureView;->EGLContextClientVersion:I
 
     return-void
@@ -695,8 +769,10 @@
 .method public setEGLContextFactory(Lcom/faceunity/core/weight/GLTextureView$EGLContextFactory;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/core/weight/GLTextureView;->checkRenderThreadState()V
 
+    .line 2
     iput-object p1, p0, Lcom/faceunity/core/weight/GLTextureView;->EGLContextFactory:Lcom/faceunity/core/weight/GLTextureView$EGLContextFactory;
 
     return-void
@@ -705,8 +781,10 @@
 .method public setEGLWindowSurfaceFactory(Lcom/faceunity/core/weight/GLTextureView$EGLWindowSurfaceFactory;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/core/weight/GLTextureView;->checkRenderThreadState()V
 
+    .line 2
     iput-object p1, p0, Lcom/faceunity/core/weight/GLTextureView;->eglWindowSurfaceFactory:Lcom/faceunity/core/weight/GLTextureView$EGLWindowSurfaceFactory;
 
     return-void
@@ -715,6 +793,7 @@
 .method public setPreserveEGLContextOnPause(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/faceunity/core/weight/GLTextureView;->preserveEGLContextOnPause:Z
 
     return-void
@@ -723,6 +802,7 @@
 .method public setRenderMode(I)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/weight/GLTextureView;->glThread:Lcom/faceunity/core/weight/GLTextureView$GLThread;
 
     invoke-virtual {p0, p1}, Lcom/faceunity/core/weight/GLTextureView$GLThread;->setRenderMode(I)V
@@ -733,12 +813,15 @@
 .method public setRenderer(Lcom/faceunity/core/weight/GLTextureView$Renderer;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/core/weight/GLTextureView;->checkRenderThreadState()V
 
+    .line 2
     iget-object v0, p0, Lcom/faceunity/core/weight/GLTextureView;->eglConfigChooser:Lcom/faceunity/core/weight/GLTextureView$EGLConfigChooser;
 
     if-nez v0, :cond_0
 
+    .line 3
     new-instance v0, Lcom/faceunity/core/weight/GLTextureView$SimpleEGLConfigChooser;
 
     const/4 v1, 0x1
@@ -747,6 +830,7 @@
 
     iput-object v0, p0, Lcom/faceunity/core/weight/GLTextureView;->eglConfigChooser:Lcom/faceunity/core/weight/GLTextureView$EGLConfigChooser;
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lcom/faceunity/core/weight/GLTextureView;->EGLContextFactory:Lcom/faceunity/core/weight/GLTextureView$EGLContextFactory;
 
@@ -754,26 +838,31 @@
 
     if-nez v0, :cond_1
 
+    .line 5
     new-instance v0, Lcom/faceunity/core/weight/GLTextureView$DefaultContextFactory;
 
     invoke-direct {v0, p0, v1}, Lcom/faceunity/core/weight/GLTextureView$DefaultContextFactory;-><init>(Lcom/faceunity/core/weight/GLTextureView;Lcom/faceunity/core/weight/GLTextureView$1;)V
 
     iput-object v0, p0, Lcom/faceunity/core/weight/GLTextureView;->EGLContextFactory:Lcom/faceunity/core/weight/GLTextureView$EGLContextFactory;
 
+    .line 6
     :cond_1
     iget-object v0, p0, Lcom/faceunity/core/weight/GLTextureView;->eglWindowSurfaceFactory:Lcom/faceunity/core/weight/GLTextureView$EGLWindowSurfaceFactory;
 
     if-nez v0, :cond_2
 
+    .line 7
     new-instance v0, Lcom/faceunity/core/weight/GLTextureView$DefaultWindowSurfaceFactory;
 
     invoke-direct {v0, v1}, Lcom/faceunity/core/weight/GLTextureView$DefaultWindowSurfaceFactory;-><init>(Lcom/faceunity/core/weight/GLTextureView$1;)V
 
     iput-object v0, p0, Lcom/faceunity/core/weight/GLTextureView;->eglWindowSurfaceFactory:Lcom/faceunity/core/weight/GLTextureView$EGLWindowSurfaceFactory;
 
+    .line 8
     :cond_2
     iput-object p1, p0, Lcom/faceunity/core/weight/GLTextureView;->renderer:Lcom/faceunity/core/weight/GLTextureView$Renderer;
 
+    .line 9
     new-instance p1, Lcom/faceunity/core/weight/GLTextureView$GLThread;
 
     iget-object v0, p0, Lcom/faceunity/core/weight/GLTextureView;->mThisWeakRef:Ljava/lang/ref/WeakReference;
@@ -782,6 +871,7 @@
 
     iput-object p1, p0, Lcom/faceunity/core/weight/GLTextureView;->glThread:Lcom/faceunity/core/weight/GLTextureView$GLThread;
 
+    .line 10
     invoke-virtual {p1}, Ljava/lang/Thread;->start()V
 
     return-void
@@ -790,6 +880,7 @@
 .method public surfaceChanged(Landroid/graphics/SurfaceTexture;III)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/weight/GLTextureView;->glThread:Lcom/faceunity/core/weight/GLTextureView$GLThread;
 
     invoke-virtual {p0, p3, p4}, Lcom/faceunity/core/weight/GLTextureView$GLThread;->onWindowResize(II)V
@@ -800,6 +891,7 @@
 .method public surfaceCreated(Landroid/graphics/SurfaceTexture;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/weight/GLTextureView;->glThread:Lcom/faceunity/core/weight/GLTextureView$GLThread;
 
     invoke-virtual {p0}, Lcom/faceunity/core/weight/GLTextureView$GLThread;->surfaceCreated()V
@@ -810,6 +902,7 @@
 .method public surfaceDestroyed(Landroid/graphics/SurfaceTexture;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/weight/GLTextureView;->glThread:Lcom/faceunity/core/weight/GLTextureView$GLThread;
 
     invoke-virtual {p0}, Lcom/faceunity/core/weight/GLTextureView$GLThread;->surfaceDestroyed()V

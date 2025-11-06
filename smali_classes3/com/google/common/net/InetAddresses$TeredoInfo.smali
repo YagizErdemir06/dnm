@@ -39,6 +39,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
@@ -61,6 +62,7 @@
     :goto_0
     const-string v4, "port \'%s\' is out of range (0 <= port <= 0xffff)"
 
+    .line 2
     invoke-static {v3, v4, p3}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;I)V
 
     if-ltz p4, :cond_1
@@ -75,8 +77,10 @@
     :goto_1
     const-string v1, "flags \'%s\' is out of range (0 <= flags <= 0xffff)"
 
+    .line 3
     invoke-static {v0, v1, p4}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;I)V
 
+    .line 4
     invoke-static {}, Lcom/google/common/net/InetAddresses;->access$000()Ljava/net/Inet4Address;
 
     move-result-object v0
@@ -89,6 +93,7 @@
 
     iput-object p1, p0, Lcom/google/common/net/InetAddresses$TeredoInfo;->server:Ljava/net/Inet4Address;
 
+    .line 5
     invoke-static {}, Lcom/google/common/net/InetAddresses;->access$000()Ljava/net/Inet4Address;
 
     move-result-object p1
@@ -101,8 +106,10 @@
 
     iput-object p1, p0, Lcom/google/common/net/InetAddresses$TeredoInfo;->client:Ljava/net/Inet4Address;
 
+    .line 6
     iput p3, p0, Lcom/google/common/net/InetAddresses$TeredoInfo;->port:I
 
+    .line 7
     iput p4, p0, Lcom/google/common/net/InetAddresses$TeredoInfo;->flags:I
 
     return-void
@@ -113,6 +120,7 @@
 .method public getClient()Ljava/net/Inet4Address;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/net/InetAddresses$TeredoInfo;->client:Ljava/net/Inet4Address;
 
     return-object p0
@@ -121,6 +129,7 @@
 .method public getFlags()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/net/InetAddresses$TeredoInfo;->flags:I
 
     return p0
@@ -129,6 +138,7 @@
 .method public getPort()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/net/InetAddresses$TeredoInfo;->port:I
 
     return p0
@@ -137,6 +147,7 @@
 .method public getServer()Ljava/net/Inet4Address;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/net/InetAddresses$TeredoInfo;->server:Ljava/net/Inet4Address;
 
     return-object p0

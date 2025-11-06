@@ -17,7 +17,7 @@
 
 
 # virtual methods
-.method public abstract apply(Lio/reactivex/Flowable;)Lkv/b;
+.method public abstract apply(Lio/reactivex/Flowable;)Ln/e/b;
     .param p1    # Lio/reactivex/Flowable;
         .annotation build Lio/reactivex/annotations/NonNull;
         .end annotation
@@ -27,7 +27,7 @@
             "(",
             "Lio/reactivex/Flowable<",
             "TUpstream;>;)",
-            "Lkv/b<",
+            "Ln/e/b<",
             "TDownstream;>;"
         }
     .end annotation

@@ -1,4 +1,4 @@
-.class final Landroidx/core/view/ViewCompat$OnReceiveContentListenerAdapter;
+.class public final Landroidx/core/view/ViewCompat$OnReceiveContentListenerAdapter;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -36,8 +36,10 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/core/view/ViewCompat$OnReceiveContentListenerAdapter;->mJetpackListener:Landroidx/core/view/OnReceiveContentListener;
 
     return-void
@@ -58,10 +60,12 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-static {p2}, Landroidx/core/view/ContentInfoCompat;->toContentInfoCompat(Landroid/view/ContentInfo;)Landroidx/core/view/ContentInfoCompat;
 
     move-result-object v0
 
+    .line 2
     iget-object p0, p0, Landroidx/core/view/ViewCompat$OnReceiveContentListenerAdapter;->mJetpackListener:Landroidx/core/view/OnReceiveContentListener;
 
     invoke-interface {p0, p1, v0}, Landroidx/core/view/OnReceiveContentListener;->onReceiveContent(Landroid/view/View;Landroidx/core/view/ContentInfoCompat;)Landroidx/core/view/ContentInfoCompat;
@@ -79,6 +83,7 @@
 
     return-object p2
 
+    .line 3
     :cond_1
     invoke-virtual {p0}, Landroidx/core/view/ContentInfoCompat;->toContentInfo()Landroid/view/ContentInfo;
 

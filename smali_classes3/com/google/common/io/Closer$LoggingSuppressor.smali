@@ -1,4 +1,4 @@
-.class final Lcom/google/common/io/Closer$LoggingSuppressor;
+.class public final Lcom/google/common/io/Closer$LoggingSuppressor;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -21,13 +21,14 @@
 
 
 # static fields
-.field static final INSTANCE:Lcom/google/common/io/Closer$LoggingSuppressor;
+.field public static final INSTANCE:Lcom/google/common/io/Closer$LoggingSuppressor;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/io/Closer$LoggingSuppressor;
 
     invoke-direct {v0}, Lcom/google/common/io/Closer$LoggingSuppressor;-><init>()V
@@ -40,6 +41,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -50,6 +52,7 @@
 .method public suppress(Ljava/io/Closeable;Ljava/lang/Throwable;Ljava/lang/Throwable;)V
     .locals 2
 
+    .line 1
     sget-object p0, Lcom/google/common/io/Closeables;->logger:Ljava/util/logging/Logger;
 
     sget-object p2, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;

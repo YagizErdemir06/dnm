@@ -14,7 +14,20 @@
 # direct methods
 .method public constructor <init>([BII)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "yuv",
+            "width",
+            "height"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-lez p2, :cond_1
@@ -23,14 +36,18 @@
 
     if-eqz p1, :cond_0
 
+    .line 2
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/I420Image;->mData:[B
 
+    .line 3
     iput p2, p0, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/I420Image;->mWidth:I
 
+    .line 4
     iput p3, p0, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/I420Image;->mHeight:I
 
     return-void
 
+    .line 5
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -40,6 +57,7 @@
 
     throw p0
 
+    .line 6
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -54,6 +72,14 @@
 # virtual methods
 .method public compressToJpeg(I)[B
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "quality"
+        }
+    .end annotation
 
     if-ltz p1, :cond_0
 
@@ -61,6 +87,7 @@
 
     if-gt p1, v0, :cond_0
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/I420Image;->mData:[B
 
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/I420Image;->mWidth:I
@@ -73,6 +100,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -86,6 +114,7 @@
 .method public getHeight()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/I420Image;->mHeight:I
 
     return p0
@@ -94,6 +123,7 @@
 .method public getWidth()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/I420Image;->mWidth:I
 
     return p0
@@ -102,6 +132,7 @@
 .method public getYuvData()[B
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/I420Image;->mData:[B
 
     return-object p0

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/extractor/ts/TsBinarySearchSeeker;
+.class public final Lcom/google/android/exoplayer2/extractor/ts/TsBinarySearchSeeker;
 .super Lcom/google/android/exoplayer2/extractor/BinarySearchSeeker;
 .source "SourceFile"
 
@@ -21,6 +21,7 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/util/TimestampAdjuster;JJII)V
     .locals 16
 
+    .line 1
     new-instance v1, Lcom/google/android/exoplayer2/extractor/BinarySearchSeeker$DefaultSeekTimestampConverter;
 
     invoke-direct {v1}, Lcom/google/android/exoplayer2/extractor/BinarySearchSeeker$DefaultSeekTimestampConverter;-><init>()V
@@ -35,11 +36,11 @@
 
     invoke-direct {v2, v3, v0, v4}, Lcom/google/android/exoplayer2/extractor/ts/TsBinarySearchSeeker$TsPcrSeeker;-><init>(ILcom/google/android/exoplayer2/util/TimestampAdjuster;I)V
 
-    const-wide/16 v5, 0x0
-
     const-wide/16 v3, 0x1
 
     add-long v7, p2, v3
+
+    const-wide/16 v5, 0x0
 
     const-wide/16 v9, 0x0
 

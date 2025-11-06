@@ -1,4 +1,4 @@
-.class final Lcom/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter;
+.class public final Lcom/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter;
 .super Lcom/google/gson/TypeAdapter;
 .source "SourceFile"
 
@@ -64,14 +64,17 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/gson/TypeAdapter;-><init>()V
 
+    .line 2
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper;
 
     invoke-direct {v0, p1, p3, p2}, Lcom/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper;-><init>(Lcom/google/gson/Gson;Lcom/google/gson/TypeAdapter;Ljava/lang/reflect/Type;)V
 
     iput-object v0, p0, Lcom/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter;->elementTypeAdapter:Lcom/google/gson/TypeAdapter;
 
+    .line 3
     iput-object p4, p0, Lcom/google/gson/internal/bind/CollectionTypeAdapterFactory$Adapter;->constructor:Lcom/google/gson/internal/ObjectConstructor;
 
     return-void

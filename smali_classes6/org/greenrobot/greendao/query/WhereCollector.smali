@@ -1,4 +1,4 @@
-.class Lorg/greenrobot/greendao/query/WhereCollector;
+.class public Lorg/greenrobot/greendao/query/WhereCollector;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -40,6 +40,17 @@
 # direct methods
 .method public constructor <init>(Lorg/greenrobot/greendao/AbstractDao;Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "dao",
+            "tablePrefix"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -50,12 +61,16 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lorg/greenrobot/greendao/query/WhereCollector;->dao:Lorg/greenrobot/greendao/AbstractDao;
 
+    .line 3
     iput-object p2, p0, Lorg/greenrobot/greendao/query/WhereCollector;->tablePrefix:Ljava/lang/String;
 
+    .line 4
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -69,13 +84,26 @@
 # virtual methods
 .method public varargs add(Lorg/greenrobot/greendao/query/WhereCondition;[Lorg/greenrobot/greendao/query/WhereCondition;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "cond",
+            "condMore"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/greenrobot/greendao/query/WhereCollector;->checkCondition(Lorg/greenrobot/greendao/query/WhereCondition;)V
 
+    .line 2
     iget-object v0, p0, Lorg/greenrobot/greendao/query/WhereCollector;->whereConditions:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 3
     array-length p1, p2
 
     const/4 v0, 0x0
@@ -85,8 +113,10 @@
 
     aget-object v1, p2, v0
 
+    .line 4
     invoke-virtual {p0, v1}, Lorg/greenrobot/greendao/query/WhereCollector;->checkCondition(Lorg/greenrobot/greendao/query/WhereCondition;)V
 
+    .line 5
     iget-object v2, p0, Lorg/greenrobot/greendao/query/WhereCollector;->whereConditions:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -101,6 +131,19 @@
 
 .method public addCondition(Ljava/lang/StringBuilder;Ljava/util/List;Lorg/greenrobot/greendao/query/WhereCondition;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "builder",
+            "values",
+            "condition"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -113,12 +156,15 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p3}, Lorg/greenrobot/greendao/query/WhereCollector;->checkCondition(Lorg/greenrobot/greendao/query/WhereCondition;)V
 
+    .line 2
     iget-object p0, p0, Lorg/greenrobot/greendao/query/WhereCollector;->tablePrefix:Ljava/lang/String;
 
     invoke-interface {p3, p1, p0}, Lorg/greenrobot/greendao/query/WhereCondition;->appendTo(Ljava/lang/StringBuilder;Ljava/lang/String;)V
 
+    .line 3
     invoke-interface {p3, p2}, Lorg/greenrobot/greendao/query/WhereCondition;->appendValuesTo(Ljava/util/List;)V
 
     return-void
@@ -126,6 +172,19 @@
 
 .method public appendWhereClause(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/util/List;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "builder",
+            "tablePrefixOrNull",
+            "values"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -137,12 +196,14 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lorg/greenrobot/greendao/query/WhereCollector;->whereConditions:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->listIterator()Ljava/util/ListIterator;
 
     move-result-object p0
 
+    .line 2
     :goto_0
     invoke-interface {p0}, Ljava/util/ListIterator;->hasNext()Z
 
@@ -150,6 +211,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 3
     invoke-interface {p0}, Ljava/util/ListIterator;->hasPrevious()Z
 
     move-result v0
@@ -158,8 +220,10 @@
 
     const-string v0, " AND "
 
+    .line 4
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 5
     :cond_0
     invoke-interface {p0}, Ljava/util/ListIterator;->next()Ljava/lang/Object;
 
@@ -167,8 +231,10 @@
 
     check-cast v0, Lorg/greenrobot/greendao/query/WhereCondition;
 
+    .line 6
     invoke-interface {v0, p1, p2}, Lorg/greenrobot/greendao/query/WhereCondition;->appendTo(Ljava/lang/StringBuilder;Ljava/lang/String;)V
 
+    .line 7
     invoke-interface {v0, p3}, Lorg/greenrobot/greendao/query/WhereCondition;->appendValuesTo(Ljava/util/List;)V
 
     goto :goto_0
@@ -179,11 +245,21 @@
 
 .method public checkCondition(Lorg/greenrobot/greendao/query/WhereCondition;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "whereCondition"
+        }
+    .end annotation
 
+    .line 1
     instance-of v0, p1, Lorg/greenrobot/greendao/query/WhereCondition$PropertyCondition;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lorg/greenrobot/greendao/query/WhereCondition$PropertyCondition;
 
     iget-object p1, p1, Lorg/greenrobot/greendao/query/WhereCondition$PropertyCondition;->property:Lorg/greenrobot/greendao/Property;
@@ -196,15 +272,26 @@
 
 .method public checkProperty(Lorg/greenrobot/greendao/Property;)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "property"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/greenrobot/greendao/query/WhereCollector;->dao:Lorg/greenrobot/greendao/AbstractDao;
 
     if-eqz v0, :cond_3
 
+    .line 2
     invoke-virtual {v0}, Lorg/greenrobot/greendao/AbstractDao;->getProperties()[Lorg/greenrobot/greendao/Property;
 
     move-result-object v0
 
+    .line 3
     array-length v1, v0
 
     const/4 v2, 0x0
@@ -233,6 +320,7 @@
 
     goto :goto_2
 
+    .line 4
     :cond_2
     new-instance v0, Lorg/greenrobot/greendao/DaoException;
 
@@ -271,23 +359,43 @@
 
 .method public varargs combineWhereConditions(Ljava/lang/String;Lorg/greenrobot/greendao/query/WhereCondition;Lorg/greenrobot/greendao/query/WhereCondition;[Lorg/greenrobot/greendao/query/WhereCondition;)Lorg/greenrobot/greendao/query/WhereCondition;
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "combineOp",
+            "cond1",
+            "cond2",
+            "condMore"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "("
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
+    .line 2
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 3
     invoke-virtual {p0, v0, v1, p2}, Lorg/greenrobot/greendao/query/WhereCollector;->addCondition(Ljava/lang/StringBuilder;Ljava/util/List;Lorg/greenrobot/greendao/query/WhereCondition;)V
 
+    .line 4
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 5
     invoke-virtual {p0, v0, v1, p3}, Lorg/greenrobot/greendao/query/WhereCollector;->addCondition(Ljava/lang/StringBuilder;Ljava/util/List;Lorg/greenrobot/greendao/query/WhereCondition;)V
 
+    .line 6
     array-length p2, p4
 
     const/4 p3, 0x0
@@ -297,8 +405,10 @@
 
     aget-object v2, p4, p3
 
+    .line 7
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 8
     invoke-virtual {p0, v0, v1, v2}, Lorg/greenrobot/greendao/query/WhereCollector;->addCondition(Ljava/lang/StringBuilder;Ljava/util/List;Lorg/greenrobot/greendao/query/WhereCondition;)V
 
     add-int/lit8 p3, p3, 0x1
@@ -308,8 +418,10 @@
     :cond_0
     const/16 p0, 0x29
 
+    .line 9
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 10
     new-instance p0, Lorg/greenrobot/greendao/query/WhereCondition$StringCondition;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -328,6 +440,7 @@
 .method public isEmpty()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/greenrobot/greendao/query/WhereCollector;->whereConditions:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z

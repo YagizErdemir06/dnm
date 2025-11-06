@@ -18,14 +18,15 @@
 
 
 # instance fields
-.field public final synthetic a:Lmiuix/popupwidget/internal/widget/GuidePopupView;
+.field public final synthetic c:Lmiuix/popupwidget/internal/widget/GuidePopupView;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/popupwidget/internal/widget/GuidePopupView;)V
     .locals 0
 
-    iput-object p1, p0, Lmiuix/popupwidget/internal/widget/GuidePopupView$c;->a:Lmiuix/popupwidget/internal/widget/GuidePopupView;
+    .line 1
+    iput-object p1, p0, Lmiuix/popupwidget/internal/widget/GuidePopupView$c;->c:Lmiuix/popupwidget/internal/widget/GuidePopupView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,15 +38,17 @@
 .method public onPreDraw()Z
     .locals 6
 
-    iget-object v0, p0, Lmiuix/popupwidget/internal/widget/GuidePopupView$c;->a:Lmiuix/popupwidget/internal/widget/GuidePopupView;
+    .line 1
+    iget-object v0, p0, Lmiuix/popupwidget/internal/widget/GuidePopupView$c;->c:Lmiuix/popupwidget/internal/widget/GuidePopupView;
 
-    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    iget-object v0, p0, Lmiuix/popupwidget/internal/widget/GuidePopupView$c;->a:Lmiuix/popupwidget/internal/widget/GuidePopupView;
+    .line 2
+    iget-object v0, p0, Lmiuix/popupwidget/internal/widget/GuidePopupView$c;->c:Lmiuix/popupwidget/internal/widget/GuidePopupView;
 
     invoke-static {v0}, Lmiuix/popupwidget/internal/widget/GuidePopupView;->a(Lmiuix/popupwidget/internal/widget/GuidePopupView;)Landroid/animation/ObjectAnimator;
 
@@ -53,7 +56,8 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lmiuix/popupwidget/internal/widget/GuidePopupView$c;->a:Lmiuix/popupwidget/internal/widget/GuidePopupView;
+    .line 3
+    iget-object v0, p0, Lmiuix/popupwidget/internal/widget/GuidePopupView$c;->c:Lmiuix/popupwidget/internal/widget/GuidePopupView;
 
     invoke-static {v0}, Lmiuix/popupwidget/internal/widget/GuidePopupView;->a(Lmiuix/popupwidget/internal/widget/GuidePopupView;)Landroid/animation/ObjectAnimator;
 
@@ -61,8 +65,9 @@
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
+    .line 4
     :cond_0
-    iget-object v0, p0, Lmiuix/popupwidget/internal/widget/GuidePopupView$c;->a:Lmiuix/popupwidget/internal/widget/GuidePopupView;
+    iget-object v0, p0, Lmiuix/popupwidget/internal/widget/GuidePopupView$c;->c:Lmiuix/popupwidget/internal/widget/GuidePopupView;
 
     sget-object v1, Landroid/view/View;->ALPHA:Landroid/util/Property;
 
@@ -82,7 +87,8 @@
 
     invoke-static {v0, v1}, Lmiuix/popupwidget/internal/widget/GuidePopupView;->b(Lmiuix/popupwidget/internal/widget/GuidePopupView;Landroid/animation/ObjectAnimator;)Landroid/animation/ObjectAnimator;
 
-    iget-object v0, p0, Lmiuix/popupwidget/internal/widget/GuidePopupView$c;->a:Lmiuix/popupwidget/internal/widget/GuidePopupView;
+    .line 5
+    iget-object v0, p0, Lmiuix/popupwidget/internal/widget/GuidePopupView$c;->c:Lmiuix/popupwidget/internal/widget/GuidePopupView;
 
     invoke-static {v0}, Lmiuix/popupwidget/internal/widget/GuidePopupView;->a(Lmiuix/popupwidget/internal/widget/GuidePopupView;)Landroid/animation/ObjectAnimator;
 
@@ -92,13 +98,14 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    iget-object v0, p0, Lmiuix/popupwidget/internal/widget/GuidePopupView$c;->a:Lmiuix/popupwidget/internal/widget/GuidePopupView;
+    .line 6
+    iget-object v0, p0, Lmiuix/popupwidget/internal/widget/GuidePopupView$c;->c:Lmiuix/popupwidget/internal/widget/GuidePopupView;
 
     invoke-static {v0}, Lmiuix/popupwidget/internal/widget/GuidePopupView;->a(Lmiuix/popupwidget/internal/widget/GuidePopupView;)Landroid/animation/ObjectAnimator;
 
     move-result-object v0
 
-    iget-object v1, p0, Lmiuix/popupwidget/internal/widget/GuidePopupView$c;->a:Lmiuix/popupwidget/internal/widget/GuidePopupView;
+    iget-object v1, p0, Lmiuix/popupwidget/internal/widget/GuidePopupView$c;->c:Lmiuix/popupwidget/internal/widget/GuidePopupView;
 
     invoke-static {v1}, Lmiuix/popupwidget/internal/widget/GuidePopupView;->e(Lmiuix/popupwidget/internal/widget/GuidePopupView;)Landroid/animation/Animator$AnimatorListener;
 
@@ -106,7 +113,8 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    iget-object p0, p0, Lmiuix/popupwidget/internal/widget/GuidePopupView$c;->a:Lmiuix/popupwidget/internal/widget/GuidePopupView;
+    .line 7
+    iget-object p0, p0, Lmiuix/popupwidget/internal/widget/GuidePopupView$c;->c:Lmiuix/popupwidget/internal/widget/GuidePopupView;
 
     invoke-static {p0}, Lmiuix/popupwidget/internal/widget/GuidePopupView;->a(Lmiuix/popupwidget/internal/widget/GuidePopupView;)Landroid/animation/ObjectAnimator;
 

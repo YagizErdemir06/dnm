@@ -1,4 +1,4 @@
-.class Lmiuix/animation/styles/TintDrawable$2;
+.class public Lmiuix/animation/styles/TintDrawable$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,15 +18,16 @@
 
 
 # instance fields
-.field final synthetic val$ref:Lmiuix/animation/styles/TintDrawable;
+.field public final synthetic val$ref:Lmiuix/animation/styles/TintDrawable;
 
-.field final synthetic val$view:Landroid/view/View;
+.field public final synthetic val$view:Landroid/view/View;
 
 
 # direct methods
 .method public constructor <init>(Landroid/view/View;Lmiuix/animation/styles/TintDrawable;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/animation/styles/TintDrawable$2;->val$view:Landroid/view/View;
 
     iput-object p2, p0, Lmiuix/animation/styles/TintDrawable$2;->val$ref:Lmiuix/animation/styles/TintDrawable;
@@ -41,6 +42,7 @@
 .method public run()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/styles/TintDrawable$2;->val$view:Landroid/view/View;
 
     iget-object p0, p0, Lmiuix/animation/styles/TintDrawable$2;->val$ref:Lmiuix/animation/styles/TintDrawable;

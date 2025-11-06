@@ -20,7 +20,7 @@
 
 
 # instance fields
-.field protected final mDataHolder:Lcom/google/android/gms/common/data/DataHolder;
+.field public final mDataHolder:Lcom/google/android/gms/common/data/DataHolder;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -51,6 +51,7 @@
 .method public final close()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/common/data/AbstractDataBuffer;->release()V
 
     return-void
@@ -112,6 +113,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/data/AbstractDataBuffer;->mDataHolder:Lcom/google/android/gms/common/data/DataHolder;
 
     if-eqz p0, :cond_1
@@ -149,6 +151,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/common/data/DataBufferIterator;
 
     invoke-direct {v0, p0}, Lcom/google/android/gms/common/data/DataBufferIterator;-><init>(Lcom/google/android/gms/common/data/DataBuffer;)V
@@ -159,6 +162,7 @@
 .method public release()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/data/AbstractDataBuffer;->mDataHolder:Lcom/google/android/gms/common/data/DataHolder;
 
     if-eqz p0, :cond_0
@@ -182,6 +186,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/common/data/SingleRefDataBufferIterator;
 
     invoke-direct {v0, p0}, Lcom/google/android/gms/common/data/SingleRefDataBufferIterator;-><init>(Lcom/google/android/gms/common/data/DataBuffer;)V

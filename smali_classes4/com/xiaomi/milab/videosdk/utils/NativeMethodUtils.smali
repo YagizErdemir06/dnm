@@ -17,6 +17,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,6 +34,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
     :try_end_0
@@ -43,7 +45,8 @@
     :catch_0
     move-exception p0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 2
+    invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     :goto_0
     return-void
@@ -392,7 +395,7 @@
     .line 29
     :goto_2
     :try_start_5
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
@@ -435,6 +438,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :try_start_0
     invoke-static {p0, v0, p1}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
@@ -444,6 +448,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 2
     :try_start_1
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
     :try_end_1
@@ -454,7 +459,8 @@
     :catch_0
     move-exception p0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 3
+    invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     :cond_0
     :goto_0
@@ -465,6 +471,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 4
     :try_start_2
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
     :try_end_2
@@ -475,8 +482,10 @@
     :catch_1
     move-exception p0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 5
+    invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
+    .line 6
     :cond_1
     :goto_1
     throw p1
@@ -528,6 +537,7 @@
 .method public static getAssets()Ljava/lang/Object;
     .locals 1
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/milab/videosdk/XmsContext;->getInstance()Lcom/xiaomi/milab/videosdk/XmsContext;
 
     move-result-object v0
@@ -556,6 +566,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 1
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->recycle()V
 
     :cond_0

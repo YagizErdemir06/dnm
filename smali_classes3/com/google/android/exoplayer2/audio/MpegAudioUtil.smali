@@ -43,13 +43,14 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    const-string v0, "audio/mpeg-L2"
+    const-string v0, "audio/mpeg-L1"
 
-    const-string v1, "audio/mpeg"
+    const-string v1, "audio/mpeg-L2"
 
-    const-string v2, "audio/mpeg-L1"
+    const-string v2, "audio/mpeg"
 
-    filled-new-array {v2, v0, v1}, [Ljava/lang/String;
+    .line 1
+    filled-new-array {v0, v1, v2}, [Ljava/lang/String;
 
     move-result-object v0
 
@@ -59,6 +60,7 @@
 
     new-array v0, v0, [I
 
+    .line 2
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->SAMPLING_RATE_V1:[I
@@ -67,30 +69,35 @@
 
     new-array v1, v0, [I
 
+    .line 3
     fill-array-data v1, :array_1
 
     sput-object v1, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->BITRATE_V1_L1:[I
 
     new-array v1, v0, [I
 
+    .line 4
     fill-array-data v1, :array_2
 
     sput-object v1, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->BITRATE_V2_L1:[I
 
     new-array v1, v0, [I
 
+    .line 5
     fill-array-data v1, :array_3
 
     sput-object v1, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->BITRATE_V1_L2:[I
 
     new-array v1, v0, [I
 
+    .line 6
     fill-array-data v1, :array_4
 
     sput-object v1, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->BITRATE_V1_L3:[I
 
     new-array v0, v0, [I
 
+    .line 7
     fill-array-data v0, :array_5
 
     sput-object v0, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->BITRATE_V2:[I
@@ -198,6 +205,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -206,6 +214,7 @@
 .method public static synthetic access$000(I)Z
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->isMagicPresent(I)Z
 
     move-result p0
@@ -216,6 +225,7 @@
 .method public static synthetic access$100()[Ljava/lang/String;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->MIME_TYPE_BY_LAYER:[Ljava/lang/String;
 
     return-object v0
@@ -224,6 +234,7 @@
 .method public static synthetic access$200()[I
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->SAMPLING_RATE_V1:[I
 
     return-object v0
@@ -232,6 +243,7 @@
 .method public static synthetic access$300(II)I
     .locals 0
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->getFrameSizeInSamples(II)I
 
     move-result p0
@@ -242,6 +254,7 @@
 .method public static synthetic access$400()[I
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->BITRATE_V1_L1:[I
 
     return-object v0
@@ -250,6 +263,7 @@
 .method public static synthetic access$500()[I
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->BITRATE_V2_L1:[I
 
     return-object v0
@@ -258,6 +272,7 @@
 .method public static synthetic access$600()[I
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->BITRATE_V1_L2:[I
 
     return-object v0
@@ -266,6 +281,7 @@
 .method public static synthetic access$700()[I
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->BITRATE_V1_L3:[I
 
     return-object v0
@@ -274,6 +290,7 @@
 .method public static synthetic access$800()[I
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->BITRATE_V2:[I
 
     return-object v0
@@ -282,6 +299,7 @@
 .method public static getFrameSize(I)I
     .locals 7
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->isMagicPresent(I)Z
 
     move-result v0
@@ -336,6 +354,7 @@
 
     return v1
 
+    .line 2
     :cond_4
     sget-object v1, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->SAMPLING_RATE_V1:[I
 
@@ -345,6 +364,7 @@
 
     if-ne v0, v6, :cond_5
 
+    .line 3
     div-int/lit8 v1, v1, 0x2
 
     goto :goto_0
@@ -352,6 +372,7 @@
     :cond_5
     if-nez v0, :cond_6
 
+    .line 4
     div-int/lit8 v1, v1, 0x4
 
     :cond_6
@@ -364,6 +385,7 @@
 
     if-ne v0, v2, :cond_7
 
+    .line 5
     sget-object v0, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->BITRATE_V1_L1:[I
 
     sub-int/2addr v5, v3
@@ -382,6 +404,7 @@
     :goto_1
     mul-int/lit8 v0, v0, 0xc
 
+    .line 6
     div-int/2addr v0, v1
 
     add-int/2addr v0, p0
@@ -395,6 +418,7 @@
 
     if-ne v4, v6, :cond_9
 
+    .line 7
     sget-object v6, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->BITRATE_V1_L2:[I
 
     sub-int/2addr v5, v3
@@ -412,6 +436,7 @@
 
     goto :goto_2
 
+    .line 8
     :cond_a
     sget-object v6, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->BITRATE_V2:[I
 
@@ -426,6 +451,7 @@
 
     mul-int/2addr v5, v6
 
+    .line 9
     div-int/2addr v5, v1
 
     add-int/2addr v5, p0
@@ -440,6 +466,7 @@
     :cond_c
     mul-int/2addr v6, v5
 
+    .line 10
     div-int/2addr v6, v1
 
     add-int/2addr v6, p0
@@ -472,6 +499,7 @@
 
     return p0
 
+    .line 1
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -517,6 +545,7 @@
 .method public static parseMpegAudioFrameSampleCount(I)I
     .locals 6
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->isMagicPresent(I)Z
 
     move-result v0
@@ -568,6 +597,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_3
     invoke-static {v0, v3}, Lcom/google/android/exoplayer2/audio/MpegAudioUtil;->getFrameSizeInSamples(II)I
 

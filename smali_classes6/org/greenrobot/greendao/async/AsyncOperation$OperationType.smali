@@ -74,6 +74,7 @@
 .method public static constructor <clinit>()V
     .locals 25
 
+    .line 1
     new-instance v0, Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;
 
     const-string v1, "Insert"
@@ -104,6 +105,7 @@
 
     sput-object v3, Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;->InsertInTxArray:Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;
 
+    .line 2
     new-instance v5, Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;
 
     const-string v7, "InsertOrReplace"
@@ -134,6 +136,7 @@
 
     sput-object v9, Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;->InsertOrReplaceInTxArray:Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;
 
+    .line 3
     new-instance v11, Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;
 
     const-string v13, "Update"
@@ -164,6 +167,7 @@
 
     sput-object v15, Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;->UpdateInTxArray:Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;
 
+    .line 4
     new-instance v14, Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;
 
     const-string v12, "Delete"
@@ -194,6 +198,7 @@
 
     sput-object v10, Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;->DeleteInTxArray:Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;
 
+    .line 5
     new-instance v8, Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;
 
     const-string v6, "DeleteByKey"
@@ -214,6 +219,7 @@
 
     sput-object v6, Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;->DeleteAll:Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;
 
+    .line 6
     new-instance v4, Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;
 
     const-string v2, "TransactionRunnable"
@@ -238,6 +244,7 @@
 
     sput-object v2, Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;->TransactionCallable:Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;
 
+    .line 7
     new-instance v6, Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;
 
     const-string v4, "QueryList"
@@ -262,6 +269,7 @@
 
     sput-object v4, Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;->QueryUnique:Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;
 
+    .line 8
     new-instance v2, Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;
 
     const-string v6, "Load"
@@ -286,6 +294,7 @@
 
     sput-object v6, Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;->LoadAll:Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;
 
+    .line 9
     new-instance v4, Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;
 
     const-string v2, "Count"
@@ -400,6 +409,7 @@
 
     aput-object v2, v6, v4
 
+    .line 10
     sput-object v6, Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;->$VALUES:[Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;
 
     return-void
@@ -407,12 +417,18 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "$enum$name",
+            "$enum$ordinal"
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -420,7 +436,16 @@
 
 .method public static valueOf(Ljava/lang/String;)Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8000
+        }
+        names = {
+            "name"
+        }
+    .end annotation
 
+    .line 1
     const-class v0, Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -435,6 +460,7 @@
 .method public static values()[Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;
     .locals 1
 
+    .line 1
     sget-object v0, Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;->$VALUES:[Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;
 
     invoke-virtual {v0}, [Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;->clone()Ljava/lang/Object;

@@ -1,4 +1,4 @@
-.class interface abstract Lcom/google/common/collect/MapMakerInternalMap$WeakValueReference;
+.class public interface abstract Lcom/google/common/collect/MapMakerInternalMap$WeakValueReference;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

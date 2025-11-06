@@ -1,4 +1,4 @@
-.class Landroidx/core/content/UnusedAppRestrictionsBackportServiceConnection$1;
+.class public Landroidx/core/content/UnusedAppRestrictionsBackportServiceConnection$1;
 .super Landroidx/core/app/unusedapprestrictions/IUnusedAppRestrictionsBackportCallback$Stub;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/core/content/UnusedAppRestrictionsBackportServiceConnection;
+.field public final synthetic this$0:Landroidx/core/content/UnusedAppRestrictionsBackportServiceConnection;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/core/content/UnusedAppRestrictionsBackportServiceConnection;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/core/content/UnusedAppRestrictionsBackportServiceConnection$1;->this$0:Landroidx/core/content/UnusedAppRestrictionsBackportServiceConnection;
 
     invoke-direct {p0}, Landroidx/core/app/unusedapprestrictions/IUnusedAppRestrictionsBackportCallback$Stub;-><init>()V
@@ -43,6 +44,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/content/UnusedAppRestrictionsBackportServiceConnection$1;->this$0:Landroidx/core/content/UnusedAppRestrictionsBackportServiceConnection;
 
     iget-object p0, p0, Landroidx/core/content/UnusedAppRestrictionsBackportServiceConnection;->mResultFuture:Landroidx/concurrent/futures/ResolvableFuture;
@@ -57,6 +59,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Landroidx/core/content/UnusedAppRestrictionsBackportServiceConnection$1;->this$0:Landroidx/core/content/UnusedAppRestrictionsBackportServiceConnection;
 
@@ -72,6 +75,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_1
     iget-object p0, p0, Landroidx/core/content/UnusedAppRestrictionsBackportServiceConnection$1;->this$0:Landroidx/core/content/UnusedAppRestrictionsBackportServiceConnection;
 
@@ -89,6 +93,7 @@
 
     const-string p1, "Unable to retrieve the permission revocation setting from the backport"
 
+    .line 4
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0

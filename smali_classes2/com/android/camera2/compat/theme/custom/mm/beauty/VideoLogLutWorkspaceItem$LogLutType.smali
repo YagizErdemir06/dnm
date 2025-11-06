@@ -1,4 +1,4 @@
-.class interface abstract annotation Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem$LogLutType;
+.class public interface abstract annotation Lcom/android/camera2/compat/theme/custom/mm/beauty/VideoLogLutWorkspaceItem$LogLutType;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

@@ -1,4 +1,4 @@
-.class final Lcom/google/common/reflect/TypeResolver$TypeVariableKey;
+.class public final Lcom/google/common/reflect/TypeResolver$TypeVariableKey;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -36,8 +36,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -59,6 +61,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/reflect/TypeResolver$TypeVariableKey;->var:Ljava/lang/reflect/TypeVariable;
 
     invoke-interface {v0}, Ljava/lang/reflect/TypeVariable;->getGenericDeclaration()Ljava/lang/reflect/GenericDeclaration;
@@ -77,6 +80,7 @@
 
     iget-object p0, p0, Lcom/google/common/reflect/TypeResolver$TypeVariableKey;->var:Ljava/lang/reflect/TypeVariable;
 
+    .line 2
     invoke-interface {p0}, Ljava/lang/reflect/TypeVariable;->getName()Ljava/lang/String;
 
     move-result-object p0
@@ -107,10 +111,12 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     instance-of v0, p0, Ljava/lang/reflect/TypeVariable;
 
     if-eqz v0, :cond_0
 
+    .line 2
     new-instance v0, Lcom/google/common/reflect/TypeResolver$TypeVariableKey;
 
     check-cast p0, Ljava/lang/reflect/TypeVariable;
@@ -134,12 +140,15 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/common/reflect/TypeResolver$TypeVariableKey;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/common/reflect/TypeResolver$TypeVariableKey;
 
+    .line 3
     iget-object p1, p1, Lcom/google/common/reflect/TypeResolver$TypeVariableKey;->var:Ljava/lang/reflect/TypeVariable;
 
     invoke-direct {p0, p1}, Lcom/google/common/reflect/TypeResolver$TypeVariableKey;->equalsTypeVariable(Ljava/lang/reflect/TypeVariable;)Z
@@ -157,10 +166,12 @@
 .method public equalsType(Ljava/lang/reflect/Type;)Z
     .locals 1
 
+    .line 1
     instance-of v0, p1, Ljava/lang/reflect/TypeVariable;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Ljava/lang/reflect/TypeVariable;
 
     invoke-direct {p0, p1}, Lcom/google/common/reflect/TypeResolver$TypeVariableKey;->equalsTypeVariable(Ljava/lang/reflect/TypeVariable;)Z
@@ -182,6 +193,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 1
     iget-object v1, p0, Lcom/google/common/reflect/TypeResolver$TypeVariableKey;->var:Ljava/lang/reflect/TypeVariable;
 
     invoke-interface {v1}, Ljava/lang/reflect/TypeVariable;->getGenericDeclaration()Ljava/lang/reflect/GenericDeclaration;
@@ -212,6 +224,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/TypeResolver$TypeVariableKey;->var:Ljava/lang/reflect/TypeVariable;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;

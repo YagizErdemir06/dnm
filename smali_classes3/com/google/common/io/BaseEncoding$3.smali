@@ -1,4 +1,4 @@
-.class Lcom/google/common/io/BaseEncoding$3;
+.class public Lcom/google/common/io/BaseEncoding$3;
 .super Ljava/io/Reader;
 .source "SourceFile"
 
@@ -15,15 +15,16 @@
 
 
 # instance fields
-.field final synthetic val$delegate:Ljava/io/Reader;
+.field public final synthetic val$delegate:Ljava/io/Reader;
 
-.field final synthetic val$toIgnore:Ljava/lang/String;
+.field public final synthetic val$toIgnore:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>(Ljava/io/Reader;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/io/BaseEncoding$3;->val$delegate:Ljava/io/Reader;
 
     iput-object p2, p0, Lcom/google/common/io/BaseEncoding$3;->val$toIgnore:Ljava/lang/String;
@@ -43,6 +44,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/io/BaseEncoding$3;->val$delegate:Ljava/io/Reader;
 
     invoke-virtual {p0}, Ljava/io/Reader;->close()V

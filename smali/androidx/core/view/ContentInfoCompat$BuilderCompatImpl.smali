@@ -1,4 +1,4 @@
-.class final Landroidx/core/view/ContentInfoCompat$BuilderCompatImpl;
+.class public final Landroidx/core/view/ContentInfoCompat$BuilderCompatImpl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,24 +18,24 @@
 
 
 # instance fields
-.field mClip:Landroid/content/ClipData;
+.field public mClip:Landroid/content/ClipData;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field mExtras:Landroid/os/Bundle;
+.field public mExtras:Landroid/os/Bundle;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field mFlags:I
+.field public mFlags:I
 
-.field mLinkUri:Landroid/net/Uri;
+.field public mLinkUri:Landroid/net/Uri;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field mSource:I
+.field public mSource:I
 
 
 # direct methods
@@ -113,6 +113,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     new-instance v0, Landroidx/core/view/ContentInfoCompat;
 
     new-instance v1, Landroidx/core/view/ContentInfoCompat$CompatImpl;
@@ -131,6 +132,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Landroidx/core/view/ContentInfoCompat$BuilderCompatImpl;->mClip:Landroid/content/ClipData;
 
     return-void
@@ -143,6 +145,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Landroidx/core/view/ContentInfoCompat$BuilderCompatImpl;->mExtras:Landroid/os/Bundle;
 
     return-void
@@ -151,6 +154,7 @@
 .method public setFlags(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/core/view/ContentInfoCompat$BuilderCompatImpl;->mFlags:I
 
     return-void
@@ -163,6 +167,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Landroidx/core/view/ContentInfoCompat$BuilderCompatImpl;->mLinkUri:Landroid/net/Uri;
 
     return-void
@@ -171,6 +176,7 @@
 .method public setSource(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/core/view/ContentInfoCompat$BuilderCompatImpl;->mSource:I
 
     return-void

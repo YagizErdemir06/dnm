@@ -1,4 +1,4 @@
-.class synthetic Lcom/google/android/exoplayer2/source/hls/MediaParserHlsMediaChunkExtractor$1;
+.class public synthetic Lcom/google/android/exoplayer2/source/hls/MediaParserHlsMediaChunkExtractor$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

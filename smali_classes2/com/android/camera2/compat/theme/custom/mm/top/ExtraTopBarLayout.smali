@@ -10,6 +10,14 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -21,6 +29,16 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     .line 2
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -59,56 +77,17 @@
     return-void
 .end method
 
-.method public static synthetic a(ILjava/util/List;Landroid/view/View$OnClickListener;Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarUIConfig;Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2, p3, p4}, Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarLayout;->lambda$updateDatas$1(ILjava/util/List;Landroid/view/View$OnClickListener;Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarUIConfig;Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;)V
-
-    return-void
-.end method
-
-.method public static synthetic b(Ljava/util/List;Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarLayout;->lambda$getViews$2(Ljava/util/List;Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;)V
-
-    return-void
-.end method
-
-.method public static synthetic c(Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarLayout;->lambda$updateLayout$5(Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;)V
-
-    return-void
-.end method
-
-.method public static synthetic d(ILcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarLayout;->lambda$notifyExtraTopBarItemChanged$3(ILcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;)V
-
-    return-void
-.end method
-
-.method public static synthetic e(Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarLayout;->lambda$notifyThemeChanged$4(Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;)V
-
-    return-void
-.end method
-
-.method public static synthetic f(Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarLayout;Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarLayout;->lambda$initView$0(Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;)V
-
-    return-void
-.end method
-
 .method private handleExtraTopBar(Ljava/util/function/Consumer;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "consumer"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -118,6 +97,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarLayout;->mExtraTopBar:[Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;
 
     invoke-static {p0}, Ljava/util/Arrays;->stream([Ljava/lang/Object;)Ljava/util/stream/Stream;
@@ -129,9 +109,10 @@
     return-void
 .end method
 
-.method private static synthetic lambda$getViews$2(Ljava/util/List;Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;)V
+.method public static synthetic lambda$getViews$2(Ljava/util/List;Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;)V
     .locals 0
 
+    .line 1
     invoke-interface {p1, p0}, Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;->getViews(Ljava/util/List;)V
 
     return-void
@@ -140,38 +121,43 @@
 .method private synthetic lambda$initView$0(Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;)V
     .locals 0
 
+    .line 1
     invoke-interface {p1, p0}, Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;->initView(Landroid/view/View;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$notifyExtraTopBarItemChanged$3(ILcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;)V
+.method public static synthetic lambda$notifyExtraTopBarItemChanged$3(ILcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;)V
     .locals 0
 
+    .line 1
     invoke-interface {p1, p0}, Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;->notifyItemChanged(I)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$notifyThemeChanged$4(Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;)V
+.method public static synthetic lambda$notifyThemeChanged$4(Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;)V
     .locals 0
 
+    .line 1
     invoke-interface {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;->notifyThemeChanged()V
 
     return-void
 .end method
 
-.method private static synthetic lambda$updateDatas$1(ILjava/util/List;Landroid/view/View$OnClickListener;Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarUIConfig;Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;)V
+.method public static synthetic lambda$updateDatas$1(ILjava/util/List;Landroid/view/View$OnClickListener;Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarUIConfig;Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;)V
     .locals 0
 
+    .line 1
     invoke-interface {p4, p0, p1, p2, p3}, Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;->updateData(ILjava/util/List;Landroid/view/View$OnClickListener;Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarUIConfig;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$updateLayout$5(Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;)V
+.method public static synthetic lambda$updateLayout$5(Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;)V
     .locals 0
 
+    .line 1
     invoke-interface {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;->updateLayout()V
 
     return-void
@@ -179,6 +165,14 @@
 
 
 # virtual methods
+.method public synthetic a(Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarLayout;->lambda$initView$0(Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarLayout;)V
+
+    return-void
+.end method
+
 .method public getViews()Ljava/util/List;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
@@ -190,13 +184,15 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/top/c;
+    .line 2
+    new-instance v1, Ld/d/b/x5/a/b/b/m/f;
 
-    invoke-direct {v1, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/c;-><init>(Ljava/util/List;)V
+    invoke-direct {v1, v0}, Ld/d/b/x5/a/b/b/m/f;-><init>(Ljava/util/List;)V
 
     invoke-direct {p0, v1}, Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarLayout;->handleExtraTopBar(Ljava/util/function/Consumer;)V
 
@@ -206,9 +202,10 @@
 .method public initView()V
     .locals 1
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/top/g;
+    .line 1
+    new-instance v0, Ld/d/b/x5/a/b/b/m/j;
 
-    invoke-direct {v0, p0}, Lcom/android/camera2/compat/theme/custom/mm/top/g;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarLayout;)V
+    invoke-direct {v0, p0}, Ld/d/b/x5/a/b/b/m/j;-><init>(Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarLayout;)V
 
     invoke-direct {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarLayout;->handleExtraTopBar(Ljava/util/function/Consumer;)V
 
@@ -217,10 +214,19 @@
 
 .method public notifyExtraTopBarItemChanged(I)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "configItem"
+        }
+    .end annotation
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/top/b;
+    .line 1
+    new-instance v0, Ld/d/b/x5/a/b/b/m/h;
 
-    invoke-direct {v0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/b;-><init>(I)V
+    invoke-direct {v0, p1}, Ld/d/b/x5/a/b/b/m/h;-><init>(I)V
 
     invoke-direct {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarLayout;->handleExtraTopBar(Ljava/util/function/Consumer;)V
 
@@ -230,9 +236,8 @@
 .method public notifyThemeChanged()V
     .locals 1
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/top/f;
-
-    invoke-direct {v0}, Lcom/android/camera2/compat/theme/custom/mm/top/f;-><init>()V
+    .line 1
+    sget-object v0, Ld/d/b/x5/a/b/b/m/i;->c:Ld/d/b/x5/a/b/b/m/i;
 
     invoke-direct {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarLayout;->handleExtraTopBar(Ljava/util/function/Consumer;)V
 
@@ -241,11 +246,26 @@
 
 .method public updateDatas(ILjava/util/List;Landroid/view/View$OnClickListener;Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarUIConfig;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "mode",
+            "topConfigItems",
+            "listener",
+            "extraTopBarUIStyle"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
             "Ljava/util/List<",
-            "Lw6/p2;",
+            "Ld/d/a/u6/a5/q/k4;",
             ">;",
             "Landroid/view/View$OnClickListener;",
             "Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarUIConfig;",
@@ -253,9 +273,10 @@
         }
     .end annotation
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/top/e;
+    .line 1
+    new-instance v0, Ld/d/b/x5/a/b/b/m/e;
 
-    invoke-direct {v0, p1, p2, p3, p4}, Lcom/android/camera2/compat/theme/custom/mm/top/e;-><init>(ILjava/util/List;Landroid/view/View$OnClickListener;Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarUIConfig;)V
+    invoke-direct {v0, p1, p2, p3, p4}, Ld/d/b/x5/a/b/b/m/e;-><init>(ILjava/util/List;Landroid/view/View$OnClickListener;Lcom/android/camera2/compat/theme/custom/mm/top/IExtraTopBarUIConfig;)V
 
     invoke-direct {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarLayout;->handleExtraTopBar(Ljava/util/function/Consumer;)V
 
@@ -265,9 +286,8 @@
 .method public updateLayout()V
     .locals 1
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/top/d;
-
-    invoke-direct {v0}, Lcom/android/camera2/compat/theme/custom/mm/top/d;-><init>()V
+    .line 1
+    sget-object v0, Ld/d/b/x5/a/b/b/m/g;->c:Ld/d/b/x5/a/b/b/m/g;
 
     invoke-direct {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/ExtraTopBarLayout;->handleExtraTopBar(Ljava/util/function/Consumer;)V
 

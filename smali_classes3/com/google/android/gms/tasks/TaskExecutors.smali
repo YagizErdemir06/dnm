@@ -9,13 +9,14 @@
     .end annotation
 .end field
 
-.field static final zza:Ljava/util/concurrent/Executor;
+.field public static final zza:Ljava/util/concurrent/Executor;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/tasks/zzu;
 
     invoke-direct {v0}, Lcom/google/android/gms/tasks/zzu;-><init>()V

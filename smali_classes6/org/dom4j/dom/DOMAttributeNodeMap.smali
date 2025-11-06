@@ -14,8 +14,10 @@
 .method public constructor <init>(Lorg/dom4j/dom/DOMElement;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lorg/dom4j/dom/DOMAttributeNodeMap;->element:Lorg/dom4j/dom/DOMElement;
 
     return-void
@@ -31,6 +33,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lorg/dom4j/dom/DOMNodeHelper;->notSupported()V
 
     return-void
@@ -39,6 +42,7 @@
 .method public getLength()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/dom/DOMAttributeNodeMap;->element:Lorg/dom4j/dom/DOMElement;
 
     invoke-virtual {p0}, Lorg/dom4j/tree/DefaultElement;->attributeCount()I
@@ -51,6 +55,7 @@
 .method public getNamedItem(Ljava/lang/String;)Lorg/w3c/dom/Node;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/dom/DOMAttributeNodeMap;->element:Lorg/dom4j/dom/DOMElement;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/dom/DOMElement;->getAttributeNode(Ljava/lang/String;)Lorg/w3c/dom/Attr;
@@ -63,6 +68,7 @@
 .method public getNamedItemNS(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Node;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/dom/DOMAttributeNodeMap;->element:Lorg/dom4j/dom/DOMElement;
 
     invoke-virtual {p0, p1, p2}, Lorg/dom4j/dom/DOMElement;->getAttributeNodeNS(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Attr;
@@ -75,6 +81,7 @@
 .method public item(I)Lorg/w3c/dom/Node;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/dom/DOMAttributeNodeMap;->element:Lorg/dom4j/dom/DOMElement;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/tree/DefaultElement;->attribute(I)Lorg/dom4j/Attribute;
@@ -89,13 +96,14 @@
 .end method
 
 .method public removeNamedItem(Ljava/lang/String;)Lorg/w3c/dom/Node;
-    .locals 2
+    .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/w3c/dom/DOMException;
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/dom/DOMAttributeNodeMap;->element:Lorg/dom4j/dom/DOMElement;
 
     invoke-virtual {v0, p1}, Lorg/dom4j/dom/DOMElement;->getAttributeNode(Ljava/lang/String;)Lorg/w3c/dom/Attr;
@@ -104,6 +112,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lorg/dom4j/dom/DOMAttributeNodeMap;->element:Lorg/dom4j/dom/DOMElement;
 
     invoke-virtual {p0, v0}, Lorg/dom4j/dom/DOMElement;->removeAttributeNode(Lorg/w3c/dom/Attr;)Lorg/w3c/dom/Attr;
@@ -112,24 +121,25 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance p0, Lorg/w3c/dom/DOMException;
 
-    new-instance v0, Ljava/lang/StringBuffer;
+    const/16 v0, 0x8
 
-    invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
+    new-instance v1, Ljava/lang/StringBuffer;
 
-    const-string v1, "No attribute named "
+    invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    const-string v2, "No attribute named "
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object p1
-
-    const/16 v0, 0x8
 
     invoke-direct {p0, v0, p1}, Lorg/w3c/dom/DOMException;-><init>(SLjava/lang/String;)V
 
@@ -144,6 +154,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/dom/DOMAttributeNodeMap;->element:Lorg/dom4j/dom/DOMElement;
 
     invoke-virtual {v0, p1, p2}, Lorg/dom4j/dom/DOMElement;->getAttributeNodeNS(Ljava/lang/String;Ljava/lang/String;)Lorg/w3c/dom/Attr;
@@ -152,6 +163,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 2
     iget-object p0, p0, Lorg/dom4j/dom/DOMAttributeNodeMap;->element:Lorg/dom4j/dom/DOMElement;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/dom/DOMElement;->removeAttributeNode(Lorg/w3c/dom/Attr;)Lorg/w3c/dom/Attr;
@@ -165,17 +177,19 @@
 .end method
 
 .method public setNamedItem(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
-    .locals 2
+    .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/w3c/dom/DOMException;
         }
     .end annotation
 
+    .line 1
     instance-of v0, p1, Lorg/w3c/dom/Attr;
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lorg/dom4j/dom/DOMAttributeNodeMap;->element:Lorg/dom4j/dom/DOMElement;
 
     check-cast p1, Lorg/w3c/dom/Attr;
@@ -186,24 +200,25 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance p0, Lorg/w3c/dom/DOMException;
 
-    new-instance v0, Ljava/lang/StringBuffer;
+    const/16 v0, 0x9
 
-    invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
+    new-instance v1, Ljava/lang/StringBuffer;
 
-    const-string v1, "Node is not an Attr: "
+    invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    const-string v2, "Node is not an Attr: "
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object p1
-
-    const/16 v0, 0x9
 
     invoke-direct {p0, v0, p1}, Lorg/w3c/dom/DOMException;-><init>(SLjava/lang/String;)V
 
@@ -211,17 +226,19 @@
 .end method
 
 .method public setNamedItemNS(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
-    .locals 2
+    .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/w3c/dom/DOMException;
         }
     .end annotation
 
+    .line 1
     instance-of v0, p1, Lorg/w3c/dom/Attr;
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lorg/dom4j/dom/DOMAttributeNodeMap;->element:Lorg/dom4j/dom/DOMElement;
 
     check-cast p1, Lorg/w3c/dom/Attr;
@@ -232,24 +249,25 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance p0, Lorg/w3c/dom/DOMException;
 
-    new-instance v0, Ljava/lang/StringBuffer;
+    const/16 v0, 0x9
 
-    invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
+    new-instance v1, Ljava/lang/StringBuffer;
 
-    const-string v1, "Node is not an Attr: "
+    invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    const-string v2, "Node is not an Attr: "
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object p1
-
-    const/16 v0, 0x9
 
     invoke-direct {p0, v0, p1}, Lorg/w3c/dom/DOMException;-><init>(SLjava/lang/String;)V
 

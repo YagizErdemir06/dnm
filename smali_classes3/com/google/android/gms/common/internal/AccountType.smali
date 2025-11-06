@@ -27,13 +27,13 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    const-string v0, "com.google.work"
+    const-string v0, "com.google"
 
-    const-string v1, "cn.google"
+    const-string v1, "com.google.work"
 
-    const-string v2, "com.google"
+    const-string v2, "cn.google"
 
-    filled-new-array {v2, v0, v1}, [Ljava/lang/String;
+    filled-new-array {v0, v1, v2}, [Ljava/lang/String;
 
     move-result-object v0
 

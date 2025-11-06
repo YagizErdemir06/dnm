@@ -28,15 +28,15 @@
 
 .field private atts:Lorg/xml/sax/helpers/AttributesImpl;
 
-.field contentHandler:Lorg/xml/sax/ContentHandler;
+.field public contentHandler:Lorg/xml/sax/ContentHandler;
 
-.field dtdHandler:Lorg/xml/sax/DTDHandler;
+.field public dtdHandler:Lorg/xml/sax/DTDHandler;
 
-.field entityResolver:Lorg/xml/sax/EntityResolver;
+.field public entityResolver:Lorg/xml/sax/EntityResolver;
 
-.field errorHandler:Lorg/xml/sax/ErrorHandler;
+.field public errorHandler:Lorg/xml/sax/ErrorHandler;
 
-.field locator:Lorg/xml/sax/Locator;
+.field public locator:Lorg/xml/sax/Locator;
 
 .field private nameParts:[Ljava/lang/String;
 
@@ -390,15 +390,15 @@
 
     new-array p2, p0, [Ljava/lang/String;
 
-    const/4 p0, 0x1
-
-    const-string p3, ""
-
-    aput-object p3, p2, p0
-
     const/4 p0, 0x0
 
-    aput-object p3, p2, p0
+    const/4 p3, 0x1
+
+    const-string v0, ""
+
+    aput-object v0, p2, p3
+
+    aput-object v0, p2, p0
 
     const/4 p0, 0x2
 
@@ -435,9 +435,11 @@
 .end method
 
 .method private setup(Lorg/xml/sax/Parser;)V
-    .locals 0
+    .locals 1
 
-    if-eqz p1, :cond_0
+    const-string v0, "Parser argument must not be null"
+
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     iput-object p1, p0, Lorg/xml/sax/helpers/ParserAdapter;->parser:Lorg/xml/sax/Parser;
 
@@ -460,15 +462,6 @@
     iput-object p1, p0, Lorg/xml/sax/helpers/ParserAdapter;->attAdapter:Lorg/xml/sax/helpers/ParserAdapter$AttributeListAdapter;
 
     return-void
-
-    :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string p1, "Parser argument must not be null"
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method
 
 .method private setupParser()V
@@ -822,6 +815,8 @@
     invoke-interface {v1, p1}, Lorg/xml/sax/Parser;->parse(Lorg/xml/sax/InputSource;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iput-boolean v0, p0, Lorg/xml/sax/helpers/ParserAdapter;->parsing:Z
 
     iput-boolean v0, p0, Lorg/xml/sax/helpers/ParserAdapter;->parsing:Z
 
@@ -1258,13 +1253,13 @@
 
     iget-object v0, v1, Lorg/xml/sax/helpers/ParserAdapter;->atts:Lorg/xml/sax/helpers/AttributesImpl;
 
-    const-string v17, ""
-
-    const-string v18, ""
-
     invoke-virtual {v15}, Ljava/lang/String;->intern()Ljava/lang/String;
 
     move-result-object v19
+
+    const-string v17, ""
+
+    const-string v18, ""
 
     move-object/from16 v16, v0
 

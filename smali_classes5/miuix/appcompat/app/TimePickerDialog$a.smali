@@ -18,14 +18,15 @@
 
 
 # instance fields
-.field public final synthetic a:Lmiuix/appcompat/app/TimePickerDialog;
+.field public final synthetic c:Lmiuix/appcompat/app/TimePickerDialog;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/appcompat/app/TimePickerDialog;)V
     .locals 0
 
-    iput-object p1, p0, Lmiuix/appcompat/app/TimePickerDialog$a;->a:Lmiuix/appcompat/app/TimePickerDialog;
+    .line 1
+    iput-object p1, p0, Lmiuix/appcompat/app/TimePickerDialog$a;->c:Lmiuix/appcompat/app/TimePickerDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,9 +38,10 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/TimePickerDialog$a;->a:Lmiuix/appcompat/app/TimePickerDialog;
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/TimePickerDialog$a;->c:Lmiuix/appcompat/app/TimePickerDialog;
 
-    invoke-static {p0}, Lmiuix/appcompat/app/TimePickerDialog;->L(Lmiuix/appcompat/app/TimePickerDialog;)V
+    invoke-static {p0}, Lmiuix/appcompat/app/TimePickerDialog;->A(Lmiuix/appcompat/app/TimePickerDialog;)V
 
     return-void
 .end method

@@ -24,6 +24,7 @@
 
     new-array v0, v0, [I
 
+    .line 1
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/google/android/exoplayer2/source/hls/DefaultHlsExtractorFactory;->DEFAULT_EXTRACTOR_ORDER:[I
@@ -83,6 +84,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/source/hls/DefaultHlsExtractorFactory;->DEFAULT_EXTRACTOR_ORDER:[I
 
     invoke-static {v0, p0}, Lcom/google/common/primitives/Ints;->indexOf([II)I
@@ -105,6 +107,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -175,6 +178,7 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     new-instance p0, Lcom/google/android/exoplayer2/source/hls/WebvttExtractor;
 
@@ -184,6 +188,7 @@
 
     return-object p0
 
+    .line 2
     :cond_1
     iget p1, p0, Lcom/google/android/exoplayer2/source/hls/DefaultHlsExtractorFactory;->payloadReaderFactoryFlags:I
 
@@ -195,6 +200,7 @@
 
     return-object p0
 
+    .line 3
     :cond_2
     invoke-static {p4, p2, p3}, Lcom/google/android/exoplayer2/source/hls/DefaultHlsExtractorFactory;->createFragmentedMp4Extractor(Lcom/google/android/exoplayer2/util/TimestampAdjuster;Lcom/google/android/exoplayer2/Format;Ljava/util/List;)Lcom/google/android/exoplayer2/extractor/mp4/FragmentedMp4Extractor;
 
@@ -202,6 +208,7 @@
 
     return-object p0
 
+    .line 4
     :cond_3
     new-instance p0, Lcom/google/android/exoplayer2/extractor/mp3/Mp3Extractor;
 
@@ -213,6 +220,7 @@
 
     return-object p0
 
+    .line 5
     :cond_4
     new-instance p0, Lcom/google/android/exoplayer2/extractor/ts/AdtsExtractor;
 
@@ -220,6 +228,7 @@
 
     return-object p0
 
+    .line 6
     :cond_5
     new-instance p0, Lcom/google/android/exoplayer2/extractor/ts/Ac4Extractor;
 
@@ -227,6 +236,7 @@
 
     return-object p0
 
+    .line 7
     :cond_6
     new-instance p0, Lcom/google/android/exoplayer2/extractor/ts/Ac3Extractor;
 
@@ -253,8 +263,10 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/extractor/mp4/FragmentedMp4Extractor;
 
+    .line 2
     invoke-static {p1}, Lcom/google/android/exoplayer2/source/hls/DefaultHlsExtractorFactory;->isFmp4Variant(Lcom/google/android/exoplayer2/Format;)Z
 
     move-result p1
@@ -269,18 +281,19 @@
     const/4 p1, 0x0
 
     :goto_0
+    const/4 v1, 0x0
+
     if-eqz p2, :cond_1
 
     goto :goto_1
 
+    .line 3
     :cond_1
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p2
 
     :goto_1
-    const/4 v1, 0x0
-
     invoke-direct {v0, p1, p0, v1, p2}, Lcom/google/android/exoplayer2/extractor/mp4/FragmentedMp4Extractor;-><init>(ILcom/google/android/exoplayer2/util/TimestampAdjuster;Lcom/google/android/exoplayer2/extractor/mp4/Track;Ljava/util/List;)V
 
     return-object v0
@@ -316,12 +329,14 @@
     :cond_0
     if-eqz p1, :cond_1
 
+    .line 1
     new-instance p1, Lcom/google/android/exoplayer2/Format$Builder;
 
     invoke-direct {p1}, Lcom/google/android/exoplayer2/Format$Builder;-><init>()V
 
     const-string p3, "application/cea-608"
 
+    .line 2
     invoke-virtual {p1, p3}, Lcom/google/android/exoplayer2/Format$Builder;->setSampleMimeType(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p1
@@ -330,20 +345,24 @@
 
     move-result-object p1
 
+    .line 3
     invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p3
 
     goto :goto_0
 
+    .line 4
     :cond_1
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p3
 
+    .line 5
     :goto_0
     iget-object p1, p2, Lcom/google/android/exoplayer2/Format;->codecs:Ljava/lang/String;
 
+    .line 6
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p2
@@ -352,6 +371,7 @@
 
     const-string p2, "audio/mp4a-latm"
 
+    .line 7
     invoke-static {p1, p2}, Lcom/google/android/exoplayer2/util/MimeTypes;->containsCodecsCorrespondingToMimeType(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p2
@@ -363,6 +383,7 @@
     :cond_2
     const-string p2, "video/avc"
 
+    .line 8
     invoke-static {p1, p2}, Lcom/google/android/exoplayer2/util/MimeTypes;->containsCodecsCorrespondingToMimeType(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p1
@@ -371,6 +392,7 @@
 
     or-int/lit8 p0, p0, 0x4
 
+    .line 9
     :cond_3
     new-instance p1, Lcom/google/android/exoplayer2/extractor/ts/TsExtractor;
 
@@ -388,6 +410,7 @@
 .method private static isFmp4Variant(Lcom/google/android/exoplayer2/Format;)Z
     .locals 4
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Format;->metadata:Lcom/google/android/exoplayer2/metadata/Metadata;
 
     const/4 v0, 0x0
@@ -399,6 +422,7 @@
     :cond_0
     move v1, v0
 
+    .line 2
     :goto_0
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/metadata/Metadata;->length()I
 
@@ -406,14 +430,17 @@
 
     if-ge v1, v2, :cond_2
 
+    .line 3
     invoke-virtual {p0, v1}, Lcom/google/android/exoplayer2/metadata/Metadata;->get(I)Lcom/google/android/exoplayer2/metadata/Metadata$Entry;
 
     move-result-object v2
 
+    .line 4
     instance-of v3, v2, Lcom/google/android/exoplayer2/source/hls/HlsTrackMetadataEntry;
 
     if-eqz v3, :cond_1
 
+    .line 5
     check-cast v2, Lcom/google/android/exoplayer2/source/hls/HlsTrackMetadataEntry;
 
     iget-object p0, v2, Lcom/google/android/exoplayer2/source/hls/HlsTrackMetadataEntry;->variantInfos:Ljava/util/List;
@@ -443,6 +470,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/extractor/Extractor;->sniff(Lcom/google/android/exoplayer2/extractor/ExtractorInput;)Z
 
@@ -451,6 +479,7 @@
     .catch Ljava/io/EOFException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
 
     goto :goto_0
@@ -460,8 +489,10 @@
 
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
 
+    .line 3
     throw p0
 
+    .line 4
     :catch_0
     invoke-interface {p1}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
 
@@ -560,11 +591,11 @@
 
     goto :goto_0
 
-    .line 11
     :cond_0
-    invoke-interface {p6}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
-
     const/4 v1, 0x0
+
+    .line 11
+    invoke-interface {p6}, Lcom/google/android/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
 
     .line 12
     :goto_1

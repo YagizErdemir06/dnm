@@ -1,11 +1,11 @@
-.class Landroidx/core/widget/EdgeEffectCompat$Api31Impl;
+.class public Landroidx/core/widget/EdgeEffectCompat$Api31Impl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # annotations
 .annotation build Landroidx/annotation/RequiresApi;
-    value = 0x1f
+    value = 0x1e
 .end annotation
 
 .annotation system Ldalvik/annotation/EnclosingClass;
@@ -22,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,6 +33,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     :try_start_0
     new-instance v0, Landroid/widget/EdgeEffect;
 
@@ -41,6 +43,7 @@
 
     return-object v0
 
+    .line 2
     :catchall_0
     new-instance p1, Landroid/widget/EdgeEffect;
 
@@ -54,8 +57,9 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     :try_start_0
-    invoke-static {p0}, Landroidx/core/widget/e;->a(Landroid/widget/EdgeEffect;)F
+    invoke-virtual {p0}, Landroid/widget/EdgeEffect;->getDistance()F
 
     move-result p0
     :try_end_0
@@ -74,8 +78,9 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     :try_start_0
-    invoke-static {p0, p1, p2}, Landroidx/core/widget/f;->a(Landroid/widget/EdgeEffect;FF)F
+    invoke-virtual {p0, p1, p2}, Landroid/widget/EdgeEffect;->onPullDistance(FF)F
 
     move-result p0
     :try_end_0
@@ -83,6 +88,7 @@
 
     return p0
 
+    .line 2
     :catchall_0
     invoke-virtual {p0, p1, p2}, Landroid/widget/EdgeEffect;->onPull(FF)V
 

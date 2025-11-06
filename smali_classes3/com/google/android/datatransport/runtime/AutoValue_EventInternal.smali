@@ -1,4 +1,4 @@
-.class final Lcom/google/android/datatransport/runtime/AutoValue_EventInternal;
+.class public final Lcom/google/android/datatransport/runtime/AutoValue_EventInternal;
 .super Lcom/google/android/datatransport/runtime/EventInternal;
 .source "SourceFile"
 
@@ -99,6 +99,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/android/datatransport/runtime/EventInternal;
 
@@ -106,8 +107,10 @@
 
     if-eqz v1, :cond_3
 
+    .line 2
     check-cast p1, Lcom/google/android/datatransport/runtime/EventInternal;
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal;->transportName:Ljava/lang/String;
 
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/EventInternal;->getTransportName()Ljava/lang/String;
@@ -124,6 +127,7 @@
 
     if-nez v1, :cond_1
 
+    .line 4
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/EventInternal;->getCode()Ljava/lang/Integer;
 
     move-result-object v1
@@ -146,6 +150,7 @@
     :goto_0
     iget-object v1, p0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal;->encodedPayload:Lcom/google/android/datatransport/runtime/EncodedPayload;
 
+    .line 5
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/EventInternal;->getEncodedPayload()Lcom/google/android/datatransport/runtime/EncodedPayload;
 
     move-result-object v3
@@ -158,6 +163,7 @@
 
     iget-wide v3, p0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal;->eventMillis:J
 
+    .line 6
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/EventInternal;->getEventMillis()J
 
     move-result-wide v5
@@ -168,6 +174,7 @@
 
     iget-wide v3, p0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal;->uptimeMillis:J
 
+    .line 7
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/EventInternal;->getUptimeMillis()J
 
     move-result-wide v5
@@ -178,6 +185,7 @@
 
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal;->autoMetadata:Ljava/util/Map;
 
+    .line 8
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/EventInternal;->getAutoMetadata()Ljava/util/Map;
 
     move-result-object p1
@@ -212,6 +220,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal;->autoMetadata:Ljava/util/Map;
 
     return-object p0
@@ -222,6 +231,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal;->code:Ljava/lang/Integer;
 
     return-object p0
@@ -230,6 +240,7 @@
 .method public getEncodedPayload()Lcom/google/android/datatransport/runtime/EncodedPayload;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal;->encodedPayload:Lcom/google/android/datatransport/runtime/EncodedPayload;
 
     return-object p0
@@ -238,6 +249,7 @@
 .method public getEventMillis()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal;->eventMillis:J
 
     return-wide v0
@@ -246,6 +258,7 @@
 .method public getTransportName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal;->transportName:Ljava/lang/String;
 
     return-object p0
@@ -254,6 +267,7 @@
 .method public getUptimeMillis()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal;->uptimeMillis:J
 
     return-wide v0
@@ -262,6 +276,7 @@
 .method public hashCode()I
     .locals 7
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal;->transportName:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -274,6 +289,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 2
     iget-object v2, p0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal;->code:Ljava/lang/Integer;
 
     if-nez v2, :cond_0
@@ -292,6 +308,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 3
     iget-object v2, p0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal;->encodedPayload:Lcom/google/android/datatransport/runtime/EncodedPayload;
 
     invoke-virtual {v2}, Lcom/google/android/datatransport/runtime/EncodedPayload;->hashCode()I
@@ -302,6 +319,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 4
     iget-wide v2, p0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal;->eventMillis:J
 
     const/16 v4, 0x20
@@ -316,6 +334,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 5
     iget-wide v2, p0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal;->uptimeMillis:J
 
     ushr-long v4, v2, v4
@@ -328,6 +347,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 6
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/AutoValue_EventInternal;->autoMetadata:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->hashCode()I
@@ -342,6 +362,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

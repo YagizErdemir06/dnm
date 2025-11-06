@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/upstream/FileDataSource$Api21;
+.class public final Lcom/google/android/exoplayer2/upstream/FileDataSource$Api21;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,6 +31,7 @@
 .method public static synthetic access$000(Ljava/lang/Throwable;)Z
     .locals 0
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/upstream/FileDataSource$Api21;->isPermissionError(Ljava/lang/Throwable;)Z
 
     move-result p0
@@ -46,6 +48,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     instance-of v0, p0, Landroid/system/ErrnoException;
 
     if-eqz v0, :cond_0

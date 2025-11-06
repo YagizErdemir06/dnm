@@ -52,6 +52,11 @@
 
     move-object/from16 v11, p7
 
+    .line 1
+    invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
+
+    move-result-object v17
+
     const/4 v2, 0x0
 
     const-string v3, ""
@@ -65,11 +70,6 @@
     const/4 v9, 0x0
 
     const/16 v16, 0x0
-
-    .line 1
-    invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
-
-    move-result-object v17
 
     .line 2
     invoke-direct/range {v0 .. v17}, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;-><init>(Ljava/lang/String;Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;Ljava/lang/String;JIJLcom/google/android/exoplayer2/drm/DrmInitData;Ljava/lang/String;Ljava/lang/String;JJZLjava/util/List;)V
@@ -165,6 +165,7 @@
 
     move-object/from16 v0, p0
 
+    .line 1
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
@@ -173,6 +174,7 @@
 
     move-wide/from16 v2, p1
 
+    .line 2
     :goto_0
     iget-object v4, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;->parts:Ljava/util/List;
 
@@ -182,6 +184,7 @@
 
     if-ge v1, v4, :cond_0
 
+    .line 3
     iget-object v4, v0, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;->parts:Ljava/util/List;
 
     invoke-interface {v4, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -192,12 +195,14 @@
 
     move/from16 v7, p3
 
+    .line 4
     invoke-virtual {v4, v2, v3, v7}, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Part;->copyWith(JI)Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Part;
 
     move-result-object v5
 
     invoke-interface {v8, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 5
     iget-wide v4, v4, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist$SegmentBase;->durationUs:J
 
     add-long/2addr v2, v4
@@ -209,6 +214,7 @@
     :cond_0
     move/from16 v7, p3
 
+    .line 6
     new-instance v19, Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;
 
     move-object/from16 v1, v19

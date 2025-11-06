@@ -67,14 +67,17 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/jaxb/JAXBWriter;->xmlWriter:Lorg/dom4j/io/XMLWriter;
 
     if-nez v0, :cond_1
 
+    .line 2
     iget-object v0, p0, Lorg/dom4j/jaxb/JAXBWriter;->outputFormat:Lorg/dom4j/io/OutputFormat;
 
     if-eqz v0, :cond_0
 
+    .line 3
     new-instance v0, Lorg/dom4j/io/XMLWriter;
 
     iget-object v1, p0, Lorg/dom4j/jaxb/JAXBWriter;->outputFormat:Lorg/dom4j/io/OutputFormat;
@@ -85,6 +88,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     new-instance v0, Lorg/dom4j/io/XMLWriter;
 
@@ -92,6 +96,7 @@
 
     iput-object v0, p0, Lorg/dom4j/jaxb/JAXBWriter;->xmlWriter:Lorg/dom4j/io/XMLWriter;
 
+    .line 5
     :cond_1
     :goto_0
     iget-object p0, p0, Lorg/dom4j/jaxb/JAXBWriter;->xmlWriter:Lorg/dom4j/io/XMLWriter;
@@ -110,6 +115,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lorg/dom4j/jaxb/JAXBWriter;->getWriter()Lorg/dom4j/io/XMLWriter;
 
     move-result-object p0
@@ -122,6 +128,7 @@
 .method public getOutputFormat()Lorg/dom4j/io/OutputFormat;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/jaxb/JAXBWriter;->outputFormat:Lorg/dom4j/io/OutputFormat;
 
     return-object p0
@@ -194,6 +201,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lorg/dom4j/jaxb/JAXBWriter;->getWriter()Lorg/dom4j/io/XMLWriter;
 
     move-result-object p0
@@ -212,6 +220,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lorg/dom4j/jaxb/JAXBWriter;->getWriter()Lorg/dom4j/io/XMLWriter;
 
     move-result-object v0
@@ -234,6 +243,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lorg/dom4j/jaxb/JAXBWriter;->getWriter()Lorg/dom4j/io/XMLWriter;
 
     move-result-object v0
@@ -255,6 +265,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lorg/dom4j/jaxb/JAXBWriter;->getWriter()Lorg/dom4j/io/XMLWriter;
 
     move-result-object p0
@@ -272,6 +283,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lorg/dom4j/jaxb/JAXBWriter;->getWriter()Lorg/dom4j/io/XMLWriter;
 
     move-result-object p0
@@ -290,6 +302,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lorg/dom4j/jaxb/JAXBWriter;->getWriter()Lorg/dom4j/io/XMLWriter;
 
     move-result-object v0
@@ -311,6 +324,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lorg/dom4j/jaxb/JAXBWriter;->getWriter()Lorg/dom4j/io/XMLWriter;
 
     move-result-object p0

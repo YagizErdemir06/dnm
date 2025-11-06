@@ -1,4 +1,4 @@
-.class Landroidx/preference/PreferenceFragment$1;
+.class public Landroidx/preference/PreferenceFragment$1;
 .super Landroid/os/Handler;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/preference/PreferenceFragment;
+.field public final synthetic this$0:Landroidx/preference/PreferenceFragment;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/preference/PreferenceFragment;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/preference/PreferenceFragment$1;->this$0:Landroidx/preference/PreferenceFragment;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -33,11 +34,8 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
-    .param p1    # Landroid/os/Message;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 
+    .line 1
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/4 v0, 0x1
@@ -46,6 +44,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Landroidx/preference/PreferenceFragment$1;->this$0:Landroidx/preference/PreferenceFragment;
 

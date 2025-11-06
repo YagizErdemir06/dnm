@@ -1,4 +1,4 @@
-.class final Lcom/google/common/eventbus/Dispatcher$LegacyAsyncDispatcher;
+.class public final Lcom/google/common/eventbus/Dispatcher$LegacyAsyncDispatcher;
 .super Lcom/google/common/eventbus/Dispatcher;
 .source "SourceFile"
 
@@ -72,8 +72,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     :goto_0
     invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -81,6 +83,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/eventbus/Dispatcher$LegacyAsyncDispatcher;->queue:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     new-instance v1, Lcom/google/common/eventbus/Dispatcher$LegacyAsyncDispatcher$EventWithSubscriber;
@@ -99,6 +102,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     :goto_1
     iget-object p1, p0, Lcom/google/common/eventbus/Dispatcher$LegacyAsyncDispatcher;->queue:Ljava/util/concurrent/ConcurrentLinkedQueue;
@@ -111,6 +115,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 5
     invoke-static {p1}, Lcom/google/common/eventbus/Dispatcher$LegacyAsyncDispatcher$EventWithSubscriber;->access$800(Lcom/google/common/eventbus/Dispatcher$LegacyAsyncDispatcher$EventWithSubscriber;)Lcom/google/common/eventbus/Subscriber;
 
     move-result-object p2

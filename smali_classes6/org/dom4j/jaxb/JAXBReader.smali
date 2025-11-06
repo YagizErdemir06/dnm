@@ -40,16 +40,19 @@
 .method private getReader()Lorg/dom4j/io/SAXReader;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/jaxb/JAXBReader;->reader:Lorg/dom4j/io/SAXReader;
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Lorg/dom4j/io/SAXReader;
 
     invoke-direct {v0}, Lorg/dom4j/io/SAXReader;-><init>()V
 
     iput-object v0, p0, Lorg/dom4j/jaxb/JAXBReader;->reader:Lorg/dom4j/io/SAXReader;
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lorg/dom4j/jaxb/JAXBReader;->reader:Lorg/dom4j/io/SAXReader;
 
@@ -61,6 +64,7 @@
 .method public addHandler(Ljava/lang/String;Lorg/dom4j/ElementHandler;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/dom4j/jaxb/JAXBReader;->getReader()Lorg/dom4j/io/SAXReader;
 
     move-result-object p0
@@ -73,10 +77,12 @@
 .method public addObjectHandler(Ljava/lang/String;Lorg/dom4j/jaxb/JAXBObjectHandler;)V
     .locals 1
 
+    .line 1
     new-instance v0, Lorg/dom4j/jaxb/JAXBReader$UnmarshalElementHandler;
 
     invoke-direct {v0, p0, p0, p2}, Lorg/dom4j/jaxb/JAXBReader$UnmarshalElementHandler;-><init>(Lorg/dom4j/jaxb/JAXBReader;Lorg/dom4j/jaxb/JAXBReader;Lorg/dom4j/jaxb/JAXBObjectHandler;)V
 
+    .line 2
     invoke-direct {p0}, Lorg/dom4j/jaxb/JAXBReader;->getReader()Lorg/dom4j/io/SAXReader;
 
     move-result-object p0
@@ -89,6 +95,7 @@
 .method public isPruneElements()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/dom4j/jaxb/JAXBReader;->pruneElements:Z
 
     return p0
@@ -152,7 +159,7 @@
     .line 4
     new-instance p1, Lorg/dom4j/DocumentException;
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/io/FileNotFoundException;->getMessage()Ljava/lang/String;
 
     move-result-object p2
 
@@ -164,7 +171,7 @@
     move-exception p0
 
     .line 5
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    invoke-virtual {p0}, Ljava/lang/RuntimeException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -206,7 +213,7 @@
     move-exception p0
 
     .line 11
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    invoke-virtual {p0}, Ljava/lang/RuntimeException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -248,7 +255,7 @@
     move-exception p0
 
     .line 14
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    invoke-virtual {p0}, Ljava/lang/RuntimeException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -290,7 +297,7 @@
     move-exception p0
 
     .line 17
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    invoke-virtual {p0}, Ljava/lang/RuntimeException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -332,7 +339,7 @@
     move-exception p0
 
     .line 20
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    invoke-virtual {p0}, Ljava/lang/RuntimeException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -374,7 +381,7 @@
     move-exception p0
 
     .line 23
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    invoke-virtual {p0}, Ljava/lang/RuntimeException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -416,7 +423,7 @@
     move-exception p0
 
     .line 26
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    invoke-virtual {p0}, Ljava/lang/RuntimeException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -458,7 +465,7 @@
     move-exception p0
 
     .line 8
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    invoke-virtual {p0}, Ljava/lang/RuntimeException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -477,6 +484,7 @@
 .method public removeHandler(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/dom4j/jaxb/JAXBReader;->getReader()Lorg/dom4j/io/SAXReader;
 
     move-result-object p0
@@ -489,6 +497,7 @@
 .method public removeObjectHandler(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/dom4j/jaxb/JAXBReader;->getReader()Lorg/dom4j/io/SAXReader;
 
     move-result-object p0
@@ -501,6 +510,7 @@
 .method public resetHandlers()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/dom4j/jaxb/JAXBReader;->getReader()Lorg/dom4j/io/SAXReader;
 
     move-result-object p0
@@ -513,10 +523,12 @@
 .method public setPruneElements(Z)V
     .locals 1
 
+    .line 1
     iput-boolean p1, p0, Lorg/dom4j/jaxb/JAXBReader;->pruneElements:Z
 
     if-eqz p1, :cond_0
 
+    .line 2
     invoke-direct {p0}, Lorg/dom4j/jaxb/JAXBReader;->getReader()Lorg/dom4j/io/SAXReader;
 
     move-result-object p1

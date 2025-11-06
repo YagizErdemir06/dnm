@@ -1,4 +1,4 @@
-.class abstract Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhk;
+.class public abstract Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhk;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, v0, p1, p2, p3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhk;->zza(I[BII)I
 
     move-result p0

@@ -25,6 +25,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/util/concurrent/AbstractFuture$TrustedFuture;-><init>()V
 
     return-void
@@ -42,6 +43,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/SettableFuture;
 
     invoke-direct {v0}, Lcom/google/common/util/concurrent/SettableFuture;-><init>()V
@@ -66,6 +68,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/util/concurrent/AbstractFuture;->set(Ljava/lang/Object;)Z
 
     move-result p0
@@ -78,6 +81,7 @@
     .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/util/concurrent/AbstractFuture;->setException(Ljava/lang/Throwable;)Z
 
     move-result p0
@@ -98,6 +102,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/util/concurrent/AbstractFuture;->setFuture(Lcom/google/common/util/concurrent/ListenableFuture;)Z
 
     move-result p0

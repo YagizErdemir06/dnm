@@ -1,4 +1,4 @@
-.class synthetic Lcom/google/common/collect/AbstractIterator$1;
+.class public synthetic Lcom/google/common/collect/AbstractIterator$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$com$google$common$collect$AbstractIterator$State:[I
+.field public static final synthetic $SwitchMap$com$google$common$collect$AbstractIterator$State:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/AbstractIterator$State;->values()[Lcom/google/common/collect/AbstractIterator$State;
 
     move-result-object v0

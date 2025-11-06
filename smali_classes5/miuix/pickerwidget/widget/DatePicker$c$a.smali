@@ -30,6 +30,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,6 +41,7 @@
 .method public a(Landroid/os/Parcel;)Lmiuix/pickerwidget/widget/DatePicker$c;
     .locals 1
 
+    .line 1
     new-instance p0, Lmiuix/pickerwidget/widget/DatePicker$c;
 
     const/4 v0, 0x0
@@ -52,6 +54,7 @@
 .method public b(I)[Lmiuix/pickerwidget/widget/DatePicker$c;
     .locals 0
 
+    .line 1
     new-array p0, p1, [Lmiuix/pickerwidget/widget/DatePicker$c;
 
     return-object p0
@@ -60,6 +63,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lmiuix/pickerwidget/widget/DatePicker$c$a;->a(Landroid/os/Parcel;)Lmiuix/pickerwidget/widget/DatePicker$c;
 
     move-result-object p0
@@ -70,6 +74,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lmiuix/pickerwidget/widget/DatePicker$c$a;->b(I)[Lmiuix/pickerwidget/widget/DatePicker$c;
 
     move-result-object p0

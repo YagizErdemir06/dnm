@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/base/CharMatcher$NamedFastMatcher;
+.class public abstract Lcom/google/common/base/CharMatcher$NamedFastMatcher;
 .super Lcom/google/common/base/CharMatcher$FastMatcher;
 .source "SourceFile"
 
@@ -22,8 +22,10 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/base/CharMatcher$FastMatcher;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -40,6 +42,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/CharMatcher$NamedFastMatcher;->description:Ljava/lang/String;
 
     return-object p0

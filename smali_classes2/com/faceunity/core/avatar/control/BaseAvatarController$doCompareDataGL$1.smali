@@ -1,14 +1,14 @@
-.class final Lcom/faceunity/core/avatar/control/BaseAvatarController$doCompareDataGL$1;
-.super Lkotlin/jvm/internal/n0;
+.class public final Lcom/faceunity/core/avatar/control/BaseAvatarController$doCompareDataGL$1;
+.super Lh/d3/x/n0;
 .source "SourceFile"
 
 # interfaces
-.implements Ljn/a;
+.implements Lh/d3/w/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/faceunity/core/avatar/control/BaseAvatarController;->doCompareDataGL(JLjn/a;)V
+    value = Lcom/faceunity/core/avatar/control/BaseAvatarController;->doCompareDataGL(JLh/d3/w/a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,19 +18,24 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lkotlin/jvm/internal/n0;",
-        "Ljn/a<",
-        "Lnm/l2;",
+        "Lh/d3/x/n0;",
+        "Lh/d3/w/a<",
+        "Lh/l2;",
         ">;"
     }
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
         "\u0000\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0003\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0001\u0010\u0002"
     }
     d2 = {
-        "Lnm/l2;",
+        "Lh/l2;",
         "invoke",
         "()V",
         "<anonymous>"
@@ -45,26 +50,26 @@
 
 
 # instance fields
-.field final synthetic $dataTime:J
+.field public final synthetic $dataTime:J
 
-.field final synthetic $unit:Ljn/a;
+.field public final synthetic $unit:Lh/d3/w/a;
 
-.field final synthetic this$0:Lcom/faceunity/core/avatar/control/BaseAvatarController;
+.field public final synthetic this$0:Lcom/faceunity/core/avatar/control/BaseAvatarController;
 
 
 # direct methods
-.method public constructor <init>(Lcom/faceunity/core/avatar/control/BaseAvatarController;JLjn/a;)V
+.method public constructor <init>(Lcom/faceunity/core/avatar/control/BaseAvatarController;JLh/d3/w/a;)V
     .locals 0
 
     iput-object p1, p0, Lcom/faceunity/core/avatar/control/BaseAvatarController$doCompareDataGL$1;->this$0:Lcom/faceunity/core/avatar/control/BaseAvatarController;
 
     iput-wide p2, p0, Lcom/faceunity/core/avatar/control/BaseAvatarController$doCompareDataGL$1;->$dataTime:J
 
-    iput-object p4, p0, Lcom/faceunity/core/avatar/control/BaseAvatarController$doCompareDataGL$1;->$unit:Ljn/a;
+    iput-object p4, p0, Lcom/faceunity/core/avatar/control/BaseAvatarController$doCompareDataGL$1;->$unit:Lh/d3/w/a;
 
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Lkotlin/jvm/internal/n0;-><init>(I)V
+    invoke-direct {p0, p1}, Lh/d3/x/n0;-><init>(I)V
 
     return-void
 .end method
@@ -77,7 +82,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/avatar/control/BaseAvatarController$doCompareDataGL$1;->invoke()V
 
-    sget-object p0, Lnm/l2;->a:Lnm/l2;
+    sget-object p0, Lh/l2;->a:Lh/l2;
 
     return-object p0
 .end method
@@ -99,9 +104,9 @@
     if-ltz v0, :cond_0
 
     .line 3
-    iget-object p0, p0, Lcom/faceunity/core/avatar/control/BaseAvatarController$doCompareDataGL$1;->$unit:Ljn/a;
+    iget-object p0, p0, Lcom/faceunity/core/avatar/control/BaseAvatarController$doCompareDataGL$1;->$unit:Lh/d3/w/a;
 
-    invoke-interface {p0}, Ljn/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lh/d3/w/a;->invoke()Ljava/lang/Object;
 
     return-void
 

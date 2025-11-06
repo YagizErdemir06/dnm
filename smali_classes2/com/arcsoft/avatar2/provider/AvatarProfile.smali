@@ -26,7 +26,7 @@
 
 .field public static final _ID:Ljava/lang/String; = "_id"
 
-.field protected static final a:Ljava/lang/String; = "content://com.arcsoft.content.provider.avatar2.content.provider/"
+.field public static final a:Ljava/lang/String; = "content://com.arcsoft.content.provider.avatar2.content.provider/"
 
 .field public static final sUriMatcher:Landroid/content/UriMatcher;
 
@@ -37,12 +37,14 @@
 
     const-string v0, "content://com.arcsoft.content.provider.avatar2.content.provider/avatar_db"
 
+    .line 1
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
     sput-object v0, Lcom/arcsoft/avatar2/provider/AvatarProfile;->AVATAR_URI:Landroid/net/Uri;
 
+    .line 2
     new-instance v0, Landroid/content/UriMatcher;
 
     const/4 v1, -0x1
@@ -51,13 +53,14 @@
 
     sput-object v0, Lcom/arcsoft/avatar2/provider/AvatarProfile;->sUriMatcher:Landroid/content/UriMatcher;
 
-    const-string v1, "avatar_db"
+    const-string v1, "com.arcsoft.content.provider.avatar2.content.provider"
 
-    const/4 v2, 0x1
+    const-string v2, "avatar_db"
 
-    const-string v3, "com.arcsoft.content.provider.avatar2.content.provider"
+    const/4 v3, 0x1
 
-    invoke-virtual {v0, v3, v1, v2}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
+    .line 3
+    invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
     return-void
 .end method
@@ -65,6 +68,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

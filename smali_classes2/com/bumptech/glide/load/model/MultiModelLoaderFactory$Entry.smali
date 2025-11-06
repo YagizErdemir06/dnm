@@ -1,4 +1,4 @@
-.class Lcom/bumptech/glide/load/model/MultiModelLoaderFactory$Entry;
+.class public Lcom/bumptech/glide/load/model/MultiModelLoaderFactory$Entry;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,7 +26,7 @@
 
 
 # instance fields
-.field final dataClass:Ljava/lang/Class;
+.field public final dataClass:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class<",
@@ -35,7 +35,7 @@
     .end annotation
 .end field
 
-.field final factory:Lcom/bumptech/glide/load/model/ModelLoaderFactory;
+.field public final factory:Lcom/bumptech/glide/load/model/ModelLoaderFactory;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/bumptech/glide/load/model/ModelLoaderFactory<",
@@ -81,12 +81,16 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/bumptech/glide/load/model/MultiModelLoaderFactory$Entry;->modelClass:Ljava/lang/Class;
 
+    .line 3
     iput-object p2, p0, Lcom/bumptech/glide/load/model/MultiModelLoaderFactory$Entry;->dataClass:Ljava/lang/Class;
 
+    .line 4
     iput-object p3, p0, Lcom/bumptech/glide/load/model/MultiModelLoaderFactory$Entry;->factory:Lcom/bumptech/glide/load/model/ModelLoaderFactory;
 
     return-void

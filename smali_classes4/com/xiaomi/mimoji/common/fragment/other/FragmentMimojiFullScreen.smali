@@ -3,87 +3,89 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lyh/a$e;
+.implements Ld/o/v/a/d0/a/c/a$e;
 
 
 # static fields
-.field public static final K:I = 0xfff3
+.field public static final f:I = 0xfff3
 
-.field public static final Y:Ljava/lang/String; = "MIMOJI_FragmentMimojiFullScreen"
+.field private static final g:Ljava/lang/String; = "MIMOJI_FragmentMimojiFullScreen"
 
 
 # instance fields
-.field public A:Landroid/graphics/Bitmap;
+.field private C1:Landroid/widget/ImageView;
 
-.field public final C:Landroid/os/Handler;
+.field private C2:Landroid/widget/ProgressBar;
 
-.field public final D:Ljava/lang/Runnable;
+.field private K0:Lcom/android/camera/ui/CameraSnapView;
 
-.field public F:Landroid/net/Uri;
+.field private K1:Landroid/widget/ImageView;
 
-.field public G:Z
+.field private K2:Landroid/widget/ImageView;
 
-.field public H:J
+.field private K8:Landroid/widget/ProgressBar;
 
-.field public I:Lrh/x;
+.field private L8:Landroid/widget/ProgressBar;
 
-.field public J:Z
+.field private M8:Landroid/widget/TextView;
 
-.field public c:Landroid/view/ViewStub;
+.field private N8:Landroid/widget/FrameLayout;
 
-.field public d:Landroid/view/View;
+.field private O8:Landroid/view/ViewGroup;
 
-.field public e:Lcom/xiaomi/mimoji/common/fragment/bottomlist/FragmentMimojiBottomList;
+.field private P8:Z
 
-.field public f:Landroid/view/ViewGroup;
+.field private Q8:Ljava/lang/String;
 
-.field public g:Landroid/widget/FrameLayout;
+.field private R8:Landroid/graphics/Bitmap;
 
-.field public h:Lcom/android/camera/ui/TextureVideoView;
+.field private final S8:Landroid/os/Handler;
 
-.field public i:Lcom/android/camera/ui/ColorImageView;
+.field private final T8:Ljava/lang/Runnable;
 
-.field public j:Landroid/widget/FrameLayout;
+.field private U8:Landroid/net/Uri;
 
-.field public k:Landroid/widget/ImageView;
+.field private V8:Z
 
-.field public l:Lcom/android/camera/ui/CameraSnapView;
+.field private W8:J
 
-.field public m:Lcom/airbnb/lottie/LottieAnimationView;
+.field private X8:Ld/o/v/a/x;
 
-.field public n:Landroid/widget/ImageView;
+.field private Y8:Z
 
-.field public o:Landroid/widget/ImageView;
+.field private j:Landroid/view/ViewStub;
 
-.field public p:Landroid/widget/ImageView;
+.field private k0:Landroid/widget/ImageView;
 
-.field public q:Lcom/android/camera/customization/BGTintTextView;
+.field private k1:Lcom/airbnb/lottie/LottieAnimationView;
 
-.field public r:Landroid/widget/ProgressBar;
+.field private m:Landroid/view/View;
 
-.field public s:Landroid/widget/ImageView;
+.field private n:Lcom/xiaomi/mimoji/common/fragment/bottomlist/FragmentMimojiBottomList;
 
-.field public t:Landroid/widget/ProgressBar;
+.field private p:Landroid/view/ViewGroup;
 
-.field public u:Landroid/widget/ProgressBar;
+.field private s:Landroid/widget/FrameLayout;
 
-.field public v:Landroid/widget/TextView;
+.field private t:Lcom/android/camera/ui/TextureVideoView;
 
-.field public w:Landroid/widget/FrameLayout;
+.field private u:Lcom/android/camera/ui/ColorImageView;
 
-.field public x:Landroid/view/ViewGroup;
+.field private v1:Landroid/widget/ImageView;
 
-.field public y:Z
+.field private v2:Lcom/android/camera/customization/BGTintTextView;
 
-.field public z:Ljava/lang/String;
+.field private w:Landroid/widget/FrameLayout;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji;-><init>()V
 
+    .line 2
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -92,227 +94,839 @@
 
     invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->C:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->S8:Landroid/os/Handler;
 
-    new-instance v0, Luh/i;
+    .line 3
+    new-instance v0, Ld/o/v/a/a0/b/e;
 
-    invoke-direct {v0, p0}, Luh/i;-><init>(Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;)V
+    invoke-direct {v0, p0}, Ld/o/v/a/a0/b/e;-><init>(Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;)V
 
-    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->D:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->T8:Ljava/lang/Runnable;
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->J:Z
+    .line 4
+    iput-boolean v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Y8:Z
 
     return-void
 .end method
 
-.method public static synthetic Ai(Lm6/u;)Z
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public static synthetic Bi(Lm6/u;)Z
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public static synthetic Ci(Lv8/b1;)V
-    .locals 5
-
-    new-instance v0, Lm6/x;
-
-    invoke-direct {v0}, Lm6/x;-><init>()V
-
-    const/16 v1, 0x16
-
-    const v2, 0xfff2
-
-    const/16 v3, 0xc
-
-    invoke-virtual {v0, v1, v2, v3}, Lm6/x;->d(III)Lm6/u;
-
-    move-result-object v2
-
-    new-instance v4, Luh/e;
-
-    invoke-direct {v4}, Luh/e;-><init>()V
-
-    invoke-virtual {v2, v4}, Lm6/u;->a(Landroidx/core/util/Predicate;)V
-
-    const v2, 0xfff1
-
-    invoke-virtual {v0, v1, v2, v3}, Lm6/x;->d(III)Lm6/u;
-
-    move-result-object v2
-
-    new-instance v4, Luh/f;
-
-    invoke-direct {v4}, Luh/f;-><init>()V
-
-    invoke-virtual {v2, v4}, Lm6/u;->a(Landroidx/core/util/Predicate;)V
-
-    const v2, 0xfff4
-
-    invoke-virtual {v0, v1, v2, v3}, Lm6/x;->d(III)Lm6/u;
-
-    move-result-object v1
-
-    new-instance v2, Luh/g;
-
-    invoke-direct {v2}, Luh/g;-><init>()V
-
-    invoke-virtual {v1, v2}, Lm6/u;->a(Landroidx/core/util/Predicate;)V
-
-    invoke-static {}, Lm6/i0;->l()Lm6/i0;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lm6/x;->j(Lm6/y;)V
-
-    invoke-interface {p0, v0}, Lv8/b1;->cb(Lm6/x;)V
-
-    return-void
-.end method
-
-.method public static synthetic Di(Lv8/y2;)V
+.method private Af()V
     .locals 2
 
+    .line 1
+    invoke-static {}, Ld/d/a/m7/g/x1;->impl2()Ld/d/a/m7/g/x1;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    .line 2
+    :cond_0
+    iget-boolean v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->P8:Z
+
+    if-nez v0, :cond_1
+
+    .line 3
+    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->z7()V
+
+    goto :goto_0
+
+    :cond_1
     const/4 v0, 0x0
 
-    const/4 v1, -0x1
+    .line 4
+    iput-boolean v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->P8:Z
 
-    invoke-interface {p0, v0, v1}, Lv8/y2;->alertFaceDetect(ZI)V
+    .line 5
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->X8:Ld/o/v/a/x;
 
+    invoke-virtual {v0}, Ld/o/v/a/x;->j()I
+
+    move-result v0
+
+    const/4 v1, 0x4
+
+    if-ne v0, v1, :cond_2
+
+    .line 6
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->f()V
+
+    :cond_2
+    :goto_0
     return-void
 .end method
 
-.method public static synthetic bi(Lm6/u;)Z
+.method public static synthetic Ce(Ld/d/a/u6/w4/b0;)Z
     .locals 0
 
-    invoke-static {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->zi(Lm6/u;)Z
-
-    move-result p0
+    const/4 p0, 0x0
 
     return p0
 .end method
 
-.method public static synthetic ci(Lv8/q;)V
-    .locals 0
+.method private Hc(Landroid/view/View;)V
+    .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
-    invoke-static {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->vi(Lv8/q;)V
+    const v0, 0x7f0b0391
+
+    .line 1
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/FrameLayout;
+
+    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->s:Landroid/widget/FrameLayout;
+
+    const v0, 0x7f0b02c9
+
+    .line 2
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/ViewGroup;
+
+    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->p:Landroid/view/ViewGroup;
+
+    const v0, 0x7f0b06c8
+
+    .line 3
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/camera/ui/TextureVideoView;
+
+    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->t:Lcom/android/camera/ui/TextureVideoView;
+
+    const v0, 0x7f0b00f3
+
+    .line 4
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/camera/ui/ColorImageView;
+
+    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->u:Lcom/android/camera/ui/ColorImageView;
+
+    .line 5
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    const v2, 0x7f080867
+
+    const v3, 0x7f080868
+
+    invoke-static {v1, v2, v3}, Lcom/android/camera/fragment/BaseFragment;->getIconDrawable(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/airbnb/lottie/LottieAnimationView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 6
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->u:Lcom/android/camera/ui/ColorImageView;
+
+    const v1, 0x7f08011d
+
+    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/AppCompatImageView;->setBackgroundResource(I)V
+
+    const v0, 0x7f0b02c7
+
+    .line 7
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/FrameLayout;
+
+    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->w:Landroid/widget/FrameLayout;
+
+    const v0, 0x7f0b032c
+
+    .line 8
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K1:Landroid/widget/ImageView;
+
+    const v0, 0x7f0b06b6
+
+    .line 9
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/camera/customization/BGTintTextView;
+
+    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->v2:Lcom/android/camera/customization/BGTintTextView;
+
+    const v0, 0x7f0b038c
+
+    .line 10
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ProgressBar;
+
+    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->C2:Landroid/widget/ProgressBar;
+
+    const v0, 0x7f0b039c
+
+    .line 11
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K2:Landroid/widget/ImageView;
+
+    const v0, 0x7f0b03a3
+
+    .line 12
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ProgressBar;
+
+    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K8:Landroid/widget/ProgressBar;
+
+    const v0, 0x7f0b038b
+
+    .line 13
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ProgressBar;
+
+    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->L8:Landroid/widget/ProgressBar;
+
+    const v0, 0x7f0b0395
+
+    .line 14
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->M8:Landroid/widget/TextView;
+
+    const v0, 0x7f0b0397
+
+    .line 15
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/camera/ui/CameraSnapView;
+
+    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K0:Lcom/android/camera/ui/CameraSnapView;
+
+    .line 16
+    iget v1, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
+
+    invoke-static {v1}, Ld/d/a/d8/n2/f/p;->c(I)Ld/d/a/d8/n2/f/p;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/ui/CameraSnapView;->setParameters(Ld/d/a/d8/n2/f/p;)V
+
+    .line 17
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K0:Lcom/android/camera/ui/CameraSnapView;
+
+    invoke-virtual {v0}, Lcom/android/camera/ui/CameraSnapView;->m()V
+
+    .line 18
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K0:Lcom/android/camera/ui/CameraSnapView;
+
+    invoke-virtual {v0}, Lcom/android/camera/ui/CameraSnapView;->n()V
+
+    .line 19
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K0:Lcom/android/camera/ui/CameraSnapView;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/ui/CameraSnapView;->setSnapClickEnable(Z)V
+
+    const v0, 0x7f0b0396
+
+    .line 20
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/airbnb/lottie/LottieAnimationView;
+
+    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->k1:Lcom/airbnb/lottie/LottieAnimationView;
+
+    const v0, 0x7f0b0390
+
+    .line 21
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->v1:Landroid/widget/ImageView;
+
+    .line 22
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    const v3, 0x7f0807cc
+
+    const v4, 0x7f0807cd
+
+    invoke-static {v2, v3, v4}, Lcom/android/camera/fragment/BaseFragment;->getIconDrawable(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    const v0, 0x7f0b0398
+
+    .line 23
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->C1:Landroid/widget/ImageView;
+
+    .line 24
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    const v3, 0x7f08089c
+
+    const v4, 0x7f08089d
+
+    invoke-static {v2, v3, v4}, Lcom/android/camera/fragment/BaseFragment;->getIconDrawable(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    const v0, 0x7f0b0393
+
+    .line 25
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->k0:Landroid/widget/ImageView;
+
+    .line 26
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Yb()V
+
+    const v0, 0x7f0b03a0
+
+    .line 27
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/ViewGroup;
+
+    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->O8:Landroid/view/ViewGroup;
+
+    const v2, 0x7f0b03a1
+
+    .line 28
+    invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/recyclerview/widget/RecyclerView;
+
+    .line 29
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setFocusable(Z)V
+
+    .line 30
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->O8:Landroid/view/ViewGroup;
+
+    const v2, 0x7f0b039d
+
+    invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    .line 31
+    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 32
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->s:Landroid/widget/FrameLayout;
+
+    invoke-virtual {v0, p0}, Landroid/widget/FrameLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 33
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K0:Lcom/android/camera/ui/CameraSnapView;
+
+    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 34
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->k1:Lcom/airbnb/lottie/LottieAnimationView;
+
+    invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 35
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->v1:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 36
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->C1:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 37
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->k0:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 38
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->u:Lcom/android/camera/ui/ColorImageView;
+
+    invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    const/4 v0, 0x1
+
+    new-array v2, v0, [Landroid/view/View;
+
+    .line 39
+    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->u:Lcom/android/camera/ui/ColorImageView;
+
+    aput-object v3, v2, v1
+
+    invoke-static {v2}, Ld/d/a/f6/f;->y([Landroid/view/View;)V
+
+    const v2, 0x7f0b0399
+
+    .line 40
+    invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/FrameLayout;
+
+    iput-object v2, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->N8:Landroid/widget/FrameLayout;
+
+    .line 41
+    invoke-virtual {v2}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    .line 42
+    invoke-static {}, Ld/d/a/n6/b;->o0()I
+
+    move-result v3
+
+    iput v3, v2, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    .line 43
+    invoke-static {}, Ld/d/a/n6/b;->j0()I
+
+    move-result v3
+
+    iput v3, v2, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+
+    .line 44
+    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->N8:Landroid/widget/FrameLayout;
+
+    invoke-virtual {v3, v2}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    const/4 v2, 0x3
+
+    new-array v3, v2, [Landroid/view/View;
+
+    .line 45
+    iget-object v4, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->v1:Landroid/widget/ImageView;
+
+    aput-object v4, v3, v1
+
+    iget-object v4, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->C1:Landroid/widget/ImageView;
+
+    aput-object v4, v3, v0
+
+    iget-object v4, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->k0:Landroid/widget/ImageView;
+
+    const/4 v5, 0x2
+
+    aput-object v4, v3, v5
+
+    invoke-static {v3}, Ld/d/a/f6/f;->w([Landroid/view/View;)V
+
+    new-array v3, v0, [Landroid/view/View;
+
+    .line 46
+    iget-object v4, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->k1:Lcom/airbnb/lottie/LottieAnimationView;
+
+    aput-object v4, v3, v1
+
+    invoke-static {v3}, Ld/d/a/f6/f;->w([Landroid/view/View;)V
+
+    .line 47
+    invoke-static {v0}, Ld/d/a/z5;->I0(I)Landroid/graphics/Rect;
+
+    move-result-object v3
+
+    const v4, 0x7f0b0775
+
+    .line 48
+    invoke-virtual {p1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/widget/FrameLayout;
+
+    const v6, 0x7f0b0776
+
+    .line 49
+    invoke-virtual {p1, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/FrameLayout;
+
+    .line 50
+    invoke-virtual {v4}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v6
+
+    check-cast v6, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    .line 51
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    .line 52
+    invoke-static {}, Ld/d/a/n6/b;->k()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_0
+
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ld/k/a/b;->c4()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_0
+
+    .line 53
+    invoke-static {}, Ld/d/a/n6/b;->q()I
+
+    move-result p1
+
+    iget v2, v3, Landroid/graphics/Rect;->right:I
+
+    sub-int/2addr p1, v2
+
+    iput p1, v6, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+
+    .line 54
+    invoke-static {}, Ld/d/a/n6/b;->b0()I
+
+    move-result p1
+
+    iput p1, v6, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    .line 55
+    invoke-virtual {p0}, Lcom/android/camera/fragment/BaseFragment;->getFatAlignHorizontal()I
+
+    move-result p1
+
+    new-array v2, v5, [Landroid/view/View;
+
+    .line 56
+    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->v1:Landroid/widget/ImageView;
+
+    aput-object v3, v2, v1
+
+    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->L8:Landroid/widget/ProgressBar;
+
+    aput-object v3, v2, v0
+
+    invoke-virtual {p0, p1, v2}, Lcom/android/camera/fragment/BaseFragment;->alignSnapLeft(I[Landroid/view/View;)V
+
+    new-array v2, v5, [Landroid/view/View;
+
+    .line 57
+    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->C1:Landroid/widget/ImageView;
+
+    aput-object v3, v2, v1
+
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K8:Landroid/widget/ProgressBar;
+
+    aput-object v1, v2, v0
+
+    invoke-virtual {p0, p1, v2}, Lcom/android/camera/fragment/BaseFragment;->alignSnapRight(I[Landroid/view/View;)V
+
+    goto/16 :goto_0
+
+    .line 58
+    :cond_0
+    invoke-static {}, Ld/d/a/n6/b;->t()I
+
+    move-result v3
+
+    iput v3, v6, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+
+    .line 59
+    invoke-static {}, Ld/d/a/n6/b;->s()I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    const v6, 0x3f333333    # 0.7f
+
+    mul-float/2addr v3, v6
+
+    invoke-static {v3}, Ljava/lang/Math;->round(F)I
+
+    move-result v3
+
+    iput v3, p1, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+
+    .line 60
+    invoke-static {}, Ld/d/a/n6/b;->u()I
+
+    move-result v3
+
+    iput v3, p1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    .line 61
+    invoke-static {}, Ld/d/a/n6/b;->s()I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    const v6, 0x3e99999a    # 0.3f
+
+    mul-float/2addr v3, v6
+
+    invoke-static {v3}, Ljava/lang/Math;->round(F)I
+
+    move-result v3
+
+    iput v3, p1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    .line 62
+    invoke-static {}, Ld/d/a/n6/b;->l()Z
+
+    move-result p1
+
+    const/4 v3, 0x4
+
+    if-eqz p1, :cond_1
+
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ld/k/a/b;->p5()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    .line 63
+    invoke-virtual {p0}, Lcom/android/camera/fragment/BaseFragment;->getThinAlignHorizontal()I
+
+    move-result p1
+
+    new-array v6, v5, [Landroid/view/View;
+
+    .line 64
+    iget-object v7, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->v1:Landroid/widget/ImageView;
+
+    aput-object v7, v6, v1
+
+    iget-object v7, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->L8:Landroid/widget/ProgressBar;
+
+    aput-object v7, v6, v0
+
+    invoke-virtual {p0, p1, v6}, Lcom/android/camera/fragment/BaseFragment;->alignSnapLeft(I[Landroid/view/View;)V
+
+    new-array v6, v5, [Landroid/view/View;
+
+    .line 65
+    iget-object v7, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->C1:Landroid/widget/ImageView;
+
+    aput-object v7, v6, v1
+
+    iget-object v7, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K8:Landroid/widget/ProgressBar;
+
+    aput-object v7, v6, v0
+
+    invoke-virtual {p0, p1, v6}, Lcom/android/camera/fragment/BaseFragment;->alignSnapRight(I[Landroid/view/View;)V
+
+    new-array p1, v3, [Landroid/view/View;
+
+    .line 66
+    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->v1:Landroid/widget/ImageView;
+
+    aput-object v3, p1, v1
+
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->L8:Landroid/widget/ProgressBar;
+
+    aput-object v1, p1, v0
+
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->C1:Landroid/widget/ImageView;
+
+    aput-object v1, p1, v5
+
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K8:Landroid/widget/ProgressBar;
+
+    aput-object v1, p1, v2
+
+    invoke-virtual {p0, v0, p1}, Lcom/android/camera/fragment/BaseFragment;->initViewBackground(Z[Landroid/view/View;)V
+
+    goto :goto_0
+
+    .line 67
+    :cond_1
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    new-array v6, v2, [Landroid/view/View;
+
+    iget-object v7, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->u:Lcom/android/camera/ui/ColorImageView;
+
+    aput-object v7, v6, v1
+
+    iget-object v7, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->v1:Landroid/widget/ImageView;
+
+    aput-object v7, v6, v0
+
+    iget-object v7, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->L8:Landroid/widget/ProgressBar;
+
+    aput-object v7, v6, v5
+
+    invoke-static {p1, v6}, Ld/d/a/n6/b;->b(Landroid/content/Context;[Landroid/view/View;)V
+
+    .line 68
+    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->u:Lcom/android/camera/ui/ColorImageView;
+
+    invoke-virtual {p1}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/FrameLayout$LayoutParams;
+
+    const v6, 0x800053
+
+    .line 69
+    iput v6, p1, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+
+    .line 70
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    new-array v6, v5, [Landroid/view/View;
+
+    iget-object v7, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->C1:Landroid/widget/ImageView;
+
+    aput-object v7, v6, v1
+
+    iget-object v7, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K8:Landroid/widget/ProgressBar;
+
+    aput-object v7, v6, v0
+
+    invoke-static {p1, v6}, Ld/d/a/n6/b;->c(Landroid/content/Context;[Landroid/view/View;)V
+
+    new-array p1, v3, [Landroid/view/View;
+
+    .line 71
+    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->v1:Landroid/widget/ImageView;
+
+    aput-object v3, p1, v1
+
+    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->L8:Landroid/widget/ProgressBar;
+
+    aput-object v3, p1, v0
+
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->C1:Landroid/widget/ImageView;
+
+    aput-object v0, p1, v5
+
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K8:Landroid/widget/ProgressBar;
+
+    aput-object v0, p1, v2
+
+    invoke-virtual {p0, v1, p1}, Lcom/android/camera/fragment/BaseFragment;->initViewBackground(Z[Landroid/view/View;)V
+
+    .line 72
+    :goto_0
+    invoke-virtual {v4, p0}, Landroid/view/ViewGroup;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    const p0, 0x7f0600f1
+
+    .line 73
+    invoke-virtual {v4, p0}, Landroid/view/ViewGroup;->setBackgroundResource(I)V
 
     return-void
 .end method
 
-.method public static synthetic di(Lv8/y2;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Di(Lv8/y2;)V
-
-    return-void
-.end method
-
-.method public static synthetic ei(Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->ui()V
-
-    return-void
-.end method
-
-.method public static synthetic fi(Lv8/b1;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Ci(Lv8/b1;)V
-
-    return-void
-.end method
-
-.method public static synthetic gi(Lm6/u;)Z
-    .locals 0
-
-    invoke-static {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Ai(Lm6/u;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static synthetic hi(Lm6/u;)Z
-    .locals 0
-
-    invoke-static {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Bi(Lm6/u;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static synthetic ii(Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->wi()V
-
-    return-void
-.end method
-
-.method public static synthetic ji(Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->xi()V
-
-    return-void
-.end method
-
-.method public static synthetic ki(Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->yi()V
-
-    return-void
-.end method
-
-.method public static synthetic li(Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;ILjava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->ti(ILjava/lang/String;)V
-
-    return-void
-.end method
-
-.method public static synthetic mi(Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;Z)Z
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->G:Z
-
-    return p1
-.end method
-
-.method private synthetic ti(ILjava/lang/String;)V
+.method private synthetic Ic(ILjava/lang/String;)V
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera/fragment/BaseFragment;->canProvide()Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->g:Landroid/widget/FrameLayout;
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->s:Landroid/widget/FrameLayout;
 
     if-eqz v0, :cond_6
 
     if-nez p1, :cond_6
 
-    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->I:Lrh/x;
+    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->X8:Ld/o/v/a/x;
 
-    invoke-virtual {p1}, Lrh/x;->z()Z
+    .line 2
+    invoke-virtual {p1}, Ld/o/v/a/x;->z()Z
 
     move-result p1
 
@@ -320,52 +934,61 @@
 
     goto/16 :goto_3
 
+    .line 3
     :cond_0
-    invoke-static {}, Lcom/android/camera/a6;->h1()Landroid/graphics/Rect;
+    invoke-static {}, Ld/d/a/z5;->Y0()Landroid/graphics/Rect;
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->g:Landroid/widget/FrameLayout;
+    .line 4
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->s:Landroid/widget/FrameLayout;
 
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
 
+    .line 5
     iget v1, p1, Landroid/graphics/Rect;->top:I
 
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
+    .line 6
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
     move-result p1
 
     iput p1, v0, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->g:Landroid/widget/FrameLayout;
+    .line 7
+    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->s:Landroid/widget/FrameLayout;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->g:Landroid/widget/FrameLayout;
+    .line 8
+    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->s:Landroid/widget/FrameLayout;
 
     const/4 v0, 0x1
 
-    invoke-static {p1, v0}, Lai/d;->c(Landroid/view/View;Z)Z
+    invoke-static {p1, v0}, Ld/o/v/a/f0/d;->c(Landroid/view/View;Z)Z
 
-    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->f:Landroid/view/ViewGroup;
+    .line 9
+    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->p:Landroid/view/ViewGroup;
 
-    invoke-static {p1, v0}, Lai/d;->c(Landroid/view/View;Z)Z
+    invoke-static {p1, v0}, Ld/o/v/a/f0/d;->c(Landroid/view/View;Z)Z
 
-    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->h:Lcom/android/camera/ui/TextureVideoView;
+    .line 10
+    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->t:Lcom/android/camera/ui/TextureVideoView;
 
-    invoke-static {p1, v0}, Lai/d;->c(Landroid/view/View;Z)Z
+    invoke-static {p1, v0}, Ld/o/v/a/f0/d;->c(Landroid/view/View;Z)Z
 
-    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->i:Lcom/android/camera/ui/ColorImageView;
+    .line 11
+    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->u:Lcom/android/camera/ui/ColorImageView;
 
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->I:Lrh/x;
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->X8:Ld/o/v/a/x;
 
-    invoke-virtual {v1}, Lrh/x;->m()I
+    invoke-virtual {v1}, Ld/o/v/a/x;->m()I
 
     move-result v1
 
@@ -383,19 +1006,21 @@
     move v1, v3
 
     :goto_0
-    invoke-static {p1, v1, v0}, Lai/d;->d(Landroid/view/View;ZZ)Z
+    invoke-static {p1, v1, v0}, Ld/o/v/a/f0/d;->d(Landroid/view/View;ZZ)Z
 
-    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->i:Lcom/android/camera/ui/ColorImageView;
+    .line 12
+    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->u:Lcom/android/camera/ui/ColorImageView;
 
     if-eqz p1, :cond_3
 
-    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->I:Lrh/x;
+    .line 13
+    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->X8:Ld/o/v/a/x;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    invoke-virtual {p1, v1}, Lrh/x;->k(Ljava/lang/Integer;)Lsh/e;
+    invoke-virtual {p1, v1}, Ld/o/v/a/x;->k(Ljava/lang/Integer;)Ld/o/v/a/z/e;
 
     move-result-object p1
 
@@ -406,36 +1031,43 @@
     :cond_2
     move v0, v3
 
+    .line 14
     :goto_1
-    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->i:Lcom/android/camera/ui/ColorImageView;
+    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->u:Lcom/android/camera/ui/ColorImageView;
 
-    invoke-virtual {p0, v0, p1}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Ii(ZLcom/android/camera/ui/ColorImageView;)V
+    invoke-direct {p0, v0, p1}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Of(ZLcom/android/camera/ui/ColorImageView;)V
 
+    .line 15
     :cond_3
-    invoke-static {}, Lyh/a$h;->impl2()Lyh/a$h;
+    invoke-static {}, Ld/o/v/a/d0/a/c/a$h;->impl2()Ld/o/v/a/d0/a/c/a$h;
 
     move-result-object p1
 
     if-eqz p1, :cond_4
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->h:Lcom/android/camera/ui/TextureVideoView;
+    .line 16
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->t:Lcom/android/camera/ui/TextureVideoView;
 
-    invoke-interface {p1, v0, p2}, Lyh/a$h;->Bg(Lcom/android/camera/ui/TextureVideoView;Ljava/lang/String;)Z
+    invoke-interface {p1, v0, p2}, Ld/o/v/a/d0/a/c/a$h;->hg(Lcom/android/camera/ui/TextureVideoView;Ljava/lang/String;)Z
 
     move-result v3
 
     :cond_4
     if-eqz v3, :cond_5
 
-    iput-object p2, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->z:Ljava/lang/String;
+    .line 17
+    iput-object p2, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Q8:Ljava/lang/String;
 
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->z1()V
+    .line 18
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->z1()V
 
     goto :goto_2
 
+    .line 19
     :cond_5
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K7()V
+    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->z7()V
 
+    .line 20
     :goto_2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -443,390 +1075,38 @@
 
     iget p0, p0, Lcom/android/camera/fragment/BaseFragment;->mDegree:I
 
-    invoke-static {p1, p0}, Lcom/android/camera/a6;->J4(Landroid/app/Activity;I)Lio/reactivex/disposables/Disposable;
+    invoke-static {p1, p0}, Ld/d/a/z5;->v4(Landroid/app/Activity;I)Lio/reactivex/disposables/Disposable;
 
     return-void
 
+    .line 21
     :cond_6
     :goto_3
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K7()V
+    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->z7()V
 
     return-void
 .end method
 
-.method private synthetic ui()V
+.method private Jf()V
     .locals 4
 
     const/4 v0, 0x0
 
-    const-wide/16 v1, 0x0
-
-    const/16 v3, 0x8
-
-    invoke-virtual {p0, v3, v0, v1, v2}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->ig(IIJ)V
-
-    return-void
-.end method
-
-.method public static synthetic vi(Lv8/q;)V
-    .locals 1
-
-    instance-of v0, p0, Lwh/f0;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p0}, Lv8/q;->Yb()V
-
-    :cond_0
-    return-void
-.end method
-
-.method private synthetic wi()V
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Fi()V
-
-    invoke-static {}, Lv8/q;->impl()Ljava/util/Optional;
-
-    move-result-object p0
-
-    new-instance v0, Luh/k;
-
-    invoke-direct {v0}, Luh/k;-><init>()V
-
-    invoke-virtual {p0, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
-
-    return-void
-.end method
-
-.method private synthetic xi()V
-    .locals 2
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Fi()V
-
-    invoke-static {}, Lai/c;->j()Lai/c;
-
-    move-result-object p0
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v0, v1}, Lai/c;->f(II)V
-
-    invoke-static {}, Lv8/q;->impl()Ljava/util/Optional;
-
-    move-result-object p0
-
-    new-instance v0, Lr4/n;
-
-    invoke-direct {v0}, Lr4/n;-><init>()V
-
-    invoke-virtual {p0, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
-
-    return-void
-.end method
-
-.method private synthetic yi()V
-    .locals 7
-
-    const/4 v0, 0x0
-
-    new-array v1, v0, [Ljava/lang/Object;
-
-    const-string v2, "MIMOJI_FragmentMimojiFullScreen"
-
-    const-string v3, "[WTP]startCombine: E"
-
-    invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->z:Ljava/lang/String;
-
-    invoke-static {v1}, Ly7/m6;->d(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
+    .line 1
     :try_start_0
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->z:Ljava/lang/String;
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->X8:Ld/o/v/a/x;
 
-    const-string v3, "mimoji_normal"
+    invoke-virtual {v1, v0}, Ld/o/v/a/x;->T(I)V
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->z:Ljava/lang/String;
-
-    const-string v3, "mimoji_deal"
-
-    invoke-virtual {v1, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    :cond_0
-    const-string v1, "MIMOJI"
-
-    const-string v3, "mp4"
-
-    invoke-static {v1, v3}, Ly7/m6;->n(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    sget-object v4, Ll9/x;->v:Ljava/lang/String;
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-object v4, Ljava/io/File;->separator:Ljava/lang/String;
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->z:Ljava/lang/String;
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
-
-    move-result-object v5
-
-    const/4 v6, 0x1
-
-    invoke-static {v4, v3, v1, v5, v6}, Lo9/b;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;I)Landroid/net/Uri;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->F:Landroid/net/Uri;
-
-    iput-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->z:Ljava/lang/String;
-
-    :cond_1
-    new-array v1, v0, [Ljava/lang/String;
-
-    invoke-virtual {p0, v1}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->V2([Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K7()V
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K7()V
-
-    :goto_0
-    const-string p0, "[WTP]startCombine: X"
-
-    new-array v0, v0, [Ljava/lang/Object;
-
-    invoke-static {v2, p0, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public static synthetic zi(Lm6/u;)Z
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-
-# virtual methods
-.method public C5()Landroid/net/Uri;
-    .locals 0
-
-    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->F:Landroid/net/Uri;
-
-    return-object p0
-.end method
-
-.method public D0(Z)V
-    .locals 1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->A:Landroid/graphics/Bitmap;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->isRecycled()Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->p:Landroid/widget/ImageView;
-
-    if-eqz p1, :cond_0
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->A:Landroid/graphics/Bitmap;
-
-    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
-
-    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->p:Landroid/widget/ImageView;
-
-    const/4 p1, 0x1
-
-    invoke-static {p0, p1}, Lai/d;->c(Landroid/view/View;Z)Z
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->p:Landroid/widget/ImageView;
-
-    const/4 p1, 0x0
-
-    invoke-static {p0, p1}, Lai/d;->c(Landroid/view/View;Z)Z
-
-    :goto_0
-    return-void
-.end method
-
-.method public Db()Z
-    .locals 0
-
-    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->d:Landroid/view/View;
-
-    invoke-static {p0}, Lai/d;->a(Landroid/view/View;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final Ei()V
-    .locals 2
-
-    invoke-static {}, Lv8/u1;->impl2()Lv8/u1;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-boolean v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->y:Z
-
-    if-nez v0, :cond_1
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K7()V
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->y:Z
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->I:Lrh/x;
-
-    invoke-virtual {v0}, Lrh/x;->j()I
-
-    move-result v0
-
-    const/4 v1, 0x4
-
-    if-ne v0, v1, :cond_2
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->e()V
-
-    :cond_2
-    :goto_0
-    return-void
-.end method
-
-.method public Fi()V
-    .locals 3
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->I:Lrh/x;
-
-    invoke-virtual {v0}, Lrh/x;->j()I
-
-    move-result v0
-
-    const/4 v1, 0x4
-
-    const/4 v2, 0x0
-
-    if-ne v0, v1, :cond_0
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->I:Lrh/x;
-
-    invoke-virtual {v0, v2}, Lrh/x;->Q(I)V
-
-    :cond_0
-    iput-boolean v2, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->y:Z
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->N(Landroid/graphics/Bitmap;)V
-
-    invoke-virtual {p0, v2}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->D0(Z)V
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->r:Landroid/widget/ProgressBar;
-
-    invoke-static {v0, v2}, Lai/d;->c(Landroid/view/View;Z)Z
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->s:Landroid/widget/ImageView;
-
-    invoke-static {v0, v2}, Lai/d;->c(Landroid/view/View;Z)Z
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->t:Landroid/widget/ProgressBar;
-
-    invoke-static {v0, v2}, Lai/d;->c(Landroid/view/View;Z)Z
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->d:Landroid/view/View;
-
-    invoke-static {v0, v2}, Lai/d;->c(Landroid/view/View;Z)Z
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Gi()V
-
-    invoke-static {}, Lyh/a$h;->impl2()Lyh/a$h;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_1
-
-    invoke-interface {p0}, Lyh/a$h;->nh()V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final Gi()V
-    .locals 4
-
-    const/4 v0, 0x0
-
-    :try_start_0
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->I:Lrh/x;
-
-    invoke-virtual {v1, v0}, Lrh/x;->T(I)V
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->e:Lcom/xiaomi/mimoji/common/fragment/bottomlist/FragmentMimojiBottomList;
+    .line 2
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->n:Lcom/xiaomi/mimoji/common/fragment/bottomlist/FragmentMimojiBottomList;
 
     if-eqz v1, :cond_0
 
+    .line 3
     invoke-virtual {v1}, Lcom/android/camera/fragment/BaseFragment;->unRegisterProtocol()V
 
+    .line 4
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getChildFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v1
@@ -841,7 +1121,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->e:Lcom/xiaomi/mimoji/common/fragment/bottomlist/FragmentMimojiBottomList;
+    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->n:Lcom/xiaomi/mimoji/common/fragment/bottomlist/FragmentMimojiBottomList;
 
     invoke-virtual {v3}, Lcom/android/camera/fragment/BaseFragment;->getFragmentTag()Ljava/lang/String;
 
@@ -853,11 +1133,12 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/android/camera/fragment/u3;->c(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)Z
+    invoke-static {v1, v2}, Ld/d/a/u6/x3;->c(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)Z
 
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->e:Lcom/xiaomi/mimoji/common/fragment/bottomlist/FragmentMimojiBottomList;
+    .line 5
+    iput-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->n:Lcom/xiaomi/mimoji/common/fragment/bottomlist/FragmentMimojiBottomList;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -866,6 +1147,7 @@
     :catch_0
     move-exception p0
 
+    .line 6
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -891,634 +1173,142 @@
     return-void
 .end method
 
-.method public final Hi(Lcom/airbnb/lottie/LottieAnimationView;)V
+.method public static synthetic Mb(Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;Z)Z
     .locals 0
 
-    invoke-static {}, Lf2/a;->e()Lf2/a;
+    .line 1
+    iput-boolean p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->V8:Z
+
+    return p1
+.end method
+
+.method private Mf(Lcom/airbnb/lottie/LottieAnimationView;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "previewCombine"
+        }
+    .end annotation
+
+    .line 1
+    invoke-static {}, Ld/d/a/k6/c;->e()Ld/d/a/k6/c;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lf2/a;->c()Z
+    invoke-virtual {p0}, Ld/d/a/k6/c;->c()Z
 
     move-result p0
 
     if-eqz p0, :cond_1
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    .line 2
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lf2/e;->k()Z
+    invoke-virtual {p0}, Ld/d/a/k6/f;->k()Z
 
     move-result p0
 
     if-nez p0, :cond_0
 
-    const p0, 0x7f1301b5
+    const p0, 0x7f1201b4
 
+    .line 3
     invoke-virtual {p1, p0}, Lcom/airbnb/lottie/LottieAnimationView;->setAnimation(I)V
 
     goto :goto_0
 
     :cond_0
-    const p0, 0x7f1301b4
+    const p0, 0x7f1201b3
 
+    .line 4
     invoke-virtual {p1, p0}, Lcom/airbnb/lottie/LottieAnimationView;->setAnimation(I)V
 
     goto :goto_0
 
     :cond_1
-    const p0, 0x7f1301b3
+    const p0, 0x7f1201b2
 
+    .line 5
     invoke-virtual {p1, p0}, Lcom/airbnb/lottie/LottieAnimationView;->setAnimation(I)V
 
     :goto_0
     return-void
 .end method
 
-.method public final Ii(ZLcom/android/camera/ui/ColorImageView;)V
+.method private Of(ZLcom/android/camera/ui/ColorImageView;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "hasTimbre",
+            "mimojiChangeTimbreBtn"
+        }
+    .end annotation
 
     if-eqz p1, :cond_0
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    .line 1
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object p0
 
-    invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
+    .line 2
+    invoke-virtual {p2}, Landroid/widget/ImageView;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    const v0, 0x7f080135
+    const v0, 0x7f08011e
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
-    invoke-static {}, Lf2/f;->j()I
+    invoke-static {}, Ld/d/a/k6/g;->j()I
 
     move-result v0
 
-    invoke-virtual {p0, p1, v0}, Lf2/e;->c(Landroid/graphics/drawable/Drawable;I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0, p1, v0}, Ld/d/a/k6/f;->c(Landroid/graphics/drawable/Drawable;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
 
-    invoke-virtual {p2, p0}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    .line 3
+    invoke-virtual {p2, p0}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_0
 
     :cond_0
-    const p0, 0x7f080134
+    const p0, 0x7f08011d
 
+    .line 4
     invoke-virtual {p2, p0}, Landroidx/appcompat/widget/AppCompatImageView;->setBackgroundResource(I)V
 
     :goto_0
     return-void
 .end method
 
-.method public final Ji()V
-    .locals 4
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->I:Lrh/x;
-
-    const/4 v1, 0x3
-
-    invoke-virtual {v0, v1}, Lrh/x;->T(I)V
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->j:Landroid/widget/FrameLayout;
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lai/d;->c(Landroid/view/View;Z)Z
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->e:Lcom/xiaomi/mimoji/common/fragment/bottomlist/FragmentMimojiBottomList;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Lcom/xiaomi/mimoji/common/fragment/bottomlist/FragmentMimojiBottomList;
-
-    invoke-direct {v0}, Lcom/xiaomi/mimoji/common/fragment/bottomlist/FragmentMimojiBottomList;-><init>()V
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->e:Lcom/xiaomi/mimoji/common/fragment/bottomlist/FragmentMimojiBottomList;
-
-    invoke-virtual {v0}, Lcom/android/camera/fragment/BaseFragment;->registerProtocol()V
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->e:Lcom/xiaomi/mimoji/common/fragment/bottomlist/FragmentMimojiBottomList;
-
-    iget v1, p0, Lcom/android/camera/fragment/BaseFragment;->mDegree:I
-
-    invoke-virtual {v0, v1}, Lcom/android/camera/fragment/BaseFragment;->setDegree(I)V
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getChildFragmentManager()Landroidx/fragment/app/FragmentManager;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->e:Lcom/xiaomi/mimoji/common/fragment/bottomlist/FragmentMimojiBottomList;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p0}, Lcom/android/camera/fragment/BaseFragment;->getFragmentTag()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->e:Lcom/xiaomi/mimoji/common/fragment/bottomlist/FragmentMimojiBottomList;
-
-    invoke-virtual {v3}, Lcom/android/camera/fragment/BaseFragment;->getFragmentTag()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    const v3, 0x7f0b030e
-
-    invoke-static {v0, v3, v1, v2}, Lcom/android/camera/fragment/u3;->a(Landroidx/fragment/app/FragmentManager;ILandroidx/fragment/app/Fragment;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Lcom/xiaomi/mimoji/common/fragment/bottomlist/FragmentMimojiBottomList;->C7()I
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->e:Lcom/xiaomi/mimoji/common/fragment/bottomlist/FragmentMimojiBottomList;
-
-    invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getView()Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lz1/f;->d(Landroid/view/View;)V
-
-    :goto_0
-    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->i:Lcom/android/camera/ui/ColorImageView;
-
-    const/4 v0, 0x0
-
-    invoke-static {p0, v0}, Lai/d;->c(Landroid/view/View;Z)Z
-
-    return-void
-.end method
-
-.method public K7()V
-    .locals 2
-
-    iget v0, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
-
-    const/16 v1, 0xb8
-
-    if-ne v0, v1, :cond_1
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->I:Lrh/x;
-
-    invoke-virtual {v0}, Lrh/x;->u()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
-
-    move-result-object v0
-
-    new-instance v1, Luh/h;
-
-    invoke-direct {v1, p0}, Luh/h;-><init>(Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;)V
-
-    invoke-virtual {v0, v1}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method public final Ki()V
-    .locals 2
-
-    sget-object v0, Leg/i;->h:Lio/reactivex/Scheduler;
-
-    new-instance v1, Luh/d;
-
-    invoke-direct {v1, p0}, Luh/d;-><init>(Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;)V
-
-    invoke-static {v0, v1}, Leg/i;->r(Lio/reactivex/Scheduler;Ljava/lang/Runnable;)Lio/reactivex/disposables/Disposable;
-
-    return-void
-.end method
-
-.method public M8()Ljava/lang/String;
-    .locals 0
-
-    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->z:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public N(Landroid/graphics/Bitmap;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->A:Landroid/graphics/Bitmap;
-
-    return-void
-.end method
-
-.method public O2()V
-    .locals 9
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->z:Ljava/lang/String;
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->G:Z
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->d:Landroid/view/View;
-
-    if-nez v1, :cond_0
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->c:Landroid/view/ViewStub;
-
-    invoke-virtual {v1}, Landroid/view/ViewStub;->inflate()Landroid/view/View;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->d:Landroid/view/View;
-
-    invoke-virtual {p0, v1}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->si(Landroid/view/View;)V
-
-    :cond_0
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->g:Landroid/widget/FrameLayout;
-
-    invoke-static {v1, v0}, Lai/d;->c(Landroid/view/View;Z)Z
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->s:Landroid/widget/ImageView;
-
-    invoke-static {v1, v0}, Lai/d;->c(Landroid/view/View;Z)Z
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->t:Landroid/widget/ProgressBar;
-
-    invoke-static {v1, v0}, Lai/d;->c(Landroid/view/View;Z)Z
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->u:Landroid/widget/ProgressBar;
-
-    invoke-static {v1, v0}, Lai/d;->c(Landroid/view/View;Z)Z
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->x:Landroid/view/ViewGroup;
-
-    invoke-static {v1, v0}, Lai/d;->c(Landroid/view/View;Z)Z
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->d:Landroid/view/View;
-
-    const/4 v2, 0x1
-
-    invoke-static {v1, v2}, Lai/d;->c(Landroid/view/View;Z)Z
-
-    invoke-virtual {p0, v2}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->D0(Z)V
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->X3()V
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->ni()V
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->I:Lrh/x;
-
-    invoke-virtual {v1}, Lrh/x;->m()I
-
-    move-result v1
-
-    const/4 v3, 0x3
-
-    if-ne v1, v3, :cond_1
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->f:Landroid/view/ViewGroup;
-
-    invoke-static {v1, v2}, Lai/d;->c(Landroid/view/View;Z)Z
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->j:Landroid/widget/FrameLayout;
-
-    invoke-static {v1, v2}, Lai/d;->c(Landroid/view/View;Z)Z
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->i:Lcom/android/camera/ui/ColorImageView;
-
-    invoke-static {v1, v0}, Lai/d;->c(Landroid/view/View;Z)Z
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->f:Landroid/view/ViewGroup;
-
-    invoke-static {v1, v0}, Lai/d;->c(Landroid/view/View;Z)Z
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->j:Landroid/widget/FrameLayout;
-
-    invoke-static {v1, v0}, Lai/d;->c(Landroid/view/View;Z)Z
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->i:Lcom/android/camera/ui/ColorImageView;
-
-    invoke-static {v1, v2}, Lai/d;->c(Landroid/view/View;Z)Z
-
-    :goto_0
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->k:Landroid/widget/ImageView;
-
-    iget v3, p0, Lcom/android/camera/fragment/BaseFragment;->mDegree:I
-
-    int-to-float v3, v3
-
-    invoke-static {v1, v3}, Landroidx/core/view/ViewCompat;->setRotation(Landroid/view/View;F)V
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->l:Lcom/android/camera/ui/CameraSnapView;
-
-    iget v3, p0, Lcom/android/camera/fragment/BaseFragment;->mDegree:I
-
-    int-to-float v3, v3
-
-    invoke-static {v1, v3}, Landroidx/core/view/ViewCompat;->setRotation(Landroid/view/View;F)V
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->m:Lcom/airbnb/lottie/LottieAnimationView;
-
-    iget v3, p0, Lcom/android/camera/fragment/BaseFragment;->mDegree:I
-
-    int-to-float v3, v3
-
-    invoke-static {v1, v3}, Landroidx/core/view/ViewCompat;->setRotation(Landroid/view/View;F)V
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->n:Landroid/widget/ImageView;
-
-    iget v3, p0, Lcom/android/camera/fragment/BaseFragment;->mDegree:I
-
-    int-to-float v3, v3
-
-    invoke-static {v1, v3}, Landroidx/core/view/ViewCompat;->setRotation(Landroid/view/View;F)V
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->o:Landroid/widget/ImageView;
-
-    iget v3, p0, Lcom/android/camera/fragment/BaseFragment;->mDegree:I
-
-    int-to-float v3, v3
-
-    invoke-static {v1, v3}, Landroidx/core/view/ViewCompat;->setRotation(Landroid/view/View;F)V
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->i:Lcom/android/camera/ui/ColorImageView;
-
-    iget v3, p0, Lcom/android/camera/fragment/BaseFragment;->mDegree:I
-
-    int-to-float v3, v3
-
-    invoke-static {v1, v3}, Landroidx/core/view/ViewCompat;->setRotation(Landroid/view/View;F)V
-
-    new-instance v1, La2/a;
-
-    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->l:Lcom/android/camera/ui/CameraSnapView;
-
-    invoke-direct {v1, v3}, La2/a;-><init>(Landroid/view/View;)V
-
-    invoke-static {v1}, Lio/reactivex/Completable;->create(Lio/reactivex/CompletableOnSubscribe;)Lio/reactivex/Completable;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lio/reactivex/Completable;->subscribe()Lio/reactivex/disposables/Disposable;
-
-    new-instance v1, La2/a;
-
-    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->m:Lcom/airbnb/lottie/LottieAnimationView;
-
-    invoke-direct {v1, v3}, La2/a;-><init>(Landroid/view/View;)V
-
-    invoke-static {v1}, Lio/reactivex/Completable;->create(Lio/reactivex/CompletableOnSubscribe;)Lio/reactivex/Completable;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lio/reactivex/Completable;->subscribe()Lio/reactivex/disposables/Disposable;
-
-    new-instance v1, La2/a;
-
-    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->n:Landroid/widget/ImageView;
-
-    invoke-direct {v1, v3}, La2/a;-><init>(Landroid/view/View;)V
-
-    invoke-static {v1}, Lio/reactivex/Completable;->create(Lio/reactivex/CompletableOnSubscribe;)Lio/reactivex/Completable;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lio/reactivex/Completable;->subscribe()Lio/reactivex/disposables/Disposable;
-
-    new-instance v1, La2/a;
-
-    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->k:Landroid/widget/ImageView;
-
-    invoke-direct {v1, v3}, La2/a;-><init>(Landroid/view/View;)V
-
-    invoke-static {v1}, Lio/reactivex/Completable;->create(Lio/reactivex/CompletableOnSubscribe;)Lio/reactivex/Completable;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lio/reactivex/Completable;->subscribe()Lio/reactivex/disposables/Disposable;
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->m:Lcom/airbnb/lottie/LottieAnimationView;
-
-    const v3, 0x3ec28f5c    # 0.38f
-
-    invoke-virtual {v1, v3}, Lcom/airbnb/lottie/LottieAnimationView;->setScale(F)V
-
-    iget v1, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
-
-    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->l:Lcom/android/camera/ui/CameraSnapView;
-
-    iget-object v4, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->m:Lcom/airbnb/lottie/LottieAnimationView;
-
-    invoke-virtual {p0, v1, v3, v4}, Lcom/android/camera/fragment/BaseFragment;->adjustProgress(ILcom/android/camera/ui/CameraSnapView;Lcom/airbnb/lottie/LottieAnimationView;)V
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->m:Lcom/airbnb/lottie/LottieAnimationView;
-
-    invoke-virtual {p0, v1}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Hi(Lcom/airbnb/lottie/LottieAnimationView;)V
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->m:Lcom/airbnb/lottie/LottieAnimationView;
-
-    invoke-virtual {v1}, Lcom/airbnb/lottie/LottieAnimationView;->playAnimation()V
-
-    new-instance v1, La2/a;
-
-    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->o:Landroid/widget/ImageView;
-
-    invoke-direct {v1, v3}, La2/a;-><init>(Landroid/view/View;)V
-
-    invoke-static {v1}, Lio/reactivex/Completable;->create(Lio/reactivex/CompletableOnSubscribe;)Lio/reactivex/Completable;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lio/reactivex/Completable;->subscribe()Lio/reactivex/disposables/Disposable;
-
-    invoke-static {}, Lyh/a$b;->impl2()Lyh/a$b;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_2
-
-    iget-wide v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->H:J
-
-    const-wide/16 v5, 0x3e8
-
-    const-wide/16 v7, 0x3a98
-
-    invoke-static/range {v3 .. v8}, Lcom/android/camera/a6;->B(JJJ)J
-
-    move-result-wide v3
-
-    invoke-static {v3, v4, v0, v0}, Lcom/android/camera/a6;->Q3(JZZ)Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->v:Landroid/widget/TextView;
-
-    invoke-virtual {v3, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->v:Landroid/widget/TextView;
-
-    invoke-static {}, Lf2/e;->d()Lf2/e;
-
-    move-result-object v3
-
-    const v4, 0x7f06030a
-
-    invoke-virtual {v3, v4}, Lf2/e;->b(I)I
-
-    move-result v3
-
-    invoke-virtual {v1, v3}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->v:Landroid/widget/TextView;
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_2
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->k:Landroid/widget/ImageView;
-
-    invoke-static {v1, v0}, Lai/d;->c(Landroid/view/View;Z)Z
-
-    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->r:Landroid/widget/ProgressBar;
-
-    invoke-static {p0, v2}, Lai/d;->c(Landroid/view/View;Z)Z
-
-    return-void
-.end method
-
-.method public T9(J)V
-    .locals 0
-
-    iput-wide p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->H:J
-
-    return-void
-.end method
-
-.method public varargs V2([Ljava/lang/String;)V
-    .locals 4
-
-    iget v0, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
-
-    const/16 v1, 0xb8
-
-    if-ne v0, v1, :cond_2
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->I:Lrh/x;
-
-    invoke-virtual {v0}, Lrh/x;->u()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "onCombineSuccess() : "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    new-array v2, v1, [Ljava/lang/Object;
-
-    const-string v3, "MIMOJI_FragmentMimojiFullScreen"
-
-    invoke-static {v3, v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    if-eqz p1, :cond_1
-
-    array-length v0, p1
-
-    if-lez v0, :cond_1
-
-    aget-object p1, p1, v1
-
-    iput-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->z:Ljava/lang/String;
-
-    :cond_1
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
-
-    move-result-object p1
-
-    new-instance v0, Luh/j;
-
-    invoke-direct {v0, p0}, Luh/j;-><init>(Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;)V
-
-    invoke-virtual {p1, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
-
-    :cond_2
-    :goto_0
-    return-void
-.end method
-
-.method public Va()Landroid/graphics/Bitmap;
-    .locals 0
-
-    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->A:Landroid/graphics/Bitmap;
-
-    return-object p0
-.end method
-
-.method public final X3()V
+.method private T3()V
     .locals 6
 
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    .line 1
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lm2/h1;->G0()I
+    invoke-virtual {v0}, Ld/d/a/l6/e/m/g1;->x0()I
 
     move-result v0
 
-    const v1, 0x7f06010d
+    const v1, 0x7f0600e9
 
-    const v2, 0x7f070063
+    const v2, 0x7f070060
 
     const/4 v3, 0x1
 
@@ -1534,14 +1324,16 @@
 
     if-eq v0, v5, :cond_0
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    .line 2
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lf2/e;->b(I)I
+    invoke-virtual {v0, v1}, Ld/d/a/k6/f;->b(I)I
 
     move-result v0
 
+    .line 3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -1554,6 +1346,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
@@ -1563,13 +1356,15 @@
 
     move-result v0
 
-    invoke-static {}, Ly2/b;->j0()I
+    .line 5
+    invoke-static {}, Ld/d/a/n6/b;->j0()I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    invoke-static {}, Ly2/b;->o0()I
+    .line 6
+    invoke-static {}, Ld/d/a/n6/b;->o0()I
 
     move-result v1
 
@@ -1581,15 +1376,17 @@
 
     goto :goto_0
 
+    .line 7
     :cond_1
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lf2/e;->b(I)I
+    invoke-virtual {v0, v1}, Ld/d/a/k6/f;->b(I)I
 
     move-result v0
 
+    .line 8
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -1600,34 +1397,40 @@
 
     move v2, v4
 
+    .line 9
     :goto_0
-    iget-object v5, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->q:Lcom/android/camera/customization/BGTintTextView;
+    iget-object v5, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->v2:Lcom/android/camera/customization/BGTintTextView;
 
-    invoke-virtual {v5}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    .line 10
+    invoke-virtual {v5}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v5
 
     check-cast v5, Landroid/view/ViewGroup$MarginLayoutParams;
 
+    .line 11
     iput v1, v5, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->q:Lcom/android/camera/customization/BGTintTextView;
+    .line 12
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->v2:Lcom/android/camera/customization/BGTintTextView;
 
-    invoke-virtual {v1, v5}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v1, v5}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->w:Landroid/widget/FrameLayout;
+    .line 13
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->N8:Landroid/widget/FrameLayout;
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+    invoke-virtual {v1, v0}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
     const/4 v0, 0x2
 
     new-array v0, v0, [Landroid/view/View;
 
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->n:Landroid/widget/ImageView;
+    .line 14
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->v1:Landroid/widget/ImageView;
 
     aput-object v1, v0, v4
 
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->o:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->C1:Landroid/widget/ImageView;
 
     aput-object v1, v0, v3
 
@@ -1636,243 +1439,60 @@
     return-void
 .end method
 
-.method public Z7()V
-    .locals 0
-    .annotation build Lh7/c;
-    .end annotation
+.method private synthetic Ud()V
+    .locals 2
 
-    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->l:Lcom/android/camera/ui/CameraSnapView;
+    .line 1
+    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Ff()V
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/CameraSnapView;->performClick()Z
-
-    return-void
-.end method
-
-.method public final alertTintColor()I
-    .locals 1
-
-    invoke-static {}, Lf2/f;->e()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {}, Lf2/f;->j()I
-
-    move-result p0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
+    .line 2
+    invoke-static {}, Ld/o/v/a/f0/c;->j()Ld/o/v/a/f0/c;
 
     move-result-object p0
 
-    const v0, 0x7f060922
-
-    invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result p0
-
-    :goto_0
-    return p0
-.end method
-
-.method public final e()V
-    .locals 4
-
-    const/4 v0, 0x0
-
-    new-array v1, v0, [Ljava/lang/Object;
-
-    const-string v2, "MIMOJI_FragmentMimojiFullScreen"
-
-    const-string v3, "mimoji void resumePlay[]"
-
-    invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    invoke-static {}, Lyh/a$h;->impl2()Lyh/a$h;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v1}, Lyh/a$h;->e()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->k:Landroid/widget/ImageView;
-
-    invoke-static {p0, v0}, Lai/d;->c(Landroid/view/View;Z)Z
-
-    goto :goto_0
-
-    :cond_0
-    const-string p0, "mimoji void resumePlay fail"
-
-    new-array v0, v0, [Ljava/lang/Object;
-
-    invoke-static {v2, p0, v0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method public getFragmentInto()I
-    .locals 0
-
-    const p0, 0xfff3
-
-    return p0
-.end method
-
-.method public getLayoutResourceId()I
-    .locals 0
-
-    const p0, 0x7f0e0117
-
-    return p0
-.end method
-
-.method public ig(IIJ)V
-    .locals 2
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->q:Lcom/android/camera/customization/BGTintTextView;
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->C:Landroid/os/Handler;
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->D:Ljava/lang/Runnable;
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
-
-    if-nez p1, :cond_1
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->q:Lcom/android/camera/customization/BGTintTextView;
-
-    invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(I)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->q:Lcom/android/camera/customization/BGTintTextView;
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->alertTintColor()I
-
-    move-result p2
-
-    invoke-virtual {p1, p2}, Lcom/android/camera/customization/BGTintTextView;->setBGColor(I)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->q:Lcom/android/camera/customization/BGTintTextView;
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
-
-    const-wide/16 p1, 0x0
-
-    cmp-long p1, p3, p1
-
-    if-lez p1, :cond_2
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->C:Landroid/os/Handler;
-
-    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->D:Ljava/lang/Runnable;
-
-    invoke-virtual {p1, p0, p3, p4}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    goto :goto_0
-
-    :cond_1
-    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->q:Lcom/android/camera/customization/BGTintTextView;
-
-    const-string p2, ""
-
-    invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->q:Lcom/android/camera/customization/BGTintTextView;
-
-    const/16 p1, 0x8
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_2
-    :goto_0
-    return-void
-.end method
-
-.method public initView(Landroid/view/View;)V
-    .locals 1
-    .annotation build Landroid/annotation/SuppressLint;
-        value = {
-            "ClickableViewAccessibility"
-        }
-    .end annotation
-
-    const v0, 0x7f0b04a2
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/view/ViewStub;
-
-    iput-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->c:Landroid/view/ViewStub;
-
-    invoke-static {}, Lg2/b;->j()Lq2/a;
-
-    move-result-object p1
-
-    const-class v0, Lrh/x;
-
-    invoke-virtual {p1, v0}, Lq2/a;->c(Ljava/lang/Class;)Lq2/d;
-
-    move-result-object p1
-
-    check-cast p1, Lrh/x;
-
-    iput-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->I:Lrh/x;
-
-    return-void
-.end method
-
-.method public final n()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->n:Landroid/widget/ImageView;
+    const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-virtual {p0, v0, v1}, Ld/o/v/a/f0/c;->f(II)V
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->u:Landroid/widget/ProgressBar;
+    .line 3
+    invoke-static {}, Ld/d/a/m7/g/t;->impl()Ljava/util/Optional;
 
-    const/16 v1, 0x8
+    move-result-object p0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    sget-object v0, Ld/o/v/a/a0/b/a;->c:Ld/o/v/a/a0/b/a;
 
-    new-instance v0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen$a;
-
-    invoke-direct {v0, p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen$a;-><init>(Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;)V
-
-    invoke-virtual {p0, v0}, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji;->Xh(Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji$b;)V
+    invoke-virtual {p0, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
     return-void
 .end method
 
-.method public final ni()V
+.method private synthetic Wc()V
+    .locals 4
+
+    const/16 v0, 0x8
+
+    const/4 v1, 0x0
+
+    const-wide/16 v2, 0x0
+
+    .line 1
+    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Pf(IIJ)V
+
+    return-void
+.end method
+
+.method private Yb()V
     .locals 7
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "!isSupportThemeCV"
         type = 0x0
     .end annotation
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->I:Lrh/x;
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->X8:Ld/o/v/a/x;
 
     const/4 v1, 0x3
 
@@ -1880,7 +1500,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lrh/x;->k(Ljava/lang/Integer;)Lsh/e;
+    invoke-virtual {v0, v1}, Ld/o/v/a/x;->k(Ljava/lang/Integer;)Ld/o/v/a/z/e;
 
     move-result-object v0
 
@@ -1896,11 +1516,12 @@
     :goto_0
     move v6, v0
 
-    iget-object v2, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->n:Landroid/widget/ImageView;
+    .line 2
+    iget-object v2, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->v1:Landroid/widget/ImageView;
 
-    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->o:Landroid/widget/ImageView;
+    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->C1:Landroid/widget/ImageView;
 
-    iget-object v4, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->i:Lcom/android/camera/ui/ColorImageView;
+    iget-object v4, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->u:Lcom/android/camera/ui/ColorImageView;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
@@ -1908,7 +1529,7 @@
 
     move-object v1, p0
 
-    invoke-virtual/range {v1 .. v6}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->oi(Landroid/widget/ImageView;Landroid/widget/ImageView;Lcom/android/camera/ui/ColorImageView;Landroid/content/Context;Z)Z
+    invoke-direct/range {v1 .. v6}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->gc(Landroid/widget/ImageView;Landroid/widget/ImageView;Lcom/android/camera/ui/ColorImageView;Landroid/content/Context;Z)Z
 
     move-result v0
 
@@ -1916,37 +1537,41 @@
 
     return-void
 
+    .line 3
     :cond_1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f0608e3
+    const v1, 0x7f06047b
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v0
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    .line 4
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lf2/e;->k()Z
+    invoke-virtual {v2}, Ld/d/a/k6/f;->k()Z
 
     move-result v2
 
     if-nez v2, :cond_2
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    .line 5
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lf2/e;->b(I)I
+    invoke-virtual {v0, v1}, Ld/d/a/k6/f;->b(I)I
 
     move-result v0
 
+    .line 6
     :cond_2
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->o:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->C1:Landroid/widget/ImageView;
 
     invoke-virtual {v1}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
@@ -1954,7 +1579,8 @@
 
     invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->setTint(I)V
 
-    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->n:Landroid/widget/ImageView;
+    .line 7
+    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->v1:Landroid/widget/ImageView;
 
     invoke-virtual {p0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
@@ -1965,80 +1591,295 @@
     return-void
 .end method
 
-.method public final oi(Landroid/widget/ImageView;Landroid/widget/ImageView;Lcom/android/camera/ui/ColorImageView;Landroid/content/Context;Z)Z
-    .locals 2
+.method private alertTintColor()I
+    .locals 1
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    .line 1
+    invoke-static {}, Ld/d/a/k6/g;->e()Z
 
-    move-result-object p0
+    move-result v0
 
-    const v0, 0x7f0608e4
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0, v0}, Lf2/e;->b(I)I
+    invoke-static {}, Ld/d/a/k6/g;->j()I
 
     move-result p0
 
-    invoke-static {}, Lf2/a;->e()Lf2/a;
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    const v0, 0x7f0604b8
+
+    invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result p0
+
+    :goto_0
+    return p0
+.end method
+
+.method private cg()V
+    .locals 5
+
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->X8:Ld/o/v/a/x;
+
+    const/4 v1, 0x3
+
+    invoke-virtual {v0, v1}, Ld/o/v/a/x;->T(I)V
+
+    .line 2
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->w:Landroid/widget/FrameLayout;
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Ld/o/v/a/f0/d;->c(Landroid/view/View;Z)Z
+
+    .line 3
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->n:Lcom/xiaomi/mimoji/common/fragment/bottomlist/FragmentMimojiBottomList;
+
+    if-nez v0, :cond_0
+
+    .line 4
+    new-instance v0, Lcom/xiaomi/mimoji/common/fragment/bottomlist/FragmentMimojiBottomList;
+
+    invoke-direct {v0}, Lcom/xiaomi/mimoji/common/fragment/bottomlist/FragmentMimojiBottomList;-><init>()V
+
+    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->n:Lcom/xiaomi/mimoji/common/fragment/bottomlist/FragmentMimojiBottomList;
+
+    .line 5
+    invoke-virtual {v0}, Lcom/android/camera/fragment/BaseFragment;->registerProtocol()V
+
+    .line 6
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->n:Lcom/xiaomi/mimoji/common/fragment/bottomlist/FragmentMimojiBottomList;
+
+    iget v1, p0, Lcom/android/camera/fragment/BaseFragment;->mDegree:I
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/fragment/BaseFragment;->setDegree(I)V
+
+    .line 7
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getChildFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lf2/a;->c()Z
+    const v1, 0x7f0b02c7
+
+    iget-object v2, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->n:Lcom/xiaomi/mimoji/common/fragment/bottomlist/FragmentMimojiBottomList;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    .line 8
+    invoke-virtual {p0}, Lcom/android/camera/fragment/BaseFragment;->getFragmentTag()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v4, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->n:Lcom/xiaomi/mimoji/common/fragment/bottomlist/FragmentMimojiBottomList;
+
+    invoke-virtual {v4}, Lcom/android/camera/fragment/BaseFragment;->getFragmentTag()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    .line 9
+    invoke-static {v0, v1, v2, v3}, Ld/d/a/u6/x3;->a(Landroidx/fragment/app/FragmentManager;ILandroidx/fragment/app/Fragment;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 10
+    :cond_0
+    invoke-virtual {v0}, Lcom/xiaomi/mimoji/common/fragment/bottomlist/FragmentMimojiBottomList;->r7()I
+
+    .line 11
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->n:Lcom/xiaomi/mimoji/common/fragment/bottomlist/FragmentMimojiBottomList;
+
+    invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getView()Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ld/d/a/f6/f;->d(Landroid/view/View;)V
+
+    .line 12
+    :goto_0
+    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->u:Lcom/android/camera/ui/ColorImageView;
+
+    const/4 v0, 0x0
+
+    invoke-static {p0, v0}, Ld/o/v/a/f0/d;->c(Landroid/view/View;Z)Z
+
+    return-void
+.end method
+
+.method private f()V
+    .locals 4
+
+    const/4 v0, 0x0
+
+    new-array v1, v0, [Ljava/lang/Object;
+
+    const-string v2, "MIMOJI_FragmentMimojiFullScreen"
+
+    const-string v3, "mimoji void resumePlay[]"
+
+    .line 1
+    invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 2
+    invoke-static {}, Ld/o/v/a/d0/a/c/a$h;->impl2()Ld/o/v/a/d0/a/c/a$h;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    .line 3
+    invoke-interface {v1}, Ld/o/v/a/d0/a/c/a$h;->f()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 4
+    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->k0:Landroid/widget/ImageView;
+
+    invoke-static {p0, v0}, Ld/o/v/a/f0/d;->c(Landroid/view/View;Z)Z
+
+    goto :goto_0
+
+    :cond_0
+    new-array p0, v0, [Ljava/lang/Object;
+
+    const-string v0, "mimoji void resumePlay fail"
+
+    .line 5
+    invoke-static {v2, v0, p0}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
+.method public static synthetic ff(Ld/d/a/u6/w4/b0;)Z
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method private gc(Landroid/widget/ImageView;Landroid/widget/ImageView;Lcom/android/camera/ui/ColorImageView;Landroid/content/Context;Z)Z
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "previewBack",
+            "previewShare",
+            "mimojiChangeTimbreBtn",
+            "context",
+            "hasTimbre"
+        }
+    .end annotation
+
+    .line 1
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
+
+    move-result-object p0
+
+    const v0, 0x7f06047c
+
+    invoke-virtual {p0, v0}, Ld/d/a/k6/f;->b(I)I
+
+    move-result p0
+
+    .line 2
+    invoke-static {}, Ld/d/a/k6/c;->e()Ld/d/a/k6/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ld/d/a/k6/c;->c()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 3
     invoke-virtual {p1}, Landroid/widget/ImageView;->clearColorFilter()V
 
+    .line 4
     invoke-virtual {p2}, Landroid/widget/ImageView;->clearColorFilter()V
 
+    .line 5
     invoke-virtual {p3}, Landroid/widget/ImageView;->clearColorFilter()V
 
     :cond_0
-    const v0, 0x7f0807d4
+    const v0, 0x7f0807cc
 
-    const v1, 0x7f0807d5
+    const v1, 0x7f0807cd
 
+    .line 6
     invoke-static {p4, v0, v1}, Lcom/android/camera/fragment/BaseFragment;->getIconDrawable(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    const v0, 0x7f0808a4
+    const v0, 0x7f08089c
 
-    const v1, 0x7f0808a5
+    const v1, 0x7f08089d
 
+    .line 7
     invoke-static {p4, v0, v1}, Lcom/android/camera/fragment/BaseFragment;->getIconDrawable(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     invoke-virtual {p2, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    const v0, 0x7f08086f
+    const v0, 0x7f080867
 
-    const v1, 0x7f080870
+    const v1, 0x7f080868
 
+    .line 8
     invoke-static {p4, v0, v1}, Lcom/android/camera/fragment/BaseFragment;->getIconDrawable(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
 
     move-result-object p4
 
     invoke-virtual {p3, p4}, Lcom/airbnb/lottie/LottieAnimationView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    invoke-static {}, Lf2/a;->e()Lf2/a;
+    .line 9
+    invoke-static {}, Ld/d/a/k6/c;->e()Ld/d/a/k6/c;
 
     move-result-object p4
 
-    invoke-virtual {p4}, Lf2/a;->c()Z
+    invoke-virtual {p4}, Ld/d/a/k6/c;->c()Z
 
     move-result p4
 
     if-eqz p4, :cond_1
 
+    .line 10
     invoke-virtual {p1, p0}, Landroid/widget/ImageView;->setColorFilter(I)V
 
+    .line 11
     invoke-virtual {p2, p0}, Landroid/widget/ImageView;->setColorFilter(I)V
 
+    .line 12
     invoke-virtual {p3, p0}, Landroid/widget/ImageView;->setColorFilter(I)V
 
     :cond_1
@@ -2046,12 +1887,14 @@
 
     const/4 p0, 0x0
 
+    .line 13
     invoke-virtual {p3, p0}, Lcom/android/camera/ui/ColorImageView;->setColor(I)V
 
     goto :goto_0
 
+    .line 14
     :cond_2
-    invoke-static {}, Le2/l;->a()I
+    invoke-static {}, Ld/d/a/j6/l;->a()I
 
     move-result p0
 
@@ -2063,459 +1906,216 @@
     return p0
 .end method
 
-.method public onBackEvent(I)Z
-    .locals 2
-    .annotation build Lh7/c;
-    .end annotation
+.method private synthetic je()V
+    .locals 7
 
     const/4 v0, 0x0
 
-    const/4 v1, 0x1
+    new-array v1, v0, [Ljava/lang/Object;
 
-    if-ne p1, v1, :cond_1
+    const-string v2, "MIMOJI_FragmentMimojiFullScreen"
 
-    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->d:Landroid/view/View;
+    const-string v3, "[WTP]startCombine: E"
 
-    invoke-static {p1}, Lai/d;->a(Landroid/view/View;)Z
+    .line 1
+    invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    move-result p1
+    .line 2
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Q8:Ljava/lang/String;
 
-    if-eqz p1, :cond_1
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->x:Landroid/view/ViewGroup;
-
-    invoke-static {p1}, Lai/d;->a(Landroid/view/View;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const-string p0, "mShareLayout visible: "
-
-    new-array p1, v0, [Ljava/lang/Object;
-
-    const-string v0, "MIMOJI_FragmentMimojiFullScreen"
-
-    invoke-static {v0, p0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->n()V
-
-    :goto_0
-    return v1
-
-    :cond_1
-    return v0
-.end method
-
-.method public onClick(Landroid/view/View;)V
-    .locals 3
-
-    invoke-static {}, Lyh/a$h;->impl2()Lyh/a$h;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->r:Landroid/widget/ProgressBar;
-
-    invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
+    invoke-static {v1}, Ld/d/a/d7/m8/b/z9;->d(Ljava/lang/String;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_2
 
-    if-eqz v0, :cond_0
+    .line 3
+    :try_start_0
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Q8:Ljava/lang/String;
 
-    invoke-interface {v0}, Lyh/a$h;->kc()Z
+    const-string v3, "mimoji_normal"
 
-    move-result v0
+    invoke-virtual {v1, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
-    if-eqz v0, :cond_5
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Q8:Ljava/lang/String;
+
+    const-string v3, "mimoji_deal"
+
+    invoke-virtual {v1, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
 
     :cond_0
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->s:Landroid/widget/ImageView;
+    const-string v1, "MIMOJI"
 
-    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
+    const-string v3, "mp4"
 
-    move-result v0
+    .line 4
+    invoke-static {v1, v3}, Ld/d/a/d7/m8/b/z9;->n(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    if-eqz v0, :cond_5
+    move-result-object v1
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->t:Landroid/widget/ProgressBar;
+    .line 5
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result v0
+    sget-object v4, Ld/d/a/w7/z;->v:Ljava/lang/String;
 
-    if-eqz v0, :cond_5
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->u:Landroid/widget/ProgressBar;
+    sget-object v4, Ljava/io/File;->separator:Ljava/lang/String;
 
-    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v0
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-nez v0, :cond_1
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    goto/16 :goto_1
+    move-result-object v3
+
+    .line 6
+    iget-object v4, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Q8:Ljava/lang/String;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v5
+
+    const/4 v6, 0x1
+
+    invoke-static {v4, v3, v1, v5, v6}, Ld/d/a/w7/b0/b;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;I)Landroid/net/Uri;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->U8:Landroid/net/Uri;
+
+    .line 7
+    iput-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Q8:Ljava/lang/String;
 
     :cond_1
-    invoke-virtual {p1}, Landroid/view/View;->getId()I
+    new-array v1, v0, [Ljava/lang/String;
 
-    move-result p1
-
-    const/4 v0, 0x0
-
-    const-string v1, "MIMOJI_FragmentMimojiFullScreen"
-
-    sparse-switch p1, :sswitch_data_0
-
-    goto/16 :goto_1
-
-    :sswitch_0
-    const-string p0, "onClick: live_preview_bottom_action"
-
-    invoke-static {v1, p0}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto/16 :goto_1
-
-    :sswitch_1
-    const-string p1, "onClick: mimoji_preview_share"
-
-    invoke-static {v1, p1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->r:Landroid/widget/ProgressBar;
-
-    invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    iget-boolean p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->J:Z
-
-    if-eqz p1, :cond_2
+    .line 8
+    invoke-virtual {p0, v1}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->V2([Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
+    .line 9
+    :catch_0
+    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->z7()V
+
+    goto :goto_0
+
+    .line 10
     :cond_2
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->qi()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->z7()V
 
-    move-result-object p1
-
-    const-string v2, "mimoji_play_share"
-
-    invoke-static {p1, v2}, Lk9/a;->Z1(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->pi()Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    const-string p1, "uri null"
-
-    new-array v0, v0, [Ljava/lang/Object;
-
-    invoke-static {v1, p1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K7()V
-
-    goto/16 :goto_1
-
-    :cond_3
     :goto_0
-    const-string p0, "concat not finished or isShareShow, skip share~"
+    new-array p0, v0, [Ljava/lang/Object;
 
-    new-array p1, v0, [Ljava/lang/Object;
+    const-string v0, "[WTP]startCombine: X"
 
-    invoke-static {v1, p0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 11
+    invoke-static {v2, v0, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
-
-    :sswitch_2
-    const-string p1, "onClick: mimoji_preview_save"
-
-    invoke-static {v1, p1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {}, Lai/c;->j()Lai/c;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0, v0}, Lai/c;->f(II)V
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->qi()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "mimoji_play_save"
-
-    invoke-static {p1, v0}, Lk9/a;->Z1(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->u()V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->k:Landroid/widget/ImageView;
-
-    const/16 v0, 0x8
-
-    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->m:Lcom/airbnb/lottie/LottieAnimationView;
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    iget p1, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->l:Lcom/android/camera/ui/CameraSnapView;
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->s:Landroid/widget/ImageView;
-
-    invoke-virtual {p0, p1, v0, v1}, Lcom/android/camera/fragment/BaseFragment;->adjustProgressAndGetDrawable(ILcom/android/camera/ui/CameraSnapView;Landroid/view/View;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_4
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->s:Landroid/widget/ImageView;
-
-    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    :cond_4
-    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->s:Landroid/widget/ImageView;
-
-    const/4 v0, 0x1
-
-    invoke-static {p1, v0}, Lai/d;->c(Landroid/view/View;Z)Z
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Ki()V
-
-    goto :goto_1
-
-    :sswitch_3
-    const-string p1, "onClick: live_preview_play"
-
-    invoke-static {v1, p1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->z1()V
-
-    goto :goto_1
-
-    :sswitch_4
-    const-string p1, "onClick: live_preview_layout"
-
-    invoke-static {v1, p1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->e:Lcom/xiaomi/mimoji/common/fragment/bottomlist/FragmentMimojiBottomList;
-
-    if-eqz p1, :cond_5
-
-    invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getView()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lai/d;->a(Landroid/view/View;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_5
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->ri()V
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->ni()V
-
-    goto :goto_1
-
-    :sswitch_5
-    const-string p1, "onClick: live_preview_back"
-
-    invoke-static {v1, p1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->n()V
-
-    goto :goto_1
-
-    :sswitch_6
-    const-string p1, "onClick: btn_mimoji_change_timbre"
-
-    invoke-static {v1, p1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Ji()V
-
-    :cond_5
-    :goto_1
-    return-void
-
-    :sswitch_data_0
-    .sparse-switch
-        0x7f0b010f -> :sswitch_6
-        0x7f0b03e6 -> :sswitch_5
-        0x7f0b03e7 -> :sswitch_4
-        0x7f0b03e9 -> :sswitch_3
-        0x7f0b03ec -> :sswitch_2
-        0x7f0b03ed -> :sswitch_2
-        0x7f0b03ee -> :sswitch_1
-        0x7f0b085b -> :sswitch_0
-    .end sparse-switch
 .end method
 
-.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+.method public static synthetic ne(Ld/d/a/u6/w4/b0;)Z
     .locals 0
-    .param p2    # Landroid/view/ViewGroup;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p3    # Landroid/os/Bundle;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/Nullable;
-    .end annotation
 
-    invoke-super {p0, p1, p2, p3}, Lcom/android/camera/fragment/BaseFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    const/4 p0, 0x0
 
-    move-result-object p0
-
-    return-object p0
+    return p0
 .end method
 
-.method public onDestroy()V
-    .locals 1
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji;->a:Lmiuix/appcompat/app/AlertDialog;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji;->a:Lmiuix/appcompat/app/AlertDialog;
-
-    :cond_0
-    invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroy()V
-
-    return-void
-.end method
-
-.method public onPause()V
+.method private o()V
     .locals 2
 
-    invoke-super {p0}, Landroidx/fragment/app/Fragment;->onPause()V
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->u()V
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->A:Landroid/graphics/Bitmap;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->p:Landroid/widget/ImageView;
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->v1:Landroid/widget/ImageView;
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+    .line 2
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->L8:Landroid/widget/ProgressBar;
 
-    :cond_0
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->A:Landroid/graphics/Bitmap;
+    const/16 v1, 0x8
 
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
+    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
-    iput-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->A:Landroid/graphics/Bitmap;
+    .line 3
+    new-instance v0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen$a;
 
-    :cond_1
-    return-void
-.end method
+    invoke-direct {v0, p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen$a;-><init>(Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;)V
 
-.method public onResume()V
-    .locals 1
-
-    invoke-super {p0}, Lcom/android/camera/fragment/BaseFragment;->onResume()V
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Ei()V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->J:Z
+    invoke-virtual {p0, v0}, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji;->nb(Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji$b;)V
 
     return-void
 .end method
 
-.method public onStop()V
-    .locals 1
+.method private og()V
+    .locals 2
 
-    iget-boolean v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->G:Z
+    .line 1
+    sget-object v0, Ld/o/f/u/k;->h:Lio/reactivex/Scheduler;
 
-    if-eqz v0, :cond_0
+    new-instance v1, Ld/o/v/a/a0/b/k;
 
-    sget-object v0, Lrh/w;->L:Ljava/lang/String;
+    invoke-direct {v1, p0}, Ld/o/v/a/a0/b/k;-><init>(Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;)V
 
-    invoke-static {v0}, Ly7/m6;->r(Ljava/lang/String;)Z
-
-    sget-object v0, Lrh/w;->P:Ljava/lang/String;
-
-    invoke-static {v0}, Ly7/m6;->r(Ljava/lang/String;)Z
-
-    sget-object v0, Lrh/w;->R:Ljava/lang/String;
-
-    invoke-static {v0}, Ly7/m6;->r(Ljava/lang/String;)Z
-
-    sget-object v0, Lrh/w;->O:Ljava/lang/String;
-
-    invoke-static {v0}, Ly7/m6;->r(Ljava/lang/String;)Z
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->G:Z
-
-    :cond_0
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K7()V
-
-    invoke-super {p0}, Lcom/android/camera/fragment/BaseFragment;->onStop()V
+    invoke-static {v0, v1}, Ld/o/f/u/k;->k(Lio/reactivex/Scheduler;Ljava/lang/Runnable;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
 
-.method public final pi()Z
+.method private qc()Z
     .locals 6
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->y:Z
+    .line 1
+    iput-boolean v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->P8:Z
 
-    iput-boolean v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->J:Z
+    .line 2
+    iput-boolean v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Y8:Z
 
     const/4 v1, 0x0
 
+    .line 3
     :try_start_0
-    iget-object v2, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->z:Ljava/lang/String;
+    iget-object v2, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Q8:Ljava/lang/String;
 
-    invoke-static {v2}, Ly7/m6;->d(Ljava/lang/String;)Z
+    invoke-static {v2}, Ld/d/a/d7/m8/b/z9;->d(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    sget-object v2, Lrh/w;->M:Ljava/lang/String;
+    sget-object v2, Ld/o/v/a/w;->M:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->z:Ljava/lang/String;
+    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Q8:Ljava/lang/String;
 
+    .line 4
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    sget-object v2, Lrh/w;->N:Ljava/lang/String;
+    sget-object v2, Ld/o/v/a/w;->N:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->z:Ljava/lang/String;
+    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Q8:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2528,15 +2128,17 @@
 
     const-string v3, "mp4"
 
-    invoke-static {v2, v3}, Ly7/m6;->n(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .line 5
+    invoke-static {v2, v3}, Ld/d/a/d7/m8/b/z9;->n(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 6
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v4, Ll9/x;->v:Ljava/lang/String;
+    sget-object v4, Ld/d/a/w7/z;->v:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2550,70 +2152,78 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->z:Ljava/lang/String;
+    .line 7
+    iget-object v4, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Q8:Ljava/lang/String;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v5
 
-    invoke-static {v4, v3, v2, v5, v0}, Lo9/b;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;I)Landroid/net/Uri;
+    invoke-static {v4, v3, v2, v5, v0}, Ld/d/a/w7/b0/b;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;I)Landroid/net/Uri;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->F:Landroid/net/Uri;
+    iput-object v2, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->U8:Landroid/net/Uri;
 
-    iput-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->z:Ljava/lang/String;
+    .line 8
+    iput-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Q8:Ljava/lang/String;
 
     const/4 v2, 0x2
 
-    invoke-static {v2, v3}, Lcom/android/camera/a6;->s0(ILjava/lang/String;)Landroid/content/ContentValues;
+    .line 9
+    invoke-static {v2, v3}, Ld/d/a/z5;->k0(ILjava/lang/String;)Landroid/content/ContentValues;
 
     move-result-object v2
 
+    .line 10
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v3
 
     check-cast v3, Lcom/android/camera/ActivityBase;
 
-    invoke-interface {v3}, Lcom/android/camera/l;->G2()Ll9/h;
+    invoke-interface {v3}, Ld/d/a/n3;->c2()Ld/d/a/w7/p;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->F:Landroid/net/Uri;
+    iget-object v4, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->U8:Landroid/net/Uri;
 
-    iget-object v5, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->z:Ljava/lang/String;
+    iget-object v5, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Q8:Ljava/lang/String;
 
-    invoke-virtual {v3, v4, v5, v2, v1}, Ll9/h;->A(Landroid/net/Uri;Ljava/lang/String;Landroid/content/ContentValues;Z)Landroid/net/Uri;
+    invoke-virtual {v3, v4, v5, v2, v1}, Ld/d/a/w7/p;->A(Landroid/net/Uri;Ljava/lang/String;Landroid/content/ContentValues;Z)Landroid/net/Uri;
 
-    iput-boolean v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->G:Z
+    .line 11
+    iput-boolean v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->V8:Z
 
+    .line 12
     :cond_1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->F:Landroid/net/Uri;
+    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->U8:Landroid/net/Uri;
 
-    iget-object v4, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->z:Ljava/lang/String;
+    iget-object v4, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Q8:Ljava/lang/String;
 
-    const v5, 0x7f140b2f
+    const v5, 0x7f130aaa
 
     invoke-virtual {p0, v5}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-static {v2, v3, v4, v5, v0}, Lcom/android/camera/a6;->E4(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/CharSequence;Z)Z
+    invoke-static {v2, v3, v4, v5, v0}, Ld/d/a/z5;->q4(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/CharSequence;Z)Z
 
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->ri()V
+    .line 13
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->xc()V
 
+    .line 14
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p0
 
     check-cast p0, Lcom/android/camera/ActivityBase;
 
-    invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->ri()V
+    invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->Fb()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2623,187 +2233,87 @@
     return v1
 .end method
 
-.method public provideAnimateElement(ILjava/util/List;I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I",
-            "Ljava/util/List<",
-            "Lio/reactivex/Completable;",
-            ">;I)V"
-        }
-    .end annotation
+.method public static synthetic qf(Ld/d/a/m7/g/e1;)V
+    .locals 5
 
-    invoke-super {p0, p1, p2, p3}, Lcom/android/camera/fragment/BaseFragment;->provideAnimateElement(ILjava/util/List;I)V
+    .line 1
+    new-instance v0, Ld/d/a/u6/w4/c0;
 
-    const/4 p1, 0x4
+    invoke-direct {v0}, Ld/d/a/u6/w4/c0;-><init>()V
 
-    if-ne p3, p1, :cond_3
+    const/16 v1, 0x16
 
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    const v2, 0xfff2
 
-    move-result-object p1
+    const/16 v3, 0xc
 
-    const/4 p2, 0x1
+    .line 2
+    invoke-virtual {v0, v1, v2, v3}, Ld/d/a/u6/w4/c0;->b(III)Ld/d/a/u6/w4/b0;
 
-    invoke-virtual {p1, p2}, Lm2/h1;->x1(Z)V
+    move-result-object v2
 
-    invoke-static {}, Lg2/b;->h()Ll2/g;
+    sget-object v4, Ld/o/v/a/a0/b/b;->a:Ld/o/v/a/a0/b/b;
 
-    move-result-object p1
+    .line 3
+    invoke-virtual {v2, v4}, Ld/d/a/u6/w4/b0;->a(Landroidx/core/util/Predicate;)V
 
-    invoke-virtual {p1, p2}, Ll2/g;->W0(Z)V
+    const v2, 0xfff1
 
-    iget-object p1, p0, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji;->a:Lmiuix/appcompat/app/AlertDialog;
+    .line 4
+    invoke-virtual {v0, v1, v2, v3}, Ld/d/a/u6/w4/c0;->b(III)Ld/d/a/u6/w4/b0;
 
-    if-eqz p1, :cond_0
+    move-result-object v2
 
-    invoke-virtual {p1}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
+    sget-object v4, Ld/o/v/a/a0/b/g;->a:Ld/o/v/a/a0/b/g;
 
-    const/4 p1, 0x0
+    .line 5
+    invoke-virtual {v2, v4}, Ld/d/a/u6/w4/b0;->a(Landroidx/core/util/Predicate;)V
 
-    iput-object p1, p0, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji;->a:Lmiuix/appcompat/app/AlertDialog;
+    const v2, 0xfff4
 
-    :cond_0
-    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->I:Lrh/x;
+    .line 6
+    invoke-virtual {v0, v1, v2, v3}, Ld/d/a/u6/w4/c0;->b(III)Ld/d/a/u6/w4/b0;
 
-    invoke-virtual {p1}, Lrh/x;->q()Lmiuix/appcompat/app/ProgressDialog;
+    move-result-object v1
 
-    move-result-object p1
+    sget-object v2, Ld/o/v/a/a0/b/h;->a:Ld/o/v/a/a0/b/h;
 
-    iget-object p2, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->I:Lrh/x;
+    .line 7
+    invoke-virtual {v1, v2}, Ld/d/a/u6/w4/b0;->a(Landroidx/core/util/Predicate;)V
 
-    invoke-virtual {p2}, Lrh/x;->n()Lrh/v;
+    .line 8
+    invoke-static {}, Ld/d/a/u6/w4/i0;->e()Ld/d/a/u6/w4/i0;
 
-    move-result-object p2
+    move-result-object v1
 
-    if-eqz p1, :cond_1
+    invoke-virtual {v0, v1}, Ld/d/a/u6/w4/c0;->h(Ld/d/a/u6/w4/d0;)V
 
-    invoke-virtual {p1}, Landroid/app/Dialog;->isShowing()Z
+    .line 9
+    invoke-interface {p0, v0}, Ld/d/a/m7/g/e1;->O9(Ld/d/a/u6/w4/c0;)V
 
-    move-result p3
-
-    if-eqz p3, :cond_1
-
-    invoke-virtual {p1}, Landroid/app/Dialog;->hide()V
-
-    :cond_1
-    if-eqz p2, :cond_2
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->I:Lrh/x;
-
-    invoke-virtual {p1}, Lrh/x;->C()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p2}, Lrh/v;->w()V
-
-    :cond_2
-    invoke-static {}, Lv8/y2;->impl2()Lv8/y2;
-
-    move-result-object p1
-
-    const/4 p2, 0x0
-
-    const/16 p3, 0x202
-
-    invoke-interface {p1, p2, p3}, Lv8/y2;->alertSlideSwitchLayout(ZI)V
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K7()V
-
-    :cond_3
     return-void
 .end method
 
-.method public provideEnterAnimation(I)Landroid/view/animation/Animation;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public provideExitAnimation(I)Landroid/view/animation/Animation;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public provideRotateItem(Ljava/util/List;I)V
+.method public static synthetic sd(Ld/d/a/m7/g/t;)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Landroid/view/View;",
-            ">;I)V"
-        }
-    .end annotation
 
-    invoke-super {p0, p1, p2}, Lcom/android/camera/fragment/BaseFragment;->provideRotateItem(Ljava/util/List;I)V
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->d:Landroid/view/View;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->k:Landroid/widget/ImageView;
-
-    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->l:Lcom/android/camera/ui/CameraSnapView;
-
-    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->m:Lcom/airbnb/lottie/LottieAnimationView;
-
-    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->n:Landroid/widget/ImageView;
-
-    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->o:Landroid/widget/ImageView;
-
-    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->i:Lcom/android/camera/ui/ColorImageView;
+    .line 1
+    instance-of v0, p0, Ld/o/v/a/c0/i0;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    .line 2
+    invoke-interface {p0}, Ld/d/a/m7/g/t;->Hb()V
 
     :cond_0
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->i:Lcom/android/camera/ui/ColorImageView;
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->e:Lcom/xiaomi/mimoji/common/fragment/bottomlist/FragmentMimojiBottomList;
-
-    if-eqz p0, :cond_2
-
-    invoke-virtual {p0, p1, p2}, Lcom/xiaomi/mimoji/common/fragment/bottomlist/FragmentMimojiBottomList;->provideRotateItem(Ljava/util/List;I)V
-
-    :cond_2
     return-void
 .end method
 
-.method public final qi()Ljava/lang/String;
+.method private uc()Ljava/lang/String;
     .locals 2
 
-    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->I:Lrh/x;
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->X8:Ld/o/v/a/x;
 
     const/4 v0, 0x1
 
@@ -2811,15 +2321,16 @@
 
     move-result-object v1
 
-    invoke-virtual {p0, v1}, Lrh/x;->k(Ljava/lang/Integer;)Lsh/e;
+    invoke-virtual {p0, v1}, Ld/o/v/a/x;->k(Ljava/lang/Integer;)Ld/o/v/a/z/e;
 
     move-result-object p0
 
-    check-cast p0, Lsh/a;
+    check-cast p0, Ld/o/v/a/z/a;
 
     if-eqz p0, :cond_5
 
-    invoke-virtual {p0}, Lsh/a;->h()Ljava/lang/String;
+    .line 2
+    invoke-virtual {p0}, Ld/o/v/a/z/a;->h()Ljava/lang/String;
 
     move-result-object v1
 
@@ -2831,8 +2342,9 @@
 
     goto :goto_2
 
+    .line 3
     :cond_0
-    invoke-virtual {p0}, Lsh/a;->h()Ljava/lang/String;
+    invoke-virtual {p0}, Ld/o/v/a/z/a;->h()Ljava/lang/String;
 
     move-result-object p0
 
@@ -2842,6 +2354,7 @@
 
     move-result-object p0
 
+    .line 4
     array-length v1, p0
 
     if-gt v1, v0, :cond_1
@@ -2850,6 +2363,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     array-length v1, p0
 
@@ -2881,6 +2395,7 @@
     :goto_0
     const-string v0, "cartoon"
 
+    .line 6
     invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -2892,6 +2407,7 @@
     :cond_3
     const-string v0, "human"
 
+    .line 7
     invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -2905,6 +2421,7 @@
     :cond_4
     const-string v0, "custom"
 
+    .line 8
     :goto_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2916,7 +2433,7 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p0}, Lrh/w;->j(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Ld/o/v/a/w;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -2935,78 +2452,76 @@
     return-object p0
 .end method
 
-.method public register(Lu8/d;)V
-    .locals 1
+.method private v()V
+    .locals 2
 
-    invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->register(Lu8/d;)V
+    const/4 p0, 0x0
 
-    const-class v0, Lyh/a$e;
+    new-array p0, p0, [Ljava/lang/Object;
 
-    invoke-interface {p1, v0, p0}, Lu8/d;->d(Ljava/lang/Class;Lu8/a;)V
+    const-string v0, "MIMOJI_FragmentMimojiFullScreen"
 
-    invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->registerBackStack(Lu8/d;Lv8/z0;)V
+    const-string v1, "mimoji void resumePlay[]"
 
-    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->I:Lrh/x;
+    .line 1
+    invoke-static {v0, v1, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    if-nez p1, :cond_0
-
-    invoke-static {}, Lg2/b;->j()Lq2/a;
-
-    move-result-object p1
-
-    const-class v0, Lrh/x;
-
-    invoke-virtual {p1, v0}, Lq2/a;->c(Ljava/lang/Class;)Lq2/d;
-
-    move-result-object p1
-
-    check-cast p1, Lrh/x;
-
-    iput-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->I:Lrh/x;
-
-    :cond_0
-    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->I:Lrh/x;
-
-    invoke-virtual {p0}, Lrh/x;->C()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    invoke-static {}, Lrh/v;->D()Lrh/v;
+    .line 2
+    invoke-static {}, Ld/o/v/a/d0/a/c/a$h;->impl2()Ld/o/v/a/d0/a/c/a$h;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lrh/v;->w()V
+    if-nez p0, :cond_0
 
-    :cond_1
+    return-void
+
+    .line 3
+    :cond_0
+    invoke-interface {p0}, Ld/o/v/a/d0/a/c/a$h;->v()Z
+
     return-void
 .end method
 
-.method public final ri()V
+.method public static synthetic vf(Ld/d/a/m7/g/a3;)V
     .locals 2
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->I:Lrh/x;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Lrh/x;->m()I
+    const/4 v1, -0x1
+
+    .line 1
+    invoke-interface {p0, v0, v1}, Ld/d/a/m7/g/a3;->alertFaceDetect(ZI)V
+
+    return-void
+.end method
+
+.method private xc()V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->X8:Ld/o/v/a/x;
+
+    invoke-virtual {v0}, Ld/o/v/a/x;->m()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->I:Lrh/x;
+    .line 2
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->X8:Ld/o/v/a/x;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lrh/x;->T(I)V
+    invoke-virtual {v0, v1}, Ld/o/v/a/x;->T(I)V
 
-    new-instance v0, La2/b;
+    .line 3
+    new-instance v0, Ld/d/a/f6/j/b;
 
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->j:Landroid/widget/FrameLayout;
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->w:Landroid/widget/FrameLayout;
 
-    invoke-direct {v0, v1}, La2/b;-><init>(Landroid/view/View;)V
+    invoke-direct {v0, v1}, Ld/d/a/f6/j/b;-><init>(Landroid/view/View;)V
 
-    invoke-virtual {v0}, La2/d;->m()La2/d;
+    invoke-virtual {v0}, Ld/d/a/f6/j/c;->h()Ld/d/a/f6/j/c;
 
     move-result-object v0
 
@@ -3016,19 +2531,1753 @@
 
     invoke-virtual {v0}, Lio/reactivex/Completable;->subscribe()Lio/reactivex/disposables/Disposable;
 
-    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->i:Lcom/android/camera/ui/ColorImageView;
+    .line 4
+    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->u:Lcom/android/camera/ui/ColorImageView;
 
     const/4 v0, 0x1
 
-    invoke-static {p0, v0, v0}, Lai/d;->d(Landroid/view/View;ZZ)Z
+    invoke-static {p0, v0, v0}, Ld/o/v/a/f0/d;->d(Landroid/view/View;ZZ)Z
 
     :cond_0
     return-void
 .end method
 
-.method public s1(Landroid/net/Uri;)V
+.method private synthetic yd()V
     .locals 1
 
+    .line 1
+    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Ff()V
+
+    .line 2
+    invoke-static {}, Ld/d/a/m7/g/t;->impl()Ljava/util/Optional;
+
+    move-result-object p0
+
+    sget-object v0, Ld/o/v/a/a0/b/c;->c:Ld/o/v/a/a0/b/c;
+
+    invoke-virtual {p0, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
+
+    return-void
+.end method
+
+.method private z1()V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->C2:Landroid/widget/ProgressBar;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Ld/o/v/a/f0/d;->c(Landroid/view/View;Z)Z
+
+    .line 2
+    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->k0:Landroid/widget/ImageView;
+
+    invoke-static {p0, v1}, Ld/o/v/a/f0/d;->c(Landroid/view/View;Z)Z
+
+    .line 3
+    invoke-static {}, Ld/o/v/a/d0/a/c/a$h;->impl2()Ld/o/v/a/d0/a/c/a$h;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    .line 4
+    invoke-interface {p0}, Ld/o/v/a/d0/a/c/a$h;->z1()V
+
+    :cond_0
+    return-void
+.end method
+
+
+# virtual methods
+.method public A8()Ljava/lang/String;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Q8:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method public B9(J)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "time"
+        }
+    .end annotation
+
+    .line 1
+    iput-wide p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->W8:J
+
+    return-void
+.end method
+
+.method public Ca()Landroid/graphics/Bitmap;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->R8:Landroid/graphics/Bitmap;
+
+    return-object p0
+.end method
+
+.method public D0(Z)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isShow"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_0
+
+    .line 1
+    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->R8:Landroid/graphics/Bitmap;
+
+    if-eqz p1, :cond_0
+
+    .line 2
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->isRecycled()Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K1:Landroid/widget/ImageView;
+
+    if-eqz p1, :cond_0
+
+    .line 3
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->R8:Landroid/graphics/Bitmap;
+
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+
+    .line 4
+    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K1:Landroid/widget/ImageView;
+
+    const/4 p1, 0x1
+
+    invoke-static {p0, p1}, Ld/o/v/a/f0/d;->c(Landroid/view/View;Z)Z
+
+    goto :goto_0
+
+    .line 5
+    :cond_0
+    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K1:Landroid/widget/ImageView;
+
+    const/4 p1, 0x0
+
+    invoke-static {p0, p1}, Ld/o/v/a/f0/d;->c(Landroid/view/View;Z)Z
+
+    :goto_0
+    return-void
+.end method
+
+.method public Ff()V
+    .locals 3
+
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->X8:Ld/o/v/a/x;
+
+    invoke-virtual {v0}, Ld/o/v/a/x;->j()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x4
+
+    if-ne v0, v2, :cond_0
+
+    .line 2
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->X8:Ld/o/v/a/x;
+
+    invoke-virtual {v0, v1}, Ld/o/v/a/x;->Q(I)V
+
+    .line 3
+    :cond_0
+    iput-boolean v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->P8:Z
+
+    const/4 v0, 0x0
+
+    .line 4
+    invoke-virtual {p0, v0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->O(Landroid/graphics/Bitmap;)V
+
+    .line 5
+    invoke-virtual {p0, v1}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->D0(Z)V
+
+    .line 6
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->C2:Landroid/widget/ProgressBar;
+
+    invoke-static {v0, v1}, Ld/o/v/a/f0/d;->c(Landroid/view/View;Z)Z
+
+    .line 7
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K2:Landroid/widget/ImageView;
+
+    invoke-static {v0, v1}, Ld/o/v/a/f0/d;->c(Landroid/view/View;Z)Z
+
+    .line 8
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K8:Landroid/widget/ProgressBar;
+
+    invoke-static {v0, v1}, Ld/o/v/a/f0/d;->c(Landroid/view/View;Z)Z
+
+    .line 9
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->m:Landroid/view/View;
+
+    invoke-static {v0, v1}, Ld/o/v/a/f0/d;->c(Landroid/view/View;Z)Z
+
+    .line 10
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Jf()V
+
+    .line 11
+    invoke-static {}, Ld/o/v/a/d0/a/c/a$h;->impl2()Ld/o/v/a/d0/a/c/a$h;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_1
+
+    .line 12
+    invoke-interface {p0}, Ld/o/v/a/d0/a/c/a$h;->Qg()V
+
+    :cond_1
+    return-void
+.end method
+
+.method public synthetic Lc(ILjava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Ic(ILjava/lang/String;)V
+
+    return-void
+.end method
+
+.method public O(Landroid/graphics/Bitmap;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "bitmap"
+        }
+    .end annotation
+
+    .line 1
+    iput-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->R8:Landroid/graphics/Bitmap;
+
+    return-void
+.end method
+
+.method public O2()V
+    .locals 9
+
+    const/4 v0, 0x0
+
+    .line 1
+    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Q8:Ljava/lang/String;
+
+    const/4 v0, 0x0
+
+    .line 2
+    iput-boolean v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->V8:Z
+
+    .line 3
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->m:Landroid/view/View;
+
+    if-nez v1, :cond_0
+
+    .line 4
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->j:Landroid/view/ViewStub;
+
+    invoke-virtual {v1}, Landroid/view/ViewStub;->inflate()Landroid/view/View;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->m:Landroid/view/View;
+
+    .line 5
+    invoke-direct {p0, v1}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Hc(Landroid/view/View;)V
+
+    .line 6
+    :cond_0
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->s:Landroid/widget/FrameLayout;
+
+    invoke-static {v1, v0}, Ld/o/v/a/f0/d;->c(Landroid/view/View;Z)Z
+
+    .line 7
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K2:Landroid/widget/ImageView;
+
+    invoke-static {v1, v0}, Ld/o/v/a/f0/d;->c(Landroid/view/View;Z)Z
+
+    .line 8
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K8:Landroid/widget/ProgressBar;
+
+    invoke-static {v1, v0}, Ld/o/v/a/f0/d;->c(Landroid/view/View;Z)Z
+
+    .line 9
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->L8:Landroid/widget/ProgressBar;
+
+    invoke-static {v1, v0}, Ld/o/v/a/f0/d;->c(Landroid/view/View;Z)Z
+
+    .line 10
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->O8:Landroid/view/ViewGroup;
+
+    invoke-static {v1, v0}, Ld/o/v/a/f0/d;->c(Landroid/view/View;Z)Z
+
+    .line 11
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->m:Landroid/view/View;
+
+    const/4 v2, 0x1
+
+    invoke-static {v1, v2}, Ld/o/v/a/f0/d;->c(Landroid/view/View;Z)Z
+
+    .line 12
+    invoke-virtual {p0, v2}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->D0(Z)V
+
+    .line 13
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->T3()V
+
+    .line 14
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Yb()V
+
+    .line 15
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->X8:Ld/o/v/a/x;
+
+    invoke-virtual {v1}, Ld/o/v/a/x;->m()I
+
+    move-result v1
+
+    const/4 v3, 0x3
+
+    if-ne v1, v3, :cond_1
+
+    .line 16
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->p:Landroid/view/ViewGroup;
+
+    invoke-static {v1, v2}, Ld/o/v/a/f0/d;->c(Landroid/view/View;Z)Z
+
+    .line 17
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->w:Landroid/widget/FrameLayout;
+
+    invoke-static {v1, v2}, Ld/o/v/a/f0/d;->c(Landroid/view/View;Z)Z
+
+    .line 18
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->u:Lcom/android/camera/ui/ColorImageView;
+
+    invoke-static {v1, v0}, Ld/o/v/a/f0/d;->c(Landroid/view/View;Z)Z
+
+    goto :goto_0
+
+    .line 19
+    :cond_1
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->p:Landroid/view/ViewGroup;
+
+    invoke-static {v1, v0}, Ld/o/v/a/f0/d;->c(Landroid/view/View;Z)Z
+
+    .line 20
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->w:Landroid/widget/FrameLayout;
+
+    invoke-static {v1, v0}, Ld/o/v/a/f0/d;->c(Landroid/view/View;Z)Z
+
+    .line 21
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->u:Lcom/android/camera/ui/ColorImageView;
+
+    invoke-static {v1, v2}, Ld/o/v/a/f0/d;->c(Landroid/view/View;Z)Z
+
+    .line 22
+    :goto_0
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->k0:Landroid/widget/ImageView;
+
+    iget v3, p0, Lcom/android/camera/fragment/BaseFragment;->mDegree:I
+
+    int-to-float v3, v3
+
+    invoke-static {v1, v3}, Landroidx/core/view/ViewCompat;->setRotation(Landroid/view/View;F)V
+
+    .line 23
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K0:Lcom/android/camera/ui/CameraSnapView;
+
+    iget v3, p0, Lcom/android/camera/fragment/BaseFragment;->mDegree:I
+
+    int-to-float v3, v3
+
+    invoke-static {v1, v3}, Landroidx/core/view/ViewCompat;->setRotation(Landroid/view/View;F)V
+
+    .line 24
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->k1:Lcom/airbnb/lottie/LottieAnimationView;
+
+    iget v3, p0, Lcom/android/camera/fragment/BaseFragment;->mDegree:I
+
+    int-to-float v3, v3
+
+    invoke-static {v1, v3}, Landroidx/core/view/ViewCompat;->setRotation(Landroid/view/View;F)V
+
+    .line 25
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->v1:Landroid/widget/ImageView;
+
+    iget v3, p0, Lcom/android/camera/fragment/BaseFragment;->mDegree:I
+
+    int-to-float v3, v3
+
+    invoke-static {v1, v3}, Landroidx/core/view/ViewCompat;->setRotation(Landroid/view/View;F)V
+
+    .line 26
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->C1:Landroid/widget/ImageView;
+
+    iget v3, p0, Lcom/android/camera/fragment/BaseFragment;->mDegree:I
+
+    int-to-float v3, v3
+
+    invoke-static {v1, v3}, Landroidx/core/view/ViewCompat;->setRotation(Landroid/view/View;F)V
+
+    .line 27
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->u:Lcom/android/camera/ui/ColorImageView;
+
+    iget v3, p0, Lcom/android/camera/fragment/BaseFragment;->mDegree:I
+
+    int-to-float v3, v3
+
+    invoke-static {v1, v3}, Landroidx/core/view/ViewCompat;->setRotation(Landroid/view/View;F)V
+
+    .line 28
+    new-instance v1, Ld/d/a/f6/j/a;
+
+    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K0:Lcom/android/camera/ui/CameraSnapView;
+
+    invoke-direct {v1, v3}, Ld/d/a/f6/j/a;-><init>(Landroid/view/View;)V
+
+    invoke-static {v1}, Lio/reactivex/Completable;->create(Lio/reactivex/CompletableOnSubscribe;)Lio/reactivex/Completable;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lio/reactivex/Completable;->subscribe()Lio/reactivex/disposables/Disposable;
+
+    .line 29
+    new-instance v1, Ld/d/a/f6/j/a;
+
+    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->k1:Lcom/airbnb/lottie/LottieAnimationView;
+
+    invoke-direct {v1, v3}, Ld/d/a/f6/j/a;-><init>(Landroid/view/View;)V
+
+    invoke-static {v1}, Lio/reactivex/Completable;->create(Lio/reactivex/CompletableOnSubscribe;)Lio/reactivex/Completable;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lio/reactivex/Completable;->subscribe()Lio/reactivex/disposables/Disposable;
+
+    .line 30
+    new-instance v1, Ld/d/a/f6/j/a;
+
+    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->v1:Landroid/widget/ImageView;
+
+    invoke-direct {v1, v3}, Ld/d/a/f6/j/a;-><init>(Landroid/view/View;)V
+
+    invoke-static {v1}, Lio/reactivex/Completable;->create(Lio/reactivex/CompletableOnSubscribe;)Lio/reactivex/Completable;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lio/reactivex/Completable;->subscribe()Lio/reactivex/disposables/Disposable;
+
+    .line 31
+    new-instance v1, Ld/d/a/f6/j/a;
+
+    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->k0:Landroid/widget/ImageView;
+
+    invoke-direct {v1, v3}, Ld/d/a/f6/j/a;-><init>(Landroid/view/View;)V
+
+    invoke-static {v1}, Lio/reactivex/Completable;->create(Lio/reactivex/CompletableOnSubscribe;)Lio/reactivex/Completable;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lio/reactivex/Completable;->subscribe()Lio/reactivex/disposables/Disposable;
+
+    .line 32
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->k1:Lcom/airbnb/lottie/LottieAnimationView;
+
+    const v3, 0x3ec28f5c    # 0.38f
+
+    invoke-virtual {v1, v3}, Lcom/airbnb/lottie/LottieAnimationView;->setScale(F)V
+
+    .line 33
+    iget v1, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
+
+    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K0:Lcom/android/camera/ui/CameraSnapView;
+
+    iget-object v4, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->k1:Lcom/airbnb/lottie/LottieAnimationView;
+
+    invoke-virtual {p0, v1, v3, v4}, Lcom/android/camera/fragment/BaseFragment;->adjustProgress(ILcom/android/camera/ui/CameraSnapView;Lcom/airbnb/lottie/LottieAnimationView;)V
+
+    .line 34
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->k1:Lcom/airbnb/lottie/LottieAnimationView;
+
+    invoke-direct {p0, v1}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Mf(Lcom/airbnb/lottie/LottieAnimationView;)V
+
+    .line 35
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->k1:Lcom/airbnb/lottie/LottieAnimationView;
+
+    invoke-virtual {v1}, Lcom/airbnb/lottie/LottieAnimationView;->playAnimation()V
+
+    .line 36
+    new-instance v1, Ld/d/a/f6/j/a;
+
+    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->C1:Landroid/widget/ImageView;
+
+    invoke-direct {v1, v3}, Ld/d/a/f6/j/a;-><init>(Landroid/view/View;)V
+
+    invoke-static {v1}, Lio/reactivex/Completable;->create(Lio/reactivex/CompletableOnSubscribe;)Lio/reactivex/Completable;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lio/reactivex/Completable;->subscribe()Lio/reactivex/disposables/Disposable;
+
+    .line 37
+    invoke-static {}, Ld/o/v/a/d0/a/c/a$b;->impl2()Ld/o/v/a/d0/a/c/a$b;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_2
+
+    .line 38
+    iget-wide v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->W8:J
+
+    const-wide/16 v5, 0x3e8
+
+    const-wide/16 v7, 0x3a98
+
+    .line 39
+    invoke-static/range {v3 .. v8}, Ld/d/a/z5;->t(JJJ)J
+
+    move-result-wide v3
+
+    .line 40
+    invoke-static {v3, v4, v0, v0}, Ld/d/a/z5;->E3(JZZ)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 41
+    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->M8:Landroid/widget/TextView;
+
+    invoke-virtual {v3, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 42
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->M8:Landroid/widget/TextView;
+
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
+
+    move-result-object v3
+
+    const v4, 0x7f060143
+
+    invoke-virtual {v3, v4}, Ld/d/a/k6/f;->b(I)I
+
+    move-result v3
+
+    invoke-virtual {v1, v3}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 43
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->M8:Landroid/widget/TextView;
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 44
+    :cond_2
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->k0:Landroid/widget/ImageView;
+
+    invoke-static {v1, v0}, Ld/o/v/a/f0/d;->c(Landroid/view/View;Z)Z
+
+    .line 45
+    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->C2:Landroid/widget/ProgressBar;
+
+    invoke-static {p0, v2}, Ld/o/v/a/f0/d;->c(Landroid/view/View;Z)Z
+
+    return-void
+.end method
+
+.method public P7()V
+    .locals 0
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K0:Lcom/android/camera/ui/CameraSnapView;
+
+    invoke-virtual {p0}, Lcom/android/camera/ui/CameraSnapView;->performClick()Z
+
+    return-void
+.end method
+
+.method public Pf(IIJ)V
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes",
+            "delay"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->v2:Lcom/android/camera/customization/BGTintTextView;
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 2
+    :cond_0
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->S8:Landroid/os/Handler;
+
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->T8:Ljava/lang/Runnable;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    if-nez p1, :cond_1
+
+    .line 3
+    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->v2:Lcom/android/camera/customization/BGTintTextView;
+
+    invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(I)V
+
+    .line 4
+    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->v2:Lcom/android/camera/customization/BGTintTextView;
+
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->alertTintColor()I
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, Lcom/android/camera/customization/BGTintTextView;->setBGColor(I)V
+
+    .line 5
+    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->v2:Lcom/android/camera/customization/BGTintTextView;
+
+    const/4 p2, 0x0
+
+    invoke-virtual {p1, p2}, Landroid/widget/TextView;->setVisibility(I)V
+
+    const-wide/16 p1, 0x0
+
+    cmp-long p1, p3, p1
+
+    if-lez p1, :cond_2
+
+    .line 6
+    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->S8:Landroid/os/Handler;
+
+    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->T8:Ljava/lang/Runnable;
+
+    invoke-virtual {p1, p0, p3, p4}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    goto :goto_0
+
+    .line 7
+    :cond_1
+    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->v2:Lcom/android/camera/customization/BGTintTextView;
+
+    const-string p2, ""
+
+    invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 8
+    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->v2:Lcom/android/camera/customization/BGTintTextView;
+
+    const/16 p1, 0x8
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setVisibility(I)V
+
+    :cond_2
+    :goto_0
+    return-void
+.end method
+
+.method public synthetic Sd()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->yd()V
+
+    return-void
+.end method
+
+.method public varargs V2([Ljava/lang/String;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "targetPaths"
+        }
+    .end annotation
+
+    .line 1
+    iget v0, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
+
+    const/16 v1, 0xb8
+
+    if-ne v0, v1, :cond_2
+
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->X8:Ld/o/v/a/x;
+
+    .line 2
+    invoke-virtual {v0}, Ld/o/v/a/x;->u()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    .line 3
+    :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "onCombineSuccess() : "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    new-array v2, v1, [Ljava/lang/Object;
+
+    const-string v3, "MIMOJI_FragmentMimojiFullScreen"
+
+    invoke-static {v3, v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    if-eqz p1, :cond_1
+
+    .line 4
+    array-length v0, p1
+
+    if-lez v0, :cond_1
+
+    .line 5
+    aget-object p1, p1, v1
+
+    iput-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Q8:Ljava/lang/String;
+
+    .line 6
+    :cond_1
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_2
+
+    .line 7
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object p1
+
+    new-instance v0, Ld/o/v/a/a0/b/j;
+
+    invoke-direct {v0, p0}, Ld/o/v/a/a0/b/j;-><init>(Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;)V
+
+    invoke-virtual {p1, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
+
+    :cond_2
+    :goto_0
+    return-void
+.end method
+
+.method public Zg(Ljava/lang/String;I)V
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "videoPath",
+            "stopRecordType"
+        }
+    .end annotation
+
+    const/4 v0, 0x0
+
+    new-array v0, v0, [Ljava/lang/Object;
+
+    const-string v1, "MIMOJI_FragmentMimojiFullScreen"
+
+    const-string v2, "mimoji void concatResult[]"
+
+    .line 1
+    invoke-static {v1, v2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 2
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 3
+    :cond_0
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v0
+
+    new-instance v1, Ld/o/v/a/a0/b/l;
+
+    invoke-direct {v1, p0, p2, p1}, Ld/o/v/a/a0/b/l;-><init>(Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;ILjava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public synthetic bd()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Wc()V
+
+    return-void
+.end method
+
+.method public synthetic ee()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Ud()V
+
+    return-void
+.end method
+
+.method public getFragmentInto()I
+    .locals 0
+
+    const p0, 0xfff3
+
+    return p0
+.end method
+
+.method public getLayoutResourceId()I
+    .locals 0
+
+    const p0, 0x7f0e0108
+
+    return p0
+.end method
+
+.method public initView(Landroid/view/View;)V
+    .locals 1
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "ClickableViewAccessibility"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
+
+    const v0, 0x7f0b042e
+
+    .line 1
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/view/ViewStub;
+
+    iput-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->j:Landroid/view/ViewStub;
+
+    .line 2
+    invoke-static {}, Ld/d/a/l6/b;->j()Ld/d/a/l6/f/h;
+
+    move-result-object p1
+
+    const-class v0, Ld/o/v/a/x;
+
+    invoke-virtual {p1, v0}, Ld/d/a/l6/f/h;->c(Ljava/lang/Class;)Ld/d/a/l6/f/l;
+
+    move-result-object p1
+
+    check-cast p1, Ld/o/v/a/x;
+
+    iput-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->X8:Ld/o/v/a/x;
+
+    return-void
+.end method
+
+.method public synthetic ke()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->je()V
+
+    return-void
+.end method
+
+.method public mb()Z
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->m:Landroid/view/View;
+
+    invoke-static {p0}, Ld/o/v/a/f0/d;->a(Landroid/view/View;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public onBackEvent(I)Z
+    .locals 2
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "callingFrom"
+        }
+    .end annotation
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    if-ne p1, v1, :cond_1
+
+    .line 1
+    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->m:Landroid/view/View;
+
+    invoke-static {p1}, Ld/o/v/a/f0/d;->a(Landroid/view/View;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    .line 2
+    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->O8:Landroid/view/ViewGroup;
+
+    invoke-static {p1}, Ld/o/v/a/f0/d;->a(Landroid/view/View;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    new-array p0, v0, [Ljava/lang/Object;
+
+    const-string p1, "MIMOJI_FragmentMimojiFullScreen"
+
+    const-string v0, "mShareLayout visible: "
+
+    .line 3
+    invoke-static {p1, v0, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    .line 4
+    :cond_0
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->o()V
+
+    :goto_0
+    return v1
+
+    :cond_1
+    return v0
+.end method
+
+.method public onClick(Landroid/view/View;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
+
+    .line 1
+    invoke-static {}, Ld/o/v/a/d0/a/c/a$h;->impl2()Ld/o/v/a/d0/a/c/a$h;
+
+    move-result-object v0
+
+    .line 2
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->C2:Landroid/widget/ProgressBar;
+
+    invoke-virtual {v1}, Landroid/widget/ProgressBar;->getVisibility()I
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    if-eqz v0, :cond_0
+
+    .line 3
+    invoke-interface {v0}, Ld/o/v/a/d0/a/c/a$h;->Ub()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    :cond_0
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K2:Landroid/widget/ImageView;
+
+    .line 4
+    invoke-virtual {v0}, Landroid/widget/ImageView;->getVisibility()I
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K8:Landroid/widget/ProgressBar;
+
+    .line 5
+    invoke-virtual {v0}, Landroid/widget/ProgressBar;->getVisibility()I
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->L8:Landroid/widget/ProgressBar;
+
+    .line 6
+    invoke-virtual {v0}, Landroid/widget/ProgressBar;->getVisibility()I
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    goto/16 :goto_1
+
+    .line 7
+    :cond_1
+    invoke-virtual {p1}, Landroid/view/View;->getId()I
+
+    move-result p1
+
+    const/4 v0, 0x0
+
+    const-string v1, "MIMOJI_FragmentMimojiFullScreen"
+
+    sparse-switch p1, :sswitch_data_0
+
+    goto/16 :goto_1
+
+    :sswitch_0
+    const-string p0, "onClick: live_preview_bottom_action"
+
+    .line 8
+    invoke-static {v1, p0}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_1
+
+    :sswitch_1
+    const-string p1, "onClick: mimoji_preview_share"
+
+    .line 9
+    invoke-static {v1, p1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 10
+    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->C2:Landroid/widget/ProgressBar;
+
+    invoke-virtual {p1}, Landroid/widget/ProgressBar;->getVisibility()I
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    iget-boolean p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Y8:Z
+
+    if-eqz p1, :cond_2
+
+    goto :goto_0
+
+    .line 11
+    :cond_2
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->uc()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v2, "mimoji_play_share"
+
+    invoke-static {p1, v2}, Ld/d/a/v7/f;->V1(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 12
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->qc()Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    new-array p1, v0, [Ljava/lang/Object;
+
+    const-string v0, "uri null"
+
+    .line 13
+    invoke-static {v1, v0, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 14
+    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->z7()V
+
+    goto/16 :goto_1
+
+    :cond_3
+    :goto_0
+    new-array p0, v0, [Ljava/lang/Object;
+
+    const-string p1, "concat not finished or isShareShow, skip share~"
+
+    .line 15
+    invoke-static {v1, p1, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    :sswitch_2
+    const-string p1, "onClick: mimoji_preview_save"
+
+    .line 16
+    invoke-static {v1, p1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 17
+    invoke-static {}, Ld/o/v/a/f0/c;->j()Ld/o/v/a/f0/c;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0, v0}, Ld/o/v/a/f0/c;->f(II)V
+
+    .line 18
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->uc()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "mimoji_play_save"
+
+    invoke-static {p1, v0}, Ld/d/a/v7/f;->V1(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 19
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->v()V
+
+    .line 20
+    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->k0:Landroid/widget/ImageView;
+
+    const/16 v0, 0x8
+
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    .line 21
+    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->k1:Lcom/airbnb/lottie/LottieAnimationView;
+
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    .line 22
+    iget p1, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
+
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K0:Lcom/android/camera/ui/CameraSnapView;
+
+    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K2:Landroid/widget/ImageView;
+
+    invoke-virtual {p0, p1, v0, v1}, Lcom/android/camera/fragment/BaseFragment;->adjustProgressAndGetDrawable(ILcom/android/camera/ui/CameraSnapView;Landroid/view/View;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_4
+
+    .line 23
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K2:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 24
+    :cond_4
+    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K2:Landroid/widget/ImageView;
+
+    const/4 v0, 0x1
+
+    invoke-static {p1, v0}, Ld/o/v/a/f0/d;->c(Landroid/view/View;Z)Z
+
+    .line 25
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->og()V
+
+    goto :goto_1
+
+    :sswitch_3
+    const-string p1, "onClick: live_preview_play"
+
+    .line 26
+    invoke-static {v1, p1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 27
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->z1()V
+
+    goto :goto_1
+
+    :sswitch_4
+    const-string p1, "onClick: live_preview_layout"
+
+    .line 28
+    invoke-static {v1, p1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 29
+    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->n:Lcom/xiaomi/mimoji/common/fragment/bottomlist/FragmentMimojiBottomList;
+
+    if-eqz p1, :cond_5
+
+    invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getView()Landroid/view/View;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ld/o/v/a/f0/d;->a(Landroid/view/View;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    .line 30
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->xc()V
+
+    .line 31
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Yb()V
+
+    goto :goto_1
+
+    :sswitch_5
+    const-string p1, "onClick: live_preview_back"
+
+    .line 32
+    invoke-static {v1, p1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 33
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->o()V
+
+    goto :goto_1
+
+    :sswitch_6
+    const-string p1, "onClick: btn_mimoji_change_timbre"
+
+    .line 34
+    invoke-static {v1, p1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 35
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->cg()V
+
+    :cond_5
+    :goto_1
+    return-void
+
+    :sswitch_data_0
+    .sparse-switch
+        0x7f0b00f3 -> :sswitch_6
+        0x7f0b0390 -> :sswitch_5
+        0x7f0b0391 -> :sswitch_4
+        0x7f0b0393 -> :sswitch_3
+        0x7f0b0396 -> :sswitch_2
+        0x7f0b0397 -> :sswitch_2
+        0x7f0b0398 -> :sswitch_1
+        0x7f0b0775 -> :sswitch_0
+    .end sparse-switch
+.end method
+
+.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    .locals 0
+    .param p2    # Landroid/view/ViewGroup;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p3    # Landroid/os/Bundle;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "inflater",
+            "container",
+            "savedInstanceState"
+        }
+    .end annotation
+
+    .line 1
+    invoke-super {p0, p1, p2, p3}, Lcom/android/camera/fragment/BaseFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public onDestroy()V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji;->d:Lmiuix/appcompat/app/AlertDialog;
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
+
+    const/4 v0, 0x0
+
+    .line 3
+    iput-object v0, p0, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji;->d:Lmiuix/appcompat/app/AlertDialog;
+
+    .line 4
+    :cond_0
+    invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroy()V
+
+    return-void
+.end method
+
+.method public onPause()V
+    .locals 2
+
+    .line 1
+    invoke-super {p0}, Landroidx/fragment/app/Fragment;->onPause()V
+
+    .line 2
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->v()V
+
+    .line 3
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->R8:Landroid/graphics/Bitmap;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 4
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K1:Landroid/widget/ImageView;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    .line 5
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+
+    .line 6
+    :cond_0
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->R8:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
+
+    .line 7
+    iput-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->R8:Landroid/graphics/Bitmap;
+
+    :cond_1
+    return-void
+.end method
+
+.method public onResume()V
+    .locals 1
+
+    .line 1
+    invoke-super {p0}, Lcom/android/camera/fragment/BaseFragment;->onResume()V
+
+    .line 2
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Af()V
+
+    const/4 v0, 0x0
+
+    .line 3
+    iput-boolean v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Y8:Z
+
+    return-void
+.end method
+
+.method public onStop()V
+    .locals 1
+
+    .line 1
+    iget-boolean v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->V8:Z
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    sget-object v0, Ld/o/v/a/w;->L:Ljava/lang/String;
+
+    invoke-static {v0}, Ld/d/a/d7/m8/b/z9;->r(Ljava/lang/String;)Z
+
+    .line 3
+    sget-object v0, Ld/o/v/a/w;->P:Ljava/lang/String;
+
+    invoke-static {v0}, Ld/d/a/d7/m8/b/z9;->r(Ljava/lang/String;)Z
+
+    .line 4
+    sget-object v0, Ld/o/v/a/w;->R:Ljava/lang/String;
+
+    invoke-static {v0}, Ld/d/a/d7/m8/b/z9;->r(Ljava/lang/String;)Z
+
+    .line 5
+    sget-object v0, Ld/o/v/a/w;->O:Ljava/lang/String;
+
+    invoke-static {v0}, Ld/d/a/d7/m8/b/z9;->r(Ljava/lang/String;)Z
+
+    const/4 v0, 0x0
+
+    .line 6
+    iput-boolean v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->V8:Z
+
+    .line 7
+    :cond_0
+    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->z7()V
+
+    .line 8
+    invoke-super {p0}, Lcom/android/camera/fragment/BaseFragment;->onStop()V
+
+    return-void
+.end method
+
+.method public provideAnimateElement(ILjava/util/List;I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "newMode",
+            "animateInElements",
+            "resetType"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "Lio/reactivex/Completable;",
+            ">;I)V"
+        }
+    .end annotation
+
+    .line 1
+    invoke-super {p0, p1, p2, p3}, Lcom/android/camera/fragment/BaseFragment;->provideAnimateElement(ILjava/util/List;I)V
+
+    const/4 p1, 0x4
+
+    if-ne p3, p1, :cond_3
+
+    .line 2
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
+
+    move-result-object p1
+
+    const/4 p2, 0x1
+
+    invoke-virtual {p1, p2}, Ld/d/a/l6/e/m/g1;->f1(Z)V
+
+    .line 3
+    invoke-static {}, Ld/d/a/l6/b;->h()Ld/d/a/l6/e/l/g;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p2}, Ld/d/a/l6/e/l/g;->R0(Z)V
+
+    .line 4
+    iget-object p1, p0, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji;->d:Lmiuix/appcompat/app/AlertDialog;
+
+    if-eqz p1, :cond_0
+
+    .line 5
+    invoke-virtual {p1}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
+
+    const/4 p1, 0x0
+
+    .line 6
+    iput-object p1, p0, Lcom/xiaomi/mimoji/common/mvp/base/BaseFragmentMimoji;->d:Lmiuix/appcompat/app/AlertDialog;
+
+    .line 7
+    :cond_0
+    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->X8:Ld/o/v/a/x;
+
+    invoke-virtual {p1}, Ld/o/v/a/x;->q()Lmiuix/appcompat/app/ProgressDialog;
+
+    move-result-object p1
+
+    .line 8
+    iget-object p2, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->X8:Ld/o/v/a/x;
+
+    invoke-virtual {p2}, Ld/o/v/a/x;->n()Ld/o/v/a/v;
+
+    move-result-object p2
+
+    if-eqz p1, :cond_1
+
+    .line 9
+    invoke-virtual {p1}, Landroid/app/Dialog;->isShowing()Z
+
+    move-result p3
+
+    if-eqz p3, :cond_1
+
+    .line 10
+    invoke-virtual {p1}, Landroid/app/Dialog;->hide()V
+
+    :cond_1
+    if-eqz p2, :cond_2
+
+    .line 11
+    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->X8:Ld/o/v/a/x;
+
+    invoke-virtual {p1}, Ld/o/v/a/x;->C()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    .line 12
+    invoke-virtual {p2}, Ld/o/v/a/v;->b()V
+
+    .line 13
+    :cond_2
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl2()Ld/d/a/m7/g/a3;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    const/16 p3, 0x202
+
+    .line 14
+    invoke-interface {p1, p2, p3}, Ld/d/a/m7/g/a3;->alertSlideSwitchLayout(ZI)V
+
+    .line 15
+    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->z7()V
+
+    :cond_3
+    return-void
+.end method
+
+.method public provideEnterAnimation(I)Landroid/view/animation/Animation;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "lastFragmentInfo"
+        }
+    .end annotation
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public provideExitAnimation(I)Landroid/view/animation/Animation;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "newFragmentInfo"
+        }
+    .end annotation
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public provideRotateItem(Ljava/util/List;I)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "pendingRotateItems",
+            "newDegree"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Landroid/view/View;",
+            ">;I)V"
+        }
+    .end annotation
+
+    .line 1
+    invoke-super {p0, p1, p2}, Lcom/android/camera/fragment/BaseFragment;->provideRotateItem(Ljava/util/List;I)V
+
+    .line 2
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->m:Landroid/view/View;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 3
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->k0:Landroid/widget/ImageView;
+
+    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 4
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->K0:Lcom/android/camera/ui/CameraSnapView;
+
+    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 5
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->k1:Lcom/airbnb/lottie/LottieAnimationView;
+
+    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 6
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->v1:Landroid/widget/ImageView;
+
+    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 7
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->C1:Landroid/widget/ImageView;
+
+    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 8
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->u:Lcom/android/camera/ui/ColorImageView;
+
+    if-eqz v0, :cond_0
+
+    .line 9
+    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 10
+    :cond_0
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->u:Lcom/android/camera/ui/ColorImageView;
+
+    if-eqz v0, :cond_1
+
+    .line 11
+    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 12
+    :cond_1
+    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->n:Lcom/xiaomi/mimoji/common/fragment/bottomlist/FragmentMimojiBottomList;
+
+    if-eqz p0, :cond_2
+
+    .line 13
+    invoke-virtual {p0, p1, p2}, Lcom/xiaomi/mimoji/common/fragment/bottomlist/FragmentMimojiBottomList;->provideRotateItem(Ljava/util/List;I)V
+
+    :cond_2
+    return-void
+.end method
+
+.method public register(Ld/d/a/m7/c;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "modeCoordinator"
+        }
+    .end annotation
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->register(Ld/d/a/m7/c;)V
+
+    .line 2
+    const-class v0, Ld/o/v/a/d0/a/c/a$e;
+
+    invoke-interface {p1, v0, p0}, Ld/d/a/m7/c;->b(Ljava/lang/Class;Ld/d/a/m7/a;)V
+
+    .line 3
+    invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->registerBackStack(Ld/d/a/m7/c;Ld/d/a/m7/g/c1;)V
+
+    .line 4
+    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->X8:Ld/o/v/a/x;
+
+    if-nez p1, :cond_0
+
+    .line 5
+    invoke-static {}, Ld/d/a/l6/b;->j()Ld/d/a/l6/f/h;
+
+    move-result-object p1
+
+    const-class v0, Ld/o/v/a/x;
+
+    invoke-virtual {p1, v0}, Ld/d/a/l6/f/h;->c(Ljava/lang/Class;)Ld/d/a/l6/f/l;
+
+    move-result-object p1
+
+    check-cast p1, Ld/o/v/a/x;
+
+    iput-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->X8:Ld/o/v/a/x;
+
+    .line 6
+    :cond_0
+    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->X8:Ld/o/v/a/x;
+
+    invoke-virtual {p0}, Ld/o/v/a/x;->C()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    .line 7
+    invoke-static {}, Ld/o/v/a/v;->i()Ld/o/v/a/v;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ld/o/v/a/v;->b()V
+
+    :cond_1
+    return-void
+.end method
+
+.method public u1(Landroid/net/Uri;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "uri"
+        }
+    .end annotation
+
+    .line 1
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3054,727 +4303,55 @@
     return-void
 .end method
 
-.method public final si(Landroid/view/View;)V
-    .locals 8
-
-    const v0, 0x7f0b03e7
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/FrameLayout;
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->g:Landroid/widget/FrameLayout;
-
-    const v0, 0x7f0b0310
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/ViewGroup;
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->f:Landroid/view/ViewGroup;
-
-    const v0, 0x7f0b07a8
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/camera/ui/TextureVideoView;
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->h:Lcom/android/camera/ui/TextureVideoView;
-
-    const v0, 0x7f0b010f
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/camera/ui/ColorImageView;
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->i:Lcom/android/camera/ui/ColorImageView;
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    const v2, 0x7f08086f
-
-    const v3, 0x7f080870
-
-    invoke-static {v1, v2, v3}, Lcom/android/camera/fragment/BaseFragment;->getIconDrawable(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/airbnb/lottie/LottieAnimationView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->i:Lcom/android/camera/ui/ColorImageView;
-
-    const v1, 0x7f080134
-
-    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/AppCompatImageView;->setBackgroundResource(I)V
-
-    const v0, 0x7f0b030e
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/FrameLayout;
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->j:Landroid/widget/FrameLayout;
-
-    const v0, 0x7f0b037f
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->p:Landroid/widget/ImageView;
-
-    const v0, 0x7f0b0796
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/camera/customization/BGTintTextView;
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->q:Lcom/android/camera/customization/BGTintTextView;
-
-    const v0, 0x7f0b03e2
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ProgressBar;
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->r:Landroid/widget/ProgressBar;
-
-    const v0, 0x7f0b03f2
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->s:Landroid/widget/ImageView;
-
-    const v0, 0x7f0b03f9
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ProgressBar;
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->t:Landroid/widget/ProgressBar;
-
-    const v0, 0x7f0b03e1
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ProgressBar;
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->u:Landroid/widget/ProgressBar;
-
-    const v0, 0x7f0b03eb
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->v:Landroid/widget/TextView;
-
-    const v0, 0x7f0b03ed
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/camera/ui/CameraSnapView;
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->l:Lcom/android/camera/ui/CameraSnapView;
-
-    iget v1, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
-
-    invoke-static {v1}, Laa/p;->e(I)Laa/p;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/android/camera/ui/CameraSnapView;->setParameters(Laa/p;)V
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->l:Lcom/android/camera/ui/CameraSnapView;
-
-    invoke-virtual {v0}, Lcom/android/camera/ui/CameraSnapView;->n()V
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->l:Lcom/android/camera/ui/CameraSnapView;
-
-    invoke-virtual {v0}, Lcom/android/camera/ui/CameraSnapView;->o()V
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->l:Lcom/android/camera/ui/CameraSnapView;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcom/android/camera/ui/CameraSnapView;->setSnapClickEnable(Z)V
-
-    const v0, 0x7f0b03ec
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/airbnb/lottie/LottieAnimationView;
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->m:Lcom/airbnb/lottie/LottieAnimationView;
-
-    const v0, 0x7f0b03e6
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->n:Landroid/widget/ImageView;
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    const v3, 0x7f0807d4
-
-    const v4, 0x7f0807d5
-
-    invoke-static {v2, v3, v4}, Lcom/android/camera/fragment/BaseFragment;->getIconDrawable(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    const v0, 0x7f0b03ee
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->o:Landroid/widget/ImageView;
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    const v3, 0x7f0808a4
-
-    const v4, 0x7f0808a5
-
-    invoke-static {v2, v3, v4}, Lcom/android/camera/fragment/BaseFragment;->getIconDrawable(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    const v0, 0x7f0b03e9
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->k:Landroid/widget/ImageView;
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->ni()V
-
-    const v0, 0x7f0b03f6
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/ViewGroup;
-
-    iput-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->x:Landroid/view/ViewGroup;
-
-    const v2, 0x7f0b03f7
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setFocusable(Z)V
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->x:Landroid/view/ViewGroup;
-
-    const v2, 0x7f0b03f3
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->g:Landroid/widget/FrameLayout;
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->l:Lcom/android/camera/ui/CameraSnapView;
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->m:Lcom/airbnb/lottie/LottieAnimationView;
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->n:Landroid/widget/ImageView;
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->o:Landroid/widget/ImageView;
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->k:Landroid/widget/ImageView;
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->i:Lcom/android/camera/ui/ColorImageView;
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const/4 v0, 0x1
-
-    new-array v2, v0, [Landroid/view/View;
-
-    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->i:Lcom/android/camera/ui/ColorImageView;
-
-    aput-object v3, v2, v1
-
-    invoke-static {v2}, Lz1/f;->y([Landroid/view/View;)V
-
-    const v2, 0x7f0b03ef
-
-    invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/FrameLayout;
-
-    iput-object v2, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->w:Landroid/widget/FrameLayout;
-
-    invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    invoke-static {}, Ly2/b;->o0()I
-
-    move-result v3
-
-    iput v3, v2, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
-
-    invoke-static {}, Ly2/b;->j0()I
-
-    move-result v3
-
-    iput v3, v2, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
-
-    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->w:Landroid/widget/FrameLayout;
-
-    invoke-virtual {v3, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    const/4 v2, 0x3
-
-    new-array v3, v2, [Landroid/view/View;
-
-    iget-object v4, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->n:Landroid/widget/ImageView;
-
-    aput-object v4, v3, v1
-
-    iget-object v4, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->o:Landroid/widget/ImageView;
-
-    aput-object v4, v3, v0
-
-    iget-object v4, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->k:Landroid/widget/ImageView;
-
-    const/4 v5, 0x2
-
-    aput-object v4, v3, v5
-
-    invoke-static {v3}, Lz1/f;->w([Landroid/view/View;)V
-
-    new-array v3, v0, [Landroid/view/View;
-
-    iget-object v4, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->m:Lcom/airbnb/lottie/LottieAnimationView;
-
-    aput-object v4, v3, v1
-
-    invoke-static {v3}, Lz1/f;->w([Landroid/view/View;)V
-
-    invoke-static {v0}, Lcom/android/camera/a6;->R0(I)Landroid/graphics/Rect;
-
-    move-result-object v3
-
-    const v4, 0x7f0b085b
-
-    invoke-virtual {p1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/widget/FrameLayout;
-
-    const v6, 0x7f0b085c
-
-    invoke-virtual {p1, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/widget/FrameLayout;
-
-    invoke-virtual {v4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v6
-
-    check-cast v6, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    invoke-static {}, Ly2/b;->k()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_0
-
-    invoke-static {}, Lid/b;->q2()Lid/b;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Lid/b;->n4()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_0
-
-    invoke-static {}, Ly2/b;->q()I
-
-    move-result p1
-
-    iget v2, v3, Landroid/graphics/Rect;->right:I
-
-    sub-int/2addr p1, v2
-
-    iput p1, v6, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
-
-    invoke-static {}, Ly2/b;->b0()I
-
-    move-result p1
-
-    iput p1, v6, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
-
-    invoke-virtual {p0}, Lcom/android/camera/fragment/BaseFragment;->getFatAlignHorizontal()I
-
-    move-result p1
-
-    new-array v2, v5, [Landroid/view/View;
-
-    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->n:Landroid/widget/ImageView;
-
-    aput-object v3, v2, v1
-
-    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->u:Landroid/widget/ProgressBar;
-
-    aput-object v3, v2, v0
-
-    invoke-virtual {p0, p1, v2}, Lcom/android/camera/fragment/BaseFragment;->alignSnapLeft(I[Landroid/view/View;)V
-
-    new-array v2, v5, [Landroid/view/View;
-
-    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->o:Landroid/widget/ImageView;
-
-    aput-object v3, v2, v1
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->t:Landroid/widget/ProgressBar;
-
-    aput-object v1, v2, v0
-
-    invoke-virtual {p0, p1, v2}, Lcom/android/camera/fragment/BaseFragment;->alignSnapRight(I[Landroid/view/View;)V
-
-    goto/16 :goto_0
-
-    :cond_0
-    invoke-static {}, Ly2/b;->t()I
-
-    move-result v3
-
-    iput v3, v6, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
-
-    invoke-static {}, Ly2/b;->s()I
-
-    move-result v3
-
-    int-to-float v3, v3
-
-    const v6, 0x3f333333    # 0.7f
-
-    mul-float/2addr v3, v6
-
-    invoke-static {v3}, Ljava/lang/Math;->round(F)I
-
-    move-result v3
-
-    iput v3, p1, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
-
-    invoke-static {}, Ly2/b;->u()I
-
-    move-result v3
-
-    iput v3, p1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
-
-    invoke-static {}, Ly2/b;->s()I
-
-    move-result v3
-
-    int-to-float v3, v3
-
-    const v6, 0x3e99999a    # 0.3f
-
-    mul-float/2addr v3, v6
-
-    invoke-static {v3}, Ljava/lang/Math;->round(F)I
-
-    move-result v3
-
-    iput v3, p1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
-
-    invoke-static {}, Ly2/b;->l()Z
-
-    move-result p1
-
-    const/4 v3, 0x4
-
-    if-eqz p1, :cond_1
-
-    invoke-static {}, Lid/b;->q2()Lid/b;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lid/b;->B5()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p0}, Lcom/android/camera/fragment/BaseFragment;->getThinAlignHorizontal()I
-
-    move-result p1
-
-    new-array v6, v5, [Landroid/view/View;
-
-    iget-object v7, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->n:Landroid/widget/ImageView;
-
-    aput-object v7, v6, v1
-
-    iget-object v7, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->u:Landroid/widget/ProgressBar;
-
-    aput-object v7, v6, v0
-
-    invoke-virtual {p0, p1, v6}, Lcom/android/camera/fragment/BaseFragment;->alignSnapLeft(I[Landroid/view/View;)V
-
-    new-array v6, v5, [Landroid/view/View;
-
-    iget-object v7, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->o:Landroid/widget/ImageView;
-
-    aput-object v7, v6, v1
-
-    iget-object v7, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->t:Landroid/widget/ProgressBar;
-
-    aput-object v7, v6, v0
-
-    invoke-virtual {p0, p1, v6}, Lcom/android/camera/fragment/BaseFragment;->alignSnapRight(I[Landroid/view/View;)V
-
-    new-array p1, v3, [Landroid/view/View;
-
-    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->n:Landroid/widget/ImageView;
-
-    aput-object v3, p1, v1
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->u:Landroid/widget/ProgressBar;
-
-    aput-object v1, p1, v0
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->o:Landroid/widget/ImageView;
-
-    aput-object v1, p1, v5
-
-    iget-object v1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->t:Landroid/widget/ProgressBar;
-
-    aput-object v1, p1, v2
-
-    invoke-virtual {p0, v0, p1}, Lcom/android/camera/fragment/BaseFragment;->initViewBackground(Z[Landroid/view/View;)V
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    new-array v6, v2, [Landroid/view/View;
-
-    iget-object v7, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->i:Lcom/android/camera/ui/ColorImageView;
-
-    aput-object v7, v6, v1
-
-    iget-object v7, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->n:Landroid/widget/ImageView;
-
-    aput-object v7, v6, v0
-
-    iget-object v7, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->u:Landroid/widget/ProgressBar;
-
-    aput-object v7, v6, v5
-
-    invoke-static {p1, v6}, Ly2/b;->b(Landroid/content/Context;[Landroid/view/View;)V
-
-    iget-object p1, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->i:Lcom/android/camera/ui/ColorImageView;
-
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/widget/FrameLayout$LayoutParams;
-
-    const v6, 0x800053
-
-    iput v6, p1, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    new-array v6, v5, [Landroid/view/View;
-
-    iget-object v7, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->o:Landroid/widget/ImageView;
-
-    aput-object v7, v6, v1
-
-    iget-object v7, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->t:Landroid/widget/ProgressBar;
-
-    aput-object v7, v6, v0
-
-    invoke-static {p1, v6}, Ly2/b;->c(Landroid/content/Context;[Landroid/view/View;)V
-
-    new-array p1, v3, [Landroid/view/View;
-
-    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->n:Landroid/widget/ImageView;
-
-    aput-object v3, p1, v1
-
-    iget-object v3, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->u:Landroid/widget/ProgressBar;
-
-    aput-object v3, p1, v0
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->o:Landroid/widget/ImageView;
-
-    aput-object v0, p1, v5
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->t:Landroid/widget/ProgressBar;
-
-    aput-object v0, p1, v2
-
-    invoke-virtual {p0, v1, p1}, Lcom/android/camera/fragment/BaseFragment;->initViewBackground(Z[Landroid/view/View;)V
-
-    :goto_0
-    invoke-virtual {v4, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const p0, 0x7f060115
-
-    invoke-virtual {v4, p0}, Landroid/view/View;->setBackgroundResource(I)V
-
-    return-void
-.end method
-
-.method public final u()V
+.method public unRegister(Ld/d/a/m7/c;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "modeCoordinator"
+        }
+    .end annotation
 
-    const/4 p0, 0x0
+    .line 1
+    invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->unRegister(Ld/d/a/m7/c;)V
 
-    new-array p0, p0, [Ljava/lang/Object;
+    .line 2
+    const-class v0, Ld/o/v/a/d0/a/c/a$e;
 
-    const-string v0, "MIMOJI_FragmentMimojiFullScreen"
+    invoke-interface {p1, v0, p0}, Ld/d/a/m7/c;->d(Ljava/lang/Class;Ld/d/a/m7/a;)V
 
-    const-string v1, "mimoji void resumePlay[]"
+    .line 3
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Jf()V
 
-    invoke-static {v0, v1, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 4
+    invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->unRegisterBackStack(Ld/d/a/m7/c;Ld/d/a/m7/g/c1;)V
 
-    invoke-static {}, Lyh/a$h;->impl2()Lyh/a$h;
-
-    move-result-object p0
-
-    if-nez p0, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-interface {p0}, Lyh/a$h;->u()Z
-
-    return-void
-.end method
-
-.method public unRegister(Lu8/d;)V
-    .locals 2
-
-    invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->unRegister(Lu8/d;)V
-
-    const-class v0, Lyh/a$e;
-
-    invoke-interface {p1, v0, p0}, Lu8/d;->c(Ljava/lang/Class;Lu8/a;)V
-
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->Gi()V
-
-    invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->unRegisterBackStack(Lu8/d;Lv8/z0;)V
-
-    invoke-static {}, Lyh/a$b;->impl2()Lyh/a$b;
+    .line 5
+    invoke-static {}, Ld/o/v/a/d0/a/c/a$b;->impl2()Ld/o/v/a/d0/a/c/a$b;
 
     move-result-object p1
 
     if-nez p1, :cond_0
 
-    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->I:Lrh/x;
+    .line 6
+    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->X8:Ld/o/v/a/x;
 
-    invoke-virtual {p0}, Lrh/x;->F()V
+    invoke-virtual {p0}, Ld/o/v/a/x;->F()V
 
-    invoke-static {}, Lv8/b1;->impl()Ljava/util/Optional;
+    .line 7
+    invoke-static {}, Ld/d/a/m7/g/e1;->impl()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance p1, Luh/a;
-
-    invoke-direct {p1}, Luh/a;-><init>()V
+    sget-object p1, Ld/o/v/a/a0/b/f;->c:Ld/o/v/a/a0/b/f;
 
     invoke-virtual {p0, p1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
     goto :goto_0
 
+    .line 8
     :cond_0
     iget v0, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
 
@@ -3782,83 +4359,78 @@
 
     if-eq v0, v1, :cond_1
 
-    invoke-interface {p1}, Lyh/a$b;->Eg()V
+    .line 9
+    invoke-interface {p1}, Ld/o/v/a/d0/a/c/a$b;->kg()V
 
-    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->I:Lrh/x;
+    .line 10
+    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->X8:Ld/o/v/a/x;
 
-    invoke-virtual {p0}, Lrh/x;->F()V
+    invoke-virtual {p0}, Ld/o/v/a/x;->F()V
 
+    .line 11
     :cond_1
     :goto_0
-    invoke-static {}, Lv8/y2;->impl()Ljava/util/Optional;
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance p1, Luh/c;
-
-    invoke-direct {p1}, Luh/c;-><init>()V
+    sget-object p1, Ld/o/v/a/a0/b/d;->c:Ld/o/v/a/a0/b/d;
 
     invoke-virtual {p0, p1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
     return-void
 .end method
 
-.method public wh(Ljava/lang/String;I)V
-    .locals 3
+.method public v5()Landroid/net/Uri;
+    .locals 0
 
-    const/4 v0, 0x0
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->U8:Landroid/net/Uri;
 
-    new-array v0, v0, [Ljava/lang/Object;
+    return-object p0
+.end method
 
-    const-string v1, "MIMOJI_FragmentMimojiFullScreen"
+.method public z7()V
+    .locals 2
 
-    const-string v2, "mimoji void concatResult[]"
+    .line 1
+    iget v0, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
 
-    invoke-static {v1, v2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    const/16 v1, 0xb8
 
+    if-ne v0, v1, :cond_1
+
+    .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_1
 
-    return-void
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->X8:Ld/o/v/a/x;
 
+    .line 3
+    invoke-virtual {v0}, Ld/o/v/a/x;->u()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    .line 4
     :cond_0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
-    new-instance v1, Luh/b;
+    new-instance v1, Ld/o/v/a/a0/b/i;
 
-    invoke-direct {v1, p0, p2, p1}, Luh/b;-><init>(Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;ILjava/lang/String;)V
+    invoke-direct {v1, p0}, Ld/o/v/a/a0/b/i;-><init>(Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;)V
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    return-void
-.end method
-
-.method public final z1()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->r:Landroid/widget/ProgressBar;
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lai/d;->c(Landroid/view/View;Z)Z
-
-    iget-object p0, p0, Lcom/xiaomi/mimoji/common/fragment/other/FragmentMimojiFullScreen;->k:Landroid/widget/ImageView;
-
-    invoke-static {p0, v1}, Lai/d;->c(Landroid/view/View;Z)Z
-
-    invoke-static {}, Lyh/a$h;->impl2()Lyh/a$h;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    invoke-interface {p0}, Lyh/a$h;->z1()V
-
-    :cond_0
+    :cond_1
+    :goto_0
     return-void
 .end method

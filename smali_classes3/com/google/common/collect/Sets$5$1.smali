@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Sets$5$1;
+.class public Lcom/google/common/collect/Sets$5$1;
 .super Lcom/google/common/collect/AbstractIterator;
 .source "SourceFile"
 
@@ -23,19 +23,21 @@
 
 
 # instance fields
-.field final bits:Ljava/util/BitSet;
+.field public final bits:Ljava/util/BitSet;
 
-.field final synthetic this$0:Lcom/google/common/collect/Sets$5;
+.field public final synthetic this$0:Lcom/google/common/collect/Sets$5;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/Sets$5;)V
     .locals 1
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/Sets$5$1;->this$0:Lcom/google/common/collect/Sets$5;
 
     invoke-direct {p0}, Lcom/google/common/collect/AbstractIterator;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/BitSet;
 
     iget-object p1, p1, Lcom/google/common/collect/Sets$5;->val$index:Lcom/google/common/collect/ImmutableMap;

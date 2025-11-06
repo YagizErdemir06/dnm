@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhl;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhl;
 .super Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhk;
 .source "SourceFile"
 
@@ -48,6 +48,7 @@
 
     add-int/lit8 p1, p3, 0x1
 
+    .line 1
     aget-byte p3, p2, p3
 
     if-gt p3, v5, :cond_1
@@ -73,6 +74,7 @@
 
     add-int/lit8 p1, p3, 0x1
 
+    .line 2
     aget-byte p3, p2, p3
 
     if-ge p1, p4, :cond_3
@@ -85,6 +87,7 @@
 
     goto :goto_1
 
+    .line 3
     :cond_3
     invoke-static {v7, p3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhn;->zza(II)I
 
@@ -108,6 +111,7 @@
     :cond_6
     add-int/lit8 p1, p3, 0x1
 
+    .line 4
     aget-byte p3, p2, p3
 
     if-gt p3, v5, :cond_7
@@ -128,6 +132,7 @@
 
     add-int/lit8 p1, p3, 0x1
 
+    .line 5
     aget-byte v8, p2, p3
 
     if-ge p1, p4, :cond_9
@@ -138,6 +143,7 @@
 
     goto :goto_2
 
+    .line 6
     :cond_9
     invoke-static {v7, v8}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhn;->zza(II)I
 
@@ -153,6 +159,7 @@
 
     add-int/lit8 p1, p3, 0x1
 
+    .line 7
     aget-byte p3, p2, p3
 
     if-ge p1, p4, :cond_b
@@ -165,6 +172,7 @@
 
     goto :goto_3
 
+    .line 8
     :cond_b
     invoke-static {v7, v8, p3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhn;->zzb(III)I
 
@@ -190,6 +198,7 @@
 
     add-int/lit8 p1, p3, 0x1
 
+    .line 9
     aget-byte p3, p2, p3
 
     if-gt p3, v5, :cond_d
@@ -203,6 +212,7 @@
     :goto_4
     if-ge p3, p4, :cond_f
 
+    .line 10
     aget-byte p1, p2, p3
 
     if-ltz p1, :cond_f
@@ -225,6 +235,7 @@
     :cond_11
     add-int/lit8 p1, p3, 0x1
 
+    .line 11
     aget-byte p3, p2, p3
 
     if-gez p3, :cond_1a
@@ -242,6 +253,7 @@
 
     add-int/lit8 p3, p1, 0x1
 
+    .line 12
     aget-byte p1, p2, p1
 
     if-le p1, v5, :cond_10
@@ -259,6 +271,7 @@
 
     if-lt p1, v7, :cond_15
 
+    .line 13
     invoke-static {p2, p1, p4}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhn;->zzc([BII)I
 
     move-result v2
@@ -268,6 +281,7 @@
     :cond_15
     add-int/lit8 v7, p1, 0x1
 
+    .line 14
     aget-byte p1, p2, p1
 
     if-gt p1, v5, :cond_13
@@ -295,6 +309,7 @@
 
     if-lt p1, v7, :cond_19
 
+    .line 15
     invoke-static {p2, p1, p4}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhn;->zzc([BII)I
 
     move-result v2
@@ -304,6 +319,7 @@
     :cond_19
     add-int/lit8 v7, p1, 0x1
 
+    .line 16
     aget-byte p1, p2, p1
 
     if-gt p1, v5, :cond_13

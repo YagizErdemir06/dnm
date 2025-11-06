@@ -30,6 +30,7 @@
 
     sget p1, Lcom/google/mlkit/vision/common/internal/MobileVisionBase;->zza:I
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/odml/image/MlImage;->close()V
 
     return-void

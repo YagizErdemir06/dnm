@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/SingletonImmutableSet;
+.class public final Lcom/google/common/collect/SingletonImmutableSet;
 .super Lcom/google/common/collect/ImmutableSet;
 .source "SourceFile"
 
@@ -24,7 +24,7 @@
 
 
 # instance fields
-.field final transient element:Ljava/lang/Object;
+.field public final transient element:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TE;"
@@ -42,8 +42,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableSet;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -65,6 +67,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/SingletonImmutableSet;->element:Ljava/lang/Object;
 
     invoke-static {p0}, Lcom/google/common/collect/ImmutableList;->of(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
@@ -81,6 +84,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/SingletonImmutableSet;->element:Ljava/lang/Object;
 
     invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -93,6 +97,7 @@
 .method public copyIntoArray([Ljava/lang/Object;I)I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/SingletonImmutableSet;->element:Ljava/lang/Object;
 
     aput-object p0, p1, p2
@@ -105,6 +110,7 @@
 .method public final hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/SingletonImmutableSet;->element:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
@@ -164,6 +170,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/SingletonImmutableSet;->element:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;

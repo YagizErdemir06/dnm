@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/widget/PopupMenu$3;
+.class public Landroidx/appcompat/widget/PopupMenu$3;
 .super Landroidx/appcompat/widget/ForwardingListener;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/appcompat/widget/PopupMenu;
+.field public final synthetic this$0:Landroidx/appcompat/widget/PopupMenu;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/appcompat/widget/PopupMenu;Landroid/view/View;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/widget/PopupMenu$3;->this$0:Landroidx/appcompat/widget/PopupMenu;
 
     invoke-direct {p0, p2}, Landroidx/appcompat/widget/ForwardingListener;-><init>(Landroid/view/View;)V
@@ -34,6 +35,7 @@
 .method public getPopup()Landroidx/appcompat/view/menu/ShowableListMenu;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/widget/PopupMenu$3;->this$0:Landroidx/appcompat/widget/PopupMenu;
 
     iget-object p0, p0, Landroidx/appcompat/widget/PopupMenu;->mPopup:Landroidx/appcompat/view/menu/MenuPopupHelper;
@@ -48,6 +50,7 @@
 .method public onForwardingStarted()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/widget/PopupMenu$3;->this$0:Landroidx/appcompat/widget/PopupMenu;
 
     invoke-virtual {p0}, Landroidx/appcompat/widget/PopupMenu;->show()V
@@ -60,6 +63,7 @@
 .method public onForwardingStopped()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/widget/PopupMenu$3;->this$0:Landroidx/appcompat/widget/PopupMenu;
 
     invoke-virtual {p0}, Landroidx/appcompat/widget/PopupMenu;->dismiss()V

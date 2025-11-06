@@ -29,6 +29,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/common/api/ResultCallbacks;-><init>()V
 
     const-string v0, "Activity must not be null"
@@ -53,6 +54,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/gms/common/api/Status;->hasResolution()Z
 
     move-result v0
@@ -64,6 +66,7 @@
 
     iget v1, p0, Lcom/google/android/gms/common/api/ResolvingResultCallbacks;->zzb:I
 
+    .line 2
     invoke-virtual {p1, v0, v1}, Lcom/google/android/gms/common/api/Status;->startResolutionForResult(Landroid/app/Activity;I)V
     :try_end_0
     .catch Landroid/content/IntentSender$SendIntentException; {:try_start_0 .. :try_end_0} :catch_0
@@ -77,6 +80,7 @@
 
     const-string v1, "Failed to start resolution"
 
+    .line 3
     invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     new-instance p1, Lcom/google/android/gms/common/api/Status;
@@ -85,10 +89,12 @@
 
     invoke-direct {p1, v0}, Lcom/google/android/gms/common/api/Status;-><init>(I)V
 
+    .line 4
     invoke-virtual {p0, p1}, Lcom/google/android/gms/common/api/ResolvingResultCallbacks;->onUnresolvableFailure(Lcom/google/android/gms/common/api/Status;)V
 
     return-void
 
+    .line 5
     :cond_0
     invoke-virtual {p0, p1}, Lcom/google/android/gms/common/api/ResolvingResultCallbacks;->onUnresolvableFailure(Lcom/google/android/gms/common/api/Status;)V
 

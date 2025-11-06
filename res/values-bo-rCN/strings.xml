@@ -206,7 +206,6 @@
     <string name="accessibility_video_capture_button">བརྙན་འབེབས་དུས་པར་ལེན་པའི་མཐེབ་གནོན།</string>
     <string name="accessibility_video_pause_button">བརྙན་ཕབ་སྐབས་སྡོད།</string>
     <string name="accessibility_video_resume_button">མུ་མཐུད་བརྙན་ལེན།</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">ཆ་རིས། ཁ་བརྒྱབ་པའི་རྣམ་པ།</string>
     <string name="accessibility_watermark_image_on">ཆུ་རིས། ཁ་ཕྱེ་བའི་རྣམ་པ།</string>
     <string name="accessibility_watermark_text">ཆུ་རིས་སྙོམ་སྒྲིག་ཤོག་ངོས།</string>
@@ -214,16 +213,6 @@
     <string name="accessibility_zoom_button">མདོ་འགྱུར།</string>
     <string name="actionbar_button_up_description">ཕྱིར་ལོག</string>
     <string name="afternoon">ཕྱི་དྲོ།</string>
-    <string name="agent_flip_tbc">འཆར་ངོས་ནང་མ་ནས་སྒྲིག་བཀོལ་གནང་རོགས།</string>
-    <string name="agent_function_max">ཆེ་ཤོས་སུ་བཟོས་ཟིན།</string>
-    <string name="agent_function_min">ཆུང་ཤོས་སུ་བཟོས་ཟིན།</string>
-    <string name="agent_workspace_mode_not_supported">གནས་སྐབས་བྱེད་ནུས་འདི་སྤྱོད་མི་ཐུབ།</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"བྱེད་ནུས་འདི་གནས་སྐབས་སྤྱོད་མི་ཐུབ། 
-པར་ལེན་རྣམ་པ་ཁ་ཕྱེ་ཟིན།"</string>
-    <string name="agent_workspace_on">%1$sཔར་ལེན་བྱ་རྒྱུའི་དཔྱད་གྲངས་སྒྲིག་བཀོད་བྱས་ཟིན།</string>
-    <string name="agent_workspace_tbc">ལྗོངས་རྣམ་སློབ་སྦྱོང་བྱེད་བཞིན་ཡོད།</string>
-    <string name="agent_workspace_tbc_use_default">"ལྗོངས་རྣམ་སློབ་སྦྱོང་བྱེད་བཞིན་ཡོད། 
-པར་ཆས་ཀྱི་དཔྱད་གྲངས་ཞེ་འཐད་དུ་སྒྲིག་འགོད་བྱེད།"</string>
     <string name="ai_agra_fort">ཨ་ག་ལ་པོ།</string>
     <string name="ai_amber_fort">རིན་ཆེན་མཁར།</string>
     <string name="ai_baby">གཅེས་ཕྲུག</string>
@@ -789,7 +778,6 @@ WiFi6ཅན་གྱི་ལག་རྩལ་ལྡན་པའམ་%sGདྲ
     <string name="download_hint_cn">མིག་སྔར་WLANམེད་པའི་ཁོར་ཡུག་ཡིན་པས། བཞུར་ཚེད་%1$sMBཙམ་ཟད་སྲིད། ཕབ་ལེན་བྱ་རྒྱུར་གཏན་འཁེལ་ཡིན་ནམ།</string>
     <string name="download_hint_wifi">@string/download_hint</string>
     <string name="download_in_progress">ཕབ་ལེན་བྱེད་བཞིན་ཡོད།</string>
-    <string name="download_network_error">ཕབ་ལེན་མི་ཐུབ། དྲ་རྒྱའི་སྦྲེལ་མཐུད་ལ་ཞིབ་དཔྱད་གནང་རོགས།</string>
     <string name="download_title">བཞུར་ཚད་དྲན་སྐུལ།</string>
     <string name="download_waiting">སྒུག་བཞིན་ཡོད།</string>
     <string name="dual_camera_lens_covered_toast">བསླང་གཟུགས་པར་མིག་ཁྱད་ནུས་བསྒྲིབས་འདུག</string>
@@ -1266,7 +1254,6 @@ WLANའགའ་ཞིག་ནི་ཕྱི་རོལ་དྲ་རྒྱ�
     <string name="miuix_appcompat_delete_description">སུབ།</string>
     <string name="miuix_appcompat_deselect_all">ཡོངས་འདེམས་རྩིས་མེད།</string>
     <string name="miuix_appcompat_deselect_all_description">ཡོངས་འདེམས་རྩིས་མེད།</string>
-    <string name="miuix_appcompat_edit">རྩོམ་སྒྲིག</string>
     <string name="miuix_appcompat_search_action_mode_cancel">རྩིས་མེད།</string>
     <string name="miuix_appcompat_search_input_description">བཤེར་འཚོལ།</string>
     <string name="miuix_appcompat_select_all">ཡོངས་འདེམས།</string>
@@ -2228,7 +2215,6 @@ UltraRAWརྣམ་པས་པར་རིས་ཀྱི་%dbitཐོག་�
     <string name="time_picker_label_hour">ཆུ་ཚོད།</string>
     <string name="time_picker_label_minute">སྐར་</string>
     <string name="time_stamp_date_format">yyyy.MM.dd</string>
-    <string name="time_stamp_date_format_minute">yyyy.MM.dd HH:mm</string>
     <string name="timefreeze_guide_tip2">པར་ལེན་སྔོན་དང་། པར་ལེན་དུས་སུ་དུས་ངེས་མེད་དུ་རྒྱབ་ལྗོངས་འཇགས་པའི་ནུས་པ་ཁ་ཕྱེ་བའམ་མཚམས་འཇོག་བྱེད།</string>
     <string name="timefreeze_guide_tip3">འདྲ་པར་ལེན་པའི་གཙོ་དོན་གྱིས་ནུས་ཡོད་ཀྱིས་གཡས་གཡོན་སྒུལ་བ་གཡོལ་དགོས།</string>
     <string name="timefreeze_guide_tip4">རྒྱབ་ལྗོངས་ཀྱི་འཁོར་རྒྱུན་བཀག་པ།</string>
@@ -2248,8 +2234,8 @@ UltraRAWརྣམ་པས་པར་རིས་ཀྱི་%dbitཐོག་�
     <string name="tip_ai_off">AIཔར་ཆས：ཁ་བརྒྱབ་ཟིན།</string>
     <string name="tip_beauty_mode_title1">སྣང་བརྙན་གྱི་ལུགས།：རང་བཞིན་རང་མདངས།</string>
     <string name="tip_beauty_mode_title2">སྣང་བརྙན་གྱི་ལུགས།：སྤུས་ཚོར་སྤྱིན་ཤོག</string>
-    <string name="tip_cvtype_title1">བརྙན་ལེན་ཁྱད་ཆོས：རྒྱུན་མཐོང་Leica</string>
-    <string name="tip_cvtype_title2">བརྙན་ལེན་ཁྱད་ཆོས།：Leicaགསོན་ཉམས་</string>
+    <string name="tip_cvtype_title1">བརྙན་ལེན་ཁྱད་ཆོས：རྒྱུན་མཐོང་ལའེ་ཁཱ།</string>
+    <string name="tip_cvtype_title2">བརྙན་ལེན་ཁྱད་ཆོས།：གསོན་ཉམས་ལའེ་ཁཱ།</string>
     <string name="tip_eis_off">འདར་འགོག：ཁ་རྒྱོབ།</string>
     <string name="tip_eis_pro_off">འདར་འགོགPro：ཁ་རྒྱོབ།</string>
     <string name="tip_flash_auto">འཁྱུག་འོད།：ཁ་ཕྱེས།</string>

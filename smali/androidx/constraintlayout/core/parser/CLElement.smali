@@ -4,25 +4,25 @@
 
 
 # static fields
-.field protected static BASE_INDENT:I = 0x2
+.field public static BASE_INDENT:I = 0x2
 
-.field protected static MAX_LINE:I = 0x50
+.field public static MAX_LINE:I = 0x50
 
 
 # instance fields
-.field protected end:J
+.field public end:J
 
 .field private line:I
 
-.field protected mContainer:Landroidx/constraintlayout/core/parser/CLContainer;
+.field public mContainer:Landroidx/constraintlayout/core/parser/CLContainer;
 
 .field private final mContent:[C
 
-.field protected start:J
+.field public start:J
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 0
 
     return-void
@@ -31,16 +31,20 @@
 .method public constructor <init>([C)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, -0x1
 
+    .line 2
     iput-wide v0, p0, Landroidx/constraintlayout/core/parser/CLElement;->start:J
 
     const-wide v0, 0x7fffffffffffffffL
 
+    .line 3
     iput-wide v0, p0, Landroidx/constraintlayout/core/parser/CLElement;->end:J
 
+    .line 4
     iput-object p1, p0, Landroidx/constraintlayout/core/parser/CLElement;->mContent:[C
 
     return-void
@@ -58,6 +62,7 @@
 
     const/16 v0, 0x20
 
+    .line 1
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     add-int/lit8 p0, p0, 0x1
@@ -71,12 +76,14 @@
 .method public content()Ljava/lang/String;
     .locals 6
 
+    .line 1
     new-instance v0, Ljava/lang/String;
 
     iget-object v1, p0, Landroidx/constraintlayout/core/parser/CLElement;->mContent:[C
 
     invoke-direct {v0, v1}, Ljava/lang/String;-><init>([C)V
 
+    .line 2
     iget-wide v1, p0, Landroidx/constraintlayout/core/parser/CLElement;->end:J
 
     const-wide v3, 0x7fffffffffffffffL
@@ -100,12 +107,14 @@
 
     add-int/lit8 v1, v1, 0x1
 
+    .line 3
     invoke-virtual {v0, p0, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
+    .line 4
     :cond_1
     :goto_0
     iget-wide v1, p0, Landroidx/constraintlayout/core/parser/CLElement;->start:J
@@ -126,6 +135,7 @@
 .method public getContainer()Landroidx/constraintlayout/core/parser/CLElement;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/parser/CLElement;->mContainer:Landroidx/constraintlayout/core/parser/CLContainer;
 
     return-object p0
@@ -134,10 +144,12 @@
 .method public getDebugName()Ljava/lang/String;
     .locals 1
 
+    .line 1
     sget-boolean v0, Landroidx/constraintlayout/core/parser/CLParser;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -167,6 +179,7 @@
 .method public getEnd()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Landroidx/constraintlayout/core/parser/CLElement;->end:J
 
     return-wide v0
@@ -175,10 +188,12 @@
 .method public getFloat()F
     .locals 1
 
+    .line 1
     instance-of v0, p0, Landroidx/constraintlayout/core/parser/CLNumber;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Landroidx/constraintlayout/core/parser/CLNumber;
 
     invoke-virtual {p0}, Landroidx/constraintlayout/core/parser/CLNumber;->getFloat()F
@@ -196,10 +211,12 @@
 .method public getInt()I
     .locals 1
 
+    .line 1
     instance-of v0, p0, Landroidx/constraintlayout/core/parser/CLNumber;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Landroidx/constraintlayout/core/parser/CLNumber;
 
     invoke-virtual {p0}, Landroidx/constraintlayout/core/parser/CLNumber;->getInt()I
@@ -217,6 +234,7 @@
 .method public getLine()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/core/parser/CLElement;->line:I
 
     return p0
@@ -225,6 +243,7 @@
 .method public getStart()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Landroidx/constraintlayout/core/parser/CLElement;->start:J
 
     return-wide v0
@@ -233,6 +252,7 @@
 .method public getStrClass()Ljava/lang/String;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p0
@@ -243,6 +263,7 @@
 
     const/16 v0, 0x2e
 
+    .line 2
     invoke-virtual {p0, v0}, Ljava/lang/String;->lastIndexOf(I)I
 
     move-result v0
@@ -259,6 +280,7 @@
 .method public isDone()Z
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Landroidx/constraintlayout/core/parser/CLElement;->end:J
 
     const-wide v2, 0x7fffffffffffffffL
@@ -281,6 +303,7 @@
 .method public isStarted()Z
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Landroidx/constraintlayout/core/parser/CLElement;->start:J
 
     const-wide/16 v2, -0x1
@@ -303,6 +326,7 @@
 .method public notStarted()Z
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Landroidx/constraintlayout/core/parser/CLElement;->start:J
 
     const-wide/16 v2, -0x1
@@ -325,6 +349,7 @@
 .method public setContainer(Landroidx/constraintlayout/core/parser/CLContainer;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/constraintlayout/core/parser/CLElement;->mContainer:Landroidx/constraintlayout/core/parser/CLContainer;
 
     return-void
@@ -333,6 +358,7 @@
 .method public setEnd(J)V
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Landroidx/constraintlayout/core/parser/CLElement;->end:J
 
     const-wide v2, 0x7fffffffffffffffL
@@ -343,13 +369,16 @@
 
     return-void
 
+    .line 2
     :cond_0
     iput-wide p1, p0, Landroidx/constraintlayout/core/parser/CLElement;->end:J
 
+    .line 3
     sget-boolean p1, Landroidx/constraintlayout/core/parser/CLParser;->DEBUG:Z
 
     if-eqz p1, :cond_1
 
+    .line 4
     sget-object p1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -378,11 +407,13 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 5
     :cond_1
     iget-object p1, p0, Landroidx/constraintlayout/core/parser/CLElement;->mContainer:Landroidx/constraintlayout/core/parser/CLContainer;
 
     if-eqz p1, :cond_2
 
+    .line 6
     invoke-virtual {p1, p0}, Landroidx/constraintlayout/core/parser/CLContainer;->add(Landroidx/constraintlayout/core/parser/CLElement;)V
 
     :cond_2
@@ -392,6 +423,7 @@
 .method public setLine(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/core/parser/CLElement;->line:I
 
     return-void
@@ -400,6 +432,7 @@
 .method public setStart(J)V
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Landroidx/constraintlayout/core/parser/CLElement;->start:J
 
     return-void
@@ -424,6 +457,7 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Landroidx/constraintlayout/core/parser/CLElement;->start:J
 
     iget-wide v2, p0, Landroidx/constraintlayout/core/parser/CLElement;->end:J
@@ -440,6 +474,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     new-instance v0, Ljava/lang/String;
 
@@ -447,6 +482,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/String;-><init>([C)V
 
+    .line 3
     iget-wide v1, p0, Landroidx/constraintlayout/core/parser/CLElement;->start:J
 
     long-to-int v1, v1
@@ -461,6 +497,7 @@
 
     move-result-object v0
 
+    .line 4
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -503,6 +540,7 @@
 
     return-object p0
 
+    .line 5
     :cond_1
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;

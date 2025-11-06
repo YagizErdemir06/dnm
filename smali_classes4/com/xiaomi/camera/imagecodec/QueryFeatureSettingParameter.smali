@@ -42,6 +42,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/xiaomi/camera/imagecodec/QueryFeatureSettingParameter$1;
 
     invoke-direct {v0}, Lcom/xiaomi/camera/imagecodec/QueryFeatureSettingParameter$1;-><init>()V
@@ -139,6 +140,7 @@
 .method public static synthetic access$102(Lcom/xiaomi/camera/imagecodec/QueryFeatureSettingParameter;I)I
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/camera/imagecodec/QueryFeatureSettingParameter;->mFeatureType:I
 
     return p1
@@ -147,6 +149,7 @@
 .method public static synthetic access$202(Lcom/xiaomi/camera/imagecodec/QueryFeatureSettingParameter;I)I
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/camera/imagecodec/QueryFeatureSettingParameter;->mISO:I
 
     return p1
@@ -155,6 +158,7 @@
 .method public static synthetic access$302(Lcom/xiaomi/camera/imagecodec/QueryFeatureSettingParameter;J)J
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lcom/xiaomi/camera/imagecodec/QueryFeatureSettingParameter;->mExposureTime:J
 
     return-wide p1
@@ -163,6 +167,7 @@
 .method public static synthetic access$402(Lcom/xiaomi/camera/imagecodec/QueryFeatureSettingParameter;I)I
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/camera/imagecodec/QueryFeatureSettingParameter;->mActiveCameraId:I
 
     return p1
@@ -171,6 +176,7 @@
 .method public static synthetic access$502(Lcom/xiaomi/camera/imagecodec/QueryFeatureSettingParameter;Z)Z
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/camera/imagecodec/QueryFeatureSettingParameter;->mIsQuickShot:Z
 
     return p1
@@ -189,6 +195,7 @@
 .method public getActiveCameraId()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/camera/imagecodec/QueryFeatureSettingParameter;->mActiveCameraId:I
 
     return p0
@@ -197,6 +204,7 @@
 .method public getExposureTime()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/camera/imagecodec/QueryFeatureSettingParameter;->mExposureTime:J
 
     return-wide v0
@@ -205,6 +213,7 @@
 .method public getFeatureType()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/camera/imagecodec/QueryFeatureSettingParameter;->mFeatureType:I
 
     return p0
@@ -213,6 +222,7 @@
 .method public getISO()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/camera/imagecodec/QueryFeatureSettingParameter;->mISO:I
 
     return p0
@@ -231,22 +241,27 @@
         }
     .end annotation
 
+    .line 1
     iget p2, p0, Lcom/xiaomi/camera/imagecodec/QueryFeatureSettingParameter;->mActiveCameraId:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 2
     iget p2, p0, Lcom/xiaomi/camera/imagecodec/QueryFeatureSettingParameter;->mFeatureType:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 3
     iget p2, p0, Lcom/xiaomi/camera/imagecodec/QueryFeatureSettingParameter;->mISO:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 4
     iget-wide v0, p0, Lcom/xiaomi/camera/imagecodec/QueryFeatureSettingParameter;->mExposureTime:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
+    .line 5
     iget-boolean p0, p0, Lcom/xiaomi/camera/imagecodec/QueryFeatureSettingParameter;->mIsQuickShot:Z
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeByte(B)V

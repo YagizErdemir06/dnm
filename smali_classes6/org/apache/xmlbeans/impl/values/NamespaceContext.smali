@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic $assertionsDisabled:Z
+.field public static final synthetic $assertionsDisabled:Z
 
 .field private static final MAP:I = 0x3
 
@@ -27,7 +27,7 @@
 
 .field private static final XML_OBJECT:I = 0x2
 
-.field static synthetic class$org$apache$xmlbeans$impl$values$NamespaceContext:Ljava/lang/Class;
+.field public static synthetic class$org$apache$xmlbeans$impl$values$NamespaceContext:Ljava/lang/Class;
 
 .field private static tl_namespaceContextStack:Ljava/lang/ThreadLocal;
 
@@ -42,6 +42,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/values/NamespaceContext;->class$org$apache$xmlbeans$impl$values$NamespaceContext:Ljava/lang/Class;
 
     if-nez v0, :cond_0
@@ -59,6 +60,7 @@
 
     sput-boolean v0, Lorg/apache/xmlbeans/impl/values/NamespaceContext;->$assertionsDisabled:Z
 
+    .line 2
     new-instance v0, Ljava/lang/ThreadLocal;
 
     invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
@@ -156,6 +158,7 @@
 .method public static synthetic class$(Ljava/lang/String;)Ljava/lang/Class;
     .locals 1
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -172,7 +175,7 @@
 
     invoke-direct {v0}, Ljava/lang/NoClassDefFoundError;-><init>()V
 
-    invoke-virtual {v0, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v0, p0}, Ljava/lang/NoClassDefFoundError;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -182,6 +185,7 @@
 .method public static getCurrent()Lorg/apache/xmlbeans/impl/common/PrefixResolver;
     .locals 1
 
+    .line 1
     invoke-static {}, Lorg/apache/xmlbeans/impl/values/NamespaceContext;->getNamespaceContextStack()Lorg/apache/xmlbeans/impl/values/NamespaceContext$NamespaceContextStack;
 
     move-result-object v0
@@ -194,6 +198,7 @@
 .method private static getNamespaceContextStack()Lorg/apache/xmlbeans/impl/values/NamespaceContext$NamespaceContextStack;
     .locals 2
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/values/NamespaceContext;->tl_namespaceContextStack:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -204,12 +209,14 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Lorg/apache/xmlbeans/impl/values/NamespaceContext$NamespaceContextStack;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Lorg/apache/xmlbeans/impl/values/NamespaceContext$NamespaceContextStack;-><init>(Lorg/apache/xmlbeans/impl/values/NamespaceContext$1;)V
 
+    .line 3
     sget-object v1, Lorg/apache/xmlbeans/impl/values/NamespaceContext;->tl_namespaceContextStack:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v1, v0}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
@@ -221,12 +228,15 @@
 .method public static pop()V
     .locals 2
 
+    .line 1
     invoke-static {}, Lorg/apache/xmlbeans/impl/values/NamespaceContext;->getNamespaceContextStack()Lorg/apache/xmlbeans/impl/values/NamespaceContext$NamespaceContextStack;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Lorg/apache/xmlbeans/impl/values/NamespaceContext$NamespaceContextStack;->pop()V
 
+    .line 3
     iget-object v0, v0, Lorg/apache/xmlbeans/impl/values/NamespaceContext$NamespaceContextStack;->stack:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -235,6 +245,7 @@
 
     if-nez v0, :cond_0
 
+    .line 4
     sget-object v0, Lorg/apache/xmlbeans/impl/values/NamespaceContext;->tl_namespaceContextStack:Ljava/lang/ThreadLocal;
 
     const/4 v1, 0x0
@@ -248,6 +259,7 @@
 .method public static push(Lorg/apache/xmlbeans/impl/values/NamespaceContext;)V
     .locals 1
 
+    .line 1
     invoke-static {}, Lorg/apache/xmlbeans/impl/values/NamespaceContext;->getNamespaceContextStack()Lorg/apache/xmlbeans/impl/values/NamespaceContext$NamespaceContextStack;
 
     move-result-object v0
@@ -266,6 +278,7 @@
 
     const-string v0, "xml"
 
+    .line 1
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -276,6 +289,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     iget v0, p0, Lorg/apache/xmlbeans/impl/values/NamespaceContext;->_code:I
 
@@ -299,6 +313,7 @@
 
     if-eq v0, v1, :cond_2
 
+    .line 3
     sget-boolean p0, Lorg/apache/xmlbeans/impl/values/NamespaceContext;->$assertionsDisabled:Z
 
     if-eqz p0, :cond_1
@@ -316,6 +331,7 @@
 
     throw p0
 
+    .line 4
     :cond_2
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/NamespaceContext;->_obj:Ljava/lang/Object;
 
@@ -327,6 +343,7 @@
 
     return-object p0
 
+    .line 5
     :cond_3
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/NamespaceContext;->_obj:Ljava/lang/Object;
 
@@ -338,9 +355,11 @@
 
     return-object p0
 
+    .line 6
     :cond_4
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/NamespaceContext;->_obj:Ljava/lang/Object;
 
+    .line 7
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -351,15 +370,18 @@
 
     if-eqz v1, :cond_5
 
+    .line 8
     invoke-static {v0}, Ljava/lang/reflect/Proxy;->getInvocationHandler(Ljava/lang/Object;)Ljava/lang/reflect/InvocationHandler;
 
     move-result-object v0
 
+    .line 9
     :cond_5
     instance-of v1, v0, Lorg/apache/xmlbeans/impl/values/TypeStoreUser;
 
     if-eqz v1, :cond_6
 
+    .line 10
     check-cast v0, Lorg/apache/xmlbeans/impl/values/TypeStoreUser;
 
     invoke-interface {v0}, Lorg/apache/xmlbeans/impl/values/TypeStoreUser;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
@@ -372,6 +394,7 @@
 
     return-object p0
 
+    .line 11
     :cond_6
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/NamespaceContext;->_obj:Ljava/lang/Object;
 
@@ -383,6 +406,7 @@
 
     if-eqz v0, :cond_8
 
+    .line 12
     invoke-interface {v0}, Lorg/apache/xmlbeans/XmlCursor;->currentTokenType()Lorg/apache/xmlbeans/XmlCursor$TokenType;
 
     move-result-object p0
@@ -391,8 +415,10 @@
 
     if-ne p0, v1, :cond_7
 
+    .line 13
     invoke-interface {v0}, Lorg/apache/xmlbeans/XmlCursor;->toParent()Z
 
+    .line 14
     :cond_7
     :try_start_0
     invoke-interface {v0, p1}, Lorg/apache/xmlbeans/XmlCursor;->namespaceForPrefix(Ljava/lang/String;)Ljava/lang/String;
@@ -401,6 +427,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 15
     invoke-interface {v0}, Lorg/apache/xmlbeans/XmlCursor;->dispose()V
 
     return-object p0
@@ -412,6 +439,7 @@
 
     throw p0
 
+    .line 16
     :cond_8
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/NamespaceContext;->_obj:Ljava/lang/Object;
 
@@ -425,6 +453,7 @@
 
     return-object p0
 
+    .line 17
     :cond_9
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/NamespaceContext;->_obj:Ljava/lang/Object;
 

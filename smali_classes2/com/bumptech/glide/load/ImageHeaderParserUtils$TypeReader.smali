@@ -1,4 +1,4 @@
-.class interface abstract Lcom/bumptech/glide/load/ImageHeaderParserUtils$TypeReader;
+.class public interface abstract Lcom/bumptech/glide/load/ImageHeaderParserUtils$TypeReader;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

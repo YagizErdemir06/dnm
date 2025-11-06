@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field protected elementName:Ljava/lang/String;
+.field public elementName:Ljava/lang/String;
 
 .field private externalDeclarations:Ljava/util/List;
 
@@ -63,6 +63,7 @@
 .method public getElementName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/DefaultDocumentType;->elementName:Ljava/lang/String;
 
     return-object p0
@@ -71,6 +72,7 @@
 .method public getExternalDeclarations()Ljava/util/List;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/DefaultDocumentType;->externalDeclarations:Ljava/util/List;
 
     return-object p0
@@ -79,6 +81,7 @@
 .method public getInternalDeclarations()Ljava/util/List;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/DefaultDocumentType;->internalDeclarations:Ljava/util/List;
 
     return-object p0
@@ -87,6 +90,7 @@
 .method public getPublicID()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/DefaultDocumentType;->publicID:Ljava/lang/String;
 
     return-object p0
@@ -95,6 +99,7 @@
 .method public getSystemID()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/DefaultDocumentType;->systemID:Ljava/lang/String;
 
     return-object p0
@@ -103,6 +108,7 @@
 .method public setElementName(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/tree/DefaultDocumentType;->elementName:Ljava/lang/String;
 
     return-void
@@ -111,6 +117,7 @@
 .method public setExternalDeclarations(Ljava/util/List;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/tree/DefaultDocumentType;->externalDeclarations:Ljava/util/List;
 
     return-void
@@ -119,6 +126,7 @@
 .method public setInternalDeclarations(Ljava/util/List;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/tree/DefaultDocumentType;->internalDeclarations:Ljava/util/List;
 
     return-void
@@ -127,6 +135,7 @@
 .method public setPublicID(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/tree/DefaultDocumentType;->publicID:Ljava/lang/String;
 
     return-void
@@ -135,6 +144,7 @@
 .method public setSystemID(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/tree/DefaultDocumentType;->systemID:Ljava/lang/String;
 
     return-void

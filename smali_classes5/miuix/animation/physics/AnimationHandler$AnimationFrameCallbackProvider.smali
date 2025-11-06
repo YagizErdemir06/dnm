@@ -1,4 +1,4 @@
-.class abstract Lmiuix/animation/physics/AnimationHandler$AnimationFrameCallbackProvider;
+.class public abstract Lmiuix/animation/physics/AnimationHandler$AnimationFrameCallbackProvider;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,15 +15,17 @@
 
 
 # instance fields
-.field final mDispatcher:Lmiuix/animation/physics/AnimationHandler$AnimationCallbackDispatcher;
+.field public final mDispatcher:Lmiuix/animation/physics/AnimationHandler$AnimationCallbackDispatcher;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/animation/physics/AnimationHandler$AnimationCallbackDispatcher;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lmiuix/animation/physics/AnimationHandler$AnimationFrameCallbackProvider;->mDispatcher:Lmiuix/animation/physics/AnimationHandler$AnimationCallbackDispatcher;
 
     return-void
@@ -31,14 +33,6 @@
 
 
 # virtual methods
-.method public getFrameDeltaNanos()J
-    .locals 2
-
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-.end method
-
 .method public abstract getLooper()Landroid/os/Looper;
 .end method
 
@@ -46,10 +40,4 @@
 .end method
 
 .method public abstract postFrameCallback()V
-.end method
-
-.method public postVsyncCallback()V
-    .locals 0
-
-    return-void
 .end method

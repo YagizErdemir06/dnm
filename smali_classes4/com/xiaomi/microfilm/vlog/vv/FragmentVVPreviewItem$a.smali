@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem;->Fh(Z)V
+    value = Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem;->eb(Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,18 +18,29 @@
 
 
 # instance fields
-.field public final synthetic a:Z
+.field public final synthetic c:Z
 
-.field public final synthetic b:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem;
+.field public final synthetic d:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem;Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$init"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem$a;->b:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem;
+    .line 1
+    iput-object p1, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem$a;->d:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem;
 
-    iput-boolean p2, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem$a;->a:Z
+    iput-boolean p2, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem$a;->c:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,9 +52,10 @@
 .method public run()V
     .locals 2
 
-    iget-object v0, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem$a;->b:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem;
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem$a;->d:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem;
 
-    invoke-static {v0}, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem;->th(Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem;)Lcom/xiaomi/microfilm/vlog/vv/w;
+    invoke-static {v0}, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem;->Ma(Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem;)Ld/o/t/f/c/z;
 
     move-result-object v0
 
@@ -51,19 +63,21 @@
 
     invoke-virtual {v0, v1}, Lcom/android/camera/resource/BaseResourceItem;->setState(I)V
 
-    iget-boolean v0, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem$a;->a:Z
+    .line 2
+    iget-boolean v0, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem$a;->c:Z
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem$a;->b:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem;
+    iget-object v0, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem$a;->d:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem;
 
-    invoke-static {v0}, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem;->vh(Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem;)Z
+    invoke-static {v0}, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem;->Na(Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem$a;->b:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem;
+    .line 3
+    iget-object p0, p0, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem$a;->d:Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem;
 
     invoke-virtual {p0}, Lcom/xiaomi/microfilm/vlog/vv/FragmentVVPreviewItem;->z1()V
 

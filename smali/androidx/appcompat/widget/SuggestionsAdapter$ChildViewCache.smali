@@ -1,4 +1,4 @@
-.class final Landroidx/appcompat/widget/SuggestionsAdapter$ChildViewCache;
+.class public final Landroidx/appcompat/widget/SuggestionsAdapter$ChildViewCache;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -30,10 +30,12 @@
 .method public constructor <init>(Landroid/view/View;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const v0, 0x1020014
 
+    .line 2
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -44,6 +46,7 @@
 
     const v0, 0x1020015
 
+    .line 3
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -54,6 +57,7 @@
 
     const v0, 0x1020007
 
+    .line 4
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -64,6 +68,7 @@
 
     const v0, 0x1020008
 
+    .line 5
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -72,6 +77,7 @@
 
     iput-object v0, p0, Landroidx/appcompat/widget/SuggestionsAdapter$ChildViewCache;->mIcon2:Landroid/widget/ImageView;
 
+    .line 6
     sget v0, Landroidx/appcompat/R$id;->edit_query:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;

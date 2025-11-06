@@ -1,4 +1,4 @@
-.class Lcom/android/camera2/compat/theme/custom/mm/dual/FragmentDualCameraAdjustMM$1;
+.class public Lcom/android/camera2/compat/theme/custom/mm/dual/FragmentDualCameraAdjustMM$1;
 .super Lmiuix/animation/listener/TransitionListener;
 .source "SourceFile"
 
@@ -15,13 +15,22 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/dual/FragmentDualCameraAdjustMM;
+.field public final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/dual/FragmentDualCameraAdjustMM;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera2/compat/theme/custom/mm/dual/FragmentDualCameraAdjustMM;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/dual/FragmentDualCameraAdjustMM$1;->this$0:Lcom/android/camera2/compat/theme/custom/mm/dual/FragmentDualCameraAdjustMM;
 
     invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
@@ -33,9 +42,19 @@
 # virtual methods
 .method public onBegin(Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "toTag"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lmiuix/animation/listener/TransitionListener;->onBegin(Ljava/lang/Object;)V
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/dual/FragmentDualCameraAdjustMM$1;->this$0:Lcom/android/camera2/compat/theme/custom/mm/dual/FragmentDualCameraAdjustMM;
 
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/dual/FragmentDualCameraAdjustMM;->mSlideView:Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView;
@@ -49,9 +68,19 @@
 
 .method public onCancel(Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "toTag"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lmiuix/animation/listener/TransitionListener;->onCancel(Ljava/lang/Object;)V
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/dual/FragmentDualCameraAdjustMM$1;->this$0:Lcom/android/camera2/compat/theme/custom/mm/dual/FragmentDualCameraAdjustMM;
 
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/dual/FragmentDualCameraAdjustMM;->mSlideView:Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView;
@@ -65,9 +94,19 @@
 
 .method public onComplete(Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "toTag"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lmiuix/animation/listener/TransitionListener;->onComplete(Ljava/lang/Object;)V
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/dual/FragmentDualCameraAdjustMM$1;->this$0:Lcom/android/camera2/compat/theme/custom/mm/dual/FragmentDualCameraAdjustMM;
 
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/dual/FragmentDualCameraAdjustMM;->mSlideView:Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView;

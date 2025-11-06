@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field protected final SCALE_START_TO_END_ANGLE:F
+.field public final SCALE_START_TO_END_ANGLE:F
 
 .field private mBitmaps:Landroid/util/SparseArray;
     .annotation system Ldalvik/annotation/Signature;
@@ -27,181 +27,190 @@
     .end annotation
 .end field
 
-.field protected mDegree:F
+.field public mDegree:F
 
-.field protected mDrawArcStartAngle:F
+.field public mDrawArcStartAngle:F
 
-.field protected mDrawableHeight:I
+.field public mDrawableHeight:I
 
-.field protected mDrawablePaint:Landroid/graphics/Paint;
+.field public mDrawablePaint:Landroid/graphics/Paint;
 
-.field protected mDrawableWidth:I
+.field public mDrawableWidth:I
 
-.field protected mEachUnitAngle:F
+.field public mEachUnitAngle:F
 
-.field protected mFocusLengthHeight:I
+.field public mFocusLengthHeight:I
 
-.field protected mFocusLengthValuePaint:Landroid/text/TextPaint;
+.field public mFocusLengthValuePaint:Landroid/text/TextPaint;
 
-.field protected mFocusLengthValueSize:F
+.field public mFocusLengthValueSize:F
 
-.field protected mGapLineIndex:I
+.field public mGapLineIndex:I
 
 .field public mIsNonSAT:Z
 
-.field protected mIsSmallSize:Z
+.field public mIsSmallSize:Z
 
-.field protected mIsVerSmallSize:Z
+.field public mIsVerSmallSize:Z
 
-.field protected mIsVerType:Z
+.field public mIsVerType:Z
 
-.field protected mLineHeight:I
+.field public mLineHeight:I
 
-.field protected mLineRadius:I
+.field public mLineRadius:I
 
-.field protected mLineWidth:I
+.field public mLineWidth:I
 
-.field protected mMiddleBgPaint:Landroid/graphics/Paint;
+.field public mMiddleBgPaint:Landroid/graphics/Paint;
 
-.field protected mMiddleBgPath:Landroid/graphics/Path;
+.field public mMiddleBgPath:Landroid/graphics/Path;
 
-.field protected mMiddleDisplayRadius:D
+.field public mMiddleDisplayRadius:D
 
-.field protected mMiddleHalfSweepAngle:D
+.field public mMiddleHalfSweepAngle:D
 
-.field protected mMiddleRectBottom:F
+.field public mMiddleRectBottom:F
 
-.field protected mMiddleRectLeft:F
+.field public mMiddleRectLeft:F
 
-.field protected mMiddleRectRadius:I
+.field public mMiddleRectRadius:I
 
-.field protected mMiddleRectRight:F
+.field public mMiddleRectRight:F
 
-.field protected mMiddleRectTop:F
+.field public mMiddleRectTop:F
 
-.field protected mMiddleRectWidth:I
+.field public mMiddleRectWidth:I
 
-.field protected mMiddleStartAngle:F
+.field public mMiddleStartAngle:F
 
-.field protected mMiddleSweepAngle:F
+.field public mMiddleSweepAngle:F
 
-.field protected mMiddleTan:D
+.field public mMiddleTan:D
 
-.field protected mNormalLinePaint:Landroid/graphics/Paint;
+.field public mNormalLinePaint:Landroid/graphics/Paint;
 
-.field protected mOutterArcViewHeight:I
+.field public mOutterArcViewHeight:I
 
-.field protected mOutterBgPaint:Landroid/graphics/Paint;
+.field public mOutterBgPaint:Landroid/graphics/Paint;
 
-.field protected mOutterBgPath:Landroid/graphics/Path;
+.field public mOutterBgPath:Landroid/graphics/Path;
 
-.field protected mOutterDisplayRadius:I
+.field public mOutterDisplayRadius:I
 
-.field protected mOutterHalfSweepAngle:D
+.field public mOutterHalfSweepAngle:D
 
-.field protected mOutterRectBottom:I
+.field public mOutterRectBottom:I
 
-.field protected mOutterRectLeft:I
+.field public mOutterRectLeft:I
 
-.field protected mOutterRectRadius:I
+.field public mOutterRectRadius:I
 
-.field protected mOutterRectRight:I
+.field public mOutterRectRight:I
 
-.field protected mOutterRectTop:I
+.field public mOutterRectTop:I
 
-.field protected mOutterRectWidth:I
+.field public mOutterRectWidth:I
 
-.field protected mOutterStartAngle:F
+.field public mOutterStartAngle:F
 
-.field protected mOutterSweepAngle:F
+.field public mOutterSweepAngle:F
 
-.field protected mOutterTan:D
+.field public mOutterTan:D
 
-.field protected mOutterToMiddleGap:I
+.field public mOutterToMiddleGap:I
 
-.field protected mRotateAngle:F
+.field public mRotateAngle:F
 
-.field protected mRotateX:F
+.field public mRotateX:F
 
-.field protected mRotateY:F
+.field public mRotateY:F
 
-.field protected mScaleLineBottom:F
+.field public mScaleLineBottom:F
 
-.field protected mScaleLineLeft:F
+.field public mScaleLineLeft:F
 
-.field protected mScaleLineRect:Landroid/graphics/RectF;
+.field public mScaleLineRect:Landroid/graphics/RectF;
 
-.field protected mScaleLineRight:F
+.field public mScaleLineRight:F
 
-.field protected mScaleLineToFocusLensGap:I
+.field public mScaleLineToFocusLensGap:I
 
-.field protected mScaleLineToScaleValueGap:I
+.field public mScaleLineToScaleValueGap:I
 
-.field protected mScaleLineTop:F
+.field public mScaleLineTop:F
 
-.field protected mScaleRingPaint:Landroid/graphics/Paint;
+.field public mScaleRingPaint:Landroid/graphics/Paint;
 
-.field protected mScaleRingWidth:I
+.field public mScaleRingWidth:I
 
-.field protected mScaleValueBottom:F
+.field public mScaleValueBottom:F
 
-.field protected mScaleValueHeight:I
+.field public mScaleValueHeight:I
 
-.field protected mScaleValueLeft:F
+.field public mScaleValueLeft:F
 
-.field protected mScaleValuePaint:Landroid/text/TextPaint;
+.field public mScaleValuePaint:Landroid/text/TextPaint;
 
-.field protected mScaleValueTextColor:I
+.field public mScaleValueTextColor:I
 
-.field protected mScaleValueTextSize:F
+.field public mScaleValueTextSize:F
 
-.field protected mScaleValueToFocusLengthGap:I
+.field public mScaleValueToFocusLengthGap:I
 
-.field protected mSelectedLineExtra:I
+.field public mSelectedLineExtra:I
 
-.field protected mSelectedLinePaint:Landroid/graphics/Paint;
+.field public mSelectedLinePaint:Landroid/graphics/Paint;
 
-.field protected mSelectedLineRect:Landroid/graphics/RectF;
+.field public mSelectedLineRect:Landroid/graphics/RectF;
 
-.field protected mStopPoinLinetPaint:Landroid/graphics/Paint;
+.field public mStopPoinLinetPaint:Landroid/graphics/Paint;
 
-.field protected mUnitCount:F
+.field public mUnitCount:F
 
-.field protected mZoomRatioMax:F
+.field public mZoomRatioMax:F
 
-.field protected mZoomRatioMin:F
+.field public mZoomRatioMin:F
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x25
 
+    .line 2
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleValueHeight:I
 
     const/16 v0, 0x20
 
+    .line 3
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mFocusLengthHeight:I
 
     const/high16 v0, -0x40800000    # -1.0f
 
+    .line 4
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mRotateAngle:F
 
     const/4 v0, 0x0
 
+    .line 5
     iput-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mIsVerType:Z
 
+    .line 6
     iput-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mIsSmallSize:Z
 
+    .line 7
     iput-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mIsVerSmallSize:Z
 
     const/high16 v1, 0x43080000    # 136.0f
 
+    .line 8
     iput v1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->SCALE_START_TO_END_ANGLE:F
 
+    .line 9
     new-instance v1, Landroid/util/SparseArray;
 
     invoke-direct {v1}, Landroid/util/SparseArray;-><init>()V
@@ -210,8 +219,10 @@
 
     const/4 v1, -0x1
 
+    .line 10
     iput v1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mGapLineIndex:I
 
+    .line 11
     iput-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mIsNonSAT:Z
 
     return-void
@@ -219,13 +230,25 @@
 
 .method private drawArc(Landroid/graphics/Canvas;I)V
     .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "canvas",
+            "position"
+        }
+    .end annotation
 
+    .line 1
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleRingWidth:I
 
     div-int/lit8 v0, v0, 0x2
 
     int-to-float v0, v0
 
+    .line 2
     new-instance v2, Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mMiddleRectLeft:F
@@ -246,20 +269,22 @@
 
     invoke-direct {v2, v1, v3, v4, v5}, Landroid/graphics/RectF;-><init>(FFFF)V
 
+    .line 3
     iget v3, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mDrawArcStartAngle:F
 
     invoke-virtual {p0, p2}, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->getItemAngle(I)F
 
     move-result v4
 
-    const/4 v5, 0x0
-
     iget-object v6, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleRingPaint:Landroid/graphics/Paint;
+
+    const/4 v5, 0x0
 
     move-object v1, p1
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
 
+    .line 4
     invoke-virtual {p0, p2}, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->getItemAngle(I)F
 
     move-result v0
@@ -270,6 +295,7 @@
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/graphics/Canvas;->rotate(FFF)V
 
+    .line 5
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleLineRect:Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mLineRadius:I
@@ -299,17 +325,30 @@
 
 .method private drawDrawable(Landroid/graphics/Canvas;I)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "canvas",
+            "position"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0, p2}, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p2
 
     if-eqz p2, :cond_1
 
+    .line 2
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mIsVerType:Z
 
     if-nez v0, :cond_0
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleLineRect:Landroid/graphics/RectF;
 
     iget v1, v0, Landroid/graphics/RectF;->bottom:F
@@ -320,10 +359,12 @@
 
     add-int/2addr v1, v2
 
+    .line 4
     iget v2, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mDrawableHeight:I
 
     add-int/2addr v2, v1
 
+    .line 5
     iget v0, v0, Landroid/graphics/RectF;->left:F
 
     float-to-int v0, v0
@@ -336,10 +377,13 @@
 
     add-int/2addr v3, v0
 
+    .line 6
     invoke-virtual {p2, v0, v1, v3, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
+    .line 7
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
+    .line 8
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mDegree:F
 
     add-int/2addr v0, v3
@@ -356,12 +400,15 @@
 
     invoke-virtual {p1, p0, v0, v1}, Landroid/graphics/Canvas;->rotate(FFF)V
 
+    .line 9
     invoke-virtual {p2, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
+    .line 10
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     goto :goto_0
 
+    .line 11
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleLineRect:Landroid/graphics/RectF;
 
@@ -379,6 +426,7 @@
 
     add-int/2addr v1, v0
 
+    .line 12
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleLineRect:Landroid/graphics/RectF;
 
     iget v2, v2, Landroid/graphics/RectF;->left:F
@@ -395,9 +443,13 @@
 
     add-int/2addr p0, v2
 
+    .line 13
     invoke-virtual {p2, v2, v0, p0, v1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
+    .line 14
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+
+    const/high16 v3, 0x42b40000    # 90.0f
 
     add-int/2addr v2, p0
 
@@ -413,12 +465,13 @@
 
     div-float/2addr v0, v2
 
-    const/high16 v1, 0x42b40000    # 90.0f
+    .line 15
+    invoke-virtual {p1, v3, p0, v0}, Landroid/graphics/Canvas;->rotate(FFF)V
 
-    invoke-virtual {p1, v1, p0, v0}, Landroid/graphics/Canvas;->rotate(FFF)V
-
+    .line 16
     invoke-virtual {p2, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
+    .line 17
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     :cond_1
@@ -428,7 +481,20 @@
 
 .method private drawScaleLine(Landroid/graphics/Canvas;ILandroid/graphics/RectF;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "canvas",
+            "position",
+            "rectF"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0, p2}, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->getItemAngle(I)F
 
     move-result v0
@@ -439,6 +505,7 @@
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/graphics/Canvas;->rotate(FFF)V
 
+    .line 2
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mGapLineIndex:I
 
     add-int/lit8 v0, v0, -0x1
@@ -447,6 +514,7 @@
 
     return-void
 
+    .line 3
     :cond_0
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mLineRadius:I
 
@@ -475,11 +543,23 @@
 
 .method private drawScaleValue(Landroid/graphics/Canvas;I)V
     .locals 12
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "canvas",
+            "position"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0, p2}, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->getScaleTextValue(I)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0, p2}, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->getFocusLengthTextView(I)Ljava/lang/String;
 
     move-result-object v1
@@ -488,16 +568,18 @@
 
     return-void
 
+    .line 3
     :cond_0
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleValuePaint:Landroid/text/TextPaint;
 
-    invoke-virtual {v2, v0}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
+    invoke-virtual {v2, v0}, Landroid/text/TextPaint;->measureText(Ljava/lang/String;)F
 
     move-result v2
 
+    .line 4
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleValuePaint:Landroid/text/TextPaint;
 
-    invoke-virtual {v3}, Landroid/graphics/Paint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
+    invoke-virtual {v3}, Landroid/text/TextPaint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
 
     move-result-object v3
 
@@ -505,7 +587,7 @@
 
     iget-object v4, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleValuePaint:Landroid/text/TextPaint;
 
-    invoke-virtual {v4}, Landroid/graphics/Paint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
+    invoke-virtual {v4}, Landroid/text/TextPaint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
 
     move-result-object v4
 
@@ -519,15 +601,17 @@
 
     if-eqz v1, :cond_1
 
+    .line 5
     iget-object v5, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mFocusLengthValuePaint:Landroid/text/TextPaint;
 
-    invoke-virtual {v5, v1}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
+    invoke-virtual {v5, v1}, Landroid/text/TextPaint;->measureText(Ljava/lang/String;)F
 
     move-result v1
 
+    .line 6
     iget-object v5, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mFocusLengthValuePaint:Landroid/text/TextPaint;
 
-    invoke-virtual {v5}, Landroid/graphics/Paint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
+    invoke-virtual {v5}, Landroid/text/TextPaint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
 
     move-result-object v5
 
@@ -535,7 +619,7 @@
 
     iget-object v6, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mFocusLengthValuePaint:Landroid/text/TextPaint;
 
-    invoke-virtual {v6}, Landroid/graphics/Paint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
+    invoke-virtual {v6}, Landroid/text/TextPaint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
 
     move-result-object v6
 
@@ -552,6 +636,7 @@
 
     move v5, v1
 
+    .line 7
     :goto_0
     iget-object v6, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mBitmaps:Landroid/util/SparseArray;
 
@@ -577,6 +662,7 @@
 
     float-to-int v5, v5
 
+    .line 8
     iget v8, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleLineLeft:F
 
     int-to-float v9, v7
@@ -589,6 +675,7 @@
 
     iput v8, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleValueLeft:F
 
+    .line 9
     iget v8, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleLineTop:F
 
     iget v9, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mLineHeight:I
@@ -605,6 +692,7 @@
 
     iput v8, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleValueBottom:F
 
+    .line 10
     iget-boolean v8, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mIsSmallSize:Z
 
     if-nez v8, :cond_3
@@ -622,6 +710,7 @@
 
     add-int/2addr v5, v9
 
+    .line 11
     iget v8, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleValueToFocusLengthGap:I
 
     if-nez v8, :cond_6
@@ -653,20 +742,24 @@
     :cond_6
     if-nez v6, :cond_d
 
+    .line 12
     sget-object v3, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     invoke-static {v7, v5, v3}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object v6
 
+    .line 13
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mBitmaps:Landroid/util/SparseArray;
 
     invoke-virtual {v3, p2, v6}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
+    .line 14
     new-instance v3, Landroid/graphics/Canvas;
 
     invoke-direct {v3, v6}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
+    .line 15
     invoke-virtual {v6}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v5
@@ -679,9 +772,10 @@
 
     sub-float/2addr v5, v8
 
+    .line 16
     iget-object v8, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleValuePaint:Landroid/text/TextPaint;
 
-    invoke-virtual {v8}, Landroid/graphics/Paint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
+    invoke-virtual {v8}, Landroid/text/TextPaint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
 
     move-result-object v8
 
@@ -693,10 +787,12 @@
 
     int-to-float v8, v8
 
+    .line 17
     iget-boolean v9, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mIsVerType:Z
 
     if-eqz v9, :cond_7
 
+    .line 18
     invoke-virtual {v6}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v5
@@ -705,6 +801,7 @@
 
     sub-float/2addr v5, v2
 
+    .line 19
     invoke-virtual {v6}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v8
@@ -713,7 +810,7 @@
 
     iget-object v9, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleValuePaint:Landroid/text/TextPaint;
 
-    invoke-virtual {v9}, Landroid/graphics/Paint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
+    invoke-virtual {v9}, Landroid/text/TextPaint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
 
     move-result-object v9
 
@@ -729,6 +826,7 @@
 
     int-to-float v8, v8
 
+    .line 20
     :cond_7
     iget-boolean v9, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mIsVerSmallSize:Z
 
@@ -736,11 +834,13 @@
 
     move v5, v4
 
+    .line 21
     :cond_8
     iget-boolean v9, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mIsSmallSize:Z
 
     if-eqz v9, :cond_9
 
+    .line 22
     iget v5, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mDegree:F
 
     invoke-virtual {v6}, Landroid/graphics/Bitmap;->getWidth()I
@@ -761,6 +861,7 @@
 
     invoke-virtual {v3, v5, v8, v9}, Landroid/graphics/Canvas;->rotate(FFF)V
 
+    .line 23
     invoke-virtual {v6}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v5
@@ -769,7 +870,7 @@
 
     iget-object v8, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mFocusLengthValuePaint:Landroid/text/TextPaint;
 
-    invoke-virtual {v8}, Landroid/graphics/Paint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
+    invoke-virtual {v8}, Landroid/text/TextPaint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
 
     move-result-object v8
 
@@ -787,26 +888,29 @@
 
     move v5, v4
 
+    .line 24
     :cond_9
     iget-object v9, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleValuePaint:Landroid/text/TextPaint;
 
     invoke-virtual {v3, v0, v5, v8, v9}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
+    .line 25
     invoke-virtual {p0, p2}, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->getFocusLengthTextView(I)Ljava/lang/String;
 
     move-result-object p2
 
     if-eqz p2, :cond_d
 
+    .line 26
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mFocusLengthValuePaint:Landroid/text/TextPaint;
 
-    invoke-virtual {v0}, Landroid/graphics/Paint;->ascent()F
+    invoke-virtual {v0}, Landroid/text/TextPaint;->ascent()F
 
     move-result v0
 
     iget-object v5, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mFocusLengthValuePaint:Landroid/text/TextPaint;
 
-    invoke-virtual {v5}, Landroid/graphics/Paint;->descent()F
+    invoke-virtual {v5}, Landroid/text/TextPaint;->descent()F
 
     move-result v5
 
@@ -818,6 +922,7 @@
 
     div-float/2addr v0, v10
 
+    .line 27
     invoke-virtual {v6}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v5
@@ -830,16 +935,19 @@
 
     sub-float/2addr v5, v8
 
+    .line 28
     iget v8, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleValueToFocusLengthGap:I
 
     int-to-float v8, v8
 
     add-float/2addr v0, v8
 
+    .line 29
     iget-boolean v8, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mIsVerType:Z
 
     if-eqz v8, :cond_a
 
+    .line 30
     invoke-virtual {v6}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v0
@@ -848,7 +956,7 @@
 
     iget-object v5, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mFocusLengthValuePaint:Landroid/text/TextPaint;
 
-    invoke-virtual {v5}, Landroid/graphics/Paint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
+    invoke-virtual {v5}, Landroid/text/TextPaint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
 
     move-result-object v5
 
@@ -869,11 +977,13 @@
     :cond_a
     move v4, v5
 
+    .line 31
     :goto_4
     iget-boolean v5, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mIsVerSmallSize:Z
 
     if-eqz v5, :cond_b
 
+    .line 32
     invoke-virtual {v6}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v4
@@ -882,17 +992,20 @@
 
     sub-float/2addr v4, v1
 
+    .line 33
     :cond_b
     iget-boolean v1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mIsSmallSize:Z
 
     if-eqz v1, :cond_c
 
+    .line 34
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleLineToScaleValueGap:I
 
     int-to-float v0, v0
 
     add-float v4, v2, v0
 
+    .line 35
     invoke-virtual {v6}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v0
@@ -901,7 +1014,7 @@
 
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mFocusLengthValuePaint:Landroid/text/TextPaint;
 
-    invoke-virtual {v1}, Landroid/graphics/Paint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
+    invoke-virtual {v1}, Landroid/text/TextPaint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
 
     move-result-object v1
 
@@ -917,16 +1030,19 @@
 
     int-to-float v0, v0
 
+    .line 36
     :cond_c
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mFocusLengthValuePaint:Landroid/text/TextPaint;
 
     invoke-virtual {v3, p2, v4, v0, v1}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
+    .line 37
     :cond_d
     iget-boolean p2, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mIsVerType:Z
 
     if-eqz p2, :cond_e
 
+    .line 38
     iget p2, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleLineLeft:F
 
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleLineToScaleValueGap:I
@@ -945,6 +1061,7 @@
 
     iput p2, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleValueLeft:F
 
+    .line 39
     iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleLineRect:Landroid/graphics/RectF;
 
     invoke-virtual {p2}, Landroid/graphics/RectF;->centerY()F
@@ -963,11 +1080,13 @@
 
     iput p2, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleValueBottom:F
 
+    .line 40
     :cond_e
     iget-boolean p2, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mIsVerSmallSize:Z
 
     if-eqz p2, :cond_f
 
+    .line 41
     iget p2, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleLineLeft:F
 
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mLineHeight:I
@@ -984,11 +1103,13 @@
 
     iput p2, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleValueLeft:F
 
+    .line 42
     :cond_f
     iget-boolean p2, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mIsSmallSize:Z
 
     if-eqz p2, :cond_10
 
+    .line 43
     iget p2, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleLineLeft:F
 
     int-to-float v0, v7
@@ -999,6 +1120,7 @@
 
     iput p2, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleValueLeft:F
 
+    .line 44
     :cond_10
     iget p2, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleValueLeft:F
 
@@ -1015,11 +1137,23 @@
 # virtual methods
 .method public draw(Landroid/graphics/Canvas;Landroid/content/Context;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "canvas",
+            "context"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     const/4 p2, 0x0
 
+    .line 2
     :goto_0
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->getItemCount()I
 
@@ -1027,6 +1161,7 @@
 
     if-ge p2, v0, :cond_1
 
+    .line 3
     invoke-virtual {p0, p2}, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->getItemType(I)I
 
     move-result v0
@@ -1035,27 +1170,33 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 4
     invoke-direct {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->drawArc(Landroid/graphics/Canvas;I)V
 
     goto :goto_1
 
+    .line 5
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleLineRect:Landroid/graphics/RectF;
 
     invoke-direct {p0, p1, p2, v0}, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->drawScaleLine(Landroid/graphics/Canvas;ILandroid/graphics/RectF;)V
 
+    .line 6
     :goto_1
     invoke-direct {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->drawDrawable(Landroid/graphics/Canvas;I)V
 
+    .line 7
     invoke-direct {p0, p1, p2}, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->drawScaleValue(Landroid/graphics/Canvas;I)V
 
     add-int/lit8 p2, p2, 0x1
 
     goto :goto_0
 
+    .line 8
     :cond_1
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
+    .line 9
     iget-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mSelectedLineRect:Landroid/graphics/RectF;
 
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mLineRadius:I
@@ -1075,36 +1216,100 @@
 .end method
 
 .method public abstract getDrawable(I)Landroid/graphics/drawable/Drawable;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "position"
+        }
+    .end annotation
 .end method
 
 .method public abstract getDrawableDestRect(I)Landroid/graphics/Rect;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "position"
+        }
+    .end annotation
 .end method
 
 .method public abstract getDrawableSrcRect(I)Landroid/graphics/Rect;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "position"
+        }
+    .end annotation
 .end method
 
 .method public abstract getDrawableView(I)Landroid/graphics/Bitmap;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "position"
+        }
+    .end annotation
 .end method
 
 .method public abstract getFocusLengthTextView(I)Ljava/lang/String;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "position"
+        }
+    .end annotation
 .end method
 
 .method public abstract getInitAngle()F
 .end method
 
 .method public abstract getItemAngle(I)F
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "position"
+        }
+    .end annotation
 .end method
 
 .method public abstract getItemCount()I
 .end method
 
 .method public abstract getItemType(I)I
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "position"
+        }
+    .end annotation
 .end method
 
 .method public abstract getMinRotateAngle()F
 .end method
 
 .method public abstract getNextAngle(Z)F
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isNext"
+        }
+    .end annotation
 .end method
 
 .method public abstract getOutterRectRadius()I
@@ -1123,6 +1328,14 @@
 .end method
 
 .method public abstract getScaleTextValue(I)Ljava/lang/String;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "position"
+        }
+    .end annotation
 .end method
 
 .method public abstract getScaleViewDispalyWidth()F
@@ -1132,33 +1345,61 @@
 .end method
 
 .method public abstract getTranslate(I)[F
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "position"
+        }
+    .end annotation
 .end method
 
 .method public init(Landroid/content/Context;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public initStyle(Landroid/content/Context;)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
+    .line 2
     new-instance v1, Landroid/graphics/Path;
 
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
     iput-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mOutterBgPath:Landroid/graphics/Path;
 
+    .line 3
     new-instance v1, Landroid/graphics/Path;
 
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
     iput-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mMiddleBgPath:Landroid/graphics/Path;
 
+    .line 4
     new-instance v1, Landroid/graphics/Paint;
 
     const/4 v2, 0x1
@@ -1167,161 +1408,184 @@
 
     iput-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mOutterBgPaint:Landroid/graphics/Paint;
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    .line 5
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object v3
 
-    const v4, 0x7f060875
+    const v4, 0x7f06040d
 
-    invoke-virtual {v3, v4}, Lf2/e;->b(I)I
+    invoke-virtual {v3, v4}, Ld/d/a/k6/f;->b(I)I
 
     move-result v3
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 6
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mOutterBgPaint:Landroid/graphics/Paint;
 
     sget-object v3, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
+    .line 7
     new-instance v1, Landroid/graphics/Paint;
 
     invoke-direct {v1, v2}, Landroid/graphics/Paint;-><init>(I)V
 
     iput-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mMiddleBgPaint:Landroid/graphics/Paint;
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    .line 8
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object v3
 
-    const v4, 0x7f06030d
+    const v4, 0x7f060146
 
-    invoke-virtual {v3, v4}, Lf2/e;->b(I)I
+    invoke-virtual {v3, v4}, Ld/d/a/k6/f;->b(I)I
 
     move-result v3
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 9
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mMiddleBgPaint:Landroid/graphics/Paint;
 
     sget-object v3, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
+    .line 10
     new-instance v1, Landroid/graphics/Paint;
 
     invoke-direct {v1, v2}, Landroid/graphics/Paint;-><init>(I)V
 
     iput-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mNormalLinePaint:Landroid/graphics/Paint;
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    .line 11
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object v3
 
-    const v4, 0x7f060877
+    const v4, 0x7f06040f
 
-    invoke-virtual {v3, v4}, Lf2/e;->b(I)I
+    invoke-virtual {v3, v4}, Ld/d/a/k6/f;->b(I)I
 
     move-result v3
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 12
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mNormalLinePaint:Landroid/graphics/Paint;
 
     sget-object v3, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
+    .line 13
     new-instance v1, Landroid/graphics/Paint;
 
     invoke-direct {v1, v2}, Landroid/graphics/Paint;-><init>(I)V
 
     iput-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mSelectedLinePaint:Landroid/graphics/Paint;
 
-    invoke-static {}, Lf2/f;->j()I
+    .line 14
+    invoke-static {}, Ld/d/a/k6/g;->j()I
 
     move-result v3
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 15
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mSelectedLinePaint:Landroid/graphics/Paint;
 
     sget-object v3, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
+    .line 16
     new-instance v1, Landroid/graphics/Paint;
 
     invoke-direct {v1, v2}, Landroid/graphics/Paint;-><init>(I)V
 
     iput-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mStopPoinLinetPaint:Landroid/graphics/Paint;
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    .line 17
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object v3
 
-    const v4, 0x7f060879
+    const v4, 0x7f060411
 
-    invoke-virtual {v3, v4}, Lf2/e;->b(I)I
+    invoke-virtual {v3, v4}, Ld/d/a/k6/f;->b(I)I
 
     move-result v3
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 18
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mStopPoinLinetPaint:Landroid/graphics/Paint;
 
     sget-object v3, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
+    .line 19
     new-instance v1, Landroid/graphics/Paint;
 
     invoke-direct {v1, v2}, Landroid/graphics/Paint;-><init>(I)V
 
     iput-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleRingPaint:Landroid/graphics/Paint;
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    .line 20
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object v3
 
-    const v5, 0x7f060878
+    const v5, 0x7f060410
 
-    invoke-virtual {v3, v5}, Lf2/e;->b(I)I
+    invoke-virtual {v3, v5}, Ld/d/a/k6/f;->b(I)I
 
     move-result v3
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 21
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleRingPaint:Landroid/graphics/Paint;
 
     sget-object v3, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
+    .line 22
     new-instance v1, Landroid/graphics/Paint;
 
     invoke-direct {v1, v2}, Landroid/graphics/Paint;-><init>(I)V
 
     iput-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mDrawablePaint:Landroid/graphics/Paint;
 
+    .line 23
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setFilterBitmap(Z)V
 
+    .line 24
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mDrawablePaint:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setDither(Z)V
 
+    .line 25
     new-instance v1, Landroid/text/TextPaint;
 
     invoke-direct {v1, v2}, Landroid/text/TextPaint;-><init>(I)V
 
     iput-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleValuePaint:Landroid/text/TextPaint;
 
-    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
+    .line 26
+    invoke-virtual {v1, v2}, Landroid/text/TextPaint;->setAntiAlias(Z)V
 
+    .line 27
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleValuePaint:Landroid/text/TextPaint;
 
-    const v3, 0x7f070d6c
+    const v3, 0x7f070ade
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1329,31 +1593,35 @@
 
     int-to-float v3, v3
 
-    invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setTextSize(F)V
+    invoke-virtual {v1, v3}, Landroid/text/TextPaint;->setTextSize(F)V
 
+    .line 28
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mScaleValuePaint:Landroid/text/TextPaint;
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object v3
 
-    invoke-virtual {v3, v4}, Lf2/e;->b(I)I
+    invoke-virtual {v3, v4}, Ld/d/a/k6/f;->b(I)I
 
     move-result v3
 
-    invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-virtual {v1, v3}, Landroid/text/TextPaint;->setColor(I)V
 
+    .line 29
     new-instance v1, Landroid/text/TextPaint;
 
     invoke-direct {v1, v2}, Landroid/text/TextPaint;-><init>(I)V
 
     iput-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mFocusLengthValuePaint:Landroid/text/TextPaint;
 
-    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
+    .line 30
+    invoke-virtual {v1, v2}, Landroid/text/TextPaint;->setAntiAlias(Z)V
 
+    .line 31
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mFocusLengthValuePaint:Landroid/text/TextPaint;
 
-    const v2, 0x7f070d66
+    const v2, 0x7f070ad8
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1361,25 +1629,27 @@
 
     int-to-float v0, v0
 
-    invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setTextSize(F)V
+    invoke-virtual {v1, v0}, Landroid/text/TextPaint;->setTextSize(F)V
 
+    .line 32
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mFocusLengthValuePaint:Landroid/text/TextPaint;
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object v1
 
-    invoke-virtual {v1, v4}, Lf2/e;->b(I)I
+    invoke-virtual {v1, v4}, Ld/d/a/k6/f;->b(I)I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setColor(I)V
 
+    .line 33
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f070715
+    const v1, 0x7f07061b
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1387,11 +1657,12 @@
 
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mDrawableHeight:I
 
+    .line 34
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const v0, 0x7f070716
+    const v0, 0x7f07061c
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1406,14 +1677,33 @@
 .end method
 
 .method public abstract isLandScape(Z)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "enable"
+        }
+    .end annotation
 .end method
 
 .method public abstract isMajorTickMarkSelected(FI)Z
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "angle",
+            "motionEvent"
+        }
+    .end annotation
 .end method
 
 .method public isNonSAT()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mIsNonSAT:Z
 
     return p0
@@ -1421,18 +1711,44 @@
 
 .method public isSmallSize(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "enable"
+        }
+    .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mIsSmallSize:Z
 
     return-void
 .end method
 
 .method public abstract isStopPoint(I)Z
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "position"
+        }
+    .end annotation
 .end method
 
 .method public isVerSmallSize(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "enable"
+        }
+    .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mIsVerSmallSize:Z
 
     return-void
@@ -1441,34 +1757,98 @@
 .method public isVerType()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mIsVerType:Z
 
     return p0
 .end method
 
 .method public abstract mapAngleToValue(F)Ljava/lang/String;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "angle"
+        }
+    .end annotation
 .end method
 
 .method public abstract mapValueToAngle(Ljava/lang/String;)F
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
 .end method
 
 .method public abstract onPositionSelect(FII)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "angle",
+            "motionEvent",
+            "action"
+        }
+    .end annotation
 .end method
 
 .method public abstract setEnable(Z)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "enable"
+        }
+    .end annotation
 .end method
 
 .method public abstract setIsSpeedDown(ZZ)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "isSpeed",
+            "isNoDelay"
+        }
+    .end annotation
 .end method
 
 .method public abstract setIsSpeedUp(Z)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isSpeed"
+        }
+    .end annotation
 .end method
 
 .method public setRotate(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "degree"
+        }
+    .end annotation
 
     int-to-float p1, p1
 
+    .line 1
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mDegree:F
 
     return-void
@@ -1476,6 +1856,15 @@
 
 .method public setStopPointEquivalentFocalLengthValue(Ljava/util/List;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1490,13 +1879,33 @@
 
 .method public setVerType(Landroid/content/Context;Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "enable"
+        }
+    .end annotation
 
+    .line 1
     iput-boolean p2, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->mIsVerType:Z
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/zoom/BaseScaleZoomView$BaseScaleZoomDrawAdapter;->init(Landroid/content/Context;)V
 
     return-void
 .end method
 
 .method public abstract updateAngleSelect(F)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "angle"
+        }
+    .end annotation
 .end method

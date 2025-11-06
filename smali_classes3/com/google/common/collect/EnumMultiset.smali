@@ -75,16 +75,20 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/AbstractMultiset;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/EnumMultiset;->type:Ljava/lang/Class;
 
+    .line 3
     invoke-virtual {p1}, Ljava/lang/Class;->isEnum()Z
 
     move-result v0
 
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
 
+    .line 4
     invoke-virtual {p1}, Ljava/lang/Class;->getEnumConstants()[Ljava/lang/Object;
 
     move-result-object p1
@@ -93,6 +97,7 @@
 
     iput-object p1, p0, Lcom/google/common/collect/EnumMultiset;->enumConstants:[Ljava/lang/Enum;
 
+    .line 5
     array-length p1, p1
 
     new-array p1, p1, [I
@@ -105,6 +110,7 @@
 .method public static synthetic access$000(Lcom/google/common/collect/EnumMultiset;)[Ljava/lang/Enum;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/EnumMultiset;->enumConstants:[Ljava/lang/Enum;
 
     return-object p0
@@ -113,6 +119,7 @@
 .method public static synthetic access$100(Lcom/google/common/collect/EnumMultiset;)[I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/EnumMultiset;->counts:[I
 
     return-object p0
@@ -121,6 +128,7 @@
 .method public static synthetic access$210(Lcom/google/common/collect/EnumMultiset;)I
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/common/collect/EnumMultiset;->distinctElements:I
 
     add-int/lit8 v1, v0, -0x1
@@ -133,6 +141,7 @@
 .method public static synthetic access$322(Lcom/google/common/collect/EnumMultiset;J)J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/collect/EnumMultiset;->size:J
 
     sub-long/2addr v0, p1
@@ -145,8 +154,10 @@
 .method private checkIsE(Ljava/lang/Object;)V
     .locals 3
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/common/collect/EnumMultiset;->isActuallyE(Ljava/lang/Object;)Z
 
     move-result v0
@@ -155,6 +166,7 @@
 
     return-void
 
+    .line 3
     :cond_0
     new-instance v0, Ljava/lang/ClassCastException;
 
@@ -310,18 +322,22 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Ljava/lang/Enum;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Ljava/lang/Enum;
 
+    .line 3
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v0
 
+    .line 4
     iget-object p0, p0, Lcom/google/common/collect/EnumMultiset;->enumConstants:[Ljava/lang/Enum;
 
     array-length v2, p0
@@ -350,16 +366,20 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->defaultReadObject()V
 
+    .line 2
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/Class;
 
+    .line 3
     iput-object v0, p0, Lcom/google/common/collect/EnumMultiset;->type:Ljava/lang/Class;
 
+    .line 4
     invoke-virtual {v0}, Ljava/lang/Class;->getEnumConstants()[Ljava/lang/Object;
 
     move-result-object v0
@@ -368,12 +388,14 @@
 
     iput-object v0, p0, Lcom/google/common/collect/EnumMultiset;->enumConstants:[Ljava/lang/Enum;
 
+    .line 5
     array-length v0, v0
 
     new-array v0, v0, [I
 
     iput-object v0, p0, Lcom/google/common/collect/EnumMultiset;->counts:[I
 
+    .line 6
     invoke-static {p0, p1}, Lcom/google/common/collect/Serialization;->populateMultiset(Lcom/google/common/collect/Multiset;Ljava/io/ObjectInputStream;)V
 
     return-void
@@ -390,12 +412,15 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/io/ObjectOutputStream;->defaultWriteObject()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/EnumMultiset;->type:Ljava/lang/Class;
 
     invoke-virtual {p1, v0}, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
 
+    .line 3
     invoke-static {p0, p1}, Lcom/google/common/collect/Serialization;->writeMultiset(Lcom/google/common/collect/Multiset;Ljava/io/ObjectOutputStream;)V
 
     return-void
@@ -514,6 +539,7 @@
 .method public clear()V
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/EnumMultiset;->counts:[I
 
     const/4 v1, 0x0
@@ -522,8 +548,10 @@
 
     const-wide/16 v2, 0x0
 
+    .line 2
     iput-wide v2, p0, Lcom/google/common/collect/EnumMultiset;->size:J
 
+    .line 3
     iput v1, p0, Lcom/google/common/collect/EnumMultiset;->distinctElements:I
 
     return-void
@@ -536,6 +564,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/AbstractMultiset;->contains(Ljava/lang/Object;)Z
 
     move-result p0
@@ -552,6 +581,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/EnumMultiset;->isActuallyE(Ljava/lang/Object;)Z
 
     move-result v0
@@ -560,9 +590,11 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     check-cast p1, Ljava/lang/Enum;
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/collect/EnumMultiset;->counts:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
@@ -583,6 +615,7 @@
 .method public distinctElements()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/collect/EnumMultiset;->distinctElements:I
 
     return p0
@@ -598,6 +631,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/EnumMultiset$1;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/EnumMultiset$1;-><init>(Lcom/google/common/collect/EnumMultiset;)V
@@ -608,6 +642,7 @@
 .method public bridge synthetic elementSet()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractMultiset;->elementSet()Ljava/util/Set;
 
     move-result-object p0
@@ -626,6 +661,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/EnumMultiset$2;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/EnumMultiset$2;-><init>(Lcom/google/common/collect/EnumMultiset;)V
@@ -636,6 +672,7 @@
 .method public bridge synthetic entrySet()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractMultiset;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -646,6 +683,7 @@
 .method public bridge synthetic isEmpty()Z
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractMultiset;->isEmpty()Z
 
     move-result p0
@@ -663,6 +701,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/collect/Multisets;->iteratorImpl(Lcom/google/common/collect/Multiset;)Ljava/util/Iterator;
 
     move-result-object p0
@@ -683,6 +722,7 @@
 
     if-eqz p1, :cond_4
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/EnumMultiset;->isActuallyE(Ljava/lang/Object;)Z
 
     move-result v1
@@ -691,6 +731,7 @@
 
     goto :goto_1
 
+    .line 2
     :cond_0
     move-object v1, p1
 
@@ -698,21 +739,25 @@
 
     const-string v2, "occurrences"
 
+    .line 3
     invoke-static {p2, v2}, Lcom/google/common/collect/CollectPreconditions;->checkNonnegative(ILjava/lang/String;)I
 
     if-nez p2, :cond_1
 
+    .line 4
     invoke-virtual {p0, p1}, Lcom/google/common/collect/EnumMultiset;->count(Ljava/lang/Object;)I
 
     move-result p0
 
     return p0
 
+    .line 5
     :cond_1
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result p1
 
+    .line 6
     iget-object v1, p0, Lcom/google/common/collect/EnumMultiset;->counts:[I
 
     aget v2, v1, p1
@@ -724,14 +769,17 @@
     :cond_2
     if-gt v2, p2, :cond_3
 
+    .line 7
     aput v0, v1, p1
 
+    .line 8
     iget p1, p0, Lcom/google/common/collect/EnumMultiset;->distinctElements:I
 
     add-int/lit8 p1, p1, -0x1
 
     iput p1, p0, Lcom/google/common/collect/EnumMultiset;->distinctElements:I
 
+    .line 9
     iget-wide p1, p0, Lcom/google/common/collect/EnumMultiset;->size:J
 
     int-to-long v0, v2
@@ -745,8 +793,10 @@
     :cond_3
     sub-int v0, v2, p2
 
+    .line 10
     aput v0, v1, p1
 
+    .line 11
     iget-wide v0, p0, Lcom/google/common/collect/EnumMultiset;->size:J
 
     int-to-long p1, p2
@@ -871,6 +921,7 @@
 .method public size()I
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/collect/EnumMultiset;->size:J
 
     invoke-static {v0, v1}, Lcom/google/common/primitives/Ints;->saturatedCast(J)I

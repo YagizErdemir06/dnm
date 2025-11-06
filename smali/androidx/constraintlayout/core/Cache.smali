@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field arrayRowPool:Landroidx/constraintlayout/core/Pools$Pool;
+.field public arrayRowPool:Landroidx/constraintlayout/core/Pools$Pool;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/constraintlayout/core/Pools$Pool<",
@@ -14,9 +14,9 @@
     .end annotation
 .end field
 
-.field mIndexedVariables:[Landroidx/constraintlayout/core/SolverVariable;
+.field public mIndexedVariables:[Landroidx/constraintlayout/core/SolverVariable;
 
-.field optimizedArrayRowPool:Landroidx/constraintlayout/core/Pools$Pool;
+.field public optimizedArrayRowPool:Landroidx/constraintlayout/core/Pools$Pool;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/constraintlayout/core/Pools$Pool<",
@@ -26,7 +26,7 @@
     .end annotation
 .end field
 
-.field solverVariablePool:Landroidx/constraintlayout/core/Pools$Pool;
+.field public solverVariablePool:Landroidx/constraintlayout/core/Pools$Pool;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/constraintlayout/core/Pools$Pool<",
@@ -41,8 +41,10 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Landroidx/constraintlayout/core/Pools$SimplePool;
 
     const/16 v1, 0x100
@@ -51,12 +53,14 @@
 
     iput-object v0, p0, Landroidx/constraintlayout/core/Cache;->optimizedArrayRowPool:Landroidx/constraintlayout/core/Pools$Pool;
 
+    .line 3
     new-instance v0, Landroidx/constraintlayout/core/Pools$SimplePool;
 
     invoke-direct {v0, v1}, Landroidx/constraintlayout/core/Pools$SimplePool;-><init>(I)V
 
     iput-object v0, p0, Landroidx/constraintlayout/core/Cache;->arrayRowPool:Landroidx/constraintlayout/core/Pools$Pool;
 
+    .line 4
     new-instance v0, Landroidx/constraintlayout/core/Pools$SimplePool;
 
     invoke-direct {v0, v1}, Landroidx/constraintlayout/core/Pools$SimplePool;-><init>(I)V
@@ -67,6 +71,7 @@
 
     new-array v0, v0, [Landroidx/constraintlayout/core/SolverVariable;
 
+    .line 5
     iput-object v0, p0, Landroidx/constraintlayout/core/Cache;->mIndexedVariables:[Landroidx/constraintlayout/core/SolverVariable;
 
     return-void

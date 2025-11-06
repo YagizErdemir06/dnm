@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/text/SubtitleDecoderFactory$1;
+.class public Lcom/google/android/exoplayer2/text/SubtitleDecoderFactory$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -21,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,215 +32,218 @@
 .method public createDecoder(Lcom/google/android/exoplayer2/Format;)Lcom/google/android/exoplayer2/text/SubtitleDecoder;
     .locals 3
 
+    .line 1
     iget-object p0, p1, Lcom/google/android/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
     if-eqz p0, :cond_c
 
+    const/4 v0, -0x1
+
+    .line 2
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
-    move-result v0
+    move-result v1
 
-    const/4 v1, -0x1
-
-    sparse-switch v0, :sswitch_data_0
+    sparse-switch v1, :sswitch_data_0
 
     goto/16 :goto_0
 
     :sswitch_0
-    const-string v0, "application/ttml+xml"
+    const-string v1, "application/ttml+xml"
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_0
+    if-nez v1, :cond_0
 
     goto/16 :goto_0
 
     :cond_0
-    const/16 v1, 0xb
+    const/16 v0, 0xb
 
     goto/16 :goto_0
 
     :sswitch_1
-    const-string v0, "application/x-subrip"
+    const-string v1, "application/x-subrip"
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_1
+    if-nez v1, :cond_1
 
     goto/16 :goto_0
 
     :cond_1
-    const/16 v1, 0xa
+    const/16 v0, 0xa
 
     goto/16 :goto_0
 
     :sswitch_2
-    const-string v0, "application/cea-708"
+    const-string v1, "application/cea-708"
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_2
+    if-nez v1, :cond_2
 
     goto/16 :goto_0
 
     :cond_2
-    const/16 v1, 0x9
+    const/16 v0, 0x9
 
     goto/16 :goto_0
 
     :sswitch_3
-    const-string v0, "application/cea-608"
+    const-string v1, "application/cea-608"
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_3
+    if-nez v1, :cond_3
 
     goto/16 :goto_0
 
     :cond_3
-    const/16 v1, 0x8
+    const/16 v0, 0x8
 
     goto/16 :goto_0
 
     :sswitch_4
-    const-string v0, "text/x-exoplayer-cues"
+    const-string v1, "text/x-exoplayer-cues"
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_4
+    if-nez v1, :cond_4
 
     goto :goto_0
 
     :cond_4
-    const/4 v1, 0x7
+    const/4 v0, 0x7
 
     goto :goto_0
 
     :sswitch_5
-    const-string v0, "application/x-mp4-cea-608"
+    const-string v1, "application/x-mp4-cea-608"
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_5
+    if-nez v1, :cond_5
 
     goto :goto_0
 
     :cond_5
-    const/4 v1, 0x6
+    const/4 v0, 0x6
 
     goto :goto_0
 
     :sswitch_6
-    const-string v0, "text/x-ssa"
+    const-string v1, "text/x-ssa"
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_6
+    if-nez v1, :cond_6
 
     goto :goto_0
 
     :cond_6
-    const/4 v1, 0x5
+    const/4 v0, 0x5
 
     goto :goto_0
 
     :sswitch_7
-    const-string v0, "application/x-quicktime-tx3g"
+    const-string v1, "application/x-quicktime-tx3g"
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_7
+    if-nez v1, :cond_7
 
     goto :goto_0
 
     :cond_7
-    const/4 v1, 0x4
+    const/4 v0, 0x4
 
     goto :goto_0
 
     :sswitch_8
-    const-string v0, "text/vtt"
+    const-string v1, "text/vtt"
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_8
+    if-nez v1, :cond_8
 
     goto :goto_0
 
     :cond_8
-    const/4 v1, 0x3
+    const/4 v0, 0x3
 
     goto :goto_0
 
     :sswitch_9
-    const-string v0, "application/x-mp4-vtt"
+    const-string v1, "application/x-mp4-vtt"
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_9
+    if-nez v1, :cond_9
 
     goto :goto_0
 
     :cond_9
-    const/4 v1, 0x2
+    const/4 v0, 0x2
 
     goto :goto_0
 
     :sswitch_a
-    const-string v0, "application/pgs"
+    const-string v1, "application/pgs"
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_a
+    if-nez v1, :cond_a
 
     goto :goto_0
 
     :cond_a
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
     goto :goto_0
 
     :sswitch_b
-    const-string v0, "application/dvbsubs"
+    const-string v1, "application/dvbsubs"
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_b
+    if-nez v1, :cond_b
 
     goto :goto_0
 
     :cond_b
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
     :goto_0
-    packed-switch v1, :pswitch_data_0
+    packed-switch v0, :pswitch_data_0
 
     goto :goto_1
 
+    .line 3
     :pswitch_0
     new-instance p0, Lcom/google/android/exoplayer2/text/ttml/TtmlDecoder;
 
@@ -247,6 +251,7 @@
 
     return-object p0
 
+    .line 4
     :pswitch_1
     new-instance p0, Lcom/google/android/exoplayer2/text/subrip/SubripDecoder;
 
@@ -254,6 +259,7 @@
 
     return-object p0
 
+    .line 5
     :pswitch_2
     new-instance p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;
 
@@ -265,6 +271,7 @@
 
     return-object p0
 
+    .line 6
     :pswitch_3
     new-instance p0, Lcom/google/android/exoplayer2/text/ExoplayerCuesDecoder;
 
@@ -272,6 +279,7 @@
 
     return-object p0
 
+    .line 7
     :pswitch_4
     new-instance v0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder;
 
@@ -283,6 +291,7 @@
 
     return-object v0
 
+    .line 8
     :pswitch_5
     new-instance p0, Lcom/google/android/exoplayer2/text/ssa/SsaDecoder;
 
@@ -292,6 +301,7 @@
 
     return-object p0
 
+    .line 9
     :pswitch_6
     new-instance p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;
 
@@ -301,6 +311,7 @@
 
     return-object p0
 
+    .line 10
     :pswitch_7
     new-instance p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttDecoder;
 
@@ -308,6 +319,7 @@
 
     return-object p0
 
+    .line 11
     :pswitch_8
     new-instance p0, Lcom/google/android/exoplayer2/text/webvtt/Mp4WebvttDecoder;
 
@@ -315,6 +327,7 @@
 
     return-object p0
 
+    .line 12
     :pswitch_9
     new-instance p0, Lcom/google/android/exoplayer2/text/pgs/PgsDecoder;
 
@@ -322,6 +335,7 @@
 
     return-object p0
 
+    .line 13
     :pswitch_a
     new-instance p0, Lcom/google/android/exoplayer2/text/dvb/DvbDecoder;
 
@@ -331,6 +345,7 @@
 
     return-object p0
 
+    .line 14
     :cond_c
     :goto_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
@@ -389,10 +404,12 @@
 .method public supportsFormat(Lcom/google/android/exoplayer2/Format;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p1, Lcom/google/android/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
     const-string p1, "text/vtt"
 
+    .line 2
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -401,6 +418,7 @@
 
     const-string p1, "text/x-ssa"
 
+    .line 3
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -409,6 +427,7 @@
 
     const-string p1, "application/ttml+xml"
 
+    .line 4
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -417,6 +436,7 @@
 
     const-string p1, "application/x-mp4-vtt"
 
+    .line 5
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -425,6 +445,7 @@
 
     const-string p1, "application/x-subrip"
 
+    .line 6
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -433,6 +454,7 @@
 
     const-string p1, "application/x-quicktime-tx3g"
 
+    .line 7
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -441,6 +463,7 @@
 
     const-string p1, "application/cea-608"
 
+    .line 8
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -449,6 +472,7 @@
 
     const-string p1, "application/x-mp4-cea-608"
 
+    .line 9
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -457,6 +481,7 @@
 
     const-string p1, "application/cea-708"
 
+    .line 10
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -465,6 +490,7 @@
 
     const-string p1, "application/dvbsubs"
 
+    .line 11
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -473,6 +499,7 @@
 
     const-string p1, "application/pgs"
 
+    .line 12
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -481,6 +508,7 @@
 
     const-string p1, "text/x-exoplayer-cues"
 
+    .line 13
     invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_common/zzpa;
+.class public final Lcom/google/android/gms/internal/mlkit_common/zzpa;
 .super Lcom/google/android/gms/internal/mlkit_common/zzph;
 .source "SourceFile"
 
@@ -37,6 +37,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/android/gms/internal/mlkit_common/zzph;
 
@@ -44,10 +45,12 @@
 
     if-eqz v1, :cond_1
 
+    .line 2
     check-cast p1, Lcom/google/android/gms/internal/mlkit_common/zzph;
 
     iget-object v1, p0, Lcom/google/android/gms/internal/mlkit_common/zzpa;->zza:Ljava/lang/String;
 
+    .line 3
     invoke-virtual {p1}, Lcom/google/android/gms/internal/mlkit_common/zzph;->zzb()Ljava/lang/String;
 
     move-result-object v3
@@ -60,6 +63,7 @@
 
     iget-boolean v1, p0, Lcom/google/android/gms/internal/mlkit_common/zzpa;->zzb:Z
 
+    .line 4
     invoke-virtual {p1}, Lcom/google/android/gms/internal/mlkit_common/zzph;->zzc()Z
 
     move-result v3
@@ -68,6 +72,7 @@
 
     iget p0, p0, Lcom/google/android/gms/internal/mlkit_common/zzpa;->zzc:I
 
+    .line 5
     invoke-virtual {p1}, Lcom/google/android/gms/internal/mlkit_common/zzph;->zza()I
 
     move-result p1
@@ -83,6 +88,7 @@
 .method public final hashCode()I
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_common/zzpa;->zza:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -93,11 +99,11 @@
 
     xor-int/2addr v0, v1
 
-    const/4 v2, 0x1
+    iget-boolean v2, p0, Lcom/google/android/gms/internal/mlkit_common/zzpa;->zzb:Z
 
-    iget-boolean v3, p0, Lcom/google/android/gms/internal/mlkit_common/zzpa;->zzb:Z
+    const/4 v3, 0x1
 
-    if-eq v2, v3, :cond_0
+    if-eq v3, v2, :cond_0
 
     const/16 v2, 0x4d5
 
@@ -123,6 +129,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_common/zzpa;->zza:Ljava/lang/String;
 
     iget-boolean v1, p0, Lcom/google/android/gms/internal/mlkit_common/zzpa;->zzb:Z

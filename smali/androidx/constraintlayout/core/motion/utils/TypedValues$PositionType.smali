@@ -66,12 +66,13 @@
 
     const-string v3, "percentHeight"
 
-    const-string/jumbo v4, "sizePercent"
+    const-string v4, "sizePercent"
 
     const-string v5, "percentX"
 
     const-string v6, "percentY"
 
+    .line 1
     filled-new-array/range {v0 .. v6}, [Ljava/lang/String;
 
     move-result-object v0
@@ -84,6 +85,7 @@
 .method public static getId(Ljava/lang/String;)I
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -132,7 +134,7 @@
     goto :goto_1
 
     :sswitch_2
-    const-string/jumbo v0, "sizePercent"
+    const-string v0, "sizePercent"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -248,6 +250,8 @@
     const/16 p0, 0x1f5
 
     return p0
+
+    nop
 
     :sswitch_data_0
     .sparse-switch

@@ -1,4 +1,4 @@
-.class Landroidx/fragment/app/DialogFragment$4;
+.class public Landroidx/fragment/app/DialogFragment$4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,13 +27,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/fragment/app/DialogFragment;
+.field public final synthetic this$0:Landroidx/fragment/app/DialogFragment;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/fragment/app/DialogFragment;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/fragment/app/DialogFragment$4;->this$0:Landroidx/fragment/app/DialogFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

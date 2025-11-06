@@ -1,4 +1,4 @@
-.class final Lcom/google/common/graph/MapRetrievalCache;
+.class public final Lcom/google/common/graph/MapRetrievalCache;
 .super Lcom/google/common/graph/MapIteratorCache;
 .source "SourceFile"
 
@@ -63,6 +63,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/graph/MapIteratorCache;-><init>(Ljava/util/Map;)V
 
     return-void
@@ -112,12 +113,15 @@
 .method public clearCache()V
     .locals 1
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/graph/MapIteratorCache;->clearCache()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Lcom/google/common/graph/MapRetrievalCache;->cacheEntry1:Lcom/google/common/graph/MapRetrievalCache$CacheEntry;
 
+    .line 3
     iput-object v0, p0, Lcom/google/common/graph/MapRetrievalCache;->cacheEntry2:Lcom/google/common/graph/MapRetrievalCache$CacheEntry;
 
     return-void
@@ -136,8 +140,10 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/google/common/graph/MapRetrievalCache;->getIfCached(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -146,6 +152,7 @@
 
     return-object v0
 
+    .line 3
     :cond_0
     invoke-virtual {p0, p1}, Lcom/google/common/graph/MapIteratorCache;->getWithoutCaching(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -153,6 +160,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     invoke-direct {p0, p1, v0}, Lcom/google/common/graph/MapRetrievalCache;->addToCache(Ljava/lang/Object;Ljava/lang/Object;)V
 
     :cond_1
@@ -176,6 +184,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/graph/MapIteratorCache;->getIfCached(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -184,30 +193,37 @@
 
     return-object v0
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/common/graph/MapRetrievalCache;->cacheEntry1:Lcom/google/common/graph/MapRetrievalCache$CacheEntry;
 
     if-eqz v0, :cond_1
 
+    .line 3
     iget-object v1, v0, Lcom/google/common/graph/MapRetrievalCache$CacheEntry;->key:Ljava/lang/Object;
 
     if-ne v1, p1, :cond_1
 
+    .line 4
     iget-object p0, v0, Lcom/google/common/graph/MapRetrievalCache$CacheEntry;->value:Ljava/lang/Object;
 
     return-object p0
 
+    .line 5
     :cond_1
     iget-object v0, p0, Lcom/google/common/graph/MapRetrievalCache;->cacheEntry2:Lcom/google/common/graph/MapRetrievalCache$CacheEntry;
 
     if-eqz v0, :cond_2
 
+    .line 6
     iget-object v1, v0, Lcom/google/common/graph/MapRetrievalCache$CacheEntry;->key:Ljava/lang/Object;
 
     if-ne v1, p1, :cond_2
 
+    .line 7
     invoke-direct {p0, v0}, Lcom/google/common/graph/MapRetrievalCache;->addToCache(Lcom/google/common/graph/MapRetrievalCache$CacheEntry;)V
 
+    .line 8
     iget-object p0, v0, Lcom/google/common/graph/MapRetrievalCache$CacheEntry;->value:Ljava/lang/Object;
 
     return-object p0

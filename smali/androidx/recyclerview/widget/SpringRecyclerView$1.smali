@@ -1,4 +1,4 @@
-.class Landroidx/recyclerview/widget/SpringRecyclerView$1;
+.class public Landroidx/recyclerview/widget/SpringRecyclerView$1;
 .super Lmiuix/spring/view/SpringHelper;
 .source "SourceFile"
 
@@ -15,15 +15,16 @@
 
 
 # instance fields
-.field mHapticFeedbackCompat:Los/c;
+.field public mHapticFeedbackCompat:Lk/i0/b;
 
-.field final synthetic this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
+.field public final synthetic this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/recyclerview/widget/SpringRecyclerView;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     invoke-direct {p0}, Lmiuix/spring/view/SpringHelper;-><init>()V
@@ -31,27 +32,30 @@
     return-void
 .end method
 
-.method private getHapticFeedbackCompat()Los/c;
+.method private getHapticFeedbackCompat()Lk/i0/b;
     .locals 2
 
-    iget-object v0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->mHapticFeedbackCompat:Los/c;
+    .line 1
+    iget-object v0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->mHapticFeedbackCompat:Lk/i0/b;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Los/c;
+    .line 2
+    new-instance v0, Lk/i0/b;
 
     iget-object v1, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Los/c;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lk/i0/b;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->mHapticFeedbackCompat:Los/c;
+    iput-object v0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->mHapticFeedbackCompat:Lk/i0/b;
 
+    .line 3
     :cond_0
-    iget-object p0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->mHapticFeedbackCompat:Los/c;
+    iget-object p0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->mHapticFeedbackCompat:Lk/i0/b;
 
     return-object p0
 .end method
@@ -61,6 +65,7 @@
 .method public canScrollHorizontally()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     iget-object p0, p0, Landroidx/recyclerview/widget/RecyclerView;->mLayout:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
@@ -87,6 +92,7 @@
 .method public canScrollVertically()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     iget-object p0, p0, Landroidx/recyclerview/widget/RecyclerView;->mLayout:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
@@ -121,6 +127,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     invoke-static {v0}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$300(Landroidx/recyclerview/widget/SpringRecyclerView;)Z
@@ -137,10 +144,12 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     invoke-static {v0, v1}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$302(Landroidx/recyclerview/widget/SpringRecyclerView;Z)Z
 
+    .line 3
     :cond_0
     iget-object v0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
@@ -156,14 +165,16 @@
 
     if-nez v0, :cond_1
 
+    .line 4
     iget-object v0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     invoke-static {v0, v1}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$402(Landroidx/recyclerview/widget/SpringRecyclerView;Z)Z
 
+    .line 5
     :cond_1
     iget-object p0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
-    invoke-static {p0}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$800(Landroidx/recyclerview/widget/SpringRecyclerView;)Landroidx/recyclerview/widget/SpringRecyclerView$SpringNestedScrollingHelper;
+    invoke-static {p0}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$500(Landroidx/recyclerview/widget/SpringRecyclerView;)Landroidx/recyclerview/widget/SpringRecyclerView$SpringNestedScrollingHelper;
 
     move-result-object v0
 
@@ -201,9 +212,10 @@
 
     move v10, p4
 
+    .line 1
     iget-object v1, v0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
-    invoke-static {v1}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$800(Landroidx/recyclerview/widget/SpringRecyclerView;)Landroidx/recyclerview/widget/SpringRecyclerView$SpringNestedScrollingHelper;
+    invoke-static {v1}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$500(Landroidx/recyclerview/widget/SpringRecyclerView;)Landroidx/recyclerview/widget/SpringRecyclerView$SpringNestedScrollingHelper;
 
     move-result-object v1
 
@@ -223,6 +235,7 @@
 
     invoke-virtual/range {v1 .. v8}, Landroidx/recyclerview/widget/SpringRecyclerView$SpringNestedScrollingHelper;->super_dispatchNestedScroll(IIII[II[I)V
 
+    .line 2
     invoke-virtual {p0}, Landroidx/recyclerview/widget/SpringRecyclerView$1;->springAvailable()Z
 
     move-result v1
@@ -231,7 +244,7 @@
 
     iget-object v1, v0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
-    invoke-static {v1}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$900(Landroidx/recyclerview/widget/SpringRecyclerView;)I
+    invoke-static {v1}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$600(Landroidx/recyclerview/widget/SpringRecyclerView;)I
 
     move-result v1
 
@@ -239,6 +252,7 @@
 
     if-ne v1, v2, :cond_1
 
+    .line 3
     iget-object v1, v0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     invoke-static {v1}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$300(Landroidx/recyclerview/widget/SpringRecyclerView;)Z
@@ -255,14 +269,16 @@
 
     if-eqz v9, :cond_0
 
+    .line 4
     iget-object v1, v0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
-    invoke-static {v1}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$1000(Landroidx/recyclerview/widget/SpringRecyclerView;)Landroidx/recyclerview/widget/SpringRecyclerView$SpringFlinger;
+    invoke-static {v1}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$700(Landroidx/recyclerview/widget/SpringRecyclerView;)Landroidx/recyclerview/widget/SpringRecyclerView$SpringFlinger;
 
     move-result-object v1
 
     invoke-virtual {v1, p3}, Landroidx/recyclerview/widget/SpringRecyclerView$SpringFlinger;->notifyHorizontalEdgeReached(I)V
 
+    .line 5
     :cond_0
     iget-object v1, v0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
@@ -280,9 +296,10 @@
 
     if-eqz v10, :cond_1
 
+    .line 6
     iget-object v0, v0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
-    invoke-static {v0}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$1000(Landroidx/recyclerview/widget/SpringRecyclerView;)Landroidx/recyclerview/widget/SpringRecyclerView$SpringFlinger;
+    invoke-static {v0}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$700(Landroidx/recyclerview/widget/SpringRecyclerView;)Landroidx/recyclerview/widget/SpringRecyclerView$SpringFlinger;
 
     move-result-object v0
 
@@ -295,9 +312,10 @@
 .method public getHeight()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getHeight()I
 
     move-result p0
 
@@ -307,68 +325,20 @@
 .method public getWidth()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getWidth()I
 
     move-result p0
 
     return p0
 .end method
 
-.method public onSpringDistanceChanged(FF)V
-    .locals 3
-
-    iget-object v0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
-
-    invoke-static {v0, p1}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$502(Landroidx/recyclerview/widget/SpringRecyclerView;F)F
-
-    iget-object v0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
-
-    invoke-static {v0, p2}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$602(Landroidx/recyclerview/widget/SpringRecyclerView;F)F
-
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_0
-    iget-object v2, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
-
-    invoke-static {v2}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$700(Landroidx/recyclerview/widget/SpringRecyclerView;)Ljava/util/List;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    if-ge v1, v2, :cond_0
-
-    iget-object v2, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
-
-    invoke-static {v2}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$700(Landroidx/recyclerview/widget/SpringRecyclerView;)Ljava/util/List;
-
-    move-result-object v2
-
-    invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lgs/a;
-
-    invoke-interface {v2, p1, p2}, Lgs/a;->onSpringDistanceChanged(FF)V
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
 .method public springAvailable()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
     invoke-static {p0}, Landroidx/recyclerview/widget/SpringRecyclerView;->access$200(Landroidx/recyclerview/widget/SpringRecyclerView;)Z
@@ -385,38 +355,32 @@
 
     const-string v0, "2.0"
 
+    .line 1
     invoke-static {v0}, Lmiuix/view/HapticCompat;->c(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
-
-    invoke-virtual {v0}, Landroid/view/View;->isHapticFeedbackEnabled()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-direct {p0}, Landroidx/recyclerview/widget/SpringRecyclerView$1;->getHapticFeedbackCompat()Los/c;
+    .line 2
+    invoke-direct {p0}, Landroidx/recyclerview/widget/SpringRecyclerView$1;->getHapticFeedbackCompat()Lk/i0/b;
 
     move-result-object p0
 
     const/16 v0, 0xc9
 
-    invoke-virtual {p0, v0}, Los/c;->o(I)V
+    invoke-virtual {p0, v0}, Lk/i0/b;->d(I)Z
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object p0, p0, Landroidx/recyclerview/widget/SpringRecyclerView$1;->this$0:Landroidx/recyclerview/widget/SpringRecyclerView;
 
-    sget v0, Lmiuix/view/j;->s:I
+    sget v0, Lk/j0/f;->s:I
 
-    invoke-static {p0, v0}, Lmiuix/view/HapticCompat;->performHapticFeedbackAsync(Landroid/view/View;I)V
+    invoke-static {p0, v0}, Lmiuix/view/HapticCompat;->performHapticFeedback(Landroid/view/View;I)Z
 
-    :cond_1
     :goto_0
     return-void
 .end method

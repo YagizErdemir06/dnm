@@ -1,4 +1,4 @@
-.class Lcom/android/camera2/compat/theme/custom/mm/zoom/FragmentMainContentMM$1;
+.class public Lcom/android/camera2/compat/theme/custom/mm/zoom/FragmentMainContentMM$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -20,13 +20,22 @@
 # instance fields
 .field private mPressDownTime:J
 
-.field final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/zoom/FragmentMainContentMM;
+.field public final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/zoom/FragmentMainContentMM;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera2/compat/theme/custom/mm/zoom/FragmentMainContentMM;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/FragmentMainContentMM$1;->this$0:Lcom/android/camera2/compat/theme/custom/mm/zoom/FragmentMainContentMM;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +47,18 @@
 # virtual methods
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "v",
+            "event"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result p1
@@ -53,6 +73,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -70,13 +91,15 @@
 
     return v1
 
+    .line 3
     :cond_1
-    invoke-static {}, Lv8/k;->impl2()Lv8/k;
+    invoke-static {}, Ld/d/a/m7/g/o;->impl2()Ld/d/a/m7/g/o;
 
     move-result-object p0
 
     if-eqz p0, :cond_2
 
+    .line 4
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
     move-result p1
@@ -89,7 +112,7 @@
 
     float-to-int p2, p2
 
-    invoke-interface {p0, p1, p2}, Lv8/k;->ph(II)Z
+    invoke-interface {p0, p1, p2}, Ld/d/a/m7/g/o;->Sg(II)Z
 
     move-result p0
 
@@ -98,6 +121,7 @@
     :cond_2
     return v1
 
+    .line 5
     :cond_3
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/FragmentMainContentMM$1;->this$0:Lcom/android/camera2/compat/theme/custom/mm/zoom/FragmentMainContentMM;
 
@@ -109,6 +133,7 @@
 
     return v1
 
+    .line 6
     :cond_4
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/FragmentMainContentMM$1;->this$0:Lcom/android/camera2/compat/theme/custom/mm/zoom/FragmentMainContentMM;
 
@@ -116,7 +141,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/widget/FrameLayout;->getTag()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -126,18 +151,21 @@
 
     return v1
 
+    .line 7
     :cond_5
-    invoke-static {}, Ly2/b;->t()I
+    invoke-static {}, Ld/d/a/n6/b;->t()I
 
     move-result v2
 
+    .line 8
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
     move-result p2
 
     float-to-int p2, p2
 
-    invoke-static {}, Ly2/b;->n()I
+    .line 9
+    invoke-static {}, Ld/d/a/n6/b;->n()I
 
     move-result v3
 
@@ -147,8 +175,9 @@
 
     return v1
 
+    .line 10
     :cond_6
-    invoke-static {}, Ly2/b;->n()I
+    invoke-static {}, Ld/d/a/n6/b;->n()I
 
     move-result v2
 
@@ -162,6 +191,7 @@
 
     return v1
 
+    .line 11
     :cond_7
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 

@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/MinMaxPriorityQueue$MoveDesc;
+.class public Lcom/google/common/collect/MinMaxPriorityQueue$MoveDesc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -24,7 +24,7 @@
 
 
 # instance fields
-.field final replaced:Ljava/lang/Object;
+.field public final replaced:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TE;"
@@ -32,7 +32,7 @@
     .end annotation
 .end field
 
-.field final toTrickle:Ljava/lang/Object;
+.field public final toTrickle:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TE;"
@@ -50,10 +50,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/MinMaxPriorityQueue$MoveDesc;->toTrickle:Ljava/lang/Object;
 
+    .line 3
     iput-object p2, p0, Lcom/google/common/collect/MinMaxPriorityQueue$MoveDesc;->replaced:Ljava/lang/Object;
 
     return-void

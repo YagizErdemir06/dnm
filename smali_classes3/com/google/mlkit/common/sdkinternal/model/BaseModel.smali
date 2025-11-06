@@ -66,6 +66,7 @@
 .method public static constructor <clinit>()V
     .locals 13
 
+    .line 1
     new-instance v0, Lcom/google/mlkit/common/sdkinternal/model/BaseModel;
 
     const-string v1, "FACE_DETECTION"
@@ -82,6 +83,7 @@
 
     const/4 v4, 0x1
 
+    .line 2
     invoke-direct {v1, v3, v4}, Lcom/google/mlkit/common/sdkinternal/model/BaseModel;-><init>(Ljava/lang/String;I)V
 
     sput-object v1, Lcom/google/mlkit/common/sdkinternal/model/BaseModel;->zzb:Lcom/google/mlkit/common/sdkinternal/model/BaseModel;
@@ -92,6 +94,7 @@
 
     const/4 v6, 0x2
 
+    .line 3
     invoke-direct {v3, v5, v6}, Lcom/google/mlkit/common/sdkinternal/model/BaseModel;-><init>(Ljava/lang/String;I)V
 
     sput-object v3, Lcom/google/mlkit/common/sdkinternal/model/BaseModel;->TRANSLATE:Lcom/google/mlkit/common/sdkinternal/model/BaseModel;
@@ -102,6 +105,7 @@
 
     const/4 v8, 0x3
 
+    .line 4
     invoke-direct {v5, v7, v8}, Lcom/google/mlkit/common/sdkinternal/model/BaseModel;-><init>(Ljava/lang/String;I)V
 
     sput-object v5, Lcom/google/mlkit/common/sdkinternal/model/BaseModel;->ENTITY_EXTRACTION:Lcom/google/mlkit/common/sdkinternal/model/BaseModel;
@@ -112,6 +116,7 @@
 
     const/4 v10, 0x4
 
+    .line 5
     invoke-direct {v7, v9, v10}, Lcom/google/mlkit/common/sdkinternal/model/BaseModel;-><init>(Ljava/lang/String;I)V
 
     sput-object v7, Lcom/google/mlkit/common/sdkinternal/model/BaseModel;->TOXICITY_DETECTION:Lcom/google/mlkit/common/sdkinternal/model/BaseModel;
@@ -122,6 +127,7 @@
 
     const/4 v12, 0x5
 
+    .line 6
     invoke-direct {v9, v11, v12}, Lcom/google/mlkit/common/sdkinternal/model/BaseModel;-><init>(Ljava/lang/String;I)V
 
     sput-object v9, Lcom/google/mlkit/common/sdkinternal/model/BaseModel;->IMAGE_CAPTIONING:Lcom/google/mlkit/common/sdkinternal/model/BaseModel;
@@ -150,6 +156,7 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -160,6 +167,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/mlkit/common/sdkinternal/model/BaseModel;->zzc:[Lcom/google/mlkit/common/sdkinternal/model/BaseModel;
 
     invoke-virtual {v0}, [Lcom/google/mlkit/common/sdkinternal/model/BaseModel;->clone()Ljava/lang/Object;

@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/SimpleTimeLimiter$1$1;
+.class public Lcom/google/common/util/concurrent/SimpleTimeLimiter$1$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,17 +27,18 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/google/common/util/concurrent/SimpleTimeLimiter$1;
+.field public final synthetic this$1:Lcom/google/common/util/concurrent/SimpleTimeLimiter$1;
 
-.field final synthetic val$args:[Ljava/lang/Object;
+.field public final synthetic val$args:[Ljava/lang/Object;
 
-.field final synthetic val$method:Ljava/lang/reflect/Method;
+.field public final synthetic val$method:Ljava/lang/reflect/Method;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/util/concurrent/SimpleTimeLimiter$1;Ljava/lang/reflect/Method;[Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/SimpleTimeLimiter$1$1;->this$1:Lcom/google/common/util/concurrent/SimpleTimeLimiter$1;
 
     iput-object p2, p0, Lcom/google/common/util/concurrent/SimpleTimeLimiter$1$1;->val$method:Ljava/lang/reflect/Method;
@@ -62,6 +63,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/common/util/concurrent/SimpleTimeLimiter$1$1;->val$method:Ljava/lang/reflect/Method;
 
@@ -84,6 +86,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-static {p0, v0}, Lcom/google/common/util/concurrent/SimpleTimeLimiter;->access$000(Ljava/lang/Exception;Z)Ljava/lang/Exception;
 
     move-result-object p0

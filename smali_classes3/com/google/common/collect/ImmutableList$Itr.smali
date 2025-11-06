@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ImmutableList$Itr;
+.class public Lcom/google/common/collect/ImmutableList$Itr;
 .super Lcom/google/common/collect/AbstractIndexedListIterator;
 .source "SourceFile"
 
@@ -46,12 +46,14 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/util/AbstractCollection;->size()I
 
     move-result v0
 
     invoke-direct {p0, v0, p2}, Lcom/google/common/collect/AbstractIndexedListIterator;-><init>(II)V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/ImmutableList$Itr;->list:Lcom/google/common/collect/ImmutableList;
 
     return-void
@@ -67,6 +69,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableList$Itr;->list:Lcom/google/common/collect/ImmutableList;
 
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;

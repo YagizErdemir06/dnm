@@ -1,4 +1,4 @@
-.class final Lcom/google/android/play/core/tasks/TaskExecutors$MainThreadExecutor;
+.class public final Lcom/google/android/play/core/tasks/TaskExecutors$MainThreadExecutor;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -25,8 +25,10 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -49,6 +51,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/play/core/tasks/TaskExecutors$MainThreadExecutor;->mainThreadHandler:Landroid/os/Handler;
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z

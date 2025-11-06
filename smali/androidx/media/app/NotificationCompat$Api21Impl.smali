@@ -1,4 +1,4 @@
-.class Landroidx/media/app/NotificationCompat$Api21Impl;
+.class public Landroidx/media/app/NotificationCompat$Api21Impl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,6 +33,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     new-instance v0, Landroid/app/Notification$MediaStyle;
 
     invoke-direct {v0}, Landroid/app/Notification$MediaStyle;-><init>()V
@@ -59,12 +61,14 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     invoke-static {p0, p1}, Landroidx/media/app/NotificationCompat$Api21Impl;->setShowActionsInCompactView(Landroid/app/Notification$MediaStyle;[I)V
 
     :cond_0
     if-eqz p2, :cond_1
 
-    invoke-virtual {p2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->g()Ljava/lang/Object;
+    .line 2
+    invoke-virtual {p2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->f()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -92,6 +96,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/app/Notification$MediaStyle;->setMediaSession(Landroid/media/session/MediaSession$Token;)Landroid/app/Notification$MediaStyle;
 
     return-void
@@ -113,6 +118,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setStyle(Landroid/app/Notification$Style;)Landroid/app/Notification$Builder;
 
     return-void
@@ -134,6 +140,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/app/Notification$MediaStyle;->setShowActionsInCompactView([I)Landroid/app/Notification$MediaStyle;
 
     return-void

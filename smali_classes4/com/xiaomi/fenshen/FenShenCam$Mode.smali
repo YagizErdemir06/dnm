@@ -38,6 +38,7 @@
 .method public static constructor <clinit>()V
     .locals 9
 
+    .line 1
     new-instance v0, Lcom/xiaomi/fenshen/FenShenCam$Mode;
 
     const-string v1, "PHOTO"
@@ -48,6 +49,7 @@
 
     sput-object v0, Lcom/xiaomi/fenshen/FenShenCam$Mode;->PHOTO:Lcom/xiaomi/fenshen/FenShenCam$Mode;
 
+    .line 2
     new-instance v1, Lcom/xiaomi/fenshen/FenShenCam$Mode;
 
     const-string v3, "VIDEO"
@@ -58,6 +60,7 @@
 
     sput-object v1, Lcom/xiaomi/fenshen/FenShenCam$Mode;->VIDEO:Lcom/xiaomi/fenshen/FenShenCam$Mode;
 
+    .line 3
     new-instance v3, Lcom/xiaomi/fenshen/FenShenCam$Mode;
 
     const-string v5, "MCOPY"
@@ -68,6 +71,7 @@
 
     sput-object v3, Lcom/xiaomi/fenshen/FenShenCam$Mode;->MCOPY:Lcom/xiaomi/fenshen/FenShenCam$Mode;
 
+    .line 4
     new-instance v5, Lcom/xiaomi/fenshen/FenShenCam$Mode;
 
     const-string v7, "TIMEFREEZE"
@@ -90,6 +94,7 @@
 
     aput-object v5, v7, v8
 
+    .line 5
     sput-object v7, Lcom/xiaomi/fenshen/FenShenCam$Mode;->$VALUES:[Lcom/xiaomi/fenshen/FenShenCam$Mode;
 
     return-void
@@ -97,12 +102,8 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -111,6 +112,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/fenshen/FenShenCam$Mode;
     .locals 1
 
+    .line 1
     const-class v0, Lcom/xiaomi/fenshen/FenShenCam$Mode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -125,6 +127,7 @@
 .method public static values()[Lcom/xiaomi/fenshen/FenShenCam$Mode;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/fenshen/FenShenCam$Mode;->$VALUES:[Lcom/xiaomi/fenshen/FenShenCam$Mode;
 
     invoke-virtual {v0}, [Lcom/xiaomi/fenshen/FenShenCam$Mode;->clone()Ljava/lang/Object;

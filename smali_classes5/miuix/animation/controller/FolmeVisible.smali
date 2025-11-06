@@ -6,12 +6,6 @@
 .implements Lmiuix/animation/IVisibleStyle;
 
 
-# static fields
-.field private static final ALIAS_VISIBLE_HIDE:Ljava/lang/String; = "visibleHide"
-
-.field private static final ALIAS_VISIBLE_SHOW:Ljava/lang/String; = "visibleShow"
-
-
 # instance fields
 .field private final mDefConfig:Lmiuix/animation/base/AnimConfig;
 
@@ -26,8 +20,10 @@
 .method public varargs constructor <init>([Lmiuix/animation/IAnimTarget;)V
     .locals 4
 
+    .line 1
     invoke-direct {p0, p1}, Lmiuix/animation/controller/FolmeBase;-><init>([Lmiuix/animation/IAnimTarget;)V
 
+    .line 2
     new-instance p1, Lmiuix/animation/base/AnimConfig;
 
     invoke-direct {p1}, Lmiuix/animation/base/AnimConfig;-><init>()V
@@ -50,30 +46,7 @@
 
     iput-object p1, p0, Lmiuix/animation/controller/FolmeVisible;->mDefConfig:Lmiuix/animation/base/AnimConfig;
 
-    iget-object p1, p0, Lmiuix/animation/controller/FolmeBase;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
-
-    new-instance v1, Lmiuix/animation/controller/AnimState;
-
-    sget-object v2, Lmiuix/animation/IVisibleStyle$VisibleType;->SHOW:Lmiuix/animation/IVisibleStyle$VisibleType;
-
-    const-string v3, "visibleShow"
-
-    invoke-direct {v1, v2, v3}, Lmiuix/animation/controller/AnimState;-><init>(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-interface {p1, v1}, Lmiuix/animation/controller/IFolmeStateStyle;->addState(Lmiuix/animation/controller/AnimState;)V
-
-    iget-object p1, p0, Lmiuix/animation/controller/FolmeBase;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
-
-    new-instance v1, Lmiuix/animation/controller/AnimState;
-
-    sget-object v2, Lmiuix/animation/IVisibleStyle$VisibleType;->HIDE:Lmiuix/animation/IVisibleStyle$VisibleType;
-
-    const-string v3, "visibleHide"
-
-    invoke-direct {v1, v2, v3}, Lmiuix/animation/controller/AnimState;-><init>(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-interface {p1, v1}, Lmiuix/animation/controller/IFolmeStateStyle;->addState(Lmiuix/animation/controller/AnimState;)V
-
+    .line 3
     invoke-virtual {p0, v0}, Lmiuix/animation/controller/FolmeVisible;->useAutoAlpha(Z)Lmiuix/animation/IVisibleStyle;
 
     return-void
@@ -82,147 +55,189 @@
 .method public static synthetic access$000(Lmiuix/animation/controller/FolmeVisible;)Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lmiuix/animation/controller/FolmeVisible;->mSetBound:Z
 
     return p0
 .end method
 
 .method private varargs getConfig(Lmiuix/animation/IVisibleStyle$VisibleType;[Lmiuix/animation/base/AnimConfig;)[Lmiuix/animation/base/AnimConfig;
-    .locals 5
+    .locals 6
 
+    .line 1
     iget-boolean v0, p0, Lmiuix/animation/controller/FolmeVisible;->mHasScale:Z
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x2
+
+    const/4 v4, -0x2
 
     if-nez v0, :cond_1
 
-    iget-boolean v1, p0, Lmiuix/animation/controller/FolmeVisible;->mHasMove:Z
+    iget-boolean v5, p0, Lmiuix/animation/controller/FolmeVisible;->mHasMove:Z
 
-    if-nez v1, :cond_1
+    if-nez v5, :cond_1
 
+    .line 2
     iget-object v0, p0, Lmiuix/animation/controller/FolmeVisible;->mDefConfig:Lmiuix/animation/base/AnimConfig;
 
-    sget-object v1, Lmiuix/animation/IVisibleStyle$VisibleType;->SHOW:Lmiuix/animation/IVisibleStyle$VisibleType;
+    sget-object v5, Lmiuix/animation/IVisibleStyle$VisibleType;->SHOW:Lmiuix/animation/IVisibleStyle$VisibleType;
 
-    if-ne p1, v1, :cond_0
+    if-ne p1, v5, :cond_0
 
-    const-wide/16 v1, 0x12c
+    const/16 p1, 0x10
 
-    invoke-static {v1, v2}, Lmiuix/animation/FolmeEase;->sinInOut(J)Lmiuix/animation/utils/EaseManager$EaseStyle;
+    new-array v3, v2, [F
+
+    const/high16 v4, 0x43960000    # 300.0f
+
+    aput v4, v3, v1
+
+    .line 3
+    invoke-static {p1, v3}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     move-result-object p1
 
     goto :goto_0
 
     :cond_0
-    const/high16 p1, 0x3f800000    # 1.0f
+    new-array p1, v3, [F
 
-    const v1, 0x3e19999a    # 0.15f
+    .line 4
+    fill-array-data p1, :array_0
 
-    invoke-static {p1, v1}, Lmiuix/animation/FolmeEase;->spring(FF)Lmiuix/animation/utils/EaseManager$EaseStyle;
+    invoke-static {v4, p1}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     move-result-object p1
 
+    .line 5
     :goto_0
     invoke-virtual {v0, p1}, Lmiuix/animation/base/AnimConfig;->setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;)Lmiuix/animation/base/AnimConfig;
 
     goto :goto_4
 
     :cond_1
-    const v1, 0x3eb33333    # 0.35f
-
-    const/high16 v2, 0x3f400000    # 0.75f
-
     if-eqz v0, :cond_3
 
-    iget-boolean v3, p0, Lmiuix/animation/controller/FolmeVisible;->mHasMove:Z
+    .line 6
+    iget-boolean v5, p0, Lmiuix/animation/controller/FolmeVisible;->mHasMove:Z
 
-    if-nez v3, :cond_3
+    if-nez v5, :cond_3
 
+    .line 7
     iget-object v0, p0, Lmiuix/animation/controller/FolmeVisible;->mDefConfig:Lmiuix/animation/base/AnimConfig;
 
-    sget-object v3, Lmiuix/animation/IVisibleStyle$VisibleType;->SHOW:Lmiuix/animation/IVisibleStyle$VisibleType;
+    sget-object v5, Lmiuix/animation/IVisibleStyle$VisibleType;->SHOW:Lmiuix/animation/IVisibleStyle$VisibleType;
 
-    if-ne p1, v3, :cond_2
+    if-ne p1, v5, :cond_2
 
-    const p1, 0x3f19999a    # 0.6f
+    new-array p1, v3, [F
 
-    invoke-static {p1, v1}, Lmiuix/animation/FolmeEase;->spring(FF)Lmiuix/animation/utils/EaseManager$EaseStyle;
+    .line 8
+    fill-array-data p1, :array_1
+
+    invoke-static {v4, p1}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     move-result-object p1
 
     goto :goto_1
 
     :cond_2
-    const p1, 0x3e4ccccd    # 0.2f
+    new-array p1, v3, [F
 
-    invoke-static {v2, p1}, Lmiuix/animation/FolmeEase;->spring(FF)Lmiuix/animation/utils/EaseManager$EaseStyle;
+    .line 9
+    fill-array-data p1, :array_2
+
+    invoke-static {v4, p1}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     move-result-object p1
 
+    .line 10
     :goto_1
     invoke-virtual {v0, p1}, Lmiuix/animation/base/AnimConfig;->setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;)Lmiuix/animation/base/AnimConfig;
 
     goto :goto_4
 
     :cond_3
-    const/high16 v3, 0x3e800000    # 0.25f
-
     if-nez v0, :cond_5
 
+    .line 11
     iget-object v0, p0, Lmiuix/animation/controller/FolmeVisible;->mDefConfig:Lmiuix/animation/base/AnimConfig;
 
-    sget-object v4, Lmiuix/animation/IVisibleStyle$VisibleType;->SHOW:Lmiuix/animation/IVisibleStyle$VisibleType;
+    sget-object v5, Lmiuix/animation/IVisibleStyle$VisibleType;->SHOW:Lmiuix/animation/IVisibleStyle$VisibleType;
 
-    if-ne p1, v4, :cond_4
+    if-ne p1, v5, :cond_4
 
-    invoke-static {v2, v1}, Lmiuix/animation/FolmeEase;->spring(FF)Lmiuix/animation/utils/EaseManager$EaseStyle;
+    new-array p1, v3, [F
+
+    .line 12
+    fill-array-data p1, :array_3
+
+    invoke-static {v4, p1}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     move-result-object p1
 
     goto :goto_2
 
     :cond_4
-    invoke-static {v2, v3}, Lmiuix/animation/FolmeEase;->spring(FF)Lmiuix/animation/utils/EaseManager$EaseStyle;
+    new-array p1, v3, [F
+
+    .line 13
+    fill-array-data p1, :array_4
+
+    invoke-static {v4, p1}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     move-result-object p1
 
+    .line 14
     :goto_2
     invoke-virtual {v0, p1}, Lmiuix/animation/base/AnimConfig;->setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;)Lmiuix/animation/base/AnimConfig;
 
     goto :goto_4
 
+    .line 15
     :cond_5
     iget-object v0, p0, Lmiuix/animation/controller/FolmeVisible;->mDefConfig:Lmiuix/animation/base/AnimConfig;
 
-    sget-object v4, Lmiuix/animation/IVisibleStyle$VisibleType;->SHOW:Lmiuix/animation/IVisibleStyle$VisibleType;
+    sget-object v5, Lmiuix/animation/IVisibleStyle$VisibleType;->SHOW:Lmiuix/animation/IVisibleStyle$VisibleType;
 
-    if-ne p1, v4, :cond_6
+    if-ne p1, v5, :cond_6
 
-    const p1, 0x3f266666    # 0.65f
+    new-array p1, v3, [F
 
-    invoke-static {p1, v1}, Lmiuix/animation/FolmeEase;->spring(FF)Lmiuix/animation/utils/EaseManager$EaseStyle;
+    .line 16
+    fill-array-data p1, :array_5
+
+    invoke-static {v4, p1}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     move-result-object p1
 
     goto :goto_3
 
     :cond_6
-    invoke-static {v2, v3}, Lmiuix/animation/FolmeEase;->spring(FF)Lmiuix/animation/utils/EaseManager$EaseStyle;
+    new-array p1, v3, [F
+
+    .line 17
+    fill-array-data p1, :array_6
+
+    invoke-static {v4, p1}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     move-result-object p1
 
+    .line 18
     :goto_3
     invoke-virtual {v0, p1}, Lmiuix/animation/base/AnimConfig;->setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;)Lmiuix/animation/base/AnimConfig;
 
     :goto_4
-    const/4 p1, 0x1
+    new-array p1, v2, [Lmiuix/animation/base/AnimConfig;
 
-    new-array p1, p1, [Lmiuix/animation/base/AnimConfig;
-
-    const/4 v0, 0x0
-
+    .line 19
     iget-object p0, p0, Lmiuix/animation/controller/FolmeVisible;->mDefConfig:Lmiuix/animation/base/AnimConfig;
 
-    aput-object p0, p1, v0
+    aput-object p0, p1, v1
 
     invoke-static {p2, p1}, Lmiuix/animation/utils/CommonUtils;->mergeArray([Ljava/lang/Object;[Ljava/lang/Object;)[Ljava/lang/Object;
 
@@ -231,11 +246,56 @@
     check-cast p0, [Lmiuix/animation/base/AnimConfig;
 
     return-object p0
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x3f800000    # 1.0f
+        0x3e19999a    # 0.15f
+    .end array-data
+
+    :array_1
+    .array-data 4
+        0x3f19999a    # 0.6f
+        0x3eb33333    # 0.35f
+    .end array-data
+
+    :array_2
+    .array-data 4
+        0x3f400000    # 0.75f
+        0x3e4ccccd    # 0.2f
+    .end array-data
+
+    :array_3
+    .array-data 4
+        0x3f400000    # 0.75f
+        0x3eb33333    # 0.35f
+    .end array-data
+
+    :array_4
+    .array-data 4
+        0x3f400000    # 0.75f
+        0x3e800000    # 0.25f
+    .end array-data
+
+    :array_5
+    .array-data 4
+        0x3f266666    # 0.65f
+        0x3eb33333    # 0.35f
+    .end array-data
+
+    :array_6
+    .array-data 4
+        0x3f400000    # 0.75f
+        0x3e800000    # 0.25f
+    .end array-data
 .end method
 
 .method private varargs getType([Lmiuix/animation/IVisibleStyle$VisibleType;)Lmiuix/animation/IVisibleStyle$VisibleType;
     .locals 0
 
+    .line 1
     array-length p0, p1
 
     if-lez p0, :cond_0
@@ -258,10 +318,12 @@
 .method public clean()V
     .locals 1
 
+    .line 1
     invoke-super {p0}, Lmiuix/animation/controller/FolmeBase;->clean()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-boolean v0, p0, Lmiuix/animation/controller/FolmeVisible;->mHasScale:Z
 
     iput-boolean v0, p0, Lmiuix/animation/controller/FolmeVisible;->mHasMove:Z
@@ -272,6 +334,7 @@
 .method public varargs hide([Lmiuix/animation/base/AnimConfig;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/controller/FolmeBase;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
     sget-object v1, Lmiuix/animation/IVisibleStyle$VisibleType;->HIDE:Lmiuix/animation/IVisibleStyle$VisibleType;
@@ -288,6 +351,7 @@
 .method public varargs setAlpha(F[Lmiuix/animation/IVisibleStyle$VisibleType;)Lmiuix/animation/IVisibleStyle;
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/controller/FolmeBase;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
     invoke-direct {p0, p2}, Lmiuix/animation/controller/FolmeVisible;->getType([Lmiuix/animation/IVisibleStyle$VisibleType;)Lmiuix/animation/IVisibleStyle$VisibleType;
@@ -312,8 +376,10 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lmiuix/animation/controller/FolmeVisible;->mSetBound:Z
 
+    .line 2
     iget-object v0, p0, Lmiuix/animation/controller/FolmeBase;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
     sget-object v1, Lmiuix/animation/IVisibleStyle$VisibleType;->SHOW:Lmiuix/animation/IVisibleStyle$VisibleType;
@@ -326,6 +392,7 @@
 
     int-to-double v2, p1
 
+    .line 3
     invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p1
@@ -334,6 +401,7 @@
 
     int-to-double v1, p2
 
+    .line 4
     invoke-virtual {p1, v0, v1, v2}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p1
@@ -342,6 +410,7 @@
 
     int-to-double v0, p3
 
+    .line 5
     invoke-virtual {p1, p2, v0, v1}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p1
@@ -350,6 +419,7 @@
 
     int-to-double p3, p4
 
+    .line 6
     invoke-virtual {p1, p2, p3, p4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     return-object p0
@@ -358,6 +428,7 @@
 .method public setFlags(J)Lmiuix/animation/IVisibleStyle;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/controller/FolmeBase;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
     invoke-interface {v0, p1, p2}, Lmiuix/animation/IStateStyle;->setFlags(J)Lmiuix/animation/IStateStyle;
@@ -368,6 +439,7 @@
 .method public setHide()Lmiuix/animation/IVisibleStyle;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/controller/FolmeBase;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
     sget-object v1, Lmiuix/animation/IVisibleStyle$VisibleType;->HIDE:Lmiuix/animation/IVisibleStyle$VisibleType;
@@ -384,12 +456,12 @@
 
     new-array v0, v0, [Lmiuix/animation/IVisibleStyle$VisibleType;
 
-    const/4 v1, 0x0
-
     .line 1
-    sget-object v2, Lmiuix/animation/IVisibleStyle$VisibleType;->HIDE:Lmiuix/animation/IVisibleStyle$VisibleType;
+    sget-object v1, Lmiuix/animation/IVisibleStyle$VisibleType;->HIDE:Lmiuix/animation/IVisibleStyle$VisibleType;
 
-    aput-object v2, v0, v1
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
 
     invoke-virtual {p0, p1, p2, v0}, Lmiuix/animation/controller/FolmeVisible;->setMove(II[Lmiuix/animation/IVisibleStyle$VisibleType;)Lmiuix/animation/IVisibleStyle;
 
@@ -476,8 +548,10 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lmiuix/animation/controller/FolmeVisible;->mHasScale:Z
 
+    .line 2
     iget-object v0, p0, Lmiuix/animation/controller/FolmeBase;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
     invoke-direct {p0, p2}, Lmiuix/animation/controller/FolmeVisible;->getType([Lmiuix/animation/IVisibleStyle$VisibleType;)Lmiuix/animation/IVisibleStyle$VisibleType;
@@ -492,12 +566,14 @@
 
     float-to-double v1, p1
 
+    .line 3
     invoke-virtual {p2, v0, v1, v2}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p1
 
     sget-object p2, Lmiuix/animation/property/ViewProperty;->SCALE_X:Lmiuix/animation/property/ViewProperty;
 
+    .line 4
     invoke-virtual {p1, p2, v1, v2}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     return-object p0
@@ -506,6 +582,7 @@
 .method public setShow()Lmiuix/animation/IVisibleStyle;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/controller/FolmeBase;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
     sget-object v1, Lmiuix/animation/IVisibleStyle$VisibleType;->SHOW:Lmiuix/animation/IVisibleStyle$VisibleType;
@@ -518,6 +595,7 @@
 .method public setShowDelay(J)Lmiuix/animation/IVisibleStyle;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/controller/FolmeBase;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
     sget-object v1, Lmiuix/animation/IVisibleStyle$VisibleType;->SHOW:Lmiuix/animation/IVisibleStyle$VisibleType;
@@ -538,6 +616,7 @@
 .method public varargs show([Lmiuix/animation/base/AnimConfig;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/controller/FolmeBase;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
     sget-object v1, Lmiuix/animation/IVisibleStyle$VisibleType;->SHOW:Lmiuix/animation/IVisibleStyle$VisibleType;
@@ -554,8 +633,10 @@
 .method public useAutoAlpha(Z)Lmiuix/animation/IVisibleStyle;
     .locals 7
 
+    .line 1
     sget-object v0, Lmiuix/animation/property/ViewProperty;->AUTO_ALPHA:Lmiuix/animation/property/ViewProperty;
 
+    .line 2
     sget-object v1, Lmiuix/animation/property/ViewProperty;->ALPHA:Lmiuix/animation/property/ViewProperty;
 
     const-wide/16 v2, 0x0
@@ -564,6 +645,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 3
     iget-object p1, p0, Lmiuix/animation/controller/FolmeBase;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
     sget-object v6, Lmiuix/animation/IVisibleStyle$VisibleType;->SHOW:Lmiuix/animation/IVisibleStyle$VisibleType;
@@ -578,6 +660,7 @@
 
     invoke-virtual {p1, v0, v4, v5}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
+    .line 4
     iget-object p1, p0, Lmiuix/animation/controller/FolmeBase;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
     sget-object v4, Lmiuix/animation/IVisibleStyle$VisibleType;->HIDE:Lmiuix/animation/IVisibleStyle$VisibleType;
@@ -594,6 +677,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     iget-object p1, p0, Lmiuix/animation/controller/FolmeBase;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
@@ -609,6 +693,7 @@
 
     invoke-virtual {p1, v1, v4, v5}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
+    .line 6
     iget-object p1, p0, Lmiuix/animation/controller/FolmeBase;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
     sget-object v4, Lmiuix/animation/IVisibleStyle$VisibleType;->HIDE:Lmiuix/animation/IVisibleStyle$VisibleType;

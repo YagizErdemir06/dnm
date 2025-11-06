@@ -1,4 +1,4 @@
-.class Lorg/apache/xmlbeans/impl/util/FilerImpl$IncrFileWriter;
+.class public Lorg/apache/xmlbeans/impl/util/FilerImpl$IncrFileWriter;
 .super Ljava/io/StringWriter;
 .source "SourceFile"
 
@@ -17,18 +17,21 @@
 # instance fields
 .field private _file:Ljava/io/File;
 
-.field private _repackager:Llv/c;
+.field private _repackager:Lo/c;
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/File;Llv/c;)V
+.method public constructor <init>(Ljava/io/File;Lo/c;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/io/StringWriter;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/util/FilerImpl$IncrFileWriter;->_file:Ljava/io/File;
 
-    iput-object p2, p0, Lorg/apache/xmlbeans/impl/util/FilerImpl$IncrFileWriter;->_repackager:Llv/c;
+    .line 3
+    iput-object p2, p0, Lorg/apache/xmlbeans/impl/util/FilerImpl$IncrFileWriter;->_repackager:Lo/c;
 
     return-void
 .end method
@@ -43,9 +46,11 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0}, Ljava/io/StringWriter;->close()V
 
-    iget-object v0, p0, Lorg/apache/xmlbeans/impl/util/FilerImpl$IncrFileWriter;->_repackager:Llv/c;
+    .line 2
+    iget-object v0, p0, Lorg/apache/xmlbeans/impl/util/FilerImpl$IncrFileWriter;->_repackager:Lo/c;
 
     if-eqz v0, :cond_0
 
@@ -53,7 +58,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Llv/c;->e(Ljava/lang/StringBuffer;)Ljava/lang/StringBuffer;
+    invoke-virtual {v0, v1}, Lo/c;->e(Ljava/lang/StringBuffer;)Ljava/lang/StringBuffer;
 
     move-result-object v0
 
@@ -64,19 +69,23 @@
 
     move-result-object v0
 
+    .line 3
     :goto_0
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 4
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 5
     new-instance v2, Ljava/io/StringReader;
 
     invoke-direct {v2, v0}, Ljava/io/StringReader;-><init>(Ljava/lang/String;)V
 
+    .line 6
     new-instance v3, Ljava/io/FileReader;
 
     iget-object v4, p0, Lorg/apache/xmlbeans/impl/util/FilerImpl$IncrFileWriter;->_file:Ljava/io/File;
@@ -86,6 +95,7 @@
     :try_start_0
     const-string v4, "<generated>"
 
+    .line 7
     iget-object v5, p0, Lorg/apache/xmlbeans/impl/util/FilerImpl$IncrFileWriter;->_file:Ljava/io/File;
 
     invoke-virtual {v5}, Ljava/io/File;->getName()Ljava/lang/String;
@@ -96,27 +106,33 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
+    .line 8
     invoke-virtual {v2}, Ljava/io/StringReader;->close()V
 
-    invoke-virtual {v3}, Ljava/io/Reader;->close()V
+    .line 9
+    invoke-virtual {v3}, Ljava/io/FileReader;->close()V
 
+    .line 10
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v1
 
     if-lez v1, :cond_1
 
+    .line 11
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/util/FilerImpl$IncrFileWriter;->_file:Ljava/io/File;
 
     invoke-static {p0}, Lorg/apache/xmlbeans/impl/util/FilerImpl;->access$000(Ljava/io/File;)Ljava/io/Writer;
 
     move-result-object p0
 
+    .line 12
     :try_start_1
     invoke-virtual {p0, v0}, Ljava/io/Writer;->write(Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 13
     invoke-virtual {p0}, Ljava/io/Writer;->close()V
 
     goto :goto_1
@@ -135,9 +151,11 @@
     :catchall_1
     move-exception p0
 
+    .line 14
     invoke-virtual {v2}, Ljava/io/StringReader;->close()V
 
-    invoke-virtual {v3}, Ljava/io/Reader;->close()V
+    .line 15
+    invoke-virtual {v3}, Ljava/io/FileReader;->close()V
 
     throw p0
 .end method

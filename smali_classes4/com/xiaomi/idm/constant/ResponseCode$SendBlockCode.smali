@@ -51,192 +51,203 @@
 
 
 # instance fields
-.field final code:I
+.field public final code:I
 
-.field final msg:Ljava/lang/String;
+.field public final msg:Ljava/lang/String;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 16
 
+    .line 1
     new-instance v0, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
 
-    const-string v1, "Block Sent"
+    const-string v1, "SEND_BLOCK_SUCCESS"
 
-    const-string v2, "SEND_BLOCK_SUCCESS"
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    const-string v3, "Block Sent"
 
-    invoke-direct {v0, v2, v3, v3, v1}, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    invoke-direct {v0, v1, v2, v2, v3}, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
     sput-object v0, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;->SEND_BLOCK_SUCCESS:Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
 
+    .line 2
     new-instance v1, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
 
-    const/4 v2, -0x1
+    const-string v3, "SEND_BLOCK_ERR_GENERAL_ERROR"
 
-    const-string v4, "SendBlock General Error"
+    const/4 v4, 0x1
 
-    const-string v5, "SEND_BLOCK_ERR_GENERAL_ERROR"
+    const/4 v5, -0x1
 
-    const/4 v6, 0x1
+    const-string v6, "SendBlock General Error"
 
-    invoke-direct {v1, v5, v6, v2, v4}, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    invoke-direct {v1, v3, v4, v5, v6}, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
     sput-object v1, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;->SEND_BLOCK_ERR_GENERAL_ERROR:Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
 
-    new-instance v2, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
+    .line 3
+    new-instance v3, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
 
-    const/4 v4, -0x2
+    const-string v5, "SEND_BLOCK_ERR_PARAM_ILLEGAL"
 
-    const-string v5, "Param error"
+    const/4 v6, 0x2
 
-    const-string v7, "SEND_BLOCK_ERR_PARAM_ILLEGAL"
+    const/4 v7, -0x2
 
-    const/4 v8, 0x2
+    const-string v8, "Param error"
 
-    invoke-direct {v2, v7, v8, v4, v5}, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    invoke-direct {v3, v5, v6, v7, v8}, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    sput-object v2, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;->SEND_BLOCK_ERR_PARAM_ILLEGAL:Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
+    sput-object v3, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;->SEND_BLOCK_ERR_PARAM_ILLEGAL:Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
 
-    new-instance v4, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
-
-    const/4 v5, -0x3
-
-    const-string v7, "Timeout"
-
-    const-string v9, "SEND_BLOCK_ERR_TIMEOUT"
-
-    const/4 v10, 0x3
-
-    invoke-direct {v4, v9, v10, v5, v7}, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
-
-    sput-object v4, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;->SEND_BLOCK_ERR_TIMEOUT:Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
-
+    .line 4
     new-instance v5, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
 
-    const/4 v7, -0x4
+    const-string v7, "SEND_BLOCK_ERR_TIMEOUT"
 
-    const-string v9, "MiConnect not support"
+    const/4 v8, 0x3
 
-    const-string v11, "SEND_BLOCK_ERR_UNSUPPORTED"
+    const/4 v9, -0x3
 
-    const/4 v12, 0x4
+    const-string v10, "Timeout"
 
-    invoke-direct {v5, v11, v12, v7, v9}, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    invoke-direct {v5, v7, v8, v9, v10}, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    sput-object v5, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;->SEND_BLOCK_ERR_UNSUPPORTED:Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
+    sput-object v5, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;->SEND_BLOCK_ERR_TIMEOUT:Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
 
+    .line 5
     new-instance v7, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
 
-    const/4 v9, -0x5
+    const-string v9, "SEND_BLOCK_ERR_UNSUPPORTED"
 
-    const-string v11, "Memory usage exceed"
+    const/4 v10, 0x4
 
-    const-string v13, "SEND_BLOCK_ERR_MEM_EXCEED"
+    const/4 v11, -0x4
 
-    const/4 v14, 0x5
+    const-string v12, "MiConnect not support"
 
-    invoke-direct {v7, v13, v14, v9, v11}, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    invoke-direct {v7, v9, v10, v11, v12}, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    sput-object v7, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;->SEND_BLOCK_ERR_MEM_EXCEED:Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
+    sput-object v7, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;->SEND_BLOCK_ERR_UNSUPPORTED:Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
 
+    .line 6
     new-instance v9, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
 
-    const/16 v11, -0xe
+    const-string v11, "SEND_BLOCK_ERR_MEM_EXCEED"
 
-    const-string v13, "Unreachable"
+    const/4 v12, 0x5
 
-    const-string v15, "SEND_BLOCK_ERR_UNREACHABLE"
+    const/4 v13, -0x5
+
+    const-string v14, "Memory usage exceed"
+
+    invoke-direct {v9, v11, v12, v13, v14}, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    sput-object v9, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;->SEND_BLOCK_ERR_MEM_EXCEED:Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
+
+    .line 7
+    new-instance v11, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
+
+    const-string v13, "SEND_BLOCK_ERR_UNREACHABLE"
 
     const/4 v14, 0x6
 
-    invoke-direct {v9, v15, v14, v11, v13}, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    const/16 v15, -0xe
 
-    sput-object v9, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;->SEND_BLOCK_ERR_UNREACHABLE:Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
+    const-string v12, "Unreachable"
 
-    new-instance v11, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
+    invoke-direct {v11, v13, v14, v15, v12}, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v13, -0xf
+    sput-object v11, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;->SEND_BLOCK_ERR_UNREACHABLE:Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
 
-    const-string v15, "Not Connected"
-
-    const-string v14, "SEND_BLOCK_ERR_NOT_CONNECTED"
-
-    const/4 v12, 0x7
-
-    invoke-direct {v11, v14, v12, v13, v15}, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
-
-    sput-object v11, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;->SEND_BLOCK_ERR_NOT_CONNECTED:Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
-
-    new-instance v13, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
-
-    const/16 v14, -0x10
-
-    const-string v15, "Remote Not Support"
-
-    const-string v12, "SEND_BLOCK_ERR_REMOTE_UNSUPPORTED"
-
-    const/16 v10, 0x8
-
-    invoke-direct {v13, v12, v10, v14, v15}, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
-
-    sput-object v13, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;->SEND_BLOCK_ERR_REMOTE_UNSUPPORTED:Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
-
+    .line 8
     new-instance v12, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
+
+    const-string v13, "SEND_BLOCK_ERR_NOT_CONNECTED"
+
+    const/4 v15, 0x7
+
+    const/16 v14, -0xf
+
+    const-string v10, "Not Connected"
+
+    invoke-direct {v12, v13, v15, v14, v10}, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    sput-object v12, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;->SEND_BLOCK_ERR_NOT_CONNECTED:Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
+
+    .line 9
+    new-instance v10, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
+
+    const-string v13, "SEND_BLOCK_ERR_REMOTE_UNSUPPORTED"
+
+    const/16 v14, 0x8
+
+    const/16 v15, -0x10
+
+    const-string v8, "Remote Not Support"
+
+    invoke-direct {v10, v13, v14, v15, v8}, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    sput-object v10, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;->SEND_BLOCK_ERR_REMOTE_UNSUPPORTED:Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
+
+    .line 10
+    new-instance v8, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
+
+    const-string v13, "SEND_BLOCK_UNKNOWN"
+
+    const/16 v15, 0x9
 
     const/16 v14, -0x270f
 
-    const-string v15, "Unknown sendBlock code"
+    const-string v6, "Unknown sendBlock code"
 
-    const-string v10, "SEND_BLOCK_UNKNOWN"
+    invoke-direct {v8, v13, v15, v14, v6}, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v8, 0x9
+    sput-object v8, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;->SEND_BLOCK_UNKNOWN:Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
 
-    invoke-direct {v12, v10, v8, v14, v15}, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    const/16 v6, 0xa
 
-    sput-object v12, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;->SEND_BLOCK_UNKNOWN:Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
+    new-array v6, v6, [Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
 
-    const/16 v10, 0xa
+    aput-object v0, v6, v2
 
-    new-array v10, v10, [Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
-
-    aput-object v0, v10, v3
-
-    aput-object v1, v10, v6
+    aput-object v1, v6, v4
 
     const/4 v0, 0x2
 
-    aput-object v2, v10, v0
+    aput-object v3, v6, v0
 
     const/4 v0, 0x3
 
-    aput-object v4, v10, v0
+    aput-object v5, v6, v0
 
     const/4 v0, 0x4
 
-    aput-object v5, v10, v0
+    aput-object v7, v6, v0
 
     const/4 v0, 0x5
 
-    aput-object v7, v10, v0
+    aput-object v9, v6, v0
 
     const/4 v0, 0x6
 
-    aput-object v9, v10, v0
+    aput-object v11, v6, v0
 
     const/4 v0, 0x7
 
-    aput-object v11, v10, v0
+    aput-object v12, v6, v0
 
     const/16 v0, 0x8
 
-    aput-object v13, v10, v0
+    aput-object v10, v6, v0
 
-    aput-object v12, v10, v8
+    aput-object v8, v6, v15
 
-    sput-object v10, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;->$VALUES:[Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
+    .line 11
+    sput-object v6, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;->$VALUES:[Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
 
     return-void
 .end method
@@ -251,10 +262,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 2
     iput p3, p0, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;->code:I
 
+    .line 3
     iput-object p4, p0, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;->msg:Ljava/lang/String;
 
     return-void
@@ -263,6 +277,7 @@
 .method public static fromCode(I)Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
     .locals 5
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;->values()[Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
 
     move-result-object v0
@@ -276,6 +291,7 @@
 
     aget-object v3, v0, v2
 
+    .line 2
     invoke-virtual {v3}, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;->getCode()I
 
     move-result v4
@@ -289,6 +305,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_1
     sget-object p0, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;->SEND_BLOCK_UNKNOWN:Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
 
@@ -298,6 +315,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
     .locals 1
 
+    .line 1
     const-class v0, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -312,6 +330,7 @@
 .method public static values()[Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;->$VALUES:[Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
 
     invoke-virtual {v0}, [Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;->clone()Ljava/lang/Object;
@@ -328,6 +347,7 @@
 .method public createException()Lcom/xiaomi/idm/exception/IDMException;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/xiaomi/idm/exception/IDMException;
 
     iget v1, p0, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;->code:I
@@ -342,6 +362,7 @@
 .method public getCode()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;->code:I
 
     return p0
@@ -350,6 +371,7 @@
 .method public getMsg()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;->msg:Ljava/lang/String;
 
     return-object p0

@@ -1,4 +1,4 @@
-.class abstract Landroidx/core/app/JobIntentService$WorkEnqueuer;
+.class public abstract Landroidx/core/app/JobIntentService$WorkEnqueuer;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,19 +15,21 @@
 
 
 # instance fields
-.field final mComponentName:Landroid/content/ComponentName;
+.field public final mComponentName:Landroid/content/ComponentName;
 
-.field mHasJobId:Z
+.field public mHasJobId:Z
 
-.field mJobId:I
+.field public mJobId:I
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/ComponentName;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/core/app/JobIntentService$WorkEnqueuer;->mComponentName:Landroid/content/ComponentName;
 
     return-void
@@ -41,18 +43,22 @@
 .method public ensureJobId(I)V
     .locals 3
 
+    .line 1
     iget-boolean v0, p0, Landroidx/core/app/JobIntentService$WorkEnqueuer;->mHasJobId:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
+    .line 2
     iput-boolean v0, p0, Landroidx/core/app/JobIntentService$WorkEnqueuer;->mHasJobId:Z
 
+    .line 3
     iput p1, p0, Landroidx/core/app/JobIntentService$WorkEnqueuer;->mJobId:I
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget v0, p0, Landroidx/core/app/JobIntentService$WorkEnqueuer;->mJobId:I
 
@@ -61,6 +67,7 @@
     :goto_0
     return-void
 
+    .line 5
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 

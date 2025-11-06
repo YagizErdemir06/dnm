@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public a:Lcom/android/camera/ui/CircleImageView;
+.field private a:Lcom/android/camera/ui/CircleImageView;
 
 .field public final synthetic b:Lcom/xiaomi/mimoji/mimojias/fragment/edit/ColorListAdapter;
 
@@ -23,13 +23,26 @@
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/mimoji/mimojias/fragment/edit/ColorListAdapter;Landroid/view/View;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x0
+        }
+        names = {
+            "this$0",
+            "itemView"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/ColorListAdapter$ViewHolder;->b:Lcom/xiaomi/mimoji/mimojias/fragment/edit/ColorListAdapter;
 
+    .line 2
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
-    const p1, 0x7f0b039f
+    const p1, 0x7f0b034e
 
+    .line 3
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -44,6 +57,7 @@
 .method public static synthetic c(Lcom/xiaomi/mimoji/mimojias/fragment/edit/ColorListAdapter$ViewHolder;)Lcom/android/camera/ui/CircleImageView;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/ColorListAdapter$ViewHolder;->a:Lcom/android/camera/ui/CircleImageView;
 
     return-object p0

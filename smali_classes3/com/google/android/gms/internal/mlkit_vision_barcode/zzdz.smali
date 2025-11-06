@@ -79,6 +79,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdz;
 
@@ -88,11 +89,13 @@
 
     return v2
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdz;
 
     iget-object v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdz;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznd;
 
+    .line 3
     iget-object v3, p1, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdz;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznd;
 
     invoke-static {v1, v3}, Lcom/google/android/gms/common/internal/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -168,11 +171,12 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    .line 1
+    iget-object v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdz;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznd;
 
-    iget-object v2, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdz;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznd;
+    const/4 v2, 0x0
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
     const/4 v1, 0x1
 
@@ -180,31 +184,31 @@
 
     aput-object v2, v0, v1
 
-    const/4 v1, 0x2
+    iget-object v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdz;->zzc:Ljava/lang/Boolean;
 
-    iget-object v3, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdz;->zzc:Ljava/lang/Boolean;
+    const/4 v3, 0x2
 
-    aput-object v3, v0, v1
+    aput-object v1, v0, v3
 
     const/4 v1, 0x3
 
     aput-object v2, v0, v1
 
-    const/4 v1, 0x4
+    iget-object v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdz;->zze:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzqv;
 
-    iget-object v2, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdz;->zze:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzqv;
+    const/4 v2, 0x4
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/4 v1, 0x5
+    iget-object v1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdz;->zzf:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcd;
 
-    iget-object v2, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdz;->zzf:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcd;
+    const/4 v2, 0x5
 
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x6
+    aput-object v1, v0, v2
 
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdz;->zzg:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcd;
+
+    const/4 v1, 0x6
 
     aput-object p0, v0, v1
 

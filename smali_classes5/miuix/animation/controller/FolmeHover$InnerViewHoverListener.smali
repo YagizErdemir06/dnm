@@ -1,4 +1,4 @@
-.class Lmiuix/animation/controller/FolmeHover$InnerViewHoverListener;
+.class public Lmiuix/animation/controller/FolmeHover$InnerViewHoverListener;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -57,42 +57,12 @@
     return-void
 .end method
 
-.method private getHoverTranslationXTag(Landroid/view/View;)F
-    .locals 1
-
-    sget p0, Laq/b$b;->miuix_animation_tag_hover_set_translation_x:I
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    instance-of v0, v0, Ljava/lang/Float;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Float;
-
-    invoke-virtual {p0}, Ljava/lang/Float;->floatValue()F
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
 
 # virtual methods
 .method public varargs addHover(Lmiuix/animation/controller/FolmeHover;[Lmiuix/animation/base/AnimConfig;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/animation/controller/FolmeHover$InnerViewHoverListener;->mHoverMap:Ljava/util/WeakHashMap;
 
     invoke-virtual {p0, p1, p2}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -101,75 +71,52 @@
 .end method
 
 .method public onHover(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 5
+    .locals 2
 
-    iget-object v0, p0, Lmiuix/animation/controller/FolmeHover$InnerViewHoverListener;->mHoverMap:Ljava/util/WeakHashMap;
+    .line 1
+    iget-object p0, p0, Lmiuix/animation/controller/FolmeHover$InnerViewHoverListener;->mHoverMap:Ljava/util/WeakHashMap;
 
-    invoke-virtual {v0}, Ljava/util/WeakHashMap;->entrySet()Ljava/util/Set;
+    invoke-virtual {p0}, Ljava/util/WeakHashMap;->entrySet()Ljava/util/Set;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    move-result-object v0
+    move-result-object p0
 
     :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v0
 
-    check-cast v1, Ljava/util/Map$Entry;
+    check-cast v0, Ljava/util/Map$Entry;
 
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lmiuix/animation/controller/FolmeHover;
-
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    .line 2
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, [Lmiuix/animation/base/AnimConfig;
+    check-cast v1, Lmiuix/animation/controller/FolmeHover;
 
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+    .line 3
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-    move-result v3
+    move-result-object v0
 
-    const/16 v4, 0x9
+    check-cast v0, [Lmiuix/animation/base/AnimConfig;
 
-    if-ne v3, v4, :cond_0
-
-    invoke-direct {p0, p1}, Lmiuix/animation/controller/FolmeHover$InnerViewHoverListener;->getHoverTranslationXTag(Landroid/view/View;)F
-
-    move-result v3
-
-    invoke-static {v2}, Lmiuix/animation/controller/FolmeHover;->access$100(Lmiuix/animation/controller/FolmeHover;)F
-
-    move-result v4
-
-    cmpl-float v3, v3, v4
-
-    if-eqz v3, :cond_0
-
-    invoke-direct {p0, p1}, Lmiuix/animation/controller/FolmeHover$InnerViewHoverListener;->getHoverTranslationXTag(Landroid/view/View;)F
-
-    move-result v3
-
-    invoke-static {v2, v3}, Lmiuix/animation/controller/FolmeHover;->access$102(Lmiuix/animation/controller/FolmeHover;F)F
-
-    :cond_0
-    invoke-static {v2, p1, p2, v1}, Lmiuix/animation/controller/FolmeHover;->access$200(Lmiuix/animation/controller/FolmeHover;Landroid/view/View;Landroid/view/MotionEvent;[Lmiuix/animation/base/AnimConfig;)V
+    .line 4
+    invoke-static {v1, p1, p2, v0}, Lmiuix/animation/controller/FolmeHover;->access$100(Lmiuix/animation/controller/FolmeHover;Landroid/view/View;Landroid/view/MotionEvent;[Lmiuix/animation/base/AnimConfig;)V
 
     goto :goto_0
 
-    :cond_1
+    :cond_0
     const/4 p0, 0x0
 
     return p0
@@ -178,10 +125,12 @@
 .method public removeHover(Lmiuix/animation/controller/FolmeHover;)Z
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/controller/FolmeHover$InnerViewHoverListener;->mHoverMap:Ljava/util/WeakHashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object p0, p0, Lmiuix/animation/controller/FolmeHover$InnerViewHoverListener;->mHoverMap:Ljava/util/WeakHashMap;
 
     invoke-virtual {p0}, Ljava/util/WeakHashMap;->isEmpty()Z

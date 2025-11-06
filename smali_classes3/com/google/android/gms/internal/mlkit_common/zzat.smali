@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field zza:[Ljava/lang/Object;
+.field public zza:[Ljava/lang/Object;
 
-.field zzb:I
+.field public zzb:I
 
-.field zzc:Lcom/google/android/gms/internal/mlkit_common/zzas;
+.field public zzc:Lcom/google/android/gms/internal/mlkit_common/zzas;
 
 
 # direct methods
@@ -35,6 +35,7 @@
 .method public final zza(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/android/gms/internal/mlkit_common/zzat;
     .locals 3
 
+    .line 1
     iget v0, p0, Lcom/google/android/gms/internal/mlkit_common/zzat;->zzb:I
 
     add-int/lit8 v0, v0, 0x1
@@ -47,16 +48,19 @@
 
     if-le v0, v2, :cond_0
 
+    .line 2
     invoke-static {v2, v0}, Lcom/google/android/gms/internal/mlkit_common/zzam;->zza(II)I
 
     move-result v0
 
+    .line 3
     invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/gms/internal/mlkit_common/zzat;->zza:[Ljava/lang/Object;
 
+    .line 4
     :cond_0
     invoke-static {p1, p2}, Lcom/google/android/gms/internal/mlkit_common/zzai;->zza(Ljava/lang/Object;Ljava/lang/Object;)V
 
@@ -66,10 +70,12 @@
 
     add-int v2, v1, v1
 
+    .line 5
     aput-object p1, v0, v2
 
     add-int/lit8 v2, v2, 0x1
 
+    .line 6
     aput-object p2, v0, v2
 
     add-int/lit8 v1, v1, 0x1
@@ -82,6 +88,7 @@
 .method public final zzb()Lcom/google/android/gms/internal/mlkit_common/zzau;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_common/zzat;->zzc:Lcom/google/android/gms/internal/mlkit_common/zzas;
 
     if-nez v0, :cond_1
@@ -100,6 +107,7 @@
 
     return-object v0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_common/zzas;->zza()Ljava/lang/IllegalArgumentException;
 
@@ -107,6 +115,7 @@
 
     throw p0
 
+    .line 3
     :cond_1
     invoke-virtual {v0}, Lcom/google/android/gms/internal/mlkit_common/zzas;->zza()Ljava/lang/IllegalArgumentException;
 

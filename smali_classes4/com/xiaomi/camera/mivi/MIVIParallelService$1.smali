@@ -1,5 +1,5 @@
-.class Lcom/xiaomi/camera/mivi/MIVIParallelService$1;
-.super Ltv/c$b;
+.class public Lcom/xiaomi/camera/mivi/MIVIParallelService$1;
+.super Lt/a/a/a/a/c$b;
 .source "SourceFile"
 
 
@@ -15,25 +15,43 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/xiaomi/camera/mivi/MIVIParallelService;
+.field public final synthetic this$0:Lcom/xiaomi/camera/mivi/MIVIParallelService;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/camera/mivi/MIVIParallelService;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/mivi/MIVIParallelService$1;->this$0:Lcom/xiaomi/camera/mivi/MIVIParallelService;
 
-    invoke-direct {p0}, Ltv/c$b;-><init>()V
+    invoke-direct {p0}, Lt/a/a/a/a/c$b;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public notifyCallback(Ltv/a;)Z
+.method public notifyCallback(Lt/a/a/a/a/a;)Z
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "callbackData"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -52,13 +70,14 @@
 
     invoke-static {v1, v0}, Lcom/android/camera/log/LogK;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 2
     iget-object p0, p0, Lcom/xiaomi/camera/mivi/MIVIParallelService$1;->this$0:Lcom/xiaomi/camera/mivi/MIVIParallelService;
 
     invoke-static {p0}, Lcom/xiaomi/camera/mivi/MIVIParallelService;->access$000(Lcom/xiaomi/camera/mivi/MIVIParallelService;)Lcom/xiaomi/camera/mivi/ImageReceiverExecutor;
 
     move-result-object p0
 
-    invoke-static {p1}, Lcom/xiaomi/camera/mivi/bean/RequestData;->opt(Ltv/a;)Lcom/xiaomi/camera/mivi/bean/RequestData;
+    invoke-static {p1}, Lcom/xiaomi/camera/mivi/bean/RequestData;->opt(Lt/a/a/a/a/a;)Lcom/xiaomi/camera/mivi/bean/RequestData;
 
     move-result-object p1
 
@@ -71,32 +90,44 @@
 
 .method public notifySnapshotAvailability(I)Z
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "available"
+        }
+    .end annotation
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 1
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lid/b;->M6()Z
+    invoke-virtual {p0}, Ld/k/a/b;->A6()Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    invoke-static {}, Lib/k;->h()Lib/k;
+    .line 2
+    invoke-static {}, Ld/d/b/z5/o;->d()Ld/d/b/z5/o;
 
     move-result-object p0
 
-    invoke-virtual {p0, p1}, Lib/k;->u(I)V
+    invoke-virtual {p0, p1}, Ld/d/b/z5/o;->u(I)V
 
     goto :goto_0
 
+    .line 3
     :cond_0
-    invoke-static {}, Lse/d;->l()Lse/d;
+    invoke-static {}, Ld/o/f/d;->i()Ld/o/f/d;
 
     move-result-object p0
 
-    invoke-virtual {p0, p1}, Lse/d;->A(I)V
+    invoke-virtual {p0, p1}, Ld/o/f/d;->A(I)V
 
+    .line 4
     :goto_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -131,7 +162,18 @@
 
 .method public onCaptureCompleted(Ljava/lang/String;I)Z
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "pictureName",
+            "frameNumber"
+        }
+    .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -156,38 +198,42 @@
 
     invoke-static {v0, p0}, Lcom/android/camera/log/LogK;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 2
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lid/b;->M6()Z
+    invoke-virtual {p0}, Ld/k/a/b;->A6()Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    invoke-static {}, Lib/k;->h()Lib/k;
+    .line 3
+    invoke-static {}, Ld/d/b/z5/o;->d()Ld/d/b/z5/o;
 
     move-result-object p0
 
-    invoke-virtual {p0, p1, p2}, Lib/k;->o(Ljava/lang/String;I)V
+    invoke-virtual {p0, p1, p2}, Ld/d/b/z5/o;->o(Ljava/lang/String;I)V
 
-    invoke-static {}, Lib/n;->n()Lib/n;
+    .line 4
+    invoke-static {}, Ld/d/b/z5/r;->n()Ld/d/b/z5/r;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lib/n;->z()V
+    invoke-virtual {p0}, Ld/d/b/z5/r;->z()V
 
     goto :goto_0
 
+    .line 5
     :cond_0
-    invoke-static {}, Lse/d;->l()Lse/d;
+    invoke-static {}, Ld/o/f/d;->i()Ld/o/f/d;
 
     move-result-object p0
 
     int-to-long v0, p2
 
-    invoke-virtual {p0, p1, v0, v1}, Lse/d;->u(Ljava/lang/String;J)V
+    invoke-virtual {p0, p1, v0, v1}, Ld/o/f/d;->u(Ljava/lang/String;J)V
 
     :goto_0
     const/4 p0, 0x1
@@ -197,35 +243,48 @@
 
 .method public onCaptureFailed(Ljava/lang/String;I)Z
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "pictureName",
+            "frameNumber"
+        }
+    .end annotation
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 1
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lid/b;->M6()Z
+    invoke-virtual {p0}, Ld/k/a/b;->A6()Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    invoke-static {}, Lib/k;->h()Lib/k;
+    .line 2
+    invoke-static {}, Ld/d/b/z5/o;->d()Ld/d/b/z5/o;
 
     move-result-object p0
 
     int-to-long v0, p2
 
-    invoke-virtual {p0, p1, v0, v1}, Lib/k;->p(Ljava/lang/String;J)V
+    invoke-virtual {p0, p1, v0, v1}, Ld/d/b/z5/o;->p(Ljava/lang/String;J)V
 
     goto :goto_0
 
+    .line 3
     :cond_0
-    invoke-static {}, Lse/d;->l()Lse/d;
+    invoke-static {}, Ld/o/f/d;->i()Ld/o/f/d;
 
     move-result-object p0
 
     int-to-long v0, p2
 
-    invoke-virtual {p0, p1, v0, v1}, Lse/d;->v(Ljava/lang/String;J)V
+    invoke-virtual {p0, p1, v0, v1}, Ld/o/f/d;->v(Ljava/lang/String;J)V
 
     :goto_0
     const/4 p0, 0x1

@@ -32,6 +32,7 @@
 .method public static validateLexical(Ljava/lang/String;Lorg/apache/xmlbeans/impl/common/ValidationContext;)V
     .locals 2
 
+    .line 1
     invoke-static {p0}, Lorg/apache/xmlbeans/impl/common/XMLChar;->isValidNCName(Ljava/lang/String;)Z
 
     move-result v0
@@ -48,6 +49,7 @@
 
     const-string p0, "NCName"
 
+    .line 2
     invoke-interface {p1, p0, v0}, Lorg/apache/xmlbeans/impl/common/ValidationContext;->invalid(Ljava/lang/String;[Ljava/lang/Object;)V
 
     :cond_0

@@ -1,4 +1,4 @@
-.class abstract Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig;
+.class public abstract Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final DEFAULT:Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig;
+.field public static final DEFAULT:Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig;
 
 .field private static final DURATION_ONE_WEEK_MS:J = 0x240c8400L
 
@@ -32,40 +32,47 @@
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig;->builder()Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig$Builder;
 
     move-result-object v0
 
     const-wide/32 v1, 0xa00000
 
+    .line 2
     invoke-virtual {v0, v1, v2}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig$Builder;->setMaxStorageSizeInBytes(J)Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig$Builder;
 
     move-result-object v0
 
     const/16 v1, 0xc8
 
+    .line 3
     invoke-virtual {v0, v1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig$Builder;->setLoadBatchSize(I)Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig$Builder;
 
     move-result-object v0
 
     const/16 v1, 0x2710
 
+    .line 4
     invoke-virtual {v0, v1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig$Builder;->setCriticalSectionEnterTimeoutMs(I)Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig$Builder;
 
     move-result-object v0
 
     const-wide/32 v1, 0x240c8400
 
+    .line 5
     invoke-virtual {v0, v1, v2}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig$Builder;->setEventCleanUpAge(J)Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig$Builder;
 
     move-result-object v0
 
     const v1, 0x14000
 
+    .line 6
     invoke-virtual {v0, v1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig$Builder;->setMaxBlobByteSizePerRow(I)Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig$Builder;
 
     move-result-object v0
 
+    .line 7
     invoke-virtual {v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig$Builder;->build()Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig;
 
     move-result-object v0
@@ -78,6 +85,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -86,6 +94,7 @@
 .method public static builder()Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig$Builder;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_EventStoreConfig$Builder;
 
     invoke-direct {v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/AutoValue_EventStoreConfig$Builder;-><init>()V
@@ -113,10 +122,12 @@
 .method public toBuilder()Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig$Builder;
     .locals 3
 
+    .line 1
     invoke-static {}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig;->builder()Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig$Builder;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig;->getMaxStorageSizeInBytes()J
 
     move-result-wide v1
@@ -125,6 +136,7 @@
 
     move-result-object v0
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig;->getLoadBatchSize()I
 
     move-result v1
@@ -133,6 +145,7 @@
 
     move-result-object v0
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig;->getCriticalSectionEnterTimeoutMs()I
 
     move-result v1
@@ -141,6 +154,7 @@
 
     move-result-object v0
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig;->getEventCleanUpAge()J
 
     move-result-wide v1
@@ -149,6 +163,7 @@
 
     move-result-object v0
 
+    .line 6
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig;->getMaxBlobByteSizePerRow()I
 
     move-result p0

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/ConcatenatingMediaSource$MessageData;
+.class public final Lcom/google/android/exoplayer2/source/ConcatenatingMediaSource$MessageData;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -55,12 +55,16 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/source/ConcatenatingMediaSource$MessageData;->index:I
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/exoplayer2/source/ConcatenatingMediaSource$MessageData;->customData:Ljava/lang/Object;
 
+    .line 4
     iput-object p3, p0, Lcom/google/android/exoplayer2/source/ConcatenatingMediaSource$MessageData;->onCompletionAction:Lcom/google/android/exoplayer2/source/ConcatenatingMediaSource$HandlerAndRunnable;
 
     return-void

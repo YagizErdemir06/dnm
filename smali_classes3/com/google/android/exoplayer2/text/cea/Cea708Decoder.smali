@@ -237,14 +237,17 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/cea/CeaDecoder;-><init>()V
 
+    .line 2
     new-instance v0, Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->ccData:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
+    .line 3
     new-instance v0, Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;-><init>()V
@@ -253,6 +256,7 @@
 
     const/4 v0, -0x1
 
+    .line 4
     iput v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->previousSequenceNumber:I
 
     const/4 v1, 0x1
@@ -261,6 +265,7 @@
 
     move p1, v1
 
+    .line 5
     :cond_0
     iput p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->selectedServiceNumber:I
 
@@ -268,6 +273,7 @@
 
     if-eqz p2, :cond_1
 
+    .line 6
     invoke-static {p2}, Lcom/google/android/exoplayer2/util/CodecSpecificDataUtil;->parseCea708InitializationData(Ljava/util/List;)Z
 
     move-result p2
@@ -286,6 +292,7 @@
 
     new-array v0, p2, [Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
+    .line 7
     iput-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->cueInfoBuilders:[Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
     move v0, p1
@@ -293,6 +300,7 @@
     :goto_1
     if-ge v0, p2, :cond_2
 
+    .line 8
     iget-object v1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->cueInfoBuilders:[Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
     new-instance v2, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
@@ -305,6 +313,7 @@
 
     goto :goto_1
 
+    .line 9
     :cond_2
     iget-object p2, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->cueInfoBuilders:[Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -318,17 +327,20 @@
 .method private finalizeCurrentPacket()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentDtvCcPacket:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$DtvCcPacket;
 
     if-nez v0, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->processCurrentPacket()V
 
     const/4 v0, 0x0
 
+    .line 3
     iput-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentDtvCcPacket:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$DtvCcPacket;
 
     return-void
@@ -345,6 +357,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -358,6 +371,7 @@
 
     if-ge v2, v3, :cond_1
 
+    .line 2
     iget-object v3, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->cueInfoBuilders:[Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
     aget-object v3, v3, v2
@@ -378,6 +392,7 @@
 
     if-eqz v3, :cond_0
 
+    .line 3
     iget-object v3, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->cueInfoBuilders:[Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
     aget-object v3, v3, v2
@@ -388,6 +403,7 @@
 
     if-eqz v3, :cond_0
 
+    .line 4
     invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_0
@@ -395,6 +411,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     invoke-static {}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$Cea708CueInfo;->access$000()Ljava/util/Comparator;
 
@@ -402,6 +419,7 @@
 
     invoke-static {v0, p0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
+    .line 6
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -410,6 +428,7 @@
 
     invoke-direct {p0, v2}, Ljava/util/ArrayList;-><init>(I)V
 
+    .line 7
     :goto_1
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -417,6 +436,7 @@
 
     if-ge v1, v2, :cond_2
 
+    .line 8
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -431,6 +451,7 @@
 
     goto :goto_1
 
+    .line 9
     :cond_2
     invoke-static {p0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
@@ -464,6 +485,7 @@
 
     if-gt p1, v1, :cond_0
 
+    .line 1
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -480,6 +502,7 @@
 
     invoke-static {v2, p1}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
@@ -495,6 +518,7 @@
 
     if-gt p1, v0, :cond_1
 
+    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -511,6 +535,7 @@
 
     invoke-static {v2, p1}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/16 p1, 0x10
@@ -519,6 +544,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -538,6 +564,7 @@
 
     goto :goto_0
 
+    .line 6
     :pswitch_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -547,11 +574,13 @@
 
     goto :goto_0
 
+    .line 7
     :pswitch_1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->resetCueBuilders()V
 
     goto :goto_0
 
+    .line 8
     :cond_2
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -559,6 +588,7 @@
 
     goto :goto_0
 
+    .line 9
     :cond_3
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->getDisplayCues()Ljava/util/List;
 
@@ -590,6 +620,7 @@
 
     packed-switch p1, :pswitch_data_0
 
+    .line 1
     :pswitch_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -614,14 +645,18 @@
     :pswitch_1
     add-int/lit16 p1, p1, -0x98
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->handleDefineWindow(I)V
 
+    .line 3
     iget v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentWindow:I
 
     if-eq v0, p1, :cond_9
 
+    .line 4
     iput p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentWindow:I
 
+    .line 5
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->cueInfoBuilders:[Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
     aget-object p1, v0, p1
@@ -630,6 +665,7 @@
 
     goto/16 :goto_5
 
+    .line 6
     :pswitch_2
     iget-object p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -639,6 +675,7 @@
 
     if-nez p1, :cond_0
 
+    .line 7
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/16 p1, 0x20
@@ -647,11 +684,13 @@
 
     goto/16 :goto_5
 
+    .line 8
     :cond_0
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->handleSetWindowAttributes()V
 
     goto/16 :goto_5
 
+    .line 9
     :pswitch_3
     iget-object p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -661,17 +700,20 @@
 
     if-nez p1, :cond_1
 
+    .line 10
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
     goto/16 :goto_5
 
+    .line 11
     :cond_1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->handleSetPenLocation()V
 
     goto/16 :goto_5
 
+    .line 12
     :pswitch_4
     iget-object p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -681,6 +723,7 @@
 
     if-nez p1, :cond_2
 
+    .line 13
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/16 p1, 0x18
@@ -689,11 +732,13 @@
 
     goto/16 :goto_5
 
+    .line 14
     :cond_2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->handleSetPenColor()V
 
     goto/16 :goto_5
 
+    .line 15
     :pswitch_5
     iget-object p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -703,22 +748,26 @@
 
     if-nez p1, :cond_3
 
+    .line 16
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
     goto/16 :goto_5
 
+    .line 17
     :cond_3
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->handleSetPenAttributes()V
 
     goto/16 :goto_5
 
+    .line 18
     :pswitch_6
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->resetCueBuilders()V
 
     goto/16 :goto_5
 
+    .line 19
     :pswitch_7
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
@@ -730,6 +779,7 @@
     :pswitch_8
     if-gt v2, v1, :cond_9
 
+    .line 20
     iget-object p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBit()Z
@@ -738,6 +788,7 @@
 
     if-eqz p1, :cond_4
 
+    .line 21
     iget-object p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->cueInfoBuilders:[Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
     rsub-int/lit8 v0, v2, 0x8
@@ -757,6 +808,7 @@
     :goto_1
     if-gt p1, v1, :cond_9
 
+    .line 22
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBit()Z
@@ -765,12 +817,14 @@
 
     if-eqz v0, :cond_5
 
+    .line 23
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->cueInfoBuilders:[Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
     rsub-int/lit8 v3, p1, 0x8
 
     aget-object v0, v0, v3
 
+    .line 24
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;->isVisible()Z
 
     move-result v3
@@ -788,6 +842,7 @@
     :pswitch_a
     if-gt v2, v1, :cond_9
 
+    .line 25
     iget-object p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBit()Z
@@ -796,6 +851,7 @@
 
     if-eqz p1, :cond_6
 
+    .line 26
     iget-object p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->cueInfoBuilders:[Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
     rsub-int/lit8 v0, v2, 0x8
@@ -817,6 +873,7 @@
     :goto_3
     if-gt p1, v1, :cond_9
 
+    .line 27
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBit()Z
@@ -825,6 +882,7 @@
 
     if-eqz v0, :cond_7
 
+    .line 28
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->cueInfoBuilders:[Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
     rsub-int/lit8 v3, p1, 0x8
@@ -842,6 +900,7 @@
     :pswitch_c
     if-gt v2, v1, :cond_9
 
+    .line 29
     iget-object p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBit()Z
@@ -850,6 +909,7 @@
 
     if-eqz p1, :cond_8
 
+    .line 30
     iget-object p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->cueInfoBuilders:[Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
     rsub-int/lit8 v0, v2, 0x8
@@ -866,12 +926,15 @@
     :pswitch_d
     add-int/lit8 p1, p1, -0x80
 
+    .line 31
     iget v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentWindow:I
 
     if-eq v0, p1, :cond_9
 
+    .line 32
     iput p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentWindow:I
 
+    .line 33
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->cueInfoBuilders:[Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
     aget-object p1, v0, p1
@@ -934,6 +997,7 @@
 
     if-gt p1, v0, :cond_1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/16 p1, 0x8
@@ -947,6 +1011,7 @@
 
     if-gt p1, v0, :cond_2
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/16 p1, 0x10
@@ -960,6 +1025,7 @@
 
     if-gt p1, v0, :cond_3
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/16 p1, 0x18
@@ -978,6 +1044,7 @@
 
     if-gt p1, v0, :cond_0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/16 p1, 0x20
@@ -991,6 +1058,7 @@
 
     if-gt p1, v0, :cond_1
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/16 p1, 0x28
@@ -1004,12 +1072,14 @@
 
     if-gt p1, v0, :cond_2
 
+    .line 3
     iget-object p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/4 v0, 0x2
 
     invoke-virtual {p1, v0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
+    .line 4
     iget-object p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/4 v0, 0x6
@@ -1018,6 +1088,7 @@
 
     move-result p1
 
+    .line 5
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     mul-int/lit8 p1, p1, 0x8
@@ -1032,34 +1103,40 @@
 .method private handleDefineWindow(I)V
     .locals 14
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->cueInfoBuilders:[Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
     aget-object v1, v0, p1
 
+    .line 2
     iget-object p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/4 v0, 0x2
 
     invoke-virtual {p1, v0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
+    .line 3
     iget-object p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBit()Z
 
     move-result v2
 
+    .line 4
     iget-object p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBit()Z
 
     move-result v3
 
+    .line 5
     iget-object p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBit()Z
 
     move-result v4
 
+    .line 6
     iget-object p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/4 v5, 0x3
@@ -1068,12 +1145,14 @@
 
     move-result p1
 
+    .line 7
     iget-object v6, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v6}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBit()Z
 
     move-result v6
 
+    .line 8
     iget-object v7, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/4 v8, 0x7
@@ -1082,6 +1161,7 @@
 
     move-result v7
 
+    .line 9
     iget-object v8, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/16 v9, 0x8
@@ -1090,6 +1170,7 @@
 
     move-result v8
 
+    .line 10
     iget-object v9, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/4 v10, 0x4
@@ -1098,16 +1179,19 @@
 
     move-result v11
 
+    .line 11
     iget-object v9, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v9, v10}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v9
 
+    .line 12
     iget-object v10, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v10, v0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
+    .line 13
     iget-object v10, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/4 v12, 0x6
@@ -1116,16 +1200,19 @@
 
     move-result v10
 
+    .line 14
     iget-object v12, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v12, v0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
+    .line 15
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v0, v5}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v12
 
+    .line 16
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {p0, v5}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
@@ -1134,6 +1221,7 @@
 
     move v5, p1
 
+    .line 17
     invoke-virtual/range {v1 .. v13}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;->defineWindow(ZZZIZIIIIIII)V
 
     return-void
@@ -1146,6 +1234,7 @@
 
     if-ne p1, v0, :cond_0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
     const/16 p1, 0x266b
@@ -1154,6 +1243,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -1170,6 +1260,7 @@
 .method private handleG1Character(I)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
     and-int/lit16 p1, p1, 0xff
@@ -1228,6 +1319,7 @@
 
     packed-switch p1, :pswitch_data_1
 
+    .line 1
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1248,6 +1340,7 @@
 
     goto/16 :goto_0
 
+    .line 2
     :pswitch_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -1257,6 +1350,7 @@
 
     goto/16 :goto_0
 
+    .line 3
     :pswitch_1
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -1266,6 +1360,7 @@
 
     goto/16 :goto_0
 
+    .line 4
     :pswitch_2
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -1275,6 +1370,7 @@
 
     goto/16 :goto_0
 
+    .line 5
     :pswitch_3
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -1284,6 +1380,7 @@
 
     goto/16 :goto_0
 
+    .line 6
     :pswitch_4
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -1293,6 +1390,7 @@
 
     goto/16 :goto_0
 
+    .line 7
     :pswitch_5
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -1302,6 +1400,7 @@
 
     goto/16 :goto_0
 
+    .line 8
     :pswitch_6
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -1311,6 +1410,7 @@
 
     goto/16 :goto_0
 
+    .line 9
     :pswitch_7
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -1320,6 +1420,7 @@
 
     goto/16 :goto_0
 
+    .line 10
     :pswitch_8
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -1329,6 +1430,7 @@
 
     goto/16 :goto_0
 
+    .line 11
     :pswitch_9
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -1338,6 +1440,7 @@
 
     goto/16 :goto_0
 
+    .line 12
     :pswitch_a
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -1347,6 +1450,7 @@
 
     goto/16 :goto_0
 
+    .line 13
     :pswitch_b
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -1356,6 +1460,7 @@
 
     goto/16 :goto_0
 
+    .line 14
     :pswitch_c
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -1365,6 +1470,7 @@
 
     goto/16 :goto_0
 
+    .line 15
     :pswitch_d
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -1374,6 +1480,7 @@
 
     goto :goto_0
 
+    .line 16
     :pswitch_e
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -1383,6 +1490,7 @@
 
     goto :goto_0
 
+    .line 17
     :pswitch_f
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -1392,6 +1500,7 @@
 
     goto :goto_0
 
+    .line 18
     :cond_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -1401,6 +1510,7 @@
 
     goto :goto_0
 
+    .line 19
     :cond_1
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -1410,6 +1520,7 @@
 
     goto :goto_0
 
+    .line 20
     :cond_2
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -1419,6 +1530,7 @@
 
     goto :goto_0
 
+    .line 21
     :cond_3
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -1428,6 +1540,7 @@
 
     goto :goto_0
 
+    .line 22
     :cond_4
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -1437,6 +1550,7 @@
 
     goto :goto_0
 
+    .line 23
     :cond_5
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -1446,6 +1560,7 @@
 
     goto :goto_0
 
+    .line 24
     :cond_6
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -1455,6 +1570,7 @@
 
     goto :goto_0
 
+    .line 25
     :cond_7
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -1464,6 +1580,7 @@
 
     goto :goto_0
 
+    .line 26
     :cond_8
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -1473,6 +1590,7 @@
 
     goto :goto_0
 
+    .line 27
     :cond_9
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
@@ -1515,6 +1633,7 @@
 
     if-ne p1, v0, :cond_0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
     const/16 p1, 0x33c4
@@ -1523,6 +1642,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1542,6 +1662,7 @@
 
     invoke-static {v0, p1}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
     const/16 p1, 0x5f
@@ -1555,6 +1676,7 @@
 .method private handleSetPenAttributes()V
     .locals 10
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/4 v1, 0x4
@@ -1563,6 +1685,7 @@
 
     move-result v3
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/4 v1, 0x2
@@ -1571,24 +1694,28 @@
 
     move-result v4
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v5
 
+    .line 4
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBit()Z
 
     move-result v6
 
+    .line 5
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBit()Z
 
     move-result v7
 
+    .line 6
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/4 v1, 0x3
@@ -1597,12 +1724,14 @@
 
     move-result v8
 
+    .line 7
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v9
 
+    .line 8
     iget-object v2, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
     invoke-virtual/range {v2 .. v9}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;->setPenAttributes(IIIZZII)V
@@ -1613,6 +1742,7 @@
 .method private handleSetPenColor()V
     .locals 6
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/4 v1, 0x2
@@ -1621,82 +1751,97 @@
 
     move-result v0
 
+    .line 2
     iget-object v2, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v2, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v2
 
+    .line 3
     iget-object v3, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v3, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v3
 
+    .line 4
     iget-object v4, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v4, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v4
 
+    .line 5
     invoke-static {v2, v3, v4, v0}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;->getArgbColorFromCeaColor(IIII)I
 
     move-result v0
 
+    .line 6
     iget-object v2, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v2, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v2
 
+    .line 7
     iget-object v3, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v3, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v3
 
+    .line 8
     iget-object v4, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v4, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v4
 
+    .line 9
     iget-object v5, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v5, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v5
 
+    .line 10
     invoke-static {v3, v4, v5, v2}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;->getArgbColorFromCeaColor(IIII)I
 
     move-result v2
 
+    .line 11
     iget-object v3, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v3, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
+    .line 12
     iget-object v3, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v3, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v3
 
+    .line 13
     iget-object v4, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v4, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v4
 
+    .line 14
     iget-object v5, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v5, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v1
 
+    .line 15
     invoke-static {v3, v4, v1}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;->getArgbColorFromCeaColor(III)I
 
     move-result v1
 
+    .line 16
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
     invoke-virtual {p0, v0, v2, v1}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;->setPenColor(III)V
@@ -1707,24 +1852,28 @@
 .method private handleSetPenLocation()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v0
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/4 v2, 0x2
 
     invoke-virtual {v1, v2}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
+    .line 4
     iget-object v1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/4 v2, 0x6
@@ -1733,6 +1882,7 @@
 
     move-result v1
 
+    .line 5
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
     invoke-virtual {p0, v0, v1}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;->setPenLocation(II)V
@@ -1743,6 +1893,7 @@
 .method private handleSetWindowAttributes()V
     .locals 13
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/4 v1, 0x2
@@ -1751,56 +1902,66 @@
 
     move-result v0
 
+    .line 2
     iget-object v2, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v2, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v2
 
+    .line 3
     iget-object v3, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v3, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v3
 
+    .line 4
     iget-object v4, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v4, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v4
 
+    .line 5
     invoke-static {v2, v3, v4, v0}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;->getArgbColorFromCeaColor(IIII)I
 
     move-result v6
 
+    .line 6
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v0
 
+    .line 7
     iget-object v2, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v2, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v2
 
+    .line 8
     iget-object v3, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v3, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v3
 
+    .line 9
     iget-object v4, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v4, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v4
 
+    .line 10
     invoke-static {v2, v3, v4}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;->getArgbColorFromCeaColor(III)I
 
     move-result v7
 
+    .line 11
     iget-object v2, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBit()Z
@@ -1814,36 +1975,42 @@
     :cond_0
     move v9, v0
 
+    .line 12
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBit()Z
 
     move-result v8
 
+    .line 13
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v10
 
+    .line 14
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v11
 
+    .line 15
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v12
 
+    .line 16
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
+    .line 17
     iget-object v5, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
     invoke-virtual/range {v5 .. v12}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;->setWindowAttributes(IIZIIII)V
@@ -1859,6 +2026,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentDtvCcPacket:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$DtvCcPacket;
 
     iget v1, v0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$DtvCcPacket;->currentIndex:I
@@ -1877,6 +2045,7 @@
 
     if-eq v1, v0, :cond_0
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1926,18 +2095,20 @@
     invoke-static {v4, v0}, Lcom/google/android/exoplayer2/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
-    iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
-
-    iget-object v1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentDtvCcPacket:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$DtvCcPacket;
-
-    iget-object v5, v1, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$DtvCcPacket;->packetData:[B
-
-    iget v1, v1, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$DtvCcPacket;->currentIndex:I
-
-    invoke-virtual {v0, v5, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->reset([BI)V
-
     const/4 v0, 0x0
 
+    .line 3
+    iget-object v1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
+
+    iget-object v5, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentDtvCcPacket:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$DtvCcPacket;
+
+    iget-object v6, v5, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$DtvCcPacket;->packetData:[B
+
+    iget v5, v5, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$DtvCcPacket;->currentIndex:I
+
+    invoke-virtual {v1, v6, v5}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->reset([BI)V
+
+    .line 4
     :cond_1
     :goto_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
@@ -1948,6 +2119,7 @@
 
     if-lez v1, :cond_e
 
+    .line 5
     iget-object v1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/4 v5, 0x3
@@ -1956,6 +2128,7 @@
 
     move-result v1
 
+    .line 6
     iget-object v5, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/4 v6, 0x5
@@ -1968,10 +2141,12 @@
 
     if-ne v1, v6, :cond_2
 
+    .line 7
     iget-object v1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v1, v2}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
+    .line 8
     iget-object v1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/4 v7, 0x6
@@ -1982,6 +2157,7 @@
 
     if-ge v1, v6, :cond_2
 
+    .line 9
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2003,6 +2179,7 @@
 
     if-eqz v1, :cond_e
 
+    .line 10
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2025,17 +2202,20 @@
 
     goto/16 :goto_3
 
+    .line 11
     :cond_3
     iget v6, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->selectedServiceNumber:I
 
     if-eq v1, v6, :cond_4
 
+    .line 12
     iget-object v1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v1, v5}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBytes(I)V
 
     goto :goto_0
 
+    .line 13
     :cond_4
     iget-object v1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
@@ -2047,6 +2227,7 @@
 
     add-int/2addr v1, v5
 
+    .line 14
     :goto_1
     iget-object v5, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
@@ -2056,6 +2237,7 @@
 
     if-ge v5, v1, :cond_1
 
+    .line 15
     iget-object v5, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     const/16 v6, 0x8
@@ -2078,6 +2260,7 @@
 
     if-gt v5, v11, :cond_5
 
+    .line 16
     invoke-direct {p0, v5}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->handleC0Command(I)V
 
     goto :goto_1
@@ -2085,6 +2268,7 @@
     :cond_5
     if-gt v5, v10, :cond_6
 
+    .line 17
     invoke-direct {p0, v5}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->handleG0Character(I)V
 
     goto :goto_2
@@ -2092,6 +2276,7 @@
     :cond_6
     if-gt v5, v9, :cond_7
 
+    .line 18
     invoke-direct {p0, v5}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->handleC1Command(I)V
 
     goto :goto_2
@@ -2099,10 +2284,12 @@
     :cond_7
     if-gt v5, v8, :cond_8
 
+    .line 19
     invoke-direct {p0, v5}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->handleG1Character(I)V
 
     goto :goto_2
 
+    .line 20
     :cond_8
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -2122,6 +2309,7 @@
 
     goto :goto_1
 
+    .line 21
     :cond_9
     iget-object v5, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->captionChannelPacketData:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
@@ -2131,6 +2319,7 @@
 
     if-gt v5, v11, :cond_a
 
+    .line 22
     invoke-direct {p0, v5}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->handleC2Command(I)V
 
     goto :goto_1
@@ -2138,6 +2327,7 @@
     :cond_a
     if-gt v5, v10, :cond_b
 
+    .line 23
     invoke-direct {p0, v5}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->handleG2Character(I)V
 
     :goto_2
@@ -2148,6 +2338,7 @@
     :cond_b
     if-gt v5, v9, :cond_c
 
+    .line 24
     invoke-direct {p0, v5}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->handleC3Command(I)V
 
     goto :goto_1
@@ -2155,10 +2346,12 @@
     :cond_c
     if-gt v5, v8, :cond_d
 
+    .line 25
     invoke-direct {p0, v5}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->handleG3Character(I)V
 
     goto :goto_2
 
+    .line 26
     :cond_d
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -2182,6 +2375,7 @@
     :goto_3
     if-eqz v0, :cond_f
 
+    .line 27
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->getDisplayCues()Ljava/util/List;
 
     move-result-object v0
@@ -2202,6 +2396,7 @@
 
     if-ge v0, v1, :cond_0
 
+    .line 1
     iget-object v1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->cueInfoBuilders:[Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
     aget-object v1, v1, v0
@@ -2221,10 +2416,12 @@
 .method public createSubtitle()Lcom/google/android/exoplayer2/text/Subtitle;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->cues:Ljava/util/List;
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->lastCues:Ljava/util/List;
 
+    .line 2
     new-instance p0, Lcom/google/android/exoplayer2/text/cea/CeaSubtitle;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2241,6 +2438,7 @@
 .method public decode(Lcom/google/android/exoplayer2/text/SubtitleInputBuffer;)V
     .locals 8
 
+    .line 1
     iget-object p1, p1, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->data:Ljava/nio/ByteBuffer;
 
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2249,18 +2447,21 @@
 
     check-cast p1, Ljava/nio/ByteBuffer;
 
+    .line 2
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object v0
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->ccData:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result p1
 
     invoke-virtual {v1, v0, p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->reset([BI)V
 
+    .line 4
     :cond_0
     :goto_0
     iget-object p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->ccData:Lcom/google/android/exoplayer2/util/ParsableByteArray;
@@ -2273,6 +2474,7 @@
 
     if-lt p1, v0, :cond_9
 
+    .line 5
     iget-object p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->ccData:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
@@ -2300,6 +2502,7 @@
     :cond_1
     move p1, v3
 
+    .line 6
     :goto_1
     iget-object v5, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->ccData:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
@@ -2309,6 +2512,7 @@
 
     int-to-byte v5, v5
 
+    .line 7
     iget-object v6, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->ccData:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v6}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
@@ -2335,12 +2539,14 @@
 
     if-ne v1, v0, :cond_6
 
+    .line 8
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->finalizeCurrentPacket()V
 
     and-int/lit16 v0, v5, 0xc0
 
     shr-int/lit8 v0, v0, 0x6
 
+    .line 9
     iget v1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->previousSequenceNumber:I
 
     const/4 v3, -0x1
@@ -2353,8 +2559,10 @@
 
     if-eq v0, v1, :cond_4
 
+    .line 10
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->resetCueBuilders()V
 
+    .line 11
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2379,6 +2587,7 @@
 
     invoke-static {p1, v1}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 12
     :cond_4
     iput v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->previousSequenceNumber:I
 
@@ -2388,6 +2597,7 @@
 
     const/16 p1, 0x40
 
+    .line 13
     :cond_5
     new-instance v1, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$DtvCcPacket;
 
@@ -2395,6 +2605,7 @@
 
     iput-object v1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentDtvCcPacket:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$DtvCcPacket;
 
+    .line 14
     iget-object p1, v1, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$DtvCcPacket;->packetData:[B
 
     iget v0, v1, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$DtvCcPacket;->currentIndex:I
@@ -2412,19 +2623,23 @@
 
     move v3, v4
 
+    .line 15
     :cond_7
     invoke-static {v3}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 16
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentDtvCcPacket:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$DtvCcPacket;
 
     if-nez v0, :cond_8
 
     const-string v0, "Encountered DTVCC_PACKET_DATA before DTVCC_PACKET_START"
 
+    .line 17
     invoke-static {p1, v0}, Lcom/google/android/exoplayer2/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
+    .line 18
     :cond_8
     iget-object p1, v0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$DtvCcPacket;->packetData:[B
 
@@ -2432,14 +2647,18 @@
 
     add-int/lit8 v2, v1, 0x1
 
+    iput v2, v0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$DtvCcPacket;->currentIndex:I
+
     aput-byte v5, p1, v1
 
     add-int/lit8 v1, v2, 0x1
 
+    .line 19
     iput v1, v0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$DtvCcPacket;->currentIndex:I
 
     aput-byte v6, p1, v2
 
+    .line 20
     :goto_2
     iget-object p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentDtvCcPacket:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$DtvCcPacket;
 
@@ -2453,6 +2672,7 @@
 
     if-ne v0, p1, :cond_0
 
+    .line 21
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->finalizeCurrentPacket()V
 
     goto/16 :goto_0
@@ -2472,6 +2692,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0}, Lcom/google/android/exoplayer2/text/cea/CeaDecoder;->dequeueInputBuffer()Lcom/google/android/exoplayer2/text/SubtitleInputBuffer;
 
     move-result-object p0
@@ -2490,6 +2711,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0}, Lcom/google/android/exoplayer2/text/cea/CeaDecoder;->dequeueOutputBuffer()Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;
 
     move-result-object p0
@@ -2500,26 +2722,33 @@
 .method public flush()V
     .locals 3
 
+    .line 1
     invoke-super {p0}, Lcom/google/android/exoplayer2/text/cea/CeaDecoder;->flush()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->cues:Ljava/util/List;
 
+    .line 3
     iput-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->lastCues:Ljava/util/List;
 
     const/4 v1, 0x0
 
+    .line 4
     iput v1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentWindow:I
 
+    .line 5
     iget-object v2, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->cueInfoBuilders:[Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
     aget-object v1, v2, v1
 
     iput-object v1, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentCueInfoBuilder:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$CueInfoBuilder;
 
+    .line 6
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->resetCueBuilders()V
 
+    .line 7
     iput-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->currentDtvCcPacket:Lcom/google/android/exoplayer2/text/cea/Cea708Decoder$DtvCcPacket;
 
     return-void
@@ -2536,6 +2765,7 @@
 .method public isNewSubtitleDataAvailable()Z
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->cues:Ljava/util/List;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/cea/Cea708Decoder;->lastCues:Ljava/util/List;
@@ -2561,6 +2791,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/android/exoplayer2/text/cea/CeaDecoder;->queueInputBuffer(Lcom/google/android/exoplayer2/text/SubtitleInputBuffer;)V
 
     return-void
@@ -2569,6 +2800,7 @@
 .method public bridge synthetic release()V
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/android/exoplayer2/text/cea/CeaDecoder;->release()V
 
     return-void
@@ -2577,6 +2809,7 @@
 .method public bridge synthetic setPositionUs(J)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/google/android/exoplayer2/text/cea/CeaDecoder;->setPositionUs(J)V
 
     return-void

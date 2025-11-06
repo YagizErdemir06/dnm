@@ -26,14 +26,17 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Lcom/google/common/math/StatsAccumulator;
 
     invoke-direct {v0}, Lcom/google/common/math/StatsAccumulator;-><init>()V
 
     iput-object v0, p0, Lcom/google/common/math/PairedStatsAccumulator;->xStats:Lcom/google/common/math/StatsAccumulator;
 
+    .line 3
     new-instance v0, Lcom/google/common/math/StatsAccumulator;
 
     invoke-direct {v0}, Lcom/google/common/math/StatsAccumulator;-><init>()V
@@ -42,6 +45,7 @@
 
     const-wide/16 v0, 0x0
 
+    .line 4
     iput-wide v0, p0, Lcom/google/common/math/PairedStatsAccumulator;->sumOfProductsOfDeltas:D
 
     return-void
@@ -56,6 +60,7 @@
 
     move-wide v0, p0
 
+    .line 1
     invoke-static/range {v0 .. v5}, Lcom/google/common/primitives/Doubles;->constrainToRange(DDD)D
 
     move-result-wide p0
@@ -85,10 +90,12 @@
 .method public add(DD)V
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/math/PairedStatsAccumulator;->xStats:Lcom/google/common/math/StatsAccumulator;
 
     invoke-virtual {v0, p1, p2}, Lcom/google/common/math/StatsAccumulator;->add(D)V
 
+    .line 2
     invoke-static {p1, p2}, Lcom/google/common/primitives/Doubles;->isFinite(D)Z
 
     move-result v0
@@ -101,6 +108,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/math/PairedStatsAccumulator;->xStats:Lcom/google/common/math/StatsAccumulator;
 
     invoke-virtual {v0}, Lcom/google/common/math/StatsAccumulator;->count()J
@@ -113,6 +121,7 @@
 
     if-lez v0, :cond_1
 
+    .line 4
     iget-wide v0, p0, Lcom/google/common/math/PairedStatsAccumulator;->sumOfProductsOfDeltas:D
 
     iget-object v2, p0, Lcom/google/common/math/PairedStatsAccumulator;->xStats:Lcom/google/common/math/StatsAccumulator;
@@ -142,8 +151,10 @@
     :cond_0
     const-wide/high16 p1, 0x7ff8000000000000L    # Double.NaN
 
+    .line 5
     iput-wide p1, p0, Lcom/google/common/math/PairedStatsAccumulator;->sumOfProductsOfDeltas:D
 
+    .line 6
     :cond_1
     :goto_0
     iget-object p0, p0, Lcom/google/common/math/PairedStatsAccumulator;->yStats:Lcom/google/common/math/StatsAccumulator;
@@ -156,6 +167,7 @@
 .method public addAll(Lcom/google/common/math/PairedStats;)V
     .locals 10
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/common/math/PairedStats;->count()J
 
     move-result-wide v0
@@ -168,6 +180,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/common/math/PairedStatsAccumulator;->xStats:Lcom/google/common/math/StatsAccumulator;
 
@@ -177,6 +190,7 @@
 
     invoke-virtual {v0, v1}, Lcom/google/common/math/StatsAccumulator;->addAll(Lcom/google/common/math/Stats;)V
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/math/PairedStatsAccumulator;->yStats:Lcom/google/common/math/StatsAccumulator;
 
     invoke-virtual {v0}, Lcom/google/common/math/StatsAccumulator;->count()J
@@ -187,6 +201,7 @@
 
     if-nez v0, :cond_1
 
+    .line 4
     invoke-virtual {p1}, Lcom/google/common/math/PairedStats;->sumOfProductsOfDeltas()D
 
     move-result-wide v0
@@ -195,13 +210,16 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     iget-wide v0, p0, Lcom/google/common/math/PairedStatsAccumulator;->sumOfProductsOfDeltas:D
 
+    .line 6
     invoke-virtual {p1}, Lcom/google/common/math/PairedStats;->sumOfProductsOfDeltas()D
 
     move-result-wide v2
 
+    .line 7
     invoke-virtual {p1}, Lcom/google/common/math/PairedStats;->xStats()Lcom/google/common/math/Stats;
 
     move-result-object v4
@@ -218,6 +236,7 @@
 
     sub-double/2addr v4, v6
 
+    .line 8
     invoke-virtual {p1}, Lcom/google/common/math/PairedStats;->yStats()Lcom/google/common/math/Stats;
 
     move-result-object v6
@@ -236,6 +255,7 @@
 
     mul-double/2addr v4, v6
 
+    .line 9
     invoke-virtual {p1}, Lcom/google/common/math/PairedStats;->count()J
 
     move-result-wide v6
@@ -250,6 +270,7 @@
 
     iput-wide v0, p0, Lcom/google/common/math/PairedStatsAccumulator;->sumOfProductsOfDeltas:D
 
+    .line 10
     :goto_0
     iget-object p0, p0, Lcom/google/common/math/PairedStatsAccumulator;->yStats:Lcom/google/common/math/StatsAccumulator;
 
@@ -265,6 +286,7 @@
 .method public count()J
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/math/PairedStatsAccumulator;->xStats:Lcom/google/common/math/StatsAccumulator;
 
     invoke-virtual {p0}, Lcom/google/common/math/StatsAccumulator;->count()J
@@ -277,6 +299,7 @@
 .method public final leastSquaresFit()Lcom/google/common/math/LinearTransformation;
     .locals 7
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/math/PairedStatsAccumulator;->count()J
 
     move-result-wide v0
@@ -301,6 +324,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
+    .line 2
     iget-wide v3, p0, Lcom/google/common/math/PairedStatsAccumulator;->sumOfProductsOfDeltas:D
 
     invoke-static {v3, v4}, Ljava/lang/Double;->isNaN(D)Z
@@ -309,12 +333,14 @@
 
     if-eqz v0, :cond_1
 
+    .line 3
     invoke-static {}, Lcom/google/common/math/LinearTransformation;->forNaN()Lcom/google/common/math/LinearTransformation;
 
     move-result-object p0
 
     return-object p0
 
+    .line 4
     :cond_1
     iget-object v0, p0, Lcom/google/common/math/PairedStatsAccumulator;->xStats:Lcom/google/common/math/StatsAccumulator;
 
@@ -328,6 +354,7 @@
 
     if-lez v0, :cond_3
 
+    .line 5
     iget-object v0, p0, Lcom/google/common/math/PairedStatsAccumulator;->yStats:Lcom/google/common/math/StatsAccumulator;
 
     invoke-virtual {v0}, Lcom/google/common/math/StatsAccumulator;->sumOfSquaresOfDeltas()D
@@ -338,6 +365,7 @@
 
     if-lez v0, :cond_2
 
+    .line 6
     iget-object v0, p0, Lcom/google/common/math/PairedStatsAccumulator;->xStats:Lcom/google/common/math/StatsAccumulator;
 
     invoke-virtual {v0}, Lcom/google/common/math/StatsAccumulator;->mean()D
@@ -358,12 +386,14 @@
 
     div-double/2addr v1, v3
 
+    .line 7
     invoke-virtual {v0, v1, v2}, Lcom/google/common/math/LinearTransformation$LinearTransformationBuilder;->withSlope(D)Lcom/google/common/math/LinearTransformation;
 
     move-result-object p0
 
     return-object p0
 
+    .line 8
     :cond_2
     iget-object p0, p0, Lcom/google/common/math/PairedStatsAccumulator;->yStats:Lcom/google/common/math/StatsAccumulator;
 
@@ -377,6 +407,7 @@
 
     return-object p0
 
+    .line 9
     :cond_3
     iget-object v0, p0, Lcom/google/common/math/PairedStatsAccumulator;->yStats:Lcom/google/common/math/StatsAccumulator;
 
@@ -396,6 +427,7 @@
     :goto_1
     invoke-static {v1}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
+    .line 10
     iget-object p0, p0, Lcom/google/common/math/PairedStatsAccumulator;->xStats:Lcom/google/common/math/StatsAccumulator;
 
     invoke-virtual {p0}, Lcom/google/common/math/StatsAccumulator;->mean()D
@@ -412,6 +444,7 @@
 .method public final pearsonsCorrelationCoefficient()D
     .locals 9
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/math/PairedStatsAccumulator;->count()J
 
     move-result-wide v0
@@ -436,6 +469,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
+    .line 2
     iget-wide v3, p0, Lcom/google/common/math/PairedStatsAccumulator;->sumOfProductsOfDeltas:D
 
     invoke-static {v3, v4}, Ljava/lang/Double;->isNaN(D)Z
@@ -448,6 +482,7 @@
 
     return-wide v0
 
+    .line 3
     :cond_1
     iget-object v0, p0, Lcom/google/common/math/PairedStatsAccumulator;->xStats:Lcom/google/common/math/StatsAccumulator;
 
@@ -455,6 +490,7 @@
 
     move-result-wide v3
 
+    .line 4
     iget-object v0, p0, Lcom/google/common/math/PairedStatsAccumulator;->yStats:Lcom/google/common/math/StatsAccumulator;
 
     invoke-virtual {v0}, Lcom/google/common/math/StatsAccumulator;->sumOfSquaresOfDeltas()D
@@ -474,6 +510,7 @@
     :cond_2
     move v0, v2
 
+    .line 5
     :goto_1
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
@@ -486,15 +523,18 @@
     :cond_3
     move v1, v2
 
+    .line 6
     :goto_2
     invoke-static {v1}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
     mul-double/2addr v3, v5
 
+    .line 7
     invoke-direct {p0, v3, v4}, Lcom/google/common/math/PairedStatsAccumulator;->ensurePositive(D)D
 
     move-result-wide v0
 
+    .line 8
     iget-wide v2, p0, Lcom/google/common/math/PairedStatsAccumulator;->sumOfProductsOfDeltas:D
 
     invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
@@ -513,6 +553,7 @@
 .method public populationCovariance()D
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/math/PairedStatsAccumulator;->count()J
 
     move-result-wide v0
@@ -533,6 +574,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
+    .line 2
     iget-wide v0, p0, Lcom/google/common/math/PairedStatsAccumulator;->sumOfProductsOfDeltas:D
 
     invoke-virtual {p0}, Lcom/google/common/math/PairedStatsAccumulator;->count()J
@@ -549,6 +591,7 @@
 .method public final sampleCovariance()D
     .locals 6
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/math/PairedStatsAccumulator;->count()J
 
     move-result-wide v0
@@ -569,6 +612,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
+    .line 2
     iget-wide v0, p0, Lcom/google/common/math/PairedStatsAccumulator;->sumOfProductsOfDeltas:D
 
     invoke-virtual {p0}, Lcom/google/common/math/PairedStatsAccumulator;->count()J
@@ -587,6 +631,7 @@
 .method public snapshot()Lcom/google/common/math/PairedStats;
     .locals 5
 
+    .line 1
     new-instance v0, Lcom/google/common/math/PairedStats;
 
     iget-object v1, p0, Lcom/google/common/math/PairedStatsAccumulator;->xStats:Lcom/google/common/math/StatsAccumulator;
@@ -611,6 +656,7 @@
 .method public xStats()Lcom/google/common/math/Stats;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/math/PairedStatsAccumulator;->xStats:Lcom/google/common/math/StatsAccumulator;
 
     invoke-virtual {p0}, Lcom/google/common/math/StatsAccumulator;->snapshot()Lcom/google/common/math/Stats;
@@ -623,6 +669,7 @@
 .method public yStats()Lcom/google/common/math/Stats;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/math/PairedStatsAccumulator;->yStats:Lcom/google/common/math/StatsAccumulator;
 
     invoke-virtual {p0}, Lcom/google/common/math/StatsAccumulator;->snapshot()Lcom/google/common/math/Stats;

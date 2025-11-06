@@ -21,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,6 +31,14 @@
 # virtual methods
 .method public getItemAnim(Landroid/view/View;)Lcom/android/camera2/compat/theme/custom/mm/top/TopBarItemAnimator;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "view"
+        }
+    .end annotation
 
     .line 2
     new-instance p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarItemAnimator;
@@ -41,6 +50,14 @@
 
 .method public bridge synthetic getItemAnim(Landroid/view/View;)Ljava/lang/Object;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "view"
+        }
+    .end annotation
 
     .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/TopConfigAnimationMM;->getItemAnim(Landroid/view/View;)Lcom/android/camera2/compat/theme/custom/mm/top/TopBarItemAnimator;

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;
+.class public final Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -57,6 +57,7 @@
 
     new-array v0, v0, [I
 
+    .line 1
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->INDEX_TABLE:[I
@@ -65,6 +66,7 @@
 
     new-array v0, v0, [I
 
+    .line 2
     fill-array-data v0, :array_1
 
     sput-object v0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->STEP_TABLE:[I
@@ -195,14 +197,19 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->extractorOutput:Lcom/google/android/exoplayer2/extractor/ExtractorOutput;
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->trackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
+    .line 4
     iput-object p3, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->wavFormat:Lcom/google/android/exoplayer2/extractor/wav/WavFormat;
 
+    .line 5
     iget p1, p3, Lcom/google/android/exoplayer2/extractor/wav/WavFormat;->frameRateHz:I
 
     div-int/lit8 p1, p1, 0xa
@@ -215,22 +222,27 @@
 
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->targetSampleSizeFrames:I
 
+    .line 6
     new-instance v0, Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     iget-object v1, p3, Lcom/google/android/exoplayer2/extractor/wav/WavFormat;->extraData:[B
 
     invoke-direct {v0, v1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;-><init>([B)V
 
+    .line 7
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLittleEndianUnsignedShort()I
 
+    .line 8
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLittleEndianUnsignedShort()I
 
     move-result v0
 
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->framesPerBlock:I
 
+    .line 9
     iget v1, p3, Lcom/google/android/exoplayer2/extractor/wav/WavFormat;->numChannels:I
 
+    .line 10
     iget v2, p3, Lcom/google/android/exoplayer2/extractor/wav/WavFormat;->blockSize:I
 
     mul-int/lit8 v3, v1, 0x4
@@ -249,10 +261,12 @@
 
     if-ne v0, v2, :cond_0
 
+    .line 11
     invoke-static {p1, v0}, Lcom/google/android/exoplayer2/util/Util;->ceilDivide(II)I
 
     move-result p2
 
+    .line 12
     iget v2, p3, Lcom/google/android/exoplayer2/extractor/wav/WavFormat;->blockSize:I
 
     mul-int/2addr v2, p2
@@ -261,8 +275,10 @@
 
     iput-object v2, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->inputData:[B
 
+    .line 13
     new-instance v2, Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
+    .line 14
     invoke-static {v0, v1}, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->numOutputFramesToBytes(II)I
 
     move-result v3
@@ -273,6 +289,7 @@
 
     iput-object v2, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->decodedData:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
+    .line 15
     iget p2, p3, Lcom/google/android/exoplayer2/extractor/wav/WavFormat;->frameRateHz:I
 
     iget v2, p3, Lcom/google/android/exoplayer2/extractor/wav/WavFormat;->blockSize:I
@@ -283,24 +300,29 @@
 
     div-int/2addr p2, v0
 
+    .line 16
     new-instance v0, Lcom/google/android/exoplayer2/Format$Builder;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/Format$Builder;-><init>()V
 
     const-string v2, "audio/raw"
 
+    .line 17
     invoke-virtual {v0, v2}, Lcom/google/android/exoplayer2/Format$Builder;->setSampleMimeType(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v0
 
+    .line 18
     invoke-virtual {v0, p2}, Lcom/google/android/exoplayer2/Format$Builder;->setAverageBitrate(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v0
 
+    .line 19
     invoke-virtual {v0, p2}, Lcom/google/android/exoplayer2/Format$Builder;->setPeakBitrate(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p2
 
+    .line 20
     invoke-static {p1, v1}, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->numOutputFramesToBytes(II)I
 
     move-result p1
@@ -311,22 +333,26 @@
 
     iget p2, p3, Lcom/google/android/exoplayer2/extractor/wav/WavFormat;->numChannels:I
 
+    .line 21
     invoke-virtual {p1, p2}, Lcom/google/android/exoplayer2/Format$Builder;->setChannelCount(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p1
 
     iget p2, p3, Lcom/google/android/exoplayer2/extractor/wav/WavFormat;->frameRateHz:I
 
+    .line 22
     invoke-virtual {p1, p2}, Lcom/google/android/exoplayer2/Format$Builder;->setSampleRate(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p1
 
     const/4 p2, 0x2
 
+    .line 23
     invoke-virtual {p1, p2}, Lcom/google/android/exoplayer2/Format$Builder;->setPcmEncoding(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object p1
 
+    .line 24
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/Format$Builder;->build()Lcom/google/android/exoplayer2/Format;
 
     move-result-object p1
@@ -335,6 +361,7 @@
 
     return-void
 
+    .line 25
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -377,6 +404,7 @@
 
     move v2, v0
 
+    .line 1
     :goto_1
     iget-object v3, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->wavFormat:Lcom/google/android/exoplayer2/extractor/wav/WavFormat;
 
@@ -384,6 +412,7 @@
 
     if-ge v2, v3, :cond_0
 
+    .line 2
     invoke-virtual {p3}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
     move-result-object v3
@@ -399,6 +428,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_1
     iget p1, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->framesPerBlock:I
 
@@ -408,8 +438,10 @@
 
     move-result p0
 
+    .line 4
     invoke-virtual {p3, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
+    .line 5
     invoke-virtual {p3, p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setLimit(I)V
 
     return-void
@@ -418,10 +450,12 @@
 .method private decodeBlockForChannel([BII[B)V
     .locals 8
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->wavFormat:Lcom/google/android/exoplayer2/extractor/wav/WavFormat;
 
     iget v1, v0, Lcom/google/android/exoplayer2/extractor/wav/WavFormat;->blockSize:I
 
+    .line 2
     iget v0, v0, Lcom/google/android/exoplayer2/extractor/wav/WavFormat;->numChannels:I
 
     mul-int v2, p2, v1
@@ -434,12 +468,14 @@
 
     add-int/2addr v3, v2
 
+    .line 3
     div-int/2addr v1, v0
 
     add-int/lit8 v1, v1, -0x4
 
     add-int/lit8 v4, v2, 0x1
 
+    .line 4
     aget-byte v4, p1, v4
 
     and-int/lit16 v4, v4, 0xff
@@ -456,6 +492,7 @@
 
     add-int/lit8 v2, v2, 0x2
 
+    .line 5
     aget-byte v2, p1, v2
 
     and-int/lit16 v2, v2, 0xff
@@ -466,10 +503,12 @@
 
     move-result v2
 
+    .line 6
     sget-object v5, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->STEP_TABLE:[I
 
     aget v5, v5, v2
 
+    .line 7
     iget p0, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->framesPerBlock:I
 
     mul-int/2addr p2, p0
@@ -484,6 +523,7 @@
 
     int-to-byte p0, p0
 
+    .line 8
     aput-byte p0, p4, p2
 
     add-int/lit8 p0, p2, 0x1
@@ -492,6 +532,7 @@
 
     int-to-byte p3, p3
 
+    .line 9
     aput-byte p3, p4, p0
 
     const/4 p0, 0x0
@@ -503,8 +544,10 @@
 
     if-ge p3, v6, :cond_2
 
+    .line 10
     div-int/lit8 v6, p3, 0x8
 
+    .line 11
     div-int/lit8 v7, p3, 0x2
 
     rem-int/lit8 v7, v7, 0x4
@@ -517,10 +560,12 @@
 
     add-int/2addr v6, v7
 
+    .line 12
     aget-byte v6, p1, v6
 
     and-int/lit16 v6, v6, 0xff
 
+    .line 13
     rem-int/lit8 v7, p3, 0x2
 
     if-nez v7, :cond_0
@@ -556,6 +601,7 @@
 
     const/16 v7, 0x7fff
 
+    .line 14
     invoke-static {v4, v5, v7}, Lcom/google/android/exoplayer2/util/Util;->constrainValue(III)I
 
     move-result v4
@@ -568,6 +614,7 @@
 
     int-to-byte v5, v5
 
+    .line 15
     aput-byte v5, p4, p2
 
     add-int/lit8 v5, p2, 0x1
@@ -576,14 +623,17 @@
 
     int-to-byte v7, v7
 
+    .line 16
     aput-byte v7, p4, v5
 
+    .line 17
     sget-object v5, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->INDEX_TABLE:[I
 
     aget v5, v5, v6
 
     add-int/2addr v2, v5
 
+    .line 18
     sget-object v5, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->STEP_TABLE:[I
 
     array-length v6, v5
@@ -594,6 +644,7 @@
 
     move-result v2
 
+    .line 19
     aget v5, v5, v2
 
     add-int/lit8 p3, p3, 0x1
@@ -607,6 +658,7 @@
 .method private numOutputBytesToFrames(I)I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->wavFormat:Lcom/google/android/exoplayer2/extractor/wav/WavFormat;
 
     iget p0, p0, Lcom/google/android/exoplayer2/extractor/wav/WavFormat;->numChannels:I
@@ -621,6 +673,7 @@
 .method private numOutputFramesToBytes(I)I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->wavFormat:Lcom/google/android/exoplayer2/extractor/wav/WavFormat;
 
     iget p0, p0, Lcom/google/android/exoplayer2/extractor/wav/WavFormat;->numChannels:I
@@ -645,32 +698,37 @@
 .method private writeSampleMetadata(I)V
     .locals 11
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->startTimeUs:J
 
     iget-wide v2, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->outputFrameCount:J
 
+    iget-object v4, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->wavFormat:Lcom/google/android/exoplayer2/extractor/wav/WavFormat;
+
+    iget v4, v4, Lcom/google/android/exoplayer2/extractor/wav/WavFormat;->frameRateHz:I
+
+    int-to-long v6, v4
+
     const-wide/32 v4, 0xf4240
 
-    iget-object v6, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->wavFormat:Lcom/google/android/exoplayer2/extractor/wav/WavFormat;
-
-    iget v6, v6, Lcom/google/android/exoplayer2/extractor/wav/WavFormat;->frameRateHz:I
-
-    int-to-long v6, v6
-
+    .line 2
     invoke-static/range {v2 .. v7}, Lcom/google/android/exoplayer2/util/Util;->scaleLargeTimestamp(JJJ)J
 
     move-result-wide v2
 
     add-long v5, v0, v2
 
+    .line 3
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->numOutputFramesToBytes(I)I
 
     move-result v0
 
+    .line 4
     iget v1, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->pendingOutputBytes:I
 
     sub-int v9, v1, v0
 
+    .line 5
     iget-object v4, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->trackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     const/4 v7, 0x1
@@ -681,6 +739,7 @@
 
     invoke-interface/range {v4 .. v10}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->sampleMetadata(JIIILcom/google/android/exoplayer2/extractor/TrackOutput$CryptoData;)V
 
+    .line 6
     iget-wide v1, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->outputFrameCount:J
 
     int-to-long v3, p1
@@ -689,6 +748,7 @@
 
     iput-wide v1, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->outputFrameCount:J
 
+    .line 7
     iget p1, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->pendingOutputBytes:I
 
     sub-int/2addr p1, v0
@@ -703,6 +763,7 @@
 .method public init(IJ)V
     .locals 9
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->extractorOutput:Lcom/google/android/exoplayer2/extractor/ExtractorOutput;
 
     new-instance v8, Lcom/google/android/exoplayer2/extractor/wav/WavSeekMap;
@@ -721,6 +782,7 @@
 
     invoke-interface {v0, v8}, Lcom/google/android/exoplayer2/extractor/ExtractorOutput;->seekMap(Lcom/google/android/exoplayer2/extractor/SeekMap;)V
 
+    .line 2
     iget-object p1, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->trackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->format:Lcom/google/android/exoplayer2/Format;
@@ -735,14 +797,18 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->pendingInputBytes:I
 
+    .line 2
     iput-wide p1, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->startTimeUs:J
 
+    .line 3
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->pendingOutputBytes:I
 
     const-wide/16 p1, 0x0
 
+    .line 4
     iput-wide p1, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->outputFrameCount:J
 
     return-void
@@ -756,22 +822,26 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->targetSampleSizeFrames:I
 
     iget v1, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->pendingOutputBytes:I
 
+    .line 2
     invoke-direct {p0, v1}, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->numOutputBytesToFrames(I)I
 
     move-result v1
 
     sub-int/2addr v0, v1
 
+    .line 3
     iget v1, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->framesPerBlock:I
 
     invoke-static {v0, v1}, Lcom/google/android/exoplayer2/util/Util;->ceilDivide(II)I
 
     move-result v0
 
+    .line 4
     iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->wavFormat:Lcom/google/android/exoplayer2/extractor/wav/WavFormat;
 
     iget v1, v1, Lcom/google/android/exoplayer2/extractor/wav/WavFormat;->blockSize:I
@@ -797,6 +867,7 @@
     :goto_1
     if-nez v1, :cond_2
 
+    .line 5
     iget v3, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->pendingInputBytes:I
 
     if-ge v3, v0, :cond_2
@@ -805,12 +876,14 @@
 
     int-to-long v3, v3
 
+    .line 6
     invoke-static {v3, v4, p2, p3}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v3
 
     long-to-int v3, v3
 
+    .line 7
     iget-object v4, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->inputData:[B
 
     iget v5, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->pendingInputBytes:I
@@ -825,6 +898,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_1
     iget v4, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->pendingInputBytes:I
 
@@ -834,6 +908,7 @@
 
     goto :goto_1
 
+    .line 9
     :cond_2
     iget p1, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->pendingInputBytes:I
 
@@ -845,12 +920,14 @@
 
     if-lez p1, :cond_3
 
+    .line 10
     iget-object p2, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->inputData:[B
 
     iget-object p3, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->decodedData:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-direct {p0, p2, p1, p3}, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->decode([BILcom/google/android/exoplayer2/util/ParsableByteArray;)V
 
+    .line 11
     iget p2, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->pendingInputBytes:I
 
     iget-object p3, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->wavFormat:Lcom/google/android/exoplayer2/extractor/wav/WavFormat;
@@ -863,37 +940,44 @@
 
     iput p2, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->pendingInputBytes:I
 
+    .line 12
     iget-object p1, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->decodedData:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->limit()I
 
     move-result p1
 
+    .line 13
     iget-object p2, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->trackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     iget-object p3, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->decodedData:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-interface {p2, p3, p1}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->sampleData(Lcom/google/android/exoplayer2/util/ParsableByteArray;I)V
 
+    .line 14
     iget p2, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->pendingOutputBytes:I
 
     add-int/2addr p2, p1
 
     iput p2, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->pendingOutputBytes:I
 
+    .line 15
     invoke-direct {p0, p2}, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->numOutputBytesToFrames(I)I
 
     move-result p1
 
+    .line 16
     iget p2, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->targetSampleSizeFrames:I
 
     if-lt p1, p2, :cond_3
 
+    .line 17
     invoke-direct {p0, p2}, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->writeSampleMetadata(I)V
 
     :cond_3
     if-eqz v1, :cond_4
 
+    .line 18
     iget p1, p0, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->pendingOutputBytes:I
 
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->numOutputBytesToFrames(I)I
@@ -902,6 +986,7 @@
 
     if-lez p1, :cond_4
 
+    .line 19
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/extractor/wav/WavExtractor$ImaAdPcmOutputWriter;->writeSampleMetadata(I)V
 
     :cond_4

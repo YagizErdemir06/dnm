@@ -18,18 +18,26 @@
 
 
 # instance fields
-.field public final a:[I
+.field private final a:[I
 
-.field public final b:[I
+.field private final b:[I
 
-.field public final c:[Ljava/lang/String;
+.field private final c:[Ljava/lang/String;
 
 .field public final synthetic d:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
 
 
 # direct methods
-.method public constructor <init>(Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;)V
+.method private constructor <init>(Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;)V
     .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
     .line 1
     iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView$b;->d:Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView;
@@ -118,111 +126,42 @@
     return-void
 .end method
 
-
-# virtual methods
-.method public a(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay;)Ljavax/microedition/khronos/egl/EGLConfig;
-    .locals 8
-
-    const/4 v0, 0x1
-
-    new-array v0, v0, [I
-
-    iget-object v3, p0, Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView$b;->a:[I
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v6, v0
-
-    invoke-interface/range {v1 .. v6}, Ljavax/microedition/khronos/egl/EGL10;->eglChooseConfig(Ljavax/microedition/khronos/egl/EGLDisplay;[I[Ljavax/microedition/khronos/egl/EGLConfig;I[I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    const/4 v1, 0x0
-
-    aget v5, v0, v1
-
-    if-lez v5, :cond_1
-
-    new-array v7, v5, [Ljavax/microedition/khronos/egl/EGLConfig;
-
-    iget-object v3, p0, Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView$b;->a:[I
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v4, v7
-
-    move-object v6, v0
-
-    invoke-interface/range {v1 .. v6}, Ljavax/microedition/khronos/egl/EGL10;->eglChooseConfig(Ljavax/microedition/khronos/egl/EGLDisplay;[I[Ljavax/microedition/khronos/egl/EGLConfig;I[I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0, p1, p2, v7}, Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView$b;->b(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay;[Ljavax/microedition/khronos/egl/EGLConfig;)Ljavax/microedition/khronos/egl/EGLConfig;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    new-instance p0, Ljava/lang/RuntimeException;
-
-    invoke-direct {p0}, Ljava/lang/RuntimeException;-><init>()V
-
-    throw p0
-
-    :cond_1
-    new-instance p0, Ljava/lang/RuntimeException;
-
-    const-string p1, "No configs match configSpec"
-
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_2
-    new-instance p0, Ljava/lang/RuntimeException;
-
-    const-string p1, "eglChooseConfig failed"
-
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final b(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay;[Ljavax/microedition/khronos/egl/EGLConfig;)Ljavax/microedition/khronos/egl/EGLConfig;
-    .locals 9
+.method private b(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay;[Ljavax/microedition/khronos/egl/EGLConfig;)Ljavax/microedition/khronos/egl/EGLConfig;
+    .locals 10
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "egl",
+            "display",
+            "configs"
+        }
+    .end annotation
 
     const/4 v0, 0x1
 
     new-array v0, v0, [I
 
+    .line 1
     array-length v1, p3
 
     const/4 v2, 0x0
 
-    const v3, 0x7fffffff
+    const/4 v3, 0x0
 
-    const/4 v4, 0x0
+    const v4, 0x7fffffff
 
-    move v5, v4
+    move v5, v2
 
     :goto_0
     const/16 v6, 0x3026
 
     if-ge v5, v1, :cond_4
 
+    .line 2
     aget-object v7, p3, v5
 
     const/16 v8, 0x3024
@@ -233,7 +172,8 @@
 
     if-eqz v7, :cond_0
 
-    aget v7, v0, v4
+    .line 3
+    aget v7, v0, v2
 
     const/16 v8, 0x8
 
@@ -241,6 +181,7 @@
 
     goto :goto_1
 
+    .line 4
     :cond_0
     aget-object v7, p3, v5
 
@@ -250,18 +191,30 @@
 
     if-eqz v6, :cond_3
 
-    aget v6, v0, v4
+    .line 5
+    aget v6, v0, v2
 
     if-nez v6, :cond_1
 
     goto :goto_1
 
+    .line 6
     :cond_1
-    if-ge v6, v3, :cond_2
+    aget v6, v0, v2
 
-    aget-object v2, p3, v5
+    if-ge v6, v4, :cond_2
 
-    move v3, v6
+    .line 7
+    aget v3, v0, v2
+
+    .line 8
+    aget-object v4, p3, v5
+
+    move-object v9, v4
+
+    move v4, v3
+
+    move-object v3, v9
 
     :cond_2
     :goto_1
@@ -269,6 +222,7 @@
 
     goto :goto_0
 
+    .line 9
     :cond_3
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -280,6 +234,7 @@
 
     invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 10
     invoke-interface {p1}, Ljavax/microedition/khronos/egl/EGL10;->eglGetError()I
 
     move-result p1
@@ -295,25 +250,41 @@
     throw p0
 
     :cond_4
-    if-nez v2, :cond_5
+    if-nez v3, :cond_5
 
-    aget-object v2, p3, v4
+    .line 11
+    aget-object v3, p3, v2
 
+    .line 12
     :cond_5
-    invoke-interface {p1, p2, v2, v6, v0}, Ljavax/microedition/khronos/egl/EGL10;->eglGetConfigAttrib(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;I[I)Z
+    invoke-interface {p1, p2, v3, v6, v0}, Ljavax/microedition/khronos/egl/EGL10;->eglGetConfigAttrib(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;I[I)Z
 
-    invoke-virtual {p0, p1, p2, v2}, Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView$b;->c(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;)V
+    .line 13
+    invoke-direct {p0, p1, p2, v3}, Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView$b;->c(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;)V
 
-    return-object v2
+    return-object v3
 .end method
 
-.method public final c(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;)V
+.method private c(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "egl",
+            "display",
+            "config"
+        }
+    .end annotation
 
     const/4 v0, 0x1
 
     new-array v0, v0, [I
 
+    .line 1
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -322,6 +293,7 @@
 
     move v3, v2
 
+    .line 2
     :goto_0
     iget-object v4, p0, Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView$b;->b:[I
 
@@ -329,10 +301,12 @@
 
     if-ge v3, v5, :cond_0
 
+    .line 3
     aget v4, v4, v3
 
     invoke-interface {p1, p2, p3, v4, v0}, Ljavax/microedition/khronos/egl/EGL10;->eglGetConfigAttrib(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLConfig;I[I)Z
 
+    .line 4
     iget-object v4, p0, Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView$b;->c:[Ljava/lang/String;
 
     aget-object v4, v4, v3
@@ -351,6 +325,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -377,4 +352,107 @@
     invoke-static {p2, p0, p1}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public a(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay;)Ljavax/microedition/khronos/egl/EGLConfig;
+    .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "egl",
+            "display"
+        }
+    .end annotation
+
+    const/4 v0, 0x1
+
+    new-array v0, v0, [I
+
+    .line 1
+    iget-object v3, p0, Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView$b;->a:[I
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v6, v0
+
+    invoke-interface/range {v1 .. v6}, Ljavax/microedition/khronos/egl/EGL10;->eglChooseConfig(Ljavax/microedition/khronos/egl/EGLDisplay;[I[Ljavax/microedition/khronos/egl/EGLConfig;I[I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    const/4 v1, 0x0
+
+    .line 2
+    aget v2, v0, v1
+
+    if-lez v2, :cond_1
+
+    .line 3
+    aget v5, v0, v1
+
+    new-array v7, v5, [Ljavax/microedition/khronos/egl/EGLConfig;
+
+    .line 4
+    iget-object v3, p0, Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView$b;->a:[I
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v4, v7
+
+    move-object v6, v0
+
+    invoke-interface/range {v1 .. v6}, Ljavax/microedition/khronos/egl/EGL10;->eglChooseConfig(Ljavax/microedition/khronos/egl/EGLDisplay;[I[Ljavax/microedition/khronos/egl/EGLConfig;I[I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 5
+    invoke-direct {p0, p1, p2, v7}, Lcom/xiaomi/mimoji/mimojifu/widget/MimojiFuEditGLTextureView$b;->b(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay;[Ljavax/microedition/khronos/egl/EGLConfig;)Ljavax/microedition/khronos/egl/EGLConfig;
+
+    move-result-object p0
+
+    return-object p0
+
+    .line 6
+    :cond_0
+    new-instance p0, Ljava/lang/RuntimeException;
+
+    invoke-direct {p0}, Ljava/lang/RuntimeException;-><init>()V
+
+    throw p0
+
+    .line 7
+    :cond_1
+    new-instance p0, Ljava/lang/RuntimeException;
+
+    const-string p1, "No configs match configSpec"
+
+    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    .line 8
+    :cond_2
+    new-instance p0, Ljava/lang/RuntimeException;
+
+    const-string p1, "eglChooseConfig failed"
+
+    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method

@@ -30,6 +30,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,6 +41,7 @@
 .method public a(Landroid/os/Parcel;)Lcom/airbnb/lottie/LottieAnimationView$f;
     .locals 1
 
+    .line 1
     new-instance p0, Lcom/airbnb/lottie/LottieAnimationView$f;
 
     const/4 v0, 0x0
@@ -52,6 +54,7 @@
 .method public b(I)[Lcom/airbnb/lottie/LottieAnimationView$f;
     .locals 0
 
+    .line 1
     new-array p0, p1, [Lcom/airbnb/lottie/LottieAnimationView$f;
 
     return-object p0
@@ -60,6 +63,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/airbnb/lottie/LottieAnimationView$f$a;->a(Landroid/os/Parcel;)Lcom/airbnb/lottie/LottieAnimationView$f;
 
     move-result-object p0
@@ -70,6 +74,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/airbnb/lottie/LottieAnimationView$f$a;->b(I)[Lcom/airbnb/lottie/LottieAnimationView$f;
 
     move-result-object p0

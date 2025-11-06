@@ -1,4 +1,4 @@
-.class Landroidx/core/app/ActivityRecreator$3;
+.class public Landroidx/core/app/ActivityRecreator$3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,15 +18,16 @@
 
 
 # instance fields
-.field final synthetic val$activityThread:Ljava/lang/Object;
+.field public final synthetic val$activityThread:Ljava/lang/Object;
 
-.field final synthetic val$token:Ljava/lang/Object;
+.field public final synthetic val$token:Ljava/lang/Object;
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/core/app/ActivityRecreator$3;->val$activityThread:Ljava/lang/Object;
 
     iput-object p2, p0, Landroidx/core/app/ActivityRecreator$3;->val$token:Ljava/lang/Object;
@@ -41,6 +42,7 @@
 .method public run()V
     .locals 6
 
+    .line 1
     :try_start_0
     sget-object v0, Landroidx/core/app/ActivityRecreator;->performStopActivity3ParamsMethod:Ljava/lang/reflect/Method;
 
@@ -52,6 +54,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v4, p0, Landroidx/core/app/ActivityRecreator$3;->val$activityThread:Ljava/lang/Object;
 
     const/4 v5, 0x3
@@ -62,6 +65,7 @@
 
     aput-object p0, v5, v2
 
+    .line 3
     sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     aput-object p0, v5, v1
@@ -70,10 +74,12 @@
 
     aput-object p0, v5, v3
 
+    .line 4
     invoke-virtual {v0, v4, v5}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
+    .line 5
     :cond_0
     sget-object v0, Landroidx/core/app/ActivityRecreator;->performStopActivity2ParamsMethod:Ljava/lang/reflect/Method;
 
@@ -85,10 +91,12 @@
 
     aput-object p0, v3, v2
 
+    .line 6
     sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     aput-object p0, v3, v1
 
+    .line 7
     invoke-virtual {v0, v4, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
@@ -103,6 +111,7 @@
 
     const-string v1, "Exception while invoking performStopActivity"
 
+    .line 8
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
@@ -110,6 +119,7 @@
     :catch_0
     move-exception p0
 
+    .line 9
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -118,13 +128,15 @@
 
     if-ne v0, v1, :cond_2
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 10
+    invoke-virtual {p0}, Ljava/lang/RuntimeException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 11
+    invoke-virtual {p0}, Ljava/lang/RuntimeException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
@@ -138,6 +150,7 @@
 
     goto :goto_0
 
+    .line 12
     :cond_1
     throw p0
 

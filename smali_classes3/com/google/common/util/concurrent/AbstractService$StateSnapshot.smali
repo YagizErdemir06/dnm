@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/AbstractService$StateSnapshot;
+.class public final Lcom/google/common/util/concurrent/AbstractService$StateSnapshot;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,14 +15,14 @@
 
 
 # instance fields
-.field final failure:Ljava/lang/Throwable;
+.field public final failure:Ljava/lang/Throwable;
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 .end field
 
-.field final shutdownWhenStartupFinishes:Z
+.field public final shutdownWhenStartupFinishes:Z
 
-.field final state:Lcom/google/common/util/concurrent/Service$State;
+.field public final state:Lcom/google/common/util/concurrent/Service$State;
 
 
 # direct methods
@@ -125,6 +125,7 @@
 .method public externalState()Lcom/google/common/util/concurrent/Service$State;
     .locals 2
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/common/util/concurrent/AbstractService$StateSnapshot;->shutdownWhenStartupFinishes:Z
 
     if-eqz v0, :cond_0
@@ -135,10 +136,12 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 2
     sget-object p0, Lcom/google/common/util/concurrent/Service$State;->STOPPING:Lcom/google/common/util/concurrent/Service$State;
 
     return-object p0
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lcom/google/common/util/concurrent/AbstractService$StateSnapshot;->state:Lcom/google/common/util/concurrent/Service$State;
 
@@ -148,6 +151,7 @@
 .method public failureCause()Ljava/lang/Throwable;
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/util/concurrent/AbstractService$StateSnapshot;->state:Lcom/google/common/util/concurrent/Service$State;
 
     sget-object v1, Lcom/google/common/util/concurrent/Service$State;->FAILED:Lcom/google/common/util/concurrent/Service$State;
@@ -166,9 +170,12 @@
 
     invoke-static {v1, v2, v0}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/String;Ljava/lang/Object;)V
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/util/concurrent/AbstractService$StateSnapshot;->failure:Ljava/lang/Throwable;
 
     invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    check-cast p0, Ljava/lang/Throwable;
 
     return-object p0
 .end method

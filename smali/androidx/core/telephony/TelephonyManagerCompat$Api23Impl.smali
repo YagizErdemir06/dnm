@@ -1,4 +1,4 @@
-.class Landroidx/core/telephony/TelephonyManagerCompat$Api23Impl;
+.class public Landroidx/core/telephony/TelephonyManagerCompat$Api23Impl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,6 +46,7 @@
         value = "android.permission.READ_PHONE_STATE"
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/telephony/TelephonyManager;->getDeviceId(I)Ljava/lang/String;
 
     move-result-object p0

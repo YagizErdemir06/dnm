@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/collect/Multisets$ElementSet;
+.class public abstract Lcom/google/common/collect/Multisets$ElementSet;
 .super Lcom/google/common/collect/Sets$ImprovedAbstractSet;
 .source "SourceFile"
 
@@ -28,6 +28,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/Sets$ImprovedAbstractSet;-><init>()V
 
     return-void
@@ -38,6 +39,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Multisets$ElementSet;->multiset()Lcom/google/common/collect/Multiset;
 
     move-result-object p0
@@ -54,6 +56,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Multisets$ElementSet;->multiset()Lcom/google/common/collect/Multiset;
 
     move-result-object p0
@@ -75,6 +78,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Multisets$ElementSet;->multiset()Lcom/google/common/collect/Multiset;
 
     move-result-object p0
@@ -89,6 +93,7 @@
 .method public isEmpty()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Multisets$ElementSet;->multiset()Lcom/google/common/collect/Multiset;
 
     move-result-object p0
@@ -127,6 +132,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Multisets$ElementSet;->multiset()Lcom/google/common/collect/Multiset;
 
     move-result-object p0
@@ -153,6 +159,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/Multisets$ElementSet;->multiset()Lcom/google/common/collect/Multiset;
 
     move-result-object p0

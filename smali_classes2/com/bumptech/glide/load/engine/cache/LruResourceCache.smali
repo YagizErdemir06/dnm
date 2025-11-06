@@ -26,6 +26,7 @@
 .method public constructor <init>(J)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/bumptech/glide/util/LruCache;-><init>(J)V
 
     return-void
@@ -151,6 +152,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/bumptech/glide/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -169,6 +171,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lcom/bumptech/glide/util/LruCache;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -185,6 +188,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/cache/LruResourceCache;->listener:Lcom/bumptech/glide/load/engine/cache/MemoryCache$ResourceRemovedListener;
 
     return-void
@@ -202,6 +206,7 @@
 
     if-lt p1, v0, :cond_0
 
+    .line 1
     invoke-virtual {p0}, Lcom/bumptech/glide/util/LruCache;->clearMemory()V
 
     goto :goto_0
@@ -215,6 +220,7 @@
 
     if-ne p1, v0, :cond_2
 
+    .line 2
     :cond_1
     invoke-virtual {p0}, Lcom/bumptech/glide/util/LruCache;->getMaxSize()J
 

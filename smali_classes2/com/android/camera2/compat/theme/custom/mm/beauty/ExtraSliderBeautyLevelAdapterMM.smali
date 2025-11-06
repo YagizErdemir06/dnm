@@ -1,12 +1,12 @@
 .class public Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;
-.super Lcom/android/camera/fragment/manually/adapter/c;
+.super Ld/d/a/u6/x4/f0/c;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/android/camera/fragment/manually/adapter/c<",
+        "Ld/d/a/u6/x4/f0/c<",
         "Ljava/lang/String;",
         ">;"
     }
@@ -20,7 +20,7 @@
 # instance fields
 .field private mCurrentValue:Ljava/lang/String;
 
-.field protected mDefaultLineRadis:F
+.field public mDefaultLineRadis:F
 
 .field private mDefaultValue:Ljava/lang/String;
 
@@ -30,9 +30,9 @@
 
 .field private mIsRTL:Z
 
-.field private mManuallyListener:Ln6/a0;
+.field private mManuallyListener:Ld/d/a/u6/x4/e0;
 
-.field protected mPointLineGap:F
+.field public mPointLineGap:F
 
 .field private mRealCountTotal:I
 
@@ -48,18 +48,35 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ln6/a0;)V
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ld/d/a/u6/x4/e0;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "currentValue",
+            "listener"
+        }
+    .end annotation
 
-    invoke-direct {p0}, Lcom/android/camera/fragment/manually/adapter/c;-><init>()V
+    .line 1
+    invoke-direct {p0}, Ld/d/a/u6/x4/f0/c;-><init>()V
 
-    iput-object p3, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mManuallyListener:Ln6/a0;
+    .line 2
+    iput-object p3, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mManuallyListener:Ld/d/a/u6/x4/e0;
 
+    .line 3
     iput-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mCurrentValue:Ljava/lang/String;
 
+    .line 4
     invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->initStyle(Landroid/content/Context;)V
 
-    invoke-static {p1}, Lcom/android/camera/a6;->R2(Landroid/content/Context;)Z
+    .line 5
+    invoke-static {p1}, Ld/d/a/z5;->G2(Landroid/content/Context;)Z
 
     move-result p1
 
@@ -70,7 +87,16 @@
 
 .method private isFlagPosition(I)Z
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "index"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mValidBeautyLevel:Ljava/util/List;
 
     const/4 v1, 0x0
@@ -101,13 +127,15 @@
 
     goto :goto_1
 
+    .line 2
     :cond_0
-    invoke-virtual {p0}, Lcom/android/camera/ui/d$b;->needVirtual()Z
+    invoke-virtual {p0}, Ld/d/a/d8/o1$b;->needVirtual()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
+    .line 3
     invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->isIndexVirtual(I)Z
 
     move-result v0
@@ -116,26 +144,30 @@
 
     return v1
 
+    .line 4
     :cond_1
-    iget v0, p0, Lcom/android/camera/ui/d$b;->mRealInterval:I
+    iget v0, p0, Ld/d/a/d8/o1$b;->mRealInterval:I
 
     div-int/2addr p1, v0
 
     goto :goto_0
 
+    .line 5
     :cond_2
-    invoke-virtual {p0}, Lcom/android/camera/ui/d$b;->needSample()Z
+    invoke-virtual {p0}, Ld/d/a/d8/o1$b;->needSample()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    iget v0, p0, Lcom/android/camera/ui/d$b;->mSampleInterval:I
+    .line 6
+    iget v0, p0, Ld/d/a/d8/o1$b;->mSampleInterval:I
 
     mul-int/2addr p1, v0
 
     goto :goto_0
 
+    .line 7
     :cond_3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mValidBeautyLevel:Ljava/util/List;
 
@@ -149,6 +181,7 @@
 
     return v1
 
+    .line 8
     :cond_4
     :goto_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mValidBeautyLevel:Ljava/util/List;
@@ -159,8 +192,9 @@
 
     add-int/lit8 v0, v0, -0x1
 
-    invoke-static {p1, v1, v0}, Lcom/android/camera/a6;->A(III)I
+    invoke-static {p1, v1, v0}, Ld/d/a/z5;->s(III)I
 
+    .line 9
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mValidBeautyLevel:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -169,6 +203,7 @@
 
     check-cast p1, Ljava/lang/String;
 
+    .line 10
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mDefaultValue:Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -186,6 +221,22 @@
 # virtual methods
 .method public draw(ILandroid/graphics/Canvas;ZIF)V
     .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "index",
+            "canvas",
+            "selected",
+            "viewState",
+            "interpolation"
+        }
+    .end annotation
 
     const/16 v6, 0xff
 
@@ -211,20 +262,40 @@
 
 .method public draw(ILandroid/graphics/Canvas;ZIFII)V
     .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "index",
+            "canvas",
+            "selected",
+            "viewState",
+            "interpolation",
+            "alpha",
+            "color"
+        }
+    .end annotation
 
     .line 2
-    invoke-super/range {p0 .. p7}, Lcom/android/camera/ui/d$b;->draw(ILandroid/graphics/Canvas;ZIFII)V
+    invoke-super/range {p0 .. p7}, Ld/d/a/d8/o1$b;->draw(ILandroid/graphics/Canvas;ZIFII)V
 
     .line 3
-    iget p4, p0, Lcom/android/camera/ui/d$b;->mLineWidth:F
+    iget p4, p0, Ld/d/a/d8/o1$b;->mLineWidth:F
 
     .line 4
-    iget p5, p0, Lcom/android/camera/ui/d$b;->mLineHalfHeight:F
+    iget p5, p0, Ld/d/a/d8/o1$b;->mLineHalfHeight:F
 
     .line 5
-    iget-object v0, p0, Lcom/android/camera/ui/d$b;->mNormalPaint:Landroid/graphics/Paint;
+    iget-object v0, p0, Ld/d/a/d8/o1$b;->mNormalPaint:Landroid/graphics/Paint;
 
-    iget v1, p0, Lcom/android/camera/ui/d$b;->mLineColorNormal:I
+    iget v1, p0, Ld/d/a/d8/o1$b;->mLineColorNormal:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
@@ -233,13 +304,13 @@
     if-eq p7, v0, :cond_0
 
     .line 6
-    iget-object v0, p0, Lcom/android/camera/ui/d$b;->mNormalPaint:Landroid/graphics/Paint;
+    iget-object v0, p0, Ld/d/a/d8/o1$b;->mNormalPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p7}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 7
     :cond_0
-    iget-object p7, p0, Lcom/android/camera/ui/d$b;->mNormalPaint:Landroid/graphics/Paint;
+    iget-object p7, p0, Ld/d/a/d8/o1$b;->mNormalPaint:Landroid/graphics/Paint;
 
     .line 8
     invoke-virtual {p7, p6}, Landroid/graphics/Paint;->setAlpha(I)V
@@ -247,13 +318,13 @@
     if-eqz p3, :cond_1
 
     .line 9
-    iget p4, p0, Lcom/android/camera/ui/d$b;->mLineSelectWidth:F
+    iget p4, p0, Ld/d/a/d8/o1$b;->mLineSelectWidth:F
 
     .line 10
-    iget p5, p0, Lcom/android/camera/ui/d$b;->mLineSelectHalfHeight:F
+    iget p5, p0, Ld/d/a/d8/o1$b;->mLineSelectHalfHeight:F
 
     .line 11
-    iget-object p7, p0, Lcom/android/camera/ui/d$b;->mSelectPaint:Landroid/graphics/Paint;
+    iget-object p7, p0, Ld/d/a/d8/o1$b;->mSelectPaint:Landroid/graphics/Paint;
 
     goto :goto_0
 
@@ -266,10 +337,10 @@
     if-eqz p1, :cond_2
 
     .line 13
-    iget p4, p0, Lcom/android/camera/ui/d$b;->mLineStopPointWidth:F
+    iget p4, p0, Ld/d/a/d8/o1$b;->mLineStopPointWidth:F
 
     .line 14
-    iget p1, p0, Lcom/android/camera/ui/d$b;->mLineColorStop:I
+    iget p1, p0, Ld/d/a/d8/o1$b;->mLineColorStop:I
 
     invoke-virtual {p7, p1}, Landroid/graphics/Paint;->setColor(I)V
 
@@ -285,7 +356,7 @@
     move-object v7, p7
 
     .line 16
-    invoke-static {}, Ly2/b;->M0()Z
+    invoke-static {}, Ld/d/a/n6/b;->M0()Z
 
     move-result p1
 
@@ -293,7 +364,7 @@
 
     if-eqz p1, :cond_3
 
-    iget-boolean p0, p0, Lcom/android/camera/ui/d$b;->mIsHorType:Z
+    iget-boolean p0, p0, Ld/d/a/d8/o1$b;->mIsHorType:Z
 
     if-nez p0, :cond_3
 
@@ -342,9 +413,19 @@
 
 .method public getAlign(I)Landroid/graphics/Paint$Align;
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "index"
+        }
+    .end annotation
+
+    .line 1
     sget-object p0, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
 
     return-object p0
@@ -353,6 +434,7 @@
 .method public getCount()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mEntryCountTotal:I
 
     return p0
@@ -361,6 +443,7 @@
 .method public getCurrentValue()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mCurrentValue:Ljava/lang/String;
 
     return-object p0
@@ -369,6 +452,7 @@
 .method public getRealCount()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mRealCountTotal:I
 
     return p0
@@ -376,6 +460,17 @@
 
 .method public initDataList(Ljava/util/List;Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "list",
+            "value"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -387,24 +482,29 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mValidBeautyLevel:Ljava/util/List;
 
+    .line 2
     invoke-interface {v0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    invoke-static {}, Ly2/b;->M0()Z
+    .line 3
+    invoke-static {}, Ld/d/a/n6/b;->M0()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 4
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mValidBeautyLevel:Ljava/util/List;
 
     invoke-static {v0}, Ljava/util/Collections;->reverse(Ljava/util/List;)V
 
+    .line 5
     :cond_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -412,17 +512,19 @@
 
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mRealCountTotal:I
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/d$b;->needVirtual()Z
+    .line 6
+    invoke-virtual {p0}, Ld/d/a/d8/o1$b;->needVirtual()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
+    .line 7
     iget p1, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mRealCountTotal:I
 
     add-int/lit8 p1, p1, -0x1
 
-    iget v0, p0, Lcom/android/camera/ui/d$b;->mRealInterval:I
+    iget v0, p0, Ld/d/a/d8/o1$b;->mRealInterval:I
 
     mul-int/2addr p1, v0
 
@@ -432,16 +534,18 @@
 
     goto :goto_0
 
+    .line 8
     :cond_1
-    invoke-virtual {p0}, Lcom/android/camera/ui/d$b;->needSample()Z
+    invoke-virtual {p0}, Ld/d/a/d8/o1$b;->needSample()Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
+    .line 9
     iget p1, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mRealCountTotal:I
 
-    iget v0, p0, Lcom/android/camera/ui/d$b;->mSampleInterval:I
+    iget v0, p0, Ld/d/a/d8/o1$b;->mSampleInterval:I
 
     div-int v1, p1, v0
 
@@ -453,14 +557,17 @@
 
     goto :goto_0
 
+    .line 10
     :cond_2
     iget p1, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mRealCountTotal:I
 
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mEntryCountTotal:I
 
+    .line 11
     :goto_0
     invoke-virtual {p0, p2}, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->updateDefaultValue(Ljava/lang/String;)V
 
+    .line 12
     invoke-virtual {p0, p2}, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->resetCurrentValue(Ljava/lang/String;)V
 
     return-void
@@ -468,66 +575,82 @@
 
 .method public initStyle(Landroid/content/Context;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Landroid/graphics/Paint;
 
     const/4 v1, 0x1
 
     invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
 
-    iput-object v0, p0, Lcom/android/camera/ui/d$b;->mNormalPaint:Landroid/graphics/Paint;
+    iput-object v0, p0, Ld/d/a/d8/o1$b;->mNormalPaint:Landroid/graphics/Paint;
 
+    .line 2
     sget-object v2, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
+    .line 3
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
 
-    iput-object v0, p0, Lcom/android/camera/ui/d$b;->mSelectPaint:Landroid/graphics/Paint;
+    iput-object v0, p0, Ld/d/a/d8/o1$b;->mSelectPaint:Landroid/graphics/Paint;
 
+    .line 4
     sget-object v1, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    iget-object v0, p0, Lcom/android/camera/ui/d$b;->mSelectPaint:Landroid/graphics/Paint;
+    .line 5
+    iget-object v0, p0, Ld/d/a/d8/o1$b;->mSelectPaint:Landroid/graphics/Paint;
 
-    invoke-static {}, Lf2/f;->j()I
+    invoke-static {}, Ld/d/a/k6/g;->j()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 6
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f070d98
+    const v1, 0x7f070b0a
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v0
 
-    iput v0, p0, Lcom/android/camera/ui/d$b;->mLineWidth:F
+    iput v0, p0, Ld/d/a/d8/o1$b;->mLineWidth:F
 
+    .line 7
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f070d96
+    const v1, 0x7f070b08
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v0
 
-    iput v0, p0, Lcom/android/camera/ui/d$b;->mLineSelectWidth:F
+    iput v0, p0, Ld/d/a/d8/o1$b;->mLineSelectWidth:F
 
+    .line 8
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f070d94
+    const v1, 0x7f070b06
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -537,25 +660,27 @@
 
     div-float/2addr v0, v1
 
-    iput v0, p0, Lcom/android/camera/ui/d$b;->mLineHalfHeight:F
+    iput v0, p0, Ld/d/a/d8/o1$b;->mLineHalfHeight:F
 
+    .line 9
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v2, 0x7f070d97
+    const v2, 0x7f070b09
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v0
 
-    iput v0, p0, Lcom/android/camera/ui/d$b;->mLineStopPointWidth:F
+    iput v0, p0, Ld/d/a/d8/o1$b;->mLineStopPointWidth:F
 
+    .line 10
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v2, 0x7f070d95
+    const v2, 0x7f070b07
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -563,13 +688,14 @@
 
     div-float/2addr v0, v1
 
-    iput v0, p0, Lcom/android/camera/ui/d$b;->mLineSelectHalfHeight:F
+    iput v0, p0, Ld/d/a/d8/o1$b;->mLineSelectHalfHeight:F
 
+    .line 11
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v2, 0x7f070d99
+    const v2, 0x7f070b0b
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -579,11 +705,12 @@
 
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mDefaultLineRadis:F
 
+    .line 12
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const v0, 0x7f070cc7
+    const v0, 0x7f070a3c
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -591,38 +718,41 @@
 
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mPointLineGap:F
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    .line 13
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object p1
 
-    const v0, 0x7f060957
+    const v0, 0x7f0604ed
 
-    invoke-virtual {p1, v0}, Lf2/e;->b(I)I
+    invoke-virtual {p1, v0}, Ld/d/a/k6/f;->b(I)I
 
     move-result p1
 
-    iput p1, p0, Lcom/android/camera/ui/d$b;->mLineColorStop:I
+    iput p1, p0, Ld/d/a/d8/o1$b;->mLineColorStop:I
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    .line 14
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object p1
 
-    const v0, 0x7f060955
+    const v0, 0x7f0604eb
 
-    invoke-virtual {p1, v0}, Lf2/e;->b(I)I
+    invoke-virtual {p1, v0}, Ld/d/a/k6/f;->b(I)I
 
     move-result p1
 
-    iput p1, p0, Lcom/android/camera/ui/d$b;->mLineColorNormal:I
+    iput p1, p0, Ld/d/a/d8/o1$b;->mLineColorNormal:I
 
     return-void
 .end method
 
 .method public isEnable()Z
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .line 1
     iget-boolean p0, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mEnable:Z
 
     return p0
@@ -630,8 +760,17 @@
 
 .method public isIndexSample(I)Z
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "index"
+        }
+    .end annotation
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/d$b;->needSample()Z
+    .line 1
+    invoke-virtual {p0}, Ld/d/a/d8/o1$b;->needSample()Z
 
     move-result v0
 
@@ -641,6 +780,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->getRealCount()I
 
@@ -650,11 +790,12 @@
 
     const/4 v2, 0x0
 
-    invoke-static {p1, v2, v0}, Lcom/android/camera/a6;->A(III)I
+    invoke-static {p1, v2, v0}, Ld/d/a/z5;->s(III)I
 
     move-result p1
 
-    iget p0, p0, Lcom/android/camera/ui/d$b;->mSampleInterval:I
+    .line 3
+    iget p0, p0, Ld/d/a/d8/o1$b;->mSampleInterval:I
 
     rem-int/2addr p1, p0
 
@@ -671,8 +812,17 @@
 
 .method public isIndexVirtual(I)Z
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "index"
+        }
+    .end annotation
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/d$b;->needVirtual()Z
+    .line 1
+    invoke-virtual {p0}, Ld/d/a/d8/o1$b;->needVirtual()Z
 
     move-result v0
 
@@ -682,6 +832,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->getCount()I
 
@@ -691,11 +842,12 @@
 
     sub-int/2addr v0, v2
 
-    invoke-static {p1, v1, v0}, Lcom/android/camera/a6;->A(III)I
+    invoke-static {p1, v1, v0}, Ld/d/a/z5;->s(III)I
 
     move-result p1
 
-    iget p0, p0, Lcom/android/camera/ui/d$b;->mRealInterval:I
+    .line 3
+    iget p0, p0, Ld/d/a/d8/o1$b;->mRealInterval:I
 
     rem-int/2addr p1, p0
 
@@ -709,6 +861,14 @@
 
 .method public bridge synthetic mapPositionToValue(F)Ljava/lang/Object;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "position"
+        }
+    .end annotation
 
     .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mapPositionToValue(F)Ljava/lang/String;
@@ -720,6 +880,14 @@
 
 .method public mapPositionToValue(F)Ljava/lang/String;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "position"
+        }
+    .end annotation
 
     .line 2
     invoke-static {p1}, Ljava/lang/Math;->round(F)I
@@ -735,7 +903,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p1, v1, v0}, Lcom/android/camera/a6;->A(III)I
+    invoke-static {p1, v1, v0}, Ld/d/a/z5;->s(III)I
 
     move-result p1
 
@@ -766,6 +934,14 @@
 
 .method public bridge synthetic mapValueToPosition(Ljava/lang/Object;)F
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "value"
+        }
+    .end annotation
 
     .line 1
     check-cast p1, Ljava/lang/String;
@@ -779,6 +955,14 @@
 
 .method public mapValueToPosition(Ljava/lang/String;)F
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
 
     .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mValidBeautyLevel:Ljava/util/List;
@@ -824,7 +1008,16 @@
 
 .method public measureGap(I)F
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "index"
+        }
+    .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mIsRTL:Z
 
     if-nez v0, :cond_0
@@ -847,8 +1040,9 @@
 
     return p0
 
+    .line 2
     :cond_2
-    iget p1, p0, Lcom/android/camera/ui/d$b;->mTotalWidth:F
+    iget p1, p0, Ld/d/a/d8/o1$b;->mTotalWidth:F
 
     const/4 v0, 0x0
 
@@ -891,24 +1085,45 @@
 
 .method public measureWidth(I)F
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "index"
+        }
+    .end annotation
 
     const/4 v0, -0x1
 
     if-ne p1, v0, :cond_0
 
-    iget p0, p0, Lcom/android/camera/ui/d$b;->mLineSelectWidth:F
+    .line 1
+    iget p0, p0, Ld/d/a/d8/o1$b;->mLineSelectWidth:F
 
     return p0
 
+    .line 2
     :cond_0
-    iget p0, p0, Lcom/android/camera/ui/d$b;->mLineWidth:F
+    iget p0, p0, Ld/d/a/d8/o1$b;->mLineWidth:F
 
     return p0
 .end method
 
 .method public onChangeValue(Ljava/lang/String;I)V
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "value",
+            "action"
+        }
     .end annotation
 
     return-void
@@ -916,18 +1131,35 @@
 
 .method public onPositionSelect(Landroid/view/View;FII)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "view",
+            "index",
+            "action",
+            "feedback"
+        }
+    .end annotation
 
+    .line 1
     iget-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mEnable:Z
 
     if-nez p1, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     invoke-static {p2}, Ljava/lang/Math;->round(F)I
 
     move-result p1
 
+    .line 3
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->getRealCount()I
 
     move-result p2
@@ -936,16 +1168,18 @@
 
     const/4 p3, 0x0
 
-    invoke-static {p1, p3, p2}, Lcom/android/camera/a6;->A(III)I
+    invoke-static {p1, p3, p2}, Ld/d/a/z5;->s(III)I
 
     move-result p1
 
     int-to-float p2, p1
 
+    .line 4
     invoke-virtual {p0, p2}, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mapPositionToValue(F)Ljava/lang/String;
 
     move-result-object p2
 
+    .line 5
     invoke-virtual {p2}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
@@ -960,18 +1194,22 @@
 
     if-nez v0, :cond_2
 
-    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mManuallyListener:Ln6/a0;
+    .line 6
+    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mManuallyListener:Ld/d/a/u6/x4/e0;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0, p1, p3, p4}, Ln6/a0;->onZoomItemSlideOn(IZI)V
+    .line 7
+    invoke-interface {v0, p1, p3, p4}, Ld/d/a/u6/x4/e0;->onZoomItemSlideOn(IZI)V
 
-    iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mManuallyListener:Ln6/a0;
+    .line 8
+    iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mManuallyListener:Ld/d/a/u6/x4/e0;
 
     const/4 p3, 0x3
 
-    invoke-interface {p1, p2, p3}, Ln6/a0;->onManuallyDataChanged(Ljava/lang/String;I)V
+    invoke-interface {p1, p2, p3}, Ld/d/a/u6/x4/e0;->onManuallyDataChanged(Ljava/lang/String;I)V
 
+    .line 9
     :cond_1
     iput-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mCurrentValue:Ljava/lang/String;
 
@@ -981,7 +1219,16 @@
 
 .method public resetCurrentValue(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "currentValue"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mCurrentValue:Ljava/lang/String;
 
     return-void
@@ -989,9 +1236,19 @@
 
 .method public setCurrentValue(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "currentValue"
+        }
+    .end annotation
 
-    invoke-super {p0, p1}, Lcom/android/camera/ui/d$b;->setCurrentValue(Ljava/lang/String;)V
+    .line 1
+    invoke-super {p0, p1}, Ld/d/a/d8/o1$b;->setCurrentValue(Ljava/lang/String;)V
 
+    .line 2
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mCurrentValue:Ljava/lang/String;
 
     return-void
@@ -999,9 +1256,19 @@
 
 .method public setEnable(Z)V
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "enable"
+        }
+    .end annotation
+
+    .line 1
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mEnable:Z
 
     return-void
@@ -1010,36 +1277,47 @@
 .method public updateColor()V
     .locals 2
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    .line 1
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object v0
 
-    const v1, 0x7f060957
+    const v1, 0x7f0604ed
 
-    invoke-virtual {v0, v1}, Lf2/e;->b(I)I
+    invoke-virtual {v0, v1}, Ld/d/a/k6/f;->b(I)I
 
     move-result v0
 
-    iput v0, p0, Lcom/android/camera/ui/d$b;->mLineColorStop:I
+    iput v0, p0, Ld/d/a/d8/o1$b;->mLineColorStop:I
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    .line 2
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object v0
 
-    const v1, 0x7f060955
+    const v1, 0x7f0604eb
 
-    invoke-virtual {v0, v1}, Lf2/e;->b(I)I
+    invoke-virtual {v0, v1}, Ld/d/a/k6/f;->b(I)I
 
     move-result v0
 
-    iput v0, p0, Lcom/android/camera/ui/d$b;->mLineColorNormal:I
+    iput v0, p0, Ld/d/a/d8/o1$b;->mLineColorNormal:I
 
     return-void
 .end method
 
 .method public updateDefaultValue(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/beauty/ExtraSliderBeautyLevelAdapterMM;->mDefaultValue:Ljava/lang/String;
 
     return-void

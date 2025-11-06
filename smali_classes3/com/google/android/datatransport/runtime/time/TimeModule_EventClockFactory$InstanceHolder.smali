@@ -1,4 +1,4 @@
-.class final Lcom/google/android/datatransport/runtime/time/TimeModule_EventClockFactory$InstanceHolder;
+.class public final Lcom/google/android/datatransport/runtime/time/TimeModule_EventClockFactory$InstanceHolder;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/datatransport/runtime/time/TimeModule_EventClockFactory;
 
     invoke-direct {v0}, Lcom/google/android/datatransport/runtime/time/TimeModule_EventClockFactory;-><init>()V
@@ -34,6 +35,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,6 +44,7 @@
 .method public static synthetic access$000()Lcom/google/android/datatransport/runtime/time/TimeModule_EventClockFactory;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/datatransport/runtime/time/TimeModule_EventClockFactory$InstanceHolder;->INSTANCE:Lcom/google/android/datatransport/runtime/time/TimeModule_EventClockFactory;
 
     return-object v0

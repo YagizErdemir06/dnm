@@ -7,15 +7,17 @@
 
 
 # instance fields
-.field protected final loaders:[Lcom/google/android/exoplayer2/source/SequenceableLoader;
+.field public final loaders:[Lcom/google/android/exoplayer2/source/SequenceableLoader;
 
 
 # direct methods
 .method public constructor <init>([Lcom/google/android/exoplayer2/source/SequenceableLoader;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/CompositeSequenceableLoader;->loaders:[Lcom/google/android/exoplayer2/source/SequenceableLoader;
 
     return-void
@@ -32,6 +34,7 @@
 
     move v3, v2
 
+    .line 1
     :cond_0
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/exoplayer2/source/CompositeSequenceableLoader;->getNextLoadPositionUs()J
 
@@ -48,6 +51,7 @@
     :cond_1
     move-object/from16 v8, p0
 
+    .line 2
     iget-object v9, v8, Lcom/google/android/exoplayer2/source/CompositeSequenceableLoader;->loaders:[Lcom/google/android/exoplayer2/source/SequenceableLoader;
 
     array-length v10, v9
@@ -61,6 +65,7 @@
 
     aget-object v13, v9, v11
 
+    .line 3
     invoke-interface {v13}, Lcom/google/android/exoplayer2/source/SequenceableLoader;->getNextLoadPositionUs()J
 
     move-result-wide v14
@@ -87,6 +92,7 @@
 
     if-eqz v16, :cond_4
 
+    .line 4
     :cond_3
     invoke-interface {v13, v0, v1}, Lcom/google/android/exoplayer2/source/SequenceableLoader;->continueLoading(J)Z
 
@@ -111,6 +117,7 @@
 .method public final getBufferedPositionUs()J
     .locals 10
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/CompositeSequenceableLoader;->loaders:[Lcom/google/android/exoplayer2/source/SequenceableLoader;
 
     array-length v0, p0
@@ -128,6 +135,7 @@
 
     aget-object v8, p0, v3
 
+    .line 2
     invoke-interface {v8}, Lcom/google/android/exoplayer2/source/SequenceableLoader;->getBufferedPositionUs()J
 
     move-result-wide v8
@@ -136,6 +144,7 @@
 
     if-eqz v6, :cond_0
 
+    .line 3
     invoke-static {v4, v5, v8, v9}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v4
@@ -159,6 +168,7 @@
 .method public final getNextLoadPositionUs()J
     .locals 10
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/CompositeSequenceableLoader;->loaders:[Lcom/google/android/exoplayer2/source/SequenceableLoader;
 
     array-length v0, p0
@@ -176,6 +186,7 @@
 
     aget-object v8, p0, v3
 
+    .line 2
     invoke-interface {v8}, Lcom/google/android/exoplayer2/source/SequenceableLoader;->getNextLoadPositionUs()J
 
     move-result-wide v8
@@ -184,6 +195,7 @@
 
     if-eqz v6, :cond_0
 
+    .line 3
     invoke-static {v4, v5, v8, v9}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v4
@@ -207,6 +219,7 @@
 .method public isLoading()Z
     .locals 4
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/CompositeSequenceableLoader;->loaders:[Lcom/google/android/exoplayer2/source/SequenceableLoader;
 
     array-length v0, p0
@@ -220,6 +233,7 @@
 
     aget-object v3, p0, v2
 
+    .line 2
     invoke-interface {v3}, Lcom/google/android/exoplayer2/source/SequenceableLoader;->isLoading()Z
 
     move-result v3
@@ -242,6 +256,7 @@
 .method public final reevaluateBuffer(J)V
     .locals 3
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/CompositeSequenceableLoader;->loaders:[Lcom/google/android/exoplayer2/source/SequenceableLoader;
 
     array-length v0, p0
@@ -253,6 +268,7 @@
 
     aget-object v2, p0, v1
 
+    .line 2
     invoke-interface {v2, p1, p2}, Lcom/google/android/exoplayer2/source/SequenceableLoader;->reevaluateBuffer(J)V
 
     add-int/lit8 v1, v1, 0x1

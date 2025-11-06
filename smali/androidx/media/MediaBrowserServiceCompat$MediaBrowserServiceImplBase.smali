@@ -1,4 +1,4 @@
-.class Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase;
+.class public Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -20,7 +20,7 @@
 # instance fields
 .field private mMessenger:Landroid/os/Messenger;
 
-.field final synthetic this$0:Landroidx/media/MediaBrowserServiceCompat;
+.field public final synthetic this$0:Landroidx/media/MediaBrowserServiceCompat;
 
 
 # direct methods
@@ -35,6 +35,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase;->this$0:Landroidx/media/MediaBrowserServiceCompat;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,12 +48,14 @@
 .method public getBrowserRootHints()Landroid/os/Bundle;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase;->this$0:Landroidx/media/MediaBrowserServiceCompat;
 
     iget-object v0, v0, Landroidx/media/MediaBrowserServiceCompat;->mCurConnection:Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;
 
     if-eqz v0, :cond_1
 
+    .line 2
     iget-object v0, v0, Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;->rootHints:Landroid/os/Bundle;
 
     if-nez v0, :cond_0
@@ -77,6 +80,7 @@
     :goto_0
     return-object p0
 
+    .line 3
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -90,16 +94,19 @@
 .method public getCurrentBrowserInfo()Landroidx/media/MediaSessionManager$RemoteUserInfo;
     .locals 1
 
+    .line 1
     iget-object p0, p0, Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase;->this$0:Landroidx/media/MediaBrowserServiceCompat;
 
     iget-object p0, p0, Landroidx/media/MediaBrowserServiceCompat;->mCurConnection:Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;
 
     if-eqz p0, :cond_0
 
+    .line 2
     iget-object p0, p0, Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;->browserInfo:Landroidx/media/MediaSessionManager$RemoteUserInfo;
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -193,6 +200,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p1, Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;->subscriptions:Ljava/util/HashMap;
 
     invoke-virtual {v0, p2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -203,6 +211,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 2
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -221,6 +230,7 @@
 
     check-cast v1, Landroidx/core/util/Pair;
 
+    .line 3
     iget-object v2, v1, Landroidx/core/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v2, Landroid/os/Bundle;
@@ -231,6 +241,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 4
     iget-object v2, p0, Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase;->this$0:Landroidx/media/MediaBrowserServiceCompat;
 
     iget-object v1, v1, Landroidx/core/util/Pair;->second:Ljava/lang/Object;
@@ -256,11 +267,12 @@
         }
     .end annotation
 
-    const-string v0, "android.media.browse.MediaBrowserService"
-
+    .line 1
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
+
+    const-string v0, "android.media.browse.MediaBrowserService"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -268,6 +280,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 2
     iget-object p0, p0, Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase;->mMessenger:Landroid/os/Messenger;
 
     invoke-virtual {p0}, Landroid/os/Messenger;->getBinder()Landroid/os/IBinder;
@@ -285,6 +298,7 @@
 .method public onCreate()V
     .locals 2
 
+    .line 1
     new-instance v0, Landroid/os/Messenger;
 
     iget-object v1, p0, Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase;->this$0:Landroidx/media/MediaBrowserServiceCompat;
@@ -309,6 +323,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/media/MediaBrowserServiceCompat$MediaBrowserServiceImplBase;->this$0:Landroidx/media/MediaBrowserServiceCompat;
 
     iget-object v0, v0, Landroidx/media/MediaBrowserServiceCompat;->mHandler:Landroidx/media/MediaBrowserServiceCompat$ServiceHandler;

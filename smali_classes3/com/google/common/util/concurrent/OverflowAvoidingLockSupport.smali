@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/OverflowAvoidingLockSupport;
+.class public final Lcom/google/common/util/concurrent/OverflowAvoidingLockSupport;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -9,13 +9,14 @@
 
 
 # static fields
-.field static final MAX_NANOSECONDS_THRESHOLD:J = 0x1dcd64ffffffffffL
+.field public static final MAX_NANOSECONDS_THRESHOLD:J = 0x1dcd64ffffffffffL
 
 
 # direct methods
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,6 +31,7 @@
 
     const-wide v0, 0x1dcd64ffffffffffL    # 3.98785104510193E-165
 
+    .line 1
     invoke-static {p1, p2, v0, v1}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide p1

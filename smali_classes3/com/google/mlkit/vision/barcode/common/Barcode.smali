@@ -188,6 +188,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/vision/barcode/common/Barcode;->zza:Lcom/google/mlkit/vision/barcode/common/internal/BarcodeSource;
 
     invoke-interface {p0}, Lcom/google/mlkit/vision/barcode/common/internal/BarcodeSource;->getCalendarEvent()Lcom/google/mlkit/vision/barcode/common/Barcode$CalendarEvent;
@@ -202,6 +203,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/vision/barcode/common/Barcode;->zza:Lcom/google/mlkit/vision/barcode/common/internal/BarcodeSource;
 
     invoke-interface {p0}, Lcom/google/mlkit/vision/barcode/common/internal/BarcodeSource;->getContactInfo()Lcom/google/mlkit/vision/barcode/common/Barcode$ContactInfo;
@@ -226,6 +228,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/vision/barcode/common/Barcode;->zza:Lcom/google/mlkit/vision/barcode/common/internal/BarcodeSource;
 
     invoke-interface {p0}, Lcom/google/mlkit/vision/barcode/common/internal/BarcodeSource;->getDisplayValue()Ljava/lang/String;
@@ -240,6 +243,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/vision/barcode/common/Barcode;->zza:Lcom/google/mlkit/vision/barcode/common/internal/BarcodeSource;
 
     invoke-interface {p0}, Lcom/google/mlkit/vision/barcode/common/internal/BarcodeSource;->getDriverLicense()Lcom/google/mlkit/vision/barcode/common/Barcode$DriverLicense;
@@ -254,6 +258,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/vision/barcode/common/Barcode;->zza:Lcom/google/mlkit/vision/barcode/common/internal/BarcodeSource;
 
     invoke-interface {p0}, Lcom/google/mlkit/vision/barcode/common/internal/BarcodeSource;->getEmail()Lcom/google/mlkit/vision/barcode/common/Barcode$Email;
@@ -268,24 +273,25 @@
     .annotation build Lcom/google/mlkit/vision/barcode/common/Barcode$BarcodeFormat;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/vision/barcode/common/Barcode;->zza:Lcom/google/mlkit/vision/barcode/common/internal/BarcodeSource;
 
     invoke-interface {p0}, Lcom/google/mlkit/vision/barcode/common/internal/BarcodeSource;->getFormat()I
 
     move-result p0
 
-    const/16 v0, 0x1000
+    const/4 v0, -0x1
 
-    const/4 v1, -0x1
+    const/16 v1, 0x1000
 
-    if-gt p0, v0, :cond_0
+    if-gt p0, v1, :cond_0
 
     if-nez p0, :cond_1
 
-    return v1
+    return v0
 
     :cond_0
-    move p0, v1
+    move p0, v0
 
     :cond_1
     return p0
@@ -296,6 +302,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/vision/barcode/common/Barcode;->zza:Lcom/google/mlkit/vision/barcode/common/internal/BarcodeSource;
 
     invoke-interface {p0}, Lcom/google/mlkit/vision/barcode/common/internal/BarcodeSource;->getGeoPoint()Lcom/google/mlkit/vision/barcode/common/Barcode$GeoPoint;
@@ -310,6 +317,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/vision/barcode/common/Barcode;->zza:Lcom/google/mlkit/vision/barcode/common/internal/BarcodeSource;
 
     invoke-interface {p0}, Lcom/google/mlkit/vision/barcode/common/internal/BarcodeSource;->getPhone()Lcom/google/mlkit/vision/barcode/common/Barcode$Phone;
@@ -324,6 +332,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/vision/barcode/common/Barcode;->zza:Lcom/google/mlkit/vision/barcode/common/internal/BarcodeSource;
 
     invoke-interface {p0}, Lcom/google/mlkit/vision/barcode/common/internal/BarcodeSource;->getRawBytes()[B
@@ -334,6 +343,7 @@
 
     array-length v0, p0
 
+    .line 2
     invoke-static {p0, v0}, Ljava/util/Arrays;->copyOf([BI)[B
 
     move-result-object p0
@@ -351,6 +361,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/vision/barcode/common/Barcode;->zza:Lcom/google/mlkit/vision/barcode/common/internal/BarcodeSource;
 
     invoke-interface {p0}, Lcom/google/mlkit/vision/barcode/common/internal/BarcodeSource;->getRawValue()Ljava/lang/String;
@@ -365,6 +376,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/vision/barcode/common/Barcode;->zza:Lcom/google/mlkit/vision/barcode/common/internal/BarcodeSource;
 
     invoke-interface {p0}, Lcom/google/mlkit/vision/barcode/common/internal/BarcodeSource;->getSms()Lcom/google/mlkit/vision/barcode/common/Barcode$Sms;
@@ -379,6 +391,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/vision/barcode/common/Barcode;->zza:Lcom/google/mlkit/vision/barcode/common/internal/BarcodeSource;
 
     invoke-interface {p0}, Lcom/google/mlkit/vision/barcode/common/internal/BarcodeSource;->getUrl()Lcom/google/mlkit/vision/barcode/common/Barcode$UrlBookmark;
@@ -393,6 +406,7 @@
     .annotation build Lcom/google/mlkit/vision/barcode/common/Barcode$BarcodeValueType;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/vision/barcode/common/Barcode;->zza:Lcom/google/mlkit/vision/barcode/common/internal/BarcodeSource;
 
     invoke-interface {p0}, Lcom/google/mlkit/vision/barcode/common/internal/BarcodeSource;->getValueType()I
@@ -407,6 +421,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/vision/barcode/common/Barcode;->zza:Lcom/google/mlkit/vision/barcode/common/internal/BarcodeSource;
 
     invoke-interface {p0}, Lcom/google/mlkit/vision/barcode/common/internal/BarcodeSource;->getWifi()Lcom/google/mlkit/vision/barcode/common/Barcode$WiFi;

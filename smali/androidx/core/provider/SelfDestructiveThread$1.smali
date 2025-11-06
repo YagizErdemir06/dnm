@@ -1,4 +1,4 @@
-.class Landroidx/core/provider/SelfDestructiveThread$1;
+.class public Landroidx/core/provider/SelfDestructiveThread$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/core/provider/SelfDestructiveThread;
+.field public final synthetic this$0:Landroidx/core/provider/SelfDestructiveThread;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/core/provider/SelfDestructiveThread;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/core/provider/SelfDestructiveThread$1;->this$0:Landroidx/core/provider/SelfDestructiveThread;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,6 +38,7 @@
 .method public handleMessage(Landroid/os/Message;)Z
     .locals 2
 
+    .line 1
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
@@ -47,6 +49,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     iget-object p0, p0, Landroidx/core/provider/SelfDestructiveThread$1;->this$0:Landroidx/core/provider/SelfDestructiveThread;
 
@@ -58,6 +61,7 @@
 
     return v1
 
+    .line 3
     :cond_1
     iget-object p0, p0, Landroidx/core/provider/SelfDestructiveThread$1;->this$0:Landroidx/core/provider/SelfDestructiveThread;
 

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/upstream/cache/ReusableBufferedOutputStream;
+.class public final Lcom/google/android/exoplayer2/upstream/cache/ReusableBufferedOutputStream;
 .super Ljava/io/BufferedOutputStream;
 .source "SourceFile"
 
@@ -38,10 +38,12 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/upstream/cache/ReusableBufferedOutputStream;->closed:Z
 
+    .line 2
     :try_start_0
-    invoke-virtual {p0}, Ljava/io/OutputStream;->flush()V
+    invoke-virtual {p0}, Ljava/io/BufferedOutputStream;->flush()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -52,6 +54,7 @@
     :catchall_0
     move-exception v0
 
+    .line 3
     :goto_0
     :try_start_1
     iget-object p0, p0, Ljava/io/BufferedOutputStream;->out:Ljava/io/OutputStream;
@@ -73,6 +76,7 @@
     :goto_1
     if-eqz v0, :cond_1
 
+    .line 4
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Util;->sneakyThrow(Ljava/lang/Throwable;)V
 
     :cond_1
@@ -82,16 +86,20 @@
 .method public reset(Ljava/io/OutputStream;)V
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/upstream/cache/ReusableBufferedOutputStream;->closed:Z
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iput-object p1, p0, Ljava/io/BufferedOutputStream;->out:Ljava/io/OutputStream;
 
     const/4 p1, 0x0
 
+    .line 3
     iput p1, p0, Ljava/io/BufferedOutputStream;->count:I
 
+    .line 4
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/upstream/cache/ReusableBufferedOutputStream;->closed:Z
 
     return-void

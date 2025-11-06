@@ -26,7 +26,7 @@
     .end annotation
 .end field
 
-.field static final RESULT_CODE_PROVIDER_NOT_FOUND:I = -0x1
+.field public static final RESULT_CODE_PROVIDER_NOT_FOUND:I = -0x1
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
             .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
@@ -37,7 +37,7 @@
     .end annotation
 .end field
 
-.field static final RESULT_CODE_WRONG_CERTIFICATES:I = -0x2
+.field public static final RESULT_CODE_WRONG_CERTIFICATES:I = -0x2
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
             .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
@@ -53,6 +53,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -77,6 +78,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {p0, p1, p2, v0}, Landroidx/core/graphics/TypefaceCompat;->createFromFontInfo(Landroid/content/Context;Landroid/os/CancellationSignal;[Landroidx/core/provider/FontsContractCompat$FontInfo;I)Landroid/graphics/Typeface;
 
     move-result-object p0
@@ -107,6 +109,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0, p2, p1}, Landroidx/core/provider/FontProvider;->getFontFamilyResult(Landroid/content/Context;Landroidx/core/provider/FontRequest;Landroid/os/CancellationSignal;)Landroidx/core/provider/FontsContractCompat$FontFamilyResult;
 
     move-result-object p0
@@ -133,10 +136,12 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     new-instance v6, Landroidx/core/graphics/TypefaceCompat$ResourcesCallbackAdapter;
 
     invoke-direct {v6, p2}, Landroidx/core/graphics/TypefaceCompat$ResourcesCallbackAdapter;-><init>(Landroidx/core/content/res/ResourcesCompat$FontCallback;)V
 
+    .line 2
     invoke-static {p3}, Landroidx/core/content/res/ResourcesCompat$FontCallback;->getHandler(Landroid/os/Handler;)Landroid/os/Handler;
 
     move-result-object v5
@@ -151,6 +156,7 @@
 
     move v4, p5
 
+    .line 3
     invoke-static/range {v0 .. v6}, Landroidx/core/provider/FontsContractCompat;->requestFont(Landroid/content/Context;Landroidx/core/provider/FontRequest;IZILandroid/os/Handler;Landroidx/core/provider/FontsContractCompat$FontRequestCallback;)Landroid/graphics/Typeface;
 
     move-result-object p0
@@ -193,6 +199,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-static {p0, p1, p2}, Landroidx/core/provider/FontProvider;->getProvider(Landroid/content/pm/PackageManager;Landroidx/core/provider/FontRequest;Landroid/content/res/Resources;)Landroid/content/pm/ProviderInfo;
 
     move-result-object p0
@@ -230,6 +237,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-static {p0, p1, p2}, Landroidx/core/graphics/TypefaceCompatUtil;->readFontInfoIntoByteBuffer(Landroid/content/Context;[Landroidx/core/provider/FontsContractCompat$FontInfo;Landroid/os/CancellationSignal;)Ljava/util/Map;
 
     move-result-object p0
@@ -346,6 +354,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-static {}, Landroidx/core/provider/FontRequestWorker;->resetTypefaceCache()V
 
     return-void
@@ -362,6 +371,7 @@
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 
+    .line 1
     invoke-static {}, Landroidx/core/provider/FontRequestWorker;->resetTypefaceCache()V
 
     return-void

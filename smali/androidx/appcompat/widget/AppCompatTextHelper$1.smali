@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/widget/AppCompatTextHelper$1;
+.class public Landroidx/appcompat/widget/AppCompatTextHelper$1;
 .super Landroidx/core/content/res/ResourcesCompat$FontCallback;
 .source "SourceFile"
 
@@ -15,19 +15,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/appcompat/widget/AppCompatTextHelper;
+.field public final synthetic this$0:Landroidx/appcompat/widget/AppCompatTextHelper;
 
-.field final synthetic val$fontWeight:I
+.field public final synthetic val$fontWeight:I
 
-.field final synthetic val$style:I
+.field public final synthetic val$style:I
 
-.field final synthetic val$textViewWeak:Ljava/lang/ref/WeakReference;
+.field public final synthetic val$textViewWeak:Ljava/lang/ref/WeakReference;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/appcompat/widget/AppCompatTextHelper;IILjava/lang/ref/WeakReference;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/widget/AppCompatTextHelper$1;->this$0:Landroidx/appcompat/widget/AppCompatTextHelper;
 
     iput p2, p0, Landroidx/appcompat/widget/AppCompatTextHelper$1;->val$fontWeight:I
@@ -56,12 +57,21 @@
         .end annotation
     .end param
 
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1c
+
+    if-lt v0, v1, :cond_1
+
+    .line 2
     iget v0, p0, Landroidx/appcompat/widget/AppCompatTextHelper$1;->val$fontWeight:I
 
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_1
 
+    .line 3
     iget v1, p0, Landroidx/appcompat/widget/AppCompatTextHelper$1;->val$style:I
 
     and-int/lit8 v1, v1, 0x2
@@ -76,10 +86,11 @@
     const/4 v1, 0x0
 
     :goto_0
-    invoke-static {p1, v0, v1}, Landroidx/appcompat/widget/AppCompatTextHelper$Api28Impl;->create(Landroid/graphics/Typeface;IZ)Landroid/graphics/Typeface;
+    invoke-static {p1, v0, v1}, Landroid/graphics/Typeface;->create(Landroid/graphics/Typeface;IZ)Landroid/graphics/Typeface;
 
     move-result-object p1
 
+    .line 4
     :cond_1
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatTextHelper$1;->this$0:Landroidx/appcompat/widget/AppCompatTextHelper;
 

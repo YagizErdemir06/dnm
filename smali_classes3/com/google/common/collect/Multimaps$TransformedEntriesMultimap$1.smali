@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Multimaps$TransformedEntriesMultimap$1;
+.class public Lcom/google/common/collect/Multimaps$TransformedEntriesMultimap$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -30,13 +30,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/Multimaps$TransformedEntriesMultimap;
+.field public final synthetic this$0:Lcom/google/common/collect/Multimaps$TransformedEntriesMultimap;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/Multimaps$TransformedEntriesMultimap;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/Multimaps$TransformedEntriesMultimap$1;->this$0:Lcom/google/common/collect/Multimaps$TransformedEntriesMultimap;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

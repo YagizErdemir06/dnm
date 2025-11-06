@@ -205,7 +205,6 @@
     <string name="accessibility_video_capture_button">વિડીયો શૂટ કરતી વખતે ફોટો પાડવા માટે બટન</string>
     <string name="accessibility_video_pause_button">વિડીયો રેકોર્ડ કરવાનું થોભાવ્યું</string>
     <string name="accessibility_video_resume_button">વિડીયો રેકોર્ડ કરવાનું ફરી શરૂ કર્યું</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">વૉટરમાર્ક બંધ છે</string>
     <string name="accessibility_watermark_image_on">વૉટરમાર્ક ચાલુ છે</string>
     <string name="accessibility_watermark_text">વૉટરમાર્ક એડજસ્ટમેન્ટ પેનલ ખોલો</string>
@@ -213,16 +212,6 @@
     <string name="accessibility_zoom_button">ઝૂમ મોડ</string>
     <string name="actionbar_button_up_description">પાછળ</string>
     <string name="afternoon">બપોર પછી</string>
-    <string name="agent_flip_tbc">આંતરિક સ્ક્રીન પર ચાલુ રાખો</string>
-    <string name="agent_function_max">મહત્તમ મૂલ્યમાં એડજસ્ટ કરેલ છે</string>
-    <string name="agent_function_min">ન્યૂનતમ મૂલ્યમાં એડજસ્ટ કરેલ છે</string>
-    <string name="agent_workspace_mode_not_supported">આ લાક્ષણિકતાને સમર્થન નથી</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"આ સુવિધા સમર્થિત નથી.
-તેના બદલે ફોટો મોડ ખોલ્યો."</string>
-    <string name="agent_workspace_on">\"%1$s\" ફોટોગ્રાફિંગ કરવા માટે પરિમાણો સેટ કર્યા</string>
-    <string name="agent_workspace_tbc">દૃશ્યનો અભ્યાસ કરી રહ્યાં છે</string>
-    <string name="agent_workspace_tbc_use_default">"દૃશ્યનો અભ્યાસ કરી રહ્યાં છે…
-કેમેરા પેરામીટર્સ ડિફૉલ્ટ તરીકે સેટ છે"</string>
     <string name="ai_agra_fort">આગ્રાનો કિલ્લો</string>
     <string name="ai_amber_fort">અંબર પેલેસ</string>
     <string name="ai_baby">બેબી</string>
@@ -781,7 +770,6 @@
     <string name="download_hint_cn">"Looks like your device isn't connected to WLAN. Use %1$s MB of mobile data to download items now?"</string>
     <string name="download_hint_wifi">એવું લાગે છે કે તમારું ડિવાઇસ Wi-Fi થી કનેક્ટેડ નથી. હમણાં આઈટમ્સ ડાઉનલોડ કરવા માટે %1$s MB મોબાઇલ ડેટાનો ઉપયોગ કરીએ?</string>
     <string name="download_in_progress">ડાઉનલોડ થાય છે…</string>
-    <string name="download_network_error">ડાઉનલોડ કરી શકાયું નહીં. તમારા નેટવર્ક સેટિંગ્સ તપાસો.</string>
     <string name="download_title">ડેટા વપરાશ ચેતવણી</string>
     <string name="download_waiting">બાકી…</string>
     <string name="dual_camera_lens_covered_toast">લેન્સ આવૃત છે.</string>
@@ -1260,7 +1248,6 @@
     <string name="miuix_appcompat_delete_description">કાઢી નાખો</string>
     <string name="miuix_appcompat_deselect_all">તમામ નાપસંદ કરો</string>
     <string name="miuix_appcompat_deselect_all_description">બધી પસંદગીઓ દૂર કરો</string>
-    <string name="miuix_appcompat_edit">એડિટ કરો</string>
     <string name="miuix_appcompat_search_action_mode_cancel">રદ કરો</string>
     <string name="miuix_appcompat_search_input_description">શોધો</string>
     <string name="miuix_appcompat_select_all">બધુ પસંદ કરો</string>
@@ -2199,7 +2186,6 @@
     <string name="time_picker_label_hour">H</string>
     <string name="time_picker_label_minute">M</string>
     <string name="time_stamp_date_format">dd/MM/yyyy</string>
-    <string name="time_stamp_date_format_minute">dd/MM/yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">તમે શૂટિંગ પહેલાં અથવા દરમિયાન કોઈપણ સમયે બેકગ્રાઉન્ડને ફ્રીઝ અને અનફ્રીઝ કરી શકો છો.</string>
     <string name="timefreeze_guide_tip3">તમારા વિષયને ફ્રેમનાં કેન્દ્રમાં રહેવા માટે કહો.</string>
     <string name="timefreeze_guide_tip4">ટ્રાફિક થોભાવો.</string>
@@ -2220,7 +2206,7 @@
     <string name="tip_beauty_mode_title1">પોર્ટ્રેટ સ્ટાઇલ: ફ્રેશ</string>
     <string name="tip_beauty_mode_title2">પોર્ટ્રેટ સ્ટાઇલ: ફિલ્મ</string>
     <string name="tip_cvtype_title1">શૈલી: Leica Authentic</string>
-    <string name="tip_cvtype_title2">શૈલી: Leica વાઇબ્રન્ટ</string>
+    <string name="tip_cvtype_title2">શૈલી: લિકા વાઇબ્રન્ટ</string>
     <string name="tip_eis_off">સ્થિર વિડિઓ: બંધ</string>
     <string name="tip_eis_pro_off">સ્થિર વિડિઓ PRO: બંધ</string>
     <string name="tip_flash_auto">ફ્લેશ: ઓટો</string>
@@ -2237,7 +2223,7 @@
     <string name="tip_flash_screen_light_on">સોફ્ટ ફ્લેશ: ચાલુ</string>
     <string name="tip_flash_soft_light_off">સોફ્ટ ફ્લેશ: બંધ છે</string>
     <string name="tip_flash_soft_light_torch">સોફ્ટ ફ્લેશ: ફ્લેશલાઇટ મોડ</string>
-    <string name="tip_flash_torch">ફ્લેશ: ફ્લેશલાઇટ</string>
+    <string name="tip_flash_torch">ફ્લેશ: હંમેશા ચાલુ</string>
     <string name="tip_friend_mode_connect_when_24GHz">પૂર્વાવલોકન ગુણવત્તા વધારવા માટે %s GHz કનેક્શનનો ઉપયોગ કરો</string>
     <string name="tip_friend_mode_display_device_name_connect">શેર કરેલ પૂર્વાવલોકન</string>
     <string name="tip_friend_mode_display_device_name_disconnect">અન્ય ડિવાઇસીસએ આ સત્ર છોડી દીધું</string>

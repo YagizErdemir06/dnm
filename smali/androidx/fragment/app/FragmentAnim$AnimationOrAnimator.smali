@@ -1,4 +1,4 @@
-.class Landroidx/fragment/app/FragmentAnim$AnimationOrAnimator;
+.class public Landroidx/fragment/app/FragmentAnim$AnimationOrAnimator;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

@@ -1,4 +1,4 @@
-.class Landroidx/preference/PreferenceGroupAdapter$PreferenceResourceDescriptor;
+.class public Landroidx/preference/PreferenceGroupAdapter$PreferenceResourceDescriptor;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,23 +15,21 @@
 
 
 # instance fields
-.field mClassName:Ljava/lang/String;
+.field public mClassName:Ljava/lang/String;
 
-.field mLayoutResId:I
+.field public mLayoutResId:I
 
-.field mWidgetLayoutResId:I
+.field public mWidgetLayoutResId:I
 
 
 # direct methods
 .method public constructor <init>(Landroidx/preference/Preference;)V
     .locals 1
-    .param p1    # Landroidx/preference/Preference;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -42,12 +40,14 @@
 
     iput-object v0, p0, Landroidx/preference/PreferenceGroupAdapter$PreferenceResourceDescriptor;->mClassName:Ljava/lang/String;
 
+    .line 3
     invoke-virtual {p1}, Landroidx/preference/Preference;->getLayoutResource()I
 
     move-result v0
 
     iput v0, p0, Landroidx/preference/PreferenceGroupAdapter$PreferenceResourceDescriptor;->mLayoutResId:I
 
+    .line 4
     invoke-virtual {p1}, Landroidx/preference/Preference;->getWidgetLayoutResource()I
 
     move-result p1
@@ -62,6 +62,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
+    .line 1
     instance-of v0, p1, Landroidx/preference/PreferenceGroupAdapter$PreferenceResourceDescriptor;
 
     const/4 v1, 0x0
@@ -70,9 +71,11 @@
 
     return v1
 
+    .line 2
     :cond_0
     check-cast p1, Landroidx/preference/PreferenceGroupAdapter$PreferenceResourceDescriptor;
 
+    .line 3
     iget v0, p0, Landroidx/preference/PreferenceGroupAdapter$PreferenceResourceDescriptor;->mLayoutResId:I
 
     iget v2, p1, Landroidx/preference/PreferenceGroupAdapter$PreferenceResourceDescriptor;->mLayoutResId:I
@@ -89,6 +92,7 @@
 
     iget-object p1, p1, Landroidx/preference/PreferenceGroupAdapter$PreferenceResourceDescriptor;->mClassName:Ljava/lang/String;
 
+    .line 4
     invoke-static {p0, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result p0
@@ -104,27 +108,30 @@
 .method public hashCode()I
     .locals 2
 
-    const/16 v0, 0x20f
+    .line 1
+    iget v0, p0, Landroidx/preference/PreferenceGroupAdapter$PreferenceResourceDescriptor;->mLayoutResId:I
 
-    iget v1, p0, Landroidx/preference/PreferenceGroupAdapter$PreferenceResourceDescriptor;->mLayoutResId:I
+    const/16 v1, 0x20f
 
-    add-int/2addr v0, v1
+    add-int/2addr v1, v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    mul-int/lit8 v1, v1, 0x1f
 
-    iget v1, p0, Landroidx/preference/PreferenceGroupAdapter$PreferenceResourceDescriptor;->mWidgetLayoutResId:I
+    .line 2
+    iget v0, p0, Landroidx/preference/PreferenceGroupAdapter$PreferenceResourceDescriptor;->mWidgetLayoutResId:I
 
-    add-int/2addr v0, v1
+    add-int/2addr v1, v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    mul-int/lit8 v1, v1, 0x1f
 
+    .line 3
     iget-object p0, p0, Landroidx/preference/PreferenceGroupAdapter$PreferenceResourceDescriptor;->mClassName:Ljava/lang/String;
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     move-result p0
 
-    add-int/2addr v0, p0
+    add-int/2addr v1, p0
 
-    return v0
+    return v1
 .end method

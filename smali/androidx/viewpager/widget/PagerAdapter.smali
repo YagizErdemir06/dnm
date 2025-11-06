@@ -19,8 +19,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Landroid/database/DataSetObservable;
 
     invoke-direct {v0}, Landroid/database/DataSetObservable;-><init>()V
@@ -91,6 +93,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/viewpager/widget/PagerAdapter;->finishUpdate(Landroid/view/View;)V
 
     return-void
@@ -182,20 +185,25 @@
 .method public notifyDataSetChanged()V
     .locals 1
 
+    .line 1
     monitor-enter p0
 
+    .line 2
     :try_start_0
     iget-object v0, p0, Landroidx/viewpager/widget/PagerAdapter;->mViewPagerObserver:Landroid/database/DataSetObserver;
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {v0}, Landroid/database/DataSetObserver;->onChanged()V
 
+    .line 4
     :cond_0
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 5
     iget-object p0, p0, Landroidx/viewpager/widget/PagerAdapter;->mObservable:Landroid/database/DataSetObservable;
 
     invoke-virtual {p0}, Landroid/database/DataSetObservable;->notifyChanged()V
@@ -205,6 +213,7 @@
     :catchall_0
     move-exception v0
 
+    .line 6
     :try_start_1
     monitor-exit p0
     :try_end_1
@@ -220,9 +229,10 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Landroidx/viewpager/widget/PagerAdapter;->mObservable:Landroid/database/DataSetObservable;
 
-    invoke-virtual {p0, p1}, Landroid/database/Observable;->registerObserver(Ljava/lang/Object;)V
+    invoke-virtual {p0, p1}, Landroid/database/DataSetObservable;->registerObserver(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -278,6 +288,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0, p1, p2, p3}, Landroidx/viewpager/widget/PagerAdapter;->setPrimaryItem(Landroid/view/View;ILjava/lang/Object;)V
 
     return-void
@@ -286,11 +297,14 @@
 .method public setViewPagerObserver(Landroid/database/DataSetObserver;)V
     .locals 0
 
+    .line 1
     monitor-enter p0
 
+    .line 2
     :try_start_0
     iput-object p1, p0, Landroidx/viewpager/widget/PagerAdapter;->mViewPagerObserver:Landroid/database/DataSetObserver;
 
+    .line 3
     monitor-exit p0
 
     return-void
@@ -324,6 +338,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/viewpager/widget/PagerAdapter;->startUpdate(Landroid/view/View;)V
 
     return-void
@@ -336,9 +351,10 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Landroidx/viewpager/widget/PagerAdapter;->mObservable:Landroid/database/DataSetObservable;
 
-    invoke-virtual {p0, p1}, Landroid/database/Observable;->unregisterObserver(Ljava/lang/Object;)V
+    invoke-virtual {p0, p1}, Landroid/database/DataSetObservable;->unregisterObserver(Ljava/lang/Object;)V
 
     return-void
 .end method

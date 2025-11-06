@@ -205,7 +205,6 @@
     <string name="accessibility_video_capture_button">כפתור המאפשר לצלם תמונות כאשר אתה מצלם בוידאו</string>
     <string name="accessibility_video_pause_button">השהה את הקלטת הוידאו</string>
     <string name="accessibility_video_resume_button">חזור להקליט</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">סימן המים מושבת</string>
     <string name="accessibility_watermark_image_on">סימן המים מופעל</string>
     <string name="accessibility_watermark_text">פתיחת פנל לכוונון סימן מים</string>
@@ -213,16 +212,6 @@
     <string name="accessibility_zoom_button">מצב זום</string>
     <string name="actionbar_button_up_description">הקודם</string>
     <string name="afternoon">אחר הצהריים</string>
-    <string name="agent_flip_tbc">להמשיך במסך הפנימי</string>
-    <string name="agent_function_max">בוצע כוונון לערך המקסימלי</string>
-    <string name="agent_function_min">בוצע כוונון לערך המינימלי</string>
-    <string name="agent_workspace_mode_not_supported">אין תמיכה במאפיין זה</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"אין תמיכה במאפיין זה.
-במקום זאת, נפתח מצב צילום"</string>
-    <string name="agent_workspace_on">הפטמטרים שהוגדרו לצילום \"%1$s\"</string>
-    <string name="agent_workspace_tbc">לומד את הסצינה</string>
-    <string name="agent_workspace_tbc_use_default">"לומד את הסצינה…
-הפרמטרים של המצלמה הוגדרו לברירת המחדל"</string>
     <string name="ai_agra_fort">מצודת אגרה</string>
     <string name="ai_amber_fort">מבצר אמבר</string>
     <string name="ai_baby">תינוק</string>
@@ -781,7 +770,6 @@
     <string name="download_hint_cn">נראה שהמכשיר שלך אינו מחובר ל-WLAN. האם להשתמש ב-%1$s MB של נתונים ניידים כדי להוריד פריטים כעת?</string>
     <string name="download_hint_wifi">נראה שהמכשיר שלך אינו מחובר ל-Wi-Fi. האם להשתמש ב-%1$s MB של נתונים ניידים כדי להוריד פריטים כעת?</string>
     <string name="download_in_progress">מוריד…</string>
-    <string name="download_network_error">לא ניתן להוריד. יש לבדוק את הגדרות הרשת.</string>
     <string name="download_title">אזהרת ניצול נתונים</string>
     <string name="download_waiting">ממתין…</string>
     <string name="dual_camera_lens_covered_toast">העדשה מוסתרת.</string>
@@ -1260,7 +1248,6 @@
     <string name="miuix_appcompat_delete_description">מחק</string>
     <string name="miuix_appcompat_deselect_all">לבטל בחירת הכול</string>
     <string name="miuix_appcompat_deselect_all_description">בטל בחירת הכל</string>
-    <string name="miuix_appcompat_edit">עריכה</string>
     <string name="miuix_appcompat_search_action_mode_cancel">ביטול</string>
     <string name="miuix_appcompat_search_input_description">חיפוש</string>
     <string name="miuix_appcompat_select_all">בחר הכל</string>
@@ -2199,7 +2186,6 @@
     <string name="time_picker_label_hour">"שע'"</string>
     <string name="time_picker_label_minute">"ד'"</string>
     <string name="time_stamp_date_format">dd.MM.yyyy</string>
-    <string name="time_stamp_date_format_minute">dd.MM.yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">ניתן להקפיא או להסיר הקפאה מהרקע בכל זמן לפני או אחרי הצילום.</string>
     <string name="timefreeze_guide_tip3">בקש מהגורם המצולם להישאר במרכז הפריים.</string>
     <string name="timefreeze_guide_tip4">עצרו את התנועה.</string>
@@ -2237,7 +2223,7 @@
     <string name="tip_flash_screen_light_on">מבזק רך: פעיל</string>
     <string name="tip_flash_soft_light_off">מבזק רך: מושבת</string>
     <string name="tip_flash_soft_light_torch">מבזק רך: מצב פנס</string>
-    <string name="tip_flash_torch">מבזק: פנס</string>
+    <string name="tip_flash_torch">מבזק (פלאש): תמיד פעיל</string>
     <string name="tip_friend_mode_connect_when_24GHz">יש להשתמש ברשת %s GHz כדי להגביר את איכות התצוגה המקדימה</string>
     <string name="tip_friend_mode_display_device_name_connect">תצוגה מקדימה משותפת</string>
     <string name="tip_friend_mode_display_device_name_disconnect">המכשיר השני יצא מההתחברות</string>

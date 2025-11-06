@@ -25,6 +25,17 @@
 
 # virtual methods
 .method public abstract a(Ljava/lang/Object;I)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "selectItemBean",
+            "position"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;I)V"

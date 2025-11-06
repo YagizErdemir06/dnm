@@ -1,5 +1,5 @@
 .class public Lcom/android/camera/ui/SlideSwitchButton$a;
-.super Lps/m;
+.super Lk/j0/k/l;
 .source "SourceFile"
 
 
@@ -27,7 +27,22 @@
 # direct methods
 .method public constructor <init>(Lcom/android/camera/ui/SlideSwitchButton;FII)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010,
+            0x1010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$left",
+            "val$targetMarginLeft",
+            "val$index"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/ui/SlideSwitchButton$a;->d:Lcom/android/camera/ui/SlideSwitchButton;
 
     iput p2, p0, Lcom/android/camera/ui/SlideSwitchButton$a;->a:F
@@ -36,7 +51,7 @@
 
     iput p4, p0, Lcom/android/camera/ui/SlideSwitchButton$a;->c:I
 
-    invoke-direct {p0}, Lps/m;-><init>()V
+    invoke-direct {p0}, Lk/j0/k/l;-><init>()V
 
     return-void
 .end method
@@ -45,11 +60,21 @@
 # virtual methods
 .method public getInterpolation(F)F
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "input"
+        }
+    .end annotation
 
-    invoke-super {p0, p1}, Lps/m;->getInterpolation(F)F
+    .line 1
+    invoke-super {p0, p1}, Lk/j0/k/l;->getInterpolation(F)F
 
     move-result p1
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera/ui/SlideSwitchButton$a;->d:Lcom/android/camera/ui/SlideSwitchButton;
 
     iget v1, p0, Lcom/android/camera/ui/SlideSwitchButton$a;->a:F
@@ -66,6 +91,7 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/ui/SlideSwitchButton;->a(Lcom/android/camera/ui/SlideSwitchButton;F)F
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera/ui/SlideSwitchButton$a;->d:Lcom/android/camera/ui/SlideSwitchButton;
 
     invoke-static {v0}, Lcom/android/camera/ui/SlideSwitchButton;->f(Lcom/android/camera/ui/SlideSwitchButton;)Landroid/graphics/Paint;
@@ -80,6 +106,7 @@
 
     iget-object v2, p0, Lcom/android/camera/ui/SlideSwitchButton$a;->d:Lcom/android/camera/ui/SlideSwitchButton;
 
+    .line 4
     invoke-static {v2}, Lcom/android/camera/ui/SlideSwitchButton;->b(Lcom/android/camera/ui/SlideSwitchButton;)I
 
     move-result v3
@@ -104,6 +131,7 @@
 
     move-result-object v3
 
+    .line 5
     invoke-virtual {v1, p1, v2, v3}, Landroid/animation/ArgbEvaluator;->evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -116,6 +144,7 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 6
     iget-object v0, p0, Lcom/android/camera/ui/SlideSwitchButton$a;->d:Lcom/android/camera/ui/SlideSwitchButton;
 
     iget v1, p0, Lcom/android/camera/ui/SlideSwitchButton$a;->c:I
@@ -126,6 +155,7 @@
 
     iget-object v3, p0, Lcom/android/camera/ui/SlideSwitchButton$a;->d:Lcom/android/camera/ui/SlideSwitchButton;
 
+    .line 7
     invoke-static {v3}, Lcom/android/camera/ui/SlideSwitchButton;->g(Lcom/android/camera/ui/SlideSwitchButton;)I
 
     move-result v3
@@ -144,6 +174,7 @@
 
     move-result-object v4
 
+    .line 8
     invoke-virtual {v2, p1, v3, v4}, Landroid/animation/ArgbEvaluator;->evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
@@ -156,6 +187,7 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/camera/ui/SlideSwitchButton;->i(Lcom/android/camera/ui/SlideSwitchButton;II)V
 
+    .line 9
     iget-object v0, p0, Lcom/android/camera/ui/SlideSwitchButton$a;->d:Lcom/android/camera/ui/SlideSwitchButton;
 
     invoke-static {v0}, Lcom/android/camera/ui/SlideSwitchButton;->b(Lcom/android/camera/ui/SlideSwitchButton;)I
@@ -166,6 +198,7 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 10
     iget-object v0, p0, Lcom/android/camera/ui/SlideSwitchButton$a;->d:Lcom/android/camera/ui/SlideSwitchButton;
 
     invoke-static {v0}, Lcom/android/camera/ui/SlideSwitchButton;->b(Lcom/android/camera/ui/SlideSwitchButton;)I
@@ -180,6 +213,7 @@
 
     iget-object v3, p0, Lcom/android/camera/ui/SlideSwitchButton$a;->d:Lcom/android/camera/ui/SlideSwitchButton;
 
+    .line 11
     invoke-static {v3}, Lcom/android/camera/ui/SlideSwitchButton;->h(Lcom/android/camera/ui/SlideSwitchButton;)I
 
     move-result v3
@@ -198,6 +232,7 @@
 
     move-result-object v4
 
+    .line 12
     invoke-virtual {v2, p1, v3, v4}, Landroid/animation/ArgbEvaluator;->evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
@@ -210,6 +245,7 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/camera/ui/SlideSwitchButton;->i(Lcom/android/camera/ui/SlideSwitchButton;II)V
 
+    .line 13
     iget-object v0, p0, Lcom/android/camera/ui/SlideSwitchButton$a;->d:Lcom/android/camera/ui/SlideSwitchButton;
 
     invoke-static {v0}, Lcom/android/camera/ui/SlideSwitchButton;->b(Lcom/android/camera/ui/SlideSwitchButton;)I
@@ -220,10 +256,11 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/camera/ui/SlideSwitchButton;->j(Lcom/android/camera/ui/SlideSwitchButton;IZ)V
 
+    .line 14
     :cond_0
     iget-object p0, p0, Lcom/android/camera/ui/SlideSwitchButton$a;->d:Lcom/android/camera/ui/SlideSwitchButton;
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->invalidate()V
 
     return p1
 .end method

@@ -205,7 +205,6 @@
     <string name="accessibility_video_capture_button">Argazkiak ateratzeko botoia bideoak grabatzen dituzun bitartean</string>
     <string name="accessibility_video_pause_button">Bideoaren grabaketa eten da</string>
     <string name="accessibility_video_resume_button">Bideoaren grabaketa berriz hasi da</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">Ur-marka desaktibatuta dago</string>
     <string name="accessibility_watermark_image_on">Ur-marka aktibatuta dago</string>
     <string name="accessibility_watermark_text">Ireki ur-marka doitze panela</string>
@@ -213,16 +212,6 @@
     <string name="accessibility_zoom_button">Zoom modua</string>
     <string name="actionbar_button_up_description">Atzera</string>
     <string name="afternoon">Arratsaldea</string>
-    <string name="agent_flip_tbc">Barneko pantailan jarraitu</string>
-    <string name="agent_function_max">Baliorik handienera ezarrita</string>
-    <string name="agent_function_min">Baliorik txikienera ezarrita</string>
-    <string name="agent_workspace_mode_not_supported">Funtzio hau ez dago onartuta</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"Funtzio hau ez dago onartuta.
-Argazki modua ireki da aldiz."</string>
-    <string name="agent_workspace_on">\"%1$s\" argazkilaritzako parametroak ezarrita</string>
-    <string name="agent_workspace_tbc">Eszena analizatzen</string>
-    <string name="agent_workspace_tbc_use_default">"Eszena analizatzen…
-Kameraren parametroak lehenetsi dira"</string>
     <string name="ai_agra_fort">Agra Fort</string>
     <string name="ai_amber_fort">Amber Jauregia</string>
     <string name="ai_baby">Haurtxoa</string>
@@ -781,7 +770,6 @@ eskaneatutako dokumentuak"</string>
     <string name="download_hint_cn">Badirudi gailua ez dagoela WLAN sarera konektatuta. Datu mugikorren %1$s MB erabili nahi dituzu elementuak deskargatzeko?</string>
     <string name="download_hint_wifi">Badirudi gailua ez dagoela wifi sarera konektatuta. Datu mugikorren %1$s MB erabili nahi dituzu elementuak deskargatzeko?</string>
     <string name="download_in_progress">Deskargatzen…</string>
-    <string name="download_network_error">Ezin izan da deskargatu. Egiaztatu zure sarearen ezarpenak.</string>
     <string name="download_title">Datu erabilera ohartarazpena</string>
     <string name="download_waiting">Zain…</string>
     <string name="dual_camera_lens_covered_toast">Lentea estalita dago.</string>
@@ -1260,7 +1248,6 @@ itxura handiagoa izan dezaten"</string>
     <string name="miuix_appcompat_delete_description">Ezabatu</string>
     <string name="miuix_appcompat_deselect_all">guztiak desaukeratu</string>
     <string name="miuix_appcompat_deselect_all_description">Desaukeratu guztiak</string>
-    <string name="miuix_appcompat_edit">Editatu</string>
     <string name="miuix_appcompat_search_action_mode_cancel">Ezeztatu</string>
     <string name="miuix_appcompat_search_input_description">Bilatu</string>
     <string name="miuix_appcompat_select_all">Denak aukeratu</string>
@@ -2199,7 +2186,6 @@ subjektua geldi mantendu atzealdea lausotzen den bitartean."</string>
     <string name="time_picker_label_hour">h</string>
     <string name="time_picker_label_minute">min</string>
     <string name="time_stamp_date_format">yyyy/MM/dd</string>
-    <string name="time_stamp_date_format_minute">yyyy/MM/dd HH:mm</string>
     <string name="timefreeze_guide_tip2">Atzeko planoa nahi duzunean izoztu eta desizoztu dezakezu, grabatu baino lehen edo grabatzen duzun bitartean.</string>
     <string name="timefreeze_guide_tip3">Eskatu subjektuari markoaren erdian mantentzeko.</string>
     <string name="timefreeze_guide_tip4">Gelditu trafikoa.</string>
@@ -2237,7 +2223,7 @@ subjektua geldi mantendu atzealdea lausotzen den bitartean."</string>
     <string name="tip_flash_screen_light_on">Flash leuna: Aktibatuta</string>
     <string name="tip_flash_soft_light_off">Flash leuna: Desaktibatuta</string>
     <string name="tip_flash_soft_light_torch">Flash leuna: Linterna modua</string>
-    <string name="tip_flash_torch">Flash-a: Linterna</string>
+    <string name="tip_flash_torch">Flash-a: Beti aktibatuta</string>
     <string name="tip_friend_mode_connect_when_24GHz">Erabili %s GHz-ko konexio bat aurrebistaren kalitatea areagotzeko</string>
     <string name="tip_friend_mode_display_device_name_connect">Aurrebista partekatu du</string>
     <string name="tip_friend_mode_display_device_name_disconnect">Beste gailua saio honetatik irten da</string>

@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/RegularImmutableMultiset;
+.class public Lcom/google/common/collect/RegularImmutableMultiset;
 .super Lcom/google/common/collect/ImmutableMultiset;
 .source "SourceFile"
 
@@ -31,7 +31,7 @@
 
 
 # static fields
-.field static final EMPTY:Lcom/google/common/collect/RegularImmutableMultiset;
+.field public static final EMPTY:Lcom/google/common/collect/RegularImmutableMultiset;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/RegularImmutableMultiset<",
@@ -43,7 +43,7 @@
 
 
 # instance fields
-.field final transient contents:Lcom/google/common/collect/ObjectCountHashMap;
+.field public final transient contents:Lcom/google/common/collect/ObjectCountHashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/ObjectCountHashMap<",
@@ -74,8 +74,10 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/RegularImmutableMultiset;
 
+    .line 2
     invoke-static {}, Lcom/google/common/collect/ObjectCountHashMap;->create()Lcom/google/common/collect/ObjectCountHashMap;
 
     move-result-object v1
@@ -97,14 +99,17 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableMultiset;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/RegularImmutableMultiset;->contents:Lcom/google/common/collect/ObjectCountHashMap;
 
     const-wide/16 v0, 0x0
 
     const/4 v2, 0x0
 
+    .line 3
     :goto_0
     invoke-virtual {p1}, Lcom/google/common/collect/ObjectCountHashMap;->size()I
 
@@ -112,6 +117,7 @@
 
     if-ge v2, v3, :cond_0
 
+    .line 4
     invoke-virtual {p1, v2}, Lcom/google/common/collect/ObjectCountHashMap;->getValue(I)I
 
     move-result v3
@@ -124,6 +130,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-static {v0, v1}, Lcom/google/common/primitives/Ints;->saturatedCast(J)I
 
@@ -143,6 +150,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/RegularImmutableMultiset;->contents:Lcom/google/common/collect/ObjectCountHashMap;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ObjectCountHashMap;->get(Ljava/lang/Object;)I
@@ -201,6 +209,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/RegularImmutableMultiset;->contents:Lcom/google/common/collect/ObjectCountHashMap;
 
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ObjectCountHashMap;->getEntry(I)Lcom/google/common/collect/Multiset$Entry;
@@ -221,6 +230,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/collect/RegularImmutableMultiset;->size:I
 
     return p0
@@ -231,6 +241,7 @@
     .annotation build Lcom/google/common/annotations/GwtIncompatible;
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/RegularImmutableMultiset$SerializedForm;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/RegularImmutableMultiset$SerializedForm;-><init>(Lcom/google/common/collect/Multiset;)V

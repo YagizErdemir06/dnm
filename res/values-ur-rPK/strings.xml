@@ -205,7 +205,6 @@
     <string name="accessibility_video_capture_button">ویڈیو شوٹ کرتے وقت فوٹو لینے کا بٹن</string>
     <string name="accessibility_video_pause_button">ویڈیو ریکارڈ کرنا روکیں</string>
     <string name="accessibility_video_resume_button">ویڈیو ریکارڈ کرنا شروع کریں</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">واٹر مارک آف ہے</string>
     <string name="accessibility_watermark_image_on">واٹر مارک آن ہے</string>
     <string name="accessibility_watermark_text">واٹر مارک ایڈجسٹمنٹ پینل کھولیں</string>
@@ -213,16 +212,6 @@
     <string name="accessibility_zoom_button">زوم موڈ</string>
     <string name="actionbar_button_up_description">واپس</string>
     <string name="afternoon">دوپہر</string>
-    <string name="agent_flip_tbc">اندرونی اسکرین پر جاری رکھیں</string>
-    <string name="agent_function_max">زیادہ سے زیادہ قدر پر ایڈجسٹ کیا گیا</string>
-    <string name="agent_function_min">کم سے کم قدر پر ایڈجسٹ کیا گیا</string>
-    <string name="agent_workspace_mode_not_supported">یہ فیچر تعاون یافتہ نہیں ہے</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"یہ فیچر تعاون یافتہ نہیں ہے۔
-اس کے بجائے فوٹو موڈ کھولا گیا۔"</string>
-    <string name="agent_workspace_on">فوٹوگرافی کے لیے سیٹ کیے گئے پیرامیٹر ”%1$s“</string>
-    <string name="agent_workspace_tbc">سین کی اسٹڈی کرنا</string>
-    <string name="agent_workspace_tbc_use_default">"سین کی اسٹڈی کی جا رہی ہے…
-کیمرہ کے پیرامیٹر ڈیفالٹ پر سیٹ ہیں"</string>
     <string name="ai_agra_fort">آگرہ قلعہ</string>
     <string name="ai_amber_fort">امبر محل</string>
     <string name="ai_baby">بیبی</string>
@@ -781,7 +770,6 @@
     <string name="download_hint_cn">"Looks like your device isn't connected to WLAN. Use %1$s MB of mobile data to download items now?"</string>
     <string name="download_hint_wifi">لگتا ہے آپ کا ڈیوائس وائی-فائی سے مربوط نہیں ہے۔ ابھی آئٹم کو ڈاؤن لوڈ کرنے کے لیے %1$s MB موبائل ڈیٹا استعمال کریں؟</string>
     <string name="download_in_progress">ڈاؤن لوڈ ہو رہا ہے…</string>
-    <string name="download_network_error">ڈاؤن لوڈ نہیں کیا جا سکا۔ اپنی نیٹ ورک ترتیبات چیک کریں۔</string>
     <string name="download_title">ڈیٹا کے استعمال کا انتباہ</string>
     <string name="download_waiting">زیر التوا…</string>
     <string name="dual_camera_lens_covered_toast">لینس ڈھکا ہوا ہے.</string>
@@ -1259,7 +1247,6 @@
     <string name="miuix_appcompat_delete_description">حذف کریں</string>
     <string name="miuix_appcompat_deselect_all">تمام غیر منتخب کریں</string>
     <string name="miuix_appcompat_deselect_all_description">تمام غیر منتخب کریں</string>
-    <string name="miuix_appcompat_edit">ترمیم کریں</string>
     <string name="miuix_appcompat_search_action_mode_cancel">منسوخ کریں</string>
     <string name="miuix_appcompat_search_input_description">تلاش کریں</string>
     <string name="miuix_appcompat_select_all">سبھی کو منتخب کریں</string>
@@ -2197,7 +2184,6 @@
     <string name="time_picker_label_hour">گھنٹہ</string>
     <string name="time_picker_label_minute">منٹ</string>
     <string name="time_stamp_date_format">dd/MM/yyyy</string>
-    <string name="time_stamp_date_format_minute">dd/MM/yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">آپ شوٹنگ سے پہلے یا اس کے دوران کسی بھی وقت پس منظر کو منجمد اور غیر منجمد کر سکتے ہیں۔</string>
     <string name="timefreeze_guide_tip3">اپنے موضوع کو فریم کے مرکز میں رہنے کے لیے کہیں۔</string>
     <string name="timefreeze_guide_tip4">ٹریفک کو روک دیں۔</string>
@@ -2217,8 +2203,8 @@
     <string name="tip_ai_off">AI کیمرہ: آف</string>
     <string name="tip_beauty_mode_title1">پورٹریٹ اسٹائل: تازہ</string>
     <string name="tip_beauty_mode_title2">پورٹریٹ اسٹائل: فلم</string>
-    <string name="tip_cvtype_title1">اسٹائل: Leica مستند</string>
-    <string name="tip_cvtype_title2">اسٹائل: Leica مرتعش</string>
+    <string name="tip_cvtype_title1">اسٹائل: لیکا مستند</string>
+    <string name="tip_cvtype_title2">اسٹائل: لیکا مرتعش</string>
     <string name="tip_eis_off">مستحکم ویڈیو: آف</string>
     <string name="tip_eis_pro_off">مستحکم ویڈیو پرو: آف</string>
     <string name="tip_flash_auto">فلیش: آٹو</string>
@@ -2235,7 +2221,7 @@
     <string name="tip_flash_screen_light_on">سافٹ فلیش: آن</string>
     <string name="tip_flash_soft_light_off">سافٹ فلیش: آف</string>
     <string name="tip_flash_soft_light_torch">سافٹ فلیش: فلیش لائٹ موڈ</string>
-    <string name="tip_flash_torch">فلیش: فلیش لائٹ</string>
+    <string name="tip_flash_torch">فلیش: ہمیشہ آن</string>
     <string name="tip_friend_mode_connect_when_24GHz">پری ویو کوالٹی کو بوسٹ کرنے کے لیے ایک %s GHz کنکشن استعمال کریں</string>
     <string name="tip_friend_mode_display_device_name_connect">اشتراک کردہ پری ویو</string>
     <string name="tip_friend_mode_display_device_name_disconnect">دوسرے ڈیوائس نے یہ سیشن چھوڑ دیا ہے</string>

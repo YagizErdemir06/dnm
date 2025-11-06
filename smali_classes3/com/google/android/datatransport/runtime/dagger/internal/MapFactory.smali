@@ -24,10 +24,10 @@
 
 
 # static fields
-.field private static final EMPTY:Lmm/c;
+.field private static final EMPTY:Lg/a/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lmm/c<",
+            "Lg/a/c<",
             "Ljava/util/Map<",
             "Ljava/lang/Object;",
             "Ljava/lang/Object;",
@@ -41,6 +41,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
     move-result-object v0
@@ -49,7 +50,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/google/android/datatransport/runtime/dagger/internal/MapFactory;->EMPTY:Lmm/c;
+    sput-object v0, Lcom/google/android/datatransport/runtime/dagger/internal/MapFactory;->EMPTY:Lg/a/c;
 
     return-void
 .end method
@@ -61,7 +62,7 @@
             "(",
             "Ljava/util/Map<",
             "TK;",
-            "Lmm/c<",
+            "Lg/a/c<",
             "TV;>;>;)V"
         }
     .end annotation
@@ -95,6 +96,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/datatransport/runtime/dagger/internal/MapFactory$Builder;
 
     const/4 v1, 0x0
@@ -104,7 +106,7 @@
     return-object v0
 .end method
 
-.method public static emptyMapProvider()Lmm/c;
+.method public static emptyMapProvider()Lg/a/c;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -113,13 +115,14 @@
             "V:",
             "Ljava/lang/Object;",
             ">()",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Ljava/util/Map<",
             "TK;TV;>;>;"
         }
     .end annotation
 
-    sget-object v0, Lcom/google/android/datatransport/runtime/dagger/internal/MapFactory;->EMPTY:Lmm/c;
+    .line 1
+    sget-object v0, Lcom/google/android/datatransport/runtime/dagger/internal/MapFactory;->EMPTY:Lg/a/c;
 
     return-object v0
 .end method
@@ -195,9 +198,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lmm/c;
+    check-cast v1, Lg/a/c;
 
-    invoke-interface {v1}, Lmm/c;->get()Ljava/lang/Object;
+    invoke-interface {v1}, Lg/a/c;->get()Ljava/lang/Object;
 
     move-result-object v1
 

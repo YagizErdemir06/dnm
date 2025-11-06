@@ -7,15 +7,17 @@
 
 
 # instance fields
-.field protected final window:Lcom/google/android/exoplayer2/Timeline$Window;
+.field public final window:Lcom/google/android/exoplayer2/Timeline$Window;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Lcom/google/android/exoplayer2/Timeline$Window;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/Timeline$Window;-><init>()V
@@ -28,6 +30,7 @@
 .method private getRepeatModeForNavigation()I
     .locals 1
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getRepeatMode()I
 
     move-result p0
@@ -45,12 +48,14 @@
 .method private seekToOffset(J)V
     .locals 4
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentPosition()J
 
     move-result-wide v0
 
     add-long/2addr v0, p1
 
+    .line 2
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getDuration()J
 
     move-result-wide p1
@@ -61,6 +66,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 3
     invoke-static {v0, v1, p1, p2}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v0
@@ -68,10 +74,12 @@
     :cond_0
     const-wide/16 p1, 0x0
 
+    .line 4
     invoke-static {v0, v1, p1, p2}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide p1
 
+    .line 5
     invoke-virtual {p0, p1, p2}, Lcom/google/android/exoplayer2/BasePlayer;->seekTo(J)V
 
     return-void
@@ -118,6 +126,7 @@
 
     const v0, 0x7fffffff
 
+    .line 1
     invoke-interface {p0, v0, p1}, Lcom/google/android/exoplayer2/Player;->addMediaItems(ILjava/util/List;)V
 
     return-void
@@ -138,18 +147,21 @@
 
     const v1, 0x7fffffff
 
+    .line 1
     invoke-interface {p0, v0, v1}, Lcom/google/android/exoplayer2/Player;->removeMediaItems(II)V
 
     return-void
 .end method
 
 .method public final getBufferedPercentage()I
-    .locals 9
+    .locals 8
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getBufferedPosition()J
 
     move-result-wide v0
 
+    .line 2
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getDuration()J
 
     move-result-wide v2
@@ -158,7 +170,9 @@
 
     cmp-long p0, v0, v4
 
-    const/4 v6, 0x0
+    const/16 v6, 0x64
+
+    const/4 v7, 0x0
 
     if-eqz p0, :cond_2
 
@@ -173,39 +187,43 @@
 
     cmp-long p0, v2, v4
 
-    const/16 v4, 0x64
-
     if-nez p0, :cond_1
 
-    move v6, v4
-
-    goto :goto_0
+    goto :goto_1
 
     :cond_1
-    const-wide/16 v7, 0x64
+    const-wide/16 v4, 0x64
 
-    mul-long/2addr v0, v7
+    mul-long/2addr v0, v4
 
+    .line 3
     div-long/2addr v0, v2
 
     long-to-int p0, v0
 
-    invoke-static {p0, v6, v4}, Lcom/google/android/exoplayer2/util/Util;->constrainValue(III)I
+    invoke-static {p0, v7, v6}, Lcom/google/android/exoplayer2/util/Util;->constrainValue(III)I
 
     move-result v6
 
+    goto :goto_1
+
     :cond_2
     :goto_0
+    move v6, v7
+
+    :goto_1
     return v6
 .end method
 
 .method public final getContentDuration()J
     .locals 2
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentTimeline()Lcom/google/android/exoplayer2/Timeline;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/Timeline;->isEmpty()Z
 
     move-result v1
@@ -216,6 +234,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentMediaItemIndex()I
 
@@ -238,10 +257,12 @@
 .method public final getCurrentLiveOffset()J
     .locals 5
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentTimeline()Lcom/google/android/exoplayer2/Timeline;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/Timeline;->isEmpty()Z
 
     move-result v1
@@ -252,6 +273,7 @@
 
     return-wide v2
 
+    .line 3
     :cond_0
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentMediaItemIndex()I
 
@@ -271,6 +293,7 @@
 
     return-wide v2
 
+    .line 4
     :cond_1
     iget-object v0, p0, Lcom/google/android/exoplayer2/BasePlayer;->window:Lcom/google/android/exoplayer2/Timeline$Window;
 
@@ -298,10 +321,12 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentTimeline()Lcom/google/android/exoplayer2/Timeline;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/Timeline;->isEmpty()Z
 
     move-result v1
@@ -312,6 +337,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentMediaItemIndex()I
 
@@ -334,10 +360,12 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentTimeline()Lcom/google/android/exoplayer2/Timeline;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/Timeline;->isEmpty()Z
 
     move-result v1
@@ -348,6 +376,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentMediaItemIndex()I
 
@@ -370,6 +399,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentMediaItemIndex()I
 
     move-result p0
@@ -380,6 +410,7 @@
 .method public final getMediaItemAt(I)Lcom/google/android/exoplayer2/MediaItem;
     .locals 1
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentTimeline()Lcom/google/android/exoplayer2/Timeline;
 
     move-result-object v0
@@ -398,6 +429,7 @@
 .method public final getMediaItemCount()I
     .locals 0
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentTimeline()Lcom/google/android/exoplayer2/Timeline;
 
     move-result-object p0
@@ -412,10 +444,12 @@
 .method public final getNextMediaItemIndex()I
     .locals 3
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentTimeline()Lcom/google/android/exoplayer2/Timeline;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/Timeline;->isEmpty()Z
 
     move-result v1
@@ -426,6 +460,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentMediaItemIndex()I
 
@@ -439,6 +474,7 @@
 
     move-result p0
 
+    .line 4
     invoke-virtual {v0, v1, v2, p0}, Lcom/google/android/exoplayer2/Timeline;->getNextWindowIndex(IIZ)I
 
     move-result p0
@@ -452,6 +488,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BasePlayer;->getNextMediaItemIndex()I
 
     move-result p0
@@ -462,10 +499,12 @@
 .method public final getPreviousMediaItemIndex()I
     .locals 3
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentTimeline()Lcom/google/android/exoplayer2/Timeline;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/Timeline;->isEmpty()Z
 
     move-result v1
@@ -476,6 +515,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentMediaItemIndex()I
 
@@ -489,6 +529,7 @@
 
     move-result p0
 
+    .line 4
     invoke-virtual {v0, v1, v2, p0}, Lcom/google/android/exoplayer2/Timeline;->getPreviousWindowIndex(IIZ)I
 
     move-result p0
@@ -502,6 +543,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BasePlayer;->getPreviousMediaItemIndex()I
 
     move-result p0
@@ -514,6 +556,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BasePlayer;->hasNextMediaItem()Z
 
     move-result p0
@@ -524,6 +567,7 @@
 .method public final hasNextMediaItem()Z
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BasePlayer;->getNextMediaItemIndex()I
 
     move-result p0
@@ -548,6 +592,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BasePlayer;->hasNextMediaItem()Z
 
     move-result p0
@@ -560,6 +605,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BasePlayer;->hasPreviousMediaItem()Z
 
     move-result p0
@@ -570,6 +616,7 @@
 .method public final hasPreviousMediaItem()Z
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BasePlayer;->getPreviousMediaItemIndex()I
 
     move-result p0
@@ -594,6 +641,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BasePlayer;->hasPreviousMediaItem()Z
 
     move-result p0
@@ -604,6 +652,7 @@
 .method public final isCommandAvailable(I)Z
     .locals 0
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getAvailableCommands()Lcom/google/android/exoplayer2/Player$Commands;
 
     move-result-object p0
@@ -618,10 +667,12 @@
 .method public final isCurrentMediaItemDynamic()Z
     .locals 2
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentTimeline()Lcom/google/android/exoplayer2/Timeline;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/Timeline;->isEmpty()Z
 
     move-result v1
@@ -656,10 +707,12 @@
 .method public final isCurrentMediaItemLive()Z
     .locals 2
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentTimeline()Lcom/google/android/exoplayer2/Timeline;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/Timeline;->isEmpty()Z
 
     move-result v1
@@ -696,10 +749,12 @@
 .method public final isCurrentMediaItemSeekable()Z
     .locals 2
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentTimeline()Lcom/google/android/exoplayer2/Timeline;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/Timeline;->isEmpty()Z
 
     move-result v1
@@ -736,6 +791,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BasePlayer;->isCurrentMediaItemDynamic()Z
 
     move-result p0
@@ -748,6 +804,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BasePlayer;->isCurrentMediaItemLive()Z
 
     move-result p0
@@ -760,6 +817,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BasePlayer;->isCurrentMediaItemSeekable()Z
 
     move-result p0
@@ -770,6 +828,7 @@
 .method public final isPlaying()Z
     .locals 2
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getPlaybackState()I
 
     move-result v0
@@ -778,12 +837,14 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 2
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getPlayWhenReady()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getPlaybackSuppressionReason()I
 
     move-result p0
@@ -808,6 +869,7 @@
 
     add-int/lit8 v0, p1, 0x1
 
+    .line 1
     invoke-interface {p0, p1, v0, p2}, Lcom/google/android/exoplayer2/Player;->moveMediaItems(III)V
 
     :cond_0
@@ -819,6 +881,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BasePlayer;->seekToNextMediaItem()V
 
     return-void
@@ -829,6 +892,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-interface {p0, v0}, Lcom/google/android/exoplayer2/Player;->setPlayWhenReady(Z)V
 
     return-void
@@ -839,6 +903,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-interface {p0, v0}, Lcom/google/android/exoplayer2/Player;->setPlayWhenReady(Z)V
 
     return-void
@@ -849,6 +914,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BasePlayer;->seekToPreviousMediaItem()V
 
     return-void
@@ -859,6 +925,7 @@
 
     add-int/lit8 v0, p1, 0x1
 
+    .line 1
     invoke-interface {p0, p1, v0}, Lcom/google/android/exoplayer2/Player;->removeMediaItems(II)V
 
     return-void
@@ -867,6 +934,7 @@
 .method public final seekBack()V
     .locals 2
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getSeekBackIncrement()J
 
     move-result-wide v0
@@ -881,6 +949,7 @@
 .method public final seekForward()V
     .locals 2
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getSeekForwardIncrement()J
 
     move-result-wide v0
@@ -893,6 +962,7 @@
 .method public final seekTo(J)V
     .locals 1
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentMediaItemIndex()I
 
     move-result v0
@@ -929,10 +999,12 @@
 .method public final seekToNext()V
     .locals 1
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentTimeline()Lcom/google/android/exoplayer2/Timeline;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/Timeline;->isEmpty()Z
 
     move-result v0
@@ -947,6 +1019,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BasePlayer;->hasNextMediaItem()Z
 
@@ -954,10 +1027,12 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BasePlayer;->seekToNextMediaItem()V
 
     goto :goto_0
 
+    .line 5
     :cond_1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BasePlayer;->isCurrentMediaItemLive()Z
 
@@ -971,6 +1046,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 6
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BasePlayer;->seekToDefaultPosition()V
 
     :cond_2
@@ -981,6 +1057,7 @@
 .method public final seekToNextMediaItem()V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BasePlayer;->getNextMediaItemIndex()I
 
     move-result v0
@@ -989,6 +1066,7 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/BasePlayer;->seekToDefaultPosition(I)V
 
     :cond_0
@@ -1000,6 +1078,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BasePlayer;->seekToNextMediaItem()V
 
     return-void
@@ -1008,10 +1087,12 @@
 .method public final seekToPrevious()V
     .locals 4
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentTimeline()Lcom/google/android/exoplayer2/Timeline;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/Timeline;->isEmpty()Z
 
     move-result v0
@@ -1026,11 +1107,13 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BasePlayer;->hasPreviousMediaItem()Z
 
     move-result v0
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BasePlayer;->isCurrentMediaItemLive()Z
 
     move-result v1
@@ -1045,6 +1128,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BasePlayer;->seekToPreviousMediaItem()V
 
     goto :goto_0
@@ -1052,6 +1136,7 @@
     :cond_1
     if-eqz v0, :cond_2
 
+    .line 6
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getCurrentPosition()J
 
     move-result-wide v0
@@ -1064,6 +1149,7 @@
 
     if-gtz v0, :cond_2
 
+    .line 7
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BasePlayer;->seekToPreviousMediaItem()V
 
     goto :goto_0
@@ -1071,6 +1157,7 @@
     :cond_2
     const-wide/16 v0, 0x0
 
+    .line 8
     invoke-virtual {p0, v0, v1}, Lcom/google/android/exoplayer2/BasePlayer;->seekTo(J)V
 
     :cond_3
@@ -1081,6 +1168,7 @@
 .method public final seekToPreviousMediaItem()V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BasePlayer;->getPreviousMediaItemIndex()I
 
     move-result v0
@@ -1089,6 +1177,7 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/BasePlayer;->seekToDefaultPosition(I)V
 
     :cond_0
@@ -1100,6 +1189,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BasePlayer;->seekToPreviousMediaItem()V
 
     return-void
@@ -1159,6 +1249,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-interface {p0, p1, v0}, Lcom/google/android/exoplayer2/Player;->setMediaItems(Ljava/util/List;Z)V
 
     return-void
@@ -1167,6 +1258,7 @@
 .method public final setPlaybackSpeed(F)V
     .locals 1
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getPlaybackParameters()Lcom/google/android/exoplayer2/PlaybackParameters;
 
     move-result-object v0

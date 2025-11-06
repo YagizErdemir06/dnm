@@ -1,4 +1,4 @@
-.class Lcom/bumptech/glide/RequestManager$ClearTarget;
+.class public Lcom/bumptech/glide/RequestManager$ClearTarget;
 .super Lcom/bumptech/glide/request/target/CustomViewTarget;
 .source "SourceFile"
 
@@ -31,6 +31,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/bumptech/glide/request/target/CustomViewTarget;-><init>(Landroid/view/View;)V
 
     return-void

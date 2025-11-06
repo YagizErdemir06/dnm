@@ -232,7 +232,6 @@
     <string name="accessibility_video_capture_button">Knapp för att ta foton men en video spelas in</string>
     <string name="accessibility_video_pause_button">Pausade inspelning</string>
     <string name="accessibility_video_resume_button">Återupptog inspelning</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">Vattenstämpel är avaktiverad</string>
     <string name="accessibility_watermark_image_on">Vattenstämpel är aktiverad</string>
     <string name="accessibility_watermark_text">Öppna justeringspanel för vattenstämpel</string>
@@ -240,16 +239,6 @@
     <string name="accessibility_zoom_button">Zoom läge</string>
     <string name="actionbar_button_up_description">Tillbaka</string>
     <string name="afternoon">Eftermiddag</string>
-    <string name="agent_flip_tbc">Fortsätt på innerskärmen</string>
-    <string name="agent_function_max">Justerade till maximalt värde</string>
-    <string name="agent_function_min">Justerade till minimalt värde</string>
-    <string name="agent_workspace_mode_not_supported">Den här funktionen stöds inte</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"Den här funktionen stöds inte.
-Öppnade fotoläget istället."</string>
-    <string name="agent_workspace_on">Parametrar inställda för fotografering \"%1$s\"</string>
-    <string name="agent_workspace_tbc">Studerar scen</string>
-    <string name="agent_workspace_tbc_use_default">"Studerar scen…
-Kameraparametrar inställda som standard"</string>
     <string name="ai_agra_fort">Agrafortet</string>
     <string name="ai_amber_fort">Amber Palace</string>
     <string name="ai_baby">Bebis</string>
@@ -476,7 +465,6 @@ och justera preferenser automatiskt"</string>
     <string name="bluetooth_headset_permission_des">Använd hörlurens mikrofon för att avgöra anslutningsstatusen mellan Bluetooth-hörlurarna och inspelningsljudet</string>
     <string name="bluetooth_permission_not_ask_again">Låt den här appen ansluta till närliggande enheter i Inställningar, för att kunna ansluta till Bluetooth-hörlurar.</string>
     <string name="bokeh_use_hint">Djupeffekt</string>
-    <string name="bottomsheet_action_expand_halfway">Utöka till hälften</string>
     <string name="burst_shoot_exit_button_text">Avaktivera Kontinuerligt fotoläge</string>
     <string name="button_fisheye_camera_title">Fisheye</string>
     <string name="button_front_camera_title">Ta en selfie</string>
@@ -517,8 +505,6 @@ och justera preferenser automatiskt"</string>
     <string name="ccc_temperature_warning_msg">Din enhet är överhettad. Kameran kommer stängas om %d sekunder. Dina foton eller videor kommer att sparas automatiskt.</string>
     <string name="ccc_temperature_warning_title">Enheten är överhettad</string>
     <string name="center_mark">Centermarkera</string>
-    <string name="character_counter_content_description">%1$d av %2$d tecken har angetts</string>
-    <string name="character_counter_overflowed_content_description">Teckengränsen har överskridits: %1$d av %2$d</string>
     <string name="cinemaster_cancel">Avbryt</string>
     <string name="cinemaster_confirm">Lämna</string>
     <string name="cinemaster_connect_exit_message">Avsluta inställningarna för flera kameror nu?</string>
@@ -537,7 +523,6 @@ och justera preferenser automatiskt"</string>
     <string name="cinemaster_toast_monitor_disconnect">Monitor bortkopplad från installationen med flera kameror</string>
     <string name="cinemaster_toast_monitor_play_error">Kamera %s bortkopplad från inställningar för flera kameror, på grund av ett fel</string>
     <string name="cinemaster_wifi_24g_tips">Byt till ett %s GHz-nätverk för att öka monitormatningens stabilitet</string>
-    <string name="clear_text_end_icon_content_description">Rensa text</string>
     <string name="clearable_edittext_clear_description">Rensa</string>
     <string name="clone_adjust">Justera</string>
     <string name="clone_copy_mode">Frys bild</string>
@@ -831,7 +816,6 @@ skannade dokument automatiskt"</string>
     <string name="download_hint_cn">Verkar som att din enhet inte är ansluten till WLAN. Använd %1$s MB mobildata för att ladda ned objekt nu?</string>
     <string name="download_hint_wifi">Verkar som att din enhet inte är ansluten till Wi-Fi. Använd %1$s MB mobildata för att ladda ned objekt nu?</string>
     <string name="download_in_progress">Laddar ned…</string>
-    <string name="download_network_error">Kunde inte ladda ner. Kontrollera dina nätverksinställningar.</string>
     <string name="download_title">Varning för dataanvändning</string>
     <string name="download_waiting">Väntar…</string>
     <string name="dual_camera_lens_covered_toast">Linsen är täckt.</string>
@@ -882,7 +866,6 @@ Dubbel telefoninspelning låter dig även ansluta till en annan närliggande enh
     <string name="eras_ad">V.T.</string>
     <string name="eras_bc">F.V.T.</string>
     <string name="error_fail_to_start_audio_capture">Kunde inte starta ljudupptagning</string>
-    <string name="error_icon_content_description">Fel</string>
     <string name="esp_tip">Förhandsvisning yttre display</string>
     <string name="evening">Eftermiddag</string>
     <string name="exo_controls_cc_disabled_description">Aktivera undertexter</string>
@@ -937,7 +920,6 @@ Dubbel telefoninspelning låter dig även ansluta till en annan närliggande enh
     <string name="exo_track_surround_7_point_1">7.1-kanaligt surroundljud</string>
     <string name="exo_track_unknown">Okänt</string>
     <string name="expand_button_title">Avancerat</string>
-    <string name="exposed_dropdown_menu_content_description">Visa rullgardinsmenyn</string>
     <string name="exposure_mode_adjust_title">ExponderingsLäge</string>
     <string name="eye_light">Ögonglitter</string>
     <string name="eye_light_angel">Ängel</string>
@@ -1094,7 +1076,6 @@ och skapar sedan ett foton där alla ser bäst ut."</string>
     <string name="hint_subtitle_prompt">Du kan diktera undertexter nu</string>
     <string name="histogram_summary_tip">Visa realtids exponeringsfeedback</string>
     <string name="hunt_dual_water_mark">Vattenstämpel för Dubbelkamera kommer läggas till automatiskt.</string>
-    <string name="icon_content_description">Dialogikon</string>
     <string name="id_card_mode_hint_back">Skanna in baksidan av ditt ID</string>
     <string name="id_card_mode_hint_front">Skanna in framsidan av ditt ID</string>
     <string name="id_card_mode_use_hint_text_body">"Kombinera båda sidorna av ditt ID på en bild.
@@ -1105,7 +1086,6 @@ Skriv ut kopian trådlöst på A4-papper."</string>
     <string name="invisible_mode_dialog_summary">Kan inte använda kameran nu. Stäng av inkognitoläget i inställningarna för att kunna använda kameran.</string>
     <string name="invisible_mode_dialog_title">Du är inkognito</string>
     <string name="invisible_mode_dialog_to_close">Inställningar</string>
-    <string name="item_view_role_description">Flik</string>
     <string name="kaleidoscope_fragment_tab_name">Kalejdoskop</string>
     <string name="lens_dirty_detected_content">"Det verkar som att din kameralins är smutsig.
 Rengör linsen för bättre bilder."</string>
@@ -1228,18 +1208,6 @@ se större ut i bilder"</string>
     <string name="manually_raw_tip">Kan inte använda zoom med RAW-format</string>
     <string name="manually_ultra_raw_tip">Kan inte använda zoom med Ultra-RAW</string>
     <string name="masterfilter_description_title">Filmfilter</string>
-    <string name="material_clock_toggle_content_description">Välj mellan FM och EM</string>
-    <string name="material_hour_selection">Ange timme</string>
-    <string name="material_hour_suffix">Klockan %1$s</string>
-    <string name="material_minute_selection">Välj minuter</string>
-    <string name="material_minute_suffix">%1$s minuter</string>
-    <string name="material_timepicker_am">FM</string>
-    <string name="material_timepicker_clock_mode_description">Byt till klockläget och ange tid.</string>
-    <string name="material_timepicker_hour">Timme</string>
-    <string name="material_timepicker_minute">Minut</string>
-    <string name="material_timepicker_pm">EM</string>
-    <string name="material_timepicker_select_time">Välj tid</string>
-    <string name="material_timepicker_text_input_mode_description">Byt till textinmatningsläget och ange tid.</string>
     <string name="message_snap_double_confirm">Långtryck på volymknappen triggar NFC nu. Ersätt denna funktion?</string>
     <string name="midnight">Natt</string>
     <string name="mimoji_app_name">Fun Cam</string>
@@ -1378,7 +1346,6 @@ se större ut i bilder"</string>
     <string name="miuix_appcompat_delete_description">Ta bort</string>
     <string name="miuix_appcompat_deselect_all">Avmarkera alla</string>
     <string name="miuix_appcompat_deselect_all_description">Avmarkera alla</string>
-    <string name="miuix_appcompat_edit">Redigera</string>
     <string name="miuix_appcompat_search_action_mode_cancel">Avbryt</string>
     <string name="miuix_appcompat_search_input_description">Sök</string>
     <string name="miuix_appcompat_select_all">Välj alla</string>
@@ -1486,42 +1453,6 @@ se större ut i bilder"</string>
     <string name="msg_bubble_doc4_first_use">Tryck för att känna igen text</string>
     <string name="msg_toast_doc4_recognition_failed">Ett fel uppstod. Försök igen.</string>
     <string name="msg_toast_doc4_text_not_found">Det gick inte att upptäcka text</string>
-    <string name="mtrl_badge_numberless_content_description">Ny avisering</string>
-    <string name="mtrl_chip_close_icon_content_description">Ta bort (%1$s)</string>
-    <string name="mtrl_exceed_max_badge_number_content_description">Fler än %1$d nya aviseringar</string>
-    <string name="mtrl_picker_a11y_next_month">Ändra till nästa månad</string>
-    <string name="mtrl_picker_a11y_prev_month">Ändra till föregående månad</string>
-    <string name="mtrl_picker_announce_current_selection">Aktuellt val: %1$s</string>
-    <string name="mtrl_picker_cancel">Avbryt</string>
-    <string name="mtrl_picker_confirm">OK</string>
-    <string name="mtrl_picker_date_header_selected">%1$s</string>
-    <string name="mtrl_picker_date_header_title">Välj datum</string>
-    <string name="mtrl_picker_date_header_unselected">Valt datum</string>
-    <string name="mtrl_picker_day_of_week_column_header">Kolumn med dagar: %1$s</string>
-    <string name="mtrl_picker_invalid_format">Ogiltigt format.</string>
-    <string name="mtrl_picker_invalid_format_example">Exempel: %1$s</string>
-    <string name="mtrl_picker_invalid_format_use">Använd %1$s</string>
-    <string name="mtrl_picker_invalid_range">Ogiltigt intervall.</string>
-    <string name="mtrl_picker_navigate_to_year_description">Navigera till år %1$s</string>
-    <string name="mtrl_picker_out_of_range">Utanför intervallet: %1$s</string>
-    <string name="mtrl_picker_range_header_only_end_selected">Startdatum–%1$s</string>
-    <string name="mtrl_picker_range_header_only_start_selected">%1$s–slutdatum</string>
-    <string name="mtrl_picker_range_header_selected">%1$s–%2$s</string>
-    <string name="mtrl_picker_range_header_title">Välj intervall</string>
-    <string name="mtrl_picker_range_header_unselected">Startdatum–slutdatum</string>
-    <string name="mtrl_picker_save">Spara</string>
-    <string name="mtrl_picker_text_input_date_hint">Datum</string>
-    <string name="mtrl_picker_text_input_date_range_end_hint">Slutdatum</string>
-    <string name="mtrl_picker_text_input_date_range_start_hint">Startdatum</string>
-    <string name="mtrl_picker_text_input_day_abbr">d</string>
-    <string name="mtrl_picker_text_input_month_abbr">m</string>
-    <string name="mtrl_picker_text_input_year_abbr">å</string>
-    <string name="mtrl_picker_toggle_to_calendar_input_mode">Byt till kalender som inmatningsläge</string>
-    <string name="mtrl_picker_toggle_to_day_selection">Byt till att välja en dag genom att trycka</string>
-    <string name="mtrl_picker_toggle_to_text_input_mode">Byt till text som inmatningsläge</string>
-    <string name="mtrl_picker_toggle_to_year_selection">Byt till att välja ett år genom att trycka</string>
-    <string name="mtrl_timepicker_cancel">Avbryt</string>
-    <string name="mtrl_timepicker_confirm">OK</string>
     <string name="multi_window_mode_not_supported">Kameran kan inte användas i multi-fönsterläge</string>
     <string name="network_access_user_notice_agree">Godkänn</string>
     <string name="network_access_user_notice_message_live_video">&lt;Data>Kamera måste ansluta till internet för att tillhandahålla effekter, musik och andra funktioner till videoklipp.&lt;br/>&lt;br/>Genom att trycka på \"Godkänn\" nedan godkänner du vårt &lt;a href =%1$s>Användaravtal&lt;/a> och vår &lt;a href =%2$s>Integritetspolicy&lt;/a> samt tillåter att Kamera ansluter till internet.&lt;/Data></string>
@@ -1616,7 +1547,6 @@ Ultra-RAW-bilder sparar %d bit med data och behåller ännu fler detaljer."</str
     <string name="parameter_wb_title">Vitbalans</string>
     <string name="parameter_zoom_slider_description">Dra zoom-reglaget horisontellt för att ändra din tagning smidigt från ett avstånd till en närbild.</string>
     <string name="parameter_zoom_slider_title">Zoom</string>
-    <string name="password_toggle_content_description">Visa lösenord</string>
     <string name="path_settings">Systemappar/Kamera/Inställningar</string>
     <string name="photo_assistance_tips_title">Live-tips</string>
     <string name="pic_flaw_blink_more">Det ser ut som att någon på bilden stängde sina ögon</string>
@@ -2359,7 +2289,6 @@ Håll objektet skarpt medans bakgrunden görs suddig."</string>
     <string name="time_picker_label_hour">H</string>
     <string name="time_picker_label_minute">M</string>
     <string name="time_stamp_date_format">dd/MM/yyyy</string>
-    <string name="time_stamp_date_format_minute">dd/MM/yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">Du kan frysa och sluta frysa bakgrunden när som helst före eller efter filmningen.</string>
     <string name="timefreeze_guide_tip3">Be ditt motiv hålla sig i mitten av ramen.</string>
     <string name="timefreeze_guide_tip4">Få trafiken att stanna.</string>
@@ -2397,7 +2326,7 @@ Håll objektet skarpt medans bakgrunden görs suddig."</string>
     <string name="tip_flash_screen_light_on">Mjuk blixt: Auto</string>
     <string name="tip_flash_soft_light_off">Mjuk blixt: Av</string>
     <string name="tip_flash_soft_light_torch">Mjuk blixt: Ficklampsläge</string>
-    <string name="tip_flash_torch">Blixt: Ficklampa</string>
+    <string name="tip_flash_torch">Blixt: Alltid på</string>
     <string name="tip_friend_mode_connect_when_24GHz">Använd en %s GHz-anslutning för att öka förhandsgranskningskvalitén</string>
     <string name="tip_friend_mode_display_device_name_connect">Delade förhandsgranskning</string>
     <string name="tip_friend_mode_display_device_name_disconnect">Den andra enheten lämnade den här sessionen</string>

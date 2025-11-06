@@ -22,7 +22,7 @@
 
 
 # instance fields
-.field protected final drawable:Landroid/graphics/drawable/Drawable;
+.field public final drawable:Landroid/graphics/drawable/Drawable;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TT;"
@@ -40,8 +40,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -105,12 +107,14 @@
 .method public initialize()V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/drawable/DrawableResource;->drawable:Landroid/graphics/drawable/Drawable;
 
     instance-of v0, p0, Landroid/graphics/drawable/BitmapDrawable;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {p0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
@@ -121,11 +125,13 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     instance-of v0, p0, Lcom/bumptech/glide/load/resource/gif/GifDrawable;
 
     if-eqz v0, :cond_1
 
+    .line 4
     check-cast p0, Lcom/bumptech/glide/load/resource/gif/GifDrawable;
 
     invoke-virtual {p0}, Lcom/bumptech/glide/load/resource/gif/GifDrawable;->getFirstFrame()Landroid/graphics/Bitmap;

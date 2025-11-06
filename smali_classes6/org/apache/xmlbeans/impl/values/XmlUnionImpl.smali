@@ -7,7 +7,7 @@
 
 
 # static fields
-.field static final synthetic $assertionsDisabled:Z
+.field public static final synthetic $assertionsDisabled:Z
 
 .field private static final JAVA_BYTEARRAY:I = 0x32
 
@@ -19,7 +19,7 @@
 
 .field private static final JAVA_NUMBER:I = 0x2f
 
-.field static synthetic class$org$apache$xmlbeans$impl$values$XmlUnionImpl:Ljava/lang/Class;
+.field public static synthetic class$org$apache$xmlbeans$impl$values$XmlUnionImpl:Ljava/lang/Class;
 
 
 # instance fields
@@ -31,9 +31,10 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->class$org$apache$xmlbeans$impl$values$XmlUnionImpl:Ljava/lang/Class;
 
     if-nez v0, :cond_0
@@ -57,12 +58,15 @@
 .method public constructor <init>(Lorg/apache/xmlbeans/SchemaType;Z)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;-><init>()V
 
     const-string v0, ""
 
+    .line 2
     iput-object v0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_textvalue:Ljava/lang/String;
 
+    .line 3
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     const/4 p1, 0x0
@@ -75,6 +79,7 @@
 .method private static check(Lorg/apache/xmlbeans/XmlObject;Lorg/apache/xmlbeans/SchemaType;)Z
     .locals 4
 
+    .line 1
     invoke-interface {p1}, Lorg/apache/xmlbeans/SchemaType;->getEnumerationValues()[Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     move-result-object p1
@@ -87,11 +92,13 @@
 
     move v2, v1
 
+    .line 2
     :goto_0
     array-length v3, p1
 
     if-ge v2, v3, :cond_1
 
+    .line 3
     aget-object v3, p1, v2
 
     invoke-interface {v3, p0}, Lorg/apache/xmlbeans/XmlObject;->valueEquals(Lorg/apache/xmlbeans/XmlObject;)Z
@@ -114,9 +121,10 @@
     return v0
 .end method
 
-.method static synthetic class$(Ljava/lang/String;)Ljava/lang/Class;
+.method public static synthetic class$(Ljava/lang/String;)Ljava/lang/Class;
     .locals 1
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -133,7 +141,7 @@
 
     invoke-direct {v0}, Ljava/lang/NoClassDefFoundError;-><init>()V
 
-    invoke-virtual {v0, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v0, p0}, Ljava/lang/NoClassDefFoundError;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -330,6 +338,7 @@
 .method private static logical_overlap(Lorg/apache/xmlbeans/SchemaType;I)Z
     .locals 4
 
+    .line 1
     sget-boolean v0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->$assertionsDisabled:Z
 
     if-nez v0, :cond_1
@@ -361,6 +370,7 @@
 
     if-gt p1, v1, :cond_4
 
+    .line 2
     invoke-interface {p0}, Lorg/apache/xmlbeans/SchemaType;->getSimpleVariety()I
 
     move-result v0
@@ -369,6 +379,7 @@
 
     return v3
 
+    .line 3
     :cond_2
     invoke-interface {p0}, Lorg/apache/xmlbeans/SchemaType;->getPrimitiveType()Lorg/apache/xmlbeans/SchemaType;
 
@@ -395,6 +406,7 @@
 
     return v3
 
+    .line 4
     :pswitch_0
     invoke-interface {p0}, Lorg/apache/xmlbeans/SchemaType;->getSimpleVariety()I
 
@@ -412,6 +424,7 @@
     :goto_2
     return v2
 
+    .line 5
     :pswitch_1
     invoke-interface {p0}, Lorg/apache/xmlbeans/SchemaType;->getSimpleVariety()I
 
@@ -421,6 +434,7 @@
 
     return v3
 
+    .line 6
     :cond_6
     invoke-interface {p0}, Lorg/apache/xmlbeans/SchemaType;->getPrimitiveType()Lorg/apache/xmlbeans/SchemaType;
 
@@ -443,6 +457,7 @@
     :cond_7
     return v2
 
+    .line 7
     :pswitch_2
     invoke-interface {p0}, Lorg/apache/xmlbeans/SchemaType;->getSimpleVariety()I
 
@@ -452,6 +467,7 @@
 
     return v3
 
+    .line 8
     :cond_8
     invoke-interface {p0}, Lorg/apache/xmlbeans/SchemaType;->getPrimitiveType()Lorg/apache/xmlbeans/SchemaType;
 
@@ -468,6 +484,7 @@
     :pswitch_3
     return v2
 
+    .line 9
     :pswitch_4
     invoke-interface {p0}, Lorg/apache/xmlbeans/SchemaType;->getSimpleVariety()I
 
@@ -477,6 +494,7 @@
 
     return v3
 
+    .line 10
     :cond_9
     invoke-interface {p0}, Lorg/apache/xmlbeans/SchemaType;->getPrimitiveType()Lorg/apache/xmlbeans/SchemaType;
 
@@ -499,6 +517,7 @@
     :cond_a
     return v2
 
+    .line 11
     :pswitch_5
     invoke-interface {p0}, Lorg/apache/xmlbeans/SchemaType;->getSimpleVariety()I
 
@@ -508,6 +527,7 @@
 
     return v3
 
+    .line 12
     :cond_b
     invoke-interface {p0}, Lorg/apache/xmlbeans/SchemaType;->getPrimitiveType()Lorg/apache/xmlbeans/SchemaType;
 
@@ -537,6 +557,7 @@
     :pswitch_6
     return v2
 
+    .line 13
     :cond_d
     new-instance p0, Ljava/lang/AssertionError;
 
@@ -578,12 +599,14 @@
 .method private set_primitive(ILjava/lang/Object;)V
     .locals 8
 
+    .line 1
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     invoke-interface {v0}, Lorg/apache/xmlbeans/SchemaType;->getUnionConstituentTypes()[Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object v0
 
+    .line 2
     sget-boolean v1, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->$assertionsDisabled:Z
 
     if-nez v1, :cond_1
@@ -599,6 +622,7 @@
 
     throw p0
 
+    .line 3
     :cond_1
     :goto_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->has_store()Z
@@ -611,6 +635,7 @@
 
     if-eqz v1, :cond_2
 
+    .line 4
     new-instance v1, Lorg/apache/xmlbeans/impl/values/NamespaceContext;
 
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
@@ -634,6 +659,7 @@
     :goto_2
     if-nez v4, :cond_3
 
+    .line 5
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_validateOnSet()Z
 
@@ -652,11 +678,13 @@
     :goto_3
     move v5, v3
 
+    .line 6
     :goto_4
     array-length v6, v0
 
     if-ge v5, v6, :cond_7
 
+    .line 7
     aget-object v6, v0, v5
 
     invoke-static {v6, p1}, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->logical_overlap(Lorg/apache/xmlbeans/SchemaType;I)Z
@@ -667,6 +695,7 @@
 
     if-eqz v6, :cond_6
 
+    .line 8
     :try_start_1
     aget-object v6, v0, v5
 
@@ -680,9 +709,11 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 9
     :try_start_2
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_value:Lorg/apache/xmlbeans/XmlAnySimpleType;
 
+    .line 10
     invoke-interface {p1}, Lorg/apache/xmlbeans/XmlAnySimpleType;->stringValue()Ljava/lang/String;
 
     move-result-object p1
@@ -693,6 +724,7 @@
 
     if-eqz v1, :cond_4
 
+    .line 11
     invoke-static {}, Lorg/apache/xmlbeans/impl/values/NamespaceContext;->pop()V
 
     :cond_4
@@ -701,6 +733,7 @@
     :catch_0
     move-exception v6
 
+    .line 12
     :try_start_3
     sget-boolean v7, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->$assertionsDisabled:Z
 
@@ -744,8 +777,10 @@
     :cond_8
     if-eqz v1, :cond_9
 
+    .line 13
     invoke-static {}, Lorg/apache/xmlbeans/impl/values/NamespaceContext;->pop()V
 
+    .line 14
     :cond_9
     new-instance p1, Lorg/apache/xmlbeans/impl/values/XmlValueOutOfRangeException;
 
@@ -781,6 +816,7 @@
     :goto_6
     if-eqz v1, :cond_b
 
+    .line 15
     invoke-static {}, Lorg/apache/xmlbeans/impl/values/NamespaceContext;->pop()V
 
     :cond_b
@@ -792,6 +828,7 @@
 .method public bigDecimalValue()Ljava/math/BigDecimal;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_value:Lorg/apache/xmlbeans/XmlAnySimpleType;
@@ -816,6 +853,7 @@
 .method public bigIntegerValue()Ljava/math/BigInteger;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_value:Lorg/apache/xmlbeans/XmlAnySimpleType;
@@ -840,6 +878,7 @@
 .method public booleanValue()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_value:Lorg/apache/xmlbeans/XmlAnySimpleType;
@@ -864,6 +903,7 @@
 .method public byteArrayValue()[B
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_value:Lorg/apache/xmlbeans/XmlAnySimpleType;
@@ -888,6 +928,7 @@
 .method public byteValue()B
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_value:Lorg/apache/xmlbeans/XmlAnySimpleType;
@@ -912,6 +953,7 @@
 .method public calendarValue()Ljava/util/Calendar;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_value:Lorg/apache/xmlbeans/XmlAnySimpleType;
@@ -936,6 +978,7 @@
 .method public compute_text(Lorg/apache/xmlbeans/impl/values/NamespaceManager;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_textvalue:Ljava/lang/String;
 
     return-object p0
@@ -944,6 +987,7 @@
 .method public dateValue()Ljava/util/Date;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_value:Lorg/apache/xmlbeans/XmlAnySimpleType;
@@ -968,6 +1012,7 @@
 .method public doubleValue()D
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_value:Lorg/apache/xmlbeans/XmlAnySimpleType;
@@ -992,6 +1037,7 @@
 .method public enumValue()Lorg/apache/xmlbeans/StringEnumAbstractBase;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_value:Lorg/apache/xmlbeans/XmlAnySimpleType;
@@ -1016,6 +1062,7 @@
 .method public equal_to(Lorg/apache/xmlbeans/XmlObject;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_value:Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     invoke-interface {p0, p1}, Lorg/apache/xmlbeans/XmlObject;->valueEquals(Lorg/apache/xmlbeans/XmlObject;)Z
@@ -1028,6 +1075,7 @@
 .method public floatValue()F
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_value:Lorg/apache/xmlbeans/XmlAnySimpleType;
@@ -1052,6 +1100,7 @@
 .method public gDateValue()Lorg/apache/xmlbeans/GDate;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_value:Lorg/apache/xmlbeans/XmlAnySimpleType;
@@ -1076,6 +1125,7 @@
 .method public gDurationValue()Lorg/apache/xmlbeans/GDuration;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_value:Lorg/apache/xmlbeans/XmlAnySimpleType;
@@ -1108,6 +1158,7 @@
 .method public instanceType()Lorg/apache/xmlbeans/SchemaType;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_value:Lorg/apache/xmlbeans/XmlAnySimpleType;
@@ -1132,6 +1183,7 @@
 .method public intValue()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_value:Lorg/apache/xmlbeans/XmlAnySimpleType;
@@ -1156,11 +1208,14 @@
 .method public is_defaultable_ws(Ljava/lang/String;)Z
     .locals 1
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_value:Lorg/apache/xmlbeans/XmlAnySimpleType;
 
+    .line 2
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->set_text(Ljava/lang/String;)V
 
+    .line 3
     iput-object v0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_value:Lorg/apache/xmlbeans/XmlAnySimpleType;
     :try_end_0
     .catch Lorg/apache/xmlbeans/impl/values/XmlValueOutOfRangeException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1178,6 +1233,7 @@
 .method public listValue()Ljava/util/List;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_value:Lorg/apache/xmlbeans/XmlAnySimpleType;
@@ -1202,6 +1258,7 @@
 .method public longValue()J
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_value:Lorg/apache/xmlbeans/XmlAnySimpleType;
@@ -1226,6 +1283,7 @@
 .method public qNameValue()Ljavax/xml/namespace/QName;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_value:Lorg/apache/xmlbeans/XmlAnySimpleType;
@@ -1250,6 +1308,7 @@
 .method public schemaType()Lorg/apache/xmlbeans/SchemaType;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     return-object p0
@@ -1260,6 +1319,7 @@
 
     const/16 v0, 0x2f
 
+    .line 1
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->set_primitive(ILjava/lang/Object;)V
 
     return-void
@@ -1270,6 +1330,7 @@
 
     const/16 v0, 0x2f
 
+    .line 1
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->set_primitive(ILjava/lang/Object;)V
 
     return-void
@@ -1280,6 +1341,7 @@
 
     const/16 v0, 0x32
 
+    .line 1
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->set_primitive(ILjava/lang/Object;)V
 
     return-void
@@ -1290,6 +1352,7 @@
 
     const/16 v0, 0x31
 
+    .line 1
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->set_primitive(ILjava/lang/Object;)V
 
     return-void
@@ -1300,6 +1363,7 @@
 
     const/16 v0, 0x30
 
+    .line 1
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->set_primitive(ILjava/lang/Object;)V
 
     return-void
@@ -1308,16 +1372,19 @@
 .method public set_GDate(Lorg/apache/xmlbeans/GDateSpecification;)V
     .locals 1
 
+    .line 1
     invoke-interface {p1}, Lorg/apache/xmlbeans/GDateSpecification;->getBuiltinTypeCode()I
 
     move-result v0
 
     if-lez v0, :cond_0
 
+    .line 2
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->set_primitive(ILjava/lang/Object;)V
 
     return-void
 
+    .line 3
     :cond_0
     new-instance p0, Lorg/apache/xmlbeans/impl/values/XmlValueOutOfRangeException;
 
@@ -1331,6 +1398,7 @@
 
     const/16 v0, 0xd
 
+    .line 1
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->set_primitive(ILjava/lang/Object;)V
 
     return-void
@@ -1341,6 +1409,7 @@
 
     const/4 v0, 0x7
 
+    .line 1
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->set_primitive(ILjava/lang/Object;)V
 
     return-void
@@ -1351,6 +1420,7 @@
 
     const/16 v0, 0x32
 
+    .line 1
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->set_primitive(ILjava/lang/Object;)V
 
     return-void
@@ -1359,6 +1429,7 @@
 .method public set_boolean(Z)V
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/lang/Boolean;
 
     invoke-direct {v0, p1}, Ljava/lang/Boolean;-><init>(Z)V
@@ -1373,6 +1444,7 @@
 .method public set_byte(B)V
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/lang/Byte;
 
     invoke-direct {v0, p1}, Ljava/lang/Byte;-><init>(B)V
@@ -1387,6 +1459,7 @@
 .method public set_double(D)V
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/lang/Double;
 
     invoke-direct {v0, p1, p2}, Ljava/lang/Double;-><init>(D)V
@@ -1403,6 +1476,7 @@
 
     const/16 v0, 0xc
 
+    .line 1
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->set_primitive(ILjava/lang/Object;)V
 
     return-void
@@ -1411,6 +1485,7 @@
 .method public set_float(F)V
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/lang/Float;
 
     invoke-direct {v0, p1}, Ljava/lang/Float;-><init>(F)V
@@ -1427,6 +1502,7 @@
 
     const/16 v0, 0x32
 
+    .line 1
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->set_primitive(ILjava/lang/Object;)V
 
     return-void
@@ -1435,6 +1511,7 @@
 .method public set_int(I)V
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/lang/Integer;
 
     invoke-direct {v0, p1}, Ljava/lang/Integer;-><init>(I)V
@@ -1451,6 +1528,7 @@
 
     const/16 v0, 0x33
 
+    .line 1
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->set_primitive(ILjava/lang/Object;)V
 
     return-void
@@ -1459,6 +1537,7 @@
 .method public set_long(J)V
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/lang/Long;
 
     invoke-direct {v0, p1, p2}, Ljava/lang/Long;-><init>(J)V
@@ -1475,8 +1554,10 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_value:Lorg/apache/xmlbeans/XmlAnySimpleType;
 
+    .line 2
     iput-object v0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_textvalue:Ljava/lang/String;
 
     return-void
@@ -1485,6 +1566,7 @@
 .method public set_short(S)V
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/lang/Short;
 
     invoke-direct {v0, p1}, Ljava/lang/Short;-><init>(S)V
@@ -1499,6 +1581,7 @@
 .method public set_text(Ljava/lang/String;)V
     .locals 10
 
+    .line 1
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     invoke-interface {v0, p1}, Lorg/apache/xmlbeans/SchemaType;->matchPatternFacet(Ljava/lang/String;)Z
@@ -1521,6 +1604,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     new-instance v0, Lorg/apache/xmlbeans/impl/values/XmlValueOutOfRangeException;
 
@@ -1548,18 +1632,22 @@
 
     throw v0
 
+    .line 3
     :cond_1
     :goto_0
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_textvalue:Ljava/lang/String;
 
+    .line 4
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_textvalue:Ljava/lang/String;
 
+    .line 5
     iget-object v4, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     invoke-interface {v4}, Lorg/apache/xmlbeans/SchemaType;->getUnionConstituentTypes()[Lorg/apache/xmlbeans/SchemaType;
 
     move-result-object v4
 
+    .line 6
     sget-boolean v5, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->$assertionsDisabled:Z
 
     if-nez v5, :cond_3
@@ -1575,6 +1663,7 @@
 
     throw p0
 
+    .line 7
     :cond_3
     :goto_1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->has_store()Z
@@ -1583,6 +1672,7 @@
 
     if-eqz v5, :cond_4
 
+    .line 8
     new-instance v5, Lorg/apache/xmlbeans/impl/values/NamespaceContext;
 
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
@@ -1606,6 +1696,7 @@
     :goto_3
     if-nez v6, :cond_5
 
+    .line 9
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_validateOnSet()Z
 
@@ -1624,6 +1715,7 @@
     :goto_4
     move v7, v3
 
+    .line 10
     :goto_5
     array-length v8, v4
     :try_end_0
@@ -1631,6 +1723,7 @@
 
     if-ge v7, v8, :cond_8
 
+    .line 11
     :try_start_1
     aget-object v8, v4, v7
 
@@ -1640,6 +1733,7 @@
 
     move-result-object v8
 
+    .line 12
     iget-object v9, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     invoke-static {v8, v9}, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->check(Lorg/apache/xmlbeans/XmlObject;Lorg/apache/xmlbeans/SchemaType;)Z
@@ -1650,6 +1744,7 @@
 
     goto :goto_6
 
+    .line 13
     :cond_6
     iput-object v8, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_value:Lorg/apache/xmlbeans/XmlAnySimpleType;
     :try_end_1
@@ -1659,6 +1754,7 @@
 
     if-eqz v5, :cond_7
 
+    .line 14
     invoke-static {}, Lorg/apache/xmlbeans/impl/values/NamespaceContext;->pop()V
 
     :cond_7
@@ -1667,6 +1763,7 @@
     :catch_0
     move-exception p0
 
+    .line 15
     :try_start_2
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -1702,11 +1799,14 @@
     :cond_9
     if-eqz v5, :cond_a
 
+    .line 16
     invoke-static {}, Lorg/apache/xmlbeans/impl/values/NamespaceContext;->pop()V
 
+    .line 17
     :cond_a
     iput-object v0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_textvalue:Ljava/lang/String;
 
+    .line 18
     new-instance v0, Lorg/apache/xmlbeans/impl/values/XmlValueOutOfRangeException;
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -1735,6 +1835,7 @@
     :goto_7
     if-eqz v5, :cond_c
 
+    .line 19
     invoke-static {}, Lorg/apache/xmlbeans/impl/values/NamespaceContext;->pop()V
 
     :cond_c
@@ -1746,6 +1847,7 @@
 
     const/16 v0, 0x10
 
+    .line 1
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->set_primitive(ILjava/lang/Object;)V
 
     return-void
@@ -1756,6 +1858,7 @@
 
     const/16 v0, 0xe
 
+    .line 1
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->set_primitive(ILjava/lang/Object;)V
 
     return-void
@@ -1766,6 +1869,7 @@
 
     const/16 v0, 0xb
 
+    .line 1
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->set_primitive(ILjava/lang/Object;)V
 
     return-void
@@ -1776,6 +1880,7 @@
 
     const/16 v0, 0xa
 
+    .line 1
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->set_primitive(ILjava/lang/Object;)V
 
     return-void
@@ -1786,6 +1891,7 @@
 
     const/16 v0, 0xd
 
+    .line 1
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->set_primitive(ILjava/lang/Object;)V
 
     return-void
@@ -1796,6 +1902,7 @@
 
     const/16 v0, 0x9
 
+    .line 1
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->set_primitive(ILjava/lang/Object;)V
 
     return-void
@@ -1806,6 +1913,7 @@
 
     const/16 v0, 0x14
 
+    .line 1
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->set_primitive(ILjava/lang/Object;)V
 
     return-void
@@ -1816,6 +1924,7 @@
 
     const/16 v0, 0x15
 
+    .line 1
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->set_primitive(ILjava/lang/Object;)V
 
     return-void
@@ -1826,6 +1935,7 @@
 
     const/16 v0, 0x13
 
+    .line 1
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->set_primitive(ILjava/lang/Object;)V
 
     return-void
@@ -1836,6 +1946,7 @@
 
     const/16 v0, 0x12
 
+    .line 1
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->set_primitive(ILjava/lang/Object;)V
 
     return-void
@@ -1846,6 +1957,7 @@
 
     const/16 v0, 0x11
 
+    .line 1
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->set_primitive(ILjava/lang/Object;)V
 
     return-void
@@ -1856,6 +1968,7 @@
 
     const/16 v0, 0xf
 
+    .line 1
     invoke-direct {p0, v0, p1}, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->set_primitive(ILjava/lang/Object;)V
 
     return-void
@@ -1864,6 +1977,7 @@
 .method public shortValue()S
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_value:Lorg/apache/xmlbeans/XmlAnySimpleType;
@@ -1888,6 +2002,7 @@
 .method public stringValue()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_value:Lorg/apache/xmlbeans/XmlAnySimpleType;
@@ -1920,17 +2035,20 @@
 
     const/4 v4, 0x1
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 2
     iget-object v5, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_value:Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     if-nez v5, :cond_0
 
     new-array v4, v4, [Ljava/lang/Object;
 
+    .line 3
     new-instance v5, Ljava/lang/StringBuffer;
 
     invoke-direct {v5}, Ljava/lang/StringBuffer;-><init>()V
@@ -1961,6 +2079,7 @@
 
     return-void
 
+    .line 4
     :cond_0
     check-cast v5, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
 
@@ -1971,6 +2090,7 @@
     :catch_0
     new-array v4, v4, [Ljava/lang/Object;
 
+    .line 5
     new-instance v5, Ljava/lang/StringBuffer;
 
     invoke-direct {v5}, Ljava/lang/StringBuffer;-><init>()V
@@ -2005,6 +2125,7 @@
 .method public value_hash_code()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_value:Lorg/apache/xmlbeans/XmlAnySimpleType;
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
@@ -2017,6 +2138,7 @@
 .method public xlistValue()Ljava/util/List;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlUnionImpl;->_value:Lorg/apache/xmlbeans/XmlAnySimpleType;

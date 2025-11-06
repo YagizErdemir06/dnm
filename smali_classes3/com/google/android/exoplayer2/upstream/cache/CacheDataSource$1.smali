@@ -1,4 +1,4 @@
-.class synthetic Lcom/google/android/exoplayer2/upstream/cache/CacheDataSource$1;
+.class public synthetic Lcom/google/android/exoplayer2/upstream/cache/CacheDataSource$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

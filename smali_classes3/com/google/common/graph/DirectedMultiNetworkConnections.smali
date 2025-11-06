@@ -1,4 +1,4 @@
-.class final Lcom/google/common/graph/DirectedMultiNetworkConnections;
+.class public final Lcom/google/common/graph/DirectedMultiNetworkConnections;
 .super Lcom/google/common/graph/AbstractDirectedNetworkConnections;
 .source "SourceFile"
 
@@ -67,6 +67,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/google/common/graph/AbstractDirectedNetworkConnections;-><init>(Ljava/util/Map;Ljava/util/Map;I)V
 
     return-void
@@ -75,6 +76,7 @@
 .method public static synthetic access$000(Lcom/google/common/graph/DirectedMultiNetworkConnections;)Lcom/google/common/collect/Multiset;
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/graph/DirectedMultiNetworkConnections;->successorsMultiset()Lcom/google/common/collect/Multiset;
 
     move-result-object p0
@@ -107,6 +109,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
@@ -130,6 +133,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/graph/DirectedMultiNetworkConnections;
 
     new-instance v1, Ljava/util/HashMap;
@@ -169,8 +173,10 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/graph/DirectedMultiNetworkConnections;
 
+    .line 2
     invoke-static {p0}, Lcom/google/common/collect/ImmutableMap;->copyOf(Ljava/util/Map;)Lcom/google/common/collect/ImmutableMap;
 
     move-result-object p0
@@ -194,6 +200,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/graph/DirectedMultiNetworkConnections;->predecessorsReference:Ljava/lang/ref/Reference;
 
     invoke-static {v0}, Lcom/google/common/graph/DirectedMultiNetworkConnections;->getReference(Ljava/lang/ref/Reference;)Ljava/lang/Object;
@@ -204,6 +211,7 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/graph/AbstractDirectedNetworkConnections;->inEdgeMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -214,6 +222,7 @@
 
     move-result-object v0
 
+    .line 3
     new-instance v1, Ljava/lang/ref/SoftReference;
 
     invoke-direct {v1, v0}, Ljava/lang/ref/SoftReference;-><init>(Ljava/lang/Object;)V
@@ -234,6 +243,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/graph/DirectedMultiNetworkConnections;->successorsReference:Ljava/lang/ref/Reference;
 
     invoke-static {v0}, Lcom/google/common/graph/DirectedMultiNetworkConnections;->getReference(Ljava/lang/ref/Reference;)Ljava/lang/Object;
@@ -244,6 +254,7 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/graph/AbstractDirectedNetworkConnections;->outEdgeMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -254,6 +265,7 @@
 
     move-result-object v0
 
+    .line 3
     new-instance v1, Ljava/lang/ref/SoftReference;
 
     invoke-direct {v1, v0}, Ljava/lang/ref/SoftReference;-><init>(Ljava/lang/Object;)V
@@ -274,8 +286,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2, p3}, Lcom/google/common/graph/AbstractDirectedNetworkConnections;->addInEdge(Ljava/lang/Object;Ljava/lang/Object;Z)V
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/graph/DirectedMultiNetworkConnections;->predecessorsReference:Ljava/lang/ref/Reference;
 
     invoke-static {p0}, Lcom/google/common/graph/DirectedMultiNetworkConnections;->getReference(Ljava/lang/ref/Reference;)Ljava/lang/Object;
@@ -286,6 +300,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-interface {p0, p2}, Lcom/google/common/collect/Multiset;->add(Ljava/lang/Object;)Z
 
     move-result p0
@@ -304,8 +319,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/google/common/graph/AbstractDirectedNetworkConnections;->addOutEdge(Ljava/lang/Object;Ljava/lang/Object;)V
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/graph/DirectedMultiNetworkConnections;->successorsReference:Ljava/lang/ref/Reference;
 
     invoke-static {p0}, Lcom/google/common/graph/DirectedMultiNetworkConnections;->getReference(Ljava/lang/ref/Reference;)Ljava/lang/Object;
@@ -316,6 +333,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-interface {p0, p2}, Lcom/google/common/collect/Multiset;->add(Ljava/lang/Object;)Z
 
     move-result p0
@@ -336,6 +354,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/graph/DirectedMultiNetworkConnections$1;
 
     iget-object v1, p0, Lcom/google/common/graph/AbstractDirectedNetworkConnections;->outEdgeMap:Ljava/util/Map;
@@ -355,6 +374,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/graph/DirectedMultiNetworkConnections;->predecessorsMultiset()Lcom/google/common/collect/Multiset;
 
     move-result-object p0
@@ -378,10 +398,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/google/common/graph/AbstractDirectedNetworkConnections;->removeInEdge(Ljava/lang/Object;Z)Ljava/lang/Object;
 
     move-result-object p1
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/graph/DirectedMultiNetworkConnections;->predecessorsReference:Ljava/lang/ref/Reference;
 
     invoke-static {p0}, Lcom/google/common/graph/DirectedMultiNetworkConnections;->getReference(Ljava/lang/ref/Reference;)Ljava/lang/Object;
@@ -392,6 +414,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-interface {p0, p1}, Lcom/google/common/collect/Multiset;->remove(Ljava/lang/Object;)Z
 
     move-result p0
@@ -410,10 +433,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/graph/AbstractDirectedNetworkConnections;->removeOutEdge(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/graph/DirectedMultiNetworkConnections;->successorsReference:Ljava/lang/ref/Reference;
 
     invoke-static {p0}, Lcom/google/common/graph/DirectedMultiNetworkConnections;->getReference(Ljava/lang/ref/Reference;)Ljava/lang/Object;
@@ -424,6 +449,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-interface {p0, p1}, Lcom/google/common/collect/Multiset;->remove(Ljava/lang/Object;)Z
 
     move-result p0
@@ -444,6 +470,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/graph/DirectedMultiNetworkConnections;->successorsMultiset()Lcom/google/common/collect/Multiset;
 
     move-result-object p0

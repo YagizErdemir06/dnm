@@ -3,11 +3,11 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lie/b;
+.implements Ld/o/b/c/l1/b;
 
 
 # static fields
-.field public static a:Ljava/util/Map;
+.field private static a:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -29,3907 +29,3907 @@
 
     sput-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Agent.Answer"
+    const-class v1, Ld/o/b/c/b$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/a$a;
+    const-string v2, "Agent.Answer"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Agent.Forward"
+    const-class v1, Ld/o/b/c/b$b;
 
-    const-class v2, Lcom/xiaomi/ai/api/a$b;
+    const-string v2, "Agent.Forward"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Agent.Query"
+    const-class v1, Ld/o/b/c/b$c;
 
-    const-class v2, Lcom/xiaomi/ai/api/a$c;
+    const-string v2, "Agent.Query"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Alerts.AlertsResult"
+    const-class v1, Ld/o/b/c/c$k;
 
-    const-class v2, Lcom/xiaomi/ai/api/b$k;
+    const-string v2, "Alerts.AlertsResult"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Alerts.ChimeHourly"
+    const-class v1, Ld/o/b/c/c$l;
 
-    const-class v2, Lcom/xiaomi/ai/api/b$l;
+    const-string v2, "Alerts.ChimeHourly"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Alerts.DeleteAlert"
+    const-class v1, Ld/o/b/c/c$n;
 
-    const-class v2, Lcom/xiaomi/ai/api/b$n;
+    const-string v2, "Alerts.DeleteAlert"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Alerts.DeleteAlerts"
+    const-class v1, Ld/o/b/c/c$o;
 
-    const-class v2, Lcom/xiaomi/ai/api/b$o;
+    const-string v2, "Alerts.DeleteAlerts"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Alerts.DeliverAlertIntention"
+    const-class v1, Ld/o/b/c/c$p;
 
-    const-class v2, Lcom/xiaomi/ai/api/b$p;
+    const-string v2, "Alerts.DeliverAlertIntention"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Alerts.SetAlert"
+    const-class v1, Ld/o/b/c/c$v;
 
-    const-class v2, Lcom/xiaomi/ai/api/b$v;
+    const-string v2, "Alerts.SetAlert"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Alerts.SetAlerts"
+    const-class v1, Ld/o/b/c/c$w;
 
-    const-class v2, Lcom/xiaomi/ai/api/b$w;
+    const-string v2, "Alerts.SetAlerts"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Alerts.SetTODO"
+    const-class v1, Ld/o/b/c/c$x;
 
-    const-class v2, Lcom/xiaomi/ai/api/b$x;
+    const-string v2, "Alerts.SetTODO"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Alerts.SmartAlarm"
+    const-class v1, Ld/o/b/c/c$y;
 
-    const-class v2, Lcom/xiaomi/ai/api/b$y;
+    const-string v2, "Alerts.SmartAlarm"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Alerts.StopAlert"
+    const-class v1, Ld/o/b/c/c$z;
 
-    const-class v2, Lcom/xiaomi/ai/api/b$z;
+    const-string v2, "Alerts.StopAlert"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Alerts.StoreAlerts"
+    const-class v1, Ld/o/b/c/c$a0;
 
-    const-class v2, Lcom/xiaomi/ai/api/b$a0;
+    const-string v2, "Alerts.StoreAlerts"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Alerts.UpdateAlertStatus"
+    const-class v1, Ld/o/b/c/c$b0;
 
-    const-class v2, Lcom/xiaomi/ai/api/b$b0;
+    const-string v2, "Alerts.UpdateAlertStatus"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Alerts.UpdateAlerts"
+    const-class v1, Ld/o/b/c/c$c0;
 
-    const-class v2, Lcom/xiaomi/ai/api/b$c0;
+    const-string v2, "Alerts.UpdateAlerts"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Alerts.UploadAlerts"
+    const-class v1, Ld/o/b/c/c$d0;
 
-    const-class v2, Lcom/xiaomi/ai/api/b$d0;
+    const-string v2, "Alerts.UploadAlerts"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Alerts.VoiceAssistantSmartAlerts"
+    const-class v1, Ld/o/b/c/c$e0;
 
-    const-class v2, Lcom/xiaomi/ai/api/b$e0;
+    const-string v2, "Alerts.VoiceAssistantSmartAlerts"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.AdsInfo"
+    const-class v1, Ld/o/b/c/d$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$a;
+    const-string v2, "Application.AdsInfo"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.AppDetail"
+    const-class v1, Ld/o/b/c/d$d;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$d;
+    const-string v2, "Application.AppDetail"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.AppDetailV1"
+    const-class v1, Ld/o/b/c/d$e;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$e;
+    const-string v2, "Application.AppDetailV1"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.AvatarRequest"
+    const-class v1, Ld/o/b/c/d$q;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$q;
+    const-string v2, "Application.AvatarRequest"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.BaikeEvent"
+    const-class v1, Ld/o/b/c/d$r;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$r;
+    const-string v2, "Application.BaikeEvent"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.CameraState"
+    const-class v1, Ld/o/b/c/d$u;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$u;
+    const-string v2, "Application.CameraState"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.CancelUserDeviceExecution"
+    const-class v1, Ld/o/b/c/d$v;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$v;
+    const-string v2, "Application.CancelUserDeviceExecution"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.CheckApps"
+    const-class v1, Ld/o/b/c/d$y;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$y;
+    const-string v2, "Application.CheckApps"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.CheckAppsFailed"
+    const-class v1, Ld/o/b/c/d$z;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$z;
+    const-string v2, "Application.CheckAppsFailed"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.CheckAuths"
+    const-class v1, Ld/o/b/c/d$a0;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$a0;
+    const-string v2, "Application.CheckAuths"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.DisableDriveMode"
+    const-class v1, Ld/o/b/c/d$d0;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$d0;
+    const-string v2, "Application.DisableDriveMode"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.DisplayAvatar"
+    const-class v1, Ld/o/b/c/d$e0;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$e0;
+    const-string v2, "Application.DisplayAvatar"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.DisplayAvatarV2"
+    const-class v1, Ld/o/b/c/d$f0;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$f0;
+    const-string v2, "Application.DisplayAvatarV2"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.DisplayAvatarV3"
+    const-class v1, Ld/o/b/c/d$g0;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$g0;
+    const-string v2, "Application.DisplayAvatarV3"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.DriveModeState"
+    const-class v1, Ld/o/b/c/d$h0;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$h0;
+    const-string v2, "Application.DriveModeState"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.EnableDriveMode"
+    const-class v1, Ld/o/b/c/d$i0;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$i0;
+    const-string v2, "Application.EnableDriveMode"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.ExpectPush"
+    const-class v1, Ld/o/b/c/d$m0;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$m0;
+    const-string v2, "Application.ExpectPush"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.GenerateSpeak"
+    const-class v1, Ld/o/b/c/d$n0;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$n0;
+    const-string v2, "Application.GenerateSpeak"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.Operate"
+    const-class v1, Ld/o/b/c/d$x0;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$x0;
+    const-string v2, "Application.Operate"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.OperateTvApp"
+    const-class v1, Ld/o/b/c/d$y0;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$y0;
+    const-string v2, "Application.OperateTvApp"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.OperateWXInDriveMode"
+    const-class v1, Ld/o/b/c/d$z0;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$z0;
+    const-string v2, "Application.OperateWXInDriveMode"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.PersonEvent"
+    const-class v1, Ld/o/b/c/d$a1;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$a1;
+    const-string v2, "Application.PersonEvent"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.PersonalState"
+    const-class v1, Ld/o/b/c/d$b1;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$b1;
+    const-string v2, "Application.PersonalState"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.QueryBonusAssistant"
+    const-class v1, Ld/o/b/c/d$e1;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$e1;
+    const-string v2, "Application.QueryBonusAssistant"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.QuickAppState"
+    const-class v1, Ld/o/b/c/d$f1;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$f1;
+    const-string v2, "Application.QuickAppState"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.RelayContent"
+    const-class v1, Ld/o/b/c/d$g1;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$g1;
+    const-string v2, "Application.RelayContent"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.ReportRelayDevices"
+    const-class v1, Ld/o/b/c/d$i1;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$i1;
+    const-string v2, "Application.ReportRelayDevices"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.ResourceInfo"
+    const-class v1, Ld/o/b/c/d$j1;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$j1;
+    const-string v2, "Application.ResourceInfo"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.Schedule"
+    const-class v1, Ld/o/b/c/d$k1;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$k1;
+    const-string v2, "Application.Schedule"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.SetBonusAssistantProperty"
+    const-class v1, Ld/o/b/c/d$o1;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$o1;
+    const-string v2, "Application.SetBonusAssistantProperty"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.SetSwitchStatus"
+    const-class v1, Ld/o/b/c/d$p1;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$p1;
+    const-string v2, "Application.SetSwitchStatus"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.Share"
+    const-class v1, Ld/o/b/c/d$q1;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$q1;
+    const-string v2, "Application.Share"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.ShowBottomCapture"
+    const-class v1, Ld/o/b/c/d$y1;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$y1;
+    const-string v2, "Application.ShowBottomCapture"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.SimulateClickState"
+    const-class v1, Ld/o/b/c/d$z1;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$z1;
+    const-string v2, "Application.SimulateClickState"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.SimulateClickV0"
+    const-class v1, Ld/o/b/c/d$b2;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$b2;
+    const-string v2, "Application.SimulateClickV0"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.State"
+    const-class v1, Ld/o/b/c/d$c2;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$c2;
+    const-string v2, "Application.State"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.StopRelayContent"
+    const-class v1, Ld/o/b/c/d$d2;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$d2;
+    const-string v2, "Application.StopRelayContent"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.SwitchTimeFormat"
+    const-class v1, Ld/o/b/c/d$g2;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$g2;
+    const-string v2, "Application.SwitchTimeFormat"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.TaskState"
+    const-class v1, Ld/o/b/c/d$i2;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$i2;
+    const-string v2, "Application.TaskState"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.Translation"
+    const-class v1, Ld/o/b/c/d$m2;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$m2;
+    const-string v2, "Application.Translation"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.Vibrate"
+    const-class v1, Ld/o/b/c/d$r2;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$r2;
+    const-string v2, "Application.Vibrate"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.VoiceWakeupState"
+    const-class v1, Ld/o/b/c/d$s2;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$s2;
+    const-string v2, "Application.VoiceWakeupState"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Application.WholeHousePlay"
+    const-class v1, Ld/o/b/c/d$z2;
 
-    const-class v2, Lcom/xiaomi/ai/api/c$z2;
+    const-string v2, "Application.WholeHousePlay"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "ApplicationSettings.ManageMenstrual"
+    const-class v1, Ld/o/b/c/e$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/d$a;
+    const-string v2, "ApplicationSettings.ManageMenstrual"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "ApplicationSettings.MenstruationState"
+    const-class v1, Ld/o/b/c/e$f;
 
-    const-class v2, Lcom/xiaomi/ai/api/d$f;
+    const-string v2, "ApplicationSettings.MenstruationState"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AudioPlayer.AddToFavorites"
+    const-class v1, Ld/o/b/c/f$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/e$a;
+    const-string v2, "AudioPlayer.AddToFavorites"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AudioPlayer.CancelFromFavorites"
+    const-class v1, Ld/o/b/c/f$f;
 
-    const-class v2, Lcom/xiaomi/ai/api/e$f;
+    const-string v2, "AudioPlayer.CancelFromFavorites"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AudioPlayer.Play"
+    const-class v1, Ld/o/b/c/f$j;
 
-    const-class v2, Lcom/xiaomi/ai/api/e$j;
+    const-string v2, "AudioPlayer.Play"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AudioPlayer.PlayApp"
+    const-class v1, Ld/o/b/c/f$k;
 
-    const-class v2, Lcom/xiaomi/ai/api/e$k;
+    const-string v2, "AudioPlayer.PlayApp"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AudioPlayer.PlayFavorites"
+    const-class v1, Ld/o/b/c/f$m;
 
-    const-class v2, Lcom/xiaomi/ai/api/e$m;
+    const-string v2, "AudioPlayer.PlayFavorites"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AudioPlayer.PlaybackState"
+    const-class v1, Ld/o/b/c/f$q;
 
-    const-class v2, Lcom/xiaomi/ai/api/e$q;
+    const-string v2, "AudioPlayer.PlaybackState"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AudioPlayer.PlaybackStateList"
+    const-class v1, Ld/o/b/c/f$r;
 
-    const-class v2, Lcom/xiaomi/ai/api/e$r;
+    const-string v2, "AudioPlayer.PlaybackStateList"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AudioPlayer.PlaybackTrack"
+    const-class v1, Ld/o/b/c/f$t;
 
-    const-class v2, Lcom/xiaomi/ai/api/e$t;
+    const-string v2, "AudioPlayer.PlaybackTrack"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.AdjustACTemperature"
+    const-class v1, Ld/o/b/c/g$b;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$b;
+    const-string v2, "AutoController.AdjustACTemperature"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.AdjustACWindSpeed"
+    const-class v1, Ld/o/b/c/g$c;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$c;
+    const-string v2, "AutoController.AdjustACWindSpeed"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.AdjustBrightness"
+    const-class v1, Ld/o/b/c/g$d;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$d;
+    const-string v2, "AutoController.AdjustBrightness"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.AdjustHeight"
+    const-class v1, Ld/o/b/c/g$e;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$e;
+    const-string v2, "AutoController.AdjustHeight"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.AdjustSeat"
+    const-class v1, Ld/o/b/c/g$f;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$f;
+    const-string v2, "AutoController.AdjustSeat"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.AdjustSeatTemperature"
+    const-class v1, Ld/o/b/c/g$g;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$g;
+    const-string v2, "AutoController.AdjustSeatTemperature"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.AdjustSeatWindSpeed"
+    const-class v1, Ld/o/b/c/g$h;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$h;
+    const-string v2, "AutoController.AdjustSeatWindSpeed"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.AdjustSunroofStepless"
+    const-class v1, Ld/o/b/c/g$j;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$j;
+    const-string v2, "AutoController.AdjustSunroofStepless"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.AdjustSunshade"
+    const-class v1, Ld/o/b/c/g$k;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$k;
+    const-string v2, "AutoController.AdjustSunshade"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.AdjustWindow"
+    const-class v1, Ld/o/b/c/g$l;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$l;
+    const-string v2, "AutoController.AdjustWindow"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.AdjustWiperSpeed"
+    const-class v1, Ld/o/b/c/g$m;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$m;
+    const-string v2, "AutoController.AdjustWiperSpeed"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.ControlAmbientLight"
+    const-class v1, Ld/o/b/c/g$s;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$s;
+    const-string v2, "AutoController.ControlAmbientLight"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.Downdip"
+    const-class v1, Ld/o/b/c/g$v;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$v;
+    const-string v2, "AutoController.Downdip"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.ExecuteCameraDirective"
+    const-class v1, Ld/o/b/c/g$y;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$y;
+    const-string v2, "AutoController.ExecuteCameraDirective"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.ExecuteDRDirective"
+    const-class v1, Ld/o/b/c/g$z;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$z;
+    const-string v2, "AutoController.ExecuteDRDirective"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.Fold"
+    const-class v1, Ld/o/b/c/g$a0;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$a0;
+    const-string v2, "AutoController.Fold"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.QueryAirCleaner"
+    const-class v1, Ld/o/b/c/g$d0;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$d0;
+    const-string v2, "AutoController.QueryAirCleaner"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.QueryEndurance"
+    const-class v1, Ld/o/b/c/g$e0;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$e0;
+    const-string v2, "AutoController.QueryEndurance"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.QueryVehicleCondition"
+    const-class v1, Ld/o/b/c/g$f0;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$f0;
+    const-string v2, "AutoController.QueryVehicleCondition"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.RotateScreen"
+    const-class v1, Ld/o/b/c/g$g0;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$g0;
+    const-string v2, "AutoController.RotateScreen"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.SetACMode"
+    const-class v1, Ld/o/b/c/g$k0;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$k0;
+    const-string v2, "AutoController.SetACMode"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.SetACTemperature"
+    const-class v1, Ld/o/b/c/g$l0;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$l0;
+    const-string v2, "AutoController.SetACTemperature"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.SetACWindSpeed"
+    const-class v1, Ld/o/b/c/g$m0;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$m0;
+    const-string v2, "AutoController.SetACWindSpeed"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.SetAirCleanerMode"
+    const-class v1, Ld/o/b/c/g$n0;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$n0;
+    const-string v2, "AutoController.SetAirCleanerMode"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.SetBrightness"
+    const-class v1, Ld/o/b/c/g$o0;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$o0;
+    const-string v2, "AutoController.SetBrightness"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.SetColor"
+    const-class v1, Ld/o/b/c/g$p0;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$p0;
+    const-string v2, "AutoController.SetColor"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.SetDrivingMode"
+    const-class v1, Ld/o/b/c/g$q0;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$q0;
+    const-string v2, "AutoController.SetDrivingMode"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.SetEnergyRecoveryLevel"
+    const-class v1, Ld/o/b/c/g$r0;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$r0;
+    const-string v2, "AutoController.SetEnergyRecoveryLevel"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.SetHeight"
+    const-class v1, Ld/o/b/c/g$s0;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$s0;
+    const-string v2, "AutoController.SetHeight"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.SetScreenMode"
+    const-class v1, Ld/o/b/c/g$t0;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$t0;
+    const-string v2, "AutoController.SetScreenMode"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.SetSeat"
+    const-class v1, Ld/o/b/c/g$u0;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$u0;
+    const-string v2, "AutoController.SetSeat"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.SetSeatMode"
+    const-class v1, Ld/o/b/c/g$v0;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$v0;
+    const-string v2, "AutoController.SetSeatMode"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.SetSeatTemperature"
+    const-class v1, Ld/o/b/c/g$w0;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$w0;
+    const-string v2, "AutoController.SetSeatTemperature"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.SetSeatWindSpeed"
+    const-class v1, Ld/o/b/c/g$x0;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$x0;
+    const-string v2, "AutoController.SetSeatWindSpeed"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.SetSteeringMode"
+    const-class v1, Ld/o/b/c/g$y0;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$y0;
+    const-string v2, "AutoController.SetSteeringMode"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.SetSunroofStepless"
+    const-class v1, Ld/o/b/c/g$z0;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$z0;
+    const-string v2, "AutoController.SetSunroofStepless"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.SetSunshade"
+    const-class v1, Ld/o/b/c/g$a1;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$a1;
+    const-string v2, "AutoController.SetSunshade"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.SetValue"
+    const-class v1, Ld/o/b/c/g$b1;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$b1;
+    const-string v2, "AutoController.SetValue"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.SetWindow"
+    const-class v1, Ld/o/b/c/g$c1;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$c1;
+    const-string v2, "AutoController.SetWindow"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.SetWiperMode"
+    const-class v1, Ld/o/b/c/g$d1;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$d1;
+    const-string v2, "AutoController.SetWiperMode"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.SetWiperSpeed"
+    const-class v1, Ld/o/b/c/g$e1;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$e1;
+    const-string v2, "AutoController.SetWiperSpeed"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.Stop"
+    const-class v1, Ld/o/b/c/g$f1;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$f1;
+    const-string v2, "AutoController.Stop"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.SwitchACMode"
+    const-class v1, Ld/o/b/c/g$g1;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$g1;
+    const-string v2, "AutoController.SwitchACMode"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.TurnOff"
+    const-class v1, Ld/o/b/c/g$h1;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$h1;
+    const-string v2, "AutoController.TurnOff"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.TurnOffACMode"
+    const-class v1, Ld/o/b/c/g$i1;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$i1;
+    const-string v2, "AutoController.TurnOffACMode"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.TurnOn"
+    const-class v1, Ld/o/b/c/g$j1;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$j1;
+    const-string v2, "AutoController.TurnOn"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.TurnUp"
+    const-class v1, Ld/o/b/c/g$k1;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$k1;
+    const-string v2, "AutoController.TurnUp"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "AutoController.VehicleState"
+    const-class v1, Ld/o/b/c/g$m1;
 
-    const-class v2, Lcom/xiaomi/ai/api/f$m1;
+    const-string v2, "AutoController.VehicleState"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Bluetooth.Connect"
+    const-class v1, Ld/o/b/c/h$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/g$a;
+    const-string v2, "Bluetooth.Connect"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Bluetooth.Disconnect"
+    const-class v1, Ld/o/b/c/h$b;
 
-    const-class v2, Lcom/xiaomi/ai/api/g$b;
+    const-string v2, "Bluetooth.Disconnect"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Bluetooth.Switch"
+    const-class v1, Ld/o/b/c/h$c;
 
-    const-class v2, Lcom/xiaomi/ai/api/g$c;
+    const-string v2, "Bluetooth.Switch"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Bluetooth.TurnOff"
+    const-class v1, Ld/o/b/c/h$d;
 
-    const-class v2, Lcom/xiaomi/ai/api/g$d;
+    const-string v2, "Bluetooth.TurnOff"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Bluetooth.TurnOn"
+    const-class v1, Ld/o/b/c/h$e;
 
-    const-class v2, Lcom/xiaomi/ai/api/g$e;
+    const-string v2, "Bluetooth.TurnOn"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "BrightnessController.AdjustBrightness"
+    const-class v1, Ld/o/b/c/i$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/h$a;
+    const-string v2, "BrightnessController.AdjustBrightness"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "BrightnessController.SetBrightness"
+    const-class v1, Ld/o/b/c/i$b;
 
-    const-class v2, Lcom/xiaomi/ai/api/h$b;
+    const-string v2, "BrightnessController.SetBrightness"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "BuiltinSkills.PreferredSkills"
+    const-class v1, Ld/o/b/c/j$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/i$a;
+    const-string v2, "BuiltinSkills.PreferredSkills"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "BuiltinSkills.Translation.Settings"
+    const-class v1, Ld/o/b/c/j$b;
 
-    const-class v2, Lcom/xiaomi/ai/api/i$b;
+    const-string v2, "BuiltinSkills.Translation.Settings"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "ChannelController.ChangeRadioChannel"
+    const-class v1, Ld/o/b/c/k$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/j$a;
+    const-string v2, "ChannelController.ChangeRadioChannel"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "ChannelController.ChangeTVChannel"
+    const-class v1, Ld/o/b/c/k$b;
 
-    const-class v2, Lcom/xiaomi/ai/api/j$b;
+    const-string v2, "ChannelController.ChangeTVChannel"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "ChannelController.TVChannelState"
+    const-class v1, Ld/o/b/c/k$f;
 
-    const-class v2, Lcom/xiaomi/ai/api/j$f;
+    const-string v2, "ChannelController.TVChannelState"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "ContentResources.Play"
+    const-class v1, Ld/o/b/c/m$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/l$a;
+    const-string v2, "ContentResources.Play"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "ContentResources.Subscribe"
+    const-class v1, Ld/o/b/c/m$d;
 
-    const-class v2, Lcom/xiaomi/ai/api/l$d;
+    const-string v2, "ContentResources.Subscribe"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "ContentResources.UnSubscribe"
+    const-class v1, Ld/o/b/c/m$e;
 
-    const-class v2, Lcom/xiaomi/ai/api/l$e;
+    const-string v2, "ContentResources.UnSubscribe"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "CustomDirective.ExecuteDeviceSkill"
+    const-class v1, Ld/o/b/c/n$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/m$a;
+    const-string v2, "CustomDirective.ExecuteDeviceSkill"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "DeviceBinding.PairBluetooth"
+    const-class v1, Ld/o/b/c/o$c;
 
-    const-class v2, Lcom/xiaomi/ai/api/n$c;
+    const-string v2, "DeviceBinding.PairBluetooth"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "DeviceBinding.PairDevices"
+    const-class v1, Ld/o/b/c/o$d;
 
-    const-class v2, Lcom/xiaomi/ai/api/n$d;
+    const-string v2, "DeviceBinding.PairDevices"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "DeviceBinding.PairDevicesResult"
+    const-class v1, Ld/o/b/c/o$e;
 
-    const-class v2, Lcom/xiaomi/ai/api/n$e;
+    const-string v2, "DeviceBinding.PairDevicesResult"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "DeviceBinding.ScanDeviceState"
+    const-class v1, Ld/o/b/c/o$f;
 
-    const-class v2, Lcom/xiaomi/ai/api/n$f;
+    const-string v2, "DeviceBinding.ScanDeviceState"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "DeviceBinding.ScanDevices"
+    const-class v1, Ld/o/b/c/o$g;
 
-    const-class v2, Lcom/xiaomi/ai/api/n$g;
+    const-string v2, "DeviceBinding.ScanDevices"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "DeviceBinding.ScanDevicesResult"
+    const-class v1, Ld/o/b/c/o$h;
 
-    const-class v2, Lcom/xiaomi/ai/api/n$h;
+    const-string v2, "DeviceBinding.ScanDevicesResult"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Dialog.CacheInstructions"
+    const-class v1, Ld/o/b/c/p$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/o$a;
+    const-string v2, "Dialog.CacheInstructions"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Dialog.DialogState"
+    const-class v1, Ld/o/b/c/p$c;
 
-    const-class v2, Lcom/xiaomi/ai/api/o$c;
+    const-string v2, "Dialog.DialogState"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Dialog.EnterTemporaryContinuousDialog"
+    const-class v1, Ld/o/b/c/p$d;
 
-    const-class v2, Lcom/xiaomi/ai/api/o$d;
+    const-string v2, "Dialog.EnterTemporaryContinuousDialog"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Dialog.ExitContinuousDialog"
+    const-class v1, Ld/o/b/c/p$e;
 
-    const-class v2, Lcom/xiaomi/ai/api/o$e;
+    const-string v2, "Dialog.ExitContinuousDialog"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Dialog.ExitMultipleTurn"
+    const-class v1, Ld/o/b/c/p$f;
 
-    const-class v2, Lcom/xiaomi/ai/api/o$f;
+    const-string v2, "Dialog.ExitMultipleTurn"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Dialog.Finish"
+    const-class v1, Ld/o/b/c/p$g;
 
-    const-class v2, Lcom/xiaomi/ai/api/o$g;
+    const-string v2, "Dialog.Finish"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Dialog.JudgeFinish"
+    const-class v1, Ld/o/b/c/p$h;
 
-    const-class v2, Lcom/xiaomi/ai/api/o$h;
+    const-string v2, "Dialog.JudgeFinish"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Dialog.MultipleTurnInProgress"
+    const-class v1, Ld/o/b/c/p$j;
 
-    const-class v2, Lcom/xiaomi/ai/api/o$j;
+    const-string v2, "Dialog.MultipleTurnInProgress"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Dialog.Reject"
+    const-class v1, Ld/o/b/c/p$k;
 
-    const-class v2, Lcom/xiaomi/ai/api/o$k;
+    const-string v2, "Dialog.Reject"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Dialog.TurnOffContinuousDialog"
+    const-class v1, Ld/o/b/c/p$l;
 
-    const-class v2, Lcom/xiaomi/ai/api/o$l;
+    const-string v2, "Dialog.TurnOffContinuousDialog"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Dialog.TurnOnContinuousDialog"
+    const-class v1, Ld/o/b/c/p$m;
 
-    const-class v2, Lcom/xiaomi/ai/api/o$m;
+    const-string v2, "Dialog.TurnOnContinuousDialog"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Education.EduCurrentPageState"
+    const-class v1, Ld/o/b/c/q$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/p$a;
+    const-string v2, "Education.EduCurrentPageState"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Education.EduSearchTagsReset"
+    const-class v1, Ld/o/b/c/q$f;
 
-    const-class v2, Lcom/xiaomi/ai/api/p$f;
+    const-string v2, "Education.EduSearchTagsReset"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Education.EduShowSearchPage"
+    const-class v1, Ld/o/b/c/q$g;
 
-    const-class v2, Lcom/xiaomi/ai/api/p$g;
+    const-string v2, "Education.EduShowSearchPage"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Execution.CrossDeviceControlPhone"
+    const-class v1, Ld/o/b/c/r$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/q$a;
+    const-string v2, "Execution.CrossDeviceControlPhone"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Execution.Group"
+    const-class v1, Ld/o/b/c/r$b;
 
-    const-class v2, Lcom/xiaomi/ai/api/q$b;
+    const-string v2, "Execution.Group"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Execution.InstructionControl"
+    const-class v1, Ld/o/b/c/r$e;
 
-    const-class v2, Lcom/xiaomi/ai/api/q$e;
+    const-string v2, "Execution.InstructionControl"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Execution.RequestControl"
+    const-class v1, Ld/o/b/c/r$g;
 
-    const-class v2, Lcom/xiaomi/ai/api/q$g;
+    const-string v2, "Execution.RequestControl"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "FullScreenTemplate.Dialogue"
+    const-class v1, Ld/o/b/c/u$q;
 
-    const-class v2, Lcom/xiaomi/ai/api/s$q;
+    const-string v2, "FullScreenTemplate.Dialogue"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "FullScreenTemplate.Dictionaries"
+    const-class v1, Ld/o/b/c/u$r;
 
-    const-class v2, Lcom/xiaomi/ai/api/s$r;
+    const-string v2, "FullScreenTemplate.Dictionaries"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "FullScreenTemplate.PrivacyAuthGuide"
+    const-class v1, Ld/o/b/c/u$l2;
 
-    const-class v2, Lcom/xiaomi/ai/api/s$l2;
+    const-string v2, "FullScreenTemplate.PrivacyAuthGuide"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "FullScreenTemplate.RecipeListItem"
+    const-class v1, Ld/o/b/c/u$s2;
 
-    const-class v2, Lcom/xiaomi/ai/api/s$s2;
+    const-string v2, "FullScreenTemplate.RecipeListItem"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "FullScreenTemplate.Suite"
+    const-class v1, Ld/o/b/c/u$d3;
 
-    const-class v2, Lcom/xiaomi/ai/api/s$d3;
+    const-string v2, "FullScreenTemplate.Suite"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "FullScreenTemplate.TranslationDialog"
+    const-class v1, Ld/o/b/c/u$j3;
 
-    const-class v2, Lcom/xiaomi/ai/api/s$j3;
+    const-string v2, "FullScreenTemplate.TranslationDialog"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "GPS.Switch"
+    const-class v1, Ld/o/b/c/v$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/t$a;
+    const-string v2, "GPS.Switch"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "GPS.TurnOff"
+    const-class v1, Ld/o/b/c/v$b;
 
-    const-class v2, Lcom/xiaomi/ai/api/t$b;
+    const-string v2, "GPS.TurnOff"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "GPS.TurnOn"
+    const-class v1, Ld/o/b/c/v$c;
 
-    const-class v2, Lcom/xiaomi/ai/api/t$c;
+    const-string v2, "GPS.TurnOn"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "General.CacheResource"
+    const-class v1, Ld/o/b/c/w$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/u$a;
+    const-string v2, "General.CacheResource"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "General.ContextUpdate"
+    const-class v1, Ld/o/b/c/w$c;
 
-    const-class v2, Lcom/xiaomi/ai/api/u$c;
+    const-string v2, "General.ContextUpdate"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "General.DebugInfo"
+    const-class v1, Ld/o/b/c/w$d;
 
-    const-class v2, Lcom/xiaomi/ai/api/u$d;
+    const-string v2, "General.DebugInfo"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "General.DeviceStateReport"
+    const-class v1, Ld/o/b/c/w$e;
 
-    const-class v2, Lcom/xiaomi/ai/api/u$e;
+    const-string v2, "General.DeviceStateReport"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "General.Experiment"
+    const-class v1, Ld/o/b/c/w$f;
 
-    const-class v2, Lcom/xiaomi/ai/api/u$f;
+    const-string v2, "General.Experiment"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "General.FetchDeviceState"
+    const-class v1, Ld/o/b/c/w$g;
 
-    const-class v2, Lcom/xiaomi/ai/api/u$g;
+    const-string v2, "General.FetchDeviceState"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "General.FetchResource"
+    const-class v1, Ld/o/b/c/w$h;
 
-    const-class v2, Lcom/xiaomi/ai/api/u$h;
+    const-string v2, "General.FetchResource"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "General.ModeOp"
+    const-class v1, Ld/o/b/c/w$j;
 
-    const-class v2, Lcom/xiaomi/ai/api/u$j;
+    const-string v2, "General.ModeOp"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "General.PickDevice"
+    const-class v1, Ld/o/b/c/w$l;
 
-    const-class v2, Lcom/xiaomi/ai/api/u$l;
+    const-string v2, "General.PickDevice"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "General.Push"
+    const-class v1, Ld/o/b/c/w$m;
 
-    const-class v2, Lcom/xiaomi/ai/api/u$m;
+    const-string v2, "General.Push"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "General.QueryClientStatus"
+    const-class v1, Ld/o/b/c/w$o;
 
-    const-class v2, Lcom/xiaomi/ai/api/u$o;
+    const-string v2, "General.QueryClientStatus"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "General.RenewSession"
+    const-class v1, Ld/o/b/c/w$q;
 
-    const-class v2, Lcom/xiaomi/ai/api/u$q;
+    const-string v2, "General.RenewSession"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "General.RequestState"
+    const-class v1, Ld/o/b/c/w$r;
 
-    const-class v2, Lcom/xiaomi/ai/api/u$r;
+    const-string v2, "General.RequestState"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "General.SetClientTracker"
+    const-class v1, Ld/o/b/c/w$t;
 
-    const-class v2, Lcom/xiaomi/ai/api/u$t;
+    const-string v2, "General.SetClientTracker"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "General.Success"
+    const-class v1, Ld/o/b/c/w$v;
 
-    const-class v2, Lcom/xiaomi/ai/api/u$v;
+    const-string v2, "General.Success"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "General.SwitchTone"
+    const-class v1, Ld/o/b/c/w$w;
 
-    const-class v2, Lcom/xiaomi/ai/api/u$w;
+    const-string v2, "General.SwitchTone"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "General.ThirdPartyWakeupState"
+    const-class v1, Ld/o/b/c/w$x;
 
-    const-class v2, Lcom/xiaomi/ai/api/u$x;
+    const-string v2, "General.ThirdPartyWakeupState"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "General.UpdateGlobalContexts"
+    const-class v1, Ld/o/b/c/w$y;
 
-    const-class v2, Lcom/xiaomi/ai/api/u$y;
+    const-string v2, "General.UpdateGlobalContexts"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "InputController.SelectInput"
+    const-class v1, Ld/o/b/c/x$b;
 
-    const-class v2, Lcom/xiaomi/ai/api/v$b;
+    const-string v2, "InputController.SelectInput"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Internal.OfflineExecution"
+    const-class v1, Ld/o/b/c/y$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/w$a;
+    const-string v2, "Internal.OfflineExecution"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Launcher.LaunchApp"
+    const-class v1, Ld/o/b/c/z$h;
 
-    const-class v2, Lcom/xiaomi/ai/api/x$h;
+    const-string v2, "Launcher.LaunchApp"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Launcher.LaunchGeneralQuickApp"
+    const-class v1, Ld/o/b/c/z$i;
 
-    const-class v2, Lcom/xiaomi/ai/api/x$i;
+    const-string v2, "Launcher.LaunchGeneralQuickApp"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Launcher.LaunchQuickApp"
+    const-class v1, Ld/o/b/c/z$j;
 
-    const-class v2, Lcom/xiaomi/ai/api/x$j;
+    const-string v2, "Launcher.LaunchQuickApp"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Launcher.LaunchShortcut"
+    const-class v1, Ld/o/b/c/z$k;
 
-    const-class v2, Lcom/xiaomi/ai/api/x$k;
+    const-string v2, "Launcher.LaunchShortcut"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Map.AddMidPoi"
+    const-class v1, Ld/o/b/c/a0$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/y$a;
+    const-string v2, "Map.AddMidPoi"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Map.AmbiguousPlaces"
+    const-class v1, Ld/o/b/c/a0$b;
 
-    const-class v2, Lcom/xiaomi/ai/api/y$b;
+    const-string v2, "Map.AmbiguousPlaces"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Map.BackToNavigation"
+    const-class v1, Ld/o/b/c/a0$c;
 
-    const-class v2, Lcom/xiaomi/ai/api/y$c;
+    const-string v2, "Map.BackToNavigation"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Map.ExecuteDirective"
+    const-class v1, Ld/o/b/c/a0$f;
 
-    const-class v2, Lcom/xiaomi/ai/api/y$f;
+    const-string v2, "Map.ExecuteDirective"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Map.MapState"
+    const-class v1, Ld/o/b/c/a0$m;
 
-    const-class v2, Lcom/xiaomi/ai/api/y$m;
+    const-string v2, "Map.MapState"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Map.ModifyUsualAddress"
+    const-class v1, Ld/o/b/c/a0$n;
 
-    const-class v2, Lcom/xiaomi/ai/api/y$n;
+    const-string v2, "Map.ModifyUsualAddress"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Map.NavigateState"
+    const-class v1, Ld/o/b/c/a0$o;
 
-    const-class v2, Lcom/xiaomi/ai/api/y$o;
+    const-string v2, "Map.NavigateState"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Map.PlanRoute"
+    const-class v1, Ld/o/b/c/a0$q;
 
-    const-class v2, Lcom/xiaomi/ai/api/y$q;
+    const-string v2, "Map.PlanRoute"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Map.QueryTrafficCondition"
+    const-class v1, Ld/o/b/c/a0$t;
 
-    const-class v2, Lcom/xiaomi/ai/api/y$t;
+    const-string v2, "Map.QueryTrafficCondition"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Map.RawPlanRoute"
+    const-class v1, Ld/o/b/c/a0$v;
 
-    const-class v2, Lcom/xiaomi/ai/api/y$v;
+    const-string v2, "Map.RawPlanRoute"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Map.RefreshBuslines"
+    const-class v1, Ld/o/b/c/a0$w;
 
-    const-class v2, Lcom/xiaomi/ai/api/y$w;
+    const-string v2, "Map.RefreshBuslines"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Map.RefreshBuslinesInfo"
+    const-class v1, Ld/o/b/c/a0$x;
 
-    const-class v2, Lcom/xiaomi/ai/api/y$x;
+    const-string v2, "Map.RefreshBuslinesInfo"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Map.SearchAlong"
+    const-class v1, Ld/o/b/c/a0$a0;
 
-    const-class v2, Lcom/xiaomi/ai/api/y$a0;
+    const-string v2, "Map.SearchAlong"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Map.SearchKeyword"
+    const-class v1, Ld/o/b/c/a0$c0;
 
-    const-class v2, Lcom/xiaomi/ai/api/y$c0;
+    const-string v2, "Map.SearchKeyword"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Map.SetBroadcastMode"
+    const-class v1, Ld/o/b/c/a0$d0;
 
-    const-class v2, Lcom/xiaomi/ai/api/y$d0;
+    const-string v2, "Map.SetBroadcastMode"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Map.SetMapMode"
+    const-class v1, Ld/o/b/c/a0$e0;
 
-    const-class v2, Lcom/xiaomi/ai/api/y$e0;
+    const-string v2, "Map.SetMapMode"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Map.SetPreference"
+    const-class v1, Ld/o/b/c/a0$f0;
 
-    const-class v2, Lcom/xiaomi/ai/api/y$f0;
+    const-string v2, "Map.SetPreference"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Map.ShowTips"
+    const-class v1, Ld/o/b/c/a0$g0;
 
-    const-class v2, Lcom/xiaomi/ai/api/y$g0;
+    const-string v2, "Map.ShowTips"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Map.TurnOff"
+    const-class v1, Ld/o/b/c/a0$j0;
 
-    const-class v2, Lcom/xiaomi/ai/api/y$j0;
+    const-string v2, "Map.TurnOff"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Map.TurnOn"
+    const-class v1, Ld/o/b/c/a0$k0;
 
-    const-class v2, Lcom/xiaomi/ai/api/y$k0;
+    const-string v2, "Map.TurnOn"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Map.ZoomIn"
+    const-class v1, Ld/o/b/c/a0$l0;
 
-    const-class v2, Lcom/xiaomi/ai/api/y$l0;
+    const-string v2, "Map.ZoomIn"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Map.ZoomOut"
+    const-class v1, Ld/o/b/c/a0$m0;
 
-    const-class v2, Lcom/xiaomi/ai/api/y$m0;
+    const-string v2, "Map.ZoomOut"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Memo.CreateResponse"
+    const-class v1, Ld/o/b/c/b0$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/z$a;
+    const-string v2, "Memo.CreateResponse"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Memo.Delete"
+    const-class v1, Ld/o/b/c/b0$b;
 
-    const-class v2, Lcom/xiaomi/ai/api/z$b;
+    const-string v2, "Memo.Delete"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Memo.DeleteResponse"
+    const-class v1, Ld/o/b/c/b0$c;
 
-    const-class v2, Lcom/xiaomi/ai/api/z$c;
+    const-string v2, "Memo.DeleteResponse"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Memo.GetMore"
+    const-class v1, Ld/o/b/c/b0$d;
 
-    const-class v2, Lcom/xiaomi/ai/api/z$d;
+    const-string v2, "Memo.GetMore"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Memo.MultipleTurnFinished"
+    const-class v1, Ld/o/b/c/b0$e;
 
-    const-class v2, Lcom/xiaomi/ai/api/z$e;
+    const-string v2, "Memo.MultipleTurnFinished"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Memo.MultipleTurnStarted"
+    const-class v1, Ld/o/b/c/b0$f;
 
-    const-class v2, Lcom/xiaomi/ai/api/z$f;
+    const-string v2, "Memo.MultipleTurnStarted"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Memo.StartMultipleTurn"
+    const-class v1, Ld/o/b/c/b0$g;
 
-    const-class v2, Lcom/xiaomi/ai/api/z$g;
+    const-string v2, "Memo.StartMultipleTurn"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Microphone.TurnOff"
+    const-class v1, Ld/o/b/c/c0$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/a0$a;
+    const-string v2, "Microphone.TurnOff"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Microphone.TurnOn"
+    const-class v1, Ld/o/b/c/c0$b;
 
-    const-class v2, Lcom/xiaomi/ai/api/a0$b;
+    const-string v2, "Microphone.TurnOn"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "MiotController.OfflineExecute"
+    const-class v1, Ld/o/b/c/d0$c;
 
-    const-class v2, Lcom/xiaomi/ai/api/b0$c;
+    const-string v2, "MiotController.OfflineExecute"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "MiotController.Operate"
+    const-class v1, Ld/o/b/c/d0$k;
 
-    const-class v2, Lcom/xiaomi/ai/api/b0$k;
+    const-string v2, "MiotController.Operate"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "MultiModal.ExecutionResult"
+    const-class v1, Ld/o/b/c/e0$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/c0$a;
+    const-string v2, "MultiModal.ExecutionResult"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "MultiModal.EyeContactRecognizeResult"
+    const-class v1, Ld/o/b/c/e0$d;
 
-    const-class v2, Lcom/xiaomi/ai/api/c0$d;
+    const-string v2, "MultiModal.EyeContactRecognizeResult"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "MultiModal.ImageStreamFinished"
+    const-class v1, Ld/o/b/c/e0$l;
 
-    const-class v2, Lcom/xiaomi/ai/api/c0$l;
+    const-string v2, "MultiModal.ImageStreamFinished"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "MultiModal.ImageStreamStarted"
+    const-class v1, Ld/o/b/c/e0$m;
 
-    const-class v2, Lcom/xiaomi/ai/api/c0$m;
+    const-string v2, "MultiModal.ImageStreamStarted"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "MultiModal.Switch"
+    const-class v1, Ld/o/b/c/e0$n;
 
-    const-class v2, Lcom/xiaomi/ai/api/c0$n;
+    const-string v2, "MultiModal.Switch"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "MultiModal.VisionRecognizeAggregateResult"
+    const-class v1, Ld/o/b/c/e0$p;
 
-    const-class v2, Lcom/xiaomi/ai/api/c0$p;
+    const-string v2, "MultiModal.VisionRecognizeAggregateResult"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "MultiModal.VisionRecognizeFinished"
+    const-class v1, Ld/o/b/c/e0$q;
 
-    const-class v2, Lcom/xiaomi/ai/api/c0$q;
+    const-string v2, "MultiModal.VisionRecognizeFinished"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "MultiModal.VisionRecognizeResult"
+    const-class v1, Ld/o/b/c/e0$r;
 
-    const-class v2, Lcom/xiaomi/ai/api/c0$r;
+    const-string v2, "MultiModal.VisionRecognizeResult"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "MultiModal.VisionRecognizeStarted"
+    const-class v1, Ld/o/b/c/e0$s;
 
-    const-class v2, Lcom/xiaomi/ai/api/c0$s;
+    const-string v2, "MultiModal.VisionRecognizeStarted"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "NFC.TurnOff"
+    const-class v1, Ld/o/b/c/f0$b;
 
-    const-class v2, Lcom/xiaomi/ai/api/d0$b;
+    const-string v2, "NFC.TurnOff"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "NFC.TurnOn"
+    const-class v1, Ld/o/b/c/f0$c;
 
-    const-class v2, Lcom/xiaomi/ai/api/d0$c;
+    const-string v2, "NFC.TurnOn"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Network.Switch"
+    const-class v1, Ld/o/b/c/g0$b;
 
-    const-class v2, Lcom/xiaomi/ai/api/e0$b;
+    const-string v2, "Network.Switch"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Network.TurnOff"
+    const-class v1, Ld/o/b/c/g0$c;
 
-    const-class v2, Lcom/xiaomi/ai/api/e0$c;
+    const-string v2, "Network.TurnOff"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Network.TurnOn"
+    const-class v1, Ld/o/b/c/g0$d;
 
-    const-class v2, Lcom/xiaomi/ai/api/e0$d;
+    const-string v2, "Network.TurnOn"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Nlp.AuxiliaryIntention"
+    const-class v1, Ld/o/b/c/h0$e;
 
-    const-class v2, Lcom/xiaomi/ai/api/f0$e;
+    const-string v2, "Nlp.AuxiliaryIntention"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Nlp.ConstructRequest"
+    const-class v1, Ld/o/b/c/h0$j;
 
-    const-class v2, Lcom/xiaomi/ai/api/f0$j;
+    const-string v2, "Nlp.ConstructRequest"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Nlp.EventACK"
+    const-class v1, Ld/o/b/c/h0$m;
 
-    const-class v2, Lcom/xiaomi/ai/api/f0$m;
+    const-string v2, "Nlp.EventACK"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Nlp.FinishAnswer"
+    const-class v1, Ld/o/b/c/h0$q;
 
-    const-class v2, Lcom/xiaomi/ai/api/f0$q;
+    const-string v2, "Nlp.FinishAnswer"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Nlp.IntentsWithRelation"
+    const-class v1, Ld/o/b/c/h0$a0;
 
-    const-class v2, Lcom/xiaomi/ai/api/f0$a0;
+    const-string v2, "Nlp.IntentsWithRelation"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Nlp.LoadMore"
+    const-class v1, Ld/o/b/c/h0$f0;
 
-    const-class v2, Lcom/xiaomi/ai/api/f0$f0;
+    const-string v2, "Nlp.LoadMore"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Nlp.LocalStrategy"
+    const-class v1, Ld/o/b/c/h0$g0;
 
-    const-class v2, Lcom/xiaomi/ai/api/f0$g0;
+    const-string v2, "Nlp.LocalStrategy"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Nlp.OfflineSession"
+    const-class v1, Ld/o/b/c/h0$w0;
 
-    const-class v2, Lcom/xiaomi/ai/api/f0$w0;
+    const-string v2, "Nlp.OfflineSession"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Nlp.PostBackRequest"
+    const-class v1, Ld/o/b/c/h0$e1;
 
-    const-class v2, Lcom/xiaomi/ai/api/f0$e1;
+    const-string v2, "Nlp.PostBackRequest"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Nlp.Request"
+    const-class v1, Ld/o/b/c/h0$j1;
 
-    const-class v2, Lcom/xiaomi/ai/api/f0$j1;
+    const-string v2, "Nlp.Request"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Nlp.StartAnswer"
+    const-class v1, Ld/o/b/c/h0$l2;
 
-    const-class v2, Lcom/xiaomi/ai/api/f0$l2;
+    const-string v2, "Nlp.StartAnswer"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Notification.General"
+    const-class v1, Ld/o/b/c/i0$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/g0$a;
+    const-string v2, "Notification.General"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Personalize.Execute"
+    const-class v1, Ld/o/b/c/j0$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/h0$a;
+    const-string v2, "Personalize.Execute"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Phone.DialBack"
+    const-class v1, Ld/o/b/c/k0$g;
 
-    const-class v2, Lcom/xiaomi/ai/api/i0$g;
+    const-string v2, "Phone.DialBack"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Phone.HangUp"
+    const-class v1, Ld/o/b/c/k0$h;
 
-    const-class v2, Lcom/xiaomi/ai/api/i0$h;
+    const-string v2, "Phone.HangUp"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Phone.LocalCallingData"
+    const-class v1, Ld/o/b/c/k0$i;
 
-    const-class v2, Lcom/xiaomi/ai/api/i0$i;
+    const-string v2, "Phone.LocalCallingData"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Phone.MakeCall"
+    const-class v1, Ld/o/b/c/k0$j;
 
-    const-class v2, Lcom/xiaomi/ai/api/i0$j;
+    const-string v2, "Phone.MakeCall"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Phone.PickUp"
+    const-class v1, Ld/o/b/c/k0$p;
 
-    const-class v2, Lcom/xiaomi/ai/api/i0$p;
+    const-string v2, "Phone.PickUp"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Phone.Redial"
+    const-class v1, Ld/o/b/c/k0$q;
 
-    const-class v2, Lcom/xiaomi/ai/api/i0$q;
+    const-string v2, "Phone.Redial"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Phone.SelectSimCard"
+    const-class v1, Ld/o/b/c/k0$r;
 
-    const-class v2, Lcom/xiaomi/ai/api/i0$r;
+    const-string v2, "Phone.SelectSimCard"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Phone.SendMessage"
+    const-class v1, Ld/o/b/c/k0$s;
 
-    const-class v2, Lcom/xiaomi/ai/api/i0$s;
+    const-string v2, "Phone.SendMessage"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Phone.SetNickname"
+    const-class v1, Ld/o/b/c/k0$t;
 
-    const-class v2, Lcom/xiaomi/ai/api/i0$t;
+    const-string v2, "Phone.SetNickname"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Phone.ShowContacts"
+    const-class v1, Ld/o/b/c/k0$u;
 
-    const-class v2, Lcom/xiaomi/ai/api/i0$u;
+    const-string v2, "Phone.ShowContacts"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Phone.ShowMessage"
+    const-class v1, Ld/o/b/c/k0$v;
 
-    const-class v2, Lcom/xiaomi/ai/api/i0$v;
+    const-string v2, "Phone.ShowMessage"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Phone.SyncContacts"
+    const-class v1, Ld/o/b/c/k0$x;
 
-    const-class v2, Lcom/xiaomi/ai/api/i0$x;
+    const-string v2, "Phone.SyncContacts"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "PlaybackController.CancelStopAfter"
+    const-class v1, Ld/o/b/c/l0$b;
 
-    const-class v2, Lcom/xiaomi/ai/api/j0$b;
+    const-string v2, "PlaybackController.CancelStopAfter"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "PlaybackController.ContinuePlaying"
+    const-class v1, Ld/o/b/c/l0$c;
 
-    const-class v2, Lcom/xiaomi/ai/api/j0$c;
+    const-string v2, "PlaybackController.ContinuePlaying"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "PlaybackController.DeletePlayingHistory"
+    const-class v1, Ld/o/b/c/l0$e;
 
-    const-class v2, Lcom/xiaomi/ai/api/j0$e;
+    const-string v2, "PlaybackController.DeletePlayingHistory"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "PlaybackController.FastForward"
+    const-class v1, Ld/o/b/c/l0$f;
 
-    const-class v2, Lcom/xiaomi/ai/api/j0$f;
+    const-string v2, "PlaybackController.FastForward"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "PlaybackController.Next"
+    const-class v1, Ld/o/b/c/l0$g;
 
-    const-class v2, Lcom/xiaomi/ai/api/j0$g;
+    const-string v2, "PlaybackController.Next"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "PlaybackController.Pause"
+    const-class v1, Ld/o/b/c/l0$h;
 
-    const-class v2, Lcom/xiaomi/ai/api/j0$h;
+    const-string v2, "PlaybackController.Pause"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "PlaybackController.Play"
+    const-class v1, Ld/o/b/c/l0$i;
 
-    const-class v2, Lcom/xiaomi/ai/api/j0$i;
+    const-string v2, "PlaybackController.Play"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "PlaybackController.Prev"
+    const-class v1, Ld/o/b/c/l0$j;
 
-    const-class v2, Lcom/xiaomi/ai/api/j0$j;
+    const-string v2, "PlaybackController.Prev"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "PlaybackController.Rewind"
+    const-class v1, Ld/o/b/c/l0$l;
 
-    const-class v2, Lcom/xiaomi/ai/api/j0$l;
+    const-string v2, "PlaybackController.Rewind"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "PlaybackController.Seek"
+    const-class v1, Ld/o/b/c/l0$m;
 
-    const-class v2, Lcom/xiaomi/ai/api/j0$m;
+    const-string v2, "PlaybackController.Seek"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "PlaybackController.SetAudioSource"
+    const-class v1, Ld/o/b/c/l0$n;
 
-    const-class v2, Lcom/xiaomi/ai/api/j0$n;
+    const-string v2, "PlaybackController.SetAudioSource"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "PlaybackController.SetProperty"
+    const-class v1, Ld/o/b/c/l0$o;
 
-    const-class v2, Lcom/xiaomi/ai/api/j0$o;
+    const-string v2, "PlaybackController.SetProperty"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "PlaybackController.SkipEnd"
+    const-class v1, Ld/o/b/c/l0$p;
 
-    const-class v2, Lcom/xiaomi/ai/api/j0$p;
+    const-string v2, "PlaybackController.SkipEnd"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "PlaybackController.SkipStart"
+    const-class v1, Ld/o/b/c/l0$q;
 
-    const-class v2, Lcom/xiaomi/ai/api/j0$q;
+    const-string v2, "PlaybackController.SkipStart"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "PlaybackController.StartOver"
+    const-class v1, Ld/o/b/c/l0$r;
 
-    const-class v2, Lcom/xiaomi/ai/api/j0$r;
+    const-string v2, "PlaybackController.StartOver"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "PlaybackController.Stop"
+    const-class v1, Ld/o/b/c/l0$s;
 
-    const-class v2, Lcom/xiaomi/ai/api/j0$s;
+    const-string v2, "PlaybackController.Stop"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "PlaybackController.StopAfter"
+    const-class v1, Ld/o/b/c/l0$t;
 
-    const-class v2, Lcom/xiaomi/ai/api/j0$t;
+    const-string v2, "PlaybackController.StopAfter"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "PushTemplate.GeneralPush"
+    const-class v1, Ld/o/b/c/m0$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/k0$a;
+    const-string v2, "PushTemplate.GeneralPush"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "RobotController.Emotion"
+    const-class v1, Ld/o/b/c/n0$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/l0$a;
+    const-string v2, "RobotController.Emotion"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "RobotController.Operate"
+    const-class v1, Ld/o/b/c/n0$b;
 
-    const-class v2, Lcom/xiaomi/ai/api/l0$b;
+    const-string v2, "RobotController.Operate"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Scene.Enter"
+    const-class v1, Ld/o/b/c/o0$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/m0$a;
+    const-string v2, "Scene.Enter"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Selector.Select"
+    const-class v1, Ld/o/b/c/p0$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/n0$a;
+    const-string v2, "Selector.Select"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Settings.AuthorizationUpdated"
+    const-class v1, Ld/o/b/c/q0$d;
 
-    const-class v2, Lcom/xiaomi/ai/api/o0$d;
+    const-string v2, "Settings.AuthorizationUpdated"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Settings.ConnectionChallenge"
+    const-class v1, Ld/o/b/c/q0$f;
 
-    const-class v2, Lcom/xiaomi/ai/api/o0$f;
+    const-string v2, "Settings.ConnectionChallenge"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Settings.ConnectionChallengeAck"
+    const-class v1, Ld/o/b/c/q0$g;
 
-    const-class v2, Lcom/xiaomi/ai/api/o0$g;
+    const-string v2, "Settings.ConnectionChallengeAck"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Settings.GlobalConfig"
+    const-class v1, Ld/o/b/c/q0$h;
 
-    const-class v2, Lcom/xiaomi/ai/api/o0$h;
+    const-string v2, "Settings.GlobalConfig"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Settings.GlobalConfigState"
+    const-class v1, Ld/o/b/c/q0$i;
 
-    const-class v2, Lcom/xiaomi/ai/api/o0$i;
+    const-string v2, "Settings.GlobalConfigState"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Settings.HeadersUpdated"
+    const-class v1, Ld/o/b/c/q0$j;
 
-    const-class v2, Lcom/xiaomi/ai/api/o0$j;
+    const-string v2, "Settings.HeadersUpdated"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Settings.PowerState"
+    const-class v1, Ld/o/b/c/q0$o;
 
-    const-class v2, Lcom/xiaomi/ai/api/o0$o;
+    const-string v2, "Settings.PowerState"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Settings.SetAIShortcut"
+    const-class v1, Ld/o/b/c/q0$t;
 
-    const-class v2, Lcom/xiaomi/ai/api/o0$t;
+    const-string v2, "Settings.SetAIShortcut"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Settings.SetPlayerProperty"
+    const-class v1, Ld/o/b/c/q0$u;
 
-    const-class v2, Lcom/xiaomi/ai/api/o0$u;
+    const-string v2, "Settings.SetPlayerProperty"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Settings.TVClientInfo"
+    const-class v1, Ld/o/b/c/q0$v;
 
-    const-class v2, Lcom/xiaomi/ai/api/o0$v;
+    const-string v2, "Settings.TVClientInfo"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Shortcut.GetCoverInfo"
+    const-class v1, Ld/o/b/c/r0$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/p0$a;
+    const-string v2, "Shortcut.GetCoverInfo"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Shortcut.Skill"
+    const-class v1, Ld/o/b/c/r0$b;
 
-    const-class v2, Lcom/xiaomi/ai/api/p0$b;
+    const-string v2, "Shortcut.Skill"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Speaker.AdjustVolume"
+    const-class v1, Ld/o/b/c/s0$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/q0$a;
+    const-string v2, "Speaker.AdjustVolume"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Speaker.SetAIVolume"
+    const-class v1, Ld/o/b/c/s0$b;
 
-    const-class v2, Lcom/xiaomi/ai/api/q0$b;
+    const-string v2, "Speaker.SetAIVolume"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Speaker.SetMute"
+    const-class v1, Ld/o/b/c/s0$c;
 
-    const-class v2, Lcom/xiaomi/ai/api/q0$c;
+    const-string v2, "Speaker.SetMute"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Speaker.SetVolume"
+    const-class v1, Ld/o/b/c/s0$d;
 
-    const-class v2, Lcom/xiaomi/ai/api/q0$d;
+    const-string v2, "Speaker.SetVolume"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "SpeechRecognizer.Cancel"
+    const-class v1, Ld/o/b/c/t0$d;
 
-    const-class v2, Lcom/xiaomi/ai/api/r0$d;
+    const-string v2, "SpeechRecognizer.Cancel"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "SpeechRecognizer.DuplexRecognizeFinished"
+    const-class v1, Ld/o/b/c/t0$e;
 
-    const-class v2, Lcom/xiaomi/ai/api/r0$e;
+    const-string v2, "SpeechRecognizer.DuplexRecognizeFinished"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "SpeechRecognizer.DuplexRecognizeStarted"
+    const-class v1, Ld/o/b/c/t0$f;
 
-    const-class v2, Lcom/xiaomi/ai/api/r0$f;
+    const-string v2, "SpeechRecognizer.DuplexRecognizeStarted"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "SpeechRecognizer.ExpectSpeech"
+    const-class v1, Ld/o/b/c/t0$g;
 
-    const-class v2, Lcom/xiaomi/ai/api/r0$g;
+    const-string v2, "SpeechRecognizer.ExpectSpeech"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "SpeechRecognizer.ExtendSpeech"
+    const-class v1, Ld/o/b/c/t0$h;
 
-    const-class v2, Lcom/xiaomi/ai/api/r0$h;
+    const-string v2, "SpeechRecognizer.ExtendSpeech"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "SpeechRecognizer.Recognize"
+    const-class v1, Ld/o/b/c/t0$k;
 
-    const-class v2, Lcom/xiaomi/ai/api/r0$k;
+    const-string v2, "SpeechRecognizer.Recognize"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "SpeechRecognizer.RecognizeResult"
+    const-class v1, Ld/o/b/c/t0$l;
 
-    const-class v2, Lcom/xiaomi/ai/api/r0$l;
+    const-string v2, "SpeechRecognizer.RecognizeResult"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "SpeechRecognizer.RecognizeState"
+    const-class v1, Ld/o/b/c/t0$p;
 
-    const-class v2, Lcom/xiaomi/ai/api/r0$p;
+    const-string v2, "SpeechRecognizer.RecognizeState"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "SpeechRecognizer.RecognizeStreamFinished"
+    const-class v1, Ld/o/b/c/t0$q;
 
-    const-class v2, Lcom/xiaomi/ai/api/r0$q;
+    const-string v2, "SpeechRecognizer.RecognizeStreamFinished"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "SpeechRecognizer.RecognizeStreamStarted"
+    const-class v1, Ld/o/b/c/t0$r;
 
-    const-class v2, Lcom/xiaomi/ai/api/r0$r;
+    const-string v2, "SpeechRecognizer.RecognizeStreamStarted"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "SpeechRecognizer.RecognizeVoiceprint"
+    const-class v1, Ld/o/b/c/t0$v;
 
-    const-class v2, Lcom/xiaomi/ai/api/r0$v;
+    const-string v2, "SpeechRecognizer.RecognizeVoiceprint"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "SpeechRecognizer.RegisterVoiceprint"
+    const-class v1, Ld/o/b/c/t0$w;
 
-    const-class v2, Lcom/xiaomi/ai/api/r0$w;
+    const-string v2, "SpeechRecognizer.RegisterVoiceprint"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "SpeechRecognizer.StopCapture"
+    const-class v1, Ld/o/b/c/t0$x;
 
-    const-class v2, Lcom/xiaomi/ai/api/r0$x;
+    const-string v2, "SpeechRecognizer.StopCapture"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "SpeechRecognizer.VoiceprintIdle"
+    const-class v1, Ld/o/b/c/t0$z;
 
-    const-class v2, Lcom/xiaomi/ai/api/r0$z;
+    const-string v2, "SpeechRecognizer.VoiceprintIdle"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "SpeechRecognizer.VoiceprintRecognizeResult"
+    const-class v1, Ld/o/b/c/t0$b0;
 
-    const-class v2, Lcom/xiaomi/ai/api/r0$b0;
+    const-string v2, "SpeechRecognizer.VoiceprintRecognizeResult"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "SpeechRecognizer.VoiceprintRegistrationResult"
+    const-class v1, Ld/o/b/c/t0$c0;
 
-    const-class v2, Lcom/xiaomi/ai/api/r0$c0;
+    const-string v2, "SpeechRecognizer.VoiceprintRegistrationResult"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "SpeechRecognizer.VoiceprintRegistrationStep"
+    const-class v1, Ld/o/b/c/t0$d0;
 
-    const-class v2, Lcom/xiaomi/ai/api/r0$d0;
+    const-string v2, "SpeechRecognizer.VoiceprintRegistrationStep"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "SpeechSettings.OperatedQuery"
+    const-class v1, Ld/o/b/c/u0$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/s0$a;
+    const-string v2, "SpeechSettings.OperatedQuery"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "SpeechSettings.SetLanguage"
+    const-class v1, Ld/o/b/c/u0$b;
 
-    const-class v2, Lcom/xiaomi/ai/api/s0$b;
+    const-string v2, "SpeechSettings.SetLanguage"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "SpeechSettings.UnsupportedLanguage"
+    const-class v1, Ld/o/b/c/u0$c;
 
-    const-class v2, Lcom/xiaomi/ai/api/s0$c;
+    const-string v2, "SpeechSettings.UnsupportedLanguage"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "SpeechSynthesizer.FinishSpeakStream"
+    const-class v1, Ld/o/b/c/v0$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/t0$a;
+    const-string v2, "SpeechSynthesizer.FinishSpeakStream"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "SpeechSynthesizer.RepeatSpeak"
+    const-class v1, Ld/o/b/c/v0$b;
 
-    const-class v2, Lcom/xiaomi/ai/api/t0$b;
+    const-string v2, "SpeechSynthesizer.RepeatSpeak"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "SpeechSynthesizer.Speak"
+    const-class v1, Ld/o/b/c/v0$c;
 
-    const-class v2, Lcom/xiaomi/ai/api/t0$c;
+    const-string v2, "SpeechSynthesizer.Speak"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "SpeechSynthesizer.Synthesize"
+    const-class v1, Ld/o/b/c/v0$d;
 
-    const-class v2, Lcom/xiaomi/ai/api/t0$d;
+    const-string v2, "SpeechSynthesizer.Synthesize"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "SpeechWakeup.Wakeup"
+    const-class v1, Ld/o/b/c/w0$c;
 
-    const-class v2, Lcom/xiaomi/ai/api/u0$c;
+    const-string v2, "SpeechWakeup.Wakeup"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "SpeechWakeup.WakeupStreamFinished"
+    const-class v1, Ld/o/b/c/w0$e;
 
-    const-class v2, Lcom/xiaomi/ai/api/u0$e;
+    const-string v2, "SpeechWakeup.WakeupStreamFinished"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Station.DisplayDetails"
+    const-class v1, Ld/o/b/c/x0$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/v0$a;
+    const-string v2, "Station.DisplayDetails"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Suggestion.FetchContextSuggestions"
+    const-class v1, Ld/o/b/c/z0$d;
 
-    const-class v2, Lcom/xiaomi/ai/api/w0$d;
+    const-string v2, "Suggestion.FetchContextSuggestions"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Suggestion.ResultsPageEducationSuggestion"
+    const-class v1, Ld/o/b/c/z0$k;
 
-    const-class v2, Lcom/xiaomi/ai/api/w0$k;
+    const-string v2, "Suggestion.ResultsPageEducationSuggestion"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Suggestion.RichSkillSuggestion"
+    const-class v1, Ld/o/b/c/z0$l;
 
-    const-class v2, Lcom/xiaomi/ai/api/w0$l;
+    const-string v2, "Suggestion.RichSkillSuggestion"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Suggestion.RichSkillSuggestionInfo"
+    const-class v1, Ld/o/b/c/z0$m;
 
-    const-class v2, Lcom/xiaomi/ai/api/w0$m;
+    const-string v2, "Suggestion.RichSkillSuggestionInfo"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Suggestion.ShowContextSuggestions"
+    const-class v1, Ld/o/b/c/z0$o;
 
-    const-class v2, Lcom/xiaomi/ai/api/w0$o;
+    const-string v2, "Suggestion.ShowContextSuggestions"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Suggestion.UploadExposeQueries"
+    const-class v1, Ld/o/b/c/z0$y;
 
-    const-class v2, Lcom/xiaomi/ai/api/w0$y;
+    const-string v2, "Suggestion.UploadExposeQueries"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "System.Abort"
+    const-class v1, Ld/o/b/c/a1$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/x0$a;
+    const-string v2, "System.Abort"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "System.Ack"
+    const-class v1, Ld/o/b/c/a1$b;
 
-    const-class v2, Lcom/xiaomi/ai/api/x0$b;
+    const-string v2, "System.Ack"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "System.AudioStore"
+    const-class v1, Ld/o/b/c/a1$f;
 
-    const-class v2, Lcom/xiaomi/ai/api/x0$f;
+    const-string v2, "System.AudioStore"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "System.AudioStoreStreamFinished"
+    const-class v1, Ld/o/b/c/a1$g;
 
-    const-class v2, Lcom/xiaomi/ai/api/x0$g;
+    const-string v2, "System.AudioStoreStreamFinished"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "System.AutoLock"
+    const-class v1, Ld/o/b/c/a1$h;
 
-    const-class v2, Lcom/xiaomi/ai/api/x0$h;
+    const-string v2, "System.AutoLock"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "System.BluetoothDeviceInfo"
+    const-class v1, Ld/o/b/c/a1$l;
 
-    const-class v2, Lcom/xiaomi/ai/api/x0$l;
+    const-string v2, "System.BluetoothDeviceInfo"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "System.ChangeVoiceAssistantLogo"
+    const-class v1, Ld/o/b/c/a1$n;
 
-    const-class v2, Lcom/xiaomi/ai/api/x0$n;
+    const-string v2, "System.ChangeVoiceAssistantLogo"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "System.CheckScreenUnlocked"
+    const-class v1, Ld/o/b/c/a1$o;
 
-    const-class v2, Lcom/xiaomi/ai/api/x0$o;
+    const-string v2, "System.CheckScreenUnlocked"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "System.ClientPing"
+    const-class v1, Ld/o/b/c/a1$p;
 
-    const-class v2, Lcom/xiaomi/ai/api/x0$p;
+    const-string v2, "System.ClientPing"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "System.DeviceState"
+    const-class v1, Ld/o/b/c/a1$u;
 
-    const-class v2, Lcom/xiaomi/ai/api/x0$u;
+    const-string v2, "System.DeviceState"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "System.DisplayState"
+    const-class v1, Ld/o/b/c/a1$x;
 
-    const-class v2, Lcom/xiaomi/ai/api/x0$x;
+    const-string v2, "System.DisplayState"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "System.EnvSwitch"
+    const-class v1, Ld/o/b/c/a1$y;
 
-    const-class v2, Lcom/xiaomi/ai/api/x0$y;
+    const-string v2, "System.EnvSwitch"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "System.EventRoute"
+    const-class v1, Ld/o/b/c/a1$a0;
 
-    const-class v2, Lcom/xiaomi/ai/api/x0$a0;
+    const-string v2, "System.EventRoute"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "System.Exception"
+    const-class v1, Ld/o/b/c/a1$b0;
 
-    const-class v2, Lcom/xiaomi/ai/api/x0$b0;
+    const-string v2, "System.Exception"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "System.FileStoreFailedNotification"
+    const-class v1, Ld/o/b/c/a1$c0;
 
-    const-class v2, Lcom/xiaomi/ai/api/x0$c0;
+    const-string v2, "System.FileStoreFailedNotification"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "System.Heartbeat"
+    const-class v1, Ld/o/b/c/a1$d0;
 
-    const-class v2, Lcom/xiaomi/ai/api/x0$d0;
+    const-string v2, "System.Heartbeat"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "System.LockScreen"
+    const-class v1, Ld/o/b/c/a1$e0;
 
-    const-class v2, Lcom/xiaomi/ai/api/x0$e0;
+    const-string v2, "System.LockScreen"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "System.PhoneLag"
+    const-class v1, Ld/o/b/c/a1$h0;
 
-    const-class v2, Lcom/xiaomi/ai/api/x0$h0;
+    const-string v2, "System.PhoneLag"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "System.Ping"
+    const-class v1, Ld/o/b/c/a1$i0;
 
-    const-class v2, Lcom/xiaomi/ai/api/x0$i0;
+    const-string v2, "System.Ping"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "System.Pong"
+    const-class v1, Ld/o/b/c/a1$j0;
 
-    const-class v2, Lcom/xiaomi/ai/api/x0$j0;
+    const-string v2, "System.Pong"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "System.Power"
+    const-class v1, Ld/o/b/c/a1$k0;
 
-    const-class v2, Lcom/xiaomi/ai/api/x0$k0;
+    const-string v2, "System.Power"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "System.ReportPhoneLag"
+    const-class v1, Ld/o/b/c/a1$n0;
 
-    const-class v2, Lcom/xiaomi/ai/api/x0$n0;
+    const-string v2, "System.ReportPhoneLag"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "System.Scene"
+    const-class v1, Ld/o/b/c/a1$o0;
 
-    const-class v2, Lcom/xiaomi/ai/api/x0$o0;
+    const-string v2, "System.Scene"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "System.SetMiuiDatabase"
+    const-class v1, Ld/o/b/c/a1$q0;
 
-    const-class v2, Lcom/xiaomi/ai/api/x0$q0;
+    const-string v2, "System.SetMiuiDatabase"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "System.SetProperty"
+    const-class v1, Ld/o/b/c/a1$r0;
 
-    const-class v2, Lcom/xiaomi/ai/api/x0$r0;
+    const-string v2, "System.SetProperty"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "System.Sleep"
+    const-class v1, Ld/o/b/c/a1$s0;
 
-    const-class v2, Lcom/xiaomi/ai/api/x0$s0;
+    const-string v2, "System.Sleep"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "System.SwitchMiuiDatabase"
+    const-class v1, Ld/o/b/c/a1$t0;
 
-    const-class v2, Lcom/xiaomi/ai/api/x0$t0;
+    const-string v2, "System.SwitchMiuiDatabase"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "System.Theme"
+    const-class v1, Ld/o/b/c/a1$u0;
 
-    const-class v2, Lcom/xiaomi/ai/api/x0$u0;
+    const-string v2, "System.Theme"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "System.TruncationNotification"
+    const-class v1, Ld/o/b/c/a1$v0;
 
-    const-class v2, Lcom/xiaomi/ai/api/x0$v0;
+    const-string v2, "System.TruncationNotification"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "System.UnlockScreen"
+    const-class v1, Ld/o/b/c/a1$w0;
 
-    const-class v2, Lcom/xiaomi/ai/api/x0$w0;
+    const-string v2, "System.UnlockScreen"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "System.UpgradeRom"
+    const-class v1, Ld/o/b/c/a1$x0;
 
-    const-class v2, Lcom/xiaomi/ai/api/x0$x0;
+    const-string v2, "System.UpgradeRom"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "TVController.Operate"
+    const-class v1, Ld/o/b/c/b1$b;
 
-    const-class v2, Lcom/xiaomi/ai/api/y0$b;
+    const-string v2, "TVController.Operate"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "TVController.State"
+    const-class v1, Ld/o/b/c/b1$c;
 
-    const-class v2, Lcom/xiaomi/ai/api/y0$c;
+    const-string v2, "TVController.State"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "TVController.StateReport"
+    const-class v1, Ld/o/b/c/b1$d;
 
-    const-class v2, Lcom/xiaomi/ai/api/y0$d;
+    const-string v2, "TVController.StateReport"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.AIMemory"
+    const-class v1, Ld/o/b/c/c1$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$a;
+    const-string v2, "Template.AIMemory"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.AIShortcut"
+    const-class v1, Ld/o/b/c/c1$c;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$c;
+    const-string v2, "Template.AIShortcut"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.AdjustProgress"
+    const-class v1, Ld/o/b/c/c1$f;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$f;
+    const-string v2, "Template.AdjustProgress"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.Alarm"
+    const-class v1, Ld/o/b/c/c1$h;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$h;
+    const-string v2, "Template.Alarm"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.AncientPoem"
+    const-class v1, Ld/o/b/c/c1$m;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$m;
+    const-string v2, "Template.AncientPoem"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.Application"
+    const-class v1, Ld/o/b/c/c1$w;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$w;
+    const-string v2, "Template.Application"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.Attachment"
+    const-class v1, Ld/o/b/c/c1$y;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$y;
+    const-string v2, "Template.Attachment"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.BuslineInfo"
+    const-class v1, Ld/o/b/c/c1$e0;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$e0;
+    const-string v2, "Template.BuslineInfo"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.Calculator"
+    const-class v1, Ld/o/b/c/c1$g0;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$g0;
+    const-string v2, "Template.Calculator"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.CallConfirm"
+    const-class v1, Ld/o/b/c/c1$i0;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$i0;
+    const-string v2, "Template.CallConfirm"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.ConfirmCancelBox"
+    const-class v1, Ld/o/b/c/c1$m0;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$m0;
+    const-string v2, "Template.ConfirmCancelBox"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.CourseSchedule"
+    const-class v1, Ld/o/b/c/c1$o0;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$o0;
+    const-string v2, "Template.CourseSchedule"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.Details"
+    const-class v1, Ld/o/b/c/c1$r0;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$r0;
+    const-string v2, "Template.Details"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.DeviceList"
+    const-class v1, Ld/o/b/c/c1$u0;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$u0;
+    const-string v2, "Template.DeviceList"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.DynamicDialogFlow"
+    const-class v1, Ld/o/b/c/c1$b1;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$b1;
+    const-string v2, "Template.DynamicDialogFlow"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.ForeignDictionary"
+    const-class v1, Ld/o/b/c/c1$l1;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$l1;
+    const-string v2, "Template.ForeignDictionary"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.General"
+    const-class v1, Ld/o/b/c/c1$s1;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$s1;
+    const-string v2, "Template.General"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.General2"
+    const-class v1, Ld/o/b/c/c1$r1;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$r1;
+    const-string v2, "Template.General2"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.H5Page"
+    const-class v1, Ld/o/b/c/c1$w1;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$w1;
+    const-string v2, "Template.H5Page"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.H5RefreshCard"
+    const-class v1, Ld/o/b/c/c1$b2;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$b2;
+    const-string v2, "Template.H5RefreshCard"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.Help"
+    const-class v1, Ld/o/b/c/c1$c2;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$c2;
+    const-string v2, "Template.Help"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.HomeList"
+    const-class v1, Ld/o/b/c/c1$g2;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$g2;
+    const-string v2, "Template.HomeList"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.ImageCard"
+    const-class v1, Ld/o/b/c/c1$j2;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$j2;
+    const-string v2, "Template.ImageCard"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.KeyboardRewrite"
+    const-class v1, Ld/o/b/c/c1$n2;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$n2;
+    const-string v2, "Template.KeyboardRewrite"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.Knowledge"
+    const-class v1, Ld/o/b/c/c1$o2;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$o2;
+    const-string v2, "Template.Knowledge"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.KnowledgeInfo"
+    const-class v1, Ld/o/b/c/c1$p2;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$p2;
+    const-string v2, "Template.KnowledgeInfo"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.Lists"
+    const-class v1, Ld/o/b/c/c1$t2;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$t2;
+    const-string v2, "Template.Lists"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.LoginHint"
+    const-class v1, Ld/o/b/c/c1$b3;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$b3;
+    const-string v2, "Template.LoginHint"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.MatchUp"
+    const-class v1, Ld/o/b/c/c1$f3;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$f3;
+    const-string v2, "Template.MatchUp"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.Memo"
+    const-class v1, Ld/o/b/c/c1$g3;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$g3;
+    const-string v2, "Template.Memo"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.MemoDraftPanel"
+    const-class v1, Ld/o/b/c/c1$h3;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$h3;
+    const-string v2, "Template.MemoDraftPanel"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.Menstruation"
+    const-class v1, Ld/o/b/c/c1$j3;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$j3;
+    const-string v2, "Template.Menstruation"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.Message"
+    const-class v1, Ld/o/b/c/c1$k3;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$k3;
+    const-string v2, "Template.Message"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.Music"
+    const-class v1, Ld/o/b/c/c1$p3;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$p3;
+    const-string v2, "Template.Music"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.OralExamination"
+    const-class v1, Ld/o/b/c/c1$s3;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$s3;
+    const-string v2, "Template.OralExamination"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.PersonDetail"
+    const-class v1, Ld/o/b/c/c1$t3;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$t3;
+    const-string v2, "Template.PersonDetail"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.PersonDisambiguation"
+    const-class v1, Ld/o/b/c/c1$u3;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$u3;
+    const-string v2, "Template.PersonDisambiguation"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.PersonSearchList"
+    const-class v1, Ld/o/b/c/c1$v3;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$v3;
+    const-string v2, "Template.PersonSearchList"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.PlayInfo"
+    const-class v1, Ld/o/b/c/c1$w3;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$w3;
+    const-string v2, "Template.PlayInfo"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.PlayTTS"
+    const-class v1, Ld/o/b/c/c1$b4;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$b4;
+    const-string v2, "Template.PlayTTS"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.PlayerRecord"
+    const-class v1, Ld/o/b/c/c1$e4;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$e4;
+    const-string v2, "Template.PlayerRecord"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.Qabot"
+    const-class v1, Ld/o/b/c/c1$h4;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$h4;
+    const-string v2, "Template.Qabot"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.QabotLists"
+    const-class v1, Ld/o/b/c/c1$j4;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$j4;
+    const-string v2, "Template.QabotLists"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.Query"
+    const-class v1, Ld/o/b/c/c1$o4;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$o4;
+    const-string v2, "Template.Query"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.ResolveWords"
+    const-class v1, Ld/o/b/c/c1$r4;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$r4;
+    const-string v2, "Template.ResolveWords"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.RestrictDriving"
+    const-class v1, Ld/o/b/c/c1$t4;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$t4;
+    const-string v2, "Template.RestrictDriving"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.RichPicture"
+    const-class v1, Ld/o/b/c/c1$u4;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$u4;
+    const-string v2, "Template.RichPicture"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.Scenes"
+    const-class v1, Ld/o/b/c/c1$x4;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$x4;
+    const-string v2, "Template.Scenes"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.SetDisplayProperty"
+    const-class v1, Ld/o/b/c/c1$z4;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$z4;
+    const-string v2, "Template.SetDisplayProperty"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.ShopRecommendation"
+    const-class v1, Ld/o/b/c/c1$b5;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$b5;
+    const-string v2, "Template.ShopRecommendation"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.ShortcutNewUserGuide"
+    const-class v1, Ld/o/b/c/c1$d5;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$d5;
+    const-string v2, "Template.ShortcutNewUserGuide"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.ShowOneCard"
+    const-class v1, Ld/o/b/c/c1$e5;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$e5;
+    const-string v2, "Template.ShowOneCard"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.SingleButton"
+    const-class v1, Ld/o/b/c/c1$g5;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$g5;
+    const-string v2, "Template.SingleButton"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.SmartHotels"
+    const-class v1, Ld/o/b/c/c1$n5;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$n5;
+    const-string v2, "Template.SmartHotels"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.SportMatch"
+    const-class v1, Ld/o/b/c/c1$o5;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$o5;
+    const-string v2, "Template.SportMatch"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.Stations"
+    const-class v1, Ld/o/b/c/c1$u5;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$u5;
+    const-string v2, "Template.Stations"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.Stock"
+    const-class v1, Ld/o/b/c/c1$v5;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$v5;
+    const-string v2, "Template.Stock"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.SwitchPanel"
+    const-class v1, Ld/o/b/c/c1$y5;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$y5;
+    const-string v2, "Template.SwitchPanel"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.SwitchPanelList"
+    const-class v1, Ld/o/b/c/c1$z5;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$z5;
+    const-string v2, "Template.SwitchPanelList"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.Table"
+    const-class v1, Ld/o/b/c/c1$d6;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$d6;
+    const-string v2, "Template.Table"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.TaskSummary"
+    const-class v1, Ld/o/b/c/c1$m6;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$m6;
+    const-string v2, "Template.TaskSummary"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.Time"
+    const-class v1, Ld/o/b/c/c1$o6;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$o6;
+    const-string v2, "Template.Time"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.ToDo"
+    const-class v1, Ld/o/b/c/c1$s6;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$s6;
+    const-string v2, "Template.ToDo"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.Toast"
+    const-class v1, Ld/o/b/c/c1$u6;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$u6;
+    const-string v2, "Template.Toast"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.TouchBar"
+    const-class v1, Ld/o/b/c/c1$w6;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$w6;
+    const-string v2, "Template.TouchBar"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.Translation"
+    const-class v1, Ld/o/b/c/c1$x6;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$x6;
+    const-string v2, "Template.Translation"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.Videos"
+    const-class v1, Ld/o/b/c/c1$g7;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$g7;
+    const-string v2, "Template.Videos"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.Weather"
+    const-class v1, Ld/o/b/c/c1$h7;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$h7;
+    const-string v2, "Template.Weather"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.WeatherV2"
+    const-class v1, Ld/o/b/c/c1$k7;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$k7;
+    const-string v2, "Template.WeatherV2"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.WikiEvent"
+    const-class v1, Ld/o/b/c/c1$p7;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$p7;
+    const-string v2, "Template.WikiEvent"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Template.WordsInfo"
+    const-class v1, Ld/o/b/c/c1$u7;
 
-    const-class v2, Lcom/xiaomi/ai/api/z0$u7;
+    const-string v2, "Template.WordsInfo"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "TrackLogV3.LogInfo"
+    const-class v1, Ld/o/b/c/d1$v;
 
-    const-class v2, Lcom/xiaomi/ai/api/a1$v;
+    const-string v2, "TrackLogV3.LogInfo"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "UIController.AuthorizationUpdated"
+    const-class v1, Ld/o/b/c/e1$c;
 
-    const-class v2, Lcom/xiaomi/ai/api/b1$c;
+    const-string v2, "UIController.AuthorizationUpdated"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "UIController.Bookmark"
+    const-class v1, Ld/o/b/c/e1$d;
 
-    const-class v2, Lcom/xiaomi/ai/api/b1$d;
+    const-string v2, "UIController.Bookmark"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "UIController.CommonEdit"
+    const-class v1, Ld/o/b/c/e1$e;
 
-    const-class v2, Lcom/xiaomi/ai/api/b1$e;
+    const-string v2, "UIController.CommonEdit"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "UIController.EndScreenProjection"
+    const-class v1, Ld/o/b/c/e1$g;
 
-    const-class v2, Lcom/xiaomi/ai/api/b1$g;
+    const-string v2, "UIController.EndScreenProjection"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "UIController.InputImages"
+    const-class v1, Ld/o/b/c/e1$i;
 
-    const-class v2, Lcom/xiaomi/ai/api/b1$i;
+    const-string v2, "UIController.InputImages"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "UIController.InputText"
+    const-class v1, Ld/o/b/c/e1$j;
 
-    const-class v2, Lcom/xiaomi/ai/api/b1$j;
+    const-string v2, "UIController.InputText"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "UIController.Interaction"
+    const-class v1, Ld/o/b/c/e1$k;
 
-    const-class v2, Lcom/xiaomi/ai/api/b1$k;
+    const-string v2, "UIController.Interaction"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "UIController.InteractionEntityInfo"
+    const-class v1, Ld/o/b/c/e1$r;
 
-    const-class v2, Lcom/xiaomi/ai/api/b1$r;
+    const-string v2, "UIController.InteractionEntityInfo"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "UIController.InteractionInfo"
+    const-class v1, Ld/o/b/c/e1$t;
 
-    const-class v2, Lcom/xiaomi/ai/api/b1$t;
+    const-string v2, "UIController.InteractionInfo"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "UIController.InteractionInfoList"
+    const-class v1, Ld/o/b/c/e1$u;
 
-    const-class v2, Lcom/xiaomi/ai/api/b1$u;
+    const-string v2, "UIController.InteractionInfoList"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "UIController.Interactions"
+    const-class v1, Ld/o/b/c/e1$y;
 
-    const-class v2, Lcom/xiaomi/ai/api/b1$y;
+    const-string v2, "UIController.Interactions"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "UIController.Navigate"
+    const-class v1, Ld/o/b/c/e1$z;
 
-    const-class v2, Lcom/xiaomi/ai/api/b1$z;
+    const-string v2, "UIController.Navigate"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "UIController.ReplyEmail"
+    const-class v1, Ld/o/b/c/e1$b0;
 
-    const-class v2, Lcom/xiaomi/ai/api/b1$b0;
+    const-string v2, "UIController.ReplyEmail"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "UIController.Screenshot"
+    const-class v1, Ld/o/b/c/e1$c0;
 
-    const-class v2, Lcom/xiaomi/ai/api/b1$c0;
+    const-string v2, "UIController.Screenshot"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "UIController.SearchEmail"
+    const-class v1, Ld/o/b/c/e1$e0;
 
-    const-class v2, Lcom/xiaomi/ai/api/b1$e0;
+    const-string v2, "UIController.SearchEmail"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "UIController.SearchFile"
+    const-class v1, Ld/o/b/c/e1$f0;
 
-    const-class v2, Lcom/xiaomi/ai/api/b1$f0;
+    const-string v2, "UIController.SearchFile"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "UIController.SendEmail"
+    const-class v1, Ld/o/b/c/e1$h0;
 
-    const-class v2, Lcom/xiaomi/ai/api/b1$h0;
+    const-string v2, "UIController.SendEmail"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "UIController.SetUIProperties"
+    const-class v1, Ld/o/b/c/e1$i0;
 
-    const-class v2, Lcom/xiaomi/ai/api/b1$i0;
+    const-string v2, "UIController.SetUIProperties"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "UIController.StartScreenProjection"
+    const-class v1, Ld/o/b/c/e1$j0;
 
-    const-class v2, Lcom/xiaomi/ai/api/b1$j0;
+    const-string v2, "UIController.StartScreenProjection"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "UIController.State"
+    const-class v1, Ld/o/b/c/e1$k0;
 
-    const-class v2, Lcom/xiaomi/ai/api/b1$k0;
+    const-string v2, "UIController.State"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Video.CurrentPageState"
+    const-class v1, Ld/o/b/c/h1$b;
 
-    const-class v2, Lcom/xiaomi/ai/api/c1$b;
+    const-string v2, "Video.CurrentPageState"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Video.Disambiguation"
+    const-class v1, Ld/o/b/c/h1$c;
 
-    const-class v2, Lcom/xiaomi/ai/api/c1$c;
+    const-string v2, "Video.Disambiguation"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Video.DisplayDetails"
+    const-class v1, Ld/o/b/c/h1$e;
 
-    const-class v2, Lcom/xiaomi/ai/api/c1$e;
+    const-string v2, "Video.DisplayDetails"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Video.SearchHistory"
+    const-class v1, Ld/o/b/c/h1$j;
 
-    const-class v2, Lcom/xiaomi/ai/api/c1$j;
+    const-string v2, "Video.SearchHistory"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Video.SearchTagsReset"
+    const-class v1, Ld/o/b/c/h1$k;
 
-    const-class v2, Lcom/xiaomi/ai/api/c1$k;
+    const-string v2, "Video.SearchTagsReset"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Video.SearchTagsTVPersonPhrase2"
+    const-class v1, Ld/o/b/c/h1$l;
 
-    const-class v2, Lcom/xiaomi/ai/api/c1$l;
+    const-string v2, "Video.SearchTagsTVPersonPhrase2"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Video.ShowDetailPage"
+    const-class v1, Ld/o/b/c/h1$m;
 
-    const-class v2, Lcom/xiaomi/ai/api/c1$m;
+    const-string v2, "Video.ShowDetailPage"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Video.ShowSearchPage"
+    const-class v1, Ld/o/b/c/h1$n;
 
-    const-class v2, Lcom/xiaomi/ai/api/c1$n;
+    const-string v2, "Video.ShowSearchPage"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "Video.VideoRecgV0"
+    const-class v1, Ld/o/b/c/h1$q;
 
-    const-class v2, Lcom/xiaomi/ai/api/c1$q;
+    const-string v2, "Video.VideoRecgV0"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "VideoPlayer.LaunchPlayApp"
+    const-class v1, Ld/o/b/c/i1$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/d1$a;
+    const-string v2, "VideoPlayer.LaunchPlayApp"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "VideoPlayer.Play"
+    const-class v1, Ld/o/b/c/i1$b;
 
-    const-class v2, Lcom/xiaomi/ai/api/d1$b;
+    const-string v2, "VideoPlayer.Play"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "VideoPlayer.PlayList"
+    const-class v1, Ld/o/b/c/i1$c;
 
-    const-class v2, Lcom/xiaomi/ai/api/d1$c;
+    const-string v2, "VideoPlayer.PlayList"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "VideoPlayer.PlayMV"
+    const-class v1, Ld/o/b/c/i1$d;
 
-    const-class v2, Lcom/xiaomi/ai/api/d1$d;
+    const-string v2, "VideoPlayer.PlayMV"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "VideoPlayer.VideoPlaybackState"
+    const-class v1, Ld/o/b/c/i1$g;
 
-    const-class v2, Lcom/xiaomi/ai/api/d1$g;
+    const-string v2, "VideoPlayer.VideoPlaybackState"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "WeChat.Cancel"
+    const-class v1, Ld/o/b/c/j1$a;
 
-    const-class v2, Lcom/xiaomi/ai/api/e1$a;
+    const-string v2, "WeChat.Cancel"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "WeChat.ReadMessage"
+    const-class v1, Ld/o/b/c/j1$b;
 
-    const-class v2, Lcom/xiaomi/ai/api/e1$b;
+    const-string v2, "WeChat.ReadMessage"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "WeChat.SendLocation"
+    const-class v1, Ld/o/b/c/j1$c;
 
-    const-class v2, Lcom/xiaomi/ai/api/e1$c;
+    const-string v2, "WeChat.SendLocation"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "WeChat.SendMessage"
+    const-class v1, Ld/o/b/c/j1$d;
 
-    const-class v2, Lcom/xiaomi/ai/api/e1$d;
+    const-string v2, "WeChat.SendMessage"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "WeChat.SendPhoto"
+    const-class v1, Ld/o/b/c/j1$e;
 
-    const-class v2, Lcom/xiaomi/ai/api/e1$e;
+    const-string v2, "WeChat.SendPhoto"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "WeChat.SendVoiceMessage"
+    const-class v1, Ld/o/b/c/j1$f;
 
-    const-class v2, Lcom/xiaomi/ai/api/e1$f;
+    const-string v2, "WeChat.SendVoiceMessage"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "WeChat.UpdateLocal"
+    const-class v1, Ld/o/b/c/j1$h;
 
-    const-class v2, Lcom/xiaomi/ai/api/e1$h;
+    const-string v2, "WeChat.UpdateLocal"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "WearableController.CheckStatus"
+    const-class v1, Ld/o/b/c/k1$b;
 
-    const-class v2, Lcom/xiaomi/ai/api/f1$b;
+    const-string v2, "WearableController.CheckStatus"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "WearableController.ControlDeviceState"
+    const-class v1, Ld/o/b/c/k1$c;
 
-    const-class v2, Lcom/xiaomi/ai/api/f1$c;
+    const-string v2, "WearableController.ControlDeviceState"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "WearableController.Execute"
+    const-class v1, Ld/o/b/c/k1$f;
 
-    const-class v2, Lcom/xiaomi/ai/api/f1$f;
+    const-string v2, "WearableController.Execute"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "WearableController.PropertyResults"
+    const-class v1, Ld/o/b/c/k1$k;
 
-    const-class v2, Lcom/xiaomi/ai/api/f1$k;
+    const-string v2, "WearableController.PropertyResults"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "WearableController.SetProperty"
+    const-class v1, Ld/o/b/c/k1$m;
 
-    const-class v2, Lcom/xiaomi/ai/api/f1$m;
+    const-string v2, "WearableController.SetProperty"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v0, Lcom/xiaomi/ai/api/AIApiNameMapping;->a:Ljava/util/Map;
 
-    const-string v1, "WearableController.Switch"
+    const-class v1, Ld/o/b/c/k1$n;
 
-    const-class v2, Lcom/xiaomi/ai/api/f1$n;
+    const-string v2, "WearableController.Switch"
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

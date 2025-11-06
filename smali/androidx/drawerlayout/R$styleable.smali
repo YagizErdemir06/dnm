@@ -27,10 +27,6 @@
 
 .field public static final ColorStateListItem_lStar:I = 0x4
 
-.field public static final DrawerLayout:[I
-
-.field public static final DrawerLayout_elevation:I = 0x0
-
 .field public static final FontFamily:[I
 
 .field public static final FontFamilyFont:[I
@@ -104,7 +100,7 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
     const/4 v0, 0x5
 
@@ -113,18 +109,6 @@
     fill-array-data v0, :array_0
 
     sput-object v0, Landroidx/drawerlayout/R$styleable;->ColorStateListItem:[I
-
-    const/4 v0, 0x1
-
-    new-array v0, v0, [I
-
-    const/4 v1, 0x0
-
-    const v2, 0x7f04029d
-
-    aput v2, v0, v1
-
-    sput-object v0, Landroidx/drawerlayout/R$styleable;->DrawerLayout:[I
 
     const/4 v0, 0x7
 
@@ -160,24 +144,26 @@
 
     return-void
 
+    nop
+
     :array_0
     .array-data 4
         0x10101a5
         0x101031f
         0x1010647
-        0x7f040088
-        0x7f0403c5
+        0x7f040077
+        0x7f040232
     .end array-data
 
     :array_1
     .array-data 4
-        0x7f040321
-        0x7f040322
-        0x7f040323
-        0x7f040324
-        0x7f040325
-        0x7f040326
-        0x7f040327
+        0x7f0401de
+        0x7f0401df
+        0x7f0401e0
+        0x7f0401e1
+        0x7f0401e2
+        0x7f0401e3
+        0x7f0401e4
     .end array-data
 
     :array_2
@@ -187,11 +173,11 @@
         0x101053f
         0x101056f
         0x1010570
-        0x7f04031f
-        0x7f040328
-        0x7f040329
-        0x7f04032a
-        0x7f040794
+        0x7f0401dc
+        0x7f0401e5
+        0x7f0401e6
+        0x7f0401e7
+        0x7f04048f
     .end array-data
 
     :array_3

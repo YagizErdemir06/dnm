@@ -1,4 +1,4 @@
-.class final Lcom/google/mlkit/vision/common/zza;
+.class public final Lcom/google/mlkit/vision/common/zza;
 .super Lcom/google/mlkit/vision/common/PointF3D;
 .source "SourceFile"
 
@@ -37,6 +37,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/mlkit/vision/common/PointF3D;
 
@@ -44,10 +45,12 @@
 
     if-eqz v1, :cond_1
 
+    .line 2
     check-cast p1, Lcom/google/mlkit/vision/common/PointF3D;
 
     iget v1, p0, Lcom/google/mlkit/vision/common/zza;->zza:F
 
+    .line 3
     invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
 
     move-result v1
@@ -64,6 +67,7 @@
 
     iget v1, p0, Lcom/google/mlkit/vision/common/zza;->zzb:F
 
+    .line 4
     invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
 
     move-result v1
@@ -80,6 +84,7 @@
 
     iget p0, p0, Lcom/google/mlkit/vision/common/zza;->zzc:F
 
+    .line 5
     invoke-static {p0}, Ljava/lang/Float;->floatToIntBits(F)I
 
     move-result p0
@@ -127,6 +132,7 @@
 .method public final hashCode()I
     .locals 3
 
+    .line 1
     iget v0, p0, Lcom/google/mlkit/vision/common/zza;->zza:F
 
     invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
@@ -139,6 +145,7 @@
 
     iget v2, p0, Lcom/google/mlkit/vision/common/zza;->zzb:F
 
+    .line 2
     invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
 
     move-result v2
@@ -149,6 +156,7 @@
 
     iget p0, p0, Lcom/google/mlkit/vision/common/zza;->zzc:F
 
+    .line 3
     invoke-static {p0}, Ljava/lang/Float;->floatToIntBits(F)I
 
     move-result p0
@@ -163,6 +171,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
+    .line 1
     iget v0, p0, Lcom/google/mlkit/vision/common/zza;->zza:F
 
     iget v1, p0, Lcom/google/mlkit/vision/common/zza;->zzb:F

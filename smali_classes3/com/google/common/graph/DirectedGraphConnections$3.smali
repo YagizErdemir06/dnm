@@ -1,4 +1,4 @@
-.class Lcom/google/common/graph/DirectedGraphConnections$3;
+.class public Lcom/google/common/graph/DirectedGraphConnections$3;
 .super Ljava/util/AbstractSet;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/graph/DirectedGraphConnections;
+.field public final synthetic this$0:Lcom/google/common/graph/DirectedGraphConnections;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/graph/DirectedGraphConnections;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/graph/DirectedGraphConnections$3;->this$0:Lcom/google/common/graph/DirectedGraphConnections;
 
     invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
@@ -45,6 +46,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/DirectedGraphConnections$3;->this$0:Lcom/google/common/graph/DirectedGraphConnections;
 
     invoke-static {p0}, Lcom/google/common/graph/DirectedGraphConnections;->access$100(Lcom/google/common/graph/DirectedGraphConnections;)Ljava/util/Map;
@@ -137,6 +139,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/DirectedGraphConnections$3;->this$0:Lcom/google/common/graph/DirectedGraphConnections;
 
     invoke-static {p0}, Lcom/google/common/graph/DirectedGraphConnections;->access$500(Lcom/google/common/graph/DirectedGraphConnections;)I

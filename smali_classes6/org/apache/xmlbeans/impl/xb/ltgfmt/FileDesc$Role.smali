@@ -41,9 +41,10 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/xb/ltgfmt/FileDesc$1;->class$org$apache$xmlbeans$impl$xb$ltgfmt$FileDesc$Role:Ljava/lang/Class;
 
     if-nez v0, :cond_0
@@ -79,6 +80,7 @@
 
     const-string v0, "schema"
 
+    .line 2
     invoke-static {v0}, Lorg/apache/xmlbeans/impl/xb/ltgfmt/FileDesc$Role$Enum;->forString(Ljava/lang/String;)Lorg/apache/xmlbeans/impl/xb/ltgfmt/FileDesc$Role$Enum;
 
     move-result-object v0
@@ -87,6 +89,7 @@
 
     const-string v0, "instance"
 
+    .line 3
     invoke-static {v0}, Lorg/apache/xmlbeans/impl/xb/ltgfmt/FileDesc$Role$Enum;->forString(Ljava/lang/String;)Lorg/apache/xmlbeans/impl/xb/ltgfmt/FileDesc$Role$Enum;
 
     move-result-object v0
@@ -95,6 +98,7 @@
 
     const-string v0, "resource"
 
+    .line 4
     invoke-static {v0}, Lorg/apache/xmlbeans/impl/xb/ltgfmt/FileDesc$Role$Enum;->forString(Ljava/lang/String;)Lorg/apache/xmlbeans/impl/xb/ltgfmt/FileDesc$Role$Enum;
 
     move-result-object v0

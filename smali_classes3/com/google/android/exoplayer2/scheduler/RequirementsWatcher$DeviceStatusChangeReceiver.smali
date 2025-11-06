@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher$DeviceStatusChangeReceiver;
+.class public Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher$DeviceStatusChangeReceiver;
 .super Landroid/content/BroadcastReceiver;
 .source "SourceFile"
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher;
+.field public final synthetic this$0:Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher;
 
 
 # direct methods
@@ -44,12 +44,14 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroid/content/BroadcastReceiver;->isInitialStickyBroadcast()Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher$DeviceStatusChangeReceiver;->this$0:Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher;->access$200(Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher;)V

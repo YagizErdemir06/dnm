@@ -28,6 +28,7 @@
 .method public constructor <init>(Lcom/google/common/collect/ForwardingSortedMap;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/Maps$SortedKeySet;-><init>(Ljava/util/SortedMap;)V
 
     return-void

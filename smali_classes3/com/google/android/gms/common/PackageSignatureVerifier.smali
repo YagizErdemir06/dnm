@@ -43,6 +43,7 @@
 .method private static zza()Lcom/google/android/gms/common/zzad;
     .locals 2
 
+    .line 1
     const-class v0, Lcom/google/android/gms/common/zzad;
 
     monitor-enter v0
@@ -68,6 +69,7 @@
     :catchall_0
     move-exception v1
 
+    .line 2
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -96,12 +98,15 @@
     .annotation build Lcom/google/android/gms/common/internal/ShowFirstParty;
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/GooglePlayServicesUtilLight;->honorsDebugCertificates(Landroid/content/Context;)Z
 
     move-result p1
 
+    .line 2
     invoke-static {}, Lcom/google/android/gms/common/PackageSignatureVerifier;->zza()Lcom/google/android/gms/common/zzad;
 
+    .line 3
     invoke-static {}, Lcom/google/android/gms/common/zzn;->zzf()Z
 
     move-result v0
@@ -134,6 +139,7 @@
 
     iget-object v1, p0, Lcom/google/android/gms/common/PackageSignatureVerifier;->zzb:Lcom/google/android/gms/common/zzac;
 
+    .line 4
     invoke-static {v1}, Lcom/google/android/gms/common/zzac;->zzb(Lcom/google/android/gms/common/zzac;)Ljava/lang/String;
 
     move-result-object v1
@@ -146,17 +152,20 @@
 
     iget-object p0, p0, Lcom/google/android/gms/common/PackageSignatureVerifier;->zzb:Lcom/google/android/gms/common/zzac;
 
+    .line 5
     invoke-static {p0}, Lcom/google/android/gms/common/zzac;->zza(Lcom/google/android/gms/common/zzac;)Lcom/google/android/gms/common/PackageVerificationResult;
 
     move-result-object p0
 
     goto :goto_1
 
+    .line 6
     :cond_1
     invoke-static {}, Lcom/google/android/gms/common/PackageSignatureVerifier;->zza()Lcom/google/android/gms/common/zzad;
 
     const/4 v1, 0x0
 
+    .line 7
     invoke-static {p2, p1, v1, v1}, Lcom/google/android/gms/common/zzn;->zzc(Ljava/lang/String;ZZZ)Lcom/google/android/gms/common/zzx;
 
     move-result-object p1
@@ -179,6 +188,7 @@
 
     iget-object p0, p0, Lcom/google/android/gms/common/PackageSignatureVerifier;->zzb:Lcom/google/android/gms/common/zzac;
 
+    .line 8
     invoke-static {p0}, Lcom/google/android/gms/common/zzac;->zza(Lcom/google/android/gms/common/zzac;)Lcom/google/android/gms/common/PackageVerificationResult;
 
     move-result-object p0
@@ -188,6 +198,7 @@
     :cond_2
     iget-object p0, p1, Lcom/google/android/gms/common/zzx;->zzb:Ljava/lang/String;
 
+    .line 9
     invoke-static {p0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iget-object p0, p1, Lcom/google/android/gms/common/zzx;->zzb:Ljava/lang/String;
@@ -204,6 +215,7 @@
     :cond_3
     new-instance p0, Lcom/google/android/gms/common/zzae;
 
+    .line 10
     invoke-direct {p0}, Lcom/google/android/gms/common/zzae;-><init>()V
 
     throw p0
@@ -228,11 +240,13 @@
     .annotation build Lcom/google/android/gms/common/internal/ShowFirstParty;
     .end annotation
 
+    .line 1
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/google/android/gms/common/PackageSignatureVerifier;->queryPackageSignatureVerified(Landroid/content/Context;Ljava/lang/String;)Lcom/google/android/gms/common/PackageVerificationResult;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Lcom/google/android/gms/common/PackageVerificationResult;->zzb()V
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
@@ -242,10 +256,12 @@
     :catch_0
     move-exception v0
 
+    .line 3
     invoke-virtual {p0, p1, p2}, Lcom/google/android/gms/common/PackageSignatureVerifier;->queryPackageSignatureVerified(Landroid/content/Context;Ljava/lang/String;)Lcom/google/android/gms/common/PackageVerificationResult;
 
     move-result-object p0
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/android/gms/common/PackageVerificationResult;->zzc()Z
 
     move-result p1
@@ -256,6 +272,7 @@
 
     const-string p2, "Got flaky result during package signature verification"
 
+    .line 5
     invoke-static {p1, p2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-object p0

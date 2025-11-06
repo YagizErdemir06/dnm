@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;
+.class public final Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;
 .super Ljava/util/IdentityHashMap;
 .source "SourceFile"
 
@@ -67,6 +67,7 @@
 .method public static synthetic access$300(Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;)Lcom/google/common/util/concurrent/ClosingFuture$DeferredCloser;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;->closer:Lcom/google/common/util/concurrent/ClosingFuture$DeferredCloser;
 
     return-object p0
@@ -81,31 +82,38 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     if-nez p1, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     monitor-enter p0
 
+    .line 3
     :try_start_0
     iget-boolean v0, p0, Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;->closed:Z
 
     if-nez v0, :cond_1
 
-    invoke-virtual {p0, p1, p2}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 4
+    invoke-virtual {p0, p1, p2}, Ljava/util/IdentityHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 5
     monitor-exit p0
 
     return-void
 
+    .line 6
     :cond_1
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 7
     invoke-static {p1, p2}, Lcom/google/common/util/concurrent/ClosingFuture;->access$3300(Ljava/io/Closeable;Ljava/util/concurrent/Executor;)V
 
     return-void
@@ -113,6 +121,7 @@
     :catchall_0
     move-exception p1
 
+    .line 8
     :try_start_1
     monitor-exit p0
     :try_end_1
@@ -147,10 +156,12 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;
 
     invoke-direct {v0}, Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;-><init>()V
 
+    .line 2
     :try_start_0
     iget-object v1, v0, Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;->closer:Lcom/google/common/util/concurrent/ClosingFuture$DeferredCloser;
 
@@ -158,14 +169,17 @@
 
     move-result-object p1
 
+    .line 3
     invoke-static {p1, v0}, Lcom/google/common/util/concurrent/ClosingFuture;->access$1000(Lcom/google/common/util/concurrent/ClosingFuture;Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;)V
 
+    .line 4
     invoke-static {p1}, Lcom/google/common/util/concurrent/ClosingFuture;->access$000(Lcom/google/common/util/concurrent/ClosingFuture;)Lcom/google/common/util/concurrent/FluentFuture;
 
     move-result-object p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 5
     invoke-static {}, Lcom/google/common/util/concurrent/MoreExecutors;->directExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object p2
@@ -183,6 +197,7 @@
 
     invoke-virtual {p0, v0, p2}, Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;->add(Ljava/io/Closeable;Ljava/util/concurrent/Executor;)V
 
+    .line 6
     throw p1
 .end method
 
@@ -212,10 +227,12 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;
 
     invoke-direct {v0}, Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;-><init>()V
 
+    .line 2
     :try_start_0
     iget-object v1, v0, Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;->closer:Lcom/google/common/util/concurrent/ClosingFuture$DeferredCloser;
 
@@ -229,6 +246,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     invoke-static {}, Lcom/google/common/util/concurrent/MoreExecutors;->directExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object p2
@@ -246,26 +264,31 @@
 
     invoke-virtual {p0, v0, p2}, Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;->add(Ljava/io/Closeable;Ljava/util/concurrent/Executor;)V
 
+    .line 4
     throw p1
 .end method
 
 .method public close()V
     .locals 3
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;->closed:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     monitor-enter p0
 
+    .line 3
     :try_start_0
     iget-boolean v0, p0, Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;->closed:Z
 
     if-eqz v0, :cond_1
 
+    .line 4
     monitor-exit p0
 
     return-void
@@ -273,13 +296,16 @@
     :cond_1
     const/4 v0, 0x1
 
+    .line 5
     iput-boolean v0, p0, Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;->closed:Z
 
+    .line 6
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {p0}, Ljava/util/AbstractMap;->entrySet()Ljava/util/Set;
+    .line 7
+    invoke-virtual {p0}, Ljava/util/IdentityHashMap;->entrySet()Ljava/util/Set;
 
     move-result-object v0
 
@@ -300,6 +326,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
+    .line 8
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -316,13 +343,16 @@
 
     goto :goto_0
 
+    .line 9
     :cond_2
-    invoke-virtual {p0}, Ljava/util/AbstractMap;->clear()V
+    invoke-virtual {p0}, Ljava/util/IdentityHashMap;->clear()V
 
+    .line 10
     iget-object v0, p0, Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;->whenClosed:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz v0, :cond_3
 
+    .line 11
     iget-object p0, p0, Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;->whenClosed:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -333,6 +363,7 @@
     :catchall_0
     move-exception v0
 
+    .line 12
     :try_start_1
     monitor-exit p0
     :try_end_1
@@ -344,26 +375,31 @@
 .method public whenClosedCountDown()Ljava/util/concurrent/CountDownLatch;
     .locals 3
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;->closed:Z
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     new-instance p0, Ljava/util/concurrent/CountDownLatch;
 
     invoke-direct {p0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
     return-object p0
 
+    .line 3
     :cond_0
     monitor-enter p0
 
+    .line 4
     :try_start_0
     iget-boolean v0, p0, Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;->closed:Z
 
     if-eqz v0, :cond_1
 
+    .line 5
     new-instance v0, Ljava/util/concurrent/CountDownLatch;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
@@ -372,6 +408,7 @@
 
     return-object v0
 
+    .line 6
     :cond_1
     iget-object v0, p0, Lcom/google/common/util/concurrent/ClosingFuture$CloseableList;->whenClosed:Ljava/util/concurrent/CountDownLatch;
 
@@ -384,6 +421,7 @@
     :cond_2
     invoke-static {v1}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
+    .line 7
     new-instance v0, Ljava/util/concurrent/CountDownLatch;
 
     invoke-direct {v0, v2}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
@@ -397,6 +435,7 @@
     :catchall_0
     move-exception v0
 
+    .line 8
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

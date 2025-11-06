@@ -8,8 +8,4 @@
         <item quantity="other">%d வினாடிகள் ரீவைண்ட் ஆகும்</item>
         <item quantity="one">%d வினாடி ரீவைண்ட் ஆகும்</item>
     </plurals>
-    <plurals name="mtrl_badge_content_description">
-        <item quantity="other">%d புதிய அறிவிப்புகள்</item>
-        <item quantity="one">%d புதிய அறிவிப்பு</item>
-    </plurals>
 </resources>

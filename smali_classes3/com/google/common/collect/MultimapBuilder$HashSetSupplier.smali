@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/MultimapBuilder$HashSetSupplier;
+.class public final Lcom/google/common/collect/MultimapBuilder$HashSetSupplier;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -39,10 +39,12 @@
 .method public constructor <init>(I)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "expectedValuesPerKey"
 
+    .line 2
     invoke-static {p1, v0}, Lcom/google/common/collect/CollectPreconditions;->checkNonnegative(ILjava/lang/String;)I
 
     move-result p1

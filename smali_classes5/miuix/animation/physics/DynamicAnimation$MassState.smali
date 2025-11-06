@@ -1,4 +1,4 @@
-.class Lmiuix/animation/physics/DynamicAnimation$MassState;
+.class public Lmiuix/animation/physics/DynamicAnimation$MassState;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,15 +15,16 @@
 
 
 # instance fields
-.field mValue:F
+.field public mValue:F
 
-.field mVelocity:F
+.field public mVelocity:F
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

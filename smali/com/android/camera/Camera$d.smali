@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/Camera;->en(Z)Z
+    value = Lcom/android/camera/Camera;->ql(Z)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,14 +18,23 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/android/camera/Camera;
+.field public final synthetic c:Lcom/android/camera/Camera;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera/Camera;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera/Camera$d;->a:Lcom/android/camera/Camera;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/Camera$d;->c:Lcom/android/camera/Camera;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,9 +46,10 @@
 .method public run()V
     .locals 2
 
-    iget-object v0, p0, Lcom/android/camera/Camera$d;->a:Lcom/android/camera/Camera;
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/Camera$d;->c:Lcom/android/camera/Camera;
 
-    invoke-static {v0}, Lcom/android/camera/Camera;->Pk(Lcom/android/camera/Camera;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/android/camera/Camera;->Di(Lcom/android/camera/Camera;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -47,7 +57,8 @@
 
     invoke-static {v0, v1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object p0, p0, Lcom/android/camera/Camera$d;->a:Lcom/android/camera/Camera;
+    .line 2
+    iget-object p0, p0, Lcom/android/camera/Camera$d;->c:Lcom/android/camera/Camera;
 
     invoke-virtual {p0}, Lcom/android/camera/Camera;->finish()V
 

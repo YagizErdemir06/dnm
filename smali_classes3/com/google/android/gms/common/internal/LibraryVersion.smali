@@ -25,6 +25,7 @@
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/common/internal/GmsLogger;
 
     const-string v1, "LibraryVersion"
@@ -37,6 +38,7 @@
 
     new-instance v0, Lcom/google/android/gms/common/internal/LibraryVersion;
 
+    .line 2
     invoke-direct {v0}, Lcom/google/android/gms/common/internal/LibraryVersion;-><init>()V
 
     sput-object v0, Lcom/google/android/gms/common/internal/LibraryVersion;->zzb:Lcom/google/android/gms/common/internal/LibraryVersion;
@@ -49,6 +51,7 @@
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
@@ -96,10 +99,12 @@
 
     const-string v2, "Please provide a valid libraryName"
 
+    .line 1
     invoke-static {p1, v2}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotEmpty(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
 
     iget-object v2, p0, Lcom/google/android/gms/common/internal/LibraryVersion;->zzc:Ljava/util/concurrent/ConcurrentHashMap;
 
+    .line 2
     invoke-virtual {v2, p1}, Ljava/util/concurrent/ConcurrentHashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v2
@@ -108,6 +113,7 @@
 
     iget-object p0, p0, Lcom/google/android/gms/common/internal/LibraryVersion;->zzc:Ljava/util/concurrent/ConcurrentHashMap;
 
+    .line 3
     invoke-virtual {p0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -119,6 +125,7 @@
     :cond_0
     new-instance v2, Ljava/util/Properties;
 
+    .line 4
     invoke-direct {v2}, Ljava/util/Properties;-><init>()V
 
     const/4 v3, 0x1
@@ -136,10 +143,12 @@
 
     const-string v6, "/%s.properties"
 
+    .line 5
     invoke-static {v6, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
+    .line 6
     invoke-virtual {v5, v3}, Ljava/lang/Class;->getResourceAsStream(Ljava/lang/String;)Ljava/io/InputStream;
 
     move-result-object v3
@@ -149,11 +158,13 @@
 
     if-eqz v3, :cond_1
 
+    .line 7
     :try_start_1
     invoke-virtual {v2, v3}, Ljava/util/Properties;->load(Ljava/io/InputStream;)V
 
     const-string v5, "version"
 
+    .line 8
     invoke-virtual {v2, v5, v4}, Ljava/util/Properties;->getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -162,6 +173,7 @@
 
     new-instance v5, Ljava/lang/StringBuilder;
 
+    .line 9
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -180,11 +192,13 @@
 
     goto :goto_0
 
+    .line 10
     :cond_1
     sget-object v2, Lcom/google/android/gms/common/internal/LibraryVersion;->zza:Lcom/google/android/gms/common/internal/GmsLogger;
 
     new-instance v5, Ljava/lang/StringBuilder;
 
+    .line 11
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -203,6 +217,7 @@
     :goto_0
     if-eqz v3, :cond_3
 
+    .line 12
     invoke-static {v3}, Lcom/google/android/gms/common/util/IOUtils;->closeQuietly(Ljava/io/Closeable;)V
 
     goto :goto_2
@@ -235,12 +250,14 @@
 
     move-object v3, v4
 
+    .line 13
     :goto_1
     :try_start_2
     sget-object v5, Lcom/google/android/gms/common/internal/LibraryVersion;->zza:Lcom/google/android/gms/common/internal/GmsLogger;
 
     new-instance v6, Ljava/lang/StringBuilder;
 
+    .line 14
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -257,6 +274,7 @@
 
     if-eqz v4, :cond_2
 
+    .line 15
     invoke-static {v4}, Lcom/google/android/gms/common/util/IOUtils;->closeQuietly(Ljava/io/Closeable;)V
 
     :cond_2
@@ -270,6 +288,7 @@
 
     const-string v2, ".properties file is dropped during release process. Failure to read app version is expected during Google internal testing where locally-built libraries are used"
 
+    .line 16
     invoke-virtual {v0, v1, v2}, Lcom/google/android/gms/common/internal/GmsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v4, "UNKNOWN"
@@ -277,6 +296,7 @@
     :cond_4
     iget-object p0, p0, Lcom/google/android/gms/common/internal/LibraryVersion;->zzc:Ljava/util/concurrent/ConcurrentHashMap;
 
+    .line 17
     invoke-virtual {p0, p1, v4}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object v4
@@ -284,8 +304,10 @@
     :goto_3
     if-eqz v4, :cond_5
 
+    .line 18
     invoke-static {v4}, Lcom/google/android/gms/common/util/IOUtils;->closeQuietly(Ljava/io/Closeable;)V
 
+    .line 19
     :cond_5
     throw p0
 .end method

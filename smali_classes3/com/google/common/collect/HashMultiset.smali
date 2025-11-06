@@ -34,6 +34,7 @@
 .method public constructor <init>(I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/AbstractMapBasedMultiset;-><init>(I)V
 
     return-void
@@ -119,6 +120,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/AbstractMultiset;->contains(Ljava/lang/Object;)Z
 
     move-result p0
@@ -129,6 +131,7 @@
 .method public bridge synthetic elementSet()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractMultiset;->elementSet()Ljava/util/Set;
 
     move-result-object p0
@@ -139,6 +142,7 @@
 .method public bridge synthetic entrySet()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractMultiset;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -149,6 +153,7 @@
 .method public bridge synthetic isEmpty()Z
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractMultiset;->isEmpty()Z
 
     move-result p0
@@ -166,6 +171,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Lcom/google/common/collect/ObjectCountHashMap;
 
     invoke-direct {p0, p1}, Lcom/google/common/collect/ObjectCountHashMap;-><init>(I)V

@@ -1,14 +1,11 @@
 .class public Lmiuix/nestedheader/widget/NestedHeaderLayout$b;
-.super Ljava/lang/Object;
+.super Lmiuix/animation/listener/TransitionListener;
 .source "SourceFile"
-
-# interfaces
-.implements Lmiuix/view/l$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lmiuix/nestedheader/widget/NestedHeaderLayout;->onFinishInflate()V
+    value = Lmiuix/nestedheader/widget/NestedHeaderLayout;->r(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,182 +15,68 @@
 
 
 # instance fields
-.field public final synthetic a:Lmiuix/nestedheader/widget/NestedHeaderLayout;
+.field public final synthetic a:Ljava/lang/String;
+
+.field public final synthetic b:Lmiuix/nestedheader/widget/NestedHeaderLayout;
 
 
 # direct methods
-.method public constructor <init>(Lmiuix/nestedheader/widget/NestedHeaderLayout;)V
+.method public constructor <init>(Lmiuix/nestedheader/widget/NestedHeaderLayout;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$b;->a:Lmiuix/nestedheader/widget/NestedHeaderLayout;
+    .line 1
+    iput-object p1, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$b;->b:Lmiuix/nestedheader/widget/NestedHeaderLayout;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$b;->a:Ljava/lang/String;
+
+    invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Z)V
+.method public onUpdate(Ljava/lang/Object;Ljava/util/Collection;)V
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Object;",
+            "Ljava/util/Collection<",
+            "Lmiuix/animation/listener/UpdateInfo;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 1
+    iget-object p1, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$b;->a:Ljava/lang/String;
+
+    invoke-static {p2, p1}, Lmiuix/animation/listener/UpdateInfo;->findByName(Ljava/util/Collection;Ljava/lang/String;)Lmiuix/animation/listener/UpdateInfo;
+
+    move-result-object p1
 
     if-eqz p1, :cond_0
 
-    iget-object p0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$b;->a:Lmiuix/nestedheader/widget/NestedHeaderLayout;
+    .line 2
+    iget-object p2, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$b;->b:Lmiuix/nestedheader/widget/NestedHeaderLayout;
 
-    new-instance p1, Landroid/graphics/drawable/ColorDrawable;
+    iget-object v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$b;->a:Ljava/lang/String;
 
-    const/4 v0, 0x0
+    invoke-static {p2, v0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->o(Lmiuix/nestedheader/widget/NestedHeaderLayout;Ljava/lang/String;)Z
 
-    invoke-direct {p1, v0}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+    move-result p2
 
-    invoke-static {p0, p1}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->R(Lmiuix/nestedheader/widget/NestedHeaderLayout;Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    if-eqz p2, :cond_0
 
-    :cond_0
-    return-void
-.end method
+    .line 3
+    iget-object p0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$b;->b:Lmiuix/nestedheader/widget/NestedHeaderLayout;
 
-.method public b(Z)V
-    .locals 2
+    invoke-virtual {p1}, Lmiuix/animation/listener/UpdateInfo;->getIntValue()I
 
-    if-eqz p1, :cond_0
+    move-result p1
 
-    iget-object v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$b;->a:Lmiuix/nestedheader/widget/NestedHeaderLayout;
-
-    invoke-static {v0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->S(Lmiuix/nestedheader/widget/NestedHeaderLayout;)Landroid/view/View;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$b;->a:Lmiuix/nestedheader/widget/NestedHeaderLayout;
-
-    invoke-static {v1}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->Q(Lmiuix/nestedheader/widget/NestedHeaderLayout;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
-
-    goto :goto_0
+    invoke-static {p0, p1}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->p(Lmiuix/nestedheader/widget/NestedHeaderLayout;I)V
 
     :cond_0
-    iget-object v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$b;->a:Lmiuix/nestedheader/widget/NestedHeaderLayout;
-
-    invoke-static {v0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->S(Lmiuix/nestedheader/widget/NestedHeaderLayout;)Landroid/view/View;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$b;->a:Lmiuix/nestedheader/widget/NestedHeaderLayout;
-
-    invoke-static {v1}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->O(Lmiuix/nestedheader/widget/NestedHeaderLayout;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
-
-    :goto_0
-    iget-object v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$b;->a:Lmiuix/nestedheader/widget/NestedHeaderLayout;
-
-    invoke-static {v0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->T(Lmiuix/nestedheader/widget/NestedHeaderLayout;)Lmiuix/nestedheader/widget/NestedHeaderLayout$e;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    iget-object p0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$b;->a:Lmiuix/nestedheader/widget/NestedHeaderLayout;
-
-    invoke-static {p0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->T(Lmiuix/nestedheader/widget/NestedHeaderLayout;)Lmiuix/nestedheader/widget/NestedHeaderLayout$e;
-
-    move-result-object p0
-
-    invoke-interface {p0, p1}, Lmiuix/nestedheader/widget/NestedHeaderLayout$e;->f(Z)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public c(Lmiuix/view/l;)V
-    .locals 5
-
-    iget-object v0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$b;->a:Lmiuix/nestedheader/widget/NestedHeaderLayout;
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    const v1, 0x1010590
-
-    const/4 v2, 0x1
-
-    invoke-static {v0, v1, v2}, Lnq/e;->d(Landroid/content/Context;IZ)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object v1, Lms/a$a$b;->b:[I
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v1, Lms/a$a$a;->b:[I
-
-    :goto_0
-    iget-object v3, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$b;->a:Lmiuix/nestedheader/widget/NestedHeaderLayout;
-
-    invoke-virtual {v3}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$b;->a:Lmiuix/nestedheader/widget/NestedHeaderLayout;
-
-    invoke-static {v4}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->O(Lmiuix/nestedheader/widget/NestedHeaderLayout;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v4
-
-    invoke-static {v3, v4, v1}, Lmiuix/view/l;->j(Landroid/content/Context;Landroid/graphics/drawable/Drawable;[I)[I
-
-    move-result-object v1
-
-    if-eqz v0, :cond_1
-
-    sget-object v0, Lms/a$b$b;->a:[I
-
-    goto :goto_1
-
-    :cond_1
-    sget-object v0, Lms/a$b$a;->a:[I
-
-    :goto_1
-    iget-object p0, p0, Lmiuix/nestedheader/widget/NestedHeaderLayout$b;->a:Lmiuix/nestedheader/widget/NestedHeaderLayout;
-
-    invoke-static {p0}, Lmiuix/nestedheader/widget/NestedHeaderLayout;->P(Lmiuix/nestedheader/widget/NestedHeaderLayout;)Z
-
-    move-result p0
-
-    const/16 v3, 0x42
-
-    if-eqz p0, :cond_2
-
-    new-array p0, v2, [I
-
-    const/4 v4, 0x0
-
-    aget v1, v1, v4
-
-    aput v1, p0, v4
-
-    new-array v1, v2, [I
-
-    aget v0, v0, v4
-
-    aput v0, v1, v4
-
-    invoke-virtual {p1, p0, v1, v3}, Lmiuix/view/l;->o([I[II)V
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {p1, v1, v0, v3}, Lmiuix/view/l;->o([I[II)V
-
-    :goto_2
     return-void
 .end method

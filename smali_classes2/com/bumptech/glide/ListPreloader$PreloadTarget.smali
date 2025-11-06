@@ -1,4 +1,4 @@
-.class final Lcom/bumptech/glide/ListPreloader$PreloadTarget;
+.class public final Lcom/bumptech/glide/ListPreloader$PreloadTarget;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,9 +27,9 @@
 
 
 # instance fields
-.field photoHeight:I
+.field public photoHeight:I
 
-.field photoWidth:I
+.field public photoWidth:I
 
 .field private request:Lcom/bumptech/glide/request/Request;
     .annotation build Landroidx/annotation/Nullable;
@@ -41,6 +41,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -53,6 +54,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/ListPreloader$PreloadTarget;->request:Lcom/bumptech/glide/request/Request;
 
     return-object p0
@@ -65,6 +67,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget v0, p0, Lcom/bumptech/glide/ListPreloader$PreloadTarget;->photoWidth:I
 
     iget p0, p0, Lcom/bumptech/glide/ListPreloader$PreloadTarget;->photoHeight:I
@@ -163,6 +166,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/bumptech/glide/ListPreloader$PreloadTarget;->request:Lcom/bumptech/glide/request/Request;
 
     return-void

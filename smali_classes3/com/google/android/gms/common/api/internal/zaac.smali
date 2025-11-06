@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/api/internal/zaac;
+.class public final Lcom/google/android/gms/common/api/internal/zaac;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field final synthetic zaa:Lcom/google/android/gms/tasks/TaskCompletionSource;
+.field public final synthetic zaa:Lcom/google/android/gms/tasks/TaskCompletionSource;
 
-.field final synthetic zab:Lcom/google/android/gms/common/api/internal/zaad;
+.field public final synthetic zab:Lcom/google/android/gms/common/api/internal/zaad;
 
 
 # direct methods
@@ -34,6 +34,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p1, p0, Lcom/google/android/gms/common/api/internal/zaac;->zab:Lcom/google/android/gms/common/api/internal/zaad;
 
     invoke-static {p1}, Lcom/google/android/gms/common/api/internal/zaad;->zab(Lcom/google/android/gms/common/api/internal/zaad;)Ljava/util/Map;

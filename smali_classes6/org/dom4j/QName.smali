@@ -7,7 +7,7 @@
 
 
 # static fields
-.field static synthetic class$org$dom4j$tree$QNameCache:Ljava/lang/Class;
+.field public static synthetic class$org$dom4j$tree$QNameCache:Ljava/lang/Class;
 
 .field private static singleton:Lorg/dom4j/util/SingletonStrategy;
 
@@ -26,42 +26,48 @@
 
 # direct methods
 .method public static constructor <clinit>()V
-    .locals 2
+    .locals 3
 
     :try_start_0
     const-string v0, "org.dom4j.util.SimpleSingleton"
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
-    :try_start_1
-    const-string v1, "org.dom4j.QName.singleton.strategy"
+    const/4 v1, 0x0
 
-    invoke-static {v1, v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    :try_start_1
+    const-string v2, "org.dom4j.QName.singleton.strategy"
+
+    .line 1
+    invoke-static {v2, v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 2
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
-    move-result-object v0
+    move-result-object v1
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
     goto :goto_0
 
     :catch_0
+    const-string v0, "org.dom4j.util.SimpleSingleton"
+
+    .line 3
     :try_start_2
-    const-class v0, Lorg/dom4j/util/SimpleSingleton;
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v1
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    goto :goto_0
-
+    .line 4
     :catch_1
-    const/4 v0, 0x0
-
     :goto_0
     :try_start_3
-    invoke-virtual {v0}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -69,6 +75,7 @@
 
     sput-object v0, Lorg/dom4j/QName;->singleton:Lorg/dom4j/util/SingletonStrategy;
 
+    .line 5
     sget-object v1, Lorg/dom4j/QName;->class$org$dom4j$tree$QNameCache:Ljava/lang/Class;
 
     if-nez v1, :cond_0
@@ -161,6 +168,7 @@
 .method public static synthetic class$(Ljava/lang/String;)Ljava/lang/Class;
     .locals 1
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -175,7 +183,7 @@
 
     new-instance v0, Ljava/lang/NoClassDefFoundError;
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/ClassNotFoundException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
 
@@ -339,6 +347,7 @@
 .method private static getCache()Lorg/dom4j/tree/QNameCache;
     .locals 1
 
+    .line 1
     sget-object v0, Lorg/dom4j/QName;->singleton:Lorg/dom4j/util/SingletonStrategy;
 
     invoke-interface {v0}, Lorg/dom4j/util/SingletonStrategy;->instance()Ljava/lang/Object;
@@ -359,20 +368,24 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
+    .line 2
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
+    .line 3
     invoke-virtual {p1}, Ljava/io/ObjectInputStream;->defaultReadObject()V
 
+    .line 4
     invoke-static {v0, v1}, Lorg/dom4j/Namespace;->get(Ljava/lang/String;Ljava/lang/String;)Lorg/dom4j/Namespace;
 
     move-result-object p1
@@ -390,6 +403,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/QName;->namespace:Lorg/dom4j/Namespace;
 
     invoke-virtual {v0}, Lorg/dom4j/Namespace;->getPrefix()Ljava/lang/String;
@@ -398,6 +412,7 @@
 
     invoke-virtual {p1, v0}, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
 
+    .line 2
     iget-object p0, p0, Lorg/dom4j/QName;->namespace:Lorg/dom4j/Namespace;
 
     invoke-virtual {p0}, Lorg/dom4j/Namespace;->getURI()Ljava/lang/String;
@@ -406,6 +421,7 @@
 
     invoke-virtual {p1, p0}, Ljava/io/ObjectOutputStream;->writeObject(Ljava/lang/Object;)V
 
+    .line 3
     invoke-virtual {p1}, Ljava/io/ObjectOutputStream;->defaultWriteObject()V
 
     return-void
@@ -422,6 +438,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lorg/dom4j/QName;
 
@@ -429,8 +446,10 @@
 
     if-eqz v1, :cond_2
 
+    .line 2
     check-cast p1, Lorg/dom4j/QName;
 
+    .line 3
     invoke-virtual {p0}, Lorg/dom4j/QName;->hashCode()I
 
     move-result v1
@@ -441,6 +460,7 @@
 
     if-ne v1, v3, :cond_2
 
+    .line 4
     invoke-virtual {p0}, Lorg/dom4j/QName;->getName()Ljava/lang/String;
 
     move-result-object v1
@@ -484,6 +504,7 @@
 .method public getDocumentFactory()Lorg/dom4j/DocumentFactory;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/QName;->documentFactory:Lorg/dom4j/DocumentFactory;
 
     return-object p0
@@ -492,6 +513,7 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/QName;->name:Ljava/lang/String;
 
     return-object p0
@@ -500,6 +522,7 @@
 .method public getNamespace()Lorg/dom4j/Namespace;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/QName;->namespace:Lorg/dom4j/Namespace;
 
     return-object p0
@@ -508,6 +531,7 @@
 .method public getNamespacePrefix()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/QName;->namespace:Lorg/dom4j/Namespace;
 
     if-nez p0, :cond_0
@@ -516,6 +540,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Lorg/dom4j/Namespace;->getPrefix()Ljava/lang/String;
 
@@ -527,6 +552,7 @@
 .method public getNamespaceURI()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/QName;->namespace:Lorg/dom4j/Namespace;
 
     if-nez p0, :cond_0
@@ -535,6 +561,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Lorg/dom4j/Namespace;->getURI()Ljava/lang/String;
 
@@ -546,22 +573,26 @@
 .method public getQualifiedName()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/QName;->qualifiedName:Ljava/lang/String;
 
     if-nez v0, :cond_1
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/QName;->getNamespacePrefix()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v1
 
     if-lez v1, :cond_0
 
+    .line 4
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -584,11 +615,13 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     iget-object v0, p0, Lorg/dom4j/QName;->name:Ljava/lang/String;
 
     iput-object v0, p0, Lorg/dom4j/QName;->qualifiedName:Ljava/lang/String;
 
+    .line 6
     :cond_1
     :goto_0
     iget-object p0, p0, Lorg/dom4j/QName;->qualifiedName:Ljava/lang/String;
@@ -599,10 +632,12 @@
 .method public hashCode()I
     .locals 2
 
+    .line 1
     iget v0, p0, Lorg/dom4j/QName;->hashCode:I
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/QName;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -627,8 +662,10 @@
 
     const v0, 0xbabe
 
+    .line 3
     iput v0, p0, Lorg/dom4j/QName;->hashCode:I
 
+    .line 4
     :cond_0
     iget p0, p0, Lorg/dom4j/QName;->hashCode:I
 
@@ -638,6 +675,7 @@
 .method public setDocumentFactory(Lorg/dom4j/DocumentFactory;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/QName;->documentFactory:Lorg/dom4j/DocumentFactory;
 
     return-void
@@ -646,6 +684,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V

@@ -30,6 +30,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,6 +41,7 @@
 .method public a(Landroid/os/Parcel;)Lmiuix/pickerwidget/widget/DateTimePicker$f;
     .locals 0
 
+    .line 1
     new-instance p0, Lmiuix/pickerwidget/widget/DateTimePicker$f;
 
     invoke-direct {p0, p1}, Lmiuix/pickerwidget/widget/DateTimePicker$f;-><init>(Landroid/os/Parcel;)V
@@ -50,6 +52,7 @@
 .method public b(I)[Lmiuix/pickerwidget/widget/DateTimePicker$f;
     .locals 0
 
+    .line 1
     new-array p0, p1, [Lmiuix/pickerwidget/widget/DateTimePicker$f;
 
     return-object p0
@@ -58,6 +61,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lmiuix/pickerwidget/widget/DateTimePicker$f$a;->a(Landroid/os/Parcel;)Lmiuix/pickerwidget/widget/DateTimePicker$f;
 
     move-result-object p0
@@ -68,6 +72,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lmiuix/pickerwidget/widget/DateTimePicker$f$a;->b(I)[Lmiuix/pickerwidget/widget/DateTimePicker$f;
 
     move-result-object p0

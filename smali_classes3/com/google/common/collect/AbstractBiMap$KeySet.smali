@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/AbstractBiMap$KeySet;
+.class public Lcom/google/common/collect/AbstractBiMap$KeySet;
 .super Lcom/google/common/collect/ForwardingSet;
 .source "SourceFile"
 
@@ -22,7 +22,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/AbstractBiMap;
+.field public final synthetic this$0:Lcom/google/common/collect/AbstractBiMap;
 
 
 # direct methods
@@ -51,6 +51,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/AbstractBiMap$KeySet;->this$0:Lcom/google/common/collect/AbstractBiMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractBiMap;->clear()V
@@ -114,6 +115,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/AbstractBiMap$KeySet;->this$0:Lcom/google/common/collect/AbstractBiMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractBiMap;->entrySet()Ljava/util/Set;
@@ -138,6 +140,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ForwardingCollection;->contains(Ljava/lang/Object;)Z
 
     move-result v0
@@ -148,6 +151,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/google/common/collect/AbstractBiMap$KeySet;->this$0:Lcom/google/common/collect/AbstractBiMap;
 
@@ -168,6 +172,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ForwardingSet;->standardRemoveAll(Ljava/util/Collection;)Z
 
     move-result p0
@@ -185,6 +190,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ForwardingCollection;->standardRetainAll(Ljava/util/Collection;)Z
 
     move-result p0

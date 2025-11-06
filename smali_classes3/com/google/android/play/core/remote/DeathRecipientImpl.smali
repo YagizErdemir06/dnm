@@ -1,4 +1,4 @@
-.class final Lcom/google/android/play/core/remote/DeathRecipientImpl;
+.class public final Lcom/google/android/play/core/remote/DeathRecipientImpl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -14,8 +14,10 @@
 .method public constructor <init>(Lcom/google/android/play/core/remote/RemoteManager;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/play/core/remote/DeathRecipientImpl;->mRemoteManager:Lcom/google/android/play/core/remote/RemoteManager;
 
     return-void
@@ -26,6 +28,7 @@
 .method public binderDied()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/play/core/remote/DeathRecipientImpl;->mRemoteManager:Lcom/google/android/play/core/remote/RemoteManager;
 
     invoke-virtual {p0}, Lcom/google/android/play/core/remote/RemoteManager;->reportBinderDeath()V

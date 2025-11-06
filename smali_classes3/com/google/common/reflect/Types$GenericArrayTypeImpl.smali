@@ -1,4 +1,4 @@
-.class final Lcom/google/common/reflect/Types$GenericArrayTypeImpl;
+.class public final Lcom/google/common/reflect/Types$GenericArrayTypeImpl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -30,8 +30,10 @@
 .method public constructor <init>(Ljava/lang/reflect/Type;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     sget-object v0, Lcom/google/common/reflect/Types$JavaVersion;->CURRENT:Lcom/google/common/reflect/Types$JavaVersion;
 
     invoke-virtual {v0, p1}, Lcom/google/common/reflect/Types$JavaVersion;->usedInGenericType(Ljava/lang/reflect/Type;)Ljava/lang/reflect/Type;
@@ -52,12 +54,15 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Ljava/lang/reflect/GenericArrayType;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Ljava/lang/reflect/GenericArrayType;
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/common/reflect/Types$GenericArrayTypeImpl;->getGenericComponentType()Ljava/lang/reflect/Type;
 
     move-result-object p0
@@ -81,6 +86,7 @@
 .method public getGenericComponentType()Ljava/lang/reflect/Type;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/Types$GenericArrayTypeImpl;->componentType:Ljava/lang/reflect/Type;
 
     return-object p0
@@ -89,6 +95,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/Types$GenericArrayTypeImpl;->componentType:Ljava/lang/reflect/Type;
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
@@ -101,6 +108,7 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/Types$GenericArrayTypeImpl;->componentType:Ljava/lang/reflect/Type;
 
     invoke-static {p0}, Lcom/google/common/reflect/Types;->toString(Ljava/lang/reflect/Type;)Ljava/lang/String;

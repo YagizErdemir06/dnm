@@ -15,19 +15,32 @@
 
 
 # instance fields
-.field public a:I
+.field private a:I
 
-.field public b:I
+.field private b:I
 
 
 # direct methods
 .method public constructor <init>(II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "width",
+            "height"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/android/camera/ui/TextureVideoView$h;->a:I
 
+    .line 3
     iput p2, p0, Lcom/android/camera/ui/TextureVideoView$h;->b:I
 
     return-void
@@ -38,6 +51,7 @@
 .method public a()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera/ui/TextureVideoView$h;->b:I
 
     return p0
@@ -46,6 +60,7 @@
 .method public b()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera/ui/TextureVideoView$h;->a:I
 
     return p0

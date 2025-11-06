@@ -1,18 +1,19 @@
-.class final Lcom/google/android/gms/common/api/internal/zaaq;
+.class public final Lcom/google/android/gms/common/api/internal/zaaq;
 .super Lcom/google/android/gms/common/api/internal/zabg;
 .source "SourceFile"
 
 
 # instance fields
-.field final synthetic zaa:Lcom/google/android/gms/common/api/internal/zaaw;
+.field public final synthetic zaa:Lcom/google/android/gms/common/api/internal/zaaw;
 
-.field final synthetic zab:Lcom/google/android/gms/signin/internal/zak;
+.field public final synthetic zab:Lcom/google/android/gms/signin/internal/zak;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/gms/common/api/internal/zaar;Lcom/google/android/gms/common/api/internal/zabf;Lcom/google/android/gms/common/api/internal/zaaw;Lcom/google/android/gms/signin/internal/zak;)V
     .locals 0
 
+    .line 1
     iput-object p3, p0, Lcom/google/android/gms/common/api/internal/zaaq;->zaa:Lcom/google/android/gms/common/api/internal/zaaw;
 
     iput-object p4, p0, Lcom/google/android/gms/common/api/internal/zaaq;->zab:Lcom/google/android/gms/signin/internal/zak;
@@ -27,6 +28,7 @@
 .method public final zaa()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zaaq;->zaa:Lcom/google/android/gms/common/api/internal/zaaw;
 
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zaaq;->zab:Lcom/google/android/gms/signin/internal/zak;

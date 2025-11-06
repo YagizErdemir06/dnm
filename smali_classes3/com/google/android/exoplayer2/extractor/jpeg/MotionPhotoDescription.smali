@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/extractor/jpeg/MotionPhotoDescription;
+.class public final Lcom/google/android/exoplayer2/extractor/jpeg/MotionPhotoDescription;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -37,10 +37,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-wide p1, p0, Lcom/google/android/exoplayer2/extractor/jpeg/MotionPhotoDescription;->photoPresentationTimestampUs:J
 
+    .line 3
     iput-object p3, p0, Lcom/google/android/exoplayer2/extractor/jpeg/MotionPhotoDescription;->items:Ljava/util/List;
 
     return-void
@@ -49,26 +52,28 @@
 
 # virtual methods
 .method public getMotionPhotoMetadata(J)Lcom/google/android/exoplayer2/metadata/mp4/MotionPhotoMetadata;
-    .locals 21
+    .locals 23
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
     move-object/from16 v0, p0
 
+    .line 1
     iget-object v1, v0, Lcom/google/android/exoplayer2/extractor/jpeg/MotionPhotoDescription;->items:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v1
 
-    const/4 v2, 0x2
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    const/4 v3, 0x2
 
-    if-ge v1, v2, :cond_0
+    if-ge v1, v3, :cond_0
 
-    return-object v3
+    return-object v2
 
+    .line 2
     :cond_0
     iget-object v1, v0, Lcom/google/android/exoplayer2/extractor/jpeg/MotionPhotoDescription;->items:Ljava/util/List;
 
@@ -95,6 +100,7 @@
     :goto_0
     if-ltz v1, :cond_4
 
+    .line 3
     iget-object v13, v0, Lcom/google/android/exoplayer2/extractor/jpeg/MotionPhotoDescription;->items:Ljava/util/List;
 
     invoke-interface {v13, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -103,39 +109,46 @@
 
     check-cast v13, Lcom/google/android/exoplayer2/extractor/jpeg/MotionPhotoDescription$ContainerItem;
 
+    .line 4
     iget-object v14, v13, Lcom/google/android/exoplayer2/extractor/jpeg/MotionPhotoDescription$ContainerItem;->mime:Ljava/lang/String;
 
-    const-string v2, "video/mp4"
+    const-string v3, "video/mp4"
 
-    invoke-virtual {v2, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v3, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v3
 
-    or-int/2addr v2, v8
+    or-int/2addr v3, v8
 
     if-nez v1, :cond_1
 
+    const-wide/16 v19, 0x0
+
+    .line 5
     iget-wide v13, v13, Lcom/google/android/exoplayer2/extractor/jpeg/MotionPhotoDescription$ContainerItem;->padding:J
 
     sub-long/2addr v6, v13
 
-    const-wide/16 v13, 0x0
+    move-wide v13, v6
+
+    move-wide/from16 v6, v19
 
     goto :goto_1
 
+    .line 6
     :cond_1
     iget-wide v13, v13, Lcom/google/android/exoplayer2/extractor/jpeg/MotionPhotoDescription$ContainerItem;->length:J
 
     sub-long v13, v6, v13
 
-    :goto_1
-    move-wide/from16 v19, v6
+    move-wide/from16 v21, v6
 
     move-wide v6, v13
 
-    move-wide/from16 v13, v19
+    move-wide/from16 v13, v21
 
-    if-eqz v2, :cond_2
+    :goto_1
+    if-eqz v3, :cond_2
 
     cmp-long v8, v6, v13
 
@@ -150,7 +163,7 @@
     goto :goto_2
 
     :cond_2
-    move v8, v2
+    move v8, v3
 
     :goto_2
     if-nez v1, :cond_3
@@ -183,6 +196,7 @@
 
     goto :goto_3
 
+    .line 7
     :cond_5
     new-instance v1, Lcom/google/android/exoplayer2/metadata/mp4/MotionPhotoMetadata;
 
@@ -196,5 +210,5 @@
 
     :cond_6
     :goto_3
-    return-object v3
+    return-object v2
 .end method

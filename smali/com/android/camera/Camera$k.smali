@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/Camera;->En(I)V
+    value = Lcom/android/camera/Camera;->Ql(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,16 @@
 # direct methods
 .method public constructor <init>(Lcom/android/camera/Camera;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/Camera$k;->a:Lcom/android/camera/Camera;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,46 +45,52 @@
 # virtual methods
 .method public onDismiss()V
     .locals 1
-    .annotation build Lh7/d;
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "supportAutoDownloadFeature"
         type = 0x0
     .end annotation
 
-    invoke-static {}, Lcom/android/camera/v2;->G5()Z
+    .line 1
+    invoke-static {}, Ld/d/a/d4;->E5()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    invoke-static {}, Lq8/a;->c()Z
+    .line 2
+    invoke-static {}, Ld/d/a/i7/a;->c()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-static {}, Lcom/android/camera/v2;->R3()Z
+    .line 3
+    invoke-static {}, Ld/d/a/d4;->P3()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-static {}, Lcom/android/camera/v2;->F5()Z
+    .line 4
+    invoke-static {}, Ld/d/a/d4;->D5()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lq8/a;->d()Z
+    .line 5
+    invoke-static {}, Ld/d/a/i7/a;->d()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 6
     :cond_0
     iget-object p0, p0, Lcom/android/camera/Camera$k;->a:Lcom/android/camera/Camera;
 
-    invoke-virtual {p0}, Lcom/android/camera/Camera;->Cn()V
+    invoke-virtual {p0}, Lcom/android/camera/Camera;->Ol()V
 
     :cond_1
     return-void

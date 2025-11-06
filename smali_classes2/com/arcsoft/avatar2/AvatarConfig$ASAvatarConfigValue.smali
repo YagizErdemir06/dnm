@@ -113,6 +113,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -123,6 +124,7 @@
 .method public clone()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     :try_start_0
     invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
@@ -137,7 +139,8 @@
     :catch_0
     move-exception p0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 2
+    invoke-virtual {p0}, Ljava/lang/CloneNotSupportedException;->printStackTrace()V
 
     const/4 p0, 0x0
 
@@ -148,6 +151,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

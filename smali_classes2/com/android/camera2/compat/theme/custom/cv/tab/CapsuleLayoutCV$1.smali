@@ -1,5 +1,5 @@
-.class Lcom/android/camera2/compat/theme/custom/cv/tab/CapsuleLayoutCV$1;
-.super Lps/s;
+.class public Lcom/android/camera2/compat/theme/custom/cv/tab/CapsuleLayoutCV$1;
+.super Lk/j0/k/r;
 .source "SourceFile"
 
 
@@ -15,16 +15,25 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/camera2/compat/theme/custom/cv/tab/CapsuleLayoutCV;
+.field public final synthetic this$0:Lcom/android/camera2/compat/theme/custom/cv/tab/CapsuleLayoutCV;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera2/compat/theme/custom/cv/tab/CapsuleLayoutCV;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/tab/CapsuleLayoutCV$1;->this$0:Lcom/android/camera2/compat/theme/custom/cv/tab/CapsuleLayoutCV;
 
-    invoke-direct {p0}, Lps/s;-><init>()V
+    invoke-direct {p0}, Lk/j0/k/r;-><init>()V
 
     return-void
 .end method
@@ -33,27 +42,39 @@
 # virtual methods
 .method public getInterpolation(F)F
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "t"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/tab/CapsuleLayoutCV$1;->this$0:Lcom/android/camera2/compat/theme/custom/cv/tab/CapsuleLayoutCV;
 
-    invoke-super {p0, p1}, Lps/s;->getInterpolation(F)F
+    invoke-super {p0, p1}, Lk/j0/k/r;->getInterpolation(F)F
 
     move-result p1
 
     invoke-static {v0, p1}, Lcom/android/camera2/compat/theme/custom/cv/tab/CapsuleLayoutCV;->access$002(Lcom/android/camera2/compat/theme/custom/cv/tab/CapsuleLayoutCV;F)F
 
+    .line 2
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/tab/CapsuleLayoutCV$1;->this$0:Lcom/android/camera2/compat/theme/custom/cv/tab/CapsuleLayoutCV;
 
     invoke-static {p1}, Lcom/android/camera2/compat/theme/custom/cv/tab/CapsuleLayoutCV;->access$100(Lcom/android/camera2/compat/theme/custom/cv/tab/CapsuleLayoutCV;)F
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+    invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
-    sget-boolean p1, Lid/c;->c:Z
+    .line 3
+    sget-boolean p1, Ld/k/a/c;->c:Z
 
     if-eqz p1, :cond_0
 
+    .line 4
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/tab/CapsuleLayoutCV$1;->this$0:Lcom/android/camera2/compat/theme/custom/cv/tab/CapsuleLayoutCV;
 
     const/high16 v0, 0x3f800000    # 1.0f
@@ -62,15 +83,18 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/tab/CapsuleLayoutCV$1;->this$0:Lcom/android/camera2/compat/theme/custom/cv/tab/CapsuleLayoutCV;
 
-    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+    invoke-virtual {p1}, Landroid/widget/FrameLayout;->invalidate()V
 
+    .line 6
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/tab/CapsuleLayoutCV$1;->this$0:Lcom/android/camera2/compat/theme/custom/cv/tab/CapsuleLayoutCV;
 
-    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
+    invoke-virtual {p1}, Landroid/widget/FrameLayout;->requestLayout()V
 
+    .line 7
     :goto_0
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/tab/CapsuleLayoutCV$1;->this$0:Lcom/android/camera2/compat/theme/custom/cv/tab/CapsuleLayoutCV;
 

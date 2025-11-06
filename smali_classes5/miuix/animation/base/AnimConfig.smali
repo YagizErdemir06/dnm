@@ -2,13 +2,8 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmiuix/animation/internal/DesignReview;
-
 
 # static fields
-.field public static final FLAG_AUTO_INIT:J = 0x8L
-
 .field public static final FLAG_DELTA:J = 0x1L
 
 .field public static final FLAG_INIT:J = 0x2L
@@ -45,8 +40,6 @@
     .end annotation
 .end field
 
-.field private mObserverLooper:Landroid/os/Looper;
-
 .field private final mSpecialNameMap:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -63,28 +56,37 @@
     .end annotation
 .end field
 
-.field public startImmediately:Z
-
 .field public tag:Ljava/lang/Object;
 
 .field public tintMode:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
-    const v0, 0x3f733333    # 0.95f
+    const/4 v0, 0x2
 
-    const v1, 0x3eb33333    # 0.35f
+    new-array v0, v0, [F
 
-    invoke-static {v0, v1}, Lmiuix/animation/FolmeEase;->spring(FF)Lmiuix/animation/utils/EaseManager$EaseStyle;
+    .line 1
+    fill-array-data v0, :array_0
+
+    const/4 v1, -0x2
+
+    invoke-static {v1, v0}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     move-result-object v0
 
     sput-object v0, Lmiuix/animation/base/AnimConfig;->sDefEase:Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     return-void
+
+    :array_0
+    .array-data 4
+        0x3f59999a    # 0.85f
+        0x3e99999a    # 0.3f
+    .end array-data
 .end method
 
 .method public constructor <init>()V
@@ -103,17 +105,17 @@
 
     const/4 v0, 0x0
 
-    .line 11
+    .line 9
     invoke-direct {p0, v0}, Lmiuix/animation/base/AnimConfig;-><init>(Z)V
 
-    .line 12
+    .line 10
     invoke-virtual {p0, p1}, Lmiuix/animation/base/AnimConfig;->copy(Lmiuix/animation/base/AnimConfig;)V
 
     return-void
 .end method
 
 .method public constructor <init>(Z)V
-    .locals 2
+    .locals 1
 
     .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -123,31 +125,21 @@
     .line 3
     iput v0, p0, Lmiuix/animation/base/AnimConfig;->fromSpeed:F
 
-    const/4 v0, 0x1
+    const/4 v0, -0x1
 
     .line 4
-    iput-boolean v0, p0, Lmiuix/animation/base/AnimConfig;->startImmediately:Z
-
-    const/4 v0, 0x0
-
-    .line 5
-    iput-object v0, p0, Lmiuix/animation/base/AnimConfig;->mObserverLooper:Landroid/os/Looper;
-
-    const/4 v1, -0x1
-
-    .line 6
-    iput v1, p0, Lmiuix/animation/base/AnimConfig;->tintMode:I
+    iput v0, p0, Lmiuix/animation/base/AnimConfig;->tintMode:I
 
     if-nez p1, :cond_0
 
-    .line 7
+    .line 5
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
     iput-object p1, p0, Lmiuix/animation/base/AnimConfig;->mSpecialNameMap:Ljava/util/Map;
 
-    .line 8
+    .line 6
     new-instance p1, Ljava/util/HashSet;
 
     invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
@@ -156,12 +148,14 @@
 
     goto :goto_0
 
-    .line 9
     :cond_0
-    iput-object v0, p0, Lmiuix/animation/base/AnimConfig;->mSpecialNameMap:Ljava/util/Map;
+    const/4 p1, 0x0
 
-    .line 10
-    iput-object v0, p0, Lmiuix/animation/base/AnimConfig;->listeners:Ljava/util/HashSet;
+    .line 7
+    iput-object p1, p0, Lmiuix/animation/base/AnimConfig;->mSpecialNameMap:Ljava/util/Map;
+
+    .line 8
+    iput-object p1, p0, Lmiuix/animation/base/AnimConfig;->listeners:Ljava/util/HashSet;
 
     :goto_0
     return-void
@@ -224,6 +218,7 @@
 .method public varargs addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/base/AnimConfig;->listeners:Ljava/util/HashSet;
 
     invoke-static {v0, p1}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
@@ -234,6 +229,7 @@
 .method public addSpecialConfigs(Lmiuix/animation/base/AnimConfig;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/animation/base/AnimConfig;->mSpecialNameMap:Ljava/util/Map;
 
     iget-object p1, p1, Lmiuix/animation/base/AnimConfig;->mSpecialNameMap:Ljava/util/Map;
@@ -248,38 +244,44 @@
 
     const-wide/16 v0, 0x0
 
+    .line 1
     iput-wide v0, p0, Lmiuix/animation/base/AnimConfig;->delay:J
 
     const/4 v2, 0x0
 
+    .line 2
     iput-object v2, p0, Lmiuix/animation/base/AnimConfig;->ease:Lmiuix/animation/utils/EaseManager$EaseStyle;
 
+    .line 3
     iget-object v3, p0, Lmiuix/animation/base/AnimConfig;->listeners:Ljava/util/HashSet;
 
     invoke-virtual {v3}, Ljava/util/HashSet;->clear()V
 
+    .line 4
     iput-object v2, p0, Lmiuix/animation/base/AnimConfig;->tag:Ljava/lang/Object;
 
+    .line 5
     iput-wide v0, p0, Lmiuix/animation/base/AnimConfig;->flags:J
 
     const v2, 0x7f7fffff    # Float.MAX_VALUE
 
+    .line 6
     iput v2, p0, Lmiuix/animation/base/AnimConfig;->fromSpeed:F
 
-    const/4 v2, 0x1
-
-    iput-boolean v2, p0, Lmiuix/animation/base/AnimConfig;->startImmediately:Z
-
+    .line 7
     iput-wide v0, p0, Lmiuix/animation/base/AnimConfig;->minDuration:J
 
     const/4 v0, -0x1
 
+    .line 8
     iput v0, p0, Lmiuix/animation/base/AnimConfig;->tintMode:I
 
+    .line 9
     iget-object p0, p0, Lmiuix/animation/base/AnimConfig;->mSpecialNameMap:Ljava/util/Map;
 
     if-eqz p0, :cond_0
 
+    .line 10
     invoke-interface {p0}, Ljava/util/Map;->clear()V
 
     :cond_0
@@ -293,50 +295,57 @@
 
     if-eq p1, p0, :cond_0
 
+    .line 1
     iget-wide v0, p1, Lmiuix/animation/base/AnimConfig;->delay:J
 
     iput-wide v0, p0, Lmiuix/animation/base/AnimConfig;->delay:J
 
+    .line 2
     iget-object v0, p1, Lmiuix/animation/base/AnimConfig;->ease:Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     iput-object v0, p0, Lmiuix/animation/base/AnimConfig;->ease:Lmiuix/animation/utils/EaseManager$EaseStyle;
 
+    .line 3
     iget-object v0, p0, Lmiuix/animation/base/AnimConfig;->listeners:Ljava/util/HashSet;
 
     iget-object v1, p1, Lmiuix/animation/base/AnimConfig;->listeners:Ljava/util/HashSet;
 
-    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
+    invoke-virtual {v0, v1}, Ljava/util/HashSet;->addAll(Ljava/util/Collection;)Z
 
+    .line 4
     iget-object v0, p1, Lmiuix/animation/base/AnimConfig;->tag:Ljava/lang/Object;
 
     iput-object v0, p0, Lmiuix/animation/base/AnimConfig;->tag:Ljava/lang/Object;
 
+    .line 5
     iget-wide v0, p1, Lmiuix/animation/base/AnimConfig;->flags:J
 
     iput-wide v0, p0, Lmiuix/animation/base/AnimConfig;->flags:J
 
+    .line 6
     iget v0, p1, Lmiuix/animation/base/AnimConfig;->fromSpeed:F
 
     iput v0, p0, Lmiuix/animation/base/AnimConfig;->fromSpeed:F
 
-    iget-boolean v0, p1, Lmiuix/animation/base/AnimConfig;->startImmediately:Z
-
-    iput-boolean v0, p0, Lmiuix/animation/base/AnimConfig;->startImmediately:Z
-
+    .line 7
     iget-wide v0, p1, Lmiuix/animation/base/AnimConfig;->minDuration:J
 
     iput-wide v0, p0, Lmiuix/animation/base/AnimConfig;->minDuration:J
 
+    .line 8
     iget v0, p1, Lmiuix/animation/base/AnimConfig;->tintMode:I
 
     iput v0, p0, Lmiuix/animation/base/AnimConfig;->tintMode:I
 
+    .line 9
     iget-object v0, p0, Lmiuix/animation/base/AnimConfig;->mSpecialNameMap:Ljava/util/Map;
 
     if-eqz v0, :cond_0
 
+    .line 10
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
+    .line 11
     iget-object p0, p0, Lmiuix/animation/base/AnimConfig;->mSpecialNameMap:Ljava/util/Map;
 
     iget-object p1, p1, Lmiuix/animation/base/AnimConfig;->mSpecialNameMap:Ljava/util/Map;
@@ -345,244 +354,6 @@
 
     :cond_0
     return-void
-.end method
-
-.method public enableStartImmediately(Z)Lmiuix/animation/base/AnimConfig;
-    .locals 0
-
-    iput-boolean p1, p0, Lmiuix/animation/base/AnimConfig;->startImmediately:Z
-
-    return-object p0
-.end method
-
-.method public getDesignInfo()Ljava/lang/String;
-    .locals 10
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const/16 v1, 0x7b
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    const-string v2, "\""
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v3, "ease"
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v3, "\": "
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v4, p0, Lmiuix/animation/base/AnimConfig;->ease:Lmiuix/animation/utils/EaseManager$EaseStyle;
-
-    const/4 v5, 0x0
-
-    if-eqz v4, :cond_0
-
-    invoke-virtual {v4}, Lmiuix/animation/utils/EaseManager$EaseStyle;->getDesignInfo()Ljava/lang/String;
-
-    move-result-object v4
-
-    goto :goto_0
-
-    :cond_0
-    move-object v4, v5
-
-    :goto_0
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v6, p0, Lmiuix/animation/base/AnimConfig;->delay:J
-
-    const-wide/16 v8, 0x0
-
-    cmp-long v4, v6, v8
-
-    const-string v6, ", "
-
-    if-lez v4, :cond_1
-
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v4, "delay"
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v7, p0, Lmiuix/animation/base/AnimConfig;->delay:J
-
-    invoke-virtual {v0, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    :cond_1
-    iget-object v4, p0, Lmiuix/animation/base/AnimConfig;->mSpecialNameMap:Ljava/util/Map;
-
-    invoke-interface {v4}, Ljava/util/Map;->isEmpty()Z
-
-    move-result v4
-
-    if-nez v4, :cond_4
-
-    iget-object v4, p0, Lmiuix/animation/base/AnimConfig;->mSpecialNameMap:Ljava/util/Map;
-
-    invoke-interface {v4}, Ljava/util/Map;->keySet()Ljava/util/Set;
-
-    move-result-object v4
-
-    invoke-interface {v4}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v4
-
-    :cond_2
-    :goto_1
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_4
-
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Ljava/lang/String;
-
-    if-nez v5, :cond_3
-
-    new-instance v5, Ljava/util/ArrayList;
-
-    iget-object v8, p0, Lmiuix/animation/base/AnimConfig;->mSpecialNameMap:Ljava/util/Map;
-
-    invoke-interface {v8}, Ljava/util/Map;->size()I
-
-    move-result v8
-
-    invoke-direct {v5, v8}, Ljava/util/ArrayList;-><init>(I)V
-
-    :cond_3
-    iget-object v8, p0, Lmiuix/animation/base/AnimConfig;->mSpecialNameMap:Ljava/util/Map;
-
-    invoke-interface {v8, v7}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Lmiuix/animation/base/AnimSpecialConfig;
-
-    if-eqz v8, :cond_2
-
-    iget-object v9, v8, Lmiuix/animation/base/AnimConfig;->ease:Lmiuix/animation/utils/EaseManager$EaseStyle;
-
-    if-eqz v9, :cond_2
-
-    new-instance v9, Ljava/lang/StringBuilder;
-
-    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v9, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v9, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v7, "\":"
-
-    invoke-virtual {v9, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8}, Lmiuix/animation/base/AnimSpecialConfig;->getDesignInfo()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-virtual {v9, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-interface {v5, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    :cond_4
-    const-string p0, "}"
-
-    if-eqz v5, :cond_7
-
-    invoke-interface {v5}, Ljava/util/List;->isEmpty()Z
-
-    move-result v4
-
-    if-nez v4, :cond_7
-
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "special"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    const/4 v1, 0x0
-
-    :goto_2
-    invoke-interface {v5}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    if-ge v1, v2, :cond_6
-
-    invoke-interface {v5, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/String;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-interface {v5}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, -0x1
-
-    if-ne v1, v2, :cond_5
-
-    goto :goto_3
-
-    :cond_5
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_2
-
-    :cond_6
-    :goto_3
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_7
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public getObserverLooper()Landroid/os/Looper;
-    .locals 0
-
-    iget-object p0, p0, Lmiuix/animation/base/AnimConfig;->mObserverLooper:Landroid/os/Looper;
-
-    return-object p0
 .end method
 
 .method public getSpecialConfig(Ljava/lang/String;)Lmiuix/animation/base/AnimSpecialConfig;
@@ -605,26 +376,6 @@
 
     .line 1
     invoke-direct {p0, p1, v0}, Lmiuix/animation/base/AnimConfig;->queryAndCreateSpecial(Lmiuix/animation/property/FloatProperty;Z)Lmiuix/animation/base/AnimSpecialConfig;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public getSpecialSet()Ljava/util/Set;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/Set<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-
-    iget-object p0, p0, Lmiuix/animation/base/AnimConfig;->mSpecialNameMap:Ljava/util/Map;
-
-    invoke-interface {p0}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object p0
 
@@ -660,16 +411,19 @@
 .method public varargs removeListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
     .locals 1
 
+    .line 1
     array-length v0, p1
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object p1, p0, Lmiuix/animation/base/AnimConfig;->listeners:Ljava/util/HashSet;
 
     invoke-virtual {p1}, Ljava/util/HashSet;->clear()V
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lmiuix/animation/base/AnimConfig;->listeners:Ljava/util/HashSet;
 
@@ -677,7 +431,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Ljava/util/AbstractCollection;->removeAll(Ljava/util/Collection;)Z
+    invoke-virtual {v0, p1}, Ljava/util/HashSet;->removeAll(Ljava/util/Collection;)Z
 
     :goto_0
     return-object p0
@@ -686,6 +440,7 @@
 .method public setDelay(J)Lmiuix/animation/base/AnimConfig;
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lmiuix/animation/base/AnimConfig;->delay:J
 
     return-object p0
@@ -716,6 +471,7 @@
 .method public setFromSpeed(F)Lmiuix/animation/base/AnimConfig;
     .locals 0
 
+    .line 1
     iput p1, p0, Lmiuix/animation/base/AnimConfig;->fromSpeed:F
 
     return-object p0
@@ -724,21 +480,10 @@
 .method public setMinDuration(J)Lmiuix/animation/base/AnimConfig;
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lmiuix/animation/base/AnimConfig;->minDuration:J
 
     return-object p0
-.end method
-
-.method public setObserverLooper(Landroid/os/Looper;)V
-    .locals 0
-    .param p1    # Landroid/os/Looper;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-
-    iput-object p1, p0, Lmiuix/animation/base/AnimConfig;->mObserverLooper:Landroid/os/Looper;
-
-    return-void
 .end method
 
 .method public varargs setSpecial(Ljava/lang/String;J[F)Lmiuix/animation/base/AnimConfig;
@@ -960,6 +705,7 @@
 .method public setTag(Ljava/lang/Object;)Lmiuix/animation/base/AnimConfig;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/animation/base/AnimConfig;->tag:Ljava/lang/Object;
 
     return-object p0
@@ -968,6 +714,7 @@
 .method public setTintMode(I)Lmiuix/animation/base/AnimConfig;
     .locals 0
 
+    .line 1
     iput p1, p0, Lmiuix/animation/base/AnimConfig;->tintMode:I
 
     return-object p0
@@ -976,21 +723,12 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "AnimConfig@"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, "{delay="
+    const-string v1, "AnimConfig{delay="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1021,14 +759,6 @@
     iget v1, p0, Lmiuix/animation/base/AnimConfig;->fromSpeed:F
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", startImmediately="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lmiuix/animation/base/AnimConfig;->startImmediately:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     const-string v1, ", tintMode="
 
@@ -1070,6 +800,7 @@
 
     const-string v1, "    "
 
+    .line 2
     invoke-static {p0, v1}, Lmiuix/animation/utils/CommonUtils;->mapToString(Ljava/util/Map;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p0

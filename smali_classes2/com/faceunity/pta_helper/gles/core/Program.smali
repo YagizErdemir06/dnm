@@ -8,15 +8,16 @@
 
 
 # instance fields
-.field protected mDrawable2d:Lcom/faceunity/pta_helper/gles/core/Drawable2d;
+.field public mDrawable2d:Lcom/faceunity/pta_helper/gles/core/Drawable2d;
 
-.field protected mProgramHandle:I
+.field public mProgramHandle:I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/faceunity/pta_helper/gles/core/GlUtil;->TAG:Ljava/lang/String;
 
     sput-object v0, Lcom/faceunity/pta_helper/gles/core/Program;->TAG:Ljava/lang/String;
@@ -103,6 +104,7 @@
     .line 4
     invoke-virtual {p0, p1, p2, p3}, Lcom/faceunity/pta_helper/gles/core/Program;->drawFrame(I[F[F)V
 
+    .line 5
     aget p0, v0, v2
 
     const/4 p1, 0x1
@@ -117,7 +119,6 @@
 
     aget p3, v0, p3
 
-    .line 5
     invoke-static {p0, p1, p2, p3}, Landroid/opengl/GLES20;->glViewport(IIII)V
 
     return-void
@@ -132,12 +133,14 @@
 .method public release()V
     .locals 1
 
+    .line 1
     iget v0, p0, Lcom/faceunity/pta_helper/gles/core/Program;->mProgramHandle:I
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glDeleteProgram(I)V
 
     const/4 v0, -0x1
 
+    .line 2
     iput v0, p0, Lcom/faceunity/pta_helper/gles/core/Program;->mProgramHandle:I
 
     return-void
@@ -146,6 +149,7 @@
 .method public updateTexCoordArray([F)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/pta_helper/gles/core/Program;->mDrawable2d:Lcom/faceunity/pta_helper/gles/core/Drawable2d;
 
     invoke-virtual {p0, p1}, Lcom/faceunity/pta_helper/gles/core/Drawable2d;->updateTexCoordArray([F)V
@@ -156,6 +160,7 @@
 .method public updateVertexArray([F)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/pta_helper/gles/core/Program;->mDrawable2d:Lcom/faceunity/pta_helper/gles/core/Drawable2d;
 
     invoke-virtual {p0, p1}, Lcom/faceunity/pta_helper/gles/core/Drawable2d;->updateVertexArray([F)V

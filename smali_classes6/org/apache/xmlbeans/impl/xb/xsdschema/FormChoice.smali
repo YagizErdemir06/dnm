@@ -28,9 +28,10 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/xb/xsdschema/FormChoice$1;->class$org$apache$xmlbeans$impl$xb$xsdschema$FormChoice:Ljava/lang/Class;
 
     if-nez v0, :cond_0
@@ -66,6 +67,7 @@
 
     const-string v0, "qualified"
 
+    .line 2
     invoke-static {v0}, Lorg/apache/xmlbeans/impl/xb/xsdschema/FormChoice$Enum;->forString(Ljava/lang/String;)Lorg/apache/xmlbeans/impl/xb/xsdschema/FormChoice$Enum;
 
     move-result-object v0
@@ -74,6 +76,7 @@
 
     const-string v0, "unqualified"
 
+    .line 3
     invoke-static {v0}, Lorg/apache/xmlbeans/impl/xb/xsdschema/FormChoice$Enum;->forString(Ljava/lang/String;)Lorg/apache/xmlbeans/impl/xb/xsdschema/FormChoice$Enum;
 
     move-result-object v0

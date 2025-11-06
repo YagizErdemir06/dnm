@@ -1,4 +1,4 @@
-.class Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter$TopBarHandler;
+.class public Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter$TopBarHandler;
 .super Landroid/os/Handler;
 .source "SourceFile"
 
@@ -15,15 +15,27 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
+.field public final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;Landroid/os/Looper;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1010,
+            0x0
+        }
+        names = {
+            "this$0",
+            "looper"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter$TopBarHandler;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
+    .line 2
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -37,7 +49,16 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "msg"
+        }
+    .end annotation
 
+    .line 1
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/16 v1, 0x64
@@ -50,6 +71,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter$TopBarHandler;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/TopBarAdapter;
 
@@ -65,6 +87,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_1
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -74,6 +97,7 @@
 
     const-wide/16 v0, 0x3e8
 
+    .line 4
     invoke-virtual {p0, p1, v0, v1}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     :goto_0

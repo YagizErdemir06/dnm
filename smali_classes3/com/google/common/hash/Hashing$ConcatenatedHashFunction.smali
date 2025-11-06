@@ -1,4 +1,4 @@
-.class final Lcom/google/common/hash/Hashing$ConcatenatedHashFunction;
+.class public final Lcom/google/common/hash/Hashing$ConcatenatedHashFunction;
 .super Lcom/google/common/hash/AbstractCompositeHashFunction;
 .source "SourceFile"
 
@@ -49,16 +49,16 @@
     :cond_0
     move v3, v0
 
-    :goto_1
-    const-string v4, "the number of bits (%s) in hashFunction (%s) must be divisible by 8"
-
     .line 5
+    :goto_1
     invoke-interface {v2}, Lcom/google/common/hash/HashFunction;->bits()I
 
-    move-result v5
+    move-result v4
+
+    const-string v5, "the number of bits (%s) in hashFunction (%s) must be divisible by 8"
 
     .line 6
-    invoke-static {v3, v4, v5, v2}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;ILjava/lang/Object;)V
+    invoke-static {v3, v5, v4, v2}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;ILjava/lang/Object;)V
 
     add-int/lit8 v1, v1, 0x1
 
@@ -82,6 +82,7 @@
 .method public bits()I
     .locals 4
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/hash/AbstractCompositeHashFunction;->functions:[Lcom/google/common/hash/HashFunction;
 
     array-length v0, p0
@@ -95,6 +96,7 @@
 
     aget-object v3, p0, v1
 
+    .line 2
     invoke-interface {v3}, Lcom/google/common/hash/HashFunction;->bits()I
 
     move-result v3
@@ -116,12 +118,15 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/common/hash/Hashing$ConcatenatedHashFunction;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/common/hash/Hashing$ConcatenatedHashFunction;
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/hash/AbstractCompositeHashFunction;->functions:[Lcom/google/common/hash/HashFunction;
 
     iget-object p1, p1, Lcom/google/common/hash/AbstractCompositeHashFunction;->functions:[Lcom/google/common/hash/HashFunction;
@@ -141,6 +146,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/hash/AbstractCompositeHashFunction;->functions:[Lcom/google/common/hash/HashFunction;
 
     invoke-static {p0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
@@ -153,6 +159,7 @@
 .method public makeHash([Lcom/google/common/hash/Hasher;)Lcom/google/common/hash/HashCode;
     .locals 5
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/hash/Hashing$ConcatenatedHashFunction;->bits()I
 
     move-result p0
@@ -161,6 +168,7 @@
 
     new-array p0, p0, [B
 
+    .line 2
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -172,10 +180,12 @@
 
     aget-object v3, p1, v1
 
+    .line 3
     invoke-interface {v3}, Lcom/google/common/hash/Hasher;->hash()Lcom/google/common/hash/HashCode;
 
     move-result-object v3
 
+    .line 4
     invoke-virtual {v3}, Lcom/google/common/hash/HashCode;->bits()I
 
     move-result v4
@@ -192,6 +202,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-static {p0}, Lcom/google/common/hash/HashCode;->fromBytesNoCopy([B)Lcom/google/common/hash/HashCode;
 

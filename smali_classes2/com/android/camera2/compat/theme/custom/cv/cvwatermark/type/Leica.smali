@@ -22,81 +22,109 @@
 .field public static final WATERMARK_WIDTH:I = 0x438
 
 
-# instance fields
-.field private mDeviceNameProvider:Lql/c;
-
-
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 .method private getBrand()Ljava/lang/String;
-    .locals 1
+    .locals 2
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lid/b;->k2()Ljava/lang/String;
+    .line 1
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object p0
 
+    invoke-virtual {p0}, Ld/k/a/b;->d2()Ljava/lang/String;
+
+    move-result-object p0
+
+    sget-object v0, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
+
+    move-result-object p0
+
+    .line 2
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ld/k/a/b;->e2()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 3
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_0
+    if-nez v1, :cond_1
 
-    const-string p0, "PHONE"
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    .line 4
     :cond_0
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, " "
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
     return-object p0
-.end method
 
-.method private getLogo()Ljava/lang/String;
-    .locals 1
+    .line 5
+    :cond_1
+    :goto_0
+    sget-object p0, Ld/k/a/c;->p:Ljava/lang/String;
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lid/b;->j2()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object p0, Lrl/c;->a:Lrl/c$a;
-
-    invoke-virtual {p0}, Lrl/c$a;->k()Ljava/lang/String;
-
-    move-result-object p0
-
-    :cond_0
     return-object p0
 .end method
 
 .method private getWatermarkImage(Landroid/graphics/Bitmap;)Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/I420Image;
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "bitmap"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result p0
 
+    .line 2
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v0
 
-    invoke-static {}, Ld2/a;->c()Ld2/a;
+    .line 3
+    invoke-static {}, Ld/d/a/i6/a;->c()Ld/d/a/i6/a;
 
     move-result-object v1
 
@@ -104,17 +132,20 @@
 
     move-result v2
 
-    invoke-virtual {v1, v2}, Ld2/a;->get(I)[B
+    invoke-virtual {v1, v2}, Ld/d/a/i6/a;->get(I)[B
 
     move-result-object v1
 
+    .line 4
     invoke-static {v1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
     move-result-object v2
 
+    .line 5
     invoke-virtual {p1, v2}, Landroid/graphics/Bitmap;->copyPixelsToBuffer(Ljava/nio/Buffer;)V
 
-    invoke-static {}, Ld2/a;->c()Ld2/a;
+    .line 6
+    invoke-static {}, Ld/d/a/i6/a;->c()Ld/d/a/i6/a;
 
     move-result-object p1
 
@@ -124,22 +155,25 @@
 
     div-int/lit8 v3, v3, 0x2
 
-    invoke-virtual {p1, v3}, Ld2/a;->get(I)[B
+    invoke-virtual {p1, v3}, Ld/d/a/i6/a;->get(I)[B
 
     move-result-object p1
 
+    .line 7
     invoke-virtual {v2}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object v2
 
     invoke-static {v2, p1, p0, v0}, Lcom/xiaomi/libyuv/YuvUtils;->RGBAToI420([B[BII)I
 
-    invoke-static {}, Ld2/a;->c()Ld2/a;
+    .line 8
+    invoke-static {}, Ld/d/a/i6/a;->c()Ld/d/a/i6/a;
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Ld2/a;->b([B)V
+    invoke-virtual {v2, v1}, Ld/d/a/i6/a;->b([B)V
 
+    .line 9
     new-instance v1, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/I420Image;
 
     invoke-direct {v1, p1, p0, v0}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/I420Image;-><init>([BII)V
@@ -149,53 +183,31 @@
 
 
 # virtual methods
-.method public getCombinedDeviceName()Ljava/lang/String;
-    .locals 2
-
-    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/type/Leica;->mDeviceNameProvider:Lql/c;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Lql/c;
-
-    invoke-direct {v0}, Lql/c;-><init>()V
-
-    iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/type/Leica;->mDeviceNameProvider:Lql/c;
-
-    :cond_0
-    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/type/Leica;->getLogo()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/type/Leica;->getBrand()Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/type/Leica;->mDeviceNameProvider:Lql/c;
-
-    invoke-virtual {p0, v0, v1}, Lql/c;->d(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 .method public getDescripSummary()I
     .locals 0
 
-    const p0, 0x7f140cef
+    const p0, 0x7f130c6a
 
     return p0
 .end method
 
 .method public getPreferencePreview(Landroid/content/Context;)Landroid/graphics/Bitmap;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const p1, 0x7f0804c1
+    const p1, 0x7f0804c6
 
     invoke-static {p0, p1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
@@ -209,7 +221,7 @@
     .annotation build Landroidx/annotation/StringRes;
     .end annotation
 
-    const p0, 0x7f1409e9
+    const p0, 0x7f130963
 
     return p0
 .end method
@@ -217,7 +229,7 @@
 .method public getWatermarkResId()I
     .locals 0
 
-    const p0, 0x7f0808c8
+    const p0, 0x7f0808c0
 
     return p0
 .end method
@@ -225,96 +237,28 @@
 .method public getWatermarkSelectResId()I
     .locals 0
 
-    const p0, 0x7f080782
-
-    return p0
-.end method
-
-.method public isDeviceCharsShort()Z
-    .locals 4
-
-    iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/type/Leica;->mDeviceNameProvider:Lql/c;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Lql/c;
-
-    invoke-direct {v0}, Lql/c;-><init>()V
-
-    iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/type/Leica;->mDeviceNameProvider:Lql/c;
-
-    :cond_0
-    invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/type/Leica;->getCombinedDeviceName()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/type/Leica;->mDeviceNameProvider:Lql/c;
-
-    const/16 v2, 0x1a
-
-    invoke-virtual {v1, v2}, Lql/c;->a(I)V
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "isDeviceCharsShort: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, ", num="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, ", maxDeviceNameChars="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/type/Leica;->mDeviceNameProvider:Lql/c;
-
-    invoke-virtual {v2}, Lql/c;->c()I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const-string v3, "Leica"
-
-    invoke-static {v3, v1, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/type/Leica;->mDeviceNameProvider:Lql/c;
-
-    invoke-virtual {p0, v0}, Lql/c;->b(Ljava/lang/String;)Z
-
-    move-result p0
+    const p0, 0x7f08077a
 
     return p0
 .end method
 
 .method public isEnabled(I)Z
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "modeIndex"
+        }
+    .end annotation
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 1
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lid/b;->j0()I
+    invoke-virtual {v0}, Ld/k/a/b;->h0()I
 
     move-result v0
 
@@ -324,42 +268,47 @@
 
     return v1
 
+    .line 2
     :cond_0
-    invoke-static {}, Lcom/android/camera/v2;->d3()Z
+    invoke-static {}, Ld/d/a/d4;->b3()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
+    .line 3
     invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/type/Leica;->isSupport(I)Z
 
     move-result p0
 
     if-eqz p0, :cond_1
 
-    invoke-static {p1}, Lcom/android/camera/v2;->q3(I)Z
+    .line 4
+    invoke-static {p1}, Ld/d/a/d4;->o3(I)Z
 
     move-result p0
 
     if-nez p0, :cond_1
 
-    invoke-static {}, Lg2/b;->h()Ll2/g;
+    .line 5
+    invoke-static {}, Ld/d/a/l6/b;->h()Ld/d/a/l6/e/l/g;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Ll2/g;->j0()Z
+    invoke-virtual {p0}, Ld/d/a/l6/e/l/g;->f0()Z
 
     move-result p0
 
     if-eqz p0, :cond_1
 
-    invoke-static {}, Lg2/b;->h()Ll2/g;
+    .line 6
+    invoke-static {}, Ld/d/a/l6/b;->h()Ld/d/a/l6/e/l/g;
 
     move-result-object p0
 
     const-string p1, "pref_cv_watermark_key"
 
-    invoke-virtual {p0, p1, v1}, Lcom/android/camera/data/data/g;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-virtual {p0, p1, v1}, Ld/d/a/l6/e/f;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p0
 
@@ -373,12 +322,21 @@
 
 .method public isSupport(I)Z
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "modeIndex"
+        }
+    .end annotation
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 1
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lid/b;->j0()I
+    invoke-virtual {p0}, Ld/k/a/b;->h0()I
 
     move-result p0
 
@@ -423,30 +381,32 @@
 
     return v0
 
+    .line 2
     :cond_1
-    invoke-static {}, Lg2/b;->g()Lj2/b1;
+    invoke-static {}, Ld/d/a/l6/b;->g()Ld/d/a/l6/e/j/a1;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lj2/b1;->a0()Lj2/u;
+    invoke-virtual {v1}, Ld/d/a/l6/e/j/a1;->a0()Ld/d/a/l6/e/j/c0;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lj2/u;->x()Z
+    invoke-virtual {v1}, Ld/d/a/l6/e/j/c0;->x()Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    invoke-static {}, Lg2/b;->g()Lj2/b1;
+    .line 3
+    invoke-static {}, Ld/d/a/l6/b;->g()Ld/d/a/l6/e/j/a1;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lj2/b1;->C()Lj2/r;
+    invoke-virtual {v1}, Ld/d/a/l6/e/j/a1;->C()Ld/d/a/l6/e/j/z;
 
     move-result-object v1
 
-    invoke-virtual {v1, p1}, Lj2/r;->isSwitchOn(I)Z
+    invoke-virtual {v1, p1}, Ld/d/a/l6/e/j/z;->isSwitchOn(I)Z
 
     move-result p1
 
@@ -461,14 +421,6 @@
     return p0
 .end method
 
-.method public isSupportHeicImageFormatSelected(I)Z
-    .locals 0
-
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
 .method public isSupportLocation()Z
     .locals 0
 
@@ -478,64 +430,79 @@
 .end method
 
 .method public processPreviewWatermark(Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;)Landroid/graphics/Bitmap;
-    .locals 16
+    .locals 13
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "p"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->getSrc()Landroid/graphics/Bitmap;
+    .line 2
+    invoke-virtual {p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->getSrc()Landroid/graphics/Bitmap;
 
     move-result-object v3
 
-    invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->getOrientation()I
+    .line 3
+    invoke-virtual {p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->getOrientation()I
 
     move-result v4
 
-    invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->getType()I
+    .line 4
+    invoke-virtual {p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->getType()I
 
     move-result v2
 
-    const/4 v15, 0x0
+    const/4 v12, 0x0
 
     const/4 v5, 0x1
 
     if-ne v2, v5, :cond_0
 
-    invoke-static {}, Lcom/android/camera/v2;->B3()Z
+    invoke-static {}, Ld/d/a/d4;->z3()Z
 
     move-result v2
 
-    move v11, v2
+    move v10, v2
 
     goto :goto_0
 
+    .line 5
     :cond_0
-    invoke-static {}, Lcom/android/camera/v2;->B3()Z
+    invoke-static {}, Ld/d/a/d4;->z3()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->getLocation()Landroid/location/Location;
+    invoke-virtual {p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->getLocation()Landroid/location/Location;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    move v11, v5
+    move v10, v5
 
     goto :goto_0
 
     :cond_1
-    move v11, v15
+    move v10, v12
 
+    .line 6
     :goto_0
-    invoke-static {}, Lcom/android/camera/v2;->C3()Z
+    invoke-static {}, Ld/d/a/d4;->A3()Z
 
-    move-result v9
+    move-result v8
 
-    invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->getType()I
+    .line 7
+    invoke-virtual {p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->getType()I
 
     move-result v2
 
@@ -543,150 +510,138 @@
 
     if-nez v2, :cond_2
 
-    move-object v8, v5
+    move-object v7, v5
 
     goto :goto_1
 
     :cond_2
     const-string v2, "2022.07.04  12:17:10"
 
-    move-object v8, v2
+    move-object v7, v2
 
+    .line 8
     :goto_1
-    invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->getType()I
+    invoke-virtual {p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->getType()I
 
     move-result v2
 
     if-nez v2, :cond_3
 
-    move-object v10, v5
+    move-object v9, v5
 
     goto :goto_2
 
     :cond_3
     const-string v2, "33\u00b035\'16\"N  7\u00b036\'50\"W"
 
-    move-object v10, v2
+    move-object v9, v2
 
+    .line 9
     :goto_2
-    invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->getType()I
+    invoke-virtual {p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->getType()I
 
     move-result v2
 
     if-nez v2, :cond_4
 
-    move-object v7, v5
+    move-object v6, v5
 
     goto :goto_3
 
     :cond_4
     const-string v2, "23mm  f/1.9  1/1102s  ISO200"
 
-    move-object v7, v2
+    move-object v6, v2
 
+    .line 10
     :goto_3
-    invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->isWhiteBackground()Z
-
-    move-result v14
-
-    invoke-direct/range {p0 .. p0}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/type/Leica;->getBrand()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-direct/range {p0 .. p0}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/type/Leica;->getLogo()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/type/Leica;->getBrand()Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->getType()I
+    const/4 p0, 0x0
 
-    move-result v2
+    .line 11
+    invoke-virtual {p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->getType()I
 
-    if-eqz v2, :cond_5
+    move-result p1
 
-    invoke-static {}, Lcom/android/camera/CameraAppImpl;->o()Landroid/content/Context;
+    if-eqz p1, :cond_5
 
-    move-result-object v2
+    .line 12
+    invoke-static {}, Lcom/android/camera/CameraAppImpl;->d()Landroid/content/Context;
 
-    const v12, 0x7f0804bf
+    move-result-object p0
 
-    invoke-static {v2, v12}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    const p1, 0x7f0804c4
 
-    move-result-object v2
+    invoke-static {p0, p1}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    goto :goto_4
+    move-result-object p0
 
     :cond_5
-    const/4 v2, 0x0
+    move-object v11, p0
 
-    :goto_4
-    move-object v12, v2
+    .line 13
+    new-instance v2, Ld/o/e0/l/e;
 
-    invoke-static {}, Lcom/android/camera/CameraAppImpl;->o()Landroid/content/Context;
+    invoke-direct {v2}, Ld/o/e0/l/e;-><init>()V
 
-    move-result-object v2
+    invoke-virtual/range {v2 .. v11}, Ld/o/e0/l/e;->b(Landroid/graphics/Bitmap;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;ZLandroid/graphics/drawable/Drawable;)Landroid/graphics/Bitmap;
 
-    if-eqz v14, :cond_6
+    move-result-object p0
 
-    const v13, 0x7f0804c2
+    .line 14
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    goto :goto_5
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    :cond_6
-    const v13, 0x7f0804c3
+    const-string v2, "processCvWatermark: addPreviewWatermark cost="
 
-    :goto_5
-    invoke-static {v2, v13}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v13
-
-    new-instance v2, Lrl/h;
-
-    invoke-direct {v2}, Lrl/h;-><init>()V
-
-    invoke-virtual/range {v2 .. v14}, Lrl/h;->c(Landroid/graphics/Bitmap;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;ZLandroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Z)Landroid/graphics/Bitmap;
-
-    move-result-object v2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "processCvWatermark: addPreviewWatermark cost="
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v4
+    move-result-wide v2
 
-    sub-long/2addr v4, v0
+    sub-long/2addr v2, v0
 
-    invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     const-string v0, "ms"
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p1
 
-    new-array v1, v15, [Ljava/lang/Object;
+    new-array v0, v12, [Ljava/lang/Object;
 
-    const-string v3, "Leica"
+    const-string v1, "Leica"
 
-    invoke-static {v3, v0, v1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, p1, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    return-object v2
+    return-object p0
 .end method
 
 .method public processWatermark(Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;)Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/I420Image;
-    .locals 25
+    .locals 22
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "p"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
+    .line 2
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->getOriginImage()Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/I420Image;
 
     move-result-object v2
@@ -695,6 +650,7 @@
 
     move-result-object v2
 
+    .line 3
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->getOriginImage()Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/I420Image;
 
     move-result-object v3
@@ -703,6 +659,7 @@
 
     move-result v4
 
+    .line 4
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->getOriginImage()Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/I420Image;
 
     move-result-object v3
@@ -711,28 +668,34 @@
 
     move-result v5
 
+    .line 5
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->getOrientation()I
 
     move-result v11
 
-    new-instance v12, Lrl/h;
+    .line 6
+    new-instance v12, Ld/o/e0/l/e;
 
-    invoke-direct {v12}, Lrl/h;-><init>()V
+    invoke-direct {v12}, Ld/o/e0/l/e;-><init>()V
 
-    sget-object v3, Lrl/c;->a:Lrl/c$a;
+    .line 7
+    sget-object v3, Ld/o/e0/l/b;->a:Ld/o/e0/l/b$a;
 
-    invoke-virtual {v3, v4, v5, v11}, Lrl/c$a;->v(III)Landroid/util/Size;
+    invoke-virtual {v3, v4, v5, v11}, Ld/o/e0/l/b$a;->m(III)Landroid/util/Size;
 
     move-result-object v3
 
+    .line 8
     invoke-virtual {v3}, Landroid/util/Size;->getWidth()I
 
     move-result v10
 
+    .line 9
     invoke-virtual {v3}, Landroid/util/Size;->getHeight()I
 
     move-result v3
 
+    .line 10
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->getExposureTime()J
 
     move-result-wide v6
@@ -751,8 +714,9 @@
 
     invoke-static {v6, v7, v8, v9, v13}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CVWatermark;->getExifStr(JISF)Ljava/lang/String;
 
-    move-result-object v17
+    move-result-object v16
 
+    .line 11
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->isTimestampOn()Z
 
     move-result v6
@@ -769,13 +733,14 @@
 
     move-result-object v6
 
-    move-object/from16 v18, v6
+    move-object/from16 v17, v6
 
     goto :goto_0
 
     :cond_0
-    move-object/from16 v18, v7
+    move-object/from16 v17, v7
 
+    .line 12
     :goto_0
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->isLocationOn()Z
 
@@ -791,13 +756,14 @@
 
     move-result-object v6
 
-    move-object/from16 v20, v6
+    move-object/from16 v19, v6
 
     goto :goto_1
 
     :cond_1
-    move-object/from16 v20, v7
+    move-object/from16 v19, v7
 
+    .line 13
     :goto_1
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->isNeedIcc()Z
 
@@ -805,74 +771,53 @@
 
     if-eqz v6, :cond_2
 
-    const v6, 0x7f0804c0
+    const v6, 0x7f0804c5
 
     goto :goto_2
 
     :cond_2
-    const v6, 0x7f0804bf
+    const v6, 0x7f0804c4
 
+    .line 14
     :goto_2
-    invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->isWhiteBackground()Z
-
-    move-result v24
-
-    invoke-direct/range {p0 .. p0}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/type/Leica;->getLogo()Ljava/lang/String;
+    invoke-direct/range {p0 .. p0}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/type/Leica;->getBrand()Ljava/lang/String;
 
     move-result-object v15
 
-    invoke-direct/range {p0 .. p0}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/type/Leica;->getBrand()Ljava/lang/String;
-
-    move-result-object v16
-
-    invoke-static {}, Lcom/android/camera/CameraAppImpl;->o()Landroid/content/Context;
+    .line 15
+    invoke-static {}, Lcom/android/camera/CameraAppImpl;->d()Landroid/content/Context;
 
     move-result-object v7
 
     invoke-static {v7, v6}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    move-result-object v22
+    move-result-object v21
 
-    invoke-static {}, Lcom/android/camera/CameraAppImpl;->o()Landroid/content/Context;
-
-    move-result-object v6
-
-    if-eqz v24, :cond_3
-
-    const v7, 0x7f0804c2
-
-    goto :goto_3
-
-    :cond_3
-    const v7, 0x7f0804c3
-
-    :goto_3
-    invoke-static {v6, v7}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v23
-
+    .line 16
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->isTimestampOn()Z
 
-    move-result v19
+    move-result v18
 
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->isLocationOn()Z
 
-    move-result v21
+    move-result v20
 
     move v13, v10
 
     move v14, v3
 
-    invoke-virtual/range {v12 .. v24}, Lrl/h;->a(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;ZLandroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Z)Landroid/graphics/Bitmap;
+    invoke-virtual/range {v12 .. v21}, Ld/o/e0/l/e;->a(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;ZLandroid/graphics/drawable/Drawable;)Landroid/graphics/Bitmap;
 
     move-result-object v6
 
     move-object/from16 v7, p0
 
+    .line 17
     invoke-direct {v7, v6}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/type/Leica;->getWatermarkImage(Landroid/graphics/Bitmap;)Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/I420Image;
 
     move-result-object v12
 
+    .line 18
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -913,6 +858,7 @@
 
     invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 19
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->isNeedIcc()Z
 
     move-result v0
@@ -929,8 +875,10 @@
 
     const-string v13, "Leica"
 
+    .line 20
     invoke-static {v13, v0, v6}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 21
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->getFileName()Ljava/lang/String;
 
     move-result-object v0
@@ -951,17 +899,20 @@
 
     invoke-static {v0, v9, v6, v7, v8}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkUtil;->dumpYuv(Ljava/lang/String;Ljava/lang/String;[BII)V
 
+    .line 22
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v14
 
+    .line 23
     invoke-virtual {v12}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/I420Image;->getHeight()I
 
     move-result v0
 
     add-int/2addr v0, v3
 
-    invoke-static {}, Ld2/a;->c()Ld2/a;
+    .line 24
+    invoke-static {}, Ld/d/a/i6/a;->c()Ld/d/a/i6/a;
 
     move-result-object v3
 
@@ -971,10 +922,11 @@
 
     div-int/lit8 v6, v6, 0x2
 
-    invoke-virtual {v3, v6}, Ld2/a;->get(I)[B
+    invoke-virtual {v3, v6}, Ld/d/a/i6/a;->get(I)[B
 
     move-result-object v9
 
+    .line 25
     invoke-virtual {v12}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/I420Image;->getYuvData()[B
 
     move-result-object v8
@@ -1005,13 +957,15 @@
 
     invoke-static/range {v3 .. v10}, Lcom/xiaomi/libyuv/YuvUtils;->I420RotateWithSplice([BII[BI[BII)I
 
-    invoke-static {}, Ld2/a;->c()Ld2/a;
+    .line 26
+    invoke-static {}, Ld/d/a/i6/a;->c()Ld/d/a/i6/a;
 
     move-result-object v3
 
-    invoke-virtual {v3, v2}, Ld2/a;->b([B)V
+    invoke-virtual {v3, v2}, Ld/d/a/i6/a;->b([B)V
 
-    invoke-static {}, Ld2/a;->c()Ld2/a;
+    .line 27
+    invoke-static {}, Ld/d/a/i6/a;->c()Ld/d/a/i6/a;
 
     move-result-object v2
 
@@ -1019,12 +973,14 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Ld2/a;->b([B)V
+    invoke-virtual {v2, v3}, Ld/d/a/i6/a;->b([B)V
 
+    .line 28
     new-instance v2, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/I420Image;
 
     invoke-direct {v2, v1, v13, v0}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/I420Image;-><init>([BII)V
 
+    .line 29
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1063,6 +1019,7 @@
 
     invoke-static {v6, v3, v5}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 30
     invoke-virtual/range {p1 .. p1}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->getFileName()Ljava/lang/String;
 
     move-result-object v3
@@ -1071,6 +1028,7 @@
 
     invoke-static {v3, v5, v1, v13, v0}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkUtil;->dumpYuv(Ljava/lang/String;Ljava/lang/String;[BII)V
 
+    .line 31
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-virtual {v12}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/I420Image;->getWidth()I
@@ -1085,6 +1043,7 @@
 
     move-object/from16 v1, p1
 
+    .line 32
     invoke-virtual {v1, v4, v0}, Lcom/android/camera2/compat/theme/custom/cv/cvwatermark/CvWatermarkParam;->setRect(ILandroid/graphics/Rect;)V
 
     return-object v2

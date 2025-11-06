@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/AbstractIdleService$1;
+.class public Lcom/google/common/util/concurrent/AbstractIdleService$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/util/concurrent/AbstractIdleService;
+.field public final synthetic this$0:Lcom/google/common/util/concurrent/AbstractIdleService;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/util/concurrent/AbstractIdleService;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/AbstractIdleService$1;->this$0:Lcom/google/common/util/concurrent/AbstractIdleService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,6 +38,7 @@
 .method public execute(Ljava/lang/Runnable;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/AbstractIdleService$1;->this$0:Lcom/google/common/util/concurrent/AbstractIdleService;
 
     invoke-static {p0}, Lcom/google/common/util/concurrent/AbstractIdleService;->access$200(Lcom/google/common/util/concurrent/AbstractIdleService;)Lcom/google/common/base/Supplier;

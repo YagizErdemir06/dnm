@@ -1,4 +1,4 @@
-.class Lcom/google/common/io/BaseEncoding$4;
+.class public Lcom/google/common/io/BaseEncoding$4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,19 +18,20 @@
 
 
 # instance fields
-.field charsUntilSeparator:I
+.field public charsUntilSeparator:I
 
-.field final synthetic val$afterEveryChars:I
+.field public final synthetic val$afterEveryChars:I
 
-.field final synthetic val$delegate:Ljava/lang/Appendable;
+.field public final synthetic val$delegate:Ljava/lang/Appendable;
 
-.field final synthetic val$separator:Ljava/lang/String;
+.field public final synthetic val$separator:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>(ILjava/lang/Appendable;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/common/io/BaseEncoding$4;->val$afterEveryChars:I
 
     iput-object p2, p0, Lcom/google/common/io/BaseEncoding$4;->val$delegate:Ljava/lang/Appendable;
@@ -39,6 +40,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/google/common/io/BaseEncoding$4;->charsUntilSeparator:I
 
     return-void

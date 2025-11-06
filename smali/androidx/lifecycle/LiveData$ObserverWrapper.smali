@@ -1,4 +1,4 @@
-.class abstract Landroidx/lifecycle/LiveData$ObserverWrapper;
+.class public abstract Landroidx/lifecycle/LiveData$ObserverWrapper;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field mActive:Z
+.field public mActive:Z
 
-.field mLastVersion:I
+.field public mLastVersion:I
 
-.field final mObserver:Landroidx/lifecycle/Observer;
+.field public final mObserver:Landroidx/lifecycle/Observer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/lifecycle/Observer<",
@@ -28,7 +28,7 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Landroidx/lifecycle/LiveData;
+.field public final synthetic this$0:Landroidx/lifecycle/LiveData;
 
 
 # direct methods
@@ -42,14 +42,17 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroidx/lifecycle/LiveData$ObserverWrapper;->this$0:Landroidx/lifecycle/LiveData;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, -0x1
 
+    .line 2
     iput p1, p0, Landroidx/lifecycle/LiveData$ObserverWrapper;->mLastVersion:I
 
+    .line 3
     iput-object p2, p0, Landroidx/lifecycle/LiveData$ObserverWrapper;->mObserver:Landroidx/lifecycle/Observer;
 
     return-void
@@ -60,15 +63,18 @@
 .method public activeStateChanged(Z)V
     .locals 1
 
+    .line 1
     iget-boolean v0, p0, Landroidx/lifecycle/LiveData$ObserverWrapper;->mActive:Z
 
     if-ne p1, v0, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     iput-boolean p1, p0, Landroidx/lifecycle/LiveData$ObserverWrapper;->mActive:Z
 
+    .line 3
     iget-object v0, p0, Landroidx/lifecycle/LiveData$ObserverWrapper;->this$0:Landroidx/lifecycle/LiveData;
 
     if-eqz p1, :cond_1
@@ -83,10 +89,12 @@
     :goto_0
     invoke-virtual {v0, p1}, Landroidx/lifecycle/LiveData;->changeActiveCounter(I)V
 
+    .line 4
     iget-boolean p1, p0, Landroidx/lifecycle/LiveData$ObserverWrapper;->mActive:Z
 
     if-eqz p1, :cond_2
 
+    .line 5
     iget-object p1, p0, Landroidx/lifecycle/LiveData$ObserverWrapper;->this$0:Landroidx/lifecycle/LiveData;
 
     invoke-virtual {p1, p0}, Landroidx/lifecycle/LiveData;->dispatchingValue(Landroidx/lifecycle/LiveData$ObserverWrapper;)V

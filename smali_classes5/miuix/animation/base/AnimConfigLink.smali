@@ -8,9 +8,7 @@
 
 
 # instance fields
-.field private final id:I
-
-.field private final mConfigList:Ljava/util/List;
+.field public final configList:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -20,6 +18,8 @@
     .end annotation
 .end field
 
+.field private final id:I
+
 .field private final mHeadConfig:Lmiuix/animation/base/AnimConfig;
 
 
@@ -27,6 +27,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
@@ -39,8 +40,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     sget-object v0, Lmiuix/animation/base/AnimConfigLink;->sIdGenerator:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
@@ -49,12 +52,14 @@
 
     iput v0, p0, Lmiuix/animation/base/AnimConfigLink;->id:I
 
+    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lmiuix/animation/base/AnimConfigLink;->mConfigList:Ljava/util/List;
+    iput-object v0, p0, Lmiuix/animation/base/AnimConfigLink;->configList:Ljava/util/List;
 
+    .line 4
     new-instance v0, Lmiuix/animation/base/AnimConfig;
 
     invoke-direct {v0}, Lmiuix/animation/base/AnimConfig;-><init>()V
@@ -67,10 +72,12 @@
 .method private doClear()V
     .locals 1
 
-    iget-object v0, p0, Lmiuix/animation/base/AnimConfigLink;->mConfigList:Ljava/util/List;
+    .line 1
+    iget-object v0, p0, Lmiuix/animation/base/AnimConfigLink;->configList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
+    .line 2
     iget-object p0, p0, Lmiuix/animation/base/AnimConfigLink;->mHeadConfig:Lmiuix/animation/base/AnimConfig;
 
     invoke-virtual {p0}, Lmiuix/animation/base/AnimConfig;->clear()V
@@ -81,10 +88,12 @@
 .method public static varargs linkConfig([Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/base/AnimConfigLink;
     .locals 6
 
+    .line 1
     new-instance v0, Lmiuix/animation/base/AnimConfigLink;
 
     invoke-direct {v0}, Lmiuix/animation/base/AnimConfigLink;-><init>()V
 
+    .line 2
     array-length v1, p0
 
     const/4 v2, 0x0
@@ -98,6 +107,7 @@
 
     new-array v5, v2, [Z
 
+    .line 3
     invoke-virtual {v0, v4, v5}, Lmiuix/animation/base/AnimConfigLink;->add(Lmiuix/animation/base/AnimConfig;[Z)V
 
     add-int/lit8 v3, v3, 0x1
@@ -116,7 +126,7 @@
     if-eqz p1, :cond_1
 
     .line 1
-    iget-object v0, p0, Lmiuix/animation/base/AnimConfigLink;->mConfigList:Ljava/util/List;
+    iget-object v0, p0, Lmiuix/animation/base/AnimConfigLink;->configList:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -141,7 +151,7 @@
     invoke-direct {p2, p1}, Lmiuix/animation/base/AnimConfig;-><init>(Lmiuix/animation/base/AnimConfig;)V
 
     .line 4
-    iget-object p0, p0, Lmiuix/animation/base/AnimConfigLink;->mConfigList:Ljava/util/List;
+    iget-object p0, p0, Lmiuix/animation/base/AnimConfigLink;->configList:Ljava/util/List;
 
     invoke-interface {p0, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -149,7 +159,7 @@
 
     .line 5
     :cond_0
-    iget-object p0, p0, Lmiuix/animation/base/AnimConfigLink;->mConfigList:Ljava/util/List;
+    iget-object p0, p0, Lmiuix/animation/base/AnimConfigLink;->configList:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -167,7 +177,7 @@
 
     .line 6
     :cond_0
-    iget-object p1, p1, Lmiuix/animation/base/AnimConfigLink;->mConfigList:Ljava/util/List;
+    iget-object p1, p1, Lmiuix/animation/base/AnimConfigLink;->configList:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -195,85 +205,23 @@
     return-void
 .end method
 
-.method public declared-synchronized addTo(Lmiuix/animation/base/AnimConfig;)V
-    .locals 10
-    .param p1    # Lmiuix/animation/base/AnimConfig;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
+.method public addTo(Lmiuix/animation/base/AnimConfig;)V
+    .locals 6
 
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lmiuix/animation/base/AnimConfigLink;->mConfigList:Ljava/util/List;
+    .line 1
+    iget-object v0, p0, Lmiuix/animation/base/AnimConfigLink;->configList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    invoke-static {}, Lmiuix/animation/utils/LogUtils;->isLogMoreEnable()Z
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    if-eqz v1, :cond_0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "AnimConfigLink addTo config listSize="
-
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v4, p0, Lmiuix/animation/base/AnimConfigLink;->mConfigList:Ljava/util/List;
-
-    invoke-interface {v4}, Ljava/util/List;->size()I
-
-    move-result v4
-
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    new-array v4, v2, [Ljava/lang/Object;
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v6, "trace:"
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v6, 0xa
-
-    invoke-static {v6}, Lmiuix/animation/utils/LogUtils;->getStackTrace(I)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    aput-object v5, v4, v3
-
-    invoke-static {v1, v4}, Lmiuix/animation/utils/LogUtils;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    :cond_0
-    sub-int/2addr v0, v2
+    add-int/lit8 v0, v0, -0x1
 
     :goto_0
-    if-ltz v0, :cond_7
+    if-ltz v0, :cond_1
 
-    iget-object v1, p0, Lmiuix/animation/base/AnimConfigLink;->mConfigList:Ljava/util/List;
+    .line 2
+    iget-object v1, p0, Lmiuix/animation/base/AnimConfigLink;->configList:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -281,225 +229,123 @@
 
     check-cast v1, Lmiuix/animation/base/AnimConfig;
 
-    iget-object v4, p1, Lmiuix/animation/base/AnimConfig;->ease:Lmiuix/animation/utils/EaseManager$EaseStyle;
+    .line 3
+    iget-wide v2, p1, Lmiuix/animation/base/AnimConfig;->delay:J
 
-    if-eqz v1, :cond_4
+    iget-wide v4, v1, Lmiuix/animation/base/AnimConfig;->delay:J
 
-    iget-wide v5, p1, Lmiuix/animation/base/AnimConfig;->delay:J
+    invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->max(JJ)J
 
-    iget-wide v7, v1, Lmiuix/animation/base/AnimConfig;->delay:J
+    move-result-wide v2
 
-    invoke-static {v5, v6, v7, v8}, Ljava/lang/Math;->max(JJ)J
+    iput-wide v2, p1, Lmiuix/animation/base/AnimConfig;->delay:J
 
-    move-result-wide v5
+    .line 4
+    iget-object v2, p1, Lmiuix/animation/base/AnimConfig;->ease:Lmiuix/animation/utils/EaseManager$EaseStyle;
 
-    iput-wide v5, p1, Lmiuix/animation/base/AnimConfig;->delay:J
+    .line 5
+    iget-object v3, v1, Lmiuix/animation/base/AnimConfig;->ease:Lmiuix/animation/utils/EaseManager$EaseStyle;
 
-    iget-object v5, v1, Lmiuix/animation/base/AnimConfig;->ease:Lmiuix/animation/utils/EaseManager$EaseStyle;
+    if-eqz v3, :cond_0
 
-    iget-object v6, v1, Lmiuix/animation/base/AnimConfig;->listeners:Ljava/util/HashSet;
+    .line 6
+    sget-object v4, Lmiuix/animation/base/AnimConfig;->sDefEase:Lmiuix/animation/utils/EaseManager$EaseStyle;
 
-    if-eqz v6, :cond_1
+    if-eq v3, v4, :cond_0
 
-    iget-object v7, p1, Lmiuix/animation/base/AnimConfig;->listeners:Ljava/util/HashSet;
+    move-object v2, v3
 
-    if-eqz v7, :cond_1
+    :cond_0
+    invoke-virtual {p1, v2}, Lmiuix/animation/base/AnimConfig;->setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;)Lmiuix/animation/base/AnimConfig;
 
-    invoke-virtual {v7, v6}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
+    .line 7
+    iget-object v2, p1, Lmiuix/animation/base/AnimConfig;->listeners:Ljava/util/HashSet;
 
-    :cond_1
-    invoke-virtual {v1}, Lmiuix/animation/base/AnimConfig;->getObserverLooper()Landroid/os/Looper;
+    iget-object v3, v1, Lmiuix/animation/base/AnimConfig;->listeners:Ljava/util/HashSet;
 
-    move-result-object v6
+    invoke-virtual {v2, v3}, Ljava/util/HashSet;->addAll(Ljava/util/Collection;)Z
 
-    if-eqz v6, :cond_2
+    .line 8
+    iget-wide v2, p1, Lmiuix/animation/base/AnimConfig;->flags:J
 
-    invoke-virtual {v1}, Lmiuix/animation/base/AnimConfig;->getObserverLooper()Landroid/os/Looper;
+    iget-wide v4, v1, Lmiuix/animation/base/AnimConfig;->flags:J
 
-    move-result-object v6
+    or-long/2addr v2, v4
 
-    invoke-virtual {p1, v6}, Lmiuix/animation/base/AnimConfig;->setObserverLooper(Landroid/os/Looper;)V
+    iput-wide v2, p1, Lmiuix/animation/base/AnimConfig;->flags:J
 
-    :cond_2
-    iget-wide v6, p1, Lmiuix/animation/base/AnimConfig;->flags:J
+    .line 9
+    iget v2, p1, Lmiuix/animation/base/AnimConfig;->fromSpeed:F
 
-    iget-wide v8, v1, Lmiuix/animation/base/AnimConfig;->flags:J
+    iget v3, v1, Lmiuix/animation/base/AnimConfig;->fromSpeed:F
 
-    or-long/2addr v6, v8
+    invoke-static {v2, v3}, Lmiuix/animation/internal/AnimConfigUtils;->chooseSpeed(FF)F
 
-    iput-wide v6, p1, Lmiuix/animation/base/AnimConfig;->flags:J
+    move-result v2
 
-    iget-boolean v6, v1, Lmiuix/animation/base/AnimConfig;->startImmediately:Z
+    iput v2, p1, Lmiuix/animation/base/AnimConfig;->fromSpeed:F
 
-    if-nez v6, :cond_3
+    .line 10
+    iget-wide v2, p1, Lmiuix/animation/base/AnimConfig;->minDuration:J
 
-    iput-boolean v3, p1, Lmiuix/animation/base/AnimConfig;->startImmediately:Z
+    iget-wide v4, v1, Lmiuix/animation/base/AnimConfig;->minDuration:J
 
-    :cond_3
-    iget v6, p1, Lmiuix/animation/base/AnimConfig;->fromSpeed:F
+    invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->max(JJ)J
 
-    iget v7, v1, Lmiuix/animation/base/AnimConfig;->fromSpeed:F
+    move-result-wide v2
 
-    invoke-static {v6, v7}, Lmiuix/animation/internal/AnimConfigUtils;->chooseSpeed(FF)F
+    iput-wide v2, p1, Lmiuix/animation/base/AnimConfig;->minDuration:J
 
-    move-result v6
+    .line 11
+    iget v2, p1, Lmiuix/animation/base/AnimConfig;->tintMode:I
 
-    iput v6, p1, Lmiuix/animation/base/AnimConfig;->fromSpeed:F
+    iget v3, v1, Lmiuix/animation/base/AnimConfig;->tintMode:I
 
-    iget-wide v6, p1, Lmiuix/animation/base/AnimConfig;->minDuration:J
+    invoke-static {v2, v3}, Ljava/lang/Math;->max(II)I
 
-    iget-wide v8, v1, Lmiuix/animation/base/AnimConfig;->minDuration:J
+    move-result v2
 
-    invoke-static {v6, v7, v8, v9}, Ljava/lang/Math;->max(JJ)J
+    iput v2, p1, Lmiuix/animation/base/AnimConfig;->tintMode:I
 
-    move-result-wide v6
-
-    iput-wide v6, p1, Lmiuix/animation/base/AnimConfig;->minDuration:J
-
-    iget v6, p1, Lmiuix/animation/base/AnimConfig;->tintMode:I
-
-    iget v7, v1, Lmiuix/animation/base/AnimConfig;->tintMode:I
-
-    invoke-static {v6, v7}, Ljava/lang/Math;->max(II)I
-
-    move-result v6
-
-    iput v6, p1, Lmiuix/animation/base/AnimConfig;->tintMode:I
-
+    .line 12
     invoke-virtual {p1, v1}, Lmiuix/animation/base/AnimConfig;->addSpecialConfigs(Lmiuix/animation/base/AnimConfig;)V
-
-    goto :goto_1
-
-    :cond_4
-    invoke-static {}, Lmiuix/animation/utils/LogUtils;->isLogMoreEnable()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    const-string v1, "AnimConfigLink addTo config warning!! mConfigList.get(%s) is null!"
-
-    new-array v5, v2, [Ljava/lang/Object;
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    aput-object v6, v5, v3
-
-    invoke-static {v1, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    new-array v5, v3, [Ljava/lang/Object;
-
-    invoke-static {v1, v5}, Lmiuix/animation/utils/LogUtils;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    :cond_5
-    const/4 v5, 0x0
-
-    :goto_1
-    if-eqz v5, :cond_6
-
-    sget-object v1, Lmiuix/animation/base/AnimConfig;->sDefEase:Lmiuix/animation/utils/EaseManager$EaseStyle;
-
-    if-eq v5, v1, :cond_6
-
-    move-object v4, v5
-
-    :cond_6
-    invoke-virtual {p1, v4}, Lmiuix/animation/base/AnimConfig;->setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;)Lmiuix/animation/base/AnimConfig;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     add-int/lit8 v0, v0, -0x1
 
-    goto/16 :goto_0
+    goto :goto_0
 
-    :cond_7
-    monitor-exit p0
-
+    :cond_1
     return-void
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit p0
-
-    throw p1
 .end method
 
-.method public declared-synchronized clear()V
-    .locals 2
+.method public clear()V
+    .locals 1
 
-    monitor-enter p0
-
-    :try_start_0
-    invoke-static {}, Lmiuix/animation/utils/LogUtils;->isLogMoreEnable()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "AnimConfigLink clear trace:"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0xa
-
-    invoke-static {v1}, Lmiuix/animation/utils/LogUtils;->getStackTrace(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    invoke-static {v0, v1}, Lmiuix/animation/utils/LogUtils;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    :cond_0
+    .line 1
     invoke-direct {p0}, Lmiuix/animation/base/AnimConfigLink;->doClear()V
 
-    iget-object v0, p0, Lmiuix/animation/base/AnimConfigLink;->mConfigList:Ljava/util/List;
+    .line 2
+    iget-object v0, p0, Lmiuix/animation/base/AnimConfigLink;->configList:Ljava/util/List;
 
-    iget-object v1, p0, Lmiuix/animation/base/AnimConfigLink;->mHeadConfig:Lmiuix/animation/base/AnimConfig;
+    iget-object p0, p0, Lmiuix/animation/base/AnimConfigLink;->mHeadConfig:Lmiuix/animation/base/AnimConfig;
 
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
+    invoke-interface {v0, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-void
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
 .end method
 
 .method public copy(Lmiuix/animation/base/AnimConfigLink;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lmiuix/animation/base/AnimConfigLink;->doClear()V
 
     if-eqz p1, :cond_0
 
-    iget-object p0, p0, Lmiuix/animation/base/AnimConfigLink;->mConfigList:Ljava/util/List;
+    .line 2
+    iget-object p0, p0, Lmiuix/animation/base/AnimConfigLink;->configList:Ljava/util/List;
 
-    iget-object p1, p1, Lmiuix/animation/base/AnimConfigLink;->mConfigList:Ljava/util/List;
+    iget-object p1, p1, Lmiuix/animation/base/AnimConfigLink;->configList:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
@@ -510,7 +356,8 @@
 .method public getHead()Lmiuix/animation/base/AnimConfig;
     .locals 2
 
-    iget-object v0, p0, Lmiuix/animation/base/AnimConfigLink;->mConfigList:Ljava/util/List;
+    .line 1
+    iget-object v0, p0, Lmiuix/animation/base/AnimConfigLink;->configList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
@@ -518,14 +365,16 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lmiuix/animation/base/AnimConfigLink;->mConfigList:Ljava/util/List;
+    .line 2
+    iget-object v0, p0, Lmiuix/animation/base/AnimConfigLink;->configList:Ljava/util/List;
 
     iget-object v1, p0, Lmiuix/animation/base/AnimConfigLink;->mHeadConfig:Lmiuix/animation/base/AnimConfig;
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 3
     :cond_0
-    iget-object p0, p0, Lmiuix/animation/base/AnimConfigLink;->mConfigList:Ljava/util/List;
+    iget-object p0, p0, Lmiuix/animation/base/AnimConfigLink;->configList:Ljava/util/List;
 
     const/4 v0, 0x0
 
@@ -543,11 +392,13 @@
 
     if-eqz p1, :cond_0
 
-    iget-object v0, p0, Lmiuix/animation/base/AnimConfigLink;->mConfigList:Ljava/util/List;
+    .line 1
+    iget-object v0, p0, Lmiuix/animation/base/AnimConfigLink;->configList:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    iget-object p1, p0, Lmiuix/animation/base/AnimConfigLink;->mConfigList:Ljava/util/List;
+    .line 2
+    iget-object p1, p0, Lmiuix/animation/base/AnimConfigLink;->configList:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
@@ -555,11 +406,13 @@
 
     if-eqz p1, :cond_0
 
+    .line 3
     iget-object p1, p0, Lmiuix/animation/base/AnimConfigLink;->mHeadConfig:Lmiuix/animation/base/AnimConfig;
 
     invoke-virtual {p1}, Lmiuix/animation/base/AnimConfig;->clear()V
 
-    iget-object p1, p0, Lmiuix/animation/base/AnimConfigLink;->mConfigList:Ljava/util/List;
+    .line 4
+    iget-object p1, p0, Lmiuix/animation/base/AnimConfigLink;->configList:Ljava/util/List;
 
     iget-object p0, p0, Lmiuix/animation/base/AnimConfigLink;->mHeadConfig:Lmiuix/animation/base/AnimConfig;
 
@@ -572,7 +425,8 @@
 .method public size()I
     .locals 0
 
-    iget-object p0, p0, Lmiuix/animation/base/AnimConfigLink;->mConfigList:Ljava/util/List;
+    .line 1
+    iget-object p0, p0, Lmiuix/animation/base/AnimConfigLink;->configList:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -584,11 +438,12 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "AnimConfigLink{id="
+    const-string v1, "AnimConfigLink{id = "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -600,8 +455,9 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lmiuix/animation/base/AnimConfigLink;->mConfigList:Ljava/util/List;
+    iget-object p0, p0, Lmiuix/animation/base/AnimConfigLink;->configList:Ljava/util/List;
 
+    .line 2
     invoke-interface {p0}, Ljava/util/List;->toArray()[Ljava/lang/Object;
 
     move-result-object p0

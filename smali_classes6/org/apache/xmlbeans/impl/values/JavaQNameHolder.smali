@@ -12,11 +12,11 @@
 
 
 # static fields
-.field static final synthetic $assertionsDisabled:Z
+.field public static final synthetic $assertionsDisabled:Z
 
 .field private static final PRETTY_PREFIXER:Lorg/apache/xmlbeans/impl/values/NamespaceManager;
 
-.field static synthetic class$org$apache$xmlbeans$impl$values$JavaQNameHolder:Ljava/lang/Class;
+.field public static synthetic class$org$apache$xmlbeans$impl$values$JavaQNameHolder:Ljava/lang/Class;
 
 
 # instance fields
@@ -24,9 +24,10 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/values/JavaQNameHolder;->class$org$apache$xmlbeans$impl$values$JavaQNameHolder:Ljava/lang/Class;
 
     if-nez v0, :cond_0
@@ -44,6 +45,7 @@
 
     sput-boolean v0, Lorg/apache/xmlbeans/impl/values/JavaQNameHolder;->$assertionsDisabled:Z
 
+    .line 2
     new-instance v0, Lorg/apache/xmlbeans/impl/values/JavaQNameHolder$PrettyNamespaceManager;
 
     const/4 v1, 0x0
@@ -58,14 +60,16 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;-><init>()V
 
     return-void
 .end method
 
-.method static synthetic class$(Ljava/lang/String;)Ljava/lang/Class;
+.method public static synthetic class$(Ljava/lang/String;)Ljava/lang/Class;
     .locals 1
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -82,7 +86,7 @@
 
     invoke-direct {v0}, Ljava/lang/NoClassDefFoundError;-><init>()V
 
-    invoke-virtual {v0, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v0, p0}, Ljava/lang/NoClassDefFoundError;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -92,6 +96,7 @@
 .method private static parse(Ljava/lang/String;Lorg/apache/xmlbeans/impl/common/PrefixResolver;)Ljavax/xml/namespace/QName;
     .locals 8
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -101,6 +106,7 @@
 
     add-int/lit8 v1, v0, -0x1
 
+    .line 2
     invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
@@ -127,6 +133,7 @@
     :goto_2
     if-ge v2, v0, :cond_3
 
+    .line 3
     invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
@@ -148,6 +155,7 @@
     :goto_3
     const/16 v3, 0x3a
 
+    .line 4
     invoke-virtual {p0, v3, v2}, Ljava/lang/String;->indexOf(II)I
 
     move-result v3
@@ -158,18 +166,21 @@
 
     if-ltz v3, :cond_4
 
+    .line 5
     invoke-virtual {p0, v2, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v2
 
     add-int/2addr v3, v5
 
+    .line 6
     invoke-virtual {p0, v3, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_4
 
+    .line 7
     :cond_4
     invoke-virtual {p0, v2, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
@@ -177,6 +188,7 @@
 
     move-object v2, v4
 
+    .line 8
     :goto_4
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
@@ -196,6 +208,7 @@
 
     goto :goto_5
 
+    .line 9
     :cond_5
     new-instance p1, Lorg/apache/xmlbeans/impl/values/XmlValueOutOfRangeException;
 
@@ -223,6 +236,7 @@
 
     throw p1
 
+    .line 10
     :cond_6
     :goto_5
     invoke-static {v0}, Lorg/apache/xmlbeans/impl/common/XMLChar;->isValidNCName(Ljava/lang/String;)Z
@@ -237,6 +251,7 @@
 
     goto :goto_6
 
+    .line 11
     :cond_7
     invoke-interface {p1, v2}, Lorg/apache/xmlbeans/impl/common/PrefixResolver;->getNamespaceForPrefix(Ljava/lang/String;)Ljava/lang/String;
 
@@ -245,6 +260,7 @@
     :goto_6
     if-nez p0, :cond_9
 
+    .line 12
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result p0
@@ -253,6 +269,7 @@
 
     goto :goto_7
 
+    .line 13
     :cond_8
     new-instance p0, Lorg/apache/xmlbeans/impl/values/XmlValueOutOfRangeException;
 
@@ -283,6 +300,7 @@
     :cond_9
     move-object v4, p0
 
+    .line 14
     :goto_7
     new-instance p0, Ljavax/xml/namespace/QName;
 
@@ -290,6 +308,7 @@
 
     return-object p0
 
+    .line 15
     :cond_a
     new-instance p1, Lorg/apache/xmlbeans/impl/values/XmlValueOutOfRangeException;
 
@@ -321,6 +340,7 @@
 .method public static validateLexical(Ljava/lang/String;Lorg/apache/xmlbeans/impl/common/ValidationContext;Lorg/apache/xmlbeans/impl/common/PrefixResolver;)Ljavax/xml/namespace/QName;
     .locals 0
 
+    .line 1
     :try_start_0
     invoke-static {p0, p2}, Lorg/apache/xmlbeans/impl/values/JavaQNameHolder;->parse(Ljava/lang/String;Lorg/apache/xmlbeans/impl/common/PrefixResolver;)Ljavax/xml/namespace/QName;
 
@@ -333,7 +353,8 @@
     :catch_0
     move-exception p0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 2
+    invoke-virtual {p0}, Ljava/lang/IllegalArgumentException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
 
@@ -352,8 +373,10 @@
 
     if-nez p1, :cond_0
 
+    .line 1
     sget-object p1, Lorg/apache/xmlbeans/impl/values/JavaQNameHolder;->PRETTY_PREFIXER:Lorg/apache/xmlbeans/impl/values/NamespaceManager;
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/values/JavaQNameHolder;->_value:Ljavax/xml/namespace/QName;
 
@@ -361,6 +384,7 @@
 
     move-result-object v0
 
+    .line 3
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaQNameHolder;->_value:Ljavax/xml/namespace/QName;
 
     invoke-virtual {p0}, Ljavax/xml/namespace/QName;->getLocalPart()Ljava/lang/String;
@@ -369,6 +393,7 @@
 
     if-eqz v0, :cond_4
 
+    .line 4
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -380,10 +405,12 @@
     :cond_1
     const/4 v1, 0x0
 
+    .line 5
     invoke-interface {p1, v0, v1}, Lorg/apache/xmlbeans/impl/values/NamespaceManager;->find_prefix_for_nsuri(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 6
     sget-boolean v0, Lorg/apache/xmlbeans/impl/values/JavaQNameHolder;->$assertionsDisabled:Z
 
     if-nez v0, :cond_3
@@ -399,6 +426,7 @@
 
     throw p0
 
+    .line 7
     :cond_3
     :goto_0
     new-instance v0, Ljava/lang/StringBuffer;
@@ -425,6 +453,7 @@
 .method public equal_to(Lorg/apache/xmlbeans/XmlObject;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaQNameHolder;->_value:Ljavax/xml/namespace/QName;
 
     check-cast p1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
@@ -451,6 +480,7 @@
 .method public qNameValue()Ljavax/xml/namespace/QName;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaQNameHolder;->_value:Ljavax/xml/namespace/QName;
@@ -461,6 +491,7 @@
 .method public schemaType()Lorg/apache/xmlbeans/SchemaType;
     .locals 0
 
+    .line 1
     sget-object p0, Lorg/apache/xmlbeans/impl/schema/BuiltinSchemaTypeSystem;->ST_QNAME:Lorg/apache/xmlbeans/impl/schema/SchemaTypeImpl;
 
     return-object p0
@@ -469,6 +500,7 @@
 .method public set_QName(Ljavax/xml/namespace/QName;)V
     .locals 3
 
+    .line 1
     sget-boolean v0, Lorg/apache/xmlbeans/impl/values/JavaQNameHolder;->$assertionsDisabled:Z
 
     if-nez v0, :cond_1
@@ -484,6 +516,7 @@
 
     throw p0
 
+    .line 2
     :cond_1
     :goto_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->has_store()Z
@@ -492,6 +525,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object v0
@@ -504,6 +538,7 @@
 
     invoke-interface {v0, v1, v2}, Lorg/apache/xmlbeans/impl/values/NamespaceManager;->find_prefix_for_nsuri(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
+    .line 4
     :cond_2
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/values/JavaQNameHolder;->_value:Ljavax/xml/namespace/QName;
 
@@ -515,6 +550,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Lorg/apache/xmlbeans/impl/values/JavaQNameHolder;->_value:Ljavax/xml/namespace/QName;
 
     return-void
@@ -523,22 +559,26 @@
 .method public set_text(Ljava/lang/String;)V
     .locals 2
 
+    .line 1
     invoke-static {}, Lorg/apache/xmlbeans/impl/values/NamespaceContext;->getCurrent()Lorg/apache/xmlbeans/impl/common/PrefixResolver;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->has_store()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->get_store()Lorg/apache/xmlbeans/impl/values/TypeStore;
 
     move-result-object v0
 
+    .line 4
     :cond_0
     invoke-static {p1, v0}, Lorg/apache/xmlbeans/impl/values/JavaQNameHolder;->parse(Ljava/lang/String;Lorg/apache/xmlbeans/impl/common/PrefixResolver;)Ljavax/xml/namespace/QName;
 
@@ -552,6 +592,7 @@
 .method public set_xmlanysimple(Lorg/apache/xmlbeans/XmlAnySimpleType;)V
     .locals 1
 
+    .line 1
     invoke-interface {p1}, Lorg/apache/xmlbeans/XmlAnySimpleType;->getStringValue()Ljava/lang/String;
 
     move-result-object p1
@@ -572,6 +613,7 @@
 .method public value_hash_code()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/JavaQNameHolder;->_value:Ljavax/xml/namespace/QName;
 
     invoke-virtual {p0}, Ljavax/xml/namespace/QName;->hashCode()I

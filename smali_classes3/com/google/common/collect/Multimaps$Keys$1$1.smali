@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Multimaps$Keys$1$1;
+.class public Lcom/google/common/collect/Multimaps$Keys$1$1;
 .super Lcom/google/common/collect/Multisets$AbstractEntry;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic val$backingEntry:Ljava/util/Map$Entry;
+.field public final synthetic val$backingEntry:Ljava/util/Map$Entry;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/Multimaps$Keys$1;Ljava/util/Map$Entry;)V
     .locals 0
 
+    .line 1
     iput-object p2, p0, Lcom/google/common/collect/Multimaps$Keys$1$1;->val$backingEntry:Ljava/util/Map$Entry;
 
     invoke-direct {p0}, Lcom/google/common/collect/Multisets$AbstractEntry;-><init>()V
@@ -41,6 +42,7 @@
 .method public getCount()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Multimaps$Keys$1$1;->val$backingEntry:Ljava/util/Map$Entry;
 
     invoke-interface {p0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
@@ -67,6 +69,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Multimaps$Keys$1$1;->val$backingEntry:Ljava/util/Map$Entry;
 
     invoke-interface {p0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;

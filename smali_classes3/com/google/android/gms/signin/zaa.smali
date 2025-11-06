@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/signin/zaa;
+.class public final Lcom/google/android/gms/signin/zaa;
 .super Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;
 .source "SourceFile"
 
@@ -17,15 +17,18 @@
 .method public final bridge synthetic buildClient(Landroid/content/Context;Landroid/os/Looper;Lcom/google/android/gms/common/internal/ClientSettings;Ljava/lang/Object;Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;)Lcom/google/android/gms/common/api/Api$Client;
     .locals 8
 
+    .line 1
     check-cast p4, Lcom/google/android/gms/signin/SignInOptions;
 
+    .line 2
     new-instance p0, Lcom/google/android/gms/signin/internal/SignInClientImpl;
 
-    const/4 v3, 0x1
-
+    .line 3
     invoke-static {p3}, Lcom/google/android/gms/signin/internal/SignInClientImpl;->createBundleFromClientSettings(Lcom/google/android/gms/common/internal/ClientSettings;)Landroid/os/Bundle;
 
     move-result-object v5
+
+    const/4 v3, 0x1
 
     move-object v0, p0
 
@@ -39,6 +42,7 @@
 
     move-object v7, p6
 
+    .line 4
     invoke-direct/range {v0 .. v7}, Lcom/google/android/gms/signin/internal/SignInClientImpl;-><init>(Landroid/content/Context;Landroid/os/Looper;ZLcom/google/android/gms/common/internal/ClientSettings;Landroid/os/Bundle;Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;)V
 
     return-object p0

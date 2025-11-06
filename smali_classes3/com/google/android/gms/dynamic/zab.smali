@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/dynamic/zab;
+.class public final Lcom/google/android/gms/dynamic/zab;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,13 +7,13 @@
 
 
 # instance fields
-.field final synthetic zaa:Landroid/app/Activity;
+.field public final synthetic zaa:Landroid/app/Activity;
 
-.field final synthetic zab:Landroid/os/Bundle;
+.field public final synthetic zab:Landroid/os/Bundle;
 
-.field final synthetic zac:Landroid/os/Bundle;
+.field public final synthetic zac:Landroid/os/Bundle;
 
-.field final synthetic zad:Lcom/google/android/gms/dynamic/DeferredLifecycleHelper;
+.field public final synthetic zad:Lcom/google/android/gms/dynamic/DeferredLifecycleHelper;
 
 
 # direct methods
@@ -46,6 +46,7 @@
 .method public final zab(Lcom/google/android/gms/dynamic/LifecycleDelegate;)V
     .locals 2
 
+    .line 1
     iget-object p1, p0, Lcom/google/android/gms/dynamic/zab;->zad:Lcom/google/android/gms/dynamic/DeferredLifecycleHelper;
 
     invoke-static {p1}, Lcom/google/android/gms/dynamic/DeferredLifecycleHelper;->zaa(Lcom/google/android/gms/dynamic/DeferredLifecycleHelper;)Lcom/google/android/gms/dynamic/LifecycleDelegate;

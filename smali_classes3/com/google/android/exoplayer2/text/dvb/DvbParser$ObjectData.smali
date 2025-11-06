@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/text/dvb/DvbParser$ObjectData;
+.class public final Lcom/google/android/exoplayer2/text/dvb/DvbParser$ObjectData;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -28,14 +28,19 @@
 .method public constructor <init>(IZ[B[B)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/text/dvb/DvbParser$ObjectData;->id:I
 
+    .line 3
     iput-boolean p2, p0, Lcom/google/android/exoplayer2/text/dvb/DvbParser$ObjectData;->nonModifyingColorFlag:Z
 
+    .line 4
     iput-object p3, p0, Lcom/google/android/exoplayer2/text/dvb/DvbParser$ObjectData;->topFieldData:[B
 
+    .line 5
     iput-object p4, p0, Lcom/google/android/exoplayer2/text/dvb/DvbParser$ObjectData;->bottomFieldData:[B
 
     return-void

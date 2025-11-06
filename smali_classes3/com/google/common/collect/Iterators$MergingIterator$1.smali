@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Iterators$MergingIterator$1;
+.class public Lcom/google/common/collect/Iterators$MergingIterator$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,13 +27,14 @@
 
 
 # instance fields
-.field final synthetic val$itemComparator:Ljava/util/Comparator;
+.field public final synthetic val$itemComparator:Ljava/util/Comparator;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/Iterators$MergingIterator;Ljava/util/Comparator;)V
     .locals 0
 
+    .line 1
     iput-object p2, p0, Lcom/google/common/collect/Iterators$MergingIterator$1;->val$itemComparator:Ljava/util/Comparator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

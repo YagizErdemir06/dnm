@@ -27,16 +27,19 @@
 
     new-array v0, v0, [B
 
+    .line 1
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/bumptech/glide/load/data/ExifOrientationStream;->EXIF_SEGMENT:[B
 
+    .line 2
     array-length v0, v0
 
     sput v0, Lcom/bumptech/glide/load/data/ExifOrientationStream;->SEGMENT_LENGTH:I
 
     add-int/lit8 v0, v0, 0x2
 
+    .line 3
     sput v0, Lcom/bumptech/glide/load/data/ExifOrientationStream;->ORIENTATION_POSITION:I
 
     return-void
@@ -80,6 +83,7 @@
 .method public constructor <init>(Ljava/io/InputStream;I)V
     .locals 1
 
+    .line 1
     invoke-direct {p0, p1}, Ljava/io/FilterInputStream;-><init>(Ljava/io/InputStream;)V
 
     const/4 p1, -0x1
@@ -92,10 +96,12 @@
 
     int-to-byte p1, p2
 
+    .line 2
     iput-byte p1, p0, Lcom/bumptech/glide/load/data/ExifOrientationStream;->orientation:B
 
     return-void
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -123,6 +129,7 @@
 .method public mark(I)V
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -295,6 +302,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -310,6 +318,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Ljava/io/FilterInputStream;->skip(J)J
 
     move-result-wide p1
@@ -320,6 +329,7 @@
 
     if-lez v0, :cond_0
 
+    .line 2
     iget v0, p0, Lcom/bumptech/glide/load/data/ExifOrientationStream;->position:I
 
     int-to-long v0, v0

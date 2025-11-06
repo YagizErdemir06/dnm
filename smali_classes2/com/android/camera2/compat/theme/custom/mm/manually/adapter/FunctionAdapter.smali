@@ -13,29 +13,40 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/DiverseAdapter<",
-        "Lcom/android/camera/data/data/c;",
+        "Ld/d/a/l6/e/c;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field protected mCurrentMode:I
+.field public mCurrentMode:I
 
 .field private mDegree:I
 
-.field protected mOnClickListener:Landroid/view/View$OnClickListener;
+.field public mOnClickListener:Landroid/view/View$OnClickListener;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Ljava/util/List;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "listItems"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
             "Ljava/util/List<",
-            "Lcom/android/camera/data/data/c;",
+            "Ld/d/a/l6/e/c;",
             ">;)V"
         }
     .end annotation
@@ -48,12 +59,27 @@
 
 .method public constructor <init>(Landroid/content/Context;Ljava/util/List;ILandroid/view/View$OnClickListener;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "listItems",
+            "mode",
+            "onClickListener"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
             "Ljava/util/List<",
-            "Lcom/android/camera/data/data/c;",
+            "Ld/d/a/l6/e/c;",
             ">;I",
             "Landroid/view/View$OnClickListener;",
             ")V"
@@ -77,6 +103,7 @@
 .method public getItemCount()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/DiverseAdapter;->mItemList:Ljava/util/List;
 
     if-nez p0, :cond_0
@@ -85,6 +112,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -95,11 +123,22 @@
 
 .method public initSubRecyclerView(Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/DiverseAdapter$DiverseViewHolder;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "sideHolder",
+            "position"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/DiverseAdapter<",
-            "Lcom/android/camera/data/data/c;",
+            "Ld/d/a/l6/e/c;",
             ">.DiverseViewHolder;I)V"
         }
     .end annotation
@@ -109,21 +148,34 @@
 
 .method public onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "holder",
+            "position"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/DiverseAdapter;->mItemList:Ljava/util/List;
 
     invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/camera/data/data/c;
+    check-cast v0, Ld/d/a/l6/e/c;
 
+    .line 2
     move-object v1, p1
 
     check-cast v1, Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/DiverseAdapter$DiverseViewHolder;
 
     invoke-virtual {v1, v0, p2}, Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/DiverseAdapter$DiverseViewHolder;->setDataToView(Ljava/lang/Object;I)V
 
+    .line 3
     iget-object p2, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/FunctionAdapter;->mDegree:I
@@ -132,6 +184,7 @@
 
     invoke-virtual {p2, v0}, Landroid/view/View;->setRotation(F)V
 
+    .line 4
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/FunctionAdapter;->mOnClickListener:Landroid/view/View$OnClickListener;
@@ -144,6 +197,17 @@
 .method public bridge synthetic onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .locals 0
     .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "viewGroup",
+            "viewType"
+        }
     .end annotation
 
     .line 1
@@ -159,13 +223,24 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "viewGroup",
+            "viewType"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             "I)",
             "Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/DiverseAdapter<",
-            "Lcom/android/camera/data/data/c;",
+            "Ld/d/a/l6/e/c;",
             ">.DiverseViewHolder;"
         }
     .end annotation
@@ -178,7 +253,7 @@
     move-result-object p2
 
     .line 3
-    invoke-static {}, Ly2/b;->H0()Z
+    invoke-static {}, Ld/d/a/n6/b;->H0()Z
 
     move-result v0
 
@@ -186,7 +261,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0e0199
+    const v0, 0x7f0e0185
 
     .line 4
     invoke-virtual {p2, v0, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
@@ -196,7 +271,7 @@
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f0e019a
+    const v0, 0x7f0e0186
 
     .line 5
     invoke-virtual {p2, v0, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
@@ -214,9 +289,19 @@
 
 .method public setRotation(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "newDegree"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/DiverseAdapter;->setRotation(I)V
 
+    .line 2
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/FunctionAdapter;->mDegree:I
 
     return-void

@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ArrayTable$ArrayMap$2;
+.class public Lcom/google/common/collect/ArrayTable$ArrayMap$2;
 .super Lcom/google/common/collect/AbstractIndexedListIterator;
 .source "SourceFile"
 
@@ -23,13 +23,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/ArrayTable$ArrayMap;
+.field public final synthetic this$0:Lcom/google/common/collect/ArrayTable$ArrayMap;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/ArrayTable$ArrayMap;I)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/ArrayTable$ArrayMap$2;->this$0:Lcom/google/common/collect/ArrayTable$ArrayMap;
 
     invoke-direct {p0, p2}, Lcom/google/common/collect/AbstractIndexedListIterator;-><init>(I)V

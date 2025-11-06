@@ -1,4 +1,4 @@
-.class final Lio/reactivex/exceptions/CompositeException$CompositeExceptionCausalChain;
+.class public final Lio/reactivex/exceptions/CompositeException$CompositeExceptionCausalChain;
 .super Ljava/lang/RuntimeException;
 .source "SourceFile"
 
@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final MESSAGE:Ljava/lang/String; = "Chain of Causes for CompositeException In Order Received =>"
+.field public static final MESSAGE:Ljava/lang/String; = "Chain of Causes for CompositeException In Order Received =>"
 
 .field private static final serialVersionUID:J = 0x35c7853e403cebd2L
 
@@ -24,6 +24,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/RuntimeException;-><init>()V
 
     return-void

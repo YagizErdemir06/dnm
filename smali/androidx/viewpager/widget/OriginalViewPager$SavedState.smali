@@ -27,19 +27,20 @@
 
 
 # instance fields
-.field adapterState:Landroid/os/Parcelable;
+.field public adapterState:Landroid/os/Parcelable;
 
-.field isRTL:I
+.field public isRTL:I
 
-.field loader:Ljava/lang/ClassLoader;
+.field public loader:Ljava/lang/ClassLoader;
 
-.field position:I
+.field public position:I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/viewpager/widget/OriginalViewPager$SavedState$1;
 
     invoke-direct {v0}, Landroidx/viewpager/widget/OriginalViewPager$SavedState$1;-><init>()V
@@ -112,6 +113,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -120,6 +122,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 2
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
@@ -160,16 +163,20 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroidx/customview/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
+    .line 2
     iget v0, p0, Landroidx/viewpager/widget/OriginalViewPager$SavedState;->position:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 3
     iget v0, p0, Landroidx/viewpager/widget/OriginalViewPager$SavedState;->isRTL:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 4
     iget-object p0, p0, Landroidx/viewpager/widget/OriginalViewPager$SavedState;->adapterState:Landroid/os/Parcelable;
 
     invoke-virtual {p1, p0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V

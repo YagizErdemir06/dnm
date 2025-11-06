@@ -43,6 +43,7 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
@@ -62,6 +63,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/common/stats/ConnectionTracker;->zzc:Lcom/google/android/gms/common/stats/ConnectionTracker;
 
     if-nez v0, :cond_1
@@ -81,6 +83,7 @@
 
     sput-object v1, Lcom/google/android/gms/common/stats/ConnectionTracker;->zzc:Lcom/google/android/gms/common/stats/ConnectionTracker;
 
+    .line 2
     :cond_0
     monitor-exit v0
 
@@ -99,6 +102,7 @@
     :goto_0
     sget-object v0, Lcom/google/android/gms/common/stats/ConnectionTracker;->zzc:Lcom/google/android/gms/common/stats/ConnectionTracker;
 
+    .line 3
     invoke-static {v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object v0
@@ -107,6 +111,7 @@
 .method private static zzb(Landroid/content/Context;Landroid/content/ServiceConnection;)V
     .locals 0
 
+    .line 1
     :try_start_0
     invoke-virtual {p0, p1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
     :try_end_0
@@ -125,6 +130,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p3}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object p6
@@ -137,6 +143,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-virtual {p6}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
@@ -144,8 +151,10 @@
 
     const-string v2, "com.google.android.gms"
 
+    .line 3
     invoke-virtual {v2, p6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
+    .line 4
     :try_start_0
     invoke-static {p1}, Lcom/google/android/gms/common/wrappers/Wrappers;->packageManager(Landroid/content/Context;)Lcom/google/android/gms/common/wrappers/PackageManagerWrapper;
 
@@ -155,6 +164,7 @@
 
     move-result-object p6
 
+    .line 5
     iget p6, p6, Landroid/content/pm/ApplicationInfo;->flags:I
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
@@ -167,10 +177,12 @@
 
     const-string p0, "Attempted to bind to a service in a STOPPED package."
 
+    .line 6
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
+    .line 7
     :catch_0
     :cond_1
     :goto_0
@@ -182,6 +194,7 @@
 
     iget-object p6, p0, Lcom/google/android/gms/common/stats/ConnectionTracker;->zza:Ljava/util/concurrent/ConcurrentHashMap;
 
+    .line 8
     invoke-virtual {p6, p4, p4}, Ljava/util/concurrent/ConcurrentHashMap;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p6
@@ -204,6 +217,7 @@
 
     const/4 p2, 0x2
 
+    .line 9
     invoke-virtual {p3}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v2
@@ -212,12 +226,15 @@
 
     const-string p2, "Duplicate binding with the same ServiceConnection: %s, %s, %s."
 
+    .line 10
     invoke-static {p2, p6}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p2
 
+    .line 11
     invoke-static {v0, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 12
     :cond_2
     :try_start_1
     invoke-static {p1, p3, p4, p5, p7}, Lcom/google/android/gms/common/stats/ConnectionTracker;->zze(Landroid/content/Context;Landroid/content/Intent;Landroid/content/ServiceConnection;ILjava/util/concurrent/Executor;)Z
@@ -233,6 +250,7 @@
     :cond_3
     iget-object p0, p0, Lcom/google/android/gms/common/stats/ConnectionTracker;->zza:Ljava/util/concurrent/ConcurrentHashMap;
 
+    .line 13
     invoke-virtual {p0, p4, p4}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     return v1
@@ -240,12 +258,16 @@
     :catchall_0
     move-exception p1
 
+    .line 14
     iget-object p0, p0, Lcom/google/android/gms/common/stats/ConnectionTracker;->zza:Ljava/util/concurrent/ConcurrentHashMap;
 
+    .line 15
     invoke-virtual {p0, p4, p4}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;Ljava/lang/Object;)Z
 
+    .line 16
     throw p1
 
+    .line 17
     :cond_4
     invoke-static {p1, p3, p4, p5, p7}, Lcom/google/android/gms/common/stats/ConnectionTracker;->zze(Landroid/content/Context;Landroid/content/Intent;Landroid/content/ServiceConnection;ILjava/util/concurrent/Executor;)Z
 
@@ -258,6 +280,7 @@
 .method private static zzd(Landroid/content/ServiceConnection;)Z
     .locals 0
 
+    .line 1
     instance-of p0, p0, Lcom/google/android/gms/common/internal/zzs;
 
     if-nez p0, :cond_0
@@ -279,6 +302,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {}, Lcom/google/android/gms/common/util/PlatformVersion;->isAtLeastQ()Z
 
     move-result v0
@@ -293,6 +317,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     invoke-virtual {p0, p1, p2, p3}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
@@ -320,6 +345,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -342,6 +368,7 @@
 
     move v6, p4
 
+    .line 2
     invoke-direct/range {v1 .. v8}, Lcom/google/android/gms/common/stats/ConnectionTracker;->zzc(Landroid/content/Context;Ljava/lang/String;Landroid/content/Intent;Landroid/content/ServiceConnection;IZLjava/util/concurrent/Executor;)Z
 
     move-result p0
@@ -362,6 +389,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     invoke-static {p2}, Lcom/google/android/gms/common/stats/ConnectionTracker;->zzd(Landroid/content/ServiceConnection;)Z
 
     move-result v0
@@ -379,6 +407,7 @@
     :try_start_0
     iget-object v0, p0, Lcom/google/android/gms/common/stats/ConnectionTracker;->zza:Ljava/util/concurrent/ConcurrentHashMap;
 
+    .line 2
     invoke-virtual {v0, p2}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -391,6 +420,7 @@
 
     iget-object p0, p0, Lcom/google/android/gms/common/stats/ConnectionTracker;->zza:Ljava/util/concurrent/ConcurrentHashMap;
 
+    .line 3
     invoke-virtual {p0, p2}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
@@ -402,8 +432,10 @@
 
     invoke-virtual {p0, p2}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     throw p1
 
+    .line 5
     :cond_0
     invoke-static {p1, p2}, Lcom/google/android/gms/common/stats/ConnectionTracker;->zzb(Landroid/content/Context;Landroid/content/ServiceConnection;)V
 
@@ -423,6 +455,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/google/android/gms/common/stats/ConnectionTracker;->unbindService(Landroid/content/Context;Landroid/content/ServiceConnection;)V
     :try_end_0
@@ -471,6 +504,7 @@
 
     move-object v7, p6
 
+    .line 1
     invoke-direct/range {v0 .. v7}, Lcom/google/android/gms/common/stats/ConnectionTracker;->zzc(Landroid/content/Context;Ljava/lang/String;Landroid/content/Intent;Landroid/content/ServiceConnection;IZLjava/util/concurrent/Executor;)Z
 
     move-result p0

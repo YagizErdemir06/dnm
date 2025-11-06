@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer;
+.class public final Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -61,30 +61,35 @@
 
     new-array v1, v0, [F
 
+    .line 1
     fill-array-data v1, :array_0
 
     sput-object v1, Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer;->TEX_MATRIX_WHOLE:[F
 
     new-array v1, v0, [F
 
+    .line 2
     fill-array-data v1, :array_1
 
     sput-object v1, Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer;->TEX_MATRIX_TOP:[F
 
     new-array v1, v0, [F
 
+    .line 3
     fill-array-data v1, :array_2
 
     sput-object v1, Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer;->TEX_MATRIX_BOTTOM:[F
 
     new-array v1, v0, [F
 
+    .line 4
     fill-array-data v1, :array_3
 
     sput-object v1, Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer;->TEX_MATRIX_LEFT:[F
 
     new-array v0, v0, [F
 
+    .line 5
     fill-array-data v0, :array_4
 
     sput-object v0, Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer;->TEX_MATRIX_RIGHT:[F
@@ -160,6 +165,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -168,10 +174,13 @@
 .method public static isSupported(Lcom/google/android/exoplayer2/video/spherical/Projection;)Z
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/video/spherical/Projection;->leftMesh:Lcom/google/android/exoplayer2/video/spherical/Projection$Mesh;
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/video/spherical/Projection;->rightMesh:Lcom/google/android/exoplayer2/video/spherical/Projection$Mesh;
 
+    .line 3
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/video/spherical/Projection$Mesh;->getSubMeshCount()I
 
     move-result v1
@@ -182,6 +191,7 @@
 
     if-ne v1, v3, :cond_0
 
+    .line 4
     invoke-virtual {v0, v2}, Lcom/google/android/exoplayer2/video/spherical/Projection$Mesh;->getSubMesh(I)Lcom/google/android/exoplayer2/video/spherical/Projection$SubMesh;
 
     move-result-object v0
@@ -190,12 +200,14 @@
 
     if-nez v0, :cond_0
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/video/spherical/Projection$Mesh;->getSubMeshCount()I
 
     move-result v0
 
     if-ne v0, v3, :cond_0
 
+    .line 6
     invoke-virtual {p0, v2}, Lcom/google/android/exoplayer2/video/spherical/Projection$Mesh;->getSubMesh(I)Lcom/google/android/exoplayer2/video/spherical/Projection$SubMesh;
 
     move-result-object p0
@@ -219,6 +231,7 @@
 
     if-eqz p3, :cond_0
 
+    .line 1
     iget-object v1, v0, Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer;->rightMeshData:Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer$MeshData;
 
     goto :goto_0
@@ -231,6 +244,7 @@
 
     return-void
 
+    .line 2
     :cond_1
     iget v2, v0, Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer;->stereoMode:I
 
@@ -240,6 +254,7 @@
 
     if-eqz p3, :cond_2
 
+    .line 3
     sget-object v2, Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer;->TEX_MATRIX_BOTTOM:[F
 
     goto :goto_1
@@ -256,6 +271,7 @@
 
     if-eqz p3, :cond_4
 
+    .line 4
     sget-object v2, Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer;->TEX_MATRIX_RIGHT:[F
 
     goto :goto_1
@@ -265,9 +281,11 @@
 
     goto :goto_1
 
+    .line 5
     :cond_5
     sget-object v2, Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer;->TEX_MATRIX_WHOLE:[F
 
+    .line 6
     :goto_1
     iget v4, v0, Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer;->uTexMatrixHandle:I
 
@@ -275,6 +293,7 @@
 
     invoke-static {v4, v3, v5, v2, v5}, Landroid/opengl/GLES20;->glUniformMatrix3fv(IIZ[FI)V
 
+    .line 7
     iget v2, v0, Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer;->mvpMatrixHandle:I
 
     move-object/from16 v4, p2
@@ -283,20 +302,25 @@
 
     const v2, 0x84c0
 
+    .line 8
     invoke-static {v2}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
     const v2, 0x8d65
 
     move/from16 v3, p1
 
+    .line 9
     invoke-static {v2, v3}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
+    .line 10
     iget v2, v0, Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer;->textureHandle:I
 
     invoke-static {v2, v5}, Landroid/opengl/GLES20;->glUniform1i(II)V
 
+    .line 11
     invoke-static {}, Lcom/google/android/exoplayer2/util/GlUtil;->checkGlError()V
 
+    .line 12
     iget v6, v0, Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer;->positionHandle:I
 
     const/4 v7, 0x3
@@ -307,14 +331,18 @@
 
     const/16 v10, 0xc
 
+    .line 13
     invoke-static {v1}, Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer$MeshData;->access$000(Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer$MeshData;)Ljava/nio/FloatBuffer;
 
     move-result-object v11
 
+    .line 14
     invoke-static/range {v6 .. v11}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
+    .line 15
     invoke-static {}, Lcom/google/android/exoplayer2/util/GlUtil;->checkGlError()V
 
+    .line 16
     iget v12, v0, Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer;->texCoordsHandle:I
 
     const/4 v13, 0x2
@@ -325,14 +353,18 @@
 
     const/16 v16, 0x8
 
+    .line 17
     invoke-static {v1}, Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer$MeshData;->access$100(Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer$MeshData;)Ljava/nio/FloatBuffer;
 
     move-result-object v17
 
+    .line 18
     invoke-static/range {v12 .. v17}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
+    .line 19
     invoke-static {}, Lcom/google/android/exoplayer2/util/GlUtil;->checkGlError()V
 
+    .line 20
     invoke-static {v1}, Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer$MeshData;->access$200(Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer$MeshData;)I
 
     move-result v0
@@ -343,6 +375,7 @@
 
     invoke-static {v0, v5, v1}, Landroid/opengl/GLES20;->glDrawArrays(III)V
 
+    .line 21
     invoke-static {}, Lcom/google/android/exoplayer2/util/GlUtil;->checkGlError()V
 
     return-void
@@ -351,6 +384,7 @@
 .method public init()V
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/util/GlProgram;
 
     const-string v1, "uniform mat4 uMvpMatrix;\nuniform mat3 uTexMatrix;\nattribute vec4 aPosition;\nattribute vec2 aTexCoords;\nvarying vec2 vTexCoords;\n// Standard transformation.\nvoid main() {\n  gl_Position = uMvpMatrix * aPosition;\n  vTexCoords = (uTexMatrix * vec3(aTexCoords, 1)).xy;\n}\n"
@@ -363,12 +397,14 @@
 
     const-string v1, "uMvpMatrix"
 
+    .line 2
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/util/GlProgram;->getUniformLocation(Ljava/lang/String;)I
 
     move-result v0
 
     iput v0, p0, Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer;->mvpMatrixHandle:I
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer;->program:Lcom/google/android/exoplayer2/util/GlProgram;
 
     const-string v1, "uTexMatrix"
@@ -379,6 +415,7 @@
 
     iput v0, p0, Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer;->uTexMatrixHandle:I
 
+    .line 4
     iget-object v0, p0, Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer;->program:Lcom/google/android/exoplayer2/util/GlProgram;
 
     const-string v1, "aPosition"
@@ -389,6 +426,7 @@
 
     iput v0, p0, Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer;->positionHandle:I
 
+    .line 5
     iget-object v0, p0, Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer;->program:Lcom/google/android/exoplayer2/util/GlProgram;
 
     const-string v1, "aTexCoords"
@@ -399,6 +437,7 @@
 
     iput v0, p0, Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer;->texCoordsHandle:I
 
+    .line 6
     iget-object v0, p0, Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer;->program:Lcom/google/android/exoplayer2/util/GlProgram;
 
     const-string v1, "uTexture"
@@ -415,6 +454,7 @@
 .method public setProjection(Lcom/google/android/exoplayer2/video/spherical/Projection;)V
     .locals 3
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer;->isSupported(Lcom/google/android/exoplayer2/video/spherical/Projection;)Z
 
     move-result v0
@@ -423,11 +463,13 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget v0, p1, Lcom/google/android/exoplayer2/video/spherical/Projection;->stereoMode:I
 
     iput v0, p0, Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer;->stereoMode:I
 
+    .line 3
     new-instance v0, Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer$MeshData;
 
     iget-object v1, p1, Lcom/google/android/exoplayer2/video/spherical/Projection;->leftMesh:Lcom/google/android/exoplayer2/video/spherical/Projection$Mesh;
@@ -442,6 +484,7 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer;->leftMeshData:Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer$MeshData;
 
+    .line 4
     iget-boolean v1, p1, Lcom/google/android/exoplayer2/video/spherical/Projection;->singleMesh:Z
 
     if-eqz v1, :cond_1
@@ -468,10 +511,12 @@
 .method public shutdown()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/video/spherical/ProjectionRenderer;->program:Lcom/google/android/exoplayer2/util/GlProgram;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/GlProgram;->delete()V
 
     :cond_0

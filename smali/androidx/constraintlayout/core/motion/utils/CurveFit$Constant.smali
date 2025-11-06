@@ -1,4 +1,4 @@
-.class Landroidx/constraintlayout/core/motion/utils/CurveFit$Constant;
+.class public Landroidx/constraintlayout/core/motion/utils/CurveFit$Constant;
 .super Landroidx/constraintlayout/core/motion/utils/CurveFit;
 .source "SourceFile"
 
@@ -15,19 +15,22 @@
 
 
 # instance fields
-.field mTime:D
+.field public mTime:D
 
-.field mValue:[D
+.field public mValue:[D
 
 
 # direct methods
 .method public constructor <init>(D[D)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroidx/constraintlayout/core/motion/utils/CurveFit;-><init>()V
 
+    .line 2
     iput-wide p1, p0, Landroidx/constraintlayout/core/motion/utils/CurveFit$Constant;->mTime:D
 
+    .line 3
     iput-object p3, p0, Landroidx/constraintlayout/core/motion/utils/CurveFit$Constant;->mValue:[D
 
     return-void
@@ -52,11 +55,11 @@
     .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/utils/CurveFit$Constant;->mValue:[D
 
-    const/4 p1, 0x0
+    array-length p1, p0
 
-    array-length p2, p0
+    const/4 p2, 0x0
 
-    invoke-static {p0, p1, p3, p1, p2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-static {p0, p2, p3, p2, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     return-void
 .end method
@@ -102,6 +105,7 @@
 
     const/4 p1, 0x0
 
+    .line 1
     :goto_0
     iget-object p2, p0, Landroidx/constraintlayout/core/motion/utils/CurveFit$Constant;->mValue:[D
 
@@ -111,6 +115,7 @@
 
     const-wide/16 v0, 0x0
 
+    .line 2
     aput-wide v0, p3, p1
 
     add-int/lit8 p1, p1, 0x1
@@ -122,17 +127,18 @@
 .end method
 
 .method public getTimePoints()[D
-    .locals 4
+    .locals 3
 
     const/4 v0, 0x1
 
     new-array v0, v0, [D
 
-    const/4 v1, 0x0
+    .line 1
+    iget-wide v1, p0, Landroidx/constraintlayout/core/motion/utils/CurveFit$Constant;->mTime:D
 
-    iget-wide v2, p0, Landroidx/constraintlayout/core/motion/utils/CurveFit$Constant;->mTime:D
+    const/4 p0, 0x0
 
-    aput-wide v2, v0, v1
+    aput-wide v1, v0, p0
 
     return-object v0
 .end method

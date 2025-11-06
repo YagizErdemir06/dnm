@@ -1,4 +1,4 @@
-.class final Lcom/google/common/base/CharMatcher$JavaIsoControl;
+.class public final Lcom/google/common/base/CharMatcher$JavaIsoControl;
 .super Lcom/google/common/base/CharMatcher$NamedFastMatcher;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # static fields
-.field static final INSTANCE:Lcom/google/common/base/CharMatcher$JavaIsoControl;
+.field public static final INSTANCE:Lcom/google/common/base/CharMatcher$JavaIsoControl;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/base/CharMatcher$JavaIsoControl;
 
     invoke-direct {v0}, Lcom/google/common/base/CharMatcher$JavaIsoControl;-><init>()V
@@ -36,6 +37,7 @@
 
     const-string v0, "CharMatcher.javaIsoControl()"
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/google/common/base/CharMatcher$NamedFastMatcher;-><init>(Ljava/lang/String;)V
 
     return-void

@@ -8,19 +8,21 @@
 
 
 # instance fields
-.field protected randomID:I
+.field public randomID:I
 
-.field protected response:Lcom/android/camera2/compat/theme/custom/cv/widget/WidgetResponse;
+.field public response:Lcom/android/camera2/compat/theme/custom/cv/widget/WidgetResponse;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Landroid/appwidget/AppWidgetProvider;-><init>()V
 
     const/4 v0, 0x1
 
+    .line 2
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/cv/widget/CameraWidgetBaseProvider;->randomID:I
 
     return-void
@@ -28,9 +30,23 @@
 
 .method private refreshAppWidgets(Landroid/content/Context;Landroid/appwidget/AppWidgetManager;[I)V
     .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "appWidgetManager",
+            "appWidgetIds"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/cv/widget/CameraWidgetBaseProvider;->initViewList(Landroid/content/Context;)V
 
+    .line 2
     array-length v0, p3
 
     const/4 v1, 0x0
@@ -42,6 +58,7 @@
 
     aget v3, p3, v2
 
+    .line 3
     new-instance v4, Landroid/widget/RemoteViews;
 
     invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -56,18 +73,22 @@
 
     invoke-direct {v4, v5, v6}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 
-    const-string v5, "refreshAppWidgets"
+    new-array v5, v1, [Ljava/lang/Object;
 
-    new-array v6, v1, [Ljava/lang/Object;
+    const-string v6, "CameraWidgetBaseProvider"
 
-    const-string v7, "CameraWidgetBaseProvider"
+    const-string v7, "refreshAppWidgets"
 
-    invoke-static {v7, v5, v6}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 4
+    invoke-static {v6, v7, v5}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 5
     invoke-direct {p0, v4}, Lcom/android/camera2/compat/theme/custom/cv/widget/CameraWidgetBaseProvider;->refreshItems(Landroid/widget/RemoteViews;)V
 
+    .line 6
     invoke-virtual {p0, p1, v4}, Lcom/android/camera2/compat/theme/custom/cv/widget/CameraWidgetBaseProvider;->setWidgetIntent(Landroid/content/Context;Landroid/widget/RemoteViews;)V
 
+    .line 7
     invoke-virtual {p2, v3, v4}, Landroid/appwidget/AppWidgetManager;->updateAppWidget(ILandroid/widget/RemoteViews;)V
 
     add-int/lit8 v2, v2, 0x1
@@ -80,9 +101,18 @@
 
 .method private refreshItems(Landroid/widget/RemoteViews;)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "remoteViews"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/cv/widget/CameraWidgetBaseProvider;->response:Lcom/android/camera2/compat/theme/custom/cv/widget/WidgetResponse;
 
@@ -96,6 +126,7 @@
 
     if-ge v0, v1, :cond_0
 
+    .line 2
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/cv/widget/CameraWidgetBaseProvider;->response:Lcom/android/camera2/compat/theme/custom/cv/widget/WidgetResponse;
 
     invoke-virtual {v1}, Lcom/android/camera2/compat/theme/custom/cv/widget/WidgetResponse;->getContentList()Ljava/util/List;
@@ -108,6 +139,7 @@
 
     check-cast v1, Lcom/android/camera2/compat/theme/custom/cv/widget/WidgetResponse$WidgetItem;
 
+    .line 3
     iget-object v2, v1, Lcom/android/camera2/compat/theme/custom/cv/widget/WidgetResponse$WidgetItem;->mItemId:Ljava/lang/Integer;
 
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
@@ -122,6 +154,7 @@
 
     invoke-virtual {p1, v2, v3}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
 
+    .line 4
     iget-object v2, v1, Lcom/android/camera2/compat/theme/custom/cv/widget/WidgetResponse$WidgetItem;->mItemId:Ljava/lang/Integer;
 
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
@@ -143,11 +176,30 @@
 
 # virtual methods
 .method public abstract initViewList(Landroid/content/Context;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 .end method
 
 .method public onDeleted(Landroid/content/Context;[I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "appWidgetIds"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroid/appwidget/AppWidgetProvider;->onDeleted(Landroid/content/Context;[I)V
 
     const/4 p0, 0x0
@@ -158,6 +210,7 @@
 
     const-string p2, "onDeleted"
 
+    .line 2
     invoke-static {p1, p2, p0}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
@@ -165,7 +218,16 @@
 
 .method public onDisabled(Landroid/content/Context;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroid/appwidget/AppWidgetProvider;->onDisabled(Landroid/content/Context;)V
 
     const/4 p0, 0x0
@@ -176,6 +238,7 @@
 
     const-string v0, "onDisabled()"
 
+    .line 2
     invoke-static {p1, v0, p0}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
@@ -183,6 +246,18 @@
 
 .method public onUpdate(Landroid/content/Context;Landroid/appwidget/AppWidgetManager;[I)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "appWidgetManager",
+            "appWidgetIds"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -192,14 +267,27 @@
 
     const-string v2, "onUpdate"
 
+    .line 1
     invoke-static {v1, v2, v0}, Lcom/android/camera/log/Log;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     invoke-super {p0, p1, p2, p3}, Landroid/appwidget/AppWidgetProvider;->onUpdate(Landroid/content/Context;Landroid/appwidget/AppWidgetManager;[I)V
 
+    .line 3
     invoke-direct {p0, p1, p2, p3}, Lcom/android/camera2/compat/theme/custom/cv/widget/CameraWidgetBaseProvider;->refreshAppWidgets(Landroid/content/Context;Landroid/appwidget/AppWidgetManager;[I)V
 
     return-void
 .end method
 
 .method public abstract setWidgetIntent(Landroid/content/Context;Landroid/widget/RemoteViews;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "views"
+        }
+    .end annotation
 .end method

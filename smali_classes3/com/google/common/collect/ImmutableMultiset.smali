@@ -73,6 +73,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableMultisetGwtSerializationDependencies;-><init>()V
 
     return-void
@@ -90,6 +91,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ImmutableMultiset$Builder;
 
     invoke-direct {v0}, Lcom/google/common/collect/ImmutableMultiset$Builder;-><init>()V
@@ -109,6 +111,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ImmutableMultiset$Builder;
 
     invoke-direct {v0}, Lcom/google/common/collect/ImmutableMultiset$Builder;-><init>()V
@@ -140,6 +143,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ImmutableMultiset$Builder;
 
     invoke-interface {p0}, Ljava/util/Collection;->size()I
@@ -148,6 +152,7 @@
 
     invoke-direct {v0, v1}, Lcom/google/common/collect/ImmutableMultiset$Builder;-><init>(I)V
 
+    .line 2
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -165,6 +170,7 @@
 
     check-cast v1, Lcom/google/common/collect/Multiset$Entry;
 
+    .line 3
     invoke-interface {v1}, Lcom/google/common/collect/Multiset$Entry;->getElement()Ljava/lang/Object;
 
     move-result-object v2
@@ -177,6 +183,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-virtual {v0}, Lcom/google/common/collect/ImmutableMultiset$Builder;->build()Lcom/google/common/collect/ImmutableMultiset;
 
@@ -301,6 +308,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Ljava/util/AbstractCollection;->isEmpty()Z
 
     move-result v0
@@ -596,6 +604,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -613,10 +622,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/ImmutableMultiset;->asList:Lcom/google/common/collect/ImmutableList;
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-super {p0}, Lcom/google/common/collect/ImmutableCollection;->asList()Lcom/google/common/collect/ImmutableList;
 
     move-result-object v0
@@ -634,6 +645,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-interface {p0, p1}, Lcom/google/common/collect/Multiset;->count(Ljava/lang/Object;)I
 
     move-result p0
@@ -656,6 +668,7 @@
     .annotation build Lcom/google/common/annotations/GwtIncompatible;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMultiset;->entrySet()Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p0
@@ -677,6 +690,7 @@
 
     check-cast v0, Lcom/google/common/collect/Multiset$Entry;
 
+    .line 2
     invoke-interface {v0}, Lcom/google/common/collect/Multiset$Entry;->getCount()I
 
     move-result v1
@@ -689,6 +703,7 @@
 
     invoke-static {p1, p2, v1, v2}, Ljava/util/Arrays;->fill([Ljava/lang/Object;IILjava/lang/Object;)V
 
+    .line 3
     invoke-interface {v0}, Lcom/google/common/collect/Multiset$Entry;->getCount()I
 
     move-result v0
@@ -714,6 +729,7 @@
 .method public bridge synthetic elementSet()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMultiset;->elementSet()Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p0
@@ -766,6 +782,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/common/collect/Multisets;->equalsImpl(Lcom/google/common/collect/Multiset;Ljava/lang/Object;)Z
 
     move-result p0
@@ -786,6 +803,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMultiset;->entrySet()Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p0
@@ -851,6 +869,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -913,18 +932,19 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableMultiset;->entrySet()Lcom/google/common/collect/ImmutableSet;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/util/AbstractCollection;->toString()Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method abstract writeReplace()Ljava/lang/Object;
+.method public abstract writeReplace()Ljava/lang/Object;
     .annotation build Lcom/google/common/annotations/GwtIncompatible;
     .end annotation
 .end method

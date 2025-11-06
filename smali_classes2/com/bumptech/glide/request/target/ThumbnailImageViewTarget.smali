@@ -59,20 +59,23 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/request/target/ViewTarget;->view:Landroid/view/View;
 
     check-cast v0, Landroid/widget/ImageView;
 
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v0}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/request/target/ThumbnailImageViewTarget;->getDrawable(Ljava/lang/Object;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget v1, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     if-lez v1, :cond_0
@@ -81,6 +84,7 @@
 
     if-lez v1, :cond_0
 
+    .line 4
     new-instance v1, Lcom/bumptech/glide/request/target/FixedSizeDrawable;
 
     iget v2, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
@@ -91,6 +95,7 @@
 
     move-object p1, v1
 
+    .line 5
     :cond_0
     iget-object p0, p0, Lcom/bumptech/glide/request/target/ViewTarget;->view:Landroid/view/View;
 

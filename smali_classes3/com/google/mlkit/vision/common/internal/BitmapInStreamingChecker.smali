@@ -22,6 +22,7 @@
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/common/internal/GmsLogger;
 
     const-string v1, "StreamingFormatChecker"
@@ -38,6 +39,7 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/util/LinkedList;
@@ -64,6 +66,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/mlkit/vision/common/InputImage;->getFormat()I
 
     move-result p1
@@ -74,6 +77,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -81,6 +85,7 @@
 
     iget-object p1, p0, Lcom/google/mlkit/vision/common/internal/BitmapInStreamingChecker;->zzb:Ljava/util/LinkedList;
 
+    .line 3
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v2
@@ -89,6 +94,7 @@
 
     iget-object p1, p0, Lcom/google/mlkit/vision/common/internal/BitmapInStreamingChecker;->zzb:Ljava/util/LinkedList;
 
+    .line 4
     invoke-virtual {p1}, Ljava/util/LinkedList;->size()I
 
     move-result p1
@@ -99,11 +105,13 @@
 
     iget-object p1, p0, Lcom/google/mlkit/vision/common/internal/BitmapInStreamingChecker;->zzb:Ljava/util/LinkedList;
 
+    .line 5
     invoke-virtual {p1}, Ljava/util/LinkedList;->removeFirst()Ljava/lang/Object;
 
     :cond_1
     iget-object p1, p0, Lcom/google/mlkit/vision/common/internal/BitmapInStreamingChecker;->zzb:Ljava/util/LinkedList;
 
+    .line 6
     invoke-virtual {p1}, Ljava/util/LinkedList;->size()I
 
     move-result p1
@@ -112,6 +120,7 @@
 
     iget-object p1, p0, Lcom/google/mlkit/vision/common/internal/BitmapInStreamingChecker;->zzb:Ljava/util/LinkedList;
 
+    .line 7
     invoke-virtual {p1}, Ljava/util/LinkedList;->peekFirst()Ljava/lang/Object;
 
     move-result-object p1
@@ -150,6 +159,7 @@
 
     const-wide/16 v4, 0x5
 
+    .line 8
     invoke-virtual {p1, v4, v5}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
     move-result-wide v4
@@ -169,6 +179,7 @@
 
     const-string v0, "ML Kit has detected that you seem to pass camera frames to the detector as a Bitmap object. This is inefficient. Please use YUV_420_888 format for camera2 API or NV21 format for (legacy) camera API and directly pass down the byte array to ML Kit."
 
+    .line 9
     invoke-virtual {p0, p1, v0}, Lcom/google/android/gms/common/internal/GmsLogger;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3

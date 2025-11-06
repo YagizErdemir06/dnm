@@ -27,7 +27,7 @@
 
 .field public text:Ljava/lang/String;
 
-.field final synthetic this$0:Lcom/xiaomi/milab/videosdk/utils/TextAnim;
+.field public final synthetic this$0:Lcom/xiaomi/milab/videosdk/utils/TextAnim;
 
 .field public type:I
 
@@ -44,6 +44,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/milab/videosdk/utils/TextAnim$Cue;->this$0:Lcom/xiaomi/milab/videosdk/utils/TextAnim;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -56,6 +57,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

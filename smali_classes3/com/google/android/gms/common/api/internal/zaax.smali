@@ -29,6 +29,7 @@
 .method public final zaa(Lcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl;)Lcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zaax;->zaa:Lcom/google/android/gms/common/api/internal/zabi;
 
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zag:Lcom/google/android/gms/common/api/internal/zabe;
@@ -43,6 +44,7 @@
 .method public final zab(Lcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl;)Lcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl;
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string p1, "GoogleApiClient is not connected yet."
@@ -55,6 +57,7 @@
 .method public final zad()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zaax;->zaa:Lcom/google/android/gms/common/api/internal/zabi;
 
     iget-object v0, v0, Lcom/google/android/gms/common/api/internal/zabi;->zaa:Ljava/util/Map;
@@ -80,6 +83,7 @@
 
     check-cast v1, Lcom/google/android/gms/common/api/Api$Client;
 
+    .line 2
     invoke-interface {v1}, Lcom/google/android/gms/common/api/Api$Client;->disconnect()V
 
     goto :goto_0
@@ -89,6 +93,7 @@
 
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zabi;->zag:Lcom/google/android/gms/common/api/internal/zabe;
 
+    .line 3
     invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
 
     move-result-object v0
@@ -101,6 +106,7 @@
 .method public final zae()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zaax;->zaa:Lcom/google/android/gms/common/api/internal/zabi;
 
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/internal/zabi;->zaj()V

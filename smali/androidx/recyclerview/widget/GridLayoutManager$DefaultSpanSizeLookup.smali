@@ -18,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/GridLayoutManager$SpanSizeLookup;-><init>()V
 
     return-void
@@ -28,6 +29,7 @@
 .method public getSpanIndex(II)I
     .locals 0
 
+    .line 1
     rem-int/2addr p1, p2
 
     return p1

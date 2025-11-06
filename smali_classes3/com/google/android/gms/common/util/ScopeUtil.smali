@@ -41,8 +41,10 @@
 
     const-string v0, "scopes can\'t be null."
 
+    .line 1
     invoke-static {p0, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-interface {p0}, Ljava/util/Set;->size()I
 
     move-result v1
@@ -55,19 +57,23 @@
 
     check-cast p0, [Lcom/google/android/gms/common/api/Scope;
 
+    .line 3
     invoke-static {p0, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     array-length v0, p0
 
     new-array v0, v0, [Ljava/lang/String;
 
     const/4 v1, 0x0
 
+    .line 5
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_0
 
+    .line 6
     aget-object v2, p0, v1
 
     invoke-virtual {v2}, Lcom/google/android/gms/common/api/Scope;->getScopeUri()Ljava/lang/String;

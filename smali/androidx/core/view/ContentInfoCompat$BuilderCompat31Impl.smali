@@ -1,4 +1,4 @@
-.class final Landroidx/core/view/ContentInfoCompat$BuilderCompat31Impl;
+.class public final Landroidx/core/view/ContentInfoCompat$BuilderCompat31Impl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -80,13 +80,14 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     new-instance v0, Landroidx/core/view/ContentInfoCompat;
 
     new-instance v1, Landroidx/core/view/ContentInfoCompat$Compat31Impl;
 
     iget-object p0, p0, Landroidx/core/view/ContentInfoCompat$BuilderCompat31Impl;->mPlatformBuilder:Landroid/view/ContentInfo$Builder;
 
-    invoke-static {p0}, Landroidx/core/view/c;->a(Landroid/view/ContentInfo$Builder;)Landroid/view/ContentInfo;
+    invoke-virtual {p0}, Landroid/view/ContentInfo$Builder;->build()Landroid/view/ContentInfo;
 
     move-result-object p0
 
@@ -104,9 +105,10 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/ContentInfoCompat$BuilderCompat31Impl;->mPlatformBuilder:Landroid/view/ContentInfo$Builder;
 
-    invoke-static {p0, p1}, Landroidx/core/view/b;->a(Landroid/view/ContentInfo$Builder;Landroid/content/ClipData;)Landroid/view/ContentInfo$Builder;
+    invoke-virtual {p0, p1}, Landroid/view/ContentInfo$Builder;->setClip(Landroid/content/ClipData;)Landroid/view/ContentInfo$Builder;
 
     return-void
 .end method
@@ -118,9 +120,10 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/ContentInfoCompat$BuilderCompat31Impl;->mPlatformBuilder:Landroid/view/ContentInfo$Builder;
 
-    invoke-static {p0, p1}, Landroidx/core/view/e;->a(Landroid/view/ContentInfo$Builder;Landroid/os/Bundle;)Landroid/view/ContentInfo$Builder;
+    invoke-virtual {p0, p1}, Landroid/view/ContentInfo$Builder;->setExtras(Landroid/os/Bundle;)Landroid/view/ContentInfo$Builder;
 
     return-void
 .end method
@@ -128,9 +131,10 @@
 .method public setFlags(I)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/ContentInfoCompat$BuilderCompat31Impl;->mPlatformBuilder:Landroid/view/ContentInfo$Builder;
 
-    invoke-static {p0, p1}, Landroidx/core/view/g;->a(Landroid/view/ContentInfo$Builder;I)Landroid/view/ContentInfo$Builder;
+    invoke-virtual {p0, p1}, Landroid/view/ContentInfo$Builder;->setFlags(I)Landroid/view/ContentInfo$Builder;
 
     return-void
 .end method
@@ -142,9 +146,10 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/ContentInfoCompat$BuilderCompat31Impl;->mPlatformBuilder:Landroid/view/ContentInfo$Builder;
 
-    invoke-static {p0, p1}, Landroidx/core/view/h;->a(Landroid/view/ContentInfo$Builder;Landroid/net/Uri;)Landroid/view/ContentInfo$Builder;
+    invoke-virtual {p0, p1}, Landroid/view/ContentInfo$Builder;->setLinkUri(Landroid/net/Uri;)Landroid/view/ContentInfo$Builder;
 
     return-void
 .end method
@@ -152,9 +157,10 @@
 .method public setSource(I)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/ContentInfoCompat$BuilderCompat31Impl;->mPlatformBuilder:Landroid/view/ContentInfo$Builder;
 
-    invoke-static {p0, p1}, Landroidx/core/view/f;->a(Landroid/view/ContentInfo$Builder;I)Landroid/view/ContentInfo$Builder;
+    invoke-virtual {p0, p1}, Landroid/view/ContentInfo$Builder;->setSource(I)Landroid/view/ContentInfo$Builder;
 
     return-void
 .end method

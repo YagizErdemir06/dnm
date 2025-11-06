@@ -21,11 +21,21 @@
     return-void
 .end method
 
-.method public k(I)Ljava/lang/String;
+.method public j(I)Ljava/lang/String;
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "progress"
+        }
+    .end annotation
+
+    .line 1
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p0
@@ -33,23 +43,67 @@
     return-object p0
 .end method
 
-.method public l(Z)V
+.method public k(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "showTip"
+        }
+    .end annotation
 
     return-void
 .end method
 
-.method public n(I)V
+.method public m(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "progress"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public abstract onProgressChanged(Landroid/widget/SeekBar;IZ)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "seekBar",
+            "i",
+            "b"
+        }
+    .end annotation
 .end method
 
 .method public abstract onStartTrackingTouch(Landroid/widget/SeekBar;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "seekBar"
+        }
+    .end annotation
 .end method
 
 .method public abstract onStopTrackingTouch(Landroid/widget/SeekBar;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "seekBar"
+        }
+    .end annotation
 .end method

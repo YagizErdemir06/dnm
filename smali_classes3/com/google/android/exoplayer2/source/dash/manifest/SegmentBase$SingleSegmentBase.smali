@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field final indexLength:J
+.field public final indexLength:J
 
-.field final indexStart:J
+.field public final indexStart:J
 
 
 # direct methods
@@ -68,6 +68,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-wide v4, p0, Lcom/google/android/exoplayer2/source/dash/manifest/SegmentBase$SingleSegmentBase;->indexLength:J
 
     const-wide/16 v0, 0x0
@@ -80,6 +81,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     new-instance v6, Lcom/google/android/exoplayer2/source/dash/manifest/RangedUri;
 

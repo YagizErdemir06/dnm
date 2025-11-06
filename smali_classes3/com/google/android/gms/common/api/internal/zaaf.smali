@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/api/internal/zaaf;
+.class public final Lcom/google/android/gms/common/api/internal/zaaf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -13,6 +13,7 @@
 .method public constructor <init>(Lcom/google/android/gms/common/api/internal/ApiKey;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Lcom/google/android/gms/tasks/TaskCompletionSource;

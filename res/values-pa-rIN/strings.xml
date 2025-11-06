@@ -205,7 +205,6 @@
     <string name="accessibility_video_capture_button">ਵੀਡੀਓ ਸ਼ੂਟ ਕਰਦੇ ਸਮੇਂ ਫ਼ੋਟੋ ਲੈਣ ਲਈ ਬਟਨ</string>
     <string name="accessibility_video_pause_button">ਵੀਡੀਓ ਰਿਕਾਰਡਿੰਗ ਨੂੰ ਵਿਰਾਮ ਦਿੱਤਾ ਗਿਆ</string>
     <string name="accessibility_video_resume_button">ਵੀਡੀਓ ਰਿਕਾਰਡਿੰਗ ਨੂੰ ਓਥੋਂ ਹੀ ਮੁੜ ਸ਼ੁਰੂ ਕੀਤਾ ਗਿਆ</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">ਵਾਟਰਮਾਰਕ ਬੰਦ ਹਨ</string>
     <string name="accessibility_watermark_image_on">ਵਾਟਰਮਾਰਕ ਚਾਲੂ ਹਨ</string>
     <string name="accessibility_watermark_text">ਵਾਟਰਮਾਰਕ ਅਨੂਕੂਲਨ ਪੈਨਲ ਖੋਲ੍ਹੋ</string>
@@ -213,16 +212,6 @@
     <string name="accessibility_zoom_button">ਜ਼ੂਮ ਮੋਡ</string>
     <string name="actionbar_button_up_description">ਵਾਪਸ</string>
     <string name="afternoon">ਬਾਅਦ ਦੁਪਹਿਰ</string>
-    <string name="agent_flip_tbc">ਅੰਦਰਲੀ ਸਕ੍ਰੀਨ ਉੱਤੇ ਜਾਰੀ ਰੱਖੋ</string>
-    <string name="agent_function_max">ਅਧਿਕਤਮ ਮਾਨ ਤੱਕ ਵਿਵਸਥਿਤ ਕੀਤਾ ਗਿਆ</string>
-    <string name="agent_function_min">ਘੱਟੋ-ਘੱਟ ਮਾਨ ਤੱਕ ਵਿਵਸਥਿਤ ਕੀਤਾ ਗਿਆ</string>
-    <string name="agent_workspace_mode_not_supported">ਇਹ ਵਿਸ਼ੇਸ਼ਤਾ ਸਮਰਥਿਤ ਨਹੀਂ ਹੈ</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"ਇਹ ਵਿਸ਼ੇਸ਼ਤਾ ਸਮਰਥਿਤ ਨਹੀਂ ਹੈ।
-ਇਸਦੀ ਬਜਾਏ ਫ਼ੋਟੋ ਮੋਡ ਖੋਲ੍ਹਿਆ ਗਿਆ।"</string>
-    <string name="agent_workspace_on">\"%1$s\" ਦੀ ਫ਼ੋਟੋਗ੍ਰਾਫ਼ੀ ਕਰਨ ਲਈ ਸੈੱਟ ਕੀਤੇ ਗਏ ਪੈਮਾਨੇ</string>
-    <string name="agent_workspace_tbc">ਦ੍ਰਿਸ਼ ਦੀ ਅਧਿਐਨ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ</string>
-    <string name="agent_workspace_tbc_use_default">"ਦ੍ਰਿਸ਼ ਦੀ ਅਧਿਐਨ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…
-ਕੈਮਰੇ ਦੇ ਪੈਮਾਨੇ ਪੂਰਵ-ਨਿਰਧਾਰਤ ਵਜੋਂ ਸੈੱਟ ਕੀਤੇ ਗਏ ਹਨ"</string>
     <string name="ai_agra_fort">ਆਗਰੇ ਦਾ ਕਿਲਾ</string>
     <string name="ai_amber_fort">ਐਂਬਰ ਪੈਲੇਸ</string>
     <string name="ai_baby">ਬੱਚਾ</string>
@@ -781,7 +770,6 @@
     <string name="download_hint_cn">ਇੰਝ ਲੱਗਦਾ ਹੈ ਤੁਹਾਡਾ ਡੀਵਾਈਸ WLAN ਨਾਲ ਕਨੈਕਟ ਕੀਤਾ ਹੋਇਆ ਹੈ। ਕੀ ਹੁਣੇ ਆਈਟਮਾਂ ਡਾਊਨਲੋਡ ਕਰਨ ਲਈ ਮੋਬਾਈਲ ਡਾਟਾ ਦੇ %1$s MB ਦੀ ਵਰਤੋਂ ਕਰਨੀ ਹੈ?</string>
     <string name="download_hint_wifi">ਇੰਝ ਲੱਗਦਾ ਹੈ ਤੁਹਾਡਾ ਡੀਵਾਈਸ ਵਾਈ-ਫ਼ਾਈ ਨਾਲ ਕਨੈਕਟ ਨਹੀਂ ਕੀਤਾ ਹੋਇਆ। ਹੁਣੇ ਆਈਟਮਾਂ ਡਾਊਨਲੋਡ ਕਰਨ ਲਈ ਮੋਬਾਈਲ ਡਾਟਾ ਦੇ %1$s MB ਦੀ ਵਰਤੋਂ ਕਰਨੀ ਹੈ?</string>
     <string name="download_in_progress">ਡਾਊਨਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…</string>
-    <string name="download_network_error">ਡਾਊਨਲੋਡ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ। ਆਪਣੀਆਂ ਨੈੱਟਵਰਕ ਸੈਟਿੰਗਾਂ ਦੀ ਜਾਂਚ ਕਰੋ।</string>
     <string name="download_title">ਡਾਟਾ ਵਰਤੋਂ ਚਿਤਾਵਨੀ</string>
     <string name="download_waiting">ਬਾਕੀ ਹੈ…</string>
     <string name="dual_camera_lens_covered_toast">ਲੈਂਸ ਕਵਰ ਕੀਤਾ ਹੋਇਆ ਹੈ।</string>
@@ -1260,7 +1248,6 @@
     <string name="miuix_appcompat_delete_description">ਮਿਟਾਓ</string>
     <string name="miuix_appcompat_deselect_all">ਸਾਰੀਆਂ ਚੋਣਾਂ ਹਟਾਓ</string>
     <string name="miuix_appcompat_deselect_all_description">ਸਾਰੀਆਂ ਚੋਣਾਂ ਹਟਾਓ</string>
-    <string name="miuix_appcompat_edit">ਸੰਪਾਦਨ ਕਰੋ</string>
     <string name="miuix_appcompat_search_action_mode_cancel">ਰੱਦ ਕਰੋ</string>
     <string name="miuix_appcompat_search_input_description">ਖੋਜ</string>
     <string name="miuix_appcompat_select_all">ਸਾਰੇ ਚੁਣੇ</string>
@@ -2199,7 +2186,6 @@
     <string name="time_picker_label_hour">ਘੰ</string>
     <string name="time_picker_label_minute">ਮਿੰ</string>
     <string name="time_stamp_date_format">dd/MM/yyyy</string>
-    <string name="time_stamp_date_format_minute">dd/MM/yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">ਸ਼ੂਟਿੰਗ ਦੌਰਾਨ ਜਾਂ ਪਹਿਲਾਂ ਕਿਸੇ ਵੀ ਸਮੇਂ ਬੈਕਗ੍ਰਾਊਂਡ ਨੂੰ ਫ਼੍ਰੀਜ਼ ਜਾਂ ਅਨਫ਼੍ਰੀਜ਼ ਕਰ ਸਕਦੇ ਹੋ।</string>
     <string name="timefreeze_guide_tip3">ਆਪਣੇ ਵਿਸ਼ੇ ਨੂੰ ਕਹੋ ਕਿ ਉਹ ਫ਼੍ਰੇਮ ਦੇ ਵਿਚਕਾਰ ਰਹੇ।</string>
     <string name="timefreeze_guide_tip4">ਟ੍ਰੈਫ਼ਿਕ ਰੋਕੋ।</string>
@@ -2237,7 +2223,7 @@
     <string name="tip_flash_screen_light_on">ਹਲਕੀ ਫ਼ਲੈਸ਼: ਚਾਲੂ</string>
     <string name="tip_flash_soft_light_off">ਹਲਕੀ ਫ਼ਲੈਸ਼: ਬੰਦ</string>
     <string name="tip_flash_soft_light_torch">ਹਲਕੀ ਫ਼ਲੈਸ਼: ਫ਼ਲੈਸ਼ਲਾਈਟ ਮੋਡ</string>
-    <string name="tip_flash_torch">ਫ਼ਲੈਸ਼: ਫ਼ਲੈਸ਼ਲਾਈਟ</string>
+    <string name="tip_flash_torch">ਫ਼ਲੈਸ਼: ਹਮੇਸ਼ਾਂ ਚਾਲੂ</string>
     <string name="tip_friend_mode_connect_when_24GHz">ਝਲਕ ਗੁਣਵੱਤਾ ਨੂੰ ਬਿਹਤਰ ਬਣਾਉਣ ਲਈ %s GHz ਕਨੈਕਸ਼ਨ ਦੀ ਵਰਤੋਂ ਕਰੋ</string>
     <string name="tip_friend_mode_display_device_name_connect">ਸਾਂਝਾ ਕੀਤੀ ਗਈ ਝਲਕ</string>
     <string name="tip_friend_mode_display_device_name_disconnect">ਦੂਸਰੇ ਡੀਵਾਈਸ ਨੇ ਇਹ ਸੈਸ਼ਨ ਛੱਡ ਦਿੱਤਾ ਹੈ</string>

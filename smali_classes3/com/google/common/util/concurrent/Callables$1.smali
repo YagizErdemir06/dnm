@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/Callables$1;
+.class public Lcom/google/common/util/concurrent/Callables$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,13 +26,14 @@
 
 
 # instance fields
-.field final synthetic val$value:Ljava/lang/Object;
+.field public final synthetic val$value:Ljava/lang/Object;
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/Callables$1;->val$value:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,6 +54,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/Callables$1;->val$value:Ljava/lang/Object;
 
     return-object p0

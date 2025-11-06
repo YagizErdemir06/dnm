@@ -1,4 +1,4 @@
-.class final Lcom/google/common/eventbus/EventBus$LoggingHandler;
+.class public final Lcom/google/common/eventbus/EventBus$LoggingHandler;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # static fields
-.field static final INSTANCE:Lcom/google/common/eventbus/EventBus$LoggingHandler;
+.field public static final INSTANCE:Lcom/google/common/eventbus/EventBus$LoggingHandler;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/eventbus/EventBus$LoggingHandler;
 
     invoke-direct {v0}, Lcom/google/common/eventbus/EventBus$LoggingHandler;-><init>()V
@@ -37,6 +38,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,6 +47,7 @@
 .method private static logger(Lcom/google/common/eventbus/SubscriberExceptionContext;)Ljava/util/logging/Logger;
     .locals 3
 
+    .line 1
     const-class v0, Lcom/google/common/eventbus/EventBus;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -101,14 +104,17 @@
 .method private static message(Lcom/google/common/eventbus/SubscriberExceptionContext;)Ljava/lang/String;
     .locals 5
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/eventbus/SubscriberExceptionContext;->getSubscriberMethod()Ljava/lang/reflect/Method;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
     move-result-object v1
 
+    .line 3
     invoke-virtual {v0}, Ljava/lang/reflect/Method;->getParameterTypes()[Ljava/lang/Class;
 
     move-result-object v0
@@ -121,6 +127,7 @@
 
     move-result-object v0
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/common/eventbus/SubscriberExceptionContext;->getSubscriber()Ljava/lang/Object;
 
     move-result-object v2
@@ -129,6 +136,7 @@
 
     move-result-object v2
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/common/eventbus/SubscriberExceptionContext;->getEvent()Ljava/lang/Object;
 
     move-result-object p0
@@ -209,10 +217,12 @@
 .method public handleException(Ljava/lang/Throwable;Lcom/google/common/eventbus/SubscriberExceptionContext;)V
     .locals 2
 
+    .line 1
     invoke-static {p2}, Lcom/google/common/eventbus/EventBus$LoggingHandler;->logger(Lcom/google/common/eventbus/SubscriberExceptionContext;)Ljava/util/logging/Logger;
 
     move-result-object p0
 
+    .line 2
     sget-object v0, Ljava/util/logging/Level;->SEVERE:Ljava/util/logging/Level;
 
     invoke-virtual {p0, v0}, Ljava/util/logging/Logger;->isLoggable(Ljava/util/logging/Level;)Z
@@ -221,6 +231,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 3
     invoke-static {p2}, Lcom/google/common/eventbus/EventBus$LoggingHandler;->message(Lcom/google/common/eventbus/SubscriberExceptionContext;)Ljava/lang/String;
 
     move-result-object p2

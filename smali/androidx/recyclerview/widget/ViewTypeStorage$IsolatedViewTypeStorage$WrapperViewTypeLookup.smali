@@ -1,4 +1,4 @@
-.class Landroidx/recyclerview/widget/ViewTypeStorage$IsolatedViewTypeStorage$WrapperViewTypeLookup;
+.class public Landroidx/recyclerview/widget/ViewTypeStorage$IsolatedViewTypeStorage$WrapperViewTypeLookup;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,19 +22,21 @@
 
 .field private mLocalToGlobalMapping:Landroid/util/SparseIntArray;
 
-.field final mWrapper:Landroidx/recyclerview/widget/NestedAdapterWrapper;
+.field public final mWrapper:Landroidx/recyclerview/widget/NestedAdapterWrapper;
 
-.field final synthetic this$0:Landroidx/recyclerview/widget/ViewTypeStorage$IsolatedViewTypeStorage;
+.field public final synthetic this$0:Landroidx/recyclerview/widget/ViewTypeStorage$IsolatedViewTypeStorage;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/recyclerview/widget/ViewTypeStorage$IsolatedViewTypeStorage;Landroidx/recyclerview/widget/NestedAdapterWrapper;)V
     .locals 1
 
+    .line 1
     iput-object p1, p0, Landroidx/recyclerview/widget/ViewTypeStorage$IsolatedViewTypeStorage$WrapperViewTypeLookup;->this$0:Landroidx/recyclerview/widget/ViewTypeStorage$IsolatedViewTypeStorage;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance p1, Landroid/util/SparseIntArray;
 
     const/4 v0, 0x1
@@ -43,12 +45,14 @@
 
     iput-object p1, p0, Landroidx/recyclerview/widget/ViewTypeStorage$IsolatedViewTypeStorage$WrapperViewTypeLookup;->mLocalToGlobalMapping:Landroid/util/SparseIntArray;
 
+    .line 3
     new-instance p1, Landroid/util/SparseIntArray;
 
     invoke-direct {p1, v0}, Landroid/util/SparseIntArray;-><init>(I)V
 
     iput-object p1, p0, Landroidx/recyclerview/widget/ViewTypeStorage$IsolatedViewTypeStorage$WrapperViewTypeLookup;->mGlobalToLocalMapping:Landroid/util/SparseIntArray;
 
+    .line 4
     iput-object p2, p0, Landroidx/recyclerview/widget/ViewTypeStorage$IsolatedViewTypeStorage$WrapperViewTypeLookup;->mWrapper:Landroidx/recyclerview/widget/NestedAdapterWrapper;
 
     return-void
@@ -59,6 +63,7 @@
 .method public dispose()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/ViewTypeStorage$IsolatedViewTypeStorage$WrapperViewTypeLookup;->this$0:Landroidx/recyclerview/widget/ViewTypeStorage$IsolatedViewTypeStorage;
 
     iget-object p0, p0, Landroidx/recyclerview/widget/ViewTypeStorage$IsolatedViewTypeStorage$WrapperViewTypeLookup;->mWrapper:Landroidx/recyclerview/widget/NestedAdapterWrapper;
@@ -71,6 +76,7 @@
 .method public globalToLocal(I)I
     .locals 3
 
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/ViewTypeStorage$IsolatedViewTypeStorage$WrapperViewTypeLookup;->mGlobalToLocalMapping:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseIntArray;->indexOfKey(I)I
@@ -79,6 +85,7 @@
 
     if-ltz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Landroidx/recyclerview/widget/ViewTypeStorage$IsolatedViewTypeStorage$WrapperViewTypeLookup;->mGlobalToLocalMapping:Landroid/util/SparseIntArray;
 
     invoke-virtual {p0, v0}, Landroid/util/SparseIntArray;->valueAt(I)I
@@ -87,6 +94,7 @@
 
     return p0
 
+    .line 3
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -94,7 +102,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "requested global type "
+    const-string v2, "requested global type "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -122,6 +130,7 @@
 .method public localToGlobal(I)I
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/ViewTypeStorage$IsolatedViewTypeStorage$WrapperViewTypeLookup;->mLocalToGlobalMapping:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseIntArray;->indexOfKey(I)I
@@ -132,6 +141,7 @@
 
     if-le v0, v1, :cond_0
 
+    .line 2
     iget-object p0, p0, Landroidx/recyclerview/widget/ViewTypeStorage$IsolatedViewTypeStorage$WrapperViewTypeLookup;->mLocalToGlobalMapping:Landroid/util/SparseIntArray;
 
     invoke-virtual {p0, v0}, Landroid/util/SparseIntArray;->valueAt(I)I
@@ -140,6 +150,7 @@
 
     return p0
 
+    .line 3
     :cond_0
     iget-object v0, p0, Landroidx/recyclerview/widget/ViewTypeStorage$IsolatedViewTypeStorage$WrapperViewTypeLookup;->this$0:Landroidx/recyclerview/widget/ViewTypeStorage$IsolatedViewTypeStorage;
 
@@ -149,10 +160,12 @@
 
     move-result v0
 
+    .line 4
     iget-object v1, p0, Landroidx/recyclerview/widget/ViewTypeStorage$IsolatedViewTypeStorage$WrapperViewTypeLookup;->mLocalToGlobalMapping:Landroid/util/SparseIntArray;
 
     invoke-virtual {v1, p1, v0}, Landroid/util/SparseIntArray;->put(II)V
 
+    .line 5
     iget-object p0, p0, Landroidx/recyclerview/widget/ViewTypeStorage$IsolatedViewTypeStorage$WrapperViewTypeLookup;->mGlobalToLocalMapping:Landroid/util/SparseIntArray;
 
     invoke-virtual {p0, v0, p1}, Landroid/util/SparseIntArray;->put(II)V

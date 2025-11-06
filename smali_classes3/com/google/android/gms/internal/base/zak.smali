@@ -150,6 +150,7 @@
 .method public final draw(Landroid/graphics/Canvas;)V
     .locals 6
 
+    .line 1
     iget v0, p0, Lcom/google/android/gms/internal/base/zak;->zaa:I
 
     const/4 v1, 0x2
@@ -164,6 +165,7 @@
 
     goto :goto_1
 
+    .line 2
     :cond_0
     iget-wide v0, p0, Lcom/google/android/gms/internal/base/zak;->zab:J
 
@@ -173,6 +175,7 @@
 
     if-ltz v0, :cond_4
 
+    .line 3
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
@@ -205,6 +208,7 @@
 
     iput v2, p0, Lcom/google/android/gms/internal/base/zak;->zaa:I
 
+    .line 4
     :cond_2
     invoke-static {v0, v1}, Ljava/lang/Math;->min(FF)F
 
@@ -226,6 +230,7 @@
 
     goto :goto_1
 
+    .line 5
     :cond_3
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -237,6 +242,7 @@
 
     move v3, v2
 
+    .line 6
     :cond_4
     :goto_1
     iget v0, p0, Lcom/google/android/gms/internal/base/zak;->zaf:I
@@ -268,8 +274,10 @@
 
     if-ne v0, p0, :cond_7
 
+    .line 7
     invoke-virtual {v5, p0}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
+    .line 8
     invoke-virtual {v5, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     :cond_7
@@ -282,8 +290,10 @@
 
     sub-int/2addr v2, v0
 
+    .line 9
     invoke-virtual {v4, v2}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
+    .line 10
     :cond_9
     invoke-virtual {v4, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
@@ -291,19 +301,24 @@
 
     iget v1, p0, Lcom/google/android/gms/internal/base/zak;->zad:I
 
+    .line 11
     invoke-virtual {v4, v1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
     :cond_a
     if-lez v0, :cond_b
 
+    .line 12
     invoke-virtual {v5, v0}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
+    .line 13
     invoke-virtual {v5, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     iget p1, p0, Lcom/google/android/gms/internal/base/zak;->zad:I
 
+    .line 14
     invoke-virtual {v5, p1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
+    .line 15
     :cond_b
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
@@ -313,6 +328,7 @@
 .method public final getChangingConfigurations()I
     .locals 2
 
+    .line 1
     invoke-super {p0}, Landroid/graphics/drawable/Drawable;->getChangingConfigurations()I
 
     move-result v0
@@ -335,6 +351,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/base/zak;->zac()Z
 
     move-result v0
@@ -343,6 +360,7 @@
 
     iget-object v0, p0, Lcom/google/android/gms/internal/base/zak;->zai:Lcom/google/android/gms/internal/base/zaj;
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/gms/internal/base/zak;->getChangingConfigurations()I
 
     move-result v1
@@ -362,6 +380,7 @@
 .method public final getIntrinsicHeight()I
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/base/zak;->zaj:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
@@ -384,6 +403,7 @@
 .method public final getIntrinsicWidth()I
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/base/zak;->zaj:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
@@ -406,6 +426,7 @@
 .method public final getOpacity()I
     .locals 2
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/gms/internal/base/zak;->zan:Z
 
     if-nez v0, :cond_0
@@ -441,12 +462,14 @@
 .method public final invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
+    .line 2
     invoke-interface {p1, p0}, Landroid/graphics/drawable/Drawable$Callback;->invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
 
     :cond_0
@@ -458,6 +481,7 @@
     .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/gms/internal/base/zak;->zah:Z
 
     if-nez v0, :cond_1
@@ -468,18 +492,22 @@
 
     if-ne v0, p0, :cond_1
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/gms/internal/base/zak;->zac()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/gms/internal/base/zak;->zaj:Landroid/graphics/drawable/Drawable;
 
+    .line 4
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
     iget-object v0, p0, Lcom/google/android/gms/internal/base/zak;->zak:Landroid/graphics/drawable/Drawable;
 
+    .line 5
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
     const/4 v0, 0x1
@@ -488,11 +516,13 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string v0, "One or more children of this LayerDrawable does not have constant state; this drawable cannot be mutated."
 
+    .line 7
     invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p0
@@ -505,12 +535,14 @@
 .method public final onBoundsChange(Landroid/graphics/Rect;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/base/zak;->zaj:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
     iget-object p0, p0, Lcom/google/android/gms/internal/base/zak;->zak:Landroid/graphics/drawable/Drawable;
 
+    .line 2
     invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
     return-void
@@ -519,12 +551,14 @@
 .method public final scheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
+    .line 2
     invoke-interface {p1, p0, p2, p3, p4}, Landroid/graphics/drawable/Drawable$Callback;->scheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
 
     :cond_0
@@ -534,6 +568,7 @@
 .method public final setAlpha(I)V
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/android/gms/internal/base/zak;->zaf:I
 
     iget v1, p0, Lcom/google/android/gms/internal/base/zak;->zad:I
@@ -557,12 +592,14 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/base/zak;->zaj:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
     iget-object p0, p0, Lcom/google/android/gms/internal/base/zak;->zak:Landroid/graphics/drawable/Drawable;
 
+    .line 2
     invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
     return-void
@@ -571,12 +608,14 @@
 .method public final unscheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
+    .line 2
     invoke-interface {p1, p0, p2}, Landroid/graphics/drawable/Drawable$Callback;->unscheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
 
     :cond_0
@@ -594,6 +633,7 @@
 .method public final zab(I)V
     .locals 0
 
+    .line 1
     iget p1, p0, Lcom/google/android/gms/internal/base/zak;->zad:I
 
     iput p1, p0, Lcom/google/android/gms/internal/base/zak;->zac:I
@@ -618,6 +658,7 @@
 .method public final zac()Z
     .locals 3
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/gms/internal/base/zak;->zal:Z
 
     if-nez v0, :cond_1

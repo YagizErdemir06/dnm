@@ -1,4 +1,4 @@
-.class final enum Lcom/google/common/cache/LocalCache$EntryFactory$5;
+.class public final enum Lcom/google/common/cache/LocalCache$EntryFactory$5;
 .super Lcom/google/common/cache/LocalCache$EntryFactory;
 .source "SourceFile"
 
@@ -20,6 +20,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, p2, v0}, Lcom/google/common/cache/LocalCache$EntryFactory;-><init>(Ljava/lang/String;ILcom/google/common/cache/LocalCache$1;)V
 
     return-void
@@ -49,6 +50,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Lcom/google/common/cache/LocalCache$WeakEntry;
 
     iget-object p1, p1, Lcom/google/common/cache/LocalCache$Segment;->keyReferenceQueue:Ljava/lang/ref/ReferenceQueue;

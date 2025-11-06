@@ -17,17 +17,17 @@
 
 
 # virtual methods
-.method public abstract apply(Lkv/c;)Lkv/c;
-    .param p1    # Lkv/c;
+.method public abstract apply(Ln/e/c;)Ln/e/c;
+    .param p1    # Ln/e/c;
         .annotation build Lio/reactivex/annotations/NonNull;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkv/c<",
+            "Ln/e/c<",
             "-TDownstream;>;)",
-            "Lkv/c<",
+            "Ln/e/c<",
             "-TUpstream;>;"
         }
     .end annotation

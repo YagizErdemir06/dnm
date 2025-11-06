@@ -3,29 +3,30 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnFocusChangeListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lmiuix/pickerwidget/widget/NumberPicker;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lmiuix/pickerwidget/widget/NumberPicker;->P()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x1
-    name = "c"
+    name = null
 .end annotation
 
 
 # instance fields
-.field public final synthetic a:Lmiuix/pickerwidget/widget/NumberPicker;
+.field public final synthetic c:Lmiuix/pickerwidget/widget/NumberPicker;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/pickerwidget/widget/NumberPicker;)V
     .locals 0
 
-    iput-object p1, p0, Lmiuix/pickerwidget/widget/NumberPicker$c;->a:Lmiuix/pickerwidget/widget/NumberPicker;
+    .line 1
+    iput-object p1, p0, Lmiuix/pickerwidget/widget/NumberPicker$c;->c:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -34,14 +35,39 @@
 
 
 # virtual methods
-.method public run()V
+.method public onFocusChange(Landroid/view/View;Z)V
     .locals 1
 
-    iget-object p0, p0, Lmiuix/pickerwidget/widget/NumberPicker$c;->a:Lmiuix/pickerwidget/widget/NumberPicker;
+    if-eqz p2, :cond_0
 
-    const/4 v0, 0x1
+    .line 1
+    iget-object p0, p0, Lmiuix/pickerwidget/widget/NumberPicker$c;->c:Lmiuix/pickerwidget/widget/NumberPicker;
 
-    invoke-static {p0, v0}, Lmiuix/pickerwidget/widget/NumberPicker;->m(Lmiuix/pickerwidget/widget/NumberPicker;Z)Z
+    invoke-static {p0}, Lmiuix/pickerwidget/widget/NumberPicker;->y(Lmiuix/pickerwidget/widget/NumberPicker;)Landroid/widget/EditText;
 
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/widget/EditText;->selectAll()V
+
+    goto :goto_0
+
+    .line 2
+    :cond_0
+    iget-object p2, p0, Lmiuix/pickerwidget/widget/NumberPicker$c;->c:Lmiuix/pickerwidget/widget/NumberPicker;
+
+    invoke-static {p2}, Lmiuix/pickerwidget/widget/NumberPicker;->y(Lmiuix/pickerwidget/widget/NumberPicker;)Landroid/widget/EditText;
+
+    move-result-object p2
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p2, v0, v0}, Landroid/widget/EditText;->setSelection(II)V
+
+    .line 3
+    iget-object p0, p0, Lmiuix/pickerwidget/widget/NumberPicker$c;->c:Lmiuix/pickerwidget/widget/NumberPicker;
+
+    invoke-static {p0, p1}, Lmiuix/pickerwidget/widget/NumberPicker;->z(Lmiuix/pickerwidget/widget/NumberPicker;Landroid/view/View;)V
+
+    :goto_0
     return-void
 .end method

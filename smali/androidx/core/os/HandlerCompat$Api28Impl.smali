@@ -1,4 +1,4 @@
-.class Landroidx/core/os/HandlerCompat$Api28Impl;
+.class public Landroidx/core/os/HandlerCompat$Api28Impl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -52,6 +53,7 @@
 .method public static postDelayed(Landroid/os/Handler;Ljava/lang/Runnable;Ljava/lang/Object;J)Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2, p3, p4}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;Ljava/lang/Object;J)Z
 
     move-result p0

@@ -16,4 +16,12 @@
 
 # virtual methods
 .method public abstract a(Landroid/graphics/Rect;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "endRect"
+        }
+    .end annotation
 .end method

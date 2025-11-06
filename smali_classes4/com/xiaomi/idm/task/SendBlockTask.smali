@@ -17,53 +17,51 @@
     }
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000p\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0012\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u0003\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0008\n\u0002\u0008\u0004\n\u0002\u0010\t\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u000e\u0008\u0000\u0018\u0000 >2\u0008\u0012\u0004\u0012\u00020\u00020\u0001:\u0001>B{\u0008\u0000\u0012\u0006\u0010\u0011\u001a\u00020\u0002\u0012\u0006\u0010\u0016\u001a\u00020\u0015\u0012`\u0010\u001f\u001a\\\u0012\u0013\u0012\u00110\u0000\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001b\u0012\u0013\u0012\u00110\u0002\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001c\u0012\u0013\u0012\u00110\u0006\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u0007\u0012\u0013\u0012\u00110\u001d\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001e\u0012\u0004\u0012\u00020\u00030\u0018\u00a2\u0006\u0004\u0008<\u0010=J\u0008\u0010\u0004\u001a\u00020\u0003H\u0002J\u0006\u0010\u0005\u001a\u00020\u0003J\u000e\u0010\u0008\u001a\u00020\u00032\u0006\u0010\u0007\u001a\u00020\u0006J\u0016\u0010\u000b\u001a\u00020\u00032\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\n\u001a\u00020\tJ\u0006\u0010\u000c\u001a\u00020\u0003J\u0016\u0010\u000e\u001a\u0008\u0012\u0004\u0012\u00020\u00020\u00012\u0006\u0010\r\u001a\u00020\u0002H\u0016J\u0016\u0010\u0010\u001a\u0008\u0012\u0004\u0012\u00020\u00020\u00012\u0006\u0010\n\u001a\u00020\u000fH\u0016R\u0017\u0010\u0011\u001a\u00020\u00028\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0011\u0010\u0012\u001a\u0004\u0008\u0013\u0010\u0014R\u0014\u0010\u0016\u001a\u00020\u00158\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0016\u0010\u0017Rn\u0010\u001f\u001a\\\u0012\u0013\u0012\u00110\u0000\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001b\u0012\u0013\u0012\u00110\u0002\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001c\u0012\u0013\u0012\u00110\u0006\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u0007\u0012\u0013\u0012\u00110\u001d\u00a2\u0006\u000c\u0008\u0019\u0012\u0008\u0008\u001a\u0012\u0004\u0008\u0008(\u001e\u0012\u0004\u0012\u00020\u00030\u00188\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u001f\u0010 R\u0017\u0010\"\u001a\u00020!8\u0006\u00a2\u0006\u000c\n\u0004\u0008\"\u0010#\u001a\u0004\u0008$\u0010%R\u0014\u0010\'\u001a\u00020&8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\'\u0010(R\u0016\u0010)\u001a\u00020!8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008)\u0010#R\u0016\u0010+\u001a\u00020*8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008+\u0010,R\u0016\u0010.\u001a\u00020-8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008.\u0010/R\u0016\u00100\u001a\u00020-8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u00080\u0010/Rl\u00103\u001aZ\u0012\u000c\u0012\n 2*\u0004\u0018\u00010\u00060\u0006\u0012\u0018\u0012\u0016\u0012\u0004\u0012\u00020- 2*\n\u0012\u0004\u0012\u00020-\u0018\u00010\u00010\u0001 2*,\u0012\u000c\u0012\n 2*\u0004\u0018\u00010\u00060\u0006\u0012\u0018\u0012\u0016\u0012\u0004\u0012\u00020- 2*\n\u0012\u0004\u0012\u00020-\u0018\u00010\u00010\u0001\u0018\u000101018\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u00083\u00104R\u0014\u00106\u001a\u00020!8BX\u0082\u0004\u00a2\u0006\u0006\u001a\u0004\u00085\u0010%R\u0014\u00108\u001a\u00020!8BX\u0082\u0004\u00a2\u0006\u0006\u001a\u0004\u00087\u0010%R\u0014\u0010;\u001a\u00020&8BX\u0082\u0004\u00a2\u0006\u0006\u001a\u0004\u00089\u0010:\u00a8\u0006?"
+        "\u0000p\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0012\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000e\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0010\u0003\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\t\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u000b\n\u0002\u0018\u0002\n\u0002\u0008\u000b\u0008\u0000\u0018\u0000 C2\u0008\u0012\u0004\u0012\u00020\u00020\u0001:\u0001CB{\u0008\u0000\u0012\u0006\u00102\u001a\u00020\u0002\u0012\u0006\u0010+\u001a\u00020*\u0012`\u0010\u001d\u001a\\\u0012\u0013\u0012\u00110\u0000\u00a2\u0006\u000c\u0008\u0017\u0012\u0008\u0008\u0018\u0012\u0004\u0008\u0008(\u0019\u0012\u0013\u0012\u00110\u0002\u00a2\u0006\u000c\u0008\u0017\u0012\u0008\u0008\u0018\u0012\u0004\u0008\u0008(\u001a\u0012\u0013\u0012\u00110\u0007\u00a2\u0006\u000c\u0008\u0017\u0012\u0008\u0008\u0018\u0012\u0004\u0008\u0008(\u0008\u0012\u0013\u0012\u00110\u001b\u00a2\u0006\u000c\u0008\u0017\u0012\u0008\u0008\u0018\u0012\u0004\u0008\u0008(\u001c\u0012\u0004\u0012\u00020\u00030\u0016\u00a2\u0006\u0004\u0008A\u0010BJ\u000f\u0010\u0004\u001a\u00020\u0003H\u0002\u00a2\u0006\u0004\u0008\u0004\u0010\u0005J\r\u0010\u0006\u001a\u00020\u0003\u00a2\u0006\u0004\u0008\u0006\u0010\u0005J\u0015\u0010\t\u001a\u00020\u00032\u0006\u0010\u0008\u001a\u00020\u0007\u00a2\u0006\u0004\u0008\t\u0010\nJ\u001d\u0010\r\u001a\u00020\u00032\u0006\u0010\u0008\u001a\u00020\u00072\u0006\u0010\u000c\u001a\u00020\u000b\u00a2\u0006\u0004\u0008\r\u0010\u000eJ\r\u0010\u000f\u001a\u00020\u0003\u00a2\u0006\u0004\u0008\u000f\u0010\u0005J\u001d\u0010\u0011\u001a\u0008\u0012\u0004\u0012\u00020\u00020\u00012\u0006\u0010\u0010\u001a\u00020\u0002H\u0016\u00a2\u0006\u0004\u0008\u0011\u0010\u0012J\u001d\u0010\u0014\u001a\u0008\u0012\u0004\u0012\u00020\u00020\u00012\u0006\u0010\u000c\u001a\u00020\u0013H\u0016\u00a2\u0006\u0004\u0008\u0014\u0010\u0015Rp\u0010\u001d\u001a\\\u0012\u0013\u0012\u00110\u0000\u00a2\u0006\u000c\u0008\u0017\u0012\u0008\u0008\u0018\u0012\u0004\u0008\u0008(\u0019\u0012\u0013\u0012\u00110\u0002\u00a2\u0006\u000c\u0008\u0017\u0012\u0008\u0008\u0018\u0012\u0004\u0008\u0008(\u001a\u0012\u0013\u0012\u00110\u0007\u00a2\u0006\u000c\u0008\u0017\u0012\u0008\u0008\u0018\u0012\u0004\u0008\u0008(\u0008\u0012\u0013\u0012\u00110\u001b\u00a2\u0006\u000c\u0008\u0017\u0012\u0008\u0008\u0018\u0012\u0004\u0008\u0008(\u001c\u0012\u0004\u0012\u00020\u00030\u00168\u0002@\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u001d\u0010\u001eR\u0016\u0010\"\u001a\u00020\u001f8B@\u0002X\u0082\u0004\u00a2\u0006\u0006\u001a\u0004\u0008 \u0010!R\u0016\u0010$\u001a\u00020#8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008$\u0010%R\u0016\u0010\'\u001a\u00020&8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\'\u0010(R\u0016\u0010)\u001a\u00020&8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008)\u0010(R\u0016\u0010+\u001a\u00020*8\u0002@\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008+\u0010,R\u0019\u0010.\u001a\u00020-8\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008.\u0010/\u001a\u0004\u00080\u00101R\u0019\u00102\u001a\u00020\u00028\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u00082\u00103\u001a\u0004\u00084\u00105R\u0016\u00106\u001a\u00020\u001f8\u0002@\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u00086\u00107R\u0016\u00108\u001a\u00020-8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u00088\u0010/Rn\u0010;\u001aZ\u0012\u000c\u0012\n :*\u0004\u0018\u00010\u00070\u0007\u0012\u0018\u0012\u0016\u0012\u0004\u0012\u00020& :*\n\u0012\u0004\u0012\u00020&\u0018\u00010\u00010\u0001 :*,\u0012\u000c\u0012\n :*\u0004\u0018\u00010\u00070\u0007\u0012\u0018\u0012\u0016\u0012\u0004\u0012\u00020& :*\n\u0012\u0004\u0012\u00020&\u0018\u00010\u00010\u0001\u0018\u000109098\u0002@\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008;\u0010<R\u0016\u0010>\u001a\u00020-8B@\u0002X\u0082\u0004\u00a2\u0006\u0006\u001a\u0004\u0008=\u00101R\u0016\u0010@\u001a\u00020-8B@\u0002X\u0082\u0004\u00a2\u0006\u0006\u001a\u0004\u0008?\u00101\u00a8\u0006D"
     }
     d2 = {
         "Lcom/xiaomi/idm/task/SendBlockTask;",
         "Lcom/xiaomi/idm/task/CallFuture;",
         "",
-        "Lnm/l2;",
+        "Lh/l2;",
         "recordTimeConsumed",
+        "()V",
         "start",
         "",
         "taskId",
         "setDoneSubTask",
+        "(Ljava/lang/String;)V",
         "Lcom/xiaomi/idm/exception/IDMException;",
         "e",
         "setFailedSubTask",
+        "(Ljava/lang/String;Lcom/xiaomi/idm/exception/IDMException;)V",
         "tryArrangeNextTask",
         "response",
         "setDone",
+        "([B)Lcom/xiaomi/idm/task/CallFuture;",
         "",
         "setFailed",
-        "data",
-        "[B",
-        "getData",
-        "()[B",
-        "Lcom/xiaomi/idm/internal/Connection;",
-        "connection",
-        "Lcom/xiaomi/idm/internal/Connection;",
+        "(Ljava/lang/Throwable;)Lcom/xiaomi/idm/task/CallFuture;",
         "Lkotlin/Function4;",
-        "Lnm/v0;",
+        "Lh/v0;",
         "name",
         "sendBlockTask",
         "fragmentData",
         "Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment;",
         "blockFragment",
         "dispatcher",
-        "Ljn/r;",
+        "Lh/d3/w/r;",
         "",
-        "blockId",
-        "I",
-        "getBlockId",
-        "()I",
-        "",
-        "initTime",
-        "J",
-        "offset",
+        "getTimeout",
+        "()J",
+        "timeout",
         "Ljava/util/concurrent/atomic/AtomicInteger;",
         "sentPackets",
         "Ljava/util/concurrent/atomic/AtomicInteger;",
@@ -71,19 +69,31 @@
         "started",
         "Z",
         "complete",
-        "Lvs/e;",
+        "Lcom/xiaomi/idm/internal/Connection;",
+        "connection",
+        "Lcom/xiaomi/idm/internal/Connection;",
+        "",
+        "blockId",
+        "I",
+        "getBlockId",
+        "()I",
+        "data",
+        "[B",
+        "getData",
+        "()[B",
+        "initTime",
+        "J",
+        "offset",
+        "Ll/a/a/e;",
         "kotlin.jvm.PlatformType",
         "taskMap",
-        "Lvs/e;",
+        "Ll/a/a/e;",
         "getSizePerPacket",
         "sizePerPacket",
         "getMaxParallelTaskNumber",
         "maxParallelTaskNumber",
-        "getTimeout",
-        "()J",
-        "timeout",
         "<init>",
-        "([BLcom/xiaomi/idm/internal/Connection;Ljn/r;)V",
+        "([BLcom/xiaomi/idm/internal/Connection;Lh/d3/w/r;)V",
         "Companion",
         "IDMSdk_release"
     }
@@ -98,17 +108,17 @@
 
 # static fields
 .field private static final BLOCK_ID:Ljava/util/concurrent/atomic/AtomicInteger;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field public static final Companion:Lcom/xiaomi/idm/task/SendBlockTask$Companion;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field private static final TAG:Ljava/lang/String; = "BlockTask"
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -119,29 +129,29 @@
 .field private volatile complete:Z
 
 .field private final connection:Lcom/xiaomi/idm/internal/Connection;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field private final data:[B
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
-.field private final dispatcher:Ljn/r;
+.field private final dispatcher:Lh/d3/w/r;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljn/r<",
+            "Lh/d3/w/r<",
             "Lcom/xiaomi/idm/task/SendBlockTask;",
             "[B",
             "Ljava/lang/String;",
             "Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment;",
-            "Lnm/l2;",
+            "Lh/l2;",
             ">;"
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -150,16 +160,16 @@
 .field private offset:I
 
 .field private sentPackets:Ljava/util/concurrent/atomic/AtomicInteger;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field private volatile started:Z
 
-.field private final taskMap:Lvs/e;
+.field private final taskMap:Ll/a/a/e;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lvs/e<",
+            "Ll/a/a/e<",
             "Ljava/lang/String;",
             "Lcom/xiaomi/idm/task/CallFuture<",
             "Ljava/lang/Boolean;",
@@ -177,10 +187,11 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/xiaomi/idm/task/SendBlockTask$Companion;-><init>(Lkotlin/jvm/internal/w;)V
+    invoke-direct {v0, v1}, Lcom/xiaomi/idm/task/SendBlockTask$Companion;-><init>(Lh/d3/x/w;)V
 
     sput-object v0, Lcom/xiaomi/idm/task/SendBlockTask;->Companion:Lcom/xiaomi/idm/task/SendBlockTask$Companion;
 
+    .line 1
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/16 v1, 0x3e8
@@ -192,56 +203,61 @@
     return-void
 .end method
 
-.method public constructor <init>([BLcom/xiaomi/idm/internal/Connection;Ljn/r;)V
+.method public constructor <init>([BLcom/xiaomi/idm/internal/Connection;Lh/d3/w/r;)V
     .locals 1
     .param p1    # [B
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Lcom/xiaomi/idm/internal/Connection;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .param p3    # Ljn/r;
-        .annotation build Ljv/d;
+    .param p3    # Lh/d3/w/r;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([B",
             "Lcom/xiaomi/idm/internal/Connection;",
-            "Ljn/r<",
+            "Lh/d3/w/r<",
             "-",
             "Lcom/xiaomi/idm/task/SendBlockTask;",
             "-[B-",
             "Ljava/lang/String;",
             "-",
             "Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment;",
-            "Lnm/l2;",
+            "Lh/l2;",
             ">;)V"
         }
     .end annotation
 
     const-string v0, "data"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "connection"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "dispatcher"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/task/CallFuture;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/xiaomi/idm/task/SendBlockTask;->data:[B
 
+    .line 3
     iput-object p2, p0, Lcom/xiaomi/idm/task/SendBlockTask;->connection:Lcom/xiaomi/idm/internal/Connection;
 
-    iput-object p3, p0, Lcom/xiaomi/idm/task/SendBlockTask;->dispatcher:Ljn/r;
+    .line 4
+    iput-object p3, p0, Lcom/xiaomi/idm/task/SendBlockTask;->dispatcher:Lh/d3/w/r;
 
+    .line 5
     sget-object p1, Lcom/xiaomi/idm/task/SendBlockTask;->BLOCK_ID:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
@@ -250,51 +266,56 @@
 
     iput p1, p0, Lcom/xiaomi/idm/task/SendBlockTask;->blockId:I
 
+    .line 6
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p1
 
     iput-wide p1, p0, Lcom/xiaomi/idm/task/SendBlockTask;->initTime:J
 
+    .line 7
     new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
     iput-object p1, p0, Lcom/xiaomi/idm/task/SendBlockTask;->sentPackets:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    invoke-static {}, Lvs/e;->g()Lvs/e$g;
+    .line 8
+    invoke-static {}, Ll/a/a/e;->f()Ll/a/a/e$g;
 
     move-result-object p1
 
+    .line 9
     invoke-direct {p0}, Lcom/xiaomi/idm/task/SendBlockTask;->getTimeout()J
 
     move-result-wide p2
 
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {p1, p2, p3, v0}, Lvs/e$g;->o(JLjava/util/concurrent/TimeUnit;)Lvs/e$g;
+    invoke-virtual {p1, p2, p3, v0}, Ll/a/a/e$g;->o(JLjava/util/concurrent/TimeUnit;)Ll/a/a/e$g;
 
     move-result-object p1
 
-    sget-object p2, Lvs/c;->b:Lvs/c;
+    .line 10
+    sget-object p2, Ll/a/a/c;->d:Ll/a/a/c;
 
-    invoke-virtual {p1, p2}, Lvs/e$g;->r(Lvs/c;)Lvs/e$g;
-
-    move-result-object p1
-
-    new-instance p2, Lcom/xiaomi/idm/task/a;
-
-    invoke-direct {p2}, Lcom/xiaomi/idm/task/a;-><init>()V
-
-    invoke-virtual {p1, p2}, Lvs/e$g;->p(Lvs/b;)Lvs/e$g;
+    invoke-virtual {p1, p2}, Ll/a/a/e$g;->r(Ll/a/a/c;)Ll/a/a/e$g;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lvs/e$g;->m()Lvs/e;
+    sget-object p2, Ld/o/l/b/a;->a:Ld/o/l/b/a;
+
+    .line 11
+    invoke-virtual {p1, p2}, Ll/a/a/e$g;->p(Ll/a/a/b;)Ll/a/a/e$g;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/xiaomi/idm/task/SendBlockTask;->taskMap:Lvs/e;
+    .line 12
+    invoke-virtual {p1}, Ll/a/a/e$g;->m()Ll/a/a/e;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/xiaomi/idm/task/SendBlockTask;->taskMap:Ll/a/a/e;
 
     return-void
 .end method
@@ -310,6 +331,7 @@
 .method public static final synthetic access$getSentPackets$p(Lcom/xiaomi/idm/task/SendBlockTask;)Ljava/util/concurrent/atomic/AtomicInteger;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/task/SendBlockTask;->sentPackets:Ljava/util/concurrent/atomic/AtomicInteger;
 
     return-object p0
@@ -318,6 +340,7 @@
 .method private final getMaxParallelTaskNumber()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/task/SendBlockTask;->connection:Lcom/xiaomi/idm/internal/Connection;
 
     invoke-virtual {p0}, Lcom/xiaomi/idm/internal/Connection;->getSendBlockMaxParallelTaskNumber()I
@@ -330,6 +353,7 @@
 .method private final getSizePerPacket()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/task/SendBlockTask;->connection:Lcom/xiaomi/idm/internal/Connection;
 
     invoke-virtual {p0}, Lcom/xiaomi/idm/internal/Connection;->getSendBlockSizePerPacket()I
@@ -342,6 +366,7 @@
 .method private final getTimeout()J
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/task/SendBlockTask;->connection:Lcom/xiaomi/idm/internal/Connection;
 
     invoke-virtual {p0}, Lcom/xiaomi/idm/internal/Connection;->getSendBlockTimeout()J
@@ -354,6 +379,7 @@
 .method private final recordTimeConsumed()V
     .locals 5
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -400,12 +426,13 @@
 
     const-string v0, "$noName_0"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string p0, "value"
 
-    invoke-static {p1, p0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     sget-object p0, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;->SEND_BLOCK_ERR_TIMEOUT:Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;
 
     invoke-virtual {p0}, Lcom/xiaomi/idm/constant/ResponseCode$SendBlockCode;->createException()Lcom/xiaomi/idm/exception/IDMException;
@@ -422,6 +449,7 @@
 .method public final getBlockId()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/idm/task/SendBlockTask;->blockId:I
 
     return p0
@@ -429,9 +457,10 @@
 
 .method public final getData()[B
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/task/SendBlockTask;->data:[B
 
     return-object p0
@@ -453,7 +482,7 @@
 .method public setDone([B)Lcom/xiaomi/idm/task/CallFuture;
     .locals 3
     .param p1    # [B
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
@@ -464,12 +493,12 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "response"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     iget-boolean v0, p0, Lcom/xiaomi/idm/task/SendBlockTask;->complete:Z
@@ -558,7 +587,7 @@
 
     const-string p1, "super.setDone(response)"
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 .end method
@@ -566,17 +595,18 @@
 .method public final setDoneSubTask(Ljava/lang/String;)V
     .locals 2
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "taskId"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/xiaomi/idm/task/SendBlockTask;->taskMap:Lvs/e;
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/idm/task/SendBlockTask;->taskMap:Ll/a/a/e;
 
-    invoke-virtual {v0, p1}, Lvs/e;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Ll/a/a/e;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -584,12 +614,14 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     invoke-virtual {v0, p1}, Lcom/xiaomi/idm/task/CallFuture;->setDone(Ljava/lang/Object;)Lcom/xiaomi/idm/task/CallFuture;
 
     goto :goto_0
 
+    .line 3
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -621,6 +653,7 @@
 
     invoke-static {v1, p1, v0}, Lcom/xiaomi/idm/util/LogUtil;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 4
     :goto_0
     iget-object p1, p0, Lcom/xiaomi/idm/task/SendBlockTask;->sentPackets:Ljava/util/concurrent/atomic/AtomicInteger;
 
@@ -634,10 +667,12 @@
 
     if-ne p1, v1, :cond_1
 
+    .line 5
     invoke-virtual {p0, v0}, Lcom/xiaomi/idm/task/SendBlockTask;->setDone([B)Lcom/xiaomi/idm/task/CallFuture;
 
     return-void
 
+    .line 6
     :cond_1
     invoke-virtual {p0}, Lcom/xiaomi/idm/task/SendBlockTask;->tryArrangeNextTask()V
 
@@ -647,7 +682,7 @@
 .method public setFailed(Ljava/lang/Throwable;)Lcom/xiaomi/idm/task/CallFuture;
     .locals 3
     .param p1    # Ljava/lang/Throwable;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
@@ -660,17 +695,19 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "e"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/idm/task/SendBlockTask;->complete:Z
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -679,36 +716,44 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 3
     iget v1, p0, Lcom/xiaomi/idm/task/SendBlockTask;->blockId:I
 
+    .line 4
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v1, " \tdata(size)="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 5
     invoke-direct {p0}, Lcom/xiaomi/idm/task/SendBlockTask;->getSizePerPacket()I
 
     move-result v1
 
+    .line 6
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v1, "\tsent="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 7
     iget-object v1, p0, Lcom/xiaomi/idm/task/SendBlockTask;->sentPackets:Ljava/util/concurrent/atomic/AtomicInteger;
 
+    .line 8
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, "\ttotal="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 9
     iget-object v1, p0, Lcom/xiaomi/idm/task/SendBlockTask;->data:[B
 
     array-length v1, v1
 
+    .line 10
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v1, " message=e.message"
@@ -725,22 +770,26 @@
 
     const-string v2, "BlockTask"
 
+    .line 11
     invoke-static {v2, v0, v1}, Lcom/xiaomi/idm/util/LogUtil;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 12
     invoke-direct {p0}, Lcom/xiaomi/idm/task/SendBlockTask;->recordTimeConsumed()V
 
     :cond_0
     const/4 v0, 0x1
 
+    .line 13
     iput-boolean v0, p0, Lcom/xiaomi/idm/task/SendBlockTask;->complete:Z
 
+    .line 14
     invoke-super {p0, p1}, Lcom/xiaomi/idm/task/CallFuture;->setFailed(Ljava/lang/Throwable;)Lcom/xiaomi/idm/task/CallFuture;
 
     move-result-object p0
 
     const-string p1, "super.setFailed(e)"
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 .end method
@@ -748,25 +797,26 @@
 .method public final setFailedSubTask(Ljava/lang/String;Lcom/xiaomi/idm/exception/IDMException;)V
     .locals 1
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Lcom/xiaomi/idm/exception/IDMException;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "taskId"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "e"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/xiaomi/idm/task/SendBlockTask;->taskMap:Lvs/e;
+    .line 1
+    iget-object v0, p0, Lcom/xiaomi/idm/task/SendBlockTask;->taskMap:Ll/a/a/e;
 
-    invoke-virtual {v0, p1}, Lvs/e;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Ll/a/a/e;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -774,10 +824,12 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0, p2}, Lcom/xiaomi/idm/task/CallFuture;->setFailed(Ljava/lang/Throwable;)Lcom/xiaomi/idm/task/CallFuture;
 
     goto :goto_0
 
+    .line 3
     :cond_0
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -816,6 +868,7 @@
 .method public final start()V
     .locals 3
 
+    .line 1
     iget-boolean v0, p0, Lcom/xiaomi/idm/task/SendBlockTask;->started:Z
 
     if-eqz v0, :cond_0
@@ -825,8 +878,10 @@
     :cond_0
     const/4 v0, 0x1
 
+    .line 2
     iput-boolean v0, p0, Lcom/xiaomi/idm/task/SendBlockTask;->started:Z
 
+    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -861,6 +916,7 @@
 
     invoke-static {v2, v0, v1}, Lcom/xiaomi/idm/util/LogUtil;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 4
     invoke-virtual {p0}, Lcom/xiaomi/idm/task/SendBlockTask;->tryArrangeNextTask()V
 
     return-void
@@ -871,10 +927,11 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
-    iget-object v0, p0, Lcom/xiaomi/idm/task/SendBlockTask;->taskMap:Lvs/e;
+    iget-object v0, p0, Lcom/xiaomi/idm/task/SendBlockTask;->taskMap:Ll/a/a/e;
 
-    invoke-virtual {v0}, Lvs/e;->size()I
+    invoke-virtual {v0}, Ll/a/a/e;->size()I
 
     move-result v0
 
@@ -886,10 +943,12 @@
 
     if-lt v0, v1, :cond_0
 
+    .line 2
     monitor-exit p0
 
     return-void
 
+    .line 3
     :cond_0
     :try_start_1
     iget v0, p0, Lcom/xiaomi/idm/task/SendBlockTask;->offset:I
@@ -902,10 +961,12 @@
 
     if-le v0, v1, :cond_1
 
+    .line 4
     monitor-exit p0
 
     return-void
 
+    .line 5
     :cond_1
     :try_start_2
     invoke-direct {p0}, Lcom/xiaomi/idm/task/SendBlockTask;->getSizePerPacket()I
@@ -920,54 +981,62 @@
 
     sub-int/2addr v1, v2
 
-    invoke-static {v0, v1}, Lsn/q;->u(II)I
+    invoke-static {v0, v1}, Lh/h3/q;->u(II)I
 
     move-result v0
 
+    .line 6
     iget-object v1, p0, Lcom/xiaomi/idm/task/SendBlockTask;->data:[B
 
     iget v2, p0, Lcom/xiaomi/idm/task/SendBlockTask;->offset:I
 
     add-int v3, v2, v0
 
-    invoke-static {v1, v2, v3}, Lpm/o;->G1([BII)[B
+    invoke-static {v1, v2, v3}, Lh/t2/o;->G1([BII)[B
 
     move-result-object v1
 
+    .line 7
     new-instance v2, Lcom/xiaomi/idm/task/CallFuture;
 
     invoke-direct {v2}, Lcom/xiaomi/idm/task/CallFuture;-><init>()V
 
+    .line 8
     iget v3, p0, Lcom/xiaomi/idm/task/SendBlockTask;->offset:I
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v3
 
+    .line 9
     new-instance v4, Lcom/xiaomi/idm/task/SendBlockTask$tryArrangeNextTask$1;
 
     invoke-direct {v4, p0, v0}, Lcom/xiaomi/idm/task/SendBlockTask$tryArrangeNextTask$1;-><init>(Lcom/xiaomi/idm/task/SendBlockTask;I)V
 
     invoke-virtual {v2, v4}, Lcom/xiaomi/idm/task/CallFuture;->setCallBack(Lcom/xiaomi/idm/task/CallFuture$Callback;)V
 
-    iget-object v4, p0, Lcom/xiaomi/idm/task/SendBlockTask;->taskMap:Lvs/e;
+    .line 10
+    iget-object v4, p0, Lcom/xiaomi/idm/task/SendBlockTask;->taskMap:Ll/a/a/e;
 
     const-string v5, "taskMap"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v4, v3, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 11
     invoke-static {}, Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment;->newBuilder()Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment$Builder;
 
     move-result-object v2
 
+    .line 12
     invoke-virtual {p0}, Lcom/xiaomi/idm/task/SendBlockTask;->getBlockId()I
 
     move-result v4
 
     invoke-virtual {v2, v4}, Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment$Builder;->setBlockId(I)Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment$Builder;
 
+    .line 13
     invoke-virtual {p0}, Lcom/xiaomi/idm/task/SendBlockTask;->getData()[B
 
     move-result-object v4
@@ -976,13 +1045,16 @@
 
     invoke-virtual {v2, v4}, Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment$Builder;->setBlockSize(I)Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment$Builder;
 
+    .line 14
     iget v4, p0, Lcom/xiaomi/idm/task/SendBlockTask;->offset:I
 
     invoke-virtual {v2, v4}, Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment$Builder;->setFragmentOffset(I)Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment$Builder;
 
+    .line 15
     invoke-virtual {v2, v0}, Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment$Builder;->setFragmentSize(I)Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment$Builder;
 
-    iget-object v0, p0, Lcom/xiaomi/idm/task/SendBlockTask;->dispatcher:Ljn/r;
+    .line 16
+    iget-object v0, p0, Lcom/xiaomi/idm/task/SendBlockTask;->dispatcher:Lh/d3/w/r;
 
     invoke-virtual {v2}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->build()Lcom/google/protobuf/GeneratedMessageLite;
 
@@ -990,10 +1062,11 @@
 
     const-string v4, "build()"
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, p0, v1, v3, v2}, Ljn/r;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p0, v1, v3, v2}, Lh/d3/w/r;->o(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 17
     iget v0, p0, Lcom/xiaomi/idm/task/SendBlockTask;->offset:I
 
     invoke-direct {p0}, Lcom/xiaomi/idm/task/SendBlockTask;->getSizePerPacket()I
@@ -1004,10 +1077,12 @@
 
     iput v0, p0, Lcom/xiaomi/idm/task/SendBlockTask;->offset:I
 
+    .line 18
     invoke-virtual {p0}, Lcom/xiaomi/idm/task/SendBlockTask;->tryArrangeNextTask()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 19
     monitor-exit p0
 
     return-void

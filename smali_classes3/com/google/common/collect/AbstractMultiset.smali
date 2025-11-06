@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/collect/AbstractMultiset;
+.class public abstract Lcom/google/common/collect/AbstractMultiset;
 .super Ljava/util/AbstractCollection;
 .source "SourceFile"
 
@@ -70,6 +70,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
     return-void
@@ -136,6 +137,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/common/collect/Multisets;->addAllImpl(Lcom/google/common/collect/Multiset;Ljava/util/Collection;)Z
 
     move-result p0
@@ -153,6 +155,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-interface {p0, p1}, Lcom/google/common/collect/Multiset;->count(Ljava/lang/Object;)I
 
     move-result p0
@@ -180,6 +183,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/AbstractMultiset$ElementSet;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/AbstractMultiset$ElementSet;-><init>(Lcom/google/common/collect/AbstractMultiset;)V
@@ -198,6 +202,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/AbstractMultiset$EntrySet;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/AbstractMultiset$EntrySet;-><init>(Lcom/google/common/collect/AbstractMultiset;)V
@@ -208,7 +213,7 @@
 .method public abstract distinctElements()I
 .end method
 
-.method abstract elementIterator()Ljava/util/Iterator;
+.method public abstract elementIterator()Ljava/util/Iterator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -228,10 +233,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/AbstractMultiset;->elementSet:Ljava/util/Set;
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMultiset;->createElementSet()Ljava/util/Set;
 
     move-result-object v0
@@ -264,10 +271,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/AbstractMultiset;->entrySet:Ljava/util/Set;
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMultiset;->createEntrySet()Ljava/util/Set;
 
     move-result-object v0
@@ -285,6 +294,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/common/collect/Multisets;->equalsImpl(Lcom/google/common/collect/Multiset;Ljava/lang/Object;)Z
 
     move-result p0
@@ -295,6 +305,7 @@
 .method public final hashCode()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMultiset;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -309,6 +320,7 @@
 .method public isEmpty()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMultiset;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -377,6 +389,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/common/collect/Multisets;->removeAllImpl(Lcom/google/common/collect/Multiset;Ljava/util/Collection;)Z
 
     move-result p0
@@ -397,6 +410,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/common/collect/Multisets;->retainAllImpl(Lcom/google/common/collect/Multiset;Ljava/util/Collection;)Z
 
     move-result p0
@@ -453,6 +467,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMultiset;->entrySet()Ljava/util/Set;
 
     move-result-object p0

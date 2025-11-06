@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/api/internal/zaba;
+.class public final Lcom/google/android/gms/common/api/internal/zaba;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field final synthetic zaa:Lcom/google/android/gms/common/api/internal/StatusPendingResult;
+.field public final synthetic zaa:Lcom/google/android/gms/common/api/internal/StatusPendingResult;
 
 
 # direct methods
@@ -30,6 +30,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zaba;->zaa:Lcom/google/android/gms/common/api/internal/StatusPendingResult;
 
     new-instance p1, Lcom/google/android/gms/common/api/Status;

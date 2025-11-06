@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/PlaybackInfo;
+.class public final Lcom/google/android/exoplayer2/PlaybackInfo;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -62,6 +62,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;
 
     new-instance v1, Ljava/lang/Object;
@@ -103,82 +104,102 @@
 
     move-object v0, p0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     move-object v1, p1
 
+    .line 2
     iput-object v1, v0, Lcom/google/android/exoplayer2/PlaybackInfo;->timeline:Lcom/google/android/exoplayer2/Timeline;
 
     move-object v1, p2
 
+    .line 3
     iput-object v1, v0, Lcom/google/android/exoplayer2/PlaybackInfo;->periodId:Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;
 
     move-wide v1, p3
 
+    .line 4
     iput-wide v1, v0, Lcom/google/android/exoplayer2/PlaybackInfo;->requestedContentPositionUs:J
 
     move-wide v1, p5
 
+    .line 5
     iput-wide v1, v0, Lcom/google/android/exoplayer2/PlaybackInfo;->discontinuityStartPositionUs:J
 
     move v1, p7
 
+    .line 6
     iput v1, v0, Lcom/google/android/exoplayer2/PlaybackInfo;->playbackState:I
 
     move-object v1, p8
 
+    .line 7
     iput-object v1, v0, Lcom/google/android/exoplayer2/PlaybackInfo;->playbackError:Lcom/google/android/exoplayer2/ExoPlaybackException;
 
     move v1, p9
 
+    .line 8
     iput-boolean v1, v0, Lcom/google/android/exoplayer2/PlaybackInfo;->isLoading:Z
 
     move-object v1, p10
 
+    .line 9
     iput-object v1, v0, Lcom/google/android/exoplayer2/PlaybackInfo;->trackGroups:Lcom/google/android/exoplayer2/source/TrackGroupArray;
 
     move-object v1, p11
 
+    .line 10
     iput-object v1, v0, Lcom/google/android/exoplayer2/PlaybackInfo;->trackSelectorResult:Lcom/google/android/exoplayer2/trackselection/TrackSelectorResult;
 
     move-object v1, p12
 
+    .line 11
     iput-object v1, v0, Lcom/google/android/exoplayer2/PlaybackInfo;->staticMetadata:Ljava/util/List;
 
     move-object/from16 v1, p13
 
+    .line 12
     iput-object v1, v0, Lcom/google/android/exoplayer2/PlaybackInfo;->loadingMediaPeriodId:Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;
 
     move/from16 v1, p14
 
+    .line 13
     iput-boolean v1, v0, Lcom/google/android/exoplayer2/PlaybackInfo;->playWhenReady:Z
 
     move/from16 v1, p15
 
+    .line 14
     iput v1, v0, Lcom/google/android/exoplayer2/PlaybackInfo;->playbackSuppressionReason:I
 
     move-object/from16 v1, p16
 
+    .line 15
     iput-object v1, v0, Lcom/google/android/exoplayer2/PlaybackInfo;->playbackParameters:Lcom/google/android/exoplayer2/PlaybackParameters;
 
     move-wide/from16 v1, p17
 
+    .line 16
     iput-wide v1, v0, Lcom/google/android/exoplayer2/PlaybackInfo;->bufferedPositionUs:J
 
     move-wide/from16 v1, p19
 
+    .line 17
     iput-wide v1, v0, Lcom/google/android/exoplayer2/PlaybackInfo;->totalBufferedDurationUs:J
 
     move-wide/from16 v1, p21
 
+    .line 18
     iput-wide v1, v0, Lcom/google/android/exoplayer2/PlaybackInfo;->positionUs:J
 
     move/from16 v1, p23
 
+    .line 19
     iput-boolean v1, v0, Lcom/google/android/exoplayer2/PlaybackInfo;->offloadSchedulingEnabled:Z
 
     move/from16 v1, p24
 
+    .line 20
     iput-boolean v1, v0, Lcom/google/android/exoplayer2/PlaybackInfo;->sleepingForOffload:Z
 
     return-void
@@ -189,6 +210,7 @@
 
     move-object/from16 v11, p0
 
+    .line 1
     new-instance v25, Lcom/google/android/exoplayer2/PlaybackInfo;
 
     move-object/from16 v0, v25
@@ -198,6 +220,15 @@
     sget-object v13, Lcom/google/android/exoplayer2/PlaybackInfo;->PLACEHOLDER_MEDIA_PERIOD_ID:Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;
 
     move-object v2, v13
+
+    sget-object v10, Lcom/google/android/exoplayer2/source/TrackGroupArray;->EMPTY:Lcom/google/android/exoplayer2/source/TrackGroupArray;
+
+    .line 2
+    invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
+
+    move-result-object v12
+
+    sget-object v16, Lcom/google/android/exoplayer2/PlaybackParameters;->DEFAULT:Lcom/google/android/exoplayer2/PlaybackParameters;
 
     const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
 
@@ -209,17 +240,9 @@
 
     const/4 v9, 0x0
 
-    sget-object v10, Lcom/google/android/exoplayer2/source/TrackGroupArray;->EMPTY:Lcom/google/android/exoplayer2/source/TrackGroupArray;
-
-    invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
-
-    move-result-object v12
-
     const/4 v14, 0x0
 
     const/4 v15, 0x0
-
-    sget-object v16, Lcom/google/android/exoplayer2/PlaybackParameters;->DEFAULT:Lcom/google/android/exoplayer2/PlaybackParameters;
 
     const-wide/16 v17, 0x0
 
@@ -239,6 +262,7 @@
 .method public static getDummyPeriodForEmptyTimeline()Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/PlaybackInfo;->PLACEHOLDER_MEDIA_PERIOD_ID:Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;
 
     return-object v0
@@ -255,6 +279,7 @@
 
     move/from16 v10, p1
 
+    .line 1
     new-instance v26, Lcom/google/android/exoplayer2/PlaybackInfo;
 
     move-object/from16 v1, v26
@@ -331,6 +356,7 @@
 
     move-object/from16 v14, p1
 
+    .line 1
     new-instance v26, Lcom/google/android/exoplayer2/PlaybackInfo;
 
     move-object/from16 v1, v26
@@ -435,6 +461,7 @@
 
     move-object/from16 v13, p12
 
+    .line 1
     new-instance v26, Lcom/google/android/exoplayer2/PlaybackInfo;
 
     move-object/from16 v1, v26
@@ -493,6 +520,7 @@
 
     move/from16 v24, p1
 
+    .line 1
     new-instance v26, Lcom/google/android/exoplayer2/PlaybackInfo;
 
     move-object/from16 v1, v26
@@ -569,6 +597,7 @@
 
     move/from16 v16, p2
 
+    .line 1
     new-instance v26, Lcom/google/android/exoplayer2/PlaybackInfo;
 
     move-object/from16 v1, v26
@@ -645,6 +674,7 @@
 
     move-object/from16 v9, p1
 
+    .line 1
     new-instance v26, Lcom/google/android/exoplayer2/PlaybackInfo;
 
     move-object/from16 v1, v26
@@ -721,6 +751,7 @@
 
     move-object/from16 v17, p1
 
+    .line 1
     new-instance v26, Lcom/google/android/exoplayer2/PlaybackInfo;
 
     move-object/from16 v1, v26
@@ -795,6 +826,7 @@
 
     move/from16 v8, p1
 
+    .line 1
     new-instance v26, Lcom/google/android/exoplayer2/PlaybackInfo;
 
     move-object/from16 v1, v26
@@ -871,6 +903,7 @@
 
     move/from16 v25, p1
 
+    .line 1
     new-instance v26, Lcom/google/android/exoplayer2/PlaybackInfo;
 
     move-object/from16 v1, v26
@@ -945,6 +978,7 @@
 
     move-object/from16 v2, p1
 
+    .line 1
     new-instance v26, Lcom/google/android/exoplayer2/PlaybackInfo;
 
     move-object/from16 v1, v26

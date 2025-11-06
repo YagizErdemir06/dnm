@@ -1,4 +1,4 @@
-.class final Lcom/google/common/graph/EndpointPair$Ordered;
+.class public final Lcom/google/common/graph/EndpointPair$Ordered;
 .super Lcom/google/common/graph/EndpointPair;
 .source "SourceFile"
 
@@ -65,6 +65,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/common/graph/EndpointPair;
 
@@ -74,9 +75,11 @@
 
     return v2
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/common/graph/EndpointPair;
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/common/graph/EndpointPair$Ordered;->isOrdered()Z
 
     move-result v1
@@ -89,6 +92,7 @@
 
     return v2
 
+    .line 4
     :cond_2
     invoke-virtual {p0}, Lcom/google/common/graph/EndpointPair$Ordered;->source()Ljava/lang/Object;
 
@@ -134,19 +138,20 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    const/4 v1, 0x0
-
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/EndpointPair$Ordered;->source()Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v1
 
-    aput-object v2, v0, v1
+    const/4 v2, 0x0
 
-    const/4 v1, 0x1
+    aput-object v1, v0, v2
 
     invoke-virtual {p0}, Lcom/google/common/graph/EndpointPair$Ordered;->target()Ljava/lang/Object;
 
     move-result-object p0
+
+    const/4 v1, 0x1
 
     aput-object p0, v0, v1
 
@@ -168,6 +173,7 @@
 .method public bridge synthetic iterator()Ljava/util/Iterator;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/graph/EndpointPair;->iterator()Lcom/google/common/collect/UnmodifiableIterator;
 
     move-result-object p0
@@ -183,6 +189,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/EndpointPair;->nodeU()Ljava/lang/Object;
 
     move-result-object p0
@@ -198,6 +205,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/EndpointPair;->nodeV()Ljava/lang/Object;
 
     move-result-object p0
@@ -208,6 +216,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/EndpointPair$Ordered;->source()Ljava/lang/Object;
 
     move-result-object v0

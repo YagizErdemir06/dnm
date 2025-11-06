@@ -12,7 +12,7 @@
 
 
 # static fields
-.field public static final a:Ljava/lang/String;
+.field private static final c:Ljava/lang/String;
 
 
 # direct methods
@@ -21,17 +21,26 @@
 
     const-string v0, "GalleryView"
 
-    invoke-static {v0}, Lcom/android/camera/litegallery/c;->r(Ljava/lang/String;)Ljava/lang/String;
+    .line 1
+    invoke-static {v0}, Ld/d/a/b7/j1;->k(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/camera/litegallery/GalleryView;->a:Ljava/lang/String;
+    sput-object v0, Lcom/android/camera/litegallery/GalleryView;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     .line 1
     invoke-direct {p0, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
@@ -45,6 +54,16 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     .line 2
     invoke-direct {p0, p1, p2}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -58,6 +77,18 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr"
+        }
+    .end annotation
 
     .line 3
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -71,6 +102,20 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr",
+            "defStyleRes"
+        }
+    .end annotation
 
     .line 4
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
@@ -82,7 +127,16 @@
 # virtual methods
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "canvas"
+        }
+    .end annotation
 
+    .line 1
     :try_start_0
     invoke-super {p0, p1}, Landroid/widget/ImageView;->onDraw(Landroid/graphics/Canvas;)V
     :try_end_0
@@ -93,6 +147,7 @@
     :catch_0
     move-exception p1
 
+    .line 2
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -109,7 +164,7 @@
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/RuntimeException;->getMessage()Ljava/lang/String;
 
     move-result-object p0
 
@@ -126,10 +181,20 @@
 
 .method public setImageBitmap(Landroid/graphics/Bitmap;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "bm"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    sget-object v0, Lcom/android/camera/litegallery/GalleryView;->a:Ljava/lang/String;
+    .line 2
+    sget-object v0, Lcom/android/camera/litegallery/GalleryView;->c:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -153,7 +218,7 @@
 
     const/4 p0, 0x2
 
-    invoke-static {p0}, Lcom/android/camera/a6;->D0(I)Ljava/lang/String;
+    invoke-static {p0}, Ld/d/a/z5;->v0(I)Ljava/lang/String;
 
     move-result-object p0
 

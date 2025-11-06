@@ -232,7 +232,6 @@
     <string name="accessibility_video_capture_button">Knapp for å ta bilder mens du lager videoer</string>
     <string name="accessibility_video_pause_button">Videoopptaket er satt på pause</string>
     <string name="accessibility_video_resume_button">Videoopptaket har startet igjen</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">Vannmerke er av</string>
     <string name="accessibility_watermark_image_on">Vannmerke er på</string>
     <string name="accessibility_watermark_text">Åpne justeringspanelet for vannmerker</string>
@@ -240,16 +239,6 @@
     <string name="accessibility_zoom_button">Zoom-modus</string>
     <string name="actionbar_button_up_description">Tilbake</string>
     <string name="afternoon">Ettermiddag</string>
-    <string name="agent_flip_tbc">Fortsett på den innvendige skjermen</string>
-    <string name="agent_function_max">Justert til maksimumsverdi</string>
-    <string name="agent_function_min">Justert til minimumsverdi</string>
-    <string name="agent_workspace_mode_not_supported">Denne funksjonen støttes ikke</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"Denne funksjonen støttes ikke.
-Åpnet fotomodus i stedet."</string>
-    <string name="agent_workspace_on">Parametere innstilt for fotografering \"%1$s\"</string>
-    <string name="agent_workspace_tbc">Studerer scene</string>
-    <string name="agent_workspace_tbc_use_default">"Studerer scene…
-Kameraparametere stilt inn som standard"</string>
     <string name="ai_agra_fort">Agra Fort</string>
     <string name="ai_amber_fort">Fort Amber</string>
     <string name="ai_baby">Baby</string>
@@ -476,7 +465,6 @@ og justere innstillinger automatisk"</string>
     <string name="bluetooth_headset_permission_des">For å bestemme Bluetooth-hodetelefonenes tilkoblingsstatus og ta opp lyd gjennom hodetelefonenes mikrofon</string>
     <string name="bluetooth_permission_not_ask_again">Tillat denne appen å koble til enheter i nærheten fra Innstillinger for å kunne koble til Bluetooth-hodetelefoner.</string>
     <string name="bokeh_use_hint">Dybdeeffekt</string>
-    <string name="bottomsheet_action_expand_halfway">Vis halve feltet nederst</string>
     <string name="burst_shoot_exit_button_text">Skru av burst-modus</string>
     <string name="button_fisheye_camera_title">Fiskeøye</string>
     <string name="button_front_camera_title">Lag en selfie</string>
@@ -517,8 +505,6 @@ og justere innstillinger automatisk"</string>
     <string name="ccc_temperature_warning_msg">Enheten er overopphetet. Kameraet vil lukkes om %d sekunder. Bildene eller videoene dine lagres automatisk.</string>
     <string name="ccc_temperature_warning_title">Enhet er overopphetet</string>
     <string name="center_mark">Markering i midten</string>
-    <string name="character_counter_content_description">%1$d av %2$d tegn er skrevet inn</string>
-    <string name="character_counter_overflowed_content_description">Tegngrensen er overskredet – %1$d av %2$d</string>
     <string name="cinemaster_cancel">Avbryt</string>
     <string name="cinemaster_confirm">Avslutt</string>
     <string name="cinemaster_connect_exit_message">Avslutte flerkamera-oppsett nå?</string>
@@ -537,7 +523,6 @@ og justere innstillinger automatisk"</string>
     <string name="cinemaster_toast_monitor_disconnect">Monitor frakoblet fra flerkamera-oppsett</string>
     <string name="cinemaster_toast_monitor_play_error">Kamera %s ble koblet fra flerkamera-oppsett på grunn av en feil</string>
     <string name="cinemaster_wifi_24g_tips">Bytt til et %s GHz-nettverk for å øke skjermfeedens stabilitet</string>
-    <string name="clear_text_end_icon_content_description">Fjern teksten</string>
     <string name="clearable_edittext_clear_description">Fjern</string>
     <string name="clone_adjust">Juster</string>
     <string name="clone_copy_mode">Frys ramme</string>
@@ -831,7 +816,6 @@ skannede dokumenter automatisk"</string>
     <string name="download_hint_cn">Det ser ut til at enheten din ikke er koblet til WLAN. Bruke %1$s MB mobildata til å laste ned elementene nå?</string>
     <string name="download_hint_wifi">Det ser ut til at enheten din ikke er koblet til Wi-Fi. Bruke %1$s MB mobildata til å laste ned elementene nå?</string>
     <string name="download_in_progress">Laster ned…</string>
-    <string name="download_network_error">Kunne ikke laste ned. Sjekk nettverksinnstillingene.</string>
     <string name="download_title">Advarsel databruk</string>
     <string name="download_waiting">Avventer…</string>
     <string name="dual_camera_lens_covered_toast">Linsen er dekket.</string>
@@ -882,7 +866,6 @@ Dobbelt telefonopptak gjør også at du kan koble til en annen enhet i nærheten
     <string name="eras_ad">e.Kr.</string>
     <string name="eras_bc">f.Kr.</string>
     <string name="error_fail_to_start_audio_capture">Kunne ikke starte lydopptak</string>
-    <string name="error_icon_content_description">Feil</string>
     <string name="esp_tip">Forhåndsvisning av ytre display</string>
     <string name="evening">Ettermiddag</string>
     <string name="exo_controls_cc_disabled_description">Slå på undertekstene</string>
@@ -937,7 +920,6 @@ Dobbelt telefonopptak gjør også at du kan koble til en annen enhet i nærheten
     <string name="exo_track_surround_7_point_1">7.1 surround-lyd</string>
     <string name="exo_track_unknown">Ukjent</string>
     <string name="expand_button_title">Avansert</string>
-    <string name="exposed_dropdown_menu_content_description">Vis rullegardinmenyen</string>
     <string name="exposure_mode_adjust_title">Eksponeringsmodus</string>
     <string name="eye_light">Øyelys</string>
     <string name="eye_light_angel">Engel</string>
@@ -1094,7 +1076,6 @@ og så opprette et bilde der alle ser best ut."</string>
     <string name="hint_subtitle_prompt">Du kan diktere undertekster nå</string>
     <string name="histogram_summary_tip">Vis eksponeringsfeedback i sanntid</string>
     <string name="hunt_dual_water_mark">Dual-kamera-vannmerket vil automatisk legges til.</string>
-    <string name="icon_content_description">Dialogboksikon</string>
     <string name="id_card_mode_hint_back">Skann baksiden av ID-en din</string>
     <string name="id_card_mode_hint_front">Skann fremsiden av ID-en din</string>
     <string name="id_card_mode_use_hint_text_body">"Kombiner begge sider av ID-en din i ett bilde.
@@ -1105,7 +1086,6 @@ Skriv ut kopien trådløst på A4-ark."</string>
     <string name="invisible_mode_dialog_summary">Kan ikke bruke kameraet nå. Deaktiver inkognitomodus under Innstillinger for å kunne bruke kameraet.</string>
     <string name="invisible_mode_dialog_title">Du er inkognito</string>
     <string name="invisible_mode_dialog_to_close">Innstillinger</string>
-    <string name="item_view_role_description">Fane</string>
     <string name="kaleidoscope_fragment_tab_name">Kaleidoskop</string>
     <string name="lens_dirty_detected_content">"Det ser ut til at kameralinsen er skitten.
 Rengjør linsen for bedre effekt."</string>
@@ -1228,18 +1208,6 @@ i portrettmodus"</string>
     <string name="manually_raw_tip">Kan ikke bruke zoom eller RAW-format</string>
     <string name="manually_ultra_raw_tip">Kan ikke bruke zoom med Ultra RAW</string>
     <string name="masterfilter_description_title">Filmfiltre</string>
-    <string name="material_clock_toggle_content_description">Velg AM eller PM</string>
-    <string name="material_hour_selection">Velg time</string>
-    <string name="material_hour_suffix">%1$s null-null</string>
-    <string name="material_minute_selection">Angi minutter</string>
-    <string name="material_minute_suffix">%1$s minutter</string>
-    <string name="material_timepicker_am">AM</string>
-    <string name="material_timepicker_clock_mode_description">Bytt til klokkemodus for tidsinndata.</string>
-    <string name="material_timepicker_hour">Time</string>
-    <string name="material_timepicker_minute">Minutt</string>
-    <string name="material_timepicker_pm">PM</string>
-    <string name="material_timepicker_select_time">Velg tidspunkt</string>
-    <string name="material_timepicker_text_input_mode_description">Bytt til tekstinndatamodus for tidsinndata.</string>
     <string name="message_snap_double_confirm">Å holde volumknappen inne lenge aktiverer NFC. Vil du bytte ut denne funksjonen?</string>
     <string name="midnight">Natt</string>
     <string name="mimoji_app_name">Fun Cam</string>
@@ -1378,7 +1346,6 @@ i portrettmodus"</string>
     <string name="miuix_appcompat_delete_description">Slett</string>
     <string name="miuix_appcompat_deselect_all">Fjern alle valg</string>
     <string name="miuix_appcompat_deselect_all_description">Fjern alle valg</string>
-    <string name="miuix_appcompat_edit">Rediger</string>
     <string name="miuix_appcompat_search_action_mode_cancel">Avbryt</string>
     <string name="miuix_appcompat_search_input_description">Søk</string>
     <string name="miuix_appcompat_select_all">Velg alle</string>
@@ -1486,42 +1453,6 @@ i portrettmodus"</string>
     <string name="msg_bubble_doc4_first_use">Trykk for å gjenkjenne tekst</string>
     <string name="msg_toast_doc4_recognition_failed">Det oppstod en feil. Prøv igjen.</string>
     <string name="msg_toast_doc4_text_not_found">Fant ikke tekst</string>
-    <string name="mtrl_badge_numberless_content_description">Nytt varsel</string>
-    <string name="mtrl_chip_close_icon_content_description">Fjern %1$s</string>
-    <string name="mtrl_exceed_max_badge_number_content_description">Flere enn %1$d nye varsler</string>
-    <string name="mtrl_picker_a11y_next_month">Endre til neste måned</string>
-    <string name="mtrl_picker_a11y_prev_month">Endre til forrige måned</string>
-    <string name="mtrl_picker_announce_current_selection">Gjeldende valg: %1$s</string>
-    <string name="mtrl_picker_cancel">Avbryt</string>
-    <string name="mtrl_picker_confirm">OK</string>
-    <string name="mtrl_picker_date_header_selected">%1$s</string>
-    <string name="mtrl_picker_date_header_title">Velg dato</string>
-    <string name="mtrl_picker_date_header_unselected">Valgt dato</string>
-    <string name="mtrl_picker_day_of_week_column_header">Kolonne for dager: %1$s</string>
-    <string name="mtrl_picker_invalid_format">Ugyldig format.</string>
-    <string name="mtrl_picker_invalid_format_example">Eksempel: %1$s</string>
-    <string name="mtrl_picker_invalid_format_use">Bruk: %1$s</string>
-    <string name="mtrl_picker_invalid_range">Ugyldig område.</string>
-    <string name="mtrl_picker_navigate_to_year_description">Naviger til år %1$s</string>
-    <string name="mtrl_picker_out_of_range">Utenfor rekkevidde: %1$s</string>
-    <string name="mtrl_picker_range_header_only_end_selected">Startdato – %1$s</string>
-    <string name="mtrl_picker_range_header_only_start_selected">%1$s – sluttdato</string>
-    <string name="mtrl_picker_range_header_selected">%1$s–%2$s</string>
-    <string name="mtrl_picker_range_header_title">Velg periode</string>
-    <string name="mtrl_picker_range_header_unselected">Startdato–sluttdato</string>
-    <string name="mtrl_picker_save">Lagre</string>
-    <string name="mtrl_picker_text_input_date_hint">Dato</string>
-    <string name="mtrl_picker_text_input_date_range_end_hint">Sluttdato</string>
-    <string name="mtrl_picker_text_input_date_range_start_hint">Startdato</string>
-    <string name="mtrl_picker_text_input_day_abbr">d</string>
-    <string name="mtrl_picker_text_input_month_abbr">m</string>
-    <string name="mtrl_picker_text_input_year_abbr">å</string>
-    <string name="mtrl_picker_toggle_to_calendar_input_mode">Bytt til kalenderinndatamodus</string>
-    <string name="mtrl_picker_toggle_to_day_selection">Trykk for å bytte til å velge dag</string>
-    <string name="mtrl_picker_toggle_to_text_input_mode">Bytt til tekstinndatamodus</string>
-    <string name="mtrl_picker_toggle_to_year_selection">Trykk for å bytte til å velge år</string>
-    <string name="mtrl_timepicker_cancel">Avbryt</string>
-    <string name="mtrl_timepicker_confirm">OK</string>
     <string name="multi_window_mode_not_supported">Kamera kan ikke brukes i flervindumodus</string>
     <string name="network_access_user_notice_agree">Godta</string>
     <string name="network_access_user_notice_message_live_video">&lt;Data>Kamera må koble til internett for å tilby effekter, musikk og andre funksjoner for korte videoer.&lt;br/>&lt;br/>Ved å trykke på \"Godta\" nedenfor, godtar du &lt;a href =%1$s>brukeravtalen&lt;/a> og &lt;a href =%2$s>personvernerklæringen&lt;/a> vår, og gir Kamera tillatelse til å koble til internett.&lt;/Data></string>
@@ -1616,7 +1547,6 @@ Ultra RAW-bilder lagrer %d bits med data, slik at du får enda bedre detaljer."<
     <string name="parameter_wb_title">Hvitbalanse</string>
     <string name="parameter_zoom_slider_description">Dra zoom-glidebryteren horisontalt for å endre bildet jevnt fra et bilde langt unna til et nærbilde.</string>
     <string name="parameter_zoom_slider_title">Zoom</string>
-    <string name="password_toggle_content_description">Vis passordet</string>
     <string name="path_settings">System-apper/Kamera/Innstillinger</string>
     <string name="photo_assistance_tips_title">Live tips</string>
     <string name="pic_flaw_blink_more">Det ser ut til at noen i rammen lukket øynene</string>
@@ -2359,7 +2289,6 @@ Hold motivet skarpt, mens du gjør bakgrunnen uskarp."</string>
     <string name="time_picker_label_hour">T</string>
     <string name="time_picker_label_minute">M</string>
     <string name="time_stamp_date_format">dd.MM.yyyy</string>
-    <string name="time_stamp_date_format_minute">dd.MM.yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">Du kan fryse og avslutte frysing av bakgrunnen når som helst før og etter opptak.</string>
     <string name="timefreeze_guide_tip3">Be motivet om å holde seg i midten av rammen.</string>
     <string name="timefreeze_guide_tip4">Få trafikken til å stoppe.</string>
@@ -2397,7 +2326,7 @@ Hold motivet skarpt, mens du gjør bakgrunnen uskarp."</string>
     <string name="tip_flash_screen_light_on">Myk blits: På</string>
     <string name="tip_flash_soft_light_off">Myk blits: Av</string>
     <string name="tip_flash_soft_light_torch">Myk blits: Lommelyktmodus</string>
-    <string name="tip_flash_torch">Blits: Lommelykt</string>
+    <string name="tip_flash_torch">Blits: Alltid på</string>
     <string name="tip_friend_mode_connect_when_24GHz">Bruk en %s GHz forbindelse for å få bedre forhåndsvisningskvalitet</string>
     <string name="tip_friend_mode_display_device_name_connect">Delt forhåndsvisning</string>
     <string name="tip_friend_mode_display_device_name_disconnect">Den andre enheten har avsluttet denne økten</string>

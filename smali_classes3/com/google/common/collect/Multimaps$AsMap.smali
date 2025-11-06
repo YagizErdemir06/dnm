@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/Multimaps$AsMap;
+.class public final Lcom/google/common/collect/Multimaps$AsMap;
 .super Lcom/google/common/collect/Maps$ViewCachingAbstractMap;
 .source "SourceFile"
 
@@ -59,8 +59,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/Maps$ViewCachingAbstractMap;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -75,6 +77,7 @@
 .method public static synthetic access$200(Lcom/google/common/collect/Multimaps$AsMap;)Lcom/google/common/collect/Multimap;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Multimaps$AsMap;->multimap:Lcom/google/common/collect/Multimap;
 
     return-object p0
@@ -85,6 +88,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Multimaps$AsMap;->multimap:Lcom/google/common/collect/Multimap;
 
     invoke-interface {p0}, Lcom/google/common/collect/Multimap;->clear()V
@@ -99,6 +103,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Multimaps$AsMap;->multimap:Lcom/google/common/collect/Multimap;
 
     invoke-interface {p0, p1}, Lcom/google/common/collect/Multimap;->containsKey(Ljava/lang/Object;)Z
@@ -121,6 +126,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/Multimaps$AsMap$EntrySet;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/Multimaps$AsMap$EntrySet;-><init>(Lcom/google/common/collect/Multimaps$AsMap;)V
@@ -189,6 +195,7 @@
 .method public isEmpty()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Multimaps$AsMap;->multimap:Lcom/google/common/collect/Multimap;
 
     invoke-interface {p0}, Lcom/google/common/collect/Multimap;->isEmpty()Z
@@ -208,6 +215,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Multimaps$AsMap;->multimap:Lcom/google/common/collect/Multimap;
 
     invoke-interface {p0}, Lcom/google/common/collect/Multimap;->keySet()Ljava/util/Set;
@@ -282,6 +290,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Multimaps$AsMap;->multimap:Lcom/google/common/collect/Multimap;
 
     invoke-interface {p0}, Lcom/google/common/collect/Multimap;->keySet()Ljava/util/Set;
@@ -296,6 +305,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Multimaps$AsMap;->multimap:Lcom/google/common/collect/Multimap;
 
     invoke-interface {p0}, Lcom/google/common/collect/Multimap;->keySet()Ljava/util/Set;

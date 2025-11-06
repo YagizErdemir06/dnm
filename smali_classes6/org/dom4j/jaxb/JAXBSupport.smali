@@ -1,4 +1,4 @@
-.class abstract Lorg/dom4j/jaxb/JAXBSupport;
+.class public abstract Lorg/dom4j/jaxb/JAXBSupport;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -51,14 +51,17 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/jaxb/JAXBSupport;->jaxbContext:Ljavax/xml/bind/JAXBContext;
 
     if-nez v0, :cond_1
 
+    .line 2
     iget-object v0, p0, Lorg/dom4j/jaxb/JAXBSupport;->classloader:Ljava/lang/ClassLoader;
 
     if-nez v0, :cond_0
 
+    .line 3
     iget-object v0, p0, Lorg/dom4j/jaxb/JAXBSupport;->contextPath:Ljava/lang/String;
 
     invoke-static {v0}, Ljavax/xml/bind/JAXBContext;->newInstance(Ljava/lang/String;)Ljavax/xml/bind/JAXBContext;
@@ -69,6 +72,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-object v1, p0, Lorg/dom4j/jaxb/JAXBSupport;->contextPath:Ljava/lang/String;
 
@@ -78,6 +82,7 @@
 
     iput-object v0, p0, Lorg/dom4j/jaxb/JAXBSupport;->jaxbContext:Ljavax/xml/bind/JAXBContext;
 
+    .line 5
     :cond_1
     :goto_0
     iget-object p0, p0, Lorg/dom4j/jaxb/JAXBSupport;->jaxbContext:Ljavax/xml/bind/JAXBContext;
@@ -93,10 +98,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/jaxb/JAXBSupport;->marshaller:Ljavax/xml/bind/Marshaller;
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-direct {p0}, Lorg/dom4j/jaxb/JAXBSupport;->getContext()Ljavax/xml/bind/JAXBContext;
 
     move-result-object v0
@@ -107,6 +114,7 @@
 
     iput-object v0, p0, Lorg/dom4j/jaxb/JAXBSupport;->marshaller:Ljavax/xml/bind/Marshaller;
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lorg/dom4j/jaxb/JAXBSupport;->marshaller:Ljavax/xml/bind/Marshaller;
 
@@ -121,10 +129,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/jaxb/JAXBSupport;->unmarshaller:Ljavax/xml/bind/Unmarshaller;
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-direct {p0}, Lorg/dom4j/jaxb/JAXBSupport;->getContext()Ljavax/xml/bind/JAXBContext;
 
     move-result-object v0
@@ -135,6 +145,7 @@
 
     iput-object v0, p0, Lorg/dom4j/jaxb/JAXBSupport;->unmarshaller:Ljavax/xml/bind/Unmarshaller;
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lorg/dom4j/jaxb/JAXBSupport;->unmarshaller:Ljavax/xml/bind/Unmarshaller;
 
@@ -151,16 +162,19 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lorg/dom4j/dom/DOMDocument;
 
     invoke-direct {v0}, Lorg/dom4j/dom/DOMDocument;-><init>()V
 
+    .line 2
     invoke-direct {p0}, Lorg/dom4j/jaxb/JAXBSupport;->getMarshaller()Ljavax/xml/bind/Marshaller;
 
     move-result-object p0
 
     invoke-interface {p0, p1, v0}, Ljavax/xml/bind/Marshaller;->marshal(Ljava/lang/Object;Lorg/w3c/dom/Node;)V
 
+    .line 3
     invoke-virtual {v0}, Lorg/dom4j/tree/DefaultDocument;->getRootElement()Lorg/dom4j/Element;
 
     move-result-object p0
@@ -176,6 +190,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljavax/xml/transform/stream/StreamSource;
 
     new-instance v1, Ljava/io/StringReader;
@@ -188,6 +203,7 @@
 
     invoke-direct {v0, v1}, Ljavax/xml/transform/stream/StreamSource;-><init>(Ljava/io/Reader;)V
 
+    .line 2
     invoke-direct {p0}, Lorg/dom4j/jaxb/JAXBSupport;->getUnmarshaller()Ljavax/xml/bind/Unmarshaller;
 
     move-result-object p0

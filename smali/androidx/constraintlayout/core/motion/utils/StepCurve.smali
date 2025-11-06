@@ -8,17 +8,20 @@
 
 
 # instance fields
-.field mCurveFit:Landroidx/constraintlayout/core/motion/utils/MonotonicCurveFit;
+.field public mCurveFit:Landroidx/constraintlayout/core/motion/utils/MonotonicCurveFit;
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 8
 
+    .line 1
     invoke-direct {p0}, Landroidx/constraintlayout/core/motion/utils/Easing;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/constraintlayout/core/motion/utils/Easing;->str:Ljava/lang/String;
 
+    .line 3
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -29,6 +32,7 @@
 
     const/16 v1, 0x28
 
+    .line 4
     invoke-virtual {p1, v1}, Ljava/lang/String;->indexOf(I)I
 
     move-result v1
@@ -37,6 +41,7 @@
 
     const/16 v2, 0x2c
 
+    .line 5
     invoke-virtual {p1, v2, v1}, Ljava/lang/String;->indexOf(II)I
 
     move-result v3
@@ -48,6 +53,7 @@
 
     if-eq v3, v5, :cond_0
 
+    .line 6
     invoke-virtual {p1, v1, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v1
@@ -58,6 +64,7 @@
 
     add-int/lit8 v5, v4, 0x1
 
+    .line 7
     invoke-static {v1}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
     move-result-wide v6
@@ -66,6 +73,7 @@
 
     add-int/lit8 v1, v3, 0x1
 
+    .line 8
     invoke-virtual {p1, v2, v1}, Ljava/lang/String;->indexOf(II)I
 
     move-result v3
@@ -77,10 +85,12 @@
     :cond_0
     const/16 v2, 0x29
 
+    .line 9
     invoke-virtual {p1, v2, v1}, Ljava/lang/String;->indexOf(II)I
 
     move-result v2
 
+    .line 10
     invoke-virtual {p1, v1, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p1
@@ -91,12 +101,14 @@
 
     add-int/lit8 v1, v4, 0x1
 
+    .line 11
     invoke-static {p1}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
     move-result-wide v2
 
     aput-wide v2, v0, v4
 
+    .line 12
     invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([DI)[D
 
     move-result-object p1
@@ -188,7 +200,7 @@
     aput v1, v2, v4
 
     .line 7
-    sget-object v9, Ljava/lang/Double;->TYPE:Ljava/lang/Class;
+    const-class v9, D
 
     invoke-static {v9, v2}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;[I)Ljava/lang/Object;
 
@@ -329,6 +341,7 @@
 .method public get(D)D
     .locals 1
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/utils/StepCurve;->mCurveFit:Landroidx/constraintlayout/core/motion/utils/MonotonicCurveFit;
 
     const/4 v0, 0x0
@@ -343,6 +356,7 @@
 .method public getDiff(D)D
     .locals 1
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/utils/StepCurve;->mCurveFit:Landroidx/constraintlayout/core/motion/utils/MonotonicCurveFit;
 
     const/4 v0, 0x0

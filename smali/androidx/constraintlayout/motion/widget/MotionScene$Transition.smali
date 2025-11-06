@@ -31,29 +31,11 @@
 
 .field public static final AUTO_NONE:I = 0x0
 
-.field public static final INTERPOLATE_ANTICIPATE:I = 0x6
+.field public static final TRANSITION_FLAG_FIRST_DRAW:I = 0x1
 
-.field public static final INTERPOLATE_BOUNCE:I = 0x4
+.field public static final TRANSITION_FLAG_INTERCEPT_TOUCH:I = 0x4
 
-.field public static final INTERPOLATE_EASE_IN:I = 0x1
-
-.field public static final INTERPOLATE_EASE_IN_OUT:I = 0x0
-
-.field public static final INTERPOLATE_EASE_OUT:I = 0x2
-
-.field public static final INTERPOLATE_LINEAR:I = 0x3
-
-.field public static final INTERPOLATE_OVERSHOOT:I = 0x5
-
-.field public static final INTERPOLATE_REFERENCE_ID:I = -0x2
-
-.field public static final INTERPOLATE_SPLINE_STRING:I = -0x1
-
-.field static final TRANSITION_FLAG_FIRST_DRAW:I = 0x1
-
-.field static final TRANSITION_FLAG_INTERCEPT_TOUCH:I = 0x4
-
-.field static final TRANSITION_FLAG_INTRA_AUTO:I = 0x2
+.field public static final TRANSITION_FLAG_INTRA_AUTO:I = 0x2
 
 
 # instance fields
@@ -487,6 +469,7 @@
 .method public static synthetic access$000(Landroidx/constraintlayout/motion/widget/MotionScene$Transition;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mConstraintSetEnd:I
 
     return p0
@@ -495,6 +478,7 @@
 .method public static synthetic access$002(Landroidx/constraintlayout/motion/widget/MotionScene$Transition;I)I
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mConstraintSetEnd:I
 
     return p1
@@ -503,6 +487,7 @@
 .method public static synthetic access$100(Landroidx/constraintlayout/motion/widget/MotionScene$Transition;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mConstraintSetStart:I
 
     return p0
@@ -511,6 +496,7 @@
 .method public static synthetic access$102(Landroidx/constraintlayout/motion/widget/MotionScene$Transition;I)I
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mConstraintSetStart:I
 
     return p1
@@ -519,6 +505,7 @@
 .method public static synthetic access$1300(Landroidx/constraintlayout/motion/widget/MotionScene$Transition;)Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mIsAbstract:Z
 
     return p0
@@ -527,6 +514,7 @@
 .method public static synthetic access$1400(Landroidx/constraintlayout/motion/widget/MotionScene$Transition;)Ljava/util/ArrayList;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mKeyFramesList:Ljava/util/ArrayList;
 
     return-object p0
@@ -535,6 +523,7 @@
 .method public static synthetic access$1500(Landroidx/constraintlayout/motion/widget/MotionScene$Transition;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mDefaultInterpolator:I
 
     return p0
@@ -543,6 +532,7 @@
 .method public static synthetic access$1600(Landroidx/constraintlayout/motion/widget/MotionScene$Transition;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mDefaultInterpolatorString:Ljava/lang/String;
 
     return-object p0
@@ -551,6 +541,7 @@
 .method public static synthetic access$1700(Landroidx/constraintlayout/motion/widget/MotionScene$Transition;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mDefaultInterpolatorID:I
 
     return p0
@@ -559,6 +550,7 @@
 .method public static synthetic access$1800(Landroidx/constraintlayout/motion/widget/MotionScene$Transition;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mDuration:I
 
     return p0
@@ -567,6 +559,7 @@
 .method public static synthetic access$1900(Landroidx/constraintlayout/motion/widget/MotionScene$Transition;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mPathMotionArc:I
 
     return p0
@@ -575,6 +568,7 @@
 .method public static synthetic access$200(Landroidx/constraintlayout/motion/widget/MotionScene$Transition;)Landroidx/constraintlayout/motion/widget/TouchResponse;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mTouchResponse:Landroidx/constraintlayout/motion/widget/TouchResponse;
 
     return-object p0
@@ -583,6 +577,7 @@
 .method public static synthetic access$2000(Landroidx/constraintlayout/motion/widget/MotionScene$Transition;)F
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mStagger:F
 
     return p0
@@ -591,6 +586,7 @@
 .method public static synthetic access$202(Landroidx/constraintlayout/motion/widget/MotionScene$Transition;Landroidx/constraintlayout/motion/widget/TouchResponse;)Landroidx/constraintlayout/motion/widget/TouchResponse;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mTouchResponse:Landroidx/constraintlayout/motion/widget/TouchResponse;
 
     return-object p1
@@ -599,6 +595,7 @@
 .method public static synthetic access$300(Landroidx/constraintlayout/motion/widget/MotionScene$Transition;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mId:I
 
     return p0
@@ -607,6 +604,7 @@
 .method public static synthetic access$400(Landroidx/constraintlayout/motion/widget/MotionScene$Transition;)Ljava/util/ArrayList;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mOnClicks:Ljava/util/ArrayList;
 
     return-object p0
@@ -615,6 +613,7 @@
 .method public static synthetic access$500(Landroidx/constraintlayout/motion/widget/MotionScene$Transition;)Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mDisable:Z
 
     return p0
@@ -623,6 +622,7 @@
 .method public static synthetic access$600(Landroidx/constraintlayout/motion/widget/MotionScene$Transition;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mAutoTransition:I
 
     return p0
@@ -631,6 +631,7 @@
 .method public static synthetic access$800(Landroidx/constraintlayout/motion/widget/MotionScene$Transition;)Landroidx/constraintlayout/motion/widget/MotionScene;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mMotionScene:Landroidx/constraintlayout/motion/widget/MotionScene;
 
     return-object p0
@@ -651,6 +652,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p3}, Landroid/content/res/TypedArray;->getIndexCount()I
 
     move-result v0
@@ -666,10 +668,12 @@
 
     if-ge v2, v0, :cond_10
 
+    .line 2
     invoke-virtual {p3, v2}, Landroid/content/res/TypedArray;->getIndex(I)I
 
     move-result v5
 
+    .line 3
     sget v6, Landroidx/constraintlayout/widget/R$styleable;->Transition_constraintSetEnd:I
 
     const-string/jumbo v7, "xml"
@@ -678,12 +682,14 @@
 
     if-ne v5, v6, :cond_1
 
+    .line 4
     invoke-virtual {p3, v5, v4}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v3
 
     iput v3, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mConstraintSetEnd:I
 
+    .line 5
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -694,20 +700,24 @@
 
     move-result-object v3
 
+    .line 6
     invoke-virtual {v8, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
+    .line 7
     new-instance v3, Landroidx/constraintlayout/widget/ConstraintSet;
 
     invoke-direct {v3}, Landroidx/constraintlayout/widget/ConstraintSet;-><init>()V
 
+    .line 8
     iget v4, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mConstraintSetEnd:I
 
     invoke-virtual {v3, p2, v4}, Landroidx/constraintlayout/widget/ConstraintSet;->load(Landroid/content/Context;I)V
 
+    .line 9
     invoke-static {p1}, Landroidx/constraintlayout/motion/widget/MotionScene;->access$1100(Landroidx/constraintlayout/motion/widget/MotionScene;)Landroid/util/SparseArray;
 
     move-result-object v4
@@ -718,6 +728,7 @@
 
     goto/16 :goto_1
 
+    .line 10
     :cond_0
     invoke-virtual {v7, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -725,21 +736,25 @@
 
     if-eqz v3, :cond_f
 
+    .line 11
     iget v3, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mConstraintSetEnd:I
 
     invoke-static {p1, p2, v3}, Landroidx/constraintlayout/motion/widget/MotionScene;->access$1200(Landroidx/constraintlayout/motion/widget/MotionScene;Landroid/content/Context;I)I
 
     move-result v3
 
+    .line 12
     iput v3, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mConstraintSetEnd:I
 
     goto/16 :goto_1
 
+    .line 13
     :cond_1
     sget v6, Landroidx/constraintlayout/widget/R$styleable;->Transition_constraintSetStart:I
 
     if-ne v5, v6, :cond_3
 
+    .line 14
     iget v3, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mConstraintSetStart:I
 
     invoke-virtual {p3, v5, v3}, Landroid/content/res/TypedArray;->getResourceId(II)I
@@ -748,6 +763,7 @@
 
     iput v3, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mConstraintSetStart:I
 
+    .line 15
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -758,20 +774,24 @@
 
     move-result-object v3
 
+    .line 16
     invoke-virtual {v8, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_2
 
+    .line 17
     new-instance v3, Landroidx/constraintlayout/widget/ConstraintSet;
 
     invoke-direct {v3}, Landroidx/constraintlayout/widget/ConstraintSet;-><init>()V
 
+    .line 18
     iget v4, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mConstraintSetStart:I
 
     invoke-virtual {v3, p2, v4}, Landroidx/constraintlayout/widget/ConstraintSet;->load(Landroid/content/Context;I)V
 
+    .line 19
     invoke-static {p1}, Landroidx/constraintlayout/motion/widget/MotionScene;->access$1100(Landroidx/constraintlayout/motion/widget/MotionScene;)Landroid/util/SparseArray;
 
     move-result-object v4
@@ -782,6 +802,7 @@
 
     goto/16 :goto_1
 
+    .line 20
     :cond_2
     invoke-virtual {v7, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -789,31 +810,37 @@
 
     if-eqz v3, :cond_f
 
+    .line 21
     iget v3, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mConstraintSetStart:I
 
     invoke-static {p1, p2, v3}, Landroidx/constraintlayout/motion/widget/MotionScene;->access$1200(Landroidx/constraintlayout/motion/widget/MotionScene;Landroid/content/Context;I)I
 
     move-result v3
 
+    .line 22
     iput v3, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mConstraintSetStart:I
 
     goto/16 :goto_1
 
+    .line 23
     :cond_3
     sget v6, Landroidx/constraintlayout/widget/R$styleable;->Transition_motionInterpolator:I
 
     if-ne v5, v6, :cond_7
 
+    .line 24
     invoke-virtual {p3, v5}, Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
 
     move-result-object v6
 
+    .line 25
     iget v6, v6, Landroid/util/TypedValue;->type:I
 
     const/4 v7, -0x2
 
     if-ne v6, v3, :cond_4
 
+    .line 26
     invoke-virtual {p3, v5, v4}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v3
@@ -822,6 +849,7 @@
 
     if-eq v3, v4, :cond_f
 
+    .line 27
     iput v7, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mDefaultInterpolator:I
 
     goto/16 :goto_1
@@ -831,6 +859,7 @@
 
     if-ne v6, v3, :cond_6
 
+    .line 28
     invoke-virtual {p3, v5}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v3
@@ -841,27 +870,32 @@
 
     const-string v6, "/"
 
+    .line 29
     invoke-virtual {v3, v6}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v3
 
     if-lez v3, :cond_5
 
+    .line 30
     invoke-virtual {p3, v5, v4}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v3
 
     iput v3, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mDefaultInterpolatorID:I
 
+    .line 31
     iput v7, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mDefaultInterpolator:I
 
     goto/16 :goto_1
 
+    .line 32
     :cond_5
     iput v4, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mDefaultInterpolator:I
 
     goto/16 :goto_1
 
+    .line 33
     :cond_6
     iget v3, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mDefaultInterpolator:I
 
@@ -873,11 +907,13 @@
 
     goto/16 :goto_1
 
+    .line 34
     :cond_7
     sget v3, Landroidx/constraintlayout/widget/R$styleable;->Transition_duration:I
 
     if-ne v5, v3, :cond_8
 
+    .line 35
     iget v3, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mDuration:I
 
     invoke-virtual {p3, v5, v3}, Landroid/content/res/TypedArray;->getInt(II)I
@@ -890,15 +926,18 @@
 
     if-ge v3, v4, :cond_f
 
+    .line 36
     iput v4, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mDuration:I
 
     goto :goto_1
 
+    .line 37
     :cond_8
     sget v3, Landroidx/constraintlayout/widget/R$styleable;->Transition_staggered:I
 
     if-ne v5, v3, :cond_9
 
+    .line 38
     iget v3, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mStagger:F
 
     invoke-virtual {p3, v5, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
@@ -909,11 +948,13 @@
 
     goto :goto_1
 
+    .line 39
     :cond_9
     sget v3, Landroidx/constraintlayout/widget/R$styleable;->Transition_autoTransition:I
 
     if-ne v5, v3, :cond_a
 
+    .line 40
     iget v3, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mAutoTransition:I
 
     invoke-virtual {p3, v5, v3}, Landroid/content/res/TypedArray;->getInteger(II)I
@@ -924,11 +965,13 @@
 
     goto :goto_1
 
+    .line 41
     :cond_a
     sget v3, Landroidx/constraintlayout/widget/R$styleable;->Transition_android_id:I
 
     if-ne v5, v3, :cond_b
 
+    .line 42
     iget v3, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mId:I
 
     invoke-virtual {p3, v5, v3}, Landroid/content/res/TypedArray;->getResourceId(II)I
@@ -939,11 +982,13 @@
 
     goto :goto_1
 
+    .line 43
     :cond_b
     sget v3, Landroidx/constraintlayout/widget/R$styleable;->Transition_transitionDisable:I
 
     if-ne v5, v3, :cond_c
 
+    .line 44
     iget-boolean v3, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mDisable:Z
 
     invoke-virtual {p3, v5, v3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -954,11 +999,13 @@
 
     goto :goto_1
 
+    .line 45
     :cond_c
     sget v3, Landroidx/constraintlayout/widget/R$styleable;->Transition_pathMotionArc:I
 
     if-ne v5, v3, :cond_d
 
+    .line 46
     invoke-virtual {p3, v5, v4}, Landroid/content/res/TypedArray;->getInteger(II)I
 
     move-result v3
@@ -967,11 +1014,13 @@
 
     goto :goto_1
 
+    .line 47
     :cond_d
     sget v3, Landroidx/constraintlayout/widget/R$styleable;->Transition_layoutDuringTransition:I
 
     if-ne v5, v3, :cond_e
 
+    .line 48
     invoke-virtual {p3, v5, v1}, Landroid/content/res/TypedArray;->getInteger(II)I
 
     move-result v3
@@ -980,11 +1029,13 @@
 
     goto :goto_1
 
+    .line 49
     :cond_e
     sget v3, Landroidx/constraintlayout/widget/R$styleable;->Transition_transitionFlags:I
 
     if-ne v5, v3, :cond_f
 
+    .line 50
     invoke-virtual {p3, v5, v1}, Landroid/content/res/TypedArray;->getInteger(II)I
 
     move-result v3
@@ -997,11 +1048,13 @@
 
     goto/16 :goto_0
 
+    .line 51
     :cond_10
     iget p1, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mConstraintSetStart:I
 
     if-ne p1, v4, :cond_11
 
+    .line 52
     iput-boolean v3, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mIsAbstract:Z
 
     :cond_11
@@ -1023,14 +1076,17 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Landroidx/constraintlayout/widget/R$styleable;->Transition:[I
 
     invoke-virtual {p2, p3, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p3
 
+    .line 2
     invoke-direct {p0, p1, p2, p3}, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->fill(Landroidx/constraintlayout/motion/widget/MotionScene;Landroid/content/Context;Landroid/content/res/TypedArray;)V
 
+    .line 3
     invoke-virtual {p3}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void
@@ -1049,6 +1105,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mKeyFramesList:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -1149,6 +1206,7 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mConstraintSetStart:I
 
     const/4 v1, -0x1
@@ -1159,6 +1217,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1170,11 +1229,13 @@
 
     move-result-object v0
 
+    .line 3
     :goto_0
     iget v2, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mConstraintSetEnd:I
 
     if-ne v2, v1, :cond_1
 
+    .line 4
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1191,6 +1252,7 @@
 
     goto :goto_1
 
+    .line 5
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1225,6 +1287,7 @@
 .method public getAutoTransition()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mAutoTransition:I
 
     return p0
@@ -1233,6 +1296,7 @@
 .method public getDuration()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mDuration:I
 
     return p0
@@ -1241,6 +1305,7 @@
 .method public getEndConstraintSetId()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mConstraintSetEnd:I
 
     return p0
@@ -1249,6 +1314,7 @@
 .method public getId()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mId:I
 
     return p0
@@ -1265,6 +1331,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mKeyFramesList:Ljava/util/ArrayList;
 
     return-object p0
@@ -1273,6 +1340,7 @@
 .method public getLayoutDuringTransition()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mLayoutDuringTransition:I
 
     return p0
@@ -1289,6 +1357,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mOnClicks:Ljava/util/ArrayList;
 
     return-object p0
@@ -1297,6 +1366,7 @@
 .method public getPathMotionArc()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mPathMotionArc:I
 
     return p0
@@ -1305,6 +1375,7 @@
 .method public getStagger()F
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mStagger:F
 
     return p0
@@ -1313,6 +1384,7 @@
 .method public getStartConstraintSetId()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mConstraintSetStart:I
 
     return p0
@@ -1321,6 +1393,7 @@
 .method public getTouchResponse()Landroidx/constraintlayout/motion/widget/TouchResponse;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mTouchResponse:Landroidx/constraintlayout/motion/widget/TouchResponse;
 
     return-object p0
@@ -1329,6 +1402,7 @@
 .method public isEnabled()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mDisable:Z
 
     xor-int/lit8 p0, p0, 0x1
@@ -1347,6 +1421,7 @@
         }
     .end annotation
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mTransitionFlags:I
 
     and-int/2addr p0, p1
@@ -1375,6 +1450,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mOnClicks:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1394,6 +1470,7 @@
 
     check-cast v1, Landroidx/constraintlayout/motion/widget/MotionScene$Transition$TransitionOnClick;
 
+    .line 2
     iget v2, v1, Landroidx/constraintlayout/motion/widget/MotionScene$Transition$TransitionOnClick;->mTargetId:I
 
     if-ne v2, p1, :cond_0
@@ -1406,6 +1483,7 @@
     :goto_0
     if-eqz v1, :cond_2
 
+    .line 3
     iget-object p0, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mOnClicks:Ljava/util/ArrayList;
 
     invoke-virtual {p0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
@@ -1425,6 +1503,7 @@
         }
     .end annotation
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mAutoTransition:I
 
     return-void
@@ -1443,6 +1522,7 @@
 
     const/16 v0, 0x8
 
+    .line 1
     invoke-static {p1, v0}, Ljava/lang/Math;->max(II)I
 
     move-result p1
@@ -1463,6 +1543,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->setEnabled(Z)V
 
     return-void
@@ -1481,6 +1562,7 @@
 
     xor-int/lit8 p1, p1, 0x1
 
+    .line 1
     iput-boolean p1, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mDisable:Z
 
     return-void
@@ -1501,10 +1583,13 @@
         }
     .end annotation
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mDefaultInterpolator:I
 
+    .line 2
     iput-object p2, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mDefaultInterpolatorString:Ljava/lang/String;
 
+    .line 3
     iput p3, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mDefaultInterpolatorID:I
 
     return-void
@@ -1521,6 +1606,7 @@
         }
     .end annotation
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mLayoutDuringTransition:I
 
     return-void
@@ -1543,6 +1629,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     new-instance v0, Landroidx/constraintlayout/motion/widget/TouchResponse;
 
@@ -1573,12 +1660,14 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->getTouchResponse()Landroidx/constraintlayout/motion/widget/TouchResponse;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Landroidx/constraintlayout/motion/widget/TouchResponse;->setTouchUpMode(I)V
 
     :cond_0
@@ -1596,6 +1685,7 @@
         }
     .end annotation
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mPathMotionArc:I
 
     return-void
@@ -1612,6 +1702,7 @@
         }
     .end annotation
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mStagger:F
 
     return-void
@@ -1628,6 +1719,7 @@
         }
     .end annotation
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->mTransitionFlags:I
 
     return-void

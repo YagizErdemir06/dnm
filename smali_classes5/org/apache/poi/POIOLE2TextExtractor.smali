@@ -7,6 +7,7 @@
 .method public constructor <init>(Lorg/apache/poi/POIDocument;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lorg/apache/poi/POITextExtractor;-><init>(Lorg/apache/poi/POIDocument;)V
 
     return-void
@@ -17,6 +18,7 @@
 .method public getDocSummaryInformation()Lorg/apache/poi/hpsf/DocumentSummaryInformation;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POITextExtractor;->document:Lorg/apache/poi/POIDocument;
 
     invoke-virtual {p0}, Lorg/apache/poi/POIDocument;->getDocumentSummaryInformation()Lorg/apache/poi/hpsf/DocumentSummaryInformation;
@@ -31,6 +33,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POITextExtractor;->document:Lorg/apache/poi/POIDocument;
 
     iget-object p0, p0, Lorg/apache/poi/POIDocument;->directory:Lorg/apache/poi/poifs/filesystem/DirectoryNode;
@@ -45,6 +48,7 @@
 .method public getMetadataTextExtractor()Lorg/apache/poi/POITextExtractor;
     .locals 1
 
+    .line 1
     new-instance v0, Lorg/apache/poi/hpsf/extractor/HPSFPropertiesExtractor;
 
     invoke-direct {v0, p0}, Lorg/apache/poi/hpsf/extractor/HPSFPropertiesExtractor;-><init>(Lorg/apache/poi/POITextExtractor;)V
@@ -55,6 +59,7 @@
 .method public getRoot()Lorg/apache/poi/poifs/filesystem/DirectoryEntry;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POITextExtractor;->document:Lorg/apache/poi/POIDocument;
 
     iget-object p0, p0, Lorg/apache/poi/POIDocument;->directory:Lorg/apache/poi/poifs/filesystem/DirectoryNode;
@@ -65,6 +70,7 @@
 .method public getSummaryInformation()Lorg/apache/poi/hpsf/SummaryInformation;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POITextExtractor;->document:Lorg/apache/poi/POIDocument;
 
     invoke-virtual {p0}, Lorg/apache/poi/POIDocument;->getSummaryInformation()Lorg/apache/poi/hpsf/SummaryInformation;

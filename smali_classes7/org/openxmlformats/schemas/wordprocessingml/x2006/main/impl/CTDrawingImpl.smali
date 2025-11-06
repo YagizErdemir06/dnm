@@ -18,19 +18,19 @@
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "anchor"
+    const-string v1, "http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
 
-    const-string v2, "http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
+    const-string v2, "anchor"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTDrawingImpl;->ANCHOR$0:Ljavax/xml/namespace/QName;
 
     new-instance v0, Ljavax/xml/namespace/QName;
 
-    const-string v1, "inline"
+    const-string v2, "inline"
 
-    invoke-direct {v0, v2, v1}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljavax/xml/namespace/QName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     sput-object v0, Lorg/openxmlformats/schemas/wordprocessingml/x2006/main/impl/CTDrawingImpl;->INLINE$2:Ljavax/xml/namespace/QName;
 

@@ -15,6 +15,7 @@
 .method public static zzd(Ljava/lang/String;)Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrc;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzqx;
 
     invoke-direct {v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzqx;-><init>()V
@@ -23,8 +24,10 @@
 
     const/4 p0, 0x1
 
+    .line 2
     invoke-virtual {v0, p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrc;->zza(Z)Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrc;
 
+    .line 3
     invoke-virtual {v0, p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrc;->zzb(I)Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrc;
 
     return-object v0

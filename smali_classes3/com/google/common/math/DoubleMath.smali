@@ -15,7 +15,7 @@
 # static fields
 .field private static final LN_2:D
 
-.field static final MAX_FACTORIAL:I = 0xaa
+.field public static final MAX_FACTORIAL:I = 0xaa
     .annotation build Lcom/google/common/annotations/VisibleForTesting;
     .end annotation
 .end field
@@ -28,7 +28,7 @@
 
 .field private static final MIN_LONG_AS_DOUBLE:D = -9.223372036854776E18
 
-.field static final everySixteenthFactorial:[D
+.field public static final everySixteenthFactorial:[D
     .annotation build Lcom/google/common/annotations/VisibleForTesting;
     .end annotation
 .end field
@@ -40,6 +40,7 @@
 
     const-wide/high16 v0, 0x4000000000000000L    # 2.0
 
+    .line 1
     invoke-static {v0, v1}, Ljava/lang/Math;->log(D)D
 
     move-result-wide v0
@@ -50,6 +51,7 @@
 
     new-array v0, v0, [D
 
+    .line 2
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/google/common/math/DoubleMath;->everySixteenthFactorial:[D
@@ -75,6 +77,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -88,6 +91,7 @@
     .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/common/math/DoubleUtils;->isFinite(D)Z
 
     move-result v0
@@ -102,6 +106,7 @@
 
     const-string v0, "n"
 
+    .line 1
     invoke-static {v0, p0}, Lcom/google/common/math/MathPreconditions;->checkNonNegative(Ljava/lang/String;I)I
 
     const/16 v0, 0xaa
@@ -113,38 +118,38 @@
     return-wide v0
 
     :cond_0
-    and-int/lit8 v0, p0, -0x10
+    const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
 
-    add-int/lit8 v0, v0, 0x1
-
-    const-wide/high16 v1, 0x3ff0000000000000L    # 1.0
+    and-int/lit8 v2, p0, -0x10
 
     :goto_0
-    if-gt v0, p0, :cond_1
+    add-int/lit8 v2, v2, 0x1
 
-    int-to-double v3, v0
+    if-gt v2, p0, :cond_1
 
-    mul-double/2addr v1, v3
+    int-to-double v3, v2
 
-    add-int/lit8 v0, v0, 0x1
+    mul-double/2addr v0, v3
 
     goto :goto_0
 
+    .line 2
     :cond_1
-    sget-object v0, Lcom/google/common/math/DoubleMath;->everySixteenthFactorial:[D
+    sget-object v2, Lcom/google/common/math/DoubleMath;->everySixteenthFactorial:[D
 
     shr-int/lit8 p0, p0, 0x4
 
-    aget-wide v3, v0, p0
+    aget-wide v2, v2, p0
 
-    mul-double/2addr v1, v3
+    mul-double/2addr v0, v2
 
-    return-wide v1
+    return-wide v0
 .end method
 
 .method public static fuzzyCompare(DDD)I
     .locals 0
 
+    .line 1
     invoke-static/range {p0 .. p5}, Lcom/google/common/math/DoubleMath;->fuzzyEquals(DDD)Z
 
     move-result p4
@@ -173,6 +178,7 @@
 
     return p0
 
+    .line 2
     :cond_2
     invoke-static {p0, p1}, Ljava/lang/Double;->isNaN(D)Z
 
@@ -194,12 +200,14 @@
 
     const-string v0, "tolerance"
 
+    .line 1
     invoke-static {v0, p4, p5}, Lcom/google/common/math/MathPreconditions;->checkNonNegative(Ljava/lang/String;D)D
 
     sub-double v0, p0, p2
 
     const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
 
+    .line 2
     invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->copySign(DD)D
 
     move-result-wide v0
@@ -212,6 +220,7 @@
 
     if-eqz p4, :cond_1
 
+    .line 3
     invoke-static {p0, p1}, Ljava/lang/Double;->isNaN(D)Z
 
     move-result p0
@@ -244,6 +253,7 @@
     .annotation build Lcom/google/common/annotations/GwtIncompatible;
     .end annotation
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/common/math/DoubleUtils;->isFinite(D)Z
 
     move-result v0
@@ -256,6 +266,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-static {p0, p1}, Lcom/google/common/math/DoubleUtils;->getSignificand(D)J
 
     move-result-wide v0
@@ -297,12 +308,14 @@
 
     if-lez v0, :cond_0
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/common/math/DoubleUtils;->isFinite(D)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-static {p0, p1}, Lcom/google/common/math/DoubleUtils;->getSignificand(D)J
 
     move-result-wide p0
@@ -403,7 +416,7 @@
     :cond_1
     sget-object v3, Lcom/google/common/math/DoubleMath$1;->$SwitchMap$java$math$RoundingMode:[I
 
-    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {p2}, Ljava/math/RoundingMode;->ordinal()I
 
     move-result p2
 
@@ -822,15 +835,17 @@
     .annotation build Lcom/google/common/annotations/GwtIncompatible;
     .end annotation
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/common/math/DoubleUtils;->isFinite(D)Z
 
     move-result v0
 
     if-eqz v0, :cond_8
 
+    .line 2
     sget-object v0, Lcom/google/common/math/DoubleMath$1;->$SwitchMap$java$math$RoundingMode:[I
 
-    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {p2}, Ljava/math/RoundingMode;->ordinal()I
 
     move-result p2
 
@@ -844,12 +859,14 @@
 
     packed-switch p2, :pswitch_data_0
 
+    .line 3
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
 
     throw p0
 
+    .line 4
     :pswitch_0
     invoke-static {p0, p1}, Ljava/lang/Math;->rint(D)D
 
@@ -857,6 +874,7 @@
 
     sub-double v4, p0, v0
 
+    .line 5
     invoke-static {v4, v5}, Ljava/lang/Math;->abs(D)D
 
     move-result-wide v4
@@ -870,6 +888,7 @@
     :cond_0
     return-wide v0
 
+    .line 6
     :pswitch_1
     invoke-static {p0, p1}, Ljava/lang/Math;->rint(D)D
 
@@ -877,6 +896,7 @@
 
     sub-double v4, p0, v0
 
+    .line 7
     invoke-static {v4, v5}, Ljava/lang/Math;->abs(D)D
 
     move-result-wide v4
@@ -885,6 +905,7 @@
 
     if-nez p2, :cond_1
 
+    .line 8
     invoke-static {v2, v3, p0, p1}, Ljava/lang/Math;->copySign(DD)D
 
     move-result-wide v0
@@ -896,6 +917,7 @@
     :cond_1
     return-wide v0
 
+    .line 9
     :pswitch_2
     invoke-static {p0, p1}, Ljava/lang/Math;->rint(D)D
 
@@ -903,6 +925,7 @@
 
     return-wide p0
 
+    .line 10
     :pswitch_3
     invoke-static {p0, p1}, Lcom/google/common/math/DoubleMath;->isMathematicalInteger(D)Z
 
@@ -941,6 +964,7 @@
 
     if-lez p2, :cond_5
 
+    .line 11
     invoke-static {p0, p1}, Lcom/google/common/math/DoubleMath;->isMathematicalInteger(D)Z
 
     move-result p2
@@ -965,6 +989,7 @@
 
     if-gez p2, :cond_7
 
+    .line 12
     invoke-static {p0, p1}, Lcom/google/common/math/DoubleMath;->isMathematicalInteger(D)Z
 
     move-result p2
@@ -984,6 +1009,7 @@
     :goto_2
     return-wide p0
 
+    .line 13
     :pswitch_7
     invoke-static {p0, p1}, Lcom/google/common/math/DoubleMath;->isMathematicalInteger(D)Z
 
@@ -993,6 +1019,7 @@
 
     return-wide p0
 
+    .line 14
     :cond_8
     new-instance p0, Ljava/lang/ArithmeticException;
 
@@ -1020,6 +1047,7 @@
     .annotation build Lcom/google/common/annotations/GwtIncompatible;
     .end annotation
 
+    .line 1
     invoke-static {p0, p1, p2}, Lcom/google/common/math/DoubleMath;->roundIntermediate(DLjava/math/RoundingMode;)D
 
     move-result-wide p0
@@ -1064,21 +1092,25 @@
 
     double-to-long p0, p0
 
+    .line 2
     invoke-static {p0, p1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object p0
 
     return-object p0
 
+    .line 3
     :cond_2
     invoke-static {p0, p1}, Ljava/lang/Math;->getExponent(D)I
 
     move-result p2
 
+    .line 4
     invoke-static {p0, p1}, Lcom/google/common/math/DoubleUtils;->getSignificand(D)J
 
     move-result-wide v0
 
+    .line 5
     invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object v0
@@ -1095,6 +1127,7 @@
 
     if-gez p0, :cond_3
 
+    .line 6
     invoke-virtual {p2}, Ljava/math/BigInteger;->negate()Ljava/math/BigInteger;
 
     move-result-object p2
@@ -1108,6 +1141,7 @@
     .annotation build Lcom/google/common/annotations/GwtIncompatible;
     .end annotation
 
+    .line 1
     invoke-static {p0, p1, p2}, Lcom/google/common/math/DoubleMath;->roundIntermediate(DLjava/math/RoundingMode;)D
 
     move-result-wide v0
@@ -1144,6 +1178,7 @@
     :goto_1
     and-int/2addr v2, v3
 
+    .line 2
     invoke-static {v2, p0, p1, p2}, Lcom/google/common/math/MathPreconditions;->checkInRangeForRoundingInputs(ZDLjava/math/RoundingMode;)V
 
     double-to-int p0, v0
@@ -1156,6 +1191,7 @@
     .annotation build Lcom/google/common/annotations/GwtIncompatible;
     .end annotation
 
+    .line 1
     invoke-static {p0, p1, p2}, Lcom/google/common/math/DoubleMath;->roundIntermediate(DLjava/math/RoundingMode;)D
 
     move-result-wide v0
@@ -1196,6 +1232,7 @@
     :goto_1
     and-int/2addr v2, v3
 
+    .line 2
     invoke-static {v2, p0, p1, p2}, Lcom/google/common/math/MathPreconditions;->checkInRangeForRoundingInputs(ZDLjava/math/RoundingMode;)V
 
     double-to-long p0, v0

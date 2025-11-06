@@ -8,7 +8,7 @@
 
 .field private static final EMPTY_URLARRAY:[Ljava/net/URL;
 
-.field static synthetic class$org$apache$xmlbeans$impl$tool$CommandLine:Ljava/lang/Class;
+.field public static synthetic class$org$apache$xmlbeans$impl$tool$CommandLine:Ljava/lang/Class;
 
 
 # instance fields
@@ -33,45 +33,53 @@
 
     new-array v1, v0, [Ljava/io/File;
 
+    .line 1
     sput-object v1, Lorg/apache/xmlbeans/impl/tool/CommandLine;->EMPTY_FILEARRAY:[Ljava/io/File;
 
     new-array v0, v0, [Ljava/net/URL;
 
+    .line 2
     sput-object v0, Lorg/apache/xmlbeans/impl/tool/CommandLine;->EMPTY_URLARRAY:[Ljava/net/URL;
 
     return-void
 .end method
 
 .method public constructor <init>([Ljava/lang/String;Ljava/util/Collection;Ljava/util/Collection;)V
-    .locals 8
+    .locals 9
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-eqz p2, :cond_5
 
     if-eqz p3, :cond_5
 
+    .line 2
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     iput-object v0, p0, Lorg/apache/xmlbeans/impl/tool/CommandLine;->_options:Ljava/util/Map;
 
+    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 4
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v2, 0x0
 
+    .line 5
     :goto_0
     array-length v3, p1
 
     if-ge v2, v3, :cond_4
 
+    .line 6
     aget-object v3, p1, v2
 
     const/16 v4, 0x2d
@@ -84,56 +92,70 @@
 
     if-nez v3, :cond_3
 
+    .line 7
     aget-object v3, p1, v2
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v3
 
+    const/4 v5, 0x0
+
+    .line 8
     invoke-interface {p2, v3}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result v6
 
-    const-string v6, ""
+    const-string v7, ""
 
-    if-eqz v5, :cond_0
+    if-eqz v6, :cond_1
+
+    :cond_0
+    move-object v5, v7
 
     goto :goto_1
 
-    :cond_0
+    .line 9
+    :cond_1
     invoke-interface {p3, v3}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result v6
 
-    if-eqz v5, :cond_1
+    if-eqz v6, :cond_2
 
     add-int/lit8 v5, v2, 0x1
 
-    array-length v7, p1
+    .line 10
+    array-length v6, p1
 
-    if-ge v5, v7, :cond_2
+    if-ge v5, v6, :cond_0
 
-    aget-object v6, p1, v5
+    .line 11
+    aget-object v2, p1, v5
 
-    move v2, v5
+    move v8, v5
+
+    move-object v5, v2
+
+    move v2, v8
 
     goto :goto_1
 
-    :cond_1
-    aget-object v5, p1, v2
-
-    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const/4 v6, 0x0
-
+    .line 12
     :cond_2
-    :goto_1
-    iget-object v5, p0, Lorg/apache/xmlbeans/impl/tool/CommandLine;->_options:Ljava/util/Map;
+    aget-object v6, p1, v2
 
-    invoke-interface {v5, v3, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 13
+    :goto_1
+    iget-object v6, p0, Lorg/apache/xmlbeans/impl/tool/CommandLine;->_options:Ljava/util/Map;
+
+    invoke-interface {v6, v3, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_2
 
+    .line 14
     :cond_3
     aget-object v3, p1, v2
 
@@ -144,6 +166,7 @@
 
     goto :goto_0
 
+    .line 15
     :cond_4
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -159,6 +182,7 @@
 
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/CommandLine;->_badopts:[Ljava/lang/String;
 
+    .line 16
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result p1
@@ -175,6 +199,7 @@
 
     return-void
 
+    .line 17
     :cond_5
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -188,6 +213,7 @@
 .method public static synthetic class$(Ljava/lang/String;)Ljava/lang/Class;
     .locals 1
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -204,7 +230,7 @@
 
     invoke-direct {v0}, Ljava/lang/NoClassDefFoundError;-><init>()V
 
-    invoke-virtual {v0, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {v0, p0}, Ljava/lang/NoClassDefFoundError;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     move-result-object p0
 
@@ -214,29 +240,35 @@
 .method private static collectFiles([Ljava/io/File;)Ljava/util/List;
     .locals 4
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v1, 0x0
 
+    .line 2
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_1
 
+    .line 3
     aget-object v2, p0, v1
 
+    .line 4
     invoke-virtual {v2}, Ljava/io/File;->isDirectory()Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
+    .line 5
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
+    .line 6
     :cond_0
     invoke-virtual {v2}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
@@ -260,14 +292,17 @@
 .method private getFileList()Ljava/util/List;
     .locals 6
 
+    .line 1
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/tool/CommandLine;->_files:Ljava/util/List;
 
     if-nez v0, :cond_4
 
+    .line 2
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->args()[Ljava/lang/String;
 
     move-result-object v0
 
+    .line 3
     array-length v1, v0
 
     new-array v1, v1, [Ljava/io/File;
@@ -276,11 +311,13 @@
 
     move v3, v2
 
+    .line 4
     :goto_0
     array-length v4, v0
 
     if-ge v2, v4, :cond_3
 
+    .line 5
     new-instance v4, Ljava/io/File;
 
     aget-object v5, v0, v2
@@ -291,9 +328,13 @@
 
     if-nez v3, :cond_1
 
-    iget-object v5, p0, Lorg/apache/xmlbeans/impl/tool/CommandLine;->_baseDir:Ljava/io/File;
+    .line 6
+    iget-object v4, p0, Lorg/apache/xmlbeans/impl/tool/CommandLine;->_baseDir:Ljava/io/File;
 
-    if-nez v5, :cond_1
+    if-nez v4, :cond_1
+
+    .line 7
+    aget-object v4, v1, v2
 
     invoke-virtual {v4}, Ljava/io/File;->isDirectory()Z
 
@@ -301,12 +342,14 @@
 
     if-eqz v4, :cond_0
 
+    .line 8
     aget-object v4, v1, v2
 
     iput-object v4, p0, Lorg/apache/xmlbeans/impl/tool/CommandLine;->_baseDir:Ljava/io/File;
 
     goto :goto_1
 
+    .line 9
     :cond_0
     aget-object v4, v1, v2
 
@@ -318,11 +361,15 @@
 
     goto :goto_1
 
+    .line 10
     :cond_1
+    aget-object v4, v1, v2
+
     invoke-virtual {v4}, Ljava/io/File;->toURI()Ljava/net/URI;
 
     move-result-object v4
 
+    .line 11
     iget-object v5, p0, Lorg/apache/xmlbeans/impl/tool/CommandLine;->_baseDir:Ljava/io/File;
 
     if-eqz v5, :cond_2
@@ -343,6 +390,7 @@
 
     const/4 v3, 0x0
 
+    .line 12
     iput-object v3, p0, Lorg/apache/xmlbeans/impl/tool/CommandLine;->_baseDir:Ljava/io/File;
 
     const/4 v3, 0x1
@@ -353,6 +401,7 @@
 
     goto :goto_0
 
+    .line 13
     :cond_3
     invoke-static {v1}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->collectFiles([Ljava/io/File;)Ljava/util/List;
 
@@ -364,6 +413,7 @@
 
     iput-object v0, p0, Lorg/apache/xmlbeans/impl/tool/CommandLine;->_files:Ljava/util/List;
 
+    .line 14
     :cond_4
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/CommandLine;->_files:Ljava/util/List;
 
@@ -373,25 +423,30 @@
 .method private getUrlList()Ljava/util/List;
     .locals 7
 
+    .line 1
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/tool/CommandLine;->_urls:Ljava/util/List;
 
     if-nez v0, :cond_2
 
+    .line 2
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->args()[Ljava/lang/String;
 
     move-result-object v0
 
+    .line 3
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v2, 0x0
 
+    .line 4
     :goto_0
     array-length v3, v0
 
     if-ge v2, v3, :cond_1
 
+    .line 5
     aget-object v3, v0, v2
 
     invoke-static {v3}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->looksLikeURL(Ljava/lang/String;)Z
@@ -400,6 +455,7 @@
 
     if-eqz v3, :cond_0
 
+    .line 6
     :try_start_0
     new-instance v3, Ljava/net/URL;
 
@@ -416,6 +472,7 @@
     :catch_0
     move-exception v3
 
+    .line 7
     sget-object v4, Ljava/lang/System;->err:Ljava/io/PrintStream;
 
     new-instance v5, Ljava/lang/StringBuffer;
@@ -434,7 +491,7 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-virtual {v3}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/net/MalformedURLException;->getMessage()Ljava/lang/String;
 
     move-result-object v3
 
@@ -452,6 +509,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_1
     invoke-static {v1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
@@ -459,6 +517,7 @@
 
     iput-object v0, p0, Lorg/apache/xmlbeans/impl/tool/CommandLine;->_urls:Ljava/util/List;
 
+    .line 9
     :cond_2
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/CommandLine;->_urls:Ljava/util/List;
 
@@ -470,6 +529,7 @@
 
     const-string v0, "http:"
 
+    .line 1
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -518,6 +578,7 @@
 .method public static printLicense()V
     .locals 2
 
+    .line 1
     :try_start_0
     sget-object v0, Lorg/apache/xmlbeans/impl/tool/CommandLine;->class$org$apache$xmlbeans$impl$tool$CommandLine:Ljava/lang/Class;
 
@@ -550,6 +611,7 @@
 
     goto :goto_0
 
+    .line 2
     :catch_0
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
@@ -564,6 +626,7 @@
 .method public static printVersion()V
     .locals 3
 
+    .line 1
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v1, Ljava/lang/StringBuffer;
@@ -610,17 +673,19 @@
 .method public args()[Ljava/lang/String;
     .locals 3
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/CommandLine;->_args:[Ljava/lang/String;
 
     array-length v0, p0
 
     new-array v0, v0, [Ljava/lang/String;
 
-    const/4 v1, 0x0
+    .line 2
+    array-length v1, p0
 
-    array-length v2, p0
+    const/4 v2, 0x0
 
-    invoke-static {p0, v1, v0, v1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-static {p0, v2, v0, v2, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     return-object v0
 .end method
@@ -628,10 +693,12 @@
 .method public filesEndingWith(Ljava/lang/String;)[Ljava/io/File;
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 2
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getFileList()Ljava/util/List;
 
     move-result-object p0
@@ -648,12 +715,14 @@
 
     if-eqz v1, :cond_1
 
+    .line 3
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/io/File;
 
+    .line 4
     invoke-virtual {v1}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v2
@@ -674,10 +743,12 @@
 
     if-nez v2, :cond_0
 
+    .line 5
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 6
     :cond_1
     sget-object p0, Lorg/apache/xmlbeans/impl/tool/CommandLine;->EMPTY_FILEARRAY:[Ljava/io/File;
 
@@ -693,6 +764,7 @@
 .method public getBadOpts()[Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/CommandLine;->_badopts:[Ljava/lang/String;
 
     return-object p0
@@ -701,6 +773,7 @@
 .method public getBaseDir()Ljava/io/File;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/CommandLine;->_baseDir:Ljava/io/File;
 
     return-object p0
@@ -709,6 +782,7 @@
 .method public getFiles()[Ljava/io/File;
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getFileList()Ljava/util/List;
 
     move-result-object p0
@@ -727,6 +801,7 @@
 .method public getOpt(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/CommandLine;->_options:Ljava/util/Map;
 
     invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -741,6 +816,7 @@
 .method public getURLs()[Ljava/net/URL;
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getUrlList()Ljava/util/List;
 
     move-result-object p0

@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Ljava/lang/String; = "    "
-
-
 # instance fields
-.field public final a:Landroid/graphics/Paint;
+.field private final c:Landroid/graphics/Paint;
+
+.field private final d:Ljava/lang/StringBuilder;
+
+.field private final f:F
 
 
 # direct methods
@@ -23,7 +23,19 @@
 
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object p1, p0, Lmiuix/pickerwidget/widget/NumberPickerGroup;->a:Landroid/graphics/Paint;
+    iput-object p1, p0, Lmiuix/pickerwidget/widget/NumberPickerGroup;->c:Landroid/graphics/Paint;
+
+    .line 3
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    iput-object p1, p0, Lmiuix/pickerwidget/widget/NumberPickerGroup;->d:Ljava/lang/StringBuilder;
+
+    const p1, 0x3f733333    # 0.95f
+
+    .line 4
+    iput p1, p0, Lmiuix/pickerwidget/widget/NumberPickerGroup;->f:F
 
     return-void
 .end method
@@ -35,15 +47,27 @@
         .end annotation
     .end param
 
-    .line 3
+    .line 5
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 4
+    .line 6
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object p1, p0, Lmiuix/pickerwidget/widget/NumberPickerGroup;->a:Landroid/graphics/Paint;
+    iput-object p1, p0, Lmiuix/pickerwidget/widget/NumberPickerGroup;->c:Landroid/graphics/Paint;
+
+    .line 7
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    iput-object p1, p0, Lmiuix/pickerwidget/widget/NumberPickerGroup;->d:Ljava/lang/StringBuilder;
+
+    const p1, 0x3f733333    # 0.95f
+
+    .line 8
+    iput p1, p0, Lmiuix/pickerwidget/widget/NumberPickerGroup;->f:F
 
     return-void
 .end method
@@ -55,305 +79,351 @@
         .end annotation
     .end param
 
-    .line 5
+    .line 9
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 6
+    .line 10
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object p1, p0, Lmiuix/pickerwidget/widget/NumberPickerGroup;->a:Landroid/graphics/Paint;
+    iput-object p1, p0, Lmiuix/pickerwidget/widget/NumberPickerGroup;->c:Landroid/graphics/Paint;
+
+    .line 11
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    iput-object p1, p0, Lmiuix/pickerwidget/widget/NumberPickerGroup;->d:Ljava/lang/StringBuilder;
+
+    const p1, 0x3f733333    # 0.95f
+
+    .line 12
+    iput p1, p0, Lmiuix/pickerwidget/widget/NumberPickerGroup;->f:F
+
+    return-void
+.end method
+
+.method private a(Landroid/view/View;IIII)V
+    .locals 0
+
+    add-int/2addr p4, p2
+
+    add-int/2addr p5, p3
+
+    .line 1
+    invoke-virtual {p1, p2, p3, p4, p5}, Landroid/view/View;->layout(IIII)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lmiuix/pickerwidget/widget/NumberPicker;)Z
-    .locals 0
+.method public onLayout(ZIIII)V
+    .locals 18
 
-    invoke-virtual {p1}, Landroid/view/View;->getId()I
+    move-object/from16 v6, p0
 
-    move-result p0
+    .line 1
+    invoke-super/range {p0 .. p5}, Landroid/widget/LinearLayout;->onLayout(ZIIII)V
 
-    sget p1, Ler/b$i;->day:I
+    .line 2
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/LinearLayout;->getOrientation()I
 
-    if-ne p0, p1, :cond_0
+    move-result v0
 
-    const/4 p0, 0x1
+    if-nez v0, :cond_5
 
-    goto :goto_0
+    .line 3
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
-    :cond_0
-    const/4 p0, 0x0
+    move-result v7
 
-    :goto_0
-    return p0
-.end method
+    .line 4
+    iget-object v0, v6, Lmiuix/pickerwidget/widget/NumberPickerGroup;->d:Ljava/lang/StringBuilder;
 
-.method public onMeasure(II)V
-    .locals 11
+    const/4 v1, 0x0
 
-    invoke-super {p0, p1, p2}, Landroid/widget/LinearLayout;->onMeasure(II)V
-
-    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getOrientation()I
-
-    move-result p1
-
-    if-nez p1, :cond_7
-
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result p1
-
-    const/4 p2, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->setLength(I)V
 
     const/4 v0, 0x0
 
-    move v1, p2
+    move v8, v0
 
-    move v6, v1
+    move v9, v8
 
-    move v2, v0
+    move v2, v1
 
     move v3, v2
 
-    move v4, v3
-
-    move v5, v4
-
     :goto_0
-    if-ge v1, p1, :cond_2
+    if-ge v2, v7, :cond_1
 
-    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    .line 5
+    invoke-virtual {v6, v2}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
-    move-result-object v7
+    move-result-object v4
 
-    instance-of v8, v7, Lmiuix/pickerwidget/widget/NumberPicker;
+    .line 6
+    instance-of v5, v4, Lmiuix/pickerwidget/widget/NumberPicker;
 
-    if-eqz v8, :cond_1
+    if-eqz v5, :cond_0
 
-    check-cast v7, Lmiuix/pickerwidget/widget/NumberPicker;
+    .line 7
+    check-cast v4, Lmiuix/pickerwidget/widget/NumberPicker;
 
-    invoke-virtual {v7}, Lmiuix/pickerwidget/widget/NumberPicker;->getDisplayedMaxTextWidth()F
+    .line 8
+    invoke-virtual {v4}, Lmiuix/pickerwidget/widget/NumberPicker;->getTotalMeasuredTextWidth()F
 
-    move-result v8
+    move-result v5
 
-    add-float/2addr v5, v8
+    add-float/2addr v8, v5
 
-    invoke-virtual {v7}, Lmiuix/pickerwidget/widget/NumberPicker;->getOriginalLabelWidth()F
+    .line 9
+    invoke-virtual {v4}, Lmiuix/pickerwidget/widget/NumberPicker;->getLabelWidth()F
 
-    move-result v8
+    move-result v5
 
-    cmpl-float v9, v8, v0
+    invoke-virtual {v4}, Lmiuix/pickerwidget/widget/NumberPicker;->getMarginLabelLeft()I
 
-    if-lez v9, :cond_0
+    move-result v10
 
-    add-float/2addr v3, v8
+    int-to-float v10, v10
 
-    invoke-virtual {v7}, Lmiuix/pickerwidget/widget/NumberPicker;->getMarginLabelLeft()I
+    add-float/2addr v5, v10
 
-    move-result v8
+    add-float/2addr v0, v5
 
-    int-to-float v8, v8
+    .line 10
+    invoke-virtual {v4}, Lmiuix/pickerwidget/widget/NumberPicker;->getOriginTextSizeHighlight()I
 
-    add-float/2addr v4, v8
+    move-result v5
 
-    :cond_0
-    invoke-virtual {v7}, Lmiuix/pickerwidget/widget/NumberPicker;->getOriginTextSizeHighlight()I
+    int-to-float v5, v5
 
-    move-result v7
+    invoke-static {v9, v5}, Ljava/lang/Math;->max(FF)F
 
-    int-to-float v7, v7
+    move-result v5
 
-    invoke-static {v2, v7}, Ljava/lang/Math;->max(FF)F
+    .line 11
+    iget-object v9, v6, Lmiuix/pickerwidget/widget/NumberPickerGroup;->d:Ljava/lang/StringBuilder;
 
-    move-result v2
+    invoke-virtual {v4}, Lmiuix/pickerwidget/widget/NumberPicker;->getDisplayedMaxText()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v9, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move v9, v5
 
     goto :goto_1
 
-    :cond_1
-    invoke-virtual {v7}, Landroid/view/View;->getMeasuredWidth()I
+    .line 12
+    :cond_0
+    invoke-virtual {v4}, Landroid/view/View;->getMeasuredWidth()I
 
-    move-result v7
+    move-result v4
 
-    add-int/2addr v6, v7
+    add-int/2addr v3, v4
 
     :goto_1
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    :cond_2
-    iget-object v1, p0, Lmiuix/pickerwidget/widget/NumberPickerGroup;->a:Landroid/graphics/Paint;
+    :cond_1
+    sub-int v2, p4, p2
 
-    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setTextSize(F)V
+    .line 13
+    invoke-static {v2}, Ljava/lang/Math;->abs(I)I
 
-    iget-object v1, p0, Lmiuix/pickerwidget/widget/NumberPickerGroup;->a:Landroid/graphics/Paint;
+    move-result v2
 
-    const-string v7, "    "
+    sub-int/2addr v2, v3
 
-    invoke-virtual {v1, v7}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
+    int-to-float v10, v2
 
-    move-result v1
+    cmpl-float v2, v8, v10
 
-    const/high16 v7, 0x40000000    # 2.0f
+    if-lez v2, :cond_5
 
-    mul-float/2addr v3, v7
+    .line 14
+    iget-object v2, v6, Lmiuix/pickerwidget/widget/NumberPickerGroup;->d:Ljava/lang/StringBuilder;
 
-    mul-float/2addr v4, v7
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    add-float/2addr v5, v3
+    move-result-object v2
 
-    add-float/2addr v5, v1
+    move v3, v9
 
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
+    .line 15
+    :goto_2
+    iget-object v4, v6, Lmiuix/pickerwidget/widget/NumberPickerGroup;->c:Landroid/graphics/Paint;
+
+    invoke-virtual {v4, v3}, Landroid/graphics/Paint;->setTextSize(F)V
+
+    const v4, 0x3f733333    # 0.95f
+
+    mul-float v11, v3, v4
+
+    .line 16
+    iget-object v3, v6, Lmiuix/pickerwidget/widget/NumberPickerGroup;->c:Landroid/graphics/Paint;
+
+    invoke-virtual {v3, v2}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
 
     move-result v3
 
-    sub-int/2addr v3, v6
+    add-float/2addr v3, v0
 
-    int-to-float v3, v3
+    cmpl-float v3, v3, v10
 
-    sub-float/2addr v3, v4
+    if-gtz v3, :cond_4
 
-    div-float v4, v3, v5
+    .line 17
+    invoke-static/range {p0 .. p0}, Lk/l/c/k;->g(Landroid/view/View;)Z
 
-    const/high16 v6, 0x3f800000    # 1.0f
+    move-result v0
 
-    cmpg-float v6, v4, v6
+    if-eqz v0, :cond_2
 
-    if-gez v6, :cond_3
+    add-int/lit8 v0, v7, -0x1
 
-    mul-float/2addr v4, v2
+    const/4 v2, -0x1
 
-    goto :goto_2
+    move v12, v0
 
-    :cond_3
-    move v4, v2
+    goto :goto_3
 
-    :goto_2
-    cmpg-float v6, v4, v2
+    :cond_2
+    const/4 v2, 0x1
 
-    if-gtz v6, :cond_7
+    move v12, v1
 
     :goto_3
-    if-ge p2, p1, :cond_7
+    move v13, v2
 
-    invoke-virtual {p0, p2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    move v14, v1
 
-    move-result-object v6
+    move v15, v14
 
-    instance-of v8, v6, Lmiuix/pickerwidget/widget/NumberPicker;
+    :goto_4
+    if-ge v14, v7, :cond_5
 
-    if-eqz v8, :cond_6
+    mul-int v0, v13, v14
 
-    move-object v8, v6
+    add-int/2addr v0, v12
 
-    check-cast v8, Lmiuix/pickerwidget/widget/NumberPicker;
+    .line 18
+    invoke-virtual {v6, v0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
-    float-to-int v9, v4
+    move-result-object v5
 
-    invoke-virtual {v8, v9}, Lmiuix/pickerwidget/widget/NumberPicker;->setTextSizeHighlight(I)V
+    .line 19
+    instance-of v0, v5, Lmiuix/pickerwidget/widget/NumberPicker;
 
-    invoke-virtual {v8}, Lmiuix/pickerwidget/widget/NumberPicker;->getOriginTextSizeHint()I
+    if-eqz v0, :cond_3
 
-    move-result v9
+    .line 20
+    move-object v0, v5
 
-    int-to-float v9, v9
+    check-cast v0, Lmiuix/pickerwidget/widget/NumberPicker;
 
-    mul-float/2addr v9, v4
+    float-to-int v1, v11
 
-    div-float/2addr v9, v2
+    .line 21
+    invoke-virtual {v0, v1}, Lmiuix/pickerwidget/widget/NumberPicker;->setTextSizeHighlight(I)V
 
-    float-to-int v9, v9
+    .line 22
+    invoke-virtual {v0}, Lmiuix/pickerwidget/widget/NumberPicker;->getOriginTextSizeHint()I
 
-    invoke-virtual {v8, v9}, Lmiuix/pickerwidget/widget/NumberPicker;->setTextSizeHint(I)V
+    move-result v1
 
-    invoke-virtual {v8}, Lmiuix/pickerwidget/widget/NumberPicker;->getOriginalLabelWidth()F
+    int-to-float v1, v1
 
-    move-result v9
+    mul-float/2addr v1, v11
 
-    cmpl-float v9, v9, v0
+    div-float/2addr v1, v9
 
-    if-lez v9, :cond_4
+    float-to-int v1, v1
 
-    invoke-virtual {v8}, Lmiuix/pickerwidget/widget/NumberPicker;->getMarginLabelLeft()I
+    invoke-virtual {v0, v1}, Lmiuix/pickerwidget/widget/NumberPicker;->setTextSizeHint(I)V
 
-    move-result v9
+    .line 23
+    invoke-virtual {v0}, Lmiuix/pickerwidget/widget/NumberPicker;->getTotalMeasuredTextWidth()F
 
-    mul-int/lit8 v9, v9, 0x2
+    move-result v0
 
-    int-to-float v9, v9
+    mul-float/2addr v0, v10
+
+    div-float/2addr v0, v8
+
+    float-to-int v4, v0
+
+    .line 24
+    invoke-virtual {v5}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v16
+
+    move-object/from16 v0, p0
+
+    move-object v1, v5
+
+    move v2, v15
+
+    move/from16 v3, p3
+
+    move/from16 v17, v4
+
+    move/from16 v5, v16
+
+    .line 25
+    invoke-direct/range {v0 .. v5}, Lmiuix/pickerwidget/widget/NumberPickerGroup;->a(Landroid/view/View;IIII)V
+
+    add-int v15, v15, v17
+
+    goto :goto_5
+
+    .line 26
+    :cond_3
+    invoke-virtual {v5}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result v4
+
+    invoke-virtual {v5}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v16
+
+    move-object/from16 v0, p0
+
+    move-object v1, v5
+
+    move v2, v15
+
+    move/from16 v3, p3
+
+    move-object/from16 v17, v5
+
+    move/from16 v5, v16
+
+    invoke-direct/range {v0 .. v5}, Lmiuix/pickerwidget/widget/NumberPickerGroup;->a(Landroid/view/View;IIII)V
+
+    .line 27
+    invoke-virtual/range {v17 .. v17}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result v0
+
+    add-int/2addr v15, v0
+
+    :goto_5
+    add-int/lit8 v14, v14, 0x1
 
     goto :goto_4
 
     :cond_4
-    move v9, v0
+    move v3, v11
 
-    :goto_4
-    invoke-virtual {p0, v8}, Lmiuix/pickerwidget/widget/NumberPickerGroup;->a(Lmiuix/pickerwidget/widget/NumberPicker;)Z
-
-    move-result v10
-
-    if-eqz v10, :cond_5
-
-    invoke-virtual {v8}, Lmiuix/pickerwidget/widget/NumberPicker;->getDisplayedMaxTextWidth()F
-
-    move-result v10
-
-    add-float/2addr v10, v1
-
-    invoke-virtual {v8}, Lmiuix/pickerwidget/widget/NumberPicker;->getOriginalLabelWidth()F
-
-    move-result v8
-
-    goto :goto_5
+    goto :goto_2
 
     :cond_5
-    invoke-virtual {v8}, Lmiuix/pickerwidget/widget/NumberPicker;->getDisplayedMaxTextWidth()F
-
-    move-result v10
-
-    invoke-virtual {v8}, Lmiuix/pickerwidget/widget/NumberPicker;->getOriginalLabelWidth()F
-
-    move-result v8
-
-    :goto_5
-    mul-float/2addr v8, v7
-
-    add-float/2addr v10, v8
-
-    mul-float/2addr v10, v3
-
-    div-float/2addr v10, v5
-
-    add-float/2addr v9, v10
-
-    float-to-int v8, v9
-
-    invoke-virtual {v6}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v9
-
-    const/high16 v10, 0x40000000    # 2.0f
-
-    invoke-static {v8, v10}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
-
-    move-result v8
-
-    invoke-static {v9, v10}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
-
-    move-result v9
-
-    invoke-virtual {v6, v8, v9}, Landroid/view/View;->measure(II)V
-
-    :cond_6
-    add-int/lit8 p2, p2, 0x1
-
-    goto :goto_3
-
-    :cond_7
     return-void
 .end method

@@ -15,6 +15,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroidx/media/AudioAttributesImplApi26Parcelizer;-><init>()V
 
     return-void
@@ -31,6 +32,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0}, Landroidx/media/AudioAttributesImplApi26Parcelizer;->read(Landroidx/versionedparcelable/VersionedParcel;)Landroidx/media/AudioAttributesImplApi26;
 
     move-result-object p0
@@ -51,6 +53,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0, p1}, Landroidx/media/AudioAttributesImplApi26Parcelizer;->write(Landroidx/media/AudioAttributesImplApi26;Landroidx/versionedparcelable/VersionedParcel;)V
 
     return-void

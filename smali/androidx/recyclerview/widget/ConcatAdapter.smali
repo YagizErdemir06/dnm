@@ -20,7 +20,7 @@
 
 
 # static fields
-.field static final TAG:Ljava/lang/String; = "ConcatAdapter"
+.field public static final TAG:Ljava/lang/String; = "ConcatAdapter"
 
 
 # instance fields
@@ -261,6 +261,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->mController:Landroidx/recyclerview/widget/ConcatAdapterController;
 
     invoke-virtual {p0, p1, p2, p3}, Landroidx/recyclerview/widget/ConcatAdapterController;->getLocalAdapterPosition(Landroidx/recyclerview/widget/RecyclerView$Adapter;Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)I
@@ -287,6 +288,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->mController:Landroidx/recyclerview/widget/ConcatAdapterController;
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/ConcatAdapterController;->getCopyOfAdapters()Ljava/util/List;
@@ -303,6 +305,7 @@
 .method public getItemCount()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->mController:Landroidx/recyclerview/widget/ConcatAdapterController;
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/ConcatAdapterController;->getTotalCount()I
@@ -315,6 +318,7 @@
 .method public getItemId(I)J
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->mController:Landroidx/recyclerview/widget/ConcatAdapterController;
 
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/ConcatAdapterController;->getItemId(I)J
@@ -327,6 +331,7 @@
 .method public getItemViewType(I)I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->mController:Landroidx/recyclerview/widget/ConcatAdapterController;
 
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/ConcatAdapterController;->getItemViewType(I)I
@@ -343,6 +348,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->setStateRestorationPolicy(Landroidx/recyclerview/widget/RecyclerView$Adapter$StateRestorationPolicy;)V
 
     return-void
@@ -355,6 +361,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->mController:Landroidx/recyclerview/widget/ConcatAdapterController;
 
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/ConcatAdapterController;->onAttachedToRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
@@ -369,6 +376,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->mController:Landroidx/recyclerview/widget/ConcatAdapterController;
 
     invoke-virtual {p0, p1, p2}, Landroidx/recyclerview/widget/ConcatAdapterController;->onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
@@ -385,6 +393,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->mController:Landroidx/recyclerview/widget/ConcatAdapterController;
 
     invoke-virtual {p0, p1, p2}, Landroidx/recyclerview/widget/ConcatAdapterController;->onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
@@ -401,6 +410,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->mController:Landroidx/recyclerview/widget/ConcatAdapterController;
 
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/ConcatAdapterController;->onDetachedFromRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
@@ -415,6 +425,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->mController:Landroidx/recyclerview/widget/ConcatAdapterController;
 
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/ConcatAdapterController;->onFailedToRecycleView(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)Z
@@ -431,6 +442,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->mController:Landroidx/recyclerview/widget/ConcatAdapterController;
 
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/ConcatAdapterController;->onViewAttachedToWindow(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
@@ -445,6 +457,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->mController:Landroidx/recyclerview/widget/ConcatAdapterController;
 
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/ConcatAdapterController;->onViewDetachedFromWindow(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
@@ -459,6 +472,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->mController:Landroidx/recyclerview/widget/ConcatAdapterController;
 
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/ConcatAdapterController;->onViewRecycled(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
@@ -482,6 +496,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/ConcatAdapter;->mController:Landroidx/recyclerview/widget/ConcatAdapterController;
 
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/ConcatAdapterController;->removeAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)Z
@@ -494,6 +509,7 @@
 .method public setHasStableIds(Z)V
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Calling setHasStableIds is not allowed on the ConcatAdapter. Use the Config object passed in the constructor to control this behavior"
@@ -510,6 +526,7 @@
         .end annotation
     .end param
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "Calling setStateRestorationPolicy is not allowed on the ConcatAdapter. This value is inferred from added adapters"

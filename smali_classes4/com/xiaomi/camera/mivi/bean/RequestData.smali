@@ -31,53 +31,73 @@
 .method public constructor <init>()V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput v0, p0, Lcom/xiaomi/camera/mivi/bean/RequestData;->mType:I
 
     const-wide/16 v1, 0x0
 
+    .line 3
     iput-wide v1, p0, Lcom/xiaomi/camera/mivi/bean/RequestData;->mTimestampUs:J
 
+    .line 4
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/xiaomi/camera/mivi/bean/RequestData;->mImages:Ljava/util/ArrayList;
 
+    .line 5
     iput v0, p0, Lcom/xiaomi/camera/mivi/bean/RequestData;->mSessionId:I
 
+    .line 6
     iput v0, p0, Lcom/xiaomi/camera/mivi/bean/RequestData;->mFrameNumber:I
 
     return-void
 .end method
 
-.method public static opt(Ltv/a;)Lcom/xiaomi/camera/mivi/bean/RequestData;
+.method public static opt(Lt/a/a/a/a/a;)Lcom/xiaomi/camera/mivi/bean/RequestData;
     .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "callbackData"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Lcom/xiaomi/camera/mivi/bean/RequestData;
 
     invoke-direct {v0}, Lcom/xiaomi/camera/mivi/bean/RequestData;-><init>()V
 
-    iget v1, p0, Ltv/a;->b:I
+    .line 2
+    iget v1, p0, Lt/a/a/a/a/a;->b:I
 
     iput v1, v0, Lcom/xiaomi/camera/mivi/bean/RequestData;->mType:I
 
-    iget-wide v1, p0, Ltv/a;->e:J
+    .line 3
+    iget-wide v1, p0, Lt/a/a/a/a/a;->e:J
 
     iput-wide v1, v0, Lcom/xiaomi/camera/mivi/bean/RequestData;->mTimestampUs:J
 
-    iget-object v1, p0, Ltv/a;->g:Ljava/lang/String;
+    .line 4
+    iget-object v1, p0, Lt/a/a/a/a/a;->g:Ljava/lang/String;
 
     iput-object v1, v0, Lcom/xiaomi/camera/mivi/bean/RequestData;->mMetadata:Ljava/lang/String;
 
-    iget v1, p0, Ltv/a;->a:I
+    .line 5
+    iget v1, p0, Lt/a/a/a/a/a;->a:I
 
     iput v1, v0, Lcom/xiaomi/camera/mivi/bean/RequestData;->mCameraId:I
 
-    iget-object v1, p0, Ltv/a;->h:Ljava/util/ArrayList;
+    .line 6
+    iget-object v1, p0, Lt/a/a/a/a/a;->h:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -94,17 +114,18 @@
 
     move-result-object v2
 
-    check-cast v2, Ltv/d;
+    check-cast v2, Lt/a/a/a/a/d;
 
+    .line 7
     iget-object v3, v0, Lcom/xiaomi/camera/mivi/bean/RequestData;->mImages:Ljava/util/ArrayList;
 
     new-instance v4, Lcom/xiaomi/camera/mivi/bean/ImageData;
 
-    iget v5, v2, Ltv/d;->b:I
+    iget v5, v2, Lt/a/a/a/a/d;->b:I
 
-    iget v6, v2, Ltv/d;->c:I
+    iget v6, v2, Lt/a/a/a/a/d;->c:I
 
-    iget v2, v2, Ltv/d;->a:I
+    iget v2, v2, Lt/a/a/a/a/d;->a:I
 
     invoke-static {v2}, Lcom/xiaomi/camera/mivi/ImageFormatUtil;->imageFormatToPublic(I)I
 
@@ -116,12 +137,14 @@
 
     goto :goto_0
 
+    .line 8
     :cond_0
-    iget v1, p0, Ltv/a;->d:I
+    iget v1, p0, Lt/a/a/a/a/a;->d:I
 
     iput v1, v0, Lcom/xiaomi/camera/mivi/bean/RequestData;->mSessionId:I
 
-    iget p0, p0, Ltv/a;->c:I
+    .line 9
+    iget p0, p0, Lt/a/a/a/a/a;->c:I
 
     iput p0, v0, Lcom/xiaomi/camera/mivi/bean/RequestData;->mFrameNumber:I
 
@@ -132,6 +155,14 @@
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "o"
+        }
+    .end annotation
 
     if-ne p0, p1, :cond_0
 
@@ -142,6 +173,7 @@
     :cond_0
     if-eqz p1, :cond_2
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -154,9 +186,11 @@
 
     goto :goto_0
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/xiaomi/camera/mivi/bean/RequestData;
 
+    .line 3
     iget-object v0, p0, Lcom/xiaomi/camera/mivi/bean/RequestData;->mImages:Ljava/util/ArrayList;
 
     iget-object p1, p1, Lcom/xiaomi/camera/mivi/bean/RequestData;->mImages:Ljava/util/ArrayList;
@@ -177,6 +211,7 @@
 .method public getCameraId()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/camera/mivi/bean/RequestData;->mCameraId:I
 
     return p0
@@ -185,6 +220,7 @@
 .method public getFrameNumber()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/camera/mivi/bean/RequestData;->mFrameNumber:I
 
     return p0
@@ -201,6 +237,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/camera/mivi/bean/RequestData;->mImages:Ljava/util/ArrayList;
 
     return-object p0
@@ -209,6 +246,7 @@
 .method public getMetadata()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/camera/mivi/bean/RequestData;->mMetadata:Ljava/lang/String;
 
     return-object p0
@@ -217,6 +255,7 @@
 .method public getSessionId()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/camera/mivi/bean/RequestData;->mSessionId:I
 
     return p0
@@ -225,6 +264,7 @@
 .method public getTimestampUs()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/camera/mivi/bean/RequestData;->mTimestampUs:J
 
     return-wide v0
@@ -233,6 +273,7 @@
 .method public getType()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/camera/mivi/bean/RequestData;->mType:I
 
     return p0
@@ -245,6 +286,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 1
     iget v1, p0, Lcom/xiaomi/camera/mivi/bean/RequestData;->mType:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -255,15 +297,15 @@
 
     aput-object v1, v0, v2
 
-    const/4 v1, 0x1
+    iget-object v1, p0, Lcom/xiaomi/camera/mivi/bean/RequestData;->mMetadata:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/xiaomi/camera/mivi/bean/RequestData;->mMetadata:Ljava/lang/String;
+    const/4 v2, 0x1
 
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x2
+    aput-object v1, v0, v2
 
     iget-object p0, p0, Lcom/xiaomi/camera/mivi/bean/RequestData;->mImages:Ljava/util/ArrayList;
+
+    const/4 v1, 0x2
 
     aput-object p0, v0, v1
 
@@ -276,6 +318,17 @@
 
 .method public isImageDataEquals(Ljava/util/ArrayList;Ljava/util/ArrayList;)Z
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "image1",
+            "image2"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -303,6 +356,7 @@
 
     goto :goto_1
 
+    .line 1
     :cond_1
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
@@ -314,7 +368,7 @@
 
     if-ne v1, v2, :cond_2
 
-    invoke-virtual {p1, p2}, Ljava/util/AbstractCollection;->containsAll(Ljava/util/Collection;)Z
+    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->containsAll(Ljava/util/Collection;)Z
 
     move-result p1
 
@@ -335,7 +389,16 @@
 
 .method public setCameraId(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "cameraId"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/camera/mivi/bean/RequestData;->mCameraId:I
 
     return-void
@@ -343,6 +406,15 @@
 
 .method public setImages(Ljava/util/ArrayList;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "images"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -352,6 +424,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/mivi/bean/RequestData;->mImages:Ljava/util/ArrayList;
 
     return-void
@@ -359,7 +432,16 @@
 
 .method public setMetadata(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "metadata"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/mivi/bean/RequestData;->mMetadata:Ljava/lang/String;
 
     return-void
@@ -367,7 +449,16 @@
 
 .method public setSessionId(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "sessionId"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/camera/mivi/bean/RequestData;->mSessionId:I
 
     return-void
@@ -375,7 +466,16 @@
 
 .method public setTimestampUs(J)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "timestampUs"
+        }
+    .end annotation
 
+    .line 1
     iput-wide p1, p0, Lcom/xiaomi/camera/mivi/bean/RequestData;->mTimestampUs:J
 
     return-void
@@ -383,7 +483,16 @@
 
 .method public setType(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "type"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/camera/mivi/bean/RequestData;->mType:I
 
     return-void
@@ -392,6 +501,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

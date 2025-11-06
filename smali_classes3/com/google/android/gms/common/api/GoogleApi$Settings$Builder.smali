@@ -44,6 +44,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/GoogleApi$Settings$Builder;->zaa:Lcom/google/android/gms/common/api/internal/StatusExceptionMapper;
 
     if-nez v0, :cond_0
@@ -59,12 +60,14 @@
 
     if-nez v0, :cond_1
 
+    .line 2
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/gms/common/api/GoogleApi$Settings$Builder;->zab:Landroid/os/Looper;
 
+    .line 3
     :cond_1
     new-instance v0, Lcom/google/android/gms/common/api/GoogleApi$Settings;
 
@@ -96,6 +99,7 @@
 
     const-string v0, "Looper must not be null."
 
+    .line 1
     invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p1, p0, Lcom/google/android/gms/common/api/GoogleApi$Settings$Builder;->zab:Landroid/os/Looper;
@@ -120,6 +124,7 @@
 
     const-string v0, "StatusExceptionMapper must not be null."
 
+    .line 1
     invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p1, p0, Lcom/google/android/gms/common/api/GoogleApi$Settings$Builder;->zaa:Lcom/google/android/gms/common/api/internal/StatusExceptionMapper;

@@ -19,6 +19,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0, p2, p3}, Lcom/google/android/gms/common/UserRecoverableException;-><init>(Ljava/lang/String;Landroid/content/Intent;)V
 
     iput p1, p0, Lcom/google/android/gms/common/GooglePlayServicesRepairableException;->zza:I

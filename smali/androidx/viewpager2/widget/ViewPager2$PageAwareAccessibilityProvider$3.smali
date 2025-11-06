@@ -1,4 +1,4 @@
-.class Landroidx/viewpager2/widget/ViewPager2$PageAwareAccessibilityProvider$3;
+.class public Landroidx/viewpager2/widget/ViewPager2$PageAwareAccessibilityProvider$3;
 .super Landroidx/viewpager2/widget/ViewPager2$DataSetChangeObserver;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic this$1:Landroidx/viewpager2/widget/ViewPager2$PageAwareAccessibilityProvider;
+.field public final synthetic this$1:Landroidx/viewpager2/widget/ViewPager2$PageAwareAccessibilityProvider;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/viewpager2/widget/ViewPager2$PageAwareAccessibilityProvider;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/viewpager2/widget/ViewPager2$PageAwareAccessibilityProvider$3;->this$1:Landroidx/viewpager2/widget/ViewPager2$PageAwareAccessibilityProvider;
 
     const/4 p1, 0x0
@@ -36,6 +37,7 @@
 .method public onChanged()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/viewpager2/widget/ViewPager2$PageAwareAccessibilityProvider$3;->this$1:Landroidx/viewpager2/widget/ViewPager2$PageAwareAccessibilityProvider;
 
     invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2$PageAwareAccessibilityProvider;->updatePageAccessibilityActions()V

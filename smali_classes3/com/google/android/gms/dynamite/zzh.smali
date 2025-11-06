@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/dynamite/zzh;
+.class public final Lcom/google/android/gms/dynamite/zzh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -25,6 +25,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy$SelectionResult;
 
     invoke-direct {p0}, Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy$SelectionResult;-><init>()V

@@ -45,6 +45,7 @@
 
     return-object p1
 
+    .line 1
     :cond_0
     iget-object p0, p0, Lcom/google/mlkit/common/sdkinternal/ExecutorSelector;->zza:Lcom/google/firebase/inject/Provider;
 

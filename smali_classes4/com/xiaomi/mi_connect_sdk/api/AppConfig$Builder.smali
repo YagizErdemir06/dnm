@@ -34,6 +34,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,6 +45,7 @@
 .method public advData([B)Lcom/xiaomi/mi_connect_sdk/api/AppConfig$Builder;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mi_connect_sdk/api/AppConfig$Builder;->advData:[B
 
     return-object p0
@@ -52,6 +54,7 @@
 .method public build()Lcom/xiaomi/mi_connect_sdk/api/AppConfig;
     .locals 9
 
+    .line 1
     new-instance v8, Lcom/xiaomi/mi_connect_sdk/api/AppConfig;
 
     iget v1, p0, Lcom/xiaomi/mi_connect_sdk/api/AppConfig$Builder;->appRoleType:I
@@ -78,6 +81,7 @@
 .method public commData([B)Lcom/xiaomi/mi_connect_sdk/api/AppConfig$Builder;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mi_connect_sdk/api/AppConfig$Builder;->commData:[B
 
     return-object p0
@@ -86,6 +90,7 @@
 .method public commDataType(I)Lcom/xiaomi/mi_connect_sdk/api/AppConfig$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/mi_connect_sdk/api/AppConfig$Builder;->appCommDataType:I
 
     return-object p0
@@ -94,6 +99,7 @@
 .method public commType(I)Lcom/xiaomi/mi_connect_sdk/api/AppConfig$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/mi_connect_sdk/api/AppConfig$Builder;->appCommType:I
 
     return-object p0
@@ -102,6 +108,7 @@
 .method public discAppIds([I)Lcom/xiaomi/mi_connect_sdk/api/AppConfig$Builder;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mi_connect_sdk/api/AppConfig$Builder;->discAppIds:[I
 
     return-object p0
@@ -110,6 +117,7 @@
 .method public discType(I)Lcom/xiaomi/mi_connect_sdk/api/AppConfig$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/mi_connect_sdk/api/AppConfig$Builder;->discType:I
 
     return-object p0
@@ -118,6 +126,7 @@
 .method public roleType(I)Lcom/xiaomi/mi_connect_sdk/api/AppConfig$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/mi_connect_sdk/api/AppConfig$Builder;->appRoleType:I
 
     return-object p0

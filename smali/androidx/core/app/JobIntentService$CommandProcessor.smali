@@ -1,4 +1,4 @@
-.class final Landroidx/core/app/JobIntentService$CommandProcessor;
+.class public final Landroidx/core/app/JobIntentService$CommandProcessor;
 .super Landroid/os/AsyncTask;
 .source "SourceFile"
 
@@ -25,13 +25,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/core/app/JobIntentService;
+.field public final synthetic this$0:Landroidx/core/app/JobIntentService;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/core/app/JobIntentService;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/core/app/JobIntentService$CommandProcessor;->this$0:Landroidx/core/app/JobIntentService;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V

@@ -1,4 +1,4 @@
-.class Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry;
+.class public Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -13,7 +13,7 @@
     }
 .end annotation
 
-.annotation runtime Lmm/f;
+.annotation runtime Lg/a/f;
 .end annotation
 
 
@@ -43,7 +43,7 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Lcom/google/android/datatransport/runtime/backends/CreationContextFactory;)V
     .locals 1
-    .annotation runtime Lmm/a;
+    .annotation runtime Lg/a/a;
     .end annotation
 
     .line 1
@@ -87,6 +87,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry;->backends:Ljava/util/Map;
 
@@ -96,6 +97,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry;->backends:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -110,6 +112,7 @@
 
     return-object p1
 
+    .line 3
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry;->backendFactoryProvider:Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry$BackendFactoryProvider;
@@ -122,12 +125,14 @@
 
     if-nez v0, :cond_1
 
+    const/4 p1, 0x0
+
+    .line 4
     monitor-exit p0
 
-    const/4 p0, 0x0
+    return-object p1
 
-    return-object p0
-
+    .line 5
     :cond_1
     :try_start_2
     iget-object v1, p0, Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry;->creationContextFactory:Lcom/google/android/datatransport/runtime/backends/CreationContextFactory;
@@ -140,12 +145,14 @@
 
     move-result-object v0
 
+    .line 6
     iget-object v1, p0, Lcom/google/android/datatransport/runtime/backends/MetadataBackendRegistry;->backends:Ljava/util/Map;
 
     invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 7
     monitor-exit p0
 
     return-object v0

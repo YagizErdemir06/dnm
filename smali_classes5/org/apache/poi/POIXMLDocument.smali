@@ -21,8 +21,10 @@
 .method public constructor <init>(Lorg/apache/poi/openxml4j/opc/OPCPackage;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lorg/apache/poi/POIXMLDocumentPart;-><init>(Lorg/apache/poi/openxml4j/opc/OPCPackage;)V
 
+    .line 2
     iput-object p1, p0, Lorg/apache/poi/POIXMLDocument;->pkg:Lorg/apache/poi/openxml4j/opc/OPCPackage;
 
     return-void
@@ -38,61 +40,68 @@
 
     const/4 v0, 0x4
 
+    .line 1
     invoke-virtual {p0, v0}, Ljava/io/InputStream;->mark(I)V
 
     new-array v0, v0, [B
 
+    .line 2
     invoke-static {p0, v0}, Lorg/apache/poi/util/IOUtils;->readFully(Ljava/io/InputStream;[B)I
 
+    .line 3
     instance-of v1, p0, Ljava/io/PushbackInputStream;
 
     if-eqz v1, :cond_0
 
+    .line 4
     check-cast p0, Ljava/io/PushbackInputStream;
 
+    .line 5
     invoke-virtual {p0, v0}, Ljava/io/PushbackInputStream;->unread([B)V
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-virtual {p0}, Ljava/io/InputStream;->reset()V
 
     :goto_0
     const/4 p0, 0x0
 
+    .line 7
     aget-byte v1, v0, p0
 
     sget-object v2, Lorg/apache/poi/poifs/common/POIFSConstants;->OOXML_FILE_HEADER:[B
 
     aget-byte v3, v2, p0
 
+    const/4 v4, 0x1
+
     if-ne v1, v3, :cond_1
 
-    const/4 v1, 0x1
+    aget-byte v1, v0, v4
+
+    aget-byte v3, v2, v4
+
+    if-ne v1, v3, :cond_1
+
+    const/4 v1, 0x2
 
     aget-byte v3, v0, v1
 
-    aget-byte v4, v2, v1
+    aget-byte v1, v2, v1
 
-    if-ne v3, v4, :cond_1
+    if-ne v3, v1, :cond_1
 
-    const/4 v3, 0x2
+    const/4 v1, 0x3
 
-    aget-byte v4, v0, v3
+    aget-byte v0, v0, v1
 
-    aget-byte v3, v2, v3
+    aget-byte v1, v2, v1
 
-    if-ne v4, v3, :cond_1
+    if-ne v0, v1, :cond_1
 
-    const/4 v3, 0x3
-
-    aget-byte v0, v0, v3
-
-    aget-byte v2, v2, v3
-
-    if-ne v0, v2, :cond_1
-
-    move p0, v1
+    move p0, v4
 
     :cond_1
     return p0
@@ -106,6 +115,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Lorg/apache/poi/openxml4j/opc/OPCPackage;->open(Ljava/lang/String;)Lorg/apache/poi/openxml4j/opc/OPCPackage;
 
@@ -118,9 +128,10 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance v0, Ljava/io/IOException;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object p0
 
@@ -151,6 +162,7 @@
 .method public getCorePart()Lorg/apache/poi/openxml4j/opc/PackagePart;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/poi/POIXMLDocumentPart;->getPackagePart()Lorg/apache/poi/openxml4j/opc/PackagePart;
 
     move-result-object p0
@@ -161,6 +173,7 @@
 .method public getPackage()Lorg/apache/poi/openxml4j/opc/OPCPackage;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLDocument;->pkg:Lorg/apache/poi/openxml4j/opc/OPCPackage;
 
     return-object p0
@@ -169,10 +182,12 @@
 .method public getProperties()Lorg/apache/poi/POIXMLProperties;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lorg/apache/poi/POIXMLDocument;->properties:Lorg/apache/poi/POIXMLProperties;
 
     if-nez v0, :cond_0
 
+    .line 2
     :try_start_0
     new-instance v0, Lorg/apache/poi/POIXMLProperties;
 
@@ -189,12 +204,14 @@
     :catch_0
     move-exception p0
 
+    .line 3
     new-instance v0, Lorg/apache/poi/POIXMLException;
 
     invoke-direct {v0, p0}, Lorg/apache/poi/POIXMLException;-><init>(Ljava/lang/Throwable;)V
 
     throw v0
 
+    .line 4
     :cond_0
     :goto_0
     iget-object p0, p0, Lorg/apache/poi/POIXMLDocument;->properties:Lorg/apache/poi/POIXMLProperties;
@@ -210,6 +227,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/poi/POIXMLDocumentPart;->getPackagePart()Lorg/apache/poi/openxml4j/opc/PackagePart;
 
     move-result-object v0
@@ -218,12 +236,14 @@
 
     move-result-object p1
 
+    .line 2
     invoke-virtual {p1}, Lorg/apache/poi/openxml4j/opc/PackageRelationshipCollection;->size()I
 
     move-result v0
 
     new-array v0, v0, [Lorg/apache/poi/openxml4j/opc/PackagePart;
 
+    .line 3
     invoke-virtual {p1}, Lorg/apache/poi/openxml4j/opc/PackageRelationshipCollection;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -243,6 +263,7 @@
 
     check-cast v2, Lorg/apache/poi/openxml4j/opc/PackageRelationship;
 
+    .line 4
     invoke-virtual {p0}, Lorg/apache/poi/POIXMLDocumentPart;->getPackagePart()Lorg/apache/poi/openxml4j/opc/PackagePart;
 
     move-result-object v3
@@ -269,17 +290,21 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
+    .line 2
     :try_start_0
     invoke-virtual {p0, p1, v0}, Lorg/apache/poi/POIXMLDocumentPart;->read(Lorg/apache/poi/POIXMLFactory;Ljava/util/Map;)V
     :try_end_0
     .catch Lorg/apache/poi/openxml4j/exceptions/OpenXML4JException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/poi/POIXMLDocumentPart;->onDocumentRead()V
 
+    .line 4
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
     return-void
@@ -287,6 +312,7 @@
     :catch_0
     move-exception p0
 
+    .line 5
     new-instance p1, Lorg/apache/poi/POIXMLException;
 
     invoke-direct {p1, p0}, Lorg/apache/poi/POIXMLException;-><init>(Ljava/lang/Throwable;)V
@@ -302,20 +328,25 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
+    .line 2
     invoke-virtual {p0, v0}, Lorg/apache/poi/POIXMLDocumentPart;->onSave(Ljava/util/Set;)V
 
+    .line 3
     invoke-interface {v0}, Ljava/util/Set;->clear()V
 
+    .line 4
     invoke-virtual {p0}, Lorg/apache/poi/POIXMLDocument;->getProperties()Lorg/apache/poi/POIXMLProperties;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lorg/apache/poi/POIXMLProperties;->commit()V
 
+    .line 5
     invoke-virtual {p0}, Lorg/apache/poi/POIXMLDocument;->getPackage()Lorg/apache/poi/openxml4j/opc/OPCPackage;
 
     move-result-object p0

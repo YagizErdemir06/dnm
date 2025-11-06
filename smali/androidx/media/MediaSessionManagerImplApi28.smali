@@ -1,4 +1,4 @@
-.class Landroidx/media/MediaSessionManagerImplApi28;
+.class public Landroidx/media/MediaSessionManagerImplApi28;
 .super Landroidx/media/MediaSessionManagerImplApi21;
 .source "SourceFile"
 
@@ -16,7 +16,7 @@
 
 
 # instance fields
-.field mObject:Landroid/media/session/MediaSessionManager;
+.field public mObject:Landroid/media/session/MediaSessionManager;
 
 
 # direct methods
@@ -31,10 +31,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/media/MediaSessionManagerImplApi21;-><init>(Landroid/content/Context;)V
 
     const-string v0, "media_session"
 
+    .line 2
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -59,6 +61,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroidx/media/MediaSessionManagerImplApi21;->isTrustedForMediaControl(Landroidx/media/MediaSessionManager$RemoteUserInfoImpl;)Z
 
     move-result p0

@@ -13,7 +13,7 @@
 # instance fields
 .field private mBoundaryMode:I
 
-.field mDamping:D
+.field public mDamping:D
 
 .field private mInitialized:Z
 
@@ -38,16 +38,20 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/high16 v0, 0x3fe0000000000000L    # 0.5
 
+    .line 2
     iput-wide v0, p0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mDamping:D
 
     const/4 v0, 0x0
 
+    .line 3
     iput-boolean v0, p0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mInitialized:Z
 
+    .line 4
     iput v0, p0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mBoundaryMode:I
 
     return-void
@@ -58,10 +62,13 @@
 
     move-object/from16 v0, p0
 
+    .line 1
     iget-wide v1, v0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mStiffness:D
 
+    .line 2
     iget-wide v3, v0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mDamping:D
 
+    .line 3
     iget v5, v0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mMass:F
 
     float-to-double v5, v5
@@ -97,6 +104,7 @@
     :goto_0
     if-ge v8, v5, :cond_2
 
+    .line 4
     iget v9, v0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mPos:F
 
     float-to-double v10, v9
@@ -109,6 +117,7 @@
 
     mul-double/2addr v14, v10
 
+    .line 5
     iget v10, v0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mV:F
 
     move-wide/from16 v16, v1
@@ -173,6 +182,7 @@
 
     double-to-float v3, v3
 
+    .line 6
     iput v3, v0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mV:F
 
     float-to-double v9, v9
@@ -183,8 +193,10 @@
 
     double-to-float v1, v9
 
+    .line 7
     iput v1, v0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mPos:F
 
+    .line 8
     iget v2, v0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mBoundaryMode:I
 
     if-lez v2, :cond_1
@@ -203,12 +215,15 @@
 
     neg-float v1, v1
 
+    .line 9
     iput v1, v0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mPos:F
 
     neg-float v1, v3
 
+    .line 10
     iput v1, v0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mV:F
 
+    .line 11
     :cond_0
     iget v1, v0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mPos:F
 
@@ -228,8 +243,10 @@
 
     sub-float/2addr v2, v1
 
+    .line 12
     iput v2, v0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mPos:F
 
+    .line 13
     iget v1, v0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mV:F
 
     neg-float v1, v1
@@ -262,10 +279,13 @@
 .method public getAcceleration()F
     .locals 8
 
+    .line 1
     iget-wide v0, p0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mStiffness:D
 
+    .line 2
     iget-wide v2, p0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mDamping:D
 
+    .line 3
     iget v4, p0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mPos:F
 
     float-to-double v4, v4
@@ -278,6 +298,7 @@
 
     mul-double/2addr v0, v4
 
+    .line 4
     iget v4, p0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mV:F
 
     float-to-double v4, v4
@@ -298,6 +319,7 @@
 .method public getInterpolation(F)F
     .locals 2
 
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mLastTime:F
 
     sub-float v0, p1, v0
@@ -306,8 +328,10 @@
 
     invoke-direct {p0, v0, v1}, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->compute(D)V
 
+    .line 2
     iput p1, p0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mLastTime:F
 
+    .line 3
     iget p0, p0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mPos:F
 
     return p0
@@ -324,6 +348,7 @@
 .method public getVelocity(F)F
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mV:F
 
     return p0
@@ -332,6 +357,7 @@
 .method public isStopped()Z
     .locals 8
 
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mPos:F
 
     float-to-double v0, v0
@@ -340,12 +366,15 @@
 
     sub-double/2addr v0, v2
 
+    .line 2
     iget-wide v2, p0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mStiffness:D
 
+    .line 3
     iget v4, p0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mV:F
 
     float-to-double v4, v4
 
+    .line 4
     iget v6, p0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mMass:F
 
     float-to-double v6, v6
@@ -362,10 +391,12 @@
 
     div-double/2addr v4, v2
 
+    .line 5
     invoke-static {v4, v5}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v0
 
+    .line 6
     iget p0, p0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mStopThreshold:F
 
     float-to-double v2, p0
@@ -388,6 +419,7 @@
 .method public log(Ljava/lang/String;)V
     .locals 2
 
+    .line 1
     new-instance p0, Ljava/lang/Throwable;
 
     invoke-direct {p0}, Ljava/lang/Throwable;-><init>()V
@@ -400,6 +432,7 @@
 
     aget-object p0, p0, v0
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -442,6 +475,7 @@
 
     move-result-object p0
 
+    .line 3
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -466,34 +500,44 @@
 
     float-to-double v0, p2
 
+    .line 1
     iput-wide v0, p0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mTargetPos:D
 
     float-to-double v0, p6
 
+    .line 2
     iput-wide v0, p0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mDamping:D
 
     const/4 p2, 0x0
 
+    .line 3
     iput-boolean p2, p0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mInitialized:Z
 
+    .line 4
     iput p1, p0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mPos:F
 
     float-to-double p1, p3
 
+    .line 5
     iput-wide p1, p0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mLastVelocity:D
 
     float-to-double p1, p5
 
+    .line 6
     iput-wide p1, p0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mStiffness:D
 
+    .line 7
     iput p4, p0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mMass:F
 
+    .line 8
     iput p7, p0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mStopThreshold:F
 
+    .line 9
     iput p8, p0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mBoundaryMode:I
 
     const/4 p1, 0x0
 
+    .line 10
     iput p1, p0, Landroidx/constraintlayout/core/motion/utils/SpringStopEngine;->mLastTime:F
 
     return-void

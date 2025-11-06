@@ -1,4 +1,4 @@
-.class interface abstract annotation Lcom/google/common/escape/ElementTypesAreNonnullByDefault;
+.class public interface abstract annotation Lcom/google/common/escape/ElementTypesAreNonnullByDefault;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

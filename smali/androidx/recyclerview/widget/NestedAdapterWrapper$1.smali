@@ -1,4 +1,4 @@
-.class Landroidx/recyclerview/widget/NestedAdapterWrapper$1;
+.class public Landroidx/recyclerview/widget/NestedAdapterWrapper$1;
 .super Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/recyclerview/widget/NestedAdapterWrapper;
+.field public final synthetic this$0:Landroidx/recyclerview/widget/NestedAdapterWrapper;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/recyclerview/widget/NestedAdapterWrapper;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/recyclerview/widget/NestedAdapterWrapper$1;->this$0:Landroidx/recyclerview/widget/NestedAdapterWrapper;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;-><init>()V
@@ -34,6 +35,7 @@
 .method public onChanged()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/NestedAdapterWrapper$1;->this$0:Landroidx/recyclerview/widget/NestedAdapterWrapper;
 
     iget-object v1, v0, Landroidx/recyclerview/widget/NestedAdapterWrapper;->adapter:Landroidx/recyclerview/widget/RecyclerView$Adapter;
@@ -44,6 +46,7 @@
 
     iput v1, v0, Landroidx/recyclerview/widget/NestedAdapterWrapper;->mCachedItemCount:I
 
+    .line 2
     iget-object p0, p0, Landroidx/recyclerview/widget/NestedAdapterWrapper$1;->this$0:Landroidx/recyclerview/widget/NestedAdapterWrapper;
 
     iget-object v0, p0, Landroidx/recyclerview/widget/NestedAdapterWrapper;->mCallback:Landroidx/recyclerview/widget/NestedAdapterWrapper$Callback;
@@ -88,6 +91,7 @@
 .method public onItemRangeInserted(II)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/NestedAdapterWrapper$1;->this$0:Landroidx/recyclerview/widget/NestedAdapterWrapper;
 
     iget v1, v0, Landroidx/recyclerview/widget/NestedAdapterWrapper;->mCachedItemCount:I
@@ -96,10 +100,12 @@
 
     iput v1, v0, Landroidx/recyclerview/widget/NestedAdapterWrapper;->mCachedItemCount:I
 
+    .line 2
     iget-object v1, v0, Landroidx/recyclerview/widget/NestedAdapterWrapper;->mCallback:Landroidx/recyclerview/widget/NestedAdapterWrapper$Callback;
 
     invoke-interface {v1, v0, p1, p2}, Landroidx/recyclerview/widget/NestedAdapterWrapper$Callback;->onItemRangeInserted(Landroidx/recyclerview/widget/NestedAdapterWrapper;II)V
 
+    .line 3
     iget-object p1, p0, Landroidx/recyclerview/widget/NestedAdapterWrapper$1;->this$0:Landroidx/recyclerview/widget/NestedAdapterWrapper;
 
     iget p2, p1, Landroidx/recyclerview/widget/NestedAdapterWrapper;->mCachedItemCount:I
@@ -108,6 +114,7 @@
 
     iget-object p1, p1, Landroidx/recyclerview/widget/NestedAdapterWrapper;->adapter:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
+    .line 4
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->getStateRestorationPolicy()Landroidx/recyclerview/widget/RecyclerView$Adapter$StateRestorationPolicy;
 
     move-result-object p1
@@ -116,6 +123,7 @@
 
     if-ne p1, p2, :cond_0
 
+    .line 5
     iget-object p0, p0, Landroidx/recyclerview/widget/NestedAdapterWrapper$1;->this$0:Landroidx/recyclerview/widget/NestedAdapterWrapper;
 
     iget-object p1, p0, Landroidx/recyclerview/widget/NestedAdapterWrapper;->mCallback:Landroidx/recyclerview/widget/NestedAdapterWrapper$Callback;
@@ -141,8 +149,10 @@
     :goto_0
     const-string p3, "moving more than 1 item is not supported in RecyclerView"
 
+    .line 1
     invoke-static {v0, p3}, Landroidx/core/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 2
     iget-object p0, p0, Landroidx/recyclerview/widget/NestedAdapterWrapper$1;->this$0:Landroidx/recyclerview/widget/NestedAdapterWrapper;
 
     iget-object p3, p0, Landroidx/recyclerview/widget/NestedAdapterWrapper;->mCallback:Landroidx/recyclerview/widget/NestedAdapterWrapper$Callback;
@@ -155,6 +165,7 @@
 .method public onItemRangeRemoved(II)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/NestedAdapterWrapper$1;->this$0:Landroidx/recyclerview/widget/NestedAdapterWrapper;
 
     iget v1, v0, Landroidx/recyclerview/widget/NestedAdapterWrapper;->mCachedItemCount:I
@@ -163,10 +174,12 @@
 
     iput v1, v0, Landroidx/recyclerview/widget/NestedAdapterWrapper;->mCachedItemCount:I
 
+    .line 2
     iget-object v1, v0, Landroidx/recyclerview/widget/NestedAdapterWrapper;->mCallback:Landroidx/recyclerview/widget/NestedAdapterWrapper$Callback;
 
     invoke-interface {v1, v0, p1, p2}, Landroidx/recyclerview/widget/NestedAdapterWrapper$Callback;->onItemRangeRemoved(Landroidx/recyclerview/widget/NestedAdapterWrapper;II)V
 
+    .line 3
     iget-object p1, p0, Landroidx/recyclerview/widget/NestedAdapterWrapper$1;->this$0:Landroidx/recyclerview/widget/NestedAdapterWrapper;
 
     iget p2, p1, Landroidx/recyclerview/widget/NestedAdapterWrapper;->mCachedItemCount:I
@@ -177,6 +190,7 @@
 
     iget-object p1, p1, Landroidx/recyclerview/widget/NestedAdapterWrapper;->adapter:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
+    .line 4
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->getStateRestorationPolicy()Landroidx/recyclerview/widget/RecyclerView$Adapter$StateRestorationPolicy;
 
     move-result-object p1
@@ -185,6 +199,7 @@
 
     if-ne p1, p2, :cond_0
 
+    .line 5
     iget-object p0, p0, Landroidx/recyclerview/widget/NestedAdapterWrapper$1;->this$0:Landroidx/recyclerview/widget/NestedAdapterWrapper;
 
     iget-object p1, p0, Landroidx/recyclerview/widget/NestedAdapterWrapper;->mCallback:Landroidx/recyclerview/widget/NestedAdapterWrapper$Callback;
@@ -198,6 +213,7 @@
 .method public onStateRestorationPolicyChanged()V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/NestedAdapterWrapper$1;->this$0:Landroidx/recyclerview/widget/NestedAdapterWrapper;
 
     iget-object v0, p0, Landroidx/recyclerview/widget/NestedAdapterWrapper;->mCallback:Landroidx/recyclerview/widget/NestedAdapterWrapper$Callback;

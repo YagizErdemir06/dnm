@@ -1,4 +1,4 @@
-.class Lmiuix/animation/property/ViewProperty$19;
+.class public Lmiuix/animation/property/ViewProperty$19;
 .super Lmiuix/animation/property/ViewProperty;
 .source "SourceFile"
 
@@ -15,10 +15,11 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;F)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lmiuix/animation/property/ViewProperty;-><init>(Ljava/lang/String;F)V
+    .line 1
+    invoke-direct {p0, p1}, Lmiuix/animation/property/ViewProperty;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -36,6 +37,7 @@
 .method public bridge synthetic getValue(Ljava/lang/Object;)F
     .locals 0
 
+    .line 1
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1}, Lmiuix/animation/property/ViewProperty$19;->getValue(Landroid/view/View;)F
@@ -54,6 +56,7 @@
 .method public bridge synthetic setValue(Ljava/lang/Object;F)V
     .locals 0
 
+    .line 1
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1, p2}, Lmiuix/animation/property/ViewProperty$19;->setValue(Landroid/view/View;F)V

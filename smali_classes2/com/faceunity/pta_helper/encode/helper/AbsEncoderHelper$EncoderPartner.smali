@@ -28,14 +28,19 @@
 .method public constructor <init>(Lcom/faceunity/pta_helper/encode/SequenceFrame;Lcom/faceunity/pta_helper/texture/TextureReader;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/faceunity/pta_helper/encode/helper/AbsEncoderHelper$EncoderPartner;->sequenceFrame:Lcom/faceunity/pta_helper/encode/SequenceFrame;
 
+    .line 3
     iput-object p2, p0, Lcom/faceunity/pta_helper/encode/helper/AbsEncoderHelper$EncoderPartner;->textureReader:Lcom/faceunity/pta_helper/texture/TextureReader;
 
+    .line 4
     iput-object p3, p0, Lcom/faceunity/pta_helper/encode/helper/AbsEncoderHelper$EncoderPartner;->filePath:Ljava/lang/String;
 
+    .line 5
     new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 p2, 0x0
@@ -50,6 +55,7 @@
 .method public static synthetic access$000(Lcom/faceunity/pta_helper/encode/helper/AbsEncoderHelper$EncoderPartner;)Lcom/faceunity/pta_helper/texture/TextureReader;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/pta_helper/encode/helper/AbsEncoderHelper$EncoderPartner;->textureReader:Lcom/faceunity/pta_helper/texture/TextureReader;
 
     return-object p0
@@ -58,6 +64,7 @@
 .method public static synthetic access$100(Lcom/faceunity/pta_helper/encode/helper/AbsEncoderHelper$EncoderPartner;)Lcom/faceunity/pta_helper/encode/SequenceFrame;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/pta_helper/encode/helper/AbsEncoderHelper$EncoderPartner;->sequenceFrame:Lcom/faceunity/pta_helper/encode/SequenceFrame;
 
     return-object p0
@@ -66,6 +73,7 @@
 .method public static synthetic access$200(Lcom/faceunity/pta_helper/encode/helper/AbsEncoderHelper$EncoderPartner;)Ljava/util/concurrent/atomic/AtomicBoolean;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/pta_helper/encode/helper/AbsEncoderHelper$EncoderPartner;->isCancel:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     return-object p0
@@ -74,6 +82,7 @@
 .method public static synthetic access$300(Lcom/faceunity/pta_helper/encode/helper/AbsEncoderHelper$EncoderPartner;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/pta_helper/encode/helper/AbsEncoderHelper$EncoderPartner;->filePath:Ljava/lang/String;
 
     return-object p0

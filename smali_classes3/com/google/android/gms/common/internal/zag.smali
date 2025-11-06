@@ -72,12 +72,14 @@
 .method public final onClick(Landroid/content/DialogInterface;I)V
     .locals 3
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Lcom/google/android/gms/common/internal/zag;->zaa()V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
     return-void
@@ -99,6 +101,7 @@
 
     const-string v2, "generic"
 
+    .line 3
     invoke-virtual {v1, v2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -112,10 +115,12 @@
     :cond_0
     const-string v0, "DialogRedirect"
 
+    .line 4
     invoke-static {v0, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 5
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
     return-void
@@ -123,6 +128,7 @@
     :goto_0
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
+    .line 6
     throw p0
 .end method
 

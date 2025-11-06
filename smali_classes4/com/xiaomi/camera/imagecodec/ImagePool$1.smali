@@ -1,4 +1,4 @@
-.class synthetic Lcom/xiaomi/camera/imagecodec/ImagePool$1;
+.class public synthetic Lcom/xiaomi/camera/imagecodec/ImagePool$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

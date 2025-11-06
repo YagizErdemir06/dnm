@@ -1,4 +1,4 @@
-.class final Landroidx/concurrent/futures/AbstractResolvableFuture$Waiter;
+.class public final Landroidx/concurrent/futures/AbstractResolvableFuture$Waiter;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,16 +15,16 @@
 
 
 # static fields
-.field static final TOMBSTONE:Landroidx/concurrent/futures/AbstractResolvableFuture$Waiter;
+.field public static final TOMBSTONE:Landroidx/concurrent/futures/AbstractResolvableFuture$Waiter;
 
 
 # instance fields
-.field volatile next:Landroidx/concurrent/futures/AbstractResolvableFuture$Waiter;
+.field public volatile next:Landroidx/concurrent/futures/AbstractResolvableFuture$Waiter;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field volatile thread:Ljava/lang/Thread;
+.field public volatile thread:Ljava/lang/Thread;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -34,6 +34,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Landroidx/concurrent/futures/AbstractResolvableFuture$Waiter;
 
     const/4 v1, 0x0
@@ -77,6 +78,7 @@
 .method public setNext(Landroidx/concurrent/futures/AbstractResolvableFuture$Waiter;)V
     .locals 1
 
+    .line 1
     sget-object v0, Landroidx/concurrent/futures/AbstractResolvableFuture;->ATOMIC_HELPER:Landroidx/concurrent/futures/AbstractResolvableFuture$AtomicHelper;
 
     invoke-virtual {v0, p0, p1}, Landroidx/concurrent/futures/AbstractResolvableFuture$AtomicHelper;->putNext(Landroidx/concurrent/futures/AbstractResolvableFuture$Waiter;Landroidx/concurrent/futures/AbstractResolvableFuture$Waiter;)V
@@ -87,14 +89,17 @@
 .method public unpark()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/concurrent/futures/AbstractResolvableFuture$Waiter;->thread:Ljava/lang/Thread;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x0
 
+    .line 2
     iput-object v1, p0, Landroidx/concurrent/futures/AbstractResolvableFuture$Waiter;->thread:Ljava/lang/Thread;
 
+    .line 3
     invoke-static {v0}, Ljava/util/concurrent/locks/LockSupport;->unpark(Ljava/lang/Thread;)V
 
     :cond_0

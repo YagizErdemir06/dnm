@@ -26,14 +26,23 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/android/camera/data/observeable/RxData$a;
+.field public final synthetic c:Lcom/android/camera/data/observeable/RxData$a;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera/data/observeable/RxData$a;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera/data/observeable/RxData$a$a;->a:Lcom/android/camera/data/observeable/RxData$a;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/data/observeable/RxData$a$a;->c:Lcom/android/camera/data/observeable/RxData$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,13 +53,23 @@
 # virtual methods
 .method public test(Ljava/lang/Object;)Z
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "data"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)Z"
         }
     .end annotation
 
-    iget-object p0, p0, Lcom/android/camera/data/observeable/RxData$a$a;->a:Lcom/android/camera/data/observeable/RxData$a;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/data/observeable/RxData$a$a;->c:Lcom/android/camera/data/observeable/RxData$a;
 
     invoke-static {p0}, Lcom/android/camera/data/observeable/RxData$a;->a(Lcom/android/camera/data/observeable/RxData$a;)Landroidx/lifecycle/LifecycleOwner;
 

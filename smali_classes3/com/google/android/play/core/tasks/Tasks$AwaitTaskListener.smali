@@ -1,4 +1,4 @@
-.class Lcom/google/android/play/core/tasks/Tasks$AwaitTaskListener;
+.class public Lcom/google/android/play/core/tasks/Tasks$AwaitTaskListener;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -72,6 +72,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/play/core/tasks/Tasks$AwaitTaskListener;->countDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->await()V
@@ -87,6 +88,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/play/core/tasks/Tasks$AwaitTaskListener;->countDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p0, p1, p2, p3}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
@@ -99,6 +101,7 @@
 .method public onFailure(Ljava/lang/Exception;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/play/core/tasks/Tasks$AwaitTaskListener;->countDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
@@ -114,6 +117,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/play/core/tasks/Tasks$AwaitTaskListener;->countDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V

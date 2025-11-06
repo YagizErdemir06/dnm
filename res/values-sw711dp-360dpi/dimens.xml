@@ -51,6 +51,7 @@
     <dimen name="more_mode_settings_video_radius">29.329987dip</dimen>
     <dimen name="more_mode_settings_video_width">232.88998dip</dimen>
     <dimen name="popup_layout_padding">1.7999878dip</dimen>
+    <item type="dimen" name="preference_item_padding_start">@dimen/miuix_preference_item_padding_start</item>
     <dimen name="previewlist_width">392.6953dip</dimen>
     <dimen name="right_tip_description_tip_top">13.454498dip</dimen>
     <dimen name="tint_AItip_margin_top_select">60.349976dip</dimen>

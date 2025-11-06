@@ -1,10 +1,10 @@
-.class final Lcom/google/android/gms/internal/common/zzn;
+.class public final Lcom/google/android/gms/internal/common/zzn;
 .super Lcom/google/android/gms/internal/common/zzm;
 .source "SourceFile"
 
 
 # static fields
-.field static final zza:Lcom/google/android/gms/internal/common/zzn;
+.field public static final zza:Lcom/google/android/gms/internal/common/zzn;
 
 
 # direct methods
@@ -25,6 +25,7 @@
 
     const-string v0, "CharMatcher.none()"
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/google/android/gms/internal/common/zzm;-><init>(Ljava/lang/String;)V
 
     return-void

@@ -42,7 +42,7 @@
     .end annotation
 .end field
 
-.field final maxSize:I
+.field public final maxSize:I
     .annotation build Lcom/google/common/annotations/VisibleForTesting;
     .end annotation
 .end field
@@ -52,6 +52,7 @@
 .method private constructor <init>(I)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ForwardingQueue;-><init>()V
 
     if-ltz p1, :cond_0
@@ -66,14 +67,17 @@
     :goto_0
     const-string v1, "maxSize (%s) must >= 0"
 
+    .line 2
     invoke-static {v0, v1, p1}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;I)V
 
+    .line 3
     new-instance v0, Ljava/util/ArrayDeque;
 
     invoke-direct {v0, p1}, Ljava/util/ArrayDeque;-><init>(I)V
 
     iput-object v0, p0, Lcom/google/common/collect/EvictingQueue;->delegate:Ljava/util/Queue;
 
+    .line 4
     iput p1, p0, Lcom/google/common/collect/EvictingQueue;->maxSize:I
 
     return-void
@@ -91,6 +95,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/EvictingQueue;
 
     invoke-direct {v0, p0}, Lcom/google/common/collect/EvictingQueue;-><init>(I)V
@@ -111,8 +116,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget v0, p0, Lcom/google/common/collect/EvictingQueue;->maxSize:I
 
     const/4 v1, 0x1
@@ -121,6 +128,7 @@
 
     return v1
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingCollection;->size()I
 
@@ -130,10 +138,12 @@
 
     if-ne v0, v2, :cond_1
 
+    .line 4
     iget-object v0, p0, Lcom/google/common/collect/EvictingQueue;->delegate:Ljava/util/Queue;
 
     invoke-interface {v0}, Ljava/util/Queue;->remove()Ljava/lang/Object;
 
+    .line 5
     :cond_1
     iget-object p0, p0, Lcom/google/common/collect/EvictingQueue;->delegate:Ljava/util/Queue;
 
@@ -155,16 +165,20 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Ljava/util/Collection;->size()I
 
     move-result v0
 
+    .line 2
     iget v1, p0, Lcom/google/common/collect/EvictingQueue;->maxSize:I
 
     if-lt v0, v1, :cond_0
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingCollection;->clear()V
 
+    .line 4
     iget v1, p0, Lcom/google/common/collect/EvictingQueue;->maxSize:I
 
     sub-int/2addr v0, v1
@@ -179,6 +193,7 @@
 
     return p0
 
+    .line 5
     :cond_0
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ForwardingCollection;->standardAddAll(Ljava/util/Collection;)Z
 
@@ -236,6 +251,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/EvictingQueue;->add(Ljava/lang/Object;)Z
 
     move-result p0
@@ -246,6 +262,7 @@
 .method public remainingCapacity()I
     .locals 1
 
+    .line 1
     iget v0, p0, Lcom/google/common/collect/EvictingQueue;->maxSize:I
 
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingCollection;->size()I
@@ -260,6 +277,7 @@
 .method public toArray()[Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/ForwardingCollection;->toArray()[Ljava/lang/Object;
 
     move-result-object p0

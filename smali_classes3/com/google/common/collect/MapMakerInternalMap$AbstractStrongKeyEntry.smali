@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/collect/MapMakerInternalMap$AbstractStrongKeyEntry;
+.class public abstract Lcom/google/common/collect/MapMakerInternalMap$AbstractStrongKeyEntry;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -33,9 +33,9 @@
 
 
 # instance fields
-.field final hash:I
+.field public final hash:I
 
-.field final key:Ljava/lang/Object;
+.field public final key:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TK;"
@@ -43,7 +43,7 @@
     .end annotation
 .end field
 
-.field final next:Lcom/google/common/collect/MapMakerInternalMap$InternalEntry;
+.field public final next:Lcom/google/common/collect/MapMakerInternalMap$InternalEntry;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TE;"
@@ -68,12 +68,16 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractStrongKeyEntry;->key:Ljava/lang/Object;
 
+    .line 3
     iput p2, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractStrongKeyEntry;->hash:I
 
+    .line 4
     iput-object p3, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractStrongKeyEntry;->next:Lcom/google/common/collect/MapMakerInternalMap$InternalEntry;
 
     return-void
@@ -84,6 +88,7 @@
 .method public getHash()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractStrongKeyEntry;->hash:I
 
     return p0
@@ -97,6 +102,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractStrongKeyEntry;->key:Ljava/lang/Object;
 
     return-object p0
@@ -110,6 +116,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractStrongKeyEntry;->next:Lcom/google/common/collect/MapMakerInternalMap$InternalEntry;
 
     return-object p0

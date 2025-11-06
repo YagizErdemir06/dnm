@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field protected target:Ljava/lang/String;
+.field public target:Ljava/lang/String;
 
-.field protected text:Ljava/lang/String;
+.field public text:Ljava/lang/String;
 
-.field protected values:Ljava/util/Map;
+.field public values:Ljava/util/Map;
 
 
 # direct methods
@@ -70,6 +70,7 @@
 .method public createXPathResult(Lorg/dom4j/Element;)Lorg/dom4j/Node;
     .locals 2
 
+    .line 1
     new-instance v0, Lorg/dom4j/tree/DefaultProcessingInstruction;
 
     invoke-virtual {p0}, Lorg/dom4j/tree/FlyweightProcessingInstruction;->getTarget()Ljava/lang/String;
@@ -88,6 +89,7 @@
 .method public getTarget()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/FlyweightProcessingInstruction;->target:Ljava/lang/String;
 
     return-object p0
@@ -96,6 +98,7 @@
 .method public getText()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/FlyweightProcessingInstruction;->text:Ljava/lang/String;
 
     return-object p0
@@ -104,6 +107,7 @@
 .method public getValue(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/FlyweightProcessingInstruction;->values:Ljava/util/Map;
 
     invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -123,6 +127,7 @@
 .method public getValues()Ljava/util/Map;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/tree/FlyweightProcessingInstruction;->values:Ljava/util/Map;
 
     invoke-static {p0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
@@ -135,6 +140,7 @@
 .method public setTarget(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "This PI is read-only and cannot be modified"

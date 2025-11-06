@@ -12,33 +12,33 @@
 
 
 # instance fields
-.field protected mBackgroundColor:I
+.field public mBackgroundColor:I
 
 .field private mBigRadius:I
 
-.field protected mComponentData:Lcom/android/camera/data/data/b;
+.field public mComponentData:Ld/d/a/l6/e/b;
 
-.field protected mCurrentPointIndex:I
+.field public mCurrentPointIndex:I
 
-.field protected mDrawBackgroundPaint:Landroid/graphics/Paint;
+.field public mDrawBackgroundPaint:Landroid/graphics/Paint;
 
 .field private mInnerHeight:I
 
-.field protected mInnerMarginHorizontal:I
+.field public mInnerMarginHorizontal:I
 
 .field private mInnerMarginVertical:I
 
 .field private mIsRLT:Z
 
-.field protected mMiniSmallColor:I
+.field public mMiniSmallColor:I
 
-.field protected mMiniSmallRadius:I
+.field public mMiniSmallRadius:I
 
 .field private mPictureStyleListener:Lcom/android/camera/ui/PictureStyleView$a;
 
-.field protected mPointCount:I
+.field public mPointCount:I
 
-.field protected mPointsXList:Ljava/util/List;
+.field public mPointsXList:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -48,7 +48,7 @@
     .end annotation
 .end field
 
-.field protected mPointsY:F
+.field public mPointsY:F
 
 .field private mSmallColor:I
 
@@ -58,6 +58,14 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -73,6 +81,16 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     .line 2
     invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -108,7 +126,7 @@
 
     move-result-object p2
 
-    invoke-static {p2}, Lcom/android/camera/a6;->R2(Landroid/content/Context;)Z
+    invoke-static {p2}, Ld/d/a/z5;->G2(Landroid/content/Context;)Z
 
     move-result p2
 
@@ -123,7 +141,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0706fe
+    const v0, 0x7f070604
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -140,7 +158,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f070700
+    const v0, 0x7f070606
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -157,7 +175,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0706ff
+    const v0, 0x7f070605
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -174,7 +192,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0706fd
+    const v0, 0x7f070603
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -191,7 +209,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f070701
+    const v0, 0x7f070607
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -208,7 +226,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f070702
+    const v0, 0x7f070608
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -221,7 +239,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f060928
+    const v0, 0x7f0604be
 
     invoke-virtual {p2, v0}, Landroid/content/Context;->getColor(I)I
 
@@ -234,7 +252,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f060922
+    const v0, 0x7f0604b8
 
     invoke-virtual {p2, v0}, Landroid/content/Context;->getColor(I)I
 
@@ -268,22 +286,25 @@
 .method private getCurrentIndex()V
     .locals 4
 
-    iget-object v0, p0, Lcom/android/camera/ui/PictureStyleView;->mComponentData:Lcom/android/camera/data/data/b;
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/ui/PictureStyleView;->mComponentData:Ld/d/a/l6/e/b;
 
     const/16 v1, 0xa0
 
-    invoke-virtual {v0, v1}, Lcom/android/camera/data/data/b;->getComponentValue(I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ld/d/a/l6/e/b;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/camera/ui/PictureStyleView;->mComponentData:Lcom/android/camera/data/data/b;
+    .line 2
+    iget-object v1, p0, Lcom/android/camera/ui/PictureStyleView;->mComponentData:Ld/d/a/l6/e/b;
 
-    invoke-virtual {v1}, Lcom/android/camera/data/data/b;->getItems()Ljava/util/List;
+    invoke-virtual {v1}, Ld/d/a/l6/e/b;->getItems()Ljava/util/List;
 
     move-result-object v1
 
     const/4 v2, 0x0
 
+    .line 3
     :goto_0
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -291,13 +312,14 @@
 
     if-ge v2, v3, :cond_2
 
+    .line 4
     invoke-interface {v1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Lcom/android/camera/data/data/c;
+    check-cast v3, Ld/d/a/l6/e/c;
 
-    iget-object v3, v3, Lcom/android/camera/data/data/c;->n:Ljava/lang/String;
+    iget-object v3, v3, Ld/d/a/l6/e/c;->q:Ljava/lang/String;
 
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -305,6 +327,7 @@
 
     if-eqz v3, :cond_1
 
+    .line 5
     iget-boolean v0, p0, Lcom/android/camera/ui/PictureStyleView;->mIsRLT:Z
 
     if-eqz v0, :cond_0
@@ -334,8 +357,17 @@
 # virtual methods
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 9
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "canvas"
+        }
+    .end annotation
 
-    iget-object v0, p0, Lcom/android/camera/ui/PictureStyleView;->mComponentData:Lcom/android/camera/data/data/b;
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/ui/PictureStyleView;->mComponentData:Ld/d/a/l6/e/b;
 
     if-eqz v0, :cond_2
 
@@ -359,6 +391,7 @@
 
     goto/16 :goto_2
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/ui/PictureStyleView;->mDrawBackgroundPaint:Landroid/graphics/Paint;
 
@@ -366,6 +399,7 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 3
     iget v0, p0, Lcom/android/camera/ui/PictureStyleView;->mInnerMarginHorizontal:I
 
     int-to-float v2, v0
@@ -404,23 +438,27 @@
 
     const/4 v0, 0x0
 
+    .line 4
     :goto_0
     iget v1, p0, Lcom/android/camera/ui/PictureStyleView;->mPointCount:I
 
     if-ge v0, v1, :cond_2
 
+    .line 5
     iget v1, p0, Lcom/android/camera/ui/PictureStyleView;->mCurrentPointIndex:I
 
     if-ne v0, v1, :cond_1
 
+    .line 6
     iget-object v1, p0, Lcom/android/camera/ui/PictureStyleView;->mDrawBackgroundPaint:Landroid/graphics/Paint;
 
-    invoke-static {}, Lf2/f;->j()I
+    invoke-static {}, Ld/d/a/k6/g;->j()I
 
     move-result v2
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 7
     iget-object v1, p0, Lcom/android/camera/ui/PictureStyleView;->mPointsXList:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -443,12 +481,14 @@
 
     invoke-virtual {p1, v1, v2, v3, v4}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
+    .line 8
     iget-object v1, p0, Lcom/android/camera/ui/PictureStyleView;->mDrawBackgroundPaint:Landroid/graphics/Paint;
 
     iget v2, p0, Lcom/android/camera/ui/PictureStyleView;->mSmallColor:I
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 9
     iget-object v1, p0, Lcom/android/camera/ui/PictureStyleView;->mPointsXList:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -473,6 +513,7 @@
 
     goto :goto_1
 
+    .line 10
     :cond_1
     iget-object v1, p0, Lcom/android/camera/ui/PictureStyleView;->mDrawBackgroundPaint:Landroid/graphics/Paint;
 
@@ -480,6 +521,7 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 11
     iget-object v1, p0, Lcom/android/camera/ui/PictureStyleView;->mPointsXList:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -514,13 +556,24 @@
 
 .method public onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "info"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroid/view/View;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
     const/4 v0, 0x1
 
+    .line 2
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setScrollable(Z)V
 
+    .line 3
     invoke-virtual {p0}, Landroid/view/View;->isEnabled()Z
 
     move-result v1
@@ -531,10 +584,12 @@
 
     if-lez v1, :cond_0
 
+    .line 4
     sget-object v1, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_SCROLL_BACKWARD:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
 
     invoke-virtual {p1, v1}, Landroid/view/accessibility/AccessibilityNodeInfo;->addAction(Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;)V
 
+    .line 5
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->isEnabled()Z
 
@@ -550,31 +605,35 @@
 
     if-ge v1, v2, :cond_1
 
+    .line 6
     sget-object v0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_SCROLL_FORWARD:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
 
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->addAction(Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;)V
 
+    .line 7
     :cond_1
     sget-object v0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_SET_PROGRESS:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
 
     invoke-virtual {p1, v0}, Landroid/view/accessibility/AccessibilityNodeInfo;->addAction(Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;)V
 
-    iget v0, p0, Lcom/android/camera/ui/PictureStyleView;->mPointCount:I
+    const/4 v0, 0x0
 
-    int-to-float v0, v0
+    const/4 v1, 0x0
+
+    .line 8
+    iget v2, p0, Lcom/android/camera/ui/PictureStyleView;->mPointCount:I
+
+    int-to-float v2, v2
 
     iget p0, p0, Lcom/android/camera/ui/PictureStyleView;->mCurrentPointIndex:I
 
     int-to-float p0, p0
 
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    invoke-static {v1, v2, v0, p0}, Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;->obtain(IFFF)Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;
+    invoke-static {v0, v1, v2, p0}, Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;->obtain(IFFF)Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;
 
     move-result-object p0
 
+    .line 9
     invoke-virtual {p1, p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setRangeInfo(Landroid/view/accessibility/AccessibilityNodeInfo$RangeInfo;)V
 
     return-void
@@ -582,9 +641,27 @@
 
 .method public onLayout(ZIIII)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "changed",
+            "left",
+            "top",
+            "right",
+            "bottom"
+        }
+    .end annotation
 
+    .line 1
     invoke-super/range {p0 .. p5}, Landroid/view/View;->onLayout(ZIIII)V
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result p1
@@ -595,7 +672,8 @@
 
     iput p1, p0, Lcom/android/camera/ui/PictureStyleView;->mPointsY:F
 
-    iget-object p1, p0, Lcom/android/camera/ui/PictureStyleView;->mComponentData:Lcom/android/camera/data/data/b;
+    .line 3
+    iget-object p1, p0, Lcom/android/camera/ui/PictureStyleView;->mComponentData:Ld/d/a/l6/e/b;
 
     if-eqz p1, :cond_0
 
@@ -603,6 +681,7 @@
 
     if-lez p1, :cond_0
 
+    .line 4
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result p1
@@ -627,17 +706,20 @@
 
     div-float/2addr p1, p2
 
+    .line 5
     iget-object p2, p0, Lcom/android/camera/ui/PictureStyleView;->mPointsXList:Ljava/util/List;
 
     invoke-interface {p2}, Ljava/util/List;->clear()V
 
     const/4 p2, 0x0
 
+    .line 6
     :goto_0
     iget p3, p0, Lcom/android/camera/ui/PictureStyleView;->mPointCount:I
 
     if-ge p2, p3, :cond_0
 
+    .line 7
     iget-object p3, p0, Lcom/android/camera/ui/PictureStyleView;->mPointsXList:Ljava/util/List;
 
     iget p4, p0, Lcom/android/camera/ui/PictureStyleView;->mInnerHeight:I
@@ -674,7 +756,16 @@
 
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "event"
+        }
+    .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera/ui/PictureStyleView;->mPointsXList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -697,12 +788,13 @@
 
     goto :goto_1
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera/ui/PictureStyleView;->mPictureStyleListener:Lcom/android/camera/ui/PictureStyleView$a;
 
     if-eqz v0, :cond_8
 
-    invoke-interface {v0}, Lcom/android/camera/ui/PictureStyleView$a;->Uf()Z
+    invoke-interface {v0}, Lcom/android/camera/ui/PictureStyleView$a;->aa()Z
 
     move-result v0
 
@@ -710,6 +802,7 @@
 
     goto :goto_1
 
+    .line 3
     :cond_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -732,11 +825,13 @@
 
     move v3, v2
 
+    .line 4
     :goto_0
     iget v4, p0, Lcom/android/camera/ui/PictureStyleView;->mPointCount:I
 
     if-ge v2, v4, :cond_4
 
+    .line 5
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v4
@@ -772,17 +867,21 @@
 
     goto :goto_0
 
+    .line 6
     :cond_4
     iget v0, p0, Lcom/android/camera/ui/PictureStyleView;->mCurrentPointIndex:I
 
     if-eq v3, v0, :cond_7
 
+    .line 7
     iput v3, p0, Lcom/android/camera/ui/PictureStyleView;->mCurrentPointIndex:I
 
+    .line 8
     iget-object v0, p0, Lcom/android/camera/ui/PictureStyleView;->mPictureStyleListener:Lcom/android/camera/ui/PictureStyleView$a;
 
     if-eqz v0, :cond_6
 
+    .line 9
     iget-boolean v2, p0, Lcom/android/camera/ui/PictureStyleView;->mIsRLT:Z
 
     if-eqz v2, :cond_5
@@ -792,11 +891,13 @@
     sub-int v3, v4, v3
 
     :cond_5
-    invoke-interface {v0, v3}, Lcom/android/camera/ui/PictureStyleView$a;->z7(I)V
+    invoke-interface {v0, v3}, Lcom/android/camera/ui/PictureStyleView$a;->l4(I)V
 
+    .line 10
     :cond_6
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
+    .line 11
     :cond_7
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -804,11 +905,13 @@
 
     if-ne p1, v1, :cond_8
 
+    .line 12
     iget-object p0, p0, Lcom/android/camera/ui/PictureStyleView;->mPictureStyleListener:Lcom/android/camera/ui/PictureStyleView$a;
 
     if-eqz p0, :cond_8
 
-    invoke-interface {p0}, Lcom/android/camera/ui/PictureStyleView$a;->Z1()V
+    .line 13
+    invoke-interface {p0}, Lcom/android/camera/ui/PictureStyleView$a;->H0()V
 
     :cond_8
     :goto_1
@@ -817,7 +920,18 @@
 
 .method public performAccessibilityAction(ILandroid/os/Bundle;)Z
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "action",
+            "arguments"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->isEnabled()Z
 
     move-result v0
@@ -828,6 +942,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/view/View;->performAccessibilityAction(ILandroid/os/Bundle;)Z
 
@@ -844,6 +959,7 @@
 
     if-ne p1, p2, :cond_2
 
+    .line 3
     iget p1, p0, Lcom/android/camera/ui/PictureStyleView;->mCurrentPointIndex:I
 
     sub-int/2addr p1, v0
@@ -857,12 +973,14 @@
 
     if-ne p1, p2, :cond_3
 
+    .line 4
     iget p1, p0, Lcom/android/camera/ui/PictureStyleView;->mCurrentPointIndex:I
 
     add-int/2addr p1, v0
 
     iput p1, p0, Lcom/android/camera/ui/PictureStyleView;->mCurrentPointIndex:I
 
+    .line 5
     :cond_3
     :goto_0
     iget p1, p0, Lcom/android/camera/ui/PictureStyleView;->mCurrentPointIndex:I
@@ -875,26 +993,32 @@
 
     add-int/lit8 p1, p2, -0x1
 
+    .line 6
     iput p1, p0, Lcom/android/camera/ui/PictureStyleView;->mCurrentPointIndex:I
 
+    .line 7
     :cond_4
     iget p1, p0, Lcom/android/camera/ui/PictureStyleView;->mCurrentPointIndex:I
 
     if-gez p1, :cond_5
 
+    .line 8
     iput v1, p0, Lcom/android/camera/ui/PictureStyleView;->mCurrentPointIndex:I
 
+    .line 9
     :cond_5
     iget-object p1, p0, Lcom/android/camera/ui/PictureStyleView;->mPictureStyleListener:Lcom/android/camera/ui/PictureStyleView$a;
 
     if-eqz p1, :cond_7
 
+    .line 10
     iget-boolean v1, p0, Lcom/android/camera/ui/PictureStyleView;->mIsRLT:Z
 
     if-eqz v1, :cond_6
 
     sub-int/2addr p2, v0
 
+    .line 11
     iget v1, p0, Lcom/android/camera/ui/PictureStyleView;->mCurrentPointIndex:I
 
     sub-int/2addr p2, v1
@@ -904,21 +1028,33 @@
     :cond_6
     iget p2, p0, Lcom/android/camera/ui/PictureStyleView;->mCurrentPointIndex:I
 
+    .line 12
     :goto_1
-    invoke-interface {p1, p2}, Lcom/android/camera/ui/PictureStyleView$a;->z7(I)V
+    invoke-interface {p1, p2}, Lcom/android/camera/ui/PictureStyleView$a;->l4(I)V
 
+    .line 13
     :cond_7
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     return v0
 .end method
 
-.method public setData(Lcom/android/camera/data/data/b;)V
+.method public setData(Ld/d/a/l6/e/b;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "componentData"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera/ui/PictureStyleView;->mComponentData:Lcom/android/camera/data/data/b;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/ui/PictureStyleView;->mComponentData:Ld/d/a/l6/e/b;
 
-    invoke-virtual {p1}, Lcom/android/camera/data/data/b;->getItems()Ljava/util/List;
+    .line 2
+    invoke-virtual {p1}, Ld/d/a/l6/e/b;->getItems()Ljava/util/List;
 
     move-result-object p1
 
@@ -928,11 +1064,14 @@
 
     iput p1, p0, Lcom/android/camera/ui/PictureStyleView;->mPointCount:I
 
+    .line 3
     invoke-direct {p0}, Lcom/android/camera/ui/PictureStyleView;->getCurrentIndex()V
 
+    .line 4
     invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
-    invoke-static {}, Lcom/android/camera/a6;->u2()Z
+    .line 5
+    invoke-static {}, Ld/d/a/z5;->k2()Z
 
     move-result p1
 
@@ -940,6 +1079,7 @@
 
     const/4 p1, 0x1
 
+    .line 6
     invoke-virtual {p0, p1}, Landroid/view/View;->setClickable(Z)V
 
     :cond_0
@@ -948,7 +1088,16 @@
 
 .method public setPictureStyleListener(Lcom/android/camera/ui/PictureStyleView$a;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "listener"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/ui/PictureStyleView;->mPictureStyleListener:Lcom/android/camera/ui/PictureStyleView$a;
 
     return-void
@@ -957,32 +1106,35 @@
 .method public updateBackgroundColor()V
     .locals 2
 
-    invoke-static {}, Ly2/b;->l()Z
+    .line 1
+    invoke-static {}, Ld/d/a/n6/b;->l()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lid/b;->B5()Z
+    invoke-virtual {v0}, Ld/k/a/b;->p5()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    .line 2
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lm2/h1;->G0()I
+    invoke-virtual {v0}, Ld/d/a/l6/e/m/g1;->x0()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 3
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -997,6 +1149,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 

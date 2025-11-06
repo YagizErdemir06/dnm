@@ -12,6 +12,7 @@
 
     const-string v0, "com.google.mlkit.vision.barcode.aidls.IBarcodeScanner"
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzb;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -43,6 +44,7 @@
 
     return p0
 
+    .line 1
     :cond_0
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
@@ -52,6 +54,7 @@
 
     move-result-object p1
 
+    .line 2
     sget-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzbu;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-static {p2, v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzc;->zza(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
@@ -60,28 +63,36 @@
 
     check-cast v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzbu;
 
+    .line 3
     invoke-static {p2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzc;->zzb(Landroid/os/Parcel;)V
 
+    .line 4
     invoke-interface {p0, p1, v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzbl;->zzb(Lcom/google/android/gms/dynamic/IObjectWrapper;Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzbu;)Ljava/util/List;
 
     move-result-object p0
 
+    .line 5
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
+    .line 6
     invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeTypedList(Ljava/util/List;)V
 
     goto :goto_0
 
+    .line 7
     :cond_1
     invoke-interface {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzbl;->zzd()V
 
+    .line 8
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
+    .line 9
     :cond_2
     invoke-interface {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzbl;->zzc()V
 
+    .line 10
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     :goto_0

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/extractor/avi/StreamFormatChunk;
+.class public final Lcom/google/android/exoplayer2/extractor/avi/StreamFormatChunk;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,8 +18,10 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/Format;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/extractor/avi/StreamFormatChunk;->format:Lcom/google/android/exoplayer2/Format;
 
     return-void
@@ -142,28 +144,35 @@
 
     const/4 v0, 0x4
 
+    .line 1
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLittleEndianInt()I
 
     move-result v1
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLittleEndianInt()I
 
     move-result v2
 
+    .line 4
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLittleEndianInt()I
 
     move-result p0
 
+    .line 6
     invoke-static {p0}, Lcom/google/android/exoplayer2/extractor/avi/StreamFormatChunk;->getMimeTypeFromCompression(I)Ljava/lang/String;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
+    .line 7
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -186,11 +195,13 @@
 
     return-object p0
 
+    .line 8
     :cond_0
     new-instance p0, Lcom/google/android/exoplayer2/Format$Builder;
 
     invoke-direct {p0}, Lcom/google/android/exoplayer2/Format$Builder;-><init>()V
 
+    .line 9
     invoke-virtual {p0, v1}, Lcom/google/android/exoplayer2/Format$Builder;->setWidth(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v1
@@ -201,6 +212,7 @@
 
     invoke-virtual {v1, v0}, Lcom/google/android/exoplayer2/Format$Builder;->setSampleMimeType(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
+    .line 10
     new-instance v0, Lcom/google/android/exoplayer2/extractor/avi/StreamFormatChunk;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Format$Builder;->build()Lcom/google/android/exoplayer2/Format;
@@ -221,6 +233,7 @@
 
     if-ne p0, v0, :cond_0
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/exoplayer2/extractor/avi/StreamFormatChunk;->parseBitmapInfoHeader(Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/extractor/avi/AviChunk;
 
     move-result-object p0
@@ -232,12 +245,14 @@
 
     if-ne p0, v0, :cond_1
 
+    .line 2
     invoke-static {p1}, Lcom/google/android/exoplayer2/extractor/avi/StreamFormatChunk;->parseWaveFormatEx(Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/extractor/avi/AviChunk;
 
     move-result-object p0
 
     return-object p0
 
+    .line 3
     :cond_1
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -247,6 +262,7 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 4
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Util;->getTrackTypeString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -259,6 +275,7 @@
 
     const-string p1, "StreamFormatChunk"
 
+    .line 5
     invoke-static {p1, p0}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p0, 0x0
@@ -271,16 +288,19 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLittleEndianUnsignedShort()I
 
     move-result v0
 
+    .line 2
     invoke-static {v0}, Lcom/google/android/exoplayer2/extractor/avi/StreamFormatChunk;->getMimeTypeFromTag(I)Ljava/lang/String;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
+    .line 3
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -303,53 +323,66 @@
 
     return-object p0
 
+    .line 4
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLittleEndianUnsignedShort()I
 
     move-result v0
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLittleEndianInt()I
 
     move-result v2
 
     const/4 v3, 0x6
 
+    .line 6
     invoke-virtual {p0, v3}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
+    .line 7
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedShort()I
 
     move-result v3
 
+    .line 8
     invoke-static {v3}, Lcom/google/android/exoplayer2/util/Util;->getPcmEncoding(I)I
 
     move-result v3
 
+    .line 9
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLittleEndianUnsignedShort()I
 
     move-result v4
 
+    .line 10
     new-array v5, v4, [B
 
     const/4 v6, 0x0
 
+    .line 11
     invoke-virtual {p0, v5, v6, v4}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readBytes([BII)V
 
+    .line 12
     new-instance p0, Lcom/google/android/exoplayer2/Format$Builder;
 
     invoke-direct {p0}, Lcom/google/android/exoplayer2/Format$Builder;-><init>()V
 
+    .line 13
     invoke-virtual {p0, v1}, Lcom/google/android/exoplayer2/Format$Builder;->setSampleMimeType(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v6
 
+    .line 14
     invoke-virtual {v6, v0}, Lcom/google/android/exoplayer2/Format$Builder;->setChannelCount(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v0
 
+    .line 15
     invoke-virtual {v0, v2}, Lcom/google/android/exoplayer2/Format$Builder;->setSampleRate(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     const-string v0, "audio/raw"
 
+    .line 16
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -358,11 +391,13 @@
 
     if-eqz v3, :cond_1
 
+    .line 17
     invoke-virtual {p0, v3}, Lcom/google/android/exoplayer2/Format$Builder;->setPcmEncoding(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     :cond_1
     const-string v0, "audio/mp4a-latm"
 
+    .line 18
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -371,12 +406,14 @@
 
     if-lez v4, :cond_2
 
+    .line 19
     invoke-static {v5}, Lcom/google/common/collect/ImmutableList;->of(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/Format$Builder;->setInitializationData(Ljava/util/List;)Lcom/google/android/exoplayer2/Format$Builder;
 
+    .line 20
     :cond_2
     new-instance v0, Lcom/google/android/exoplayer2/extractor/avi/StreamFormatChunk;
 

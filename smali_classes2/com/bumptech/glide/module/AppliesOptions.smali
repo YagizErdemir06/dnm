@@ -1,4 +1,4 @@
-.class interface abstract Lcom/bumptech/glide/module/AppliesOptions;
+.class public interface abstract Lcom/bumptech/glide/module/AppliesOptions;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

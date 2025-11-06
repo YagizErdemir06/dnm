@@ -46,6 +46,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/Tracks;
 
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
@@ -56,9 +57,8 @@
 
     sput-object v0, Lcom/google/android/exoplayer2/Tracks;->EMPTY:Lcom/google/android/exoplayer2/Tracks;
 
-    new-instance v0, Lcom/google/android/exoplayer2/o2;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/o2;-><init>()V
+    .line 2
+    sget-object v0, Ld/j/a/b/h2;->a:Ld/j/a/b/h2;
 
     sput-object v0, Lcom/google/android/exoplayer2/Tracks;->CREATOR:Lcom/google/android/exoplayer2/Bundleable$Creator;
 
@@ -76,8 +76,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object p1
@@ -87,21 +89,12 @@
     return-void
 .end method
 
-.method public static synthetic a(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/Tracks;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/Tracks;->lambda$static$0(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/Tracks;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 .method private static keyForField(I)Ljava/lang/String;
     .locals 1
 
     const/16 v0, 0x24
 
+    .line 1
     invoke-static {p0, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
     move-result-object p0
@@ -109,11 +102,12 @@
     return-object p0
 .end method
 
-.method private static synthetic lambda$static$0(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/Tracks;
+.method public static synthetic lambda$static$0(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/Tracks;
     .locals 1
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {v0}, Lcom/google/android/exoplayer2/Tracks;->keyForField(I)Ljava/lang/String;
 
     move-result-object v0
@@ -124,12 +118,14 @@
 
     if-nez p0, :cond_0
 
+    .line 2
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
 
     move-result-object p0
 
     goto :goto_0
 
+    .line 3
     :cond_0
     sget-object v0, Lcom/google/android/exoplayer2/Tracks$Group;->CREATOR:Lcom/google/android/exoplayer2/Bundleable$Creator;
 
@@ -137,6 +133,7 @@
 
     move-result-object p0
 
+    .line 4
     :goto_0
     new-instance v0, Lcom/google/android/exoplayer2/Tracks;
 
@@ -154,6 +151,7 @@
 
     move v1, v0
 
+    .line 1
     :goto_0
     iget-object v2, p0, Lcom/google/android/exoplayer2/Tracks;->groups:Lcom/google/common/collect/ImmutableList;
 
@@ -163,6 +161,7 @@
 
     if-ge v1, v2, :cond_1
 
+    .line 2
     iget-object v2, p0, Lcom/google/android/exoplayer2/Tracks;->groups:Lcom/google/common/collect/ImmutableList;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -206,6 +205,7 @@
     :cond_0
     if-eqz p1, :cond_2
 
+    .line 1
     const-class v0, Lcom/google/android/exoplayer2/Tracks;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -216,9 +216,11 @@
 
     goto :goto_0
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/Tracks;
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/Tracks;->groups:Lcom/google/common/collect/ImmutableList;
 
     iget-object p1, p1, Lcom/google/android/exoplayer2/Tracks;->groups:Lcom/google/common/collect/ImmutableList;
@@ -247,6 +249,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Tracks;->groups:Lcom/google/common/collect/ImmutableList;
 
     return-object p0
@@ -255,6 +258,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Tracks;->groups:Lcom/google/common/collect/ImmutableList;
 
     invoke-virtual {p0}, Lcom/google/common/collect/ImmutableList;->hashCode()I
@@ -267,6 +271,7 @@
 .method public isEmpty()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/Tracks;->groups:Lcom/google/common/collect/ImmutableList;
 
     invoke-virtual {p0}, Ljava/util/AbstractCollection;->isEmpty()Z
@@ -283,6 +288,7 @@
 
     move v1, v0
 
+    .line 1
     :goto_0
     iget-object v2, p0, Lcom/google/android/exoplayer2/Tracks;->groups:Lcom/google/common/collect/ImmutableList;
 
@@ -292,6 +298,7 @@
 
     if-ge v1, v2, :cond_1
 
+    .line 2
     iget-object v2, p0, Lcom/google/android/exoplayer2/Tracks;->groups:Lcom/google/common/collect/ImmutableList;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -300,6 +307,7 @@
 
     check-cast v2, Lcom/google/android/exoplayer2/Tracks$Group;
 
+    .line 3
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/Tracks$Group;->isSelected()Z
 
     move-result v3
@@ -449,12 +457,14 @@
 .method public toBundle()Landroid/os/Bundle;
     .locals 2
 
+    .line 1
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-static {v1}, Lcom/google/android/exoplayer2/Tracks;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1

@@ -11,4 +11,12 @@
 .end method
 
 .method public abstract setState(I)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "newState"
+        }
+    .end annotation
 .end method

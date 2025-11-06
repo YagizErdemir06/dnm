@@ -1,4 +1,4 @@
-.class final Lokhttp3/internal/ws/RealWebSocket$WriterTask;
+.class public final Lokhttp3/internal/ws/RealWebSocket$WriterTask;
 .super Lokhttp3/internal/concurrent/Task;
 .source "SourceFile"
 
@@ -13,7 +13,7 @@
     name = "WriterTask"
 .end annotation
 
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
     d1 = {
         "\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\t\n\u0000\u0008\u0082\u0004\u0018\u00002\u00020\u0001B\u0005\u00a2\u0006\u0002\u0010\u0002J\u0008\u0010\u0003\u001a\u00020\u0004H\u0016\u00a8\u0006\u0005"
     }
@@ -36,22 +36,18 @@
 
 
 # instance fields
-.field final synthetic this$0:Lokhttp3/internal/ws/RealWebSocket;
+.field public final synthetic this$0:Lokhttp3/internal/ws/RealWebSocket;
 
 
 # direct methods
 .method public constructor <init>(Lokhttp3/internal/ws/RealWebSocket;)V
     .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
     const-string v0, "this$0"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iput-object p1, p0, Lokhttp3/internal/ws/RealWebSocket$WriterTask;->this$0:Lokhttp3/internal/ws/RealWebSocket;
 
     invoke-static {p1}, Lokhttp3/internal/ws/RealWebSocket;->access$getName$p(Lokhttp3/internal/ws/RealWebSocket;)Ljava/lang/String;
@@ -60,17 +56,17 @@
 
     const-string v0, " writer"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p1, v0}, Lh/d3/x/l0;->C(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
-    const/4 v0, 0x2
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    const/4 v1, 0x2
 
     const/4 v2, 0x0
 
-    invoke-direct {p0, p1, v2, v0, v1}, Lokhttp3/internal/concurrent/Task;-><init>(Ljava/lang/String;ZILkotlin/jvm/internal/w;)V
+    invoke-direct {p0, p1, v0, v1, v2}, Lokhttp3/internal/concurrent/Task;-><init>(Ljava/lang/String;ZILh/d3/x/w;)V
 
     return-void
 .end method
@@ -80,6 +76,7 @@
 .method public runOnce()J
     .locals 2
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lokhttp3/internal/ws/RealWebSocket$WriterTask;->this$0:Lokhttp3/internal/ws/RealWebSocket;
 
@@ -98,6 +95,7 @@
     :catch_0
     move-exception v0
 
+    .line 2
     iget-object p0, p0, Lokhttp3/internal/ws/RealWebSocket$WriterTask;->this$0:Lokhttp3/internal/ws/RealWebSocket;
 
     const/4 v1, 0x0

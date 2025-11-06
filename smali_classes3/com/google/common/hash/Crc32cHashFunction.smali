@@ -1,4 +1,4 @@
-.class final Lcom/google/common/hash/Crc32cHashFunction;
+.class public final Lcom/google/common/hash/Crc32cHashFunction;
 .super Lcom/google/common/hash/AbstractHashFunction;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # static fields
-.field static final CRC_32_C:Lcom/google/common/hash/HashFunction;
+.field public static final CRC_32_C:Lcom/google/common/hash/HashFunction;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/hash/Crc32cHashFunction;
 
     invoke-direct {v0}, Lcom/google/common/hash/Crc32cHashFunction;-><init>()V
@@ -37,6 +38,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/hash/AbstractHashFunction;-><init>()V
 
     return-void
@@ -55,6 +57,7 @@
 .method public newHasher()Lcom/google/common/hash/Hasher;
     .locals 0
 
+    .line 1
     new-instance p0, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;
 
     invoke-direct {p0}, Lcom/google/common/hash/Crc32cHashFunction$Crc32cHasher;-><init>()V

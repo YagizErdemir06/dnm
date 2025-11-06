@@ -1,4 +1,4 @@
-.class Lorg/apache/xmlbeans/impl/tool/Diff$ZipEntryNameComparator;
+.class public Lorg/apache/xmlbeans/impl/tool/Diff$ZipEntryNameComparator;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # static fields
-.field static final synthetic $assertionsDisabled:Z
+.field public static final synthetic $assertionsDisabled:Z
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/tool/Diff;->class$org$apache$xmlbeans$impl$tool$Diff:Ljava/lang/Class;
 
     if-nez v0, :cond_0
@@ -68,6 +69,7 @@
 .method public compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 2
 
+    .line 1
     sget-boolean p0, Lorg/apache/xmlbeans/impl/tool/Diff$ZipEntryNameComparator;->$assertionsDisabled:Z
 
     const-string v0, "Must pass in a java.util.zip.ZipEntry as argument"
@@ -91,6 +93,7 @@
     :goto_0
     if-nez p0, :cond_3
 
+    .line 2
     instance-of p0, p2, Ljava/util/zip/ZipEntry;
 
     if-eqz p0, :cond_2
@@ -104,6 +107,7 @@
 
     throw p0
 
+    .line 3
     :cond_3
     :goto_1
     check-cast p1, Ljava/util/zip/ZipEntry;
@@ -112,12 +116,14 @@
 
     move-result-object p0
 
+    .line 4
     check-cast p2, Ljava/util/zip/ZipEntry;
 
     invoke-virtual {p2}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 5
     invoke-virtual {p0, p1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
     move-result p0

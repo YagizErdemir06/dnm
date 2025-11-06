@@ -7,6 +7,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,6 +20,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result p0
@@ -43,6 +45,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void

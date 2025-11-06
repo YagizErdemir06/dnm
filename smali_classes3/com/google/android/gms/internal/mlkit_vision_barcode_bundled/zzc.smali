@@ -11,6 +11,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     const-class v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzc;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -33,6 +34,7 @@
 .method public static zza(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -43,6 +45,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     invoke-interface {p1, p0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
 
@@ -56,6 +59,7 @@
 .method public static zzb(Landroid/os/Parcel;)V
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Landroid/os/Parcel;->dataAvail()I
 
     move-result p0
@@ -64,6 +68,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     new-instance v0, Landroid/os/BadParcelableException;
 

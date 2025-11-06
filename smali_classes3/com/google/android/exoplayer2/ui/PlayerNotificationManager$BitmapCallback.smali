@@ -17,7 +17,7 @@
 # instance fields
 .field private final notificationTag:I
 
-.field final synthetic this$0:Lcom/google/android/exoplayer2/ui/PlayerNotificationManager;
+.field public final synthetic this$0:Lcom/google/android/exoplayer2/ui/PlayerNotificationManager;
 
 
 # direct methods
@@ -51,6 +51,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$BitmapCallback;->this$0:Lcom/google/android/exoplayer2/ui/PlayerNotificationManager;
 
     iget p0, p0, Lcom/google/android/exoplayer2/ui/PlayerNotificationManager$BitmapCallback;->notificationTag:I

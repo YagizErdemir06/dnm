@@ -1,9 +1,9 @@
-.class final Lcom/faceunity/core/support/FUSDKController$createItemFromPackage$3;
-.super Lkotlin/jvm/internal/n0;
+.class public final Lcom/faceunity/core/support/FUSDKController$createItemFromPackage$3;
+.super Lh/d3/x/n0;
 .source "SourceFile"
 
 # interfaces
-.implements Ljn/a;
+.implements Lh/d3/w/a;
 
 
 # annotations
@@ -18,26 +18,27 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lkotlin/jvm/internal/n0;",
-        "Ljn/a<",
+        "Lh/d3/x/n0;",
+        "Lh/d3/w/a<",
         "Ljava/lang/Object;",
         ">;"
     }
 .end annotation
 
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
     bv = {
         0x1,
         0x0,
         0x3
     }
     d1 = {
-        "\u0000\u0008\n\u0000\n\u0002\u0010\u0000\n\u0000\u0010\u0000\u001a\u0004\u0018\u00010\u0001H\n\u00a2\u0006\u0002\u0008\u0002"
+        "\u0000\u0008\n\u0002\u0010\u0000\n\u0002\u0008\u0003\u0010\u0003\u001a\u0004\u0018\u00010\u0000H\n\u00a2\u0006\u0004\u0008\u0001\u0010\u0002"
     }
     d2 = {
-        "<anonymous>",
         "",
-        "invoke"
+        "invoke",
+        "()Ljava/lang/Object;",
+        "<anonymous>"
     }
     k = 0x3
     mv = {
@@ -70,7 +71,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lkotlin/jvm/internal/n0;-><init>(I)V
+    invoke-direct {p0, v0}, Lh/d3/x/n0;-><init>(I)V
 
     return-void
 .end method
@@ -79,7 +80,7 @@
 # virtual methods
 .method public final invoke()Ljava/lang/Object;
     .locals 0
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
     const-string p0, "fuSetInputCameraBufferMatrixState   enable:1"

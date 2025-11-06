@@ -7,6 +7,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/milab/videosdk/XmsFilter;-><init>()V
 
     return-void
@@ -99,6 +100,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -107,6 +109,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-wide v2, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -140,6 +143,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -148,6 +152,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-wide v2, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -175,6 +180,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -183,6 +189,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -204,6 +211,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -212,6 +220,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 

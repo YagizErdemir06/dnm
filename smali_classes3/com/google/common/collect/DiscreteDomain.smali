@@ -29,7 +29,7 @@
 
 
 # instance fields
-.field final supportsFastOffset:Z
+.field public final supportsFastOffset:Z
 
 
 # direct methods
@@ -76,6 +76,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/DiscreteDomain$BigIntegerDomain;->access$300()Lcom/google/common/collect/DiscreteDomain$BigIntegerDomain;
 
     move-result-object v0
@@ -94,6 +95,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/DiscreteDomain$IntegerDomain;->access$000()Lcom/google/common/collect/DiscreteDomain$IntegerDomain;
 
     move-result-object v0
@@ -112,6 +114,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/DiscreteDomain$LongDomain;->access$200()Lcom/google/common/collect/DiscreteDomain$LongDomain;
 
     move-result-object v0
@@ -140,6 +143,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/util/NoSuchElementException;
 
     invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
@@ -158,6 +162,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/util/NoSuchElementException;
 
     invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
@@ -186,6 +191,7 @@
 
     const-string v0, "distance"
 
+    .line 1
     invoke-static {p2, p3, v0}, Lcom/google/common/collect/CollectPreconditions;->checkNonnegative(JLjava/lang/String;)J
 
     const-wide/16 v0, 0x0
@@ -197,6 +203,7 @@
 
     if-gez v3, :cond_1
 
+    .line 2
     invoke-virtual {p0, v2}, Lcom/google/common/collect/DiscreteDomain;->next(Ljava/lang/Comparable;)Ljava/lang/Comparable;
 
     move-result-object v2
@@ -209,6 +216,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

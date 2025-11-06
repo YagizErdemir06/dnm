@@ -149,50 +149,70 @@
 .method public constructor <init>(Ljava/lang/String;Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine$AvatarExtraSceneTriggerCallback;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
+    .line 3
     iput-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->T:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
 
+    .line 4
     iput v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->V:I
 
+    .line 5
     iput v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->W:I
 
+    .line 6
     iput v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->X:I
 
+    .line 7
     iput v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->Y:I
 
+    .line 8
     iput v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->Z:I
 
+    .line 9
     iput v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->aa:I
 
+    .line 10
     iput v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->ab:I
 
+    .line 11
     iput-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->ac:Ljava/util/Random;
 
+    .line 12
     iput-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->ad:Ljava/util/List;
 
+    .line 13
+    iput-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->ae:Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine$AvatarExtraSceneTriggerCallback;
+
+    .line 14
     iput-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->U:Ljava/lang/String;
 
+    .line 15
     iput-object p2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->ae:Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine$AvatarExtraSceneTriggerCallback;
 
+    .line 16
     new-instance p2, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;
 
     invoke-direct {p2}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;-><init>()V
 
     iput-object p2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->R:Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;
 
+    .line 17
     new-instance p2, Ljava/util/ArrayList;
 
     invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->T:Ljava/util/ArrayList;
 
+    .line 18
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -213,8 +233,10 @@
 
     iput-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->P:Ljava/lang/String;
 
+    .line 19
     invoke-direct {p0}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->a()V
 
+    .line 20
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -871,7 +893,7 @@
     move-exception p0
 
     .line 102
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_3
 
@@ -879,7 +901,7 @@
     move-exception p0
 
     .line 103
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    invoke-virtual {p0}, Ljava/io/FileNotFoundException;->printStackTrace()V
 
     goto :goto_3
 
@@ -2820,9 +2842,11 @@
     .line 48
     aget-object v2, p1, v1
 
-    const-string v3, "="
+    aget-object v3, p1, v1
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+    const-string v4, "="
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v3
 
@@ -2937,6 +2961,7 @@
 .method private d(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;)V
     .locals 8
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2977,6 +3002,7 @@
 
     invoke-static {v1, v0}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->m(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;)Z
 
     move-result v0
@@ -2991,6 +3017,7 @@
 
     if-nez v0, :cond_2
 
+    .line 3
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v0}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getExtraStatus()I
@@ -3001,6 +3028,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
@@ -3010,19 +3038,23 @@
 
     if-ne p1, v4, :cond_1
 
+    .line 5
     iget-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {p1, v3}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setExtraStatus(I)V
 
+    .line 6
     iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->X:I
 
     return-void
 
+    .line 7
     :cond_1
     iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->X:I
 
     return-void
 
+    .line 8
     :cond_2
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
@@ -3034,6 +3066,7 @@
 
     return-void
 
+    .line 9
     :cond_3
     iget v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->X:I
 
@@ -3041,6 +3074,7 @@
 
     iput v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->X:I
 
+    .line 10
     :goto_0
     iget v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->X:I
 
@@ -3048,11 +3082,13 @@
 
     return-void
 
+    .line 11
     :cond_4
     invoke-virtual {p1}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->getExpWeights()[F
 
     move-result-object v0
 
+    .line 12
     iget-object v5, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v5}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getExpressInfoList()Ljava/util/ArrayList;
@@ -3067,8 +3103,10 @@
 
     check-cast v5, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;
 
+    .line 13
     invoke-direct {p0, v5, v0}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->a(Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;[F)V
 
+    .line 14
     iget-object v5, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v5}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getExtraStatus()I
@@ -3081,6 +3119,7 @@
 
     if-eqz v5, :cond_5
 
+    .line 15
     iget-object v6, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v6}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getHeadWear()I
@@ -3091,6 +3130,7 @@
 
     invoke-interface {v5, v7, v6}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine$AvatarExtraSceneTriggerCallback;->onExtraSceneTrigger(Ljava/lang/String;I)V
 
+    .line 16
     :cond_5
     iget-object v5, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
@@ -3100,6 +3140,7 @@
 
     if-eq v5, v4, :cond_7
 
+    .line 17
     iget v5, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->V:I
 
     iget-object v6, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
@@ -3116,14 +3157,17 @@
 
     if-lt v5, v6, :cond_6
 
+    .line 18
     iget-object v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v1, v4}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setExtraStatus(I)V
 
+    .line 19
     iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->V:I
 
     goto :goto_1
 
+    .line 20
     :cond_6
     iget v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->V:I
 
@@ -3131,10 +3175,12 @@
 
     iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->V:I
 
+    .line 21
     iget-object p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {p0, v1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setExtraStatus(I)V
 
+    .line 22
     :cond_7
     :goto_1
     invoke-virtual {p1, v0}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->setExpWeights([F)V
@@ -3145,6 +3191,7 @@
 .method private e(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;)V
     .locals 6
 
+    .line 1
     invoke-virtual {p1}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->getOrientations()[F
 
     move-result-object p1
@@ -3157,68 +3204,81 @@
 
     if-eqz p1, :cond_2
 
+    .line 2
     aget v3, p1, v0
 
     const/high16 v4, -0x3e900000    # -15.0f
 
-    cmpg-float v4, v3, v4
+    cmpg-float v3, v3, v4
 
-    const/high16 v5, 0x41200000    # 10.0f
+    const/high16 v4, 0x41200000    # 10.0f
 
-    if-gez v4, :cond_0
+    if-gez v3, :cond_0
 
-    aget v4, p1, v1
+    aget v3, p1, v1
 
-    cmpg-float v4, v4, v5
+    cmpg-float v3, v3, v4
 
-    if-gez v4, :cond_0
+    if-gez v3, :cond_0
 
     const-string p1, "--- left---"
 
+    .line 3
     invoke-static {v2, p1}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 4
     iget p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->aa:I
 
     add-int/2addr p1, v0
 
     iput p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->aa:I
 
+    .line 5
     iput v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->ab:I
 
     goto :goto_0
 
+    .line 6
     :cond_0
-    const/high16 v4, 0x41700000    # 15.0f
+    aget v3, p1, v0
 
-    cmpl-float v3, v3, v4
+    const/high16 v5, 0x41700000    # 15.0f
+
+    cmpl-float v3, v3, v5
 
     if-lez v3, :cond_1
 
     aget p1, p1, v1
 
-    cmpg-float p1, p1, v5
+    cmpg-float p1, p1, v4
 
     if-gez p1, :cond_1
 
     const-string p1, "--- right---"
 
+    .line 7
     invoke-static {v2, p1}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 8
     iget p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->ab:I
 
     add-int/2addr p1, v0
 
     iput p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->ab:I
 
+    .line 9
     iput v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->aa:I
 
     goto :goto_0
 
+    .line 10
     :cond_1
     iput v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->aa:I
 
+    .line 11
     iput v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->ab:I
 
+    .line 12
     :cond_2
     :goto_0
     new-instance p1, Ljava/lang/StringBuilder;
@@ -3247,6 +3307,7 @@
 
     invoke-static {v2, p1}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 13
     iget p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->aa:I
 
     const/4 v3, 0x3
@@ -3260,6 +3321,7 @@
     :cond_3
     move v1, v0
 
+    .line 14
     :cond_4
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -3279,12 +3341,14 @@
 
     if-nez v1, :cond_5
 
+    .line 15
     iget-object p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {p0, v0}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setExtraStatus(I)V
 
     return-void
 
+    .line 16
     :cond_5
     iget-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
@@ -3296,17 +3360,20 @@
 
     return-void
 
+    .line 17
     :cond_6
     iget-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->ac:Ljava/util/Random;
 
     if-nez p1, :cond_7
 
+    .line 18
     new-instance p1, Ljava/util/Random;
 
     invoke-direct {p1}, Ljava/util/Random;-><init>()V
 
     iput-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->ac:Ljava/util/Random;
 
+    .line 19
     :cond_7
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -3342,6 +3409,7 @@
 
     invoke-static {v2, p1}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 20
     :cond_8
     iget-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->ac:Ljava/util/Random;
 
@@ -3355,6 +3423,7 @@
 
     move-result p1
 
+    .line 21
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3371,10 +3440,12 @@
 
     invoke-static {v2, v0}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 22
     iget v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->aa:I
 
     if-lt v0, v3, :cond_9
 
+    .line 23
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v0}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getEmojiHelmetLeftRandomNum()I
@@ -3391,17 +3462,20 @@
 
     if-eq v0, p1, :cond_8
 
+    .line 24
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v0, p1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setEmojiHelmetLeftRandomNum(I)V
 
     goto :goto_1
 
+    .line 25
     :cond_9
     iget v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->ab:I
 
     if-lt v0, v3, :cond_8
 
+    .line 26
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v0}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getEmojiHelmetLeftRandomNum()I
@@ -3418,10 +3492,12 @@
 
     if-eq v0, p1, :cond_8
 
+    .line 27
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v0, p1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setEmojiHelmetRightRandomNum(I)V
 
+    .line 28
     :goto_1
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -3457,6 +3533,7 @@
 
     invoke-static {v2, p1}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 29
     iget p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->aa:I
 
     if-ge p1, v3, :cond_b
@@ -3472,6 +3549,7 @@
 
     goto :goto_3
 
+    .line 30
     :cond_b
     :goto_2
     new-instance p1, Ljava/lang/StringBuilder;
@@ -3510,6 +3588,7 @@
 
     move-result-object p1
 
+    .line 31
     :goto_3
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
@@ -3534,6 +3613,7 @@
 
     check-cast v1, Ljava/lang/String;
 
+    .line 32
     invoke-virtual {v1, p1}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v4
@@ -3542,6 +3622,7 @@
 
     if-eq v4, v5, :cond_c
 
+    .line 33
     iget-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {p1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getAccPath()Ljava/lang/String;
@@ -3556,15 +3637,18 @@
 
     return-void
 
+    .line 34
     :cond_d
     iget-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->Q:Lcom/arcsoft/avatar2/AvatarEngine;
 
     invoke-virtual {p1, v1}, Lcom/arcsoft/avatar2/AvatarEngine;->setHeadWearTexture(Ljava/lang/String;)I
 
+    .line 35
     iget-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {p1, v1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setAccPath(Ljava/lang/String;)V
 
+    .line 36
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3581,11 +3665,13 @@
 
     invoke-static {v2, p1}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 37
     :cond_e
     iget-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->ae:Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine$AvatarExtraSceneTriggerCallback;
 
     if-eqz p1, :cond_f
 
+    .line 38
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v0}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getHeadWear()I
@@ -3596,6 +3682,7 @@
 
     invoke-interface {p1, v1, v0}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine$AvatarExtraSceneTriggerCallback;->onExtraSceneTrigger(Ljava/lang/String;I)V
 
+    .line 39
     :cond_f
     iget-object p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
@@ -3607,6 +3694,7 @@
 .method private f(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;)V
     .locals 9
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3647,6 +3735,7 @@
 
     invoke-static {v1, v0}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->m(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;)Z
 
     move-result v0
@@ -3661,6 +3750,7 @@
 
     if-nez v0, :cond_2
 
+    .line 3
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v0}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getExtraStatus()I
@@ -3671,6 +3761,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
@@ -3680,19 +3771,23 @@
 
     if-ne p1, v3, :cond_1
 
+    .line 5
     iget-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {p1, v4}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setExtraStatus(I)V
 
+    .line 6
     iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->X:I
 
     return-void
 
+    .line 7
     :cond_1
     iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->X:I
 
     return-void
 
+    .line 8
     :cond_2
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
@@ -3704,6 +3799,7 @@
 
     return-void
 
+    .line 9
     :cond_3
     iget v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->X:I
 
@@ -3711,6 +3807,7 @@
 
     iput v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->X:I
 
+    .line 10
     :goto_0
     iget v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->X:I
 
@@ -3718,11 +3815,13 @@
 
     return-void
 
+    .line 11
     :cond_4
     invoke-virtual {p1}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->getExpWeights()[F
 
     move-result-object v0
 
+    .line 12
     iget-object v5, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v5}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getExpressInfoList()Ljava/util/ArrayList;
@@ -3737,8 +3836,10 @@
 
     check-cast v5, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;
 
+    .line 13
     invoke-direct {p0, v5, v0}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->a(Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;[F)V
 
+    .line 14
     iget-object v6, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v6}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getExtraStatus()I
@@ -3751,6 +3852,7 @@
 
     if-eqz v6, :cond_5
 
+    .line 15
     iget-object v7, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v7}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getHeadWear()I
@@ -3761,6 +3863,7 @@
 
     invoke-interface {v6, v8, v7}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine$AvatarExtraSceneTriggerCallback;->onExtraSceneTrigger(Ljava/lang/String;I)V
 
+    .line 16
     :cond_5
     iget-object v6, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
@@ -3770,6 +3873,7 @@
 
     if-eq v6, v3, :cond_8
 
+    .line 17
     invoke-virtual {v5}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;->getLoopStatus()I
 
     move-result v5
@@ -3778,12 +3882,14 @@
 
     if-ne v5, v1, :cond_6
 
+    .line 18
     iget-object v5, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v5}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getLoopCount()I
 
     move-result v5
 
+    .line 19
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -3812,6 +3918,7 @@
 
     invoke-static {v6, v7}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 20
     iget-object v7, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v7}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getLoopNum()I
@@ -3820,6 +3927,7 @@
 
     if-ge v5, v7, :cond_6
 
+    .line 21
     iget-object v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getLoopBeginFrameIndex()I
@@ -3828,6 +3936,7 @@
 
     iput v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->V:I
 
+    .line 22
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3846,16 +3955,19 @@
 
     invoke-static {v6, v1}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 23
     iget-object p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     add-int/2addr v5, v4
 
     invoke-virtual {p0, v5}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setLoopCount(I)V
 
+    .line 24
     invoke-virtual {p1, v0}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->setExpWeights([F)V
 
     return-void
 
+    .line 25
     :cond_6
     iget v5, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->V:I
 
@@ -3875,22 +3987,28 @@
 
     const-string v1, "--- end ---"
 
+    .line 26
     invoke-static {v6, v1}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 27
     iget-object v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v1, v3}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setExtraStatus(I)V
 
+    .line 28
     iget-object v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v1, v2}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setLoopCount(I)V
 
+    .line 29
     iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->V:I
 
+    .line 30
     iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->Z:I
 
     goto :goto_1
 
+    .line 31
     :cond_7
     iget v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->V:I
 
@@ -3898,6 +4016,7 @@
 
     iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->V:I
 
+    .line 32
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3916,10 +4035,12 @@
 
     invoke-static {v6, v2}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 33
     iget-object p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {p0, v1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setExtraStatus(I)V
 
+    .line 34
     :cond_8
     :goto_1
     invoke-virtual {p1, v0}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->setExpWeights([F)V
@@ -3930,6 +4051,7 @@
 .method private g(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;)V
     .locals 8
 
+    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v0}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getExtraStatus()I
@@ -3938,17 +4060,18 @@
 
     const/4 v1, 0x3
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
-    const/4 v3, 0x1
+    const/4 v3, 0x0
 
-    if-ne v0, v3, :cond_4
+    if-ne v0, v2, :cond_4
 
+    .line 2
     invoke-virtual {p1}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->getExpWeights()[F
 
     move-result-object v0
 
-    aget v0, v0, v2
+    aget v0, v0, v3
 
     const v4, 0x3f4ccccd    # 0.8f
 
@@ -3962,28 +4085,31 @@
 
     move-result-object v0
 
-    aget v0, v0, v3
+    aget v0, v0, v2
 
     cmpg-float v0, v0, v5
 
     if-gez v0, :cond_0
 
+    .line 3
     iget v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->aa:I
 
-    add-int/2addr v0, v3
+    add-int/2addr v0, v2
 
     iput v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->aa:I
 
-    iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->ab:I
+    .line 4
+    iput v3, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->ab:I
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-virtual {p1}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->getExpWeights()[F
 
     move-result-object v0
 
-    aget v0, v0, v3
+    aget v0, v0, v2
 
     cmpl-float v0, v0, v4
 
@@ -3993,27 +4119,32 @@
 
     move-result-object v0
 
-    aget v0, v0, v2
+    aget v0, v0, v3
 
     cmpg-float v0, v0, v5
 
     if-gez v0, :cond_1
 
+    .line 6
     iget v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->ab:I
 
-    add-int/2addr v0, v3
+    add-int/2addr v0, v2
 
     iput v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->ab:I
 
-    iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->aa:I
+    .line 7
+    iput v3, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->aa:I
 
     goto :goto_0
 
+    .line 8
     :cond_1
-    iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->aa:I
+    iput v3, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->aa:I
 
-    iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->ab:I
+    .line 9
+    iput v3, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->ab:I
 
+    .line 10
     :goto_0
     iget v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->aa:I
 
@@ -4026,14 +4157,15 @@
     goto :goto_1
 
     :cond_2
-    move v0, v2
+    move v0, v3
 
     goto :goto_2
 
     :cond_3
     :goto_1
-    move v0, v3
+    move v0, v2
 
+    .line 11
     :goto_2
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -4057,11 +4189,13 @@
 
     return-void
 
+    .line 12
     :cond_4
     invoke-virtual {p1}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->getExpWeights()[F
 
     move-result-object v0
 
+    .line 13
     iget-object v4, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v4}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getExpressInfoList()Ljava/util/ArrayList;
@@ -4076,20 +4210,23 @@
 
     check-cast v4, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;
 
+    .line 14
     invoke-direct {p0, v4, v0}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->a(Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;[F)V
 
+    .line 15
     iget-object v5, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v5}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getExtraStatus()I
 
     move-result v5
 
-    if-ne v5, v3, :cond_5
+    if-ne v5, v2, :cond_5
 
     iget-object v5, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->ae:Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine$AvatarExtraSceneTriggerCallback;
 
     if-eqz v5, :cond_5
 
+    .line 16
     iget-object v6, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v6}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getHeadWear()I
@@ -4100,6 +4237,7 @@
 
     invoke-interface {v5, v7, v6}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine$AvatarExtraSceneTriggerCallback;->onExtraSceneTrigger(Ljava/lang/String;I)V
 
+    .line 17
     :cond_5
     iget-object v5, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
@@ -4109,6 +4247,7 @@
 
     if-eq v5, v1, :cond_8
 
+    .line 18
     invoke-virtual {v4}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;->getLoopStatus()I
 
     move-result v1
@@ -4119,12 +4258,14 @@
 
     if-ne v1, v4, :cond_6
 
+    .line 19
     iget-object v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getLoopCount()I
 
     move-result v1
 
+    .line 20
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -4153,6 +4294,7 @@
 
     invoke-static {v5, v6}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 21
     iget-object v6, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v6}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getLoopNum()I
@@ -4161,42 +4303,47 @@
 
     if-ge v1, v6, :cond_6
 
-    iget-object v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
+    .line 22
+    iget-object v3, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
-    invoke-virtual {v2}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getLoopBeginFrameIndex()I
+    invoke-virtual {v3}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getLoopBeginFrameIndex()I
 
-    move-result v2
+    move-result v3
 
-    iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->V:I
+    iput v3, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->V:I
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    .line 23
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v4, "-- mExtraSceneIndex = "
 
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v4, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->V:I
 
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-static {v5, v2}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v3}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 24
     iget-object p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
-    add-int/2addr v1, v3
+    add-int/2addr v1, v2
 
     invoke-virtual {p0, v1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setLoopCount(I)V
 
+    .line 25
     invoke-virtual {p1, v0}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->setExpWeights([F)V
 
     return-void
 
+    .line 26
     :cond_6
     iget v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->V:I
 
@@ -4210,39 +4357,48 @@
 
     move-result v6
 
-    sub-int/2addr v6, v3
+    sub-int/2addr v6, v2
 
     if-lt v1, v6, :cond_7
 
     const-string v1, "--- end ---"
 
+    .line 27
     invoke-static {v5, v1}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 28
     iget-object v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
-    invoke-virtual {v1, v3}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setExtraStatus(I)V
+    invoke-virtual {v1, v2}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setExtraStatus(I)V
 
+    .line 29
     iget-object v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
-    invoke-virtual {v1, v2}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setLoopCount(I)V
+    invoke-virtual {v1, v3}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setLoopCount(I)V
 
-    iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->V:I
+    .line 30
+    iput v3, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->V:I
 
-    iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->Z:I
+    .line 31
+    iput v3, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->Z:I
 
-    iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->aa:I
+    .line 32
+    iput v3, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->aa:I
 
-    iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->ab:I
+    .line 33
+    iput v3, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->ab:I
 
     goto :goto_3
 
+    .line 34
     :cond_7
     iget v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->V:I
 
-    add-int/2addr v1, v3
+    add-int/2addr v1, v2
 
     iput v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->V:I
 
+    .line 35
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4261,10 +4417,12 @@
 
     invoke-static {v5, v1}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 36
     iget-object p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {p0, v4}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setExtraStatus(I)V
 
+    .line 37
     :cond_8
     :goto_3
     invoke-virtual {p1, v0}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->setExpWeights([F)V
@@ -4275,10 +4433,12 @@
 .method private h(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;)V
     .locals 6
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->m(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;)Z
 
     move-result v0
 
+    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4313,6 +4473,7 @@
 
     if-nez v0, :cond_2
 
+    .line 3
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v0}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getExtraStatus()I
@@ -4323,6 +4484,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
@@ -4332,6 +4494,7 @@
 
     if-ne p1, v3, :cond_1
 
+    .line 5
     iget-object p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {p0, v2}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setExtraStatus(I)V
@@ -4339,6 +4502,7 @@
     :cond_1
     return-void
 
+    .line 6
     :cond_2
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
@@ -4350,12 +4514,14 @@
 
     return-void
 
+    .line 7
     :cond_3
     :goto_0
     invoke-virtual {p1}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->getExpWeights()[F
 
     move-result-object v0
 
+    .line 8
     iget-object v4, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v4}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getExpressInfoList()Ljava/util/ArrayList;
@@ -4370,8 +4536,10 @@
 
     check-cast v4, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;
 
+    .line 9
     invoke-direct {p0, v4, v0}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->a(Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;[F)V
 
+    .line 10
     iget-object v4, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v4}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getExtraStatus()I
@@ -4380,6 +4548,7 @@
 
     if-eq v4, v3, :cond_5
 
+    .line 11
     iget v4, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->V:I
 
     iget-object v5, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
@@ -4396,16 +4565,19 @@
 
     if-lt v4, v5, :cond_4
 
+    .line 12
     iget-object v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v1, v3}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setExtraStatus(I)V
 
     const/4 v1, 0x0
 
+    .line 13
     iput v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->V:I
 
     goto :goto_1
 
+    .line 14
     :cond_4
     iget v3, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->V:I
 
@@ -4413,10 +4585,12 @@
 
     iput v3, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->V:I
 
+    .line 15
     iget-object p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {p0, v1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setExtraStatus(I)V
 
+    .line 16
     :cond_5
     :goto_1
     invoke-virtual {p1, v0}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->setExpWeights([F)V
@@ -4429,10 +4603,12 @@
 
     move-object/from16 v0, p0
 
+    .line 1
     invoke-virtual/range {p1 .. p1}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->getOrientations()[F
 
     move-result-object v1
 
+    .line 2
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -4461,6 +4637,7 @@
 
     if-eqz v1, :cond_10
 
+    .line 3
     array-length v2, v1
 
     const/4 v3, 0x3
@@ -4469,12 +4646,13 @@
 
     goto/16 :goto_5
 
+    .line 4
     :cond_0
-    aget v1, v1, v4
+    aget v2, v1, v4
 
-    const/high16 v2, 0x41700000    # 15.0f
+    const/high16 v5, 0x41700000    # 15.0f
 
-    cmpl-float v2, v1, v2
+    cmpl-float v2, v2, v5
 
     const/4 v5, 0x0
 
@@ -4486,7 +4664,10 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
+    aget v1, v1, v4
+
     const/high16 v2, -0x3e900000    # -15.0f
 
     cmpg-float v1, v1, v2
@@ -4503,6 +4684,7 @@
     :goto_0
     if-nez v1, :cond_5
 
+    .line 6
     iget-object v2, v0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v2}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getExtraStatus()I
@@ -4513,6 +4695,7 @@
 
     goto :goto_1
 
+    .line 7
     :cond_3
     iget-object v1, v0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
@@ -4522,6 +4705,7 @@
 
     if-ne v1, v3, :cond_4
 
+    .line 8
     iget-object v0, v0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v0, v6}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setExtraStatus(I)V
@@ -4532,8 +4716,10 @@
     :cond_5
     if-ne v1, v6, :cond_6
 
+    .line 9
     iget-object v2, v0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
+    .line 10
     invoke-virtual {v2}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getExtraStatus()I
 
     move-result v2
@@ -4542,6 +4728,7 @@
 
     return-void
 
+    .line 11
     :cond_6
     iget-object v2, v0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
@@ -4553,12 +4740,14 @@
 
     return-void
 
+    .line 12
     :cond_7
     :goto_1
     invoke-virtual/range {p1 .. p1}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->getExpWeights()[F
 
     move-result-object v2
 
+    .line 13
     iget-object v7, v0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v7}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getExpressInfoList()Ljava/util/ArrayList;
@@ -4573,16 +4762,19 @@
 
     check-cast v7, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;
 
+    .line 14
     invoke-virtual {v7}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;->getExpressIndex()[I
 
     move-result-object v8
 
+    .line 15
     invoke-virtual {v7}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;->getExpressValue()Ljava/util/ArrayList;
 
     move-result-object v9
 
     move v10, v5
 
+    .line 16
     :goto_2
     invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
 
@@ -4590,6 +4782,7 @@
 
     if-ge v10, v11, :cond_9
 
+    .line 17
     array-length v11, v8
 
     invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
@@ -4604,6 +4797,7 @@
 
     if-ne v11, v12, :cond_8
 
+    .line 18
     aget v11, v8, v10
 
     invoke-virtual {v9, v10}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -4618,6 +4812,7 @@
 
     aput v12, v2, v11
 
+    .line 19
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -4644,6 +4839,7 @@
 
     goto :goto_3
 
+    .line 20
     :cond_8
     aget v11, v8, v5
 
@@ -4659,6 +4855,7 @@
 
     aput v12, v2, v11
 
+    .line 21
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -4691,10 +4888,12 @@
     :cond_9
     if-eqz v1, :cond_a
 
+    .line 22
     iget-object v8, v0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v8, v1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setHeadPitchStatus(I)V
 
+    .line 23
     :cond_a
     iget-object v1, v0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
@@ -4708,6 +4907,7 @@
 
     if-eqz v1, :cond_b
 
+    .line 24
     iget-object v8, v0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v8}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getHeadWear()I
@@ -4718,6 +4918,7 @@
 
     invoke-interface {v1, v9, v8}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine$AvatarExtraSceneTriggerCallback;->onExtraSceneTrigger(Ljava/lang/String;I)V
 
+    .line 25
     :cond_b
     invoke-virtual {v7}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;->isPauseFrame()Z
 
@@ -4733,10 +4934,12 @@
 
     if-ne v1, v4, :cond_c
 
+    .line 26
     invoke-direct/range {p0 .. p1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->j(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;)V
 
     return-void
 
+    .line 27
     :cond_c
     iget-object v1, v0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
@@ -4746,18 +4949,21 @@
 
     if-ne v1, v6, :cond_d
 
+    .line 28
     iget-object v1, v0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getOldHeadWearPath()Ljava/lang/String;
 
     move-result-object v1
 
+    .line 29
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v7
 
     if-nez v7, :cond_d
 
+    .line 30
     iget-object v7, v0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v7}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getAccPath()Ljava/lang/String;
@@ -4770,14 +4976,17 @@
 
     if-nez v7, :cond_d
 
+    .line 31
     iget-object v7, v0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->Q:Lcom/arcsoft/avatar2/AvatarEngine;
 
     invoke-virtual {v7, v1}, Lcom/arcsoft/avatar2/AvatarEngine;->setHeadWearTexture(Ljava/lang/String;)I
 
+    .line 32
     iget-object v7, v0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v7, v1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setAccPath(Ljava/lang/String;)V
 
+    .line 33
     :cond_d
     iget-object v1, v0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
@@ -4787,6 +4996,7 @@
 
     if-eq v1, v3, :cond_f
 
+    .line 34
     iget v1, v0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->V:I
 
     iget-object v7, v0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
@@ -4803,14 +5013,17 @@
 
     if-lt v1, v7, :cond_e
 
+    .line 35
     iget-object v1, v0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v1, v3}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setExtraStatus(I)V
 
+    .line 36
     iput v5, v0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->V:I
 
     goto :goto_4
 
+    .line 37
     :cond_e
     iget v1, v0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->V:I
 
@@ -4818,6 +5031,7 @@
 
     iput v1, v0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->V:I
 
+    .line 38
     iget-object v0, v0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v0, v4}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setExtraStatus(I)V
@@ -4826,6 +5040,7 @@
     :goto_4
     move-object/from16 v0, p1
 
+    .line 39
     invoke-virtual {v0, v2}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->setExpWeights([F)V
 
     :cond_10
@@ -4836,6 +5051,7 @@
 .method private j(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;)V
     .locals 14
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4872,6 +5088,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 2
     invoke-virtual {p1}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->getExpWeights()[F
 
     move-result-object v1
@@ -4914,6 +5131,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 3
     invoke-virtual {p1}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->getExpWeights()[F
 
     move-result-object v1
@@ -4958,6 +5176,7 @@
 
     const-string v1, "check_expweight"
 
+    .line 4
     invoke-static {v1, v0}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
@@ -4966,6 +5185,7 @@
 
     move v3, v2
 
+    .line 5
     :goto_0
     iget-object v4, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
@@ -4981,6 +5201,7 @@
 
     if-ge v2, v4, :cond_4
 
+    .line 6
     iget-object v4, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v4}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getExpCheckIdList()Ljava/util/ArrayList;
@@ -4993,6 +5214,7 @@
 
     check-cast v4, [I
 
+    .line 7
     iget-object v6, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v6}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getExpCheckValueList()Ljava/util/ArrayList;
@@ -5007,11 +5229,13 @@
 
     move v7, v0
 
+    .line 8
     :goto_1
     array-length v8, v4
 
     if-ge v7, v8, :cond_2
 
+    .line 9
     aget v3, v6, v7
 
     const/4 v8, 0x0
@@ -5042,6 +5266,7 @@
 
     if-lez v3, :cond_0
 
+    .line 10
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -5084,6 +5309,7 @@
 
     goto :goto_2
 
+    .line 11
     :cond_0
     aget v3, v6, v7
 
@@ -5107,6 +5333,7 @@
 
     if-gez v3, :cond_1
 
+    .line 12
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -5159,6 +5386,7 @@
     :cond_1
     const-string v3, "--- false ---"
 
+    .line 13
     invoke-static {v11, v3}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     move v3, v0
@@ -5176,6 +5404,7 @@
     :cond_4
     move v2, v0
 
+    .line 14
     :goto_3
     iget-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
@@ -5187,6 +5416,7 @@
 
     if-ltz v2, :cond_8
 
+    .line 15
     iget-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {p1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getNewHeadWearPathList()Ljava/util/ArrayList;
@@ -5199,12 +5429,14 @@
 
     check-cast p1, Ljava/lang/String;
 
+    .line 16
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
     if-nez v3, :cond_8
 
+    .line 17
     iget-object v3, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v3}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getAccPath()Ljava/lang/String;
@@ -5219,11 +5451,13 @@
 
     return-void
 
+    .line 18
     :cond_5
     iget v3, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->Y:I
 
     if-ne v2, v3, :cond_6
 
+    .line 19
     iget v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->X:I
 
     add-int/2addr v0, v5
@@ -5232,11 +5466,14 @@
 
     goto :goto_4
 
+    .line 20
     :cond_6
     iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->Y:I
 
+    .line 21
     iput v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->X:I
 
+    .line 22
     :goto_4
     iget v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->X:I
 
@@ -5246,15 +5483,18 @@
 
     return-void
 
+    .line 23
     :cond_7
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->Q:Lcom/arcsoft/avatar2/AvatarEngine;
 
     invoke-virtual {v0, p1}, Lcom/arcsoft/avatar2/AvatarEngine;->setHeadWearTexture(Ljava/lang/String;)I
 
+    .line 24
     iget-object p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {p0, p1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setAccPath(Ljava/lang/String;)V
 
+    .line 25
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -5278,6 +5518,7 @@
 .method private k(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;)V
     .locals 9
 
+    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v0}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getAccPath()Ljava/lang/String;
@@ -5290,6 +5531,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v0}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getOldHeadWearPath()Ljava/lang/String;
@@ -5298,11 +5540,13 @@
 
     invoke-virtual {v0, v1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setAccPath(Ljava/lang/String;)V
 
+    .line 3
     :cond_0
     invoke-virtual {p1}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->getExpWeights()[F
 
     move-result-object v0
 
+    .line 4
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -5339,6 +5583,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 5
     invoke-virtual {p1}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->getExpWeights()[F
 
     move-result-object v2
@@ -5381,6 +5626,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 6
     invoke-virtual {p1}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->getExpWeights()[F
 
     move-result-object v2
@@ -5423,6 +5669,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 7
     invoke-virtual {p1}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->getExpWeights()[F
 
     move-result-object v2
@@ -5439,8 +5686,10 @@
 
     const-string v2, "check_expweight"
 
+    .line 8
     invoke-static {v2, v1}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 9
     iget-object v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getExpIdInPut()[I
@@ -5461,6 +5710,7 @@
 
     move v1, v3
 
+    .line 10
     :goto_0
     iget-object v4, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
@@ -5472,6 +5722,7 @@
 
     if-ge v1, v4, :cond_1
 
+    .line 11
     iget-object v4, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v4}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getExpIdInPut()[I
@@ -5492,6 +5743,7 @@
 
     aput v5, v0, v4
 
+    .line 12
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -5516,6 +5768,7 @@
 
     iget-object v6, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
+    .line 13
     invoke-virtual {v6}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getExpIdInPut()[I
 
     move-result-object v6
@@ -5560,12 +5813,14 @@
 
     const-string v5, "dogHat"
 
+    .line 14
     invoke-static {v5, v4}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
+    .line 15
     :cond_1
     invoke-virtual {p1, v0}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->setExpWeights([F)V
 
@@ -5574,6 +5829,7 @@
 
     move v1, v0
 
+    .line 16
     :goto_1
     iget-object v4, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
@@ -5587,6 +5843,7 @@
 
     if-ge v0, v4, :cond_7
 
+    .line 17
     iget-object v4, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v4}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getExpCheckIdList()Ljava/util/ArrayList;
@@ -5599,6 +5856,7 @@
 
     check-cast v4, [I
 
+    .line 18
     iget-object v5, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v5}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getExpCheckValueList()Ljava/util/ArrayList;
@@ -5613,11 +5871,13 @@
 
     move v6, v3
 
+    .line 19
     :goto_2
     array-length v7, v4
 
     if-ge v6, v7, :cond_5
 
+    .line 20
     aget v1, v5, v6
 
     const/4 v7, 0x0
@@ -5642,6 +5902,7 @@
 
     goto :goto_3
 
+    .line 21
     :cond_3
     aget v1, v5, v6
 
@@ -5685,6 +5946,7 @@
 
     goto :goto_1
 
+    .line 22
     :cond_7
     :goto_4
     iget-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
@@ -5708,6 +5970,7 @@
 
     move-result-object p1
 
+    .line 23
     :goto_5
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -5727,10 +5990,12 @@
 
     if-nez v0, :cond_a
 
+    .line 24
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->ae:Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine$AvatarExtraSceneTriggerCallback;
 
     if-eqz v0, :cond_9
 
+    .line 25
     iget-object v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getHeadWear()I
@@ -5741,15 +6006,18 @@
 
     invoke-interface {v0, v3, v1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine$AvatarExtraSceneTriggerCallback;->onExtraSceneTrigger(Ljava/lang/String;I)V
 
+    .line 26
     :cond_9
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->Q:Lcom/arcsoft/avatar2/AvatarEngine;
 
     invoke-virtual {v0, p1}, Lcom/arcsoft/avatar2/AvatarEngine;->setHeadWearTexture(Ljava/lang/String;)I
 
+    .line 27
     iget-object p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {p0, p1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setAccPath(Ljava/lang/String;)V
 
+    .line 28
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -5773,6 +6041,7 @@
 .method private l(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;)V
     .locals 9
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->m(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;)Z
 
     move-result v0
@@ -5787,6 +6056,7 @@
 
     if-nez v0, :cond_2
 
+    .line 2
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v0}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getExtraStatus()I
@@ -5797,6 +6067,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
@@ -5806,19 +6077,23 @@
 
     if-ne p1, v3, :cond_1
 
+    .line 4
     iget-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {p1, v4}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setExtraStatus(I)V
 
+    .line 5
     iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->X:I
 
     return-void
 
+    .line 6
     :cond_1
     iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->X:I
 
     return-void
 
+    .line 7
     :cond_2
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
@@ -5830,6 +6105,7 @@
 
     return-void
 
+    .line 8
     :cond_3
     iget v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->X:I
 
@@ -5837,6 +6113,7 @@
 
     iput v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->X:I
 
+    .line 9
     :goto_0
     iget v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->X:I
 
@@ -5844,11 +6121,13 @@
 
     return-void
 
+    .line 10
     :cond_4
     invoke-virtual {p1}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->getExpWeights()[F
 
     move-result-object v0
 
+    .line 11
     iget-object v5, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v5}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getExpressInfoList()Ljava/util/ArrayList;
@@ -5863,8 +6142,10 @@
 
     check-cast v5, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;
 
+    .line 12
     invoke-direct {p0, v5, v0}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->a(Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;[F)V
 
+    .line 13
     iget-object v6, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v6}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getExtraStatus()I
@@ -5877,6 +6158,7 @@
 
     if-eqz v6, :cond_5
 
+    .line 14
     iget-object v7, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v7}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getHeadWear()I
@@ -5887,6 +6169,7 @@
 
     invoke-interface {v6, v8, v7}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine$AvatarExtraSceneTriggerCallback;->onExtraSceneTrigger(Ljava/lang/String;I)V
 
+    .line 15
     :cond_5
     iget-object v6, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
@@ -5896,6 +6179,7 @@
 
     if-eq v6, v3, :cond_8
 
+    .line 16
     invoke-virtual {v5}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$ExpressInfo;->getLoopStatus()I
 
     move-result v5
@@ -5904,12 +6188,14 @@
 
     if-ne v5, v1, :cond_6
 
+    .line 17
     iget-object v5, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v5}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getLoopCount()I
 
     move-result v5
 
+    .line 18
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -5938,6 +6224,7 @@
 
     invoke-static {v6, v7}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 19
     iget-object v7, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v7}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getLoopNum()I
@@ -5946,6 +6233,7 @@
 
     if-ge v5, v7, :cond_6
 
+    .line 20
     iget-object v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getLoopBeginFrameIndex()I
@@ -5954,6 +6242,7 @@
 
     iput v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->V:I
 
+    .line 21
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -5972,16 +6261,19 @@
 
     invoke-static {v6, v1}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 22
     iget-object p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     add-int/2addr v5, v4
 
     invoke-virtual {p0, v5}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setLoopCount(I)V
 
+    .line 23
     invoke-virtual {p1, v0}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->setExpWeights([F)V
 
     return-void
 
+    .line 24
     :cond_6
     iget v5, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->V:I
 
@@ -6001,22 +6293,28 @@
 
     const-string v1, "--- end ---"
 
+    .line 25
     invoke-static {v6, v1}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 26
     iget-object v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v1, v3}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setExtraStatus(I)V
 
+    .line 27
     iget-object v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v1, v2}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setLoopCount(I)V
 
+    .line 28
     iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->V:I
 
+    .line 29
     iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->Z:I
 
     goto :goto_1
 
+    .line 30
     :cond_7
     iget v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->V:I
 
@@ -6024,6 +6322,7 @@
 
     iput v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->V:I
 
+    .line 31
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -6042,10 +6341,12 @@
 
     invoke-static {v6, v2}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 32
     iget-object p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {p0, v1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setExtraStatus(I)V
 
+    .line 33
     :cond_8
     :goto_1
     invoke-virtual {p1, v0}, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;->setExpWeights([F)V
@@ -6056,6 +6357,7 @@
 .method private m(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;)Z
     .locals 8
 
+    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v0}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getExpCheckIdList()Ljava/util/ArrayList;
@@ -6081,6 +6383,7 @@
 
     move v2, v0
 
+    .line 2
     :goto_0
     iget-object v3, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
@@ -6094,6 +6397,7 @@
 
     if-ge v0, v3, :cond_5
 
+    .line 3
     iget-object v3, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v3}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getExpCheckIdList()Ljava/util/ArrayList;
@@ -6106,6 +6410,7 @@
 
     check-cast v3, [I
 
+    .line 4
     iget-object v4, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v4}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getExpCheckValueList()Ljava/util/ArrayList;
@@ -6120,11 +6425,13 @@
 
     move v5, v1
 
+    .line 5
     :goto_1
     array-length v6, v3
 
     if-ge v5, v6, :cond_3
 
+    .line 6
     aget v2, v4, v5
 
     const/4 v6, 0x0
@@ -6149,6 +6456,7 @@
 
     goto :goto_2
 
+    .line 7
     :cond_1
     aget v2, v4, v5
 
@@ -6212,10 +6520,12 @@
 
     const-string p0, "info is null"
 
+    .line 1
     invoke-static {v0, p0}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
+    .line 2
     :cond_0
     iget-object v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->R:Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;
 
@@ -6223,10 +6533,12 @@
 
     const-string p0, "mConfigValue is null"
 
+    .line 3
     invoke-static {v0, p0}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
+    .line 4
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -6252,6 +6564,7 @@
 
     invoke-static {v2, v1}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 5
     iget-object v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->R:Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;
 
     iget v1, v1, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configHeadwearStyleID:I
@@ -6262,11 +6575,13 @@
 
     return-void
 
+    .line 6
     :cond_2
     iget-object v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     if-nez v1, :cond_5
 
+    .line 7
     iget-object v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->T:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -6286,6 +6601,7 @@
 
     check-cast v3, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
+    .line 8
     iget-object v4, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->R:Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;
 
     iget v4, v4, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configHeadwearStyleID:I
@@ -6296,12 +6612,14 @@
 
     if-ne v4, v5, :cond_3
 
+    .line 9
     invoke-virtual {v3}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getHeadWearColor()I
 
     move-result v4
 
     if-eq v4, v2, :cond_4
 
+    .line 10
     iget-object v4, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->R:Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;
 
     iget v4, v4, Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;->configHeadwearColorID:I
@@ -6312,13 +6630,16 @@
 
     if-ne v4, v5, :cond_3
 
+    .line 11
     iput-object v3, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     goto :goto_0
 
+    .line 12
     :cond_4
     iput-object v3, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
+    .line 13
     :cond_5
     :goto_0
     iget-object v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
@@ -6327,10 +6648,12 @@
 
     const-string p0, "mExtraSceneInfo is null"
 
+    .line 14
     invoke-static {v0, p0}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
+    .line 15
     :cond_6
     invoke-virtual {v1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getName()Ljava/lang/String;
 
@@ -6525,56 +6848,67 @@
 
     goto :goto_2
 
+    .line 16
     :pswitch_0
     invoke-direct {p0, p1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->k(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;)V
 
     goto :goto_2
 
+    .line 17
     :pswitch_1
     invoke-direct {p0, p1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->f(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;)V
 
     goto :goto_2
 
+    .line 18
     :pswitch_2
     invoke-direct {p0, p1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->c(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;)V
 
     goto :goto_2
 
+    .line 19
     :pswitch_3
     invoke-direct {p0, p1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->b(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;)V
 
     goto :goto_2
 
+    .line 20
     :pswitch_4
     invoke-direct {p0, p1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->a(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;)V
 
     goto :goto_2
 
+    .line 21
     :pswitch_5
     invoke-direct {p0, p1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->d(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;)V
 
     goto :goto_2
 
+    .line 22
     :pswitch_6
     invoke-direct {p0, p1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->i(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;)V
 
     goto :goto_2
 
+    .line 23
     :pswitch_7
     invoke-direct {p0, p1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->h(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;)V
 
     goto :goto_2
 
+    .line 24
     :pswitch_8
     invoke-direct {p0, p1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->l(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;)V
 
     goto :goto_2
 
+    .line 25
     :pswitch_9
     invoke-direct {p0, p1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->g(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;)V
 
     goto :goto_2
 
+    .line 26
     :pswitch_a
     invoke-direct {p0, p1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->e(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarProcessInfo;)V
 
@@ -6617,22 +6951,30 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->W:I
 
+    .line 2
     iput v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->X:I
 
     const/4 v1, -0x1
 
+    .line 3
     iput v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->Y:I
 
+    .line 4
     iput v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->V:I
 
+    .line 5
     iput v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->aa:I
 
+    .line 6
     iput v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->ab:I
 
+    .line 7
     iput v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->Z:I
 
+    .line 8
     iget-object v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->Q:Lcom/arcsoft/avatar2/AvatarEngine;
 
     if-eqz v1, :cond_5
@@ -6646,6 +6988,7 @@
     :cond_0
     if-eqz v1, :cond_4
 
+    .line 9
     invoke-virtual {v1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getOldToothPath()Ljava/lang/String;
 
     move-result-object v1
@@ -6656,6 +6999,7 @@
 
     if-nez v1, :cond_1
 
+    .line 10
     iget-object v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->Q:Lcom/arcsoft/avatar2/AvatarEngine;
 
     iget-object v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
@@ -6666,6 +7010,7 @@
 
     invoke-virtual {v1, v2}, Lcom/arcsoft/avatar2/AvatarEngine;->setToothTexture(Ljava/lang/String;)I
 
+    .line 11
     :cond_1
     iget-object v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
@@ -6679,6 +7024,7 @@
 
     if-nez v1, :cond_2
 
+    .line 12
     iget-object v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->Q:Lcom/arcsoft/avatar2/AvatarEngine;
 
     iget-object v2, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
@@ -6689,6 +7035,7 @@
 
     invoke-virtual {v1, v2}, Lcom/arcsoft/avatar2/AvatarEngine;->setHeadWearTexture(Ljava/lang/String;)I
 
+    .line 13
     iget-object v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v1}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->getOldHeadWearPath()Ljava/lang/String;
@@ -6697,6 +7044,7 @@
 
     invoke-virtual {v1, v2}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setAccPath(Ljava/lang/String;)V
 
+    .line 14
     :cond_2
     iget-object v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
@@ -6704,26 +7052,32 @@
 
     invoke-virtual {v1, v2}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setIsOldHeadWearAcc(Z)V
 
+    .line 15
     iget-object v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v1, v2}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setExtraStatus(I)V
 
+    .line 16
     iget-object v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v1, v0}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setLoopCount(I)V
 
+    .line 17
     iget-object v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v1, v0}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setEmojiHelmetLeftRandomNum(I)V
 
+    .line 18
     iget-object v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v1, v2}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setEmojiHelmetRightRandomNum(I)V
 
+    .line 19
     iget-object v1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-virtual {v1, v0}, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;->setHeadPitchStatus(I)V
 
+    .line 20
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->ad:Ljava/util/List;
 
     if-eqz v0, :cond_3
@@ -6734,10 +7088,12 @@
 
     if-lez v0, :cond_3
 
+    .line 21
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->Q:Lcom/arcsoft/avatar2/AvatarEngine;
 
     invoke-virtual {v0, v2, v2}, Lcom/arcsoft/avatar2/AvatarEngine;->setHairRenderParam(ZZ)I
 
+    .line 22
     :cond_3
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->ad:Ljava/util/List;
 
@@ -6746,6 +7102,7 @@
     :cond_4
     const/4 v0, 0x0
 
+    .line 23
     iput-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     :cond_5
@@ -6760,20 +7117,25 @@
 
     const-string v1, "-- setAvatarEngine --"
 
+    .line 1
     invoke-static {v0, v1}, Lcom/arcsoft/avatar2/util/LOG;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 2
     iput-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->Q:Lcom/arcsoft/avatar2/AvatarEngine;
 
+    .line 3
     iget-object v0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->R:Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;
 
     invoke-virtual {p1, v0}, Lcom/arcsoft/avatar2/AvatarEngine;->getConfigValue(Lcom/arcsoft/avatar2/AvatarConfig$ASAvatarConfigValue;)V
 
+    .line 4
     iget-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->ad:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->clear()V
 
     const/4 p1, 0x0
 
+    .line 5
     iput-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneEngine;->S:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     return-void

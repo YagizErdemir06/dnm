@@ -1,4 +1,4 @@
-.class final Lcom/google/common/graph/StandardMutableValueGraph;
+.class public final Lcom/google/common/graph/StandardMutableValueGraph;
 .super Lcom/google/common/graph/StandardValueGraph;
 .source "SourceFile"
 
@@ -47,8 +47,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/graph/StandardValueGraph;-><init>(Lcom/google/common/graph/AbstractGraphBuilder;)V
 
+    .line 2
     iget-object p1, p1, Lcom/google/common/graph/AbstractGraphBuilder;->incidentEdgeOrder:Lcom/google/common/graph/ElementOrder;
 
     invoke-virtual {p1}, Lcom/google/common/graph/ElementOrder;->cast()Lcom/google/common/graph/ElementOrder;
@@ -73,10 +75,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/graph/StandardMutableValueGraph;->newConnections()Lcom/google/common/graph/GraphConnections;
 
     move-result-object v0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/graph/StandardValueGraph;->nodeConnections:Lcom/google/common/graph/MapIteratorCache;
 
     invoke-virtual {p0, p1, v0}, Lcom/google/common/graph/MapIteratorCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -108,12 +112,14 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/StandardValueGraph;->isDirected()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/graph/StandardMutableValueGraph;->incidentEdgeOrder:Lcom/google/common/graph/ElementOrder;
 
     invoke-static {p0}, Lcom/google/common/graph/DirectedGraphConnections;->of(Lcom/google/common/graph/ElementOrder;)Lcom/google/common/graph/DirectedGraphConnections;
@@ -122,6 +128,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lcom/google/common/graph/StandardMutableValueGraph;->incidentEdgeOrder:Lcom/google/common/graph/ElementOrder;
 
@@ -148,8 +155,10 @@
 
     const-string v0, "node"
 
+    .line 1
     invoke-static {p1, v0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/google/common/graph/StandardValueGraph;->containsNode(Ljava/lang/Object;)Z
 
     move-result v0
@@ -160,6 +169,7 @@
 
     return p0
 
+    .line 3
     :cond_0
     invoke-direct {p0, p1}, Lcom/google/common/graph/StandardMutableValueGraph;->addNodeInternal(Ljava/lang/Object;)Lcom/google/common/graph/GraphConnections;
 
@@ -178,6 +188,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/StandardMutableValueGraph;->incidentEdgeOrder:Lcom/google/common/graph/ElementOrder;
 
     return-object p0
@@ -453,8 +464,10 @@
 
     const-string v0, "node"
 
+    .line 1
     invoke-static {p1, v0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/graph/StandardValueGraph;->nodeConnections:Lcom/google/common/graph/MapIteratorCache;
 
     invoke-virtual {v0, p1}, Lcom/google/common/graph/MapIteratorCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -469,6 +482,7 @@
 
     return v1
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Lcom/google/common/graph/StandardValueGraph;->allowsSelfLoops()Z
 
@@ -478,20 +492,24 @@
 
     if-eqz v2, :cond_1
 
+    .line 4
     invoke-interface {v0, p1}, Lcom/google/common/graph/GraphConnections;->removeSuccessor(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
+    .line 5
     invoke-interface {v0, p1}, Lcom/google/common/graph/GraphConnections;->removePredecessor(Ljava/lang/Object;)V
 
+    .line 6
     iget-wide v5, p0, Lcom/google/common/graph/StandardValueGraph;->edgeCount:J
 
     sub-long/2addr v5, v3
 
     iput-wide v5, p0, Lcom/google/common/graph/StandardValueGraph;->edgeCount:J
 
+    .line 7
     :cond_1
     invoke-interface {v0}, Lcom/google/common/graph/GraphConnections;->successors()Ljava/util/Set;
 
@@ -512,6 +530,7 @@
 
     move-result-object v5
 
+    .line 8
     iget-object v6, p0, Lcom/google/common/graph/StandardValueGraph;->nodeConnections:Lcom/google/common/graph/MapIteratorCache;
 
     invoke-virtual {v6, v5}, Lcom/google/common/graph/MapIteratorCache;->getWithoutCaching(Ljava/lang/Object;)Ljava/lang/Object;
@@ -526,6 +545,7 @@
 
     invoke-interface {v5, p1}, Lcom/google/common/graph/GraphConnections;->removePredecessor(Ljava/lang/Object;)V
 
+    .line 9
     iget-wide v5, p0, Lcom/google/common/graph/StandardValueGraph;->edgeCount:J
 
     sub-long/2addr v5, v3
@@ -534,6 +554,7 @@
 
     goto :goto_0
 
+    .line 10
     :cond_2
     invoke-virtual {p0}, Lcom/google/common/graph/StandardValueGraph;->isDirected()Z
 
@@ -543,6 +564,7 @@
 
     if-eqz v2, :cond_4
 
+    .line 11
     invoke-interface {v0}, Lcom/google/common/graph/GraphConnections;->predecessors()Ljava/util/Set;
 
     move-result-object v0
@@ -562,8 +584,10 @@
 
     move-result-object v2
 
+    .line 12
     iget-object v6, p0, Lcom/google/common/graph/StandardValueGraph;->nodeConnections:Lcom/google/common/graph/MapIteratorCache;
 
+    .line 13
     invoke-virtual {v6, v2}, Lcom/google/common/graph/MapIteratorCache;->getWithoutCaching(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
@@ -587,9 +611,11 @@
     :cond_3
     move v2, v1
 
+    .line 14
     :goto_2
     invoke-static {v2}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
+    .line 15
     iget-wide v6, p0, Lcom/google/common/graph/StandardValueGraph;->edgeCount:J
 
     sub-long/2addr v6, v3
@@ -598,11 +624,13 @@
 
     goto :goto_1
 
+    .line 16
     :cond_4
     iget-object v0, p0, Lcom/google/common/graph/StandardValueGraph;->nodeConnections:Lcom/google/common/graph/MapIteratorCache;
 
     invoke-virtual {v0, p1}, Lcom/google/common/graph/MapIteratorCache;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 17
     iget-wide p0, p0, Lcom/google/common/graph/StandardValueGraph;->edgeCount:J
 
     invoke-static {p0, p1}, Lcom/google/common/graph/Graphs;->checkNonNegative(J)J

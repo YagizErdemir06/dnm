@@ -1,4 +1,4 @@
-.class final Lcom/google/common/io/CharSequenceReader;
+.class public final Lcom/google/common/io/CharSequenceReader;
 .super Ljava/io/Reader;
 .source "SourceFile"
 
@@ -26,8 +26,10 @@
 .method public constructor <init>(Ljava/lang/CharSequence;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/io/Reader;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -47,12 +49,14 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/io/CharSequenceReader;->seq:Ljava/lang/CharSequence;
 
     if-eqz p0, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/io/IOException;
 
@@ -66,6 +70,7 @@
 .method private hasRemaining()Z
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/io/CharSequenceReader;->remaining()I
 
     move-result p0
@@ -86,10 +91,12 @@
 .method private remaining()I
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/io/CharSequenceReader;->seq:Ljava/lang/CharSequence;
 
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/io/CharSequenceReader;->seq:Ljava/lang/CharSequence;
 
     invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
@@ -117,11 +124,13 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :try_start_0
     iput-object v0, p0, Lcom/google/common/io/CharSequenceReader;->seq:Ljava/lang/CharSequence;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     monitor-exit p0
 
     return-void
@@ -157,16 +166,20 @@
     :try_start_0
     const-string v1, "readAheadLimit (%s) may not be negative"
 
+    .line 1
     invoke-static {v0, v1, p1}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;I)V
 
+    .line 2
     invoke-direct {p0}, Lcom/google/common/io/CharSequenceReader;->checkOpen()V
 
+    .line 3
     iget p1, p0, Lcom/google/common/io/CharSequenceReader;->pos:I
 
     iput p1, p0, Lcom/google/common/io/CharSequenceReader;->mark:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
     monitor-exit p0
 
     return-void
@@ -276,17 +289,17 @@
 
     if-nez v0, :cond_0
 
+    const/4 p1, -0x1
+
     .line 5
     monitor-exit p0
 
-    const/4 p0, -0x1
-
-    return p0
+    return p1
 
     .line 6
     :cond_0
     :try_start_1
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+    invoke-virtual {p1}, Ljava/nio/CharBuffer;->remaining()I
 
     move-result v0
 
@@ -373,12 +386,12 @@
 
     if-nez v0, :cond_0
 
+    const/4 p1, -0x1
+
     .line 16
     monitor-exit p0
 
-    const/4 p0, -0x1
-
-    return p0
+    return p1
 
     .line 17
     :cond_0
@@ -443,16 +456,18 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     invoke-direct {p0}, Lcom/google/common/io/CharSequenceReader;->checkOpen()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    const/4 v0, 0x1
+
+    .line 2
     monitor-exit p0
 
-    const/4 p0, 0x1
-
-    return p0
+    return v0
 
     :catchall_0
     move-exception v0
@@ -472,15 +487,18 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     invoke-direct {p0}, Lcom/google/common/io/CharSequenceReader;->checkOpen()V
 
+    .line 2
     iget v0, p0, Lcom/google/common/io/CharSequenceReader;->mark:I
 
     iput v0, p0, Lcom/google/common/io/CharSequenceReader;->pos:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     monitor-exit p0
 
     return-void
@@ -520,10 +538,13 @@
     :try_start_0
     const-string v1, "n (%s) may not be negative"
 
+    .line 1
     invoke-static {v0, v1, p1, p2}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;J)V
 
+    .line 2
     invoke-direct {p0}, Lcom/google/common/io/CharSequenceReader;->checkOpen()V
 
+    .line 3
     invoke-direct {p0}, Lcom/google/common/io/CharSequenceReader;->remaining()I
 
     move-result v0
@@ -536,6 +557,7 @@
 
     long-to-int p1, p1
 
+    .line 4
     iget p2, p0, Lcom/google/common/io/CharSequenceReader;->pos:I
 
     add-int/2addr p2, p1
@@ -546,6 +568,7 @@
 
     int-to-long p1, p1
 
+    .line 5
     monitor-exit p0
 
     return-wide p1

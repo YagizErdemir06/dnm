@@ -16,6 +16,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,10 +27,34 @@
 .method public final native detectGesture([BIII)I
     .annotation runtime Lcom/xiaomi/camera/perftools/memory/loader/NativeMethod;
     .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "data",
+            "width",
+            "height",
+            "orientation"
+        }
+    .end annotation
 .end method
 
 .method public final native init(Ljava/lang/String;)V
     .annotation runtime Lcom/xiaomi/camera/perftools/memory/loader/NativeMethod;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "modelPath"
+        }
     .end annotation
 .end method
 

@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/LinkedListMultimap$1EntriesImpl;
+.class public Lcom/google/common/collect/LinkedListMultimap$1EntriesImpl;
 .super Ljava/util/AbstractSequentialList;
 .source "SourceFile"
 
@@ -23,13 +23,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/LinkedListMultimap;
+.field public final synthetic this$0:Lcom/google/common/collect/LinkedListMultimap;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/LinkedListMultimap;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/LinkedListMultimap$1EntriesImpl;->this$0:Lcom/google/common/collect/LinkedListMultimap;
 
     invoke-direct {p0}, Ljava/util/AbstractSequentialList;-><init>()V
@@ -50,6 +51,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/LinkedListMultimap$NodeIterator;
 
     iget-object p0, p0, Lcom/google/common/collect/LinkedListMultimap$1EntriesImpl;->this$0:Lcom/google/common/collect/LinkedListMultimap;
@@ -62,6 +64,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/LinkedListMultimap$1EntriesImpl;->this$0:Lcom/google/common/collect/LinkedListMultimap;
 
     invoke-static {p0}, Lcom/google/common/collect/LinkedListMultimap;->access$800(Lcom/google/common/collect/LinkedListMultimap;)I

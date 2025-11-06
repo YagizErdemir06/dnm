@@ -11,6 +11,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,6 +28,7 @@
         }
     .end annotation
 
+    .line 1
     sput-object p0, Lcom/xiaomi/milab/videosdk/utils/StaticContext;->sContext:Landroid/content/Context;
 
     return-void
@@ -35,6 +37,7 @@
 .method public static sGetAndroidContext()Landroid/content/Context;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/milab/videosdk/utils/StaticContext;->sContext:Landroid/content/Context;
 
     return-object v0

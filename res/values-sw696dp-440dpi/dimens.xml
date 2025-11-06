@@ -32,9 +32,11 @@
     <dimen name="mishot_snap_top_marin_landscape">186.44199dip</dimen>
     <dimen name="mishot_thumbnail_bottom_marin_landscape">152.436dip</dimen>
     <dimen name="mishot_thumbnail_end_marin_portrait">104.53998dip</dimen>
+    <dimen name="mm_mode_new_edit_width">105.359985dip</dimen>
     <dimen name="mode_more_top_margin">30.0dip</dimen>
     <dimen name="mode_select_margin_hor">15.0dip</dimen>
     <dimen name="mode_tips_item_text_margin_ver">2.5499878dip</dimen>
+    <dimen name="preference_item_padding_start">28.0dip</dimen>
     <dimen name="pro_video_recording_simple_width_cv">41.0dip</dimen>
     <dimen name="pro_view_zoom_view_slider_height_cv">221.18399dip</dimen>
     <dimen name="right_tip_description_tip_top">0.0dip</dimen>

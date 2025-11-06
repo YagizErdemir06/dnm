@@ -80,10 +80,13 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->language:Ljava/lang/String;
 
+    .line 3
     new-instance p1, Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     const/16 v0, 0x400
@@ -92,6 +95,7 @@
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->sampleDataBuffer:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
+    .line 4
     new-instance v0, Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
@@ -104,6 +108,7 @@
 
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 5
     iput-wide v0, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->timeUs:J
 
     return-void
@@ -114,6 +119,7 @@
 
     const/4 v0, 0x2
 
+    .line 1
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v0
@@ -122,6 +128,7 @@
 
     mul-int/lit8 v0, v0, 0x8
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result p0
@@ -145,6 +152,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBit()Z
 
     move-result v0
@@ -153,12 +161,15 @@
 
     const/4 v0, 0x1
 
+    .line 2
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->streamMuxRead:Z
 
+    .line 3
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->parseStreamMuxConfig(Lcom/google/android/exoplayer2/util/ParsableBitArray;)V
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->streamMuxRead:Z
 
@@ -166,6 +177,7 @@
 
     return-void
 
+    .line 5
     :cond_1
     :goto_0
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->audioMuxVersionA:I
@@ -174,20 +186,25 @@
 
     if-nez v0, :cond_4
 
+    .line 6
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->numSubframes:I
 
     if-nez v0, :cond_3
 
+    .line 7
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->parsePayloadLengthInfo(Lcom/google/android/exoplayer2/util/ParsableBitArray;)I
 
     move-result v0
 
+    .line 8
     invoke-direct {p0, p1, v0}, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->parsePayloadMux(Lcom/google/android/exoplayer2/util/ParsableBitArray;I)V
 
+    .line 9
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->otherDataPresent:Z
 
     if-eqz v0, :cond_2
 
+    .line 10
     iget-wide v0, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->otherDataLenBits:J
 
     long-to-int p0, v0
@@ -197,6 +214,7 @@
     :cond_2
     return-void
 
+    .line 11
     :cond_3
     invoke-static {v1, v1}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedContainer(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
@@ -204,6 +222,7 @@
 
     throw p0
 
+    .line 12
     :cond_4
     invoke-static {v1, v1}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedContainer(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
@@ -220,28 +239,34 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->bitsLeft()I
 
     move-result v0
 
     const/4 v1, 0x1
 
+    .line 2
     invoke-static {p1, v1}, Lcom/google/android/exoplayer2/audio/AacUtil;->parseAudioSpecificConfig(Lcom/google/android/exoplayer2/util/ParsableBitArray;Z)Lcom/google/android/exoplayer2/audio/AacUtil$Config;
 
     move-result-object v1
 
+    .line 3
     iget-object v2, v1, Lcom/google/android/exoplayer2/audio/AacUtil$Config;->codecs:Ljava/lang/String;
 
     iput-object v2, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->codecs:Ljava/lang/String;
 
+    .line 4
     iget v2, v1, Lcom/google/android/exoplayer2/audio/AacUtil$Config;->sampleRateHz:I
 
     iput v2, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->sampleRateHz:I
 
+    .line 5
     iget v1, v1, Lcom/google/android/exoplayer2/audio/AacUtil$Config;->channelCount:I
 
     iput v1, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->channelCount:I
 
+    .line 6
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->bitsLeft()I
 
     move-result p0
@@ -256,6 +281,7 @@
 
     const/4 v0, 0x3
 
+    .line 1
     invoke-virtual {p1, v0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v1
@@ -288,6 +314,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -295,12 +322,14 @@
 
     throw p0
 
+    .line 3
     :cond_1
     :goto_0
     invoke-virtual {p1, p0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
     goto :goto_1
 
+    .line 4
     :cond_2
     invoke-virtual {p1, v2}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
@@ -309,6 +338,7 @@
     :cond_3
     const/16 p0, 0x9
 
+    .line 5
     invoke-virtual {p1, p0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
     goto :goto_1
@@ -316,6 +346,7 @@
     :cond_4
     const/16 p0, 0x8
 
+    .line 6
     invoke-virtual {p1, p0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
     :goto_1
@@ -330,6 +361,7 @@
         }
     .end annotation
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->frameLengthType:I
 
     if-nez p0, :cond_1
@@ -339,6 +371,7 @@
     :cond_0
     const/16 v0, 0x8
 
+    .line 2
     invoke-virtual {p1, v0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v0
@@ -354,6 +387,7 @@
     :cond_1
     const/4 p0, 0x0
 
+    .line 3
     invoke-static {p0, p0}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedContainer(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
     move-result-object p0
@@ -369,6 +403,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->getPosition()I
 
     move-result v0
@@ -377,6 +412,7 @@
 
     if-nez v1, :cond_0
 
+    .line 2
     iget-object p1, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->sampleDataBuffer:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     shr-int/lit8 v0, v0, 0x3
@@ -385,6 +421,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->sampleDataBuffer:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
@@ -398,10 +435,12 @@
 
     invoke-virtual {p1, v0, v2, v1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits([BII)V
 
+    .line 4
     iget-object p1, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->sampleDataBuffer:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {p1, v2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
+    .line 5
     :goto_0
     iget-object p1, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->output:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
@@ -409,6 +448,7 @@
 
     invoke-interface {p1, v0, p2}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->sampleData(Lcom/google/android/exoplayer2/util/ParsableByteArray;I)V
 
+    .line 6
     iget-wide v2, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->timeUs:J
 
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
@@ -417,6 +457,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 7
     iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->output:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     const/4 v4, 0x1
@@ -429,6 +470,7 @@
 
     invoke-interface/range {v1 .. v7}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->sampleMetadata(JIIILcom/google/android/exoplayer2/extractor/TrackOutput$CryptoData;)V
 
+    .line 8
     iget-wide p1, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->timeUs:J
 
     iget-wide v0, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->sampleDurationUs:J
@@ -457,6 +499,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-virtual {p1, v0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v1
@@ -465,6 +508,7 @@
 
     if-ne v1, v0, :cond_0
 
+    .line 2
     invoke-virtual {p1, v0}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v3
@@ -483,8 +527,10 @@
 
     if-ne v1, v0, :cond_1
 
+    .line 3
     invoke-static {p1}, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->latmGetValue(Lcom/google/android/exoplayer2/util/ParsableBitArray;)J
 
+    .line 4
     :cond_1
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBit()Z
 
@@ -494,6 +540,7 @@
 
     const/4 v3, 0x6
 
+    .line 5
     invoke-virtual {p1, v3}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v3
@@ -502,12 +549,14 @@
 
     const/4 v3, 0x4
 
+    .line 6
     invoke-virtual {p1, v3}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v3
 
     const/4 v5, 0x3
 
+    .line 7
     invoke-virtual {p1, v5}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v5
@@ -520,58 +569,70 @@
 
     if-nez v1, :cond_2
 
+    .line 8
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->getPosition()I
 
     move-result v4
 
+    .line 9
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->parseAudioSpecificConfig(Lcom/google/android/exoplayer2/util/ParsableBitArray;)I
 
     move-result v5
 
+    .line 10
     invoke-virtual {p1, v4}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->setPosition(I)V
 
     add-int/lit8 v4, v5, 0x7
 
+    .line 11
     div-int/2addr v4, v3
 
     new-array v4, v4, [B
 
+    .line 12
     invoke-virtual {p1, v4, v2, v5}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBits([BII)V
 
+    .line 13
     new-instance v2, Lcom/google/android/exoplayer2/Format$Builder;
 
     invoke-direct {v2}, Lcom/google/android/exoplayer2/Format$Builder;-><init>()V
 
     iget-object v5, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->formatId:Ljava/lang/String;
 
+    .line 14
     invoke-virtual {v2, v5}, Lcom/google/android/exoplayer2/Format$Builder;->setId(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v2
 
     const-string v5, "audio/mp4a-latm"
 
+    .line 15
     invoke-virtual {v2, v5}, Lcom/google/android/exoplayer2/Format$Builder;->setSampleMimeType(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v2
 
     iget-object v5, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->codecs:Ljava/lang/String;
 
+    .line 16
     invoke-virtual {v2, v5}, Lcom/google/android/exoplayer2/Format$Builder;->setCodecs(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v2
 
     iget v5, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->channelCount:I
 
+    .line 17
     invoke-virtual {v2, v5}, Lcom/google/android/exoplayer2/Format$Builder;->setChannelCount(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v2
 
     iget v5, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->sampleRateHz:I
 
+    .line 18
     invoke-virtual {v2, v5}, Lcom/google/android/exoplayer2/Format$Builder;->setSampleRate(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v2
 
+    .line 19
     invoke-static {v4}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v4
@@ -582,14 +643,17 @@
 
     iget-object v4, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->language:Ljava/lang/String;
 
+    .line 20
     invoke-virtual {v2, v4}, Lcom/google/android/exoplayer2/Format$Builder;->setLanguage(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v2
 
+    .line 21
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/Format$Builder;->build()Lcom/google/android/exoplayer2/Format;
 
     move-result-object v2
 
+    .line 22
     iget-object v4, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->format:Lcom/google/android/exoplayer2/Format;
 
     invoke-virtual {v2, v4}, Lcom/google/android/exoplayer2/Format;->equals(Ljava/lang/Object;)Z
@@ -598,24 +662,28 @@
 
     if-nez v4, :cond_3
 
+    .line 23
     iput-object v2, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->format:Lcom/google/android/exoplayer2/Format;
 
-    iget v4, v2, Lcom/google/android/exoplayer2/Format;->sampleRate:I
+    const-wide/32 v4, 0x3d090000
 
-    int-to-long v4, v4
+    .line 24
+    iget v6, v2, Lcom/google/android/exoplayer2/Format;->sampleRate:I
 
-    const-wide/32 v6, 0x3d090000
+    int-to-long v6, v6
 
-    div-long/2addr v6, v4
+    div-long/2addr v4, v6
 
-    iput-wide v6, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->sampleDurationUs:J
+    iput-wide v4, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->sampleDurationUs:J
 
+    .line 25
     iget-object v4, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->output:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     invoke-interface {v4, v2}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->format(Lcom/google/android/exoplayer2/Format;)V
 
     goto :goto_1
 
+    .line 26
     :cond_2
     invoke-static {p1}, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->latmGetValue(Lcom/google/android/exoplayer2/util/ParsableBitArray;)J
 
@@ -623,18 +691,22 @@
 
     long-to-int v2, v4
 
+    .line 27
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->parseAudioSpecificConfig(Lcom/google/android/exoplayer2/util/ParsableBitArray;)I
 
     move-result v4
 
     sub-int/2addr v2, v4
 
+    .line 28
     invoke-virtual {p1, v2}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
+    .line 29
     :cond_3
     :goto_1
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->parseFrameLength(Lcom/google/android/exoplayer2/util/ParsableBitArray;)V
 
+    .line 30
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBit()Z
 
     move-result v2
@@ -643,12 +715,14 @@
 
     const-wide/16 v4, 0x0
 
+    .line 31
     iput-wide v4, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->otherDataLenBits:J
 
     if-eqz v2, :cond_5
 
     if-ne v1, v0, :cond_4
 
+    .line 32
     invoke-static {p1}, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->latmGetValue(Lcom/google/android/exoplayer2/util/ParsableBitArray;)J
 
     move-result-wide v0
@@ -657,11 +731,13 @@
 
     goto :goto_2
 
+    .line 33
     :cond_4
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBit()Z
 
     move-result v0
 
+    .line 34
     iget-wide v1, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->otherDataLenBits:J
 
     shl-long/2addr v1, v3
@@ -678,6 +754,7 @@
 
     if-nez v0, :cond_4
 
+    .line 35
     :cond_5
     :goto_2
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->readBit()Z
@@ -686,11 +763,13 @@
 
     if-eqz p0, :cond_6
 
+    .line 36
     invoke-virtual {p1, v3}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
     :cond_6
     return-void
 
+    .line 37
     :cond_7
     invoke-static {v4, v4}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedContainer(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
@@ -698,6 +777,7 @@
 
     throw p0
 
+    .line 38
     :cond_8
     invoke-static {v4, v4}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedContainer(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
@@ -705,6 +785,7 @@
 
     throw p0
 
+    .line 39
     :cond_9
     invoke-static {v4, v4}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedContainer(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
@@ -716,10 +797,12 @@
 .method private resetBufferForSize(I)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->sampleDataBuffer:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v0, p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->reset(I)V
 
+    .line 2
     iget-object p1, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->sampleBitArray:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->sampleDataBuffer:Lcom/google/android/exoplayer2/util/ParsableByteArray;
@@ -743,10 +826,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->output:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkStateNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     :cond_0
     :goto_0
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
@@ -755,6 +840,7 @@
 
     if-lez v0, :cond_7
 
+    .line 3
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->state:I
 
     const/16 v1, 0x56
@@ -775,6 +861,7 @@
 
     if-ne v0, v1, :cond_1
 
+    .line 4
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
     move-result v0
@@ -789,6 +876,7 @@
 
     move-result v0
 
+    .line 5
     iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->sampleBitArray:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     iget-object v1, v1, Lcom/google/android/exoplayer2/util/ParsableBitArray;->data:[B
@@ -797,28 +885,34 @@
 
     invoke-virtual {p1, v1, v2, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readBytes([BII)V
 
+    .line 6
     iget v1, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->bytesRead:I
 
     add-int/2addr v1, v0
 
     iput v1, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->bytesRead:I
 
+    .line 7
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->sampleSize:I
 
     if-ne v1, v0, :cond_0
 
+    .line 8
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->sampleBitArray:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v0, v4}, Lcom/google/android/exoplayer2/util/ParsableBitArray;->setPosition(I)V
 
+    .line 9
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->sampleBitArray:Lcom/google/android/exoplayer2/util/ParsableBitArray;
 
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->parseAudioMuxElement(Lcom/google/android/exoplayer2/util/ParsableBitArray;)V
 
+    .line 10
     iput v4, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->state:I
 
     goto :goto_0
 
+    .line 11
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -826,6 +920,7 @@
 
     throw p0
 
+    .line 12
     :cond_2
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->secondHeaderByte:I
 
@@ -841,6 +936,7 @@
 
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->sampleSize:I
 
+    .line 13
     iget-object v2, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->sampleDataBuffer:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
@@ -851,17 +947,21 @@
 
     if-le v0, v2, :cond_3
 
+    .line 14
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->sampleSize:I
 
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->resetBufferForSize(I)V
 
+    .line 15
     :cond_3
     iput v4, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->bytesRead:I
 
+    .line 16
     iput v1, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->state:I
 
     goto :goto_0
 
+    .line 17
     :cond_4
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
@@ -873,8 +973,10 @@
 
     if-ne v2, v5, :cond_5
 
+    .line 18
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->secondHeaderByte:I
 
+    .line 19
     iput v3, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->state:I
 
     goto :goto_0
@@ -882,10 +984,12 @@
     :cond_5
     if-eq v0, v1, :cond_0
 
+    .line 20
     iput v4, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->state:I
 
     goto :goto_0
 
+    .line 21
     :cond_6
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
@@ -893,6 +997,7 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 22
     iput v2, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->state:I
 
     goto/16 :goto_0
@@ -904,8 +1009,10 @@
 .method public createTracks(Lcom/google/android/exoplayer2/extractor/ExtractorOutput;Lcom/google/android/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;)V
     .locals 2
 
+    .line 1
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;->generateNewId()V
 
+    .line 2
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;->getTrackId()I
 
     move-result v0
@@ -918,6 +1025,7 @@
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->output:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
+    .line 3
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;->getFormatId()Ljava/lang/String;
 
     move-result-object p1
@@ -942,6 +1050,7 @@
 
     if-eqz p3, :cond_0
 
+    .line 1
     iput-wide p1, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->timeUs:J
 
     :cond_0
@@ -953,12 +1062,15 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->state:I
 
     const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 2
     iput-wide v1, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->timeUs:J
 
+    .line 3
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/extractor/ts/LatmReader;->streamMuxRead:Z
 
     return-void

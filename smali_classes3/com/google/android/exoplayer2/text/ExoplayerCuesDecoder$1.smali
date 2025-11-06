@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/text/ExoplayerCuesDecoder$1;
+.class public Lcom/google/android/exoplayer2/text/ExoplayerCuesDecoder$1;
 .super Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/android/exoplayer2/text/ExoplayerCuesDecoder;
+.field public final synthetic this$0:Lcom/google/android/exoplayer2/text/ExoplayerCuesDecoder;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/exoplayer2/text/ExoplayerCuesDecoder;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/text/ExoplayerCuesDecoder$1;->this$0:Lcom/google/android/exoplayer2/text/ExoplayerCuesDecoder;
 
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;-><init>()V
@@ -34,6 +35,7 @@
 .method public release()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/ExoplayerCuesDecoder$1;->this$0:Lcom/google/android/exoplayer2/text/ExoplayerCuesDecoder;
 
     invoke-static {v0, p0}, Lcom/google/android/exoplayer2/text/ExoplayerCuesDecoder;->access$000(Lcom/google/android/exoplayer2/text/ExoplayerCuesDecoder;Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;)V

@@ -112,6 +112,7 @@
 .method public static constructor <clinit>()V
     .locals 18
 
+    .line 1
     new-instance v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
     const-string v1, "WIFI_P2P_GO"
@@ -122,6 +123,7 @@
 
     sput-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->WIFI_P2P_GO:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
+    .line 2
     new-instance v1, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
     const-string v3, "WIFI_P2P_GC"
@@ -132,6 +134,7 @@
 
     sput-object v1, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->WIFI_P2P_GC:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
+    .line 3
     new-instance v3, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
     const-string v5, "WIFI_SOFTAP"
@@ -142,6 +145,7 @@
 
     sput-object v3, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->WIFI_SOFTAP:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
+    .line 4
     new-instance v5, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
     const-string v7, "WIFI_STATION"
@@ -152,6 +156,7 @@
 
     sput-object v5, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->WIFI_STATION:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
+    .line 5
     new-instance v7, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
     const-string v9, "BT_RFCOMM"
@@ -162,6 +167,7 @@
 
     sput-object v7, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->BT_RFCOMM:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
+    .line 6
     new-instance v9, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
     const-string v11, "BT_GATT"
@@ -174,178 +180,189 @@
 
     sput-object v9, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->BT_GATT:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
+    .line 7
     new-instance v11, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
-    const/16 v14, 0x10
+    const-string v14, "BLE_GATT"
 
-    const-string v15, "BLE_GATT"
+    const/4 v15, 0x6
 
-    const/4 v12, 0x6
+    const/16 v12, 0x10
 
-    invoke-direct {v11, v15, v12, v14}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v11, v14, v15, v12}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;-><init>(Ljava/lang/String;II)V
 
     sput-object v11, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->BLE_GATT:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
-    new-instance v14, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
-
-    const/16 v15, 0x20
-
-    const-string v12, "COAP"
-
-    const/4 v10, 0x7
-
-    invoke-direct {v14, v12, v10, v15}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;-><init>(Ljava/lang/String;II)V
-
-    sput-object v14, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->COAP:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
-
+    .line 8
     new-instance v12, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
-    const-string v15, "NFC"
+    const-string v14, "COAP"
 
-    const/16 v10, 0x40
+    const/4 v15, 0x7
 
-    invoke-direct {v12, v15, v13, v10}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;-><init>(Ljava/lang/String;II)V
+    const/16 v10, 0x20
 
-    sput-object v12, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->NFC:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
+    invoke-direct {v12, v14, v15, v10}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;-><init>(Ljava/lang/String;II)V
 
+    sput-object v12, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->COAP:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
+
+    .line 9
     new-instance v10, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
-    const/16 v15, 0x80
+    const-string v14, "NFC"
 
-    const-string v13, "IDB"
+    const/16 v15, 0x40
 
-    const/16 v8, 0x9
+    invoke-direct {v10, v14, v13, v15}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;-><init>(Ljava/lang/String;II)V
 
-    invoke-direct {v10, v13, v8, v15}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;-><init>(Ljava/lang/String;II)V
+    sput-object v10, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->NFC:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
-    sput-object v10, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->IDB:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
+    .line 10
+    new-instance v14, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
-    new-instance v13, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
+    const-string v15, "IDB"
 
-    const/16 v15, 0x100
+    const/16 v13, 0x9
 
-    const-string v8, "WLAN_P2P"
+    const/16 v8, 0x80
 
-    const/16 v6, 0xa
+    invoke-direct {v14, v15, v13, v8}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;-><init>(Ljava/lang/String;II)V
 
-    invoke-direct {v13, v8, v6, v15}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;-><init>(Ljava/lang/String;II)V
+    sput-object v14, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->IDB:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
-    sput-object v13, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->WLAN_P2P:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
-
+    .line 11
     new-instance v8, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
-    const/16 v15, 0x200
+    const-string v15, "WLAN_P2P"
 
-    const-string v6, "WLAN_SOFTAP"
+    const/16 v13, 0xa
 
-    const/16 v4, 0xb
+    const/16 v6, 0x100
 
-    invoke-direct {v8, v6, v4, v15}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v8, v15, v13, v6}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;-><init>(Ljava/lang/String;II)V
 
-    sput-object v8, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->WLAN_SOFTAP:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
+    sput-object v8, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->WLAN_P2P:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
+    .line 12
     new-instance v6, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
-    const/16 v15, 0x400
+    const-string v15, "WLAN_SOFTAP"
 
-    const-string v4, "WLAN_GC_SOFTAP"
+    const/16 v13, 0xb
 
-    const/16 v2, 0xc
+    const/16 v4, 0x200
 
-    invoke-direct {v6, v4, v2, v15}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v6, v15, v13, v4}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;-><init>(Ljava/lang/String;II)V
 
-    sput-object v6, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->WLAN_GC_SOFTAP:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
+    sput-object v6, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->WLAN_SOFTAP:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
+    .line 13
     new-instance v4, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
+
+    const-string v15, "WLAN_GC_SOFTAP"
+
+    const/16 v13, 0xc
+
+    const/16 v2, 0x400
+
+    invoke-direct {v4, v15, v13, v2}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;-><init>(Ljava/lang/String;II)V
+
+    sput-object v4, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->WLAN_GC_SOFTAP:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
+
+    .line 14
+    new-instance v2, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
     const-string v15, "UNKNOWN"
 
-    const/16 v2, 0xd
+    const/16 v13, 0xd
 
-    move-object/from16 v16, v6
+    move-object/from16 v16, v4
 
-    const/4 v6, -0x1
+    const/4 v4, -0x1
 
-    invoke-direct {v4, v15, v2, v6}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v2, v15, v13, v4}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;-><init>(Ljava/lang/String;II)V
 
-    sput-object v4, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->UNKNOWN:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
+    sput-object v2, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->UNKNOWN:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
+    .line 15
     new-instance v15, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
-    const-string v2, "UNRECOGNIZED"
+    const-string v13, "UNRECOGNIZED"
 
-    move-object/from16 v17, v4
+    move-object/from16 v17, v2
 
-    const/16 v4, 0xe
+    const/16 v2, 0xe
 
-    invoke-direct {v15, v2, v4, v6}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v15, v13, v2, v4}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;-><init>(Ljava/lang/String;II)V
 
     sput-object v15, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->UNRECOGNIZED:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
-    const/16 v2, 0xf
+    const/16 v4, 0xf
 
-    new-array v2, v2, [Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
+    new-array v4, v4, [Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
-    const/4 v6, 0x0
+    const/4 v13, 0x0
 
-    aput-object v0, v2, v6
+    aput-object v0, v4, v13
 
     const/4 v0, 0x1
 
-    aput-object v1, v2, v0
+    aput-object v1, v4, v0
 
     const/4 v0, 0x2
 
-    aput-object v3, v2, v0
+    aput-object v3, v4, v0
 
     const/4 v0, 0x3
 
-    aput-object v5, v2, v0
+    aput-object v5, v4, v0
 
     const/4 v0, 0x4
 
-    aput-object v7, v2, v0
+    aput-object v7, v4, v0
 
     const/4 v0, 0x5
 
-    aput-object v9, v2, v0
+    aput-object v9, v4, v0
 
     const/4 v0, 0x6
 
-    aput-object v11, v2, v0
+    aput-object v11, v4, v0
 
     const/4 v0, 0x7
 
-    aput-object v14, v2, v0
+    aput-object v12, v4, v0
 
     const/16 v0, 0x8
 
-    aput-object v12, v2, v0
+    aput-object v10, v4, v0
 
     const/16 v0, 0x9
 
-    aput-object v10, v2, v0
+    aput-object v14, v4, v0
 
     const/16 v0, 0xa
 
-    aput-object v13, v2, v0
+    aput-object v8, v4, v0
 
     const/16 v0, 0xb
 
-    aput-object v8, v2, v0
+    aput-object v6, v4, v0
 
     const/16 v0, 0xc
 
-    aput-object v16, v2, v0
+    aput-object v16, v4, v0
 
     const/16 v0, 0xd
 
-    aput-object v17, v2, v0
+    aput-object v17, v4, v0
 
-    aput-object v15, v2, v4
+    aput-object v15, v4, v2
 
-    sput-object v2, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->$VALUES:[Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
+    .line 16
+    sput-object v4, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->$VALUES:[Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
+    .line 17
     new-instance v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType$1;
 
     invoke-direct {v0}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType$1;-><init>()V
@@ -363,8 +380,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 2
     iput p3, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->value:I
 
     return-void
@@ -431,71 +450,85 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     sget-object p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->WLAN_GC_SOFTAP:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
     return-object p0
 
+    .line 2
     :cond_1
     sget-object p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->WLAN_SOFTAP:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
     return-object p0
 
+    .line 3
     :cond_2
     sget-object p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->WLAN_P2P:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
     return-object p0
 
+    .line 4
     :cond_3
     sget-object p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->IDB:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
     return-object p0
 
+    .line 5
     :cond_4
     sget-object p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->NFC:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
     return-object p0
 
+    .line 6
     :cond_5
     sget-object p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->COAP:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
     return-object p0
 
+    .line 7
     :cond_6
     sget-object p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->BLE_GATT:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
     return-object p0
 
+    .line 8
     :cond_7
     sget-object p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->BT_GATT:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
     return-object p0
 
+    .line 9
     :cond_8
     sget-object p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->BT_RFCOMM:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
     return-object p0
 
+    .line 10
     :cond_9
     sget-object p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->WIFI_STATION:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
     return-object p0
 
+    .line 11
     :cond_a
     sget-object p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->WIFI_SOFTAP:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
     return-object p0
 
+    .line 12
     :cond_b
     sget-object p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->WIFI_P2P_GC:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
     return-object p0
 
+    .line 13
     :cond_c
     sget-object p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->WIFI_P2P_GO:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
     return-object p0
 
+    .line 14
     :cond_d
     sget-object p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->UNKNOWN:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
@@ -513,6 +546,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->internalValueMap:Lcom/google/protobuf/Internal$EnumLiteMap;
 
     return-object v0
@@ -521,6 +555,7 @@
 .method public static internalGetVerifier()Lcom/google/protobuf/Internal$EnumVerifier;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType$ConnTypeVerifier;->INSTANCE:Lcom/google/protobuf/Internal$EnumVerifier;
 
     return-object v0
@@ -557,6 +592,7 @@
 .method public static values()[Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->$VALUES:[Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
     invoke-virtual {v0}, [Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->clone()Ljava/lang/Object;
@@ -573,14 +609,17 @@
 .method public final getNumber()I
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->UNRECOGNIZED:Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;
 
     if-eq p0, v0, :cond_0
 
+    .line 2
     iget p0, p0, Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam$ConnType;->value:I
 
     return p0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

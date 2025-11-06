@@ -40,7 +40,7 @@
 
 .field private mIndex:I
 
-.field mLastStartId:I
+.field public mLastStartId:I
 
 .field private final mList:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
@@ -58,7 +58,7 @@
 
 .field private mTargetIndex:I
 
-.field mUpdateRunnable:Ljava/lang/Runnable;
+.field public mUpdateRunnable:Ljava/lang/Runnable;
 
 .field private nextState:I
 
@@ -378,17 +378,10 @@
     return-void
 .end method
 
-.method public static synthetic a(Landroidx/constraintlayout/helper/widget/Carousel;)V
-    .locals 0
-
-    invoke-direct {p0}, Landroidx/constraintlayout/helper/widget/Carousel;->lambda$updateItems$0()V
-
-    return-void
-.end method
-
 .method public static synthetic access$000(Landroidx/constraintlayout/helper/widget/Carousel;)Landroidx/constraintlayout/motion/widget/MotionLayout;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mMotionLayout:Landroidx/constraintlayout/motion/widget/MotionLayout;
 
     return-object p0
@@ -397,6 +390,7 @@
 .method public static synthetic access$100(Landroidx/constraintlayout/helper/widget/Carousel;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroidx/constraintlayout/helper/widget/Carousel;->updateItems()V
 
     return-void
@@ -405,6 +399,7 @@
 .method public static synthetic access$200(Landroidx/constraintlayout/helper/widget/Carousel;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mIndex:I
 
     return p0
@@ -413,6 +408,7 @@
 .method public static synthetic access$300(Landroidx/constraintlayout/helper/widget/Carousel;)Landroidx/constraintlayout/helper/widget/Carousel$Adapter;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mAdapter:Landroidx/constraintlayout/helper/widget/Carousel$Adapter;
 
     return-object p0
@@ -421,6 +417,7 @@
 .method public static synthetic access$400(Landroidx/constraintlayout/helper/widget/Carousel;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->touchUpMode:I
 
     return p0
@@ -429,6 +426,7 @@
 .method public static synthetic access$500(Landroidx/constraintlayout/helper/widget/Carousel;)F
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->velocityThreshold:F
 
     return p0
@@ -437,6 +435,7 @@
 .method public static synthetic access$600(Landroidx/constraintlayout/helper/widget/Carousel;)F
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->dampening:F
 
     return p0
@@ -445,6 +444,7 @@
 .method public static synthetic access$700(Landroidx/constraintlayout/helper/widget/Carousel;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mPreviousIndex:I
 
     return p0
@@ -461,12 +461,14 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mMotionLayout:Landroidx/constraintlayout/motion/widget/MotionLayout;
 
     invoke-virtual {p0}, Landroidx/constraintlayout/motion/widget/MotionLayout;->getDefinedTransitions()Ljava/util/ArrayList;
 
     move-result-object p0
 
+    .line 2
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -484,6 +486,7 @@
 
     check-cast v0, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;
 
+    .line 3
     invoke-virtual {v0, p1}, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->setEnabled(Z)V
 
     goto :goto_0
@@ -505,21 +508,23 @@
         }
     .end annotation
 
-    const/4 v0, -0x1
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    const/4 v1, -0x1
 
-    if-ne p1, v0, :cond_0
+    if-ne p1, v1, :cond_0
 
-    return v1
+    return v0
 
+    .line 1
     :cond_0
     iget-object p0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mMotionLayout:Landroidx/constraintlayout/motion/widget/MotionLayout;
 
     if-nez p0, :cond_1
 
-    return v1
+    return v0
 
+    .line 2
     :cond_1
     invoke-virtual {p0, p1}, Landroidx/constraintlayout/motion/widget/MotionLayout;->getTransition(I)Landroidx/constraintlayout/motion/widget/MotionScene$Transition;
 
@@ -527,8 +532,9 @@
 
     if-nez p0, :cond_2
 
-    return v1
+    return v0
 
+    .line 3
     :cond_2
     invoke-virtual {p0}, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->isEnabled()Z
 
@@ -536,8 +542,9 @@
 
     if-ne p2, p1, :cond_3
 
-    return v1
+    return v0
 
+    .line 4
     :cond_3
     invoke-virtual {p0, p2}, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->setEnabled(Z)V
 
@@ -561,12 +568,14 @@
 
     if-eqz p2, :cond_b
 
+    .line 1
     sget-object v0, Landroidx/constraintlayout/widget/R$styleable;->Carousel:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
+    .line 2
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->getIndexCount()I
 
     move-result p2
@@ -576,14 +585,17 @@
     :goto_0
     if-ge v0, p2, :cond_a
 
+    .line 3
     invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->getIndex(I)I
 
     move-result v1
 
+    .line 4
     sget v2, Landroidx/constraintlayout/widget/R$styleable;->Carousel_carousel_firstView:I
 
     if-ne v1, v2, :cond_0
 
+    .line 5
     iget v2, p0, Landroidx/constraintlayout/helper/widget/Carousel;->firstViewReference:I
 
     invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
@@ -594,11 +606,13 @@
 
     goto/16 :goto_1
 
+    .line 6
     :cond_0
     sget v2, Landroidx/constraintlayout/widget/R$styleable;->Carousel_carousel_backwardTransition:I
 
     if-ne v1, v2, :cond_1
 
+    .line 7
     iget v2, p0, Landroidx/constraintlayout/helper/widget/Carousel;->backwardTransition:I
 
     invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
@@ -609,11 +623,13 @@
 
     goto/16 :goto_1
 
+    .line 8
     :cond_1
     sget v2, Landroidx/constraintlayout/widget/R$styleable;->Carousel_carousel_forwardTransition:I
 
     if-ne v1, v2, :cond_2
 
+    .line 9
     iget v2, p0, Landroidx/constraintlayout/helper/widget/Carousel;->forwardTransition:I
 
     invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
@@ -624,11 +640,13 @@
 
     goto :goto_1
 
+    .line 10
     :cond_2
     sget v2, Landroidx/constraintlayout/widget/R$styleable;->Carousel_carousel_emptyViewsBehavior:I
 
     if-ne v1, v2, :cond_3
 
+    .line 11
     iget v2, p0, Landroidx/constraintlayout/helper/widget/Carousel;->emptyViewBehavior:I
 
     invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getInt(II)I
@@ -639,11 +657,13 @@
 
     goto :goto_1
 
+    .line 12
     :cond_3
     sget v2, Landroidx/constraintlayout/widget/R$styleable;->Carousel_carousel_previousState:I
 
     if-ne v1, v2, :cond_4
 
+    .line 13
     iget v2, p0, Landroidx/constraintlayout/helper/widget/Carousel;->previousState:I
 
     invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
@@ -654,11 +674,13 @@
 
     goto :goto_1
 
+    .line 14
     :cond_4
     sget v2, Landroidx/constraintlayout/widget/R$styleable;->Carousel_carousel_nextState:I
 
     if-ne v1, v2, :cond_5
 
+    .line 15
     iget v2, p0, Landroidx/constraintlayout/helper/widget/Carousel;->nextState:I
 
     invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
@@ -669,11 +691,13 @@
 
     goto :goto_1
 
+    .line 16
     :cond_5
     sget v2, Landroidx/constraintlayout/widget/R$styleable;->Carousel_carousel_touchUp_dampeningFactor:I
 
     if-ne v1, v2, :cond_6
 
+    .line 17
     iget v2, p0, Landroidx/constraintlayout/helper/widget/Carousel;->dampening:F
 
     invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
@@ -684,11 +708,13 @@
 
     goto :goto_1
 
+    .line 18
     :cond_6
     sget v2, Landroidx/constraintlayout/widget/R$styleable;->Carousel_carousel_touchUpMode:I
 
     if-ne v1, v2, :cond_7
 
+    .line 19
     iget v2, p0, Landroidx/constraintlayout/helper/widget/Carousel;->touchUpMode:I
 
     invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getInt(II)I
@@ -699,11 +725,13 @@
 
     goto :goto_1
 
+    .line 20
     :cond_7
     sget v2, Landroidx/constraintlayout/widget/R$styleable;->Carousel_carousel_touchUp_velocityThreshold:I
 
     if-ne v1, v2, :cond_8
 
+    .line 21
     iget v2, p0, Landroidx/constraintlayout/helper/widget/Carousel;->velocityThreshold:F
 
     invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
@@ -714,11 +742,13 @@
 
     goto :goto_1
 
+    .line 22
     :cond_8
     sget v2, Landroidx/constraintlayout/widget/R$styleable;->Carousel_carousel_infinite:I
 
     if-ne v1, v2, :cond_9
 
+    .line 23
     iget-boolean v2, p0, Landroidx/constraintlayout/helper/widget/Carousel;->infiniteCarousel:Z
 
     invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -733,6 +763,7 @@
 
     goto/16 :goto_0
 
+    .line 24
     :cond_a
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
@@ -743,18 +774,21 @@
 .method private synthetic lambda$updateItems$0()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mMotionLayout:Landroidx/constraintlayout/motion/widget/MotionLayout;
 
     iget v1, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mAnimateTargetDelay:I
 
     invoke-virtual {v0, v1}, Landroidx/constraintlayout/motion/widget/MotionLayout;->setTransitionDuration(I)V
 
+    .line 2
     iget v0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mTargetIndex:I
 
     iget v1, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mIndex:I
 
     if-ge v0, v1, :cond_0
 
+    .line 3
     iget-object v0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mMotionLayout:Landroidx/constraintlayout/motion/widget/MotionLayout;
 
     iget v1, p0, Landroidx/constraintlayout/helper/widget/Carousel;->previousState:I
@@ -765,6 +799,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-object v0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mMotionLayout:Landroidx/constraintlayout/motion/widget/MotionLayout;
 
@@ -781,12 +816,14 @@
 .method private updateItems()V
     .locals 8
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mAdapter:Landroidx/constraintlayout/helper/widget/Carousel$Adapter;
 
     if-nez v0, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     iget-object v1, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mMotionLayout:Landroidx/constraintlayout/motion/widget/MotionLayout;
 
@@ -794,6 +831,7 @@
 
     return-void
 
+    .line 3
     :cond_1
     invoke-interface {v0}, Landroidx/constraintlayout/helper/widget/Carousel$Adapter;->count()I
 
@@ -803,6 +841,7 @@
 
     return-void
 
+    .line 4
     :cond_2
     iget-object v0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mList:Ljava/util/ArrayList;
 
@@ -817,6 +856,7 @@
     :goto_0
     if-ge v2, v0, :cond_d
 
+    .line 5
     iget-object v3, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mList:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -825,6 +865,7 @@
 
     check-cast v3, Landroid/view/View;
 
+    .line 6
     iget v4, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mIndex:I
 
     add-int/2addr v4, v2
@@ -833,6 +874,7 @@
 
     sub-int/2addr v4, v5
 
+    .line 7
     iget-boolean v5, p0, Landroidx/constraintlayout/helper/widget/Carousel;->infiniteCarousel:Z
 
     if-eqz v5, :cond_a
@@ -841,17 +883,21 @@
 
     if-gez v4, :cond_5
 
+    .line 8
     iget v6, p0, Landroidx/constraintlayout/helper/widget/Carousel;->emptyViewBehavior:I
 
     if-eq v6, v5, :cond_3
 
+    .line 9
     invoke-direct {p0, v3, v6}, Landroidx/constraintlayout/helper/widget/Carousel;->updateViewVisibility(Landroid/view/View;I)Z
 
     goto :goto_1
 
+    .line 10
     :cond_3
     invoke-direct {p0, v3, v1}, Landroidx/constraintlayout/helper/widget/Carousel;->updateViewVisibility(Landroid/view/View;I)Z
 
+    .line 11
     :goto_1
     iget-object v5, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mAdapter:Landroidx/constraintlayout/helper/widget/Carousel$Adapter;
 
@@ -863,12 +909,14 @@
 
     if-nez v5, :cond_4
 
+    .line 12
     iget-object v4, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mAdapter:Landroidx/constraintlayout/helper/widget/Carousel$Adapter;
 
     invoke-interface {v4, v3, v1}, Landroidx/constraintlayout/helper/widget/Carousel$Adapter;->populate(Landroid/view/View;I)V
 
     goto/16 :goto_4
 
+    .line 13
     :cond_4
     iget-object v5, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mAdapter:Landroidx/constraintlayout/helper/widget/Carousel$Adapter;
 
@@ -890,6 +938,7 @@
 
     goto :goto_4
 
+    .line 14
     :cond_5
     iget-object v6, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mAdapter:Landroidx/constraintlayout/helper/widget/Carousel$Adapter;
 
@@ -899,6 +948,7 @@
 
     if-lt v4, v6, :cond_9
 
+    .line 15
     iget-object v6, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mAdapter:Landroidx/constraintlayout/helper/widget/Carousel$Adapter;
 
     invoke-interface {v6}, Landroidx/constraintlayout/helper/widget/Carousel$Adapter;->count()I
@@ -911,6 +961,7 @@
 
     goto :goto_2
 
+    .line 16
     :cond_6
     iget-object v6, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mAdapter:Landroidx/constraintlayout/helper/widget/Carousel$Adapter;
 
@@ -920,6 +971,7 @@
 
     if-le v4, v6, :cond_7
 
+    .line 17
     iget-object v6, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mAdapter:Landroidx/constraintlayout/helper/widget/Carousel$Adapter;
 
     invoke-interface {v6}, Landroidx/constraintlayout/helper/widget/Carousel$Adapter;->count()I
@@ -928,19 +980,23 @@
 
     rem-int/2addr v4, v6
 
+    .line 18
     :cond_7
     :goto_2
     iget v6, p0, Landroidx/constraintlayout/helper/widget/Carousel;->emptyViewBehavior:I
 
     if-eq v6, v5, :cond_8
 
+    .line 19
     invoke-direct {p0, v3, v6}, Landroidx/constraintlayout/helper/widget/Carousel;->updateViewVisibility(Landroid/view/View;I)Z
 
     goto :goto_3
 
+    .line 20
     :cond_8
     invoke-direct {p0, v3, v1}, Landroidx/constraintlayout/helper/widget/Carousel;->updateViewVisibility(Landroid/view/View;I)Z
 
+    .line 21
     :goto_3
     iget-object v5, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mAdapter:Landroidx/constraintlayout/helper/widget/Carousel$Adapter;
 
@@ -948,9 +1004,11 @@
 
     goto :goto_4
 
+    .line 22
     :cond_9
     invoke-direct {p0, v3, v1}, Landroidx/constraintlayout/helper/widget/Carousel;->updateViewVisibility(Landroid/view/View;I)Z
 
+    .line 23
     iget-object v5, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mAdapter:Landroidx/constraintlayout/helper/widget/Carousel$Adapter;
 
     invoke-interface {v5, v3, v4}, Landroidx/constraintlayout/helper/widget/Carousel$Adapter;->populate(Landroid/view/View;I)V
@@ -960,12 +1018,14 @@
     :cond_a
     if-gez v4, :cond_b
 
+    .line 24
     iget v4, p0, Landroidx/constraintlayout/helper/widget/Carousel;->emptyViewBehavior:I
 
     invoke-direct {p0, v3, v4}, Landroidx/constraintlayout/helper/widget/Carousel;->updateViewVisibility(Landroid/view/View;I)Z
 
     goto :goto_4
 
+    .line 25
     :cond_b
     iget-object v5, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mAdapter:Landroidx/constraintlayout/helper/widget/Carousel$Adapter;
 
@@ -975,15 +1035,18 @@
 
     if-lt v4, v5, :cond_c
 
+    .line 26
     iget v4, p0, Landroidx/constraintlayout/helper/widget/Carousel;->emptyViewBehavior:I
 
     invoke-direct {p0, v3, v4}, Landroidx/constraintlayout/helper/widget/Carousel;->updateViewVisibility(Landroid/view/View;I)Z
 
     goto :goto_4
 
+    .line 27
     :cond_c
     invoke-direct {p0, v3, v1}, Landroidx/constraintlayout/helper/widget/Carousel;->updateViewVisibility(Landroid/view/View;I)Z
 
+    .line 28
     iget-object v5, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mAdapter:Landroidx/constraintlayout/helper/widget/Carousel$Adapter;
 
     invoke-interface {v5, v3, v4}, Landroidx/constraintlayout/helper/widget/Carousel$Adapter;->populate(Landroid/view/View;I)V
@@ -993,6 +1056,7 @@
 
     goto/16 :goto_0
 
+    .line 29
     :cond_d
     iget v0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mTargetIndex:I
 
@@ -1004,23 +1068,27 @@
 
     if-eq v0, v3, :cond_e
 
+    .line 30
     iget-object v0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mMotionLayout:Landroidx/constraintlayout/motion/widget/MotionLayout;
 
-    new-instance v3, Landroidx/constraintlayout/helper/widget/a;
+    new-instance v3, Lc/a/b/a/a;
 
-    invoke-direct {v3, p0}, Landroidx/constraintlayout/helper/widget/a;-><init>(Landroidx/constraintlayout/helper/widget/Carousel;)V
+    invoke-direct {v3, p0}, Lc/a/b/a/a;-><init>(Landroidx/constraintlayout/helper/widget/Carousel;)V
 
-    invoke-virtual {v0, v3}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_5
 
+    .line 31
     :cond_e
     iget v3, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mIndex:I
 
     if-ne v0, v3, :cond_f
 
+    .line 32
     iput v2, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mTargetIndex:I
 
+    .line 33
     :cond_f
     :goto_5
     iget v0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->backwardTransition:I
@@ -1033,6 +1101,7 @@
 
     goto :goto_8
 
+    .line 34
     :cond_10
     iget-boolean v0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->infiniteCarousel:Z
 
@@ -1040,6 +1109,7 @@
 
     return-void
 
+    .line 35
     :cond_11
     iget-object v0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mAdapter:Landroidx/constraintlayout/helper/widget/Carousel$Adapter;
 
@@ -1047,29 +1117,34 @@
 
     move-result v0
 
+    .line 36
     iget v2, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mIndex:I
 
     const/4 v3, 0x1
 
     if-nez v2, :cond_12
 
+    .line 37
     iget v2, p0, Landroidx/constraintlayout/helper/widget/Carousel;->backwardTransition:I
 
     invoke-direct {p0, v2, v1}, Landroidx/constraintlayout/helper/widget/Carousel;->enableTransition(IZ)Z
 
     goto :goto_6
 
+    .line 38
     :cond_12
     iget v2, p0, Landroidx/constraintlayout/helper/widget/Carousel;->backwardTransition:I
 
     invoke-direct {p0, v2, v3}, Landroidx/constraintlayout/helper/widget/Carousel;->enableTransition(IZ)Z
 
+    .line 39
     iget-object v2, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mMotionLayout:Landroidx/constraintlayout/motion/widget/MotionLayout;
 
     iget v4, p0, Landroidx/constraintlayout/helper/widget/Carousel;->backwardTransition:I
 
     invoke-virtual {v2, v4}, Landroidx/constraintlayout/motion/widget/MotionLayout;->setTransition(I)V
 
+    .line 40
     :goto_6
     iget v2, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mIndex:I
 
@@ -1077,17 +1152,20 @@
 
     if-ne v2, v0, :cond_13
 
+    .line 41
     iget v0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->forwardTransition:I
 
     invoke-direct {p0, v0, v1}, Landroidx/constraintlayout/helper/widget/Carousel;->enableTransition(IZ)Z
 
     goto :goto_7
 
+    .line 42
     :cond_13
     iget v0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->forwardTransition:I
 
     invoke-direct {p0, v0, v3}, Landroidx/constraintlayout/helper/widget/Carousel;->enableTransition(IZ)Z
 
+    .line 43
     iget-object v0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mMotionLayout:Landroidx/constraintlayout/motion/widget/MotionLayout;
 
     iget p0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->forwardTransition:I
@@ -1103,6 +1181,7 @@
 
     const-string v0, "No backward or forward transitions defined for Carousel!"
 
+    .line 44
     invoke-static {p0, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -1219,13 +1298,23 @@
 
 
 # virtual methods
+.method public synthetic a()V
+    .locals 0
+
+    invoke-direct {p0}, Landroidx/constraintlayout/helper/widget/Carousel;->lambda$updateItems$0()V
+
+    return-void
+.end method
+
 .method public getCount()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mAdapter:Landroidx/constraintlayout/helper/widget/Carousel$Adapter;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0}, Landroidx/constraintlayout/helper/widget/Carousel$Adapter;->count()I
 
     move-result p0
@@ -1241,6 +1330,7 @@
 .method public getCurrentIndex()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mIndex:I
 
     return p0
@@ -1257,6 +1347,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroidx/constraintlayout/helper/widget/Carousel;->getCount()I
 
     move-result v0
@@ -1275,6 +1366,7 @@
 
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mIndex:I
 
+    .line 2
     invoke-virtual {p0}, Landroidx/constraintlayout/helper/widget/Carousel;->refresh()V
 
     return-void
@@ -1286,8 +1378,10 @@
         api = 0x11
     .end annotation
 
+    .line 1
     invoke-super {p0}, Landroidx/constraintlayout/widget/ConstraintHelper;->onAttachedToWindow()V
 
+    .line 2
     invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -1296,6 +1390,7 @@
 
     if-eqz v0, :cond_4
 
+    .line 3
     invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -1304,25 +1399,31 @@
 
     const/4 v1, 0x0
 
+    .line 4
     :goto_0
     iget v2, p0, Landroidx/constraintlayout/widget/ConstraintHelper;->mCount:I
 
     if-ge v1, v2, :cond_1
 
+    .line 5
     iget-object v2, p0, Landroidx/constraintlayout/widget/ConstraintHelper;->mIds:[I
 
     aget v2, v2, v1
 
+    .line 6
     invoke-virtual {v0, v2}, Landroidx/constraintlayout/widget/ConstraintLayout;->getViewById(I)Landroid/view/View;
 
     move-result-object v3
 
+    .line 7
     iget v4, p0, Landroidx/constraintlayout/helper/widget/Carousel;->firstViewReference:I
 
     if-ne v4, v2, :cond_0
 
+    .line 8
     iput v1, p0, Landroidx/constraintlayout/helper/widget/Carousel;->startIndex:I
 
+    .line 9
     :cond_0
     iget-object v2, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mList:Ljava/util/ArrayList;
 
@@ -1332,15 +1433,18 @@
 
     goto :goto_0
 
+    .line 10
     :cond_1
     iput-object v0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mMotionLayout:Landroidx/constraintlayout/motion/widget/MotionLayout;
 
+    .line 11
     iget v1, p0, Landroidx/constraintlayout/helper/widget/Carousel;->touchUpMode:I
 
     const/4 v2, 0x2
 
     if-ne v1, v2, :cond_3
 
+    .line 12
     iget v1, p0, Landroidx/constraintlayout/helper/widget/Carousel;->forwardTransition:I
 
     invoke-virtual {v0, v1}, Landroidx/constraintlayout/motion/widget/MotionLayout;->getTransition(I)Landroidx/constraintlayout/motion/widget/MotionScene$Transition;
@@ -1351,8 +1455,10 @@
 
     if-eqz v0, :cond_2
 
+    .line 13
     invoke-virtual {v0, v1}, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->setOnTouchUp(I)V
 
+    .line 14
     :cond_2
     iget-object v0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mMotionLayout:Landroidx/constraintlayout/motion/widget/MotionLayout;
 
@@ -1364,8 +1470,10 @@
 
     if-eqz v0, :cond_3
 
+    .line 15
     invoke-virtual {v0, v1}, Landroidx/constraintlayout/motion/widget/MotionScene$Transition;->setOnTouchUp(I)V
 
+    .line 16
     :cond_3
     invoke-direct {p0}, Landroidx/constraintlayout/helper/widget/Carousel;->updateItems()V
 
@@ -1390,6 +1498,7 @@
         }
     .end annotation
 
+    .line 1
     iput p2, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mLastStartId:I
 
     return-void
@@ -1408,20 +1517,24 @@
         }
     .end annotation
 
+    .line 1
     iget p1, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mIndex:I
 
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mPreviousIndex:I
 
+    .line 2
     iget v0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->nextState:I
 
     if-ne p2, v0, :cond_0
 
     add-int/lit8 p1, p1, 0x1
 
+    .line 3
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mIndex:I
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget v0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->previousState:I
 
@@ -1429,8 +1542,10 @@
 
     add-int/lit8 p1, p1, -0x1
 
+    .line 5
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mIndex:I
 
+    .line 6
     :cond_1
     :goto_0
     iget-boolean p1, p0, Landroidx/constraintlayout/helper/widget/Carousel;->infiniteCarousel:Z
@@ -1439,6 +1554,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 7
     iget p1, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mIndex:I
 
     iget-object v0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mAdapter:Landroidx/constraintlayout/helper/widget/Carousel$Adapter;
@@ -1449,13 +1565,16 @@
 
     if-lt p1, v0, :cond_2
 
+    .line 8
     iput p2, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mIndex:I
 
+    .line 9
     :cond_2
     iget p1, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mIndex:I
 
     if-gez p1, :cond_5
 
+    .line 10
     iget-object p1, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mAdapter:Landroidx/constraintlayout/helper/widget/Carousel$Adapter;
 
     invoke-interface {p1}, Landroidx/constraintlayout/helper/widget/Carousel$Adapter;->count()I
@@ -1468,6 +1587,7 @@
 
     goto :goto_1
 
+    .line 11
     :cond_3
     iget p1, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mIndex:I
 
@@ -1479,6 +1599,7 @@
 
     if-lt p1, v0, :cond_4
 
+    .line 12
     iget-object p1, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mAdapter:Landroidx/constraintlayout/helper/widget/Carousel$Adapter;
 
     invoke-interface {p1}, Landroidx/constraintlayout/helper/widget/Carousel$Adapter;->count()I
@@ -1489,13 +1610,16 @@
 
     iput p1, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mIndex:I
 
+    .line 13
     :cond_4
     iget p1, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mIndex:I
 
     if-gez p1, :cond_5
 
+    .line 14
     iput p2, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mIndex:I
 
+    .line 15
     :cond_5
     :goto_1
     iget p1, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mPreviousIndex:I
@@ -1504,11 +1628,12 @@
 
     if-eq p1, p2, :cond_6
 
+    .line 16
     iget-object p1, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mMotionLayout:Landroidx/constraintlayout/motion/widget/MotionLayout;
 
     iget-object p0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mUpdateRunnable:Ljava/lang/Runnable;
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {p1, p0}, Landroid/view/ViewGroup;->post(Ljava/lang/Runnable;)Z
 
     :cond_6
     return-void
@@ -1517,6 +1642,7 @@
 .method public refresh()V
     .locals 5
 
+    .line 1
     iget-object v0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -1530,6 +1656,7 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
+    .line 2
     iget-object v3, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mList:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1538,6 +1665,7 @@
 
     check-cast v3, Landroid/view/View;
 
+    .line 3
     iget-object v4, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mAdapter:Landroidx/constraintlayout/helper/widget/Carousel$Adapter;
 
     invoke-interface {v4}, Landroidx/constraintlayout/helper/widget/Carousel$Adapter;->count()I
@@ -1546,12 +1674,14 @@
 
     if-nez v4, :cond_0
 
+    .line 4
     iget v4, p0, Landroidx/constraintlayout/helper/widget/Carousel;->emptyViewBehavior:I
 
     invoke-direct {p0, v3, v4}, Landroidx/constraintlayout/helper/widget/Carousel;->updateViewVisibility(Landroid/view/View;I)Z
 
     goto :goto_1
 
+    .line 5
     :cond_0
     invoke-direct {p0, v3, v1}, Landroidx/constraintlayout/helper/widget/Carousel;->updateViewVisibility(Landroid/view/View;I)Z
 
@@ -1560,11 +1690,13 @@
 
     goto :goto_0
 
+    .line 6
     :cond_1
     iget-object v0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mMotionLayout:Landroidx/constraintlayout/motion/widget/MotionLayout;
 
     invoke-virtual {v0}, Landroidx/constraintlayout/motion/widget/MotionLayout;->rebuildScene()V
 
+    .line 7
     invoke-direct {p0}, Landroidx/constraintlayout/helper/widget/Carousel;->updateItems()V
 
     return-void
@@ -1581,6 +1713,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mAdapter:Landroidx/constraintlayout/helper/widget/Carousel$Adapter;
 
     return-void
@@ -1599,6 +1732,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroidx/constraintlayout/helper/widget/Carousel;->getCount()I
 
     move-result v0
@@ -1617,20 +1751,24 @@
 
     iput v0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mTargetIndex:I
 
+    .line 2
     invoke-static {v1, p2}, Ljava/lang/Math;->max(II)I
 
     move-result p2
 
     iput p2, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mAnimateTargetDelay:I
 
+    .line 3
     iget-object v0, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mMotionLayout:Landroidx/constraintlayout/motion/widget/MotionLayout;
 
     invoke-virtual {v0, p2}, Landroidx/constraintlayout/motion/widget/MotionLayout;->setTransitionDuration(I)V
 
+    .line 4
     iget p2, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mIndex:I
 
     if-ge p1, p2, :cond_0
 
+    .line 5
     iget-object p1, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mMotionLayout:Landroidx/constraintlayout/motion/widget/MotionLayout;
 
     iget p2, p0, Landroidx/constraintlayout/helper/widget/Carousel;->previousState:I
@@ -1641,6 +1779,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     iget-object p1, p0, Landroidx/constraintlayout/helper/widget/Carousel;->mMotionLayout:Landroidx/constraintlayout/motion/widget/MotionLayout;
 

@@ -1,4 +1,4 @@
-.class Lcom/google/common/base/Predicates$InPredicate;
+.class public Lcom/google/common/base/Predicates$InPredicate;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -94,6 +94,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/google/common/base/Predicates$InPredicate;->target:Ljava/util/Collection;
 
@@ -119,12 +120,15 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/common/base/Predicates$InPredicate;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/common/base/Predicates$InPredicate;
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/base/Predicates$InPredicate;->target:Ljava/util/Collection;
 
     iget-object p1, p1, Lcom/google/common/base/Predicates$InPredicate;->target:Ljava/util/Collection;
@@ -144,6 +148,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/Predicates$InPredicate;->target:Ljava/util/Collection;
 
     invoke-interface {p0}, Ljava/util/Collection;->hashCode()I
@@ -156,6 +161,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/base/Predicates$InPredicate;->target:Ljava/util/Collection;
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

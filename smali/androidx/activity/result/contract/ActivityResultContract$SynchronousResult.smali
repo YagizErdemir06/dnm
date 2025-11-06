@@ -22,33 +22,15 @@
     }
 .end annotation
 
-.annotation runtime Lnm/i0;
-    d1 = {
-        "\u0000\u000e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0000\n\u0002\u0008\u0006\u0018\u0000*\u0004\u0008\u0002\u0010\u00012\u00020\u0002B\r\u0012\u0006\u0010\u0003\u001a\u00028\u0002\u00a2\u0006\u0002\u0010\u0004R\u0013\u0010\u0003\u001a\u00028\u0002\u00a2\u0006\n\n\u0002\u0010\u0007\u001a\u0004\u0008\u0005\u0010\u0006\u00a8\u0006\u0008"
-    }
-    d2 = {
-        "Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;",
-        "T",
-        "",
-        "value",
-        "(Ljava/lang/Object;)V",
-        "getValue",
-        "()Ljava/lang/Object;",
-        "Ljava/lang/Object;",
-        "activity_release"
-    }
-    k = 0x1
-    mv = {
-        0x1,
-        0x6,
-        0x0
-    }
-    xi = 0x30
-.end annotation
-
 
 # instance fields
-.field private final value:Ljava/lang/Object;
+.field private final mValue:Ljava/lang/Object;
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "UnknownNullness"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TT;"
@@ -60,30 +42,46 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroid/annotation/SuppressLint;
+            value = {
+                "UnknownNullness"
+            }
+        .end annotation
+    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)V"
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;->value:Ljava/lang/Object;
+    .line 2
+    iput-object p1, p0, Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;->mValue:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getValue()Ljava/lang/Object;
+.method public getValue()Ljava/lang/Object;
     .locals 0
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "UnknownNullness"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TT;"
         }
     .end annotation
 
-    iget-object p0, p0, Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;->value:Ljava/lang/Object;
+    .line 1
+    iget-object p0, p0, Landroidx/activity/result/contract/ActivityResultContract$SynchronousResult;->mValue:Ljava/lang/Object;
 
     return-object p0
 .end method

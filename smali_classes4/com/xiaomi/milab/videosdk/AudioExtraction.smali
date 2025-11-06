@@ -27,18 +27,22 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
+    .line 2
     iput-wide v0, p0, Lcom/xiaomi/milab/videosdk/AudioExtraction;->mHandler:J
 
     const/4 v0, 0x0
 
+    .line 3
     iput v0, p0, Lcom/xiaomi/milab/videosdk/AudioExtraction;->mFrom:I
 
     const/4 v0, -0x1
 
+    .line 4
     iput v0, p0, Lcom/xiaomi/milab/videosdk/AudioExtraction;->mTo:I
 
     return-void
@@ -81,6 +85,7 @@
 .method public extract()V
     .locals 7
 
+    .line 1
     iget-object v1, p0, Lcom/xiaomi/milab/videosdk/AudioExtraction;->mInputFile:Ljava/lang/String;
 
     iget v2, p0, Lcom/xiaomi/milab/videosdk/AudioExtraction;->mFrom:I
@@ -107,6 +112,7 @@
 .method public release()V
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/AudioExtraction;->mHandler:J
 
     const-wide/16 v2, 0x0
@@ -115,6 +121,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0, v1}, Lcom/xiaomi/milab/videosdk/AudioExtraction;->_release(J)V
 
     :cond_0
@@ -132,6 +139,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/milab/videosdk/AudioExtraction;->mInputFile:Ljava/lang/String;
 
     return-void
@@ -152,10 +160,13 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/milab/videosdk/AudioExtraction;->mOutputFile:Ljava/lang/String;
 
+    .line 2
     iput p2, p0, Lcom/xiaomi/milab/videosdk/AudioExtraction;->mChannels:I
 
+    .line 3
     iput p3, p0, Lcom/xiaomi/milab/videosdk/AudioExtraction;->mFrequency:I
 
     return-void
@@ -174,8 +185,10 @@
         }
     .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/milab/videosdk/AudioExtraction;->mFrom:I
 
+    .line 2
     iput p2, p0, Lcom/xiaomi/milab/videosdk/AudioExtraction;->mTo:I
 
     return-void

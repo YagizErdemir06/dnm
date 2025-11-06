@@ -56,10 +56,12 @@
 
     check-cast p2, Lcom/google/android/gms/tasks/TaskCompletionSource;
 
+    .line 1
     new-instance v4, Lcom/google/android/gms/common/moduleinstall/internal/zau;
 
     invoke-direct {v4, v0, v1, p2, v2}, Lcom/google/android/gms/common/moduleinstall/internal/zau;-><init>(Lcom/google/android/gms/common/moduleinstall/internal/zay;Ljava/util/concurrent/atomic/AtomicReference;Lcom/google/android/gms/tasks/TaskCompletionSource;Lcom/google/android/gms/common/moduleinstall/InstallStatusListener;)V
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/android/gms/common/internal/BaseGmsClient;->getService()Landroid/os/IInterface;
 
     move-result-object p1

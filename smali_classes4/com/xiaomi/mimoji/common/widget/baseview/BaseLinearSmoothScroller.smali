@@ -4,39 +4,39 @@
 
 
 # static fields
-.field public static final i:Ljava/lang/String; = "BaseLinearSmoothScroller"
+.field public static final a:Ljava/lang/String; = "BaseLinearSmoothScroller"
 
-.field public static final j:Z = false
+.field private static final b:Z = false
 
-.field public static final k:F = 160.0f
+.field private static final c:F = 160.0f
 
-.field public static final l:I = 0x2710
+.field private static final d:I = 0x2710
 
-.field public static final m:I = -0x1
+.field public static final e:I = -0x1
 
-.field public static final n:I = 0x1
+.field public static final f:I = 0x1
 
-.field public static final o:I = 0x0
+.field public static final g:I = 0x0
 
-.field public static final p:F = 1.2f
+.field private static final h:F = 1.2f
 
 
 # instance fields
-.field public final a:Landroid/view/animation/LinearInterpolator;
+.field public final i:Landroid/view/animation/LinearInterpolator;
 
-.field public final b:Landroid/view/animation/DecelerateInterpolator;
+.field public final j:Landroid/view/animation/DecelerateInterpolator;
 
-.field public c:Landroid/graphics/PointF;
+.field public k:Landroid/graphics/PointF;
 
-.field public final d:Landroid/util/DisplayMetrics;
+.field private final l:Landroid/util/DisplayMetrics;
 
-.field public e:Z
+.field private m:Z
 
-.field public f:F
+.field private n:F
 
-.field public g:I
+.field public o:I
 
-.field public h:I
+.field public p:I
 
 
 # direct methods
@@ -48,29 +48,44 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;-><init>()V
 
+    .line 2
     new-instance v0, Landroid/view/animation/LinearInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
-    iput-object v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->a:Landroid/view/animation/LinearInterpolator;
+    iput-object v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->i:Landroid/view/animation/LinearInterpolator;
 
+    .line 3
     new-instance v0, Landroid/view/animation/DecelerateInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
 
-    iput-object v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->b:Landroid/view/animation/DecelerateInterpolator;
+    iput-object v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->j:Landroid/view/animation/DecelerateInterpolator;
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->e:Z
+    .line 4
+    iput-boolean v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->m:Z
 
-    iput v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->g:I
+    .line 5
+    iput v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->o:I
 
-    iput v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->h:I
+    .line 6
+    iput v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->p:I
 
+    .line 7
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -79,15 +94,88 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->d:Landroid/util/DisplayMetrics;
+    iput-object p1, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->l:Landroid/util/DisplayMetrics;
 
     return-void
+.end method
+
+.method private clampApplyScroll(II)I
+    .locals 0
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "tmpDt",
+            "dt"
+        }
+    .end annotation
+
+    sub-int p0, p1, p2
+
+    mul-int/2addr p1, p0
+
+    if-gtz p1, :cond_0
+
+    const/4 p0, 0x0
+
+    :cond_0
+    return p0
+.end method
+
+.method private getSpeedPerPixel()F
+    .locals 1
+
+    .line 1
+    iget-boolean v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->m:Z
+
+    if-nez v0, :cond_0
+
+    .line 2
+    iget-object v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->l:Landroid/util/DisplayMetrics;
+
+    invoke-virtual {p0, v0}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->calculateSpeedPerPixel(Landroid/util/DisplayMetrics;)F
+
+    move-result v0
+
+    iput v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->n:F
+
+    const/4 v0, 0x1
+
+    .line 3
+    iput-boolean v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->m:Z
+
+    .line 4
+    :cond_0
+    iget p0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->n:F
+
+    return p0
 .end method
 
 
 # virtual methods
 .method public calculateDtToFit(IIIII)I
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "viewStart",
+            "viewEnd",
+            "boxStart",
+            "boxEnd",
+            "snapPreference"
+        }
+    .end annotation
 
     const/4 p0, -0x1
 
@@ -103,6 +191,7 @@
 
     return p4
 
+    .line 1
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -139,13 +228,25 @@
 
 .method public calculateDxToMakeVisible(Landroid/view/View;I)I
     .locals 10
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "view",
+            "snapPreference"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->getLayoutManager()Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
+    .line 2
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->canScrollHorizontally()Z
 
     move-result v1
@@ -154,6 +255,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -161,6 +263,7 @@
 
     check-cast v1, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
 
+    .line 4
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getDecoratedLeft(Landroid/view/View;)I
 
     move-result v2
@@ -169,6 +272,7 @@
 
     sub-int v5, v2, v3
 
+    .line 5
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getDecoratedRight(Landroid/view/View;)I
 
     move-result p1
@@ -177,10 +281,12 @@
 
     add-int v6, p1, v1
 
+    .line 6
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getPaddingLeft()I
 
     move-result v7
 
+    .line 7
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getWidth()I
 
     move-result p1
@@ -195,6 +301,7 @@
 
     move v9, p2
 
+    .line 8
     invoke-virtual/range {v4 .. v9}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->calculateDtToFit(IIIII)I
 
     move-result p0
@@ -210,13 +317,25 @@
 
 .method public calculateDyToMakeVisible(Landroid/view/View;I)I
     .locals 10
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "view",
+            "snapPreference"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->getLayoutManager()Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
+    .line 2
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->canScrollVertically()Z
 
     move-result v1
@@ -225,6 +344,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -232,6 +352,7 @@
 
     check-cast v1, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
 
+    .line 4
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getDecoratedTop(Landroid/view/View;)I
 
     move-result v2
@@ -240,6 +361,7 @@
 
     sub-int v5, v2, v3
 
+    .line 5
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getDecoratedBottom(Landroid/view/View;)I
 
     move-result p1
@@ -248,10 +370,12 @@
 
     add-int v6, p1, v1
 
+    .line 6
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getPaddingTop()I
 
     move-result v7
 
+    .line 7
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->getHeight()I
 
     move-result p1
@@ -266,6 +390,7 @@
 
     move v9, p2
 
+    .line 8
     invoke-virtual/range {v4 .. v9}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->calculateDtToFit(IIIII)I
 
     move-result p0
@@ -281,7 +406,16 @@
 
 .method public calculateSpeedPerPixel(Landroid/util/DisplayMetrics;)F
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "displayMetrics"
+        }
+    .end annotation
 
+    .line 1
     iget p0, p1, Landroid/util/DisplayMetrics;->densityDpi:I
 
     int-to-float p0, p0
@@ -295,7 +429,16 @@
 
 .method public calculateTimeForDeceleration(I)I
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "dx"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->calculateTimeForScrolling(I)I
 
     move-result p0
@@ -317,14 +460,23 @@
 
 .method public calculateTimeForScrolling(I)I
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "dx"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {p1}, Ljava/lang/Math;->abs(I)I
 
     move-result p1
 
     int-to-float p1, p1
 
-    invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->getSpeedPerPixel()F
+    invoke-direct {p0}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->getSpeedPerPixel()F
 
     move-result p0
 
@@ -341,27 +493,11 @@
     return p0
 .end method
 
-.method public final clampApplyScroll(II)I
-    .locals 0
-    .annotation build Lh7/c;
-    .end annotation
-
-    sub-int p0, p1, p2
-
-    mul-int/2addr p1, p0
-
-    if-gtz p1, :cond_0
-
-    const/4 p0, 0x0
-
-    :cond_0
-    return p0
-.end method
-
 .method public getHorizontalSnapPreference()I
     .locals 2
 
-    iget-object p0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->c:Landroid/graphics/PointF;
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->k:Landroid/graphics/PointF;
 
     if-eqz p0, :cond_2
 
@@ -397,35 +533,11 @@
     return p0
 .end method
 
-.method public final getSpeedPerPixel()F
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->e:Z
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->d:Landroid/util/DisplayMetrics;
-
-    invoke-virtual {p0, v0}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->calculateSpeedPerPixel(Landroid/util/DisplayMetrics;)F
-
-    move-result v0
-
-    iput v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->f:F
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->e:Z
-
-    :cond_0
-    iget p0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->f:F
-
-    return p0
-.end method
-
 .method public getVerticalSnapPreference()I
     .locals 2
 
-    iget-object p0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->c:Landroid/graphics/PointF;
+    .line 1
+    iget-object p0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->k:Landroid/graphics/PointF;
 
     if-eqz p0, :cond_2
 
@@ -463,42 +575,63 @@
 
 .method public onSeekTargetStep(IILandroidx/recyclerview/widget/RecyclerView$State;Landroidx/recyclerview/widget/RecyclerView$SmoothScroller$Action;)V
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "dx",
+            "dy",
+            "state",
+            "action"
+        }
+    .end annotation
+
+    .line 1
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->getChildCount()I
 
     move-result p3
 
     if-nez p3, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->stop()V
 
     return-void
 
+    .line 3
     :cond_0
-    iget p3, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->g:I
+    iget p3, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->o:I
 
-    invoke-virtual {p0, p3, p1}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->clampApplyScroll(II)I
-
-    move-result p1
-
-    iput p1, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->g:I
-
-    iget p1, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->h:I
-
-    invoke-virtual {p0, p1, p2}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->clampApplyScroll(II)I
+    invoke-direct {p0, p3, p1}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->clampApplyScroll(II)I
 
     move-result p1
 
-    iput p1, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->h:I
+    iput p1, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->o:I
 
-    iget p2, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->g:I
+    .line 4
+    iget p1, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->p:I
+
+    invoke-direct {p0, p1, p2}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->clampApplyScroll(II)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->p:I
+
+    .line 5
+    iget p2, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->o:I
 
     if-nez p2, :cond_1
 
     if-nez p1, :cond_1
 
+    .line 6
     invoke-virtual {p0, p4}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->updateActionForInterimTarget(Landroidx/recyclerview/widget/RecyclerView$SmoothScroller$Action;)V
 
     :cond_1
@@ -508,7 +641,8 @@
 .method public onStart()V
     .locals 1
 
-    sget-object p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->i:Ljava/lang/String;
+    .line 1
+    sget-object p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->a:Ljava/lang/String;
 
     const-string v0, "onStart: "
 
@@ -522,20 +656,35 @@
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->h:I
+    .line 1
+    iput v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->p:I
 
-    iput v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->g:I
+    iput v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->o:I
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->c:Landroid/graphics/PointF;
+    .line 2
+    iput-object v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->k:Landroid/graphics/PointF;
 
     return-void
 .end method
 
 .method public onTargetFound(Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView$State;Landroidx/recyclerview/widget/RecyclerView$SmoothScroller$Action;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "targetView",
+            "state",
+            "action"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->getHorizontalSnapPreference()I
 
     move-result p2
@@ -544,6 +693,7 @@
 
     move-result p2
 
+    .line 2
     invoke-virtual {p0}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->getVerticalSnapPreference()I
 
     move-result v0
@@ -560,12 +710,14 @@
 
     int-to-double v0, v0
 
+    .line 3
     invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v0
 
     double-to-int v0, v0
 
+    .line 4
     invoke-virtual {p0, v0}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->calculateTimeForDeceleration(I)I
 
     move-result v0
@@ -576,7 +728,8 @@
 
     neg-int p1, p1
 
-    iget-object p0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->b:Landroid/view/animation/DecelerateInterpolator;
+    .line 5
+    iget-object p0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->j:Landroid/view/animation/DecelerateInterpolator;
 
     invoke-virtual {p3, p2, p1, v0, p0}, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller$Action;->update(IIILandroid/view/animation/Interpolator;)V
 
@@ -586,9 +739,19 @@
 
 .method public updateActionForInterimTarget(Landroidx/recyclerview/widget/RecyclerView$SmoothScroller$Action;)V
     .locals 4
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "action"
+        }
+    .end annotation
+
+    .line 1
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->getTargetPosition()I
 
     move-result v0
@@ -599,6 +762,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 2
     iget v1, v0, Landroid/graphics/PointF;->x:F
 
     const/4 v2, 0x0
@@ -615,11 +779,14 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->normalize(Landroid/graphics/PointF;)V
 
-    iput-object v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->c:Landroid/graphics/PointF;
+    .line 4
+    iput-object v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->k:Landroid/graphics/PointF;
 
+    .line 5
     iget v1, v0, Landroid/graphics/PointF;->x:F
 
     const v2, 0x461c4000    # 10000.0f
@@ -628,23 +795,26 @@
 
     float-to-int v1, v1
 
-    iput v1, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->g:I
+    iput v1, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->o:I
 
+    .line 6
     iget v0, v0, Landroid/graphics/PointF;->y:F
 
     mul-float/2addr v0, v2
 
     float-to-int v0, v0
 
-    iput v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->h:I
+    iput v0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->p:I
 
     const/16 v0, 0x2710
 
+    .line 7
     invoke-virtual {p0, v0}, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->calculateTimeForScrolling(I)I
 
     move-result v0
 
-    iget v1, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->g:I
+    .line 8
+    iget v1, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->o:I
 
     int-to-float v1, v1
 
@@ -654,7 +824,7 @@
 
     float-to-int v1, v1
 
-    iget v3, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->h:I
+    iget v3, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->p:I
 
     int-to-float v3, v3
 
@@ -668,20 +838,23 @@
 
     float-to-int v0, v0
 
-    iget-object p0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->a:Landroid/view/animation/LinearInterpolator;
+    iget-object p0, p0, Lcom/xiaomi/mimoji/common/widget/baseview/BaseLinearSmoothScroller;->i:Landroid/view/animation/LinearInterpolator;
 
     invoke-virtual {p1, v1, v3, v0, p0}, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller$Action;->update(IIILandroid/view/animation/Interpolator;)V
 
     return-void
 
+    .line 9
     :cond_1
     :goto_0
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->getTargetPosition()I
 
     move-result v0
 
+    .line 10
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller$Action;->jumpTo(I)V
 
+    .line 11
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->stop()V
 
     return-void

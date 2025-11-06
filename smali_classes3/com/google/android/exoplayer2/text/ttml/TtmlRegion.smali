@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/text/ttml/TtmlRegion;
+.class public final Lcom/google/android/exoplayer2/text/ttml/TtmlRegion;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

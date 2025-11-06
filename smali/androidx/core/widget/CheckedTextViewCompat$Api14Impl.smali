@@ -1,4 +1,4 @@
-.class Landroidx/core/widget/CheckedTextViewCompat$Api14Impl;
+.class public Landroidx/core/widget/CheckedTextViewCompat$Api14Impl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -24,6 +24,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,6 +39,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     sget-boolean v0, Landroidx/core/widget/CheckedTextViewCompat$Api14Impl;->sResolved:Z
 
     const-string v1, "CheckedTextViewCompat"
@@ -46,18 +48,21 @@
 
     const/4 v0, 0x1
 
+    .line 2
     :try_start_0
     const-class v2, Landroid/widget/CheckedTextView;
 
     const-string v3, "mCheckMarkDrawable"
 
+    .line 3
     invoke-virtual {v2, v3}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v2
 
     sput-object v2, Landroidx/core/widget/CheckedTextViewCompat$Api14Impl;->sCheckMarkDrawableField:Ljava/lang/reflect/Field;
 
-    invoke-virtual {v2, v0}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    .line 4
+    invoke-virtual {v2, v0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
     :try_end_0
     .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -68,11 +73,14 @@
 
     const-string v3, "Failed to retrieve mCheckMarkDrawable field"
 
+    .line 5
     invoke-static {v1, v3, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 6
     :goto_0
     sput-boolean v0, Landroidx/core/widget/CheckedTextViewCompat$Api14Impl;->sResolved:Z
 
+    .line 7
     :cond_0
     sget-object v0, Landroidx/core/widget/CheckedTextViewCompat$Api14Impl;->sCheckMarkDrawableField:Ljava/lang/reflect/Field;
 
@@ -80,6 +88,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 8
     :try_start_1
     invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -96,8 +105,10 @@
 
     const-string v0, "Failed to get check mark drawable via reflection"
 
+    .line 9
     invoke-static {v1, v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    .line 10
     sput-object v2, Landroidx/core/widget/CheckedTextViewCompat$Api14Impl;->sCheckMarkDrawableField:Ljava/lang/reflect/Field;
 
     :cond_1

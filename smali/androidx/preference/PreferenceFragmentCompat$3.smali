@@ -1,4 +1,4 @@
-.class Landroidx/preference/PreferenceFragmentCompat$3;
+.class public Landroidx/preference/PreferenceFragmentCompat$3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,17 +18,18 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/preference/PreferenceFragmentCompat;
+.field public final synthetic this$0:Landroidx/preference/PreferenceFragmentCompat;
 
-.field final synthetic val$key:Ljava/lang/String;
+.field public final synthetic val$key:Ljava/lang/String;
 
-.field final synthetic val$preference:Landroidx/preference/Preference;
+.field public final synthetic val$preference:Landroidx/preference/Preference;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/preference/PreferenceFragmentCompat;Landroidx/preference/Preference;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/preference/PreferenceFragmentCompat$3;->this$0:Landroidx/preference/PreferenceFragmentCompat;
 
     iput-object p2, p0, Landroidx/preference/PreferenceFragmentCompat$3;->val$preference:Landroidx/preference/Preference;
@@ -45,6 +46,7 @@
 .method public run()V
     .locals 4
 
+    .line 1
     iget-object v0, p0, Landroidx/preference/PreferenceFragmentCompat$3;->this$0:Landroidx/preference/PreferenceFragmentCompat;
 
     iget-object v0, v0, Landroidx/preference/PreferenceFragmentCompat;->mList:Landroidx/recyclerview/widget/RecyclerView;
@@ -53,6 +55,7 @@
 
     move-result-object v0
 
+    .line 2
     instance-of v1, v0, Landroidx/preference/PreferenceGroup$PreferencePositionCallback;
 
     if-nez v1, :cond_1
@@ -61,6 +64,7 @@
 
     return-void
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -70,21 +74,25 @@
 
     throw p0
 
+    .line 4
     :cond_1
     iget-object v1, p0, Landroidx/preference/PreferenceFragmentCompat$3;->val$preference:Landroidx/preference/Preference;
 
     if-eqz v1, :cond_2
 
+    .line 5
     move-object v2, v0
 
     check-cast v2, Landroidx/preference/PreferenceGroup$PreferencePositionCallback;
 
+    .line 6
     invoke-interface {v2, v1}, Landroidx/preference/PreferenceGroup$PreferencePositionCallback;->getPreferenceAdapterPosition(Landroidx/preference/Preference;)I
 
     move-result v1
 
     goto :goto_0
 
+    .line 7
     :cond_2
     move-object v1, v0
 
@@ -92,6 +100,7 @@
 
     iget-object v2, p0, Landroidx/preference/PreferenceFragmentCompat$3;->val$key:Ljava/lang/String;
 
+    .line 8
     invoke-interface {v1, v2}, Landroidx/preference/PreferenceGroup$PreferencePositionCallback;->getPreferenceAdapterPosition(Ljava/lang/String;)I
 
     move-result v1
@@ -101,6 +110,7 @@
 
     if-eq v1, v2, :cond_3
 
+    .line 9
     iget-object p0, p0, Landroidx/preference/PreferenceFragmentCompat$3;->this$0:Landroidx/preference/PreferenceFragmentCompat;
 
     iget-object p0, p0, Landroidx/preference/PreferenceFragmentCompat;->mList:Landroidx/recyclerview/widget/RecyclerView;
@@ -109,6 +119,7 @@
 
     goto :goto_1
 
+    .line 10
     :cond_3
     new-instance v1, Landroidx/preference/PreferenceFragmentCompat$ScrollToPreferenceObserver;
 

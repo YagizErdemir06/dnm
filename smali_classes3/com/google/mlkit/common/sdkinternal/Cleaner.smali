@@ -21,6 +21,7 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/lang/ref/ReferenceQueue;
@@ -31,6 +32,7 @@
 
     new-instance v0, Ljava/util/HashSet;
 
+    .line 2
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     invoke-static {v0}, Ljava/util/Collections;->synchronizedSet(Ljava/util/Set;)Ljava/util/Set;
@@ -50,12 +52,14 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/mlkit/common/sdkinternal/Cleaner;
 
     invoke-direct {v0}, Lcom/google/mlkit/common/sdkinternal/Cleaner;-><init>()V
 
     sget-object v1, Lcom/google/mlkit/common/sdkinternal/zzb;->zza:Lcom/google/mlkit/common/sdkinternal/zzb;
 
+    .line 2
     invoke-virtual {v0, v0, v1}, Lcom/google/mlkit/common/sdkinternal/Cleaner;->register(Ljava/lang/Object;Ljava/lang/Runnable;)Lcom/google/mlkit/common/sdkinternal/Cleaner$Cleanable;
 
     iget-object v1, v0, Lcom/google/mlkit/common/sdkinternal/Cleaner;->zza:Ljava/lang/ref/ReferenceQueue;
@@ -70,12 +74,15 @@
 
     const-string v2, "MlKitCleaner"
 
+    .line 3
     invoke-direct {v1, v3, v2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
     const/4 v2, 0x1
 
+    .line 4
     invoke-virtual {v1, v2}, Ljava/lang/Thread;->setDaemon(Z)V
 
+    .line 5
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
     return-object v0
@@ -99,6 +106,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     new-instance v6, Lcom/google/mlkit/common/sdkinternal/zzd;
 
     iget-object v2, p0, Lcom/google/mlkit/common/sdkinternal/Cleaner;->zza:Ljava/lang/ref/ReferenceQueue;
@@ -117,6 +125,7 @@
 
     iget-object p0, p0, Lcom/google/mlkit/common/sdkinternal/Cleaner;->zzb:Ljava/util/Set;
 
+    .line 2
     invoke-interface {p0, v6}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     return-object v6

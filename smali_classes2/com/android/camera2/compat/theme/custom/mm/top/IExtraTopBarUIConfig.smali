@@ -6,8 +6,17 @@
 # virtual methods
 .method public getExtraTopBarPadding(Landroid/content/Context;)I
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
-    invoke-static {}, Ly2/b;->j0()I
+    .line 1
+    invoke-static {}, Ld/d/a/n6/b;->j0()I
 
     move-result p0
 
@@ -15,7 +24,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f070e54
+    const v0, 0x7f070bb5
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

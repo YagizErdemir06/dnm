@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/RegularContiguousSet$1;
+.class public Lcom/google/common/collect/RegularContiguousSet$1;
 .super Lcom/google/common/collect/AbstractSequentialIterator;
 .source "SourceFile"
 
@@ -22,7 +22,7 @@
 
 
 # instance fields
-.field final last:Ljava/lang/Comparable;
+.field public final last:Ljava/lang/Comparable;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TC;"
@@ -30,17 +30,19 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Lcom/google/common/collect/RegularContiguousSet;
+.field public final synthetic this$0:Lcom/google/common/collect/RegularContiguousSet;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/RegularContiguousSet;Ljava/lang/Comparable;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/RegularContiguousSet$1;->this$0:Lcom/google/common/collect/RegularContiguousSet;
 
     invoke-direct {p0, p2}, Lcom/google/common/collect/AbstractSequentialIterator;-><init>(Ljava/lang/Object;)V
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/common/collect/RegularContiguousSet;->last()Ljava/lang/Comparable;
 
     move-result-object p1

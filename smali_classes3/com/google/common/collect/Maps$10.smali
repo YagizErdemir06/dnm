@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Maps$10;
+.class public Lcom/google/common/collect/Maps$10;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,15 +26,16 @@
 
 
 # instance fields
-.field final synthetic val$key:Ljava/lang/Object;
+.field public final synthetic val$key:Ljava/lang/Object;
 
-.field final synthetic val$transformer:Lcom/google/common/collect/Maps$EntryTransformer;
+.field public final synthetic val$transformer:Lcom/google/common/collect/Maps$EntryTransformer;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/Maps$EntryTransformer;Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/Maps$10;->val$transformer:Lcom/google/common/collect/Maps$EntryTransformer;
 
     iput-object p2, p0, Lcom/google/common/collect/Maps$10;->val$key:Ljava/lang/Object;
@@ -61,6 +62,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Maps$10;->val$transformer:Lcom/google/common/collect/Maps$EntryTransformer;
 
     iget-object p0, p0, Lcom/google/common/collect/Maps$10;->val$key:Ljava/lang/Object;

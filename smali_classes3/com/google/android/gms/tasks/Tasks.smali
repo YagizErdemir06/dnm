@@ -275,6 +275,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/tasks/zzw;
 
     invoke-direct {v0}, Lcom/google/android/gms/tasks/zzw;-><init>()V
@@ -305,6 +306,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/tasks/zzw;
 
     invoke-direct {v0}, Lcom/google/android/gms/tasks/zzw;-><init>()V
@@ -329,6 +331,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/tasks/zzw;
 
     invoke-direct {v0}, Lcom/google/android/gms/tasks/zzw;-><init>()V
@@ -360,7 +363,7 @@
         }
     .end annotation
 
-    if-eqz p0, :cond_4
+    if-eqz p0, :cond_3
 
     .line 1
     invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
@@ -382,7 +385,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_1
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -390,21 +393,14 @@
 
     check-cast v1, Lcom/google/android/gms/tasks/Task;
 
-    if-eqz v1, :cond_1
+    const-string v2, "null tasks are not accepted"
+
+    .line 3
+    invoke-static {v1, v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     goto :goto_0
 
     :cond_1
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string v0, "null tasks are not accepted"
-
-    .line 3
-    invoke-direct {p0, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_2
     new-instance v0, Lcom/google/android/gms/tasks/zzw;
 
     .line 4
@@ -429,7 +425,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_2
 
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -442,10 +438,10 @@
 
     goto :goto_1
 
-    :cond_3
+    :cond_2
     return-object v0
 
-    :cond_4
+    :cond_3
     :goto_2
     const/4 p0, 0x0
 
@@ -784,6 +780,7 @@
 
     const-string v0, "Task must not be null"
 
+    .line 1
     invoke-static {p0, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-wide/16 v0, 0x0
@@ -802,22 +799,27 @@
     :goto_0
     const-string v1, "Timeout must be positive"
 
+    .line 2
     invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
     const-string v0, "TimeUnit must not be null"
 
+    .line 3
     invoke-static {p3, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     new-instance v0, Lcom/google/android/gms/tasks/zzb;
 
+    .line 4
     invoke-direct {v0}, Lcom/google/android/gms/tasks/zzb;-><init>()V
 
     new-instance v1, Lcom/google/android/gms/tasks/TaskCompletionSource;
 
+    .line 5
     invoke-direct {v1, v0}, Lcom/google/android/gms/tasks/TaskCompletionSource;-><init>(Lcom/google/android/gms/tasks/CancellationToken;)V
 
     new-instance v2, Lcom/google/android/gms/internal/tasks/zza;
 
+    .line 6
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v3
@@ -828,16 +830,19 @@
 
     invoke-direct {v3, v1}, Lcom/google/android/gms/tasks/zzx;-><init>(Lcom/google/android/gms/tasks/TaskCompletionSource;)V
 
+    .line 7
     invoke-virtual {p3, p1, p2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
     move-result-wide p1
 
+    .line 8
     invoke-virtual {v2, v3, p1, p2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     new-instance p1, Lcom/google/android/gms/tasks/zzy;
 
     invoke-direct {p1, v2, v1, v0}, Lcom/google/android/gms/tasks/zzy;-><init>(Lcom/google/android/gms/internal/tasks/zza;Lcom/google/android/gms/tasks/TaskCompletionSource;Lcom/google/android/gms/tasks/zzb;)V
 
+    .line 9
     invoke-virtual {p0, p1}, Lcom/google/android/gms/tasks/Task;->addOnCompleteListener(Lcom/google/android/gms/tasks/OnCompleteListener;)Lcom/google/android/gms/tasks/Task;
 
     invoke-virtual {v1}, Lcom/google/android/gms/tasks/TaskCompletionSource;->getTask()Lcom/google/android/gms/tasks/Task;
@@ -859,18 +864,21 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/tasks/Task;->isSuccessful()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/gms/tasks/Task;->getResult()Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/gms/tasks/Task;->isCanceled()Z
 
@@ -878,6 +886,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     new-instance p0, Ljava/util/concurrent/CancellationException;
 
     const-string v0, "Task is already canceled"
@@ -886,6 +895,7 @@
 
     throw p0
 
+    .line 5
     :cond_1
     new-instance v0, Ljava/util/concurrent/ExecutionException;
 
@@ -901,12 +911,15 @@
 .method private static zzb(Lcom/google/android/gms/tasks/Task;Lcom/google/android/gms/tasks/zzae;)V
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/tasks/TaskExecutors;->zza:Ljava/util/concurrent/Executor;
 
     invoke-virtual {p0, v0, p1}, Lcom/google/android/gms/tasks/Task;->addOnSuccessListener(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/OnSuccessListener;)Lcom/google/android/gms/tasks/Task;
 
+    .line 2
     invoke-virtual {p0, v0, p1}, Lcom/google/android/gms/tasks/Task;->addOnFailureListener(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/OnFailureListener;)Lcom/google/android/gms/tasks/Task;
 
+    .line 3
     invoke-virtual {p0, v0, p1}, Lcom/google/android/gms/tasks/Task;->addOnCanceledListener(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/OnCanceledListener;)Lcom/google/android/gms/tasks/Task;
 
     return-void

@@ -39,66 +39,78 @@
 .method public static constructor <clinit>()V
     .locals 4
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/Format$Builder;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/Format$Builder;-><init>()V
 
     const-string v1, "audio/raw"
 
+    .line 2
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/Format$Builder;->setSampleMimeType(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v0
 
     const/4 v1, 0x2
 
+    .line 3
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/Format$Builder;->setChannelCount(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v0
 
     const v2, 0xac44
 
+    .line 4
     invoke-virtual {v0, v2}, Lcom/google/android/exoplayer2/Format$Builder;->setSampleRate(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v0
 
+    .line 5
     invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/Format$Builder;->setPcmEncoding(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v0
 
+    .line 6
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/Format$Builder;->build()Lcom/google/android/exoplayer2/Format;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/android/exoplayer2/source/SilenceMediaSource;->FORMAT:Lcom/google/android/exoplayer2/Format;
 
+    .line 7
     new-instance v2, Lcom/google/android/exoplayer2/MediaItem$Builder;
 
     invoke-direct {v2}, Lcom/google/android/exoplayer2/MediaItem$Builder;-><init>()V
 
     const-string v3, "SilenceMediaSource"
 
+    .line 8
     invoke-virtual {v2, v3}, Lcom/google/android/exoplayer2/MediaItem$Builder;->setMediaId(Ljava/lang/String;)Lcom/google/android/exoplayer2/MediaItem$Builder;
 
     move-result-object v2
 
     sget-object v3, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
+    .line 9
     invoke-virtual {v2, v3}, Lcom/google/android/exoplayer2/MediaItem$Builder;->setUri(Landroid/net/Uri;)Lcom/google/android/exoplayer2/MediaItem$Builder;
 
     move-result-object v2
 
     iget-object v0, v0, Lcom/google/android/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
+    .line 10
     invoke-virtual {v2, v0}, Lcom/google/android/exoplayer2/MediaItem$Builder;->setMimeType(Ljava/lang/String;)Lcom/google/android/exoplayer2/MediaItem$Builder;
 
     move-result-object v0
 
+    .line 11
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/MediaItem$Builder;->build()Lcom/google/android/exoplayer2/MediaItem;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/android/exoplayer2/source/SilenceMediaSource;->MEDIA_ITEM:Lcom/google/android/exoplayer2/MediaItem;
 
+    .line 12
     invoke-static {v1, v1}, Lcom/google/android/exoplayer2/util/Util;->getPcmFrameSize(II)I
 
     move-result v0
@@ -167,6 +179,7 @@
 .method public static synthetic access$000()Lcom/google/android/exoplayer2/MediaItem;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/source/SilenceMediaSource;->MEDIA_ITEM:Lcom/google/android/exoplayer2/MediaItem;
 
     return-object v0
@@ -175,6 +188,7 @@
 .method public static synthetic access$200()Lcom/google/android/exoplayer2/Format;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/source/SilenceMediaSource;->FORMAT:Lcom/google/android/exoplayer2/Format;
 
     return-object v0
@@ -183,6 +197,7 @@
 .method public static synthetic access$300(J)J
     .locals 0
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/android/exoplayer2/source/SilenceMediaSource;->getAudioByteCount(J)J
 
     move-result-wide p0
@@ -193,6 +208,7 @@
 .method public static synthetic access$400(J)J
     .locals 0
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/android/exoplayer2/source/SilenceMediaSource;->getAudioPositionUs(J)J
 
     move-result-wide p0
@@ -203,6 +219,7 @@
 .method public static synthetic access$500()[B
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/source/SilenceMediaSource;->SILENCE_SAMPLE:[B
 
     return-object v0
@@ -217,10 +234,12 @@
 
     const-wide/32 v0, 0xf4240
 
+    .line 1
     div-long/2addr p0, v0
 
     const/4 v0, 0x2
 
+    .line 2
     invoke-static {v0, v0}, Lcom/google/android/exoplayer2/util/Util;->getPcmFrameSize(II)I
 
     move-result v0
@@ -237,6 +256,7 @@
 
     const/4 v0, 0x2
 
+    .line 1
     invoke-static {v0, v0}, Lcom/google/android/exoplayer2/util/Util;->getPcmFrameSize(II)I
 
     move-result v0
@@ -251,6 +271,7 @@
 
     const-wide/32 v0, 0xac44
 
+    .line 2
     div-long/2addr p0, v0
 
     return-wide p0
@@ -261,6 +282,7 @@
 .method public createPeriod(Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;Lcom/google/android/exoplayer2/upstream/Allocator;J)Lcom/google/android/exoplayer2/source/MediaPeriod;
     .locals 0
 
+    .line 1
     new-instance p1, Lcom/google/android/exoplayer2/source/SilenceMediaSource$SilenceMediaPeriod;
 
     iget-wide p2, p0, Lcom/google/android/exoplayer2/source/SilenceMediaSource;->durationUs:J
@@ -273,6 +295,7 @@
 .method public getMediaItem()Lcom/google/android/exoplayer2/MediaItem;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/SilenceMediaSource;->mediaItem:Lcom/google/android/exoplayer2/MediaItem;
 
     return-object p0
@@ -291,9 +314,12 @@
         .end annotation
     .end param
 
+    .line 1
     new-instance p1, Lcom/google/android/exoplayer2/source/SinglePeriodTimeline;
 
     iget-wide v1, p0, Lcom/google/android/exoplayer2/source/SilenceMediaSource;->durationUs:J
+
+    iget-object v7, p0, Lcom/google/android/exoplayer2/source/SilenceMediaSource;->mediaItem:Lcom/google/android/exoplayer2/MediaItem;
 
     const/4 v3, 0x1
 
@@ -302,8 +328,6 @@
     const/4 v5, 0x0
 
     const/4 v6, 0x0
-
-    iget-object v7, p0, Lcom/google/android/exoplayer2/source/SilenceMediaSource;->mediaItem:Lcom/google/android/exoplayer2/MediaItem;
 
     move-object v0, p1
 

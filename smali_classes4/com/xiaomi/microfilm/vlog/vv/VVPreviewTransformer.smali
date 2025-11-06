@@ -7,23 +7,24 @@
 
 
 # static fields
-.field public static final a:F = 1.0f
+.field private static final a:F = 1.0f
 
-.field public static final b:F = 1.0f
+.field private static final b:F = 1.0f
 
-.field public static final c:F = 1.0f
+.field private static final c:F = 1.0f
 
-.field public static final d:F = 1.0f
+.field private static final d:F = 1.0f
 
-.field public static final e:F
+.field private static final e:F
 
-.field public static final f:F
+.field private static final f:F
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,6 +34,16 @@
 # virtual methods
 .method public transformPage(Landroid/view/View;F)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "page",
+            "position"
+        }
+    .end annotation
 
     const/high16 p0, -0x40800000    # -1.0f
 
@@ -73,6 +84,7 @@
 
     add-float/2addr p2, v1
 
+    .line 1
     invoke-static {p1, p2}, Landroidx/core/view/ViewCompat;->setAlpha(Landroid/view/View;F)V
 
     return-void

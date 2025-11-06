@@ -30,7 +30,12 @@
     value = "SMAP\nComparisons.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Comparisons.kt\nkotlin/comparisons/ComparisonsKt__ComparisonsKt$compareBy$2\n+ 2 zip.kt\nokio/internal/ZipKt\n*L\n1#1,320:1\n166#2:321\n*E\n"
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
         "\u0000\u000c\n\u0002\u0008\u0004\n\u0002\u0010\u0008\n\u0002\u0008\u0004\u0010\u0008\u001a\u00020\u0004\"\u0004\u0008\u0000\u0010\u00002\u000e\u0010\u0002\u001a\n \u0001*\u0004\u0018\u00018\u00008\u00002\u000e\u0010\u0003\u001a\n \u0001*\u0004\u0018\u00018\u00008\u0000H\n\u00a2\u0006\u0004\u0008\u0005\u0010\u0006\u00a8\u0006\u0007"
     }
@@ -42,7 +47,7 @@
         "",
         "compare",
         "(Ljava/lang/Object;Ljava/lang/Object;)I",
-        "tm/b$b",
+        "h/u2/b$b",
         "<anonymous>"
     }
     k = 0x3
@@ -73,8 +78,10 @@
         }
     .end annotation
 
+    .line 1
     check-cast p1, Lokio/internal/ZipEntry;
 
+    .line 2
     invoke-virtual {p1}, Lokio/internal/ZipEntry;->getCanonicalPath()Lokio/Path;
 
     move-result-object p0
@@ -85,7 +92,7 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Ltm/b;->g(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+    invoke-static {p0, p1}, Lh/u2/b;->g(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
 
     move-result p0
 

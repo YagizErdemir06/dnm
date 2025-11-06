@@ -56,6 +56,7 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p1, Lcom/google/android/gms/common/api/BatchResultToken;->mId:I
 
     iget-object v1, p0, Lcom/google/android/gms/common/api/BatchResult;->zab:[Lcom/google/android/gms/common/api/PendingResult;
@@ -78,6 +79,7 @@
 
     iget-object p0, p0, Lcom/google/android/gms/common/api/BatchResult;->zab:[Lcom/google/android/gms/common/api/PendingResult;
 
+    .line 2
     iget p1, p1, Lcom/google/android/gms/common/api/BatchResultToken;->mId:I
 
     aget-object p0, p0, p1
@@ -86,6 +88,7 @@
 
     sget-object p1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
+    .line 3
     invoke-virtual {p0, v0, v1, p1}, Lcom/google/android/gms/common/api/PendingResult;->await(JLjava/util/concurrent/TimeUnit;)Lcom/google/android/gms/common/api/Result;
 
     move-result-object p0

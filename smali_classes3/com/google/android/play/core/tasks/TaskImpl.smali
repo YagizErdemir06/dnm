@@ -1,4 +1,4 @@
-.class Lcom/google/android/play/core/tasks/TaskImpl;
+.class public Lcom/google/android/play/core/tasks/TaskImpl;
 .super Lcom/google/android/play/core/tasks/Task;
 .source "SourceFile"
 
@@ -44,14 +44,17 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/play/core/tasks/Task;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/play/core/tasks/TaskImpl;->lock:Ljava/lang/Object;
 
+    .line 3
     new-instance v0, Lcom/google/android/play/core/tasks/InvocationListenerManager;
 
     invoke-direct {v0}, Lcom/google/android/play/core/tasks/InvocationListenerManager;-><init>()V
@@ -64,12 +67,14 @@
 .method private assertComplete()V
     .locals 1
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/play/core/tasks/TaskImpl;->isComplete:Z
 
     if-eqz p0, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -83,19 +88,23 @@
 .method private invokeListeners()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/play/core/tasks/TaskImpl;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-boolean v1, p0, Lcom/google/android/play/core/tasks/TaskImpl;->isComplete:Z
 
     if-eqz v1, :cond_0
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/play/core/tasks/TaskImpl;->mListenerManager:Lcom/google/android/play/core/tasks/InvocationListenerManager;
 
     invoke-virtual {v1, p0}, Lcom/google/android/play/core/tasks/InvocationListenerManager;->invokeListener(Lcom/google/android/play/core/tasks/Task;)V
 
+    .line 4
     :cond_0
     monitor-exit v0
 
@@ -266,13 +275,16 @@
 .method public getException()Ljava/lang/Exception;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/play/core/tasks/TaskImpl;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-object p0, p0, Lcom/google/android/play/core/tasks/TaskImpl;->mException:Ljava/lang/Exception;
 
+    .line 3
     monitor-exit v0
 
     return-object p0
@@ -295,23 +307,29 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/play/core/tasks/TaskImpl;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-direct {p0}, Lcom/google/android/play/core/tasks/TaskImpl;->assertComplete()V
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/play/core/tasks/TaskImpl;->mException:Ljava/lang/Exception;
 
     if-nez v1, :cond_0
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/play/core/tasks/TaskImpl;->mResult:Ljava/lang/Object;
 
+    .line 5
     monitor-exit v0
 
     return-object p0
 
+    .line 6
     :cond_0
     new-instance v1, Lcom/google/android/play/core/tasks/RuntimeExecutionException;
 
@@ -324,6 +342,7 @@
     :catchall_0
     move-exception p0
 
+    .line 7
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -357,13 +376,16 @@
 .method public isComplete()Z
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/play/core/tasks/TaskImpl;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-boolean p0, p0, Lcom/google/android/play/core/tasks/TaskImpl;->isComplete:Z
 
+    .line 3
     monitor-exit v0
 
     return p0
@@ -381,10 +403,12 @@
 .method public isSuccessful()Z
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/play/core/tasks/TaskImpl;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-boolean v1, p0, Lcom/google/android/play/core/tasks/TaskImpl;->isComplete:Z
 
@@ -401,6 +425,7 @@
     :cond_0
     const/4 p0, 0x0
 
+    .line 3
     :goto_0
     monitor-exit v0
 
@@ -423,32 +448,39 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/play/core/tasks/TaskImpl;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-boolean v1, p0, Lcom/google/android/play/core/tasks/TaskImpl;->isComplete:Z
 
     if-eqz v1, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    .line 3
+    monitor-exit v0
 
     return p0
 
     :cond_0
     const/4 v1, 0x1
 
+    .line 4
     iput-boolean v1, p0, Lcom/google/android/play/core/tasks/TaskImpl;->isComplete:Z
 
+    .line 5
     iput-object p1, p0, Lcom/google/android/play/core/tasks/TaskImpl;->mException:Ljava/lang/Exception;
 
+    .line 6
     iget-object p1, p0, Lcom/google/android/play/core/tasks/TaskImpl;->mListenerManager:Lcom/google/android/play/core/tasks/InvocationListenerManager;
 
     invoke-virtual {p1, p0}, Lcom/google/android/play/core/tasks/InvocationListenerManager;->invokeListener(Lcom/google/android/play/core/tasks/Task;)V
 
+    .line 7
     monitor-exit v0
 
     return v1
@@ -456,6 +488,7 @@
     :catchall_0
     move-exception p0
 
+    .line 8
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -471,32 +504,39 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/play/core/tasks/TaskImpl;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-boolean v1, p0, Lcom/google/android/play/core/tasks/TaskImpl;->isComplete:Z
 
     if-eqz v1, :cond_0
 
-    monitor-exit v0
-
     const/4 p0, 0x0
+
+    .line 3
+    monitor-exit v0
 
     return p0
 
     :cond_0
     const/4 v1, 0x1
 
+    .line 4
     iput-boolean v1, p0, Lcom/google/android/play/core/tasks/TaskImpl;->isComplete:Z
 
+    .line 5
     iput-object p1, p0, Lcom/google/android/play/core/tasks/TaskImpl;->mResult:Ljava/lang/Object;
 
+    .line 6
     iget-object p1, p0, Lcom/google/android/play/core/tasks/TaskImpl;->mListenerManager:Lcom/google/android/play/core/tasks/InvocationListenerManager;
 
     invoke-virtual {p1, p0}, Lcom/google/android/play/core/tasks/InvocationListenerManager;->invokeListener(Lcom/google/android/play/core/tasks/Task;)V
 
+    .line 7
     monitor-exit v0
 
     return v1
@@ -504,6 +544,7 @@
     :catchall_0
     move-exception p0
 
+    .line 8
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -519,10 +560,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/play/core/tasks/TaskImpl;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-boolean v1, p0, Lcom/google/android/play/core/tasks/TaskImpl;->isComplete:Z
 
@@ -530,20 +573,25 @@
 
     const/4 v1, 0x1
 
+    .line 3
     iput-boolean v1, p0, Lcom/google/android/play/core/tasks/TaskImpl;->isComplete:Z
 
+    .line 4
     iput-object p1, p0, Lcom/google/android/play/core/tasks/TaskImpl;->mResult:Ljava/lang/Object;
 
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 6
     iget-object p1, p0, Lcom/google/android/play/core/tasks/TaskImpl;->mListenerManager:Lcom/google/android/play/core/tasks/InvocationListenerManager;
 
     invoke-virtual {p1, p0}, Lcom/google/android/play/core/tasks/InvocationListenerManager;->invokeListener(Lcom/google/android/play/core/tasks/Task;)V
 
     return-void
 
+    .line 7
     :cond_0
     :try_start_1
     new-instance p0, Ljava/lang/RuntimeException;
@@ -557,6 +605,7 @@
     :catchall_0
     move-exception p0
 
+    .line 8
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0

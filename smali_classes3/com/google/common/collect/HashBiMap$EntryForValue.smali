@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/HashBiMap$EntryForValue;
+.class public final Lcom/google/common/collect/HashBiMap$EntryForValue;
 .super Lcom/google/common/collect/AbstractMapEntry;
 .source "SourceFile"
 
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field final biMap:Lcom/google/common/collect/HashBiMap;
+.field public final biMap:Lcom/google/common/collect/HashBiMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/HashBiMap<",
@@ -36,9 +36,9 @@
     .end annotation
 .end field
 
-.field index:I
+.field public index:I
 
-.field final value:Ljava/lang/Object;
+.field public final value:Ljava/lang/Object;
     .annotation runtime Lcom/google/common/collect/ParametricNullness;
     .end annotation
 
@@ -61,10 +61,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/AbstractMapEntry;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/HashBiMap$EntryForValue;->biMap:Lcom/google/common/collect/HashBiMap;
 
+    .line 3
     iget-object p1, p1, Lcom/google/common/collect/HashBiMap;->values:[Ljava/lang/Object;
 
     aget-object p1, p1, p2
@@ -75,6 +78,7 @@
 
     iput-object p1, p0, Lcom/google/common/collect/HashBiMap$EntryForValue;->value:Ljava/lang/Object;
 
+    .line 4
     iput p2, p0, Lcom/google/common/collect/HashBiMap$EntryForValue;->index:I
 
     return-void
@@ -83,6 +87,7 @@
 .method private updateIndex()V
     .locals 3
 
+    .line 1
     iget v0, p0, Lcom/google/common/collect/HashBiMap$EntryForValue;->index:I
 
     const/4 v1, -0x1
@@ -107,6 +112,7 @@
 
     if-nez v0, :cond_1
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/common/collect/HashBiMap$EntryForValue;->biMap:Lcom/google/common/collect/HashBiMap;
 
@@ -135,6 +141,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/HashBiMap$EntryForValue;->value:Ljava/lang/Object;
 
     return-object p0
@@ -151,8 +158,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/HashBiMap$EntryForValue;->updateIndex()V
 
+    .line 2
     iget v0, p0, Lcom/google/common/collect/HashBiMap$EntryForValue;->index:I
 
     const/4 v1, -0x1
@@ -195,53 +204,60 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/HashBiMap$EntryForValue;->updateIndex()V
 
+    .line 2
     iget v0, p0, Lcom/google/common/collect/HashBiMap$EntryForValue;->index:I
 
-    const/4 v1, -0x1
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const/4 v2, -0x1
 
-    if-ne v0, v1, :cond_0
+    if-ne v0, v2, :cond_0
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/collect/HashBiMap$EntryForValue;->biMap:Lcom/google/common/collect/HashBiMap;
 
     iget-object p0, p0, Lcom/google/common/collect/HashBiMap$EntryForValue;->value:Ljava/lang/Object;
 
-    invoke-virtual {v0, p0, p1, v2}, Lcom/google/common/collect/HashBiMap;->putInverse(Ljava/lang/Object;Ljava/lang/Object;Z)Ljava/lang/Object;
+    invoke-virtual {v0, p0, p1, v1}, Lcom/google/common/collect/HashBiMap;->putInverse(Ljava/lang/Object;Ljava/lang/Object;Z)Ljava/lang/Object;
 
+    .line 4
     invoke-static {}, Lcom/google/common/collect/NullnessCasts;->unsafeNull()Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 
+    .line 5
     :cond_0
-    iget-object v1, p0, Lcom/google/common/collect/HashBiMap$EntryForValue;->biMap:Lcom/google/common/collect/HashBiMap;
+    iget-object v2, p0, Lcom/google/common/collect/HashBiMap$EntryForValue;->biMap:Lcom/google/common/collect/HashBiMap;
 
-    iget-object v1, v1, Lcom/google/common/collect/HashBiMap;->keys:[Ljava/lang/Object;
+    iget-object v2, v2, Lcom/google/common/collect/HashBiMap;->keys:[Ljava/lang/Object;
 
-    aget-object v0, v1, v0
+    aget-object v0, v2, v0
 
     invoke-static {v0}, Lcom/google/common/collect/NullnessCasts;->uncheckedCastNullableTToT(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 6
     invoke-static {v0, p1}, Lcom/google/common/base/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_1
+    if-eqz v2, :cond_1
 
     return-object p1
 
+    .line 7
     :cond_1
-    iget-object v1, p0, Lcom/google/common/collect/HashBiMap$EntryForValue;->biMap:Lcom/google/common/collect/HashBiMap;
+    iget-object v2, p0, Lcom/google/common/collect/HashBiMap$EntryForValue;->biMap:Lcom/google/common/collect/HashBiMap;
 
     iget p0, p0, Lcom/google/common/collect/HashBiMap$EntryForValue;->index:I
 
-    invoke-static {v1, p0, p1, v2}, Lcom/google/common/collect/HashBiMap;->access$400(Lcom/google/common/collect/HashBiMap;ILjava/lang/Object;Z)V
+    invoke-static {v2, p0, p1, v1}, Lcom/google/common/collect/HashBiMap;->access$400(Lcom/google/common/collect/HashBiMap;ILjava/lang/Object;Z)V
 
     return-object v0
 .end method

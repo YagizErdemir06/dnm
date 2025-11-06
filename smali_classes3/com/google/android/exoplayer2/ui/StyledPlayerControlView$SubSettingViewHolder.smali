@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/ui/StyledPlayerControlView$SubSettingViewHolder;
+.class public Lcom/google/android/exoplayer2/ui/StyledPlayerControlView$SubSettingViewHolder;
 .super Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 .source "SourceFile"
 
@@ -24,8 +24,10 @@
 .method public constructor <init>(Landroid/view/View;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
+    .line 2
     sget v0, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
     const/16 v1, 0x1a
@@ -34,8 +36,10 @@
 
     const/4 v0, 0x1
 
+    .line 3
     invoke-virtual {p1, v0}, Landroid/view/View;->setFocusable(Z)V
 
+    .line 4
     :cond_0
     sget v0, Lcom/google/android/exoplayer2/ui/R$id;->exo_text:I
 
@@ -47,6 +51,7 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/ui/StyledPlayerControlView$SubSettingViewHolder;->textView:Landroid/widget/TextView;
 
+    .line 5
     sget v0, Lcom/google/android/exoplayer2/ui/R$id;->exo_check:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;

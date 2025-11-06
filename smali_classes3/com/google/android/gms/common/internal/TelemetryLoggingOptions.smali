@@ -90,6 +90,7 @@
 
     return p0
 
+    .line 1
     :cond_0
     instance-of v0, p1, Lcom/google/android/gms/common/internal/TelemetryLoggingOptions;
 
@@ -99,11 +100,13 @@
 
     return p0
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/gms/common/internal/TelemetryLoggingOptions;
 
     iget-object p0, p0, Lcom/google/android/gms/common/internal/TelemetryLoggingOptions;->zab:Ljava/lang/String;
 
+    .line 3
     iget-object p1, p1, Lcom/google/android/gms/common/internal/TelemetryLoggingOptions;->zab:Ljava/lang/String;
 
     invoke-static {p0, p1}, Lcom/google/android/gms/common/internal/Objects;->equal(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -120,9 +123,10 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    const/4 v1, 0x0
-
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/internal/TelemetryLoggingOptions;->zab:Ljava/lang/String;
+
+    const/4 v1, 0x0
 
     aput-object p0, v0, v1
 
@@ -138,6 +142,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
@@ -148,6 +153,7 @@
 
     const-string v1, "api"
 
+    .line 2
     invoke-virtual {v0, v1, p0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0

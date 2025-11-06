@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/config/zze;
+.class public final Lcom/google/android/gms/common/config/zze;
 .super Lcom/google/android/gms/common/config/GservicesValue;
 .source "SourceFile"
 
@@ -7,6 +7,7 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/gms/common/config/GservicesValue;-><init>(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
@@ -19,6 +20,7 @@
 
     const/4 p1, 0x0
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     iget-object p0, p0, Lcom/google/android/gms/common/config/GservicesValue;->zzb:Ljava/lang/Object;

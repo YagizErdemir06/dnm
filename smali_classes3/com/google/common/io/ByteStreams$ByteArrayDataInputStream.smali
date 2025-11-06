@@ -1,4 +1,4 @@
-.class Lcom/google/common/io/ByteStreams$ByteArrayDataInputStream;
+.class public Lcom/google/common/io/ByteStreams$ByteArrayDataInputStream;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,15 +18,17 @@
 
 
 # instance fields
-.field final input:Ljava/io/DataInput;
+.field public final input:Ljava/io/DataInput;
 
 
 # direct methods
 .method public constructor <init>(Ljava/io/ByteArrayInputStream;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/io/DataInputStream;
 
     invoke-direct {v0, p1}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
@@ -41,6 +43,7 @@
 .method public readBoolean()Z
     .locals 1
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataInputStream;->input:Ljava/io/DataInput;
 
@@ -55,6 +58,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance v0, Ljava/lang/IllegalStateException;
 
     invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
@@ -65,6 +69,7 @@
 .method public readByte()B
     .locals 1
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataInputStream;->input:Ljava/io/DataInput;
 
@@ -80,6 +85,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance v0, Ljava/lang/AssertionError;
 
     invoke-direct {v0, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
@@ -89,6 +95,7 @@
     :catch_1
     move-exception p0
 
+    .line 3
     new-instance v0, Ljava/lang/IllegalStateException;
 
     invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
@@ -99,6 +106,7 @@
 .method public readChar()C
     .locals 1
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataInputStream;->input:Ljava/io/DataInput;
 
@@ -113,6 +121,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance v0, Ljava/lang/IllegalStateException;
 
     invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
@@ -123,6 +132,7 @@
 .method public readDouble()D
     .locals 2
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataInputStream;->input:Ljava/io/DataInput;
 
@@ -137,6 +147,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance v0, Ljava/lang/IllegalStateException;
 
     invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
@@ -147,6 +158,7 @@
 .method public readFloat()F
     .locals 1
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataInputStream;->input:Ljava/io/DataInput;
 
@@ -161,6 +173,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance v0, Ljava/lang/IllegalStateException;
 
     invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
@@ -219,6 +232,7 @@
 .method public readInt()I
     .locals 1
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataInputStream;->input:Ljava/io/DataInput;
 
@@ -233,6 +247,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance v0, Ljava/lang/IllegalStateException;
 
     invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
@@ -245,6 +260,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataInputStream;->input:Ljava/io/DataInput;
 
@@ -259,6 +275,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance v0, Ljava/lang/IllegalStateException;
 
     invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
@@ -269,6 +286,7 @@
 .method public readLong()J
     .locals 2
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataInputStream;->input:Ljava/io/DataInput;
 
@@ -283,6 +301,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance v0, Ljava/lang/IllegalStateException;
 
     invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
@@ -293,6 +312,7 @@
 .method public readShort()S
     .locals 1
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataInputStream;->input:Ljava/io/DataInput;
 
@@ -307,6 +327,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance v0, Ljava/lang/IllegalStateException;
 
     invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
@@ -317,6 +338,7 @@
 .method public readUTF()Ljava/lang/String;
     .locals 1
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataInputStream;->input:Ljava/io/DataInput;
 
@@ -331,6 +353,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance v0, Ljava/lang/IllegalStateException;
 
     invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
@@ -341,6 +364,7 @@
 .method public readUnsignedByte()I
     .locals 1
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataInputStream;->input:Ljava/io/DataInput;
 
@@ -355,6 +379,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance v0, Ljava/lang/IllegalStateException;
 
     invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
@@ -365,6 +390,7 @@
 .method public readUnsignedShort()I
     .locals 1
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataInputStream;->input:Ljava/io/DataInput;
 
@@ -379,6 +405,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance v0, Ljava/lang/IllegalStateException;
 
     invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
@@ -389,6 +416,7 @@
 .method public skipBytes(I)I
     .locals 0
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataInputStream;->input:Ljava/io/DataInput;
 
@@ -403,6 +431,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance p1, Ljava/lang/IllegalStateException;
 
     invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V

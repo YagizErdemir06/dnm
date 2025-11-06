@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/moduleinstall/internal/zaab;
+.class public final Lcom/google/android/gms/common/moduleinstall/internal/zaab;
 .super Lcom/google/android/gms/common/moduleinstall/internal/zag;
 .source "SourceFile"
 
@@ -11,6 +11,7 @@
 .method public constructor <init>(Lcom/google/android/gms/common/api/internal/ListenerHolder;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/common/moduleinstall/internal/zag;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/gms/common/moduleinstall/internal/zaab;->zaa:Lcom/google/android/gms/common/api/internal/ListenerHolder;
@@ -23,6 +24,7 @@
 .method public final zab(Lcom/google/android/gms/common/moduleinstall/ModuleInstallStatusUpdate;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/moduleinstall/internal/zaab;->zaa:Lcom/google/android/gms/common/api/internal/ListenerHolder;
 
     new-instance v1, Lcom/google/android/gms/common/moduleinstall/internal/zaaa;

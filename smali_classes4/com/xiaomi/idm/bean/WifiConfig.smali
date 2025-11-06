@@ -18,25 +18,26 @@
 
 
 # instance fields
-.field channel:I
+.field public channel:I
 
-.field localIp:Ljava/lang/String;
+.field public localIp:Ljava/lang/String;
 
-.field macAddr:Ljava/lang/String;
+.field public macAddr:Ljava/lang/String;
 
-.field pwd:Ljava/lang/String;
+.field public pwd:Ljava/lang/String;
 
-.field remoteIp:Ljava/lang/String;
+.field public remoteIp:Ljava/lang/String;
 
-.field ssid:Ljava/lang/String;
+.field public ssid:Ljava/lang/String;
 
-.field use5GBand:Z
+.field public use5GBand:Z
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/idm/bean/ConnConfig;-><init>()V
 
     return-void
@@ -132,14 +133,14 @@
     :catch_0
     move-exception p0
 
-    const-string v1, "WifiConfig"
-
     .line 2
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-static {v1, v2, p0}, Lcom/xiaomi/idm/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    const-string v2, "WifiConfig"
+
+    invoke-static {v2, v1, p0}, Lcom/xiaomi/idm/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     .line 3
     :goto_0
@@ -155,6 +156,7 @@
 .method public getChannel()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/idm/bean/WifiConfig;->channel:I
 
     return p0
@@ -163,6 +165,7 @@
 .method public getLocalIp()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/bean/WifiConfig;->localIp:Ljava/lang/String;
 
     return-object p0
@@ -171,6 +174,7 @@
 .method public getMacAddr()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/bean/WifiConfig;->macAddr:Ljava/lang/String;
 
     return-object p0
@@ -179,6 +183,7 @@
 .method public getPwd()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/bean/WifiConfig;->pwd:Ljava/lang/String;
 
     return-object p0
@@ -187,6 +192,7 @@
 .method public getRemoteIp()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/bean/WifiConfig;->remoteIp:Ljava/lang/String;
 
     return-object p0
@@ -195,6 +201,7 @@
 .method public getSsid()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/bean/WifiConfig;->ssid:Ljava/lang/String;
 
     return-object p0
@@ -203,6 +210,7 @@
 .method public isUse5GBand()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/xiaomi/idm/bean/WifiConfig;->use5GBand:Z
 
     return p0
@@ -211,6 +219,7 @@
 .method public setChannel(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/idm/bean/WifiConfig;->channel:I
 
     return-void
@@ -219,6 +228,7 @@
 .method public setLocalIp(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/bean/WifiConfig;->localIp:Ljava/lang/String;
 
     return-void
@@ -227,6 +237,7 @@
 .method public setMacAddr(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/bean/WifiConfig;->macAddr:Ljava/lang/String;
 
     return-void
@@ -235,6 +246,7 @@
 .method public setPwd(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/bean/WifiConfig;->pwd:Ljava/lang/String;
 
     return-void
@@ -243,6 +255,7 @@
 .method public setRemoteIp(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/bean/WifiConfig;->remoteIp:Ljava/lang/String;
 
     return-void
@@ -251,6 +264,7 @@
 .method public setSsid(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/bean/WifiConfig;->ssid:Ljava/lang/String;
 
     return-void
@@ -259,6 +273,7 @@
 .method public setUse5GBand(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/idm/bean/WifiConfig;->use5GBand:Z
 
     return-void
@@ -353,10 +368,12 @@
 .method public toQCodeString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 2
     iget-object v1, p0, Lcom/xiaomi/idm/bean/WifiConfig;->ssid:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -381,6 +398,7 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
+    .line 3
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -391,6 +409,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

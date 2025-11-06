@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ConcurrentHashMultiset$EntrySet;
+.class public Lcom/google/common/collect/ConcurrentHashMultiset$EntrySet;
 .super Lcom/google/common/collect/AbstractMultiset$EntrySet;
 .source "SourceFile"
 
@@ -22,7 +22,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/ConcurrentHashMultiset;
+.field public final synthetic this$0:Lcom/google/common/collect/ConcurrentHashMultiset;
 
 
 # direct methods
@@ -57,6 +57,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMultiset$EntrySet;->size()I
 
     move-result v0
@@ -65,6 +66,7 @@
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractMultiset$EntrySet;->iterator()Ljava/util/Iterator;
 
     move-result-object p0

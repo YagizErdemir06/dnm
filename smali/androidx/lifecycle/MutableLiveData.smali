@@ -49,6 +49,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroidx/lifecycle/LiveData;->postValue(Ljava/lang/Object;)V
 
     return-void
@@ -62,6 +63,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroidx/lifecycle/LiveData;->setValue(Ljava/lang/Object;)V
 
     return-void

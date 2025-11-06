@@ -74,16 +74,16 @@
         .end annotation
     .end param
 
-    .line 20
+    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 21
+    .line 22
     iput-object p7, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->p:Lcom/arcsoft/avatar2/recoder/RecordingListener;
 
-    .line 22
+    .line 23
     iput p2, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->b:I
 
-    .line 23
+    .line 24
     iput p3, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->c:I
 
     const/16 p7, 0x5a
@@ -97,46 +97,49 @@
     :cond_0
     xor-int p7, p2, p3
 
+    .line 25
+    iput p7, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->b:I
+
     xor-int v0, p7, p3
 
-    .line 24
+    .line 26
     iput v0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->c:I
 
     xor-int/2addr p7, v0
 
-    .line 25
+    .line 27
     iput p7, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->b:I
 
-    .line 26
+    .line 28
     :cond_1
     iput p4, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->d:I
 
-    .line 27
+    .line 29
     iput-boolean p5, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->e:Z
 
     const/4 p4, 0x0
 
-    .line 28
+    .line 30
     iput p4, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->m:I
 
-    .line 29
+    .line 31
     iput p4, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->n:I
 
-    .line 30
+    .line 32
     new-instance p5, Lcom/arcsoft/avatar2/recoder/MuxerWrapper;
 
     invoke-direct {p5, p1, p6, p0}, Lcom/arcsoft/avatar2/recoder/MuxerWrapper;-><init>(Ljava/io/FileDescriptor;ILcom/arcsoft/avatar2/recoder/RecordingListener;)V
 
     iput-object p5, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->j:Lcom/arcsoft/avatar2/recoder/MuxerWrapper;
 
-    .line 31
+    .line 33
     invoke-static {}, Landroid/opengl/EGL14;->eglGetCurrentDisplay()Landroid/opengl/EGLDisplay;
 
     move-result-object p1
 
     const/16 p5, 0x305a
 
-    .line 32
+    .line 34
     invoke-static {p5}, Landroid/opengl/EGL14;->eglGetCurrentSurface(I)Landroid/opengl/EGLSurface;
 
     move-result-object p5
@@ -149,32 +152,32 @@
 
     const/16 v0, 0x3057
 
-    .line 33
+    .line 35
     invoke-static {p1, p5, v0, p7, p4}, Landroid/opengl/EGL14;->eglQuerySurface(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;I[II)Z
 
     const/16 v0, 0x3056
 
-    .line 34
+    .line 36
     invoke-static {p1, p5, v0, p6, p4}, Landroid/opengl/EGL14;->eglQuerySurface(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;I[II)Z
 
+    .line 37
     aget p1, p7, p4
 
-    .line 35
     iput p1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->s:I
 
+    .line 38
     aget p1, p6, p4
 
-    .line 36
     iput p1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->t:I
 
-    .line 37
+    .line 39
     new-instance p1, Ljava/lang/Object;
 
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->o:Ljava/lang/Object;
 
-    .line 38
+    .line 40
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -232,46 +235,49 @@
     :cond_0
     xor-int p7, p2, p3
 
+    .line 5
+    iput p7, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->b:I
+
     xor-int v0, p7, p3
 
-    .line 5
+    .line 6
     iput v0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->c:I
 
     xor-int/2addr p7, v0
 
-    .line 6
+    .line 7
     iput p7, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->b:I
 
-    .line 7
+    .line 8
     :cond_1
     iput p4, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->d:I
 
-    .line 8
+    .line 9
     iput-boolean p5, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->e:Z
 
     const/4 p4, 0x0
 
-    .line 9
+    .line 10
     iput p4, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->m:I
 
-    .line 10
+    .line 11
     iput p4, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->n:I
 
-    .line 11
+    .line 12
     new-instance p5, Lcom/arcsoft/avatar2/recoder/MuxerWrapper;
 
     invoke-direct {p5, p1, p6, p0}, Lcom/arcsoft/avatar2/recoder/MuxerWrapper;-><init>(Ljava/lang/String;ILcom/arcsoft/avatar2/recoder/RecordingListener;)V
 
     iput-object p5, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->j:Lcom/arcsoft/avatar2/recoder/MuxerWrapper;
 
-    .line 12
+    .line 13
     invoke-static {}, Landroid/opengl/EGL14;->eglGetCurrentDisplay()Landroid/opengl/EGLDisplay;
 
     move-result-object p1
 
     const/16 p5, 0x305a
 
-    .line 13
+    .line 14
     invoke-static {p5}, Landroid/opengl/EGL14;->eglGetCurrentSurface(I)Landroid/opengl/EGLSurface;
 
     move-result-object p5
@@ -284,32 +290,32 @@
 
     const/16 v0, 0x3057
 
-    .line 14
+    .line 15
     invoke-static {p1, p5, v0, p7, p4}, Landroid/opengl/EGL14;->eglQuerySurface(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;I[II)Z
 
     const/16 v0, 0x3056
 
-    .line 15
+    .line 16
     invoke-static {p1, p5, v0, p6, p4}, Landroid/opengl/EGL14;->eglQuerySurface(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;I[II)Z
 
+    .line 17
     aget p1, p7, p4
 
-    .line 16
     iput p1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->s:I
 
+    .line 18
     aget p1, p6, p4
 
-    .line 17
     iput p1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->t:I
 
-    .line 18
+    .line 19
     new-instance p1, Ljava/lang/Object;
 
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->o:Ljava/lang/Object;
 
-    .line 19
+    .line 20
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -435,14 +441,14 @@
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
     .line 4
     iget v3, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->b:I
 
     iget v4, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->c:I
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
 
     const/16 v5, 0x1908
 
@@ -490,6 +496,7 @@
 .method public drawSurfaceWithTextureId(I)V
     .locals 6
 
+    .line 1
     iget-boolean v0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->f:Z
 
     const-string v1, "Arc_VideoEncoder"
@@ -498,6 +505,7 @@
 
     const-string p0, "drawSurfaceWithTextureId()-> MediaManager has not been initialized."
 
+    .line 2
     invoke-static {v1, p0}, Lcom/arcsoft/avatar2/util/CodecLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -505,21 +513,24 @@
     :cond_0
     if-lez p1, :cond_7
 
+    .line 3
     iget-object v0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->l:Lcom/arcsoft/avatar2/gl/GLRender;
 
     if-eqz v0, :cond_6
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
     const/4 v3, 0x0
 
+    .line 4
     :try_start_0
     iget-object v4, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->h:Lcom/arcsoft/avatar2/recoder/BaseEncoder;
 
     invoke-virtual {v4}, Lcom/arcsoft/avatar2/recoder/BaseEncoder;->lock()V
 
+    .line 5
     iget-object v4, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->q:Lcom/arcsoft/avatar2/recoder/FrameQueue;
 
     invoke-virtual {v4}, Lcom/arcsoft/avatar2/recoder/FrameQueue;->isIsInited()Z
@@ -528,22 +539,24 @@
 
     if-eqz v4, :cond_3
 
+    .line 6
     iget-object v4, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->q:Lcom/arcsoft/avatar2/recoder/FrameQueue;
 
     invoke-virtual {v4}, Lcom/arcsoft/avatar2/recoder/FrameQueue;->getFrameForProducer()Lcom/arcsoft/avatar2/recoder/FrameItem;
 
-    move-result-object v3
+    move-result-object v0
 
-    if-eqz v3, :cond_2
+    if-eqz v0, :cond_2
 
-    iget-boolean v4, v3, Lcom/arcsoft/avatar2/recoder/FrameItem;->mIsInited:Z
+    .line 7
+    iget-boolean v4, v0, Lcom/arcsoft/avatar2/recoder/FrameItem;->mIsInited:Z
 
     if-nez v4, :cond_1
 
     goto :goto_0
 
     :cond_1
-    move v1, v0
+    move v1, v2
 
     goto :goto_1
 
@@ -551,11 +564,13 @@
     :goto_0
     const-string v4, "drawSurfaceWithTextureId()-> get a null frame item."
 
+    .line 8
     invoke-static {v1, v4}, Lcom/arcsoft/avatar2/util/CodecLog;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 9
     iget-object p0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->h:Lcom/arcsoft/avatar2/recoder/BaseEncoder;
 
     invoke-virtual {p0}, Lcom/arcsoft/avatar2/recoder/BaseEncoder;->unLock()V
@@ -563,7 +578,7 @@
     return-void
 
     :cond_3
-    move v1, v2
+    move v1, v3
 
     :goto_1
     iget-object v4, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->h:Lcom/arcsoft/avatar2/recoder/BaseEncoder;
@@ -580,22 +595,25 @@
     :catch_0
     move-exception v1
 
+    .line 10
     :try_start_1
-    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 11
     iget-object v1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->h:Lcom/arcsoft/avatar2/recoder/BaseEncoder;
 
     invoke-virtual {v1}, Lcom/arcsoft/avatar2/recoder/BaseEncoder;->unLock()V
 
-    move v1, v2
+    move v1, v3
 
     :goto_2
     if-nez v1, :cond_4
 
     return-void
 
+    .line 12
     :cond_4
     iget-object v1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->u:[I
 
@@ -605,50 +623,61 @@
 
     new-array v1, v1, [I
 
+    .line 13
     iput-object v1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->u:[I
 
     const/16 v4, 0xba2
 
-    invoke-static {v4, v1, v2}, Landroid/opengl/GLES20;->glGetIntegerv(I[II)V
+    .line 14
+    invoke-static {v4, v1, v3}, Landroid/opengl/GLES30;->glGetIntegerv(I[II)V
 
+    .line 15
     :cond_5
     iget-object v1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->q:Lcom/arcsoft/avatar2/recoder/FrameQueue;
 
-    invoke-virtual {v1, v3}, Lcom/arcsoft/avatar2/recoder/FrameQueue;->deleteSync(Lcom/arcsoft/avatar2/recoder/FrameItem;)V
+    invoke-virtual {v1, v0}, Lcom/arcsoft/avatar2/recoder/FrameQueue;->deleteSync(Lcom/arcsoft/avatar2/recoder/FrameItem;)V
 
-    iget-object v1, v3, Lcom/arcsoft/avatar2/recoder/FrameItem;->mFramebuffer:Lcom/arcsoft/avatar2/gl/GLFramebuffer;
+    .line 16
+    iget-object v1, v0, Lcom/arcsoft/avatar2/recoder/FrameItem;->mFramebuffer:Lcom/arcsoft/avatar2/gl/GLFramebuffer;
 
-    invoke-virtual {v1, v2, v2}, Lcom/arcsoft/avatar2/gl/GLFramebuffer;->bind(ZZ)V
+    invoke-virtual {v1, v3, v3}, Lcom/arcsoft/avatar2/gl/GLFramebuffer;->bind(ZZ)V
 
+    .line 17
     iget v1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->b:I
 
     iget v4, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->c:I
 
-    invoke-static {v2, v2, v1, v4}, Landroid/opengl/GLES20;->glViewport(IIII)V
+    invoke-static {v3, v3, v1, v4}, Landroid/opengl/GLES20;->glViewport(IIII)V
 
+    .line 18
     iget-object v1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->l:Lcom/arcsoft/avatar2/gl/GLRender;
 
     invoke-virtual {v1, p1}, Lcom/arcsoft/avatar2/gl/GLRender;->renderWithTextureId(I)V
 
     const p1, 0x9117
 
-    invoke-static {p1, v2}, Landroid/opengl/GLES30;->glFenceSync(II)J
+    .line 19
+    invoke-static {p1, v3}, Landroid/opengl/GLES30;->glFenceSync(II)J
 
     move-result-wide v4
 
-    iput-wide v4, v3, Lcom/arcsoft/avatar2/recoder/FrameItem;->a:J
+    .line 20
+    iput-wide v4, v0, Lcom/arcsoft/avatar2/recoder/FrameItem;->a:J
 
-    iget-object p1, v3, Lcom/arcsoft/avatar2/recoder/FrameItem;->mFramebuffer:Lcom/arcsoft/avatar2/gl/GLFramebuffer;
+    .line 21
+    iget-object p1, v0, Lcom/arcsoft/avatar2/recoder/FrameItem;->mFramebuffer:Lcom/arcsoft/avatar2/gl/GLFramebuffer;
 
-    invoke-virtual {p1, v2, v2}, Lcom/arcsoft/avatar2/gl/GLFramebuffer;->unBind(ZZ)V
+    invoke-virtual {p1, v3, v3}, Lcom/arcsoft/avatar2/gl/GLFramebuffer;->unBind(ZZ)V
 
-    iput-boolean v2, v3, Lcom/arcsoft/avatar2/recoder/FrameItem;->mIsEmpty:Z
+    .line 22
+    iput-boolean v3, v0, Lcom/arcsoft/avatar2/recoder/FrameItem;->mIsEmpty:Z
 
+    .line 23
     iget-object p1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->u:[I
 
-    aget v1, p1, v2
+    aget v0, p1, v3
 
-    aget v0, p1, v0
+    aget v1, p1, v2
 
     const/4 v2, 0x2
 
@@ -658,13 +687,15 @@
 
     aget p1, p1, v3
 
-    invoke-static {v1, v0, v2, p1}, Landroid/opengl/GLES20;->glViewport(IIII)V
+    invoke-static {v0, v1, v2, p1}, Landroid/opengl/GLES20;->glViewport(IIII)V
 
+    .line 24
     :try_start_2
     iget-object p1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->h:Lcom/arcsoft/avatar2/recoder/BaseEncoder;
 
     invoke-virtual {p1}, Lcom/arcsoft/avatar2/recoder/BaseEncoder;->lock()V
 
+    .line 25
     iget-object p1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->q:Lcom/arcsoft/avatar2/recoder/FrameQueue;
 
     invoke-virtual {p1}, Lcom/arcsoft/avatar2/recoder/FrameQueue;->addFrameForProducer()V
@@ -682,33 +713,39 @@
     :catch_1
     move-exception p1
 
+    .line 26
     :try_start_3
-    invoke-virtual {p1}, Ljava/lang/Throwable;->printStackTrace()V
+    invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
+    .line 27
     :goto_3
     iget-object p1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->h:Lcom/arcsoft/avatar2/recoder/BaseEncoder;
 
     invoke-virtual {p1}, Lcom/arcsoft/avatar2/recoder/BaseEncoder;->sinalCondition()V
 
+    .line 28
     iget-object p0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->h:Lcom/arcsoft/avatar2/recoder/BaseEncoder;
 
     invoke-virtual {p0}, Lcom/arcsoft/avatar2/recoder/BaseEncoder;->unLock()V
 
     return-void
 
+    .line 29
     :goto_4
     iget-object v0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->h:Lcom/arcsoft/avatar2/recoder/BaseEncoder;
 
     invoke-virtual {v0}, Lcom/arcsoft/avatar2/recoder/BaseEncoder;->sinalCondition()V
 
+    .line 30
     iget-object p0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->h:Lcom/arcsoft/avatar2/recoder/BaseEncoder;
 
     invoke-virtual {p0}, Lcom/arcsoft/avatar2/recoder/BaseEncoder;->unLock()V
 
     throw p1
 
+    .line 31
     :goto_5
     iget-object p0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->h:Lcom/arcsoft/avatar2/recoder/BaseEncoder;
 
@@ -716,6 +753,7 @@
 
     throw p1
 
+    .line 32
     :cond_6
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -725,6 +763,7 @@
 
     throw p0
 
+    .line 33
     :cond_7
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -750,6 +789,7 @@
 .method public getMuxerSizeRecorded()J
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->j:Lcom/arcsoft/avatar2/recoder/MuxerWrapper;
 
     if-nez p0, :cond_0
@@ -758,6 +798,7 @@
 
     return-wide v0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Lcom/arcsoft/avatar2/recoder/MuxerWrapper;->getSizeRecordFile()J
 
@@ -769,6 +810,7 @@
 .method public getMuxerTimeElapsed()J
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->j:Lcom/arcsoft/avatar2/recoder/MuxerWrapper;
 
     if-nez p0, :cond_0
@@ -777,6 +819,7 @@
 
     return-wide v0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Lcom/arcsoft/avatar2/recoder/MuxerWrapper;->getTimeElapse()J
 
@@ -788,6 +831,7 @@
 .method public initAudioEncoder()V
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/arcsoft/avatar2/recoder/AudioEncoder;
 
     iget-object v1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->j:Lcom/arcsoft/avatar2/recoder/MuxerWrapper;
@@ -800,14 +844,17 @@
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-virtual {v0, v1}, Lcom/arcsoft/avatar2/recoder/BaseEncoder;->prepare(Z)V
 
+    .line 3
     iget v0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->n:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->n:I
 
+    .line 4
     invoke-direct {p0}, Lcom/arcsoft/avatar2/recoder/MediaManager;->a()V
 
     return-void
@@ -816,13 +863,15 @@
 .method public initVideoEncoder(Ljava/lang/String;)V
     .locals 11
 
-    const-string v0, "MediaManager initVideoEncoder in"
+    const-string v0, "Arc_VideoEncoder"
 
-    const-string v1, "Arc_VideoEncoder"
+    const-string v1, "MediaManager initVideoEncoder in"
 
-    invoke-static {v1, v0}, Lcom/arcsoft/avatar2/util/CodecLog;->e(Ljava/lang/String;Ljava/lang/String;)V
+    .line 1
+    invoke-static {v0, v1}, Lcom/arcsoft/avatar2/util/CodecLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v0, Lcom/arcsoft/avatar2/recoder/VideoEncoder;
+    .line 2
+    new-instance v1, Lcom/arcsoft/avatar2/recoder/VideoEncoder;
 
     iget-object v3, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->j:Lcom/arcsoft/avatar2/recoder/MuxerWrapper;
 
@@ -836,7 +885,7 @@
 
     const v9, 0x989680
 
-    move-object v2, v0
+    move-object v2, v1
 
     move-object v7, p0
 
@@ -844,31 +893,36 @@
 
     invoke-direct/range {v2 .. v10}, Lcom/arcsoft/avatar2/recoder/VideoEncoder;-><init>(Lcom/arcsoft/avatar2/recoder/MuxerWrapper;IILjava/lang/Object;Lcom/arcsoft/avatar2/recoder/RecordingListener;Landroid/opengl/EGLContext;ILjava/lang/String;)V
 
-    iput-object v0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->h:Lcom/arcsoft/avatar2/recoder/BaseEncoder;
+    iput-object v1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->h:Lcom/arcsoft/avatar2/recoder/BaseEncoder;
 
     const/4 p1, 0x0
 
-    invoke-virtual {v0, p1}, Lcom/arcsoft/avatar2/recoder/BaseEncoder;->prepare(Z)V
+    .line 3
+    invoke-virtual {v1, p1}, Lcom/arcsoft/avatar2/recoder/BaseEncoder;->prepare(Z)V
 
     const/4 p1, 0x1
 
+    .line 4
     iput-boolean p1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->f:Z
 
-    iget v0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->n:I
+    .line 5
+    iget v1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->n:I
 
-    add-int/2addr v0, p1
+    add-int/2addr v1, p1
 
-    iput v0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->n:I
+    iput v1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->n:I
 
+    .line 6
     invoke-direct {p0}, Lcom/arcsoft/avatar2/recoder/MediaManager;->a()V
 
+    .line 7
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v0, "MediaManager initVideoEncoder out mInitedEncoderCount = "
+    const-string v1, "MediaManager initVideoEncoder out mInitedEncoderCount = "
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget p0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->n:I
 
@@ -878,7 +932,7 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lcom/arcsoft/avatar2/util/CodecLog;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p0}, Lcom/arcsoft/avatar2/util/CodecLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -886,6 +940,7 @@
 .method public initVideoEncoderWithSharedContext(Landroid/opengl/EGLContext;IZLjava/lang/String;)V
     .locals 10
 
+    .line 1
     new-instance v9, Lcom/arcsoft/avatar2/recoder/VideoEncoder;
 
     iget-object v1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->j:Lcom/arcsoft/avatar2/recoder/MuxerWrapper;
@@ -912,8 +967,10 @@
 
     const/4 p1, 0x1
 
+    .line 2
     iput-boolean p1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->k:Z
 
+    .line 3
     invoke-virtual {v9}, Lcom/arcsoft/avatar2/recoder/BaseEncoder;->getInputSurface()Landroid/view/Surface;
 
     move-result-object p2
@@ -922,6 +979,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 4
     new-instance p2, Lcom/arcsoft/avatar2/gl/GLRender;
 
     iget v0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->b:I
@@ -938,10 +996,12 @@
 
     const/4 v0, 0x0
 
+    .line 5
     invoke-virtual {p2, p3, v0}, Lcom/arcsoft/avatar2/gl/GLRender;->initRender(ZF)V
 
     goto :goto_0
 
+    .line 6
     :cond_0
     iget-object p2, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->p:Lcom/arcsoft/avatar2/recoder/RecordingListener;
 
@@ -949,12 +1009,14 @@
 
     const/16 p3, 0x232
 
+    .line 7
     invoke-static {p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     invoke-interface {p2, p3, v0}, Lcom/arcsoft/avatar2/recoder/RecordingListener;->onRecordingListener(ILjava/lang/Object;)V
 
+    .line 8
     :cond_1
     :goto_0
     new-instance p2, Lcom/arcsoft/avatar2/recoder/FrameQueue;
@@ -963,34 +1025,39 @@
 
     iput-object p2, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->q:Lcom/arcsoft/avatar2/recoder/FrameQueue;
 
-    iget p3, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->b:I
+    const/4 p3, 0x2
 
-    iget v0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->c:I
+    .line 9
+    iget v0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->b:I
 
-    const/4 v1, 0x2
+    iget v1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->c:I
 
-    invoke-virtual {p2, v1, p3, v0, p4}, Lcom/arcsoft/avatar2/recoder/FrameQueue;->init(IIIZ)V
+    invoke-virtual {p2, p3, v0, v1, p4}, Lcom/arcsoft/avatar2/recoder/FrameQueue;->init(IIIZ)V
 
+    .line 10
     iget-object p2, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->h:Lcom/arcsoft/avatar2/recoder/BaseEncoder;
 
     iget-object p3, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->q:Lcom/arcsoft/avatar2/recoder/FrameQueue;
 
     invoke-virtual {p2, p3}, Lcom/arcsoft/avatar2/recoder/BaseEncoder;->setFrameQueue(Lcom/arcsoft/avatar2/recoder/FrameQueue;)V
 
+    .line 11
     iget p2, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->n:I
 
     add-int/2addr p2, p1
 
     iput p2, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->n:I
 
+    .line 12
     invoke-direct {p0}, Lcom/arcsoft/avatar2/recoder/MediaManager;->a()V
 
     return-void
 .end method
 
 .method public onRecordingListener(ILjava/lang/Object;)V
-    .locals 2
+    .locals 5
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1019,19 +1086,19 @@
 
     invoke-static {v1, v0}, Lcom/arcsoft/avatar2/util/CodecLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    const/16 v0, 0x220
+    const/16 v0, 0x270
+
+    const/16 v2, 0x230
+
+    const/16 v3, 0x220
+
+    const/16 v4, 0x260
 
     packed-switch p1, :pswitch_data_0
 
-    const/16 v0, 0x230
-
     packed-switch p1, :pswitch_data_1
 
-    const/16 v0, 0x260
-
     packed-switch p1, :pswitch_data_2
-
-    const/16 v0, 0x270
 
     packed-switch p1, :pswitch_data_3
 
@@ -1040,46 +1107,64 @@
     :pswitch_0
     move p1, v0
 
+    goto :goto_0
+
+    :pswitch_1
+    move p1, v4
+
+    goto :goto_0
+
+    :pswitch_2
+    move p1, v2
+
+    goto :goto_0
+
+    :pswitch_3
+    move p1, v3
+
+    .line 2
     :goto_0
     iget-object p0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->p:Lcom/arcsoft/avatar2/recoder/RecordingListener;
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-interface {p0, p1, p2}, Lcom/arcsoft/avatar2/recoder/RecordingListener;->onRecordingListener(ILjava/lang/Object;)V
 
     :cond_0
     const-string p0, "onRecordingListener()->out"
 
+    .line 4
     invoke-static {v1, p0}, Lcom/arcsoft/avatar2/util/CodecLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
     :pswitch_data_0
     .packed-switch 0x221
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
+        :pswitch_3
+        :pswitch_3
+        :pswitch_3
+        :pswitch_3
+        :pswitch_3
     .end packed-switch
 
     :pswitch_data_1
     .packed-switch 0x231
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
+        :pswitch_2
+        :pswitch_2
+        :pswitch_2
+        :pswitch_2
+        :pswitch_2
     .end packed-switch
 
     :pswitch_data_2
     .packed-switch 0x261
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
     .end packed-switch
 
     :pswitch_data_3
@@ -1093,17 +1178,21 @@
 .method public pauseRecording()I
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->i:Lcom/arcsoft/avatar2/recoder/BaseEncoder;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Lcom/arcsoft/avatar2/recoder/BaseEncoder;->pauseRecording()V
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->h:Lcom/arcsoft/avatar2/recoder/BaseEncoder;
 
     if-eqz p0, :cond_1
 
+    .line 4
     invoke-virtual {p0}, Lcom/arcsoft/avatar2/recoder/BaseEncoder;->pauseRecording()V
 
     :cond_1
@@ -1115,23 +1204,29 @@
 .method public releaseFrameQueue()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->l:Lcom/arcsoft/avatar2/gl/GLRender;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Lcom/arcsoft/avatar2/gl/GLRender;->unInitRender()V
 
+    .line 3
     iput-object v1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->l:Lcom/arcsoft/avatar2/gl/GLRender;
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->q:Lcom/arcsoft/avatar2/recoder/FrameQueue;
 
     if-eqz v0, :cond_1
 
+    .line 5
     invoke-virtual {v0}, Lcom/arcsoft/avatar2/recoder/FrameQueue;->unInit()V
 
+    .line 6
     iput-object v1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->q:Lcom/arcsoft/avatar2/recoder/FrameQueue;
 
     :cond_1
@@ -1141,29 +1236,36 @@
 .method public resumeRecording()I
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->o:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->i:Lcom/arcsoft/avatar2/recoder/BaseEncoder;
 
     if-eqz v1, :cond_0
 
+    .line 3
     invoke-virtual {v1}, Lcom/arcsoft/avatar2/recoder/BaseEncoder;->resumeRecording()V
 
+    .line 4
     :cond_0
     iget-object v1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->h:Lcom/arcsoft/avatar2/recoder/BaseEncoder;
 
     if-eqz v1, :cond_1
 
+    .line 5
     invoke-virtual {v1}, Lcom/arcsoft/avatar2/recoder/BaseEncoder;->resumeRecording()V
 
+    .line 6
     :cond_1
     iget-object p0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->o:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
+    .line 7
     monitor-exit v0
 
     const/4 p0, 0x0
@@ -1183,10 +1285,12 @@
 .method public setCropFactor(F)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->h:Lcom/arcsoft/avatar2/recoder/BaseEncoder;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/arcsoft/avatar2/recoder/BaseEncoder;->setCropFactor(F)V
 
     :cond_0
@@ -1196,12 +1300,15 @@
 .method public setEncoderCount(I)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->j:Lcom/arcsoft/avatar2/recoder/MuxerWrapper;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {v0, p1}, Lcom/arcsoft/avatar2/recoder/MuxerWrapper;->setEncoderCount(I)V
 
+    .line 3
     :cond_0
     iput p1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->m:I
 
@@ -1211,6 +1318,7 @@
 .method public startRecording()V
     .locals 3
 
+    .line 1
     iget-boolean v0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->f:Z
 
     if-eqz v0, :cond_2
@@ -1219,16 +1327,19 @@
 
     if-eqz v0, :cond_2
 
+    .line 2
     iget-object v0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->h:Lcom/arcsoft/avatar2/recoder/BaseEncoder;
 
     const-string v1, "Arc_VideoEncoder"
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {v0}, Lcom/arcsoft/avatar2/recoder/BaseEncoder;->startRecording()V
 
     goto :goto_0
 
+    .line 4
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1248,15 +1359,18 @@
 
     invoke-static {v1, v0}, Lcom/arcsoft/avatar2/util/CodecLog;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 5
     :goto_0
     iget-object v0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->i:Lcom/arcsoft/avatar2/recoder/BaseEncoder;
 
     if-eqz v0, :cond_1
 
+    .line 6
     invoke-virtual {v0}, Lcom/arcsoft/avatar2/recoder/BaseEncoder;->startRecording()V
 
     goto :goto_1
 
+    .line 7
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1279,6 +1393,7 @@
     :goto_1
     return-void
 
+    .line 8
     :cond_2
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -1292,55 +1407,69 @@
 .method public stopRecording()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->o:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->o:Ljava/lang/Object;
 
     invoke-virtual {v1}, Ljava/lang/Object;->notifyAll()V
 
+    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 4
     iget-object v0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->h:Lcom/arcsoft/avatar2/recoder/BaseEncoder;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 5
     invoke-virtual {v0}, Lcom/arcsoft/avatar2/recoder/BaseEncoder;->stopRecording()V
 
+    .line 6
     iget-object v0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->h:Lcom/arcsoft/avatar2/recoder/BaseEncoder;
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Lcom/arcsoft/avatar2/recoder/BaseEncoder;->release(Z)V
 
+    .line 7
     iput-object v1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->h:Lcom/arcsoft/avatar2/recoder/BaseEncoder;
 
+    .line 8
     :cond_0
     iget-object v0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->i:Lcom/arcsoft/avatar2/recoder/BaseEncoder;
 
     if-eqz v0, :cond_1
 
+    .line 9
     invoke-virtual {v0}, Lcom/arcsoft/avatar2/recoder/BaseEncoder;->stopRecording()V
 
+    .line 10
     iget-object v0, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->i:Lcom/arcsoft/avatar2/recoder/BaseEncoder;
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Lcom/arcsoft/avatar2/recoder/BaseEncoder;->release(Z)V
 
+    .line 11
     iput-object v1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->i:Lcom/arcsoft/avatar2/recoder/BaseEncoder;
 
+    .line 12
     :cond_1
     iput-object v1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->j:Lcom/arcsoft/avatar2/recoder/MuxerWrapper;
 
+    .line 13
     iput-object v1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->o:Ljava/lang/Object;
 
+    .line 14
     iput-object v1, p0, Lcom/arcsoft/avatar2/recoder/MediaManager;->u:[I
 
     return-void
@@ -1348,6 +1477,7 @@
     :catchall_0
     move-exception p0
 
+    .line 15
     :try_start_1
     monitor-exit v0
     :try_end_1

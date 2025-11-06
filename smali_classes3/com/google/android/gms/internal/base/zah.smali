@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/base/zah;
+.class public final Lcom/google/android/gms/internal/base/zah;
 .super Landroid/graphics/drawable/Drawable$ConstantState;
 .source "SourceFile"
 
@@ -35,6 +35,7 @@
 .method public final newDrawable()Landroid/graphics/drawable/Drawable;
     .locals 0
 
+    .line 1
     invoke-static {}, Lcom/google/android/gms/internal/base/zai;->zaa()Lcom/google/android/gms/internal/base/zai;
 
     move-result-object p0

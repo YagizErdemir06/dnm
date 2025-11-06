@@ -132,96 +132,131 @@
 .method public constructor <init>()V
     .locals 4
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
+    .line 2
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->width:I
 
+    .line 3
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->height:I
 
+    .line 4
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->displayWidth:I
 
+    .line 5
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->displayHeight:I
 
     const/4 v1, 0x0
 
+    .line 6
     iput v1, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->displayUnit:I
 
+    .line 7
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->projectionType:I
 
     const/4 v2, 0x0
 
+    .line 8
     iput v2, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->projectionPoseYaw:F
 
+    .line 9
     iput v2, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->projectionPosePitch:F
 
+    .line 10
     iput v2, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->projectionPoseRoll:F
 
     const/4 v2, 0x0
 
+    .line 11
     iput-object v2, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->projectionData:[B
 
+    .line 12
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->stereoMode:I
 
+    .line 13
     iput-boolean v1, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->hasColorInfo:Z
 
+    .line 14
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->colorSpace:I
 
+    .line 15
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->colorTransfer:I
 
+    .line 16
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->colorRange:I
 
     const/16 v1, 0x3e8
 
+    .line 17
     iput v1, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->maxContentLuminance:I
 
     const/16 v1, 0xc8
 
+    .line 18
     iput v1, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->maxFrameAverageLuminance:I
 
     const/high16 v1, -0x40800000    # -1.0f
 
+    .line 19
     iput v1, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->primaryRChromaticityX:F
 
+    .line 20
     iput v1, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->primaryRChromaticityY:F
 
+    .line 21
     iput v1, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->primaryGChromaticityX:F
 
+    .line 22
     iput v1, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->primaryGChromaticityY:F
 
+    .line 23
     iput v1, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->primaryBChromaticityX:F
 
+    .line 24
     iput v1, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->primaryBChromaticityY:F
 
+    .line 25
     iput v1, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->whitePointChromaticityX:F
 
+    .line 26
     iput v1, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->whitePointChromaticityY:F
 
+    .line 27
     iput v1, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->maxMasteringLuminance:F
 
+    .line 28
     iput v1, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->minMasteringLuminance:F
 
     const/4 v1, 0x1
 
+    .line 29
     iput v1, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->channelCount:I
 
+    .line 30
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->audioBitDepth:I
 
     const/16 v0, 0x1f40
 
+    .line 31
     iput v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->sampleRate:I
 
     const-wide/16 v2, 0x0
 
+    .line 32
     iput-wide v2, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->codecDelayNs:J
 
+    .line 33
     iput-wide v2, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->seekPreRollNs:J
 
+    .line 34
     iput-boolean v1, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->flagDefault:Z
 
     const-string v0, "eng"
 
+    .line 35
     iput-object v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->language:Ljava/lang/String;
 
     return-void
@@ -230,6 +265,7 @@
 .method public static synthetic access$100(Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->assertOutputInitialized()V
 
     return-void
@@ -238,6 +274,7 @@
 .method public static synthetic access$200(Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->blockAddIdType:I
 
     return p0
@@ -246,6 +283,7 @@
 .method public static synthetic access$202(Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;I)I
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->blockAddIdType:I
 
     return p1
@@ -254,6 +292,7 @@
 .method public static synthetic access$302(Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->language:Ljava/lang/String;
 
     return-object p1
@@ -262,6 +301,7 @@
 .method public static synthetic access$400(Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;Z)Z
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->samplesHaveSupplementalData(Z)Z
 
     move-result p0
@@ -277,6 +317,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->output:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -298,12 +339,14 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->codecPrivate:[B
 
     if-eqz p0, :cond_0
 
     return-object p0
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -333,6 +376,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->primaryRChromaticityX:F
 
     const/high16 v1, -0x40800000    # -1.0f
@@ -402,6 +446,7 @@
 
     new-array v0, v0, [B
 
+    .line 2
     invoke-static {v0}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
     move-result-object v1
@@ -414,8 +459,10 @@
 
     const/4 v2, 0x0
 
+    .line 3
     invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
+    .line 4
     iget v2, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->primaryRChromaticityX:F
 
     const v3, 0x47435000    # 50000.0f
@@ -432,6 +479,7 @@
 
     invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
+    .line 5
     iget v2, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->primaryRChromaticityY:F
 
     mul-float/2addr v2, v3
@@ -444,6 +492,7 @@
 
     invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
+    .line 6
     iget v2, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->primaryGChromaticityX:F
 
     mul-float/2addr v2, v3
@@ -456,6 +505,7 @@
 
     invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
+    .line 7
     iget v2, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->primaryGChromaticityY:F
 
     mul-float/2addr v2, v3
@@ -468,6 +518,7 @@
 
     invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
+    .line 8
     iget v2, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->primaryBChromaticityX:F
 
     mul-float/2addr v2, v3
@@ -480,6 +531,7 @@
 
     invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
+    .line 9
     iget v2, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->primaryBChromaticityY:F
 
     mul-float/2addr v2, v3
@@ -492,6 +544,7 @@
 
     invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
+    .line 10
     iget v2, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->whitePointChromaticityX:F
 
     mul-float/2addr v2, v3
@@ -504,6 +557,7 @@
 
     invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
+    .line 11
     iget v2, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->whitePointChromaticityY:F
 
     mul-float/2addr v2, v3
@@ -516,6 +570,7 @@
 
     invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
+    .line 12
     iget v2, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->maxMasteringLuminance:F
 
     add-float/2addr v2, v4
@@ -526,6 +581,7 @@
 
     invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
+    .line 13
     iget v2, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->minMasteringLuminance:F
 
     add-float/2addr v2, v4
@@ -536,12 +592,14 @@
 
     invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
+    .line 14
     iget v2, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->maxContentLuminance:I
 
     int-to-short v2, v2
 
     invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
+    .line 15
     iget p0, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->maxFrameAverageLuminance:I
 
     int-to-short p0, p0
@@ -581,9 +639,11 @@
 
     const/4 v1, 0x0
 
+    .line 1
     :try_start_0
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLittleEndianUnsignedInt()J
 
     move-result-wide v2
@@ -594,6 +654,7 @@
 
     if-nez v0, :cond_0
 
+    .line 3
     new-instance p0, Landroid/util/Pair;
 
     const-string v0, "video/divx"
@@ -609,6 +670,7 @@
 
     if-nez v0, :cond_1
 
+    .line 4
     new-instance p0, Landroid/util/Pair;
 
     const-string v0, "video/3gpp"
@@ -624,16 +686,19 @@
 
     if-nez v0, :cond_4
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getPosition()I
 
     move-result v0
 
     add-int/lit8 v0, v0, 0x14
 
+    .line 6
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getData()[B
 
     move-result-object p0
 
+    .line 7
     :goto_0
     array-length v2, p0
 
@@ -641,6 +706,7 @@
 
     if-ge v0, v2, :cond_3
 
+    .line 8
     aget-byte v2, p0, v0
 
     if-nez v2, :cond_2
@@ -667,12 +733,14 @@
 
     if-ne v2, v3, :cond_2
 
+    .line 9
     array-length v2, p0
 
     invoke-static {p0, v0, v2}, Ljava/util/Arrays;->copyOfRange([BII)[B
 
     move-result-object p0
 
+    .line 10
     new-instance v0, Landroid/util/Pair;
 
     const-string v2, "video/wvc1"
@@ -693,6 +761,7 @@
     :cond_3
     const-string p0, "Failed to find FourCC VC1 initialization data"
 
+    .line 11
     invoke-static {p0, v1}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedContainer(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
     move-result-object p0
@@ -706,8 +775,10 @@
 
     const-string v0, "Unknown FourCC. Setting mimeType to video/x-unknown"
 
+    .line 12
     invoke-static {p0, v0}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 13
     new-instance p0, Landroid/util/Pair;
 
     const-string v0, "video/x-unknown"
@@ -719,6 +790,7 @@
     :catch_0
     const-string p0, "Error parsing FourCC private data"
 
+    .line 14
     invoke-static {p0, v1}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedContainer(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
     move-result-object p0
@@ -734,6 +806,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLittleEndianUnsignedShort()I
 
@@ -754,8 +827,10 @@
 
     const/16 v0, 0x18
 
+    .line 2
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLong()J
 
     move-result-wide v4
@@ -772,6 +847,7 @@
 
     if-nez v0, :cond_1
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLong()J
 
     move-result-wide v4
@@ -802,11 +878,12 @@
     return v3
 
     :catch_0
-    const-string p0, "Error parsing MS/ACM codec private"
+    const/4 p0, 0x0
 
-    const/4 v0, 0x0
+    const-string v0, "Error parsing MS/ACM codec private"
 
-    invoke-static {p0, v0}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedContainer(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
+    .line 5
+    invoke-static {v0, p0}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedContainer(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
     move-result-object p0
 
@@ -814,7 +891,7 @@
 .end method
 
 .method private static parseVorbisCodecPrivate([B)Ljava/util/List;
-    .locals 11
+    .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([B)",
@@ -835,6 +912,7 @@
 
     const/4 v2, 0x0
 
+    .line 1
     :try_start_0
     aget-byte v3, p0, v2
 
@@ -848,14 +926,15 @@
 
     move v5, v3
 
+    .line 2
     :goto_0
     aget-byte v7, p0, v5
 
-    and-int/lit16 v8, v7, 0xff
+    const/16 v8, 0xff
 
-    const/16 v9, 0xff
+    and-int/2addr v7, v8
 
-    if-ne v8, v9, :cond_0
+    if-ne v7, v8, :cond_0
 
     add-int/lit16 v6, v6, 0xff
 
@@ -864,80 +943,98 @@
     goto :goto_0
 
     :cond_0
-    add-int/2addr v5, v3
+    add-int/lit8 v7, v5, 0x1
 
-    and-int/2addr v7, v9
+    .line 3
+    aget-byte v5, p0, v5
 
-    add-int/2addr v6, v7
+    and-int/2addr v5, v8
 
-    move v7, v2
+    add-int/2addr v6, v5
 
+    move v5, v2
+
+    .line 4
     :goto_1
-    aget-byte v8, p0, v5
+    aget-byte v9, p0, v7
 
-    and-int/lit16 v10, v8, 0xff
+    and-int/2addr v9, v8
 
-    if-ne v10, v9, :cond_1
+    if-ne v9, v8, :cond_1
 
-    add-int/lit16 v7, v7, 0xff
+    add-int/lit16 v5, v5, 0xff
 
-    add-int/lit8 v5, v5, 0x1
+    add-int/lit8 v7, v7, 0x1
 
     goto :goto_1
 
     :cond_1
-    add-int/2addr v5, v3
+    add-int/lit8 v9, v7, 0x1
 
-    and-int/2addr v8, v9
+    .line 5
+    aget-byte v7, p0, v7
 
-    add-int/2addr v7, v8
-
-    aget-byte v8, p0, v5
-
-    if-ne v8, v3, :cond_4
-
-    new-array v3, v6, [B
-
-    invoke-static {p0, v5, v3, v2, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    add-int/2addr v5, v6
-
-    aget-byte v6, p0, v5
-
-    const/4 v8, 0x3
-
-    if-ne v6, v8, :cond_3
+    and-int/2addr v7, v8
 
     add-int/2addr v5, v7
 
-    aget-byte v6, p0, v5
+    .line 6
+    aget-byte v7, p0, v9
 
-    const/4 v7, 0x5
+    if-ne v7, v3, :cond_4
 
-    if-ne v6, v7, :cond_2
+    .line 7
+    new-array v3, v6, [B
 
+    .line 8
+    invoke-static {p0, v9, v3, v2, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    add-int/2addr v9, v6
+
+    .line 9
+    aget-byte v6, p0, v9
+
+    const/4 v7, 0x3
+
+    if-ne v6, v7, :cond_3
+
+    add-int/2addr v9, v5
+
+    .line 10
+    aget-byte v5, p0, v9
+
+    const/4 v6, 0x5
+
+    if-ne v5, v6, :cond_2
+
+    .line 11
+    array-length v5, p0
+
+    sub-int/2addr v5, v9
+
+    new-array v5, v5, [B
+
+    .line 12
     array-length v6, p0
 
-    sub-int/2addr v6, v5
+    sub-int/2addr v6, v9
 
-    new-array v6, v6, [B
+    invoke-static {p0, v9, v5, v2, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    array-length v7, p0
-
-    sub-int/2addr v7, v5
-
-    invoke-static {p0, v5, v6, v2, v7}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
+    .line 13
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0, v4}, Ljava/util/ArrayList;-><init>(I)V
 
+    .line 14
     invoke-interface {p0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-interface {p0, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    .line 15
+    invoke-interface {p0, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-object p0
 
+    .line 16
     :cond_2
     invoke-static {v0, v1}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedContainer(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
@@ -945,6 +1042,7 @@
 
     throw p0
 
+    .line 17
     :cond_3
     invoke-static {v0, v1}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedContainer(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
@@ -952,6 +1050,7 @@
 
     throw p0
 
+    .line 18
     :cond_4
     invoke-static {v0, v1}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedContainer(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
@@ -959,6 +1058,7 @@
 
     throw p0
 
+    .line 19
     :cond_5
     invoke-static {v0, v1}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedContainer(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
@@ -968,6 +1068,7 @@
     :try_end_0
     .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 20
     :catch_0
     invoke-static {v0, v1}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedContainer(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
@@ -979,11 +1080,12 @@
 .method private samplesHaveSupplementalData(Z)Z
     .locals 2
 
-    const-string v0, "A_OPUS"
+    .line 1
+    iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->codecId:Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->codecId:Ljava/lang/String;
+    const-string v1, "A_OPUS"
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -991,6 +1093,7 @@
 
     return p1
 
+    .line 2
     :cond_0
     iget p0, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->maxBlockAdditionId:I
 
@@ -1031,6 +1134,7 @@
 
     move-object/from16 v0, p0
 
+    .line 1
     iget-object v1, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->codecId:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
@@ -1609,6 +1713,7 @@
 
     const-string v0, "Unrecognized codec identifier."
 
+    .line 2
     invoke-static {v0, v8}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedContainer(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
     move-result-object v0
@@ -1616,10 +1721,14 @@
     throw v0
 
     :pswitch_0
+    const/16 v16, 0x1680
+
+    .line 3
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1, v9}, Ljava/util/ArrayList;-><init>(I)V
 
+    .line 4
     iget-object v3, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->codecId:Ljava/lang/String;
 
     invoke-direct {v0, v3}, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->getCodecPrivate(Ljava/lang/String;)[B
@@ -1628,6 +1737,7 @@
 
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 5
     invoke-static {v7}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v3
@@ -1648,8 +1758,10 @@
 
     move-result-object v3
 
+    .line 6
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 7
     invoke-static {v7}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v3
@@ -1668,14 +1780,14 @@
 
     move-result-object v3
 
+    .line 8
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     const-string v17, "audio/opus"
 
-    const/16 v16, 0x1680
-
     goto/16 :goto_9
 
+    .line 9
     :pswitch_1
     iget-object v1, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->codecId:Ljava/lang/String;
 
@@ -1715,6 +1827,7 @@
 
     goto/16 :goto_4
 
+    .line 10
     :pswitch_6
     new-instance v1, Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
@@ -1730,18 +1843,22 @@
 
     move-result-object v1
 
+    .line 11
     iget-object v3, v1, Lcom/google/android/exoplayer2/video/HevcConfig;->initializationData:Ljava/util/List;
 
+    .line 12
     iget v4, v1, Lcom/google/android/exoplayer2/video/HevcConfig;->nalUnitLengthFieldLength:I
 
     iput v4, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->nalUnitLengthFieldLength:I
 
+    .line 13
     iget-object v1, v1, Lcom/google/android/exoplayer2/video/HevcConfig;->codecs:Ljava/lang/String;
 
     const-string v17, "video/hevc"
 
     goto/16 :goto_6
 
+    .line 14
     :pswitch_7
     invoke-static {}, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor;->access$500()[B
 
@@ -1763,6 +1880,7 @@
 
     goto/16 :goto_4
 
+    .line 15
     :pswitch_8
     iget v1, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->audioBitDepth:I
 
@@ -1772,6 +1890,7 @@
 
     if-nez v1, :cond_21
 
+    .line 16
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1806,6 +1925,7 @@
 
     goto/16 :goto_5
 
+    .line 17
     :pswitch_9
     iget v1, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->audioBitDepth:I
 
@@ -1826,6 +1946,7 @@
 
     goto :goto_2
 
+    .line 18
     :cond_23
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1851,6 +1972,7 @@
 
     goto/16 :goto_b
 
+    .line 19
     :pswitch_a
     iget v1, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->audioBitDepth:I
 
@@ -1864,6 +1986,7 @@
 
     goto :goto_5
 
+    .line 20
     :cond_24
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1939,6 +2062,7 @@
 
     goto :goto_3
 
+    .line 21
     :pswitch_12
     iget-object v1, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->codecId:Ljava/lang/String;
 
@@ -1950,20 +2074,24 @@
 
     move-result-object v1
 
+    .line 22
     iget-object v3, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->codecPrivate:[B
 
     invoke-static {v3}, Lcom/google/android/exoplayer2/audio/AacUtil;->parseAudioSpecificConfig([B)Lcom/google/android/exoplayer2/audio/AacUtil$Config;
 
     move-result-object v3
 
+    .line 23
     iget v4, v3, Lcom/google/android/exoplayer2/audio/AacUtil$Config;->sampleRateHz:I
 
     iput v4, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->sampleRate:I
 
+    .line 24
     iget v4, v3, Lcom/google/android/exoplayer2/audio/AacUtil$Config;->channelCount:I
 
     iput v4, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->channelCount:I
 
+    .line 25
     iget-object v3, v3, Lcom/google/android/exoplayer2/audio/AacUtil$Config;->codecs:Ljava/lang/String;
 
     const-string v17, "audio/mp4a-latm"
@@ -1975,6 +2103,7 @@
 
     goto :goto_3
 
+    .line 26
     :pswitch_14
     iget-object v1, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->codecId:Ljava/lang/String;
 
@@ -1992,6 +2121,7 @@
 
     goto :goto_4
 
+    .line 27
     :pswitch_15
     new-instance v1, Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
@@ -2007,12 +2137,15 @@
 
     move-result-object v1
 
+    .line 28
     iget-object v3, v1, Lcom/google/android/exoplayer2/video/AvcConfig;->initializationData:Ljava/util/List;
 
+    .line 29
     iget v4, v1, Lcom/google/android/exoplayer2/video/AvcConfig;->nalUnitLengthFieldLength:I
 
     iput v4, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->nalUnitLengthFieldLength:I
 
+    .line 30
     iget-object v1, v1, Lcom/google/android/exoplayer2/video/AvcConfig;->codecs:Ljava/lang/String;
 
     const-string v17, "video/avc"
@@ -2035,6 +2168,7 @@
 
     new-array v3, v1, [B
 
+    .line 31
     iget-object v4, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->codecId:Ljava/lang/String;
 
     invoke-direct {v0, v4}, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->getCodecPrivate(Ljava/lang/String;)[B
@@ -2045,6 +2179,7 @@
 
     invoke-static {v4, v6, v3, v6, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 32
     invoke-static {v3}, Lcom/google/common/collect/ImmutableList;->of(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object v1
@@ -2053,11 +2188,13 @@
 
     goto :goto_7
 
+    .line 33
     :pswitch_17
     new-instance v1, Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     iget-object v3, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->codecId:Ljava/lang/String;
 
+    .line 34
     invoke-direct {v0, v3}, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->getCodecPrivate(Ljava/lang/String;)[B
 
     move-result-object v3
@@ -2068,12 +2205,14 @@
 
     move-result-object v1
 
+    .line 35
     iget-object v3, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     move-object/from16 v17, v3
 
     check-cast v17, Ljava/lang/String;
 
+    .line 36
     iget-object v1, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v1, Ljava/util/List;
@@ -2099,6 +2238,9 @@
     goto :goto_a
 
     :pswitch_1a
+    const/16 v16, 0x2000
+
+    .line 37
     iget-object v1, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->codecId:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->getCodecPrivate(Ljava/lang/String;)[B
@@ -2111,8 +2253,6 @@
 
     const-string v17, "audio/vorbis"
 
-    const/16 v16, 0x2000
-
     :goto_9
     move-object v3, v8
 
@@ -2123,6 +2263,7 @@
 
     goto :goto_d
 
+    .line 38
     :pswitch_1b
     new-instance v1, Lcom/google/android/exoplayer2/extractor/TrueHdSampleRechunker;
 
@@ -2134,6 +2275,7 @@
 
     goto/16 :goto_3
 
+    .line 39
     :pswitch_1c
     new-instance v1, Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
@@ -2151,6 +2293,7 @@
 
     if-eqz v1, :cond_25
 
+    .line 40
     iget v1, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->audioBitDepth:I
 
     invoke-static {v1}, Lcom/google/android/exoplayer2/util/Util;->getPcmEncoding(I)I
@@ -2159,6 +2302,7 @@
 
     if-nez v1, :cond_21
 
+    .line 41
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2183,6 +2327,7 @@
 
     goto :goto_b
 
+    .line 42
     :cond_25
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2209,6 +2354,7 @@
 
     goto/16 :goto_4
 
+    .line 43
     :pswitch_1d
     iget-object v1, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->codecPrivate:[B
 
@@ -2228,21 +2374,25 @@
 
     goto/16 :goto_7
 
+    .line 44
     :goto_d
     iget-object v7, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->dolbyVisionConfigBytes:[B
 
     if-eqz v7, :cond_27
 
+    .line 45
     new-instance v10, Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-direct {v10, v7}, Lcom/google/android/exoplayer2/util/ParsableByteArray;-><init>([B)V
 
+    .line 46
     invoke-static {v10}, Lcom/google/android/exoplayer2/video/DolbyVisionConfig;->parse(Lcom/google/android/exoplayer2/util/ParsableByteArray;)Lcom/google/android/exoplayer2/video/DolbyVisionConfig;
 
     move-result-object v7
 
     if-eqz v7, :cond_27
 
+    .line 47
     iget-object v3, v7, Lcom/google/android/exoplayer2/video/DolbyVisionConfig;->codecs:Ljava/lang/String;
 
     const-string v17, "video/dolby-vision"
@@ -2250,12 +2400,14 @@
     :cond_27
     move-object/from16 v7, v17
 
+    .line 48
     iget-boolean v10, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->flagDefault:Z
 
     const/4 v11, 0x0
 
     or-int/2addr v10, v11
 
+    .line 49
     iget-boolean v9, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->flagForced:Z
 
     if-eqz v9, :cond_28
@@ -2270,34 +2422,41 @@
     :goto_e
     or-int/2addr v9, v10
 
+    .line 50
     new-instance v10, Lcom/google/android/exoplayer2/Format$Builder;
 
     invoke-direct {v10}, Lcom/google/android/exoplayer2/Format$Builder;-><init>()V
 
+    .line 51
     invoke-static {v7}, Lcom/google/android/exoplayer2/util/MimeTypes;->isAudio(Ljava/lang/String;)Z
 
     move-result v17
 
     if-eqz v17, :cond_29
 
+    .line 52
     iget v2, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->channelCount:I
 
+    .line 53
     invoke-virtual {v10, v2}, Lcom/google/android/exoplayer2/Format$Builder;->setChannelCount(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v2
 
     iget v5, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->sampleRate:I
 
+    .line 54
     invoke-virtual {v2, v5}, Lcom/google/android/exoplayer2/Format$Builder;->setSampleRate(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v2
 
+    .line 55
     invoke-virtual {v2, v4}, Lcom/google/android/exoplayer2/Format$Builder;->setPcmEncoding(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     const/4 v5, 0x1
 
-    goto/16 :goto_14
+    goto/16 :goto_13
 
+    .line 56
     :cond_29
     invoke-static {v7}, Lcom/google/android/exoplayer2/util/MimeTypes;->isVideo(Ljava/lang/String;)Z
 
@@ -2305,10 +2464,12 @@
 
     if-eqz v4, :cond_35
 
+    .line 57
     iget v2, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->displayUnit:I
 
     if-nez v2, :cond_2c
 
+    .line 58
     iget v2, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->displayWidth:I
 
     const/4 v4, -0x1
@@ -2320,6 +2481,7 @@
     :cond_2a
     iput v2, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->displayWidth:I
 
+    .line 59
     iget v2, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->displayHeight:I
 
     if-ne v2, v4, :cond_2b
@@ -2335,42 +2497,44 @@
     const/4 v4, -0x1
 
     :goto_f
-    iget v2, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->displayWidth:I
+    const/high16 v2, -0x40800000    # -1.0f
 
-    if-eq v2, v4, :cond_2d
-
-    iget v5, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->displayHeight:I
+    .line 60
+    iget v5, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->displayWidth:I
 
     if-eq v5, v4, :cond_2d
 
-    iget v12, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->height:I
+    iget v12, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->displayHeight:I
 
-    mul-int/2addr v12, v2
+    if-eq v12, v4, :cond_2d
 
-    int-to-float v2, v12
+    .line 61
+    iget v2, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->height:I
 
-    iget v12, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->width:I
+    mul-int/2addr v2, v5
 
-    mul-int/2addr v12, v5
+    int-to-float v2, v2
 
-    int-to-float v5, v12
+    iget v5, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->width:I
+
+    mul-int/2addr v5, v12
+
+    int-to-float v5, v5
 
     div-float/2addr v2, v5
 
-    goto :goto_10
-
+    .line 62
     :cond_2d
-    const/high16 v2, -0x40800000    # -1.0f
-
-    :goto_10
     iget-boolean v5, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->hasColorInfo:Z
 
     if-eqz v5, :cond_2e
 
+    .line 63
     invoke-direct/range {p0 .. p0}, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->getHdrStaticInfo()[B
 
     move-result-object v5
 
+    .line 64
     new-instance v8, Lcom/google/android/exoplayer2/video/ColorInfo;
 
     iget v12, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->colorSpace:I
@@ -2381,6 +2545,7 @@
 
     invoke-direct {v8, v12, v13, v14, v5}, Lcom/google/android/exoplayer2/video/ColorInfo;-><init>(III[B)V
 
+    .line 65
     :cond_2e
     iget-object v5, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->name:Ljava/lang/String;
 
@@ -2398,6 +2563,7 @@
 
     if-eqz v5, :cond_2f
 
+    .line 66
     invoke-static {}, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor;->access$600()Ljava/util/Map;
 
     move-result-object v4
@@ -2414,6 +2580,7 @@
 
     move-result v4
 
+    .line 67
     :cond_2f
     iget v5, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->projectionType:I
 
@@ -2423,6 +2590,7 @@
 
     const/4 v12, 0x0
 
+    .line 68
     invoke-static {v5, v12}, Ljava/lang/Float;->compare(FF)I
 
     move-result v5
@@ -2431,12 +2599,14 @@
 
     iget v5, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->projectionPosePitch:F
 
+    .line 69
     invoke-static {v5, v12}, Ljava/lang/Float;->compare(FF)I
 
     move-result v5
 
     if-nez v5, :cond_34
 
+    .line 70
     iget v5, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->projectionPoseRoll:F
 
     invoke-static {v5, v12}, Ljava/lang/Float;->compare(FF)I
@@ -2447,8 +2617,9 @@
 
     move v4, v11
 
-    goto :goto_12
+    goto :goto_11
 
+    .line 71
     :cond_30
     iget v5, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->projectionPosePitch:F
 
@@ -2462,8 +2633,9 @@
 
     const/16 v4, 0x5a
 
-    goto :goto_12
+    goto :goto_11
 
+    .line 72
     :cond_31
     iget v5, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->projectionPosePitch:F
 
@@ -2479,14 +2651,16 @@
 
     const/high16 v11, 0x43340000    # 180.0f
 
+    .line 73
     invoke-static {v5, v11}, Ljava/lang/Float;->compare(FF)I
 
     move-result v5
 
     if-nez v5, :cond_32
 
-    goto :goto_11
+    goto :goto_10
 
+    .line 74
     :cond_32
     iget v5, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->projectionPosePitch:F
 
@@ -2500,52 +2674,61 @@
 
     const/16 v4, 0x10e
 
-    goto :goto_12
+    goto :goto_11
 
     :cond_33
-    :goto_11
+    :goto_10
     const/16 v4, 0xb4
 
+    .line 75
     :cond_34
-    :goto_12
+    :goto_11
     iget v5, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->width:I
 
+    .line 76
     invoke-virtual {v10, v5}, Lcom/google/android/exoplayer2/Format$Builder;->setWidth(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v5
 
     iget v11, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->height:I
 
+    .line 77
     invoke-virtual {v5, v11}, Lcom/google/android/exoplayer2/Format$Builder;->setHeight(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v5
 
+    .line 78
     invoke-virtual {v5, v2}, Lcom/google/android/exoplayer2/Format$Builder;->setPixelWidthHeightRatio(F)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v2
 
+    .line 79
     invoke-virtual {v2, v4}, Lcom/google/android/exoplayer2/Format$Builder;->setRotationDegrees(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v2
 
     iget-object v4, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->projectionData:[B
 
+    .line 80
     invoke-virtual {v2, v4}, Lcom/google/android/exoplayer2/Format$Builder;->setProjectionData([B)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v2
 
     iget v4, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->stereoMode:I
 
+    .line 81
     invoke-virtual {v2, v4}, Lcom/google/android/exoplayer2/Format$Builder;->setStereoMode(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v2
 
+    .line 82
     invoke-virtual {v2, v8}, Lcom/google/android/exoplayer2/Format$Builder;->setColorInfo(Lcom/google/android/exoplayer2/video/ColorInfo;)Lcom/google/android/exoplayer2/Format$Builder;
 
     const/4 v5, 0x2
 
-    goto :goto_14
+    goto :goto_13
 
+    .line 83
     :cond_35
     invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2553,41 +2736,47 @@
 
     if-nez v4, :cond_37
 
+    .line 84
     invoke-virtual {v15, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-nez v4, :cond_37
 
+    .line 85
     invoke-virtual {v14, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-nez v4, :cond_37
 
+    .line 86
     invoke-virtual {v13, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-nez v4, :cond_37
 
+    .line 87
     invoke-virtual {v12, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-nez v4, :cond_37
 
+    .line 88
     invoke-virtual {v2, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_36
 
-    goto :goto_13
+    goto :goto_12
 
     :cond_36
     const-string v0, "Unexpected MIME type."
 
+    .line 89
     invoke-static {v0, v8}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedContainer(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
     move-result-object v0
@@ -2595,10 +2784,11 @@
     throw v0
 
     :cond_37
-    :goto_13
+    :goto_12
     const/4 v5, 0x3
 
-    :goto_14
+    .line 90
+    :goto_13
     iget-object v2, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->name:Ljava/lang/String;
 
     if-eqz v2, :cond_38
@@ -2615,6 +2805,7 @@
 
     if-nez v2, :cond_38
 
+    .line 91
     iget-object v2, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->name:Ljava/lang/String;
 
     invoke-virtual {v10, v2}, Lcom/google/android/exoplayer2/Format$Builder;->setLabel(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
@@ -2622,46 +2813,56 @@
     :cond_38
     move/from16 v2, p2
 
+    .line 92
     invoke-virtual {v10, v2}, Lcom/google/android/exoplayer2/Format$Builder;->setId(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v2
 
+    .line 93
     invoke-virtual {v2, v7}, Lcom/google/android/exoplayer2/Format$Builder;->setSampleMimeType(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v2
 
+    .line 94
     invoke-virtual {v2, v6}, Lcom/google/android/exoplayer2/Format$Builder;->setMaxInputSize(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v2
 
     iget-object v4, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->language:Ljava/lang/String;
 
+    .line 95
     invoke-virtual {v2, v4}, Lcom/google/android/exoplayer2/Format$Builder;->setLanguage(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v2
 
+    .line 96
     invoke-virtual {v2, v9}, Lcom/google/android/exoplayer2/Format$Builder;->setSelectionFlags(I)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v2
 
+    .line 97
     invoke-virtual {v2, v1}, Lcom/google/android/exoplayer2/Format$Builder;->setInitializationData(Ljava/util/List;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v1
 
+    .line 98
     invoke-virtual {v1, v3}, Lcom/google/android/exoplayer2/Format$Builder;->setCodecs(Ljava/lang/String;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v1
 
     iget-object v2, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->drmInitData:Lcom/google/android/exoplayer2/drm/DrmInitData;
 
+    .line 99
     invoke-virtual {v1, v2}, Lcom/google/android/exoplayer2/Format$Builder;->setDrmInitData(Lcom/google/android/exoplayer2/drm/DrmInitData;)Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v1
 
+    .line 100
     invoke-virtual {v1}, Lcom/google/android/exoplayer2/Format$Builder;->build()Lcom/google/android/exoplayer2/Format;
 
     move-result-object v1
 
+    .line 101
     iget v2, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->number:I
 
     move-object/from16 v3, p1
@@ -2672,9 +2873,12 @@
 
     iput-object v2, v0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->output:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
+    .line 102
     invoke-interface {v2, v1}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->format(Lcom/google/android/exoplayer2/Format;)V
 
     return-void
+
+    nop
 
     :sswitch_data_0
     .sparse-switch
@@ -2759,10 +2963,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->trueHdSampleRechunker:Lcom/google/android/exoplayer2/extractor/TrueHdSampleRechunker;
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->output:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->cryptoData:Lcom/google/android/exoplayer2/extractor/TrackOutput$CryptoData;
@@ -2776,10 +2982,12 @@
 .method public reset()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->trueHdSampleRechunker:Lcom/google/android/exoplayer2/extractor/TrueHdSampleRechunker;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/extractor/TrueHdSampleRechunker;->reset()V
 
     :cond_0

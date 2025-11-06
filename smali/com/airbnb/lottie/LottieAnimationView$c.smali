@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Li/j;
+.implements Ld/b/a/j;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Li/j<",
+        "Ld/b/a/j<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -34,6 +34,7 @@
 .method public constructor <init>(Lcom/airbnb/lottie/LottieAnimationView;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/airbnb/lottie/LottieAnimationView$c;->a:Lcom/airbnb/lottie/LottieAnimationView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,9 +44,21 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/Throwable;)V
+.method public bridge synthetic a(Ljava/lang/Object;)V
+    .locals 0
+
+    .line 1
+    check-cast p1, Ljava/lang/Throwable;
+
+    invoke-virtual {p0, p1}, Lcom/airbnb/lottie/LottieAnimationView$c;->b(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public b(Ljava/lang/Throwable;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/airbnb/lottie/LottieAnimationView$c;->a:Lcom/airbnb/lottie/LottieAnimationView;
 
     invoke-static {v0}, Lcom/airbnb/lottie/LottieAnimationView;->access$000(Lcom/airbnb/lottie/LottieAnimationView;)I
@@ -54,6 +67,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/airbnb/lottie/LottieAnimationView$c;->a:Lcom/airbnb/lottie/LottieAnimationView;
 
     invoke-static {v0}, Lcom/airbnb/lottie/LottieAnimationView;->access$000(Lcom/airbnb/lottie/LottieAnimationView;)I
@@ -62,16 +76,17 @@
 
     invoke-virtual {v0, v1}, Lcom/airbnb/lottie/LottieAnimationView;->setImageResource(I)V
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/airbnb/lottie/LottieAnimationView$c;->a:Lcom/airbnb/lottie/LottieAnimationView;
 
-    invoke-static {v0}, Lcom/airbnb/lottie/LottieAnimationView;->access$100(Lcom/airbnb/lottie/LottieAnimationView;)Li/j;
+    invoke-static {v0}, Lcom/airbnb/lottie/LottieAnimationView;->access$100(Lcom/airbnb/lottie/LottieAnimationView;)Ld/b/a/j;
 
     move-result-object v0
 
     if-nez v0, :cond_1
 
-    invoke-static {}, Lcom/airbnb/lottie/LottieAnimationView;->access$200()Li/j;
+    invoke-static {}, Lcom/airbnb/lottie/LottieAnimationView;->access$200()Ld/b/a/j;
 
     move-result-object p0
 
@@ -80,22 +95,13 @@
     :cond_1
     iget-object p0, p0, Lcom/airbnb/lottie/LottieAnimationView$c;->a:Lcom/airbnb/lottie/LottieAnimationView;
 
-    invoke-static {p0}, Lcom/airbnb/lottie/LottieAnimationView;->access$100(Lcom/airbnb/lottie/LottieAnimationView;)Li/j;
+    invoke-static {p0}, Lcom/airbnb/lottie/LottieAnimationView;->access$100(Lcom/airbnb/lottie/LottieAnimationView;)Ld/b/a/j;
 
     move-result-object p0
 
+    .line 4
     :goto_0
-    invoke-interface {p0, p1}, Li/j;->onResult(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public bridge synthetic onResult(Ljava/lang/Object;)V
-    .locals 0
-
-    check-cast p1, Ljava/lang/Throwable;
-
-    invoke-virtual {p0, p1}, Lcom/airbnb/lottie/LottieAnimationView$c;->a(Ljava/lang/Throwable;)V
+    invoke-interface {p0, p1}, Ld/b/a/j;->a(Ljava/lang/Object;)V
 
     return-void
 .end method

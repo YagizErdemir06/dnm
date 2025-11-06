@@ -1,4 +1,4 @@
-.class Lcom/google/common/escape/Platform$1;
+.class public Lcom/google/common/escape/Platform$1;
 .super Ljava/lang/ThreadLocal;
 .source "SourceFile"
 
@@ -25,6 +25,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
 
     return-void
@@ -35,6 +36,7 @@
 .method public bridge synthetic initialValue()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/escape/Platform$1;->initialValue()[C
 
     move-result-object p0

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/dash/DashMediaSource$UtcTimestampCallback;
+.class public final Lcom/google/android/exoplayer2/source/dash/DashMediaSource$UtcTimestampCallback;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -28,7 +28,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/android/exoplayer2/source/dash/DashMediaSource;
+.field public final synthetic this$0:Lcom/google/android/exoplayer2/source/dash/DashMediaSource;
 
 
 # direct methods

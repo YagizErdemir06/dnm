@@ -29,14 +29,23 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/android/camera/data/observeable/RxData$a;
+.field public final synthetic c:Lcom/android/camera/data/observeable/RxData$a;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera/data/observeable/RxData$a;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1010
+        }
+        names = {
+            "val$dataCheck"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera/data/observeable/RxData$DataObservable$a;->a:Lcom/android/camera/data/observeable/RxData$a;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/data/observeable/RxData$DataObservable$a;->c:Lcom/android/camera/data/observeable/RxData$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,6 +56,15 @@
 # virtual methods
 .method public a(Lio/reactivex/Observable;)Lcom/android/camera/data/observeable/RxData$DataObservable;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "tObservable"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -57,9 +75,10 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/android/camera/data/observeable/RxData$DataObservable;
 
-    iget-object p0, p0, Lcom/android/camera/data/observeable/RxData$DataObservable$a;->a:Lcom/android/camera/data/observeable/RxData$a;
+    iget-object p0, p0, Lcom/android/camera/data/observeable/RxData$DataObservable$a;->c:Lcom/android/camera/data/observeable/RxData$a;
 
     invoke-direct {v0, p1, p0}, Lcom/android/camera/data/observeable/RxData$DataObservable;-><init>(Lio/reactivex/Observable;Lcom/android/camera/data/observeable/RxData$a;)V
 
@@ -68,12 +87,22 @@
 
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "tObservable"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
         }
     .end annotation
 
+    .line 1
     check-cast p1, Lio/reactivex/Observable;
 
     invoke-virtual {p0, p1}, Lcom/android/camera/data/observeable/RxData$DataObservable$a;->a(Lio/reactivex/Observable;)Lcom/android/camera/data/observeable/RxData$DataObservable;

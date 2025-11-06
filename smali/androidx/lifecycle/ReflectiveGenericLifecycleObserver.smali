@@ -1,14 +1,9 @@
-.class Landroidx/lifecycle/ReflectiveGenericLifecycleObserver;
+.class public Landroidx/lifecycle/ReflectiveGenericLifecycleObserver;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
 .implements Landroidx/lifecycle/LifecycleEventObserver;
-
-
-# annotations
-.annotation runtime Ljava/lang/Deprecated;
-.end annotation
 
 
 # instance fields
@@ -21,10 +16,13 @@
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/lifecycle/ReflectiveGenericLifecycleObserver;->mWrapped:Ljava/lang/Object;
 
+    .line 3
     sget-object v0, Landroidx/lifecycle/ClassesInfoCache;->sInstance:Landroidx/lifecycle/ClassesInfoCache;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -53,6 +51,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Landroidx/lifecycle/ReflectiveGenericLifecycleObserver;->mInfo:Landroidx/lifecycle/ClassesInfoCache$CallbackInfo;
 
     iget-object p0, p0, Landroidx/lifecycle/ReflectiveGenericLifecycleObserver;->mWrapped:Ljava/lang/Object;

@@ -1,4 +1,4 @@
-.class final Landroidx/appcompat/widget/ActivityChooserModel$PersistHistoryAsyncTask;
+.class public final Landroidx/appcompat/widget/ActivityChooserModel$PersistHistoryAsyncTask;
 .super Landroid/os/AsyncTask;
 .source "SourceFile"
 
@@ -25,13 +25,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/appcompat/widget/ActivityChooserModel;
+.field public final synthetic this$0:Landroidx/appcompat/widget/ActivityChooserModel;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/appcompat/widget/ActivityChooserModel;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/widget/ActivityChooserModel$PersistHistoryAsyncTask;->this$0:Landroidx/appcompat/widget/ActivityChooserModel;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -141,7 +142,7 @@
     .line 14
     invoke-interface {v7, v6, v11, v12}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    const-string/jumbo v11, "time"
+    const-string v11, "time"
 
     .line 15
     iget-wide v12, v10, Landroidx/appcompat/widget/ActivityChooserModel$HistoricalRecord;->time:J

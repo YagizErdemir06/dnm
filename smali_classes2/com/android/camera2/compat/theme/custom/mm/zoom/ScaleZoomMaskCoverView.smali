@@ -4,56 +4,64 @@
 
 
 # instance fields
-.field protected isSupportCineMaster:Z
+.field public isSupportCineMaster:Z
 
-.field protected isSupportCineMasterManually:Z
+.field public isSupportCineMasterManually:Z
 
-.field protected mArcViewHeight:I
+.field public mArcViewHeight:I
 
-.field protected mDisplayRadius:I
+.field public mDisplayRadius:I
 
-.field protected mDisplayWidth:I
+.field public mDisplayWidth:I
 
-.field protected mHalfSweepAngle:D
+.field public mHalfSweepAngle:D
 
-.field protected mIsLandScape:Z
+.field public mIsLandScape:Z
 
-.field protected mIsShowPortraitVirtual:Z
+.field public mIsShowPortraitVirtual:Z
 
-.field protected mIsSupportedCinemaster:Z
+.field public mIsSupportedCinemaster:Z
 
-.field protected mIsSupportedEqualRatio:Z
+.field public mIsSupportedEqualRatio:Z
 
-.field protected mIsSupportedScaleZoomView:Z
+.field public mIsSupportedScaleZoomView:Z
 
-.field protected mIsVertical:Z
+.field public mIsVertical:Z
 
-.field protected mLinearGradient:Landroid/graphics/LinearGradient;
+.field public mLinearGradient:Landroid/graphics/LinearGradient;
 
-.field protected mMiShotScaleZoomViewWidth:I
+.field public mMiShotScaleZoomViewWidth:I
 
-.field protected mPaint:Landroid/graphics/Paint;
+.field public mPaint:Landroid/graphics/Paint;
 
-.field protected mPath:Landroid/graphics/Path;
+.field public mPath:Landroid/graphics/Path;
 
-.field protected mRectBottom:I
+.field public mRectBottom:I
 
-.field protected mRectLeft:I
+.field public mRectLeft:I
 
-.field protected mRectWidth:I
+.field public mRectWidth:I
 
-.field protected mRrectRadius:I
+.field public mRrectRadius:I
 
-.field protected mStartAngle:F
+.field public mStartAngle:F
 
-.field protected mSweepAngle:F
+.field public mSweepAngle:F
 
-.field protected mTan:D
+.field public mTan:D
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -71,6 +79,16 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     const/4 v0, -0x1
 
@@ -86,6 +104,18 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr"
+        }
+    .end annotation
 
     const/4 v0, -0x1
 
@@ -101,6 +131,20 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr",
+            "defStyleRes"
+        }
+    .end annotation
 
     .line 4
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
@@ -122,12 +166,14 @@
 .method private init()V
     .locals 10
 
+    .line 1
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mPath:Landroid/graphics/Path;
 
+    .line 2
     new-instance v0, Landroid/graphics/Paint;
 
     const/4 v1, 0x1
@@ -136,10 +182,12 @@
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mPaint:Landroid/graphics/Paint;
 
+    .line 3
     sget-object v1, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
+    .line 4
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -148,19 +196,14 @@
 
     move-result-object v0
 
-    const v1, 0x7f07108d
+    const v1, 0x7f070df0
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
+    .line 5
     new-instance v9, Landroid/graphics/LinearGradient;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
 
     int-to-float v5, v0
 
@@ -178,17 +221,24 @@
 
     sget-object v8, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
 
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
     move-object v1, v9
 
     invoke-direct/range {v1 .. v8}, Landroid/graphics/LinearGradient;-><init>(FFFFIILandroid/graphics/Shader$TileMode;)V
 
     iput-object v9, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mLinearGradient:Landroid/graphics/LinearGradient;
 
+    .line 6
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f070244
+    const v1, 0x7f070240
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -203,7 +253,16 @@
 # virtual methods
 .method public isLandScape(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "enable"
+        }
+    .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mIsLandScape:Z
 
     return-void
@@ -211,7 +270,16 @@
 
 .method public isShowPortraitVirtual(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "enable"
+        }
+    .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mIsShowPortraitVirtual:Z
 
     return-void
@@ -219,7 +287,16 @@
 
 .method public isSupportedCineMaster(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "enable"
+        }
+    .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mIsSupportedCinemaster:Z
 
     return-void
@@ -227,7 +304,16 @@
 
 .method public isSupportedEqualRaito(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "enable"
+        }
+    .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mIsSupportedEqualRatio:Z
 
     return-void
@@ -235,7 +321,16 @@
 
 .method public isSupportedZoomScaleView(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "enable"
+        }
+    .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mIsSupportedScaleZoomView:Z
 
     return-void
@@ -243,17 +338,29 @@
 
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "canvas"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
+    .line 2
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1}, Landroid/graphics/Paint;->reset()V
 
+    .line 3
     iget-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mIsShowPortraitVirtual:Z
 
     if-eqz p1, :cond_0
 
+    .line 4
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mPaint:Landroid/graphics/Paint;
 
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mLinearGradient:Landroid/graphics/LinearGradient;
@@ -262,16 +369,17 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mPaint:Landroid/graphics/Paint;
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object p1
 
-    const v0, 0x7f060875
+    const v0, 0x7f06040d
 
-    invoke-virtual {p1, v0}, Lf2/e;->b(I)I
+    invoke-virtual {p1, v0}, Ld/d/a/k6/f;->b(I)I
 
     move-result p1
 
@@ -283,7 +391,16 @@
 
 .method public setVertical(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "enable"
+        }
+    .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/zoom/ScaleZoomMaskCoverView;->mIsVertical:Z
 
     return-void

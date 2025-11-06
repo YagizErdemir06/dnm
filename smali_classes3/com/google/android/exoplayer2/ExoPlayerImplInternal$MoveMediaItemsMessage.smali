@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/ExoPlayerImplInternal$MoveMediaItemsMessage;
+.class public Lcom/google/android/exoplayer2/ExoPlayerImplInternal$MoveMediaItemsMessage;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -28,14 +28,19 @@
 .method public constructor <init>(IIILcom/google/android/exoplayer2/source/ShuffleOrder;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/ExoPlayerImplInternal$MoveMediaItemsMessage;->fromIndex:I
 
+    .line 3
     iput p2, p0, Lcom/google/android/exoplayer2/ExoPlayerImplInternal$MoveMediaItemsMessage;->toIndex:I
 
+    .line 4
     iput p3, p0, Lcom/google/android/exoplayer2/ExoPlayerImplInternal$MoveMediaItemsMessage;->newFromIndex:I
 
+    .line 5
     iput-object p4, p0, Lcom/google/android/exoplayer2/ExoPlayerImplInternal$MoveMediaItemsMessage;->shuffleOrder:Lcom/google/android/exoplayer2/source/ShuffleOrder;
 
     return-void

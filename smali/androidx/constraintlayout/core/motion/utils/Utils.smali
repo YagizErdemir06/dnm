@@ -12,13 +12,14 @@
 
 
 # static fields
-.field static ourHandle:Landroidx/constraintlayout/core/motion/utils/Utils$DebugHandle;
+.field public static ourHandle:Landroidx/constraintlayout/core/motion/utils/Utils$DebugHandle;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -221,6 +222,7 @@
 .method public static logStack(Ljava/lang/String;I)V
     .locals 7
 
+    .line 1
     new-instance v0, Ljava/lang/Throwable;
 
     invoke-direct {v0}, Ljava/lang/Throwable;-><init>()V
@@ -229,6 +231,7 @@
 
     move-result-object v0
 
+    .line 2
     array-length v1, v0
 
     const/4 v2, 0x1
@@ -246,8 +249,10 @@
     :goto_0
     if-gt v2, p1, :cond_0
 
+    .line 3
     aget-object v4, v0, v2
 
+    .line 4
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -292,6 +297,7 @@
 
     move-result-object v4
 
+    .line 5
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -304,6 +310,7 @@
 
     move-result-object v3
 
+    .line 6
     sget-object v5, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -335,6 +342,7 @@
 .method public static loge(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
+    .line 1
     sget-object v0, Ljava/lang/System;->err:Ljava/io/PrintStream;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -367,6 +375,7 @@
 
     float-to-int p0, p0
 
+    .line 1
     invoke-static {p0}, Landroidx/constraintlayout/core/motion/utils/Utils;->clamp(I)I
 
     move-result p0
@@ -375,6 +384,7 @@
 
     float-to-int p1, p1
 
+    .line 2
     invoke-static {p1}, Landroidx/constraintlayout/core/motion/utils/Utils;->clamp(I)I
 
     move-result p1
@@ -383,6 +393,7 @@
 
     float-to-int p2, p2
 
+    .line 3
     invoke-static {p2}, Landroidx/constraintlayout/core/motion/utils/Utils;->clamp(I)I
 
     move-result p2
@@ -391,6 +402,7 @@
 
     float-to-int p3, p3
 
+    .line 4
     invoke-static {p3}, Landroidx/constraintlayout/core/motion/utils/Utils;->clamp(I)I
 
     move-result p3
@@ -413,6 +425,7 @@
 .method public static setDebugHandle(Landroidx/constraintlayout/core/motion/utils/Utils$DebugHandle;)V
     .locals 0
 
+    .line 1
     sput-object p0, Landroidx/constraintlayout/core/motion/utils/Utils;->ourHandle:Landroidx/constraintlayout/core/motion/utils/Utils$DebugHandle;
 
     return-void
@@ -421,6 +434,7 @@
 .method public static socketSend(Ljava/lang/String;)V
     .locals 3
 
+    .line 1
     :try_start_0
     new-instance v0, Ljava/net/Socket;
 
@@ -430,16 +444,19 @@
 
     invoke-direct {v0, v1, v2}, Ljava/net/Socket;-><init>(Ljava/lang/String;I)V
 
+    .line 2
     invoke-virtual {v0}, Ljava/net/Socket;->getOutputStream()Ljava/io/OutputStream;
 
     move-result-object v0
 
+    .line 3
     invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B
 
     move-result-object p0
 
     invoke-virtual {v0, p0}, Ljava/io/OutputStream;->write([B)V
 
+    .line 4
     invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -449,7 +466,8 @@
     :catch_0
     move-exception p0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+    .line 5
+    invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     :goto_0
     return-void
@@ -462,6 +480,7 @@
 
     const/4 p0, 0x0
 
+    .line 1
     aget p0, p1, p0
 
     float-to-double v0, p0
@@ -486,6 +505,7 @@
 
     const/4 v1, 0x1
 
+    .line 2
     aget v1, p1, v1
 
     float-to-double v4, v1
@@ -506,6 +526,7 @@
 
     const/4 v4, 0x2
 
+    .line 3
     aget v4, p1, v4
 
     float-to-double v4, v4
@@ -526,6 +547,7 @@
 
     const/4 v3, 0x3
 
+    .line 4
     aget p1, p1, v3
 
     mul-float/2addr p1, v0

@@ -3,94 +3,87 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation build Lin/h;
-    name = "ViewTreeSavedStateRegistryOwner"
-.end annotation
-
-.annotation runtime Lkotlin/Metadata;
-    d1 = {
-        "\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0007\u001a\u001d\u0010\u0006\u001a\u00020\u0003*\u00020\u00002\u0008\u0010\u0002\u001a\u0004\u0018\u00010\u0001H\u0007\u00a2\u0006\u0004\u0008\u0004\u0010\u0005\u001a\u0015\u0010\t\u001a\u0004\u0018\u00010\u0001*\u00020\u0000H\u0007\u00a2\u0006\u0004\u0008\u0007\u0010\u0008\u00a8\u0006\n"
-    }
-    d2 = {
-        "Landroid/view/View;",
-        "Landroidx/savedstate/SavedStateRegistryOwner;",
-        "owner",
-        "Lnm/l2;",
-        "set",
-        "(Landroid/view/View;Landroidx/savedstate/SavedStateRegistryOwner;)V",
-        "setViewTreeSavedStateRegistryOwner",
-        "get",
-        "(Landroid/view/View;)Landroidx/savedstate/SavedStateRegistryOwner;",
-        "findViewTreeSavedStateRegistryOwner",
-        "savedstate_release"
-    }
-    k = 0x2
-    mv = {
-        0x1,
-        0x6,
-        0x0
-    }
-.end annotation
-
-
 # direct methods
-.method public static final get(Landroid/view/View;)Landroidx/savedstate/SavedStateRegistryOwner;
-    .locals 1
-    .param p0    # Landroid/view/View;
-        .annotation build Ljv/d;
-        .end annotation
-    .end param
-    .annotation build Lin/h;
-        name = "get"
-    .end annotation
+.method private constructor <init>()V
+    .locals 0
 
-    .annotation build Ljv/e;
-    .end annotation
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, "<this>"
-
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
-    sget-object v0, Landroidx/savedstate/ViewTreeSavedStateRegistryOwner$findViewTreeSavedStateRegistryOwner$1;->INSTANCE:Landroidx/savedstate/ViewTreeSavedStateRegistryOwner$findViewTreeSavedStateRegistryOwner$1;
-
-    invoke-static {p0, v0}, Lun/s;->l(Ljava/lang/Object;Ljn/l;)Lun/m;
-
-    move-result-object p0
-
-    sget-object v0, Landroidx/savedstate/ViewTreeSavedStateRegistryOwner$findViewTreeSavedStateRegistryOwner$2;->INSTANCE:Landroidx/savedstate/ViewTreeSavedStateRegistryOwner$findViewTreeSavedStateRegistryOwner$2;
-
-    invoke-static {p0, v0}, Lun/u;->p1(Lun/m;Ljn/l;)Lun/m;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lun/u;->F0(Lun/m;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroidx/savedstate/SavedStateRegistryOwner;
-
-    return-object p0
+    return-void
 .end method
 
-.method public static final set(Landroid/view/View;Landroidx/savedstate/SavedStateRegistryOwner;)V
+.method public static get(Landroid/view/View;)Landroidx/savedstate/SavedStateRegistryOwner;
+    .locals 2
+    .param p0    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    sget v0, Landroidx/savedstate/R$id;->view_tree_saved_state_registry_owner:I
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/savedstate/SavedStateRegistryOwner;
+
+    if-eqz v0, :cond_0
+
+    return-object v0
+
+    .line 2
+    :cond_0
+    invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p0
+
+    :goto_0
+    if-nez v0, :cond_1
+
+    .line 3
+    instance-of v1, p0, Landroid/view/View;
+
+    if-eqz v1, :cond_1
+
+    .line 4
+    check-cast p0, Landroid/view/View;
+
+    .line 5
+    sget v0, Landroidx/savedstate/R$id;->view_tree_saved_state_registry_owner:I
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/savedstate/SavedStateRegistryOwner;
+
+    .line 6
+    invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p0
+
+    goto :goto_0
+
+    :cond_1
+    return-object v0
+.end method
+
+.method public static set(Landroid/view/View;Landroidx/savedstate/SavedStateRegistryOwner;)V
     .locals 1
     .param p0    # Landroid/view/View;
-        .annotation build Ljv/d;
+        .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
     .param p1    # Landroidx/savedstate/SavedStateRegistryOwner;
-        .annotation build Ljv/e;
+        .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .annotation build Lin/h;
-        name = "set"
-    .end annotation
 
-    const-string v0, "<this>"
-
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
-
+    .line 1
     sget v0, Landroidx/savedstate/R$id;->view_tree_saved_state_registry_owner:I
 
     invoke-virtual {p0, v0, p1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V

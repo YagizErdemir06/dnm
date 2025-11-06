@@ -8,8 +8,4 @@
         <item quantity="other">Shko prapa %d sekonda</item>
         <item quantity="one">Shko prapa %d sekondë</item>
     </plurals>
-    <plurals name="mtrl_badge_content_description">
-        <item quantity="other">%d njoftime të reja</item>
-        <item quantity="one">%d njoftim i ri</item>
-    </plurals>
 </resources>

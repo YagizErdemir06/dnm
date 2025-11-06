@@ -18,7 +18,16 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "url"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/resource/SimpleNetworkBaseRequest;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -31,6 +40,17 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "originJson",
+            "t"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -53,6 +73,17 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "content",
+            "t"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -67,11 +98,13 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
+    .line 2
     invoke-virtual {p0, v0, p2}, Lcom/android/camera/resource/SimpleNetworkJsonRequest;->parseJson(Lorg/json/JSONObject;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -85,13 +118,15 @@
 
     const-string p1, "SimpleNetworkBaseRequest"
 
+    .line 3
     invoke-static {p1, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 4
     new-instance p1, Lcom/android/camera/resource/BaseRequestException;
 
     const/4 p2, 0x2
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 

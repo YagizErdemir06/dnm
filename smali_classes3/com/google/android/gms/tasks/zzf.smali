@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/tasks/zzf;
+.class public final Lcom/google/android/gms/tasks/zzf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -83,6 +83,7 @@
 .method public final onCanceled()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/tasks/zzf;->zzc:Lcom/google/android/gms/tasks/zzw;
 
     invoke-virtual {p0}, Lcom/google/android/gms/tasks/zzw;->zzc()Z
@@ -97,6 +98,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/tasks/zzf;->zzc:Lcom/google/android/gms/tasks/zzw;
 
     invoke-virtual {p0, p1}, Lcom/google/android/gms/tasks/zzw;->zza(Ljava/lang/Exception;)V
@@ -112,6 +114,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/tasks/zzf;->zzc:Lcom/google/android/gms/tasks/zzw;
 
     invoke-virtual {p0, p1}, Lcom/google/android/gms/tasks/zzw;->zzb(Ljava/lang/Object;)V
@@ -122,6 +125,7 @@
 .method public final zzc()V
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -136,6 +140,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/tasks/zzf;->zza:Ljava/util/concurrent/Executor;
 
     new-instance v1, Lcom/google/android/gms/tasks/zze;

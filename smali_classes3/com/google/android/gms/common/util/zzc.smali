@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/util/zzc;
+.class public final Lcom/google/android/gms/common/util/zzc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -25,6 +25,7 @@
 .method public static zza(Ljava/lang/String;)Ljava/lang/String;
     .locals 7
 
+    .line 1
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -33,6 +34,7 @@
 
     sget-object v0, Lcom/google/android/gms/common/util/zzc;->zza:Ljava/util/regex/Pattern;
 
+    .line 2
     invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
@@ -41,6 +43,7 @@
 
     const/4 v2, 0x0
 
+    .line 3
     :cond_0
     :goto_0
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
@@ -53,8 +56,10 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    .line 4
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 5
     :cond_1
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->start()I
 
@@ -67,6 +72,7 @@
 
     if-ltz v4, :cond_2
 
+    .line 6
     invoke-virtual {p0, v4}, Ljava/lang/String;->charAt(I)C
 
     move-result v6
@@ -86,10 +92,12 @@
 
     if-eqz v3, :cond_0
 
+    .line 7
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
 
     move-result-object v3
 
+    .line 8
     invoke-virtual {v3, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v3
@@ -100,6 +108,7 @@
 
     move-result v3
 
+    .line 9
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->start()I
 
     move-result v4
@@ -110,17 +119,21 @@
 
     const-string v1, "\\\\"
 
+    .line 10
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
+    .line 11
     :cond_3
     invoke-static {v3}, Ljava/lang/Character;->toChars(I)[C
 
     move-result-object v1
 
+    .line 12
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append([C)Ljava/lang/StringBuilder;
 
+    .line 13
     :goto_2
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->end()I
 
@@ -133,6 +146,7 @@
 
     return-object p0
 
+    .line 14
     :cond_5
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->regionEnd()I
 
@@ -140,6 +154,7 @@
 
     if-ge v1, v3, :cond_6
 
+    .line 15
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->regionEnd()I
 
     move-result v0

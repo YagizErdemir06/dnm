@@ -44,7 +44,18 @@
     .end annotation
 .end method
 
-.method public abstract d(Landroid/support/v4/media/session/PlaybackStateCompat;)V
+.method public abstract d(I)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "type"
+        }
+    .end annotation
+.end method
+
+.method public abstract e(Landroid/support/v4/media/session/PlaybackStateCompat;)V
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0
@@ -55,7 +66,7 @@
     .end annotation
 .end method
 
-.method public abstract e(I)V
+.method public abstract f(I)V
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0
@@ -66,7 +77,7 @@
     .end annotation
 .end method
 
-.method public abstract f(Z)V
+.method public abstract g(Z)V
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0
@@ -77,7 +88,21 @@
     .end annotation
 .end method
 
-.method public abstract g(Landroidx/media/MediaSessionManager$RemoteUserInfo;)V
+.method public abstract getPlaybackState()Landroid/support/v4/media/session/PlaybackStateCompat;
+.end method
+
+.method public abstract h(Z)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "active"
+        }
+    .end annotation
+.end method
+
+.method public abstract i(Landroidx/media/MediaSessionManager$RemoteUserInfo;)V
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0
@@ -88,10 +113,10 @@
     .end annotation
 .end method
 
-.method public abstract getPlaybackState()Landroid/support/v4/media/session/PlaybackStateCompat;
+.method public abstract isActive()Z
 .end method
 
-.method public abstract h(I)V
+.method public abstract j(I)V
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0
@@ -102,7 +127,7 @@
     .end annotation
 .end method
 
-.method public abstract i(Landroidx/media/VolumeProviderCompat;)V
+.method public abstract k(Landroidx/media/VolumeProviderCompat;)V
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0
@@ -113,10 +138,18 @@
     .end annotation
 .end method
 
-.method public abstract isActive()Z
+.method public abstract l(Ljava/lang/CharSequence;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "title"
+        }
+    .end annotation
 .end method
 
-.method public abstract j(Ljava/util/List;)V
+.method public abstract m(Ljava/util/List;)V
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0
@@ -136,53 +169,39 @@
     .end annotation
 .end method
 
-.method public abstract k()Ljava/lang/Object;
-.end method
-
-.method public abstract l()Landroidx/media/MediaSessionManager$RemoteUserInfo;
-.end method
-
-.method public abstract m()Ljava/lang/String;
-.end method
-
 .method public abstract n()Ljava/lang/Object;
 .end method
 
-.method public abstract o(Landroid/support/v4/media/MediaMetadataCompat;)V
+.method public abstract o()Landroidx/media/MediaSessionManager$RemoteUserInfo;
+.end method
+
+.method public abstract p()Ljava/lang/String;
+.end method
+
+.method public abstract q(Landroid/app/PendingIntent;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mbr"
+        }
+    .end annotation
+.end method
+
+.method public abstract r()Ljava/lang/Object;
+.end method
+
+.method public abstract release()V
+.end method
+
+.method public abstract s(Landroid/support/v4/media/MediaMetadataCompat;)V
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
             0x0
         }
         names = {
             "metadata"
-        }
-    .end annotation
-.end method
-
-.method public abstract p(Landroid/app/PendingIntent;)V
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "pi"
-        }
-    .end annotation
-.end method
-
-.method public abstract q()Landroid/support/v4/media/session/MediaSessionCompat$b;
-.end method
-
-.method public abstract release()V
-.end method
-
-.method public abstract setActive(Z)V
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "active"
         }
     .end annotation
 .end method
@@ -209,39 +228,6 @@
     .end annotation
 .end method
 
-.method public abstract setMediaButtonReceiver(Landroid/app/PendingIntent;)V
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "mbr"
-        }
-    .end annotation
-.end method
-
-.method public abstract setQueueTitle(Ljava/lang/CharSequence;)V
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "title"
-        }
-    .end annotation
-.end method
-
-.method public abstract setRatingType(I)V
-    .annotation system Ldalvik/annotation/MethodParameters;
-        accessFlags = {
-            0x0
-        }
-        names = {
-            "type"
-        }
-    .end annotation
-.end method
-
 .method public abstract setRepeatMode(I)V
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -251,4 +237,18 @@
             "repeatMode"
         }
     .end annotation
+.end method
+
+.method public abstract t(Landroid/app/PendingIntent;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "pi"
+        }
+    .end annotation
+.end method
+
+.method public abstract u()Landroid/support/v4/media/session/MediaSessionCompat$b;
 .end method

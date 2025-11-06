@@ -11,6 +11,7 @@
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Lcom/google/android/gms/internal/base/zat;->zaa()Lcom/google/android/gms/internal/base/zaq;
 
     move-result-object v0
@@ -23,6 +24,7 @@
 
     const/4 v2, 0x1
 
+    .line 2
     invoke-interface {v0, v1, v2}, Lcom/google/android/gms/internal/base/zaq;->zaa(Ljava/util/concurrent/ThreadFactory;I)Ljava/util/concurrent/ExecutorService;
 
     move-result-object v0

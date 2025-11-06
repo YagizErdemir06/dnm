@@ -15,55 +15,105 @@
 
 
 # instance fields
-.field public a:F
+.field private c:F
 
-.field public final synthetic b:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
+.field public final synthetic d:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera/features/mode/street/ui/FragmentStreet;F)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x0
+        }
+        names = {
+            "this$0",
+            "fontSizePx"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$c;->b:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$c;->d:Lcom/android/camera/features/mode/street/ui/FragmentStreet;
 
     invoke-direct {p0}, Landroid/text/style/ReplacementSpan;-><init>()V
 
-    iput p2, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$c;->a:F
+    .line 2
+    iput p2, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$c;->c:F
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(Landroid/graphics/Paint;)Landroid/text/TextPaint;
+.method private a(Landroid/graphics/Paint;)Landroid/text/TextPaint;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "srcPaint"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Landroid/text/TextPaint;
 
     invoke-direct {v0, p1}, Landroid/text/TextPaint;-><init>(Landroid/graphics/Paint;)V
 
-    iget p0, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$c;->a:F
+    .line 2
+    iget p0, p0, Lcom/android/camera/features/mode/street/ui/FragmentStreet$c;->c:F
 
-    invoke-virtual {v0, p0}, Landroid/graphics/Paint;->setTextSize(F)V
+    invoke-virtual {v0, p0}, Landroid/text/TextPaint;->setTextSize(F)V
 
     return-object v0
 .end method
 
+
+# virtual methods
 .method public draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "canvas",
+            "text",
+            "start",
+            "end",
+            "x",
+            "top",
+            "y",
+            "bottom",
+            "paint"
+        }
+    .end annotation
 
+    .line 1
     invoke-interface {p2, p3, p4}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
     move-result-object p2
 
-    invoke-virtual {p0, p9}, Lcom/android/camera/features/mode/street/ui/FragmentStreet$c;->a(Landroid/graphics/Paint;)Landroid/text/TextPaint;
+    .line 2
+    invoke-direct {p0, p9}, Lcom/android/camera/features/mode/street/ui/FragmentStreet$c;->a(Landroid/graphics/Paint;)Landroid/text/TextPaint;
 
     move-result-object p0
 
+    .line 3
     invoke-virtual {p0}, Landroid/graphics/Paint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
 
     move-result-object p3
 
+    .line 4
     invoke-interface {p2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object p2
@@ -103,15 +153,34 @@
 
 .method public getSize(Landroid/graphics/Paint;Ljava/lang/CharSequence;IILandroid/graphics/Paint$FontMetricsInt;)I
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "paint",
+            "text",
+            "start",
+            "end",
+            "fm"
+        }
+    .end annotation
 
+    .line 1
     invoke-interface {p2, p3, p4}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
     move-result-object p2
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/features/mode/street/ui/FragmentStreet$c;->a(Landroid/graphics/Paint;)Landroid/text/TextPaint;
+    .line 2
+    invoke-direct {p0, p1}, Lcom/android/camera/features/mode/street/ui/FragmentStreet$c;->a(Landroid/graphics/Paint;)Landroid/text/TextPaint;
 
     move-result-object p0
 
+    .line 3
     invoke-interface {p2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object p1

@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Sets$CartesianSet$1;
+.class public Lcom/google/common/collect/Sets$CartesianSet$1;
 .super Lcom/google/common/collect/ImmutableList;
 .source "SourceFile"
 
@@ -23,13 +23,14 @@
 
 
 # instance fields
-.field final synthetic val$axes:Lcom/google/common/collect/ImmutableList;
+.field public final synthetic val$axes:Lcom/google/common/collect/ImmutableList;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/ImmutableList;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/Sets$CartesianSet$1;->val$axes:Lcom/google/common/collect/ImmutableList;
 
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableList;-><init>()V
@@ -87,6 +88,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Sets$CartesianSet$1;->val$axes:Lcom/google/common/collect/ImmutableList;
 
     invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I

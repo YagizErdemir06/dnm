@@ -23,19 +23,20 @@
 
 
 # static fields
-.field public static final enum a:Lcom/xiaomi/camera/videocast/VideoCastService$e;
-
-.field public static final enum b:Lcom/xiaomi/camera/videocast/VideoCastService$e;
-
 .field public static final enum c:Lcom/xiaomi/camera/videocast/VideoCastService$e;
 
-.field public static final synthetic d:[Lcom/xiaomi/camera/videocast/VideoCastService$e;
+.field public static final enum d:Lcom/xiaomi/camera/videocast/VideoCastService$e;
+
+.field public static final enum f:Lcom/xiaomi/camera/videocast/VideoCastService$e;
+
+.field private static final synthetic g:[Lcom/xiaomi/camera/videocast/VideoCastService$e;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 7
 
+    .line 1
     new-instance v0, Lcom/xiaomi/camera/videocast/VideoCastService$e;
 
     const-string v1, "UNKNOWN"
@@ -44,8 +45,9 @@
 
     invoke-direct {v0, v1, v2}, Lcom/xiaomi/camera/videocast/VideoCastService$e;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/xiaomi/camera/videocast/VideoCastService$e;->a:Lcom/xiaomi/camera/videocast/VideoCastService$e;
+    sput-object v0, Lcom/xiaomi/camera/videocast/VideoCastService$e;->c:Lcom/xiaomi/camera/videocast/VideoCastService$e;
 
+    .line 2
     new-instance v1, Lcom/xiaomi/camera/videocast/VideoCastService$e;
 
     const-string v3, "REJECTED"
@@ -54,8 +56,9 @@
 
     invoke-direct {v1, v3, v4}, Lcom/xiaomi/camera/videocast/VideoCastService$e;-><init>(Ljava/lang/String;I)V
 
-    sput-object v1, Lcom/xiaomi/camera/videocast/VideoCastService$e;->b:Lcom/xiaomi/camera/videocast/VideoCastService$e;
+    sput-object v1, Lcom/xiaomi/camera/videocast/VideoCastService$e;->d:Lcom/xiaomi/camera/videocast/VideoCastService$e;
 
+    .line 3
     new-instance v3, Lcom/xiaomi/camera/videocast/VideoCastService$e;
 
     const-string v5, "APPROVED"
@@ -64,7 +67,7 @@
 
     invoke-direct {v3, v5, v6}, Lcom/xiaomi/camera/videocast/VideoCastService$e;-><init>(Ljava/lang/String;I)V
 
-    sput-object v3, Lcom/xiaomi/camera/videocast/VideoCastService$e;->c:Lcom/xiaomi/camera/videocast/VideoCastService$e;
+    sput-object v3, Lcom/xiaomi/camera/videocast/VideoCastService$e;->f:Lcom/xiaomi/camera/videocast/VideoCastService$e;
 
     const/4 v5, 0x3
 
@@ -76,19 +79,26 @@
 
     aput-object v3, v5, v6
 
-    sput-object v5, Lcom/xiaomi/camera/videocast/VideoCastService$e;->d:[Lcom/xiaomi/camera/videocast/VideoCastService$e;
+    .line 4
+    sput-object v5, Lcom/xiaomi/camera/videocast/VideoCastService$e;->g:[Lcom/xiaomi/camera/videocast/VideoCastService$e;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;I)V
+.method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            "$enum$name",
+            "$enum$ordinal"
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -96,7 +106,16 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/camera/videocast/VideoCastService$e;
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8000
+        }
+        names = {
+            "name"
+        }
+    .end annotation
 
+    .line 1
     const-class v0, Lcom/xiaomi/camera/videocast/VideoCastService$e;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -111,7 +130,8 @@
 .method public static values()[Lcom/xiaomi/camera/videocast/VideoCastService$e;
     .locals 1
 
-    sget-object v0, Lcom/xiaomi/camera/videocast/VideoCastService$e;->d:[Lcom/xiaomi/camera/videocast/VideoCastService$e;
+    .line 1
+    sget-object v0, Lcom/xiaomi/camera/videocast/VideoCastService$e;->g:[Lcom/xiaomi/camera/videocast/VideoCastService$e;
 
     invoke-virtual {v0}, [Lcom/xiaomi/camera/videocast/VideoCastService$e;->clone()Ljava/lang/Object;
 

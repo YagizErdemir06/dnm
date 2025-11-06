@@ -7,6 +7,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,6 +19,7 @@
     :goto_0
     if-ge p1, p2, :cond_0
 
+    .line 1
     aget-byte v0, p0, p1
 
     const/16 v1, 0x47
@@ -54,6 +56,7 @@
 
     if-ge v3, p2, :cond_1
 
+    .line 1
     aget-byte v3, p0, v3
 
     const/16 v4, 0x47
@@ -89,50 +92,53 @@
 .method public static readPcrFromPacket(Lcom/google/android/exoplayer2/util/ParsableByteArray;II)J
     .locals 4
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
     move-result p1
 
-    const/4 v0, 0x5
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
-    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
+    const/4 v2, 0x5
 
-    if-ge p1, v0, :cond_0
+    if-ge p1, v2, :cond_0
 
-    return-wide v1
+    return-wide v0
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result p1
 
-    const/high16 v0, 0x800000
+    const/high16 v2, 0x800000
 
-    and-int/2addr v0, p1
+    and-int/2addr v2, p1
 
-    if-eqz v0, :cond_1
+    if-eqz v2, :cond_1
 
-    return-wide v1
+    return-wide v0
 
     :cond_1
-    const v0, 0x1fff00
+    const v2, 0x1fff00
 
-    and-int/2addr v0, p1
+    and-int/2addr v2, p1
 
-    shr-int/lit8 v0, v0, 0x8
+    shr-int/lit8 v2, v2, 0x8
 
-    if-eq v0, p2, :cond_2
+    if-eq v2, p2, :cond_2
 
-    return-wide v1
+    return-wide v0
 
     :cond_2
     and-int/lit8 p1, p1, 0x20
 
     const/4 p2, 0x1
 
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
     if-eqz p1, :cond_3
 
@@ -141,13 +147,14 @@
     goto :goto_0
 
     :cond_3
-    move p1, v0
+    move p1, v2
 
     :goto_0
     if-nez p1, :cond_4
 
-    return-wide v1
+    return-wide v0
 
+    .line 4
     :cond_4
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
@@ -157,12 +164,14 @@
 
     if-lt p1, v3, :cond_6
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
     move-result p1
 
     if-lt p1, v3, :cond_6
 
+    .line 6
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result p1
@@ -176,7 +185,7 @@
     goto :goto_1
 
     :cond_5
-    move p2, v0
+    move p2, v2
 
     :goto_1
     if-eqz p2, :cond_6
@@ -185,8 +194,10 @@
 
     new-array p2, p1, [B
 
-    invoke-virtual {p0, p2, v0, p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readBytes([BII)V
+    .line 7
+    invoke-virtual {p0, p2, v2, p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readBytes([BII)V
 
+    .line 8
     invoke-static {p2}, Lcom/google/android/exoplayer2/extractor/ts/TsUtil;->readPcrValueFromPcrBytes([B)J
 
     move-result-wide p0
@@ -194,7 +205,7 @@
     return-wide p0
 
     :cond_6
-    return-wide v1
+    return-wide v0
 .end method
 
 .method private static readPcrValueFromPcrBytes([B)J
@@ -202,6 +213,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     aget-byte v0, p0, v0
 
     int-to-long v0, v0

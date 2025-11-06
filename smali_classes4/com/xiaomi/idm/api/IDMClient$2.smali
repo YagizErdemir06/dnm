@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/idm/api/IDMClient$2;
+.class public Lcom/xiaomi/idm/api/IDMClient$2;
 .super Lcom/xiaomi/mi_connect_service/IIDMClientCallback$Stub;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/xiaomi/idm/api/IDMClient;
+.field public final synthetic this$0:Lcom/xiaomi/idm/api/IDMClient;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/idm/api/IDMClient;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     invoke-direct {p0}, Lcom/xiaomi/mi_connect_service/IIDMClientCallback$Stub;-><init>()V
@@ -32,6 +33,7 @@
 .method private callOnAccountChanged(Ljava/lang/String;Ljava/lang/String;)V
     .locals 6
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -64,18 +66,21 @@
 
     invoke-static {v5, v0, v4}, Lcom/xiaomi/idm/util/LogUtil;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     iget-object v0, v0, Lcom/xiaomi/idm/api/IDMBase;->handler:Landroid/os/Handler;
 
-    new-instance v4, Lcom/xiaomi/idm/api/q;
+    new-instance v4, Ld/o/l/a/m;
 
-    invoke-direct {v4, p0, p1, p2}, Lcom/xiaomi/idm/api/q;-><init>(Lcom/xiaomi/idm/api/IDMClient$2;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v4, p0, p1, p2}, Ld/o/l/a/m;-><init>(Lcom/xiaomi/idm/api/IDMClient$2;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 3
     invoke-virtual {v0, v4}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     move-result p0
 
+    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -121,13 +126,14 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     iget-object v0, v0, Lcom/xiaomi/idm/api/IDMBase;->handler:Landroid/os/Handler;
 
-    new-instance v1, Lcom/xiaomi/idm/api/p;
+    new-instance v1, Ld/o/l/a/k;
 
-    invoke-direct {v1, p0, p1, p2, p3}, Lcom/xiaomi/idm/api/p;-><init>(Lcom/xiaomi/idm/api/IDMClient$2;Lcom/xiaomi/idm/api/IDMService$Event;[BLcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEvent;)V
+    invoke-direct {v1, p0, p1, p2, p3}, Ld/o/l/a/k;-><init>(Lcom/xiaomi/idm/api/IDMClient$2;Lcom/xiaomi/idm/api/IDMService$Event;[BLcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEvent;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -137,6 +143,7 @@
 .method private callOnInvitationAccepted(Lcom/xiaomi/idm/api/IDMService;)V
     .locals 5
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -163,18 +170,20 @@
 
     invoke-static {v4, v0, v3}, Lcom/xiaomi/idm/util/LogUtil;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     iget-object v0, v0, Lcom/xiaomi/idm/api/IDMBase;->handler:Landroid/os/Handler;
 
-    new-instance v3, Lcom/xiaomi/idm/api/u;
+    new-instance v3, Ld/o/l/a/n;
 
-    invoke-direct {v3, p0, p1}, Lcom/xiaomi/idm/api/u;-><init>(Lcom/xiaomi/idm/api/IDMClient$2;Lcom/xiaomi/idm/api/IDMService;)V
+    invoke-direct {v3, p0, p1}, Ld/o/l/a/n;-><init>(Lcom/xiaomi/idm/api/IDMClient$2;Lcom/xiaomi/idm/api/IDMService;)V
 
     invoke-virtual {v0, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     move-result p0
 
+    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -207,13 +216,14 @@
 .method private callOnServiceFound(Lcom/xiaomi/idm/api/IDMService;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     iget-object v0, v0, Lcom/xiaomi/idm/api/IDMBase;->handler:Landroid/os/Handler;
 
-    new-instance v1, Lcom/xiaomi/idm/api/r;
+    new-instance v1, Ld/o/l/a/q;
 
-    invoke-direct {v1, p0, p1}, Lcom/xiaomi/idm/api/r;-><init>(Lcom/xiaomi/idm/api/IDMClient$2;Lcom/xiaomi/idm/api/IDMService;)V
+    invoke-direct {v1, p0, p1}, Ld/o/l/a/q;-><init>(Lcom/xiaomi/idm/api/IDMClient$2;Lcom/xiaomi/idm/api/IDMService;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -223,13 +233,14 @@
 .method private callOnServiceLost(Lcom/xiaomi/idm/api/IDMService;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     iget-object v0, v0, Lcom/xiaomi/idm/api/IDMBase;->handler:Landroid/os/Handler;
 
-    new-instance v1, Lcom/xiaomi/idm/api/s;
+    new-instance v1, Ld/o/l/a/s;
 
-    invoke-direct {v1, p0, p1}, Lcom/xiaomi/idm/api/s;-><init>(Lcom/xiaomi/idm/api/IDMClient$2;Lcom/xiaomi/idm/api/IDMService;)V
+    invoke-direct {v1, p0, p1}, Ld/o/l/a/s;-><init>(Lcom/xiaomi/idm/api/IDMClient$2;Lcom/xiaomi/idm/api/IDMService;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -239,13 +250,14 @@
 .method private callOnServiceUpdate(Lcom/xiaomi/idm/api/IDMService;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     iget-object v0, v0, Lcom/xiaomi/idm/api/IDMBase;->handler:Landroid/os/Handler;
 
-    new-instance v1, Lcom/xiaomi/idm/api/n;
+    new-instance v1, Ld/o/l/a/o;
 
-    invoke-direct {v1, p0, p1}, Lcom/xiaomi/idm/api/n;-><init>(Lcom/xiaomi/idm/api/IDMClient$2;Lcom/xiaomi/idm/api/IDMService;)V
+    invoke-direct {v1, p0, p1}, Ld/o/l/a/o;-><init>(Lcom/xiaomi/idm/api/IDMClient$2;Lcom/xiaomi/idm/api/IDMService;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -255,6 +267,7 @@
 .method private synthetic lambda$callOnAccountChanged$5(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     invoke-static {p0}, Lcom/xiaomi/idm/api/IDMClient;->access$200(Lcom/xiaomi/idm/api/IDMClient;)Lcom/xiaomi/idm/api/IDMClient$IDMClientCallback;
@@ -271,6 +284,7 @@
 
     const-string v0, "IDMClient"
 
+    .line 1
     :try_start_0
     invoke-virtual {p1, p2}, Lcom/xiaomi/idm/api/IDMService$Event;->onEvent([B)[B
 
@@ -278,10 +292,12 @@
     :try_end_0
     .catch Lcom/xiaomi/idm/exception/RmiException; {:try_start_0 .. :try_end_0} :catch_1
 
+    .line 2
     invoke-virtual {p3}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEvent;->getClientId()Ljava/lang/String;
 
     move-result-object p2
 
+    .line 3
     invoke-virtual {p2}, Ljava/lang/String;->isEmpty()Z
 
     move-result v1
@@ -292,6 +308,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 4
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -323,6 +340,7 @@
     :cond_0
     if-nez p1, :cond_1
 
+    .line 5
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -351,6 +369,7 @@
 
     return-void
 
+    .line 6
     :cond_1
     iget-object v1, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
@@ -362,6 +381,7 @@
 
     if-ge v1, v4, :cond_2
 
+    .line 7
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -390,6 +410,7 @@
 
     return-void
 
+    .line 8
     :cond_2
     iget-object v1, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
@@ -401,15 +422,18 @@
 
     return-void
 
+    .line 9
     :cond_3
     invoke-static {}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEventResponse;->newBuilder()Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEventResponse$Builder;
 
     move-result-object v1
 
+    .line 10
     invoke-virtual {v1, p2}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEventResponse$Builder;->setClientId(Ljava/lang/String;)Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEventResponse$Builder;
 
     move-result-object v1
 
+    .line 11
     invoke-virtual {p3}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEvent;->getServiceId()Ljava/lang/String;
 
     move-result-object v2
@@ -420,6 +444,7 @@
 
     sget-object v2, Lcom/xiaomi/idm/constant/ResponseCode$EventCode;->EVENT_SUCCESS:Lcom/xiaomi/idm/constant/ResponseCode$EventCode;
 
+    .line 12
     invoke-virtual {v2}, Lcom/xiaomi/idm/constant/ResponseCode$EventCode;->getCode()I
 
     move-result v4
@@ -428,6 +453,7 @@
 
     move-result-object v1
 
+    .line 13
     invoke-virtual {v2}, Lcom/xiaomi/idm/constant/ResponseCode$EventCode;->getMsg()Ljava/lang/String;
 
     move-result-object v2
@@ -436,6 +462,7 @@
 
     move-result-object v1
 
+    .line 14
     invoke-virtual {p3}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEvent;->getRequestId()Ljava/lang/String;
 
     move-result-object p3
@@ -444,6 +471,7 @@
 
     move-result-object p3
 
+    .line 15
     invoke-static {p1}, Lcom/google/protobuf/ByteString;->copyFrom([B)Lcom/google/protobuf/ByteString;
 
     move-result-object p1
@@ -452,26 +480,31 @@
 
     move-result-object p1
 
+    .line 16
     invoke-virtual {p1}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->build()Lcom/google/protobuf/GeneratedMessageLite;
 
     move-result-object p1
 
     check-cast p1, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEventResponse;
 
+    .line 17
     invoke-static {}, Lcom/xiaomi/idm/compat/proto/IPCParam$EventResponse;->newBuilder()Lcom/xiaomi/idm/compat/proto/IPCParam$EventResponse$Builder;
 
     move-result-object p3
 
+    .line 18
     invoke-virtual {p3, p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$EventResponse$Builder;->setEventResponse(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEventResponse;)Lcom/xiaomi/idm/compat/proto/IPCParam$EventResponse$Builder;
 
     move-result-object p1
 
+    .line 19
     invoke-virtual {p1}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->build()Lcom/google/protobuf/GeneratedMessageLite;
 
     move-result-object p1
 
     check-cast p1, Lcom/xiaomi/idm/compat/proto/IPCParam$EventResponse;
 
+    .line 20
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -494,6 +527,7 @@
 
     invoke-static {v0, p2, p3}, Lcom/xiaomi/idm/util/LogUtil;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 21
     :try_start_1
     iget-object p2, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
@@ -520,7 +554,8 @@
     :catch_0
     move-exception p0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 22
+    invoke-virtual {p0}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
 
     move-result-object p1
 
@@ -532,6 +567,7 @@
     :catch_1
     move-exception p0
 
+    .line 23
     invoke-virtual {p0}, Lcom/xiaomi/idm/exception/RmiException;->getMessage()Ljava/lang/String;
 
     move-result-object p1
@@ -544,6 +580,7 @@
 .method private synthetic lambda$callOnInvitationAccepted$4(Lcom/xiaomi/idm/api/IDMService;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     invoke-static {p0}, Lcom/xiaomi/idm/api/IDMClient;->access$200(Lcom/xiaomi/idm/api/IDMClient;)Lcom/xiaomi/idm/api/IDMClient$IDMClientCallback;
@@ -558,6 +595,7 @@
 .method private synthetic lambda$callOnServiceFound$0(Lcom/xiaomi/idm/api/IDMService;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     invoke-static {p0}, Lcom/xiaomi/idm/api/IDMClient;->access$200(Lcom/xiaomi/idm/api/IDMClient;)Lcom/xiaomi/idm/api/IDMClient$IDMClientCallback;
@@ -572,6 +610,7 @@
 .method private synthetic lambda$callOnServiceLost$2(Lcom/xiaomi/idm/api/IDMService;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     invoke-static {p0}, Lcom/xiaomi/idm/api/IDMClient;->access$200(Lcom/xiaomi/idm/api/IDMClient;)Lcom/xiaomi/idm/api/IDMClient$IDMClientCallback;
@@ -586,6 +625,7 @@
 .method private synthetic lambda$callOnServiceUpdate$1(Lcom/xiaomi/idm/api/IDMService;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     invoke-static {p0}, Lcom/xiaomi/idm/api/IDMClient;->access$200(Lcom/xiaomi/idm/api/IDMClient;)Lcom/xiaomi/idm/api/IDMClient$IDMClientCallback;
@@ -597,25 +637,28 @@
     return-void
 .end method
 
-.method private static synthetic lambda$onBlockReceived$8(Lcom/xiaomi/idm/task/RecvBlockTask;II[B)V
+.method public static synthetic lambda$onBlockReceived$8(Lcom/xiaomi/idm/task/RecvBlockTask;II[B)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1, p2, p3}, Lcom/xiaomi/idm/task/RecvBlockTask;->receive(II[B)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onBlockSendResult$6(Lcom/xiaomi/idm/task/SendBlockTask;Ljava/lang/String;)V
+.method public static synthetic lambda$onBlockSendResult$6(Lcom/xiaomi/idm/task/SendBlockTask;Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/xiaomi/idm/task/SendBlockTask;->setDoneSubTask(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method private static synthetic lambda$onBlockSendResult$7(Lcom/xiaomi/idm/task/SendBlockTask;Ljava/lang/String;Lcom/xiaomi/idm/compat/proto/IPCParam$OnBlockSendResult;)V
+.method public static synthetic lambda$onBlockSendResult$7(Lcom/xiaomi/idm/task/SendBlockTask;Ljava/lang/String;Lcom/xiaomi/idm/compat/proto/IPCParam$OnBlockSendResult;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p2}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnBlockSendResult;->getCode()I
 
     move-result p2
@@ -628,6 +671,7 @@
 
     move-result-object p2
 
+    .line 2
     invoke-virtual {p0, p1, p2}, Lcom/xiaomi/idm/task/SendBlockTask;->setFailedSubTask(Ljava/lang/String;Lcom/xiaomi/idm/exception/IDMException;)V
 
     return-void
@@ -636,18 +680,21 @@
 .method private synthetic lambda$onRpcChannelConnected$9(Lcom/xiaomi/idm/compat/proto/IPCParam$RpcChannelStatus;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     invoke-static {v0}, Lcom/xiaomi/idm/api/IDMClient;->access$200(Lcom/xiaomi/idm/api/IDMClient;)Lcom/xiaomi/idm/api/IDMClient$IDMClientCallback;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Lcom/xiaomi/idm/bean/RpcChannelStatus$Builder;->newBuilder()Lcom/xiaomi/idm/bean/RpcChannelStatus$Builder;
 
     move-result-object v1
 
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
+    .line 3
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBase;->getClientId()Ljava/lang/String;
 
     move-result-object p0
@@ -656,6 +703,7 @@
 
     move-result-object p0
 
+    .line 4
     invoke-virtual {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$RpcChannelStatus;->getServiceId()Ljava/lang/String;
 
     move-result-object v1
@@ -664,6 +712,7 @@
 
     move-result-object p0
 
+    .line 5
     invoke-virtual {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$RpcChannelStatus;->getConnectLevel()I
 
     move-result v1
@@ -672,6 +721,7 @@
 
     move-result-object p0
 
+    .line 6
     invoke-virtual {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$RpcChannelStatus;->getRpcChannelType()I
 
     move-result p1
@@ -684,6 +734,7 @@
 
     move-result-object p0
 
+    .line 7
     invoke-virtual {v0, p0}, Lcom/xiaomi/idm/api/IDMClient$IDMClientCallback;->onRpcChannelConnected(Lcom/xiaomi/idm/bean/RpcChannelStatus;)V
 
     return-void
@@ -692,18 +743,21 @@
 .method private synthetic lambda$onRpcChannelDisconnected$10(Lcom/xiaomi/idm/compat/proto/IPCParam$RpcChannelStatus;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     invoke-static {v0}, Lcom/xiaomi/idm/api/IDMClient;->access$200(Lcom/xiaomi/idm/api/IDMClient;)Lcom/xiaomi/idm/api/IDMClient$IDMClientCallback;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Lcom/xiaomi/idm/bean/RpcChannelStatus$Builder;->newBuilder()Lcom/xiaomi/idm/bean/RpcChannelStatus$Builder;
 
     move-result-object v1
 
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
+    .line 3
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBase;->getClientId()Ljava/lang/String;
 
     move-result-object p0
@@ -712,6 +766,7 @@
 
     move-result-object p0
 
+    .line 4
     invoke-virtual {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$RpcChannelStatus;->getServiceId()Ljava/lang/String;
 
     move-result-object v1
@@ -720,6 +775,7 @@
 
     move-result-object p0
 
+    .line 5
     invoke-virtual {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$RpcChannelStatus;->getConnectLevel()I
 
     move-result v1
@@ -728,6 +784,7 @@
 
     move-result-object p0
 
+    .line 6
     invoke-virtual {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$RpcChannelStatus;->getRpcChannelType()I
 
     move-result p1
@@ -740,39 +797,8 @@
 
     move-result-object p0
 
+    .line 7
     invoke-virtual {v0, p0}, Lcom/xiaomi/idm/api/IDMClient$IDMClientCallback;->onRpcChannelDisconnected(Lcom/xiaomi/idm/bean/RpcChannelStatus;)V
-
-    return-void
-.end method
-
-.method public static synthetic p0(Lcom/xiaomi/idm/api/IDMClient$2;Lcom/xiaomi/idm/compat/proto/IPCParam$RpcChannelStatus;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/IDMClient$2;->lambda$onRpcChannelConnected$9(Lcom/xiaomi/idm/compat/proto/IPCParam$RpcChannelStatus;)V
-
-    return-void
-.end method
-
-.method public static synthetic q0(Lcom/xiaomi/idm/api/IDMClient$2;Lcom/xiaomi/idm/api/IDMService$Event;[BLcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEvent;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2, p3}, Lcom/xiaomi/idm/api/IDMClient$2;->lambda$callOnEvent$3(Lcom/xiaomi/idm/api/IDMService$Event;[BLcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEvent;)V
-
-    return-void
-.end method
-
-.method public static synthetic r0(Lcom/xiaomi/idm/api/IDMClient$2;Lcom/xiaomi/idm/compat/proto/IPCParam$RpcChannelStatus;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/IDMClient$2;->lambda$onRpcChannelDisconnected$10(Lcom/xiaomi/idm/compat/proto/IPCParam$RpcChannelStatus;)V
-
-    return-void
-.end method
-
-.method public static synthetic s0(Lcom/xiaomi/idm/api/IDMClient$2;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/xiaomi/idm/api/IDMClient$2;->lambda$callOnAccountChanged$5(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -795,6 +821,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p1, Lcom/xiaomi/idm/api/IDMClient$RmiCall;->future:Lcom/xiaomi/idm/task/CallFuture;
 
     iget-object p1, p1, Lcom/xiaomi/idm/api/IDMClient$RmiCall;->action:Lcom/xiaomi/idm/api/IDMService$Action;
@@ -808,15 +835,9 @@
     return-void
 .end method
 
-.method public static synthetic t0(Lcom/xiaomi/idm/api/IDMClient$2;Lcom/xiaomi/idm/api/IDMService;)V
-    .locals 0
 
-    invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/IDMClient$2;->lambda$callOnInvitationAccepted$4(Lcom/xiaomi/idm/api/IDMService;)V
-
-    return-void
-.end method
-
-.method public static synthetic u0(Lcom/xiaomi/idm/api/IDMClient$2;Lcom/xiaomi/idm/api/IDMService;)V
+# virtual methods
+.method public synthetic A0(Lcom/xiaomi/idm/api/IDMService;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/IDMClient$2;->lambda$callOnServiceUpdate$1(Lcom/xiaomi/idm/api/IDMService;)V
@@ -824,51 +845,26 @@
     return-void
 .end method
 
-.method public static synthetic v0(Lcom/xiaomi/idm/task/RecvBlockTask;II[B)V
+.method public synthetic B0(Lcom/xiaomi/idm/compat/proto/IPCParam$RpcChannelStatus;)V
     .locals 0
 
-    invoke-static {p0, p1, p2, p3}, Lcom/xiaomi/idm/api/IDMClient$2;->lambda$onBlockReceived$8(Lcom/xiaomi/idm/task/RecvBlockTask;II[B)V
+    invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/IDMClient$2;->lambda$onRpcChannelConnected$9(Lcom/xiaomi/idm/compat/proto/IPCParam$RpcChannelStatus;)V
 
     return-void
 .end method
 
-.method public static synthetic w0(Lcom/xiaomi/idm/api/IDMClient$2;Lcom/xiaomi/idm/api/IDMService;)V
+.method public synthetic C0(Lcom/xiaomi/idm/compat/proto/IPCParam$RpcChannelStatus;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/IDMClient$2;->lambda$callOnServiceFound$0(Lcom/xiaomi/idm/api/IDMService;)V
+    invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/IDMClient$2;->lambda$onRpcChannelDisconnected$10(Lcom/xiaomi/idm/compat/proto/IPCParam$RpcChannelStatus;)V
 
     return-void
 .end method
 
-.method public static synthetic x0(Lcom/xiaomi/idm/task/SendBlockTask;Ljava/lang/String;Lcom/xiaomi/idm/compat/proto/IPCParam$OnBlockSendResult;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/xiaomi/idm/api/IDMClient$2;->lambda$onBlockSendResult$7(Lcom/xiaomi/idm/task/SendBlockTask;Ljava/lang/String;Lcom/xiaomi/idm/compat/proto/IPCParam$OnBlockSendResult;)V
-
-    return-void
-.end method
-
-.method public static synthetic y0(Lcom/xiaomi/idm/api/IDMClient$2;Lcom/xiaomi/idm/api/IDMService;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/IDMClient$2;->lambda$callOnServiceLost$2(Lcom/xiaomi/idm/api/IDMService;)V
-
-    return-void
-.end method
-
-.method public static synthetic z0(Lcom/xiaomi/idm/task/SendBlockTask;Ljava/lang/String;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/xiaomi/idm/api/IDMClient$2;->lambda$onBlockSendResult$6(Lcom/xiaomi/idm/task/SendBlockTask;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-
-# virtual methods
 .method public onAccountChanged([B)V
     .locals 6
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -901,6 +897,7 @@
 
     invoke-static {v4, v0, v3}, Lcom/xiaomi/idm/util/LogUtil;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     :try_start_0
     invoke-static {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$ClientOnAccountChanged;->parseFrom([B)Lcom/xiaomi/idm/compat/proto/IPCParam$ClientOnAccountChanged;
 
@@ -913,7 +910,8 @@
     :catch_0
     move-exception p1
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 3
+    invoke-virtual {p1}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
@@ -924,6 +922,7 @@
     :goto_0
     if-nez p1, :cond_0
 
+    .line 4
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -952,15 +951,18 @@
 
     return-void
 
+    .line 5
     :cond_0
     invoke-virtual {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$ClientOnAccountChanged;->getNewIdHash()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 6
     invoke-virtual {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$ClientOnAccountChanged;->getSubChangeType()Lcom/xiaomi/idm/api/proto/IDMServiceProto$OnAccountChangeResult$SubChangeType;
 
     move-result-object p1
 
+    .line 7
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -985,6 +987,7 @@
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 8
     invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v5
@@ -1001,14 +1004,17 @@
 
     new-array v5, v2, [Ljava/lang/Object;
 
+    .line 9
     invoke-static {v4, v3, v5}, Lcom/xiaomi/idm/util/LogUtil;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 10
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
+    .line 11
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1037,6 +1043,7 @@
 
     return-void
 
+    .line 12
     :cond_1
     invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
@@ -1055,6 +1062,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     invoke-static {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnBlockReceived;->parseFrom([B)Lcom/xiaomi/idm/compat/proto/IPCParam$OnBlockReceived;
 
@@ -1062,36 +1070,44 @@
     :try_end_0
     .catch Lcom/google/protobuf/InvalidProtocolBufferException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 2
     invoke-virtual {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnBlockReceived;->getBlockFragment()Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment;
 
     move-result-object v0
 
+    .line 3
     invoke-virtual {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnBlockReceived;->getServiceId()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 4
     invoke-virtual {v0}, Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment;->getBlockId()I
 
     move-result v1
 
+    .line 5
     invoke-virtual {v0}, Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment;->getBlockSize()I
 
     move-result v2
 
+    .line 6
     invoke-virtual {v0}, Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment;->getFragmentOffset()I
 
     move-result v3
 
+    .line 7
     invoke-virtual {v0}, Lcom/xiaomi/idm/compat/proto/IPCParam$BlockFragment;->getFragmentSize()I
 
     move-result v0
 
+    .line 8
     iget-object v4, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     invoke-static {v4, p1, v1}, Lcom/xiaomi/idm/api/IDMClient;->access$1400(Lcom/xiaomi/idm/api/IDMClient;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v4
 
+    .line 9
     iget-object v5, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     iget-object v5, v5, Lcom/xiaomi/idm/api/IDMBase;->recvBlockTasks:Ljava/util/concurrent/ConcurrentHashMap;
@@ -1104,35 +1120,40 @@
 
     if-nez v5, :cond_0
 
+    .line 10
     new-instance v5, Lcom/xiaomi/idm/task/RecvBlockTask;
 
     invoke-direct {v5, p1, v1, v2}, Lcom/xiaomi/idm/task/RecvBlockTask;-><init>(Ljava/lang/String;II)V
 
+    .line 11
     new-instance v2, Lcom/xiaomi/idm/api/IDMClient$2$1;
 
     invoke-direct {v2, p0, p1, v1, v4}, Lcom/xiaomi/idm/api/IDMClient$2$1;-><init>(Lcom/xiaomi/idm/api/IDMClient$2;Ljava/lang/String;ILjava/lang/String;)V
 
     invoke-virtual {v5, v2}, Lcom/xiaomi/idm/task/CallFuture;->setCallBack(Lcom/xiaomi/idm/task/CallFuture$Callback;)V
 
+    .line 12
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     iget-object p1, p1, Lcom/xiaomi/idm/api/IDMBase;->recvBlockTasks:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {p1, v4, v5}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 13
     :cond_0
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMBase;->handler:Landroid/os/Handler;
 
-    new-instance p1, Lcom/xiaomi/idm/api/x;
+    new-instance p1, Ld/o/l/a/p;
 
-    invoke-direct {p1, v5, v3, v0, p2}, Lcom/xiaomi/idm/api/x;-><init>(Lcom/xiaomi/idm/task/RecvBlockTask;II[B)V
+    invoke-direct {p1, v5, v3, v0, p2}, Ld/o/l/a/p;-><init>(Lcom/xiaomi/idm/task/RecvBlockTask;II[B)V
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 
+    .line 14
     :catch_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -1172,6 +1193,7 @@
 .method public onBlockSendResult([B)V
     .locals 6
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1204,6 +1226,7 @@
 
     invoke-static {v4, v0, v3}, Lcom/xiaomi/idm/util/LogUtil;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     :try_start_0
     invoke-static {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnBlockSendResult;->parseFrom([B)Lcom/xiaomi/idm/compat/proto/IPCParam$OnBlockSendResult;
 
@@ -1211,6 +1234,7 @@
     :try_end_0
     .catch Lcom/google/protobuf/InvalidProtocolBufferException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 3
     invoke-virtual {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnBlockSendResult;->getHead()Lcom/xiaomi/idm/compat/proto/IPCParam$TransHead;
 
     move-result-object v0
@@ -1219,6 +1243,7 @@
 
     move-result-object v0
 
+    .line 4
     iget-object v3, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     iget-object v3, v3, Lcom/xiaomi/idm/api/IDMBase;->seqBlockMap:Ljava/util/concurrent/ConcurrentHashMap;
@@ -1231,6 +1256,7 @@
 
     if-nez v3, :cond_0
 
+    .line 5
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1265,15 +1291,18 @@
 
     return-void
 
+    .line 6
     :cond_0
     iget-object v0, v3, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/String;
 
+    .line 7
     iget-object v1, v3, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/String;
 
+    .line 8
     iget-object v3, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     iget-object v3, v3, Lcom/xiaomi/idm/api/IDMBase;->sendBlockTasks:Ljava/util/concurrent/ConcurrentLinkedDeque;
@@ -1286,6 +1315,7 @@
 
     if-nez v3, :cond_1
 
+    .line 9
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1312,6 +1342,7 @@
 
     return-void
 
+    .line 10
     :cond_1
     invoke-virtual {v3}, Lcom/xiaomi/idm/task/SendBlockTask;->getBlockId()I
 
@@ -1327,6 +1358,7 @@
 
     if-eqz v5, :cond_3
 
+    .line 11
     invoke-virtual {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnBlockSendResult;->getCode()I
 
     move-result v0
@@ -1339,6 +1371,7 @@
 
     if-ne v0, v5, :cond_2
 
+    .line 12
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1357,32 +1390,35 @@
 
     invoke-static {v4, p1, v0}, Lcom/xiaomi/idm/util/LogUtil;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 13
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMBase;->handler:Landroid/os/Handler;
 
-    new-instance p1, Lcom/xiaomi/idm/api/v;
+    new-instance p1, Ld/o/l/a/t;
 
-    invoke-direct {p1, v3, v1}, Lcom/xiaomi/idm/api/v;-><init>(Lcom/xiaomi/idm/task/SendBlockTask;Ljava/lang/String;)V
+    invoke-direct {p1, v3, v1}, Ld/o/l/a/t;-><init>(Lcom/xiaomi/idm/task/SendBlockTask;Ljava/lang/String;)V
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 
+    .line 14
     :cond_2
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMBase;->handler:Landroid/os/Handler;
 
-    new-instance v0, Lcom/xiaomi/idm/api/w;
+    new-instance v0, Ld/o/l/a/r;
 
-    invoke-direct {v0, v3, v1, p1}, Lcom/xiaomi/idm/api/w;-><init>(Lcom/xiaomi/idm/task/SendBlockTask;Ljava/lang/String;Lcom/xiaomi/idm/compat/proto/IPCParam$OnBlockSendResult;)V
+    invoke-direct {v0, v3, v1, p1}, Ld/o/l/a/r;-><init>(Lcom/xiaomi/idm/task/SendBlockTask;Ljava/lang/String;Lcom/xiaomi/idm/compat/proto/IPCParam$OnBlockSendResult;)V
 
     invoke-virtual {p0, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     :goto_0
     return-void
 
+    .line 15
     :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -1394,6 +1430,7 @@
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 16
     invoke-virtual {v3}, Lcom/xiaomi/idm/task/SendBlockTask;->getBlockId()I
 
     move-result v1
@@ -1414,6 +1451,7 @@
 
     throw p0
 
+    .line 17
     :catch_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -1447,17 +1485,20 @@
 .method public onConfigurationReceived([B)V
     .locals 1
 
+    .line 1
     :try_start_0
     invoke-static {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$Configuration;->parseFrom([B)Lcom/xiaomi/idm/compat/proto/IPCParam$Configuration;
 
     move-result-object p1
 
+    .line 2
     invoke-static {p1}, Lcom/xiaomi/idm/internal/Configuration;->fromProto(Lcom/xiaomi/idm/compat/proto/IPCParam$Configuration;)Lcom/xiaomi/idm/internal/Configuration;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
+    .line 3
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     invoke-virtual {p1, p0}, Lcom/xiaomi/idm/internal/Configuration;->enableConfig(Lcom/xiaomi/idm/api/IDMBase;)V
@@ -1469,13 +1510,14 @@
     :catch_0
     move-exception p0
 
-    const-string p1, "IDMClient"
+    .line 4
+    invoke-virtual {p0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v0
+    const-string v0, "IDMClient"
 
-    invoke-static {p1, v0, p0}, Lcom/xiaomi/idm/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, p1, p0}, Lcom/xiaomi/idm/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_0
     :goto_0
@@ -1485,6 +1527,7 @@
 .method public onDiscoveryResult([B)V
     .locals 5
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1517,6 +1560,7 @@
 
     invoke-static {v4, v0, v3}, Lcom/xiaomi/idm/util/LogUtil;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     :try_start_0
     invoke-static {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnDiscoveryResult;->parseFrom([B)Lcom/xiaomi/idm/compat/proto/IPCParam$OnDiscoveryResult;
 
@@ -1529,7 +1573,8 @@
     :catch_0
     move-exception p1
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 3
+    invoke-virtual {p1}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1540,6 +1585,7 @@
     :goto_0
     if-nez p1, :cond_0
 
+    .line 4
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1568,11 +1614,13 @@
 
     return-void
 
+    .line 5
     :cond_0
     invoke-virtual {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnDiscoveryResult;->getStatus()I
 
     move-result p1
 
+    .line 6
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1605,6 +1653,7 @@
 
     invoke-static {v4, v0, v1}, Lcom/xiaomi/idm/util/LogUtil;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 7
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     invoke-static {p0, p1}, Lcom/xiaomi/idm/api/IDMClient;->access$1100(Lcom/xiaomi/idm/api/IDMClient;I)V
@@ -1620,6 +1669,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1652,6 +1702,7 @@
 
     invoke-static {v4, v0, v3}, Lcom/xiaomi/idm/util/LogUtil;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     :try_start_0
     invoke-static {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnEventRequest;->parseFrom([B)Lcom/xiaomi/idm/compat/proto/IPCParam$OnEventRequest;
 
@@ -1664,7 +1715,8 @@
     :catch_0
     move-exception p1
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 3
+    invoke-virtual {p1}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1675,6 +1727,7 @@
     :goto_0
     if-nez p1, :cond_0
 
+    .line 4
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1703,6 +1756,7 @@
 
     return-void
 
+    .line 5
     :cond_0
     invoke-virtual {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnEventRequest;->hasIdmEvent()Z
 
@@ -1710,6 +1764,7 @@
 
     if-nez v0, :cond_1
 
+    .line 6
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1738,11 +1793,13 @@
 
     return-void
 
+    .line 7
     :cond_1
     invoke-virtual {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnEventRequest;->getIdmEvent()Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEvent;
 
     move-result-object p1
 
+    .line 8
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1775,14 +1832,17 @@
 
     invoke-static {v4, v0, v1}, Lcom/xiaomi/idm/util/LogUtil;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 9
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEvent;->getServiceId()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 10
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEvent;->getEid()I
 
     move-result v1
 
+    .line 11
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEvent;->getEvent()Lcom/google/protobuf/ByteString;
 
     move-result-object v3
@@ -1791,12 +1851,14 @@
 
     move-result-object v3
 
+    .line 12
     iget-object v5, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     invoke-virtual {v5, v0, v1}, Lcom/xiaomi/idm/api/IDMClient;->generateEventKey(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 13
     iget-object v1, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     invoke-static {v1}, Lcom/xiaomi/idm/api/IDMClient;->access$800(Lcom/xiaomi/idm/api/IDMClient;)Ljava/util/concurrent/ConcurrentHashMap;
@@ -1811,14 +1873,16 @@
 
     if-nez v0, :cond_2
 
-    const-string p0, "onEvent: reiEvent not found"
+    new-array p0, v2, [Ljava/lang/Object;
 
-    new-array p1, v2, [Ljava/lang/Object;
+    const-string p1, "onEvent: reiEvent not found"
 
-    invoke-static {v4, p0, p1}, Lcom/xiaomi/idm/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 14
+    invoke-static {v4, p1, p0}, Lcom/xiaomi/idm/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
+    .line 15
     :cond_2
     invoke-direct {p0, v0, v3, p1}, Lcom/xiaomi/idm/api/IDMClient$2;->callOnEvent(Lcom/xiaomi/idm/api/IDMService$Event;[BLcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEvent;)V
 
@@ -1828,6 +1892,7 @@
 .method public onInvitationAccepted([B)V
     .locals 5
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1860,6 +1925,7 @@
 
     invoke-static {v4, v0, v3}, Lcom/xiaomi/idm/util/LogUtil;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     :try_start_0
     invoke-static {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;->parseFrom([B)Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;
 
@@ -1872,7 +1938,8 @@
     :catch_0
     move-exception p1
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 3
+    invoke-virtual {p1}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1883,6 +1950,7 @@
     :goto_0
     if-nez p1, :cond_0
 
+    .line 4
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1911,6 +1979,7 @@
 
     return-void
 
+    .line 5
     :cond_0
     invoke-virtual {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;->hasIdmService()Z
 
@@ -1918,6 +1987,7 @@
 
     if-nez v0, :cond_1
 
+    .line 6
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1946,11 +2016,13 @@
 
     return-void
 
+    .line 7
     :cond_1
     invoke-virtual {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnInvitationAccepted;->getIdmService()Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;
 
     move-result-object p1
 
+    .line 8
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1983,6 +2055,7 @@
 
     invoke-static {v4, v0, v1}, Lcom/xiaomi/idm/util/LogUtil;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 9
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     invoke-static {v0}, Lcom/xiaomi/idm/api/IDMClient;->access$400(Lcom/xiaomi/idm/api/IDMClient;)Ljava/util/concurrent/ConcurrentHashMap;
@@ -1999,6 +2072,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 10
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     invoke-static {v0}, Lcom/xiaomi/idm/api/IDMClient;->access$400(Lcom/xiaomi/idm/api/IDMClient;)Ljava/util/concurrent/ConcurrentHashMap;
@@ -2015,10 +2089,12 @@
 
     check-cast v0, Lcom/xiaomi/idm/api/IDMService;
 
+    .line 11
     invoke-virtual {v0, p1}, Lcom/xiaomi/idm/api/IDMService;->update(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;)V
 
     goto :goto_1
 
+    .line 12
     :cond_2
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
@@ -2035,6 +2111,7 @@
     :goto_1
     if-eqz v0, :cond_3
 
+    .line 13
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     invoke-static {p1}, Lcom/xiaomi/idm/api/IDMClient;->access$400(Lcom/xiaomi/idm/api/IDMClient;)Ljava/util/concurrent/ConcurrentHashMap;
@@ -2047,6 +2124,7 @@
 
     invoke-virtual {p1, v1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 14
     invoke-direct {p0, v0}, Lcom/xiaomi/idm/api/IDMClient$2;->callOnInvitationAccepted(Lcom/xiaomi/idm/api/IDMService;)V
 
     :cond_3
@@ -2056,6 +2134,7 @@
 .method public onInviteConnection([B)V
     .locals 5
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2088,6 +2167,7 @@
 
     invoke-static {v4, v0, v3}, Lcom/xiaomi/idm/util/LogUtil;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     :try_start_0
     invoke-static {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnInviteConnection;->parseFrom([B)Lcom/xiaomi/idm/compat/proto/IPCParam$OnInviteConnection;
 
@@ -2100,7 +2180,8 @@
     :catch_0
     move-exception p1
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 3
+    invoke-virtual {p1}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
@@ -2111,6 +2192,7 @@
     :goto_0
     if-nez p1, :cond_0
 
+    .line 4
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2139,15 +2221,18 @@
 
     return-void
 
+    .line 5
     :cond_0
     invoke-virtual {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnInviteConnection;->getCode()I
 
     move-result v0
 
+    .line 6
     invoke-virtual {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnInviteConnection;->getInviteStr()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 7
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2186,6 +2271,7 @@
 
     invoke-static {v4, v1, v2}, Lcom/xiaomi/idm/util/LogUtil;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 8
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     invoke-static {p0, v0, p1}, Lcom/xiaomi/idm/api/IDMClient;->access$1000(Lcom/xiaomi/idm/api/IDMClient;ILjava/lang/String;)V
@@ -2198,6 +2284,7 @@
 
     const-string v0, "IDMClient"
 
+    .line 1
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2228,6 +2315,7 @@
 
     invoke-static {v0, v1, v3}, Lcom/xiaomi/idm/util/LogUtil;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     :try_start_0
     invoke-static {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnResponse;->parseFrom([B)Lcom/xiaomi/idm/compat/proto/IPCParam$OnResponse;
 
@@ -2242,7 +2330,8 @@
 
     const-string v0, "IDMClient"
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 3
+    invoke-virtual {p1}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object v1
 
@@ -2255,6 +2344,7 @@
 
     const-string p1, "IDMClient"
 
+    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2285,6 +2375,7 @@
 
     return-void
 
+    .line 5
     :cond_0
     invoke-virtual {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnResponse;->hasIdmResponse()Z
 
@@ -2294,6 +2385,7 @@
 
     const-string p1, "IDMClient"
 
+    .line 6
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2324,6 +2416,7 @@
 
     return-void
 
+    .line 7
     :cond_1
     invoke-virtual {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnResponse;->getIdmResponse()Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;
 
@@ -2331,6 +2424,7 @@
 
     const-string v0, "IDMClient"
 
+    .line 8
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2365,10 +2459,12 @@
 
     invoke-static {v0, v1, v3}, Lcom/xiaomi/idm/util/LogUtil;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 9
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;->getRequestId()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 10
     iget-object v1, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     invoke-static {v1}, Lcom/xiaomi/idm/api/IDMClient;->access$600(Lcom/xiaomi/idm/api/IDMClient;)Ljava/util/concurrent/ConcurrentHashMap;
@@ -2377,6 +2473,7 @@
 
     monitor-enter v1
 
+    .line 11
     :try_start_1
     iget-object v3, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
@@ -2390,6 +2487,7 @@
 
     check-cast v3, Lcom/xiaomi/idm/api/IDMClient$RmiCall;
 
+    .line 12
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -2398,6 +2496,7 @@
 
     const-string p1, "IDMClient"
 
+    .line 13
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2434,6 +2533,7 @@
 
     return-void
 
+    .line 14
     :cond_2
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;->getCode()I
 
@@ -2447,6 +2547,7 @@
 
     if-ne v0, v1, :cond_3
 
+    .line 15
     :try_start_2
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMResponse;->getResponse()Lcom/google/protobuf/ByteString;
 
@@ -2467,18 +2568,21 @@
 
     const-string v0, "IDMClient"
 
+    .line 16
     invoke-virtual {p1}, Lcom/xiaomi/idm/exception/RmiException;->getMessage()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-static {v0, v1, p1}, Lcom/xiaomi/idm/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 17
     iget-object v0, v3, Lcom/xiaomi/idm/api/IDMClient$RmiCall;->future:Lcom/xiaomi/idm/task/CallFuture;
 
     invoke-virtual {v0, p1}, Lcom/xiaomi/idm/task/CallFuture;->setFailed(Ljava/lang/Throwable;)Lcom/xiaomi/idm/task/CallFuture;
 
     goto :goto_1
 
+    .line 18
     :cond_3
     iget-object v0, v3, Lcom/xiaomi/idm/api/IDMClient$RmiCall;->future:Lcom/xiaomi/idm/task/CallFuture;
 
@@ -2510,6 +2614,7 @@
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/idm/task/CallFuture;->setFailed(Ljava/lang/Throwable;)Lcom/xiaomi/idm/task/CallFuture;
 
+    .line 19
     :goto_1
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
@@ -2520,6 +2625,7 @@
     :catchall_0
     move-exception p0
 
+    .line 20
     :try_start_3
     monitor-exit v1
     :try_end_3
@@ -2542,6 +2648,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2574,11 +2681,13 @@
 
     invoke-static {v3, v0, v2}, Lcom/xiaomi/idm/util/LogUtil;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     :try_start_0
     invoke-static {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$RpcChannelStatus;->parseFrom([B)Lcom/xiaomi/idm/compat/proto/IPCParam$RpcChannelStatus;
 
     move-result-object p1
 
+    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2601,6 +2710,7 @@
 
     invoke-static {v3, v0, v2}, Lcom/xiaomi/idm/util/LogUtil;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2623,6 +2733,7 @@
 
     invoke-static {v3, v0, v2}, Lcom/xiaomi/idm/util/LogUtil;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 5
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2645,13 +2756,14 @@
 
     invoke-static {v3, v0, v1}, Lcom/xiaomi/idm/util/LogUtil;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 6
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     iget-object v0, v0, Lcom/xiaomi/idm/api/IDMBase;->handler:Landroid/os/Handler;
 
-    new-instance v1, Lcom/xiaomi/idm/api/o;
+    new-instance v1, Ld/o/l/a/j;
 
-    invoke-direct {v1, p0, p1}, Lcom/xiaomi/idm/api/o;-><init>(Lcom/xiaomi/idm/api/IDMClient$2;Lcom/xiaomi/idm/compat/proto/IPCParam$RpcChannelStatus;)V
+    invoke-direct {v1, p0, p1}, Ld/o/l/a/j;-><init>(Lcom/xiaomi/idm/api/IDMClient$2;Lcom/xiaomi/idm/compat/proto/IPCParam$RpcChannelStatus;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
     :try_end_0
@@ -2662,7 +2774,8 @@
     :catch_0
     move-exception p0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 7
+    invoke-virtual {p0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object p1
 
@@ -2686,6 +2799,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2718,11 +2832,13 @@
 
     invoke-static {v3, v0, v2}, Lcom/xiaomi/idm/util/LogUtil;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     :try_start_0
     invoke-static {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$RpcChannelStatus;->parseFrom([B)Lcom/xiaomi/idm/compat/proto/IPCParam$RpcChannelStatus;
 
     move-result-object p1
 
+    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2745,6 +2861,7 @@
 
     invoke-static {v3, v0, v2}, Lcom/xiaomi/idm/util/LogUtil;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2767,6 +2884,7 @@
 
     invoke-static {v3, v0, v2}, Lcom/xiaomi/idm/util/LogUtil;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 5
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2789,13 +2907,14 @@
 
     invoke-static {v3, v0, v1}, Lcom/xiaomi/idm/util/LogUtil;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 6
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     iget-object v0, v0, Lcom/xiaomi/idm/api/IDMBase;->handler:Landroid/os/Handler;
 
-    new-instance v1, Lcom/xiaomi/idm/api/t;
+    new-instance v1, Ld/o/l/a/l;
 
-    invoke-direct {v1, p0, p1}, Lcom/xiaomi/idm/api/t;-><init>(Lcom/xiaomi/idm/api/IDMClient$2;Lcom/xiaomi/idm/compat/proto/IPCParam$RpcChannelStatus;)V
+    invoke-direct {v1, p0, p1}, Ld/o/l/a/l;-><init>(Lcom/xiaomi/idm/api/IDMClient$2;Lcom/xiaomi/idm/compat/proto/IPCParam$RpcChannelStatus;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
     :try_end_0
@@ -2806,7 +2925,8 @@
     :catch_0
     move-exception p0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 7
+    invoke-virtual {p0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object p1
 
@@ -2819,6 +2939,7 @@
 .method public onServiceConnectStatus([B)V
     .locals 7
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2853,14 +2974,16 @@
 
     if-nez p1, :cond_0
 
-    const-string p0, "onServiceConnectStatus: param is null"
+    new-array p0, v2, [Ljava/lang/Object;
 
-    new-array p1, v2, [Ljava/lang/Object;
+    const-string p1, "onServiceConnectStatus: param is null"
 
-    invoke-static {v4, p0, p1}, Lcom/xiaomi/idm/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 2
+    invoke-static {v4, p1, p0}, Lcom/xiaomi/idm/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
+    .line 3
     :cond_0
     :try_start_0
     invoke-static {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnServiceConnectStatus;->parseFrom([B)Lcom/xiaomi/idm/compat/proto/IPCParam$OnServiceConnectStatus;
@@ -2869,22 +2992,27 @@
     :try_end_0
     .catch Lcom/google/protobuf/InvalidProtocolBufferException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 4
     invoke-virtual {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnServiceConnectStatus;->getStatus()I
 
     move-result v0
 
+    .line 5
     invoke-virtual {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnServiceConnectStatus;->getServiceId()Ljava/lang/String;
 
     move-result-object v3
 
+    .line 6
     invoke-virtual {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnServiceConnectStatus;->getEndpoint()Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;
 
     move-result-object v5
 
+    .line 7
     invoke-virtual {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnServiceConnectStatus;->getConnParam()Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam;
 
     move-result-object p1
 
+    .line 8
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2935,16 +3063,20 @@
 
     invoke-static {v4, v1, v2}, Lcom/xiaomi/idm/util/LogUtil;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 9
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
+    .line 10
     invoke-static {v5}, Lcom/xiaomi/idm/bean/EndPoint;->buildFromProto(Lcom/xiaomi/idm/api/proto/IDMServiceProto$Endpoint;)Lcom/xiaomi/idm/bean/EndPoint;
 
     move-result-object v1
 
+    .line 11
     invoke-static {p1}, Lcom/xiaomi/idm/bean/ConnParam;->buildFromProto(Lcom/xiaomi/idm/api/proto/IDMServiceProto$ConnParam;)Lcom/xiaomi/idm/bean/ConnParam;
 
     move-result-object p1
 
+    .line 12
     invoke-static {p0, v0, v3, v1, p1}, Lcom/xiaomi/idm/api/IDMClient;->access$900(Lcom/xiaomi/idm/api/IDMClient;ILjava/lang/String;Lcom/xiaomi/idm/bean/EndPoint;Lcom/xiaomi/idm/bean/ConnParam;)V
 
     return-void
@@ -2952,7 +3084,8 @@
     :catch_0
     move-exception p0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 13
+    invoke-virtual {p0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object p1
 
@@ -2964,6 +3097,7 @@
 .method public onServiceFound([B)V
     .locals 5
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2996,6 +3130,7 @@
 
     invoke-static {v4, v0, v3}, Lcom/xiaomi/idm/util/LogUtil;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     invoke-static {v0}, Lcom/xiaomi/idm/api/IDMClient;->access$200(Lcom/xiaomi/idm/api/IDMClient;)Lcom/xiaomi/idm/api/IDMClient$IDMClientCallback;
@@ -3015,10 +3150,13 @@
     goto/16 :goto_2
 
     :cond_0
+    const/4 v0, 0x0
+
+    .line 3
     :try_start_0
     invoke-static {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnServiceFound;->parseFrom([B)Lcom/xiaomi/idm/compat/proto/IPCParam$OnServiceFound;
 
-    move-result-object p1
+    move-result-object v0
     :try_end_0
     .catch Lcom/google/protobuf/InvalidProtocolBufferException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -3027,17 +3165,17 @@
     :catch_0
     move-exception p1
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 4
+    invoke-virtual {p1}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v3
 
-    invoke-static {v4, v0, p1}, Lcom/xiaomi/idm/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    const/4 p1, 0x0
+    invoke-static {v4, v3, p1}, Lcom/xiaomi/idm/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
-    if-nez p1, :cond_1
+    if-nez v0, :cond_1
 
+    .line 5
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3066,13 +3204,15 @@
 
     return-void
 
+    .line 6
     :cond_1
-    invoke-virtual {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnServiceFound;->hasIdmService()Z
+    invoke-virtual {v0}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnServiceFound;->hasIdmService()Z
 
-    move-result v0
+    move-result p1
 
-    if-nez v0, :cond_2
+    if-nez p1, :cond_2
 
+    .line 7
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3101,11 +3241,13 @@
 
     return-void
 
+    .line 8
     :cond_2
-    invoke-virtual {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnServiceFound;->getIdmService()Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;
+    invoke-virtual {v0}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnServiceFound;->getIdmService()Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;
 
     move-result-object p1
 
+    .line 9
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3138,6 +3280,7 @@
 
     invoke-static {v4, v0, v1}, Lcom/xiaomi/idm/util/LogUtil;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 10
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     invoke-static {v0}, Lcom/xiaomi/idm/api/IDMClient;->access$400(Lcom/xiaomi/idm/api/IDMClient;)Ljava/util/concurrent/ConcurrentHashMap;
@@ -3156,12 +3299,15 @@
 
     if-eqz v0, :cond_3
 
+    .line 11
     invoke-virtual {v0, p1}, Lcom/xiaomi/idm/api/IDMService;->update(Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;)V
 
+    .line 12
     invoke-direct {p0, v0}, Lcom/xiaomi/idm/api/IDMClient$2;->callOnServiceUpdate(Lcom/xiaomi/idm/api/IDMService;)V
 
     goto :goto_1
 
+    .line 13
     :cond_3
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
@@ -3175,6 +3321,7 @@
 
     move-result-object v0
 
+    .line 14
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3183,6 +3330,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 15
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;->getType()Ljava/lang/String;
 
     move-result-object p1
@@ -3193,8 +3341,10 @@
 
     move-result-object p1
 
+    .line 16
     invoke-static {v0, p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 17
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     invoke-static {p1}, Lcom/xiaomi/idm/api/IDMClient;->access$400(Lcom/xiaomi/idm/api/IDMClient;)Ljava/util/concurrent/ConcurrentHashMap;
@@ -3207,11 +3357,13 @@
 
     invoke-virtual {p1, v1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 18
     invoke-direct {p0, v0}, Lcom/xiaomi/idm/api/IDMClient$2;->callOnServiceFound(Lcom/xiaomi/idm/api/IDMService;)V
 
     :goto_1
     return-void
 
+    .line 19
     :cond_4
     :goto_2
     new-instance p1, Ljava/lang/StringBuilder;
@@ -3246,6 +3398,7 @@
 .method public onServiceLost([B)V
     .locals 7
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3280,6 +3433,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     :try_start_0
     invoke-static {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnServiceLost;->parseFrom([B)Lcom/xiaomi/idm/compat/proto/IPCParam$OnServiceLost;
 
@@ -3292,7 +3446,8 @@
     :catch_0
     move-exception p1
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 3
+    invoke-virtual {p1}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object v3
 
@@ -3303,6 +3458,7 @@
     :goto_0
     if-nez p1, :cond_0
 
+    .line 4
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3331,11 +3487,13 @@
 
     return-void
 
+    .line 5
     :cond_0
     invoke-virtual {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnServiceLost;->getServiceId()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 6
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -3368,12 +3526,14 @@
 
     invoke-static {v4, v3, v6}, Lcom/xiaomi/idm/util/LogUtil;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 7
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
+    .line 8
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     invoke-static {v0}, Lcom/xiaomi/idm/api/IDMClient;->access$400(Lcom/xiaomi/idm/api/IDMClient;)Ljava/util/concurrent/ConcurrentHashMap;
@@ -3389,6 +3549,7 @@
     :cond_1
     if-nez v0, :cond_2
 
+    .line 9
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3421,6 +3582,7 @@
 
     return-void
 
+    .line 10
     :cond_2
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
@@ -3434,8 +3596,10 @@
 
     invoke-virtual {p1, v1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 11
     invoke-direct {p0, v0}, Lcom/xiaomi/idm/api/IDMClient$2;->callOnServiceLost(Lcom/xiaomi/idm/api/IDMService;)V
 
+    .line 12
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     invoke-virtual {v0}, Lcom/xiaomi/idm/api/IDMService;->getServiceId()Ljava/lang/String;
@@ -3450,6 +3614,7 @@
 .method public onSubscribeEventResult([B)V
     .locals 6
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3482,6 +3647,7 @@
 
     invoke-static {v4, v0, v3}, Lcom/xiaomi/idm/util/LogUtil;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     :try_start_0
     invoke-static {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnSubscribeEventResult;->parseFrom([B)Lcom/xiaomi/idm/compat/proto/IPCParam$OnSubscribeEventResult;
 
@@ -3494,7 +3660,8 @@
     :catch_0
     move-exception p1
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 3
+    invoke-virtual {p1}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
@@ -3505,6 +3672,7 @@
     :goto_0
     if-nez p1, :cond_0
 
+    .line 4
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3533,6 +3701,7 @@
 
     return-void
 
+    .line 5
     :cond_0
     invoke-virtual {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnSubscribeEventResult;->hasEventResult()Z
 
@@ -3540,6 +3709,7 @@
 
     if-nez v0, :cond_1
 
+    .line 6
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3568,11 +3738,13 @@
 
     return-void
 
+    .line 7
     :cond_1
     invoke-virtual {p1}, Lcom/xiaomi/idm/compat/proto/IPCParam$OnSubscribeEventResult;->getEventResult()Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEventResult;
 
     move-result-object p1
 
+    .line 8
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3605,24 +3777,29 @@
 
     invoke-static {v4, v0, v3}, Lcom/xiaomi/idm/util/LogUtil;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 9
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEventResult;->getServiceId()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 10
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEventResult;->getEid()I
 
     move-result v3
 
+    .line 11
     invoke-virtual {p1}, Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEventResult;->getCode()I
 
     move-result p1
 
+    .line 12
     iget-object v5, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     invoke-virtual {v5, v0, v3}, Lcom/xiaomi/idm/api/IDMClient;->generateEventKey(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 13
     iget-object v3, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     invoke-static {v3}, Lcom/xiaomi/idm/api/IDMClient;->access$1200(Lcom/xiaomi/idm/api/IDMClient;)Ljava/util/concurrent/ConcurrentHashMap;
@@ -3637,6 +3814,7 @@
 
     if-nez v0, :cond_2
 
+    .line 14
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3665,6 +3843,7 @@
 
     return-void
 
+    .line 15
     :cond_2
     iget-object v0, v0, Lcom/xiaomi/idm/api/IDMClient$SubsEventCall;->future:Lcom/xiaomi/idm/task/CallFuture;
 
@@ -3674,9 +3853,50 @@
 
     invoke-virtual {v0, p1}, Lcom/xiaomi/idm/task/CallFuture;->setDone(Ljava/lang/Object;)Lcom/xiaomi/idm/task/CallFuture;
 
+    .line 16
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMClient$2;->this$0:Lcom/xiaomi/idm/api/IDMClient;
 
     invoke-static {p0}, Lcom/xiaomi/idm/api/IDMClient;->access$1300(Lcom/xiaomi/idm/api/IDMClient;)V
+
+    return-void
+.end method
+
+.method public synthetic v0(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/xiaomi/idm/api/IDMClient$2;->lambda$callOnAccountChanged$5(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public synthetic w0(Lcom/xiaomi/idm/api/IDMService$Event;[BLcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEvent;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2, p3}, Lcom/xiaomi/idm/api/IDMClient$2;->lambda$callOnEvent$3(Lcom/xiaomi/idm/api/IDMService$Event;[BLcom/xiaomi/idm/api/proto/IDMServiceProto$IDMEvent;)V
+
+    return-void
+.end method
+
+.method public synthetic x0(Lcom/xiaomi/idm/api/IDMService;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/IDMClient$2;->lambda$callOnInvitationAccepted$4(Lcom/xiaomi/idm/api/IDMService;)V
+
+    return-void
+.end method
+
+.method public synthetic y0(Lcom/xiaomi/idm/api/IDMService;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/IDMClient$2;->lambda$callOnServiceFound$0(Lcom/xiaomi/idm/api/IDMService;)V
+
+    return-void
+.end method
+
+.method public synthetic z0(Lcom/xiaomi/idm/api/IDMService;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/xiaomi/idm/api/IDMClient$2;->lambda$callOnServiceLost$2(Lcom/xiaomi/idm/api/IDMService;)V
 
     return-void
 .end method

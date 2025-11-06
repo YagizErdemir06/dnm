@@ -1,4 +1,4 @@
-.class synthetic Lcom/bumptech/glide/RequestBuilder$1;
+.class public synthetic Lcom/bumptech/glide/RequestBuilder$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,15 +15,16 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$android$widget$ImageView$ScaleType:[I
+.field public static final synthetic $SwitchMap$android$widget$ImageView$ScaleType:[I
 
-.field static final synthetic $SwitchMap$com$bumptech$glide$Priority:[I
+.field public static final synthetic $SwitchMap$com$bumptech$glide$Priority:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 6
 
+    .line 1
     invoke-static {}, Lcom/bumptech/glide/Priority;->values()[Lcom/bumptech/glide/Priority;
 
     move-result-object v0
@@ -95,6 +96,7 @@
     :try_end_3
     .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
+    .line 2
     :catch_3
     invoke-static {}, Landroid/widget/ImageView$ScaleType;->values()[Landroid/widget/ImageView$ScaleType;
 
@@ -109,7 +111,7 @@
     :try_start_4
     sget-object v5, Landroid/widget/ImageView$ScaleType;->CENTER_CROP:Landroid/widget/ImageView$ScaleType;
 
-    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v5}, Landroid/widget/ImageView$ScaleType;->ordinal()I
 
     move-result v5
 
@@ -123,7 +125,7 @@
 
     sget-object v4, Landroid/widget/ImageView$ScaleType;->CENTER_INSIDE:Landroid/widget/ImageView$ScaleType;
 
-    invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v4}, Landroid/widget/ImageView$ScaleType;->ordinal()I
 
     move-result v4
 
@@ -137,7 +139,7 @@
 
     sget-object v1, Landroid/widget/ImageView$ScaleType;->FIT_CENTER:Landroid/widget/ImageView$ScaleType;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Landroid/widget/ImageView$ScaleType;->ordinal()I
 
     move-result v1
 
@@ -151,7 +153,7 @@
 
     sget-object v1, Landroid/widget/ImageView$ScaleType;->FIT_START:Landroid/widget/ImageView$ScaleType;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Landroid/widget/ImageView$ScaleType;->ordinal()I
 
     move-result v1
 
@@ -165,7 +167,7 @@
 
     sget-object v1, Landroid/widget/ImageView$ScaleType;->FIT_END:Landroid/widget/ImageView$ScaleType;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Landroid/widget/ImageView$ScaleType;->ordinal()I
 
     move-result v1
 
@@ -181,7 +183,7 @@
 
     sget-object v1, Landroid/widget/ImageView$ScaleType;->FIT_XY:Landroid/widget/ImageView$ScaleType;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Landroid/widget/ImageView$ScaleType;->ordinal()I
 
     move-result v1
 
@@ -197,7 +199,7 @@
 
     sget-object v1, Landroid/widget/ImageView$ScaleType;->CENTER:Landroid/widget/ImageView$ScaleType;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Landroid/widget/ImageView$ScaleType;->ordinal()I
 
     move-result v1
 
@@ -213,7 +215,7 @@
 
     sget-object v1, Landroid/widget/ImageView$ScaleType;->MATRIX:Landroid/widget/ImageView$ScaleType;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Landroid/widget/ImageView$ScaleType;->ordinal()I
 
     move-result v1
 

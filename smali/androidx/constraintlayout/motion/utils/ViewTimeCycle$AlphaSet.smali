@@ -1,4 +1,4 @@
-.class Landroidx/constraintlayout/motion/utils/ViewTimeCycle$AlphaSet;
+.class public Landroidx/constraintlayout/motion/utils/ViewTimeCycle$AlphaSet;
 .super Landroidx/constraintlayout/motion/utils/ViewTimeCycle;
 .source "SourceFile"
 
@@ -18,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroidx/constraintlayout/motion/utils/ViewTimeCycle;-><init>()V
 
     return-void
@@ -52,12 +53,14 @@
 
     move-object v5, p5
 
+    .line 1
     invoke-virtual/range {v0 .. v5}, Landroidx/constraintlayout/motion/utils/ViewTimeCycle;->get(FJLandroid/view/View;Landroidx/constraintlayout/core/motion/utils/KeyCache;)F
 
     move-result p2
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setAlpha(F)V
 
+    .line 2
     iget-boolean p0, p0, Landroidx/constraintlayout/core/motion/utils/TimeCycleSplineSet;->mContinue:Z
 
     return p0

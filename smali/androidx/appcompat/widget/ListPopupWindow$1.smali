@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/widget/ListPopupWindow$1;
+.class public Landroidx/appcompat/widget/ListPopupWindow$1;
 .super Landroidx/appcompat/widget/ForwardingListener;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/appcompat/widget/ListPopupWindow;
+.field public final synthetic this$0:Landroidx/appcompat/widget/ListPopupWindow;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/appcompat/widget/ListPopupWindow;Landroid/view/View;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/widget/ListPopupWindow$1;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
 
     invoke-direct {p0, p2}, Landroidx/appcompat/widget/ForwardingListener;-><init>(Landroid/view/View;)V

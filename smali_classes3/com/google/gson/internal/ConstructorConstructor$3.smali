@@ -1,4 +1,4 @@
-.class Lcom/google/gson/internal/ConstructorConstructor$3;
+.class public Lcom/google/gson/internal/ConstructorConstructor$3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,15 +26,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/gson/internal/ConstructorConstructor;
+.field public final synthetic this$0:Lcom/google/gson/internal/ConstructorConstructor;
 
-.field final synthetic val$constructor:Ljava/lang/reflect/Constructor;
+.field public final synthetic val$constructor:Ljava/lang/reflect/Constructor;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/gson/internal/ConstructorConstructor;Ljava/lang/reflect/Constructor;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/gson/internal/ConstructorConstructor$3;->this$0:Lcom/google/gson/internal/ConstructorConstructor;
 
     iput-object p2, p0, Lcom/google/gson/internal/ConstructorConstructor$3;->val$constructor:Ljava/lang/reflect/Constructor;
@@ -58,12 +59,13 @@
 
     const-string v1, "Failed to invoke "
 
+    const/4 v2, 0x0
+
+    .line 1
     :try_start_0
-    iget-object v2, p0, Lcom/google/gson/internal/ConstructorConstructor$3;->val$constructor:Ljava/lang/reflect/Constructor;
+    iget-object v3, p0, Lcom/google/gson/internal/ConstructorConstructor$3;->val$constructor:Ljava/lang/reflect/Constructor;
 
-    const/4 v3, 0x0
-
-    invoke-virtual {v2, v3}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3, v2}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
     :try_end_0
@@ -76,6 +78,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance v0, Ljava/lang/AssertionError;
 
     invoke-direct {v0, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
@@ -85,6 +88,7 @@
     :catch_1
     move-exception v2
 
+    .line 3
     new-instance v3, Ljava/lang/RuntimeException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -103,6 +107,7 @@
 
     move-result-object p0
 
+    .line 4
     invoke-virtual {v2}, Ljava/lang/reflect/InvocationTargetException;->getTargetException()Ljava/lang/Throwable;
 
     move-result-object v0
@@ -114,6 +119,7 @@
     :catch_2
     move-exception v2
 
+    .line 5
     new-instance v3, Ljava/lang/RuntimeException;
 
     new-instance v4, Ljava/lang/StringBuilder;

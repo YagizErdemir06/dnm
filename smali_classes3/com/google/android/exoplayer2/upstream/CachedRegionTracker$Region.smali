@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/upstream/CachedRegionTracker$Region;
+.class public Lcom/google/android/exoplayer2/upstream/CachedRegionTracker$Region;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -38,10 +38,13 @@
 .method public constructor <init>(JJ)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-wide p1, p0, Lcom/google/android/exoplayer2/upstream/CachedRegionTracker$Region;->startOffset:J
 
+    .line 3
     iput-wide p3, p0, Lcom/google/android/exoplayer2/upstream/CachedRegionTracker$Region;->endOffset:J
 
     return-void

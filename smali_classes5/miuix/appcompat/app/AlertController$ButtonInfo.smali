@@ -1,4 +1,4 @@
-.class Lmiuix/appcompat/app/AlertController$ButtonInfo;
+.class public Lmiuix/appcompat/app/AlertController$ButtonInfo;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -83,66 +83,74 @@
     return-void
 .end method
 
-.method public static synthetic access$1200(Lmiuix/appcompat/app/AlertController$ButtonInfo;)Ljava/lang/CharSequence;
+.method public static synthetic access$1100(Lmiuix/appcompat/app/AlertController$ButtonInfo;)I
     .locals 0
 
-    iget-object p0, p0, Lmiuix/appcompat/app/AlertController$ButtonInfo;->mText:Ljava/lang/CharSequence;
-
-    return-object p0
-.end method
-
-.method public static synthetic access$1300(Lmiuix/appcompat/app/AlertController$ButtonInfo;)I
-    .locals 0
-
-    iget p0, p0, Lmiuix/appcompat/app/AlertController$ButtonInfo;->mWhich:I
-
-    return p0
-.end method
-
-.method public static synthetic access$1700(Lmiuix/appcompat/app/AlertController$ButtonInfo;)I
-    .locals 0
-
+    .line 1
     iget p0, p0, Lmiuix/appcompat/app/AlertController$ButtonInfo;->mStyle:I
 
     return p0
 .end method
 
-.method public static synthetic access$1800(Lmiuix/appcompat/app/AlertController$ButtonInfo;)Landroid/content/DialogInterface$OnClickListener;
+.method public static synthetic access$1200(Lmiuix/appcompat/app/AlertController$ButtonInfo;)Landroid/content/DialogInterface$OnClickListener;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/appcompat/app/AlertController$ButtonInfo;->mOnClickListener:Landroid/content/DialogInterface$OnClickListener;
 
     return-object p0
 .end method
 
-.method public static synthetic access$600(Lmiuix/appcompat/app/AlertController$ButtonInfo;)Lmiuix/internal/widget/GroupButton;
+.method public static synthetic access$400(Lmiuix/appcompat/app/AlertController$ButtonInfo;)Lmiuix/internal/widget/GroupButton;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/appcompat/app/AlertController$ButtonInfo;->mButton:Lmiuix/internal/widget/GroupButton;
 
     return-object p0
 .end method
 
-.method public static synthetic access$602(Lmiuix/appcompat/app/AlertController$ButtonInfo;Lmiuix/internal/widget/GroupButton;)Lmiuix/internal/widget/GroupButton;
+.method public static synthetic access$402(Lmiuix/appcompat/app/AlertController$ButtonInfo;Lmiuix/internal/widget/GroupButton;)Lmiuix/internal/widget/GroupButton;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/appcompat/app/AlertController$ButtonInfo;->mButton:Lmiuix/internal/widget/GroupButton;
 
     return-object p1
 .end method
 
-.method public static synthetic access$700(Lmiuix/appcompat/app/AlertController$ButtonInfo;)Landroid/os/Message;
+.method public static synthetic access$500(Lmiuix/appcompat/app/AlertController$ButtonInfo;)Landroid/os/Message;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/appcompat/app/AlertController$ButtonInfo;->mMsg:Landroid/os/Message;
 
     return-object p0
 .end method
 
-.method public static synthetic access$702(Lmiuix/appcompat/app/AlertController$ButtonInfo;Landroid/os/Message;)Landroid/os/Message;
+.method public static synthetic access$502(Lmiuix/appcompat/app/AlertController$ButtonInfo;Landroid/os/Message;)Landroid/os/Message;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/appcompat/app/AlertController$ButtonInfo;->mMsg:Landroid/os/Message;
 
     return-object p1
+.end method
+
+.method public static synthetic access$600(Lmiuix/appcompat/app/AlertController$ButtonInfo;)Ljava/lang/CharSequence;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/app/AlertController$ButtonInfo;->mText:Ljava/lang/CharSequence;
+
+    return-object p0
+.end method
+
+.method public static synthetic access$700(Lmiuix/appcompat/app/AlertController$ButtonInfo;)I
+    .locals 0
+
+    .line 1
+    iget p0, p0, Lmiuix/appcompat/app/AlertController$ButtonInfo;->mWhich:I
+
+    return p0
 .end method

@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Maps$FilteredKeyMap;
+.class public Lcom/google/common/collect/Maps$FilteredKeyMap;
 .super Lcom/google/common/collect/Maps$AbstractFilteredMap;
 .source "SourceFile"
 
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field final keyPredicate:Lcom/google/common/base/Predicate;
+.field public final keyPredicate:Lcom/google/common/base/Predicate;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/base/Predicate<",
@@ -54,8 +54,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p3}, Lcom/google/common/collect/Maps$AbstractFilteredMap;-><init>(Ljava/util/Map;Lcom/google/common/base/Predicate;)V
 
+    .line 2
     iput-object p2, p0, Lcom/google/common/collect/Maps$FilteredKeyMap;->keyPredicate:Lcom/google/common/base/Predicate;
 
     return-void
@@ -70,6 +72,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Maps$AbstractFilteredMap;->unfiltered:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -108,6 +111,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Maps$AbstractFilteredMap;->unfiltered:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -133,6 +137,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Maps$AbstractFilteredMap;->unfiltered:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/dynamite/zzk;
+.class public final Lcom/google/android/gms/dynamite/zzk;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -25,6 +25,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy$SelectionResult;
 
     invoke-direct {p0}, Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy$SelectionResult;-><init>()V
@@ -37,6 +38,7 @@
 
     const/4 v0, 0x1
 
+    .line 2
     invoke-interface {p3, p1, p2, v0}, Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy$IVersions;->zzb(Landroid/content/Context;Ljava/lang/String;Z)I
 
     move-result p1
@@ -45,24 +47,27 @@
 
     iget p2, p0, Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy$SelectionResult;->localVersion:I
 
-    if-nez p2, :cond_0
+    const/4 p3, 0x0
 
-    const/4 p2, 0x0
+    if-nez p2, :cond_1
 
     if-nez p1, :cond_0
 
-    iput p2, p0, Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy$SelectionResult;->selection:I
+    iput p3, p0, Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy$SelectionResult;->selection:I
 
     goto :goto_0
 
     :cond_0
-    if-lt p1, p2, :cond_1
+    move p2, p3
+
+    :cond_1
+    if-lt p1, p2, :cond_2
 
     iput v0, p0, Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy$SelectionResult;->selection:I
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     const/4 p1, -0x1
 
     iput p1, p0, Lcom/google/android/gms/dynamite/DynamiteModule$VersionPolicy$SelectionResult;->selection:I

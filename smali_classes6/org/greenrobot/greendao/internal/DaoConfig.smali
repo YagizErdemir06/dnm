@@ -38,6 +38,17 @@
 # direct methods
 .method public constructor <init>(Lorg/greenrobot/greendao/database/Database;Ljava/lang/Class;)V
     .locals 9
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "db",
+            "daoClass"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -302,6 +313,14 @@
 
 .method public constructor <init>(Lorg/greenrobot/greendao/internal/DaoConfig;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "source"
+        }
+    .end annotation
 
     .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -356,6 +375,15 @@
 
 .method private static reflectProperties(Ljava/lang/Class;)[Lorg/greenrobot/greendao/Property;
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "daoClass"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -375,6 +403,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -397,14 +426,17 @@
 
     move-result-object p0
 
+    .line 2
     invoke-virtual {p0}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
 
     move-result-object p0
 
+    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 4
     array-length v1, p0
 
     const/4 v2, 0x0
@@ -414,6 +446,7 @@
 
     aget-object v3, p0, v2
 
+    .line 5
     invoke-virtual {v3}, Ljava/lang/reflect/Field;->getModifiers()I
 
     move-result v4
@@ -426,14 +459,17 @@
 
     const/4 v4, 0x0
 
+    .line 6
     invoke-virtual {v3, v4}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
+    .line 7
     instance-of v4, v3, Lorg/greenrobot/greendao/Property;
 
     if-eqz v4, :cond_0
 
+    .line 8
     check-cast v3, Lorg/greenrobot/greendao/Property;
 
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -443,6 +479,7 @@
 
     goto :goto_0
 
+    .line 9
     :cond_1
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -450,6 +487,7 @@
 
     new-array p0, p0, [Lorg/greenrobot/greendao/Property;
 
+    .line 10
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -467,16 +505,19 @@
 
     check-cast v1, Lorg/greenrobot/greendao/Property;
 
+    .line 11
     iget v2, v1, Lorg/greenrobot/greendao/Property;->ordinal:I
 
     aget-object v3, p0, v2
 
     if-nez v3, :cond_2
 
+    .line 12
     aput-object v1, p0, v2
 
     goto :goto_1
 
+    .line 13
     :cond_2
     new-instance p0, Lorg/greenrobot/greendao/DaoException;
 
@@ -495,10 +536,12 @@
 .method public clearIdentityScope()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/greenrobot/greendao/internal/DaoConfig;->identityScope:Lorg/greenrobot/greendao/identityscope/IdentityScope;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0}, Lorg/greenrobot/greendao/identityscope/IdentityScope;->clear()V
 
     :cond_0
@@ -542,6 +585,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lorg/greenrobot/greendao/internal/DaoConfig;->identityScope:Lorg/greenrobot/greendao/identityscope/IdentityScope;
 
     return-object p0
@@ -549,26 +593,39 @@
 
 .method public initIdentityScope(Lorg/greenrobot/greendao/identityscope/IdentityScopeType;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "type"
+        }
+    .end annotation
 
+    .line 1
     sget-object v0, Lorg/greenrobot/greendao/identityscope/IdentityScopeType;->None:Lorg/greenrobot/greendao/identityscope/IdentityScopeType;
 
     if-ne p1, v0, :cond_0
 
     const/4 p1, 0x0
 
+    .line 2
     iput-object p1, p0, Lorg/greenrobot/greendao/internal/DaoConfig;->identityScope:Lorg/greenrobot/greendao/identityscope/IdentityScope;
 
     goto :goto_0
 
+    .line 3
     :cond_0
     sget-object v0, Lorg/greenrobot/greendao/identityscope/IdentityScopeType;->Session:Lorg/greenrobot/greendao/identityscope/IdentityScopeType;
 
     if-ne p1, v0, :cond_2
 
+    .line 4
     iget-boolean p1, p0, Lorg/greenrobot/greendao/internal/DaoConfig;->keyIsNumeric:Z
 
     if-eqz p1, :cond_1
 
+    .line 5
     new-instance p1, Lorg/greenrobot/greendao/identityscope/IdentityScopeLong;
 
     invoke-direct {p1}, Lorg/greenrobot/greendao/identityscope/IdentityScopeLong;-><init>()V
@@ -577,6 +634,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_1
     new-instance p1, Lorg/greenrobot/greendao/identityscope/IdentityScopeObject;
 
@@ -587,6 +645,7 @@
     :goto_0
     return-void
 
+    .line 7
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -611,6 +670,15 @@
 
 .method public setIdentityScope(Lorg/greenrobot/greendao/identityscope/IdentityScope;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "identityScope"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -619,6 +687,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lorg/greenrobot/greendao/internal/DaoConfig;->identityScope:Lorg/greenrobot/greendao/identityscope/IdentityScope;
 
     return-void

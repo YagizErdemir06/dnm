@@ -15,21 +15,21 @@
 
 
 # instance fields
-.field advMode:I
+.field public advMode:I
 
-.field appData:Ljava/lang/String;
+.field public appData:Ljava/lang/String;
 
-.field commType:I
+.field public commType:I
 
-.field discType:I
+.field public discType:I
 
-.field idmService:Lcom/xiaomi/idm/api/IDMService;
+.field public idmService:Lcom/xiaomi/idm/api/IDMService;
 
-.field updateAppData:Z
+.field public updateAppData:Z
 
-.field updateStrategy:I
+.field public updateStrategy:I
 
-.field updateType:I
+.field public updateType:I
 
 
 # direct methods
@@ -40,30 +40,39 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Lcom/xiaomi/idm/api/IDMServer$USParamBuilder;->appData:Ljava/lang/String;
 
+    .line 3
     iput-object p1, p0, Lcom/xiaomi/idm/api/IDMServer$USParamBuilder;->idmService:Lcom/xiaomi/idm/api/IDMService;
 
     const/4 p1, -0x1
 
+    .line 4
     iput p1, p0, Lcom/xiaomi/idm/api/IDMServer$USParamBuilder;->discType:I
 
     const/16 p1, 0x8
 
+    .line 5
     iput p1, p0, Lcom/xiaomi/idm/api/IDMServer$USParamBuilder;->commType:I
 
     const/4 p1, 0x0
 
+    .line 6
     iput p1, p0, Lcom/xiaomi/idm/api/IDMServer$USParamBuilder;->advMode:I
 
+    .line 7
     iput p1, p0, Lcom/xiaomi/idm/api/IDMServer$USParamBuilder;->updateStrategy:I
 
+    .line 8
     iput-boolean p1, p0, Lcom/xiaomi/idm/api/IDMServer$USParamBuilder;->updateAppData:Z
 
+    .line 9
     iput p1, p0, Lcom/xiaomi/idm/api/IDMServer$USParamBuilder;->updateType:I
 
     return-void
@@ -74,6 +83,7 @@
 .method public advMode(I)Lcom/xiaomi/idm/api/IDMServer$USParamBuilder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/idm/api/IDMServer$USParamBuilder;->advMode:I
 
     return-object p0
@@ -82,8 +92,10 @@
 .method public appData(Ljava/lang/String;)Lcom/xiaomi/idm/api/IDMServer$USParamBuilder;
     .locals 1
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/api/IDMServer$USParamBuilder;->appData:Ljava/lang/String;
 
+    .line 2
     iget-object v0, p0, Lcom/xiaomi/idm/api/IDMServer$USParamBuilder;->idmService:Lcom/xiaomi/idm/api/IDMService;
 
     invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
@@ -94,6 +106,7 @@
 
     const/4 p1, 0x1
 
+    .line 3
     iput-boolean p1, p0, Lcom/xiaomi/idm/api/IDMServer$USParamBuilder;->updateAppData:Z
 
     return-object p0
@@ -102,6 +115,7 @@
 .method public commType(I)Lcom/xiaomi/idm/api/IDMServer$USParamBuilder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/idm/api/IDMServer$USParamBuilder;->commType:I
 
     return-object p0
@@ -110,6 +124,7 @@
 .method public discType(I)Lcom/xiaomi/idm/api/IDMServer$USParamBuilder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/idm/api/IDMServer$USParamBuilder;->discType:I
 
     return-object p0
@@ -118,6 +133,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -128,6 +144,7 @@
 
     iget-object v1, p0, Lcom/xiaomi/idm/api/IDMServer$USParamBuilder;->idmService:Lcom/xiaomi/idm/api/IDMService;
 
+    .line 2
     invoke-virtual {v1}, Lcom/xiaomi/idm/api/IDMService;->getIDMServiceProto()Lcom/xiaomi/idm/api/proto/IDMServiceProto$IDMService;
 
     move-result-object v1
@@ -196,6 +213,7 @@
 .method public updateAppData(Z)Lcom/xiaomi/idm/api/IDMServer$USParamBuilder;
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/xiaomi/idm/api/IDMServer$USParamBuilder;->updateAppData:Z
 
     return-object p0
@@ -204,6 +222,7 @@
 .method public updateStrategy(I)Lcom/xiaomi/idm/api/IDMServer$USParamBuilder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/idm/api/IDMServer$USParamBuilder;->updateStrategy:I
 
     return-object p0
@@ -212,6 +231,7 @@
 .method public updateType(I)Lcom/xiaomi/idm/api/IDMServer$USParamBuilder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/idm/api/IDMServer$USParamBuilder;->updateType:I
 
     return-object p0

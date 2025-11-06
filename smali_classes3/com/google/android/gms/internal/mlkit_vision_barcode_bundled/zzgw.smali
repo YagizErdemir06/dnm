@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgw;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgw;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,16 +7,19 @@
 .method public static zza(Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;)Ljava/lang/String;
     .locals 5
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;->zzd()I
 
     move-result v1
 
+    .line 2
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
     const/4 v1, 0x0
 
+    .line 3
     :goto_0
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;->zzd()I
 
@@ -24,6 +27,7 @@
 
     if-ge v1, v2, :cond_4
 
+    .line 4
     invoke-virtual {p0, v1}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;->zza(I)B
 
     move-result v2
@@ -52,10 +56,12 @@
 
     int-to-char v2, v2
 
+    .line 5
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
+    .line 6
     :cond_0
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
@@ -67,6 +73,7 @@
 
     int-to-char v3, v3
 
+    .line 7
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     ushr-int/lit8 v3, v2, 0x3
@@ -77,6 +84,7 @@
 
     int-to-char v3, v3
 
+    .line 8
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     and-int/lit8 v2, v2, 0x7
@@ -85,6 +93,7 @@
 
     int-to-char v2, v2
 
+    .line 9
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_1
@@ -92,6 +101,7 @@
     :pswitch_0
     const-string v2, "\\r"
 
+    .line 10
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
@@ -99,6 +109,7 @@
     :pswitch_1
     const-string v2, "\\f"
 
+    .line 11
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
@@ -106,6 +117,7 @@
     :pswitch_2
     const-string v2, "\\v"
 
+    .line 12
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
@@ -113,6 +125,7 @@
     :pswitch_3
     const-string v2, "\\n"
 
+    .line 13
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
@@ -120,6 +133,7 @@
     :pswitch_4
     const-string v2, "\\t"
 
+    .line 14
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
@@ -127,6 +141,7 @@
     :pswitch_5
     const-string v2, "\\b"
 
+    .line 15
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
@@ -134,6 +149,7 @@
     :pswitch_6
     const-string v2, "\\a"
 
+    .line 16
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
@@ -141,6 +157,7 @@
     :cond_1
     const-string v2, "\\\\"
 
+    .line 17
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
@@ -148,6 +165,7 @@
     :cond_2
     const-string v2, "\\\'"
 
+    .line 18
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
@@ -155,6 +173,7 @@
     :cond_3
     const-string v2, "\\\""
 
+    .line 19
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :goto_1
@@ -162,6 +181,7 @@
 
     goto/16 :goto_0
 
+    .line 20
     :cond_4
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

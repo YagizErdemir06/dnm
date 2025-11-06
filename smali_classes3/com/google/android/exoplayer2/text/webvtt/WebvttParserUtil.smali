@@ -15,6 +15,7 @@
 
     const-string v0, "^NOTE([ \t].*)?$"
 
+    .line 1
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -27,6 +28,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,6 +39,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLine()Ljava/lang/String;
 
@@ -44,6 +47,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 2
     sget-object v1, Lcom/google/android/exoplayer2/text/webvtt/WebvttParserUtil;->COMMENT:Ljava/util/regex/Pattern;
 
     invoke-virtual {v1, v0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
@@ -56,6 +60,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 3
     :goto_0
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLine()Ljava/lang/String;
 
@@ -71,6 +76,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     sget-object v1, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser;->CUE_HEADER_PATTERN:Ljava/util/regex/Pattern;
 
@@ -78,6 +84,7 @@
 
     move-result-object v0
 
+    .line 5
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v1
@@ -95,6 +102,7 @@
 .method public static isWebvttHeaderLine(Lcom/google/android/exoplayer2/util/ParsableByteArray;)Z
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLine()Ljava/lang/String;
 
     move-result-object p0
@@ -103,6 +111,7 @@
 
     const-string v0, "WEBVTT"
 
+    .line 2
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p0
@@ -130,21 +139,23 @@
 
     const-string v0, "%"
 
+    .line 1
     invoke-virtual {p0, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    const/4 v0, 0x0
+
+    .line 2
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
-    move-result v0
+    move-result v1
 
-    add-int/lit8 v0, v0, -0x1
+    add-int/lit8 v1, v1, -0x1
 
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    invoke-virtual {p0, v0, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0
 
@@ -158,6 +169,7 @@
 
     return p0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/NumberFormatException;
 
@@ -178,12 +190,14 @@
 
     const-string v0, "\\."
 
+    .line 1
     invoke-static {p0, v0}, Lcom/google/android/exoplayer2/util/Util;->splitAtFirst(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
     const/4 v0, 0x0
 
+    .line 2
     aget-object v1, p0, v0
 
     const-string v2, ":"
@@ -192,6 +206,7 @@
 
     move-result-object v1
 
+    .line 3
     array-length v2, v1
 
     const-wide/16 v3, 0x0
@@ -205,6 +220,7 @@
 
     mul-long/2addr v3, v6
 
+    .line 4
     invoke-static {v5}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide v5
@@ -220,6 +236,7 @@
 
     mul-long/2addr v3, v0
 
+    .line 5
     array-length v2, p0
 
     const/4 v5, 0x2
@@ -228,6 +245,7 @@
 
     const/4 v2, 0x1
 
+    .line 6
     aget-object p0, p0, v2
 
     invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
@@ -250,10 +268,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getPosition()I
 
     move-result v0
 
+    .line 2
     invoke-static {p0}, Lcom/google/android/exoplayer2/text/webvtt/WebvttParserUtil;->isWebvttHeaderLine(Lcom/google/android/exoplayer2/util/ParsableByteArray;)Z
 
     move-result v1
@@ -262,9 +282,11 @@
 
     return-void
 
+    .line 3
     :cond_0
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
+    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -273,6 +295,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLine()Ljava/lang/String;
 
     move-result-object p0
@@ -285,6 +308,7 @@
 
     const/4 v0, 0x0
 
+    .line 6
     invoke-static {p0, v0}, Lcom/google/android/exoplayer2/ParserException;->createForMalformedContainer(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/exoplayer2/ParserException;
 
     move-result-object p0

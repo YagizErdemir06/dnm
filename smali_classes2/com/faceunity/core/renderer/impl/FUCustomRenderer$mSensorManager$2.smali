@@ -1,9 +1,9 @@
-.class final Lcom/faceunity/core/renderer/impl/FUCustomRenderer$mSensorManager$2;
-.super Lkotlin/jvm/internal/n0;
+.class public final Lcom/faceunity/core/renderer/impl/FUCustomRenderer$mSensorManager$2;
+.super Lh/d3/x/n0;
 .source "SourceFile"
 
 # interfaces
-.implements Ljn/a;
+.implements Lh/d3/w/a;
 
 
 # annotations
@@ -18,26 +18,27 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lkotlin/jvm/internal/n0;",
-        "Ljn/a<",
+        "Lh/d3/x/n0;",
+        "Lh/d3/w/a<",
         "Landroid/hardware/SensorManager;",
         ">;"
     }
 .end annotation
 
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
     bv = {
         0x1,
         0x0,
         0x3
     }
     d1 = {
-        "\u0000\u0008\n\u0000\n\u0002\u0018\u0002\n\u0000\u0010\u0000\u001a\u00020\u0001H\n\u00a2\u0006\u0002\u0008\u0002"
+        "\u0000\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0003\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0001\u0010\u0002"
     }
     d2 = {
-        "<anonymous>",
         "Landroid/hardware/SensorManager;",
-        "invoke"
+        "invoke",
+        "()Landroid/hardware/SensorManager;",
+        "<anonymous>"
     }
     k = 0x3
     mv = {
@@ -70,7 +71,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lkotlin/jvm/internal/n0;-><init>(I)V
+    invoke-direct {p0, v0}, Lh/d3/x/n0;-><init>(I)V
 
     return-void
 .end method
@@ -79,7 +80,7 @@
 # virtual methods
 .method public final invoke()Landroid/hardware/SensorManager;
     .locals 1
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     .line 2
@@ -93,20 +94,13 @@
 
     move-result-object p0
 
-    if-eqz p0, :cond_0
+    const-string v0, "null cannot be cast to non-null type android.hardware.SensorManager"
+
+    invoke-static {p0, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     check-cast p0, Landroid/hardware/SensorManager;
 
     return-object p0
-
-    :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string v0, "null cannot be cast to non-null type android.hardware.SensorManager"
-
-    invoke-direct {p0, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method
 
 .method public bridge synthetic invoke()Ljava/lang/Object;

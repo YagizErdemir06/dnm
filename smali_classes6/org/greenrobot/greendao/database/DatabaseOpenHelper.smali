@@ -16,6 +16,18 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;I)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "name",
+            "version"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -27,6 +39,20 @@
 
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "name",
+            "factory",
+            "version"
+        }
+    .end annotation
 
     .line 2
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
@@ -53,6 +79,7 @@
 .method public getReadableDb()Lorg/greenrobot/greendao/database/Database;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteOpenHelper;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
@@ -67,6 +94,7 @@
 .method public getWritableDb()Lorg/greenrobot/greendao/database/Database;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
@@ -80,7 +108,16 @@
 
 .method public onCreate(Landroid/database/sqlite/SQLiteDatabase;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "db"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/greenrobot/greendao/database/DatabaseOpenHelper;->wrap(Landroid/database/sqlite/SQLiteDatabase;)Lorg/greenrobot/greendao/database/Database;
 
     move-result-object p1
@@ -92,13 +129,34 @@
 
 .method public onCreate(Lorg/greenrobot/greendao/database/Database;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "db"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public onDowngrade(Landroid/database/sqlite/SQLiteDatabase;II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "db",
+            "oldVersion",
+            "newVersion"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/greenrobot/greendao/database/DatabaseOpenHelper;->wrap(Landroid/database/sqlite/SQLiteDatabase;)Lorg/greenrobot/greendao/database/Database;
 
     move-result-object p1
@@ -110,13 +168,34 @@
 
 .method public onDowngrade(Lorg/greenrobot/greendao/database/Database;II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "db",
+            "oldVersion",
+            "newVersion"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public onOpen(Landroid/database/sqlite/SQLiteDatabase;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "db"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/greenrobot/greendao/database/DatabaseOpenHelper;->wrap(Landroid/database/sqlite/SQLiteDatabase;)Lorg/greenrobot/greendao/database/Database;
 
     move-result-object p1
@@ -128,13 +207,34 @@
 
 .method public onOpen(Lorg/greenrobot/greendao/database/Database;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "db"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public onUpgrade(Landroid/database/sqlite/SQLiteDatabase;II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "db",
+            "oldVersion",
+            "newVersion"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/greenrobot/greendao/database/DatabaseOpenHelper;->wrap(Landroid/database/sqlite/SQLiteDatabase;)Lorg/greenrobot/greendao/database/Database;
 
     move-result-object p1
@@ -146,13 +246,34 @@
 
 .method public onUpgrade(Lorg/greenrobot/greendao/database/Database;II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "db",
+            "oldVersion",
+            "newVersion"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public setLoadSQLCipherNativeLibs(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "loadSQLCipherNativeLibs"
+        }
+    .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lorg/greenrobot/greendao/database/DatabaseOpenHelper;->loadSQLCipherNativeLibs:Z
 
     return-void
@@ -160,7 +281,16 @@
 
 .method public wrap(Landroid/database/sqlite/SQLiteDatabase;)Lorg/greenrobot/greendao/database/Database;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "sqLiteDatabase"
+        }
+    .end annotation
 
+    .line 1
     new-instance p0, Lorg/greenrobot/greendao/database/StandardDatabase;
 
     invoke-direct {p0, p1}, Lorg/greenrobot/greendao/database/StandardDatabase;-><init>(Landroid/database/sqlite/SQLiteDatabase;)V

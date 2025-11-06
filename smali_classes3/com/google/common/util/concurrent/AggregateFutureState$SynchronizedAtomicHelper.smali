@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/AggregateFutureState$SynchronizedAtomicHelper;
+.class public final Lcom/google/common/util/concurrent/AggregateFutureState$SynchronizedAtomicHelper;
 .super Lcom/google/common/util/concurrent/AggregateFutureState$AtomicHelper;
 .source "SourceFile"
 
@@ -57,8 +57,10 @@
         }
     .end annotation
 
+    .line 1
     monitor-enter p1
 
+    .line 2
     :try_start_0
     invoke-static {p1}, Lcom/google/common/util/concurrent/AggregateFutureState;->access$200(Lcom/google/common/util/concurrent/AggregateFutureState;)Ljava/util/Set;
 
@@ -66,8 +68,10 @@
 
     if-ne p0, p2, :cond_0
 
+    .line 3
     invoke-static {p1, p3}, Lcom/google/common/util/concurrent/AggregateFutureState;->access$202(Lcom/google/common/util/concurrent/AggregateFutureState;Ljava/util/Set;)Ljava/util/Set;
 
+    .line 4
     :cond_0
     monitor-exit p1
 
@@ -93,8 +97,10 @@
         }
     .end annotation
 
+    .line 1
     monitor-enter p1
 
+    .line 2
     :try_start_0
     invoke-static {p1}, Lcom/google/common/util/concurrent/AggregateFutureState;->access$306(Lcom/google/common/util/concurrent/AggregateFutureState;)I
 
@@ -107,6 +113,7 @@
     :catchall_0
     move-exception p0
 
+    .line 3
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

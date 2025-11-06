@@ -40,6 +40,7 @@
 
     const-string p1, "com.google.android.gms.vision.barcode"
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzbj;->zzb(Ljava/lang/Object;Ljava/lang/Object;)V
 
     const/4 v0, 0x2
@@ -56,6 +57,7 @@
 
     const/4 p1, 0x0
 
+    .line 2
     invoke-static {p0, v0, p1}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcx;->zzg(I[Ljava/lang/Object;Lcom/google/android/gms/internal/mlkit_vision_barcode/zzce;)Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcx;
 
     move-result-object p0
@@ -70,6 +72,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -84,6 +87,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcf;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -107,6 +111,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcf;->zzb()Lcom/google/android/gms/internal/mlkit_vision_barcode/zzby;
 
     move-result-object p0
@@ -121,6 +126,7 @@
 .method public final bridge synthetic entrySet()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcf;->zzf()Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcg;
 
     move-result-object p0
@@ -141,6 +147,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     instance-of v0, p1, Ljava/util/Map;
 
@@ -151,9 +158,11 @@
     :goto_0
     return p0
 
+    .line 2
     :cond_1
     check-cast p1, Ljava/util/Map;
 
+    .line 3
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -191,6 +200,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcf;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -206,6 +216,7 @@
 .method public final hashCode()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcf;->zzf()Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcg;
 
     move-result-object p0
@@ -239,6 +250,7 @@
 .method public final bridge synthetic keySet()Ljava/util/Set;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcf;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcg;
 
     if-nez v0, :cond_0
@@ -261,6 +273,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -273,6 +286,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -292,6 +306,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -302,6 +317,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
+    .line 1
     invoke-interface {p0}, Ljava/util/Map;->size()I
 
     move-result v0
@@ -320,6 +336,7 @@
 
     const-wide/32 v3, 0x40000000
 
+    .line 2
     invoke-static {v0, v1, v3, v4}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v0
@@ -330,8 +347,10 @@
 
     const/16 v0, 0x7b
 
+    .line 3
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 4
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -359,8 +378,10 @@
 
     const-string v0, ", "
 
+    .line 5
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 6
     :cond_0
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -385,6 +406,7 @@
     :cond_1
     const/16 p0, 0x7d
 
+    .line 7
     invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -397,6 +419,7 @@
 .method public final bridge synthetic values()Ljava/util/Collection;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcf;->zzb()Lcom/google/android/gms/internal/mlkit_vision_barcode/zzby;
 
     move-result-object p0
@@ -410,6 +433,7 @@
 .method public final zzb()Lcom/google/android/gms/internal/mlkit_vision_barcode/zzby;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcf;->zzc:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzby;
 
     if-nez v0, :cond_0
@@ -433,6 +457,7 @@
 .method public final zzf()Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcg;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcf;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzcg;
 
     if-nez v0, :cond_0

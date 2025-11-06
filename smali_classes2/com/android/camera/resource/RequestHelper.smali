@@ -14,6 +14,7 @@
     :try_start_0
     const-string v0, "camera_requestutil_jni"
 
+    .line 1
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -27,6 +28,7 @@
 
     const-string v2, "load libcamera_requestutil_jni.so failed."
 
+    .line 2
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -36,6 +38,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -69,15 +72,27 @@
 .end method
 
 .method private static native generate(JJ)[B
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "random",
+            "time"
+        }
+    .end annotation
 .end method
 
 .method public static getAivsAccessAppID()Ljava/lang/String;
     .locals 2
 
+    .line 1
     invoke-static {}, Lcom/android/camera/resource/RequestHelper;->genAivsAccessAppID()[B
 
     move-result-object v0
 
+    .line 2
     new-instance v1, Ljava/lang/String;
 
     invoke-direct {v1, v0}, Ljava/lang/String;-><init>([B)V
@@ -88,10 +103,12 @@
 .method public static getAivsAccessAppSecret()Ljava/lang/String;
     .locals 2
 
+    .line 1
     invoke-static {}, Lcom/android/camera/resource/RequestHelper;->genAivsAccessAppSecret()[B
 
     move-result-object v0
 
+    .line 2
     new-instance v1, Ljava/lang/String;
 
     invoke-direct {v1, v0}, Ljava/lang/String;-><init>([B)V
@@ -110,10 +127,12 @@
 .method public static getReleaseAivsAccessKey()Ljava/lang/String;
     .locals 2
 
+    .line 1
     invoke-static {}, Lcom/android/camera/resource/RequestHelper;->genReleaseAivsAccessKey()[B
 
     move-result-object v0
 
+    .line 2
     new-instance v1, Ljava/lang/String;
 
     invoke-direct {v1, v0}, Ljava/lang/String;-><init>([B)V
@@ -124,10 +143,12 @@
 .method public static getSubtitleAccessAppID()Ljava/lang/String;
     .locals 2
 
+    .line 1
     invoke-static {}, Lcom/android/camera/resource/RequestHelper;->genSubtitleAccessAppID()[B
 
     move-result-object v0
 
+    .line 2
     new-instance v1, Ljava/lang/String;
 
     invoke-direct {v1, v0}, Ljava/lang/String;-><init>([B)V
@@ -138,10 +159,12 @@
 .method public static getSubtitleAccessAppKey()Ljava/lang/String;
     .locals 2
 
+    .line 1
     invoke-static {}, Lcom/android/camera/resource/RequestHelper;->genSubtitleAccessAppKey()[B
 
     move-result-object v0
 
+    .line 2
     new-instance v1, Ljava/lang/String;
 
     invoke-direct {v1, v0}, Ljava/lang/String;-><init>([B)V
@@ -152,10 +175,12 @@
 .method public static getSubtitleAccessAppSecret()Ljava/lang/String;
     .locals 2
 
+    .line 1
     invoke-static {}, Lcom/android/camera/resource/RequestHelper;->genSubtitleAccessAppSecret()[B
 
     move-result-object v0
 
+    .line 2
     new-instance v1, Ljava/lang/String;
 
     invoke-direct {v1, v0}, Ljava/lang/String;-><init>([B)V
@@ -166,10 +191,12 @@
 .method public static getSubtitleUrl()Ljava/lang/String;
     .locals 2
 
+    .line 1
     invoke-static {}, Lcom/android/camera/resource/RequestHelper;->genSubtitleUrl()[B
 
     move-result-object v0
 
+    .line 2
     new-instance v1, Ljava/lang/String;
 
     invoke-direct {v1, v0}, Ljava/lang/String;-><init>([B)V
@@ -180,10 +207,12 @@
 .method public static getTestAivsAccessKey()Ljava/lang/String;
     .locals 2
 
+    .line 1
     invoke-static {}, Lcom/android/camera/resource/RequestHelper;->genTestAivsAccessKey()[B
 
     move-result-object v0
 
+    .line 2
     new-instance v1, Ljava/lang/String;
 
     invoke-direct {v1, v0}, Ljava/lang/String;-><init>([B)V
@@ -194,10 +223,12 @@
 .method public static getTestSignMd5()Ljava/lang/String;
     .locals 2
 
+    .line 1
     invoke-static {}, Lcom/android/camera/resource/RequestHelper;->genSignMd5()[B
 
     move-result-object v0
 
+    .line 2
     new-instance v1, Ljava/lang/String;
 
     invoke-direct {v1, v0}, Ljava/lang/String;-><init>([B)V
@@ -207,15 +238,28 @@
 
 .method public static md5(JJ)Ljava/lang/String;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "random",
+            "time"
+        }
+    .end annotation
 
+    .line 1
     invoke-static {p0, p1, p2, p3}, Lcom/android/camera/resource/RequestHelper;->generate(JJ)[B
 
     move-result-object p0
 
+    .line 2
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 3
     array-length p2, p0
 
     const/4 p3, 0x0
@@ -229,6 +273,7 @@
 
     or-int/lit16 v0, v0, -0x100
 
+    .line 4
     invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -245,6 +290,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

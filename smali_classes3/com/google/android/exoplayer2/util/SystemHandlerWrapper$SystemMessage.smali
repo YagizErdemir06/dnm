@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/util/SystemHandlerWrapper$SystemMessage;
+.class public final Lcom/google/android/exoplayer2/util/SystemHandlerWrapper$SystemMessage;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -53,10 +53,13 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Lcom/google/android/exoplayer2/util/SystemHandlerWrapper$SystemMessage;->message:Landroid/os/Message;
 
+    .line 2
     iput-object v0, p0, Lcom/google/android/exoplayer2/util/SystemHandlerWrapper$SystemMessage;->handler:Lcom/google/android/exoplayer2/util/SystemHandlerWrapper;
 
+    .line 3
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/SystemHandlerWrapper;->access$100(Lcom/google/android/exoplayer2/util/SystemHandlerWrapper$SystemMessage;)V
 
     return-void
@@ -67,6 +70,7 @@
 .method public getTarget()Lcom/google/android/exoplayer2/util/HandlerWrapper;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/SystemHandlerWrapper$SystemMessage;->handler:Lcom/google/android/exoplayer2/util/SystemHandlerWrapper;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -81,6 +85,7 @@
 .method public sendAtFrontOfQueue(Landroid/os/Handler;)Z
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/SystemHandlerWrapper$SystemMessage;->message:Landroid/os/Message;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -93,6 +98,7 @@
 
     move-result p1
 
+    .line 2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/util/SystemHandlerWrapper$SystemMessage;->recycle()V
 
     return p1
@@ -101,6 +107,7 @@
 .method public sendToTarget()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/SystemHandlerWrapper$SystemMessage;->message:Landroid/os/Message;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -111,6 +118,7 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
+    .line 2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/util/SystemHandlerWrapper$SystemMessage;->recycle()V
 
     return-void
@@ -119,8 +127,10 @@
 .method public setMessage(Landroid/os/Message;Lcom/google/android/exoplayer2/util/SystemHandlerWrapper;)Lcom/google/android/exoplayer2/util/SystemHandlerWrapper$SystemMessage;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/util/SystemHandlerWrapper$SystemMessage;->message:Landroid/os/Message;
 
+    .line 2
     iput-object p2, p0, Lcom/google/android/exoplayer2/util/SystemHandlerWrapper$SystemMessage;->handler:Lcom/google/android/exoplayer2/util/SystemHandlerWrapper;
 
     return-object p0

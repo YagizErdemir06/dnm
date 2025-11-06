@@ -1,4 +1,4 @@
-.class Lcom/bumptech/glide/load/engine/EngineResource;
+.class public Lcom/bumptech/glide/load/engine/EngineResource;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -62,8 +62,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -72,12 +74,16 @@
 
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/EngineResource;->resource:Lcom/bumptech/glide/load/engine/Resource;
 
+    .line 3
     iput-boolean p2, p0, Lcom/bumptech/glide/load/engine/EngineResource;->isMemoryCacheable:Z
 
+    .line 4
     iput-boolean p3, p0, Lcom/bumptech/glide/load/engine/EngineResource;->isRecyclable:Z
 
+    .line 5
     iput-object p4, p0, Lcom/bumptech/glide/load/engine/EngineResource;->key:Lcom/bumptech/glide/load/Key;
 
+    .line 6
     invoke-static {p5}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -96,11 +102,13 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget-boolean v0, p0, Lcom/bumptech/glide/load/engine/EngineResource;->isRecycled:Z
 
     if-nez v0, :cond_0
 
+    .line 2
     iget v0, p0, Lcom/bumptech/glide/load/engine/EngineResource;->acquired:I
 
     add-int/lit8 v0, v0, 0x1
@@ -109,10 +117,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     monitor-exit p0
 
     return-void
 
+    .line 4
     :cond_0
     :try_start_1
     new-instance v0, Ljava/lang/IllegalStateException;
@@ -144,6 +154,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/EngineResource;->resource:Lcom/bumptech/glide/load/engine/Resource;
 
     invoke-interface {p0}, Lcom/bumptech/glide/load/engine/Resource;->get()Ljava/lang/Object;
@@ -163,6 +174,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/EngineResource;->resource:Lcom/bumptech/glide/load/engine/Resource;
 
     return-object p0
@@ -181,6 +193,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/EngineResource;->resource:Lcom/bumptech/glide/load/engine/Resource;
 
     invoke-interface {p0}, Lcom/bumptech/glide/load/engine/Resource;->getResourceClass()Ljava/lang/Class;
@@ -193,6 +206,7 @@
 .method public getSize()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/EngineResource;->resource:Lcom/bumptech/glide/load/engine/Resource;
 
     invoke-interface {p0}, Lcom/bumptech/glide/load/engine/Resource;->getSize()I
@@ -205,6 +219,7 @@
 .method public isMemoryCacheable()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/bumptech/glide/load/engine/EngineResource;->isMemoryCacheable:Z
 
     return p0
@@ -215,34 +230,41 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     iget v0, p0, Lcom/bumptech/glide/load/engine/EngineResource;->acquired:I
 
     if-gtz v0, :cond_2
 
+    .line 2
     iget-boolean v0, p0, Lcom/bumptech/glide/load/engine/EngineResource;->isRecycled:Z
 
     if-nez v0, :cond_1
 
     const/4 v0, 0x1
 
+    .line 3
     iput-boolean v0, p0, Lcom/bumptech/glide/load/engine/EngineResource;->isRecycled:Z
 
+    .line 4
     iget-boolean v0, p0, Lcom/bumptech/glide/load/engine/EngineResource;->isRecyclable:Z
 
     if-eqz v0, :cond_0
 
+    .line 5
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/EngineResource;->resource:Lcom/bumptech/glide/load/engine/Resource;
 
     invoke-interface {v0}, Lcom/bumptech/glide/load/engine/Resource;->recycle()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 6
     :cond_0
     monitor-exit p0
 
     return-void
 
+    .line 7
     :cond_1
     :try_start_1
     new-instance v0, Ljava/lang/IllegalStateException;
@@ -253,6 +275,7 @@
 
     throw v0
 
+    .line 8
     :cond_2
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -275,8 +298,10 @@
 .method public release()V
     .locals 2
 
+    .line 1
     monitor-enter p0
 
+    .line 2
     :try_start_0
     iget v0, p0, Lcom/bumptech/glide/load/engine/EngineResource;->acquired:I
 
@@ -286,6 +311,7 @@
 
     sub-int/2addr v0, v1
 
+    .line 3
     iput v0, p0, Lcom/bumptech/glide/load/engine/EngineResource;->acquired:I
 
     if-nez v0, :cond_0
@@ -295,6 +321,7 @@
     :cond_0
     const/4 v1, 0x0
 
+    .line 4
     :goto_0
     monitor-exit p0
     :try_end_0
@@ -302,6 +329,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 5
     iget-object v0, p0, Lcom/bumptech/glide/load/engine/EngineResource;->listener:Lcom/bumptech/glide/load/engine/EngineResource$ResourceListener;
 
     iget-object v1, p0, Lcom/bumptech/glide/load/engine/EngineResource;->key:Lcom/bumptech/glide/load/Key;
@@ -311,6 +339,7 @@
     :cond_1
     return-void
 
+    .line 6
     :cond_2
     :try_start_1
     new-instance v0, Ljava/lang/IllegalStateException;
@@ -324,6 +353,7 @@
     :catchall_0
     move-exception v0
 
+    .line 7
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -336,6 +366,7 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 

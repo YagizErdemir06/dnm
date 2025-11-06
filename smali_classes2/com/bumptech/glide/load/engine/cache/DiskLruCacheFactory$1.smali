@@ -1,4 +1,4 @@
-.class Lcom/bumptech/glide/load/engine/cache/DiskLruCacheFactory$1;
+.class public Lcom/bumptech/glide/load/engine/cache/DiskLruCacheFactory$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic val$diskCacheFolder:Ljava/lang/String;
+.field public final synthetic val$diskCacheFolder:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/bumptech/glide/load/engine/cache/DiskLruCacheFactory$1;->val$diskCacheFolder:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,6 +38,7 @@
 .method public getCacheDirectory()Ljava/io/File;
     .locals 1
 
+    .line 1
     new-instance v0, Ljava/io/File;
 
     iget-object p0, p0, Lcom/bumptech/glide/load/engine/cache/DiskLruCacheFactory$1;->val$diskCacheFolder:Ljava/lang/String;

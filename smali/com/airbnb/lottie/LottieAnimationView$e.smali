@@ -22,7 +22,8 @@
 .method public static constructor <clinit>()V
     .locals 3
 
-    invoke-static {}, Li/r;->values()[Li/r;
+    .line 1
+    invoke-static {}, Ld/b/a/s;->values()[Ld/b/a/s;
 
     move-result-object v0
 
@@ -33,7 +34,7 @@
     sput-object v0, Lcom/airbnb/lottie/LottieAnimationView$e;->a:[I
 
     :try_start_0
-    sget-object v1, Li/r;->b:Li/r;
+    sget-object v1, Ld/b/a/s;->d:Ld/b/a/s;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -49,7 +50,7 @@
     :try_start_1
     sget-object v0, Lcom/airbnb/lottie/LottieAnimationView$e;->a:[I
 
-    sget-object v1, Li/r;->c:Li/r;
+    sget-object v1, Ld/b/a/s;->f:Ld/b/a/s;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -65,7 +66,7 @@
     :try_start_2
     sget-object v0, Lcom/airbnb/lottie/LottieAnimationView$e;->a:[I
 
-    sget-object v1, Li/r;->a:Li/r;
+    sget-object v1, Ld/b/a/s;->c:Ld/b/a/s;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 

@@ -103,6 +103,7 @@
 .method public final zze(Ljava/lang/Long;)Lcom/google/android/gms/internal/mlkit_common/zzlh;
     .locals 4
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v0
@@ -131,6 +132,7 @@
 .method public final zzg(Ljava/lang/Long;)Lcom/google/android/gms/internal/mlkit_common/zzlh;
     .locals 4
 
+    .line 1
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v0

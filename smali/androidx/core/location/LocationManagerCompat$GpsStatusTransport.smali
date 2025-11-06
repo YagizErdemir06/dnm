@@ -1,4 +1,4 @@
-.class Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;
+.class public Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final mCallback:Landroidx/core/location/GnssStatusCompat$Callback;
+.field public final mCallback:Landroidx/core/location/GnssStatusCompat$Callback;
 
-.field volatile mExecutor:Ljava/util/concurrent/Executor;
+.field public volatile mExecutor:Ljava/util/concurrent/Executor;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -32,6 +32,7 @@
 .method public constructor <init>(Landroid/location/LocationManager;Landroidx/core/location/GnssStatusCompat$Callback;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-eqz p2, :cond_0
@@ -46,43 +47,14 @@
     :goto_0
     const-string v1, "invalid null callback"
 
+    .line 2
     invoke-static {v0, v1}, Landroidx/core/util/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 3
     iput-object p1, p0, Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;->mLocationManager:Landroid/location/LocationManager;
 
+    .line 4
     iput-object p2, p0, Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;->mCallback:Landroidx/core/location/GnssStatusCompat$Callback;
-
-    return-void
-.end method
-
-.method public static synthetic a(Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;Ljava/util/concurrent/Executor;I)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;->lambda$onGpsStatusChanged$2(Ljava/util/concurrent/Executor;I)V
-
-    return-void
-.end method
-
-.method public static synthetic b(Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;Ljava/util/concurrent/Executor;Landroidx/core/location/GnssStatusCompat;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;->lambda$onGpsStatusChanged$3(Ljava/util/concurrent/Executor;Landroidx/core/location/GnssStatusCompat;)V
-
-    return-void
-.end method
-
-.method public static synthetic c(Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;Ljava/util/concurrent/Executor;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;->lambda$onGpsStatusChanged$0(Ljava/util/concurrent/Executor;)V
-
-    return-void
-.end method
-
-.method public static synthetic d(Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;Ljava/util/concurrent/Executor;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;->lambda$onGpsStatusChanged$1(Ljava/util/concurrent/Executor;)V
 
     return-void
 .end method
@@ -90,12 +62,14 @@
 .method private synthetic lambda$onGpsStatusChanged$0(Ljava/util/concurrent/Executor;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;->mExecutor:Ljava/util/concurrent/Executor;
 
     if-eq v0, p1, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     iget-object p0, p0, Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;->mCallback:Landroidx/core/location/GnssStatusCompat$Callback;
 
@@ -107,12 +81,14 @@
 .method private synthetic lambda$onGpsStatusChanged$1(Ljava/util/concurrent/Executor;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;->mExecutor:Ljava/util/concurrent/Executor;
 
     if-eq v0, p1, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     iget-object p0, p0, Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;->mCallback:Landroidx/core/location/GnssStatusCompat$Callback;
 
@@ -124,12 +100,14 @@
 .method private synthetic lambda$onGpsStatusChanged$2(Ljava/util/concurrent/Executor;I)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;->mExecutor:Ljava/util/concurrent/Executor;
 
     if-eq v0, p1, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     iget-object p0, p0, Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;->mCallback:Landroidx/core/location/GnssStatusCompat$Callback;
 
@@ -141,12 +119,14 @@
 .method private synthetic lambda$onGpsStatusChanged$3(Ljava/util/concurrent/Executor;Landroidx/core/location/GnssStatusCompat;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;->mExecutor:Ljava/util/concurrent/Executor;
 
     if-eq v0, p1, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     iget-object p0, p0, Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;->mCallback:Landroidx/core/location/GnssStatusCompat$Callback;
 
@@ -157,12 +137,45 @@
 
 
 # virtual methods
+.method public synthetic a(Ljava/util/concurrent/Executor;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;->lambda$onGpsStatusChanged$0(Ljava/util/concurrent/Executor;)V
+
+    return-void
+.end method
+
+.method public synthetic b(Ljava/util/concurrent/Executor;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;->lambda$onGpsStatusChanged$1(Ljava/util/concurrent/Executor;)V
+
+    return-void
+.end method
+
+.method public synthetic c(Ljava/util/concurrent/Executor;I)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;->lambda$onGpsStatusChanged$2(Ljava/util/concurrent/Executor;I)V
+
+    return-void
+.end method
+
+.method public synthetic d(Ljava/util/concurrent/Executor;Landroidx/core/location/GnssStatusCompat;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;->lambda$onGpsStatusChanged$3(Ljava/util/concurrent/Executor;Landroidx/core/location/GnssStatusCompat;)V
+
+    return-void
+.end method
+
 .method public onGpsStatusChanged(I)V
     .locals 3
     .annotation build Landroidx/annotation/RequiresPermission;
         value = "android.permission.ACCESS_FINE_LOCATION"
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;->mExecutor:Ljava/util/concurrent/Executor;
 
     if-nez v0, :cond_0
@@ -190,6 +203,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_1
     iget-object p1, p0, Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;->mLocationManager:Landroid/location/LocationManager;
 
@@ -199,18 +213,21 @@
 
     if-eqz p1, :cond_5
 
+    .line 3
     invoke-static {p1}, Landroidx/core/location/GnssStatusCompat;->wrap(Landroid/location/GpsStatus;)Landroidx/core/location/GnssStatusCompat;
 
     move-result-object p1
 
-    new-instance v1, Landroidx/core/location/p;
+    .line 4
+    new-instance v1, Lc/b/b/d;
 
-    invoke-direct {v1, p0, v0, p1}, Landroidx/core/location/p;-><init>(Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;Ljava/util/concurrent/Executor;Landroidx/core/location/GnssStatusCompat;)V
+    invoke-direct {v1, p0, v0, p1}, Lc/b/b/d;-><init>(Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;Ljava/util/concurrent/Executor;Landroidx/core/location/GnssStatusCompat;)V
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     goto :goto_0
 
+    .line 5
     :cond_2
     iget-object p1, p0, Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;->mLocationManager:Landroid/location/LocationManager;
 
@@ -220,31 +237,35 @@
 
     if-eqz p1, :cond_5
 
+    .line 6
     invoke-virtual {p1}, Landroid/location/GpsStatus;->getTimeToFirstFix()I
 
     move-result p1
 
-    new-instance v1, Landroidx/core/location/o;
+    .line 7
+    new-instance v1, Lc/b/b/c;
 
-    invoke-direct {v1, p0, v0, p1}, Landroidx/core/location/o;-><init>(Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;Ljava/util/concurrent/Executor;I)V
+    invoke-direct {v1, p0, v0, p1}, Lc/b/b/c;-><init>(Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;Ljava/util/concurrent/Executor;I)V
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     goto :goto_0
 
+    .line 8
     :cond_3
-    new-instance p1, Landroidx/core/location/n;
+    new-instance p1, Lc/b/b/f;
 
-    invoke-direct {p1, p0, v0}, Landroidx/core/location/n;-><init>(Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;Ljava/util/concurrent/Executor;)V
+    invoke-direct {p1, p0, v0}, Lc/b/b/f;-><init>(Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;Ljava/util/concurrent/Executor;)V
 
     invoke-interface {v0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     goto :goto_0
 
+    .line 9
     :cond_4
-    new-instance p1, Landroidx/core/location/m;
+    new-instance p1, Lc/b/b/e;
 
-    invoke-direct {p1, p0, v0}, Landroidx/core/location/m;-><init>(Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;Ljava/util/concurrent/Executor;)V
+    invoke-direct {p1, p0, v0}, Lc/b/b/e;-><init>(Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;Ljava/util/concurrent/Executor;)V
 
     invoke-interface {v0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
@@ -256,6 +277,7 @@
 .method public register(Ljava/util/concurrent/Executor;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;->mExecutor:Ljava/util/concurrent/Executor;
 
     if-nez v0, :cond_0
@@ -270,6 +292,7 @@
     :goto_0
     invoke-static {v0}, Landroidx/core/util/Preconditions;->checkState(Z)V
 
+    .line 2
     iput-object p1, p0, Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;->mExecutor:Ljava/util/concurrent/Executor;
 
     return-void
@@ -280,6 +303,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Landroidx/core/location/LocationManagerCompat$GpsStatusTransport;->mExecutor:Ljava/util/concurrent/Executor;
 
     return-void

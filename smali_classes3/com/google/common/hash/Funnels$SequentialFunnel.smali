@@ -1,4 +1,4 @@
-.class Lcom/google/common/hash/Funnels$SequentialFunnel;
+.class public Lcom/google/common/hash/Funnels$SequentialFunnel;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -53,8 +53,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -75,12 +77,15 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/common/hash/Funnels$SequentialFunnel;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/common/hash/Funnels$SequentialFunnel;
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/hash/Funnels$SequentialFunnel;->elementFunnel:Lcom/google/common/hash/Funnel;
 
     iget-object p1, p1, Lcom/google/common/hash/Funnels$SequentialFunnel;->elementFunnel:Lcom/google/common/hash/Funnel;
@@ -150,6 +155,7 @@
 .method public hashCode()I
     .locals 1
 
+    .line 1
     const-class v0, Lcom/google/common/hash/Funnels$SequentialFunnel;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -170,6 +176,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/hash/Funnels$SequentialFunnel;->elementFunnel:Lcom/google/common/hash/Funnel;
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

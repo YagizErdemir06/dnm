@@ -1,4 +1,4 @@
-.class final Lcom/google/gson/internal/LinkedTreeMap$Node;
+.class public final Lcom/google/gson/internal/LinkedTreeMap$Node;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -31,9 +31,9 @@
 
 
 # instance fields
-.field height:I
+.field public height:I
 
-.field final key:Ljava/lang/Object;
+.field public final key:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TK;"
@@ -41,7 +41,7 @@
     .end annotation
 .end field
 
-.field left:Lcom/google/gson/internal/LinkedTreeMap$Node;
+.field public left:Lcom/google/gson/internal/LinkedTreeMap$Node;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/gson/internal/LinkedTreeMap$Node<",
@@ -50,7 +50,7 @@
     .end annotation
 .end field
 
-.field next:Lcom/google/gson/internal/LinkedTreeMap$Node;
+.field public next:Lcom/google/gson/internal/LinkedTreeMap$Node;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/gson/internal/LinkedTreeMap$Node<",
@@ -59,7 +59,7 @@
     .end annotation
 .end field
 
-.field parent:Lcom/google/gson/internal/LinkedTreeMap$Node;
+.field public parent:Lcom/google/gson/internal/LinkedTreeMap$Node;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/gson/internal/LinkedTreeMap$Node<",
@@ -68,7 +68,7 @@
     .end annotation
 .end field
 
-.field prev:Lcom/google/gson/internal/LinkedTreeMap$Node;
+.field public prev:Lcom/google/gson/internal/LinkedTreeMap$Node;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/gson/internal/LinkedTreeMap$Node<",
@@ -77,7 +77,7 @@
     .end annotation
 .end field
 
-.field right:Lcom/google/gson/internal/LinkedTreeMap$Node;
+.field public right:Lcom/google/gson/internal/LinkedTreeMap$Node;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/gson/internal/LinkedTreeMap$Node<",
@@ -86,7 +86,7 @@
     .end annotation
 .end field
 
-.field value:Ljava/lang/Object;
+.field public value:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TV;"
@@ -163,14 +163,17 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
+    .line 1
     instance-of v0, p1, Ljava/util/Map$Entry;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_2
 
+    .line 2
     check-cast p1, Ljava/util/Map$Entry;
 
+    .line 3
     iget-object v0, p0, Lcom/google/gson/internal/LinkedTreeMap$Node;->key:Ljava/lang/Object;
 
     if-nez v0, :cond_0
@@ -199,6 +202,7 @@
 
     if-nez p0, :cond_1
 
+    .line 4
     invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p0
@@ -235,6 +239,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/gson/internal/LinkedTreeMap$Node;->left:Lcom/google/gson/internal/LinkedTreeMap$Node;
 
     :goto_0
@@ -246,6 +251,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/gson/internal/LinkedTreeMap$Node;->left:Lcom/google/gson/internal/LinkedTreeMap$Node;
 
     goto :goto_0
@@ -262,6 +268,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/gson/internal/LinkedTreeMap$Node;->key:Ljava/lang/Object;
 
     return-object p0
@@ -275,6 +282,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/gson/internal/LinkedTreeMap$Node;->value:Ljava/lang/Object;
 
     return-object p0
@@ -283,6 +291,7 @@
 .method public hashCode()I
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/gson/internal/LinkedTreeMap$Node;->key:Ljava/lang/Object;
 
     const/4 v1, 0x0
@@ -305,6 +314,7 @@
 
     goto :goto_1
 
+    .line 2
     :cond_1
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
@@ -326,6 +336,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/gson/internal/LinkedTreeMap$Node;->right:Lcom/google/gson/internal/LinkedTreeMap$Node;
 
     :goto_0
@@ -337,6 +348,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/gson/internal/LinkedTreeMap$Node;->right:Lcom/google/gson/internal/LinkedTreeMap$Node;
 
     goto :goto_0
@@ -353,8 +365,10 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/gson/internal/LinkedTreeMap$Node;->value:Ljava/lang/Object;
 
+    .line 2
     iput-object p1, p0, Lcom/google/gson/internal/LinkedTreeMap$Node;->value:Ljava/lang/Object;
 
     return-object v0
@@ -363,6 +377,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

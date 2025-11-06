@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/text/dvb/DvbParser$PageComposition;
+.class public final Lcom/google/android/exoplayer2/text/dvb/DvbParser$PageComposition;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -44,14 +44,19 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/text/dvb/DvbParser$PageComposition;->timeOutSecs:I
 
+    .line 3
     iput p2, p0, Lcom/google/android/exoplayer2/text/dvb/DvbParser$PageComposition;->version:I
 
+    .line 4
     iput p3, p0, Lcom/google/android/exoplayer2/text/dvb/DvbParser$PageComposition;->state:I
 
+    .line 5
     iput-object p4, p0, Lcom/google/android/exoplayer2/text/dvb/DvbParser$PageComposition;->regions:Landroid/util/SparseArray;
 
     return-void

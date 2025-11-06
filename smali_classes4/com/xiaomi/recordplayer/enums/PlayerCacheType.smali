@@ -33,6 +33,7 @@
 .method public static constructor <clinit>()V
     .locals 9
 
+    .line 1
     new-instance v0, Lcom/xiaomi/recordplayer/enums/PlayerCacheType;
 
     const-string v1, "PlayerCacheNo"
@@ -43,6 +44,7 @@
 
     sput-object v0, Lcom/xiaomi/recordplayer/enums/PlayerCacheType;->PlayerCacheNo:Lcom/xiaomi/recordplayer/enums/PlayerCacheType;
 
+    .line 2
     new-instance v1, Lcom/xiaomi/recordplayer/enums/PlayerCacheType;
 
     const-string v3, "PlayerCacheFile"
@@ -53,6 +55,7 @@
 
     sput-object v1, Lcom/xiaomi/recordplayer/enums/PlayerCacheType;->PlayerCacheFile:Lcom/xiaomi/recordplayer/enums/PlayerCacheType;
 
+    .line 3
     new-instance v3, Lcom/xiaomi/recordplayer/enums/PlayerCacheType;
 
     const-string v5, "PlayerCacheMemory"
@@ -63,6 +66,7 @@
 
     sput-object v3, Lcom/xiaomi/recordplayer/enums/PlayerCacheType;->PlayerCacheMemory:Lcom/xiaomi/recordplayer/enums/PlayerCacheType;
 
+    .line 4
     new-instance v5, Lcom/xiaomi/recordplayer/enums/PlayerCacheType;
 
     const-string v7, "PlayerCacheAll"
@@ -85,6 +89,7 @@
 
     aput-object v5, v7, v8
 
+    .line 5
     sput-object v7, Lcom/xiaomi/recordplayer/enums/PlayerCacheType;->$VALUES:[Lcom/xiaomi/recordplayer/enums/PlayerCacheType;
 
     return-void
@@ -98,8 +103,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    .line 2
     iput p3, p0, Lcom/xiaomi/recordplayer/enums/PlayerCacheType;->nCode:I
 
     return-void
@@ -108,8 +115,10 @@
 .method public static int2enum(I)Lcom/xiaomi/recordplayer/enums/PlayerCacheType;
     .locals 6
 
+    .line 1
     sget-object v0, Lcom/xiaomi/recordplayer/enums/PlayerCacheType;->PlayerCacheNo:Lcom/xiaomi/recordplayer/enums/PlayerCacheType;
 
+    .line 2
     invoke-static {}, Lcom/xiaomi/recordplayer/enums/PlayerCacheType;->values()[Lcom/xiaomi/recordplayer/enums/PlayerCacheType;
 
     move-result-object v1
@@ -123,6 +132,7 @@
 
     aget-object v4, v1, v3
 
+    .line 3
     invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
 
     move-result v5
@@ -143,6 +153,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/recordplayer/enums/PlayerCacheType;
     .locals 1
 
+    .line 1
     const-class v0, Lcom/xiaomi/recordplayer/enums/PlayerCacheType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -157,6 +168,7 @@
 .method public static values()[Lcom/xiaomi/recordplayer/enums/PlayerCacheType;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/xiaomi/recordplayer/enums/PlayerCacheType;->$VALUES:[Lcom/xiaomi/recordplayer/enums/PlayerCacheType;
 
     invoke-virtual {v0}, [Lcom/xiaomi/recordplayer/enums/PlayerCacheType;->clone()Ljava/lang/Object;
@@ -173,6 +185,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/recordplayer/enums/PlayerCacheType;->nCode:I
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;

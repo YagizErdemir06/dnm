@@ -1,4 +1,4 @@
-.class final Lcom/google/common/io/CharSource$AsByteSource;
+.class public final Lcom/google/common/io/CharSource$AsByteSource;
 .super Lcom/google/common/io/ByteSource;
 .source "SourceFile"
 
@@ -15,19 +15,21 @@
 
 
 # instance fields
-.field final charset:Ljava/nio/charset/Charset;
+.field public final charset:Ljava/nio/charset/Charset;
 
-.field final synthetic this$0:Lcom/google/common/io/CharSource;
+.field public final synthetic this$0:Lcom/google/common/io/CharSource;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/io/CharSource;Ljava/nio/charset/Charset;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/io/CharSource$AsByteSource;->this$0:Lcom/google/common/io/CharSource;
 
     invoke-direct {p0}, Lcom/google/common/io/ByteSource;-><init>()V
 
+    .line 2
     invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -44,6 +46,7 @@
 .method public asCharSource(Ljava/nio/charset/Charset;)Lcom/google/common/io/CharSource;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/io/CharSource$AsByteSource;->charset:Ljava/nio/charset/Charset;
 
     invoke-virtual {p1, v0}, Ljava/nio/charset/Charset;->equals(Ljava/lang/Object;)Z
@@ -52,10 +55,12 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/io/CharSource$AsByteSource;->this$0:Lcom/google/common/io/CharSource;
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-super {p0, p1}, Lcom/google/common/io/ByteSource;->asCharSource(Ljava/nio/charset/Charset;)Lcom/google/common/io/CharSource;
 
@@ -72,6 +77,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/io/ReaderInputStream;
 
     iget-object v1, p0, Lcom/google/common/io/CharSource$AsByteSource;->this$0:Lcom/google/common/io/CharSource;
@@ -92,6 +98,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/io/CharSource$AsByteSource;->this$0:Lcom/google/common/io/CharSource;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;

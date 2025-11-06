@@ -15,20 +15,23 @@
 
 
 # instance fields
-.field public c:Lmiuix/preference/RadioSetPreferenceCategory;
+.field private f:Lmiuix/preference/RadioSetPreferenceCategory;
 
-.field public final synthetic d:Lmiuix/preference/RadioButtonPreferenceCategory;
+.field public final synthetic g:Lmiuix/preference/RadioButtonPreferenceCategory;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/preference/RadioButtonPreferenceCategory;Lmiuix/preference/RadioSetPreferenceCategory;)V
     .locals 0
 
-    iput-object p1, p0, Lmiuix/preference/RadioButtonPreferenceCategory$b;->d:Lmiuix/preference/RadioButtonPreferenceCategory;
+    .line 1
+    iput-object p1, p0, Lmiuix/preference/RadioButtonPreferenceCategory$b;->g:Lmiuix/preference/RadioButtonPreferenceCategory;
 
+    .line 2
     invoke-direct {p0, p1, p2}, Lmiuix/preference/RadioButtonPreferenceCategory$d;-><init>(Lmiuix/preference/RadioButtonPreferenceCategory;Landroid/widget/Checkable;)V
 
-    iput-object p2, p0, Lmiuix/preference/RadioButtonPreferenceCategory$b;->c:Lmiuix/preference/RadioSetPreferenceCategory;
+    .line 3
+    iput-object p2, p0, Lmiuix/preference/RadioButtonPreferenceCategory$b;->f:Lmiuix/preference/RadioSetPreferenceCategory;
 
     return-void
 .end method
@@ -38,17 +41,19 @@
 .method public a()Landroidx/preference/Preference;
     .locals 0
 
-    iget-object p0, p0, Lmiuix/preference/RadioButtonPreferenceCategory$b;->c:Lmiuix/preference/RadioSetPreferenceCategory;
+    .line 1
+    iget-object p0, p0, Lmiuix/preference/RadioButtonPreferenceCategory$b;->f:Lmiuix/preference/RadioSetPreferenceCategory;
 
     return-object p0
 .end method
 
-.method public b(Lmr/e;)V
+.method public b(Lk/x/f;)V
     .locals 0
 
-    iget-object p0, p0, Lmiuix/preference/RadioButtonPreferenceCategory$b;->c:Lmiuix/preference/RadioSetPreferenceCategory;
+    .line 1
+    iget-object p0, p0, Lmiuix/preference/RadioButtonPreferenceCategory$b;->f:Lmiuix/preference/RadioSetPreferenceCategory;
 
-    invoke-virtual {p0, p1}, Lmiuix/preference/RadioSetPreferenceCategory;->f(Lmr/e;)V
+    invoke-virtual {p0, p1}, Lmiuix/preference/RadioSetPreferenceCategory;->c(Lk/x/f;)V
 
     return-void
 .end method
@@ -56,19 +61,22 @@
 .method public setChecked(Z)V
     .locals 1
 
+    .line 1
     invoke-super {p0, p1}, Lmiuix/preference/RadioButtonPreferenceCategory$d;->setChecked(Z)V
 
-    iget-object v0, p0, Lmiuix/preference/RadioButtonPreferenceCategory$b;->c:Lmiuix/preference/RadioSetPreferenceCategory;
+    .line 2
+    iget-object v0, p0, Lmiuix/preference/RadioButtonPreferenceCategory$b;->f:Lmiuix/preference/RadioSetPreferenceCategory;
 
-    invoke-virtual {v0}, Lmiuix/preference/RadioSetPreferenceCategory;->e()Lmiuix/preference/RadioButtonPreference;
+    invoke-virtual {v0}, Lmiuix/preference/RadioSetPreferenceCategory;->b()Lmiuix/preference/RadioButtonPreference;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lmiuix/preference/RadioButtonPreferenceCategory$b;->c:Lmiuix/preference/RadioSetPreferenceCategory;
+    .line 3
+    iget-object p0, p0, Lmiuix/preference/RadioButtonPreferenceCategory$b;->f:Lmiuix/preference/RadioSetPreferenceCategory;
 
-    invoke-virtual {p0}, Lmiuix/preference/RadioSetPreferenceCategory;->e()Lmiuix/preference/RadioButtonPreference;
+    invoke-virtual {p0}, Lmiuix/preference/RadioSetPreferenceCategory;->b()Lmiuix/preference/RadioButtonPreference;
 
     move-result-object p0
 

@@ -205,7 +205,6 @@
     <string name="accessibility_video_capture_button">Butoni për të shkrepur fotot ndërsa filmohen videot</string>
     <string name="accessibility_video_pause_button">U pezullua regjistrimi i videos</string>
     <string name="accessibility_video_resume_button">Rifilloi regjistrimi i videos</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">Filigrami është fikur</string>
     <string name="accessibility_watermark_image_on">Filigrami është ndezuar</string>
     <string name="accessibility_watermark_text">Hap panelin e pershtatjes të filigramit</string>
@@ -213,16 +212,6 @@
     <string name="accessibility_zoom_button">Modaliteti i zmadhimit</string>
     <string name="actionbar_button_up_description">Prapa</string>
     <string name="afternoon">Pasdite</string>
-    <string name="agent_flip_tbc">Vazhdoni në ekranin e brendshëm</string>
-    <string name="agent_function_max">Përshtatur në vlerën maksimale</string>
-    <string name="agent_function_min">Përshtatur në vlerën minimale</string>
-    <string name="agent_workspace_mode_not_supported">Kjo veçori nuk mbështetet</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"Kjo veçori nuk mbështetet.
-Në vend të kësaj modaliteti i fotografisë."</string>
-    <string name="agent_workspace_on">Parametrat e vendosur për fotografimin e \"%1$s\"</string>
-    <string name="agent_workspace_tbc">Studimi i skenës</string>
-    <string name="agent_workspace_tbc_use_default">"Studimi i skenës…
-Parametrat e kamerës janë caktuar si paracaktim"</string>
     <string name="ai_agra_fort">Fort Agra</string>
     <string name="ai_amber_fort">Amber Palace</string>
     <string name="ai_baby">Bebe</string>
@@ -781,7 +770,6 @@ dokumente të skanuara automatikisht"</string>
     <string name="download_hint_cn">Me sa duket pajisja juaj nuk është e lidhur me WLAN. Përdorni %1$s MB të dhëna celulare për të shkarkuar artikuj tani?</string>
     <string name="download_hint_wifi">Me sa duket pajisja juaj nuk është e lidhur me Wi-Fi. Përdorni %1$s MB të dhëna celulare për të shkarkuar artikuj tani?</string>
     <string name="download_in_progress">Duke shkarkuar…</string>
-    <string name="download_network_error">Nuk mund të shkarkohej. Kontrollo cilësimet e rrjetit.</string>
     <string name="download_title">Paralajmërim për përdorim interneti celular</string>
     <string name="download_waiting">Në pritje…</string>
     <string name="dual_camera_lens_covered_toast">Lentja është mbuluar.</string>
@@ -1015,7 +1003,7 @@ Patro thjerrëzën për efekt më të mirë."</string>
     <string name="lighting_hint_too_far">Afroje kamerën</string>
     <string name="lighting_hint_usage">"Mund të përdorësh efekte ndriçimi studioje
 në modalitetin Portret"</string>
-    <string name="lighting_lanshan">Dekadentizëm</string>
+    <string name="lighting_lanshan">dekadentizëm</string>
     <string name="lighting_movie_light_effect_title">Efektet kinematike</string>
     <string name="lighting_neon">Neon</string>
     <string name="lighting_nostalgia">nostalgji</string>
@@ -1260,7 +1248,6 @@ të duken më të mëdha në foto"</string>
     <string name="miuix_appcompat_delete_description">Fshij</string>
     <string name="miuix_appcompat_deselect_all">"Ç'zgjidh të gjithë"</string>
     <string name="miuix_appcompat_deselect_all_description">Fshij të gjitha</string>
-    <string name="miuix_appcompat_edit">Redakto</string>
     <string name="miuix_appcompat_search_action_mode_cancel">Anulo</string>
     <string name="miuix_appcompat_search_input_description">Kërko</string>
     <string name="miuix_appcompat_select_all">Përzgjidhi të gjitha</string>
@@ -2112,7 +2099,7 @@ Mbaj objektin në fokus teksa mjegullosni sfondin."</string>
     <string name="subtitle_network_exception_tips">Nuk mund të lidhej me rrjetin. Nuk mund të transkriptohet tani.</string>
     <string name="summary_pref_camera_doc4">Drejtoje kamerën drejt tekstit kinez ose anglisht për ta njohur atë</string>
     <string name="sunday">E diel</string>
-    <string name="sunday_short">Die</string>
+    <string name="sunday_short">Dielli</string>
     <string name="sunday_shortest">Die</string>
     <string name="super_eis">Video e qëndrueshme</string>
     <string name="super_eis_disabled_hint">Videoja e qëndrueshme është fikur</string>
@@ -2199,7 +2186,6 @@ Mbaj objektin në fokus teksa mjegullosni sfondin."</string>
     <string name="time_picker_label_hour">H</string>
     <string name="time_picker_label_minute">M</string>
     <string name="time_stamp_date_format">dd.MM.yyyy</string>
-    <string name="time_stamp_date_format_minute">dd/MM/yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">Mund ta ngrini dhe ngrini sfondin në çdo kohë para ose gjatë shkrepjes.</string>
     <string name="timefreeze_guide_tip3">Kërkojini subjektit tuaj të qëndrojë në qendër të kornizës.</string>
     <string name="timefreeze_guide_tip4">Bëni ndalimin e trafikut.</string>
@@ -2237,7 +2223,7 @@ Mbaj objektin në fokus teksa mjegullosni sfondin."</string>
     <string name="tip_flash_screen_light_on">Blic i butë: Ndezur</string>
     <string name="tip_flash_soft_light_off">Blic i butë: Fikur</string>
     <string name="tip_flash_soft_light_torch">Blic i butë: Modaliteti Elektrik dore</string>
-    <string name="tip_flash_torch">Blic: Elektrik dore</string>
+    <string name="tip_flash_torch">Blic: Gjithmone ndezur</string>
     <string name="tip_friend_mode_connect_when_24GHz">Përdorni një lidhje %s GHz për të rritur cilësinë e pamjes paraprake</string>
     <string name="tip_friend_mode_display_device_name_connect">Pamje paraprake e ndare</string>
     <string name="tip_friend_mode_display_device_name_disconnect">Pajisja tjetër u largua nga ky sesion</string>

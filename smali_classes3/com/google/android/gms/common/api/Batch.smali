@@ -35,6 +35,7 @@
 .method public synthetic constructor <init>(Ljava/util/List;Lcom/google/android/gms/common/api/GoogleApiClient;Lcom/google/android/gms/common/api/zac;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0, p2}, Lcom/google/android/gms/common/api/internal/BasePendingResult;-><init>(Lcom/google/android/gms/common/api/GoogleApiClient;)V
 
     new-instance p2, Ljava/lang/Object;
@@ -43,16 +44,19 @@
 
     iput-object p2, p0, Lcom/google/android/gms/common/api/Batch;->zai:Ljava/lang/Object;
 
+    .line 2
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result p2
 
     iput p2, p0, Lcom/google/android/gms/common/api/Batch;->zae:I
 
+    .line 3
     new-array p2, p2, [Lcom/google/android/gms/common/api/PendingResult;
 
     iput-object p2, p0, Lcom/google/android/gms/common/api/Batch;->zah:[Lcom/google/android/gms/common/api/PendingResult;
 
+    .line 4
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result p3
@@ -61,6 +65,7 @@
 
     const/4 p2, 0x0
 
+    .line 5
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -68,6 +73,7 @@
 
     if-ge p2, p3, :cond_0
 
+    .line 6
     invoke-interface {p1, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p3
@@ -76,12 +82,14 @@
 
     iget-object v0, p0, Lcom/google/android/gms/common/api/Batch;->zah:[Lcom/google/android/gms/common/api/PendingResult;
 
+    .line 7
     aput-object p3, v0, p2
 
     new-instance v0, Lcom/google/android/gms/common/api/zab;
 
     invoke-direct {v0, p0}, Lcom/google/android/gms/common/api/zab;-><init>(Lcom/google/android/gms/common/api/Batch;)V
 
+    .line 8
     invoke-virtual {p3, v0}, Lcom/google/android/gms/common/api/PendingResult;->addStatusListener(Lcom/google/android/gms/common/api/PendingResult$StatusListener;)V
 
     add-int/lit8 p2, p2, 0x1
@@ -91,6 +99,7 @@
     :cond_0
     return-void
 
+    .line 9
     :cond_1
     new-instance p1, Lcom/google/android/gms/common/api/BatchResult;
 
@@ -150,6 +159,7 @@
 .method public static synthetic zaf(Lcom/google/android/gms/common/api/Batch;)V
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->cancel()V
 
     return-void
@@ -184,10 +194,12 @@
 .method public cancel()V
     .locals 3
 
+    .line 1
     invoke-super {p0}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->cancel()V
 
     iget-object p0, p0, Lcom/google/android/gms/common/api/Batch;->zah:[Lcom/google/android/gms/common/api/PendingResult;
 
+    .line 2
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -197,6 +209,7 @@
 
     aget-object v2, p0, v1
 
+    .line 3
     invoke-virtual {v2}, Lcom/google/android/gms/common/api/PendingResult;->cancel()V
 
     add-int/lit8 v1, v1, 0x1

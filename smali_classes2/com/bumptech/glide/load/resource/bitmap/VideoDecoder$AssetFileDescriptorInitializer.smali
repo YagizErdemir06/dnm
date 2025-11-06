@@ -1,4 +1,4 @@
-.class final Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder$AssetFileDescriptorInitializer;
+.class public final Lcom/bumptech/glide/load/resource/bitmap/VideoDecoder$AssetFileDescriptorInitializer;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

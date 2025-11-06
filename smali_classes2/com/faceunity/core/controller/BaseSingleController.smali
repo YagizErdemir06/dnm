@@ -14,9 +14,14 @@
     value = "SMAP\nBaseSingleController.kt\nKotlin\n*S Kotlin\n*F\n+ 1 BaseSingleController.kt\ncom/faceunity/core/controller/BaseSingleController\n+ 2 _Maps.kt\nkotlin/collections/MapsKt___MapsKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,663:1\n181#2,2:664\n181#2:672\n181#2,2:673\n182#2:675\n181#2,2:676\n181#2,2:678\n181#2,2:680\n181#2:682\n181#2,2:683\n182#2:685\n181#2:686\n181#2,2:687\n182#2:689\n181#2:690\n181#2,2:691\n182#2:693\n181#2,2:694\n1819#3,2:666\n1819#3,2:668\n1819#3,2:670\n1819#3,2:696\n*E\n*S KotlinDebug\n*F\n+ 1 BaseSingleController.kt\ncom/faceunity/core/controller/BaseSingleController\n*L\n118#1,2:664\n153#1:672\n156#1,2:673\n153#1:675\n173#1,2:676\n179#1,2:678\n191#1,2:680\n205#1:682\n208#1,2:683\n205#1:685\n226#1:686\n228#1,2:687\n226#1:689\n243#1:690\n245#1,2:691\n243#1:693\n260#1,2:694\n121#1,2:666\n125#1,2:668\n139#1,2:670\n272#1,2:696\n*E\n"
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000\u00a0\u0001\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u000b\n\u0002\u0010\u0008\n\u0002\u0008\u0005\n\u0002\u0010\u0015\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\n\n\u0002\u0010\u0012\n\u0002\u0008\u0005\n\u0002\u0010\u000b\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\t\u0008\u0016\u0018\u0000 e2\u00020\u0001:\u0001eB\u0007\u00a2\u0006\u0004\u0008d\u0010KJ\u001c\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\n\u0008\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u0004H\u0002J\u0010\u0010\u0008\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u0002H\u0002J\u0010\u0010\t\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u0002H\u0002J\u0010\u0010\n\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u0002H\u0002J\u0010\u0010\u000b\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u0002H\u0002J\u0010\u0010\u000c\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u0002H\u0002J\u0010\u0010\r\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u0002H\u0002J\u0010\u0010\u000e\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u0002H\u0002J\u0010\u0010\u000f\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u0002H\u0002J\u0010\u0010\u0010\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u0002H\u0002J\u0010\u0010\u0011\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u0002H\u0002J\u0010\u0010\u0014\u001a\u00020\u00062\u0006\u0010\u0013\u001a\u00020\u0012H\u0002J\u0010\u0010\u0015\u001a\u00020\u00062\u0006\u0010\u0013\u001a\u00020\u0012H\u0002J\u0010\u0010\u0016\u001a\u00020\u00062\u0006\u0010\u0013\u001a\u00020\u0012H\u0002J\u0018\u0010\u001a\u001a\u00020\u00062\u0006\u0010\u0017\u001a\u00020\u00122\u0006\u0010\u0019\u001a\u00020\u0018H\u0002J\u0012\u0010\u001e\u001a\u0004\u0018\u00010\u001d2\u0006\u0010\u001c\u001a\u00020\u001bH\u0002J\u0012\u0010\u001f\u001a\u0004\u0018\u00010\u001d2\u0006\u0010\u001c\u001a\u00020\u001bH\u0002J\u0016\u0010\"\u001a\u00020\u00062\u000c\u0010!\u001a\u0008\u0012\u0004\u0012\u00020\u00060 H\u0002J\u0016\u0010#\u001a\u00020\u00062\u000c\u0010!\u001a\u0008\u0012\u0004\u0012\u00020\u00060 H\u0002J\u001a\u0010\'\u001a\u00020\u00062\u0008\u0010%\u001a\u0004\u0018\u00010$2\u0008\u0010&\u001a\u0004\u0018\u00010$J\"\u0010-\u001a\u00020\u00062\u0006\u0010)\u001a\u00020(2\u0008\u0010+\u001a\u0004\u0018\u00010*2\u0008\u0010,\u001a\u0004\u0018\u00010*J\u0010\u0010.\u001a\u00020\u00122\u0006\u0010\u001c\u001a\u00020\u001bH\u0004J\u0010\u0010/\u001a\u00020\u00122\u0006\u0010\u001c\u001a\u00020\u001bH\u0004J\u0018\u00100\u001a\u00020\u00062\u0006\u0010\u0017\u001a\u00020\u00122\u0006\u0010\u0019\u001a\u00020\u0018H\u0004J\u0018\u00100\u001a\u00020\u00062\u0006\u0010\u0017\u001a\u00020\u00122\u0006\u00101\u001a\u00020\u0012H\u0004J\u0018\u0010\u001a\u001a\u00020\u00062\u0006\u0010\u0017\u001a\u00020\u00122\u0006\u00101\u001a\u00020\u0012H\u0004J\u0010\u00102\u001a\u00020\u00062\u0006\u0010\u0013\u001a\u00020\u0012H\u0004J\u0010\u00102\u001a\u00020\u00062\u0006\u0010\u001c\u001a\u00020\u001bH\u0004J \u00104\u001a\u00020\u00062\u0006\u0010)\u001a\u00020(2\u0006\u00103\u001a\u00020\u001b2\u0008\u0010\u001c\u001a\u0004\u0018\u00010\u001bJ0\u00109\u001a\u00020\u00062\u0006\u0010\u0013\u001a\u00020\u00122\u0006\u00103\u001a\u00020\u001b2\u0006\u00106\u001a\u0002052\u0006\u00107\u001a\u00020\u00122\u0006\u00108\u001a\u00020\u0012H\u0004J\u0018\u0010:\u001a\u00020\u00062\u0006\u0010\u0013\u001a\u00020\u00122\u0006\u00103\u001a\u00020\u001bH\u0004J\u0016\u0010=\u001a\u00020\u00062\u0006\u0010)\u001a\u00020(2\u0006\u0010<\u001a\u00020;J\u001e\u0010@\u001a\u00020\u00062\u0006\u0010)\u001a\u00020(2\u0006\u0010>\u001a\u00020\u001b2\u0006\u0010?\u001a\u00020\u0001J2\u0010@\u001a\u00020\u00062\u0006\u0010)\u001a\u00020(2\"\u0010C\u001a\u001e\u0012\u0004\u0012\u00020\u001b\u0012\u0004\u0012\u00020\u00010Aj\u000e\u0012\u0004\u0012\u00020\u001b\u0012\u0004\u0012\u00020\u0001`BJ \u0010D\u001a\u00020\u00062\u0006\u0010\u0013\u001a\u00020\u00122\u0006\u0010>\u001a\u00020\u001b2\u0006\u0010?\u001a\u00020\u0001H\u0004J3\u0010G\u001a\u00020\u00062\u0006\u0010)\u001a\u00020(2!\u0010!\u001a\u001d\u0012\u0013\u0012\u00110\u0012\u00a2\u0006\u000c\u0008F\u0012\u0008\u00083\u0012\u0004\u0008\u0008(\u0013\u0012\u0004\u0012\u00020\u00060EH\u0004J3\u0010H\u001a\u00020\u00062\u0006\u0010)\u001a\u00020(2!\u0010!\u001a\u001d\u0012\u0013\u0012\u00110\u0012\u00a2\u0006\u000c\u0008F\u0012\u0008\u00083\u0012\u0004\u0008\u0008(\u0013\u0012\u0004\u0012\u00020\u00060EH\u0004J3\u0010I\u001a\u00020\u00062\u0006\u0010)\u001a\u00020(2!\u0010!\u001a\u001d\u0012\u0013\u0012\u00110\u0012\u00a2\u0006\u000c\u0008F\u0012\u0008\u00083\u0012\u0004\u0008\u0008(\u0013\u0012\u0004\u0012\u00020\u00060EH\u0004J\u000f\u0010L\u001a\u00020\u0006H\u0010\u00a2\u0006\u0004\u0008J\u0010KR\u001b\u0010R\u001a\u00020M8DX\u0084\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008N\u0010O\u001a\u0004\u0008P\u0010QR\u001b\u0010W\u001a\u00020S8BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008T\u0010O\u001a\u0004\u0008U\u0010VR\u001b\u0010\\\u001a\u00020X8BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008Y\u0010O\u001a\u0004\u0008Z\u0010[R&\u0010^\u001a\u000e\u0012\u0004\u0012\u00020(\u0012\u0004\u0012\u00020\u00120]8\u0004X\u0084\u0004\u00a2\u0006\u000c\n\u0004\u0008^\u0010_\u001a\u0004\u0008`\u0010aR0\u0010b\u001a\u001e\u0012\u0004\u0012\u00020\u001b\u0012\u0004\u0012\u00020\u001d0Aj\u000e\u0012\u0004\u0012\u00020\u001b\u0012\u0004\u0012\u00020\u001d`B8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008b\u0010c\u00a8\u0006f"
+        "\u0000\u00a0\u0001\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\r\n\u0002\u0010\u0008\n\u0002\u0008\u0006\n\u0002\u0010\u0015\n\u0002\u0008\u0003\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u000f\n\u0002\u0010\u0012\n\u0002\u0008\u0007\n\u0002\u0010\u000b\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\t\u0008\u0016\u0018\u0000 x2\u00020\u0001:\u0001xB\u0007\u00a2\u0006\u0004\u0008w\u0010^J#\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\n\u0008\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u0004H\u0002\u00a2\u0006\u0004\u0008\u0007\u0010\u0008J\u0017\u0010\t\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u0002H\u0002\u00a2\u0006\u0004\u0008\t\u0010\nJ\u0017\u0010\u000b\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u0002H\u0002\u00a2\u0006\u0004\u0008\u000b\u0010\nJ\u0017\u0010\u000c\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u0002H\u0002\u00a2\u0006\u0004\u0008\u000c\u0010\nJ\u0017\u0010\r\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u0002H\u0002\u00a2\u0006\u0004\u0008\r\u0010\nJ\u0017\u0010\u000e\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u0002H\u0002\u00a2\u0006\u0004\u0008\u000e\u0010\nJ\u0017\u0010\u000f\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u0002H\u0002\u00a2\u0006\u0004\u0008\u000f\u0010\nJ\u0017\u0010\u0010\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u0002H\u0002\u00a2\u0006\u0004\u0008\u0010\u0010\nJ\u0017\u0010\u0011\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u0002H\u0002\u00a2\u0006\u0004\u0008\u0011\u0010\nJ\u0017\u0010\u0012\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u0002H\u0002\u00a2\u0006\u0004\u0008\u0012\u0010\nJ\u0017\u0010\u0013\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u0002H\u0002\u00a2\u0006\u0004\u0008\u0013\u0010\nJ\u0017\u0010\u0016\u001a\u00020\u00062\u0006\u0010\u0015\u001a\u00020\u0014H\u0002\u00a2\u0006\u0004\u0008\u0016\u0010\u0017J\u0017\u0010\u0018\u001a\u00020\u00062\u0006\u0010\u0015\u001a\u00020\u0014H\u0002\u00a2\u0006\u0004\u0008\u0018\u0010\u0017J\u0017\u0010\u0019\u001a\u00020\u00062\u0006\u0010\u0015\u001a\u00020\u0014H\u0002\u00a2\u0006\u0004\u0008\u0019\u0010\u0017J\u001f\u0010\u001d\u001a\u00020\u00062\u0006\u0010\u001a\u001a\u00020\u00142\u0006\u0010\u001c\u001a\u00020\u001bH\u0002\u00a2\u0006\u0004\u0008\u001d\u0010\u001eJ\u0019\u0010\"\u001a\u0004\u0018\u00010!2\u0006\u0010 \u001a\u00020\u001fH\u0002\u00a2\u0006\u0004\u0008\"\u0010#J\u0019\u0010$\u001a\u0004\u0018\u00010!2\u0006\u0010 \u001a\u00020\u001fH\u0002\u00a2\u0006\u0004\u0008$\u0010#J\u001d\u0010\'\u001a\u00020\u00062\u000c\u0010&\u001a\u0008\u0012\u0004\u0012\u00020\u00060%H\u0002\u00a2\u0006\u0004\u0008\'\u0010(J\u001d\u0010)\u001a\u00020\u00062\u000c\u0010&\u001a\u0008\u0012\u0004\u0012\u00020\u00060%H\u0002\u00a2\u0006\u0004\u0008)\u0010(J!\u0010-\u001a\u00020\u00062\u0008\u0010+\u001a\u0004\u0018\u00010*2\u0008\u0010,\u001a\u0004\u0018\u00010*\u00a2\u0006\u0004\u0008-\u0010.J)\u00104\u001a\u00020\u00062\u0006\u00100\u001a\u00020/2\u0008\u00102\u001a\u0004\u0018\u0001012\u0008\u00103\u001a\u0004\u0018\u000101\u00a2\u0006\u0004\u00084\u00105J\u0017\u00106\u001a\u00020\u00142\u0006\u0010 \u001a\u00020\u001fH\u0004\u00a2\u0006\u0004\u00086\u00107J\u0017\u00108\u001a\u00020\u00142\u0006\u0010 \u001a\u00020\u001fH\u0004\u00a2\u0006\u0004\u00088\u00107J\u001f\u00109\u001a\u00020\u00062\u0006\u0010\u001a\u001a\u00020\u00142\u0006\u0010\u001c\u001a\u00020\u001bH\u0004\u00a2\u0006\u0004\u00089\u0010\u001eJ\u001f\u00109\u001a\u00020\u00062\u0006\u0010\u001a\u001a\u00020\u00142\u0006\u0010:\u001a\u00020\u0014H\u0004\u00a2\u0006\u0004\u00089\u0010;J\u001f\u0010\u001d\u001a\u00020\u00062\u0006\u0010\u001a\u001a\u00020\u00142\u0006\u0010:\u001a\u00020\u0014H\u0004\u00a2\u0006\u0004\u0008\u001d\u0010;J\u0017\u0010<\u001a\u00020\u00062\u0006\u0010\u0015\u001a\u00020\u0014H\u0004\u00a2\u0006\u0004\u0008<\u0010\u0017J\u0017\u0010<\u001a\u00020\u00062\u0006\u0010 \u001a\u00020\u001fH\u0004\u00a2\u0006\u0004\u0008<\u0010=J\'\u0010?\u001a\u00020\u00062\u0006\u00100\u001a\u00020/2\u0006\u0010>\u001a\u00020\u001f2\u0008\u0010 \u001a\u0004\u0018\u00010\u001f\u00a2\u0006\u0004\u0008?\u0010@J7\u0010E\u001a\u00020\u00062\u0006\u0010\u0015\u001a\u00020\u00142\u0006\u0010>\u001a\u00020\u001f2\u0006\u0010B\u001a\u00020A2\u0006\u0010C\u001a\u00020\u00142\u0006\u0010D\u001a\u00020\u0014H\u0004\u00a2\u0006\u0004\u0008E\u0010FJ\u001f\u0010G\u001a\u00020\u00062\u0006\u0010\u0015\u001a\u00020\u00142\u0006\u0010>\u001a\u00020\u001fH\u0004\u00a2\u0006\u0004\u0008G\u0010HJ\u001d\u0010K\u001a\u00020\u00062\u0006\u00100\u001a\u00020/2\u0006\u0010J\u001a\u00020I\u00a2\u0006\u0004\u0008K\u0010LJ%\u0010O\u001a\u00020\u00062\u0006\u00100\u001a\u00020/2\u0006\u0010M\u001a\u00020\u001f2\u0006\u0010N\u001a\u00020\u0001\u00a2\u0006\u0004\u0008O\u0010PJ9\u0010O\u001a\u00020\u00062\u0006\u00100\u001a\u00020/2\"\u0010S\u001a\u001e\u0012\u0004\u0012\u00020\u001f\u0012\u0004\u0012\u00020\u00010Qj\u000e\u0012\u0004\u0012\u00020\u001f\u0012\u0004\u0012\u00020\u0001`R\u00a2\u0006\u0004\u0008O\u0010TJ\'\u0010U\u001a\u00020\u00062\u0006\u0010\u0015\u001a\u00020\u00142\u0006\u0010M\u001a\u00020\u001f2\u0006\u0010N\u001a\u00020\u0001H\u0004\u00a2\u0006\u0004\u0008U\u0010VJ:\u0010Y\u001a\u00020\u00062\u0006\u00100\u001a\u00020/2!\u0010&\u001a\u001d\u0012\u0013\u0012\u00110\u0014\u00a2\u0006\u000c\u0008X\u0012\u0008\u0008>\u0012\u0004\u0008\u0008(\u0015\u0012\u0004\u0012\u00020\u00060WH\u0004\u00a2\u0006\u0004\u0008Y\u0010ZJ:\u0010[\u001a\u00020\u00062\u0006\u00100\u001a\u00020/2!\u0010&\u001a\u001d\u0012\u0013\u0012\u00110\u0014\u00a2\u0006\u000c\u0008X\u0012\u0008\u0008>\u0012\u0004\u0008\u0008(\u0015\u0012\u0004\u0012\u00020\u00060WH\u0004\u00a2\u0006\u0004\u0008[\u0010ZJ:\u0010\\\u001a\u00020\u00062\u0006\u00100\u001a\u00020/2!\u0010&\u001a\u001d\u0012\u0013\u0012\u00110\u0014\u00a2\u0006\u000c\u0008X\u0012\u0008\u0008>\u0012\u0004\u0008\u0008(\u0015\u0012\u0004\u0012\u00020\u00060WH\u0004\u00a2\u0006\u0004\u0008\\\u0010ZJ\u000f\u0010_\u001a\u00020\u0006H\u0010\u00a2\u0006\u0004\u0008]\u0010^R\u001d\u0010e\u001a\u00020`8B@\u0002X\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008a\u0010b\u001a\u0004\u0008c\u0010dR(\u0010g\u001a\u000e\u0012\u0004\u0012\u00020/\u0012\u0004\u0012\u00020\u00140f8\u0004@\u0004X\u0084\u0004\u00a2\u0006\u000c\n\u0004\u0008g\u0010h\u001a\u0004\u0008i\u0010jR\u001d\u0010o\u001a\u00020k8B@\u0002X\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008l\u0010b\u001a\u0004\u0008m\u0010nR\u001d\u0010t\u001a\u00020p8D@\u0004X\u0084\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008q\u0010b\u001a\u0004\u0008r\u0010sR2\u0010u\u001a\u001e\u0012\u0004\u0012\u00020\u001f\u0012\u0004\u0012\u00020!0Qj\u000e\u0012\u0004\u0012\u00020\u001f\u0012\u0004\u0012\u00020!`R8\u0002@\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008u\u0010v\u00a8\u0006y"
     }
     d2 = {
         "Lcom/faceunity/core/controller/BaseSingleController;",
@@ -25,9 +30,11 @@
         "compareData",
         "Lcom/faceunity/core/listener/OnExecuteListener;",
         "listener",
-        "Lnm/l2;",
+        "Lh/l2;",
         "applyCompData",
+        "(Lcom/faceunity/core/entity/FUModelCompareData;Lcom/faceunity/core/listener/OnExecuteListener;)V",
         "applyCreateBundle",
+        "(Lcom/faceunity/core/entity/FUModelCompareData;)V",
         "applyCreateTex",
         "applyRemoveChildBundle",
         "applyRemoveControllerBundle",
@@ -40,83 +47,100 @@
         "",
         "handle",
         "bindControllerBundle",
+        "(I)V",
         "unbindControllerBundle",
         "unbindAndDestroyControllerBundle",
         "controlHandle",
         "",
         "items",
         "bindControllerItem",
+        "(I[I)V",
         "",
         "path",
         "Lcom/faceunity/core/entity/FUTextureImageData;",
         "createTextureImage",
+        "(Ljava/lang/String;)Lcom/faceunity/core/entity/FUTextureImageData;",
         "loadTextureImageFromLocal",
         "Lkotlin/Function0;",
         "unit",
         "doBackgroundAction",
+        "(Lh/d3/w/a;)V",
         "doGLThreadAction",
         "Lcom/faceunity/core/entity/FUFeaturesData;",
         "oldData",
         "newData",
         "replaceModel",
+        "(Lcom/faceunity/core/entity/FUFeaturesData;Lcom/faceunity/core/entity/FUFeaturesData;)V",
         "",
         "modelId",
         "Lcom/faceunity/core/entity/FUBundleData;",
         "oldBundle",
         "newBundle",
         "replaceChildBundleData",
+        "(JLcom/faceunity/core/entity/FUBundleData;Lcom/faceunity/core/entity/FUBundleData;)V",
         "getBundleHandle",
+        "(Ljava/lang/String;)I",
         "createBundle",
         "unbindControllerItem",
         "item",
+        "(II)V",
         "destroyBundle",
+        "(Ljava/lang/String;)V",
         "name",
         "updateItemTex",
+        "(JLjava/lang/String;Ljava/lang/String;)V",
         "",
         "bytes",
         "width",
         "height",
         "createItemTex",
+        "(ILjava/lang/String;[BII)V",
         "deleteItemTex",
+        "(ILjava/lang/String;)V",
         "",
         "enable",
         "setBundleEnable",
+        "(JZ)V",
         "key",
         "value",
         "setItemParam",
+        "(JLjava/lang/String;Ljava/lang/Object;)V",
         "Ljava/util/LinkedHashMap;",
         "Lkotlin/collections/LinkedHashMap;",
         "params",
+        "(JLjava/util/LinkedHashMap;)V",
         "itemSetParam",
+        "(ILjava/lang/String;Ljava/lang/Object;)V",
         "Lkotlin/Function1;",
-        "Lnm/v0;",
+        "Lh/v0;",
         "doControllerActionBackground",
+        "(JLh/d3/w/l;)V",
         "doControllerActionGL",
         "doControllerActionBackgroundGL",
         "release$lib_core_release",
         "()V",
         "release",
-        "Lcom/faceunity/core/schedule/FUThreadSchedule;",
-        "mThreadSchedule$delegate",
-        "Lnm/d0;",
-        "getMThreadSchedule",
-        "()Lcom/faceunity/core/schedule/FUThreadSchedule;",
-        "mThreadSchedule",
         "Lcom/faceunity/core/bundle/FUBundleManager;",
         "mBundleManager$delegate",
+        "Lh/d0;",
         "getMBundleManager",
         "()Lcom/faceunity/core/bundle/FUBundleManager;",
         "mBundleManager",
-        "Lcom/faceunity/core/controller/base/ModelDataConverter;",
-        "mModelDataConverter$delegate",
-        "getMModelDataConverter",
-        "()Lcom/faceunity/core/controller/base/ModelDataConverter;",
-        "mModelDataConverter",
         "Ljava/util/concurrent/ConcurrentHashMap;",
         "mModelIdMap",
         "Ljava/util/concurrent/ConcurrentHashMap;",
         "getMModelIdMap",
         "()Ljava/util/concurrent/ConcurrentHashMap;",
+        "Lcom/faceunity/core/controller/base/ModelDataConverter;",
+        "mModelDataConverter$delegate",
+        "getMModelDataConverter",
+        "()Lcom/faceunity/core/controller/base/ModelDataConverter;",
+        "mModelDataConverter",
+        "Lcom/faceunity/core/schedule/FUThreadSchedule;",
+        "mThreadSchedule$delegate",
+        "getMThreadSchedule",
+        "()Lcom/faceunity/core/schedule/FUThreadSchedule;",
+        "mThreadSchedule",
         "mFUTextureImageDataMap",
         "Ljava/util/LinkedHashMap;",
         "<init>",
@@ -134,18 +158,18 @@
 
 # static fields
 .field public static final Companion:Lcom/faceunity/core/controller/BaseSingleController$Companion;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field private static final TAG:Ljava/lang/String;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 
 # instance fields
-.field private final mBundleManager$delegate:Lnm/d0;
+.field private final mBundleManager$delegate:Lh/d0;
 
 .field private final mFUTextureImageDataMap:Ljava/util/LinkedHashMap;
     .annotation system Ldalvik/annotation/Signature;
@@ -158,7 +182,7 @@
     .end annotation
 .end field
 
-.field private final mModelDataConverter$delegate:Lnm/d0;
+.field private final mModelDataConverter$delegate:Lh/d0;
 
 .field private final mModelIdMap:Ljava/util/concurrent/ConcurrentHashMap;
     .annotation system Ldalvik/annotation/Signature;
@@ -170,12 +194,12 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
-.field private final mThreadSchedule$delegate:Lnm/d0;
-    .annotation build Ljv/d;
+.field private final mThreadSchedule$delegate:Lh/d0;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -188,10 +212,11 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/faceunity/core/controller/BaseSingleController$Companion;-><init>(Lkotlin/jvm/internal/w;)V
+    invoke-direct {v0, v1}, Lcom/faceunity/core/controller/BaseSingleController$Companion;-><init>(Lh/d3/x/w;)V
 
     sput-object v0, Lcom/faceunity/core/controller/BaseSingleController;->Companion:Lcom/faceunity/core/controller/BaseSingleController$Companion;
 
+    .line 1
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -222,32 +247,37 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     sget-object v0, Lcom/faceunity/core/controller/BaseSingleController$mThreadSchedule$2;->INSTANCE:Lcom/faceunity/core/controller/BaseSingleController$mThreadSchedule$2;
 
-    invoke-static {v0}, Lnm/f0;->b(Ljn/a;)Lnm/d0;
+    invoke-static {v0}, Lh/f0;->c(Lh/d3/w/a;)Lh/d0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/faceunity/core/controller/BaseSingleController;->mThreadSchedule$delegate:Lnm/d0;
+    iput-object v0, p0, Lcom/faceunity/core/controller/BaseSingleController;->mThreadSchedule$delegate:Lh/d0;
 
+    .line 3
     sget-object v0, Lcom/faceunity/core/controller/BaseSingleController$mBundleManager$2;->INSTANCE:Lcom/faceunity/core/controller/BaseSingleController$mBundleManager$2;
 
-    invoke-static {v0}, Lnm/f0;->b(Ljn/a;)Lnm/d0;
+    invoke-static {v0}, Lh/f0;->c(Lh/d3/w/a;)Lh/d0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/faceunity/core/controller/BaseSingleController;->mBundleManager$delegate:Lnm/d0;
+    iput-object v0, p0, Lcom/faceunity/core/controller/BaseSingleController;->mBundleManager$delegate:Lh/d0;
 
+    .line 4
     sget-object v0, Lcom/faceunity/core/controller/BaseSingleController$mModelDataConverter$2;->INSTANCE:Lcom/faceunity/core/controller/BaseSingleController$mModelDataConverter$2;
 
-    invoke-static {v0}, Lnm/f0;->b(Ljn/a;)Lnm/d0;
+    invoke-static {v0}, Lh/f0;->c(Lh/d3/w/a;)Lh/d0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/faceunity/core/controller/BaseSingleController;->mModelDataConverter$delegate:Lnm/d0;
+    iput-object v0, p0, Lcom/faceunity/core/controller/BaseSingleController;->mModelDataConverter$delegate:Lh/d0;
 
+    .line 5
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     const/16 v1, 0x10
@@ -256,6 +286,7 @@
 
     iput-object v0, p0, Lcom/faceunity/core/controller/BaseSingleController;->mModelIdMap:Ljava/util/concurrent/ConcurrentHashMap;
 
+    .line 6
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0, v1}, Ljava/util/LinkedHashMap;-><init>(I)V
@@ -268,6 +299,7 @@
 .method public static final synthetic access$applyAddTex(Lcom/faceunity/core/controller/BaseSingleController;Lcom/faceunity/core/entity/FUModelCompareData;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/faceunity/core/controller/BaseSingleController;->applyAddTex(Lcom/faceunity/core/entity/FUModelCompareData;)V
 
     return-void
@@ -276,6 +308,7 @@
 .method public static final synthetic access$bindControllerBundle(Lcom/faceunity/core/controller/BaseSingleController;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/faceunity/core/controller/BaseSingleController;->bindControllerBundle(I)V
 
     return-void
@@ -284,6 +317,7 @@
 .method public static final synthetic access$createTextureImage(Lcom/faceunity/core/controller/BaseSingleController;Ljava/lang/String;)Lcom/faceunity/core/entity/FUTextureImageData;
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/faceunity/core/controller/BaseSingleController;->createTextureImage(Ljava/lang/String;)Lcom/faceunity/core/entity/FUTextureImageData;
 
     move-result-object p0
@@ -291,10 +325,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic access$doGLThreadAction(Lcom/faceunity/core/controller/BaseSingleController;Ljn/a;)V
+.method public static final synthetic access$doGLThreadAction(Lcom/faceunity/core/controller/BaseSingleController;Lh/d3/w/a;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/faceunity/core/controller/BaseSingleController;->doGLThreadAction(Ljn/a;)V
+    .line 1
+    invoke-direct {p0, p1}, Lcom/faceunity/core/controller/BaseSingleController;->doGLThreadAction(Lh/d3/w/a;)V
 
     return-void
 .end method
@@ -302,6 +337,7 @@
 .method public static final synthetic access$getMFUTextureImageDataMap$p(Lcom/faceunity/core/controller/BaseSingleController;)Ljava/util/LinkedHashMap;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/controller/BaseSingleController;->mFUTextureImageDataMap:Ljava/util/LinkedHashMap;
 
     return-object p0
@@ -310,6 +346,7 @@
 .method public static final synthetic access$getMModelDataConverter$p(Lcom/faceunity/core/controller/BaseSingleController;)Lcom/faceunity/core/controller/base/ModelDataConverter;
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/core/controller/BaseSingleController;->getMModelDataConverter()Lcom/faceunity/core/controller/base/ModelDataConverter;
 
     move-result-object p0
@@ -320,6 +357,7 @@
 .method public static final synthetic access$getTAG$cp()Ljava/lang/String;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/faceunity/core/controller/BaseSingleController;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -328,6 +366,7 @@
 .method public static final synthetic access$unbindAndDestroyControllerBundle(Lcom/faceunity/core/controller/BaseSingleController;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/faceunity/core/controller/BaseSingleController;->unbindAndDestroyControllerBundle(I)V
 
     return-void
@@ -336,6 +375,7 @@
 .method public static final synthetic access$unbindControllerBundle(Lcom/faceunity/core/controller/BaseSingleController;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/faceunity/core/controller/BaseSingleController;->unbindControllerBundle(I)V
 
     return-void
@@ -344,10 +384,12 @@
 .method private final applyAddChildBundle(Lcom/faceunity/core/entity/FUModelCompareData;)V
     .locals 4
 
+    .line 1
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FUModelCompareData;->getBindChildBundleMap()Ljava/util/LinkedHashMap;
 
     move-result-object p1
 
+    .line 2
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p1
@@ -386,6 +428,7 @@
 
     check-cast v0, Ljava/util/HashMap;
 
+    .line 3
     iget-object v3, p0, Lcom/faceunity/core/controller/BaseSingleController;->mModelIdMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -400,10 +443,12 @@
 
     if-eqz v1, :cond_0
 
+    .line 4
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
+    .line 5
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v0
@@ -432,12 +477,14 @@
 
     check-cast v3, Ljava/lang/String;
 
+    .line 6
     invoke-virtual {p0, v3}, Lcom/faceunity/core/controller/BaseSingleController;->getBundleHandle(Ljava/lang/String;)I
 
     move-result v3
 
     if-lez v3, :cond_1
 
+    .line 7
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -446,6 +493,7 @@
 
     goto :goto_1
 
+    .line 8
     :cond_2
     invoke-interface {v2}, Ljava/util/Collection;->isEmpty()Z
 
@@ -457,13 +505,14 @@
 
     const-string v0, "controlHandle"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 9
+    invoke-static {v1, v0}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
-    invoke-static {v2}, Lpm/g0;->P5(Ljava/util/Collection;)[I
+    invoke-static {v2}, Lh/t2/g0;->P5(Ljava/util/Collection;)[I
 
     move-result-object v1
 
@@ -478,10 +527,12 @@
 .method private final applyAddControllerBundle(Lcom/faceunity/core/entity/FUModelCompareData;)V
     .locals 4
 
+    .line 1
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FUModelCompareData;->getBindControllerBundleMap()Ljava/util/HashMap;
 
     move-result-object p1
 
+    .line 2
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p1
@@ -519,6 +570,7 @@
 
     check-cast v0, Lcom/faceunity/core/entity/FUBundleData;
 
+    .line 3
     invoke-virtual {v0}, Lcom/faceunity/core/entity/FUBundleData;->getPath()Ljava/lang/String;
 
     move-result-object v0
@@ -531,6 +583,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-object v3, p0, Lcom/faceunity/core/controller/BaseSingleController;->mModelIdMap:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -553,10 +606,12 @@
 .method private final applyAddTex(Lcom/faceunity/core/entity/FUModelCompareData;)V
     .locals 10
 
+    .line 1
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FUModelCompareData;->getBindTexMap()Ljava/util/LinkedHashMap;
 
     move-result-object p1
 
+    .line 2
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p1
@@ -594,6 +649,7 @@
 
     check-cast v0, Ljava/util/HashMap;
 
+    .line 3
     iget-object v3, p0, Lcom/faceunity/core/controller/BaseSingleController;->mModelIdMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -608,6 +664,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 4
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v0
@@ -644,6 +701,7 @@
 
     check-cast v2, Ljava/lang/String;
 
+    .line 5
     iget-object v3, p0, Lcom/faceunity/core/controller/BaseSingleController;->mFUTextureImageDataMap:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v3, v2}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -656,7 +714,8 @@
 
     const-string v3, "handle"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 6
+    invoke-static {v1, v3}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
@@ -664,6 +723,7 @@
 
     invoke-virtual {p0, v3, v6}, Lcom/faceunity/core/controller/BaseSingleController;->deleteItemTex(ILjava/lang/String;)V
 
+    .line 7
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v5
@@ -693,32 +753,43 @@
 .method private final applyCompData(Lcom/faceunity/core/entity/FUModelCompareData;Lcom/faceunity/core/listener/OnExecuteListener;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/faceunity/core/controller/BaseSingleController;->applyCreateBundle(Lcom/faceunity/core/entity/FUModelCompareData;)V
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/faceunity/core/controller/BaseSingleController;->applyCreateTex(Lcom/faceunity/core/entity/FUModelCompareData;)V
 
+    .line 3
     invoke-direct {p0, p1}, Lcom/faceunity/core/controller/BaseSingleController;->applyRemoveChildBundle(Lcom/faceunity/core/entity/FUModelCompareData;)V
 
+    .line 4
     invoke-direct {p0, p1}, Lcom/faceunity/core/controller/BaseSingleController;->applyRemoveControllerBundle(Lcom/faceunity/core/entity/FUModelCompareData;)V
 
+    .line 5
     invoke-direct {p0, p1}, Lcom/faceunity/core/controller/BaseSingleController;->applyAddControllerBundle(Lcom/faceunity/core/entity/FUModelCompareData;)V
 
+    .line 6
     invoke-direct {p0, p1}, Lcom/faceunity/core/controller/BaseSingleController;->applyAddChildBundle(Lcom/faceunity/core/entity/FUModelCompareData;)V
 
+    .line 7
     invoke-direct {p0, p1}, Lcom/faceunity/core/controller/BaseSingleController;->applyParams(Lcom/faceunity/core/entity/FUModelCompareData;)V
 
+    .line 8
     new-instance v0, Lcom/faceunity/core/controller/BaseSingleController$applyCompData$1;
 
     invoke-direct {v0, p0, p1}, Lcom/faceunity/core/controller/BaseSingleController$applyCompData$1;-><init>(Lcom/faceunity/core/controller/BaseSingleController;Lcom/faceunity/core/entity/FUModelCompareData;)V
 
-    invoke-direct {p0, v0}, Lcom/faceunity/core/controller/BaseSingleController;->doGLThreadAction(Ljn/a;)V
+    invoke-direct {p0, v0}, Lcom/faceunity/core/controller/BaseSingleController;->doGLThreadAction(Lh/d3/w/a;)V
 
+    .line 9
     invoke-direct {p0, p1}, Lcom/faceunity/core/controller/BaseSingleController;->applyControllerBundleEnable(Lcom/faceunity/core/entity/FUModelCompareData;)V
 
+    .line 10
     invoke-direct {p0, p1}, Lcom/faceunity/core/controller/BaseSingleController;->applyDestroyBundle(Lcom/faceunity/core/entity/FUModelCompareData;)V
 
     if-eqz p2, :cond_0
 
+    .line 11
     invoke-interface {p2}, Lcom/faceunity/core/listener/OnExecuteListener;->onCompleted()V
 
     :cond_0
@@ -736,11 +807,13 @@
 
     const/4 p2, 0x0
 
+    .line 1
     :cond_0
     invoke-direct {p0, p1, p2}, Lcom/faceunity/core/controller/BaseSingleController;->applyCompData(Lcom/faceunity/core/entity/FUModelCompareData;Lcom/faceunity/core/listener/OnExecuteListener;)V
 
     return-void
 
+    .line 2
     :cond_1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -754,10 +827,12 @@
 .method private final applyControllerBundleEnable(Lcom/faceunity/core/entity/FUModelCompareData;)V
     .locals 4
 
+    .line 1
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FUModelCompareData;->getEnableControllerBundleMap()Ljava/util/HashMap;
 
     move-result-object p1
 
+    .line 2
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p1
@@ -800,6 +875,7 @@
 
     move-result v0
 
+    .line 3
     iget-object v3, p0, Lcom/faceunity/core/controller/BaseSingleController;->mModelIdMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -814,6 +890,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 4
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v2
@@ -822,6 +899,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 5
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
@@ -837,14 +915,17 @@
 .method private final applyCreateBundle(Lcom/faceunity/core/entity/FUModelCompareData;)V
     .locals 4
 
+    .line 1
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
+    .line 2
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FUModelCompareData;->getBindControllerBundleMap()Ljava/util/HashMap;
 
     move-result-object v1
 
+    .line 3
     invoke-interface {v1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v1
@@ -872,6 +953,7 @@
 
     check-cast v2, Lcom/faceunity/core/entity/FUBundleData;
 
+    .line 4
     invoke-virtual {v2}, Lcom/faceunity/core/entity/FUBundleData;->getPath()Ljava/lang/String;
 
     move-result-object v2
@@ -880,11 +962,13 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FUModelCompareData;->getChildBundleCreateList()Ljava/util/LinkedList;
 
     move-result-object p1
 
+    .line 6
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -902,10 +986,12 @@
 
     check-cast v1, Ljava/lang/String;
 
+    .line 7
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
+    .line 8
     :cond_1
     new-instance p1, Ljava/util/concurrent/CountDownLatch;
 
@@ -915,6 +1001,7 @@
 
     invoke-direct {p1, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
+    .line 9
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -932,6 +1019,7 @@
 
     check-cast v1, Ljava/lang/String;
 
+    .line 10
     invoke-virtual {p0}, Lcom/faceunity/core/controller/BaseSingleController;->getMThreadSchedule()Lcom/faceunity/core/schedule/FUThreadSchedule;
 
     move-result-object v2
@@ -940,10 +1028,11 @@
 
     invoke-direct {v3, v1, p0, p1}, Lcom/faceunity/core/controller/BaseSingleController$applyCreateBundle$$inlined$forEach$lambda$1;-><init>(Ljava/lang/String;Lcom/faceunity/core/controller/BaseSingleController;Ljava/util/concurrent/CountDownLatch;)V
 
-    invoke-virtual {v2, v3}, Lcom/faceunity/core/schedule/FUThreadSchedule;->queueThreadPoolEvent(Ljn/a;)V
+    invoke-virtual {v2, v3}, Lcom/faceunity/core/schedule/FUThreadSchedule;->queueThreadPoolEvent(Lh/d3/w/a;)V
 
     goto :goto_2
 
+    .line 11
     :cond_2
     invoke-virtual {p1}, Ljava/util/concurrent/CountDownLatch;->await()V
 
@@ -953,6 +1042,7 @@
 .method private final applyCreateTex(Lcom/faceunity/core/entity/FUModelCompareData;)V
     .locals 4
 
+    .line 1
     new-instance v0, Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FUModelCompareData;->getChildTexAddList()Ljava/util/LinkedList;
@@ -965,10 +1055,12 @@
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
+    .line 2
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FUModelCompareData;->getChildTexAddList()Ljava/util/LinkedList;
 
     move-result-object p1
 
+    .line 3
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -986,6 +1078,7 @@
 
     check-cast v1, Ljava/lang/String;
 
+    .line 4
     invoke-virtual {p0}, Lcom/faceunity/core/controller/BaseSingleController;->getMThreadSchedule()Lcom/faceunity/core/schedule/FUThreadSchedule;
 
     move-result-object v2
@@ -994,10 +1087,11 @@
 
     invoke-direct {v3, v1, p0, v0}, Lcom/faceunity/core/controller/BaseSingleController$applyCreateTex$$inlined$forEach$lambda$1;-><init>(Ljava/lang/String;Lcom/faceunity/core/controller/BaseSingleController;Ljava/util/concurrent/CountDownLatch;)V
 
-    invoke-virtual {v2, v3}, Lcom/faceunity/core/schedule/FUThreadSchedule;->queueThreadPoolEvent(Ljn/a;)V
+    invoke-virtual {v2, v3}, Lcom/faceunity/core/schedule/FUThreadSchedule;->queueThreadPoolEvent(Lh/d3/w/a;)V
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->await()V
 
@@ -1007,10 +1101,12 @@
 .method private final applyDestroyBundle(Lcom/faceunity/core/entity/FUModelCompareData;)V
     .locals 1
 
+    .line 1
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FUModelCompareData;->getChildBundleDestroyList()Ljava/util/LinkedList;
 
     move-result-object p1
 
+    .line 2
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -1028,6 +1124,7 @@
 
     check-cast v0, Ljava/lang/String;
 
+    .line 3
     invoke-virtual {p0, v0}, Lcom/faceunity/core/controller/BaseSingleController;->destroyBundle(Ljava/lang/String;)V
 
     goto :goto_0
@@ -1039,10 +1136,12 @@
 .method private final applyParams(Lcom/faceunity/core/entity/FUModelCompareData;)V
     .locals 5
 
+    .line 1
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FUModelCompareData;->getParamsMap()Ljava/util/LinkedHashMap;
 
     move-result-object p1
 
+    .line 2
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p1
@@ -1080,6 +1179,7 @@
 
     check-cast v0, Ljava/util/LinkedHashMap;
 
+    .line 3
     iget-object v3, p0, Lcom/faceunity/core/controller/BaseSingleController;->mModelIdMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -1094,6 +1194,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 4
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v0
@@ -1127,22 +1228,25 @@
 
     const/4 v4, 0x0
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/t1;->B(Ljava/lang/Object;I)Z
+    .line 5
+    invoke-static {v2, v4}, Lh/d3/x/t1;->B(Ljava/lang/Object;I)Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    check-cast v2, Ljn/a;
+    .line 6
+    check-cast v2, Lh/d3/w/a;
 
-    invoke-interface {v2}, Ljn/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v2}, Lh/d3/w/a;->invoke()Ljava/lang/Object;
 
     goto :goto_0
 
     :cond_1
     const-string v4, "handle"
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 7
+    invoke-static {v1, v4}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
@@ -1159,10 +1263,12 @@
 .method private final applyRemoveChildBundle(Lcom/faceunity/core/entity/FUModelCompareData;)V
     .locals 4
 
+    .line 1
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FUModelCompareData;->getUnbindChildBundleMap()Ljava/util/LinkedHashMap;
 
     move-result-object p1
 
+    .line 2
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p1
@@ -1201,6 +1307,7 @@
 
     check-cast v0, Ljava/util/HashMap;
 
+    .line 3
     iget-object v3, p0, Lcom/faceunity/core/controller/BaseSingleController;->mModelIdMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -1215,10 +1322,12 @@
 
     if-eqz v1, :cond_0
 
+    .line 4
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
+    .line 5
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v0
@@ -1247,12 +1356,14 @@
 
     check-cast v3, Ljava/lang/String;
 
+    .line 6
     invoke-virtual {p0, v3}, Lcom/faceunity/core/controller/BaseSingleController;->getBundleHandle(Ljava/lang/String;)I
 
     move-result v3
 
     if-lez v3, :cond_1
 
+    .line 7
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -1261,6 +1372,7 @@
 
     goto :goto_1
 
+    .line 8
     :cond_2
     invoke-interface {v2}, Ljava/util/Collection;->isEmpty()Z
 
@@ -1272,13 +1384,14 @@
 
     const-string v0, "controlHandle"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 9
+    invoke-static {v1, v0}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
-    invoke-static {v2}, Lpm/g0;->P5(Ljava/util/Collection;)[I
+    invoke-static {v2}, Lh/t2/g0;->P5(Ljava/util/Collection;)[I
 
     move-result-object v1
 
@@ -1293,10 +1406,12 @@
 .method private final applyRemoveControllerBundle(Lcom/faceunity/core/entity/FUModelCompareData;)V
     .locals 6
 
+    .line 1
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FUModelCompareData;->getUnbindControllerBundleMap()Ljava/util/HashMap;
 
     move-result-object v0
 
+    .line 2
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v0
@@ -1329,6 +1444,7 @@
 
     move-result-wide v1
 
+    .line 3
     iget-object v3, p0, Lcom/faceunity/core/controller/BaseSingleController;->mModelIdMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -1345,7 +1461,8 @@
 
     const-string v4, "controlHandle"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 4
+    invoke-static {v3, v4}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
@@ -1353,6 +1470,7 @@
 
     invoke-direct {p0, v3}, Lcom/faceunity/core/controller/BaseSingleController;->unbindAndDestroyControllerBundle(I)V
 
+    .line 5
     iget-object v3, p0, Lcom/faceunity/core/controller/BaseSingleController;->mModelIdMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -1363,11 +1481,13 @@
 
     goto :goto_0
 
+    .line 6
     :cond_1
     invoke-virtual {p1}, Lcom/faceunity/core/entity/FUModelCompareData;->getReplaceControllerBundleMap()Ljava/util/LinkedHashMap;
 
     move-result-object p1
 
+    .line 7
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p1
@@ -1410,6 +1530,7 @@
 
     move-result-wide v3
 
+    .line 8
     iget-object v0, p0, Lcom/faceunity/core/controller/BaseSingleController;->mModelIdMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -1424,6 +1545,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 9
     iget-object v5, p0, Lcom/faceunity/core/controller/BaseSingleController;->mModelIdMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -1432,10 +1554,11 @@
 
     const-string v4, "it"
 
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lh/d3/x/l0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v5, v3, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 10
     iget-object v0, p0, Lcom/faceunity/core/controller/BaseSingleController;->mModelIdMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -1453,6 +1576,7 @@
 .method private final bindControllerBundle(I)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/core/controller/BaseSingleController;->getMBundleManager()Lcom/faceunity/core/bundle/FUBundleManager;
 
     move-result-object p0
@@ -1480,6 +1604,7 @@
 .method private final createTextureImage(Ljava/lang/String;)Lcom/faceunity/core/entity/FUTextureImageData;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/controller/BaseSingleController;->mFUTextureImageDataMap:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1490,12 +1615,14 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-direct {p0, p1}, Lcom/faceunity/core/controller/BaseSingleController;->loadTextureImageFromLocal(Ljava/lang/String;)Lcom/faceunity/core/entity/FUTextureImageData;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object p0, p0, Lcom/faceunity/core/controller/BaseSingleController;->mFUTextureImageDataMap:Ljava/util/LinkedHashMap;
 
     invoke-interface {p0, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -1504,42 +1631,44 @@
     return-object v0
 .end method
 
-.method private final doBackgroundAction(Ljn/a;)V
+.method private final doBackgroundAction(Lh/d3/w/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ljn/a<",
-            "Lnm/l2;",
+            "Lh/d3/w/a<",
+            "Lh/l2;",
             ">;)V"
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/controller/BaseSingleController;->getMThreadSchedule()Lcom/faceunity/core/schedule/FUThreadSchedule;
 
     move-result-object p0
 
-    invoke-virtual {p0, p1}, Lcom/faceunity/core/schedule/FUThreadSchedule;->queueBackgroundEvent(Ljn/a;)V
+    invoke-virtual {p0, p1}, Lcom/faceunity/core/schedule/FUThreadSchedule;->queueBackgroundEvent(Lh/d3/w/a;)V
 
     return-void
 .end method
 
-.method private final doGLThreadAction(Ljn/a;)V
+.method private final doGLThreadAction(Lh/d3/w/a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ljn/a<",
-            "Lnm/l2;",
+            "Lh/d3/w/a<",
+            "Lh/l2;",
             ">;)V"
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/controller/BaseSingleController;->getMThreadSchedule()Lcom/faceunity/core/schedule/FUThreadSchedule;
 
     move-result-object p0
 
-    invoke-virtual {p0, p1}, Lcom/faceunity/core/schedule/FUThreadSchedule;->queueGLEvent(Ljn/a;)V
+    invoke-virtual {p0, p1}, Lcom/faceunity/core/schedule/FUThreadSchedule;->queueGLEvent(Lh/d3/w/a;)V
 
     return-void
 .end method
@@ -1547,9 +1676,9 @@
 .method private final getMBundleManager()Lcom/faceunity/core/bundle/FUBundleManager;
     .locals 0
 
-    iget-object p0, p0, Lcom/faceunity/core/controller/BaseSingleController;->mBundleManager$delegate:Lnm/d0;
+    iget-object p0, p0, Lcom/faceunity/core/controller/BaseSingleController;->mBundleManager$delegate:Lh/d0;
 
-    invoke-interface {p0}, Lnm/d0;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lh/d0;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -1561,9 +1690,9 @@
 .method private final getMModelDataConverter()Lcom/faceunity/core/controller/base/ModelDataConverter;
     .locals 0
 
-    iget-object p0, p0, Lcom/faceunity/core/controller/BaseSingleController;->mModelDataConverter$delegate:Lnm/d0;
+    iget-object p0, p0, Lcom/faceunity/core/controller/BaseSingleController;->mModelDataConverter$delegate:Lh/d0;
 
-    invoke-interface {p0}, Lnm/d0;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lh/d0;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -1575,6 +1704,7 @@
 .method private final loadTextureImageFromLocal(Ljava/lang/String;)Lcom/faceunity/core/entity/FUTextureImageData;
     .locals 3
 
+    .line 1
     invoke-static {}, Lcom/faceunity/core/FURenderConstants;->getApplication()Landroid/app/Application;
 
     move-result-object p0
@@ -1587,6 +1717,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 2
     :try_start_0
     invoke-static {p0}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
 
@@ -1595,6 +1726,7 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 3
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
 
     goto :goto_2
@@ -1607,11 +1739,13 @@
     :catch_0
     move-exception v1
 
+    .line 4
     :try_start_1
-    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 5
     invoke-virtual {p0}, Ljava/io/InputStream;->close()V
 
     goto :goto_1
@@ -1628,26 +1762,31 @@
     :goto_2
     if-eqz v1, :cond_1
 
+    .line 6
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result p0
 
+    .line 7
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v2
 
+    .line 8
     invoke-static {v1}, Lcom/faceunity/toolbox/media/FUMediaUtils;->readRgbaByteFromBitmap(Landroid/graphics/Bitmap;)[B
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
+    .line 9
     new-instance p1, Lcom/faceunity/core/entity/FUTextureImageData;
 
     invoke-direct {p1, p0, v2, v1}, Lcom/faceunity/core/entity/FUTextureImageData;-><init>(II[B)V
 
     return-object p1
 
+    .line 10
     :cond_1
     sget-object p0, Lcom/faceunity/core/controller/BaseSingleController;->TAG:Ljava/lang/String;
 
@@ -1673,6 +1812,7 @@
 .method private final unbindAndDestroyControllerBundle(I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/core/controller/BaseSingleController;->getMBundleManager()Lcom/faceunity/core/bundle/FUBundleManager;
 
     move-result-object p0
@@ -1685,6 +1825,7 @@
 .method private final unbindControllerBundle(I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/core/controller/BaseSingleController;->getMBundleManager()Lcom/faceunity/core/bundle/FUBundleManager;
 
     move-result-object p0
@@ -1712,14 +1853,15 @@
 .method public final createBundle(Ljava/lang/String;)I
     .locals 8
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "path"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/core/controller/BaseSingleController;->getMBundleManager()Lcom/faceunity/core/bundle/FUBundleManager;
 
     move-result-object p0
@@ -1740,7 +1882,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v6}, Lcom/faceunity/core/entity/FUBundleData;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/w;)V
+    invoke-direct/range {v0 .. v6}, Lcom/faceunity/core/entity/FUBundleData;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILh/d3/x/w;)V
 
     invoke-virtual {p0, v7}, Lcom/faceunity/core/bundle/FUBundleManager;->loadBundle(Lcom/faceunity/core/entity/FUBundleData;)I
 
@@ -1752,22 +1894,23 @@
 .method public final createItemTex(ILjava/lang/String;[BII)V
     .locals 6
     .param p2    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p3    # [B
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string p0, "name"
 
-    invoke-static {p2, p0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string p0, "bytes"
 
-    invoke-static {p3, p0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     sget-object v0, Lcom/faceunity/core/support/FUSDKController;->INSTANCE:Lcom/faceunity/core/support/FUSDKController;
 
     move v1, p1
@@ -1788,14 +1931,15 @@
 .method public final deleteItemTex(ILjava/lang/String;)V
     .locals 0
     .param p2    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string p0, "name"
 
-    invoke-static {p2, p0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     sget-object p0, Lcom/faceunity/core/support/FUSDKController;->INSTANCE:Lcom/faceunity/core/support/FUSDKController;
 
     invoke-virtual {p0, p1, p2}, Lcom/faceunity/core/support/FUSDKController;->deleteTexForItem$lib_core_release(ILjava/lang/String;)I
@@ -1819,13 +1963,13 @@
 .method public final destroyBundle(Ljava/lang/String;)V
     .locals 1
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "path"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     invoke-direct {p0}, Lcom/faceunity/core/controller/BaseSingleController;->getMBundleManager()Lcom/faceunity/core/bundle/FUBundleManager;
@@ -1837,92 +1981,95 @@
     return-void
 .end method
 
-.method public final doControllerActionBackground(JLjn/l;)V
+.method public final doControllerActionBackground(JLh/d3/w/l;)V
     .locals 1
-    .param p3    # Ljn/l;
-        .annotation build Ljv/d;
+    .param p3    # Lh/d3/w/l;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(J",
-            "Ljn/l<",
+            "Lh/d3/w/l<",
             "-",
             "Ljava/lang/Integer;",
-            "Lnm/l2;",
+            "Lh/l2;",
             ">;)V"
         }
     .end annotation
 
     const-string v0, "unit"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     new-instance v0, Lcom/faceunity/core/controller/BaseSingleController$doControllerActionBackground$1;
 
-    invoke-direct {v0, p0, p1, p2, p3}, Lcom/faceunity/core/controller/BaseSingleController$doControllerActionBackground$1;-><init>(Lcom/faceunity/core/controller/BaseSingleController;JLjn/l;)V
+    invoke-direct {v0, p0, p1, p2, p3}, Lcom/faceunity/core/controller/BaseSingleController$doControllerActionBackground$1;-><init>(Lcom/faceunity/core/controller/BaseSingleController;JLh/d3/w/l;)V
 
-    invoke-direct {p0, v0}, Lcom/faceunity/core/controller/BaseSingleController;->doBackgroundAction(Ljn/a;)V
+    invoke-direct {p0, v0}, Lcom/faceunity/core/controller/BaseSingleController;->doBackgroundAction(Lh/d3/w/a;)V
 
     return-void
 .end method
 
-.method public final doControllerActionBackgroundGL(JLjn/l;)V
+.method public final doControllerActionBackgroundGL(JLh/d3/w/l;)V
     .locals 1
-    .param p3    # Ljn/l;
-        .annotation build Ljv/d;
+    .param p3    # Lh/d3/w/l;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(J",
-            "Ljn/l<",
+            "Lh/d3/w/l<",
             "-",
             "Ljava/lang/Integer;",
-            "Lnm/l2;",
+            "Lh/l2;",
             ">;)V"
         }
     .end annotation
 
     const-string v0, "unit"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     new-instance v0, Lcom/faceunity/core/controller/BaseSingleController$doControllerActionBackgroundGL$1;
 
-    invoke-direct {v0, p0, p1, p2, p3}, Lcom/faceunity/core/controller/BaseSingleController$doControllerActionBackgroundGL$1;-><init>(Lcom/faceunity/core/controller/BaseSingleController;JLjn/l;)V
+    invoke-direct {v0, p0, p1, p2, p3}, Lcom/faceunity/core/controller/BaseSingleController$doControllerActionBackgroundGL$1;-><init>(Lcom/faceunity/core/controller/BaseSingleController;JLh/d3/w/l;)V
 
-    invoke-direct {p0, v0}, Lcom/faceunity/core/controller/BaseSingleController;->doBackgroundAction(Ljn/a;)V
+    invoke-direct {p0, v0}, Lcom/faceunity/core/controller/BaseSingleController;->doBackgroundAction(Lh/d3/w/a;)V
 
     return-void
 .end method
 
-.method public final doControllerActionGL(JLjn/l;)V
+.method public final doControllerActionGL(JLh/d3/w/l;)V
     .locals 1
-    .param p3    # Ljn/l;
-        .annotation build Ljv/d;
+    .param p3    # Lh/d3/w/l;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(J",
-            "Ljn/l<",
+            "Lh/d3/w/l<",
             "-",
             "Ljava/lang/Integer;",
-            "Lnm/l2;",
+            "Lh/l2;",
             ">;)V"
         }
     .end annotation
 
     const-string v0, "unit"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     new-instance v0, Lcom/faceunity/core/controller/BaseSingleController$doControllerActionGL$1;
 
-    invoke-direct {v0, p0, p1, p2, p3}, Lcom/faceunity/core/controller/BaseSingleController$doControllerActionGL$1;-><init>(Lcom/faceunity/core/controller/BaseSingleController;JLjn/l;)V
+    invoke-direct {v0, p0, p1, p2, p3}, Lcom/faceunity/core/controller/BaseSingleController$doControllerActionGL$1;-><init>(Lcom/faceunity/core/controller/BaseSingleController;JLh/d3/w/l;)V
 
-    invoke-direct {p0, v0}, Lcom/faceunity/core/controller/BaseSingleController;->doGLThreadAction(Ljn/a;)V
+    invoke-direct {p0, v0}, Lcom/faceunity/core/controller/BaseSingleController;->doGLThreadAction(Lh/d3/w/a;)V
 
     return-void
 .end method
@@ -1930,14 +2077,15 @@
 .method public final getBundleHandle(Ljava/lang/String;)I
     .locals 1
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "path"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/core/controller/BaseSingleController;->getMBundleManager()Lcom/faceunity/core/bundle/FUBundleManager;
 
     move-result-object p0
@@ -1961,9 +2109,10 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/controller/BaseSingleController;->mModelIdMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     return-object p0
@@ -1971,12 +2120,12 @@
 
 .method public final getMThreadSchedule()Lcom/faceunity/core/schedule/FUThreadSchedule;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
-    iget-object p0, p0, Lcom/faceunity/core/controller/BaseSingleController;->mThreadSchedule$delegate:Lnm/d0;
+    iget-object p0, p0, Lcom/faceunity/core/controller/BaseSingleController;->mThreadSchedule$delegate:Lh/d0;
 
-    invoke-interface {p0}, Lnm/d0;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lh/d0;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -1988,24 +2137,25 @@
 .method public final itemSetParam(ILjava/lang/String;Ljava/lang/Object;)V
     .locals 2
     .param p2    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p3    # Ljava/lang/Object;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string p0, "key"
 
-    invoke-static {p2, p0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string p0, "value"
 
-    invoke-static {p3, p0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-gtz p1, :cond_0
 
+    .line 1
     sget-object p0, Lcom/faceunity/core/controller/BaseSingleController;->TAG:Ljava/lang/String;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -2030,6 +2180,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     instance-of p0, p3, Ljava/lang/Double;
 
@@ -2047,6 +2198,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_1
     instance-of p0, p3, Ljava/lang/String;
 
@@ -2060,6 +2212,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_2
     instance-of p0, p3, [D
 
@@ -2073,6 +2226,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_3
     instance-of p0, p3, Ljava/lang/Integer;
 
@@ -2092,6 +2246,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_4
     instance-of p0, p3, Ljava/lang/Float;
 
@@ -2117,6 +2272,7 @@
 .method public release$lib_core_release()V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/controller/BaseSingleController;->getMThreadSchedule()Lcom/faceunity/core/schedule/FUThreadSchedule;
 
     move-result-object v0
@@ -2129,6 +2285,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     new-instance v0, Ljava/util/concurrent/CountDownLatch;
 
@@ -2136,14 +2293,17 @@
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
+    .line 3
     new-instance v1, Lcom/faceunity/core/controller/BaseSingleController$release$1;
 
     invoke-direct {v1, p0, v0}, Lcom/faceunity/core/controller/BaseSingleController$release$1;-><init>(Lcom/faceunity/core/controller/BaseSingleController;Ljava/util/concurrent/CountDownLatch;)V
 
-    invoke-direct {p0, v1}, Lcom/faceunity/core/controller/BaseSingleController;->doBackgroundAction(Ljn/a;)V
+    invoke-direct {p0, v1}, Lcom/faceunity/core/controller/BaseSingleController;->doBackgroundAction(Lh/d3/w/a;)V
 
+    .line 4
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->await()V
 
+    .line 5
     invoke-virtual {p0}, Lcom/faceunity/core/controller/BaseSingleController;->getMThreadSchedule()Lcom/faceunity/core/schedule/FUThreadSchedule;
 
     move-result-object p0
@@ -2156,19 +2316,20 @@
 .method public final replaceChildBundleData(JLcom/faceunity/core/entity/FUBundleData;Lcom/faceunity/core/entity/FUBundleData;)V
     .locals 1
     .param p3    # Lcom/faceunity/core/entity/FUBundleData;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
     .param p4    # Lcom/faceunity/core/entity/FUBundleData;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
 
+    .line 1
     new-instance v0, Lcom/faceunity/core/controller/BaseSingleController$replaceChildBundleData$1;
 
     invoke-direct {v0, p0, p4, p3}, Lcom/faceunity/core/controller/BaseSingleController$replaceChildBundleData$1;-><init>(Lcom/faceunity/core/controller/BaseSingleController;Lcom/faceunity/core/entity/FUBundleData;Lcom/faceunity/core/entity/FUBundleData;)V
 
-    invoke-virtual {p0, p1, p2, v0}, Lcom/faceunity/core/controller/BaseSingleController;->doControllerActionBackground(JLjn/l;)V
+    invoke-virtual {p0, p1, p2, v0}, Lcom/faceunity/core/controller/BaseSingleController;->doControllerActionBackground(JLh/d3/w/l;)V
 
     return-void
 .end method
@@ -2176,19 +2337,20 @@
 .method public final replaceModel(Lcom/faceunity/core/entity/FUFeaturesData;Lcom/faceunity/core/entity/FUFeaturesData;)V
     .locals 1
     .param p1    # Lcom/faceunity/core/entity/FUFeaturesData;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
     .param p2    # Lcom/faceunity/core/entity/FUFeaturesData;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
 
+    .line 1
     new-instance v0, Lcom/faceunity/core/controller/BaseSingleController$replaceModel$1;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/faceunity/core/controller/BaseSingleController$replaceModel$1;-><init>(Lcom/faceunity/core/controller/BaseSingleController;Lcom/faceunity/core/entity/FUFeaturesData;Lcom/faceunity/core/entity/FUFeaturesData;)V
 
-    invoke-direct {p0, v0}, Lcom/faceunity/core/controller/BaseSingleController;->doBackgroundAction(Ljn/a;)V
+    invoke-direct {p0, v0}, Lcom/faceunity/core/controller/BaseSingleController;->doBackgroundAction(Lh/d3/w/a;)V
 
     return-void
 .end method
@@ -2196,6 +2358,7 @@
 .method public final setBundleEnable(JZ)V
     .locals 3
 
+    .line 1
     sget-object v0, Lcom/faceunity/core/controller/BaseSingleController;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2224,11 +2387,12 @@
 
     invoke-static {v0, v1}, Lcom/faceunity/toolbox/utils/FULogger;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 2
     new-instance v0, Lcom/faceunity/core/controller/BaseSingleController$setBundleEnable$1;
 
     invoke-direct {v0, p0, p3}, Lcom/faceunity/core/controller/BaseSingleController$setBundleEnable$1;-><init>(Lcom/faceunity/core/controller/BaseSingleController;Z)V
 
-    invoke-virtual {p0, p1, p2, v0}, Lcom/faceunity/core/controller/BaseSingleController;->doControllerActionBackground(JLjn/l;)V
+    invoke-virtual {p0, p1, p2, v0}, Lcom/faceunity/core/controller/BaseSingleController;->doControllerActionBackground(JLh/d3/w/l;)V
 
     return-void
 .end method
@@ -2236,21 +2400,21 @@
 .method public final setItemParam(JLjava/lang/String;Ljava/lang/Object;)V
     .locals 3
     .param p3    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p4    # Ljava/lang/Object;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "key"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "value"
 
-    invoke-static {p4, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     sget-object v0, Lcom/faceunity/core/controller/BaseSingleController;->TAG:Ljava/lang/String;
@@ -2288,7 +2452,7 @@
 
     invoke-direct {v0, p0, p3, p4}, Lcom/faceunity/core/controller/BaseSingleController$setItemParam$1;-><init>(Lcom/faceunity/core/controller/BaseSingleController;Ljava/lang/String;Ljava/lang/Object;)V
 
-    invoke-virtual {p0, p1, p2, v0}, Lcom/faceunity/core/controller/BaseSingleController;->doControllerActionBackground(JLjn/l;)V
+    invoke-virtual {p0, p1, p2, v0}, Lcom/faceunity/core/controller/BaseSingleController;->doControllerActionBackground(JLh/d3/w/l;)V
 
     return-void
 .end method
@@ -2296,7 +2460,7 @@
 .method public final setItemParam(JLjava/util/LinkedHashMap;)V
     .locals 3
     .param p3    # Ljava/util/LinkedHashMap;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
@@ -2311,7 +2475,7 @@
 
     const-string v0, "params"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
     sget-object v0, Lcom/faceunity/core/controller/BaseSingleController;->TAG:Ljava/lang/String;
@@ -2324,7 +2488,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p3}, Ljava/util/AbstractMap;->size()I
+    invoke-virtual {p3}, Ljava/util/LinkedHashMap;->size()I
 
     move-result v2
 
@@ -2341,7 +2505,7 @@
 
     invoke-direct {v0, p0, p3}, Lcom/faceunity/core/controller/BaseSingleController$setItemParam$2;-><init>(Lcom/faceunity/core/controller/BaseSingleController;Ljava/util/LinkedHashMap;)V
 
-    invoke-virtual {p0, p1, p2, v0}, Lcom/faceunity/core/controller/BaseSingleController;->doControllerActionBackground(JLjn/l;)V
+    invoke-virtual {p0, p1, p2, v0}, Lcom/faceunity/core/controller/BaseSingleController;->doControllerActionBackground(JLh/d3/w/l;)V
 
     return-void
 .end method
@@ -2362,13 +2526,13 @@
 .method public final unbindControllerItem(I[I)V
     .locals 1
     .param p2    # [I
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "items"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     invoke-direct {p0}, Lcom/faceunity/core/controller/BaseSingleController;->getMBundleManager()Lcom/faceunity/core/bundle/FUBundleManager;
@@ -2383,18 +2547,19 @@
 .method public final updateItemTex(JLjava/lang/String;Ljava/lang/String;)V
     .locals 7
     .param p3    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p4    # Ljava/lang/String;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
 
     const-string v0, "name"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     new-instance v0, Lcom/faceunity/core/controller/BaseSingleController$updateItemTex$1;
 
     move-object v1, v0
@@ -2409,7 +2574,7 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/faceunity/core/controller/BaseSingleController$updateItemTex$1;-><init>(Lcom/faceunity/core/controller/BaseSingleController;Ljava/lang/String;JLjava/lang/String;)V
 
-    invoke-direct {p0, v0}, Lcom/faceunity/core/controller/BaseSingleController;->doBackgroundAction(Ljn/a;)V
+    invoke-direct {p0, v0}, Lcom/faceunity/core/controller/BaseSingleController;->doBackgroundAction(Lh/d3/w/a;)V
 
     return-void
 .end method

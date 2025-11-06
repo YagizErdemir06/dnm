@@ -10,18 +10,18 @@
 
 
 # instance fields
-.field bgColor:I
+.field public bgColor:I
     .annotation build Landroidx/annotation/ColorInt;
     .end annotation
 .end field
 
-.field bgIndex:I
+.field public bgIndex:I
 
-.field currentFrame:Lcom/bumptech/glide/gifdecoder/GifFrame;
+.field public currentFrame:Lcom/bumptech/glide/gifdecoder/GifFrame;
 
-.field frameCount:I
+.field public frameCount:I
 
-.field final frames:Ljava/util/List;
+.field public final frames:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -31,42 +31,47 @@
     .end annotation
 .end field
 
-.field gct:[I
+.field public gct:[I
     .annotation build Landroidx/annotation/ColorInt;
     .end annotation
 .end field
 
-.field gctFlag:Z
+.field public gctFlag:Z
 
-.field gctSize:I
+.field public gctSize:I
 
-.field height:I
+.field public height:I
 
-.field loopCount:I
+.field public loopCount:I
 
-.field pixelAspect:I
+.field public pixelAspect:I
 
-.field status:I
+.field public status:I
 
-.field width:I
+.field public width:I
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Lcom/bumptech/glide/gifdecoder/GifHeader;->gct:[I
 
     const/4 v0, 0x0
 
+    .line 3
     iput v0, p0, Lcom/bumptech/glide/gifdecoder/GifHeader;->status:I
 
+    .line 4
     iput v0, p0, Lcom/bumptech/glide/gifdecoder/GifHeader;->frameCount:I
 
+    .line 5
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -75,6 +80,7 @@
 
     const/4 v0, -0x1
 
+    .line 6
     iput v0, p0, Lcom/bumptech/glide/gifdecoder/GifHeader;->loopCount:I
 
     return-void
@@ -85,6 +91,7 @@
 .method public getHeight()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/bumptech/glide/gifdecoder/GifHeader;->height:I
 
     return p0
@@ -93,6 +100,7 @@
 .method public getNumFrames()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/bumptech/glide/gifdecoder/GifHeader;->frameCount:I
 
     return p0
@@ -101,6 +109,7 @@
 .method public getStatus()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/bumptech/glide/gifdecoder/GifHeader;->status:I
 
     return p0
@@ -109,6 +118,7 @@
 .method public getWidth()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/bumptech/glide/gifdecoder/GifHeader;->width:I
 
     return p0

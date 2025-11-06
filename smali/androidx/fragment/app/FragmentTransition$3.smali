@@ -1,4 +1,4 @@
-.class Landroidx/fragment/app/FragmentTransition$3;
+.class public Landroidx/fragment/app/FragmentTransition$3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,17 +18,18 @@
 
 
 # instance fields
-.field final synthetic val$callback:Landroidx/fragment/app/FragmentTransition$Callback;
+.field public final synthetic val$callback:Landroidx/fragment/app/FragmentTransition$Callback;
 
-.field final synthetic val$outFragment:Landroidx/fragment/app/Fragment;
+.field public final synthetic val$outFragment:Landroidx/fragment/app/Fragment;
 
-.field final synthetic val$signal:Landroidx/core/os/CancellationSignal;
+.field public final synthetic val$signal:Landroidx/core/os/CancellationSignal;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/fragment/app/FragmentTransition$Callback;Landroidx/fragment/app/Fragment;Landroidx/core/os/CancellationSignal;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/fragment/app/FragmentTransition$3;->val$callback:Landroidx/fragment/app/FragmentTransition$Callback;
 
     iput-object p2, p0, Landroidx/fragment/app/FragmentTransition$3;->val$outFragment:Landroidx/fragment/app/Fragment;
@@ -45,6 +46,7 @@
 .method public run()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/fragment/app/FragmentTransition$3;->val$callback:Landroidx/fragment/app/FragmentTransition$Callback;
 
     iget-object v1, p0, Landroidx/fragment/app/FragmentTransition$3;->val$outFragment:Landroidx/fragment/app/Fragment;

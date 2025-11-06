@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/server/response/zae;
+.class public final Lcom/google/android/gms/common/server/response/zae;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -31,6 +31,7 @@
 
     const/4 p0, 0x0
 
+    .line 1
     invoke-static {p1, p2, p0}, Lcom/google/android/gms/common/server/response/FastParser;->zah(Lcom/google/android/gms/common/server/response/FastParser;Ljava/io/BufferedReader;Z)Z
 
     move-result p0

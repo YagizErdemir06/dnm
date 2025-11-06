@@ -10,20 +10,13 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
-    .param p1    # Landroid/content/Context;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroid/util/AttributeSet;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
             .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/RestrictTo$Scope;
         }
     .end annotation
 
+    .line 1
     sget v0, Landroidx/preference/R$attr;->preferenceScreenStyle:I
 
     const v1, 0x101008b
@@ -36,6 +29,7 @@
 
     const/4 p1, 0x1
 
+    .line 2
     iput-boolean p1, p0, Landroidx/preference/PreferenceScreen;->mShouldUseGeneratedIds:Z
 
     return-void
@@ -54,6 +48,7 @@
 .method public onClick()V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Landroidx/preference/Preference;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -74,6 +69,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Landroidx/preference/Preference;->getPreferenceManager()Landroidx/preference/PreferenceManager;
 
@@ -85,6 +81,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 3
     invoke-interface {v0, p0}, Landroidx/preference/PreferenceManager$OnNavigateToScreenListener;->onNavigateToScreen(Landroidx/preference/PreferenceScreen;)V
 
     :cond_1
@@ -95,16 +92,19 @@
 .method public setShouldUseGeneratedIds(Z)V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Landroidx/preference/PreferenceGroup;->isAttached()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 2
     iput-boolean p1, p0, Landroidx/preference/PreferenceScreen;->mShouldUseGeneratedIds:Z
 
     return-void
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -118,6 +118,7 @@
 .method public shouldUseGeneratedIds()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Landroidx/preference/PreferenceScreen;->mShouldUseGeneratedIds:Z
 
     return p0

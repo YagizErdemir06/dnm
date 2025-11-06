@@ -1,4 +1,4 @@
-.class final Lcom/google/common/cache/LocalCache$EntryIterator;
+.class public final Lcom/google/common/cache/LocalCache$EntryIterator;
 .super Lcom/google/common/cache/LocalCache$HashIterator;
 .source "SourceFile"
 
@@ -27,6 +27,7 @@
 .method public constructor <init>(Lcom/google/common/cache/LocalCache;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/cache/LocalCache$HashIterator;-><init>(Lcom/google/common/cache/LocalCache;)V
 
     return-void

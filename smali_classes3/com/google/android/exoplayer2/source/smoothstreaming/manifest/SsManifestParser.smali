@@ -36,8 +36,10 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     :try_start_0
     invoke-static {}, Lorg/xmlpull/v1/XmlPullParserFactory;->newInstance()Lorg/xmlpull/v1/XmlPullParserFactory;
 
@@ -52,6 +54,7 @@
     :catch_0
     move-exception p0
 
+    .line 3
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Couldn\'t create XmlPullParserFactory instance"

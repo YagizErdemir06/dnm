@@ -1,4 +1,4 @@
-.class Landroidx/core/provider/SelfDestructiveThread$2$1;
+.class public Landroidx/core/provider/SelfDestructiveThread$2$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,15 +18,16 @@
 
 
 # instance fields
-.field final synthetic this$1:Landroidx/core/provider/SelfDestructiveThread$2;
+.field public final synthetic this$1:Landroidx/core/provider/SelfDestructiveThread$2;
 
-.field final synthetic val$result:Ljava/lang/Object;
+.field public final synthetic val$result:Ljava/lang/Object;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/core/provider/SelfDestructiveThread$2;Ljava/lang/Object;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/core/provider/SelfDestructiveThread$2$1;->this$1:Landroidx/core/provider/SelfDestructiveThread$2;
 
     iput-object p2, p0, Landroidx/core/provider/SelfDestructiveThread$2$1;->val$result:Ljava/lang/Object;
@@ -41,6 +42,7 @@
 .method public run()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/core/provider/SelfDestructiveThread$2$1;->this$1:Landroidx/core/provider/SelfDestructiveThread$2;
 
     iget-object v0, v0, Landroidx/core/provider/SelfDestructiveThread$2;->val$reply:Landroidx/core/provider/SelfDestructiveThread$ReplyCallback;

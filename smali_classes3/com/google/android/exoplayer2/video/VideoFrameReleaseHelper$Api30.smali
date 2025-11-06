@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/video/VideoFrameReleaseHelper$Api30;
+.class public final Lcom/google/android/exoplayer2/video/VideoFrameReleaseHelper$Api30;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,6 +46,7 @@
     :cond_0
     const/4 v0, 0x1
 
+    .line 1
     :goto_0
     :try_start_0
     invoke-virtual {p0, p1, v0}, Landroid/view/Surface;->setFrameRate(FI)V
@@ -60,6 +62,7 @@
 
     const-string v0, "Failed to call Surface.setFrameRate"
 
+    .line 2
     invoke-static {p1, v0, p0}, Lcom/google/android/exoplayer2/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_1

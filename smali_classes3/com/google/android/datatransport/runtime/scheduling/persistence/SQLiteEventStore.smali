@@ -20,7 +20,7 @@
     }
 .end annotation
 
-.annotation runtime Lmm/f;
+.annotation runtime Lg/a/f;
 .end annotation
 
 
@@ -29,7 +29,7 @@
 
 .field private static final LOG_TAG:Ljava/lang/String; = "SQLiteEventStore"
 
-.field static final MAX_RETRIES:I = 0x10
+.field public static final MAX_RETRIES:I = 0x10
 
 .field private static final PROTOBUF_ENCODING:Lcom/google/android/datatransport/Encoding;
 
@@ -39,10 +39,10 @@
 
 .field private final monotonicClock:Lcom/google/android/datatransport/runtime/time/Clock;
 
-.field private final packageName:Lmm/c;
+.field private final packageName:Lg/a/c;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lmm/c<",
+            "Lg/a/c<",
             "Ljava/lang/String;",
             ">;"
         }
@@ -60,6 +60,7 @@
 
     const-string v0, "proto"
 
+    .line 1
     invoke-static {v0}, Lcom/google/android/datatransport/Encoding;->of(Ljava/lang/String;)Lcom/google/android/datatransport/Encoding;
 
     move-result-object v0
@@ -69,7 +70,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/google/android/datatransport/runtime/time/Clock;Lcom/google/android/datatransport/runtime/time/Clock;Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig;Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager;Lmm/c;)V
+.method public constructor <init>(Lcom/google/android/datatransport/runtime/time/Clock;Lcom/google/android/datatransport/runtime/time/Clock;Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig;Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager;Lg/a/c;)V
     .locals 0
     .param p1    # Lcom/google/android/datatransport/runtime/time/Clock;
         .annotation build Lcom/google/android/datatransport/runtime/time/WallTime;
@@ -79,8 +80,8 @@
         .annotation build Lcom/google/android/datatransport/runtime/time/Monotonic;
         .end annotation
     .end param
-    .param p5    # Lmm/c;
-        .annotation runtime Lmm/b;
+    .param p5    # Lg/a/c;
+        .annotation runtime Lg/a/b;
             value = "PACKAGE_NAME"
         .end annotation
     .end param
@@ -91,113 +92,40 @@
             "Lcom/google/android/datatransport/runtime/time/Clock;",
             "Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig;",
             "Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager;",
-            "Lmm/c<",
+            "Lg/a/c<",
             "Ljava/lang/String;",
             ">;)V"
         }
     .end annotation
 
-    .annotation runtime Lmm/a;
+    .annotation runtime Lg/a/a;
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p4, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->schemaManager:Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager;
 
+    .line 3
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->wallClock:Lcom/google/android/datatransport/runtime/time/Clock;
 
+    .line 4
     iput-object p2, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->monotonicClock:Lcom/google/android/datatransport/runtime/time/Clock;
 
+    .line 5
     iput-object p3, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->config:Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig;
 
-    iput-object p5, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->packageName:Lmm/c;
+    .line 6
+    iput-object p5, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->packageName:Lg/a/c;
 
     return-void
-.end method
-
-.method public static synthetic A(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;Ljava/util/Map;Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics$Builder;Landroid/database/Cursor;)Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics;
-    .locals 0
-
-    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$loadClientMetrics$19(Ljava/util/Map;Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics$Builder;Landroid/database/Cursor;)Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic B(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;Landroid/database/Cursor;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$recordFailure$3(Landroid/database/Cursor;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic C(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;JLandroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Integer;
-    .locals 0
-
-    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$cleanUp$12(JLandroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic D(Landroid/database/sqlite/SQLiteDatabase;)Ljava/util/List;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$loadActiveContexts$10(Landroid/database/sqlite/SQLiteDatabase;)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic E(Landroid/database/Cursor;)Ljava/lang/Boolean;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$recordLogEventDropped$17(Landroid/database/Cursor;)Ljava/lang/Boolean;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic a(Ljava/lang/Throwable;)Landroid/database/sqlite/SQLiteDatabase;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$getDb$0(Ljava/lang/Throwable;)Landroid/database/sqlite/SQLiteDatabase;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic b(Ljava/lang/Throwable;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$ensureBeginTransaction$25(Ljava/lang/Throwable;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic c(JLandroid/database/Cursor;)Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow;
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$getTimeWindow$21(JLandroid/database/Cursor;)Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow;
-
-    move-result-object p0
-
-    return-object p0
 .end method
 
 .method private convertToReason(I)Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
     .locals 2
 
+    .line 1
     sget-object p0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->REASON_UNKNOWN:Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->getNumber()I
@@ -208,6 +136,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     sget-object v0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->MESSAGE_TOO_OLD:Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
@@ -219,6 +148,7 @@
 
     return-object v0
 
+    .line 3
     :cond_1
     sget-object v0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->CACHE_FULL:Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
@@ -230,6 +160,7 @@
 
     return-object v0
 
+    .line 4
     :cond_2
     sget-object v0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->PAYLOAD_TOO_BIG:Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
@@ -241,6 +172,7 @@
 
     return-object v0
 
+    .line 5
     :cond_3
     sget-object v0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->MAX_RETRIES_REACHED:Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
@@ -252,6 +184,7 @@
 
     return-object v0
 
+    .line 6
     :cond_4
     sget-object v0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->INVALID_PAYLOD:Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
@@ -263,6 +196,7 @@
 
     return-object v0
 
+    .line 7
     :cond_5
     sget-object v0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->SERVER_ERROR:Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
@@ -274,36 +208,18 @@
 
     return-object v0
 
+    .line 8
     :cond_6
-    const-string v0, "%n is not valid. No matched LogEventDropped-Reason found. Treated it as REASON_UNKNOWN"
-
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    const-string v1, "SQLiteEventStore"
+    const-string v0, "SQLiteEventStore"
 
-    invoke-static {v1, v0, p1}, Lcom/google/android/datatransport/runtime/logging/Logging;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
+    const-string v1, "%n is not valid. No matched LogEventDropped-Reason found. Treated it as REASON_UNKNOWN"
 
-    return-object p0
-.end method
-
-.method public static synthetic d(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;Lcom/google/android/datatransport/runtime/TransportContext;Landroid/database/sqlite/SQLiteDatabase;)Ljava/util/List;
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$loadBatch$8(Lcom/google/android/datatransport/runtime/TransportContext;Landroid/database/sqlite/SQLiteDatabase;)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic e(Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$ensureBeginTransaction$24(Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Object;
-
-    move-result-object p0
+    .line 9
+    invoke-static {v0, v1, p1}, Lcom/google/android/datatransport/runtime/logging/Logging;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
 
     return-object p0
 .end method
@@ -311,13 +227,12 @@
 .method private ensureBeginTransaction(Landroid/database/sqlite/SQLiteDatabase;)V
     .locals 1
 
-    new-instance v0, Lcom/google/android/datatransport/runtime/scheduling/persistence/k;
+    .line 1
+    new-instance v0, Ld/j/a/a/b/b/d/e;
 
-    invoke-direct {v0, p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/k;-><init>(Landroid/database/sqlite/SQLiteDatabase;)V
+    invoke-direct {v0, p1}, Ld/j/a/a/b/b/d/e;-><init>(Landroid/database/sqlite/SQLiteDatabase;)V
 
-    new-instance p1, Lcom/google/android/datatransport/runtime/scheduling/persistence/m;
-
-    invoke-direct {p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/m;-><init>()V
+    sget-object p1, Ld/j/a/a/b/b/d/b;->a:Ld/j/a/a/b/b/d/b;
 
     invoke-direct {p0, v0, p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->retryIfDbLocked(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Producer;Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;)Ljava/lang/Object;
 
@@ -327,23 +242,27 @@
 .method private ensureTransportContext(Landroid/database/sqlite/SQLiteDatabase;Lcom/google/android/datatransport/runtime/TransportContext;)J
     .locals 3
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->getTransportContextId(Landroid/database/sqlite/SQLiteDatabase;Lcom/google/android/datatransport/runtime/TransportContext;)Ljava/lang/Long;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
 
     move-result-wide p0
 
     return-wide p0
 
+    .line 3
     :cond_0
     new-instance p0, Landroid/content/ContentValues;
 
     invoke-direct {p0}, Landroid/content/ContentValues;-><init>()V
 
+    .line 4
     invoke-virtual {p2}, Lcom/google/android/datatransport/runtime/TransportContext;->getBackendName()Ljava/lang/String;
 
     move-result-object v0
@@ -352,6 +271,7 @@
 
     invoke-virtual {p0, v1, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {p2}, Lcom/google/android/datatransport/runtime/TransportContext;->getPriority()Lcom/google/android/datatransport/Priority;
 
     move-result-object v0
@@ -368,27 +288,30 @@
 
     invoke-virtual {p0, v1, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    const-string v0, "next_request_ms"
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    .line 6
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v1
 
-    move-result-object v2
+    const-string v2, "next_request_ms"
 
-    invoke-virtual {p0, v0, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+    invoke-virtual {p0, v2, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    .line 7
     invoke-virtual {p2}, Lcom/google/android/datatransport/runtime/TransportContext;->getExtras()[B
 
-    move-result-object v0
+    move-result-object v1
 
-    if-eqz v0, :cond_1
+    if-eqz v1, :cond_1
 
+    .line 8
     invoke-virtual {p2}, Lcom/google/android/datatransport/runtime/TransportContext;->getExtras()[B
 
     move-result-object p2
 
-    invoke-static {p2, v1}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+    invoke-static {p2, v0}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
 
     move-result-object p2
 
@@ -397,48 +320,32 @@
     invoke-virtual {p0, v0, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
-    const-string p2, "transport_contexts"
+    const/4 p2, 0x0
 
-    const/4 v0, 0x0
+    const-string v0, "transport_contexts"
 
-    invoke-virtual {p1, p2, v0, p0}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
+    .line 9
+    invoke-virtual {p1, v0, p2, p0}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
     move-result-wide p0
 
     return-wide p0
 .end method
 
-.method public static synthetic f(JLcom/google/android/datatransport/runtime/TransportContext;Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-static {p0, p1, p2, p3}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$recordNextCallTime$7(JLcom/google/android/datatransport/runtime/TransportContext;Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic g(Landroid/database/Cursor;)[B
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$readPayload$15(Landroid/database/Cursor;)[B
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 .method private getGlobalMetrics()Lcom/google/android/datatransport/runtime/firebase/transport/GlobalMetrics;
     .locals 4
 
+    .line 1
     invoke-static {}, Lcom/google/android/datatransport/runtime/firebase/transport/GlobalMetrics;->newBuilder()Lcom/google/android/datatransport/runtime/firebase/transport/GlobalMetrics$Builder;
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Lcom/google/android/datatransport/runtime/firebase/transport/StorageMetrics;->newBuilder()Lcom/google/android/datatransport/runtime/firebase/transport/StorageMetrics$Builder;
 
     move-result-object v1
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->getByteSize()J
 
     move-result-wide v2
@@ -449,6 +356,7 @@
 
     sget-object v1, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig;->DEFAULT:Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig;
 
+    .line 4
     invoke-virtual {v1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig;->getMaxStorageSizeInBytes()J
 
     move-result-wide v1
@@ -457,14 +365,17 @@
 
     move-result-object p0
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/firebase/transport/StorageMetrics$Builder;->build()Lcom/google/android/datatransport/runtime/firebase/transport/StorageMetrics;
 
     move-result-object p0
 
+    .line 6
     invoke-virtual {v0, p0}, Lcom/google/android/datatransport/runtime/firebase/transport/GlobalMetrics$Builder;->setStorageMetrics(Lcom/google/android/datatransport/runtime/firebase/transport/StorageMetrics;)Lcom/google/android/datatransport/runtime/firebase/transport/GlobalMetrics$Builder;
 
     move-result-object p0
 
+    .line 7
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/firebase/transport/GlobalMetrics$Builder;->build()Lcom/google/android/datatransport/runtime/firebase/transport/GlobalMetrics;
 
     move-result-object p0
@@ -475,6 +386,7 @@
 .method private getPageCount()J
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->getDb()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object p0
@@ -495,6 +407,7 @@
 .method private getPageSize()J
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->getDb()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object p0
@@ -515,15 +428,17 @@
 .method private getTimeWindow()Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow;
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->wallClock:Lcom/google/android/datatransport/runtime/time/Clock;
 
     invoke-interface {v0}, Lcom/google/android/datatransport/runtime/time/Clock;->getTime()J
 
     move-result-wide v0
 
-    new-instance v2, Lcom/google/android/datatransport/runtime/scheduling/persistence/w;
+    .line 2
+    new-instance v2, Ld/j/a/a/b/b/d/m;
 
-    invoke-direct {v2, v0, v1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/w;-><init>(J)V
+    invoke-direct {v2, v0, v1}, Ld/j/a/a/b/b/d/m;-><init>(J)V
 
     invoke-virtual {p0, v2}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->inTransaction(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;)Ljava/lang/Object;
 
@@ -539,18 +454,21 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/StringBuilder;
 
     const-string v0, "backend_name = ? and priority = ?"
 
     invoke-direct {p0, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x2
 
     new-array v1, v1, [Ljava/lang/String;
 
+    .line 3
     invoke-virtual {p2}, Lcom/google/android/datatransport/runtime/TransportContext;->getBackendName()Ljava/lang/String;
 
     move-result-object v2
@@ -559,6 +477,7 @@
 
     aput-object v2, v1, v3
 
+    .line 4
     invoke-virtual {p2}, Lcom/google/android/datatransport/runtime/TransportContext;->getPriority()Lcom/google/android/datatransport/Priority;
 
     move-result-object v2
@@ -575,12 +494,14 @@
 
     aput-object v2, v1, v4
 
+    .line 5
     invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
+    .line 6
     invoke-virtual {p2}, Lcom/google/android/datatransport/runtime/TransportContext;->getExtras()[B
 
     move-result-object v1
@@ -589,8 +510,10 @@
 
     const-string v1, " and extras = ?"
 
+    .line 7
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 8
     invoke-virtual {p2}, Lcom/google/android/datatransport/runtime/TransportContext;->getExtras()[B
 
     move-result-object p2
@@ -606,23 +529,25 @@
     :cond_0
     const-string p2, " and extras is null"
 
+    .line 9
     invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :goto_0
-    const-string v5, "transport_contexts"
-
     const-string p2, "_id"
 
+    .line 10
     filled-new-array {p2}, [Ljava/lang/String;
 
     move-result-object v6
 
+    .line 11
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v7
 
     new-array p0, v3, [Ljava/lang/String;
 
+    .line 12
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p0
@@ -637,16 +562,18 @@
 
     const/4 v11, 0x0
 
+    const-string v5, "transport_contexts"
+
     move-object v4, p1
 
+    .line 13
     invoke-virtual/range {v4 .. v11}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object p0
 
-    new-instance p1, Lcom/google/android/datatransport/runtime/scheduling/persistence/t;
+    sget-object p1, Ld/j/a/a/b/b/d/r;->a:Ld/j/a/a/b/b/d/r;
 
-    invoke-direct {p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/t;-><init>()V
-
+    .line 14
     invoke-static {p0, p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->tryWithCursor(Landroid/database/Cursor;Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;)Ljava/lang/Object;
 
     move-result-object p0
@@ -656,29 +583,10 @@
     return-object p0
 .end method
 
-.method public static synthetic h(Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$clearDb$13(Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic i(Landroid/database/Cursor;)Ljava/util/List;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$loadActiveContexts$9(Landroid/database/Cursor;)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 .method private isStorageAtLimit()Z
     .locals 4
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->getPageCount()J
 
     move-result-wide v0
@@ -689,6 +597,7 @@
 
     mul-long/2addr v0, v2
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->config:Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig;
 
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig;->getMaxStorageSizeInBytes()J
@@ -729,10 +638,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Ljava/util/List;->listIterator()Ljava/util/ListIterator;
 
     move-result-object p0
 
+    .line 2
     :goto_0
     invoke-interface {p0}, Ljava/util/ListIterator;->hasNext()Z
 
@@ -740,12 +651,14 @@
 
     if-eqz v0, :cond_2
 
+    .line 3
     invoke-interface {p0}, Ljava/util/ListIterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/google/android/datatransport/runtime/scheduling/persistence/PersistedEvent;
 
+    .line 4
     invoke-virtual {v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/PersistedEvent;->getId()J
 
     move-result-wide v1
@@ -762,6 +675,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-virtual {v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/PersistedEvent;->getEvent()Lcom/google/android/datatransport/runtime/EventInternal;
 
@@ -771,6 +685,7 @@
 
     move-result-object v1
 
+    .line 6
     invoke-virtual {v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/PersistedEvent;->getId()J
 
     move-result-wide v2
@@ -802,6 +717,7 @@
 
     check-cast v3, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Metadata;
 
+    .line 7
     iget-object v4, v3, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Metadata;->key:Ljava/lang/String;
 
     iget-object v3, v3, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Metadata;->value:Ljava/lang/String;
@@ -810,6 +726,7 @@
 
     goto :goto_1
 
+    .line 8
     :cond_1
     invoke-virtual {v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/PersistedEvent;->getId()J
 
@@ -827,6 +744,7 @@
 
     move-result-object v0
 
+    .line 9
     invoke-interface {p0, v0}, Ljava/util/ListIterator;->set(Ljava/lang/Object;)V
 
     goto :goto_0
@@ -835,19 +753,10 @@
     return-object p1
 .end method
 
-.method public static synthetic k(Ljava/lang/String;Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;JLandroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-static {p0, p1, p2, p3, p4}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$recordLogEventDropped$18(Ljava/lang/String;Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;JLandroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 .method private synthetic lambda$cleanUp$11(Landroid/database/Cursor;)Ljava/lang/Object;
     .locals 4
 
+    .line 1
     :goto_0
     invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -857,18 +766,21 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v0
 
     const/4 v1, 0x1
 
+    .line 3
     invoke-interface {p1, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
     int-to-long v2, v0
 
+    .line 4
     sget-object v0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->MESSAGE_TOO_OLD:Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
     invoke-virtual {p0, v2, v3, v0, v1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->recordLogEventDropped(JLcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;Ljava/lang/String;)V
@@ -882,36 +794,40 @@
 .end method
 
 .method private synthetic lambda$cleanUp$12(JLandroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Integer;
-    .locals 2
+    .locals 1
 
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;
 
-    const/4 v1, 0x0
-
+    .line 1
     invoke-static {p1, p2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object p1
 
-    aput-object p1, v0, v1
+    const/4 p2, 0x0
+
+    aput-object p1, v0, p2
 
     const-string p1, "SELECT COUNT(*), transport_name FROM events WHERE timestamp_ms < ? GROUP BY transport_name"
 
+    .line 2
     invoke-virtual {p3, p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object p1
 
-    new-instance p2, Lcom/google/android/datatransport/runtime/scheduling/persistence/r;
+    new-instance p2, Ld/j/a/a/b/b/d/k;
 
-    invoke-direct {p2, p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/r;-><init>(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;)V
+    invoke-direct {p2, p0}, Ld/j/a/a/b/b/d/k;-><init>(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;)V
 
+    .line 3
     invoke-static {p1, p2}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->tryWithCursor(Landroid/database/Cursor;Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;)Ljava/lang/Object;
 
     const-string p0, "events"
 
     const-string p1, "timestamp_ms < ?"
 
+    .line 4
     invoke-virtual {p3, p0, p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result p0
@@ -923,7 +839,7 @@
     return-object p0
 .end method
 
-.method private static synthetic lambda$clearDb$13(Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Object;
+.method public static synthetic lambda$clearDb$13(Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Object;
     .locals 4
 
     const/4 v0, 0x0
@@ -934,20 +850,23 @@
 
     const/4 v3, 0x0
 
+    .line 1
     invoke-virtual {p0, v2, v3, v1}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
-
-    const-string v1, "transport_contexts"
 
     new-array v0, v0, [Ljava/lang/String;
 
+    const-string v1, "transport_contexts"
+
+    .line 2
     invoke-virtual {p0, v1, v3, v0}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     return-object v3
 .end method
 
-.method private static synthetic lambda$ensureBeginTransaction$24(Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Object;
+.method public static synthetic lambda$ensureBeginTransaction$24(Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
     const/4 p0, 0x0
@@ -955,9 +874,10 @@
     return-object p0
 .end method
 
-.method private static synthetic lambda$ensureBeginTransaction$25(Ljava/lang/Throwable;)Ljava/lang/Object;
+.method public static synthetic lambda$ensureBeginTransaction$25(Ljava/lang/Throwable;)Ljava/lang/Object;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/datatransport/runtime/synchronization/SynchronizationException;
 
     const-string v1, "Timed out while trying to acquire the lock."
@@ -967,9 +887,10 @@
     throw v0
 .end method
 
-.method private static synthetic lambda$getDb$0(Ljava/lang/Throwable;)Landroid/database/sqlite/SQLiteDatabase;
+.method public static synthetic lambda$getDb$0(Ljava/lang/Throwable;)Landroid/database/sqlite/SQLiteDatabase;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/datatransport/runtime/synchronization/SynchronizationException;
 
     const-string v1, "Timed out while trying to open db."
@@ -979,9 +900,10 @@
     throw v0
 .end method
 
-.method private static synthetic lambda$getNextCallTime$5(Landroid/database/Cursor;)Ljava/lang/Long;
+.method public static synthetic lambda$getNextCallTime$5(Landroid/database/Cursor;)Ljava/lang/Long;
     .locals 2
 
+    .line 1
     invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v0
@@ -990,6 +912,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-interface {p0, v0}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v0
@@ -1003,6 +926,7 @@
     :cond_0
     const-wide/16 v0, 0x0
 
+    .line 3
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p0
@@ -1010,17 +934,20 @@
     return-object p0
 .end method
 
-.method private static synthetic lambda$getTimeWindow$21(JLandroid/database/Cursor;)Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow;
+.method public static synthetic lambda$getTimeWindow$21(JLandroid/database/Cursor;)Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow;
     .locals 2
 
+    .line 1
     invoke-interface {p2}, Landroid/database/Cursor;->moveToNext()Z
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-interface {p2, v0}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v0
 
+    .line 3
     invoke-static {}, Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow;->newBuilder()Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow$Builder;
 
     move-result-object p2
@@ -1040,7 +967,7 @@
     return-object p0
 .end method
 
-.method private static synthetic lambda$getTimeWindow$22(JLandroid/database/sqlite/SQLiteDatabase;)Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow;
+.method public static synthetic lambda$getTimeWindow$22(JLandroid/database/sqlite/SQLiteDatabase;)Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow;
     .locals 2
 
     const/4 v0, 0x0
@@ -1049,14 +976,16 @@
 
     const-string v1, "SELECT last_metrics_upload_ms FROM global_log_event_state LIMIT 1"
 
+    .line 1
     invoke-virtual {p2, v1, v0}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object p2
 
-    new-instance v0, Lcom/google/android/datatransport/runtime/scheduling/persistence/s;
+    new-instance v0, Ld/j/a/a/b/b/d/c;
 
-    invoke-direct {v0, p0, p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/s;-><init>(J)V
+    invoke-direct {v0, p0, p1}, Ld/j/a/a/b/b/d/c;-><init>(J)V
 
+    .line 2
     invoke-static {p2, v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->tryWithCursor(Landroid/database/Cursor;Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1066,9 +995,10 @@
     return-object p0
 .end method
 
-.method private static synthetic lambda$getTransportContextId$2(Landroid/database/Cursor;)Ljava/lang/Long;
+.method public static synthetic lambda$getTransportContextId$2(Landroid/database/Cursor;)Ljava/lang/Long;
     .locals 2
 
+    .line 1
     invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v0
@@ -1082,6 +1012,7 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 2
     invoke-interface {p0, v0}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v0
@@ -1096,16 +1027,19 @@
 .method private synthetic lambda$hasPendingEventsFor$6(Lcom/google/android/datatransport/runtime/TransportContext;Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Boolean;
     .locals 1
 
+    .line 1
     invoke-direct {p0, p2, p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->getTransportContextId(Landroid/database/sqlite/SQLiteDatabase;Lcom/google/android/datatransport/runtime/TransportContext;)Ljava/lang/Long;
 
     move-result-object p1
 
     if-nez p1, :cond_0
 
+    .line 2
     sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->getDb()Landroid/database/sqlite/SQLiteDatabase;
 
@@ -1117,6 +1051,7 @@
 
     const/4 v0, 0x0
 
+    .line 4
     invoke-virtual {p1}, Ljava/lang/Long;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -1125,14 +1060,14 @@
 
     const-string p1, "SELECT 1 FROM events WHERE context_id = ? LIMIT 1"
 
+    .line 5
     invoke-virtual {p0, p1, p2}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object p0
 
-    new-instance p1, Lcom/google/android/datatransport/runtime/scheduling/persistence/n;
+    sget-object p1, Ld/j/a/a/b/b/d/f0;->a:Ld/j/a/a/b/b/d/f0;
 
-    invoke-direct {p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/n;-><init>()V
-
+    .line 6
     invoke-static {p0, p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->tryWithCursor(Landroid/database/Cursor;Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1142,7 +1077,7 @@
     return-object p0
 .end method
 
-.method private static synthetic lambda$loadActiveContexts$10(Landroid/database/sqlite/SQLiteDatabase;)Ljava/util/List;
+.method public static synthetic lambda$loadActiveContexts$10(Landroid/database/sqlite/SQLiteDatabase;)Ljava/util/List;
     .locals 2
 
     const/4 v0, 0x0
@@ -1151,14 +1086,14 @@
 
     const-string v1, "SELECT distinct t._id, t.backend_name, t.priority, t.extras FROM transport_contexts AS t, events AS e WHERE e.context_id = t._id"
 
+    .line 1
     invoke-virtual {p0, v1, v0}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object p0
 
-    new-instance v0, Lcom/google/android/datatransport/runtime/scheduling/persistence/p;
+    sget-object v0, Ld/j/a/a/b/b/d/i;->a:Ld/j/a/a/b/b/d/i;
 
-    invoke-direct {v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/p;-><init>()V
-
+    .line 2
     invoke-static {p0, v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->tryWithCursor(Landroid/database/Cursor;Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1168,13 +1103,15 @@
     return-object p0
 .end method
 
-.method private static synthetic lambda$loadActiveContexts$9(Landroid/database/Cursor;)Ljava/util/List;
+.method public static synthetic lambda$loadActiveContexts$9(Landroid/database/Cursor;)Ljava/util/List;
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 2
     :goto_0
     invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -1182,12 +1119,14 @@
 
     if-eqz v1, :cond_0
 
+    .line 3
     invoke-static {}, Lcom/google/android/datatransport/runtime/TransportContext;->builder()Lcom/google/android/datatransport/runtime/TransportContext$Builder;
 
     move-result-object v1
 
     const/4 v2, 0x1
 
+    .line 4
     invoke-interface {p0, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -1198,6 +1137,7 @@
 
     const/4 v2, 0x2
 
+    .line 5
     invoke-interface {p0, v2}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v2
@@ -1212,6 +1152,7 @@
 
     const/4 v2, 0x3
 
+    .line 6
     invoke-interface {p0, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -1224,10 +1165,12 @@
 
     move-result-object v1
 
+    .line 7
     invoke-virtual {v1}, Lcom/google/android/datatransport/runtime/TransportContext$Builder;->build()Lcom/google/android/datatransport/runtime/TransportContext;
 
     move-result-object v1
 
+    .line 8
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -1239,6 +1182,7 @@
 .method private synthetic lambda$loadBatch$8(Lcom/google/android/datatransport/runtime/TransportContext;Landroid/database/sqlite/SQLiteDatabase;)Ljava/util/List;
     .locals 7
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->config:Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig;
 
     invoke-virtual {v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig;->getLoadBatchSize()I
@@ -1249,6 +1193,7 @@
 
     move-result-object v0
 
+    .line 2
     invoke-static {}, Lcom/google/android/datatransport/Priority;->values()[Lcom/google/android/datatransport/Priority;
 
     move-result-object v1
@@ -1262,6 +1207,7 @@
 
     aget-object v4, v1, v3
 
+    .line 3
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getPriority()Lcom/google/android/datatransport/Priority;
 
     move-result-object v5
@@ -1270,6 +1216,7 @@
 
     goto :goto_1
 
+    .line 4
     :cond_0
     iget-object v5, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->config:Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig;
 
@@ -1287,6 +1234,7 @@
 
     goto :goto_2
 
+    .line 5
     :cond_1
     invoke-virtual {p1, v4}, Lcom/google/android/datatransport/runtime/TransportContext;->withPriority(Lcom/google/android/datatransport/Priority;)Lcom/google/android/datatransport/runtime/TransportContext;
 
@@ -1296,6 +1244,7 @@
 
     move-result-object v4
 
+    .line 6
     invoke-interface {v0, v4}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     :goto_1
@@ -1303,6 +1252,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_2
     :goto_2
     invoke-direct {p0, p2, v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->loadMetadata(Landroid/database/sqlite/SQLiteDatabase;Ljava/util/List;)Ljava/util/Map;
@@ -1319,6 +1269,7 @@
 .method private synthetic lambda$loadClientMetrics$19(Ljava/util/Map;Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics$Builder;Landroid/database/Cursor;)Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics;
     .locals 5
 
+    .line 1
     :goto_0
     invoke-interface {p3}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -1328,12 +1279,14 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-interface {p3, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
+    .line 3
     invoke-interface {p3, v1}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v1
@@ -1344,22 +1297,26 @@
 
     const/4 v2, 0x2
 
+    .line 4
     invoke-interface {p3, v2}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v2
 
+    .line 5
     invoke-interface {p1, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
+    .line 6
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
     invoke-interface {p1, v0, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 7
     :cond_0
     invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1367,44 +1324,53 @@
 
     check-cast v0, Ljava/util/List;
 
+    .line 8
     invoke-static {}, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped;->newBuilder()Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Builder;
 
     move-result-object v4
 
+    .line 9
     invoke-virtual {v4, v1}, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Builder;->setReason(Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;)Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Builder;
 
     move-result-object v1
 
+    .line 10
     invoke-virtual {v1, v2, v3}, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Builder;->setEventsDroppedCount(J)Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Builder;
 
     move-result-object v1
 
+    .line 11
     invoke-virtual {v1}, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Builder;->build()Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped;
 
     move-result-object v1
 
+    .line 12
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    .line 13
     :cond_1
     invoke-direct {p0, p2, p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->populateLogSourcesMetrics(Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics$Builder;Ljava/util/Map;)V
 
+    .line 14
     invoke-direct {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->getTimeWindow()Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow;
 
     move-result-object p1
 
     invoke-virtual {p2, p1}, Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics$Builder;->setWindow(Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow;)Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics$Builder;
 
+    .line 15
     invoke-direct {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->getGlobalMetrics()Lcom/google/android/datatransport/runtime/firebase/transport/GlobalMetrics;
 
     move-result-object p1
 
     invoke-virtual {p2, p1}, Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics$Builder;->setGlobalMetrics(Lcom/google/android/datatransport/runtime/firebase/transport/GlobalMetrics;)Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics$Builder;
 
-    iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->packageName:Lmm/c;
+    .line 16
+    iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->packageName:Lg/a/c;
 
-    invoke-interface {p0}, Lmm/c;->get()Ljava/lang/Object;
+    invoke-interface {p0}, Lg/a/c;->get()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -1412,6 +1378,7 @@
 
     invoke-virtual {p2, p0}, Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics$Builder;->setAppNamespace(Ljava/lang/String;)Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics$Builder;
 
+    .line 17
     invoke-virtual {p2}, Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics$Builder;->build()Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics;
 
     move-result-object p0
@@ -1426,14 +1393,16 @@
 
     new-array v0, v0, [Ljava/lang/String;
 
+    .line 1
     invoke-virtual {p4, p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object p1
 
-    new-instance p4, Lcom/google/android/datatransport/runtime/scheduling/persistence/x;
+    new-instance p4, Ld/j/a/a/b/b/d/v;
 
-    invoke-direct {p4, p0, p2, p3}, Lcom/google/android/datatransport/runtime/scheduling/persistence/x;-><init>(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;Ljava/util/Map;Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics$Builder;)V
+    invoke-direct {p4, p0, p2, p3}, Ld/j/a/a/b/b/d/v;-><init>(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;Ljava/util/Map;Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics$Builder;)V
 
+    .line 2
     invoke-static {p1, p4}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->tryWithCursor(Landroid/database/Cursor;Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1446,6 +1415,7 @@
 .method private synthetic lambda$loadEvents$14(Ljava/util/List;Lcom/google/android/datatransport/runtime/TransportContext;Landroid/database/Cursor;)Ljava/lang/Object;
     .locals 6
 
+    .line 1
     :goto_0
     invoke-interface {p3}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -1455,12 +1425,14 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-interface {p3, v0}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v1
 
     const/4 v3, 0x7
 
+    .line 3
     invoke-interface {p3, v3}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v3
@@ -1471,11 +1443,13 @@
 
     move v0, v4
 
+    .line 4
     :cond_0
     invoke-static {}, Lcom/google/android/datatransport/runtime/EventInternal;->builder()Lcom/google/android/datatransport/runtime/EventInternal$Builder;
 
     move-result-object v3
 
+    .line 5
     invoke-interface {p3, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v4
@@ -1486,6 +1460,7 @@
 
     const/4 v4, 0x2
 
+    .line 6
     invoke-interface {p3, v4}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v4
@@ -1496,6 +1471,7 @@
 
     const/4 v4, 0x3
 
+    .line 7
     invoke-interface {p3, v4}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v4
@@ -1508,8 +1484,10 @@
 
     if-eqz v0, :cond_1
 
+    .line 8
     new-instance v0, Lcom/google/android/datatransport/runtime/EncodedPayload;
 
+    .line 9
     invoke-interface {p3, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v4
@@ -1526,13 +1504,16 @@
 
     invoke-direct {v0, v4, v5}, Lcom/google/android/datatransport/runtime/EncodedPayload;-><init>(Lcom/google/android/datatransport/Encoding;[B)V
 
+    .line 10
     invoke-virtual {v3, v0}, Lcom/google/android/datatransport/runtime/EventInternal$Builder;->setEncodedPayload(Lcom/google/android/datatransport/runtime/EncodedPayload;)Lcom/google/android/datatransport/runtime/EventInternal$Builder;
 
     goto :goto_1
 
+    .line 11
     :cond_1
     new-instance v0, Lcom/google/android/datatransport/runtime/EncodedPayload;
 
+    .line 12
     invoke-interface {p3, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v4
@@ -1547,17 +1528,20 @@
 
     invoke-direct {v0, v4, v5}, Lcom/google/android/datatransport/runtime/EncodedPayload;-><init>(Lcom/google/android/datatransport/Encoding;[B)V
 
+    .line 13
     invoke-virtual {v3, v0}, Lcom/google/android/datatransport/runtime/EventInternal$Builder;->setEncodedPayload(Lcom/google/android/datatransport/runtime/EncodedPayload;)Lcom/google/android/datatransport/runtime/EventInternal$Builder;
 
     :goto_1
     const/4 v0, 0x6
 
+    .line 14
     invoke-interface {p3, v0}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v4
 
     if-nez v4, :cond_2
 
+    .line 15
     invoke-interface {p3, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v0
@@ -1568,6 +1552,7 @@
 
     invoke-virtual {v3, v0}, Lcom/google/android/datatransport/runtime/EventInternal$Builder;->setCode(Ljava/lang/Integer;)Lcom/google/android/datatransport/runtime/EventInternal$Builder;
 
+    .line 16
     :cond_2
     invoke-virtual {v3}, Lcom/google/android/datatransport/runtime/EventInternal$Builder;->build()Lcom/google/android/datatransport/runtime/EventInternal;
 
@@ -1587,9 +1572,10 @@
     return-object p0
 .end method
 
-.method private static synthetic lambda$loadMetadata$16(Ljava/util/Map;Landroid/database/Cursor;)Ljava/lang/Object;
+.method public static synthetic lambda$loadMetadata$16(Ljava/util/Map;Landroid/database/Cursor;)Ljava/lang/Object;
     .locals 5
 
+    .line 1
     :goto_0
     invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -1601,10 +1587,12 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v2
 
+    .line 3
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -1617,16 +1605,19 @@
 
     if-nez v0, :cond_0
 
+    .line 4
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
+    .line 5
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v2
 
     invoke-interface {p0, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 6
     :cond_0
     new-instance v2, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Metadata;
 
@@ -1655,41 +1646,49 @@
 .method private synthetic lambda$persist$1(Lcom/google/android/datatransport/runtime/EventInternal;Lcom/google/android/datatransport/runtime/TransportContext;Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Long;
     .locals 10
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->isStorageAtLimit()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    sget-object p2, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->CACHE_FULL:Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
+    const-wide/16 p2, 0x1
 
+    .line 2
+    sget-object v0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->CACHE_FULL:Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
+
+    .line 3
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/EventInternal;->getTransportName()Ljava/lang/String;
 
     move-result-object p1
 
-    const-wide/16 v0, 0x1
-
-    invoke-virtual {p0, v0, v1, p2, p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->recordLogEventDropped(JLcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;Ljava/lang/String;)V
+    .line 4
+    invoke-virtual {p0, p2, p3, v0, p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->recordLogEventDropped(JLcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;Ljava/lang/String;)V
 
     const-wide/16 p0, -0x1
 
+    .line 5
     invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p0
 
     return-object p0
 
+    .line 6
     :cond_0
     invoke-direct {p0, p3, p2}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->ensureTransportContext(Landroid/database/sqlite/SQLiteDatabase;Lcom/google/android/datatransport/runtime/TransportContext;)J
 
     move-result-wide v0
 
+    .line 7
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->config:Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig;
 
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreConfig;->getMaxBlobByteSizePerRow()I
 
     move-result p0
 
+    .line 8
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/EventInternal;->getEncodedPayload()Lcom/google/android/datatransport/runtime/EncodedPayload;
 
     move-result-object p2
@@ -1698,6 +1697,7 @@
 
     move-result-object p2
 
+    .line 9
     array-length v2, p2
 
     const/4 v3, 0x0
@@ -1713,27 +1713,31 @@
     :cond_1
     move v2, v3
 
+    .line 10
     :goto_0
     new-instance v5, Landroid/content/ContentValues;
 
     invoke-direct {v5}, Landroid/content/ContentValues;-><init>()V
 
-    const-string v6, "context_id"
-
+    .line 11
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    invoke-virtual {v5, v6, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
+    const-string v1, "context_id"
 
-    const-string v0, "transport_name"
+    invoke-virtual {v5, v1, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
+    .line 12
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/EventInternal;->getTransportName()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v5, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v1, "transport_name"
 
+    invoke-virtual {v5, v1, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 13
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/EventInternal;->getEventMillis()J
 
     move-result-wide v0
@@ -1746,6 +1750,7 @@
 
     invoke-virtual {v5, v1, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
+    .line 14
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/EventInternal;->getUptimeMillis()J
 
     move-result-wide v0
@@ -1758,6 +1763,7 @@
 
     invoke-virtual {v5, v1, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
+    .line 15
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/EventInternal;->getEncodedPayload()Lcom/google/android/datatransport/runtime/EncodedPayload;
 
     move-result-object v0
@@ -1774,29 +1780,32 @@
 
     invoke-virtual {v5, v1, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v0, "code"
-
+    .line 16
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/EventInternal;->getCode()Ljava/lang/Integer;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v5, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+    const-string v1, "code"
 
-    const-string v0, "num_attempts"
+    invoke-virtual {v5, v1, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    .line 17
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v5, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+    const-string v1, "num_attempts"
 
-    const-string v0, "inline"
+    invoke-virtual {v5, v1, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    .line 18
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v5, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Boolean;)V
+    const-string v1, "inline"
+
+    invoke-virtual {v5, v1, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Boolean;)V
 
     if-eqz v2, :cond_2
 
@@ -1810,12 +1819,14 @@
     :goto_1
     const-string v1, "payload"
 
+    .line 19
     invoke-virtual {v5, v1, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;[B)V
 
     const-string v0, "events"
 
     const/4 v1, 0x0
 
+    .line 20
     invoke-virtual {p3, v0, v1, v5}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
     move-result-wide v5
@@ -1824,6 +1835,7 @@
 
     if-nez v2, :cond_3
 
+    .line 21
     array-length v2, p2
 
     int-to-double v2, v2
@@ -1847,46 +1859,55 @@
 
     mul-int v7, v4, p0
 
+    .line 22
     array-length v8, p2
 
+    .line 23
     invoke-static {v7, v8}, Ljava/lang/Math;->min(II)I
 
     move-result v7
 
+    .line 24
     invoke-static {p2, v3, v7}, Ljava/util/Arrays;->copyOfRange([BII)[B
 
     move-result-object v3
 
+    .line 25
     new-instance v7, Landroid/content/ContentValues;
 
     invoke-direct {v7}, Landroid/content/ContentValues;-><init>()V
 
+    .line 26
     invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v8
 
     invoke-virtual {v7, v0, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    const-string v8, "sequence_num"
-
+    .line 27
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v9
+    move-result-object v8
 
-    invoke-virtual {v7, v8, v9}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+    const-string v9, "sequence_num"
+
+    invoke-virtual {v7, v9, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
     const-string v8, "bytes"
 
+    .line 28
     invoke-virtual {v7, v8, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;[B)V
 
     const-string v3, "event_payloads"
 
+    .line 29
     invoke-virtual {p3, v3, v1, v7}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
+    .line 30
     :cond_3
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/EventInternal;->getMetadata()Ljava/util/Map;
 
@@ -1913,16 +1934,19 @@
 
     check-cast p1, Ljava/util/Map$Entry;
 
+    .line 31
     new-instance p2, Landroid/content/ContentValues;
 
     invoke-direct {p2}, Landroid/content/ContentValues;-><init>()V
 
+    .line 32
     invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v2
 
     invoke-virtual {p2, v0, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
+    .line 33
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -1933,6 +1957,7 @@
 
     invoke-virtual {p2, v3, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 34
     invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -1945,10 +1970,12 @@
 
     const-string p1, "event_metadata"
 
+    .line 35
     invoke-virtual {p3, p1, v1, p2}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
     goto :goto_3
 
+    .line 36
     :cond_4
     invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -1957,9 +1984,10 @@
     return-object p0
 .end method
 
-.method private static synthetic lambda$readPayload$15(Landroid/database/Cursor;)[B
+.method public static synthetic lambda$readPayload$15(Landroid/database/Cursor;)[B
     .locals 6
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -1968,6 +1996,7 @@
 
     move v2, v1
 
+    .line 2
     :goto_0
     invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -1975,18 +2004,22 @@
 
     if-eqz v3, :cond_0
 
+    .line 3
     invoke-interface {p0, v1}, Landroid/database/Cursor;->getBlob(I)[B
 
     move-result-object v3
 
+    .line 4
     invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 5
     array-length v3, v3
 
     add-int/2addr v2, v3
 
     goto :goto_0
 
+    .line 6
     :cond_0
     new-array p0, v2, [B
 
@@ -1994,6 +2027,7 @@
 
     move v3, v2
 
+    .line 7
     :goto_1
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -2001,16 +2035,19 @@
 
     if-ge v2, v4, :cond_1
 
+    .line 8
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, [B
 
+    .line 9
     array-length v5, v4
 
     invoke-static {v4, v1, p0, v3, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 10
     array-length v4, v4
 
     add-int/2addr v3, v4
@@ -2026,6 +2063,7 @@
 .method private synthetic lambda$recordFailure$3(Landroid/database/Cursor;)Ljava/lang/Object;
     .locals 4
 
+    .line 1
     :goto_0
     invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -2035,18 +2073,21 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v0
 
     const/4 v1, 0x1
 
+    .line 3
     invoke-interface {p1, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
     int-to-long v2, v0
 
+    .line 4
     sget-object v0, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->MAX_RETRIES_REACHED:Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;
 
     invoke-virtual {p0, v2, v3, v0, v1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->recordLogEventDropped(JLcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;Ljava/lang/String;)V
@@ -2062,6 +2103,7 @@
 .method private synthetic lambda$recordFailure$4(Ljava/lang/String;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Object;
     .locals 1
 
+    .line 1
     invoke-virtual {p3, p1}, Landroid/database/sqlite/SQLiteDatabase;->compileStatement(Ljava/lang/String;)Landroid/database/sqlite/SQLiteStatement;
 
     move-result-object p1
@@ -2070,18 +2112,21 @@
 
     const/4 p1, 0x0
 
+    .line 2
     invoke-virtual {p3, p2, p1}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object p2
 
-    new-instance v0, Lcom/google/android/datatransport/runtime/scheduling/persistence/f;
+    new-instance v0, Ld/j/a/a/b/b/d/w;
 
-    invoke-direct {v0, p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/f;-><init>(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;)V
+    invoke-direct {v0, p0}, Ld/j/a/a/b/b/d/w;-><init>(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;)V
 
+    .line 3
     invoke-static {p2, v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->tryWithCursor(Landroid/database/Cursor;Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;)Ljava/lang/Object;
 
     const-string p0, "DELETE FROM events WHERE num_attempts >= 16"
 
+    .line 4
     invoke-virtual {p3, p0}, Landroid/database/sqlite/SQLiteDatabase;->compileStatement(Ljava/lang/String;)Landroid/database/sqlite/SQLiteStatement;
 
     move-result-object p0
@@ -2091,9 +2136,10 @@
     return-object p1
 .end method
 
-.method private static synthetic lambda$recordLogEventDropped$17(Landroid/database/Cursor;)Ljava/lang/Boolean;
+.method public static synthetic lambda$recordLogEventDropped$17(Landroid/database/Cursor;)Ljava/lang/Boolean;
     .locals 0
 
+    .line 1
     invoke-interface {p0}, Landroid/database/Cursor;->getCount()I
 
     move-result p0
@@ -2115,7 +2161,7 @@
     return-object p0
 .end method
 
-.method private static synthetic lambda$recordLogEventDropped$18(Ljava/lang/String;Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;JLandroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Object;
+.method public static synthetic lambda$recordLogEventDropped$18(Ljava/lang/String;Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;JLandroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Object;
     .locals 6
 
     const/4 v0, 0x2
@@ -2126,6 +2172,7 @@
 
     aput-object p0, v1, v2
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->getNumber()I
 
     move-result v3
@@ -2140,13 +2187,12 @@
 
     const-string v3, "SELECT 1 FROM log_event_dropped WHERE log_source = ? AND reason = ?"
 
+    .line 2
     invoke-virtual {p4, v3, v1}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v1
 
-    new-instance v3, Lcom/google/android/datatransport/runtime/scheduling/persistence/z;
-
-    invoke-direct {v3}, Lcom/google/android/datatransport/runtime/scheduling/persistence/z;-><init>()V
+    sget-object v3, Ld/j/a/a/b/b/d/z;->a:Ld/j/a/a/b/b/d/z;
 
     invoke-static {v1, v3}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->tryWithCursor(Landroid/database/Cursor;Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;)Ljava/lang/Object;
 
@@ -2162,14 +2208,17 @@
 
     if-nez v1, :cond_0
 
+    .line 3
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
     const-string v1, "log_source"
 
+    .line 4
     invoke-virtual {v0, v1, p0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->getNumber()I
 
     move-result p0
@@ -2182,20 +2231,23 @@
 
     invoke-virtual {v0, p1, p0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    const-string p0, "events_dropped_count"
-
+    .line 6
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-virtual {v0, p0, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
+    const-string p1, "events_dropped_count"
+
+    invoke-virtual {v0, p1, p0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
     const-string p0, "log_event_dropped"
 
+    .line 7
     invoke-virtual {p4, p0, v3, v0}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
     goto :goto_0
 
+    .line 8
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2219,6 +2271,7 @@
 
     aput-object p0, p3, v2
 
+    .line 9
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;->getNumber()I
 
     move-result p0
@@ -2235,25 +2288,28 @@
     return-object v3
 .end method
 
-.method private static synthetic lambda$recordNextCallTime$7(JLcom/google/android/datatransport/runtime/TransportContext;Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Object;
+.method public static synthetic lambda$recordNextCallTime$7(JLcom/google/android/datatransport/runtime/TransportContext;Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Object;
     .locals 3
 
+    .line 1
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    const-string v1, "next_request_ms"
-
+    .line 2
     invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p0
 
-    invoke-virtual {v0, v1, p0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
+    const-string p1, "next_request_ms"
+
+    invoke-virtual {v0, p1, p0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
     const/4 p0, 0x2
 
     new-array p0, p0, [Ljava/lang/String;
 
+    .line 3
     invoke-virtual {p2}, Lcom/google/android/datatransport/runtime/TransportContext;->getBackendName()Ljava/lang/String;
 
     move-result-object p1
@@ -2262,6 +2318,7 @@
 
     aput-object p1, p0, v1
 
+    .line 4
     invoke-virtual {p2}, Lcom/google/android/datatransport/runtime/TransportContext;->getPriority()Lcom/google/android/datatransport/Priority;
 
     move-result-object p1
@@ -2282,6 +2339,7 @@
 
     const-string v2, "backend_name = ? and priority = ?"
 
+    .line 5
     invoke-virtual {p3, p1, v0, v2, p0}, Landroid/database/sqlite/SQLiteDatabase;->update(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result p0
@@ -2290,14 +2348,16 @@
 
     if-ge p0, v1, :cond_0
 
-    const-string p0, "backend_name"
-
+    .line 6
     invoke-virtual {p2}, Lcom/google/android/datatransport/runtime/TransportContext;->getBackendName()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-virtual {v0, p0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v1, "backend_name"
 
+    invoke-virtual {v0, v1, p0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 7
     invoke-virtual {p2}, Lcom/google/android/datatransport/runtime/TransportContext;->getPriority()Lcom/google/android/datatransport/Priority;
 
     move-result-object p0
@@ -2314,6 +2374,7 @@
 
     invoke-virtual {v0, p2, p0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
+    .line 8
     invoke-virtual {p3, p1, v2, v0}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
     :cond_0
@@ -2325,12 +2386,14 @@
 
     const-string v0, "DELETE FROM log_event_dropped"
 
+    .line 1
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->compileStatement(Ljava/lang/String;)Landroid/database/sqlite/SQLiteStatement;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteStatement;->execute()V
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2341,6 +2404,7 @@
 
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->wallClock:Lcom/google/android/datatransport/runtime/time/Clock;
 
+    .line 3
     invoke-interface {p0}, Lcom/google/android/datatransport/runtime/time/Clock;->getTime()J
 
     move-result-wide v1
@@ -2351,10 +2415,12 @@
 
     move-result-object p0
 
+    .line 4
     invoke-virtual {p1, p0}, Landroid/database/sqlite/SQLiteDatabase;->compileStatement(Ljava/lang/String;)Landroid/database/sqlite/SQLiteStatement;
 
     move-result-object p0
 
+    .line 5
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteStatement;->execute()V
 
     const/4 p0, 0x0
@@ -2363,7 +2429,7 @@
 .end method
 
 .method private loadEvents(Landroid/database/sqlite/SQLiteDatabase;Lcom/google/android/datatransport/runtime/TransportContext;I)Ljava/util/List;
-    .locals 12
+    .locals 19
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2376,11 +2442,13 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->getTransportContextId(Landroid/database/sqlite/SQLiteDatabase;Lcom/google/android/datatransport/runtime/TransportContext;)Ljava/lang/Long;
+    .line 2
+    invoke-direct/range {p0 .. p2}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->getTransportContextId(Landroid/database/sqlite/SQLiteDatabase;Lcom/google/android/datatransport/runtime/TransportContext;)Ljava/lang/Long;
 
     move-result-object v1
 
@@ -2389,69 +2457,78 @@
     return-object v0
 
     :cond_0
-    const-string v3, "events"
+    const-string v2, "_id"
 
-    const-string v4, "_id"
+    const-string v3, "transport_name"
 
-    const-string v5, "transport_name"
+    const-string v4, "timestamp_ms"
 
-    const-string v6, "timestamp_ms"
+    const-string v5, "uptime_ms"
 
-    const-string v7, "uptime_ms"
+    const-string v6, "payload_encoding"
 
-    const-string v8, "payload_encoding"
+    const-string v7, "payload"
 
-    const-string v9, "payload"
+    const-string v8, "code"
 
-    const-string v10, "code"
+    const-string v9, "inline"
 
-    const-string v11, "inline"
+    .line 3
+    filled-new-array/range {v2 .. v9}, [Ljava/lang/String;
 
-    filled-new-array/range {v4 .. v11}, [Ljava/lang/String;
-
-    move-result-object v4
-
-    const-string v5, "context_id = ?"
+    move-result-object v12
 
     const/4 v2, 0x1
 
-    new-array v6, v2, [Ljava/lang/String;
+    new-array v14, v2, [Ljava/lang/String;
 
     const/4 v2, 0x0
 
+    .line 4
     invoke-virtual {v1}, Ljava/lang/Long;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    aput-object v1, v6, v2
+    aput-object v1, v14, v2
 
-    const/4 v7, 0x0
+    const/4 v15, 0x0
 
-    const/4 v8, 0x0
+    const/16 v16, 0x0
 
-    const/4 v9, 0x0
+    const/16 v17, 0x0
 
-    invoke-static {p3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    .line 5
+    invoke-static/range {p3 .. p3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-    move-result-object v10
+    move-result-object v18
 
-    move-object v2, p1
+    const-string v11, "events"
 
-    invoke-virtual/range {v2 .. v10}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    const-string v13, "context_id = ?"
 
-    move-result-object p1
+    move-object/from16 v10, p1
 
-    new-instance p3, Lcom/google/android/datatransport/runtime/scheduling/persistence/i;
+    .line 6
+    invoke-virtual/range {v10 .. v18}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
-    invoke-direct {p3, p0, v0, p2}, Lcom/google/android/datatransport/runtime/scheduling/persistence/i;-><init>(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;Ljava/util/List;Lcom/google/android/datatransport/runtime/TransportContext;)V
+    move-result-object v1
 
-    invoke-static {p1, p3}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->tryWithCursor(Landroid/database/Cursor;Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;)Ljava/lang/Object;
+    new-instance v2, Ld/j/a/a/b/b/d/p;
+
+    move-object/from16 v3, p0
+
+    move-object/from16 v4, p2
+
+    invoke-direct {v2, v3, v0, v4}, Ld/j/a/a/b/b/d/p;-><init>(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;Ljava/util/List;Lcom/google/android/datatransport/runtime/TransportContext;)V
+
+    .line 7
+    invoke-static {v1, v2}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->tryWithCursor(Landroid/database/Cursor;Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;)Ljava/lang/Object;
 
     return-object v0
 .end method
 
 .method private loadMetadata(Landroid/database/sqlite/SQLiteDatabase;Ljava/util/List;)Ljava/util/Map;
-    .locals 9
+    .locals 11
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2467,10 +2544,12 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/util/HashMap;
 
     invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "event_id IN ("
@@ -2479,6 +2558,7 @@
 
     const/4 v1, 0x0
 
+    .line 3
     :goto_0
     invoke-interface {p2}, Ljava/util/List;->size()I
 
@@ -2486,6 +2566,7 @@
 
     if-ge v1, v2, :cond_1
 
+    .line 4
     invoke-interface {p2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -2498,6 +2579,7 @@
 
     invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
+    .line 5
     invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result v2
@@ -2508,6 +2590,7 @@
 
     const/16 v2, 0x2c
 
+    .line 6
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     :cond_0
@@ -2518,53 +2601,48 @@
     :cond_1
     const/16 p2, 0x29
 
+    .line 7
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    const-string v2, "event_metadata"
+    const-string p2, "event_id"
 
-    const-string p2, "name"
+    const-string v1, "name"
 
-    const-string v1, "value"
+    const-string v2, "value"
 
-    const-string v3, "event_id"
+    .line 8
+    filled-new-array {p2, v1, v2}, [Ljava/lang/String;
 
-    filled-new-array {v3, p2, v1}, [Ljava/lang/String;
+    move-result-object v5
 
-    move-result-object v3
-
+    .line 9
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v4
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
+    move-result-object v6
 
     const/4 v7, 0x0
 
     const/4 v8, 0x0
 
-    move-object v1, p1
+    const/4 v9, 0x0
 
-    invoke-virtual/range {v1 .. v8}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    const/4 v10, 0x0
+
+    const-string v4, "event_metadata"
+
+    move-object v3, p1
+
+    .line 10
+    invoke-virtual/range {v3 .. v10}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object p1
 
-    new-instance p2, Lcom/google/android/datatransport/runtime/scheduling/persistence/l;
+    new-instance p2, Ld/j/a/a/b/b/d/u;
 
-    invoke-direct {p2, p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/l;-><init>(Ljava/util/Map;)V
+    invoke-direct {p2, p0}, Ld/j/a/a/b/b/d/u;-><init>(Ljava/util/Map;)V
 
+    .line 11
     invoke-static {p1, p2}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->tryWithCursor(Landroid/database/Cursor;Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;)Ljava/lang/Object;
-
-    return-object p0
-.end method
-
-.method public static synthetic m(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;Landroid/database/Cursor;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$cleanUp$11(Landroid/database/Cursor;)Ljava/lang/Object;
-
-    move-result-object p0
 
     return-object p0
 .end method
@@ -2585,27 +2663,8 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {p0, v0}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic n(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;Lcom/google/android/datatransport/runtime/TransportContext;Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Boolean;
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$hasPendingEventsFor$6(Lcom/google/android/datatransport/runtime/TransportContext;Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Boolean;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic o(JLandroid/database/sqlite/SQLiteDatabase;)Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow;
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$getTimeWindow$22(JLandroid/database/sqlite/SQLiteDatabase;)Lcom/google/android/datatransport/runtime/firebase/transport/TimeWindow;
 
     move-result-object p0
 
@@ -2626,6 +2685,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -2647,10 +2707,12 @@
 
     check-cast p2, Ljava/util/Map$Entry;
 
+    .line 2
     invoke-static {}, Lcom/google/android/datatransport/runtime/firebase/transport/LogSourceMetrics;->newBuilder()Lcom/google/android/datatransport/runtime/firebase/transport/LogSourceMetrics$Builder;
 
     move-result-object v0
 
+    .line 3
     invoke-interface {p2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -2661,6 +2723,7 @@
 
     move-result-object v0
 
+    .line 4
     invoke-interface {p2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p2
@@ -2671,10 +2734,12 @@
 
     move-result-object p2
 
+    .line 5
     invoke-virtual {p2}, Lcom/google/android/datatransport/runtime/firebase/transport/LogSourceMetrics$Builder;->build()Lcom/google/android/datatransport/runtime/firebase/transport/LogSourceMetrics;
 
     move-result-object p2
 
+    .line 6
     invoke-virtual {p1, p2}, Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics$Builder;->addLogSourceMetrics(Lcom/google/android/datatransport/runtime/firebase/transport/LogSourceMetrics;)Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics$Builder;
 
     goto :goto_0
@@ -2683,24 +2748,13 @@
     return-void
 .end method
 
-.method public static synthetic r(Landroid/database/Cursor;)Ljava/lang/Long;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$getNextCallTime$5(Landroid/database/Cursor;)Ljava/lang/Long;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 .method private readPayload(J)[B
     .locals 8
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->getDb()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
-
-    const-string v1, "event_payloads"
 
     const-string p0, "bytes"
 
@@ -2708,19 +2762,22 @@
 
     move-result-object v2
 
-    const-string v3, "event_id = ?"
-
     const/4 p0, 0x1
 
     new-array v4, p0, [Ljava/lang/String;
 
-    const/4 p0, 0x0
-
+    .line 2
     invoke-static {p1, p2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    aput-object p1, v4, p0
+    const/4 p1, 0x0
+
+    aput-object p0, v4, p1
+
+    const-string v1, "event_payloads"
+
+    const-string v3, "event_id = ?"
 
     const/4 v5, 0x0
 
@@ -2728,14 +2785,14 @@
 
     const-string v7, "sequence_num"
 
+    .line 3
     invoke-virtual/range {v0 .. v7}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object p0
 
-    new-instance p1, Lcom/google/android/datatransport/runtime/scheduling/persistence/u;
+    sget-object p1, Ld/j/a/a/b/b/d/g;->a:Ld/j/a/a/b/b/d/g;
 
-    invoke-direct {p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/u;-><init>()V
-
+    .line 4
     invoke-static {p0, p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->tryWithCursor(Landroid/database/Cursor;Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;)Ljava/lang/Object;
 
     move-result-object p0
@@ -2760,12 +2817,14 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->monotonicClock:Lcom/google/android/datatransport/runtime/time/Clock;
 
     invoke-interface {v0}, Lcom/google/android/datatransport/runtime/time/Clock;->getTime()J
 
     move-result-wide v0
 
+    .line 2
     :goto_0
     :try_start_0
     invoke-interface {p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Producer;->produce()Ljava/lang/Object;
@@ -2779,6 +2838,7 @@
     :catch_0
     move-exception v2
 
+    .line 3
     iget-object v3, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->monotonicClock:Lcom/google/android/datatransport/runtime/time/Clock;
 
     invoke-interface {v3}, Lcom/google/android/datatransport/runtime/time/Clock;->getTime()J
@@ -2799,6 +2859,7 @@
 
     if-ltz v3, :cond_0
 
+    .line 4
     invoke-interface {p2, v2}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -2808,29 +2869,10 @@
     :cond_0
     const-wide/16 v2, 0x32
 
+    .line 5
     invoke-static {v2, v3}, Landroid/os/SystemClock;->sleep(J)V
 
     goto :goto_0
-.end method
-
-.method public static synthetic s(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;Ljava/lang/String;Ljava/util/Map;Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics$Builder;Landroid/database/sqlite/SQLiteDatabase;)Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics;
-    .locals 0
-
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$loadClientMetrics$20(Ljava/lang/String;Ljava/util/Map;Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics$Builder;Landroid/database/sqlite/SQLiteDatabase;)Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic t(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;Ljava/util/List;Lcom/google/android/datatransport/runtime/TransportContext;Landroid/database/Cursor;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$loadEvents$14(Ljava/util/List;Lcom/google/android/datatransport/runtime/TransportContext;Landroid/database/Cursor;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
 .end method
 
 .method private static toEncoding(Ljava/lang/String;)Lcom/google/android/datatransport/Encoding;
@@ -2842,10 +2884,12 @@
 
     if-nez p0, :cond_0
 
+    .line 1
     sget-object p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->PROTOBUF_ENCODING:Lcom/google/android/datatransport/Encoding;
 
     return-object p0
 
+    .line 2
     :cond_0
     invoke-static {p0}, Lcom/google/android/datatransport/Encoding;->of(Ljava/lang/String;)Lcom/google/android/datatransport/Encoding;
 
@@ -2866,16 +2910,19 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "("
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
+    .line 2
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
+    .line 3
     :cond_0
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
@@ -2884,6 +2931,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 4
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -2896,6 +2944,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
+    .line 5
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
@@ -2904,6 +2953,7 @@
 
     const/16 v1, 0x2c
 
+    .line 6
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_0
@@ -2911,8 +2961,10 @@
     :cond_1
     const/16 p0, 0x29
 
+    .line 7
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 8
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -2937,6 +2989,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     invoke-interface {p1, p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -2944,6 +2997,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 2
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
     return-object p1
@@ -2953,64 +3007,36 @@
 
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
+    .line 3
     throw p1
-.end method
-
-.method public static synthetic u(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$resetClientMetrics$23(Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic v(Landroid/database/Cursor;)Ljava/lang/Long;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$getTransportContextId$2(Landroid/database/Cursor;)Ljava/lang/Long;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic x(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;Ljava/lang/String;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$recordFailure$4(Ljava/lang/String;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic y(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;Lcom/google/android/datatransport/runtime/EventInternal;Lcom/google/android/datatransport/runtime/TransportContext;Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Long;
-    .locals 0
-
-    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$persist$1(Lcom/google/android/datatransport/runtime/EventInternal;Lcom/google/android/datatransport/runtime/TransportContext;Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Long;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic z(Ljava/util/Map;Landroid/database/Cursor;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$loadMetadata$16(Ljava/util/Map;Landroid/database/Cursor;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
 .end method
 
 
 # virtual methods
+.method public synthetic a(Landroid/database/Cursor;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$cleanUp$11(Landroid/database/Cursor;)Ljava/lang/Object;
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public synthetic b(JLandroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Integer;
+    .locals 0
+
+    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$cleanUp$12(JLandroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method public cleanUp()I
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->wallClock:Lcom/google/android/datatransport/runtime/time/Clock;
 
     invoke-interface {v0}, Lcom/google/android/datatransport/runtime/time/Clock;->getTime()J
@@ -3025,9 +3051,10 @@
 
     sub-long/2addr v0, v2
 
-    new-instance v2, Lcom/google/android/datatransport/runtime/scheduling/persistence/j;
+    .line 2
+    new-instance v2, Ld/j/a/a/b/b/d/x;
 
-    invoke-direct {v2, p0, v0, v1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/j;-><init>(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;J)V
+    invoke-direct {v2, p0, v0, v1}, Ld/j/a/a/b/b/d/x;-><init>(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;J)V
 
     invoke-virtual {p0, v2}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->inTransaction(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;)Ljava/lang/Object;
 
@@ -3050,9 +3077,8 @@
         }
     .end annotation
 
-    new-instance v0, Lcom/google/android/datatransport/runtime/scheduling/persistence/a;
-
-    invoke-direct {v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/a;-><init>()V
+    .line 1
+    sget-object v0, Ld/j/a/a/b/b/d/h;->a:Ld/j/a/a/b/b/d/h;
 
     invoke-virtual {p0, v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->inTransaction(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;)Ljava/lang/Object;
 
@@ -3062,6 +3088,7 @@
 .method public close()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->schemaManager:Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager;
 
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteOpenHelper;->close()V
@@ -3069,11 +3096,42 @@
     return-void
 .end method
 
+.method public synthetic d(Lcom/google/android/datatransport/runtime/TransportContext;Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Boolean;
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$hasPendingEventsFor$6(Lcom/google/android/datatransport/runtime/TransportContext;Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Boolean;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public synthetic e(Lcom/google/android/datatransport/runtime/TransportContext;Landroid/database/sqlite/SQLiteDatabase;)Ljava/util/List;
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$loadBatch$8(Lcom/google/android/datatransport/runtime/TransportContext;Landroid/database/sqlite/SQLiteDatabase;)Ljava/util/List;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public synthetic f(Ljava/util/Map;Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics$Builder;Landroid/database/Cursor;)Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics;
+    .locals 0
+
+    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$loadClientMetrics$19(Ljava/util/Map;Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics$Builder;Landroid/database/Cursor;)Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method public getByteSize()J
     .locals 4
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->getPageCount()J
 
     move-result-wide v0
@@ -3092,18 +3150,19 @@
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->schemaManager:Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager;
 
+    .line 2
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v1, Lcom/google/android/datatransport/runtime/scheduling/persistence/c;
+    new-instance v1, Ld/j/a/a/b/b/d/g0;
 
-    invoke-direct {v1, v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/c;-><init>(Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager;)V
+    invoke-direct {v1, v0}, Ld/j/a/a/b/b/d/g0;-><init>(Lcom/google/android/datatransport/runtime/scheduling/persistence/SchemaManager;)V
 
-    new-instance v0, Lcom/google/android/datatransport/runtime/scheduling/persistence/d;
+    sget-object v0, Ld/j/a/a/b/b/d/a;->a:Ld/j/a/a/b/b/d/a;
 
-    invoke-direct {v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/d;-><init>()V
-
+    .line 3
     invoke-direct {p0, v1, v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->retryIfDbLocked(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Producer;Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;)Ljava/lang/Object;
 
     move-result-object p0
@@ -3116,6 +3175,7 @@
 .method public getNextCallTime(Lcom/google/android/datatransport/runtime/TransportContext;)J
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->getDb()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object p0
@@ -3124,6 +3184,7 @@
 
     new-array v0, v0, [Ljava/lang/String;
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getBackendName()Ljava/lang/String;
 
     move-result-object v1
@@ -3132,6 +3193,7 @@
 
     aput-object v1, v0, v2
 
+    .line 3
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getPriority()Lcom/google/android/datatransport/Priority;
 
     move-result-object p1
@@ -3150,14 +3212,14 @@
 
     const-string p1, "SELECT next_request_ms FROM transport_contexts WHERE backend_name = ? and priority = ?"
 
+    .line 4
     invoke-virtual {p0, p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object p0
 
-    new-instance p1, Lcom/google/android/datatransport/runtime/scheduling/persistence/e;
+    sget-object p1, Ld/j/a/a/b/b/d/n;->a:Ld/j/a/a/b/b/d/n;
 
-    invoke-direct {p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/e;-><init>()V
-
+    .line 5
     invoke-static {p0, p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->tryWithCursor(Landroid/database/Cursor;Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;)Ljava/lang/Object;
 
     move-result-object p0
@@ -3171,12 +3233,23 @@
     return-wide p0
 .end method
 
+.method public synthetic h(Ljava/lang/String;Ljava/util/Map;Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics$Builder;Landroid/database/sqlite/SQLiteDatabase;)Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics;
+    .locals 0
+
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$loadClientMetrics$20(Ljava/lang/String;Ljava/util/Map;Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics$Builder;Landroid/database/sqlite/SQLiteDatabase;)Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method public hasPendingEventsFor(Lcom/google/android/datatransport/runtime/TransportContext;)Z
     .locals 1
 
-    new-instance v0, Lcom/google/android/datatransport/runtime/scheduling/persistence/a0;
+    .line 1
+    new-instance v0, Ld/j/a/a/b/b/d/l;
 
-    invoke-direct {v0, p0, p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/a0;-><init>(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;Lcom/google/android/datatransport/runtime/TransportContext;)V
+    invoke-direct {v0, p0, p1}, Ld/j/a/a/b/b/d/l;-><init>(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;Lcom/google/android/datatransport/runtime/TransportContext;)V
 
     invoke-virtual {p0, v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->inTransaction(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;)Ljava/lang/Object;
 
@@ -3189,6 +3262,16 @@
     move-result p0
 
     return p0
+.end method
+
+.method public synthetic i(Ljava/util/List;Lcom/google/android/datatransport/runtime/TransportContext;Landroid/database/Cursor;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$loadEvents$14(Ljava/util/List;Lcom/google/android/datatransport/runtime/TransportContext;Landroid/database/Cursor;)Ljava/lang/Object;
+
+    const/4 p0, 0x0
+
+    return-object p0
 .end method
 
 .method public inTransaction(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;)Ljava/lang/Object;
@@ -3207,21 +3290,26 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->getDb()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object p0
 
+    .line 2
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
+    .line 3
     :try_start_0
     invoke-interface {p1, p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
+    .line 4
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 5
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
     return-object p1
@@ -3231,7 +3319,38 @@
 
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
+    .line 6
     throw p1
+.end method
+
+.method public synthetic j(Lcom/google/android/datatransport/runtime/EventInternal;Lcom/google/android/datatransport/runtime/TransportContext;Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Long;
+    .locals 0
+
+    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$persist$1(Lcom/google/android/datatransport/runtime/EventInternal;Lcom/google/android/datatransport/runtime/TransportContext;Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Long;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public synthetic k(Landroid/database/Cursor;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$recordFailure$3(Landroid/database/Cursor;)Ljava/lang/Object;
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public synthetic l(Ljava/lang/String;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-direct {p0, p1, p2, p3}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$recordFailure$4(Ljava/lang/String;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Object;
+
+    const/4 p0, 0x0
+
+    return-object p0
 .end method
 
 .method public loadActiveContexts()Ljava/lang/Iterable;
@@ -3245,9 +3364,8 @@
         }
     .end annotation
 
-    new-instance v0, Lcom/google/android/datatransport/runtime/scheduling/persistence/y;
-
-    invoke-direct {v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/y;-><init>()V
+    .line 1
+    sget-object v0, Ld/j/a/a/b/b/d/y;->a:Ld/j/a/a/b/b/d/y;
 
     invoke-virtual {p0, v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->inTransaction(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;)Ljava/lang/Object;
 
@@ -3271,9 +3389,10 @@
         }
     .end annotation
 
-    new-instance v0, Lcom/google/android/datatransport/runtime/scheduling/persistence/o;
+    .line 1
+    new-instance v0, Ld/j/a/a/b/b/d/d;
 
-    invoke-direct {v0, p0, p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/o;-><init>(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;Lcom/google/android/datatransport/runtime/TransportContext;)V
+    invoke-direct {v0, p0, p1}, Ld/j/a/a/b/b/d/d;-><init>(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;Lcom/google/android/datatransport/runtime/TransportContext;)V
 
     invoke-virtual {p0, v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->inTransaction(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;)Ljava/lang/Object;
 
@@ -3287,25 +3406,38 @@
 .method public loadClientMetrics()Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics;
     .locals 4
 
+    .line 1
     invoke-static {}, Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics;->newBuilder()Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics$Builder;
 
     move-result-object v0
 
+    .line 2
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    new-instance v2, Lcom/google/android/datatransport/runtime/scheduling/persistence/v;
+    .line 3
+    new-instance v2, Ld/j/a/a/b/b/d/o;
 
     const-string v3, "SELECT log_source, reason, events_dropped_count FROM log_event_dropped"
 
-    invoke-direct {v2, p0, v3, v1, v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/v;-><init>(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;Ljava/lang/String;Ljava/util/Map;Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics$Builder;)V
+    invoke-direct {v2, p0, v3, v1, v0}, Ld/j/a/a/b/b/d/o;-><init>(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;Ljava/lang/String;Ljava/util/Map;Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics$Builder;)V
 
     invoke-virtual {p0, v2}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->inTransaction(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Lcom/google/android/datatransport/runtime/firebase/transport/ClientMetrics;
+
+    return-object p0
+.end method
+
+.method public synthetic m(Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->lambda$resetClientMetrics$23(Landroid/database/sqlite/SQLiteDatabase;)Ljava/lang/Object;
+
+    const/4 p0, 0x0
 
     return-object p0
 .end method
@@ -3319,6 +3451,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getPriority()Lcom/google/android/datatransport/Priority;
 
     move-result-object v1
@@ -3327,6 +3460,7 @@
 
     aput-object v1, v0, v2
 
+    .line 2
     invoke-virtual {p2}, Lcom/google/android/datatransport/runtime/EventInternal;->getTransportName()Ljava/lang/String;
 
     move-result-object v1
@@ -3335,24 +3469,28 @@
 
     aput-object v1, v0, v2
 
-    const/4 v1, 0x2
-
+    .line 3
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getBackendName()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    aput-object v2, v0, v1
+    const/4 v2, 0x2
+
+    aput-object v1, v0, v2
 
     const-string v1, "SQLiteEventStore"
 
     const-string v2, "Storing event with priority=%s, name=%s for destination %s"
 
+    .line 4
     invoke-static {v1, v2, v0}, Lcom/google/android/datatransport/runtime/logging/Logging;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    new-instance v0, Lcom/google/android/datatransport/runtime/scheduling/persistence/b0;
+    .line 5
+    new-instance v0, Ld/j/a/a/b/b/d/t;
 
-    invoke-direct {v0, p0, p2, p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/b0;-><init>(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;Lcom/google/android/datatransport/runtime/EventInternal;Lcom/google/android/datatransport/runtime/TransportContext;)V
+    invoke-direct {v0, p0, p2, p1}, Ld/j/a/a/b/b/d/t;-><init>(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;Lcom/google/android/datatransport/runtime/EventInternal;Lcom/google/android/datatransport/runtime/TransportContext;)V
 
+    .line 6
     invoke-virtual {p0, v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->inTransaction(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;)Ljava/lang/Object;
 
     move-result-object p0
@@ -3373,6 +3511,7 @@
 
     return-object p0
 
+    .line 7
     :cond_0
     invoke-static {v0, v1, p1, p2}, Lcom/google/android/datatransport/runtime/scheduling/persistence/PersistedEvent;->create(JLcom/google/android/datatransport/runtime/TransportContext;Lcom/google/android/datatransport/runtime/EventInternal;)Lcom/google/android/datatransport/runtime/scheduling/persistence/PersistedEvent;
 
@@ -3392,6 +3531,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -3404,6 +3544,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -3413,6 +3554,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 3
     invoke-static {p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->toIdList(Ljava/lang/Iterable;)Ljava/lang/String;
 
     move-result-object p1
@@ -3423,11 +3565,12 @@
 
     move-result-object p1
 
-    new-instance v0, Lcom/google/android/datatransport/runtime/scheduling/persistence/q;
+    .line 4
+    new-instance v0, Ld/j/a/a/b/b/d/s;
 
     const-string v1, "SELECT COUNT(*), transport_name FROM events WHERE num_attempts >= 16 GROUP BY transport_name"
 
-    invoke-direct {v0, p0, p1, v1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/q;-><init>(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, p0, p1, v1}, Ld/j/a/a/b/b/d/s;-><init>(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p0, v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->inTransaction(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;)Ljava/lang/Object;
 
@@ -3437,9 +3580,10 @@
 .method public recordLogEventDropped(JLcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;Ljava/lang/String;)V
     .locals 1
 
-    new-instance v0, Lcom/google/android/datatransport/runtime/scheduling/persistence/b;
+    .line 1
+    new-instance v0, Ld/j/a/a/b/b/d/j;
 
-    invoke-direct {v0, p4, p3, p1, p2}, Lcom/google/android/datatransport/runtime/scheduling/persistence/b;-><init>(Ljava/lang/String;Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;J)V
+    invoke-direct {v0, p4, p3, p1, p2}, Ld/j/a/a/b/b/d/j;-><init>(Ljava/lang/String;Lcom/google/android/datatransport/runtime/firebase/transport/LogEventDropped$Reason;J)V
 
     invoke-virtual {p0, v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->inTransaction(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;)Ljava/lang/Object;
 
@@ -3449,9 +3593,10 @@
 .method public recordNextCallTime(Lcom/google/android/datatransport/runtime/TransportContext;J)V
     .locals 1
 
-    new-instance v0, Lcom/google/android/datatransport/runtime/scheduling/persistence/g;
+    .line 1
+    new-instance v0, Ld/j/a/a/b/b/d/f;
 
-    invoke-direct {v0, p2, p3, p1}, Lcom/google/android/datatransport/runtime/scheduling/persistence/g;-><init>(JLcom/google/android/datatransport/runtime/TransportContext;)V
+    invoke-direct {v0, p2, p3, p1}, Ld/j/a/a/b/b/d/f;-><init>(JLcom/google/android/datatransport/runtime/TransportContext;)V
 
     invoke-virtual {p0, v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->inTransaction(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;)Ljava/lang/Object;
 
@@ -3469,6 +3614,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -3481,6 +3627,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -3500,6 +3647,7 @@
 
     move-result-object p1
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->getDb()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object p0
@@ -3516,9 +3664,10 @@
 .method public resetClientMetrics()V
     .locals 1
 
-    new-instance v0, Lcom/google/android/datatransport/runtime/scheduling/persistence/h;
+    .line 1
+    new-instance v0, Ld/j/a/a/b/b/d/q;
 
-    invoke-direct {v0, p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/h;-><init>(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;)V
+    invoke-direct {v0, p0}, Ld/j/a/a/b/b/d/q;-><init>(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;)V
 
     invoke-virtual {p0, v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->inTransaction(Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore$Function;)Ljava/lang/Object;
 
@@ -3537,21 +3686,26 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->getDb()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
+    .line 2
     invoke-direct {p0, v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/SQLiteEventStore;->ensureBeginTransaction(Landroid/database/sqlite/SQLiteDatabase;)V
 
+    .line 3
     :try_start_0
     invoke-interface {p1}, Lcom/google/android/datatransport/runtime/synchronization/SynchronizationGuard$CriticalSection;->execute()Ljava/lang/Object;
 
     move-result-object p0
 
+    .line 4
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 5
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
     return-object p0
@@ -3561,5 +3715,6 @@
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
+    .line 6
     throw p0
 .end method

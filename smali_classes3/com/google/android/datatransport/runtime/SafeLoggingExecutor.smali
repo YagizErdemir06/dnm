@@ -1,4 +1,4 @@
-.class Lcom/google/android/datatransport/runtime/SafeLoggingExecutor;
+.class public Lcom/google/android/datatransport/runtime/SafeLoggingExecutor;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,8 +22,10 @@
 .method public constructor <init>(Ljava/util/concurrent/Executor;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/SafeLoggingExecutor;->delegate:Ljava/util/concurrent/Executor;
 
     return-void
@@ -34,6 +36,7 @@
 .method public execute(Ljava/lang/Runnable;)V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/SafeLoggingExecutor;->delegate:Ljava/util/concurrent/Executor;
 
     new-instance v0, Lcom/google/android/datatransport/runtime/SafeLoggingExecutor$SafeLoggingRunnable;

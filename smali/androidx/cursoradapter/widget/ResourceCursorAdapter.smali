@@ -96,6 +96,7 @@
 .method public newDropDownView(Landroid/content/Context;Landroid/database/Cursor;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 0
 
+    .line 1
     iget-object p1, p0, Landroidx/cursoradapter/widget/ResourceCursorAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     iget p0, p0, Landroidx/cursoradapter/widget/ResourceCursorAdapter;->mDropDownLayout:I
@@ -112,6 +113,7 @@
 .method public newView(Landroid/content/Context;Landroid/database/Cursor;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 0
 
+    .line 1
     iget-object p1, p0, Landroidx/cursoradapter/widget/ResourceCursorAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     iget p0, p0, Landroidx/cursoradapter/widget/ResourceCursorAdapter;->mLayout:I
@@ -128,6 +130,7 @@
 .method public setDropDownViewResource(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/cursoradapter/widget/ResourceCursorAdapter;->mDropDownLayout:I
 
     return-void
@@ -136,6 +139,7 @@
 .method public setViewResource(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/cursoradapter/widget/ResourceCursorAdapter;->mLayout:I
 
     return-void

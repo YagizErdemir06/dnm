@@ -1,4 +1,4 @@
-.class Lcom/google/gson/internal/bind/TypeAdapters$22$1;
+.class public Lcom/google/gson/internal/bind/TypeAdapters$22$1;
 .super Lcom/google/gson/TypeAdapter;
 .source "SourceFile"
 
@@ -23,15 +23,16 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/gson/internal/bind/TypeAdapters$22;
+.field public final synthetic this$0:Lcom/google/gson/internal/bind/TypeAdapters$22;
 
-.field final synthetic val$dateTypeAdapter:Lcom/google/gson/TypeAdapter;
+.field public final synthetic val$dateTypeAdapter:Lcom/google/gson/TypeAdapter;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/gson/internal/bind/TypeAdapters$22;Lcom/google/gson/TypeAdapter;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/gson/internal/bind/TypeAdapters$22$1;->this$0:Lcom/google/gson/internal/bind/TypeAdapters$22;
 
     iput-object p2, p0, Lcom/google/gson/internal/bind/TypeAdapters$22$1;->val$dateTypeAdapter:Lcom/google/gson/TypeAdapter;

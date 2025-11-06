@@ -7,6 +7,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -15,43 +16,56 @@
 .method public static isSupportSmartAction(Landroid/content/Context;Landroid/view/View;)Z
     .locals 7
 
-    const/4 v0, 0x0
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
+    const/4 v1, 0x0
+
+    const/16 v2, 0x17
+
+    if-ge v0, v2, :cond_0
+
+    return v1
+
+    .line 2
+    :cond_0
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p0
 
-    const-string v1, "com.miuix.editor"
+    const-string v0, "com.miuix.editor"
 
     const/4 v2, 0x3
 
-    invoke-virtual {p0, v1, v2}, Landroid/content/Context;->createPackageContext(Ljava/lang/String;I)Landroid/content/Context;
+    invoke-virtual {p0, v0, v2}, Landroid/content/Context;->createPackageContext(Ljava/lang/String;I)Landroid/content/Context;
 
     move-result-object p0
 
+    .line 3
     invoke-virtual {p0}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object p0
 
-    const-string v1, "miuix.toolbar.FloatingActionModeHelper"
+    const-string v0, "miuix.toolbar.FloatingActionModeHelper"
 
-    invoke-virtual {p0, v1}, Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
+    invoke-virtual {p0, v0}, Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object p0
 
-    if-nez p0, :cond_0
+    if-nez p0, :cond_1
 
-    return v0
+    return v1
 
-    :cond_0
-    const-string v1, "supportHook"
+    :cond_1
+    const-string v0, "supportHook"
 
     new-array v3, v2, [Ljava/lang/Class;
 
+    .line 4
     const-class v4, Landroid/view/View;
 
-    aput-object v4, v3, v0
+    aput-object v4, v3, v1
 
     const-class v4, Landroid/view/ActionMode$Callback;
 
@@ -65,36 +79,40 @@
 
     aput-object v4, v3, v6
 
-    invoke-virtual {p0, v1, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    invoke-virtual {p0, v0, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object p0
 
-    if-nez p0, :cond_1
+    if-nez p0, :cond_2
 
-    return v0
+    return v1
 
-    :cond_1
-    invoke-virtual {p0, v5}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    .line 5
+    :cond_2
+    invoke-virtual {p0, v5}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    new-array v1, v2, [Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    aput-object p1, v1, v0
+    new-array v2, v2, [Ljava/lang/Object;
 
+    aput-object p1, v2, v1
+
+    .line 6
     new-instance p1, Lmiuix/smartaction/SmartActionHelper$1;
 
     invoke-direct {p1}, Lmiuix/smartaction/SmartActionHelper$1;-><init>()V
 
-    aput-object p1, v1, v5
+    aput-object p1, v2, v5
 
+    .line 7
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    aput-object p1, v1, v6
+    aput-object p1, v2, v6
 
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    .line 8
+    invoke-virtual {p0, v0, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -109,5 +127,5 @@
     return p0
 
     :catch_0
-    return v0
+    return v1
 .end method

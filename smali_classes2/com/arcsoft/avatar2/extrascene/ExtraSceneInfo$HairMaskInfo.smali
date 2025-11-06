@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
+.field public final synthetic a:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
 .field private b:I
 
@@ -30,20 +30,25 @@
 .method public constructor <init>(Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$HairMaskInfo;->a:Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, -0x1
 
+    .line 2
     iput p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$HairMaskInfo;->b:I
 
+    .line 3
     iput p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$HairMaskInfo;->c:I
 
     const/4 p1, 0x0
 
+    .line 4
     iput-boolean p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$HairMaskInfo;->d:Z
 
+    .line 5
     iput-boolean p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$HairMaskInfo;->e:Z
 
     return-void
@@ -54,6 +59,7 @@
 .method public getBlendShape()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$HairMaskInfo;->d:Z
 
     return p0
@@ -62,6 +68,7 @@
 .method public getExpId()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$HairMaskInfo;->c:I
 
     return p0
@@ -70,6 +77,7 @@
 .method public getHairId()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$HairMaskInfo;->b:I
 
     return p0
@@ -78,6 +86,7 @@
 .method public getMask()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$HairMaskInfo;->e:Z
 
     return p0
@@ -86,6 +95,7 @@
 .method public setBlendShape(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$HairMaskInfo;->d:Z
 
     return-void
@@ -94,6 +104,7 @@
 .method public setExpId(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$HairMaskInfo;->c:I
 
     return-void
@@ -102,6 +113,7 @@
 .method public setHairId(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$HairMaskInfo;->b:I
 
     return-void
@@ -110,6 +122,7 @@
 .method public setMask(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/arcsoft/avatar2/extrascene/ExtraSceneInfo$HairMaskInfo;->e:Z
 
     return-void
@@ -118,6 +131,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

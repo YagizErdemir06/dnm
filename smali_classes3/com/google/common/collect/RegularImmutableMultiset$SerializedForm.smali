@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/RegularImmutableMultiset$SerializedForm;
+.class public Lcom/google/common/collect/RegularImmutableMultiset$SerializedForm;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -25,9 +25,9 @@
 
 
 # instance fields
-.field final counts:[I
+.field public final counts:[I
 
-.field final elements:[Ljava/lang/Object;
+.field public final elements:[Ljava/lang/Object;
 
 
 # direct methods
@@ -43,8 +43,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-interface {p1}, Lcom/google/common/collect/Multiset;->entrySet()Ljava/util/Set;
 
     move-result-object v0
@@ -53,14 +55,17 @@
 
     move-result v0
 
+    .line 3
     new-array v1, v0, [Ljava/lang/Object;
 
     iput-object v1, p0, Lcom/google/common/collect/RegularImmutableMultiset$SerializedForm;->elements:[Ljava/lang/Object;
 
+    .line 4
     new-array v0, v0, [I
 
     iput-object v0, p0, Lcom/google/common/collect/RegularImmutableMultiset$SerializedForm;->counts:[I
 
+    .line 5
     invoke-interface {p1}, Lcom/google/common/collect/Multiset;->entrySet()Ljava/util/Set;
 
     move-result-object p1
@@ -84,6 +89,7 @@
 
     check-cast v1, Lcom/google/common/collect/Multiset$Entry;
 
+    .line 6
     iget-object v2, p0, Lcom/google/common/collect/RegularImmutableMultiset$SerializedForm;->elements:[Ljava/lang/Object;
 
     invoke-interface {v1}, Lcom/google/common/collect/Multiset$Entry;->getElement()Ljava/lang/Object;
@@ -92,6 +98,7 @@
 
     aput-object v3, v2, v0
 
+    .line 7
     iget-object v2, p0, Lcom/google/common/collect/RegularImmutableMultiset$SerializedForm;->counts:[I
 
     invoke-interface {v1}, Lcom/google/common/collect/Multiset$Entry;->getCount()I
@@ -113,6 +120,7 @@
 .method public readResolve()Ljava/lang/Object;
     .locals 4
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ImmutableMultiset$Builder;
 
     iget-object v1, p0, Lcom/google/common/collect/RegularImmutableMultiset$SerializedForm;->elements:[Ljava/lang/Object;
@@ -123,6 +131,7 @@
 
     const/4 v1, 0x0
 
+    .line 2
     :goto_0
     iget-object v2, p0, Lcom/google/common/collect/RegularImmutableMultiset$SerializedForm;->elements:[Ljava/lang/Object;
 
@@ -130,6 +139,7 @@
 
     if-ge v1, v3, :cond_0
 
+    .line 3
     aget-object v2, v2, v1
 
     iget-object v3, p0, Lcom/google/common/collect/RegularImmutableMultiset$SerializedForm;->counts:[I
@@ -142,6 +152,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-virtual {v0}, Lcom/google/common/collect/ImmutableMultiset$Builder;->build()Lcom/google/common/collect/ImmutableMultiset;
 

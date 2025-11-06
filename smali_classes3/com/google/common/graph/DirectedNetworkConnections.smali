@@ -1,4 +1,4 @@
-.class final Lcom/google/common/graph/DirectedNetworkConnections;
+.class public final Lcom/google/common/graph/DirectedNetworkConnections;
 .super Lcom/google/common/graph/AbstractDirectedNetworkConnections;
 .source "SourceFile"
 
@@ -33,6 +33,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/google/common/graph/AbstractDirectedNetworkConnections;-><init>(Ljava/util/Map;Ljava/util/Map;I)V
 
     return-void
@@ -52,10 +53,12 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/graph/DirectedNetworkConnections;
 
     const/4 v1, 0x2
 
+    .line 2
     invoke-static {v1}, Lcom/google/common/collect/HashBiMap;->create(I)Lcom/google/common/collect/HashBiMap;
 
     move-result-object v2
@@ -89,8 +92,10 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/graph/DirectedNetworkConnections;
 
+    .line 2
     invoke-static {p0}, Lcom/google/common/collect/ImmutableBiMap;->copyOf(Ljava/util/Map;)Lcom/google/common/collect/ImmutableBiMap;
 
     move-result-object p0
@@ -116,6 +121,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/graph/EdgesConnecting;
 
     iget-object p0, p0, Lcom/google/common/graph/AbstractDirectedNetworkConnections;->outEdgeMap:Ljava/util/Map;
@@ -141,6 +147,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/AbstractDirectedNetworkConnections;->inEdgeMap:Ljava/util/Map;
 
     check-cast p0, Lcom/google/common/collect/BiMap;
@@ -166,6 +173,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/AbstractDirectedNetworkConnections;->outEdgeMap:Ljava/util/Map;
 
     check-cast p0, Lcom/google/common/collect/BiMap;

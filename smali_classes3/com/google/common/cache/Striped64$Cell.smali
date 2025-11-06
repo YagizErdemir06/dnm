@@ -1,4 +1,4 @@
-.class final Lcom/google/common/cache/Striped64$Cell;
+.class public final Lcom/google/common/cache/Striped64$Cell;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -21,41 +21,42 @@
 
 
 # instance fields
-.field volatile p0:J
+.field public volatile p0:J
 
-.field volatile p1:J
+.field public volatile p1:J
 
-.field volatile p2:J
+.field public volatile p2:J
 
-.field volatile p3:J
+.field public volatile p3:J
 
-.field volatile p4:J
+.field public volatile p4:J
 
-.field volatile p5:J
+.field public volatile p5:J
 
-.field volatile p6:J
+.field public volatile p6:J
 
-.field volatile q0:J
+.field public volatile q0:J
 
-.field volatile q1:J
+.field public volatile q1:J
 
-.field volatile q2:J
+.field public volatile q2:J
 
-.field volatile q3:J
+.field public volatile q3:J
 
-.field volatile q4:J
+.field public volatile q4:J
 
-.field volatile q5:J
+.field public volatile q5:J
 
-.field volatile q6:J
+.field public volatile q6:J
 
-.field volatile value:J
+.field public volatile value:J
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     :try_start_0
     invoke-static {}, Lcom/google/common/cache/Striped64;->access$000()Lsun/misc/Unsafe;
 
@@ -63,10 +64,12 @@
 
     sput-object v0, Lcom/google/common/cache/Striped64$Cell;->UNSAFE:Lsun/misc/Unsafe;
 
+    .line 2
     const-class v1, Lcom/google/common/cache/Striped64$Cell;
 
     const-string v2, "value"
 
+    .line 3
     invoke-virtual {v1, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v1
@@ -84,6 +87,7 @@
     :catch_0
     move-exception v0
 
+    .line 4
     new-instance v1, Ljava/lang/Error;
 
     invoke-direct {v1, v0}, Ljava/lang/Error;-><init>(Ljava/lang/Throwable;)V
@@ -94,8 +98,10 @@
 .method public constructor <init>(J)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-wide p1, p0, Lcom/google/common/cache/Striped64$Cell;->value:J
 
     return-void
@@ -106,6 +112,7 @@
 .method public final cas(JJ)Z
     .locals 8
 
+    .line 1
     sget-object v0, Lcom/google/common/cache/Striped64$Cell;->UNSAFE:Lsun/misc/Unsafe;
 
     sget-wide v2, Lcom/google/common/cache/Striped64$Cell;->valueOffset:J

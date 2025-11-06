@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/Futures$1;
+.class public Lcom/google/common/util/concurrent/Futures$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic val$scheduled:Ljava/util/concurrent/Future;
+.field public final synthetic val$scheduled:Ljava/util/concurrent/Future;
 
 
 # direct methods
 .method public constructor <init>(Ljava/util/concurrent/Future;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/util/concurrent/Futures$1;->val$scheduled:Ljava/util/concurrent/Future;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,6 +38,7 @@
 .method public run()V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/util/concurrent/Futures$1;->val$scheduled:Ljava/util/concurrent/Future;
 
     const/4 v0, 0x0

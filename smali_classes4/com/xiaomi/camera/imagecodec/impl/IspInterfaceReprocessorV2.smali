@@ -31,6 +31,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessorV2$1;
 
     invoke-direct {v0}, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessorV2$1;-><init>()V
@@ -43,14 +44,17 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/camera/imagecodec/BaseReprocessor;-><init>()V
 
+    .line 2
     new-instance v0, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;
 
     invoke-direct {v0}, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;-><init>()V
 
     iput-object v0, p0, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessorV2;->mRaw2YuvReprocessor:Lcom/xiaomi/camera/imagecodec/BaseReprocessor;
 
+    .line 3
     new-instance v0, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;
 
     invoke-direct {v0}, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessor;-><init>()V
@@ -73,18 +77,21 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessorV2;->mRaw2YuvReprocessor:Lcom/xiaomi/camera/imagecodec/BaseReprocessor;
 
     invoke-virtual {v0, p1}, Lcom/xiaomi/camera/imagecodec/BaseReprocessor;->customize(Ljava/util/HashMap;)V
 
     const/16 v0, 0x65
 
+    .line 2
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessorV2;->mYuv2JpegReprocessor:Lcom/xiaomi/camera/imagecodec/BaseReprocessor;
 
     invoke-virtual {p0, p1}, Lcom/xiaomi/camera/imagecodec/BaseReprocessor;->customize(Ljava/util/HashMap;)V
@@ -95,10 +102,12 @@
 .method public deInit()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessorV2;->mRaw2YuvReprocessor:Lcom/xiaomi/camera/imagecodec/BaseReprocessor;
 
     invoke-interface {v0}, Lcom/xiaomi/camera/imagecodec/Reprocessor;->deInit()V
 
+    .line 2
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessorV2;->mYuv2JpegReprocessor:Lcom/xiaomi/camera/imagecodec/BaseReprocessor;
 
     invoke-interface {p0}, Lcom/xiaomi/camera/imagecodec/Reprocessor;->deInit()V
@@ -109,6 +118,7 @@
 .method public getVersionCode()I
     .locals 0
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/camera/isp/IspInterface;->getVersionCode()I
 
     move-result p0
@@ -127,10 +137,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessorV2;->mRaw2YuvReprocessor:Lcom/xiaomi/camera/imagecodec/BaseReprocessor;
 
     invoke-interface {v0, p1}, Lcom/xiaomi/camera/imagecodec/Reprocessor;->init(Landroid/content/Context;)V
 
+    .line 2
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessorV2;->mYuv2JpegReprocessor:Lcom/xiaomi/camera/imagecodec/BaseReprocessor;
 
     invoke-interface {p0, p1}, Lcom/xiaomi/camera/imagecodec/Reprocessor;->init(Landroid/content/Context;)V
@@ -171,8 +183,10 @@
 
     const-string v1, "raw2yuv queryFeatureSetting"
 
+    .line 1
     invoke-static {v0, v1}, Lcom/xiaomi/engine/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessorV2;->mRaw2YuvReprocessor:Lcom/xiaomi/camera/imagecodec/BaseReprocessor;
 
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/xiaomi/camera/imagecodec/BaseReprocessor;->queryFeatureSetting(Lcom/xiaomi/camera/isp/IspInterfaceIO;Landroid/os/Parcelable;Lcom/xiaomi/camera/imagecodec/QueryFeatureSettingParameter;Z)Lcom/xiaomi/camera/imagecodec/FeatureSetting;
@@ -197,10 +211,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessorV2;->mRaw2YuvReprocessor:Lcom/xiaomi/camera/imagecodec/BaseReprocessor;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/xiaomi/camera/imagecodec/Reprocessor;->setOutputPictureSpec(III)V
 
+    .line 2
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessorV2;->mYuv2JpegReprocessor:Lcom/xiaomi/camera/imagecodec/BaseReprocessor;
 
     invoke-interface {p0, p1, p2, p3}, Lcom/xiaomi/camera/imagecodec/Reprocessor;->setOutputPictureSpec(III)V
@@ -219,6 +235,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Lcom/xiaomi/camera/imagecodec/ReprocessData;->getMainImage()Ljava/util/ArrayList;
 
     move-result-object v0
@@ -229,18 +246,21 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v3
 
     if-lez v3, :cond_0
 
+    .line 3
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/media/Image;
 
+    .line 4
     invoke-virtual {v0}, Landroid/media/Image;->getFormat()I
 
     move-result v0
@@ -250,10 +270,12 @@
     :cond_0
     const-string v0, "input image is null, could not get format"
 
+    .line 5
     invoke-static {v1, v0}, Lcom/xiaomi/engine/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     move v0, v2
 
+    .line 6
     :goto_0
     invoke-virtual {p1}, Lcom/xiaomi/camera/imagecodec/ReprocessData;->getReprocessFunctionType()I
 
@@ -269,6 +291,7 @@
 
     if-ne v0, v4, :cond_2
 
+    .line 7
     :cond_1
     sget v7, Lcom/xiaomi/camera/imagecodec/ReprocessData;->REPROCESS_FUNCTION_RAW_MFNR:I
 
@@ -280,6 +303,7 @@
 
     goto :goto_1
 
+    .line 8
     :cond_2
     invoke-virtual {p1}, Lcom/xiaomi/camera/imagecodec/ReprocessData;->getOutputFormat()I
 
@@ -321,6 +345,7 @@
     :cond_6
     move v2, v7
 
+    .line 9
     :cond_7
     :goto_3
     new-instance v4, Ljava/lang/StringBuilder;
@@ -357,6 +382,7 @@
 
     goto :goto_4
 
+    .line 10
     :cond_8
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessorV2;->mYuv2JpegReprocessor:Lcom/xiaomi/camera/imagecodec/BaseReprocessor;
 
@@ -364,6 +390,7 @@
 
     goto :goto_4
 
+    .line 11
     :cond_9
     iget-object p0, p0, Lcom/xiaomi/camera/imagecodec/impl/IspInterfaceReprocessorV2;->mRaw2YuvReprocessor:Lcom/xiaomi/camera/imagecodec/BaseReprocessor;
 

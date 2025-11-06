@@ -13,6 +13,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroid/app/AppComponentFactory;-><init>()V
 
     return-void
@@ -45,6 +46,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1, p2, p3}, Landroidx/core/app/AppComponentFactory;->instantiateActivityCompat(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/app/Activity;
 
     move-result-object p0
@@ -85,6 +87,7 @@
 
     const/4 p0, 0x0
 
+    .line 1
     :try_start_0
     invoke-static {p2, p0, p1}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
 
@@ -98,6 +101,7 @@
 
     new-array p2, p0, [Ljava/lang/Class;
 
+    .line 2
     invoke-virtual {p1, p2}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object p1
@@ -118,6 +122,7 @@
     :catch_0
     move-exception p0
 
+    .line 3
     new-instance p1, Ljava/lang/RuntimeException;
 
     const-string p2, "Couldn\'t call constructor"
@@ -148,6 +153,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroidx/core/app/AppComponentFactory;->instantiateApplicationCompat(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroid/app/Application;
 
     move-result-object p0
@@ -184,6 +190,7 @@
 
     const/4 p0, 0x0
 
+    .line 1
     :try_start_0
     invoke-static {p2, p0, p1}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
 
@@ -197,6 +204,7 @@
 
     new-array p2, p0, [Ljava/lang/Class;
 
+    .line 2
     invoke-virtual {p1, p2}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object p1
@@ -217,6 +225,7 @@
     :catch_0
     move-exception p0
 
+    .line 3
     new-instance p1, Ljava/lang/RuntimeException;
 
     const-string p2, "Couldn\'t call constructor"
@@ -247,6 +256,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroidx/core/app/AppComponentFactory;->instantiateProviderCompat(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroid/content/ContentProvider;
 
     move-result-object p0
@@ -283,6 +293,7 @@
 
     const/4 p0, 0x0
 
+    .line 1
     :try_start_0
     invoke-static {p2, p0, p1}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
 
@@ -296,6 +307,7 @@
 
     new-array p2, p0, [Ljava/lang/Class;
 
+    .line 2
     invoke-virtual {p1, p2}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object p1
@@ -316,6 +328,7 @@
     :catch_0
     move-exception p0
 
+    .line 3
     new-instance p1, Ljava/lang/RuntimeException;
 
     const-string p2, "Couldn\'t call constructor"
@@ -350,6 +363,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1, p2, p3}, Landroidx/core/app/AppComponentFactory;->instantiateReceiverCompat(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/content/BroadcastReceiver;
 
     move-result-object p0
@@ -390,6 +404,7 @@
 
     const/4 p0, 0x0
 
+    .line 1
     :try_start_0
     invoke-static {p2, p0, p1}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
 
@@ -403,6 +418,7 @@
 
     new-array p2, p0, [Ljava/lang/Class;
 
+    .line 2
     invoke-virtual {p1, p2}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object p1
@@ -423,6 +439,7 @@
     :catch_0
     move-exception p0
 
+    .line 3
     new-instance p1, Ljava/lang/RuntimeException;
 
     const-string p2, "Couldn\'t call constructor"
@@ -457,6 +474,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1, p2, p3}, Landroidx/core/app/AppComponentFactory;->instantiateServiceCompat(Ljava/lang/ClassLoader;Ljava/lang/String;Landroid/content/Intent;)Landroid/app/Service;
 
     move-result-object p0
@@ -497,6 +515,7 @@
 
     const/4 p0, 0x0
 
+    .line 1
     :try_start_0
     invoke-static {p2, p0, p1}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
 
@@ -510,6 +529,7 @@
 
     new-array p2, p0, [Ljava/lang/Class;
 
+    .line 2
     invoke-virtual {p1, p2}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object p1
@@ -530,6 +550,7 @@
     :catch_0
     move-exception p0
 
+    .line 3
     new-instance p1, Ljava/lang/RuntimeException;
 
     const-string p2, "Couldn\'t call constructor"

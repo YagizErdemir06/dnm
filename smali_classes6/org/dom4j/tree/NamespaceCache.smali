@@ -6,9 +6,9 @@
 # static fields
 .field private static final CONCURRENTREADERHASHMAP_CLASS:Ljava/lang/String; = "EDU.oswego.cs.dl.util.concurrent.ConcurrentReaderHashMap"
 
-.field protected static cache:Ljava/util/Map;
+.field public static cache:Ljava/util/Map;
 
-.field protected static noPrefixCache:Ljava/util/Map;
+.field public static noPrefixCache:Ljava/util/Map;
 
 
 # direct methods
@@ -18,6 +18,7 @@
     :try_start_0
     const-string v0, "java.util.concurrent.ConcurrentHashMap"
 
+    .line 1
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -26,6 +27,7 @@
 
     new-array v2, v1, [Ljava/lang/Class;
 
+    .line 2
     sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     const/4 v4, 0x0
@@ -48,6 +50,7 @@
 
     new-array v2, v1, [Ljava/lang/Object;
 
+    .line 3
     new-instance v3, Ljava/lang/Integer;
 
     const/16 v7, 0xb
@@ -80,6 +83,7 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
+    .line 4
     new-instance v2, Ljava/lang/Integer;
 
     invoke-direct {v2, v7}, Ljava/lang/Integer;-><init>(I)V
@@ -114,10 +118,12 @@
     :try_start_1
     const-string v0, "EDU.oswego.cs.dl.util.concurrent.ConcurrentReaderHashMap"
 
+    .line 5
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
+    .line 6
     invoke-virtual {v0}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
     move-result-object v1
@@ -126,6 +132,7 @@
 
     sput-object v1, Lorg/dom4j/tree/NamespaceCache;->cache:Ljava/util/Map;
 
+    .line 7
     invoke-virtual {v0}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
     move-result-object v0
@@ -138,6 +145,7 @@
 
     goto :goto_0
 
+    .line 8
     :catchall_1
     new-instance v0, Lorg/dom4j/tree/ConcurrentReaderHashMap;
 
@@ -145,6 +153,7 @@
 
     sput-object v0, Lorg/dom4j/tree/NamespaceCache;->cache:Ljava/util/Map;
 
+    .line 9
     new-instance v0, Lorg/dom4j/tree/ConcurrentReaderHashMap;
 
     invoke-direct {v0}, Lorg/dom4j/tree/ConcurrentReaderHashMap;-><init>()V
@@ -158,6 +167,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -168,6 +178,7 @@
 .method public createNamespace(Ljava/lang/String;Ljava/lang/String;)Lorg/dom4j/Namespace;
     .locals 0
 
+    .line 1
     new-instance p0, Lorg/dom4j/Namespace;
 
     invoke-direct {p0, p1, p2}, Lorg/dom4j/Namespace;-><init>(Ljava/lang/String;Ljava/lang/String;)V
@@ -190,7 +201,7 @@
     if-eqz v0, :cond_0
 
     .line 11
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -222,7 +233,7 @@
     if-eqz v2, :cond_1
 
     .line 14
-    invoke-virtual {v2}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -287,7 +298,7 @@
     if-eqz v1, :cond_0
 
     .line 3
-    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -315,7 +326,7 @@
     if-eqz v2, :cond_1
 
     .line 6
-    invoke-virtual {v2}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -361,6 +372,7 @@
 .method public getURICache(Ljava/lang/String;)Ljava/util/Map;
     .locals 2
 
+    .line 1
     sget-object p0, Lorg/dom4j/tree/NamespaceCache;->cache:Ljava/util/Map;
 
     invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -371,10 +383,12 @@
 
     if-nez p0, :cond_1
 
+    .line 2
     sget-object v0, Lorg/dom4j/tree/NamespaceCache;->cache:Ljava/util/Map;
 
     monitor-enter v0
 
+    .line 3
     :try_start_0
     sget-object p0, Lorg/dom4j/tree/NamespaceCache;->cache:Ljava/util/Map;
 
@@ -386,14 +400,17 @@
 
     if-nez p0, :cond_0
 
+    .line 4
     new-instance p0, Lorg/dom4j/tree/ConcurrentReaderHashMap;
 
     invoke-direct {p0}, Lorg/dom4j/tree/ConcurrentReaderHashMap;-><init>()V
 
+    .line 5
     sget-object v1, Lorg/dom4j/tree/NamespaceCache;->cache:Ljava/util/Map;
 
     invoke-interface {v1, p1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 6
     :cond_0
     monitor-exit v0
 

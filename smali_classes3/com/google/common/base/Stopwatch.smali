@@ -62,9 +62,10 @@
 .method private static abbreviate(Ljava/util/concurrent/TimeUnit;)Ljava/lang/String;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/common/base/Stopwatch$1;->$SwitchMap$java$util$concurrent$TimeUnit:[I
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {p0}, Ljava/util/concurrent/TimeUnit;->ordinal()I
 
     move-result p0
 
@@ -72,6 +73,7 @@
 
     packed-switch p0, :pswitch_data_0
 
+    .line 2
     new-instance p0, Ljava/lang/AssertionError;
 
     invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
@@ -128,6 +130,7 @@
 .method private static chooseUnit(J)Ljava/util/concurrent/TimeUnit;
     .locals 6
 
+    .line 1
     sget-object v0, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
 
     sget-object v1, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
@@ -144,6 +147,7 @@
 
     return-object v0
 
+    .line 2
     :cond_0
     sget-object v0, Ljava/util/concurrent/TimeUnit;->HOURS:Ljava/util/concurrent/TimeUnit;
 
@@ -157,6 +161,7 @@
 
     return-object v0
 
+    .line 3
     :cond_1
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
 
@@ -170,6 +175,7 @@
 
     return-object v0
 
+    .line 4
     :cond_2
     sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -183,6 +189,7 @@
 
     return-object v0
 
+    .line 5
     :cond_3
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -196,6 +203,7 @@
 
     return-object v0
 
+    .line 6
     :cond_4
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MICROSECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -268,6 +276,7 @@
 .method private elapsedNanos()J
     .locals 4
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/common/base/Stopwatch;->isRunning:Z
 
     if-eqz v0, :cond_0
@@ -300,6 +309,7 @@
 .method public elapsed(Ljava/util/concurrent/TimeUnit;)J
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/base/Stopwatch;->elapsedNanos()J
 
     move-result-wide v0
@@ -316,6 +326,7 @@
 .method public isRunning()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/common/base/Stopwatch;->isRunning:Z
 
     return p0
@@ -328,10 +339,12 @@
 
     const-wide/16 v0, 0x0
 
+    .line 1
     iput-wide v0, p0, Lcom/google/common/base/Stopwatch;->elapsedNanos:J
 
     const/4 v0, 0x0
 
+    .line 2
     iput-boolean v0, p0, Lcom/google/common/base/Stopwatch;->isRunning:Z
 
     return-object p0
@@ -342,6 +355,7 @@
     .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/common/base/Stopwatch;->isRunning:Z
 
     const/4 v1, 0x1
@@ -352,8 +366,10 @@
 
     invoke-static {v0, v2}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/Object;)V
 
+    .line 2
     iput-boolean v1, p0, Lcom/google/common/base/Stopwatch;->isRunning:Z
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/base/Stopwatch;->ticker:Lcom/google/common/base/Ticker;
 
     invoke-virtual {v0}, Lcom/google/common/base/Ticker;->read()J
@@ -370,12 +386,14 @@
     .annotation build Lcom/google/errorprone/annotations/CanIgnoreReturnValue;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/base/Stopwatch;->ticker:Lcom/google/common/base/Ticker;
 
     invoke-virtual {v0}, Lcom/google/common/base/Ticker;->read()J
 
     move-result-wide v0
 
+    .line 2
     iget-boolean v2, p0, Lcom/google/common/base/Stopwatch;->isRunning:Z
 
     const-string v3, "This stopwatch is already stopped."
@@ -384,8 +402,10 @@
 
     const/4 v2, 0x0
 
+    .line 3
     iput-boolean v2, p0, Lcom/google/common/base/Stopwatch;->isRunning:Z
 
+    .line 4
     iget-wide v2, p0, Lcom/google/common/base/Stopwatch;->elapsedNanos:J
 
     iget-wide v4, p0, Lcom/google/common/base/Stopwatch;->startTick:J
@@ -402,16 +422,19 @@
 .method public toString()Ljava/lang/String;
     .locals 5
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/base/Stopwatch;->elapsedNanos()J
 
     move-result-wide v0
 
+    .line 2
     invoke-static {v0, v1}, Lcom/google/common/base/Stopwatch;->chooseUnit(J)Ljava/util/concurrent/TimeUnit;
 
     move-result-object p0
 
     long-to-double v0, v0
 
+    .line 3
     sget-object v2, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v3, 0x1
@@ -424,6 +447,7 @@
 
     div-double/2addr v0, v2
 
+    .line 4
     invoke-static {v0, v1}, Lcom/google/common/base/Platform;->formatCompact4Digits(D)Ljava/lang/String;
 
     move-result-object v0

@@ -15,6 +15,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,36 +31,43 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/audio/OpusUtil;->getPreSkipSamples([B)I
 
     move-result v0
 
     int-to-long v0, v0
 
+    .line 2
     invoke-static {v0, v1}, Lcom/google/android/exoplayer2/audio/OpusUtil;->sampleCountToNanoseconds(J)J
 
     move-result-wide v0
 
     const-wide/16 v2, 0xf00
 
+    .line 3
     invoke-static {v2, v3}, Lcom/google/android/exoplayer2/audio/OpusUtil;->sampleCountToNanoseconds(J)J
 
     move-result-wide v2
 
+    .line 4
     new-instance v4, Ljava/util/ArrayList;
 
     const/4 v5, 0x3
 
     invoke-direct {v4, v5}, Ljava/util/ArrayList;-><init>(I)V
 
+    .line 5
     invoke-interface {v4, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 6
     invoke-static {v0, v1}, Lcom/google/android/exoplayer2/audio/OpusUtil;->buildNativeOrderByteArray(J)[B
 
     move-result-object p0
 
     invoke-interface {v4, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 7
     invoke-static {v2, v3}, Lcom/google/android/exoplayer2/audio/OpusUtil;->buildNativeOrderByteArray(J)[B
 
     move-result-object p0
@@ -74,6 +82,7 @@
 
     const/16 v0, 0x8
 
+    .line 1
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
@@ -102,6 +111,7 @@
 
     const/16 v0, 0x9
 
+    .line 1
     aget-byte p0, p0, v0
 
     and-int/lit16 p0, p0, 0xff
@@ -114,6 +124,7 @@
 
     const/16 v0, 0xb
 
+    .line 1
     aget-byte v0, p0, v0
 
     and-int/lit16 v0, v0, 0xff
@@ -140,6 +151,7 @@
 
     const-wide/32 v0, 0xbb80
 
+    .line 1
     div-long/2addr p0, v0
 
     return-wide p0

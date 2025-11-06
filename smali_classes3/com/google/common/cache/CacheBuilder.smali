@@ -31,7 +31,7 @@
 
 
 # static fields
-.field static final CACHE_STATS_COUNTER:Lcom/google/common/base/Supplier;
+.field public static final CACHE_STATS_COUNTER:Lcom/google/common/base/Supplier;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/base/Supplier<",
@@ -49,9 +49,9 @@
 
 .field private static final DEFAULT_REFRESH_NANOS:I = 0x0
 
-.field static final EMPTY_STATS:Lcom/google/common/cache/CacheStats;
+.field public static final EMPTY_STATS:Lcom/google/common/cache/CacheStats;
 
-.field static final NULL_STATS_COUNTER:Lcom/google/common/base/Supplier;
+.field public static final NULL_STATS_COUNTER:Lcom/google/common/base/Supplier;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/base/Supplier<",
@@ -62,23 +62,23 @@
     .end annotation
 .end field
 
-.field static final NULL_TICKER:Lcom/google/common/base/Ticker;
+.field public static final NULL_TICKER:Lcom/google/common/base/Ticker;
 
-.field static final UNSET_INT:I = -0x1
+.field public static final UNSET_INT:I = -0x1
 
 .field private static final logger:Ljava/util/logging/Logger;
 
 
 # instance fields
-.field concurrencyLevel:I
+.field public concurrencyLevel:I
 
-.field expireAfterAccessNanos:J
+.field public expireAfterAccessNanos:J
 
-.field expireAfterWriteNanos:J
+.field public expireAfterWriteNanos:J
 
-.field initialCapacity:I
+.field public initialCapacity:I
 
-.field keyEquivalence:Lcom/google/common/base/Equivalence;
+.field public keyEquivalence:Lcom/google/common/base/Equivalence;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/base/Equivalence<",
@@ -88,15 +88,15 @@
     .end annotation
 .end field
 
-.field keyStrength:Lcom/google/common/cache/LocalCache$Strength;
+.field public keyStrength:Lcom/google/common/cache/LocalCache$Strength;
 
-.field maximumSize:J
+.field public maximumSize:J
 
-.field maximumWeight:J
+.field public maximumWeight:J
 
-.field refreshNanos:J
+.field public refreshNanos:J
 
-.field removalListener:Lcom/google/common/cache/RemovalListener;
+.field public removalListener:Lcom/google/common/cache/RemovalListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/cache/RemovalListener<",
@@ -105,7 +105,7 @@
     .end annotation
 .end field
 
-.field statsCounterSupplier:Lcom/google/common/base/Supplier;
+.field public statsCounterSupplier:Lcom/google/common/base/Supplier;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/base/Supplier<",
@@ -116,11 +116,11 @@
     .end annotation
 .end field
 
-.field strictParsing:Z
+.field public strictParsing:Z
 
-.field ticker:Lcom/google/common/base/Ticker;
+.field public ticker:Lcom/google/common/base/Ticker;
 
-.field valueEquivalence:Lcom/google/common/base/Equivalence;
+.field public valueEquivalence:Lcom/google/common/base/Equivalence;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/base/Equivalence<",
@@ -130,9 +130,9 @@
     .end annotation
 .end field
 
-.field valueStrength:Lcom/google/common/cache/LocalCache$Strength;
+.field public valueStrength:Lcom/google/common/cache/LocalCache$Strength;
 
-.field weigher:Lcom/google/common/cache/Weigher;
+.field public weigher:Lcom/google/common/cache/Weigher;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/cache/Weigher<",
@@ -146,16 +146,19 @@
 .method public static constructor <clinit>()V
     .locals 14
 
+    .line 1
     new-instance v0, Lcom/google/common/cache/CacheBuilder$1;
 
     invoke-direct {v0}, Lcom/google/common/cache/CacheBuilder$1;-><init>()V
 
+    .line 2
     invoke-static {v0}, Lcom/google/common/base/Suppliers;->ofInstance(Ljava/lang/Object;)Lcom/google/common/base/Supplier;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/common/cache/CacheBuilder;->NULL_STATS_COUNTER:Lcom/google/common/base/Supplier;
 
+    .line 3
     new-instance v0, Lcom/google/common/cache/CacheStats;
 
     const-wide/16 v2, 0x0
@@ -176,18 +179,21 @@
 
     sput-object v0, Lcom/google/common/cache/CacheBuilder;->EMPTY_STATS:Lcom/google/common/cache/CacheStats;
 
+    .line 4
     new-instance v0, Lcom/google/common/cache/CacheBuilder$2;
 
     invoke-direct {v0}, Lcom/google/common/cache/CacheBuilder$2;-><init>()V
 
     sput-object v0, Lcom/google/common/cache/CacheBuilder;->CACHE_STATS_COUNTER:Lcom/google/common/base/Supplier;
 
+    .line 5
     new-instance v0, Lcom/google/common/cache/CacheBuilder$3;
 
     invoke-direct {v0}, Lcom/google/common/cache/CacheBuilder$3;-><init>()V
 
     sput-object v0, Lcom/google/common/cache/CacheBuilder;->NULL_TICKER:Lcom/google/common/base/Ticker;
 
+    .line 6
     const-class v0, Lcom/google/common/cache/CacheBuilder;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -206,30 +212,40 @@
 .method private constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
+    .line 2
     iput-boolean v0, p0, Lcom/google/common/cache/CacheBuilder;->strictParsing:Z
 
     const/4 v0, -0x1
 
+    .line 3
     iput v0, p0, Lcom/google/common/cache/CacheBuilder;->initialCapacity:I
 
+    .line 4
     iput v0, p0, Lcom/google/common/cache/CacheBuilder;->concurrencyLevel:I
 
     const-wide/16 v0, -0x1
 
+    .line 5
     iput-wide v0, p0, Lcom/google/common/cache/CacheBuilder;->maximumSize:J
 
+    .line 6
     iput-wide v0, p0, Lcom/google/common/cache/CacheBuilder;->maximumWeight:J
 
+    .line 7
     iput-wide v0, p0, Lcom/google/common/cache/CacheBuilder;->expireAfterWriteNanos:J
 
+    .line 8
     iput-wide v0, p0, Lcom/google/common/cache/CacheBuilder;->expireAfterAccessNanos:J
 
+    .line 9
     iput-wide v0, p0, Lcom/google/common/cache/CacheBuilder;->refreshNanos:J
 
+    .line 10
     sget-object v0, Lcom/google/common/cache/CacheBuilder;->NULL_STATS_COUNTER:Lcom/google/common/base/Supplier;
 
     iput-object v0, p0, Lcom/google/common/cache/CacheBuilder;->statsCounterSupplier:Lcom/google/common/base/Supplier;
@@ -240,6 +256,7 @@
 .method private checkNonLoadingCache()V
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/cache/CacheBuilder;->refreshNanos:J
 
     const-wide/16 v2, -0x1
@@ -266,6 +283,7 @@
 .method private checkWeightWithWeigher()V
     .locals 7
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/cache/CacheBuilder;->weigher:Lcom/google/common/cache/Weigher;
 
     const/4 v1, 0x1
@@ -276,6 +294,7 @@
 
     if-nez v0, :cond_1
 
+    .line 2
     iget-wide v5, p0, Lcom/google/common/cache/CacheBuilder;->maximumWeight:J
 
     cmp-long p0, v5, v3
@@ -294,11 +313,13 @@
 
     goto :goto_2
 
+    .line 3
     :cond_1
     iget-boolean v0, p0, Lcom/google/common/cache/CacheBuilder;->strictParsing:Z
 
     if-eqz v0, :cond_3
 
+    .line 4
     iget-wide v5, p0, Lcom/google/common/cache/CacheBuilder;->maximumWeight:J
 
     cmp-long p0, v5, v3
@@ -317,6 +338,7 @@
 
     goto :goto_2
 
+    .line 5
     :cond_3
     iget-wide v0, p0, Lcom/google/common/cache/CacheBuilder;->maximumWeight:J
 
@@ -324,6 +346,7 @@
 
     if-nez p0, :cond_4
 
+    .line 6
     sget-object p0, Lcom/google/common/cache/CacheBuilder;->logger:Ljava/util/logging/Logger;
 
     sget-object v0, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
@@ -416,6 +439,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/cache/CacheBuilder;
 
     invoke-direct {v0}, Lcom/google/common/cache/CacheBuilder;-><init>()V
@@ -488,38 +512,41 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/common/cache/CacheBuilder;->concurrencyLevel:I
 
-    const/4 v1, -0x1
+    const/4 v1, 0x1
 
-    const/4 v2, 0x1
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    const/4 v3, -0x1
 
-    if-ne v0, v1, :cond_0
+    if-ne v0, v3, :cond_0
 
-    move v1, v2
+    move v3, v1
 
     goto :goto_0
 
     :cond_0
-    move v1, v3
+    move v3, v2
 
     :goto_0
     const-string v4, "concurrency level was already set to %s"
 
-    invoke-static {v1, v4, v0}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/String;I)V
+    invoke-static {v3, v4, v0}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/String;I)V
 
     if-lez p1, :cond_1
 
     goto :goto_1
 
     :cond_1
-    move v2, v3
+    move v1, v2
 
+    .line 2
     :goto_1
-    invoke-static {v2}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
+    invoke-static {v1}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
 
+    .line 3
     iput p1, p0, Lcom/google/common/cache/CacheBuilder;->concurrencyLevel:I
 
     return-object p0
@@ -537,6 +564,7 @@
         }
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/cache/CacheBuilder;->expireAfterAccessNanos:J
 
     const-wide/16 v2, -0x1
@@ -575,8 +603,10 @@
     :goto_1
     const-string v0, "duration cannot be negative: %s %s"
 
+    .line 2
     invoke-static {v3, v0, p1, p2, p3}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;JLjava/lang/Object;)V
 
+    .line 3
     invoke-virtual {p3, p1, p2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
 
     move-result-wide p1
@@ -598,6 +628,7 @@
         }
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/cache/CacheBuilder;->expireAfterWriteNanos:J
 
     const-wide/16 v2, -0x1
@@ -636,8 +667,10 @@
     :goto_1
     const-string v0, "duration cannot be negative: %s %s"
 
+    .line 2
     invoke-static {v3, v0, p1, p2, p3}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;JLjava/lang/Object;)V
 
+    .line 3
     invoke-virtual {p3, p1, p2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
 
     move-result-wide p1
@@ -650,6 +683,7 @@
 .method public getConcurrencyLevel()I
     .locals 1
 
+    .line 1
     iget p0, p0, Lcom/google/common/cache/CacheBuilder;->concurrencyLevel:I
 
     const/4 v0, -0x1
@@ -665,6 +699,7 @@
 .method public getExpireAfterAccessNanos()J
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/cache/CacheBuilder;->expireAfterAccessNanos:J
 
     const-wide/16 v2, -0x1
@@ -682,6 +717,7 @@
 .method public getExpireAfterWriteNanos()J
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/cache/CacheBuilder;->expireAfterWriteNanos:J
 
     const-wide/16 v2, -0x1
@@ -699,6 +735,7 @@
 .method public getInitialCapacity()I
     .locals 1
 
+    .line 1
     iget p0, p0, Lcom/google/common/cache/CacheBuilder;->initialCapacity:I
 
     const/4 v0, -0x1
@@ -722,6 +759,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/cache/CacheBuilder;->keyEquivalence:Lcom/google/common/base/Equivalence;
 
     invoke-virtual {p0}, Lcom/google/common/cache/CacheBuilder;->getKeyStrength()Lcom/google/common/cache/LocalCache$Strength;
@@ -744,6 +782,7 @@
 .method public getKeyStrength()Lcom/google/common/cache/LocalCache$Strength;
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/cache/CacheBuilder;->keyStrength:Lcom/google/common/cache/LocalCache$Strength;
 
     sget-object v0, Lcom/google/common/cache/LocalCache$Strength;->STRONG:Lcom/google/common/cache/LocalCache$Strength;
@@ -760,6 +799,7 @@
 .method public getMaximumWeight()J
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/cache/CacheBuilder;->expireAfterWriteNanos:J
 
     const-wide/16 v2, 0x0
@@ -776,6 +816,7 @@
 
     goto :goto_1
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/common/cache/CacheBuilder;->weigher:Lcom/google/common/cache/Weigher;
 
@@ -799,6 +840,7 @@
 .method public getRefreshNanos()J
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/cache/CacheBuilder;->refreshNanos:J
 
     const-wide/16 v2, -0x1
@@ -823,10 +865,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/cache/CacheBuilder;->removalListener:Lcom/google/common/cache/RemovalListener;
 
     sget-object v0, Lcom/google/common/cache/CacheBuilder$NullListener;->INSTANCE:Lcom/google/common/cache/CacheBuilder$NullListener;
 
+    .line 2
     invoke-static {p0, v0}, Lcom/google/common/base/MoreObjects;->firstNonNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -848,6 +892,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/cache/CacheBuilder;->statsCounterSupplier:Lcom/google/common/base/Supplier;
 
     return-object p0
@@ -856,6 +901,7 @@
 .method public getTicker(Z)Lcom/google/common/base/Ticker;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/cache/CacheBuilder;->ticker:Lcom/google/common/base/Ticker;
 
     if-eqz p0, :cond_0
@@ -865,6 +911,7 @@
     :cond_0
     if-eqz p1, :cond_1
 
+    .line 2
     invoke-static {}, Lcom/google/common/base/Ticker;->systemTicker()Lcom/google/common/base/Ticker;
 
     move-result-object p0
@@ -889,6 +936,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/cache/CacheBuilder;->valueEquivalence:Lcom/google/common/base/Equivalence;
 
     invoke-virtual {p0}, Lcom/google/common/cache/CacheBuilder;->getValueStrength()Lcom/google/common/cache/LocalCache$Strength;
@@ -911,6 +959,7 @@
 .method public getValueStrength()Lcom/google/common/cache/LocalCache$Strength;
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/cache/CacheBuilder;->valueStrength:Lcom/google/common/cache/LocalCache$Strength;
 
     sget-object v0, Lcom/google/common/cache/LocalCache$Strength;->STRONG:Lcom/google/common/cache/LocalCache$Strength;
@@ -934,6 +983,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/cache/CacheBuilder;->weigher:Lcom/google/common/cache/Weigher;
 
     sget-object v0, Lcom/google/common/cache/CacheBuilder$OneWeigher;->INSTANCE:Lcom/google/common/cache/CacheBuilder$OneWeigher;
@@ -957,38 +1007,41 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/common/cache/CacheBuilder;->initialCapacity:I
 
-    const/4 v1, -0x1
+    const/4 v1, 0x1
 
-    const/4 v2, 0x1
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    const/4 v3, -0x1
 
-    if-ne v0, v1, :cond_0
+    if-ne v0, v3, :cond_0
 
-    move v1, v2
+    move v3, v1
 
     goto :goto_0
 
     :cond_0
-    move v1, v3
+    move v3, v2
 
     :goto_0
     const-string v4, "initial capacity was already set to %s"
 
-    invoke-static {v1, v4, v0}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/String;I)V
+    invoke-static {v3, v4, v0}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/String;I)V
 
     if-ltz p1, :cond_1
 
     goto :goto_1
 
     :cond_1
-    move v2, v3
+    move v1, v2
 
+    .line 2
     :goto_1
-    invoke-static {v2}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
+    invoke-static {v1}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
 
+    .line 3
     iput p1, p0, Lcom/google/common/cache/CacheBuilder;->initialCapacity:I
 
     return-object p0
@@ -997,6 +1050,7 @@
 .method public isRecordingStats()Z
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/cache/CacheBuilder;->statsCounterSupplier:Lcom/google/common/base/Supplier;
 
     sget-object v0, Lcom/google/common/cache/CacheBuilder;->CACHE_STATS_COUNTER:Lcom/google/common/base/Supplier;
@@ -1030,6 +1084,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/cache/CacheBuilder;->keyEquivalence:Lcom/google/common/base/Equivalence;
 
     if-nez v0, :cond_0
@@ -1046,6 +1101,7 @@
 
     invoke-static {v1, v2, v0}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/String;Ljava/lang/Object;)V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -1072,6 +1128,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/common/cache/CacheBuilder;->strictParsing:Z
 
     return-object p0
@@ -1087,6 +1144,7 @@
         }
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/cache/CacheBuilder;->maximumSize:J
 
     const-wide/16 v2, -0x1
@@ -1111,6 +1169,7 @@
 
     invoke-static {v4, v7, v0, v1}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/String;J)V
 
+    .line 2
     iget-wide v0, p0, Lcom/google/common/cache/CacheBuilder;->maximumWeight:J
 
     cmp-long v2, v0, v2
@@ -1129,6 +1188,7 @@
 
     invoke-static {v2, v3, v0, v1}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/String;J)V
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/cache/CacheBuilder;->weigher:Lcom/google/common/cache/Weigher;
 
     if-nez v0, :cond_2
@@ -1159,8 +1219,10 @@
     :goto_3
     const-string v0, "maximum size must not be negative"
 
+    .line 4
     invoke-static {v5, v0}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 5
     iput-wide p1, p0, Lcom/google/common/cache/CacheBuilder;->maximumSize:J
 
     return-object p0
@@ -1179,6 +1241,7 @@
         }
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/google/common/cache/CacheBuilder;->maximumWeight:J
 
     const-wide/16 v2, -0x1
@@ -1203,6 +1266,7 @@
 
     invoke-static {v4, v7, v0, v1}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/String;J)V
 
+    .line 2
     iget-wide v0, p0, Lcom/google/common/cache/CacheBuilder;->maximumSize:J
 
     cmp-long v2, v0, v2
@@ -1235,8 +1299,10 @@
     :goto_2
     const-string v0, "maximum weight must not be negative"
 
+    .line 3
     invoke-static {v5, v0}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 4
     iput-wide p1, p0, Lcom/google/common/cache/CacheBuilder;->maximumWeight:J
 
     return-object p0
@@ -1252,6 +1318,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/common/cache/CacheBuilder;->CACHE_STATS_COUNTER:Lcom/google/common/base/Supplier;
 
     iput-object v0, p0, Lcom/google/common/cache/CacheBuilder;->statsCounterSupplier:Lcom/google/common/base/Supplier;
@@ -1274,8 +1341,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p3}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-wide v0, p0, Lcom/google/common/cache/CacheBuilder;->refreshNanos:J
 
     const-wide/16 v2, -0x1
@@ -1314,8 +1383,10 @@
     :goto_1
     const-string v0, "duration must be positive: %s %s"
 
+    .line 3
     invoke-static {v3, v0, p1, p2, p3}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;JLjava/lang/Object;)V
 
+    .line 4
     invoke-virtual {p3, p1, p2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
 
     move-result-wide p1
@@ -1340,6 +1411,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/cache/CacheBuilder;->removalListener:Lcom/google/common/cache/RemovalListener;
 
     if-nez v0, :cond_0
@@ -1354,6 +1426,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -1377,6 +1450,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/cache/CacheBuilder;->keyStrength:Lcom/google/common/cache/LocalCache$Strength;
 
     if-nez v0, :cond_0
@@ -1393,6 +1467,7 @@
 
     invoke-static {v1, v2, v0}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/String;Ljava/lang/Object;)V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -1416,6 +1491,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/cache/CacheBuilder;->valueStrength:Lcom/google/common/cache/LocalCache$Strength;
 
     if-nez v0, :cond_0
@@ -1432,6 +1508,7 @@
 
     invoke-static {v1, v2, v0}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/String;Ljava/lang/Object;)V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -1456,6 +1533,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/common/cache/LocalCache$Strength;->SOFT:Lcom/google/common/cache/LocalCache$Strength;
 
     invoke-virtual {p0, v0}, Lcom/google/common/cache/CacheBuilder;->setValueStrength(Lcom/google/common/cache/LocalCache$Strength;)Lcom/google/common/cache/CacheBuilder;
@@ -1477,6 +1555,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/cache/CacheBuilder;->ticker:Lcom/google/common/base/Ticker;
 
     if-nez v0, :cond_0
@@ -1491,6 +1570,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -1505,10 +1585,12 @@
 .method public toString()Ljava/lang/String;
     .locals 8
 
+    .line 1
     invoke-static {p0}, Lcom/google/common/base/MoreObjects;->toStringHelper(Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
     move-result-object v0
 
+    .line 2
     iget v1, p0, Lcom/google/common/cache/CacheBuilder;->initialCapacity:I
 
     const/4 v2, -0x1
@@ -1517,8 +1599,10 @@
 
     const-string v3, "initialCapacity"
 
+    .line 3
     invoke-virtual {v0, v3, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;I)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 4
     :cond_0
     iget v1, p0, Lcom/google/common/cache/CacheBuilder;->concurrencyLevel:I
 
@@ -1526,8 +1610,10 @@
 
     const-string v2, "concurrencyLevel"
 
+    .line 5
     invoke-virtual {v0, v2, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;I)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 6
     :cond_1
     iget-wide v1, p0, Lcom/google/common/cache/CacheBuilder;->maximumSize:J
 
@@ -1539,8 +1625,10 @@
 
     const-string v5, "maximumSize"
 
+    .line 7
     invoke-virtual {v0, v5, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 8
     :cond_2
     iget-wide v1, p0, Lcom/google/common/cache/CacheBuilder;->maximumWeight:J
 
@@ -1550,8 +1638,10 @@
 
     const-string v5, "maximumWeight"
 
+    .line 9
     invoke-virtual {v0, v5, v1, v2}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;J)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 10
     :cond_3
     iget-wide v1, p0, Lcom/google/common/cache/CacheBuilder;->expireAfterWriteNanos:J
 
@@ -1563,6 +1653,7 @@
 
     if-eqz v5, :cond_4
 
+    .line 11
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5, v7}, Ljava/lang/StringBuilder;-><init>(I)V
@@ -1579,6 +1670,7 @@
 
     invoke-virtual {v0, v2, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 12
     :cond_4
     iget-wide v1, p0, Lcom/google/common/cache/CacheBuilder;->expireAfterAccessNanos:J
 
@@ -1586,6 +1678,7 @@
 
     if-eqz v3, :cond_5
 
+    .line 13
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3, v7}, Ljava/lang/StringBuilder;-><init>(I)V
@@ -1602,12 +1695,14 @@
 
     invoke-virtual {v0, v2, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 14
     :cond_5
     iget-object v1, p0, Lcom/google/common/cache/CacheBuilder;->keyStrength:Lcom/google/common/cache/LocalCache$Strength;
 
     if-eqz v1, :cond_6
 
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    .line 15
+    invoke-virtual {v1}, Ljava/lang/Enum;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1619,12 +1714,14 @@
 
     invoke-virtual {v0, v2, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 16
     :cond_6
     iget-object v1, p0, Lcom/google/common/cache/CacheBuilder;->valueStrength:Lcom/google/common/cache/LocalCache$Strength;
 
     if-eqz v1, :cond_7
 
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    .line 17
+    invoke-virtual {v1}, Ljava/lang/Enum;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1636,6 +1733,7 @@
 
     invoke-virtual {v0, v2, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->add(Ljava/lang/String;Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 18
     :cond_7
     iget-object v1, p0, Lcom/google/common/cache/CacheBuilder;->keyEquivalence:Lcom/google/common/base/Equivalence;
 
@@ -1643,8 +1741,10 @@
 
     const-string v1, "keyEquivalence"
 
+    .line 19
     invoke-virtual {v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->addValue(Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 20
     :cond_8
     iget-object v1, p0, Lcom/google/common/cache/CacheBuilder;->valueEquivalence:Lcom/google/common/base/Equivalence;
 
@@ -1652,8 +1752,10 @@
 
     const-string v1, "valueEquivalence"
 
+    .line 21
     invoke-virtual {v0, v1}, Lcom/google/common/base/MoreObjects$ToStringHelper;->addValue(Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 22
     :cond_9
     iget-object p0, p0, Lcom/google/common/cache/CacheBuilder;->removalListener:Lcom/google/common/cache/RemovalListener;
 
@@ -1661,8 +1763,10 @@
 
     const-string p0, "removalListener"
 
+    .line 23
     invoke-virtual {v0, p0}, Lcom/google/common/base/MoreObjects$ToStringHelper;->addValue(Ljava/lang/Object;)Lcom/google/common/base/MoreObjects$ToStringHelper;
 
+    .line 24
     :cond_a
     invoke-virtual {v0}, Lcom/google/common/base/MoreObjects$ToStringHelper;->toString()Ljava/lang/String;
 
@@ -1687,6 +1791,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/cache/CacheBuilder;->valueEquivalence:Lcom/google/common/base/Equivalence;
 
     if-nez v0, :cond_0
@@ -1703,6 +1808,7 @@
 
     invoke-static {v1, v2, v0}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/String;Ljava/lang/Object;)V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -1727,6 +1833,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/common/cache/LocalCache$Strength;->WEAK:Lcom/google/common/cache/LocalCache$Strength;
 
     invoke-virtual {p0, v0}, Lcom/google/common/cache/CacheBuilder;->setKeyStrength(Lcom/google/common/cache/LocalCache$Strength;)Lcom/google/common/cache/CacheBuilder;
@@ -1749,6 +1856,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/common/cache/LocalCache$Strength;->WEAK:Lcom/google/common/cache/LocalCache$Strength;
 
     invoke-virtual {p0, v0}, Lcom/google/common/cache/CacheBuilder;->setValueStrength(Lcom/google/common/cache/LocalCache$Strength;)Lcom/google/common/cache/CacheBuilder;
@@ -1773,6 +1881,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/cache/CacheBuilder;->weigher:Lcom/google/common/cache/Weigher;
 
     const/4 v1, 0x1
@@ -1791,10 +1900,12 @@
     :goto_0
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkState(Z)V
 
+    .line 2
     iget-boolean v0, p0, Lcom/google/common/cache/CacheBuilder;->strictParsing:Z
 
     if-eqz v0, :cond_2
 
+    .line 3
     iget-wide v3, p0, Lcom/google/common/cache/CacheBuilder;->maximumSize:J
 
     const-wide/16 v5, -0x1
@@ -1813,6 +1924,7 @@
 
     invoke-static {v1, v0, v3, v4}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/String;J)V
 
+    .line 4
     :cond_2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 

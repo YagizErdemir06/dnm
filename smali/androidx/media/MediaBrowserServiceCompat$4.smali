@@ -1,11 +1,11 @@
-.class Landroidx/media/MediaBrowserServiceCompat$4;
+.class public Landroidx/media/MediaBrowserServiceCompat$4;
 .super Landroidx/media/MediaBrowserServiceCompat$Result;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/media/MediaBrowserServiceCompat;->performCustomAction(Ljava/lang/String;Landroid/os/Bundle;Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;Lb/b;)V
+    value = Landroidx/media/MediaBrowserServiceCompat;->performCustomAction(Ljava/lang/String;Landroid/os/Bundle;Landroidx/media/MediaBrowserServiceCompat$ConnectionRecord;Lb/b/a/c/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -23,13 +23,13 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/media/MediaBrowserServiceCompat;
+.field public final synthetic this$0:Landroidx/media/MediaBrowserServiceCompat;
 
-.field final synthetic val$receiver:Lb/b;
+.field public final synthetic val$receiver:Lb/b/a/c/b;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/media/MediaBrowserServiceCompat;Ljava/lang/Object;Lb/b;)V
+.method public constructor <init>(Landroidx/media/MediaBrowserServiceCompat;Ljava/lang/Object;Lb/b/a/c/b;)V
     .locals 0
     .annotation system Ldalvik/annotation/MethodParameters;
         accessFlags = {
@@ -44,9 +44,10 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroidx/media/MediaBrowserServiceCompat$4;->this$0:Landroidx/media/MediaBrowserServiceCompat;
 
-    iput-object p3, p0, Landroidx/media/MediaBrowserServiceCompat$4;->val$receiver:Lb/b;
+    iput-object p3, p0, Landroidx/media/MediaBrowserServiceCompat$4;->val$receiver:Lb/b/a/c/b;
 
     invoke-direct {p0, p2}, Landroidx/media/MediaBrowserServiceCompat$Result;-><init>(Ljava/lang/Object;)V
 
@@ -70,11 +71,12 @@
         }
     .end annotation
 
-    iget-object p0, p0, Landroidx/media/MediaBrowserServiceCompat$4;->val$receiver:Lb/b;
+    .line 1
+    iget-object p0, p0, Landroidx/media/MediaBrowserServiceCompat$4;->val$receiver:Lb/b/a/c/b;
 
     const/4 v0, -0x1
 
-    invoke-virtual {p0, v0, p1}, Lb/b;->c(ILandroid/os/Bundle;)V
+    invoke-virtual {p0, v0, p1}, Lb/b/a/c/b;->b(ILandroid/os/Bundle;)V
 
     return-void
 .end method
@@ -94,11 +96,12 @@
         }
     .end annotation
 
-    iget-object p0, p0, Landroidx/media/MediaBrowserServiceCompat$4;->val$receiver:Lb/b;
+    .line 1
+    iget-object p0, p0, Landroidx/media/MediaBrowserServiceCompat$4;->val$receiver:Lb/b/a/c/b;
 
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0, p1}, Lb/b;->c(ILandroid/os/Bundle;)V
+    invoke-virtual {p0, v0, p1}, Lb/b/a/c/b;->b(ILandroid/os/Bundle;)V
 
     return-void
 .end method
@@ -119,11 +122,11 @@
     .end annotation
 
     .line 2
-    iget-object p0, p0, Landroidx/media/MediaBrowserServiceCompat$4;->val$receiver:Lb/b;
+    iget-object p0, p0, Landroidx/media/MediaBrowserServiceCompat$4;->val$receiver:Lb/b/a/c/b;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0, p1}, Lb/b;->c(ILandroid/os/Bundle;)V
+    invoke-virtual {p0, v0, p1}, Lb/b/a/c/b;->b(ILandroid/os/Bundle;)V
 
     return-void
 .end method

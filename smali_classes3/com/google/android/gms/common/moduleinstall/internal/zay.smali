@@ -20,6 +20,7 @@
 .method public static constructor <clinit>()V
     .locals 4
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/common/api/Api$ClientKey;
 
     invoke-direct {v0}, Lcom/google/android/gms/common/api/Api$ClientKey;-><init>()V
@@ -78,8 +79,10 @@
 
     const-string v0, "Requested APIs must not be null."
 
+    .line 1
     invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -101,16 +104,19 @@
     :goto_1
     if-ge v1, v0, :cond_1
 
+    .line 3
     aget-object v2, p1, v1
 
     const-string v3, "Requested API must not be null."
 
+    .line 4
     invoke-static {v2, v3}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
+    .line 5
     :cond_1
     invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
@@ -140,6 +146,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {v0, p1}, Lcom/google/android/gms/common/moduleinstall/internal/zay;->zad(Z[Lcom/google/android/gms/common/api/OptionalModuleApi;)Lcom/google/android/gms/common/moduleinstall/internal/ApiFeatureRequest;
 
     move-result-object p1
@@ -148,6 +155,7 @@
 
     move-result-object v1
 
+    .line 2
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
@@ -156,6 +164,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 3
     new-instance p0, Lcom/google/android/gms/common/moduleinstall/ModuleAvailabilityResponse;
 
     invoke-direct {p0, v2, v0}, Lcom/google/android/gms/common/moduleinstall/ModuleAvailabilityResponse;-><init>(ZI)V
@@ -173,28 +182,35 @@
 
     new-array v2, v2, [Lcom/google/android/gms/common/Feature;
 
+    .line 4
     sget-object v3, Lcom/google/android/gms/internal/base/zav;->zaa:Lcom/google/android/gms/common/Feature;
 
     aput-object v3, v2, v0
 
+    .line 5
     invoke-virtual {v1, v2}, Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;->setFeatures([Lcom/google/android/gms/common/Feature;)Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;
 
     const/16 v2, 0x6aa5
 
+    .line 6
     invoke-virtual {v1, v2}, Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;->setMethodKey(I)Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;
 
+    .line 7
     invoke-virtual {v1, v0}, Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;->setAutoResolveMissingFeatures(Z)Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;
 
     new-instance v0, Lcom/google/android/gms/common/moduleinstall/internal/zap;
 
     invoke-direct {v0, p0, p1}, Lcom/google/android/gms/common/moduleinstall/internal/zap;-><init>(Lcom/google/android/gms/common/moduleinstall/internal/zay;Lcom/google/android/gms/common/moduleinstall/internal/ApiFeatureRequest;)V
 
+    .line 8
     invoke-virtual {v1, v0}, Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;->run(Lcom/google/android/gms/common/api/internal/RemoteCall;)Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;
 
+    .line 9
     invoke-virtual {v1}, Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;->build()Lcom/google/android/gms/common/api/internal/TaskApiCall;
 
     move-result-object p1
 
+    .line 10
     invoke-virtual {p0, p1}, Lcom/google/android/gms/common/api/GoogleApi;->doRead(Lcom/google/android/gms/common/api/internal/TaskApiCall;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object p0
@@ -217,6 +233,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {v0, p1}, Lcom/google/android/gms/common/moduleinstall/internal/zay;->zad(Z[Lcom/google/android/gms/common/api/OptionalModuleApi;)Lcom/google/android/gms/common/moduleinstall/internal/ApiFeatureRequest;
 
     move-result-object p1
@@ -225,6 +242,7 @@
 
     move-result-object v1
 
+    .line 2
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
@@ -233,6 +251,7 @@
 
     const/4 p0, 0x0
 
+    .line 3
     invoke-static {p0}, Lcom/google/android/gms/tasks/Tasks;->forResult(Ljava/lang/Object;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object p0
@@ -248,28 +267,35 @@
 
     new-array v2, v2, [Lcom/google/android/gms/common/Feature;
 
+    .line 4
     sget-object v3, Lcom/google/android/gms/internal/base/zav;->zaa:Lcom/google/android/gms/common/Feature;
 
     aput-object v3, v2, v0
 
+    .line 5
     invoke-virtual {v1, v2}, Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;->setFeatures([Lcom/google/android/gms/common/Feature;)Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;
 
     const/16 v2, 0x6aa6
 
+    .line 6
     invoke-virtual {v1, v2}, Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;->setMethodKey(I)Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;
 
+    .line 7
     invoke-virtual {v1, v0}, Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;->setAutoResolveMissingFeatures(Z)Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;
 
     new-instance v0, Lcom/google/android/gms/common/moduleinstall/internal/zan;
 
     invoke-direct {v0, p0, p1}, Lcom/google/android/gms/common/moduleinstall/internal/zan;-><init>(Lcom/google/android/gms/common/moduleinstall/internal/zay;Lcom/google/android/gms/common/moduleinstall/internal/ApiFeatureRequest;)V
 
+    .line 8
     invoke-virtual {v1, v0}, Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;->run(Lcom/google/android/gms/common/api/internal/RemoteCall;)Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;
 
+    .line 9
     invoke-virtual {v1}, Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;->build()Lcom/google/android/gms/common/api/internal/TaskApiCall;
 
     move-result-object p1
 
+    .line 10
     invoke-virtual {p0, p1}, Lcom/google/android/gms/common/api/GoogleApi;->doRead(Lcom/google/android/gms/common/api/internal/TaskApiCall;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object p0
@@ -293,6 +319,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-static {v0, p1}, Lcom/google/android/gms/common/moduleinstall/internal/zay;->zad(Z[Lcom/google/android/gms/common/api/OptionalModuleApi;)Lcom/google/android/gms/common/moduleinstall/internal/ApiFeatureRequest;
 
     move-result-object p1
@@ -301,12 +328,14 @@
 
     move-result-object v1
 
+    .line 2
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 3
     new-instance p0, Lcom/google/android/gms/common/moduleinstall/ModuleInstallIntentResponse;
 
     const/4 p1, 0x0
@@ -328,26 +357,32 @@
 
     const/4 v2, 0x0
 
+    .line 4
     sget-object v3, Lcom/google/android/gms/internal/base/zav;->zaa:Lcom/google/android/gms/common/Feature;
 
     aput-object v3, v0, v2
 
+    .line 5
     invoke-virtual {v1, v0}, Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;->setFeatures([Lcom/google/android/gms/common/Feature;)Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;
 
     const/16 v0, 0x6aab
 
+    .line 6
     invoke-virtual {v1, v0}, Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;->setMethodKey(I)Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;
 
     new-instance v0, Lcom/google/android/gms/common/moduleinstall/internal/zam;
 
     invoke-direct {v0, p0, p1}, Lcom/google/android/gms/common/moduleinstall/internal/zam;-><init>(Lcom/google/android/gms/common/moduleinstall/internal/zay;Lcom/google/android/gms/common/moduleinstall/internal/ApiFeatureRequest;)V
 
+    .line 7
     invoke-virtual {v1, v0}, Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;->run(Lcom/google/android/gms/common/api/internal/RemoteCall;)Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;
 
+    .line 8
     invoke-virtual {v1}, Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;->build()Lcom/google/android/gms/common/api/internal/TaskApiCall;
 
     move-result-object p1
 
+    .line 9
     invoke-virtual {p0, p1}, Lcom/google/android/gms/common/api/GoogleApi;->doRead(Lcom/google/android/gms/common/api/internal/TaskApiCall;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object p0
@@ -368,37 +403,45 @@
         }
     .end annotation
 
+    .line 1
+    const-class v0, Lcom/google/android/gms/common/moduleinstall/InstallStatusListener;
+
     invoke-static {p1}, Lcom/google/android/gms/common/moduleinstall/internal/ApiFeatureRequest;->fromModuleInstallRequest(Lcom/google/android/gms/common/moduleinstall/ModuleInstallRequest;)Lcom/google/android/gms/common/moduleinstall/internal/ApiFeatureRequest;
+
+    move-result-object v5
+
+    .line 2
+    invoke-virtual {p1}, Lcom/google/android/gms/common/moduleinstall/ModuleInstallRequest;->getListener()Lcom/google/android/gms/common/moduleinstall/InstallStatusListener;
 
     move-result-object v4
 
-    invoke-virtual {p1}, Lcom/google/android/gms/common/moduleinstall/ModuleInstallRequest;->getListener()Lcom/google/android/gms/common/moduleinstall/InstallStatusListener;
-
-    move-result-object v3
-
+    .line 3
     invoke-virtual {p1}, Lcom/google/android/gms/common/moduleinstall/ModuleInstallRequest;->getListenerExecutor()Ljava/util/concurrent/Executor;
 
-    move-result-object v0
+    move-result-object v1
 
+    .line 4
     invoke-virtual {p1}, Lcom/google/android/gms/common/moduleinstall/ModuleInstallRequest;->zaa()Z
 
     move-result p1
 
-    invoke-virtual {v4}, Lcom/google/android/gms/common/moduleinstall/internal/ApiFeatureRequest;->getApiFeatures()Ljava/util/List;
+    invoke-virtual {v5}, Lcom/google/android/gms/common/moduleinstall/internal/ApiFeatureRequest;->getApiFeatures()Ljava/util/List;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+    .line 5
+    invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
 
-    move-result v1
+    move-result v2
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    if-eqz v1, :cond_0
+    if-eqz v2, :cond_0
 
+    .line 6
     new-instance p0, Lcom/google/android/gms/common/moduleinstall/ModuleInstallResponse;
 
-    invoke-direct {p0, v6}, Lcom/google/android/gms/common/moduleinstall/ModuleInstallResponse;-><init>(I)V
+    invoke-direct {p0, v7}, Lcom/google/android/gms/common/moduleinstall/ModuleInstallResponse;-><init>(I)V
 
     invoke-static {p0}, Lcom/google/android/gms/tasks/Tasks;->forResult(Ljava/lang/Object;)Lcom/google/android/gms/tasks/Task;
 
@@ -407,125 +450,143 @@
     goto/16 :goto_1
 
     :cond_0
-    const/4 v7, 0x1
+    const/4 v8, 0x1
 
-    if-nez v3, :cond_1
+    if-nez v4, :cond_1
 
     invoke-static {}, Lcom/google/android/gms/common/api/internal/TaskApiCall;->builder()Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;
 
     move-result-object v0
 
-    new-array v1, v7, [Lcom/google/android/gms/common/Feature;
+    new-array v1, v8, [Lcom/google/android/gms/common/Feature;
 
+    .line 7
     sget-object v2, Lcom/google/android/gms/internal/base/zav;->zaa:Lcom/google/android/gms/common/Feature;
 
-    aput-object v2, v1, v6
+    aput-object v2, v1, v7
 
+    .line 8
     invoke-virtual {v0, v1}, Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;->setFeatures([Lcom/google/android/gms/common/Feature;)Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;
 
+    .line 9
     invoke-virtual {v0, p1}, Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;->setAutoResolveMissingFeatures(Z)Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;
 
     const/16 p1, 0x6aa8
 
+    .line 10
     invoke-virtual {v0, p1}, Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;->setMethodKey(I)Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;
 
     new-instance p1, Lcom/google/android/gms/common/moduleinstall/internal/zao;
 
-    invoke-direct {p1, p0, v4}, Lcom/google/android/gms/common/moduleinstall/internal/zao;-><init>(Lcom/google/android/gms/common/moduleinstall/internal/zay;Lcom/google/android/gms/common/moduleinstall/internal/ApiFeatureRequest;)V
+    invoke-direct {p1, p0, v5}, Lcom/google/android/gms/common/moduleinstall/internal/zao;-><init>(Lcom/google/android/gms/common/moduleinstall/internal/zay;Lcom/google/android/gms/common/moduleinstall/internal/ApiFeatureRequest;)V
 
+    .line 11
     invoke-virtual {v0, p1}, Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;->run(Lcom/google/android/gms/common/api/internal/RemoteCall;)Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;
 
+    .line 12
     invoke-virtual {v0}, Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;->build()Lcom/google/android/gms/common/api/internal/TaskApiCall;
 
     move-result-object p1
 
+    .line 13
     invoke-virtual {p0, p1}, Lcom/google/android/gms/common/api/GoogleApi;->doRead(Lcom/google/android/gms/common/api/internal/TaskApiCall;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object p0
 
     goto :goto_1
 
+    .line 14
     :cond_1
-    invoke-static {v3}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v4}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-class v1, Lcom/google/android/gms/common/moduleinstall/InstallStatusListener;
+    if-nez v1, :cond_2
 
-    if-nez v0, :cond_2
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    .line 15
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0, v3, v0}, Lcom/google/android/gms/common/api/GoogleApi;->registerListener(Ljava/lang/Object;Ljava/lang/String;)Lcom/google/android/gms/common/api/internal/ListenerHolder;
+    invoke-virtual {p0, v4, v0}, Lcom/google/android/gms/common/api/GoogleApi;->registerListener(Ljava/lang/Object;Ljava/lang/String;)Lcom/google/android/gms/common/api/internal/ListenerHolder;
 
     move-result-object v0
 
     goto :goto_0
 
+    .line 16
     :cond_2
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v3, v0, v1}, Lcom/google/android/gms/common/api/internal/ListenerHolders;->createListenerHolder(Ljava/lang/Object;Ljava/util/concurrent/Executor;Ljava/lang/String;)Lcom/google/android/gms/common/api/internal/ListenerHolder;
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    :goto_0
-    move-object v8, v0
+    .line 17
+    invoke-static {v4, v1, v0}, Lcom/google/android/gms/common/api/internal/ListenerHolders;->createListenerHolder(Ljava/lang/Object;Ljava/util/concurrent/Executor;Ljava/lang/String;)Lcom/google/android/gms/common/api/internal/ListenerHolder;
 
+    move-result-object v0
+
+    .line 18
+    :goto_0
     new-instance v9, Lcom/google/android/gms/common/moduleinstall/internal/zaab;
 
-    invoke-direct {v9, v8}, Lcom/google/android/gms/common/moduleinstall/internal/zaab;-><init>(Lcom/google/android/gms/common/api/internal/ListenerHolder;)V
+    .line 19
+    invoke-direct {v9, v0}, Lcom/google/android/gms/common/moduleinstall/internal/zaab;-><init>(Lcom/google/android/gms/common/api/internal/ListenerHolder;)V
 
     new-instance v10, Ljava/util/concurrent/atomic/AtomicReference;
 
+    .line 20
     invoke-direct {v10}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     new-instance v11, Lcom/google/android/gms/common/moduleinstall/internal/zai;
 
-    move-object v0, v11
+    move-object v1, v11
 
-    move-object v1, p0
+    move-object v2, p0
 
-    move-object v2, v10
+    move-object v3, v10
 
-    move-object v5, v9
+    move-object v6, v9
 
-    invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/common/moduleinstall/internal/zai;-><init>(Lcom/google/android/gms/common/moduleinstall/internal/zay;Ljava/util/concurrent/atomic/AtomicReference;Lcom/google/android/gms/common/moduleinstall/InstallStatusListener;Lcom/google/android/gms/common/moduleinstall/internal/ApiFeatureRequest;Lcom/google/android/gms/common/moduleinstall/internal/zaab;)V
+    invoke-direct/range {v1 .. v6}, Lcom/google/android/gms/common/moduleinstall/internal/zai;-><init>(Lcom/google/android/gms/common/moduleinstall/internal/zay;Ljava/util/concurrent/atomic/AtomicReference;Lcom/google/android/gms/common/moduleinstall/InstallStatusListener;Lcom/google/android/gms/common/moduleinstall/internal/ApiFeatureRequest;Lcom/google/android/gms/common/moduleinstall/internal/zaab;)V
 
-    new-instance v0, Lcom/google/android/gms/common/moduleinstall/internal/zaj;
+    new-instance v1, Lcom/google/android/gms/common/moduleinstall/internal/zaj;
 
-    invoke-direct {v0, p0, v9}, Lcom/google/android/gms/common/moduleinstall/internal/zaj;-><init>(Lcom/google/android/gms/common/moduleinstall/internal/zay;Lcom/google/android/gms/common/moduleinstall/internal/zaab;)V
+    invoke-direct {v1, p0, v9}, Lcom/google/android/gms/common/moduleinstall/internal/zaj;-><init>(Lcom/google/android/gms/common/moduleinstall/internal/zay;Lcom/google/android/gms/common/moduleinstall/internal/zaab;)V
 
     invoke-static {}, Lcom/google/android/gms/common/api/internal/RegistrationMethods;->builder()Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1, v8}, Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;->withHolder(Lcom/google/android/gms/common/api/internal/ListenerHolder;)Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;
+    .line 21
+    invoke-virtual {v2, v0}, Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;->withHolder(Lcom/google/android/gms/common/api/internal/ListenerHolder;)Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;
 
-    new-array v2, v7, [Lcom/google/android/gms/common/Feature;
+    new-array v0, v8, [Lcom/google/android/gms/common/Feature;
 
     sget-object v3, Lcom/google/android/gms/internal/base/zav;->zaa:Lcom/google/android/gms/common/Feature;
 
-    aput-object v3, v2, v6
+    aput-object v3, v0, v7
 
-    invoke-virtual {v1, v2}, Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;->setFeatures([Lcom/google/android/gms/common/Feature;)Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;
+    .line 22
+    invoke-virtual {v2, v0}, Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;->setFeatures([Lcom/google/android/gms/common/Feature;)Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;
 
-    invoke-virtual {v1, p1}, Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;->setAutoResolveMissingFeatures(Z)Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;
+    .line 23
+    invoke-virtual {v2, p1}, Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;->setAutoResolveMissingFeatures(Z)Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;
 
-    invoke-virtual {v1, v11}, Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;->register(Lcom/google/android/gms/common/api/internal/RemoteCall;)Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;
+    .line 24
+    invoke-virtual {v2, v11}, Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;->register(Lcom/google/android/gms/common/api/internal/RemoteCall;)Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;
 
-    invoke-virtual {v1, v0}, Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;->unregister(Lcom/google/android/gms/common/api/internal/RemoteCall;)Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;
+    .line 25
+    invoke-virtual {v2, v1}, Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;->unregister(Lcom/google/android/gms/common/api/internal/RemoteCall;)Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;
 
     const/16 p1, 0x6aa9
 
-    invoke-virtual {v1, p1}, Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;->setMethodKey(I)Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;
+    .line 26
+    invoke-virtual {v2, p1}, Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;->setMethodKey(I)Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;
 
-    invoke-virtual {v1}, Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;->build()Lcom/google/android/gms/common/api/internal/RegistrationMethods;
+    .line 27
+    invoke-virtual {v2}, Lcom/google/android/gms/common/api/internal/RegistrationMethods$Builder;->build()Lcom/google/android/gms/common/api/internal/RegistrationMethods;
 
     move-result-object p1
 
+    .line 28
     invoke-virtual {p0, p1}, Lcom/google/android/gms/common/api/GoogleApi;->doRegisterEventListener(Lcom/google/android/gms/common/api/internal/RegistrationMethods;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object p0
@@ -534,6 +595,7 @@
 
     invoke-direct {p1, v10}, Lcom/google/android/gms/common/moduleinstall/internal/zak;-><init>(Ljava/util/concurrent/atomic/AtomicReference;)V
 
+    .line 29
     invoke-virtual {p0, p1}, Lcom/google/android/gms/tasks/Task;->onSuccessTask(Lcom/google/android/gms/tasks/SuccessContinuation;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object p0
@@ -557,6 +619,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {v0, p1}, Lcom/google/android/gms/common/moduleinstall/internal/zay;->zad(Z[Lcom/google/android/gms/common/api/OptionalModuleApi;)Lcom/google/android/gms/common/moduleinstall/internal/ApiFeatureRequest;
 
     move-result-object p1
@@ -565,6 +628,7 @@
 
     move-result-object v1
 
+    .line 2
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
@@ -573,6 +637,7 @@
 
     const/4 p0, 0x0
 
+    .line 3
     invoke-static {p0}, Lcom/google/android/gms/tasks/Tasks;->forResult(Ljava/lang/Object;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object p0
@@ -588,28 +653,35 @@
 
     new-array v2, v2, [Lcom/google/android/gms/common/Feature;
 
+    .line 4
     sget-object v3, Lcom/google/android/gms/internal/base/zav;->zaa:Lcom/google/android/gms/common/Feature;
 
     aput-object v3, v2, v0
 
+    .line 5
     invoke-virtual {v1, v2}, Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;->setFeatures([Lcom/google/android/gms/common/Feature;)Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;
 
     const/16 v2, 0x6aa7
 
+    .line 6
     invoke-virtual {v1, v2}, Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;->setMethodKey(I)Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;
 
+    .line 7
     invoke-virtual {v1, v0}, Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;->setAutoResolveMissingFeatures(Z)Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;
 
     new-instance v0, Lcom/google/android/gms/common/moduleinstall/internal/zal;
 
     invoke-direct {v0, p0, p1}, Lcom/google/android/gms/common/moduleinstall/internal/zal;-><init>(Lcom/google/android/gms/common/moduleinstall/internal/zay;Lcom/google/android/gms/common/moduleinstall/internal/ApiFeatureRequest;)V
 
+    .line 8
     invoke-virtual {v1, v0}, Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;->run(Lcom/google/android/gms/common/api/internal/RemoteCall;)Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;
 
+    .line 9
     invoke-virtual {v1}, Lcom/google/android/gms/common/api/internal/TaskApiCall$Builder;->build()Lcom/google/android/gms/common/api/internal/TaskApiCall;
 
     move-result-object p1
 
+    .line 10
     invoke-virtual {p0, p1}, Lcom/google/android/gms/common/api/GoogleApi;->doRead(Lcom/google/android/gms/common/api/internal/TaskApiCall;)Lcom/google/android/gms/tasks/Task;
 
     move-result-object p0
@@ -631,6 +703,7 @@
         }
     .end annotation
 
+    .line 1
     const-class v0, Lcom/google/android/gms/common/moduleinstall/InstallStatusListener;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -643,6 +716,7 @@
 
     const/16 v0, 0x6aaa
 
+    .line 2
     invoke-virtual {p0, p1, v0}, Lcom/google/android/gms/common/api/GoogleApi;->doUnregisterEventListener(Lcom/google/android/gms/common/api/internal/ListenerHolder$ListenerKey;I)Lcom/google/android/gms/tasks/Task;
 
     move-result-object p0

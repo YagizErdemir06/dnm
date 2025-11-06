@@ -17,6 +17,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/pta_helper/encode/helper/AbsEncoderHelper;-><init>()V
 
     return-void
@@ -27,6 +28,7 @@
 .method public setDither(Lcom/faceunity/pta_helper/encode/SequenceFrame;I)Z
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/faceunity/pta_helper/encode/EncoderGIF;
 
     invoke-virtual {p1, p2}, Lcom/faceunity/pta_helper/encode/EncoderGIF;->setDither(I)Z
@@ -39,6 +41,7 @@
 .method public setEncoder(Lcom/faceunity/pta_helper/encode/SequenceFrame;I)Z
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/faceunity/pta_helper/encode/EncoderGIF;
 
     invoke-virtual {p1, p2}, Lcom/faceunity/pta_helper/encode/EncoderGIF;->setEncoder(I)Z
@@ -51,6 +54,7 @@
 .method public setImageSizeToComputeColorTable(Lcom/faceunity/pta_helper/encode/SequenceFrame;II)Z
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/faceunity/pta_helper/encode/EncoderGIF;
 
     invoke-virtual {p1, p2, p3}, Lcom/faceunity/pta_helper/encode/EncoderGIF;->setImageSizeToComputeColorTable(II)Z
@@ -63,6 +67,7 @@
 .method public setSample(Lcom/faceunity/pta_helper/encode/SequenceFrame;I)Z
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/faceunity/pta_helper/encode/EncoderGIF;
 
     invoke-virtual {p1, p2}, Lcom/faceunity/pta_helper/encode/EncoderGIF;->setSample(I)Z
@@ -75,6 +80,7 @@
 .method public setThreadCount(Lcom/faceunity/pta_helper/encode/SequenceFrame;I)Z
     .locals 0
 
+    .line 1
     check-cast p1, Lcom/faceunity/pta_helper/encode/EncoderGIF;
 
     invoke-virtual {p1, p2}, Lcom/faceunity/pta_helper/encode/EncoderGIF;->setThreadCount(I)Z
@@ -87,20 +93,24 @@
 .method public startRecord(Ljava/lang/String;II)Lcom/faceunity/pta_helper/encode/SequenceFrame;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/faceunity/pta_helper/encode/EncoderGIF;
 
     invoke-direct {v0}, Lcom/faceunity/pta_helper/encode/EncoderGIF;-><init>()V
 
+    .line 2
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/faceunity/pta_helper/encode/helper/AbsEncoderHelper;->startRecord(Ljava/lang/String;IILcom/faceunity/pta_helper/encode/SequenceFrame;)Lcom/faceunity/pta_helper/encode/SequenceFrame;
 
     move-result-object p0
 
+    .line 3
     invoke-virtual {v0, p1, p2, p3}, Lcom/faceunity/pta_helper/encode/EncoderGIF;->init(Ljava/lang/String;II)Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
+    .line 4
     sget-object p1, Lcom/faceunity/pta_helper/encode/helper/GifEncoderHelper;->TAG:Ljava/lang/String;
 
     const-string p2, "GifEncoderHelper init failure"

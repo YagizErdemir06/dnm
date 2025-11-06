@@ -1,4 +1,4 @@
-.class final Lcom/google/common/base/MoreObjects$ToStringHelper$UnconditionalValueHolder;
+.class public final Lcom/google/common/base/MoreObjects$ToStringHelper$UnconditionalValueHolder;
 .super Lcom/google/common/base/MoreObjects$ToStringHelper$ValueHolder;
 .source "SourceFile"
 

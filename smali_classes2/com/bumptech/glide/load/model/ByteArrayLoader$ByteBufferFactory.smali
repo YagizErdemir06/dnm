@@ -31,6 +31,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -59,6 +60,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p1, Lcom/bumptech/glide/load/model/ByteArrayLoader;
 
     new-instance v0, Lcom/bumptech/glide/load/model/ByteArrayLoader$ByteBufferFactory$1;

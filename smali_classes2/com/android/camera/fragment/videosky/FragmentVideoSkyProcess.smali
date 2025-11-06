@@ -4,140 +4,972 @@
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
-.implements Lv8/z0;
-.implements Lv8/k3;
+.implements Ld/d/a/m7/g/c1;
+.implements Ld/d/a/m7/g/i3;
 .implements Lcom/android/camera/ui/CameraSnapView$c;
 .implements Landroid/view/SurfaceHolder$Callback;
 
 
 # static fields
-.field public static final H:Ljava/lang/String; = "FragmentVideoSkyProcess"
+.field private static final c:Ljava/lang/String; = "FragmentVideoSkyProcess"
 
-.field public static final I:I = 0x0
+.field private static final d:I = 0x0
 
-.field public static final J:I = 0x1
+.field private static final f:I = 0x1
 
-.field public static final K:I = 0x2
+.field private static final g:I = 0x2
 
-.field public static final Y:I = 0x3
+.field private static final j:I = 0x3
 
 
 # instance fields
-.field public A:Z
+.field private C1:Landroid/content/ContentValues;
 
-.field public C:I
+.field private C2:Z
 
-.field public D:Landroid/view/SurfaceHolder;
+.field private K0:Landroid/widget/ImageView;
 
-.field public F:Lcom/xiaomi/magicvideosky/MediaEffectGraph;
+.field private K1:Ljava/lang/String;
 
-.field public G:Lcom/xiaomi/magicvideosky/EffectMediaPlayer;
+.field private K2:Lmiuix/appcompat/app/AlertDialog;
 
-.field public a:Landroid/view/View;
+.field private K8:Landroid/view/View;
 
-.field public b:Landroid/view/ViewGroup;
+.field private L8:Landroid/widget/TextView;
 
-.field public c:Landroid/view/ViewGroup;
+.field private M8:Landroidx/recyclerview/widget/RecyclerView;
 
-.field public d:Lcom/android/camera/ui/CameraSnapView;
+.field private N8:Lcom/xiaomi/microfilm/vlog/vv/page/PagerGridSnapHelper;
 
-.field public e:Landroid/widget/ImageView;
+.field private O8:Lcom/xiaomi/microfilm/vlog/vv/page/PageIndicatorView;
 
-.field public f:Landroid/widget/ImageView;
+.field private P8:Lcom/xiaomi/microfilm/vlog/vv/VVShareAdapter;
 
-.field public g:Landroid/widget/ImageView;
+.field private Q8:Landroid/view/SurfaceView;
 
-.field public h:Lcom/airbnb/lottie/LottieAnimationView;
+.field private R8:Landroid/widget/ImageView;
 
-.field public i:Landroid/widget/ImageView;
+.field private S8:Z
 
-.field public j:Landroid/widget/ProgressBar;
+.field private T8:Z
 
-.field public k:Z
+.field private U8:Z
 
-.field public l:Landroid/content/ContentValues;
+.field private V8:I
 
-.field public m:Ljava/lang/String;
+.field private W8:Landroid/view/SurfaceHolder;
 
-.field public n:Landroid/net/Uri;
+.field private X8:Lcom/xiaomi/magicvideosky/MediaEffectGraph;
 
-.field public o:Z
+.field private Y8:Lcom/xiaomi/magicvideosky/EffectMediaPlayer;
 
-.field public p:Lmiuix/appcompat/app/AlertDialog;
+.field private k0:Lcom/airbnb/lottie/LottieAnimationView;
 
-.field public q:Landroid/view/View;
+.field private k1:Landroid/widget/ProgressBar;
 
-.field public r:Landroid/widget/TextView;
+.field private m:Landroid/view/View;
 
-.field public s:Landroidx/recyclerview/widget/RecyclerView;
+.field private n:Landroid/view/ViewGroup;
 
-.field public t:Lcom/xiaomi/microfilm/vlog/vv/page/PagerGridSnapHelper;
+.field private p:Landroid/view/ViewGroup;
 
-.field public u:Lcom/xiaomi/microfilm/vlog/vv/page/PageIndicatorView;
+.field private s:Lcom/android/camera/ui/CameraSnapView;
 
-.field public v:Lcom/xiaomi/microfilm/vlog/vv/VVShareAdapter;
+.field private t:Landroid/widget/ImageView;
 
-.field public w:Landroid/view/SurfaceView;
+.field private u:Landroid/widget/ImageView;
 
-.field public x:Landroid/widget/ImageView;
+.field private v1:Z
 
-.field public y:Z
+.field private v2:Landroid/net/Uri;
 
-.field public z:Z
+.field private w:Landroid/widget/ImageView;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/BaseFragment;-><init>()V
 
     return-void
 .end method
 
-.method public static synthetic Gh(Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;Lv8/q;)V
+.method private Fb(Landroid/view/View;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "view"
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
+
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    .line 2
+    new-instance p0, Ld/d/a/f6/j/b;
+
+    invoke-direct {p0, p1}, Ld/d/a/f6/j/b;-><init>(Landroid/view/View;)V
+
+    invoke-static {p0}, Lio/reactivex/Completable;->create(Lio/reactivex/CompletableOnSubscribe;)Lio/reactivex/Completable;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lio/reactivex/Completable;->subscribe()Lio/reactivex/disposables/Disposable;
+
+    :cond_0
+    return-void
+.end method
+
+.method public static synthetic Hc(ZLd/d/a/m7/g/t;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->hi(Lv8/q;)V
+    if-eqz p0, :cond_0
+
+    .line 1
+    invoke-interface {p1}, Ld/d/a/m7/g/t;->Df()V
+
+    goto :goto_0
+
+    .line 2
+    :cond_0
+    invoke-interface {p1}, Ld/d/a/m7/g/t;->Hb()V
+
+    :goto_0
+    return-void
+.end method
+
+.method public static synthetic Ic()V
+    .locals 2
+
+    const-string v0, "FragmentVideoSkyProcess"
+
+    const-string v1, "showExitConfirm onClick negative"
+
+    .line 1
+    invoke-static {v0, v1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public static synthetic Hh(ZLv8/q;)V
-    .locals 0
+.method private Lc(Z)V
+    .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "fromShare"
+        }
+    .end annotation
 
-    invoke-static {p0, p1}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->ii(ZLv8/q;)V
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->v2:Landroid/net/Uri;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K1:Ljava/lang/String;
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-virtual {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->prepare()V
+
+    return-void
+
+    .line 3
+    :cond_0
+    invoke-static {}, Ld/d/a/m7/g/h3;->impl2()Ld/d/a/m7/g/h3;
+
+    move-result-object v0
+
+    const-string v1, "FragmentVideoSkyProcess"
+
+    const/4 v2, 0x0
+
+    if-nez v0, :cond_1
+
+    new-array p0, v2, [Ljava/lang/Object;
+
+    const-string p1, "onSaveButtonClick: no clone action"
+
+    .line 4
+    invoke-static {v1, p1, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_1
+    new-array v3, v2, [Ljava/lang/Object;
+
+    const-string v4, "onSaveButtonClick"
+
+    .line 5
+    invoke-static {v1, v4, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    const/16 v1, 0x8
+
+    if-eqz p1, :cond_2
+
+    .line 6
+    iget-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->u:Landroid/widget/ImageView;
+
+    invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    .line 7
+    iget-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k1:Landroid/widget/ProgressBar;
+
+    invoke-virtual {p1, v2}, Landroid/widget/ProgressBar;->setVisibility(I)V
+
+    goto :goto_0
+
+    .line 8
+    :cond_2
+    iget-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k0:Lcom/airbnb/lottie/LottieAnimationView;
+
+    invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    const/4 p1, 0x1
+
+    .line 9
+    invoke-direct {p0, p1}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Sd(Z)V
+
+    .line 10
+    :goto_0
+    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Y8:Lcom/xiaomi/magicvideosky/EffectMediaPlayer;
+
+    invoke-virtual {p0}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->q()V
+
+    .line 11
+    invoke-interface {v0}, Ld/d/a/m7/g/h3;->F()V
 
     return-void
 .end method
 
-.method public static synthetic Xh()V
+.method private Mb()Z
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->v2:Landroid/net/Uri;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K1:Ljava/lang/String;
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-direct {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->ee()V
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method private Sd(Z)V
+    .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "visible"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_0
+
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K0:Landroid/widget/ImageView;
+
+    invoke-virtual {v0}, Landroid/widget/ImageView;->getVisibility()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    if-nez p1, :cond_1
+
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K0:Landroid/widget/ImageView;
+
+    invoke-virtual {v0}, Landroid/widget/ImageView;->getVisibility()I
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    return-void
+
+    :cond_1
+    if-eqz p1, :cond_3
+
+    .line 3
+    iget p1, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
+
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->s:Lcom/android/camera/ui/CameraSnapView;
+
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K0:Landroid/widget/ImageView;
+
+    invoke-virtual {p0, p1, v0, v1}, Lcom/android/camera/fragment/BaseFragment;->adjustProgressAndGetDrawable(ILcom/android/camera/ui/CameraSnapView;Landroid/view/View;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_2
+
+    .line 4
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K0:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 5
+    :cond_2
+    new-instance p1, Landroid/view/animation/RotateAnimation;
+
+    const/4 v2, 0x0
+
+    const/high16 v3, 0x43b40000    # 360.0f
+
+    const/4 v4, 0x1
+
+    const/high16 v5, 0x3f000000    # 0.5f
+
+    const/4 v6, 0x1
+
+    const/high16 v7, 0x3f000000    # 0.5f
+
+    move-object v1, p1
+
+    invoke-direct/range {v1 .. v7}, Landroid/view/animation/RotateAnimation;-><init>(FFIFIF)V
+
+    .line 6
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f0c0037
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
+
+    move-result v0
+
+    int-to-long v0, v0
+
+    invoke-virtual {p1, v0, v1}, Landroid/view/animation/RotateAnimation;->setDuration(J)V
+
+    .line 7
+    new-instance v0, Landroid/view/animation/LinearInterpolator;
+
+    invoke-direct {v0}, Landroid/view/animation/LinearInterpolator;-><init>()V
+
+    invoke-virtual {p1, v0}, Landroid/view/animation/RotateAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
+
+    const/4 v0, 0x1
+
+    .line 8
+    invoke-virtual {p1, v0}, Landroid/view/animation/RotateAnimation;->setRepeatMode(I)V
+
+    const/4 v0, -0x1
+
+    .line 9
+    invoke-virtual {p1, v0}, Landroid/view/animation/RotateAnimation;->setRepeatCount(I)V
+
+    .line 10
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K0:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setAnimation(Landroid/view/animation/Animation;)V
+
+    .line 11
+    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K0:Landroid/widget/ImageView;
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    goto :goto_0
+
+    .line 12
+    :cond_3
+    iget-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K0:Landroid/widget/ImageView;
+
+    invoke-virtual {p1}, Landroid/widget/ImageView;->clearAnimation()V
+
+    .line 13
+    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K0:Landroid/widget/ImageView;
+
+    const/16 p1, 0x8
+
+    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    :goto_0
+    return-void
+.end method
+
+.method private Ud(ZZ)V
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "enable",
+            "updateAlphaWhenDisable"
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "setSnapButtonEnable "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const-string v2, "FragmentVideoSkyProcess"
+
+    invoke-static {v2, v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->s:Lcom/android/camera/ui/CameraSnapView;
+
+    if-eqz v0, :cond_2
+
+    .line 3
+    invoke-virtual {v0, p1}, Lcom/android/camera/ui/CameraSnapView;->setSnapClickEnable(Z)V
+
+    .line 4
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->s:Lcom/android/camera/ui/CameraSnapView;
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setEnabled(Z)V
+
+    if-nez p1, :cond_0
+
+    if-eqz p2, :cond_2
+
+    .line 5
+    :cond_0
+    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->s:Lcom/android/camera/ui/CameraSnapView;
+
+    if-eqz p1, :cond_1
+
+    const/high16 p1, 0x3f800000    # 1.0f
+
+    goto :goto_0
+
+    :cond_1
+    const/high16 p1, 0x3f000000    # 0.5f
+
+    :goto_0
+    invoke-virtual {p0, p1}, Landroid/view/View;->setAlpha(F)V
+
+    :cond_2
+    return-void
+.end method
+
+.method private Wc()V
     .locals 0
 
-    invoke-static {}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->ji()V
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Y8:Lcom/xiaomi/magicvideosky/EffectMediaPlayer;
+
+    if-eqz p0, :cond_0
+
+    .line 2
+    invoke-virtual {p0}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->g()V
+
+    :cond_0
+    return-void
+.end method
+
+.method private Yb()Z
+    .locals 4
+
+    const/4 v0, 0x0
+
+    new-array v1, v0, [Ljava/lang/Object;
+
+    const-string v2, "FragmentVideoSkyProcess"
+
+    const-string v3, "hideExitDialog"
+
+    .line 1
+    invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 2
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K2:Lmiuix/appcompat/app/AlertDialog;
+
+    if-eqz v1, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 3
+    invoke-direct {p0, v0, v0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Ud(ZZ)V
+
+    .line 4
+    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K2:Lmiuix/appcompat/app/AlertDialog;
+
+    invoke-virtual {p0}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
+
+    :cond_0
+    return v0
+.end method
+
+.method private bd()V
+    .locals 5
+
+    .line 1
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-static {}, Ld/d/a/l6/b;->i()Ld/d/a/l6/e/k/d;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ld/d/a/l6/e/k/d;->P()Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    .line 2
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    .line 3
+    :goto_0
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v4
+
+    if-ge v3, v4, :cond_0
+
+    .line 4
+    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ld/o/t/b/t$f;
+
+    invoke-interface {v4}, Ld/o/t/b/t$f;->getPath()Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v1, v3
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    .line 5
+    :cond_0
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->X8:Lcom/xiaomi/magicvideosky/MediaEffectGraph;
+
+    if-eqz v0, :cond_1
+
+    .line 6
+    invoke-virtual {v0}, Lcom/xiaomi/magicvideosky/MediaEffectGraph;->i()V
+
+    .line 7
+    :cond_1
+    new-instance v0, Lcom/xiaomi/magicvideosky/MediaEffectGraph;
+
+    invoke-direct {v0}, Lcom/xiaomi/magicvideosky/MediaEffectGraph;-><init>()V
+
+    iput-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->X8:Lcom/xiaomi/magicvideosky/MediaEffectGraph;
+
+    .line 8
+    invoke-virtual {v0}, Lcom/xiaomi/magicvideosky/MediaEffectGraph;->h()V
+
+    .line 9
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->X8:Lcom/xiaomi/magicvideosky/MediaEffectGraph;
+
+    const/4 v3, 0x1
+
+    new-array v3, v3, [F
+
+    const/high16 v4, 0x3f800000    # 1.0f
+
+    aput v4, v3, v2
+
+    invoke-virtual {v0, v1, v3}, Lcom/xiaomi/magicvideosky/MediaEffectGraph;->e([Ljava/lang/String;[F)V
+
+    .line 10
+    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->X8:Lcom/xiaomi/magicvideosky/MediaEffectGraph;
+
+    const-string v0, ""
+
+    invoke-virtual {p0, v0, v2}, Lcom/xiaomi/magicvideosky/MediaEffectGraph;->a(Ljava/lang/String;Z)J
 
     return-void
 .end method
 
-.method public static synthetic Zh(Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;)Lmiuix/appcompat/app/AlertDialog;
+.method private ee()V
+    .locals 4
+
+    const/4 v0, 0x0
+
+    .line 1
+    iput-boolean v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->v1:Z
+
+    .line 2
+    iget-boolean v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->C2:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    .line 3
+    :cond_0
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->v2:Landroid/net/Uri;
+
+    iget-object v2, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K1:Ljava/lang/String;
+
+    const v3, 0x7f130581
+
+    invoke-virtual {p0, v3}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    const/4 v3, 0x1
+
+    invoke-static {v0, v1, v2, p0, v3}, Ld/d/a/z5;->q4(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/CharSequence;Z)Z
+
+    return-void
+.end method
+
+.method private gc()Z
+    .locals 4
+
+    const/4 v0, 0x0
+
+    new-array v1, v0, [Ljava/lang/Object;
+
+    const-string v2, "FragmentVideoSkyProcess"
+
+    const-string v3, "hideShareSheet"
+
+    .line 1
+    invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 2
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K8:Landroid/view/View;
+
+    invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 3
+    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K8:Landroid/view/View;
+
+    const/16 v0, 0x8
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    return v0
+.end method
+
+.method private je()V
+    .locals 5
+
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->W8:Landroid/view/SurfaceHolder;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    new-array p0, v1, [Ljava/lang/Object;
+
+    const-string v0, "FragmentVideoSkyProcess"
+
+    const-string v1, "startVideoPlay failed, mSurfaceHolder not available"
+
+    .line 2
+    invoke-static {v0, v1, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    .line 3
+    :cond_0
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Q8:Landroid/view/SurfaceView;
+
+    invoke-virtual {v0, v1}, Landroid/view/SurfaceView;->setVisibility(I)V
+
+    .line 4
+    invoke-direct {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->bd()V
+
+    const/4 v0, 0x1
+
+    .line 5
+    iput-boolean v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->S8:Z
+
+    .line 6
+    iput-boolean v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->T8:Z
+
+    .line 7
+    new-instance v1, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;
+
+    iget-object v2, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->X8:Lcom/xiaomi/magicvideosky/MediaEffectGraph;
+
+    invoke-direct {v1, v2}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;-><init>(Lcom/xiaomi/magicvideosky/MediaEffectGraph;)V
+
+    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Y8:Lcom/xiaomi/magicvideosky/EffectMediaPlayer;
+
+    .line 8
+    invoke-virtual {v1}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->a()Z
+
+    .line 9
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Y8:Lcom/xiaomi/magicvideosky/EffectMediaPlayer;
+
+    new-instance v2, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess$a;
+
+    invoke-direct {v2, p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess$a;-><init>(Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;)V
+
+    invoke-virtual {v1, v2}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->m(Lcom/xiaomi/magicvideosky/EffectNotifier;)V
+
+    .line 10
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Y8:Lcom/xiaomi/magicvideosky/EffectMediaPlayer;
+
+    iget-object v2, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->W8:Landroid/view/SurfaceHolder;
+
+    invoke-interface {v2}, Landroid/view/SurfaceHolder;->getSurface()Landroid/view/Surface;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->n(Landroid/view/Surface;)V
+
+    .line 11
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Y8:Lcom/xiaomi/magicvideosky/EffectMediaPlayer;
+
+    sget-object v2, Lcom/xiaomi/magicvideosky/EffectMediaPlayer$a;->d:Lcom/xiaomi/magicvideosky/EffectMediaPlayer$a;
+
+    const/16 v3, 0x438
+
+    const/16 v4, 0x780
+
+    invoke-virtual {v1, v2, v3, v4}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->r(Lcom/xiaomi/magicvideosky/EffectMediaPlayer$a;II)V
+
+    .line 12
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Y8:Lcom/xiaomi/magicvideosky/EffectMediaPlayer;
+
+    invoke-virtual {v1, v0}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->c(Z)V
+
+    .line 13
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Y8:Lcom/xiaomi/magicvideosky/EffectMediaPlayer;
+
+    invoke-virtual {v1, v0}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->j(Z)V
+
+    .line 14
+    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Y8:Lcom/xiaomi/magicvideosky/EffectMediaPlayer;
+
+    invoke-virtual {p0}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->o()V
+
+    return-void
+.end method
+
+.method private ke()V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Y8:Lcom/xiaomi/magicvideosky/EffectMediaPlayer;
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-virtual {v0}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->q()V
+
+    .line 3
+    :cond_0
+    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Q8:Landroid/view/SurfaceView;
+
+    const/4 v0, 0x4
+
+    invoke-virtual {p0, v0}, Landroid/view/SurfaceView;->setVisibility(I)V
+
+    return-void
+.end method
+
+.method public static synthetic nb(Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;)Lmiuix/appcompat/app/AlertDialog;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->p:Lmiuix/appcompat/app/AlertDialog;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K2:Lmiuix/appcompat/app/AlertDialog;
 
     return-object p0
 .end method
 
-.method public static synthetic ai(Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;Lmiuix/appcompat/app/AlertDialog;)Lmiuix/appcompat/app/AlertDialog;
+.method private o()V
+    .locals 10
+
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K2:Lmiuix/appcompat/app/AlertDialog;
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    .line 2
+    :cond_0
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    const v0, 0x7f13057f
+
+    .line 3
+    invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    const v0, 0x7f13057e
+
+    .line 4
+    invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    new-instance v5, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess$b;
+
+    invoke-direct {v5, p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess$b;-><init>(Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;)V
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const v0, 0x7f130ac7
+
+    .line 5
+    invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
+
+    move-result-object v8
+
+    sget-object v9, Ld/d/a/u6/h5/c;->c:Ld/d/a/u6/h5/c;
+
+    .line 6
+    invoke-static/range {v1 .. v9}, Ld/d/a/l5;->u(Landroid/content/Context;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;)Lmiuix/appcompat/app/AlertDialog;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K2:Lmiuix/appcompat/app/AlertDialog;
+
+    .line 7
+    new-instance v1, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess$c;
+
+    invoke-direct {v1, p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess$c;-><init>(Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;)V
+
+    invoke-virtual {v0, v1}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+
+    return-void
+.end method
+
+.method public static synthetic qb(Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;Lmiuix/appcompat/app/AlertDialog;)Lmiuix/appcompat/app/AlertDialog;
     .locals 0
 
-    iput-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->p:Lmiuix/appcompat/app/AlertDialog;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K2:Lmiuix/appcompat/app/AlertDialog;
 
     return-object p1
 .end method
 
-.method private synthetic hi(Lv8/q;)V
+.method private qc()V
+    .locals 4
+
+    const/4 v0, 0x0
+
+    new-array v1, v0, [Ljava/lang/Object;
+
+    const-string v2, "FragmentVideoSkyProcess"
+
+    const-string v3, "initShutterButton"
+
+    .line 1
+    invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 2
+    iget v1, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
+
+    invoke-static {v1}, Ld/d/a/d8/n2/f/p;->c(I)Ld/d/a/d8/n2/f/p;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    .line 3
+    invoke-virtual {v1, v2}, Ld/d/a/d8/n2/f/p;->d0(I)Ld/d/a/d8/n2/f/p;
+
+    .line 4
+    iget-object v2, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->s:Lcom/android/camera/ui/CameraSnapView;
+
+    invoke-virtual {v2, v1}, Lcom/android/camera/ui/CameraSnapView;->setParameters(Ld/d/a/d8/n2/f/p;)V
+
+    .line 5
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->s:Lcom/android/camera/ui/CameraSnapView;
+
+    invoke-virtual {v1}, Lcom/android/camera/ui/CameraSnapView;->Y()V
+
+    .line 6
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->s:Lcom/android/camera/ui/CameraSnapView;
+
+    invoke-virtual {v1}, Lcom/android/camera/ui/CameraSnapView;->b0()V
+
+    .line 7
+    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->s:Lcom/android/camera/ui/CameraSnapView;
+
+    invoke-virtual {p0, v0}, Lcom/android/camera/ui/CameraSnapView;->f0(Z)V
+
+    return-void
+.end method
+
+.method private synthetic uc(Ld/d/a/m7/g/t;)V
     .locals 1
 
+    .line 1
     iget p0, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
 
     const/16 v0, 0xd7
@@ -146,46 +978,76 @@
 
     const/16 p0, 0xa
 
-    invoke-interface {p1, p0}, Lv8/q;->B(I)Z
+    .line 2
+    invoke-interface {p1, p0}, Ld/d/a/m7/g/t;->C(I)Z
 
     :cond_0
     return-void
 .end method
 
-.method public static synthetic ii(ZLv8/q;)V
+.method private wb(Landroid/view/View;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "view"
+        }
+    .end annotation
+
+    .line 1
+    invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
+
+    move-result p0
 
     if-eqz p0, :cond_0
 
-    invoke-interface {p1}, Lv8/q;->Sf()V
+    .line 2
+    new-instance p0, Ld/d/a/f6/j/a;
 
-    goto :goto_0
+    invoke-direct {p0, p1}, Ld/d/a/f6/j/a;-><init>(Landroid/view/View;)V
+
+    invoke-static {p0}, Lio/reactivex/Completable;->create(Lio/reactivex/CompletableOnSubscribe;)Lio/reactivex/Completable;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lio/reactivex/Completable;->subscribe()Lio/reactivex/disposables/Disposable;
 
     :cond_0
-    invoke-interface {p1}, Lv8/q;->Yb()V
-
-    :goto_0
     return-void
 .end method
 
-.method public static synthetic ji()V
-    .locals 2
+.method private yd()V
+    .locals 0
 
-    const-string v0, "FragmentVideoSkyProcess"
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Y8:Lcom/xiaomi/magicvideosky/EffectMediaPlayer;
 
-    const-string v1, "showExitConfirm onClick negative"
+    if-eqz p0, :cond_0
 
-    invoke-static {v0, v1}, Lcom/android/camera/log/LogU;->i(Ljava/lang/String;Ljava/lang/String;)V
+    .line 2
+    invoke-virtual {p0}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->h()Z
 
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public I(Z)V
+.method public J(Z)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "keepCaptureHintShowing"
+        }
+    .end annotation
 
-    invoke-static {}, Lv8/j3;->impl2()Lv8/j3;
+    .line 1
+    invoke-static {}, Ld/d/a/m7/g/h3;->impl2()Ld/d/a/m7/g/h3;
 
     move-result-object p1
 
@@ -195,39 +1057,44 @@
 
     if-nez p1, :cond_0
 
-    const-string p0, "stopCaptureToPreviewResult videoSkyAction is null"
+    new-array p0, v1, [Ljava/lang/Object;
 
-    new-array p1, v1, [Ljava/lang/Object;
+    const-string p1, "stopCaptureToPreviewResult videoSkyAction is null"
 
-    invoke-static {v0, p0, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 2
+    invoke-static {v0, p1, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
+    .line 3
     :cond_0
-    iget-boolean v2, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->A:Z
+    iget-boolean v2, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->U8:Z
 
     if-eqz v2, :cond_1
 
-    const-string p0, "stopCaptureToPreviewResult ignore, pending show composeResult"
+    new-array p0, v1, [Ljava/lang/Object;
 
-    new-array p1, v1, [Ljava/lang/Object;
+    const-string p1, "stopCaptureToPreviewResult ignore, pending show composeResult"
 
-    invoke-static {v0, p0, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 4
+    invoke-static {v0, p1, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
+    .line 5
     :cond_1
-    iget v2, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->C:I
+    iget v2, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->V8:I
 
     const/4 v3, 0x1
 
     if-eq v2, v3, :cond_2
 
-    const-string p0, "stopCaptureToPreviewResult ignore, not capturing"
+    new-array p0, v1, [Ljava/lang/Object;
 
-    new-array p1, v1, [Ljava/lang/Object;
+    const-string p1, "stopCaptureToPreviewResult ignore, not capturing"
 
-    invoke-static {v0, p0, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 6
+    invoke-static {v0, p1, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
@@ -236,33 +1103,48 @@
 
     const-string v1, "stopCaptureToPreviewResult"
 
+    .line 7
     invoke-static {v1, v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     const/4 v0, 0x2
 
-    iput v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->C:I
+    .line 8
+    iput v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->V8:I
 
-    invoke-interface {p1}, Lv8/j3;->J()V
+    .line 9
+    invoke-interface {p1}, Ld/d/a/m7/g/h3;->K()V
 
-    iput-boolean v3, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->A:Z
+    .line 10
+    iput-boolean v3, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->U8:Z
 
+    .line 11
     invoke-virtual {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->P()V
 
+    .line 12
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
 
     iget p0, p0, Lcom/android/camera/fragment/BaseFragment;->mDegree:I
 
-    invoke-static {p1, p0}, Lcom/android/camera/a6;->J4(Landroid/app/Activity;I)Lio/reactivex/disposables/Disposable;
+    invoke-static {p1, p0}, Ld/d/a/z5;->v4(Landroid/app/Activity;I)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
 
-.method public L(Landroid/content/ContentValues;)V
+.method public M(Landroid/content/ContentValues;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "contentValues"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->l:Landroid/content/ContentValues;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->C1:Landroid/content/ContentValues;
 
     return-void
 .end method
@@ -270,7 +1152,8 @@
 .method public P()V
     .locals 4
 
-    iget-boolean v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->A:Z
+    .line 1
+    iget-boolean v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->U8:Z
 
     const-string v1, "FragmentVideoSkyProcess"
 
@@ -278,69 +1161,80 @@
 
     if-nez v0, :cond_0
 
-    const-string p0, "ignore showSaveAndGiveUp"
+    new-array p0, v2, [Ljava/lang/Object;
 
-    new-array v0, v2, [Ljava/lang/Object;
+    const-string v0, "ignore showSaveAndGiveUp"
 
-    invoke-static {v1, p0, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 2
+    invoke-static {v1, v0, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
+    .line 3
     :cond_0
-    iget v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->C:I
+    iget v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->V8:I
 
     const/4 v3, 0x2
 
     if-eq v0, v3, :cond_1
 
-    const-string p0, "showSaveAndGiveUp ignore, not stop"
+    new-array p0, v2, [Ljava/lang/Object;
 
-    new-array v0, v2, [Ljava/lang/Object;
+    const-string v0, "showSaveAndGiveUp ignore, not stop"
 
-    invoke-static {v1, p0, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 4
+    invoke-static {v1, v0, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
     :cond_1
-    const-string v0, "showSaveAndGiveUp"
+    new-array v0, v2, [Ljava/lang/Object;
 
-    new-array v3, v2, [Ljava/lang/Object;
+    const-string v3, "showSaveAndGiveUp"
 
-    invoke-static {v1, v0, v3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 5
+    invoke-static {v1, v3, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     const/4 v0, 0x3
 
-    iput v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->C:I
+    .line 6
+    iput v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->V8:I
 
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->d:Lcom/android/camera/ui/CameraSnapView;
+    .line 7
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->s:Lcom/android/camera/ui/CameraSnapView;
+
+    invoke-virtual {v0}, Lcom/android/camera/ui/CameraSnapView;->m()V
+
+    .line 8
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->s:Lcom/android/camera/ui/CameraSnapView;
 
     invoke-virtual {v0}, Lcom/android/camera/ui/CameraSnapView;->n()V
 
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->d:Lcom/android/camera/ui/CameraSnapView;
+    .line 9
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k0:Lcom/airbnb/lottie/LottieAnimationView;
 
-    invoke-virtual {v0}, Lcom/android/camera/ui/CameraSnapView;->o()V
+    invoke-static {v0}, Ld/d/a/f6/j/a;->i(Landroid/view/View;)V
 
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->h:Lcom/airbnb/lottie/LottieAnimationView;
-
-    invoke-static {v0}, La2/a;->n(Landroid/view/View;)V
-
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->h:Lcom/airbnb/lottie/LottieAnimationView;
+    .line 10
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k0:Lcom/airbnb/lottie/LottieAnimationView;
 
     const v1, 0x3ec28f5c    # 0.38f
 
     invoke-virtual {v0, v1}, Lcom/airbnb/lottie/LottieAnimationView;->setScale(F)V
 
+    .line 11
     iget v0, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
 
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->d:Lcom/android/camera/ui/CameraSnapView;
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->s:Lcom/android/camera/ui/CameraSnapView;
 
-    iget-object v3, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->h:Lcom/airbnb/lottie/LottieAnimationView;
+    iget-object v3, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k0:Lcom/airbnb/lottie/LottieAnimationView;
 
     invoke-virtual {p0, v0, v1, v3}, Lcom/android/camera/fragment/BaseFragment;->adjustProgress(ILcom/android/camera/ui/CameraSnapView;Lcom/airbnb/lottie/LottieAnimationView;)V
 
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->h:Lcom/airbnb/lottie/LottieAnimationView;
+    .line 12
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k0:Lcom/airbnb/lottie/LottieAnimationView;
 
-    const v1, 0x7f1301b2
+    const v1, 0x7f1201b1
 
     invoke-static {v1}, Lcom/android/camera2/compat/theme/MiThemeCompat;->getOverlayResBySuffix(I)I
 
@@ -348,38 +1242,46 @@
 
     invoke-virtual {v0, v1}, Lcom/airbnb/lottie/LottieAnimationView;->setAnimation(I)V
 
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->h:Lcom/airbnb/lottie/LottieAnimationView;
+    .line 13
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k0:Lcom/airbnb/lottie/LottieAnimationView;
 
     invoke-virtual {v0}, Lcom/airbnb/lottie/LottieAnimationView;->playAnimation()V
 
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->g:Landroid/widget/ImageView;
+    .line 14
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->w:Landroid/widget/ImageView;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    invoke-virtual {p0, v2}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->pi(Z)V
+    .line 15
+    invoke-direct {p0, v2}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Sd(Z)V
 
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->f:Landroid/widget/ImageView;
+    .line 16
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->u:Landroid/widget/ImageView;
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->bi(Landroid/view/View;)V
+    invoke-direct {p0, v0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->wb(Landroid/view/View;)V
 
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->e:Landroid/widget/ImageView;
+    .line 17
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->t:Landroid/widget/ImageView;
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->bi(Landroid/view/View;)V
+    invoke-direct {p0, v0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->wb(Landroid/view/View;)V
 
-    iput-boolean v2, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->A:Z
+    .line 18
+    iput-boolean v2, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->U8:Z
 
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0, v0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->qi(ZZ)V
+    .line 19
+    invoke-direct {p0, v0, v0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Ud(ZZ)V
 
-    invoke-virtual {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->si()V
+    .line 20
+    invoke-direct {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->je()V
 
     return-void
 .end method
 
-.method public a()V
+.method public b()V
     .locals 4
 
     const/4 v0, 0x0
@@ -390,47 +1292,29 @@
 
     const-string v3, "processingPrepare"
 
+    .line 1
     invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     iget v1, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
 
     const/4 v2, 0x1
 
-    invoke-static {v0, v1, v2, v0, v0}, Lz5/c;->b(ZIZZZ)Lz5/c;
+    .line 3
+    invoke-static {v0, v1, v2, v0, v0}, Ld/d/a/u6/i4/c;->b(ZIZZZ)Ld/d/a/u6/i4/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lz5/c;->a()Lz5/c;
+    .line 4
+    invoke-virtual {v0}, Ld/d/a/u6/i4/c;->a()Ld/d/a/u6/i4/c;
 
     move-result-object v0
 
-    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->d:Lcom/android/camera/ui/CameraSnapView;
+    .line 5
+    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->s:Lcom/android/camera/ui/CameraSnapView;
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/ui/CameraSnapView;->O(Lz5/c;)V
+    invoke-virtual {p0, v0}, Lcom/android/camera/ui/CameraSnapView;->O(Ld/d/a/u6/i4/c;)V
 
-    return-void
-.end method
-
-.method public final bi(Landroid/view/View;)V
-    .locals 0
-
-    invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    new-instance p0, La2/a;
-
-    invoke-direct {p0, p1}, La2/a;-><init>(Landroid/view/View;)V
-
-    invoke-static {p0}, Lio/reactivex/Completable;->create(Lio/reactivex/CompletableOnSubscribe;)Lio/reactivex/Completable;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lio/reactivex/Completable;->subscribe()Lio/reactivex/disposables/Disposable;
-
-    :cond_0
     return-void
 .end method
 
@@ -445,6 +1329,7 @@
 .method public canMultiCaptureByStableCondition()Ljava/lang/Boolean;
     .locals 0
 
+    .line 1
     sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     return-object p0
@@ -453,13 +1338,14 @@
 .method public canSnap()Z
     .locals 2
 
-    iget v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->C:I
+    .line 1
+    iget v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->V8:I
 
     const/4 v1, 0x3
 
     if-eq v0, v1, :cond_0
 
-    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->d:Lcom/android/camera/ui/CameraSnapView;
+    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->s:Lcom/android/camera/ui/CameraSnapView;
 
     if-eqz p0, :cond_0
 
@@ -480,116 +1366,6 @@
     return p0
 .end method
 
-.method public final ci(Landroid/view/View;)V
-    .locals 0
-
-    invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
-
-    move-result p0
-
-    if-nez p0, :cond_0
-
-    new-instance p0, La2/b;
-
-    invoke-direct {p0, p1}, La2/b;-><init>(Landroid/view/View;)V
-
-    invoke-static {p0}, Lio/reactivex/Completable;->create(Lio/reactivex/CompletableOnSubscribe;)Lio/reactivex/Completable;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lio/reactivex/Completable;->subscribe()Lio/reactivex/disposables/Disposable;
-
-    :cond_0
-    return-void
-.end method
-
-.method public final di()Z
-    .locals 1
-
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->n:Landroid/net/Uri;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->m:Ljava/lang/String;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->ri()V
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final ei()Z
-    .locals 4
-
-    const/4 v0, 0x0
-
-    new-array v1, v0, [Ljava/lang/Object;
-
-    const-string v2, "FragmentVideoSkyProcess"
-
-    const-string v3, "hideExitDialog"
-
-    invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->p:Lmiuix/appcompat/app/AlertDialog;
-
-    if-eqz v1, :cond_0
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0, v0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->qi(ZZ)V
-
-    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->p:Lmiuix/appcompat/app/AlertDialog;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
-
-    :cond_0
-    return v0
-.end method
-
-.method public final fi()Z
-    .locals 4
-
-    const/4 v0, 0x0
-
-    new-array v1, v0, [Ljava/lang/Object;
-
-    const-string v2, "FragmentVideoSkyProcess"
-
-    const-string v3, "hideShareSheet"
-
-    invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->q:Landroid/view/View;
-
-    invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->q:Landroid/view/View;
-
-    const/16 v0, 0x8
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    return v0
-.end method
-
 .method public getFragmentInto()I
     .locals 0
 
@@ -601,55 +1377,21 @@
 .method public getLayoutResourceId()I
     .locals 0
 
-    const p0, 0x7f0e0151
+    const p0, 0x7f0e0142
 
     return p0
 .end method
 
-.method public final gi()V
-    .locals 4
-
-    const/4 v0, 0x0
-
-    new-array v1, v0, [Ljava/lang/Object;
-
-    const-string v2, "FragmentVideoSkyProcess"
-
-    const-string v3, "initShutterButton"
-
-    invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget v1, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
-
-    invoke-static {v1}, Laa/p;->e(I)Laa/p;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v2}, Laa/p;->c0(I)Laa/p;
-
-    iget-object v2, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->d:Lcom/android/camera/ui/CameraSnapView;
-
-    invoke-virtual {v2, v1}, Lcom/android/camera/ui/CameraSnapView;->setParameters(Laa/p;)V
-
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->d:Lcom/android/camera/ui/CameraSnapView;
-
-    invoke-virtual {v1}, Lcom/android/camera/ui/CameraSnapView;->Y()V
-
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->d:Lcom/android/camera/ui/CameraSnapView;
-
-    invoke-virtual {v1}, Lcom/android/camera/ui/CameraSnapView;->b0()V
-
-    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->d:Lcom/android/camera/ui/CameraSnapView;
-
-    invoke-virtual {p0, v0}, Lcom/android/camera/ui/CameraSnapView;->f0(Z)V
-
-    return-void
-.end method
-
 .method public initView(Landroid/view/View;)V
     .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -659,109 +1401,123 @@
 
     const-string v3, "initView"
 
+    .line 1
     invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iput-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->a:Landroid/view/View;
+    .line 2
+    iput-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->m:Landroid/view/View;
 
-    const v1, 0x7f0b0216
+    const v1, 0x7f0b01e4
 
+    .line 3
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/ImageView;
 
-    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->i:Landroid/widget/ImageView;
+    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K0:Landroid/widget/ImageView;
 
-    const v1, 0x7f0b0214
+    const v1, 0x7f0b01e2
 
+    .line 4
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/ProgressBar;
 
-    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->j:Landroid/widget/ProgressBar;
+    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k1:Landroid/widget/ProgressBar;
 
-    const v1, 0x7f0b0215
+    const v1, 0x7f0b01e3
 
+    .line 5
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/camera/ui/CameraSnapView;
 
-    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->d:Lcom/android/camera/ui/CameraSnapView;
+    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->s:Lcom/android/camera/ui/CameraSnapView;
 
+    .line 6
     invoke-virtual {v1, p0}, Lcom/android/camera/ui/CameraSnapView;->setSnapListener(Lcom/android/camera/ui/CameraSnapView$c;)V
 
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->d:Lcom/android/camera/ui/CameraSnapView;
+    .line 7
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->s:Lcom/android/camera/ui/CameraSnapView;
 
     const/16 v2, 0x8
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    const v1, 0x7f0b020a
+    const v1, 0x7f0b01d8
 
+    .line 8
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/ImageView;
 
-    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->e:Landroid/widget/ImageView;
+    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->t:Landroid/widget/ImageView;
 
-    const v1, 0x7f0b0212
+    const v1, 0x7f0b01e0
 
+    .line 9
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/ImageView;
 
-    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->f:Landroid/widget/ImageView;
+    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->u:Landroid/widget/ImageView;
 
-    const v1, 0x7f0b0217
+    const v1, 0x7f0b01e5
 
+    .line 10
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/ImageView;
 
-    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->g:Landroid/widget/ImageView;
+    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->w:Landroid/widget/ImageView;
 
-    const v1, 0x7f0b0213
+    const v1, 0x7f0b01e1
 
+    .line 11
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Lcom/airbnb/lottie/LottieAnimationView;
 
-    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->h:Lcom/airbnb/lottie/LottieAnimationView;
+    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k0:Lcom/airbnb/lottie/LottieAnimationView;
 
-    const v1, 0x7f0b0874
+    const v1, 0x7f0b078e
 
+    .line 12
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->q:Landroid/view/View;
+    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K8:Landroid/view/View;
 
-    const v2, 0x7f0b0875
+    const v2, 0x7f0b078f
 
+    .line 13
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->r:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->L8:Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->q:Landroid/view/View;
+    .line 14
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K8:Landroid/view/View;
 
-    const v2, 0x7f0b0877
+    const v2, 0x7f0b0791
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -769,13 +1525,15 @@
 
     check-cast v1, Landroidx/recyclerview/widget/RecyclerView;
 
-    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->s:Landroidx/recyclerview/widget/RecyclerView;
+    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->M8:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->setFocusable(Z)V
+    .line 15
+    invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->setFocusable(Z)V
 
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->q:Landroid/view/View;
+    .line 16
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K8:Landroid/view/View;
 
-    const v2, 0x7f0b0878
+    const v2, 0x7f0b0792
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -783,59 +1541,69 @@
 
     check-cast v1, Lcom/xiaomi/microfilm/vlog/vv/page/PageIndicatorView;
 
-    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->u:Lcom/xiaomi/microfilm/vlog/vv/page/PageIndicatorView;
+    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->O8:Lcom/xiaomi/microfilm/vlog/vv/page/PageIndicatorView;
 
-    const v1, 0x7f0b0210
+    const v1, 0x7f0b01de
 
+    .line 17
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/ImageView;
 
-    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->x:Landroid/widget/ImageView;
+    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->R8:Landroid/widget/ImageView;
 
-    const v1, 0x7f0b07ea
+    const v1, 0x7f0b070b
 
+    .line 18
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/view/SurfaceView;
 
-    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->w:Landroid/view/SurfaceView;
+    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Q8:Landroid/view/SurfaceView;
 
     const/4 v2, 0x4
 
+    .line 19
     invoke-virtual {v1, v2}, Landroid/view/SurfaceView;->setVisibility(I)V
 
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->w:Landroid/view/SurfaceView;
+    .line 20
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Q8:Landroid/view/SurfaceView;
 
-    invoke-virtual {v1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v1, p0}, Landroid/view/SurfaceView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->w:Landroid/view/SurfaceView;
+    .line 21
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Q8:Landroid/view/SurfaceView;
 
     invoke-virtual {v1}, Landroid/view/SurfaceView;->getHolder()Landroid/view/SurfaceHolder;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->D:Landroid/view/SurfaceHolder;
+    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->W8:Landroid/view/SurfaceHolder;
 
+    .line 22
     invoke-interface {v1, p0}, Landroid/view/SurfaceHolder;->addCallback(Landroid/view/SurfaceHolder$Callback;)V
 
     const/4 v1, 0x1
 
-    invoke-static {v1}, Lcom/android/camera/a6;->R0(I)Landroid/graphics/Rect;
+    .line 23
+    invoke-static {v1}, Ld/d/a/z5;->I0(I)Landroid/graphics/Rect;
 
     move-result-object v3
 
+    .line 24
     iget v4, v3, Landroid/graphics/Rect;->top:I
 
+    .line 25
     invoke-virtual {v3}, Landroid/graphics/Rect;->height()I
 
     move-result v5
 
-    invoke-static {}, Ly2/b;->n()I
+    .line 26
+    invoke-static {}, Ld/d/a/n6/b;->n()I
 
     move-result v6
 
@@ -847,9 +1615,11 @@
 
     const/4 v5, 0x2
 
+    .line 27
     div-int/2addr v4, v5
 
-    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->d:Lcom/android/camera/ui/CameraSnapView;
+    .line 28
+    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->s:Lcom/android/camera/ui/CameraSnapView;
 
     iget v6, p0, Lcom/android/camera/fragment/BaseFragment;->mDegree:I
 
@@ -857,7 +1627,8 @@
 
     invoke-static {v4, v6}, Landroidx/core/view/ViewCompat;->setRotation(Landroid/view/View;F)V
 
-    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->e:Landroid/widget/ImageView;
+    .line 29
+    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->t:Landroid/widget/ImageView;
 
     iget v6, p0, Lcom/android/camera/fragment/BaseFragment;->mDegree:I
 
@@ -865,7 +1636,8 @@
 
     invoke-static {v4, v6}, Landroidx/core/view/ViewCompat;->setRotation(Landroid/view/View;F)V
 
-    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->f:Landroid/widget/ImageView;
+    .line 30
+    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->u:Landroid/widget/ImageView;
 
     iget v6, p0, Lcom/android/camera/fragment/BaseFragment;->mDegree:I
 
@@ -873,7 +1645,8 @@
 
     invoke-static {v4, v6}, Landroidx/core/view/ViewCompat;->setRotation(Landroid/view/View;F)V
 
-    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->h:Lcom/airbnb/lottie/LottieAnimationView;
+    .line 31
+    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k0:Lcom/airbnb/lottie/LottieAnimationView;
 
     iget v6, p0, Lcom/android/camera/fragment/BaseFragment;->mDegree:I
 
@@ -881,7 +1654,8 @@
 
     invoke-static {v4, v6}, Landroidx/core/view/ViewCompat;->setRotation(Landroid/view/View;F)V
 
-    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->g:Landroid/widget/ImageView;
+    .line 32
+    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->w:Landroid/widget/ImageView;
 
     iget v6, p0, Lcom/android/camera/fragment/BaseFragment;->mDegree:I
 
@@ -889,7 +1663,8 @@
 
     invoke-static {v4, v6}, Landroidx/core/view/ViewCompat;->setRotation(Landroid/view/View;F)V
 
-    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->q:Landroid/view/View;
+    .line 33
+    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K8:Landroid/view/View;
 
     iget v6, p0, Lcom/android/camera/fragment/BaseFragment;->mDegree:I
 
@@ -897,7 +1672,8 @@
 
     invoke-static {v4, v6}, Landroidx/core/view/ViewCompat;->setRotation(Landroid/view/View;F)V
 
-    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->x:Landroid/widget/ImageView;
+    .line 34
+    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->R8:Landroid/widget/ImageView;
 
     iget v6, p0, Lcom/android/camera/fragment/BaseFragment;->mDegree:I
 
@@ -905,121 +1681,138 @@
 
     invoke-static {v4, v6}, Landroidx/core/view/ViewCompat;->setRotation(Landroid/view/View;F)V
 
-    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->d:Lcom/android/camera/ui/CameraSnapView;
+    .line 35
+    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->s:Lcom/android/camera/ui/CameraSnapView;
 
     invoke-virtual {v4, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->e:Landroid/widget/ImageView;
+    .line 36
+    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->t:Landroid/widget/ImageView;
 
-    invoke-virtual {v4, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v4, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->f:Landroid/widget/ImageView;
+    .line 37
+    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->u:Landroid/widget/ImageView;
 
-    invoke-virtual {v4, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v4, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->g:Landroid/widget/ImageView;
+    .line 38
+    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->w:Landroid/widget/ImageView;
 
-    invoke-virtual {v4, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v4, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->h:Lcom/airbnb/lottie/LottieAnimationView;
+    .line 39
+    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k0:Lcom/airbnb/lottie/LottieAnimationView;
 
-    invoke-virtual {v4, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v4, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->x:Landroid/widget/ImageView;
+    .line 40
+    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->R8:Landroid/widget/ImageView;
 
-    invoke-virtual {v4, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v4, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     new-array v4, v2, [Landroid/view/View;
 
-    iget-object v6, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->g:Landroid/widget/ImageView;
+    .line 41
+    iget-object v6, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->w:Landroid/widget/ImageView;
 
     aput-object v6, v4, v0
 
-    iget-object v6, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->e:Landroid/widget/ImageView;
+    iget-object v6, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->t:Landroid/widget/ImageView;
 
     aput-object v6, v4, v1
 
-    iget-object v6, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->f:Landroid/widget/ImageView;
+    iget-object v6, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->u:Landroid/widget/ImageView;
 
     aput-object v6, v4, v5
 
-    iget-object v6, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->x:Landroid/widget/ImageView;
+    iget-object v6, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->R8:Landroid/widget/ImageView;
 
     const/4 v7, 0x3
 
     aput-object v6, v4, v7
 
-    invoke-static {v4}, Lz1/f;->w([Landroid/view/View;)V
+    invoke-static {v4}, Ld/d/a/f6/f;->w([Landroid/view/View;)V
 
     new-array v4, v1, [Landroid/view/View;
 
-    iget-object v6, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->h:Lcom/airbnb/lottie/LottieAnimationView;
+    .line 42
+    iget-object v6, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k0:Lcom/airbnb/lottie/LottieAnimationView;
 
     aput-object v6, v4, v0
 
-    invoke-static {v4}, Lz1/f;->w([Landroid/view/View;)V
+    invoke-static {v4}, Ld/d/a/f6/f;->w([Landroid/view/View;)V
 
     new-array v4, v1, [Landroid/view/View;
 
-    iget-object v6, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->r:Landroid/widget/TextView;
+    .line 43
+    iget-object v6, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->L8:Landroid/widget/TextView;
 
     aput-object v6, v4, v0
 
-    invoke-static {v4}, Lz1/f;->u([Landroid/view/View;)V
+    invoke-static {v4}, Ld/d/a/f6/f;->u([Landroid/view/View;)V
 
-    const v4, 0x7f0b085b
+    const v4, 0x7f0b0775
 
+    .line 44
     invoke-virtual {p1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v4
 
     check-cast v4, Landroid/widget/FrameLayout;
 
-    iput-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->b:Landroid/view/ViewGroup;
+    iput-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->n:Landroid/view/ViewGroup;
 
-    const v4, 0x7f0b085c
+    const v4, 0x7f0b0776
 
+    .line 45
     invoke-virtual {p1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
     check-cast p1, Landroid/widget/FrameLayout;
 
-    iput-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->c:Landroid/view/ViewGroup;
+    iput-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->p:Landroid/view/ViewGroup;
 
-    iget-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->b:Landroid/view/ViewGroup;
+    .line 46
+    iget-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->n:Landroid/view/ViewGroup;
 
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    .line 47
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p1
 
     check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->c:Landroid/view/ViewGroup;
+    .line 48
+    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->p:Landroid/view/ViewGroup;
 
-    invoke-virtual {v4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    .line 49
+    invoke-virtual {v4}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v4
 
     check-cast v4, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    invoke-static {}, Ly2/b;->k()Z
+    .line 50
+    invoke-static {}, Ld/d/a/n6/b;->k()Z
 
     move-result v6
 
     if-eqz v6, :cond_0
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v6
 
-    invoke-virtual {v6}, Lid/b;->n4()Z
+    invoke-virtual {v6}, Ld/k/a/b;->c4()Z
 
     move-result v6
 
     if-eqz v6, :cond_0
 
-    invoke-static {}, Ly2/b;->q()I
+    .line 51
+    invoke-static {}, Ld/d/a/n6/b;->q()I
 
     move-result v2
 
@@ -1029,19 +1822,22 @@
 
     iput v2, p1, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
-    invoke-static {}, Ly2/b;->b0()I
+    .line 52
+    invoke-static {}, Ld/d/a/n6/b;->b0()I
 
     move-result v2
 
     iput v2, p1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
+    .line 53
     invoke-virtual {p0}, Lcom/android/camera/fragment/BaseFragment;->getFatAlignHorizontal()I
 
     move-result p1
 
     new-array v2, v1, [Landroid/view/View;
 
-    iget-object v3, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->e:Landroid/widget/ImageView;
+    .line 54
+    iget-object v3, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->t:Landroid/widget/ImageView;
 
     aput-object v3, v2, v0
 
@@ -1049,15 +1845,16 @@
 
     new-array v2, v7, [Landroid/view/View;
 
-    iget-object v3, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->f:Landroid/widget/ImageView;
+    .line 55
+    iget-object v3, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->u:Landroid/widget/ImageView;
 
     aput-object v3, v2, v0
 
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->g:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->w:Landroid/widget/ImageView;
 
     aput-object v0, v2, v1
 
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->j:Landroid/widget/ProgressBar;
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k1:Landroid/widget/ProgressBar;
 
     aput-object v0, v2, v5
 
@@ -1065,14 +1862,16 @@
 
     goto/16 :goto_0
 
+    .line 56
     :cond_0
-    invoke-static {}, Ly2/b;->t()I
+    invoke-static {}, Ld/d/a/n6/b;->t()I
 
     move-result v3
 
     iput v3, p1, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
-    invoke-static {}, Ly2/b;->s()I
+    .line 57
+    invoke-static {}, Ld/d/a/n6/b;->s()I
 
     move-result p1
 
@@ -1088,13 +1887,15 @@
 
     iput p1, v4, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
-    invoke-static {}, Ly2/b;->u()I
+    .line 58
+    invoke-static {}, Ld/d/a/n6/b;->u()I
 
     move-result p1
 
     iput p1, v4, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
-    invoke-static {}, Ly2/b;->s()I
+    .line 59
+    invoke-static {}, Ld/d/a/n6/b;->s()I
 
     move-result p1
 
@@ -1110,29 +1911,32 @@
 
     iput p1, v4, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    invoke-static {}, Ly2/b;->l()Z
+    .line 60
+    invoke-static {}, Ld/d/a/n6/b;->l()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lid/b;->B5()Z
+    invoke-virtual {p1}, Ld/k/a/b;->p5()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
+    .line 61
     invoke-virtual {p0}, Lcom/android/camera/fragment/BaseFragment;->getThinAlignHorizontal()I
 
     move-result p1
 
     new-array v3, v1, [Landroid/view/View;
 
-    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->e:Landroid/widget/ImageView;
+    .line 62
+    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->t:Landroid/widget/ImageView;
 
     aput-object v4, v3, v0
 
@@ -1140,15 +1944,16 @@
 
     new-array v3, v7, [Landroid/view/View;
 
-    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->f:Landroid/widget/ImageView;
+    .line 63
+    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->u:Landroid/widget/ImageView;
 
     aput-object v4, v3, v0
 
-    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->g:Landroid/widget/ImageView;
+    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->w:Landroid/widget/ImageView;
 
     aput-object v4, v3, v1
 
-    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->j:Landroid/widget/ProgressBar;
+    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k1:Landroid/widget/ProgressBar;
 
     aput-object v4, v3, v5
 
@@ -1156,19 +1961,20 @@
 
     new-array p1, v2, [Landroid/view/View;
 
-    iget-object v2, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->e:Landroid/widget/ImageView;
+    .line 64
+    iget-object v2, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->t:Landroid/widget/ImageView;
 
     aput-object v2, p1, v0
 
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->f:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->u:Landroid/widget/ImageView;
 
     aput-object v0, p1, v1
 
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->g:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->w:Landroid/widget/ImageView;
 
     aput-object v0, p1, v5
 
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->j:Landroid/widget/ProgressBar;
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k1:Landroid/widget/ProgressBar;
 
     aput-object v0, p1, v7
 
@@ -1176,6 +1982,7 @@
 
     goto :goto_0
 
+    .line 65
     :cond_1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
@@ -1183,52 +1990,55 @@
 
     new-array v3, v1, [Landroid/view/View;
 
-    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->e:Landroid/widget/ImageView;
+    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->t:Landroid/widget/ImageView;
 
     aput-object v4, v3, v0
 
-    invoke-static {p1, v3}, Ly2/b;->b(Landroid/content/Context;[Landroid/view/View;)V
+    invoke-static {p1, v3}, Ld/d/a/n6/b;->b(Landroid/content/Context;[Landroid/view/View;)V
 
+    .line 66
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
     new-array v3, v7, [Landroid/view/View;
 
-    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->f:Landroid/widget/ImageView;
+    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->u:Landroid/widget/ImageView;
 
     aput-object v4, v3, v0
 
-    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->g:Landroid/widget/ImageView;
+    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->w:Landroid/widget/ImageView;
 
     aput-object v4, v3, v1
 
-    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->j:Landroid/widget/ProgressBar;
+    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k1:Landroid/widget/ProgressBar;
 
     aput-object v4, v3, v5
 
-    invoke-static {p1, v3}, Ly2/b;->c(Landroid/content/Context;[Landroid/view/View;)V
+    invoke-static {p1, v3}, Ld/d/a/n6/b;->c(Landroid/content/Context;[Landroid/view/View;)V
 
     new-array p1, v2, [Landroid/view/View;
 
-    iget-object v2, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->e:Landroid/widget/ImageView;
+    .line 67
+    iget-object v2, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->t:Landroid/widget/ImageView;
 
     aput-object v2, p1, v0
 
-    iget-object v2, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->f:Landroid/widget/ImageView;
+    iget-object v2, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->u:Landroid/widget/ImageView;
 
     aput-object v2, p1, v1
 
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->g:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->w:Landroid/widget/ImageView;
 
     aput-object v1, p1, v5
 
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->j:Landroid/widget/ProgressBar;
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k1:Landroid/widget/ProgressBar;
 
     aput-object v1, p1, v7
 
     invoke-virtual {p0, v0, p1}, Lcom/android/camera/fragment/BaseFragment;->initViewBackground(Z[Landroid/view/View;)V
 
+    .line 68
     :goto_0
     iget p1, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
 
@@ -1236,13 +2046,14 @@
 
     if-eq p1, v0, :cond_2
 
-    invoke-virtual {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k()V
+    .line 69
+    invoke-virtual {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->l()V
 
     :cond_2
     return-void
 .end method
 
-.method public k()V
+.method public l()V
     .locals 3
 
     const/4 v0, 0x0
@@ -1253,320 +2064,32 @@
 
     const-string v2, "quit"
 
+    .line 1
     invoke-static {v1, v2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->a:Landroid/view/View;
+    .line 2
+    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->m:Landroid/view/View;
 
     const/16 v0, 0x8
 
     invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
 
-    return-void
-.end method
-
-.method public final ki(Z)V
-    .locals 5
-
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->n:Landroid/net/Uri;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->m:Ljava/lang/String;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->prepare()V
-
-    return-void
-
-    :cond_0
-    invoke-static {}, Lv8/j3;->impl2()Lv8/j3;
-
-    move-result-object v0
-
-    const-string v1, "FragmentVideoSkyProcess"
-
-    const/4 v2, 0x0
-
-    if-nez v0, :cond_1
-
-    const-string p0, "onSaveButtonClick: no clone action"
-
-    new-array p1, v2, [Ljava/lang/Object;
-
-    invoke-static {v1, p0, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_1
-    const-string v3, "onSaveButtonClick"
-
-    new-array v4, v2, [Ljava/lang/Object;
-
-    invoke-static {v1, v3, v4}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    const/16 v1, 0x8
-
-    if-eqz p1, :cond_2
-
-    iget-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->f:Landroid/widget/ImageView;
-
-    invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    iget-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->j:Landroid/widget/ProgressBar;
-
-    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
-
-    goto :goto_0
-
-    :cond_2
-    iget-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->h:Lcom/airbnb/lottie/LottieAnimationView;
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
-
-    const/4 p1, 0x1
-
-    invoke-virtual {p0, p1}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->pi(Z)V
-
-    :goto_0
-    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->G:Lcom/xiaomi/magicvideosky/EffectMediaPlayer;
-
-    invoke-virtual {p0}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->q()V
-
-    invoke-interface {v0}, Lv8/j3;->E()V
-
-    return-void
-.end method
-
-.method public final li()V
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->G:Lcom/xiaomi/magicvideosky/EffectMediaPlayer;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->g()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final mi()V
-    .locals 5
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-static {}, Lg2/b;->i()Lk2/g;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lk2/g;->S()Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    const/4 v2, 0x0
-
-    move v3, v2
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v4
-
-    if-ge v3, v4, :cond_0
-
-    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lcom/xiaomi/microfilm/milive/a$f;
-
-    invoke-interface {v4}, Lcom/xiaomi/microfilm/milive/a$f;->getPath()Ljava/lang/String;
-
-    move-result-object v4
-
-    aput-object v4, v1, v3
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->F:Lcom/xiaomi/magicvideosky/MediaEffectGraph;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Lcom/xiaomi/magicvideosky/MediaEffectGraph;->i()V
-
-    :cond_1
-    new-instance v0, Lcom/xiaomi/magicvideosky/MediaEffectGraph;
-
-    invoke-direct {v0}, Lcom/xiaomi/magicvideosky/MediaEffectGraph;-><init>()V
-
-    iput-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->F:Lcom/xiaomi/magicvideosky/MediaEffectGraph;
-
-    invoke-virtual {v0}, Lcom/xiaomi/magicvideosky/MediaEffectGraph;->h()V
-
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->F:Lcom/xiaomi/magicvideosky/MediaEffectGraph;
-
-    const/4 v3, 0x1
-
-    new-array v3, v3, [F
-
-    const/high16 v4, 0x3f800000    # 1.0f
-
-    aput v4, v3, v2
-
-    invoke-virtual {v0, v1, v3}, Lcom/xiaomi/magicvideosky/MediaEffectGraph;->e([Ljava/lang/String;[F)V
-
-    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->F:Lcom/xiaomi/magicvideosky/MediaEffectGraph;
-
-    const-string v0, ""
-
-    invoke-virtual {p0, v0, v2}, Lcom/xiaomi/magicvideosky/MediaEffectGraph;->a(Ljava/lang/String;Z)J
-
-    return-void
-.end method
-
-.method public final n()V
-    .locals 10
-
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->p:Lmiuix/appcompat/app/AlertDialog;
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    const v0, 0x7f14059e
-
-    invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    const v0, 0x7f14059d
-
-    invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    new-instance v5, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess$b;
-
-    invoke-direct {v5, p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess$b;-><init>(Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;)V
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    const v0, 0x7f140b4c
-
-    invoke-virtual {p0, v0}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
-
-    move-result-object v8
-
-    new-instance v9, Ld7/a;
-
-    invoke-direct {v9}, Ld7/a;-><init>()V
-
-    invoke-static/range {v1 .. v9}, Lcom/android/camera/y4;->E(Landroid/content/Context;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;Ljava/lang/CharSequence;Ljava/lang/Runnable;)Lmiuix/appcompat/app/AlertDialog;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->p:Lmiuix/appcompat/app/AlertDialog;
-
-    new-instance v1, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess$c;
-
-    invoke-direct {v1, p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess$c;-><init>(Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;)V
-
-    invoke-virtual {v0, v1}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
-
-    return-void
-.end method
-
-.method public ni(Z)V
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "resetToPreview toModeSelect "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    const-string v2, "FragmentVideoSkyProcess"
-
-    invoke-static {v2, v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->j:Landroid/widget/ProgressBar;
-
-    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->j:Landroid/widget/ProgressBar;
-
-    const/16 v0, 0x8
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_0
-    invoke-static {}, Lv8/q;->impl()Ljava/util/Optional;
-
-    move-result-object p0
-
-    new-instance v0, Ld7/c;
-
-    invoke-direct {v0, p1}, Ld7/c;-><init>(Z)V
-
-    invoke-virtual {p0, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
-
-    return-void
-.end method
-
-.method public final oi()V
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->G:Lcom/xiaomi/magicvideosky/EffectMediaPlayer;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->h()Z
-
-    :cond_0
     return-void
 .end method
 
 .method public onBackEvent(I)Z
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "callingFrom"
+        }
+    .end annotation
 
-    invoke-virtual {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->ei()Z
+    .line 1
+    invoke-direct {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Yb()Z
 
     move-result p1
 
@@ -1576,8 +2099,9 @@
 
     return v0
 
+    .line 2
     :cond_0
-    invoke-virtual {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->fi()Z
+    invoke-direct {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->gc()Z
 
     move-result p0
 
@@ -1594,6 +2118,7 @@
 .method public onBackPressed()V
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1602,7 +2127,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->C:I
+    iget v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->V8:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1618,7 +2143,8 @@
 
     invoke-static {v2, v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->C:I
+    .line 2
+    iget v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->V8:I
 
     if-eqz v0, :cond_1
 
@@ -1628,19 +2154,22 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
-    invoke-virtual {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->n()V
+    invoke-direct {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->o()V
 
     goto :goto_0
 
     :cond_1
     const-string v0, "value_dolly_zoom_exit_preview"
 
-    invoke-static {v0}, Lk9/a;->K0(Ljava/lang/String;)V
+    .line 4
+    invoke-static {v0}, Ld/d/a/v7/f;->G0(Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->ni(Z)V
+    .line 5
+    invoke-virtual {p0, v0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->sd(Z)V
 
     :goto_0
     return-void
@@ -1648,10 +2177,19 @@
 
 .method public onClick(Landroid/view/View;)V
     .locals 6
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->i:Landroid/widget/ImageView;
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K0:Landroid/widget/ImageView;
 
-    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
+    invoke-virtual {v0}, Landroid/widget/ImageView;->getVisibility()I
 
     move-result v0
 
@@ -1661,9 +2199,9 @@
 
     if-eqz v0, :cond_7
 
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->j:Landroid/widget/ProgressBar;
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k1:Landroid/widget/ProgressBar;
 
-    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
+    invoke-virtual {v0}, Landroid/widget/ProgressBar;->getVisibility()I
 
     move-result v0
 
@@ -1671,16 +2209,17 @@
 
     goto/16 :goto_1
 
+    .line 2
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v0
 
-    const v3, 0x7f0b03f5
+    const v3, 0x7f0b039f
 
     if-eq v0, v3, :cond_2
 
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->q:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K8:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
 
@@ -1688,19 +2227,21 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->p:Lmiuix/appcompat/app/AlertDialog;
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K2:Lmiuix/appcompat/app/AlertDialog;
 
     if-eqz v0, :cond_2
 
     :cond_1
-    const-string p0, "ignore onClick, dialog show"
+    new-array p0, v2, [Ljava/lang/Object;
 
-    new-array p1, v2, [Ljava/lang/Object;
+    const-string p1, "ignore onClick, dialog show"
 
-    invoke-static {v1, p0, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 3
+    invoke-static {v1, p1, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
+    .line 4
     :cond_2
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
@@ -1712,118 +2253,140 @@
 
     goto :goto_0
 
+    .line 5
     :sswitch_0
-    iget-boolean p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->z:Z
+    iget-boolean p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->T8:Z
 
     if-nez p1, :cond_3
 
-    invoke-virtual {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->li()V
+    .line 6
+    invoke-direct {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Wc()V
 
+    .line 7
     :cond_3
-    iget-boolean p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->z:Z
+    iget-boolean p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->T8:Z
 
     xor-int/2addr p1, v3
 
-    iput-boolean p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->z:Z
+    iput-boolean p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->T8:Z
 
     goto :goto_0
 
+    .line 8
     :sswitch_1
-    invoke-virtual {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->fi()Z
+    invoke-direct {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->gc()Z
 
+    .line 9
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Landroid/content/pm/ResolveInfo;
 
+    .line 10
     iget-object p1, p1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v0, p1, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
     iget-object v1, p1, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
+    .line 11
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->n:Landroid/net/Uri;
+    iget-object v3, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->v2:Landroid/net/Uri;
 
-    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->m:Ljava/lang/String;
+    iget-object v4, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K1:Ljava/lang/String;
 
     const/4 v5, 0x1
 
-    invoke-static/range {v0 .. v5}, Lcom/android/camera/a6;->Q4(Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;Z)Z
+    .line 12
+    invoke-static/range {v0 .. v5}, Ld/d/a/z5;->C4(Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;Z)Z
 
     goto :goto_0
 
+    .line 13
     :sswitch_2
-    iget-boolean p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->A:Z
+    iget-boolean p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->U8:Z
 
     if-eqz p1, :cond_4
 
-    const-string p0, "ignore stop capture"
+    new-array p0, v2, [Ljava/lang/Object;
 
-    new-array p1, v2, [Ljava/lang/Object;
+    const-string p1, "ignore stop capture"
 
-    invoke-static {v1, p0, p1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 14
+    invoke-static {v1, p1, p0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
+    .line 15
     :cond_4
-    invoke-virtual {p0, v2}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->I(Z)V
+    invoke-virtual {p0, v2}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->J(Z)V
 
     goto :goto_0
 
     :sswitch_3
     const-string p1, "value_dolly_zoom_click_play_save"
 
-    invoke-static {p1}, Lk9/a;->K0(Ljava/lang/String;)V
+    .line 16
+    invoke-static {p1}, Ld/d/a/v7/f;->G0(Ljava/lang/String;)V
 
-    invoke-virtual {p0, v2}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->ki(Z)V
+    .line 17
+    invoke-direct {p0, v2}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Lc(Z)V
 
     goto :goto_0
 
     :sswitch_4
     const-string p1, "value_dolly_zoom_click_play_share"
 
-    invoke-static {p1}, Lk9/a;->K0(Ljava/lang/String;)V
+    .line 18
+    invoke-static {p1}, Ld/d/a/v7/f;->G0(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->di()Z
+    .line 19
+    invoke-direct {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Mb()Z
 
     move-result p1
 
     if-nez p1, :cond_6
 
-    iput-boolean v3, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k:Z
+    .line 20
+    iput-boolean v3, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->v1:Z
 
-    invoke-virtual {p0, v3}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->ki(Z)V
+    .line 21
+    invoke-direct {p0, v3}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Lc(Z)V
 
     goto :goto_0
 
+    .line 22
     :sswitch_5
-    iget-boolean p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->z:Z
+    iget-boolean p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->T8:Z
 
     if-eqz p1, :cond_5
 
-    invoke-virtual {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->oi()V
+    .line 23
+    invoke-direct {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->yd()V
 
+    .line 24
     :cond_5
-    iget-boolean p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->z:Z
+    iget-boolean p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->T8:Z
 
     xor-int/2addr p1, v3
 
-    iput-boolean p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->z:Z
+    iput-boolean p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->T8:Z
 
     goto :goto_0
 
+    .line 25
     :sswitch_6
-    invoke-virtual {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->n()V
+    invoke-direct {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->o()V
 
     :cond_6
     :goto_0
     return-void
 
+    .line 26
     :cond_7
     :goto_1
     new-instance p1, Ljava/lang/StringBuilder;
@@ -1834,9 +2397,9 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->i:Landroid/widget/ImageView;
+    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K0:Landroid/widget/ImageView;
 
-    invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
+    invoke-virtual {p0}, Landroid/widget/ImageView;->getVisibility()I
 
     move-result p0
 
@@ -1854,13 +2417,13 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f0b020a -> :sswitch_6
-        0x7f0b0210 -> :sswitch_5
-        0x7f0b0212 -> :sswitch_4
-        0x7f0b0213 -> :sswitch_3
-        0x7f0b0217 -> :sswitch_2
-        0x7f0b03f5 -> :sswitch_1
-        0x7f0b07ea -> :sswitch_0
+        0x7f0b01d8 -> :sswitch_6
+        0x7f0b01de -> :sswitch_5
+        0x7f0b01e0 -> :sswitch_4
+        0x7f0b01e1 -> :sswitch_3
+        0x7f0b01e5 -> :sswitch_2
+        0x7f0b039f -> :sswitch_1
+        0x7f0b070b -> :sswitch_0
     .end sparse-switch
 .end method
 
@@ -1870,6 +2433,14 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "savedInstanceState"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -1879,8 +2450,10 @@
 
     const-string v2, "onCreate"
 
+    .line 1
     invoke-static {v1, v2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onCreate(Landroid/os/Bundle;)V
 
     return-void
@@ -1889,13 +2462,16 @@
 .method public onDestroy()V
     .locals 0
 
+    .line 1
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroy()V
 
-    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->i:Landroid/widget/ImageView;
+    .line 2
+    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K0:Landroid/widget/ImageView;
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Landroid/view/View;->clearAnimation()V
+    .line 3
+    invoke-virtual {p0}, Landroid/widget/ImageView;->clearAnimation()V
 
     :cond_0
     return-void
@@ -1912,17 +2488,22 @@
 
     const-string v2, "onPause"
 
+    .line 1
     invoke-static {v1, v2, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onPause()V
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->o:Z
+    .line 3
+    iput-boolean v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->C2:Z
 
-    invoke-virtual {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->ei()Z
+    .line 4
+    invoke-direct {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Yb()Z
 
-    invoke-virtual {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->fi()Z
+    .line 5
+    invoke-direct {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->gc()Z
 
     return-void
 .end method
@@ -1930,6 +2511,7 @@
 .method public onResume()V
     .locals 4
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1938,7 +2520,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->C:I
+    iget v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->V8:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1954,11 +2536,14 @@
 
     invoke-static {v3, v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     invoke-super {p0}, Lcom/android/camera/fragment/BaseFragment;->onResume()V
 
-    iput-boolean v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->o:Z
+    .line 3
+    iput-boolean v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->C2:Z
 
-    iget v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->C:I
+    .line 4
+    iget v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->V8:I
 
     const/4 v1, 0x3
 
@@ -1966,16 +2551,19 @@
 
     return-void
 
+    .line 5
     :cond_0
     invoke-virtual {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->prepare()V
 
-    invoke-static {}, Lv8/j3;->impl2()Lv8/j3;
+    .line 6
+    invoke-static {}, Ld/d/a/m7/g/h3;->impl2()Ld/d/a/m7/g/h3;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
-    invoke-interface {p0}, Lv8/j3;->D()V
+    .line 7
+    invoke-interface {p0}, Ld/d/a/m7/g/h3;->E()V
 
     :cond_1
     return-void
@@ -1992,19 +2580,22 @@
 
     const-string v3, "onSnapClick"
 
+    .line 1
     invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->i:Landroid/widget/ImageView;
+    .line 2
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K0:Landroid/widget/ImageView;
 
-    invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
+    invoke-virtual {v1}, Landroid/widget/ImageView;->getVisibility()I
 
     move-result v1
 
     if-eqz v1, :cond_6
 
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->j:Landroid/widget/ProgressBar;
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k1:Landroid/widget/ProgressBar;
 
-    invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
+    .line 3
+    invoke-virtual {v1}, Landroid/widget/ProgressBar;->getVisibility()I
 
     move-result v1
 
@@ -2012,19 +2603,22 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->p:Lmiuix/appcompat/app/AlertDialog;
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K2:Lmiuix/appcompat/app/AlertDialog;
 
     if-eqz v1, :cond_1
 
-    const-string p0, "onSnapClick ignore click case 2"
+    new-array p0, v0, [Ljava/lang/Object;
 
-    new-array v0, v0, [Ljava/lang/Object;
+    const-string v0, "onSnapClick ignore click case 2"
 
-    invoke-static {v2, p0, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 5
+    invoke-static {v2, v0, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
+    .line 6
     :cond_1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
@@ -2036,83 +2630,93 @@
 
     return-void
 
+    .line 7
     :cond_2
-    invoke-virtual {v1}, Lcom/android/camera/ActivityBase;->z2()Lq7/v4;
+    invoke-virtual {v1}, Lcom/android/camera/ActivityBase;->N1()Ld/d/a/d7/z7;
 
     move-result-object v1
 
     if-eqz v1, :cond_3
 
-    invoke-interface {v1}, Lq7/v4;->x4()Lr7/l;
+    .line 8
+    invoke-interface {v1}, Ld/d/a/d7/z7;->s4()Ld/d/a/d7/i8/r;
 
     move-result-object v3
 
-    invoke-interface {v3}, Lr7/l;->g()Z
+    invoke-interface {v3}, Ld/d/a/d7/i8/r;->c()Z
 
     move-result v3
 
     if-eqz v3, :cond_3
 
-    invoke-interface {v1}, Lq7/v4;->Ah()Lr7/m;
+    .line 9
+    invoke-interface {v1}, Ld/d/a/d7/z7;->ch()Ld/d/a/d7/i8/s;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lr7/m;->L()Z
+    invoke-interface {v1}, Ld/d/a/d7/i8/s;->i1()Z
 
     move-result v1
 
     if-nez v1, :cond_3
 
-    const-string p0, "onSnapClick ignore click case 3"
+    new-array p0, v0, [Ljava/lang/Object;
 
-    new-array v0, v0, [Ljava/lang/Object;
+    const-string v0, "onSnapClick ignore click case 3"
 
-    invoke-static {v2, p0, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 10
+    invoke-static {v2, v0, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
+    .line 11
     :cond_3
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->h:Lcom/airbnb/lottie/LottieAnimationView;
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k0:Lcom/airbnb/lottie/LottieAnimationView;
 
-    invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
+    invoke-virtual {v1}, Landroid/widget/ImageView;->getVisibility()I
 
     move-result v1
 
     if-nez v1, :cond_4
 
-    const-string v1, "onSnapClick performClick mSaveButton"
-
     new-array v0, v0, [Ljava/lang/Object;
 
+    const-string v1, "onSnapClick performClick mSaveButton"
+
+    .line 12
     invoke-static {v2, v1, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->h:Lcom/airbnb/lottie/LottieAnimationView;
+    .line 13
+    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k0:Lcom/airbnb/lottie/LottieAnimationView;
 
-    invoke-virtual {p0}, Landroid/view/View;->performClick()Z
+    invoke-virtual {p0}, Landroid/widget/ImageView;->performClick()Z
 
     return-void
 
+    .line 14
     :cond_4
-    iget-boolean v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->A:Z
+    iget-boolean v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->U8:Z
 
     if-eqz v1, :cond_5
 
-    const-string p0, "onSnapClick ignore click case 4"
+    new-array p0, v0, [Ljava/lang/Object;
 
-    new-array v0, v0, [Ljava/lang/Object;
+    const-string v0, "onSnapClick ignore click case 4"
 
-    invoke-static {v2, p0, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 15
+    invoke-static {v2, v0, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
+    .line 16
     :cond_5
-    invoke-static {}, Lv8/q;->impl()Ljava/util/Optional;
+    invoke-static {}, Ld/d/a/m7/g/t;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Ld7/b;
+    new-instance v1, Ld/d/a/u6/h5/a;
 
-    invoke-direct {v1, p0}, Ld7/b;-><init>(Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;)V
+    invoke-direct {v1, p0}, Ld/d/a/u6/h5/a;-><init>(Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;)V
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -2120,11 +2724,12 @@
 
     :cond_6
     :goto_0
-    const-string p0, "onSnapClick ignore click case 1"
+    new-array p0, v0, [Ljava/lang/Object;
 
-    new-array v0, v0, [Ljava/lang/Object;
+    const-string v0, "onSnapClick ignore click case 1"
 
-    invoke-static {v2, p0, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 17
+    invoke-static {v2, v0, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -2161,134 +2766,29 @@
 
 .method public onTrackSnapMissTaken(J)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "time"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public onTrackSnapTaken(J)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "time"
+        }
+    .end annotation
 
-    return-void
-.end method
-
-.method public final pi(Z)V
-    .locals 8
-
-    if-eqz p1, :cond_0
-
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->i:Landroid/widget/ImageView;
-
-    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    if-nez p1, :cond_1
-
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->i:Landroid/widget/ImageView;
-
-    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    return-void
-
-    :cond_1
-    if-eqz p1, :cond_3
-
-    iget p1, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
-
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->d:Lcom/android/camera/ui/CameraSnapView;
-
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->i:Landroid/widget/ImageView;
-
-    invoke-virtual {p0, p1, v0, v1}, Lcom/android/camera/fragment/BaseFragment;->adjustProgressAndGetDrawable(ILcom/android/camera/ui/CameraSnapView;Landroid/view/View;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->i:Landroid/widget/ImageView;
-
-    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    :cond_2
-    new-instance p1, Landroid/view/animation/RotateAnimation;
-
-    const/4 v2, 0x0
-
-    const/high16 v3, 0x43b40000    # 360.0f
-
-    const/4 v4, 0x1
-
-    const/high16 v5, 0x3f000000    # 0.5f
-
-    const/4 v6, 0x1
-
-    const/high16 v7, 0x3f000000    # 0.5f
-
-    move-object v1, p1
-
-    invoke-direct/range {v1 .. v7}, Landroid/view/animation/RotateAnimation;-><init>(FFIFIF)V
-
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0c0081
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v0
-
-    int-to-long v0, v0
-
-    invoke-virtual {p1, v0, v1}, Landroid/view/animation/Animation;->setDuration(J)V
-
-    new-instance v0, Landroid/view/animation/LinearInterpolator;
-
-    invoke-direct {v0}, Landroid/view/animation/LinearInterpolator;-><init>()V
-
-    invoke-virtual {p1, v0}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Landroid/view/animation/Animation;->setRepeatMode(I)V
-
-    const/4 v0, -0x1
-
-    invoke-virtual {p1, v0}, Landroid/view/animation/Animation;->setRepeatCount(I)V
-
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->i:Landroid/widget/ImageView;
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setAnimation(Landroid/view/animation/Animation;)V
-
-    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->i:Landroid/widget/ImageView;
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    goto :goto_0
-
-    :cond_3
-    iget-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->i:Landroid/widget/ImageView;
-
-    invoke-virtual {p1}, Landroid/view/View;->clearAnimation()V
-
-    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->i:Landroid/widget/ImageView;
-
-    const/16 p1, 0x8
-
-    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    :goto_0
     return-void
 .end method
 
@@ -2303,78 +2803,99 @@
 
     const-string v3, "prepare E"
 
+    .line 1
     invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->n:Landroid/net/Uri;
+    .line 2
+    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->v2:Landroid/net/Uri;
 
-    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->m:Ljava/lang/String;
+    .line 3
+    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K1:Ljava/lang/String;
 
-    iput-boolean v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k:Z
+    .line 4
+    iput-boolean v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->v1:Z
 
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->a:Landroid/view/View;
+    .line 5
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->m:Landroid/view/View;
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
 
     const/16 v1, 0xd7
 
+    .line 6
     iput v1, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
 
-    invoke-virtual {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->gi()V
+    .line 7
+    invoke-direct {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->qc()V
 
-    invoke-virtual {p0, v0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->pi(Z)V
+    .line 8
+    invoke-direct {p0, v0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Sd(Z)V
 
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->j:Landroid/widget/ProgressBar;
+    .line 9
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k1:Landroid/widget/ProgressBar;
 
     const/16 v3, 0x8
 
-    invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v1, v3}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->f:Landroid/widget/ImageView;
-
-    invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->h:Lcom/airbnb/lottie/LottieAnimationView;
-
-    invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->e:Landroid/widget/ImageView;
+    .line 10
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->u:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->g:Landroid/widget/ImageView;
+    .line 11
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k0:Lcom/airbnb/lottie/LottieAnimationView;
 
     invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->x:Landroid/widget/ImageView;
+    .line 12
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->t:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    iput-boolean v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->A:Z
+    .line 13
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->w:Landroid/widget/ImageView;
+
+    invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    .line 14
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->R8:Landroid/widget/ImageView;
+
+    invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    .line 15
+    iput-boolean v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->U8:Z
 
     const/4 v1, 0x1
 
-    invoke-virtual {p0, v1, v1}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->qi(ZZ)V
+    .line 16
+    invoke-direct {p0, v1, v1}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Ud(ZZ)V
 
-    invoke-virtual {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->ti()V
+    .line 17
+    invoke-direct {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->ke()V
 
-    invoke-static {}, Lv8/y2;->impl2()Lv8/y2;
+    .line 18
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl2()Ld/d/a/m7/g/a3;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    invoke-interface {v1}, Lv8/y2;->showConfigMenu()V
+    .line 19
+    invoke-interface {v1}, Ld/d/a/m7/g/a3;->showConfigMenu()V
 
+    .line 20
     :cond_0
-    iput v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->C:I
+    iput v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->V8:I
 
-    const-string p0, "prepare X "
+    new-array p0, v0, [Ljava/lang/Object;
 
-    new-array v0, v0, [Ljava/lang/Object;
+    const-string v0, "prepare X "
 
-    invoke-static {v2, p0, v0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 21
+    invoke-static {v2, v0, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -2382,23 +2903,28 @@
 .method public processingFinish()V
     .locals 2
 
-    const/4 v0, 0x0
+    .line 1
+    iget v0, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
 
-    iget v1, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
+    const/4 v1, 0x0
 
-    invoke-static {v0, v1, v0, v0, v0}, Lz5/c;->b(ZIZZZ)Lz5/c;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lz5/c;->a()Lz5/c;
+    .line 2
+    invoke-static {v1, v0, v1, v1, v1}, Ld/d/a/u6/i4/c;->b(ZIZZZ)Ld/d/a/u6/i4/c;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->d:Lcom/android/camera/ui/CameraSnapView;
+    .line 3
+    invoke-virtual {v0}, Ld/d/a/u6/i4/c;->a()Ld/d/a/u6/i4/c;
 
-    invoke-virtual {v1, v0}, Lcom/android/camera/ui/CameraSnapView;->g0(Lz5/c;)V
+    move-result-object v0
 
-    invoke-static {}, Lcom/android/camera/a6;->u2()Z
+    .line 4
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->s:Lcom/android/camera/ui/CameraSnapView;
+
+    invoke-virtual {v1, v0}, Lcom/android/camera/ui/CameraSnapView;->g0(Ld/d/a/u6/i4/c;)V
+
+    .line 5
+    invoke-static {}, Ld/d/a/z5;->k2()Z
 
     move-result v0
 
@@ -2410,9 +2936,10 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->d:Lcom/android/camera/ui/CameraSnapView;
+    .line 6
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->s:Lcom/android/camera/ui/CameraSnapView;
 
-    const v1, 0x7f14003f
+    const v1, 0x7f13003f
 
     invoke-virtual {p0, v1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
@@ -2420,9 +2947,10 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->announceForAccessibility(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->d:Lcom/android/camera/ui/CameraSnapView;
+    .line 7
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->s:Lcom/android/camera/ui/CameraSnapView;
 
-    const v1, 0x7f1400d6
+    const v1, 0x7f1300d5
 
     invoke-virtual {p0, v1}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
@@ -2445,28 +2973,33 @@
 
     const-string v3, "processingStart"
 
+    .line 1
     invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->C:I
+    .line 2
+    iget v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->V8:I
 
     if-eqz v1, :cond_0
 
-    const-string v1, "processingStart failed because current status not STATUS_PREPARE"
+    new-array v1, v0, [Ljava/lang/Object;
 
-    new-array v3, v0, [Ljava/lang/Object;
+    const-string v3, "processingStart failed because current status not STATUS_PREPARE"
 
-    invoke-static {v2, v1, v3}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 3
+    invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 4
     :cond_0
-    invoke-static {}, Lcom/android/camera/a6;->u2()Z
+    invoke-static {}, Ld/d/a/z5;->k2()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->d:Lcom/android/camera/ui/CameraSnapView;
+    .line 5
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->s:Lcom/android/camera/ui/CameraSnapView;
 
-    const v2, 0x7f1400dc
+    const v2, 0x7f1300db
 
     invoke-virtual {p0, v2}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
 
@@ -2474,11 +3007,13 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
+    .line 6
     :cond_1
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->d:Lcom/android/camera/ui/CameraSnapView;
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->s:Lcom/android/camera/ui/CameraSnapView;
 
     invoke-virtual {v1, v0}, Lcom/android/camera/ui/CameraSnapView;->setSpecificProgress(I)V
 
+    .line 7
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -2487,38 +3022,45 @@
 
     if-eqz v0, :cond_3
 
-    invoke-static {}, Lcom/android/camera/a6;->Q0()Landroid/graphics/Rect;
+    .line 8
+    invoke-static {}, Ld/d/a/z5;->H0()Landroid/graphics/Rect;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->w:Landroid/view/SurfaceView;
+    .line 9
+    iget-object v2, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Q8:Landroid/view/SurfaceView;
 
-    invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v2}, Landroid/view/SurfaceView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v2
 
     check-cast v2, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->vi()I
+    .line 10
+    invoke-virtual {v0}, Lcom/android/camera/ActivityBase;->uc()I
 
     move-result v0
 
+    .line 11
     rem-int/lit16 v3, v0, 0xb4
 
     if-eqz v3, :cond_2
 
+    .line 12
     invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
 
     move-result v3
 
     iput v3, v2, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
 
+    .line 13
     invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
 
     move-result v3
 
     iput v3, v2, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
+    .line 14
     iget v1, v1, Landroid/graphics/Rect;->top:I
 
     iget v4, v2, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
@@ -2533,15 +3075,18 @@
 
     sub-int/2addr v3, v4
 
+    .line 15
     div-int/lit8 v3, v3, 0x2
 
     iput v3, v2, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->w:Landroid/view/SurfaceView;
+    .line 16
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Q8:Landroid/view/SurfaceView;
 
-    invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v1, v2}, Landroid/view/SurfaceView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->w:Landroid/view/SurfaceView;
+    .line 17
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Q8:Landroid/view/SurfaceView;
 
     add-int/lit16 v0, v0, 0xb4
 
@@ -2553,6 +3098,7 @@
 
     goto :goto_0
 
+    .line 18
     :cond_2
     invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
 
@@ -2560,25 +3106,30 @@
 
     iput v3, v2, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
 
+    .line 19
     invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
 
     move-result v3
 
     iput v3, v2, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
+    .line 20
     iget v3, v1, Landroid/graphics/Rect;->top:I
 
     iput v3, v2, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
+    .line 21
     iget v1, v1, Landroid/graphics/Rect;->left:I
 
     iput v1, v2, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->w:Landroid/view/SurfaceView;
+    .line 22
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Q8:Landroid/view/SurfaceView;
 
-    invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v1, v2}, Landroid/view/SurfaceView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->w:Landroid/view/SurfaceView;
+    .line 23
+    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->Q8:Landroid/view/SurfaceView;
 
     int-to-float v0, v0
 
@@ -2588,13 +3139,27 @@
     :goto_0
     const/4 v0, 0x1
 
-    iput v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->C:I
+    .line 24
+    iput v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->V8:I
 
     return-void
 .end method
 
 .method public provideAnimateElement(ILjava/util/List;I)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "newMode",
+            "animateInElements",
+            "resetType"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -2604,12 +3169,16 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2, p3}, Lcom/android/camera/fragment/BaseFragment;->provideAnimateElement(ILjava/util/List;I)V
 
+    .line 2
     iput p1, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
 
+    .line 3
     iput p3, p0, Lcom/android/camera/fragment/BaseFragment;->mResetType:I
 
+    .line 4
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2626,7 +3195,7 @@
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean p2, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->A:Z
+    iget-boolean p2, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->U8:Z
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -2642,34 +3211,40 @@
 
     invoke-static {v0, p1, p3}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 5
     iget p1, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
 
     const/16 p3, 0xd7
 
     if-ne p1, p3, :cond_0
 
-    iget-boolean p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->A:Z
+    .line 6
+    iget-boolean p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->U8:Z
 
     if-eqz p1, :cond_1
 
-    iput-boolean p2, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->A:Z
+    .line 7
+    iput-boolean p2, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->U8:Z
 
-    const-string p1, "provideAnimateElement restore ui"
+    new-array p1, p2, [Ljava/lang/Object;
 
-    new-array p2, p2, [Ljava/lang/Object;
+    const-string p2, "provideAnimateElement restore ui"
 
-    invoke-static {v0, p1, p2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 8
+    invoke-static {v0, p2, p1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 9
     invoke-virtual {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->prepare()V
 
     goto :goto_0
 
+    .line 10
     :cond_0
-    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->h:Lcom/airbnb/lottie/LottieAnimationView;
+    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k0:Lcom/airbnb/lottie/LottieAnimationView;
 
     const/16 p1, 0x8
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     :cond_1
     :goto_0
@@ -2678,6 +3253,17 @@
 
 .method public provideRotateItem(Ljava/util/List;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "pendingRotateItems",
+            "newDegree"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -2687,19 +3273,54 @@
         }
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/android/camera/fragment/BaseFragment;->provideRotateItem(Ljava/util/List;I)V
 
     return-void
 .end method
 
-.method public final qi(ZZ)V
-    .locals 3
+.method public register(Ld/d/a/m7/c;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "modeCoordinator"
+        }
+    .end annotation
 
+    .line 1
+    invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->register(Ld/d/a/m7/c;)V
+
+    .line 2
+    const-class v0, Ld/d/a/m7/g/i3;
+
+    invoke-interface {p1, v0, p0}, Ld/d/a/m7/c;->b(Ljava/lang/Class;Ld/d/a/m7/a;)V
+
+    .line 3
+    invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->registerBackStack(Ld/d/a/m7/c;Ld/d/a/m7/g/c1;)V
+
+    return-void
+.end method
+
+.method public sd(Z)V
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "toModeSelect"
+        }
+    .end annotation
+
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "setSnapButtonEnable "
+    const-string v1, "resetToPreview toModeSelect "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2717,169 +3338,33 @@
 
     invoke-static {v2, v0, v1}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->d:Lcom/android/camera/ui/CameraSnapView;
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k1:Landroid/widget/ProgressBar;
 
-    if-eqz v0, :cond_2
+    invoke-virtual {v0}, Landroid/widget/ProgressBar;->getVisibility()I
 
-    invoke-virtual {v0, p1}, Lcom/android/camera/ui/CameraSnapView;->setSnapClickEnable(Z)V
-
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->d:Lcom/android/camera/ui/CameraSnapView;
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setEnabled(Z)V
-
-    if-nez p1, :cond_0
-
-    if-eqz p2, :cond_2
-
-    :cond_0
-    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->d:Lcom/android/camera/ui/CameraSnapView;
-
-    if-eqz p1, :cond_1
-
-    const/high16 p1, 0x3f800000    # 1.0f
-
-    goto :goto_0
-
-    :cond_1
-    const/high16 p1, 0x3f000000    # 0.5f
-
-    :goto_0
-    invoke-virtual {p0, p1}, Landroid/view/View;->setAlpha(F)V
-
-    :cond_2
-    return-void
-.end method
-
-.method public register(Lu8/d;)V
-    .locals 1
-
-    invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->register(Lu8/d;)V
-
-    const-class v0, Lv8/k3;
-
-    invoke-interface {p1, v0, p0}, Lu8/d;->d(Ljava/lang/Class;Lu8/a;)V
-
-    invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->registerBackStack(Lu8/d;Lv8/z0;)V
-
-    return-void
-.end method
-
-.method public final ri()V
-    .locals 4
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k:Z
-
-    iget-boolean v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->o:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->n:Landroid/net/Uri;
-
-    iget-object v2, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->m:Ljava/lang/String;
-
-    const v3, 0x7f1405a0
-
-    invoke-virtual {p0, v3}, Landroidx/fragment/app/Fragment;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    const/4 v3, 0x1
-
-    invoke-static {v0, v1, v2, p0, v3}, Lcom/android/camera/a6;->E4(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/CharSequence;Z)Z
-
-    return-void
-.end method
-
-.method public final si()V
-    .locals 5
-
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->D:Landroid/view/SurfaceHolder;
-
-    const/4 v1, 0x0
+    move-result v0
 
     if-nez v0, :cond_0
 
-    const-string p0, "startVideoPlay failed, mSurfaceHolder not available"
+    .line 3
+    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k1:Landroid/widget/ProgressBar;
 
-    new-array v0, v1, [Ljava/lang/Object;
+    const/16 v0, 0x8
 
-    const-string v1, "FragmentVideoSkyProcess"
+    invoke-virtual {p0, v0}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
-    invoke-static {v1, p0, v0}, Lcom/android/camera/log/Log;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-void
-
+    .line 4
     :cond_0
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->w:Landroid/view/SurfaceView;
+    invoke-static {}, Ld/d/a/m7/g/t;->impl()Ljava/util/Optional;
 
-    invoke-virtual {v0, v1}, Landroid/view/SurfaceView;->setVisibility(I)V
+    move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->mi()V
+    new-instance v0, Ld/d/a/u6/h5/b;
 
-    const/4 v0, 0x1
+    invoke-direct {v0, p1}, Ld/d/a/u6/h5/b;-><init>(Z)V
 
-    iput-boolean v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->y:Z
-
-    iput-boolean v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->z:Z
-
-    new-instance v1, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;
-
-    iget-object v2, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->F:Lcom/xiaomi/magicvideosky/MediaEffectGraph;
-
-    invoke-direct {v1, v2}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;-><init>(Lcom/xiaomi/magicvideosky/MediaEffectGraph;)V
-
-    iput-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->G:Lcom/xiaomi/magicvideosky/EffectMediaPlayer;
-
-    invoke-virtual {v1}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->a()Z
-
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->G:Lcom/xiaomi/magicvideosky/EffectMediaPlayer;
-
-    new-instance v2, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess$a;
-
-    invoke-direct {v2, p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess$a;-><init>(Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;)V
-
-    invoke-virtual {v1, v2}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->m(Lcom/xiaomi/magicvideosky/EffectNotifier;)V
-
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->G:Lcom/xiaomi/magicvideosky/EffectMediaPlayer;
-
-    iget-object v2, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->D:Landroid/view/SurfaceHolder;
-
-    invoke-interface {v2}, Landroid/view/SurfaceHolder;->getSurface()Landroid/view/Surface;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->n(Landroid/view/Surface;)V
-
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->G:Lcom/xiaomi/magicvideosky/EffectMediaPlayer;
-
-    sget-object v2, Lcom/xiaomi/magicvideosky/EffectMediaPlayer$a;->c:Lcom/xiaomi/magicvideosky/EffectMediaPlayer$a;
-
-    const/16 v3, 0x438
-
-    const/16 v4, 0x780
-
-    invoke-virtual {v1, v2, v3, v4}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->r(Lcom/xiaomi/magicvideosky/EffectMediaPlayer$a;II)V
-
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->G:Lcom/xiaomi/magicvideosky/EffectMediaPlayer;
-
-    invoke-virtual {v1, v0}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->c(Z)V
-
-    iget-object v1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->G:Lcom/xiaomi/magicvideosky/EffectMediaPlayer;
-
-    invoke-virtual {v1, v0}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->j(Z)V
-
-    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->G:Lcom/xiaomi/magicvideosky/EffectMediaPlayer;
-
-    invoke-virtual {p0}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->o()V
+    invoke-virtual {p0, v0}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
     return-void
 .end method
@@ -2890,9 +3375,25 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "holder",
+            "format",
+            "width",
+            "height"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->D:Landroid/view/SurfaceHolder;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->W8:Landroid/view/SurfaceHolder;
 
+    .line 2
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2901,7 +3402,7 @@
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->D:Landroid/view/SurfaceHolder;
+    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->W8:Landroid/view/SurfaceHolder;
 
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -2926,9 +3427,19 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "holder"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->D:Landroid/view/SurfaceHolder;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->W8:Landroid/view/SurfaceHolder;
 
+    .line 2
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2937,7 +3448,7 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->D:Landroid/view/SurfaceHolder;
+    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->W8:Landroid/view/SurfaceHolder;
 
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -2962,6 +3473,14 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "holder"
+        }
+    .end annotation
 
     const/4 p0, 0x0
 
@@ -2971,47 +3490,57 @@
 
     const-string v0, "surfaceDestroyed"
 
+    .line 1
     invoke-static {p1, v0, p0}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final ti()V
+.method public unRegister(Ld/d/a/m7/c;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "modeCoordinator"
+        }
+    .end annotation
 
-    iget-object v0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->G:Lcom/xiaomi/magicvideosky/EffectMediaPlayer;
+    .line 1
+    invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->unRegister(Ld/d/a/m7/c;)V
 
-    if-eqz v0, :cond_0
+    .line 2
+    const-class v0, Ld/d/a/m7/g/i3;
 
-    invoke-virtual {v0}, Lcom/xiaomi/magicvideosky/EffectMediaPlayer;->q()V
+    invoke-interface {p1, v0, p0}, Ld/d/a/m7/c;->d(Ljava/lang/Class;Ld/d/a/m7/a;)V
 
-    :cond_0
-    iget-object p0, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->w:Landroid/view/SurfaceView;
-
-    const/4 v0, 0x4
-
-    invoke-virtual {p0, v0}, Landroid/view/SurfaceView;->setVisibility(I)V
+    .line 3
+    invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->unRegisterBackStack(Ld/d/a/m7/c;Ld/d/a/m7/g/c1;)V
 
     return-void
 .end method
 
-.method public unRegister(Lu8/d;)V
-    .locals 1
+.method public synthetic xc(Ld/d/a/m7/g/t;)V
+    .locals 0
 
-    invoke-super {p0, p1}, Lcom/android/camera/fragment/BaseFragment;->unRegister(Lu8/d;)V
-
-    const-class v0, Lv8/k3;
-
-    invoke-interface {p1, v0, p0}, Lu8/d;->c(Ljava/lang/Class;Lu8/a;)V
-
-    invoke-virtual {p0, p1, p0}, Lcom/android/camera/fragment/BaseFragment;->unRegisterBackStack(Lu8/d;Lv8/z0;)V
+    invoke-direct {p0, p1}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->uc(Ld/d/a/m7/g/t;)V
 
     return-void
 .end method
 
-.method public y(Landroid/net/Uri;)V
+.method public z(Landroid/net/Uri;)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "uri"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3034,43 +3563,52 @@
 
     invoke-static {v3, v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iput-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->n:Landroid/net/Uri;
+    .line 2
+    iput-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->v2:Landroid/net/Uri;
 
-    iget-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->l:Landroid/content/ContentValues;
+    .line 3
+    iget-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->C1:Landroid/content/ContentValues;
 
     if-eqz p1, :cond_0
 
     const-string v0, "_data"
 
+    .line 4
     invoke-virtual {p1, v0}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->m:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->K1:Ljava/lang/String;
 
+    .line 5
     :cond_0
-    iget-boolean p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k:Z
+    iget-boolean p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->v1:Z
 
     if-eqz p1, :cond_1
 
-    iget-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->j:Landroid/widget/ProgressBar;
+    .line 6
+    iget-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k1:Landroid/widget/ProgressBar;
 
     const/16 v0, 0x8
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {p1, v0}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
-    iget-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->h:Lcom/airbnb/lottie/LottieAnimationView;
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->f:Landroid/widget/ImageView;
+    .line 7
+    iget-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->k0:Lcom/airbnb/lottie/LottieAnimationView;
 
     invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    invoke-virtual {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->ri()V
+    .line 8
+    iget-object p1, p0, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->u:Landroid/widget/ImageView;
+
+    invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    .line 9
+    invoke-direct {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->ee()V
 
     return-void
 
+    .line 10
     :cond_1
     invoke-virtual {p0}, Lcom/android/camera/fragment/videosky/FragmentVideoSkyProcess;->prepare()V
 

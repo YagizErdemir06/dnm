@@ -1,4 +1,4 @@
-.class final Lcom/google/common/hash/MacHashFunction$MacHasher;
+.class public final Lcom/google/common/hash/MacHashFunction$MacHasher;
 .super Lcom/google/common/hash/AbstractByteHasher;
 .source "SourceFile"
 
@@ -45,6 +45,7 @@
 .method private checkNotDone()V
     .locals 1
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/common/hash/MacHashFunction$MacHasher;->done:Z
 
     xor-int/lit8 p0, p0, 0x1
@@ -61,12 +62,15 @@
 .method public hash()Lcom/google/common/hash/HashCode;
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/hash/MacHashFunction$MacHasher;->checkNotDone()V
 
     const/4 v0, 0x1
 
+    .line 2
     iput-boolean v0, p0, Lcom/google/common/hash/MacHashFunction$MacHasher;->done:Z
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/hash/MacHashFunction$MacHasher;->mac:Ljavax/crypto/Mac;
 
     invoke-virtual {p0}, Ljavax/crypto/Mac;->doFinal()[B

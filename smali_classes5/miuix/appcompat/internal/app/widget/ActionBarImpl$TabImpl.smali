@@ -15,21 +15,21 @@
 
 
 # instance fields
-.field public a:Landroidx/appcompat/app/ActionBar$TabListener;
+.field private a:Landroidx/appcompat/app/ActionBar$TabListener;
 
-.field public b:Landroidx/appcompat/app/ActionBar$TabListener;
+.field private b:Landroidx/appcompat/app/ActionBar$TabListener;
 
-.field public c:Ljava/lang/Object;
+.field private c:Ljava/lang/Object;
 
-.field public d:Landroid/graphics/drawable/Drawable;
+.field private d:Landroid/graphics/drawable/Drawable;
 
-.field public e:Ljava/lang/CharSequence;
+.field private e:Ljava/lang/CharSequence;
 
-.field public f:Ljava/lang/CharSequence;
+.field private f:Ljava/lang/CharSequence;
 
-.field public g:I
+.field private g:I
 
-.field public h:Landroid/view/View;
+.field private h:Landroid/view/View;
 
 .field public i:Z
 
@@ -40,16 +40,19 @@
 .method public constructor <init>(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->j:Lmiuix/appcompat/internal/app/widget/ActionBarImpl;
 
     invoke-direct {p0}, Landroidx/appcompat/app/ActionBar$Tab;-><init>()V
 
     const/4 p1, -0x1
 
+    .line 2
     iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->g:I
 
     const/4 p1, 0x1
 
+    .line 3
     iput-boolean p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->i:Z
 
     return-void
@@ -58,6 +61,7 @@
 .method public static synthetic a(Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;)Landroidx/appcompat/app/ActionBar$TabListener;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->b:Landroidx/appcompat/app/ActionBar$TabListener;
 
     return-object p0
@@ -66,6 +70,7 @@
 .method public static synthetic b(Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;)Landroidx/appcompat/app/ActionBar$TabListener;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->a:Landroidx/appcompat/app/ActionBar$TabListener;
 
     return-object p0
@@ -76,6 +81,7 @@
 .method public c(Landroidx/appcompat/app/ActionBar$TabListener;)Landroidx/appcompat/app/ActionBar$Tab;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->b:Landroidx/appcompat/app/ActionBar$TabListener;
 
     return-object p0
@@ -84,7 +90,8 @@
 .method public getCallback()Landroidx/appcompat/app/ActionBar$TabListener;
     .locals 0
 
-    invoke-static {}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->O0()Landroidx/appcompat/app/ActionBar$TabListener;
+    .line 1
+    invoke-static {}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->e0()Landroidx/appcompat/app/ActionBar$TabListener;
 
     move-result-object p0
 
@@ -94,6 +101,7 @@
 .method public getContentDescription()Ljava/lang/CharSequence;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->f:Ljava/lang/CharSequence;
 
     return-object p0
@@ -102,6 +110,7 @@
 .method public getCustomView()Landroid/view/View;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->h:Landroid/view/View;
 
     return-object p0
@@ -110,6 +119,7 @@
 .method public getIcon()Landroid/graphics/drawable/Drawable;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->d:Landroid/graphics/drawable/Drawable;
 
     return-object p0
@@ -118,6 +128,7 @@
 .method public getPosition()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->g:I
 
     return p0
@@ -126,6 +137,7 @@
 .method public getTag()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->c:Ljava/lang/Object;
 
     return-object p0
@@ -134,19 +146,19 @@
 .method public getText()Ljava/lang/CharSequence;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->e:Ljava/lang/CharSequence;
 
     return-object p0
 .end method
 
 .method public select()V
-    .locals 2
+    .locals 1
 
+    .line 1
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->j:Lmiuix/appcompat/internal/app/widget/ActionBarImpl;
 
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p0, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->U(Landroidx/appcompat/app/ActionBar$Tab;Z)V
+    invoke-virtual {v0, p0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->selectTab(Landroidx/appcompat/app/ActionBar$Tab;)V
 
     return-void
 .end method
@@ -158,7 +170,7 @@
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->j:Lmiuix/appcompat/internal/app/widget/ActionBarImpl;
 
     .line 2
-    invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->U0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Landroid/content/Context;
+    invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->k0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Landroid/content/Context;
 
     move-result-object v0
 
@@ -192,7 +204,7 @@
     .line 6
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->j:Lmiuix/appcompat/internal/app/widget/ActionBarImpl;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->P0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->g0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
     move-result-object p1
 
@@ -203,7 +215,7 @@
     .line 7
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->j:Lmiuix/appcompat/internal/app/widget/ActionBarImpl;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->Q0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->h0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
     move-result-object p1
 
@@ -214,24 +226,24 @@
     .line 8
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->j:Lmiuix/appcompat/internal/app/widget/ActionBarImpl;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->R0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
     move-result-object p1
 
     iget v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->g:I
 
-    invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;->G(I)V
+    invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->t(I)V
 
     .line 9
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->j:Lmiuix/appcompat/internal/app/widget/ActionBarImpl;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->S0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->j0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
     move-result-object p1
 
     iget v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->g:I
 
-    invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;->G(I)V
+    invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->t(I)V
 
     :cond_0
     return-object p0
@@ -275,11 +287,11 @@
     .line 2
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->j:Lmiuix/appcompat/internal/app/widget/ActionBarImpl;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->Z0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->f0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->v()Z
+    invoke-virtual {p1}, Lk/b/e/b/a/f;->v()Z
 
     move-result p1
 
@@ -288,7 +300,7 @@
     .line 3
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->j:Lmiuix/appcompat/internal/app/widget/ActionBarImpl;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->Z0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->f0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
     move-result-object p1
 
@@ -299,7 +311,7 @@
     .line 4
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->j:Lmiuix/appcompat/internal/app/widget/ActionBarImpl;
 
-    invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->l0(Z)V
+    invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->N(Z)V
 
     .line 5
     :cond_0
@@ -310,7 +322,7 @@
     .line 6
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->j:Lmiuix/appcompat/internal/app/widget/ActionBarImpl;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->P0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->g0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
     move-result-object p1
 
@@ -328,7 +340,7 @@
     .line 7
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->j:Lmiuix/appcompat/internal/app/widget/ActionBarImpl;
 
-    invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->U0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Landroid/content/Context;
+    invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->k0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Landroid/content/Context;
 
     move-result-object v0
 
@@ -361,7 +373,7 @@
     .line 3
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->j:Lmiuix/appcompat/internal/app/widget/ActionBarImpl;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->P0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->g0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
     move-result-object p1
 
@@ -372,7 +384,7 @@
     .line 4
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->j:Lmiuix/appcompat/internal/app/widget/ActionBarImpl;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->Q0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->h0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
     move-result-object p1
 
@@ -383,24 +395,24 @@
     .line 5
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->j:Lmiuix/appcompat/internal/app/widget/ActionBarImpl;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->R0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
     move-result-object p1
 
     iget v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->g:I
 
-    invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;->G(I)V
+    invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->t(I)V
 
     .line 6
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->j:Lmiuix/appcompat/internal/app/widget/ActionBarImpl;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->S0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->j0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
     move-result-object p1
 
     iget v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->g:I
 
-    invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;->G(I)V
+    invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->t(I)V
 
     :cond_0
     return-object p0
@@ -409,6 +421,7 @@
 .method public setPosition(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->g:I
 
     return-void
@@ -417,6 +430,7 @@
 .method public setTabListener(Landroidx/appcompat/app/ActionBar$TabListener;)Landroidx/appcompat/app/ActionBar$Tab;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->a:Landroidx/appcompat/app/ActionBar$TabListener;
 
     return-object p0
@@ -425,6 +439,7 @@
 .method public setTag(Ljava/lang/Object;)Landroidx/appcompat/app/ActionBar$Tab;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->c:Ljava/lang/Object;
 
     return-object p0
@@ -436,7 +451,7 @@
     .line 7
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->j:Lmiuix/appcompat/internal/app/widget/ActionBarImpl;
 
-    invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->U0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Landroid/content/Context;
+    invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->k0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Landroid/content/Context;
 
     move-result-object v0
 
@@ -469,7 +484,7 @@
     .line 3
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->j:Lmiuix/appcompat/internal/app/widget/ActionBarImpl;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->P0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->g0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
     move-result-object p1
 
@@ -480,7 +495,7 @@
     .line 4
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->j:Lmiuix/appcompat/internal/app/widget/ActionBarImpl;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->Q0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->h0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
     move-result-object p1
 
@@ -491,24 +506,24 @@
     .line 5
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->j:Lmiuix/appcompat/internal/app/widget/ActionBarImpl;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->R0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
     move-result-object p1
 
     iget v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->g:I
 
-    invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;->G(I)V
+    invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->t(I)V
 
     .line 6
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->j:Lmiuix/appcompat/internal/app/widget/ActionBarImpl;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->R0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarImpl;->i0(Lmiuix/appcompat/internal/app/widget/ActionBarImpl;)Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;
 
     move-result-object p1
 
     iget v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarImpl$TabImpl;->g:I
 
-    invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/app/widget/SecondaryTabContainerView;->G(I)V
+    invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/app/widget/ScrollingTabContainerView;->t(I)V
 
     :cond_0
     return-object p0

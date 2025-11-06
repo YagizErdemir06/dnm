@@ -1,4 +1,4 @@
-.class interface abstract Landroidx/constraintlayout/core/LinearSystem$Row;
+.class public interface abstract Landroidx/constraintlayout/core/LinearSystem$Row;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

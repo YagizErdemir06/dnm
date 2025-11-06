@@ -8,9 +8,14 @@
     value = "SMAP\nFacePup.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FacePup.kt\ncom/faceunity/core/avatar/avatar/FacePup\n+ 2 _Maps.kt\nkotlin/collections/MapsKt___MapsKt\n*L\n1#1,111:1\n181#2,2:112\n*E\n*S KotlinDebug\n*F\n+ 1 FacePup.kt\ncom/faceunity/core/avatar/avatar/FacePup\n*L\n93#1,2:112\n*E\n"
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000B\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\u0010\u0007\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u000c\u0018\u00002\u00020\u0001B\u0007\u00a2\u0006\u0004\u0008\'\u0010(J\"\u0010\u0006\u001a\u001e\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u00040\u0002j\u000e\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004`\u0005J\u0011\u0010\u0008\u001a\u0004\u0018\u00010\u0007H\u0007\u00a2\u0006\u0004\u0008\u0008\u0010\tJ\u001a\u0010\r\u001a\u00020\u000c2\u0006\u0010\n\u001a\u00020\u00072\u0008\u0008\u0002\u0010\u000b\u001a\u00020\u0007H\u0007J\"\u0010\u0010\u001a\u00020\u000c2\u0006\u0010\u000e\u001a\u00020\u00032\u0006\u0010\u000f\u001a\u00020\u00042\u0008\u0008\u0002\u0010\u000b\u001a\u00020\u0007H\u0007J\u0010\u0010\u0011\u001a\u00020\u00042\u0006\u0010\u000e\u001a\u00020\u0003H\u0007J?\u0010\u0018\u001a\u00020\u000c2.\u0010\u0015\u001a*\u0012\u0004\u0012\u00020\u0003\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u000c0\u00130\u0012j\u0014\u0012\u0004\u0012\u00020\u0003\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u000c0\u0013`\u0014H\u0000\u00a2\u0006\u0004\u0008\u0016\u0010\u0017J\u0017\u0010\u001c\u001a\u00020\u000c2\u0006\u0010\u0019\u001a\u00020\u0000H\u0000\u00a2\u0006\u0004\u0008\u001a\u0010\u001bR&\u0010\u001e\u001a\u000e\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u00040\u001d8\u0000X\u0080\u0004\u00a2\u0006\u000c\n\u0004\u0008\u001e\u0010\u001f\u001a\u0004\u0008 \u0010!R$\u0010\"\u001a\u0004\u0018\u00010\u00078\u0000@\u0000X\u0080\u000e\u00a2\u0006\u0012\n\u0004\u0008\"\u0010#\u001a\u0004\u0008$\u0010\t\"\u0004\u0008%\u0010&\u00a8\u0006)"
+        "\u0000D\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\u0010\u0007\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u000c\u0018\u00002\u00020\u0001B\u0007\u00a2\u0006\u0004\u0008+\u0010,J)\u0010\u0006\u001a\u001e\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u00040\u0002j\u000e\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004`\u0005\u00a2\u0006\u0004\u0008\u0006\u0010\u0007J\u0011\u0010\t\u001a\u0004\u0018\u00010\u0008H\u0007\u00a2\u0006\u0004\u0008\t\u0010\nJ!\u0010\u000e\u001a\u00020\r2\u0006\u0010\u000b\u001a\u00020\u00082\u0008\u0008\u0002\u0010\u000c\u001a\u00020\u0008H\u0007\u00a2\u0006\u0004\u0008\u000e\u0010\u000fJ)\u0010\u0012\u001a\u00020\r2\u0006\u0010\u0010\u001a\u00020\u00032\u0006\u0010\u0011\u001a\u00020\u00042\u0008\u0008\u0002\u0010\u000c\u001a\u00020\u0008H\u0007\u00a2\u0006\u0004\u0008\u0012\u0010\u0013J\u0017\u0010\u0014\u001a\u00020\u00042\u0006\u0010\u0010\u001a\u00020\u0003H\u0007\u00a2\u0006\u0004\u0008\u0014\u0010\u0015J?\u0010\u001c\u001a\u00020\r2.\u0010\u0019\u001a*\u0012\u0004\u0012\u00020\u0003\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\r0\u00170\u0016j\u0014\u0012\u0004\u0012\u00020\u0003\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\r0\u0017`\u0018H\u0000\u00a2\u0006\u0004\u0008\u001a\u0010\u001bJ\u0017\u0010 \u001a\u00020\r2\u0006\u0010\u001d\u001a\u00020\u0000H\u0000\u00a2\u0006\u0004\u0008\u001e\u0010\u001fR(\u0010\"\u001a\u000e\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u00040!8\u0000@\u0000X\u0080\u0004\u00a2\u0006\u000c\n\u0004\u0008\"\u0010#\u001a\u0004\u0008$\u0010%R$\u0010&\u001a\u0004\u0018\u00010\u00088\u0000@\u0000X\u0080\u000e\u00a2\u0006\u0012\n\u0004\u0008&\u0010\'\u001a\u0004\u0008(\u0010\n\"\u0004\u0008)\u0010*\u00a8\u0006-"
     }
     d2 = {
         "Lcom/faceunity/core/avatar/avatar/FacePup;",
@@ -20,17 +25,21 @@
         "",
         "Lkotlin/collections/HashMap;",
         "getFacePupCache",
+        "()Ljava/util/HashMap;",
         "",
         "getEnableFacePup",
         "()Ljava/lang/Boolean;",
         "enable",
         "needBackgroundThread",
-        "Lnm/l2;",
+        "Lh/l2;",
         "setEnableFacePup",
+        "(ZZ)V",
         "name",
         "intensity",
         "setFacePupParam",
+        "(Ljava/lang/String;FZ)V",
         "getFacePupParam",
+        "(Ljava/lang/String;)F",
         "Ljava/util/LinkedHashMap;",
         "Lkotlin/Function0;",
         "Lkotlin/collections/LinkedHashMap;",
@@ -67,7 +76,7 @@
 
 # instance fields
 .field private mEnableFacePup:Ljava/lang/Boolean;
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 .end field
 
@@ -81,7 +90,7 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -90,8 +99,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/core/avatar/base/BaseAvatarAttribute;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
@@ -110,6 +121,7 @@
 
     const/4 p2, 0x1
 
+    .line 1
     :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/faceunity/core/avatar/avatar/FacePup;->setEnableFacePup(ZZ)V
 
@@ -125,6 +137,7 @@
 
     const/4 p3, 0x1
 
+    .line 1
     :cond_0
     invoke-virtual {p0, p1, p2, p3}, Lcom/faceunity/core/avatar/avatar/FacePup;->setFacePupParam(Ljava/lang/String;FZ)V
 
@@ -136,22 +149,25 @@
 .method public final clone$lib_core_release(Lcom/faceunity/core/avatar/avatar/FacePup;)V
     .locals 1
     .param p1    # Lcom/faceunity/core/avatar/avatar/FacePup;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "facePup"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-object v0, p1, Lcom/faceunity/core/avatar/avatar/FacePup;->mEnableFacePup:Ljava/lang/Boolean;
 
     iput-object v0, p0, Lcom/faceunity/core/avatar/avatar/FacePup;->mEnableFacePup:Ljava/lang/Boolean;
 
+    .line 2
     iget-object v0, p0, Lcom/faceunity/core/avatar/avatar/FacePup;->mFacePupCache:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
 
+    .line 3
     iget-object p0, p0, Lcom/faceunity/core/avatar/avatar/FacePup;->mFacePupCache:Ljava/util/concurrent/ConcurrentHashMap;
 
     iget-object p1, p1, Lcom/faceunity/core/avatar/avatar/FacePup;->mFacePupCache:Ljava/util/concurrent/ConcurrentHashMap;
@@ -166,9 +182,10 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/avatar/avatar/FacePup;->mEnableFacePup:Ljava/lang/Boolean;
 
     return-object p0
@@ -186,9 +203,10 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/HashMap;
 
     iget-object p0, p0, Lcom/faceunity/core/avatar/avatar/FacePup;->mFacePupCache:Ljava/util/concurrent/ConcurrentHashMap;
@@ -201,16 +219,17 @@
 .method public final getFacePupParam(Ljava/lang/String;)F
     .locals 3
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
     const-string v0, "name"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/avatar/base/BaseAvatarAttribute;->getMFUAvatarController$lib_core_release()Lcom/faceunity/core/avatar/control/AvatarController;
 
     move-result-object v0
@@ -228,9 +247,10 @@
 
 .method public final getMEnableFacePup$lib_core_release()Ljava/lang/Boolean;
     .locals 0
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/avatar/avatar/FacePup;->mEnableFacePup:Ljava/lang/Boolean;
 
     return-object p0
@@ -248,9 +268,10 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/avatar/avatar/FacePup;->mFacePupCache:Ljava/util/concurrent/ConcurrentHashMap;
 
     return-object p0
@@ -259,7 +280,7 @@
 .method public final loadParams$lib_core_release(Ljava/util/LinkedHashMap;)V
     .locals 6
     .param p1    # Ljava/util/LinkedHashMap;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
@@ -267,16 +288,17 @@
             "(",
             "Ljava/util/LinkedHashMap<",
             "Ljava/lang/String;",
-            "Ljn/a<",
-            "Lnm/l2;",
+            "Lh/d3/w/a<",
+            "Lh/l2;",
             ">;>;)V"
         }
     .end annotation
 
     const-string v0, "params"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/avatar/avatar/FacePup;->mEnableFacePup:Ljava/lang/Boolean;
 
     if-eqz v0, :cond_0
@@ -285,6 +307,7 @@
 
     move-result v0
 
+    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -309,9 +332,11 @@
 
     invoke-interface {p1, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/faceunity/core/avatar/avatar/FacePup;->mFacePupCache:Ljava/util/concurrent/ConcurrentHashMap;
 
+    .line 4
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v0
@@ -349,6 +374,7 @@
 
     move-result v1
 
+    .line 5
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -380,6 +406,7 @@
     :cond_1
     const/4 p1, 0x1
 
+    .line 6
     invoke-virtual {p0, p1}, Lcom/faceunity/core/avatar/base/BaseAvatarAttribute;->setHasLoaded$lib_core_release(Z)V
 
     return-void
@@ -387,37 +414,40 @@
 
 .method public final setEnableFacePup(Z)V
     .locals 3
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
-    const/4 v0, 0x2
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    const/4 v1, 0x2
 
     const/4 v2, 0x0
 
-    invoke-static {p0, p1, v2, v0, v1}, Lcom/faceunity/core/avatar/avatar/FacePup;->setEnableFacePup$default(Lcom/faceunity/core/avatar/avatar/FacePup;ZZILjava/lang/Object;)V
+    invoke-static {p0, p1, v0, v1, v2}, Lcom/faceunity/core/avatar/avatar/FacePup;->setEnableFacePup$default(Lcom/faceunity/core/avatar/avatar/FacePup;ZZILjava/lang/Object;)V
 
     return-void
 .end method
 
 .method public final setEnableFacePup(ZZ)V
     .locals 3
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
+    .line 1
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/faceunity/core/avatar/avatar/FacePup;->mEnableFacePup:Ljava/lang/Boolean;
 
+    .line 2
     invoke-virtual {p0}, Lcom/faceunity/core/avatar/base/BaseAvatarAttribute;->getHasLoaded$lib_core_release()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {p0}, Lcom/faceunity/core/avatar/base/BaseAvatarAttribute;->getMFUAvatarController$lib_core_release()Lcom/faceunity/core/avatar/control/AvatarController;
 
     move-result-object v0
@@ -435,10 +465,10 @@
 .method public final setFacePupParam(Ljava/lang/String;F)V
     .locals 6
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const/4 v3, 0x0
@@ -461,16 +491,17 @@
 .method public final setFacePupParam(Ljava/lang/String;FZ)V
     .locals 7
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const-string v0, "name"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/avatar/avatar/FacePup;->mFacePupCache:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -479,12 +510,14 @@
 
     invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-virtual {p0}, Lcom/faceunity/core/avatar/base/BaseAvatarAttribute;->getHasLoaded$lib_core_release()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {p0}, Lcom/faceunity/core/avatar/base/BaseAvatarAttribute;->getMFUAvatarController$lib_core_release()Lcom/faceunity/core/avatar/control/AvatarController;
 
     move-result-object v1
@@ -508,10 +541,11 @@
 .method public final setMEnableFacePup$lib_core_release(Ljava/lang/Boolean;)V
     .locals 0
     .param p1    # Ljava/lang/Boolean;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/core/avatar/avatar/FacePup;->mEnableFacePup:Ljava/lang/Boolean;
 
     return-void

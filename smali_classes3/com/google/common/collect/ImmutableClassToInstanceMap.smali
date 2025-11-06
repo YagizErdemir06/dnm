@@ -69,8 +69,10 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ImmutableClassToInstanceMap;
 
+    .line 2
     invoke-static {}, Lcom/google/common/collect/ImmutableMap;->of()Lcom/google/common/collect/ImmutableMap;
 
     move-result-object v1
@@ -123,6 +125,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ImmutableClassToInstanceMap$Builder;
 
     invoke-direct {v0}, Lcom/google/common/collect/ImmutableClassToInstanceMap$Builder;-><init>()V
@@ -146,14 +149,17 @@
         }
     .end annotation
 
+    .line 1
     instance-of v0, p0, Lcom/google/common/collect/ImmutableClassToInstanceMap;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Lcom/google/common/collect/ImmutableClassToInstanceMap;
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance v0, Lcom/google/common/collect/ImmutableClassToInstanceMap$Builder;
 
@@ -258,6 +264,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableClassToInstanceMap;->delegate:Lcom/google/common/collect/ImmutableMap;
 
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -294,6 +301,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -304,6 +312,7 @@
 .method public readResolve()Ljava/lang/Object;
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/ForwardingMap;->isEmpty()Z
 
     move-result v0

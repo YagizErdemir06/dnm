@@ -1,4 +1,4 @@
-.class Landroidx/media/app/NotificationCompat$Api24Impl;
+.class public Landroidx/media/app/NotificationCompat$Api24Impl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,6 +33,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     new-instance v0, Landroid/app/Notification$DecoratedMediaCustomViewStyle;
 
     invoke-direct {v0}, Landroid/app/Notification$DecoratedMediaCustomViewStyle;-><init>()V

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/zzy;
+.class public final Lcom/google/android/gms/common/zzy;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -11,6 +11,7 @@
 
     new-array v1, v0, [I
 
+    .line 1
     fill-array-data v1, :array_0
 
     const/4 v2, 0x0
@@ -36,6 +37,7 @@
     :cond_1
     const/4 p0, 0x0
 
+    .line 2
     throw p0
 
     :cond_2

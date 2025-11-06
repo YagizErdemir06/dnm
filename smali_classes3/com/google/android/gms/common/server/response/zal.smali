@@ -25,19 +25,19 @@
 
 
 # instance fields
-.field final zaa:I
+.field public final zaa:I
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$VersionField;
         id = 0x1
     .end annotation
 .end field
 
-.field final zab:Ljava/lang/String;
+.field public final zab:Ljava/lang/String;
     .annotation build Lcom/google/android/gms/common/internal/safeparcel/SafeParcelable$Field;
         id = 0x2
     .end annotation
 .end field
 
-.field final zac:Ljava/util/ArrayList;
+.field public final zac:Ljava/util/ArrayList;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -167,15 +167,17 @@
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->beginObjectHeader(Landroid/os/Parcel;)I
 
     move-result p2
 
-    const/4 v0, 0x1
+    iget v0, p0, Lcom/google/android/gms/common/server/response/zal;->zaa:I
 
-    iget v1, p0, Lcom/google/android/gms/common/server/response/zal;->zaa:I
+    const/4 v1, 0x1
 
-    invoke-static {p1, v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
+    .line 2
+    invoke-static {p1, v1, v0}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeInt(Landroid/os/Parcel;II)V
 
     iget-object v0, p0, Lcom/google/android/gms/common/server/response/zal;->zab:Ljava/lang/String;
 
@@ -183,14 +185,17 @@
 
     const/4 v2, 0x0
 
+    .line 3
     invoke-static {p1, v1, v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeString(Landroid/os/Parcel;ILjava/lang/String;Z)V
-
-    const/4 v0, 0x3
 
     iget-object p0, p0, Lcom/google/android/gms/common/server/response/zal;->zac:Ljava/util/ArrayList;
 
+    const/4 v0, 0x3
+
+    .line 4
     invoke-static {p1, v0, p0, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->writeTypedList(Landroid/os/Parcel;ILjava/util/List;Z)V
 
+    .line 5
     invoke-static {p1, p2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelWriter;->finishObjectHeader(Landroid/os/Parcel;I)V
 
     return-void

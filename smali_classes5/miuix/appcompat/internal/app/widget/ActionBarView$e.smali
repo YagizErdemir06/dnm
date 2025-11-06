@@ -1,9 +1,6 @@
 .class public Lmiuix/appcompat/internal/app/widget/ActionBarView$e;
-.super Ljava/lang/Object;
+.super Lmiuix/animation/listener/TransitionListener;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -25,131 +22,40 @@
 .method public constructor <init>(Lmiuix/appcompat/internal/app/widget/ActionBarView;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$e;->a:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 4
+.method public onComplete(Ljava/lang/Object;)V
+    .locals 0
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$e;->a:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+    .line 1
+    invoke-super {p0, p1}, Lmiuix/animation/listener/TransitionListener;->onComplete(Ljava/lang/Object;)V
 
-    invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->n0(Lmiuix/appcompat/internal/app/widget/ActionBarView;)Landroid/widget/Scroller;
+    .line 2
+    iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$e;->a:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
-    move-result-object v0
+    invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->K(Lmiuix/appcompat/internal/app/widget/ActionBarView;)Lk/b/e/b/a/f$c;
 
-    invoke-virtual {v0}, Landroid/widget/Scroller;->computeScrollOffset()Z
+    move-result-object p1
 
-    move-result v0
+    if-eqz p1, :cond_0
 
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$e;->a:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->n0(Lmiuix/appcompat/internal/app/widget/ActionBarView;)Landroid/widget/Scroller;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/widget/Scroller;->getCurrY()I
-
-    move-result v1
-
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$e;->a:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    iget v3, v2, Lmiuix/appcompat/internal/app/widget/ActionBarView;->ob:I
-
-    sub-int/2addr v1, v3
-
-    invoke-static {v2}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->r0(Lmiuix/appcompat/internal/app/widget/ActionBarView;)I
-
-    move-result v2
-
-    add-int/2addr v1, v2
-
-    invoke-static {v0, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->p0(Lmiuix/appcompat/internal/app/widget/ActionBarView;I)I
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$e;->a:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$e;->a:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->n0(Lmiuix/appcompat/internal/app/widget/ActionBarView;)Landroid/widget/Scroller;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Scroller;->isFinished()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$e;->a:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->postOnAnimation(Ljava/lang/Runnable;)V
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$e;->a:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->n0(Lmiuix/appcompat/internal/app/widget/ActionBarView;)Landroid/widget/Scroller;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Scroller;->getCurrY()I
-
-    move-result v0
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$e;->a:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    iget v2, v1, Lmiuix/appcompat/internal/app/widget/ActionBarView;->ob:I
-
-    if-ne v0, v2, :cond_1
-
-    const/4 p0, 0x0
-
-    invoke-virtual {v1, p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setExpandState(I)V
-
-    goto :goto_0
-
-    :cond_1
-    invoke-static {v1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->n0(Lmiuix/appcompat/internal/app/widget/ActionBarView;)Landroid/widget/Scroller;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Scroller;->getCurrY()I
-
-    move-result v0
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$e;->a:Lmiuix/appcompat/internal/app/widget/ActionBarView;
-
-    iget v2, v1, Lmiuix/appcompat/internal/app/widget/ActionBarView;->ob:I
-
-    invoke-static {v1}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->S(Lmiuix/appcompat/internal/app/widget/ActionBarView;)Landroid/widget/FrameLayout;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v1
-
-    add-int/2addr v2, v1
-
-    if-ne v0, v2, :cond_2
-
+    .line 3
     iget-object p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarView$e;->a:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 
-    const/4 v0, 0x1
+    invoke-static {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->K(Lmiuix/appcompat/internal/app/widget/ActionBarView;)Lk/b/e/b/a/f$c;
 
-    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setExpandState(I)V
+    move-result-object p0
 
-    :cond_2
-    :goto_0
+    invoke-virtual {p0}, Lk/b/e/b/a/f$c;->f()V
+
+    :cond_0
     return-void
 .end method

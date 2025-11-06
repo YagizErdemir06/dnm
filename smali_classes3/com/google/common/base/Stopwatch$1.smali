@@ -1,4 +1,4 @@
-.class synthetic Lcom/google/common/base/Stopwatch$1;
+.class public synthetic Lcom/google/common/base/Stopwatch$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$java$util$concurrent$TimeUnit:[I
+.field public static final synthetic $SwitchMap$java$util$concurrent$TimeUnit:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Ljava/util/concurrent/TimeUnit;->values()[Ljava/util/concurrent/TimeUnit;
 
     move-result-object v0
@@ -35,7 +36,7 @@
     :try_start_0
     sget-object v1, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Ljava/util/concurrent/TimeUnit;->ordinal()I
 
     move-result v1
 
@@ -51,7 +52,7 @@
 
     sget-object v1, Ljava/util/concurrent/TimeUnit;->MICROSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Ljava/util/concurrent/TimeUnit;->ordinal()I
 
     move-result v1
 
@@ -67,7 +68,7 @@
 
     sget-object v1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Ljava/util/concurrent/TimeUnit;->ordinal()I
 
     move-result v1
 
@@ -83,7 +84,7 @@
 
     sget-object v1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Ljava/util/concurrent/TimeUnit;->ordinal()I
 
     move-result v1
 
@@ -99,7 +100,7 @@
 
     sget-object v1, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Ljava/util/concurrent/TimeUnit;->ordinal()I
 
     move-result v1
 
@@ -115,7 +116,7 @@
 
     sget-object v1, Ljava/util/concurrent/TimeUnit;->HOURS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Ljava/util/concurrent/TimeUnit;->ordinal()I
 
     move-result v1
 
@@ -131,7 +132,7 @@
 
     sget-object v1, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Ljava/util/concurrent/TimeUnit;->ordinal()I
 
     move-result v1
 

@@ -10,6 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,9 +18,18 @@
 
 
 # virtual methods
-.method public getCameraFocusPaintCenterIndicator(Landroid/content/Context;)Ly9/q;
+.method public getCameraFocusPaintCenterIndicator(Landroid/content/Context;)Ld/d/a/d8/n2/d/u;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
+    .line 1
     new-instance p0, Lcom/android/camera2/compat/theme/custom/cv/CameraFocusPaintCenterIndicatorCV;
 
     invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/cv/CameraFocusPaintCenterIndicatorCV;-><init>(Landroid/content/Context;)V
@@ -30,21 +40,32 @@
 .method public getFocusViewOuterRectcolor()I
     .locals 1
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    .line 1
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object p0
 
-    const v0, 0x7f06010a
+    const v0, 0x7f0600e6
 
-    invoke-virtual {p0, v0}, Lf2/e;->b(I)I
+    invoke-virtual {p0, v0}, Ld/d/a/k6/f;->b(I)I
 
     move-result p0
 
     return p0
 .end method
 
-.method public setCenterFlag(Ly9/q;Z)V
+.method public setCenterFlag(Ld/d/a/d8/n2/d/u;Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "focusCenterIndicator",
+            "isCombo"
+        }
+    .end annotation
 
     if-eqz p2, :cond_0
 
@@ -55,16 +76,28 @@
     :cond_0
     const/4 p0, 0x0
 
+    .line 1
     :goto_0
-    invoke-virtual {p1, p0}, Ly9/q;->setCenterFlag(I)V
+    invoke-virtual {p1, p0}, Ld/d/a/d8/n2/d/u;->setCenterFlag(I)V
 
     return-void
 .end method
 
-.method public setIndicatorBitmapSun(Ly9/q;Landroid/graphics/Bitmap;)V
+.method public setIndicatorBitmapSun(Ld/d/a/d8/n2/d/u;Landroid/graphics/Bitmap;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "focusCenterIndicator",
+            "exposureBitmap"
+        }
+    .end annotation
 
-    invoke-virtual {p1, p2}, Ly9/q;->setIndicatorBitmapSun(Landroid/graphics/Bitmap;)V
+    .line 1
+    invoke-virtual {p1, p2}, Ld/d/a/d8/n2/d/u;->setIndicatorBitmapSun(Landroid/graphics/Bitmap;)V
 
     return-void
 .end method

@@ -11,6 +11,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;-><init>()V
 
     return-void
@@ -36,11 +37,13 @@
 
     return v2
 
+    .line 1
     :cond_1
     invoke-static {p0}, Ljava/lang/Float;->floatToIntBits(F)I
 
     move-result p0
 
+    .line 2
     invoke-static {p1}, Ljava/lang/Float;->floatToIntBits(F)I
 
     move-result p1
@@ -98,6 +101,7 @@
 
     return-object p0
 
+    .line 1
     :cond_2
     invoke-static {p0}, Ljava/lang/Float;->toString(F)Ljava/lang/String;
 
@@ -109,6 +113,7 @@
 .method public static validateLexical(Ljava/lang/String;Lorg/apache/xmlbeans/impl/common/ValidationContext;)F
     .locals 2
 
+    .line 1
     :try_start_0
     invoke-static {p0}, Lorg/apache/xmlbeans/impl/util/XsTypeConverter;->lexFloat(Ljava/lang/CharSequence;)F
 
@@ -129,6 +134,7 @@
 
     const-string p0, "float"
 
+    .line 2
     invoke-interface {p1, p0, v0}, Lorg/apache/xmlbeans/impl/common/ValidationContext;->invalid(Ljava/lang/String;[Ljava/lang/Object;)V
 
     const/high16 p0, 0x7fc00000    # Float.NaN
@@ -141,6 +147,7 @@
 .method public bigDecimalValue()Ljava/math/BigDecimal;
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
     new-instance v0, Ljava/math/BigDecimal;
@@ -157,6 +164,7 @@
 .method public compare_to(Lorg/apache/xmlbeans/XmlObject;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lorg/apache/xmlbeans/impl/values/JavaFloatHolder;->_value:F
 
     check-cast p1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
@@ -175,6 +183,7 @@
 .method public compute_text(Lorg/apache/xmlbeans/impl/values/NamespaceManager;)Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget p0, p0, Lorg/apache/xmlbeans/impl/values/JavaFloatHolder;->_value:F
 
     invoke-static {p0}, Lorg/apache/xmlbeans/impl/values/JavaFloatHolder;->serialize(F)Ljava/lang/String;
@@ -187,6 +196,7 @@
 .method public doubleValue()D
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
     iget p0, p0, Lorg/apache/xmlbeans/impl/values/JavaFloatHolder;->_value:F
@@ -199,6 +209,7 @@
 .method public equal_to(Lorg/apache/xmlbeans/XmlObject;)Z
     .locals 0
 
+    .line 1
     iget p0, p0, Lorg/apache/xmlbeans/impl/values/JavaFloatHolder;->_value:F
 
     check-cast p1, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;
@@ -227,6 +238,7 @@
 .method public floatValue()F
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->check_dated()V
 
     iget p0, p0, Lorg/apache/xmlbeans/impl/values/JavaFloatHolder;->_value:F
@@ -237,6 +249,7 @@
 .method public schemaType()Lorg/apache/xmlbeans/SchemaType;
     .locals 0
 
+    .line 1
     sget-object p0, Lorg/apache/xmlbeans/impl/schema/BuiltinSchemaTypeSystem;->ST_FLOAT:Lorg/apache/xmlbeans/impl/schema/SchemaTypeImpl;
 
     return-object p0
@@ -245,6 +258,7 @@
 .method public set_BigDecimal(Ljava/math/BigDecimal;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Ljava/math/BigDecimal;->floatValue()F
 
     move-result p1
@@ -257,6 +271,7 @@
 .method public set_BigInteger(Ljava/math/BigInteger;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Ljava/math/BigInteger;->floatValue()F
 
     move-result p1
@@ -271,6 +286,7 @@
 
     double-to-float p1, p1
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/JavaFloatHolder;->set_float(F)V
 
     return-void
@@ -279,6 +295,7 @@
 .method public set_float(F)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lorg/apache/xmlbeans/impl/values/JavaFloatHolder;->_value:F
 
     return-void
@@ -289,6 +306,7 @@
 
     long-to-float p1, p1
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/apache/xmlbeans/impl/values/JavaFloatHolder;->set_float(F)V
 
     return-void
@@ -299,6 +317,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput v0, p0, Lorg/apache/xmlbeans/impl/values/JavaFloatHolder;->_value:F
 
     return-void
@@ -307,6 +326,7 @@
 .method public set_text(Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/values/XmlObjectBase;->_voorVc:Lorg/apache/xmlbeans/impl/common/ValidationContext;
 
     invoke-static {p1, v0}, Lorg/apache/xmlbeans/impl/values/JavaFloatHolder;->validateLexical(Ljava/lang/String;Lorg/apache/xmlbeans/impl/common/ValidationContext;)F
@@ -321,6 +341,7 @@
 .method public value_hash_code()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lorg/apache/xmlbeans/impl/values/JavaFloatHolder;->_value:F
 
     invoke-static {p0}, Ljava/lang/Float;->floatToIntBits(F)I

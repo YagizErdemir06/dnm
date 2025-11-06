@@ -517,6 +517,7 @@
 .method public static constructor <clinit>()V
     .locals 5
 
+    .line 1
     new-instance v0, Ljava/util/UUID;
 
     const-wide/16 v1, 0x0
@@ -525,6 +526,7 @@
 
     sput-object v0, Lcom/google/android/exoplayer2/C;->UUID_NIL:Ljava/util/UUID;
 
+    .line 2
     new-instance v0, Ljava/util/UUID;
 
     const-wide v1, 0x1077efecc0b24d02L
@@ -535,6 +537,7 @@
 
     sput-object v0, Lcom/google/android/exoplayer2/C;->COMMON_PSSH_UUID:Ljava/util/UUID;
 
+    .line 3
     new-instance v0, Ljava/util/UUID;
 
     const-wide v1, -0x1d8e62a7567a4c37L    # -1.6229728350858627E166
@@ -545,6 +548,7 @@
 
     sput-object v0, Lcom/google/android/exoplayer2/C;->CLEARKEY_UUID:Ljava/util/UUID;
 
+    .line 4
     new-instance v0, Ljava/util/UUID;
 
     const-wide v1, -0x121074568629b532L    # -3.563403477674908E221
@@ -555,6 +559,7 @@
 
     sput-object v0, Lcom/google/android/exoplayer2/C;->WIDEVINE_UUID:Ljava/util/UUID;
 
+    .line 5
     new-instance v0, Ljava/util/UUID;
 
     const-wide v1, -0x65fb0f8667bfbd7aL
@@ -571,6 +576,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -592,6 +598,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Util;->generateAudioSessionIdV21(Landroid/content/Context;)I
 
     move-result p0
@@ -611,6 +618,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Util;->getErrorCodeForMediaDrmErrorCode(I)I
 
     move-result p0
@@ -630,6 +638,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Util;->getFormatSupportString(I)Ljava/lang/String;
 
     move-result-object p0
@@ -649,6 +658,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/android/exoplayer2/util/Util;->msToUs(J)J
 
     move-result-wide p0
@@ -668,6 +678,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-static {p0, p1}, Lcom/google/android/exoplayer2/util/Util;->usToMs(J)J
 
     move-result-wide p0

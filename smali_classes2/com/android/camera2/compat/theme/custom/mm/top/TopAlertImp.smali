@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lv8/y2;
+.implements Ld/d/a/m7/g/a3;
 
 
 # instance fields
@@ -25,22 +25,24 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "fragmentTopAlert"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Ljava/util/Optional;->of(Ljava/lang/Object;)Ljava/util/Optional;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopAlertImp;->mTopAlertOpt:Ljava/util/Optional;
-
-    return-void
-.end method
-
-.method public static synthetic b(Lcom/android/camera/fragment/top/FragmentTopAlert;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopAlertImp;->lambda$clearVideoUltraClear$1(Lcom/android/camera/fragment/top/FragmentTopAlert;)V
 
     return-void
 .end method
@@ -51,7 +53,16 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "fragmentTopAlert"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/top/TopAlertImp;
 
     invoke-direct {v0, p0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopAlertImp;-><init>(Lcom/android/camera/fragment/top/FragmentTopAlert;)V
@@ -61,6 +72,15 @@
 
 .method private executeFunction(Ljava/util/function/Consumer;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "consumer"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -70,11 +90,10 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopAlertImp;->mTopAlertOpt:Ljava/util/Optional;
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/top/k1;
-
-    invoke-direct {v0}, Lcom/android/camera2/compat/theme/custom/mm/top/k1;-><init>()V
+    sget-object v0, Ld/d/b/x5/a/b/b/m/o1;->a:Ld/d/b/x5/a/b/b/m/o1;
 
     invoke-virtual {p0, v0}, Ljava/util/Optional;->filter(Ljava/util/function/Predicate;)Ljava/util/Optional;
 
@@ -85,27 +104,19 @@
     return-void
 .end method
 
-.method public static synthetic g(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
+.method public static synthetic lambda$clearVideoUltraClear$1(Lcom/android/camera/fragment/top/FragmentTopAlert;)V
     .locals 0
 
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopAlertImp;->lambda$executeFunction$0(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method private static synthetic lambda$clearVideoUltraClear$1(Lcom/android/camera/fragment/top/FragmentTopAlert;)V
-    .locals 0
-
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera/fragment/top/FragmentTopAlert;->clearVideoUltraClear()V
 
     return-void
 .end method
 
-.method private static synthetic lambda$executeFunction$0(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
+.method public static synthetic lambda$executeFunction$0(Lcom/android/camera/fragment/top/FragmentTopAlert;)Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result p0
@@ -117,138 +128,392 @@
 # virtual methods
 .method public alert960FpsDirectOverheatHint(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "visible"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertAiAudio(II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertAiAudioBGHint(II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertAiAudioMutexToastIfNeed(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "res"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertAiAudioNewDescTip(Ljava/lang/String;II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "visibility",
+            "stringRes"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertAiAudioNewDescTip(Ljava/lang/String;IIJ)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "visibility",
+            "stringRes",
+            "delay"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertAiAudioSingleBGHint(II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertAiAudioSingleDescTip(Ljava/lang/String;II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "visibility",
+            "stringRes"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertAiAudioSingleDescTip(Ljava/lang/String;IIJ)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "visibility",
+            "stringRes",
+            "delay"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertAiDetectTipHint(IIJ)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes",
+            "delay"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertAiDetectTipHint(ILjava/lang/String;J)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "res",
+            "delay"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertAiEnhancedVideoHint(II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertAmbientLightTip(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "visible"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertAudioZoomIndicator(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "remove"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertAutoHibernationDescTip(Ljava/lang/String;IIJ)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "visibility",
+            "stringRes",
+            "delay"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertCastVideoHint(II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertDualVideoHint(II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertESPFeatureTip(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "visible"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertFaceDetect(ZI)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "show",
+            "desc"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertFastmotionIndicator(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "speed",
+            "number",
+            "duration",
+            "anim"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertFastmotionProValue(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "title",
+            "speedDesc",
+            "saveTime",
+            "singleShow",
+            "needExtendSpeedWidth"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertFastmotionValue(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "title",
+            "desc"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertFlash(ILjava/lang/String;Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "flashComponentValue",
+            "showSelector"
+        }
+    .end annotation
 
     return-void
 .end method
@@ -269,168 +534,472 @@
 
 .method public alertFlashFrontAdjustSwitchLayout(ZZ)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "isAnimEnd2Start"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertFocusViewDescTip(Ljava/lang/String;IIJ)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "visibility",
+            "stringRes",
+            "delay"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertFriendDisplayDeviceNameTip(Ljava/lang/String;ILjava/lang/String;Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "visibility",
+            "stringRes",
+            "isConnected"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertHDR(IZZ)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "live",
+            "showSelector"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertHandGestureHint(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "stringRes"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertLightingTip(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "result"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertLiveShotHint(II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertMacroModeHint(II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertMotionDetectionTip(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "visible"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertMusicClose(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "show"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertPanoramaApertureTipHint(ILjava/lang/String;J)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "str",
+            "delay"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertParameterDescriptionTip(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "visible"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertParameterResetTip(ZII)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "isRefrensh",
+            "visible",
+            "stringRes"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertProColourHint(II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertQVGASubtitleHint(II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertRecommendDescTip(Ljava/lang/String;II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "visibility",
+            "stringRes"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertRecommendDescTip(Ljava/lang/String;IIJ)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "visibility",
+            "stringRes",
+            "delay"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertRecommendDescTip(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "visibility",
+            "stringRes"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertRecommendDescTip(Ljava/lang/String;ILjava/lang/String;J)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "visibility",
+            "stringRes",
+            "delay"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertRecommendTipHint(ILjava/lang/String;J)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "str",
+            "delay"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertSlideSwitchLayout(ZI)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "configItem"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertSlowMotionDisableRecordTip(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "visible"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertSubtitleHint(II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertSuperNightSeTip(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "visible"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertSwitchTip(Ljava/lang/String;II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "visibility",
+            "hint"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertSwitchTip(Ljava/lang/String;IILjava/lang/String;J)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "visibility",
+            "clearType",
+            "hint",
+            "delay"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertSwitchTip(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "visibility",
+            "hint"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertTimerBurstHint(II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes"
+        }
+    .end annotation
 
     return-void
 .end method
@@ -441,60 +1010,166 @@
         .annotation build Landroidx/annotation/StringRes;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "visibility",
+            "stringRes"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertTopBarOperationTip(Ljava/lang/String;ILjava/lang/CharSequence;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "visibility",
+            "string"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertTopHint(II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertTopHint(IIJ)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes",
+            "delay"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertTopTip(ZII)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "show",
+            "desc",
+            "delay"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertUpdateValue(IILjava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "type",
+            "displayNameRes",
+            "value"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertVideoLowBatteryHint(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "visible"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertVideoOverheatHint(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "visible"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertVideoUltraClear(II)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "stringRes"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public alertVideoUltraClear(ILjava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "visible",
+            "showText"
+        }
+    .end annotation
 
     return-void
 .end method
@@ -515,12 +1190,28 @@
 
 .method public changeViewAccessibility(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "enable"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public checkLutTopAlert(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "visible"
+        }
+    .end annotation
 
     return-void
 .end method
@@ -546,9 +1237,8 @@
 .method public clearVideoUltraClear()V
     .locals 1
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/top/j1;
-
-    invoke-direct {v0}, Lcom/android/camera2/compat/theme/custom/mm/top/j1;-><init>()V
+    .line 1
+    sget-object v0, Ld/d/b/x5/a/b/b/m/n1;->c:Ld/d/b/x5/a/b/b/m/n1;
 
     invoke-direct {p0, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopAlertImp;->executeFunction(Ljava/util/function/Consumer;)V
 
@@ -581,12 +1271,32 @@
 
 .method public varargs disableMenuItem(Z[I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "isHide",
+            "configItems"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public varargs enableMenuItem(Z[I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "isShow",
+            "configItems"
+        }
+    .end annotation
 
     return-void
 .end method
@@ -597,8 +1307,20 @@
     return-void
 .end method
 
-.method public expandExtraView(Lcom/android/camera/data/data/b;Landroid/view/View;I)V
+.method public expandExtraView(Ld/d/a/l6/e/b;Landroid/view/View;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "componentData",
+            "anchorView",
+            "tag"
+        }
+    .end annotation
 
     return-void
 .end method
@@ -651,13 +1373,21 @@
 
 .method public getTipsState(Ljava/lang/String;)Z
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "tipType"
+        }
+    .end annotation
 
     const/4 p0, 0x0
 
     return p0
 .end method
 
-.method public getVideoTag()Lcom/android/camera/ui/j2;
+.method public getVideoTag()Ld/d/a/d8/j2;
     .locals 0
 
     const/4 p0, 0x0
@@ -675,6 +1405,14 @@
 
 .method public handleProVideoRecordingSimple(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "needSimple"
+        }
+    .end annotation
 
     return-void
 .end method
@@ -687,6 +1425,14 @@
 
 .method public hideConfigMenu(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
 
     return-void
 .end method
@@ -699,6 +1445,14 @@
 
 .method public hideRecommendDescTip(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "tipType"
+        }
+    .end annotation
 
     return-void
 .end method
@@ -711,6 +1465,14 @@
 
 .method public isContainAlertLightingTip(I)Z
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "result"
+        }
+    .end annotation
 
     const/4 p0, 0x0
 
@@ -719,6 +1481,14 @@
 
 .method public varargs isContainAlertRecommendTip([I)Z
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "tokenRes"
+        }
+    .end annotation
 
     const/4 p0, 0x0
 
@@ -727,6 +1497,14 @@
 
 .method public isCurrentRecommendTipText(I)Z
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "resId"
+        }
+    .end annotation
 
     const/4 p0, 0x0
 
@@ -791,96 +1569,224 @@
 
 .method public onBeautyModeClick(Landroid/view/View;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "view"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public onCvClick(Landroid/view/View;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "view"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public onEisProClick(Landroid/view/View;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "view"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public onFlashClick(Landroid/view/View;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public onHdrClick(Landroid/view/View;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public onMacroClick(Landroid/view/View;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public onMiLiveVideoQualityClick(Landroid/view/View;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public onRawClick(Landroid/view/View;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "view"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public onSlowMotionVideoFpsClick(Landroid/view/View;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public onSlowMotionVideoQualityClick(Landroid/view/View;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public onTimerClick(Landroid/view/View;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "view"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public onTopAnimClick(Landroid/view/View;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public onVideoFpsClick(Landroid/view/View;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public onVideoQualityClick(Landroid/view/View;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public reInitAlert(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "anim"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public recheckFlashFrontAdjust(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "flashComponentValue"
+        }
+    .end annotation
 
     return-void
 .end method
@@ -906,19 +1812,28 @@
 .method public registerProtocol()V
     .locals 2
 
-    invoke-static {}, Lu8/e;->i()Lu8/e;
+    .line 1
+    invoke-static {}, Ld/d/a/m7/d;->i()Ld/d/a/m7/d;
 
     move-result-object v0
 
-    const-class v1, Lv8/y2;
+    const-class v1, Ld/d/a/m7/g/a3;
 
-    invoke-virtual {v0, v1, p0}, Lu8/e;->d(Ljava/lang/Class;Lu8/a;)V
+    invoke-virtual {v0, v1, p0}, Ld/d/a/m7/d;->b(Ljava/lang/Class;Ld/d/a/m7/a;)V
 
     return-void
 .end method
 
 .method public removeExtraMenu(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "callFrom"
+        }
+    .end annotation
 
     return-void
 .end method
@@ -931,6 +1846,14 @@
 
 .method public reverseExpandTopBar(Z)Z
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "anim"
+        }
+    .end annotation
 
     const/4 p0, 0x0
 
@@ -939,18 +1862,42 @@
 
 .method public setAiSceneImageLevel(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mode"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public setAlertAnim(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isAnim"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public setCalculateTime(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "time"
+        }
+    .end annotation
 
     return-void
 .end method
@@ -963,54 +1910,130 @@
 
 .method public setMenuIndicatorState(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "state"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public setMenuIndicatorVisibility(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "visibility"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public setMishotLeftTipsVisibility(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isShown"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public setMishotTopRightVisibility(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isShown"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public setRecordingTimeState(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "state"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public setRecordingTimeState(IZ)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "state",
+            "hideTimeLabel"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public setShow(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "show"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public setTipsState(Ljava/lang/String;Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "tipType",
+            "state"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public setVolumeValue([F)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mArray"
+        }
+    .end annotation
 
     return-void
 .end method
@@ -1036,13 +2059,14 @@
 .method public unRegisterProtocol()V
     .locals 2
 
-    invoke-static {}, Lu8/e;->i()Lu8/e;
+    .line 1
+    invoke-static {}, Ld/d/a/m7/d;->i()Ld/d/a/m7/d;
 
     move-result-object v0
 
-    const-class v1, Lv8/y2;
+    const-class v1, Ld/d/a/m7/g/a3;
 
-    invoke-virtual {v0, v1, p0}, Lu8/e;->c(Ljava/lang/Class;Lu8/a;)V
+    invoke-virtual {v0, v1, p0}, Ld/d/a/m7/d;->d(Ljava/lang/Class;Ld/d/a/m7/a;)V
 
     return-void
 .end method
@@ -1055,24 +2079,58 @@
 
 .method public varargs updateConfigItem([I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "configItems"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public updateEndGravityTip(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "needPadding"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public updateFastmotionProRecordingTime(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "first",
+            "second"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public updateHistogramStatsData([I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "y"
+        }
+    .end annotation
 
     return-void
 .end method
@@ -1085,24 +2143,58 @@
 
 .method public updateLyingDirectHint(ZZ)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "show",
+            "refrensh"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public updateProVideoRecordingSimpleView(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "show"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public updateRecordingTime(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
 
     return-void
 .end method
 
 .method public updateRecordingTimeStyle(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "showIcon"
+        }
+    .end annotation
 
     return-void
 .end method

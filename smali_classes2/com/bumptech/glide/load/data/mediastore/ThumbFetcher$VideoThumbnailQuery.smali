@@ -1,4 +1,4 @@
-.class Lcom/bumptech/glide/load/data/mediastore/ThumbFetcher$VideoThumbnailQuery;
+.class public Lcom/bumptech/glide/load/data/mediastore/ThumbFetcher$VideoThumbnailQuery;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -33,6 +33,7 @@
 
     const-string v0, "_data"
 
+    .line 1
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
@@ -45,8 +46,10 @@
 .method public constructor <init>(Landroid/content/ContentResolver;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/bumptech/glide/load/data/mediastore/ThumbFetcher$VideoThumbnailQuery;->contentResolver:Landroid/content/ContentResolver;
 
     return-void
@@ -57,17 +60,17 @@
 .method public query(Landroid/net/Uri;)Landroid/database/Cursor;
     .locals 6
 
+    .line 1
     invoke-virtual {p1}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object p1
 
+    .line 2
     iget-object v0, p0, Lcom/bumptech/glide/load/data/mediastore/ThumbFetcher$VideoThumbnailQuery;->contentResolver:Landroid/content/ContentResolver;
 
     sget-object v1, Landroid/provider/MediaStore$Video$Thumbnails;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
     sget-object v2, Lcom/bumptech/glide/load/data/mediastore/ThumbFetcher$VideoThumbnailQuery;->PATH_PROJECTION:[Ljava/lang/String;
-
-    const-string v3, "kind = 1 AND video_id = ?"
 
     const/4 p0, 0x1
 
@@ -76,6 +79,8 @@
     const/4 p0, 0x0
 
     aput-object p1, v4, p0
+
+    const-string v3, "kind = 1 AND video_id = ?"
 
     const/4 v5, 0x0
 

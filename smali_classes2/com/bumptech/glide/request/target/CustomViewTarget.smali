@@ -48,7 +48,7 @@
 
 .field private final sizeDeterminer:Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;
 
-.field protected final view:Landroid/view/View;
+.field public final view:Landroid/view/View;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TT;"
@@ -61,6 +61,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     sget v0, Lcom/bumptech/glide/R$id;->glide_custom_view_target_tag:I
 
     sput v0, Lcom/bumptech/glide/request/target/CustomViewTarget;->VIEW_TAG_ID:I
@@ -80,8 +81,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -90,6 +93,7 @@
 
     iput-object v0, p0, Lcom/bumptech/glide/request/target/CustomViewTarget;->view:Landroid/view/View;
 
+    .line 3
     new-instance v0, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;
 
     invoke-direct {v0, p1}, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;-><init>(Landroid/view/View;)V
@@ -104,6 +108,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/target/CustomViewTarget;->view:Landroid/view/View;
 
     sget v0, Lcom/bumptech/glide/request/target/CustomViewTarget;->VIEW_TAG_ID:I
@@ -118,6 +123,7 @@
 .method private maybeAddAttachStateListener()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/request/target/CustomViewTarget;->attachStateListener:Landroid/view/View$OnAttachStateChangeListener;
 
     if-eqz v0, :cond_1
@@ -128,6 +134,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object v1, p0, Lcom/bumptech/glide/request/target/CustomViewTarget;->view:Landroid/view/View;
 
@@ -135,6 +142,7 @@
 
     const/4 v0, 0x1
 
+    .line 3
     iput-boolean v0, p0, Lcom/bumptech/glide/request/target/CustomViewTarget;->isAttachStateListenerAdded:Z
 
     :cond_1
@@ -145,6 +153,7 @@
 .method private maybeRemoveAttachStateListener()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/request/target/CustomViewTarget;->attachStateListener:Landroid/view/View$OnAttachStateChangeListener;
 
     if-eqz v0, :cond_1
@@ -155,6 +164,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object v1, p0, Lcom/bumptech/glide/request/target/CustomViewTarget;->view:Landroid/view/View;
 
@@ -162,6 +172,7 @@
 
     const/4 v0, 0x0
 
+    .line 3
     iput-boolean v0, p0, Lcom/bumptech/glide/request/target/CustomViewTarget;->isAttachStateListenerAdded:Z
 
     :cond_1
@@ -176,6 +187,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/target/CustomViewTarget;->view:Landroid/view/View;
 
     sget v0, Lcom/bumptech/glide/request/target/CustomViewTarget;->VIEW_TAG_ID:I
@@ -200,12 +212,14 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/request/target/CustomViewTarget;->attachStateListener:Landroid/view/View$OnAttachStateChangeListener;
 
     if-eqz v0, :cond_0
 
     return-object p0
 
+    .line 2
     :cond_0
     new-instance v0, Lcom/bumptech/glide/request/target/CustomViewTarget$1;
 
@@ -213,6 +227,7 @@
 
     iput-object v0, p0, Lcom/bumptech/glide/request/target/CustomViewTarget;->attachStateListener:Landroid/view/View$OnAttachStateChangeListener;
 
+    .line 3
     invoke-direct {p0}, Lcom/bumptech/glide/request/target/CustomViewTarget;->maybeAddAttachStateListener()V
 
     return-object p0
@@ -223,20 +238,24 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/bumptech/glide/request/target/CustomViewTarget;->getTag()Ljava/lang/Object;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
+    .line 2
     instance-of v0, p0, Lcom/bumptech/glide/request/Request;
 
     if-eqz v0, :cond_0
 
+    .line 3
     check-cast p0, Lcom/bumptech/glide/request/Request;
 
     return-object p0
 
+    .line 4
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -259,6 +278,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/target/CustomViewTarget;->sizeDeterminer:Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->getSize(Lcom/bumptech/glide/request/target/SizeReadyCallback;)V
@@ -277,6 +297,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/target/CustomViewTarget;->view:Landroid/view/View;
 
     return-object p0
@@ -295,16 +316,20 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/request/target/CustomViewTarget;->sizeDeterminer:Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;
 
     invoke-virtual {v0}, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->clearCallbacksAndListener()V
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/request/target/CustomViewTarget;->onResourceCleared(Landroid/graphics/drawable/Drawable;)V
 
+    .line 3
     iget-boolean p1, p0, Lcom/bumptech/glide/request/target/CustomViewTarget;->isClearedByUs:Z
 
     if-nez p1, :cond_0
 
+    .line 4
     invoke-direct {p0}, Lcom/bumptech/glide/request/target/CustomViewTarget;->maybeRemoveAttachStateListener()V
 
     :cond_0
@@ -318,8 +343,10 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Lcom/bumptech/glide/request/target/CustomViewTarget;->maybeAddAttachStateListener()V
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/request/target/CustomViewTarget;->onResourceLoading(Landroid/graphics/drawable/Drawable;)V
 
     return-void
@@ -357,6 +384,7 @@
 .method public final pauseMyRequest()V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/bumptech/glide/request/target/CustomViewTarget;->getRequest()Lcom/bumptech/glide/request/Request;
 
     move-result-object v0
@@ -365,12 +393,15 @@
 
     const/4 v1, 0x1
 
+    .line 2
     iput-boolean v1, p0, Lcom/bumptech/glide/request/target/CustomViewTarget;->isClearedByUs:Z
 
+    .line 3
     invoke-interface {v0}, Lcom/bumptech/glide/request/Request;->clear()V
 
     const/4 v0, 0x0
 
+    .line 4
     iput-boolean v0, p0, Lcom/bumptech/glide/request/target/CustomViewTarget;->isClearedByUs:Z
 
     :cond_0
@@ -384,6 +415,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/request/target/CustomViewTarget;->sizeDeterminer:Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;->removeCallback(Lcom/bumptech/glide/request/target/SizeReadyCallback;)V
@@ -394,18 +426,21 @@
 .method public final resumeMyRequest()V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/bumptech/glide/request/target/CustomViewTarget;->getRequest()Lcom/bumptech/glide/request/Request;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0}, Lcom/bumptech/glide/request/Request;->isCleared()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-interface {p0}, Lcom/bumptech/glide/request/Request;->begin()V
 
     :cond_0
@@ -419,6 +454,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/bumptech/glide/request/target/CustomViewTarget;->setTag(Ljava/lang/Object;)V
 
     return-void
@@ -427,6 +463,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -479,6 +516,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/request/target/CustomViewTarget;->sizeDeterminer:Lcom/bumptech/glide/request/target/CustomViewTarget$SizeDeterminer;
 
     const/4 v1, 0x1

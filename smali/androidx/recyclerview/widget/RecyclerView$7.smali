@@ -1,4 +1,4 @@
-.class synthetic Landroidx/recyclerview/widget/RecyclerView$7;
+.class public synthetic Landroidx/recyclerview/widget/RecyclerView$7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$androidx$recyclerview$widget$RecyclerView$Adapter$StateRestorationPolicy:[I
+.field public static final synthetic $SwitchMap$androidx$recyclerview$widget$RecyclerView$Adapter$StateRestorationPolicy:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Landroidx/recyclerview/widget/RecyclerView$Adapter$StateRestorationPolicy;->values()[Landroidx/recyclerview/widget/RecyclerView$Adapter$StateRestorationPolicy;
 
     move-result-object v0

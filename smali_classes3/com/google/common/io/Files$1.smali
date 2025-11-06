@@ -1,4 +1,4 @@
-.class Lcom/google/common/io/Files$1;
+.class public Lcom/google/common/io/Files$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -28,7 +28,7 @@
 
 
 # instance fields
-.field final result:Ljava/util/List;
+.field public final result:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -43,8 +43,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {}, Lcom/google/common/collect/Lists;->newArrayList()Ljava/util/ArrayList;
 
     move-result-object v0
@@ -87,6 +89,7 @@
 .method public processLine(Ljava/lang/String;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/io/Files$1;->result:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z

@@ -18,6 +18,7 @@
 .method private constructor <init>(Lcom/google/android/gms/internal/mlkit_vision_barcode/zznf;I)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzpx;
@@ -38,6 +39,7 @@
 .method public static zzf(Lcom/google/android/gms/internal/mlkit_vision_barcode/zznf;)Lcom/google/android/gms/internal/mlkit_vision_barcode/zzra;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzro;
 
     const/4 v1, 0x0
@@ -50,6 +52,7 @@
 .method public static zzg(Lcom/google/android/gms/internal/mlkit_vision_barcode/zznf;I)Lcom/google/android/gms/internal/mlkit_vision_barcode/zzra;
     .locals 1
 
+    .line 1
     new-instance p1, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzro;
 
     const/4 v0, 0x1
@@ -72,6 +75,7 @@
 .method public final zzb(Lcom/google/android/gms/internal/mlkit_vision_barcode/zzne;)Lcom/google/android/gms/internal/mlkit_vision_barcode/zzra;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzro;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznf;
 
     invoke-virtual {v0, p1}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznf;->zzf(Lcom/google/android/gms/internal/mlkit_vision_barcode/zzne;)Lcom/google/android/gms/internal/mlkit_vision_barcode/zznf;
@@ -90,6 +94,7 @@
 .method public final zzd()Ljava/lang/String;
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzro;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode/zznf;
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznf;->zzj()Lcom/google/android/gms/internal/mlkit_vision_barcode/zznh;
@@ -116,6 +121,7 @@
 
     move-result-object p0
 
+    .line 2
     invoke-static {p0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -135,6 +141,7 @@
 
     xor-int/lit8 p2, p1, 0x1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzro;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzpx;
 
     const/4 v1, 0x1
@@ -157,6 +164,7 @@
 
     iget-object p2, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzro;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzpx;
 
+    .line 2
     sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     invoke-virtual {p2, v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzpx;->zze(Ljava/lang/Boolean;)Lcom/google/android/gms/internal/mlkit_vision_barcode/zzpx;
@@ -165,12 +173,14 @@
 
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzro;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode/zzpx;
 
+    .line 3
     invoke-virtual {v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzpx;->zzm()Lcom/google/android/gms/internal/mlkit_vision_barcode/zzpz;
 
     move-result-object v0
 
     invoke-virtual {p2, v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zznf;->zzi(Lcom/google/android/gms/internal/mlkit_vision_barcode/zzpz;)Lcom/google/android/gms/internal/mlkit_vision_barcode/zznf;
 
+    .line 4
     :try_start_0
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrx;->zza()Lcom/google/android/gms/internal/mlkit_vision_barcode/zzrx;
 
@@ -182,6 +192,7 @@
 
     move-result-object p0
 
+    .line 5
     new-instance p1, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;
 
     invoke-direct {p1}, Lcom/google/firebase/encoders/json/JsonDataEncoderBuilder;-><init>()V
@@ -206,6 +217,7 @@
 
     const-string p1, "utf-8"
 
+    .line 6
     invoke-virtual {p0, p1}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
 
     move-result-object p0
@@ -219,14 +231,18 @@
 
     move-result-object p0
 
+    .line 7
     new-instance p1, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdo;
 
     invoke-direct {p1}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdo;-><init>()V
 
+    .line 8
     sget-object p2, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzlh;->zza:Lcom/google/firebase/encoders/config/Configurator;
 
+    .line 9
     invoke-interface {p2, p1}, Lcom/google/firebase/encoders/config/Configurator;->configure(Lcom/google/firebase/encoders/config/EncoderConfig;)V
 
+    .line 10
     invoke-virtual {p1}, Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdo;->zza()Lcom/google/android/gms/internal/mlkit_vision_barcode/zzdp;
 
     move-result-object p1
@@ -246,6 +262,7 @@
 
     const-string p2, "Failed to covert logging to UTF-8 byte array"
 
+    .line 11
     invoke-direct {p1, p2, p0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     throw p1

@@ -23,6 +23,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -53,8 +54,10 @@
 
     const-string v0, "sources is null"
 
+    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lio/reactivex/internal/operators/single/SingleAmb;
 
     const/4 v1, 0x0
@@ -89,10 +92,12 @@
         value = "none"
     .end annotation
 
+    .line 1
     array-length v0, p0
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-static {}, Lio/reactivex/internal/operators/single/SingleInternalHelper;->emptyThrower()Ljava/util/concurrent/Callable;
 
     move-result-object p0
@@ -103,6 +108,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     array-length v0, p0
 
@@ -112,6 +118,7 @@
 
     const/4 v0, 0x0
 
+    .line 4
     aget-object p0, p0, v0
 
     invoke-static {p0}, Lio/reactivex/Single;->wrap(Lio/reactivex/SingleSource;)Lio/reactivex/Single;
@@ -120,6 +127,7 @@
 
     return-object p0
 
+    .line 5
     :cond_1
     new-instance v0, Lio/reactivex/internal/operators/single/SingleAmb;
 
@@ -188,7 +196,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lio/reactivex/Single;->concat(Lkv/b;)Lio/reactivex/Flowable;
+    invoke-static {p0}, Lio/reactivex/Single;->concat(Ln/e/b;)Lio/reactivex/Flowable;
 
     move-result-object p0
 
@@ -260,7 +268,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lio/reactivex/Single;->concat(Lkv/b;)Lio/reactivex/Flowable;
+    invoke-static {p0}, Lio/reactivex/Single;->concat(Ln/e/b;)Lio/reactivex/Flowable;
 
     move-result-object p0
 
@@ -343,7 +351,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lio/reactivex/Single;->concat(Lkv/b;)Lio/reactivex/Flowable;
+    invoke-static {p0}, Lio/reactivex/Single;->concat(Ln/e/b;)Lio/reactivex/Flowable;
 
     move-result-object p0
 
@@ -382,21 +390,21 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lio/reactivex/Single;->concat(Lkv/b;)Lio/reactivex/Flowable;
+    invoke-static {p0}, Lio/reactivex/Single;->concat(Ln/e/b;)Lio/reactivex/Flowable;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static concat(Lkv/b;)Lio/reactivex/Flowable;
+.method public static concat(Ln/e/b;)Lio/reactivex/Flowable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkv/b<",
+            "Ln/e/b<",
             "+",
             "Lio/reactivex/SingleSource<",
             "+TT;>;>;)",
@@ -419,21 +427,21 @@
     const/4 v0, 0x2
 
     .line 4
-    invoke-static {p0, v0}, Lio/reactivex/Single;->concat(Lkv/b;I)Lio/reactivex/Flowable;
+    invoke-static {p0, v0}, Lio/reactivex/Single;->concat(Ln/e/b;I)Lio/reactivex/Flowable;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static concat(Lkv/b;I)Lio/reactivex/Flowable;
+.method public static concat(Ln/e/b;I)Lio/reactivex/Flowable;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkv/b<",
+            "Ln/e/b<",
             "+",
             "Lio/reactivex/SingleSource<",
             "+TT;>;>;I)",
@@ -472,7 +480,7 @@
 
     sget-object v2, Lio/reactivex/internal/util/ErrorMode;->IMMEDIATE:Lio/reactivex/internal/util/ErrorMode;
 
-    invoke-direct {v0, p0, v1, p1, v2}, Lio/reactivex/internal/operators/flowable/FlowableConcatMapPublisher;-><init>(Lkv/b;Lio/reactivex/functions/Function;ILio/reactivex/internal/util/ErrorMode;)V
+    invoke-direct {v0, p0, v1, p1, v2}, Lio/reactivex/internal/operators/flowable/FlowableConcatMapPublisher;-><init>(Ln/e/b;Lio/reactivex/functions/Function;ILio/reactivex/internal/util/ErrorMode;)V
 
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->onAssembly(Lio/reactivex/Flowable;)Lio/reactivex/Flowable;
 
@@ -516,11 +524,11 @@
 
     move-result-object v1
 
-    const/4 v2, 0x2
+    sget-object v2, Lio/reactivex/internal/util/ErrorMode;->IMMEDIATE:Lio/reactivex/internal/util/ErrorMode;
 
-    sget-object v3, Lio/reactivex/internal/util/ErrorMode;->IMMEDIATE:Lio/reactivex/internal/util/ErrorMode;
+    const/4 v3, 0x2
 
-    invoke-direct {v0, p0, v1, v2, v3}, Lio/reactivex/internal/operators/observable/ObservableConcatMap;-><init>(Lio/reactivex/ObservableSource;Lio/reactivex/functions/Function;ILio/reactivex/internal/util/ErrorMode;)V
+    invoke-direct {v0, p0, v1, v3, v2}, Lio/reactivex/internal/operators/observable/ObservableConcatMap;-><init>(Lio/reactivex/ObservableSource;Lio/reactivex/functions/Function;ILio/reactivex/internal/util/ErrorMode;)V
 
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->onAssembly(Lio/reactivex/Observable;)Lio/reactivex/Observable;
 
@@ -554,6 +562,7 @@
         value = "none"
     .end annotation
 
+    .line 1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableConcatMap;
 
     invoke-static {p0}, Lio/reactivex/Flowable;->fromArray([Ljava/lang/Object;)Lio/reactivex/Flowable;
@@ -564,11 +573,11 @@
 
     move-result-object v1
 
-    const/4 v2, 0x2
+    sget-object v2, Lio/reactivex/internal/util/ErrorMode;->BOUNDARY:Lio/reactivex/internal/util/ErrorMode;
 
-    sget-object v3, Lio/reactivex/internal/util/ErrorMode;->BOUNDARY:Lio/reactivex/internal/util/ErrorMode;
+    const/4 v3, 0x2
 
-    invoke-direct {v0, p0, v1, v2, v3}, Lio/reactivex/internal/operators/flowable/FlowableConcatMap;-><init>(Lio/reactivex/Flowable;Lio/reactivex/functions/Function;ILio/reactivex/internal/util/ErrorMode;)V
+    invoke-direct {v0, p0, v1, v3, v2}, Lio/reactivex/internal/operators/flowable/FlowableConcatMap;-><init>(Lio/reactivex/Flowable;Lio/reactivex/functions/Function;ILio/reactivex/internal/util/ErrorMode;)V
 
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->onAssembly(Lio/reactivex/Flowable;)Lio/reactivex/Flowable;
 
@@ -600,8 +609,10 @@
 
     const-string v0, "source is null"
 
+    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lio/reactivex/internal/operators/single/SingleCreate;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/single/SingleCreate;-><init>(Lio/reactivex/SingleOnSubscribe;)V
@@ -638,8 +649,10 @@
 
     const-string v0, "singleSupplier is null"
 
+    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lio/reactivex/internal/operators/single/SingleDefer;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/single/SingleDefer;-><init>(Ljava/util/concurrent/Callable;)V
@@ -677,12 +690,15 @@
 
     const-string v0, "first is null"
 
+    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "second is null"
 
+    .line 2
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 3
     new-instance v0, Lio/reactivex/internal/operators/single/SingleEquals;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/single/SingleEquals;-><init>(Lio/reactivex/SingleSource;Lio/reactivex/SingleSource;)V
@@ -795,8 +811,10 @@
 
     const-string v0, "callable is null"
 
+    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lio/reactivex/internal/operators/single/SingleFromCallable;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/single/SingleFromCallable;-><init>(Ljava/util/concurrent/Callable;)V
@@ -970,8 +988,10 @@
 
     const-string v0, "observableSource is null"
 
+    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lio/reactivex/internal/operators/observable/ObservableSingleSingle;
 
     const/4 v1, 0x0
@@ -985,14 +1005,14 @@
     return-object p0
 .end method
 
-.method public static fromPublisher(Lkv/b;)Lio/reactivex/Single;
+.method public static fromPublisher(Ln/e/b;)Lio/reactivex/Single;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkv/b<",
+            "Ln/e/b<",
             "+TT;>;)",
             "Lio/reactivex/Single<",
             "TT;>;"
@@ -1012,11 +1032,13 @@
 
     const-string v0, "publisher is null"
 
+    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lio/reactivex/internal/operators/single/SingleFromPublisher;
 
-    invoke-direct {v0, p0}, Lio/reactivex/internal/operators/single/SingleFromPublisher;-><init>(Lkv/b;)V
+    invoke-direct {v0, p0}, Lio/reactivex/internal/operators/single/SingleFromPublisher;-><init>(Ln/e/b;)V
 
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->onAssembly(Lio/reactivex/Single;)Lio/reactivex/Single;
 
@@ -1046,8 +1068,10 @@
 
     const-string v0, "value is null"
 
+    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lio/reactivex/internal/operators/single/SingleJust;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/single/SingleJust;-><init>(Ljava/lang/Object;)V
@@ -1113,7 +1137,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lio/reactivex/Single;->merge(Lkv/b;)Lio/reactivex/Flowable;
+    invoke-static {p0}, Lio/reactivex/Single;->merge(Ln/e/b;)Lio/reactivex/Flowable;
 
     move-result-object p0
 
@@ -1185,7 +1209,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lio/reactivex/Single;->merge(Lkv/b;)Lio/reactivex/Flowable;
+    invoke-static {p0}, Lio/reactivex/Single;->merge(Ln/e/b;)Lio/reactivex/Flowable;
 
     move-result-object p0
 
@@ -1268,7 +1292,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lio/reactivex/Single;->merge(Lkv/b;)Lio/reactivex/Flowable;
+    invoke-static {p0}, Lio/reactivex/Single;->merge(Ln/e/b;)Lio/reactivex/Flowable;
 
     move-result-object p0
 
@@ -1307,21 +1331,21 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lio/reactivex/Single;->merge(Lkv/b;)Lio/reactivex/Flowable;
+    invoke-static {p0}, Lio/reactivex/Single;->merge(Ln/e/b;)Lio/reactivex/Flowable;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static merge(Lkv/b;)Lio/reactivex/Flowable;
+.method public static merge(Ln/e/b;)Lio/reactivex/Flowable;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkv/b<",
+            "Ln/e/b<",
             "+",
             "Lio/reactivex/SingleSource<",
             "+TT;>;>;)",
@@ -1353,19 +1377,19 @@
 
     move-result-object v3
 
-    const/4 v4, 0x0
-
-    const v5, 0x7fffffff
-
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v6
+
+    const/4 v4, 0x0
+
+    const v5, 0x7fffffff
 
     move-object v1, v0
 
     move-object v2, p0
 
-    invoke-direct/range {v1 .. v6}, Lio/reactivex/internal/operators/flowable/FlowableFlatMapPublisher;-><init>(Lkv/b;Lio/reactivex/functions/Function;ZII)V
+    invoke-direct/range {v1 .. v6}, Lio/reactivex/internal/operators/flowable/FlowableFlatMapPublisher;-><init>(Ln/e/b;Lio/reactivex/functions/Function;ZII)V
 
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->onAssembly(Lio/reactivex/Flowable;)Lio/reactivex/Flowable;
 
@@ -1475,7 +1499,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lio/reactivex/Single;->mergeDelayError(Lkv/b;)Lio/reactivex/Flowable;
+    invoke-static {p0}, Lio/reactivex/Single;->mergeDelayError(Ln/e/b;)Lio/reactivex/Flowable;
 
     move-result-object p0
 
@@ -1550,7 +1574,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lio/reactivex/Single;->mergeDelayError(Lkv/b;)Lio/reactivex/Flowable;
+    invoke-static {p0}, Lio/reactivex/Single;->mergeDelayError(Ln/e/b;)Lio/reactivex/Flowable;
 
     move-result-object p0
 
@@ -1636,7 +1660,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lio/reactivex/Single;->mergeDelayError(Lkv/b;)Lio/reactivex/Flowable;
+    invoke-static {p0}, Lio/reactivex/Single;->mergeDelayError(Ln/e/b;)Lio/reactivex/Flowable;
 
     move-result-object p0
 
@@ -1678,21 +1702,21 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lio/reactivex/Single;->mergeDelayError(Lkv/b;)Lio/reactivex/Flowable;
+    invoke-static {p0}, Lio/reactivex/Single;->mergeDelayError(Ln/e/b;)Lio/reactivex/Flowable;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static mergeDelayError(Lkv/b;)Lio/reactivex/Flowable;
+.method public static mergeDelayError(Ln/e/b;)Lio/reactivex/Flowable;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkv/b<",
+            "Ln/e/b<",
             "+",
             "Lio/reactivex/SingleSource<",
             "+TT;>;>;)",
@@ -1727,19 +1751,19 @@
 
     move-result-object v3
 
-    const/4 v4, 0x1
-
-    const v5, 0x7fffffff
-
     invoke-static {}, Lio/reactivex/Flowable;->bufferSize()I
 
     move-result v6
+
+    const/4 v4, 0x1
+
+    const v5, 0x7fffffff
 
     move-object v1, v0
 
     move-object v2, p0
 
-    invoke-direct/range {v1 .. v6}, Lio/reactivex/internal/operators/flowable/FlowableFlatMapPublisher;-><init>(Lkv/b;Lio/reactivex/functions/Function;ZII)V
+    invoke-direct/range {v1 .. v6}, Lio/reactivex/internal/operators/flowable/FlowableFlatMapPublisher;-><init>(Ln/e/b;Lio/reactivex/functions/Function;ZII)V
 
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->onAssembly(Lio/reactivex/Flowable;)Lio/reactivex/Flowable;
 
@@ -1767,6 +1791,7 @@
         value = "none"
     .end annotation
 
+    .line 1
     sget-object v0, Lio/reactivex/internal/operators/single/SingleNever;->INSTANCE:Lio/reactivex/Single;
 
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->onAssembly(Lio/reactivex/Single;)Lio/reactivex/Single;
@@ -1792,12 +1817,15 @@
 
     const-string v0, "unit is null"
 
+    .line 1
     invoke-static {p3, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "scheduler is null"
 
+    .line 2
     invoke-static {p4, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 3
     new-instance v0, Lio/reactivex/internal/operators/single/SingleTimeout;
 
     move-object v1, v0
@@ -1910,6 +1938,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lio/reactivex/internal/operators/flowable/FlowableSingleSingle;
 
     const/4 v1, 0x0
@@ -1946,12 +1975,15 @@
 
     const-string v0, "onSubscribe is null"
 
+    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     instance-of v0, p0, Lio/reactivex/Single;
 
     if-nez v0, :cond_0
 
+    .line 3
     new-instance v0, Lio/reactivex/internal/operators/single/SingleFromUnsafeSource;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/single/SingleFromUnsafeSource;-><init>(Lio/reactivex/SingleSource;)V
@@ -1962,6 +1994,7 @@
 
     return-object p0
 
+    .line 4
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -2090,12 +2123,15 @@
 
     const-string v0, "source is null"
 
+    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     instance-of v0, p0, Lio/reactivex/Single;
 
     if-eqz v0, :cond_0
 
+    .line 3
     check-cast p0, Lio/reactivex/Single;
 
     invoke-static {p0}, Lio/reactivex/plugins/RxJavaPlugins;->onAssembly(Lio/reactivex/Single;)Lio/reactivex/Single;
@@ -2104,6 +2140,7 @@
 
     return-object p0
 
+    .line 4
     :cond_0
     new-instance v0, Lio/reactivex/internal/operators/single/SingleFromUnsafeSource;
 
@@ -3064,16 +3101,20 @@
 
     const-string v0, "zipper is null"
 
+    .line 1
     invoke-static {p0, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const-string v0, "sources is null"
 
+    .line 2
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 3
     array-length v0, p1
 
     if-nez v0, :cond_0
 
+    .line 4
     new-instance p0, Ljava/util/NoSuchElementException;
 
     invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
@@ -3084,6 +3125,7 @@
 
     return-object p0
 
+    .line 5
     :cond_0
     new-instance v0, Lio/reactivex/internal/operators/single/SingleZipArray;
 
@@ -3119,6 +3161,7 @@
 
     const-string v0, "other is null"
 
+    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/4 v0, 0x2
@@ -3133,6 +3176,7 @@
 
     aput-object p1, v0, p0
 
+    .line 2
     invoke-static {v0}, Lio/reactivex/Single;->ambArray([Lio/reactivex/SingleSource;)Lio/reactivex/Single;
 
     move-result-object p0
@@ -3168,6 +3212,7 @@
 
     const-string v0, "converter is null"
 
+    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -3196,12 +3241,15 @@
         value = "none"
     .end annotation
 
+    .line 1
     new-instance v0, Lio/reactivex/internal/observers/BlockingMultiObserver;
 
     invoke-direct {v0}, Lio/reactivex/internal/observers/BlockingMultiObserver;-><init>()V
 
+    .line 2
     invoke-virtual {p0, v0}, Lio/reactivex/Single;->subscribe(Lio/reactivex/SingleObserver;)V
 
+    .line 3
     invoke-virtual {v0}, Lio/reactivex/internal/observers/BlockingMultiObserver;->blockingGet()Ljava/lang/Object;
 
     move-result-object p0
@@ -3226,6 +3274,7 @@
         value = "none"
     .end annotation
 
+    .line 1
     new-instance v0, Lio/reactivex/internal/operators/single/SingleCache;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/single/SingleCache;-><init>(Lio/reactivex/SingleSource;)V
@@ -3260,8 +3309,10 @@
 
     const-string v0, "clazz is null"
 
+    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     invoke-static {p1}, Lio/reactivex/internal/functions/Functions;->castFunction(Ljava/lang/Class;)Lio/reactivex/functions/Function;
 
     move-result-object p1
@@ -3296,6 +3347,7 @@
 
     const-string v0, "transformer is null"
 
+    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -3336,6 +3388,7 @@
         value = "none"
     .end annotation
 
+    .line 1
     invoke-static {p0, p1}, Lio/reactivex/Single;->concat(Lio/reactivex/SingleSource;Lio/reactivex/SingleSource;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -3771,14 +3824,14 @@
     return-object p0
 .end method
 
-.method public final delaySubscription(Lkv/b;)Lio/reactivex/Single;
+.method public final delaySubscription(Ln/e/b;)Lio/reactivex/Single;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<U:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkv/b<",
+            "Ln/e/b<",
             "TU;>;)",
             "Lio/reactivex/Single<",
             "TT;>;"
@@ -3804,7 +3857,7 @@
     .line 8
     new-instance v0, Lio/reactivex/internal/operators/single/SingleDelayWithPublisher;
 
-    invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/single/SingleDelayWithPublisher;-><init>(Lio/reactivex/SingleSource;Lkv/b;)V
+    invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/single/SingleDelayWithPublisher;-><init>(Lio/reactivex/SingleSource;Ln/e/b;)V
 
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->onAssembly(Lio/reactivex/Single;)Lio/reactivex/Single;
 
@@ -3834,8 +3887,10 @@
 
     const-string v0, "doAfterSuccess is null"
 
+    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lio/reactivex/internal/operators/single/SingleDoAfterSuccess;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/single/SingleDoAfterSuccess;-><init>(Lio/reactivex/SingleSource;Lio/reactivex/functions/Consumer;)V
@@ -3868,8 +3923,10 @@
 
     const-string v0, "onAfterTerminate is null"
 
+    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lio/reactivex/internal/operators/single/SingleDoAfterTerminate;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/single/SingleDoAfterTerminate;-><init>(Lio/reactivex/SingleSource;Lio/reactivex/functions/Action;)V
@@ -3902,8 +3959,10 @@
 
     const-string v0, "onFinally is null"
 
+    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lio/reactivex/internal/operators/single/SingleDoFinally;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/single/SingleDoFinally;-><init>(Lio/reactivex/SingleSource;Lio/reactivex/functions/Action;)V
@@ -3936,8 +3995,10 @@
 
     const-string v0, "onDispose is null"
 
+    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lio/reactivex/internal/operators/single/SingleDoOnDispose;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/single/SingleDoOnDispose;-><init>(Lio/reactivex/SingleSource;Lio/reactivex/functions/Action;)V
@@ -3972,8 +4033,10 @@
 
     const-string v0, "onError is null"
 
+    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lio/reactivex/internal/operators/single/SingleDoOnError;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/single/SingleDoOnError;-><init>(Lio/reactivex/SingleSource;Lio/reactivex/functions/Consumer;)V
@@ -4008,8 +4071,10 @@
 
     const-string v0, "onEvent is null"
 
+    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lio/reactivex/internal/operators/single/SingleDoOnEvent;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/single/SingleDoOnEvent;-><init>(Lio/reactivex/SingleSource;Lio/reactivex/functions/BiConsumer;)V
@@ -4044,8 +4109,10 @@
 
     const-string v0, "onSubscribe is null"
 
+    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lio/reactivex/internal/operators/single/SingleDoOnSubscribe;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/single/SingleDoOnSubscribe;-><init>(Lio/reactivex/SingleSource;Lio/reactivex/functions/Consumer;)V
@@ -4078,8 +4145,10 @@
 
     const-string v0, "onSuccess is null"
 
+    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lio/reactivex/internal/operators/single/SingleDoOnSuccess;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/single/SingleDoOnSuccess;-><init>(Lio/reactivex/SingleSource;Lio/reactivex/functions/Consumer;)V
@@ -4112,8 +4181,10 @@
 
     const-string v0, "predicate is null"
 
+    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lio/reactivex/internal/operators/maybe/MaybeFilterSingle;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/maybe/MaybeFilterSingle;-><init>(Lio/reactivex/SingleSource;Lio/reactivex/functions/Predicate;)V
@@ -4150,8 +4221,10 @@
 
     const-string v0, "mapper is null"
 
+    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lio/reactivex/internal/operators/single/SingleFlatMap;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/single/SingleFlatMap;-><init>(Lio/reactivex/SingleSource;Lio/reactivex/functions/Function;)V
@@ -4185,8 +4258,10 @@
 
     const-string v0, "mapper is null"
 
+    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lio/reactivex/internal/operators/single/SingleFlatMapCompletable;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/single/SingleFlatMapCompletable;-><init>(Lio/reactivex/SingleSource;Lio/reactivex/functions/Function;)V
@@ -4223,8 +4298,10 @@
 
     const-string v0, "mapper is null"
 
+    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lio/reactivex/internal/operators/single/SingleFlatMapMaybe;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/single/SingleFlatMapMaybe;-><init>(Lio/reactivex/SingleSource;Lio/reactivex/functions/Function;)V
@@ -4259,6 +4336,7 @@
         value = "none"
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lio/reactivex/Single;->toObservable()Lio/reactivex/Observable;
 
     move-result-object p0
@@ -4279,7 +4357,7 @@
             ">(",
             "Lio/reactivex/functions/Function<",
             "-TT;+",
-            "Lkv/b<",
+            "Ln/e/b<",
             "+TR;>;>;)",
             "Lio/reactivex/Flowable<",
             "TR;>;"
@@ -4297,6 +4375,7 @@
         value = "none"
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lio/reactivex/Single;->toFlowable()Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -4337,8 +4416,10 @@
 
     const-string v0, "mapper is null"
 
+    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lio/reactivex/internal/operators/single/SingleFlatMapIterableFlowable;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/single/SingleFlatMapIterableFlowable;-><init>(Lio/reactivex/SingleSource;Lio/reactivex/functions/Function;)V
@@ -4375,8 +4456,10 @@
 
     const-string v0, "mapper is null"
 
+    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lio/reactivex/internal/operators/single/SingleFlatMapIterableObservable;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/single/SingleFlatMapIterableObservable;-><init>(Lio/reactivex/SingleSource;Lio/reactivex/functions/Function;)V
@@ -4405,6 +4488,7 @@
         value = "none"
     .end annotation
 
+    .line 1
     new-instance v0, Lio/reactivex/internal/operators/single/SingleHide;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/single/SingleHide;-><init>(Lio/reactivex/SingleSource;)V
@@ -4439,8 +4523,10 @@
 
     const-string v0, "onLift is null"
 
+    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lio/reactivex/internal/operators/single/SingleLift;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/single/SingleLift;-><init>(Lio/reactivex/SingleSource;Lio/reactivex/SingleOperator;)V
@@ -4475,8 +4561,10 @@
 
     const-string v0, "mapper is null"
 
+    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lio/reactivex/internal/operators/single/SingleMap;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/single/SingleMap;-><init>(Lio/reactivex/SingleSource;Lio/reactivex/functions/Function;)V
@@ -4511,6 +4599,7 @@
         value = "none"
     .end annotation
 
+    .line 1
     invoke-static {p0, p1}, Lio/reactivex/Single;->merge(Lio/reactivex/SingleSource;Lio/reactivex/SingleSource;)Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -4539,8 +4628,10 @@
 
     const-string v0, "scheduler is null"
 
+    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lio/reactivex/internal/operators/single/SingleObserveOn;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/single/SingleObserveOn;-><init>(Lio/reactivex/SingleSource;Lio/reactivex/Scheduler;)V
@@ -4650,8 +4741,10 @@
 
     const-string v0, "resumeFunction is null"
 
+    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lio/reactivex/internal/operators/single/SingleOnErrorReturn;
 
     const/4 v1, 0x0
@@ -4684,8 +4777,10 @@
 
     const-string v0, "value is null"
 
+    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lio/reactivex/internal/operators/single/SingleOnErrorReturn;
 
     const/4 v1, 0x0
@@ -4719,6 +4814,7 @@
         value = "none"
     .end annotation
 
+    .line 1
     new-instance v0, Lio/reactivex/internal/operators/single/SingleDetach;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/single/SingleDetach;-><init>(Lio/reactivex/SingleSource;)V
@@ -4819,6 +4915,7 @@
         value = "none"
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lio/reactivex/Single;->toFlowable()Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -4840,7 +4937,7 @@
             "Lio/reactivex/Flowable<",
             "Ljava/lang/Object;",
             ">;+",
-            "Lkv/b<",
+            "Ln/e/b<",
             "*>;>;)",
             "Lio/reactivex/Flowable<",
             "TT;>;"
@@ -4858,6 +4955,7 @@
         value = "none"
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lio/reactivex/Single;->toFlowable()Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -5061,7 +5159,7 @@
             "Lio/reactivex/Flowable<",
             "Ljava/lang/Throwable;",
             ">;+",
-            "Lkv/b<",
+            "Ln/e/b<",
             "*>;>;)",
             "Lio/reactivex/Single<",
             "TT;>;"
@@ -5075,6 +5173,7 @@
         value = "none"
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lio/reactivex/Single;->toFlowable()Lio/reactivex/Flowable;
 
     move-result-object p0
@@ -5269,7 +5368,7 @@
     invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     .line 16
-    invoke-virtual {p1, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-virtual {p1, p0}, Ljava/lang/NullPointerException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     .line 17
     throw p1
@@ -5316,8 +5415,10 @@
 
     const-string v0, "scheduler is null"
 
+    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lio/reactivex/internal/operators/single/SingleSubscribeOn;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/single/SingleSubscribeOn;-><init>(Lio/reactivex/SingleSource;Lio/reactivex/Scheduler;)V
@@ -5346,6 +5447,7 @@
         value = "none"
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lio/reactivex/Single;->subscribe(Lio/reactivex/SingleObserver;)V
 
     return-object p1
@@ -5380,7 +5482,7 @@
 
     invoke-direct {v0, p1}, Lio/reactivex/internal/operators/completable/CompletableToFlowable;-><init>(Lio/reactivex/CompletableSource;)V
 
-    invoke-virtual {p0, v0}, Lio/reactivex/Single;->takeUntil(Lkv/b;)Lio/reactivex/Single;
+    invoke-virtual {p0, v0}, Lio/reactivex/Single;->takeUntil(Ln/e/b;)Lio/reactivex/Single;
 
     move-result-object p0
 
@@ -5418,21 +5520,21 @@
 
     invoke-direct {v0, p1}, Lio/reactivex/internal/operators/single/SingleToFlowable;-><init>(Lio/reactivex/SingleSource;)V
 
-    invoke-virtual {p0, v0}, Lio/reactivex/Single;->takeUntil(Lkv/b;)Lio/reactivex/Single;
+    invoke-virtual {p0, v0}, Lio/reactivex/Single;->takeUntil(Ln/e/b;)Lio/reactivex/Single;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public final takeUntil(Lkv/b;)Lio/reactivex/Single;
+.method public final takeUntil(Ln/e/b;)Lio/reactivex/Single;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<E:",
             "Ljava/lang/Object;",
             ">(",
-            "Lkv/b<",
+            "Ln/e/b<",
             "TE;>;)",
             "Lio/reactivex/Single<",
             "TT;>;"
@@ -5458,7 +5560,7 @@
     .line 4
     new-instance v0, Lio/reactivex/internal/operators/single/SingleTakeUntil;
 
-    invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/single/SingleTakeUntil;-><init>(Lio/reactivex/SingleSource;Lkv/b;)V
+    invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/single/SingleTakeUntil;-><init>(Lio/reactivex/SingleSource;Ln/e/b;)V
 
     invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->onAssembly(Lio/reactivex/Single;)Lio/reactivex/Single;
 
@@ -5709,6 +5811,7 @@
     :try_start_0
     const-string v0, "convert is null"
 
+    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -5726,8 +5829,10 @@
     :catchall_0
     move-exception p0
 
+    .line 2
     invoke-static {p0}, Lio/reactivex/exceptions/Exceptions;->throwIfFatal(Ljava/lang/Throwable;)V
 
+    .line 3
     invoke-static {p0}, Lio/reactivex/internal/util/ExceptionHelper;->wrapOrThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     move-result-object p0
@@ -5744,6 +5849,7 @@
         value = "none"
     .end annotation
 
+    .line 1
     new-instance v0, Lio/reactivex/internal/operators/completable/CompletableFromSingle;
 
     invoke-direct {v0, p0}, Lio/reactivex/internal/operators/completable/CompletableFromSingle;-><init>(Lio/reactivex/SingleSource;)V
@@ -5776,10 +5882,12 @@
         value = "none"
     .end annotation
 
+    .line 1
     instance-of v0, p0, Lio/reactivex/internal/fuseable/FuseToFlowable;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Lio/reactivex/internal/fuseable/FuseToFlowable;
 
     invoke-interface {p0}, Lio/reactivex/internal/fuseable/FuseToFlowable;->fuseToFlowable()Lio/reactivex/Flowable;
@@ -5788,6 +5896,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance v0, Lio/reactivex/internal/operators/single/SingleToFlowable;
 
@@ -5817,6 +5926,7 @@
         value = "none"
     .end annotation
 
+    .line 1
     new-instance v0, Lio/reactivex/internal/observers/FutureSingleObserver;
 
     invoke-direct {v0}, Lio/reactivex/internal/observers/FutureSingleObserver;-><init>()V
@@ -5847,10 +5957,12 @@
         value = "none"
     .end annotation
 
+    .line 1
     instance-of v0, p0, Lio/reactivex/internal/fuseable/FuseToMaybe;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Lio/reactivex/internal/fuseable/FuseToMaybe;
 
     invoke-interface {p0}, Lio/reactivex/internal/fuseable/FuseToMaybe;->fuseToMaybe()Lio/reactivex/Maybe;
@@ -5859,6 +5971,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance v0, Lio/reactivex/internal/operators/maybe/MaybeFromSingle;
 
@@ -5888,10 +6001,12 @@
         value = "none"
     .end annotation
 
+    .line 1
     instance-of v0, p0, Lio/reactivex/internal/fuseable/FuseToObservable;
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p0, Lio/reactivex/internal/fuseable/FuseToObservable;
 
     invoke-interface {p0}, Lio/reactivex/internal/fuseable/FuseToObservable;->fuseToObservable()Lio/reactivex/Observable;
@@ -5900,6 +6015,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance v0, Lio/reactivex/internal/operators/single/SingleToObservable;
 
@@ -5936,8 +6052,10 @@
 
     const-string v0, "scheduler is null"
 
+    .line 1
     invoke-static {p1, v0}, Lio/reactivex/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
+    .line 2
     new-instance v0, Lio/reactivex/internal/operators/single/SingleUnsubscribeOn;
 
     invoke-direct {v0, p0, p1}, Lio/reactivex/internal/operators/single/SingleUnsubscribeOn;-><init>(Lio/reactivex/SingleSource;Lio/reactivex/Scheduler;)V
@@ -5974,6 +6092,7 @@
         value = "none"
     .end annotation
 
+    .line 1
     invoke-static {p0, p1, p2}, Lio/reactivex/Single;->zip(Lio/reactivex/SingleSource;Lio/reactivex/SingleSource;Lio/reactivex/functions/BiFunction;)Lio/reactivex/Single;
 
     move-result-object p0

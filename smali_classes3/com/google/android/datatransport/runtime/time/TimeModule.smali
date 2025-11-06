@@ -12,6 +12,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,6 +26,7 @@
     .annotation build Lcom/google/android/datatransport/runtime/time/WallTime;
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/datatransport/runtime/time/WallTimeClock;
 
     invoke-direct {v0}, Lcom/google/android/datatransport/runtime/time/WallTimeClock;-><init>()V
@@ -40,6 +42,7 @@
     .annotation build Lcom/google/android/datatransport/runtime/time/Monotonic;
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/datatransport/runtime/time/UptimeClock;
 
     invoke-direct {v0}, Lcom/google/android/datatransport/runtime/time/UptimeClock;-><init>()V

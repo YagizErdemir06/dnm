@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/DefaultMediaClock;
+.class public final Lcom/google/android/exoplayer2/DefaultMediaClock;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -38,10 +38,13 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/DefaultMediaClock$PlaybackParametersListener;Lcom/google/android/exoplayer2/util/Clock;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->listener:Lcom/google/android/exoplayer2/DefaultMediaClock$PlaybackParametersListener;
 
+    .line 3
     new-instance p1, Lcom/google/android/exoplayer2/util/StandaloneMediaClock;
 
     invoke-direct {p1, p2}, Lcom/google/android/exoplayer2/util/StandaloneMediaClock;-><init>(Lcom/google/android/exoplayer2/util/Clock;)V
@@ -50,6 +53,7 @@
 
     const/4 p1, 0x1
 
+    .line 4
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->isUsingStandaloneClock:Z
 
     return-void
@@ -58,10 +62,12 @@
 .method private shouldUseStandaloneClock(Z)Z
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->rendererClockSource:Lcom/google/android/exoplayer2/Renderer;
 
     if-eqz v0, :cond_1
 
+    .line 2
     invoke-interface {v0}, Lcom/google/android/exoplayer2/Renderer;->isEnded()Z
 
     move-result v0
@@ -70,6 +76,7 @@
 
     iget-object v0, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->rendererClockSource:Lcom/google/android/exoplayer2/Renderer;
 
+    .line 3
     invoke-interface {v0}, Lcom/google/android/exoplayer2/Renderer;->isReady()Z
 
     move-result v0
@@ -80,6 +87,7 @@
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->rendererClockSource:Lcom/google/android/exoplayer2/Renderer;
 
+    .line 4
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Renderer;->hasReadStreamToEnd()Z
 
     move-result p0
@@ -104,6 +112,7 @@
 .method private syncClocks(Z)V
     .locals 4
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/DefaultMediaClock;->shouldUseStandaloneClock(Z)Z
 
     move-result p1
@@ -112,12 +121,15 @@
 
     const/4 p1, 0x1
 
+    .line 2
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->isUsingStandaloneClock:Z
 
+    .line 3
     iget-boolean p1, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->standaloneClockIsStarted:Z
 
     if-eqz p1, :cond_0
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->standaloneClock:Lcom/google/android/exoplayer2/util/StandaloneMediaClock;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/StandaloneMediaClock;->start()V
@@ -125,6 +137,7 @@
     :cond_0
     return-void
 
+    .line 5
     :cond_1
     iget-object p1, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->rendererClock:Lcom/google/android/exoplayer2/util/MediaClock;
 
@@ -134,14 +147,17 @@
 
     check-cast p1, Lcom/google/android/exoplayer2/util/MediaClock;
 
+    .line 6
     invoke-interface {p1}, Lcom/google/android/exoplayer2/util/MediaClock;->getPositionUs()J
 
     move-result-wide v0
 
+    .line 7
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->isUsingStandaloneClock:Z
 
     if-eqz v2, :cond_3
 
+    .line 8
     iget-object v2, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->standaloneClock:Lcom/google/android/exoplayer2/util/StandaloneMediaClock;
 
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/util/StandaloneMediaClock;->getPositionUs()J
@@ -152,6 +168,7 @@
 
     if-gez v2, :cond_2
 
+    .line 9
     iget-object p0, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->standaloneClock:Lcom/google/android/exoplayer2/util/StandaloneMediaClock;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/StandaloneMediaClock;->stop()V
@@ -161,25 +178,31 @@
     :cond_2
     const/4 v2, 0x0
 
+    .line 10
     iput-boolean v2, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->isUsingStandaloneClock:Z
 
+    .line 11
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->standaloneClockIsStarted:Z
 
     if-eqz v2, :cond_3
 
+    .line 12
     iget-object v2, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->standaloneClock:Lcom/google/android/exoplayer2/util/StandaloneMediaClock;
 
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/util/StandaloneMediaClock;->start()V
 
+    .line 13
     :cond_3
     iget-object v2, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->standaloneClock:Lcom/google/android/exoplayer2/util/StandaloneMediaClock;
 
     invoke-virtual {v2, v0, v1}, Lcom/google/android/exoplayer2/util/StandaloneMediaClock;->resetPosition(J)V
 
+    .line 14
     invoke-interface {p1}, Lcom/google/android/exoplayer2/util/MediaClock;->getPlaybackParameters()Lcom/google/android/exoplayer2/PlaybackParameters;
 
     move-result-object p1
 
+    .line 15
     iget-object v0, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->standaloneClock:Lcom/google/android/exoplayer2/util/StandaloneMediaClock;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/util/StandaloneMediaClock;->getPlaybackParameters()Lcom/google/android/exoplayer2/PlaybackParameters;
@@ -192,10 +215,12 @@
 
     if-nez v0, :cond_4
 
+    .line 16
     iget-object v0, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->standaloneClock:Lcom/google/android/exoplayer2/util/StandaloneMediaClock;
 
     invoke-virtual {v0, p1}, Lcom/google/android/exoplayer2/util/StandaloneMediaClock;->setPlaybackParameters(Lcom/google/android/exoplayer2/PlaybackParameters;)V
 
+    .line 17
     iget-object p0, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->listener:Lcom/google/android/exoplayer2/DefaultMediaClock$PlaybackParametersListener;
 
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/DefaultMediaClock$PlaybackParametersListener;->onPlaybackParametersChanged(Lcom/google/android/exoplayer2/PlaybackParameters;)V
@@ -209,16 +234,19 @@
 .method public getPlaybackParameters()Lcom/google/android/exoplayer2/PlaybackParameters;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->rendererClock:Lcom/google/android/exoplayer2/util/MediaClock;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {v0}, Lcom/google/android/exoplayer2/util/MediaClock;->getPlaybackParameters()Lcom/google/android/exoplayer2/PlaybackParameters;
 
     move-result-object p0
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->standaloneClock:Lcom/google/android/exoplayer2/util/StandaloneMediaClock;
 
@@ -233,10 +261,12 @@
 .method public getPositionUs()J
     .locals 2
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->isUsingStandaloneClock:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->standaloneClock:Lcom/google/android/exoplayer2/util/StandaloneMediaClock;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/StandaloneMediaClock;->getPositionUs()J
@@ -245,6 +275,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->rendererClock:Lcom/google/android/exoplayer2/util/MediaClock;
 
@@ -265,18 +296,22 @@
 .method public onRendererDisabled(Lcom/google/android/exoplayer2/Renderer;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->rendererClockSource:Lcom/google/android/exoplayer2/Renderer;
 
     if-ne p1, v0, :cond_0
 
     const/4 p1, 0x0
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->rendererClock:Lcom/google/android/exoplayer2/util/MediaClock;
 
+    .line 3
     iput-object p1, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->rendererClockSource:Lcom/google/android/exoplayer2/Renderer;
 
     const/4 p1, 0x1
 
+    .line 4
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->isUsingStandaloneClock:Z
 
     :cond_0
@@ -291,22 +326,27 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Lcom/google/android/exoplayer2/Renderer;->getMediaClock()Lcom/google/android/exoplayer2/util/MediaClock;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->rendererClock:Lcom/google/android/exoplayer2/util/MediaClock;
 
     if-eq v0, v1, :cond_1
 
     if-nez v1, :cond_0
 
+    .line 3
     iput-object v0, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->rendererClock:Lcom/google/android/exoplayer2/util/MediaClock;
 
+    .line 4
     iput-object p1, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->rendererClockSource:Lcom/google/android/exoplayer2/Renderer;
 
+    .line 5
     iget-object p0, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->standaloneClock:Lcom/google/android/exoplayer2/util/StandaloneMediaClock;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/StandaloneMediaClock;->getPlaybackParameters()Lcom/google/android/exoplayer2/PlaybackParameters;
@@ -317,6 +357,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -338,6 +379,7 @@
 .method public resetPosition(J)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->standaloneClock:Lcom/google/android/exoplayer2/util/StandaloneMediaClock;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/android/exoplayer2/util/StandaloneMediaClock;->resetPosition(J)V
@@ -348,18 +390,22 @@
 .method public setPlaybackParameters(Lcom/google/android/exoplayer2/PlaybackParameters;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->rendererClock:Lcom/google/android/exoplayer2/util/MediaClock;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {v0, p1}, Lcom/google/android/exoplayer2/util/MediaClock;->setPlaybackParameters(Lcom/google/android/exoplayer2/PlaybackParameters;)V
 
+    .line 3
     iget-object p1, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->rendererClock:Lcom/google/android/exoplayer2/util/MediaClock;
 
     invoke-interface {p1}, Lcom/google/android/exoplayer2/util/MediaClock;->getPlaybackParameters()Lcom/google/android/exoplayer2/PlaybackParameters;
 
     move-result-object p1
 
+    .line 4
     :cond_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->standaloneClock:Lcom/google/android/exoplayer2/util/StandaloneMediaClock;
 
@@ -373,8 +419,10 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->standaloneClockIsStarted:Z
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->standaloneClock:Lcom/google/android/exoplayer2/util/StandaloneMediaClock;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/StandaloneMediaClock;->start()V
@@ -387,8 +435,10 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->standaloneClockIsStarted:Z
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/DefaultMediaClock;->standaloneClock:Lcom/google/android/exoplayer2/util/StandaloneMediaClock;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/StandaloneMediaClock;->stop()V
@@ -399,8 +449,10 @@
 .method public syncAndGetPositionUs(Z)J
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/DefaultMediaClock;->syncClocks(Z)V
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/DefaultMediaClock;->getPositionUs()J
 
     move-result-wide p0

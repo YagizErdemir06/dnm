@@ -12,6 +12,7 @@
 
     const-string v0, "com.google.android.gms.common.internal.IGmsCallbacks"
 
+    .line 1
     invoke-direct {p0, p1, v0}, Lcom/google/android/gms/internal/common/zza;-><init>(Landroid/os/IBinder;Ljava/lang/String;)V
 
     return-void
@@ -27,18 +28,23 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/common/zza;->zza()Landroid/os/Parcel;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 3
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
+    .line 4
     invoke-static {v0, p3}, Lcom/google/android/gms/internal/common/zzc;->zzd(Landroid/os/Parcel;Landroid/os/Parcelable;)V
 
     const/4 p1, 0x1
 
+    .line 5
     invoke-virtual {p0, p1, v0}, Lcom/google/android/gms/internal/common/zza;->zzC(ILandroid/os/Parcel;)V
 
     return-void

@@ -16,4 +16,14 @@
 
 # virtual methods
 .method public abstract a(Lcom/android/camera/ui/ModeSelectView$ModeSelectViewHolder;Z)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "holder",
+            "selected"
+        }
+    .end annotation
 .end method

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/datatransport/runtime/backends/AutoValue_CreationContext;
+.class public final Lcom/google/android/datatransport/runtime/backends/AutoValue_CreationContext;
 .super Lcom/google/android/datatransport/runtime/backends/CreationContext;
 .source "SourceFile"
 
@@ -15,63 +15,44 @@
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Lcom/google/android/datatransport/runtime/time/Clock;Lcom/google/android/datatransport/runtime/time/Clock;Ljava/lang/String;)V
-    .locals 0
+    .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/datatransport/runtime/backends/CreationContext;-><init>()V
 
-    if-eqz p1, :cond_3
+    const-string v0, "Null applicationContext"
 
+    .line 2
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 3
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_CreationContext;->applicationContext:Landroid/content/Context;
-
-    if-eqz p2, :cond_2
-
-    iput-object p2, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_CreationContext;->wallClock:Lcom/google/android/datatransport/runtime/time/Clock;
-
-    if-eqz p3, :cond_1
-
-    iput-object p3, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_CreationContext;->monotonicClock:Lcom/google/android/datatransport/runtime/time/Clock;
-
-    if-eqz p4, :cond_0
-
-    iput-object p4, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_CreationContext;->backendName:Ljava/lang/String;
-
-    return-void
-
-    :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string p1, "Null backendName"
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string p1, "Null monotonicClock"
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_2
-    new-instance p0, Ljava/lang/NullPointerException;
 
     const-string p1, "Null wallClock"
 
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    .line 4
+    invoke-static {p2, p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    throw p0
+    .line 5
+    iput-object p2, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_CreationContext;->wallClock:Lcom/google/android/datatransport/runtime/time/Clock;
 
-    :cond_3
-    new-instance p0, Ljava/lang/NullPointerException;
+    const-string p1, "Null monotonicClock"
 
-    const-string p1, "Null applicationContext"
+    .line 6
+    invoke-static {p3, p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    .line 7
+    iput-object p3, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_CreationContext;->monotonicClock:Lcom/google/android/datatransport/runtime/time/Clock;
 
-    throw p0
+    const-string p1, "Null backendName"
+
+    .line 8
+    invoke-static {p4, p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 9
+    iput-object p4, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_CreationContext;->backendName:Ljava/lang/String;
+
+    return-void
 .end method
 
 
@@ -85,6 +66,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/android/datatransport/runtime/backends/CreationContext;
 
@@ -92,8 +74,10 @@
 
     if-eqz v1, :cond_2
 
+    .line 2
     check-cast p1, Lcom/google/android/datatransport/runtime/backends/CreationContext;
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_CreationContext;->applicationContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/backends/CreationContext;->getApplicationContext()Landroid/content/Context;
@@ -108,6 +92,7 @@
 
     iget-object v1, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_CreationContext;->wallClock:Lcom/google/android/datatransport/runtime/time/Clock;
 
+    .line 4
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/backends/CreationContext;->getWallClock()Lcom/google/android/datatransport/runtime/time/Clock;
 
     move-result-object v3
@@ -120,6 +105,7 @@
 
     iget-object v1, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_CreationContext;->monotonicClock:Lcom/google/android/datatransport/runtime/time/Clock;
 
+    .line 5
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/backends/CreationContext;->getMonotonicClock()Lcom/google/android/datatransport/runtime/time/Clock;
 
     move-result-object v3
@@ -132,6 +118,7 @@
 
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_CreationContext;->backendName:Ljava/lang/String;
 
+    .line 6
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/backends/CreationContext;->getBackendName()Ljava/lang/String;
 
     move-result-object p1
@@ -157,6 +144,7 @@
 .method public getApplicationContext()Landroid/content/Context;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_CreationContext;->applicationContext:Landroid/content/Context;
 
     return-object p0
@@ -167,6 +155,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_CreationContext;->backendName:Ljava/lang/String;
 
     return-object p0
@@ -175,6 +164,7 @@
 .method public getMonotonicClock()Lcom/google/android/datatransport/runtime/time/Clock;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_CreationContext;->monotonicClock:Lcom/google/android/datatransport/runtime/time/Clock;
 
     return-object p0
@@ -183,6 +173,7 @@
 .method public getWallClock()Lcom/google/android/datatransport/runtime/time/Clock;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_CreationContext;->wallClock:Lcom/google/android/datatransport/runtime/time/Clock;
 
     return-object p0
@@ -191,6 +182,7 @@
 .method public hashCode()I
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_CreationContext;->applicationContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -203,6 +195,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 2
     iget-object v2, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_CreationContext;->wallClock:Lcom/google/android/datatransport/runtime/time/Clock;
 
     invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
@@ -213,6 +206,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 3
     iget-object v2, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_CreationContext;->monotonicClock:Lcom/google/android/datatransport/runtime/time/Clock;
 
     invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
@@ -223,6 +217,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/backends/AutoValue_CreationContext;->backendName:Ljava/lang/String;
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -237,6 +232,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

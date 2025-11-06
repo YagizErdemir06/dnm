@@ -24,13 +24,22 @@
 
 .field private gender_match:I
 
-.field final synthetic this$0:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;
+.field public final synthetic this$0:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;->this$0:Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,6 +52,7 @@
 .method public getBundle()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;->bundle:Ljava/lang/String;
 
     return-object p0
@@ -51,6 +61,7 @@
 .method public getGender()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;->gender:I
 
     return p0
@@ -59,6 +70,7 @@
 .method public getGender_match()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;->gender_match:I
 
     return p0
@@ -66,7 +78,16 @@
 
 .method public setBundle(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "bundle"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;->bundle:Ljava/lang/String;
 
     return-void
@@ -74,7 +95,16 @@
 
 .method public setGender(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "gender"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;->gender:I
 
     return-void
@@ -82,7 +112,16 @@
 
 .method public setGender_match(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "gender_match"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/mimoji/mimojifu/bean/MimojiFuAvatarInfo$Fuitem;->gender_match:I
 
     return-void

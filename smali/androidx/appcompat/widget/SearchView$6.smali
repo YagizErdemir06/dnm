@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/widget/SearchView$6;
+.class public Landroidx/appcompat/widget/SearchView$6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/appcompat/widget/SearchView;
+.field public final synthetic this$0:Landroidx/appcompat/widget/SearchView;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/appcompat/widget/SearchView;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/widget/SearchView$6;->this$0:Landroidx/appcompat/widget/SearchView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,6 +38,7 @@
 .method public onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
     .locals 3
 
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/widget/SearchView$6;->this$0:Landroidx/appcompat/widget/SearchView;
 
     iget-object v1, v0, Landroidx/appcompat/widget/SearchView;->mSearchable:Landroid/app/SearchableInfo;
@@ -47,6 +49,7 @@
 
     return v2
 
+    .line 2
     :cond_0
     iget-object v0, v0, Landroidx/appcompat/widget/SearchView;->mSearchSrcTextView:Landroidx/appcompat/widget/SearchView$SearchAutoComplete;
 
@@ -60,6 +63,7 @@
 
     iget-object v0, v0, Landroidx/appcompat/widget/SearchView;->mSearchSrcTextView:Landroidx/appcompat/widget/SearchView$SearchAutoComplete;
 
+    .line 3
     invoke-virtual {v0}, Landroid/widget/AutoCompleteTextView;->getListSelection()I
 
     move-result v0
@@ -68,6 +72,7 @@
 
     if-eq v0, v1, :cond_1
 
+    .line 4
     iget-object p0, p0, Landroidx/appcompat/widget/SearchView$6;->this$0:Landroidx/appcompat/widget/SearchView;
 
     invoke-virtual {p0, p1, p2, p3}, Landroidx/appcompat/widget/SearchView;->onSuggestionsKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
@@ -76,6 +81,7 @@
 
     return p0
 
+    .line 5
     :cond_1
     iget-object v0, p0, Landroidx/appcompat/widget/SearchView$6;->this$0:Landroidx/appcompat/widget/SearchView;
 
@@ -93,6 +99,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 6
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
     move-result p3
@@ -105,23 +112,27 @@
 
     if-ne p2, p3, :cond_2
 
+    .line 7
     invoke-virtual {p1}, Landroid/view/View;->cancelLongPress()V
 
+    .line 8
     iget-object p0, p0, Landroidx/appcompat/widget/SearchView$6;->this$0:Landroidx/appcompat/widget/SearchView;
 
-    iget-object p1, p0, Landroidx/appcompat/widget/SearchView;->mSearchSrcTextView:Landroidx/appcompat/widget/SearchView$SearchAutoComplete;
+    const/4 p1, 0x0
 
-    invoke-virtual {p1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+    iget-object p2, p0, Landroidx/appcompat/widget/SearchView;->mSearchSrcTextView:Landroidx/appcompat/widget/SearchView$SearchAutoComplete;
 
-    move-result-object p1
+    invoke-virtual {p2}, Landroid/widget/AutoCompleteTextView;->getText()Landroid/text/Editable;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    move-result-object p2
 
-    move-result-object p1
+    .line 9
+    invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    const/4 p2, 0x0
+    move-result-object p2
 
-    invoke-virtual {p0, v2, p2, p1}, Landroidx/appcompat/widget/SearchView;->launchQuerySearch(ILjava/lang/String;Ljava/lang/String;)V
+    .line 10
+    invoke-virtual {p0, v2, p1, p2}, Landroidx/appcompat/widget/SearchView;->launchQuerySearch(ILjava/lang/String;Ljava/lang/String;)V
 
     return v0
 

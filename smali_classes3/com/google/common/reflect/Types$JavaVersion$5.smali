@@ -1,4 +1,4 @@
-.class Lcom/google/common/reflect/Types$JavaVersion$5;
+.class public Lcom/google/common/reflect/Types$JavaVersion$5;
 .super Lcom/google/common/reflect/TypeCapture;
 .source "SourceFile"
 
@@ -27,6 +27,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/reflect/TypeCapture;-><init>()V
 
     return-void

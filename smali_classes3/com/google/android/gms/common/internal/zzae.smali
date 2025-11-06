@@ -19,14 +19,17 @@
     :cond_0
     const-string v0, "com.google.android.gms.common.internal.IGoogleCertificatesApi"
 
+    .line 1
     invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0
 
+    .line 2
     instance-of v1, v0, Lcom/google/android/gms/common/internal/zzaf;
 
     if-eqz v1, :cond_1
 
+    .line 3
     check-cast v0, Lcom/google/android/gms/common/internal/zzaf;
 
     return-object v0

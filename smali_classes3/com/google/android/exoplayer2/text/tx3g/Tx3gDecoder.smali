@@ -72,14 +72,17 @@
 
     const-string v0, "Tx3gDecoder"
 
+    .line 1
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/text/SimpleSubtitleDecoder;-><init>(Ljava/lang/String;)V
 
+    .line 2
     new-instance v0, Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->parsableByteArray:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
+    .line 3
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -88,13 +91,14 @@
 
     const-string v2, "sans-serif"
 
-    const/4 v3, 0x0
+    const/4 v3, 0x1
 
-    const/4 v4, 0x1
+    const/4 v4, 0x0
 
-    if-ne v0, v4, :cond_4
+    if-ne v0, v3, :cond_4
 
-    invoke-interface {p1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    .line 4
+    invoke-interface {p1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -106,7 +110,7 @@
 
     if-eq v0, v5, :cond_0
 
-    invoke-interface {p1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {p1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -118,8 +122,9 @@
 
     if-ne v0, v5, :cond_4
 
+    .line 5
     :cond_0
-    invoke-interface {p1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {p1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -127,12 +132,14 @@
 
     const/16 v0, 0x18
 
+    .line 6
     aget-byte v5, p1, v0
 
     iput v5, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->defaultFontFace:I
 
     const/16 v5, 0x1a
 
+    .line 7
     aget-byte v5, p1, v5
 
     and-int/lit16 v5, v5, 0xff
@@ -169,18 +176,21 @@
 
     iput v0, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->defaultColorRgba:I
 
+    .line 8
     array-length v0, p1
 
     const/16 v5, 0x2b
 
     sub-int/2addr v0, v5
 
+    .line 9
     invoke-static {p1, v5, v0}, Lcom/google/android/exoplayer2/util/Util;->fromUtf8Bytes([BII)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v5, "Serif"
 
+    .line 10
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -194,27 +204,33 @@
 
     const/16 v0, 0x19
 
+    .line 11
     aget-byte v0, p1, v0
 
     mul-int/lit8 v0, v0, 0x14
 
     iput v0, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->calculatedVideoTrackHeight:I
 
-    aget-byte v2, p1, v3
+    .line 12
+    aget-byte v2, p1, v4
 
     and-int/lit8 v2, v2, 0x20
 
     if-eqz v2, :cond_2
 
-    move v3, v4
+    goto :goto_0
 
     :cond_2
+    move v3, v4
+
+    :goto_0
     iput-boolean v3, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->customVerticalPlacement:Z
 
     if-eqz v3, :cond_3
 
     const/16 v1, 0xa
 
+    .line 13
     aget-byte v1, p1, v1
 
     and-int/lit16 v1, v1, 0xff
@@ -239,57 +255,66 @@
 
     const v1, 0x3f733333    # 0.95f
 
+    .line 14
     invoke-static {p1, v0, v1}, Lcom/google/android/exoplayer2/util/Util;->constrainValue(FFF)F
 
     move-result p1
 
     iput p1, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->defaultVerticalPlacement:F
 
-    goto :goto_0
+    goto :goto_1
 
+    .line 15
     :cond_3
     iput v1, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->defaultVerticalPlacement:F
 
-    goto :goto_0
+    goto :goto_1
 
+    .line 16
     :cond_4
-    iput v3, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->defaultFontFace:I
+    iput v4, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->defaultFontFace:I
 
     const/4 p1, -0x1
 
+    .line 17
     iput p1, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->defaultColorRgba:I
 
+    .line 18
     iput-object v2, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->defaultFontFamily:Ljava/lang/String;
 
-    iput-boolean v3, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->customVerticalPlacement:Z
+    .line 19
+    iput-boolean v4, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->customVerticalPlacement:Z
 
+    .line 20
     iput v1, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->defaultVerticalPlacement:F
 
+    .line 21
     iput p1, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->calculatedVideoTrackHeight:I
 
-    :goto_0
+    :goto_1
     return-void
 .end method
 
 .method private applyStyleRecord(Lcom/google/android/exoplayer2/util/ParsableByteArray;Landroid/text/SpannableStringBuilder;)V
-    .locals 9
+    .locals 8
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/google/android/exoplayer2/text/SubtitleDecoderException;
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
     move-result v0
 
-    const/16 v1, 0xc
+    const/4 v1, 0x1
 
-    const/4 v2, 0x1
+    const/16 v2, 0xc
 
-    if-lt v0, v1, :cond_0
+    if-lt v0, v2, :cond_0
 
-    move v0, v2
+    move v0, v1
 
     goto :goto_0
 
@@ -299,73 +324,90 @@
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->assertTrue(Z)V
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedShort()I
 
     move-result v0
 
+    .line 3
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedShort()I
 
-    move-result v1
+    move-result v2
 
     const/4 v3, 0x2
 
+    .line 4
     invoke-virtual {p1, v3}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
+    .line 5
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
-    move-result v4
+    move-result v3
 
-    invoke-virtual {p1, v2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
+    .line 6
+    invoke-virtual {p1, v1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
+    .line 7
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result p1
 
+    .line 8
+    invoke-virtual {p2}, Landroid/text/SpannableStringBuilder;->length()I
+
+    move-result v1
+
+    const-string v4, ")."
+
+    const-string v5, "Tx3gDecoder"
+
+    if-le v2, v1, :cond_1
+
+    .line 9
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "Truncating styl end ("
+
+    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, ") to cueText.length() ("
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 10
     invoke-virtual {p2}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v2
 
-    const-string v3, ")."
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v5, "Tx3gDecoder"
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-le v1, v2, :cond_1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v6, "Truncating styl end ("
-
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ") to cueText.length() ("
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Landroid/text/SpannableStringBuilder;->length()I
-
-    move-result v1
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
+    .line 11
     invoke-static {v5, v1}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 12
     invoke-virtual {p2}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v1
 
+    goto :goto_1
+
     :cond_1
+    move v1, v2
+
+    :goto_1
     if-lt v0, v1, :cond_2
 
+    .line 13
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -382,7 +424,7 @@
 
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -392,24 +434,26 @@
 
     return-void
 
+    .line 14
     :cond_2
-    iget v5, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->defaultFontFace:I
+    iget v4, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->defaultFontFace:I
 
-    const/4 v8, 0x0
+    const/4 v7, 0x0
 
-    move-object v3, p2
+    move-object v2, p2
 
-    move v6, v0
+    move v5, v0
 
-    move v7, v1
+    move v6, v1
 
-    invoke-static/range {v3 .. v8}, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->attachFontFace(Landroid/text/SpannableStringBuilder;IIIII)V
+    invoke-static/range {v2 .. v7}, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->attachFontFace(Landroid/text/SpannableStringBuilder;IIIII)V
 
-    iget v5, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->defaultColorRgba:I
+    .line 15
+    iget v4, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->defaultColorRgba:I
 
-    move v4, p1
+    move v3, p1
 
-    invoke-static/range {v3 .. v8}, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->attachColor(Landroid/text/SpannableStringBuilder;IIIII)V
+    invoke-static/range {v2 .. v7}, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->attachColor(Landroid/text/SpannableStringBuilder;IIIII)V
 
     return-void
 .end method
@@ -426,6 +470,7 @@
 
     return-void
 
+    .line 1
     :cond_0
     new-instance p0, Lcom/google/android/exoplayer2/text/SubtitleDecoderException;
 
@@ -449,6 +494,7 @@
 
     or-int/2addr p1, p2
 
+    .line 1
     new-instance p2, Landroid/text/style/ForegroundColorSpan;
 
     invoke-direct {p2, p1}, Landroid/text/style/ForegroundColorSpan;-><init>(I)V
@@ -500,6 +546,7 @@
 
     if-eqz v2, :cond_2
 
+    .line 1
     new-instance v3, Landroid/text/style/StyleSpan;
 
     const/4 v4, 0x3
@@ -510,6 +557,7 @@
 
     goto :goto_2
 
+    .line 2
     :cond_2
     new-instance v3, Landroid/text/style/StyleSpan;
 
@@ -522,6 +570,7 @@
     :cond_3
     if-eqz v2, :cond_4
 
+    .line 3
     new-instance v3, Landroid/text/style/StyleSpan;
 
     const/4 v4, 0x2
@@ -544,6 +593,7 @@
     :goto_3
     if-eqz v1, :cond_6
 
+    .line 4
     new-instance p1, Landroid/text/style/UnderlineSpan;
 
     invoke-direct {p1}, Landroid/text/style/UnderlineSpan;-><init>()V
@@ -557,6 +607,7 @@
 
     if-nez v2, :cond_7
 
+    .line 5
     new-instance p1, Landroid/text/style/StyleSpan;
 
     invoke-direct {p1, v0}, Landroid/text/style/StyleSpan;-><init>(I)V
@@ -574,6 +625,7 @@
 
     if-eq p1, v0, :cond_0
 
+    .line 1
     new-instance v0, Landroid/text/style/TypefaceSpan;
 
     invoke-direct {v0, p1}, Landroid/text/style/TypefaceSpan;-><init>(Ljava/lang/String;)V
@@ -594,6 +646,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
     move-result v0
@@ -612,6 +665,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->assertTrue(Z)V
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedShort()I
 
     move-result v0
@@ -622,6 +676,7 @@
 
     return-object p0
 
+    .line 3
     :cond_1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
@@ -629,6 +684,7 @@
 
     if-lt v2, v1, :cond_3
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->peekChar()C
 
     move-result v1
@@ -641,6 +697,7 @@
 
     if-ne v1, v2, :cond_3
 
+    .line 5
     :cond_2
     sget-object v1, Lcom/google/common/base/Charsets;->UTF_16:Ljava/nio/charset/Charset;
 
@@ -650,6 +707,7 @@
 
     return-object p0
 
+    .line 6
     :cond_3
     sget-object v1, Lcom/google/common/base/Charsets;->UTF_8:Ljava/nio/charset/Charset;
 
@@ -670,37 +728,44 @@
         }
     .end annotation
 
+    .line 1
     iget-object p3, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->parsableByteArray:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {p3, p1, p2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->reset([BI)V
 
+    .line 2
     iget-object p1, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->parsableByteArray:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-static {p1}, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->readSubtitleText(Lcom/google/android/exoplayer2/util/ParsableByteArray;)Ljava/lang/String;
 
     move-result-object p1
 
+    .line 3
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
+    .line 4
     sget-object p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gSubtitle;->EMPTY:Lcom/google/android/exoplayer2/text/tx3g/Tx3gSubtitle;
 
     return-object p0
 
+    .line 5
     :cond_0
     new-instance p2, Landroid/text/SpannableStringBuilder;
 
     invoke-direct {p2, p1}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
+    .line 6
     iget v1, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->defaultFontFace:I
 
     const/4 v2, 0x0
 
     const/4 v3, 0x0
 
+    .line 7
     invoke-virtual {p2}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v4
@@ -709,8 +774,10 @@
 
     move-object v0, p2
 
+    .line 8
     invoke-static/range {v0 .. v5}, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->attachFontFace(Landroid/text/SpannableStringBuilder;IIIII)V
 
+    .line 9
     iget v1, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->defaultColorRgba:I
 
     const/4 v2, -0x1
@@ -721,6 +788,7 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->attachColor(Landroid/text/SpannableStringBuilder;IIIII)V
 
+    .line 10
     iget-object p1, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->defaultFontFamily:Ljava/lang/String;
 
     invoke-virtual {p2}, Landroid/text/SpannableStringBuilder;->length()I
@@ -731,8 +799,10 @@
 
     invoke-static {p2, p1, v0, p3}, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->attachFontFamily(Landroid/text/SpannableStringBuilder;Ljava/lang/String;II)V
 
+    .line 11
     iget p1, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->defaultVerticalPlacement:F
 
+    .line 12
     :goto_0
     iget-object p3, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->parsableByteArray:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
@@ -744,18 +814,21 @@
 
     if-lt p3, v1, :cond_5
 
+    .line 13
     iget-object p3, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->parsableByteArray:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {p3}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getPosition()I
 
     move-result p3
 
+    .line 14
     iget-object v1, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->parsableByteArray:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v1
 
+    .line 15
     iget-object v2, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->parsableByteArray:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readInt()I
@@ -770,6 +843,7 @@
 
     if-ne v2, v3, :cond_2
 
+    .line 16
     iget-object v2, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->parsableByteArray:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
@@ -786,6 +860,7 @@
     :goto_1
     invoke-static {v5}, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->assertTrue(Z)V
 
+    .line 17
     iget-object v2, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->parsableByteArray:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedShort()I
@@ -797,6 +872,7 @@
     :goto_2
     if-ge v3, v2, :cond_4
 
+    .line 18
     iget-object v4, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->parsableByteArray:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-direct {p0, v4, p2}, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->applyStyleRecord(Lcom/google/android/exoplayer2/util/ParsableByteArray;Landroid/text/SpannableStringBuilder;)V
@@ -810,10 +886,12 @@
 
     if-ne v2, v3, :cond_4
 
+    .line 19
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->customVerticalPlacement:Z
 
     if-eqz v2, :cond_4
 
+    .line 20
     iget-object p1, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->parsableByteArray:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
@@ -830,6 +908,7 @@
     :goto_3
     invoke-static {v5}, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->assertTrue(Z)V
 
+    .line 21
     iget-object p1, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->parsableByteArray:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedShort()I
@@ -838,6 +917,7 @@
 
     int-to-float p1, p1
 
+    .line 22
     iget v2, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->calculatedVideoTrackHeight:I
 
     int-to-float v2, v2
@@ -848,10 +928,12 @@
 
     const v3, 0x3f733333    # 0.95f
 
+    .line 23
     invoke-static {p1, v2, v3}, Lcom/google/android/exoplayer2/util/Util;->constrainValue(FFF)F
 
     move-result p1
 
+    .line 24
     :cond_4
     iget-object v2, p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gDecoder;->parsableByteArray:Lcom/google/android/exoplayer2/util/ParsableByteArray;
 
@@ -861,6 +943,7 @@
 
     goto :goto_0
 
+    .line 25
     :cond_5
     new-instance p0, Lcom/google/android/exoplayer2/text/tx3g/Tx3gSubtitle;
 
@@ -868,18 +951,22 @@
 
     invoke-direct {p3}, Lcom/google/android/exoplayer2/text/Cue$Builder;-><init>()V
 
+    .line 26
     invoke-virtual {p3, p2}, Lcom/google/android/exoplayer2/text/Cue$Builder;->setText(Ljava/lang/CharSequence;)Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     move-result-object p2
 
+    .line 27
     invoke-virtual {p2, p1, v0}, Lcom/google/android/exoplayer2/text/Cue$Builder;->setLine(FI)Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     move-result-object p1
 
+    .line 28
     invoke-virtual {p1, v0}, Lcom/google/android/exoplayer2/text/Cue$Builder;->setLineAnchor(I)Lcom/google/android/exoplayer2/text/Cue$Builder;
 
     move-result-object p1
 
+    .line 29
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/text/Cue$Builder;->build()Lcom/google/android/exoplayer2/text/Cue;
 
     move-result-object p1

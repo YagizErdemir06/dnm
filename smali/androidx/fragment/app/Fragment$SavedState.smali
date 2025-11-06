@@ -39,13 +39,14 @@
 
 
 # instance fields
-.field final mState:Landroid/os/Bundle;
+.field public final mState:Landroid/os/Bundle;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/fragment/app/Fragment$SavedState$1;
 
     invoke-direct {v0}, Landroidx/fragment/app/Fragment$SavedState$1;-><init>()V
@@ -116,6 +117,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Landroidx/fragment/app/Fragment$SavedState;->mState:Landroid/os/Bundle;
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V

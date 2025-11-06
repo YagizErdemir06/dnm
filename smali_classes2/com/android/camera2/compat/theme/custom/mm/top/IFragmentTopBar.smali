@@ -3,23 +3,11 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lu8/a;
-.implements Lz1/c$a;
+.implements Ld/d/a/m7/a;
+.implements Ld/d/a/f6/c$a;
 
 
 # virtual methods
-.method public enterTopBarStyle()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public exitTopBarStyle()V
-    .locals 0
-
-    return-void
-.end method
-
 .method public abstract getFragmentInto()I
 .end method
 
@@ -30,6 +18,14 @@
 .end method
 
 .method public abstract initView(Landroid/view/View;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 .end method
 
 .method public abstract onStop()V
@@ -40,4 +36,14 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "v",
+            "savedInstanceState"
+        }
+    .end annotation
 .end method

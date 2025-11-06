@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;->Ti(I)V
+    value = Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;->lh(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,18 +18,29 @@
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic c:I
 
-.field public final synthetic b:Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;
+.field public final synthetic d:Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$backType"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit$d;->b:Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;
+    .line 1
+    iput-object p1, p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit$d;->d:Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;
 
-    iput p2, p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit$d;->a:I
+    iput p2, p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit$d;->c:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +52,8 @@
 .method public run()V
     .locals 5
 
-    iget v0, p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit$d;->a:I
+    .line 1
+    iget v0, p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit$d;->c:I
 
     const/4 v1, 0x0
 
@@ -59,48 +71,52 @@
     :goto_0
     if-nez v0, :cond_2
 
-    iget-object v3, p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit$d;->b:Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;
+    .line 2
+    iget-object v3, p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit$d;->d:Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;
 
-    invoke-static {v3}, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;->ri(Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;)Z
+    invoke-static {v3}, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;->xc(Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;)Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    iget-object v3, p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit$d;->b:Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;
+    .line 3
+    iget-object v3, p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit$d;->d:Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;
 
-    invoke-static {v3}, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;->xi(Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;)Lcom/arcsoft/avatar2/AvatarEngine;
+    invoke-static {v3}, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;->sd(Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;)Lcom/arcsoft/avatar2/AvatarEngine;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit$d;->b:Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;
+    iget-object v4, p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit$d;->d:Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;
 
-    invoke-static {v4}, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;->yi(Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;)Z
+    invoke-static {v4}, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;->yd(Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;)Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    iget-object v4, p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit$d;->b:Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;
+    iget-object v4, p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit$d;->d:Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;
 
-    invoke-static {v4}, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;->si(Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;->Hc(Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;)Ljava/lang/String;
 
     move-result-object v4
 
     goto :goto_1
 
     :cond_1
-    sget-object v4, Lji/a;->T:Ljava/lang/String;
+    sget-object v4, Ld/o/v/c/e/a/a;->C:Ljava/lang/String;
 
     :goto_1
     invoke-virtual {v3, v4}, Lcom/arcsoft/avatar2/AvatarEngine;->loadConfig(Ljava/lang/String;)V
 
+    .line 4
     :cond_2
-    iget-object v3, p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit$d;->b:Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;
+    iget-object v3, p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit$d;->d:Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;
 
-    invoke-virtual {v3, v0, v1}, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;->Ci(ZZ)V
+    invoke-virtual {v3, v0, v1}, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;->je(ZZ)V
 
-    iget p0, p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit$d;->a:I
+    .line 5
+    iget p0, p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit$d;->c:I
 
     const-string v0, "preview_mid"
 
@@ -120,8 +136,9 @@
 
     goto :goto_2
 
+    .line 6
     :cond_3
-    sget-object p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;->K:Ljava/lang/String;
+    sget-object p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;->f:Ljava/lang/String;
 
     const-string v1, "showAlertDialog onClick edit_cancel"
 
@@ -129,12 +146,14 @@
 
     const-string p0, "edit_cancel"
 
-    invoke-static {p0, v0}, Lk9/a;->b2(Ljava/lang/String;Ljava/lang/String;)V
+    .line 7
+    invoke-static {p0, v0}, Ld/d/a/v7/f;->X1(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_2
 
+    .line 8
     :cond_4
-    sget-object p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;->K:Ljava/lang/String;
+    sget-object p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;->f:Ljava/lang/String;
 
     const-string v0, "showAlertDialog onClick edit_soft_back"
 
@@ -144,12 +163,14 @@
 
     const-string v0, "edit"
 
-    invoke-static {p0, v0}, Lk9/a;->b2(Ljava/lang/String;Ljava/lang/String;)V
+    .line 9
+    invoke-static {p0, v0}, Ld/d/a/v7/f;->X1(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_2
 
+    .line 10
     :cond_5
-    sget-object p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;->K:Ljava/lang/String;
+    sget-object p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;->f:Ljava/lang/String;
 
     const-string v1, "showAlertDialog onClick preview_mid_soft_back"
 
@@ -157,12 +178,14 @@
 
     const-string p0, "preview_mid_soft_back"
 
-    invoke-static {p0, v0}, Lk9/a;->b2(Ljava/lang/String;Ljava/lang/String;)V
+    .line 11
+    invoke-static {p0, v0}, Ld/d/a/v7/f;->X1(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_2
 
+    .line 12
     :cond_6
-    sget-object p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;->K:Ljava/lang/String;
+    sget-object p0, Lcom/xiaomi/mimoji/mimojias/fragment/edit/FragmentMimojiAsEdit;->f:Ljava/lang/String;
 
     const-string v1, "showAlertDialog onClick mimoji_click_preview_mid_back"
 
@@ -170,7 +193,8 @@
 
     const-string p0, "mimoji_click_preview_mid_back"
 
-    invoke-static {p0, v0}, Lk9/a;->b2(Ljava/lang/String;Ljava/lang/String;)V
+    .line 13
+    invoke-static {p0, v0}, Ld/d/a/v7/f;->X1(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_2
     return-void

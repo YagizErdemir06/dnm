@@ -23,6 +23,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,6 +31,14 @@
 
 .method public static d(Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "msg"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -45,6 +54,16 @@
 
 .method public static d(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "msg",
+            "th"
+        }
+    .end annotation
 
     const-string v0, "greenDAO"
 
@@ -56,6 +75,14 @@
 
 .method public static e(Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "msg"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -71,6 +98,16 @@
 
 .method public static e(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "msg",
+            "th"
+        }
+    .end annotation
 
     const-string v0, "greenDAO"
 
@@ -82,6 +119,14 @@
 
 .method public static i(Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "msg"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -97,6 +142,16 @@
 
 .method public static i(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "msg",
+            "th"
+        }
+    .end annotation
 
     const-string v0, "greenDAO"
 
@@ -108,9 +163,18 @@
 
 .method public static isLoggable(I)Z
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "level"
+        }
+    .end annotation
 
     const-string v0, "greenDAO"
 
+    .line 1
     invoke-static {v0, p0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result p0
@@ -120,6 +184,14 @@
 
 .method public static v(Ljava/lang/String;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "msg"
+        }
+    .end annotation
 
     const-string v0, "greenDAO"
 
@@ -131,6 +203,16 @@
 
 .method public static v(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "msg",
+            "th"
+        }
+    .end annotation
 
     const-string v0, "greenDAO"
 
@@ -142,6 +224,14 @@
 
 .method public static w(Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "msg"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -157,6 +247,16 @@
 
 .method public static w(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "msg",
+            "th"
+        }
+    .end annotation
 
     const-string v0, "greenDAO"
 
@@ -168,6 +268,14 @@
 
 .method public static w(Ljava/lang/Throwable;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "th"
+        }
+    .end annotation
 
     const-string v0, "greenDAO"
 

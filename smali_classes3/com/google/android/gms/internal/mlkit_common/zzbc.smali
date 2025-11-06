@@ -1,14 +1,14 @@
-.class final Lcom/google/android/gms/internal/mlkit_common/zzbc;
+.class public final Lcom/google/android/gms/internal/mlkit_common/zzbc;
 .super Lcom/google/android/gms/internal/mlkit_common/zzau;
 .source "SourceFile"
 
 
 # static fields
-.field static final zza:Lcom/google/android/gms/internal/mlkit_common/zzau;
+.field public static final zza:Lcom/google/android/gms/internal/mlkit_common/zzau;
 
 
 # instance fields
-.field final transient zzb:[Ljava/lang/Object;
+.field public final transient zzb:[Ljava/lang/Object;
 
 .field private final transient zzc:Ljava/lang/Object;
     .annotation runtime Ljavax/annotation/CheckForNull;
@@ -81,14 +81,17 @@
 
     if-ne v0, v5, :cond_1
 
+    .line 1
     aget-object v0, v1, v4
 
+    .line 2
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     aget-object v2, v1, v5
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 3
     invoke-static {v0, v2}, Lcom/google/android/gms/internal/mlkit_common/zzai;->zza(Ljava/lang/Object;Ljava/lang/Object;)V
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_common/zzbc;
@@ -97,6 +100,7 @@
 
     return-object v0
 
+    .line 4
     :cond_1
     array-length v6, v1
 
@@ -104,57 +108,68 @@
 
     const-string v7, "index"
 
+    .line 5
     invoke-static {v0, v6, v7}, Lcom/google/android/gms/internal/mlkit_common/zzaf;->zzb(IILjava/lang/String;)I
 
     const/4 v6, 0x2
 
+    .line 6
     invoke-static {v0, v6}, Ljava/lang/Math;->max(II)I
 
     move-result v7
 
     const v8, 0x2ccccccc
 
+    const/high16 v9, 0x40000000    # 2.0f
+
     if-ge v7, v8, :cond_2
 
     add-int/lit8 v8, v7, -0x1
 
+    .line 7
     invoke-static {v8}, Ljava/lang/Integer;->highestOneBit(I)I
 
     move-result v8
 
-    :goto_0
     add-int/2addr v8, v8
 
-    int-to-double v9, v8
+    move v9, v8
 
-    const-wide v11, 0x3fe6666666666666L    # 0.7
+    :goto_0
+    int-to-double v10, v9
 
-    mul-double/2addr v9, v11
+    const-wide v12, 0x3fe6666666666666L    # 0.7
 
-    int-to-double v11, v7
+    mul-double/2addr v10, v12
 
-    cmpg-double v9, v9, v11
+    int-to-double v12, v7
 
-    if-gez v9, :cond_3
+    cmpg-double v8, v10, v12
+
+    if-gez v8, :cond_3
+
+    add-int/2addr v9, v9
 
     goto :goto_0
 
     :cond_2
-    const/high16 v8, 0x40000000    # 2.0f
-
-    if-ge v7, v8, :cond_18
+    if-ge v7, v9, :cond_18
 
     :cond_3
     if-ne v0, v5, :cond_4
 
+    .line 8
     aget-object v7, v1, v4
 
+    .line 9
     invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     aget-object v8, v1, v5
 
+    .line 10
     invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 11
     invoke-static {v7, v8}, Lcom/google/android/gms/internal/mlkit_common/zzai;->zza(Ljava/lang/Object;Ljava/lang/Object;)V
 
     move v7, v5
@@ -164,18 +179,20 @@
     goto/16 :goto_d
 
     :cond_4
-    add-int/lit8 v7, v8, -0x1
+    add-int/lit8 v7, v9, -0x1
 
-    const/16 v9, 0x80
+    const/16 v8, 0x80
 
     const/4 v10, 0x3
 
     const/4 v11, -0x1
 
-    if-gt v8, v9, :cond_a
+    if-gt v9, v8, :cond_a
 
-    new-array v8, v8, [B
+    .line 12
+    new-array v8, v9, [B
 
+    .line 13
     invoke-static {v8, v11}, Ljava/util/Arrays;->fill([BB)V
 
     move v9, v4
@@ -189,18 +206,22 @@
 
     add-int v13, v9, v9
 
+    .line 14
     aget-object v14, v1, v13
 
     invoke-virtual {v14}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     xor-int/2addr v13, v5
 
+    .line 15
     aget-object v13, v1, v13
 
     invoke-virtual {v13}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 16
     invoke-static {v14, v13}, Lcom/google/android/gms/internal/mlkit_common/zzai;->zza(Ljava/lang/Object;Ljava/lang/Object;)V
 
+    .line 17
     invoke-virtual {v14}, Ljava/lang/Object;->hashCode()I
 
     move-result v15
@@ -212,6 +233,7 @@
     :goto_2
     and-int/2addr v15, v7
 
+    .line 18
     aget-byte v6, v8, v15
 
     const/16 v5, 0xff
@@ -222,14 +244,17 @@
 
     int-to-byte v5, v12
 
+    .line 19
     aput-byte v5, v8, v15
 
     if-ge v11, v9, :cond_5
 
+    .line 20
     aput-object v14, v1, v12
 
     xor-int/lit8 v5, v12, 0x1
 
+    .line 21
     aput-object v13, v1, v5
 
     :cond_5
@@ -237,6 +262,7 @@
 
     goto :goto_3
 
+    .line 22
     :cond_6
     aget-object v5, v1, v6
 
@@ -250,12 +276,15 @@
 
     new-instance v5, Lcom/google/android/gms/internal/mlkit_common/zzas;
 
+    .line 23
     aget-object v6, v1, v3
 
+    .line 24
     invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     invoke-direct {v5, v14, v13, v6}, Lcom/google/android/gms/internal/mlkit_common/zzas;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
+    .line 25
     aput-object v13, v1, v3
 
     move-object v3, v5
@@ -293,6 +322,7 @@
 
     aput-object v8, v5, v4
 
+    .line 26
     invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -317,10 +347,11 @@
     :cond_a
     const v5, 0x8000
 
-    if-gt v8, v5, :cond_10
+    if-gt v9, v5, :cond_10
 
-    new-array v5, v8, [S
+    new-array v5, v9, [S
 
+    .line 27
     invoke-static {v5, v11}, Ljava/util/Arrays;->fill([SS)V
 
     move v6, v4
@@ -334,6 +365,7 @@
 
     add-int v11, v6, v6
 
+    .line 28
     aget-object v12, v1, v11
 
     invoke-virtual {v12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -342,12 +374,15 @@
 
     xor-int/2addr v11, v13
 
+    .line 29
     aget-object v11, v1, v11
 
     invoke-virtual {v11}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    .line 30
     invoke-static {v12, v11}, Lcom/google/android/gms/internal/mlkit_common/zzai;->zza(Ljava/lang/Object;Ljava/lang/Object;)V
 
+    .line 31
     invoke-virtual {v12}, Ljava/lang/Object;->hashCode()I
 
     move-result v13
@@ -359,6 +394,7 @@
     :goto_7
     and-int/2addr v13, v7
 
+    .line 32
     aget-short v14, v5, v13
 
     int-to-char v14, v14
@@ -369,14 +405,17 @@
 
     int-to-short v14, v9
 
+    .line 33
     aput-short v14, v5, v13
 
     if-ge v8, v6, :cond_b
 
+    .line 34
     aput-object v12, v1, v9
 
     xor-int/lit8 v9, v9, 0x1
 
+    .line 35
     aput-object v11, v1, v9
 
     :cond_b
@@ -384,6 +423,7 @@
 
     goto :goto_8
 
+    .line 36
     :cond_c
     aget-object v15, v1, v14
 
@@ -397,12 +437,15 @@
 
     new-instance v9, Lcom/google/android/gms/internal/mlkit_common/zzas;
 
+    .line 37
     aget-object v13, v1, v3
 
+    .line 38
     invoke-virtual {v13}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     invoke-direct {v9, v12, v11, v13}, Lcom/google/android/gms/internal/mlkit_common/zzas;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
+    .line 39
     aput-object v11, v1, v3
 
     move-object v3, v9
@@ -427,13 +470,14 @@
 
     aput-object v5, v6, v4
 
+    .line 40
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
-    const/4 v9, 0x1
+    const/4 v8, 0x1
 
-    aput-object v5, v6, v9
+    aput-object v5, v6, v8
 
     const/4 v5, 0x2
 
@@ -441,40 +485,45 @@
 
     move-object v3, v6
 
-    move v7, v9
+    move v7, v8
 
     goto/16 :goto_d
 
     :cond_10
-    const/4 v9, 0x1
+    const/4 v8, 0x1
 
-    new-array v5, v8, [I
+    new-array v5, v9, [I
 
+    .line 41
     invoke-static {v5, v11}, Ljava/util/Arrays;->fill([II)V
 
     move v6, v4
 
-    move v8, v6
+    move v9, v6
 
     :goto_9
     if-ge v6, v0, :cond_14
 
-    add-int v12, v8, v8
+    add-int v12, v9, v9
 
     add-int v13, v6, v6
 
+    .line 42
     aget-object v14, v1, v13
 
     invoke-virtual {v14}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    xor-int/2addr v13, v9
+    xor-int/2addr v13, v8
 
-    aget-object v9, v1, v13
+    .line 43
+    aget-object v8, v1, v13
 
-    invoke-virtual {v9}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v14, v9}, Lcom/google/android/gms/internal/mlkit_common/zzai;->zza(Ljava/lang/Object;Ljava/lang/Object;)V
+    .line 44
+    invoke-static {v14, v8}, Lcom/google/android/gms/internal/mlkit_common/zzai;->zza(Ljava/lang/Object;Ljava/lang/Object;)V
 
+    .line 45
     invoke-virtual {v14}, Ljava/lang/Object;->hashCode()I
 
     move-result v13
@@ -486,25 +535,30 @@
     :goto_a
     and-int/2addr v13, v7
 
+    .line 46
     aget v15, v5, v13
 
     if-ne v15, v11, :cond_12
 
+    .line 47
     aput v12, v5, v13
 
-    if-ge v8, v6, :cond_11
+    if-ge v9, v6, :cond_11
 
+    .line 48
     aput-object v14, v1, v12
 
     xor-int/lit8 v12, v12, 0x1
 
-    aput-object v9, v1, v12
+    .line 49
+    aput-object v8, v1, v12
 
     :cond_11
-    add-int/lit8 v8, v8, 0x1
+    add-int/lit8 v9, v9, 0x1
 
     goto :goto_b
 
+    .line 50
     :cond_12
     aget-object v11, v1, v15
 
@@ -518,20 +572,23 @@
 
     new-instance v11, Lcom/google/android/gms/internal/mlkit_common/zzas;
 
+    .line 51
     aget-object v12, v1, v3
 
+    .line 52
     invoke-virtual {v12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct {v11, v14, v9, v12}, Lcom/google/android/gms/internal/mlkit_common/zzas;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v11, v14, v8, v12}, Lcom/google/android/gms/internal/mlkit_common/zzas;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    aput-object v9, v1, v3
+    .line 53
+    aput-object v8, v1, v3
 
     move-object v3, v11
 
     :goto_b
     add-int/lit8 v6, v6, 0x1
 
-    const/4 v9, 0x1
+    const/4 v8, 0x1
 
     const/4 v11, -0x1
 
@@ -545,7 +602,7 @@
     goto :goto_a
 
     :cond_14
-    if-ne v8, v0, :cond_15
+    if-ne v9, v0, :cond_15
 
     :goto_c
     move-object v3, v5
@@ -557,7 +614,8 @@
 
     aput-object v5, v6, v4
 
-    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    .line 54
+    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
@@ -571,23 +629,29 @@
 
     move-object v3, v6
 
+    .line 55
     :goto_d
     instance-of v6, v3, [Ljava/lang/Object;
 
     if-eqz v6, :cond_17
 
+    .line 56
     check-cast v3, [Ljava/lang/Object;
 
+    .line 57
     aget-object v0, v3, v5
 
     check-cast v0, Lcom/google/android/gms/internal/mlkit_common/zzas;
 
     if-eqz v2, :cond_16
 
+    .line 58
     iput-object v0, v2, Lcom/google/android/gms/internal/mlkit_common/zzat;->zzc:Lcom/google/android/gms/internal/mlkit_common/zzas;
 
+    .line 59
     aget-object v0, v3, v4
 
+    .line 60
     aget-object v2, v3, v7
 
     check-cast v2, Ljava/lang/Integer;
@@ -598,6 +662,7 @@
 
     add-int v3, v2, v2
 
+    .line 61
     invoke-static {v1, v3}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     move-result-object v1
@@ -608,6 +673,7 @@
 
     goto :goto_e
 
+    .line 62
     :cond_16
     invoke-virtual {v0}, Lcom/google/android/gms/internal/mlkit_common/zzas;->zza()Ljava/lang/IllegalArgumentException;
 
@@ -615,6 +681,7 @@
 
     throw v0
 
+    .line 63
     :cond_17
     :goto_e
     new-instance v2, Lcom/google/android/gms/internal/mlkit_common/zzbc;
@@ -623,11 +690,13 @@
 
     return-object v2
 
+    .line 64
     :cond_18
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "collection too large"
 
+    .line 65
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
@@ -644,6 +713,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_common/zzbc;->zzc:Ljava/lang/Object;
 
     iget-object v1, p0, Lcom/google/android/gms/internal/mlkit_common/zzbc;->zzb:[Ljava/lang/Object;
@@ -677,6 +747,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 2
     aget-object p0, v1, v3
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -688,6 +759,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_3
     instance-of p0, v0, [B
 
@@ -695,6 +767,7 @@
 
     if-eqz p0, :cond_6
 
+    .line 4
     move-object p0, v0
 
     check-cast p0, [B
@@ -703,6 +776,7 @@
 
     add-int/lit8 v5, v0, -0x1
 
+    .line 5
     invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
@@ -714,6 +788,7 @@
     :goto_1
     and-int/2addr v0, v5
 
+    .line 6
     aget-byte v4, p0, v0
 
     const/16 v6, 0xff
@@ -724,6 +799,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_4
     aget-object v6, v1, v4
 
@@ -735,6 +811,7 @@
 
     xor-int/lit8 p0, v4, 0x1
 
+    .line 8
     aget-object p0, v1, p0
 
     goto :goto_4
@@ -744,11 +821,13 @@
 
     goto :goto_1
 
+    .line 9
     :cond_6
     instance-of p0, v0, [S
 
     if-eqz p0, :cond_9
 
+    .line 10
     move-object p0, v0
 
     check-cast p0, [S
@@ -757,6 +836,7 @@
 
     add-int/lit8 v5, v0, -0x1
 
+    .line 11
     invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
@@ -768,6 +848,7 @@
     :goto_2
     and-int/2addr v0, v5
 
+    .line 12
     aget-short v4, p0, v0
 
     int-to-char v4, v4
@@ -778,6 +859,7 @@
 
     goto :goto_0
 
+    .line 13
     :cond_7
     aget-object v6, v1, v4
 
@@ -789,6 +871,7 @@
 
     xor-int/lit8 p0, v4, 0x1
 
+    .line 14
     aget-object p0, v1, p0
 
     goto :goto_4
@@ -798,6 +881,7 @@
 
     goto :goto_2
 
+    .line 15
     :cond_9
     check-cast v0, [I
 
@@ -805,6 +889,7 @@
 
     add-int/2addr p0, v4
 
+    .line 16
     invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
 
     move-result v5
@@ -816,12 +901,14 @@
     :goto_3
     and-int/2addr v5, p0
 
+    .line 17
     aget v6, v0, v5
 
     if-ne v6, v4, :cond_a
 
     goto/16 :goto_0
 
+    .line 18
     :cond_a
     aget-object v7, v1, v6
 
@@ -833,6 +920,7 @@
 
     xor-int/lit8 p0, v6, 0x1
 
+    .line 19
     aget-object p0, v1, p0
 
     :goto_4
@@ -860,13 +948,14 @@
 .method public final zza()Lcom/google/android/gms/internal/mlkit_common/zzan;
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_common/zzbb;
 
     iget-object v1, p0, Lcom/google/android/gms/internal/mlkit_common/zzbc;->zzb:[Ljava/lang/Object;
 
-    const/4 v2, 0x1
-
     iget p0, p0, Lcom/google/android/gms/internal/mlkit_common/zzbc;->zzd:I
+
+    const/4 v2, 0x1
 
     invoke-direct {v0, v1, v2, p0}, Lcom/google/android/gms/internal/mlkit_common/zzbb;-><init>([Ljava/lang/Object;II)V
 
@@ -876,15 +965,16 @@
 .method public final zzd()Lcom/google/android/gms/internal/mlkit_common/zzav;
     .locals 4
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_common/zzaz;
 
     iget-object v1, p0, Lcom/google/android/gms/internal/mlkit_common/zzbc;->zzb:[Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    iget v2, p0, Lcom/google/android/gms/internal/mlkit_common/zzbc;->zzd:I
 
-    iget v3, p0, Lcom/google/android/gms/internal/mlkit_common/zzbc;->zzd:I
+    const/4 v3, 0x0
 
-    invoke-direct {v0, p0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_common/zzaz;-><init>(Lcom/google/android/gms/internal/mlkit_common/zzau;[Ljava/lang/Object;II)V
+    invoke-direct {v0, p0, v1, v3, v2}, Lcom/google/android/gms/internal/mlkit_common/zzaz;-><init>(Lcom/google/android/gms/internal/mlkit_common/zzau;[Ljava/lang/Object;II)V
 
     return-object v0
 .end method
@@ -892,18 +982,20 @@
 .method public final zze()Lcom/google/android/gms/internal/mlkit_common/zzav;
     .locals 4
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_common/zzbb;
 
     iget-object v1, p0, Lcom/google/android/gms/internal/mlkit_common/zzbc;->zzb:[Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    iget v2, p0, Lcom/google/android/gms/internal/mlkit_common/zzbc;->zzd:I
 
-    iget v3, p0, Lcom/google/android/gms/internal/mlkit_common/zzbc;->zzd:I
+    const/4 v3, 0x0
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_common/zzbb;-><init>([Ljava/lang/Object;II)V
+    invoke-direct {v0, v1, v3, v2}, Lcom/google/android/gms/internal/mlkit_common/zzbb;-><init>([Ljava/lang/Object;II)V
 
     new-instance v1, Lcom/google/android/gms/internal/mlkit_common/zzba;
 
+    .line 2
     invoke-direct {v1, p0, v0}, Lcom/google/android/gms/internal/mlkit_common/zzba;-><init>(Lcom/google/android/gms/internal/mlkit_common/zzau;Lcom/google/android/gms/internal/mlkit_common/zzar;)V
 
     return-object v1

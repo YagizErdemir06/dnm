@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/collect/TransformedIterator;
+.class public abstract Lcom/google/common/collect/TransformedIterator;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -28,7 +28,7 @@
 
 
 # instance fields
-.field final backingIterator:Ljava/util/Iterator;
+.field public final backingIterator:Ljava/util/Iterator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Iterator<",
@@ -49,8 +49,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -67,6 +69,7 @@
 .method public final hasNext()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/TransformedIterator;->backingIterator:Ljava/util/Iterator;
 
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
@@ -87,6 +90,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/TransformedIterator;->backingIterator:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -103,6 +107,7 @@
 .method public final remove()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/TransformedIterator;->backingIterator:Ljava/util/Iterator;
 
     invoke-interface {p0}, Ljava/util/Iterator;->remove()V

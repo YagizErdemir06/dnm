@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/MultimapBuilder$3;
+.class public Lcom/google/common/collect/MultimapBuilder$3;
 .super Lcom/google/common/collect/MultimapBuilder$MultimapBuilderWithKeys;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic val$comparator:Ljava/util/Comparator;
+.field public final synthetic val$comparator:Ljava/util/Comparator;
 
 
 # direct methods
 .method public constructor <init>(Ljava/util/Comparator;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/MultimapBuilder$3;->val$comparator:Ljava/util/Comparator;
 
     invoke-direct {p0}, Lcom/google/common/collect/MultimapBuilder$MultimapBuilderWithKeys;-><init>()V
@@ -52,6 +53,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/TreeMap;
 
     iget-object p0, p0, Lcom/google/common/collect/MultimapBuilder$3;->val$comparator:Ljava/util/Comparator;

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/ui/PlayerControlView$Api21;
+.class public final Lcom/google/android/exoplayer2/ui/PlayerControlView$Api21;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,6 +33,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/view/View;->isAccessibilityFocused()Z
 
     move-result p0

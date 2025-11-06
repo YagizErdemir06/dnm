@@ -20,6 +20,14 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -35,6 +43,16 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     .line 2
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -50,22 +68,22 @@
     invoke-virtual {p0, p2}, Landroid/widget/LinearLayout;->setGravity(I)V
 
     .line 5
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
 
-    const v0, 0x7f070e54
+    const v0, 0x7f070bb5
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
     move-result p2
 
     .line 6
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f070e60
+    const v1, 0x7f070bc1
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -88,7 +106,7 @@
     .line 9
     new-instance v2, Landroid/widget/TextView;
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -121,7 +139,7 @@
     const/4 v5, 0x1
 
     .line 14
-    invoke-virtual {v2, v5}, Landroid/view/View;->setId(I)V
+    invoke-virtual {v2, v5}, Landroid/widget/TextView;->setId(I)V
 
     const/16 v5, 0x11
 
@@ -129,18 +147,18 @@
     invoke-virtual {v2, v5}, Landroid/widget/TextView;->setGravity(I)V
 
     .line 16
-    invoke-virtual {v2, p1}, Landroid/view/View;->setFocusable(Z)V
+    invoke-virtual {v2, p1}, Landroid/widget/TextView;->setFocusable(Z)V
 
     .line 17
-    invoke-virtual {v2, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 18
-    invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    invoke-virtual {p0, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     .line 19
     new-instance v2, Lcom/android/camera2/compat/theme/custom/mm/top/DotView;
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
     move-result-object v6
 
@@ -153,12 +171,12 @@
     invoke-virtual {v2, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 22
-    invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    invoke-virtual {p0, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     .line 23
     new-instance v2, Landroid/widget/TextView;
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
     move-result-object v6
 
@@ -187,19 +205,19 @@
     const/4 p2, 0x2
 
     .line 28
-    invoke-virtual {v2, p2}, Landroid/view/View;->setId(I)V
+    invoke-virtual {v2, p2}, Landroid/widget/TextView;->setId(I)V
 
     .line 29
     invoke-virtual {v2, v5}, Landroid/widget/TextView;->setGravity(I)V
 
     .line 30
-    invoke-virtual {v2, p1}, Landroid/view/View;->setFocusable(Z)V
+    invoke-virtual {v2, p1}, Landroid/widget/TextView;->setFocusable(Z)V
 
     .line 31
-    invoke-virtual {v2, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 32
-    invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    invoke-virtual {p0, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     return-void
 .end method
@@ -207,41 +225,47 @@
 
 # virtual methods
 .method public getRotation()F
-    .locals 1
+    .locals 2
 
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+    .line 1
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
 
     if-gtz v0, :cond_0
 
-    invoke-super {p0}, Landroid/view/View;->getRotation()F
+    .line 2
+    invoke-super {p0}, Landroid/widget/LinearLayout;->getRotation()F
 
     move-result p0
 
     return p0
 
     :cond_0
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result v0
-
-    if-lez v0, :cond_1
-
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    .line 3
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
+
+    move-result v1
+
+    if-lez v1, :cond_1
+
+    .line 4
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object p0
 
+    .line 5
     invoke-virtual {p0}, Landroid/view/View;->getRotation()F
 
     move-result p0
 
     return p0
 
+    .line 6
     :cond_1
-    invoke-super {p0}, Landroid/view/View;->getRotation()F
+    invoke-super {p0}, Landroid/widget/LinearLayout;->getRotation()F
 
     move-result p0
 
@@ -254,20 +278,31 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "l"
+        }
+    .end annotation
 
     if-eqz p1, :cond_0
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/VideoQualityView;->mOnClickListener:Landroid/view/View$OnClickListener;
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/VideoQualityView;->mStartTextView:Landroid/widget/TextView;
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    .line 3
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/VideoQualityView;->mEndTextView:Landroid/widget/TextView;
 
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/VideoQualityView;->mOnClickListener:Landroid/view/View$OnClickListener;
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p1, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     :cond_0
     return-void
@@ -275,8 +310,17 @@
 
 .method public setRotation(F)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "rotation"
+        }
+    .end annotation
 
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+    .line 1
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
 
@@ -287,17 +331,20 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 2
     :goto_0
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v1
 
     if-ge v0, v1, :cond_1
 
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    .line 3
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
+    .line 4
     invoke-virtual {v1, p1}, Landroid/view/View;->setRotation(F)V
 
     add-int/lit8 v0, v0, 0x1
@@ -310,22 +357,34 @@
 
 .method public setTag(Ljava/lang/Object;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "tag"
+        }
+    .end annotation
 
-    invoke-super {p0, p1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+    .line 1
+    invoke-super {p0, p1}, Landroid/widget/LinearLayout;->setTag(Ljava/lang/Object;)V
 
     const/4 v0, 0x0
 
+    .line 2
     :goto_0
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v1
 
     if-ge v0, v1, :cond_0
 
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    .line 3
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
+    .line 4
     invoke-virtual {v1, p1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     add-int/lit8 v0, v0, 0x1
@@ -338,17 +397,27 @@
 
 .method public setTextColor(I)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "color"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v1
 
     if-ge v0, v1, :cond_2
 
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    .line 2
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -356,18 +425,21 @@
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    .line 3
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/TextView;
 
+    .line 4
     invoke-virtual {v1, p1}, Landroid/widget/TextView;->setTextColor(I)V
 
     goto :goto_1
 
+    .line 5
     :cond_0
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -375,12 +447,14 @@
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    .line 6
+    invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/camera2/compat/theme/custom/mm/top/DotView;
 
+    .line 7
     invoke-virtual {v1, p1}, Lcom/android/camera2/compat/theme/custom/mm/top/DotView;->setColor(I)V
 
     :cond_1
@@ -395,13 +469,23 @@
 
 .method public setTexts([Ljava/lang/String;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "texts"
+        }
+    .end annotation
 
+    .line 1
     array-length v0, p1
 
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/VideoQualityView;->mStartTextView:Landroid/widget/TextView;
 
     const/4 v1, 0x0
@@ -410,6 +494,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 3
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/VideoQualityView;->mEndTextView:Landroid/widget/TextView;
 
     const/4 v0, 0x1

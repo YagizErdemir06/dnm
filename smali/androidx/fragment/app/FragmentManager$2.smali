@@ -1,4 +1,4 @@
-.class Landroidx/fragment/app/FragmentManager$2;
+.class public Landroidx/fragment/app/FragmentManager$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/fragment/app/FragmentManager;
+.field public final synthetic this$0:Landroidx/fragment/app/FragmentManager;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/fragment/app/FragmentManager;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/fragment/app/FragmentManager$2;->this$0:Landroidx/fragment/app/FragmentManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,12 +46,14 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p2}, Landroidx/core/os/CancellationSignal;->isCanceled()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Landroidx/fragment/app/FragmentManager$2;->this$0:Landroidx/fragment/app/FragmentManager;
 
     invoke-virtual {p0, p1, p2}, Landroidx/fragment/app/FragmentManager;->removeCancellationSignal(Landroidx/fragment/app/Fragment;Landroidx/core/os/CancellationSignal;)V
@@ -70,6 +73,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Landroidx/fragment/app/FragmentManager$2;->this$0:Landroidx/fragment/app/FragmentManager;
 
     invoke-virtual {p0, p1, p2}, Landroidx/fragment/app/FragmentManager;->addCancellationSignal(Landroidx/fragment/app/Fragment;Landroidx/core/os/CancellationSignal;)V

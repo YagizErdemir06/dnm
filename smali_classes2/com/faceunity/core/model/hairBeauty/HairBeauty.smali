@@ -4,44 +4,48 @@
 
 
 # annotations
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
     bv = {
         0x1,
         0x0,
         0x3
     }
     d1 = {
-        "\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0005\n\u0002\u0010\u0006\n\u0002\u0008\u000c\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0008&\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004R$\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u00068F@FX\u0086\u000e\u00a2\u0006\u000c\u001a\u0004\u0008\u0008\u0010\t\"\u0004\u0008\n\u0010\u000bR$\u0010\r\u001a\u00020\u000c2\u0006\u0010\u0005\u001a\u00020\u000c8F@FX\u0086\u000e\u00a2\u0006\u000c\u001a\u0004\u0008\u000e\u0010\u000f\"\u0004\u0008\u0010\u0010\u0011R\u001a\u0010\u0012\u001a\u00020\u0006X\u0080\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0013\u0010\t\"\u0004\u0008\u0014\u0010\u000bR\u001a\u0010\u0015\u001a\u00020\u000cX\u0080\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\u0008\u0016\u0010\u000f\"\u0004\u0008\u0017\u0010\u0011R\u0014\u0010\u0018\u001a\u00020\u0019X\u0090\u0004\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u001a\u0010\u001b\u00a8\u0006\u001c"
+        "\u0000(\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0008\n\u0002\u0008\n\n\u0002\u0010\u0006\n\u0002\u0008\t\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0008&\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u001d\u001a\u00020\u001c\u00a2\u0006\u0004\u0008\u001e\u0010\u001fR\"\u0010\u0003\u001a\u00020\u00028\u0000@\u0000X\u0080\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0003\u0010\u0004\u001a\u0004\u0008\u0005\u0010\u0006\"\u0004\u0008\u0007\u0010\u0008R$\u0010\u000c\u001a\u00020\u00022\u0006\u0010\t\u001a\u00020\u00028F@FX\u0086\u000e\u00a2\u0006\u000c\u001a\u0004\u0008\n\u0010\u0006\"\u0004\u0008\u000b\u0010\u0008R$\u0010\u0012\u001a\u00020\r2\u0006\u0010\t\u001a\u00020\r8F@FX\u0086\u000e\u00a2\u0006\u000c\u001a\u0004\u0008\u000e\u0010\u000f\"\u0004\u0008\u0010\u0010\u0011R\"\u0010\u0013\u001a\u00020\r8\u0000@\u0000X\u0080\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0013\u0010\u0014\u001a\u0004\u0008\u0015\u0010\u000f\"\u0004\u0008\u0016\u0010\u0011R\u001c\u0010\u0018\u001a\u00020\u00178\u0010@\u0010X\u0090\u0004\u00a2\u0006\u000c\n\u0004\u0008\u0018\u0010\u0019\u001a\u0004\u0008\u001a\u0010\u001b\u00a8\u0006 "
     }
     d2 = {
         "Lcom/faceunity/core/model/hairBeauty/HairBeauty;",
         "Lcom/faceunity/core/model/BaseSingleModel;",
-        "controlBundle",
-        "Lcom/faceunity/core/entity/FUBundleData;",
-        "(Lcom/faceunity/core/entity/FUBundleData;)V",
-        "value",
         "",
-        "hairIndex",
-        "getHairIndex",
+        "mHairIndex",
+        "I",
+        "getMHairIndex$lib_core_release",
         "()I",
-        "setHairIndex",
+        "setMHairIndex$lib_core_release",
         "(I)V",
+        "value",
+        "getHairIndex",
+        "setHairIndex",
+        "hairIndex",
         "",
-        "hairIntensity",
         "getHairIntensity",
         "()D",
         "setHairIntensity",
         "(D)V",
-        "mHairIndex",
-        "getMHairIndex$lib_core_release",
-        "setMHairIndex$lib_core_release",
+        "hairIntensity",
         "mHairIntensity",
+        "D",
         "getMHairIntensity$lib_core_release",
         "setMHairIntensity$lib_core_release",
+        "Lcom/faceunity/core/controller/BaseSingleController;",
         "mModelController",
         "Lcom/faceunity/core/controller/BaseSingleController;",
         "getMModelController$lib_core_release",
         "()Lcom/faceunity/core/controller/BaseSingleController;",
+        "Lcom/faceunity/core/entity/FUBundleData;",
+        "controlBundle",
+        "<init>",
+        "(Lcom/faceunity/core/entity/FUBundleData;)V",
         "lib_core_release"
     }
     k = 0x1
@@ -59,7 +63,7 @@
 .field private mHairIntensity:D
 
 .field private final mModelController:Lcom/faceunity/core/controller/BaseSingleController;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -68,16 +72,18 @@
 .method public constructor <init>(Lcom/faceunity/core/entity/FUBundleData;)V
     .locals 2
     .param p1    # Lcom/faceunity/core/entity/FUBundleData;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "controlBundle"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/core/model/BaseSingleModel;-><init>()V
 
+    .line 2
     sget-object p1, Lcom/faceunity/core/support/FURenderBridge;->Companion:Lcom/faceunity/core/support/FURenderBridge$Companion;
 
     invoke-virtual {p1}, Lcom/faceunity/core/support/FURenderBridge$Companion;->getInstance$lib_core_release()Lcom/faceunity/core/support/FURenderBridge;
@@ -92,6 +98,7 @@
 
     const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
 
+    .line 3
     iput-wide v0, p0, Lcom/faceunity/core/model/hairBeauty/HairBeauty;->mHairIntensity:D
 
     return-void
@@ -102,6 +109,7 @@
 .method public final getHairIndex()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/faceunity/core/model/hairBeauty/HairBeauty;->mHairIndex:I
 
     return p0
@@ -110,6 +118,7 @@
 .method public final getHairIntensity()D
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/faceunity/core/model/hairBeauty/HairBeauty;->mHairIntensity:D
 
     return-wide v0
@@ -118,6 +127,7 @@
 .method public final getMHairIndex$lib_core_release()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/faceunity/core/model/hairBeauty/HairBeauty;->mHairIndex:I
 
     return p0
@@ -126,6 +136,7 @@
 .method public final getMHairIntensity$lib_core_release()D
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/faceunity/core/model/hairBeauty/HairBeauty;->mHairIntensity:D
 
     return-wide v0
@@ -133,9 +144,10 @@
 
 .method public getMModelController$lib_core_release()Lcom/faceunity/core/controller/BaseSingleController;
     .locals 0
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/model/hairBeauty/HairBeauty;->mModelController:Lcom/faceunity/core/controller/BaseSingleController;
 
     return-object p0
@@ -144,13 +156,15 @@
 .method public final setHairIndex(I)V
     .locals 1
 
+    .line 1
     iput p1, p0, Lcom/faceunity/core/model/hairBeauty/HairBeauty;->mHairIndex:I
 
-    const-string v0, "Index"
-
+    .line 2
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
+
+    const-string v0, "Index"
 
     invoke-virtual {p0, v0, p1}, Lcom/faceunity/core/model/BaseSingleModel;->setItemParam(Ljava/lang/String;Ljava/lang/Object;)V
 
@@ -158,17 +172,19 @@
 .end method
 
 .method public final setHairIntensity(D)V
-    .locals 1
+    .locals 0
 
+    .line 1
     iput-wide p1, p0, Lcom/faceunity/core/model/hairBeauty/HairBeauty;->mHairIntensity:D
 
-    const-string v0, "Strength"
-
+    .line 2
     invoke-static {p1, p2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object p1
 
-    invoke-virtual {p0, v0, p1}, Lcom/faceunity/core/model/BaseSingleModel;->setItemParam(Ljava/lang/String;Ljava/lang/Object;)V
+    const-string p2, "Strength"
+
+    invoke-virtual {p0, p2, p1}, Lcom/faceunity/core/model/BaseSingleModel;->setItemParam(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -176,6 +192,7 @@
 .method public final setMHairIndex$lib_core_release(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/faceunity/core/model/hairBeauty/HairBeauty;->mHairIndex:I
 
     return-void
@@ -184,6 +201,7 @@
 .method public final setMHairIntensity$lib_core_release(D)V
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lcom/faceunity/core/model/hairBeauty/HairBeauty;->mHairIntensity:D
 
     return-void

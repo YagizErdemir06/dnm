@@ -13,6 +13,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,11 +21,23 @@
 
 .method private static compareVersion(Ljava/lang/String;Ljava/lang/String;)I
     .locals 9
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "version1",
+            "version2"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
+    .line 2
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -54,6 +67,7 @@
 
     if-ge v3, v0, :cond_3
 
+    .line 3
     invoke-virtual {p0, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v7
@@ -62,6 +76,7 @@
 
     mul-int/lit8 v5, v5, 0xa
 
+    .line 4
     invoke-virtual {p0, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v6
@@ -82,6 +97,7 @@
     :goto_2
     if-ge v4, v1, :cond_4
 
+    .line 5
     invoke-virtual {p1, v4}, Ljava/lang/String;->charAt(I)C
 
     move-result v8
@@ -90,6 +106,7 @@
 
     mul-int/lit8 v7, v7, 0xa
 
+    .line 6
     invoke-virtual {p1, v4}, Ljava/lang/String;->charAt(I)C
 
     move-result v8
@@ -122,11 +139,23 @@
 
 .method public static getDataByKey(Ljava/lang/String;Ljava/lang/String;)Lcom/google/gson/JsonObject;
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "allData",
+            "dataKey"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
+    .line 1
     sput-object v0, Lcom/android/camera/resource/conf/ConfRequestUtil;->mLastVersion:Ljava/lang/String;
 
+    .line 2
     new-instance v0, Lcom/google/gson/JsonParser;
 
     invoke-direct {v0}, Lcom/google/gson/JsonParser;-><init>()V
@@ -135,10 +164,12 @@
 
     move-result-object p0
 
+    .line 3
     new-instance v0, Lcom/google/gson/JsonObject;
 
     invoke-direct {v0}, Lcom/google/gson/JsonObject;-><init>()V
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/gson/JsonElement;->isJsonNull()Z
 
     move-result v1
@@ -147,11 +178,13 @@
 
     return-object v0
 
+    .line 5
     :cond_0
     invoke-virtual {p0}, Lcom/google/gson/JsonElement;->getAsJsonArray()Lcom/google/gson/JsonArray;
 
     move-result-object p0
 
+    .line 6
     invoke-virtual {p0}, Lcom/google/gson/JsonArray;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -170,12 +203,14 @@
 
     check-cast v1, Lcom/google/gson/JsonElement;
 
+    .line 7
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
+    .line 8
     invoke-static {v1, v0, p1}, Lcom/android/camera/resource/conf/ConfRequestUtil;->getMatchedDataByKey(Lcom/google/gson/JsonObject;Lcom/google/gson/JsonObject;Ljava/lang/String;)Lcom/google/gson/JsonObject;
 
     move-result-object v0
@@ -188,11 +223,25 @@
 
 .method private static getMatchedDataByKey(Lcom/google/gson/JsonObject;Lcom/google/gson/JsonObject;Ljava/lang/String;)Lcom/google/gson/JsonObject;
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "jsonObject",
+            "matchedObject",
+            "dataKey"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/gson/JsonObject;->entrySet()Ljava/util/Set;
 
     move-result-object v0
 
+    .line 2
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -211,12 +260,14 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
+    .line 3
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
+    .line 4
     invoke-static {v1, p2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -225,11 +276,13 @@
 
     goto :goto_0
 
+    .line 5
     :cond_1
     invoke-virtual {p0}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v1
 
+    .line 6
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsJsonObject()Lcom/google/gson/JsonObject;
 
     move-result-object v1
@@ -245,6 +298,7 @@
     :cond_2
     const-string v2, "Version"
 
+    .line 7
     invoke-virtual {v1, v2}, Lcom/google/gson/JsonObject;->get(Ljava/lang/String;)Lcom/google/gson/JsonElement;
 
     move-result-object v1
@@ -253,11 +307,13 @@
 
     return-object p0
 
+    .line 8
     :cond_3
     invoke-virtual {v1}, Lcom/google/gson/JsonElement;->getAsString()Ljava/lang/String;
 
     move-result-object v1
 
+    .line 9
     sget-object v2, Lcom/android/camera/resource/conf/ConfRequestUtil;->mLastVersion:Ljava/lang/String;
 
     if-eqz v2, :cond_4
@@ -268,9 +324,11 @@
 
     if-lez v2, :cond_0
 
+    .line 10
     :cond_4
     sput-object v1, Lcom/android/camera/resource/conf/ConfRequestUtil;->mLastVersion:Ljava/lang/String;
 
+    .line 11
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V

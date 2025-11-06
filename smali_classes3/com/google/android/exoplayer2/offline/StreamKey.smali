@@ -48,6 +48,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/offline/StreamKey$1;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/offline/StreamKey$1;-><init>()V
@@ -195,6 +196,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 1
     const-class v2, Lcom/google/android/exoplayer2/offline/StreamKey;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -205,9 +207,11 @@
 
     goto :goto_1
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/offline/StreamKey;
 
+    .line 3
     iget v2, p0, Lcom/google/android/exoplayer2/offline/StreamKey;->periodIndex:I
 
     iget v3, p1, Lcom/google/android/exoplayer2/offline/StreamKey;->periodIndex:I
@@ -242,16 +246,19 @@
 .method public hashCode()I
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/offline/StreamKey;->periodIndex:I
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 2
     iget v1, p0, Lcom/google/android/exoplayer2/offline/StreamKey;->groupIndex:I
 
     add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 3
     iget p0, p0, Lcom/google/android/exoplayer2/offline/StreamKey;->streamIndex:I
 
     add-int/2addr v0, p0
@@ -262,6 +269,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -294,14 +302,17 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
+    .line 1
     iget p2, p0, Lcom/google/android/exoplayer2/offline/StreamKey;->periodIndex:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 2
     iget p2, p0, Lcom/google/android/exoplayer2/offline/StreamKey;->groupIndex:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 3
     iget p0, p0, Lcom/google/android/exoplayer2/offline/StreamKey;->streamIndex:I
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V

@@ -31,6 +31,7 @@
 
     const-string v1, "precision mediump float;\nvarying vec2 vTextureCoord;\nvarying vec3 vPosition;\nuniform sampler2D sTexture;\nvoid main() {\n    float distance=sqrt(pow((vPosition.x-0.0),2.0)+pow((vPosition.y/vPosition.z-0.0),2.0));\n    if(vPosition.y>=0.0||distance<=1.0){\n       gl_FragColor = texture2D(sTexture, vTextureCoord);\n    }else{\n       gl_FragColor = texture2D(sTexture, vTextureCoord).rgba * vec4(0.0, 0.0, 0.0, 0.0);\n    }\n}\n"
 
+    .line 1
     invoke-direct {p0, v0, v1}, Lcom/faceunity/toolbox/program/core/FUProgram;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     int-to-float v0, p1
@@ -45,8 +46,10 @@
 
     div-float/2addr v0, v2
 
+    .line 2
     iput v0, p0, Lcom/faceunity/toolbox/program/FUProgramCircle;->whRadio:F
 
+    .line 3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -89,24 +92,30 @@
 
     const-string v0, "draw start"
 
+    .line 1
     invoke-static {v0}, Lcom/faceunity/toolbox/utils/FUGLUtils;->checkGlError(Ljava/lang/String;)V
 
+    .line 2
     iget v0, p0, Lcom/faceunity/toolbox/program/core/FUProgram;->mProgramHandle:I
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
     const-string v0, "glUseProgram"
 
+    .line 3
     invoke-static {v0}, Lcom/faceunity/toolbox/utils/FUGLUtils;->checkGlError(Ljava/lang/String;)V
 
     const v0, 0x84c0
 
+    .line 4
     invoke-static {v0}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
     const/16 v0, 0xde1
 
+    .line 5
     invoke-static {v0, p1}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
+    .line 6
     iget p1, p0, Lcom/faceunity/toolbox/program/FUProgramCircle;->muMVPMatrixLoc:I
 
     const/4 v1, 0x1
@@ -117,14 +126,18 @@
 
     const-string p1, "glUniformMatrix4fv"
 
+    .line 7
     invoke-static {p1}, Lcom/faceunity/toolbox/utils/FUGLUtils;->checkGlError(Ljava/lang/String;)V
 
+    .line 8
     iget p3, p0, Lcom/faceunity/toolbox/program/FUProgramCircle;->muTexMatrixLoc:I
 
     invoke-static {p3, v1, v2, p2, v2}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZ[FI)V
 
+    .line 9
     invoke-static {p1}, Lcom/faceunity/toolbox/utils/FUGLUtils;->checkGlError(Ljava/lang/String;)V
 
+    .line 10
     iget p1, p0, Lcom/faceunity/toolbox/program/FUProgramCircle;->ratio:I
 
     iget p2, p0, Lcom/faceunity/toolbox/program/FUProgramCircle;->whRadio:F
@@ -133,17 +146,28 @@
 
     const-string p1, "radio"
 
+    .line 11
     invoke-static {p1}, Lcom/faceunity/toolbox/utils/FUGLUtils;->checkGlError(Ljava/lang/String;)V
 
+    .line 12
     iget p1, p0, Lcom/faceunity/toolbox/program/FUProgramCircle;->maPositionLoc:I
 
     invoke-static {p1}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
     const-string p1, "glEnableVertexAttribArray"
 
+    .line 13
     invoke-static {p1}, Lcom/faceunity/toolbox/utils/FUGLUtils;->checkGlError(Ljava/lang/String;)V
 
+    .line 14
     iget v3, p0, Lcom/faceunity/toolbox/program/FUProgramCircle;->maPositionLoc:I
+
+    iget-object p2, p0, Lcom/faceunity/toolbox/program/core/FUProgram;->mDrawable2d:Lcom/faceunity/toolbox/program/core/FUDrawable2d;
+
+    .line 15
+    invoke-virtual {p2}, Lcom/faceunity/toolbox/program/core/FUDrawable2d;->vertexArray()Ljava/nio/FloatBuffer;
+
+    move-result-object v8
 
     const/4 v4, 0x2
 
@@ -153,36 +177,39 @@
 
     const/16 v7, 0x8
 
-    iget-object p2, p0, Lcom/faceunity/toolbox/program/core/FUProgram;->mDrawable2d:Lcom/faceunity/toolbox/program/core/FUDrawable2d;
-
-    invoke-virtual {p2}, Lcom/faceunity/toolbox/program/core/FUDrawable2d;->vertexArray()Ljava/nio/FloatBuffer;
-
-    move-result-object v8
-
+    .line 16
     invoke-static/range {v3 .. v8}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
     const-string p2, "glVertexAttribPointer"
 
+    .line 17
     invoke-static {p2}, Lcom/faceunity/toolbox/utils/FUGLUtils;->checkGlError(Ljava/lang/String;)V
 
+    .line 18
     iget p3, p0, Lcom/faceunity/toolbox/program/FUProgramCircle;->maTextureCoordLoc:I
 
     invoke-static {p3}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
+    .line 19
     invoke-static {p1}, Lcom/faceunity/toolbox/utils/FUGLUtils;->checkGlError(Ljava/lang/String;)V
 
+    .line 20
     iget v3, p0, Lcom/faceunity/toolbox/program/FUProgramCircle;->maTextureCoordLoc:I
 
     iget-object p1, p0, Lcom/faceunity/toolbox/program/core/FUProgram;->mDrawable2d:Lcom/faceunity/toolbox/program/core/FUDrawable2d;
 
+    .line 21
     invoke-virtual {p1}, Lcom/faceunity/toolbox/program/core/FUDrawable2d;->texCoordArray()Ljava/nio/FloatBuffer;
 
     move-result-object v8
 
+    .line 22
     invoke-static/range {v3 .. v8}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
+    .line 23
     invoke-static {p2}, Lcom/faceunity/toolbox/utils/FUGLUtils;->checkGlError(Ljava/lang/String;)V
 
+    .line 24
     iget-object p1, p0, Lcom/faceunity/toolbox/program/core/FUProgram;->mDrawable2d:Lcom/faceunity/toolbox/program/core/FUDrawable2d;
 
     invoke-virtual {p1}, Lcom/faceunity/toolbox/program/core/FUDrawable2d;->vertexCount()I
@@ -195,18 +222,23 @@
 
     const-string p1, "glDrawArrays"
 
+    .line 25
     invoke-static {p1}, Lcom/faceunity/toolbox/utils/FUGLUtils;->checkGlError(Ljava/lang/String;)V
 
+    .line 26
     iget p1, p0, Lcom/faceunity/toolbox/program/FUProgramCircle;->maPositionLoc:I
 
     invoke-static {p1}, Landroid/opengl/GLES20;->glDisableVertexAttribArray(I)V
 
+    .line 27
     iget p0, p0, Lcom/faceunity/toolbox/program/FUProgramCircle;->maTextureCoordLoc:I
 
     invoke-static {p0}, Landroid/opengl/GLES20;->glDisableVertexAttribArray(I)V
 
+    .line 28
     invoke-static {v0, v2}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
+    .line 29
     invoke-static {v2}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
     return-void
@@ -215,6 +247,7 @@
 .method public getDrawable2d()Lcom/faceunity/toolbox/program/core/FUDrawable2d;
     .locals 0
 
+    .line 1
     new-instance p0, Lcom/faceunity/toolbox/program/FUDrawable2dFull;
 
     invoke-direct {p0}, Lcom/faceunity/toolbox/program/FUDrawable2dFull;-><init>()V
@@ -225,6 +258,7 @@
 .method public getLocations()V
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/faceunity/toolbox/program/core/FUProgram;->mProgramHandle:I
 
     const-string v1, "aPosition"
@@ -235,8 +269,10 @@
 
     iput v0, p0, Lcom/faceunity/toolbox/program/FUProgramCircle;->maPositionLoc:I
 
+    .line 2
     invoke-static {v0, v1}, Lcom/faceunity/toolbox/utils/FUGLUtils;->checkLocation(ILjava/lang/String;)V
 
+    .line 3
     iget v0, p0, Lcom/faceunity/toolbox/program/core/FUProgram;->mProgramHandle:I
 
     const-string v1, "aTextureCoord"
@@ -247,8 +283,10 @@
 
     iput v0, p0, Lcom/faceunity/toolbox/program/FUProgramCircle;->maTextureCoordLoc:I
 
+    .line 4
     invoke-static {v0, v1}, Lcom/faceunity/toolbox/utils/FUGLUtils;->checkLocation(ILjava/lang/String;)V
 
+    .line 5
     iget v0, p0, Lcom/faceunity/toolbox/program/core/FUProgram;->mProgramHandle:I
 
     const-string v1, "uMVPMatrix"
@@ -259,8 +297,10 @@
 
     iput v0, p0, Lcom/faceunity/toolbox/program/FUProgramCircle;->muMVPMatrixLoc:I
 
+    .line 6
     invoke-static {v0, v1}, Lcom/faceunity/toolbox/utils/FUGLUtils;->checkLocation(ILjava/lang/String;)V
 
+    .line 7
     iget v0, p0, Lcom/faceunity/toolbox/program/core/FUProgram;->mProgramHandle:I
 
     const-string v1, "uTexMatrix"
@@ -271,8 +311,10 @@
 
     iput v0, p0, Lcom/faceunity/toolbox/program/FUProgramCircle;->muTexMatrixLoc:I
 
+    .line 8
     invoke-static {v0, v1}, Lcom/faceunity/toolbox/utils/FUGLUtils;->checkLocation(ILjava/lang/String;)V
 
+    .line 9
     iget v0, p0, Lcom/faceunity/toolbox/program/core/FUProgram;->mProgramHandle:I
 
     const-string v1, "ratio"
@@ -283,6 +325,7 @@
 
     iput v0, p0, Lcom/faceunity/toolbox/program/FUProgramCircle;->ratio:I
 
+    .line 10
     invoke-static {v0, v1}, Lcom/faceunity/toolbox/utils/FUGLUtils;->checkLocation(ILjava/lang/String;)V
 
     return-void

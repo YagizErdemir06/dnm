@@ -32,8 +32,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/decoder/DecoderOutputBuffer;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoderOutputBuffer;->owner:Lcom/google/android/exoplayer2/decoder/DecoderOutputBuffer$Owner;
 
     return-void
@@ -44,12 +46,15 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/android/exoplayer2/decoder/Buffer;->clear()V
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoderOutputBuffer;->data:Ljava/nio/ByteBuffer;
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
     :cond_0
@@ -59,18 +64,21 @@
 .method public init(JI)Ljava/nio/ByteBuffer;
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lcom/google/android/exoplayer2/decoder/DecoderOutputBuffer;->timeUs:J
 
+    .line 2
     iget-object p1, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoderOutputBuffer;->data:Ljava/nio/ByteBuffer;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->capacity()I
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->capacity()I
 
     move-result p1
 
     if-ge p1, p3, :cond_1
 
+    .line 3
     :cond_0
     invoke-static {p3}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
@@ -86,6 +94,7 @@
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoderOutputBuffer;->data:Ljava/nio/ByteBuffer;
 
+    .line 4
     :cond_1
     iget-object p1, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoderOutputBuffer;->data:Ljava/nio/ByteBuffer;
 
@@ -93,10 +102,12 @@
 
     invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
+    .line 5
     iget-object p1, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoderOutputBuffer;->data:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p1, p3}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
+    .line 6
     iget-object p0, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoderOutputBuffer;->data:Ljava/nio/ByteBuffer;
 
     return-object p0
@@ -105,6 +116,7 @@
 .method public release()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/decoder/SimpleDecoderOutputBuffer;->owner:Lcom/google/android/exoplayer2/decoder/DecoderOutputBuffer$Owner;
 
     invoke-interface {v0, p0}, Lcom/google/android/exoplayer2/decoder/DecoderOutputBuffer$Owner;->releaseOutputBuffer(Lcom/google/android/exoplayer2/decoder/DecoderOutputBuffer;)V

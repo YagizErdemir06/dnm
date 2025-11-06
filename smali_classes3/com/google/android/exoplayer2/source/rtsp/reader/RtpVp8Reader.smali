@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;
+.class public final Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -36,30 +36,39 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->payloadFormat:Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;
 
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 3
     iput-wide v0, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->firstReceivedTimestamp:J
 
     const/4 p1, -0x1
 
+    .line 4
     iput p1, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->previousSequenceNumber:I
 
+    .line 5
     iput p1, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->fragmentedSampleSizeBytes:I
 
     const-wide/16 v0, 0x0
 
+    .line 6
     iput-wide v0, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->startTimeOffsetUs:J
 
     const/4 p1, 0x0
 
+    .line 7
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->gotFirstPacketOfVp8Frame:Z
 
+    .line 8
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->isKeyFrame:Z
 
+    .line 9
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->isOutputFormatSet:Z
 
     return-void
@@ -74,6 +83,7 @@
 
     const-wide/32 v4, 0x15f90
 
+    .line 1
     invoke-static/range {v0 .. v5}, Lcom/google/android/exoplayer2/util/Util;->scaleLargeTimestamp(JJJ)J
 
     move-result-wide p2
@@ -86,10 +96,12 @@
 .method private validateVp8Descriptor(Lcom/google/android/exoplayer2/util/ParsableByteArray;I)Z
     .locals 5
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v0
 
+    .line 2
     iget-boolean v1, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->gotFirstPacketOfVp8Frame:Z
 
     const-string v2, "RtpVP8Reader"
@@ -110,6 +122,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iput-boolean v4, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->gotFirstPacketOfVp8Frame:Z
 
@@ -119,10 +132,12 @@
     :goto_0
     const-string p0, "RTP packet is not the start of a new VP8 partition, skipping."
 
+    .line 4
     invoke-static {v2, p0}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     return v3
 
+    .line 5
     :cond_2
     iget p0, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->previousSequenceNumber:I
 
@@ -136,6 +151,7 @@
 
     new-array p1, p1, [Ljava/lang/Object;
 
+    .line 6
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -150,10 +166,12 @@
 
     const-string p0, "Received RTP packet with unexpected sequence number. Expected: %d; received: %d. Dropping packet."
 
+    .line 7
     invoke-static {p0, p1}, Lcom/google/android/exoplayer2/util/Util;->formatInvariant(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 8
     invoke-static {v2, p0}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     return v3
@@ -164,6 +182,7 @@
 
     if-eqz p0, :cond_7
 
+    .line 9
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result p0
@@ -172,6 +191,7 @@
 
     if-eqz p2, :cond_4
 
+    .line 10
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result p2
@@ -180,6 +200,7 @@
 
     if-eqz p2, :cond_4
 
+    .line 11
     invoke-virtual {p1, v4}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
     :cond_4
@@ -187,6 +208,7 @@
 
     if-eqz p2, :cond_5
 
+    .line 12
     invoke-virtual {p1, v4}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
     :cond_5
@@ -198,6 +220,7 @@
 
     if-eqz p0, :cond_7
 
+    .line 13
     :cond_6
     invoke-virtual {p1, v4}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
@@ -216,16 +239,19 @@
 
     move/from16 v2, p4
 
+    .line 1
     iget-object v3, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->trackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     invoke-static {v3}, Lcom/google/android/exoplayer2/util/Assertions;->checkStateNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     invoke-direct {v0, v1, v2}, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->validateVp8Descriptor(Lcom/google/android/exoplayer2/util/ParsableByteArray;I)Z
 
     move-result v3
 
     if-eqz v3, :cond_7
 
+    .line 3
     iget v3, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->fragmentedSampleSizeBytes:I
 
     const/4 v4, 0x0
@@ -240,6 +266,7 @@
 
     if-eqz v3, :cond_1
 
+    .line 4
     invoke-virtual/range {p1 .. p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->peekUnsignedByte()I
 
     move-result v3
@@ -258,33 +285,40 @@
     :goto_0
     iput-boolean v3, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->isKeyFrame:Z
 
+    .line 5
     :cond_1
     iget-boolean v3, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->isOutputFormatSet:Z
 
     if-nez v3, :cond_4
 
+    .line 6
     invoke-virtual/range {p1 .. p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->getPosition()I
 
     move-result v3
 
     add-int/lit8 v7, v3, 0x6
 
+    .line 7
     invoke-virtual {v1, v7}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
+    .line 8
     invoke-virtual/range {p1 .. p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLittleEndianUnsignedShort()I
 
     move-result v7
 
     and-int/lit16 v7, v7, 0x3fff
 
+    .line 9
     invoke-virtual/range {p1 .. p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->readLittleEndianUnsignedShort()I
 
     move-result v8
 
     and-int/lit16 v8, v8, 0x3fff
 
+    .line 10
     invoke-virtual {v1, v3}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
+    .line 11
     iget-object v3, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->payloadFormat:Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;
 
     iget-object v3, v3, Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;->format:Lcom/google/android/exoplayer2/Format;
@@ -297,9 +331,11 @@
 
     if-eq v8, v9, :cond_3
 
+    .line 12
     :cond_2
     iget-object v9, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->trackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
+    .line 13
     invoke-virtual {v3}, Lcom/google/android/exoplayer2/Format;->buildUpon()Lcom/google/android/exoplayer2/Format$Builder;
 
     move-result-object v3
@@ -316,20 +352,25 @@
 
     move-result-object v3
 
+    .line 14
     invoke-interface {v9, v3}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->format(Lcom/google/android/exoplayer2/Format;)V
 
+    .line 15
     :cond_3
     iput-boolean v6, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->isOutputFormatSet:Z
 
+    .line 16
     :cond_4
     invoke-virtual/range {p1 .. p1}, Lcom/google/android/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
     move-result v3
 
+    .line 17
     iget-object v6, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->trackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     invoke-interface {v6, v1, v3}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->sampleData(Lcom/google/android/exoplayer2/util/ParsableByteArray;I)V
 
+    .line 18
     iget v1, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->fragmentedSampleSizeBytes:I
 
     add-int/2addr v1, v3
@@ -338,6 +379,7 @@
 
     if-eqz p5, :cond_6
 
+    .line 19
     iget-wide v6, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->firstReceivedTimestamp:J
 
     const-wide v8, -0x7fffffffffffffffL    # -4.9E-324
@@ -348,8 +390,10 @@
 
     if-nez v1, :cond_5
 
+    .line 20
     iput-wide v8, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->firstReceivedTimestamp:J
 
+    .line 21
     :cond_5
     iget-wide v6, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->startTimeOffsetUs:J
 
@@ -361,8 +405,10 @@
 
     move-result-wide v13
 
+    .line 22
     iget-object v12, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->trackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
+    .line 23
     iget-boolean v15, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->isKeyFrame:Z
 
     iget v1, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->fragmentedSampleSizeBytes:I
@@ -373,12 +419,16 @@
 
     move/from16 v16, v1
 
+    .line 24
     invoke-interface/range {v12 .. v18}, Lcom/google/android/exoplayer2/extractor/TrackOutput;->sampleMetadata(JIIILcom/google/android/exoplayer2/extractor/TrackOutput$CryptoData;)V
 
+    .line 25
     iput v5, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->fragmentedSampleSizeBytes:I
 
+    .line 26
     iput-boolean v4, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->gotFirstPacketOfVp8Frame:Z
 
+    .line 27
     :cond_6
     iput v2, v0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->previousSequenceNumber:I
 
@@ -391,12 +441,14 @@
 
     const/4 v0, 0x2
 
+    .line 1
     invoke-interface {p1, p2, v0}, Lcom/google/android/exoplayer2/extractor/ExtractorOutput;->track(II)Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->trackOutput:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->payloadFormat:Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtpPayloadFormat;->format:Lcom/google/android/exoplayer2/Format;
@@ -415,12 +467,15 @@
 .method public seek(JJ)V
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->firstReceivedTimestamp:J
 
     const/4 p1, -0x1
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->fragmentedSampleSizeBytes:I
 
+    .line 3
     iput-wide p3, p0, Lcom/google/android/exoplayer2/source/rtsp/reader/RtpVp8Reader;->startTimeOffsetUs:J
 
     return-void

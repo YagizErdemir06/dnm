@@ -1,4 +1,4 @@
-.class Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM$2;
+.class public Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,17 +18,30 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;
+.field public final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;
 
-.field final synthetic val$enabled:Z
+.field public final synthetic val$enabled:Z
 
-.field final synthetic val$view:Landroid/view/View;
+.field public final synthetic val$view:Landroid/view/View;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;Landroid/view/View;Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$view",
+            "val$enabled"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;
 
     iput-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM$2;->val$view:Landroid/view/View;
@@ -44,17 +57,28 @@
 # virtual methods
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
 
+    .line 1
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->access$102(Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;Z)Z
 
+    .line 2
     iget-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM$2;->val$enabled:Z
 
     if-eqz p1, :cond_0
 
+    .line 3
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM$2;->val$view:Landroid/view/View;
 
     const/4 p1, 0x1
@@ -67,17 +91,28 @@
 
 .method public onAnimationRepeat(Landroid/view/animation/Animation;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
 
+    .line 1
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->access$102(Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;Z)Z
 
+    .line 2
     iget-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM$2;->val$enabled:Z
 
     if-eqz p1, :cond_0
 
+    .line 3
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM$2;->val$view:Landroid/view/View;
 
     const/4 p1, 0x1
@@ -90,19 +125,30 @@
 
 .method public onAnimationStart(Landroid/view/animation/Animation;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
 
+    .line 1
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;
 
     const/4 v0, 0x1
 
     invoke-static {p1, v0}, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;->access$102(Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM;Z)Z
 
+    .line 2
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM$2;->val$view:Landroid/view/View;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
+    .line 3
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/top/TopExpendViewMM$2;->val$view:Landroid/view/View;
 
     invoke-virtual {p0, v0}, Landroid/view/View;->setEnabled(Z)V

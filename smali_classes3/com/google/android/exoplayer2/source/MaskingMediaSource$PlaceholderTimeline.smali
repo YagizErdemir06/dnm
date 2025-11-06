@@ -25,8 +25,10 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/MediaItem;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/Timeline;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/MaskingMediaSource$PlaceholderTimeline;->mediaItem:Lcom/google/android/exoplayer2/MediaItem;
 
     return-void
@@ -37,6 +39,7 @@
 .method public getIndexOfPeriod(Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     sget-object p0, Lcom/google/android/exoplayer2/source/MaskingMediaSource$MaskingTimeline;->MASKING_EXTERNAL_PERIOD_UID:Ljava/lang/Object;
 
     if-ne p1, p0, :cond_0
@@ -61,6 +64,7 @@
 
     const/4 p1, 0x0
 
+    .line 1
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -75,6 +79,7 @@
     :goto_0
     if-eqz p3, :cond_1
 
+    .line 2
     sget-object p0, Lcom/google/android/exoplayer2/source/MaskingMediaSource$MaskingTimeline;->MASKING_EXTERNAL_PERIOD_UID:Ljava/lang/Object;
 
     :cond_1
@@ -92,6 +97,7 @@
 
     move-object v0, p2
 
+    .line 3
     invoke-virtual/range {v0 .. v9}, Lcom/google/android/exoplayer2/Timeline$Period;->set(Ljava/lang/Object;Ljava/lang/Object;IJJLcom/google/android/exoplayer2/source/ads/AdPlaybackState;Z)Lcom/google/android/exoplayer2/Timeline$Period;
 
     return-object p2
@@ -108,6 +114,7 @@
 .method public getUidOfPeriod(I)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     sget-object p0, Lcom/google/android/exoplayer2/source/MaskingMediaSource$MaskingTimeline;->MASKING_EXTERNAL_PERIOD_UID:Ljava/lang/Object;
 
     return-object p0
@@ -120,6 +127,7 @@
 
     move-object/from16 v0, p2
 
+    .line 1
     sget-object v1, Lcom/google/android/exoplayer2/Timeline$Window;->SINGLE_WINDOW_UID:Ljava/lang/Object;
 
     move-object/from16 v2, p0
@@ -158,6 +166,7 @@
 
     move-object/from16 v1, p2
 
+    .line 2
     iput-boolean v0, v1, Lcom/google/android/exoplayer2/Timeline$Window;->isPlaceholder:Z
 
     return-object v1

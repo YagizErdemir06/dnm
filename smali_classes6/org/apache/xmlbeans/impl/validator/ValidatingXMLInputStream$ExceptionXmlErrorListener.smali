@@ -1,4 +1,4 @@
-.class final Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream$ExceptionXmlErrorListener;
+.class public final Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream$ExceptionXmlErrorListener;
 .super Ljava/util/AbstractCollection;
 .source "SourceFile"
 
@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic $assertionsDisabled:Z
+.field public static final synthetic $assertionsDisabled:Z
 
 
 # instance fields
@@ -26,6 +26,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     sget-object v0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream;->class$org$apache$xmlbeans$impl$validator$ValidatingXMLInputStream:Ljava/lang/Class;
 
     if-nez v0, :cond_0
@@ -71,6 +72,7 @@
 .method public add(Ljava/lang/Object;)Z
     .locals 1
 
+    .line 1
     sget-boolean v0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream$ExceptionXmlErrorListener;->$assertionsDisabled:Z
 
     if-nez v0, :cond_1
@@ -92,6 +94,7 @@
 
     throw p0
 
+    .line 2
     :cond_1
     :goto_0
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream$ExceptionXmlErrorListener;->this$0:Lorg/apache/xmlbeans/impl/validator/ValidatingXMLInputStream;
@@ -112,6 +115,7 @@
 .method public iterator()Ljava/util/Iterator;
     .locals 0
 
+    .line 1
     sget-object p0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;

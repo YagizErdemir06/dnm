@@ -70,13 +70,14 @@
 .method public static constructor <clinit>()V
     .locals 10
 
+    .line 1
     new-instance v8, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
-
-    const/4 v1, 0x0
 
     const/4 v9, 0x0
 
     new-array v2, v9, [Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
+
+    const/4 v1, 0x0
 
     const-wide/16 v3, 0x0
 
@@ -90,6 +91,7 @@
 
     sput-object v8, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->NONE:Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
+    .line 2
     new-instance v0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     const-wide/16 v1, 0x0
@@ -102,9 +104,8 @@
 
     sput-object v0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->REMOVED_AD_GROUP:Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
-    new-instance v0, Lcom/google/android/exoplayer2/source/ads/a;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/source/ads/a;-><init>()V
+    .line 3
+    sget-object v0, Ld/j/a/b/v2/x/b;->a:Ld/j/a/b/v2/x/b;
 
     sput-object v0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->CREATOR:Lcom/google/android/exoplayer2/Bundleable$Creator;
 
@@ -183,6 +184,7 @@
 .method private static createEmptyAdGroups([J)[Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
     .locals 6
 
+    .line 1
     array-length v0, p0
 
     new-array v1, v0, [Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
@@ -192,6 +194,7 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
+    .line 2
     new-instance v3, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     aget-wide v4, p0, v2
@@ -213,6 +216,7 @@
 
     move-object/from16 v0, p1
 
+    .line 1
     iget v1, v0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroupCount:I
 
     iget v2, v0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->removedAdGroupCount:I
@@ -226,10 +230,12 @@
     :goto_0
     if-ge v2, v1, :cond_0
 
+    .line 2
     iget-object v3, v0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroups:[Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     aget-object v3, v3, v2
 
+    .line 3
     new-instance v16, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     iget-wide v6, v3, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;->timeUs:J
@@ -240,6 +246,7 @@
 
     array-length v9, v5
 
+    .line 4
     invoke-static {v5, v9}, Ljava/util/Arrays;->copyOf([II)[I
 
     move-result-object v9
@@ -248,6 +255,7 @@
 
     array-length v10, v5
 
+    .line 5
     invoke-static {v5, v10}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     move-result-object v5
@@ -260,6 +268,7 @@
 
     array-length v11, v5
 
+    .line 6
     invoke-static {v5, v11}, Ljava/util/Arrays;->copyOf([JI)[J
 
     move-result-object v11
@@ -280,6 +289,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_0
     new-instance v1, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
@@ -303,6 +313,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-static {v0}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->keyForField(I)Ljava/lang/String;
 
     move-result-object v0
@@ -321,6 +332,7 @@
 
     goto :goto_1
 
+    .line 2
     :cond_0
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -328,6 +340,7 @@
 
     new-array v2, v2, [Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
+    .line 3
     :goto_0
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -335,6 +348,7 @@
 
     if-ge v1, v3, :cond_1
 
+    .line 4
     sget-object v3, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;->CREATOR:Lcom/google/android/exoplayer2/Bundleable$Creator;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -361,6 +375,7 @@
     :goto_1
     const/4 v0, 0x2
 
+    .line 5
     invoke-static {v0}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->keyForField(I)Ljava/lang/String;
 
     move-result-object v0
@@ -373,6 +388,7 @@
 
     const/4 v0, 0x3
 
+    .line 6
     invoke-static {v0}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->keyForField(I)Ljava/lang/String;
 
     move-result-object v0
@@ -385,6 +401,7 @@
 
     const/4 v0, 0x4
 
+    .line 7
     invoke-static {v0}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->keyForField(I)Ljava/lang/String;
 
     move-result-object v0
@@ -393,6 +410,7 @@
 
     move-result v10
 
+    .line 8
     new-instance p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     const/4 v4, 0x0
@@ -417,6 +435,7 @@
 
     return v3
 
+    .line 1
     :cond_0
     invoke-virtual {p0, p5}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->getAdGroup(I)Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
@@ -462,6 +481,7 @@
 
     const/16 v0, 0x24
 
+    .line 1
     invoke-static {p0, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
     move-result-object p0
@@ -489,6 +509,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 1
     const-class v2, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -499,9 +520,11 @@
 
     goto :goto_1
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
+    .line 3
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adsId:Ljava/lang/Object;
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adsId:Ljava/lang/Object;
@@ -544,6 +567,7 @@
 
     iget-object p1, p1, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroups:[Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
+    .line 4
     invoke-static {p0, p1}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
 
     move-result p0
@@ -571,14 +595,17 @@
         .end annotation
     .end param
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->removedAdGroupCount:I
 
     if-ge p1, v0, :cond_0
 
+    .line 2
     sget-object p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->REMOVED_AD_GROUP:Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroups:[Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
@@ -613,14 +640,17 @@
 
     goto :goto_1
 
+    .line 1
     :cond_0
     iget p3, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->removedAdGroupCount:I
 
+    .line 2
     :goto_0
     iget p4, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroupCount:I
 
     if-ge p3, p4, :cond_3
 
+    .line 3
     invoke-virtual {p0, p3}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->getAdGroup(I)Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     move-result-object p4
@@ -631,6 +661,7 @@
 
     if-eqz p4, :cond_1
 
+    .line 4
     invoke-virtual {p0, p3}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->getAdGroup(I)Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     move-result-object p4
@@ -641,6 +672,7 @@
 
     if-lez p4, :cond_2
 
+    .line 5
     :cond_1
     invoke-virtual {p0, p3}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->getAdGroup(I)Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
@@ -657,6 +689,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_3
     iget p0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroupCount:I
 
@@ -672,6 +705,7 @@
 .method public getAdGroupIndexForPositionUs(JJ)I
     .locals 7
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroupCount:I
 
     add-int/lit8 v0, v0, -0x1
@@ -687,6 +721,7 @@
 
     move v6, v0
 
+    .line 2
     invoke-direct/range {v1 .. v6}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->isPositionBeforeAdGroup(JJI)Z
 
     move-result v1
@@ -700,6 +735,7 @@
     :cond_0
     if-ltz v0, :cond_1
 
+    .line 3
     invoke-virtual {p0, v0}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->getAdGroup(I)Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     move-result-object p0
@@ -722,10 +758,12 @@
 .method public hashCode()I
     .locals 3
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroupCount:I
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adsId:Ljava/lang/Object;
 
     if-nez v1, :cond_0
@@ -744,6 +782,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 3
     iget-wide v1, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adResumePositionUs:J
 
     long-to-int v1, v1
@@ -752,6 +791,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 4
     iget-wide v1, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->contentDurationUs:J
 
     long-to-int v1, v1
@@ -760,12 +800,14 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 5
     iget v1, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->removedAdGroupCount:I
 
     add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 6
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroups:[Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     invoke-static {p0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
@@ -790,6 +832,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroupCount:I
 
     const/4 v1, 0x0
@@ -798,11 +841,13 @@
 
     return v1
 
+    .line 2
     :cond_0
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->getAdGroup(I)Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     move-result-object p0
 
+    .line 3
     iget p1, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;->count:I
 
     const/4 v0, -0x1
@@ -813,6 +858,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;->states:[I
 
@@ -832,14 +878,17 @@
 .method public toBundle()Landroid/os/Bundle;
     .locals 6
 
+    .line 1
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
+    .line 2
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
+    .line 3
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroups:[Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     array-length v3, v2
@@ -851,6 +900,7 @@
 
     aget-object v5, v2, v4
 
+    .line 4
     invoke-virtual {v5}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;->toBundle()Landroid/os/Bundle;
 
     move-result-object v5
@@ -864,6 +914,7 @@
     :cond_0
     const/4 v2, 0x1
 
+    .line 5
     invoke-static {v2}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -872,6 +923,7 @@
 
     const/4 v1, 0x2
 
+    .line 6
     invoke-static {v1}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -882,6 +934,7 @@
 
     const/4 v1, 0x3
 
+    .line 7
     invoke-static {v1}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -892,6 +945,7 @@
 
     const/4 v1, 0x4
 
+    .line 8
     invoke-static {v1}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -906,34 +960,41 @@
 .method public toString()Ljava/lang/String;
     .locals 10
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v1, "AdPlaybackState(adsId="
 
+    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adsId:Ljava/lang/Object;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, ", adResumePositionUs="
 
+    .line 4
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 5
     iget-wide v1, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adResumePositionUs:J
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     const-string v1, ", adGroups=["
 
+    .line 6
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const/4 v1, 0x0
 
     move v2, v1
 
+    .line 7
     :goto_0
     iget-object v3, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroups:[Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
@@ -945,8 +1006,10 @@
 
     const-string v3, "adGroup(timeUs="
 
+    .line 8
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 9
     iget-object v3, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroups:[Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     aget-object v3, v3, v2
@@ -957,10 +1020,12 @@
 
     const-string v3, ", ads=["
 
+    .line 10
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move v3, v1
 
+    .line 11
     :goto_1
     iget-object v5, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroups:[Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
@@ -978,8 +1043,10 @@
 
     const-string v5, "ad(state="
 
+    .line 12
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 13
     iget-object v5, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroups:[Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     aget-object v5, v5, v2
@@ -1006,6 +1073,7 @@
 
     const/16 v5, 0x3f
 
+    .line 14
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_2
@@ -1013,6 +1081,7 @@
     :cond_0
     const/16 v5, 0x21
 
+    .line 15
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_2
@@ -1020,6 +1089,7 @@
     :cond_1
     const/16 v5, 0x50
 
+    .line 16
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_2
@@ -1027,6 +1097,7 @@
     :cond_2
     const/16 v5, 0x53
 
+    .line 17
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_2
@@ -1034,6 +1105,7 @@
     :cond_3
     const/16 v5, 0x52
 
+    .line 18
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_2
@@ -1041,13 +1113,16 @@
     :cond_4
     const/16 v5, 0x5f
 
+    .line 19
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     :goto_2
     const-string v5, ", durationUs="
 
+    .line 20
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 21
     iget-object v5, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroups:[Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     aget-object v5, v5, v2
@@ -1060,8 +1135,10 @@
 
     const/16 v5, 0x29
 
+    .line 22
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
+    .line 23
     iget-object v5, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroups:[Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     aget-object v5, v5, v2
@@ -1074,6 +1151,7 @@
 
     if-ge v3, v5, :cond_5
 
+    .line 24
     invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_5
@@ -1081,9 +1159,11 @@
 
     goto :goto_1
 
+    .line 25
     :cond_6
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 26
     iget-object v3, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroups:[Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     array-length v3, v3
@@ -1092,6 +1172,7 @@
 
     if-ge v2, v3, :cond_7
 
+    .line 27
     invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_7
@@ -1099,9 +1180,11 @@
 
     goto/16 :goto_0
 
+    .line 28
     :cond_8
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 29
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -1133,13 +1216,16 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 2
     iget v0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->removedAdGroupCount:I
 
     sub-int/2addr p1, v0
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroups:[Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     aget-object v1, v0, p1
@@ -1150,6 +1236,7 @@
 
     return-object p0
 
+    .line 4
     :cond_1
     array-length v1, v0
 
@@ -1161,6 +1248,7 @@
 
     check-cast v3, [Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
+    .line 5
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroups:[Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     aget-object v0, v0, p1
@@ -1171,6 +1259,7 @@
 
     aput-object p2, v3, p1
 
+    .line 6
     new-instance p1, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adsId:Ljava/lang/Object;
@@ -1328,10 +1417,12 @@
     .annotation build Landroidx/annotation/CheckResult;
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->removedAdGroupCount:I
 
     sub-int/2addr p1, v0
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroups:[Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     array-length v1, v0
@@ -1344,6 +1435,7 @@
 
     check-cast v3, [Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroups:[Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     aget-object v0, v0, p1
@@ -1354,6 +1446,7 @@
 
     aput-object p2, v3, p1
 
+    .line 4
     new-instance p1, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adsId:Ljava/lang/Object;
@@ -1386,10 +1479,12 @@
     .annotation build Landroidx/annotation/CheckResult;
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->removedAdGroupCount:I
 
     sub-int/2addr p1, v0
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroups:[Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     array-length v1, v0
@@ -1402,6 +1497,7 @@
 
     check-cast v3, [Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
+    .line 3
     aget-object v0, v3, p1
 
     const/4 v1, 0x4
@@ -1412,6 +1508,7 @@
 
     aput-object p2, v3, p1
 
+    .line 4
     new-instance p1, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adsId:Ljava/lang/Object;
@@ -1434,6 +1531,7 @@
     .annotation build Landroidx/annotation/CheckResult;
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adResumePositionUs:J
 
     cmp-long v0, v0, p1
@@ -1442,6 +1540,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     new-instance v0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
@@ -1477,10 +1576,12 @@
     .annotation build Landroidx/annotation/CheckResult;
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->removedAdGroupCount:I
 
     sub-int/2addr p1, v0
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroups:[Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     array-length v1, v0
@@ -1493,6 +1594,7 @@
 
     check-cast v3, [Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
+    .line 3
     aget-object v0, v3, p1
 
     invoke-virtual {v0, p3, p2}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;->withAdUri(Landroid/net/Uri;I)Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
@@ -1501,6 +1603,7 @@
 
     aput-object p2, v3, p1
 
+    .line 4
     new-instance p1, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adsId:Ljava/lang/Object;
@@ -1523,6 +1626,7 @@
     .annotation build Landroidx/annotation/CheckResult;
     .end annotation
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->contentDurationUs:J
 
     cmp-long v0, v0, p1
@@ -1531,6 +1635,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     new-instance v0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
@@ -1561,10 +1666,12 @@
     .annotation build Landroidx/annotation/CheckResult;
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->removedAdGroupCount:I
 
     sub-int/2addr p1, v0
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroups:[Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     aget-object v1, v0, p1
@@ -1577,6 +1684,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     array-length v1, v0
 
@@ -1588,14 +1696,17 @@
 
     check-cast v3, [Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
+    .line 4
     aget-object v0, v3, p1
 
+    .line 5
     invoke-virtual {v0, p2, p3}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;->withContentResumeOffsetUs(J)Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     move-result-object p2
 
     aput-object p2, v3, p1
 
+    .line 6
     new-instance p1, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adsId:Ljava/lang/Object;
@@ -1623,10 +1734,12 @@
     .annotation build Landroidx/annotation/CheckResult;
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->removedAdGroupCount:I
 
     sub-int/2addr p1, v0
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroups:[Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     aget-object v1, v0, p1
@@ -1637,6 +1750,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     array-length v1, v0
 
@@ -1648,14 +1762,17 @@
 
     check-cast v3, [Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
+    .line 4
     aget-object v0, v3, p1
 
+    .line 5
     invoke-virtual {v0, p2}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;->withIsServerSideInserted(Z)Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     move-result-object p2
 
     aput-object p2, v3, p1
 
+    .line 6
     new-instance p1, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adsId:Ljava/lang/Object;
@@ -1683,14 +1800,17 @@
     .annotation build Landroidx/annotation/CheckResult;
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->removedAdGroupCount:I
 
     sub-int/2addr p1, v0
 
+    .line 2
     new-instance v0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     invoke-direct {v0, p2, p3}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;-><init>(J)V
 
+    .line 3
     iget-object p2, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroups:[Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     invoke-static {p2, v0}, Lcom/google/android/exoplayer2/util/Util;->nullSafeArrayAppend([Ljava/lang/Object;Ljava/lang/Object;)[Ljava/lang/Object;
@@ -1703,6 +1823,7 @@
 
     add-int/lit8 p2, p1, 0x1
 
+    .line 4
     iget-object p3, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroups:[Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     array-length p3, p3
@@ -1711,8 +1832,10 @@
 
     invoke-static {v3, p1, v3, p2, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 5
     aput-object v0, v3, p1
 
+    .line 6
     new-instance p1, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adsId:Ljava/lang/Object;
@@ -1745,10 +1868,12 @@
     .annotation build Landroidx/annotation/CheckResult;
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->removedAdGroupCount:I
 
     sub-int/2addr p1, v0
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroups:[Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     array-length v1, v0
@@ -1761,16 +1886,19 @@
 
     check-cast v3, [Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
+    .line 3
     aget-object v0, v3, p1
 
     const/4 v1, 0x3
 
+    .line 4
     invoke-virtual {v0, v1, p2}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;->withAdState(II)Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     move-result-object p2
 
     aput-object p2, v3, p1
 
+    .line 5
     new-instance p1, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adsId:Ljava/lang/Object;
@@ -1798,6 +1926,7 @@
     .annotation build Landroidx/annotation/CheckResult;
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->removedAdGroupCount:I
 
     if-ne v0, p1, :cond_0
@@ -1816,15 +1945,18 @@
     :cond_1
     move v0, v1
 
+    .line 2
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 3
     iget v0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroupCount:I
 
     sub-int/2addr v0, p1
 
     new-array v4, v0, [Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
+    .line 4
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroups:[Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     iget v3, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->removedAdGroupCount:I
@@ -1833,6 +1965,7 @@
 
     invoke-static {v2, v3, v4, v1, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 5
     new-instance v0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     iget-object v3, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adsId:Ljava/lang/Object;
@@ -1860,10 +1993,12 @@
     .annotation build Landroidx/annotation/CheckResult;
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->removedAdGroupCount:I
 
     sub-int/2addr p1, v0
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroups:[Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     array-length v1, v0
@@ -1876,6 +2011,7 @@
 
     check-cast v3, [Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
+    .line 3
     aget-object v0, v3, p1
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;->withAllAdsReset()Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
@@ -1884,6 +2020,7 @@
 
     aput-object v0, v3, p1
 
+    .line 4
     new-instance p1, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adsId:Ljava/lang/Object;
@@ -1916,10 +2053,12 @@
     .annotation build Landroidx/annotation/CheckResult;
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->removedAdGroupCount:I
 
     sub-int/2addr p1, v0
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroups:[Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     array-length v1, v0
@@ -1932,16 +2071,19 @@
 
     check-cast v3, [Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
+    .line 3
     aget-object v0, v3, p1
 
     const/4 v1, 0x2
 
+    .line 4
     invoke-virtual {v0, v1, p2}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;->withAdState(II)Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     move-result-object p2
 
     aput-object p2, v3, p1
 
+    .line 5
     new-instance p1, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adsId:Ljava/lang/Object;
@@ -1969,10 +2111,12 @@
     .annotation build Landroidx/annotation/CheckResult;
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->removedAdGroupCount:I
 
     sub-int/2addr p1, v0
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adGroups:[Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
     array-length v1, v0
@@ -1985,6 +2129,7 @@
 
     check-cast v3, [Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
 
+    .line 3
     aget-object v0, v3, p1
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;->withAllAdsSkipped()Lcom/google/android/exoplayer2/source/ads/AdPlaybackState$AdGroup;
@@ -1993,6 +2138,7 @@
 
     aput-object v0, v3, p1
 
+    .line 4
     new-instance p1, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;->adsId:Ljava/lang/Object;

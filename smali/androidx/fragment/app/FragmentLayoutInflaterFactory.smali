@@ -1,4 +1,4 @@
-.class Landroidx/fragment/app/FragmentLayoutInflaterFactory;
+.class public Landroidx/fragment/app/FragmentLayoutInflaterFactory;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -11,15 +11,17 @@
 
 
 # instance fields
-.field final mFragmentManager:Landroidx/fragment/app/FragmentManager;
+.field private final mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/fragment/app/FragmentManager;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/fragment/app/FragmentLayoutInflaterFactory;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
     return-void
@@ -311,68 +313,73 @@
     .line 28
     iget-object p3, p0, Landroidx/fragment/app/FragmentLayoutInflaterFactory;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
-    invoke-virtual {p3, v0}, Landroidx/fragment/app/FragmentManager;->addFragment(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentStateManager;
+    invoke-virtual {p3, v0}, Landroidx/fragment/app/FragmentManager;->createOrGetFragmentStateManager(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentStateManager;
 
     move-result-object p3
 
     .line 29
-    invoke-static {v6}, Landroidx/fragment/app/FragmentManager;->isLoggingEnabled(I)Z
+    iget-object p0, p0, Landroidx/fragment/app/FragmentLayoutInflaterFactory;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
-    move-result p4
-
-    if-eqz p4, :cond_c
+    invoke-virtual {p0, v0}, Landroidx/fragment/app/FragmentManager;->addFragment(Landroidx/fragment/app/Fragment;)V
 
     .line 30
-    new-instance p4, Ljava/lang/StringBuilder;
+    invoke-static {v6}, Landroidx/fragment/app/FragmentManager;->isLoggingEnabled(I)Z
 
-    invoke-direct {p4}, Ljava/lang/StringBuilder;-><init>()V
+    move-result p0
 
-    invoke-virtual {p4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, " has been inflated via the <fragment> tag: id=0x"
-
-    invoke-virtual {p4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz p0, :cond_c
 
     .line 31
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p4, " has been inflated via the <fragment> tag: id=0x"
+
+    invoke-virtual {p0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 32
     invoke-static {v2}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p4
 
-    .line 32
-    invoke-static {v5, p4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {p0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    .line 33
+    invoke-static {v5, p0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_3
 
-    .line 33
+    .line 34
     :cond_b
     iget-boolean p3, v0, Landroidx/fragment/app/Fragment;->mInLayout:Z
 
     if-nez p3, :cond_10
 
-    .line 34
+    .line 35
     iput-boolean v7, v0, Landroidx/fragment/app/Fragment;->mInLayout:Z
 
-    .line 35
+    .line 36
     iget-object p3, p0, Landroidx/fragment/app/FragmentLayoutInflaterFactory;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
     iput-object p3, v0, Landroidx/fragment/app/Fragment;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
-    .line 36
+    .line 37
     invoke-virtual {p3}, Landroidx/fragment/app/FragmentManager;->getHost()Landroidx/fragment/app/FragmentHostCallback;
 
     move-result-object p3
 
     iput-object p3, v0, Landroidx/fragment/app/Fragment;->mHost:Landroidx/fragment/app/FragmentHostCallback;
 
-    .line 37
+    .line 38
     iget-object p3, p0, Landroidx/fragment/app/FragmentLayoutInflaterFactory;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
     invoke-virtual {p3}, Landroidx/fragment/app/FragmentManager;->getHost()Landroidx/fragment/app/FragmentHostCallback;
@@ -387,98 +394,89 @@
 
     invoke-virtual {v0, p3, p4, v1}, Landroidx/fragment/app/Fragment;->onInflate(Landroid/content/Context;Landroid/util/AttributeSet;Landroid/os/Bundle;)V
 
-    .line 38
-    iget-object p3, p0, Landroidx/fragment/app/FragmentLayoutInflaterFactory;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
+    .line 39
+    iget-object p0, p0, Landroidx/fragment/app/FragmentLayoutInflaterFactory;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
-    invoke-virtual {p3, v0}, Landroidx/fragment/app/FragmentManager;->createOrGetFragmentStateManager(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentStateManager;
+    invoke-virtual {p0, v0}, Landroidx/fragment/app/FragmentManager;->createOrGetFragmentStateManager(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentStateManager;
 
     move-result-object p3
 
-    .line 39
+    .line 40
     invoke-static {v6}, Landroidx/fragment/app/FragmentManager;->isLoggingEnabled(I)Z
 
-    move-result p4
+    move-result p0
 
-    if-eqz p4, :cond_c
-
-    .line 40
-    new-instance p4, Ljava/lang/StringBuilder;
-
-    invoke-direct {p4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "Retained Fragment "
-
-    invoke-virtual {p4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, " has been re-attached via the <fragment> tag: id=0x"
-
-    invoke-virtual {p4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz p0, :cond_c
 
     .line 41
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p4, "Retained Fragment "
+
+    invoke-virtual {p0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p4, " has been re-attached via the <fragment> tag: id=0x"
+
+    invoke-virtual {p0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 42
     invoke-static {v2}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p4
 
-    .line 42
-    invoke-static {v5, p4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {p0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
 
     .line 43
+    invoke-static {v5, p0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 44
     :cond_c
     :goto_3
     check-cast p1, Landroid/view/ViewGroup;
 
     iput-object p1, v0, Landroidx/fragment/app/Fragment;->mContainer:Landroid/view/ViewGroup;
 
-    .line 44
+    .line 45
     invoke-virtual {p3}, Landroidx/fragment/app/FragmentStateManager;->moveToExpectedState()V
 
-    .line 45
+    .line 46
     invoke-virtual {p3}, Landroidx/fragment/app/FragmentStateManager;->ensureInflatedView()V
 
-    .line 46
-    iget-object p1, v0, Landroidx/fragment/app/Fragment;->mView:Landroid/view/View;
+    .line 47
+    iget-object p0, v0, Landroidx/fragment/app/Fragment;->mView:Landroid/view/View;
 
-    if-eqz p1, :cond_f
+    if-eqz p0, :cond_f
 
     if-eqz v2, :cond_d
 
-    .line 47
-    invoke-virtual {p1, v2}, Landroid/view/View;->setId(I)V
-
     .line 48
-    :cond_d
-    iget-object p1, v0, Landroidx/fragment/app/Fragment;->mView:Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-nez p1, :cond_e
+    invoke-virtual {p0, v2}, Landroid/view/View;->setId(I)V
 
     .line 49
-    iget-object p1, v0, Landroidx/fragment/app/Fragment;->mView:Landroid/view/View;
+    :cond_d
+    iget-object p0, v0, Landroidx/fragment/app/Fragment;->mView:Landroid/view/View;
 
-    invoke-virtual {p1, v4}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+    invoke-virtual {p0}, Landroid/view/View;->getTag()Ljava/lang/Object;
+
+    move-result-object p0
+
+    if-nez p0, :cond_e
 
     .line 50
-    :cond_e
-    iget-object p1, v0, Landroidx/fragment/app/Fragment;->mView:Landroid/view/View;
+    iget-object p0, v0, Landroidx/fragment/app/Fragment;->mView:Landroid/view/View;
 
-    new-instance p2, Landroidx/fragment/app/FragmentLayoutInflaterFactory$1;
-
-    invoke-direct {p2, p0, p3}, Landroidx/fragment/app/FragmentLayoutInflaterFactory$1;-><init>(Landroidx/fragment/app/FragmentLayoutInflaterFactory;Landroidx/fragment/app/FragmentStateManager;)V
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+    invoke-virtual {p0, v4}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     .line 51
+    :cond_e
     iget-object p0, v0, Landroidx/fragment/app/Fragment;->mView:Landroid/view/View;
 
     return-object p0

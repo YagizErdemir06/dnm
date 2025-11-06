@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lyo/a$b;
+.implements Lk/b/e/a/a$b;
 
 
 # annotations
@@ -18,19 +18,22 @@
 
 
 # instance fields
-.field public a:Lmiuix/preference/DropDownPreference;
+.field private a:Lmiuix/preference/DropDownPreference;
 
-.field public b:Landroid/widget/ArrayAdapter;
+.field private b:Landroid/widget/ArrayAdapter;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/preference/DropDownPreference;Landroid/widget/ArrayAdapter;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lmiuix/preference/DropDownPreference$g;->a:Lmiuix/preference/DropDownPreference;
 
+    .line 3
     iput-object p2, p0, Lmiuix/preference/DropDownPreference$g;->b:Landroid/widget/ArrayAdapter;
 
     return-void
@@ -41,9 +44,10 @@
 .method public a(I)Z
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lmiuix/preference/DropDownPreference$g;->a:Lmiuix/preference/DropDownPreference;
 
-    invoke-static {v0}, Lmiuix/preference/DropDownPreference;->e(Lmiuix/preference/DropDownPreference;)[Ljava/lang/CharSequence;
+    invoke-static {v0}, Lmiuix/preference/DropDownPreference;->a(Lmiuix/preference/DropDownPreference;)[Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -55,6 +59,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lmiuix/preference/DropDownPreference$g;->a:Lmiuix/preference/DropDownPreference;
 
@@ -64,7 +69,7 @@
 
     iget-object p0, p0, Lmiuix/preference/DropDownPreference$g;->a:Lmiuix/preference/DropDownPreference;
 
-    invoke-static {p0}, Lmiuix/preference/DropDownPreference;->e(Lmiuix/preference/DropDownPreference;)[Ljava/lang/CharSequence;
+    invoke-static {p0}, Lmiuix/preference/DropDownPreference;->a(Lmiuix/preference/DropDownPreference;)[Ljava/lang/CharSequence;
 
     move-result-object p0
 
@@ -82,6 +87,7 @@
 
     const-string p1, "pos out of entries\' length."
 
+    .line 3
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p0, 0x0

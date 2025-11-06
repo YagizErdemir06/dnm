@@ -16,6 +16,14 @@
 
 # virtual methods
 .method public abstract putVolumeControlValue(F)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mValue"
+        }
+    .end annotation
 .end method
 
 .method public abstract removePostDelayedTime()V
@@ -25,4 +33,12 @@
 .end method
 
 .method public abstract setSilenceUpSwitchTarget(Z)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mSwitch"
+        }
+    .end annotation
 .end method

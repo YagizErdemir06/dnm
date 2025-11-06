@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ArrayTable$ColumnMap;
+.class public Lcom/google/common/collect/ArrayTable$ColumnMap;
 .super Lcom/google/common/collect/ArrayTable$ArrayMap;
 .source "SourceFile"
 
@@ -24,7 +24,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/ArrayTable;
+.field public final synthetic this$0:Lcom/google/common/collect/ArrayTable;
 
 
 # direct methods

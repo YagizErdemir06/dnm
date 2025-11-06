@@ -24,6 +24,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,6 +35,7 @@
 .method public getCacheCMVNData()[B
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/asr/engine/PhraseWakeupResult$PhraseWakeupResultDebugInfo;->mCacheCMVNData:[B
 
     return-object p0
@@ -42,6 +44,7 @@
 .method public getCacheSVData()[B
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/asr/engine/PhraseWakeupResult$PhraseWakeupResultDebugInfo;->mCacheSVData:[B
 
     return-object p0
@@ -50,6 +53,7 @@
 .method public setCacheCMVNData([B)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/asr/engine/PhraseWakeupResult$PhraseWakeupResultDebugInfo;->mCacheCMVNData:[B
 
     return-void
@@ -58,6 +62,7 @@
 .method public setCacheSVData([B)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/asr/engine/PhraseWakeupResult$PhraseWakeupResultDebugInfo;->mCacheSVData:[B
 
     return-void

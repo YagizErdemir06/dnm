@@ -31,28 +31,32 @@
 .method public constructor <init>()V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/util/PriorityTaskManager;->lock:Ljava/lang/Object;
 
+    .line 3
     new-instance v0, Ljava/util/PriorityQueue;
-
-    const/16 v1, 0xa
 
     invoke-static {}, Ljava/util/Collections;->reverseOrder()Ljava/util/Comparator;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-direct {v0, v1, v2}, Ljava/util/PriorityQueue;-><init>(ILjava/util/Comparator;)V
+    const/16 v2, 0xa
+
+    invoke-direct {v0, v2, v1}, Ljava/util/PriorityQueue;-><init>(ILjava/util/Comparator;)V
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/util/PriorityTaskManager;->queue:Ljava/util/PriorityQueue;
 
     const/high16 v0, -0x80000000
 
+    .line 4
     iput v0, p0, Lcom/google/android/exoplayer2/util/PriorityTaskManager;->highestPriority:I
 
     return-void
@@ -63,10 +67,12 @@
 .method public add(I)V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/PriorityTaskManager;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/util/PriorityTaskManager;->queue:Ljava/util/PriorityQueue;
 
@@ -76,6 +82,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/PriorityQueue;->add(Ljava/lang/Object;)Z
 
+    .line 3
     iget v1, p0, Lcom/google/android/exoplayer2/util/PriorityTaskManager;->highestPriority:I
 
     invoke-static {v1, p1}, Ljava/lang/Math;->max(II)I
@@ -84,6 +91,7 @@
 
     iput p1, p0, Lcom/google/android/exoplayer2/util/PriorityTaskManager;->highestPriority:I
 
+    .line 4
     monitor-exit v0
 
     return-void
@@ -106,22 +114,26 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/PriorityTaskManager;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :goto_0
     :try_start_0
     iget v1, p0, Lcom/google/android/exoplayer2/util/PriorityTaskManager;->highestPriority:I
 
     if-eq v1, p1, :cond_0
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/util/PriorityTaskManager;->lock:Ljava/lang/Object;
 
     invoke-virtual {v1}, Ljava/lang/Object;->wait()V
 
     goto :goto_0
 
+    .line 4
     :cond_0
     monitor-exit v0
 
@@ -140,10 +152,12 @@
 .method public proceedNonBlocking(I)Z
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/PriorityTaskManager;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget p0, p0, Lcom/google/android/exoplayer2/util/PriorityTaskManager;->highestPriority:I
 
@@ -164,6 +178,7 @@
     :catchall_0
     move-exception p0
 
+    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -179,19 +194,23 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/PriorityTaskManager;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget v1, p0, Lcom/google/android/exoplayer2/util/PriorityTaskManager;->highestPriority:I
 
     if-ne v1, p1, :cond_0
 
+    .line 3
     monitor-exit v0
 
     return-void
 
+    .line 4
     :cond_0
     new-instance v1, Lcom/google/android/exoplayer2/util/PriorityTaskManager$PriorityTooLowException;
 
@@ -204,6 +223,7 @@
     :catchall_0
     move-exception p0
 
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -214,10 +234,12 @@
 .method public remove(I)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/util/PriorityTaskManager;->lock:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/util/PriorityTaskManager;->queue:Ljava/util/PriorityQueue;
 
@@ -227,9 +249,10 @@
 
     invoke-virtual {v1, p1}, Ljava/util/PriorityQueue;->remove(Ljava/lang/Object;)Z
 
+    .line 3
     iget-object p1, p0, Lcom/google/android/exoplayer2/util/PriorityTaskManager;->queue:Ljava/util/PriorityQueue;
 
-    invoke-virtual {p1}, Ljava/util/AbstractCollection;->isEmpty()Z
+    invoke-virtual {p1}, Ljava/util/PriorityQueue;->isEmpty()Z
 
     move-result p1
 
@@ -261,10 +284,12 @@
     :goto_0
     iput p1, p0, Lcom/google/android/exoplayer2/util/PriorityTaskManager;->highestPriority:I
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/exoplayer2/util/PriorityTaskManager;->lock:Ljava/lang/Object;
 
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
+    .line 5
     monitor-exit v0
 
     return-void

@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/util/concurrent/AbstractFuture$AtomicHelper;
+.class public abstract Lcom/google/common/util/concurrent/AbstractFuture$AtomicHelper;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

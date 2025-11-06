@@ -160,6 +160,7 @@
     :cond_0
     const/4 v2, 0x0
 
+    .line 1
     :goto_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -167,6 +168,7 @@
 
     if-ge v2, v3, :cond_1
 
+    .line 2
     invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
@@ -224,6 +226,7 @@
 
     const/16 p0, 0x10
 
+    .line 1
     invoke-static {p0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object p0
@@ -246,6 +249,7 @@
 .method private nonFlushingUpdate([BII[BI)I
     .locals 6
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/upstream/crypto/AesFlushingCipher;->cipher:Ljavax/crypto/Cipher;
 
@@ -270,6 +274,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -284,11 +289,13 @@
 
     move v2, p2
 
+    .line 1
     :cond_0
     iget p2, p0, Lcom/google/android/exoplayer2/upstream/crypto/AesFlushingCipher;->pendingXorBytes:I
 
     if-lez p2, :cond_1
 
+    .line 2
     aget-byte v0, p1, v2
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/upstream/crypto/AesFlushingCipher;->flushedBlock:[B
@@ -311,6 +318,7 @@
 
     add-int/lit8 p2, p2, -0x1
 
+    .line 3
     iput p2, p0, Lcom/google/android/exoplayer2/upstream/crypto/AesFlushingCipher;->pendingXorBytes:I
 
     add-int/lit8 p3, p3, -0x1
@@ -330,6 +338,7 @@
 
     move v5, p5
 
+    .line 4
     invoke-direct/range {v0 .. v5}, Lcom/google/android/exoplayer2/upstream/crypto/AesFlushingCipher;->nonFlushingUpdate([BII[BI)I
 
     move-result p1
@@ -341,6 +350,7 @@
     :cond_2
     sub-int/2addr p3, p1
 
+    .line 5
     iget p2, p0, Lcom/google/android/exoplayer2/upstream/crypto/AesFlushingCipher;->blockSize:I
 
     const/4 v0, 0x0
@@ -361,12 +371,14 @@
 
     add-int/2addr p5, p1
 
+    .line 6
     iget p1, p0, Lcom/google/android/exoplayer2/upstream/crypto/AesFlushingCipher;->blockSize:I
 
     sub-int v5, p1, p3
 
     iput v5, p0, Lcom/google/android/exoplayer2/upstream/crypto/AesFlushingCipher;->pendingXorBytes:I
 
+    .line 7
     iget-object v3, p0, Lcom/google/android/exoplayer2/upstream/crypto/AesFlushingCipher;->zerosBlock:[B
 
     const/4 v4, 0x0
@@ -381,6 +393,7 @@
 
     move-result p1
 
+    .line 8
     iget p2, p0, Lcom/google/android/exoplayer2/upstream/crypto/AesFlushingCipher;->blockSize:I
 
     if-ne p1, p2, :cond_4
@@ -398,6 +411,7 @@
 
     add-int/lit8 p1, p5, 0x1
 
+    .line 9
     iget-object p2, p0, Lcom/google/android/exoplayer2/upstream/crypto/AesFlushingCipher;->flushedBlock:[B
 
     aget-byte p2, p2, v0
@@ -429,6 +443,7 @@
 
     move v5, p2
 
+    .line 1
     invoke-virtual/range {v0 .. v5}, Lcom/google/android/exoplayer2/upstream/crypto/AesFlushingCipher;->update([BII[BI)V
 
     return-void

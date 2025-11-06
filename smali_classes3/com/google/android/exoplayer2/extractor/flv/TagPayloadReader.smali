@@ -1,4 +1,4 @@
-.class abstract Lcom/google/android/exoplayer2/extractor/flv/TagPayloadReader;
+.class public abstract Lcom/google/android/exoplayer2/extractor/flv/TagPayloadReader;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -12,15 +12,17 @@
 
 
 # instance fields
-.field protected final output:Lcom/google/android/exoplayer2/extractor/TrackOutput;
+.field public final output:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/exoplayer2/extractor/TrackOutput;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/extractor/flv/TagPayloadReader;->output:Lcom/google/android/exoplayer2/extractor/TrackOutput;
 
     return-void
@@ -36,6 +38,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/extractor/flv/TagPayloadReader;->parseHeader(Lcom/google/android/exoplayer2/util/ParsableByteArray;)Z
 
     move-result v0

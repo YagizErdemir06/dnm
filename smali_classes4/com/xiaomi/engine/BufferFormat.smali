@@ -34,6 +34,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/xiaomi/engine/BufferFormat$1;
 
     invoke-direct {v0}, Lcom/xiaomi/engine/BufferFormat$1;-><init>()V
@@ -151,14 +152,14 @@
 
     iput-object v0, p0, Lcom/xiaomi/engine/BufferFormat;->mGraphDescriptor:Lcom/xiaomi/engine/GraphDescriptorBean;
 
-    const/4 v0, 0x2
-
     .line 12
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
-    move-result v1
+    move-result v0
 
-    if-ne v0, v1, :cond_0
+    const/4 v1, 0x2
+
+    if-ne v1, v0, :cond_0
 
     .line 13
     new-instance v0, Landroid/util/Size;
@@ -206,6 +207,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/xiaomi/engine/BufferFormat;
 
@@ -215,9 +217,11 @@
 
     return v2
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/xiaomi/engine/BufferFormat;
 
+    .line 3
     iget v1, p0, Lcom/xiaomi/engine/BufferFormat;->mBufferWidth:I
 
     iget v3, p1, Lcom/xiaomi/engine/BufferFormat;->mBufferWidth:I
@@ -240,6 +244,7 @@
 
     iget-object v3, p1, Lcom/xiaomi/engine/BufferFormat;->mGraphDescriptor:Lcom/xiaomi/engine/GraphDescriptorBean;
 
+    .line 4
     invoke-static {v1, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
@@ -250,6 +255,7 @@
 
     iget-object p1, p1, Lcom/xiaomi/engine/BufferFormat;->mDepthBufferSize:Landroid/util/Size;
 
+    .line 5
     invoke-static {p0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -268,6 +274,7 @@
 .method public getBufferFormat()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/engine/BufferFormat;->mBufferFormat:I
 
     return p0
@@ -276,6 +283,7 @@
 .method public getBufferHeight()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/engine/BufferFormat;->mBufferHeight:I
 
     return p0
@@ -284,6 +292,7 @@
 .method public getBufferWidth()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/engine/BufferFormat;->mBufferWidth:I
 
     return p0
@@ -292,10 +301,12 @@
 .method public getCameraCombinationMode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/engine/BufferFormat;->mGraphDescriptor:Lcom/xiaomi/engine/GraphDescriptorBean;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/xiaomi/engine/GraphDescriptorBean;->getCameraCombinationMode()I
 
     move-result p0
@@ -311,6 +322,7 @@
 .method public getDepthBufferSize()Landroid/util/Size;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/engine/BufferFormat;->mDepthBufferSize:Landroid/util/Size;
 
     return-object p0
@@ -319,6 +331,7 @@
 .method public getGraphDescriptor()Lcom/xiaomi/engine/GraphDescriptorBean;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/engine/BufferFormat;->mGraphDescriptor:Lcom/xiaomi/engine/GraphDescriptorBean;
 
     return-object p0
@@ -331,6 +344,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 1
     iget v1, p0, Lcom/xiaomi/engine/BufferFormat;->mBufferWidth:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -361,15 +375,15 @@
 
     aput-object v1, v0, v2
 
-    const/4 v1, 0x3
+    iget-object v1, p0, Lcom/xiaomi/engine/BufferFormat;->mGraphDescriptor:Lcom/xiaomi/engine/GraphDescriptorBean;
 
-    iget-object v2, p0, Lcom/xiaomi/engine/BufferFormat;->mGraphDescriptor:Lcom/xiaomi/engine/GraphDescriptorBean;
+    const/4 v2, 0x3
 
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x4
+    aput-object v1, v0, v2
 
     iget-object p0, p0, Lcom/xiaomi/engine/BufferFormat;->mDepthBufferSize:Landroid/util/Size;
+
+    const/4 v1, 0x4
 
     aput-object p0, v0, v1
 
@@ -391,6 +405,7 @@
         }
     .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/engine/BufferFormat;->mBufferFormat:I
 
     return-void
@@ -407,6 +422,7 @@
         }
     .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/engine/BufferFormat;->mBufferHeight:I
 
     return-void
@@ -423,6 +439,7 @@
         }
     .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/engine/BufferFormat;->mBufferWidth:I
 
     return-void
@@ -441,6 +458,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     new-instance v0, Landroid/util/Size;
 
     invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
@@ -470,6 +488,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/engine/BufferFormat;->mGraphDescriptor:Lcom/xiaomi/engine/GraphDescriptorBean;
 
     return-void
@@ -478,6 +497,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -546,30 +566,37 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Lcom/xiaomi/engine/BufferFormat;->mBufferWidth:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 2
     iget v0, p0, Lcom/xiaomi/engine/BufferFormat;->mBufferHeight:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 3
     iget v0, p0, Lcom/xiaomi/engine/BufferFormat;->mBufferFormat:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 4
     iget-object v0, p0, Lcom/xiaomi/engine/BufferFormat;->mGraphDescriptor:Lcom/xiaomi/engine/GraphDescriptorBean;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
+    .line 5
     iget-object p2, p0, Lcom/xiaomi/engine/BufferFormat;->mDepthBufferSize:Landroid/util/Size;
 
     if-eqz p2, :cond_0
 
     const/4 p2, 0x2
 
+    .line 6
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
 
+    .line 7
     iget-object p2, p0, Lcom/xiaomi/engine/BufferFormat;->mDepthBufferSize:Landroid/util/Size;
 
     invoke-virtual {p2}, Landroid/util/Size;->getWidth()I
@@ -578,6 +605,7 @@
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
+    .line 8
     iget-object p0, p0, Lcom/xiaomi/engine/BufferFormat;->mDepthBufferSize:Landroid/util/Size;
 
     invoke-virtual {p0}, Landroid/util/Size;->getHeight()I
@@ -591,6 +619,7 @@
     :cond_0
     const/4 p0, 0x0
 
+    .line 9
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeByte(B)V
 
     :goto_0

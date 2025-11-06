@@ -1,4 +1,4 @@
-.class final Lcom/google/common/hash/SipHashFunction;
+.class public final Lcom/google/common/hash/SipHashFunction;
 .super Lcom/google/common/hash/AbstractHashFunction;
 .source "SourceFile"
 
@@ -21,7 +21,7 @@
 
 
 # static fields
-.field static final SIP_HASH_24:Lcom/google/common/hash/HashFunction;
+.field public static final SIP_HASH_24:Lcom/google/common/hash/HashFunction;
 
 .field private static final serialVersionUID:J
 
@@ -40,6 +40,7 @@
 .method public static constructor <clinit>()V
     .locals 8
 
+    .line 1
     new-instance v7, Lcom/google/common/hash/SipHashFunction;
 
     const/4 v1, 0x2
@@ -62,6 +63,7 @@
 .method public constructor <init>(IIJJ)V
     .locals 4
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/hash/AbstractHashFunction;-><init>()V
 
     const/4 v0, 0x1
@@ -80,6 +82,7 @@
     :goto_0
     const-string v3, "The number of SipRound iterations (c=%s) during Compression must be positive."
 
+    .line 2
     invoke-static {v2, v3, p1}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;I)V
 
     if-lez p2, :cond_1
@@ -92,14 +95,19 @@
     :goto_1
     const-string v1, "The number of SipRound iterations (d=%s) during Finalization must be positive."
 
+    .line 3
     invoke-static {v0, v1, p2}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;I)V
 
+    .line 4
     iput p1, p0, Lcom/google/common/hash/SipHashFunction;->c:I
 
+    .line 5
     iput p2, p0, Lcom/google/common/hash/SipHashFunction;->d:I
 
+    .line 6
     iput-wide p3, p0, Lcom/google/common/hash/SipHashFunction;->k0:J
 
+    .line 7
     iput-wide p5, p0, Lcom/google/common/hash/SipHashFunction;->k1:J
 
     return-void
@@ -122,14 +130,17 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/common/hash/SipHashFunction;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/common/hash/SipHashFunction;
 
+    .line 3
     iget v0, p0, Lcom/google/common/hash/SipHashFunction;->c:I
 
     iget v2, p1, Lcom/google/common/hash/SipHashFunction;->c:I
@@ -167,6 +178,7 @@
 .method public hashCode()I
     .locals 4
 
+    .line 1
     const-class v0, Lcom/google/common/hash/SipHashFunction;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -199,6 +211,7 @@
 .method public newHasher()Lcom/google/common/hash/Hasher;
     .locals 8
 
+    .line 1
     new-instance v7, Lcom/google/common/hash/SipHashFunction$SipHasher;
 
     iget v1, p0, Lcom/google/common/hash/SipHashFunction;->c:I
@@ -219,6 +232,7 @@
 .method public toString()Ljava/lang/String;
     .locals 7
 
+    .line 1
     iget v0, p0, Lcom/google/common/hash/SipHashFunction;->c:I
 
     iget v1, p0, Lcom/google/common/hash/SipHashFunction;->d:I

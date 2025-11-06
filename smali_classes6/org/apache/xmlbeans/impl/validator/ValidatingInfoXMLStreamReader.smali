@@ -16,14 +16,17 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader;-><init>()V
 
     const/4 v0, -0x1
 
+    .line 2
     iput v0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingInfoXMLStreamReader;->_attCount:I
 
     const/4 v0, 0x0
 
+    .line 3
     iput v0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingInfoXMLStreamReader;->_attIndex:I
 
     return-void
@@ -34,6 +37,7 @@
 .method public getBooleanValue()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader;->_validator:Lorg/apache/xmlbeans/impl/validator/Validator;
 
     if-nez p0, :cond_0
@@ -54,6 +58,7 @@
 .method public getByteArrayValue()[B
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader;->_validator:Lorg/apache/xmlbeans/impl/validator/Validator;
 
     if-nez p0, :cond_0
@@ -74,6 +79,7 @@
 .method public getCurrentAttribute()Lorg/apache/xmlbeans/SchemaLocalAttribute;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader;->_validator:Lorg/apache/xmlbeans/impl/validator/Validator;
 
     if-nez p0, :cond_0
@@ -94,6 +100,7 @@
 .method public getCurrentElement()Lorg/apache/xmlbeans/SchemaLocalElement;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader;->_validator:Lorg/apache/xmlbeans/impl/validator/Validator;
 
     if-nez p0, :cond_0
@@ -114,6 +121,7 @@
 .method public getCurrentElementSchemaType()Lorg/apache/xmlbeans/SchemaType;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader;->_validator:Lorg/apache/xmlbeans/impl/validator/Validator;
 
     if-nez p0, :cond_0
@@ -134,6 +142,7 @@
 .method public getCurrentWildcardAttribute()Lorg/apache/xmlbeans/SchemaAttributeModel;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader;->_validator:Lorg/apache/xmlbeans/impl/validator/Validator;
 
     if-nez p0, :cond_0
@@ -154,6 +163,7 @@
 .method public getCurrentWildcardElement()Lorg/apache/xmlbeans/SchemaParticle;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader;->_validator:Lorg/apache/xmlbeans/impl/validator/Validator;
 
     if-nez p0, :cond_0
@@ -174,6 +184,7 @@
 .method public getDecimalValue()Ljava/math/BigDecimal;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader;->_validator:Lorg/apache/xmlbeans/impl/validator/Validator;
 
     if-nez p0, :cond_0
@@ -194,6 +205,7 @@
 .method public getDoubleValue()D
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader;->_validator:Lorg/apache/xmlbeans/impl/validator/Validator;
 
     if-nez p0, :cond_0
@@ -214,6 +226,7 @@
 .method public getFloatValue()F
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader;->_validator:Lorg/apache/xmlbeans/impl/validator/Validator;
 
     if-nez p0, :cond_0
@@ -234,6 +247,7 @@
 .method public getGDateValue()Lorg/apache/xmlbeans/GDate;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader;->_validator:Lorg/apache/xmlbeans/impl/validator/Validator;
 
     if-nez p0, :cond_0
@@ -254,6 +268,7 @@
 .method public getGDurationValue()Lorg/apache/xmlbeans/GDuration;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader;->_validator:Lorg/apache/xmlbeans/impl/validator/Validator;
 
     if-nez p0, :cond_0
@@ -274,6 +289,7 @@
 .method public getListTypes()Ljava/util/List;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader;->_validator:Lorg/apache/xmlbeans/impl/validator/Validator;
 
     if-nez p0, :cond_0
@@ -294,6 +310,7 @@
 .method public getListValue()Ljava/util/List;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader;->_validator:Lorg/apache/xmlbeans/impl/validator/Validator;
 
     if-nez p0, :cond_0
@@ -314,6 +331,7 @@
 .method public getQNameValue()Ljavax/xml/namespace/QName;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader;->_validator:Lorg/apache/xmlbeans/impl/validator/Validator;
 
     if-nez p0, :cond_0
@@ -334,6 +352,7 @@
 .method public getStringValue()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader;->_validator:Lorg/apache/xmlbeans/impl/validator/Validator;
 
     if-nez p0, :cond_0
@@ -354,6 +373,7 @@
 .method public getUnionType()Lorg/apache/xmlbeans/SchemaType;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader;->_validator:Lorg/apache/xmlbeans/impl/validator/Validator;
 
     if-nez p0, :cond_0
@@ -379,14 +399,17 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingInfoXMLStreamReader;->_attIndex:I
 
     iget v1, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingInfoXMLStreamReader;->_attCount:I
 
     if-ge v0, v1, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0}, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader;->validate_attribute(I)V
 
+    .line 3
     iget v0, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingInfoXMLStreamReader;->_attIndex:I
 
     add-int/lit8 v0, v0, 0x1
@@ -397,6 +420,7 @@
 
     return p0
 
+    .line 4
     :cond_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/validator/ValidatingXMLStreamReader;->next()I
 
@@ -408,10 +432,12 @@
 .method public validate_attributes(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingInfoXMLStreamReader;->_attCount:I
 
     const/4 p1, 0x0
 
+    .line 2
     iput p1, p0, Lorg/apache/xmlbeans/impl/validator/ValidatingInfoXMLStreamReader;->_attIndex:I
 
     return-void

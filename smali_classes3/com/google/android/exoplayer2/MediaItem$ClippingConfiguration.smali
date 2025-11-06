@@ -67,6 +67,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration$Builder;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration$Builder;-><init>()V
@@ -77,9 +78,8 @@
 
     sput-object v0, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration;->UNSET:Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration;
 
-    new-instance v0, Lcom/google/android/exoplayer2/w1;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/w1;-><init>()V
+    .line 2
+    sget-object v0, Ld/j/a/b/o1;->a:Ld/j/a/b/o1;
 
     sput-object v0, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration;->CREATOR:Lcom/google/android/exoplayer2/Bundleable$Creator;
 
@@ -139,21 +139,12 @@
     return-void
 .end method
 
-.method public static synthetic a(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/MediaItem$ClippingProperties;
-    .locals 0
-
-    invoke-static {p0}, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration;->lambda$static$0(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/MediaItem$ClippingProperties;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 .method private static keyForField(I)Ljava/lang/String;
     .locals 1
 
     const/16 v0, 0x24
 
+    .line 1
     invoke-static {p0, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
     move-result-object p0
@@ -161,15 +152,17 @@
     return-object p0
 .end method
 
-.method private static synthetic lambda$static$0(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/MediaItem$ClippingProperties;
+.method public static synthetic lambda$static$0(Landroid/os/Bundle;)Lcom/google/android/exoplayer2/MediaItem$ClippingProperties;
     .locals 5
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration$Builder;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration$Builder;-><init>()V
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-static {v1}, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -180,28 +173,33 @@
 
     move-result-wide v2
 
+    .line 3
     invoke-virtual {v0, v2, v3}, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration$Builder;->setStartPositionMs(J)Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration$Builder;
 
     move-result-object v0
 
     const/4 v2, 0x1
 
+    .line 4
     invoke-static {v2}, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
 
     const-wide/high16 v3, -0x8000000000000000L
 
+    .line 5
     invoke-virtual {p0, v2, v3, v4}, Landroid/os/Bundle;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v2
 
+    .line 6
     invoke-virtual {v0, v2, v3}, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration$Builder;->setEndPositionMs(J)Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration$Builder;
 
     move-result-object v0
 
     const/4 v2, 0x2
 
+    .line 7
     invoke-static {v2}, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -210,12 +208,14 @@
 
     move-result v2
 
+    .line 8
     invoke-virtual {v0, v2}, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration$Builder;->setRelativeToLiveWindow(Z)Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration$Builder;
 
     move-result-object v0
 
     const/4 v2, 0x3
 
+    .line 9
     invoke-static {v2}, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -224,12 +224,14 @@
 
     move-result v2
 
+    .line 10
     invoke-virtual {v0, v2}, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration$Builder;->setRelativeToDefaultPosition(Z)Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration$Builder;
 
     move-result-object v0
 
     const/4 v2, 0x4
 
+    .line 11
     invoke-static {v2}, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -238,10 +240,12 @@
 
     move-result p0
 
+    .line 12
     invoke-virtual {v0, p0}, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration$Builder;->setStartsAtKeyFrame(Z)Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration$Builder;
 
     move-result-object p0
 
+    .line 13
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration$Builder;->buildClippingProperties()Lcom/google/android/exoplayer2/MediaItem$ClippingProperties;
 
     move-result-object p0
@@ -254,6 +258,7 @@
 .method public buildUpon()Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration$Builder;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration$Builder;
 
     const/4 v1, 0x0
@@ -276,6 +281,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration;
 
@@ -285,9 +291,11 @@
 
     return v2
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration;
 
+    .line 3
     iget-wide v3, p0, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration;->startPositionMs:J
 
     iget-wide v5, p1, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration;->startPositionMs:J
@@ -334,6 +342,7 @@
 .method public hashCode()I
     .locals 5
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration;->startPositionMs:J
 
     const/16 v2, 0x20
@@ -346,6 +355,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 2
     iget-wide v3, p0, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration;->endPositionMs:J
 
     ushr-long v1, v3, v2
@@ -358,18 +368,21 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 3
     iget-boolean v1, p0, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration;->relativeToLiveWindow:Z
 
     add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 4
     iget-boolean v1, p0, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration;->relativeToDefaultPosition:Z
 
     add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
+    .line 5
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration;->startsAtKeyFrame:Z
 
     add-int/2addr v0, p0
@@ -380,12 +393,14 @@
 .method public toBundle()Landroid/os/Bundle;
     .locals 4
 
+    .line 1
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-static {v1}, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -396,6 +411,7 @@
 
     const/4 v1, 0x1
 
+    .line 3
     invoke-static {v1}, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -406,6 +422,7 @@
 
     const/4 v1, 0x2
 
+    .line 4
     invoke-static {v1}, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -416,6 +433,7 @@
 
     const/4 v1, 0x3
 
+    .line 5
     invoke-static {v1}, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -426,6 +444,7 @@
 
     const/4 v1, 0x4
 
+    .line 6
     invoke-static {v1}, Lcom/google/android/exoplayer2/MediaItem$ClippingConfiguration;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1

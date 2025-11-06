@@ -27,13 +27,14 @@
 
 
 # instance fields
-.field public a:I
+.field public c:I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lmiuix/core/widget/NestedScrollView$c$a;
 
     invoke-direct {v0}, Lmiuix/core/widget/NestedScrollView$c$a;-><init>()V
@@ -54,7 +55,7 @@
 
     move-result p1
 
-    iput p1, p0, Lmiuix/core/widget/NestedScrollView$c;->a:I
+    iput p1, p0, Lmiuix/core/widget/NestedScrollView$c;->c:I
 
     return-void
 .end method
@@ -75,6 +76,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -83,6 +85,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 2
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
@@ -97,11 +100,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget p0, p0, Lmiuix/core/widget/NestedScrollView$c;->a:I
+    iget p0, p0, Lmiuix/core/widget/NestedScrollView$c;->c:I
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string p0, "}"
+    const-string/jumbo p0, "}"
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -115,9 +118,11 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    iget p0, p0, Lmiuix/core/widget/NestedScrollView$c;->a:I
+    .line 2
+    iget p0, p0, Lmiuix/core/widget/NestedScrollView$c;->c:I
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
 

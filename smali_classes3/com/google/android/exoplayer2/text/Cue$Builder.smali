@@ -243,6 +243,7 @@
 
     move-object/from16 v0, p0
 
+    .line 1
     new-instance v20, Lcom/google/android/exoplayer2/text/Cue;
 
     move-object/from16 v1, v20
@@ -303,6 +304,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->windowColorSet:Z
 
     return-object p0
@@ -316,6 +318,7 @@
     .annotation runtime Lorg/checkerframework/dataflow/qual/Pure;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->bitmap:Landroid/graphics/Bitmap;
 
     return-object p0
@@ -326,6 +329,7 @@
     .annotation runtime Lorg/checkerframework/dataflow/qual/Pure;
     .end annotation
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->bitmapHeight:F
 
     return p0
@@ -336,6 +340,7 @@
     .annotation runtime Lorg/checkerframework/dataflow/qual/Pure;
     .end annotation
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->line:F
 
     return p0
@@ -346,6 +351,7 @@
     .annotation runtime Lorg/checkerframework/dataflow/qual/Pure;
     .end annotation
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->lineAnchor:I
 
     return p0
@@ -356,6 +362,7 @@
     .annotation runtime Lorg/checkerframework/dataflow/qual/Pure;
     .end annotation
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->lineType:I
 
     return p0
@@ -366,6 +373,7 @@
     .annotation runtime Lorg/checkerframework/dataflow/qual/Pure;
     .end annotation
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->position:F
 
     return p0
@@ -376,6 +384,7 @@
     .annotation runtime Lorg/checkerframework/dataflow/qual/Pure;
     .end annotation
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->positionAnchor:I
 
     return p0
@@ -386,6 +395,7 @@
     .annotation runtime Lorg/checkerframework/dataflow/qual/Pure;
     .end annotation
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->size:F
 
     return p0
@@ -399,6 +409,7 @@
     .annotation runtime Lorg/checkerframework/dataflow/qual/Pure;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->text:Ljava/lang/CharSequence;
 
     return-object p0
@@ -412,6 +423,7 @@
     .annotation runtime Lorg/checkerframework/dataflow/qual/Pure;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->textAlignment:Landroid/text/Layout$Alignment;
 
     return-object p0
@@ -422,6 +434,7 @@
     .annotation runtime Lorg/checkerframework/dataflow/qual/Pure;
     .end annotation
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->textSize:F
 
     return p0
@@ -432,6 +445,7 @@
     .annotation runtime Lorg/checkerframework/dataflow/qual/Pure;
     .end annotation
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->textSizeType:I
 
     return p0
@@ -442,6 +456,7 @@
     .annotation runtime Lorg/checkerframework/dataflow/qual/Pure;
     .end annotation
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->verticalType:I
 
     return p0
@@ -455,6 +470,7 @@
     .annotation runtime Lorg/checkerframework/dataflow/qual/Pure;
     .end annotation
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->windowColor:I
 
     return p0
@@ -463,6 +479,7 @@
 .method public isWindowColorSet()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->windowColorSet:Z
 
     return p0
@@ -471,6 +488,7 @@
 .method public setBitmap(Landroid/graphics/Bitmap;)Lcom/google/android/exoplayer2/text/Cue$Builder;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->bitmap:Landroid/graphics/Bitmap;
 
     return-object p0
@@ -479,6 +497,7 @@
 .method public setBitmapHeight(F)Lcom/google/android/exoplayer2/text/Cue$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->bitmapHeight:F
 
     return-object p0
@@ -487,8 +506,10 @@
 .method public setLine(FI)Lcom/google/android/exoplayer2/text/Cue$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->line:F
 
+    .line 2
     iput p2, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->lineType:I
 
     return-object p0
@@ -497,6 +518,7 @@
 .method public setLineAnchor(I)Lcom/google/android/exoplayer2/text/Cue$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->lineAnchor:I
 
     return-object p0
@@ -509,6 +531,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->multiRowAlignment:Landroid/text/Layout$Alignment;
 
     return-object p0
@@ -517,6 +540,7 @@
 .method public setPosition(F)Lcom/google/android/exoplayer2/text/Cue$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->position:F
 
     return-object p0
@@ -525,6 +549,7 @@
 .method public setPositionAnchor(I)Lcom/google/android/exoplayer2/text/Cue$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->positionAnchor:I
 
     return-object p0
@@ -533,6 +558,7 @@
 .method public setShearDegrees(F)Lcom/google/android/exoplayer2/text/Cue$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->shearDegrees:F
 
     return-object p0
@@ -541,6 +567,7 @@
 .method public setSize(F)Lcom/google/android/exoplayer2/text/Cue$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->size:F
 
     return-object p0
@@ -549,6 +576,7 @@
 .method public setText(Ljava/lang/CharSequence;)Lcom/google/android/exoplayer2/text/Cue$Builder;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->text:Ljava/lang/CharSequence;
 
     return-object p0
@@ -561,6 +589,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->textAlignment:Landroid/text/Layout$Alignment;
 
     return-object p0
@@ -569,8 +598,10 @@
 .method public setTextSize(FI)Lcom/google/android/exoplayer2/text/Cue$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->textSize:F
 
+    .line 2
     iput p2, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->textSizeType:I
 
     return-object p0
@@ -579,6 +610,7 @@
 .method public setVerticalType(I)Lcom/google/android/exoplayer2/text/Cue$Builder;
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->verticalType:I
 
     return-object p0
@@ -591,10 +623,12 @@
         .end annotation
     .end param
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->windowColor:I
 
     const/4 p1, 0x1
 
+    .line 2
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/text/Cue$Builder;->windowColorSet:Z
 
     return-object p0

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$StyleMatch;
+.class public final Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$StyleMatch;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -36,10 +36,13 @@
 .method public constructor <init>(ILcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$StyleMatch;->score:I
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/exoplayer2/text/webvtt/WebvttCueParser$StyleMatch;->style:Lcom/google/android/exoplayer2/text/webvtt/WebvttCssStyle;
 
     return-void

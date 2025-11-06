@@ -1,4 +1,4 @@
-.class final Lcom/google/android/datatransport/runtime/AutoValue_SendRequest;
+.class public final Lcom/google/android/datatransport/runtime/AutoValue_SendRequest;
 .super Lcom/google/android/datatransport/runtime/SendRequest;
 .source "SourceFile"
 
@@ -95,6 +95,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/android/datatransport/runtime/SendRequest;
 
@@ -102,8 +103,10 @@
 
     if-eqz v1, :cond_2
 
+    .line 2
     check-cast p1, Lcom/google/android/datatransport/runtime/SendRequest;
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/datatransport/runtime/AutoValue_SendRequest;->transportContext:Lcom/google/android/datatransport/runtime/TransportContext;
 
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/SendRequest;->getTransportContext()Lcom/google/android/datatransport/runtime/TransportContext;
@@ -118,6 +121,7 @@
 
     iget-object v1, p0, Lcom/google/android/datatransport/runtime/AutoValue_SendRequest;->transportName:Ljava/lang/String;
 
+    .line 4
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/SendRequest;->getTransportName()Ljava/lang/String;
 
     move-result-object v3
@@ -130,6 +134,7 @@
 
     iget-object v1, p0, Lcom/google/android/datatransport/runtime/AutoValue_SendRequest;->event:Lcom/google/android/datatransport/Event;
 
+    .line 5
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/SendRequest;->getEvent()Lcom/google/android/datatransport/Event;
 
     move-result-object v3
@@ -142,6 +147,7 @@
 
     iget-object v1, p0, Lcom/google/android/datatransport/runtime/AutoValue_SendRequest;->transformer:Lcom/google/android/datatransport/Transformer;
 
+    .line 6
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/SendRequest;->getTransformer()Lcom/google/android/datatransport/Transformer;
 
     move-result-object v3
@@ -154,6 +160,7 @@
 
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/AutoValue_SendRequest;->encoding:Lcom/google/android/datatransport/Encoding;
 
+    .line 7
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/SendRequest;->getEncoding()Lcom/google/android/datatransport/Encoding;
 
     move-result-object p1
@@ -179,6 +186,7 @@
 .method public getEncoding()Lcom/google/android/datatransport/Encoding;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/AutoValue_SendRequest;->encoding:Lcom/google/android/datatransport/Encoding;
 
     return-object p0
@@ -194,6 +202,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/AutoValue_SendRequest;->event:Lcom/google/android/datatransport/Event;
 
     return-object p0
@@ -209,6 +218,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/AutoValue_SendRequest;->transformer:Lcom/google/android/datatransport/Transformer;
 
     return-object p0
@@ -217,6 +227,7 @@
 .method public getTransportContext()Lcom/google/android/datatransport/runtime/TransportContext;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/AutoValue_SendRequest;->transportContext:Lcom/google/android/datatransport/runtime/TransportContext;
 
     return-object p0
@@ -225,6 +236,7 @@
 .method public getTransportName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/AutoValue_SendRequest;->transportName:Ljava/lang/String;
 
     return-object p0
@@ -233,6 +245,7 @@
 .method public hashCode()I
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/AutoValue_SendRequest;->transportContext:Lcom/google/android/datatransport/runtime/TransportContext;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -245,6 +258,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 2
     iget-object v2, p0, Lcom/google/android/datatransport/runtime/AutoValue_SendRequest;->transportName:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
@@ -255,6 +269,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 3
     iget-object v2, p0, Lcom/google/android/datatransport/runtime/AutoValue_SendRequest;->event:Lcom/google/android/datatransport/Event;
 
     invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
@@ -265,6 +280,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 4
     iget-object v2, p0, Lcom/google/android/datatransport/runtime/AutoValue_SendRequest;->transformer:Lcom/google/android/datatransport/Transformer;
 
     invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
@@ -275,6 +291,7 @@
 
     mul-int/2addr v0, v1
 
+    .line 5
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/AutoValue_SendRequest;->encoding:Lcom/google/android/datatransport/Encoding;
 
     invoke-virtual {p0}, Lcom/google/android/datatransport/Encoding;->hashCode()I
@@ -289,6 +306,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

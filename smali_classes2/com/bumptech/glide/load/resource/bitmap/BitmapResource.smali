@@ -37,10 +37,12 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "Bitmap must not be null"
 
+    .line 2
     invoke-static {p1, v0}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -51,6 +53,7 @@
 
     const-string p1, "BitmapPool must not be null"
 
+    .line 3
     invoke-static {p2, p1}, Lcom/bumptech/glide/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
@@ -81,6 +84,7 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     new-instance v0, Lcom/bumptech/glide/load/resource/bitmap/BitmapResource;
 
@@ -129,6 +133,7 @@
         }
     .end annotation
 
+    .line 1
     const-class p0, Landroid/graphics/Bitmap;
 
     return-object p0
@@ -137,6 +142,7 @@
 .method public getSize()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/bitmap/BitmapResource;->bitmap:Landroid/graphics/Bitmap;
 
     invoke-static {p0}, Lcom/bumptech/glide/util/Util;->getBitmapByteSize(Landroid/graphics/Bitmap;)I
@@ -149,6 +155,7 @@
 .method public initialize()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/bitmap/BitmapResource;->bitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->prepareToDraw()V
@@ -159,6 +166,7 @@
 .method public recycle()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/bumptech/glide/load/resource/bitmap/BitmapResource;->bitmapPool:Lcom/bumptech/glide/load/engine/bitmap_recycle/BitmapPool;
 
     iget-object p0, p0, Lcom/bumptech/glide/load/resource/bitmap/BitmapResource;->bitmap:Landroid/graphics/Bitmap;

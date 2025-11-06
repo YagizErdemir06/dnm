@@ -1,4 +1,4 @@
-.class Landroidx/recyclerview/widget/AsyncListUtil$2;
+.class public Landroidx/recyclerview/widget/AsyncListUtil$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -34,7 +34,7 @@
 
 .field private mLastRequiredTileStart:I
 
-.field final mLoadedTiles:Landroid/util/SparseBooleanArray;
+.field public final mLoadedTiles:Landroid/util/SparseBooleanArray;
 
 .field private mRecycledRoot:Landroidx/recyclerview/widget/TileList$Tile;
     .annotation system Ldalvik/annotation/Signature;
@@ -45,17 +45,19 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Landroidx/recyclerview/widget/AsyncListUtil;
+.field public final synthetic this$0:Landroidx/recyclerview/widget/AsyncListUtil;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/recyclerview/widget/AsyncListUtil;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->this$0:Landroidx/recyclerview/widget/AsyncListUtil;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance p1, Landroid/util/SparseBooleanArray;
 
     invoke-direct {p1}, Landroid/util/SparseBooleanArray;-><init>()V
@@ -75,16 +77,19 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->mRecycledRoot:Landroidx/recyclerview/widget/TileList$Tile;
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v1, v0, Landroidx/recyclerview/widget/TileList$Tile;->mNext:Landroidx/recyclerview/widget/TileList$Tile;
 
     iput-object v1, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->mRecycledRoot:Landroidx/recyclerview/widget/TileList$Tile;
 
     return-object v0
 
+    .line 3
     :cond_0
     new-instance v0, Landroidx/recyclerview/widget/TileList$Tile;
 
@@ -109,6 +114,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->mLoadedTiles:Landroid/util/SparseBooleanArray;
 
     iget v1, p1, Landroidx/recyclerview/widget/TileList$Tile;->mStartPosition:I
@@ -117,6 +123,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
+    .line 2
     iget-object v0, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->this$0:Landroidx/recyclerview/widget/AsyncListUtil;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/AsyncListUtil;->mMainThreadProxy:Landroidx/recyclerview/widget/ThreadUtil$MainThreadCallback;
@@ -131,6 +138,7 @@
 .method private flushTileCache(I)V
     .locals 7
 
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->this$0:Landroidx/recyclerview/widget/AsyncListUtil;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/AsyncListUtil;->mDataCallback:Landroidx/recyclerview/widget/AsyncListUtil$DataCallback;
@@ -139,6 +147,7 @@
 
     move-result v0
 
+    .line 2
     :goto_0
     iget-object v1, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->mLoadedTiles:Landroid/util/SparseBooleanArray;
 
@@ -148,6 +157,7 @@
 
     if-lt v1, v0, :cond_3
 
+    .line 3
     iget-object v1, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->mLoadedTiles:Landroid/util/SparseBooleanArray;
 
     const/4 v2, 0x0
@@ -156,6 +166,7 @@
 
     move-result v1
 
+    .line 4
     iget-object v2, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->mLoadedTiles:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v2}, Landroid/util/SparseBooleanArray;->size()I
@@ -170,10 +181,12 @@
 
     move-result v2
 
+    .line 5
     iget v3, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->mFirstRequiredTileStart:I
 
     sub-int/2addr v3, v1
 
+    .line 6
     iget v5, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->mLastRequiredTileStart:I
 
     sub-int v5, v2, v5
@@ -186,6 +199,7 @@
 
     if-ne p1, v6, :cond_1
 
+    .line 7
     :cond_0
     invoke-direct {p0, v1}, Landroidx/recyclerview/widget/AsyncListUtil$2;->removeTile(I)V
 
@@ -198,6 +212,7 @@
 
     if-ne p1, v4, :cond_3
 
+    .line 8
     :cond_2
     invoke-direct {p0, v2}, Landroidx/recyclerview/widget/AsyncListUtil$2;->removeTile(I)V
 
@@ -210,6 +225,7 @@
 .method private getTileStart(I)I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->this$0:Landroidx/recyclerview/widget/AsyncListUtil;
 
     iget p0, p0, Landroidx/recyclerview/widget/AsyncListUtil;->mTileSize:I
@@ -224,6 +240,7 @@
 .method private isTileLoaded(I)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->mLoadedTiles:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseBooleanArray;->get(I)Z
@@ -236,6 +253,7 @@
 .method private varargs log(Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 1
 
+    .line 1
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -264,10 +282,12 @@
 .method private removeTile(I)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->mLoadedTiles:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseBooleanArray;->delete(I)V
 
+    .line 2
     iget-object v0, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->this$0:Landroidx/recyclerview/widget/AsyncListUtil;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/AsyncListUtil;->mMainThreadProxy:Landroidx/recyclerview/widget/ThreadUtil$MainThreadCallback;
@@ -298,6 +318,7 @@
     :cond_0
     move v1, v0
 
+    .line 1
     :goto_1
     iget-object v2, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->this$0:Landroidx/recyclerview/widget/AsyncListUtil;
 
@@ -305,6 +326,7 @@
 
     invoke-interface {v2, v1, p3}, Landroidx/recyclerview/widget/ThreadUtil$BackgroundCallback;->loadTile(II)V
 
+    .line 2
     iget-object v1, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->this$0:Landroidx/recyclerview/widget/AsyncListUtil;
 
     iget v1, v1, Landroidx/recyclerview/widget/AsyncListUtil;->mTileSize:I
@@ -322,6 +344,7 @@
 .method public loadTile(II)V
     .locals 4
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/AsyncListUtil$2;->isTileLoaded(I)Z
 
     move-result v0
@@ -330,13 +353,16 @@
 
     return-void
 
+    .line 2
     :cond_0
     invoke-direct {p0}, Landroidx/recyclerview/widget/AsyncListUtil$2;->acquireTile()Landroidx/recyclerview/widget/TileList$Tile;
 
     move-result-object v0
 
+    .line 3
     iput p1, v0, Landroidx/recyclerview/widget/TileList$Tile;->mStartPosition:I
 
+    .line 4
     iget-object v1, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->this$0:Landroidx/recyclerview/widget/AsyncListUtil;
 
     iget v1, v1, Landroidx/recyclerview/widget/AsyncListUtil;->mTileSize:I
@@ -351,6 +377,7 @@
 
     iput p1, v0, Landroidx/recyclerview/widget/TileList$Tile;->mItemCount:I
 
+    .line 5
     iget-object v1, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->this$0:Landroidx/recyclerview/widget/AsyncListUtil;
 
     iget-object v1, v1, Landroidx/recyclerview/widget/AsyncListUtil;->mDataCallback:Landroidx/recyclerview/widget/AsyncListUtil$DataCallback;
@@ -361,8 +388,10 @@
 
     invoke-virtual {v1, v2, v3, p1}, Landroidx/recyclerview/widget/AsyncListUtil$DataCallback;->fillData([Ljava/lang/Object;II)V
 
+    .line 6
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/AsyncListUtil$2;->flushTileCache(I)V
 
+    .line 7
     invoke-direct {p0, v0}, Landroidx/recyclerview/widget/AsyncListUtil$2;->addTile(Landroidx/recyclerview/widget/TileList$Tile;)V
 
     return-void
@@ -378,6 +407,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->this$0:Landroidx/recyclerview/widget/AsyncListUtil;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/AsyncListUtil;->mDataCallback:Landroidx/recyclerview/widget/AsyncListUtil$DataCallback;
@@ -388,10 +418,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/AsyncListUtil$DataCallback;->recycleData([Ljava/lang/Object;I)V
 
+    .line 2
     iget-object v0, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->mRecycledRoot:Landroidx/recyclerview/widget/TileList$Tile;
 
     iput-object v0, p1, Landroidx/recyclerview/widget/TileList$Tile;->mNext:Landroidx/recyclerview/widget/TileList$Tile;
 
+    .line 3
     iput-object p1, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->mRecycledRoot:Landroidx/recyclerview/widget/TileList$Tile;
 
     return-void
@@ -400,12 +432,15 @@
 .method public refresh(I)V
     .locals 1
 
+    .line 1
     iput p1, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->mGeneration:I
 
+    .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->mLoadedTiles:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {p1}, Landroid/util/SparseBooleanArray;->clear()V
 
+    .line 3
     iget-object p1, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->this$0:Landroidx/recyclerview/widget/AsyncListUtil;
 
     iget-object p1, p1, Landroidx/recyclerview/widget/AsyncListUtil;->mDataCallback:Landroidx/recyclerview/widget/AsyncListUtil$DataCallback;
@@ -416,6 +451,7 @@
 
     iput p1, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->mItemCount:I
 
+    .line 4
     iget-object v0, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->this$0:Landroidx/recyclerview/widget/AsyncListUtil;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/AsyncListUtil;->mMainThreadProxy:Landroidx/recyclerview/widget/ThreadUtil$MainThreadCallback;
@@ -434,21 +470,25 @@
 
     return-void
 
+    .line 1
     :cond_0
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/AsyncListUtil$2;->getTileStart(I)I
 
     move-result p1
 
+    .line 2
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/AsyncListUtil$2;->getTileStart(I)I
 
     move-result p2
 
+    .line 3
     invoke-direct {p0, p3}, Landroidx/recyclerview/widget/AsyncListUtil$2;->getTileStart(I)I
 
     move-result p3
 
     iput p3, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->mFirstRequiredTileStart:I
 
+    .line 4
     invoke-direct {p0, p4}, Landroidx/recyclerview/widget/AsyncListUtil$2;->getTileStart(I)I
 
     move-result p3
@@ -461,10 +501,12 @@
 
     if-ne p5, v0, :cond_1
 
+    .line 5
     iget p1, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->mFirstRequiredTileStart:I
 
     invoke-direct {p0, p1, p2, p5, v0}, Landroidx/recyclerview/widget/AsyncListUtil$2;->requestTiles(IIIZ)V
 
+    .line 6
     iget-object p1, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->this$0:Landroidx/recyclerview/widget/AsyncListUtil;
 
     iget p1, p1, Landroidx/recyclerview/widget/AsyncListUtil;->mTileSize:I
@@ -477,9 +519,11 @@
 
     goto :goto_0
 
+    .line 7
     :cond_1
     invoke-direct {p0, p1, p3, p5, p4}, Landroidx/recyclerview/widget/AsyncListUtil$2;->requestTiles(IIIZ)V
 
+    .line 8
     iget p2, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->mFirstRequiredTileStart:I
 
     iget-object p3, p0, Landroidx/recyclerview/widget/AsyncListUtil$2;->this$0:Landroidx/recyclerview/widget/AsyncListUtil;

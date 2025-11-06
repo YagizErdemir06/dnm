@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/ImmediateFuture;
+.class public Lcom/google/common/util/concurrent/ImmediateFuture;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -33,7 +33,7 @@
 
 
 # static fields
-.field static final NULL:Lcom/google/common/util/concurrent/ListenableFuture;
+.field public static final NULL:Lcom/google/common/util/concurrent/ListenableFuture;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/util/concurrent/ListenableFuture<",
@@ -62,6 +62,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/common/util/concurrent/ImmediateFuture;
 
     const/4 v1, 0x0
@@ -70,6 +71,7 @@
 
     sput-object v0, Lcom/google/common/util/concurrent/ImmediateFuture;->NULL:Lcom/google/common/util/concurrent/ListenableFuture;
 
+    .line 2
     const-class v0, Lcom/google/common/util/concurrent/ImmediateFuture;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -97,8 +99,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/util/concurrent/ImmediateFuture;->value:Ljava/lang/Object;
 
     return-void
@@ -111,12 +115,15 @@
 
     const-string p0, "Runnable was null."
 
+    .line 1
     invoke-static {p1, p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "Executor was null."
 
+    .line 2
     invoke-static {p2, p0}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     :try_start_0
     invoke-interface {p2, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
     :try_end_0
@@ -127,6 +134,7 @@
     :catch_0
     move-exception p0
 
+    .line 4
     sget-object v0, Lcom/google/common/util/concurrent/ImmediateFuture;->log:Ljava/util/logging/Logger;
 
     sget-object v1, Ljava/util/logging/Level;->SEVERE:Ljava/util/logging/Level;
@@ -251,6 +259,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0

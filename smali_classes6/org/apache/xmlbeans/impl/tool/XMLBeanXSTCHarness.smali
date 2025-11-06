@@ -10,6 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,15 +21,18 @@
 .method public runTestCase(Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCaseResult;)V
     .locals 8
 
+    .line 1
     invoke-virtual {p1}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCaseResult;->getTestCase()Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;
 
     move-result-object p0
 
+    .line 2
     :try_start_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->getSchemaFile()Ljava/io/File;
 
     move-result-object v1
@@ -46,6 +50,7 @@
 
     const/4 v3, 0x1
 
+    .line 4
     :try_start_1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->getSchemaFile()Ljava/io/File;
 
@@ -67,12 +72,14 @@
 
     move-result-object v4
 
+    .line 5
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->getResourceFile()Ljava/io/File;
 
     move-result-object v5
 
     if-eqz v5, :cond_1
 
+    .line 6
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->getResourceFile()Ljava/io/File;
 
     move-result-object v5
@@ -118,6 +125,7 @@
 
     move-object v5, v7
 
+    .line 7
     :goto_1
     invoke-static {}, Lorg/apache/xmlbeans/XmlBeans;->getBuiltinTypeSystem()Lorg/apache/xmlbeans/SchemaTypeSystem;
 
@@ -139,6 +147,7 @@
 
     aput-object v4, v5, v2
 
+    .line 8
     invoke-static {}, Lorg/apache/xmlbeans/XmlBeans;->getBuiltinTypeSystem()Lorg/apache/xmlbeans/SchemaTypeSystem;
 
     move-result-object v4
@@ -159,6 +168,7 @@
     :catch_0
     move-exception v4
 
+    .line 9
     :try_start_2
     instance-of v5, v4, Lorg/apache/xmlbeans/XmlException;
 
@@ -170,19 +180,23 @@
 
     if-eqz v5, :cond_4
 
+    .line 10
     :cond_3
     invoke-virtual {p1, v3}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCaseResult;->setCrash(Z)V
 
+    .line 11
     new-instance v5, Ljava/io/StringWriter;
 
     invoke-direct {v5}, Ljava/io/StringWriter;-><init>()V
 
+    .line 12
     new-instance v6, Ljava/io/PrintWriter;
 
     invoke-direct {v6, v5}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
 
-    invoke-virtual {v4, v6}, Ljava/lang/Throwable;->printStackTrace(Ljava/io/PrintWriter;)V
+    invoke-virtual {v4, v6}, Ljava/lang/Exception;->printStackTrace(Ljava/io/PrintWriter;)V
 
+    .line 13
     invoke-virtual {v5}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
 
     move-result-object v4
@@ -198,17 +212,21 @@
 
     move v5, v2
 
+    .line 14
     :goto_2
     invoke-virtual {p1, v0}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCaseResult;->addSvMessages(Ljava/util/Collection;)V
 
+    .line 15
     invoke-virtual {p1, v5}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCaseResult;->setSvActual(Z)V
 
+    .line 16
     invoke-interface {v0}, Ljava/util/Collection;->clear()V
 
     if-nez v4, :cond_5
 
     return-void
 
+    .line 17
     :cond_5
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->getInstanceFile()Ljava/io/File;
 
@@ -220,6 +238,7 @@
 
     return-void
 
+    .line 18
     :cond_6
     :try_start_3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->getInstanceFile()Ljava/io/File;
@@ -242,6 +261,7 @@
 
     move-result-object p0
 
+    .line 19
     new-instance v1, Lorg/apache/xmlbeans/XmlOptions;
 
     invoke-direct {v1}, Lorg/apache/xmlbeans/XmlOptions;-><init>()V
@@ -262,6 +282,7 @@
     :catch_1
     move-exception p0
 
+    .line 20
     :try_start_4
     instance-of v1, p0, Lorg/apache/xmlbeans/XmlException;
 
@@ -273,19 +294,23 @@
 
     if-eqz v1, :cond_8
 
+    .line 21
     :cond_7
     invoke-virtual {p1, v3}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCaseResult;->setCrash(Z)V
 
+    .line 22
     new-instance v1, Ljava/io/StringWriter;
 
     invoke-direct {v1}, Ljava/io/StringWriter;-><init>()V
 
+    .line 23
     new-instance v3, Ljava/io/PrintWriter;
 
     invoke-direct {v3, v1}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
 
-    invoke-virtual {p0, v3}, Ljava/lang/Throwable;->printStackTrace(Ljava/io/PrintWriter;)V
+    invoke-virtual {p0, v3}, Ljava/lang/Exception;->printStackTrace(Ljava/io/PrintWriter;)V
 
+    .line 24
     invoke-virtual {v1}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -296,10 +321,12 @@
 
     invoke-virtual {p1, p0}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCaseResult;->addIvMessages(Ljava/util/Collection;)V
 
+    .line 25
     :cond_8
     :goto_3
     invoke-virtual {p1, v0}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCaseResult;->addIvMessages(Ljava/util/Collection;)V
 
+    .line 26
     invoke-virtual {p1, v2}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCaseResult;->setIvActual(Z)V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
@@ -309,5 +336,6 @@
     :catchall_0
     move-exception p0
 
+    .line 27
     throw p0
 .end method

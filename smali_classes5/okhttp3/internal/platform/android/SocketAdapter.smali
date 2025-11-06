@@ -10,31 +10,31 @@
     }
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
     d1 = {
-        "\u0000:\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0008f\u0018\u00002\u00020\u0001J\u0008\u0010\u0003\u001a\u00020\u0002H&J\u0012\u0010\u0007\u001a\u0004\u0018\u00010\u00062\u0006\u0010\u0005\u001a\u00020\u0004H\u0016J\u0010\u0010\n\u001a\u00020\u00022\u0006\u0010\t\u001a\u00020\u0008H&J\u0010\u0010\u000b\u001a\u00020\u00022\u0006\u0010\u0005\u001a\u00020\u0004H\u0016J(\u0010\u0012\u001a\u00020\u00112\u0006\u0010\t\u001a\u00020\u00082\u0008\u0010\r\u001a\u0004\u0018\u00010\u000c2\u000c\u0010\u0010\u001a\u0008\u0012\u0004\u0012\u00020\u000f0\u000eH&J\u0012\u0010\u0013\u001a\u0004\u0018\u00010\u000c2\u0006\u0010\t\u001a\u00020\u0008H&\u00a8\u0006\u0014"
+        "\u0000<\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\u0008f\u0018\u00002\u00020\u0001J(\u0010\u0002\u001a\u00020\u00032\u0006\u0010\u0004\u001a\u00020\u00052\u0008\u0010\u0006\u001a\u0004\u0018\u00010\u00072\u000c\u0010\u0008\u001a\u0008\u0012\u0004\u0012\u00020\n0\tH&J\u0012\u0010\u000b\u001a\u0004\u0018\u00010\u00072\u0006\u0010\u0004\u001a\u00020\u0005H&J\u0008\u0010\u000c\u001a\u00020\rH&J\u0010\u0010\u000e\u001a\u00020\r2\u0006\u0010\u0004\u001a\u00020\u0005H&J\u0010\u0010\u000f\u001a\u00020\r2\u0006\u0010\u0010\u001a\u00020\u0011H\u0016J\u0012\u0010\u0012\u001a\u0004\u0018\u00010\u00132\u0006\u0010\u0010\u001a\u00020\u0011H\u0016\u00a8\u0006\u0014"
     }
     d2 = {
         "Lokhttp3/internal/platform/android/SocketAdapter;",
         "",
+        "configureTlsExtensions",
         "",
-        "isSupported",
-        "Ljavax/net/ssl/SSLSocketFactory;",
-        "sslSocketFactory",
-        "Ljavax/net/ssl/X509TrustManager;",
-        "trustManager",
-        "Ljavax/net/ssl/SSLSocket;",
         "sslSocket",
-        "matchesSocket",
-        "matchesSocketFactory",
-        "",
+        "Ljavax/net/ssl/SSLSocket;",
         "hostname",
         "",
-        "Lokhttp3/Protocol;",
         "protocols",
-        "Lnm/l2;",
-        "configureTlsExtensions",
+        "",
+        "Lokhttp3/Protocol;",
         "getSelectedProtocol",
+        "isSupported",
+        "",
+        "matchesSocket",
+        "matchesSocketFactory",
+        "sslSocketFactory",
+        "Ljavax/net/ssl/SSLSocketFactory;",
+        "trustManager",
+        "Ljavax/net/ssl/X509TrustManager;",
         "okhttp"
     }
     k = 0x1
@@ -43,21 +43,22 @@
         0x6,
         0x0
     }
+    xi = 0x30
 .end annotation
 
 
 # virtual methods
 .method public abstract configureTlsExtensions(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
     .param p1    # Ljavax/net/ssl/SSLSocket;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
     .param p3    # Ljava/util/List;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
@@ -75,10 +76,10 @@
 
 .method public abstract getSelectedProtocol(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
     .param p1    # Ljavax/net/ssl/SSLSocket;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 .end method
 
@@ -87,23 +88,23 @@
 
 .method public abstract matchesSocket(Ljavax/net/ssl/SSLSocket;)Z
     .param p1    # Ljavax/net/ssl/SSLSocket;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 .end method
 
 .method public abstract matchesSocketFactory(Ljavax/net/ssl/SSLSocketFactory;)Z
     .param p1    # Ljavax/net/ssl/SSLSocketFactory;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 .end method
 
 .method public abstract trustManager(Ljavax/net/ssl/SSLSocketFactory;)Ljavax/net/ssl/X509TrustManager;
     .param p1    # Ljavax/net/ssl/SSLSocketFactory;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 .end method

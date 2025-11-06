@@ -1,4 +1,4 @@
-.class Lmiuix/animation/utils/StyleComposer$1;
+.class public Lmiuix/animation/utils/StyleComposer$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,17 +18,18 @@
 
 
 # instance fields
-.field final synthetic val$interceptor:Lmiuix/animation/utils/StyleComposer$IInterceptor;
+.field public final synthetic val$interceptor:Lmiuix/animation/utils/StyleComposer$IInterceptor;
 
-.field final synthetic val$interfaceClz:Ljava/lang/Class;
+.field public final synthetic val$interfaceClz:Ljava/lang/Class;
 
-.field final synthetic val$styles:[Ljava/lang/Object;
+.field public final synthetic val$styles:[Ljava/lang/Object;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/animation/utils/StyleComposer$IInterceptor;[Ljava/lang/Object;Ljava/lang/Class;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/animation/utils/StyleComposer$1;->val$interceptor:Lmiuix/animation/utils/StyleComposer$IInterceptor;
 
     iput-object p2, p0, Lmiuix/animation/utils/StyleComposer$1;->val$styles:[Ljava/lang/Object;
@@ -45,6 +46,7 @@
 .method public invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
     .locals 8
 
+    .line 1
     iget-object v0, p0, Lmiuix/animation/utils/StyleComposer$1;->val$interceptor:Lmiuix/animation/utils/StyleComposer$IInterceptor;
 
     if-eqz v0, :cond_0
@@ -55,6 +57,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lmiuix/animation/utils/StyleComposer$1;->val$interceptor:Lmiuix/animation/utils/StyleComposer$IInterceptor;
 
     iget-object v1, p0, Lmiuix/animation/utils/StyleComposer$1;->val$styles:[Ljava/lang/Object;
@@ -65,6 +68,7 @@
 
     goto :goto_2
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lmiuix/animation/utils/StyleComposer$1;->val$styles:[Ljava/lang/Object;
 
@@ -75,14 +79,15 @@
     const/4 v3, 0x0
 
     :goto_0
-    if-ge v3, v1, :cond_1
+    if-ge v2, v1, :cond_1
 
-    aget-object v4, v0, v3
+    aget-object v4, v0, v2
 
+    .line 4
     :try_start_0
     invoke-virtual {p2, v4, p3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v3
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -91,6 +96,7 @@
     :catch_0
     move-exception v5
 
+    .line 5
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -111,7 +117,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v5}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    invoke-virtual {v5}, Ljava/lang/Exception;->getCause()Ljava/lang/Throwable;
 
     move-result-object v5
 
@@ -120,16 +126,17 @@
     invoke-static {v6, v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_1
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     :cond_1
-    move-object p2, v2
+    move-object p2, v3
 
     :goto_2
     if-eqz p2, :cond_2
 
+    .line 6
     iget-object p3, p0, Lmiuix/animation/utils/StyleComposer$1;->val$styles:[Ljava/lang/Object;
 
     array-length v0, p3
@@ -140,6 +147,7 @@
 
     if-ne p2, p3, :cond_2
 
+    .line 7
     iget-object p0, p0, Lmiuix/animation/utils/StyleComposer$1;->val$interfaceClz:Ljava/lang/Class;
 
     invoke-virtual {p0, p1}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;

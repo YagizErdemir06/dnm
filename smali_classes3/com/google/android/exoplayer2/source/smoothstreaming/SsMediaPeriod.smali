@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;
+.class public final Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -73,28 +73,40 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->manifest:Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest;
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->chunkSourceFactory:Lcom/google/android/exoplayer2/source/smoothstreaming/SsChunkSource$Factory;
 
+    .line 4
     iput-object p3, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->transferListener:Lcom/google/android/exoplayer2/upstream/TransferListener;
 
+    .line 5
     iput-object p9, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->manifestLoaderErrorThrower:Lcom/google/android/exoplayer2/upstream/LoaderErrorThrower;
 
+    .line 6
     iput-object p5, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->drmSessionManager:Lcom/google/android/exoplayer2/drm/DrmSessionManager;
 
+    .line 7
     iput-object p6, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->drmEventDispatcher:Lcom/google/android/exoplayer2/drm/DrmSessionEventListener$EventDispatcher;
 
+    .line 8
     iput-object p7, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->loadErrorHandlingPolicy:Lcom/google/android/exoplayer2/upstream/LoadErrorHandlingPolicy;
 
+    .line 9
     iput-object p8, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->mediaSourceEventDispatcher:Lcom/google/android/exoplayer2/source/MediaSourceEventListener$EventDispatcher;
 
+    .line 10
     iput-object p10, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->allocator:Lcom/google/android/exoplayer2/upstream/Allocator;
 
+    .line 11
     iput-object p4, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->compositeSequenceableLoaderFactory:Lcom/google/android/exoplayer2/source/CompositeSequenceableLoaderFactory;
 
+    .line 12
     invoke-static {p1, p5}, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->buildTrackGroups(Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest;Lcom/google/android/exoplayer2/drm/DrmSessionManager;)Lcom/google/android/exoplayer2/source/TrackGroupArray;
 
     move-result-object p1
@@ -103,12 +115,14 @@
 
     const/4 p1, 0x0
 
+    .line 13
     invoke-static {p1}, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->newSampleStreamArray(I)[Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->sampleStreams:[Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;
 
+    .line 14
     invoke-interface {p4, p1}, Lcom/google/android/exoplayer2/source/CompositeSequenceableLoaderFactory;->createCompositeSequenceableLoader([Lcom/google/android/exoplayer2/source/SequenceableLoader;)Lcom/google/android/exoplayer2/source/SequenceableLoader;
 
     move-result-object p1
@@ -133,6 +147,7 @@
 
     move-object v5, p0
 
+    .line 1
     iget-object v0, v5, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->trackGroups:Lcom/google/android/exoplayer2/source/TrackGroupArray;
 
     invoke-interface {p1}, Lcom/google/android/exoplayer2/trackselection/TrackSelection;->getTrackGroup()Lcom/google/android/exoplayer2/source/TrackGroup;
@@ -143,6 +158,7 @@
 
     move-result v0
 
+    .line 2
     iget-object v6, v5, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->chunkSourceFactory:Lcom/google/android/exoplayer2/source/smoothstreaming/SsChunkSource$Factory;
 
     iget-object v7, v5, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->manifestLoaderErrorThrower:Lcom/google/android/exoplayer2/upstream/LoaderErrorThrower;
@@ -155,10 +171,12 @@
 
     move-object v10, p1
 
+    .line 3
     invoke-interface/range {v6 .. v11}, Lcom/google/android/exoplayer2/source/smoothstreaming/SsChunkSource$Factory;->createChunkSource(Lcom/google/android/exoplayer2/upstream/LoaderErrorThrower;Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest;ILcom/google/android/exoplayer2/trackselection/ExoTrackSelection;Lcom/google/android/exoplayer2/upstream/TransferListener;)Lcom/google/android/exoplayer2/source/smoothstreaming/SsChunkSource;
 
     move-result-object v4
 
+    .line 4
     new-instance v13, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;
 
     iget-object v1, v5, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->manifest:Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest;
@@ -169,10 +187,6 @@
 
     iget v1, v0, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->type:I
 
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
     iget-object v6, v5, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->allocator:Lcom/google/android/exoplayer2/upstream/Allocator;
 
     iget-object v9, v5, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->drmSessionManager:Lcom/google/android/exoplayer2/drm/DrmSessionManager;
@@ -182,6 +196,10 @@
     iget-object v11, v5, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->loadErrorHandlingPolicy:Lcom/google/android/exoplayer2/upstream/LoadErrorHandlingPolicy;
 
     iget-object v12, v5, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->mediaSourceEventDispatcher:Lcom/google/android/exoplayer2/source/MediaSourceEventListener$EventDispatcher;
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
 
     move-object v0, v13
 
@@ -195,6 +213,7 @@
 .method private static buildTrackGroups(Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest;Lcom/google/android/exoplayer2/drm/DrmSessionManager;)Lcom/google/android/exoplayer2/source/TrackGroupArray;
     .locals 8
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest;->streamElements:[Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;
 
     array-length v0, v0
@@ -205,6 +224,7 @@
 
     move v2, v1
 
+    .line 2
     :goto_0
     iget-object v3, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest;->streamElements:[Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;
 
@@ -212,23 +232,28 @@
 
     if-ge v2, v4, :cond_1
 
+    .line 3
     aget-object v3, v3, v2
 
     iget-object v3, v3, Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->formats:[Lcom/google/android/exoplayer2/Format;
 
+    .line 4
     array-length v4, v3
 
     new-array v4, v4, [Lcom/google/android/exoplayer2/Format;
 
     move v5, v1
 
+    .line 5
     :goto_1
     array-length v6, v3
 
     if-ge v5, v6, :cond_0
 
+    .line 6
     aget-object v6, v3, v5
 
+    .line 7
     invoke-interface {p1, v6}, Lcom/google/android/exoplayer2/drm/DrmSessionManager;->getCryptoType(Lcom/google/android/exoplayer2/Format;)I
 
     move-result v7
@@ -243,6 +268,7 @@
 
     goto :goto_1
 
+    .line 8
     :cond_0
     new-instance v3, Lcom/google/android/exoplayer2/source/TrackGroup;
 
@@ -258,6 +284,7 @@
 
     goto :goto_0
 
+    .line 9
     :cond_1
     new-instance p0, Lcom/google/android/exoplayer2/source/TrackGroupArray;
 
@@ -277,6 +304,7 @@
         }
     .end annotation
 
+    .line 1
     new-array p0, p0, [Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;
 
     return-object p0
@@ -287,6 +315,7 @@
 .method public continueLoading(J)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->compositeSequenceableLoader:Lcom/google/android/exoplayer2/source/SequenceableLoader;
 
     invoke-interface {p0, p1, p2}, Lcom/google/android/exoplayer2/source/SequenceableLoader;->continueLoading(J)Z
@@ -299,6 +328,7 @@
 .method public discardBuffer(JZ)V
     .locals 3
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->sampleStreams:[Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;
 
     array-length v0, p0
@@ -310,6 +340,7 @@
 
     aget-object v2, p0, v1
 
+    .line 2
     invoke-virtual {v2, p1, p2, p3}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->discardBuffer(JZ)V
 
     add-int/lit8 v1, v1, 0x1
@@ -323,6 +354,7 @@
 .method public getAdjustedSeekPositionUs(JLcom/google/android/exoplayer2/SeekParameters;)J
     .locals 5
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->sampleStreams:[Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;
 
     array-length v0, p0
@@ -334,12 +366,14 @@
 
     aget-object v2, p0, v1
 
+    .line 2
     iget v3, v2, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->primaryTrackType:I
 
     const/4 v4, 0x2
 
     if-ne v3, v4, :cond_0
 
+    .line 3
     invoke-virtual {v2, p1, p2, p3}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->getAdjustedSeekPositionUs(JLcom/google/android/exoplayer2/SeekParameters;)J
 
     move-result-wide p0
@@ -358,6 +392,7 @@
 .method public getBufferedPositionUs()J
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->compositeSequenceableLoader:Lcom/google/android/exoplayer2/source/SequenceableLoader;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/source/SequenceableLoader;->getBufferedPositionUs()J
@@ -370,6 +405,7 @@
 .method public getNextLoadPositionUs()J
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->compositeSequenceableLoader:Lcom/google/android/exoplayer2/source/SequenceableLoader;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/source/SequenceableLoader;->getNextLoadPositionUs()J
@@ -393,6 +429,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -401,6 +438,7 @@
 
     move v2, v1
 
+    .line 2
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -408,12 +446,14 @@
 
     if-ge v2, v3, :cond_1
 
+    .line 3
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;
 
+    .line 4
     iget-object v4, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->trackGroups:Lcom/google/android/exoplayer2/source/TrackGroupArray;
 
     invoke-interface {v3}, Lcom/google/android/exoplayer2/trackselection/TrackSelection;->getTrackGroup()Lcom/google/android/exoplayer2/source/TrackGroup;
@@ -426,6 +466,7 @@
 
     move v5, v1
 
+    .line 5
     :goto_1
     invoke-interface {v3}, Lcom/google/android/exoplayer2/trackselection/TrackSelection;->length()I
 
@@ -433,6 +474,7 @@
 
     if-ge v5, v6, :cond_0
 
+    .line 6
     new-instance v6, Lcom/google/android/exoplayer2/offline/StreamKey;
 
     invoke-interface {v3, v5}, Lcom/google/android/exoplayer2/trackselection/TrackSelection;->getIndexInTrackGroup(I)I
@@ -459,6 +501,7 @@
 .method public getTrackGroups()Lcom/google/android/exoplayer2/source/TrackGroupArray;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->trackGroups:Lcom/google/android/exoplayer2/source/TrackGroupArray;
 
     return-object p0
@@ -467,6 +510,7 @@
 .method public isLoading()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->compositeSequenceableLoader:Lcom/google/android/exoplayer2/source/SequenceableLoader;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/source/SequenceableLoader;->isLoading()Z
@@ -484,6 +528,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->manifestLoaderErrorThrower:Lcom/google/android/exoplayer2/upstream/LoaderErrorThrower;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/upstream/LoaderErrorThrower;->maybeThrowError()V
@@ -524,8 +569,10 @@
 .method public prepare(Lcom/google/android/exoplayer2/source/MediaPeriod$Callback;J)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->callback:Lcom/google/android/exoplayer2/source/MediaPeriod$Callback;
 
+    .line 2
     invoke-interface {p1, p0}, Lcom/google/android/exoplayer2/source/MediaPeriod$Callback;->onPrepared(Lcom/google/android/exoplayer2/source/MediaPeriod;)V
 
     return-void
@@ -542,6 +589,7 @@
 .method public reevaluateBuffer(J)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->compositeSequenceableLoader:Lcom/google/android/exoplayer2/source/SequenceableLoader;
 
     invoke-interface {p0, p1, p2}, Lcom/google/android/exoplayer2/source/SequenceableLoader;->reevaluateBuffer(J)V
@@ -552,6 +600,7 @@
 .method public release()V
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->sampleStreams:[Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;
 
     array-length v1, v0
@@ -563,6 +612,7 @@
 
     aget-object v3, v0, v2
 
+    .line 2
     invoke-virtual {v3}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->release()V
 
     add-int/lit8 v2, v2, 0x1
@@ -572,6 +622,7 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 3
     iput-object v0, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->callback:Lcom/google/android/exoplayer2/source/MediaPeriod$Callback;
 
     return-void
@@ -580,6 +631,7 @@
 .method public seekToUs(J)J
     .locals 3
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->sampleStreams:[Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;
 
     array-length v0, p0
@@ -591,6 +643,7 @@
 
     aget-object v2, p0, v1
 
+    .line 2
     invoke-virtual {v2, p1, p2}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->seekToUs(J)V
 
     add-int/lit8 v1, v1, 0x1
@@ -604,23 +657,30 @@
 .method public selectTracks([Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;[Z[Lcom/google/android/exoplayer2/source/SampleStream;[ZJ)J
     .locals 5
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v1, 0x0
 
+    .line 2
     :goto_0
     array-length v2, p1
 
     if-ge v1, v2, :cond_4
 
+    .line 3
     aget-object v2, p3, v1
 
     if-eqz v2, :cond_2
 
+    .line 4
+    aget-object v2, p3, v1
+
     check-cast v2, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;
 
+    .line 5
     aget-object v3, p1, v1
 
     if-eqz v3, :cond_1
@@ -631,6 +691,7 @@
 
     goto :goto_1
 
+    .line 6
     :cond_0
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->getChunkSource()Lcom/google/android/exoplayer2/source/chunk/ChunkSource;
 
@@ -642,18 +703,22 @@
 
     invoke-interface {v3, v4}, Lcom/google/android/exoplayer2/source/smoothstreaming/SsChunkSource;->updateTrackSelection(Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;)V
 
+    .line 7
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
 
+    .line 8
     :cond_1
     :goto_1
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->release()V
 
     const/4 v2, 0x0
 
+    .line 9
     aput-object v2, p3, v1
 
+    .line 10
     :cond_2
     :goto_2
     aget-object v2, p3, v1
@@ -664,16 +729,22 @@
 
     if-eqz v2, :cond_3
 
+    .line 11
+    aget-object v2, p1, v1
+
     invoke-direct {p0, v2, p5, p6}, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->buildSampleStream(Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;J)Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;
 
     move-result-object v2
 
+    .line 12
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 13
     aput-object v2, p3, v1
 
     const/4 v2, 0x1
 
+    .line 14
     aput-boolean v2, p4, v1
 
     :cond_3
@@ -681,6 +752,7 @@
 
     goto :goto_0
 
+    .line 15
     :cond_4
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -692,12 +764,15 @@
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->sampleStreams:[Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;
 
+    .line 16
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
+    .line 17
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->compositeSequenceableLoaderFactory:Lcom/google/android/exoplayer2/source/CompositeSequenceableLoaderFactory;
 
     iget-object p2, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->sampleStreams:[Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;
 
+    .line 18
     invoke-interface {p1, p2}, Lcom/google/android/exoplayer2/source/CompositeSequenceableLoaderFactory;->createCompositeSequenceableLoader([Lcom/google/android/exoplayer2/source/SequenceableLoader;)Lcom/google/android/exoplayer2/source/SequenceableLoader;
 
     move-result-object p1
@@ -710,8 +785,10 @@
 .method public updateManifest(Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest;)V
     .locals 4
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->manifest:Lcom/google/android/exoplayer2/source/smoothstreaming/manifest/SsManifest;
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->sampleStreams:[Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;
 
     array-length v1, v0
@@ -723,6 +800,7 @@
 
     aget-object v3, v0, v2
 
+    .line 3
     invoke-virtual {v3}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->getChunkSource()Lcom/google/android/exoplayer2/source/chunk/ChunkSource;
 
     move-result-object v3
@@ -735,6 +813,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/smoothstreaming/SsMediaPeriod;->callback:Lcom/google/android/exoplayer2/source/MediaPeriod$Callback;
 

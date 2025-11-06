@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/eventbus/Dispatcher;
+.class public abstract Lcom/google/common/eventbus/Dispatcher;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -20,6 +20,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,6 +29,7 @@
 .method public static immediate()Lcom/google/common/eventbus/Dispatcher;
     .locals 1
 
+    .line 1
     invoke-static {}, Lcom/google/common/eventbus/Dispatcher$ImmediateDispatcher;->access$200()Lcom/google/common/eventbus/Dispatcher$ImmediateDispatcher;
 
     move-result-object v0
@@ -38,6 +40,7 @@
 .method public static legacyAsync()Lcom/google/common/eventbus/Dispatcher;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/common/eventbus/Dispatcher$LegacyAsyncDispatcher;
 
     const/4 v1, 0x0
@@ -50,6 +53,7 @@
 .method public static perThreadDispatchQueue()Lcom/google/common/eventbus/Dispatcher;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/common/eventbus/Dispatcher$PerThreadQueuedDispatcher;
 
     const/4 v1, 0x0

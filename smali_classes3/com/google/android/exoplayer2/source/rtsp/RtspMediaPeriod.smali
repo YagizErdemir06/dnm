@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;
+.class public final Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -102,20 +102,26 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/upstream/Allocator;Lcom/google/android/exoplayer2/source/rtsp/RtpDataChannel$Factory;Landroid/net/Uri;Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$Listener;Ljava/lang/String;Ljavax/net/SocketFactory;Z)V
     .locals 7
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->allocator:Lcom/google/android/exoplayer2/upstream/Allocator;
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtpDataChannelFactory:Lcom/google/android/exoplayer2/source/rtsp/RtpDataChannel$Factory;
 
+    .line 4
     iput-object p4, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->listener:Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$Listener;
 
+    .line 5
     invoke-static {}, Lcom/google/android/exoplayer2/util/Util;->createHandlerForCurrentLooper()Landroid/os/Handler;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->handler:Landroid/os/Handler;
 
+    .line 6
     new-instance v2, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$InternalListener;
 
     const/4 p1, 0x0
@@ -124,6 +130,7 @@
 
     iput-object v2, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->internalListener:Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$InternalListener;
 
+    .line 7
     new-instance p1, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
     move-object v0, p1
@@ -142,12 +149,14 @@
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspClient:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
+    .line 8
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspLoaderWrappers:Ljava/util/List;
 
+    .line 9
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -156,10 +165,13 @@
 
     const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 10
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->pendingSeekPositionUs:J
 
+    .line 11
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->requestedSeekPositionUs:J
 
+    .line 12
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->pendingSeekPositionUsForTcpRetry:J
 
     return-void
@@ -168,6 +180,7 @@
 .method public static synthetic access$1008(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;)I
     .locals 2
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->portBindingRetryCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -180,6 +193,7 @@
 .method public static synthetic access$1100(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;)Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$RtspPlaybackException;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->playbackException:Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$RtspPlaybackException;
 
     return-object p0
@@ -188,6 +202,7 @@
 .method public static synthetic access$1102(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$RtspPlaybackException;)Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$RtspPlaybackException;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->playbackException:Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$RtspPlaybackException;
 
     return-object p1
@@ -196,6 +211,7 @@
 .method public static synthetic access$1200(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;)Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspClient:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
     return-object p0
@@ -204,6 +220,7 @@
 .method public static synthetic access$1300(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;)Ljava/util/List;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->selectedLoadInfos:Ljava/util/List;
 
     return-object p0
@@ -212,6 +229,7 @@
 .method public static synthetic access$1400(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;)Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$Listener;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->listener:Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$Listener;
 
     return-object p0
@@ -220,6 +238,7 @@
 .method public static synthetic access$1500(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;)Z
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->isSeekPending()Z
 
     move-result p0
@@ -230,6 +249,7 @@
 .method public static synthetic access$1602(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;Z)Z
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->notifyDiscontinuity:Z
 
     return p1
@@ -238,6 +258,7 @@
 .method public static synthetic access$1700(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;)J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->pendingSeekPositionUs:J
 
     return-wide v0
@@ -246,6 +267,7 @@
 .method public static synthetic access$1702(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;J)J
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->pendingSeekPositionUs:J
 
     return-wide p1
@@ -254,6 +276,7 @@
 .method public static synthetic access$1800(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;)J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->requestedSeekPositionUs:J
 
     return-wide v0
@@ -262,6 +285,7 @@
 .method public static synthetic access$1802(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;J)J
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->requestedSeekPositionUs:J
 
     return-wide p1
@@ -270,6 +294,7 @@
 .method public static synthetic access$1900(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;)J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->pendingSeekPositionUsForTcpRetry:J
 
     return-wide v0
@@ -278,6 +303,7 @@
 .method public static synthetic access$1902(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;J)J
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->pendingSeekPositionUsForTcpRetry:J
 
     return-wide p1
@@ -286,6 +312,7 @@
 .method public static synthetic access$2000(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;Landroid/net/Uri;)Lcom/google/android/exoplayer2/source/rtsp/RtpDataLoadable;
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->getLoadableByTrackUri(Landroid/net/Uri;)Lcom/google/android/exoplayer2/source/rtsp/RtpDataLoadable;
 
     move-result-object p0
@@ -296,6 +323,7 @@
 .method public static synthetic access$2100(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;)Lcom/google/android/exoplayer2/source/rtsp/RtpDataChannel$Factory;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtpDataChannelFactory:Lcom/google/android/exoplayer2/source/rtsp/RtpDataChannel$Factory;
 
     return-object p0
@@ -304,6 +332,7 @@
 .method public static synthetic access$2200(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->maybeFinishPrepare()V
 
     return-void
@@ -312,6 +341,7 @@
 .method public static synthetic access$2300(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;)Lcom/google/android/exoplayer2/upstream/Allocator;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->allocator:Lcom/google/android/exoplayer2/upstream/Allocator;
 
     return-object p0
@@ -320,6 +350,7 @@
 .method public static synthetic access$2400(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;)Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$InternalListener;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->internalListener:Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$InternalListener;
 
     return-object p0
@@ -328,6 +359,7 @@
 .method public static synthetic access$2500(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->updateLoadingFinished()V
 
     return-void
@@ -336,6 +368,7 @@
 .method public static synthetic access$2600(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->maybeSetupTracks()V
 
     return-void
@@ -344,6 +377,7 @@
 .method public static synthetic access$400(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;)Ljava/util/List;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspLoaderWrappers:Ljava/util/List;
 
     return-object p0
@@ -352,6 +386,7 @@
 .method public static synthetic access$500(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;)Landroid/os/Handler;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->handler:Landroid/os/Handler;
 
     return-object p0
@@ -360,6 +395,7 @@
 .method public static synthetic access$600(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;)Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->isUsingRtpTcp:Z
 
     return p0
@@ -368,6 +404,7 @@
 .method public static synthetic access$602(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;Z)Z
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->isUsingRtpTcp:Z
 
     return p1
@@ -376,6 +413,7 @@
 .method public static synthetic access$700(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->retryWithRtpTcp()V
 
     return-void
@@ -384,6 +422,7 @@
 .method public static synthetic access$800(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;)Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->prepared:Z
 
     return p0
@@ -392,6 +431,7 @@
 .method public static synthetic access$902(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;Ljava/io/IOException;)Ljava/io/IOException;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->preparationError:Ljava/io/IOException;
 
     return-object p1
@@ -411,6 +451,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ImmutableList$Builder;
 
     invoke-direct {v0}, Lcom/google/common/collect/ImmutableList$Builder;-><init>()V
@@ -419,6 +460,7 @@
 
     move v2, v1
 
+    .line 2
     :goto_0
     invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
 
@@ -426,6 +468,7 @@
 
     if-ge v2, v3, :cond_0
 
+    .line 3
     invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -436,8 +479,10 @@
 
     move-result-object v3
 
+    .line 4
     new-instance v4, Lcom/google/android/exoplayer2/source/TrackGroup;
 
+    .line 5
     invoke-static {v2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v5
@@ -460,12 +505,14 @@
 
     invoke-direct {v4, v5, v6}, Lcom/google/android/exoplayer2/source/TrackGroup;-><init>(Ljava/lang/String;[Lcom/google/android/exoplayer2/Format;)V
 
+    .line 6
     invoke-virtual {v0, v4}, Lcom/google/common/collect/ImmutableList$Builder;->add(Ljava/lang/Object;)Lcom/google/common/collect/ImmutableList$Builder;
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 7
     :cond_0
     invoke-virtual {v0}, Lcom/google/common/collect/ImmutableList$Builder;->build()Lcom/google/common/collect/ImmutableList;
 
@@ -481,6 +528,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspLoaderWrappers:Ljava/util/List;
 
@@ -490,6 +538,7 @@
 
     if-ge v0, v1, :cond_1
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspLoaderWrappers:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -504,6 +553,7 @@
 
     if-nez v1, :cond_0
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspLoaderWrappers:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -514,6 +564,7 @@
 
     iget-object v1, v1, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$RtspLoaderWrapper;->loadInfo:Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$RtpLoadInfo;
 
+    .line 4
     invoke-virtual {v1}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$RtpLoadInfo;->getTrackUri()Landroid/net/Uri;
 
     move-result-object v2
@@ -524,6 +575,7 @@
 
     if-eqz v2, :cond_0
 
+    .line 5
     invoke-static {v1}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$RtpLoadInfo;->access$300(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$RtpLoadInfo;)Lcom/google/android/exoplayer2/source/rtsp/RtpDataLoadable;
 
     move-result-object p0
@@ -544,6 +596,7 @@
 .method private isSeekPending()Z
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->pendingSeekPositionUs:J
 
     const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
@@ -566,6 +619,7 @@
 .method private maybeFinishPrepare()V
     .locals 2
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->released:Z
 
     if-nez v0, :cond_3
@@ -579,6 +633,7 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 2
     :goto_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspLoaderWrappers:Ljava/util/List;
 
@@ -588,6 +643,7 @@
 
     if-ge v0, v1, :cond_2
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspLoaderWrappers:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -616,8 +672,10 @@
     :cond_2
     const/4 v0, 0x1
 
+    .line 4
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->prepared:Z
 
+    .line 5
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspLoaderWrappers:Ljava/util/List;
 
     invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
@@ -630,6 +688,7 @@
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->trackGroups:Lcom/google/common/collect/ImmutableList;
 
+    .line 6
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->callback:Lcom/google/android/exoplayer2/source/MediaPeriod$Callback;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -652,6 +711,7 @@
 
     const/4 v1, 0x0
 
+    .line 1
     :goto_0
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->selectedLoadInfos:Ljava/util/List;
 
@@ -661,6 +721,7 @@
 
     if-ge v1, v2, :cond_0
 
+    .line 2
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->selectedLoadInfos:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -682,10 +743,12 @@
     :cond_0
     if-eqz v0, :cond_1
 
+    .line 3
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->trackSelected:Z
 
     if-eqz v0, :cond_1
 
+    .line 4
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspClient:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->selectedLoadInfos:Ljava/util/List;
@@ -699,18 +762,22 @@
 .method private retryWithRtpTcp()V
     .locals 8
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspClient:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->retryWithRtpTcp()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtpDataChannelFactory:Lcom/google/android/exoplayer2/source/rtsp/RtpDataChannel$Factory;
 
+    .line 3
     invoke-interface {v0}, Lcom/google/android/exoplayer2/source/rtsp/RtpDataChannel$Factory;->createFallbackDataChannelFactory()Lcom/google/android/exoplayer2/source/rtsp/RtpDataChannel$Factory;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
+    .line 4
     new-instance v0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaSource$RtspPlaybackException;
 
     const-string v1, "No fallback data channel factory for TCP retry"
@@ -721,6 +788,7 @@
 
     return-void
 
+    .line 5
     :cond_0
     new-instance v1, Ljava/util/ArrayList;
 
@@ -732,6 +800,7 @@
 
     invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
 
+    .line 6
     new-instance v2, Ljava/util/ArrayList;
 
     iget-object v3, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->selectedLoadInfos:Ljava/util/List;
@@ -746,6 +815,7 @@
 
     move v4, v3
 
+    .line 7
     :goto_0
     iget-object v5, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspLoaderWrappers:Ljava/util/List;
 
@@ -755,6 +825,7 @@
 
     if-ge v4, v5, :cond_3
 
+    .line 8
     iget-object v5, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspLoaderWrappers:Ljava/util/List;
 
     invoke-interface {v5, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -763,12 +834,14 @@
 
     check-cast v5, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$RtspLoaderWrapper;
 
+    .line 9
     invoke-static {v5}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$RtspLoaderWrapper;->access$100(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$RtspLoaderWrapper;)Z
 
     move-result v6
 
     if-nez v6, :cond_1
 
+    .line 10
     new-instance v6, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$RtspLoaderWrapper;
 
     iget-object v7, v5, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$RtspLoaderWrapper;->loadInfo:Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$RtpLoadInfo;
@@ -777,10 +850,13 @@
 
     invoke-direct {v6, p0, v7, v4, v0}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$RtspLoaderWrapper;-><init>(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;Lcom/google/android/exoplayer2/source/rtsp/RtspMediaTrack;ILcom/google/android/exoplayer2/source/rtsp/RtpDataChannel$Factory;)V
 
+    .line 11
     invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    .line 12
     invoke-virtual {v6}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$RtspLoaderWrapper;->startLoading()V
 
+    .line 13
     iget-object v7, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->selectedLoadInfos:Ljava/util/List;
 
     iget-object v5, v5, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$RtspLoaderWrapper;->loadInfo:Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$RtpLoadInfo;
@@ -791,12 +867,14 @@
 
     if-eqz v5, :cond_2
 
+    .line 14
     iget-object v5, v6, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$RtspLoaderWrapper;->loadInfo:Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$RtpLoadInfo;
 
     invoke-virtual {v2, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
+    .line 15
     :cond_1
     invoke-virtual {v1, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -806,29 +884,36 @@
 
     goto :goto_0
 
+    .line 16
     :cond_3
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspLoaderWrappers:Ljava/util/List;
 
+    .line 17
     invoke-static {v0}, Lcom/google/common/collect/ImmutableList;->copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object v0
 
+    .line 18
     iget-object v4, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspLoaderWrappers:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->clear()V
 
+    .line 19
     iget-object v4, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspLoaderWrappers:Ljava/util/List;
 
     invoke-interface {v4, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
+    .line 20
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->selectedLoadInfos:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
+    .line 21
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->selectedLoadInfos:Ljava/util/List;
 
     invoke-interface {p0, v2}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
+    .line 22
     :goto_2
     invoke-virtual {v0}, Ljava/util/AbstractCollection;->size()I
 
@@ -836,6 +921,7 @@
 
     if-ge v3, p0, :cond_4
 
+    .line 23
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
@@ -859,6 +945,7 @@
 
     move v1, v0
 
+    .line 1
     :goto_0
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspLoaderWrappers:Ljava/util/List;
 
@@ -868,6 +955,7 @@
 
     if-ge v1, v2, :cond_1
 
+    .line 2
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspLoaderWrappers:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -880,6 +968,7 @@
 
     move-result-object v2
 
+    .line 3
     invoke-virtual {v2, p1, p2, v0}, Lcom/google/android/exoplayer2/source/SampleQueue;->seekTo(JZ)Z
 
     move-result v2
@@ -902,6 +991,7 @@
 .method private suppressRead()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->notifyDiscontinuity:Z
 
     return p0
@@ -912,10 +1002,12 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->loadingFinished:Z
 
     const/4 v0, 0x0
 
+    .line 2
     :goto_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspLoaderWrappers:Ljava/util/List;
 
@@ -925,6 +1017,7 @@
 
     if-ge v0, v1, :cond_0
 
+    .line 3
     iget-boolean v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->loadingFinished:Z
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspLoaderWrappers:Ljava/util/List;
@@ -956,6 +1049,7 @@
 .method public continueLoading(J)Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->isLoading()Z
 
     move-result p0
@@ -966,6 +1060,7 @@
 .method public discardBuffer(JZ)V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->isSeekPending()Z
 
     move-result v0
@@ -977,6 +1072,7 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 2
     :goto_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspLoaderWrappers:Ljava/util/List;
 
@@ -986,6 +1082,7 @@
 
     if-ge v0, v1, :cond_2
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspLoaderWrappers:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -994,12 +1091,14 @@
 
     check-cast v1, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$RtspLoaderWrapper;
 
+    .line 4
     invoke-static {v1}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$RtspLoaderWrapper;->access$100(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$RtspLoaderWrapper;)Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
+    .line 5
     invoke-static {v1}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$RtspLoaderWrapper;->access$200(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$RtspLoaderWrapper;)Lcom/google/android/exoplayer2/source/SampleQueue;
 
     move-result-object v1
@@ -1026,6 +1125,7 @@
 .method public getBufferedPositionUs()J
     .locals 9
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->loadingFinished:Z
 
     const-wide/high16 v1, -0x8000000000000000L
@@ -1042,6 +1142,7 @@
 
     goto :goto_1
 
+    .line 2
     :cond_0
     iget-wide v3, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->requestedSeekPositionUs:J
 
@@ -1054,14 +1155,15 @@
     return-wide v3
 
     :cond_1
+    const-wide v3, 0x7fffffffffffffffL
+
     const/4 v0, 0x0
 
-    const/4 v3, 0x1
-
-    const-wide v4, 0x7fffffffffffffffL
+    const/4 v5, 0x1
 
     move v6, v0
 
+    .line 3
     :goto_0
     iget-object v7, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspLoaderWrappers:Ljava/util/List;
 
@@ -1071,6 +1173,7 @@
 
     if-ge v6, v7, :cond_3
 
+    .line 4
     iget-object v7, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspLoaderWrappers:Ljava/util/List;
 
     invoke-interface {v7, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1079,23 +1182,23 @@
 
     check-cast v7, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$RtspLoaderWrapper;
 
+    .line 5
     invoke-static {v7}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$RtspLoaderWrapper;->access$100(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$RtspLoaderWrapper;)Z
 
     move-result v8
 
     if-nez v8, :cond_2
 
+    .line 6
     invoke-virtual {v7}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$RtspLoaderWrapper;->getBufferedPositionUs()J
 
     move-result-wide v7
 
-    invoke-static {v4, v5, v7, v8}, Ljava/lang/Math;->min(JJ)J
+    invoke-static {v3, v4, v7, v8}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v3
 
-    move-wide v4, v3
-
-    move v3, v0
+    move v5, v0
 
     :cond_2
     add-int/lit8 v6, v6, 0x1
@@ -1103,17 +1206,17 @@
     goto :goto_0
 
     :cond_3
-    if-nez v3, :cond_4
+    if-nez v5, :cond_4
 
-    cmp-long p0, v4, v1
+    cmp-long p0, v3, v1
 
     if-nez p0, :cond_5
 
     :cond_4
-    const-wide/16 v4, 0x0
+    const-wide/16 v3, 0x0
 
     :cond_5
-    return-wide v4
+    return-wide v3
 
     :cond_6
     :goto_1
@@ -1123,6 +1226,7 @@
 .method public getNextLoadPositionUs()J
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->getBufferedPositionUs()J
 
     move-result-wide v0
@@ -1166,10 +1270,12 @@
 .method public getTrackGroups()Lcom/google/android/exoplayer2/source/TrackGroupArray;
     .locals 2
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->prepared:Z
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     new-instance v0, Lcom/google/android/exoplayer2/source/TrackGroupArray;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->trackGroups:Lcom/google/common/collect/ImmutableList;
@@ -1198,6 +1304,7 @@
 .method public isLoading()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->loadingFinished:Z
 
     xor-int/lit8 p0, p0, 0x1
@@ -1208,6 +1315,7 @@
 .method public isReady(I)Z
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->suppressRead()Z
 
     move-result v0
@@ -1247,12 +1355,14 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->preparationError:Ljava/io/IOException;
 
     if-nez p0, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     throw p0
 .end method
@@ -1260,8 +1370,10 @@
 .method public prepare(Lcom/google/android/exoplayer2/source/MediaPeriod$Callback;J)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->callback:Lcom/google/android/exoplayer2/source/MediaPeriod$Callback;
 
+    .line 2
     :try_start_0
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspClient:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
@@ -1274,8 +1386,10 @@
     :catch_0
     move-exception p1
 
+    .line 3
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->preparationError:Ljava/io/IOException;
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspClient:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Util;->closeQuietly(Ljava/io/Closeable;)V
@@ -1287,6 +1401,7 @@
 .method public readData(ILcom/google/android/exoplayer2/FormatHolder;Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;I)I
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->suppressRead()Z
 
     move-result v0
@@ -1297,6 +1412,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspLoaderWrappers:Ljava/util/List;
 
@@ -1316,12 +1432,14 @@
 .method public readDiscontinuity()J
     .locals 2
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->notifyDiscontinuity:Z
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
+    .line 2
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->notifyDiscontinuity:Z
 
     const-wide/16 v0, 0x0
@@ -1345,6 +1463,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspLoaderWrappers:Ljava/util/List;
 
@@ -1354,6 +1473,7 @@
 
     if-ge v0, v1, :cond_0
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspLoaderWrappers:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1368,6 +1488,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspClient:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
@@ -1375,6 +1496,7 @@
 
     const/4 v0, 0x1
 
+    .line 4
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->released:Z
 
     return-void
@@ -1383,6 +1505,7 @@
 .method public seekToUs(J)J
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->getBufferedPositionUs()J
 
     move-result-wide v0
@@ -1397,6 +1520,7 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->pendingSeekPositionUsForTcpRetry:J
 
     return-wide p1
@@ -1404,16 +1528,20 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 3
     invoke-virtual {p0, p1, p2, v0}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->discardBuffer(JZ)V
 
+    .line 4
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->requestedSeekPositionUs:J
 
+    .line 5
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->isSeekPending()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
+    .line 6
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspClient:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->getState()I
@@ -1428,14 +1556,17 @@
 
     if-ne v0, v1, :cond_1
 
+    .line 7
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->pendingSeekPositionUs:J
 
+    .line 8
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspClient:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->seekToUs(J)V
 
     return-wide p1
 
+    .line 9
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -1446,6 +1577,7 @@
     :cond_2
     return-wide p1
 
+    .line 10
     :cond_3
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->seekInsideBufferUs(J)Z
 
@@ -1455,13 +1587,16 @@
 
     return-wide p1
 
+    .line 11
     :cond_4
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->pendingSeekPositionUs:J
 
+    .line 12
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspClient:Lcom/google/android/exoplayer2/source/rtsp/RtspClient;
 
     invoke-virtual {v1, p1, p2}, Lcom/google/android/exoplayer2/source/rtsp/RtspClient;->seekToUs(J)V
 
+    .line 13
     :goto_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspLoaderWrappers:Ljava/util/List;
 
@@ -1471,6 +1606,7 @@
 
     if-ge v0, v1, :cond_5
 
+    .line 14
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspLoaderWrappers:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1496,11 +1632,13 @@
 
     move v1, v0
 
+    .line 1
     :goto_0
     array-length v2, p1
 
     if-ge v1, v2, :cond_2
 
+    .line 2
     aget-object v2, p3, v1
 
     if-eqz v2, :cond_1
@@ -1516,6 +1654,7 @@
     :cond_0
     const/4 v2, 0x0
 
+    .line 3
     aput-object v2, p3, v1
 
     :cond_1
@@ -1523,6 +1662,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_2
     iget-object p2, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->selectedLoadInfos:Ljava/util/List;
 
@@ -1530,6 +1670,7 @@
 
     move p2, v0
 
+    .line 5
     :goto_1
     array-length v1, p1
 
@@ -1537,17 +1678,20 @@
 
     if-ge p2, v1, :cond_5
 
+    .line 6
     aget-object v1, p1, p2
 
     if-nez v1, :cond_3
 
     goto :goto_2
 
+    .line 7
     :cond_3
     invoke-interface {v1}, Lcom/google/android/exoplayer2/trackselection/TrackSelection;->getTrackGroup()Lcom/google/android/exoplayer2/source/TrackGroup;
 
     move-result-object v1
 
+    .line 8
     iget-object v3, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->trackGroups:Lcom/google/common/collect/ImmutableList;
 
     invoke-static {v3}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1560,6 +1704,7 @@
 
     move-result v3
 
+    .line 9
     iget-object v4, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->selectedLoadInfos:Ljava/util/List;
 
     iget-object v5, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspLoaderWrappers:Ljava/util/List;
@@ -1580,6 +1725,7 @@
 
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 10
     iget-object v4, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->trackGroups:Lcom/google/common/collect/ImmutableList;
 
     invoke-virtual {v4, v1}, Lcom/google/common/collect/ImmutableList;->contains(Ljava/lang/Object;)Z
@@ -1588,16 +1734,19 @@
 
     if-eqz v1, :cond_4
 
+    .line 11
     aget-object v1, p3, p2
 
     if-nez v1, :cond_4
 
+    .line 12
     new-instance v1, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$SampleStreamImpl;
 
     invoke-direct {v1, p0, v3}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$SampleStreamImpl;-><init>(Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;I)V
 
     aput-object v1, p3, p2
 
+    .line 13
     aput-boolean v2, p4, p2
 
     :cond_4
@@ -1606,6 +1755,7 @@
 
     goto :goto_1
 
+    .line 14
     :cond_5
     :goto_3
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspLoaderWrappers:Ljava/util/List;
@@ -1616,6 +1766,7 @@
 
     if-ge v0, p1, :cond_7
 
+    .line 15
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspLoaderWrappers:Ljava/util/List;
 
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1624,6 +1775,7 @@
 
     check-cast p1, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$RtspLoaderWrapper;
 
+    .line 16
     iget-object p2, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->selectedLoadInfos:Ljava/util/List;
 
     iget-object p3, p1, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$RtspLoaderWrapper;->loadInfo:Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$RtpLoadInfo;
@@ -1634,6 +1786,7 @@
 
     if-nez p2, :cond_6
 
+    .line 17
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod$RtspLoaderWrapper;->cancelLoad()V
 
     :cond_6
@@ -1641,9 +1794,11 @@
 
     goto :goto_3
 
+    .line 18
     :cond_7
     iput-boolean v2, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->trackSelected:Z
 
+    .line 19
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->maybeSetupTracks()V
 
     return-wide p5
@@ -1652,6 +1807,7 @@
 .method public skipData(IJ)I
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->suppressRead()Z
 
     move-result v0
@@ -1662,6 +1818,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/rtsp/RtspMediaPeriod;->rtspLoaderWrappers:Ljava/util/List;
 

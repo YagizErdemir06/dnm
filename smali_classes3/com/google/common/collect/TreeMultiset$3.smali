@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/TreeMultiset$3;
+.class public Lcom/google/common/collect/TreeMultiset$3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field current:Lcom/google/common/collect/TreeMultiset$AvlNode;
+.field public current:Lcom/google/common/collect/TreeMultiset$AvlNode;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/TreeMultiset$AvlNode<",
@@ -39,7 +39,7 @@
     .end annotation
 .end field
 
-.field prevEntry:Lcom/google/common/collect/Multiset$Entry;
+.field public prevEntry:Lcom/google/common/collect/Multiset$Entry;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/Multiset$Entry<",
@@ -51,17 +51,19 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Lcom/google/common/collect/TreeMultiset;
+.field public final synthetic this$0:Lcom/google/common/collect/TreeMultiset;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/TreeMultiset;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/TreeMultiset$3;->this$0:Lcom/google/common/collect/TreeMultiset;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/collect/TreeMultiset;->access$1700(Lcom/google/common/collect/TreeMultiset;)Lcom/google/common/collect/TreeMultiset$AvlNode;
 
     move-result-object p1
@@ -70,6 +72,7 @@
 
     const/4 p1, 0x0
 
+    .line 3
     iput-object p1, p0, Lcom/google/common/collect/TreeMultiset$3;->prevEntry:Lcom/google/common/collect/Multiset$Entry;
 
     return-void
@@ -80,6 +83,7 @@
 .method public hasNext()Z
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/TreeMultiset$3;->current:Lcom/google/common/collect/TreeMultiset$AvlNode;
 
     const/4 v1, 0x0
@@ -88,6 +92,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/common/collect/TreeMultiset$3;->this$0:Lcom/google/common/collect/TreeMultiset;
 
@@ -109,6 +114,7 @@
 
     const/4 v0, 0x0
 
+    .line 3
     iput-object v0, p0, Lcom/google/common/collect/TreeMultiset$3;->current:Lcom/google/common/collect/TreeMultiset$AvlNode;
 
     return v1
@@ -211,6 +217,7 @@
 .method public remove()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/TreeMultiset$3;->prevEntry:Lcom/google/common/collect/Multiset$Entry;
 
     const/4 v1, 0x0
@@ -229,6 +236,7 @@
 
     invoke-static {v0, v2}, Lcom/google/common/base/Preconditions;->checkState(ZLjava/lang/Object;)V
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/TreeMultiset$3;->this$0:Lcom/google/common/collect/TreeMultiset;
 
     iget-object v2, p0, Lcom/google/common/collect/TreeMultiset$3;->prevEntry:Lcom/google/common/collect/Multiset$Entry;
@@ -241,6 +249,7 @@
 
     const/4 v0, 0x0
 
+    .line 3
     iput-object v0, p0, Lcom/google/common/collect/TreeMultiset$3;->prevEntry:Lcom/google/common/collect/Multiset$Entry;
 
     return-void

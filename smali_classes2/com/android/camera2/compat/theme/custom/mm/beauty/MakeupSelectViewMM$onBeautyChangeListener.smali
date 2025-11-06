@@ -22,6 +22,14 @@
 .end method
 
 .method public abstract onBeautyItemChange(I)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "index"
+        }
+    .end annotation
 .end method
 
 .method public abstract setAccessibleWhenStateIdle()V

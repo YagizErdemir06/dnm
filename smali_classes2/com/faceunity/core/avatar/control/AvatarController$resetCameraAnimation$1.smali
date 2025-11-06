@@ -1,9 +1,9 @@
-.class final Lcom/faceunity/core/avatar/control/AvatarController$resetCameraAnimation$1;
-.super Lkotlin/jvm/internal/n0;
+.class public final Lcom/faceunity/core/avatar/control/AvatarController$resetCameraAnimation$1;
+.super Lh/d3/x/n0;
 .source "SourceFile"
 
 # interfaces
-.implements Ljn/l;
+.implements Lh/d3/w/l;
 
 
 # annotations
@@ -18,22 +18,27 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lkotlin/jvm/internal/n0;",
-        "Ljn/l<",
+        "Lh/d3/x/n0;",
+        "Lh/d3/w/l<",
         "Ljava/lang/Integer;",
-        "Lnm/l2;",
+        "Lh/l2;",
         ">;"
     }
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
         "\u0000\u000e\n\u0002\u0010\u0008\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0005\u001a\u00020\u00022\u0006\u0010\u0001\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0003\u0010\u0004"
     }
     d2 = {
         "",
         "it",
-        "Lnm/l2;",
+        "Lh/l2;",
         "invoke",
         "(I)V",
         "<anonymous>"
@@ -69,7 +74,7 @@
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lkotlin/jvm/internal/n0;-><init>(I)V
+    invoke-direct {p0, v0}, Lh/d3/x/n0;-><init>(I)V
 
     return-void
 .end method
@@ -88,7 +93,7 @@
 
     invoke-virtual {p0, p1}, Lcom/faceunity/core/avatar/control/AvatarController$resetCameraAnimation$1;->invoke(I)V
 
-    sget-object p0, Lnm/l2;->a:Lnm/l2;
+    sget-object p0, Lh/l2;->a:Lh/l2;
 
     return-object p0
 .end method

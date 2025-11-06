@@ -1,4 +1,4 @@
-.class interface abstract Lcom/android/camera2/compat/theme/custom/mm/beauty/MakeupSingleCheckAdapterMM$onScrollListener;
+.class public interface abstract Lcom/android/camera2/compat/theme/custom/mm/beauty/MakeupSingleCheckAdapterMM$onScrollListener;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -16,4 +16,12 @@
 
 # virtual methods
 .method public abstract onScrollToCenter(Landroid/view/View;)V
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "view"
+        }
+    .end annotation
 .end method

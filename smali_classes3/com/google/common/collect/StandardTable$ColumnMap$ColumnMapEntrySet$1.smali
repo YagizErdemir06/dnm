@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/StandardTable$ColumnMap$ColumnMapEntrySet$1;
+.class public Lcom/google/common/collect/StandardTable$ColumnMap$ColumnMapEntrySet$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -28,13 +28,14 @@
 
 
 # instance fields
-.field final synthetic this$2:Lcom/google/common/collect/StandardTable$ColumnMap$ColumnMapEntrySet;
+.field public final synthetic this$2:Lcom/google/common/collect/StandardTable$ColumnMap$ColumnMapEntrySet;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/StandardTable$ColumnMap$ColumnMapEntrySet;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/StandardTable$ColumnMap$ColumnMapEntrySet$1;->this$2:Lcom/google/common/collect/StandardTable$ColumnMap$ColumnMapEntrySet;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

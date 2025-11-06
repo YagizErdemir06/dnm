@@ -25,6 +25,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,10 +34,12 @@
 .method public static averageFrameRate(I)D
     .locals 6
 
+    .line 1
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
+    .line 2
     sget-wide v2, Lcom/faceunity/core/renderer/utils/FULimitFpsUtil;->startTimeMs:J
 
     sub-long/2addr v0, v2
@@ -51,6 +54,7 @@
 
     div-double/2addr v2, v0
 
+    .line 3
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -63,6 +67,7 @@
 .method public static limitFrameRate()V
     .locals 4
 
+    .line 1
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -71,6 +76,7 @@
 
     sub-long/2addr v0, v2
 
+    .line 2
     sget-wide v2, Lcom/faceunity/core/renderer/utils/FULimitFpsUtil;->expectedFrameTimeMs:J
 
     sub-long/2addr v2, v0
@@ -81,8 +87,10 @@
 
     if-lez v0, :cond_0
 
+    .line 3
     invoke-static {v2, v3}, Landroid/os/SystemClock;->sleep(J)V
 
+    .line 4
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -102,6 +110,7 @@
 
     const/16 v2, 0x3e8
 
+    .line 1
     div-int/2addr v2, p0
 
     int-to-long v2, v2
@@ -114,8 +123,10 @@
     :goto_0
     sput-wide v2, Lcom/faceunity/core/renderer/utils/FULimitFpsUtil;->expectedFrameTimeMs:J
 
+    .line 2
     sput-wide v0, Lcom/faceunity/core/renderer/utils/FULimitFpsUtil;->frameStartTimeMs:J
 
+    .line 3
     sput-wide v0, Lcom/faceunity/core/renderer/utils/FULimitFpsUtil;->startTimeMs:J
 
     return-void

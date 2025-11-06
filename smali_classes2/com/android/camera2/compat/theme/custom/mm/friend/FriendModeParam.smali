@@ -35,24 +35,30 @@
 
 .method public constructor <init>(I)V
     .locals 8
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "currentMode"
+        }
+    .end annotation
 
     .line 12
-    invoke-static {}, Lg2/b;->k()Lm2/h1;
+    invoke-static {}, Ld/d/a/l6/b;->k()Ld/d/a/l6/e/m/g1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lm2/h1;->o0()Lm2/d1;
+    invoke-virtual {v0}, Ld/d/a/l6/e/m/g1;->g0()Ld/d/a/l6/e/m/d1;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/android/camera/data/data/b;->getComponentValue(I)Ljava/lang/String;
+    invoke-virtual {v0, p1}, Ld/d/a/l6/e/b;->getComponentValue(I)Ljava/lang/String;
 
     move-result-object v2
 
-    const-string v3, "4x3"
-
     .line 13
-    invoke-static {}, Lg2/b;->h()Ll2/g;
+    invoke-static {}, Ld/d/a/l6/b;->h()Ld/d/a/l6/e/l/g;
 
     move-result-object p1
 
@@ -60,7 +66,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {p1, v0, v1}, Lcom/android/camera/data/data/g;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-virtual {p1, v0, v1}, Ld/d/a/l6/e/f;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p1
 
@@ -69,7 +75,7 @@
     move-result-object v4
 
     .line 14
-    invoke-static {}, Lg2/b;->h()Ll2/g;
+    invoke-static {}, Ld/d/a/l6/b;->h()Ld/d/a/l6/e/l/g;
 
     move-result-object p1
 
@@ -77,12 +83,12 @@
 
     const-string v1, "jiugongge"
 
-    invoke-virtual {p1, v0, v1}, Lcom/android/camera/data/data/g;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, v0, v1}, Ld/d/a/l6/e/f;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     .line 15
-    invoke-static {}, Lcom/android/camera/v2;->f4()Z
+    invoke-static {}, Ld/d/a/d4;->d4()Z
 
     move-result p1
 
@@ -91,13 +97,15 @@
     move-result-object v6
 
     .line 16
-    invoke-static {}, Lcom/android/camera/v2;->p3()Z
+    invoke-static {}, Ld/d/a/d4;->n3()Z
 
     move-result p1
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
     move-result-object v7
+
+    const-string v3, "4x3"
 
     move-object v1, p0
 
@@ -113,6 +121,14 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "json"
+        }
+    .end annotation
 
     const-string v0, "0"
 
@@ -254,6 +270,24 @@
 
 .method private constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "timer",
+            "ratio",
+            "reference",
+            "referenceType",
+            "gradienter",
+            "centerMark"
+        }
+    .end annotation
 
     .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -281,11 +315,24 @@
 
 .method private jsonPut(Lorg/json/JSONObject;ILjava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "json",
+            "key",
+            "value"
+        }
+    .end annotation
 
     if-nez p3, :cond_0
 
     return-void
 
+    .line 1
     :cond_0
     :try_start_0
     invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -301,13 +348,14 @@
     :catch_0
     move-exception p0
 
-    new-instance p1, Luf/z0;
+    .line 2
+    new-instance p1, Ld/o/f/r/i/a1;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Lorg/json/JSONException;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-direct {p1, p0}, Luf/z0;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p0}, Ld/o/f/r/i/a1;-><init>(Ljava/lang/String;)V
 
     throw p1
 .end method
@@ -317,6 +365,7 @@
 .method public getCenterMark()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->mCenterMark:Ljava/lang/String;
 
     return-object p0
@@ -325,6 +374,7 @@
 .method public getGradienter()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->mGradienter:Ljava/lang/String;
 
     return-object p0
@@ -333,6 +383,7 @@
 .method public getRatio()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->mRatio:Ljava/lang/String;
 
     return-object p0
@@ -341,6 +392,7 @@
 .method public getReference()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->mReference:Ljava/lang/String;
 
     return-object p0
@@ -349,6 +401,7 @@
 .method public getReferenceType()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->mReferenceType:Ljava/lang/String;
 
     return-object p0
@@ -357,6 +410,7 @@
 .method public getTimer()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->mTimer:Ljava/lang/String;
 
     return-object p0
@@ -365,6 +419,7 @@
 .method public isSupportedRealSquare()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->isSupportedRealSquare:Z
 
     return p0
@@ -373,46 +428,54 @@
 .method public objectToString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    const/16 v1, 0xa2
+    .line 2
+    iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->mTimer:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->mTimer:Ljava/lang/String;
+    const/16 v2, 0xa2
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->jsonPut(Lorg/json/JSONObject;ILjava/lang/Object;)V
+    invoke-direct {p0, v0, v2, v1}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->jsonPut(Lorg/json/JSONObject;ILjava/lang/Object;)V
 
-    const/16 v1, 0xa7
+    .line 3
+    iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->mRatio:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->mRatio:Ljava/lang/String;
+    const/16 v2, 0xa7
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->jsonPut(Lorg/json/JSONObject;ILjava/lang/Object;)V
+    invoke-direct {p0, v0, v2, v1}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->jsonPut(Lorg/json/JSONObject;ILjava/lang/Object;)V
 
-    const/16 v1, 0xa3
+    .line 4
+    iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->mReference:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->mReference:Ljava/lang/String;
+    const/16 v2, 0xa3
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->jsonPut(Lorg/json/JSONObject;ILjava/lang/Object;)V
+    invoke-direct {p0, v0, v2, v1}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->jsonPut(Lorg/json/JSONObject;ILjava/lang/Object;)V
 
-    const/16 v1, 0xa4
+    .line 5
+    iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->mReferenceType:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->mReferenceType:Ljava/lang/String;
+    const/16 v2, 0xa4
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->jsonPut(Lorg/json/JSONObject;ILjava/lang/Object;)V
+    invoke-direct {p0, v0, v2, v1}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->jsonPut(Lorg/json/JSONObject;ILjava/lang/Object;)V
 
-    const/16 v1, 0xa5
+    .line 6
+    iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->mGradienter:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->mGradienter:Ljava/lang/String;
+    const/16 v2, 0xa5
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->jsonPut(Lorg/json/JSONObject;ILjava/lang/Object;)V
+    invoke-direct {p0, v0, v2, v1}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->jsonPut(Lorg/json/JSONObject;ILjava/lang/Object;)V
 
-    const/16 v1, 0xa6
+    .line 7
+    iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->mCenterMark:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->mCenterMark:Ljava/lang/String;
+    const/16 v2, 0xa6
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->jsonPut(Lorg/json/JSONObject;ILjava/lang/Object;)V
+    invoke-direct {p0, v0, v2, v1}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->jsonPut(Lorg/json/JSONObject;ILjava/lang/Object;)V
 
+    .line 8
     iget-boolean v1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->isSupportedRealSquare:Z
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -423,6 +486,7 @@
 
     invoke-direct {p0, v0, v2, v1}, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->jsonPut(Lorg/json/JSONObject;ILjava/lang/Object;)V
 
+    .line 9
     invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -432,7 +496,16 @@
 
 .method public setCenterMark(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mCenterMark"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->mCenterMark:Ljava/lang/String;
 
     return-void
@@ -440,7 +513,16 @@
 
 .method public setGradienter(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mGradienter"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->mGradienter:Ljava/lang/String;
 
     return-void
@@ -448,7 +530,16 @@
 
 .method public setRatio(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mRatio"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->mRatio:Ljava/lang/String;
 
     return-void
@@ -456,7 +547,16 @@
 
 .method public setReference(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mReference"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->mReference:Ljava/lang/String;
 
     return-void
@@ -464,7 +564,16 @@
 
 .method public setReferenceType(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mReferenceType"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->mReferenceType:Ljava/lang/String;
 
     return-void
@@ -472,7 +581,16 @@
 
 .method public setSupportedRealSquare(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "supportedRealSquare"
+        }
+    .end annotation
 
+    .line 1
     iput-boolean p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->isSupportedRealSquare:Z
 
     return-void
@@ -480,7 +598,16 @@
 
 .method public setTimer(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "mTimer"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/friend/FriendModeParam;->mTimer:Ljava/lang/String;
 
     return-void
@@ -491,6 +618,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

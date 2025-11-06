@@ -35,6 +35,14 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -50,6 +58,16 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -65,6 +83,18 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr"
+        }
+    .end annotation
 
     .line 3
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -96,25 +126,20 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;Landroid/view/View;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->lambda$initListener$0(Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method public static synthetic b(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;IZZ)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2, p3}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->lambda$initListener$1(IZZ)V
-
-    return-void
-.end method
-
 .method public static dp2px(Landroid/content/Context;F)I
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "dpVal"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -137,17 +162,19 @@
 .method private initListener()V
     .locals 2
 
-    new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/h;
+    .line 1
+    new-instance v0, Ld/d/b/x5/a/b/b/g/n1/f;
 
-    invoke-direct {v0, p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/h;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;)V
+    invoke-direct {v0, p0}, Ld/d/b/x5/a/b/b/g/n1/f;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;)V
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->popupConnectView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView;
 
-    new-instance v1, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/i;
+    new-instance v1, Ld/d/b/x5/a/b/b/g/n1/g;
 
-    invoke-direct {v1, p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/i;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;)V
+    invoke-direct {v1, p0}, Ld/d/b/x5/a/b/b/g/n1/g;-><init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;)V
 
     invoke-virtual {v0, v1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView;->setStartBntClickEventListener(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView$ClickEventListener;)V
 
@@ -156,20 +183,31 @@
 
 .method private initView(Landroid/content/Context;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView;
 
     invoke-direct {v0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->popupConnectView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView;
 
+    .line 2
     new-instance v0, Landroid/view/View;
 
     invoke-direct {v0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->translucentView:Landroid/view/View;
 
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    .line 3
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
@@ -193,6 +231,7 @@
 
     if-lez v0, :cond_0
 
+    .line 4
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->mTranslationX:I
 
     int-to-float v0, v0
@@ -203,6 +242,7 @@
 
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->mTranslationX:I
 
+    .line 5
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->mTranslationY:I
 
     int-to-float v0, v0
@@ -220,6 +260,7 @@
 .method private synthetic lambda$initListener$0(Landroid/view/View;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->hideView()V
 
     return-void
@@ -228,10 +269,12 @@
 .method private synthetic lambda$initListener$1(IZZ)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->eventListener:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView$ClickEventListener;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0, p1, p2, p3}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView$ClickEventListener;->onStartBtnClick(IZZ)V
 
     :cond_0
@@ -240,12 +283,20 @@
 
 .method private showView(I)V
     .locals 10
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "showDirection"
+        }
+    .end annotation
 
     .line 2
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->mShowDirection:I
 
     .line 3
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->removeAllViews()V
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->removeAllViews()V
 
     .line 4
     new-instance v0, Landroid/widget/RelativeLayout$LayoutParams;
@@ -263,7 +314,7 @@
     if-nez p1, :cond_1
 
     .line 5
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
@@ -278,7 +329,7 @@
     iput p1, v0, Landroid/widget/RelativeLayout$LayoutParams;->height:I
 
     .line 6
-    invoke-static {}, Ly2/b;->q()I
+    invoke-static {}, Ld/d/a/n6/b;->q()I
 
     move-result p1
 
@@ -312,7 +363,7 @@
 
     sget-object v3, Lmiuix/animation/property/ViewProperty;->Y:Lmiuix/animation/property/ViewProperty;
 
-    invoke-static {}, Ly2/b;->n()I
+    invoke-static {}, Ld/d/a/n6/b;->n()I
 
     move-result v6
 
@@ -333,11 +384,11 @@
 
     invoke-direct {v7, v2}, Lmiuix/animation/controller/AnimState;-><init>(Ljava/lang/Object;)V
 
-    invoke-static {}, Ly2/b;->n()I
+    invoke-static {}, Ld/d/a/n6/b;->n()I
 
     move-result v2
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getContext()Landroid/content/Context;
 
     move-result-object v8
 
@@ -365,7 +416,7 @@
     .line 14
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->popupConnectView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView;
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
@@ -383,14 +434,14 @@
 
     .line 15
     :cond_1
-    invoke-static {}, Ly2/b;->n()I
+    invoke-static {}, Ld/d/a/n6/b;->n()I
 
     move-result p1
 
     iput p1, v0, Landroid/widget/RelativeLayout$LayoutParams;->height:I
 
     .line 16
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
@@ -421,7 +472,7 @@
 
     sget-object v3, Lmiuix/animation/property/ViewProperty;->X:Lmiuix/animation/property/ViewProperty;
 
-    invoke-static {}, Ly2/b;->p()I
+    invoke-static {}, Ld/d/a/n6/b;->p()I
 
     move-result v6
 
@@ -442,11 +493,11 @@
 
     invoke-direct {v7, v2}, Lmiuix/animation/controller/AnimState;-><init>(Ljava/lang/Object;)V
 
-    invoke-static {}, Ly2/b;->q()I
+    invoke-static {}, Ld/d/a/n6/b;->q()I
 
     move-result v2
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getContext()Landroid/content/Context;
 
     move-result-object v8
 
@@ -474,7 +525,7 @@
     .line 22
     iget-object v3, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->popupConnectView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView;
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
@@ -497,7 +548,7 @@
     .line 24
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->translucentView:Landroid/view/View;
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
@@ -512,17 +563,17 @@
     .line 25
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->popupConnectView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView;
 
-    invoke-virtual {p0, v1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p0, v1, v0}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 26
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->translucentView:Landroid/view/View;
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0, v0, v1, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p0, v0, v1, v3}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
 
     .line 27
-    invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getVisibility()I
 
     move-result v0
 
@@ -531,7 +582,7 @@
     if-ne v0, v3, :cond_2
 
     .line 28
-    invoke-virtual {p0, v1}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {p0, v1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
     :cond_2
     const/4 v0, 0x1
@@ -557,29 +608,29 @@
 
     invoke-direct {v5}, Lmiuix/animation/base/AnimConfig;-><init>()V
 
-    const/4 v6, 0x2
+    const/4 v6, -0x2
 
-    new-array v7, v6, [F
+    const/4 v7, 0x2
 
-    fill-array-data v7, :array_0
+    new-array v8, v7, [F
 
-    const/4 v8, -0x2
+    fill-array-data v8, :array_0
 
     .line 30
-    invoke-virtual {v5, v8, v7}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
+    invoke-virtual {v5, v6, v8}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v5
 
-    new-array v7, v0, [F
+    new-array v6, v0, [F
 
     const/high16 v8, 0x43480000    # 200.0f
 
-    aput v8, v7, v1
+    aput v8, v6, v1
 
     const/16 v9, 0x12
 
     .line 31
-    invoke-virtual {v5, v9, v7}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
+    invoke-virtual {v5, v9, v6}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v5
 
@@ -632,7 +683,7 @@
 
     move-result-object v0
 
-    aput-object v0, p1, v6
+    aput-object v0, p1, v7
 
     .line 35
     invoke-interface {p0, p1}, Lmiuix/animation/IStateStyle;->to([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
@@ -648,9 +699,34 @@
 
 
 # virtual methods
-.method public getDeviceNameByIp(Ljava/lang/String;)Ljava/lang/String;
+.method public synthetic a(Landroid/view/View;)V
     .locals 0
 
+    invoke-direct {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->lambda$initListener$0(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public synthetic b(IZZ)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2, p3}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->lambda$initListener$1(IZZ)V
+
+    return-void
+.end method
+
+.method public getDeviceNameByIp(Ljava/lang/String;)Ljava/lang/String;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "ip"
+        }
+    .end annotation
+
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->popupConnectView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView;
 
     invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView;->getMonitorNameByIp(Ljava/lang/String;)Ljava/lang/String;
@@ -667,8 +743,10 @@
 
     const-string v1, "hideView: "
 
+    .line 1
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->translucentView:Landroid/view/View;
 
     const/4 v1, 0x2
@@ -683,6 +761,7 @@
 
     aput-object v0, v4, v2
 
+    .line 3
     invoke-static {v4}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object v0
@@ -707,24 +786,27 @@
 
     invoke-interface {v0, v4}, Lmiuix/animation/IStateStyle;->setTo([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->popupConnectView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView;
 
     if-eqz v0, :cond_2
 
+    .line 5
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->mShowDirection:I
 
     const-string v4, "hideAnim"
 
     if-nez v0, :cond_1
 
+    .line 6
     new-instance v0, Lmiuix/animation/controller/AnimState;
 
     invoke-direct {v0, v4}, Lmiuix/animation/controller/AnimState;-><init>(Ljava/lang/Object;)V
 
     sget-object v4, Lmiuix/animation/property/ViewProperty;->Y:Lmiuix/animation/property/ViewProperty;
 
-    invoke-static {}, Ly2/b;->n()I
+    invoke-static {}, Ld/d/a/n6/b;->n()I
 
     move-result v5
 
@@ -736,6 +818,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_1
     new-instance v0, Lmiuix/animation/controller/AnimState;
 
@@ -743,7 +826,7 @@
 
     sget-object v4, Lmiuix/animation/property/ViewProperty;->X:Lmiuix/animation/property/ViewProperty;
 
-    invoke-static {}, Ly2/b;->q()I
+    invoke-static {}, Ld/d/a/n6/b;->q()I
 
     move-result v5
 
@@ -756,6 +839,7 @@
     :goto_0
     new-array v4, v3, [Landroid/view/View;
 
+    .line 8
     iget-object v5, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->popupConnectView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView;
 
     aput-object v5, v4, v2
@@ -774,12 +858,13 @@
 
     invoke-direct {v6}, Lmiuix/animation/base/AnimConfig;-><init>()V
 
+    const/4 v7, -0x2
+
     new-array v1, v1, [F
 
     fill-array-data v1, :array_0
 
-    const/4 v7, -0x2
-
+    .line 9
     invoke-virtual {v6, v7, v1}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
 
     move-result-object v1
@@ -792,12 +877,14 @@
 
     aput-object v6, v3, v2
 
+    .line 10
     invoke-virtual {v1, v3}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
 
     move-result-object p0
 
     aput-object p0, v5, v2
 
+    .line 11
     invoke-interface {v4, v0, v5}, Lmiuix/animation/IStateStyle;->to(Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
 
     :cond_2
@@ -814,23 +901,35 @@
 
 .method public refreshCameraDeviceList(Ljava/util/Set;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "devices"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Set<",
-            "Lm3/c;",
+            "Ld/d/a/o6/c/c;",
             ">;)V"
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 2
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->popupConnectView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView;
 
     if-eqz v1, :cond_1
 
+    .line 3
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -846,10 +945,12 @@
 
     move-result-object v1
 
-    check-cast v1, Lm3/c;
+    check-cast v1, Ld/d/a/o6/c/c;
 
-    iget-object v1, v1, Lm3/c;->d:Ljava/lang/String;
+    .line 4
+    iget-object v1, v1, Ld/d/a/o6/c/c;->f:Ljava/lang/String;
 
+    .line 5
     new-instance v2, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView$ItemData;
 
     invoke-direct {v2, v1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView$ItemData;-><init>(Ljava/lang/String;)V
@@ -858,6 +959,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->popupConnectView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView;
 
@@ -869,6 +971,15 @@
 
 .method public refreshMonitorDeviceList(Ljava/util/List;)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "list"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -878,16 +989,19 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 2
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->popupConnectView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView;
 
     if-eqz v1, :cond_1
 
     const/4 v1, 0x0
 
+    .line 3
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -895,11 +1009,12 @@
 
     if-ge v1, v2, :cond_0
 
+    .line 4
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -907,7 +1022,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f140392
+    const v4, 0x7f13037c
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -923,6 +1038,7 @@
 
     move-result-object v2
 
+    .line 5
     new-instance v3, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView$ItemData;
 
     invoke-direct {v3, v2}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView$ItemData;-><init>(Ljava/lang/String;)V
@@ -931,6 +1047,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->popupConnectView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView;
 
@@ -942,7 +1059,16 @@
 
 .method public setClickEventListener(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView$ClickEventListener;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "clickEventListener"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->eventListener:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView$ClickEventListener;
 
     return-void
@@ -950,13 +1076,24 @@
 
 .method public setDegree(I)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "degree"
+        }
+    .end annotation
 
+    .line 1
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->mDegree:I
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->popupConnectView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView;
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView;->setDegree(I)V
 
     :cond_0
@@ -965,11 +1102,21 @@
 
 .method public setIpAddress(Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "ipAddress"
+        }
+    .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->popupConnectView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView;->setIpAddress(Ljava/lang/String;)V
 
     :cond_0
@@ -978,33 +1125,49 @@
 
 .method public setShowDirection(I)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "showDirection"
+        }
+    .end annotation
 
-    invoke-virtual {p0}, Landroid/view/View;->getTranslationY()F
+    .line 1
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getTranslationY()F
 
     move-result v0
 
-    invoke-virtual {p0}, Landroid/view/View;->getTranslationX()F
+    .line 2
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getTranslationX()F
 
     move-result v1
 
+    .line 3
     iget v2, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->mShowDirection:I
 
     if-eq v2, p1, :cond_2
 
+    .line 4
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->mShowDirection:I
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setTranslationX(F)V
+    .line 5
+    invoke-virtual {p0, v0}, Landroid/widget/RelativeLayout;->setTranslationX(F)V
 
-    invoke-virtual {p0, v1}, Landroid/view/View;->setTranslationY(F)V
+    .line 6
+    invoke-virtual {p0, v1}, Landroid/widget/RelativeLayout;->setTranslationY(F)V
 
+    .line 7
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->popupConnectView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView;
 
-    invoke-virtual {v0}, Landroid/view/View;->isAttachedToWindow()Z
+    invoke-virtual {v0}, Landroid/widget/RelativeLayout;->isAttachedToWindow()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
+    .line 8
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1023,9 +1186,10 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 9
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->popupConnectView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView;
 
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v0}, Landroid/widget/RelativeLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
@@ -1035,7 +1199,8 @@
 
     if-nez p1, :cond_1
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    .line 10
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
@@ -1049,7 +1214,8 @@
 
     iput p1, v0, Landroid/widget/RelativeLayout$LayoutParams;->height:I
 
-    invoke-static {}, Ly2/b;->q()I
+    .line 11
+    invoke-static {}, Ld/d/a/n6/b;->q()I
 
     move-result p1
 
@@ -1057,24 +1223,29 @@
 
     const/16 p1, 0xc
 
+    .line 12
     invoke-virtual {v0, p1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
     const/16 p1, 0xe
 
+    .line 13
     invoke-virtual {v0, p1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
+    .line 14
     iget p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->mDegree:I
 
     if-eq p1, v1, :cond_0
 
+    .line 15
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->popupConnectView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView;
 
     invoke-virtual {v0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView;->setDegree(I)V
 
+    .line 16
     :cond_0
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->popupConnectView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView;
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -1090,14 +1261,16 @@
 
     goto :goto_0
 
+    .line 17
     :cond_1
-    invoke-static {}, Ly2/b;->n()I
+    invoke-static {}, Ld/d/a/n6/b;->n()I
 
     move-result p1
 
     iput p1, v0, Landroid/widget/RelativeLayout$LayoutParams;->height:I
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    .line 18
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
@@ -1113,15 +1286,18 @@
 
     const/16 p1, 0x15
 
+    .line 19
     invoke-virtual {v0, p1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
     const/16 p1, 0xf
 
+    .line 20
     invoke-virtual {v0, p1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
+    .line 21
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->popupConnectView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView;
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -1142,7 +1318,16 @@
 
 .method public showResultStatue(Z)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "isStart"
+        }
+    .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupView;->popupConnectView:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView;
 
     invoke-virtual {p0, p1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/CinePopupConnectView;->toggleStarted(Z)V

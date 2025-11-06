@@ -26,12 +26,15 @@
 .method public constructor <init>(Lorg/apache/xmlbeans/impl/tool/XMLBean;Z)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/XMLBean$ErrorLogger;->this$0:Lorg/apache/xmlbeans/impl/tool/XMLBean;
 
     invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
+    .line 2
     iput-boolean p2, p0, Lorg/apache/xmlbeans/impl/tool/XMLBean$ErrorLogger;->_noisy:Z
 
+    .line 3
     invoke-static {p1}, Lorg/apache/xmlbeans/impl/tool/XMLBean;->access$000(Lorg/apache/xmlbeans/impl/tool/XMLBean;)Lorg/apache/tools/ant/Project;
 
     move-result-object p1
@@ -54,20 +57,24 @@
 .method public add(Ljava/lang/Object;)Z
     .locals 3
 
+    .line 1
     instance-of v0, p1, Lorg/apache/xmlbeans/XmlError;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_2
 
+    .line 2
     check-cast p1, Lorg/apache/xmlbeans/XmlError;
 
+    .line 3
     invoke-virtual {p1}, Lorg/apache/xmlbeans/XmlError;->getSeverity()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 4
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/tool/XMLBean$ErrorLogger;->this$0:Lorg/apache/xmlbeans/impl/tool/XMLBean;
 
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/XMLBean$ErrorLogger;->_baseURI:Ljava/net/URI;
@@ -80,6 +87,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-virtual {p1}, Lorg/apache/xmlbeans/XmlError;->getSeverity()I
 
@@ -89,6 +97,7 @@
 
     if-ne v0, v2, :cond_1
 
+    .line 6
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/tool/XMLBean$ErrorLogger;->this$0:Lorg/apache/xmlbeans/impl/tool/XMLBean;
 
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/XMLBean$ErrorLogger;->_baseURI:Ljava/net/URI;
@@ -101,11 +110,13 @@
 
     goto :goto_0
 
+    .line 7
     :cond_1
     iget-boolean v0, p0, Lorg/apache/xmlbeans/impl/tool/XMLBean$ErrorLogger;->_noisy:Z
 
     if-eqz v0, :cond_2
 
+    .line 8
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/tool/XMLBean$ErrorLogger;->this$0:Lorg/apache/xmlbeans/impl/tool/XMLBean;
 
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/tool/XMLBean$ErrorLogger;->_baseURI:Ljava/net/URI;
@@ -126,6 +137,7 @@
 .method public iterator()Ljava/util/Iterator;
     .locals 0
 
+    .line 1
     sget-object p0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;

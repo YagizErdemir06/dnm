@@ -15,9 +15,9 @@
 
 
 # static fields
-.field public static final exo_controls_fastforward_by_amount_description:I = 0x7f120016
+.field public static final exo_controls_fastforward_by_amount_description:I = 0x7f110014
 
-.field public static final exo_controls_rewind_by_amount_description:I = 0x7f120017
+.field public static final exo_controls_rewind_by_amount_description:I = 0x7f110015
 
 
 # direct methods

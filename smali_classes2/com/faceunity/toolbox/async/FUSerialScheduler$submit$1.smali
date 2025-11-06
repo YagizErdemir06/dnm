@@ -1,4 +1,4 @@
-.class final Lcom/faceunity/toolbox/async/FUSerialScheduler$submit$1;
+.class public final Lcom/faceunity/toolbox/async/FUSerialScheduler$submit$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,33 +27,33 @@
     }
 .end annotation
 
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
     bv = {
         0x1,
         0x0,
         0x3
     }
     d1 = {
-        "\u0000\u0004\n\u0002\u0008\u0005\u0010\u0000\u001a\u0002H\u0001\"\u0004\u0008\u0000\u0010\u0002\"\u0004\u0008\u0001\u0010\u0001H\n\u00a2\u0006\u0004\u0008\u0003\u0010\u0004"
+        "\u0000\u0004\n\u0002\u0008\u0005\u0010\u0004\u001a\u00028\u0001\"\u0004\u0008\u0000\u0010\u0000\"\u0004\u0008\u0001\u0010\u0001H\n\u00a2\u0006\u0004\u0008\u0002\u0010\u0003"
     }
     d2 = {
-        "<anonymous>",
-        "Result",
         "Params",
+        "Result",
         "call",
-        "()Ljava/lang/Object;"
+        "()Ljava/lang/Object;",
+        "<anonymous>"
     }
     k = 0x3
     mv = {
         0x1,
-        0x1,
-        0xf
+        0x4,
+        0x0
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $FUAsyncTask:Lcom/faceunity/toolbox/async/FUAsyncTask;
+.field public final synthetic $FUAsyncTask:Lcom/faceunity/toolbox/async/FUAsyncTask;
 
 
 # direct methods
@@ -77,6 +77,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/toolbox/async/FUSerialScheduler$submit$1;->$FUAsyncTask:Lcom/faceunity/toolbox/async/FUAsyncTask;
 
     invoke-virtual {p0}, Lcom/faceunity/toolbox/async/FUAsyncTask;->getParams()Ljava/lang/Object;

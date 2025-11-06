@@ -39,6 +39,7 @@
 
     monitor-enter v0
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
@@ -56,6 +57,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -71,6 +73,7 @@
     :goto_0
     const/4 v2, 0x0
 
+    .line 3
     :try_start_1
     sput-object v2, Lcom/google/android/gms/common/wrappers/InstantApps;->zzb:Ljava/lang/Boolean;
 
@@ -80,6 +83,7 @@
 
     if-eqz v2, :cond_2
 
+    .line 4
     invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
@@ -98,6 +102,7 @@
 
     goto :goto_1
 
+    .line 5
     :cond_2
     :try_start_2
     invoke-virtual {p0}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
@@ -106,8 +111,10 @@
 
     const-string v2, "com.google.android.instantapps.supervisor.InstantAppsRuntime"
 
+    .line 6
     invoke-virtual {p0, v2}, Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
 
+    .line 7
     sget-object p0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     sput-object p0, Lcom/google/android/gms/common/wrappers/InstantApps;->zzb:Ljava/lang/Boolean;
@@ -117,17 +124,20 @@
 
     goto :goto_1
 
+    .line 8
     :catch_0
     :try_start_3
     sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     sput-object p0, Lcom/google/android/gms/common/wrappers/InstantApps;->zzb:Ljava/lang/Boolean;
 
+    .line 9
     :goto_1
     sput-object v1, Lcom/google/android/gms/common/wrappers/InstantApps;->zza:Landroid/content/Context;
 
     sget-object p0, Lcom/google/android/gms/common/wrappers/InstantApps;->zzb:Ljava/lang/Boolean;
 
+    .line 10
     invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p0

@@ -1,4 +1,4 @@
-.class Lcom/bumptech/glide/load/engine/cache/DiskCacheWriteLocker$WriteLock;
+.class public Lcom/bumptech/glide/load/engine/cache/DiskCacheWriteLocker$WriteLock;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,17 +15,19 @@
 
 
 # instance fields
-.field interestedThreads:I
+.field public interestedThreads:I
 
-.field final lock:Ljava/util/concurrent/locks/Lock;
+.field public final lock:Ljava/util/concurrent/locks/Lock;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V

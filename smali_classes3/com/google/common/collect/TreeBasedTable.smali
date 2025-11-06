@@ -61,6 +61,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/TreeMap;
 
     invoke-direct {v0, p1}, Ljava/util/TreeMap;-><init>(Ljava/util/Comparator;)V
@@ -71,6 +72,7 @@
 
     invoke-direct {p0, v0, p1}, Lcom/google/common/collect/StandardRowSortedTable;-><init>(Ljava/util/SortedMap;Lcom/google/common/base/Supplier;)V
 
+    .line 2
     iput-object p2, p0, Lcom/google/common/collect/TreeBasedTable;->columnComparator:Ljava/util/Comparator;
 
     return-void
@@ -185,6 +187,7 @@
 .method public bridge synthetic cellSet()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/StandardTable;->cellSet()Ljava/util/Set;
 
     move-result-object p0
@@ -195,6 +198,7 @@
 .method public bridge synthetic clear()V
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/StandardTable;->clear()V
 
     return-void
@@ -203,6 +207,7 @@
 .method public bridge synthetic column(Ljava/lang/Object;)Ljava/util/Map;
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/StandardTable;->column(Ljava/lang/Object;)Ljava/util/Map;
 
     move-result-object p0
@@ -223,6 +228,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/TreeBasedTable;->columnComparator:Ljava/util/Comparator;
 
     return-object p0
@@ -231,6 +237,7 @@
 .method public bridge synthetic columnKeySet()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/StandardTable;->columnKeySet()Ljava/util/Set;
 
     move-result-object p0
@@ -241,6 +248,7 @@
 .method public bridge synthetic columnMap()Ljava/util/Map;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/StandardTable;->columnMap()Ljava/util/Map;
 
     move-result-object p0
@@ -259,6 +267,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/google/common/collect/StandardTable;->contains(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -273,6 +282,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/StandardTable;->containsColumn(Ljava/lang/Object;)Z
 
     move-result p0
@@ -287,6 +297,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/StandardTable;->containsRow(Ljava/lang/Object;)Z
 
     move-result p0
@@ -301,6 +312,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/StandardTable;->containsValue(Ljava/lang/Object;)Z
 
     move-result p0
@@ -318,12 +330,15 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/TreeBasedTable;->columnComparator()Ljava/util/Comparator;
 
     move-result-object v0
 
+    .line 2
     iget-object v1, p0, Lcom/google/common/collect/StandardTable;->backingMap:Ljava/util/Map;
 
+    .line 3
     invoke-interface {v1}, Ljava/util/Map;->values()Ljava/util/Collection;
 
     move-result-object v1
@@ -332,14 +347,17 @@
 
     invoke-direct {v2, p0}, Lcom/google/common/collect/TreeBasedTable$1;-><init>(Lcom/google/common/collect/TreeBasedTable;)V
 
+    .line 4
     invoke-static {v1, v2}, Lcom/google/common/collect/Iterables;->transform(Ljava/lang/Iterable;Lcom/google/common/base/Function;)Ljava/lang/Iterable;
 
     move-result-object v1
 
+    .line 5
     invoke-static {v1, v0}, Lcom/google/common/collect/Iterators;->mergeSorted(Ljava/lang/Iterable;Ljava/util/Comparator;)Lcom/google/common/collect/UnmodifiableIterator;
 
     move-result-object v1
 
+    .line 6
     new-instance v2, Lcom/google/common/collect/TreeBasedTable$2;
 
     invoke-direct {v2, p0, v1, v0}, Lcom/google/common/collect/TreeBasedTable$2;-><init>(Lcom/google/common/collect/TreeBasedTable;Ljava/util/Iterator;Ljava/util/Comparator;)V
@@ -354,6 +372,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/AbstractTable;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -374,6 +393,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/google/common/collect/StandardTable;->get(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -384,6 +404,7 @@
 .method public bridge synthetic hashCode()I
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractTable;->hashCode()I
 
     move-result p0
@@ -394,6 +415,7 @@
 .method public bridge synthetic isEmpty()Z
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/StandardTable;->isEmpty()Z
 
     move-result p0
@@ -409,6 +431,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2, p3}, Lcom/google/common/collect/StandardTable;->put(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -419,6 +442,7 @@
 .method public bridge synthetic putAll(Lcom/google/common/collect/Table;)V
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/collect/AbstractTable;->putAll(Lcom/google/common/collect/Table;)V
 
     return-void
@@ -440,6 +464,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Lcom/google/common/collect/StandardTable;->remove(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -489,6 +514,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/TreeBasedTable;->rowKeySet()Ljava/util/SortedSet;
 
     move-result-object p0
@@ -567,6 +593,7 @@
 .method public bridge synthetic size()I
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/StandardTable;->size()I
 
     move-result p0
@@ -577,6 +604,7 @@
 .method public bridge synthetic toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/AbstractTable;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -587,6 +615,7 @@
 .method public bridge synthetic values()Ljava/util/Collection;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/collect/StandardTable;->values()Ljava/util/Collection;
 
     move-result-object p0

@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ImmutableSortedMap$1;
+.class public Lcom/google/common/collect/ImmutableSortedMap$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,13 +27,14 @@
 
 
 # instance fields
-.field final synthetic val$comparator:Ljava/util/Comparator;
+.field public final synthetic val$comparator:Ljava/util/Comparator;
 
 
 # direct methods
 .method public constructor <init>(Ljava/util/Comparator;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/ImmutableSortedMap$1;->val$comparator:Ljava/util/Comparator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

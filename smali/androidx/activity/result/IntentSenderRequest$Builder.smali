@@ -65,6 +65,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     new-instance v0, Landroidx/activity/result/IntentSenderRequest;
 
     iget-object v1, p0, Landroidx/activity/result/IntentSenderRequest$Builder;->mIntentSender:Landroid/content/IntentSender;
@@ -89,6 +90,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iput-object p1, p0, Landroidx/activity/result/IntentSenderRequest$Builder;->mFillInIntent:Landroid/content/Intent;
 
     return-object p0
@@ -99,8 +101,10 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iput p1, p0, Landroidx/activity/result/IntentSenderRequest$Builder;->mFlagsValues:I
 
+    .line 2
     iput p2, p0, Landroidx/activity/result/IntentSenderRequest$Builder;->mFlagsMask:I
 
     return-object p0

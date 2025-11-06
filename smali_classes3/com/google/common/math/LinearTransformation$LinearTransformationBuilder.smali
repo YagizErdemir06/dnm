@@ -50,6 +50,7 @@
 .method public and(DD)Lcom/google/common/math/LinearTransformation;
     .locals 5
 
+    .line 1
     invoke-static {p1, p2}, Lcom/google/common/math/DoubleUtils;->isFinite(D)Z
 
     move-result v0
@@ -76,12 +77,14 @@
     :goto_0
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
 
+    .line 2
     iget-wide v3, p0, Lcom/google/common/math/LinearTransformation$LinearTransformationBuilder;->x1:D
 
     cmpl-double v0, p1, v3
 
     if-nez v0, :cond_2
 
+    .line 3
     iget-wide p1, p0, Lcom/google/common/math/LinearTransformation$LinearTransformationBuilder;->y1:D
 
     cmpl-double p1, p3, p1
@@ -96,6 +99,7 @@
     :goto_1
     invoke-static {v1}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
 
+    .line 4
     new-instance p1, Lcom/google/common/math/LinearTransformation$VerticalLinearTransformation;
 
     iget-wide p2, p0, Lcom/google/common/math/LinearTransformation$LinearTransformationBuilder;->x1:D
@@ -104,6 +108,7 @@
 
     return-object p1
 
+    .line 5
     :cond_2
     iget-wide v0, p0, Lcom/google/common/math/LinearTransformation$LinearTransformationBuilder;->y1:D
 
@@ -123,6 +128,7 @@
 .method public withSlope(D)Lcom/google/common/math/LinearTransformation;
     .locals 4
 
+    .line 1
     invoke-static {p1, p2}, Ljava/lang/Double;->isNaN(D)Z
 
     move-result v0
@@ -131,12 +137,14 @@
 
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
 
+    .line 2
     invoke-static {p1, p2}, Lcom/google/common/math/DoubleUtils;->isFinite(D)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-wide v0, p0, Lcom/google/common/math/LinearTransformation$LinearTransformationBuilder;->y1:D
 
     iget-wide v2, p0, Lcom/google/common/math/LinearTransformation$LinearTransformationBuilder;->x1:D
@@ -145,12 +153,14 @@
 
     sub-double/2addr v0, v2
 
+    .line 4
     new-instance p0, Lcom/google/common/math/LinearTransformation$RegularLinearTransformation;
 
     invoke-direct {p0, p1, p2, v0, v1}, Lcom/google/common/math/LinearTransformation$RegularLinearTransformation;-><init>(DD)V
 
     return-object p0
 
+    .line 5
     :cond_0
     new-instance p1, Lcom/google/common/math/LinearTransformation$VerticalLinearTransformation;
 

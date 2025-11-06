@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcp;
+.class public final Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcp;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -12,6 +12,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0, p1, p2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcp;->zzj([BILcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;)I
 
     move-result p1
@@ -20,6 +21,7 @@
 
     if-ltz v0, :cond_2
 
+    .line 2
     array-length v1, p0
 
     sub-int/2addr v1, p1
@@ -28,12 +30,14 @@
 
     if-nez v0, :cond_0
 
+    .line 3
     sget-object p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;
 
     iput-object p0, p2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;->zzc:Ljava/lang/Object;
 
     return p1
 
+    .line 4
     :cond_0
     invoke-static {p0, p1, v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;->zzr([BII)Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;
 
@@ -45,6 +49,7 @@
 
     return p1
 
+    .line 5
     :cond_1
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;->zzg()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;
 
@@ -52,6 +57,7 @@
 
     throw p0
 
+    .line 6
     :cond_2
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;->zzd()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;
 
@@ -63,6 +69,7 @@
 .method public static zzb([BI)I
     .locals 3
 
+    .line 1
     aget-byte v0, p0, p1
 
     and-int/lit16 v0, v0, 0xff
@@ -108,6 +115,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgh;->zze()Ljava/lang/Object;
 
     move-result-object v7
@@ -126,10 +134,12 @@
 
     move-object v6, p5
 
+    .line 2
     invoke-static/range {v0 .. v6}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcp;->zzn(Ljava/lang/Object;Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgh;[BIIILcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;)I
 
     move-result p1
 
+    .line 3
     invoke-interface {p0, v7}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgh;->zzf(Ljava/lang/Object;)V
 
     iput-object v7, p5, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;->zzc:Ljava/lang/Object;
@@ -145,6 +155,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgh;->zze()Ljava/lang/Object;
 
     move-result-object v6
@@ -161,10 +172,12 @@
 
     move-object v5, p4
 
+    .line 2
     invoke-static/range {v0 .. v5}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcp;->zzo(Ljava/lang/Object;Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgh;[BIILcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;)I
 
     move-result p1
 
+    .line 3
     invoke-interface {p0, v6}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgh;->zzf(Ljava/lang/Object;)V
 
     iput-object v6, p4, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;->zzc:Ljava/lang/Object;
@@ -180,17 +193,20 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0, p2, p3, p4, p6}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcp;->zzd(Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgh;[BIILcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;)I
 
     move-result p3
 
     iget-object v0, p6, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;->zzc:Ljava/lang/Object;
 
+    .line 2
     invoke-interface {p5, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :goto_0
     if-ge p3, p4, :cond_1
 
+    .line 3
     invoke-static {p2, p3, p6}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcp;->zzj([BILcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;)I
 
     move-result v0
@@ -201,6 +217,7 @@
 
     goto :goto_1
 
+    .line 4
     :cond_0
     invoke-static {p0, p2, v0, p4, p6}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcp;->zzd(Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgh;[BIILcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;)I
 
@@ -208,6 +225,7 @@
 
     iget-object v0, p6, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;->zzc:Ljava/lang/Object;
 
+    .line 5
     invoke-interface {p5, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -225,8 +243,10 @@
         }
     .end annotation
 
+    .line 1
     check-cast p2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzee;
 
+    .line 2
     invoke-static {p0, p1, p3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcp;->zzj([BILcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;)I
 
     move-result p1
@@ -238,12 +258,14 @@
     :goto_0
     if-ge p1, v0, :cond_0
 
+    .line 3
     invoke-static {p0, p1, p3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcp;->zzj([BILcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;)I
 
     move-result p1
 
     iget v1, p3, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;->zza:I
 
+    .line 4
     invoke-virtual {p2, v1}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzee;->zzg(I)V
 
     goto :goto_0
@@ -253,6 +275,7 @@
 
     return p1
 
+    .line 5
     :cond_1
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;->zzg()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;
 
@@ -269,6 +292,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0, p1, p2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcp;->zzj([BILcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;)I
 
     move-result p1
@@ -281,6 +305,7 @@
 
     const-string p0, ""
 
+    .line 2
     iput-object p0, p2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;->zzc:Ljava/lang/Object;
 
     return p1
@@ -288,6 +313,7 @@
     :cond_0
     new-instance v1, Ljava/lang/String;
 
+    .line 3
     sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzem;->zzb:Ljava/nio/charset/Charset;
 
     invoke-direct {v1, p0, p1, v0, v2}, Ljava/lang/String;-><init>([BIILjava/nio/charset/Charset;)V
@@ -298,6 +324,7 @@
 
     return p1
 
+    .line 4
     :cond_1
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;->zzd()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;
 
@@ -314,6 +341,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p0, p1, p2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcp;->zzj([BILcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;)I
 
     move-result p1
@@ -326,6 +354,7 @@
 
     const-string p0, ""
 
+    .line 2
     iput-object p0, p2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;->zzc:Ljava/lang/Object;
 
     return p1
@@ -337,6 +366,7 @@
 
     sub-int v3, v2, p1
 
+    .line 3
     sget v4, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhn;->zza:I
 
     sub-int/2addr v3, v0
@@ -349,6 +379,7 @@
 
     add-int v1, p1, v0
 
+    .line 4
     new-array v0, v0, [C
 
     move v2, v3
@@ -356,6 +387,7 @@
     :goto_0
     if-ge p1, v1, :cond_1
 
+    .line 5
     aget-byte v4, p0, p1
 
     invoke-static {v4}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhj;->zzd(B)Z
@@ -370,6 +402,7 @@
 
     int-to-char v4, v4
 
+    .line 6
     aput-char v4, v0, v2
 
     move v2, v5
@@ -382,6 +415,7 @@
 
     add-int/lit8 v4, p1, 0x1
 
+    .line 7
     aget-byte p1, p0, p1
 
     invoke-static {p1}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhj;->zzd(B)Z
@@ -394,6 +428,7 @@
 
     int-to-char p1, p1
 
+    .line 8
     aput-char p1, v0, v2
 
     move p1, v4
@@ -403,6 +438,7 @@
 
     if-ge p1, v1, :cond_1
 
+    .line 9
     aget-byte v4, p0, p1
 
     invoke-static {v4}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzhj;->zzd(B)Z
@@ -417,6 +453,7 @@
 
     int-to-char v4, v4
 
+    .line 10
     aput-char v4, v0, v2
 
     goto :goto_2
@@ -430,6 +467,7 @@
 
     add-int/lit8 v5, v4, 0x1
 
+    .line 11
     aget-byte v4, p0, v4
 
     add-int/lit8 v6, v2, 0x1
@@ -442,6 +480,7 @@
 
     goto :goto_1
 
+    .line 12
     :cond_3
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;->zzc()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;
 
@@ -460,6 +499,7 @@
 
     add-int/lit8 v5, v4, 0x1
 
+    .line 13
     aget-byte v4, p0, v4
 
     add-int/lit8 v6, v5, 0x1
@@ -476,6 +516,7 @@
 
     goto :goto_1
 
+    .line 14
     :cond_5
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;->zzc()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;
 
@@ -490,6 +531,7 @@
 
     add-int/lit8 v5, v4, 0x1
 
+    .line 15
     aget-byte v6, p0, v4
 
     add-int/lit8 v4, v5, 0x1
@@ -520,6 +562,7 @@
 
     goto :goto_1
 
+    .line 16
     :cond_7
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;->zzc()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;
 
@@ -527,6 +570,7 @@
 
     throw p0
 
+    .line 17
     :cond_8
     new-instance p0, Ljava/lang/String;
 
@@ -536,6 +580,7 @@
 
     return v1
 
+    .line 18
     :cond_9
     new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
@@ -543,6 +588,7 @@
 
     new-array p2, p2, [Ljava/lang/Object;
 
+    .line 19
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -575,6 +621,7 @@
 
     throw p0
 
+    .line 20
     :cond_a
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;->zzd()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;
 
@@ -615,6 +662,7 @@
 
     if-ne v0, p3, :cond_0
 
+    .line 1
     invoke-static {p1, p2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcp;->zzb([BI)I
 
     move-result p1
@@ -629,6 +677,7 @@
 
     return p2
 
+    .line 2
     :cond_0
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;->zzb()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;
 
@@ -641,6 +690,7 @@
 
     or-int/lit8 v0, v0, 0x4
 
+    .line 3
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgz;->zzf()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgz;
 
     move-result-object v7
@@ -668,6 +718,7 @@
 
     move-object v6, p5
 
+    .line 4
     invoke-static/range {v1 .. v6}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcp;->zzi(I[BIILcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgz;Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;)I
 
     move-result v1
@@ -688,10 +739,12 @@
 
     if-ne v1, v0, :cond_4
 
+    .line 5
     invoke-virtual {p4, p0, v7}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgz;->zzj(ILjava/lang/Object;)V
 
     return p2
 
+    .line 6
     :cond_4
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;->zze()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;
 
@@ -699,6 +752,7 @@
 
     throw p0
 
+    .line 7
     :cond_5
     invoke-static {p1, p2, p5}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcp;->zzj([BILcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;)I
 
@@ -708,6 +762,7 @@
 
     if-ltz p3, :cond_8
 
+    .line 8
     array-length p5, p1
 
     sub-int/2addr p5, p2
@@ -716,12 +771,14 @@
 
     if-nez p3, :cond_6
 
+    .line 9
     sget-object p1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;
 
     invoke-virtual {p4, p0, p1}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgz;->zzj(ILjava/lang/Object;)V
 
     goto :goto_1
 
+    .line 10
     :cond_6
     invoke-static {p1, p2, p3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;->zzr([BII)Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;
 
@@ -734,6 +791,7 @@
 
     return p2
 
+    .line 11
     :cond_7
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;->zzg()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;
 
@@ -741,6 +799,7 @@
 
     throw p0
 
+    .line 12
     :cond_8
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;->zzd()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;
 
@@ -748,6 +807,7 @@
 
     throw p0
 
+    .line 13
     :cond_9
     invoke-static {p1, p2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcp;->zzq([BI)J
 
@@ -763,6 +823,7 @@
 
     return p2
 
+    .line 14
     :cond_a
     invoke-static {p1, p2, p5}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcp;->zzm([BILcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;)I
 
@@ -770,6 +831,7 @@
 
     iget-wide p2, p5, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;->zzb:J
 
+    .line 15
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p2
@@ -778,6 +840,7 @@
 
     return p1
 
+    .line 16
     :cond_b
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;->zzb()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;
 
@@ -791,6 +854,7 @@
 
     add-int/lit8 v0, p1, 0x1
 
+    .line 1
     aget-byte p1, p0, p1
 
     if-ltz p1, :cond_0
@@ -799,6 +863,7 @@
 
     return v0
 
+    .line 2
     :cond_0
     invoke-static {p1, p0, v0, p2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcp;->zzk(I[BILcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;)I
 
@@ -810,6 +875,7 @@
 .method public static zzk(I[BILcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;)I
     .locals 1
 
+    .line 1
     aget-byte v0, p1, p2
 
     add-int/lit8 p2, p2, 0x1
@@ -835,6 +901,7 @@
 
     add-int/lit8 v0, p2, 0x1
 
+    .line 2
     aget-byte p2, p1, p2
 
     if-ltz p2, :cond_1
@@ -856,6 +923,7 @@
 
     add-int/lit8 p2, v0, 0x1
 
+    .line 3
     aget-byte v0, p1, v0
 
     if-ltz v0, :cond_2
@@ -877,6 +945,7 @@
 
     add-int/lit8 v0, p2, 0x1
 
+    .line 4
     aget-byte p2, p1, p2
 
     if-ltz p2, :cond_3
@@ -899,6 +968,7 @@
     :goto_0
     add-int/lit8 p2, v0, 0x1
 
+    .line 5
     aget-byte v0, p1, v0
 
     if-gez v0, :cond_4
@@ -916,19 +986,23 @@
 .method public static zzl(I[BIILcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzel;Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;)I
     .locals 2
 
+    .line 1
     check-cast p4, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzee;
 
+    .line 2
     invoke-static {p1, p2, p5}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcp;->zzj([BILcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;)I
 
     move-result p2
 
     iget v0, p5, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;->zza:I
 
+    .line 3
     invoke-virtual {p4, v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzee;->zzg(I)V
 
     :goto_0
     if-ge p2, p3, :cond_1
 
+    .line 4
     invoke-static {p1, p2, p5}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcp;->zzj([BILcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;)I
 
     move-result v0
@@ -939,6 +1013,7 @@
 
     goto :goto_1
 
+    .line 5
     :cond_0
     invoke-static {p1, v0, p5}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcp;->zzj([BILcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;)I
 
@@ -946,6 +1021,7 @@
 
     iget v0, p5, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;->zza:I
 
+    .line 6
     invoke-virtual {p4, v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzee;->zzg(I)V
 
     goto :goto_0
@@ -958,6 +1034,7 @@
 .method public static zzm([BILcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;)I
     .locals 9
 
+    .line 1
     aget-byte v0, p0, p1
 
     int-to-long v0, v0
@@ -977,6 +1054,7 @@
     :cond_0
     add-int/lit8 v2, p1, 0x1
 
+    .line 2
     aget-byte p1, p0, p1
 
     and-int/lit8 v3, p1, 0x7f
@@ -1000,6 +1078,7 @@
 
     add-int/lit8 p1, v2, 0x1
 
+    .line 3
     aget-byte v2, p0, v2
 
     add-int/2addr v3, v5
@@ -1034,6 +1113,7 @@
         }
     .end annotation
 
+    .line 1
     move-object v0, p1
 
     check-cast v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfr;
@@ -1050,6 +1130,7 @@
 
     move-object v6, p6
 
+    .line 2
     invoke-virtual/range {v0 .. v6}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfr;->zzc(Ljava/lang/Object;[BIIILcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;)I
 
     move-result p1
@@ -1069,10 +1150,12 @@
 
     add-int/lit8 v0, p3, 0x1
 
+    .line 1
     aget-byte p3, p2, p3
 
     if-gez p3, :cond_0
 
+    .line 2
     invoke-static {p3, p2, v0, p5}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcp;->zzk(I[BILcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;)I
 
     move-result v0
@@ -1100,12 +1183,14 @@
 
     move-object v5, p5
 
+    .line 3
     invoke-interface/range {v0 .. v5}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzgh;->zzh(Ljava/lang/Object;[BIILcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;)V
 
     iput-object p0, p5, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;->zzc:Ljava/lang/Object;
 
     return p3
 
+    .line 4
     :cond_1
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;->zzg()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;
 
@@ -1150,6 +1235,7 @@
 
     return p2
 
+    .line 1
     :cond_0
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;->zzb()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;
 
@@ -1167,6 +1253,7 @@
     :goto_0
     if-ge p2, p3, :cond_2
 
+    .line 2
     invoke-static {p1, p2, p4}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcp;->zzj([BILcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;)I
 
     move-result p2
@@ -1175,6 +1262,7 @@
 
     if-eq v0, p0, :cond_2
 
+    .line 3
     invoke-static {v0, p1, p2, p3, p4}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcp;->zzp(I[BIILcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;)I
 
     move-result p2
@@ -1188,6 +1276,7 @@
 
     return p2
 
+    .line 4
     :cond_3
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;->zze()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;
 
@@ -1195,6 +1284,7 @@
 
     throw p0
 
+    .line 5
     :cond_4
     invoke-static {p1, p2, p4}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcp;->zzj([BILcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;)I
 
@@ -1211,6 +1301,7 @@
 
     return p2
 
+    .line 6
     :cond_6
     invoke-static {p1, p2, p4}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcp;->zzm([BILcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzco;)I
 
@@ -1218,6 +1309,7 @@
 
     return p0
 
+    .line 7
     :cond_7
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;->zzb()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeo;
 
@@ -1229,6 +1321,7 @@
 .method public static zzq([BI)J
     .locals 18
 
+    .line 1
     aget-byte v0, p0, p1
 
     int-to-long v0, v0

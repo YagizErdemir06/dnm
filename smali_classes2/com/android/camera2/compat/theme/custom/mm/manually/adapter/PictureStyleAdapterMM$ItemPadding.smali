@@ -29,18 +29,29 @@
 
 
 # instance fields
-.field protected padding:I
+.field public padding:I
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;I)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "mode"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;-><init>()V
 
     if-eqz p1, :cond_3
 
-    const v0, 0x7f070157
+    const v0, 0x7f070153
 
     const/4 v1, 0x2
 
@@ -54,12 +65,13 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const p2, 0x7f0705a7
+    const p2, 0x7f07057f
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -71,6 +83,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_1
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -86,6 +99,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_2
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -99,17 +113,19 @@
 
     iput p2, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/PictureStyleAdapterMM$ItemPadding;->padding:I
 
-    invoke-static {}, Ly2/b;->C0()Z
+    .line 5
+    invoke-static {}, Ld/d/a/n6/b;->C0()Z
 
     move-result p2
 
     if-eqz p2, :cond_3
 
+    .line 6
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const p2, 0x7f070cbc
+    const p2, 0x7f070a31
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -128,7 +144,22 @@
 # virtual methods
 .method public getItemOffsets(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "outRect",
+            "view",
+            "parent",
+            "state"
+        }
+    .end annotation
 
+    .line 1
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/PictureStyleAdapterMM$ItemPadding;->padding:I
 
     const/4 p2, 0x0
@@ -141,6 +172,7 @@
 .method public getPadding()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/adapter/PictureStyleAdapterMM$ItemPadding;->padding:I
 
     return p0

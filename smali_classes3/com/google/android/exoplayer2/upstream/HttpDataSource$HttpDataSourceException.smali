@@ -197,10 +197,12 @@
 .method public static createForIOException(Ljava/io/IOException;Lcom/google/android/exoplayer2/upstream/DataSpec;I)Lcom/google/android/exoplayer2/upstream/HttpDataSource$HttpDataSourceException;
     .locals 3
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 1
+    invoke-virtual {p0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 2
     instance-of v1, p0, Ljava/net/SocketTimeoutException;
 
     const/16 v2, 0x7d7
@@ -211,6 +213,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     instance-of v1, p0, Ljava/io/InterruptedIOException;
 
@@ -223,6 +226,7 @@
     :cond_1
     if-eqz v0, :cond_2
 
+    .line 4
     invoke-static {v0}, Lcom/google/common/base/Ascii;->toLowerCase(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -245,12 +249,14 @@
     :goto_0
     if-ne v0, v2, :cond_3
 
+    .line 5
     new-instance p2, Lcom/google/android/exoplayer2/upstream/HttpDataSource$CleartextNotPermittedException;
 
     invoke-direct {p2, p0, p1}, Lcom/google/android/exoplayer2/upstream/HttpDataSource$CleartextNotPermittedException;-><init>(Ljava/io/IOException;Lcom/google/android/exoplayer2/upstream/DataSpec;)V
 
     goto :goto_1
 
+    .line 6
     :cond_3
     new-instance v1, Lcom/google/android/exoplayer2/upstream/HttpDataSource$HttpDataSourceException;
 

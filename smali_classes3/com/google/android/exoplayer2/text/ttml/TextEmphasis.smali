@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/text/ttml/TextEmphasis;
+.class public final Lcom/google/android/exoplayer2/text/ttml/TextEmphasis;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -73,6 +73,7 @@
 
     const-string v0, "\\s+"
 
+    .line 1
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -83,19 +84,21 @@
 
     const-string v1, "none"
 
+    .line 2
     invoke-static {v0, v1}, Lcom/google/common/collect/ImmutableSet;->of(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableSet;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/android/exoplayer2/text/ttml/TextEmphasis;->SINGLE_STYLE_VALUES:Lcom/google/common/collect/ImmutableSet;
 
-    const-string v0, "sesame"
+    const-string v0, "dot"
 
-    const-string v1, "circle"
+    const-string v1, "sesame"
 
-    const-string v2, "dot"
+    const-string v2, "circle"
 
-    invoke-static {v2, v0, v1}, Lcom/google/common/collect/ImmutableSet;->of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableSet;
+    .line 3
+    invoke-static {v0, v1, v2}, Lcom/google/common/collect/ImmutableSet;->of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableSet;
 
     move-result-object v0
 
@@ -105,19 +108,21 @@
 
     const-string v1, "open"
 
+    .line 4
     invoke-static {v0, v1}, Lcom/google/common/collect/ImmutableSet;->of(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableSet;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/android/exoplayer2/text/ttml/TextEmphasis;->MARK_FILL_VALUES:Lcom/google/common/collect/ImmutableSet;
 
-    const-string v0, "before"
+    const-string v0, "after"
 
-    const-string v1, "outside"
+    const-string v1, "before"
 
-    const-string v2, "after"
+    const-string v2, "outside"
 
-    invoke-static {v2, v0, v1}, Lcom/google/common/collect/ImmutableSet;->of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableSet;
+    .line 5
+    invoke-static {v0, v1, v2}, Lcom/google/common/collect/ImmutableSet;->of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/common/collect/ImmutableSet;
 
     move-result-object v0
 
@@ -129,12 +134,16 @@
 .method private constructor <init>(III)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/text/ttml/TextEmphasis;->markShape:I
 
+    .line 3
     iput p2, p0, Lcom/google/android/exoplayer2/text/ttml/TextEmphasis;->markFill:I
 
+    .line 4
     iput p3, p0, Lcom/google/android/exoplayer2/text/ttml/TextEmphasis;->position:I
 
     return-void
@@ -155,6 +164,7 @@
 
     return-object v0
 
+    .line 1
     :cond_0
     invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -164,6 +174,7 @@
 
     move-result-object p0
 
+    .line 2
     invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v1
@@ -172,6 +183,7 @@
 
     return-object v0
 
+    .line 3
     :cond_1
     sget-object v0, Lcom/google/android/exoplayer2/text/ttml/TextEmphasis;->WHITESPACE_PATTERN:Ljava/util/regex/Pattern;
 
@@ -202,6 +214,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/android/exoplayer2/text/ttml/TextEmphasis;->POSITION_VALUES:Lcom/google/common/collect/ImmutableSet;
 
     invoke-static {v0, p0}, Lcom/google/common/collect/Sets;->intersection(Ljava/util/Set;Ljava/util/Set;)Lcom/google/common/collect/Sets$SetView;
@@ -210,6 +223,7 @@
 
     const-string v1, "outside"
 
+    .line 2
     invoke-static {v0, v1}, Lcom/google/common/collect/Iterables;->getFirst(Ljava/lang/Iterable;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -224,11 +238,11 @@
 
     const/4 v4, 0x2
 
-    const/4 v5, 0x0
+    const/4 v5, -0x1
 
-    const/4 v6, 0x1
+    const/4 v6, 0x0
 
-    const/4 v7, -0x1
+    const/4 v7, 0x1
 
     if-eq v2, v3, :cond_2
 
@@ -251,7 +265,7 @@
 
     if-eqz v0, :cond_3
 
-    move v0, v5
+    move v0, v6
 
     goto :goto_1
 
@@ -262,7 +276,7 @@
 
     if-eqz v0, :cond_3
 
-    move v0, v6
+    move v0, v7
 
     goto :goto_1
 
@@ -281,14 +295,14 @@
 
     :cond_3
     :goto_0
-    move v0, v7
+    move v0, v5
 
     :goto_1
     if-eqz v0, :cond_5
 
-    if-eq v0, v6, :cond_4
+    if-eq v0, v7, :cond_4
 
-    move v0, v6
+    move v0, v7
 
     goto :goto_2
 
@@ -300,6 +314,7 @@
     :cond_5
     move v0, v4
 
+    .line 3
     :goto_2
     sget-object v1, Lcom/google/android/exoplayer2/text/ttml/TextEmphasis;->SINGLE_STYLE_VALUES:Lcom/google/common/collect/ImmutableSet;
 
@@ -307,12 +322,14 @@
 
     move-result-object v1
 
+    .line 4
     invoke-interface {v1}, Ljava/util/Set;->isEmpty()Z
 
     move-result v2
 
     if-nez v2, :cond_a
 
+    .line 5
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -346,7 +363,7 @@
 
     if-eqz p0, :cond_8
 
-    move v6, v5
+    move v7, v6
 
     goto :goto_4
 
@@ -363,23 +380,25 @@
 
     :cond_8
     :goto_3
-    move v6, v7
+    move v7, v5
 
     :goto_4
-    if-eqz v6, :cond_9
+    if-eqz v7, :cond_9
 
     goto :goto_5
 
     :cond_9
-    move v7, v5
+    move v5, v6
 
+    .line 6
     :goto_5
     new-instance p0, Lcom/google/android/exoplayer2/text/ttml/TextEmphasis;
 
-    invoke-direct {p0, v7, v5, v0}, Lcom/google/android/exoplayer2/text/ttml/TextEmphasis;-><init>(III)V
+    invoke-direct {p0, v5, v6, v0}, Lcom/google/android/exoplayer2/text/ttml/TextEmphasis;-><init>(III)V
 
     return-object p0
 
+    .line 7
     :cond_a
     sget-object v1, Lcom/google/android/exoplayer2/text/ttml/TextEmphasis;->MARK_FILL_VALUES:Lcom/google/common/collect/ImmutableSet;
 
@@ -387,12 +406,14 @@
 
     move-result-object v1
 
+    .line 8
     sget-object v2, Lcom/google/android/exoplayer2/text/ttml/TextEmphasis;->MARK_SHAPE_VALUES:Lcom/google/common/collect/ImmutableSet;
 
     invoke-static {v2, p0}, Lcom/google/common/collect/Sets;->intersection(Ljava/util/Set;Ljava/util/Set;)Lcom/google/common/collect/Sets$SetView;
 
     move-result-object p0
 
+    .line 9
     invoke-interface {v1}, Ljava/util/Set;->isEmpty()Z
 
     move-result v2
@@ -405,15 +426,17 @@
 
     if-eqz v2, :cond_b
 
+    .line 10
     new-instance p0, Lcom/google/android/exoplayer2/text/ttml/TextEmphasis;
 
-    invoke-direct {p0, v7, v5, v0}, Lcom/google/android/exoplayer2/text/ttml/TextEmphasis;-><init>(III)V
+    invoke-direct {p0, v5, v6, v0}, Lcom/google/android/exoplayer2/text/ttml/TextEmphasis;-><init>(III)V
 
     return-object p0
 
     :cond_b
     const-string v2, "filled"
 
+    .line 11
     invoke-static {v1, v2}, Lcom/google/common/collect/Iterables;->getFirst(Ljava/lang/Iterable;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -443,7 +466,7 @@
 
     if-eqz v1, :cond_e
 
-    move v1, v5
+    move v1, v6
 
     goto :goto_7
 
@@ -454,18 +477,18 @@
 
     if-eqz v1, :cond_e
 
-    move v1, v6
+    move v1, v7
 
     goto :goto_7
 
     :cond_e
     :goto_6
-    move v1, v7
+    move v1, v5
 
     :goto_7
     if-eqz v1, :cond_f
 
-    move v1, v6
+    move v1, v7
 
     goto :goto_8
 
@@ -475,6 +498,7 @@
     :goto_8
     const-string v2, "circle"
 
+    .line 12
     invoke-static {p0, v2}, Lcom/google/common/collect/Iterables;->getFirst(Ljava/lang/Iterable;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -508,7 +532,9 @@
 
     if-eqz p0, :cond_13
 
-    goto :goto_a
+    move v5, v6
+
+    goto :goto_9
 
     :cond_11
     const-string v2, "sesame"
@@ -519,9 +545,9 @@
 
     if-eqz p0, :cond_13
 
-    move v5, v6
+    move v5, v7
 
-    goto :goto_a
+    goto :goto_9
 
     :cond_12
     invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -532,26 +558,22 @@
 
     move v5, v4
 
-    goto :goto_a
-
     :cond_13
     :goto_9
-    move v5, v7
-
-    :goto_a
     if-eqz v5, :cond_15
 
-    if-eq v5, v6, :cond_14
+    if-eq v5, v7, :cond_14
 
-    move v4, v6
+    move v4, v7
 
-    goto :goto_b
+    goto :goto_a
 
     :cond_14
     const/4 v4, 0x3
 
+    .line 13
     :cond_15
-    :goto_b
+    :goto_a
     new-instance p0, Lcom/google/android/exoplayer2/text/ttml/TextEmphasis;
 
     invoke-direct {p0, v4, v1, v0}, Lcom/google/android/exoplayer2/text/ttml/TextEmphasis;-><init>(III)V

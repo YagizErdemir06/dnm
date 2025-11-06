@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/ui/SubtitlePainter;
+.class public final Lcom/google/android/exoplayer2/ui/SubtitlePainter;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -96,22 +96,26 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x2
 
     new-array v0, v0, [I
 
+    .line 2
     fill-array-data v0, :array_0
 
     const/4 v1, 0x0
 
     const/4 v2, 0x0
 
+    .line 3
     invoke-virtual {p1, v1, v0, v2, v2}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
+    .line 4
     invoke-virtual {v0, v2, v2}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
     move-result v1
@@ -120,26 +124,31 @@
 
     iput v1, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->spacingAdd:F
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    const/4 v1, 0x1
 
-    const/4 v2, 0x1
+    const/high16 v2, 0x3f800000    # 1.0f
 
-    invoke-virtual {v0, v2, v1}, Landroid/content/res/TypedArray;->getFloat(IF)F
+    .line 5
+    invoke-virtual {v0, v1, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
-    move-result v1
+    move-result v2
 
-    iput v1, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->spacingMult:F
+    iput v2, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->spacingMult:F
 
+    .line 6
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
+    .line 7
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
+    .line 8
     invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
     move-result-object p1
 
+    .line 9
     iget p1, p1, Landroid/util/DisplayMetrics;->densityDpi:I
 
     int-to-float p1, p1
@@ -158,43 +167,55 @@
 
     int-to-float p1, p1
 
+    .line 10
     iput p1, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->outlineWidth:F
 
+    .line 11
     iput p1, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->shadowRadius:F
 
+    .line 12
     iput p1, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->shadowOffset:F
 
+    .line 13
     new-instance p1, Landroid/text/TextPaint;
 
     invoke-direct {p1}, Landroid/text/TextPaint;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->textPaint:Landroid/text/TextPaint;
 
-    invoke-virtual {p1, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
+    .line 14
+    invoke-virtual {p1, v1}, Landroid/text/TextPaint;->setAntiAlias(Z)V
 
-    invoke-virtual {p1, v2}, Landroid/graphics/Paint;->setSubpixelText(Z)V
+    .line 15
+    invoke-virtual {p1, v1}, Landroid/text/TextPaint;->setSubpixelText(Z)V
 
+    .line 16
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->windowPaint:Landroid/graphics/Paint;
 
-    invoke-virtual {p1, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
+    .line 17
+    invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
+    .line 18
     sget-object v0, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
+    .line 19
     new-instance p1, Landroid/graphics/Paint;
 
     invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->bitmapPaint:Landroid/graphics/Paint;
 
-    invoke-virtual {p1, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
+    .line 20
+    invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    invoke-virtual {p1, v2}, Landroid/graphics/Paint;->setFilterBitmap(Z)V
+    .line 21
+    invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setFilterBitmap(Z)V
 
     return-void
 
@@ -220,6 +241,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 1
     invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -250,6 +272,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cueBitmap:Landroid/graphics/Bitmap;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->bitmapRect:Landroid/graphics/Rect;
@@ -268,19 +291,23 @@
 
     if-eqz p2, :cond_0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->drawTextLayout(Landroid/graphics/Canvas;)V
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object p2, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->bitmapRect:Landroid/graphics/Rect;
 
     invoke-static {p2}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     iget-object p2, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cueBitmap:Landroid/graphics/Bitmap;
 
     invoke-static {p2}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->drawBitmapLayout(Landroid/graphics/Canvas;)V
 
     :goto_0
@@ -290,8 +317,10 @@
 .method private drawTextLayout(Landroid/graphics/Canvas;)V
     .locals 10
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->textLayout:Landroid/text/StaticLayout;
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->edgeLayout:Landroid/text/StaticLayout;
 
     if-eqz v0, :cond_9
@@ -300,11 +329,13 @@
 
     goto/16 :goto_3
 
+    .line 3
     :cond_0
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v2
 
+    .line 4
     iget v3, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->textLeft:I
 
     int-to-float v3, v3
@@ -315,6 +346,7 @@
 
     invoke-virtual {p1, v3, v4}, Landroid/graphics/Canvas;->translate(FF)V
 
+    .line 5
     iget v3, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->windowColor:I
 
     invoke-static {v3}, Landroid/graphics/Color;->alpha(I)I
@@ -323,12 +355,14 @@
 
     if-lez v3, :cond_1
 
+    .line 6
     iget-object v3, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->windowPaint:Landroid/graphics/Paint;
 
     iget v4, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->windowColor:I
 
     invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setColor(I)V
 
+    .line 7
     iget v3, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->textPaddingX:I
 
     neg-int v3, v3
@@ -337,7 +371,8 @@
 
     const/4 v6, 0x0
 
-    invoke-virtual {v0}, Landroid/text/Layout;->getWidth()I
+    .line 8
+    invoke-virtual {v0}, Landroid/text/StaticLayout;->getWidth()I
 
     move-result v3
 
@@ -347,7 +382,8 @@
 
     int-to-float v7, v3
 
-    invoke-virtual {v0}, Landroid/text/Layout;->getHeight()I
+    .line 9
+    invoke-virtual {v0}, Landroid/text/StaticLayout;->getHeight()I
 
     move-result v3
 
@@ -357,8 +393,10 @@
 
     move-object v4, p1
 
+    .line 10
     invoke-virtual/range {v4 .. v9}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
+    .line 11
     :cond_1
     iget v3, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->edgeType:I
 
@@ -368,31 +406,36 @@
 
     if-ne v3, v5, :cond_2
 
+    .line 12
     iget-object v3, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->textPaint:Landroid/text/TextPaint;
 
     sget-object v5, Landroid/graphics/Paint$Join;->ROUND:Landroid/graphics/Paint$Join;
 
-    invoke-virtual {v3, v5}, Landroid/graphics/Paint;->setStrokeJoin(Landroid/graphics/Paint$Join;)V
+    invoke-virtual {v3, v5}, Landroid/text/TextPaint;->setStrokeJoin(Landroid/graphics/Paint$Join;)V
 
+    .line 13
     iget-object v3, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->textPaint:Landroid/text/TextPaint;
 
     iget v5, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->outlineWidth:F
 
-    invoke-virtual {v3, v5}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+    invoke-virtual {v3, v5}, Landroid/text/TextPaint;->setStrokeWidth(F)V
 
+    .line 14
     iget-object v3, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->textPaint:Landroid/text/TextPaint;
 
     iget v5, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->edgeColor:I
 
-    invoke-virtual {v3, v5}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-virtual {v3, v5}, Landroid/text/TextPaint;->setColor(I)V
 
+    .line 15
     iget-object v3, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->textPaint:Landroid/text/TextPaint;
 
     sget-object v5, Landroid/graphics/Paint$Style;->FILL_AND_STROKE:Landroid/graphics/Paint$Style;
 
-    invoke-virtual {v3, v5}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+    invoke-virtual {v3, v5}, Landroid/text/TextPaint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    invoke-virtual {v1, p1}, Landroid/text/Layout;->draw(Landroid/graphics/Canvas;)V
+    .line 16
+    invoke-virtual {v1, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
     goto :goto_2
 
@@ -401,6 +444,7 @@
 
     if-ne v3, v6, :cond_3
 
+    .line 17
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->textPaint:Landroid/text/TextPaint;
 
     iget v3, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->shadowRadius:F
@@ -409,7 +453,7 @@
 
     iget v6, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->edgeColor:I
 
-    invoke-virtual {v1, v3, v5, v5, v6}, Landroid/graphics/Paint;->setShadowLayer(FFFI)V
+    invoke-virtual {v1, v3, v5, v5, v6}, Landroid/text/TextPaint;->setShadowLayer(FFFI)V
 
     goto :goto_2
 
@@ -439,14 +483,17 @@
 
     goto :goto_1
 
+    .line 18
     :cond_6
     iget v6, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->edgeColor:I
 
     :goto_1
     if-eqz v5, :cond_7
 
+    .line 19
     iget v3, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->edgeColor:I
 
+    .line 20
     :cond_7
     iget v5, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->shadowRadius:F
 
@@ -454,56 +501,66 @@
 
     div-float/2addr v5, v7
 
+    .line 21
     iget-object v7, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->textPaint:Landroid/text/TextPaint;
 
     iget v8, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->foregroundColor:I
 
-    invoke-virtual {v7, v8}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-virtual {v7, v8}, Landroid/text/TextPaint;->setColor(I)V
 
+    .line 22
     iget-object v7, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->textPaint:Landroid/text/TextPaint;
 
     sget-object v8, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
-    invoke-virtual {v7, v8}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+    invoke-virtual {v7, v8}, Landroid/text/TextPaint;->setStyle(Landroid/graphics/Paint$Style;)V
 
+    .line 23
     iget-object v7, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->textPaint:Landroid/text/TextPaint;
 
     iget v8, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->shadowRadius:F
 
     neg-float v9, v5
 
-    invoke-virtual {v7, v8, v9, v9, v6}, Landroid/graphics/Paint;->setShadowLayer(FFFI)V
+    invoke-virtual {v7, v8, v9, v9, v6}, Landroid/text/TextPaint;->setShadowLayer(FFFI)V
 
-    invoke-virtual {v1, p1}, Landroid/text/Layout;->draw(Landroid/graphics/Canvas;)V
+    .line 24
+    invoke-virtual {v1, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
+    .line 25
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->textPaint:Landroid/text/TextPaint;
 
     iget v6, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->shadowRadius:F
 
-    invoke-virtual {v1, v6, v5, v5, v3}, Landroid/graphics/Paint;->setShadowLayer(FFFI)V
+    invoke-virtual {v1, v6, v5, v5, v3}, Landroid/text/TextPaint;->setShadowLayer(FFFI)V
 
+    .line 26
     :cond_8
     :goto_2
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->textPaint:Landroid/text/TextPaint;
 
     iget v3, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->foregroundColor:I
 
-    invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-virtual {v1, v3}, Landroid/text/TextPaint;->setColor(I)V
 
+    .line 27
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->textPaint:Landroid/text/TextPaint;
 
     sget-object v3, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
-    invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+    invoke-virtual {v1, v3}, Landroid/text/TextPaint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    invoke-virtual {v0, p1}, Landroid/text/Layout;->draw(Landroid/graphics/Canvas;)V
+    .line 28
+    invoke-virtual {v0, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
+    .line 29
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->textPaint:Landroid/text/TextPaint;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0, v0, v0, v4}, Landroid/graphics/Paint;->setShadowLayer(FFFI)V
+    invoke-virtual {p0, v0, v0, v0, v4}, Landroid/text/TextPaint;->setShadowLayer(FFFI)V
 
+    .line 30
     invoke-virtual {p1, v2}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
     :cond_9
@@ -519,14 +576,17 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cueBitmap:Landroid/graphics/Bitmap;
 
+    .line 2
     iget v1, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->parentRight:I
 
     iget v2, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->parentLeft:I
 
     sub-int/2addr v1, v2
 
+    .line 3
     iget v3, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->parentBottom:I
 
     iget v4, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->parentTop:I
@@ -537,6 +597,7 @@
 
     int-to-float v1, v1
 
+    .line 4
     iget v5, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cuePosition:F
 
     mul-float/2addr v5, v1
@@ -547,12 +608,14 @@
 
     int-to-float v3, v3
 
+    .line 5
     iget v5, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cueLine:F
 
     mul-float/2addr v5, v3
 
     add-float/2addr v4, v5
 
+    .line 6
     iget v5, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cueSize:F
 
     mul-float/2addr v1, v5
@@ -561,6 +624,7 @@
 
     move-result v1
 
+    .line 7
     iget v5, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cueBitmapHeight:F
 
     const v6, -0x800001
@@ -571,6 +635,7 @@
 
     mul-float/2addr v3, v5
 
+    .line 8
     invoke-static {v3}, Ljava/lang/Math;->round(F)I
 
     move-result v0
@@ -580,6 +645,7 @@
     :cond_0
     int-to-float v3, v1
 
+    .line 9
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v5
@@ -600,6 +666,7 @@
 
     move-result v0
 
+    .line 10
     :goto_0
     iget v3, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cuePositionAnchor:I
 
@@ -619,18 +686,21 @@
     :cond_1
     if-ne v3, v5, :cond_2
 
+    .line 11
     div-int/lit8 v3, v1, 0x2
 
     int-to-float v3, v3
 
     goto :goto_1
 
+    .line 12
     :cond_2
     :goto_2
     invoke-static {v2}, Ljava/lang/Math;->round(F)I
 
     move-result v2
 
+    .line 13
     iget v3, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cueLineAnchor:I
 
     if-ne v3, v6, :cond_3
@@ -645,18 +715,21 @@
     :cond_3
     if-ne v3, v5, :cond_4
 
+    .line 14
     div-int/lit8 v3, v0, 0x2
 
     int-to-float v3, v3
 
     goto :goto_3
 
+    .line 15
     :cond_4
     :goto_4
     invoke-static {v4}, Ljava/lang/Math;->round(F)I
 
     move-result v3
 
+    .line 16
     new-instance v4, Landroid/graphics/Rect;
 
     add-int/2addr v1, v2
@@ -680,16 +753,19 @@
 
     move-object/from16 v0, p0
 
+    .line 1
     iget-object v1, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cueText:Ljava/lang/CharSequence;
 
     instance-of v2, v1, Landroid/text/SpannableStringBuilder;
 
     if-eqz v2, :cond_0
 
+    .line 2
     check-cast v1, Landroid/text/SpannableStringBuilder;
 
     goto :goto_0
 
+    .line 3
     :cond_0
     new-instance v1, Landroid/text/SpannableStringBuilder;
 
@@ -697,6 +773,7 @@
 
     invoke-direct {v1, v2}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
+    .line 4
     :goto_0
     iget v2, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->parentRight:I
 
@@ -704,18 +781,21 @@
 
     sub-int/2addr v2, v3
 
+    .line 5
     iget v3, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->parentBottom:I
 
     iget v4, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->parentTop:I
 
     sub-int v11, v3, v4
 
+    .line 6
     iget-object v3, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->textPaint:Landroid/text/TextPaint;
 
     iget v4, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->defaultTextSizePx:F
 
-    invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setTextSize(F)V
+    invoke-virtual {v3, v4}, Landroid/text/TextPaint;->setTextSize(F)V
 
+    .line 7
     iget v3, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->defaultTextSizePx:F
 
     const/high16 v4, 0x3e000000    # 0.125f
@@ -732,6 +812,7 @@
 
     sub-int v3, v2, v13
 
+    .line 8
     iget v4, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cueSize:F
 
     const v14, -0x800001
@@ -755,10 +836,12 @@
 
     const-string v0, "Skipped drawing subtitle cue (insufficient space)"
 
+    .line 9
     invoke-static {v10, v0}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
+    .line 10
     :cond_2
     iget v3, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cueTextSizePx:F
 
@@ -772,6 +855,7 @@
 
     if-lez v3, :cond_3
 
+    .line 11
     new-instance v3, Landroid/text/style/AbsoluteSizeSpan;
 
     iget v5, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cueTextSizePx:F
@@ -780,23 +864,28 @@
 
     invoke-direct {v3, v5}, Landroid/text/style/AbsoluteSizeSpan;-><init>(I)V
 
+    .line 12
     invoke-virtual {v1}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v5
 
+    .line 13
     invoke-virtual {v1, v3, v9, v5, v4}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
+    .line 14
     :cond_3
     new-instance v8, Landroid/text/SpannableStringBuilder;
 
     invoke-direct {v8, v1}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
+    .line 15
     iget v3, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->edgeType:I
 
     const/4 v7, 0x1
 
     if-ne v3, v7, :cond_4
 
+    .line 16
     invoke-virtual {v8}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v3
@@ -809,6 +898,7 @@
 
     check-cast v3, [Landroid/text/style/ForegroundColorSpan;
 
+    .line 17
     array-length v5, v3
 
     move v6, v9
@@ -818,6 +908,7 @@
 
     aget-object v7, v3, v6
 
+    .line 18
     invoke-virtual {v8, v7}, Landroid/text/SpannableStringBuilder;->removeSpan(Ljava/lang/Object;)V
 
     add-int/lit8 v6, v6, 0x1
@@ -826,6 +917,7 @@
 
     goto :goto_1
 
+    .line 19
     :cond_4
     iget v3, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->backgroundColor:I
 
@@ -837,6 +929,7 @@
 
     if-lez v3, :cond_7
 
+    .line 20
     iget v3, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->edgeType:I
 
     if-eqz v3, :cond_6
@@ -845,6 +938,7 @@
 
     goto :goto_2
 
+    .line 21
     :cond_5
     new-instance v3, Landroid/text/style/BackgroundColorSpan;
 
@@ -852,14 +946,17 @@
 
     invoke-direct {v3, v5}, Landroid/text/style/BackgroundColorSpan;-><init>(I)V
 
+    .line 22
     invoke-virtual {v8}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v5
 
+    .line 23
     invoke-virtual {v8, v3, v9, v5, v4}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
     goto :goto_3
 
+    .line 24
     :cond_6
     :goto_2
     new-instance v3, Landroid/text/style/BackgroundColorSpan;
@@ -868,12 +965,15 @@
 
     invoke-direct {v3, v5}, Landroid/text/style/BackgroundColorSpan;-><init>(I)V
 
+    .line 25
     invoke-virtual {v1}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v5
 
+    .line 26
     invoke-virtual {v1, v3, v9, v5, v4}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
+    .line 27
     :cond_7
     :goto_3
     iget-object v3, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cueTextAlignment:Landroid/text/Layout$Alignment;
@@ -885,6 +985,7 @@
     :cond_8
     move-object/from16 v21, v3
 
+    .line 28
     new-instance v6, Landroid/text/StaticLayout;
 
     iget-object v5, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->textPaint:Landroid/text/TextPaint;
@@ -927,10 +1028,12 @@
 
     iput-object v14, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->textLayout:Landroid/text/StaticLayout;
 
-    invoke-virtual {v14}, Landroid/text/Layout;->getHeight()I
+    .line 29
+    invoke-virtual {v14}, Landroid/text/StaticLayout;->getHeight()I
 
     move-result v3
 
+    .line 30
     iget-object v4, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->textLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v4}, Landroid/text/StaticLayout;->getLineCount()I
@@ -944,9 +1047,10 @@
     :goto_4
     if-ge v9, v4, :cond_9
 
+    .line 31
     iget-object v6, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->textLayout:Landroid/text/StaticLayout;
 
-    invoke-virtual {v6, v9}, Landroid/text/Layout;->getLineWidth(I)F
+    invoke-virtual {v6, v9}, Landroid/text/StaticLayout;->getLineWidth(I)F
 
     move-result v6
 
@@ -966,6 +1070,7 @@
 
     goto :goto_4
 
+    .line 32
     :cond_9
     iget v4, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cueSize:F
 
@@ -985,6 +1090,7 @@
     :goto_5
     add-int/2addr v15, v13
 
+    .line 33
     iget v4, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cuePosition:F
 
     cmpl-float v5, v4, v6
@@ -995,6 +1101,7 @@
 
     mul-float/2addr v2, v4
 
+    .line 34
     invoke-static {v2}, Ljava/lang/Math;->round(F)I
 
     move-result v2
@@ -1003,6 +1110,7 @@
 
     add-int/2addr v2, v4
 
+    .line 35
     iget v5, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cuePositionAnchor:I
 
     const/4 v6, 0x1
@@ -1027,8 +1135,10 @@
 
     sub-int/2addr v2, v15
 
+    .line 36
     div-int/2addr v2, v7
 
+    .line 37
     :goto_6
     invoke-static {v2, v4}, Ljava/lang/Math;->max(II)I
 
@@ -1036,6 +1146,7 @@
 
     add-int/2addr v15, v2
 
+    .line 38
     iget v4, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->parentRight:I
 
     invoke-static {v15, v4}, Ljava/lang/Math;->min(II)I
@@ -1051,6 +1162,7 @@
 
     sub-int/2addr v2, v15
 
+    .line 39
     div-int/2addr v2, v7
 
     iget v4, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->parentLeft:I
@@ -1066,10 +1178,12 @@
 
     const-string v0, "Skipped drawing subtitle cue (invalid horizontal positioning)"
 
+    .line 40
     invoke-static {v12, v0}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
+    .line 41
     :cond_e
     iget v4, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cueLine:F
 
@@ -1079,6 +1193,7 @@
 
     if-eqz v5, :cond_14
 
+    .line 42
     iget v5, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cueLineType:I
 
     if-nez v5, :cond_10
@@ -1087,6 +1202,7 @@
 
     mul-float/2addr v5, v4
 
+    .line 43
     invoke-static {v5}, Ljava/lang/Math;->round(F)I
 
     move-result v4
@@ -1095,6 +1211,7 @@
 
     add-int/2addr v4, v5
 
+    .line 44
     iget v5, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cueLineAnchor:I
 
     if-ne v5, v7, :cond_f
@@ -1108,16 +1225,18 @@
 
     sub-int/2addr v4, v3
 
+    .line 45
     div-int/2addr v4, v7
 
     goto :goto_9
 
+    .line 46
     :cond_10
     iget-object v4, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->textLayout:Landroid/text/StaticLayout;
 
     const/4 v5, 0x0
 
-    invoke-virtual {v4, v5}, Landroid/text/Layout;->getLineBottom(I)I
+    invoke-virtual {v4, v5}, Landroid/text/StaticLayout;->getLineBottom(I)I
 
     move-result v4
 
@@ -1129,6 +1248,7 @@
 
     sub-int/2addr v4, v5
 
+    .line 47
     iget v5, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cueLine:F
 
     cmpl-float v6, v5, v16
@@ -1139,6 +1259,7 @@
 
     mul-float/2addr v5, v4
 
+    .line 48
     invoke-static {v5}, Ljava/lang/Math;->round(F)I
 
     move-result v4
@@ -1158,6 +1279,7 @@
 
     mul-float/2addr v5, v4
 
+    .line 49
     invoke-static {v5}, Ljava/lang/Math;->round(F)I
 
     move-result v4
@@ -1173,6 +1295,7 @@
     :goto_9
     add-int v5, v4, v3
 
+    .line 50
     iget v6, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->parentBottom:I
 
     if-le v5, v6, :cond_13
@@ -1181,6 +1304,7 @@
 
     goto :goto_a
 
+    .line 51
     :cond_13
     iget v3, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->parentTop:I
 
@@ -1190,6 +1314,7 @@
 
     goto :goto_b
 
+    .line 52
     :cond_14
     iget v4, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->parentBottom:I
 
@@ -1209,6 +1334,7 @@
     :goto_a
     move v11, v4
 
+    .line 53
     :goto_b
     new-instance v12, Landroid/text/StaticLayout;
 
@@ -1232,6 +1358,7 @@
 
     iput-object v12, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->textLayout:Landroid/text/StaticLayout;
 
+    .line 54
     new-instance v1, Landroid/text/StaticLayout;
 
     iget-object v3, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->textPaint:Landroid/text/TextPaint;
@@ -1256,12 +1383,15 @@
 
     iput-object v1, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->edgeLayout:Landroid/text/StaticLayout;
 
+    .line 55
     iput v2, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->textLeft:I
 
+    .line 56
     iput v11, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->textTop:I
 
     move/from16 v1, v25
 
+    .line 57
     iput v1, v0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->textPaddingX:I
 
     return-void
@@ -1272,6 +1402,7 @@
 .method public draw(Lcom/google/android/exoplayer2/text/Cue;Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;FFFLandroid/graphics/Canvas;IIII)V
     .locals 4
 
+    .line 1
     iget-object v0, p1, Lcom/google/android/exoplayer2/text/Cue;->bitmap:Landroid/graphics/Bitmap;
 
     if-nez v0, :cond_0
@@ -1284,8 +1415,11 @@
     const/4 v0, 0x0
 
     :goto_0
+    const/high16 v1, -0x1000000
+
     if-eqz v0, :cond_3
 
+    .line 2
     iget-object v1, p1, Lcom/google/android/exoplayer2/text/Cue;->text:Ljava/lang/CharSequence;
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1296,6 +1430,7 @@
 
     return-void
 
+    .line 3
     :cond_1
     iget-boolean v1, p1, Lcom/google/android/exoplayer2/text/Cue;->windowColorSet:Z
 
@@ -1308,11 +1443,8 @@
     :cond_2
     iget v1, p2, Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;->windowColor:I
 
-    goto :goto_1
-
+    .line 4
     :cond_3
-    const/high16 v1, -0x1000000
-
     :goto_1
     iget-object v2, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cueText:Ljava/lang/CharSequence;
 
@@ -1328,6 +1460,7 @@
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/text/Cue;->textAlignment:Landroid/text/Layout$Alignment;
 
+    .line 5
     invoke-static {v2, v3}, Lcom/google/android/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -1356,6 +1489,7 @@
 
     iget v2, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cueLineAnchor:I
 
+    .line 6
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -1382,6 +1516,7 @@
 
     iget v2, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cuePositionAnchor:I
 
+    .line 7
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -1444,7 +1579,8 @@
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->textPaint:Landroid/text/TextPaint;
 
-    invoke-virtual {v2}, Landroid/graphics/Paint;->getTypeface()Landroid/graphics/Typeface;
+    .line 8
+    invoke-virtual {v2}, Landroid/text/TextPaint;->getTypeface()Landroid/graphics/Typeface;
 
     move-result-object v2
 
@@ -1490,106 +1626,135 @@
 
     if-ne v2, p10, :cond_4
 
+    .line 9
     invoke-direct {p0, p6, v0}, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->drawLayout(Landroid/graphics/Canvas;Z)V
 
     return-void
 
+    .line 10
     :cond_4
     iget-object v2, p1, Lcom/google/android/exoplayer2/text/Cue;->text:Ljava/lang/CharSequence;
 
     iput-object v2, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cueText:Ljava/lang/CharSequence;
 
+    .line 11
     iget-object v2, p1, Lcom/google/android/exoplayer2/text/Cue;->textAlignment:Landroid/text/Layout$Alignment;
 
     iput-object v2, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cueTextAlignment:Landroid/text/Layout$Alignment;
 
+    .line 12
     iget-object v2, p1, Lcom/google/android/exoplayer2/text/Cue;->bitmap:Landroid/graphics/Bitmap;
 
     iput-object v2, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cueBitmap:Landroid/graphics/Bitmap;
 
+    .line 13
     iget v2, p1, Lcom/google/android/exoplayer2/text/Cue;->line:F
 
     iput v2, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cueLine:F
 
+    .line 14
     iget v2, p1, Lcom/google/android/exoplayer2/text/Cue;->lineType:I
 
     iput v2, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cueLineType:I
 
+    .line 15
     iget v2, p1, Lcom/google/android/exoplayer2/text/Cue;->lineAnchor:I
 
     iput v2, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cueLineAnchor:I
 
+    .line 16
     iget v2, p1, Lcom/google/android/exoplayer2/text/Cue;->position:F
 
     iput v2, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cuePosition:F
 
+    .line 17
     iget v2, p1, Lcom/google/android/exoplayer2/text/Cue;->positionAnchor:I
 
     iput v2, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cuePositionAnchor:I
 
+    .line 18
     iget v2, p1, Lcom/google/android/exoplayer2/text/Cue;->size:F
 
     iput v2, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cueSize:F
 
+    .line 19
     iget p1, p1, Lcom/google/android/exoplayer2/text/Cue;->bitmapHeight:F
 
     iput p1, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cueBitmapHeight:F
 
+    .line 20
     iget p1, p2, Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;->foregroundColor:I
 
     iput p1, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->foregroundColor:I
 
+    .line 21
     iget p1, p2, Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;->backgroundColor:I
 
     iput p1, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->backgroundColor:I
 
+    .line 22
     iput v1, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->windowColor:I
 
+    .line 23
     iget p1, p2, Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;->edgeType:I
 
     iput p1, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->edgeType:I
 
+    .line 24
     iget p1, p2, Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;->edgeColor:I
 
     iput p1, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->edgeColor:I
 
+    .line 25
     iget-object p1, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->textPaint:Landroid/text/TextPaint;
 
     iget-object p2, p2, Lcom/google/android/exoplayer2/ui/CaptionStyleCompat;->typeface:Landroid/graphics/Typeface;
 
-    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
+    invoke-virtual {p1, p2}, Landroid/text/TextPaint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
+    .line 26
     iput p3, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->defaultTextSizePx:F
 
+    .line 27
     iput p4, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cueTextSizePx:F
 
+    .line 28
     iput p5, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->bottomPaddingFraction:F
 
+    .line 29
     iput p7, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->parentLeft:I
 
+    .line 30
     iput p8, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->parentTop:I
 
+    .line 31
     iput p9, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->parentRight:I
 
+    .line 32
     iput p10, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->parentBottom:I
 
     if-eqz v0, :cond_5
 
+    .line 33
     iget-object p1, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cueText:Ljava/lang/CharSequence;
 
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 34
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->setupTextLayout()V
 
     goto :goto_2
 
+    .line 35
     :cond_5
     iget-object p1, p0, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->cueBitmap:Landroid/graphics/Bitmap;
 
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 36
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->setupBitmapLayout()V
 
+    .line 37
     :goto_2
     invoke-direct {p0, p6, v0}, Lcom/google/android/exoplayer2/ui/SubtitlePainter;->drawLayout(Landroid/graphics/Canvas;Z)V
 

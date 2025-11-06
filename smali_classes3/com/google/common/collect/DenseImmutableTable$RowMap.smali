@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/DenseImmutableTable$RowMap;
+.class public final Lcom/google/common/collect/DenseImmutableTable$RowMap;
 .super Lcom/google/common/collect/DenseImmutableTable$ImmutableArrayMap;
 .source "SourceFile"
 
@@ -24,7 +24,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/collect/DenseImmutableTable;
+.field public final synthetic this$0:Lcom/google/common/collect/DenseImmutableTable;
 
 
 # direct methods
@@ -108,6 +108,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/DenseImmutableTable$RowMap;->this$0:Lcom/google/common/collect/DenseImmutableTable;
 
     invoke-static {p0}, Lcom/google/common/collect/DenseImmutableTable;->access$600(Lcom/google/common/collect/DenseImmutableTable;)Lcom/google/common/collect/ImmutableMap;

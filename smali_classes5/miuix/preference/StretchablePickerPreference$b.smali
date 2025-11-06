@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lmiuix/preference/StretchablePickerPreference;->y(Lmiuix/slidingwidget/widget/SlidingButton;Lmiuix/pickerwidget/widget/DateTimePicker;)V
+    value = Lmiuix/preference/StretchablePickerPreference;->s(Lmiuix/slidingwidget/widget/SlidingButton;Lmiuix/pickerwidget/widget/DateTimePicker;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,18 +18,19 @@
 
 
 # instance fields
-.field public final synthetic a:Lmiuix/pickerwidget/widget/DateTimePicker;
+.field public final synthetic c:Lmiuix/pickerwidget/widget/DateTimePicker;
 
-.field public final synthetic b:Lmiuix/preference/StretchablePickerPreference;
+.field public final synthetic d:Lmiuix/preference/StretchablePickerPreference;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/preference/StretchablePickerPreference;Lmiuix/pickerwidget/widget/DateTimePicker;)V
     .locals 0
 
-    iput-object p1, p0, Lmiuix/preference/StretchablePickerPreference$b;->b:Lmiuix/preference/StretchablePickerPreference;
+    .line 1
+    iput-object p1, p0, Lmiuix/preference/StretchablePickerPreference$b;->d:Lmiuix/preference/StretchablePickerPreference;
 
-    iput-object p2, p0, Lmiuix/preference/StretchablePickerPreference$b;->a:Lmiuix/pickerwidget/widget/DateTimePicker;
+    iput-object p2, p0, Lmiuix/preference/StretchablePickerPreference$b;->c:Lmiuix/pickerwidget/widget/DateTimePicker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -39,13 +40,28 @@
 
 # virtual methods
 .method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .locals 0
+    .locals 2
 
-    iget-object p1, p0, Lmiuix/preference/StretchablePickerPreference$b;->b:Lmiuix/preference/StretchablePickerPreference;
+    .line 1
+    iget-object p1, p0, Lmiuix/preference/StretchablePickerPreference$b;->c:Lmiuix/pickerwidget/widget/DateTimePicker;
 
-    iget-object p0, p0, Lmiuix/preference/StretchablePickerPreference$b;->a:Lmiuix/pickerwidget/widget/DateTimePicker;
+    invoke-virtual {p1, p2}, Lmiuix/pickerwidget/widget/DateTimePicker;->setLunarMode(Z)V
 
-    invoke-static {p1, p0, p2}, Lmiuix/preference/StretchablePickerPreference;->x(Lmiuix/preference/StretchablePickerPreference;Lmiuix/pickerwidget/widget/DateTimePicker;Z)V
+    .line 2
+    iget-object p1, p0, Lmiuix/preference/StretchablePickerPreference$b;->d:Lmiuix/preference/StretchablePickerPreference;
+
+    iget-object v0, p0, Lmiuix/preference/StretchablePickerPreference$b;->c:Lmiuix/pickerwidget/widget/DateTimePicker;
+
+    invoke-virtual {v0}, Lmiuix/pickerwidget/widget/DateTimePicker;->getTimeInMillis()J
+
+    move-result-wide v0
+
+    invoke-static {p1, p2, v0, v1}, Lmiuix/preference/StretchablePickerPreference;->l(Lmiuix/preference/StretchablePickerPreference;ZJ)V
+
+    .line 3
+    iget-object p0, p0, Lmiuix/preference/StretchablePickerPreference$b;->d:Lmiuix/preference/StretchablePickerPreference;
+
+    invoke-static {p0, p2}, Lmiuix/preference/StretchablePickerPreference;->k(Lmiuix/preference/StretchablePickerPreference;Z)Z
 
     return-void
 .end method

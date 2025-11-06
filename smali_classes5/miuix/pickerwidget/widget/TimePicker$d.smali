@@ -18,14 +18,15 @@
 
 
 # instance fields
-.field public final synthetic a:Lmiuix/pickerwidget/widget/TimePicker;
+.field public final synthetic c:Lmiuix/pickerwidget/widget/TimePicker;
 
 
 # direct methods
 .method public constructor <init>(Lmiuix/pickerwidget/widget/TimePicker;)V
     .locals 0
 
-    iput-object p1, p0, Lmiuix/pickerwidget/widget/TimePicker$d;->a:Lmiuix/pickerwidget/widget/TimePicker;
+    .line 1
+    iput-object p1, p0, Lmiuix/pickerwidget/widget/TimePicker$d;->c:Lmiuix/pickerwidget/widget/TimePicker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,9 +38,11 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
+    .line 1
     invoke-virtual {p1}, Landroid/view/View;->requestFocus()Z
 
-    iget-object p1, p0, Lmiuix/pickerwidget/widget/TimePicker$d;->a:Lmiuix/pickerwidget/widget/TimePicker;
+    .line 2
+    iget-object p1, p0, Lmiuix/pickerwidget/widget/TimePicker$d;->c:Lmiuix/pickerwidget/widget/TimePicker;
 
     invoke-static {p1}, Lmiuix/pickerwidget/widget/TimePicker;->a(Lmiuix/pickerwidget/widget/TimePicker;)Z
 
@@ -49,11 +52,13 @@
 
     invoke-static {p1, v0}, Lmiuix/pickerwidget/widget/TimePicker;->b(Lmiuix/pickerwidget/widget/TimePicker;Z)Z
 
-    iget-object p1, p0, Lmiuix/pickerwidget/widget/TimePicker$d;->a:Lmiuix/pickerwidget/widget/TimePicker;
+    .line 3
+    iget-object p1, p0, Lmiuix/pickerwidget/widget/TimePicker$d;->c:Lmiuix/pickerwidget/widget/TimePicker;
 
     invoke-static {p1}, Lmiuix/pickerwidget/widget/TimePicker;->c(Lmiuix/pickerwidget/widget/TimePicker;)V
 
-    iget-object p0, p0, Lmiuix/pickerwidget/widget/TimePicker$d;->a:Lmiuix/pickerwidget/widget/TimePicker;
+    .line 4
+    iget-object p0, p0, Lmiuix/pickerwidget/widget/TimePicker$d;->c:Lmiuix/pickerwidget/widget/TimePicker;
 
     invoke-static {p0}, Lmiuix/pickerwidget/widget/TimePicker;->d(Lmiuix/pickerwidget/widget/TimePicker;)V
 

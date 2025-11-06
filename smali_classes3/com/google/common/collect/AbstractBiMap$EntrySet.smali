@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/AbstractBiMap$EntrySet;
+.class public Lcom/google/common/collect/AbstractBiMap$EntrySet;
 .super Lcom/google/common/collect/ForwardingSet;
 .source "SourceFile"
 
@@ -23,7 +23,7 @@
 
 
 # instance fields
-.field final esDelegate:Ljava/util/Set;
+.field public final esDelegate:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
@@ -33,7 +33,7 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Lcom/google/common/collect/AbstractBiMap;
+.field public final synthetic this$0:Lcom/google/common/collect/AbstractBiMap;
 
 
 # direct methods
@@ -73,6 +73,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/AbstractBiMap$EntrySet;->this$0:Lcom/google/common/collect/AbstractBiMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractBiMap;->clear()V
@@ -87,6 +88,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractBiMap$EntrySet;->delegate()Ljava/util/Set;
 
     move-result-object p0
@@ -108,6 +110,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ForwardingCollection;->standardContainsAll(Ljava/util/Collection;)Z
 
     move-result p0
@@ -165,6 +168,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/AbstractBiMap$EntrySet;->this$0:Lcom/google/common/collect/AbstractBiMap;
 
     invoke-virtual {p0}, Lcom/google/common/collect/AbstractBiMap;->entrySetIterator()Ljava/util/Iterator;
@@ -181,6 +185,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/AbstractBiMap$EntrySet;->esDelegate:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -195,9 +200,11 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     check-cast p1, Ljava/util/Map$Entry;
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/collect/AbstractBiMap$EntrySet;->this$0:Lcom/google/common/collect/AbstractBiMap;
 
     iget-object v0, v0, Lcom/google/common/collect/AbstractBiMap;->inverse:Lcom/google/common/collect/AbstractBiMap;
@@ -212,6 +219,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     iget-object p0, p0, Lcom/google/common/collect/AbstractBiMap$EntrySet;->esDelegate:Ljava/util/Set;
 
     invoke-interface {p0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
@@ -237,6 +245,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ForwardingSet;->standardRemoveAll(Ljava/util/Collection;)Z
 
     move-result p0
@@ -254,6 +263,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/ForwardingCollection;->standardRetainAll(Ljava/util/Collection;)Z
 
     move-result p0

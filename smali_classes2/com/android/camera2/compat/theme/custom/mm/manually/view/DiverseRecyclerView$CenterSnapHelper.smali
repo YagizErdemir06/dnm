@@ -15,13 +15,22 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/manually/view/DiverseRecyclerView;
+.field public final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/manually/view/DiverseRecyclerView;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera2/compat/theme/custom/mm/manually/view/DiverseRecyclerView;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/manually/view/DiverseRecyclerView$CenterSnapHelper;->this$0:Lcom/android/camera2/compat/theme/custom/mm/manually/view/DiverseRecyclerView;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/LinearSnapHelper;-><init>()V
@@ -41,7 +50,18 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "layoutManager",
+            "targetView"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/LinearSnapHelper;->calculateDistanceToFinalSnap(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;Landroid/view/View;)[I
 
     move-result-object p0
@@ -51,7 +71,18 @@
 
 .method public calculateScrollDistance(II)[I
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "velocityX",
+            "velocityY"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/SnapHelper;->calculateScrollDistance(II)[I
 
     move-result-object p0
@@ -61,7 +92,16 @@
 
 .method public findSnapView(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)Landroid/view/View;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "layoutManager"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/LinearSnapHelper;->findSnapView(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)Landroid/view/View;
 
     move-result-object p0
@@ -71,7 +111,20 @@
 
 .method public findTargetSnapPosition(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;II)I
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "layoutManager",
+            "velocityX",
+            "velocityY"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2, p3}, Landroidx/recyclerview/widget/LinearSnapHelper;->findTargetSnapPosition(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;II)I
 
     move-result p0

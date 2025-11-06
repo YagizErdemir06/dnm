@@ -8,7 +8,7 @@
 
 
 # instance fields
-.field protected volatile zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfo;
+.field public volatile zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfo;
 
 .field private volatile zzc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;
 
@@ -17,6 +17,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdo;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdo;
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeu;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdo;
@@ -27,6 +28,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,6 +45,7 @@
 
     return p0
 
+    .line 1
     :cond_0
     instance-of v0, p1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeu;
 
@@ -52,11 +55,13 @@
 
     return p0
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeu;
 
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeu;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfo;
 
+    .line 3
     iget-object v1, p1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeu;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfo;
 
     if-nez v0, :cond_3
@@ -65,6 +70,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_2
     invoke-virtual {p0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeu;->zzb()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;
 
@@ -88,6 +94,7 @@
 
     goto :goto_1
 
+    .line 5
     :cond_4
     invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -99,6 +106,7 @@
     :goto_1
     if-eqz v0, :cond_6
 
+    .line 6
     invoke-interface {v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfp;->zzab()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfo;
 
     move-result-object p0
@@ -113,15 +121,18 @@
 
     return p0
 
+    .line 7
     :cond_6
     invoke-interface {v1}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfp;->zzab()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfo;
 
     move-result-object p1
 
+    .line 8
     invoke-virtual {p0, p1}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeu;->zzd(Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfo;)V
 
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeu;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfo;
 
+    .line 9
     invoke-virtual {p0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -148,6 +159,7 @@
 
     check-cast p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcy;
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzcy;->zza:[B
 
     array-length p0, p0
@@ -176,6 +188,7 @@
 .method public final zzb()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeu;->zzc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;
 
     if-eqz v0, :cond_0
@@ -203,24 +216,29 @@
 
     if-nez v0, :cond_2
 
+    .line 2
     sget-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;
 
     iput-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeu;->zzc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;
 
     goto :goto_0
 
+    .line 3
     :cond_2
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeu;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfo;
 
+    .line 4
     invoke-interface {v0}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfo;->zzC()Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeu;->zzc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;
 
+    .line 5
     :goto_0
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeu;->zzc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;
 
+    .line 6
     monitor-exit p0
 
     return-object v0
@@ -228,6 +246,7 @@
     :catchall_0
     move-exception v0
 
+    .line 7
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -252,6 +271,7 @@
 .method public final zzd(Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfo;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeu;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfo;
 
     if-eqz v0, :cond_0
@@ -280,19 +300,23 @@
 
     goto :goto_0
 
+    .line 2
     :catch_0
     :try_start_2
     iput-object p1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeu;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzfo;
 
+    .line 3
     sget-object p1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;
 
     iput-object p1, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzeu;->zzc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzdb;
 
+    .line 4
     :goto_0
     monitor-exit p0
 
     return-void
 
+    .line 5
     :cond_1
     monitor-exit p0
 
@@ -301,6 +325,7 @@
     :catchall_0
     move-exception p1
 
+    .line 6
     monitor-exit p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0

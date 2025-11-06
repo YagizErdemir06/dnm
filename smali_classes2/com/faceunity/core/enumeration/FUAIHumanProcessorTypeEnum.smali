@@ -12,23 +12,25 @@
     }
 .end annotation
 
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
     bv = {
         0x1,
         0x0,
         0x3
     }
     d1 = {
-        "\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0006\u0008\u0086\u0001\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00000\u0001B\u000f\u0008\u0002\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004R\u0011\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0005\u0010\u0006j\u0002\u0008\u0007j\u0002\u0008\u0008\u00a8\u0006\t"
+        "\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\u0010\u0008\n\u0002\u0008\t\u0008\u0086\u0001\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00000\u0001B\u0011\u0008\u0002\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u00a2\u0006\u0004\u0008\u0007\u0010\u0008R\u0019\u0010\u0003\u001a\u00020\u00028\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0003\u0010\u0004\u001a\u0004\u0008\u0005\u0010\u0006j\u0002\u0008\tj\u0002\u0008\n\u00a8\u0006\u000b"
     }
     d2 = {
         "Lcom/faceunity/core/enumeration/FUAIHumanProcessorTypeEnum;",
         "",
-        "type",
         "",
-        "(Ljava/lang/String;II)V",
+        "type",
+        "I",
         "getType",
         "()I",
+        "<init>",
+        "(Ljava/lang/String;II)V",
         "AI_FUAI",
         "RIGGING_BVHINPUT_PROCESSOR",
         "lib_core_release"
@@ -68,6 +70,7 @@
 
     const/4 v3, 0x0
 
+    .line 1
     invoke-direct {v1, v2, v3, v3}, Lcom/faceunity/core/enumeration/FUAIHumanProcessorTypeEnum;-><init>(Ljava/lang/String;II)V
 
     sput-object v1, Lcom/faceunity/core/enumeration/FUAIHumanProcessorTypeEnum;->AI_FUAI:Lcom/faceunity/core/enumeration/FUAIHumanProcessorTypeEnum;
@@ -99,6 +102,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     iput p3, p0, Lcom/faceunity/core/enumeration/FUAIHumanProcessorTypeEnum;->type:I
@@ -139,6 +143,7 @@
 .method public final getType()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/faceunity/core/enumeration/FUAIHumanProcessorTypeEnum;->type:I
 
     return p0

@@ -1,4 +1,4 @@
-.class synthetic Lorg/greenrobot/greendao/async/AsyncOperationExecutor$1;
+.class public synthetic Lorg/greenrobot/greendao/async/AsyncOperationExecutor$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$org$greenrobot$greendao$async$AsyncOperation$OperationType:[I
+.field public static final synthetic $SwitchMap$org$greenrobot$greendao$async$AsyncOperation$OperationType:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;->values()[Lorg/greenrobot/greendao/async/AsyncOperation$OperationType;
 
     move-result-object v0

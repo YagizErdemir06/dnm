@@ -1,4 +1,4 @@
-.class Landroidx/core/view/MenuHostHelper$LifecycleContainer;
+.class public Landroidx/core/view/MenuHostHelper$LifecycleContainer;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final mLifecycle:Landroidx/lifecycle/Lifecycle;
+.field public final mLifecycle:Landroidx/lifecycle/Lifecycle;
 
 .field private mObserver:Landroidx/lifecycle/LifecycleEventObserver;
 
@@ -32,12 +32,16 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/core/view/MenuHostHelper$LifecycleContainer;->mLifecycle:Landroidx/lifecycle/Lifecycle;
 
+    .line 3
     iput-object p2, p0, Landroidx/core/view/MenuHostHelper$LifecycleContainer;->mObserver:Landroidx/lifecycle/LifecycleEventObserver;
 
+    .line 4
     invoke-virtual {p1, p2}, Landroidx/lifecycle/Lifecycle;->addObserver(Landroidx/lifecycle/LifecycleObserver;)V
 
     return-void
@@ -48,6 +52,7 @@
 .method public clearObservers()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Landroidx/core/view/MenuHostHelper$LifecycleContainer;->mLifecycle:Landroidx/lifecycle/Lifecycle;
 
     iget-object v1, p0, Landroidx/core/view/MenuHostHelper$LifecycleContainer;->mObserver:Landroidx/lifecycle/LifecycleEventObserver;
@@ -56,6 +61,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Landroidx/core/view/MenuHostHelper$LifecycleContainer;->mObserver:Landroidx/lifecycle/LifecycleEventObserver;
 
     return-void

@@ -13,6 +13,7 @@
         Lcom/google/android/exoplayer2/source/smoothstreaming/R$id;,
         Lcom/google/android/exoplayer2/source/smoothstreaming/R$integer;,
         Lcom/google/android/exoplayer2/source/smoothstreaming/R$layout;,
+        Lcom/google/android/exoplayer2/source/smoothstreaming/R$menu;,
         Lcom/google/android/exoplayer2/source/smoothstreaming/R$string;,
         Lcom/google/android/exoplayer2/source/smoothstreaming/R$style;,
         Lcom/google/android/exoplayer2/source/smoothstreaming/R$styleable;

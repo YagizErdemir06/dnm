@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/api/internal/zabl;
+.class public final Lcom/google/android/gms/common/api/internal/zabl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field final synthetic zaa:Lcom/google/android/gms/common/api/internal/GoogleApiManager;
+.field public final synthetic zaa:Lcom/google/android/gms/common/api/internal/GoogleApiManager;
 
 
 # direct methods
@@ -26,6 +26,7 @@
 .method public final onBackgroundStateChanged(Z)V
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zabl;->zaa:Lcom/google/android/gms/common/api/internal/GoogleApiManager;
 
     invoke-static {p0}, Lcom/google/android/gms/common/api/internal/GoogleApiManager;->zaf(Lcom/google/android/gms/common/api/internal/GoogleApiManager;)Landroid/os/Handler;
@@ -36,16 +37,17 @@
 
     move-result-object p0
 
-    const/4 v1, 0x1
-
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
+
+    const/4 v1, 0x1
 
     invoke-virtual {p0, v1, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object p0
 
+    .line 2
     invoke-virtual {v0, p0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     return-void

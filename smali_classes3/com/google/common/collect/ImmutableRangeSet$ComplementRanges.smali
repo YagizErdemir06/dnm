@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/ImmutableRangeSet$ComplementRanges;
+.class public final Lcom/google/common/collect/ImmutableRangeSet$ComplementRanges;
 .super Lcom/google/common/collect/ImmutableList;
 .source "SourceFile"
 
@@ -29,17 +29,19 @@
 
 .field private final size:I
 
-.field final synthetic this$0:Lcom/google/common/collect/ImmutableRangeSet;
+.field public final synthetic this$0:Lcom/google/common/collect/ImmutableRangeSet;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/ImmutableRangeSet;)V
     .locals 2
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/ImmutableRangeSet$ComplementRanges;->this$0:Lcom/google/common/collect/ImmutableRangeSet;
 
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableList;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/collect/ImmutableRangeSet;->access$000(Lcom/google/common/collect/ImmutableRangeSet;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object v0
@@ -58,6 +60,7 @@
 
     iput-boolean v0, p0, Lcom/google/common/collect/ImmutableRangeSet$ComplementRanges;->positiveBoundedBelow:Z
 
+    .line 3
     invoke-static {p1}, Lcom/google/common/collect/ImmutableRangeSet;->access$000(Lcom/google/common/collect/ImmutableRangeSet;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object v1
@@ -74,6 +77,7 @@
 
     iput-boolean v1, p0, Lcom/google/common/collect/ImmutableRangeSet$ComplementRanges;->positiveBoundedAbove:Z
 
+    .line 4
     invoke-static {p1}, Lcom/google/common/collect/ImmutableRangeSet;->access$000(Lcom/google/common/collect/ImmutableRangeSet;)Lcom/google/common/collect/ImmutableList;
 
     move-result-object p1
@@ -93,6 +97,7 @@
 
     add-int/lit8 p1, p1, 0x1
 
+    .line 5
     :cond_1
     iput p1, p0, Lcom/google/common/collect/ImmutableRangeSet$ComplementRanges;->size:I
 
@@ -237,6 +242,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/collect/ImmutableRangeSet$ComplementRanges;->size:I
 
     return p0

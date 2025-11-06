@@ -1,4 +1,4 @@
-.class synthetic Lcom/google/android/exoplayer2/ui/WebViewSubtitleOutput$2;
+.class public synthetic Lcom/google/android/exoplayer2/ui/WebViewSubtitleOutput$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$android$text$Layout$Alignment:[I
+.field public static final synthetic $SwitchMap$android$text$Layout$Alignment:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Landroid/text/Layout$Alignment;->values()[Landroid/text/Layout$Alignment;
 
     move-result-object v0
@@ -35,7 +36,7 @@
     :try_start_0
     sget-object v1, Landroid/text/Layout$Alignment;->ALIGN_NORMAL:Landroid/text/Layout$Alignment;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Landroid/text/Layout$Alignment;->ordinal()I
 
     move-result v1
 
@@ -51,7 +52,7 @@
 
     sget-object v1, Landroid/text/Layout$Alignment;->ALIGN_OPPOSITE:Landroid/text/Layout$Alignment;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Landroid/text/Layout$Alignment;->ordinal()I
 
     move-result v1
 
@@ -67,7 +68,7 @@
 
     sget-object v1, Landroid/text/Layout$Alignment;->ALIGN_CENTER:Landroid/text/Layout$Alignment;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1}, Landroid/text/Layout$Alignment;->ordinal()I
 
     move-result v1
 

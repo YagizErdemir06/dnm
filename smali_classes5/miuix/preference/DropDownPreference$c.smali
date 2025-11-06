@@ -18,18 +18,15 @@
 
 
 # instance fields
-.field public final synthetic a:Landroidx/preference/PreferenceViewHolder;
-
-.field public final synthetic b:Lmiuix/preference/DropDownPreference;
+.field public final synthetic c:Lmiuix/preference/DropDownPreference;
 
 
 # direct methods
-.method public constructor <init>(Lmiuix/preference/DropDownPreference;Landroidx/preference/PreferenceViewHolder;)V
+.method public constructor <init>(Lmiuix/preference/DropDownPreference;)V
     .locals 0
 
-    iput-object p1, p0, Lmiuix/preference/DropDownPreference$c;->b:Lmiuix/preference/DropDownPreference;
-
-    iput-object p2, p0, Lmiuix/preference/DropDownPreference$c;->a:Landroidx/preference/PreferenceViewHolder;
+    .line 1
+    iput-object p1, p0, Lmiuix/preference/DropDownPreference$c;->c:Lmiuix/preference/DropDownPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -39,27 +36,22 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 1
 
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference$c;->b:Lmiuix/preference/DropDownPreference;
+    .line 1
+    iget-object v0, p0, Lmiuix/preference/DropDownPreference$c;->c:Lmiuix/preference/DropDownPreference;
 
-    iget-object v1, p0, Lmiuix/preference/DropDownPreference$c;->a:Landroidx/preference/PreferenceViewHolder;
-
-    invoke-static {v0, v1}, Lmiuix/preference/DropDownPreference;->h(Lmiuix/preference/DropDownPreference;Landroidx/preference/PreferenceViewHolder;)V
-
-    iget-object v0, p0, Lmiuix/preference/DropDownPreference$c;->b:Lmiuix/preference/DropDownPreference;
-
-    invoke-static {v0}, Lmiuix/preference/DropDownPreference;->k(Lmiuix/preference/DropDownPreference;)Lmiuix/appcompat/widget/Spinner;
+    invoke-static {v0}, Lmiuix/preference/DropDownPreference;->e(Lmiuix/preference/DropDownPreference;)Lmiuix/appcompat/widget/Spinner;
 
     move-result-object v0
 
-    iget-object p0, p0, Lmiuix/preference/DropDownPreference$c;->b:Lmiuix/preference/DropDownPreference;
+    iget-object p0, p0, Lmiuix/preference/DropDownPreference$c;->c:Lmiuix/preference/DropDownPreference;
 
-    invoke-static {p0}, Lmiuix/preference/DropDownPreference;->i(Lmiuix/preference/DropDownPreference;)Landroid/widget/AdapterView$OnItemSelectedListener;
+    invoke-static {p0}, Lmiuix/preference/DropDownPreference;->d(Lmiuix/preference/DropDownPreference;)Landroid/widget/AdapterView$OnItemSelectedListener;
 
     move-result-object p0
 
-    invoke-virtual {v0, p0}, Landroid/widget/AdapterView;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
+    invoke-virtual {v0, p0}, Landroid/widget/Spinner;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
 
     return-void
 .end method

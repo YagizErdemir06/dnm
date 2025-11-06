@@ -13,13 +13,13 @@
 
 
 # static fields
-.field static final ATTEMPT_NUMBER:Ljava/lang/String; = "attemptNumber"
+.field public static final ATTEMPT_NUMBER:Ljava/lang/String; = "attemptNumber"
 
-.field static final BACKEND_NAME:Ljava/lang/String; = "backendName"
+.field public static final BACKEND_NAME:Ljava/lang/String; = "backendName"
 
-.field static final EVENT_PRIORITY:Ljava/lang/String; = "priority"
+.field public static final EVENT_PRIORITY:Ljava/lang/String; = "priority"
 
-.field static final EXTRAS:Ljava/lang/String; = "extras"
+.field public static final EXTRAS:Ljava/lang/String; = "extras"
 
 .field private static final LOG_TAG:Ljava/lang/String; = "JobInfoScheduler"
 
@@ -36,12 +36,16 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/JobInfoScheduler;->context:Landroid/content/Context;
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/JobInfoScheduler;->eventStore:Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStore;
 
+    .line 4
     iput-object p3, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/JobInfoScheduler;->config:Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig;
 
     return-void
@@ -50,6 +54,7 @@
 .method private isJobServiceOn(Landroid/app/job/JobScheduler;II)Z
     .locals 3
 
+    .line 1
     invoke-virtual {p1}, Landroid/app/job/JobScheduler;->getAllPendingJobs()Ljava/util/List;
 
     move-result-object p0
@@ -73,6 +78,7 @@
 
     check-cast p1, Landroid/app/job/JobInfo;
 
+    .line 2
     invoke-virtual {p1}, Landroid/app/job/JobInfo;->getExtras()Landroid/os/PersistableBundle;
 
     move-result-object v1
@@ -83,6 +89,7 @@
 
     move-result v1
 
+    .line 3
     invoke-virtual {p1}, Landroid/app/job/JobInfo;->getId()I
 
     move-result p1
@@ -104,10 +111,12 @@
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/zip/Adler32;
 
     invoke-direct {v0}, Ljava/util/zip/Adler32;-><init>()V
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/JobInfoScheduler;->context:Landroid/content/Context;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -126,6 +135,7 @@
 
     invoke-virtual {v0, p0}, Ljava/util/zip/Adler32;->update([B)V
 
+    .line 3
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getBackendName()Ljava/lang/String;
 
     move-result-object p0
@@ -142,10 +152,12 @@
 
     const/4 p0, 0x4
 
+    .line 4
     invoke-static {p0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object p0
 
+    .line 5
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getPriority()Lcom/google/android/datatransport/Priority;
 
     move-result-object v1
@@ -158,24 +170,29 @@
 
     move-result-object p0
 
+    .line 6
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object p0
 
+    .line 7
     invoke-virtual {v0, p0}, Ljava/util/zip/Adler32;->update([B)V
 
+    .line 8
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getExtras()[B
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 9
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getExtras()[B
 
     move-result-object p0
 
     invoke-virtual {v0, p0}, Ljava/util/zip/Adler32;->update([B)V
 
+    .line 10
     :cond_0
     invoke-virtual {v0}, Ljava/util/zip/Adler32;->getValue()J
 
@@ -283,14 +300,14 @@
     .line 13
     invoke-virtual {v0, v4, p2}, Landroid/os/PersistableBundle;->putInt(Ljava/lang/String;I)V
 
-    const-string v4, "backendName"
-
     .line 14
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getBackendName()Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v4
 
-    invoke-virtual {v0, v4, v5}, Landroid/os/PersistableBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v5, "backendName"
+
+    invoke-virtual {v0, v5, v4}, Landroid/os/PersistableBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 15
     invoke-virtual {p1}, Lcom/google/android/datatransport/runtime/TransportContext;->getPriority()Lcom/google/android/datatransport/Priority;
@@ -346,6 +363,8 @@
 
     aput-object v2, v0, v4
 
+    const/4 v2, 0x2
+
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/JobInfoScheduler;->config:Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/SchedulerConfig;
 
     .line 20
@@ -361,9 +380,7 @@
 
     move-result-object p0
 
-    const/4 p1, 0x2
-
-    aput-object p0, v0, p1
+    aput-object p0, v0, v2
 
     const/4 p0, 0x3
 

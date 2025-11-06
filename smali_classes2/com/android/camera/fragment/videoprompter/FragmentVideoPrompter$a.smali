@@ -18,14 +18,23 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter;
+.field public final synthetic c:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$a;->a:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$a;->c:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,12 +49,21 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object p1
 
-    iget-object p0, p0, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$a;->a:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter;
+    iget-object p0, p0, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$a;->c:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter;
 
     invoke-static {p0}, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter;->access$000(Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter;)Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
@@ -62,12 +80,21 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object p1
 
-    iget-object p0, p0, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$a;->a:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter;
+    iget-object p0, p0, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter$a;->c:Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter;
 
     invoke-static {p0}, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter;->access$000(Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter;)Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 

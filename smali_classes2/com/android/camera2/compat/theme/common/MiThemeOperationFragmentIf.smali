@@ -7,6 +7,7 @@
 .method public getApertureAdjustFragment()Ljava/lang/String;
     .locals 0
 
+    .line 1
     const-class p0, Lcom/android/camera/fragment/apertureadjust/FragmentApertureAdjust;
 
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -19,6 +20,7 @@
 .method public getCineManuallyExtraFragment()Ljava/lang/String;
     .locals 0
 
+    .line 1
     const-class p0, Lcom/android/camera/fragment/manually/FragmentManuallyExtra;
 
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -31,6 +33,7 @@
 .method public getCineManuallyFragment()Ljava/lang/String;
     .locals 0
 
+    .line 1
     const-class p0, Lcom/android/camera/fragment/manually/FragmentManually;
 
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -51,6 +54,7 @@
 .method public getDualCameraAdjustFragment()Ljava/lang/String;
     .locals 0
 
+    .line 1
     const-class p0, Lcom/android/camera/fragment/dual/FragmentDualCameraAdjust;
 
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -63,6 +67,7 @@
 .method public getFastMotionProExtraFragment()Ljava/lang/String;
     .locals 0
 
+    .line 1
     const-class p0, Lcom/android/camera/fragment/fastmotion/FragmentFastMotionProExtra;
 
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -75,6 +80,7 @@
 .method public getMainContentFragment()Ljava/lang/String;
     .locals 0
 
+    .line 1
     const-class p0, Lcom/android/camera/fragment/FragmentMainContent;
 
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -87,6 +93,7 @@
 .method public getManualPictureStyleFragment()Ljava/lang/String;
     .locals 0
 
+    .line 1
     const-class p0, Lcom/android/camera/fragment/manually/FragmentManualPictureStyle;
 
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -99,6 +106,7 @@
 .method public getManuallyExtraFragment()Ljava/lang/String;
     .locals 0
 
+    .line 1
     const-class p0, Lcom/android/camera/fragment/manually/FragmentManuallyExtra;
 
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -111,6 +119,7 @@
 .method public getManuallyFragment()Ljava/lang/String;
     .locals 0
 
+    .line 1
     const-class p0, Lcom/android/camera/fragment/manually/FragmentManually;
 
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -123,6 +132,7 @@
 .method public getMasterFilterFragment()Ljava/lang/String;
     .locals 0
 
+    .line 1
     const-class p0, Lcom/android/camera/fragment/FragmentMasterFilter;
 
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -135,6 +145,7 @@
 .method public getPrivacyWatermarkNewBieDialogFragment()Ljava/lang/String;
     .locals 0
 
+    .line 1
     const-class p0, Lcom/android/camera/fragment/dialog/PrivacyWatermarkNewbieDialogFragment;
 
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -147,6 +158,7 @@
 .method public getVideoPrompterAdjustFragment()Ljava/lang/String;
     .locals 0
 
+    .line 1
     const-class p0, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompterAdjust;
 
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -159,6 +171,7 @@
 .method public getVideoPrompterEditFragment()Ljava/lang/String;
     .locals 0
 
+    .line 1
     const-class p0, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompterEdit;
 
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -171,6 +184,7 @@
 .method public getVideoPrompterFragment()Ljava/lang/String;
     .locals 0
 
+    .line 1
     const-class p0, Lcom/android/camera/fragment/videoprompter/FragmentVideoPrompter;
 
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -183,6 +197,7 @@
 .method public getZoomViewFragment()Ljava/lang/String;
     .locals 0
 
+    .line 1
     const-class p0, Lcom/android/camera/fragment/modeselector/FragmentZoomView;
 
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -195,11 +210,12 @@
 .method public isNeedTrackFocusHintShow()Z
     .locals 0
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 1
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lid/b;->c4()Z
+    invoke-virtual {p0}, Ld/k/a/b;->R3()Z
 
     move-result p0
 

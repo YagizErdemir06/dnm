@@ -31,6 +31,7 @@
 .method public static constructor <clinit>()V
     .locals 11
 
+    .line 1
     new-instance v0, Lio/reactivex/BackpressureStrategy;
 
     const-string v1, "MISSING"
@@ -41,6 +42,7 @@
 
     sput-object v0, Lio/reactivex/BackpressureStrategy;->MISSING:Lio/reactivex/BackpressureStrategy;
 
+    .line 2
     new-instance v1, Lio/reactivex/BackpressureStrategy;
 
     const-string v3, "ERROR"
@@ -51,6 +53,7 @@
 
     sput-object v1, Lio/reactivex/BackpressureStrategy;->ERROR:Lio/reactivex/BackpressureStrategy;
 
+    .line 3
     new-instance v3, Lio/reactivex/BackpressureStrategy;
 
     const-string v5, "BUFFER"
@@ -61,6 +64,7 @@
 
     sput-object v3, Lio/reactivex/BackpressureStrategy;->BUFFER:Lio/reactivex/BackpressureStrategy;
 
+    .line 4
     new-instance v5, Lio/reactivex/BackpressureStrategy;
 
     const-string v7, "DROP"
@@ -71,6 +75,7 @@
 
     sput-object v5, Lio/reactivex/BackpressureStrategy;->DROP:Lio/reactivex/BackpressureStrategy;
 
+    .line 5
     new-instance v7, Lio/reactivex/BackpressureStrategy;
 
     const-string v9, "LATEST"
@@ -95,6 +100,7 @@
 
     aput-object v7, v9, v10
 
+    .line 6
     sput-object v9, Lio/reactivex/BackpressureStrategy;->$VALUES:[Lio/reactivex/BackpressureStrategy;
 
     return-void
@@ -102,12 +108,8 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -116,6 +118,7 @@
 .method public static valueOf(Ljava/lang/String;)Lio/reactivex/BackpressureStrategy;
     .locals 1
 
+    .line 1
     const-class v0, Lio/reactivex/BackpressureStrategy;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -130,6 +133,7 @@
 .method public static values()[Lio/reactivex/BackpressureStrategy;
     .locals 1
 
+    .line 1
     sget-object v0, Lio/reactivex/BackpressureStrategy;->$VALUES:[Lio/reactivex/BackpressureStrategy;
 
     invoke-virtual {v0}, [Lio/reactivex/BackpressureStrategy;->clone()Ljava/lang/Object;

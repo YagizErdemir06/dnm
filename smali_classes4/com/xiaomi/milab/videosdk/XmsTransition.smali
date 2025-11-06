@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field protected mParent:Lcom/xiaomi/milab/videosdk/XmsTrack;
+.field public mParent:Lcom/xiaomi/milab/videosdk/XmsTrack;
 
 
 # direct methods
@@ -19,8 +19,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/xiaomi/milab/videosdk/XmsTransition;->mParent:Lcom/xiaomi/milab/videosdk/XmsTrack;
 
     return-void

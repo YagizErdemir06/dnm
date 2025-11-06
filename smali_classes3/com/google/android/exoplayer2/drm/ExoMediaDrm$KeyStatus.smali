@@ -24,10 +24,13 @@
 .method public constructor <init>(I[B)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/drm/ExoMediaDrm$KeyStatus;->statusCode:I
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/exoplayer2/drm/ExoMediaDrm$KeyStatus;->keyId:[B
 
     return-void
@@ -38,6 +41,7 @@
 .method public getKeyId()[B
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/drm/ExoMediaDrm$KeyStatus;->keyId:[B
 
     return-object p0
@@ -46,6 +50,7 @@
 .method public getStatusCode()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/drm/ExoMediaDrm$KeyStatus;->statusCode:I
 
     return p0

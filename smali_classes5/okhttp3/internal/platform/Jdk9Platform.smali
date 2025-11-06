@@ -14,30 +14,29 @@
     value = "SMAP\nJdk9Platform.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Jdk9Platform.kt\nokhttp3/internal/platform/Jdk9Platform\n+ 2 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n*L\n1#1,89:1\n37#2:90\n36#2,3:91\n*S KotlinDebug\n*F\n+ 1 Jdk9Platform.kt\nokhttp3/internal/platform/Jdk9Platform\n*L\n36#1:90\n36#1:91,3\n*E\n"
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
     d1 = {
-        "\u00008\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\u0008\u0016\u0018\u0000 \u00132\u00020\u0001:\u0001\u0013B\u0007\u00a2\u0006\u0004\u0008\u0011\u0010\u0012J-\u0010\u000b\u001a\u00020\n2\u0006\u0010\u0003\u001a\u00020\u00022\u0008\u0010\u0005\u001a\u0004\u0018\u00010\u00042\u0011\u0010\t\u001a\r\u0012\t\u0012\u00070\u0007\u00a2\u0006\u0002\u0008\u00080\u0006H\u0017J\u0012\u0010\u000c\u001a\u0004\u0018\u00010\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0017J\u0012\u0010\u0010\u001a\u0004\u0018\u00010\u000f2\u0006\u0010\u000e\u001a\u00020\rH\u0016\u00a8\u0006\u0014"
+        "\u0000<\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0008\u0016\u0018\u0000 \u00122\u00020\u0001:\u0001\u0012B\u0005\u00a2\u0006\u0002\u0010\u0002J-\u0010\u0003\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u00062\u0008\u0010\u0007\u001a\u0004\u0018\u00010\u00082\u0011\u0010\t\u001a\r\u0012\t\u0012\u00070\u000b\u00a2\u0006\u0002\u0008\u000c0\nH\u0017J\u0012\u0010\r\u001a\u0004\u0018\u00010\u00082\u0006\u0010\u0005\u001a\u00020\u0006H\u0017J\u0012\u0010\u000e\u001a\u0004\u0018\u00010\u000f2\u0006\u0010\u0010\u001a\u00020\u0011H\u0016\u00a8\u0006\u0013"
     }
     d2 = {
         "Lokhttp3/internal/platform/Jdk9Platform;",
         "Lokhttp3/internal/platform/Platform;",
-        "Ljavax/net/ssl/SSLSocket;",
-        "sslSocket",
+        "()V",
+        "configureTlsExtensions",
         "",
+        "sslSocket",
+        "Ljavax/net/ssl/SSLSocket;",
         "hostname",
         "",
-        "Lokhttp3/Protocol;",
-        "Lin/m;",
         "protocols",
-        "Lnm/l2;",
-        "configureTlsExtensions",
+        "",
+        "Lokhttp3/Protocol;",
+        "Lkotlin/jvm/JvmSuppressWildcards;",
         "getSelectedProtocol",
-        "Ljavax/net/ssl/SSLSocketFactory;",
-        "sslSocketFactory",
-        "Ljavax/net/ssl/X509TrustManager;",
         "trustManager",
-        "<init>",
-        "()V",
+        "Ljavax/net/ssl/X509TrustManager;",
+        "sslSocketFactory",
+        "Ljavax/net/ssl/SSLSocketFactory;",
         "Companion",
         "okhttp"
     }
@@ -47,12 +46,13 @@
         0x6,
         0x0
     }
+    xi = 0x30
 .end annotation
 
 
 # static fields
 .field public static final Companion:Lokhttp3/internal/platform/Jdk9Platform$Companion;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
@@ -67,12 +67,13 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lokhttp3/internal/platform/Jdk9Platform$Companion;-><init>(Lkotlin/jvm/internal/w;)V
+    invoke-direct {v0, v1}, Lokhttp3/internal/platform/Jdk9Platform$Companion;-><init>(Lh/d3/x/w;)V
 
     sput-object v0, Lokhttp3/internal/platform/Jdk9Platform;->Companion:Lokhttp3/internal/platform/Jdk9Platform$Companion;
 
     const-string v0, "java.specification.version"
 
+    .line 1
     invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -81,8 +82,9 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
-    invoke-static {v0}, Lxn/a0;->X0(Ljava/lang/String;)Ljava/lang/Integer;
+    invoke-static {v0}, Lh/m3/a0;->X0(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v1
 
@@ -93,6 +95,7 @@
 
     if-eqz v1, :cond_2
 
+    .line 3
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
@@ -109,6 +112,7 @@
 
     goto :goto_1
 
+    .line 4
     :cond_2
     :try_start_0
     const-class v1, Ljavax/net/ssl/SSLSocket;
@@ -117,10 +121,12 @@
 
     new-array v4, v2, [Ljava/lang/Class;
 
+    .line 5
     invoke-virtual {v1, v3, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 6
     :goto_1
     sput-boolean v0, Lokhttp3/internal/platform/Jdk9Platform;->isAvailable:Z
 
@@ -130,6 +136,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lokhttp3/internal/platform/Platform;-><init>()V
 
     return-void
@@ -138,6 +145,7 @@
 .method public static final synthetic access$isAvailable$cp()Z
     .locals 1
 
+    .line 1
     sget-boolean v0, Lokhttp3/internal/platform/Jdk9Platform;->isAvailable:Z
 
     return v0
@@ -148,15 +156,15 @@
 .method public configureTlsExtensions(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
     .locals 0
     .param p1    # Ljavax/net/ssl/SSLSocket;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
     .param p3    # Ljava/util/List;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
@@ -175,59 +183,55 @@
 
     const-string p0, "sslSocket"
 
-    invoke-static {p1, p0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string p0, "protocols"
 
-    invoke-static {p3, p0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-virtual {p1}, Ljavax/net/ssl/SSLSocket;->getSSLParameters()Ljavax/net/ssl/SSLParameters;
 
     move-result-object p0
 
+    .line 2
     sget-object p2, Lokhttp3/internal/platform/Platform;->Companion:Lokhttp3/internal/platform/Platform$Companion;
 
     invoke-virtual {p2, p3}, Lokhttp3/internal/platform/Platform$Companion;->alpnProtocolNames(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p2
 
-    check-cast p2, Ljava/util/Collection;
-
     const/4 p3, 0x0
 
     new-array p3, p3, [Ljava/lang/String;
 
+    .line 3
     invoke-interface {p2, p3}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p2
 
-    if-eqz p2, :cond_0
+    const-string p3, "null cannot be cast to non-null type kotlin.Array<T of kotlin.collections.ArraysKt__ArraysJVMKt.toTypedArray>"
+
+    invoke-static {p2, p3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     check-cast p2, [Ljava/lang/String;
 
+    .line 4
     invoke-virtual {p0, p2}, Ljavax/net/ssl/SSLParameters;->setApplicationProtocols([Ljava/lang/String;)V
 
+    .line 5
     invoke-virtual {p1, p0}, Ljavax/net/ssl/SSLSocket;->setSSLParameters(Ljavax/net/ssl/SSLParameters;)V
 
     return-void
-
-    :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string p1, "null cannot be cast to non-null type kotlin.Array<T of kotlin.collections.ArraysKt__ArraysJVMKt.toTypedArray>"
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method
 
 .method public getSelectedProtocol(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
     .locals 1
     .param p1    # Ljavax/net/ssl/SSLSocket;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
     .annotation build Lokhttp3/internal/SuppressSignatureCheck;
@@ -235,10 +239,11 @@
 
     const-string p0, "sslSocket"
 
-    invoke-static {p1, p0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
+    .line 1
     :try_start_0
     invoke-virtual {p1}, Ljavax/net/ssl/SSLSocket;->getApplicationProtocol()Ljava/lang/String;
 
@@ -253,7 +258,8 @@
     :cond_0
     const-string v0, ""
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .line 2
+    invoke-static {p1, v0}, Lh/d3/x/l0;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
     :try_end_0
@@ -275,16 +281,17 @@
 .method public trustManager(Ljavax/net/ssl/SSLSocketFactory;)Ljavax/net/ssl/X509TrustManager;
     .locals 0
     .param p1    # Ljavax/net/ssl/SSLSocketFactory;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
     const-string p0, "sslSocketFactory"
 
-    invoke-static {p1, p0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string p1, "clientBuilder.sslSocketFactory(SSLSocketFactory) not supported on JDK 9+"

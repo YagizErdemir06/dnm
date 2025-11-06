@@ -1,4 +1,4 @@
-.class final Lcom/bumptech/glide/load/ImageHeaderParserUtils$2;
+.class public final Lcom/bumptech/glide/load/ImageHeaderParserUtils$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic val$buffer:Ljava/nio/ByteBuffer;
+.field public final synthetic val$buffer:Ljava/nio/ByteBuffer;
 
 
 # direct methods
 .method public constructor <init>(Ljava/nio/ByteBuffer;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/bumptech/glide/load/ImageHeaderParserUtils$2;->val$buffer:Ljava/nio/ByteBuffer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,6 +43,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/ImageHeaderParserUtils$2;->val$buffer:Ljava/nio/ByteBuffer;
 
     invoke-interface {p1, p0}, Lcom/bumptech/glide/load/ImageHeaderParser;->getType(Ljava/nio/ByteBuffer;)Lcom/bumptech/glide/load/ImageHeaderParser$ImageType;

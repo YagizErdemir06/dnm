@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Maps$4;
+.class public Lcom/google/common/collect/Maps$4;
 .super Lcom/google/common/collect/ForwardingSet;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic val$set:Ljava/util/Set;
+.field public final synthetic val$set:Ljava/util/Set;
 
 
 # direct methods
 .method public constructor <init>(Ljava/util/Set;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/collect/Maps$4;->val$set:Ljava/util/Set;
 
     invoke-direct {p0}, Lcom/google/common/collect/ForwardingSet;-><init>()V
@@ -50,6 +51,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -67,6 +69,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V

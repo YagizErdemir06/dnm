@@ -1,4 +1,4 @@
-.class Landroidx/customview/widget/ViewDragHelper$2;
+.class public Landroidx/customview/widget/ViewDragHelper$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/customview/widget/ViewDragHelper;
+.field public final synthetic this$0:Landroidx/customview/widget/ViewDragHelper;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/customview/widget/ViewDragHelper;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/customview/widget/ViewDragHelper$2;->this$0:Landroidx/customview/widget/ViewDragHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,6 +38,7 @@
 .method public run()V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Landroidx/customview/widget/ViewDragHelper$2;->this$0:Landroidx/customview/widget/ViewDragHelper;
 
     const/4 v0, 0x0

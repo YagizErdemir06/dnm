@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/internal/mlkit_common/zzpd;
+.class public final Lcom/google/android/gms/internal/mlkit_common/zzpd;
 .super Lcom/google/android/gms/internal/mlkit_common/zzpp;
 .source "SourceFile"
 
@@ -53,6 +53,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/android/gms/internal/mlkit_common/zzpp;
 
@@ -60,15 +61,17 @@
 
     if-eqz v1, :cond_1
 
+    .line 2
     check-cast p1, Lcom/google/android/gms/internal/mlkit_common/zzpp;
 
     iget-object v1, p0, Lcom/google/android/gms/internal/mlkit_common/zzpd;->zza:Lcom/google/android/gms/internal/mlkit_common/zzlc;
 
+    .line 3
     invoke-virtual {p1}, Lcom/google/android/gms/internal/mlkit_common/zzpp;->zzc()Lcom/google/android/gms/internal/mlkit_common/zzlc;
 
     move-result-object v3
 
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -76,6 +79,7 @@
 
     iget-object v1, p0, Lcom/google/android/gms/internal/mlkit_common/zzpd;->zzb:Ljava/lang/String;
 
+    .line 4
     invoke-virtual {p1}, Lcom/google/android/gms/internal/mlkit_common/zzpp;->zze()Ljava/lang/String;
 
     move-result-object v3
@@ -88,6 +92,7 @@
 
     iget-boolean v1, p0, Lcom/google/android/gms/internal/mlkit_common/zzpd;->zzc:Z
 
+    .line 5
     invoke-virtual {p1}, Lcom/google/android/gms/internal/mlkit_common/zzpp;->zzg()Z
 
     move-result v3
@@ -96,6 +101,7 @@
 
     iget-boolean v1, p0, Lcom/google/android/gms/internal/mlkit_common/zzpd;->zzd:Z
 
+    .line 6
     invoke-virtual {p1}, Lcom/google/android/gms/internal/mlkit_common/zzpp;->zzf()Z
 
     move-result v3
@@ -104,11 +110,12 @@
 
     iget-object v1, p0, Lcom/google/android/gms/internal/mlkit_common/zzpd;->zze:Lcom/google/mlkit/common/sdkinternal/ModelType;
 
+    .line 7
     invoke-virtual {p1}, Lcom/google/android/gms/internal/mlkit_common/zzpp;->zzb()Lcom/google/mlkit/common/sdkinternal/ModelType;
 
     move-result-object v3
 
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -116,11 +123,12 @@
 
     iget-object v1, p0, Lcom/google/android/gms/internal/mlkit_common/zzpd;->zzf:Lcom/google/android/gms/internal/mlkit_common/zzli;
 
+    .line 8
     invoke-virtual {p1}, Lcom/google/android/gms/internal/mlkit_common/zzpp;->zzd()Lcom/google/android/gms/internal/mlkit_common/zzli;
 
     move-result-object v3
 
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Ljava/lang/Enum;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -128,6 +136,7 @@
 
     iget p0, p0, Lcom/google/android/gms/internal/mlkit_common/zzpd;->zzg:I
 
+    .line 9
     invoke-virtual {p1}, Lcom/google/android/gms/internal/mlkit_common/zzpp;->zza()I
 
     move-result p1
@@ -143,9 +152,10 @@
 .method public final hashCode()I
     .locals 7
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_common/zzpd;->zza:Lcom/google/android/gms/internal/mlkit_common/zzlc;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0}, Ljava/lang/Enum;->hashCode()I
 
     move-result v0
 
@@ -155,6 +165,7 @@
 
     iget-object v2, p0, Lcom/google/android/gms/internal/mlkit_common/zzpd;->zzb:Ljava/lang/String;
 
+    .line 2
     invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
 
     move-result v2
@@ -193,7 +204,8 @@
     :goto_1
     iget-object v4, p0, Lcom/google/android/gms/internal/mlkit_common/zzpd;->zze:Lcom/google/mlkit/common/sdkinternal/ModelType;
 
-    invoke-virtual {v4}, Ljava/lang/Object;->hashCode()I
+    .line 3
+    invoke-virtual {v4}, Ljava/lang/Enum;->hashCode()I
 
     move-result v4
 
@@ -211,7 +223,8 @@
 
     iget-object v2, p0, Lcom/google/android/gms/internal/mlkit_common/zzpd;->zzf:Lcom/google/android/gms/internal/mlkit_common/zzli;
 
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    .line 4
+    invoke-virtual {v2}, Ljava/lang/Enum;->hashCode()I
 
     move-result v2
 
@@ -231,6 +244,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 8
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/internal/mlkit_common/zzpd;->zza:Lcom/google/android/gms/internal/mlkit_common/zzlc;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;

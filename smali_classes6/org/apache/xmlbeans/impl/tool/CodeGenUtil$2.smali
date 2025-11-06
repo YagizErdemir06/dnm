@@ -1,4 +1,4 @@
-.class Lorg/apache/xmlbeans/impl/tool/CodeGenUtil$2;
+.class public Lorg/apache/xmlbeans/impl/tool/CodeGenUtil$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,6 +18,7 @@
 .method public constructor <init>(Lorg/apache/xmlbeans/impl/tool/CodeGenUtil$ThreadedReader;Ljava/io/BufferedReader;Ljava/lang/StringBuffer;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/tool/CodeGenUtil$2;->this$0:Lorg/apache/xmlbeans/impl/tool/CodeGenUtil$ThreadedReader;
 
     iput-object p2, p0, Lorg/apache/xmlbeans/impl/tool/CodeGenUtil$2;->val$reader:Ljava/io/BufferedReader;
@@ -34,6 +35,7 @@
 .method public run()V
     .locals 3
 
+    .line 1
     :goto_0
     :try_start_0
     iget-object v0, p0, Lorg/apache/xmlbeans/impl/tool/CodeGenUtil$2;->val$reader:Ljava/io/BufferedReader;
@@ -44,6 +46,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v1, p0, Lorg/apache/xmlbeans/impl/tool/CodeGenUtil$2;->val$output:Ljava/lang/StringBuffer;
 
     new-instance v2, Ljava/lang/StringBuffer;

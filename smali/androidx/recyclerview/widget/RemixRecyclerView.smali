@@ -1,4 +1,4 @@
-.class abstract Landroidx/recyclerview/widget/RemixRecyclerView;
+.class public abstract Landroidx/recyclerview/widget/RemixRecyclerView;
 .super Landroidx/recyclerview/widget/RecyclerView;
 .source "SourceFile"
 
@@ -14,21 +14,13 @@
 # static fields
 .field private static final INVALID_POINTER:I = -0x1
 
-.field private static final MAX_POINTER_COUNT:I = 0x5
-
 
 # instance fields
-.field private final mMaxFlingVelocity:I
-
-.field private mMouseEvent:Z
-
-.field private mMouseEventTime:J
-
 .field private mScrollPointerId:I
 
 .field private mSpringEnabled:Z
 
-.field private final mVelocityMonitor:[Lmiuix/animation/utils/VelocityMonitor;
+.field private mVelocityMonitor:Lmiuix/animation/utils/VelocityMonitor;
 
 
 # direct methods
@@ -59,7 +51,7 @@
     .end param
 
     .line 2
-    sget v0, Lqr/b$a;->recyclerViewStyle:I
+    sget v0, Lk/z/b$a;->recyclerViewStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Landroidx/recyclerview/widget/RemixRecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -80,44 +72,15 @@
     .line 3
     invoke-direct {p0, p1, p2, p3}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    const/4 p2, 0x5
-
-    new-array p2, p2, [Lmiuix/animation/utils/VelocityMonitor;
+    const/4 p1, -0x1
 
     .line 4
-    iput-object p2, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mVelocityMonitor:[Lmiuix/animation/utils/VelocityMonitor;
+    iput p1, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mScrollPointerId:I
 
-    const/4 p2, -0x1
+    const/4 p1, 0x1
 
     .line 5
-    iput p2, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mScrollPointerId:I
-
-    const/4 p2, 0x1
-
-    .line 6
-    iput-boolean p2, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mSpringEnabled:Z
-
-    const/4 p2, 0x0
-
-    .line 7
-    iput-boolean p2, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mMouseEvent:Z
-
-    const-wide/16 p2, 0x0
-
-    .line 8
-    iput-wide p2, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mMouseEventTime:J
-
-    .line 9
-    invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
-
-    move-result-object p1
-
-    .line 10
-    invoke-virtual {p1}, Landroid/view/ViewConfiguration;->getScaledMaximumFlingVelocity()I
-
-    move-result p1
-
-    iput p1, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mMaxFlingVelocity:I
+    iput-boolean p1, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mSpringEnabled:Z
 
     return-void
 .end method
@@ -125,7 +88,8 @@
 .method public static synthetic access$000(Landroidx/recyclerview/widget/RemixRecyclerView;)Z
     .locals 0
 
-    invoke-virtual {p0}, Landroid/view/View;->awakenScrollBars()Z
+    .line 1
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->awakenScrollBars()Z
 
     move-result p0
 
@@ -135,178 +99,188 @@
 .method public static synthetic access$100(Landroidx/recyclerview/widget/RemixRecyclerView;)Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mSpringEnabled:Z
 
     return p0
 .end method
 
-.method public static synthetic access$200(Landroidx/recyclerview/widget/RemixRecyclerView;)I
+.method public static synthetic access$200(Landroidx/recyclerview/widget/RemixRecyclerView;)Lmiuix/animation/utils/VelocityMonitor;
     .locals 0
 
-    iget p0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mMaxFlingVelocity:I
-
-    return p0
-.end method
-
-.method public static synthetic access$300(Landroidx/recyclerview/widget/RemixRecyclerView;)I
-    .locals 0
-
-    iget p0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mScrollPointerId:I
-
-    return p0
-.end method
-
-.method public static synthetic access$400(Landroidx/recyclerview/widget/RemixRecyclerView;I)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RemixRecyclerView;->checkVelocityMonitor(I)V
-
-    return-void
-.end method
-
-.method public static synthetic access$500(Landroidx/recyclerview/widget/RemixRecyclerView;)[Lmiuix/animation/utils/VelocityMonitor;
-    .locals 0
-
-    iget-object p0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mVelocityMonitor:[Lmiuix/animation/utils/VelocityMonitor;
+    .line 1
+    iget-object p0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mVelocityMonitor:Lmiuix/animation/utils/VelocityMonitor;
 
     return-object p0
 .end method
 
-.method private checkVelocityMonitor(I)V
-    .locals 1
+.method private trackVelocity(Landroid/view/MotionEvent;)V
+    .locals 3
 
-    iget-object p0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mVelocityMonitor:[Lmiuix/animation/utils/VelocityMonitor;
-
-    aget-object v0, p0, p1
+    .line 1
+    iget-object v0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mVelocityMonitor:Lmiuix/animation/utils/VelocityMonitor;
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Lmiuix/animation/utils/VelocityMonitor;
 
     invoke-direct {v0}, Lmiuix/animation/utils/VelocityMonitor;-><init>()V
 
-    aput-object v0, p0, p1
+    iput-object v0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mVelocityMonitor:Lmiuix/animation/utils/VelocityMonitor;
 
+    .line 3
     :cond_0
-    return-void
-.end method
-
-.method private resetVelocity(Landroid/view/MotionEvent;I)V
-    .locals 0
-
-    invoke-virtual {p1, p2}, Landroid/view/MotionEvent;->getPointerId(I)I
-
-    move-result p1
-
-    rem-int/lit8 p1, p1, 0x5
-
-    invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RemixRecyclerView;->checkVelocityMonitor(I)V
-
-    iget-object p0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mVelocityMonitor:[Lmiuix/animation/utils/VelocityMonitor;
-
-    aget-object p0, p0, p1
-
-    invoke-virtual {p0}, Lmiuix/animation/utils/VelocityMonitor;->clear()V
-
-    return-void
-.end method
-
-.method private trackVelocity(Landroid/view/MotionEvent;)V
-    .locals 4
-
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
 
+    .line 4
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result v1
 
-    const/4 v2, 0x0
+    if-eqz v0, :cond_5
 
-    if-eqz v0, :cond_2
+    const/4 v2, 0x2
 
-    const/4 v3, 0x2
-
-    if-eq v0, v3, :cond_1
+    if-eq v0, v2, :cond_3
 
     const/4 v2, 0x5
 
-    if-eq v0, v2, :cond_0
+    if-eq v0, v2, :cond_6
+
+    const/4 v2, 0x6
+
+    if-eq v0, v2, :cond_1
 
     goto :goto_1
 
-    :cond_0
+    .line 5
+    :cond_1
+    invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->getPointerId(I)I
+
+    move-result v0
+
+    iget v2, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mScrollPointerId:I
+
+    if-ne v0, v2, :cond_7
+
+    if-nez v1, :cond_2
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v0, 0x0
+
+    .line 6
+    :goto_0
+    invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getPointerId(I)I
+
+    move-result v0
+
+    iput v0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mScrollPointerId:I
+
+    .line 7
+    invoke-direct {p0, p1, v1}, Landroidx/recyclerview/widget/RemixRecyclerView;->updateVelocity(Landroid/view/MotionEvent;I)V
+
+    goto :goto_1
+
+    .line 8
+    :cond_3
+    iget v0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mScrollPointerId:I
+
+    invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->findPointerIndex(I)I
+
+    move-result v0
+
+    if-gez v0, :cond_4
+
+    .line 9
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "Error processing scroll; pointer index for id "
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget p0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mScrollPointerId:I
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p0, " not found. Did any MotionEvents get skipped?"
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string p1, "RecyclerView"
+
+    invoke-static {p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    .line 10
+    :cond_4
+    invoke-direct {p0, p1, v0}, Landroidx/recyclerview/widget/RemixRecyclerView;->updateVelocity(Landroid/view/MotionEvent;I)V
+
+    goto :goto_1
+
+    .line 11
+    :cond_5
+    iget-object v0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mVelocityMonitor:Lmiuix/animation/utils/VelocityMonitor;
+
+    invoke-virtual {v0}, Lmiuix/animation/utils/VelocityMonitor;->clear()V
+
+    .line 12
+    :cond_6
     invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->getPointerId(I)I
 
     move-result v0
 
     iput v0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mScrollPointerId:I
 
-    invoke-direct {p0, p1, v1}, Landroidx/recyclerview/widget/RemixRecyclerView;->resetVelocity(Landroid/view/MotionEvent;I)V
-
+    .line 13
     invoke-direct {p0, p1, v1}, Landroidx/recyclerview/widget/RemixRecyclerView;->updateVelocity(Landroid/view/MotionEvent;I)V
 
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getPointerCount()I
-
-    move-result v0
-
-    if-ge v2, v0, :cond_3
-
-    invoke-direct {p0, p1, v2}, Landroidx/recyclerview/widget/RemixRecyclerView;->updateVelocity(Landroid/view/MotionEvent;I)V
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p1, v2}, Landroid/view/MotionEvent;->getPointerId(I)I
-
-    move-result v0
-
-    iput v0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mScrollPointerId:I
-
-    invoke-direct {p0, p1, v1}, Landroidx/recyclerview/widget/RemixRecyclerView;->resetVelocity(Landroid/view/MotionEvent;I)V
-
-    invoke-direct {p0, p1, v1}, Landroidx/recyclerview/widget/RemixRecyclerView;->updateVelocity(Landroid/view/MotionEvent;I)V
-
-    :cond_3
+    :cond_7
     :goto_1
     return-void
 .end method
 
 .method private updateVelocity(Landroid/view/MotionEvent;I)V
-    .locals 4
+    .locals 5
 
-    invoke-virtual {p1, p2}, Landroid/view/MotionEvent;->getPointerId(I)I
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    move-result v0
+    const/4 v1, 0x1
 
-    rem-int/lit8 v0, v0, 0x5
+    const/4 v2, 0x0
 
-    invoke-direct {p0, v0}, Landroidx/recyclerview/widget/RemixRecyclerView;->checkVelocityMonitor(I)V
+    const/4 v3, 0x2
 
-    iget-object p0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mVelocityMonitor:[Lmiuix/animation/utils/VelocityMonitor;
+    const/16 v4, 0x1d
 
-    aget-object p0, p0, v0
+    if-lt v0, v4, :cond_0
 
-    const/4 v0, 0x2
+    .line 2
+    iget-object p0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mVelocityMonitor:Lmiuix/animation/utils/VelocityMonitor;
 
-    new-array v0, v0, [D
+    new-array v0, v3, [D
 
     invoke-virtual {p1, p2}, Landroid/view/MotionEvent;->getRawX(I)F
 
-    move-result v1
+    move-result v3
 
-    float-to-double v1, v1
+    float-to-double v3, v3
 
-    const/4 v3, 0x0
-
-    aput-wide v1, v0, v3
+    aput-wide v3, v0, v2
 
     invoke-virtual {p1, p2}, Landroid/view/MotionEvent;->getRawY(I)F
 
@@ -314,64 +288,49 @@
 
     float-to-double p1, p1
 
-    const/4 v1, 0x1
-
     aput-wide p1, v0, v1
 
     invoke-virtual {p0, v0}, Lmiuix/animation/utils/VelocityMonitor;->update([D)V
 
+    goto :goto_0
+
+    .line 3
+    :cond_0
+    iget-object p0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mVelocityMonitor:Lmiuix/animation/utils/VelocityMonitor;
+
+    new-array p2, v3, [D
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
+
+    move-result v0
+
+    float-to-double v3, v0
+
+    aput-wide v3, p2, v2
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
+
+    move-result p1
+
+    float-to-double v2, p1
+
+    aput-wide v2, p2, v1
+
+    invoke-virtual {p0, p2}, Lmiuix/animation/utils/VelocityMonitor;->update([D)V
+
+    :goto_0
     return-void
 .end method
 
 
 # virtual methods
 .method public getSpringEnabled()Z
-    .locals 4
+    .locals 0
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    .line 1
+    iget-boolean p0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mSpringEnabled:Z
 
-    move-result-wide v0
-
-    iget-wide v2, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mMouseEventTime:J
-
-    sub-long/2addr v0, v2
-
-    const-wide/16 v2, 0xa
-
-    cmp-long v0, v0, v2
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    if-lez v0, :cond_0
-
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v2
-
-    :goto_0
-    iget-boolean v3, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mSpringEnabled:Z
-
-    if-eqz v3, :cond_1
-
-    iget-boolean p0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mMouseEvent:Z
-
-    if-eqz p0, :cond_2
-
-    if-eqz v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    move v1, v2
-
-    :cond_2
-    :goto_1
-    return v1
+    return p0
 .end method
 
 .method public isOverScrolling()Z
@@ -382,38 +341,13 @@
     return p0
 .end method
 
-.method public onGenericMotionEvent(Landroid/view/MotionEvent;)Z
-    .locals 2
-
-    const/16 v0, 0x2002
-
-    invoke-static {p1, v0}, Landroidx/core/view/MotionEventCompat;->isFromSource(Landroid/view/MotionEvent;I)Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mMouseEvent:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mMouseEventTime:J
-
-    :cond_0
-    invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->onGenericMotionEvent(Landroid/view/MotionEvent;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RemixRecyclerView;->trackVelocity(Landroid/view/MotionEvent;)V
 
+    .line 2
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p0
@@ -422,27 +356,12 @@
 .end method
 
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 2
+    .locals 0
 
-    const/16 v0, 0x2002
-
-    invoke-static {p1, v0}, Landroidx/core/view/MotionEventCompat;->isFromSource(Landroid/view/MotionEvent;I)Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mMouseEvent:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mMouseEventTime:J
-
-    :cond_0
+    .line 1
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RemixRecyclerView;->trackVelocity(Landroid/view/MotionEvent;)V
 
+    .line 2
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p0
@@ -453,7 +372,8 @@
 .method public setOverScrollMode(I)V
     .locals 1
 
-    invoke-super {p0, p1}, Landroid/view/View;->setOverScrollMode(I)V
+    .line 1
+    invoke-super {p0, p1}, Landroid/view/ViewGroup;->setOverScrollMode(I)V
 
     const/4 v0, 0x2
 
@@ -461,6 +381,7 @@
 
     const/4 p1, 0x0
 
+    .line 2
     iput-boolean p1, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mSpringEnabled:Z
 
     :cond_0
@@ -470,6 +391,7 @@
 .method public setSpringEnabled(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mSpringEnabled:Z
 
     return-void

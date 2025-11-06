@@ -1,4 +1,4 @@
-.class Lcom/google/common/eventbus/Subscriber;
+.class public Lcom/google/common/eventbus/Subscriber;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -24,7 +24,7 @@
 
 .field private final method:Ljava/lang/reflect/Method;
 
-.field final target:Ljava/lang/Object;
+.field public final target:Ljava/lang/Object;
     .annotation build Lcom/google/common/annotations/VisibleForTesting;
     .end annotation
 .end field
@@ -53,7 +53,7 @@
     const/4 p2, 0x1
 
     .line 6
-    invoke-virtual {p3, p2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    invoke-virtual {p3, p2}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
     .line 7
     invoke-virtual {p1}, Lcom/google/common/eventbus/EventBus;->executor()Ljava/util/concurrent/Executor;
@@ -77,6 +77,7 @@
 .method public static synthetic access$100(Lcom/google/common/eventbus/Subscriber;Ljava/lang/Object;)Lcom/google/common/eventbus/SubscriberExceptionContext;
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/eventbus/Subscriber;->context(Ljava/lang/Object;)Lcom/google/common/eventbus/SubscriberExceptionContext;
 
     move-result-object p0
@@ -87,6 +88,7 @@
 .method public static synthetic access$200(Lcom/google/common/eventbus/Subscriber;)Lcom/google/common/eventbus/EventBus;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/eventbus/Subscriber;->bus:Lcom/google/common/eventbus/EventBus;
 
     return-object p0
@@ -95,6 +97,7 @@
 .method private context(Ljava/lang/Object;)Lcom/google/common/eventbus/SubscriberExceptionContext;
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/common/eventbus/SubscriberExceptionContext;
 
     iget-object v1, p0, Lcom/google/common/eventbus/Subscriber;->bus:Lcom/google/common/eventbus/EventBus;
@@ -111,18 +114,21 @@
 .method public static create(Lcom/google/common/eventbus/EventBus;Ljava/lang/Object;Ljava/lang/reflect/Method;)Lcom/google/common/eventbus/Subscriber;
     .locals 2
 
+    .line 1
     invoke-static {p2}, Lcom/google/common/eventbus/Subscriber;->isDeclaredThreadSafe(Ljava/lang/reflect/Method;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     new-instance v0, Lcom/google/common/eventbus/Subscriber;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/google/common/eventbus/Subscriber;-><init>(Lcom/google/common/eventbus/EventBus;Ljava/lang/Object;Ljava/lang/reflect/Method;)V
 
     goto :goto_0
 
+    .line 3
     :cond_0
     new-instance v0, Lcom/google/common/eventbus/Subscriber$SynchronizedSubscriber;
 
@@ -137,6 +143,7 @@
 .method private static isDeclaredThreadSafe(Ljava/lang/reflect/Method;)Z
     .locals 1
 
+    .line 1
     const-class v0, Lcom/google/common/eventbus/AllowConcurrentEvents;
 
     invoke-virtual {p0, v0}, Ljava/lang/reflect/Method;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
@@ -161,6 +168,7 @@
 .method public final dispatchEvent(Ljava/lang/Object;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/eventbus/Subscriber;->executor:Ljava/util/concurrent/Executor;
 
     new-instance v1, Lcom/google/common/eventbus/Subscriber$1;
@@ -179,14 +187,17 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/common/eventbus/Subscriber;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lcom/google/common/eventbus/Subscriber;
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/eventbus/Subscriber;->target:Ljava/lang/Object;
 
     iget-object v2, p1, Lcom/google/common/eventbus/Subscriber;->target:Ljava/lang/Object;
@@ -212,6 +223,7 @@
 .method public final hashCode()I
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/eventbus/Subscriber;->method:Ljava/lang/reflect/Method;
 
     invoke-virtual {v0}, Ljava/lang/reflect/Method;->hashCode()I
@@ -244,6 +256,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/common/eventbus/Subscriber;->method:Ljava/lang/reflect/Method;
 
@@ -253,13 +266,13 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
+    const/4 v2, 0x0
+
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v3
 
-    const/4 v3, 0x0
-
-    aput-object v2, v1, v3
+    aput-object v3, v1, v2
 
     invoke-virtual {v0, p0, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
@@ -272,6 +285,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     invoke-virtual {p0}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p1
@@ -280,6 +294,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 3
     invoke-virtual {p0}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p0
@@ -288,12 +303,14 @@
 
     throw p0
 
+    .line 4
     :cond_0
     throw p0
 
     :catch_1
     move-exception p0
 
+    .line 5
     new-instance v0, Ljava/lang/Error;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -327,6 +344,7 @@
     :catch_2
     move-exception p0
 
+    .line 6
     new-instance v0, Ljava/lang/Error;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

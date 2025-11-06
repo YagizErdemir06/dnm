@@ -1,4 +1,4 @@
-.class final Lcom/google/common/util/concurrent/AbstractFuture$SynchronizedHelper;
+.class public final Lcom/google/common/util/concurrent/AbstractFuture$SynchronizedHelper;
 .super Lcom/google/common/util/concurrent/AbstractFuture$AtomicHelper;
 .source "SourceFile"
 
@@ -54,8 +54,10 @@
         }
     .end annotation
 
+    .line 1
     monitor-enter p1
 
+    .line 2
     :try_start_0
     invoke-static {p1}, Lcom/google/common/util/concurrent/AbstractFuture;->access$900(Lcom/google/common/util/concurrent/AbstractFuture;)Lcom/google/common/util/concurrent/AbstractFuture$Listener;
 
@@ -63,24 +65,28 @@
 
     if-ne p0, p2, :cond_0
 
+    .line 3
     invoke-static {p1, p3}, Lcom/google/common/util/concurrent/AbstractFuture;->access$902(Lcom/google/common/util/concurrent/AbstractFuture;Lcom/google/common/util/concurrent/AbstractFuture$Listener;)Lcom/google/common/util/concurrent/AbstractFuture$Listener;
 
-    monitor-exit p1
-
     const/4 p0, 0x1
+
+    .line 4
+    monitor-exit p1
 
     return p0
 
     :cond_0
-    monitor-exit p1
-
     const/4 p0, 0x0
+
+    .line 5
+    monitor-exit p1
 
     return p0
 
     :catchall_0
     move-exception p0
 
+    .line 6
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -105,8 +111,10 @@
         }
     .end annotation
 
+    .line 1
     monitor-enter p1
 
+    .line 2
     :try_start_0
     invoke-static {p1}, Lcom/google/common/util/concurrent/AbstractFuture;->access$400(Lcom/google/common/util/concurrent/AbstractFuture;)Ljava/lang/Object;
 
@@ -114,24 +122,28 @@
 
     if-ne p0, p2, :cond_0
 
+    .line 3
     invoke-static {p1, p3}, Lcom/google/common/util/concurrent/AbstractFuture;->access$402(Lcom/google/common/util/concurrent/AbstractFuture;Ljava/lang/Object;)Ljava/lang/Object;
 
-    monitor-exit p1
-
     const/4 p0, 0x1
+
+    .line 4
+    monitor-exit p1
 
     return p0
 
     :cond_0
-    monitor-exit p1
-
     const/4 p0, 0x0
+
+    .line 5
+    monitor-exit p1
 
     return p0
 
     :catchall_0
     move-exception p0
 
+    .line 6
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -160,8 +172,10 @@
         }
     .end annotation
 
+    .line 1
     monitor-enter p1
 
+    .line 2
     :try_start_0
     invoke-static {p1}, Lcom/google/common/util/concurrent/AbstractFuture;->access$800(Lcom/google/common/util/concurrent/AbstractFuture;)Lcom/google/common/util/concurrent/AbstractFuture$Waiter;
 
@@ -169,24 +183,28 @@
 
     if-ne p0, p2, :cond_0
 
+    .line 3
     invoke-static {p1, p3}, Lcom/google/common/util/concurrent/AbstractFuture;->access$802(Lcom/google/common/util/concurrent/AbstractFuture;Lcom/google/common/util/concurrent/AbstractFuture$Waiter;)Lcom/google/common/util/concurrent/AbstractFuture$Waiter;
 
-    monitor-exit p1
-
     const/4 p0, 0x1
+
+    .line 4
+    monitor-exit p1
 
     return p0
 
     :cond_0
-    monitor-exit p1
-
     const/4 p0, 0x0
+
+    .line 5
+    monitor-exit p1
 
     return p0
 
     :catchall_0
     move-exception p0
 
+    .line 6
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -201,6 +219,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p2, p1, Lcom/google/common/util/concurrent/AbstractFuture$Waiter;->next:Lcom/google/common/util/concurrent/AbstractFuture$Waiter;
 
     return-void
@@ -209,6 +228,7 @@
 .method public putThread(Lcom/google/common/util/concurrent/AbstractFuture$Waiter;Ljava/lang/Thread;)V
     .locals 0
 
+    .line 1
     iput-object p2, p1, Lcom/google/common/util/concurrent/AbstractFuture$Waiter;->thread:Ljava/lang/Thread;
 
     return-void

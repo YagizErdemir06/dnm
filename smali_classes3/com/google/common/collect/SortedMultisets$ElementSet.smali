@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/SortedMultisets$ElementSet;
+.class public Lcom/google/common/collect/SortedMultisets$ElementSet;
 .super Lcom/google/common/collect/Multisets$ElementSet;
 .source "SourceFile"
 
@@ -54,8 +54,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/Multisets$ElementSet;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/SortedMultisets$ElementSet;->multiset:Lcom/google/common/collect/SortedMultiset;
 
     return-void
@@ -73,6 +75,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/SortedMultisets$ElementSet;->multiset()Lcom/google/common/collect/SortedMultiset;
 
     move-result-object p0
@@ -95,6 +98,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/SortedMultisets$ElementSet;->multiset()Lcom/google/common/collect/SortedMultiset;
 
     move-result-object p0
@@ -124,6 +128,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/SortedMultisets$ElementSet;->multiset()Lcom/google/common/collect/SortedMultiset;
 
     move-result-object p0
@@ -151,6 +156,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/SortedMultisets$ElementSet;->multiset()Lcom/google/common/collect/SortedMultiset;
 
     move-result-object p0
@@ -181,6 +187,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/SortedMultisets$ElementSet;->multiset()Lcom/google/common/collect/SortedMultiset;
 
     move-result-object p0
@@ -241,6 +248,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/SortedMultisets$ElementSet;->multiset()Lcom/google/common/collect/SortedMultiset;
 
     move-result-object p0
@@ -274,6 +282,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/SortedMultisets$ElementSet;->multiset()Lcom/google/common/collect/SortedMultiset;
 
     move-result-object p0

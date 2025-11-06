@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Multimaps$UnmodifiableMultimap;
+.class public Lcom/google/common/collect/Multimaps$UnmodifiableMultimap;
 .super Lcom/google/common/collect/ForwardingMultimap;
 .source "SourceFile"
 
@@ -35,7 +35,7 @@
 
 
 # instance fields
-.field final delegate:Lcom/google/common/collect/Multimap;
+.field public final delegate:Lcom/google/common/collect/Multimap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/Multimap<",
@@ -44,7 +44,7 @@
     .end annotation
 .end field
 
-.field transient entries:Ljava/util/Collection;
+.field public transient entries:Ljava/util/Collection;
     .annotation runtime Lcom/google/errorprone/annotations/concurrent/LazyInit;
     .end annotation
 
@@ -60,7 +60,7 @@
     .end annotation
 .end field
 
-.field transient keySet:Ljava/util/Set;
+.field public transient keySet:Ljava/util/Set;
     .annotation runtime Lcom/google/errorprone/annotations/concurrent/LazyInit;
     .end annotation
 
@@ -75,7 +75,7 @@
     .end annotation
 .end field
 
-.field transient keys:Lcom/google/common/collect/Multiset;
+.field public transient keys:Lcom/google/common/collect/Multiset;
     .annotation runtime Lcom/google/errorprone/annotations/concurrent/LazyInit;
     .end annotation
 
@@ -90,7 +90,7 @@
     .end annotation
 .end field
 
-.field transient map:Ljava/util/Map;
+.field public transient map:Ljava/util/Map;
     .annotation runtime Lcom/google/errorprone/annotations/concurrent/LazyInit;
     .end annotation
 
@@ -107,7 +107,7 @@
     .end annotation
 .end field
 
-.field transient values:Ljava/util/Collection;
+.field public transient values:Ljava/util/Collection;
     .annotation runtime Lcom/google/errorprone/annotations/concurrent/LazyInit;
     .end annotation
 
@@ -134,8 +134,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ForwardingMultimap;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -161,12 +163,15 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Multimaps$UnmodifiableMultimap;->map:Ljava/util/Map;
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/Multimaps$UnmodifiableMultimap;->delegate:Lcom/google/common/collect/Multimap;
 
+    .line 3
     invoke-interface {v0}, Lcom/google/common/collect/Multimap;->asMap()Ljava/util/Map;
 
     move-result-object v0
@@ -175,10 +180,12 @@
 
     invoke-direct {v1, p0}, Lcom/google/common/collect/Multimaps$UnmodifiableMultimap$1;-><init>(Lcom/google/common/collect/Multimaps$UnmodifiableMultimap;)V
 
+    .line 4
     invoke-static {v0, v1}, Lcom/google/common/collect/Maps;->transformValues(Ljava/util/Map;Lcom/google/common/base/Function;)Ljava/util/Map;
 
     move-result-object v0
 
+    .line 5
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
@@ -192,6 +199,7 @@
 .method public clear()V
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -237,10 +245,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Multimaps$UnmodifiableMultimap;->entries:Ljava/util/Collection;
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/Multimaps$UnmodifiableMultimap;->delegate:Lcom/google/common/collect/Multimap;
 
     invoke-interface {v0}, Lcom/google/common/collect/Multimap;->entries()Ljava/util/Collection;
@@ -271,6 +281,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/Multimaps$UnmodifiableMultimap;->delegate:Lcom/google/common/collect/Multimap;
 
     invoke-interface {p0, p1}, Lcom/google/common/collect/Multimap;->get(Ljava/lang/Object;)Ljava/util/Collection;
@@ -294,10 +305,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Multimaps$UnmodifiableMultimap;->keySet:Ljava/util/Set;
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/Multimaps$UnmodifiableMultimap;->delegate:Lcom/google/common/collect/Multimap;
 
     invoke-interface {v0}, Lcom/google/common/collect/Multimap;->keySet()Ljava/util/Set;
@@ -324,10 +337,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Multimaps$UnmodifiableMultimap;->keys:Lcom/google/common/collect/Multiset;
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/Multimaps$UnmodifiableMultimap;->delegate:Lcom/google/common/collect/Multimap;
 
     invoke-interface {v0}, Lcom/google/common/collect/Multimap;->keys()Lcom/google/common/collect/Multiset;
@@ -360,6 +375,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -418,6 +434,7 @@
         .end annotation
     .end param
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -441,6 +458,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -464,6 +482,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -481,10 +500,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/Multimaps$UnmodifiableMultimap;->values:Ljava/util/Collection;
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/Multimaps$UnmodifiableMultimap;->delegate:Lcom/google/common/collect/Multimap;
 
     invoke-interface {v0}, Lcom/google/common/collect/Multimap;->values()Ljava/util/Collection;

@@ -35,8 +35,10 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera/fragment/modeselector/FragmentZoomView;-><init>()V
 
+    .line 2
     new-instance v0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV$1;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -50,27 +52,22 @@
     return-void
 .end method
 
-.method public static synthetic Hh(Lv8/y2;)V
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->lambda$onHiddenChanged$0(Lv8/y2;)V
-
-    return-void
-.end method
-
 .method private initSlideTipRotation()V
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mTipsLayout:Landroid/view/ViewGroup;
 
     if-eqz v0, :cond_6
 
+    .line 2
     iget v1, p0, Lcom/android/camera/fragment/BaseFragment;->mDegree:I
 
     int-to-float v1, v1
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setRotation(F)V
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setRotation(F)V
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mZoomTip:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
@@ -83,20 +80,24 @@
 
     if-nez v0, :cond_6
 
+    .line 4
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mTipsLayout:Landroid/view/ViewGroup;
 
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    .line 5
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
 
-    invoke-static {}, Ly2/b;->M0()Z
+    .line 6
+    invoke-static {}, Ld/d/a/n6/b;->M0()Z
 
     move-result v1
 
     if-nez v1, :cond_4
 
+    .line 7
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mZoomTip:Landroid/widget/TextView;
 
     const/4 v2, 0x0
@@ -109,15 +110,17 @@
 
     move-result v2
 
-    invoke-virtual {v1, v3, v2}, Landroid/view/View;->measure(II)V
+    invoke-virtual {v1, v3, v2}, Landroid/widget/TextView;->measure(II)V
 
     const/16 v1, 0x51
 
+    .line 8
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
+    .line 9
     iget v0, p0, Lcom/android/camera/fragment/BaseFragment;->mDegree:I
 
-    const v1, 0x7f070e39
+    const v1, 0x7f070b9a
 
     if-eqz v0, :cond_2
 
@@ -127,6 +130,7 @@
 
     goto :goto_1
 
+    .line 10
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mTipsLayout:Landroid/view/ViewGroup;
 
@@ -134,6 +138,7 @@
 
     if-eqz v2, :cond_1
 
+    .line 11
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -144,12 +149,13 @@
 
     goto :goto_0
 
+    .line 12
     :cond_1
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const v1, 0x7f071093
+    const v1, 0x7f070df6
 
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -160,10 +166,12 @@
 
     int-to-float p0, p0
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->setTranslationY(F)V
+    .line 13
+    invoke-virtual {v0, p0}, Landroid/view/ViewGroup;->setTranslationY(F)V
 
     goto :goto_3
 
+    .line 14
     :cond_2
     :goto_1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mTipsLayout:Landroid/view/ViewGroup;
@@ -172,6 +180,7 @@
 
     if-eqz v2, :cond_3
 
+    .line 15
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -182,12 +191,13 @@
 
     goto :goto_2
 
+    .line 16
     :cond_3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const v1, 0x7f071094
+    const v1, 0x7f070df7
 
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -198,15 +208,18 @@
 
     int-to-float p0, p0
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->setTranslationY(F)V
+    .line 17
+    invoke-virtual {v0, p0}, Landroid/view/ViewGroup;->setTranslationY(F)V
 
     goto :goto_3
 
     :cond_4
     const/16 v1, 0x13
 
+    .line 18
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
+    .line 19
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mTipsLayout:Landroid/view/ViewGroup;
 
     iget-object v1, p0, Lcom/android/camera/fragment/modeselector/FragmentZoomView;->mZoomViewHorizontal:Lcom/android/camera/ui/ZoomView;
@@ -227,7 +240,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f071086
+    const v3, 0x7f070de9
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -237,22 +250,25 @@
 
     int-to-float v1, v1
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationX(F)V
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setTranslationX(F)V
 
-    invoke-static {}, Ly2/b;->F0()Z
+    .line 20
+    invoke-static {}, Ld/d/a/n6/b;->F0()Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
+    .line 21
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mTipsLayout:Landroid/view/ViewGroup;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setTranslationY(F)V
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->setTranslationY(F)V
 
     goto :goto_3
 
+    .line 22
     :cond_5
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mTipsLayout:Landroid/view/ViewGroup;
 
@@ -260,7 +276,7 @@
 
     move-result-object p0
 
-    const v1, 0x7f0701c7
+    const v1, 0x7f0701c3
 
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -270,7 +286,7 @@
 
     int-to-float p0, p0
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->setTranslationY(F)V
+    invoke-virtual {v0, p0}, Landroid/view/ViewGroup;->setTranslationY(F)V
 
     :cond_6
     :goto_3
@@ -278,18 +294,19 @@
 .end method
 
 .method private isSupportShowAudioZoom()Z
-    .locals 2
-    .annotation build Lh7/d;
+    .locals 3
+    .annotation build Ld/d/a/x6/d;
         ignore = false
         key = "isSupportAiAudioNew"
         type = 0x0
     .end annotation
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    .line 1
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lid/b;->Y4()Z
+    invoke-virtual {v0}, Ld/k/a/b;->N4()Z
 
     move-result v0
 
@@ -297,14 +314,15 @@
 
     if-eqz v0, :cond_5
 
-    invoke-static {}, Lcom/android/camera/a6;->B3()Z
+    invoke-static {}, Ld/d/a/z5;->p3()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    goto :goto_1
+    goto :goto_0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -312,43 +330,46 @@
 
     check-cast p0, Lcom/android/camera/ActivityBase;
 
-    invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->z2()Lq7/v4;
+    invoke-virtual {p0}, Lcom/android/camera/ActivityBase;->N1()Ld/d/a/d7/z7;
 
     move-result-object p0
 
     if-eqz p0, :cond_5
 
-    invoke-interface {p0}, Lq7/v4;->M9()Lr7/h;
+    .line 3
+    invoke-interface {p0}, Ld/d/a/d7/z7;->Y9()Ld/d/a/d7/i8/n;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lr7/h;->J()Z
+    invoke-interface {v0}, Ld/d/a/d7/i8/n;->G()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    goto :goto_1
-
-    :cond_1
-    instance-of v0, p0, Lq7/h7;
-
-    if-eqz v0, :cond_2
-
-    check-cast p0, Lq7/h7;
-
     goto :goto_0
 
-    :cond_2
-    const/4 p0, 0x0
+    :cond_1
+    const/4 v0, 0x0
 
-    :goto_0
-    if-nez p0, :cond_3
+    .line 4
+    instance-of v2, p0, Ld/d/a/d7/f8;
+
+    if-eqz v2, :cond_2
+
+    .line 5
+    move-object v0, p0
+
+    check-cast v0, Ld/d/a/d7/f8;
+
+    :cond_2
+    if-nez v0, :cond_3
 
     return v1
 
+    .line 6
     :cond_3
-    invoke-virtual {p0}, Lq7/h7;->Gn()Z
+    invoke-virtual {v0}, Ld/d/a/d7/f8;->sm()Z
 
     move-result p0
 
@@ -362,18 +383,19 @@
     return p0
 
     :cond_5
-    :goto_1
+    :goto_0
     return v1
 .end method
 
-.method private static synthetic lambda$onHiddenChanged$0(Lv8/y2;)V
+.method public static synthetic lambda$onHiddenChanged$0(Ld/d/a/m7/g/a3;)V
     .locals 2
 
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
-    invoke-interface {p0, v0, v0, v1}, Lv8/y2;->alertUpdateValue(IILjava/lang/String;)V
+    .line 1
+    invoke-interface {p0, v0, v0, v1}, Ld/d/a/m7/g/a3;->alertUpdateValue(IILjava/lang/String;)V
 
     return-void
 .end method
@@ -383,18 +405,19 @@
 .method public getLayoutResourceId()I
     .locals 0
 
-    invoke-static {}, Ly2/b;->M0()Z
+    .line 1
+    invoke-static {}, Ld/d/a/n6/b;->M0()Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    const p0, 0x7f0e016e
+    const p0, 0x7f0e015f
 
     goto :goto_0
 
     :cond_0
-    const p0, 0x7f0e016d
+    const p0, 0x7f0e015e
 
     :goto_0
     return p0
@@ -402,9 +425,18 @@
 
 .method public initView(Landroid/view/View;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "v"
+        }
+    .end annotation
 
-    const v0, 0x7f0b08c0
+    const v0, 0x7f0b07d7
 
+    .line 1
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -413,8 +445,9 @@
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mZoomViewLayout:Landroid/view/ViewGroup;
 
-    const v0, 0x7f0b08c1
+    const v0, 0x7f0b07d8
 
+    .line 2
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -423,8 +456,9 @@
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mZoomTip:Landroid/widget/TextView;
 
-    const v0, 0x7f0b08c2
+    const v0, 0x7f0b07d9
 
+    .line 3
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -433,7 +467,8 @@
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mTipsLayout:Landroid/view/ViewGroup;
 
-    invoke-static {}, Lf2/e;->d()Lf2/e;
+    .line 4
+    invoke-static {}, Ld/d/a/k6/f;->d()Ld/d/a/k6/f;
 
     move-result-object v0
 
@@ -447,24 +482,27 @@
 
     move-result v2
 
-    invoke-virtual {v0, v1, v2}, Lf2/e;->o(Landroid/widget/TextView;I)V
+    invoke-virtual {v0, v1, v2}, Ld/d/a/k6/f;->o(Landroid/widget/TextView;I)V
 
-    const v0, 0x7f0b00a8
+    const v0, 0x7f0b0091
 
+    .line 5
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/view/ViewStub;
 
+    .line 6
     invoke-virtual {v0}, Landroid/view/ViewStub;->inflate()Landroid/view/View;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mAudioZoomIndicatorLayout:Landroid/view/View;
 
-    const v1, 0x7f0b00a7
+    const v1, 0x7f0b0090
 
+    .line 7
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -473,11 +511,13 @@
 
     const/16 v1, 0x8
 
+    .line 8
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
+    .line 9
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mAudioZoomIndicatorLayout:Landroid/view/View;
 
-    const v1, 0x7f0b00a6
+    const v1, 0x7f0b008f
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -487,9 +527,10 @@
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mAudioZoomHorn:Landroid/widget/ImageView;
 
+    .line 10
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mAudioZoomIndicatorLayout:Landroid/view/View;
 
-    const v1, 0x7f0b00a9
+    const v1, 0x7f0b0092
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -499,12 +540,14 @@
 
     iput-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mAudioZoomIndicator:Lcom/android/camera/ui/AudioZoomIndicator;
 
+    .line 11
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->isSupportShowAudioZoom()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mIsSupportShowAudioZoom:Z
 
+    .line 12
     invoke-super {p0, p1}, Lcom/android/camera/fragment/modeselector/FragmentZoomView;->initView(Landroid/view/View;)V
 
     return-void
@@ -513,8 +556,10 @@
 .method public onDestroyView()V
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/android/camera/fragment/BaseFragment;->onDestroyView()V
 
+    .line 2
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->resetSlideTip()V
 
     return-void
@@ -522,35 +567,44 @@
 
 .method public onHiddenChanged(Z)V
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "hidden"
+        }
+    .end annotation
+
+    .line 1
     invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onHiddenChanged(Z)V
 
     if-eqz p1, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->resetSlideTip()V
 
-    invoke-static {}, Lv8/y2;->impl()Ljava/util/Optional;
+    .line 3
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance p1, Lcom/android/camera2/compat/theme/custom/cv/zoom/a;
-
-    invoke-direct {p1}, Lcom/android/camera2/compat/theme/custom/cv/zoom/a;-><init>()V
+    sget-object p1, Ld/d/b/x5/a/b/a/o/a;->c:Ld/d/b/x5/a/b/a/o/a;
 
     invoke-virtual {p0, p1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
     goto :goto_0
 
+    .line 4
     :cond_0
-    invoke-static {}, Lv8/y2;->impl()Ljava/util/Optional;
+    invoke-static {}, Ld/d/a/m7/g/a3;->impl()Ljava/util/Optional;
 
     move-result-object p0
 
-    new-instance p1, Ly7/o5;
-
-    invoke-direct {p1}, Ly7/o5;-><init>()V
+    sget-object p1, Ld/d/b/x5/a/b/a/o/b;->c:Ld/d/b/x5/a/b/a/o/b;
 
     invoke-virtual {p0, p1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
@@ -561,38 +615,45 @@
 .method public onZoomTouchDown()V
     .locals 2
 
+    .line 1
     invoke-super {p0}, Lcom/android/camera/fragment/modeselector/FragmentZoomView;->onZoomTouchDown()V
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mZoomTip:Landroid/widget/TextView;
 
     const-string v1, ""
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 4
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mZoomTip:Landroid/widget/TextView;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
+    .line 5
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->isSupportShowAudioZoom()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 6
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mAudioZoomIndicatorView:Landroid/view/View;
 
     invoke-virtual {p0, v1}, Landroid/view/View;->setVisibility(I)V
 
+    .line 7
     :cond_0
-    invoke-static {}, Lv8/t2;->impl2()Lv8/t2;
+    invoke-static {}, Ld/d/a/m7/g/v2;->impl2()Ld/d/a/m7/g/v2;
 
     move-result-object p0
 
@@ -600,16 +661,19 @@
 
     const/4 v0, 0x1
 
-    invoke-interface {p0, v0}, Lv8/t2;->Y1(Z)V
+    .line 8
+    invoke-interface {p0, v0}, Ld/d/a/m7/g/v2;->b2(Z)V
 
+    .line 9
     :cond_1
-    invoke-static {}, Lv8/p1;->impl2()Lv8/p1;
+    invoke-static {}, Ld/d/a/m7/g/s1;->impl2()Ld/d/a/m7/g/s1;
 
     move-result-object p0
 
     if-eqz p0, :cond_2
 
-    invoke-interface {p0, v1, v1}, Lv8/p1;->forceUpdateManualView(IZ)V
+    .line 10
+    invoke-interface {p0, v1, v1}, Ld/d/a/m7/g/s1;->forceUpdateManualView(IZ)V
 
     :cond_2
     return-void
@@ -618,14 +682,17 @@
 .method public onZoomTouchUp()V
     .locals 4
 
+    .line 1
     invoke-super {p0}, Lcom/android/camera/fragment/modeselector/FragmentZoomView;->onZoomTouchUp()V
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
+    .line 3
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mHandler:Landroid/os/Handler;
 
     const-wide/16 v2, 0x3e8
@@ -637,9 +704,19 @@
 
 .method public onZoomValueChanged(F)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "value"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lcom/android/camera/fragment/modeselector/FragmentZoomView;->onZoomValueChanged(F)V
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -652,7 +729,7 @@
 
     move-result v1
 
-    invoke-static {v1}, Lwa/a;->x(F)F
+    invoke-static {v1}, Ld/d/a/k8/y;->w(F)F
 
     move-result v1
 
@@ -666,30 +743,36 @@
 
     move-result-object v0
 
+    .line 3
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mZoomTip:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 4
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->isSupportShowAudioZoom()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mIsSupportShowAudioZoom:Z
 
+    .line 5
     invoke-direct {p0}, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->initSlideTipRotation()V
 
+    .line 6
     iget-boolean v0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mIsSupportShowAudioZoom:Z
 
     if-eqz v0, :cond_0
 
+    .line 7
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mAudioZoomHorn:Landroid/widget/ImageView;
 
-    invoke-static {}, Lf2/f;->j()I
+    invoke-static {}, Ld/d/a/k6/g;->j()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setColorFilter(I)V
 
+    .line 8
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mAudioZoomIndicator:Lcom/android/camera/ui/AudioZoomIndicator;
 
     iget v1, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mMinZoom:F
@@ -713,9 +796,10 @@
 .method public resetSlideTip()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mZoomTip:Landroid/widget/TextView;
 
-    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
+    invoke-virtual {v0}, Landroid/widget/TextView;->getVisibility()I
 
     move-result v0
 
@@ -723,6 +807,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mHandler:Landroid/os/Handler;
 
@@ -730,23 +815,27 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mZoomTip:Landroid/widget/TextView;
 
     const/16 v1, 0x8
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
+    .line 4
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mAudioZoomIndicatorView:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
+    .line 5
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mZoomTip:Landroid/widget/TextView;
 
     const-string v0, ""
 
     invoke-virtual {p0, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-static {}, Lv8/t2;->impl2()Lv8/t2;
+    .line 6
+    invoke-static {}, Ld/d/a/m7/g/v2;->impl2()Ld/d/a/m7/g/v2;
 
     move-result-object p0
 
@@ -754,10 +843,12 @@
 
     if-eqz p0, :cond_1
 
-    invoke-interface {p0, v0}, Lv8/t2;->Y1(Z)V
+    .line 7
+    invoke-interface {p0, v0}, Ld/d/a/m7/g/v2;->b2(Z)V
 
+    .line 8
     :cond_1
-    invoke-static {}, Lv8/p1;->impl2()Lv8/p1;
+    invoke-static {}, Ld/d/a/m7/g/s1;->impl2()Ld/d/a/m7/g/s1;
 
     move-result-object p0
 
@@ -765,7 +856,8 @@
 
     const/4 v1, 0x1
 
-    invoke-interface {p0, v0, v1}, Lv8/p1;->forceUpdateManualView(IZ)V
+    .line 9
+    invoke-interface {p0, v0, v1}, Ld/d/a/m7/g/s1;->forceUpdateManualView(IZ)V
 
     :cond_2
     return-void
@@ -777,7 +869,18 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "v",
+            "savedInstanceState"
+        }
+    .end annotation
 
+    .line 1
     iget-object p1, p0, Lcom/android/camera/fragment/modeselector/FragmentZoomView;->mZoomViewHorizontal:Lcom/android/camera/ui/ZoomView;
 
     invoke-virtual {p0}, Lcom/android/camera/fragment/modeselector/FragmentZoomView;->isVerType()Z
@@ -790,29 +893,34 @@
 
     invoke-virtual {p1, p2, v0}, Lcom/android/camera/ui/ZoomView;->k(ZI)V
 
+    .line 2
     iget-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mZoomViewLayout:Landroid/view/ViewGroup;
 
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    .line 3
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p1
 
     check-cast p1, Landroid/widget/FrameLayout$LayoutParams;
 
+    .line 4
     iget-object p2, p0, Lcom/android/camera/fragment/modeselector/FragmentZoomView;->mZoomViewHorizontal:Lcom/android/camera/ui/ZoomView;
 
+    .line 5
     invoke-virtual {p2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p2
 
     check-cast p2, Landroid/widget/FrameLayout$LayoutParams;
 
-    invoke-static {}, Ly2/b;->M0()Z
+    .line 6
+    invoke-static {}, Ld/d/a/n6/b;->M0()Z
 
     move-result v0
 
     const/16 v1, 0xb4
 
-    const v2, 0x7f070d27
+    const v2, 0x7f070a9a
 
     const/4 v3, -0x1
 
@@ -820,6 +928,7 @@
 
     if-eqz v0, :cond_7
 
+    .line 7
     invoke-virtual {p0}, Lcom/android/camera/fragment/modeselector/FragmentZoomView;->getFitCenterWidth()I
 
     move-result v0
@@ -828,11 +937,14 @@
 
     const/16 v0, 0x10
 
+    .line 8
     iput v0, p2, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
-    invoke-virtual {p2, v4, v4, v4, v4}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
+    .line 9
+    invoke-virtual {p2, v4, v4, v4, v4}, Landroid/widget/FrameLayout$LayoutParams;->setMargins(IIII)V
 
-    invoke-static {}, Ly2/b;->j()Z
+    .line 10
+    invoke-static {}, Ld/d/a/n6/b;->j()Z
 
     move-result v0
 
@@ -840,23 +952,25 @@
 
     if-eqz v0, :cond_1
 
-    invoke-static {}, Lid/b;->q2()Lid/b;
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lid/b;->m4()Z
+    invoke-virtual {v0}, Ld/k/a/b;->b4()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-static {}, Ly2/b;->F0()Z
+    .line 11
+    invoke-static {}, Ld/d/a/n6/b;->F0()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {v4}, Ly2/b;->E(I)Landroid/graphics/Rect;
+    .line 12
+    invoke-static {v4}, Ld/d/a/n6/b;->E(I)Landroid/graphics/Rect;
 
     move-result-object v0
 
@@ -866,8 +980,9 @@
 
     goto :goto_0
 
+    .line 13
     :cond_0
-    invoke-static {v5}, Ly2/b;->E(I)Landroid/graphics/Rect;
+    invoke-static {v5}, Ld/d/a/n6/b;->E(I)Landroid/graphics/Rect;
 
     move-result-object v0
 
@@ -875,22 +990,24 @@
 
     iput v0, p1, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
+    .line 14
     :goto_0
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f071086
+    const v1, 0x7f070de9
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
+    .line 15
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v5, 0x7f071073
+    const v5, 0x7f070dd6
 
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -908,20 +1025,22 @@
 
     goto :goto_2
 
+    .line 16
     :cond_1
-    const-string v0, "4:3"
+    invoke-static {}, Ld/d/a/n6/b;->D()Ljava/lang/String;
 
-    invoke-static {}, Ly2/b;->D()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v6
+    const-string v6, "4:3"
 
-    invoke-virtual {v0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    invoke-static {v4}, Ly2/b;->E(I)Landroid/graphics/Rect;
+    .line 17
+    invoke-static {v4}, Ld/d/a/n6/b;->E(I)Landroid/graphics/Rect;
 
     move-result-object v0
 
@@ -929,6 +1048,7 @@
 
     iput v0, p1, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
+    .line 18
     invoke-virtual {p0}, Lcom/android/camera/fragment/modeselector/FragmentZoomView;->getMarginOffset()I
 
     move-result v0
@@ -937,18 +1057,21 @@
 
     goto :goto_2
 
+    .line 19
     :cond_2
     iget v0, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
 
     if-ne v0, v1, :cond_4
 
-    invoke-static {}, Ly2/b;->F0()Z
+    .line 20
+    invoke-static {}, Ld/d/a/n6/b;->F0()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    invoke-static {v5}, Ly2/b;->E(I)Landroid/graphics/Rect;
+    .line 21
+    invoke-static {v5}, Ld/d/a/n6/b;->E(I)Landroid/graphics/Rect;
 
     move-result-object v0
 
@@ -958,8 +1081,9 @@
 
     goto :goto_1
 
+    .line 22
     :cond_3
-    invoke-static {v5}, Ly2/b;->E(I)Landroid/graphics/Rect;
+    invoke-static {v5}, Ld/d/a/n6/b;->E(I)Landroid/graphics/Rect;
 
     move-result-object v0
 
@@ -969,8 +1093,9 @@
 
     goto :goto_1
 
+    .line 23
     :cond_4
-    invoke-static {}, Ly2/b;->F0()Z
+    invoke-static {}, Ld/d/a/n6/b;->F0()Z
 
     move-result v0
 
@@ -978,7 +1103,8 @@
 
     const/4 v0, 0x4
 
-    invoke-static {v0}, Ly2/b;->E(I)Landroid/graphics/Rect;
+    .line 24
+    invoke-static {v0}, Ld/d/a/n6/b;->E(I)Landroid/graphics/Rect;
 
     move-result-object v0
 
@@ -988,8 +1114,9 @@
 
     goto :goto_1
 
+    .line 25
     :cond_5
-    invoke-static {v4}, Ly2/b;->E(I)Landroid/graphics/Rect;
+    invoke-static {v4}, Ld/d/a/n6/b;->E(I)Landroid/graphics/Rect;
 
     move-result-object v0
 
@@ -997,6 +1124,7 @@
 
     iput v0, p1, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
+    .line 26
     :goto_1
     invoke-virtual {p0}, Lcom/android/camera/fragment/modeselector/FragmentZoomView;->getMarginOffset()I
 
@@ -1004,30 +1132,37 @@
 
     iput v0, p2, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
+    .line 27
     :goto_2
     iget v0, p1, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
     iput v0, p1, Landroid/widget/FrameLayout$LayoutParams;->rightMargin:I
 
-    invoke-static {}, Ly2/b;->F0()Z
+    .line 28
+    invoke-static {}, Ld/d/a/n6/b;->F0()Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
+    .line 29
     iput v4, p1, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
 
+    .line 30
     iput v4, p1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
+    .line 31
     iput v4, p2, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
     goto :goto_3
 
+    .line 32
     :cond_6
-    invoke-static {}, Ly2/b;->t()I
+    invoke-static {}, Ld/d/a/n6/b;->t()I
 
     move-result v0
 
+    .line 33
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -1040,13 +1175,15 @@
 
     iput v0, p1, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
 
+    .line 34
     iput v0, p1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
+    .line 35
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f0701c7
+    const v1, 0x7f0701c3
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -1059,16 +1196,20 @@
     :goto_3
     const/16 p2, 0x13
 
+    .line 36
     iput p2, p1, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
+    .line 37
     iput v3, p1, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
+    .line 38
     iput v3, p1, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
     goto :goto_4
 
+    .line 39
     :cond_7
-    invoke-static {}, Ly2/b;->G0()Z
+    invoke-static {}, Ld/d/a/n6/b;->G0()Z
 
     move-result v0
 
@@ -1076,35 +1217,44 @@
 
     if-eqz v0, :cond_9
 
+    .line 40
     iput v5, p2, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
+    .line 41
     invoke-virtual {p0}, Lcom/android/camera/fragment/modeselector/FragmentZoomView;->getFitCenterWidth()I
 
     move-result v0
 
     iput v0, p2, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
-    invoke-virtual {p2, v4, v4, v4, v4}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
+    .line 42
+    invoke-virtual {p2, v4, v4, v4, v4}, Landroid/widget/FrameLayout$LayoutParams;->setMargins(IIII)V
 
     const/16 p2, 0x50
 
+    .line 43
     iput p2, p1, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
+    .line 44
     iput v3, p1, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    invoke-static {}, Ly2/b;->w()I
+    .line 45
+    invoke-static {}, Ld/d/a/n6/b;->w()I
 
     move-result p2
 
     iput p2, p1, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
-    invoke-virtual {p1, v4, v4, v4, v4}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
+    .line 46
+    invoke-virtual {p1, v4, v4, v4, v4}, Landroid/widget/FrameLayout$LayoutParams;->setMargins(IIII)V
 
+    .line 47
     iget p2, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
 
     if-ne p2, v1, :cond_8
 
-    invoke-static {}, Ly2/b;->t()I
+    .line 48
+    invoke-static {}, Ld/d/a/n6/b;->t()I
 
     move-result p2
 
@@ -1112,7 +1262,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070712
+    const v1, 0x7f070618
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1124,8 +1274,9 @@
 
     goto :goto_4
 
+    .line 49
     :cond_8
-    invoke-static {}, Ly2/b;->t()I
+    invoke-static {}, Ld/d/a/n6/b;->t()I
 
     move-result p2
 
@@ -1133,6 +1284,7 @@
 
     goto :goto_4
 
+    .line 50
     :cond_9
     invoke-virtual {p0}, Lcom/android/camera/fragment/modeselector/FragmentZoomView;->getFitCenterWidth()I
 
@@ -1140,15 +1292,17 @@
 
     iput p2, p1, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
-    invoke-static {}, Ly2/b;->t()I
+    .line 51
+    invoke-static {}, Ld/d/a/n6/b;->t()I
 
     move-result p2
 
+    .line 52
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f070d28
+    const v1, 0x7f070a9b
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1156,6 +1310,7 @@
 
     sub-int/2addr p2, v0
 
+    .line 53
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1168,18 +1323,29 @@
 
     iput p2, p1, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
 
+    .line 54
     iput v5, p1, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
+    .line 55
     :goto_4
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mZoomViewLayout:Landroid/view/ViewGroup;
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
 .end method
 
 .method public updateZoomRange(Landroid/util/Range;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "range"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1189,6 +1355,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/util/Range;->getLower()Ljava/lang/Comparable;
 
     move-result-object v0
@@ -1201,6 +1368,7 @@
 
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mMinZoom:F
 
+    .line 2
     invoke-virtual {p1}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
 
     move-result-object v0
@@ -1213,6 +1381,7 @@
 
     iput v0, p0, Lcom/android/camera2/compat/theme/custom/cv/zoom/FragmentZoomViewCV;->mMaxZoom:F
 
+    .line 3
     invoke-super {p0, p1}, Lcom/android/camera/fragment/modeselector/FragmentZoomView;->updateZoomRange(Landroid/util/Range;)V
 
     return-void

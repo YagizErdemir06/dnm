@@ -19,6 +19,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {p0}, Lcom/google/mlkit/common/sdkinternal/MlKitContext;->zza(Landroid/content/Context;)Lcom/google/mlkit/common/sdkinternal/MlKitContext;
 
     return-void

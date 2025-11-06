@@ -38,6 +38,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -48,6 +49,7 @@
 .method public getCropRegion()[I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/engine/ResultData;->mCropRegion:[I
 
     return-object p0
@@ -56,6 +58,7 @@
 .method public getFlawResult()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/engine/ResultData;->mFlawResult:I
 
     return p0
@@ -73,6 +76,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/engine/ResultData;->mMetadata:Ljava/util/Map;
 
     return-object p0
@@ -81,6 +85,7 @@
 .method public getResultId()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/xiaomi/engine/ResultData;->mResultId:I
 
     return p0
@@ -89,6 +94,7 @@
 .method public getTimeStamp()J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/engine/ResultData;->mTimeStamp:J
 
     return-wide v0
@@ -105,6 +111,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/engine/ResultData;->mCropRegion:[I
 
     return-void
@@ -121,6 +128,7 @@
         }
     .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/engine/ResultData;->mFlawResult:I
 
     return-void
@@ -147,6 +155,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/engine/ResultData;->mMetadata:Ljava/util/Map;
 
     return-void
@@ -163,6 +172,7 @@
         }
     .end annotation
 
+    .line 1
     iput p1, p0, Lcom/xiaomi/engine/ResultData;->mResultId:I
 
     return-void
@@ -179,6 +189,7 @@
         }
     .end annotation
 
+    .line 1
     iput-wide p1, p0, Lcom/xiaomi/engine/ResultData;->mTimeStamp:J
 
     return-void
@@ -187,6 +198,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

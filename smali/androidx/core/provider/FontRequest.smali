@@ -205,6 +205,7 @@
         .end annotation
     .end param
 
+    .line 1
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
@@ -215,6 +216,7 @@
 
     invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 2
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -242,6 +244,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/provider/FontRequest;->mCertificates:Ljava/util/List;
 
     return-object p0
@@ -252,6 +255,7 @@
     .annotation build Landroidx/annotation/ArrayRes;
     .end annotation
 
+    .line 1
     iget p0, p0, Landroidx/core/provider/FontRequest;->mCertificatesArray:I
 
     return p0
@@ -268,6 +272,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/provider/FontRequest;->mIdentifier:Ljava/lang/String;
 
     return-object p0
@@ -284,6 +289,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/provider/FontRequest;->mIdentifier:Ljava/lang/String;
 
     return-object p0
@@ -294,6 +300,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/provider/FontRequest;->mProviderAuthority:Ljava/lang/String;
 
     return-object p0
@@ -304,6 +311,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/provider/FontRequest;->mProviderPackage:Ljava/lang/String;
 
     return-object p0
@@ -314,6 +322,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/provider/FontRequest;->mQuery:Ljava/lang/String;
 
     return-object p0
@@ -322,10 +331,12 @@
 .method public toString()Ljava/lang/String;
     .locals 6
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
+    .line 2
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -368,6 +379,7 @@
 
     move v2, v1
 
+    .line 3
     :goto_0
     iget-object v3, p0, Landroidx/core/provider/FontRequest;->mCertificates:Ljava/util/List;
 
@@ -379,8 +391,10 @@
 
     const-string v3, " ["
 
+    .line 4
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 5
     iget-object v3, p0, Landroidx/core/provider/FontRequest;->mCertificates:Ljava/util/List;
 
     invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -391,6 +405,7 @@
 
     move v4, v1
 
+    .line 6
     :goto_1
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -400,14 +415,17 @@
 
     const-string v5, " \""
 
+    .line 7
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 8
     invoke-interface {v3, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, [B
 
+    .line 9
     invoke-static {v5, v1}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
 
     move-result-object v5
@@ -416,6 +434,7 @@
 
     const-string v5, "\""
 
+    .line 10
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     add-int/lit8 v4, v4, 0x1
@@ -425,6 +444,7 @@
     :cond_0
     const-string v3, " ]"
 
+    .line 11
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     add-int/lit8 v2, v2, 0x1
@@ -434,8 +454,10 @@
     :cond_1
     const-string/jumbo v1, "}"
 
+    .line 12
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 13
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -454,6 +476,7 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 14
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0

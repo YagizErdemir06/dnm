@@ -1,4 +1,4 @@
-.class Lcom/google/common/cache/CacheBuilder$1;
+.class public Lcom/google/common/cache/CacheBuilder$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -21,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -61,6 +62,7 @@
 .method public snapshot()Lcom/google/common/cache/CacheStats;
     .locals 0
 
+    .line 1
     sget-object p0, Lcom/google/common/cache/CacheBuilder;->EMPTY_STATS:Lcom/google/common/cache/CacheStats;
 
     return-object p0

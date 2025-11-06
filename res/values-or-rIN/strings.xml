@@ -205,7 +205,6 @@
     <string name="accessibility_video_capture_button">ଭିଡିଓ ସୁଟ କରିବା ସମୟରେ ଫଟୋ ନେବା ପାଇଁ ବଟନ୍</string>
     <string name="accessibility_video_pause_button">ଭିଡିଓ ରେକର୍ଡ କରିବା ବିରତ ହୋଇଛି</string>
     <string name="accessibility_video_resume_button">ଭିଡିଓ ରେକର୍ଡ କରିବା ଆରମ୍ଭ ହୋଇଛି</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">ୱାଟରମାର୍କ ବନ୍ଦ ଅଛି</string>
     <string name="accessibility_watermark_image_on">ୱାଟରମାର୍କ ଚାଲୁ ଅଛି</string>
     <string name="accessibility_watermark_text">ୱାଟରମାର୍କ ଆଡଜଷ୍ଟମେଣ୍ଟ ପେନେଲ ଖୋଲନ୍ତୁ</string>
@@ -213,16 +212,6 @@
     <string name="accessibility_zoom_button">ଜୁମ୍‍ ମୋଡ୍</string>
     <string name="actionbar_button_up_description">ଫେରନ୍ତୁ</string>
     <string name="afternoon">ମଧ୍ୟାହ୍ନ</string>
-    <string name="agent_flip_tbc">ଭିତର ସ୍କ୍ରିନରେ ଜାରି ରଖନ୍ତୁ</string>
-    <string name="agent_function_max">ସର୍ବାଧିକ ମୂଲ୍ୟରେ ଆଡଜଷ୍ଟ ହୋଇଛି</string>
-    <string name="agent_function_min">ସର୍ବନିମ୍ନ ମୂଲ୍ୟରେ ଆଡଜଷ୍ଟ ହୋଇଛି</string>
-    <string name="agent_workspace_mode_not_supported">ଏହି ଫିଚର ସମର୍ଥିତ ନୁହେଁ</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"ଏହି ଫିଚର ସମର୍ଥିତ ନୁହେଁ।
-ଏହା ପରିବର୍ତ୍ତେ ଫଟୋ ମୋଡେଲ ଖୋଲା ହୋଇଛି।"</string>
-    <string name="agent_workspace_on">ଫଟୋଗ୍ରାଫିଂ \"%1$s\" ପାଇଁ ପାରାମିଟର ସେଟ୍ ହୋଇଛି</string>
-    <string name="agent_workspace_tbc">ସିନକୁ ଅଧ୍ୟୟନ କରୁଛି</string>
-    <string name="agent_workspace_tbc_use_default">"ସିନ ଅଧ୍ୟୟନ କରୁଛି…
-କ୍ୟାମେରା ପାରାମିଟର ଡିଫଲ୍ଟ ଭାବେ ସେଟ୍ ହୋଇଛି"</string>
     <string name="ai_agra_fort">ଆଗ୍ରା ଦୁର୍ଗ</string>
     <string name="ai_amber_fort">ଆମେର ପ୍ରାସାଦ</string>
     <string name="ai_baby">ବେବି</string>
@@ -779,7 +768,6 @@
     <string name="download_hint_cn">ଜଣାପଡ଼ୁଛି ଆପଣଙ୍କ ଡିଭାଇସ WLAN ସହିତ ସଂଯୁକ୍ତ ନୁହେଁ। ବର୍ତ୍ତମାନ ଆଇଟମଗୁଡ଼ିକୁ ଡାଉନଲୋଡ୍ କରିବାକୁ %1$s MB ମୋବାଇଲ ଡାଟା ବ୍ୟବହାର କରିବେ?</string>
     <string name="download_hint_wifi">ଜଣାପଡ଼ୁଛି ଆପଣଙ୍କ ଡିଭାଇସ Wi-Fi ସହିତ ସଂଯୁକ୍ତ ନୁହେଁ। ବର୍ତ୍ତମାନ ଆଇଟମଗୁଡ଼ିକୁ ଡାଉନଲୋଡ୍ କରିବାକୁ %1$s MB ମୋବାଇଲ ଡାଟା ବ୍ୟବହାର କରିବେ?</string>
     <string name="download_in_progress">ଡାଉନଲୋଡ୍‌ ହେଉଛି…</string>
-    <string name="download_network_error">ଡାଉନଲୋଡ ହୋଇପାରିଲା ନାହିଁ। ଆପଣଙ୍କ ନେଟୱାର୍କ ସେଟିଂସ ଯାଞ୍ଚ କରନ୍ତୁ।</string>
     <string name="download_title">ଡାଟା ବ୍ୟବହାର ଚେତାବନୀ</string>
     <string name="download_waiting">ବାକି ଅଛି…</string>
     <string name="dual_camera_lens_covered_toast">ଲେନ୍ସ କଭର୍‌ ହୋଇଛି।</string>
@@ -1256,7 +1244,6 @@
     <string name="miuix_appcompat_delete_description">ବିଲୋପ</string>
     <string name="miuix_appcompat_deselect_all">ସବୁ ଅଚୟନ କରନ୍ତୁ</string>
     <string name="miuix_appcompat_deselect_all_description">ସବୁ ଅଚୟନ କରନ୍ତୁ</string>
-    <string name="miuix_appcompat_edit">ଏଡିଟ୍ କରନ୍ତୁ</string>
     <string name="miuix_appcompat_search_action_mode_cancel">ବାତିଲ୍ କରନ୍ତୁ</string>
     <string name="miuix_appcompat_search_input_description">ସନ୍ଧାନ</string>
     <string name="miuix_appcompat_select_all">ସମସ୍ତ ଚୟନ କରନ୍ତୁ</string>
@@ -2194,7 +2181,6 @@
     <string name="time_picker_label_hour">ଘ</string>
     <string name="time_picker_label_minute">ମି</string>
     <string name="time_stamp_date_format">dd/MM/yyyy</string>
-    <string name="time_stamp_date_format_minute">dd/MM/yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">ଆପଣ ସୁଟିଂ ସମୟରେ ବା ପୂର୍ବରୁ ଯେ କୌଣସି ସମୟରେ ପୃଷ୍ଠଭୂମିକୁ ଫ୍ରିଜ୍ ଏବଂ ଅନଫ୍ରିଜ୍ କରିପାରିବେ।</string>
     <string name="timefreeze_guide_tip3">ଫ୍ରେମର ମଝିରେ ରହିବାକୁ ଆପଣଙ୍କ ସବଜେକ୍ଟକୁ କୁହନ୍ତୁ।</string>
     <string name="timefreeze_guide_tip4">ଟ୍ରାଫିକ ବନ୍ଦ କରନ୍ତୁ।</string>
@@ -2214,8 +2200,8 @@
     <string name="tip_ai_off">AI କ୍ୟାମେରା: ବନ୍ଦ</string>
     <string name="tip_beauty_mode_title1">ପୋର୍ଟ୍ରେଟ ଷ୍ଟାଇଲ: ଫ୍ରେସ</string>
     <string name="tip_beauty_mode_title2">ପୋର୍ଟ୍ରେଟ ଷ୍ଟାଇଲ: ଫିଲ୍ମ</string>
-    <string name="tip_cvtype_title1">ଷ୍ଟାଇଲ: Leica ଅଥେଣ୍ଟିକ</string>
-    <string name="tip_cvtype_title2">ଷ୍ଟାଇଲ: Leica ଭାଇବ୍ରେଣ୍ଟ</string>
+    <string name="tip_cvtype_title1">ଷ୍ଟାଇଲ: ଲେଇକା ଅଥେଣ୍ଟିକ</string>
+    <string name="tip_cvtype_title2">ଷ୍ଟାଇଲ: ଲିକା ଭାଇବ୍ରେଣ୍ଟ</string>
     <string name="tip_eis_off">ଷ୍ଟେଡି ଭିଡିଓ: ବନ୍ଦ</string>
     <string name="tip_eis_pro_off">ଷ୍ଟେଡି ଭିଡିଓ PRO: ବନ୍ଦ</string>
     <string name="tip_flash_auto">ଫ୍ଲାସ୍: ଅଟୋ</string>
@@ -2232,7 +2218,7 @@
     <string name="tip_flash_screen_light_on">ସଫ୍ଟ ଫ୍ଲାସ୍: ଚାଲୁ</string>
     <string name="tip_flash_soft_light_off">ସଫ୍ଟ ଫ୍ଲାସ୍: ବନ୍ଦ</string>
     <string name="tip_flash_soft_light_torch">ସଫ୍ଟ ଫ୍ଲାସ: ଫ୍ଲାସଲାଇଟ୍ ମୋଡ</string>
-    <string name="tip_flash_torch">ଫ୍ଲାସ୍: ଫ୍ଲାସଲାଇଟ୍</string>
+    <string name="tip_flash_torch">ଫ୍ଲାସ୍: ସର୍ବଦା ଚାଲୁ</string>
     <string name="tip_friend_mode_connect_when_24GHz">ପ୍ରିଭ୍ୟୁ ଗୁଣବତ୍ତା ବୁଷ୍ଟ କରିବାକୁ ଏକ %s GHz ସଂଯୋଗ ବ୍ୟବହାର କରନ୍ତୁ</string>
     <string name="tip_friend_mode_display_device_name_connect">ସେଆର ହୋଇଥିବା ପ୍ରିଭ୍ୟୁ</string>
     <string name="tip_friend_mode_display_device_name_disconnect">ଅନ୍ୟ ଡିଭାଇସଟି ଏହି ସେସନ ଛାଡ଼ି ଦେଇଛି</string>

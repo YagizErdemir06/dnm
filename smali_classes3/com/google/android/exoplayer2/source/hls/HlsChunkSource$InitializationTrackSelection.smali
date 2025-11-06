@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/hls/HlsChunkSource$InitializationTrackSelection;
+.class public final Lcom/google/android/exoplayer2/source/hls/HlsChunkSource$InitializationTrackSelection;
 .super Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;
 .source "SourceFile"
 
@@ -22,10 +22,12 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/source/TrackGroup;[I)V
     .locals 1
 
+    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;-><init>(Lcom/google/android/exoplayer2/source/TrackGroup;[I)V
 
     const/4 v0, 0x0
 
+    .line 2
     aget p2, p2, v0
 
     invoke-virtual {p1, p2}, Lcom/google/android/exoplayer2/source/TrackGroup;->getFormat(I)Lcom/google/android/exoplayer2/Format;
@@ -46,6 +48,7 @@
 .method public getSelectedIndex()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/source/hls/HlsChunkSource$InitializationTrackSelection;->selectedIndex:I
 
     return p0
@@ -83,10 +86,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide p1
 
+    .line 2
     iget p3, p0, Lcom/google/android/exoplayer2/source/hls/HlsChunkSource$InitializationTrackSelection;->selectedIndex:I
 
     invoke-virtual {p0, p3, p1, p2}, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->isBlacklisted(IJ)Z
@@ -97,6 +102,7 @@
 
     return-void
 
+    .line 3
     :cond_0
     iget p3, p0, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->length:I
 
@@ -105,12 +111,14 @@
     :goto_0
     if-ltz p3, :cond_2
 
+    .line 4
     invoke-virtual {p0, p3, p1, p2}, Lcom/google/android/exoplayer2/trackselection/BaseTrackSelection;->isBlacklisted(IJ)Z
 
     move-result p4
 
     if-nez p4, :cond_1
 
+    .line 5
     iput p3, p0, Lcom/google/android/exoplayer2/source/hls/HlsChunkSource$InitializationTrackSelection;->selectedIndex:I
 
     return-void
@@ -120,6 +128,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_2
     new-instance p0, Ljava/lang/IllegalStateException;
 

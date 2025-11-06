@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/milab/videosdk/message/DefaultHandler;
+.class public Lcom/xiaomi/milab/videosdk/message/DefaultHandler;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -28,20 +28,27 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->mPlayCallback:Lcom/xiaomi/milab/videosdk/interfaces/PlayCallback;
 
+    .line 3
     iput-object v0, p0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->mExportCallback:Lcom/xiaomi/milab/videosdk/interfaces/ExportCallback;
 
+    .line 4
     iput-object v0, p0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->mPreviewExportCallback:Lcom/xiaomi/milab/videosdk/interfaces/ExportCallback;
 
+    .line 5
     iput-object v0, p0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->mTranscodeCallback:Lcom/xiaomi/milab/videosdk/message/TranscodeCallback;
 
+    .line 6
     iput-object v0, p0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->mAudioExtractCallback:Lcom/xiaomi/milab/videosdk/interfaces/AudioExtractCallback;
 
+    .line 7
     iput-object v0, p0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->mTimelineCacllback:Lcom/xiaomi/milab/videosdk/interfaces/TimelineCallback;
 
     return-void
@@ -68,6 +75,7 @@
 
     packed-switch p1, :pswitch_data_0
 
+    .line 1
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -93,49 +101,59 @@
 
     goto/16 :goto_0
 
+    .line 2
     :pswitch_1
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->mPreviewExportCallback:Lcom/xiaomi/milab/videosdk/interfaces/ExportCallback;
 
     if-eqz p0, :cond_5
 
+    .line 3
     invoke-interface {p0}, Lcom/xiaomi/milab/videosdk/interfaces/ExportCallback;->onExportFail()V
 
     goto/16 :goto_0
 
+    .line 4
     :pswitch_2
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->mPreviewExportCallback:Lcom/xiaomi/milab/videosdk/interfaces/ExportCallback;
 
     if-eqz p0, :cond_5
 
+    .line 5
     invoke-interface {p0}, Lcom/xiaomi/milab/videosdk/interfaces/ExportCallback;->onExportCancel()V
 
     goto/16 :goto_0
 
+    .line 6
     :pswitch_3
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->mPreviewExportCallback:Lcom/xiaomi/milab/videosdk/interfaces/ExportCallback;
 
     if-eqz p0, :cond_5
 
+    .line 7
     instance-of p1, p0, Lcom/xiaomi/milab/videosdk/interfaces/ExportCallback2;
 
     if-eqz p1, :cond_0
 
+    .line 8
     check-cast p0, Lcom/xiaomi/milab/videosdk/interfaces/ExportCallback2;
 
     invoke-interface {p0, p3}, Lcom/xiaomi/milab/videosdk/interfaces/ExportCallback2;->onExportSuccess(I)V
 
     goto/16 :goto_0
 
+    .line 9
     :cond_0
     invoke-interface {p0}, Lcom/xiaomi/milab/videosdk/interfaces/ExportCallback;->onExportSuccess()V
 
     goto/16 :goto_0
 
+    .line 10
     :pswitch_4
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->mPreviewExportCallback:Lcom/xiaomi/milab/videosdk/interfaces/ExportCallback;
 
     if-eqz p0, :cond_5
 
+    .line 11
     invoke-interface {p0, p3}, Lcom/xiaomi/milab/videosdk/interfaces/ExportCallback;->onExportProgress(I)V
 
     goto/16 :goto_0
@@ -147,11 +165,13 @@
 
     goto/16 :goto_0
 
+    .line 12
     :cond_1
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->mTimelineCacllback:Lcom/xiaomi/milab/videosdk/interfaces/TimelineCallback;
 
     if-eqz p0, :cond_5
 
+    .line 13
     invoke-interface {p0}, Lcom/xiaomi/milab/videosdk/interfaces/TimelineCallback;->onTimelineStarted()V
 
     goto/16 :goto_0
@@ -167,20 +187,24 @@
 
     goto/16 :goto_0
 
+    .line 14
     :cond_2
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->mAudioExtractCallback:Lcom/xiaomi/milab/videosdk/interfaces/AudioExtractCallback;
 
     if-eqz p0, :cond_5
 
+    .line 15
     invoke-interface {p0}, Lcom/xiaomi/milab/videosdk/interfaces/AudioExtractCallback;->onExtractFinished()V
 
     goto/16 :goto_0
 
+    .line 16
     :cond_3
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->mAudioExtractCallback:Lcom/xiaomi/milab/videosdk/interfaces/AudioExtractCallback;
 
     if-eqz p0, :cond_5
 
+    .line 17
     invoke-interface {p0, p3}, Lcom/xiaomi/milab/videosdk/interfaces/AudioExtractCallback;->onExtractProgress(I)V
 
     goto/16 :goto_0
@@ -190,38 +214,46 @@
 
     goto/16 :goto_0
 
+    .line 18
     :pswitch_8
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->mTranscodeCallback:Lcom/xiaomi/milab/videosdk/message/TranscodeCallback;
 
     if-eqz p0, :cond_5
 
+    .line 19
     invoke-interface {p0}, Lcom/xiaomi/milab/videosdk/message/TranscodeCallback;->onTranscodeFail()V
 
     goto/16 :goto_0
 
+    .line 20
     :pswitch_9
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->mTranscodeCallback:Lcom/xiaomi/milab/videosdk/message/TranscodeCallback;
 
     if-eqz p0, :cond_5
 
+    .line 21
     invoke-interface {p0}, Lcom/xiaomi/milab/videosdk/message/TranscodeCallback;->onTranscodeCancel()V
 
     goto/16 :goto_0
 
+    .line 22
     :pswitch_a
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->mTranscodeCallback:Lcom/xiaomi/milab/videosdk/message/TranscodeCallback;
 
     if-eqz p0, :cond_5
 
+    .line 23
     invoke-interface {p0}, Lcom/xiaomi/milab/videosdk/message/TranscodeCallback;->onTranscodeSuccess()V
 
     goto/16 :goto_0
 
+    .line 24
     :pswitch_b
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->mTranscodeCallback:Lcom/xiaomi/milab/videosdk/message/TranscodeCallback;
 
     if-eqz p0, :cond_5
 
+    .line 25
     invoke-interface {p0, p3}, Lcom/xiaomi/milab/videosdk/message/TranscodeCallback;->onTranscodeProgress(I)V
 
     goto :goto_0
@@ -231,38 +263,46 @@
 
     goto :goto_0
 
+    .line 26
     :pswitch_d
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->mExportCallback:Lcom/xiaomi/milab/videosdk/interfaces/ExportCallback;
 
     if-eqz p0, :cond_5
 
+    .line 27
     invoke-interface {p0}, Lcom/xiaomi/milab/videosdk/interfaces/ExportCallback;->onExportFail()V
 
     goto :goto_0
 
+    .line 28
     :pswitch_e
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->mExportCallback:Lcom/xiaomi/milab/videosdk/interfaces/ExportCallback;
 
     if-eqz p0, :cond_5
 
+    .line 29
     invoke-interface {p0}, Lcom/xiaomi/milab/videosdk/interfaces/ExportCallback;->onExportCancel()V
 
     goto :goto_0
 
+    .line 30
     :pswitch_f
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->mExportCallback:Lcom/xiaomi/milab/videosdk/interfaces/ExportCallback;
 
     if-eqz p0, :cond_5
 
+    .line 31
     invoke-interface {p0}, Lcom/xiaomi/milab/videosdk/interfaces/ExportCallback;->onExportSuccess()V
 
     goto :goto_0
 
+    .line 32
     :pswitch_10
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->mExportCallback:Lcom/xiaomi/milab/videosdk/interfaces/ExportCallback;
 
     if-eqz p0, :cond_5
 
+    .line 33
     invoke-interface {p0, p3}, Lcom/xiaomi/milab/videosdk/interfaces/ExportCallback;->onExportProgress(I)V
 
     goto :goto_0
@@ -272,6 +312,7 @@
 
     goto :goto_0
 
+    .line 34
     :pswitch_12
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->mPlayCallback:Lcom/xiaomi/milab/videosdk/interfaces/PlayCallback;
 
@@ -281,17 +322,21 @@
 
     if-eqz p0, :cond_4
 
+    .line 35
     invoke-interface {p0, p3}, Lcom/xiaomi/milab/videosdk/interfaces/PlayCallback;->onTimelineSurfaceChange(I)V
 
+    .line 36
     invoke-static {p1, p2, p2, p2}, Lcom/xiaomi/milab/videosdk/message/XmsMessage;->OnUserCommand(IIII)V
 
     goto :goto_0
 
+    .line 37
     :cond_4
     invoke-static {p1, p2, p2, p2}, Lcom/xiaomi/milab/videosdk/message/XmsMessage;->OnUserCommand(IIII)V
 
     goto :goto_0
 
+    .line 38
     :pswitch_13
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->mPlayCallback:Lcom/xiaomi/milab/videosdk/interfaces/PlayCallback;
 
@@ -299,19 +344,23 @@
 
     int-to-long p1, p3
 
+    .line 39
     invoke-interface {p0, p1, p2}, Lcom/xiaomi/milab/videosdk/interfaces/PlayCallback;->onTimelineSeekComplete(J)V
 
     goto :goto_0
 
+    .line 40
     :pswitch_14
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->mPlayCallback:Lcom/xiaomi/milab/videosdk/interfaces/PlayCallback;
 
     if-eqz p0, :cond_5
 
+    .line 41
     invoke-interface {p0}, Lcom/xiaomi/milab/videosdk/interfaces/PlayCallback;->onPlayEOF()V
 
     goto :goto_0
 
+    .line 42
     :pswitch_15
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->mPlayCallback:Lcom/xiaomi/milab/videosdk/interfaces/PlayCallback;
 
@@ -319,15 +368,18 @@
 
     int-to-long p1, p3
 
+    .line 43
     invoke-interface {p0, p1, p2}, Lcom/xiaomi/milab/videosdk/interfaces/PlayCallback;->onPlayTimelinePosition(J)V
 
     goto :goto_0
 
+    .line 44
     :pswitch_16
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->mPlayCallback:Lcom/xiaomi/milab/videosdk/interfaces/PlayCallback;
 
     if-eqz p0, :cond_5
 
+    .line 45
     invoke-interface {p0, p3}, Lcom/xiaomi/milab/videosdk/interfaces/PlayCallback;->onTimelineStateChanged(I)V
 
     :cond_5
@@ -395,6 +447,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->mAudioExtractCallback:Lcom/xiaomi/milab/videosdk/interfaces/AudioExtractCallback;
 
     return-void
@@ -411,6 +464,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->mExportCallback:Lcom/xiaomi/milab/videosdk/interfaces/ExportCallback;
 
     return-void
@@ -427,6 +481,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->mPlayCallback:Lcom/xiaomi/milab/videosdk/interfaces/PlayCallback;
 
     return-void
@@ -443,6 +498,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->mPreviewExportCallback:Lcom/xiaomi/milab/videosdk/interfaces/ExportCallback;
 
     return-void
@@ -459,6 +515,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->mTimelineCacllback:Lcom/xiaomi/milab/videosdk/interfaces/TimelineCallback;
 
     return-void
@@ -475,6 +532,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/milab/videosdk/message/DefaultHandler;->mTranscodeCallback:Lcom/xiaomi/milab/videosdk/message/TranscodeCallback;
 
     return-void

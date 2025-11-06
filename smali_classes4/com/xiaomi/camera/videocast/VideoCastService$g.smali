@@ -23,13 +23,24 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Intent;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "i"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Lcom/xiaomi/camera/videocast/VideoCastService$e;->a:Lcom/xiaomi/camera/videocast/VideoCastService$e;
+    .line 2
+    sget-object v0, Lcom/xiaomi/camera/videocast/VideoCastService$e;->c:Lcom/xiaomi/camera/videocast/VideoCastService$e;
 
     iput-object v0, p0, Lcom/xiaomi/camera/videocast/VideoCastService$g;->b:Lcom/xiaomi/camera/videocast/VideoCastService$e;
 
+    .line 3
     iput-object p1, p0, Lcom/xiaomi/camera/videocast/VideoCastService$g;->a:Landroid/content/Intent;
 
     return-void

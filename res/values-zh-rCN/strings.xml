@@ -119,7 +119,6 @@
     <string name="accessibility_flash_soft_light_off">柔光灯，关闭状态</string>
     <string name="accessibility_flash_soft_light_touch">柔光灯，常亮状态</string>
     <string name="accessibility_flash_torch">闪光灯，常亮状态</string>
-    <string name="accessibility_focal">焦距</string>
     <string name="accessibility_focal_lens">%s毫米等效焦距</string>
     <string name="accessibility_focus_face_pos_bottom">靠近底部边缘</string>
     <string name="accessibility_focus_face_pos_left">靠近左侧边缘</string>
@@ -240,7 +239,6 @@
     <string name="accessibility_video_capture_button">录像时拍照按钮</string>
     <string name="accessibility_video_pause_button">录像暂停</string>
     <string name="accessibility_video_resume_button">录像继续</string>
-    <string name="accessibility_watermark_count_tip">%1$s，%2$s</string>
     <string name="accessibility_watermark_image_off">水印，关闭状态</string>
     <string name="accessibility_watermark_image_on">水印，开启状态</string>
     <string name="accessibility_watermark_text">打开水印调节面板</string>
@@ -248,17 +246,6 @@
     <string name="accessibility_zoom_button">变焦</string>
     <string name="actionbar_button_up_description">返回</string>
     <string name="afternoon">下午</string>
-    <string name="agent_flip_tbc">请展开到内屏操作</string>
-    <string name="agent_function_active">%1$s调整已生效</string>
-    <string name="agent_function_max">已调节到最大值</string>
-    <string name="agent_function_min">已调节到最小值</string>
-    <string name="agent_workspace_mode_not_supported">暂不支持此功能</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"暂不支持此功能，
-已打开拍照模式"</string>
-    <string name="agent_workspace_on">拍摄%1$s的参数已设置</string>
-    <string name="agent_workspace_tbc">场景学习中</string>
-    <string name="agent_workspace_tbc_use_default">"场景学习中，
-相机参数设置为默认值"</string>
     <string name="ai_agra_fort">阿格拉堡</string>
     <string name="ai_amber_fort">琥珀堡</string>
     <string name="ai_baby">宝宝</string>
@@ -487,7 +474,6 @@
     <string name="bluetooth_headset_permission_des">用于判断蓝牙耳机连接状态，接入带麦克风的蓝牙耳机时可通过耳机收录声音</string>
     <string name="bluetooth_permission_not_ask_again">需要在系统“权限管理”中打开“连接附近的设备”开关，才能获取蓝牙耳机的连接状态</string>
     <string name="bokeh_use_hint">景深效果已开启</string>
-    <string name="bottomsheet_action_expand_halfway">展开到一半高度</string>
     <string name="burst_shoot_exit_button_text">关闭连拍模式</string>
     <string name="button_fisheye_camera_title">鱼眼镜头</string>
     <string name="button_front_camera_title">自拍</string>
@@ -528,8 +514,6 @@
     <string name="ccc_temperature_warning_msg">手机温度过高，相机应用%d秒后自动关闭。您正在进行的拍照或视频会自动保存。</string>
     <string name="ccc_temperature_warning_title">温度警示</string>
     <string name="center_mark">中心标</string>
-    <string name="character_counter_content_description">输入了 %1$d 个字符（上限为 %2$d 个）</string>
-    <string name="character_counter_overflowed_content_description">超出字符数限制（共 %1$d 个，上限为 %2$d 个）</string>
     <string name="cinemaster_cancel">取消</string>
     <string name="cinemaster_confirm">确认</string>
     <string name="cinemaster_connect_exit_message">是否退出多机互联？</string>
@@ -548,7 +532,6 @@
     <string name="cinemaster_toast_monitor_disconnect">监视器退出多机互联</string>
     <string name="cinemaster_toast_monitor_play_error">摄像机%s连接异常，退出多机互联</string>
     <string name="cinemaster_wifi_24g_tips">建议手动切换%sG路由频段，提升监视端画质效果</string>
-    <string name="clear_text_end_icon_content_description">清除文字</string>
     <string name="clearable_edittext_clear_description">清空</string>
     <string name="clone_adjust">调整分身</string>
     <string name="clone_copy_mode">定格模式</string>
@@ -850,7 +833,6 @@
     <string name="download_hint_cn">当前非WLAN环境，将会耗费约%1$sMB数据流量，确定下载吗？</string>
     <string name="download_hint_wifi">@string/download_hint</string>
     <string name="download_in_progress">下载中</string>
-    <string name="download_network_error">下载失败，请检查网络连接</string>
     <string name="download_title">流量提醒</string>
     <string name="download_waiting">等待中</string>
     <string name="dual_camera_lens_covered_toast">立体镜头被遮挡。</string>
@@ -902,7 +884,6 @@
     <string name="eras_ad">公元</string>
     <string name="eras_bc">公元前</string>
     <string name="error_fail_to_start_audio_capture">无法启用声控拍照：麦克风被其他应用占用</string>
-    <string name="error_icon_content_description">错误</string>
     <string name="esp_tip">外部屏幕预览</string>
     <string name="evening">傍晚</string>
     <string name="exo_controls_cc_disabled_description">启用字幕</string>
@@ -957,7 +938,6 @@
     <string name="exo_track_surround_7_point_1">7.1 环绕声</string>
     <string name="exo_track_unknown">未知</string>
     <string name="expand_button_title">高级</string>
-    <string name="exposed_dropdown_menu_content_description">显示下拉菜单</string>
     <string name="exposure_mode_adjust_title">曝光模式</string>
     <string name="eye_light">眼神光</string>
     <string name="eye_light_angel">天使眼神光</string>
@@ -1125,7 +1105,6 @@
     <string name="hint_subtitle_prompt">已开启语音字幕，请边录边说</string>
     <string name="histogram_summary_tip">实时反馈画面的曝光情况</string>
     <string name="hunt_dual_water_mark">双摄水印将自动添加到照片上</string>
-    <string name="icon_content_description">对话框图标</string>
     <string name="id_card_mode_hint_back">请拍摄身份证国徽面</string>
     <string name="id_card_mode_hint_front">请拍摄身份证人像面</string>
     <string name="id_card_mode_use_hint_text_body">"身份证双面拍摄，1:1生成A4证件复印件
@@ -1136,7 +1115,6 @@
     <string name="invisible_mode_dialog_summary">无法连接到相机，如需使用相机，请关闭隐身模式。</string>
     <string name="invisible_mode_dialog_title">隐身模式已开启</string>
     <string name="invisible_mode_dialog_to_close">去关闭</string>
-    <string name="item_view_role_description">标签页</string>
     <string name="kaleidoscope_fragment_tab_name">万花筒</string>
     <string name="lens_dirty_detected_content">"检测到您的镜头有脏污，为拍出效果更好
 的照片，请您清洁相机镜头"</string>
@@ -1268,18 +1246,6 @@
     <string name="manually_raw_tip">RAW格式下不支持变焦</string>
     <string name="manually_ultra_raw_tip">Ultra RAW格式下不支持变焦</string>
     <string name="masterfilter_description_title">电影滤镜介绍</string>
-    <string name="material_clock_toggle_content_description">选择上午或下午</string>
-    <string name="material_hour_selection">选择小时</string>
-    <string name="material_hour_suffix">%1$s 点</string>
-    <string name="material_minute_selection">选择分钟</string>
-    <string name="material_minute_suffix">%1$s 分</string>
-    <string name="material_timepicker_am">上午</string>
-    <string name="material_timepicker_clock_mode_description">切换到时钟模式来输入时间。</string>
-    <string name="material_timepicker_hour">小时</string>
-    <string name="material_timepicker_minute">分钟</string>
-    <string name="material_timepicker_pm">下午</string>
-    <string name="material_timepicker_select_time">选择时间</string>
-    <string name="material_timepicker_text_input_mode_description">切换到文字输入模式来输入时间。</string>
     <string name="message_snap_double_confirm">当前长按音量键默认为NFC刷卡模式，确认替换？</string>
     <string name="midnight">半夜</string>
     <string name="mimoji_app_name">小米萌拍</string>
@@ -1530,42 +1496,6 @@
     <string name="msg_bubble_doc4_first_use">点击可快速提取文本</string>
     <string name="msg_toast_doc4_recognition_failed">识别发生异常，请重试</string>
     <string name="msg_toast_doc4_text_not_found">未检测到可识别文本</string>
-    <string name="mtrl_badge_numberless_content_description">新通知</string>
-    <string name="mtrl_chip_close_icon_content_description">移除%1$s</string>
-    <string name="mtrl_exceed_max_badge_number_content_description">有 %1$d 条以上的新通知</string>
-    <string name="mtrl_picker_a11y_next_month">转到下个月</string>
-    <string name="mtrl_picker_a11y_prev_month">转到上个月</string>
-    <string name="mtrl_picker_announce_current_selection">当前的选择是：%1$s</string>
-    <string name="mtrl_picker_cancel">取消</string>
-    <string name="mtrl_picker_confirm">确定</string>
-    <string name="mtrl_picker_date_header_selected">%1$s</string>
-    <string name="mtrl_picker_date_header_title">请选择日期</string>
-    <string name="mtrl_picker_date_header_unselected">选定的日期</string>
-    <string name="mtrl_picker_day_of_week_column_header">表示周几的列：%1$s</string>
-    <string name="mtrl_picker_invalid_format">格式无效。</string>
-    <string name="mtrl_picker_invalid_format_example">示例：%1$s</string>
-    <string name="mtrl_picker_invalid_format_use">使用：%1$s</string>
-    <string name="mtrl_picker_invalid_range">范围无效。</string>
-    <string name="mtrl_picker_navigate_to_year_description">转到 %1$s 年</string>
-    <string name="mtrl_picker_out_of_range">不在允许的范围内：%1$s</string>
-    <string name="mtrl_picker_range_header_only_end_selected">开始日期 – %1$s</string>
-    <string name="mtrl_picker_range_header_only_start_selected">%1$s – 结束日期</string>
-    <string name="mtrl_picker_range_header_selected">%1$s - %2$s</string>
-    <string name="mtrl_picker_range_header_title">请选择范围</string>
-    <string name="mtrl_picker_range_header_unselected">开始日期 - 结束日期</string>
-    <string name="mtrl_picker_save">保存</string>
-    <string name="mtrl_picker_text_input_date_hint">日期</string>
-    <string name="mtrl_picker_text_input_date_range_end_hint">结束日期</string>
-    <string name="mtrl_picker_text_input_date_range_start_hint">开始日期</string>
-    <string name="mtrl_picker_text_input_day_abbr">d</string>
-    <string name="mtrl_picker_text_input_month_abbr">m</string>
-    <string name="mtrl_picker_text_input_year_abbr">y</string>
-    <string name="mtrl_picker_toggle_to_calendar_input_mode">切换到日历输入模式</string>
-    <string name="mtrl_picker_toggle_to_day_selection">点按即可切换到选择某天</string>
-    <string name="mtrl_picker_toggle_to_text_input_mode">切换到文本字段输入模式</string>
-    <string name="mtrl_picker_toggle_to_year_selection">点按即可切换到选择某年</string>
-    <string name="mtrl_timepicker_cancel">取消</string>
-    <string name="mtrl_timepicker_confirm">确定</string>
     <string name="multi_window_mode_not_supported">系统相机暂不支持多窗口</string>
     <string name="network_access_user_notice_agree">同意</string>
     <string name="network_access_user_notice_message_live_video"><Data>欢迎您使用短视频功能，我们将使用联网功能为您提供道具、音乐等趣味性功能。&lt;br/>&lt;br/>点击同意，表示您同意&lt;a href =%1$s>用户协议&lt;/a>、&lt;a href =%2$s>隐私政策&lt;/a>以及网络连接许可。</Data></string>
@@ -1661,7 +1591,6 @@ UltraRAW格式记录照片的%dbit原始数据，适用于图片后期处理，�
     <string name="parameter_wb_title">白平衡</string>
     <string name="parameter_zoom_slider_description">通过左右拖动变焦滑杆，可实现平滑缩放取景构图的效果</string>
     <string name="parameter_zoom_slider_title">变焦滑杆</string>
-    <string name="password_toggle_content_description">显示密码</string>
     <string name="path_settings">系统应用/相机/设置</string>
     <string name="photo_assistance_tips_title">拍照辅助提示</string>
     <string name="pic_flaw_blink_more">照片拍摄有人眨眼</string>
@@ -2465,7 +2394,6 @@ UltraRAW格式记录照片的%dbit原始数据，适用于图片后期处理，�
     <string name="time_picker_label_hour">时</string>
     <string name="time_picker_label_minute">分</string>
     <string name="time_stamp_date_format">yyyy.MM.dd</string>
-    <string name="time_stamp_date_format_minute">yyyy.MM.dd HH:mm</string>
     <string name="timefreeze_guide_tip2">拍摄前、拍摄中可随时开启和停止背景静止效果</string>
     <string name="timefreeze_guide_tip3">被拍摄主体尽量避免左右移动</string>
     <string name="timefreeze_guide_tip4">冻结背景车流</string>
@@ -2606,8 +2534,8 @@ UltraRAW格式记录照片的%dbit原始数据，适用于图片后期处理，�
     <string name="user_disagree">不同意</string>
     <string name="user_notice_identify_summary_format">相机需要您同意《<a href="http://www.miui.com/res/doc/eula.html?lang=zh_CN">用户协议</a>》和《<a href="http://www.miui.com/res/doc/privacy.html?lang=zh_CN">隐私政策</a>》方可使用。在使用过程中需要连接网络，您是否同意？</string>
     <string name="user_notice_title">声明与条款</string>
-    <string name="v7_preference_off">已关闭</string>
-    <string name="v7_preference_on">已开启</string>
+    <string name="v7_preference_off">关闭</string>
+    <string name="v7_preference_on">开启</string>
     <string name="video_beauty_hint_msg">面部遮瑕更精准、皮肤细节更真实</string>
     <string name="video_beauty_hint_title">视频美颜全新升级</string>
     <string name="video_beauty_tip">视频美颜</string>

@@ -31,6 +31,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/signin/zad;->zac:Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;
 
     sput-object v0, Lcom/google/android/gms/common/api/internal/zact;->zaa:Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;
@@ -47,6 +48,7 @@
     .annotation build Landroidx/annotation/WorkerThread;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/common/api/internal/zact;->zaa:Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;
 
     invoke-direct {p0}, Lcom/google/android/gms/signin/internal/zac;-><init>()V
@@ -57,6 +59,7 @@
 
     const-string p1, "ClientSettings must not be null"
 
+    .line 2
     invoke-static {p3, p1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -87,16 +90,19 @@
 .method public static bridge synthetic zad(Lcom/google/android/gms/common/api/internal/zact;Lcom/google/android/gms/signin/internal/zak;)V
     .locals 3
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/gms/signin/internal/zak;->zaa()Lcom/google/android/gms/common/ConnectionResult;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Lcom/google/android/gms/common/ConnectionResult;->isSuccess()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
+    .line 3
     invoke-virtual {p1}, Lcom/google/android/gms/signin/internal/zak;->zab()Lcom/google/android/gms/common/internal/zav;
 
     move-result-object p1
@@ -107,16 +113,19 @@
 
     check-cast p1, Lcom/google/android/gms/common/internal/zav;
 
+    .line 4
     invoke-virtual {p1}, Lcom/google/android/gms/common/internal/zav;->zaa()Lcom/google/android/gms/common/ConnectionResult;
 
     move-result-object v0
 
+    .line 5
     invoke-virtual {v0}, Lcom/google/android/gms/common/ConnectionResult;->isSuccess()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
+    .line 6
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -137,10 +146,12 @@
 
     iget-object p1, p0, Lcom/google/android/gms/common/api/internal/zact;->zah:Lcom/google/android/gms/common/api/internal/zacs;
 
+    .line 7
     invoke-interface {p1, v0}, Lcom/google/android/gms/common/api/internal/zacs;->zae(Lcom/google/android/gms/common/ConnectionResult;)V
 
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zact;->zag:Lcom/google/android/gms/signin/zae;
 
+    .line 8
     invoke-interface {p0}, Lcom/google/android/gms/common/api/Api$Client;->disconnect()V
 
     return-void
@@ -148,6 +159,7 @@
     :cond_0
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zact;->zah:Lcom/google/android/gms/common/api/internal/zacs;
 
+    .line 9
     invoke-virtual {p1}, Lcom/google/android/gms/common/internal/zav;->zab()Lcom/google/android/gms/common/internal/IAccountAccessor;
 
     move-result-object p1
@@ -158,14 +170,18 @@
 
     goto :goto_0
 
+    .line 10
     :cond_1
     iget-object p1, p0, Lcom/google/android/gms/common/api/internal/zact;->zah:Lcom/google/android/gms/common/api/internal/zacs;
 
+    .line 11
     invoke-interface {p1, v0}, Lcom/google/android/gms/common/api/internal/zacs;->zae(Lcom/google/android/gms/common/ConnectionResult;)V
 
+    .line 12
     :goto_0
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zact;->zag:Lcom/google/android/gms/signin/zae;
 
+    .line 13
     invoke-interface {p0}, Lcom/google/android/gms/common/api/Api$Client;->disconnect()V
 
     return-void
@@ -182,6 +198,7 @@
     .annotation build Landroidx/annotation/WorkerThread;
     .end annotation
 
+    .line 1
     iget-object p1, p0, Lcom/google/android/gms/common/api/internal/zact;->zag:Lcom/google/android/gms/signin/zae;
 
     invoke-interface {p1, p0}, Lcom/google/android/gms/signin/zae;->zad(Lcom/google/android/gms/signin/internal/zae;)V
@@ -198,6 +215,7 @@
     .annotation build Landroidx/annotation/WorkerThread;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zact;->zah:Lcom/google/android/gms/common/api/internal/zacs;
 
     invoke-interface {p0, p1}, Lcom/google/android/gms/common/api/internal/zacs;->zae(Lcom/google/android/gms/common/ConnectionResult;)V
@@ -210,6 +228,7 @@
     .annotation build Landroidx/annotation/WorkerThread;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zact;->zag:Lcom/google/android/gms/signin/zae;
 
     invoke-interface {p0}, Lcom/google/android/gms/common/api/Api$Client;->disconnect()V
@@ -222,6 +241,7 @@
     .annotation build Landroidx/annotation/BinderThread;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zact;->zac:Landroid/os/Handler;
 
     new-instance v1, Lcom/google/android/gms/common/api/internal/zacr;
@@ -238,6 +258,7 @@
     .annotation build Landroidx/annotation/WorkerThread;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zact;->zag:Lcom/google/android/gms/signin/zae;
 
     if-eqz v0, :cond_0
@@ -247,6 +268,7 @@
     :cond_0
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zact;->zaf:Lcom/google/android/gms/common/internal/ClientSettings;
 
+    .line 2
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
@@ -263,12 +285,14 @@
 
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/zact;->zac:Landroid/os/Handler;
 
+    .line 3
     invoke-virtual {v0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
     move-result-object v4
 
     iget-object v5, p0, Lcom/google/android/gms/common/api/internal/zact;->zaf:Lcom/google/android/gms/common/internal/ClientSettings;
 
+    .line 4
     invoke-virtual {v5}, Lcom/google/android/gms/common/internal/ClientSettings;->zaa()Lcom/google/android/gms/signin/SignInOptions;
 
     move-result-object v6
@@ -277,6 +301,7 @@
 
     move-object v8, p0
 
+    .line 5
     invoke-virtual/range {v2 .. v8}, Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;->buildClient(Landroid/content/Context;Landroid/os/Looper;Lcom/google/android/gms/common/internal/ClientSettings;Ljava/lang/Object;Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;)Lcom/google/android/gms/common/api/Api$Client;
 
     move-result-object v0
@@ -289,6 +314,7 @@
 
     if-eqz p1, :cond_2
 
+    .line 6
     invoke-interface {p1}, Ljava/util/Set;->isEmpty()Z
 
     move-result p1
@@ -297,13 +323,16 @@
 
     goto :goto_0
 
+    .line 7
     :cond_1
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zact;->zag:Lcom/google/android/gms/signin/zae;
 
+    .line 8
     invoke-interface {p0}, Lcom/google/android/gms/signin/zae;->zab()V
 
     return-void
 
+    .line 9
     :cond_2
     :goto_0
     iget-object p1, p0, Lcom/google/android/gms/common/api/internal/zact;->zac:Landroid/os/Handler;
@@ -312,6 +341,7 @@
 
     invoke-direct {v0, p0}, Lcom/google/android/gms/common/api/internal/zacq;-><init>(Lcom/google/android/gms/common/api/internal/zact;)V
 
+    .line 10
     invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
@@ -320,6 +350,7 @@
 .method public final zaf()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/zact;->zag:Lcom/google/android/gms/signin/zae;
 
     if-eqz p0, :cond_0

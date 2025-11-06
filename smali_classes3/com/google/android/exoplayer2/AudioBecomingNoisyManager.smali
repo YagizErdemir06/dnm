@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/AudioBecomingNoisyManager;
+.class public final Lcom/google/android/exoplayer2/AudioBecomingNoisyManager;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -24,14 +24,17 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Handler;Lcom/google/android/exoplayer2/AudioBecomingNoisyManager$EventListener;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/AudioBecomingNoisyManager;->context:Landroid/content/Context;
 
+    .line 3
     new-instance p1, Lcom/google/android/exoplayer2/AudioBecomingNoisyManager$AudioBecomingNoisyReceiver;
 
     invoke-direct {p1, p0, p2, p3}, Lcom/google/android/exoplayer2/AudioBecomingNoisyManager$AudioBecomingNoisyReceiver;-><init>(Lcom/google/android/exoplayer2/AudioBecomingNoisyManager;Landroid/os/Handler;Lcom/google/android/exoplayer2/AudioBecomingNoisyManager$EventListener;)V
@@ -44,6 +47,7 @@
 .method public static synthetic access$000(Lcom/google/android/exoplayer2/AudioBecomingNoisyManager;)Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/AudioBecomingNoisyManager;->receiverRegistered:Z
 
     return p0
@@ -56,10 +60,12 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/AudioBecomingNoisyManager;->receiverRegistered:Z
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object p1, p0, Lcom/google/android/exoplayer2/AudioBecomingNoisyManager;->context:Landroid/content/Context;
 
     iget-object v0, p0, Lcom/google/android/exoplayer2/AudioBecomingNoisyManager;->receiver:Lcom/google/android/exoplayer2/AudioBecomingNoisyManager$AudioBecomingNoisyReceiver;
@@ -74,6 +80,7 @@
 
     const/4 p1, 0x1
 
+    .line 3
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/AudioBecomingNoisyManager;->receiverRegistered:Z
 
     goto :goto_0
@@ -81,10 +88,12 @@
     :cond_0
     if-nez p1, :cond_1
 
+    .line 4
     iget-boolean p1, p0, Lcom/google/android/exoplayer2/AudioBecomingNoisyManager;->receiverRegistered:Z
 
     if-eqz p1, :cond_1
 
+    .line 5
     iget-object p1, p0, Lcom/google/android/exoplayer2/AudioBecomingNoisyManager;->context:Landroid/content/Context;
 
     iget-object v0, p0, Lcom/google/android/exoplayer2/AudioBecomingNoisyManager;->receiver:Lcom/google/android/exoplayer2/AudioBecomingNoisyManager$AudioBecomingNoisyReceiver;
@@ -93,6 +102,7 @@
 
     const/4 p1, 0x0
 
+    .line 6
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/AudioBecomingNoisyManager;->receiverRegistered:Z
 
     :cond_1

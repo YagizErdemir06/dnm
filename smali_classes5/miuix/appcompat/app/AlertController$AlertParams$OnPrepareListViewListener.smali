@@ -1,4 +1,4 @@
-.class interface abstract Lmiuix/appcompat/app/AlertController$AlertParams$OnPrepareListViewListener;
+.class public interface abstract Lmiuix/appcompat/app/AlertController$AlertParams$OnPrepareListViewListener;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

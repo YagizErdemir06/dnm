@@ -16,12 +16,4 @@
 
 # virtual methods
 .method public abstract onPreferenceStartScreen(Landroidx/preference/PreferenceFragmentCompat;Landroidx/preference/PreferenceScreen;)Z
-    .param p1    # Landroidx/preference/PreferenceFragmentCompat;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroidx/preference/PreferenceScreen;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 .end method

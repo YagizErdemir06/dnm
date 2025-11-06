@@ -30,6 +30,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/graph/AbstractBaseGraph;-><init>()V
 
     return-void
@@ -40,6 +41,7 @@
 .method public bridge synthetic degree(Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/graph/AbstractBaseGraph;->degree(Ljava/lang/Object;)I
 
     move-result p0
@@ -50,6 +52,7 @@
 .method public bridge synthetic edges()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/graph/AbstractBaseGraph;->edges()Ljava/util/Set;
 
     move-result-object p0
@@ -70,6 +73,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/common/graph/Graph;
 
@@ -79,9 +83,11 @@
 
     return v2
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/common/graph/Graph;
 
+    .line 3
     invoke-interface {p0}, Lcom/google/common/graph/Graph;->isDirected()Z
 
     move-result v1
@@ -92,6 +98,7 @@
 
     if-ne v1, v3, :cond_2
 
+    .line 4
     invoke-interface {p0}, Lcom/google/common/graph/Graph;->nodes()Ljava/util/Set;
 
     move-result-object v1
@@ -106,6 +113,7 @@
 
     if-eqz v1, :cond_2
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/common/graph/AbstractGraph;->edges()Ljava/util/Set;
 
     move-result-object p0
@@ -154,6 +162,7 @@
 .method public final hashCode()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/graph/AbstractGraph;->edges()Ljava/util/Set;
 
     move-result-object p0
@@ -168,6 +177,7 @@
 .method public bridge synthetic inDegree(Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/graph/AbstractBaseGraph;->inDegree(Ljava/lang/Object;)I
 
     move-result p0
@@ -178,6 +188,7 @@
 .method public bridge synthetic incidentEdgeOrder()Lcom/google/common/graph/ElementOrder;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/graph/AbstractBaseGraph;->incidentEdgeOrder()Lcom/google/common/graph/ElementOrder;
 
     move-result-object p0
@@ -188,6 +199,7 @@
 .method public bridge synthetic incidentEdges(Ljava/lang/Object;)Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/graph/AbstractBaseGraph;->incidentEdges(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0
@@ -198,6 +210,7 @@
 .method public bridge synthetic outDegree(Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/graph/AbstractBaseGraph;->outDegree(Ljava/lang/Object;)I
 
     move-result p0
@@ -208,14 +221,17 @@
 .method public toString()Ljava/lang/String;
     .locals 5
 
+    .line 1
     invoke-interface {p0}, Lcom/google/common/graph/Graph;->isDirected()Z
 
     move-result v0
 
+    .line 2
     invoke-interface {p0}, Lcom/google/common/graph/Graph;->allowsSelfLoops()Z
 
     move-result v1
 
+    .line 3
     invoke-interface {p0}, Lcom/google/common/graph/Graph;->nodes()Ljava/util/Set;
 
     move-result-object v2
@@ -224,6 +240,7 @@
 
     move-result-object v2
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/common/graph/AbstractGraph;->edges()Ljava/util/Set;
 
     move-result-object p0

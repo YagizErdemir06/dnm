@@ -1,4 +1,4 @@
-.class Lcom/google/common/cache/CacheBuilderSpec$MaximumSizeParser;
+.class public Lcom/google/common/cache/CacheBuilderSpec$MaximumSizeParser;
 .super Lcom/google/common/cache/CacheBuilderSpec$LongParser;
 .source "SourceFile"
 
@@ -18,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/cache/CacheBuilderSpec$LongParser;-><init>()V
 
     return-void
@@ -28,6 +29,7 @@
 .method public parseLong(Lcom/google/common/cache/CacheBuilderSpec;J)V
     .locals 4
 
+    .line 1
     iget-object p0, p1, Lcom/google/common/cache/CacheBuilderSpec;->maximumSize:Ljava/lang/Long;
 
     const/4 v0, 0x1
@@ -48,6 +50,7 @@
 
     invoke-static {v2, v3, p0}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;Ljava/lang/Object;)V
 
+    .line 2
     iget-object p0, p1, Lcom/google/common/cache/CacheBuilderSpec;->maximumWeight:Ljava/lang/Long;
 
     if-nez p0, :cond_1
@@ -62,6 +65,7 @@
 
     invoke-static {v0, v1, p0}, Lcom/google/common/base/Preconditions;->checkArgument(ZLjava/lang/String;Ljava/lang/Object;)V
 
+    .line 3
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p0

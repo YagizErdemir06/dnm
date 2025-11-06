@@ -19,8 +19,10 @@
 .method public constructor <init>(Lcom/google/android/play/core/listener/StateUpdateListenerRegister;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/play/core/listener/StateUpdatedReceiver;->mRegister:Lcom/google/android/play/core/listener/StateUpdateListenerRegister;
 
     return-void
@@ -31,6 +33,7 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/play/core/listener/StateUpdatedReceiver;->mRegister:Lcom/google/android/play/core/listener/StateUpdateListenerRegister;
 
     invoke-virtual {p0, p2}, Lcom/google/android/play/core/listener/StateUpdateListenerRegister;->onReceived(Landroid/content/Intent;)V

@@ -1,4 +1,4 @@
-.class abstract Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;
+.class public abstract Landroidx/viewpager2/widget/ViewPager2$AccessibilityProvider;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/viewpager2/widget/ViewPager2;
+.field public final synthetic this$0:Landroidx/viewpager2/widget/ViewPager2;
 
 
 # direct methods
@@ -110,6 +110,7 @@
 .method public onGetAccessibilityClassName()Ljava/lang/String;
     .locals 1
 
+    .line 1
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string v0, "Not implemented."
@@ -152,6 +153,7 @@
 .method public onLmPerformAccessibilityAction(I)Z
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string p1, "Not implemented."
@@ -164,6 +166,7 @@
 .method public onPerformAccessibilityAction(ILandroid/os/Bundle;)Z
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string p1, "Not implemented."
@@ -182,6 +185,7 @@
 .method public onRvGetAccessibilityClassName()Ljava/lang/CharSequence;
     .locals 1
 
+    .line 1
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string v0, "Not implemented."

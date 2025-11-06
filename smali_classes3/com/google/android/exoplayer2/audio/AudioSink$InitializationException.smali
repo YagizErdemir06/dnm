@@ -30,6 +30,7 @@
         .end annotation
     .end param
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -73,6 +74,7 @@
     :cond_0
     const-string p2, ""
 
+    .line 2
     :goto_0
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -80,12 +82,16 @@
 
     move-result-object p2
 
+    .line 3
     invoke-direct {p0, p2, p7}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 4
     iput p1, p0, Lcom/google/android/exoplayer2/audio/AudioSink$InitializationException;->audioTrackState:I
 
+    .line 5
     iput-boolean p6, p0, Lcom/google/android/exoplayer2/audio/AudioSink$InitializationException;->isRecoverable:Z
 
+    .line 6
     iput-object p5, p0, Lcom/google/android/exoplayer2/audio/AudioSink$InitializationException;->format:Lcom/google/android/exoplayer2/Format;
 
     return-void

@@ -28,6 +28,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/net/URL;
@@ -55,6 +56,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/mlkit/common/sdkinternal/model/URLWrapper;->zza:Ljava/net/URL;
 
     invoke-virtual {p0}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;

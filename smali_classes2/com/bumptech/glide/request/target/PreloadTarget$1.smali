@@ -1,4 +1,4 @@
-.class final Lcom/bumptech/glide/request/target/PreloadTarget$1;
+.class public final Lcom/bumptech/glide/request/target/PreloadTarget$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -21,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,12 +32,14 @@
 .method public handleMessage(Landroid/os/Message;)Z
     .locals 1
 
+    .line 1
     iget p0, p1, Landroid/os/Message;->what:I
 
     const/4 v0, 0x1
 
     if-ne p0, v0, :cond_0
 
+    .line 2
     iget-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p0, Lcom/bumptech/glide/request/target/PreloadTarget;

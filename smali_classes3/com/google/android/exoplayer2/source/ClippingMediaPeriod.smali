@@ -26,7 +26,7 @@
     .end annotation
 .end field
 
-.field endUs:J
+.field public endUs:J
 
 .field public final mediaPeriod:Lcom/google/android/exoplayer2/source/MediaPeriod;
 
@@ -34,21 +34,24 @@
 
 .field private sampleStreams:[Lcom/google/android/exoplayer2/source/ClippingMediaPeriod$ClippingSampleStream;
 
-.field startUs:J
+.field public startUs:J
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/exoplayer2/source/MediaPeriod;ZJJ)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->mediaPeriod:Lcom/google/android/exoplayer2/source/MediaPeriod;
 
     const/4 p1, 0x0
 
     new-array p1, p1, [Lcom/google/android/exoplayer2/source/ClippingMediaPeriod$ClippingSampleStream;
 
+    .line 3
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->sampleStreams:[Lcom/google/android/exoplayer2/source/ClippingMediaPeriod$ClippingSampleStream;
 
     if-eqz p2, :cond_0
@@ -60,40 +63,45 @@
     :cond_0
     const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 4
     :goto_0
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->pendingInitialDiscontinuityPositionUs:J
 
+    .line 5
     iput-wide p3, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->startUs:J
 
+    .line 6
     iput-wide p5, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->endUs:J
 
     return-void
 .end method
 
 .method private clipSeekParameters(JLcom/google/android/exoplayer2/SeekParameters;)Lcom/google/android/exoplayer2/SeekParameters;
-    .locals 10
+    .locals 8
 
+    .line 1
     iget-wide v0, p3, Lcom/google/android/exoplayer2/SeekParameters;->toleranceBeforeUs:J
+
+    iget-wide v2, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->startUs:J
+
+    sub-long v4, p1, v2
 
     const-wide/16 v2, 0x0
 
-    iget-wide v4, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->startUs:J
-
-    sub-long v4, p1, v4
-
+    .line 2
     invoke-static/range {v0 .. v5}, Lcom/google/android/exoplayer2/util/Util;->constrainValue(JJJ)J
 
     move-result-wide v0
 
+    .line 3
     iget-wide v2, p3, Lcom/google/android/exoplayer2/SeekParameters;->toleranceAfterUs:J
 
-    const-wide/16 v4, 0x0
+    .line 4
+    iget-wide v4, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->endUs:J
 
-    iget-wide v6, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->endUs:J
+    const-wide/high16 v6, -0x8000000000000000L
 
-    const-wide/high16 v8, -0x8000000000000000L
-
-    cmp-long p0, v6, v8
+    cmp-long p0, v4, v6
 
     if-nez p0, :cond_0
 
@@ -104,13 +112,19 @@
     goto :goto_0
 
     :cond_0
-    sub-long/2addr v6, p1
+    sub-long/2addr v4, p1
+
+    move-wide v6, v4
 
     :goto_0
+    const-wide/16 v4, 0x0
+
+    .line 5
     invoke-static/range {v2 .. v7}, Lcom/google/android/exoplayer2/util/Util;->constrainValue(JJJ)J
 
     move-result-wide p0
 
+    .line 6
     iget-wide v2, p3, Lcom/google/android/exoplayer2/SeekParameters;->toleranceBeforeUs:J
 
     cmp-long p2, v0, v2
@@ -125,6 +139,7 @@
 
     return-object p3
 
+    .line 7
     :cond_1
     new-instance p2, Lcom/google/android/exoplayer2/SeekParameters;
 
@@ -144,6 +159,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 1
     array-length p0, p2
 
     move v0, p1
@@ -155,10 +171,12 @@
 
     if-eqz v1, :cond_0
 
+    .line 2
     invoke-interface {v1}, Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;->getSelectedFormat()Lcom/google/android/exoplayer2/Format;
 
     move-result-object v1
 
+    .line 3
     iget-object v2, v1, Lcom/google/android/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
     iget-object v1, v1, Lcom/google/android/exoplayer2/Format;->codecs:Ljava/lang/String;
@@ -187,6 +205,7 @@
 .method public continueLoading(J)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->mediaPeriod:Lcom/google/android/exoplayer2/source/MediaPeriod;
 
     invoke-interface {p0, p1, p2}, Lcom/google/android/exoplayer2/source/MediaPeriod;->continueLoading(J)Z
@@ -199,6 +218,7 @@
 .method public discardBuffer(JZ)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->mediaPeriod:Lcom/google/android/exoplayer2/source/MediaPeriod;
 
     invoke-interface {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/source/MediaPeriod;->discardBuffer(JZ)V
@@ -209,6 +229,7 @@
 .method public getAdjustedSeekPositionUs(JLcom/google/android/exoplayer2/SeekParameters;)J
     .locals 3
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->startUs:J
 
     cmp-long v2, p1, v0
@@ -217,11 +238,13 @@
 
     return-wide v0
 
+    .line 2
     :cond_0
     invoke-direct {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->clipSeekParameters(JLcom/google/android/exoplayer2/SeekParameters;)Lcom/google/android/exoplayer2/SeekParameters;
 
     move-result-object p3
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->mediaPeriod:Lcom/google/android/exoplayer2/source/MediaPeriod;
 
     invoke-interface {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/source/MediaPeriod;->getAdjustedSeekPositionUs(JLcom/google/android/exoplayer2/SeekParameters;)J
@@ -234,6 +257,7 @@
 .method public getBufferedPositionUs()J
     .locals 6
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->mediaPeriod:Lcom/google/android/exoplayer2/source/MediaPeriod;
 
     invoke-interface {v0}, Lcom/google/android/exoplayer2/source/MediaPeriod;->getBufferedPositionUs()J
@@ -246,6 +270,7 @@
 
     if-eqz v4, :cond_1
 
+    .line 2
     iget-wide v4, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->endUs:J
 
     cmp-long p0, v4, v2
@@ -269,6 +294,7 @@
 .method public getNextLoadPositionUs()J
     .locals 6
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->mediaPeriod:Lcom/google/android/exoplayer2/source/MediaPeriod;
 
     invoke-interface {v0}, Lcom/google/android/exoplayer2/source/MediaPeriod;->getNextLoadPositionUs()J
@@ -281,6 +307,7 @@
 
     if-eqz v4, :cond_1
 
+    .line 2
     iget-wide v4, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->endUs:J
 
     cmp-long p0, v4, v2
@@ -304,6 +331,7 @@
 .method public getTrackGroups()Lcom/google/android/exoplayer2/source/TrackGroupArray;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->mediaPeriod:Lcom/google/android/exoplayer2/source/MediaPeriod;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/source/MediaPeriod;->getTrackGroups()Lcom/google/android/exoplayer2/source/TrackGroupArray;
@@ -316,6 +344,7 @@
 .method public isLoading()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->mediaPeriod:Lcom/google/android/exoplayer2/source/MediaPeriod;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/source/MediaPeriod;->isLoading()Z
@@ -328,6 +357,7 @@
 .method public isPendingInitialDiscontinuity()Z
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->pendingInitialDiscontinuityPositionUs:J
 
     const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
@@ -355,16 +385,19 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->clippingError:Lcom/google/android/exoplayer2/source/ClippingMediaSource$IllegalClippingException;
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->mediaPeriod:Lcom/google/android/exoplayer2/source/MediaPeriod;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/source/MediaPeriod;->maybeThrowPrepareError()V
 
     return-void
 
+    .line 3
     :cond_0
     throw v0
 .end method
@@ -400,12 +433,14 @@
 .method public onPrepared(Lcom/google/android/exoplayer2/source/MediaPeriod;)V
     .locals 0
 
+    .line 1
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->clippingError:Lcom/google/android/exoplayer2/source/ClippingMediaSource$IllegalClippingException;
 
     if-eqz p1, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->callback:Lcom/google/android/exoplayer2/source/MediaPeriod$Callback;
 
@@ -423,8 +458,10 @@
 .method public prepare(Lcom/google/android/exoplayer2/source/MediaPeriod$Callback;J)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->callback:Lcom/google/android/exoplayer2/source/MediaPeriod$Callback;
 
+    .line 2
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->mediaPeriod:Lcom/google/android/exoplayer2/source/MediaPeriod;
 
     invoke-interface {p1, p0, p2, p3}, Lcom/google/android/exoplayer2/source/MediaPeriod;->prepare(Lcom/google/android/exoplayer2/source/MediaPeriod$Callback;J)V
@@ -435,6 +472,7 @@
 .method public readDiscontinuity()J
     .locals 9
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->isPendingInitialDiscontinuity()Z
 
     move-result v0
@@ -443,10 +481,13 @@
 
     if-eqz v0, :cond_1
 
+    .line 2
     iget-wide v3, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->pendingInitialDiscontinuityPositionUs:J
 
+    .line 3
     iput-wide v1, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->pendingInitialDiscontinuityPositionUs:J
 
+    .line 4
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->readDiscontinuity()J
 
     move-result-wide v5
@@ -460,6 +501,7 @@
     :cond_0
     return-wide v3
 
+    .line 5
     :cond_1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->mediaPeriod:Lcom/google/android/exoplayer2/source/MediaPeriod;
 
@@ -473,6 +515,7 @@
 
     return-wide v1
 
+    .line 6
     :cond_2
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->startUs:J
 
@@ -494,6 +537,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 7
     iget-wide v5, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->endUs:J
 
     const-wide/high16 v7, -0x8000000000000000L
@@ -521,6 +565,7 @@
 .method public reevaluateBuffer(J)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->mediaPeriod:Lcom/google/android/exoplayer2/source/MediaPeriod;
 
     invoke-interface {p0, p1, p2}, Lcom/google/android/exoplayer2/source/MediaPeriod;->reevaluateBuffer(J)V
@@ -533,8 +578,10 @@
 
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 1
     iput-wide v0, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->pendingInitialDiscontinuityPositionUs:J
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->sampleStreams:[Lcom/google/android/exoplayer2/source/ClippingMediaPeriod$ClippingSampleStream;
 
     array-length v1, v0
@@ -550,6 +597,7 @@
 
     if-eqz v4, :cond_0
 
+    .line 3
     invoke-virtual {v4}, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod$ClippingSampleStream;->clearSentEos()V
 
     :cond_0
@@ -557,6 +605,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->mediaPeriod:Lcom/google/android/exoplayer2/source/MediaPeriod;
 
@@ -568,6 +617,7 @@
 
     if-eqz p1, :cond_2
 
+    .line 5
     iget-wide p1, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->startUs:J
 
     cmp-long p1, v0, p1
@@ -602,12 +652,14 @@
 
     move-object v1, p3
 
+    .line 1
     array-length v2, v1
 
     new-array v2, v2, [Lcom/google/android/exoplayer2/source/ClippingMediaPeriod$ClippingSampleStream;
 
     iput-object v2, v0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->sampleStreams:[Lcom/google/android/exoplayer2/source/ClippingMediaPeriod$ClippingSampleStream;
 
+    .line 2
     array-length v2, v1
 
     new-array v9, v2, [Lcom/google/android/exoplayer2/source/SampleStream;
@@ -616,6 +668,7 @@
 
     move v2, v10
 
+    .line 3
     :goto_0
     array-length v3, v1
 
@@ -623,6 +676,7 @@
 
     if-ge v2, v3, :cond_1
 
+    .line 4
     iget-object v3, v0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->sampleStreams:[Lcom/google/android/exoplayer2/source/ClippingMediaPeriod$ClippingSampleStream;
 
     aget-object v4, v1, v2
@@ -631,9 +685,14 @@
 
     aput-object v4, v3, v2
 
+    .line 5
+    aget-object v4, v3, v2
+
     if-eqz v4, :cond_0
 
-    iget-object v11, v4, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod$ClippingSampleStream;->childStream:Lcom/google/android/exoplayer2/source/SampleStream;
+    aget-object v3, v3, v2
+
+    iget-object v11, v3, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod$ClippingSampleStream;->childStream:Lcom/google/android/exoplayer2/source/SampleStream;
 
     :cond_0
     aput-object v11, v9, v2
@@ -642,6 +701,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_1
     iget-object v2, v0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->mediaPeriod:Lcom/google/android/exoplayer2/source/MediaPeriod;
 
@@ -655,10 +715,12 @@
 
     move-wide/from16 v7, p5
 
+    .line 7
     invoke-interface/range {v2 .. v8}, Lcom/google/android/exoplayer2/source/MediaPeriod;->selectTracks([Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;[Z[Lcom/google/android/exoplayer2/source/SampleStream;[ZJ)J
 
     move-result-wide v2
 
+    .line 8
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->isPendingInitialDiscontinuity()Z
 
     move-result v4
@@ -673,6 +735,7 @@
 
     move-object v6, p1
 
+    .line 9
     invoke-static {v4, v5, p1}, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->shouldKeepInitialDiscontinuity(J[Lcom/google/android/exoplayer2/trackselection/ExoTrackSelection;)Z
 
     move-result v4
@@ -686,6 +749,7 @@
     :cond_2
     const-wide v4, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 10
     :goto_1
     iput-wide v4, v0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->pendingInitialDiscontinuityPositionUs:J
 
@@ -693,6 +757,7 @@
 
     if-eqz v4, :cond_4
 
+    .line 11
     iget-wide v4, v0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->startUs:J
 
     cmp-long v4, v2, v4
@@ -725,39 +790,51 @@
     :goto_3
     invoke-static {v4}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 12
     :goto_4
     array-length v4, v1
 
     if-ge v10, v4, :cond_8
 
+    .line 13
     aget-object v4, v9, v10
 
     if-nez v4, :cond_5
 
+    .line 14
     iget-object v4, v0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->sampleStreams:[Lcom/google/android/exoplayer2/source/ClippingMediaPeriod$ClippingSampleStream;
 
     aput-object v11, v4, v10
 
     goto :goto_5
 
+    .line 15
     :cond_5
-    iget-object v5, v0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->sampleStreams:[Lcom/google/android/exoplayer2/source/ClippingMediaPeriod$ClippingSampleStream;
+    iget-object v4, v0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->sampleStreams:[Lcom/google/android/exoplayer2/source/ClippingMediaPeriod$ClippingSampleStream;
 
-    aget-object v6, v5, v10
+    aget-object v5, v4, v10
 
-    if-eqz v6, :cond_6
+    if-eqz v5, :cond_6
 
-    iget-object v6, v6, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod$ClippingSampleStream;->childStream:Lcom/google/android/exoplayer2/source/SampleStream;
+    aget-object v5, v4, v10
 
-    if-eq v6, v4, :cond_7
+    iget-object v5, v5, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod$ClippingSampleStream;->childStream:Lcom/google/android/exoplayer2/source/SampleStream;
 
+    aget-object v6, v9, v10
+
+    if-eq v5, v6, :cond_7
+
+    .line 16
     :cond_6
-    new-instance v6, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod$ClippingSampleStream;
+    new-instance v5, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod$ClippingSampleStream;
 
-    invoke-direct {v6, p0, v4}, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod$ClippingSampleStream;-><init>(Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;Lcom/google/android/exoplayer2/source/SampleStream;)V
+    aget-object v6, v9, v10
 
-    aput-object v6, v5, v10
+    invoke-direct {v5, p0, v6}, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod$ClippingSampleStream;-><init>(Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;Lcom/google/android/exoplayer2/source/SampleStream;)V
 
+    aput-object v5, v4, v10
+
+    .line 17
     :cond_7
     :goto_5
     iget-object v4, v0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->sampleStreams:[Lcom/google/android/exoplayer2/source/ClippingMediaPeriod$ClippingSampleStream;
@@ -777,6 +854,7 @@
 .method public setClippingError(Lcom/google/android/exoplayer2/source/ClippingMediaSource$IllegalClippingException;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->clippingError:Lcom/google/android/exoplayer2/source/ClippingMediaSource$IllegalClippingException;
 
     return-void
@@ -785,8 +863,10 @@
 .method public updateClipping(JJ)V
     .locals 0
 
+    .line 1
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->startUs:J
 
+    .line 2
     iput-wide p3, p0, Lcom/google/android/exoplayer2/source/ClippingMediaPeriod;->endUs:J
 
     return-void

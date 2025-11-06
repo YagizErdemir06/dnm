@@ -25,8 +25,10 @@
 .method public constructor <init>(Ljava/io/File;Ljava/lang/String;Ljava/lang/ClassLoader;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/google/common/reflect/ClassPath$ResourceInfo;-><init>(Ljava/io/File;Ljava/lang/String;Ljava/lang/ClassLoader;)V
 
+    .line 2
     invoke-static {p2}, Lcom/google/common/reflect/ClassPath;->getClassName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -41,6 +43,7 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/ClassPath$ClassInfo;->className:Ljava/lang/String;
 
     return-object p0
@@ -49,6 +52,7 @@
 .method public getPackageName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/ClassPath$ClassInfo;->className:Ljava/lang/String;
 
     invoke-static {p0}, Lcom/google/common/reflect/Reflection;->getPackageName(Ljava/lang/String;)Ljava/lang/String;
@@ -61,6 +65,7 @@
 .method public getSimpleName()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/reflect/ClassPath$ClassInfo;->className:Ljava/lang/String;
 
     const/16 v1, 0x24
@@ -73,6 +78,7 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/reflect/ClassPath$ClassInfo;->className:Ljava/lang/String;
 
     add-int/lit8 v0, v0, 0x1
@@ -85,6 +91,7 @@
 
     const/16 v1, 0x39
 
+    .line 3
     invoke-static {v0, v1}, Lcom/google/common/base/CharMatcher;->inRange(CC)Lcom/google/common/base/CharMatcher;
 
     move-result-object v0
@@ -95,21 +102,25 @@
 
     return-object p0
 
+    .line 4
     :cond_0
     invoke-virtual {p0}, Lcom/google/common/reflect/ClassPath$ClassInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 5
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
+    .line 6
     iget-object p0, p0, Lcom/google/common/reflect/ClassPath$ClassInfo;->className:Ljava/lang/String;
 
     return-object p0
 
+    .line 7
     :cond_1
     iget-object p0, p0, Lcom/google/common/reflect/ClassPath$ClassInfo;->className:Ljava/lang/String;
 
@@ -129,6 +140,7 @@
 .method public isTopLevel()Z
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/ClassPath$ClassInfo;->className:Ljava/lang/String;
 
     const/16 v0, 0x24
@@ -162,6 +174,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Lcom/google/common/reflect/ClassPath$ResourceInfo;->loader:Ljava/lang/ClassLoader;
 
@@ -178,6 +191,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     new-instance v0, Ljava/lang/IllegalStateException;
 
     invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
@@ -188,6 +202,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/reflect/ClassPath$ClassInfo;->className:Ljava/lang/String;
 
     return-object p0

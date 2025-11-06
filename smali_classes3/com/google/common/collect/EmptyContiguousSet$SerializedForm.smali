@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/EmptyContiguousSet$SerializedForm;
+.class public final Lcom/google/common/collect/EmptyContiguousSet$SerializedForm;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -77,6 +77,7 @@
 .method private readResolve()Ljava/lang/Object;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/EmptyContiguousSet;
 
     iget-object p0, p0, Lcom/google/common/collect/EmptyContiguousSet$SerializedForm;->domain:Lcom/google/common/collect/DiscreteDomain;

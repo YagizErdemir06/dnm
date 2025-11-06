@@ -8,13 +8,13 @@
 
 
 # instance fields
-.field mBooleanValue:Z
+.field public mBooleanValue:Z
 
 .field private mFloatValue:F
 
 .field private mIntegerValue:I
 
-.field mName:Ljava/lang/String;
+.field public mName:Ljava/lang/String;
 
 .field private mStringValue:Ljava/lang/String;
 
@@ -79,35 +79,35 @@
 .method public constructor <init>(Landroidx/constraintlayout/core/motion/CustomVariable;Ljava/lang/Object;)V
     .locals 1
 
-    .line 51
+    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/high16 v0, -0x80000000
 
-    .line 52
+    .line 54
     iput v0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mIntegerValue:I
 
     const/high16 v0, 0x7fc00000    # Float.NaN
 
-    .line 53
+    .line 55
     iput v0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mFloatValue:F
 
     const/4 v0, 0x0
 
-    .line 54
+    .line 56
     iput-object v0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mStringValue:Ljava/lang/String;
 
-    .line 55
+    .line 57
     iget-object v0, p1, Landroidx/constraintlayout/core/motion/CustomVariable;->mName:Ljava/lang/String;
 
     iput-object v0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mName:Ljava/lang/String;
 
-    .line 56
+    .line 58
     iget p1, p1, Landroidx/constraintlayout/core/motion/CustomVariable;->mType:I
 
     iput p1, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mType:I
 
-    .line 57
+    .line 59
     invoke-virtual {p0, p2}, Landroidx/constraintlayout/core/motion/CustomVariable;->setValue(Ljava/lang/Object;)V
 
     return-void
@@ -116,28 +116,28 @@
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 1
 
-    .line 38
+    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/high16 v0, -0x80000000
 
-    .line 39
+    .line 41
     iput v0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mIntegerValue:I
 
     const/high16 v0, 0x7fc00000    # Float.NaN
 
-    .line 40
+    .line 42
     iput v0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mFloatValue:F
 
     const/4 v0, 0x0
 
-    .line 41
+    .line 43
     iput-object v0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mStringValue:Ljava/lang/String;
 
-    .line 42
+    .line 44
     iput-object p1, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mName:Ljava/lang/String;
 
-    .line 43
+    .line 45
     iput p2, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mType:I
 
     return-void
@@ -146,26 +146,31 @@
 .method public constructor <init>(Ljava/lang/String;IF)V
     .locals 1
 
-    .line 25
+    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/high16 v0, -0x80000000
 
-    .line 26
+    .line 27
     iput v0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mIntegerValue:I
+
+    const/high16 v0, 0x7fc00000    # Float.NaN
+
+    .line 28
+    iput v0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mFloatValue:F
 
     const/4 v0, 0x0
 
-    .line 27
+    .line 29
     iput-object v0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mStringValue:Ljava/lang/String;
 
-    .line 28
+    .line 30
     iput-object p1, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mName:Ljava/lang/String;
 
-    .line 29
+    .line 31
     iput p2, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mType:I
 
-    .line 30
+    .line 32
     iput p3, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mFloatValue:F
 
     return-void
@@ -174,28 +179,28 @@
 .method public constructor <init>(Ljava/lang/String;II)V
     .locals 1
 
-    .line 17
+    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/high16 v0, -0x80000000
 
-    .line 18
+    .line 19
     iput v0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mIntegerValue:I
 
     const/high16 v0, 0x7fc00000    # Float.NaN
 
-    .line 19
+    .line 20
     iput v0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mFloatValue:F
 
     const/4 v0, 0x0
 
-    .line 20
+    .line 21
     iput-object v0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mStringValue:Ljava/lang/String;
 
-    .line 21
+    .line 22
     iput-object p1, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mName:Ljava/lang/String;
 
-    .line 22
+    .line 23
     iput p2, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mType:I
 
     const/16 p1, 0x385
@@ -204,12 +209,12 @@
 
     int-to-float p1, p3
 
-    .line 23
+    .line 24
     iput p1, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mFloatValue:F
 
     goto :goto_0
 
-    .line 24
+    .line 25
     :cond_0
     iput p3, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mIntegerValue:I
 
@@ -220,31 +225,31 @@
 .method public constructor <init>(Ljava/lang/String;ILjava/lang/Object;)V
     .locals 1
 
-    .line 44
+    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/high16 v0, -0x80000000
 
-    .line 45
+    .line 47
     iput v0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mIntegerValue:I
 
     const/high16 v0, 0x7fc00000    # Float.NaN
 
-    .line 46
+    .line 48
     iput v0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mFloatValue:F
 
     const/4 v0, 0x0
 
-    .line 47
+    .line 49
     iput-object v0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mStringValue:Ljava/lang/String;
 
-    .line 48
+    .line 50
     iput-object p1, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mName:Ljava/lang/String;
 
-    .line 49
+    .line 51
     iput p2, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mType:I
 
-    .line 50
+    .line 52
     invoke-virtual {p0, p3}, Landroidx/constraintlayout/core/motion/CustomVariable;->setValue(Ljava/lang/Object;)V
 
     return-void
@@ -266,13 +271,18 @@
     .line 13
     iput v0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mFloatValue:F
 
+    const/4 v0, 0x0
+
     .line 14
-    iput-object p1, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mName:Ljava/lang/String;
+    iput-object v0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mStringValue:Ljava/lang/String;
 
     .line 15
-    iput p2, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mType:I
+    iput-object p1, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mName:Ljava/lang/String;
 
     .line 16
+    iput p2, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mType:I
+
+    .line 17
     iput-object p3, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mStringValue:Ljava/lang/String;
 
     return-void
@@ -281,31 +291,31 @@
 .method public constructor <init>(Ljava/lang/String;IZ)V
     .locals 1
 
-    .line 31
+    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/high16 v0, -0x80000000
 
-    .line 32
+    .line 34
     iput v0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mIntegerValue:I
 
     const/high16 v0, 0x7fc00000    # Float.NaN
 
-    .line 33
+    .line 35
     iput v0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mFloatValue:F
 
     const/4 v0, 0x0
 
-    .line 34
+    .line 36
     iput-object v0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mStringValue:Ljava/lang/String;
 
-    .line 35
+    .line 37
     iput-object p1, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mName:Ljava/lang/String;
 
-    .line 36
+    .line 38
     iput p2, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mType:I
 
-    .line 37
+    .line 39
     iput-boolean p3, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mBooleanValue:Z
 
     return-void
@@ -334,6 +344,7 @@
 .method public static colorString(I)Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -352,6 +363,7 @@
 
     move-result-object p0
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -550,6 +562,7 @@
 
     float-to-int p0, p0
 
+    .line 1
     invoke-static {p0}, Landroidx/constraintlayout/core/motion/CustomVariable;->clamp(I)I
 
     move-result p0
@@ -558,6 +571,7 @@
 
     float-to-int p1, p1
 
+    .line 2
     invoke-static {p1}, Landroidx/constraintlayout/core/motion/CustomVariable;->clamp(I)I
 
     move-result p1
@@ -566,6 +580,7 @@
 
     float-to-int p2, p2
 
+    .line 3
     invoke-static {p2}, Landroidx/constraintlayout/core/motion/CustomVariable;->clamp(I)I
 
     move-result p2
@@ -574,6 +589,7 @@
 
     float-to-int p3, p3
 
+    .line 4
     invoke-static {p3}, Landroidx/constraintlayout/core/motion/CustomVariable;->clamp(I)I
 
     move-result p3
@@ -598,12 +614,14 @@
 .method public applyToWidget(Landroidx/constraintlayout/core/motion/MotionWidget;)V
     .locals 2
 
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mType:I
 
     packed-switch v0, :pswitch_data_0
 
     goto :goto_0
 
+    .line 2
     :pswitch_0
     iget-object v1, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mName:Ljava/lang/String;
 
@@ -613,6 +631,7 @@
 
     goto :goto_0
 
+    .line 3
     :pswitch_1
     iget-object v1, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mName:Ljava/lang/String;
 
@@ -622,6 +641,7 @@
 
     goto :goto_0
 
+    .line 4
     :pswitch_2
     iget-object v1, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mName:Ljava/lang/String;
 
@@ -631,6 +651,7 @@
 
     goto :goto_0
 
+    .line 5
     :pswitch_3
     iget-object v1, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mName:Ljava/lang/String;
 
@@ -656,6 +677,7 @@
 .method public copy()Landroidx/constraintlayout/core/motion/CustomVariable;
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/constraintlayout/core/motion/CustomVariable;
 
     invoke-direct {v0, p0}, Landroidx/constraintlayout/core/motion/CustomVariable;-><init>(Landroidx/constraintlayout/core/motion/CustomVariable;)V
@@ -670,6 +692,7 @@
 
     if-eqz p1, :cond_6
 
+    .line 1
     iget v1, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mType:I
 
     iget v2, p1, Landroidx/constraintlayout/core/motion/CustomVariable;->mType:I
@@ -685,6 +708,7 @@
 
     return v0
 
+    .line 2
     :pswitch_0
     iget p0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mFloatValue:F
 
@@ -699,6 +723,7 @@
     :cond_1
     return v0
 
+    .line 3
     :pswitch_1
     iget-boolean p0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mBooleanValue:Z
 
@@ -711,6 +736,7 @@
     :cond_2
     return v0
 
+    .line 4
     :pswitch_2
     iget p0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mIntegerValue:I
 
@@ -723,6 +749,7 @@
     :cond_3
     return v0
 
+    .line 5
     :pswitch_3
     iget p0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mIntegerValue:I
 
@@ -735,6 +762,7 @@
     :cond_4
     return v0
 
+    .line 6
     :pswitch_4
     iget p0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mFloatValue:F
 
@@ -749,6 +777,7 @@
     :cond_5
     return v0
 
+    .line 7
     :pswitch_5
     iget p0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mIntegerValue:I
 
@@ -779,6 +808,7 @@
 .method public getBooleanValue()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mBooleanValue:Z
 
     return p0
@@ -787,6 +817,7 @@
 .method public getColorValue()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mIntegerValue:I
 
     return p0
@@ -795,6 +826,7 @@
 .method public getFloatValue()F
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mFloatValue:F
 
     return p0
@@ -803,6 +835,7 @@
 .method public getIntegerValue()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mIntegerValue:I
 
     return p0
@@ -813,6 +846,7 @@
 
     const/4 p0, 0x0
 
+    .line 1
     aget p0, p1, p0
 
     float-to-double v0, p0
@@ -837,6 +871,7 @@
 
     const/4 v1, 0x1
 
+    .line 2
     aget v1, p1, v1
 
     float-to-double v4, v1
@@ -857,6 +892,7 @@
 
     const/4 v4, 0x2
 
+    .line 3
     aget v4, p1, v4
 
     float-to-double v4, v4
@@ -877,6 +913,7 @@
 
     const/4 v3, 0x3
 
+    .line 4
     aget p1, p1, v3
 
     mul-float/2addr p1, v0
@@ -905,6 +942,7 @@
 .method public getName()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mName:Ljava/lang/String;
 
     return-object p0
@@ -913,6 +951,7 @@
 .method public getStringValue()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mStringValue:Ljava/lang/String;
 
     return-object p0
@@ -921,6 +960,7 @@
 .method public getType()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mType:I
 
     return p0
@@ -929,6 +969,7 @@
 .method public getValueToInterpolate()F
     .locals 1
 
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mType:I
 
     packed-switch v0, :pswitch_data_0
@@ -937,11 +978,13 @@
 
     return p0
 
+    .line 2
     :pswitch_0
     iget p0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mFloatValue:F
 
     return p0
 
+    .line 3
     :pswitch_1
     iget-boolean p0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mBooleanValue:Z
 
@@ -957,6 +1000,7 @@
     :goto_0
     return p0
 
+    .line 4
     :pswitch_2
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -966,6 +1010,7 @@
 
     throw p0
 
+    .line 5
     :pswitch_3
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -975,11 +1020,13 @@
 
     throw p0
 
+    .line 6
     :pswitch_4
     iget p0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mFloatValue:F
 
     return p0
 
+    .line 7
     :pswitch_5
     iget p0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mIntegerValue:I
 
@@ -1003,6 +1050,7 @@
 .method public getValuesToInterpolate([F)V
     .locals 9
 
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mType:I
 
     const/4 v1, 0x0
@@ -1011,6 +1059,7 @@
 
     goto :goto_1
 
+    .line 2
     :pswitch_0
     iget p0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mFloatValue:F
 
@@ -1018,6 +1067,7 @@
 
     goto :goto_1
 
+    .line 3
     :pswitch_1
     iget-boolean p0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mBooleanValue:Z
 
@@ -1035,6 +1085,7 @@
 
     goto :goto_1
 
+    .line 4
     :pswitch_2
     new-instance p0, Ljava/lang/RuntimeException;
 
@@ -1044,6 +1095,7 @@
 
     throw p0
 
+    .line 5
     :pswitch_3
     iget p0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mIntegerValue:I
 
@@ -1071,6 +1123,7 @@
 
     const-wide v7, 0x400199999999999aL    # 2.2
 
+    .line 6
     invoke-static {v5, v6, v7, v8}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v5
@@ -1083,6 +1136,7 @@
 
     float-to-double v5, v3
 
+    .line 7
     invoke-static {v5, v6, v7, v8}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v5
@@ -1095,32 +1149,38 @@
 
     float-to-double v5, p0
 
+    .line 8
     invoke-static {v5, v6, v7, v8}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v5
 
     double-to-float p0, v5
 
+    .line 9
     aput v2, p1, v1
 
     const/4 v1, 0x1
 
+    .line 10
     aput v3, p1, v1
 
     const/4 v1, 0x2
 
+    .line 11
     aput p0, p1, v1
 
-    int-to-float p0, v0
+    const/4 p0, 0x3
 
-    div-float/2addr p0, v4
+    int-to-float v0, v0
 
-    const/4 v0, 0x3
+    div-float/2addr v0, v4
 
-    aput p0, p1, v0
+    .line 12
+    aput v0, p1, p0
 
     goto :goto_1
 
+    .line 13
     :pswitch_4
     iget p0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mFloatValue:F
 
@@ -1128,6 +1188,7 @@
 
     goto :goto_1
 
+    .line 14
     :pswitch_5
     iget p0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mIntegerValue:I
 
@@ -1154,6 +1215,7 @@
 .method public isContinuous()Z
     .locals 1
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mType:I
 
     const/16 v0, 0x387
@@ -1181,6 +1243,7 @@
 .method public numberOfInterpolatedValues()I
     .locals 1
 
+    .line 1
     iget p0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mType:I
 
     const/16 v0, 0x386
@@ -1200,6 +1263,7 @@
 .method public setBooleanValue(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mBooleanValue:Z
 
     return-void
@@ -1208,6 +1272,7 @@
 .method public setFloatValue(F)V
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mFloatValue:F
 
     return-void
@@ -1216,6 +1281,7 @@
 .method public setIntValue(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mIntegerValue:I
 
     return-void
@@ -1224,6 +1290,7 @@
 .method public setInterpolatedValue(Landroidx/constraintlayout/core/motion/MotionWidget;[F)V
     .locals 8
 
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mType:I
 
     const/4 v1, 0x1
@@ -1234,6 +1301,7 @@
 
     goto/16 :goto_1
 
+    .line 2
     :pswitch_0
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mName:Ljava/lang/String;
 
@@ -1255,6 +1323,7 @@
 
     goto :goto_1
 
+    .line 3
     :pswitch_1
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -1278,6 +1347,7 @@
 
     throw p1
 
+    .line 4
     :pswitch_2
     aget v0, p2, v2
 
@@ -1301,6 +1371,7 @@
 
     move-result v0
 
+    .line 5
     aget v1, p2, v1
 
     float-to-double v6, v1
@@ -1321,6 +1392,7 @@
 
     const/4 v3, 0x2
 
+    .line 6
     aget v3, p2, v3
 
     float-to-double v6, v3
@@ -1341,6 +1413,7 @@
 
     const/4 v4, 0x3
 
+    .line 7
     aget p2, p2, v4
 
     mul-float/2addr p2, v2
@@ -1363,6 +1436,7 @@
 
     or-int/2addr p2, v3
 
+    .line 8
     iget-object v0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mName:Ljava/lang/String;
 
     iget p0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mType:I
@@ -1371,6 +1445,7 @@
 
     goto :goto_1
 
+    .line 9
     :pswitch_3
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mName:Ljava/lang/String;
 
@@ -1380,6 +1455,7 @@
 
     goto :goto_1
 
+    .line 10
     :pswitch_4
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mName:Ljava/lang/String;
 
@@ -1407,6 +1483,7 @@
 .method public setStringValue(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mStringValue:Ljava/lang/String;
 
     return-void
@@ -1680,6 +1757,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1696,10 +1774,12 @@
 
     move-result-object v0
 
+    .line 2
     iget v1, p0, Landroidx/constraintlayout/core/motion/CustomVariable;->mType:I
 
     packed-switch v1, :pswitch_data_0
 
+    .line 3
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1716,6 +1796,7 @@
 
     return-object p0
 
+    .line 4
     :pswitch_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1733,6 +1814,7 @@
 
     return-object p0
 
+    .line 5
     :pswitch_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1754,6 +1836,7 @@
 
     return-object p0
 
+    .line 6
     :pswitch_2
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1771,6 +1854,7 @@
 
     return-object p0
 
+    .line 7
     :pswitch_3
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1792,6 +1876,7 @@
 
     return-object p0
 
+    .line 8
     :pswitch_4
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1809,6 +1894,7 @@
 
     return-object p0
 
+    .line 9
     :pswitch_5
     new-instance v1, Ljava/lang/StringBuilder;
 

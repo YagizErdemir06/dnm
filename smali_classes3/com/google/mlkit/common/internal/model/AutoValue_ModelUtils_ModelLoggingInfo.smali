@@ -1,4 +1,4 @@
-.class final Lcom/google/mlkit/common/internal/model/AutoValue_ModelUtils_ModelLoggingInfo;
+.class public final Lcom/google/mlkit/common/internal/model/AutoValue_ModelUtils_ModelLoggingInfo;
 .super Lcom/google/mlkit/common/internal/model/ModelUtils$ModelLoggingInfo;
 .source "SourceFile"
 
@@ -37,6 +37,7 @@
 
     return v0
 
+    .line 1
     :cond_0
     instance-of v1, p1, Lcom/google/mlkit/common/internal/model/ModelUtils$ModelLoggingInfo;
 
@@ -44,10 +45,12 @@
 
     if-eqz v1, :cond_1
 
+    .line 2
     check-cast p1, Lcom/google/mlkit/common/internal/model/ModelUtils$ModelLoggingInfo;
 
     iget-wide v3, p0, Lcom/google/mlkit/common/internal/model/AutoValue_ModelUtils_ModelLoggingInfo;->zza:J
 
+    .line 3
     invoke-virtual {p1}, Lcom/google/mlkit/common/internal/model/ModelUtils$ModelLoggingInfo;->getSize()J
 
     move-result-wide v5
@@ -58,6 +61,7 @@
 
     iget-object v1, p0, Lcom/google/mlkit/common/internal/model/AutoValue_ModelUtils_ModelLoggingInfo;->zzb:Ljava/lang/String;
 
+    .line 4
     invoke-virtual {p1}, Lcom/google/mlkit/common/internal/model/ModelUtils$ModelLoggingInfo;->getHash()Ljava/lang/String;
 
     move-result-object v3
@@ -70,6 +74,7 @@
 
     iget-boolean p0, p0, Lcom/google/mlkit/common/internal/model/AutoValue_ModelUtils_ModelLoggingInfo;->zzc:Z
 
+    .line 5
     invoke-virtual {p1}, Lcom/google/mlkit/common/internal/model/ModelUtils$ModelLoggingInfo;->isManifestModel()Z
 
     move-result p1
@@ -105,6 +110,7 @@
 .method public final hashCode()I
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/mlkit/common/internal/model/AutoValue_ModelUtils_ModelLoggingInfo;->zza:J
 
     const/16 v2, 0x20
@@ -129,9 +135,9 @@
 
     xor-int/2addr v0, v2
 
-    const/4 v2, 0x1
-
     iget-boolean p0, p0, Lcom/google/mlkit/common/internal/model/AutoValue_ModelUtils_ModelLoggingInfo;->zzc:Z
+
+    const/4 v2, 0x1
 
     if-eq v2, p0, :cond_0
 
@@ -163,6 +169,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
+    .line 1
     iget-wide v0, p0, Lcom/google/mlkit/common/internal/model/AutoValue_ModelUtils_ModelLoggingInfo;->zza:J
 
     iget-object v2, p0, Lcom/google/mlkit/common/internal/model/AutoValue_ModelUtils_ModelLoggingInfo;->zzb:Ljava/lang/String;

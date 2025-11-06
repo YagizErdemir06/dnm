@@ -1,4 +1,4 @@
-.class abstract Landroidx/interpolator/view/animation/LookupTableInterpolator;
+.class public abstract Landroidx/interpolator/view/animation/LookupTableInterpolator;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -16,10 +16,13 @@
 .method public constructor <init>([F)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroidx/interpolator/view/animation/LookupTableInterpolator;->mValues:[F
 
+    .line 3
     array-length p1, p1
 
     add-int/lit8 p1, p1, -0x1
@@ -57,6 +60,7 @@
 
     return v0
 
+    .line 1
     :cond_1
     iget-object v0, p0, Landroidx/interpolator/view/animation/LookupTableInterpolator;->mValues:[F
 
@@ -80,6 +84,7 @@
 
     int-to-float v1, v0
 
+    .line 2
     iget v2, p0, Landroidx/interpolator/view/animation/LookupTableInterpolator;->mStepSize:F
 
     mul-float/2addr v1, v2
@@ -88,17 +93,20 @@
 
     div-float/2addr p1, v2
 
+    .line 3
     iget-object p0, p0, Landroidx/interpolator/view/animation/LookupTableInterpolator;->mValues:[F
 
     aget v1, p0, v0
 
-    add-int/lit8 v0, v0, 0x1
+    add-int/lit8 v2, v0, 0x1
+
+    aget v2, p0, v2
 
     aget p0, p0, v0
 
-    sub-float/2addr p0, v1
+    sub-float/2addr v2, p0
 
-    mul-float/2addr p1, p0
+    mul-float/2addr p1, v2
 
     add-float/2addr v1, p1
 

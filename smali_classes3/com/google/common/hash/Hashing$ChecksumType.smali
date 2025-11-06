@@ -1,4 +1,4 @@
-.class abstract enum Lcom/google/common/hash/Hashing$ChecksumType;
+.class public abstract enum Lcom/google/common/hash/Hashing$ChecksumType;
 .super Ljava/lang/Enum;
 .source "SourceFile"
 
@@ -51,17 +51,18 @@
 
     new-array v0, v0, [Lcom/google/common/hash/Hashing$ChecksumType;
 
-    const/4 v1, 0x0
+    .line 1
+    sget-object v1, Lcom/google/common/hash/Hashing$ChecksumType;->CRC_32:Lcom/google/common/hash/Hashing$ChecksumType;
 
-    sget-object v2, Lcom/google/common/hash/Hashing$ChecksumType;->CRC_32:Lcom/google/common/hash/Hashing$ChecksumType;
+    const/4 v2, 0x0
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/4 v1, 0x1
+    sget-object v1, Lcom/google/common/hash/Hashing$ChecksumType;->ADLER_32:Lcom/google/common/hash/Hashing$ChecksumType;
 
-    sget-object v2, Lcom/google/common/hash/Hashing$ChecksumType;->ADLER_32:Lcom/google/common/hash/Hashing$ChecksumType;
+    const/4 v2, 0x1
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
     return-object v0
 .end method
@@ -69,30 +70,33 @@
 .method public static constructor <clinit>()V
     .locals 4
 
+    .line 1
     new-instance v0, Lcom/google/common/hash/Hashing$ChecksumType$1;
 
-    const/4 v1, 0x0
+    const-string v1, "CRC_32"
 
-    const-string v2, "Hashing.crc32()"
+    const/4 v2, 0x0
 
-    const-string v3, "CRC_32"
+    const-string v3, "Hashing.crc32()"
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/common/hash/Hashing$ChecksumType$1;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/common/hash/Hashing$ChecksumType$1;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/google/common/hash/Hashing$ChecksumType;->CRC_32:Lcom/google/common/hash/Hashing$ChecksumType;
 
+    .line 2
     new-instance v0, Lcom/google/common/hash/Hashing$ChecksumType$2;
 
-    const/4 v1, 0x1
+    const-string v1, "ADLER_32"
 
-    const-string v2, "Hashing.adler32()"
+    const/4 v2, 0x1
 
-    const-string v3, "ADLER_32"
+    const-string v3, "Hashing.adler32()"
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/common/hash/Hashing$ChecksumType$2;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/common/hash/Hashing$ChecksumType$2;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/google/common/hash/Hashing$ChecksumType;->ADLER_32:Lcom/google/common/hash/Hashing$ChecksumType;
 
+    .line 3
     invoke-static {}, Lcom/google/common/hash/Hashing$ChecksumType;->$values()[Lcom/google/common/hash/Hashing$ChecksumType;
 
     move-result-object v0
@@ -139,6 +143,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/common/hash/Hashing$ChecksumType;
     .locals 1
 
+    .line 1
     const-class v0, Lcom/google/common/hash/Hashing$ChecksumType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -153,6 +158,7 @@
 .method public static values()[Lcom/google/common/hash/Hashing$ChecksumType;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/common/hash/Hashing$ChecksumType;->$VALUES:[Lcom/google/common/hash/Hashing$ChecksumType;
 
     invoke-virtual {v0}, [Lcom/google/common/hash/Hashing$ChecksumType;->clone()Ljava/lang/Object;

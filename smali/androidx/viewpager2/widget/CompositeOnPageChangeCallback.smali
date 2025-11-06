@@ -1,4 +1,4 @@
-.class final Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;
+.class public final Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;
 .super Landroidx/viewpager2/widget/ViewPager2$OnPageChangeCallback;
 .source "SourceFile"
 
@@ -22,8 +22,10 @@
 .method public constructor <init>(I)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Landroidx/viewpager2/widget/ViewPager2$OnPageChangeCallback;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(I)V
@@ -36,6 +38,7 @@
 .method private throwCallbackListModifiedWhileInUse(Ljava/util/ConcurrentModificationException;)V
     .locals 1
 
+    .line 1
     new-instance p0, Ljava/lang/IllegalStateException;
 
     const-string v0, "Adding and removing callbacks during dispatch to callbacks is not supported"
@@ -50,6 +53,7 @@
 .method public addOnPageChangeCallback(Landroidx/viewpager2/widget/ViewPager2$OnPageChangeCallback;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;->mCallbacks:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -60,6 +64,7 @@
 .method public onPageScrollStateChanged(I)V
     .locals 2
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;->mCallbacks:Ljava/util/List;
 
@@ -80,6 +85,7 @@
 
     check-cast v1, Landroidx/viewpager2/widget/ViewPager2$OnPageChangeCallback;
 
+    .line 2
     invoke-virtual {v1, p1}, Landroidx/viewpager2/widget/ViewPager2$OnPageChangeCallback;->onPageScrollStateChanged(I)V
     :try_end_0
     .catch Ljava/util/ConcurrentModificationException; {:try_start_0 .. :try_end_0} :catch_0
@@ -89,6 +95,7 @@
     :catch_0
     move-exception p1
 
+    .line 3
     invoke-direct {p0, p1}, Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;->throwCallbackListModifiedWhileInUse(Ljava/util/ConcurrentModificationException;)V
 
     :cond_0
@@ -102,6 +109,7 @@
         .end annotation
     .end param
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;->mCallbacks:Ljava/util/List;
 
@@ -122,6 +130,7 @@
 
     check-cast v1, Landroidx/viewpager2/widget/ViewPager2$OnPageChangeCallback;
 
+    .line 2
     invoke-virtual {v1, p1, p2, p3}, Landroidx/viewpager2/widget/ViewPager2$OnPageChangeCallback;->onPageScrolled(IFI)V
     :try_end_0
     .catch Ljava/util/ConcurrentModificationException; {:try_start_0 .. :try_end_0} :catch_0
@@ -131,6 +140,7 @@
     :catch_0
     move-exception p1
 
+    .line 3
     invoke-direct {p0, p1}, Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;->throwCallbackListModifiedWhileInUse(Ljava/util/ConcurrentModificationException;)V
 
     :cond_0
@@ -140,6 +150,7 @@
 .method public onPageSelected(I)V
     .locals 2
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;->mCallbacks:Ljava/util/List;
 
@@ -160,6 +171,7 @@
 
     check-cast v1, Landroidx/viewpager2/widget/ViewPager2$OnPageChangeCallback;
 
+    .line 2
     invoke-virtual {v1, p1}, Landroidx/viewpager2/widget/ViewPager2$OnPageChangeCallback;->onPageSelected(I)V
     :try_end_0
     .catch Ljava/util/ConcurrentModificationException; {:try_start_0 .. :try_end_0} :catch_0
@@ -169,6 +181,7 @@
     :catch_0
     move-exception p1
 
+    .line 3
     invoke-direct {p0, p1}, Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;->throwCallbackListModifiedWhileInUse(Ljava/util/ConcurrentModificationException;)V
 
     :cond_0
@@ -178,6 +191,7 @@
 .method public removeOnPageChangeCallback(Landroidx/viewpager2/widget/ViewPager2$OnPageChangeCallback;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Landroidx/viewpager2/widget/CompositeOnPageChangeCallback;->mCallbacks:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z

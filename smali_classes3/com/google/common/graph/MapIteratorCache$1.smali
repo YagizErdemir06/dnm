@@ -1,4 +1,4 @@
-.class Lcom/google/common/graph/MapIteratorCache$1;
+.class public Lcom/google/common/graph/MapIteratorCache$1;
 .super Ljava/util/AbstractSet;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/graph/MapIteratorCache;
+.field public final synthetic this$0:Lcom/google/common/graph/MapIteratorCache;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/graph/MapIteratorCache;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/graph/MapIteratorCache$1;->this$0:Lcom/google/common/graph/MapIteratorCache;
 
     invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
@@ -45,6 +46,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/MapIteratorCache$1;->this$0:Lcom/google/common/graph/MapIteratorCache;
 
     invoke-virtual {p0, p1}, Lcom/google/common/graph/MapIteratorCache;->containsKey(Ljava/lang/Object;)Z
@@ -101,6 +103,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/graph/MapIteratorCache$1;->this$0:Lcom/google/common/graph/MapIteratorCache;
 
     invoke-static {p0}, Lcom/google/common/graph/MapIteratorCache;->access$000(Lcom/google/common/graph/MapIteratorCache;)Ljava/util/Map;

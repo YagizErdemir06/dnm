@@ -11,6 +11,7 @@
 .method public constructor <init>(Lorg/apache/xmlbeans/SchemaType;Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/apache/xmlbeans/impl/values/XmlAnySimpleTypeImpl;-><init>()V
 
     iput-object p1, p0, Lorg/apache/xmlbeans/impl/values/XmlAnySimpleTypeRestriction;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
@@ -27,6 +28,7 @@
 .method public schemaType()Lorg/apache/xmlbeans/SchemaType;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/xmlbeans/impl/values/XmlAnySimpleTypeRestriction;->_schemaType:Lorg/apache/xmlbeans/SchemaType;
 
     return-object p0

@@ -3,28 +3,40 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/android/camera/ui/c1;
+.implements Ld/d/a/d8/z1;
 
 
 # static fields
-.field public static final c:Ljava/lang/String; = "RotateLayout"
+.field private static final c:Ljava/lang/String; = "RotateLayout"
 
 
 # instance fields
-.field public a:I
+.field private d:I
 
-.field public b:Landroid/view/View;
+.field public f:Landroid/view/View;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const p1, 0x106000d
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setBackgroundResource(I)V
+    .line 2
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setBackgroundResource(I)V
 
     return-void
 .end method
@@ -33,19 +45,33 @@
 # virtual methods
 .method public d(IZ)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "orientation",
+            "animation"
+        }
+    .end annotation
 
+    .line 1
     rem-int/lit16 p1, p1, 0x168
 
-    iget p2, p0, Lcom/android/camera/ui/RotateLayout;->a:I
+    .line 2
+    iget p2, p0, Lcom/android/camera/ui/RotateLayout;->d:I
 
     if-ne p2, p1, :cond_0
 
     return-void
 
+    .line 3
     :cond_0
-    iput p1, p0, Lcom/android/camera/ui/RotateLayout;->a:I
+    iput p1, p0, Lcom/android/camera/ui/RotateLayout;->d:I
 
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
+    .line 4
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->requestLayout()V
 
     return-void
 .end method
@@ -53,7 +79,8 @@
 .method public getCurrentOrientation()I
     .locals 0
 
-    iget p0, p0, Lcom/android/camera/ui/RotateLayout;->a:I
+    .line 1
+    iget p0, p0, Lcom/android/camera/ui/RotateLayout;->d:I
 
     return p0
 .end method
@@ -63,17 +90,20 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/camera/ui/RotateLayout;->b:Landroid/view/View;
+    iput-object v0, p0, Lcom/android/camera/ui/RotateLayout;->f:Landroid/view/View;
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-virtual {v0, v1}, Landroid/view/View;->setPivotX(F)V
 
-    iget-object p0, p0, Lcom/android/camera/ui/RotateLayout;->b:Landroid/view/View;
+    .line 3
+    iget-object p0, p0, Lcom/android/camera/ui/RotateLayout;->f:Landroid/view/View;
 
     invoke-virtual {p0, v1}, Landroid/view/View;->setPivotY(F)V
 
@@ -82,12 +112,29 @@
 
 .method public onLayout(ZIIII)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "change",
+            "left",
+            "top",
+            "right",
+            "bottom"
+        }
+    .end annotation
 
     sub-int/2addr p4, p2
 
     sub-int/2addr p5, p3
 
-    iget p1, p0, Lcom/android/camera/ui/RotateLayout;->a:I
+    .line 1
+    iget p1, p0, Lcom/android/camera/ui/RotateLayout;->d:I
 
     const/4 p2, 0x0
 
@@ -107,15 +154,17 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
-    iget-object p0, p0, Lcom/android/camera/ui/RotateLayout;->b:Landroid/view/View;
+    iget-object p0, p0, Lcom/android/camera/ui/RotateLayout;->f:Landroid/view/View;
 
     invoke-virtual {p0, p2, p2, p5, p4}, Landroid/view/View;->layout(IIII)V
 
     goto :goto_0
 
+    .line 3
     :cond_1
-    iget-object p0, p0, Lcom/android/camera/ui/RotateLayout;->b:Landroid/view/View;
+    iget-object p0, p0, Lcom/android/camera/ui/RotateLayout;->f:Landroid/view/View;
 
     invoke-virtual {p0, p2, p2, p4, p5}, Landroid/view/View;->layout(IIII)V
 
@@ -125,14 +174,27 @@
 
 .method public onMeasure(II)V
     .locals 5
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "widthSpec",
+            "heightSpec"
+        }
+    .end annotation
 
-    iget v0, p0, Lcom/android/camera/ui/RotateLayout;->a:I
+    .line 1
+    iget v0, p0, Lcom/android/camera/ui/RotateLayout;->d:I
 
     const/16 v1, 0x10e
 
     const/16 v2, 0xb4
 
     const/16 v3, 0x5a
+
+    const/4 v4, 0x0
 
     if-eqz v0, :cond_1
 
@@ -142,119 +204,134 @@
 
     if-eq v0, v1, :cond_0
 
-    const/4 p1, 0x0
-
-    move p2, p1
+    move p1, v4
 
     goto :goto_0
 
+    .line 2
     :cond_0
-    iget-object v0, p0, Lcom/android/camera/ui/RotateLayout;->b:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/camera/ui/RotateLayout;->f:Landroid/view/View;
 
     invoke-virtual {p0, v0, p2, p1}, Landroid/view/ViewGroup;->measureChild(Landroid/view/View;II)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/RotateLayout;->b:Landroid/view/View;
+    .line 3
+    iget-object p1, p0, Lcom/android/camera/ui/RotateLayout;->f:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
 
-    move-result p1
+    move-result v4
 
-    iget-object p2, p0, Lcom/android/camera/ui/RotateLayout;->b:Landroid/view/View;
-
-    invoke-virtual {p2}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result p2
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v0, p0, Lcom/android/camera/ui/RotateLayout;->b:Landroid/view/View;
-
-    invoke-virtual {p0, v0, p1, p2}, Landroid/view/ViewGroup;->measureChild(Landroid/view/View;II)V
-
-    iget-object p1, p0, Lcom/android/camera/ui/RotateLayout;->b:Landroid/view/View;
+    .line 4
+    iget-object p1, p0, Lcom/android/camera/ui/RotateLayout;->f:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result p1
 
-    iget-object p2, p0, Lcom/android/camera/ui/RotateLayout;->b:Landroid/view/View;
+    goto :goto_0
 
-    invoke-virtual {p2}, Landroid/view/View;->getMeasuredHeight()I
+    .line 5
+    :cond_1
+    iget-object v0, p0, Lcom/android/camera/ui/RotateLayout;->f:Landroid/view/View;
 
-    move-result p2
+    invoke-virtual {p0, v0, p1, p2}, Landroid/view/ViewGroup;->measureChild(Landroid/view/View;II)V
 
+    .line 6
+    iget-object p1, p0, Lcom/android/camera/ui/RotateLayout;->f:Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result v4
+
+    .line 7
+    iget-object p1, p0, Lcom/android/camera/ui/RotateLayout;->f:Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result p1
+
+    .line 8
     :goto_0
-    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setMeasuredDimension(II)V
+    invoke-virtual {p0, v4, p1}, Landroid/view/ViewGroup;->setMeasuredDimension(II)V
 
-    iget v0, p0, Lcom/android/camera/ui/RotateLayout;->a:I
+    .line 9
+    iget p2, p0, Lcom/android/camera/ui/RotateLayout;->d:I
 
-    const/4 v4, 0x0
+    const/4 v0, 0x0
 
-    if-eqz v0, :cond_5
+    if-eqz p2, :cond_5
 
-    if-eq v0, v3, :cond_4
+    if-eq p2, v3, :cond_4
 
-    if-eq v0, v2, :cond_3
+    if-eq p2, v2, :cond_3
 
-    if-eq v0, v1, :cond_2
+    if-eq p2, v1, :cond_2
 
     goto :goto_1
 
+    .line 10
     :cond_2
-    iget-object p2, p0, Lcom/android/camera/ui/RotateLayout;->b:Landroid/view/View;
+    iget-object p1, p0, Lcom/android/camera/ui/RotateLayout;->f:Landroid/view/View;
 
-    int-to-float p1, p1
+    int-to-float p2, v4
 
-    invoke-virtual {p2, p1}, Landroid/view/View;->setTranslationX(F)V
+    invoke-virtual {p1, p2}, Landroid/view/View;->setTranslationX(F)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/RotateLayout;->b:Landroid/view/View;
+    .line 11
+    iget-object p1, p0, Lcom/android/camera/ui/RotateLayout;->f:Landroid/view/View;
 
-    invoke-virtual {p1, v4}, Landroid/view/View;->setTranslationY(F)V
+    invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationY(F)V
 
     goto :goto_1
 
+    .line 12
     :cond_3
-    iget-object v0, p0, Lcom/android/camera/ui/RotateLayout;->b:Landroid/view/View;
+    iget-object p2, p0, Lcom/android/camera/ui/RotateLayout;->f:Landroid/view/View;
+
+    int-to-float v0, v4
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->setTranslationX(F)V
+
+    .line 13
+    iget-object p2, p0, Lcom/android/camera/ui/RotateLayout;->f:Landroid/view/View;
 
     int-to-float p1, p1
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setTranslationX(F)V
-
-    iget-object p1, p0, Lcom/android/camera/ui/RotateLayout;->b:Landroid/view/View;
-
-    int-to-float p2, p2
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setTranslationY(F)V
+    invoke-virtual {p2, p1}, Landroid/view/View;->setTranslationY(F)V
 
     goto :goto_1
 
+    .line 14
     :cond_4
-    iget-object p1, p0, Lcom/android/camera/ui/RotateLayout;->b:Landroid/view/View;
+    iget-object p2, p0, Lcom/android/camera/ui/RotateLayout;->f:Landroid/view/View;
 
-    invoke-virtual {p1, v4}, Landroid/view/View;->setTranslationX(F)V
+    invoke-virtual {p2, v0}, Landroid/view/View;->setTranslationX(F)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/RotateLayout;->b:Landroid/view/View;
+    .line 15
+    iget-object p2, p0, Lcom/android/camera/ui/RotateLayout;->f:Landroid/view/View;
 
-    int-to-float p2, p2
+    int-to-float p1, p1
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setTranslationY(F)V
+    invoke-virtual {p2, p1}, Landroid/view/View;->setTranslationY(F)V
 
     goto :goto_1
 
+    .line 16
     :cond_5
-    iget-object p1, p0, Lcom/android/camera/ui/RotateLayout;->b:Landroid/view/View;
+    iget-object p1, p0, Lcom/android/camera/ui/RotateLayout;->f:Landroid/view/View;
 
-    invoke-virtual {p1, v4}, Landroid/view/View;->setTranslationX(F)V
+    invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationX(F)V
 
-    iget-object p1, p0, Lcom/android/camera/ui/RotateLayout;->b:Landroid/view/View;
+    .line 17
+    iget-object p1, p0, Lcom/android/camera/ui/RotateLayout;->f:Landroid/view/View;
 
-    invoke-virtual {p1, v4}, Landroid/view/View;->setTranslationY(F)V
+    invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationY(F)V
 
+    .line 18
     :goto_1
-    iget-object p1, p0, Lcom/android/camera/ui/RotateLayout;->b:Landroid/view/View;
+    iget-object p1, p0, Lcom/android/camera/ui/RotateLayout;->f:Landroid/view/View;
 
-    iget p0, p0, Lcom/android/camera/ui/RotateLayout;->a:I
+    iget p0, p0, Lcom/android/camera/ui/RotateLayout;->d:I
 
     neg-int p0, p0
 

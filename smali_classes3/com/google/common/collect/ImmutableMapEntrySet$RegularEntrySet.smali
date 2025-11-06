@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/ImmutableMapEntrySet$RegularEntrySet;
+.class public final Lcom/google/common/collect/ImmutableMapEntrySet$RegularEntrySet;
 .super Lcom/google/common/collect/ImmutableMapEntrySet;
 .source "SourceFile"
 
@@ -103,6 +103,7 @@
         value = "not used in GWT"
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMapEntrySet$RegularEntrySet;->entries:Lcom/google/common/collect/ImmutableList;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/common/collect/ImmutableList;->copyIntoArray([Ljava/lang/Object;I)I
@@ -123,6 +124,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMapEntrySet$RegularEntrySet;->entries:Lcom/google/common/collect/ImmutableList;
 
     return-object p0
@@ -170,6 +172,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/ImmutableMapEntrySet$RegularEntrySet;->map:Lcom/google/common/collect/ImmutableMap;
 
     return-object p0

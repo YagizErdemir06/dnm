@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/Ordering$IncomparableValueException;
+.class public Lcom/google/common/collect/Ordering$IncomparableValueException;
 .super Ljava/lang/ClassCastException;
 .source "SourceFile"
 
@@ -22,13 +22,14 @@
 
 
 # instance fields
-.field final value:Ljava/lang/Object;
+.field public final value:Ljava/lang/Object;
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 3
 
+    .line 1
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -55,6 +56,7 @@
 
     invoke-direct {p0, v0}, Ljava/lang/ClassCastException;-><init>(Ljava/lang/String;)V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/Ordering$IncomparableValueException;->value:Ljava/lang/Object;
 
     return-void

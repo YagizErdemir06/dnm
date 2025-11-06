@@ -21,7 +21,7 @@
 # instance fields
 .field private props:Lorg/openxmlformats/schemas/officeDocument/x2006/customProperties/PropertiesDocument;
 
-.field final synthetic this$0:Lorg/apache/poi/POIXMLProperties;
+.field public final synthetic this$0:Lorg/apache/poi/POIXMLProperties;
 
 
 # direct methods
@@ -51,6 +51,7 @@
 .method public static synthetic access$400(Lorg/apache/poi/POIXMLProperties$CustomProperties;)Lorg/openxmlformats/schemas/officeDocument/x2006/customProperties/PropertiesDocument;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLProperties$CustomProperties;->props:Lorg/openxmlformats/schemas/officeDocument/x2006/customProperties/PropertiesDocument;
 
     return-object p0
@@ -59,12 +60,14 @@
 .method private add(Ljava/lang/String;)Lorg/openxmlformats/schemas/officeDocument/x2006/customProperties/CTProperty;
     .locals 1
 
+    .line 1
     invoke-virtual {p0, p1}, Lorg/apache/poi/POIXMLProperties$CustomProperties;->contains(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lorg/apache/poi/POIXMLProperties$CustomProperties;->props:Lorg/openxmlformats/schemas/officeDocument/x2006/customProperties/PropertiesDocument;
 
     invoke-interface {v0}, Lorg/openxmlformats/schemas/officeDocument/x2006/customProperties/PropertiesDocument;->getProperties()Lorg/openxmlformats/schemas/officeDocument/x2006/customProperties/CTProperties;
@@ -75,20 +78,25 @@
 
     move-result-object v0
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/poi/POIXMLProperties$CustomProperties;->nextPid()I
 
     move-result p0
 
+    .line 4
     invoke-interface {v0, p0}, Lorg/openxmlformats/schemas/officeDocument/x2006/customProperties/CTProperty;->setPid(I)V
 
-    const-string p0, "{D5CDD505-2E9C-101B-9397-08002B2CF9AE}"
+    const-string/jumbo p0, "{D5CDD505-2E9C-101B-9397-08002B2CF9AE}"
 
+    .line 5
     invoke-interface {v0, p0}, Lorg/openxmlformats/schemas/officeDocument/x2006/customProperties/CTProperty;->setFmtid(Ljava/lang/String;)V
 
+    .line 6
     invoke-interface {v0, p1}, Lorg/openxmlformats/schemas/officeDocument/x2006/customProperties/CTProperty;->setName(Ljava/lang/String;)V
 
     return-object v0
 
+    .line 7
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -160,6 +168,7 @@
 .method public contains(Ljava/lang/String;)Z
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLProperties$CustomProperties;->props:Lorg/openxmlformats/schemas/officeDocument/x2006/customProperties/PropertiesDocument;
 
     invoke-interface {p0}, Lorg/openxmlformats/schemas/officeDocument/x2006/customProperties/PropertiesDocument;->getProperties()Lorg/openxmlformats/schemas/officeDocument/x2006/customProperties/CTProperties;
@@ -187,6 +196,7 @@
 
     check-cast v0, Lorg/openxmlformats/schemas/officeDocument/x2006/customProperties/CTProperty;
 
+    .line 2
     invoke-interface {v0}, Lorg/openxmlformats/schemas/officeDocument/x2006/customProperties/CTProperty;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -210,6 +220,7 @@
 .method public getUnderlyingProperties()Lorg/openxmlformats/schemas/officeDocument/x2006/customProperties/CTProperties;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLProperties$CustomProperties;->props:Lorg/openxmlformats/schemas/officeDocument/x2006/customProperties/PropertiesDocument;
 
     invoke-interface {p0}, Lorg/openxmlformats/schemas/officeDocument/x2006/customProperties/PropertiesDocument;->getProperties()Lorg/openxmlformats/schemas/officeDocument/x2006/customProperties/CTProperties;
@@ -222,6 +233,7 @@
 .method public nextPid()I
     .locals 4
 
+    .line 1
     iget-object p0, p0, Lorg/apache/poi/POIXMLProperties$CustomProperties;->props:Lorg/openxmlformats/schemas/officeDocument/x2006/customProperties/PropertiesDocument;
 
     invoke-interface {p0}, Lorg/openxmlformats/schemas/officeDocument/x2006/customProperties/PropertiesDocument;->getProperties()Lorg/openxmlformats/schemas/officeDocument/x2006/customProperties/CTProperties;
@@ -254,6 +266,7 @@
 
     check-cast v2, Lorg/openxmlformats/schemas/officeDocument/x2006/customProperties/CTProperty;
 
+    .line 2
     invoke-interface {v2}, Lorg/openxmlformats/schemas/officeDocument/x2006/customProperties/CTProperty;->getPid()I
 
     move-result v3

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/common/zzm;
+.class public final Lcom/google/android/gms/common/zzm;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -9,7 +9,7 @@
 
 
 # static fields
-.field static final zza:[Lcom/google/android/gms/common/zzj;
+.field public static final zza:[Lcom/google/android/gms/common/zzj;
 
 
 # direct methods
@@ -20,17 +20,18 @@
 
     new-array v0, v0, [Lcom/google/android/gms/common/zzj;
 
-    const/4 v1, 0x0
+    .line 1
+    sget-object v1, Lcom/google/android/gms/common/zzn;->zzc:Lcom/google/android/gms/common/zzl;
 
-    sget-object v2, Lcom/google/android/gms/common/zzn;->zzc:Lcom/google/android/gms/common/zzl;
+    const/4 v2, 0x0
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/4 v1, 0x1
+    sget-object v1, Lcom/google/android/gms/common/zzn;->zzd:Lcom/google/android/gms/common/zzl;
 
-    sget-object v2, Lcom/google/android/gms/common/zzn;->zzd:Lcom/google/android/gms/common/zzl;
+    const/4 v2, 0x1
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
     sput-object v0, Lcom/google/android/gms/common/zzm;->zza:[Lcom/google/android/gms/common/zzj;
 

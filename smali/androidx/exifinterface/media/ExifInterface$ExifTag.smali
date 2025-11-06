@@ -1,4 +1,4 @@
-.class Landroidx/exifinterface/media/ExifInterface$ExifTag;
+.class public Landroidx/exifinterface/media/ExifInterface$ExifTag;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -74,21 +74,23 @@
 .method public isFormatCompatible(I)Z
     .locals 3
 
+    .line 1
     iget v0, p0, Landroidx/exifinterface/media/ExifInterface$ExifTag;->primaryFormat:I
 
-    const/4 v1, 0x1
+    const/4 v1, 0x7
 
-    const/4 v2, 0x7
+    const/4 v2, 0x1
 
-    if-eq v0, v2, :cond_8
+    if-eq v0, v1, :cond_8
 
-    if-ne p1, v2, :cond_0
+    if-ne p1, v1, :cond_0
 
     goto :goto_0
 
     :cond_0
     if-eq v0, p1, :cond_8
 
+    .line 2
     iget p0, p0, Landroidx/exifinterface/media/ExifInterface$ExifTag;->secondaryFormat:I
 
     if-ne p0, p1, :cond_1
@@ -96,46 +98,46 @@
     goto :goto_0
 
     :cond_1
-    const/4 v2, 0x4
+    const/4 v1, 0x4
 
-    if-eq v0, v2, :cond_2
+    if-eq v0, v1, :cond_2
 
-    if-ne p0, v2, :cond_3
+    if-ne p0, v1, :cond_3
 
     :cond_2
-    const/4 v2, 0x3
+    const/4 v1, 0x3
 
-    if-ne p1, v2, :cond_3
+    if-ne p1, v1, :cond_3
 
-    return v1
+    return v2
 
     :cond_3
-    const/16 v2, 0x9
+    const/16 v1, 0x9
 
-    if-eq v0, v2, :cond_4
+    if-eq v0, v1, :cond_4
 
-    if-ne p0, v2, :cond_5
+    if-ne p0, v1, :cond_5
 
     :cond_4
-    const/16 v2, 0x8
+    const/16 v1, 0x8
 
-    if-ne p1, v2, :cond_5
+    if-ne p1, v1, :cond_5
 
-    return v1
+    return v2
 
     :cond_5
-    const/16 v2, 0xc
+    const/16 v1, 0xc
 
-    if-eq v0, v2, :cond_6
+    if-eq v0, v1, :cond_6
 
-    if-ne p0, v2, :cond_7
+    if-ne p0, v1, :cond_7
 
     :cond_6
     const/16 p0, 0xb
 
     if-ne p1, p0, :cond_7
 
-    return v1
+    return v2
 
     :cond_7
     const/4 p0, 0x0
@@ -144,5 +146,5 @@
 
     :cond_8
     :goto_0
-    return v1
+    return v2
 .end method

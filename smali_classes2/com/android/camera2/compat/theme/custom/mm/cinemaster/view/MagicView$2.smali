@@ -1,4 +1,4 @@
-.class Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView$2;
+.class public Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,21 +27,31 @@
 
 
 # instance fields
-.field index:I
+.field public index:I
 
-.field final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView;
+.field public final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
+    .line 2
     iput p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView$2;->index:I
 
     return-void
@@ -51,11 +61,19 @@
 # virtual methods
 .method public accept(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "streamTextureView"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
     .line 2
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {p1, v0}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
     .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView$2;->this$0:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView;
@@ -76,6 +94,14 @@
 
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "streamTextureView"
+        }
+    .end annotation
 
     .line 1
     check-cast p1, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;

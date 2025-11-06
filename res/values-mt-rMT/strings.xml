@@ -205,7 +205,6 @@
     <string name="accessibility_video_capture_button">Buttuna biex tieħu r-ritratti waqt li tkun qed tiġbed il-vidjows</string>
     <string name="accessibility_video_pause_button">Pawża milli tirrekordja l-vidjow</string>
     <string name="accessibility_video_resume_button">"Reġa' beda jirreġistra l-vidjow"</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">Il-marka tal-ilma mitfija</string>
     <string name="accessibility_watermark_image_on">Il-marka tal-ilma mixgħula</string>
     <string name="accessibility_watermark_text">Iftaħ l-għażliet għall-bidla tal-marka tal-ilma</string>
@@ -213,16 +212,6 @@
     <string name="accessibility_zoom_button">Modalità taż-żum</string>
     <string name="actionbar_button_up_description">Lura</string>
     <string name="afternoon">Wara nofsinhar</string>
-    <string name="agent_flip_tbc">"Kompli fuq l-iskrin ta' ġewwa"</string>
-    <string name="agent_function_max">Inbidel għall-ogħla valur</string>
-    <string name="agent_function_min">Inbidel għall-inqas valur</string>
-    <string name="agent_workspace_mode_not_supported">Dil-faċilità mhix kompatibbli</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"Dil-faċilità mhix kompatibbli.
-Fetaħ il-Modalità tar-ritratti minflok."</string>
-    <string name="agent_workspace_on">Il-parametri għat-teħid tar-ritratt \"%1$s\" tqiegħdu</string>
-    <string name="agent_workspace_tbc">Qed jifhem l-atmosfera</string>
-    <string name="agent_workspace_tbc_use_default">"Qed jifhem l-atmosfera…
-Il-parametri tal-kamera tqiegħdu bħala standard"</string>
     <string name="ai_agra_fort">Il-Fortizza Agra</string>
     <string name="ai_amber_fort">Il-Palazz Amer</string>
     <string name="ai_baby">Tarbija</string>
@@ -781,7 +770,6 @@ awtomatikament lid-dokumenti skennjati"</string>
     <string name="download_hint_cn">"Milli jidher it-tagħmir tiegħek mhux imqabbad ma' WLAN. Tixtieq tuża %1$s MB ta' dejta tal-mowbajl biex tniżżel l-affarijiet issa?"</string>
     <string name="download_hint_wifi">"Jidher li t-tagħmir tiegħek mhuwiex imqabbad mal-Wi-Fi. Trid tuża %1$s MB ta' dejta tal-mowbajl biex tniżżel affarijiet issa?"</string>
     <string name="download_in_progress">Qed iniżżel…</string>
-    <string name="download_network_error">Ma setax iniżżel. Iċċekkja l-għażliet tan-netwerk tiegħek.</string>
     <string name="download_title">Twissija dwar l-użu tad-dejta</string>
     <string name="download_waiting">Pendenti…</string>
     <string name="dual_camera_lens_covered_toast">Il-lenti hija mgħottija.</string>
@@ -1260,7 +1248,6 @@ jidhru ikbar fir-ritratti"</string>
     <string name="miuix_appcompat_delete_description">Ħassar</string>
     <string name="miuix_appcompat_deselect_all">Neħħi l-għażliet kollha</string>
     <string name="miuix_appcompat_deselect_all_description">Neħħi l-għażliet kollha</string>
-    <string name="miuix_appcompat_edit">Ibdel</string>
     <string name="miuix_appcompat_search_action_mode_cancel">Ikkanċella</string>
     <string name="miuix_appcompat_search_input_description">Fittex</string>
     <string name="miuix_appcompat_select_all">Agħżel kollox</string>
@@ -2199,7 +2186,6 @@ u tevidenzja n-nies fuq quddiem."</string>
     <string name="time_picker_label_hour">S</string>
     <string name="time_picker_label_minute">M</string>
     <string name="time_stamp_date_format">dd/MM/yyyy</string>
-    <string name="time_stamp_date_format_minute">dd/MM/yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">"Tista' tiffriża jew tħoll l-isfond meta trid, kemm qabel kif ukoll waqt li qed tiġbed il-vidjo."</string>
     <string name="timefreeze_guide_tip3">"Itlob lis-suġġett tiegħek joqgħod f'nofs il-gwarniċ."</string>
     <string name="timefreeze_guide_tip4">Waqqaf it-traffiku.</string>
@@ -2237,7 +2223,7 @@ u tevidenzja n-nies fuq quddiem."</string>
     <string name="tip_flash_screen_light_on">"Flash ta' quddiem: Mixgħula"</string>
     <string name="tip_flash_soft_light_off">"Flash ta' quddiem: Mitfija"</string>
     <string name="tip_flash_soft_light_torch">"Flash ta' quddiem: Modalità tat-torċ"</string>
-    <string name="tip_flash_torch">Flexx; Torċ</string>
+    <string name="tip_flash_torch">Flash: Dejjem mixgħula</string>
     <string name="tip_friend_mode_connect_when_24GHz">Uża konnessjoni %s GHz biex ittejjeb l-istabbiltà tas-sinjal tal-monitor</string>
     <string name="tip_friend_mode_display_device_name_connect">Ħarsa minn qabel maqsuma</string>
     <string name="tip_friend_mode_display_device_name_disconnect">It-tagħmir l-ieħor ħalla s-sessjoni</string>

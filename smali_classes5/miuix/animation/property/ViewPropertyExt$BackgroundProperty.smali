@@ -28,14 +28,12 @@
 
 # direct methods
 .method private constructor <init>()V
-    .locals 2
+    .locals 1
 
     const-string v0, "background"
 
-    const/high16 v1, 0x3b800000    # 0.00390625f
-
     .line 2
-    invoke-direct {p0, v0, v1}, Lmiuix/animation/property/ViewProperty;-><init>(Ljava/lang/String;F)V
+    invoke-direct {p0, v0}, Lmiuix/animation/property/ViewProperty;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -103,6 +101,7 @@
 .method public bridge synthetic getValue(Ljava/lang/Object;)F
     .locals 0
 
+    .line 1
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1}, Lmiuix/animation/property/ViewPropertyExt$BackgroundProperty;->getValue(Landroid/view/View;)F
@@ -141,6 +140,7 @@
 .method public bridge synthetic setValue(Ljava/lang/Object;F)V
     .locals 0
 
+    .line 1
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1, p2}, Lmiuix/animation/property/ViewPropertyExt$BackgroundProperty;->setValue(Landroid/view/View;F)V

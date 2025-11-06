@@ -4,9 +4,9 @@
 
 
 # static fields
-.field public static final a:Ljava/lang/String; = "JpegUtil"
+.field private static final a:Ljava/lang/String; = "JpegUtil"
 
-.field public static b:Z = false
+.field private static b:Z = false
 
 
 # direct methods
@@ -16,12 +16,15 @@
     :try_start_0
     const-string v0, "camera_jpegutil_jni.xiaomi"
 
+    .line 1
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
+    .line 2
     invoke-static {}, Lcom/android/camera/JpegUtil;->nativeClassInit()V
 
     const/4 v0, 0x1
 
+    .line 3
     sput-boolean v0, Lcom/android/camera/JpegUtil;->b:Z
     :try_end_0
     .catch Ljava/lang/UnsatisfiedLinkError; {:try_start_0 .. :try_end_0} :catch_0
@@ -29,17 +32,19 @@
     goto :goto_0
 
     :catch_0
-    const-string v0, "couldn\'t find libcamera_jpegutil_jni.xiaomi.so"
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    new-array v1, v0, [Ljava/lang/Object;
 
-    new-array v2, v1, [Ljava/lang/Object;
+    const-string v2, "JpegUtil"
 
-    const-string v3, "JpegUtil"
+    const-string v3, "couldn\'t find libcamera_jpegutil_jni.xiaomi.so"
 
-    invoke-static {v3, v0, v2}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 4
+    invoke-static {v2, v3, v1}, Lcom/android/camera/log/Log;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    sput-boolean v1, Lcom/android/camera/JpegUtil;->b:Z
+    .line 5
+    sput-boolean v0, Lcom/android/camera/JpegUtil;->b:Z
 
     :goto_0
     return-void
@@ -48,6 +53,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -55,29 +61,46 @@
 
 .method public static a([Landroid/media/Image$Plane;I)[B
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "planes",
+            "planeNumber"
+        }
+    .end annotation
 
     const/4 v0, 0x0
 
     if-eqz p0, :cond_0
 
+    .line 1
     array-length v1, p0
 
     if-le v1, p1, :cond_0
 
-    aget-object p0, p0, p1
+    .line 2
+    aget-object v1, p0, p1
 
-    if-eqz p0, :cond_0
+    if-eqz v1, :cond_0
+
+    .line 3
+    aget-object p0, p0, p1
 
     invoke-virtual {p0}, Landroid/media/Image$Plane;->getBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Ljava/nio/Buffer;->remaining()I
+    .line 4
+    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result p1
 
     new-array p1, p1, [B
 
+    .line 5
     invoke-virtual {p0, p1}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
     return-object p1
@@ -88,7 +111,16 @@
 
 .method public static b(Landroid/media/Image;)[Landroid/media/Image$Plane;
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x10
+        }
+        names = {
+            "image"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -113,6 +145,7 @@
 
     invoke-static {v3, v0, v2}, Lcom/android/camera/log/Log;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
+    .line 2
     sget-boolean v0, Lcom/android/camera/JpegUtil;->b:Z
 
     if-nez v0, :cond_0
@@ -124,6 +157,7 @@
     :cond_0
     if-eqz p0, :cond_2
 
+    .line 3
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -140,10 +174,12 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     invoke-static {p0}, Lcom/android/camera/JpegUtil;->nativeGetPlanesExtra(Landroid/media/Image;)[Landroid/media/Image$Plane;
 
     move-result-object p0
 
+    .line 5
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -164,6 +200,7 @@
 
     return-object p0
 
+    .line 6
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -173,6 +210,7 @@
 
     throw p0
 
+    .line 7
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -187,4 +225,12 @@
 .end method
 
 .method private static native nativeGetPlanesExtra(Landroid/media/Image;)[Landroid/media/Image$Plane;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "image"
+        }
+    .end annotation
 .end method

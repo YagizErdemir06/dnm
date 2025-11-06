@@ -14,83 +14,96 @@
 
 
 # instance fields
-.field mCountBoolean:I
+.field public mCountBoolean:I
 
-.field mCountFloat:I
+.field public mCountFloat:I
 
-.field mCountInt:I
+.field public mCountInt:I
 
-.field mCountString:I
+.field public mCountString:I
 
-.field mTypeBoolean:[I
+.field public mTypeBoolean:[I
 
-.field mTypeFloat:[I
+.field public mTypeFloat:[I
 
-.field mTypeInt:[I
+.field public mTypeInt:[I
 
-.field mTypeString:[I
+.field public mTypeString:[I
 
-.field mValueBoolean:[Z
+.field public mValueBoolean:[Z
 
-.field mValueFloat:[F
+.field public mValueFloat:[F
 
-.field mValueInt:[I
+.field public mValueInt:[I
 
-.field mValueString:[Ljava/lang/String;
+.field public mValueString:[Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0xa
 
     new-array v1, v0, [I
 
+    .line 2
     iput-object v1, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mTypeInt:[I
 
     new-array v1, v0, [I
 
+    .line 3
     iput-object v1, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mValueInt:[I
 
     const/4 v1, 0x0
 
+    .line 4
     iput v1, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mCountInt:I
 
     new-array v2, v0, [I
 
+    .line 5
     iput-object v2, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mTypeFloat:[I
 
     new-array v0, v0, [F
 
+    .line 6
     iput-object v0, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mValueFloat:[F
 
+    .line 7
     iput v1, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mCountFloat:I
 
     const/4 v0, 0x5
 
     new-array v2, v0, [I
 
+    .line 8
     iput-object v2, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mTypeString:[I
 
     new-array v0, v0, [Ljava/lang/String;
 
+    .line 9
     iput-object v0, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mValueString:[Ljava/lang/String;
 
+    .line 10
     iput v1, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mCountString:I
 
     const/4 v0, 0x4
 
     new-array v2, v0, [I
 
+    .line 11
     iput-object v2, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mTypeBoolean:[I
 
     new-array v0, v0, [Z
 
+    .line 12
     iput-object v0, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mValueBoolean:[Z
 
+    .line 13
     iput v1, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mCountBoolean:I
 
     return-void
@@ -329,6 +342,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 1
     invoke-virtual {p0, p1, p2}, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->add(ILjava/lang/String;)V
 
     :cond_0
@@ -544,12 +558,16 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput v0, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mCountBoolean:I
 
+    .line 2
     iput v0, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mCountString:I
 
+    .line 3
     iput v0, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mCountFloat:I
 
+    .line 4
     iput v0, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mCountInt:I
 
     return-void
@@ -560,17 +578,20 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     iget v1, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mCountInt:I
 
     if-ge v0, v1, :cond_1
 
+    .line 2
     iget-object v1, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mTypeInt:[I
 
     aget v1, v1, v0
 
     if-ne v1, p1, :cond_0
 
+    .line 3
     iget-object p0, p0, Landroidx/constraintlayout/core/motion/utils/TypedBundle;->mValueInt:[I
 
     aget p0, p0, v0

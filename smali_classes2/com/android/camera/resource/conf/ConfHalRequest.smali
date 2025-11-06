@@ -7,7 +7,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/android/camera/resource/SimpleParseRequest<",
-        "Li2/g;",
+        "Ld/d/a/l6/d/g;",
         ">;"
     }
 .end annotation
@@ -21,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera/resource/SimpleParseRequest;-><init>()V
 
     return-void
@@ -29,7 +30,8 @@
 .method public static getCloudDataList()Ljava/lang/String;
     .locals 2
 
-    invoke-static {}, Lcom/android/camera/CameraAppImpl;->o()Landroid/content/Context;
+    .line 1
+    invoke-static {}, Lcom/android/camera/CameraAppImpl;->d()Landroid/content/Context;
 
     move-result-object v0
 
@@ -39,7 +41,8 @@
 
     const-string v1, "camera_hal"
 
-    invoke-static {v0, v1}, Log/c$b;->b(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+    .line 2
+    invoke-static {v0, v1}, Ld/o/i/e/c$c;->b(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -54,6 +57,15 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            "resource"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/json/JSONException;
@@ -61,19 +73,28 @@
     .end annotation
 
     .line 1
-    check-cast p1, Li2/g;
+    check-cast p1, Ld/d/a/l6/d/g;
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/resource/conf/ConfHalRequest;->processParse(Li2/g;)V
+    invoke-virtual {p0, p1}, Lcom/android/camera/resource/conf/ConfHalRequest;->processParse(Ld/d/a/l6/d/g;)V
 
     return-void
 .end method
 
-.method public processParse(Li2/g;)V
+.method public processParse(Ld/d/a/l6/d/g;)V
     .locals 0
-    .param p1    # Li2/g;
+    .param p1    # Ld/d/a/l6/d/g;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "resource"
+        }
+    .end annotation
+
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/json/JSONException;
@@ -86,7 +107,7 @@
     move-result-object p0
 
     .line 3
-    invoke-virtual {p1, p0}, Li2/g;->m(Ljava/lang/String;)V
+    invoke-virtual {p1, p0}, Ld/d/a/l6/d/g;->m(Ljava/lang/String;)V
 
     return-void
 .end method

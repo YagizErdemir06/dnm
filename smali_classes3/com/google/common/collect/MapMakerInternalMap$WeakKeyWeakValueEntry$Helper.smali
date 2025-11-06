@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/MapMakerInternalMap$WeakKeyWeakValueEntry$Helper;
+.class public final Lcom/google/common/collect/MapMakerInternalMap$WeakKeyWeakValueEntry$Helper;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -49,6 +49,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/MapMakerInternalMap$WeakKeyWeakValueEntry$Helper;
 
     invoke-direct {v0}, Lcom/google/common/collect/MapMakerInternalMap$WeakKeyWeakValueEntry$Helper;-><init>()V
@@ -61,6 +62,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -80,6 +82,7 @@
         }
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/common/collect/MapMakerInternalMap$WeakKeyWeakValueEntry$Helper;->INSTANCE:Lcom/google/common/collect/MapMakerInternalMap$WeakKeyWeakValueEntry$Helper;
 
     return-object v0
@@ -169,6 +172,7 @@
 .method public keyStrength()Lcom/google/common/collect/MapMakerInternalMap$Strength;
     .locals 0
 
+    .line 1
     sget-object p0, Lcom/google/common/collect/MapMakerInternalMap$Strength;->WEAK:Lcom/google/common/collect/MapMakerInternalMap$Strength;
 
     return-object p0
@@ -296,6 +300,7 @@
 .method public valueStrength()Lcom/google/common/collect/MapMakerInternalMap$Strength;
     .locals 0
 
+    .line 1
     sget-object p0, Lcom/google/common/collect/MapMakerInternalMap$Strength;->WEAK:Lcom/google/common/collect/MapMakerInternalMap$Strength;
 
     return-object p0

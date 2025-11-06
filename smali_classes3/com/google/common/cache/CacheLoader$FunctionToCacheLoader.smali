@@ -1,4 +1,4 @@
-.class final Lcom/google/common/cache/CacheLoader$FunctionToCacheLoader;
+.class public final Lcom/google/common/cache/CacheLoader$FunctionToCacheLoader;
 .super Lcom/google/common/cache/CacheLoader;
 .source "SourceFile"
 
@@ -56,8 +56,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/cache/CacheLoader;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -79,6 +81,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/cache/CacheLoader$FunctionToCacheLoader;->computingFunction:Lcom/google/common/base/Function;
 
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;

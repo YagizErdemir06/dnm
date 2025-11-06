@@ -32,10 +32,13 @@
 .method public constructor <init>(I[F[FI)V
     .locals 6
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/video/spherical/Projection$SubMesh;->textureId:I
 
+    .line 3
     array-length p1, p2
 
     int-to-long v0, p1
@@ -66,10 +69,13 @@
     :goto_0
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 4
     iput-object p2, p0, Lcom/google/android/exoplayer2/video/spherical/Projection$SubMesh;->vertices:[F
 
+    .line 5
     iput-object p3, p0, Lcom/google/android/exoplayer2/video/spherical/Projection$SubMesh;->textureCoords:[F
 
+    .line 6
     iput p4, p0, Lcom/google/android/exoplayer2/video/spherical/Projection$SubMesh;->mode:I
 
     return-void
@@ -80,6 +86,7 @@
 .method public getVertexCount()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/video/spherical/Projection$SubMesh;->vertices:[F
 
     array-length p0, p0

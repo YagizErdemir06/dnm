@@ -1656,6 +1656,7 @@
 .method public static constructor <clinit>()V
     .locals 4
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     const-string v1, "PROVIDER_ANY"
@@ -1668,8548 +1669,9261 @@
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/4 v1, 0x1
+    const-string v1, "PROVIDER_UNKNOWN"
 
-    const/16 v2, 0x1111
+    const/4 v2, 0x1
 
-    const-string v3, "PROVIDER_UNKNOWN"
+    const/16 v3, 0x1111
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 2
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/4 v1, 0x2
+    const-string v1, "PROVIDER_NAVTEQ"
 
-    const/16 v2, 0x1112
+    const/4 v2, 0x2
 
-    const-string v3, "PROVIDER_NAVTEQ"
+    const/16 v3, 0x1112
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 3
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/4 v1, 0x3
+    const-string v1, "PROVIDER_TELE_ATLAS"
 
-    const/16 v2, 0x1113
+    const/4 v2, 0x3
 
-    const-string v3, "PROVIDER_TELE_ATLAS"
+    const/16 v3, 0x1113
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 4
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/4 v1, 0x4
+    const-string v1, "PROVIDER_TELE_ATLAS_MULTINET"
 
-    const v2, 0x11131
+    const/4 v2, 0x4
 
-    const-string v3, "PROVIDER_TELE_ATLAS_MULTINET"
+    const v3, 0x11131
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 5
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zze:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/4 v1, 0x5
+    const-string v1, "PROVIDER_TELE_ATLAS_CODEPOINT"
 
-    const v2, 0x11132
+    const/4 v2, 0x5
 
-    const-string v3, "PROVIDER_TELE_ATLAS_CODEPOINT"
+    const v3, 0x11132
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 6
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/4 v1, 0x6
+    const-string v1, "PROVIDER_TELE_ATLAS_GEOPOST"
 
-    const v2, 0x11133
+    const/4 v2, 0x6
 
-    const-string v3, "PROVIDER_TELE_ATLAS_GEOPOST"
+    const v3, 0x11133
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 7
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/4 v1, 0x7
+    const-string v1, "PROVIDER_TELE_ATLAS_DATAGEO"
 
-    const v2, 0x11134
+    const/4 v2, 0x7
 
-    const-string v3, "PROVIDER_TELE_ATLAS_DATAGEO"
+    const v3, 0x11134
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 8
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x8
+    const-string v1, "PROVIDER_TELE_ATLAS_ADDRESS_POINTS"
 
-    const v2, 0x11135
+    const/16 v2, 0x8
 
-    const-string v3, "PROVIDER_TELE_ATLAS_ADDRESS_POINTS"
+    const v3, 0x11135
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 9
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzi:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x9
+    const-string v1, "PROVIDER_TELCONTAR"
 
-    const/16 v2, 0x1114
+    const/16 v2, 0x9
 
-    const-string v3, "PROVIDER_TELCONTAR"
+    const/16 v3, 0x1114
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 10
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xa
+    const-string v1, "PROVIDER_EUROPA"
 
-    const/16 v2, 0x1115
+    const/16 v2, 0xa
 
-    const-string v3, "PROVIDER_EUROPA"
+    const/16 v3, 0x1115
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 11
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzk:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xb
+    const-string v1, "PROVIDER_ROYAL_MAIL"
 
-    const/16 v2, 0x1116
+    const/16 v2, 0xb
 
-    const-string v3, "PROVIDER_ROYAL_MAIL"
+    const/16 v3, 0x1116
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 12
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzl:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xc
+    const-string v1, "PROVIDER_GOOGLE"
 
-    const/16 v2, 0x1117
+    const/16 v2, 0xc
 
-    const-string v3, "PROVIDER_GOOGLE"
+    const/16 v3, 0x1117
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 13
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xd
+    const-string v1, "PROVIDER_GOOGLE_HAND_EDIT"
 
-    const v2, 0x11171
+    const/16 v2, 0xd
 
-    const-string v3, "PROVIDER_GOOGLE_HAND_EDIT"
+    const v3, 0x11171
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 14
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzn:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xe
+    const-string v1, "PROVIDER_GOOGLE_BORDERS"
 
-    const v2, 0x11172
+    const/16 v2, 0xe
 
-    const-string v3, "PROVIDER_GOOGLE_BORDERS"
+    const v3, 0x11172
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 15
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzo:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xf
+    const-string v1, "PROVIDER_GOOGLE_SUBRANGE"
 
-    const v2, 0x11173
+    const/16 v2, 0xf
 
-    const-string v3, "PROVIDER_GOOGLE_SUBRANGE"
+    const v3, 0x11173
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 16
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x10
+    const-string v1, "PROVIDER_GOOGLE_GT_FUSION"
 
-    const v2, 0x11173001
+    const/16 v2, 0x10
 
-    const-string v3, "PROVIDER_GOOGLE_GT_FUSION"
+    const v3, 0x11173001
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 17
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x11
+    const-string v1, "PROVIDER_GOOGLE_ZAGAT_CMS"
 
-    const v2, 0x11173002
+    const/16 v2, 0x11
 
-    const-string v3, "PROVIDER_GOOGLE_ZAGAT_CMS"
+    const v3, 0x11173002
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 18
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x12
+    const-string v1, "PROVIDER_GOOGLE_PLACE_NAVBOOST"
 
-    const v2, 0x11173003
+    const/16 v2, 0x12
 
-    const-string v3, "PROVIDER_GOOGLE_PLACE_NAVBOOST"
+    const v3, 0x11173003
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 19
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzs:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x13
+    const-string v1, "PROVIDER_GOOGLE_FOOTPRINT"
 
-    const v2, 0x11173004
+    const/16 v2, 0x13
 
-    const-string v3, "PROVIDER_GOOGLE_FOOTPRINT"
+    const v3, 0x11173004
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 20
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzt:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x14
+    const-string v1, "PROVIDER_GOOGLE_PRODUCT_TERMS"
 
-    const v2, 0x11173005
+    const/16 v2, 0x14
 
-    const-string v3, "PROVIDER_GOOGLE_PRODUCT_TERMS"
+    const v3, 0x11173005
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 21
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x15
+    const-string v1, "PROVIDER_GOOGLE_POINTCARDS"
 
-    const v2, 0x11173006
+    const/16 v2, 0x15
 
-    const-string v3, "PROVIDER_GOOGLE_POINTCARDS"
+    const v3, 0x11173006
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 22
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x16
+    const-string v1, "PROVIDER_GOOGLE_BUSINESS_CHAINS"
 
-    const v2, 0x11173007
+    const/16 v2, 0x16
 
-    const-string v3, "PROVIDER_GOOGLE_BUSINESS_CHAINS"
+    const v3, 0x11173007
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 23
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x17
+    const-string v1, "PROVIDER_GOOGLE_LOCAL_SUMMARIZATION"
 
-    const v2, 0x11173008
+    const/16 v2, 0x17
 
-    const-string v3, "PROVIDER_GOOGLE_LOCAL_SUMMARIZATION"
+    const v3, 0x11173008
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 24
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x18
+    const-string v1, "PROVIDER_GOOGLE_PRONUNCIATIONS"
 
-    const v2, 0x11173009
+    const/16 v2, 0x18
 
-    const-string v3, "PROVIDER_GOOGLE_PRONUNCIATIONS"
+    const v3, 0x11173009
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 25
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzy:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x19
+    const-string v1, "PROVIDER_GOOGLE_DUMPLING"
 
-    const v2, 0x1117300a
+    const/16 v2, 0x19
 
-    const-string v3, "PROVIDER_GOOGLE_DUMPLING"
+    const v3, 0x1117300a
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 26
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1a
+    const-string v1, "PROVIDER_GOOGLE_DISTILLERY"
 
-    const v2, 0x1117300b
+    const/16 v2, 0x1a
 
-    const-string v3, "PROVIDER_GOOGLE_DISTILLERY"
+    const v3, 0x1117300b
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 27
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1b
+    const-string v1, "PROVIDER_GOOGLE_LOCAL_ATTRIBUTE_SUMMARIZATION"
 
-    const v2, 0x1117300c
+    const/16 v2, 0x1b
 
-    const-string v3, "PROVIDER_GOOGLE_LOCAL_ATTRIBUTE_SUMMARIZATION"
+    const v3, 0x1117300c
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 28
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1c
+    const-string v1, "PROVIDER_GOOGLE_RELATION_MINER"
 
-    const v2, 0x1117300d
+    const/16 v2, 0x1c
 
-    const-string v3, "PROVIDER_GOOGLE_RELATION_MINER"
+    const v3, 0x1117300d
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 29
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1d
+    const-string v1, "PROVIDER_GOOGLE_MAPSPAM"
 
-    const v2, 0x1117300e
+    const/16 v2, 0x1d
 
-    const-string v3, "PROVIDER_GOOGLE_MAPSPAM"
+    const v3, 0x1117300e
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 30
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1e
+    const-string v1, "PROVIDER_GOOGLE_ROSE"
 
-    const v2, 0x1117300f
+    const/16 v2, 0x1e
 
-    const-string v3, "PROVIDER_GOOGLE_ROSE"
+    const v3, 0x1117300f
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 31
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1f
+    const-string v1, "PROVIDER_GOOGLE_LOCAL_PLACE_RATINGS"
 
-    const v2, 0x11173010
+    const/16 v2, 0x1f
 
-    const-string v3, "PROVIDER_GOOGLE_LOCAL_PLACE_RATINGS"
+    const v3, 0x11173010
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 32
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x20
+    const-string v1, "PROVIDER_GOOGLE_WIPEOUT"
 
-    const v2, 0x11173011
+    const/16 v2, 0x20
 
-    const-string v3, "PROVIDER_GOOGLE_WIPEOUT"
+    const v3, 0x11173011
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 33
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x21
+    const-string v1, "PROVIDER_GOOGLE_KNOWLEDGE_GRAPH"
 
-    const v2, 0x11173012
+    const/16 v2, 0x21
 
-    const-string v3, "PROVIDER_GOOGLE_KNOWLEDGE_GRAPH"
+    const v3, 0x11173012
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 34
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x22
+    const-string v1, "PROVIDER_GOOGLE_BEEGEES"
 
-    const v2, 0x11173013
+    const/16 v2, 0x22
 
-    const-string v3, "PROVIDER_GOOGLE_BEEGEES"
+    const v3, 0x11173013
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 35
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x23
+    const-string v1, "PROVIDER_GOOGLE_REVIEW_SUMMARIZATION"
 
-    const v2, 0x11173014
+    const/16 v2, 0x23
 
-    const-string v3, "PROVIDER_GOOGLE_REVIEW_SUMMARIZATION"
+    const v3, 0x11173014
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 36
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x24
+    const-string v1, "PROVIDER_GOOGLE_OFFLINE_NON_CORE_ATTRIBUTE_SUMMARIZATION"
 
-    const v2, 0x11173015
+    const/16 v2, 0x24
 
-    const-string v3, "PROVIDER_GOOGLE_OFFLINE_NON_CORE_ATTRIBUTE_SUMMARIZATION"
+    const v3, 0x11173015
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 37
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x25
+    const-string v1, "PROVIDER_GOOGLE_GEO_WORLDMAPS"
 
-    const v2, 0x11173016
+    const/16 v2, 0x25
 
-    const-string v3, "PROVIDER_GOOGLE_GEO_WORLDMAPS"
+    const v3, 0x11173016
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 38
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x26
+    const-string v1, "PROVIDER_GOOGLE_GEO_MODERATION"
 
-    const v2, 0x11173017
+    const/16 v2, 0x26
 
-    const-string v3, "PROVIDER_GOOGLE_GEO_MODERATION"
+    const v3, 0x11173017
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 39
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x27
+    const-string v1, "PROVIDER_GOOGLE_OYSTER_AUTO_EDITS"
 
-    const v2, 0x11173018
+    const/16 v2, 0x27
 
-    const-string v3, "PROVIDER_GOOGLE_OYSTER_AUTO_EDITS"
+    const v3, 0x11173018
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 40
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x28
+    const-string v1, "PROVIDER_GOOGLE_LOCAL_ALCHEMY"
 
-    const v2, 0x11173019
+    const/16 v2, 0x28
 
-    const-string v3, "PROVIDER_GOOGLE_LOCAL_ALCHEMY"
+    const v3, 0x11173019
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 41
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x29
+    const-string v1, "PROVIDER_GOOGLE_KEROUAC"
 
-    const v2, 0x1117301a
+    const/16 v2, 0x29
 
-    const-string v3, "PROVIDER_GOOGLE_KEROUAC"
+    const v3, 0x1117301a
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 42
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2a
+    const-string v1, "PROVIDER_GOOGLE_MOBRANK"
 
-    const v2, 0x1117301b
+    const/16 v2, 0x2a
 
-    const-string v3, "PROVIDER_GOOGLE_MOBRANK"
+    const v3, 0x1117301b
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 43
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2b
+    const-string v1, "PROVIDER_GOOGLE_RAPTURE"
 
-    const v2, 0x1117301c
+    const/16 v2, 0x2b
 
-    const-string v3, "PROVIDER_GOOGLE_RAPTURE"
+    const v3, 0x1117301c
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 44
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2c
+    const-string v1, "PROVIDER_GOOGLE_CULTURAL_INSTITUTE"
 
-    const v2, 0x1117301d
+    const/16 v2, 0x2c
 
-    const-string v3, "PROVIDER_GOOGLE_CULTURAL_INSTITUTE"
+    const v3, 0x1117301d
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 45
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2d
+    const-string v1, "PROVIDER_GOOGLE_GEOCODES_FROM_LOCAL_FEEDS"
 
-    const v2, 0x1117301e
+    const/16 v2, 0x2d
 
-    const-string v3, "PROVIDER_GOOGLE_GEOCODES_FROM_LOCAL_FEEDS"
+    const v3, 0x1117301e
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 46
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2e
+    const-string v1, "PROVIDER_GOOGLE_ATTRIBUTES_FROM_CRAWLED_CHAINS"
 
-    const v2, 0x1117301f
+    const/16 v2, 0x2e
 
-    const-string v3, "PROVIDER_GOOGLE_ATTRIBUTES_FROM_CRAWLED_CHAINS"
+    const v3, 0x1117301f
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 47
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2f
+    const-string v1, "PROVIDER_GOOGLE_TACTILE_MAPS"
 
-    const v2, 0x11173020
+    const/16 v2, 0x2f
 
-    const-string v3, "PROVIDER_GOOGLE_TACTILE_MAPS"
+    const v3, 0x11173020
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 48
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x30
+    const-string v1, "PROVIDER_GOOGLE_MAPS_FOR_MOBILE"
 
-    const v2, 0x11173021
+    const/16 v2, 0x30
 
-    const-string v3, "PROVIDER_GOOGLE_MAPS_FOR_MOBILE"
+    const v3, 0x11173021
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 49
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x31
+    const-string v1, "PROVIDER_GOOGLE_GEO_REALTIME"
 
-    const v2, 0x11173022
+    const/16 v2, 0x31
 
-    const-string v3, "PROVIDER_GOOGLE_GEO_REALTIME"
+    const v3, 0x11173022
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 50
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x32
+    const-string v1, "PROVIDER_GOOGLE_PROMINENT_PLACES"
 
-    const v2, 0x11173023
+    const/16 v2, 0x32
 
-    const-string v3, "PROVIDER_GOOGLE_PROMINENT_PLACES"
+    const v3, 0x11173023
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 51
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x33
+    const-string v1, "PROVIDER_GOOGLE_PLACE_ACTIONS"
 
-    const v2, 0x11173024
+    const/16 v2, 0x33
 
-    const-string v3, "PROVIDER_GOOGLE_PLACE_ACTIONS"
+    const v3, 0x11173024
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 52
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x34
+    const-string v1, "PROVIDER_GOOGLE_GT_AUTO_EDITS"
 
-    const v2, 0x11173025
+    const/16 v2, 0x34
 
-    const-string v3, "PROVIDER_GOOGLE_GT_AUTO_EDITS"
+    const v3, 0x11173025
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 53
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaa:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x35
+    const-string v1, "PROVIDER_GOOGLE_WAZE"
 
-    const v2, 0x11173026
+    const/16 v2, 0x35
 
-    const-string v3, "PROVIDER_GOOGLE_WAZE"
+    const v3, 0x11173026
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 54
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzab:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x36
+    const-string v1, "PROVIDER_GOOGLE_ONTHEGO"
 
-    const v2, 0x11173027
+    const/16 v2, 0x36
 
-    const-string v3, "PROVIDER_GOOGLE_ONTHEGO"
+    const v3, 0x11173027
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 55
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzac:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x37
+    const-string v1, "PROVIDER_GOOGLE_GT_IMPORT"
 
-    const v2, 0x11173028
+    const/16 v2, 0x37
 
-    const-string v3, "PROVIDER_GOOGLE_GT_IMPORT"
+    const v3, 0x11173028
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 56
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzad:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x38
+    const-string v1, "PROVIDER_GOOGLE_STRUCTURED_DATA"
 
-    const v2, 0x11173029
+    const/16 v2, 0x38
 
-    const-string v3, "PROVIDER_GOOGLE_STRUCTURED_DATA"
+    const v3, 0x11173029
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 57
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzae:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x39
+    const-string v1, "PROVIDER_GOOGLE_HELICOPTER"
 
-    const v2, 0x1117302a
+    const/16 v2, 0x39
 
-    const-string v3, "PROVIDER_GOOGLE_HELICOPTER"
+    const v3, 0x1117302a
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 58
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x3a
+    const-string v1, "PROVIDER_GOOGLE_ROLLBACK"
 
-    const v2, 0x1117302b
+    const/16 v2, 0x3a
 
-    const-string v3, "PROVIDER_GOOGLE_ROLLBACK"
+    const v3, 0x1117302b
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 59
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzag:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x3b
+    const-string v1, "PROVIDER_GOOGLE_RIGHTS_REPAIR"
 
-    const v2, 0x1117302c
+    const/16 v2, 0x3b
 
-    const-string v3, "PROVIDER_GOOGLE_RIGHTS_REPAIR"
+    const v3, 0x1117302c
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 60
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzah:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x3c
+    const-string v1, "PROVIDER_GOOGLE_PERFUME"
 
-    const v2, 0x1117302d
+    const/16 v2, 0x3c
 
-    const-string v3, "PROVIDER_GOOGLE_PERFUME"
+    const v3, 0x1117302d
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 61
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzai:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x3d
+    const-string v1, "PROVIDER_GOOGLE_MAPS_TRANSLATION"
 
-    const v2, 0x1117302e
+    const/16 v2, 0x3d
 
-    const-string v3, "PROVIDER_GOOGLE_MAPS_TRANSLATION"
+    const v3, 0x1117302e
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 62
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x3e
+    const-string v1, "PROVIDER_GOOGLE_CALL_ME_MAYBE"
 
-    const v2, 0x1117302f
+    const/16 v2, 0x3e
 
-    const-string v3, "PROVIDER_GOOGLE_CALL_ME_MAYBE"
+    const v3, 0x1117302f
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 63
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzak:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x3f
+    const-string v1, "PROVIDER_GOOGLE_LOCAL_UNIVERSAL"
 
-    const v2, 0x11173030
+    const/16 v2, 0x3f
 
-    const-string v3, "PROVIDER_GOOGLE_LOCAL_UNIVERSAL"
+    const v3, 0x11173030
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 64
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzal:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x40
+    const-string v1, "PROVIDER_GOOGLE_CROUPIER"
 
-    const v2, 0x11173031
+    const/16 v2, 0x40
 
-    const-string v3, "PROVIDER_GOOGLE_CROUPIER"
+    const v3, 0x11173031
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 65
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzam:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x41
+    const-string v1, "PROVIDER_GOOGLE_SKYSMART"
 
-    const v2, 0x11173032
+    const/16 v2, 0x41
 
-    const-string v3, "PROVIDER_GOOGLE_SKYSMART"
+    const v3, 0x11173032
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 66
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzan:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x42
+    const-string v1, "PROVIDER_GOOGLE_RIDDLER"
 
-    const v2, 0x11173033
+    const/16 v2, 0x42
 
-    const-string v3, "PROVIDER_GOOGLE_RIDDLER"
+    const v3, 0x11173033
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 67
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzao:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x43
+    const-string v1, "PROVIDER_GOOGLE_ROADCLOSURES"
 
-    const v2, 0x11173034
+    const/16 v2, 0x43
 
-    const-string v3, "PROVIDER_GOOGLE_ROADCLOSURES"
+    const v3, 0x11173034
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 68
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzap:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x44
+    const-string v1, "PROVIDER_GOOGLE_SPORE"
 
-    const v2, 0x11173035
+    const/16 v2, 0x44
 
-    const-string v3, "PROVIDER_GOOGLE_SPORE"
+    const v3, 0x11173035
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 69
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x45
+    const-string v1, "PROVIDER_GOOGLE_LOCALIZATION"
 
-    const v2, 0x11173036
+    const/16 v2, 0x45
 
-    const-string v3, "PROVIDER_GOOGLE_LOCALIZATION"
+    const v3, 0x11173036
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 70
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzar:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x46
+    const-string v1, "PROVIDER_GOOGLE_CATTERMS"
 
-    const v2, 0x11173037
+    const/16 v2, 0x46
 
-    const-string v3, "PROVIDER_GOOGLE_CATTERMS"
+    const v3, 0x11173037
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 71
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzas:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x47
+    const-string v1, "PROVIDER_GOOGLE_GT_FIELD_OPS"
 
-    const v2, 0x11173038
+    const/16 v2, 0x47
 
-    const-string v3, "PROVIDER_GOOGLE_GT_FIELD_OPS"
+    const v3, 0x11173038
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 72
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzat:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x48
+    const-string v1, "PROVIDER_GOOGLE_MATCHMAKER"
 
-    const v2, 0x11173039
+    const/16 v2, 0x48
 
-    const-string v3, "PROVIDER_GOOGLE_MATCHMAKER"
+    const v3, 0x11173039
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 73
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzau:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x49
+    const-string v1, "PROVIDER_GOOGLE_ARBITRATION"
 
-    const v2, 0x1117303a
+    const/16 v2, 0x49
 
-    const-string v3, "PROVIDER_GOOGLE_ARBITRATION"
+    const v3, 0x1117303a
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 74
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzav:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x4a
+    const-string v1, "PROVIDER_GOOGLE_BIZBUILDER_OPS"
 
-    const v2, 0x1117303b
+    const/16 v2, 0x4a
 
-    const-string v3, "PROVIDER_GOOGLE_BIZBUILDER_OPS"
+    const v3, 0x1117303b
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 75
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x4b
+    const-string v1, "PROVIDER_GOOGLE_LOCAL_INVENTORY_ADS"
 
-    const v2, 0x1117303c
+    const/16 v2, 0x4b
 
-    const-string v3, "PROVIDER_GOOGLE_LOCAL_INVENTORY_ADS"
+    const v3, 0x1117303c
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 76
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzax:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x4c
+    const-string v1, "PROVIDER_GOOGLE_GT_DRAFTY"
 
-    const v2, 0x1117303d
+    const/16 v2, 0x4c
 
-    const-string v3, "PROVIDER_GOOGLE_GT_DRAFTY"
+    const v3, 0x1117303d
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 77
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzay:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x4d
+    const-string v1, "PROVIDER_GOOGLE_HOTELADS_OPS"
 
-    const v2, 0x1117303e
+    const/16 v2, 0x4d
 
-    const-string v3, "PROVIDER_GOOGLE_HOTELADS_OPS"
+    const v3, 0x1117303e
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 78
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x4e
+    const-string v1, "PROVIDER_GOOGLE_MARKERS"
 
-    const v2, 0x1117303f
+    const/16 v2, 0x4e
 
-    const-string v3, "PROVIDER_GOOGLE_MARKERS"
+    const v3, 0x1117303f
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 79
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x4f
+    const-string v1, "PROVIDER_GOOGLE_STATE_MACHINE"
 
-    const v2, 0x11173040
+    const/16 v2, 0x4f
 
-    const-string v3, "PROVIDER_GOOGLE_STATE_MACHINE"
+    const v3, 0x11173040
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 80
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x50
+    const-string v1, "PROVIDER_GOOGLE_ATTRIBUTES_INFERENCE"
 
-    const v2, 0x11173041
+    const/16 v2, 0x50
 
-    const-string v3, "PROVIDER_GOOGLE_ATTRIBUTES_INFERENCE"
+    const v3, 0x11173041
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 81
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x51
+    const-string v1, "PROVIDER_GOOGLE_BIKESHARE"
 
-    const v2, 0x11173042
+    const/16 v2, 0x51
 
-    const-string v3, "PROVIDER_GOOGLE_BIKESHARE"
+    const v3, 0x11173042
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 82
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x52
+    const-string v1, "PROVIDER_GOOGLE_GHOSTWRITER"
 
-    const v2, 0x11173043
+    const/16 v2, 0x52
 
-    const-string v3, "PROVIDER_GOOGLE_GHOSTWRITER"
+    const v3, 0x11173043
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 83
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x53
+    const-string v1, "PROVIDER_GOOGLE_EDIT_PLATFORM"
 
-    const v2, 0x11173044
+    const/16 v2, 0x53
 
-    const-string v3, "PROVIDER_GOOGLE_EDIT_PLATFORM"
+    const v3, 0x11173044
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 84
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x54
+    const-string v1, "PROVIDER_GOOGLE_BLUE_GINGER"
 
-    const v2, 0x11173045
+    const/16 v2, 0x54
 
-    const-string v3, "PROVIDER_GOOGLE_BLUE_GINGER"
+    const v3, 0x11173045
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 85
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x55
+    const-string v1, "PROVIDER_GOOGLE_GEO_TIGER"
 
-    const v2, 0x11173046
+    const/16 v2, 0x55
 
-    const-string v3, "PROVIDER_GOOGLE_GEO_TIGER"
+    const v3, 0x11173046
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 86
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x56
+    const-string v1, "PROVIDER_GOOGLE_HYADES"
 
-    const v2, 0x11173047
+    const/16 v2, 0x56
 
-    const-string v3, "PROVIDER_GOOGLE_HYADES"
+    const v3, 0x11173047
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 87
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x57
+    const-string v1, "PROVIDER_GOOGLE_WEBQUARRY"
 
-    const v2, 0x11173048
+    const/16 v2, 0x57
 
-    const-string v3, "PROVIDER_GOOGLE_WEBQUARRY"
+    const v3, 0x11173048
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 88
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x58
+    const-string v1, "PROVIDER_GOOGLE_GEO_MADDEN"
 
-    const v2, 0x11173049
+    const/16 v2, 0x58
 
-    const-string v3, "PROVIDER_GOOGLE_GEO_MADDEN"
+    const v3, 0x11173049
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 89
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x59
+    const-string v1, "PROVIDER_GOOGLE_ANDROID_PAY"
 
-    const v2, 0x1117304a
+    const/16 v2, 0x59
 
-    const-string v3, "PROVIDER_GOOGLE_ANDROID_PAY"
+    const v3, 0x1117304a
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 90
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x5a
+    const-string v1, "PROVIDER_GOOGLE_OPENING_HOURS_TEAM"
 
-    const v2, 0x1117304b
+    const/16 v2, 0x5a
 
-    const-string v3, "PROVIDER_GOOGLE_OPENING_HOURS_TEAM"
+    const v3, 0x1117304b
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 91
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x5b
+    const-string v1, "PROVIDER_GOOGLE_LOCAL_DISCOVERY"
 
-    const v2, 0x1117304c
+    const/16 v2, 0x5b
 
-    const-string v3, "PROVIDER_GOOGLE_LOCAL_DISCOVERY"
+    const v3, 0x1117304c
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 92
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x5c
+    const-string v1, "PROVIDER_GOOGLE_LOCAL_HEALTH"
 
-    const v2, 0x1117304d
+    const/16 v2, 0x5c
 
-    const-string v3, "PROVIDER_GOOGLE_LOCAL_HEALTH"
+    const v3, 0x1117304d
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 93
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x5d
+    const-string v1, "PROVIDER_GOOGLE_UGC_MAPS"
 
-    const v2, 0x1117304e
+    const/16 v2, 0x5d
 
-    const-string v3, "PROVIDER_GOOGLE_UGC_MAPS"
+    const v3, 0x1117304e
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 94
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x5e
+    const-string v1, "PROVIDER_GOOGLE_FIBER"
 
-    const v2, 0x1117304f
+    const/16 v2, 0x5e
 
-    const-string v3, "PROVIDER_GOOGLE_FIBER"
+    const v3, 0x1117304f
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 95
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x5f
+    const-string v1, "PROVIDER_GOOGLE_REVGEO"
 
-    const v2, 0x11173050
+    const/16 v2, 0x5f
 
-    const-string v3, "PROVIDER_GOOGLE_REVGEO"
+    const v3, 0x11173050
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 96
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x60
+    const-string v1, "PROVIDER_GOOGLE_HOTELADS_PARTNER_FRONT_END"
 
-    const v2, 0x11173051
+    const/16 v2, 0x60
 
-    const-string v3, "PROVIDER_GOOGLE_HOTELADS_PARTNER_FRONT_END"
+    const v3, 0x11173051
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 97
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x61
+    const-string v1, "PROVIDER_GOOGLE_GEO_UGC_TASKS"
 
-    const v2, 0x11173052
+    const/16 v2, 0x61
 
-    const-string v3, "PROVIDER_GOOGLE_GEO_UGC_TASKS"
+    const v3, 0x11173052
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 98
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x62
+    const-string v1, "PROVIDER_GOOGLE_GEOCODING"
 
-    const v2, 0x11173053
+    const/16 v2, 0x62
 
-    const-string v3, "PROVIDER_GOOGLE_GEOCODING"
+    const v3, 0x11173053
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 99
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x63
+    const-string v1, "PROVIDER_GOOGLE_SPYGLASS"
 
-    const v2, 0x11173054
+    const/16 v2, 0x63
 
-    const-string v3, "PROVIDER_GOOGLE_SPYGLASS"
+    const v3, 0x11173054
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 100
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x64
+    const-string v1, "PROVIDER_GOOGLE_PLUS_CODES_AS_ADDRESSES"
 
-    const v2, 0x11173055
+    const/16 v2, 0x64
 
-    const-string v3, "PROVIDER_GOOGLE_PLUS_CODES_AS_ADDRESSES"
+    const v3, 0x11173055
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 101
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x65
+    const-string v1, "PROVIDER_GOOGLE_GEO_CHANGES"
 
-    const v2, 0x11173056
+    const/16 v2, 0x65
 
-    const-string v3, "PROVIDER_GOOGLE_GEO_CHANGES"
+    const v3, 0x11173056
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 102
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x66
+    const-string v1, "PROVIDER_GOOGLE_HUME"
 
-    const v2, 0x11173057
+    const/16 v2, 0x66
 
-    const-string v3, "PROVIDER_GOOGLE_HUME"
+    const v3, 0x11173057
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 103
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x67
+    const-string v1, "PROVIDER_GOOGLE_MEGAMIND"
 
-    const v2, 0x11173058
+    const/16 v2, 0x67
 
-    const-string v3, "PROVIDER_GOOGLE_MEGAMIND"
+    const v3, 0x11173058
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 104
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x68
+    const-string v1, "PROVIDER_GOOGLE_GT_ROADSYNTH"
 
-    const v2, 0x11173059
+    const/16 v2, 0x68
 
-    const-string v3, "PROVIDER_GOOGLE_GT_ROADSYNTH"
+    const v3, 0x11173059
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 105
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzba:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x69
+    const-string v1, "PROVIDER_GOOGLE_FIREBOLT"
 
-    const v2, 0x1117305a
+    const/16 v2, 0x69
 
-    const-string v3, "PROVIDER_GOOGLE_FIREBOLT"
+    const v3, 0x1117305a
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 106
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x6a
+    const-string v1, "PROVIDER_GOOGLE_LOCAL_PLACE_OFFERINGS"
 
-    const v2, 0x11173060
+    const/16 v2, 0x6a
 
-    const-string v3, "PROVIDER_GOOGLE_LOCAL_PLACE_OFFERINGS"
+    const v3, 0x11173060
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 107
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x6b
+    const-string v1, "PROVIDER_GOOGLE_UGC_SERVICES"
 
-    const v2, 0x11173061
+    const/16 v2, 0x6b
 
-    const-string v3, "PROVIDER_GOOGLE_UGC_SERVICES"
+    const v3, 0x11173061
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 108
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x6c
+    const-string v1, "PROVIDER_GOOGLE_GEOALIGN"
 
-    const v2, 0x11173062
+    const/16 v2, 0x6c
 
-    const-string v3, "PROVIDER_GOOGLE_GEOALIGN"
+    const v3, 0x11173062
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 109
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbe:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x6d
+    const-string v1, "PROVIDER_GOOGLE_GT_COMPOUNDS"
 
-    const v2, 0x11173063
+    const/16 v2, 0x6d
 
-    const-string v3, "PROVIDER_GOOGLE_GT_COMPOUNDS"
+    const v3, 0x11173063
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 110
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x6e
+    const-string v1, "PROVIDER_GOOGLE_FOOD_ORDERING"
 
-    const v2, 0x11173064
+    const/16 v2, 0x6e
 
-    const-string v3, "PROVIDER_GOOGLE_FOOD_ORDERING"
+    const v3, 0x11173064
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 111
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x6f
+    const-string v1, "PROVIDER_GOOGLE_HOTEL_KNOWLEDGE_OPS"
 
-    const v2, 0x11173065
+    const/16 v2, 0x6f
 
-    const-string v3, "PROVIDER_GOOGLE_HOTEL_KNOWLEDGE_OPS"
+    const v3, 0x11173065
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 112
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x70
+    const-string v1, "PROVIDER_GOOGLE_URAW"
 
-    const v2, 0x11173067
+    const/16 v2, 0x70
 
-    const-string v3, "PROVIDER_GOOGLE_URAW"
+    const v3, 0x11173067
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 113
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbi:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x71
+    const-string v1, "PROVIDER_GOOGLE_FLYEYE"
 
-    const v2, 0x11173068
+    const/16 v2, 0x71
 
-    const-string v3, "PROVIDER_GOOGLE_FLYEYE"
+    const v3, 0x11173068
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 114
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x72
+    const-string v1, "PROVIDER_GOOGLE_YOUKE"
 
-    const v2, 0x11173069
+    const/16 v2, 0x72
 
-    const-string v3, "PROVIDER_GOOGLE_YOUKE"
+    const v3, 0x11173069
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 115
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbk:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x73
+    const-string v1, "PROVIDER_GOOGLE_GT_ZEPHYR"
 
-    const v2, 0x1117306a
+    const/16 v2, 0x73
 
-    const-string v3, "PROVIDER_GOOGLE_GT_ZEPHYR"
+    const v3, 0x1117306a
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 116
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbl:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x74
+    const-string v1, "PROVIDER_GOOGLE_USER_SAFETY"
 
-    const v2, 0x1117306b
+    const/16 v2, 0x74
 
-    const-string v3, "PROVIDER_GOOGLE_USER_SAFETY"
+    const v3, 0x1117306b
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 117
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x75
+    const-string v1, "PROVIDER_GOOGLE_ADDRESS_MAKER"
 
-    const v2, 0x1117306c
+    const/16 v2, 0x75
 
-    const-string v3, "PROVIDER_GOOGLE_ADDRESS_MAKER"
+    const v3, 0x1117306c
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 118
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbn:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x76
+    const-string v1, "PROVIDER_GOOGLE_UGC_PHOTOS"
 
-    const v2, 0x1117306d
+    const/16 v2, 0x76
 
-    const-string v3, "PROVIDER_GOOGLE_UGC_PHOTOS"
+    const v3, 0x1117306d
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 119
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbo:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x77
+    const-string v1, "PROVIDER_GOOGLE_GT_WINDCHIME"
 
-    const v2, 0x1117306e
+    const/16 v2, 0x77
 
-    const-string v3, "PROVIDER_GOOGLE_GT_WINDCHIME"
+    const v3, 0x1117306e
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 120
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x78
+    const-string v1, "PROVIDER_GOOGLE_SNAG_FIXER"
 
-    const v2, 0x1117306f
+    const/16 v2, 0x78
 
-    const-string v3, "PROVIDER_GOOGLE_SNAG_FIXER"
+    const v3, 0x1117306f
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 121
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x79
+    const-string v1, "PROVIDER_GOOGLE_GEO_DEALS"
 
-    const v2, 0x11173070
+    const/16 v2, 0x79
 
-    const-string v3, "PROVIDER_GOOGLE_GEO_DEALS"
+    const v3, 0x11173070
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 122
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x7a
+    const-string v1, "PROVIDER_GOOGLE_LOCAL_PLACE_TOPICS"
 
-    const v2, 0x11173071
+    const/16 v2, 0x7a
 
-    const-string v3, "PROVIDER_GOOGLE_LOCAL_PLACE_TOPICS"
+    const v3, 0x11173071
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 123
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbs:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x7b
+    const-string v1, "PROVIDER_GOOGLE_PROPERTY_INSIGHTS"
 
-    const v2, 0x11173072
+    const/16 v2, 0x7b
 
-    const-string v3, "PROVIDER_GOOGLE_PROPERTY_INSIGHTS"
+    const v3, 0x11173072
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 124
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbt:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x7c
+    const-string v1, "PROVIDER_GOOGLE_GEO_CONSUMER_MERCHANT_EXPERIMENTS"
 
-    const v2, 0x11173073
+    const/16 v2, 0x7c
 
-    const-string v3, "PROVIDER_GOOGLE_GEO_CONSUMER_MERCHANT_EXPERIMENTS"
+    const v3, 0x11173073
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 125
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x7d
+    const-string v1, "PROVIDER_GOOGLE_GEO_PORTKEY"
 
-    const v2, 0x11173074
+    const/16 v2, 0x7d
 
-    const-string v3, "PROVIDER_GOOGLE_GEO_PORTKEY"
+    const v3, 0x11173074
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 126
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x7e
+    const-string v1, "PROVIDER_GOOGLE_ROAD_MAPPER"
 
-    const v2, 0x11173075
+    const/16 v2, 0x7e
 
-    const-string v3, "PROVIDER_GOOGLE_ROAD_MAPPER"
+    const v3, 0x11173075
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 127
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x7f
+    const-string v1, "PROVIDER_GOOGLE_LOCATION_PLATFORM"
 
-    const v2, 0x11173076
+    const/16 v2, 0x7f
 
-    const-string v3, "PROVIDER_GOOGLE_LOCATION_PLATFORM"
+    const v3, 0x11173076
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 128
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x80
+    const-string v1, "PROVIDER_GOOGLE_POSTTRIP"
 
-    const v2, 0x11173077
+    const/16 v2, 0x80
 
-    const-string v3, "PROVIDER_GOOGLE_POSTTRIP"
+    const v3, 0x11173077
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 129
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzby:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x81
+    const-string v1, "PROVIDER_GOOGLE_TRAVEL_DESTINATION"
 
-    const v2, 0x11173078
+    const/16 v2, 0x81
 
-    const-string v3, "PROVIDER_GOOGLE_TRAVEL_DESTINATION"
+    const v3, 0x11173078
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 130
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x82
+    const-string v1, "PROVIDER_GOOGLE_GEO_DATA_UPLOAD"
 
-    const v2, 0x11173079
+    const/16 v2, 0x82
 
-    const-string v3, "PROVIDER_GOOGLE_GEO_DATA_UPLOAD"
+    const v3, 0x11173079
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 131
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x83
+    const-string v1, "PROVIDER_GOOGLE_BIZBUILDER_CLEANUP"
 
-    const v2, 0x1117307a
+    const/16 v2, 0x83
 
-    const-string v3, "PROVIDER_GOOGLE_BIZBUILDER_CLEANUP"
+    const v3, 0x1117307a
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 132
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x84
+    const-string v1, "PROVIDER_GOOGLE_USER"
 
-    const v2, 0x1117307b
+    const/16 v2, 0x84
 
-    const-string v3, "PROVIDER_GOOGLE_USER"
+    const v3, 0x1117307b
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 133
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x85
+    const-string v1, "PROVIDER_GOOGLE_STATION"
 
-    const v2, 0x1117307c
+    const/16 v2, 0x85
 
-    const-string v3, "PROVIDER_GOOGLE_STATION"
+    const v3, 0x1117307c
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 134
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x86
+    const-string v1, "PROVIDER_GOOGLE_GEO_FOOD"
 
-    const v2, 0x1117307d
+    const/16 v2, 0x86
 
-    const-string v3, "PROVIDER_GOOGLE_GEO_FOOD"
+    const v3, 0x1117307d
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 135
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x87
+    const-string v1, "PROVIDER_GOOGLE_GEO_AR"
 
-    const v2, 0x1117307e
+    const/16 v2, 0x87
 
-    const-string v3, "PROVIDER_GOOGLE_GEO_AR"
+    const v3, 0x1117307e
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 136
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x88
+    const-string v1, "PROVIDER_GOOGLE_GEO_TEMPORAL"
 
-    const v2, 0x1117307f
+    const/16 v2, 0x88
 
-    const-string v3, "PROVIDER_GOOGLE_GEO_TEMPORAL"
+    const v3, 0x1117307f
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 137
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x89
+    const-string v1, "PROVIDER_GOOGLE_SERVICES_MARKETPLACE"
 
-    const v2, 0x11173080
+    const/16 v2, 0x89
 
-    const-string v3, "PROVIDER_GOOGLE_SERVICES_MARKETPLACE"
+    const v3, 0x11173080
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 138
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x8a
+    const-string v1, "PROVIDER_GOOGLE_IMT_CLEANUP"
 
-    const v2, 0x11173081
+    const/16 v2, 0x8a
 
-    const-string v3, "PROVIDER_GOOGLE_IMT_CLEANUP"
+    const v3, 0x11173081
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 139
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x8b
+    const-string v1, "PROVIDER_GOOGLE_GEO_FOOD_MENU"
 
-    const v2, 0x11173082
+    const/16 v2, 0x8b
 
-    const-string v3, "PROVIDER_GOOGLE_GEO_FOOD_MENU"
+    const v3, 0x11173082
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 140
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x8c
+    const-string v1, "PROVIDER_GOOGLE_CARENAV"
 
-    const v2, 0x11173083
+    const/16 v2, 0x8c
 
-    const-string v3, "PROVIDER_GOOGLE_CARENAV"
+    const v3, 0x11173083
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 141
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x8d
+    const-string v1, "PROVIDER_GOOGLE_DRIVING_FEEDS"
 
-    const v2, 0x11173084
+    const/16 v2, 0x8d
 
-    const-string v3, "PROVIDER_GOOGLE_DRIVING_FEEDS"
+    const v3, 0x11173084
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 142
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x8e
+    const-string v1, "PROVIDER_GOOGLE_DRIVING_UGC"
 
-    const v2, 0x11173085
+    const/16 v2, 0x8e
 
-    const-string v3, "PROVIDER_GOOGLE_DRIVING_UGC"
+    const v3, 0x11173085
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 143
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x8f
+    const-string v1, "PROVIDER_GOOGLE_POLAR"
 
-    const v2, 0x11173086
+    const/16 v2, 0x8f
 
-    const-string v3, "PROVIDER_GOOGLE_POLAR"
+    const v3, 0x11173086
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 144
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x90
+    const-string v1, "PROVIDER_GOOGLE_TRIWILD"
 
-    const v2, 0x11173087
+    const/16 v2, 0x90
 
-    const-string v3, "PROVIDER_GOOGLE_TRIWILD"
+    const v3, 0x11173087
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 145
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x91
+    const-string v1, "PROVIDER_GOOGLE_CROWD_COMPUTE_OPS"
 
-    const v2, 0x11173088
+    const/16 v2, 0x91
 
-    const-string v3, "PROVIDER_GOOGLE_CROWD_COMPUTE_OPS"
+    const v3, 0x11173088
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 146
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x92
+    const-string v1, "PROVIDER_GOOGLE_SA_FROM_WEB"
 
-    const v2, 0x11173089
+    const/16 v2, 0x92
 
-    const-string v3, "PROVIDER_GOOGLE_SA_FROM_WEB"
+    const v3, 0x11173089
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 147
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x93
+    const-string v1, "PROVIDER_GOOGLE_POI_ALIGNMENT"
 
-    const v2, 0x1117308a
+    const/16 v2, 0x93
 
-    const-string v3, "PROVIDER_GOOGLE_POI_ALIGNMENT"
+    const v3, 0x1117308a
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 148
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x94
+    const-string v1, "PROVIDER_GOOGLE_SA_FROM_HULK"
 
-    const v2, 0x1117308b
+    const/16 v2, 0x94
 
-    const-string v3, "PROVIDER_GOOGLE_SA_FROM_HULK"
+    const v3, 0x1117308b
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 149
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x95
+    const-string v1, "PROVIDER_GOOGLE_SERVICES_INTERACTIONS"
 
-    const v2, 0x1117308c
+    const/16 v2, 0x95
 
-    const-string v3, "PROVIDER_GOOGLE_SERVICES_INTERACTIONS"
+    const v3, 0x1117308c
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 150
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x96
+    const-string v1, "PROVIDER_GOOGLE_ROADS_UGC_EDITOR"
 
-    const v2, 0x1117308d
+    const/16 v2, 0x96
 
-    const-string v3, "PROVIDER_GOOGLE_ROADS_UGC_EDITOR"
+    const v3, 0x1117308d
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 151
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x97
+    const-string v1, "PROVIDER_GOOGLE_SA_FROM_NG_INFERENCE"
 
-    const v2, 0x1117308e
+    const/16 v2, 0x97
 
-    const-string v3, "PROVIDER_GOOGLE_SA_FROM_NG_INFERENCE"
+    const v3, 0x1117308e
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 152
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x98
+    const-string v1, "PROVIDER_GOOGLE_GEO_DRIVING_VIZ"
 
-    const v2, 0x1117308f
+    const/16 v2, 0x98
 
-    const-string v3, "PROVIDER_GOOGLE_GEO_DRIVING_VIZ"
+    const v3, 0x1117308f
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 153
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x99
+    const-string v1, "PROVIDER_GOOGLE_GEO_TASKING"
 
-    const v2, 0x11173090
+    const/16 v2, 0x99
 
-    const-string v3, "PROVIDER_GOOGLE_GEO_TASKING"
+    const v3, 0x11173090
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 154
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x9a
+    const-string v1, "PROVIDER_GOOGLE_CROWDTASK_DATACOMPUTE"
 
-    const v2, 0x11173091
+    const/16 v2, 0x9a
 
-    const-string v3, "PROVIDER_GOOGLE_CROWDTASK_DATACOMPUTE"
+    const v3, 0x11173091
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 155
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x9b
+    const-string v1, "PROVIDER_GOOGLE_CROWDTASK_TASKADS"
 
-    const v2, 0x11173092
+    const/16 v2, 0x9b
 
-    const-string v3, "PROVIDER_GOOGLE_CROWDTASK_TASKADS"
+    const v3, 0x11173092
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 156
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x9c
+    const-string v1, "PROVIDER_GOOGLE_CROWDTASK_TASKMATE"
 
-    const v2, 0x11173093
+    const/16 v2, 0x9c
 
-    const-string v3, "PROVIDER_GOOGLE_CROWDTASK_TASKMATE"
+    const v3, 0x11173093
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 157
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzca:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x9d
+    const-string v1, "PROVIDER_GOOGLE_CROWDTASK_FURBALL"
 
-    const v2, 0x11173094
+    const/16 v2, 0x9d
 
-    const-string v3, "PROVIDER_GOOGLE_CROWDTASK_FURBALL"
+    const v3, 0x11173094
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 158
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x9e
+    const-string v1, "PROVIDER_GOOGLE_CROWDTASK_ADAP"
 
-    const v2, 0x11173095
+    const/16 v2, 0x9e
 
-    const-string v3, "PROVIDER_GOOGLE_CROWDTASK_ADAP"
+    const v3, 0x11173095
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 159
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x9f
+    const-string v1, "PROVIDER_GOOGLE_GPAY"
 
-    const v2, 0x11173096
+    const/16 v2, 0x9f
 
-    const-string v3, "PROVIDER_GOOGLE_GPAY"
+    const v3, 0x11173096
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 160
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xa0
+    const-string v1, "PROVIDER_GOOGLE_GEO_UGC_TRUSTED_USERS"
 
-    const v2, 0x11173097
+    const/16 v2, 0xa0
 
-    const-string v3, "PROVIDER_GOOGLE_GEO_UGC_TRUSTED_USERS"
+    const v3, 0x11173097
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 161
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzce:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xa1
+    const-string v1, "PROVIDER_GOOGLE_THIRD_PARTY_DATA_PRODUCTION"
 
-    const v2, 0x11173098
+    const/16 v2, 0xa1
 
-    const-string v3, "PROVIDER_GOOGLE_THIRD_PARTY_DATA_PRODUCTION"
+    const v3, 0x11173098
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 162
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xa2
+    const-string v1, "PROVIDER_GOOGLE_GEOTRACKER"
 
-    const v2, 0x11173099
+    const/16 v2, 0xa2
 
-    const-string v3, "PROVIDER_GOOGLE_GEOTRACKER"
+    const v3, 0x11173099
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 163
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xa3
+    const-string v1, "PROVIDER_GOOGLE_LOCAL_LANDMARK_INFERENCE"
 
-    const v2, 0x1117309a
+    const/16 v2, 0xa3
 
-    const-string v3, "PROVIDER_GOOGLE_LOCAL_LANDMARK_INFERENCE"
+    const v3, 0x1117309a
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 164
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzch:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xa4
+    const-string v1, "PROVIDER_GOOGLE_GEO_CLOSED_LOOP"
 
-    const v2, 0x1117309b
+    const/16 v2, 0xa4
 
-    const-string v3, "PROVIDER_GOOGLE_GEO_CLOSED_LOOP"
+    const v3, 0x1117309b
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 165
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzci:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xa5
+    const-string v1, "PROVIDER_GOOGLE_SA_FROM_MERCHANT_POSTS"
 
-    const v2, 0x1117309c
+    const/16 v2, 0xa5
 
-    const-string v3, "PROVIDER_GOOGLE_SA_FROM_MERCHANT_POSTS"
+    const v3, 0x1117309c
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 166
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xa6
+    const-string v1, "PROVIDER_GOOGLE_CORE_DATA_RIGHTS"
 
-    const v2, 0x1117309d
+    const/16 v2, 0xa6
 
-    const-string v3, "PROVIDER_GOOGLE_CORE_DATA_RIGHTS"
+    const v3, 0x1117309d
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 167
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzck:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xa7
+    const-string v1, "PROVIDER_GOOGLE_SA_FROM_USER_REVIEWS"
 
-    const v2, 0x1117309e
+    const/16 v2, 0xa7
 
-    const-string v3, "PROVIDER_GOOGLE_SA_FROM_USER_REVIEWS"
+    const v3, 0x1117309e
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 168
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcl:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xa8
+    const-string v1, "PROVIDER_GOOGLE_GEO_CONTENT_FIXER"
 
-    const v2, 0x1117309f
+    const/16 v2, 0xa8
 
-    const-string v3, "PROVIDER_GOOGLE_GEO_CONTENT_FIXER"
+    const v3, 0x1117309f
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 169
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xa9
+    const-string v1, "PROVIDER_GOOGLE_POLYGON_REFINEMENT"
 
-    const v2, 0x111730a0
+    const/16 v2, 0xa9
 
-    const-string v3, "PROVIDER_GOOGLE_POLYGON_REFINEMENT"
+    const v3, 0x111730a0
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 170
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcn:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xaa
+    const-string v1, "PROVIDER_GOOGLE_HANASU"
 
-    const v2, 0x111730a1
+    const/16 v2, 0xaa
 
-    const-string v3, "PROVIDER_GOOGLE_HANASU"
+    const v3, 0x111730a1
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 171
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzco:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xab
+    const-string v1, "PROVIDER_GOOGLE_FULLRIGHTS_GEO_DATA_UPLOAD"
 
-    const v2, 0x111730a2
+    const/16 v2, 0xab
 
-    const-string v3, "PROVIDER_GOOGLE_FULLRIGHTS_GEO_DATA_UPLOAD"
+    const v3, 0x111730a2
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 172
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xac
+    const-string v1, "PROVIDER_GOOGLE_FULLRIGHTS_3P_OUTREACH_UPLOAD"
 
-    const v2, 0x111730a3
+    const/16 v2, 0xac
 
-    const-string v3, "PROVIDER_GOOGLE_FULLRIGHTS_3P_OUTREACH_UPLOAD"
+    const v3, 0x111730a3
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 173
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xad
+    const-string v1, "PROVIDER_GOOGLE_ATTRIBUTION_3P_OUTREACH_UPLOAD"
 
-    const v2, 0x111730a4
+    const/16 v2, 0xad
 
-    const-string v3, "PROVIDER_GOOGLE_ATTRIBUTION_3P_OUTREACH_UPLOAD"
+    const v3, 0x111730a4
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 174
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xae
+    const-string v1, "PROVIDER_GOOGLE_SA_FROM_FOOD_MENUS"
 
-    const v2, 0x111730a5
+    const/16 v2, 0xae
 
-    const-string v3, "PROVIDER_GOOGLE_SA_FROM_FOOD_MENUS"
+    const v3, 0x111730a5
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 175
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcs:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xaf
+    const-string v1, "PROVIDER_GOOGLE_GT_CONSISTENCY_EDITS"
 
-    const v2, 0x111730a6
+    const/16 v2, 0xaf
 
-    const-string v3, "PROVIDER_GOOGLE_GT_CONSISTENCY_EDITS"
+    const v3, 0x111730a6
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 176
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzct:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xb0
+    const-string v1, "PROVIDER_GOOGLE_SA_QUALITY"
 
-    const v2, 0x111730a7
+    const/16 v2, 0xb0
 
-    const-string v3, "PROVIDER_GOOGLE_SA_QUALITY"
+    const v3, 0x111730a7
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 177
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xb1
+    const-string v1, "PROVIDER_GOOGLE_GDCE_CLEANUP"
 
-    const v2, 0x111730a8
+    const/16 v2, 0xb1
 
-    const-string v3, "PROVIDER_GOOGLE_GDCE_CLEANUP"
+    const v3, 0x111730a8
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 178
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xb2
+    const-string v1, "PROVIDER_GOOGLE_UGC_QUALITY_CHAINS"
 
-    const v2, 0x111730a9
+    const/16 v2, 0xb2
 
-    const-string v3, "PROVIDER_GOOGLE_UGC_QUALITY_CHAINS"
+    const v3, 0x111730a9
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 179
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xb3
+    const-string v1, "PROVIDER_GOOGLE_ATTRIBUTES_DISCOVERY"
 
-    const v2, 0x111730aa
+    const/16 v2, 0xb3
 
-    const-string v3, "PROVIDER_GOOGLE_ATTRIBUTES_DISCOVERY"
+    const v3, 0x111730aa
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 180
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xb4
+    const-string v1, "PROVIDER_GOOGLE_GEO_LDE"
 
-    const v2, 0x111730ab
+    const/16 v2, 0xb4
 
-    const-string v3, "PROVIDER_GOOGLE_GEO_LDE"
+    const v3, 0x111730ab
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 181
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcy:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xb5
+    const-string v1, "PROVIDER_GOOGLE_GEO_SIGNAL_TRACKING"
 
-    const v2, 0x111730ac
+    const/16 v2, 0xb5
 
-    const-string v3, "PROVIDER_GOOGLE_GEO_SIGNAL_TRACKING"
+    const v3, 0x111730ac
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 182
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xb6
+    const-string v1, "PROVIDER_GOOGLE_UGC_AGGREGATION"
 
-    const v2, 0x111730ad
+    const/16 v2, 0xb6
 
-    const-string v3, "PROVIDER_GOOGLE_UGC_AGGREGATION"
+    const v3, 0x111730ad
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 183
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xb7
+    const-string v1, "PROVIDER_GOOGLE_3D_BASEMAP"
 
-    const v2, 0x111730ae
+    const/16 v2, 0xb7
 
-    const-string v3, "PROVIDER_GOOGLE_3D_BASEMAP"
+    const v3, 0x111730ae
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 184
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xb8
+    const-string v1, "PROVIDER_GOOGLE_MAPFACTS_PRIVACY"
 
-    const v2, 0x111730af
+    const/16 v2, 0xb8
 
-    const-string v3, "PROVIDER_GOOGLE_MAPFACTS_PRIVACY"
+    const v3, 0x111730af
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 185
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xb9
+    const-string v1, "PROVIDER_GOOGLE_GT_ALF"
 
-    const v2, 0x111730b0
+    const/16 v2, 0xb9
 
-    const-string v3, "PROVIDER_GOOGLE_GT_ALF"
+    const v3, 0x111730b0
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 186
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xba
+    const-string v1, "PROVIDER_GOOGLE_GT_OPERATOR_PROVENANCE"
 
-    const v2, 0x111730b1
+    const/16 v2, 0xba
 
-    const-string v3, "PROVIDER_GOOGLE_GT_OPERATOR_PROVENANCE"
+    const v3, 0x111730b1
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 187
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xbb
+    const-string v1, "PROVIDER_GOOGLE_LOCAL_SERVICES_ADS"
 
-    const v2, 0x111730b2
+    const/16 v2, 0xbb
 
-    const-string v3, "PROVIDER_GOOGLE_LOCAL_SERVICES_ADS"
+    const v3, 0x111730b2
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 188
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xbc
+    const-string v1, "PROVIDER_GOOGLE_LOCALSEARCH"
 
-    const v2, 0x11174
+    const/16 v2, 0xbc
 
-    const-string v3, "PROVIDER_GOOGLE_LOCALSEARCH"
+    const v3, 0x11174
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 189
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xbd
+    const-string v1, "PROVIDER_GOOGLE_TRANSIT"
 
-    const v2, 0x11175
+    const/16 v2, 0xbd
 
-    const-string v3, "PROVIDER_GOOGLE_TRANSIT"
+    const v3, 0x11175
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 190
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xbe
+    const-string v1, "PROVIDER_GOOGLE_GEOWIKI"
 
-    const v2, 0x11176
+    const/16 v2, 0xbe
 
-    const-string v3, "PROVIDER_GOOGLE_GEOWIKI"
+    const v3, 0x11176
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 191
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xbf
+    const-string v1, "PROVIDER_GOOGLE_CHINA_LOCAL_TEAM"
 
-    const v2, 0x11177
+    const/16 v2, 0xbf
 
-    const-string v3, "PROVIDER_GOOGLE_CHINA_LOCAL_TEAM"
+    const v3, 0x11177
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 192
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xc0
+    const-string v1, "PROVIDER_GOOGLE_SYNTHESIZED"
 
-    const v2, 0x11178
+    const/16 v2, 0xc0
 
-    const-string v3, "PROVIDER_GOOGLE_SYNTHESIZED"
+    const v3, 0x11178
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 193
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xc1
+    const-string v1, "PROVIDER_GOOGLE_INTERNAL_TEST"
 
-    const v2, 0x11179
+    const/16 v2, 0xc1
 
-    const-string v3, "PROVIDER_GOOGLE_INTERNAL_TEST"
+    const v3, 0x11179
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 194
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xc2
+    const-string v1, "PROVIDER_GOOGLE_DISPUTED_AREAS"
 
-    const v2, 0x1117a
+    const/16 v2, 0xc2
 
-    const-string v3, "PROVIDER_GOOGLE_DISPUTED_AREAS"
+    const v3, 0x1117a
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 195
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xc3
+    const-string v1, "PROVIDER_GOOGLE_3DWAREHOUSE"
 
-    const v2, 0x1117b
+    const/16 v2, 0xc3
 
-    const-string v3, "PROVIDER_GOOGLE_3DWAREHOUSE"
+    const v3, 0x1117b
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 196
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xc4
+    const-string v1, "PROVIDER_GOOGLE_GROUNDS_BUILDER"
 
-    const v2, 0x1117c
+    const/16 v2, 0xc4
 
-    const-string v3, "PROVIDER_GOOGLE_GROUNDS_BUILDER"
+    const v3, 0x1117c
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 197
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xc5
+    const-string v1, "PROVIDER_GOOGLE_SESAME"
 
-    const v2, 0x1117d
+    const/16 v2, 0xc5
 
-    const-string v3, "PROVIDER_GOOGLE_SESAME"
+    const v3, 0x1117d
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 198
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xc6
+    const-string v1, "PROVIDER_GOOGLE_GT"
 
-    const v2, 0x1117e
+    const/16 v2, 0xc6
 
-    const-string v3, "PROVIDER_GOOGLE_GT"
+    const v3, 0x1117e
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 199
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xc7
+    const-string v1, "PROVIDER_GOOGLE_GT_BASEMAP_UPLOAD"
 
-    const v2, 0x1117e1
+    const/16 v2, 0xc7
 
-    const-string v3, "PROVIDER_GOOGLE_GT_BASEMAP_UPLOAD"
+    const v3, 0x1117e1
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 200
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xc8
+    const-string v1, "PROVIDER_GOOGLE_ADSDB"
 
-    const v2, 0x1117f1
+    const/16 v2, 0xc8
 
-    const-string v3, "PROVIDER_GOOGLE_ADSDB"
+    const v3, 0x1117f1
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 201
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xc9
+    const-string v1, "PROVIDER_GOOGLE_MACHINE_TRANSLITERATION"
 
-    const v2, 0x1117f2
+    const/16 v2, 0xc9
 
-    const-string v3, "PROVIDER_GOOGLE_MACHINE_TRANSLITERATION"
+    const v3, 0x1117f2
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 202
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xca
+    const-string v1, "PROVIDER_GOOGLE_TRAVELSEARCH"
 
-    const v2, 0x1117f3
+    const/16 v2, 0xca
 
-    const-string v3, "PROVIDER_GOOGLE_TRAVELSEARCH"
+    const v3, 0x1117f3
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 203
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xcb
+    const-string v1, "PROVIDER_GOOGLE_PANORAMIO"
 
-    const v2, 0x1117f4
+    const/16 v2, 0xcb
 
-    const-string v3, "PROVIDER_GOOGLE_PANORAMIO"
+    const v3, 0x1117f4
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 204
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xcc
+    const-string v1, "PROVIDER_GOOGLE_YOUTUBE"
 
-    const v2, 0x1117f5
+    const/16 v2, 0xcc
 
-    const-string v3, "PROVIDER_GOOGLE_YOUTUBE"
+    const v3, 0x1117f5
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 205
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xcd
+    const-string v1, "PROVIDER_GOOGLE_OLD"
 
-    const v2, 0x1117f6
+    const/16 v2, 0xcd
 
-    const-string v3, "PROVIDER_GOOGLE_OLD"
+    const v3, 0x1117f6
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 206
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xce
+    const-string v1, "PROVIDER_GOOGLE_STREETVIEW"
 
-    const v2, 0x1117f7
+    const/16 v2, 0xce
 
-    const-string v3, "PROVIDER_GOOGLE_STREETVIEW"
+    const v3, 0x1117f7
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 207
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xcf
+    const-string v1, "PROVIDER_GOOGLE_STREETVIEW_BIZVIEW"
 
-    const v2, 0x1117f71
+    const/16 v2, 0xcf
 
-    const-string v3, "PROVIDER_GOOGLE_STREETVIEW_BIZVIEW"
+    const v3, 0x1117f71
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 208
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xd0
+    const-string v1, "PROVIDER_GOOGLE_ZIPIT"
 
-    const v2, 0x1117f8
+    const/16 v2, 0xd0
 
-    const-string v3, "PROVIDER_GOOGLE_ZIPIT"
+    const v3, 0x1117f8
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 209
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzda:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xd1
+    const-string v1, "PROVIDER_GOOGLE_OYSTER_CONNECT_ROUTES"
 
-    const v2, 0x1117f9
+    const/16 v2, 0xd1
 
-    const-string v3, "PROVIDER_GOOGLE_OYSTER_CONNECT_ROUTES"
+    const v3, 0x1117f9
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 210
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xd2
+    const-string v1, "PROVIDER_GOOGLE_GOLDEN"
 
-    const v2, 0x1117fa
+    const/16 v2, 0xd2
 
-    const-string v3, "PROVIDER_GOOGLE_GOLDEN"
+    const v3, 0x1117fa
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 211
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xd3
+    const-string v1, "PROVIDER_GOOGLE_INNERSPACE"
 
-    const v2, 0x1117fb
+    const/16 v2, 0xd3
 
-    const-string v3, "PROVIDER_GOOGLE_INNERSPACE"
+    const v3, 0x1117fb
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 212
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xd4
+    const-string v1, "PROVIDER_GOOGLE_MAPSEARCH"
 
-    const v2, 0x1117fc
+    const/16 v2, 0xd4
 
-    const-string v3, "PROVIDER_GOOGLE_MAPSEARCH"
+    const v3, 0x1117fc
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 213
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzde:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xd5
+    const-string v1, "PROVIDER_GOOGLE_CATEGORIES_TEAM"
 
-    const v2, 0x1117fd
+    const/16 v2, 0xd5
 
-    const-string v3, "PROVIDER_GOOGLE_CATEGORIES_TEAM"
+    const v3, 0x1117fd
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 214
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xd6
+    const-string v1, "PROVIDER_GOOGLE_CROWDSENSUS"
 
-    const v2, 0x1117fe
+    const/16 v2, 0xd6
 
-    const-string v3, "PROVIDER_GOOGLE_CROWDSENSUS"
+    const v3, 0x1117fe
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 215
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xd7
+    const-string v1, "PROVIDER_GOOGLE_LOCAL_ALGORITHMIC_IDENTITY"
 
-    const v2, 0x1117ff1
+    const/16 v2, 0xd7
 
-    const-string v3, "PROVIDER_GOOGLE_LOCAL_ALGORITHMIC_IDENTITY"
+    const v3, 0x1117ff1
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 216
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xd8
+    const-string v1, "PROVIDER_GOOGLE_FREEBASE"
 
-    const v2, 0x1117ff2
+    const/16 v2, 0xd8
 
-    const-string v3, "PROVIDER_GOOGLE_FREEBASE"
+    const v3, 0x1117ff2
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 217
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdi:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xd9
+    const-string v1, "PROVIDER_GOOGLE_HOTELADS"
 
-    const v2, 0x1117ff3
+    const/16 v2, 0xd9
 
-    const-string v3, "PROVIDER_GOOGLE_HOTELADS"
+    const v3, 0x1117ff3
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 218
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xda
+    const-string v1, "PROVIDER_GOOGLE_AUTHORITY_PAGES"
 
-    const v2, 0x1117ff4
+    const/16 v2, 0xda
 
-    const-string v3, "PROVIDER_GOOGLE_AUTHORITY_PAGES"
+    const v3, 0x1117ff4
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 219
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdk:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xdb
+    const-string v1, "PROVIDER_GOOGLE_PLACES_API"
 
-    const v2, 0x1117ff5
+    const/16 v2, 0xdb
 
-    const-string v3, "PROVIDER_GOOGLE_PLACES_API"
+    const v3, 0x1117ff5
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 220
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdl:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xdc
+    const-string v1, "PROVIDER_GOOGLE_NAMEHEATMAP"
 
-    const v2, 0x1117ff6
+    const/16 v2, 0xdc
 
-    const-string v3, "PROVIDER_GOOGLE_NAMEHEATMAP"
+    const v3, 0x1117ff6
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 221
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xdd
+    const-string v1, "PROVIDER_GOOGLE_MAPMAKER"
 
-    const v2, 0x1117ff7
+    const/16 v2, 0xdd
 
-    const-string v3, "PROVIDER_GOOGLE_MAPMAKER"
+    const v3, 0x1117ff7
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 222
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdn:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xde
+    const-string v1, "PROVIDER_GOOGLE_MAPMAKER_MOBILE"
 
-    const v2, 0x1117ff71
+    const/16 v2, 0xde
 
-    const-string v3, "PROVIDER_GOOGLE_MAPMAKER_MOBILE"
+    const v3, 0x1117ff71
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 223
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdo:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xdf
+    const-string v1, "PROVIDER_GOOGLE_MAPMAKER_PANCAKE"
 
-    const v2, 0x1117ff72
+    const/16 v2, 0xdf
 
-    const-string v3, "PROVIDER_GOOGLE_MAPMAKER_PANCAKE"
+    const v3, 0x1117ff72
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 224
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xe0
+    const-string v1, "PROVIDER_GOOGLE_MAPMAKER_V2"
 
-    const v2, 0x1117ff73
+    const/16 v2, 0xe0
 
-    const-string v3, "PROVIDER_GOOGLE_MAPMAKER_V2"
+    const v3, 0x1117ff73
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 225
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xe1
+    const-string v1, "PROVIDER_GOOGLE_LOCAL_CLUSTERING_OPERATOR_OVERRIDE"
 
-    const v2, 0x1117ff8
+    const/16 v2, 0xe1
 
-    const-string v3, "PROVIDER_GOOGLE_LOCAL_CLUSTERING_OPERATOR_OVERRIDE"
+    const v3, 0x1117ff8
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 226
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xe2
+    const-string v1, "PROVIDER_GOOGLE_SERVED_ON_MAPMAKER"
 
-    const v2, 0x1117ff9
+    const/16 v2, 0xe2
 
-    const-string v3, "PROVIDER_GOOGLE_SERVED_ON_MAPMAKER"
+    const v3, 0x1117ff9
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 227
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzds:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xe3
+    const-string v1, "PROVIDER_GOOGLE_GT_LOCAL"
 
-    const v2, 0x1117ffa
+    const/16 v2, 0xe3
 
-    const-string v3, "PROVIDER_GOOGLE_GT_LOCAL"
+    const v3, 0x1117ffa
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 228
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdt:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xe4
+    const-string v1, "PROVIDER_GOOGLE_GT_LOCAL_WITH_RIGHTS"
 
-    const v2, 0x1117ffa1
+    const/16 v2, 0xe4
 
-    const-string v3, "PROVIDER_GOOGLE_GT_LOCAL_WITH_RIGHTS"
+    const v3, 0x1117ffa1
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 229
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xe5
+    const-string v1, "PROVIDER_GOOGLE_LOGS_RANKING_SIGNALS"
 
-    const v2, 0x1117ffb
+    const/16 v2, 0xe5
 
-    const-string v3, "PROVIDER_GOOGLE_LOGS_RANKING_SIGNALS"
+    const v3, 0x1117ffb
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 230
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xe6
+    const-string v1, "PROVIDER_GOOGLE_ENTITY_NAVBOOST"
 
-    const v2, 0x1117ffc
+    const/16 v2, 0xe6
 
-    const-string v3, "PROVIDER_GOOGLE_ENTITY_NAVBOOST"
+    const v3, 0x1117ffc
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 231
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xe7
+    const-string v1, "PROVIDER_GOOGLE_RELATED_PLACES"
 
-    const v2, 0x1117ffd
+    const/16 v2, 0xe7
 
-    const-string v3, "PROVIDER_GOOGLE_RELATED_PLACES"
+    const v3, 0x1117ffd
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 232
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xe8
+    const-string v1, "PROVIDER_GOOGLE_KNOWN_FOR_TERMS"
 
-    const v2, 0x1117ffe
+    const/16 v2, 0xe8
 
-    const-string v3, "PROVIDER_GOOGLE_KNOWN_FOR_TERMS"
+    const v3, 0x1117ffe
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 233
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdy:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xe9
+    const-string v1, "PROVIDER_GOOGLE_SYNTHETIC_AREAS"
 
-    const v2, 0x1117fff1
+    const/16 v2, 0xe9
 
-    const-string v3, "PROVIDER_GOOGLE_SYNTHETIC_AREAS"
+    const v3, 0x1117fff1
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 234
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xea
+    const-string v1, "PROVIDER_GOOGLE_AUTHORITY_PAGE_PHOTOS"
 
-    const v2, 0x1117fff2
+    const/16 v2, 0xea
 
-    const-string v3, "PROVIDER_GOOGLE_AUTHORITY_PAGE_PHOTOS"
+    const v3, 0x1117fff2
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 235
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xeb
+    const-string v1, "PROVIDER_GOOGLE_CROSS_STREETS"
 
-    const v2, 0x1117fff3
+    const/16 v2, 0xeb
 
-    const-string v3, "PROVIDER_GOOGLE_CROSS_STREETS"
+    const v3, 0x1117fff3
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 236
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xec
+    const-string v1, "PROVIDER_GOOGLE_CORRIDORS"
 
-    const v2, 0x1117fff4
+    const/16 v2, 0xec
 
-    const-string v3, "PROVIDER_GOOGLE_CORRIDORS"
+    const v3, 0x1117fff4
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 237
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xed
+    const-string v1, "PROVIDER_GOOGLE_BICYCLE_RENTAL"
 
-    const v2, 0x1117fff5
+    const/16 v2, 0xed
 
-    const-string v3, "PROVIDER_GOOGLE_BICYCLE_RENTAL"
+    const v3, 0x1117fff5
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 238
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xee
+    const-string v1, "PROVIDER_GOOGLE_CONCRETE_URLS"
 
-    const v2, 0x1117fff6
+    const/16 v2, 0xee
 
-    const-string v3, "PROVIDER_GOOGLE_CONCRETE_URLS"
+    const v3, 0x1117fff6
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 239
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xef
+    const-string v1, "PROVIDER_GOOGLE_LEANBACK"
 
-    const v2, 0x1117fff7
+    const/16 v2, 0xef
 
-    const-string v3, "PROVIDER_GOOGLE_LEANBACK"
+    const v3, 0x1117fff7
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 240
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xf0
+    const-string v1, "PROVIDER_GOOGLE_LOCKED_LISTINGS"
 
-    const v2, 0x1117fff8
+    const/16 v2, 0xf0
 
-    const-string v3, "PROVIDER_GOOGLE_LOCKED_LISTINGS"
+    const v3, 0x1117fff8
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 241
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xf1
+    const-string v1, "PROVIDER_GOOGLE_MONITORING"
 
-    const v2, 0x1117fff9
+    const/16 v2, 0xf1
 
-    const-string v3, "PROVIDER_GOOGLE_MONITORING"
+    const v3, 0x1117fff9
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 242
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xf2
+    const-string v1, "PROVIDER_GOOGLE_SPROUT"
 
-    const v2, 0x1117fffa
+    const/16 v2, 0xf2
 
-    const-string v3, "PROVIDER_GOOGLE_SPROUT"
+    const v3, 0x1117fffa
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 243
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xf3
+    const-string v1, "PROVIDER_GOOGLE_LOCAL_SEARCH_QUALITY"
 
-    const v2, 0x1117fffb
+    const/16 v2, 0xf3
 
-    const-string v3, "PROVIDER_GOOGLE_LOCAL_SEARCH_QUALITY"
+    const v3, 0x1117fffb
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 244
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xf4
+    const-string v1, "PROVIDER_GOOGLE_GOBY"
 
-    const v2, 0x1117fffc
+    const/16 v2, 0xf4
 
-    const-string v3, "PROVIDER_GOOGLE_GOBY"
+    const v3, 0x1117fffc
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 245
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xf5
+    const-string v1, "PROVIDER_GOOGLE_PROBLEM_REPORT"
 
-    const v2, 0x1117fffd
+    const/16 v2, 0xf5
 
-    const-string v3, "PROVIDER_GOOGLE_PROBLEM_REPORT"
+    const v3, 0x1117fffd
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 246
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xf6
+    const-string v1, "PROVIDER_GOOGLE_CANDID"
 
-    const v2, 0x1117fffe
+    const/16 v2, 0xf6
 
-    const-string v3, "PROVIDER_GOOGLE_CANDID"
+    const v3, 0x1117fffe
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 247
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xf7
+    const-string v1, "PROVIDER_GOOGLE_BIZBUILDER"
 
-    const v2, 0x1117ffff
+    const/16 v2, 0xf7
 
-    const-string v3, "PROVIDER_GOOGLE_BIZBUILDER"
+    const v3, 0x1117ffff
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 248
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xf8
+    const-string v1, "PROVIDER_AUTOMOTIVE_NAVIGATION_DATA"
 
-    const/16 v2, 0x1118
+    const/16 v2, 0xf8
 
-    const-string v3, "PROVIDER_AUTOMOTIVE_NAVIGATION_DATA"
+    const/16 v3, 0x1118
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 249
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xf9
+    const-string v1, "PROVIDER_MAPDATA_SCIENCES"
 
-    const/16 v2, 0x1119
+    const/16 v2, 0xf9
 
-    const-string v3, "PROVIDER_MAPDATA_SCIENCES"
+    const/16 v3, 0x1119
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 250
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xfa
+    const-string v1, "PROVIDER_MAPONICS"
 
-    const/16 v2, 0x111a
+    const/16 v2, 0xfa
 
-    const-string v3, "PROVIDER_MAPONICS"
+    const/16 v3, 0x111a
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 251
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xfb
+    const-string v1, "PROVIDER_SKI_RESORTS"
 
-    const/16 v2, 0x111b
+    const/16 v2, 0xfb
 
-    const-string v3, "PROVIDER_SKI_RESORTS"
+    const/16 v3, 0x111b
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 252
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xfc
+    const-string v1, "PROVIDER_ZENRIN"
 
-    const/16 v2, 0x1120
+    const/16 v2, 0xfc
 
-    const-string v3, "PROVIDER_ZENRIN"
+    const/16 v3, 0x1120
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 253
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xfd
+    const-string v1, "PROVIDER_SANBORN"
 
-    const/16 v2, 0x1121
+    const/16 v2, 0xfd
 
-    const-string v3, "PROVIDER_SANBORN"
+    const/16 v3, 0x1121
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 254
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xfe
+    const-string v1, "PROVIDER_URBAN_MAPPING"
 
-    const/16 v2, 0x1122
+    const/16 v2, 0xfe
 
-    const-string v3, "PROVIDER_URBAN_MAPPING"
+    const/16 v3, 0x1122
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 255
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0xff
+    const-string v1, "PROVIDER_US_GOVERNMENT"
 
-    const/16 v2, 0x1123
+    const/16 v2, 0xff
 
-    const-string v3, "PROVIDER_US_GOVERNMENT"
+    const/16 v3, 0x1123
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 256
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x100
+    const-string v1, "PROVIDER_US_CENSUS"
 
-    const v2, 0x11231
+    const/16 v2, 0x100
 
-    const-string v3, "PROVIDER_US_CENSUS"
+    const v3, 0x11231
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 257
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x101
+    const-string v1, "PROVIDER_US_POSTAL_SERVICE"
 
-    const v2, 0x11232
+    const/16 v2, 0x101
 
-    const-string v3, "PROVIDER_US_POSTAL_SERVICE"
+    const v3, 0x11232
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 258
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x102
+    const-string v1, "PROVIDER_US_GEOLOGICAL_SURVEY"
 
-    const v2, 0x11233
+    const/16 v2, 0x102
 
-    const-string v3, "PROVIDER_US_GEOLOGICAL_SURVEY"
+    const v3, 0x11233
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 259
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x103
+    const-string v1, "PROVIDER_US_GNIS"
 
-    const v2, 0x112331
+    const/16 v2, 0x103
 
-    const-string v3, "PROVIDER_US_GNIS"
+    const v3, 0x112331
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 260
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x104
+    const-string v1, "PROVIDER_US_LANDSAT"
 
-    const v2, 0x112332
+    const/16 v2, 0x104
 
-    const-string v3, "PROVIDER_US_LANDSAT"
+    const v3, 0x112332
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 261
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzea:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x105
+    const-string v1, "PROVIDER_US_NATIONAL_GEOSPATIAL_INTELLIGENCE_AGENCY"
 
-    const v2, 0x11234
+    const/16 v2, 0x105
 
-    const-string v3, "PROVIDER_US_NATIONAL_GEOSPATIAL_INTELLIGENCE_AGENCY"
+    const v3, 0x11234
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 262
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x106
+    const-string v1, "PROVIDER_US_NGA_GNS"
 
-    const v2, 0x112341
+    const/16 v2, 0x106
 
-    const-string v3, "PROVIDER_US_NGA_GNS"
+    const v3, 0x112341
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 263
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzec:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x107
+    const-string v1, "PROVIDER_US_SSIBL"
 
-    const v2, 0x11235
+    const/16 v2, 0x107
 
-    const-string v3, "PROVIDER_US_SSIBL"
+    const v3, 0x11235
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 264
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzed:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x108
+    const-string v1, "PROVIDER_US_BUREAU_OF_TRANSPORTATION_STATISTICS"
 
-    const v2, 0x11236
+    const/16 v2, 0x108
 
-    const-string v3, "PROVIDER_US_BUREAU_OF_TRANSPORTATION_STATISTICS"
+    const v3, 0x11236
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 265
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzee:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x109
+    const-string v1, "PROVIDER_US_NATIONAL_OCEANIC_AND_ATMOSPHERIC_ADMINISTRATION"
 
-    const v2, 0x11237
+    const/16 v2, 0x109
 
-    const-string v3, "PROVIDER_US_NATIONAL_OCEANIC_AND_ATMOSPHERIC_ADMINISTRATION"
+    const v3, 0x11237
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 266
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzef:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x10a
+    const-string v1, "PROVIDER_US_POLAR_GEOSPATIAL_CENTER"
 
-    const v2, 0x11238
+    const/16 v2, 0x10a
 
-    const-string v3, "PROVIDER_US_POLAR_GEOSPATIAL_CENTER"
+    const v3, 0x11238
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 267
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x10b
+    const-string v1, "PROVIDER_US_DEPARTMENT_OF_AGRICULTURE"
 
-    const v2, 0x11239
+    const/16 v2, 0x10b
 
-    const-string v3, "PROVIDER_US_DEPARTMENT_OF_AGRICULTURE"
+    const v3, 0x11239
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 268
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x10c
+    const-string v1, "PROVIDER_US_NPI_REGISTRY"
 
-    const v2, 0x1123a
+    const/16 v2, 0x10c
 
-    const-string v3, "PROVIDER_US_NPI_REGISTRY"
+    const v3, 0x1123a
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 269
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzei:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x10d
+    const-string v1, "PROVIDER_US_BUREAU_OF_INDIAN_AFFAIRS"
 
-    const v2, 0x1123b
+    const/16 v2, 0x10d
 
-    const-string v3, "PROVIDER_US_BUREAU_OF_INDIAN_AFFAIRS"
+    const v3, 0x1123b
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 270
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzej:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x10e
+    const-string v1, "PROVIDER_DMTI_SPATIAL"
 
-    const/16 v2, 0x1124
+    const/16 v2, 0x10e
 
-    const-string v3, "PROVIDER_DMTI_SPATIAL"
+    const/16 v3, 0x1124
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 271
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzek:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x10f
+    const-string v1, "PROVIDER_INTERNATIONAL_HYDROGRAPHIC_ORGANIZATION"
 
-    const/16 v2, 0x1125
+    const/16 v2, 0x10f
 
-    const-string v3, "PROVIDER_INTERNATIONAL_HYDROGRAPHIC_ORGANIZATION"
+    const/16 v3, 0x1125
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 272
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzel:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x110
+    const-string v1, "PROVIDER_MAPLINK"
 
-    const/16 v2, 0x1126
+    const/16 v2, 0x110
 
-    const-string v3, "PROVIDER_MAPLINK"
+    const/16 v3, 0x1126
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 273
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzem:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x111
+    const-string v1, "PROVIDER_KINGWAY"
 
-    const/16 v2, 0x1127
+    const/16 v2, 0x111
 
-    const-string v3, "PROVIDER_KINGWAY"
+    const/16 v3, 0x1127
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 274
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzen:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x112
+    const-string v1, "PROVIDER_GEOCENTRE"
 
-    const/16 v2, 0x1128
+    const/16 v2, 0x112
 
-    const-string v3, "PROVIDER_GEOCENTRE"
+    const/16 v3, 0x1128
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 275
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeo:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x113
+    const-string v1, "PROVIDER_CN_NATIONAL_FOUNDAMENTAL_GIS"
 
-    const/16 v2, 0x1129
+    const/16 v2, 0x113
 
-    const-string v3, "PROVIDER_CN_NATIONAL_FOUNDAMENTAL_GIS"
+    const/16 v3, 0x1129
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 276
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzep:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x114
+    const-string v1, "PROVIDER_CN_MAPABC"
 
-    const/16 v2, 0x1130
+    const/16 v2, 0x114
 
-    const-string v3, "PROVIDER_CN_MAPABC"
+    const/16 v3, 0x1130
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 277
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x115
+    const-string v1, "PROVIDER_SMITHSONIAN_INSTITUTE"
 
-    const/16 v2, 0x1131
+    const/16 v2, 0x115
 
-    const-string v3, "PROVIDER_SMITHSONIAN_INSTITUTE"
+    const/16 v3, 0x1131
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 278
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzer:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x116
+    const-string v1, "PROVIDER_TRACKS_FOR_AFRICA"
 
-    const/16 v2, 0x1132
+    const/16 v2, 0x116
 
-    const-string v3, "PROVIDER_TRACKS_FOR_AFRICA"
+    const/16 v3, 0x1132
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 279
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzes:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x117
+    const-string v1, "PROVIDER_PPWK"
 
-    const/16 v2, 0x1133
+    const/16 v2, 0x117
 
-    const-string v3, "PROVIDER_PPWK"
+    const/16 v3, 0x1133
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 280
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzet:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x118
+    const-string v1, "PROVIDER_LEADDOG"
 
-    const/16 v2, 0x1134
+    const/16 v2, 0x118
 
-    const-string v3, "PROVIDER_LEADDOG"
+    const/16 v3, 0x1134
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 281
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x119
+    const-string v1, "PROVIDER_CENTRE_DONNEES_ASTRONOMIQUES_STRASBOURG"
 
-    const/16 v2, 0x1135
+    const/16 v2, 0x119
 
-    const-string v3, "PROVIDER_CENTRE_DONNEES_ASTRONOMIQUES_STRASBOURG"
+    const/16 v3, 0x1135
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 282
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzev:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x11a
+    const-string v1, "PROVIDER_GISRAEL"
 
-    const/16 v2, 0x1136
+    const/16 v2, 0x11a
 
-    const-string v3, "PROVIDER_GISRAEL"
+    const/16 v3, 0x1136
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 283
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzew:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x11b
+    const-string v1, "PROVIDER_BASARSOFT"
 
-    const/16 v2, 0x1137
+    const/16 v2, 0x11b
 
-    const-string v3, "PROVIDER_BASARSOFT"
+    const/16 v3, 0x1137
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 284
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzex:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x11c
+    const-string v1, "PROVIDER_MAPINFO"
 
-    const/16 v2, 0x1138
+    const/16 v2, 0x11c
 
-    const-string v3, "PROVIDER_MAPINFO"
+    const/16 v3, 0x1138
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 285
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzey:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x11d
+    const-string v1, "PROVIDER_MAPIT"
 
-    const/16 v2, 0x1139
+    const/16 v2, 0x11d
 
-    const-string v3, "PROVIDER_MAPIT"
+    const/16 v3, 0x1139
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 286
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzez:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x11e
+    const-string v1, "PROVIDER_GEOBASE"
 
-    const/16 v2, 0x113a
+    const/16 v2, 0x11e
 
-    const-string v3, "PROVIDER_GEOBASE"
+    const/16 v3, 0x113a
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 287
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x11f
+    const-string v1, "PROVIDER_ORION"
 
-    const/16 v2, 0x113b
+    const/16 v2, 0x11f
 
-    const-string v3, "PROVIDER_ORION"
+    const/16 v3, 0x113b
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 288
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x120
+    const-string v1, "PROVIDER_CENTRAL_EUROPEAN_DATA_AGENCY"
 
-    const/16 v2, 0x1140
+    const/16 v2, 0x120
 
-    const-string v3, "PROVIDER_CENTRAL_EUROPEAN_DATA_AGENCY"
+    const/16 v3, 0x1140
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 289
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x121
+    const-string v1, "PROVIDER_ANASAT"
 
-    const/16 v2, 0x1141
+    const/16 v2, 0x121
 
-    const-string v3, "PROVIDER_ANASAT"
+    const/16 v3, 0x1141
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 290
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x122
+    const-string v1, "PROVIDER_MINED_POSTCODES"
 
-    const/16 v2, 0x1142
+    const/16 v2, 0x122
 
-    const-string v3, "PROVIDER_MINED_POSTCODES"
+    const/16 v3, 0x1142
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 291
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x123
+    const-string v1, "PROVIDER_DMAPAS"
 
-    const/16 v2, 0x1143
+    const/16 v2, 0x123
 
-    const-string v3, "PROVIDER_DMAPAS"
+    const/16 v3, 0x1143
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 292
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x124
+    const-string v1, "PROVIDER_COMMON_LOCALE_DATA_REPOSITORY"
 
-    const/16 v2, 0x1144
+    const/16 v2, 0x124
 
-    const-string v3, "PROVIDER_COMMON_LOCALE_DATA_REPOSITORY"
+    const/16 v3, 0x1144
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 293
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x125
+    const-string v1, "PROVIDER_CH_SBB"
 
-    const/16 v2, 0x1145
+    const/16 v2, 0x125
 
-    const-string v3, "PROVIDER_CH_SBB"
+    const/16 v3, 0x1145
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 294
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x126
+    const-string v1, "PROVIDER_SKENERGY"
 
-    const/16 v2, 0x1146
+    const/16 v2, 0x126
 
-    const-string v3, "PROVIDER_SKENERGY"
+    const/16 v3, 0x1146
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 295
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x127
+    const-string v1, "PROVIDER_GBRMPA"
 
-    const/16 v2, 0x1147
+    const/16 v2, 0x127
 
-    const-string v3, "PROVIDER_GBRMPA"
+    const/16 v3, 0x1147
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 296
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x128
+    const-string v1, "PROVIDER_KOREA_POST"
 
-    const/16 v2, 0x1148
+    const/16 v2, 0x128
 
-    const-string v3, "PROVIDER_KOREA_POST"
+    const/16 v3, 0x1148
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 297
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x129
+    const-string v1, "PROVIDER_CN_AUTONAVI"
 
-    const/16 v2, 0x1149
+    const/16 v2, 0x129
 
-    const-string v3, "PROVIDER_CN_AUTONAVI"
+    const/16 v3, 0x1149
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 298
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x12a
+    const-string v1, "PROVIDER_MINED_POI"
 
-    const/16 v2, 0x114a
+    const/16 v2, 0x12a
 
-    const-string v3, "PROVIDER_MINED_POI"
+    const/16 v3, 0x114a
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 299
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x12b
+    const-string v1, "PROVIDER_ML_INFOMAP"
 
-    const/16 v2, 0x114b
+    const/16 v2, 0x12b
 
-    const-string v3, "PROVIDER_ML_INFOMAP"
+    const/16 v3, 0x114b
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 300
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x12c
+    const-string v1, "PROVIDER_SNOOPER"
 
-    const/16 v2, 0x114c
+    const/16 v2, 0x12c
 
-    const-string v3, "PROVIDER_SNOOPER"
+    const/16 v3, 0x114c
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 301
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x12d
+    const-string v1, "PROVIDER_GEOSISTEMAS"
 
-    const/16 v2, 0x114d
+    const/16 v2, 0x12d
 
-    const-string v3, "PROVIDER_GEOSISTEMAS"
+    const/16 v3, 0x114d
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 302
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x12e
+    const-string v1, "PROVIDER_AFRIGIS"
 
-    const/16 v2, 0x114e
+    const/16 v2, 0x12e
 
-    const-string v3, "PROVIDER_AFRIGIS"
+    const/16 v3, 0x114e
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 303
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x12f
+    const-string v1, "PROVIDER_TRANSNAVICOM"
 
-    const/16 v2, 0x114f
+    const/16 v2, 0x12f
 
-    const-string v3, "PROVIDER_TRANSNAVICOM"
+    const/16 v3, 0x114f
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 304
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x130
+    const-string v1, "PROVIDER_EASYCONNECT"
 
-    const/16 v2, 0x1150
+    const/16 v2, 0x130
 
-    const-string v3, "PROVIDER_EASYCONNECT"
+    const/16 v3, 0x1150
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 305
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x131
+    const-string v1, "PROVIDER_LANTMATERIET"
 
-    const/16 v2, 0x1151
+    const/16 v2, 0x131
 
-    const-string v3, "PROVIDER_LANTMATERIET"
+    const/16 v3, 0x1151
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 306
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x132
+    const-string v1, "PROVIDER_LOGICA"
 
-    const/16 v2, 0x1152
+    const/16 v2, 0x132
 
-    const-string v3, "PROVIDER_LOGICA"
+    const/16 v3, 0x1152
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 307
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x133
+    const-string v1, "PROVIDER_MAPKING"
 
-    const/16 v2, 0x1153
+    const/16 v2, 0x133
 
-    const-string v3, "PROVIDER_MAPKING"
+    const/16 v3, 0x1153
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 308
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x134
+    const-string v1, "PROVIDER_DIANPING"
 
-    const/16 v2, 0x1154
+    const/16 v2, 0x134
 
-    const-string v3, "PROVIDER_DIANPING"
+    const/16 v3, 0x1154
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 309
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x135
+    const-string v1, "PROVIDER_GEONAV"
 
-    const/16 v2, 0x1155
+    const/16 v2, 0x135
 
-    const-string v3, "PROVIDER_GEONAV"
+    const/16 v3, 0x1155
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 310
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x136
+    const-string v1, "PROVIDER_HEIBONSHA"
 
-    const/16 v2, 0x1156
+    const/16 v2, 0x136
 
-    const-string v3, "PROVIDER_HEIBONSHA"
+    const/16 v3, 0x1156
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 311
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x137
+    const-string v1, "PROVIDER_DEUTSCHE_TELEKOM"
 
-    const/16 v2, 0x1157
+    const/16 v2, 0x137
 
-    const-string v3, "PROVIDER_DEUTSCHE_TELEKOM"
+    const/16 v3, 0x1157
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 312
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x138
+    const-string v1, "PROVIDER_LINGUISTIC_DATA_CONSORTIUM"
 
-    const/16 v2, 0x1158
+    const/16 v2, 0x138
 
-    const-string v3, "PROVIDER_LINGUISTIC_DATA_CONSORTIUM"
+    const/16 v3, 0x1158
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 313
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfa:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x139
+    const-string v1, "PROVIDER_ACXIOM"
 
-    const/16 v2, 0x1159
+    const/16 v2, 0x139
 
-    const-string v3, "PROVIDER_ACXIOM"
+    const/16 v3, 0x1159
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 314
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x13a
+    const-string v1, "PROVIDER_DUN_AND_BRADSTREET"
 
-    const/16 v2, 0x115a
+    const/16 v2, 0x13a
 
-    const-string v3, "PROVIDER_DUN_AND_BRADSTREET"
+    const/16 v3, 0x115a
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 315
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x13b
+    const-string v1, "PROVIDER_FEDERAL_AVIATION_ADMINISTRATION"
 
-    const/16 v2, 0x115b
+    const/16 v2, 0x13b
 
-    const-string v3, "PROVIDER_FEDERAL_AVIATION_ADMINISTRATION"
+    const/16 v3, 0x115b
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 316
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x13c
+    const-string v1, "PROVIDER_INFOUSA"
 
-    const/16 v2, 0x115c
+    const/16 v2, 0x13c
 
-    const-string v3, "PROVIDER_INFOUSA"
+    const/16 v3, 0x115c
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 317
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfe:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x13d
+    const-string v1, "PROVIDER_INFOUSA_NIXIE"
 
-    const v2, 0x115c1
+    const/16 v2, 0x13d
 
-    const-string v3, "PROVIDER_INFOUSA_NIXIE"
+    const v3, 0x115c1
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 318
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzff:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x13e
+    const-string v1, "PROVIDER_THOMSON_LOCAL"
 
-    const/16 v2, 0x115d
+    const/16 v2, 0x13e
 
-    const-string v3, "PROVIDER_THOMSON_LOCAL"
+    const/16 v3, 0x115d
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 319
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x13f
+    const-string v1, "PROVIDER_TELEFONICA_PUBLICIDAD_E_INFORMACION"
 
-    const/16 v2, 0x115e
+    const/16 v2, 0x13f
 
-    const-string v3, "PROVIDER_TELEFONICA_PUBLICIDAD_E_INFORMACION"
+    const/16 v3, 0x115e
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 320
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x140
+    const-string v1, "PROVIDER_WIKIPEDIA"
 
-    const/16 v2, 0x115f
+    const/16 v2, 0x140
 
-    const-string v3, "PROVIDER_WIKIPEDIA"
+    const/16 v3, 0x115f
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 321
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfi:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x141
+    const-string v1, "PROVIDER_INFOBEL"
 
-    const/16 v2, 0x1160
+    const/16 v2, 0x141
 
-    const-string v3, "PROVIDER_INFOBEL"
+    const/16 v3, 0x1160
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 322
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x142
+    const-string v1, "PROVIDER_MX_GOVERNMENT"
 
-    const/16 v2, 0x1161
+    const/16 v2, 0x142
 
-    const-string v3, "PROVIDER_MX_GOVERNMENT"
+    const/16 v3, 0x1161
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 323
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfk:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x143
+    const-string v1, "PROVIDER_MX_NATIONAL_INSTITUTE_STATISTICS_GEOGRAPHY"
 
-    const v2, 0x11611
+    const/16 v2, 0x143
 
-    const-string v3, "PROVIDER_MX_NATIONAL_INSTITUTE_STATISTICS_GEOGRAPHY"
+    const v3, 0x11611
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 324
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfl:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x144
+    const-string v1, "PROVIDER_MX_SERVICIO_POSTAL_MEXICANO"
 
-    const v2, 0x11612
+    const/16 v2, 0x144
 
-    const-string v3, "PROVIDER_MX_SERVICIO_POSTAL_MEXICANO"
+    const v3, 0x11612
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 325
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x145
+    const-string v1, "PROVIDER_TELEGATE"
 
-    const/16 v2, 0x1162
+    const/16 v2, 0x145
 
-    const-string v3, "PROVIDER_TELEGATE"
+    const/16 v3, 0x1162
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 326
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfn:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x146
+    const-string v1, "PROVIDER_TELELISTAS"
 
-    const/16 v2, 0x1163
+    const/16 v2, 0x146
 
-    const-string v3, "PROVIDER_TELELISTAS"
+    const/16 v3, 0x1163
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 327
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfo:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x147
+    const-string v1, "PROVIDER_MAPCITY"
 
-    const/16 v2, 0x1164
+    const/16 v2, 0x147
 
-    const-string v3, "PROVIDER_MAPCITY"
+    const/16 v3, 0x1164
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 328
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x148
+    const-string v1, "PROVIDER_EXPLAINER_DC"
 
-    const/16 v2, 0x1165
+    const/16 v2, 0x148
 
-    const-string v3, "PROVIDER_EXPLAINER_DC"
+    const/16 v3, 0x1165
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 329
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x149
+    const-string v1, "PROVIDER_DAIKEI"
 
-    const/16 v2, 0x1166
+    const/16 v2, 0x149
 
-    const-string v3, "PROVIDER_DAIKEI"
+    const/16 v3, 0x1166
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 330
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x14a
+    const-string v1, "PROVIDER_NL_CHAMBER_OF_COMMERCE"
 
-    const/16 v2, 0x1167
+    const/16 v2, 0x14a
 
-    const-string v3, "PROVIDER_NL_CHAMBER_OF_COMMERCE"
+    const/16 v3, 0x1167
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 331
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfs:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x14b
+    const-string v1, "PROVIDER_KOREA_INFO_SERVICE"
 
-    const/16 v2, 0x1168
+    const/16 v2, 0x14b
 
-    const-string v3, "PROVIDER_KOREA_INFO_SERVICE"
+    const/16 v3, 0x1168
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 332
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzft:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x14c
+    const-string v1, "PROVIDER_WIKITRAVEL"
 
-    const/16 v2, 0x1169
+    const/16 v2, 0x14c
 
-    const-string v3, "PROVIDER_WIKITRAVEL"
+    const/16 v3, 0x1169
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 333
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x14d
+    const-string v1, "PROVIDER_FLICKR"
 
-    const/16 v2, 0x116a
+    const/16 v2, 0x14d
 
-    const-string v3, "PROVIDER_FLICKR"
+    const/16 v3, 0x116a
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 334
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x14e
+    const-string v1, "PROVIDER_DIANCO"
 
-    const/16 v2, 0x116b
+    const/16 v2, 0x14e
 
-    const-string v3, "PROVIDER_DIANCO"
+    const/16 v3, 0x116b
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 335
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x14f
+    const-string v1, "PROVIDER_VOLT_DELTA"
 
-    const/16 v2, 0x116c
+    const/16 v2, 0x14f
 
-    const-string v3, "PROVIDER_VOLT_DELTA"
+    const/16 v3, 0x116c
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 336
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x150
+    const-string v1, "PROVIDER_SG_GOVERNMENT"
 
-    const/16 v2, 0x116d
+    const/16 v2, 0x150
 
-    const-string v3, "PROVIDER_SG_GOVERNMENT"
+    const/16 v3, 0x116d
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 337
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfy:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x151
+    const-string v1, "PROVIDER_SG_LAND_TRANSPORT_AUTHORITY"
 
-    const v2, 0x116d1    # 1.0002E-40f
+    const/16 v2, 0x151
 
-    const-string v3, "PROVIDER_SG_LAND_TRANSPORT_AUTHORITY"
+    const v3, 0x116d1    # 1.0002E-40f
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 338
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x152
+    const-string v1, "PROVIDER_MAPBAR"
 
-    const/16 v2, 0x116e
+    const/16 v2, 0x152
 
-    const-string v3, "PROVIDER_MAPBAR"
+    const/16 v3, 0x116e
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 339
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x153
+    const-string v1, "PROVIDER_LONGTU"
 
-    const/16 v2, 0x116f
+    const/16 v2, 0x153
 
-    const-string v3, "PROVIDER_LONGTU"
+    const/16 v3, 0x116f
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 340
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x154
+    const-string v1, "PROVIDER_SA_GOVERNMENT"
 
-    const/16 v2, 0x1170
+    const/16 v2, 0x154
 
-    const-string v3, "PROVIDER_SA_GOVERNMENT"
+    const/16 v3, 0x1170
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 341
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x155
+    const-string v1, "PROVIDER_SA_SAUDI_POST"
 
-    const v2, 0x11701    # 1.00088E-40f
+    const/16 v2, 0x155
 
-    const-string v3, "PROVIDER_SA_SAUDI_POST"
+    const v3, 0x11701    # 1.00088E-40f
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 342
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x156
+    const-string v1, "PROVIDER_PEAKLIST"
 
-    const/16 v2, 0x1171
+    const/16 v2, 0x156
 
-    const-string v3, "PROVIDER_PEAKLIST"
+    const/16 v3, 0x1171
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 343
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x157
+    const-string v1, "PROVIDER_LOCAL_BUSINESS_CENTER"
 
-    const/16 v2, 0x1172
+    const/16 v2, 0x157
 
-    const-string v3, "PROVIDER_LOCAL_BUSINESS_CENTER"
+    const/16 v3, 0x1172
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 344
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x158
+    const-string v1, "PROVIDER_LOCAL_FEED_XML"
 
-    const/16 v2, 0x1173
+    const/16 v2, 0x158
 
-    const-string v3, "PROVIDER_LOCAL_FEED_XML"
+    const/16 v3, 0x1173
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 345
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x159
+    const-string v1, "PROVIDER_WEB"
 
-    const/16 v2, 0x1174
+    const/16 v2, 0x159
 
-    const-string v3, "PROVIDER_WEB"
+    const/16 v3, 0x1174
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 346
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x15a
+    const-string v1, "PROVIDER_RAILS_TO_TRAILS"
 
-    const/16 v2, 0x1175
+    const/16 v2, 0x15a
 
-    const-string v3, "PROVIDER_RAILS_TO_TRAILS"
+    const/16 v3, 0x1175
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 347
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x15b
+    const-string v1, "PROVIDER_INDIACOM"
 
-    const/16 v2, 0x1176
+    const/16 v2, 0x15b
 
-    const-string v3, "PROVIDER_INDIACOM"
+    const/16 v3, 0x1176
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 348
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x15c
+    const-string v1, "PROVIDER_INFOMEDIA"
 
-    const/16 v2, 0x1177
+    const/16 v2, 0x15c
 
-    const-string v3, "PROVIDER_INFOMEDIA"
+    const/16 v3, 0x1177
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 349
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x15d
+    const-string v1, "PROVIDER_PICASA"
 
-    const/16 v2, 0x1178
+    const/16 v2, 0x15d
 
-    const-string v3, "PROVIDER_PICASA"
+    const/16 v3, 0x1178
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 350
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x15e
+    const-string v1, "PROVIDER_AT_GOVERNMENT"
 
-    const/16 v2, 0x1179
+    const/16 v2, 0x15e
 
-    const-string v3, "PROVIDER_AT_GOVERNMENT"
+    const/16 v3, 0x1179
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 351
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x15f
+    const-string v1, "PROVIDER_AT_BUNDESAMT_FUR_EICH_UND_VERMESSUNGSWESEN"
 
-    const v2, 0x11791
+    const/16 v2, 0x15f
 
-    const-string v3, "PROVIDER_AT_BUNDESAMT_FUR_EICH_UND_VERMESSUNGSWESEN"
+    const v3, 0x11791
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 352
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x160
+    const-string v1, "PROVIDER_AT_NATIONAL_TOURIST_OFFICE"
 
-    const v2, 0x11792
+    const/16 v2, 0x160
 
-    const-string v3, "PROVIDER_AT_NATIONAL_TOURIST_OFFICE"
+    const v3, 0x11792
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 353
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x161
+    const-string v1, "PROVIDER_AT_AUSTRIA_POST"
 
-    const v2, 0x11793
+    const/16 v2, 0x161
 
-    const-string v3, "PROVIDER_AT_AUSTRIA_POST"
+    const v3, 0x11793
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 354
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x162
+    const-string v1, "PROVIDER_NO_GOVERNMENT"
 
-    const/16 v2, 0x117a
+    const/16 v2, 0x162
 
-    const-string v3, "PROVIDER_NO_GOVERNMENT"
+    const/16 v3, 0x117a
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 355
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x163
+    const-string v1, "PROVIDER_NO_NORSK_EIENDOMSINFORMASJON"
 
-    const v2, 0x117a1
+    const/16 v2, 0x163
 
-    const-string v3, "PROVIDER_NO_NORSK_EIENDOMSINFORMASJON"
+    const v3, 0x117a1
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 356
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x164
+    const-string v1, "PROVIDER_NO_POSTEN_NORGE_AS"
 
-    const v2, 0x117a2
+    const/16 v2, 0x164
 
-    const-string v3, "PROVIDER_NO_POSTEN_NORGE_AS"
+    const v3, 0x117a2
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 357
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x165
+    const-string v1, "PROVIDER_CH_GOVERNMENT"
 
-    const/16 v2, 0x117b
+    const/16 v2, 0x165
 
-    const-string v3, "PROVIDER_CH_GOVERNMENT"
+    const/16 v3, 0x117b
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 358
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x166
+    const-string v1, "PROVIDER_CH_SWISS_POST"
 
-    const v2, 0x117b1
+    const/16 v2, 0x166
 
-    const-string v3, "PROVIDER_CH_SWISS_POST"
+    const v3, 0x117b1
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 359
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x167
+    const-string v1, "PROVIDER_CH_SWISSTOPO"
 
-    const v2, 0x117b2
+    const/16 v2, 0x167
 
-    const-string v3, "PROVIDER_CH_SWISSTOPO"
+    const v3, 0x117b2
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 360
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x168
+    const-string v1, "PROVIDER_CH_SWISS_NATIONAL_PARK"
 
-    const v2, 0x117b3
+    const/16 v2, 0x168
 
-    const-string v3, "PROVIDER_CH_SWISS_NATIONAL_PARK"
+    const v3, 0x117b3
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 361
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x169
+    const-string v1, "PROVIDER_NAVIT"
 
-    const/16 v2, 0x117c
+    const/16 v2, 0x169
 
-    const-string v3, "PROVIDER_NAVIT"
+    const/16 v3, 0x117c
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 362
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x16a
+    const-string v1, "PROVIDER_GEOSEARCH"
 
-    const/16 v2, 0x117d
+    const/16 v2, 0x16a
 
-    const-string v3, "PROVIDER_GEOSEARCH"
+    const/16 v3, 0x117d
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 363
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x16b
+    const-string v1, "PROVIDER_DE_GOVERNMENT"
 
-    const/16 v2, 0x117e
+    const/16 v2, 0x16b
 
-    const-string v3, "PROVIDER_DE_GOVERNMENT"
+    const/16 v3, 0x117e
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 364
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x16c
+    const-string v1, "PROVIDER_BUNDESAMT_KARTOGRAPHIE_UND_GEODASIE"
 
-    const v2, 0x117e1
+    const/16 v2, 0x16c
 
-    const-string v3, "PROVIDER_BUNDESAMT_KARTOGRAPHIE_UND_GEODASIE"
+    const v3, 0x117e1
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 365
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzga:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x16d
+    const-string v1, "PROVIDER_BUNDESNETZAGENTUR"
 
-    const v2, 0x117e2
+    const/16 v2, 0x16d
 
-    const-string v3, "PROVIDER_BUNDESNETZAGENTUR"
+    const v3, 0x117e2
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 366
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x16e
+    const-string v1, "PROVIDER_SCHOBER_GROUP"
 
-    const/16 v2, 0x117f
+    const/16 v2, 0x16e
 
-    const-string v3, "PROVIDER_SCHOBER_GROUP"
+    const/16 v3, 0x117f
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 367
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x16f
+    const-string v1, "PROVIDER_MIREO"
 
-    const/16 v2, 0x1180
+    const/16 v2, 0x16f
 
-    const-string v3, "PROVIDER_MIREO"
+    const/16 v3, 0x1180
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 368
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x170
+    const-string v1, "PROVIDER_PUBLIC_MUNICIPALITY"
 
-    const/16 v2, 0x1181
+    const/16 v2, 0x170
 
-    const-string v3, "PROVIDER_PUBLIC_MUNICIPALITY"
+    const/16 v3, 0x1181
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 369
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzge:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x171
+    const-string v1, "PROVIDER_US_PUBLIC_MUNICIPALITY"
 
-    const v2, 0x11811
+    const/16 v2, 0x171
 
-    const-string v3, "PROVIDER_US_PUBLIC_MUNICIPALITY"
+    const v3, 0x11811
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 370
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x172
+    const-string v1, "PROVIDER_US_PUBLIC_MUNICIPALITY_WEBSTER_TEXAS"
 
-    const v2, 0x118111
+    const/16 v2, 0x172
 
-    const-string v3, "PROVIDER_US_PUBLIC_MUNICIPALITY_WEBSTER_TEXAS"
+    const v3, 0x118111
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 371
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x173
+    const-string v1, "PROVIDER_US_PUBLIC_MUNICIPALITY_AMHERST_MASSACHUSETTS"
 
-    const v2, 0x118112
+    const/16 v2, 0x173
 
-    const-string v3, "PROVIDER_US_PUBLIC_MUNICIPALITY_AMHERST_MASSACHUSETTS"
+    const v3, 0x118112
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 372
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x174
+    const-string v1, "PROVIDER_US_PUBLIC_MUNICIPALITY_BLOOMINGTON_INDIANA"
 
-    const v2, 0x118113
+    const/16 v2, 0x174
 
-    const-string v3, "PROVIDER_US_PUBLIC_MUNICIPALITY_BLOOMINGTON_INDIANA"
+    const v3, 0x118113
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 373
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgi:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x175
+    const-string v1, "PROVIDER_US_PUBLIC_MUNICIPALITY_PASADENA_CALIFORNIA"
 
-    const v2, 0x118114
+    const/16 v2, 0x175
 
-    const-string v3, "PROVIDER_US_PUBLIC_MUNICIPALITY_PASADENA_CALIFORNIA"
+    const v3, 0x118114
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 374
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x176
+    const-string v1, "PROVIDER_US_PUBLIC_MUNICIPALITY_CHULA_VISTA_CALIFORNIA"
 
-    const v2, 0x118115
+    const/16 v2, 0x176
 
-    const-string v3, "PROVIDER_US_PUBLIC_MUNICIPALITY_CHULA_VISTA_CALIFORNIA"
+    const v3, 0x118115
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 375
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgk:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x177
+    const-string v1, "PROVIDER_US_PUBLIC_MUNICIPALITY_TEMPE_ARIZONA"
 
-    const v2, 0x118116
+    const/16 v2, 0x177
 
-    const-string v3, "PROVIDER_US_PUBLIC_MUNICIPALITY_TEMPE_ARIZONA"
+    const v3, 0x118116
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 376
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgl:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x178
+    const-string v1, "PROVIDER_US_PUBLIC_MUNICIPALITY_COLUMBUS_OHIO"
 
-    const v2, 0x118117
+    const/16 v2, 0x178
 
-    const-string v3, "PROVIDER_US_PUBLIC_MUNICIPALITY_COLUMBUS_OHIO"
+    const v3, 0x118117
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 377
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x179
+    const-string v1, "PROVIDER_US_PUBLIC_MUNICIPALITY_PORTAGE_MICHIGAN"
 
-    const v2, 0x118118
+    const/16 v2, 0x179
 
-    const-string v3, "PROVIDER_US_PUBLIC_MUNICIPALITY_PORTAGE_MICHIGAN"
+    const v3, 0x118118
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 378
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgn:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x17a
+    const-string v1, "PROVIDER_US_PUBLIC_MUNICIPALITY_GEORGETOWN_KENTUCKY"
 
-    const v2, 0x118119
+    const/16 v2, 0x17a
 
-    const-string v3, "PROVIDER_US_PUBLIC_MUNICIPALITY_GEORGETOWN_KENTUCKY"
+    const v3, 0x118119
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 379
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgo:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x17b
+    const-string v1, "PROVIDER_US_PUBLIC_MUNICIPALITY_GREENVILLE_SOUTH_CAROLINA"
 
-    const v2, 0x11811a
+    const/16 v2, 0x17b
 
-    const-string v3, "PROVIDER_US_PUBLIC_MUNICIPALITY_GREENVILLE_SOUTH_CAROLINA"
+    const v3, 0x11811a
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 380
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x17c
+    const-string v1, "PROVIDER_US_PUBLIC_MUNICIPALITY_NASHVILLE_TENNESSEE"
 
-    const v2, 0x11811b
+    const/16 v2, 0x17c
 
-    const-string v3, "PROVIDER_US_PUBLIC_MUNICIPALITY_NASHVILLE_TENNESSEE"
+    const v3, 0x11811b
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 381
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x17d
+    const-string v1, "PROVIDER_US_PUBLIC_MUNICIPALITY_WASHINGTON_DISTRICT_OF_COLUMBIA"
 
-    const v2, 0x11811c
+    const/16 v2, 0x17d
 
-    const-string v3, "PROVIDER_US_PUBLIC_MUNICIPALITY_WASHINGTON_DISTRICT_OF_COLUMBIA"
+    const v3, 0x11811c
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 382
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x17e
+    const-string v1, "PROVIDER_US_PUBLIC_MUNICIPALITY_BOULDER_COLORADO"
 
-    const v2, 0x11811d
+    const/16 v2, 0x17e
 
-    const-string v3, "PROVIDER_US_PUBLIC_MUNICIPALITY_BOULDER_COLORADO"
+    const v3, 0x11811d
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 383
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgs:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x17f
+    const-string v1, "PROVIDER_NZ_PUBLIC_MUNICIPALITY"
 
-    const v2, 0x11812
+    const/16 v2, 0x17f
 
-    const-string v3, "PROVIDER_NZ_PUBLIC_MUNICIPALITY"
+    const v3, 0x11812
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 384
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgt:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x180
+    const-string v1, "PROVIDER_NZ_PUBLIC_MUNICIPALITY_ENVIRONMENT_BAY"
 
-    const v2, 0x118121
+    const/16 v2, 0x180
 
-    const-string v3, "PROVIDER_NZ_PUBLIC_MUNICIPALITY_ENVIRONMENT_BAY"
+    const v3, 0x118121
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 385
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x181
+    const-string v1, "PROVIDER_PL_PUBLIC_MUNICIPALITY"
 
-    const v2, 0x11813
+    const/16 v2, 0x181
 
-    const-string v3, "PROVIDER_PL_PUBLIC_MUNICIPALITY"
+    const v3, 0x11813
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 386
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x182
+    const-string v1, "PROVIDER_PL_PUBLIC_MUNICIPALITY_BIELSKO_BIALA"
 
-    const v2, 0x118131
+    const/16 v2, 0x182
 
-    const-string v3, "PROVIDER_PL_PUBLIC_MUNICIPALITY_BIELSKO_BIALA"
+    const v3, 0x118131
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 387
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x183
+    const-string v1, "PROVIDER_DE_PUBLIC_MUNICIPALITY"
 
-    const v2, 0x11814
+    const/16 v2, 0x183
 
-    const-string v3, "PROVIDER_DE_PUBLIC_MUNICIPALITY"
+    const v3, 0x11814
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 388
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x184
+    const-string v1, "PROVIDER_DE_PUBLIC_MUNICIPALITY_FRANKFURT"
 
-    const v2, 0x118141
+    const/16 v2, 0x184
 
-    const-string v3, "PROVIDER_DE_PUBLIC_MUNICIPALITY_FRANKFURT"
+    const v3, 0x118141
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 389
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgy:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x185
+    const-string v1, "PROVIDER_DE_PUBLIC_MUNICIPALITY_HAMBURG"
 
-    const v2, 0x118142
+    const/16 v2, 0x185
 
-    const-string v3, "PROVIDER_DE_PUBLIC_MUNICIPALITY_HAMBURG"
+    const v3, 0x118142
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 390
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x186
+    const-string v1, "PROVIDER_DE_PUBLIC_MUNICIPALITY_KARLSRUHE"
 
-    const v2, 0x118143
+    const/16 v2, 0x186
 
-    const-string v3, "PROVIDER_DE_PUBLIC_MUNICIPALITY_KARLSRUHE"
+    const v3, 0x118143
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 391
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x187
+    const-string v1, "PROVIDER_PT_PUBLIC_MUNICIPALITY"
 
-    const v2, 0x11815
+    const/16 v2, 0x187
 
-    const-string v3, "PROVIDER_PT_PUBLIC_MUNICIPALITY"
+    const v3, 0x11815
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 392
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x188
+    const-string v1, "PROVIDER_PT_PUBLIC_MUNICIPALITY_SANTA_CRUZ"
 
-    const v2, 0x118151
+    const/16 v2, 0x188
 
-    const-string v3, "PROVIDER_PT_PUBLIC_MUNICIPALITY_SANTA_CRUZ"
+    const v3, 0x118151
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 393
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x189
+    const-string v1, "PROVIDER_AT_PUBLIC_MUNICIPALITY"
 
-    const v2, 0x11816
+    const/16 v2, 0x189
 
-    const-string v3, "PROVIDER_AT_PUBLIC_MUNICIPALITY"
+    const v3, 0x11816
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 394
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x18a
+    const-string v1, "PROVIDER_AT_PUBLIC_MUNICIPALITY_KLAGENFURT"
 
-    const v2, 0x118161
+    const/16 v2, 0x18a
 
-    const-string v3, "PROVIDER_AT_PUBLIC_MUNICIPALITY_KLAGENFURT"
+    const v3, 0x118161
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 395
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x18b
+    const-string v1, "PROVIDER_AT_PUBLIC_MUNICIPALITY_LINZ"
 
-    const v2, 0x118162
+    const/16 v2, 0x18b
 
-    const-string v3, "PROVIDER_AT_PUBLIC_MUNICIPALITY_LINZ"
+    const v3, 0x118162
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 396
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x18c
+    const-string v1, "PROVIDER_ES_PUBLIC_MUNICIPALITY"
 
-    const v2, 0x11817
+    const/16 v2, 0x18c
 
-    const-string v3, "PROVIDER_ES_PUBLIC_MUNICIPALITY"
+    const v3, 0x11817
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 397
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x18d
+    const-string v1, "PROVIDER_ES_PUBLIC_MUNICIPALITY_AZKOITIA"
 
-    const v2, 0x118171
+    const/16 v2, 0x18d
 
-    const-string v3, "PROVIDER_ES_PUBLIC_MUNICIPALITY_AZKOITIA"
+    const v3, 0x118171
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 398
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x18e
+    const-string v1, "PROVIDER_ES_PUBLIC_MUNICIPALITY_BEASAIN"
 
-    const v2, 0x118172
+    const/16 v2, 0x18e
 
-    const-string v3, "PROVIDER_ES_PUBLIC_MUNICIPALITY_BEASAIN"
+    const v3, 0x118172
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 399
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x18f
+    const-string v1, "PROVIDER_ES_PUBLIC_MUNICIPALITY_GIRONA"
 
-    const v2, 0x118173
+    const/16 v2, 0x18f
 
-    const-string v3, "PROVIDER_ES_PUBLIC_MUNICIPALITY_GIRONA"
+    const v3, 0x118173
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 400
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x190
+    const-string v1, "PROVIDER_ES_PUBLIC_MUNICIPALITY_SAN_SEBASTIAN"
 
-    const v2, 0x118174
+    const/16 v2, 0x190
 
-    const-string v3, "PROVIDER_ES_PUBLIC_MUNICIPALITY_SAN_SEBASTIAN"
+    const v3, 0x118174
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 401
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x191
+    const-string v1, "PROVIDER_ES_PUBLIC_MUNICIPALITY_CATALUNYA"
 
-    const v2, 0x118175
+    const/16 v2, 0x191
 
-    const-string v3, "PROVIDER_ES_PUBLIC_MUNICIPALITY_CATALUNYA"
+    const v3, 0x118175
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 402
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x192
+    const-string v1, "PROVIDER_ES_PUBLIC_MUNICIPALITY_HONDARRIBIA"
 
-    const v2, 0x118176
+    const/16 v2, 0x192
 
-    const-string v3, "PROVIDER_ES_PUBLIC_MUNICIPALITY_HONDARRIBIA"
+    const v3, 0x118176
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 403
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x193
+    const-string v1, "PROVIDER_AU_PUBLIC_MUNICIPALITY"
 
-    const v2, 0x11818
+    const/16 v2, 0x193
 
-    const-string v3, "PROVIDER_AU_PUBLIC_MUNICIPALITY"
+    const v3, 0x11818
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 404
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x194
+    const-string v1, "PROVIDER_AU_PUBLIC_MUNICIPALITY_LAUNCESTON_TASMANIA"
 
-    const v2, 0x118181
+    const/16 v2, 0x194
 
-    const-string v3, "PROVIDER_AU_PUBLIC_MUNICIPALITY_LAUNCESTON_TASMANIA"
+    const v3, 0x118181
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 405
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x195
+    const-string v1, "PROVIDER_IS_PUBLIC_MUNICIPALITY"
 
-    const v2, 0x11819
+    const/16 v2, 0x195
 
-    const-string v3, "PROVIDER_IS_PUBLIC_MUNICIPALITY"
+    const v3, 0x11819
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 406
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x196
+    const-string v1, "PROVIDER_IS_PUBLIC_MUNICIPALITY_REYKJAVIK"
 
-    const v2, 0x118191
+    const/16 v2, 0x196
 
-    const-string v3, "PROVIDER_IS_PUBLIC_MUNICIPALITY_REYKJAVIK"
+    const v3, 0x118191
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 407
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x197
+    const-string v1, "PROVIDER_NL_PUBLIC_MUNICIPALITY"
 
-    const v2, 0x1181a
+    const/16 v2, 0x197
 
-    const-string v3, "PROVIDER_NL_PUBLIC_MUNICIPALITY"
+    const v3, 0x1181a
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 408
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x198
+    const-string v1, "PROVIDER_NL_PUBLIC_MUNICIPALITY_AMELSTEVEEN"
 
-    const v2, 0x1181a1
+    const/16 v2, 0x198
 
-    const-string v3, "PROVIDER_NL_PUBLIC_MUNICIPALITY_AMELSTEVEEN"
+    const v3, 0x1181a1
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 409
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x199
+    const-string v1, "PROVIDER_BE_PUBLIC_MUNICIPALITY"
 
-    const v2, 0x1181b
+    const/16 v2, 0x199
 
-    const-string v3, "PROVIDER_BE_PUBLIC_MUNICIPALITY"
+    const v3, 0x1181b
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 410
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x19a
+    const-string v1, "PROVIDER_BE_PUBLIC_MUNICIPALITY_ANTWERPEN"
 
-    const v2, 0x1181b1
+    const/16 v2, 0x19a
 
-    const-string v3, "PROVIDER_BE_PUBLIC_MUNICIPALITY_ANTWERPEN"
+    const v3, 0x1181b1
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 411
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x19b
+    const-string v1, "PROVIDER_CA_PUBLIC_MUNICIPALITY"
 
-    const v2, 0x1181c
+    const/16 v2, 0x19b
 
-    const-string v3, "PROVIDER_CA_PUBLIC_MUNICIPALITY"
+    const v3, 0x1181c
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 412
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x19c
+    const-string v1, "PROVIDER_CA_PUBLIC_MUNICIPALITY_FREDERICTON_NEW_BRUNSWICK"
 
-    const v2, 0x1181c1
+    const/16 v2, 0x19c
 
-    const-string v3, "PROVIDER_CA_PUBLIC_MUNICIPALITY_FREDERICTON_NEW_BRUNSWICK"
+    const v3, 0x1181c1
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 413
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x19d
+    const-string v1, "PROVIDER_CA_PUBLIC_MUNICIPALITY_KAMLOOPS_BRITISH_COLUMBIA"
 
-    const v2, 0x1181c2
+    const/16 v2, 0x19d
 
-    const-string v3, "PROVIDER_CA_PUBLIC_MUNICIPALITY_KAMLOOPS_BRITISH_COLUMBIA"
+    const v3, 0x1181c2
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 414
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x19e
+    const-string v1, "PROVIDER_CA_PUBLIC_MUNICIPALITY_NANAIMO_BRITISH_COLUMBIA"
 
-    const v2, 0x1181c3
+    const/16 v2, 0x19e
 
-    const-string v3, "PROVIDER_CA_PUBLIC_MUNICIPALITY_NANAIMO_BRITISH_COLUMBIA"
+    const v3, 0x1181c3
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 415
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x19f
+    const-string v1, "PROVIDER_CA_PUBLIC_MUNICIPALITY_BANFF_ALBERTA"
 
-    const v2, 0x1181c4
+    const/16 v2, 0x19f
 
-    const-string v3, "PROVIDER_CA_PUBLIC_MUNICIPALITY_BANFF_ALBERTA"
+    const v3, 0x1181c4
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 416
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1a0
+    const-string v1, "PROVIDER_CA_PUBLIC_MUNICIPALITY_CALGARY_ALBERTA"
 
-    const v2, 0x1181c5
+    const/16 v2, 0x1a0
 
-    const-string v3, "PROVIDER_CA_PUBLIC_MUNICIPALITY_CALGARY_ALBERTA"
+    const v3, 0x1181c5
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 417
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzha:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1a1
+    const-string v1, "PROVIDER_CA_PUBLIC_MUNICIPALITY_TORONTO_ONTARIO"
 
-    const v2, 0x1181c6
+    const/16 v2, 0x1a1
 
-    const-string v3, "PROVIDER_CA_PUBLIC_MUNICIPALITY_TORONTO_ONTARIO"
+    const v3, 0x1181c6
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 418
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1a2
+    const-string v1, "PROVIDER_SE_PUBLIC_MUNICIPALITY"
 
-    const v2, 0x1181d
+    const/16 v2, 0x1a2
 
-    const-string v3, "PROVIDER_SE_PUBLIC_MUNICIPALITY"
+    const v3, 0x1181d
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 419
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1a3
+    const-string v1, "PROVIDER_SE_PUBLIC_MUNICIPALITY_UMEA"
 
-    const v2, 0x1181d1
+    const/16 v2, 0x1a3
 
-    const-string v3, "PROVIDER_SE_PUBLIC_MUNICIPALITY_UMEA"
+    const v3, 0x1181d1
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 420
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1a4
+    const-string v1, "PROVIDER_UA_PUBLIC_MUNICIPALITY"
 
-    const v2, 0x1181e
+    const/16 v2, 0x1a4
 
-    const-string v3, "PROVIDER_UA_PUBLIC_MUNICIPALITY"
+    const v3, 0x1181e
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 421
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhe:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1a5
+    const-string v1, "PROVIDER_UA_PUBLIC_MUNICIPALITY_KHARKIV"
 
-    const v2, 0x1181e1
+    const/16 v2, 0x1a5
 
-    const-string v3, "PROVIDER_UA_PUBLIC_MUNICIPALITY_KHARKIV"
+    const v3, 0x1181e1
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 422
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1a6
+    const-string v1, "PROVIDER_OTHER_PUBLIC_MUNICIPALITY"
 
-    const v2, 0x1181f1
+    const/16 v2, 0x1a6
 
-    const-string v3, "PROVIDER_OTHER_PUBLIC_MUNICIPALITY"
+    const v3, 0x1181f1
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 423
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1a7
+    const-string v1, "PROVIDER_OTHER_PUBLIC_MUNICIPALITY_AQUA_CALIENTE_CAHUILLA_INDIANS"
 
-    const v2, 0x1181f11
+    const/16 v2, 0x1a7
 
-    const-string v3, "PROVIDER_OTHER_PUBLIC_MUNICIPALITY_AQUA_CALIENTE_CAHUILLA_INDIANS"
+    const v3, 0x1181f11
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 424
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1a8
+    const-string v1, "PROVIDER_FR_PUBLIC_MUNICIPALITY"
 
-    const v2, 0x1181f2
+    const/16 v2, 0x1a8
 
-    const-string v3, "PROVIDER_FR_PUBLIC_MUNICIPALITY"
+    const v3, 0x1181f2
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 425
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhi:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1a9
+    const-string v1, "PROVIDER_FR_PUBLIC_MUNICIPALITY_PONT_AUDEMER"
 
-    const v2, 0x1181f21
+    const/16 v2, 0x1a9
 
-    const-string v3, "PROVIDER_FR_PUBLIC_MUNICIPALITY_PONT_AUDEMER"
+    const v3, 0x1181f21
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 426
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1aa
+    const-string v1, "PROVIDER_FR_PUBLIC_MUNICIPALITY_BORDEAUX"
 
-    const v2, 0x1181f22
+    const/16 v2, 0x1aa
 
-    const-string v3, "PROVIDER_FR_PUBLIC_MUNICIPALITY_BORDEAUX"
+    const v3, 0x1181f22
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 427
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhk:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1ab
+    const-string v1, "PROVIDER_SG_PUBLIC_MUNICIPALITY"
 
-    const v2, 0x1181f3
+    const/16 v2, 0x1ab
 
-    const-string v3, "PROVIDER_SG_PUBLIC_MUNICIPALITY"
+    const v3, 0x1181f3
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 428
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhl:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1ac
+    const-string v1, "PROVIDER_BR_PUBLIC_MUNICIPALITY"
 
-    const v2, 0x1181f4
+    const/16 v2, 0x1ac
 
-    const-string v3, "PROVIDER_BR_PUBLIC_MUNICIPALITY"
+    const v3, 0x1181f4
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 429
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1ad
+    const-string v1, "PROVIDER_BR_PUBLIC_MUNICIPALITY_RIO_DE_JANEIRO"
 
-    const v2, 0x1181f41
+    const/16 v2, 0x1ad
 
-    const-string v3, "PROVIDER_BR_PUBLIC_MUNICIPALITY_RIO_DE_JANEIRO"
+    const v3, 0x1181f41
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 430
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhn:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1ae
+    const-string v1, "PROVIDER_MAPCUBE"
 
-    const/16 v2, 0x1182
+    const/16 v2, 0x1ae
 
-    const-string v3, "PROVIDER_MAPCUBE"
+    const/16 v3, 0x1182
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 431
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzho:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1af
+    const-string v1, "PROVIDER_3D_REALITYMAPS"
 
-    const/16 v2, 0x1183
+    const/16 v2, 0x1af
 
-    const-string v3, "PROVIDER_3D_REALITYMAPS"
+    const/16 v3, 0x1183
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 432
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1b0
+    const-string v1, "PROVIDER_DEUTSCHES_ZENTRUM_FUR_LUFT_UND_RAUMFAHRT"
 
-    const/16 v2, 0x1184
+    const/16 v2, 0x1b0
 
-    const-string v3, "PROVIDER_DEUTSCHES_ZENTRUM_FUR_LUFT_UND_RAUMFAHRT"
+    const/16 v3, 0x1184
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 433
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1b1
+    const-string v1, "PROVIDER_3D_CITIES_SOCIEDADE_ANONIMA"
 
-    const/16 v2, 0x1185
+    const/16 v2, 0x1b1
 
-    const-string v3, "PROVIDER_3D_CITIES_SOCIEDADE_ANONIMA"
+    const/16 v3, 0x1185
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 434
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1b2
+    const-string v1, "PROVIDER_DISNEY"
 
-    const/16 v2, 0x1186
+    const/16 v2, 0x1b2
 
-    const-string v3, "PROVIDER_DISNEY"
+    const/16 v3, 0x1186
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 435
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhs:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1b3
+    const-string v1, "PROVIDER_CYBERCITY"
 
-    const/16 v2, 0x1187
+    const/16 v2, 0x1b3
 
-    const-string v3, "PROVIDER_CYBERCITY"
+    const/16 v3, 0x1187
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 436
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzht:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1b4
+    const-string v1, "PROVIDER_PRECISION_LIGHTWORKS_MODELWORKS"
 
-    const/16 v2, 0x1188
+    const/16 v2, 0x1b4
 
-    const-string v3, "PROVIDER_PRECISION_LIGHTWORKS_MODELWORKS"
+    const/16 v3, 0x1188
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 437
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1b5
+    const-string v1, "PROVIDER_VIRTUAL_HUNGARY_LIMITED"
 
-    const/16 v2, 0x1189
+    const/16 v2, 0x1b5
 
-    const-string v3, "PROVIDER_VIRTUAL_HUNGARY_LIMITED"
+    const/16 v3, 0x1189
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 438
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1b6
+    const-string v1, "PROVIDER_VIRTUEL_CITY"
 
-    const/16 v2, 0x118a
+    const/16 v2, 0x1b6
 
-    const-string v3, "PROVIDER_VIRTUEL_CITY"
+    const/16 v3, 0x118a
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 439
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1b7
+    const-string v1, "PROVIDER_SCREAMPOINT_INTERNATIONAL"
 
-    const/16 v2, 0x118b
+    const/16 v2, 0x1b7
 
-    const-string v3, "PROVIDER_SCREAMPOINT_INTERNATIONAL"
+    const/16 v3, 0x118b
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 440
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1b8
+    const-string v1, "PROVIDER_AGENTSCHAP_VOOR_GEOGRAFISCHE_INFORMATIE_VLAANDEREN"
 
-    const/16 v2, 0x118c
+    const/16 v2, 0x1b8
 
-    const-string v3, "PROVIDER_AGENTSCHAP_VOOR_GEOGRAFISCHE_INFORMATIE_VLAANDEREN"
+    const/16 v3, 0x118c
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 441
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhy:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1b9
+    const-string v1, "PROVIDER_FR_GOVERNMENT"
 
-    const/16 v2, 0x118d
+    const/16 v2, 0x1b9
 
-    const-string v3, "PROVIDER_FR_GOVERNMENT"
+    const/16 v3, 0x118d
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 442
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1ba
+    const-string v1, "PROVIDER_FR_INSTITUT_GEOGRAPHIQUE_NATIONAL"
 
-    const v2, 0x118d1
+    const/16 v2, 0x1ba
 
-    const-string v3, "PROVIDER_FR_INSTITUT_GEOGRAPHIQUE_NATIONAL"
+    const v3, 0x118d1
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 443
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1bb
+    const-string v1, "PROVIDER_FR_CADASTRE"
 
-    const v2, 0x118d2
+    const/16 v2, 0x1bb
 
-    const-string v3, "PROVIDER_FR_CADASTRE"
+    const v3, 0x118d2
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 444
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1bc
+    const-string v1, "PROVIDER_DIADIEM"
 
-    const/16 v2, 0x118e
+    const/16 v2, 0x1bc
 
-    const-string v3, "PROVIDER_DIADIEM"
+    const/16 v3, 0x118e
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 445
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1bd
+    const-string v1, "PROVIDER_THE_WEATHER_CHANNEL"
 
-    const/16 v2, 0x118f
+    const/16 v2, 0x1bd
 
-    const-string v3, "PROVIDER_THE_WEATHER_CHANNEL"
+    const/16 v3, 0x118f
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 446
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1be
+    const-string v1, "PROVIDER_COWI"
 
-    const/16 v2, 0x1190
+    const/16 v2, 0x1be
 
-    const-string v3, "PROVIDER_COWI"
+    const/16 v3, 0x1190
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 447
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1bf
+    const-string v1, "PROVIDER_FALKPLAN_ANDES"
 
-    const/16 v2, 0x1191
+    const/16 v2, 0x1bf
 
-    const-string v3, "PROVIDER_FALKPLAN_ANDES"
+    const/16 v3, 0x1191
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 448
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1c0
+    const-string v1, "PROVIDER_NL_GOVERNMENT"
 
-    const/16 v2, 0x1192
+    const/16 v2, 0x1c0
 
-    const-string v3, "PROVIDER_NL_GOVERNMENT"
+    const/16 v3, 0x1192
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 449
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1c1
+    const-string v1, "PROVIDER_NL_KADASTER"
 
-    const v2, 0x11921
+    const/16 v2, 0x1c1
 
-    const-string v3, "PROVIDER_NL_KADASTER"
+    const v3, 0x11921
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 450
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1c2
+    const-string v1, "PROVIDER_NL_BOARD_OF_TOURISM_AND_CONVENTIONS"
 
-    const v2, 0x11922
+    const/16 v2, 0x1c2
 
-    const-string v3, "PROVIDER_NL_BOARD_OF_TOURISM_AND_CONVENTIONS"
+    const v3, 0x11922
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 451
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1c3
+    const-string v1, "PROVIDER_DIGITAL_MAP_PRODUCTS"
 
-    const/16 v2, 0x1193
+    const/16 v2, 0x1c3
 
-    const-string v3, "PROVIDER_DIGITAL_MAP_PRODUCTS"
+    const/16 v3, 0x1193
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 452
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1c4
+    const-string v1, "PROVIDER_SILICE_DIGITAL"
 
-    const/16 v2, 0x1194
+    const/16 v2, 0x1c4
 
-    const-string v3, "PROVIDER_SILICE_DIGITAL"
+    const/16 v3, 0x1194
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 453
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1c5
+    const-string v1, "PROVIDER_TYDAC"
 
-    const/16 v2, 0x1195
+    const/16 v2, 0x1c5
 
-    const-string v3, "PROVIDER_TYDAC"
+    const/16 v3, 0x1195
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 454
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1c6
+    const-string v1, "PROVIDER_ALBRECHT_GOLF"
 
-    const/16 v2, 0x1196
+    const/16 v2, 0x1c6
 
-    const-string v3, "PROVIDER_ALBRECHT_GOLF"
+    const/16 v3, 0x1196
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 455
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1c7
+    const-string v1, "PROVIDER_HEALTH_CH"
 
-    const/16 v2, 0x1197
+    const/16 v2, 0x1c7
 
-    const-string v3, "PROVIDER_HEALTH_CH"
+    const/16 v3, 0x1197
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 456
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1c8
+    const-string v1, "PROVIDER_VISITDENMARK"
 
-    const/16 v2, 0x1198
+    const/16 v2, 0x1c8
 
-    const-string v3, "PROVIDER_VISITDENMARK"
+    const/16 v3, 0x1198
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 457
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1c9
+    const-string v1, "PROVIDER_FLYHERE"
 
-    const/16 v2, 0x1199
+    const/16 v2, 0x1c9
 
-    const-string v3, "PROVIDER_FLYHERE"
+    const/16 v3, 0x1199
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 458
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1ca
+    const-string v1, "PROVIDER_DIGITAL_DATA_SERVICES"
 
-    const/16 v2, 0x119a
+    const/16 v2, 0x1ca
 
-    const-string v3, "PROVIDER_DIGITAL_DATA_SERVICES"
+    const/16 v3, 0x119a
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 459
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1cb
+    const-string v1, "PROVIDER_MECOMO"
 
-    const/16 v2, 0x119b
+    const/16 v2, 0x1cb
 
-    const-string v3, "PROVIDER_MECOMO"
+    const/16 v3, 0x119b
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 460
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1cc
+    const-string v1, "PROVIDER_ZA_GOVERNMENT"
 
-    const/16 v2, 0x119c
+    const/16 v2, 0x1cc
 
-    const-string v3, "PROVIDER_ZA_GOVERNMENT"
+    const/16 v3, 0x119c
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 461
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1cd
+    const-string v1, "PROVIDER_ZA_RURAL_DEVELOPMENT_LAND_REFORM"
 
-    const v2, 0x119c1
+    const/16 v2, 0x1cd
 
-    const-string v3, "PROVIDER_ZA_RURAL_DEVELOPMENT_LAND_REFORM"
+    const v3, 0x119c1
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 462
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1ce
+    const-string v1, "PROVIDER_SENSIS"
 
-    const/16 v2, 0x119d
+    const/16 v2, 0x1ce
 
-    const-string v3, "PROVIDER_SENSIS"
+    const/16 v3, 0x119d
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 463
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1cf
+    const-string v1, "PROVIDER_JJCONNECT"
 
-    const/16 v2, 0x119e
+    const/16 v2, 0x1cf
 
-    const-string v3, "PROVIDER_JJCONNECT"
+    const/16 v3, 0x119e
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 464
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1d0
+    const-string v1, "PROVIDER_OPPLYSNINGEN"
 
-    const/16 v2, 0x119f
+    const/16 v2, 0x1d0
 
-    const-string v3, "PROVIDER_OPPLYSNINGEN"
+    const/16 v3, 0x119f
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 465
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1d1
+    const-string v1, "PROVIDER_TELLUS"
 
-    const/16 v2, 0x11a0
+    const/16 v2, 0x1d1
 
-    const-string v3, "PROVIDER_TELLUS"
+    const/16 v3, 0x11a0
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 466
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1d2
+    const-string v1, "PROVIDER_IQONIA"
 
-    const/16 v2, 0x11a1
+    const/16 v2, 0x1d2
 
-    const-string v3, "PROVIDER_IQONIA"
+    const/16 v3, 0x11a1
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 467
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1d3
+    const-string v1, "PROVIDER_BE_GOVERNMENT"
 
-    const/16 v2, 0x11a2
+    const/16 v2, 0x1d3
 
-    const-string v3, "PROVIDER_BE_GOVERNMENT"
+    const/16 v3, 0x11a2
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 468
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1d4
+    const-string v1, "PROVIDER_BE_NATIONAAL_GEOGRAFISCH_INSTITUUT"
 
-    const v2, 0x11a21
+    const/16 v2, 0x1d4
 
-    const-string v3, "PROVIDER_BE_NATIONAAL_GEOGRAFISCH_INSTITUUT"
+    const v3, 0x11a21
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 469
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzia:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1d5
+    const-string v1, "PROVIDER_BE_BRUSSELS_MOBILITY"
 
-    const v2, 0x11a22
+    const/16 v2, 0x1d5
 
-    const-string v3, "PROVIDER_BE_BRUSSELS_MOBILITY"
+    const v3, 0x11a22
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 470
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzib:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1d6
+    const-string v1, "PROVIDER_YELLOWMAP_AG"
 
-    const/16 v2, 0x11a3
+    const/16 v2, 0x1d6
 
-    const-string v3, "PROVIDER_YELLOWMAP_AG"
+    const/16 v3, 0x11a3
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 471
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzic:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1d7
+    const-string v1, "PROVIDER_STIFTUNG_GESUNDHEIT"
 
-    const/16 v2, 0x11a4
+    const/16 v2, 0x1d7
 
-    const-string v3, "PROVIDER_STIFTUNG_GESUNDHEIT"
+    const/16 v3, 0x11a4
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 472
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzid:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1d8
+    const-string v1, "PROVIDER_GIATA"
 
-    const/16 v2, 0x11a5
+    const/16 v2, 0x1d8
 
-    const-string v3, "PROVIDER_GIATA"
+    const/16 v3, 0x11a5
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 473
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzie:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1d9
+    const-string v1, "PROVIDER_SANPARKS"
 
-    const/16 v2, 0x11a6
+    const/16 v2, 0x1d9
 
-    const-string v3, "PROVIDER_SANPARKS"
+    const/16 v3, 0x11a6
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 474
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzif:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1da
+    const-string v1, "PROVIDER_CENTRE_DINFORMATIQUE_POUR_LA_REGION_BRUXELLOISE"
 
-    const/16 v2, 0x11a7
+    const/16 v2, 0x1da
 
-    const-string v3, "PROVIDER_CENTRE_DINFORMATIQUE_POUR_LA_REGION_BRUXELLOISE"
+    const/16 v3, 0x11a7
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 475
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzig:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1db
+    const-string v1, "PROVIDER_INFOPORTUGAL"
 
-    const/16 v2, 0x11a8
+    const/16 v2, 0x1db
 
-    const-string v3, "PROVIDER_INFOPORTUGAL"
+    const/16 v3, 0x11a8
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 476
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzih:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1dc
+    const-string v1, "PROVIDER_NEGOCIOS_DE_TELECOMUNICACOES_E_SISTEMAS_DE_INFORMACAO"
 
-    const/16 v2, 0x11a9
+    const/16 v2, 0x1dc
 
-    const-string v3, "PROVIDER_NEGOCIOS_DE_TELECOMUNICACOES_E_SISTEMAS_DE_INFORMACAO"
+    const/16 v3, 0x11a9
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 477
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzii:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1dd
+    const-string v1, "PROVIDER_COLLINS_BARTHOLOMEW"
 
-    const/16 v2, 0x11aa
+    const/16 v2, 0x1dd
 
-    const-string v3, "PROVIDER_COLLINS_BARTHOLOMEW"
+    const/16 v3, 0x11aa
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 478
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzij:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1de
+    const-string v1, "PROVIDER_PROTECT_PLANET_OCEAN"
 
-    const/16 v2, 0x11ab
+    const/16 v2, 0x1de
 
-    const-string v3, "PROVIDER_PROTECT_PLANET_OCEAN"
+    const/16 v3, 0x11ab
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 479
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzik:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1df
+    const-string v1, "PROVIDER_KARTTAKESKUS"
 
-    const/16 v2, 0x11ac
+    const/16 v2, 0x1df
 
-    const-string v3, "PROVIDER_KARTTAKESKUS"
+    const/16 v3, 0x11ac
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 480
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzil:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1e0
+    const-string v1, "PROVIDER_FI_GOVERNMENT"
 
-    const/16 v2, 0x11ad
+    const/16 v2, 0x1e0
 
-    const-string v3, "PROVIDER_FI_GOVERNMENT"
+    const/16 v3, 0x11ad
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 481
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzim:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1e1
+    const-string v1, "PROVIDER_FI_NATIONAL_ROAD_ADMINISTRATION"
 
-    const v2, 0x11ad1
+    const/16 v2, 0x1e1
 
-    const-string v3, "PROVIDER_FI_NATIONAL_ROAD_ADMINISTRATION"
+    const v3, 0x11ad1
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 482
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzin:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1e2
+    const-string v1, "PROVIDER_FI_NATIONAL_LAND_SURVEY"
 
-    const v2, 0x11ad2
+    const/16 v2, 0x1e2
 
-    const-string v3, "PROVIDER_FI_NATIONAL_LAND_SURVEY"
+    const v3, 0x11ad2
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 483
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzio:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1e3
+    const-string v1, "PROVIDER_FI_STATISTICS_FINLAND"
 
-    const v2, 0x11ad3
+    const/16 v2, 0x1e3
 
-    const-string v3, "PROVIDER_FI_STATISTICS_FINLAND"
+    const v3, 0x11ad3
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 484
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzip:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1e4
+    const-string v1, "PROVIDER_GB_GOVERNMENT"
 
-    const/16 v2, 0x11ae
+    const/16 v2, 0x1e4
 
-    const-string v3, "PROVIDER_GB_GOVERNMENT"
+    const/16 v3, 0x11ae
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 485
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1e5
+    const-string v1, "PROVIDER_GB_ORDNANCE_SURVEY"
 
-    const v2, 0x11ae1
+    const/16 v2, 0x1e5
 
-    const-string v3, "PROVIDER_GB_ORDNANCE_SURVEY"
+    const v3, 0x11ae1
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 486
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzir:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1e6
+    const-string v1, "PROVIDER_NATURAL_ENGLAND"
 
-    const v2, 0x11ae2
+    const/16 v2, 0x1e6
 
-    const-string v3, "PROVIDER_NATURAL_ENGLAND"
+    const v3, 0x11ae2
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 487
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzis:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1e7
+    const-string v1, "PROVIDER_WELSH_GOVERNMENT"
 
-    const v2, 0x11ae3
+    const/16 v2, 0x1e7
 
-    const-string v3, "PROVIDER_WELSH_GOVERNMENT"
+    const v3, 0x11ae3
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 488
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzit:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1e8
+    const-string v1, "PROVIDER_GB_OFFICE_FOR_NATIONAL_STATISTICS"
 
-    const v2, 0x11ae4
+    const/16 v2, 0x1e8
 
-    const-string v3, "PROVIDER_GB_OFFICE_FOR_NATIONAL_STATISTICS"
+    const v3, 0x11ae4
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 489
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1e9
+    const-string v1, "PROVIDER_EPSILON"
 
-    const/16 v2, 0x11af
+    const/16 v2, 0x1e9
 
-    const-string v3, "PROVIDER_EPSILON"
+    const/16 v3, 0x11af
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 490
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1ea
+    const-string v1, "PROVIDER_PARTNER_FRONT_END"
 
-    const/16 v2, 0x11b0
+    const/16 v2, 0x1ea
 
-    const-string v3, "PROVIDER_PARTNER_FRONT_END"
+    const/16 v3, 0x11b0
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 491
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1eb
+    const-string v1, "PROVIDER_CARTESIA"
 
-    const/16 v2, 0x11b1
+    const/16 v2, 0x1eb
 
-    const-string v3, "PROVIDER_CARTESIA"
+    const/16 v3, 0x11b1
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 492
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzix:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1ec
+    const-string v1, "PROVIDER_SE_GOVERNMENT"
 
-    const/16 v2, 0x11b2
+    const/16 v2, 0x1ec
 
-    const-string v3, "PROVIDER_SE_GOVERNMENT"
+    const/16 v3, 0x11b2
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 493
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziy:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1ed
+    const-string v1, "PROVIDER_SE_TRAFIKVERKET"
 
-    const v2, 0x11b21
+    const/16 v2, 0x1ed
 
-    const-string v3, "PROVIDER_SE_TRAFIKVERKET"
+    const v3, 0x11b21
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 494
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1ee
+    const-string v1, "PROVIDER_SE_NATURVARDSVERKET"
 
-    const v2, 0x11b22
+    const/16 v2, 0x1ee
 
-    const-string v3, "PROVIDER_SE_NATURVARDSVERKET"
+    const v3, 0x11b22
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 495
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1ef
+    const-string v1, "PROVIDER_IE_GOVERNMENT"
 
-    const/16 v2, 0x11b3
+    const/16 v2, 0x1ef
 
-    const-string v3, "PROVIDER_IE_GOVERNMENT"
+    const/16 v3, 0x11b3
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 496
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1f0
+    const-string v1, "PROVIDER_IE_ORDNANCE_SURVEY_IRELAND"
 
-    const v2, 0x11b31
+    const/16 v2, 0x1f0
 
-    const-string v3, "PROVIDER_IE_ORDNANCE_SURVEY_IRELAND"
+    const v3, 0x11b31
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 497
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1f1
+    const-string v1, "PROVIDER_LU_GOVERNMENT"
 
-    const/16 v2, 0x11b4
+    const/16 v2, 0x1f1
 
-    const-string v3, "PROVIDER_LU_GOVERNMENT"
+    const/16 v3, 0x11b4
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 498
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1f2
+    const-string v1, "PROVIDER_LU_P_AND_T_LUXEMBOURG"
 
-    const v2, 0x11b41
+    const/16 v2, 0x1f2
 
-    const-string v3, "PROVIDER_LU_P_AND_T_LUXEMBOURG"
+    const v3, 0x11b41
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 499
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1f3
+    const-string v1, "PROVIDER_LU_ADMINISTRATION_DU_CADASTRE_ET_DE_LA_TOPOGRAPHIE"
 
-    const v2, 0x11b42
+    const/16 v2, 0x1f3
 
-    const-string v3, "PROVIDER_LU_ADMINISTRATION_DU_CADASTRE_ET_DE_LA_TOPOGRAPHIE"
+    const v3, 0x11b42
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 500
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1f4
+    const-string v1, "PROVIDER_LU_NATIONAL_TOURIST_OFFICE"
 
-    const v2, 0x11b43
+    const/16 v2, 0x1f4
 
-    const-string v3, "PROVIDER_LU_NATIONAL_TOURIST_OFFICE"
+    const v3, 0x11b43
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 501
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1f5
+    const-string v1, "PROVIDER_MAPFLOW"
 
-    const/16 v2, 0x11b5
+    const/16 v2, 0x1f5
 
-    const-string v3, "PROVIDER_MAPFLOW"
+    const/16 v3, 0x11b5
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 502
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1f6
+    const-string v1, "PROVIDER_TKARTOR"
 
-    const/16 v2, 0x11b6
+    const/16 v2, 0x1f6
 
-    const-string v3, "PROVIDER_TKARTOR"
+    const/16 v3, 0x11b6
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 503
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1f7
+    const-string v1, "PROVIDER_JUMPSTART"
 
-    const/16 v2, 0x11b7
+    const/16 v2, 0x1f7
 
-    const-string v3, "PROVIDER_JUMPSTART"
+    const/16 v3, 0x11b7
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 504
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1f8
+    const-string v1, "PROVIDER_EPTISA"
 
-    const/16 v2, 0x11b8
+    const/16 v2, 0x1f8
 
-    const-string v3, "PROVIDER_EPTISA"
+    const/16 v3, 0x11b8
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 505
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1f9
+    const-string v1, "PROVIDER_MC_GOVERNMENT"
 
-    const/16 v2, 0x11b9
+    const/16 v2, 0x1f9
 
-    const-string v3, "PROVIDER_MC_GOVERNMENT"
+    const/16 v3, 0x11b9
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 506
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1fa
+    const-string v1, "PROVIDER_MC_PRINCIPAUTE_DE_MONACO"
 
-    const v2, 0x11b91
+    const/16 v2, 0x1fa
 
-    const-string v3, "PROVIDER_MC_PRINCIPAUTE_DE_MONACO"
+    const v3, 0x11b91
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 507
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1fb
+    const-string v1, "PROVIDER_MONOLIT"
 
-    const/16 v2, 0x11ba
+    const/16 v2, 0x1fb
 
-    const-string v3, "PROVIDER_MONOLIT"
+    const/16 v3, 0x11ba
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 508
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1fc
+    const-string v1, "PROVIDER_ENVIRONMENTAL_SYSTEMS_RESEARCH_INSTITUTE"
 
-    const/16 v2, 0x11bb
+    const/16 v2, 0x1fc
 
-    const-string v3, "PROVIDER_ENVIRONMENTAL_SYSTEMS_RESEARCH_INSTITUTE"
+    const/16 v3, 0x11bb
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 509
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1fd
+    const-string v1, "PROVIDER_MODIS"
 
-    const/16 v2, 0x11bc
+    const/16 v2, 0x1fd
 
-    const-string v3, "PROVIDER_MODIS"
+    const/16 v3, 0x11bc
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 510
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1fe
+    const-string v1, "PROVIDER_GEOX"
 
-    const/16 v2, 0x11bd
+    const/16 v2, 0x1fe
 
-    const-string v3, "PROVIDER_GEOX"
+    const/16 v3, 0x11bd
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 511
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x1ff
+    const-string v1, "PROVIDER_GEODIRECTORY"
 
-    const/16 v2, 0x11be
+    const/16 v2, 0x1ff
 
-    const-string v3, "PROVIDER_GEODIRECTORY"
+    const/16 v3, 0x11be
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 512
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x200
+    const-string v1, "PROVIDER_GEOPLAN"
 
-    const/16 v2, 0x11bf
+    const/16 v2, 0x200
 
-    const-string v3, "PROVIDER_GEOPLAN"
+    const/16 v3, 0x11bf
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 513
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x201
+    const-string v1, "PROVIDER_INFODIREKT"
 
-    const/16 v2, 0x11c0
+    const/16 v2, 0x201
 
-    const-string v3, "PROVIDER_INFODIREKT"
+    const/16 v3, 0x11c0
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 514
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x202
+    const-string v1, "PROVIDER_GEOGLOBAL"
 
-    const/16 v2, 0x11c1
+    const/16 v2, 0x202
 
-    const-string v3, "PROVIDER_GEOGLOBAL"
+    const/16 v3, 0x11c1
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 515
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x203
+    const-string v1, "PROVIDER_DEUTSCHE_POST"
 
-    const/16 v2, 0x11c2
+    const/16 v2, 0x203
 
-    const-string v3, "PROVIDER_DEUTSCHE_POST"
+    const/16 v3, 0x11c2
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 516
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x204
+    const-string v1, "PROVIDER_TRACASA"
 
-    const/16 v2, 0x11c3
+    const/16 v2, 0x204
 
-    const-string v3, "PROVIDER_TRACASA"
+    const/16 v3, 0x11c3
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 517
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x205
+    const-string v1, "PROVIDER_CORREOS"
 
-    const/16 v2, 0x11c4
+    const/16 v2, 0x205
 
-    const-string v3, "PROVIDER_CORREOS"
+    const/16 v3, 0x11c4
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 518
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x206
+    const-string v1, "PROVIDER_ES_GOVERNMENT"
 
-    const/16 v2, 0x11c5
+    const/16 v2, 0x206
 
-    const-string v3, "PROVIDER_ES_GOVERNMENT"
+    const/16 v3, 0x11c5
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 519
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x207
+    const-string v1, "PROVIDER_ES_CENTRO_NACIONAL_DE_INFORMACION_GEOGRAFICA"
 
-    const v2, 0x11c51
+    const/16 v2, 0x207
 
-    const-string v3, "PROVIDER_ES_CENTRO_NACIONAL_DE_INFORMACION_GEOGRAFICA"
+    const v3, 0x11c51
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 520
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x208
+    const-string v1, "PROVIDER_EDIMAP"
 
-    const/16 v2, 0x11c6
+    const/16 v2, 0x208
 
-    const-string v3, "PROVIDER_EDIMAP"
+    const/16 v3, 0x11c6
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 521
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzja:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x209
+    const-string v1, "PROVIDER_VERIZON"
 
-    const/16 v2, 0x11c7
+    const/16 v2, 0x209
 
-    const-string v3, "PROVIDER_VERIZON"
+    const/16 v3, 0x11c7
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 522
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x20a
+    const-string v1, "PROVIDER_NATIONAL_GEOGRAPHIC_MAPS"
 
-    const/16 v2, 0x11c8
+    const/16 v2, 0x20a
 
-    const-string v3, "PROVIDER_NATIONAL_GEOGRAPHIC_MAPS"
+    const/16 v3, 0x11c8
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 523
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x20b
+    const-string v1, "PROVIDER_PROMAPS"
 
-    const/16 v2, 0x11c9
+    const/16 v2, 0x20b
 
-    const-string v3, "PROVIDER_PROMAPS"
+    const/16 v3, 0x11c9
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 524
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x20c
+    const-string v1, "PROVIDER_CONSODATA"
 
-    const/16 v2, 0x11ca
+    const/16 v2, 0x20c
 
-    const-string v3, "PROVIDER_CONSODATA"
+    const/16 v3, 0x11ca
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 525
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzje:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x20d
+    const-string v1, "PROVIDER_DE_AGOSTINI"
 
-    const/16 v2, 0x11cb
+    const/16 v2, 0x20d
 
-    const-string v3, "PROVIDER_DE_AGOSTINI"
+    const/16 v3, 0x11cb
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 526
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x20e
+    const-string v1, "PROVIDER_FEDERPARCHI"
 
-    const/16 v2, 0x11cc
+    const/16 v2, 0x20e
 
-    const-string v3, "PROVIDER_FEDERPARCHI"
+    const/16 v3, 0x11cc
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 527
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x20f
+    const-string v1, "PROVIDER_NAVIGO"
 
-    const/16 v2, 0x11cd
+    const/16 v2, 0x20f
 
-    const-string v3, "PROVIDER_NAVIGO"
+    const/16 v3, 0x11cd
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 528
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x210
+    const-string v1, "PROVIDER_ITALIAMAPPE"
 
-    const/16 v2, 0x11ce
+    const/16 v2, 0x210
 
-    const-string v3, "PROVIDER_ITALIAMAPPE"
+    const/16 v3, 0x11ce
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 529
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzji:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x211
+    const-string v1, "PROVIDER_CZECOT"
 
-    const/16 v2, 0x11cf
+    const/16 v2, 0x211
 
-    const-string v3, "PROVIDER_CZECOT"
+    const/16 v3, 0x11cf
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 530
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x212
+    const-string v1, "PROVIDER_NATURAL_EARTH"
 
-    const/16 v2, 0x11d0
+    const/16 v2, 0x212
 
-    const-string v3, "PROVIDER_NATURAL_EARTH"
+    const/16 v3, 0x11d0
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 531
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjk:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x213
+    const-string v1, "PROVIDER_REGIO"
 
-    const/16 v2, 0x11d1
+    const/16 v2, 0x213
 
-    const-string v3, "PROVIDER_REGIO"
+    const/16 v3, 0x11d1
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 532
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjl:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x214
+    const-string v1, "PROVIDER_SHIPWRECK_CENTRAL"
 
-    const/16 v2, 0x11d2
+    const/16 v2, 0x214
 
-    const-string v3, "PROVIDER_SHIPWRECK_CENTRAL"
+    const/16 v3, 0x11d2
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 533
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x215
+    const-string v1, "PROVIDER_RUTGERS_STATE_UNIVERSITY"
 
-    const/16 v2, 0x11d3
+    const/16 v2, 0x215
 
-    const-string v3, "PROVIDER_RUTGERS_STATE_UNIVERSITY"
+    const/16 v3, 0x11d3
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 534
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjn:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x216
+    const-string v1, "PROVIDER_TWINICE"
 
-    const/16 v2, 0x11d4
+    const/16 v2, 0x216
 
-    const-string v3, "PROVIDER_TWINICE"
+    const/16 v3, 0x11d4
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 535
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjo:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x217
+    const-string v1, "PROVIDER_NORTHERN_IRELAND_TOURIST_BOARD"
 
-    const/16 v2, 0x11d5
+    const/16 v2, 0x217
 
-    const-string v3, "PROVIDER_NORTHERN_IRELAND_TOURIST_BOARD"
+    const/16 v3, 0x11d5
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 536
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x218
+    const-string v1, "PROVIDER_INFOGROUP"
 
-    const/16 v2, 0x11d6
+    const/16 v2, 0x218
 
-    const-string v3, "PROVIDER_INFOGROUP"
+    const/16 v3, 0x11d6
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 537
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x219
+    const-string v1, "PROVIDER_TNET"
 
-    const/16 v2, 0x11d7
+    const/16 v2, 0x219
 
-    const-string v3, "PROVIDER_TNET"
+    const/16 v3, 0x11d7
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 538
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x21a
+    const-string v1, "PROVIDER_CTT_CORREIOS_DE_PORTUGAL"
 
-    const/16 v2, 0x11d8
+    const/16 v2, 0x21a
 
-    const-string v3, "PROVIDER_CTT_CORREIOS_DE_PORTUGAL"
+    const/16 v3, 0x11d8
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 539
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjs:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x21b
+    const-string v1, "PROVIDER_EUROPARC"
 
-    const/16 v2, 0x11d9
+    const/16 v2, 0x21b
 
-    const-string v3, "PROVIDER_EUROPARC"
+    const/16 v3, 0x11d9
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 540
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjt:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x21c
+    const-string v1, "PROVIDER_IUPPITER"
 
-    const/16 v2, 0x11da
+    const/16 v2, 0x21c
 
-    const-string v3, "PROVIDER_IUPPITER"
+    const/16 v3, 0x11da
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 541
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzju:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x21d
+    const-string v1, "PROVIDER_MICHAEL_BAUER_INTERNATIONAL"
 
-    const/16 v2, 0x11db
+    const/16 v2, 0x21d
 
-    const-string v3, "PROVIDER_MICHAEL_BAUER_INTERNATIONAL"
+    const/16 v3, 0x11db
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 542
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x21e
+    const-string v1, "PROVIDER_LEPTON"
 
-    const/16 v2, 0x11dc
+    const/16 v2, 0x21e
 
-    const-string v3, "PROVIDER_LEPTON"
+    const/16 v3, 0x11dc
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 543
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x21f
+    const-string v1, "PROVIDER_MAPPOINT"
 
-    const/16 v2, 0x11dd
+    const/16 v2, 0x21f
 
-    const-string v3, "PROVIDER_MAPPOINT"
+    const/16 v3, 0x11dd
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 544
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x220
+    const-string v1, "PROVIDER_GEODATA"
 
-    const/16 v2, 0x11de
+    const/16 v2, 0x220
 
-    const-string v3, "PROVIDER_GEODATA"
+    const/16 v3, 0x11de
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 545
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjy:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x221
+    const-string v1, "PROVIDER_RU_GOVERNMENT"
 
-    const/16 v2, 0x11df
+    const/16 v2, 0x221
 
-    const-string v3, "PROVIDER_RU_GOVERNMENT"
+    const/16 v3, 0x11df
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 546
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x222
+    const-string v1, "PROVIDER_RU_FNS_KLADR"
 
-    const v2, 0x11df1
+    const/16 v2, 0x222
 
-    const-string v3, "PROVIDER_RU_FNS_KLADR"
+    const v3, 0x11df1
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 547
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x223
+    const-string v1, "PROVIDER_BR_GOVERNMENT"
 
-    const/16 v2, 0x11e0
+    const/16 v2, 0x223
 
-    const-string v3, "PROVIDER_BR_GOVERNMENT"
+    const/16 v3, 0x11e0
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 548
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x224
+    const-string v1, "PROVIDER_BR_INSTITUTO_BRASILEIRO_DO_MEIO_AMBIENTE_E_DOS_RECURSOS_NATURAIS_RENOVAVEIS"
 
-    const v2, 0x11e01
+    const/16 v2, 0x224
 
-    const-string v3, "PROVIDER_BR_INSTITUTO_BRASILEIRO_DO_MEIO_AMBIENTE_E_DOS_RECURSOS_NATURAIS_RENOVAVEIS"
+    const v3, 0x11e01
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 549
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x225
+    const-string v1, "PROVIDER_BR_MINISTERIO_DO_MEIO_AMBIENTE"
 
-    const v2, 0x11e02
+    const/16 v2, 0x225
 
-    const-string v3, "PROVIDER_BR_MINISTERIO_DO_MEIO_AMBIENTE"
+    const v3, 0x11e02
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 550
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x226
+    const-string v1, "PROVIDER_BR_AGENCIA_NACIONAL_DE_AGUAS"
 
-    const v2, 0x11e03
+    const/16 v2, 0x226
 
-    const-string v3, "PROVIDER_BR_AGENCIA_NACIONAL_DE_AGUAS"
+    const v3, 0x11e03
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 551
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x227
+    const-string v1, "PROVIDER_BR_INSTITUTO_BRASILEIRO_DE_GEOGRAFIA_E_ESTATISTICA"
 
-    const v2, 0x11e04
+    const/16 v2, 0x227
 
-    const-string v3, "PROVIDER_BR_INSTITUTO_BRASILEIRO_DE_GEOGRAFIA_E_ESTATISTICA"
+    const v3, 0x11e04
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 552
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x228
+    const-string v1, "PROVIDER_BR_FUNDACAO_NACIONAL_DO_INDIO"
 
-    const v2, 0x11e05
+    const/16 v2, 0x228
 
-    const-string v3, "PROVIDER_BR_FUNDACAO_NACIONAL_DO_INDIO"
+    const v3, 0x11e05
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 553
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x229
+    const-string v1, "PROVIDER_BR_DEPARTAMENTO_NACIONAL_DE_INFRAESTRUTURA_DE_TRANSPORTES"
 
-    const v2, 0x11e06
+    const/16 v2, 0x229
 
-    const-string v3, "PROVIDER_BR_DEPARTAMENTO_NACIONAL_DE_INFRAESTRUTURA_DE_TRANSPORTES"
+    const v3, 0x11e06
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 554
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x22a
+    const-string v1, "PROVIDER_AZAVEA"
 
-    const/16 v2, 0x11e1
+    const/16 v2, 0x22a
 
-    const-string v3, "PROVIDER_AZAVEA"
+    const/16 v3, 0x11e1
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 555
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x22b
+    const-string v1, "PROVIDER_NORTHSTAR"
 
-    const/16 v2, 0x11e2
+    const/16 v2, 0x22b
 
-    const-string v3, "PROVIDER_NORTHSTAR"
+    const/16 v3, 0x11e2
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 556
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x22c
+    const-string v1, "PROVIDER_COMMEDI"
 
-    const/16 v2, 0x11e3
+    const/16 v2, 0x22c
 
-    const-string v3, "PROVIDER_COMMEDI"
+    const/16 v3, 0x11e3
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 557
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x22d
+    const-string v1, "PROVIDER_NEXUS_GEOGRAFICS"
 
-    const/16 v2, 0x11e4
+    const/16 v2, 0x22d
 
-    const-string v3, "PROVIDER_NEXUS_GEOGRAFICS"
+    const/16 v3, 0x11e4
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 558
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x22e
+    const-string v1, "PROVIDER_INFOERA"
 
-    const/16 v2, 0x11e5
+    const/16 v2, 0x22e
 
-    const-string v3, "PROVIDER_INFOERA"
+    const/16 v3, 0x11e5
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 559
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x22f
+    const-string v1, "PROVIDER_AD_GOVERNMENT"
 
-    const/16 v2, 0x11e6
+    const/16 v2, 0x22f
 
-    const-string v3, "PROVIDER_AD_GOVERNMENT"
+    const/16 v3, 0x11e6
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 560
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x230
+    const-string v1, "PROVIDER_AD_AREA_DE_CARTOGRAFIA"
 
-    const v2, 0x11e61
+    const/16 v2, 0x230
 
-    const-string v3, "PROVIDER_AD_AREA_DE_CARTOGRAFIA"
+    const v3, 0x11e61
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 561
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x231
+    const-string v1, "PROVIDER_MAXXIMA"
 
-    const/16 v2, 0x11e7
+    const/16 v2, 0x231
 
-    const-string v3, "PROVIDER_MAXXIMA"
+    const/16 v3, 0x11e7
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 562
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x232
+    const-string v1, "PROVIDER_SI_GOVERNMENT"
 
-    const/16 v2, 0x11e8
+    const/16 v2, 0x232
 
-    const-string v3, "PROVIDER_SI_GOVERNMENT"
+    const/16 v3, 0x11e8
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 563
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x233
+    const-string v1, "PROVIDER_SI_AGENCY_FOR_ENVIRONMENT"
 
-    const v2, 0x11e81
+    const/16 v2, 0x233
 
-    const-string v3, "PROVIDER_SI_AGENCY_FOR_ENVIRONMENT"
+    const v3, 0x11e81
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 564
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x234
+    const-string v1, "PROVIDER_TRANSPORT_HI_TECH_CONSULTANTS"
 
-    const/16 v2, 0x11e9
+    const/16 v2, 0x234
 
-    const-string v3, "PROVIDER_TRANSPORT_HI_TECH_CONSULTANTS"
+    const/16 v3, 0x11e9
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 565
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x235
+    const-string v1, "PROVIDER_L1_TECHNOLOGIES"
 
-    const/16 v2, 0x11ea
+    const/16 v2, 0x235
 
-    const-string v3, "PROVIDER_L1_TECHNOLOGIES"
+    const/16 v3, 0x11ea
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 566
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x236
+    const-string v1, "PROVIDER_TELEMEDIA"
 
-    const/16 v2, 0x11eb
+    const/16 v2, 0x236
 
-    const-string v3, "PROVIDER_TELEMEDIA"
+    const/16 v3, 0x11eb
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 567
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x237
+    const-string v1, "PROVIDER_CDCOM_PROGOROD"
 
-    const/16 v2, 0x11ec
+    const/16 v2, 0x237
 
-    const-string v3, "PROVIDER_CDCOM_PROGOROD"
+    const/16 v3, 0x11ec
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 568
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x238
+    const-string v1, "PROVIDER_MIT_CITYGUIDE"
 
-    const/16 v2, 0x11ed
+    const/16 v2, 0x238
 
-    const-string v3, "PROVIDER_MIT_CITYGUIDE"
+    const/16 v3, 0x11ed
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 569
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x239
+    const-string v1, "PROVIDER_SUNCART"
 
-    const/16 v2, 0x11ee
+    const/16 v2, 0x239
 
-    const-string v3, "PROVIDER_SUNCART"
+    const/16 v3, 0x11ee
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 570
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x23a
+    const-string v1, "PROVIDER_MICROMAPPER"
 
-    const/16 v2, 0x11ef
+    const/16 v2, 0x23a
 
-    const-string v3, "PROVIDER_MICROMAPPER"
+    const/16 v3, 0x11ef
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 571
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x23b
+    const-string v1, "PROVIDER_RICHI"
 
-    const/16 v2, 0x11f0
+    const/16 v2, 0x23b
 
-    const-string v3, "PROVIDER_RICHI"
+    const/16 v3, 0x11f0
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 572
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x23c
+    const-string v1, "PROVIDER_FORUM44"
 
-    const/16 v2, 0x11f1
+    const/16 v2, 0x23c
 
-    const-string v3, "PROVIDER_FORUM44"
+    const/16 v3, 0x11f1
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 573
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzka:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x23d
+    const-string v1, "PROVIDER_SEAT"
 
-    const/16 v2, 0x11f2
+    const/16 v2, 0x23d
 
-    const-string v3, "PROVIDER_SEAT"
+    const/16 v3, 0x11f2
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 574
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x23e
+    const-string v1, "PROVIDER_VALASSIS"
 
-    const/16 v2, 0x11f3
+    const/16 v2, 0x23e
 
-    const-string v3, "PROVIDER_VALASSIS"
+    const/16 v3, 0x11f3
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 575
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x23f
+    const-string v1, "PROVIDER_NAVICOM"
 
-    const/16 v2, 0x11f4
+    const/16 v2, 0x23f
 
-    const-string v3, "PROVIDER_NAVICOM"
+    const/16 v3, 0x11f4
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 576
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x240
+    const-string v1, "PROVIDER_COLTRACK"
 
-    const/16 v2, 0x11f5
+    const/16 v2, 0x240
 
-    const-string v3, "PROVIDER_COLTRACK"
+    const/16 v3, 0x11f5
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 577
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzke:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x241
+    const-string v1, "PROVIDER_PSMA_AUSTRALIA"
 
-    const/16 v2, 0x11f6
+    const/16 v2, 0x241
 
-    const-string v3, "PROVIDER_PSMA_AUSTRALIA"
+    const/16 v3, 0x11f6
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 578
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x242
+    const-string v1, "PROVIDER_PT_DUTA_ASTAKONA_GIRINDA"
 
-    const/16 v2, 0x11f7
+    const/16 v2, 0x242
 
-    const-string v3, "PROVIDER_PT_DUTA_ASTAKONA_GIRINDA"
+    const/16 v3, 0x11f7
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 579
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x243
+    const-string v1, "PROVIDER_CA_GOVERNMENT"
 
-    const/16 v2, 0x11f8
+    const/16 v2, 0x243
 
-    const-string v3, "PROVIDER_CA_GOVERNMENT"
+    const/16 v3, 0x11f8
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 580
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x244
+    const-string v1, "PROVIDER_STATISTICS_CANADA"
 
-    const v2, 0x11f81
+    const/16 v2, 0x244
 
-    const-string v3, "PROVIDER_STATISTICS_CANADA"
+    const v3, 0x11f81
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 581
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzki:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x245
+    const-string v1, "PROVIDER_TOCTOC"
 
-    const/16 v2, 0x11f9
+    const/16 v2, 0x245
 
-    const-string v3, "PROVIDER_TOCTOC"
+    const/16 v3, 0x11f9
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 582
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x246
+    const-string v1, "PROVIDER_RMSI"
 
-    const/16 v2, 0x11fa
+    const/16 v2, 0x246
 
-    const-string v3, "PROVIDER_RMSI"
+    const/16 v3, 0x11fa
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 583
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkk:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x247
+    const-string v1, "PROVIDER_TRUE_TECHNOLOGY"
 
-    const/16 v2, 0x11fb
+    const/16 v2, 0x247
 
-    const-string v3, "PROVIDER_TRUE_TECHNOLOGY"
+    const/16 v3, 0x11fb
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 584
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkl:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x248
+    const-string v1, "PROVIDER_INCREMENT_P_CORPORATION"
 
-    const/16 v2, 0x11fc
+    const/16 v2, 0x248
 
-    const-string v3, "PROVIDER_INCREMENT_P_CORPORATION"
+    const/16 v3, 0x11fc
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 585
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x249
+    const-string v1, "PROVIDER_GOJAVAS"
 
-    const/16 v2, 0x11fd
+    const/16 v2, 0x249
 
-    const-string v3, "PROVIDER_GOJAVAS"
+    const/16 v3, 0x11fd
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 586
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkn:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x24a
+    const-string v1, "PROVIDER_GEOINFORMATION_GROUP"
 
-    const/16 v2, 0x11fe
+    const/16 v2, 0x24a
 
-    const-string v3, "PROVIDER_GEOINFORMATION_GROUP"
+    const/16 v3, 0x11fe
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 587
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzko:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x24b
+    const-string v1, "PROVIDER_CYBERSOFT"
 
-    const/16 v2, 0x11ff
+    const/16 v2, 0x24b
 
-    const-string v3, "PROVIDER_CYBERSOFT"
+    const/16 v3, 0x11ff
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 588
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x24c
+    const-string v1, "PROVIDER_TSENTR_EFFEKTIVNYKH_TEKHNOLOGIY"
 
-    const/16 v2, 0x1200
+    const/16 v2, 0x24c
 
-    const-string v3, "PROVIDER_TSENTR_EFFEKTIVNYKH_TEKHNOLOGIY"
+    const/16 v3, 0x1200
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 589
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x24d
+    const-string v1, "PROVIDER_EE_GOVERNMENT"
 
-    const/16 v2, 0x1201
+    const/16 v2, 0x24d
 
-    const-string v3, "PROVIDER_EE_GOVERNMENT"
+    const/16 v3, 0x1201
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 590
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x24e
+    const-string v1, "PROVIDER_EE_MAA_AMET"
 
-    const v2, 0x12011
+    const/16 v2, 0x24e
 
-    const-string v3, "PROVIDER_EE_MAA_AMET"
+    const v3, 0x12011
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 591
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzks:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x24f
+    const-string v1, "PROVIDER_GASBUDDY"
 
-    const/16 v2, 0x1202
+    const/16 v2, 0x24f
 
-    const-string v3, "PROVIDER_GASBUDDY"
+    const/16 v3, 0x1202
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 592
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkt:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x250
+    const-string v1, "PROVIDER_DK_GOVERNMENT"
 
-    const/16 v2, 0x1203
+    const/16 v2, 0x250
 
-    const-string v3, "PROVIDER_DK_GOVERNMENT"
+    const/16 v3, 0x1203
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 593
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzku:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x251
+    const-string v1, "PROVIDER_DK_GEODATASTYRELSEN"
 
-    const v2, 0x12031
+    const/16 v2, 0x251
 
-    const-string v3, "PROVIDER_DK_GEODATASTYRELSEN"
+    const v3, 0x12031
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 594
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x252
+    const-string v1, "PROVIDER_MURCIA_REGION_GOVERNMENT"
 
-    const/16 v2, 0x1205
+    const/16 v2, 0x252
 
-    const-string v3, "PROVIDER_MURCIA_REGION_GOVERNMENT"
+    const/16 v3, 0x1205
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 595
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x253
+    const-string v1, "PROVIDER_CORREIOS"
 
-    const/16 v2, 0x1206
+    const/16 v2, 0x253
 
-    const-string v3, "PROVIDER_CORREIOS"
+    const/16 v3, 0x1206
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 596
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x254
+    const-string v1, "PROVIDER_WEST_WORLD_MEDIA"
 
-    const/16 v2, 0x1207
+    const/16 v2, 0x254
 
-    const-string v3, "PROVIDER_WEST_WORLD_MEDIA"
+    const/16 v3, 0x1207
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 597
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzky:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x255
+    const-string v1, "PROVIDER_INTERNATIONAL_MAPPING_ASSOCIATION"
 
-    const/16 v2, 0x1208
+    const/16 v2, 0x255
 
-    const-string v3, "PROVIDER_INTERNATIONAL_MAPPING_ASSOCIATION"
+    const/16 v3, 0x1208
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 598
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x256
+    const-string v1, "PROVIDER_MEDICARE"
 
-    const/16 v2, 0x1209
+    const/16 v2, 0x256
 
-    const-string v3, "PROVIDER_MEDICARE"
+    const/16 v3, 0x1209
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 599
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x257
+    const-string v1, "PROVIDER_POLARIS"
 
-    const/16 v2, 0x120a
+    const/16 v2, 0x257
 
-    const-string v3, "PROVIDER_POLARIS"
+    const/16 v3, 0x120a
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 600
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x258
+    const-string v1, "PROVIDER_TW_GOVERNMENT"
 
-    const/16 v2, 0x120b
+    const/16 v2, 0x258
 
-    const-string v3, "PROVIDER_TW_GOVERNMENT"
+    const/16 v3, 0x120b
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 601
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x259
+    const-string v1, "PROVIDER_TW_MINISTRY_OF_THE_INTERIOR_SURVEYING_AND_MAPPING_CENTER"
 
-    const v2, 0x120b1
+    const/16 v2, 0x259
 
-    const-string v3, "PROVIDER_TW_MINISTRY_OF_THE_INTERIOR_SURVEYING_AND_MAPPING_CENTER"
+    const v3, 0x120b1
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 602
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x25a
+    const-string v1, "PROVIDER_NORDECA"
 
-    const/16 v2, 0x120c
+    const/16 v2, 0x25a
 
-    const-string v3, "PROVIDER_NORDECA"
+    const/16 v3, 0x120c
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 603
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x25b
+    const-string v1, "PROVIDER_AFRIMAPPING"
 
-    const/16 v2, 0x120d
+    const/16 v2, 0x25b
 
-    const-string v3, "PROVIDER_AFRIMAPPING"
+    const/16 v3, 0x120d
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 604
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x25c
+    const-string v1, "PROVIDER_OVERDRIVE"
 
-    const/16 v2, 0x120e
+    const/16 v2, 0x25c
 
-    const-string v3, "PROVIDER_OVERDRIVE"
+    const/16 v3, 0x120e
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 605
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x25d
+    const-string v1, "PROVIDER_PROVIDER_NETWORK_DIRECTORIES"
 
-    const/16 v2, 0x120f
+    const/16 v2, 0x25d
 
-    const-string v3, "PROVIDER_PROVIDER_NETWORK_DIRECTORIES"
+    const/16 v3, 0x120f
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 606
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x25e
+    const-string v1, "PROVIDER_BR_MINISTERIO_DA_SAUDE"
 
-    const/16 v2, 0x1210
+    const/16 v2, 0x25e
 
-    const-string v3, "PROVIDER_BR_MINISTERIO_DA_SAUDE"
+    const/16 v3, 0x1210
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 607
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x25f
+    const-string v1, "PROVIDER_DIGITAL_EGYPT"
 
-    const/16 v2, 0x1211
+    const/16 v2, 0x25f
 
-    const-string v3, "PROVIDER_DIGITAL_EGYPT"
+    const/16 v3, 0x1211
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 608
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x260
+    const-string v1, "PROVIDER_INRIX"
 
-    const/16 v2, 0x1212
+    const/16 v2, 0x260
 
-    const-string v3, "PROVIDER_INRIX"
+    const/16 v3, 0x1212
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 609
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x261
+    const-string v1, "PROVIDER_ARPINDO"
 
-    const/16 v2, 0x1213
+    const/16 v2, 0x261
 
-    const-string v3, "PROVIDER_ARPINDO"
+    const/16 v3, 0x1213
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 610
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x262
+    const-string v1, "PROVIDER_IT_GOVERNMENT"
 
-    const/16 v2, 0x1214
+    const/16 v2, 0x262
 
-    const-string v3, "PROVIDER_IT_GOVERNMENT"
+    const/16 v3, 0x1214
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 611
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x263
+    const-string v1, "PROVIDER_ISTITUTO_GEOGRAFICO_MILITARE"
 
-    const v2, 0x12141
+    const/16 v2, 0x263
 
-    const-string v3, "PROVIDER_ISTITUTO_GEOGRAFICO_MILITARE"
+    const v3, 0x12141
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 612
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x264
+    const-string v1, "PROVIDER_EAST_END_GROUP"
 
-    const/16 v2, 0x1215
+    const/16 v2, 0x264
 
-    const-string v3, "PROVIDER_EAST_END_GROUP"
+    const/16 v3, 0x1215
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 613
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x265
+    const-string v1, "PROVIDER_INGEOLAN"
 
-    const/16 v2, 0x1216
+    const/16 v2, 0x265
 
-    const-string v3, "PROVIDER_INGEOLAN"
+    const/16 v3, 0x1216
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 614
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x266
+    const-string v1, "PROVIDER_SEMACONNECT"
 
-    const/16 v2, 0x1217
+    const/16 v2, 0x266
 
-    const-string v3, "PROVIDER_SEMACONNECT"
+    const/16 v3, 0x1217
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 615
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x267
+    const-string v1, "PROVIDER_BLINK"
 
-    const/16 v2, 0x1218
+    const/16 v2, 0x267
 
-    const-string v3, "PROVIDER_BLINK"
+    const/16 v3, 0x1218
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 616
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x268
+    const-string v1, "PROVIDER_EVGO"
 
-    const/16 v2, 0x1219
+    const/16 v2, 0x268
 
-    const-string v3, "PROVIDER_EVGO"
+    const/16 v3, 0x1219
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 617
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x269
+    const-string v1, "PROVIDER_CHARGEPOINT"
 
-    const/16 v2, 0x121a
+    const/16 v2, 0x269
 
-    const-string v3, "PROVIDER_CHARGEPOINT"
+    const/16 v3, 0x121a
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 618
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x26a
+    const-string v1, "PROVIDER_TPL_TRAKKER"
 
-    const/16 v2, 0x121b
+    const/16 v2, 0x26a
 
-    const-string v3, "PROVIDER_TPL_TRAKKER"
+    const/16 v3, 0x121b
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 619
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x26b
+    const-string v1, "PROVIDER_OI"
 
-    const/16 v2, 0x121c
+    const/16 v2, 0x26b
 
-    const-string v3, "PROVIDER_OI"
+    const/16 v3, 0x121c
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 620
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x26c
+    const-string v1, "PROVIDER_MAPARADAR"
 
-    const/16 v2, 0x121d
+    const/16 v2, 0x26c
 
-    const-string v3, "PROVIDER_MAPARADAR"
+    const/16 v3, 0x121d
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 621
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x26d
+    const-string v1, "PROVIDER_SINGAPORE_POST"
 
-    const/16 v2, 0x121e
+    const/16 v2, 0x26d
 
-    const-string v3, "PROVIDER_SINGAPORE_POST"
+    const/16 v3, 0x121e
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 622
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x26e
+    const-string v1, "PROVIDER_CHARGEMASTER"
 
-    const/16 v2, 0x121f
+    const/16 v2, 0x26e
 
-    const-string v3, "PROVIDER_CHARGEMASTER"
+    const/16 v3, 0x121f
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 623
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x26f
+    const-string v1, "PROVIDER_TESLA"
 
-    const/16 v2, 0x1220
+    const/16 v2, 0x26f
 
-    const-string v3, "PROVIDER_TESLA"
+    const/16 v3, 0x1220
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 624
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x270
+    const-string v1, "PROVIDER_VISICOM"
 
-    const/16 v2, 0x1221
+    const/16 v2, 0x270
 
-    const-string v3, "PROVIDER_VISICOM"
+    const/16 v3, 0x1221
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 625
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzla:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x271
+    const-string v1, "PROVIDER_GEOLYSIS"
 
-    const/16 v2, 0x1222
+    const/16 v2, 0x271
 
-    const-string v3, "PROVIDER_GEOLYSIS"
+    const/16 v3, 0x1222
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 626
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x272
+    const-string v1, "PROVIDER_ZEPHEIRA"
 
-    const/16 v2, 0x1223
+    const/16 v2, 0x272
 
-    const-string v3, "PROVIDER_ZEPHEIRA"
+    const/16 v3, 0x1223
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 627
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x273
+    const-string v1, "PROVIDER_HUBJECT"
 
-    const/16 v2, 0x1224
+    const/16 v2, 0x273
 
-    const-string v3, "PROVIDER_HUBJECT"
+    const/16 v3, 0x1224
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 628
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzld:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x274
+    const-string v1, "PROVIDER_PODPOINT"
 
-    const/16 v2, 0x1225
+    const/16 v2, 0x274
 
-    const-string v3, "PROVIDER_PODPOINT"
+    const/16 v3, 0x1225
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 629
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzle:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x275
+    const-string v1, "PROVIDER_CHARGEFOX"
 
-    const/16 v2, 0x1226
+    const/16 v2, 0x275
 
-    const-string v3, "PROVIDER_CHARGEFOX"
+    const/16 v3, 0x1226
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 630
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x276
+    const-string v1, "PROVIDER_KR_GOVERNMENT"
 
-    const/16 v2, 0x1227
+    const/16 v2, 0x276
 
-    const-string v3, "PROVIDER_KR_GOVERNMENT"
+    const/16 v3, 0x1227
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 631
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x277
+    const-string v1, "PROVIDER_KR_MOLIT"
 
-    const v2, 0x12271
+    const/16 v2, 0x277
 
-    const-string v3, "PROVIDER_KR_MOLIT"
+    const v3, 0x12271
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 632
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x278
+    const-string v1, "PROVIDER_KR_MINISTRY_OF_THE_INTERIOR_AND_SAFETY"
 
-    const v2, 0x12272
+    const/16 v2, 0x278
 
-    const-string v3, "PROVIDER_KR_MINISTRY_OF_THE_INTERIOR_AND_SAFETY"
+    const v3, 0x12272
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 633
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzli:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x279
+    const-string v1, "PROVIDER_CRITCHLOW"
 
-    const/16 v2, 0x1228
+    const/16 v2, 0x279
 
-    const-string v3, "PROVIDER_CRITCHLOW"
+    const/16 v3, 0x1228
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 634
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x27a
+    const-string v1, "PROVIDER_EIFRIG"
 
-    const/16 v2, 0x1229
+    const/16 v2, 0x27a
 
-    const-string v3, "PROVIDER_EIFRIG"
+    const/16 v3, 0x1229
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 635
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlk:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x27b
+    const-string v1, "PROVIDER_GIREVE"
 
-    const/16 v2, 0x122a
+    const/16 v2, 0x27b
 
-    const-string v3, "PROVIDER_GIREVE"
+    const/16 v3, 0x122a
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 636
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzll:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x27c
+    const-string v1, "PROVIDER_CN_NAVINFO"
 
-    const/16 v2, 0x122b
+    const/16 v2, 0x27c
 
-    const-string v3, "PROVIDER_CN_NAVINFO"
+    const/16 v3, 0x122b
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 637
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x27d
+    const-string v1, "PROVIDER_JAPAN_CHARGE_NETWORK"
 
-    const/16 v2, 0x122c
+    const/16 v2, 0x27d
 
-    const-string v3, "PROVIDER_JAPAN_CHARGE_NETWORK"
+    const/16 v3, 0x122c
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 638
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzln:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x27e
+    const-string v1, "PROVIDER_NOBIL"
 
-    const/16 v2, 0x122d
+    const/16 v2, 0x27e
 
-    const-string v3, "PROVIDER_NOBIL"
+    const/16 v3, 0x122d
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 639
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlo:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x27f
+    const-string v1, "PROVIDER_INDIA_BANKS"
 
-    const/16 v2, 0x122e
+    const/16 v2, 0x27f
 
-    const-string v3, "PROVIDER_INDIA_BANKS"
+    const/16 v3, 0x122e
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 640
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x280
+    const-string v1, "PROVIDER_INDONESIA_ELECTION_KPU"
 
-    const/16 v2, 0x122f
+    const/16 v2, 0x280
 
-    const-string v3, "PROVIDER_INDONESIA_ELECTION_KPU"
+    const/16 v3, 0x122f
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 641
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x281
+    const-string v1, "PROVIDER_CAREERS360"
 
-    const/16 v2, 0x1230
+    const/16 v2, 0x281
 
-    const-string v3, "PROVIDER_CAREERS360"
+    const/16 v3, 0x1230
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 642
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x282
+    const-string v1, "PROVIDER_SOURCE_LONDON"
 
-    const/16 v2, 0x1231
+    const/16 v2, 0x282
 
-    const-string v3, "PROVIDER_SOURCE_LONDON"
+    const/16 v3, 0x1231
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 643
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzls:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x283
+    const-string v1, "PROVIDER_EVBOX"
 
-    const/16 v2, 0x1232
+    const/16 v2, 0x283
 
-    const-string v3, "PROVIDER_EVBOX"
+    const/16 v3, 0x1232
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 644
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlt:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x284
+    const-string v1, "PROVIDER_JP_GOVERNMENT"
 
-    const/16 v2, 0x1233
+    const/16 v2, 0x284
 
-    const-string v3, "PROVIDER_JP_GOVERNMENT"
+    const/16 v3, 0x1233
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 645
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x285
+    const-string v1, "PROVIDER_JP_MINISTRY_OF_THE_ENVIRONMENT"
 
-    const v2, 0x12331
+    const/16 v2, 0x285
 
-    const-string v3, "PROVIDER_JP_MINISTRY_OF_THE_ENVIRONMENT"
+    const v3, 0x12331
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 646
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x286
+    const-string v1, "PROVIDER_YUMYUM"
 
-    const/16 v2, 0x1234
+    const/16 v2, 0x286
 
-    const-string v3, "PROVIDER_YUMYUM"
+    const/16 v3, 0x1234
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 647
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x287
+    const-string v1, "PROVIDER_HWW_AUSTRALIA"
 
-    const/16 v2, 0x1235
+    const/16 v2, 0x287
 
-    const-string v3, "PROVIDER_HWW_AUSTRALIA"
+    const/16 v3, 0x1235
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 648
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x288
+    const-string v1, "PROVIDER_CINERGY"
 
-    const/16 v2, 0x1236
+    const/16 v2, 0x288
 
-    const-string v3, "PROVIDER_CINERGY"
+    const/16 v3, 0x1236
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 649
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzly:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x289
+    const-string v1, "PROVIDER_MTIME"
 
-    const/16 v2, 0x1237
+    const/16 v2, 0x289
 
-    const-string v3, "PROVIDER_MTIME"
+    const/16 v3, 0x1237
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 650
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x28a
+    const-string v1, "PROVIDER_KULTUNAUT"
 
-    const/16 v2, 0x1238
+    const/16 v2, 0x28a
 
-    const-string v3, "PROVIDER_KULTUNAUT"
+    const/16 v3, 0x1238
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 651
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x28b
+    const-string v1, "PROVIDER_BLITZ"
 
-    const/16 v2, 0x1239
+    const/16 v2, 0x28b
 
-    const-string v3, "PROVIDER_BLITZ"
+    const/16 v3, 0x1239
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 652
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x28c
+    const-string v1, "PROVIDER_PIA"
 
-    const/16 v2, 0x123a
+    const/16 v2, 0x28c
 
-    const-string v3, "PROVIDER_PIA"
+    const/16 v3, 0x123a
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 653
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x28d
+    const-string v1, "PROVIDER_INTERPARK"
 
-    const/16 v2, 0x123b
+    const/16 v2, 0x28d
 
-    const-string v3, "PROVIDER_INTERPARK"
+    const/16 v3, 0x123b
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 654
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x28e
+    const-string v1, "PROVIDER_CINEMA_ONLINE"
 
-    const/16 v2, 0x123c
+    const/16 v2, 0x28e
 
-    const-string v3, "PROVIDER_CINEMA_ONLINE"
+    const/16 v3, 0x123c
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 655
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x28f
+    const-string v1, "PROVIDER_BELBIOS"
 
-    const/16 v2, 0x123d
+    const/16 v2, 0x28f
 
-    const-string v3, "PROVIDER_BELBIOS"
+    const/16 v3, 0x123d
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 656
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x290
+    const-string v1, "PROVIDER_MOVIESEER"
 
-    const/16 v2, 0x123e
+    const/16 v2, 0x290
 
-    const-string v3, "PROVIDER_MOVIESEER"
+    const/16 v3, 0x123e
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 657
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x291
+    const-string v1, "PROVIDER_SODAMEDYA"
 
-    const/16 v2, 0x123f
+    const/16 v2, 0x291
 
-    const-string v3, "PROVIDER_SODAMEDYA"
+    const/16 v3, 0x123f
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 658
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x292
+    const-string v1, "PROVIDER_ATMOVIES"
 
-    const/16 v2, 0x1240
+    const/16 v2, 0x292
 
-    const-string v3, "PROVIDER_ATMOVIES"
+    const/16 v3, 0x1240
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 659
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x293
+    const-string v1, "PROVIDER_HOTELBEDS"
 
-    const/16 v2, 0x1241
+    const/16 v2, 0x293
 
-    const-string v3, "PROVIDER_HOTELBEDS"
+    const/16 v3, 0x1241
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 660
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x294
+    const-string v1, "PROVIDER_VERICRED"
 
-    const/16 v2, 0x1242
+    const/16 v2, 0x294
 
-    const-string v3, "PROVIDER_VERICRED"
+    const/16 v3, 0x1242
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 661
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x295
+    const-string v1, "PROVIDER_CIRRANTIC"
 
-    const/16 v2, 0x1243
+    const/16 v2, 0x295
 
-    const-string v3, "PROVIDER_CIRRANTIC"
+    const/16 v3, 0x1243
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 662
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x296
+    const-string v1, "PROVIDER_GOGO_LABS"
 
-    const/16 v2, 0x1244
+    const/16 v2, 0x296
 
-    const-string v3, "PROVIDER_GOGO_LABS"
+    const/16 v3, 0x1244
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 663
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x297
+    const-string v1, "PROVIDER_ELECTRIFY_AMERICA"
 
-    const/16 v2, 0x1245
+    const/16 v2, 0x297
 
-    const-string v3, "PROVIDER_ELECTRIFY_AMERICA"
+    const/16 v3, 0x1245
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 664
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x298
+    const-string v1, "PROVIDER_CMS_MPPUF"
 
-    const/16 v2, 0x1246
+    const/16 v2, 0x298
 
-    const-string v3, "PROVIDER_CMS_MPPUF"
+    const/16 v3, 0x1246
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 665
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x299
+    const-string v1, "PROVIDER_DIGIROAD"
 
-    const/16 v2, 0x1247
+    const/16 v2, 0x299
 
-    const-string v3, "PROVIDER_DIGIROAD"
+    const/16 v3, 0x1247
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 666
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x29a
+    const-string v1, "PROVIDER_KONTEX_GEOMATICS"
 
-    const/16 v2, 0x1248
+    const/16 v2, 0x29a
 
-    const-string v3, "PROVIDER_KONTEX_GEOMATICS"
+    const/16 v3, 0x1248
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 667
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x29b
+    const-string v1, "PROVIDER_NZ_GOVERNMENT"
 
-    const/16 v2, 0x1249
+    const/16 v2, 0x29b
 
-    const-string v3, "PROVIDER_NZ_GOVERNMENT"
+    const/16 v3, 0x1249
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 668
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x29c
+    const-string v1, "PROVIDER_NZ_LINZ"
 
-    const v2, 0x12491
+    const/16 v2, 0x29c
 
-    const-string v3, "PROVIDER_NZ_LINZ"
+    const v3, 0x12491
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 669
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x29d
+    const-string v1, "PROVIDER_NZ_DOC"
 
-    const v2, 0x12492
+    const/16 v2, 0x29d
 
-    const-string v3, "PROVIDER_NZ_DOC"
+    const v3, 0x12492
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 670
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x29e
+    const-string v1, "PROVIDER_FASTNED"
 
-    const/16 v2, 0x124a
+    const/16 v2, 0x29e
 
-    const-string v3, "PROVIDER_FASTNED"
+    const/16 v3, 0x124a
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 671
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x29f
+    const-string v1, "PROVIDER_DESTINY_CS"
 
-    const/16 v2, 0x124b
+    const/16 v2, 0x29f
 
-    const-string v3, "PROVIDER_DESTINY_CS"
+    const/16 v3, 0x124b
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 672
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2a0
+    const-string v1, "PROVIDER_IONITY"
 
-    const/16 v2, 0x124c
+    const/16 v2, 0x2a0
 
-    const-string v3, "PROVIDER_IONITY"
+    const/16 v3, 0x124c
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 673
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2a1
+    const-string v1, "PROVIDER_EV_CONNECT"
 
-    const/16 v2, 0x124d
+    const/16 v2, 0x2a1
 
-    const-string v3, "PROVIDER_EV_CONNECT"
+    const/16 v3, 0x124d
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 674
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2a2
+    const-string v1, "PROVIDER_PANPAGES"
 
-    const/16 v2, 0x124e
+    const/16 v2, 0x2a2
 
-    const-string v3, "PROVIDER_PANPAGES"
+    const/16 v3, 0x124e
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 675
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2a3
+    const-string v1, "PROVIDER_ETECNIC"
 
-    const/16 v2, 0x124f
+    const/16 v2, 0x2a3
 
-    const-string v3, "PROVIDER_ETECNIC"
+    const/16 v3, 0x124f
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 676
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2a4
+    const-string v1, "PROVIDER_VOLTA"
 
-    const/16 v2, 0x1250
+    const/16 v2, 0x2a4
 
-    const-string v3, "PROVIDER_VOLTA"
+    const/16 v3, 0x1250
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 677
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzma:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2a5
+    const-string v1, "PROVIDER_NISSAN_MEXICO"
 
-    const/16 v2, 0x1251
+    const/16 v2, 0x2a5
 
-    const-string v3, "PROVIDER_NISSAN_MEXICO"
+    const/16 v3, 0x1251
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 678
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2a6
+    const-string v1, "PROVIDER_BMW_GROUP_LATIN_AMERICA"
 
-    const/16 v2, 0x1252
+    const/16 v2, 0x2a6
 
-    const-string v3, "PROVIDER_BMW_GROUP_LATIN_AMERICA"
+    const/16 v3, 0x1252
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 679
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2a7
+    const-string v1, "PROVIDER_FEDERAL_ELECTRICITY_COMMISSION_MEXICO"
 
-    const/16 v2, 0x1253
+    const/16 v2, 0x2a7
 
-    const-string v3, "PROVIDER_FEDERAL_ELECTRICITY_COMMISSION_MEXICO"
+    const/16 v3, 0x1253
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 680
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2a8
+    const-string v1, "PROVIDER_VOLVO_CARS_BRASIL"
 
-    const/16 v2, 0x1254
+    const/16 v2, 0x2a8
 
-    const-string v3, "PROVIDER_VOLVO_CARS_BRASIL"
+    const/16 v3, 0x1254
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 681
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzme:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2a9
+    const-string v1, "PROVIDER_CHARGE_AND_PARKING"
 
-    const/16 v2, 0x1255
+    const/16 v2, 0x2a9
 
-    const-string v3, "PROVIDER_CHARGE_AND_PARKING"
+    const/16 v3, 0x1255
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 682
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2aa
+    const-string v1, "PROVIDER_DEDUCE_TECHNOLOGIES"
 
-    const/16 v2, 0x1256
+    const/16 v2, 0x2aa
 
-    const-string v3, "PROVIDER_DEDUCE_TECHNOLOGIES"
+    const/16 v3, 0x1256
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 683
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2ab
+    const-string v1, "PROVIDER_SK_TELECOM"
 
-    const/16 v2, 0x1257
+    const/16 v2, 0x2ab
 
-    const-string v3, "PROVIDER_SK_TELECOM"
+    const/16 v3, 0x1257
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 684
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2ac
+    const-string v1, "PROVIDER_ECO_MOVEMENT"
 
-    const/16 v2, 0x1258
+    const/16 v2, 0x2ac
 
-    const-string v3, "PROVIDER_ECO_MOVEMENT"
+    const/16 v3, 0x1258
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 685
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmi:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2ad
+    const-string v1, "PROVIDER_GOOGLE_GMS"
 
-    const/16 v2, 0x1259
+    const/16 v2, 0x2ad
 
-    const-string v3, "PROVIDER_GOOGLE_GMS"
+    const/16 v3, 0x1259
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 686
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2ae
+    const-string v1, "PROVIDER_EASYWAY"
 
-    const/16 v2, 0x125a
+    const/16 v2, 0x2ae
 
-    const-string v3, "PROVIDER_EASYWAY"
+    const/16 v3, 0x125a
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 687
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmk:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2af
+    const-string v1, "PROVIDER_PHYSICIAN_COMPARE"
 
-    const/16 v2, 0x125b
+    const/16 v2, 0x2af
 
-    const-string v3, "PROVIDER_PHYSICIAN_COMPARE"
+    const/16 v3, 0x125b
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 688
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzml:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2b0
+    const-string v1, "PROVIDER_HOSPITAL_COMPARE"
 
-    const/16 v2, 0x125c
+    const/16 v2, 0x2b0
 
-    const-string v3, "PROVIDER_HOSPITAL_COMPARE"
+    const/16 v3, 0x125c
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 689
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2b1
+    const-string v1, "PROVIDER_ENDOLLA_BARCELONA"
 
-    const/16 v2, 0x125d
+    const/16 v2, 0x2b1
 
-    const-string v3, "PROVIDER_ENDOLLA_BARCELONA"
+    const/16 v3, 0x125d
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 690
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmn:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2b2
+    const-string v1, "PROVIDER_BE_CHARGE"
 
-    const/16 v2, 0x125e
+    const/16 v2, 0x2b2
 
-    const-string v3, "PROVIDER_BE_CHARGE"
+    const/16 v3, 0x125e
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 691
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmo:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2b3
+    const-string v1, "PROVIDER_ONE_NETWORK"
 
-    const/16 v2, 0x125f
+    const/16 v2, 0x2b3
 
-    const-string v3, "PROVIDER_ONE_NETWORK"
+    const/16 v3, 0x125f
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 692
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2b4
+    const-string v1, "PROVIDER_CARENAV_DUPLEX"
 
-    const/16 v2, 0x1260
+    const/16 v2, 0x2b4
 
-    const-string v3, "PROVIDER_CARENAV_DUPLEX"
+    const/16 v3, 0x1260
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 693
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2b5
+    const-string v1, "PROVIDER_CARENAV_POI"
 
-    const/16 v2, 0x1261
+    const/16 v2, 0x2b5
 
-    const-string v3, "PROVIDER_CARENAV_POI"
+    const/16 v3, 0x1261
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 694
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2b6
+    const-string v1, "PROVIDER_IN_GOVERNMENT"
 
-    const/16 v2, 0x1262
+    const/16 v2, 0x2b6
 
-    const-string v3, "PROVIDER_IN_GOVERNMENT"
+    const/16 v3, 0x1262
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 695
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzms:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2b7
+    const-string v1, "PROVIDER_SURVEY_OF_INDIA"
 
-    const v2, 0x12621
+    const/16 v2, 0x2b7
 
-    const-string v3, "PROVIDER_SURVEY_OF_INDIA"
+    const v3, 0x12621
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 696
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmt:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2b8
+    const-string v1, "PROVIDER_E_ON"
 
-    const/16 v2, 0x1263
+    const/16 v2, 0x2b8
 
-    const-string v3, "PROVIDER_E_ON"
+    const/16 v3, 0x1263
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 697
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2b9
+    const-string v1, "PROVIDER_ELECTRIFY_CANADA"
 
-    const/16 v2, 0x1264
+    const/16 v2, 0x2b9
 
-    const-string v3, "PROVIDER_ELECTRIFY_CANADA"
+    const/16 v3, 0x1264
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 698
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2ba
+    const-string v1, "PROVIDER_GRIDCARS"
 
-    const/16 v2, 0x1265
+    const/16 v2, 0x2ba
 
-    const-string v3, "PROVIDER_GRIDCARS"
+    const/16 v3, 0x1265
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 699
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2bb
+    const-string v1, "PROVIDER_DRIVECO"
 
-    const/16 v2, 0x1266
+    const/16 v2, 0x2bb
 
-    const-string v3, "PROVIDER_DRIVECO"
+    const/16 v3, 0x1266
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 700
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2bc
+    const-string v1, "PROVIDER_GREEN_ACTION_STUDIOS"
 
-    const/16 v2, 0x1267
+    const/16 v2, 0x2bc
 
-    const-string v3, "PROVIDER_GREEN_ACTION_STUDIOS"
+    const/16 v3, 0x1267
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 701
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmy:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2bd
+    const-string v1, "PROVIDER_GREEN_ACTION_STUDIO"
 
-    const/16 v2, 0x1268
+    const/16 v2, 0x2bd
 
-    const-string v3, "PROVIDER_GREEN_ACTION_STUDIO"
+    const/16 v3, 0x1268
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 702
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2be
+    const-string v1, "PROVIDER_EVINY"
 
-    const/16 v2, 0x1269
+    const/16 v2, 0x2be
 
-    const-string v3, "PROVIDER_EVINY"
+    const/16 v3, 0x1269
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 703
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2bf
+    const-string v1, "PROVIDER_MASTERCARD"
 
-    const/16 v2, 0x126a
+    const/16 v2, 0x2bf
 
-    const-string v3, "PROVIDER_MASTERCARD"
+    const/16 v3, 0x126a
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 704
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2c0
+    const-string v1, "PROVIDER_VATTENFALL"
 
-    const/16 v2, 0x126b
+    const/16 v2, 0x2c0
 
-    const-string v3, "PROVIDER_VATTENFALL"
+    const/16 v3, 0x126b
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 705
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2c1
+    const-string v1, "PROVIDER_VIETGIS"
 
-    const/16 v2, 0x126c
+    const/16 v2, 0x2c1
 
-    const-string v3, "PROVIDER_VIETGIS"
+    const/16 v3, 0x126c
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 706
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2c2
+    const-string v1, "PROVIDER_UNITE"
 
-    const/16 v2, 0x126d
+    const/16 v2, 0x2c2
 
-    const-string v3, "PROVIDER_UNITE"
+    const/16 v3, 0x126d
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 707
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2c3
+    const-string v1, "PROVIDER_NEOGY"
 
-    const/16 v2, 0x126e
+    const/16 v2, 0x2c3
 
-    const-string v3, "PROVIDER_NEOGY"
+    const/16 v3, 0x126e
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 708
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2c4
+    const-string v1, "PROVIDER_AMPUP"
 
-    const/16 v2, 0x126f
+    const/16 v2, 0x2c4
 
-    const-string v3, "PROVIDER_AMPUP"
+    const/16 v3, 0x126f
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 709
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2c5
+    const-string v1, "PROVIDER_LOOP"
 
-    const/16 v2, 0x1270
+    const/16 v2, 0x2c5
 
-    const-string v3, "PROVIDER_LOOP"
+    const/16 v3, 0x1270
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 710
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2c6
+    const-string v1, "PROVIDER_ZEST"
 
-    const v2, 0x1270a
+    const/16 v2, 0x2c6
 
-    const-string v3, "PROVIDER_ZEST"
+    const v3, 0x1270a
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 711
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2c7
+    const-string v1, "PROVIDER_EZVOLT"
 
-    const v2, 0x1270b
+    const/16 v2, 0x2c7
 
-    const-string v3, "PROVIDER_EZVOLT"
+    const v3, 0x1270b
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 712
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     new-instance v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/16 v1, 0x2c8
+    const-string v1, "UNRECOGNIZED"
 
-    const/4 v2, -0x1
+    const/16 v2, 0x2c8
 
-    const-string v3, "UNRECOGNIZED"
+    const/4 v3, -0x1
 
-    invoke-direct {v0, v3, v1, v2}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
+    .line 713
+    invoke-direct {v0, v1, v2, v3}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
+    .line 714
     invoke-static {}, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzc()[Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     move-result-object v0
@@ -10228,6 +10942,7 @@
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     iput p3, p0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmN:I
@@ -10238,6 +10953,7 @@
 .method public static values()[Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmM:[Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     invoke-virtual {v0}, [Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->clone()Ljava/lang/Object;
@@ -14599,4283 +15315,4283 @@
 
     new-array v0, v0, [Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    const/4 v1, 0x0
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zza:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/4 v2, 0x0
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/4 v1, 0x1
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/4 v2, 0x1
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/4 v1, 0x2
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/4 v2, 0x2
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/4 v1, 0x3
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/4 v2, 0x3
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/4 v1, 0x4
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zze:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zze:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/4 v2, 0x4
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/4 v1, 0x5
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/4 v2, 0x5
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/4 v1, 0x6
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/4 v2, 0x6
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/4 v1, 0x7
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/4 v2, 0x7
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x8
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzi:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzi:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x8
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x9
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x9
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xa
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzk:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzk:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xa
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xb
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzl:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzl:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xb
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xc
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xc
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xd
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzn:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzn:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xd
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xe
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzo:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzo:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xe
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xf
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xf
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x10
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x10
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x11
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x11
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x12
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzs:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzs:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x12
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x13
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzt:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzt:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x13
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x14
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x14
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x15
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x15
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x16
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x16
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x17
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x17
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x18
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzy:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzy:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x18
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x19
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x19
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1a
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1a
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1b
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1b
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1c
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1c
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1d
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1d
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1e
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1e
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1f
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1f
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x20
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x20
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x21
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x21
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x22
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x22
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x23
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x23
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x24
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x24
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x25
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x25
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x26
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x26
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x27
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x27
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x28
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x28
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x29
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x29
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2a
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2a
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2b
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2b
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2c
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2c
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2d
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2d
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2e
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2e
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2f
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2f
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x30
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x30
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x31
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x31
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x32
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x32
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x33
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x33
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x34
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaa:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaa:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x34
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x35
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzab:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzab:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x35
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x36
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzac:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzac:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x36
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x37
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzad:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzad:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x37
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x38
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzae:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzae:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x38
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x39
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x39
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x3a
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzag:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzag:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x3a
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x3b
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzah:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzah:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x3b
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x3c
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzai:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzai:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x3c
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x3d
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x3d
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x3e
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzak:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzak:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x3e
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x3f
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzal:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzal:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x3f
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x40
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzam:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzam:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x40
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x41
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzan:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzan:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x41
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x42
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzao:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzao:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x42
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x43
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzap:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzap:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x43
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x44
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x44
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x45
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzar:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzar:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x45
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x46
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzas:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzas:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x46
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x47
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzat:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzat:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x47
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x48
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzau:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzau:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x48
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x49
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzav:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzav:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x49
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x4a
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x4a
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x4b
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzax:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzax:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x4b
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x4c
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzay:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzay:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x4c
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x4d
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x4d
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x4e
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x4e
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x4f
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x4f
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x50
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x50
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x51
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x51
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x52
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x52
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x53
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x53
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x54
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x54
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x55
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x55
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x56
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x56
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x57
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x57
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x58
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x58
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x59
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x59
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x5a
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x5a
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x5b
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x5b
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x5c
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x5c
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x5d
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x5d
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x5e
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x5e
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x5f
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x5f
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x60
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x60
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x61
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x61
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x62
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x62
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x63
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x63
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x64
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x64
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x65
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x65
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x66
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x66
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x67
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzaZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x67
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x68
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzba:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzba:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x68
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x69
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x69
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x6a
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x6a
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x6b
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x6b
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x6c
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbe:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbe:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x6c
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x6d
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x6d
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x6e
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x6e
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x6f
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x6f
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x70
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbi:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbi:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x70
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x71
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x71
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x72
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbk:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbk:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x72
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x73
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbl:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbl:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x73
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x74
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x74
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x75
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbn:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbn:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x75
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x76
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbo:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbo:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x76
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x77
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x77
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x78
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x78
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x79
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x79
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x7a
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbs:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbs:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x7a
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x7b
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbt:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbt:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x7b
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x7c
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x7c
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x7d
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x7d
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x7e
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x7e
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x7f
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x7f
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x80
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzby:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzby:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x80
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x81
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x81
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x82
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x82
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x83
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x83
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x84
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x84
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x85
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x85
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x86
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x86
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x87
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x87
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x88
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x88
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x89
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x89
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x8a
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x8a
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x8b
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x8b
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x8c
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x8c
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x8d
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x8d
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x8e
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x8e
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x8f
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x8f
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x90
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x90
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x91
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x91
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x92
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x92
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x93
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x93
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x94
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x94
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x95
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x95
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x96
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x96
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x97
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x97
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x98
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x98
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x99
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x99
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x9a
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x9a
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x9b
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzbZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x9b
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x9c
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzca:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzca:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x9c
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x9d
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x9d
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x9e
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x9e
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x9f
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x9f
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xa0
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzce:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzce:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xa0
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xa1
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xa1
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xa2
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xa2
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xa3
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzch:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzch:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xa3
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xa4
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzci:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzci:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xa4
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xa5
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xa5
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xa6
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzck:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzck:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xa6
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xa7
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcl:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcl:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xa7
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xa8
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xa8
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xa9
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcn:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcn:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xa9
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xaa
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzco:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzco:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xaa
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xab
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xab
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xac
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xac
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xad
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xad
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xae
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcs:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcs:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xae
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xaf
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzct:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzct:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xaf
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xb0
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xb0
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xb1
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xb1
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xb2
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xb2
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xb3
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xb3
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xb4
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcy:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcy:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xb4
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xb5
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xb5
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xb6
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xb6
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xb7
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xb7
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xb8
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xb8
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xb9
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xb9
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xba
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xba
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xbb
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xbb
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xbc
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xbc
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xbd
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xbd
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xbe
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xbe
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xbf
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xbf
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xc0
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xc0
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xc1
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xc1
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xc2
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xc2
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xc3
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xc3
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xc4
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xc4
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xc5
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xc5
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xc6
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xc6
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xc7
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xc7
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xc8
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xc8
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xc9
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xc9
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xca
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xca
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xcb
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xcb
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xcc
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xcc
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xcd
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xcd
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xce
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xce
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xcf
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzcZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xcf
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xd0
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzda:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzda:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xd0
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xd1
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xd1
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xd2
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xd2
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xd3
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xd3
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xd4
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzde:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzde:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xd4
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xd5
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xd5
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xd6
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xd6
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xd7
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xd7
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xd8
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdi:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdi:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xd8
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xd9
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xd9
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xda
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdk:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdk:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xda
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xdb
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdl:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdl:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xdb
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xdc
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xdc
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xdd
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdn:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdn:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xdd
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xde
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdo:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdo:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xde
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xdf
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xdf
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xe0
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xe0
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xe1
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xe1
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xe2
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzds:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzds:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xe2
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xe3
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdt:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdt:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xe3
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xe4
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xe4
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xe5
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xe5
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xe6
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xe6
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xe7
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xe7
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xe8
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdy:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdy:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xe8
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xe9
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xe9
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xea
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xea
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xeb
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xeb
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xec
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xec
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xed
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xed
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xee
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xee
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xef
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xef
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xf0
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xf0
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xf1
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xf1
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xf2
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xf2
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xf3
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xf3
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xf4
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xf4
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xf5
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xf5
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xf6
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xf6
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xf7
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xf7
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xf8
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xf8
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xf9
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xf9
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xfa
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xfa
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xfb
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xfb
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xfc
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xfc
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xfd
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xfd
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xfe
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xfe
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0xff
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0xff
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x100
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x100
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x101
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x101
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x102
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x102
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x103
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzdZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x103
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x104
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzea:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzea:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x104
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x105
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x105
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x106
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzec:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzec:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x106
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x107
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzed:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzed:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x107
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x108
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzee:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzee:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x108
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x109
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzef:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzef:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x109
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x10a
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x10a
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x10b
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x10b
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x10c
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzei:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzei:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x10c
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x10d
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzej:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzej:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x10d
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x10e
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzek:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzek:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x10e
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x10f
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzel:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzel:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x10f
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x110
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzem:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzem:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x110
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x111
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzen:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzen:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x111
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x112
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeo:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeo:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x112
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x113
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzep:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzep:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x113
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x114
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x114
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x115
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzer:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzer:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x115
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x116
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzes:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzes:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x116
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x117
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzet:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzet:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x117
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x118
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x118
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x119
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzev:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzev:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x119
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x11a
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzew:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzew:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x11a
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x11b
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzex:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzex:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x11b
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x11c
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzey:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzey:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x11c
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x11d
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzez:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzez:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x11d
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x11e
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x11e
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x11f
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x11f
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x120
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x120
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x121
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x121
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x122
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x122
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x123
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x123
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x124
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x124
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x125
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x125
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x126
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x126
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x127
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x127
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x128
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x128
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x129
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x129
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x12a
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x12a
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x12b
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x12b
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x12c
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x12c
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x12d
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x12d
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x12e
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x12e
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x12f
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x12f
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x130
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x130
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x131
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x131
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x132
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x132
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x133
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x133
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x134
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x134
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x135
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x135
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x136
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x136
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x137
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzeZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x137
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x138
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfa:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfa:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x138
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x139
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x139
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x13a
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x13a
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x13b
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x13b
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x13c
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfe:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfe:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x13c
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x13d
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzff:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzff:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x13d
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x13e
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x13e
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x13f
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x13f
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x140
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfi:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfi:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x140
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x141
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x141
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x142
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfk:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfk:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x142
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x143
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfl:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfl:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x143
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x144
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x144
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x145
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfn:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfn:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x145
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x146
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfo:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfo:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x146
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x147
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x147
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x148
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x148
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x149
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x149
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x14a
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfs:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfs:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x14a
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x14b
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzft:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzft:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x14b
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x14c
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x14c
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x14d
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x14d
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x14e
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x14e
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x14f
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x14f
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x150
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfy:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfy:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x150
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x151
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x151
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x152
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x152
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x153
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x153
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x154
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x154
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x155
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x155
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x156
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x156
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x157
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x157
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x158
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x158
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x159
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x159
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x15a
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x15a
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x15b
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x15b
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x15c
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x15c
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x15d
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x15d
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x15e
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x15e
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x15f
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x15f
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x160
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x160
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x161
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x161
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x162
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x162
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x163
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x163
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x164
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x164
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x165
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x165
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x166
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x166
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x167
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x167
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x168
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x168
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x169
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x169
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x16a
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x16a
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x16b
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzfZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x16b
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x16c
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzga:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzga:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x16c
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x16d
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x16d
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x16e
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x16e
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x16f
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x16f
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x170
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzge:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzge:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x170
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x171
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x171
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x172
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x172
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x173
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x173
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x174
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgi:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgi:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x174
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x175
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x175
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x176
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgk:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgk:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x176
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x177
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgl:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgl:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x177
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x178
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x178
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x179
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgn:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgn:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x179
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x17a
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgo:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgo:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x17a
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x17b
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x17b
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x17c
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x17c
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x17d
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x17d
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x17e
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgs:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgs:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x17e
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x17f
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgt:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgt:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x17f
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x180
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x180
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x181
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x181
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x182
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x182
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x183
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x183
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x184
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgy:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgy:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x184
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x185
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x185
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x186
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x186
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x187
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x187
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x188
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x188
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x189
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x189
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x18a
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x18a
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x18b
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x18b
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x18c
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x18c
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x18d
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x18d
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x18e
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x18e
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x18f
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x18f
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x190
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x190
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x191
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x191
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x192
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x192
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x193
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x193
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x194
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x194
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x195
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x195
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x196
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x196
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x197
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x197
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x198
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x198
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x199
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x199
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x19a
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x19a
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x19b
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x19b
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x19c
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x19c
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x19d
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x19d
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x19e
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x19e
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x19f
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzgZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x19f
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1a0
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzha:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzha:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1a0
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1a1
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1a1
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1a2
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1a2
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1a3
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1a3
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1a4
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhe:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhe:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1a4
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1a5
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1a5
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1a6
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1a6
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1a7
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1a7
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1a8
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhi:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhi:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1a8
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1a9
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1a9
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1aa
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhk:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhk:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1aa
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1ab
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhl:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhl:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1ab
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1ac
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1ac
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1ad
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhn:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhn:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1ad
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1ae
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzho:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzho:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1ae
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1af
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1af
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1b0
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1b0
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1b1
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1b1
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1b2
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhs:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhs:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1b2
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1b3
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzht:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzht:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1b3
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1b4
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1b4
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1b5
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1b5
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1b6
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1b6
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1b7
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1b7
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1b8
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhy:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhy:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1b8
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1b9
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1b9
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1ba
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1ba
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1bb
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1bb
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1bc
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1bc
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1bd
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1bd
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1be
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1be
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1bf
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1bf
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1c0
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1c0
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1c1
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1c1
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1c2
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1c2
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1c3
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1c3
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1c4
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1c4
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1c5
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1c5
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1c6
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1c6
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1c7
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1c7
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1c8
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1c8
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1c9
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1c9
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1ca
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1ca
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1cb
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1cb
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1cc
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1cc
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1cd
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1cd
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1ce
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1ce
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1cf
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1cf
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1d0
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1d0
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1d1
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1d1
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1d2
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1d2
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1d3
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzhZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1d3
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1d4
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzia:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzia:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1d4
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1d5
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzib:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzib:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1d5
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1d6
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzic:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzic:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1d6
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1d7
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzid:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzid:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1d7
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1d8
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzie:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzie:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1d8
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1d9
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzif:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzif:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1d9
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1da
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzig:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzig:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1da
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1db
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzih:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzih:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1db
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1dc
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzii:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzii:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1dc
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1dd
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzij:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzij:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1dd
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1de
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzik:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzik:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1de
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1df
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzil:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzil:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1df
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1e0
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzim:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzim:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1e0
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1e1
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzin:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzin:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1e1
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1e2
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzio:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzio:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1e2
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1e3
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzip:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzip:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1e3
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1e4
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1e4
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1e5
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzir:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzir:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1e5
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1e6
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzis:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzis:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1e6
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1e7
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzit:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzit:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1e7
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1e8
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1e8
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1e9
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1e9
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1ea
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1ea
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1eb
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzix:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzix:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1eb
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1ec
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziy:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziy:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1ec
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1ed
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1ed
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1ee
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1ee
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1ef
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1ef
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1f0
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1f0
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1f1
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1f1
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1f2
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1f2
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1f3
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1f3
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1f4
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1f4
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1f5
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1f5
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1f6
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1f6
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1f7
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1f7
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1f8
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1f8
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1f9
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1f9
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1fa
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1fa
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1fb
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1fb
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1fc
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1fc
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1fd
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1fd
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1fe
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1fe
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x1ff
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x1ff
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x200
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x200
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x201
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x201
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x202
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x202
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x203
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x203
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x204
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x204
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x205
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x205
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x206
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x206
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x207
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zziZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x207
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x208
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzja:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzja:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x208
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x209
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x209
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x20a
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x20a
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x20b
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x20b
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x20c
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzje:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzje:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x20c
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x20d
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x20d
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x20e
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x20e
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x20f
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x20f
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x210
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzji:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzji:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x210
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x211
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x211
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x212
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjk:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjk:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x212
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x213
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjl:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjl:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x213
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x214
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x214
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x215
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjn:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjn:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x215
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x216
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjo:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjo:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x216
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x217
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x217
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x218
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x218
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x219
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x219
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x21a
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjs:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjs:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x21a
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x21b
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjt:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjt:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x21b
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x21c
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzju:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzju:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x21c
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x21d
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x21d
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x21e
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x21e
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x21f
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x21f
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x220
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjy:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjy:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x220
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x221
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x221
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x222
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x222
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x223
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x223
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x224
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x224
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x225
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x225
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x226
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x226
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x227
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x227
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x228
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x228
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x229
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x229
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x22a
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x22a
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x22b
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x22b
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x22c
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x22c
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x22d
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x22d
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x22e
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x22e
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x22f
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x22f
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x230
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x230
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x231
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x231
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x232
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x232
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x233
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x233
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x234
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x234
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x235
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x235
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x236
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x236
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x237
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x237
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x238
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x238
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x239
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x239
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x23a
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x23a
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x23b
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzjZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x23b
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x23c
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzka:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzka:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x23c
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x23d
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x23d
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x23e
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x23e
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x23f
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x23f
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x240
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzke:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzke:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x240
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x241
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x241
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x242
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x242
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x243
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x243
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x244
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzki:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzki:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x244
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x245
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x245
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x246
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkk:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkk:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x246
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x247
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkl:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkl:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x247
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x248
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x248
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x249
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkn:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkn:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x249
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x24a
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzko:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzko:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x24a
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x24b
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x24b
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x24c
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x24c
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x24d
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x24d
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x24e
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzks:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzks:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x24e
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x24f
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkt:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkt:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x24f
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x250
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzku:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzku:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x250
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x251
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x251
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x252
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x252
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x253
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x253
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x254
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzky:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzky:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x254
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x255
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x255
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x256
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x256
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x257
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x257
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x258
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x258
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x259
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x259
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x25a
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x25a
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x25b
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x25b
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x25c
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x25c
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x25d
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x25d
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x25e
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x25e
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x25f
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x25f
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x260
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x260
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x261
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x261
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x262
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x262
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x263
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x263
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x264
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x264
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x265
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x265
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x266
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x266
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x267
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x267
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x268
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x268
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x269
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x269
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x26a
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x26a
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x26b
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x26b
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x26c
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x26c
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x26d
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x26d
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x26e
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x26e
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x26f
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzkZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x26f
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x270
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzla:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzla:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x270
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x271
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x271
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x272
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x272
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x273
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzld:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzld:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x273
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x274
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzle:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzle:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x274
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x275
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x275
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x276
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x276
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x277
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x277
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x278
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzli:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzli:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x278
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x279
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x279
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x27a
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlk:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlk:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x27a
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x27b
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzll:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzll:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x27b
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x27c
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x27c
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x27d
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzln:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzln:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x27d
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x27e
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlo:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlo:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x27e
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x27f
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x27f
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x280
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x280
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x281
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x281
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x282
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzls:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzls:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x282
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x283
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlt:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlt:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x283
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x284
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x284
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x285
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x285
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x286
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x286
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x287
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x287
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x288
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzly:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzly:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x288
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x289
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x289
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x28a
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x28a
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x28b
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x28b
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x28c
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x28c
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x28d
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x28d
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x28e
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x28e
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x28f
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x28f
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x290
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x290
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x291
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x291
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x292
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x292
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x293
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x293
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x294
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x294
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x295
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlL:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x295
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x296
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlM:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x296
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x297
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlN:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x297
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x298
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlO:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x298
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x299
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlP:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x299
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x29a
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlQ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x29a
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x29b
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlR:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x29b
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x29c
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlS:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x29c
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x29d
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlT:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x29d
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x29e
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlU:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x29e
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x29f
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlV:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x29f
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2a0
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlW:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2a0
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2a1
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlX:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2a1
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2a2
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlY:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2a2
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2a3
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzlZ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2a3
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2a4
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzma:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzma:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2a4
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2a5
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmb:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2a5
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2a6
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmc:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2a6
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2a7
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmd:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2a7
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2a8
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzme:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzme:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2a8
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2a9
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmf:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2a9
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2aa
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmg:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2aa
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2ab
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmh:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2ab
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2ac
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmi:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmi:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2ac
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2ad
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmj:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2ad
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2ae
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmk:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmk:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2ae
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2af
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzml:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzml:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2af
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2b0
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmm:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2b0
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2b1
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmn:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmn:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2b1
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2b2
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmo:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmo:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2b2
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2b3
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmp:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2b3
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2b4
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmq:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2b4
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2b5
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmr:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2b5
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2b6
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzms:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzms:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2b6
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2b7
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmt:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmt:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2b7
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2b8
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmu:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2b8
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2b9
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmv:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2b9
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2ba
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmw:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2ba
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2bb
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmx:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2bb
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2bc
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmy:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmy:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2bc
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2bd
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmz:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2bd
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2be
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmA:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2be
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2bf
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmB:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2bf
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2c0
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmC:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2c0
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2c1
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmD:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2c1
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2c2
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmE:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2c2
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2c3
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmF:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2c3
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2c4
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmG:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2c4
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2c5
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmH:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2c5
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2c6
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmI:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2c6
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2c7
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmJ:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2c7
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/16 v1, 0x2c8
+    sget-object v1, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
-    sget-object v2, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
+    const/16 v2, 0x2c8
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
     return-object v0
 .end method
@@ -18899,6 +19615,7 @@
 .method public final zza()I
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;->zzmK:Lcom/google/android/gms/internal/mlkit_vision_barcode_bundled/zzs;
 
     if-eq p0, v0, :cond_0

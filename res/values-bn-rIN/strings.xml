@@ -205,7 +205,6 @@
     <string name="accessibility_video_capture_button">ভিডিও শুটিং করার সময় এবং ফটো নেওয়ার জন্য বোতাম</string>
     <string name="accessibility_video_pause_button">ভিডিও রেকর্ডিং পজ করুন</string>
     <string name="accessibility_video_resume_button">ভিডিও রেকর্ডিং রিজিউম করুন</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">ওয়াটারমার্ক বন্ধ করা আছে</string>
     <string name="accessibility_watermark_image_on">ওয়াটারমার্ক চালু করা আছে</string>
     <string name="accessibility_watermark_text">খোলা ওয়াটারমার্ক অ্যাডজাস্টমেন্ট প্যানেল</string>
@@ -213,16 +212,6 @@
     <string name="accessibility_zoom_button">জুম মোড</string>
     <string name="actionbar_button_up_description">ফিরে যান</string>
     <string name="afternoon">দুপুর</string>
-    <string name="agent_flip_tbc">ইনার স্ক্রিনে চালিয়ে যান</string>
-    <string name="agent_function_max">সর্বোচ্চ ভ্যালুতে অ্যাডজাস্ট করা হয়েছে</string>
-    <string name="agent_function_min">সর্বনিম্ন ভ্যালুতে অ্যাডজাস্ট করা হয়েছে</string>
-    <string name="agent_workspace_mode_not_supported">এই ফিচারটি এখনও কাজ করছে না</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"এই ফিচারটি এখনও কাজ করছে না।
-বরং ফটো মোড খুলুন"</string>
-    <string name="agent_workspace_on">ফটোগ্রাফিংয়ের জন্য প্যারামিটার সেট করুন \"%1$s\"</string>
-    <string name="agent_workspace_tbc">সিন পরীক্ষা করা হচ্ছে</string>
-    <string name="agent_workspace_tbc_use_default">"সিন পরীক্ষা করা হচ্ছে…
-ক্য়ামেরা প্যারামিটার ডিফল্টে সেট করা আছে"</string>
     <string name="ai_agra_fort">আগ্রার দুর্গ</string>
     <string name="ai_amber_fort">আম্বর প্যালেস</string>
     <string name="ai_baby">বাচ্চা</string>
@@ -781,7 +770,6 @@
     <string name="download_hint_cn">"Looks like your device isn't connected to WLAN. Use %1$s MB of mobile data to download items now?"</string>
     <string name="download_hint_wifi">দেখে মনে হচ্ছে আপনার ডিভাইস ওয়াই ফাই এর সাথে কানেক্ট করা নেই। %1$s MB মোবাইল ডেটা ব্যবহার করে আইটেমগুলি ডাউনলোড করতে চান?</string>
     <string name="download_in_progress">ডাউনলোড করা হচ্ছে…</string>
-    <string name="download_network_error">ডাউনলোড করা যায় নি। আপনার নেটওয়ার্ক সেটিংস চেক করুন।</string>
     <string name="download_title">ডেটা ব্যবহার সতর্কবার্তা</string>
     <string name="download_waiting">মুলতুবি আছে…</string>
     <string name="dual_camera_lens_covered_toast">লেন্স ঢাকা রয়েছে।</string>
@@ -1260,7 +1248,6 @@
     <string name="miuix_appcompat_delete_description">মুছে দিন</string>
     <string name="miuix_appcompat_deselect_all">কিছুই বাছবেন না</string>
     <string name="miuix_appcompat_deselect_all_description">কিছুই বাছবেন না</string>
-    <string name="miuix_appcompat_edit">এডিট করুন</string>
     <string name="miuix_appcompat_search_action_mode_cancel">বাতিল করুন</string>
     <string name="miuix_appcompat_search_input_description">অনুসন্ধান করুন</string>
     <string name="miuix_appcompat_select_all">সব নির্বাচন করুন</string>
@@ -2199,7 +2186,6 @@
     <string name="time_picker_label_hour">H</string>
     <string name="time_picker_label_minute">M</string>
     <string name="time_stamp_date_format">dd/MM/yyyy</string>
-    <string name="time_stamp_date_format_minute">dd/MM/yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">আপনি শুটিং করার সময় বা তার আগে যে কোনো সময়ে ব্যাকগ্রাউন্ড ফ্রিজ বা আনফ্রিজ করতে পারেন</string>
     <string name="timefreeze_guide_tip3">আপনার সাবজেক্টকে ফ্রেমের একদম মাঝখানে থাকতে বলুন।</string>
     <string name="timefreeze_guide_tip4">ট্র্যাফিক যে থেমে যাবে।</string>
@@ -2219,8 +2205,8 @@
     <string name="tip_ai_off">AI ক্যামেরা: বন্ধ</string>
     <string name="tip_beauty_mode_title1">পোর্ট্রেট স্টাইল: ফ্রেশ</string>
     <string name="tip_beauty_mode_title2">পোর্ট্রেট স্টাইল: ফিল্ম</string>
-    <string name="tip_cvtype_title1">স্টাইল: Leica Authentic</string>
-    <string name="tip_cvtype_title2">স্টাইল: Leica ভাইব্রেন্ট</string>
+    <string name="tip_cvtype_title1">স্টাইল: লিসিয়া অথেনটিক</string>
+    <string name="tip_cvtype_title2">স্টাইল: লেইকা ভাইব্রেন্ট</string>
     <string name="tip_eis_off">স্টেডি ভিডিও: বন্ধ</string>
     <string name="tip_eis_pro_off">স্টেডি ভিডিও প্রো: বন্ধ</string>
     <string name="tip_flash_auto">ফ্ল্যাশ: অটো</string>
@@ -2237,7 +2223,7 @@
     <string name="tip_flash_screen_light_on">সফ্ট ফ্ল্যাশ: চালু</string>
     <string name="tip_flash_soft_light_off">সফ্ট ফ্ল্যাশ: বন্ধ</string>
     <string name="tip_flash_soft_light_torch">সফ্ট ফ্ল্যাশ: ফ্ল্যাশলাইট মোড</string>
-    <string name="tip_flash_torch">ফ্ল্যাশ: ফ্ল্যাশলাইট</string>
+    <string name="tip_flash_torch">ফ্ল্যাশ: সর্বদা চালু</string>
     <string name="tip_friend_mode_connect_when_24GHz">প্রিভিউ কোয়ালিটি বাড়াতে %s GHzকানেকশন ব্যবহার করুন</string>
     <string name="tip_friend_mode_display_device_name_connect">শেয়ার করা প্রিভিউ</string>
     <string name="tip_friend_mode_display_device_name_disconnect">অন্য ডিভাইস এই সেসন ছেড়ে গিয়েছে</string>

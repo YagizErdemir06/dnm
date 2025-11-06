@@ -7,24 +7,70 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/android/camera/WatermarkEditActivity;-><init>()V
 
     return-void
 .end method
 
-.method public static synthetic ni(ILjava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
+.method private qc(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "text"
+        }
+    .end annotation
 
-    invoke-static/range {p0 .. p6}, Lcom/android/camera/watermark/CustomWatermarkActivity;->pi(ILjava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
+    .line 1
+    iget-object p0, p0, Lcom/android/camera/WatermarkEditActivity;->m:Landroid/widget/EditText;
+
+    if-nez p0, :cond_0
+
+    .line 2
+    invoke-static {}, Ld/d/a/h8/d/f;->l()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    .line 3
+    :cond_0
+    invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object p0
+
+    .line 4
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    .line 5
+    invoke-static {}, Ld/d/a/h8/d/f;->l()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    .line 6
+    :cond_1
+    sget-object p1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+
+    invoke-virtual {p0, p1}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static synthetic pi(ILjava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
+.method public static synthetic uc(ILjava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
     .locals 2
 
+    .line 1
     invoke-virtual {p4}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p3
@@ -49,6 +95,7 @@
 
     return-object p3
 
+    .line 2
     :cond_0
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
@@ -74,10 +121,12 @@
     :goto_0
     if-ge p5, p0, :cond_3
 
+    .line 3
     invoke-interface {p1, p5}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v0
 
+    .line 4
     invoke-static {v0}, Ljava/lang/Character;->isHighSurrogate(C)Z
 
     move-result v1
@@ -86,6 +135,7 @@
 
     goto :goto_1
 
+    .line 5
     :cond_2
     invoke-static {v0}, Ljava/lang/String;->valueOf(C)Ljava/lang/String;
 
@@ -111,6 +161,7 @@
 
     return-object p3
 
+    .line 6
     :cond_4
     invoke-interface {p1, p2, p6}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
@@ -121,95 +172,129 @@
 
 
 # virtual methods
-.method public Ah()V
+.method public Fb(Ljava/lang/String;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "text"
+        }
+    .end annotation
+
+    .line 1
+    invoke-direct {p0, p1}, Lcom/android/camera/watermark/CustomWatermarkActivity;->qc(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 2
+    invoke-static {}, Ld/d/a/d4;->T()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 3
+    invoke-static {p1}, Ld/d/a/d4;->e8(Ljava/lang/String;)V
+
+    .line 4
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 5
+    invoke-virtual {p0, p1}, Lcom/android/camera/watermark/CustomWatermarkActivity;->gc(Ljava/lang/String;)V
+
+    .line 6
+    :cond_0
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_1
+
+    invoke-static {}, Ld/k/a/b;->j2()Ld/k/a/b;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ld/k/a/b;->v8()Z
+
+    move-result p0
+
+    if-nez p0, :cond_1
+
+    .line 7
+    invoke-static {}, Ld/d/a/h8/d/f;->f()V
+
+    .line 8
+    :cond_1
+    invoke-static {}, Ld/d/a/v7/f;->A3()V
+
+    return-void
+.end method
+
+.method public O7()V
     .locals 1
 
-    invoke-super {p0}, Lcom/android/camera/WatermarkEditActivity;->Ah()V
+    .line 1
+    invoke-super {p0}, Lcom/android/camera/WatermarkEditActivity;->O7()V
 
-    iget-object v0, p0, Lcom/android/camera/WatermarkEditActivity;->d:Lcom/google/gson/Gson;
+    .line 2
+    iget-object v0, p0, Lcom/android/camera/WatermarkEditActivity;->g:Lcom/google/gson/Gson;
 
-    iget-object p0, p0, Lcom/android/camera/WatermarkEditActivity;->e:Ljava/util/List;
+    iget-object p0, p0, Lcom/android/camera/WatermarkEditActivity;->j:Ljava/util/List;
 
     invoke-virtual {v0, p0}, Lcom/google/gson/Gson;->toJson(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/camera/v2;->i8(Ljava/lang/String;)V
+    invoke-static {p0}, Ld/d/a/d4;->f8(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public Ch()V
+.method public Q7()V
     .locals 2
 
-    invoke-static {}, Lv8/g3;->impl()Ljava/util/Optional;
+    .line 1
+    invoke-static {}, Ld/d/a/m7/g/e3;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
-    new-instance v1, Lra/b;
-
-    invoke-direct {v1}, Lra/b;-><init>()V
+    sget-object v1, Ld/d/a/h8/a;->c:Ld/d/a/h8/a;
 
     invoke-virtual {v0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
 
-    invoke-super {p0}, Lcom/android/camera/WatermarkEditActivity;->Ch()V
+    .line 2
+    invoke-super {p0}, Lcom/android/camera/WatermarkEditActivity;->Q7()V
 
     return-void
 .end method
 
-.method public Fh()Ljava/lang/String;
+.method public Q9()Ljava/lang/String;
     .locals 0
 
-    invoke-static {}, Lcom/android/camera/v2;->U()Ljava/lang/String;
+    .line 1
+    invoke-static {}, Ld/d/a/d4;->V()Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public Gh()Landroid/text/InputFilter;
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/android/camera/watermark/CustomWatermarkActivity;->Hh()I
-
-    move-result p0
-
-    new-instance v0, Lra/a;
-
-    invoke-direct {v0, p0}, Lra/a;-><init>(I)V
-
-    return-object v0
-.end method
-
-.method public Hh()I
-    .locals 1
-
-    invoke-virtual {p0}, Landroid/view/ContextThemeWrapper;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    const v0, 0x7f0c0068
-
-    invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public Xh()Ljava/lang/String;
+.method public T9(Ljava/lang/String;)I
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "content"
+        }
+    .end annotation
 
-    invoke-static {}, Lcom/android/camera/v2;->W()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public Zh(Ljava/lang/String;)I
-    .locals 0
-
+    .line 1
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p0
@@ -220,6 +305,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     invoke-static {p1}, Lcom/android/camera2/compat/theme/custom/mm/manually/CharsetLengthFilter;->trimLeading(Ljava/lang/String;)Ljava/lang/String;
 
@@ -232,15 +318,70 @@
     return p0
 .end method
 
-.method public ai()I
+.method public X8()Ljava/lang/String;
     .locals 0
 
-    const p0, 0x7f140a8a
+    .line 1
+    invoke-static {}, Ld/d/a/d4;->T()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public Y9()I
+    .locals 0
+
+    const p0, 0x7f130a04
 
     return p0
 .end method
 
-.method public ii()Z
+.method public g9()Landroid/text/InputFilter;
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lcom/android/camera/watermark/CustomWatermarkActivity;->x9()I
+
+    move-result p0
+
+    .line 2
+    new-instance v0, Ld/d/a/h8/b;
+
+    invoke-direct {v0, p0}, Ld/d/a/h8/b;-><init>(I)V
+
+    return-object v0
+.end method
+
+.method public gc(Ljava/lang/String;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "editText"
+        }
+    .end annotation
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/android/camera/WatermarkEditActivity;->gc(Ljava/lang/String;)V
+
+    .line 2
+    iget-object p1, p0, Lcom/android/camera/WatermarkEditActivity;->g:Lcom/google/gson/Gson;
+
+    iget-object p0, p0, Lcom/android/camera/WatermarkEditActivity;->j:Ljava/util/List;
+
+    invoke-virtual {p1, p0}, Lcom/google/gson/Gson;->toJson(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Ld/d/a/d4;->f8(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public wb()Z
     .locals 0
 
     const/4 p0, 0x1
@@ -248,106 +389,19 @@
     return p0
 .end method
 
-.method public ji(Ljava/lang/String;)V
-    .locals 2
+.method public x9()I
+    .locals 1
 
-    invoke-virtual {p0, p1}, Lcom/android/camera/watermark/CustomWatermarkActivity;->oi(Ljava/lang/String;)Ljava/lang/String;
+    .line 1
+    invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-static {}, Lcom/android/camera/v2;->U()Ljava/lang/String;
+    const v0, 0x7f0c0034
 
-    move-result-object v0
-
-    invoke-static {p1}, Lcom/android/camera/v2;->h8(Ljava/lang/String;)V
-
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {p0, p1}, Lcom/android/camera/watermark/CustomWatermarkActivity;->mi(Ljava/lang/String;)V
-
-    :cond_0
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result p0
 
-    if-nez p0, :cond_1
-
-    invoke-static {}, Lid/b;->q2()Lid/b;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lid/b;->H8()Z
-
-    move-result p0
-
-    if-nez p0, :cond_1
-
-    invoke-static {}, Lsa/f;->f()V
-
-    :cond_1
-    invoke-static {}, Lk9/a;->E3()V
-
-    return-void
-.end method
-
-.method public mi(Ljava/lang/String;)V
-    .locals 0
-
-    invoke-super {p0, p1}, Lcom/android/camera/WatermarkEditActivity;->mi(Ljava/lang/String;)V
-
-    iget-object p1, p0, Lcom/android/camera/WatermarkEditActivity;->d:Lcom/google/gson/Gson;
-
-    iget-object p0, p0, Lcom/android/camera/WatermarkEditActivity;->e:Ljava/util/List;
-
-    invoke-virtual {p1, p0}, Lcom/google/gson/Gson;->toJson(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lcom/android/camera/v2;->i8(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final oi(Ljava/lang/String;)Ljava/lang/String;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/camera/WatermarkEditActivity;->f:Landroid/widget/EditText;
-
-    if-nez p0, :cond_0
-
-    invoke-static {}, Lsa/f;->l()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    invoke-static {}, Lsa/f;->l()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_1
-    sget-object p1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
-
-    invoke-virtual {p0, p1}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return p0
 .end method

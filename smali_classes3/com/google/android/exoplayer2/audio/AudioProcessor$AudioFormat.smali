@@ -32,6 +32,7 @@
 .method public static constructor <clinit>()V
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/audio/AudioProcessor$AudioFormat;
 
     const/4 v1, -0x1
@@ -46,20 +47,26 @@
 .method public constructor <init>(III)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/audio/AudioProcessor$AudioFormat;->sampleRate:I
 
+    .line 3
     iput p2, p0, Lcom/google/android/exoplayer2/audio/AudioProcessor$AudioFormat;->channelCount:I
 
+    .line 4
     iput p3, p0, Lcom/google/android/exoplayer2/audio/AudioProcessor$AudioFormat;->encoding:I
 
+    .line 5
     invoke-static {p3}, Lcom/google/android/exoplayer2/util/Util;->isEncodingLinearPcm(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
+    .line 6
     invoke-static {p3, p2}, Lcom/google/android/exoplayer2/util/Util;->getPcmFrameSize(II)I
 
     move-result p1
@@ -69,6 +76,7 @@
     :cond_0
     const/4 p1, -0x1
 
+    .line 7
     :goto_0
     iput p1, p0, Lcom/google/android/exoplayer2/audio/AudioProcessor$AudioFormat;->bytesPerFrame:I
 
@@ -80,6 +88,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

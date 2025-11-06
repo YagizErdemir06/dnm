@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/MetadataRetriever$MetadataRetrieverInternal;
+.class public final Lcom/google/android/exoplayer2/MetadataRetriever$MetadataRetrieverInternal;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -52,10 +52,13 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/source/MediaSource$Factory;Lcom/google/android/exoplayer2/util/Clock;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/MetadataRetriever$MetadataRetrieverInternal;->mediaSourceFactory:Lcom/google/android/exoplayer2/source/MediaSource$Factory;
 
+    .line 3
     new-instance p1, Landroid/os/HandlerThread;
 
     const-string v0, "ExoPlayer:MetadataRetriever"
@@ -64,8 +67,10 @@
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/MetadataRetriever$MetadataRetrieverInternal;->mediaSourceThread:Landroid/os/HandlerThread;
 
-    invoke-virtual {p1}, Ljava/lang/Thread;->start()V
+    .line 4
+    invoke-virtual {p1}, Landroid/os/HandlerThread;->start()V
 
+    .line 5
     invoke-virtual {p1}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
     move-result-object p1
@@ -80,6 +85,7 @@
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/MetadataRetriever$MetadataRetrieverInternal;->mediaSourceHandler:Lcom/google/android/exoplayer2/util/HandlerWrapper;
 
+    .line 6
     invoke-static {}, Lcom/google/common/util/concurrent/SettableFuture;->create()Lcom/google/common/util/concurrent/SettableFuture;
 
     move-result-object p1
@@ -92,6 +98,7 @@
 .method public static synthetic access$000(Lcom/google/android/exoplayer2/MetadataRetriever$MetadataRetrieverInternal;)Lcom/google/android/exoplayer2/source/MediaSource$Factory;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/MetadataRetriever$MetadataRetrieverInternal;->mediaSourceFactory:Lcom/google/android/exoplayer2/source/MediaSource$Factory;
 
     return-object p0
@@ -100,6 +107,7 @@
 .method public static synthetic access$100(Lcom/google/android/exoplayer2/MetadataRetriever$MetadataRetrieverInternal;)Lcom/google/android/exoplayer2/util/HandlerWrapper;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/MetadataRetriever$MetadataRetrieverInternal;->mediaSourceHandler:Lcom/google/android/exoplayer2/util/HandlerWrapper;
 
     return-object p0
@@ -108,6 +116,7 @@
 .method public static synthetic access$200(Lcom/google/android/exoplayer2/MetadataRetriever$MetadataRetrieverInternal;)Lcom/google/common/util/concurrent/SettableFuture;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/MetadataRetriever$MetadataRetrieverInternal;->trackGroupsFuture:Lcom/google/common/util/concurrent/SettableFuture;
 
     return-object p0
@@ -116,6 +125,7 @@
 .method public static synthetic access$300(Lcom/google/android/exoplayer2/MetadataRetriever$MetadataRetrieverInternal;)Landroid/os/HandlerThread;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/MetadataRetriever$MetadataRetrieverInternal;->mediaSourceThread:Landroid/os/HandlerThread;
 
     return-object p0
@@ -136,6 +146,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/MetadataRetriever$MetadataRetrieverInternal;->mediaSourceHandler:Lcom/google/android/exoplayer2/util/HandlerWrapper;
 
     const/4 v1, 0x0
@@ -146,6 +157,7 @@
 
     invoke-interface {p1}, Lcom/google/android/exoplayer2/util/HandlerWrapper$Message;->sendToTarget()V
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/MetadataRetriever$MetadataRetrieverInternal;->trackGroupsFuture:Lcom/google/common/util/concurrent/SettableFuture;
 
     return-object p0

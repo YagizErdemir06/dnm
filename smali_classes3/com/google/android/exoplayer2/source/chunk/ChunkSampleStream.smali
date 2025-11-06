@@ -82,7 +82,7 @@
     .end annotation
 .end field
 
-.field loadingFinished:Z
+.field public loadingFinished:Z
 
 .field private final mediaChunks:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
@@ -160,8 +160,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->primaryTrackType:I
 
     const/4 v0, 0x0
@@ -170,6 +172,7 @@
 
     new-array p2, v0, [I
 
+    .line 3
     :cond_0
     iput-object p2, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->embeddedTrackTypes:[I
 
@@ -177,17 +180,23 @@
 
     new-array p3, v0, [Lcom/google/android/exoplayer2/Format;
 
+    .line 4
     :cond_1
     iput-object p3, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->embeddedTrackFormats:[Lcom/google/android/exoplayer2/Format;
 
+    .line 5
     iput-object p4, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->chunkSource:Lcom/google/android/exoplayer2/source/chunk/ChunkSource;
 
+    .line 6
     iput-object p5, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->callback:Lcom/google/android/exoplayer2/source/SequenceableLoader$Callback;
 
+    .line 7
     iput-object p12, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->mediaSourceEventDispatcher:Lcom/google/android/exoplayer2/source/MediaSourceEventListener$EventDispatcher;
 
+    .line 8
     iput-object p11, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->loadErrorHandlingPolicy:Lcom/google/android/exoplayer2/upstream/LoadErrorHandlingPolicy;
 
+    .line 9
     new-instance p3, Lcom/google/android/exoplayer2/upstream/Loader;
 
     const-string p4, "ChunkSampleStream"
@@ -196,65 +205,80 @@
 
     iput-object p3, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->loader:Lcom/google/android/exoplayer2/upstream/Loader;
 
+    .line 10
     new-instance p3, Lcom/google/android/exoplayer2/source/chunk/ChunkHolder;
 
     invoke-direct {p3}, Lcom/google/android/exoplayer2/source/chunk/ChunkHolder;-><init>()V
 
     iput-object p3, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->nextChunkHolder:Lcom/google/android/exoplayer2/source/chunk/ChunkHolder;
 
+    .line 11
     new-instance p3, Ljava/util/ArrayList;
 
     invoke-direct {p3}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p3, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->mediaChunks:Ljava/util/ArrayList;
 
+    .line 12
     invoke-static {p3}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p3
 
     iput-object p3, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->readOnlyMediaChunks:Ljava/util/List;
 
+    .line 13
     array-length p2, p2
 
+    .line 14
     new-array p3, p2, [Lcom/google/android/exoplayer2/source/SampleQueue;
 
     iput-object p3, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->embeddedSampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
+    .line 15
     new-array p3, p2, [Z
 
     iput-object p3, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->embeddedTracksSelected:[Z
 
     add-int/lit8 p3, p2, 0x1
 
+    .line 16
     new-array p4, p3, [I
 
+    .line 17
     new-array p3, p3, [Lcom/google/android/exoplayer2/source/SampleQueue;
 
+    .line 18
     invoke-static {p6, p9, p10}, Lcom/google/android/exoplayer2/source/SampleQueue;->createWithDrm(Lcom/google/android/exoplayer2/upstream/Allocator;Lcom/google/android/exoplayer2/drm/DrmSessionManager;Lcom/google/android/exoplayer2/drm/DrmSessionEventListener$EventDispatcher;)Lcom/google/android/exoplayer2/source/SampleQueue;
 
     move-result-object p5
 
     iput-object p5, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->primarySampleQueue:Lcom/google/android/exoplayer2/source/SampleQueue;
 
+    .line 19
     aput p1, p4, v0
 
+    .line 20
     aput-object p5, p3, v0
 
     :goto_0
     if-ge v0, p2, :cond_2
 
+    .line 21
     invoke-static {p6}, Lcom/google/android/exoplayer2/source/SampleQueue;->createWithoutDrm(Lcom/google/android/exoplayer2/upstream/Allocator;)Lcom/google/android/exoplayer2/source/SampleQueue;
 
     move-result-object p1
 
+    .line 22
     iget-object p5, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->embeddedSampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     aput-object p1, p5, v0
 
     add-int/lit8 p5, v0, 0x1
 
+    .line 23
     aput-object p1, p3, p5
 
+    .line 24
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->embeddedTrackTypes:[I
 
     aget p1, p1, v0
@@ -265,6 +289,7 @@
 
     goto :goto_0
 
+    .line 25
     :cond_2
     new-instance p1, Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunkOutput;
 
@@ -272,8 +297,10 @@
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->chunkOutput:Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunkOutput;
 
+    .line 26
     iput-wide p7, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->pendingResetPositionUs:J
 
+    .line 27
     iput-wide p7, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->lastSeekPositionUs:J
 
     return-void
@@ -282,6 +309,7 @@
 .method public static synthetic access$000(Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;)Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunk;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->canceledMediaChunk:Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunk;
 
     return-object p0
@@ -290,6 +318,7 @@
 .method public static synthetic access$100(Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;)[Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->embeddedTracksSelected:[Z
 
     return-object p0
@@ -298,6 +327,7 @@
 .method public static synthetic access$200(Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;)[I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->embeddedTrackTypes:[I
 
     return-object p0
@@ -306,6 +336,7 @@
 .method public static synthetic access$300(Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;)[Lcom/google/android/exoplayer2/Format;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->embeddedTrackFormats:[Lcom/google/android/exoplayer2/Format;
 
     return-object p0
@@ -314,6 +345,7 @@
 .method public static synthetic access$400(Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;)J
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->lastSeekPositionUs:J
 
     return-wide v0
@@ -322,6 +354,7 @@
 .method public static synthetic access$500(Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;)Lcom/google/android/exoplayer2/source/MediaSourceEventListener$EventDispatcher;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->mediaSourceEventDispatcher:Lcom/google/android/exoplayer2/source/MediaSourceEventListener$EventDispatcher;
 
     return-object p0
@@ -332,22 +365,27 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, v0}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->primarySampleIndexToMediaChunkIndex(II)I
 
     move-result p1
 
+    .line 2
     iget v1, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->nextNotifyPrimaryFormatMediaChunkIndex:I
 
+    .line 3
     invoke-static {p1, v1}, Ljava/lang/Math;->min(II)I
 
     move-result p1
 
     if-lez p1, :cond_0
 
+    .line 4
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->mediaChunks:Ljava/util/ArrayList;
 
     invoke-static {v1, v0, p1}, Lcom/google/android/exoplayer2/util/Util;->removeRange(Ljava/util/List;II)V
 
+    .line 5
     iget v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->nextNotifyPrimaryFormatMediaChunkIndex:I
 
     sub-int/2addr v0, p1
@@ -361,6 +399,7 @@
 .method private discardUpstream(I)V
     .locals 7
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->loader:Lcom/google/android/exoplayer2/upstream/Loader;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/upstream/Loader;->isLoading()Z
@@ -371,6 +410,7 @@
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->mediaChunks:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -382,6 +422,7 @@
 
     if-ge p1, v0, :cond_1
 
+    .line 3
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->haveReadFromMediaChunk(I)Z
 
     move-result v2
@@ -403,6 +444,7 @@
 
     return-void
 
+    .line 4
     :cond_2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->getLastMediaChunk()Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunk;
 
@@ -410,10 +452,12 @@
 
     iget-wide v5, v0, Lcom/google/android/exoplayer2/source/chunk/Chunk;->endTimeUs:J
 
+    .line 5
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->discardUpstreamMediaChunksFromIndex(I)Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunk;
 
     move-result-object p1
 
+    .line 6
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->mediaChunks:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -422,6 +466,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 7
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->lastSeekPositionUs:J
 
     iput-wide v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->pendingResetPositionUs:J
@@ -429,8 +474,10 @@
     :cond_3
     const/4 v0, 0x0
 
+    .line 8
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->loadingFinished:Z
 
+    .line 9
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->mediaSourceEventDispatcher:Lcom/google/android/exoplayer2/source/MediaSourceEventListener$EventDispatcher;
 
     iget v2, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->primaryTrackType:I
@@ -445,6 +492,7 @@
 .method private discardUpstreamMediaChunksFromIndex(I)Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunk;
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->mediaChunks:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -453,6 +501,7 @@
 
     check-cast v0, Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunk;
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->mediaChunks:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -461,10 +510,12 @@
 
     invoke-static {v1, p1, v2}, Lcom/google/android/exoplayer2/util/Util;->removeRange(Ljava/util/List;II)V
 
+    .line 3
     iget p1, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->nextNotifyPrimaryFormatMediaChunkIndex:I
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->mediaChunks:Ljava/util/ArrayList;
 
+    .line 4
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v1
@@ -475,6 +526,7 @@
 
     iput p1, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->nextNotifyPrimaryFormatMediaChunkIndex:I
 
+    .line 5
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->primarySampleQueue:Lcom/google/android/exoplayer2/source/SampleQueue;
 
     const/4 v1, 0x0
@@ -485,6 +537,7 @@
 
     invoke-virtual {p1, v2}, Lcom/google/android/exoplayer2/source/SampleQueue;->discardUpstreamSamples(I)V
 
+    .line 6
     :goto_0
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->embeddedSampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
@@ -492,6 +545,7 @@
 
     if-ge v1, v2, :cond_0
 
+    .line 7
     aget-object p1, p1, v1
 
     add-int/lit8 v1, v1, 0x1
@@ -511,6 +565,7 @@
 .method private getLastMediaChunk()Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunk;
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->mediaChunks:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
@@ -531,6 +586,7 @@
 .method private haveReadFromMediaChunk(I)Z
     .locals 5
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->mediaChunks:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -539,6 +595,7 @@
 
     check-cast p1, Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunk;
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->primarySampleQueue:Lcom/google/android/exoplayer2/source/SampleQueue;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/source/SampleQueue;->getReadIndex()I
@@ -560,6 +617,7 @@
     :cond_0
     move v0, v1
 
+    .line 3
     :cond_1
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->embeddedSampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
@@ -567,6 +625,7 @@
 
     if-ge v0, v4, :cond_2
 
+    .line 4
     aget-object v2, v2, v0
 
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/source/SampleQueue;->getReadIndex()I
@@ -590,6 +649,7 @@
 .method private isMediaChunk(Lcom/google/android/exoplayer2/source/chunk/Chunk;)Z
     .locals 0
 
+    .line 1
     instance-of p0, p1, Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunk;
 
     return p0
@@ -686,6 +746,7 @@
     :cond_0
     add-int/lit8 p2, p2, 0x1
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->mediaChunks:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -694,6 +755,7 @@
 
     if-ge p2, v0, :cond_1
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->mediaChunks:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -714,6 +776,7 @@
 
     return p2
 
+    .line 3
     :cond_1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->mediaChunks:Ljava/util/ArrayList;
 
@@ -729,10 +792,12 @@
 .method private resetSampleQueues()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->primarySampleQueue:Lcom/google/android/exoplayer2/source/SampleQueue;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/source/SampleQueue;->reset()V
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->embeddedSampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     array-length v0, p0
@@ -744,6 +809,7 @@
 
     aget-object v2, p0, v1
 
+    .line 3
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/source/SampleQueue;->reset()V
 
     add-int/lit8 v1, v1, 0x1
@@ -761,6 +827,7 @@
 
     move-object/from16 v0, p0
 
+    .line 1
     iget-boolean v1, v0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->loadingFinished:Z
 
     const/4 v2, 0x0
@@ -785,6 +852,7 @@
 
     goto/16 :goto_3
 
+    .line 2
     :cond_0
     invoke-virtual/range {p0 .. p0}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->isPendingReset()Z
 
@@ -792,17 +860,21 @@
 
     if-eqz v1, :cond_1
 
+    .line 3
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v3
 
+    .line 4
     iget-wide v4, v0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->pendingResetPositionUs:J
 
     goto :goto_0
 
+    .line 5
     :cond_1
     iget-object v3, v0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->readOnlyMediaChunks:Ljava/util/List;
 
+    .line 6
     invoke-direct/range {p0 .. p0}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->getLastMediaChunk()Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunk;
 
     move-result-object v4
@@ -814,6 +886,7 @@
 
     move-wide v9, v4
 
+    .line 7
     iget-object v6, v0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->chunkSource:Lcom/google/android/exoplayer2/source/chunk/ChunkSource;
 
     iget-object v12, v0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->nextChunkHolder:Lcom/google/android/exoplayer2/source/chunk/ChunkHolder;
@@ -822,12 +895,15 @@
 
     invoke-interface/range {v6 .. v12}, Lcom/google/android/exoplayer2/source/chunk/ChunkSource;->getNextChunk(JJLjava/util/List;Lcom/google/android/exoplayer2/source/chunk/ChunkHolder;)V
 
+    .line 8
     iget-object v3, v0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->nextChunkHolder:Lcom/google/android/exoplayer2/source/chunk/ChunkHolder;
 
     iget-boolean v4, v3, Lcom/google/android/exoplayer2/source/chunk/ChunkHolder;->endOfStream:Z
 
+    .line 9
     iget-object v5, v3, Lcom/google/android/exoplayer2/source/chunk/ChunkHolder;->chunk:Lcom/google/android/exoplayer2/source/chunk/Chunk;
 
+    .line 10
     invoke-virtual {v3}, Lcom/google/android/exoplayer2/source/chunk/ChunkHolder;->clear()V
 
     const-wide v6, -0x7fffffffffffffffL    # -4.9E-324
@@ -836,8 +912,10 @@
 
     if-eqz v4, :cond_2
 
+    .line 11
     iput-wide v6, v0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->pendingResetPositionUs:J
 
+    .line 12
     iput-boolean v3, v0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->loadingFinished:Z
 
     return v3
@@ -847,21 +925,25 @@
 
     return v2
 
+    .line 13
     :cond_3
     iput-object v5, v0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->loadingChunk:Lcom/google/android/exoplayer2/source/chunk/Chunk;
 
+    .line 14
     invoke-direct {v0, v5}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->isMediaChunk(Lcom/google/android/exoplayer2/source/chunk/Chunk;)Z
 
     move-result v4
 
     if-eqz v4, :cond_6
 
+    .line 15
     move-object v4, v5
 
     check-cast v4, Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunk;
 
     if-eqz v1, :cond_5
 
+    .line 16
     iget-wide v8, v4, Lcom/google/android/exoplayer2/source/chunk/Chunk;->startTimeUs:J
 
     iget-wide v10, v0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->pendingResetPositionUs:J
@@ -870,10 +952,12 @@
 
     if-eqz v1, :cond_4
 
+    .line 17
     iget-object v1, v0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->primarySampleQueue:Lcom/google/android/exoplayer2/source/SampleQueue;
 
     invoke-virtual {v1, v10, v11}, Lcom/google/android/exoplayer2/source/SampleQueue;->setStartTimeUs(J)V
 
+    .line 18
     iget-object v1, v0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->embeddedSampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     array-length v8, v1
@@ -883,6 +967,7 @@
 
     aget-object v9, v1, v2
 
+    .line 19
     iget-wide v10, v0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->pendingResetPositionUs:J
 
     invoke-virtual {v9, v10, v11}, Lcom/google/android/exoplayer2/source/SampleQueue;->setStartTimeUs(J)V
@@ -891,25 +976,30 @@
 
     goto :goto_1
 
+    .line 20
     :cond_4
     iput-wide v6, v0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->pendingResetPositionUs:J
 
+    .line 21
     :cond_5
     iget-object v1, v0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->chunkOutput:Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunkOutput;
 
     invoke-virtual {v4, v1}, Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunk;->init(Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunkOutput;)V
 
+    .line 22
     iget-object v1, v0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->mediaChunks:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
 
+    .line 23
     :cond_6
     instance-of v1, v5, Lcom/google/android/exoplayer2/source/chunk/InitializationChunk;
 
     if-eqz v1, :cond_7
 
+    .line 24
     move-object v1, v5
 
     check-cast v1, Lcom/google/android/exoplayer2/source/chunk/InitializationChunk;
@@ -918,6 +1008,7 @@
 
     invoke-virtual {v1, v2}, Lcom/google/android/exoplayer2/source/chunk/InitializationChunk;->init(Lcom/google/android/exoplayer2/source/chunk/ChunkExtractor$TrackOutputProvider;)V
 
+    .line 25
     :cond_7
     :goto_2
     iget-object v1, v0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->loader:Lcom/google/android/exoplayer2/upstream/Loader;
@@ -926,14 +1017,17 @@
 
     iget v4, v5, Lcom/google/android/exoplayer2/source/chunk/Chunk;->type:I
 
+    .line 26
     invoke-interface {v2, v4}, Lcom/google/android/exoplayer2/upstream/LoadErrorHandlingPolicy;->getMinimumLoadableRetryCount(I)I
 
     move-result v2
 
+    .line 27
     invoke-virtual {v1, v5, v0, v2}, Lcom/google/android/exoplayer2/upstream/Loader;->startLoading(Lcom/google/android/exoplayer2/upstream/Loader$Loadable;Lcom/google/android/exoplayer2/upstream/Loader$Callback;I)J
 
     move-result-wide v10
 
+    .line 28
     iget-object v12, v0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->mediaSourceEventDispatcher:Lcom/google/android/exoplayer2/source/MediaSourceEventListener$EventDispatcher;
 
     new-instance v13, Lcom/google/android/exoplayer2/source/LoadEventInfo;
@@ -982,6 +1076,7 @@
 .method public discardBuffer(JZ)V
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->isPendingReset()Z
 
     move-result v0
@@ -990,6 +1085,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->primarySampleQueue:Lcom/google/android/exoplayer2/source/SampleQueue;
 
@@ -997,12 +1093,14 @@
 
     move-result v0
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->primarySampleQueue:Lcom/google/android/exoplayer2/source/SampleQueue;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, p1, p2, p3, v2}, Lcom/google/android/exoplayer2/source/SampleQueue;->discardTo(JZZ)V
 
+    .line 4
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->primarySampleQueue:Lcom/google/android/exoplayer2/source/SampleQueue;
 
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/source/SampleQueue;->getFirstIndex()I
@@ -1011,6 +1109,7 @@
 
     if-le p1, v0, :cond_1
 
+    .line 5
     iget-object p2, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->primarySampleQueue:Lcom/google/android/exoplayer2/source/SampleQueue;
 
     invoke-virtual {p2}, Lcom/google/android/exoplayer2/source/SampleQueue;->getFirstTimestampUs()J
@@ -1019,6 +1118,7 @@
 
     const/4 p2, 0x0
 
+    .line 6
     :goto_0
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->embeddedSampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
@@ -1026,6 +1126,7 @@
 
     if-ge p2, v3, :cond_1
 
+    .line 7
     aget-object v2, v2, p2
 
     iget-object v3, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->embeddedTracksSelected:[Z
@@ -1038,6 +1139,7 @@
 
     goto :goto_0
 
+    .line 8
     :cond_1
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->discardDownstreamMediaChunks(I)V
 
@@ -1047,6 +1149,7 @@
 .method public getAdjustedSeekPositionUs(JLcom/google/android/exoplayer2/SeekParameters;)J
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->chunkSource:Lcom/google/android/exoplayer2/source/chunk/ChunkSource;
 
     invoke-interface {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/source/chunk/ChunkSource;->getAdjustedSeekPositionUs(JLcom/google/android/exoplayer2/SeekParameters;)J
@@ -1059,6 +1162,7 @@
 .method public getBufferedPositionUs()J
     .locals 4
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->loadingFinished:Z
 
     if-eqz v0, :cond_0
@@ -1067,6 +1171,7 @@
 
     return-wide v0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->isPendingReset()Z
 
@@ -1074,17 +1179,21 @@
 
     if-eqz v0, :cond_1
 
+    .line 3
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->pendingResetPositionUs:J
 
     return-wide v0
 
+    .line 4
     :cond_1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->lastSeekPositionUs:J
 
+    .line 5
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->getLastMediaChunk()Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunk;
 
     move-result-object v2
 
+    .line 6
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/source/chunk/MediaChunk;->isLoadCompleted()Z
 
     move-result v3
@@ -1093,6 +1202,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_2
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->mediaChunks:Ljava/util/ArrayList;
 
@@ -1126,12 +1236,14 @@
     :goto_0
     if-eqz v2, :cond_4
 
+    .line 8
     iget-wide v2, v2, Lcom/google/android/exoplayer2/source/chunk/Chunk;->endTimeUs:J
 
     invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide v0
 
+    .line 9
     :cond_4
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->primarySampleQueue:Lcom/google/android/exoplayer2/source/SampleQueue;
 
@@ -1154,6 +1266,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->chunkSource:Lcom/google/android/exoplayer2/source/chunk/ChunkSource;
 
     return-object p0
@@ -1162,16 +1275,19 @@
 .method public getNextLoadPositionUs()J
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->isPendingReset()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->pendingResetPositionUs:J
 
     return-wide v0
 
+    .line 3
     :cond_0
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->loadingFinished:Z
 
@@ -1195,6 +1311,7 @@
 .method public isLoading()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->loader:Lcom/google/android/exoplayer2/upstream/Loader;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/upstream/Loader;->isLoading()Z
@@ -1207,6 +1324,7 @@
 .method public isPendingReset()Z
     .locals 4
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->pendingResetPositionUs:J
 
     const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
@@ -1229,6 +1347,7 @@
 .method public isReady()Z
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->isPendingReset()Z
 
     move-result v0
@@ -1264,14 +1383,17 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->loader:Lcom/google/android/exoplayer2/upstream/Loader;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/upstream/Loader;->maybeThrowError()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->primarySampleQueue:Lcom/google/android/exoplayer2/source/SampleQueue;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/source/SampleQueue;->maybeThrowError()V
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->loader:Lcom/google/android/exoplayer2/upstream/Loader;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/upstream/Loader;->isLoading()Z
@@ -1280,6 +1402,7 @@
 
     if-nez v0, :cond_0
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->chunkSource:Lcom/google/android/exoplayer2/source/chunk/ChunkSource;
 
     invoke-interface {p0}, Lcom/google/android/exoplayer2/source/chunk/ChunkSource;->maybeThrowError()V
@@ -1850,10 +1973,12 @@
 .method public onLoaderReleased()V
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->primarySampleQueue:Lcom/google/android/exoplayer2/source/SampleQueue;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/source/SampleQueue;->release()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->embeddedSampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     array-length v1, v0
@@ -1865,21 +1990,25 @@
 
     aget-object v3, v0, v2
 
+    .line 3
     invoke-virtual {v3}, Lcom/google/android/exoplayer2/source/SampleQueue;->release()V
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->chunkSource:Lcom/google/android/exoplayer2/source/chunk/ChunkSource;
 
     invoke-interface {v0}, Lcom/google/android/exoplayer2/source/chunk/ChunkSource;->release()V
 
+    .line 5
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->releaseCallback:Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream$ReleaseCallback;
 
     if-eqz v0, :cond_1
 
+    .line 6
     invoke-interface {v0, p0}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream$ReleaseCallback;->onSampleStreamReleased(Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;)V
 
     :cond_1
@@ -1889,6 +2018,7 @@
 .method public readData(Lcom/google/android/exoplayer2/FormatHolder;Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;I)I
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->isPendingReset()Z
 
     move-result v0
@@ -1899,6 +2029,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->canceledMediaChunk:Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunk;
 
@@ -1906,12 +2037,14 @@
 
     const/4 v2, 0x0
 
+    .line 3
     invoke-virtual {v0, v2}, Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunk;->getFirstSampleIndex(I)I
 
     move-result v0
 
     iget-object v2, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->primarySampleQueue:Lcom/google/android/exoplayer2/source/SampleQueue;
 
+    .line 4
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/source/SampleQueue;->getReadIndex()I
 
     move-result v2
@@ -1920,9 +2053,11 @@
 
     return v1
 
+    .line 5
     :cond_1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->maybeNotifyPrimaryTrackFormatChanged()V
 
+    .line 6
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->primarySampleQueue:Lcom/google/android/exoplayer2/source/SampleQueue;
 
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->loadingFinished:Z
@@ -1937,6 +2072,7 @@
 .method public reevaluateBuffer(J)V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->loader:Lcom/google/android/exoplayer2/upstream/Loader;
 
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/upstream/Loader;->hasFatalError()Z
@@ -1953,6 +2089,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->loader:Lcom/google/android/exoplayer2/upstream/Loader;
 
@@ -1962,6 +2099,7 @@
 
     if-eqz v0, :cond_3
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->loadingChunk:Lcom/google/android/exoplayer2/source/chunk/Chunk;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1970,6 +2108,7 @@
 
     check-cast v0, Lcom/google/android/exoplayer2/source/chunk/Chunk;
 
+    .line 4
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->isMediaChunk(Lcom/google/android/exoplayer2/source/chunk/Chunk;)Z
 
     move-result v1
@@ -1978,6 +2117,7 @@
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->mediaChunks:Ljava/util/ArrayList;
 
+    .line 5
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v1
@@ -1992,6 +2132,7 @@
 
     return-void
 
+    .line 6
     :cond_1
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->chunkSource:Lcom/google/android/exoplayer2/source/chunk/ChunkSource;
 
@@ -2003,16 +2144,19 @@
 
     if-eqz p1, :cond_2
 
+    .line 7
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->loader:Lcom/google/android/exoplayer2/upstream/Loader;
 
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/upstream/Loader;->cancelLoading()V
 
+    .line 8
     invoke-direct {p0, v0}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->isMediaChunk(Lcom/google/android/exoplayer2/source/chunk/Chunk;)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
+    .line 9
     check-cast v0, Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunk;
 
     iput-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->canceledMediaChunk:Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunk;
@@ -2020,6 +2164,7 @@
     :cond_2
     return-void
 
+    .line 10
     :cond_3
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->chunkSource:Lcom/google/android/exoplayer2/source/chunk/ChunkSource;
 
@@ -2029,6 +2174,7 @@
 
     move-result p1
 
+    .line 11
     iget-object p2, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->mediaChunks:Ljava/util/ArrayList;
 
     invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
@@ -2037,6 +2183,7 @@
 
     if-ge p1, p2, :cond_4
 
+    .line 12
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->discardUpstream(I)V
 
     :cond_4
@@ -2106,16 +2253,19 @@
 .end method
 
 .method public seekToUs(J)V
-    .locals 8
+    .locals 9
 
+    .line 1
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->lastSeekPositionUs:J
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->isPendingReset()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->pendingResetPositionUs:J
 
     return-void
@@ -2123,75 +2273,83 @@
     :cond_0
     const/4 v0, 0x0
 
-    move v1, v0
+    const/4 v1, 0x0
 
+    move v2, v1
+
+    .line 4
     :goto_0
-    iget-object v2, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->mediaChunks:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->mediaChunks:Ljava/util/ArrayList;
 
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
-    move-result v2
+    move-result v3
 
-    if-ge v1, v2, :cond_3
+    if-ge v2, v3, :cond_3
 
-    iget-object v2, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->mediaChunks:Ljava/util/ArrayList;
+    .line 5
+    iget-object v3, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->mediaChunks:Ljava/util/ArrayList;
 
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v3
 
-    check-cast v2, Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunk;
+    check-cast v3, Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunk;
 
-    iget-wide v3, v2, Lcom/google/android/exoplayer2/source/chunk/Chunk;->startTimeUs:J
+    .line 6
+    iget-wide v4, v3, Lcom/google/android/exoplayer2/source/chunk/Chunk;->startTimeUs:J
 
-    cmp-long v3, v3, p1
-
-    if-nez v3, :cond_1
-
-    iget-wide v4, v2, Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunk;->clippedStartTimeUs:J
-
-    const-wide v6, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v4, v4, v6
+    cmp-long v4, v4, p1
 
     if-nez v4, :cond_1
 
-    goto :goto_2
+    .line 7
+    iget-wide v5, v3, Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunk;->clippedStartTimeUs:J
+
+    const-wide v7, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long v5, v5, v7
+
+    if-nez v5, :cond_1
+
+    move-object v0, v3
+
+    goto :goto_1
 
     :cond_1
-    if-lez v3, :cond_2
+    if-lez v4, :cond_2
 
     goto :goto_1
 
     :cond_2
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     :cond_3
     :goto_1
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
-    :goto_2
-    const/4 v1, 0x1
+    if-eqz v0, :cond_4
 
-    if-eqz v2, :cond_4
-
+    .line 8
     iget-object v3, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->primarySampleQueue:Lcom/google/android/exoplayer2/source/SampleQueue;
 
-    invoke-virtual {v2, v0}, Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunk;->getFirstSampleIndex(I)I
+    invoke-virtual {v0, v1}, Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunk;->getFirstSampleIndex(I)I
 
-    move-result v2
+    move-result v0
 
-    invoke-virtual {v3, v2}, Lcom/google/android/exoplayer2/source/SampleQueue;->seekTo(I)Z
+    invoke-virtual {v3, v0}, Lcom/google/android/exoplayer2/source/SampleQueue;->seekTo(I)Z
 
-    move-result v2
+    move-result v0
 
-    goto :goto_4
+    goto :goto_3
 
+    .line 9
     :cond_4
-    iget-object v2, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->primarySampleQueue:Lcom/google/android/exoplayer2/source/SampleQueue;
+    iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->primarySampleQueue:Lcom/google/android/exoplayer2/source/SampleQueue;
 
+    .line 10
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->getNextLoadPositionUs()J
 
     move-result-wide v3
@@ -2200,59 +2358,70 @@
 
     if-gez v3, :cond_5
 
-    move v3, v1
+    move v3, v2
 
-    goto :goto_3
+    goto :goto_2
 
     :cond_5
-    move v3, v0
+    move v3, v1
+
+    .line 11
+    :goto_2
+    invoke-virtual {v0, p1, p2, v3}, Lcom/google/android/exoplayer2/source/SampleQueue;->seekTo(JZ)Z
+
+    move-result v0
 
     :goto_3
-    invoke-virtual {v2, p1, p2, v3}, Lcom/google/android/exoplayer2/source/SampleQueue;->seekTo(JZ)Z
+    if-eqz v0, :cond_6
 
-    move-result v2
+    .line 12
+    iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->primarySampleQueue:Lcom/google/android/exoplayer2/source/SampleQueue;
 
-    :goto_4
-    if-eqz v2, :cond_6
+    .line 13
+    invoke-virtual {v0}, Lcom/google/android/exoplayer2/source/SampleQueue;->getReadIndex()I
 
-    iget-object v2, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->primarySampleQueue:Lcom/google/android/exoplayer2/source/SampleQueue;
+    move-result v0
 
-    invoke-virtual {v2}, Lcom/google/android/exoplayer2/source/SampleQueue;->getReadIndex()I
+    .line 14
+    invoke-direct {p0, v0, v1}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->primarySampleIndexToMediaChunkIndex(II)I
 
-    move-result v2
+    move-result v0
 
-    invoke-direct {p0, v2, v0}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->primarySampleIndexToMediaChunkIndex(II)I
+    iput v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->nextNotifyPrimaryFormatMediaChunkIndex:I
 
-    move-result v2
-
-    iput v2, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->nextNotifyPrimaryFormatMediaChunkIndex:I
-
+    .line 15
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->embeddedSampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
-    array-length v2, p0
+    array-length v0, p0
 
-    :goto_5
-    if-ge v0, v2, :cond_9
+    :goto_4
+    if-ge v1, v0, :cond_9
 
-    aget-object v3, p0, v0
+    aget-object v3, p0, v1
 
-    invoke-virtual {v3, p1, p2, v1}, Lcom/google/android/exoplayer2/source/SampleQueue;->seekTo(JZ)Z
+    .line 16
+    invoke-virtual {v3, p1, p2, v2}, Lcom/google/android/exoplayer2/source/SampleQueue;->seekTo(JZ)Z
 
-    add-int/lit8 v0, v0, 0x1
+    add-int/lit8 v1, v1, 0x1
 
-    goto :goto_5
+    goto :goto_4
 
+    .line 17
     :cond_6
     iput-wide p1, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->pendingResetPositionUs:J
 
-    iput-boolean v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->loadingFinished:Z
+    .line 18
+    iput-boolean v1, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->loadingFinished:Z
 
+    .line 19
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->mediaChunks:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
-    iput v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->nextNotifyPrimaryFormatMediaChunkIndex:I
+    .line 20
+    iput v1, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->nextNotifyPrimaryFormatMediaChunkIndex:I
 
+    .line 21
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->loader:Lcom/google/android/exoplayer2/upstream/Loader;
 
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/upstream/Loader;->isLoading()Z
@@ -2261,41 +2430,47 @@
 
     if-eqz p1, :cond_8
 
+    .line 22
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->primarySampleQueue:Lcom/google/android/exoplayer2/source/SampleQueue;
 
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/source/SampleQueue;->discardToEnd()V
 
+    .line 23
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->embeddedSampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     array-length p2, p1
 
-    :goto_6
-    if-ge v0, p2, :cond_7
+    :goto_5
+    if-ge v1, p2, :cond_7
 
-    aget-object v1, p1, v0
+    aget-object v0, p1, v1
 
-    invoke-virtual {v1}, Lcom/google/android/exoplayer2/source/SampleQueue;->discardToEnd()V
+    .line 24
+    invoke-virtual {v0}, Lcom/google/android/exoplayer2/source/SampleQueue;->discardToEnd()V
 
-    add-int/lit8 v0, v0, 0x1
+    add-int/lit8 v1, v1, 0x1
 
-    goto :goto_6
+    goto :goto_5
 
+    .line 25
     :cond_7
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->loader:Lcom/google/android/exoplayer2/upstream/Loader;
 
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/upstream/Loader;->cancelLoading()V
 
-    goto :goto_7
+    goto :goto_6
 
+    .line 26
     :cond_8
     iget-object p1, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->loader:Lcom/google/android/exoplayer2/upstream/Loader;
 
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/upstream/Loader;->clearFatalError()V
 
+    .line 27
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->resetSampleQueues()V
 
     :cond_9
-    :goto_7
+    :goto_6
     return-void
 .end method
 
@@ -2311,6 +2486,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :goto_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->embeddedSampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
@@ -2318,12 +2494,14 @@
 
     if-ge v0, v1, :cond_1
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->embeddedTrackTypes:[I
 
     aget v1, v1, v0
 
     if-ne v1, p3, :cond_0
 
+    .line 3
     iget-object p3, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->embeddedTracksSelected:[Z
 
     aget-boolean p3, p3, v0
@@ -2334,16 +2512,19 @@
 
     invoke-static {p3}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 4
     iget-object p3, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->embeddedTracksSelected:[Z
 
     aput-boolean v1, p3, v0
 
+    .line 5
     iget-object p3, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->embeddedSampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
 
     aget-object p3, p3, v0
 
     invoke-virtual {p3, p1, p2, v1}, Lcom/google/android/exoplayer2/source/SampleQueue;->seekTo(JZ)Z
 
+    .line 6
     new-instance p1, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream$EmbeddedSampleStream;
 
     iget-object p2, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->embeddedSampleQueues:[Lcom/google/android/exoplayer2/source/SampleQueue;
@@ -2359,6 +2540,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_1
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -2370,6 +2552,7 @@
 .method public skipData(J)I
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->isPendingReset()Z
 
     move-result v0
@@ -2380,6 +2563,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->primarySampleQueue:Lcom/google/android/exoplayer2/source/SampleQueue;
 
@@ -2389,31 +2573,37 @@
 
     move-result p1
 
+    .line 3
     iget-object p2, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->canceledMediaChunk:Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunk;
 
     if-eqz p2, :cond_1
 
+    .line 4
     invoke-virtual {p2, v1}, Lcom/google/android/exoplayer2/source/chunk/BaseMediaChunk;->getFirstSampleIndex(I)I
 
     move-result p2
 
     iget-object v0, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->primarySampleQueue:Lcom/google/android/exoplayer2/source/SampleQueue;
 
+    .line 5
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/source/SampleQueue;->getReadIndex()I
 
     move-result v0
 
     sub-int/2addr p2, v0
 
+    .line 6
     invoke-static {p1, p2}, Ljava/lang/Math;->min(II)I
 
     move-result p1
 
+    .line 7
     :cond_1
     iget-object p2, p0, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->primarySampleQueue:Lcom/google/android/exoplayer2/source/SampleQueue;
 
     invoke-virtual {p2, p1}, Lcom/google/android/exoplayer2/source/SampleQueue;->skip(I)V
 
+    .line 8
     invoke-direct {p0}, Lcom/google/android/exoplayer2/source/chunk/ChunkSampleStream;->maybeNotifyPrimaryTrackFormatChanged()V
 
     return p1

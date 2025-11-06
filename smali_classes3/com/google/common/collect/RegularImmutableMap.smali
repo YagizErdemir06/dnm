@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/RegularImmutableMap;
+.class public final Lcom/google/common/collect/RegularImmutableMap;
 .super Lcom/google/common/collect/ImmutableMap;
 .source "SourceFile"
 
@@ -40,7 +40,7 @@
 
 .field private static final BYTE_MAX_SIZE:I = 0x80
 
-.field static final EMPTY:Lcom/google/common/collect/ImmutableMap;
+.field public static final EMPTY:Lcom/google/common/collect/ImmutableMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/ImmutableMap<",
@@ -59,7 +59,7 @@
 
 
 # instance fields
-.field final transient alternatingKeysAndValues:[Ljava/lang/Object;
+.field public final transient alternatingKeysAndValues:[Ljava/lang/Object;
     .annotation build Lcom/google/common/annotations/VisibleForTesting;
     .end annotation
 .end field
@@ -76,6 +76,7 @@
 .method public static constructor <clinit>()V
     .locals 4
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/RegularImmutableMap;
 
     const/4 v1, 0x0
@@ -98,12 +99,16 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/ImmutableMap;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/RegularImmutableMap;->hashTable:Ljava/lang/Object;
 
+    .line 3
     iput-object p2, p0, Lcom/google/common/collect/RegularImmutableMap;->alternatingKeysAndValues:[Ljava/lang/Object;
 
+    .line 4
     iput p3, p0, Lcom/google/common/collect/RegularImmutableMap;->size:I
 
     return-void
@@ -127,6 +132,7 @@
 
     if-nez p0, :cond_0
 
+    .line 1
     sget-object p0, Lcom/google/common/collect/RegularImmutableMap;->EMPTY:Lcom/google/common/collect/ImmutableMap;
 
     check-cast p0, Lcom/google/common/collect/RegularImmutableMap;
@@ -140,16 +146,20 @@
 
     if-ne p0, v1, :cond_1
 
+    .line 2
     aget-object p0, p1, v0
 
+    .line 3
     invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     aget-object v0, p1, v1
 
     invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     invoke-static {p0, v0}, Lcom/google/common/collect/CollectPreconditions;->checkEntryNotNull(Ljava/lang/Object;Ljava/lang/Object;)V
 
+    .line 5
     new-instance p0, Lcom/google/common/collect/RegularImmutableMap;
 
     const/4 v0, 0x0
@@ -158,6 +168,7 @@
 
     return-object p0
 
+    .line 6
     :cond_1
     array-length v2, p1
 
@@ -165,14 +176,17 @@
 
     invoke-static {p0, v1}, Lcom/google/common/base/Preconditions;->checkPositionIndex(II)I
 
+    .line 7
     invoke-static {p0}, Lcom/google/common/collect/ImmutableSet;->chooseTableSize(I)I
 
     move-result v1
 
+    .line 8
     invoke-static {p1, p0, v1, v0}, Lcom/google/common/collect/RegularImmutableMap;->createHashTable([Ljava/lang/Object;III)Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 9
     new-instance v1, Lcom/google/common/collect/RegularImmutableMap;
 
     invoke-direct {v1, v0, p1, p0}, Lcom/google/common/collect/RegularImmutableMap;-><init>(Ljava/lang/Object;[Ljava/lang/Object;I)V
@@ -189,16 +203,20 @@
 
     if-ne p1, v0, :cond_0
 
+    .line 1
     aget-object p1, p0, p3
 
+    .line 2
     invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     xor-int/lit8 p2, p3, 0x1
 
     aget-object p0, p0, p2
 
+    .line 3
     invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     invoke-static {p1, p0}, Lcom/google/common/collect/CollectPreconditions;->checkEntryNotNull(Ljava/lang/Object;Ljava/lang/Object;)V
 
     const/4 p0, 0x0
@@ -216,8 +234,10 @@
 
     if-gt p2, v1, :cond_4
 
+    .line 5
     new-array p2, p2, [B
 
+    .line 6
     invoke-static {p2, v3}, Ljava/util/Arrays;->fill([BB)V
 
     :goto_0
@@ -227,18 +247,22 @@
 
     add-int/2addr v1, p3
 
+    .line 7
     aget-object v3, p0, v1
 
     invoke-static {v3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     xor-int/lit8 v4, v1, 0x1
 
+    .line 8
     aget-object v4, p0, v4
 
     invoke-static {v4}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 9
     invoke-static {v3, v4}, Lcom/google/common/collect/CollectPreconditions;->checkEntryNotNull(Ljava/lang/Object;Ljava/lang/Object;)V
 
+    .line 10
     invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
 
     move-result v5
@@ -250,6 +274,7 @@
     :goto_1
     and-int/2addr v5, v0
 
+    .line 11
     aget-byte v6, p2, v5
 
     const/16 v7, 0xff
@@ -260,12 +285,14 @@
 
     int-to-byte v1, v1
 
+    .line 12
     aput-byte v1, p2, v5
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    .line 13
     :cond_1
     aget-object v7, p0, v6
 
@@ -279,6 +306,7 @@
 
     goto :goto_1
 
+    .line 14
     :cond_2
     invoke-static {v3, v4, p0, v6}, Lcom/google/common/collect/RegularImmutableMap;->duplicateKeyException(Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/lang/IllegalArgumentException;
 
@@ -294,8 +322,10 @@
 
     if-gt p2, v1, :cond_8
 
+    .line 15
     new-array p2, p2, [S
 
+    .line 16
     invoke-static {p2, v3}, Ljava/util/Arrays;->fill([SS)V
 
     :goto_2
@@ -305,18 +335,22 @@
 
     add-int/2addr v1, p3
 
+    .line 17
     aget-object v3, p0, v1
 
     invoke-static {v3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     xor-int/lit8 v4, v1, 0x1
 
+    .line 18
     aget-object v4, p0, v4
 
     invoke-static {v4}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 19
     invoke-static {v3, v4}, Lcom/google/common/collect/CollectPreconditions;->checkEntryNotNull(Ljava/lang/Object;Ljava/lang/Object;)V
 
+    .line 20
     invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
 
     move-result v5
@@ -328,6 +362,7 @@
     :goto_3
     and-int/2addr v5, v0
 
+    .line 21
     aget-short v6, p2, v5
 
     const v7, 0xffff
@@ -338,12 +373,14 @@
 
     int-to-short v1, v1
 
+    .line 22
     aput-short v1, p2, v5
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
+    .line 23
     :cond_5
     aget-object v7, p0, v6
 
@@ -357,6 +394,7 @@
 
     goto :goto_3
 
+    .line 24
     :cond_6
     invoke-static {v3, v4, p0, v6}, Lcom/google/common/collect/RegularImmutableMap;->duplicateKeyException(Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/lang/IllegalArgumentException;
 
@@ -367,9 +405,11 @@
     :cond_7
     return-object p2
 
+    .line 25
     :cond_8
     new-array p2, p2, [I
 
+    .line 26
     invoke-static {p2, v3}, Ljava/util/Arrays;->fill([II)V
 
     :goto_4
@@ -379,18 +419,22 @@
 
     add-int/2addr v1, p3
 
+    .line 27
     aget-object v4, p0, v1
 
     invoke-static {v4}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     xor-int/lit8 v5, v1, 0x1
 
+    .line 28
     aget-object v5, p0, v5
 
     invoke-static {v5}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 29
     invoke-static {v4, v5}, Lcom/google/common/collect/CollectPreconditions;->checkEntryNotNull(Ljava/lang/Object;Ljava/lang/Object;)V
 
+    .line 30
     invoke-virtual {v4}, Ljava/lang/Object;->hashCode()I
 
     move-result v6
@@ -402,16 +446,19 @@
     :goto_5
     and-int/2addr v6, v0
 
+    .line 31
     aget v7, p2, v6
 
     if-ne v7, v3, :cond_9
 
+    .line 32
     aput v1, p2, v6
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_4
 
+    .line 33
     :cond_9
     aget-object v8, p0, v7
 
@@ -425,6 +472,7 @@
 
     goto :goto_5
 
+    .line 34
     :cond_a
     invoke-static {v4, v5, p0, v7}, Lcom/google/common/collect/RegularImmutableMap;->duplicateKeyException(Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/lang/IllegalArgumentException;
 
@@ -439,6 +487,7 @@
 .method private static duplicateKeyException(Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;I)Ljava/lang/IllegalArgumentException;
     .locals 3
 
+    .line 1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -760,15 +809,16 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/RegularImmutableMap$EntrySet;
 
     iget-object v1, p0, Lcom/google/common/collect/RegularImmutableMap;->alternatingKeysAndValues:[Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    iget v2, p0, Lcom/google/common/collect/RegularImmutableMap;->size:I
 
-    iget v3, p0, Lcom/google/common/collect/RegularImmutableMap;->size:I
+    const/4 v3, 0x0
 
-    invoke-direct {v0, p0, v1, v2, v3}, Lcom/google/common/collect/RegularImmutableMap$EntrySet;-><init>(Lcom/google/common/collect/ImmutableMap;[Ljava/lang/Object;II)V
+    invoke-direct {v0, p0, v1, v3, v2}, Lcom/google/common/collect/RegularImmutableMap$EntrySet;-><init>(Lcom/google/common/collect/ImmutableMap;[Ljava/lang/Object;II)V
 
     return-object v0
 .end method
@@ -783,16 +833,18 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/RegularImmutableMap$KeysOrValuesAsList;
 
     iget-object v1, p0, Lcom/google/common/collect/RegularImmutableMap;->alternatingKeysAndValues:[Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    iget v2, p0, Lcom/google/common/collect/RegularImmutableMap;->size:I
 
-    iget v3, p0, Lcom/google/common/collect/RegularImmutableMap;->size:I
+    const/4 v3, 0x0
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/google/common/collect/RegularImmutableMap$KeysOrValuesAsList;-><init>([Ljava/lang/Object;II)V
+    invoke-direct {v0, v1, v3, v2}, Lcom/google/common/collect/RegularImmutableMap$KeysOrValuesAsList;-><init>([Ljava/lang/Object;II)V
 
+    .line 2
     new-instance v1, Lcom/google/common/collect/RegularImmutableMap$KeySet;
 
     invoke-direct {v1, p0, v0}, Lcom/google/common/collect/RegularImmutableMap$KeySet;-><init>(Lcom/google/common/collect/ImmutableMap;Lcom/google/common/collect/ImmutableList;)V
@@ -810,13 +862,14 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/RegularImmutableMap$KeysOrValuesAsList;
 
     iget-object v1, p0, Lcom/google/common/collect/RegularImmutableMap;->alternatingKeysAndValues:[Ljava/lang/Object;
 
-    const/4 v2, 0x1
-
     iget p0, p0, Lcom/google/common/collect/RegularImmutableMap;->size:I
+
+    const/4 v2, 0x1
 
     invoke-direct {v0, v1, v2, p0}, Lcom/google/common/collect/RegularImmutableMap$KeysOrValuesAsList;-><init>([Ljava/lang/Object;II)V
 
@@ -872,6 +925,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/collect/RegularImmutableMap;->size:I
 
     return p0

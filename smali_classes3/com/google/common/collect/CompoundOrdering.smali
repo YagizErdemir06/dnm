@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/CompoundOrdering;
+.class public final Lcom/google/common/collect/CompoundOrdering;
 .super Lcom/google/common/collect/Ordering;
 .source "SourceFile"
 
@@ -31,7 +31,7 @@
 
 
 # instance fields
-.field final comparators:[Ljava/util/Comparator;
+.field public final comparators:[Ljava/util/Comparator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "[",
@@ -129,6 +129,7 @@
 
     move v1, v0
 
+    .line 1
     :goto_0
     iget-object v2, p0, Lcom/google/common/collect/CompoundOrdering;->comparators:[Ljava/util/Comparator;
 
@@ -136,6 +137,7 @@
 
     if-ge v1, v3, :cond_1
 
+    .line 2
     aget-object v2, v2, v1
 
     invoke-interface {v2, p1, p2}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
@@ -168,13 +170,16 @@
 
     return p0
 
+    .line 1
     :cond_0
     instance-of v0, p1, Lcom/google/common/collect/CompoundOrdering;
 
     if-eqz v0, :cond_1
 
+    .line 2
     check-cast p1, Lcom/google/common/collect/CompoundOrdering;
 
+    .line 3
     iget-object p0, p0, Lcom/google/common/collect/CompoundOrdering;->comparators:[Ljava/util/Comparator;
 
     iget-object p1, p1, Lcom/google/common/collect/CompoundOrdering;->comparators:[Ljava/util/Comparator;
@@ -194,6 +199,7 @@
 .method public hashCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/CompoundOrdering;->comparators:[Ljava/util/Comparator;
 
     invoke-static {p0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
@@ -206,6 +212,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/CompoundOrdering;->comparators:[Ljava/util/Comparator;
 
     invoke-static {p0}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;

@@ -10,6 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lorg/dom4j/tree/AbstractCharacterData;-><init>()V
 
     return-void
@@ -20,6 +21,7 @@
 .method public accept(Lorg/dom4j/Visitor;)V
     .locals 0
 
+    .line 1
     invoke-interface {p1, p0}, Lorg/dom4j/Visitor;->visit(Lorg/dom4j/Text;)V
 
     return-void
@@ -28,6 +30,7 @@
 .method public asXML()Ljava/lang/String;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractNode;->getText()Ljava/lang/String;
 
     move-result-object p0
@@ -46,6 +49,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -85,6 +89,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/tree/AbstractNode;->getText()Ljava/lang/String;
 
     move-result-object p0

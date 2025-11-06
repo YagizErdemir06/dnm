@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/ExoPlayerImplInternal$1;
+.class public Lcom/google/android/exoplayer2/ExoPlayerImplInternal$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/android/exoplayer2/ExoPlayerImplInternal;
+.field public final synthetic this$0:Lcom/google/android/exoplayer2/ExoPlayerImplInternal;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/exoplayer2/ExoPlayerImplInternal;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/ExoPlayerImplInternal$1;->this$0:Lcom/google/android/exoplayer2/ExoPlayerImplInternal;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,6 +38,7 @@
 .method public onSleep()V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ExoPlayerImplInternal$1;->this$0:Lcom/google/android/exoplayer2/ExoPlayerImplInternal;
 
     const/4 v0, 0x1
@@ -49,6 +51,7 @@
 .method public onWakeup()V
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ExoPlayerImplInternal$1;->this$0:Lcom/google/android/exoplayer2/ExoPlayerImplInternal;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/ExoPlayerImplInternal;->access$700(Lcom/google/android/exoplayer2/ExoPlayerImplInternal;)Lcom/google/android/exoplayer2/util/HandlerWrapper;

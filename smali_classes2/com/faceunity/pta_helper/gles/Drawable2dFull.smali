@@ -17,12 +17,14 @@
 
     new-array v1, v0, [F
 
+    .line 1
     fill-array-data v1, :array_0
 
     sput-object v1, Lcom/faceunity/pta_helper/gles/Drawable2dFull;->FULL_RECTANGLE_COORDS:[F
 
     new-array v0, v0, [F
 
+    .line 2
     fill-array-data v0, :array_1
 
     sput-object v0, Lcom/faceunity/pta_helper/gles/Drawable2dFull;->FULL_RECTANGLE_TEX_COORDS:[F
@@ -59,6 +61,7 @@
 .method public constructor <init>()V
     .locals 2
 
+    .line 1
     sget-object v0, Lcom/faceunity/pta_helper/gles/Drawable2dFull;->FULL_RECTANGLE_COORDS:[F
 
     sget-object v1, Lcom/faceunity/pta_helper/gles/Drawable2dFull;->FULL_RECTANGLE_TEX_COORDS:[F

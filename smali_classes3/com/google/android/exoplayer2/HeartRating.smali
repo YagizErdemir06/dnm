@@ -31,9 +31,8 @@
 .method public static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/google/android/exoplayer2/u1;
-
-    invoke-direct {v0}, Lcom/google/android/exoplayer2/u1;-><init>()V
+    .line 1
+    sget-object v0, Ld/j/a/b/n1;->a:Ld/j/a/b/n1;
 
     sput-object v0, Lcom/google/android/exoplayer2/HeartRating;->CREATOR:Lcom/google/android/exoplayer2/Bundleable$Creator;
 
@@ -89,6 +88,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {v0}, Lcom/google/android/exoplayer2/HeartRating;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -110,9 +110,11 @@
     :cond_0
     move v1, v0
 
+    .line 2
     :goto_0
     invoke-static {v1}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 3
     invoke-static {v2}, Lcom/google/android/exoplayer2/HeartRating;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -123,6 +125,7 @@
 
     if-eqz v1, :cond_1
 
+    .line 4
     new-instance v1, Lcom/google/android/exoplayer2/HeartRating;
 
     const/4 v2, 0x2
@@ -139,6 +142,7 @@
 
     goto :goto_1
 
+    .line 5
     :cond_1
     new-instance v1, Lcom/google/android/exoplayer2/HeartRating;
 
@@ -153,6 +157,7 @@
 
     const/16 v0, 0x24
 
+    .line 1
     invoke-static {p0, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
     move-result-object p0
@@ -169,6 +174,7 @@
         .end annotation
     .end param
 
+    .line 1
     instance-of v0, p1, Lcom/google/android/exoplayer2/HeartRating;
 
     const/4 v1, 0x0
@@ -177,9 +183,11 @@
 
     return v1
 
+    .line 2
     :cond_0
     check-cast p1, Lcom/google/android/exoplayer2/HeartRating;
 
+    .line 3
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/HeartRating;->isHeart:Z
 
     iget-boolean v2, p1, Lcom/google/android/exoplayer2/HeartRating;->isHeart:Z
@@ -205,6 +213,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
+    .line 1
     iget-boolean v1, p0, Lcom/google/android/exoplayer2/HeartRating;->rated:Z
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -235,6 +244,7 @@
 .method public isHeart()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/HeartRating;->isHeart:Z
 
     return p0
@@ -243,6 +253,7 @@
 .method public isRated()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/HeartRating;->rated:Z
 
     return p0
@@ -251,12 +262,14 @@
 .method public toBundle()Landroid/os/Bundle;
     .locals 3
 
+    .line 1
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const/4 v1, 0x0
 
+    .line 2
     invoke-static {v1}, Lcom/google/android/exoplayer2/HeartRating;->keyForField(I)Ljava/lang/String;
 
     move-result-object v2
@@ -265,6 +278,7 @@
 
     const/4 v1, 0x1
 
+    .line 3
     invoke-static {v1}, Lcom/google/android/exoplayer2/HeartRating;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1
@@ -275,6 +289,7 @@
 
     const/4 v1, 0x2
 
+    .line 4
     invoke-static {v1}, Lcom/google/android/exoplayer2/HeartRating;->keyForField(I)Ljava/lang/String;
 
     move-result-object v1

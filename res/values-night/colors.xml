@@ -30,11 +30,7 @@
     <color name="lpl_dialog_icon_bg_color_unselected">#14ffffff</color>
     <color name="lpl_dialog_icon_color_unselected">#ffffffff</color>
     <color name="lpl_dialog_title_color">#b3ffffff</color>
-    <color name="miuix_appcompat_action_mode_button_text">@color/miuix_appcompat_action_mode_button_text_dark</color>
-    <color name="miuix_appcompat_dialog_default_progress_percent_color">@color/miuix_appcompat_dialog_default_progress_percent_color_dark</color>
-    <color name="miuix_appcompat_fab_color">@color/miuix_appcompat_fab_color_dark</color>
     <color name="miuix_folme_color_blink_tint">#26ffffff</color>
-    <color name="miuix_folme_color_hover_tint">@color/miuix_folme_color_hover_tint_dark</color>
     <color name="miuix_folme_color_touch_tint">@color/miuix_folme_color_touch_tint_dark</color>
     <color name="more_mode_style_setting_text_color">#ccffffff</color>
     <color name="newbie_cv_lens_bg">#ff242424</color>

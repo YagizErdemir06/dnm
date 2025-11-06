@@ -21,6 +21,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lmiuix/animation/controller/StateComposer$1;
 
     invoke-direct {v0}, Lmiuix/animation/controller/StateComposer$1;-><init>()V
@@ -33,6 +34,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,12 +45,14 @@
 
     if-eqz p0, :cond_3
 
+    .line 1
     array-length v0, p0
 
     if-nez v0, :cond_0
 
     goto :goto_1
 
+    .line 2
     :cond_0
     array-length v0, p0
 
@@ -58,6 +62,7 @@
 
     if-ne v0, v2, :cond_1
 
+    .line 3
     new-instance v0, Lmiuix/animation/controller/FolmeState;
 
     aget-object p0, p0, v1
@@ -66,16 +71,19 @@
 
     return-object v0
 
+    .line 4
     :cond_1
     array-length v0, p0
 
     new-array v0, v0, [Lmiuix/animation/controller/FolmeState;
 
+    .line 5
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_2
 
+    .line 6
     new-instance v2, Lmiuix/animation/controller/FolmeState;
 
     aget-object v3, p0, v1
@@ -88,6 +96,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_2
     const-class p0, Lmiuix/animation/controller/IFolmeStateStyle;
 

@@ -1,4 +1,4 @@
-.class synthetic Landroidx/fragment/app/FragmentStateManager$2;
+.class public synthetic Landroidx/fragment/app/FragmentStateManager$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,13 +15,14 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$androidx$lifecycle$Lifecycle$State:[I
+.field public static final synthetic $SwitchMap$androidx$lifecycle$Lifecycle$State:[I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     invoke-static {}, Landroidx/lifecycle/Lifecycle$State;->values()[Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object v0

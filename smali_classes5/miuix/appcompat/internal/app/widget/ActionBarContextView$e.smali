@@ -27,19 +27,20 @@
 
 
 # instance fields
-.field public a:Ljava/lang/CharSequence;
+.field public c:Ljava/lang/CharSequence;
 
-.field public b:Ljava/lang/CharSequence;
+.field public d:Ljava/lang/CharSequence;
 
-.field public c:Z
+.field public f:Z
 
-.field public d:I
+.field public g:I
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$e$a;
 
     invoke-direct {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$e$a;-><init>()V
@@ -49,7 +50,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcel;)V
+.method private constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
     .line 4
@@ -70,7 +71,7 @@
     const/4 v0, 0x0
 
     :goto_0
-    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$e;->c:Z
+    iput-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$e;->f:Z
 
     .line 6
     sget-object v0, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
@@ -81,7 +82,7 @@
 
     check-cast v0, Ljava/lang/CharSequence;
 
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$e;->a:Ljava/lang/CharSequence;
+    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$e;->c:Ljava/lang/CharSequence;
 
     .line 7
     sget-object v0, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
@@ -92,19 +93,19 @@
 
     check-cast v0, Ljava/lang/CharSequence;
 
-    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$e;->b:Ljava/lang/CharSequence;
+    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$e;->d:Ljava/lang/CharSequence;
 
     .line 8
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
-    iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$e;->d:I
+    iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$e;->g:I
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+.method private constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 0
     .annotation build Landroidx/annotation/RequiresApi;
         api = 0x18
@@ -128,7 +129,7 @@
     const/4 p2, 0x0
 
     :goto_0
-    iput-boolean p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$e;->c:Z
+    iput-boolean p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$e;->f:Z
 
     .line 11
     sget-object p2, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
@@ -139,7 +140,7 @@
 
     check-cast p2, Ljava/lang/CharSequence;
 
-    iput-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$e;->a:Ljava/lang/CharSequence;
+    iput-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$e;->c:Ljava/lang/CharSequence;
 
     .line 12
     sget-object p2, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
@@ -150,14 +151,14 @@
 
     check-cast p2, Ljava/lang/CharSequence;
 
-    iput-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$e;->b:Ljava/lang/CharSequence;
+    iput-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$e;->d:Ljava/lang/CharSequence;
 
     .line 13
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
 
-    iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$e;->d:I
+    iput p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$e;->g:I
 
     return-void
 .end method
@@ -194,23 +195,28 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    iget-boolean p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$e;->c:Z
+    .line 2
+    iget-boolean p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$e;->f:Z
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$e;->a:Ljava/lang/CharSequence;
+    .line 3
+    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$e;->c:Ljava/lang/CharSequence;
 
     const/4 v0, 0x0
 
     invoke-static {p2, p1, v0}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
-    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$e;->b:Ljava/lang/CharSequence;
+    .line 4
+    iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$e;->d:Ljava/lang/CharSequence;
 
     invoke-static {p2, p1, v0}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
-    iget p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$e;->d:I
+    .line 5
+    iget p0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$e;->g:I
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
 

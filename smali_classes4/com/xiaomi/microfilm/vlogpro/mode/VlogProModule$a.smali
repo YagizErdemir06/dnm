@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/android/camera/z4$p;
+.implements Ld/d/a/m5$p;
 
 
 # annotations
@@ -24,7 +24,16 @@
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule$a;->a:Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,8 +45,17 @@
 # virtual methods
 .method public a(D)V
     .locals 7
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "a"
+        }
+    .end annotation
 
-    invoke-static {}, Lv8/n1;->impl()Ljava/util/Optional;
+    .line 1
+    invoke-static {}, Ld/d/a/m7/g/q1;->impl()Ljava/util/Optional;
 
     move-result-object v0
 
@@ -45,11 +63,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lv8/n1;
+    check-cast v0, Ld/d/a/m7/g/q1;
 
     const/4 v1, 0x1
 
-    invoke-interface {v0, v1}, Lv8/d1;->isEvAdjusted(Z)Z
+    invoke-interface {v0, v1}, Ld/d/a/m7/g/g1;->isEvAdjusted(Z)Z
 
     move-result v0
 
@@ -57,27 +75,29 @@
 
     iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule$a;->a:Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;
 
-    iget-object v0, v0, Lq7/i0;->c:Lr7/h;
+    iget-object v0, v0, Ld/d/a/d7/p7;->p:Ld/d/a/d7/i8/n;
 
-    invoke-interface {v0}, Lr7/h;->isPaused()Z
+    .line 2
+    invoke-interface {v0}, Ld/d/a/d7/i8/n;->isPaused()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 3
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
 
     iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule$a;->a:Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;
 
-    invoke-static {v0}, Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;->ll(Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;)J
+    invoke-static {v0}, Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;->pk(Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;)J
 
     move-result-wide v3
 
     const-wide/16 v5, 0xbb8
 
-    invoke-static/range {v1 .. v6}, Lcom/android/camera/a6;->u3(JJJ)Z
+    invoke-static/range {v1 .. v6}, Ld/d/a/z5;->i3(JJJ)Z
 
     move-result v0
 
@@ -85,17 +105,19 @@
 
     iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule$a;->a:Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;
 
-    invoke-virtual {v0}, Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;->yl()Z
+    .line 4
+    invoke-virtual {v0}, Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;->Ck()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 5
     iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule$a;->a:Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;
 
-    iget-object v0, v0, Lq7/i0;->b:Lr7/m;
+    iget-object v0, v0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
 
-    invoke-interface {v0}, Lr7/m;->W()Lc8/u;
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->u1()Ld/d/a/d7/o8/b/x;
 
     move-result-object v0
 
@@ -103,29 +125,31 @@
 
     iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule$a;->a:Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;
 
-    iget-object v0, v0, Lq7/i0;->b:Lr7/m;
+    iget-object v0, v0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
 
-    invoke-interface {v0}, Lr7/m;->W()Lc8/u;
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->u1()Ld/d/a/d7/o8/b/x;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lc8/u;->x0()Z
+    invoke-virtual {v0}, Ld/d/a/d7/o8/b/x;->x0()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 6
     iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule$a;->a:Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;
 
-    invoke-virtual {v0}, Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;->d()Z
+    invoke-virtual {v0}, Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 7
     iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule$a;->a:Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;
 
-    invoke-static {p0, p1, p2}, Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;->ml(Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;D)Z
+    invoke-static {p0, p1, p2}, Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;->qk(Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;D)Z
 
     :cond_0
     return-void
@@ -133,6 +157,16 @@
 
 .method public c(FZ)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "orientation",
+            "isLying"
+        }
+    .end annotation
 
     if-nez p2, :cond_0
 
@@ -140,29 +174,32 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule$a;->a:Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;
 
-    iget-object v0, v0, Lq7/i0;->d:Lr7/b;
+    iget-object v0, v0, Ld/d/a/d7/p7;->s:Ld/d/a/d7/i8/k;
 
-    invoke-interface {v0}, Lr7/b;->getOrientation()I
+    invoke-interface {v0}, Ld/d/a/d7/i8/k;->getOrientation()I
 
     move-result v0
 
     int-to-float v0, v0
 
+    .line 2
     :goto_0
     iget-object v1, p0, Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule$a;->a:Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;
 
-    iget-object v1, v1, Lq7/i0;->d:Lr7/b;
+    iget-object v1, v1, Ld/d/a/d7/p7;->s:Ld/d/a/d7/i8/k;
 
-    invoke-interface {v1, v0}, Lr7/b;->j(F)V
+    invoke-interface {v1, v0}, Ld/d/a/d7/i8/k;->Q(F)V
 
+    .line 3
     iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule$a;->a:Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;
 
-    iget-object v0, v0, Lq7/i0;->b:Lr7/m;
+    iget-object v0, v0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
 
-    invoke-interface {v0}, Lr7/m;->s()I
+    invoke-interface {v0}, Ld/d/a/d7/i8/s;->P0()I
 
     move-result v0
 
@@ -172,39 +209,43 @@
 
     iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule$a;->a:Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;
 
-    iget-object v0, v0, Lq7/i0;->c:Lr7/h;
+    iget-object v0, v0, Ld/d/a/d7/p7;->p:Ld/d/a/d7/i8/n;
 
-    invoke-interface {v0}, Lr7/h;->z()Z
+    invoke-interface {v0}, Ld/d/a/d7/i8/n;->w()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
+    .line 4
     :cond_1
-    invoke-static {}, Lcom/android/camera/effect/b;->getInstance()Lcom/android/camera/effect/b;
+    invoke-static {}, Ld/d/a/q6/b;->getInstance()Ld/d/a/q6/b;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule$a;->a:Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;
 
-    iget-object v2, v1, Lq7/i0;->q:Lcom/android/camera/Camera;
+    iget-object v2, v1, Ld/d/a/d7/p7;->K8:Lcom/android/camera/Camera;
 
-    iget-object v1, v1, Lq7/i0;->d:Lr7/b;
+    iget-object v1, v1, Ld/d/a/d7/p7;->s:Ld/d/a/d7/i8/k;
 
-    invoke-interface {v1}, Lr7/b;->C()F
-
-    move-result v1
-
-    invoke-static {v2, v1}, Lcom/android/camera/a6;->R1(Landroid/app/Activity;F)F
+    .line 5
+    invoke-interface {v1}, Ld/d/a/d7/i8/k;->i0()F
 
     move-result v1
 
-    invoke-virtual {v0, p2, v1}, Lcom/android/camera/effect/b;->setDeviceRotation(ZF)V
+    invoke-static {v2, v1}, Ld/d/a/z5;->I1(Landroid/app/Activity;F)F
 
+    move-result v1
+
+    .line 6
+    invoke-virtual {v0, p2, v1}, Ld/d/a/q6/b;->setDeviceRotation(ZF)V
+
+    .line 7
     :cond_2
     iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule$a;->a:Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;
 
-    invoke-static {v0}, Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;->nl(Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;)Landroid/os/Handler;
+    invoke-static {v0}, Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;->rk(Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -212,11 +253,12 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
+    .line 8
     iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule$a;->a:Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;
 
-    iget-object v0, v0, Lq7/i0;->c:Lr7/h;
+    iget-object v0, v0, Ld/d/a/d7/p7;->p:Ld/d/a/d7/i8/n;
 
-    invoke-interface {v0}, Lr7/h;->isPaused()Z
+    invoke-interface {v0}, Ld/d/a/d7/i8/n;->isPaused()Z
 
     move-result v0
 
@@ -230,37 +272,41 @@
 
     if-eqz p2, :cond_3
 
+    .line 9
     invoke-static {p1}, Ljava/lang/Math;->round(F)I
 
     move-result p1
 
     iget-object p2, p0, Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule$a;->a:Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;
 
-    iget-object p2, p2, Lq7/i0;->d:Lr7/b;
+    iget-object p2, p2, Ld/d/a/d7/p7;->s:Ld/d/a/d7/i8/k;
 
-    invoke-interface {p2}, Lr7/b;->getOrientation()I
+    invoke-interface {p2}, Ld/d/a/d7/i8/k;->getOrientation()I
 
     move-result p2
 
-    invoke-static {p1, p2}, Lcom/android/camera/a6;->h4(II)I
+    invoke-static {p1, p2}, Ld/d/a/z5;->T3(II)I
 
     move-result p1
 
+    .line 10
     iget-object p2, p0, Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule$a;->a:Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;
 
-    iget-object p2, p2, Lq7/i0;->q:Lcom/android/camera/Camera;
+    iget-object p2, p2, Ld/d/a/d7/p7;->K8:Lcom/android/camera/Camera;
 
-    invoke-static {p2}, Lcom/android/camera/a6;->S0(Landroid/app/Activity;)I
+    invoke-static {p2}, Ld/d/a/z5;->J0(Landroid/app/Activity;)I
 
     move-result p2
 
     add-int/2addr p2, p1
 
+    .line 11
     rem-int/lit16 p2, p2, 0x168
 
+    .line 12
     iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule$a;->a:Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;
 
-    invoke-static {p0}, Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;->fl(Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;)Landroid/os/Handler;
+    invoke-static {p0}, Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;->jk(Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;)Landroid/os/Handler;
 
     move-result-object p0
 
@@ -277,11 +323,12 @@
 .method public g()Z
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule$a;->a:Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;
 
-    iget-object v0, v0, Lq7/i0;->c:Lr7/h;
+    iget-object v0, v0, Ld/d/a/d7/p7;->p:Ld/d/a/d7/i8/n;
 
-    invoke-interface {v0}, Lr7/h;->J()Z
+    invoke-interface {v0}, Ld/d/a/d7/i8/n;->G()Z
 
     move-result v0
 
@@ -289,9 +336,9 @@
 
     iget-object p0, p0, Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule$a;->a:Lcom/xiaomi/microfilm/vlogpro/mode/VlogProModule;
 
-    iget-object p0, p0, Lq7/i0;->b:Lr7/m;
+    iget-object p0, p0, Ld/d/a/d7/p7;->n:Ld/d/a/d7/i8/s;
 
-    invoke-interface {p0}, Lr7/m;->s()I
+    invoke-interface {p0}, Ld/d/a/d7/i8/s;->P0()I
 
     move-result p0
 
@@ -310,6 +357,14 @@
 
 .method public onSensorChanged(Landroid/hardware/SensorEvent;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "e"
+        }
+    .end annotation
 
     return-void
 .end method

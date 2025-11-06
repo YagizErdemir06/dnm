@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field protected children:Ljava/util/List;
+.field public children:Ljava/util/List;
 
 
 # direct methods
@@ -40,6 +40,7 @@
 .method public children()Ljava/util/Enumeration;
     .locals 1
 
+    .line 1
     new-instance v0, Lorg/dom4j/swing/BranchTreeNode$1;
 
     invoke-direct {v0, p0}, Lorg/dom4j/swing/BranchTreeNode$1;-><init>(Lorg/dom4j/swing/BranchTreeNode;)V
@@ -50,14 +51,17 @@
 .method public createChildList()Ljava/util/List;
     .locals 6
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/swing/BranchTreeNode;->getXmlBranch()Lorg/dom4j/Branch;
 
     move-result-object v0
 
+    .line 2
     invoke-interface {v0}, Lorg/dom4j/Branch;->nodeCount()I
 
     move-result v1
 
+    .line 3
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2, v1}, Ljava/util/ArrayList;-><init>(I)V
@@ -67,14 +71,17 @@
     :goto_0
     if-ge v3, v1, :cond_2
 
+    .line 4
     invoke-interface {v0, v3}, Lorg/dom4j/Branch;->node(I)Lorg/dom4j/Node;
 
     move-result-object v4
 
+    .line 5
     instance-of v5, v4, Lorg/dom4j/CharacterData;
 
     if-eqz v5, :cond_1
 
+    .line 6
     invoke-interface {v4}, Lorg/dom4j/Node;->getText()Ljava/lang/String;
 
     move-result-object v5
@@ -83,11 +90,13 @@
 
     goto :goto_1
 
+    .line 7
     :cond_0
     invoke-virtual {v5}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v5
 
+    .line 8
     invoke-virtual {v5}, Ljava/lang/String;->length()I
 
     move-result v5
@@ -96,6 +105,7 @@
 
     goto :goto_1
 
+    .line 9
     :cond_1
     invoke-virtual {p0, v4}, Lorg/dom4j/swing/BranchTreeNode;->createChildTreeNode(Lorg/dom4j/Node;)Ljavax/swing/tree/TreeNode;
 
@@ -115,10 +125,12 @@
 .method public createChildTreeNode(Lorg/dom4j/Node;)Ljavax/swing/tree/TreeNode;
     .locals 1
 
+    .line 1
     instance-of v0, p1, Lorg/dom4j/Branch;
 
     if-eqz v0, :cond_0
 
+    .line 2
     new-instance v0, Lorg/dom4j/swing/BranchTreeNode;
 
     check-cast p1, Lorg/dom4j/Branch;
@@ -127,6 +139,7 @@
 
     return-object v0
 
+    .line 3
     :cond_0
     new-instance v0, Lorg/dom4j/swing/LeafTreeNode;
 
@@ -146,6 +159,7 @@
 .method public getChildAt(I)Ljavax/swing/tree/TreeNode;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/swing/BranchTreeNode;->getChildList()Ljava/util/List;
 
     move-result-object p0
@@ -162,6 +176,7 @@
 .method public getChildCount()I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/swing/BranchTreeNode;->getChildList()Ljava/util/List;
 
     move-result-object p0
@@ -176,16 +191,19 @@
 .method public getChildList()Ljava/util/List;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/swing/BranchTreeNode;->children:Ljava/util/List;
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/swing/BranchTreeNode;->createChildList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/dom4j/swing/BranchTreeNode;->children:Ljava/util/List;
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lorg/dom4j/swing/BranchTreeNode;->children:Ljava/util/List;
 
@@ -195,6 +213,7 @@
 .method public getIndex(Ljavax/swing/tree/TreeNode;)I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/swing/BranchTreeNode;->getChildList()Ljava/util/List;
 
     move-result-object p0
@@ -209,6 +228,7 @@
 .method public getXmlBranch()Lorg/dom4j/Branch;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/swing/LeafTreeNode;->xmlNode:Lorg/dom4j/Node;
 
     check-cast p0, Lorg/dom4j/Branch;
@@ -219,6 +239,7 @@
 .method public isLeaf()Z
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/swing/BranchTreeNode;->getXmlBranch()Lorg/dom4j/Branch;
 
     move-result-object p0
@@ -243,6 +264,7 @@
 .method public toString()Ljava/lang/String;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/swing/LeafTreeNode;->xmlNode:Lorg/dom4j/Node;
 
     invoke-interface {p0}, Lorg/dom4j/Node;->getName()Ljava/lang/String;

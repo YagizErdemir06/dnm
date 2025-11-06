@@ -65,6 +65,7 @@
 .method public synthetic constructor <init>(Landroid/os/Parcel;Lcom/google/android/gms/common/internal/zzi;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
@@ -93,6 +94,7 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/internal/BinderWrapper;->zza:Landroid/os/IBinder;
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V

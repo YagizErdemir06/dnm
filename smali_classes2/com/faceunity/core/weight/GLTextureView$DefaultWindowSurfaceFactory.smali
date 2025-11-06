@@ -1,4 +1,4 @@
-.class Lcom/faceunity/core/weight/GLTextureView$DefaultWindowSurfaceFactory;
+.class public Lcom/faceunity/core/weight/GLTextureView$DefaultWindowSurfaceFactory;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -52,6 +52,7 @@
 
     aput v0, p0, v1
 
+    .line 1
     invoke-static {p1, p2, p3, p0, v1}, Landroid/opengl/EGL14;->eglCreateWindowSurface(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLConfig;Ljava/lang/Object;[II)Landroid/opengl/EGLSurface;
 
     move-result-object p0
@@ -63,6 +64,7 @@
     :catch_0
     move-exception p0
 
+    .line 2
     invoke-static {}, Lcom/faceunity/core/weight/GLTextureView;->access$300()Ljava/lang/String;
 
     move-result-object p1
@@ -80,6 +82,7 @@
 .method public destroySurface(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;)V
     .locals 0
 
+    .line 1
     invoke-static {p1, p2}, Landroid/opengl/EGL14;->eglDestroySurface(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;)Z
 
     return-void

@@ -1,4 +1,4 @@
-.class Lcom/google/common/eventbus/SubscriberRegistry$2;
+.class public Lcom/google/common/eventbus/SubscriberRegistry$2;
 .super Lcom/google/common/cache/CacheLoader;
 .source "SourceFile"
 
@@ -29,6 +29,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/cache/CacheLoader;-><init>()V
 
     return-void

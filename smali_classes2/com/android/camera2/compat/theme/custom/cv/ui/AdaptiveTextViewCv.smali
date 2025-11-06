@@ -16,7 +16,16 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
     .end annotation
 
     .line 1
@@ -37,6 +46,16 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs"
+        }
+    .end annotation
 
     .line 4
     invoke-direct {p0, p1, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -56,7 +75,20 @@
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "context",
+            "attrs",
+            "defStyleAttr"
+        }
     .end annotation
 
     .line 7
@@ -87,7 +119,18 @@
 
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
     .locals 1
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "keyCode",
+            "event"
+        }
     .end annotation
 
     const/16 v0, 0x42
@@ -116,6 +159,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/widget/TextView;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
@@ -132,9 +176,21 @@
 
 .method public setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "text",
+            "type"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
 
+    .line 2
     iget p1, p0, Lcom/android/camera2/compat/theme/custom/cv/ui/AdaptiveTextViewCv;->mMaxFontScale:F
 
     const/4 p2, 0x0
@@ -143,7 +199,8 @@
 
     if-lez p1, :cond_1
 
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    .line 3
+    invoke-virtual {p0}, Landroid/widget/TextView;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
@@ -153,18 +210,21 @@
 
     iget p1, p1, Landroid/content/res/Configuration;->fontScale:F
 
+    .line 4
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/cv/ui/AdaptiveTextViewCv;->mMaxFontScale:F
 
     cmpl-float v0, p1, v0
 
     if-ltz v0, :cond_1
 
+    .line 5
     iget v0, p0, Lcom/android/camera2/compat/theme/custom/cv/ui/AdaptiveTextViewCv;->mRealFontScale:F
 
     cmpl-float p2, v0, p2
 
     if-nez p2, :cond_0
 
+    .line 6
     invoke-virtual {p0}, Landroid/widget/TextView;->getTextSize()F
 
     move-result p2
@@ -177,6 +237,7 @@
 
     iput p2, p0, Lcom/android/camera2/compat/theme/custom/cv/ui/AdaptiveTextViewCv;->mRealFontScale:F
 
+    .line 7
     :cond_0
     iget p1, p0, Lcom/android/camera2/compat/theme/custom/cv/ui/AdaptiveTextViewCv;->mRealFontScale:F
 
@@ -184,6 +245,7 @@
 
     invoke-virtual {p0, p2, p1}, Landroid/widget/TextView;->setTextSize(IF)V
 
+    .line 8
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V

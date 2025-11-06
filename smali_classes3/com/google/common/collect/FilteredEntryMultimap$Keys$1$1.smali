@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/FilteredEntryMultimap$Keys$1$1;
+.class public Lcom/google/common/collect/FilteredEntryMultimap$Keys$1$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -29,13 +29,14 @@
 
 
 # instance fields
-.field final synthetic val$predicate:Lcom/google/common/base/Predicate;
+.field public final synthetic val$predicate:Lcom/google/common/base/Predicate;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/collect/FilteredEntryMultimap$Keys$1;Lcom/google/common/base/Predicate;)V
     .locals 0
 
+    .line 1
     iput-object p2, p0, Lcom/google/common/collect/FilteredEntryMultimap$Keys$1$1;->val$predicate:Lcom/google/common/base/Predicate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

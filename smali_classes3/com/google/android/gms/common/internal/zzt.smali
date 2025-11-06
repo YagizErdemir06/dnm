@@ -15,12 +15,14 @@
 
     const-string v0, "https://plus.google.com/"
 
+    .line 1
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/android/gms/common/internal/zzt;->zza:Landroid/net/Uri;
 
+    .line 2
     invoke-virtual {v0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v0
@@ -49,6 +51,7 @@
 .method public static zza()Landroid/content/Intent;
     .locals 2
 
+    .line 1
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.google.android.clockwork.home.UPDATE_ANDROID_WEAR_ACTION"
@@ -57,6 +60,7 @@
 
     const-string v1, "com.google.android.wearable.app"
 
+    .line 2
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     return-object v0
@@ -69,6 +73,7 @@
         .end annotation
     .end param
 
+    .line 1
     new-instance p0, Landroid/content/Intent;
 
     const-string v0, "android.intent.action.VIEW"
@@ -77,10 +82,12 @@
 
     const-string v0, "market://details"
 
+    .line 2
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
+    .line 3
     invoke-virtual {v0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v0
@@ -89,10 +96,12 @@
 
     const-string v2, "com.google.android.gms"
 
+    .line 4
     invoke-virtual {v0, v1, v2}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
 
+    .line 5
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -101,21 +110,26 @@
 
     const-string v1, "pcampaignid"
 
+    .line 6
     invoke-virtual {v0, v1, p1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
+    .line 7
     :cond_0
     invoke-virtual {v0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object p1
 
+    .line 8
     invoke-virtual {p0, p1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
     const-string p1, "com.android.vending"
 
+    .line 9
     invoke-virtual {p0, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     const/high16 p1, 0x80000
 
+    .line 10
     invoke-virtual {p0, p1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     return-object p0
@@ -124,13 +138,14 @@
 .method public static zzc(Ljava/lang/String;)Landroid/content/Intent;
     .locals 2
 
-    const-string p0, "com.google.android.gms"
+    const-string p0, "package"
 
-    const/4 v0, 0x0
+    const-string v0, "com.google.android.gms"
 
-    const-string v1, "package"
+    const/4 v1, 0x0
 
-    invoke-static {v1, p0, v0}, Landroid/net/Uri;->fromParts(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
+    .line 1
+    invoke-static {p0, v0, v1}, Landroid/net/Uri;->fromParts(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p0
 
@@ -138,8 +153,10 @@
 
     const-string v1, "android.settings.APPLICATION_DETAILS_SETTINGS"
 
+    .line 2
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    .line 3
     invoke-virtual {v0, p0}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
     return-object v0

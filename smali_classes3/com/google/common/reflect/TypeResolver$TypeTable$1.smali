@@ -1,4 +1,4 @@
-.class Lcom/google/common/reflect/TypeResolver$TypeTable$1;
+.class public Lcom/google/common/reflect/TypeResolver$TypeTable$1;
 .super Lcom/google/common/reflect/TypeResolver$TypeTable;
 .source "SourceFile"
 
@@ -15,15 +15,16 @@
 
 
 # instance fields
-.field final synthetic val$unguarded:Lcom/google/common/reflect/TypeResolver$TypeTable;
+.field public final synthetic val$unguarded:Lcom/google/common/reflect/TypeResolver$TypeTable;
 
-.field final synthetic val$var:Ljava/lang/reflect/TypeVariable;
+.field public final synthetic val$var:Ljava/lang/reflect/TypeVariable;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/reflect/TypeResolver$TypeTable;Ljava/lang/reflect/TypeVariable;Lcom/google/common/reflect/TypeResolver$TypeTable;)V
     .locals 0
 
+    .line 1
     iput-object p2, p0, Lcom/google/common/reflect/TypeResolver$TypeTable$1;->val$var:Ljava/lang/reflect/TypeVariable;
 
     iput-object p3, p0, Lcom/google/common/reflect/TypeResolver$TypeTable$1;->val$unguarded:Lcom/google/common/reflect/TypeResolver$TypeTable;
@@ -48,6 +49,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p1}, Ljava/lang/reflect/TypeVariable;->getGenericDeclaration()Ljava/lang/reflect/GenericDeclaration;
 
     move-result-object v0
@@ -66,6 +68,7 @@
 
     return-object p1
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lcom/google/common/reflect/TypeResolver$TypeTable$1;->val$unguarded:Lcom/google/common/reflect/TypeResolver$TypeTable;
 

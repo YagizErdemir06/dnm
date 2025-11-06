@@ -25,6 +25,7 @@
 .method public constructor <init>(Lcom/google/common/collect/ForwardingSortedMultiset;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/SortedMultisets$NavigableElementSet;-><init>(Lcom/google/common/collect/SortedMultiset;)V
 
     return-void

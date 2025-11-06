@@ -31,8 +31,10 @@
 .method private constructor <init>(I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/android/datatransport/runtime/dagger/internal/DaggerCollections;->newLinkedHashMapWithExpectedSize(I)Ljava/util/LinkedHashMap;
 
     move-result-object p1
@@ -56,6 +58,7 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/android/datatransport/runtime/dagger/internal/MapBuilder;
 
     invoke-direct {v0, p0}, Lcom/google/android/datatransport/runtime/dagger/internal/MapBuilder;-><init>(I)V
@@ -75,6 +78,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/dagger/internal/MapBuilder;->contributions:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->size()I
@@ -83,6 +87,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/datatransport/runtime/dagger/internal/MapBuilder;->contributions:Ljava/util/Map;
 
     invoke-static {p0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
@@ -91,6 +96,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
@@ -109,6 +115,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/dagger/internal/MapBuilder;->contributions:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -128,6 +135,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/datatransport/runtime/dagger/internal/MapBuilder;->contributions:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V

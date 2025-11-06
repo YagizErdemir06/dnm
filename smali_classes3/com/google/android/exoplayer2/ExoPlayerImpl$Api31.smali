@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/ExoPlayerImpl$Api31;
+.class public final Lcom/google/android/exoplayer2/ExoPlayerImpl$Api31;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,6 +33,7 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
+    .line 1
     invoke-static {p0}, Lcom/google/android/exoplayer2/analytics/MediaMetricsListener;->create(Landroid/content/Context;)Lcom/google/android/exoplayer2/analytics/MediaMetricsListener;
 
     move-result-object p0
@@ -42,13 +44,13 @@
 
     const-string p1, "MediaMetricsService unavailable."
 
+    .line 2
     invoke-static {p0, p1}, Lcom/google/android/exoplayer2/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 3
     new-instance p0, Lcom/google/android/exoplayer2/analytics/PlayerId;
 
-    invoke-static {}, Lcom/google/android/exoplayer2/g1;->a()Landroid/media/metrics/LogSessionId;
-
-    move-result-object p1
+    sget-object p1, Landroid/media/metrics/LogSessionId;->LOG_SESSION_ID_NONE:Landroid/media/metrics/LogSessionId;
 
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/analytics/PlayerId;-><init>(Landroid/media/metrics/LogSessionId;)V
 
@@ -57,8 +59,10 @@
     :cond_0
     if-eqz p2, :cond_1
 
+    .line 4
     invoke-virtual {p1, p0}, Lcom/google/android/exoplayer2/ExoPlayerImpl;->addAnalyticsListener(Lcom/google/android/exoplayer2/analytics/AnalyticsListener;)V
 
+    .line 5
     :cond_1
     new-instance p1, Lcom/google/android/exoplayer2/analytics/PlayerId;
 

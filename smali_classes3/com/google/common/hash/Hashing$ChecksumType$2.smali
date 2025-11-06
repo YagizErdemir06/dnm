@@ -1,4 +1,4 @@
-.class final enum Lcom/google/common/hash/Hashing$ChecksumType$2;
+.class public final enum Lcom/google/common/hash/Hashing$ChecksumType$2;
 .super Lcom/google/common/hash/Hashing$ChecksumType;
 .source "SourceFile"
 
@@ -20,6 +20,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/google/common/hash/Hashing$ChecksumType;-><init>(Ljava/lang/String;ILjava/lang/String;Lcom/google/common/hash/Hashing$1;)V
 
     return-void

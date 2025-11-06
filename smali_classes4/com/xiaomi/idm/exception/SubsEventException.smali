@@ -7,6 +7,7 @@
 .method public constructor <init>(Lcom/xiaomi/idm/constant/ResponseCode$SubsEventCode;)V
     .locals 1
 
+    .line 1
     invoke-virtual {p1}, Lcom/xiaomi/idm/constant/ResponseCode$SubsEventCode;->getCode()I
 
     move-result v0

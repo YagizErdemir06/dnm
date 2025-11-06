@@ -1,4 +1,4 @@
-.class public Lmiuix/animation/physics/SpringForce;
+.class public final Lmiuix/animation/physics/SpringForce;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -23,31 +23,31 @@
 
 .field public static final STIFFNESS_VERY_LOW:F = 50.0f
 
-.field static final UNSET:D = 1.7976931348623157E308
+.field private static final UNSET:D = 1.7976931348623157E308
 
 .field private static final VELOCITY_THRESHOLD_MULTIPLIER:D = 62.5
 
 
 # instance fields
-.field mDampedFreq:D
+.field private mDampedFreq:D
 
-.field mDampingRatio:D
+.field public mDampingRatio:D
 
-.field mFinalPosition:D
+.field private mFinalPosition:D
 
 .field private mGammaMinus:D
 
 .field private mGammaPlus:D
 
-.field mInitialized:Z
+.field private mInitialized:Z
 
-.field final mMassState:Lmiuix/animation/physics/DynamicAnimation$MassState;
+.field private final mMassState:Lmiuix/animation/physics/DynamicAnimation$MassState;
 
-.field mNaturalFreq:D
+.field public mNaturalFreq:D
 
-.field mValueThreshold:D
+.field private mValueThreshold:D
 
-.field mVelocityThreshold:D
+.field private mVelocityThreshold:D
 
 
 # direct methods
@@ -136,17 +136,142 @@
     return-void
 .end method
 
+.method private init()V
+    .locals 8
+
+    .line 1
+    iget-boolean v0, p0, Lmiuix/animation/physics/SpringForce;->mInitialized:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    .line 2
+    :cond_0
+    iget-wide v0, p0, Lmiuix/animation/physics/SpringForce;->mFinalPosition:D
+
+    const-wide v2, 0x7fefffffffffffffL    # Double.MAX_VALUE
+
+    cmpl-double v0, v0, v2
+
+    if-eqz v0, :cond_3
+
+    .line 3
+    iget-wide v0, p0, Lmiuix/animation/physics/SpringForce;->mDampingRatio:D
+
+    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
+
+    cmpl-double v4, v0, v2
+
+    if-lez v4, :cond_1
+
+    neg-double v4, v0
+
+    .line 4
+    iget-wide v6, p0, Lmiuix/animation/physics/SpringForce;->mNaturalFreq:D
+
+    mul-double/2addr v4, v6
+
+    mul-double/2addr v0, v0
+
+    sub-double/2addr v0, v2
+
+    .line 5
+    invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v0
+
+    mul-double/2addr v6, v0
+
+    add-double/2addr v4, v6
+
+    iput-wide v4, p0, Lmiuix/animation/physics/SpringForce;->mGammaPlus:D
+
+    .line 6
+    iget-wide v0, p0, Lmiuix/animation/physics/SpringForce;->mDampingRatio:D
+
+    neg-double v4, v0
+
+    iget-wide v6, p0, Lmiuix/animation/physics/SpringForce;->mNaturalFreq:D
+
+    mul-double/2addr v4, v6
+
+    mul-double/2addr v0, v0
+
+    sub-double/2addr v0, v2
+
+    .line 7
+    invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v0
+
+    mul-double/2addr v6, v0
+
+    sub-double/2addr v4, v6
+
+    iput-wide v4, p0, Lmiuix/animation/physics/SpringForce;->mGammaMinus:D
+
+    goto :goto_0
+
+    :cond_1
+    const-wide/16 v4, 0x0
+
+    cmpl-double v4, v0, v4
+
+    if-ltz v4, :cond_2
+
+    cmpg-double v4, v0, v2
+
+    if-gez v4, :cond_2
+
+    .line 8
+    iget-wide v4, p0, Lmiuix/animation/physics/SpringForce;->mNaturalFreq:D
+
+    mul-double/2addr v0, v0
+
+    sub-double/2addr v2, v0
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v0
+
+    mul-double/2addr v4, v0
+
+    iput-wide v4, p0, Lmiuix/animation/physics/SpringForce;->mDampedFreq:D
+
+    :cond_2
+    :goto_0
+    const/4 v0, 0x1
+
+    .line 9
+    iput-boolean v0, p0, Lmiuix/animation/physics/SpringForce;->mInitialized:Z
+
+    return-void
+
+    .line 10
+    :cond_3
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Error: Final position of the spring must be set before the miuix.animation starts"
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
 
 # virtual methods
 .method public getAcceleration(FF)F
     .locals 6
 
+    .line 1
     invoke-virtual {p0}, Lmiuix/animation/physics/SpringForce;->getFinalPosition()F
 
     move-result v0
 
     sub-float/2addr p1, v0
 
+    .line 2
     iget-wide v0, p0, Lmiuix/animation/physics/SpringForce;->mNaturalFreq:D
 
     mul-double v2, v0, v0
@@ -155,6 +280,7 @@
 
     mul-double/2addr v0, v4
 
+    .line 3
     iget-wide v4, p0, Lmiuix/animation/physics/SpringForce;->mDampingRatio:D
 
     mul-double/2addr v0, v4
@@ -179,6 +305,7 @@
 .method public getDampingRatio()F
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lmiuix/animation/physics/SpringForce;->mDampingRatio:D
 
     double-to-float p0, v0
@@ -189,6 +316,7 @@
 .method public getFinalPosition()F
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lmiuix/animation/physics/SpringForce;->mFinalPosition:D
 
     double-to-float p0, v0
@@ -199,6 +327,7 @@
 .method public getStiffness()F
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lmiuix/animation/physics/SpringForce;->mNaturalFreq:D
 
     mul-double/2addr v0, v0
@@ -208,122 +337,10 @@
     return p0
 .end method
 
-.method public init()V
-    .locals 8
-
-    iget-boolean v0, p0, Lmiuix/animation/physics/SpringForce;->mInitialized:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-wide v0, p0, Lmiuix/animation/physics/SpringForce;->mFinalPosition:D
-
-    const-wide v2, 0x7fefffffffffffffL    # Double.MAX_VALUE
-
-    cmpl-double v0, v0, v2
-
-    if-eqz v0, :cond_3
-
-    iget-wide v0, p0, Lmiuix/animation/physics/SpringForce;->mDampingRatio:D
-
-    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
-
-    cmpl-double v4, v0, v2
-
-    if-lez v4, :cond_1
-
-    neg-double v4, v0
-
-    iget-wide v6, p0, Lmiuix/animation/physics/SpringForce;->mNaturalFreq:D
-
-    mul-double/2addr v4, v6
-
-    mul-double/2addr v0, v0
-
-    sub-double/2addr v0, v2
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
-
-    move-result-wide v0
-
-    mul-double/2addr v6, v0
-
-    add-double/2addr v4, v6
-
-    iput-wide v4, p0, Lmiuix/animation/physics/SpringForce;->mGammaPlus:D
-
-    iget-wide v0, p0, Lmiuix/animation/physics/SpringForce;->mDampingRatio:D
-
-    neg-double v4, v0
-
-    iget-wide v6, p0, Lmiuix/animation/physics/SpringForce;->mNaturalFreq:D
-
-    mul-double/2addr v4, v6
-
-    mul-double/2addr v0, v0
-
-    sub-double/2addr v0, v2
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
-
-    move-result-wide v0
-
-    mul-double/2addr v6, v0
-
-    sub-double/2addr v4, v6
-
-    iput-wide v4, p0, Lmiuix/animation/physics/SpringForce;->mGammaMinus:D
-
-    goto :goto_0
-
-    :cond_1
-    const-wide/16 v4, 0x0
-
-    cmpl-double v4, v0, v4
-
-    if-ltz v4, :cond_2
-
-    cmpg-double v4, v0, v2
-
-    if-gez v4, :cond_2
-
-    iget-wide v4, p0, Lmiuix/animation/physics/SpringForce;->mNaturalFreq:D
-
-    mul-double/2addr v0, v0
-
-    sub-double/2addr v2, v0
-
-    invoke-static {v2, v3}, Ljava/lang/Math;->sqrt(D)D
-
-    move-result-wide v0
-
-    mul-double/2addr v4, v0
-
-    iput-wide v4, p0, Lmiuix/animation/physics/SpringForce;->mDampedFreq:D
-
-    :cond_2
-    :goto_0
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lmiuix/animation/physics/SpringForce;->mInitialized:Z
-
-    return-void
-
-    :cond_3
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string v0, "Error: Final position of the spring must be set before the miuix.animation starts"
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
 .method public isAtEquilibrium(FF)Z
     .locals 4
 
+    .line 1
     invoke-static {p2}, Ljava/lang/Math;->abs(F)F
 
     move-result p2
@@ -336,6 +353,7 @@
 
     if-gez p2, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lmiuix/animation/physics/SpringForce;->getFinalPosition()F
 
     move-result p2
@@ -375,14 +393,17 @@
 
     float-to-double v0, p1
 
+    .line 1
     iput-wide v0, p0, Lmiuix/animation/physics/SpringForce;->mDampingRatio:D
 
     const/4 p1, 0x0
 
+    .line 2
     iput-boolean p1, p0, Lmiuix/animation/physics/SpringForce;->mInitialized:Z
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -398,25 +419,8 @@
 
     float-to-double v0, p1
 
+    .line 1
     iput-wide v0, p0, Lmiuix/animation/physics/SpringForce;->mFinalPosition:D
-
-    return-object p0
-.end method
-
-.method public setResponse(F)Lmiuix/animation/physics/SpringForce;
-    .locals 4
-
-    const-wide v0, 0x401921fb54442d18L    # 6.283185307179586
-
-    float-to-double v2, p1
-
-    div-double/2addr v0, v2
-
-    iput-wide v0, p0, Lmiuix/animation/physics/SpringForce;->mNaturalFreq:D
-
-    const/4 p1, 0x0
-
-    iput-boolean p1, p0, Lmiuix/animation/physics/SpringForce;->mInitialized:Z
 
     return-object p0
 .end method
@@ -432,6 +436,7 @@
 
     float-to-double v0, p1
 
+    .line 1
     invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v0
@@ -440,10 +445,12 @@
 
     const/4 p1, 0x0
 
+    .line 2
     iput-boolean p1, p0, Lmiuix/animation/physics/SpringForce;->mInitialized:Z
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -457,6 +464,7 @@
 .method public setValueThreshold(D)V
     .locals 2
 
+    .line 1
     invoke-static {p1, p2}, Ljava/lang/Math;->abs(D)D
 
     move-result-wide p1
@@ -467,6 +475,7 @@
 
     mul-double/2addr p1, v0
 
+    .line 2
     iput-wide p1, p0, Lmiuix/animation/physics/SpringForce;->mVelocityThreshold:D
 
     return-void
@@ -477,20 +486,23 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual/range {p0 .. p0}, Lmiuix/animation/physics/SpringForce;->init()V
+    .line 1
+    invoke-direct/range {p0 .. p0}, Lmiuix/animation/physics/SpringForce;->init()V
 
     move-wide/from16 v1, p5
 
     long-to-double v1, v1
 
-    const-wide v3, 0x41cdcd6500000000L    # 1.0E9
+    const-wide v3, 0x408f400000000000L    # 1000.0
 
     div-double/2addr v1, v3
 
+    .line 2
     iget-wide v3, v0, Lmiuix/animation/physics/SpringForce;->mFinalPosition:D
 
     sub-double v3, p1, v3
 
+    .line 3
     iget-wide v5, v0, Lmiuix/animation/physics/SpringForce;->mDampingRatio:D
 
     const-wide/high16 v7, 0x3ff0000000000000L    # 1.0
@@ -501,6 +513,7 @@
 
     if-lez v9, :cond_0
 
+    .line 4
     iget-wide v5, v0, Lmiuix/animation/physics/SpringForce;->mGammaMinus:D
 
     mul-double v7, v5, v3
@@ -525,6 +538,7 @@
 
     mul-double/2addr v5, v1
 
+    .line 5
     invoke-static {v10, v11, v5, v6}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v5
@@ -535,6 +549,7 @@
 
     mul-double/2addr v12, v1
 
+    .line 6
     invoke-static {v10, v11, v12, v13}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v12
@@ -543,6 +558,7 @@
 
     add-double/2addr v5, v12
 
+    .line 7
     iget-wide v12, v0, Lmiuix/animation/physics/SpringForce;->mGammaMinus:D
 
     mul-double/2addr v7, v12
@@ -561,6 +577,7 @@
 
     mul-double/2addr v12, v1
 
+    .line 8
     invoke-static {v10, v11, v12, v13}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v1
@@ -576,6 +593,7 @@
 
     if-nez v9, :cond_1
 
+    .line 9
     iget-wide v5, v0, Lmiuix/animation/physics/SpringForce;->mNaturalFreq:D
 
     mul-double v7, v5, v3
@@ -590,12 +608,14 @@
 
     mul-double/2addr v5, v1
 
+    .line 10
     invoke-static {v10, v11, v5, v6}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v5
 
     mul-double/2addr v5, v3
 
+    .line 11
     iget-wide v12, v0, Lmiuix/animation/physics/SpringForce;->mNaturalFreq:D
 
     neg-double v12, v12
@@ -618,6 +638,7 @@
 
     mul-double/2addr v12, v1
 
+    .line 12
     invoke-static {v10, v11, v12, v13}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v1
@@ -628,6 +649,7 @@
 
     goto :goto_0
 
+    .line 13
     :cond_1
     iget-wide v12, v0, Lmiuix/animation/physics/SpringForce;->mDampedFreq:D
 
@@ -649,6 +671,7 @@
 
     mul-double/2addr v5, v1
 
+    .line 14
     invoke-static {v10, v11, v5, v6}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v5
@@ -657,6 +680,7 @@
 
     mul-double/2addr v12, v1
 
+    .line 15
     invoke-static {v12, v13}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v12
@@ -667,6 +691,7 @@
 
     mul-double/2addr v14, v1
 
+    .line 16
     invoke-static {v14, v15}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v14
@@ -677,6 +702,7 @@
 
     mul-double/2addr v5, v12
 
+    .line 17
     iget-wide v12, v0, Lmiuix/animation/physics/SpringForce;->mNaturalFreq:D
 
     neg-double v14, v12
@@ -695,6 +721,7 @@
 
     const-wide v11, 0x4005bf0a8b145769L    # Math.E
 
+    .line 18
     invoke-static {v11, v12, v9, v10}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v9
@@ -709,6 +736,7 @@
 
     mul-double/2addr v11, v1
 
+    .line 19
     invoke-static {v11, v12}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v3
@@ -721,6 +749,7 @@
 
     mul-double/2addr v3, v1
 
+    .line 20
     invoke-static {v3, v4}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v1
@@ -735,6 +764,7 @@
 
     move-wide/from16 v5, p1
 
+    .line 21
     :goto_0
     iget-object v1, v0, Lmiuix/animation/physics/SpringForce;->mMassState:Lmiuix/animation/physics/DynamicAnimation$MassState;
 
@@ -748,6 +778,7 @@
 
     double-to-float v0, v7
 
+    .line 22
     iput v0, v1, Lmiuix/animation/physics/DynamicAnimation$MassState;->mVelocity:F
 
     return-object v1

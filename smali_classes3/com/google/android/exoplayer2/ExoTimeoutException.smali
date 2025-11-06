@@ -29,12 +29,14 @@
 .method public constructor <init>(I)V
     .locals 1
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/exoplayer2/ExoTimeoutException;->getErrorMessage(I)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/ExoTimeoutException;->timeoutOperation:I
 
     return-void

@@ -1,4 +1,4 @@
-.class Lcom/google/common/base/Splitter$3;
+.class public Lcom/google/common/base/Splitter$3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic val$separatorPattern:Lcom/google/common/base/CommonPattern;
+.field public final synthetic val$separatorPattern:Lcom/google/common/base/CommonPattern;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/base/CommonPattern;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/base/Splitter$3;->val$separatorPattern:Lcom/google/common/base/CommonPattern;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

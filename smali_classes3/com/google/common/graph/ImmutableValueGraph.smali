@@ -47,6 +47,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/graph/ValueGraphBuilder;->from(Lcom/google/common/graph/ValueGraph;)Lcom/google/common/graph/ValueGraphBuilder;
 
     move-result-object v0
@@ -86,26 +87,31 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/graph/ImmutableValueGraph$1;
 
     invoke-direct {v0, p0, p1}, Lcom/google/common/graph/ImmutableValueGraph$1;-><init>(Lcom/google/common/graph/ValueGraph;Ljava/lang/Object;)V
 
+    .line 2
     invoke-interface {p0}, Lcom/google/common/graph/ValueGraph;->isDirected()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    .line 3
     invoke-interface {p0, p1}, Lcom/google/common/graph/ValueGraph;->incidentEdges(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0
 
+    .line 4
     invoke-static {p1, p0, v0}, Lcom/google/common/graph/DirectedGraphConnections;->ofImmutable(Ljava/lang/Object;Ljava/lang/Iterable;Lcom/google/common/base/Function;)Lcom/google/common/graph/DirectedGraphConnections;
 
     move-result-object p0
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-interface {p0, p1}, Lcom/google/common/graph/ValueGraph;->adjacentNodes(Ljava/lang/Object;)Ljava/util/Set;
 
@@ -115,6 +121,7 @@
 
     move-result-object p0
 
+    .line 6
     invoke-static {p0}, Lcom/google/common/graph/UndirectedGraphConnections;->ofImmutable(Ljava/util/Map;)Lcom/google/common/graph/UndirectedGraphConnections;
 
     move-result-object p0
@@ -208,10 +215,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/collect/ImmutableMap;->builder()Lcom/google/common/collect/ImmutableMap$Builder;
 
     move-result-object v0
 
+    .line 2
     invoke-interface {p0}, Lcom/google/common/graph/ValueGraph;->nodes()Ljava/util/Set;
 
     move-result-object v1
@@ -231,6 +240,7 @@
 
     move-result-object v2
 
+    .line 3
     invoke-static {p0, v2}, Lcom/google/common/graph/ImmutableValueGraph;->connectionsOf(Lcom/google/common/graph/ValueGraph;Ljava/lang/Object;)Lcom/google/common/graph/GraphConnections;
 
     move-result-object v3
@@ -239,6 +249,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-virtual {v0}, Lcom/google/common/collect/ImmutableMap$Builder;->build()Lcom/google/common/collect/ImmutableMap;
 
@@ -252,6 +263,7 @@
 .method public bridge synthetic adjacentNodes(Ljava/lang/Object;)Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/graph/StandardValueGraph;->adjacentNodes(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0
@@ -262,6 +274,7 @@
 .method public bridge synthetic allowsSelfLoops()Z
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/graph/StandardValueGraph;->allowsSelfLoops()Z
 
     move-result p0
@@ -364,6 +377,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lcom/google/common/graph/ElementOrder;->stable()Lcom/google/common/graph/ElementOrder;
 
     move-result-object p0
@@ -374,6 +388,7 @@
 .method public bridge synthetic incidentEdges(Ljava/lang/Object;)Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/graph/StandardValueGraph;->incidentEdges(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0
@@ -384,6 +399,7 @@
 .method public bridge synthetic isDirected()Z
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/graph/StandardValueGraph;->isDirected()Z
 
     move-result p0
@@ -394,6 +410,7 @@
 .method public bridge synthetic nodeOrder()Lcom/google/common/graph/ElementOrder;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/graph/StandardValueGraph;->nodeOrder()Lcom/google/common/graph/ElementOrder;
 
     move-result-object p0
@@ -404,6 +421,7 @@
 .method public bridge synthetic nodes()Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0}, Lcom/google/common/graph/StandardValueGraph;->nodes()Ljava/util/Set;
 
     move-result-object p0
@@ -414,6 +432,7 @@
 .method public bridge synthetic predecessors(Ljava/lang/Object;)Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/graph/StandardValueGraph;->predecessors(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0
@@ -424,6 +443,7 @@
 .method public bridge synthetic successors(Ljava/lang/Object;)Ljava/util/Set;
     .locals 0
 
+    .line 1
     invoke-super {p0, p1}, Lcom/google/common/graph/StandardValueGraph;->successors(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0

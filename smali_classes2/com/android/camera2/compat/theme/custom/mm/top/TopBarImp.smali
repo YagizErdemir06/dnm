@@ -10,6 +10,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,13 +21,14 @@
 .method public registerProtocol()V
     .locals 2
 
-    invoke-static {}, Lu8/e;->i()Lu8/e;
+    .line 1
+    invoke-static {}, Ld/d/a/m7/d;->i()Ld/d/a/m7/d;
 
     move-result-object v0
 
     const-class v1, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarImp;
 
-    invoke-virtual {v0, v1, p0}, Lu8/e;->d(Ljava/lang/Class;Lu8/a;)V
+    invoke-virtual {v0, v1, p0}, Ld/d/a/m7/d;->b(Ljava/lang/Class;Ld/d/a/m7/a;)V
 
     return-void
 .end method
@@ -34,13 +36,14 @@
 .method public unRegisterProtocol()V
     .locals 2
 
-    invoke-static {}, Lu8/e;->i()Lu8/e;
+    .line 1
+    invoke-static {}, Ld/d/a/m7/d;->i()Ld/d/a/m7/d;
 
     move-result-object v0
 
     const-class v1, Lcom/android/camera2/compat/theme/custom/mm/top/TopBarImp;
 
-    invoke-virtual {v0, v1, p0}, Lu8/e;->c(Ljava/lang/Class;Lu8/a;)V
+    invoke-virtual {v0, v1, p0}, Ld/d/a/m7/d;->d(Ljava/lang/Class;Ld/d/a/m7/a;)V
 
     return-void
 .end method

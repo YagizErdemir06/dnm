@@ -1,4 +1,4 @@
-.class Landroidx/media/AudioAttributesImplApi26$Builder;
+.class public Landroidx/media/AudioAttributesImplApi26$Builder;
 .super Landroidx/media/AudioAttributesImplApi21$Builder;
 .source "SourceFile"
 
@@ -52,6 +52,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     new-instance v0, Landroidx/media/AudioAttributesImplApi26;
 
     iget-object p0, p0, Landroidx/media/AudioAttributesImplApi21$Builder;->mFwkBuilder:Landroid/media/AudioAttributes$Builder;

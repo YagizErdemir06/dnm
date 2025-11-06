@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/camera/customization/FragmentCustomTint;->wi(Landroid/view/View;)V
+    value = Lcom/android/camera/customization/FragmentCustomTint;->vf(Landroid/view/View;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -23,7 +23,18 @@
 # direct methods
 .method public constructor <init>(Lcom/android/camera/customization/FragmentCustomTint;Landroid/view/View;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$currentView"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera/customization/FragmentCustomTint$a;->b:Lcom/android/camera/customization/FragmentCustomTint;
 
     iput-object p2, p0, Lcom/android/camera/customization/FragmentCustomTint$a;->a:Landroid/view/View;
@@ -37,10 +48,20 @@
 # virtual methods
 .method public onBegin(Ljava/lang/Object;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "toTag"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lmiuix/animation/listener/TransitionListener;->onBegin(Ljava/lang/Object;)V
 
-    invoke-static {}, Lcom/android/camera/customization/FragmentCustomTint;->Gh()Ljava/lang/String;
+    .line 2
+    invoke-static {}, Lcom/android/camera/customization/FragmentCustomTint;->nb()Ljava/lang/String;
 
     move-result-object p1
 
@@ -54,10 +75,11 @@
 
     move p1, v0
 
+    .line 3
     :goto_0
     iget-object v1, p0, Lcom/android/camera/customization/FragmentCustomTint$a;->b:Lcom/android/camera/customization/FragmentCustomTint;
 
-    invoke-static {v1}, Lcom/android/camera/customization/FragmentCustomTint;->Hh(Lcom/android/camera/customization/FragmentCustomTint;)Landroidx/viewpager/widget/ViewPager;
+    invoke-static {v1}, Lcom/android/camera/customization/FragmentCustomTint;->qb(Lcom/android/camera/customization/FragmentCustomTint;)Landroidx/viewpager/widget/ViewPager;
 
     move-result-object v1
 
@@ -67,9 +89,10 @@
 
     if-ge p1, v1, :cond_1
 
+    .line 4
     iget-object v1, p0, Lcom/android/camera/customization/FragmentCustomTint$a;->b:Lcom/android/camera/customization/FragmentCustomTint;
 
-    invoke-static {v1}, Lcom/android/camera/customization/FragmentCustomTint;->Hh(Lcom/android/camera/customization/FragmentCustomTint;)Landroidx/viewpager/widget/ViewPager;
+    invoke-static {v1}, Lcom/android/camera/customization/FragmentCustomTint;->qb(Lcom/android/camera/customization/FragmentCustomTint;)Landroidx/viewpager/widget/ViewPager;
 
     move-result-object v1
 
@@ -77,15 +100,17 @@
 
     move-result-object v1
 
-    const v2, 0x7f0b00c4
+    const v2, 0x7f0b00a9
 
+    .line 5
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
+    .line 6
     iget-object v2, p0, Lcom/android/camera/customization/FragmentCustomTint$a;->b:Lcom/android/camera/customization/FragmentCustomTint;
 
-    invoke-static {v2}, Lcom/android/camera/customization/FragmentCustomTint;->ai(Lcom/android/camera/customization/FragmentCustomTint;)Z
+    invoke-static {v2}, Lcom/android/camera/customization/FragmentCustomTint;->Mb(Lcom/android/camera/customization/FragmentCustomTint;)Z
 
     move-result v2
 
@@ -101,9 +126,10 @@
     :goto_1
     invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
+    .line 7
     iget-object v1, p0, Lcom/android/camera/customization/FragmentCustomTint$a;->a:Landroid/view/View;
 
-    const v2, 0x7f0b01bc
+    const v2, 0x7f0b0192
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -111,6 +137,7 @@
 
     check-cast v1, Landroid/widget/ImageView;
 
+    .line 8
     sget-object v2, Landroid/widget/ImageView$ScaleType;->FIT_XY:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
@@ -125,12 +152,22 @@
 
 .method public onComplete(Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "toTag"
+        }
+    .end annotation
 
+    .line 1
     invoke-super {p0, p1}, Lmiuix/animation/listener/TransitionListener;->onComplete(Ljava/lang/Object;)V
 
+    .line 2
     iget-object p0, p0, Lcom/android/camera/customization/FragmentCustomTint$a;->a:Landroid/view/View;
 
-    const p1, 0x7f0b01bc
+    const p1, 0x7f0b0192
 
     invoke-virtual {p0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -138,6 +175,7 @@
 
     check-cast p0, Landroid/widget/ImageView;
 
+    .line 3
     sget-object p1, Landroid/widget/ImageView$ScaleType;->FIT_XY:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V

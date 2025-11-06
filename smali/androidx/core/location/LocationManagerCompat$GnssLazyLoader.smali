@@ -1,4 +1,4 @@
-.class Landroidx/core/location/LocationManagerCompat$GnssLazyLoader;
+.class public Landroidx/core/location/LocationManagerCompat$GnssLazyLoader;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final sGnssStatusListeners:Landroidx/collection/SimpleArrayMap;
+.field public static final sGnssStatusListeners:Landroidx/collection/SimpleArrayMap;
     .annotation build Landroidx/annotation/GuardedBy;
         value = "sGnssStatusListeners"
     .end annotation
@@ -35,6 +35,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/collection/SimpleArrayMap;
 
     invoke-direct {v0}, Landroidx/collection/SimpleArrayMap;-><init>()V
@@ -47,6 +48,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/ExoPlayerImplInternal$PendingMessageInfo;
+.class public final Lcom/google/android/exoplayer2/ExoPlayerImplInternal$PendingMessageInfo;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -43,8 +43,10 @@
 .method public constructor <init>(Lcom/google/android/exoplayer2/PlayerMessage;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/ExoPlayerImplInternal$PendingMessageInfo;->message:Lcom/google/android/exoplayer2/PlayerMessage;
 
     return-void
@@ -139,10 +141,13 @@
 .method public setResolvedPosition(IJLjava/lang/Object;)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/ExoPlayerImplInternal$PendingMessageInfo;->resolvedPeriodIndex:I
 
+    .line 2
     iput-wide p2, p0, Lcom/google/android/exoplayer2/ExoPlayerImplInternal$PendingMessageInfo;->resolvedPeriodTimeUs:J
 
+    .line 3
     iput-object p4, p0, Lcom/google/android/exoplayer2/ExoPlayerImplInternal$PendingMessageInfo;->resolvedPeriodUid:Ljava/lang/Object;
 
     return-void

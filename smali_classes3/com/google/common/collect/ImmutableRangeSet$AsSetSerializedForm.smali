@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/ImmutableRangeSet$AsSetSerializedForm;
+.class public Lcom/google/common/collect/ImmutableRangeSet$AsSetSerializedForm;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -62,10 +62,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/ImmutableRangeSet$AsSetSerializedForm;->ranges:Lcom/google/common/collect/ImmutableList;
 
+    .line 3
     iput-object p2, p0, Lcom/google/common/collect/ImmutableRangeSet$AsSetSerializedForm;->domain:Lcom/google/common/collect/DiscreteDomain;
 
     return-void
@@ -76,6 +79,7 @@
 .method public readResolve()Ljava/lang/Object;
     .locals 2
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/ImmutableRangeSet;
 
     iget-object v1, p0, Lcom/google/common/collect/ImmutableRangeSet$AsSetSerializedForm;->ranges:Lcom/google/common/collect/ImmutableList;

@@ -15,25 +15,25 @@
 
 
 # static fields
-.field public static g:Ljava/lang/String; = "GLThreadManager"
+.field private static a:Ljava/lang/String; = "GLThreadManager"
 
-.field public static final h:I = 0x20000
+.field private static final b:I = 0x20000
 
-.field public static final i:Ljava/lang/String; = "Q3Dimension MSM7500 "
+.field private static final c:Ljava/lang/String; = "Q3Dimension MSM7500 "
 
 
 # instance fields
-.field public a:Z
+.field private d:Z
 
-.field public b:I
+.field private e:I
 
-.field public c:Z
+.field private f:Z
 
-.field public d:Z
+.field private g:Z
 
-.field public e:Z
+.field private h:Z
 
-.field public f:Lcom/android/camera/ui/GLTextureView$k;
+.field private i:Lcom/android/camera/ui/GLTextureView$k;
 
 
 # direct methods
@@ -43,7 +43,7 @@
     return-void
 .end method
 
-.method public constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
     .line 1
@@ -61,27 +61,59 @@
     return-void
 .end method
 
+.method private b()V
+    .locals 1
+
+    .line 1
+    iget-boolean v0, p0, Lcom/android/camera/ui/GLTextureView$l;->d:Z
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 2
+    iput-boolean v0, p0, Lcom/android/camera/ui/GLTextureView$l;->g:Z
+
+    .line 3
+    iput-boolean v0, p0, Lcom/android/camera/ui/GLTextureView$l;->d:Z
+
+    :cond_0
+    return-void
+.end method
+
 
 # virtual methods
 .method public declared-synchronized a(Ljavax/microedition/khronos/opengles/GL10;)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "gl"
+        }
+    .end annotation
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
-    iget-boolean v0, p0, Lcom/android/camera/ui/GLTextureView$l;->c:Z
+    iget-boolean v0, p0, Lcom/android/camera/ui/GLTextureView$l;->f:Z
 
     if-nez v0, :cond_3
 
-    invoke-virtual {p0}, Lcom/android/camera/ui/GLTextureView$l;->b()V
+    .line 2
+    invoke-direct {p0}, Lcom/android/camera/ui/GLTextureView$l;->b()V
 
     const/16 v0, 0x1f01
 
+    .line 3
     invoke-interface {p1, v0}, Ljavax/microedition/khronos/opengles/GL10;->glGetString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    iget v0, p0, Lcom/android/camera/ui/GLTextureView$l;->b:I
+    .line 4
+    iget v0, p0, Lcom/android/camera/ui/GLTextureView$l;->e:I
 
     const/high16 v1, 0x20000
 
@@ -93,6 +125,7 @@
 
     const-string v0, "Q3Dimension MSM7500 "
 
+    .line 5
     invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p1
@@ -107,24 +140,28 @@
     move p1, v2
 
     :goto_0
-    iput-boolean p1, p0, Lcom/android/camera/ui/GLTextureView$l;->d:Z
+    iput-boolean p1, p0, Lcom/android/camera/ui/GLTextureView$l;->g:Z
 
+    .line 6
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
+    .line 7
     :cond_1
-    iget-boolean p1, p0, Lcom/android/camera/ui/GLTextureView$l;->d:Z
+    iget-boolean p1, p0, Lcom/android/camera/ui/GLTextureView$l;->g:Z
 
     if-nez p1, :cond_2
 
     move v2, v3
 
     :cond_2
-    iput-boolean v2, p0, Lcom/android/camera/ui/GLTextureView$l;->e:Z
+    iput-boolean v2, p0, Lcom/android/camera/ui/GLTextureView$l;->h:Z
 
-    iput-boolean v3, p0, Lcom/android/camera/ui/GLTextureView$l;->c:Z
+    .line 8
+    iput-boolean v3, p0, Lcom/android/camera/ui/GLTextureView$l;->f:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 9
     :cond_3
     monitor-exit p0
 
@@ -138,34 +175,28 @@
     throw p1
 .end method
 
-.method public final b()V
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/android/camera/ui/GLTextureView$l;->a:Z
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/android/camera/ui/GLTextureView$l;->d:Z
-
-    iput-boolean v0, p0, Lcom/android/camera/ui/GLTextureView$l;->a:Z
-
-    :cond_0
-    return-void
-.end method
-
 .method public c(Lcom/android/camera/ui/GLTextureView$k;)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "thread"
+        }
+    .end annotation
 
-    iget-object v0, p0, Lcom/android/camera/ui/GLTextureView$l;->f:Lcom/android/camera/ui/GLTextureView$k;
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/ui/GLTextureView$l;->i:Lcom/android/camera/ui/GLTextureView$k;
 
     if-ne v0, p1, :cond_0
 
     const/4 p1, 0x0
 
-    iput-object p1, p0, Lcom/android/camera/ui/GLTextureView$l;->f:Lcom/android/camera/ui/GLTextureView$k;
+    .line 2
+    iput-object p1, p0, Lcom/android/camera/ui/GLTextureView$l;->i:Lcom/android/camera/ui/GLTextureView$k;
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
@@ -177,8 +208,9 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
-    iget-boolean v0, p0, Lcom/android/camera/ui/GLTextureView$l;->e:Z
+    iget-boolean v0, p0, Lcom/android/camera/ui/GLTextureView$l;->h:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -199,10 +231,12 @@
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
-    invoke-virtual {p0}, Lcom/android/camera/ui/GLTextureView$l;->b()V
+    invoke-direct {p0}, Lcom/android/camera/ui/GLTextureView$l;->b()V
 
-    iget-boolean v0, p0, Lcom/android/camera/ui/GLTextureView$l;->d:Z
+    .line 2
+    iget-boolean v0, p0, Lcom/android/camera/ui/GLTextureView$l;->g:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -222,11 +256,20 @@
 
 .method public declared-synchronized f(Lcom/android/camera/ui/GLTextureView$k;)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "thread"
+        }
+    .end annotation
 
     monitor-enter p0
 
+    .line 1
     :try_start_0
-    sget-object v0, Lcom/android/camera/ui/GLTextureView$l;->g:Ljava/lang/String;
+    sget-object v0, Lcom/android/camera/ui/GLTextureView$l;->a:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -254,21 +297,26 @@
 
     const/4 v0, 0x1
 
+    .line 2
     invoke-static {p1, v0}, Lcom/android/camera/ui/GLTextureView$k;->b(Lcom/android/camera/ui/GLTextureView$k;Z)Z
 
-    iget-object v0, p0, Lcom/android/camera/ui/GLTextureView$l;->f:Lcom/android/camera/ui/GLTextureView$k;
+    .line 3
+    iget-object v0, p0, Lcom/android/camera/ui/GLTextureView$l;->i:Lcom/android/camera/ui/GLTextureView$k;
 
     if-ne v0, p1, :cond_0
 
     const/4 p1, 0x0
 
-    iput-object p1, p0, Lcom/android/camera/ui/GLTextureView$l;->f:Lcom/android/camera/ui/GLTextureView$k;
+    .line 4
+    iput-object p1, p0, Lcom/android/camera/ui/GLTextureView$l;->i:Lcom/android/camera/ui/GLTextureView$k;
 
+    .line 5
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 6
     monitor-exit p0
 
     return-void
@@ -283,8 +331,17 @@
 
 .method public g(Lcom/android/camera/ui/GLTextureView$k;)Z
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "thread"
+        }
+    .end annotation
 
-    iget-object v0, p0, Lcom/android/camera/ui/GLTextureView$l;->f:Lcom/android/camera/ui/GLTextureView$k;
+    .line 1
+    iget-object v0, p0, Lcom/android/camera/ui/GLTextureView$l;->i:Lcom/android/camera/ui/GLTextureView$k;
 
     const/4 v1, 0x1
 
@@ -294,20 +351,24 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
-    invoke-virtual {p0}, Lcom/android/camera/ui/GLTextureView$l;->b()V
+    invoke-direct {p0}, Lcom/android/camera/ui/GLTextureView$l;->b()V
 
-    iget-boolean p1, p0, Lcom/android/camera/ui/GLTextureView$l;->d:Z
+    .line 3
+    iget-boolean p1, p0, Lcom/android/camera/ui/GLTextureView$l;->g:Z
 
     if-eqz p1, :cond_1
 
     return v1
 
+    .line 4
     :cond_1
-    iget-object p0, p0, Lcom/android/camera/ui/GLTextureView$l;->f:Lcom/android/camera/ui/GLTextureView$k;
+    iget-object p0, p0, Lcom/android/camera/ui/GLTextureView$l;->i:Lcom/android/camera/ui/GLTextureView$k;
 
     if-eqz p0, :cond_2
 
+    .line 5
     invoke-virtual {p0}, Lcom/android/camera/ui/GLTextureView$k;->k()V
 
     :cond_2
@@ -315,10 +376,12 @@
 
     return p0
 
+    .line 6
     :cond_3
     :goto_0
-    iput-object p1, p0, Lcom/android/camera/ui/GLTextureView$l;->f:Lcom/android/camera/ui/GLTextureView$k;
+    iput-object p1, p0, Lcom/android/camera/ui/GLTextureView$l;->i:Lcom/android/camera/ui/GLTextureView$k;
 
+    .line 7
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
     return v1

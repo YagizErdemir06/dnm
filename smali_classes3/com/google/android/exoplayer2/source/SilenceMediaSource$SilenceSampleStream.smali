@@ -1,4 +1,4 @@
-.class final Lcom/google/android/exoplayer2/source/SilenceMediaSource$SilenceSampleStream;
+.class public final Lcom/google/android/exoplayer2/source/SilenceMediaSource$SilenceSampleStream;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -29,8 +29,10 @@
 .method public constructor <init>(J)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-static {p1, p2}, Lcom/google/android/exoplayer2/source/SilenceMediaSource;->access$300(J)J
 
     move-result-wide p1
@@ -39,6 +41,7 @@
 
     const-wide/16 p1, 0x0
 
+    .line 3
     invoke-virtual {p0, p1, p2}, Lcom/google/android/exoplayer2/source/SilenceMediaSource$SilenceSampleStream;->seekTo(J)V
 
     return-void
@@ -63,6 +66,7 @@
 .method public readData(Lcom/google/android/exoplayer2/FormatHolder;Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;I)I
     .locals 8
 
+    .line 1
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/source/SilenceMediaSource$SilenceSampleStream;->sentFormat:Z
 
     const/4 v1, 0x1
@@ -75,6 +79,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-wide v2, p0, Lcom/google/android/exoplayer2/source/SilenceMediaSource$SilenceSampleStream;->durationBytes:J
 
@@ -92,10 +97,12 @@
 
     const/4 p0, 0x4
 
+    .line 3
     invoke-virtual {p2, p0}, Lcom/google/android/exoplayer2/decoder/Buffer;->addFlag(I)V
 
     return v0
 
+    .line 4
     :cond_1
     invoke-static {v4, v5}, Lcom/google/android/exoplayer2/source/SilenceMediaSource;->access$400(J)J
 
@@ -103,8 +110,10 @@
 
     iput-wide v4, p2, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->timeUs:J
 
+    .line 5
     invoke-virtual {p2, v1}, Lcom/google/android/exoplayer2/decoder/Buffer;->addFlag(I)V
 
+    .line 6
     invoke-static {}, Lcom/google/android/exoplayer2/source/SilenceMediaSource;->access$500()[B
 
     move-result-object p1
@@ -123,8 +132,10 @@
 
     if-nez v2, :cond_2
 
+    .line 7
     invoke-virtual {p2, p1}, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->ensureSpaceForWrite(I)V
 
+    .line 8
     iget-object p2, p2, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->data:Ljava/nio/ByteBuffer;
 
     invoke-static {}, Lcom/google/android/exoplayer2/source/SilenceMediaSource;->access$500()[B
@@ -140,6 +151,7 @@
 
     if-nez p2, :cond_3
 
+    .line 9
     iget-wide p2, p0, Lcom/google/android/exoplayer2/source/SilenceMediaSource$SilenceSampleStream;->positionBytes:J
 
     int-to-long v1, p1
@@ -151,6 +163,7 @@
     :cond_3
     return v0
 
+    .line 10
     :cond_4
     :goto_0
     invoke-static {}, Lcom/google/android/exoplayer2/source/SilenceMediaSource;->access$200()Lcom/google/android/exoplayer2/Format;
@@ -159,6 +172,7 @@
 
     iput-object p2, p1, Lcom/google/android/exoplayer2/FormatHolder;->format:Lcom/google/android/exoplayer2/Format;
 
+    .line 11
     iput-boolean v1, p0, Lcom/google/android/exoplayer2/source/SilenceMediaSource$SilenceSampleStream;->sentFormat:Z
 
     const/4 p0, -0x5
@@ -169,13 +183,14 @@
 .method public seekTo(J)V
     .locals 6
 
+    .line 1
     invoke-static {p1, p2}, Lcom/google/android/exoplayer2/source/SilenceMediaSource;->access$300(J)J
 
     move-result-wide v0
 
-    const-wide/16 v2, 0x0
-
     iget-wide v4, p0, Lcom/google/android/exoplayer2/source/SilenceMediaSource$SilenceSampleStream;->durationBytes:J
+
+    const-wide/16 v2, 0x0
 
     invoke-static/range {v0 .. v5}, Lcom/google/android/exoplayer2/util/Util;->constrainValue(JJJ)J
 
@@ -189,10 +204,13 @@
 .method public skipData(J)I
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/SilenceMediaSource$SilenceSampleStream;->positionBytes:J
 
+    .line 2
     invoke-virtual {p0, p1, p2}, Lcom/google/android/exoplayer2/source/SilenceMediaSource$SilenceSampleStream;->seekTo(J)V
 
+    .line 3
     iget-wide p0, p0, Lcom/google/android/exoplayer2/source/SilenceMediaSource$SilenceSampleStream;->positionBytes:J
 
     sub-long/2addr p0, v0

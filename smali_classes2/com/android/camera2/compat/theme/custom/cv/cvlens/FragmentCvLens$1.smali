@@ -1,4 +1,4 @@
-.class Lcom/android/camera2/compat/theme/custom/cv/cvlens/FragmentCvLens$1;
+.class public Lcom/android/camera2/compat/theme/custom/cv/cvlens/FragmentCvLens$1;
 .super Lcom/android/camera/fragment/beauty/LinearLayoutManagerWrapper;
 .source "SourceFile"
 
@@ -15,13 +15,30 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/camera2/compat/theme/custom/cv/cvlens/FragmentCvLens;
+.field public final synthetic this$0:Lcom/android/camera2/compat/theme/custom/cv/cvlens/FragmentCvLens;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera2/compat/theme/custom/cv/cvlens/FragmentCvLens;Landroid/content/Context;IZLjava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "this$0",
+            "context",
+            "orientation",
+            "reverseLayout",
+            "viewFrom"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/cv/cvlens/FragmentCvLens$1;->this$0:Lcom/android/camera2/compat/theme/custom/cv/cvlens/FragmentCvLens;
 
     invoke-direct {p0, p2, p3, p4, p5}, Lcom/android/camera/fragment/beauty/LinearLayoutManagerWrapper;-><init>(Landroid/content/Context;IZLjava/lang/String;)V

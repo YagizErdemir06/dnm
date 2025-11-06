@@ -17,6 +17,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,6 +28,7 @@
 .method public height()I
     .locals 1
 
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/core/motion/utils/Rect;->bottom:I
 
     iget p0, p0, Landroidx/constraintlayout/core/motion/utils/Rect;->top:I
@@ -39,6 +41,7 @@
 .method public width()I
     .locals 1
 
+    .line 1
     iget v0, p0, Landroidx/constraintlayout/core/motion/utils/Rect;->right:I
 
     iget p0, p0, Landroidx/constraintlayout/core/motion/utils/Rect;->left:I

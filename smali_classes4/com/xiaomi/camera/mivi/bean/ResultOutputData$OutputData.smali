@@ -19,13 +19,22 @@
 
 .field public format:I
 
-.field final synthetic this$0:Lcom/xiaomi/camera/mivi/bean/ResultOutputData;
+.field public final synthetic this$0:Lcom/xiaomi/camera/mivi/bean/ResultOutputData;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/camera/mivi/bean/ResultOutputData;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/camera/mivi/bean/ResultOutputData$OutputData;->this$0:Lcom/xiaomi/camera/mivi/bean/ResultOutputData;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

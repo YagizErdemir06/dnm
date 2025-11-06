@@ -16,8 +16,4 @@
 
 # virtual methods
 .method public abstract superDispatchKeyEvent(Landroid/view/KeyEvent;)Z
-    .param p1    # Landroid/view/KeyEvent;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
 .end method

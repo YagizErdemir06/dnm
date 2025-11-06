@@ -205,7 +205,6 @@
     <string name="accessibility_video_capture_button">Botón para facer fotos mentres se gravan vídeos</string>
     <string name="accessibility_video_pause_button">Gravación de vídeo pausada</string>
     <string name="accessibility_video_resume_button">Gravación de vídeo reanudada</string>
-    <string name="accessibility_watermark_count_tip">%1$s %2$s</string>
     <string name="accessibility_watermark_image_off">A marca de auga está desactivada</string>
     <string name="accessibility_watermark_image_on">A marca de auga está activada</string>
     <string name="accessibility_watermark_text">Abre o panel de axuste de marca de auga</string>
@@ -213,16 +212,6 @@
     <string name="accessibility_zoom_button">Modo zoom</string>
     <string name="actionbar_button_up_description">Atrás</string>
     <string name="afternoon">Tarde</string>
-    <string name="agent_flip_tbc">Continuar na pantalla interior</string>
-    <string name="agent_function_max">Axustouse ao valor máximo</string>
-    <string name="agent_function_min">Axustouse ao valor mínimo</string>
-    <string name="agent_workspace_mode_not_supported">Esta función non é compatible</string>
-    <string name="agent_workspace_mode_not_supported_use_default">"Esta característica non é compatible.
-Abriuse o Modo foto en lugar diso."</string>
-    <string name="agent_workspace_on">Parámetros establecidos para fotografar \"%1$s\"</string>
-    <string name="agent_workspace_tbc">Estudando escena</string>
-    <string name="agent_workspace_tbc_use_default">"Estudando escena…
-Parámetros da Cámara establecidos por defecto"</string>
     <string name="ai_agra_fort">Forte de Agra</string>
     <string name="ai_amber_fort">Forte Amber</string>
     <string name="ai_baby">Bebé</string>
@@ -780,7 +769,6 @@ Recomendamos conectarse a redes Wi-Fi %s GHz que sexan compatibles co estándar 
     <string name="download_hint_cn">Parece que o teu dispositivo non está conectado á WLAN. Usar %1$s MB de datos móbiles para descargar elemento agora?</string>
     <string name="download_hint_wifi">Parece que o teu dispositivo non está conectado á Wi-Fi. Desexas usar %1$s MB de datos móbiles para descargar elementos agora?</string>
     <string name="download_in_progress">Descargando…</string>
-    <string name="download_network_error">Non foi posible realizar a descarga. Comproba os axustes de rede.</string>
     <string name="download_title">Aviso de uso de datos</string>
     <string name="download_waiting">Pendente…</string>
     <string name="dual_camera_lens_covered_toast">A lente está tapada.</string>
@@ -1259,7 +1247,6 @@ parezan maiores nas fotos"</string>
     <string name="miuix_appcompat_delete_description">Eliminar</string>
     <string name="miuix_appcompat_deselect_all">Desmarcar todo</string>
     <string name="miuix_appcompat_deselect_all_description">Desmarcar todos</string>
-    <string name="miuix_appcompat_edit">Editar</string>
     <string name="miuix_appcompat_search_action_mode_cancel">Cancelar</string>
     <string name="miuix_appcompat_search_input_description">Buscar</string>
     <string name="miuix_appcompat_select_all">Seleccionar todo</string>
@@ -2198,7 +2185,6 @@ Manteña o suxeito definido mentres que se desenfoca o fondo."</string>
     <string name="time_picker_label_hour">H</string>
     <string name="time_picker_label_minute">M</string>
     <string name="time_stamp_date_format">dd/MM/yyyy</string>
-    <string name="time_stamp_date_format_minute">dd/MM/yyyy HH:mm</string>
     <string name="timefreeze_guide_tip2">Podes conxelar e desconxelar o fondo en calquera momento antes ou durante a toma.</string>
     <string name="timefreeze_guide_tip3">Pídelle ao teu suxeito que se manteña no centro do cadro.</string>
     <string name="timefreeze_guide_tip4">Fai que o tráfico pare.</string>
@@ -2236,7 +2222,7 @@ Manteña o suxeito definido mentres que se desenfoca o fondo."</string>
     <string name="tip_flash_screen_light_on">Flash frontal: activado</string>
     <string name="tip_flash_soft_light_off">Flash suave: desactivado</string>
     <string name="tip_flash_soft_light_torch">Flash suave: modo lanterna</string>
-    <string name="tip_flash_torch">Flash: lanterna</string>
+    <string name="tip_flash_torch">Flash: sembre activado</string>
     <string name="tip_friend_mode_connect_when_24GHz">Usa unha conexión de %s GHz para potenciar a calidade da previsualización</string>
     <string name="tip_friend_mode_display_device_name_connect">Vista previa compartida</string>
     <string name="tip_friend_mode_display_device_name_disconnect">O outro dispositivo pechou esta sesión</string>

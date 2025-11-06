@@ -16,11 +16,11 @@
 
 
 # instance fields
-.field documentHandler:Lorg/xml/sax/DocumentHandler;
+.field public documentHandler:Lorg/xml/sax/DocumentHandler;
 
-.field qAtts:Lorg/xml/sax/helpers/XMLReaderAdapter$AttributesAdapter;
+.field public qAtts:Lorg/xml/sax/helpers/XMLReaderAdapter$AttributesAdapter;
 
-.field xmlReader:Lorg/xml/sax/XMLReader;
+.field public xmlReader:Lorg/xml/sax/XMLReader;
 
 
 # direct methods
@@ -54,9 +54,11 @@
 .end method
 
 .method private setup(Lorg/xml/sax/XMLReader;)V
-    .locals 0
+    .locals 1
 
-    if-eqz p1, :cond_0
+    const-string v0, "XMLReader must not be null"
+
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     iput-object p1, p0, Lorg/xml/sax/helpers/XMLReaderAdapter;->xmlReader:Lorg/xml/sax/XMLReader;
 
@@ -67,15 +69,6 @@
     iput-object p1, p0, Lorg/xml/sax/helpers/XMLReaderAdapter;->qAtts:Lorg/xml/sax/helpers/XMLReaderAdapter$AttributesAdapter;
 
     return-void
-
-    :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string p1, "XMLReader must not be null"
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method
 
 .method private setupXMLReader()V

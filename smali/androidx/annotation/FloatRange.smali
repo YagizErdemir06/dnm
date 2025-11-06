@@ -16,24 +16,7 @@
     .end subannotation
 .end annotation
 
-.annotation runtime Ljava/lang/annotation/Documented;
-.end annotation
-
-.annotation runtime Ljava/lang/annotation/Retention;
-    value = .enum Ljava/lang/annotation/RetentionPolicy;->CLASS:Ljava/lang/annotation/RetentionPolicy;
-.end annotation
-
-.annotation runtime Ljava/lang/annotation/Target;
-    value = {
-        .enum Ljava/lang/annotation/ElementType;->FIELD:Ljava/lang/annotation/ElementType;,
-        .enum Ljava/lang/annotation/ElementType;->METHOD:Ljava/lang/annotation/ElementType;,
-        .enum Ljava/lang/annotation/ElementType;->PARAMETER:Ljava/lang/annotation/ElementType;,
-        .enum Ljava/lang/annotation/ElementType;->LOCAL_VARIABLE:Ljava/lang/annotation/ElementType;,
-        .enum Ljava/lang/annotation/ElementType;->ANNOTATION_TYPE:Ljava/lang/annotation/ElementType;
-    }
-.end annotation
-
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
     d1 = {
         "\u0000\u001a\n\u0002\u0018\u0002\n\u0002\u0010\u001b\n\u0000\n\u0002\u0010\u0006\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u0004\u0008\u0087\u0002\u0018\u00002\u00020\u0001B(\u0012\u0008\u0008\u0002\u0010\u0002\u001a\u00020\u0003\u0012\u0008\u0008\u0002\u0010\u0004\u001a\u00020\u0003\u0012\u0008\u0008\u0002\u0010\u0005\u001a\u00020\u0006\u0012\u0008\u0008\u0002\u0010\u0007\u001a\u00020\u0006R\u000f\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0006\u001a\u0004\u0008\u0002\u0010\u0008R\u000f\u0010\u0005\u001a\u00020\u0006\u00a2\u0006\u0006\u001a\u0004\u0008\u0005\u0010\tR\u000f\u0010\u0004\u001a\u00020\u0003\u00a2\u0006\u0006\u001a\u0004\u0008\u0004\u0010\u0008R\u000f\u0010\u0007\u001a\u00020\u0006\u00a2\u0006\u0006\u001a\u0004\u0008\u0007\u0010\t\u00a8\u0006\n"
     }
@@ -59,22 +42,39 @@
     xi = 0x30
 .end annotation
 
-.annotation runtime Lom/c;
+.annotation runtime Lh/s2/c;
 .end annotation
 
-.annotation runtime Lom/e;
-    value = .enum Lom/a;->b:Lom/a;
+.annotation runtime Lh/s2/e;
+    value = .enum Lh/s2/a;->d:Lh/s2/a;
 .end annotation
 
-.annotation runtime Lom/f;
+.annotation runtime Lh/s2/f;
     allowedTargets = {
-        .enum Lom/b;->i:Lom/b;,
-        .enum Lom/b;->j:Lom/b;,
-        .enum Lom/b;->k:Lom/b;,
-        .enum Lom/b;->g:Lom/b;,
-        .enum Lom/b;->e:Lom/b;,
-        .enum Lom/b;->f:Lom/b;,
-        .enum Lom/b;->b:Lom/b;
+        .enum Lh/s2/b;->s:Lh/s2/b;,
+        .enum Lh/s2/b;->t:Lh/s2/b;,
+        .enum Lh/s2/b;->u:Lh/s2/b;,
+        .enum Lh/s2/b;->n:Lh/s2/b;,
+        .enum Lh/s2/b;->j:Lh/s2/b;,
+        .enum Lh/s2/b;->m:Lh/s2/b;,
+        .enum Lh/s2/b;->d:Lh/s2/b;
+    }
+.end annotation
+
+.annotation runtime Ljava/lang/annotation/Documented;
+.end annotation
+
+.annotation runtime Ljava/lang/annotation/Retention;
+    value = .enum Ljava/lang/annotation/RetentionPolicy;->CLASS:Ljava/lang/annotation/RetentionPolicy;
+.end annotation
+
+.annotation runtime Ljava/lang/annotation/Target;
+    value = {
+        .enum Ljava/lang/annotation/ElementType;->FIELD:Ljava/lang/annotation/ElementType;,
+        .enum Ljava/lang/annotation/ElementType;->METHOD:Ljava/lang/annotation/ElementType;,
+        .enum Ljava/lang/annotation/ElementType;->PARAMETER:Ljava/lang/annotation/ElementType;,
+        .enum Ljava/lang/annotation/ElementType;->LOCAL_VARIABLE:Ljava/lang/annotation/ElementType;,
+        .enum Ljava/lang/annotation/ElementType;->ANNOTATION_TYPE:Ljava/lang/annotation/ElementType;
     }
 .end annotation
 

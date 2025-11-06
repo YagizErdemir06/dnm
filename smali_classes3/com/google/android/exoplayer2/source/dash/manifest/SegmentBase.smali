@@ -16,14 +16,14 @@
 
 
 # instance fields
-.field final initialization:Lcom/google/android/exoplayer2/source/dash/manifest/RangedUri;
+.field public final initialization:Lcom/google/android/exoplayer2/source/dash/manifest/RangedUri;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field final presentationTimeOffset:J
+.field public final presentationTimeOffset:J
 
-.field final timescale:J
+.field public final timescale:J
 
 
 # direct methods
@@ -34,12 +34,16 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/source/dash/manifest/SegmentBase;->initialization:Lcom/google/android/exoplayer2/source/dash/manifest/RangedUri;
 
+    .line 3
     iput-wide p2, p0, Lcom/google/android/exoplayer2/source/dash/manifest/SegmentBase;->timescale:J
 
+    .line 4
     iput-wide p4, p0, Lcom/google/android/exoplayer2/source/dash/manifest/SegmentBase;->presentationTimeOffset:J
 
     return-void
@@ -52,6 +56,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/dash/manifest/SegmentBase;->initialization:Lcom/google/android/exoplayer2/source/dash/manifest/RangedUri;
 
     return-object p0
@@ -60,11 +65,12 @@
 .method public getPresentationTimeOffsetUs()J
     .locals 6
 
+    .line 1
     iget-wide v0, p0, Lcom/google/android/exoplayer2/source/dash/manifest/SegmentBase;->presentationTimeOffset:J
 
-    const-wide/32 v2, 0xf4240
-
     iget-wide v4, p0, Lcom/google/android/exoplayer2/source/dash/manifest/SegmentBase;->timescale:J
+
+    const-wide/32 v2, 0xf4240
 
     invoke-static/range {v0 .. v5}, Lcom/google/android/exoplayer2/util/Util;->scaleLargeTimestamp(JJJ)J
 

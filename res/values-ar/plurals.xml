@@ -112,22 +112,6 @@
         <item quantity="few">المدة: %d ثواني</item>
         <item quantity="many">المدة: %d ثانية</item>
     </plurals>
-    <plurals name="accessibility_watermark_characters_inputted">
-        <item quantity="other">تم إدخال %d حرف.</item>
-        <item quantity="zero">تم إدخال %d حرف.</item>
-        <item quantity="one">تم إدخال %d حرف.</item>
-        <item quantity="two">تم إدخال %d أحرف.</item>
-        <item quantity="few">تم إدخال %d أحرف.</item>
-        <item quantity="many">تم إدخال %d حرف.</item>
-    </plurals>
-    <plurals name="accessibility_watermark_characters_max">
-        <item quantity="other">أدخل ما يصل إلى %d حرف.</item>
-        <item quantity="zero">أدخل ما يصل إلى %d حرف.</item>
-        <item quantity="one">أدخل ما يصل إلى %d حرف.</item>
-        <item quantity="two">أدخل ما يصل إلى %d أحرف.</item>
-        <item quantity="few">أدخل ما يصل إلى %d أحرف.</item>
-        <item quantity="many">أدخل ما يصل إلى %d حرف.</item>
-    </plurals>
     <plurals name="cinemaster_toast_camera_overflow">
         <item quantity="other">يمكنك توصيل ما يصل إلى %d كاميرات بنفس الشبكة</item>
         <item quantity="zero">يمكنك توصيل ما يصل إلى %d كاميرات بنفس الشبكة</item>
@@ -279,14 +263,6 @@
         <item quantity="two">تم تحديد %d عناصر</item>
         <item quantity="few">تم تحديد %d عناصر</item>
         <item quantity="many">تم تحديد %d عنصر</item>
-    </plurals>
-    <plurals name="mtrl_badge_content_description">
-        <item quantity="other">%d إشعار جديد</item>
-        <item quantity="zero">%d إشعار جديد</item>
-        <item quantity="one">إشعار جديد واحد (%d)</item>
-        <item quantity="two">إشعاران جديدان (%d)</item>
-        <item quantity="few">%d إشعارات جديدة</item>
-        <item quantity="many">%d إشعارًا جديدًا</item>
     </plurals>
     <plurals name="num_minutes_ago">
         <item quantity="other">منذ %d دق</item>

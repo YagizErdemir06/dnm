@@ -17,6 +17,7 @@
 .method public final zaa(Lcom/google/android/gms/common/api/GoogleApiClient;)Lcom/google/android/gms/common/api/PendingResult;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/common/internal/service/zac;
 
     invoke-direct {v0, p0, p1}, Lcom/google/android/gms/common/internal/service/zac;-><init>(Lcom/google/android/gms/common/internal/service/zae;Lcom/google/android/gms/common/api/GoogleApiClient;)V

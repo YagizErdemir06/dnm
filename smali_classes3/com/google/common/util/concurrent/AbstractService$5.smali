@@ -1,4 +1,4 @@
-.class Lcom/google/common/util/concurrent/AbstractService$5;
+.class public Lcom/google/common/util/concurrent/AbstractService$5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -27,15 +27,16 @@
 
 
 # instance fields
-.field final synthetic val$cause:Ljava/lang/Throwable;
+.field public final synthetic val$cause:Ljava/lang/Throwable;
 
-.field final synthetic val$from:Lcom/google/common/util/concurrent/Service$State;
+.field public final synthetic val$from:Lcom/google/common/util/concurrent/Service$State;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/util/concurrent/AbstractService;Lcom/google/common/util/concurrent/Service$State;Ljava/lang/Throwable;)V
     .locals 0
 
+    .line 1
     iput-object p2, p0, Lcom/google/common/util/concurrent/AbstractService$5;->val$from:Lcom/google/common/util/concurrent/Service$State;
 
     iput-object p3, p0, Lcom/google/common/util/concurrent/AbstractService$5;->val$cause:Ljava/lang/Throwable;
@@ -74,6 +75,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/util/concurrent/AbstractService$5;->val$from:Lcom/google/common/util/concurrent/Service$State;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

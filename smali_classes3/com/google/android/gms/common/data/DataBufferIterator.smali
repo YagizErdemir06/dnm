@@ -23,12 +23,12 @@
 
 
 # instance fields
-.field protected final zaa:Lcom/google/android/gms/common/data/DataBuffer;
+.field public final zaa:Lcom/google/android/gms/common/data/DataBuffer;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
 
-.field protected zab:I
+.field public zab:I
 
 
 # direct methods
@@ -39,6 +39,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     invoke-static {p1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -61,6 +62,7 @@
 .method public final hasNext()Z
     .locals 1
 
+    .line 1
     iget v0, p0, Lcom/google/android/gms/common/data/DataBufferIterator;->zab:I
 
     iget-object p0, p0, Lcom/google/android/gms/common/data/DataBufferIterator;->zaa:Lcom/google/android/gms/common/data/DataBuffer;
@@ -88,12 +90,14 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/gms/common/data/DataBufferIterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/gms/common/data/DataBufferIterator;->zaa:Lcom/google/android/gms/common/data/DataBuffer;
 
     iget v1, p0, Lcom/google/android/gms/common/data/DataBufferIterator;->zab:I
@@ -102,12 +106,14 @@
 
     iput v1, p0, Lcom/google/android/gms/common/data/DataBufferIterator;->zab:I
 
+    .line 3
     invoke-interface {v0, v1}, Lcom/google/android/gms/common/data/DataBuffer;->get(I)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 
+    .line 4
     :cond_0
     new-instance v0, Ljava/util/NoSuchElementException;
 
@@ -115,6 +121,7 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    .line 5
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v2, "Cannot advance the iterator beyond "
@@ -135,6 +142,7 @@
 .method public final remove()V
     .locals 1
 
+    .line 1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
     const-string v0, "Cannot remove elements from a DataBufferIterator"

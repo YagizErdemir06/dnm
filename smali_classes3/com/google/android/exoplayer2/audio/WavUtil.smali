@@ -33,6 +33,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -67,6 +68,7 @@
     :cond_1
     return v1
 
+    .line 1
     :cond_2
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Util;->getPcmEncoding(I)I
 
@@ -100,6 +102,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 

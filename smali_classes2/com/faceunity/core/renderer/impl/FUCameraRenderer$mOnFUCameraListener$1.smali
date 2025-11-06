@@ -16,17 +16,23 @@
     name = null
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000\u0017\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002*\u0001\u0000\u0008\n\u0018\u00002\u00020\u0001J\u0010\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0016\u00a8\u0006\u0006"
+        "\u0000\u0017\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003*\u0001\u0000\u0008\n\u0018\u00002\u00020\u0001J\u0017\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0016\u00a2\u0006\u0004\u0008\u0005\u0010\u0006\u00a8\u0006\u0007"
     }
     d2 = {
         "com/faceunity/core/renderer/impl/FUCameraRenderer$mOnFUCameraListener$1",
         "Lcom/faceunity/core/camera/listener/OnFUCameraListener;",
         "Lcom/faceunity/core/camera/entity/FUCameraPreviewData;",
         "previewData",
-        "Lnm/l2;",
+        "Lh/l2;",
         "onPreviewFrame",
+        "(Lcom/faceunity/core/camera/entity/FUCameraPreviewData;)V",
         "lib_core_release"
     }
     k = 0x1
@@ -39,18 +45,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/faceunity/core/renderer/impl/FUCameraRenderer;
+.field public final synthetic this$0:Lcom/faceunity/core/renderer/impl/FUCameraRenderer;
 
 
 # direct methods
 .method public constructor <init>(Lcom/faceunity/core/renderer/impl/FUCameraRenderer;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer$mOnFUCameraListener$1;->this$0:Lcom/faceunity/core/renderer/impl/FUCameraRenderer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -63,14 +65,15 @@
 .method public onPreviewFrame(Lcom/faceunity/core/camera/entity/FUCameraPreviewData;)V
     .locals 10
     .param p1    # Lcom/faceunity/core/camera/entity/FUCameraPreviewData;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "previewData"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer$mOnFUCameraListener$1;->this$0:Lcom/faceunity/core/renderer/impl/FUCameraRenderer;
 
     invoke-static {v0}, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->access$getMFUCameraConfig$p(Lcom/faceunity/core/renderer/impl/FUCameraRenderer;)Lcom/faceunity/core/camera/entity/FUCameraConfig;
@@ -85,6 +88,7 @@
 
     iput-object v1, v0, Lcom/faceunity/core/camera/entity/FUCameraConfig;->cameraFacing:Lcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer$mOnFUCameraListener$1;->this$0:Lcom/faceunity/core/renderer/impl/FUCameraRenderer;
 
@@ -100,6 +104,7 @@
 
     iput v1, v0, Lcom/faceunity/core/camera/entity/FUCameraConfig;->cameraHeight:I
 
+    .line 3
     :cond_1
     iget-object v0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer$mOnFUCameraListener$1;->this$0:Lcom/faceunity/core/renderer/impl/FUCameraRenderer;
 
@@ -115,6 +120,7 @@
 
     iput v1, v0, Lcom/faceunity/core/camera/entity/FUCameraConfig;->cameraWidth:I
 
+    .line 4
     :cond_2
     iget-object v0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer$mOnFUCameraListener$1;->this$0:Lcom/faceunity/core/renderer/impl/FUCameraRenderer;
 
@@ -124,6 +130,7 @@
 
     monitor-enter v0
 
+    .line 5
     :try_start_0
     iget-object v1, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer$mOnFUCameraListener$1;->this$0:Lcom/faceunity/core/renderer/impl/FUCameraRenderer;
 
@@ -131,18 +138,21 @@
 
     move-result-object v1
 
+    .line 6
     invoke-virtual {p1}, Lcom/faceunity/core/camera/entity/FUCameraPreviewData;->getWidth()I
 
     move-result v2
 
     invoke-virtual {v1, v2}, Lcom/faceunity/core/entity/FURenderInputData;->setWidth(I)V
 
+    .line 7
     invoke-virtual {p1}, Lcom/faceunity/core/camera/entity/FUCameraPreviewData;->getHeight()I
 
     move-result v2
 
     invoke-virtual {v1, v2}, Lcom/faceunity/core/entity/FURenderInputData;->setHeight(I)V
 
+    .line 8
     new-instance v2, Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;
 
     sget-object v4, Lcom/faceunity/core/enumeration/FUInputBufferEnum;->FU_FORMAT_NV21_BUFFER:Lcom/faceunity/core/enumeration/FUInputBufferEnum;
@@ -161,24 +171,28 @@
 
     move-object v3, v2
 
-    invoke-direct/range {v3 .. v9}, Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;-><init>(Lcom/faceunity/core/enumeration/FUInputBufferEnum;[B[B[BILkotlin/jvm/internal/w;)V
+    invoke-direct/range {v3 .. v9}, Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;-><init>(Lcom/faceunity/core/enumeration/FUInputBufferEnum;[B[B[BILh/d3/x/w;)V
 
     invoke-virtual {v1, v2}, Lcom/faceunity/core/entity/FURenderInputData;->setImageBuffer(Lcom/faceunity/core/entity/FURenderInputData$FUImageBuffer;)V
 
+    .line 9
     invoke-virtual {v1}, Lcom/faceunity/core/entity/FURenderInputData;->getRenderConfig()Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;
 
     move-result-object v1
 
+    .line 10
     sget-object v2, Lcom/faceunity/core/enumeration/FUExternalInputEnum;->EXTERNAL_INPUT_TYPE_CAMERA:Lcom/faceunity/core/enumeration/FUExternalInputEnum;
 
     invoke-virtual {v1, v2}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;->setExternalInputType(Lcom/faceunity/core/enumeration/FUExternalInputEnum;)V
 
+    .line 11
     invoke-virtual {p1}, Lcom/faceunity/core/camera/entity/FUCameraPreviewData;->getCameraOrientation()I
 
     move-result v2
 
     invoke-virtual {v1, v2}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;->setInputOrientation(I)V
 
+    .line 12
     iget-object v2, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer$mOnFUCameraListener$1;->this$0:Lcom/faceunity/core/renderer/impl/FUCameraRenderer;
 
     invoke-static {v2}, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->access$getMDeviceOrientation$p(Lcom/faceunity/core/renderer/impl/FUCameraRenderer;)I
@@ -187,12 +201,14 @@
 
     invoke-virtual {v1, v2}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;->setDeviceOrientation(I)V
 
+    .line 13
     invoke-virtual {p1}, Lcom/faceunity/core/camera/entity/FUCameraPreviewData;->getCameraFacing()Lcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;
 
     move-result-object p1
 
     invoke-virtual {v1, p1}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;->setCameraFacing(Lcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;)V
 
+    .line 14
     invoke-virtual {v1}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;->getCameraFacing()Lcom/faceunity/core/camera/enumeration/FUCameraFacingEnum;
 
     move-result-object p1
@@ -201,21 +217,26 @@
 
     if-ne p1, v2, :cond_3
 
+    .line 15
     sget-object p1, Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;->CCROT90_FLIPHORIZONTAL:Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;
 
     invoke-virtual {v1, p1}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;->setInputTextureMatrix(Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;)V
 
+    .line 16
     invoke-virtual {v1, p1}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;->setInputBufferMatrix(Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;)V
 
     goto :goto_0
 
+    .line 17
     :cond_3
     sget-object p1, Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;->CCROT270:Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;
 
     invoke-virtual {v1, p1}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;->setInputTextureMatrix(Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;)V
 
+    .line 18
     invoke-virtual {v1, p1}, Lcom/faceunity/core/entity/FURenderInputData$FURenderConfig;->setInputBufferMatrix(Lcom/faceunity/core/enumeration/FUTransformMatrixEnum;)V
 
+    .line 19
     :goto_0
     iget-object p1, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer$mOnFUCameraListener$1;->this$0:Lcom/faceunity/core/renderer/impl/FUCameraRenderer;
 
@@ -223,12 +244,15 @@
 
     invoke-static {p1, v1}, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->access$setMFUCameraPrepare$p(Lcom/faceunity/core/renderer/impl/FUCameraRenderer;Z)V
 
-    sget-object p1, Lnm/l2;->a:Lnm/l2;
+    .line 20
+    sget-object p1, Lh/l2;->a:Lh/l2;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 21
     monitor-exit v0
 
+    .line 22
     iget-object p0, p0, Lcom/faceunity/core/renderer/impl/FUCameraRenderer$mOnFUCameraListener$1;->this$0:Lcom/faceunity/core/renderer/impl/FUCameraRenderer;
 
     invoke-static {p0}, Lcom/faceunity/core/renderer/impl/FUCameraRenderer;->access$getMGLTextureView$p(Lcom/faceunity/core/renderer/impl/FUCameraRenderer;)Lcom/faceunity/core/weight/GLTextureView;
@@ -245,6 +269,7 @@
     :catchall_0
     move-exception p0
 
+    .line 23
     monitor-exit v0
 
     throw p0

@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/util/concurrent/ForwardingLock;
+.class public abstract Lcom/google/common/util/concurrent/ForwardingLock;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,6 +15,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,6 +29,7 @@
 .method public lock()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingLock;->delegate()Ljava/util/concurrent/locks/Lock;
 
     move-result-object p0
@@ -45,6 +47,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingLock;->delegate()Ljava/util/concurrent/locks/Lock;
 
     move-result-object p0
@@ -57,6 +60,7 @@
 .method public newCondition()Ljava/util/concurrent/locks/Condition;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingLock;->delegate()Ljava/util/concurrent/locks/Lock;
 
     move-result-object p0
@@ -106,6 +110,7 @@
 .method public unlock()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingLock;->delegate()Ljava/util/concurrent/locks/Lock;
 
     move-result-object p0

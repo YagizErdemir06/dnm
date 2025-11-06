@@ -1,4 +1,4 @@
-.class Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView$6;
+.class public Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView$6;
 .super Lmiuix/animation/listener/TransitionListener;
 .source "SourceFile"
 
@@ -15,15 +15,26 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView;
+.field public final synthetic this$0:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView;
 
-.field final synthetic val$view:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;
+.field public final synthetic val$view:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView;Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010
+        }
+        names = {
+            "this$0",
+            "val$view"
+        }
+    .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView$6;->this$0:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView;
 
     iput-object p2, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView$6;->val$view:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;
@@ -37,7 +48,16 @@
 # virtual methods
 .method public onComplete(Ljava/lang/Object;)V
     .locals 4
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "tag"
+        }
+    .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -56,22 +76,26 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 2
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView$6;->this$0:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView;
 
     iget-object v1, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView$6;->val$view:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;
 
     invoke-static {v0, v1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView;->access$300(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView;Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;)V
 
+    .line 3
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView$6;->val$view:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->setLabelTextVisible(I)V
 
+    .line 4
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView$6;->val$view:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;
 
     invoke-virtual {v0, v1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->setParamTextVisible(I)V
 
+    .line 5
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView$6;->val$view:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;
 
     iget-object v2, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView$6;->this$0:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView;
@@ -97,6 +121,7 @@
     :cond_0
     invoke-virtual {v0, v1}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView;->setParamTextSizeLarge(Z)V
 
+    .line 6
     iget-object v0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView$6;->this$0:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView;
 
     invoke-static {v0}, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView;->access$400(Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView;)Ljava/util/List;
@@ -105,9 +130,10 @@
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
+    .line 7
     iget-object p0, p0, Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView$6;->this$0:Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/MagicView;
 
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->requestLayout()V
 
     return-void
 .end method

@@ -19,6 +19,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/metadata/scte35/SpliceNullCommand$1;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/metadata/scte35/SpliceNullCommand$1;-><init>()V
@@ -31,6 +32,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/metadata/scte35/SpliceCommand;-><init>()V
 
     return-void

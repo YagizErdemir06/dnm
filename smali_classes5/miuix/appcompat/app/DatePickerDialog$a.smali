@@ -25,6 +25,7 @@
 .method public constructor <init>(Lmiuix/appcompat/app/DatePickerDialog;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/appcompat/app/DatePickerDialog$a;->a:Lmiuix/appcompat/app/DatePickerDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,17 +38,19 @@
 .method public a(Lmiuix/pickerwidget/widget/DatePicker;IIIZ)V
     .locals 0
 
+    .line 1
     iget-object p1, p0, Lmiuix/appcompat/app/DatePickerDialog$a;->a:Lmiuix/appcompat/app/DatePickerDialog;
 
-    invoke-static {p1}, Lmiuix/appcompat/app/DatePickerDialog;->M(Lmiuix/appcompat/app/DatePickerDialog;)Z
+    invoke-static {p1}, Lmiuix/appcompat/app/DatePickerDialog;->A(Lmiuix/appcompat/app/DatePickerDialog;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
+    .line 2
     iget-object p0, p0, Lmiuix/appcompat/app/DatePickerDialog$a;->a:Lmiuix/appcompat/app/DatePickerDialog;
 
-    invoke-static {p0, p2, p3, p4}, Lmiuix/appcompat/app/DatePickerDialog;->N(Lmiuix/appcompat/app/DatePickerDialog;III)V
+    invoke-static {p0, p2, p3, p4}, Lmiuix/appcompat/app/DatePickerDialog;->B(Lmiuix/appcompat/app/DatePickerDialog;III)V
 
     :cond_0
     return-void

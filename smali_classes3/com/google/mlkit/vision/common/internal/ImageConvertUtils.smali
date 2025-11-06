@@ -45,6 +45,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->hasArray()Z
 
     move-result v0
@@ -53,17 +54,21 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
-    invoke-virtual {p0}, Ljava/nio/Buffer;->limit()I
+    .line 3
+    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v0
 
     new-array v0, v0, [B
 
+    .line 4
     invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
+    .line 5
     invoke-static {v0}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
     move-result-object p0
@@ -104,6 +109,7 @@
 
     const/4 v0, 0x1
 
+    .line 1
     invoke-static {p0, v0}, Lcom/google/mlkit/vision/common/internal/ImageConvertUtils;->yv12ToNv21Buffer(Ljava/nio/ByteBuffer;Z)Ljava/nio/ByteBuffer;
 
     move-result-object p0
@@ -112,10 +118,12 @@
 
     move-result-object p0
 
+    .line 2
     invoke-static {p0, p1, p2}, Lcom/google/mlkit/vision/common/internal/ImageConvertUtils;->zzb([BII)[B
 
     move-result-object p0
 
+    .line 3
     array-length p1, p0
 
     const/4 p2, 0x0
@@ -124,6 +132,7 @@
 
     move-result-object p0
 
+    .line 4
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result p1
@@ -151,9 +160,11 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
-    invoke-virtual {p0}, Ljava/nio/Buffer;->limit()I
+    .line 2
+    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v0
 
@@ -161,12 +172,14 @@
 
     if-eqz p1, :cond_0
 
+    .line 3
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object p1
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
@@ -182,6 +195,7 @@
 
     if-ge v2, v3, :cond_1
 
+    .line 5
     invoke-virtual {p0, v2}, Ljava/nio/ByteBuffer;->get(I)B
 
     move-result v3
@@ -210,6 +224,7 @@
 
     add-int/2addr v4, v5
 
+    .line 6
     invoke-virtual {p0, v4}, Ljava/nio/ByteBuffer;->get(I)B
 
     move-result v4
@@ -237,6 +252,7 @@
 
     const/4 p1, 0x0
 
+    .line 1
     invoke-static {p0, p1, p1, p2, p3}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;IIII)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -250,10 +266,12 @@
 
     new-instance v5, Landroid/graphics/Matrix;
 
+    .line 2
     invoke-direct {v5}, Landroid/graphics/Matrix;-><init>()V
 
     int-to-float p1, p1
 
+    .line 3
     invoke-virtual {v5, p1}, Landroid/graphics/Matrix;->postRotate(F)Z
 
     const/4 v6, 0x1
@@ -264,6 +282,7 @@
 
     move v4, p3
 
+    .line 4
     invoke-static/range {v0 .. v6}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -272,7 +291,7 @@
 .end method
 
 .method private static zzb([BII)[B
-    .locals 8
+    .locals 7
     .param p0    # [B
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -283,24 +302,24 @@
         }
     .end annotation
 
-    const-class v0, Ljava/lang/Throwable;
+    .line 1
+    new-instance v6, Landroid/graphics/YuvImage;
 
-    new-instance v7, Landroid/graphics/YuvImage;
+    const/16 v2, 0x11
 
-    const/16 v3, 0x11
+    const/4 v5, 0x0
 
-    const/4 v6, 0x0
+    move-object v0, v6
 
-    move-object v1, v7
+    move-object v1, p0
 
-    move-object v2, p0
+    move v3, p1
 
-    move v4, p1
+    move v4, p2
 
-    move v5, p2
+    invoke-direct/range {v0 .. v5}, Landroid/graphics/YuvImage;-><init>([BIII[I)V
 
-    invoke-direct/range {v1 .. v6}, Landroid/graphics/YuvImage;-><init>([BIII[I)V
-
+    .line 2
     :try_start_0
     new-instance p0, Ljava/io/ByteArrayOutputStream;
 
@@ -308,23 +327,26 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
     :try_start_1
-    new-instance v2, Landroid/graphics/Rect;
+    new-instance v1, Landroid/graphics/Rect;
 
-    invoke-direct {v2, v1, v1, p1, p2}, Landroid/graphics/Rect;-><init>(IIII)V
+    .line 3
+    invoke-direct {v1, v0, v0, p1, p2}, Landroid/graphics/Rect;-><init>(IIII)V
 
     const/16 p1, 0x64
 
-    invoke-virtual {v7, v2, p1, p0}, Landroid/graphics/YuvImage;->compressToJpeg(Landroid/graphics/Rect;ILjava/io/OutputStream;)Z
+    invoke-virtual {v6, v1, p1, p0}, Landroid/graphics/YuvImage;->compressToJpeg(Landroid/graphics/Rect;ILjava/io/OutputStream;)Z
 
+    .line 4
     invoke-virtual {p0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 5
     :try_start_2
     invoke-virtual {p0}, Ljava/io/ByteArrayOutputStream;->close()V
     :try_end_2
@@ -335,6 +357,7 @@
     :catchall_0
     move-exception p1
 
+    .line 6
     :try_start_3
     invoke-virtual {p0}, Ljava/io/ByteArrayOutputStream;->close()V
     :try_end_3
@@ -346,26 +369,32 @@
     move-exception p0
 
     :try_start_4
-    const-string p2, "addSuppressed"
+    const-class p2, Ljava/lang/Throwable;
+
+    const-string v1, "addSuppressed"
 
     const/4 v2, 0x1
 
     new-array v3, v2, [Ljava/lang/Class;
 
-    aput-object v0, v3, v1
+    const-class v4, Ljava/lang/Throwable;
 
-    invoke-virtual {v0, p2, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    aput-object v4, v3, v0
+
+    .line 7
+    invoke-virtual {p2, v1, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object p2
 
-    new-array v0, v2, [Ljava/lang/Object;
+    new-array v1, v2, [Ljava/lang/Object;
 
-    aput-object p0, v0, v1
+    aput-object p0, v1, v0
 
-    invoke-virtual {p2, p1, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p2, p1, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 
+    .line 8
     :catch_0
     :goto_0
     :try_start_5
@@ -380,15 +409,17 @@
 
     const-string p2, "Error closing ByteArrayOutputStream"
 
+    .line 9
     invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 10
     new-instance p1, Lcom/google/mlkit/common/MlKitException;
 
-    const-string p2, "Image conversion error from NV21 format"
+    const/16 p2, 0xd
 
-    const/16 v0, 0xd
+    const-string v0, "Image conversion error from NV21 format"
 
-    invoke-direct {p1, p2, v0, p0}, Lcom/google/mlkit/common/MlKitException;-><init>(Ljava/lang/String;ILjava/lang/Throwable;)V
+    invoke-direct {p1, v0, p2, p0}, Lcom/google/mlkit/common/MlKitException;-><init>(Ljava/lang/String;ILjava/lang/Throwable;)V
 
     throw p1
 .end method
@@ -396,13 +427,16 @@
 .method private static final zzc(Landroid/media/Image$Plane;II[BII)V
     .locals 7
 
+    .line 1
     invoke-virtual {p0}, Landroid/media/Image$Plane;->getBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
+    .line 2
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
-    invoke-virtual {v0}, Ljava/nio/Buffer;->limit()I
+    .line 3
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v1
 
@@ -424,9 +458,11 @@
 
     return-void
 
+    .line 4
     :cond_0
     div-int/2addr p2, v1
 
+    .line 5
     div-int/2addr p1, p2
 
     const/4 p2, 0x0
@@ -445,6 +481,7 @@
     :goto_1
     if-ge v4, p1, :cond_1
 
+    .line 6
     invoke-virtual {v0, v5}, Ljava/nio/ByteBuffer;->get(I)B
 
     move-result v6
@@ -453,6 +490,7 @@
 
     add-int/2addr p4, p5
 
+    .line 7
     invoke-virtual {p0}, Landroid/media/Image$Plane;->getPixelStride()I
 
     move-result v6
@@ -463,6 +501,7 @@
 
     goto :goto_1
 
+    .line 8
     :cond_1
     invoke-virtual {p0}, Landroid/media/Image$Plane;->getRowStride()I
 
@@ -492,6 +531,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->hasArray()Z
 
     move-result p0
@@ -504,26 +544,30 @@
 
     if-nez p0, :cond_0
 
+    .line 2
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object p0
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
+    const/4 p0, 0x0
 
-    move-result p0
+    .line 4
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->limit()I
 
-    new-array v0, p0, [B
+    move-result v0
 
-    const/4 v1, 0x0
+    new-array v1, v0, [B
 
-    invoke-virtual {p1, v0, v1, p0}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
+    .line 5
+    invoke-virtual {p1, v1, p0, v0}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
-    return-object v0
+    return-object v1
 .end method
 
 .method public cloneByteBuffer(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
@@ -538,16 +582,20 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->capacity()I
+    .line 2
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->capacity()I
 
     move-result p0
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
+    .line 3
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v0
 
+    .line 4
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->isDirect()Z
 
     move-result v1
@@ -565,13 +613,15 @@
 
     move-result-object p0
 
+    .line 5
     :goto_0
-    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v1
 
     invoke-virtual {p0, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
+    .line 6
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
     move-result-object v1
@@ -580,8 +630,10 @@
 
     invoke-virtual {p0, v1}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
+    .line 7
     invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
+    .line 8
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     return-object p0
@@ -599,30 +651,32 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/media/Image;->getFormat()I
 
     move-result p0
 
-    const/16 v0, 0x100
+    const/4 v0, 0x1
 
-    const/4 v1, 0x1
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const/16 v2, 0x100
 
-    if-ne p0, v0, :cond_0
+    if-ne p0, v2, :cond_0
 
-    move p0, v1
+    move p0, v0
 
     goto :goto_0
 
     :cond_0
-    move p0, v2
+    move p0, v1
 
     :goto_0
-    const-string v0, "Only JPEG is supported now"
+    const-string v2, "Only JPEG is supported now"
 
-    invoke-static {p0, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkArgument(ZLjava/lang/Object;)V
+    invoke-static {p0, v2}, Lcom/google/android/gms/common/internal/Preconditions;->checkArgument(ZLjava/lang/Object;)V
 
+    .line 2
     invoke-virtual {p1}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object p0
@@ -631,28 +685,34 @@
 
     array-length p1, p0
 
-    if-ne p1, v1, :cond_1
+    if-ne p1, v0, :cond_1
 
-    aget-object p0, p0, v2
+    .line 3
+    aget-object p0, p0, v1
 
     invoke-virtual {p0}, Landroid/media/Image$Plane;->getBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object p0
 
+    .line 4
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
-    invoke-virtual {p0}, Ljava/nio/Buffer;->remaining()I
+    .line 5
+    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result p1
 
     new-array v0, p1, [B
 
+    .line 6
     invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
-    invoke-static {v0, v2, p1}, Landroid/graphics/BitmapFactory;->decodeByteArray([BII)Landroid/graphics/Bitmap;
+    .line 7
+    invoke-static {v0, v1, p1}, Landroid/graphics/BitmapFactory;->decodeByteArray([BII)Landroid/graphics/Bitmap;
 
     move-result-object p0
 
+    .line 8
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result p1
@@ -667,11 +727,13 @@
 
     return-object p0
 
+    .line 9
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
     const-string p1, "Unexpected image format, JPEG should have exactly 1 image plane"
 
+    .line 10
     invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p0
@@ -697,6 +759,7 @@
 
     move/from16 v0, p2
 
+    .line 1
     invoke-virtual/range {p1 .. p1}, Lcom/google/mlkit/vision/common/InputImage;->getFormat()I
 
     move-result v1
@@ -717,6 +780,7 @@
 
     if-ne v1, v2, :cond_0
 
+    .line 2
     invoke-virtual/range {p1 .. p1}, Lcom/google/mlkit/vision/common/InputImage;->getByteBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object v1
@@ -733,17 +797,19 @@
 
     return-object v0
 
+    .line 3
     :cond_0
     new-instance v0, Lcom/google/mlkit/common/MlKitException;
 
-    const-string v1, "Unsupported image format"
+    const/16 v1, 0xd
 
-    const/16 v2, 0xd
+    const-string v2, "Unsupported image format"
 
-    invoke-direct {v0, v1, v2}, Lcom/google/mlkit/common/MlKitException;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v2, v1}, Lcom/google/mlkit/common/MlKitException;-><init>(Ljava/lang/String;I)V
 
     throw v0
 
+    .line 4
     :cond_1
     invoke-virtual/range {p1 .. p1}, Lcom/google/mlkit/vision/common/InputImage;->getPlanes()[Landroid/media/Image$Plane;
 
@@ -765,6 +831,7 @@
 
     move-object/from16 v3, p0
 
+    .line 5
     invoke-virtual {v3, v0, v1, v2}, Lcom/google/mlkit/vision/common/internal/ImageConvertUtils;->yuv420ThreePlanesToNV21([Landroid/media/Image$Plane;II)Ljava/nio/ByteBuffer;
 
     move-result-object v0
@@ -774,6 +841,7 @@
     :cond_2
     if-eqz v0, :cond_3
 
+    .line 6
     invoke-virtual/range {p1 .. p1}, Lcom/google/mlkit/vision/common/InputImage;->getByteBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object v0
@@ -790,6 +858,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_3
     invoke-virtual/range {p1 .. p1}, Lcom/google/mlkit/vision/common/InputImage;->getByteBuffer()Ljava/nio/ByteBuffer;
 
@@ -804,6 +873,7 @@
     :goto_0
     return-object v0
 
+    .line 8
     :cond_4
     invoke-virtual/range {p1 .. p1}, Lcom/google/mlkit/vision/common/InputImage;->getBitmapInternal()Landroid/graphics/Bitmap;
 
@@ -815,6 +885,13 @@
 
     check-cast v1, Landroid/graphics/Bitmap;
 
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v3, 0x1a
+
+    if-lt v2, v3, :cond_5
+
+    .line 9
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     move-result-object v2
@@ -825,6 +902,7 @@
 
     sget-object v2, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
+    .line 10
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->isMutable()Z
 
     move-result v3
@@ -836,16 +914,19 @@
     :cond_5
     move-object v2, v1
 
+    .line 11
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v1
 
+    .line 12
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v10
 
     mul-int v11, v1, v10
 
+    .line 13
     new-array v12, v11, [I
 
     const/4 v4, 0x0
@@ -862,6 +943,7 @@
 
     move v9, v10
 
+    .line 14
     invoke-virtual/range {v2 .. v9}, Landroid/graphics/Bitmap;->getPixels([IIIIIII)V
 
     int-to-double v2, v10
@@ -870,6 +952,7 @@
 
     div-double/2addr v2, v4
 
+    .line 15
     invoke-static {v2, v3}, Ljava/lang/Math;->ceil(D)D
 
     move-result-wide v2
@@ -894,12 +977,14 @@
 
     if-eqz v0, :cond_6
 
+    .line 16
     invoke-static {v2}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
     goto :goto_1
 
+    .line 17
     :cond_6
     invoke-static {v2}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
@@ -920,6 +1005,7 @@
     :goto_3
     if-ge v6, v1, :cond_8
 
+    .line 18
     aget v7, v12, v5
 
     shr-int/lit8 v8, v7, 0x10
@@ -952,6 +1038,7 @@
 
     add-int/lit8 v2, v2, 0x10
 
+    .line 19
     invoke-static {v13, v2}, Ljava/lang/Math;->min(II)I
 
     move-result v2
@@ -1002,6 +1089,7 @@
 
     add-int/lit8 v7, v11, 0x1
 
+    .line 20
     invoke-static {v13, v2}, Ljava/lang/Math;->min(II)I
 
     move-result v2
@@ -1012,6 +1100,7 @@
 
     add-int/lit8 v11, v7, 0x1
 
+    .line 21
     invoke-static {v13, v4}, Ljava/lang/Math;->min(II)I
 
     move-result v2
@@ -1056,6 +1145,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/mlkit/vision/common/InputImage;->getFormat()I
 
     move-result v0
@@ -1076,6 +1166,7 @@
 
     if-ne v0, p0, :cond_0
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/mlkit/vision/common/InputImage;->getByteBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object p0
@@ -1086,35 +1177,41 @@
 
     check-cast p0, Ljava/nio/ByteBuffer;
 
+    .line 3
     invoke-virtual {p1}, Lcom/google/mlkit/vision/common/InputImage;->getWidth()I
 
     move-result v0
 
+    .line 4
     invoke-virtual {p1}, Lcom/google/mlkit/vision/common/InputImage;->getHeight()I
 
     move-result v1
 
+    .line 5
     invoke-virtual {p1}, Lcom/google/mlkit/vision/common/InputImage;->getRotationDegrees()I
 
     move-result p1
 
+    .line 6
     invoke-static {p0, v0, v1, p1}, Lcom/google/mlkit/vision/common/internal/ImageConvertUtils;->yv12ToBitmap(Ljava/nio/ByteBuffer;III)Landroid/graphics/Bitmap;
 
     move-result-object p0
 
     return-object p0
 
+    .line 7
     :cond_0
     new-instance p0, Lcom/google/mlkit/common/MlKitException;
 
-    const-string p1, "Unsupported image format"
+    const/16 p1, 0xd
 
-    const/16 v0, 0xd
+    const-string v0, "Unsupported image format"
 
-    invoke-direct {p0, p1, v0}, Lcom/google/mlkit/common/MlKitException;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0, v0, p1}, Lcom/google/mlkit/common/MlKitException;-><init>(Ljava/lang/String;I)V
 
     throw p0
 
+    .line 8
     :cond_1
     invoke-virtual {p1}, Lcom/google/mlkit/vision/common/InputImage;->getPlanes()[Landroid/media/Image$Plane;
 
@@ -1126,36 +1223,44 @@
 
     check-cast v0, [Landroid/media/Image$Plane;
 
+    .line 9
     invoke-virtual {p1}, Lcom/google/mlkit/vision/common/InputImage;->getWidth()I
 
     move-result v1
 
+    .line 10
     invoke-virtual {p1}, Lcom/google/mlkit/vision/common/InputImage;->getHeight()I
 
     move-result v2
 
+    .line 11
     invoke-virtual {p0, v0, v1, v2}, Lcom/google/mlkit/vision/common/internal/ImageConvertUtils;->yuv420ThreePlanesToNV21([Landroid/media/Image$Plane;II)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
+    .line 12
     invoke-virtual {p1}, Lcom/google/mlkit/vision/common/InputImage;->getWidth()I
 
     move-result v1
 
+    .line 13
     invoke-virtual {p1}, Lcom/google/mlkit/vision/common/InputImage;->getHeight()I
 
     move-result v2
 
+    .line 14
     invoke-virtual {p1}, Lcom/google/mlkit/vision/common/InputImage;->getRotationDegrees()I
 
     move-result p1
 
+    .line 15
     invoke-virtual {p0, v0, v1, v2, p1}, Lcom/google/mlkit/vision/common/internal/ImageConvertUtils;->nv21ToBitmap(Ljava/nio/ByteBuffer;III)Landroid/graphics/Bitmap;
 
     move-result-object p0
 
     return-object p0
 
+    .line 16
     :cond_2
     invoke-virtual {p1}, Lcom/google/mlkit/vision/common/InputImage;->getByteBuffer()Ljava/nio/ByteBuffer;
 
@@ -1167,24 +1272,29 @@
 
     check-cast v0, Ljava/nio/ByteBuffer;
 
+    .line 17
     invoke-virtual {p1}, Lcom/google/mlkit/vision/common/InputImage;->getWidth()I
 
     move-result v1
 
+    .line 18
     invoke-virtual {p1}, Lcom/google/mlkit/vision/common/InputImage;->getHeight()I
 
     move-result v2
 
+    .line 19
     invoke-virtual {p1}, Lcom/google/mlkit/vision/common/InputImage;->getRotationDegrees()I
 
     move-result p1
 
+    .line 20
     invoke-virtual {p0, v0, v1, v2, p1}, Lcom/google/mlkit/vision/common/internal/ImageConvertUtils;->nv21ToBitmap(Ljava/nio/ByteBuffer;III)Landroid/graphics/Bitmap;
 
     move-result-object p0
 
     return-object p0
 
+    .line 21
     :cond_3
     invoke-virtual {p1}, Lcom/google/mlkit/vision/common/InputImage;->getBitmapInternal()Landroid/graphics/Bitmap;
 
@@ -1196,18 +1306,22 @@
 
     check-cast p0, Landroid/graphics/Bitmap;
 
+    .line 22
     invoke-virtual {p1}, Lcom/google/mlkit/vision/common/InputImage;->getRotationDegrees()I
 
     move-result v0
 
+    .line 23
     invoke-virtual {p1}, Lcom/google/mlkit/vision/common/InputImage;->getWidth()I
 
     move-result v1
 
+    .line 24
     invoke-virtual {p1}, Lcom/google/mlkit/vision/common/InputImage;->getHeight()I
 
     move-result p1
 
+    .line 25
     invoke-static {p0, v0, v1, p1}, Lcom/google/mlkit/vision/common/internal/ImageConvertUtils;->zza(Landroid/graphics/Bitmap;III)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -1233,12 +1347,14 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/mlkit/vision/common/InputImage;->getBitmapInternal()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/mlkit/vision/common/InputImage;->getRotationDegrees()I
 
     move-result p0
@@ -1251,12 +1367,14 @@
 
     move-result p1
 
+    .line 3
     invoke-static {v0, p0, v1, p1}, Lcom/google/mlkit/vision/common/internal/ImageConvertUtils;->zza(Landroid/graphics/Bitmap;III)Landroid/graphics/Bitmap;
 
     move-result-object p0
 
     return-object p0
 
+    .line 4
     :cond_0
     invoke-virtual {p0, p1}, Lcom/google/mlkit/vision/common/internal/ImageConvertUtils;->convertToUpRightBitmap(Lcom/google/mlkit/vision/common/InputImage;)Landroid/graphics/Bitmap;
 
@@ -1283,6 +1401,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/mlkit/vision/common/internal/ImageConvertUtils;->byteBufferToByteArray(Ljava/nio/ByteBuffer;)[B
 
     move-result-object p0
@@ -1291,6 +1410,7 @@
 
     move-result-object p0
 
+    .line 2
     array-length p1, p0
 
     const/4 p2, 0x0
@@ -1299,6 +1419,7 @@
 
     move-result-object p0
 
+    .line 3
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result p1
@@ -1328,6 +1449,7 @@
 
     mul-int v4, p2, p3
 
+    .line 1
     div-int/lit8 p0, v4, 0x4
 
     add-int/2addr p0, p0
@@ -1338,6 +1460,7 @@
 
     const/4 v0, 0x1
 
+    .line 2
     aget-object v1, p1, v0
 
     invoke-virtual {v1}, Landroid/media/Image$Plane;->getBuffer()Ljava/nio/ByteBuffer;
@@ -1346,29 +1469,35 @@
 
     const/4 v2, 0x2
 
+    .line 3
     aget-object v3, p1, v2
 
     invoke-virtual {v3}, Landroid/media/Image$Plane;->getBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Ljava/nio/Buffer;->position()I
+    .line 4
+    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v5
 
-    invoke-virtual {v1}, Ljava/nio/Buffer;->limit()I
+    .line 5
+    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v6
 
     add-int/lit8 v7, v5, 0x1
 
+    .line 6
     invoke-virtual {v3, v7}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     add-int/lit8 v7, v6, -0x1
 
+    .line 7
     invoke-virtual {v1, v7}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    invoke-virtual {v3}, Ljava/nio/Buffer;->remaining()I
+    .line 8
+    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v7
 
@@ -1395,13 +1524,16 @@
     :cond_0
     move v7, v10
 
+    .line 9
     :goto_0
     invoke-virtual {v3, v5}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
+    .line 10
     invoke-virtual {v1, v6}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
     if-eqz v7, :cond_1
 
+    .line 11
     aget-object p2, p1, v10
 
     invoke-virtual {p2}, Landroid/media/Image$Plane;->getBuffer()Ljava/nio/ByteBuffer;
@@ -1410,28 +1542,33 @@
 
     invoke-virtual {p2, p0, v10, v4}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
+    .line 12
     aget-object p2, p1, v0
 
     invoke-virtual {p2}, Landroid/media/Image$Plane;->getBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object p2
 
+    .line 13
     aget-object p1, p1, v2
 
     invoke-virtual {p1}, Landroid/media/Image$Plane;->getBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object p1
 
+    .line 14
     invoke-virtual {p1, p0, v4, v0}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
     add-int/2addr v4, v0
 
     add-int/lit8 v8, v8, -0x1
 
+    .line 15
     invoke-virtual {p2, p0, v4, v8}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
     goto :goto_1
 
+    .line 16
     :cond_1
     aget-object v5, p1, v10
 
@@ -1447,6 +1584,7 @@
 
     invoke-static/range {v5 .. v10}, Lcom/google/mlkit/vision/common/internal/ImageConvertUtils;->zzc(Landroid/media/Image$Plane;II[BII)V
 
+    .line 17
     aget-object v5, p1, v0
 
     add-int/lit8 v9, v4, 0x1
@@ -1455,6 +1593,7 @@
 
     invoke-static/range {v5 .. v10}, Lcom/google/mlkit/vision/common/internal/ImageConvertUtils;->zzc(Landroid/media/Image$Plane;II[BII)V
 
+    .line 18
     aget-object v0, p1, v2
 
     const/4 v5, 0x2
@@ -1467,6 +1606,7 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/mlkit/vision/common/internal/ImageConvertUtils;->zzc(Landroid/media/Image$Plane;II[BII)V
 
+    .line 19
     :goto_1
     invoke-static {p0}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 

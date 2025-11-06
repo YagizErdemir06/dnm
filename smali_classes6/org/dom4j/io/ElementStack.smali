@@ -1,4 +1,4 @@
-.class Lorg/dom4j/io/ElementStack;
+.class public Lorg/dom4j/io/ElementStack;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -9,9 +9,9 @@
 # instance fields
 .field private handler:Lorg/dom4j/io/DispatchHandler;
 
-.field protected lastElementIndex:I
+.field public lastElementIndex:I
 
-.field protected stack:[Lorg/dom4j/Element;
+.field public stack:[Lorg/dom4j/Element;
 
 
 # direct methods
@@ -53,10 +53,12 @@
 .method private getHandlerPath(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/ElementStack;->handler:Lorg/dom4j/io/DispatchHandler;
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Lorg/dom4j/io/DispatchHandler;
 
     invoke-direct {v0}, Lorg/dom4j/io/DispatchHandler;-><init>()V
@@ -66,6 +68,7 @@
     :cond_0
     const-string v0, "/"
 
+    .line 3
     invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -74,6 +77,7 @@
 
     goto :goto_0
 
+    .line 4
     :cond_1
     invoke-virtual {p0}, Lorg/dom4j/io/ElementStack;->getPath()Ljava/lang/String;
 
@@ -85,6 +89,7 @@
 
     if-eqz v1, :cond_2
 
+    .line 5
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -103,6 +108,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_2
     new-instance v1, Ljava/lang/StringBuffer;
 
@@ -131,6 +137,7 @@
 .method public addHandler(Ljava/lang/String;Lorg/dom4j/ElementHandler;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/ElementStack;->handler:Lorg/dom4j/io/DispatchHandler;
 
     invoke-direct {p0, p1}, Lorg/dom4j/io/ElementStack;->getHandlerPath(Ljava/lang/String;)Ljava/lang/String;
@@ -147,6 +154,7 @@
 
     const/4 v0, -0x1
 
+    .line 1
     iput v0, p0, Lorg/dom4j/io/ElementStack;->lastElementIndex:I
 
     return-void
@@ -155,6 +163,7 @@
 .method public containsHandler(Ljava/lang/String;)Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/ElementStack;->handler:Lorg/dom4j/io/DispatchHandler;
 
     invoke-virtual {p0, p1}, Lorg/dom4j/io/DispatchHandler;->containsHandler(Ljava/lang/String;)Z
@@ -167,6 +176,7 @@
 .method public getCurrent()Lorg/dom4j/Element;
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/io/ElementStack;->peekElement()Lorg/dom4j/Element;
 
     move-result-object p0
@@ -177,6 +187,7 @@
 .method public getDispatchHandler()Lorg/dom4j/io/DispatchHandler;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/ElementStack;->handler:Lorg/dom4j/io/DispatchHandler;
 
     return-object p0
@@ -185,6 +196,7 @@
 .method public getElement(I)Lorg/dom4j/Element;
     .locals 0
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lorg/dom4j/io/ElementStack;->stack:[Lorg/dom4j/Element;
 
@@ -204,16 +216,19 @@
 .method public getPath()Ljava/lang/String;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/ElementStack;->handler:Lorg/dom4j/io/DispatchHandler;
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Lorg/dom4j/io/DispatchHandler;
 
     invoke-direct {v0}, Lorg/dom4j/io/DispatchHandler;-><init>()V
 
     invoke-virtual {p0, v0}, Lorg/dom4j/io/ElementStack;->setDispatchHandler(Lorg/dom4j/io/DispatchHandler;)V
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lorg/dom4j/io/ElementStack;->handler:Lorg/dom4j/io/DispatchHandler;
 
@@ -227,6 +242,7 @@
 .method public peekElement()Lorg/dom4j/Element;
     .locals 1
 
+    .line 1
     iget v0, p0, Lorg/dom4j/io/ElementStack;->lastElementIndex:I
 
     if-gez v0, :cond_0
@@ -235,6 +251,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     iget-object p0, p0, Lorg/dom4j/io/ElementStack;->stack:[Lorg/dom4j/Element;
 
@@ -246,6 +263,7 @@
 .method public popElement()Lorg/dom4j/Element;
     .locals 3
 
+    .line 1
     iget v0, p0, Lorg/dom4j/io/ElementStack;->lastElementIndex:I
 
     if-gez v0, :cond_0
@@ -254,6 +272,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     iget-object v1, p0, Lorg/dom4j/io/ElementStack;->stack:[Lorg/dom4j/Element;
 
@@ -269,10 +288,12 @@
 .method public pushElement(Lorg/dom4j/Element;)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/ElementStack;->stack:[Lorg/dom4j/Element;
 
     array-length v0, v0
 
+    .line 2
     iget v1, p0, Lorg/dom4j/io/ElementStack;->lastElementIndex:I
 
     add-int/lit8 v1, v1, 0x1
@@ -283,8 +304,10 @@
 
     mul-int/lit8 v0, v0, 0x2
 
+    .line 3
     invoke-virtual {p0, v0}, Lorg/dom4j/io/ElementStack;->reallocate(I)V
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lorg/dom4j/io/ElementStack;->stack:[Lorg/dom4j/Element;
 
@@ -298,12 +321,15 @@
 .method public reallocate(I)V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/ElementStack;->stack:[Lorg/dom4j/Element;
 
+    .line 2
     new-array p1, p1, [Lorg/dom4j/Element;
 
     iput-object p1, p0, Lorg/dom4j/io/ElementStack;->stack:[Lorg/dom4j/Element;
 
+    .line 3
     array-length p0, v0
 
     const/4 v1, 0x0
@@ -316,6 +342,7 @@
 .method public removeHandler(Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/ElementStack;->handler:Lorg/dom4j/io/DispatchHandler;
 
     invoke-direct {p0, p1}, Lorg/dom4j/io/ElementStack;->getHandlerPath(Ljava/lang/String;)Ljava/lang/String;
@@ -330,6 +357,7 @@
 .method public setDispatchHandler(Lorg/dom4j/io/DispatchHandler;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/io/ElementStack;->handler:Lorg/dom4j/io/DispatchHandler;
 
     return-void
@@ -338,6 +366,7 @@
 .method public size()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lorg/dom4j/io/ElementStack;->lastElementIndex:I
 
     add-int/lit8 p0, p0, 0x1

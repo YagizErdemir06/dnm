@@ -1,4 +1,4 @@
-.class synthetic Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView$1;
+.class public synthetic Lcom/android/camera2/compat/theme/custom/mm/cinemaster/view/StreamTextureView$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

@@ -1,4 +1,4 @@
-.class Landroidx/recyclerview/widget/GapWorker$Task;
+.class public Landroidx/recyclerview/widget/GapWorker$Task;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -30,6 +30,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,16 +43,21 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-boolean v0, p0, Landroidx/recyclerview/widget/GapWorker$Task;->immediate:Z
 
+    .line 2
     iput v0, p0, Landroidx/recyclerview/widget/GapWorker$Task;->viewVelocity:I
 
+    .line 3
     iput v0, p0, Landroidx/recyclerview/widget/GapWorker$Task;->distanceToItem:I
 
     const/4 v1, 0x0
 
+    .line 4
     iput-object v1, p0, Landroidx/recyclerview/widget/GapWorker$Task;->view:Landroidx/recyclerview/widget/RecyclerView;
 
+    .line 5
     iput v0, p0, Landroidx/recyclerview/widget/GapWorker$Task;->position:I
 
     return-void

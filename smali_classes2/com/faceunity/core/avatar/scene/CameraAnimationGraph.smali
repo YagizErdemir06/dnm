@@ -10,9 +10,14 @@
     }
 .end annotation
 
-.annotation runtime Lkotlin/Metadata;
+.annotation runtime Lh/i0;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
     d1 = {
-        "\u0000N\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0010\u0007\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0008\u0018\u0000 42\u00020\u0001:\u00014B\u0007\u00a2\u0006\u0004\u00082\u00103J\"\u0010\u0008\u001a\u00020\u00072\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0004\u001a\u00020\u00022\u0008\u0008\u0002\u0010\u0006\u001a\u00020\u0005H\u0007J\u0012\u0010\t\u001a\u00020\u00072\u0008\u0008\u0002\u0010\u0006\u001a\u00020\u0005H\u0007J\"\u0010\r\u001a\u00020\u00072\u0006\u0010\n\u001a\u00020\u00022\u0006\u0010\u000c\u001a\u00020\u000b2\u0008\u0008\u0002\u0010\u0006\u001a\u00020\u0005H\u0007J\"\u0010\r\u001a\u00020\u00072\u0006\u0010\n\u001a\u00020\u00022\u0006\u0010\u000c\u001a\u00020\u000e2\u0008\u0008\u0002\u0010\u0006\u001a\u00020\u0005H\u0007J\"\u0010\r\u001a\u00020\u00072\u0006\u0010\n\u001a\u00020\u00022\u0006\u0010\u000c\u001a\u00020\u00052\u0008\u0008\u0002\u0010\u0006\u001a\u00020\u0005H\u0007J\"\u0010\r\u001a\u00020\u00072\u0006\u0010\n\u001a\u00020\u00022\u0006\u0010\u000c\u001a\u00020\u00022\u0008\u0008\u0002\u0010\u0006\u001a\u00020\u0005H\u0007J\u0019\u0010\u000f\u001a\u0004\u0018\u00010\u000b2\u0006\u0010\n\u001a\u00020\u0002H\u0007\u00a2\u0006\u0004\u0008\u000f\u0010\u0010J\u0019\u0010\u0011\u001a\u0004\u0018\u00010\u000e2\u0006\u0010\n\u001a\u00020\u0002H\u0007\u00a2\u0006\u0004\u0008\u0011\u0010\u0012J\u0012\u0010\u0013\u001a\u0004\u0018\u00010\u00022\u0006\u0010\n\u001a\u00020\u0002H\u0007J\u0019\u0010\u0014\u001a\u0004\u0018\u00010\u00052\u0006\u0010\n\u001a\u00020\u0002H\u0007\u00a2\u0006\u0004\u0008\u0014\u0010\u0015Jo\u0010\u001d\u001a\u00020\u00072.\u0010\u0019\u001a*\u0012\u0004\u0012\u00020\u0002\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u00070\u00170\u0016j\u0014\u0012\u0004\u0012\u00020\u0002\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u00070\u0017`\u00182.\u0010\u001a\u001a*\u0012\u0004\u0012\u00020\u0002\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u00070\u00170\u0016j\u0014\u0012\u0004\u0012\u00020\u0002\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u00070\u0017`\u0018H\u0000\u00a2\u0006\u0004\u0008\u001b\u0010\u001cJ\u0017\u0010!\u001a\u00020\u00072\u0006\u0010\u001e\u001a\u00020\u0000H\u0000\u00a2\u0006\u0004\u0008\u001f\u0010 R$\u0010\"\u001a\u0004\u0018\u00010\u00028\u0000@\u0000X\u0080\u000e\u00a2\u0006\u0012\n\u0004\u0008\"\u0010#\u001a\u0004\u0008$\u0010%\"\u0004\u0008&\u0010\'R$\u0010(\u001a\u0004\u0018\u00010\u00028\u0000@\u0000X\u0080\u000e\u00a2\u0006\u0012\n\u0004\u0008(\u0010#\u001a\u0004\u0008)\u0010%\"\u0004\u0008*\u0010\'R6\u0010.\u001a\u001e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020,0+j\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020,`-8\u0000X\u0080\u0004\u00a2\u0006\u000c\n\u0004\u0008.\u0010/\u001a\u0004\u00080\u00101\u00a8\u00065"
+        "\u0000N\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0010\u0007\n\u0002\u0008\n\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\t\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0011\u0018\u0000 :2\u00020\u0001:\u0001:B\u0007\u00a2\u0006\u0004\u00088\u00109J)\u0010\u0008\u001a\u00020\u00072\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0004\u001a\u00020\u00022\u0008\u0008\u0002\u0010\u0006\u001a\u00020\u0005H\u0007\u00a2\u0006\u0004\u0008\u0008\u0010\tJ\u0019\u0010\n\u001a\u00020\u00072\u0008\u0008\u0002\u0010\u0006\u001a\u00020\u0005H\u0007\u00a2\u0006\u0004\u0008\n\u0010\u000bJ)\u0010\u000f\u001a\u00020\u00072\u0006\u0010\u000c\u001a\u00020\u00022\u0006\u0010\u000e\u001a\u00020\r2\u0008\u0008\u0002\u0010\u0006\u001a\u00020\u0005H\u0007\u00a2\u0006\u0004\u0008\u000f\u0010\u0010J)\u0010\u000f\u001a\u00020\u00072\u0006\u0010\u000c\u001a\u00020\u00022\u0006\u0010\u000e\u001a\u00020\u00112\u0008\u0008\u0002\u0010\u0006\u001a\u00020\u0005H\u0007\u00a2\u0006\u0004\u0008\u000f\u0010\u0012J)\u0010\u000f\u001a\u00020\u00072\u0006\u0010\u000c\u001a\u00020\u00022\u0006\u0010\u000e\u001a\u00020\u00052\u0008\u0008\u0002\u0010\u0006\u001a\u00020\u0005H\u0007\u00a2\u0006\u0004\u0008\u000f\u0010\u0013J)\u0010\u000f\u001a\u00020\u00072\u0006\u0010\u000c\u001a\u00020\u00022\u0006\u0010\u000e\u001a\u00020\u00022\u0008\u0008\u0002\u0010\u0006\u001a\u00020\u0005H\u0007\u00a2\u0006\u0004\u0008\u000f\u0010\tJ\u0019\u0010\u0014\u001a\u0004\u0018\u00010\r2\u0006\u0010\u000c\u001a\u00020\u0002H\u0007\u00a2\u0006\u0004\u0008\u0014\u0010\u0015J\u0019\u0010\u0016\u001a\u0004\u0018\u00010\u00112\u0006\u0010\u000c\u001a\u00020\u0002H\u0007\u00a2\u0006\u0004\u0008\u0016\u0010\u0017J\u0019\u0010\u0018\u001a\u0004\u0018\u00010\u00022\u0006\u0010\u000c\u001a\u00020\u0002H\u0007\u00a2\u0006\u0004\u0008\u0018\u0010\u0019J\u0019\u0010\u001a\u001a\u0004\u0018\u00010\u00052\u0006\u0010\u000c\u001a\u00020\u0002H\u0007\u00a2\u0006\u0004\u0008\u001a\u0010\u001bJo\u0010#\u001a\u00020\u00072.\u0010\u001f\u001a*\u0012\u0004\u0012\u00020\u0002\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u00070\u001d0\u001cj\u0014\u0012\u0004\u0012\u00020\u0002\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u00070\u001d`\u001e2.\u0010 \u001a*\u0012\u0004\u0012\u00020\u0002\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u00070\u001d0\u001cj\u0014\u0012\u0004\u0012\u00020\u0002\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u00070\u001d`\u001eH\u0000\u00a2\u0006\u0004\u0008!\u0010\"J\u0017\u0010\'\u001a\u00020\u00072\u0006\u0010$\u001a\u00020\u0000H\u0000\u00a2\u0006\u0004\u0008%\u0010&R8\u0010+\u001a\u001e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020)0(j\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020)`*8\u0000@\u0000X\u0080\u0004\u00a2\u0006\u000c\n\u0004\u0008+\u0010,\u001a\u0004\u0008-\u0010.R$\u0010/\u001a\u0004\u0018\u00010\u00028\u0000@\u0000X\u0080\u000e\u00a2\u0006\u0012\n\u0004\u0008/\u00100\u001a\u0004\u00081\u00102\"\u0004\u00083\u00104R$\u00105\u001a\u0004\u0018\u00010\u00028\u0000@\u0000X\u0080\u000e\u00a2\u0006\u0012\n\u0004\u00085\u00100\u001a\u0004\u00086\u00102\"\u0004\u00087\u00104\u00a8\u0006;"
     }
     d2 = {
         "Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;",
@@ -22,19 +27,25 @@
         "logicJson",
         "",
         "needBackgroundThread",
-        "Lnm/l2;",
+        "Lh/l2;",
         "setAnimationGraphAndLogic",
+        "(Ljava/lang/String;Ljava/lang/String;Z)V",
         "clearAnimationGraphAndLogic",
+        "(Z)V",
         "paramName",
         "",
         "paramValue",
         "setAnimationGraphParam",
+        "(Ljava/lang/String;IZ)V",
         "",
+        "(Ljava/lang/String;FZ)V",
+        "(Ljava/lang/String;ZZ)V",
         "getAnimationGraphParamInt",
         "(Ljava/lang/String;)Ljava/lang/Integer;",
         "getAnimationGraphParamFloat",
         "(Ljava/lang/String;)Ljava/lang/Float;",
         "getAnimationGraphParamString",
+        "(Ljava/lang/String;)Ljava/lang/String;",
         "getAnimationGraphParamBoolean",
         "(Ljava/lang/String;)Ljava/lang/Boolean;",
         "Ljava/util/LinkedHashMap;",
@@ -49,6 +60,13 @@
         "clone$lib_core_release",
         "(Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;)V",
         "clone",
+        "Ljava/util/HashMap;",
+        "",
+        "Lkotlin/collections/HashMap;",
+        "mGraphParamsMap",
+        "Ljava/util/HashMap;",
+        "getMGraphParamsMap$lib_core_release",
+        "()Ljava/util/HashMap;",
         "mGraphJson",
         "Ljava/lang/String;",
         "getMGraphJson$lib_core_release",
@@ -58,13 +76,6 @@
         "mLogicJson",
         "getMLogicJson$lib_core_release",
         "setMLogicJson$lib_core_release",
-        "Ljava/util/HashMap;",
-        "",
-        "Lkotlin/collections/HashMap;",
-        "mGraphParamsMap",
-        "Ljava/util/HashMap;",
-        "getMGraphParamsMap$lib_core_release",
-        "()Ljava/util/HashMap;",
         "<init>",
         "()V",
         "Companion",
@@ -81,19 +92,19 @@
 
 # static fields
 .field public static final Companion:Lcom/faceunity/core/avatar/scene/CameraAnimationGraph$Companion;
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field public static final TAG:Ljava/lang/String; = "KIT_CameraAnimationGraph"
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 
 # instance fields
 .field private mGraphJson:Ljava/lang/String;
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 .end field
 
@@ -107,12 +118,12 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 .end field
 
 .field private mLogicJson:Ljava/lang/String;
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 .end field
 
@@ -125,7 +136,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/faceunity/core/avatar/scene/CameraAnimationGraph$Companion;-><init>(Lkotlin/jvm/internal/w;)V
+    invoke-direct {v0, v1}, Lcom/faceunity/core/avatar/scene/CameraAnimationGraph$Companion;-><init>(Lh/d3/x/w;)V
 
     sput-object v0, Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;->Companion:Lcom/faceunity/core/avatar/scene/CameraAnimationGraph$Companion;
 
@@ -135,8 +146,10 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/faceunity/core/avatar/base/BaseSceneAttribute;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -157,6 +170,7 @@
 
     move p1, p3
 
+    .line 1
     :cond_0
     invoke-virtual {p0, p1}, Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;->clearAnimationGraphAndLogic(Z)V
 
@@ -172,6 +186,7 @@
 
     const/4 p3, 0x1
 
+    .line 1
     :cond_0
     invoke-virtual {p0, p1, p2, p3}, Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;->setAnimationGraphAndLogic(Ljava/lang/String;Ljava/lang/String;Z)V
 
@@ -246,31 +261,34 @@
 # virtual methods
 .method public final clearAnimationGraphAndLogic()V
     .locals 3
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    invoke-static {p0, v2, v0, v1}, Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;->clearAnimationGraphAndLogic$default(Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;ZILjava/lang/Object;)V
+    invoke-static {p0, v0, v1, v2}, Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;->clearAnimationGraphAndLogic$default(Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;ZILjava/lang/Object;)V
 
     return-void
 .end method
 
 .method public final clearAnimationGraphAndLogic(Z)V
     .locals 3
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;->mGraphJson:Ljava/lang/String;
 
+    .line 2
     iput-object v0, p0, Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;->mLogicJson:Ljava/lang/String;
 
+    .line 3
     invoke-virtual {p0}, Lcom/faceunity/core/avatar/base/BaseSceneAttribute;->getMFUAvatarController$lib_core_release()Lcom/faceunity/core/avatar/control/AvatarController;
 
     move-result-object v0
@@ -287,26 +305,30 @@
 .method public final clone$lib_core_release(Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;)V
     .locals 1
     .param p1    # Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
 
     const-string v0, "cameraAnimationGraph"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-object v0, p1, Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;->mGraphJson:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;->mGraphJson:Ljava/lang/String;
 
+    .line 2
     iget-object v0, p1, Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;->mLogicJson:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;->mLogicJson:Ljava/lang/String;
 
+    .line 3
     iget-object v0, p0, Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;->mGraphParamsMap:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
+    .line 4
     iget-object p0, p0, Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;->mGraphParamsMap:Ljava/util/HashMap;
 
     iget-object p1, p1, Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;->mGraphParamsMap:Ljava/util/HashMap;
@@ -319,16 +341,17 @@
 .method public final getAnimationGraphParamBoolean(Ljava/lang/String;)Ljava/lang/Boolean;
     .locals 3
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
     const-string v0, "paramName"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/avatar/base/BaseSceneAttribute;->getMFUAvatarController$lib_core_release()Lcom/faceunity/core/avatar/control/AvatarController;
 
     move-result-object v0
@@ -347,16 +370,17 @@
 .method public final getAnimationGraphParamFloat(Ljava/lang/String;)Ljava/lang/Float;
     .locals 3
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
     const-string v0, "paramName"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/avatar/base/BaseSceneAttribute;->getMFUAvatarController$lib_core_release()Lcom/faceunity/core/avatar/control/AvatarController;
 
     move-result-object v0
@@ -375,16 +399,17 @@
 .method public final getAnimationGraphParamInt(Ljava/lang/String;)Ljava/lang/Integer;
     .locals 3
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
     const-string v0, "paramName"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/avatar/base/BaseSceneAttribute;->getMFUAvatarController$lib_core_release()Lcom/faceunity/core/avatar/control/AvatarController;
 
     move-result-object v0
@@ -403,16 +428,17 @@
 .method public final getAnimationGraphParamString(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
     const-string v0, "paramName"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     invoke-virtual {p0}, Lcom/faceunity/core/avatar/base/BaseSceneAttribute;->getMFUAvatarController$lib_core_release()Lcom/faceunity/core/avatar/control/AvatarController;
 
     move-result-object v0
@@ -430,9 +456,10 @@
 
 .method public final getMGraphJson$lib_core_release()Ljava/lang/String;
     .locals 0
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;->mGraphJson:Ljava/lang/String;
 
     return-object p0
@@ -450,9 +477,10 @@
         }
     .end annotation
 
-    .annotation build Ljv/d;
+    .annotation build Ln/d/a/d;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;->mGraphParamsMap:Ljava/util/HashMap;
 
     return-object p0
@@ -460,9 +488,10 @@
 
 .method public final getMLogicJson$lib_core_release()Ljava/lang/String;
     .locals 0
-    .annotation build Ljv/e;
+    .annotation build Ln/d/a/e;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;->mLogicJson:Ljava/lang/String;
 
     return-object p0
@@ -471,11 +500,11 @@
 .method public final loadParams$lib_core_release(Ljava/util/LinkedHashMap;Ljava/util/LinkedHashMap;)V
     .locals 5
     .param p1    # Ljava/util/LinkedHashMap;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Ljava/util/LinkedHashMap;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .annotation system Ldalvik/annotation/Signature;
@@ -483,33 +512,36 @@
             "(",
             "Ljava/util/LinkedHashMap<",
             "Ljava/lang/String;",
-            "Ljn/a<",
-            "Lnm/l2;",
+            "Lh/d3/w/a<",
+            "Lh/l2;",
             ">;>;",
             "Ljava/util/LinkedHashMap<",
             "Ljava/lang/String;",
-            "Ljn/a<",
-            "Lnm/l2;",
+            "Lh/d3/w/a<",
+            "Lh/l2;",
             ">;>;)V"
         }
     .end annotation
 
     const-string v0, "params"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "priorityParams"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iget-object v0, p0, Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;->mGraphJson:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v1, p0, Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;->mLogicJson:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
+    .line 3
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -534,6 +566,7 @@
 
     invoke-interface {p2, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 4
     :cond_0
     iget-object p2, p0, Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;->mGraphParamsMap:Ljava/util/HashMap;
 
@@ -547,6 +580,7 @@
 
     if-eqz p2, :cond_1
 
+    .line 5
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -571,6 +605,7 @@
 
     invoke-interface {p1, p2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 6
     :cond_1
     invoke-virtual {p0, v0}, Lcom/faceunity/core/avatar/base/BaseSceneAttribute;->setHasLoaded$lib_core_release(Z)V
 
@@ -580,14 +615,14 @@
 .method public final setAnimationGraphAndLogic(Ljava/lang/String;Ljava/lang/String;)V
     .locals 6
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const/4 v3, 0x0
@@ -610,28 +645,31 @@
 .method public final setAnimationGraphAndLogic(Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 7
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const-string v0, "graphJson"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "logicJson"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;->mGraphJson:Ljava/lang/String;
 
+    .line 2
     iput-object p2, p0, Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;->mLogicJson:Ljava/lang/String;
 
+    .line 3
     invoke-virtual {p0}, Lcom/faceunity/core/avatar/base/BaseSceneAttribute;->getMFUAvatarController$lib_core_release()Lcom/faceunity/core/avatar/control/AvatarController;
 
     move-result-object v1
@@ -654,10 +692,10 @@
 .method public final setAnimationGraphParam(Ljava/lang/String;F)V
     .locals 6
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const/4 v3, 0x0
@@ -680,15 +718,15 @@
 .method public final setAnimationGraphParam(Ljava/lang/String;FZ)V
     .locals 8
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const-string v0, "paramName"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
     iget-object v0, p0, Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;->mGraphParamsMap:Ljava/util/HashMap;
@@ -722,10 +760,10 @@
 .method public final setAnimationGraphParam(Ljava/lang/String;I)V
     .locals 6
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const/4 v3, 0x0
@@ -748,15 +786,15 @@
 .method public final setAnimationGraphParam(Ljava/lang/String;IZ)V
     .locals 8
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const-string v0, "paramName"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 1
     iget-object v0, p0, Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;->mGraphParamsMap:Ljava/util/HashMap;
@@ -790,14 +828,14 @@
 .method public final setAnimationGraphParam(Ljava/lang/String;Ljava/lang/String;)V
     .locals 6
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const/4 v3, 0x0
@@ -820,23 +858,23 @@
 .method public final setAnimationGraphParam(Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 7
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
     .param p2    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const-string v0, "paramName"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "paramValue"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
     iget-object v0, p0, Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;->mGraphParamsMap:Ljava/util/HashMap;
@@ -866,10 +904,10 @@
 .method public final setAnimationGraphParam(Ljava/lang/String;Z)V
     .locals 6
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const/4 v3, 0x0
@@ -892,15 +930,15 @@
 .method public final setAnimationGraphParam(Ljava/lang/String;ZZ)V
     .locals 8
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/d;
+        .annotation build Ln/d/a/d;
         .end annotation
     .end param
-    .annotation build Lin/i;
+    .annotation build Lh/d3/i;
     .end annotation
 
     const-string v0, "paramName"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lh/d3/x/l0;->p(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     iget-object v0, p0, Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;->mGraphParamsMap:Ljava/util/HashMap;
@@ -934,10 +972,11 @@
 .method public final setMGraphJson$lib_core_release(Ljava/lang/String;)V
     .locals 0
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;->mGraphJson:Ljava/lang/String;
 
     return-void
@@ -946,10 +985,11 @@
 .method public final setMLogicJson$lib_core_release(Ljava/lang/String;)V
     .locals 0
     .param p1    # Ljava/lang/String;
-        .annotation build Ljv/e;
+        .annotation build Ln/d/a/e;
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/faceunity/core/avatar/scene/CameraAnimationGraph;->mLogicJson:Ljava/lang/String;
 
     return-void

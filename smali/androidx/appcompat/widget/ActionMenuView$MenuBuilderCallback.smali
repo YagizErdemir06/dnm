@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/widget/ActionMenuView$MenuBuilderCallback;
+.class public Landroidx/appcompat/widget/ActionMenuView$MenuBuilderCallback;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/appcompat/widget/ActionMenuView;
+.field public final synthetic this$0:Landroidx/appcompat/widget/ActionMenuView;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/appcompat/widget/ActionMenuView;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/widget/ActionMenuView$MenuBuilderCallback;->this$0:Landroidx/appcompat/widget/ActionMenuView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,12 +46,14 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/widget/ActionMenuView$MenuBuilderCallback;->this$0:Landroidx/appcompat/widget/ActionMenuView;
 
     iget-object p0, p0, Landroidx/appcompat/widget/ActionMenuView;->mOnMenuItemClickListener:Landroidx/appcompat/widget/ActionMenuView$OnMenuItemClickListener;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0, p2}, Landroidx/appcompat/widget/ActionMenuView$OnMenuItemClickListener;->onMenuItemClick(Landroid/view/MenuItem;)Z
 
     move-result p0
@@ -75,12 +78,14 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object p0, p0, Landroidx/appcompat/widget/ActionMenuView$MenuBuilderCallback;->this$0:Landroidx/appcompat/widget/ActionMenuView;
 
     iget-object p0, p0, Landroidx/appcompat/widget/ActionMenuView;->mMenuBuilderCallback:Landroidx/appcompat/view/menu/MenuBuilder$Callback;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0, p1}, Landroidx/appcompat/view/menu/MenuBuilder$Callback;->onMenuModeChange(Landroidx/appcompat/view/menu/MenuBuilder;)V
 
     :cond_0

@@ -1,10 +1,10 @@
-.class final Lcom/google/android/gms/internal/common/zzu;
+.class public final Lcom/google/android/gms/internal/common/zzu;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field final synthetic zza:Lcom/google/android/gms/internal/common/zzo;
+.field public final synthetic zza:Lcom/google/android/gms/internal/common/zzo;
 
 
 # direct methods

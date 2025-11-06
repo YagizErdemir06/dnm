@@ -1,4 +1,4 @@
-.class Lcom/bumptech/glide/manager/RequestManagerFragment$FragmentRequestManagerTreeNode;
+.class public Lcom/bumptech/glide/manager/RequestManagerFragment$FragmentRequestManagerTreeNode;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/bumptech/glide/manager/RequestManagerFragment;
+.field public final synthetic this$0:Lcom/bumptech/glide/manager/RequestManagerFragment;
 
 
 # direct methods
 .method public constructor <init>(Lcom/bumptech/glide/manager/RequestManagerFragment;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/bumptech/glide/manager/RequestManagerFragment$FragmentRequestManagerTreeNode;->this$0:Lcom/bumptech/glide/manager/RequestManagerFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,12 +49,14 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/manager/RequestManagerFragment$FragmentRequestManagerTreeNode;->this$0:Lcom/bumptech/glide/manager/RequestManagerFragment;
 
     invoke-virtual {p0}, Lcom/bumptech/glide/manager/RequestManagerFragment;->getDescendantRequestManagerFragments()Ljava/util/Set;
 
     move-result-object p0
 
+    .line 2
     new-instance v0, Ljava/util/HashSet;
 
     invoke-interface {p0}, Ljava/util/Set;->size()I
@@ -62,6 +65,7 @@
 
     invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(I)V
 
+    .line 3
     invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -80,12 +84,14 @@
 
     check-cast v1, Lcom/bumptech/glide/manager/RequestManagerFragment;
 
+    .line 4
     invoke-virtual {v1}, Lcom/bumptech/glide/manager/RequestManagerFragment;->getRequestManager()Lcom/bumptech/glide/RequestManager;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
+    .line 5
     invoke-virtual {v1}, Lcom/bumptech/glide/manager/RequestManagerFragment;->getRequestManager()Lcom/bumptech/glide/RequestManager;
 
     move-result-object v1
@@ -101,6 +107,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

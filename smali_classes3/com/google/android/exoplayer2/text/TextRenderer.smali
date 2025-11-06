@@ -141,6 +141,7 @@
 .method private clearOutput()V
     .locals 1
 
+    .line 1
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
@@ -153,33 +154,37 @@
 .method private getNextEventTime()J
     .locals 4
 
+    .line 1
     iget v0, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->nextSubtitleEventIndex:I
 
-    const/4 v1, -0x1
+    const-wide v1, 0x7fffffffffffffffL
 
-    const-wide v2, 0x7fffffffffffffffL
+    const/4 v3, -0x1
 
-    if-ne v0, v1, :cond_0
+    if-ne v0, v3, :cond_0
 
-    return-wide v2
+    return-wide v1
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->subtitle:Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 3
     iget v0, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->nextSubtitleEventIndex:I
 
-    iget-object v1, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->subtitle:Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;
+    iget-object v3, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->subtitle:Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;
 
-    invoke-virtual {v1}, Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;->getEventTimeCount()I
+    invoke-virtual {v3}, Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;->getEventTimeCount()I
 
-    move-result v1
+    move-result v3
 
-    if-lt v0, v1, :cond_1
+    if-lt v0, v3, :cond_1
 
     goto :goto_0
 
+    .line 4
     :cond_1
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->subtitle:Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;
 
@@ -187,15 +192,16 @@
 
     invoke-virtual {v0, p0}, Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;->getEventTime(I)J
 
-    move-result-wide v2
+    move-result-wide v1
 
     :goto_0
-    return-wide v2
+    return-wide v1
 .end method
 
 .method private handleDecoderError(Lcom/google/android/exoplayer2/text/SubtitleDecoderException;)V
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -216,8 +222,10 @@
 
     invoke-static {v1, v0, p1}, Lcom/google/android/exoplayer2/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/TextRenderer;->clearOutput()V
 
+    .line 3
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/TextRenderer;->replaceDecoder()V
 
     return-void
@@ -228,8 +236,10 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->waitingForKeyFrame:Z
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->decoderFactory:Lcom/google/android/exoplayer2/text/SubtitleDecoderFactory;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->streamFormat:Lcom/google/android/exoplayer2/Format;
@@ -260,10 +270,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->output:Lcom/google/android/exoplayer2/text/TextOutput;
 
     invoke-interface {v0, p1}, Lcom/google/android/exoplayer2/text/TextOutput;->onCues(Ljava/util/List;)V
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->output:Lcom/google/android/exoplayer2/text/TextOutput;
 
     new-instance v0, Lcom/google/android/exoplayer2/text/CueGroup;
@@ -280,27 +292,35 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->nextInputBuffer:Lcom/google/android/exoplayer2/text/SubtitleInputBuffer;
 
     const/4 v1, -0x1
 
+    .line 2
     iput v1, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->nextSubtitleEventIndex:I
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->subtitle:Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;
 
     if-eqz v1, :cond_0
 
+    .line 4
     invoke-virtual {v1}, Lcom/google/android/exoplayer2/decoder/DecoderOutputBuffer;->release()V
 
+    .line 5
     iput-object v0, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->subtitle:Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;
 
+    .line 6
     :cond_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->nextSubtitle:Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;
 
     if-eqz v1, :cond_1
 
+    .line 7
     invoke-virtual {v1}, Lcom/google/android/exoplayer2/decoder/DecoderOutputBuffer;->release()V
 
+    .line 8
     iput-object v0, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->nextSubtitle:Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;
 
     :cond_1
@@ -310,8 +330,10 @@
 .method private releaseDecoder()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/TextRenderer;->releaseBuffers()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->decoder:Lcom/google/android/exoplayer2/text/SubtitleDecoder;
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -324,10 +346,12 @@
 
     const/4 v0, 0x0
 
+    .line 3
     iput-object v0, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->decoder:Lcom/google/android/exoplayer2/text/SubtitleDecoder;
 
     const/4 v0, 0x0
 
+    .line 4
     iput v0, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->decoderReplacementState:I
 
     return-void
@@ -336,8 +360,10 @@
 .method private replaceDecoder()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/TextRenderer;->releaseDecoder()V
 
+    .line 2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/TextRenderer;->initDecoder()V
 
     return-void
@@ -354,12 +380,14 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->outputHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
 
     const/4 p0, 0x0
 
+    .line 2
     invoke-virtual {v0, p0, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object p0
@@ -368,6 +396,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/text/TextRenderer;->invokeUpdateOutputInternal(Ljava/util/List;)V
 
@@ -388,10 +417,12 @@
 .method public handleMessage(Landroid/os/Message;)Z
     .locals 1
 
+    .line 1
     iget v0, p1, Landroid/os/Message;->what:I
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Ljava/util/List;
@@ -402,6 +433,7 @@
 
     return p0
 
+    .line 3
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -413,6 +445,7 @@
 .method public isEnded()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->outputStreamEnded:Z
 
     return p0
@@ -431,14 +464,18 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->streamFormat:Lcom/google/android/exoplayer2/Format;
 
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 2
     iput-wide v0, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->finalStreamEndPositionUs:J
 
+    .line 3
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/TextRenderer;->clearOutput()V
 
+    .line 4
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/TextRenderer;->releaseDecoder()V
 
     return-void
@@ -447,29 +484,37 @@
 .method public onPositionReset(JZ)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/TextRenderer;->clearOutput()V
 
     const/4 p1, 0x0
 
+    .line 2
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->inputStreamEnded:Z
 
+    .line 3
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->outputStreamEnded:Z
 
     const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 4
     iput-wide p1, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->finalStreamEndPositionUs:J
 
+    .line 5
     iget p1, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->decoderReplacementState:I
 
     if-eqz p1, :cond_0
 
+    .line 6
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/TextRenderer;->replaceDecoder()V
 
     goto :goto_0
 
+    .line 7
     :cond_0
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/TextRenderer;->releaseBuffers()V
 
+    .line 8
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->decoder:Lcom/google/android/exoplayer2/text/SubtitleDecoder;
 
     invoke-static {p0}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -489,20 +534,24 @@
 
     const/4 p2, 0x0
 
+    .line 1
     aget-object p1, p1, p2
 
     iput-object p1, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->streamFormat:Lcom/google/android/exoplayer2/Format;
 
+    .line 2
     iget-object p1, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->decoder:Lcom/google/android/exoplayer2/text/SubtitleDecoder;
 
     if-eqz p1, :cond_0
 
     const/4 p1, 0x1
 
+    .line 3
     iput p1, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->decoderReplacementState:I
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/TextRenderer;->initDecoder()V
 
@@ -513,6 +562,7 @@
 .method public render(JJ)V
     .locals 8
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BaseRenderer;->isCurrentStreamFinal()Z
 
     move-result p3
@@ -533,10 +583,13 @@
 
     if-ltz p3, :cond_0
 
+    .line 2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/TextRenderer;->releaseBuffers()V
 
+    .line 3
     iput-boolean p4, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->outputStreamEnded:Z
 
+    .line 4
     :cond_0
     iget-boolean p3, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->outputStreamEnded:Z
 
@@ -544,11 +597,13 @@
 
     return-void
 
+    .line 5
     :cond_1
     iget-object p3, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->nextSubtitle:Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;
 
     if-nez p3, :cond_2
 
+    .line 6
     iget-object p3, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->decoder:Lcom/google/android/exoplayer2/text/SubtitleDecoder;
 
     invoke-static {p3}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -559,6 +614,7 @@
 
     invoke-interface {p3, p1, p2}, Lcom/google/android/exoplayer2/text/SubtitleDecoder;->setPositionUs(J)V
 
+    .line 7
     :try_start_0
     iget-object p3, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->decoder:Lcom/google/android/exoplayer2/text/SubtitleDecoder;
 
@@ -583,10 +639,12 @@
     :catch_0
     move-exception p1
 
+    .line 8
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/text/TextRenderer;->handleDecoderError(Lcom/google/android/exoplayer2/text/SubtitleDecoderException;)V
 
     return-void
 
+    .line 9
     :cond_2
     :goto_0
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BaseRenderer;->getState()I
@@ -599,6 +657,7 @@
 
     return-void
 
+    .line 10
     :cond_3
     iget-object p3, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->subtitle:Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;
 
@@ -606,6 +665,7 @@
 
     if-eqz p3, :cond_4
 
+    .line 11
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/TextRenderer;->getNextEventTime()J
 
     move-result-wide v2
@@ -617,12 +677,14 @@
 
     if-gtz v2, :cond_5
 
+    .line 12
     iget p3, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->nextSubtitleEventIndex:I
 
     add-int/2addr p3, p4
 
     iput p3, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->nextSubtitleEventIndex:I
 
+    .line 13
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/TextRenderer;->getNextEventTime()J
 
     move-result-wide v2
@@ -634,6 +696,7 @@
     :cond_4
     move p3, v1
 
+    .line 14
     :cond_5
     iget-object v2, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->nextSubtitle:Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;
 
@@ -641,6 +704,7 @@
 
     if-eqz v2, :cond_9
 
+    .line 15
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/decoder/Buffer;->isEndOfStream()Z
 
     move-result v4
@@ -649,6 +713,7 @@
 
     if-nez p3, :cond_9
 
+    .line 16
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/TextRenderer;->getNextEventTime()J
 
     move-result-wide v4
@@ -659,21 +724,26 @@
 
     if-nez v2, :cond_9
 
+    .line 17
     iget v2, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->decoderReplacementState:I
 
     if-ne v2, v0, :cond_6
 
+    .line 18
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/TextRenderer;->replaceDecoder()V
 
     goto :goto_2
 
+    .line 19
     :cond_6
     invoke-direct {p0}, Lcom/google/android/exoplayer2/text/TextRenderer;->releaseBuffers()V
 
+    .line 20
     iput-boolean p4, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->outputStreamEnded:Z
 
     goto :goto_2
 
+    .line 21
     :cond_7
     iget-wide v4, v2, Lcom/google/android/exoplayer2/decoder/DecoderOutputBuffer;->timeUs:J
 
@@ -681,12 +751,15 @@
 
     if-gtz v4, :cond_9
 
+    .line 22
     iget-object p3, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->subtitle:Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;
 
     if-eqz p3, :cond_8
 
+    .line 23
     invoke-virtual {p3}, Lcom/google/android/exoplayer2/decoder/DecoderOutputBuffer;->release()V
 
+    .line 24
     :cond_8
     invoke-virtual {v2, p1, p2}, Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;->getNextEventTimeIndex(J)I
 
@@ -694,8 +767,10 @@
 
     iput p3, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->nextSubtitleEventIndex:I
 
+    .line 25
     iput-object v2, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->subtitle:Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;
 
+    .line 26
     iput-object v3, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->nextSubtitle:Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;
 
     move p3, p4
@@ -704,10 +779,12 @@
     :goto_2
     if-eqz p3, :cond_a
 
+    .line 27
     iget-object p3, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->subtitle:Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;
 
     invoke-static {p3}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 28
     iget-object p3, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->subtitle:Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;
 
     invoke-virtual {p3, p1, p2}, Lcom/google/android/exoplayer2/text/SubtitleOutputBuffer;->getCues(J)Ljava/util/List;
@@ -716,6 +793,7 @@
 
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/text/TextRenderer;->updateOutput(Ljava/util/List;)V
 
+    .line 29
     :cond_a
     iget p1, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->decoderReplacementState:I
 
@@ -723,6 +801,7 @@
 
     return-void
 
+    .line 30
     :cond_b
     :goto_3
     :try_start_1
@@ -730,10 +809,12 @@
 
     if-nez p1, :cond_13
 
+    .line 31
     iget-object p1, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->nextInputBuffer:Lcom/google/android/exoplayer2/text/SubtitleInputBuffer;
 
     if-nez p1, :cond_d
 
+    .line 32
     iget-object p1, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->decoder:Lcom/google/android/exoplayer2/text/SubtitleDecoder;
 
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -752,9 +833,11 @@
 
     return-void
 
+    .line 33
     :cond_c
     iput-object p1, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->nextInputBuffer:Lcom/google/android/exoplayer2/text/SubtitleInputBuffer;
 
+    .line 34
     :cond_d
     iget p2, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->decoderReplacementState:I
 
@@ -762,8 +845,10 @@
 
     const/4 p2, 0x4
 
+    .line 35
     invoke-virtual {p1, p2}, Lcom/google/android/exoplayer2/decoder/Buffer;->setFlags(I)V
 
+    .line 36
     iget-object p2, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->decoder:Lcom/google/android/exoplayer2/text/SubtitleDecoder;
 
     invoke-static {p2}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -774,12 +859,15 @@
 
     invoke-interface {p2, p1}, Lcom/google/android/exoplayer2/decoder/Decoder;->queueInputBuffer(Ljava/lang/Object;)V
 
+    .line 37
     iput-object v3, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->nextInputBuffer:Lcom/google/android/exoplayer2/text/SubtitleInputBuffer;
 
+    .line 38
     iput v0, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->decoderReplacementState:I
 
     return-void
 
+    .line 39
     :cond_e
     iget-object p2, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->formatHolder:Lcom/google/android/exoplayer2/FormatHolder;
 
@@ -791,18 +879,22 @@
 
     if-ne p2, p3, :cond_12
 
+    .line 40
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/decoder/Buffer;->isEndOfStream()Z
 
     move-result p2
 
     if-eqz p2, :cond_f
 
+    .line 41
     iput-boolean p4, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->inputStreamEnded:Z
 
+    .line 42
     iput-boolean v1, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->waitingForKeyFrame:Z
 
     goto :goto_5
 
+    .line 43
     :cond_f
     iget-object p2, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->formatHolder:Lcom/google/android/exoplayer2/FormatHolder;
 
@@ -812,13 +904,16 @@
 
     return-void
 
+    .line 44
     :cond_10
     iget-wide p2, p2, Lcom/google/android/exoplayer2/Format;->subsampleOffsetUs:J
 
     iput-wide p2, p1, Lcom/google/android/exoplayer2/text/SubtitleInputBuffer;->subsampleOffsetUs:J
 
+    .line 45
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer;->flip()V
 
+    .line 46
     iget-boolean p2, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->waitingForKeyFrame:Z
 
     invoke-virtual {p1}, Lcom/google/android/exoplayer2/decoder/Buffer;->isKeyFrame()Z
@@ -839,11 +934,13 @@
 
     iput-boolean p2, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->waitingForKeyFrame:Z
 
+    .line 47
     :goto_5
     iget-boolean p2, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->waitingForKeyFrame:Z
 
     if-nez p2, :cond_b
 
+    .line 48
     iget-object p2, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->decoder:Lcom/google/android/exoplayer2/text/SubtitleDecoder;
 
     invoke-static {p2}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -854,6 +951,7 @@
 
     invoke-interface {p2, p1}, Lcom/google/android/exoplayer2/decoder/Decoder;->queueInputBuffer(Ljava/lang/Object;)V
 
+    .line 49
     iput-object v3, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->nextInputBuffer:Lcom/google/android/exoplayer2/text/SubtitleInputBuffer;
     :try_end_1
     .catch Lcom/google/android/exoplayer2/text/SubtitleDecoderException; {:try_start_1 .. :try_end_1} :catch_1
@@ -870,6 +968,7 @@
     :catch_1
     move-exception p1
 
+    .line 50
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/text/TextRenderer;->handleDecoderError(Lcom/google/android/exoplayer2/text/SubtitleDecoderException;)V
 
     :cond_13
@@ -879,12 +978,14 @@
 .method public setFinalStreamEndPositionUs(J)V
     .locals 1
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/BaseRenderer;->isCurrentStreamFinal()Z
 
     move-result v0
 
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkState(Z)V
 
+    .line 2
     iput-wide p1, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->finalStreamEndPositionUs:J
 
     return-void
@@ -893,6 +994,7 @@
 .method public supportsFormat(Lcom/google/android/exoplayer2/Format;)I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/text/TextRenderer;->decoderFactory:Lcom/google/android/exoplayer2/text/SubtitleDecoderFactory;
 
     invoke-interface {p0, p1}, Lcom/google/android/exoplayer2/text/SubtitleDecoderFactory;->supportsFormat(Lcom/google/android/exoplayer2/Format;)Z
@@ -901,6 +1003,7 @@
 
     if-eqz p0, :cond_1
 
+    .line 2
     iget p0, p1, Lcom/google/android/exoplayer2/Format;->cryptoType:I
 
     if-nez p0, :cond_0
@@ -912,6 +1015,7 @@
     :cond_0
     const/4 p0, 0x2
 
+    .line 3
     :goto_0
     invoke-static {p0}, Lcom/google/android/exoplayer2/RendererCapabilities;->create(I)I
 
@@ -919,6 +1023,7 @@
 
     return p0
 
+    .line 4
     :cond_1
     iget-object p0, p1, Lcom/google/android/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
@@ -930,6 +1035,7 @@
 
     const/4 p0, 0x1
 
+    .line 5
     invoke-static {p0}, Lcom/google/android/exoplayer2/RendererCapabilities;->create(I)I
 
     move-result p0
@@ -939,6 +1045,7 @@
     :cond_2
     const/4 p0, 0x0
 
+    .line 6
     invoke-static {p0}, Lcom/google/android/exoplayer2/RendererCapabilities;->create(I)I
 
     move-result p0

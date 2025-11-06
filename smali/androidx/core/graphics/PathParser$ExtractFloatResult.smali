@@ -1,4 +1,4 @@
-.class Landroidx/core/graphics/PathParser$ExtractFloatResult;
+.class public Landroidx/core/graphics/PathParser$ExtractFloatResult;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -15,15 +15,16 @@
 
 
 # instance fields
-.field mEndPosition:I
+.field public mEndPosition:I
 
-.field mEndWithNegOrDot:Z
+.field public mEndWithNegOrDot:Z
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

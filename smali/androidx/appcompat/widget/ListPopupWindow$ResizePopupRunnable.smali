@@ -1,4 +1,4 @@
-.class Landroidx/appcompat/widget/ListPopupWindow$ResizePopupRunnable;
+.class public Landroidx/appcompat/widget/ListPopupWindow$ResizePopupRunnable;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,13 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/appcompat/widget/ListPopupWindow;
+.field public final synthetic this$0:Landroidx/appcompat/widget/ListPopupWindow;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/appcompat/widget/ListPopupWindow;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/appcompat/widget/ListPopupWindow$ResizePopupRunnable;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,6 +38,7 @@
 .method public run()V
     .locals 3
 
+    .line 1
     iget-object v0, p0, Landroidx/appcompat/widget/ListPopupWindow$ResizePopupRunnable;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
 
     iget-object v0, v0, Landroidx/appcompat/widget/ListPopupWindow;->mDropDownList:Landroidx/appcompat/widget/DropDownListView;
@@ -53,7 +55,8 @@
 
     iget-object v0, v0, Landroidx/appcompat/widget/ListPopupWindow;->mDropDownList:Landroidx/appcompat/widget/DropDownListView;
 
-    invoke-virtual {v0}, Landroid/widget/AdapterView;->getCount()I
+    .line 2
+    invoke-virtual {v0}, Landroid/widget/ListView;->getCount()I
 
     move-result v0
 
@@ -61,7 +64,7 @@
 
     iget-object v1, v1, Landroidx/appcompat/widget/ListPopupWindow;->mDropDownList:Landroidx/appcompat/widget/DropDownListView;
 
-    invoke-virtual {v1}, Landroid/view/ViewGroup;->getChildCount()I
+    invoke-virtual {v1}, Landroid/widget/ListView;->getChildCount()I
 
     move-result v1
 
@@ -71,7 +74,8 @@
 
     iget-object v0, v0, Landroidx/appcompat/widget/ListPopupWindow;->mDropDownList:Landroidx/appcompat/widget/DropDownListView;
 
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
+    .line 3
+    invoke-virtual {v0}, Landroid/widget/ListView;->getChildCount()I
 
     move-result v0
 
@@ -81,12 +85,14 @@
 
     if-gt v0, v2, :cond_0
 
+    .line 4
     iget-object v0, v1, Landroidx/appcompat/widget/ListPopupWindow;->mPopup:Landroid/widget/PopupWindow;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Landroid/widget/PopupWindow;->setInputMethodMode(I)V
 
+    .line 5
     iget-object p0, p0, Landroidx/appcompat/widget/ListPopupWindow$ResizePopupRunnable;->this$0:Landroidx/appcompat/widget/ListPopupWindow;
 
     invoke-virtual {p0}, Landroidx/appcompat/widget/ListPopupWindow;->show()V

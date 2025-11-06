@@ -172,6 +172,7 @@
 .method private getEncoding()Ljava/lang/String;
     .locals 4
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/SAXContentHandler;->locator:Lorg/xml/sax/Locator;
 
     const/4 v1, 0x0
@@ -180,6 +181,7 @@
 
     return-object v1
 
+    .line 2
     :cond_0
     :try_start_0
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -198,6 +200,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 3
     iget-object p0, p0, Lorg/dom4j/io/SAXContentHandler;->locator:Lorg/xml/sax/Locator;
 
     invoke-virtual {v0, p0, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
@@ -220,20 +223,24 @@
 .method public addAttributes(Lorg/dom4j/Element;Lorg/xml/sax/Attributes;)V
     .locals 7
 
+    .line 1
     instance-of v0, p1, Lorg/dom4j/tree/AbstractElement;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
+    .line 2
     check-cast p1, Lorg/dom4j/tree/AbstractElement;
 
+    .line 3
     iget-object p0, p0, Lorg/dom4j/io/SAXContentHandler;->namespaceStack:Lorg/dom4j/tree/NamespaceStack;
 
     invoke-virtual {p1, p2, p0, v1}, Lorg/dom4j/tree/AbstractElement;->setAttributes(Lorg/xml/sax/Attributes;Lorg/dom4j/tree/NamespaceStack;Z)V
 
     goto :goto_1
 
+    .line 4
     :cond_0
     invoke-interface {p2}, Lorg/xml/sax/Attributes;->getLength()I
 
@@ -242,36 +249,43 @@
     :goto_0
     if-ge v1, v0, :cond_2
 
+    .line 5
     invoke-interface {p2, v1}, Lorg/xml/sax/Attributes;->getQName(I)Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "xmlns"
 
+    .line 6
     invoke-virtual {v2, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
+    .line 7
     invoke-interface {p2, v1}, Lorg/xml/sax/Attributes;->getURI(I)Ljava/lang/String;
 
     move-result-object v3
 
+    .line 8
     invoke-interface {p2, v1}, Lorg/xml/sax/Attributes;->getLocalName(I)Ljava/lang/String;
 
     move-result-object v4
 
+    .line 9
     invoke-interface {p2, v1}, Lorg/xml/sax/Attributes;->getValue(I)Ljava/lang/String;
 
     move-result-object v5
 
+    .line 10
     iget-object v6, p0, Lorg/dom4j/io/SAXContentHandler;->namespaceStack:Lorg/dom4j/tree/NamespaceStack;
 
     invoke-virtual {v6, v3, v4, v2}, Lorg/dom4j/tree/NamespaceStack;->getAttributeQName(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/dom4j/QName;
 
     move-result-object v2
 
+    .line 11
     invoke-interface {p1, v2, v5}, Lorg/dom4j/Element;->addAttribute(Lorg/dom4j/QName;Ljava/lang/String;)Lorg/dom4j/Element;
 
     :cond_1
@@ -287,16 +301,19 @@
 .method public addDTDDeclaration(Ljava/lang/Object;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/SAXContentHandler;->internalDTDDeclarations:Ljava/util/List;
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/dom4j/io/SAXContentHandler;->internalDTDDeclarations:Ljava/util/List;
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lorg/dom4j/io/SAXContentHandler;->internalDTDDeclarations:Ljava/util/List;
 
@@ -308,8 +325,10 @@
 .method public addDeclaredNamespaces(Lorg/dom4j/Element;)V
     .locals 3
 
+    .line 1
     invoke-interface {p1}, Lorg/dom4j/Element;->getNamespace()Lorg/dom4j/Namespace;
 
+    .line 2
     iget-object v0, p0, Lorg/dom4j/io/SAXContentHandler;->namespaceStack:Lorg/dom4j/tree/NamespaceStack;
 
     invoke-virtual {v0}, Lorg/dom4j/tree/NamespaceStack;->size()I
@@ -321,14 +340,17 @@
 
     if-ge v1, v0, :cond_0
 
+    .line 3
     iget-object v2, p0, Lorg/dom4j/io/SAXContentHandler;->namespaceStack:Lorg/dom4j/tree/NamespaceStack;
 
     invoke-virtual {v2, v1}, Lorg/dom4j/tree/NamespaceStack;->getNamespace(I)Lorg/dom4j/Namespace;
 
     move-result-object v1
 
+    .line 4
     invoke-interface {p1, v1}, Lorg/dom4j/Element;->add(Lorg/dom4j/Namespace;)V
 
+    .line 5
     iget v1, p0, Lorg/dom4j/io/SAXContentHandler;->declaredNamespaceIndex:I
 
     add-int/lit8 v1, v1, 0x1
@@ -344,16 +366,19 @@
 .method public addExternalDTDDeclaration(Ljava/lang/Object;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/SAXContentHandler;->externalDTDDeclarations:Ljava/util/List;
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/dom4j/io/SAXContentHandler;->externalDTDDeclarations:Ljava/util/List;
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lorg/dom4j/io/SAXContentHandler;->externalDTDDeclarations:Ljava/util/List;
 
@@ -370,14 +395,17 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lorg/dom4j/io/SAXContentHandler;->internalDTDsubset:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-boolean v0, p0, Lorg/dom4j/io/SAXContentHandler;->includeInternalDTDDeclarations:Z
 
     if-eqz v0, :cond_1
 
+    .line 3
     new-instance v0, Lorg/dom4j/dtd/AttributeDecl;
 
     move-object v1, v0
@@ -398,11 +426,13 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-boolean v0, p0, Lorg/dom4j/io/SAXContentHandler;->includeExternalDTDDeclarations:Z
 
     if-eqz v0, :cond_1
 
+    .line 5
     new-instance v0, Lorg/dom4j/dtd/AttributeDecl;
 
     move-object v1, v0
@@ -438,15 +468,18 @@
 
     return-void
 
+    .line 1
     :cond_0
     iget-object v0, p0, Lorg/dom4j/io/SAXContentHandler;->currentElement:Lorg/dom4j/Element;
 
     if-eqz v0, :cond_6
 
+    .line 2
     iget-object v1, p0, Lorg/dom4j/io/SAXContentHandler;->entity:Ljava/lang/String;
 
     if-eqz v1, :cond_2
 
+    .line 3
     iget-boolean v0, p0, Lorg/dom4j/io/SAXContentHandler;->mergeAdjacentText:Z
 
     if-eqz v0, :cond_1
@@ -455,8 +488,10 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     invoke-virtual {p0}, Lorg/dom4j/io/SAXContentHandler;->completeCurrentTextNode()V
 
+    .line 5
     :cond_1
     iget-object v0, p0, Lorg/dom4j/io/SAXContentHandler;->currentElement:Lorg/dom4j/Element;
 
@@ -470,15 +505,18 @@
 
     const/4 p1, 0x0
 
+    .line 6
     iput-object p1, p0, Lorg/dom4j/io/SAXContentHandler;->entity:Ljava/lang/String;
 
     goto :goto_0
 
+    .line 7
     :cond_2
     iget-boolean v1, p0, Lorg/dom4j/io/SAXContentHandler;->insideCDATASection:Z
 
     if-eqz v1, :cond_4
 
+    .line 8
     iget-boolean v0, p0, Lorg/dom4j/io/SAXContentHandler;->mergeAdjacentText:Z
 
     if-eqz v0, :cond_3
@@ -487,8 +525,10 @@
 
     if-eqz v0, :cond_3
 
+    .line 9
     invoke-virtual {p0}, Lorg/dom4j/io/SAXContentHandler;->completeCurrentTextNode()V
 
+    .line 10
     :cond_3
     iget-object p0, p0, Lorg/dom4j/io/SAXContentHandler;->cdataText:Ljava/lang/StringBuffer;
 
@@ -500,21 +540,25 @@
 
     goto :goto_0
 
+    .line 11
     :cond_4
     iget-boolean v1, p0, Lorg/dom4j/io/SAXContentHandler;->mergeAdjacentText:Z
 
     if-eqz v1, :cond_5
 
+    .line 12
     iget-object v0, p0, Lorg/dom4j/io/SAXContentHandler;->textBuffer:Ljava/lang/StringBuffer;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/lang/StringBuffer;->append([CII)Ljava/lang/StringBuffer;
 
     const/4 p1, 0x1
 
+    .line 13
     iput-boolean p1, p0, Lorg/dom4j/io/SAXContentHandler;->textInTextBuffer:Z
 
     goto :goto_0
 
+    .line 14
     :cond_5
     new-instance p0, Ljava/lang/String;
 
@@ -535,10 +579,12 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lorg/dom4j/io/SAXContentHandler;->ignoreComments:Z
 
     if-nez v0, :cond_2
 
+    .line 2
     iget-boolean v0, p0, Lorg/dom4j/io/SAXContentHandler;->mergeAdjacentText:Z
 
     if-eqz v0, :cond_0
@@ -547,13 +593,16 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     invoke-virtual {p0}, Lorg/dom4j/io/SAXContentHandler;->completeCurrentTextNode()V
 
+    .line 4
     :cond_0
     new-instance v0, Ljava/lang/String;
 
     invoke-direct {v0, p1, p2, p3}, Ljava/lang/String;-><init>([CII)V
 
+    .line 5
     iget-boolean p1, p0, Lorg/dom4j/io/SAXContentHandler;->insideDTDSection:Z
 
     if-nez p1, :cond_2
@@ -564,14 +613,17 @@
 
     if-lez p1, :cond_2
 
+    .line 6
     iget-object p1, p0, Lorg/dom4j/io/SAXContentHandler;->currentElement:Lorg/dom4j/Element;
 
     if-eqz p1, :cond_1
 
+    .line 7
     invoke-interface {p1, v0}, Lorg/dom4j/Element;->addComment(Ljava/lang/String;)Lorg/dom4j/Element;
 
     goto :goto_0
 
+    .line 8
     :cond_1
     invoke-virtual {p0}, Lorg/dom4j/io/SAXContentHandler;->getDocument()Lorg/dom4j/Document;
 
@@ -587,12 +639,14 @@
 .method public completeCurrentTextNode()V
     .locals 4
 
+    .line 1
     iget-boolean v0, p0, Lorg/dom4j/io/SAXContentHandler;->stripWhitespaceText:Z
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_2
 
+    .line 2
     iget-object v0, p0, Lorg/dom4j/io/SAXContentHandler;->textBuffer:Ljava/lang/StringBuffer;
 
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->length()I
@@ -604,6 +658,7 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
+    .line 3
     iget-object v3, p0, Lorg/dom4j/io/SAXContentHandler;->textBuffer:Ljava/lang/StringBuffer;
 
     invoke-virtual {v3, v2}, Ljava/lang/StringBuffer;->charAt(I)C
@@ -631,6 +686,7 @@
     :goto_1
     if-nez v0, :cond_3
 
+    .line 4
     iget-object v0, p0, Lorg/dom4j/io/SAXContentHandler;->currentElement:Lorg/dom4j/Element;
 
     iget-object v2, p0, Lorg/dom4j/io/SAXContentHandler;->textBuffer:Ljava/lang/StringBuffer;
@@ -643,6 +699,7 @@
 
     goto :goto_2
 
+    .line 5
     :cond_2
     iget-object v0, p0, Lorg/dom4j/io/SAXContentHandler;->currentElement:Lorg/dom4j/Element;
 
@@ -654,12 +711,14 @@
 
     invoke-interface {v0, v2}, Lorg/dom4j/Element;->addText(Ljava/lang/String;)Lorg/dom4j/Element;
 
+    .line 6
     :cond_3
     :goto_2
     iget-object v0, p0, Lorg/dom4j/io/SAXContentHandler;->textBuffer:Ljava/lang/StringBuffer;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->setLength(I)V
 
+    .line 7
     iput-boolean v1, p0, Lorg/dom4j/io/SAXContentHandler;->textInTextBuffer:Z
 
     return-void
@@ -668,24 +727,29 @@
 .method public createDocument()Lorg/dom4j/Document;
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lorg/dom4j/io/SAXContentHandler;->getEncoding()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 2
     iget-object v1, p0, Lorg/dom4j/io/SAXContentHandler;->documentFactory:Lorg/dom4j/DocumentFactory;
 
     invoke-virtual {v1, v0}, Lorg/dom4j/DocumentFactory;->createDocument(Ljava/lang/String;)Lorg/dom4j/Document;
 
     move-result-object v0
 
+    .line 3
     iget-object v1, p0, Lorg/dom4j/io/SAXContentHandler;->entityResolver:Lorg/xml/sax/EntityResolver;
 
     invoke-interface {v0, v1}, Lorg/dom4j/Document;->setEntityResolver(Lorg/xml/sax/EntityResolver;)V
 
+    .line 4
     iget-object p0, p0, Lorg/dom4j/io/SAXContentHandler;->inputSource:Lorg/xml/sax/InputSource;
 
     if-eqz p0, :cond_0
 
+    .line 5
     invoke-virtual {p0}, Lorg/xml/sax/InputSource;->getSystemId()Ljava/lang/String;
 
     move-result-object p0
@@ -699,6 +763,7 @@
 .method public createElementStack()Lorg/dom4j/io/ElementStack;
     .locals 0
 
+    .line 1
     new-instance p0, Lorg/dom4j/io/ElementStack;
 
     invoke-direct {p0}, Lorg/dom4j/io/ElementStack;-><init>()V
@@ -714,14 +779,17 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lorg/dom4j/io/SAXContentHandler;->internalDTDsubset:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-boolean v0, p0, Lorg/dom4j/io/SAXContentHandler;->includeInternalDTDDeclarations:Z
 
     if-eqz v0, :cond_1
 
+    .line 3
     new-instance v0, Lorg/dom4j/dtd/ElementDecl;
 
     invoke-direct {v0, p1, p2}, Lorg/dom4j/dtd/ElementDecl;-><init>(Ljava/lang/String;Ljava/lang/String;)V
@@ -730,11 +798,13 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-boolean v0, p0, Lorg/dom4j/io/SAXContentHandler;->includeExternalDTDDeclarations:Z
 
     if-eqz v0, :cond_1
 
+    .line 5
     new-instance v0, Lorg/dom4j/dtd/ElementDecl;
 
     invoke-direct {v0, p1, p2}, Lorg/dom4j/dtd/ElementDecl;-><init>(Ljava/lang/String;Ljava/lang/String;)V
@@ -756,8 +826,10 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-boolean v0, p0, Lorg/dom4j/io/SAXContentHandler;->insideCDATASection:Z
 
+    .line 2
     iget-object v0, p0, Lorg/dom4j/io/SAXContentHandler;->currentElement:Lorg/dom4j/Element;
 
     iget-object p0, p0, Lorg/dom4j/io/SAXContentHandler;->cdataText:Ljava/lang/StringBuffer;
@@ -781,8 +853,10 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-boolean v0, p0, Lorg/dom4j/io/SAXContentHandler;->insideDTDSection:Z
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/io/SAXContentHandler;->getDocument()Lorg/dom4j/Document;
 
     move-result-object v0
@@ -793,24 +867,30 @@
 
     if-eqz v0, :cond_1
 
+    .line 3
     iget-object v1, p0, Lorg/dom4j/io/SAXContentHandler;->internalDTDDeclarations:Ljava/util/List;
 
     if-eqz v1, :cond_0
 
+    .line 4
     invoke-interface {v0, v1}, Lorg/dom4j/DocumentType;->setInternalDeclarations(Ljava/util/List;)V
 
+    .line 5
     :cond_0
     iget-object v1, p0, Lorg/dom4j/io/SAXContentHandler;->externalDTDDeclarations:Ljava/util/List;
 
     if-eqz v1, :cond_1
 
+    .line 6
     invoke-interface {v0, v1}, Lorg/dom4j/DocumentType;->setExternalDeclarations(Ljava/util/List;)V
 
     :cond_1
     const/4 v0, 0x0
 
+    .line 7
     iput-object v0, p0, Lorg/dom4j/io/SAXContentHandler;->internalDTDDeclarations:Ljava/util/List;
 
+    .line 8
     iput-object v0, p0, Lorg/dom4j/io/SAXContentHandler;->externalDTDDeclarations:Ljava/util/List;
 
     return-void
@@ -824,18 +904,22 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/SAXContentHandler;->namespaceStack:Lorg/dom4j/tree/NamespaceStack;
 
     invoke-virtual {v0}, Lorg/dom4j/tree/NamespaceStack;->clear()V
 
+    .line 2
     iget-object v0, p0, Lorg/dom4j/io/SAXContentHandler;->elementStack:Lorg/dom4j/io/ElementStack;
 
     invoke-virtual {v0}, Lorg/dom4j/io/ElementStack;->clear()V
 
     const/4 v0, 0x0
 
+    .line 3
     iput-object v0, p0, Lorg/dom4j/io/SAXContentHandler;->currentElement:Lorg/dom4j/Element;
 
+    .line 4
     iput-object v0, p0, Lorg/dom4j/io/SAXContentHandler;->textBuffer:Ljava/lang/StringBuffer;
 
     return-void
@@ -849,6 +933,7 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean p1, p0, Lorg/dom4j/io/SAXContentHandler;->mergeAdjacentText:Z
 
     if-eqz p1, :cond_0
@@ -857,8 +942,10 @@
 
     if-eqz p1, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/io/SAXContentHandler;->completeCurrentTextNode()V
 
+    .line 3
     :cond_0
     iget-object p1, p0, Lorg/dom4j/io/SAXContentHandler;->elementHandler:Lorg/dom4j/ElementHandler;
 
@@ -868,15 +955,18 @@
 
     if-eqz p2, :cond_1
 
+    .line 4
     iget-object p2, p0, Lorg/dom4j/io/SAXContentHandler;->elementStack:Lorg/dom4j/io/ElementStack;
 
     invoke-interface {p1, p2}, Lorg/dom4j/ElementHandler;->onEnd(Lorg/dom4j/ElementPath;)V
 
+    .line 5
     :cond_1
     iget-object p1, p0, Lorg/dom4j/io/SAXContentHandler;->elementStack:Lorg/dom4j/io/ElementStack;
 
     invoke-virtual {p1}, Lorg/dom4j/io/ElementStack;->popElement()Lorg/dom4j/Element;
 
+    .line 6
     iget-object p1, p0, Lorg/dom4j/io/SAXContentHandler;->elementStack:Lorg/dom4j/io/ElementStack;
 
     invoke-virtual {p1}, Lorg/dom4j/io/ElementStack;->peekElement()Lorg/dom4j/Element;
@@ -896,6 +986,7 @@
         }
     .end annotation
 
+    .line 1
     iget p1, p0, Lorg/dom4j/io/SAXContentHandler;->entityLevel:I
 
     const/4 v0, 0x1
@@ -906,10 +997,12 @@
 
     const/4 v1, 0x0
 
+    .line 2
     iput-object v1, p0, Lorg/dom4j/io/SAXContentHandler;->entity:Ljava/lang/String;
 
     if-nez p1, :cond_0
 
+    .line 3
     iput-boolean v0, p0, Lorg/dom4j/io/SAXContentHandler;->internalDTDsubset:Z
 
     :cond_0
@@ -924,10 +1017,12 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/SAXContentHandler;->namespaceStack:Lorg/dom4j/tree/NamespaceStack;
 
     invoke-virtual {v0, p1}, Lorg/dom4j/tree/NamespaceStack;->pop(Ljava/lang/String;)Lorg/dom4j/Namespace;
 
+    .line 2
     iget-object p1, p0, Lorg/dom4j/io/SAXContentHandler;->namespaceStack:Lorg/dom4j/tree/NamespaceStack;
 
     invoke-virtual {p1}, Lorg/dom4j/tree/NamespaceStack;->size()I
@@ -947,6 +1042,7 @@
         }
     .end annotation
 
+    .line 1
     throw p1
 .end method
 
@@ -958,27 +1054,33 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lorg/dom4j/dtd/ExternalEntityDecl;
 
     invoke-direct {v0, p1, p2, p3}, Lorg/dom4j/dtd/ExternalEntityDecl;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 2
     iget-boolean p1, p0, Lorg/dom4j/io/SAXContentHandler;->internalDTDsubset:Z
 
     if-eqz p1, :cond_0
 
+    .line 3
     iget-boolean p1, p0, Lorg/dom4j/io/SAXContentHandler;->includeInternalDTDDeclarations:Z
 
     if-eqz p1, :cond_1
 
+    .line 4
     invoke-virtual {p0, v0}, Lorg/dom4j/io/SAXContentHandler;->addDTDDeclaration(Ljava/lang/Object;)V
 
     goto :goto_0
 
+    .line 5
     :cond_0
     iget-boolean p1, p0, Lorg/dom4j/io/SAXContentHandler;->includeExternalDTDDeclarations:Z
 
     if-eqz p1, :cond_1
 
+    .line 6
     invoke-virtual {p0, v0}, Lorg/dom4j/io/SAXContentHandler;->addExternalDTDDeclaration(Ljava/lang/Object;)V
 
     :cond_1
@@ -994,22 +1096,26 @@
         }
     .end annotation
 
+    .line 1
     throw p1
 .end method
 
 .method public getDocument()Lorg/dom4j/Document;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lorg/dom4j/io/SAXContentHandler;->document:Lorg/dom4j/Document;
 
     if-nez v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/io/SAXContentHandler;->createDocument()Lorg/dom4j/Document;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/dom4j/io/SAXContentHandler;->document:Lorg/dom4j/Document;
 
+    .line 3
     :cond_0
     iget-object p0, p0, Lorg/dom4j/io/SAXContentHandler;->document:Lorg/dom4j/Document;
 
@@ -1019,6 +1125,7 @@
 .method public getElementStack()Lorg/dom4j/io/ElementStack;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/SAXContentHandler;->elementStack:Lorg/dom4j/io/ElementStack;
 
     return-object p0
@@ -1027,6 +1134,7 @@
 .method public getEntityResolver()Lorg/xml/sax/EntityResolver;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/SAXContentHandler;->entityResolver:Lorg/xml/sax/EntityResolver;
 
     return-object p0
@@ -1035,6 +1143,7 @@
 .method public getInputSource()Lorg/xml/sax/InputSource;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/SAXContentHandler;->inputSource:Lorg/xml/sax/InputSource;
 
     return-object p0
@@ -1048,14 +1157,17 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lorg/dom4j/io/SAXContentHandler;->internalDTDsubset:Z
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-boolean v0, p0, Lorg/dom4j/io/SAXContentHandler;->includeInternalDTDDeclarations:Z
 
     if-eqz v0, :cond_1
 
+    .line 3
     new-instance v0, Lorg/dom4j/dtd/InternalEntityDecl;
 
     invoke-direct {v0, p1, p2}, Lorg/dom4j/dtd/InternalEntityDecl;-><init>(Ljava/lang/String;Ljava/lang/String;)V
@@ -1064,11 +1176,13 @@
 
     goto :goto_0
 
+    .line 4
     :cond_0
     iget-boolean v0, p0, Lorg/dom4j/io/SAXContentHandler;->includeExternalDTDDeclarations:Z
 
     if-eqz v0, :cond_1
 
+    .line 5
     new-instance v0, Lorg/dom4j/dtd/InternalEntityDecl;
 
     invoke-direct {v0, p1, p2}, Lorg/dom4j/dtd/InternalEntityDecl;-><init>(Ljava/lang/String;Ljava/lang/String;)V
@@ -1085,6 +1199,7 @@
 
     const-string p0, "amp"
 
+    .line 1
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -1141,6 +1256,7 @@
 .method public isIgnoreComments()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/dom4j/io/SAXContentHandler;->ignoreComments:Z
 
     return p0
@@ -1149,6 +1265,7 @@
 .method public isIncludeExternalDTDDeclarations()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/dom4j/io/SAXContentHandler;->includeExternalDTDDeclarations:Z
 
     return p0
@@ -1157,6 +1274,7 @@
 .method public isIncludeInternalDTDDeclarations()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/dom4j/io/SAXContentHandler;->includeInternalDTDDeclarations:Z
 
     return p0
@@ -1165,6 +1283,7 @@
 .method public isMergeAdjacentText()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/dom4j/io/SAXContentHandler;->mergeAdjacentText:Z
 
     return p0
@@ -1173,6 +1292,7 @@
 .method public isStripWhitespaceText()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lorg/dom4j/io/SAXContentHandler;->stripWhitespaceText:Z
 
     return p0
@@ -1197,6 +1317,7 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lorg/dom4j/io/SAXContentHandler;->mergeAdjacentText:Z
 
     if-eqz v0, :cond_0
@@ -1205,17 +1326,21 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/io/SAXContentHandler;->completeCurrentTextNode()V
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lorg/dom4j/io/SAXContentHandler;->currentElement:Lorg/dom4j/Element;
 
     if-eqz v0, :cond_1
 
+    .line 4
     invoke-interface {v0, p1, p2}, Lorg/dom4j/Element;->addProcessingInstruction(Ljava/lang/String;Ljava/lang/String;)Lorg/dom4j/Element;
 
     goto :goto_0
 
+    .line 5
     :cond_1
     invoke-virtual {p0}, Lorg/dom4j/io/SAXContentHandler;->getDocument()Lorg/dom4j/Document;
 
@@ -1230,6 +1355,7 @@
 .method public setDocumentLocator(Lorg/xml/sax/Locator;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/io/SAXContentHandler;->locator:Lorg/xml/sax/Locator;
 
     return-void
@@ -1238,6 +1364,7 @@
 .method public setElementStack(Lorg/dom4j/io/ElementStack;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/io/SAXContentHandler;->elementStack:Lorg/dom4j/io/ElementStack;
 
     return-void
@@ -1246,6 +1373,7 @@
 .method public setEntityResolver(Lorg/xml/sax/EntityResolver;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/io/SAXContentHandler;->entityResolver:Lorg/xml/sax/EntityResolver;
 
     return-void
@@ -1254,6 +1382,7 @@
 .method public setIgnoreComments(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lorg/dom4j/io/SAXContentHandler;->ignoreComments:Z
 
     return-void
@@ -1262,6 +1391,7 @@
 .method public setIncludeExternalDTDDeclarations(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lorg/dom4j/io/SAXContentHandler;->includeExternalDTDDeclarations:Z
 
     return-void
@@ -1270,6 +1400,7 @@
 .method public setIncludeInternalDTDDeclarations(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lorg/dom4j/io/SAXContentHandler;->includeInternalDTDDeclarations:Z
 
     return-void
@@ -1278,6 +1409,7 @@
 .method public setInputSource(Lorg/xml/sax/InputSource;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lorg/dom4j/io/SAXContentHandler;->inputSource:Lorg/xml/sax/InputSource;
 
     return-void
@@ -1286,6 +1418,7 @@
 .method public setMergeAdjacentText(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lorg/dom4j/io/SAXContentHandler;->mergeAdjacentText:Z
 
     return-void
@@ -1294,6 +1427,7 @@
 .method public setStripWhitespaceText(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lorg/dom4j/io/SAXContentHandler;->stripWhitespaceText:Z
 
     return-void
@@ -1309,8 +1443,10 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lorg/dom4j/io/SAXContentHandler;->insideCDATASection:Z
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -1328,6 +1464,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lorg/dom4j/io/SAXContentHandler;->getDocument()Lorg/dom4j/Document;
 
     move-result-object v0
@@ -1336,8 +1473,10 @@
 
     const/4 p1, 0x1
 
+    .line 2
     iput-boolean p1, p0, Lorg/dom4j/io/SAXContentHandler;->insideDTDSection:Z
 
+    .line 3
     iput-boolean p1, p0, Lorg/dom4j/io/SAXContentHandler;->internalDTDsubset:Z
 
     return-void
@@ -1353,14 +1492,18 @@
 
     const/4 v0, 0x0
 
+    .line 1
     iput-object v0, p0, Lorg/dom4j/io/SAXContentHandler;->document:Lorg/dom4j/Document;
 
+    .line 2
     iput-object v0, p0, Lorg/dom4j/io/SAXContentHandler;->currentElement:Lorg/dom4j/Element;
 
+    .line 3
     iget-object v0, p0, Lorg/dom4j/io/SAXContentHandler;->elementStack:Lorg/dom4j/io/ElementStack;
 
     invoke-virtual {v0}, Lorg/dom4j/io/ElementStack;->clear()V
 
+    .line 4
     iget-object v0, p0, Lorg/dom4j/io/SAXContentHandler;->elementHandler:Lorg/dom4j/ElementHandler;
 
     if-eqz v0, :cond_0
@@ -1369,12 +1512,14 @@
 
     if-eqz v1, :cond_0
 
+    .line 5
     iget-object v1, p0, Lorg/dom4j/io/SAXContentHandler;->elementStack:Lorg/dom4j/io/ElementStack;
 
     check-cast v0, Lorg/dom4j/io/DispatchHandler;
 
     invoke-virtual {v1, v0}, Lorg/dom4j/io/ElementStack;->setDispatchHandler(Lorg/dom4j/io/DispatchHandler;)V
 
+    .line 6
     :cond_0
     iget-object v0, p0, Lorg/dom4j/io/SAXContentHandler;->namespaceStack:Lorg/dom4j/tree/NamespaceStack;
 
@@ -1382,8 +1527,10 @@
 
     const/4 v0, 0x0
 
+    .line 7
     iput v0, p0, Lorg/dom4j/io/SAXContentHandler;->declaredNamespaceIndex:I
 
+    .line 8
     iget-boolean v1, p0, Lorg/dom4j/io/SAXContentHandler;->mergeAdjacentText:Z
 
     if-eqz v1, :cond_1
@@ -1392,12 +1539,14 @@
 
     if-nez v1, :cond_1
 
+    .line 9
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
     iput-object v1, p0, Lorg/dom4j/io/SAXContentHandler;->textBuffer:Ljava/lang/StringBuffer;
 
+    .line 10
     :cond_1
     iput-boolean v0, p0, Lorg/dom4j/io/SAXContentHandler;->textInTextBuffer:Z
 
@@ -1412,6 +1561,7 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lorg/dom4j/io/SAXContentHandler;->mergeAdjacentText:Z
 
     if-eqz v0, :cond_0
@@ -1420,8 +1570,10 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0}, Lorg/dom4j/io/SAXContentHandler;->completeCurrentTextNode()V
 
+    .line 3
     :cond_0
     iget-object v0, p0, Lorg/dom4j/io/SAXContentHandler;->namespaceStack:Lorg/dom4j/tree/NamespaceStack;
 
@@ -1429,37 +1581,47 @@
 
     move-result-object p1
 
+    .line 4
     iget-object p2, p0, Lorg/dom4j/io/SAXContentHandler;->currentElement:Lorg/dom4j/Element;
 
     if-nez p2, :cond_1
 
+    .line 5
     invoke-virtual {p0}, Lorg/dom4j/io/SAXContentHandler;->getDocument()Lorg/dom4j/Document;
 
     move-result-object p2
 
+    .line 6
     :cond_1
     invoke-interface {p2, p1}, Lorg/dom4j/Branch;->addElement(Lorg/dom4j/QName;)Lorg/dom4j/Element;
 
     move-result-object p1
 
+    .line 7
     invoke-virtual {p0, p1}, Lorg/dom4j/io/SAXContentHandler;->addDeclaredNamespaces(Lorg/dom4j/Element;)V
 
+    .line 8
     invoke-virtual {p0, p1, p4}, Lorg/dom4j/io/SAXContentHandler;->addAttributes(Lorg/dom4j/Element;Lorg/xml/sax/Attributes;)V
 
+    .line 9
     iget-object p2, p0, Lorg/dom4j/io/SAXContentHandler;->elementStack:Lorg/dom4j/io/ElementStack;
 
     invoke-virtual {p2, p1}, Lorg/dom4j/io/ElementStack;->pushElement(Lorg/dom4j/Element;)V
 
+    .line 10
     iput-object p1, p0, Lorg/dom4j/io/SAXContentHandler;->currentElement:Lorg/dom4j/Element;
 
     const/4 p1, 0x0
 
+    .line 11
     iput-object p1, p0, Lorg/dom4j/io/SAXContentHandler;->entity:Ljava/lang/String;
 
+    .line 12
     iget-object p1, p0, Lorg/dom4j/io/SAXContentHandler;->elementHandler:Lorg/dom4j/ElementHandler;
 
     if-eqz p1, :cond_2
 
+    .line 13
     iget-object p0, p0, Lorg/dom4j/io/SAXContentHandler;->elementStack:Lorg/dom4j/io/ElementStack;
 
     invoke-interface {p1, p0}, Lorg/dom4j/ElementHandler;->onStart(Lorg/dom4j/ElementPath;)V
@@ -1476,6 +1638,7 @@
         }
     .end annotation
 
+    .line 1
     iget v0, p0, Lorg/dom4j/io/SAXContentHandler;->entityLevel:I
 
     add-int/lit8 v0, v0, 0x1
@@ -1484,23 +1647,28 @@
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Lorg/dom4j/io/SAXContentHandler;->entity:Ljava/lang/String;
 
+    .line 3
     iget-boolean v0, p0, Lorg/dom4j/io/SAXContentHandler;->insideDTDSection:Z
 
     if-nez v0, :cond_0
 
+    .line 4
     invoke-virtual {p0, p1}, Lorg/dom4j/io/SAXContentHandler;->isIgnorableEntity(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 5
     iput-object p1, p0, Lorg/dom4j/io/SAXContentHandler;->entity:Ljava/lang/String;
 
     :cond_0
     const/4 p1, 0x0
 
+    .line 6
     iput-boolean p1, p0, Lorg/dom4j/io/SAXContentHandler;->internalDTDsubset:Z
 
     return-void
@@ -1514,6 +1682,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lorg/dom4j/io/SAXContentHandler;->namespaceStack:Lorg/dom4j/tree/NamespaceStack;
 
     invoke-virtual {p0, p1, p2}, Lorg/dom4j/tree/NamespaceStack;->push(Ljava/lang/String;Ljava/lang/String;)V

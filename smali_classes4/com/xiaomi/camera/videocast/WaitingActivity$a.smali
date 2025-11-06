@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/xiaomi/camera/videocast/WaitingActivity;->ug()V
+    value = Lcom/xiaomi/camera/videocast/WaitingActivity;->O7()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,14 +18,23 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/xiaomi/camera/videocast/WaitingActivity;
+.field public final synthetic c:Lcom/xiaomi/camera/videocast/WaitingActivity;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/camera/videocast/WaitingActivity;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/xiaomi/camera/videocast/WaitingActivity$a;->a:Lcom/xiaomi/camera/videocast/WaitingActivity;
+    .line 1
+    iput-object p1, p0, Lcom/xiaomi/camera/videocast/WaitingActivity$a;->c:Lcom/xiaomi/camera/videocast/WaitingActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,10 +45,20 @@
 # virtual methods
 .method public onCancel(Landroid/content/DialogInterface;)V
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
-    iget-object p1, p0, Lcom/xiaomi/camera/videocast/WaitingActivity$a;->a:Lcom/xiaomi/camera/videocast/WaitingActivity;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "dialog"
+        }
+    .end annotation
+
+    .line 1
+    iget-object p1, p0, Lcom/xiaomi/camera/videocast/WaitingActivity$a;->c:Lcom/xiaomi/camera/videocast/WaitingActivity;
 
     invoke-virtual {p1}, Lmiuix/appcompat/app/AppCompatActivity;->isFinishing()Z
 
@@ -47,7 +66,8 @@
 
     if-nez p1, :cond_0
 
-    iget-object p0, p0, Lcom/xiaomi/camera/videocast/WaitingActivity$a;->a:Lcom/xiaomi/camera/videocast/WaitingActivity;
+    .line 2
+    iget-object p0, p0, Lcom/xiaomi/camera/videocast/WaitingActivity$a;->c:Lcom/xiaomi/camera/videocast/WaitingActivity;
 
     invoke-virtual {p0}, Lmiuix/appcompat/app/AppCompatActivity;->finish()V
 

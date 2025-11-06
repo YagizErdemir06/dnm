@@ -1,4 +1,4 @@
-.class final Lorg/xml/sax/helpers/ParserAdapter$AttributeListAdapter;
+.class public final Lorg/xml/sax/helpers/ParserAdapter$AttributeListAdapter;
 .super Ljava/lang/Object;
 .source "SourceFile"
 

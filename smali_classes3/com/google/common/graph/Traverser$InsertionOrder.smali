@@ -1,4 +1,4 @@
-.class abstract enum Lcom/google/common/graph/Traverser$InsertionOrder;
+.class public abstract enum Lcom/google/common/graph/Traverser$InsertionOrder;
 .super Ljava/lang/Enum;
 .source "SourceFile"
 
@@ -38,17 +38,18 @@
 
     new-array v0, v0, [Lcom/google/common/graph/Traverser$InsertionOrder;
 
-    const/4 v1, 0x0
+    .line 1
+    sget-object v1, Lcom/google/common/graph/Traverser$InsertionOrder;->FRONT:Lcom/google/common/graph/Traverser$InsertionOrder;
 
-    sget-object v2, Lcom/google/common/graph/Traverser$InsertionOrder;->FRONT:Lcom/google/common/graph/Traverser$InsertionOrder;
+    const/4 v2, 0x0
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
-    const/4 v1, 0x1
+    sget-object v1, Lcom/google/common/graph/Traverser$InsertionOrder;->BACK:Lcom/google/common/graph/Traverser$InsertionOrder;
 
-    sget-object v2, Lcom/google/common/graph/Traverser$InsertionOrder;->BACK:Lcom/google/common/graph/Traverser$InsertionOrder;
+    const/4 v2, 0x1
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v2
 
     return-object v0
 .end method
@@ -56,6 +57,7 @@
 .method public static constructor <clinit>()V
     .locals 3
 
+    .line 1
     new-instance v0, Lcom/google/common/graph/Traverser$InsertionOrder$1;
 
     const-string v1, "FRONT"
@@ -66,6 +68,7 @@
 
     sput-object v0, Lcom/google/common/graph/Traverser$InsertionOrder;->FRONT:Lcom/google/common/graph/Traverser$InsertionOrder;
 
+    .line 2
     new-instance v0, Lcom/google/common/graph/Traverser$InsertionOrder$2;
 
     const-string v1, "BACK"
@@ -76,6 +79,7 @@
 
     sput-object v0, Lcom/google/common/graph/Traverser$InsertionOrder;->BACK:Lcom/google/common/graph/Traverser$InsertionOrder;
 
+    .line 3
     invoke-static {}, Lcom/google/common/graph/Traverser$InsertionOrder;->$values()[Lcom/google/common/graph/Traverser$InsertionOrder;
 
     move-result-object v0
@@ -87,11 +91,6 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
     .line 1
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
@@ -111,6 +110,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/common/graph/Traverser$InsertionOrder;
     .locals 1
 
+    .line 1
     const-class v0, Lcom/google/common/graph/Traverser$InsertionOrder;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -125,6 +125,7 @@
 .method public static values()[Lcom/google/common/graph/Traverser$InsertionOrder;
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/google/common/graph/Traverser$InsertionOrder;->$VALUES:[Lcom/google/common/graph/Traverser$InsertionOrder;
 
     invoke-virtual {v0}, [Lcom/google/common/graph/Traverser$InsertionOrder;->clone()Ljava/lang/Object;

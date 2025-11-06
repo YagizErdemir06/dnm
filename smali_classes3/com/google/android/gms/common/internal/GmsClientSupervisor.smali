@@ -9,7 +9,7 @@
 
 
 # static fields
-.field static zza:Landroid/os/HandlerThread; = null
+.field public static zza:Landroid/os/HandlerThread; = null
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -72,6 +72,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/common/internal/GmsClientSupervisor;->zzc:Ljava/lang/Object;
 
     monitor-enter v0
@@ -91,6 +92,7 @@
 
     if-eqz v3, :cond_0
 
+    .line 2
     invoke-static {}, Lcom/google/android/gms/common/internal/GmsClientSupervisor;->getOrStartHandlerThread()Landroid/os/HandlerThread;
 
     move-result-object p0
@@ -101,6 +103,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
 
@@ -111,6 +114,7 @@
 
     sput-object v1, Lcom/google/android/gms/common/internal/GmsClientSupervisor;->zzd:Lcom/google/android/gms/common/internal/zzr;
 
+    .line 4
     :cond_1
     monitor-exit v0
     :try_end_0
@@ -139,6 +143,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/common/internal/GmsClientSupervisor;->zzc:Ljava/lang/Object;
 
     monitor-enter v0
@@ -159,14 +164,17 @@
 
     const/16 v3, 0x9
 
+    .line 2
     invoke-direct {v1, v2, v3}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;I)V
 
     sput-object v1, Lcom/google/android/gms/common/internal/GmsClientSupervisor;->zza:Landroid/os/HandlerThread;
 
-    invoke-virtual {v1}, Ljava/lang/Thread;->start()V
+    .line 3
+    invoke-virtual {v1}, Landroid/os/HandlerThread;->start()V
 
     sget-object v1, Lcom/google/android/gms/common/internal/GmsClientSupervisor;->zza:Landroid/os/HandlerThread;
 
+    .line 4
     monitor-exit v0
 
     return-object v1
@@ -174,6 +182,7 @@
     :catchall_0
     move-exception v1
 
+    .line 5
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -186,6 +195,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/common/internal/GmsClientSupervisor;->zzc:Ljava/lang/Object;
 
     monitor-enter v0
@@ -214,6 +224,7 @@
 
     sput-boolean v1, Lcom/google/android/gms/common/internal/GmsClientSupervisor;->zze:Z
 
+    .line 2
     monitor-exit v0
 
     return-void
@@ -396,6 +407,7 @@
         .end annotation
     .end param
 
+    .line 1
     new-instance v0, Lcom/google/android/gms/common/internal/zzn;
 
     invoke-direct {v0, p1, p2, p3, p6}, Lcom/google/android/gms/common/internal/zzn;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V

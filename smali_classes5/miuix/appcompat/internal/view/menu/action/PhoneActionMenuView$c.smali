@@ -19,21 +19,21 @@
 
 
 # instance fields
-.field public a:Landroid/animation/AnimatorSet;
+.field private c:Landroid/animation/AnimatorSet;
 
-.field public b:Landroid/animation/AnimatorSet;
+.field private d:Landroid/animation/AnimatorSet;
 
-.field public c:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+.field private f:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
 
-.field public final synthetic d:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+.field public final synthetic g:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
 
 
 # direct methods
-.method public constructor <init>(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;)V
+.method private constructor <init>(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+    iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->g:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,12 +49,47 @@
     return-void
 .end method
 
+.method private e(Z)V
+    .locals 0
+
+    if-eqz p1, :cond_0
+
+    .line 1
+    iget-object p0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->f:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->getContentView()Landroid/view/View;
+
+    move-result-object p0
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setImportantForAccessibility(I)V
+
+    goto :goto_0
+
+    .line 2
+    :cond_0
+    iget-object p0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->f:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->getContentView()Landroid/view/View;
+
+    move-result-object p0
+
+    const/4 p1, 0x4
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setImportantForAccessibility(I)V
+
+    :goto_0
+    return-void
+.end method
+
 
 # virtual methods
 .method public a()V
     .locals 1
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->b:Landroid/animation/AnimatorSet;
+    .line 1
+    iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Landroid/animation/AnimatorSet;
 
     if-eqz v0, :cond_0
 
@@ -64,12 +99,14 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->b:Landroid/animation/AnimatorSet;
+    .line 2
+    iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
+    .line 3
     :cond_0
-    iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->a:Landroid/animation/AnimatorSet;
+    iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->c:Landroid/animation/AnimatorSet;
 
     if-eqz v0, :cond_1
 
@@ -79,7 +116,8 @@
 
     if-eqz v0, :cond_1
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->a:Landroid/animation/AnimatorSet;
+    .line 4
+    iget-object p0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->c:Landroid/animation/AnimatorSet;
 
     invoke-virtual {p0}, Landroid/animation/AnimatorSet;->cancel()V
 
@@ -90,17 +128,21 @@
 .method public b(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)V
     .locals 9
 
-    iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->c:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
+    .line 1
+    iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->f:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->a:Landroid/animation/AnimatorSet;
+    .line 2
+    iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->c:Landroid/animation/AnimatorSet;
 
     if-nez v0, :cond_0
 
+    .line 3
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+    .line 4
+    iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->g:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
 
     const/4 v2, 0x2
 
@@ -120,7 +162,8 @@
 
     aput-object v1, v3, v5
 
-    invoke-virtual {p1, p0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->v(Landroid/view/View$OnClickListener;)Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;
+    .line 5
+    invoke-virtual {p1, p0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->m(Landroid/view/View$OnClickListener;)Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;
 
     move-result-object v1
 
@@ -134,9 +177,10 @@
 
     invoke-virtual {v0, v3}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+    .line 6
+    iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->g:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
 
-    invoke-virtual {v1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -150,21 +194,26 @@
 
     invoke-virtual {v0, v7, v8}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    new-instance v1, Lps/m;
+    .line 7
+    new-instance v1, Lk/j0/k/l;
 
-    invoke-direct {v1}, Lps/m;-><init>()V
+    invoke-direct {v1}, Lk/j0/k/l;-><init>()V
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
+    .line 8
     invoke-virtual {v0, p0}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    iput-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->a:Landroid/animation/AnimatorSet;
+    .line 9
+    iput-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->c:Landroid/animation/AnimatorSet;
 
+    .line 10
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+    .line 11
+    iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->g:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
 
     new-array v7, v2, [F
 
@@ -180,7 +229,8 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {p1, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->v(Landroid/view/View$OnClickListener;)Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;
+    .line 12
+    invoke-virtual {p1, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->m(Landroid/view/View$OnClickListener;)Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout$c;
 
     move-result-object p1
 
@@ -192,9 +242,10 @@
 
     invoke-virtual {v0, v2}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+    .line 13
+    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->g:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
 
-    invoke-virtual {p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p1}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
@@ -206,29 +257,35 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    new-instance p1, Lps/m;
+    .line 14
+    new-instance p1, Lk/j0/k/l;
 
-    invoke-direct {p1}, Lps/m;-><init>()V
+    invoke-direct {p1}, Lk/j0/k/l;-><init>()V
 
     invoke-virtual {v0, p1}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
+    .line 15
     invoke-virtual {v0, p0}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    iput-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->b:Landroid/animation/AnimatorSet;
+    .line 16
+    iput-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Landroid/animation/AnimatorSet;
 
-    invoke-static {}, Lnq/f;->a()Z
+    .line 17
+    invoke-static {}, Lk/l/c/e;->a()Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->a:Landroid/animation/AnimatorSet;
+    .line 18
+    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->c:Landroid/animation/AnimatorSet;
 
     const-wide/16 v0, 0x0
 
     invoke-virtual {p1, v0, v1}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->b:Landroid/animation/AnimatorSet;
+    .line 19
+    iget-object p0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Landroid/animation/AnimatorSet;
 
     invoke-virtual {p0, v0, v1}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
@@ -253,17 +310,21 @@
 .method public c(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->b(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)V
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->b:Landroid/animation/AnimatorSet;
+    .line 2
+    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Landroid/animation/AnimatorSet;
 
     invoke-virtual {p1}, Landroid/animation/AnimatorSet;->cancel()V
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->a:Landroid/animation/AnimatorSet;
+    .line 3
+    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->c:Landroid/animation/AnimatorSet;
 
     invoke-virtual {p1}, Landroid/animation/AnimatorSet;->cancel()V
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->b:Landroid/animation/AnimatorSet;
+    .line 4
+    iget-object p0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Landroid/animation/AnimatorSet;
 
     invoke-virtual {p0}, Landroid/animation/AnimatorSet;->start()V
 
@@ -273,9 +334,17 @@
 .method public d()V
     .locals 4
 
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1a
+
+    if-lt v0, v1, :cond_1
+
     :try_start_0
     const-string v0, "android.animation.AnimatorSet"
 
+    .line 2
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -290,7 +359,8 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->a:Landroid/animation/AnimatorSet;
+    .line 3
+    iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->c:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v1}, Landroid/animation/AnimatorSet;->isRunning()Z
 
@@ -298,22 +368,25 @@
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->a:Landroid/animation/AnimatorSet;
+    .line 4
+    iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->c:Landroid/animation/AnimatorSet;
 
     new-array v3, v2, [Ljava/lang/Object;
 
     invoke-virtual {v0, v1, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 5
     :cond_0
-    iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->b:Landroid/animation/AnimatorSet;
+    iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v1}, Landroid/animation/AnimatorSet;->isRunning()Z
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_5
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->b:Landroid/animation/AnimatorSet;
+    .line 6
+    iget-object p0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Landroid/animation/AnimatorSet;
 
     new-array v1, v2, [Ljava/lang/Object;
 
@@ -321,7 +394,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    goto :goto_1
 
     :catch_0
     move-exception p0
@@ -330,59 +403,101 @@
 
     const-string v1, "reverse: "
 
+    .line 7
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    goto :goto_1
+
     :cond_1
-    :goto_0
+    const/4 v0, 0x0
+
+    .line 8
+    iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->c:Landroid/animation/AnimatorSet;
+
+    invoke-virtual {v1}, Landroid/animation/AnimatorSet;->isRunning()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    .line 9
+    iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->c:Landroid/animation/AnimatorSet;
+
+    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->getChildAnimations()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    .line 10
+    :cond_2
+    iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Landroid/animation/AnimatorSet;
+
+    invoke-virtual {v1}, Landroid/animation/AnimatorSet;->isRunning()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    .line 11
+    iget-object p0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Landroid/animation/AnimatorSet;
+
+    invoke-virtual {p0}, Landroid/animation/AnimatorSet;->getChildAnimations()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    :cond_3
+    if-nez v0, :cond_4
+
     return-void
-.end method
 
-.method public final e(Z)V
-    .locals 0
-
-    if-eqz p1, :cond_0
-
-    iget-object p0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->c:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->getContentView()Landroid/view/View;
+    .line 12
+    :cond_4
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
-    const/4 p1, 0x0
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setImportantForAccessibility(I)V
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/animation/Animator;
+
+    .line 13
+    check-cast v0, Landroid/animation/ValueAnimator;
+
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->reverse()V
 
     goto :goto_0
 
-    :cond_0
-    iget-object p0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->c:Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
-
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->getContentView()Landroid/view/View;
-
-    move-result-object p0
-
-    const/4 p1, 0x4
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setImportantForAccessibility(I)V
-
-    :goto_0
+    :cond_5
+    :goto_1
     return-void
 .end method
 
 .method public f(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->b(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)V
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->b:Landroid/animation/AnimatorSet;
+    .line 2
+    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Landroid/animation/AnimatorSet;
 
     invoke-virtual {p1}, Landroid/animation/AnimatorSet;->cancel()V
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->a:Landroid/animation/AnimatorSet;
+    .line 3
+    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->c:Landroid/animation/AnimatorSet;
 
     invoke-virtual {p1}, Landroid/animation/AnimatorSet;->cancel()V
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->a:Landroid/animation/AnimatorSet;
+    .line 4
+    iget-object p0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->c:Landroid/animation/AnimatorSet;
 
     invoke-virtual {p0}, Landroid/animation/AnimatorSet;->start()V
 
@@ -392,51 +507,56 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 1
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+    .line 1
+    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->g:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->z(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;)Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
-
-    move-result-object p1
-
-    sget-object v0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;->b:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
-
-    if-eq p1, v0, :cond_2
-
-    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
-
-    invoke-static {p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->z(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;)Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
-
-    move-result-object p1
-
-    sget-object v0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;->c:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
-
-    if-ne p1, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
-
-    invoke-static {p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->z(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;)Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
+    invoke-static {p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->r(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;)Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
 
     move-result-object p1
 
     sget-object v0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;->d:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
 
-    if-eq p1, v0, :cond_1
+    if-eq p1, v0, :cond_2
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->g:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->z(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;)Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
+    .line 2
+    invoke-static {p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->r(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;)Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
 
     move-result-object p1
 
-    sget-object v0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;->a:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
+    sget-object v0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;->f:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
+
+    if-ne p1, v0, :cond_0
+
+    goto :goto_0
+
+    .line 3
+    :cond_0
+    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->g:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+
+    invoke-static {p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->r(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;)Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
+
+    move-result-object p1
+
+    sget-object v0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;->g:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
+
+    if-eq p1, v0, :cond_1
+
+    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->g:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+
+    .line 4
+    invoke-static {p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->r(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;)Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
+
+    move-result-object p1
+
+    sget-object v0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;->c:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
 
     if-ne p1, v0, :cond_3
 
+    .line 5
     :cond_1
-    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->g:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
 
     const/high16 v0, 0x3f800000    # 1.0f
 
@@ -444,13 +564,15 @@
 
     const/4 p1, 0x1
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->e(Z)V
+    .line 6
+    invoke-direct {p0, p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->e(Z)V
 
     goto :goto_1
 
+    .line 7
     :cond_2
     :goto_0
-    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->g:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
 
     const/4 v0, 0x0
 
@@ -458,13 +580,15 @@
 
     const/4 p1, 0x0
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->e(Z)V
+    .line 8
+    invoke-direct {p0, p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->e(Z)V
 
+    .line 9
     :cond_3
     :goto_1
-    iget-object p0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+    iget-object p0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->g:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
 
-    invoke-virtual {p0}, Landroid/view/View;->postInvalidateOnAnimation()V
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->postInvalidateOnAnimation()V
 
     return-void
 .end method
@@ -472,17 +596,19 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+    .line 1
+    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->g:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->y(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;)Landroid/view/View;
+    invoke-static {p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->q(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;)Landroid/view/View;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+    .line 2
+    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->g:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->y(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;)Landroid/view/View;
+    invoke-static {p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->q(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;)Landroid/view/View;
 
     move-result-object p1
 
@@ -496,22 +622,25 @@
 
     if-nez p1, :cond_0
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+    .line 3
+    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->g:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
 
-    sget-object v0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;->c:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
+    sget-object v0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;->f:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
 
-    invoke-static {p1, v0}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->A(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;)Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
+    invoke-static {p1, v0}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->s(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;)Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
 
     const/4 p1, 0x0
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->e(Z)V
+    .line 4
+    invoke-direct {p0, p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->e(Z)V
 
     goto :goto_0
 
+    .line 5
     :cond_0
-    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->g:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->y(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;)Landroid/view/View;
+    invoke-static {p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->q(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;)Landroid/view/View;
 
     move-result-object p1
 
@@ -519,9 +648,9 @@
 
     move-result p1
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+    iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->g:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
 
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
+    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getMeasuredHeight()I
 
     move-result v0
 
@@ -531,35 +660,48 @@
 
     if-nez p1, :cond_1
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+    .line 6
+    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->g:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
 
-    sget-object v0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;->a:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
+    sget-object v0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;->c:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
 
-    invoke-static {p1, v0}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->A(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;)Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
+    invoke-static {p1, v0}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->s(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;)Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
 
     const/4 p1, 0x1
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->e(Z)V
+    .line 7
+    invoke-direct {p0, p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->e(Z)V
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+    .line 8
+    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->g:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->C(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;)Landroid/view/View;
+    invoke-static {p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->t(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    .line 9
+    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->g:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+
+    invoke-static {p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->v(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;)Landroid/view/View;
 
     move-result-object p1
 
-    iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+    iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->g:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
 
-    invoke-static {v0}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->B(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->u(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
+    .line 10
     :cond_1
     :goto_0
-    iget-object p0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+    iget-object p0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->g:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
 
-    invoke-virtual {p0}, Landroid/view/View;->postInvalidateOnAnimation()V
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->postInvalidateOnAnimation()V
 
     return-void
 .end method
@@ -579,25 +721,27 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
-    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+    .line 1
+    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->g:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
 
-    invoke-static {p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->z(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;)Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
+    invoke-static {p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->r(Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;)Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
 
     move-result-object p1
 
-    sget-object v0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;->c:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
+    sget-object v0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;->f:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$b;
 
     if-ne p1, v0, :cond_0
 
-    iget-object p0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->d:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+    .line 2
+    iget-object p0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$c;->g:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
 
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/view/menu/action/b;->getPresenter()Lmiuix/appcompat/internal/view/menu/action/a;
+    invoke-virtual {p0}, Lk/b/e/e/f/m/e;->getPresenter()Lk/b/e/e/f/m/d;
 
     move-result-object p0
 
     const/4 p1, 0x1
 
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/view/menu/action/a;->V(Z)Z
+    invoke-virtual {p0, p1}, Lk/b/e/e/f/m/d;->M(Z)Z
 
     :cond_0
     return-void

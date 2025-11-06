@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmiuix/pickerwidget/widget/NumberPicker$i;
+.implements Lmiuix/pickerwidget/widget/NumberPicker$k;
 
 
 # annotations
@@ -25,6 +25,7 @@
 .method public constructor <init>(Lmiuix/pickerwidget/widget/TimePicker;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lmiuix/pickerwidget/widget/TimePicker$e;->a:Lmiuix/pickerwidget/widget/TimePicker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,8 +38,10 @@
 .method public a(Lmiuix/pickerwidget/widget/NumberPicker;II)V
     .locals 0
 
-    invoke-virtual {p1}, Landroid/view/View;->requestFocus()Z
+    .line 1
+    invoke-virtual {p1}, Landroid/widget/LinearLayout;->requestFocus()Z
 
+    .line 2
     iget-object p1, p0, Lmiuix/pickerwidget/widget/TimePicker$e;->a:Lmiuix/pickerwidget/widget/TimePicker;
 
     invoke-static {p1}, Lmiuix/pickerwidget/widget/TimePicker;->a(Lmiuix/pickerwidget/widget/TimePicker;)Z
@@ -49,10 +52,12 @@
 
     invoke-static {p1, p2}, Lmiuix/pickerwidget/widget/TimePicker;->b(Lmiuix/pickerwidget/widget/TimePicker;Z)Z
 
+    .line 3
     iget-object p1, p0, Lmiuix/pickerwidget/widget/TimePicker$e;->a:Lmiuix/pickerwidget/widget/TimePicker;
 
     invoke-static {p1}, Lmiuix/pickerwidget/widget/TimePicker;->c(Lmiuix/pickerwidget/widget/TimePicker;)V
 
+    .line 4
     iget-object p0, p0, Lmiuix/pickerwidget/widget/TimePicker$e;->a:Lmiuix/pickerwidget/widget/TimePicker;
 
     invoke-static {p0}, Lmiuix/pickerwidget/widget/TimePicker;->d(Lmiuix/pickerwidget/widget/TimePicker;)V

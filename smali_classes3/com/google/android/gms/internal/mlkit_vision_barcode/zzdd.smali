@@ -7,6 +7,7 @@
 .method public static zza(III)I
     .locals 0
 
+    .line 1
     invoke-static {p0, p1}, Ljava/lang/Math;->max(II)I
 
     move-result p0

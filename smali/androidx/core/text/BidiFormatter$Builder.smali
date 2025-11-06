@@ -76,6 +76,7 @@
 
     if-eqz p0, :cond_0
 
+    .line 1
     sget-object p0, Landroidx/core/text/BidiFormatter;->DEFAULT_RTL_INSTANCE:Landroidx/core/text/BidiFormatter;
 
     goto :goto_0
@@ -90,14 +91,17 @@
 .method private initialize(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Landroidx/core/text/BidiFormatter$Builder;->mIsRtlContext:Z
 
+    .line 2
     sget-object p1, Landroidx/core/text/BidiFormatter;->DEFAULT_TEXT_DIRECTION_HEURISTIC:Landroidx/core/text/TextDirectionHeuristicCompat;
 
     iput-object p1, p0, Landroidx/core/text/BidiFormatter$Builder;->mTextDirectionHeuristicCompat:Landroidx/core/text/TextDirectionHeuristicCompat;
 
     const/4 p1, 0x2
 
+    .line 3
     iput p1, p0, Landroidx/core/text/BidiFormatter$Builder;->mFlags:I
 
     return-void
@@ -108,6 +112,7 @@
 .method public build()Landroidx/core/text/BidiFormatter;
     .locals 3
 
+    .line 1
     iget v0, p0, Landroidx/core/text/BidiFormatter$Builder;->mFlags:I
 
     const/4 v1, 0x2
@@ -120,6 +125,7 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 2
     iget-boolean p0, p0, Landroidx/core/text/BidiFormatter$Builder;->mIsRtlContext:Z
 
     invoke-static {p0}, Landroidx/core/text/BidiFormatter$Builder;->getDefaultInstanceFromContext(Z)Landroidx/core/text/BidiFormatter;
@@ -128,6 +134,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance v0, Landroidx/core/text/BidiFormatter;
 
@@ -145,6 +152,7 @@
 .method public setTextDirectionHeuristic(Landroidx/core/text/TextDirectionHeuristicCompat;)Landroidx/core/text/BidiFormatter$Builder;
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/core/text/BidiFormatter$Builder;->mTextDirectionHeuristicCompat:Landroidx/core/text/TextDirectionHeuristicCompat;
 
     return-object p0
@@ -155,6 +163,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 1
     iget p1, p0, Landroidx/core/text/BidiFormatter$Builder;->mFlags:I
 
     or-int/lit8 p1, p1, 0x2
@@ -163,6 +172,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget p1, p0, Landroidx/core/text/BidiFormatter$Builder;->mFlags:I
 

@@ -1,4 +1,4 @@
-.class Lcom/google/common/io/AppendableWriter;
+.class public Lcom/google/common/io/AppendableWriter;
 .super Ljava/io/Writer;
 .source "SourceFile"
 
@@ -21,8 +21,10 @@
 .method public constructor <init>(Ljava/lang/Appendable;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/io/Writer;-><init>()V
 
+    .line 2
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -42,12 +44,14 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/common/io/AppendableWriter;->closed:Z
 
     if-nez p0, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     new-instance p0, Ljava/io/IOException;
 
@@ -191,14 +195,17 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/google/common/io/AppendableWriter;->closed:Z
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/io/AppendableWriter;->target:Ljava/lang/Appendable;
 
     instance-of v0, p0, Ljava/io/Closeable;
 
     if-eqz v0, :cond_0
 
+    .line 3
     check-cast p0, Ljava/io/Closeable;
 
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
@@ -215,14 +222,17 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/io/AppendableWriter;->checkNotClosed()V
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/io/AppendableWriter;->target:Ljava/lang/Appendable;
 
     instance-of v0, p0, Ljava/io/Flushable;
 
     if-eqz v0, :cond_0
 
+    .line 3
     check-cast p0, Ljava/io/Flushable;
 
     invoke-interface {p0}, Ljava/io/Flushable;->flush()V

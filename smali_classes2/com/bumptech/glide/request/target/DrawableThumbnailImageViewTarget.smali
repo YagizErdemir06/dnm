@@ -45,6 +45,7 @@
 .method public bridge synthetic getDrawable(Ljava/lang/Object;)Landroid/graphics/drawable/Drawable;
     .locals 0
 
+    .line 1
     check-cast p1, Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, p1}, Lcom/bumptech/glide/request/target/DrawableThumbnailImageViewTarget;->getDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;

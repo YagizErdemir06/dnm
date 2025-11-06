@@ -28,6 +28,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame$1;
 
     invoke-direct {v0}, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame$1;-><init>()V
@@ -108,10 +109,12 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -129,6 +132,7 @@
 
     if-lt v1, v3, :cond_0
 
+    .line 3
     invoke-virtual {p0, v5, v6}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v1
@@ -143,6 +147,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 4
     invoke-virtual {p0, v2, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v1
@@ -159,6 +164,7 @@
 
     const/16 v1, 0x8
 
+    .line 5
     invoke-virtual {p0, v1, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0
@@ -175,6 +181,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -182,6 +189,7 @@
 
     if-lt v1, v4, :cond_1
 
+    .line 7
     invoke-virtual {p0, v5, v6}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v1
@@ -196,6 +204,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 8
     invoke-virtual {p0, v2, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0
@@ -212,6 +221,7 @@
 
     goto :goto_0
 
+    .line 9
     :cond_1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -219,6 +229,7 @@
 
     if-lt v1, v6, :cond_2
 
+    .line 10
     invoke-virtual {p0, v5, v6}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0
@@ -239,6 +250,7 @@
     :goto_0
     return-object v0
 
+    .line 11
     :catch_0
     new-instance p0, Ljava/util/ArrayList;
 
@@ -267,6 +279,7 @@
 
     if-eqz p1, :cond_3
 
+    .line 1
     const-class v2, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -277,9 +290,11 @@
 
     goto :goto_1
 
+    .line 2
     :cond_1
     check-cast p1, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;
 
+    .line 3
     iget-object v2, p0, Lcom/google/android/exoplayer2/metadata/id3/Id3Frame;->id:Ljava/lang/String;
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/metadata/id3/Id3Frame;->id:Ljava/lang/String;
@@ -294,6 +309,7 @@
 
     iget-object v3, p1, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;->description:Ljava/lang/String;
 
+    .line 4
     invoke-static {v2, v3}, Lcom/google/android/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -304,6 +320,7 @@
 
     iget-object p1, p1, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;->value:Ljava/lang/String;
 
+    .line 5
     invoke-static {p0, p1}, Lcom/google/android/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
@@ -326,6 +343,7 @@
 .method public hashCode()I
     .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/metadata/id3/Id3Frame;->id:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -338,6 +356,7 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;->description:Ljava/lang/String;
 
     const/4 v2, 0x0
@@ -358,6 +377,7 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;->value:Ljava/lang/String;
 
     if-eqz p0, :cond_1
@@ -375,6 +395,7 @@
 .method public populateMediaMetadata(Lcom/google/android/exoplayer2/MediaMetadata$Builder;)V
     .locals 8
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/metadata/id3/Id3Frame;->id:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -754,6 +775,7 @@
 
     goto/16 :goto_2
 
+    .line 2
     :pswitch_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;->value:Ljava/lang/String;
 
@@ -761,6 +783,7 @@
 
     move-result-object p0
 
+    .line 3
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -773,6 +796,7 @@
 
     goto/16 :goto_2
 
+    .line 4
     :cond_16
     invoke-interface {p0, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -782,6 +806,7 @@
 
     invoke-virtual {p1, v0}, Lcom/google/android/exoplayer2/MediaMetadata$Builder;->setReleaseDay(Ljava/lang/Integer;)Lcom/google/android/exoplayer2/MediaMetadata$Builder;
 
+    .line 5
     :cond_17
     invoke-interface {p0, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -791,6 +816,7 @@
 
     invoke-virtual {p1, v0}, Lcom/google/android/exoplayer2/MediaMetadata$Builder;->setReleaseMonth(Ljava/lang/Integer;)Lcom/google/android/exoplayer2/MediaMetadata$Builder;
 
+    .line 6
     :cond_18
     invoke-interface {p0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -802,6 +828,7 @@
 
     goto/16 :goto_2
 
+    .line 7
     :pswitch_1
     iget-object p0, p0, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;->value:Ljava/lang/String;
 
@@ -809,6 +836,7 @@
 
     move-result-object p0
 
+    .line 8
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -821,6 +849,7 @@
 
     goto/16 :goto_2
 
+    .line 9
     :cond_19
     invoke-interface {p0, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -830,6 +859,7 @@
 
     invoke-virtual {p1, v0}, Lcom/google/android/exoplayer2/MediaMetadata$Builder;->setRecordingDay(Ljava/lang/Integer;)Lcom/google/android/exoplayer2/MediaMetadata$Builder;
 
+    .line 10
     :cond_1a
     invoke-interface {p0, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -839,6 +869,7 @@
 
     invoke-virtual {p1, v0}, Lcom/google/android/exoplayer2/MediaMetadata$Builder;->setRecordingMonth(Ljava/lang/Integer;)Lcom/google/android/exoplayer2/MediaMetadata$Builder;
 
+    .line 11
     :cond_1b
     invoke-interface {p0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -850,6 +881,7 @@
 
     goto/16 :goto_2
 
+    .line 12
     :pswitch_2
     :try_start_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;->value:Ljava/lang/String;
@@ -868,6 +900,7 @@
 
     goto/16 :goto_2
 
+    .line 13
     :pswitch_3
     iget-object p0, p0, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;->value:Ljava/lang/String;
 
@@ -875,6 +908,7 @@
 
     goto/16 :goto_2
 
+    .line 14
     :pswitch_4
     iget-object p0, p0, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;->value:Ljava/lang/String;
 
@@ -882,6 +916,7 @@
 
     goto :goto_2
 
+    .line 15
     :pswitch_5
     iget-object p0, p0, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;->value:Ljava/lang/String;
 
@@ -891,6 +926,7 @@
 
     move-result-object p0
 
+    .line 16
     :try_start_1
     aget-object v0, p0, v4
 
@@ -898,6 +934,7 @@
 
     move-result v0
 
+    .line 17
     array-length v1, p0
 
     if-le v1, v6, :cond_1c
@@ -917,6 +954,7 @@
     :cond_1c
     const/4 p0, 0x0
 
+    .line 18
     :goto_1
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -932,6 +970,7 @@
 
     goto :goto_2
 
+    .line 19
     :pswitch_6
     iget-object p0, p0, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;->value:Ljava/lang/String;
 
@@ -939,6 +978,7 @@
 
     goto :goto_2
 
+    .line 20
     :pswitch_7
     iget-object p0, p0, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;->value:Ljava/lang/String;
 
@@ -946,6 +986,7 @@
 
     goto :goto_2
 
+    .line 21
     :pswitch_8
     iget-object p0, p0, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;->value:Ljava/lang/String;
 
@@ -953,6 +994,7 @@
 
     goto :goto_2
 
+    .line 22
     :pswitch_9
     :try_start_2
     iget-object v0, p0, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;->value:Ljava/lang/String;
@@ -965,6 +1007,7 @@
 
     move-result v0
 
+    .line 23
     iget-object p0, p0, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;->value:Ljava/lang/String;
 
     invoke-virtual {p0, v4, v5}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -975,6 +1018,7 @@
 
     move-result p0
 
+    .line 24
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -994,6 +1038,7 @@
 
     goto :goto_2
 
+    .line 25
     :pswitch_a
     iget-object p0, p0, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;->value:Ljava/lang/String;
 
@@ -1001,6 +1046,7 @@
 
     goto :goto_2
 
+    .line 26
     :pswitch_b
     iget-object p0, p0, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;->value:Ljava/lang/String;
 
@@ -1068,6 +1114,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1102,14 +1149,17 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
+    .line 1
     iget-object p2, p0, Lcom/google/android/exoplayer2/metadata/id3/Id3Frame;->id:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 2
     iget-object p2, p0, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;->description:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
+    .line 3
     iget-object p0, p0, Lcom/google/android/exoplayer2/metadata/id3/TextInformationFrame;->value:Ljava/lang/String;
 
     invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V

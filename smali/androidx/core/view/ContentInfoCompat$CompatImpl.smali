@@ -1,4 +1,4 @@
-.class final Landroidx/core/view/ContentInfoCompat$CompatImpl;
+.class public final Landroidx/core/view/ContentInfoCompat$CompatImpl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -42,8 +42,10 @@
 .method public constructor <init>(Landroidx/core/view/ContentInfoCompat$BuilderCompatImpl;)V
     .locals 4
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iget-object v0, p1, Landroidx/core/view/ContentInfoCompat$BuilderCompatImpl;->mClip:Landroid/content/ClipData;
 
     invoke-static {v0}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -54,20 +56,22 @@
 
     iput-object v0, p0, Landroidx/core/view/ContentInfoCompat$CompatImpl;->mClip:Landroid/content/ClipData;
 
+    .line 3
     iget v0, p1, Landroidx/core/view/ContentInfoCompat$BuilderCompatImpl;->mSource:I
 
-    const/4 v1, 0x5
+    const/4 v1, 0x0
 
-    const-string/jumbo v2, "source"
+    const/4 v2, 0x5
 
-    const/4 v3, 0x0
+    const-string v3, "source"
 
-    invoke-static {v0, v3, v1, v2}, Landroidx/core/util/Preconditions;->checkArgumentInRange(IIILjava/lang/String;)I
+    invoke-static {v0, v1, v2, v3}, Landroidx/core/util/Preconditions;->checkArgumentInRange(IIILjava/lang/String;)I
 
     move-result v0
 
     iput v0, p0, Landroidx/core/view/ContentInfoCompat$CompatImpl;->mSource:I
 
+    .line 4
     iget v0, p1, Landroidx/core/view/ContentInfoCompat$BuilderCompatImpl;->mFlags:I
 
     const/4 v1, 0x1
@@ -78,10 +82,12 @@
 
     iput v0, p0, Landroidx/core/view/ContentInfoCompat$CompatImpl;->mFlags:I
 
+    .line 5
     iget-object v0, p1, Landroidx/core/view/ContentInfoCompat$BuilderCompatImpl;->mLinkUri:Landroid/net/Uri;
 
     iput-object v0, p0, Landroidx/core/view/ContentInfoCompat$CompatImpl;->mLinkUri:Landroid/net/Uri;
 
+    .line 6
     iget-object p1, p1, Landroidx/core/view/ContentInfoCompat$BuilderCompatImpl;->mExtras:Landroid/os/Bundle;
 
     iput-object p1, p0, Landroidx/core/view/ContentInfoCompat$CompatImpl;->mExtras:Landroid/os/Bundle;
@@ -96,6 +102,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/ContentInfoCompat$CompatImpl;->mClip:Landroid/content/ClipData;
 
     return-object p0
@@ -106,6 +113,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/ContentInfoCompat$CompatImpl;->mExtras:Landroid/os/Bundle;
 
     return-object p0
@@ -114,6 +122,7 @@
 .method public getFlags()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/core/view/ContentInfoCompat$CompatImpl;->mFlags:I
 
     return p0
@@ -124,6 +133,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/core/view/ContentInfoCompat$CompatImpl;->mLinkUri:Landroid/net/Uri;
 
     return-object p0
@@ -132,6 +142,7 @@
 .method public getSource()I
     .locals 0
 
+    .line 1
     iget p0, p0, Landroidx/core/view/ContentInfoCompat$CompatImpl;->mSource:I
 
     return p0
@@ -152,6 +163,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -162,6 +174,7 @@
 
     iget-object v1, p0, Landroidx/core/view/ContentInfoCompat$CompatImpl;->mClip:Landroid/content/ClipData;
 
+    .line 2
     invoke-virtual {v1}, Landroid/content/ClipData;->getDescription()Landroid/content/ClipDescription;
 
     move-result-object v1
@@ -174,6 +187,7 @@
 
     iget v1, p0, Landroidx/core/view/ContentInfoCompat$CompatImpl;->mSource:I
 
+    .line 3
     invoke-static {v1}, Landroidx/core/view/ContentInfoCompat;->sourceToString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -186,12 +200,14 @@
 
     iget v1, p0, Landroidx/core/view/ContentInfoCompat$CompatImpl;->mFlags:I
 
+    .line 4
     invoke-static {v1}, Landroidx/core/view/ContentInfoCompat;->flagsToString(I)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 5
     iget-object v1, p0, Landroidx/core/view/ContentInfoCompat$CompatImpl;->mLinkUri:Landroid/net/Uri;
 
     const-string v2, ""
@@ -234,6 +250,7 @@
     :goto_0
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 6
     iget-object p0, p0, Landroidx/core/view/ContentInfoCompat$CompatImpl;->mExtras:Landroid/os/Bundle;
 
     if-nez p0, :cond_1

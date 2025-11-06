@@ -10,17 +10,27 @@
 
 .field public static final ANIM_SHOW:I = 0x1
 
-.field public static final KEY_ANIM_STATE:I = 0x7f0b0225
+.field public static final KEY_ANIM_STATE:I = 0x7f0b01f3
 
-.field public static final KEY_DIRECTION:I = 0x7f0b0227
+.field public static final KEY_DIRECTION:I = 0x7f0b01f5
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/android/camera/ui/DragLayout$e;-><init>(Landroid/content/Context;)V
 
+    .line 2
     new-instance v0, Landroid/util/Range;
 
     const/4 v1, 0x0
@@ -29,11 +39,12 @@
 
     move-result-object v1
 
+    .line 3
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const v2, 0x7f070313
+    const v2, 0x7f07030e
 
     invoke-virtual {p1, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -52,9 +63,18 @@
 
 .method private static hide(Landroid/view/View;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "view"
+        }
+    .end annotation
 
-    const v0, 0x7f0b0225
+    const v0, 0x7f0b01f3
 
+    .line 1
     invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -69,10 +89,12 @@
 
     if-ne v1, v2, :cond_0
 
-    invoke-static {p0}, La2/b;->n(Landroid/view/View;)V
+    .line 2
+    invoke-static {p0}, Ld/d/a/f6/i/b;->a(Landroid/view/View;)V
 
     const/4 v1, 0x2
 
+    .line 3
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -85,9 +107,24 @@
 
 .method public static onDragProgress(Landroid/view/View;IZZ)V
     .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "view",
+            "translationY",
+            "up",
+            "reverse"
+        }
+    .end annotation
 
-    const v0, 0x7f0b0227
+    const v0, 0x7f0b01f5
 
+    .line 1
     invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -96,6 +133,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     check-cast v0, Ljava/lang/Boolean;
 
@@ -109,6 +147,7 @@
 
     int-to-float p1, p1
 
+    .line 3
     invoke-static {}, Lcom/android/camera/ui/DragLayout;->getAnimationConfig()Lcom/android/camera/ui/DragLayout$e;
 
     move-result-object p2
@@ -125,10 +164,12 @@
 
     if-eqz p3, :cond_1
 
+    .line 4
     invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/cv/more/DragAnimationConfigCV;->show(Landroid/view/View;)V
 
     goto :goto_0
 
+    .line 5
     :cond_1
     invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/cv/more/DragAnimationConfigCV;->hide(Landroid/view/View;)V
 
@@ -137,6 +178,7 @@
     :cond_2
     int-to-float p1, p1
 
+    .line 6
     invoke-static {}, Lcom/android/camera/ui/DragLayout;->getAnimationConfig()Lcom/android/camera/ui/DragLayout$e;
 
     move-result-object p2
@@ -145,6 +187,7 @@
 
     move-result p2
 
+    .line 7
     invoke-static {}, Lcom/android/camera/ui/DragLayout;->getAnimationConfig()Lcom/android/camera/ui/DragLayout$e;
 
     move-result-object v0
@@ -161,10 +204,12 @@
 
     if-eqz p3, :cond_3
 
+    .line 8
     invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/cv/more/DragAnimationConfigCV;->hide(Landroid/view/View;)V
 
     goto :goto_0
 
+    .line 9
     :cond_3
     invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/cv/more/DragAnimationConfigCV;->show(Landroid/view/View;)V
 
@@ -175,6 +220,7 @@
 
     int-to-float p1, p1
 
+    .line 10
     invoke-static {}, Lcom/android/camera/ui/DragLayout;->getAnimationConfig()Lcom/android/camera/ui/DragLayout$e;
 
     move-result-object p2
@@ -191,10 +237,12 @@
 
     if-eqz p3, :cond_5
 
+    .line 11
     invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/cv/more/DragAnimationConfigCV;->hide(Landroid/view/View;)V
 
     goto :goto_0
 
+    .line 12
     :cond_5
     invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/cv/more/DragAnimationConfigCV;->show(Landroid/view/View;)V
 
@@ -203,6 +251,7 @@
     :cond_6
     int-to-float p1, p1
 
+    .line 13
     invoke-static {}, Lcom/android/camera/ui/DragLayout;->getAnimationConfig()Lcom/android/camera/ui/DragLayout$e;
 
     move-result-object p2
@@ -211,6 +260,7 @@
 
     move-result p2
 
+    .line 14
     invoke-static {}, Lcom/android/camera/ui/DragLayout;->getAnimationConfig()Lcom/android/camera/ui/DragLayout$e;
 
     move-result-object v0
@@ -227,10 +277,12 @@
 
     if-eqz p3, :cond_7
 
+    .line 15
     invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/cv/more/DragAnimationConfigCV;->show(Landroid/view/View;)V
 
     goto :goto_0
 
+    .line 16
     :cond_7
     invoke-static {p0}, Lcom/android/camera2/compat/theme/custom/cv/more/DragAnimationConfigCV;->hide(Landroid/view/View;)V
 
@@ -241,14 +293,27 @@
 
 .method public static onDragStart(Landroid/view/View;ZZ)V
     .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "view",
+            "up",
+            "reverse"
+        }
+    .end annotation
 
-    const v0, 0x7f0b0227
-
+    .line 1
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {p0, v0, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+    const v1, 0x7f0b01f5
+
+    invoke-virtual {p0, v1, v0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
     xor-int/2addr p1, p2
 
@@ -261,13 +326,15 @@
     :cond_0
     const/4 p1, 0x2
 
+    .line 2
     :goto_0
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    const p2, 0x7f0b0225
+    const p2, 0x7f0b01f3
 
+    .line 3
     invoke-virtual {p0, p2, p1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
     return-void
@@ -275,9 +342,18 @@
 
 .method private static show(Landroid/view/View;)V
     .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "view"
+        }
+    .end annotation
 
-    const v0, 0x7f0b0225
+    const v0, 0x7f0b01f3
 
+    .line 1
     invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -292,9 +368,10 @@
 
     if-ne v1, v2, :cond_0
 
-    new-instance v1, La2/a;
+    .line 2
+    new-instance v1, Lcom/android/camera2/compat/theme/custom/cv/folme/FolmeAlphaInOnSubscribeCV;
 
-    invoke-direct {v1, p0}, La2/a;-><init>(Landroid/view/View;)V
+    invoke-direct {v1, p0}, Lcom/android/camera2/compat/theme/custom/cv/folme/FolmeAlphaInOnSubscribeCV;-><init>(Landroid/view/View;)V
 
     invoke-static {v1}, Lio/reactivex/Completable;->create(Lio/reactivex/CompletableOnSubscribe;)Lio/reactivex/Completable;
 
@@ -304,6 +381,7 @@
 
     const/4 v1, 0x1
 
+    .line 3
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -318,12 +396,21 @@
 # virtual methods
 .method public getPopupTopMargin(Landroid/content/Context;)I
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "context"
+        }
+    .end annotation
 
+    .line 1
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const p1, 0x7f070319
+    const p1, 0x7f070314
 
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 

@@ -1,4 +1,4 @@
-.class final Lcom/google/android/gms/dynamic/zae;
+.class public final Lcom/google/android/gms/dynamic/zae;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field final synthetic zaa:Landroid/content/Context;
+.field public final synthetic zaa:Landroid/content/Context;
 
-.field final synthetic zab:Landroid/content/Intent;
+.field public final synthetic zab:Landroid/content/Intent;
 
 
 # direct methods
@@ -30,6 +30,7 @@
 .method public final onClick(Landroid/view/View;)V
     .locals 1
 
+    .line 1
     :try_start_0
     iget-object p1, p0, Lcom/google/android/gms/dynamic/zae;->zaa:Landroid/content/Context;
 
@@ -48,6 +49,7 @@
 
     const-string v0, "Failed to start resolution intent"
 
+    .line 2
     invoke-static {p1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-void

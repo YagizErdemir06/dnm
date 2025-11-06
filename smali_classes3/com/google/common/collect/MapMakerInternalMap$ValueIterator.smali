@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/MapMakerInternalMap$ValueIterator;
+.class public final Lcom/google/common/collect/MapMakerInternalMap$ValueIterator;
 .super Lcom/google/common/collect/MapMakerInternalMap$HashIterator;
 .source "SourceFile"
 
@@ -25,6 +25,7 @@
 .method public constructor <init>(Lcom/google/common/collect/MapMakerInternalMap;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/common/collect/MapMakerInternalMap$HashIterator;-><init>(Lcom/google/common/collect/MapMakerInternalMap;)V
 
     return-void
@@ -40,6 +41,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/MapMakerInternalMap$HashIterator;->nextEntry()Lcom/google/common/collect/MapMakerInternalMap$WriteThroughEntry;
 
     move-result-object p0

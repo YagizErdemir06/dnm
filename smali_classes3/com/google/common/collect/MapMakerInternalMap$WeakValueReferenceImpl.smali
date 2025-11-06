@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/MapMakerInternalMap$WeakValueReferenceImpl;
+.class public final Lcom/google/common/collect/MapMakerInternalMap$WeakValueReferenceImpl;
 .super Ljava/lang/ref/WeakReference;
 .source "SourceFile"
 
@@ -34,7 +34,7 @@
 
 
 # instance fields
-.field final entry:Lcom/google/common/collect/MapMakerInternalMap$InternalEntry;
+.field public final entry:Lcom/google/common/collect/MapMakerInternalMap$InternalEntry;
     .annotation build Lcom/google/j2objc/annotations/Weak;
     .end annotation
 
@@ -57,8 +57,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V
 
+    .line 2
     iput-object p3, p0, Lcom/google/common/collect/MapMakerInternalMap$WeakValueReferenceImpl;->entry:Lcom/google/common/collect/MapMakerInternalMap$InternalEntry;
 
     return-void
@@ -78,9 +80,10 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Lcom/google/common/collect/MapMakerInternalMap$WeakValueReferenceImpl;
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -97,6 +100,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/MapMakerInternalMap$WeakValueReferenceImpl;->entry:Lcom/google/common/collect/MapMakerInternalMap$InternalEntry;
 
     return-object p0

@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/idm/api/IDMServer$1;
+.class public Lcom/xiaomi/idm/api/IDMServer$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,19 +26,20 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/xiaomi/idm/api/IDMServer;
+.field public final synthetic this$0:Lcom/xiaomi/idm/api/IDMServer;
 
-.field final synthetic val$myLooper:Landroid/os/Looper;
+.field public final synthetic val$myLooper:Landroid/os/Looper;
 
-.field final synthetic val$retFuture:Lcom/xiaomi/idm/task/CallFuture;
+.field public final synthetic val$retFuture:Lcom/xiaomi/idm/task/CallFuture;
 
-.field final synthetic val$sendBlockTask:Lcom/xiaomi/idm/task/SendBlockTask;
+.field public final synthetic val$sendBlockTask:Lcom/xiaomi/idm/task/SendBlockTask;
 
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/idm/api/IDMServer;Lcom/xiaomi/idm/task/SendBlockTask;Landroid/os/Looper;Lcom/xiaomi/idm/task/CallFuture;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/idm/api/IDMServer$1;->this$0:Lcom/xiaomi/idm/api/IDMServer;
 
     iput-object p2, p0, Lcom/xiaomi/idm/api/IDMServer$1;->val$sendBlockTask:Lcom/xiaomi/idm/task/SendBlockTask;
@@ -52,33 +53,19 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/xiaomi/idm/task/CallFuture;[B)V
+.method public static synthetic lambda$onFailed$1(Lcom/xiaomi/idm/task/CallFuture;Ljava/lang/Throwable;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lcom/xiaomi/idm/api/IDMServer$1;->lambda$onResponse$0(Lcom/xiaomi/idm/task/CallFuture;[B)V
-
-    return-void
-.end method
-
-.method public static synthetic b(Lcom/xiaomi/idm/task/CallFuture;Ljava/lang/Throwable;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/xiaomi/idm/api/IDMServer$1;->lambda$onFailed$1(Lcom/xiaomi/idm/task/CallFuture;Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method private static synthetic lambda$onFailed$1(Lcom/xiaomi/idm/task/CallFuture;Ljava/lang/Throwable;)V
-    .locals 0
-
+    .line 1
     invoke-virtual {p0, p1}, Lcom/xiaomi/idm/task/CallFuture;->setFailed(Ljava/lang/Throwable;)Lcom/xiaomi/idm/task/CallFuture;
 
     return-void
 .end method
 
-.method private static synthetic lambda$onResponse$0(Lcom/xiaomi/idm/task/CallFuture;[B)V
+.method public static synthetic lambda$onResponse$0(Lcom/xiaomi/idm/task/CallFuture;[B)V
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/xiaomi/idm/task/CallFuture;->setDone(Ljava/lang/Object;)Lcom/xiaomi/idm/task/CallFuture;
 
     return-void
@@ -98,6 +85,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMServer$1;->this$0:Lcom/xiaomi/idm/api/IDMServer;
 
     iget-object p1, p1, Lcom/xiaomi/idm/api/IDMBase;->sendBlockTasks:Ljava/util/concurrent/ConcurrentLinkedDeque;
@@ -110,6 +98,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 2
     invoke-virtual {p1}, Lcom/xiaomi/idm/task/SendBlockTask;->getBlockId()I
 
     move-result v0
@@ -122,6 +111,7 @@
 
     if-eq v0, v1, :cond_0
 
+    .line 3
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -130,6 +120,7 @@
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 4
     invoke-virtual {p1}, Lcom/xiaomi/idm/task/SendBlockTask;->getBlockId()I
 
     move-result p1
@@ -158,10 +149,12 @@
 
     const-string p2, "IDMServer"
 
+    .line 5
     invoke-static {p2, p0, p1}, Lcom/xiaomi/idm/util/LogUtil;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 
+    .line 6
     :cond_0
     iget-object p1, p0, Lcom/xiaomi/idm/api/IDMServer$1;->this$0:Lcom/xiaomi/idm/api/IDMServer;
 
@@ -169,12 +162,13 @@
 
     iget-object v1, p0, Lcom/xiaomi/idm/api/IDMServer$1;->val$retFuture:Lcom/xiaomi/idm/task/CallFuture;
 
-    new-instance v2, Lcom/xiaomi/idm/api/b0;
+    new-instance v2, Ld/o/l/a/z;
 
-    invoke-direct {v2, v1, p2}, Lcom/xiaomi/idm/api/b0;-><init>(Lcom/xiaomi/idm/task/CallFuture;Ljava/lang/Throwable;)V
+    invoke-direct {v2, v1, p2}, Ld/o/l/a/z;-><init>(Lcom/xiaomi/idm/task/CallFuture;Ljava/lang/Throwable;)V
 
     invoke-virtual {p1, v0, v2}, Lcom/xiaomi/idm/api/IDMBase;->tryDoOnLooper(Landroid/os/Looper;Ljava/lang/Runnable;)V
 
+    .line 7
     iget-object p0, p0, Lcom/xiaomi/idm/api/IDMServer$1;->this$0:Lcom/xiaomi/idm/api/IDMServer;
 
     invoke-virtual {p0}, Lcom/xiaomi/idm/api/IDMBase;->tryStartASendBlockTask()Ljava/lang/Boolean;
@@ -280,9 +274,9 @@
 
     iget-object v1, p0, Lcom/xiaomi/idm/api/IDMServer$1;->val$retFuture:Lcom/xiaomi/idm/task/CallFuture;
 
-    new-instance v2, Lcom/xiaomi/idm/api/c0;
+    new-instance v2, Ld/o/l/a/y;
 
-    invoke-direct {v2, v1, p2}, Lcom/xiaomi/idm/api/c0;-><init>(Lcom/xiaomi/idm/task/CallFuture;[B)V
+    invoke-direct {v2, v1, p2}, Ld/o/l/a/y;-><init>(Lcom/xiaomi/idm/task/CallFuture;[B)V
 
     invoke-virtual {p1, v0, v2}, Lcom/xiaomi/idm/api/IDMBase;->tryDoOnLooper(Landroid/os/Looper;Ljava/lang/Runnable;)V
 

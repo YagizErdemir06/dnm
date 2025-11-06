@@ -1,4 +1,4 @@
-.class Landroidx/lifecycle/Transformations$2$1;
+.class public Landroidx/lifecycle/Transformations$2$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,13 +26,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Landroidx/lifecycle/Transformations$2;
+.field public final synthetic this$0:Landroidx/lifecycle/Transformations$2;
 
 
 # direct methods
 .method public constructor <init>(Landroidx/lifecycle/Transformations$2;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Landroidx/lifecycle/Transformations$2$1;->this$0:Landroidx/lifecycle/Transformations$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -54,6 +55,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Landroidx/lifecycle/Transformations$2$1;->this$0:Landroidx/lifecycle/Transformations$2;
 
     iget-object p0, p0, Landroidx/lifecycle/Transformations$2;->val$result:Landroidx/lifecycle/MediatorLiveData;

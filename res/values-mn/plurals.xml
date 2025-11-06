@@ -8,8 +8,4 @@
         <item quantity="other">%d секунд ухраах</item>
         <item quantity="one">%d секунд ухраах</item>
     </plurals>
-    <plurals name="mtrl_badge_content_description">
-        <item quantity="other">%d шинэ мэдэгдэл</item>
-        <item quantity="one">%d шинэ мэдэгдэл</item>
-    </plurals>
 </resources>

@@ -192,6 +192,7 @@
 
     const-string v0, "goog.exo.ui"
 
+    .line 1
     invoke-static {v0}, Lcom/google/android/exoplayer2/ExoPlayerLibraryInfo;->registerModule(Ljava/lang/String;)V
 
     return-void
@@ -492,16 +493,16 @@
     iput-object p3, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->componentListener:Lcom/google/android/exoplayer2/ui/PlayerControlView$ComponentListener;
 
     .line 46
-    new-instance v4, Lcom/google/android/exoplayer2/ui/c;
+    new-instance v4, Ld/j/a/b/y2/d;
 
-    invoke-direct {v4, p0}, Lcom/google/android/exoplayer2/ui/c;-><init>(Lcom/google/android/exoplayer2/ui/PlayerControlView;)V
+    invoke-direct {v4, p0}, Ld/j/a/b/y2/d;-><init>(Lcom/google/android/exoplayer2/ui/PlayerControlView;)V
 
     iput-object v4, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateProgressAction:Ljava/lang/Runnable;
 
     .line 47
-    new-instance v4, Lcom/google/android/exoplayer2/ui/d;
+    new-instance v4, Ld/j/a/b/y2/a;
 
-    invoke-direct {v4, p0}, Lcom/google/android/exoplayer2/ui/d;-><init>(Lcom/google/android/exoplayer2/ui/PlayerControlView;)V
+    invoke-direct {v4, p0}, Ld/j/a/b/y2/a;-><init>(Lcom/google/android/exoplayer2/ui/PlayerControlView;)V
 
     iput-object v4, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->hideAction:Ljava/lang/Runnable;
 
@@ -515,12 +516,12 @@
     const/high16 p2, 0x40000
 
     .line 49
-    invoke-virtual {p0, p2}, Landroid/view/ViewGroup;->setDescendantFocusability(I)V
+    invoke-virtual {p0, p2}, Landroid/widget/FrameLayout;->setDescendantFocusability(I)V
 
     .line 50
     sget p2, Lcom/google/android/exoplayer2/ui/R$id;->exo_progress:I
 
-    invoke-virtual {p0, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v4
 
@@ -529,7 +530,7 @@
     .line 51
     sget v5, Lcom/google/android/exoplayer2/ui/R$id;->exo_progress_placeholder:I
 
-    invoke-virtual {p0, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v5}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v5
 
@@ -589,7 +590,7 @@
     :goto_1
     sget p2, Lcom/google/android/exoplayer2/ui/R$id;->exo_duration:I
 
-    invoke-virtual {p0, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
 
@@ -600,7 +601,7 @@
     .line 63
     sget p2, Lcom/google/android/exoplayer2/ui/R$id;->exo_position:I
 
-    invoke-virtual {p0, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
 
@@ -620,7 +621,7 @@
     :cond_3
     sget p2, Lcom/google/android/exoplayer2/ui/R$id;->exo_play:I
 
-    invoke-virtual {p0, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
 
@@ -635,7 +636,7 @@
     :cond_4
     sget p2, Lcom/google/android/exoplayer2/ui/R$id;->exo_pause:I
 
-    invoke-virtual {p0, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
 
@@ -650,7 +651,7 @@
     :cond_5
     sget p2, Lcom/google/android/exoplayer2/ui/R$id;->exo_prev:I
 
-    invoke-virtual {p0, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
 
@@ -665,7 +666,7 @@
     :cond_6
     sget p2, Lcom/google/android/exoplayer2/ui/R$id;->exo_next:I
 
-    invoke-virtual {p0, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
 
@@ -680,7 +681,7 @@
     :cond_7
     sget p2, Lcom/google/android/exoplayer2/ui/R$id;->exo_rew:I
 
-    invoke-virtual {p0, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
 
@@ -695,7 +696,7 @@
     :cond_8
     sget p2, Lcom/google/android/exoplayer2/ui/R$id;->exo_ffwd:I
 
-    invoke-virtual {p0, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
 
@@ -710,7 +711,7 @@
     :cond_9
     sget p2, Lcom/google/android/exoplayer2/ui/R$id;->exo_repeat_toggle:I
 
-    invoke-virtual {p0, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
 
@@ -721,13 +722,13 @@
     if-eqz p2, :cond_a
 
     .line 79
-    invoke-virtual {p2, p3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p2, p3}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 80
     :cond_a
     sget p2, Lcom/google/android/exoplayer2/ui/R$id;->exo_shuffle:I
 
-    invoke-virtual {p0, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
 
@@ -738,13 +739,13 @@
     if-eqz p2, :cond_b
 
     .line 81
-    invoke-virtual {p2, p3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p2, p3}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 82
     :cond_b
     sget p2, Lcom/google/android/exoplayer2/ui/R$id;->exo_vr:I
 
-    invoke-virtual {p0, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, p2}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
 
@@ -905,6 +906,7 @@
 .method public static synthetic access$100(Lcom/google/android/exoplayer2/ui/PlayerControlView;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updatePlayPauseButton()V
 
     return-void
@@ -913,6 +915,7 @@
 .method public static synthetic access$1000(Lcom/google/android/exoplayer2/ui/PlayerControlView;)Ljava/util/Formatter;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->formatter:Ljava/util/Formatter;
 
     return-object p0
@@ -921,6 +924,7 @@
 .method public static synthetic access$1100(Lcom/google/android/exoplayer2/ui/PlayerControlView;)Lcom/google/android/exoplayer2/Player;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->player:Lcom/google/android/exoplayer2/Player;
 
     return-object p0
@@ -929,6 +933,7 @@
 .method public static synthetic access$1200(Lcom/google/android/exoplayer2/ui/PlayerControlView;Lcom/google/android/exoplayer2/Player;J)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->seekToTimeBarPosition(Lcom/google/android/exoplayer2/Player;J)V
 
     return-void
@@ -937,6 +942,7 @@
 .method public static synthetic access$1300(Lcom/google/android/exoplayer2/ui/PlayerControlView;)Landroid/view/View;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->nextButton:Landroid/view/View;
 
     return-object p0
@@ -945,6 +951,7 @@
 .method public static synthetic access$1400(Lcom/google/android/exoplayer2/ui/PlayerControlView;)Landroid/view/View;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->previousButton:Landroid/view/View;
 
     return-object p0
@@ -953,6 +960,7 @@
 .method public static synthetic access$1500(Lcom/google/android/exoplayer2/ui/PlayerControlView;)Landroid/view/View;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->fastForwardButton:Landroid/view/View;
 
     return-object p0
@@ -961,6 +969,7 @@
 .method public static synthetic access$1600(Lcom/google/android/exoplayer2/ui/PlayerControlView;)Landroid/view/View;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->rewindButton:Landroid/view/View;
 
     return-object p0
@@ -969,6 +978,7 @@
 .method public static synthetic access$1700(Lcom/google/android/exoplayer2/ui/PlayerControlView;)Landroid/view/View;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->playButton:Landroid/view/View;
 
     return-object p0
@@ -977,6 +987,7 @@
 .method public static synthetic access$1800(Lcom/google/android/exoplayer2/ui/PlayerControlView;Lcom/google/android/exoplayer2/Player;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->dispatchPlay(Lcom/google/android/exoplayer2/Player;)V
 
     return-void
@@ -985,6 +996,7 @@
 .method public static synthetic access$1900(Lcom/google/android/exoplayer2/ui/PlayerControlView;)Landroid/view/View;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->pauseButton:Landroid/view/View;
 
     return-object p0
@@ -993,6 +1005,7 @@
 .method public static synthetic access$200(Lcom/google/android/exoplayer2/ui/PlayerControlView;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateProgress()V
 
     return-void
@@ -1001,6 +1014,7 @@
 .method public static synthetic access$2000(Lcom/google/android/exoplayer2/ui/PlayerControlView;Lcom/google/android/exoplayer2/Player;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->dispatchPause(Lcom/google/android/exoplayer2/Player;)V
 
     return-void
@@ -1009,6 +1023,7 @@
 .method public static synthetic access$2100(Lcom/google/android/exoplayer2/ui/PlayerControlView;)Landroid/widget/ImageView;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->repeatToggleButton:Landroid/widget/ImageView;
 
     return-object p0
@@ -1017,6 +1032,7 @@
 .method public static synthetic access$2200(Lcom/google/android/exoplayer2/ui/PlayerControlView;)I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->repeatToggleModes:I
 
     return p0
@@ -1025,6 +1041,7 @@
 .method public static synthetic access$2300(Lcom/google/android/exoplayer2/ui/PlayerControlView;)Landroid/widget/ImageView;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->shuffleButton:Landroid/widget/ImageView;
 
     return-object p0
@@ -1033,6 +1050,7 @@
 .method public static synthetic access$300(Lcom/google/android/exoplayer2/ui/PlayerControlView;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateRepeatModeButton()V
 
     return-void
@@ -1041,6 +1059,7 @@
 .method public static synthetic access$400(Lcom/google/android/exoplayer2/ui/PlayerControlView;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateShuffleButton()V
 
     return-void
@@ -1049,6 +1068,7 @@
 .method public static synthetic access$500(Lcom/google/android/exoplayer2/ui/PlayerControlView;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateNavigation()V
 
     return-void
@@ -1057,6 +1077,7 @@
 .method public static synthetic access$600(Lcom/google/android/exoplayer2/ui/PlayerControlView;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateTimeline()V
 
     return-void
@@ -1065,6 +1086,7 @@
 .method public static synthetic access$702(Lcom/google/android/exoplayer2/ui/PlayerControlView;Z)Z
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->scrubbing:Z
 
     return p1
@@ -1073,6 +1095,7 @@
 .method public static synthetic access$800(Lcom/google/android/exoplayer2/ui/PlayerControlView;)Landroid/widget/TextView;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->positionView:Landroid/widget/TextView;
 
     return-object p0
@@ -1081,6 +1104,7 @@
 .method public static synthetic access$900(Lcom/google/android/exoplayer2/ui/PlayerControlView;)Ljava/lang/StringBuilder;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->formatBuilder:Ljava/lang/StringBuilder;
 
     return-object p0
@@ -1089,29 +1113,32 @@
 .method private static canShowMultiWindowTimeBar(Lcom/google/android/exoplayer2/Timeline;Lcom/google/android/exoplayer2/Timeline$Window;)Z
     .locals 7
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Timeline;->getWindowCount()I
 
     move-result v0
 
-    const/16 v1, 0x64
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const/16 v2, 0x64
 
-    if-le v0, v1, :cond_0
+    if-le v0, v2, :cond_0
 
-    return v2
+    return v1
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/Timeline;->getWindowCount()I
 
     move-result v0
 
-    move v1, v2
+    move v2, v1
 
     :goto_0
-    if-ge v1, v0, :cond_2
+    if-ge v2, v0, :cond_2
 
-    invoke-virtual {p0, v1, p1}, Lcom/google/android/exoplayer2/Timeline;->getWindow(ILcom/google/android/exoplayer2/Timeline$Window;)Lcom/google/android/exoplayer2/Timeline$Window;
+    .line 3
+    invoke-virtual {p0, v2, p1}, Lcom/google/android/exoplayer2/Timeline;->getWindow(ILcom/google/android/exoplayer2/Timeline$Window;)Lcom/google/android/exoplayer2/Timeline$Window;
 
     move-result-object v3
 
@@ -1123,10 +1150,10 @@
 
     if-nez v3, :cond_1
 
-    return v2
+    return v1
 
     :cond_1
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
@@ -1139,6 +1166,7 @@
 .method private dispatchPause(Lcom/google/android/exoplayer2/Player;)V
     .locals 0
 
+    .line 1
     invoke-interface {p1}, Lcom/google/android/exoplayer2/Player;->pause()V
 
     return-void
@@ -1147,6 +1175,7 @@
 .method private dispatchPlay(Lcom/google/android/exoplayer2/Player;)V
     .locals 3
 
+    .line 1
     invoke-interface {p1}, Lcom/google/android/exoplayer2/Player;->getPlaybackState()I
 
     move-result v0
@@ -1155,6 +1184,7 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 2
     invoke-interface {p1}, Lcom/google/android/exoplayer2/Player;->prepare()V
 
     goto :goto_0
@@ -1164,6 +1194,7 @@
 
     if-ne v0, v1, :cond_1
 
+    .line 3
     invoke-interface {p1}, Lcom/google/android/exoplayer2/Player;->getCurrentMediaItemIndex()I
 
     move-result v0
@@ -1172,6 +1203,7 @@
 
     invoke-direct {p0, p1, v0, v1, v2}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->seekTo(Lcom/google/android/exoplayer2/Player;IJ)V
 
+    .line 4
     :cond_1
     :goto_0
     invoke-interface {p1}, Lcom/google/android/exoplayer2/Player;->play()V
@@ -1182,6 +1214,7 @@
 .method private dispatchPlayPause(Lcom/google/android/exoplayer2/Player;)V
     .locals 2
 
+    .line 1
     invoke-interface {p1}, Lcom/google/android/exoplayer2/Player;->getPlaybackState()I
 
     move-result v0
@@ -1194,6 +1227,7 @@
 
     if-eq v0, v1, :cond_1
 
+    .line 2
     invoke-interface {p1}, Lcom/google/android/exoplayer2/Player;->getPlayWhenReady()Z
 
     move-result v0
@@ -1202,11 +1236,13 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->dispatchPause(Lcom/google/android/exoplayer2/Player;)V
 
     goto :goto_1
 
+    .line 4
     :cond_1
     :goto_0
     invoke-direct {p0, p1}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->dispatchPlay(Lcom/google/android/exoplayer2/Player;)V
@@ -1231,14 +1267,17 @@
 .method private hideAfterTimeout()V
     .locals 5
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->hideAction:Ljava/lang/Runnable;
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->removeCallbacks(Ljava/lang/Runnable;)Z
 
+    .line 2
     iget v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->showTimeoutMs:I
 
     if-lez v0, :cond_0
 
+    .line 3
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
@@ -1251,21 +1290,24 @@
 
     iput-wide v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->hideAtMs:J
 
+    .line 4
     iget-boolean v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->isAttachedToWindow:Z
 
     if-eqz v0, :cond_1
 
+    .line 5
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->hideAction:Ljava/lang/Runnable;
 
     int-to-long v1, v2
 
-    invoke-virtual {p0, v0, v1, v2}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {p0, v0, v1, v2}, Landroid/widget/FrameLayout;->postDelayed(Ljava/lang/Runnable;J)Z
 
     goto :goto_0
 
     :cond_0
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 6
     iput-wide v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->hideAtMs:J
 
     :cond_1
@@ -1331,6 +1373,7 @@
 .method private requestPlayPauseAccessibilityFocus()V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->shouldShowPauseButton()Z
 
     move-result v0
@@ -1339,10 +1382,12 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v2, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->playButton:Landroid/view/View;
 
     if-eqz v2, :cond_0
 
+    .line 3
     invoke-virtual {v2, v1}, Landroid/view/View;->sendAccessibilityEvent(I)V
 
     goto :goto_0
@@ -1350,10 +1395,12 @@
     :cond_0
     if-eqz v0, :cond_1
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->pauseButton:Landroid/view/View;
 
     if-eqz p0, :cond_1
 
+    .line 5
     invoke-virtual {p0, v1}, Landroid/view/View;->sendAccessibilityEvent(I)V
 
     :cond_1
@@ -1364,16 +1411,19 @@
 .method private requestPlayPauseFocus()V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->shouldShowPauseButton()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->playButton:Landroid/view/View;
 
     if-eqz v1, :cond_0
 
+    .line 3
     invoke-virtual {v1}, Landroid/view/View;->requestFocus()Z
 
     goto :goto_0
@@ -1381,10 +1431,12 @@
     :cond_0
     if-eqz v0, :cond_1
 
+    .line 4
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->pauseButton:Landroid/view/View;
 
     if-eqz p0, :cond_1
 
+    .line 5
     invoke-virtual {p0}, Landroid/view/View;->requestFocus()Z
 
     :cond_1
@@ -1395,6 +1447,7 @@
 .method private seekTo(Lcom/google/android/exoplayer2/Player;IJ)V
     .locals 0
 
+    .line 1
     invoke-interface {p1, p2, p3, p4}, Lcom/google/android/exoplayer2/Player;->seekTo(IJ)V
 
     return-void
@@ -1403,10 +1456,12 @@
 .method private seekToTimeBarPosition(Lcom/google/android/exoplayer2/Player;J)V
     .locals 6
 
+    .line 1
     invoke-interface {p1}, Lcom/google/android/exoplayer2/Player;->getCurrentTimeline()Lcom/google/android/exoplayer2/Timeline;
 
     move-result-object v0
 
+    .line 2
     iget-boolean v1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->multiWindowTimeBar:Z
 
     if-eqz v1, :cond_2
@@ -1417,12 +1472,14 @@
 
     if-nez v1, :cond_2
 
+    .line 3
     invoke-virtual {v0}, Lcom/google/android/exoplayer2/Timeline;->getWindowCount()I
 
     move-result v1
 
     const/4 v2, 0x0
 
+    .line 4
     :goto_0
     iget-object v3, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->window:Lcom/google/android/exoplayer2/Timeline$Window;
 
@@ -1456,46 +1513,53 @@
 
     goto :goto_0
 
+    .line 5
     :cond_2
     invoke-interface {p1}, Lcom/google/android/exoplayer2/Player;->getCurrentMediaItemIndex()I
 
     move-result v2
 
+    .line 6
     :goto_1
     invoke-direct {p0, p1, v2, p2, p3}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->seekTo(Lcom/google/android/exoplayer2/Player;IJ)V
 
+    .line 7
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateProgress()V
 
     return-void
 .end method
 
 .method private shouldShowPauseButton()Z
-    .locals 2
+    .locals 3
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->player:Lcom/google/android/exoplayer2/Player;
+
+    const/4 v1, 0x1
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-interface {v0}, Lcom/google/android/exoplayer2/Player;->getPlaybackState()I
 
     move-result v0
 
-    const/4 v1, 0x4
+    const/4 v2, 0x4
 
-    if-eq v0, v1, :cond_0
+    if-eq v0, v2, :cond_0
 
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->player:Lcom/google/android/exoplayer2/Player;
 
+    .line 3
     invoke-interface {v0}, Lcom/google/android/exoplayer2/Player;->getPlaybackState()I
 
     move-result v0
-
-    const/4 v1, 0x1
 
     if-eq v0, v1, :cond_0
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->player:Lcom/google/android/exoplayer2/Player;
 
+    .line 4
     invoke-interface {p0}, Lcom/google/android/exoplayer2/Player;->getPlayWhenReady()Z
 
     move-result p0
@@ -1514,14 +1578,19 @@
 .method private updateAll()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updatePlayPauseButton()V
 
+    .line 2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateNavigation()V
 
+    .line 3
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateRepeatModeButton()V
 
+    .line 4
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateShuffleButton()V
 
+    .line 5
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateTimeline()V
 
     return-void
@@ -1538,11 +1607,13 @@
 
     return-void
 
+    .line 1
     :cond_0
     invoke-virtual {p3, p2}, Landroid/view/View;->setEnabled(Z)V
 
     if-eqz p2, :cond_1
 
+    .line 2
     iget p0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->buttonAlphaEnabled:F
 
     goto :goto_0
@@ -1562,6 +1633,7 @@
     :cond_2
     const/16 p0, 0x8
 
+    .line 3
     :goto_1
     invoke-virtual {p3, p0}, Landroid/view/View;->setVisibility(I)V
 
@@ -1569,8 +1641,9 @@
 .end method
 
 .method private updateNavigation()V
-    .locals 7
+    .locals 8
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->isVisible()Z
 
     move-result v0
@@ -1583,46 +1656,58 @@
 
     goto :goto_1
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->player:Lcom/google/android/exoplayer2/Player;
+
+    const/4 v1, 0x0
 
     if-eqz v0, :cond_1
 
     const/4 v1, 0x5
 
+    .line 3
     invoke-interface {v0, v1}, Lcom/google/android/exoplayer2/Player;->isCommandAvailable(I)Z
 
     move-result v1
 
     const/4 v2, 0x7
 
+    .line 4
     invoke-interface {v0, v2}, Lcom/google/android/exoplayer2/Player;->isCommandAvailable(I)Z
 
     move-result v2
 
     const/16 v3, 0xb
 
+    .line 5
     invoke-interface {v0, v3}, Lcom/google/android/exoplayer2/Player;->isCommandAvailable(I)Z
 
     move-result v3
 
     const/16 v4, 0xc
 
+    .line 6
     invoke-interface {v0, v4}, Lcom/google/android/exoplayer2/Player;->isCommandAvailable(I)Z
 
     move-result v4
 
     const/16 v5, 0x9
 
+    .line 7
     invoke-interface {v0, v5}, Lcom/google/android/exoplayer2/Player;->isCommandAvailable(I)Z
 
     move-result v0
 
+    move v7, v2
+
+    move v2, v1
+
+    move v1, v7
+
     goto :goto_0
 
     :cond_1
-    const/4 v1, 0x0
-
     move v0, v1
 
     move v2, v0
@@ -1631,36 +1716,42 @@
 
     move v4, v3
 
+    .line 8
     :goto_0
     iget-boolean v5, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->showPreviousButton:Z
 
     iget-object v6, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->previousButton:Landroid/view/View;
 
-    invoke-direct {p0, v5, v2, v6}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateButton(ZZLandroid/view/View;)V
+    invoke-direct {p0, v5, v1, v6}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateButton(ZZLandroid/view/View;)V
 
-    iget-boolean v2, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->showRewindButton:Z
+    .line 9
+    iget-boolean v1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->showRewindButton:Z
 
     iget-object v5, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->rewindButton:Landroid/view/View;
 
-    invoke-direct {p0, v2, v3, v5}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateButton(ZZLandroid/view/View;)V
+    invoke-direct {p0, v1, v3, v5}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateButton(ZZLandroid/view/View;)V
 
-    iget-boolean v2, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->showFastForwardButton:Z
+    .line 10
+    iget-boolean v1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->showFastForwardButton:Z
 
     iget-object v3, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->fastForwardButton:Landroid/view/View;
 
-    invoke-direct {p0, v2, v4, v3}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateButton(ZZLandroid/view/View;)V
+    invoke-direct {p0, v1, v4, v3}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateButton(ZZLandroid/view/View;)V
 
-    iget-boolean v2, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->showNextButton:Z
+    .line 11
+    iget-boolean v1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->showNextButton:Z
 
     iget-object v3, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->nextButton:Landroid/view/View;
 
-    invoke-direct {p0, v2, v0, v3}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateButton(ZZLandroid/view/View;)V
+    invoke-direct {p0, v1, v0, v3}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateButton(ZZLandroid/view/View;)V
 
+    .line 12
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->timeBar:Lcom/google/android/exoplayer2/ui/TimeBar;
 
     if-eqz p0, :cond_2
 
-    invoke-interface {p0, v1}, Lcom/google/android/exoplayer2/ui/TimeBar;->setEnabled(Z)V
+    .line 13
+    invoke-interface {p0, v2}, Lcom/google/android/exoplayer2/ui/TimeBar;->setEnabled(Z)V
 
     :cond_2
     :goto_1
@@ -1670,6 +1761,7 @@
 .method private updatePlayPauseButton()V
     .locals 9
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->isVisible()Z
 
     move-result v0
@@ -1682,11 +1774,13 @@
 
     goto/16 :goto_6
 
+    .line 2
     :cond_0
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->shouldShowPauseButton()Z
 
     move-result v0
 
+    .line 3
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->playButton:Landroid/view/View;
 
     const/16 v2, 0x8
@@ -1701,6 +1795,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 4
     invoke-virtual {v1}, Landroid/view/View;->isFocused()Z
 
     move-result v1
@@ -1717,6 +1812,7 @@
     :goto_0
     or-int/2addr v1, v5
 
+    .line 5
     sget v6, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
     if-ge v6, v3, :cond_2
@@ -1728,6 +1824,7 @@
     :cond_2
     if-eqz v0, :cond_3
 
+    .line 6
     iget-object v6, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->playButton:Landroid/view/View;
 
     invoke-static {v6}, Lcom/google/android/exoplayer2/ui/PlayerControlView$Api21;->isAccessibilityFocused(Landroid/view/View;)Z
@@ -1746,6 +1843,7 @@
     :goto_1
     or-int/2addr v6, v5
 
+    .line 7
     iget-object v7, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->playButton:Landroid/view/View;
 
     if-eqz v0, :cond_4
@@ -1767,6 +1865,7 @@
 
     move v6, v1
 
+    .line 8
     :goto_3
     iget-object v7, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->pauseButton:Landroid/view/View;
 
@@ -1774,6 +1873,7 @@
 
     if-nez v0, :cond_6
 
+    .line 9
     invoke-virtual {v7}, Landroid/view/View;->isFocused()Z
 
     move-result v7
@@ -1790,6 +1890,7 @@
     :goto_4
     or-int/2addr v1, v7
 
+    .line 10
     sget v7, Lcom/google/android/exoplayer2/util/Util;->SDK_INT:I
 
     if-ge v7, v3, :cond_7
@@ -1801,6 +1902,7 @@
     :cond_7
     if-nez v0, :cond_8
 
+    .line 11
     iget-object v3, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->pauseButton:Landroid/view/View;
 
     invoke-static {v3}, Lcom/google/android/exoplayer2/ui/PlayerControlView$Api21;->isAccessibilityFocused(Landroid/view/View;)Z
@@ -1817,6 +1919,7 @@
     :goto_5
     or-int/2addr v6, v4
 
+    .line 12
     iget-object v3, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->pauseButton:Landroid/view/View;
 
     if-eqz v0, :cond_9
@@ -1829,11 +1932,13 @@
     :cond_a
     if-eqz v1, :cond_b
 
+    .line 13
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->requestPlayPauseFocus()V
 
     :cond_b
     if-eqz v6, :cond_c
 
+    .line 14
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->requestPlayPauseAccessibilityFocus()V
 
     :cond_c
@@ -1844,6 +1949,7 @@
 .method private updateProgress()V
     .locals 12
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->isVisible()Z
 
     move-result v0
@@ -1856,11 +1962,15 @@
 
     goto/16 :goto_4
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->player:Lcom/google/android/exoplayer2/Player;
 
+    const-wide/16 v1, 0x0
+
     if-eqz v0, :cond_1
 
+    .line 3
     iget-wide v1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->currentWindowOffset:J
 
     invoke-interface {v0}, Lcom/google/android/exoplayer2/Player;->getContentPosition()J
@@ -1869,6 +1979,7 @@
 
     add-long/2addr v1, v3
 
+    .line 4
     iget-wide v3, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->currentWindowOffset:J
 
     invoke-interface {v0}, Lcom/google/android/exoplayer2/Player;->getContentBufferedPosition()J
@@ -1880,10 +1991,9 @@
     goto :goto_0
 
     :cond_1
-    const-wide/16 v1, 0x0
-
     move-wide v3, v1
 
+    .line 5
     :goto_0
     iget-wide v5, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->currentPosition:J
 
@@ -1902,6 +2012,7 @@
     :cond_2
     move v5, v6
 
+    .line 6
     :goto_1
     iget-wide v8, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->currentBufferedPosition:J
 
@@ -1911,11 +2022,14 @@
 
     move v6, v7
 
+    .line 7
     :cond_3
     iput-wide v1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->currentPosition:J
 
+    .line 8
     iput-wide v3, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->currentBufferedPosition:J
 
+    .line 9
     iget-object v8, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->positionView:Landroid/widget/TextView;
 
     if-eqz v8, :cond_4
@@ -1926,6 +2040,7 @@
 
     if-eqz v5, :cond_4
 
+    .line 10
     iget-object v9, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->formatBuilder:Ljava/lang/StringBuilder;
 
     iget-object v10, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->formatter:Ljava/util/Formatter;
@@ -1936,17 +2051,21 @@
 
     invoke-virtual {v8, v9}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 11
     :cond_4
     iget-object v8, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->timeBar:Lcom/google/android/exoplayer2/ui/TimeBar;
 
     if-eqz v8, :cond_5
 
+    .line 12
     invoke-interface {v8, v1, v2}, Lcom/google/android/exoplayer2/ui/TimeBar;->setPosition(J)V
 
+    .line 13
     iget-object v8, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->timeBar:Lcom/google/android/exoplayer2/ui/TimeBar;
 
     invoke-interface {v8, v3, v4}, Lcom/google/android/exoplayer2/ui/TimeBar;->setBufferedPosition(J)V
 
+    .line 14
     :cond_5
     iget-object v8, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->progressUpdateListener:Lcom/google/android/exoplayer2/ui/PlayerControlView$ProgressUpdateListener;
 
@@ -1956,13 +2075,15 @@
 
     if-eqz v6, :cond_7
 
+    .line 15
     :cond_6
     invoke-interface {v8, v1, v2, v3, v4}, Lcom/google/android/exoplayer2/ui/PlayerControlView$ProgressUpdateListener;->onProgressUpdate(JJ)V
 
+    .line 16
     :cond_7
     iget-object v3, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateProgressAction:Ljava/lang/Runnable;
 
-    invoke-virtual {p0, v3}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+    invoke-virtual {p0, v3}, Landroid/widget/FrameLayout;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     if-nez v0, :cond_8
 
@@ -1970,6 +2091,7 @@
 
     goto :goto_2
 
+    .line 17
     :cond_8
     invoke-interface {v0}, Lcom/google/android/exoplayer2/Player;->getPlaybackState()I
 
@@ -1980,12 +2102,14 @@
 
     if-eqz v0, :cond_b
 
+    .line 18
     invoke-interface {v0}, Lcom/google/android/exoplayer2/Player;->isPlaying()Z
 
     move-result v6
 
     if-eqz v6, :cond_b
 
+    .line 19
     iget-object v3, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->timeBar:Lcom/google/android/exoplayer2/ui/TimeBar;
 
     if-eqz v3, :cond_9
@@ -1999,15 +2123,18 @@
     :cond_9
     move-wide v6, v4
 
+    .line 20
     :goto_3
     rem-long/2addr v1, v4
 
     sub-long v1, v4, v1
 
+    .line 21
     invoke-static {v6, v7, v1, v2}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v1
 
+    .line 22
     invoke-interface {v0}, Lcom/google/android/exoplayer2/Player;->getPlaybackParameters()Lcom/google/android/exoplayer2/PlaybackParameters;
 
     move-result-object v0
@@ -2029,6 +2156,7 @@
     :cond_a
     move-wide v6, v4
 
+    .line 23
     iget v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->timeBarMinUpdateIntervalMs:I
 
     int-to-long v8, v0
@@ -2039,9 +2167,10 @@
 
     move-result-wide v0
 
+    .line 24
     iget-object v2, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateProgressAction:Ljava/lang/Runnable;
 
-    invoke-virtual {p0, v2, v0, v1}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {p0, v2, v0, v1}, Landroid/widget/FrameLayout;->postDelayed(Ljava/lang/Runnable;J)Z
 
     goto :goto_4
 
@@ -2052,9 +2181,10 @@
 
     if-eq v3, v7, :cond_c
 
+    .line 25
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateProgressAction:Ljava/lang/Runnable;
 
-    invoke-virtual {p0, v0, v4, v5}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {p0, v0, v4, v5}, Landroid/widget/FrameLayout;->postDelayed(Ljava/lang/Runnable;J)Z
 
     :cond_c
     :goto_4
@@ -2064,6 +2194,7 @@
 .method private updateRepeatModeButton()V
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->isVisible()Z
 
     move-result v0
@@ -2080,6 +2211,7 @@
 
     goto :goto_1
 
+    .line 2
     :cond_0
     iget v1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->repeatToggleModes:I
 
@@ -2087,10 +2219,12 @@
 
     if-nez v1, :cond_1
 
+    .line 3
     invoke-direct {p0, v2, v2, v0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateButton(ZZLandroid/view/View;)V
 
     return-void
 
+    .line 4
     :cond_1
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->player:Lcom/google/android/exoplayer2/Player;
 
@@ -2098,25 +2232,30 @@
 
     if-nez v1, :cond_2
 
+    .line 5
     invoke-direct {p0, v3, v2, v0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateButton(ZZLandroid/view/View;)V
 
+    .line 6
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->repeatToggleButton:Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->repeatOffButtonDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
+    .line 7
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->repeatToggleButton:Landroid/widget/ImageView;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->repeatOffButtonContentDescription:Ljava/lang/String;
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
     return-void
 
+    .line 8
     :cond_2
     invoke-direct {p0, v3, v3, v0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateButton(ZZLandroid/view/View;)V
 
+    .line 9
     invoke-interface {v1}, Lcom/google/android/exoplayer2/Player;->getRepeatMode()I
 
     move-result v0
@@ -2131,6 +2270,7 @@
 
     goto :goto_0
 
+    .line 10
     :cond_3
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->repeatToggleButton:Landroid/widget/ImageView;
 
@@ -2138,14 +2278,16 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
+    .line 11
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->repeatToggleButton:Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->repeatAllButtonContentDescription:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
+    .line 12
     :cond_4
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->repeatToggleButton:Landroid/widget/ImageView;
 
@@ -2153,14 +2295,16 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
+    .line 13
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->repeatToggleButton:Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->repeatOneButtonContentDescription:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
+    .line 14
     :cond_5
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->repeatToggleButton:Landroid/widget/ImageView;
 
@@ -2168,12 +2312,14 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
+    .line 15
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->repeatToggleButton:Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->repeatOffButtonContentDescription:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
+    .line 16
     :goto_0
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->repeatToggleButton:Landroid/widget/ImageView;
 
@@ -2187,6 +2333,7 @@
 .method private updateShuffleButton()V
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->isVisible()Z
 
     move-result v0
@@ -2203,15 +2350,18 @@
 
     goto :goto_2
 
+    .line 2
     :cond_0
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->player:Lcom/google/android/exoplayer2/Player;
 
+    .line 3
     iget-boolean v2, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->showShuffleButton:Z
 
     const/4 v3, 0x0
 
     if-nez v2, :cond_1
 
+    .line 4
     invoke-direct {p0, v3, v3, v0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateButton(ZZLandroid/view/View;)V
 
     goto :goto_2
@@ -2221,27 +2371,33 @@
 
     if-nez v1, :cond_2
 
+    .line 5
     invoke-direct {p0, v2, v3, v0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateButton(ZZLandroid/view/View;)V
 
+    .line 6
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->shuffleButton:Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->shuffleOffButtonDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
+    .line 7
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->shuffleButton:Landroid/widget/ImageView;
 
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->shuffleOffContentDescription:Ljava/lang/String;
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
     goto :goto_2
 
+    .line 8
     :cond_2
     invoke-direct {p0, v2, v2, v0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateButton(ZZLandroid/view/View;)V
 
+    .line 9
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->shuffleButton:Landroid/widget/ImageView;
 
+    .line 10
     invoke-interface {v1}, Lcom/google/android/exoplayer2/Player;->getShuffleModeEnabled()Z
 
     move-result v2
@@ -2255,26 +2411,32 @@
     :cond_3
     iget-object v2, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->shuffleOffButtonDrawable:Landroid/graphics/drawable/Drawable;
 
+    .line 11
     :goto_0
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
+    .line 12
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->shuffleButton:Landroid/widget/ImageView;
 
+    .line 13
     invoke-interface {v1}, Lcom/google/android/exoplayer2/Player;->getShuffleModeEnabled()Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
+    .line 14
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->shuffleOnContentDescription:Ljava/lang/String;
 
     goto :goto_1
 
+    .line 15
     :cond_4
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->shuffleOffContentDescription:Ljava/lang/String;
 
+    .line 16
     :goto_1
-    invoke-virtual {v0, p0}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
     :cond_5
     :goto_2
@@ -2286,12 +2448,14 @@
 
     move-object/from16 v0, p0
 
+    .line 1
     iget-object v1, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->player:Lcom/google/android/exoplayer2/Player;
 
     if-nez v1, :cond_0
 
     return-void
 
+    .line 2
     :cond_0
     iget-boolean v2, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->showMultiWindowTimeBar:Z
 
@@ -2299,6 +2463,7 @@
 
     if-eqz v2, :cond_1
 
+    .line 3
     invoke-interface {v1}, Lcom/google/android/exoplayer2/Player;->getCurrentTimeline()Lcom/google/android/exoplayer2/Timeline;
 
     move-result-object v2
@@ -2323,22 +2488,27 @@
 
     const-wide/16 v5, 0x0
 
+    .line 4
     iput-wide v5, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->currentWindowOffset:J
 
+    .line 5
     invoke-interface {v1}, Lcom/google/android/exoplayer2/Player;->getCurrentTimeline()Lcom/google/android/exoplayer2/Timeline;
 
     move-result-object v2
 
+    .line 6
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/Timeline;->isEmpty()Z
 
     move-result v7
 
     if-nez v7, :cond_e
 
+    .line 7
     invoke-interface {v1}, Lcom/google/android/exoplayer2/Player;->getCurrentMediaItemIndex()I
 
     move-result v1
 
+    .line 8
     iget-boolean v7, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->multiWindowTimeBar:Z
 
     if-eqz v7, :cond_2
@@ -2353,6 +2523,7 @@
     :goto_1
     if-eqz v7, :cond_3
 
+    .line 9
     invoke-virtual {v2}, Lcom/google/android/exoplayer2/Timeline;->getWindowCount()I
 
     move-result v7
@@ -2374,17 +2545,20 @@
 
     if-ne v8, v1, :cond_4
 
+    .line 10
     invoke-static {v9, v10}, Lcom/google/android/exoplayer2/util/Util;->usToMs(J)J
 
     move-result-wide v12
 
     iput-wide v12, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->currentWindowOffset:J
 
+    .line 11
     :cond_4
     iget-object v12, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->window:Lcom/google/android/exoplayer2/Timeline$Window;
 
     invoke-virtual {v2, v8, v12}, Lcom/google/android/exoplayer2/Timeline;->getWindow(ILcom/google/android/exoplayer2/Timeline$Window;)Lcom/google/android/exoplayer2/Timeline$Window;
 
+    .line 12
     iget-object v12, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->window:Lcom/google/android/exoplayer2/Timeline$Window;
 
     iget-wide v13, v12, Lcom/google/android/exoplayer2/Timeline$Window;->durationUs:J
@@ -2395,6 +2569,7 @@
 
     if-nez v13, :cond_5
 
+    .line 13
     iget-boolean v1, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->multiWindowTimeBar:Z
 
     xor-int/2addr v1, v4
@@ -2403,6 +2578,7 @@
 
     goto/16 :goto_8
 
+    .line 14
     :cond_5
     iget v12, v12, Lcom/google/android/exoplayer2/Timeline$Window;->firstPeriodIndex:I
 
@@ -2413,16 +2589,19 @@
 
     if-gt v12, v14, :cond_c
 
+    .line 15
     iget-object v13, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->period:Lcom/google/android/exoplayer2/Timeline$Period;
 
     invoke-virtual {v2, v12, v13}, Lcom/google/android/exoplayer2/Timeline;->getPeriod(ILcom/google/android/exoplayer2/Timeline$Period;)Lcom/google/android/exoplayer2/Timeline$Period;
 
+    .line 16
     iget-object v13, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->period:Lcom/google/android/exoplayer2/Timeline$Period;
 
     invoke-virtual {v13}, Lcom/google/android/exoplayer2/Timeline$Period;->getRemovedAdGroupCount()I
 
     move-result v13
 
+    .line 17
     iget-object v14, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->period:Lcom/google/android/exoplayer2/Timeline$Period;
 
     invoke-virtual {v14}, Lcom/google/android/exoplayer2/Timeline$Period;->getAdGroupCount()I
@@ -2432,6 +2611,7 @@
     :goto_5
     if-ge v13, v14, :cond_b
 
+    .line 18
     iget-object v4, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->period:Lcom/google/android/exoplayer2/Timeline$Period;
 
     invoke-virtual {v4, v13}, Lcom/google/android/exoplayer2/Timeline$Period;->getAdGroupTimeUs(I)J
@@ -2444,6 +2624,7 @@
 
     if-nez v4, :cond_7
 
+    .line 19
     iget-object v4, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->period:Lcom/google/android/exoplayer2/Timeline$Period;
 
     iget-wide v3, v4, Lcom/google/android/exoplayer2/Timeline$Period;->durationUs:J
@@ -2457,6 +2638,7 @@
     :cond_6
     move-wide/from16 v17, v3
 
+    .line 20
     :cond_7
     iget-object v3, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->period:Lcom/google/android/exoplayer2/Timeline$Period;
 
@@ -2470,12 +2652,14 @@
 
     if-ltz v3, :cond_a
 
+    .line 21
     iget-object v3, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->adGroupTimesMs:[J
 
     array-length v4, v3
 
     if-ne v11, v4, :cond_9
 
+    .line 22
     array-length v4, v3
 
     if-nez v4, :cond_8
@@ -2489,6 +2673,7 @@
 
     mul-int/lit8 v4, v4, 0x2
 
+    .line 23
     :goto_6
     invoke-static {v3, v4}, Ljava/util/Arrays;->copyOf([JI)[J
 
@@ -2496,6 +2681,7 @@
 
     iput-object v3, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->adGroupTimesMs:[J
 
+    .line 24
     iget-object v3, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->playedAdGroups:[Z
 
     invoke-static {v3, v4}, Ljava/util/Arrays;->copyOf([ZI)[Z
@@ -2504,6 +2690,7 @@
 
     iput-object v3, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->playedAdGroups:[Z
 
+    .line 25
     :cond_9
     iget-object v3, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->adGroupTimesMs:[J
 
@@ -2515,6 +2702,7 @@
 
     aput-wide v17, v3, v11
 
+    .line 26
     iget-object v3, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->playedAdGroups:[Z
 
     iget-object v4, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->period:Lcom/google/android/exoplayer2/Timeline$Period;
@@ -2542,6 +2730,7 @@
 
     goto :goto_4
 
+    .line 27
     :cond_c
     iget-wide v3, v13, Lcom/google/android/exoplayer2/Timeline$Window;->durationUs:J
 
@@ -2562,15 +2751,18 @@
     :cond_e
     const/4 v11, 0x0
 
+    .line 28
     :goto_9
     invoke-static {v5, v6}, Lcom/google/android/exoplayer2/util/Util;->usToMs(J)J
 
     move-result-wide v1
 
+    .line 29
     iget-object v3, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->durationView:Landroid/widget/TextView;
 
     if-eqz v3, :cond_f
 
+    .line 30
     iget-object v4, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->formatBuilder:Ljava/lang/StringBuilder;
 
     iget-object v5, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->formatter:Ljava/util/Formatter;
@@ -2581,31 +2773,37 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 31
     :cond_f
     iget-object v3, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->timeBar:Lcom/google/android/exoplayer2/ui/TimeBar;
 
     if-eqz v3, :cond_11
 
+    .line 32
     invoke-interface {v3, v1, v2}, Lcom/google/android/exoplayer2/ui/TimeBar;->setDuration(J)V
 
+    .line 33
     iget-object v1, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->extraAdGroupTimesMs:[J
 
     array-length v1, v1
 
     add-int v2, v11, v1
 
+    .line 34
     iget-object v3, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->adGroupTimesMs:[J
 
     array-length v4, v3
 
     if-le v2, v4, :cond_10
 
+    .line 35
     invoke-static {v3, v2}, Ljava/util/Arrays;->copyOf([JI)[J
 
     move-result-object v3
 
     iput-object v3, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->adGroupTimesMs:[J
 
+    .line 36
     iget-object v3, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->playedAdGroups:[Z
 
     invoke-static {v3, v2}, Ljava/util/Arrays;->copyOf([ZI)[Z
@@ -2614,6 +2812,7 @@
 
     iput-object v3, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->playedAdGroups:[Z
 
+    .line 37
     :cond_10
     iget-object v3, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->extraAdGroupTimesMs:[J
 
@@ -2623,12 +2822,14 @@
 
     invoke-static {v3, v5, v4, v11, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 38
     iget-object v3, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->extraPlayedAdGroups:[Z
 
     iget-object v4, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->playedAdGroups:[Z
 
     invoke-static {v3, v5, v4, v11, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 39
     iget-object v1, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->timeBar:Lcom/google/android/exoplayer2/ui/TimeBar;
 
     iget-object v3, v0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->adGroupTimesMs:[J
@@ -2637,6 +2838,7 @@
 
     invoke-interface {v1, v3, v4, v2}, Lcom/google/android/exoplayer2/ui/TimeBar;->setAdGroupTimesMs([J[ZI)V
 
+    .line 40
     :cond_11
     invoke-direct/range {p0 .. p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateProgress()V
 
@@ -2648,8 +2850,10 @@
 .method public addVisibilityListener(Lcom/google/android/exoplayer2/ui/PlayerControlView$VisibilityListener;)V
     .locals 0
 
+    .line 1
     invoke-static {p1}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 2
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->visibilityListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
@@ -2660,13 +2864,14 @@
 .method public dispatchKeyEvent(Landroid/view/KeyEvent;)Z
     .locals 1
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->dispatchMediaKeyEvent(Landroid/view/KeyEvent;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    invoke-super {p0, p1}, Landroid/view/View;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
+    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
     move-result p0
 
@@ -2690,14 +2895,17 @@
 .method public dispatchMediaKeyEvent(Landroid/view/KeyEvent;)Z
     .locals 3
 
+    .line 1
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v0
 
+    .line 2
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->player:Lcom/google/android/exoplayer2/Player;
 
     if-eqz v1, :cond_9
 
+    .line 3
     invoke-static {v0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->isHandledMediaKey(I)Z
 
     move-result v2
@@ -2706,6 +2914,7 @@
 
     goto :goto_1
 
+    .line 4
     :cond_0
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
@@ -2717,6 +2926,7 @@
 
     if-ne v0, v2, :cond_1
 
+    .line 5
     invoke-interface {v1}, Lcom/google/android/exoplayer2/Player;->getPlaybackState()I
 
     move-result p0
@@ -2725,6 +2935,7 @@
 
     if-eq p0, p1, :cond_8
 
+    .line 6
     invoke-interface {v1}, Lcom/google/android/exoplayer2/Player;->seekForward()V
 
     goto :goto_0
@@ -2734,10 +2945,12 @@
 
     if-ne v0, v2, :cond_2
 
+    .line 7
     invoke-interface {v1}, Lcom/google/android/exoplayer2/Player;->seekBack()V
 
     goto :goto_0
 
+    .line 8
     :cond_2
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getRepeatCount()I
 
@@ -2771,26 +2984,31 @@
 
     goto :goto_0
 
+    .line 9
     :cond_3
     invoke-direct {p0, v1}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->dispatchPause(Lcom/google/android/exoplayer2/Player;)V
 
     goto :goto_0
 
+    .line 10
     :cond_4
     invoke-direct {p0, v1}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->dispatchPlay(Lcom/google/android/exoplayer2/Player;)V
 
     goto :goto_0
 
+    .line 11
     :cond_5
     invoke-interface {v1}, Lcom/google/android/exoplayer2/Player;->seekToPrevious()V
 
     goto :goto_0
 
+    .line 12
     :cond_6
     invoke-interface {v1}, Lcom/google/android/exoplayer2/Player;->seekToNext()V
 
     goto :goto_0
 
+    .line 13
     :cond_7
     invoke-direct {p0, v1}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->dispatchPlayPause(Lcom/google/android/exoplayer2/Player;)V
 
@@ -2810,18 +3028,21 @@
 .method public final dispatchTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 2
 
+    .line 1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->hideAction:Ljava/lang/Runnable;
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -2831,11 +3052,13 @@
 
     if-ne v0, v1, :cond_1
 
+    .line 4
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->hideAfterTimeout()V
 
+    .line 5
     :cond_1
     :goto_0
-    invoke-super {p0, p1}, Landroid/view/View;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
+    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p0
 
@@ -2847,6 +3070,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->player:Lcom/google/android/exoplayer2/Player;
 
     return-object p0
@@ -2864,6 +3088,7 @@
 .method public getShowShuffleButton()Z
     .locals 0
 
+    .line 1
     iget-boolean p0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->showShuffleButton:Z
 
     return p0
@@ -2872,6 +3097,7 @@
 .method public getShowTimeoutMs()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->showTimeoutMs:I
 
     return p0
@@ -2880,6 +3106,7 @@
 .method public getShowVrButton()Z
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->vrButton:Landroid/view/View;
 
     if-eqz p0, :cond_0
@@ -2904,6 +3131,7 @@
 .method public hide()V
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->isVisible()Z
 
     move-result v0
@@ -2912,8 +3140,10 @@
 
     const/16 v0, 0x8
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
+    .line 2
+    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->visibilityListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -2933,7 +3163,8 @@
 
     check-cast v1, Lcom/google/android/exoplayer2/ui/PlayerControlView$VisibilityListener;
 
-    invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
+    .line 4
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getVisibility()I
 
     move-result v2
 
@@ -2941,17 +3172,20 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateProgressAction:Ljava/lang/Runnable;
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->removeCallbacks(Ljava/lang/Runnable;)Z
 
+    .line 6
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->hideAction:Ljava/lang/Runnable;
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
+    .line 7
     iput-wide v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->hideAtMs:J
 
     :cond_1
@@ -2961,7 +3195,8 @@
 .method public isVisible()Z
     .locals 0
 
-    invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
+    .line 1
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getVisibility()I
 
     move-result p0
 
@@ -2981,12 +3216,15 @@
 .method public onAttachedToWindow()V
     .locals 4
 
-    invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
+    .line 1
+    invoke-super {p0}, Landroid/widget/FrameLayout;->onAttachedToWindow()V
 
     const/4 v0, 0x1
 
+    .line 2
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->isAttachedToWindow:Z
 
+    .line 3
     iget-wide v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->hideAtMs:J
 
     const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
@@ -2995,6 +3233,7 @@
 
     if-eqz v2, :cond_1
 
+    .line 4
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
@@ -3007,17 +3246,20 @@
 
     if-gtz v2, :cond_0
 
+    .line 5
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->hide()V
 
     goto :goto_0
 
+    .line 6
     :cond_0
     iget-object v2, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->hideAction:Ljava/lang/Runnable;
 
-    invoke-virtual {p0, v2, v0, v1}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {p0, v2, v0, v1}, Landroid/widget/FrameLayout;->postDelayed(Ljava/lang/Runnable;J)Z
 
     goto :goto_0
 
+    .line 7
     :cond_1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->isVisible()Z
 
@@ -3025,8 +3267,10 @@
 
     if-eqz v0, :cond_2
 
+    .line 8
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->hideAfterTimeout()V
 
+    .line 9
     :cond_2
     :goto_0
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateAll()V
@@ -3037,19 +3281,23 @@
 .method public onDetachedFromWindow()V
     .locals 1
 
-    invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
+    .line 1
+    invoke-super {p0}, Landroid/widget/FrameLayout;->onDetachedFromWindow()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-boolean v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->isAttachedToWindow:Z
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateProgressAction:Ljava/lang/Runnable;
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->removeCallbacks(Ljava/lang/Runnable;)Z
 
+    .line 4
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->hideAction:Ljava/lang/Runnable;
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
@@ -3057,6 +3305,7 @@
 .method public removeVisibilityListener(Lcom/google/android/exoplayer2/ui/PlayerControlView$VisibilityListener;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->visibilityListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
@@ -3081,14 +3330,17 @@
 
     new-array p1, v0, [J
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->extraAdGroupTimesMs:[J
 
     new-array p1, v0, [Z
 
+    .line 2
     iput-object p1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->extraPlayedAdGroups:[Z
 
     goto :goto_0
 
+    .line 3
     :cond_0
     invoke-static {p2}, Lcom/google/android/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -3096,6 +3348,7 @@
 
     check-cast p2, [Z
 
+    .line 4
     array-length v1, p1
 
     array-length v2, p2
@@ -3107,10 +3360,13 @@
     :cond_1
     invoke-static {v0}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 5
     iput-object p1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->extraAdGroupTimesMs:[J
 
+    .line 6
     iput-object p2, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->extraPlayedAdGroups:[Z
 
+    .line 7
     :goto_0
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateTimeline()V
 
@@ -3124,6 +3380,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -3150,6 +3407,7 @@
 
     if-eqz p1, :cond_2
 
+    .line 2
     invoke-interface {p1}, Lcom/google/android/exoplayer2/Player;->getApplicationLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -3165,10 +3423,12 @@
     :cond_1
     move v2, v3
 
+    .line 3
     :cond_2
     :goto_1
     invoke-static {v2}, Lcom/google/android/exoplayer2/util/Assertions;->checkArgument(Z)V
 
+    .line 4
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->player:Lcom/google/android/exoplayer2/Player;
 
     if-ne v0, p1, :cond_3
@@ -3178,19 +3438,23 @@
     :cond_3
     if-eqz v0, :cond_4
 
+    .line 5
     iget-object v1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->componentListener:Lcom/google/android/exoplayer2/ui/PlayerControlView$ComponentListener;
 
     invoke-interface {v0, v1}, Lcom/google/android/exoplayer2/Player;->removeListener(Lcom/google/android/exoplayer2/Player$Listener;)V
 
+    .line 6
     :cond_4
     iput-object p1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->player:Lcom/google/android/exoplayer2/Player;
 
     if-eqz p1, :cond_5
 
+    .line 7
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->componentListener:Lcom/google/android/exoplayer2/ui/PlayerControlView$ComponentListener;
 
     invoke-interface {p1, v0}, Lcom/google/android/exoplayer2/Player;->addListener(Lcom/google/android/exoplayer2/Player$Listener;)V
 
+    .line 8
     :cond_5
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateAll()V
 
@@ -3204,6 +3468,7 @@
         .end annotation
     .end param
 
+    .line 1
     iput-object p1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->progressUpdateListener:Lcom/google/android/exoplayer2/ui/PlayerControlView$ProgressUpdateListener;
 
     return-void
@@ -3212,12 +3477,15 @@
 .method public setRepeatToggleModes(I)V
     .locals 3
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->repeatToggleModes:I
 
+    .line 2
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->player:Lcom/google/android/exoplayer2/Player;
 
     if-eqz v0, :cond_2
 
+    .line 3
     invoke-interface {v0}, Lcom/google/android/exoplayer2/Player;->getRepeatMode()I
 
     move-result v0
@@ -3226,6 +3494,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 4
     iget-object p1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->player:Lcom/google/android/exoplayer2/Player;
 
     const/4 v0, 0x0
@@ -3243,6 +3512,7 @@
 
     if-ne v0, v1, :cond_1
 
+    .line 5
     iget-object p1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p1, v2}, Lcom/google/android/exoplayer2/Player;->setRepeatMode(I)V
@@ -3254,10 +3524,12 @@
 
     if-ne v0, v2, :cond_2
 
+    .line 6
     iget-object p1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->player:Lcom/google/android/exoplayer2/Player;
 
     invoke-interface {p1, v1}, Lcom/google/android/exoplayer2/Player;->setRepeatMode(I)V
 
+    .line 7
     :cond_2
     :goto_0
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateRepeatModeButton()V
@@ -3268,8 +3540,10 @@
 .method public setShowFastForwardButton(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->showFastForwardButton:Z
 
+    .line 2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateNavigation()V
 
     return-void
@@ -3278,8 +3552,10 @@
 .method public setShowMultiWindowTimeBar(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->showMultiWindowTimeBar:Z
 
+    .line 2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateTimeline()V
 
     return-void
@@ -3288,8 +3564,10 @@
 .method public setShowNextButton(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->showNextButton:Z
 
+    .line 2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateNavigation()V
 
     return-void
@@ -3298,8 +3576,10 @@
 .method public setShowPreviousButton(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->showPreviousButton:Z
 
+    .line 2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateNavigation()V
 
     return-void
@@ -3308,8 +3588,10 @@
 .method public setShowRewindButton(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->showRewindButton:Z
 
+    .line 2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateNavigation()V
 
     return-void
@@ -3318,8 +3600,10 @@
 .method public setShowShuffleButton(Z)V
     .locals 0
 
+    .line 1
     iput-boolean p1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->showShuffleButton:Z
 
+    .line 2
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateShuffleButton()V
 
     return-void
@@ -3328,14 +3612,17 @@
 .method public setShowTimeoutMs(I)V
     .locals 0
 
+    .line 1
     iput p1, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->showTimeoutMs:I
 
+    .line 2
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->isVisible()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
+    .line 3
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->hideAfterTimeout()V
 
     :cond_0
@@ -3345,6 +3632,7 @@
 .method public setShowVrButton(Z)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->vrButton:Landroid/view/View;
 
     if-eqz p0, :cond_1
@@ -3358,6 +3646,7 @@
     :cond_0
     const/16 p1, 0x8
 
+    .line 2
     :goto_0
     invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
 
@@ -3372,6 +3661,7 @@
 
     const/16 v1, 0x3e8
 
+    .line 1
     invoke-static {p1, v0, v1}, Lcom/google/android/exoplayer2/util/Util;->constrainValue(III)I
 
     move-result p1
@@ -3388,12 +3678,15 @@
         .end annotation
     .end param
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->vrButton:Landroid/view/View;
 
     if-eqz v0, :cond_1
 
+    .line 2
     invoke-virtual {v0, p1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    .line 3
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->getShowVrButton()Z
 
     move-result v0
@@ -3419,6 +3712,7 @@
 .method public show()V
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->isVisible()Z
 
     move-result v0
@@ -3427,8 +3721,10 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
+    .line 2
+    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
+    .line 3
     iget-object v0, p0, Lcom/google/android/exoplayer2/ui/PlayerControlView;->visibilityListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -3448,7 +3744,8 @@
 
     check-cast v1, Lcom/google/android/exoplayer2/ui/PlayerControlView$VisibilityListener;
 
-    invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
+    .line 4
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getVisibility()I
 
     move-result v2
 
@@ -3456,13 +3753,17 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->updateAll()V
 
+    .line 6
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->requestPlayPauseFocus()V
 
+    .line 7
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->requestPlayPauseAccessibilityFocus()V
 
+    .line 8
     :cond_1
     invoke-direct {p0}, Lcom/google/android/exoplayer2/ui/PlayerControlView;->hideAfterTimeout()V
 

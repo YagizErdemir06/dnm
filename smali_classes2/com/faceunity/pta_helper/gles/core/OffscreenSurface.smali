@@ -7,8 +7,10 @@
 .method public constructor <init>(Lcom/faceunity/pta_helper/gles/core/EglCore;II)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Lcom/faceunity/pta_helper/gles/core/EglSurfaceBase;-><init>(Lcom/faceunity/pta_helper/gles/core/EglCore;)V
 
+    .line 2
     invoke-virtual {p0, p2, p3}, Lcom/faceunity/pta_helper/gles/core/EglSurfaceBase;->createOffscreenSurface(II)V
 
     return-void
@@ -19,6 +21,7 @@
 .method public release()V
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/faceunity/pta_helper/gles/core/EglSurfaceBase;->releaseEglSurface()V
 
     return-void

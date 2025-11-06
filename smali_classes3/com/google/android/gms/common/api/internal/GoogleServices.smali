@@ -58,14 +58,17 @@
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
+    .line 2
     sget v1, Lcom/google/android/gms/common/R$string;->common_google_play_services_unknown_issue:I
 
+    .line 3
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getResourcePackageName(I)Ljava/lang/String;
 
     move-result-object v1
@@ -74,6 +77,7 @@
 
     const-string v3, "integer"
 
+    .line 4
     invoke-virtual {v0, v2, v3, v1}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v1
@@ -84,6 +88,7 @@
 
     if-eqz v1, :cond_2
 
+    .line 5
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v0
@@ -110,12 +115,15 @@
 
     goto :goto_2
 
+    .line 6
     :cond_2
     iput-boolean v3, p0, Lcom/google/android/gms/common/api/internal/GoogleServices;->zzf:Z
 
+    .line 7
     :goto_2
     iput-boolean v2, p0, Lcom/google/android/gms/common/api/internal/GoogleServices;->zze:Z
 
+    .line 8
     invoke-static {p1}, Lcom/google/android/gms/common/internal/zzag;->zzb(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
@@ -124,14 +132,17 @@
 
     new-instance v0, Lcom/google/android/gms/common/internal/StringResourceValueReader;
 
+    .line 9
     invoke-direct {v0, p1}, Lcom/google/android/gms/common/internal/StringResourceValueReader;-><init>(Landroid/content/Context;)V
 
     const-string p1, "google_app_id"
 
+    .line 10
     invoke-virtual {v0, p1}, Lcom/google/android/gms/common/internal/StringResourceValueReader;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 11
     :cond_3
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -195,6 +206,7 @@
     .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/common/api/internal/GoogleServices;->zza:Ljava/lang/Object;
 
     monitor-enter v0
@@ -213,6 +225,7 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    .line 2
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v3, "Initialize must be called before "
@@ -236,6 +249,7 @@
     :catchall_0
     move-exception p0
 
+    .line 3
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -251,6 +265,7 @@
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
     .end annotation
 
+    .line 1
     sget-object v0, Lcom/google/android/gms/common/api/internal/GoogleServices;->zza:Ljava/lang/Object;
 
     monitor-enter v0
@@ -284,6 +299,7 @@
 
     const-string v0, "getGoogleAppId"
 
+    .line 1
     invoke-static {v0}, Lcom/google/android/gms/common/api/internal/GoogleServices;->checkInitialized(Ljava/lang/String;)Lcom/google/android/gms/common/api/internal/GoogleServices;
 
     move-result-object v0
@@ -423,12 +439,14 @@
 
     const-string v0, "isMeasurementEnabled"
 
+    .line 1
     invoke-static {v0}, Lcom/google/android/gms/common/api/internal/GoogleServices;->checkInitialized(Ljava/lang/String;)Lcom/google/android/gms/common/api/internal/GoogleServices;
 
     move-result-object v0
 
     iget-object v1, v0, Lcom/google/android/gms/common/api/internal/GoogleServices;->zzd:Lcom/google/android/gms/common/api/Status;
 
+    .line 2
     invoke-virtual {v1}, Lcom/google/android/gms/common/api/Status;->isSuccess()Z
 
     move-result v1
@@ -456,6 +474,7 @@
 
     const-string v0, "isMeasurementExplicitlyDisabled"
 
+    .line 1
     invoke-static {v0}, Lcom/google/android/gms/common/api/internal/GoogleServices;->checkInitialized(Ljava/lang/String;)Lcom/google/android/gms/common/api/internal/GoogleServices;
 
     move-result-object v0
@@ -475,6 +494,7 @@
     .annotation build Lcom/google/android/gms/common/util/VisibleForTesting;
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/GoogleServices;->zzc:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -491,6 +511,7 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    .line 2
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v1, "Initialize was called with two different Google App IDs.  Only the first app ID will be used: \'"

@@ -1,4 +1,4 @@
-.class final Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$QMediaStoreUriFetcher;
+.class public final Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$QMediaStoreUriFetcher;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -93,6 +93,7 @@
 
     const-string v0, "_data"
 
+    .line 1
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
@@ -122,26 +123,35 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$QMediaStoreUriFetcher;->context:Landroid/content/Context;
 
+    .line 3
     iput-object p2, p0, Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$QMediaStoreUriFetcher;->fileDelegate:Lcom/bumptech/glide/load/model/ModelLoader;
 
+    .line 4
     iput-object p3, p0, Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$QMediaStoreUriFetcher;->uriDelegate:Lcom/bumptech/glide/load/model/ModelLoader;
 
+    .line 5
     iput-object p4, p0, Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$QMediaStoreUriFetcher;->uri:Landroid/net/Uri;
 
+    .line 6
     iput p5, p0, Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$QMediaStoreUriFetcher;->width:I
 
+    .line 7
     iput p6, p0, Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$QMediaStoreUriFetcher;->height:I
 
+    .line 8
     iput-object p7, p0, Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$QMediaStoreUriFetcher;->options:Lcom/bumptech/glide/load/Options;
 
+    .line 9
     iput-object p8, p0, Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$QMediaStoreUriFetcher;->dataClass:Ljava/lang/Class;
 
     return-void
@@ -166,12 +176,14 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroid/os/Environment;->isExternalStorageLegacy()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$QMediaStoreUriFetcher;->fileDelegate:Lcom/bumptech/glide/load/model/ModelLoader;
 
     iget-object v1, p0, Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$QMediaStoreUriFetcher;->uri:Landroid/net/Uri;
@@ -192,6 +204,7 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-direct {p0}, Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$QMediaStoreUriFetcher;->isAccessMediaLocationGranted()Z
 
@@ -210,6 +223,7 @@
     :cond_1
     iget-object v0, p0, Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$QMediaStoreUriFetcher;->uri:Landroid/net/Uri;
 
+    .line 4
     :goto_0
     iget-object v1, p0, Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$QMediaStoreUriFetcher;->uriDelegate:Lcom/bumptech/glide/load/model/ModelLoader;
 
@@ -245,12 +259,14 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$QMediaStoreUriFetcher;->buildDelegateData()Lcom/bumptech/glide/load/model/ModelLoader$LoadData;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     iget-object p0, p0, Lcom/bumptech/glide/load/model/ModelLoader$LoadData;->fetcher:Lcom/bumptech/glide/load/data/DataFetcher;
 
     goto :goto_0
@@ -265,6 +281,7 @@
 .method private isAccessMediaLocationGranted()Z
     .locals 1
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$QMediaStoreUriFetcher;->context:Landroid/content/Context;
 
     const-string v0, "android.permission.ACCESS_MEDIA_LOCATION"
@@ -299,9 +316,11 @@
 
     const/4 v0, 0x0
 
+    .line 1
     :try_start_0
     iget-object p0, p0, Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$QMediaStoreUriFetcher;->context:Landroid/content/Context;
 
+    .line 2
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -316,12 +335,14 @@
 
     move-object v2, p1
 
+    .line 3
     invoke-virtual/range {v1 .. v6}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
+    .line 4
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result p0
@@ -330,6 +351,7 @@
 
     const-string p0, "_data"
 
+    .line 5
     invoke-interface {v0, p0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result p0
@@ -338,22 +360,26 @@
 
     move-result-object p0
 
+    .line 6
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
+    .line 7
     new-instance p1, Ljava/io/File;
 
     invoke-direct {p1, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 8
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
     return-object p1
 
+    .line 9
     :cond_0
     :try_start_1
     new-instance p0, Ljava/io/FileNotFoundException;
@@ -376,6 +402,7 @@
 
     throw p0
 
+    .line 10
     :cond_1
     new-instance p0, Ljava/io/FileNotFoundException;
 
@@ -404,8 +431,10 @@
 
     if-eqz v0, :cond_2
 
+    .line 11
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
+    .line 12
     :cond_2
     throw p0
 .end method
@@ -417,12 +446,15 @@
 
     const/4 v0, 0x1
 
+    .line 1
     iput-boolean v0, p0, Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$QMediaStoreUriFetcher;->isCancelled:Z
 
+    .line 2
     iget-object p0, p0, Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$QMediaStoreUriFetcher;->delegate:Lcom/bumptech/glide/load/data/DataFetcher;
 
     if-eqz p0, :cond_0
 
+    .line 3
     invoke-interface {p0}, Lcom/bumptech/glide/load/data/DataFetcher;->cancel()V
 
     :cond_0
@@ -432,10 +464,12 @@
 .method public cleanup()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$QMediaStoreUriFetcher;->delegate:Lcom/bumptech/glide/load/data/DataFetcher;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0}, Lcom/bumptech/glide/load/data/DataFetcher;->cleanup()V
 
     :cond_0
@@ -455,6 +489,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$QMediaStoreUriFetcher;->dataClass:Ljava/lang/Class;
 
     return-object p0
@@ -465,6 +500,7 @@
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
+    .line 1
     sget-object p0, Lcom/bumptech/glide/load/DataSource;->LOCAL:Lcom/bumptech/glide/load/DataSource;
 
     return-object p0
@@ -489,6 +525,7 @@
         }
     .end annotation
 
+    .line 1
     :try_start_0
     invoke-direct {p0}, Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$QMediaStoreUriFetcher;->buildDelegateFetcher()Lcom/bumptech/glide/load/data/DataFetcher;
 
@@ -496,6 +533,7 @@
 
     if-nez v0, :cond_0
 
+    .line 2
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -520,17 +558,21 @@
 
     return-void
 
+    .line 3
     :cond_0
     iput-object v0, p0, Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$QMediaStoreUriFetcher;->delegate:Lcom/bumptech/glide/load/data/DataFetcher;
 
+    .line 4
     iget-boolean v1, p0, Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$QMediaStoreUriFetcher;->isCancelled:Z
 
     if-eqz v1, :cond_1
 
+    .line 5
     invoke-virtual {p0}, Lcom/bumptech/glide/load/model/stream/QMediaStoreUriLoader$QMediaStoreUriFetcher;->cancel()V
 
     goto :goto_0
 
+    .line 6
     :cond_1
     invoke-interface {v0, p1, p2}, Lcom/bumptech/glide/load/data/DataFetcher;->loadData(Lcom/bumptech/glide/Priority;Lcom/bumptech/glide/load/data/DataFetcher$DataCallback;)V
     :try_end_0
@@ -541,6 +583,7 @@
     :catch_0
     move-exception p0
 
+    .line 7
     invoke-interface {p2, p0}, Lcom/bumptech/glide/load/data/DataFetcher$DataCallback;->onLoadFailed(Ljava/lang/Exception;)V
 
     :goto_0

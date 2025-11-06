@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/LinkedListMultimap$Node;
+.class public final Lcom/google/common/collect/LinkedListMultimap$Node;
 .super Lcom/google/common/collect/AbstractMapEntry;
 .source "SourceFile"
 
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field final key:Ljava/lang/Object;
+.field public final key:Ljava/lang/Object;
     .annotation runtime Lcom/google/common/collect/ParametricNullness;
     .end annotation
 
@@ -38,7 +38,7 @@
     .end annotation
 .end field
 
-.field next:Lcom/google/common/collect/LinkedListMultimap$Node;
+.field public next:Lcom/google/common/collect/LinkedListMultimap$Node;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/LinkedListMultimap$Node<",
@@ -50,7 +50,7 @@
     .end annotation
 .end field
 
-.field nextSibling:Lcom/google/common/collect/LinkedListMultimap$Node;
+.field public nextSibling:Lcom/google/common/collect/LinkedListMultimap$Node;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/LinkedListMultimap$Node<",
@@ -62,7 +62,7 @@
     .end annotation
 .end field
 
-.field previous:Lcom/google/common/collect/LinkedListMultimap$Node;
+.field public previous:Lcom/google/common/collect/LinkedListMultimap$Node;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/LinkedListMultimap$Node<",
@@ -74,7 +74,7 @@
     .end annotation
 .end field
 
-.field previousSibling:Lcom/google/common/collect/LinkedListMultimap$Node;
+.field public previousSibling:Lcom/google/common/collect/LinkedListMultimap$Node;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/common/collect/LinkedListMultimap$Node<",
@@ -86,7 +86,7 @@
     .end annotation
 .end field
 
-.field value:Ljava/lang/Object;
+.field public value:Ljava/lang/Object;
     .annotation runtime Lcom/google/common/collect/ParametricNullness;
     .end annotation
 
@@ -115,10 +115,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lcom/google/common/collect/AbstractMapEntry;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/LinkedListMultimap$Node;->key:Ljava/lang/Object;
 
+    .line 3
     iput-object p2, p0, Lcom/google/common/collect/LinkedListMultimap$Node;->value:Ljava/lang/Object;
 
     return-void
@@ -137,6 +140,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/LinkedListMultimap$Node;->key:Ljava/lang/Object;
 
     return-object p0
@@ -153,6 +157,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/LinkedListMultimap$Node;->value:Ljava/lang/Object;
 
     return-object p0
@@ -173,8 +178,10 @@
         }
     .end annotation
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/LinkedListMultimap$Node;->value:Ljava/lang/Object;
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/LinkedListMultimap$Node;->value:Ljava/lang/Object;
 
     return-object v0

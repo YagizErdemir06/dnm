@@ -8,7 +8,7 @@
 
 
 # instance fields
-.field releaseListener:Lcom/xiaomi/milab/videosdk/OnReleaseListener;
+.field public releaseListener:Lcom/xiaomi/milab/videosdk/OnReleaseListener;
 
 .field private trackHashMap:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
@@ -26,6 +26,7 @@
 .method public static constructor <clinit>()V
     .locals 1
 
+    .line 1
     const-class v0, Lcom/xiaomi/milab/videosdk/XmsVideoClip;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -40,12 +41,15 @@
 .method private constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-object v0, p0, Lcom/xiaomi/milab/videosdk/XmsTimeline;->releaseListener:Lcom/xiaomi/milab/videosdk/OnReleaseListener;
 
+    .line 3
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -58,6 +62,7 @@
 .method public static createTimeline()Lcom/xiaomi/milab/videosdk/XmsTimeline;
     .locals 4
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/milab/videosdk/XmsContext;->getInstance()Lcom/xiaomi/milab/videosdk/XmsContext;
 
     move-result-object v0
@@ -76,11 +81,13 @@
 
     return-object v0
 
+    .line 2
     :cond_0
     new-instance v2, Lcom/xiaomi/milab/videosdk/XmsTimeline;
 
     invoke-direct {v2}, Lcom/xiaomi/milab/videosdk/XmsTimeline;-><init>()V
 
+    .line 3
     iput-wide v0, v2, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     return-object v2
@@ -630,6 +637,7 @@
 .method public appendAudioTrack()Lcom/xiaomi/milab/videosdk/XmsAudioTrack;
     .locals 3
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -640,11 +648,13 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     new-instance v0, Lcom/xiaomi/milab/videosdk/XmsAudioTrack;
 
     invoke-direct {v0}, Lcom/xiaomi/milab/videosdk/XmsAudioTrack;-><init>()V
 
+    .line 3
     iget-wide v1, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     invoke-direct {p0, v1, v2}, Lcom/xiaomi/milab/videosdk/XmsTimeline;->nativeAppendAudioTrack(J)J
@@ -653,6 +663,7 @@
 
     iput-wide v1, v0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
+    .line 4
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/XmsTimeline;->trackHashMap:Ljava/util/HashMap;
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -667,6 +678,7 @@
 .method public appendDecorateTrack()Lcom/xiaomi/milab/videosdk/XmsDecorateTrack;
     .locals 6
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -677,6 +689,7 @@
 
     return-object v1
 
+    .line 2
     :cond_0
     iget-wide v2, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -692,13 +705,16 @@
 
     return-object v1
 
+    .line 3
     :cond_1
     new-instance v0, Lcom/xiaomi/milab/videosdk/XmsDecorateTrack;
 
     invoke-direct {v0}, Lcom/xiaomi/milab/videosdk/XmsDecorateTrack;-><init>()V
 
+    .line 4
     iput-wide v2, v0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
+    .line 5
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/XmsTimeline;->trackHashMap:Ljava/util/HashMap;
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -713,6 +729,7 @@
 .method public appendVideoTrack()Lcom/xiaomi/milab/videosdk/XmsVideoTrack;
     .locals 6
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -723,6 +740,7 @@
 
     return-object v1
 
+    .line 2
     :cond_0
     iget-wide v2, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -738,13 +756,16 @@
 
     return-object v1
 
+    .line 3
     :cond_1
     new-instance v0, Lcom/xiaomi/milab/videosdk/XmsVideoTrack;
 
     invoke-direct {v0}, Lcom/xiaomi/milab/videosdk/XmsVideoTrack;-><init>()V
 
+    .line 4
     iput-wide v2, v0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
+    .line 5
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/XmsTimeline;->trackHashMap:Ljava/util/HashMap;
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -767,6 +788,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -775,6 +797,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -786,6 +809,7 @@
 .method public clearMap()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/xiaomi/milab/videosdk/XmsTimeline;->trackHashMap:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -796,6 +820,7 @@
 
     move-result-object v0
 
+    .line 2
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -803,12 +828,14 @@
 
     if-eqz v1, :cond_0
 
+    .line 3
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/Map$Entry;
 
+    .line 4
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -819,6 +846,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/XmsTimeline;->trackHashMap:Ljava/util/HashMap;
 
@@ -830,6 +858,7 @@
 .method public createRecordConsumer()V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -838,6 +867,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -849,15 +879,18 @@
 .method public debug()V
     .locals 3
 
+    .line 1
     const-class v0, Lcom/xiaomi/milab/videosdk/XmsTimeline;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     iget-wide v1, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     invoke-direct {p0, v1, v2}, Lcom/xiaomi/milab/videosdk/XmsTimeline;->nativeDebug(J)V
 
+    .line 3
     monitor-exit v0
 
     return-void
@@ -889,6 +922,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -897,6 +931,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-wide v2, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -926,6 +961,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -934,6 +970,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -1055,6 +1092,7 @@
 .method public flushPreview()V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -1063,6 +1101,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -1082,6 +1121,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -1092,6 +1132,7 @@
 
     return-object v1
 
+    .line 2
     :cond_0
     iget-wide v2, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -1107,6 +1148,7 @@
 
     return-object v1
 
+    .line 3
     :cond_1
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/XmsTimeline;->trackHashMap:Ljava/util/HashMap;
 
@@ -1126,6 +1168,7 @@
 .method public getAudioTrackCount()I
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -1136,6 +1179,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -1157,6 +1201,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -1167,6 +1212,7 @@
 
     return-object v1
 
+    .line 2
     :cond_0
     iget-wide v2, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -1182,6 +1228,7 @@
 
     return-object v1
 
+    .line 3
     :cond_1
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/XmsTimeline;->trackHashMap:Ljava/util/HashMap;
 
@@ -1201,6 +1248,7 @@
 .method public getDecorateTrackCount()I
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -1211,6 +1259,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -1224,10 +1273,12 @@
 .method public getDuration()J
     .locals 5
 
+    .line 1
     const-class v0, Lcom/xiaomi/milab/videosdk/XmsTimeline;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
@@ -1235,12 +1286,14 @@
 
     if-eqz v1, :cond_0
 
+    const-wide/16 v1, -0x1
+
+    .line 3
     monitor-exit v0
 
-    const-wide/16 v0, -0x1
+    return-wide v1
 
-    return-wide v0
-
+    .line 4
     :cond_0
     sget-object v1, Lcom/xiaomi/milab/videosdk/XmsTimeline;->TAG:Ljava/lang/String;
 
@@ -1262,6 +1315,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 5
     iget-wide v1, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     invoke-direct {p0, v1, v2}, Lcom/xiaomi/milab/videosdk/XmsTimeline;->nativeGetDuration(J)J
@@ -1275,6 +1329,7 @@
     :catchall_0
     move-exception p0
 
+    .line 6
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1285,10 +1340,12 @@
 .method public getLength()J
     .locals 5
 
+    .line 1
     const-class v0, Lcom/xiaomi/milab/videosdk/XmsTimeline;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
@@ -1296,12 +1353,14 @@
 
     if-eqz v1, :cond_0
 
+    const-wide/16 v1, -0x1
+
+    .line 3
     monitor-exit v0
 
-    const-wide/16 v0, -0x1
+    return-wide v1
 
-    return-wide v0
-
+    .line 4
     :cond_0
     sget-object v1, Lcom/xiaomi/milab/videosdk/XmsTimeline;->TAG:Ljava/lang/String;
 
@@ -1323,6 +1382,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 5
     iget-wide v1, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     invoke-direct {p0, v1, v2}, Lcom/xiaomi/milab/videosdk/XmsTimeline;->nativeGetLength(J)J
@@ -1336,6 +1396,7 @@
     :catchall_0
     move-exception p0
 
+    .line 6
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1346,6 +1407,7 @@
 .method public getStatus()I
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -1356,6 +1418,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -1377,6 +1440,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -1387,6 +1451,7 @@
 
     return-object v1
 
+    .line 2
     :cond_0
     iget-wide v2, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -1402,6 +1467,7 @@
 
     return-object v1
 
+    .line 3
     :cond_1
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/XmsTimeline;->trackHashMap:Ljava/util/HashMap;
 
@@ -1421,6 +1487,7 @@
 .method public getVideoTrackCount()I
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -1431,6 +1498,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -1444,6 +1512,7 @@
 .method public isSafeExit()Z
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -1454,6 +1523,7 @@
 
     return p0
 
+    .line 2
     :cond_0
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -1477,6 +1547,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -1487,6 +1558,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -1494,10 +1566,12 @@
 
     move-result-wide p0
 
+    .line 3
     new-instance p2, Lcom/xiaomi/milab/videosdk/XmsAudioMixer;
 
     invoke-direct {p2}, Lcom/xiaomi/milab/videosdk/XmsAudioMixer;-><init>()V
 
+    .line 4
     iput-wide p0, p2, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     return-object p2
@@ -1520,6 +1594,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -1530,6 +1605,7 @@
 
     return-object v1
 
+    .line 2
     :cond_0
     iget-wide v3, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -1555,11 +1631,13 @@
 
     return-object v1
 
+    .line 3
     :cond_1
     new-instance p2, Lcom/xiaomi/milab/videosdk/XmsVideoMixer;
 
     invoke-direct {p2}, Lcom/xiaomi/milab/videosdk/XmsVideoMixer;-><init>()V
 
+    .line 4
     iput-wide p0, p2, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     return-object p2
@@ -1594,10 +1672,12 @@
 .method public reconnect()V
     .locals 3
 
+    .line 1
     const-class v0, Lcom/xiaomi/milab/videosdk/XmsTimeline;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
@@ -1605,15 +1685,18 @@
 
     if-eqz v1, :cond_0
 
+    .line 3
     monitor-exit v0
 
     return-void
 
+    .line 4
     :cond_0
     iget-wide v1, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     invoke-direct {p0, v1, v2}, Lcom/xiaomi/milab/videosdk/XmsTimeline;->nativeReconnect(J)V
 
+    .line 5
     monitor-exit v0
 
     return-void
@@ -1631,10 +1714,12 @@
 .method public releaseAction()V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/XmsTimeline;->releaseListener:Lcom/xiaomi/milab/videosdk/OnReleaseListener;
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-interface {p0}, Lcom/xiaomi/milab/videosdk/OnReleaseListener;->onRelease()V
 
     :cond_0
@@ -1652,6 +1737,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -1662,6 +1748,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -1669,6 +1756,7 @@
 
     invoke-direct {p0, v0, v1, v2, v3}, Lcom/xiaomi/milab/videosdk/XmsTimeline;->nativeRemoveAudioTrack(JJ)V
 
+    .line 3
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/XmsTimeline;->trackHashMap:Ljava/util/HashMap;
 
     iget-wide v0, p1, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
@@ -1681,6 +1769,7 @@
 
     const-wide/16 v0, 0x0
 
+    .line 4
     iput-wide v0, p1, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     :cond_1
@@ -1699,6 +1788,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -1709,6 +1799,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -1716,6 +1807,7 @@
 
     invoke-direct {p0, v0, v1, v2, v3}, Lcom/xiaomi/milab/videosdk/XmsTimeline;->nativeRemoveDecorateTrack(JJ)V
 
+    .line 3
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/XmsTimeline;->trackHashMap:Ljava/util/HashMap;
 
     iget-wide v0, p1, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
@@ -1728,6 +1820,7 @@
 
     const-wide/16 v0, 0x0
 
+    .line 4
     iput-wide v0, p1, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     :cond_1
@@ -1746,6 +1839,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -1756,6 +1850,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -1765,6 +1860,7 @@
 
     const-wide/16 v0, 0x0
 
+    .line 3
     iput-wide v0, p1, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     :cond_1
@@ -1783,6 +1879,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -1793,6 +1890,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -1800,6 +1898,7 @@
 
     invoke-direct {p0, v0, v1, v2, v3}, Lcom/xiaomi/milab/videosdk/XmsTimeline;->nativeRemoveVideoTrack(JJ)V
 
+    .line 3
     iget-object p0, p0, Lcom/xiaomi/milab/videosdk/XmsTimeline;->trackHashMap:Ljava/util/HashMap;
 
     iget-wide v0, p1, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
@@ -1812,6 +1911,7 @@
 
     const-wide/16 v0, 0x0
 
+    .line 4
     iput-wide v0, p1, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     :cond_1
@@ -1822,6 +1922,7 @@
 .method public resetInAndOut()V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -1830,6 +1931,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -1901,12 +2003,14 @@
 .method public setAutoForceSync()V
     .locals 2
 
+    .line 1
     invoke-static {}, Lcom/xiaomi/milab/videosdk/utils/Device;->isMTKPlatform()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 2
     sget-object v0, Lcom/xiaomi/milab/videosdk/XmsTimeline;->TAG:Ljava/lang/String;
 
     const-string v1, "mtk platform force sync"
@@ -1915,10 +2019,12 @@
 
     const/4 v0, 0x1
 
+    .line 3
     invoke-virtual {p0, v0}, Lcom/xiaomi/milab/videosdk/XmsTimeline;->setForceSync(Z)V
 
     goto :goto_0
 
+    .line 4
     :cond_0
     sget-object p0, Lcom/xiaomi/milab/videosdk/XmsTimeline;->TAG:Ljava/lang/String;
 
@@ -1941,6 +2047,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -1949,6 +2056,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -1968,6 +2076,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -1976,6 +2085,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -1999,6 +2109,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -2007,6 +2118,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-wide v2, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -2038,6 +2150,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -2046,6 +2159,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-wide v2, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -2077,6 +2191,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -2085,6 +2200,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-wide v2, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -2112,6 +2228,7 @@
         }
     .end annotation
 
+    .line 1
     iput-object p1, p0, Lcom/xiaomi/milab/videosdk/XmsTimeline;->releaseListener:Lcom/xiaomi/milab/videosdk/OnReleaseListener;
 
     return-void
@@ -2120,6 +2237,7 @@
 .method public startPreview()V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -2128,6 +2246,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -2301,10 +2420,12 @@
 .method public stop()V
     .locals 3
 
+    .line 1
     const-class v0, Lcom/xiaomi/milab/videosdk/XmsTimeline;
 
     monitor-enter v0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
@@ -2312,15 +2433,18 @@
 
     if-eqz v1, :cond_0
 
+    .line 3
     monitor-exit v0
 
     return-void
 
+    .line 4
     :cond_0
     iget-wide v1, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     invoke-direct {p0, v1, v2}, Lcom/xiaomi/milab/videosdk/XmsTimeline;->nativeStop(J)V
 
+    .line 5
     monitor-exit v0
 
     return-void
@@ -2338,6 +2462,7 @@
 .method public stopPreview()V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -2346,6 +2471,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -2357,6 +2483,7 @@
 .method public stopPreviewRecording()V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->isNULL()Z
 
     move-result v0
@@ -2365,6 +2492,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
@@ -2388,6 +2516,7 @@
         }
     .end annotation
 
+    .line 1
     iget-wide v1, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     move-object v0, p0
@@ -2406,6 +2535,7 @@
 .method public updateRender()V
     .locals 2
 
+    .line 1
     iget-wide v0, p0, Lcom/xiaomi/milab/videosdk/XmsNativeObject;->mNativePtr:J
 
     invoke-virtual {p0, v0, v1}, Lcom/xiaomi/milab/videosdk/XmsTimeline;->updateRender(J)V

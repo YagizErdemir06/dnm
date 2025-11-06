@@ -1,4 +1,4 @@
-.class Lcom/google/common/collect/TreeBasedTable$TreeRow;
+.class public Lcom/google/common/collect/TreeBasedTable$TreeRow;
 .super Lcom/google/common/collect/StandardTable$Row;
 .source "SourceFile"
 
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field final lowerBound:Ljava/lang/Object;
+.field public final lowerBound:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TC;"
@@ -38,9 +38,9 @@
     .end annotation
 .end field
 
-.field final synthetic this$0:Lcom/google/common/collect/TreeBasedTable;
+.field public final synthetic this$0:Lcom/google/common/collect/TreeBasedTable;
 
-.field final upperBound:Ljava/lang/Object;
+.field public final upperBound:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TC;"
@@ -51,7 +51,7 @@
     .end annotation
 .end field
 
-.field transient wholeRow:Ljava/util/SortedMap;
+.field public transient wholeRow:Ljava/util/SortedMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/SortedMap<",
@@ -150,6 +150,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/TreeBasedTable$TreeRow;->this$0:Lcom/google/common/collect/TreeBasedTable;
 
     invoke-virtual {p0}, Lcom/google/common/collect/TreeBasedTable;->columnComparator()Ljava/util/Comparator;
@@ -162,10 +163,12 @@
 .method public compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/TreeBasedTable$TreeRow;->comparator()Ljava/util/Comparator;
 
     move-result-object p0
 
+    .line 2
     invoke-interface {p0, p1, p2}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
 
     move-result p0
@@ -244,6 +247,7 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p0, p1}, Lcom/google/common/collect/TreeBasedTable$TreeRow;->rangeContains(Ljava/lang/Object;)Z
 
     move-result v0
@@ -275,12 +279,15 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/StandardTable$Row;->updateBackingRowMapField()V
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/StandardTable$Row;->backingRowMap:Ljava/util/Map;
 
     if-eqz p0, :cond_0
 
+    .line 3
     check-cast p0, Ljava/util/SortedMap;
 
     invoke-interface {p0}, Ljava/util/SortedMap;->firstKey()Ljava/lang/Object;
@@ -289,6 +296,7 @@
 
     return-object p0
 
+    .line 4
     :cond_0
     new-instance p0, Ljava/util/NoSuchElementException;
 
@@ -307,6 +315,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -317,6 +326,7 @@
 
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/TreeBasedTable$TreeRow;
 
     iget-object v1, p0, Lcom/google/common/collect/TreeBasedTable$TreeRow;->this$0:Lcom/google/common/collect/TreeBasedTable;
@@ -367,12 +377,15 @@
         }
     .end annotation
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/StandardTable$Row;->updateBackingRowMapField()V
 
+    .line 2
     iget-object p0, p0, Lcom/google/common/collect/StandardTable$Row;->backingRowMap:Ljava/util/Map;
 
     if-eqz p0, :cond_0
 
+    .line 3
     check-cast p0, Ljava/util/SortedMap;
 
     invoke-interface {p0}, Ljava/util/SortedMap;->lastKey()Ljava/lang/Object;
@@ -381,6 +394,7 @@
 
     return-object p0
 
+    .line 4
     :cond_0
     new-instance p0, Ljava/util/NoSuchElementException;
 
@@ -392,18 +406,21 @@
 .method public maintainEmptyInvariant()V
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Lcom/google/common/collect/TreeBasedTable$TreeRow;->updateWholeRowField()V
 
+    .line 2
     iget-object v0, p0, Lcom/google/common/collect/TreeBasedTable$TreeRow;->wholeRow:Ljava/util/SortedMap;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
+    invoke-interface {v0}, Ljava/util/SortedMap;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
+    .line 3
     iget-object v0, p0, Lcom/google/common/collect/TreeBasedTable$TreeRow;->this$0:Lcom/google/common/collect/TreeBasedTable;
 
     iget-object v0, v0, Lcom/google/common/collect/StandardTable;->backingMap:Ljava/util/Map;
@@ -414,8 +431,10 @@
 
     const/4 v0, 0x0
 
+    .line 4
     iput-object v0, p0, Lcom/google/common/collect/TreeBasedTable$TreeRow;->wholeRow:Ljava/util/SortedMap;
 
+    .line 5
     iput-object v0, p0, Lcom/google/common/collect/StandardTable$Row;->backingRowMap:Ljava/util/Map;
 
     :cond_0
@@ -433,6 +452,7 @@
     .annotation runtime Ljavax/annotation/CheckForNull;
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -443,6 +463,7 @@
 
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
 
+    .line 2
     invoke-super {p0, p1, p2}, Lcom/google/common/collect/StandardTable$Row;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -459,10 +480,12 @@
 
     if-eqz p1, :cond_2
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/TreeBasedTable$TreeRow;->lowerBound:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
+    .line 2
     invoke-virtual {p0, v0, p1}, Lcom/google/common/collect/TreeBasedTable$TreeRow;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
 
     move-result v0
@@ -474,6 +497,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 3
     invoke-virtual {p0, v0, p1}, Lcom/google/common/collect/TreeBasedTable$TreeRow;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
 
     move-result p0
@@ -502,6 +526,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -532,6 +557,7 @@
     :goto_0
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/TreeBasedTable$TreeRow;
 
     iget-object v1, p0, Lcom/google/common/collect/TreeBasedTable$TreeRow;->this$0:Lcom/google/common/collect/TreeBasedTable;
@@ -553,6 +579,7 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -563,6 +590,7 @@
 
     invoke-static {v0}, Lcom/google/common/base/Preconditions;->checkArgument(Z)V
 
+    .line 2
     new-instance v0, Lcom/google/common/collect/TreeBasedTable$TreeRow;
 
     iget-object v1, p0, Lcom/google/common/collect/TreeBasedTable$TreeRow;->this$0:Lcom/google/common/collect/TreeBasedTable;
@@ -579,11 +607,12 @@
 .method public updateWholeRowField()V
     .locals 2
 
+    .line 1
     iget-object v0, p0, Lcom/google/common/collect/TreeBasedTable$TreeRow;->wholeRow:Ljava/util/SortedMap;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
+    invoke-interface {v0}, Ljava/util/SortedMap;->isEmpty()Z
 
     move-result v0
 
@@ -601,6 +630,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 2
     :cond_0
     iget-object v0, p0, Lcom/google/common/collect/TreeBasedTable$TreeRow;->this$0:Lcom/google/common/collect/TreeBasedTable;
 

@@ -1,4 +1,4 @@
-.class Lcom/google/common/escape/Escaper$1;
+.class public Lcom/google/common/escape/Escaper$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -28,13 +28,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/google/common/escape/Escaper;
+.field public final synthetic this$0:Lcom/google/common/escape/Escaper;
 
 
 # direct methods
 .method public constructor <init>(Lcom/google/common/escape/Escaper;)V
     .locals 0
 
+    .line 1
     iput-object p1, p0, Lcom/google/common/escape/Escaper$1;->this$0:Lcom/google/common/escape/Escaper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

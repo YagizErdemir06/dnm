@@ -1,4 +1,4 @@
-.class abstract Lcom/google/common/collect/MapMakerInternalMap$AbstractWeakKeyEntry;
+.class public abstract Lcom/google/common/collect/MapMakerInternalMap$AbstractWeakKeyEntry;
 .super Ljava/lang/ref/WeakReference;
 .source "SourceFile"
 
@@ -34,9 +34,9 @@
 
 
 # instance fields
-.field final hash:I
+.field public final hash:I
 
-.field final next:Lcom/google/common/collect/MapMakerInternalMap$InternalEntry;
+.field public final next:Lcom/google/common/collect/MapMakerInternalMap$InternalEntry;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TE;"
@@ -63,10 +63,13 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0, p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V
 
+    .line 2
     iput p3, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractWeakKeyEntry;->hash:I
 
+    .line 3
     iput-object p4, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractWeakKeyEntry;->next:Lcom/google/common/collect/MapMakerInternalMap$InternalEntry;
 
     return-void
@@ -77,6 +80,7 @@
 .method public getHash()I
     .locals 0
 
+    .line 1
     iget p0, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractWeakKeyEntry;->hash:I
 
     return p0
@@ -90,7 +94,8 @@
         }
     .end annotation
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    .line 1
+    invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -105,6 +110,7 @@
         }
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/MapMakerInternalMap$AbstractWeakKeyEntry;->next:Lcom/google/common/collect/MapMakerInternalMap$InternalEntry;
 
     return-object p0

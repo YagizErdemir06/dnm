@@ -1,4 +1,4 @@
-.class abstract Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo;
+.class public abstract Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -43,14 +43,19 @@
 .method public constructor <init>(ILcom/google/android/exoplayer2/source/TrackGroup;I)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo;->rendererIndex:I
 
+    .line 3
     iput-object p2, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo;->trackGroup:Lcom/google/android/exoplayer2/source/TrackGroup;
 
+    .line 4
     iput p3, p0, Lcom/google/android/exoplayer2/trackselection/DefaultTrackSelector$TrackInfo;->trackIndex:I
 
+    .line 5
     invoke-virtual {p2, p3}, Lcom/google/android/exoplayer2/source/TrackGroup;->getFormat(I)Lcom/google/android/exoplayer2/Format;
 
     move-result-object p1

@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/source/chunk/MediaChunkIterator$1;
+.class public Lcom/google/android/exoplayer2/source/chunk/MediaChunkIterator$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -21,6 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,6 +32,7 @@
 .method public getChunkEndTimeUs()J
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/util/NoSuchElementException;
 
     invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
@@ -41,6 +43,7 @@
 .method public getChunkStartTimeUs()J
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/util/NoSuchElementException;
 
     invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
@@ -51,6 +54,7 @@
 .method public getDataSpec()Lcom/google/android/exoplayer2/upstream/DataSpec;
     .locals 0
 
+    .line 1
     new-instance p0, Ljava/util/NoSuchElementException;
 
     invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V

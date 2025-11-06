@@ -15,14 +15,23 @@
 
 
 # instance fields
-.field public final synthetic a:Lcom/android/camera/ui/FaceView$d;
+.field public final synthetic c:Lcom/android/camera/ui/FaceView$d;
 
 
 # direct methods
 .method public constructor <init>(Lcom/android/camera/ui/FaceView$d;)V
     .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$1"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcom/android/camera/ui/FaceView$d$a;->a:Lcom/android/camera/ui/FaceView$d;
+    .line 1
+    iput-object p1, p0, Lcom/android/camera/ui/FaceView$d$a;->c:Lcom/android/camera/ui/FaceView$d;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
@@ -33,12 +42,23 @@
 # virtual methods
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
+
+    .line 1
     invoke-virtual {p1}, Landroid/animation/Animator;->removeAllListeners()V
 
-    iget-object p0, p0, Lcom/android/camera/ui/FaceView$d$a;->a:Lcom/android/camera/ui/FaceView$d;
+    .line 2
+    iget-object p0, p0, Lcom/android/camera/ui/FaceView$d$a;->c:Lcom/android/camera/ui/FaceView$d;
 
     iget-object p0, p0, Lcom/android/camera/ui/FaceView$d;->c:Lcom/android/camera/ui/FaceView;
 
@@ -51,10 +71,20 @@
 
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
     .end annotation
 
-    iget-object p1, p0, Lcom/android/camera/ui/FaceView$d$a;->a:Lcom/android/camera/ui/FaceView$d;
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
+    .end annotation
+
+    .line 1
+    iget-object p1, p0, Lcom/android/camera/ui/FaceView$d$a;->c:Lcom/android/camera/ui/FaceView$d;
 
     iget-object p1, p1, Lcom/android/camera/ui/FaceView$d;->c:Lcom/android/camera/ui/FaceView;
 
@@ -62,18 +92,28 @@
 
     invoke-virtual {p1, v0}, Lcom/android/camera/ui/FaceView;->setFaceRectVisible(I)V
 
-    iget-object p0, p0, Lcom/android/camera/ui/FaceView$d$a;->a:Lcom/android/camera/ui/FaceView$d;
+    .line 2
+    iget-object p0, p0, Lcom/android/camera/ui/FaceView$d$a;->c:Lcom/android/camera/ui/FaceView$d;
 
     const/high16 p1, 0x3f800000    # 1.0f
 
-    invoke-static {p0, p1}, Lcom/android/camera/ui/FaceView$d;->d(Lcom/android/camera/ui/FaceView$d;F)F
+    invoke-static {p0, p1}, Lcom/android/camera/ui/FaceView$d;->b(Lcom/android/camera/ui/FaceView$d;F)F
 
     return-void
 .end method
 
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 0
-    .annotation build Lh7/c;
+    .annotation build Ld/d/a/x6/c;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "animation"
+        }
     .end annotation
 
     return-void

@@ -13,12 +13,14 @@
     name = "DefaultImpls"
 .end annotation
 
-.annotation runtime Lnm/i0;
+.annotation runtime Lh/i0;
     bv = {
         0x1,
         0x0,
         0x3
     }
+    d1 = {}
+    d2 = {}
     k = 0x3
     mv = {
         0x1,
@@ -40,11 +42,13 @@
 
     const/4 p2, 0x0
 
+    .line 1
     :cond_0
     invoke-interface {p0, p1, p2}, Lcom/faceunity/core/callback/OnPosterRenderCallback;->onPhotoLoaded(ILjava/util/ArrayList;)V
 
     return-void
 
+    .line 2
     :cond_1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 

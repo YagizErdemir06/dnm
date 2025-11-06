@@ -7,11 +7,11 @@
 
 
 # instance fields
-.field names:Ljava/util/Vector;
+.field public names:Ljava/util/Vector;
 
-.field types:Ljava/util/Vector;
+.field public types:Ljava/util/Vector;
 
-.field values:Ljava/util/Vector;
+.field public values:Ljava/util/Vector;
 
 
 # direct methods

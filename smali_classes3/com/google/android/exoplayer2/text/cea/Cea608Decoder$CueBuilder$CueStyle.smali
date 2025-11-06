@@ -1,4 +1,4 @@
-.class Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder$CueStyle;
+.class public Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder$CueStyle;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -26,12 +26,16 @@
 .method public constructor <init>(IZI)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput p1, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder$CueStyle;->style:I
 
+    .line 3
     iput-boolean p2, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder$CueStyle;->underline:Z
 
+    .line 4
     iput p3, p0, Lcom/google/android/exoplayer2/text/cea/Cea608Decoder$CueBuilder$CueStyle;->start:I
 
     return-void

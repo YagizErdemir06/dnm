@@ -183,8 +183,6 @@
         }
     .end annotation
 
-    const/4 v5, 0x0
-
     .line 1
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
 
@@ -194,6 +192,8 @@
     invoke-static {}, Lcom/google/common/collect/ImmutableList;->of()Lcom/google/common/collect/ImmutableList;
 
     move-result-object v7
+
+    const/4 v5, 0x0
 
     const/4 v8, 0x0
 
@@ -346,6 +346,7 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/exoplayer2/source/dash/manifest/Representation;->initializationUri:Lcom/google/android/exoplayer2/source/dash/manifest/RangedUri;
 
     return-object p0

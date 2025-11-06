@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field protected final mStatus:Lcom/google/android/gms/common/api/Status;
+.field public final mStatus:Lcom/google/android/gms/common/api/Status;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
@@ -21,10 +21,12 @@
         .end annotation
     .end param
 
+    .line 1
     invoke-virtual {p1}, Lcom/google/android/gms/common/api/Status;->getStatusCode()I
 
     move-result v0
 
+    .line 2
     invoke-virtual {p1}, Lcom/google/android/gms/common/api/Status;->getStatusMessage()Ljava/lang/String;
 
     move-result-object v1
@@ -57,6 +59,7 @@
 
     move-result-object v0
 
+    .line 3
     invoke-direct {p0, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/google/android/gms/common/api/ApiException;->mStatus:Lcom/google/android/gms/common/api/Status;
@@ -79,6 +82,7 @@
 .method public getStatusCode()I
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/api/ApiException;->mStatus:Lcom/google/android/gms/common/api/Status;
 
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/Status;->getStatusCode()I
@@ -96,6 +100,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/api/ApiException;->mStatus:Lcom/google/android/gms/common/api/Status;
 
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/Status;->getStatusMessage()Ljava/lang/String;

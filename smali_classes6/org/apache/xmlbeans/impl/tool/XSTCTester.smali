@@ -25,6 +25,7 @@
 
     const/16 v1, 0x8
 
+    .line 1
     invoke-static {v0, v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
 
     move-result-object v0
@@ -37,6 +38,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -51,6 +53,7 @@
 
     if-eqz p1, :cond_2
 
+    .line 1
     invoke-interface {p1}, Ljava/util/Collection;->size()I
 
     move-result v1
@@ -59,6 +62,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -71,6 +75,7 @@
 
     if-eqz v1, :cond_2
 
+    .line 3
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -104,38 +109,47 @@
         }
     .end annotation
 
+    .line 1
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     const-string v1, "h"
 
+    .line 2
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v2, "help"
 
+    .line 3
     invoke-interface {v0, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v3, "usage"
 
+    .line 4
     invoke-interface {v0, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v4, "version"
 
+    .line 5
     invoke-interface {v0, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v5, "showpass"
 
+    .line 6
     invoke-interface {v0, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v6, "errcode"
 
+    .line 7
     invoke-interface {v0, v6}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    .line 8
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v7
 
+    .line 9
     new-instance v9, Lorg/apache/xmlbeans/impl/tool/CommandLine;
 
     sget-object v10, Ljava/util/Collections;->EMPTY_SET:Ljava/util/Set;
@@ -144,6 +158,7 @@
 
     invoke-direct {v9, v11, v0, v10}, Lorg/apache/xmlbeans/impl/tool/CommandLine;-><init>([Ljava/lang/String;Ljava/util/Collection;Ljava/util/Collection;)V
 
+    .line 10
     invoke-virtual {v9, v1}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -166,6 +181,7 @@
 
     goto/16 :goto_c
 
+    .line 11
     :cond_0
     invoke-virtual {v9, v4}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
@@ -173,28 +189,34 @@
 
     if-eqz v0, :cond_1
 
+    .line 12
     invoke-static {}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->printVersion()V
 
+    .line 13
     invoke-static {v1}, Ljava/lang/System;->exit(I)V
 
     return-void
 
+    .line 14
     :cond_1
     invoke-virtual {v9}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getBadOpts()[Ljava/lang/String;
 
     move-result-object v0
 
+    .line 15
     array-length v2, v0
 
     if-lez v2, :cond_3
 
     move v2, v1
 
+    .line 16
     :goto_0
     array-length v3, v0
 
     if-ge v2, v3, :cond_2
 
+    .line 17
     sget-object v3, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v4, Ljava/lang/StringBuffer;
@@ -219,13 +241,16 @@
 
     goto :goto_0
 
+    .line 18
     :cond_2
     invoke-static {}, Lorg/apache/xmlbeans/impl/tool/XSTCTester;->printUsage()V
 
+    .line 19
     invoke-static {v1}, Ljava/lang/System;->exit(I)V
 
     return-void
 
+    .line 20
     :cond_3
     invoke-virtual {v9}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->args()[Ljava/lang/String;
 
@@ -235,10 +260,12 @@
 
     if-nez v0, :cond_4
 
+    .line 21
     invoke-static {}, Lorg/apache/xmlbeans/impl/tool/XSTCTester;->printUsage()V
 
     return-void
 
+    .line 22
     :cond_4
     invoke-virtual {v9, v5}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
@@ -255,6 +282,7 @@
     :cond_5
     move v0, v1
 
+    .line 23
     :goto_1
     invoke-virtual {v9, v6}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getOpt(Ljava/lang/String;)Ljava/lang/String;
 
@@ -267,26 +295,31 @@
     :cond_6
     move v2, v1
 
+    .line 24
     :goto_2
     invoke-virtual {v9}, Lorg/apache/xmlbeans/impl/tool/CommandLine;->getFiles()[Ljava/io/File;
 
     move-result-object v3
 
+    .line 25
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
+    .line 26
     new-instance v5, Lorg/apache/xmlbeans/impl/tool/XMLBeanXSTCHarness;
 
     invoke-direct {v5}, Lorg/apache/xmlbeans/impl/tool/XMLBeanXSTCHarness;-><init>()V
 
     move v6, v1
 
+    .line 27
     :goto_3
     array-length v9, v3
 
     if-ge v6, v9, :cond_8
 
+    .line 28
     aget-object v9, v3, v6
 
     invoke-virtual {v9}, Ljava/io/File;->getName()Ljava/lang/String;
@@ -301,6 +334,7 @@
 
     if-ltz v9, :cond_7
 
+    .line 29
     aget-object v9, v3, v6
 
     invoke-interface {v4, v9}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
@@ -310,6 +344,7 @@
 
     goto :goto_3
 
+    .line 30
     :cond_8
     new-instance v3, Ljava/io/File;
 
@@ -317,6 +352,7 @@
 
     invoke-direct {v3, v6}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
+    .line 31
     new-instance v6, Ljava/io/PrintWriter;
 
     new-instance v9, Ljava/io/FileWriter;
@@ -327,76 +363,96 @@
 
     const-string v9, "<html>"
 
+    .line 32
     invoke-virtual {v6, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v9, "<style>td {border-bottom: 1px solid black} xmp {white-space: normal; word-wrap: break-word; word-break: break-all} </style>"
 
+    .line 33
     invoke-virtual {v6, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v9, "<body>"
 
+    .line 34
     invoke-virtual {v6, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v9, "<script language=\'JavaScript\' type=\'text/javascript\'>"
 
+    .line 35
     invoke-virtual {v6, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v9, "var w;"
 
+    .line 36
     invoke-virtual {v6, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v9, "function openWindow(schema, instance) {"
 
+    .line 37
     invoke-virtual {v6, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v9, "  if (w == null) {"
 
+    .line 38
     invoke-virtual {v6, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v9, "    w = window.open(\'about:blank\', \'xstc\');"
 
+    .line 39
     invoke-virtual {v6, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v10, "  }"
 
+    .line 40
     invoke-virtual {v6, v10}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v11, "  if (w.closed) {"
 
+    .line 41
     invoke-virtual {v6, v11}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    .line 42
     invoke-virtual {v6, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    .line 43
     invoke-virtual {v6, v10}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v9, "  w.document.open();"
 
+    .line 44
     invoke-virtual {v6, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v9, "  w.document.write(\"<frameset rows=*,*><frame src=\'\" + schema + \"\'><frame src=\'\" + instance + \"\'></frameset>\");"
 
+    .line 45
     invoke-virtual {v6, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v9, "  w.document.close();"
 
+    .line 46
     invoke-virtual {v6, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v9, "  w.focus();"
 
+    .line 47
     invoke-virtual {v6, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v9, "}"
 
+    .line 48
     invoke-virtual {v6, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v9, "</script>"
 
+    .line 49
     invoke-virtual {v6, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v9, "<h1>XML Schema Test Collection Results</h1>"
 
+    .line 50
     invoke-virtual {v6, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    .line 51
     new-instance v9, Ljava/lang/StringBuffer;
 
     invoke-direct {v9}, Ljava/lang/StringBuffer;-><init>()V
@@ -427,20 +483,25 @@
 
     const-string v9, "<p>Values in schema or instance valid columns are results from compiling or validating respectively."
 
+    .line 52
     invoke-virtual {v6, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v9, "Red or orange background mean the test failed.</p>"
 
+    .line 53
     invoke-virtual {v6, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v9, "<table style=\'border: 1px solid black\' cellpadding=0 cellspacing=0>"
 
+    .line 54
     invoke-virtual {v6, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v9, "<tr><td witdh=10%>id</td><td width=70%>Description</td><td width=10%>sch v</td><td width=10%>ins v</td></tr>"
 
+    .line 55
     invoke-virtual {v6, v9}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    .line 56
     invoke-interface {v4}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -456,12 +517,14 @@
 
     if-eqz v11, :cond_10
 
+    .line 57
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v11
 
     check-cast v11, Ljava/io/File;
 
+    .line 58
     sget-object v12, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v13, Ljava/lang/StringBuffer;
@@ -480,14 +543,17 @@
 
     invoke-virtual {v12, v13}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 59
     new-instance v12, Ljava/util/ArrayList;
 
     invoke-direct {v12}, Ljava/util/ArrayList;-><init>()V
 
+    .line 60
     invoke-static {v11, v12}, Lorg/apache/xmlbeans/impl/tool/XSTCTester;->parseLTGFile(Ljava/io/File;Ljava/util/Collection;)[Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;
 
     move-result-object v13
 
+    .line 61
     new-instance v14, Ljava/util/ArrayList;
 
     invoke-direct {v14}, Ljava/util/ArrayList;-><init>()V
@@ -496,25 +562,30 @@
 
     move v15, v1
 
+    .line 62
     :goto_5
     array-length v1, v13
 
     if-ge v15, v1, :cond_b
 
+    .line 63
     new-instance v1, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCaseResult;
 
     invoke-direct {v1}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCaseResult;-><init>()V
 
     move-object/from16 v16, v4
 
+    .line 64
     aget-object v4, v13, v15
 
     invoke-static {v1, v4}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCaseResult;->access$002(Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCaseResult;Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;)Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;
 
+    .line 65
     invoke-interface {v5, v1}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$Harness;->runTestCase(Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCaseResult;)V
 
     add-int/lit8 v10, v10, 0x1
 
+    .line 66
     invoke-virtual {v1, v2}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCaseResult;->succeeded(Z)Z
 
     move-result v4
@@ -530,6 +601,7 @@
 
     goto :goto_7
 
+    .line 67
     :cond_a
     :goto_6
     invoke-interface {v14, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
@@ -544,6 +616,7 @@
     :cond_b
     move-object/from16 v16, v4
 
+    .line 68
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -564,6 +637,7 @@
 
     invoke-virtual {v6, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    .line 69
     invoke-interface {v12}, Ljava/util/Collection;->isEmpty()Z
 
     move-result v1
@@ -572,12 +646,15 @@
 
     const-string v1, "<tr><td>Errors within the LTG file:"
 
+    .line 70
     invoke-virtual {v6, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v1, "<xmp>"
 
+    .line 71
     invoke-virtual {v6, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    .line 72
     invoke-interface {v12}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -589,6 +666,7 @@
 
     if-eqz v11, :cond_c
 
+    .line 73
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v11
@@ -600,12 +678,15 @@
     :cond_c
     const-string v1, "</xmp>"
 
+    .line 74
     invoke-virtual {v6, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    .line 75
     invoke-virtual {v6, v4}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     goto :goto_9
 
+    .line 76
     :cond_d
     invoke-interface {v14}, Ljava/util/Collection;->size()I
 
@@ -615,8 +696,10 @@
 
     const-string v1, "<tr><td colspan=4 bgcolor=green>Nothing to report</td></tr>"
 
+    .line 77
     invoke-virtual {v6, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    .line 78
     :cond_e
     :goto_9
     invoke-interface {v14}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
@@ -630,6 +713,7 @@
 
     if-eqz v4, :cond_f
 
+    .line 79
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v4
@@ -647,6 +731,7 @@
 
     goto/16 :goto_4
 
+    .line 80
     :cond_10
     new-instance v0, Ljava/lang/StringBuffer;
 
@@ -676,14 +761,18 @@
 
     const-string v0, "</table>"
 
+    .line 81
     invoke-virtual {v6, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    .line 82
     invoke-virtual {v6}, Ljava/io/PrintWriter;->close()V
 
+    .line 83
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
+    .line 84
     sget-object v2, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v4, Ljava/lang/StringBuffer;
@@ -714,6 +803,7 @@
 
     invoke-virtual {v2, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
+    .line 85
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v1, Ljava/lang/StringBuffer;
@@ -734,6 +824,7 @@
 
     const-string v0, "os.name"
 
+    .line 86
     invoke-static {v0}, Lorg/apache/xmlbeans/SystemProperties;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -750,6 +841,7 @@
 
     if-ltz v0, :cond_11
 
+    .line 87
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v0
@@ -780,6 +872,7 @@
 
     goto :goto_b
 
+    .line 88
     :cond_11
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
@@ -808,12 +901,14 @@
     :goto_b
     return-void
 
+    .line 89
     :cond_12
     :goto_c
     invoke-static {}, Lorg/apache/xmlbeans/impl/tool/XSTCTester;->printUsage()V
 
     const/4 v0, 0x0
 
+    .line 90
     invoke-static {v0}, Ljava/lang/System;->exit(I)V
 
     return-void
@@ -822,14 +917,17 @@
 .method public static makeHTMLDescription(Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;)Ljava/lang/String;
     .locals 4
 
+    .line 1
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
     const-string v1, "<a class=noline href=\'javascript:openWindow(\""
 
+    .line 2
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    .line 3
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->getSchemaFile()Ljava/io/File;
 
     move-result-object v1
@@ -842,10 +940,12 @@
 
     const-string v1, "about:No schema"
 
+    .line 4
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     goto :goto_0
 
+    .line 5
     :cond_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->getSchemaFile()Ljava/io/File;
 
@@ -864,8 +964,10 @@
     :goto_0
     const-string v1, "\", \""
 
+    .line 6
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    .line 7
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->getInstanceFile()Ljava/io/File;
 
     move-result-object v1
@@ -874,10 +976,12 @@
 
     const-string v1, "about:No instance"
 
+    .line 8
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     goto :goto_1
 
+    .line 9
     :cond_1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->getInstanceFile()Ljava/io/File;
 
@@ -896,8 +1000,10 @@
     :goto_1
     const-string v1, "\")\'><xmp>"
 
+    .line 10
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    .line 11
     sget-object v1, Lorg/apache/xmlbeans/impl/tool/XSTCTester;->leadingSpace:Ljava/util/regex/Pattern;
 
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->getDescription()Ljava/lang/String;
@@ -918,8 +1024,10 @@
 
     const-string p0, "</xmp></a>"
 
+    .line 12
     invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
+    .line 13
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -936,6 +1044,7 @@
 
     return-object p0
 
+    .line 1
     :cond_0
     invoke-virtual {p0}, Ljava/io/File;->getAbsoluteFile()Ljava/io/File;
 
@@ -945,6 +1054,7 @@
 
     move-result-object p0
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -979,10 +1089,12 @@
 .method public static parseLTGFile(Ljava/io/File;Ljava/util/Collection;)[Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;
     .locals 13
 
+    .line 1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    .line 2
     :try_start_0
     new-instance v1, Lorg/apache/xmlbeans/XmlOptions;
 
@@ -992,26 +1104,32 @@
 
     const-string v3, "http://www.bea.com/2003/05/xmlbean/ltgfmt"
 
+    .line 3
     invoke-static {v2, v3}, Ljava/util/Collections;->singletonMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Lorg/apache/xmlbeans/XmlOptions;->setLoadSubstituteNamespaces(Ljava/util/Map;)Lorg/apache/xmlbeans/XmlOptions;
 
+    .line 4
     invoke-virtual {v1, v0}, Lorg/apache/xmlbeans/XmlOptions;->setErrorListener(Ljava/util/Collection;)Lorg/apache/xmlbeans/XmlOptions;
 
+    .line 5
     invoke-virtual {v1}, Lorg/apache/xmlbeans/XmlOptions;->setLoadLineNumbers()Lorg/apache/xmlbeans/XmlOptions;
 
+    .line 6
     invoke-static {p0, v1}, Lorg/apache/xmlbeans/impl/xb/ltgfmt/TestsDocument$Factory;->parse(Ljava/io/File;Lorg/apache/xmlbeans/XmlOptions;)Lorg/apache/xmlbeans/impl/xb/ltgfmt/TestsDocument;
 
     move-result-object v2
 
+    .line 7
     invoke-interface {v2, v1}, Lorg/apache/xmlbeans/XmlObject;->validate(Lorg/apache/xmlbeans/XmlOptions;)Z
 
     move-result v1
 
     if-eqz v1, :cond_b
 
+    .line 8
     invoke-interface {v2}, Lorg/apache/xmlbeans/impl/xb/ltgfmt/TestsDocument;->getTests()Lorg/apache/xmlbeans/impl/xb/ltgfmt/TestsDocument$Tests;
 
     move-result-object v1
@@ -1020,6 +1138,7 @@
 
     move-result-object v1
 
+    .line 9
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
@@ -1028,17 +1147,21 @@
 
     move v4, v3
 
+    .line 10
     :goto_0
     array-length v5, v1
 
     if-ge v4, v5, :cond_a
 
+    .line 11
     new-instance v5, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;
 
     invoke-direct {v5}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;-><init>()V
 
+    .line 12
     invoke-static {v5, p0}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->access$302(Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;Ljava/io/File;)Ljava/io/File;
 
+    .line 13
     aget-object v6, v1, v4
 
     invoke-interface {v6}, Lorg/apache/xmlbeans/impl/xb/ltgfmt/TestCase;->getId()Ljava/lang/String;
@@ -1047,6 +1170,7 @@
 
     invoke-static {v5, v6}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->access$402(Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;Ljava/lang/String;)Ljava/lang/String;
 
+    .line 14
     aget-object v6, v1, v4
 
     invoke-interface {v6}, Lorg/apache/xmlbeans/impl/xb/ltgfmt/TestCase;->getOrigin()Ljava/lang/String;
@@ -1055,6 +1179,7 @@
 
     invoke-static {v5, v6}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->access$502(Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;Ljava/lang/String;)Ljava/lang/String;
 
+    .line 15
     aget-object v6, v1, v4
 
     invoke-interface {v6}, Lorg/apache/xmlbeans/impl/xb/ltgfmt/TestCase;->getDescription()Ljava/lang/String;
@@ -1063,6 +1188,7 @@
 
     invoke-static {v5, v6}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->access$602(Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;Ljava/lang/String;)Ljava/lang/String;
 
+    .line 16
     aget-object v6, v1, v4
 
     invoke-interface {v6}, Lorg/apache/xmlbeans/impl/xb/ltgfmt/TestCase;->getFiles()Lorg/apache/xmlbeans/impl/xb/ltgfmt/TestCase$Files;
@@ -1073,29 +1199,34 @@
 
     move-result-object v6
 
+    .line 17
     aget-object v7, v1, v4
 
     invoke-interface {v7}, Lorg/apache/xmlbeans/impl/xb/ltgfmt/TestCase;->getOrigin()Ljava/lang/String;
 
     move v7, v3
 
+    .line 18
     :goto_1
     array-length v8, v6
 
     if-ge v7, v8, :cond_9
 
+    .line 19
     aget-object v8, v6, v7
 
     invoke-interface {v8}, Lorg/apache/xmlbeans/impl/xb/ltgfmt/FileDesc;->getFolder()Ljava/lang/String;
 
     move-result-object v8
 
+    .line 20
     aget-object v9, v6, v7
 
     invoke-interface {v9}, Lorg/apache/xmlbeans/impl/xb/ltgfmt/FileDesc;->getFileName()Ljava/lang/String;
 
     move-result-object v9
 
+    .line 21
     new-instance v10, Ljava/io/File;
 
     invoke-virtual {p0}, Ljava/io/File;->getParentFile()Ljava/io/File;
@@ -1120,6 +1251,7 @@
 
     invoke-direct {v10, v11, v8}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
+    .line 22
     invoke-virtual {v10}, Ljava/io/File;->exists()Z
 
     move-result v8
@@ -1140,6 +1272,7 @@
 
     goto/16 :goto_3
 
+    .line 23
     :cond_0
     aget-object v8, v6, v7
 
@@ -1163,6 +1296,7 @@
 
     if-ne v8, v9, :cond_2
 
+    .line 24
     invoke-static {v5}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->access$1100(Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;)Ljava/io/File;
 
     move-result-object v8
@@ -1171,6 +1305,7 @@
 
     const-string v8, "More than one resource file speicifed - ignoring all but last"
 
+    .line 25
     aget-object v9, v6, v7
 
     invoke-static {v8, v9}, Lorg/apache/xmlbeans/XmlError;->forObject(Ljava/lang/String;Lorg/apache/xmlbeans/XmlObject;)Lorg/apache/xmlbeans/XmlError;
@@ -1183,9 +1318,11 @@
 
     invoke-interface {p1, v8}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
+    .line 26
     :cond_1
     invoke-static {v5, v10}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->access$1102(Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;Ljava/io/File;)Ljava/io/File;
 
+    .line 27
     aget-object v8, v6, v7
 
     invoke-interface {v8}, Lorg/apache/xmlbeans/impl/xb/ltgfmt/FileDesc;->getValidity()Z
@@ -1196,6 +1333,7 @@
 
     goto :goto_2
 
+    .line 28
     :cond_2
     new-instance p0, Lorg/apache/xmlbeans/XmlException;
 
@@ -1211,6 +1349,7 @@
 
     throw p0
 
+    .line 29
     :cond_3
     invoke-static {v5}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->access$700(Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;)Ljava/io/File;
 
@@ -1220,6 +1359,7 @@
 
     const-string v8, "More than one instance file speicifed - ignoring all but last"
 
+    .line 30
     aget-object v9, v6, v7
 
     invoke-static {v8, v9}, Lorg/apache/xmlbeans/XmlError;->forObject(Ljava/lang/String;Lorg/apache/xmlbeans/XmlObject;)Lorg/apache/xmlbeans/XmlError;
@@ -1232,9 +1372,11 @@
 
     invoke-interface {p1, v8}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
+    .line 31
     :cond_4
     invoke-static {v5, v10}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->access$702(Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;Ljava/io/File;)Ljava/io/File;
 
+    .line 32
     aget-object v8, v6, v7
 
     invoke-interface {v8}, Lorg/apache/xmlbeans/impl/xb/ltgfmt/FileDesc;->getValidity()Z
@@ -1245,6 +1387,7 @@
 
     goto :goto_2
 
+    .line 33
     :cond_5
     invoke-static {v5}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->access$900(Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;)Ljava/io/File;
 
@@ -1254,6 +1397,7 @@
 
     const-string v8, "More than one schema file speicifed - ignoring all but last"
 
+    .line 34
     aget-object v9, v6, v7
 
     invoke-static {v8, v9}, Lorg/apache/xmlbeans/XmlError;->forObject(Ljava/lang/String;Lorg/apache/xmlbeans/XmlObject;)Lorg/apache/xmlbeans/XmlError;
@@ -1266,9 +1410,11 @@
 
     invoke-interface {p1, v8}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
+    .line 35
     :cond_6
     invoke-static {v5, v10}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->access$902(Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;Ljava/io/File;)Ljava/io/File;
 
+    .line 36
     aget-object v8, v6, v7
 
     invoke-interface {v8}, Lorg/apache/xmlbeans/impl/xb/ltgfmt/FileDesc;->getValidity()Z
@@ -1277,6 +1423,7 @@
 
     invoke-static {v5, v8}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->access$1002(Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;Z)Z
 
+    .line 37
     :goto_2
     aget-object v8, v6, v7
 
@@ -1286,6 +1433,7 @@
 
     if-eqz v8, :cond_8
 
+    .line 38
     aget-object v8, v6, v7
 
     invoke-interface {v8}, Lorg/apache/xmlbeans/impl/xb/ltgfmt/FileDesc;->getCode()Lorg/apache/xmlbeans/impl/xb/ltgfmt/Code;
@@ -1300,6 +1448,7 @@
 
     goto :goto_4
 
+    .line 39
     :cond_7
     :goto_3
     new-instance v8, Ljava/lang/StringBuffer;
@@ -1334,6 +1483,7 @@
 
     goto/16 :goto_1
 
+    .line 40
     :cond_9
     invoke-interface {v2, v5}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
@@ -1341,6 +1491,7 @@
 
     goto/16 :goto_0
 
+    .line 41
     :cond_a
     invoke-interface {v2}, Ljava/util/Collection;->size()I
 
@@ -1356,6 +1507,7 @@
 
     return-object p0
 
+    .line 42
     :cond_b
     new-instance v1, Ljava/lang/Exception;
 
@@ -1386,13 +1538,15 @@
     :catch_0
     move-exception p0
 
+    .line 43
     invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
 
     move-result v1
 
     if-eqz v1, :cond_c
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    .line 44
+    invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object p0
 
@@ -1400,6 +1554,7 @@
 
     goto :goto_6
 
+    .line 45
     :cond_c
     invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -1412,6 +1567,7 @@
 
     if-eqz v0, :cond_d
 
+    .line 46
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -1434,6 +1590,7 @@
 .method public static printUsage()V
     .locals 2
 
+    .line 1
     sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     const-string v1, "Usage: xstc [-showpass] [-errcode] foo_LTGfmt.xml ..."
@@ -1446,6 +1603,7 @@
 .method public static summarizeResultAsHTMLTableRows(Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCaseResult;Ljava/io/PrintWriter;Z)V
     .locals 13
 
+    .line 1
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCaseResult;->getTestCase()Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;
 
     move-result-object v0
@@ -1456,6 +1614,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 2
     invoke-virtual {v0}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->getErrorCode()Ljava/lang/String;
 
     move-result-object v3
@@ -1469,6 +1628,7 @@
     :cond_0
     move v3, v1
 
+    .line 3
     :goto_0
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCaseResult;->getIvMessages()Ljava/util/Collection;
 
@@ -1501,6 +1661,7 @@
     :goto_1
     move v4, v2
 
+    .line 4
     :goto_2
     invoke-virtual {v0}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->getSchemaFile()Ljava/io/File;
 
@@ -1529,6 +1690,7 @@
     :goto_3
     move v5, v2
 
+    .line 5
     :goto_4
     invoke-virtual {v0}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->getInstanceFile()Ljava/io/File;
 
@@ -1560,6 +1722,7 @@
     :goto_6
     if-eqz v3, :cond_9
 
+    .line 6
     invoke-virtual {v0}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->getErrorCode()Ljava/lang/String;
 
     move-result-object v7
@@ -1594,6 +1757,7 @@
     :cond_8
     move v2, v1
 
+    .line 7
     :cond_9
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCaseResult;->isCrash()Z
 
@@ -1617,6 +1781,7 @@
 
     add-int/2addr v1, v4
 
+    .line 8
     new-instance v8, Ljava/lang/StringBuffer;
 
     invoke-direct {v8}, Ljava/lang/StringBuffer;-><init>()V
@@ -1647,6 +1812,7 @@
 
     invoke-virtual {p1, v8}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    .line 9
     new-instance v8, Ljava/lang/StringBuffer;
 
     invoke-direct {v8}, Ljava/lang/StringBuffer;-><init>()V
@@ -1669,12 +1835,14 @@
 
     invoke-virtual {p1, v8}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    .line 10
     invoke-virtual {v0}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->getResourceFile()Ljava/io/File;
 
     move-result-object v8
 
     if-nez v8, :cond_b
 
+    .line 11
     invoke-virtual {v0}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCase;->getSchemaFile()Ljava/io/File;
 
     move-result-object v8
@@ -1689,6 +1857,7 @@
 
     goto :goto_8
 
+    .line 12
     :cond_b
     new-instance v8, Ljava/lang/StringBuffer;
 
@@ -1730,6 +1899,7 @@
 
     move-result-object v8
 
+    .line 13
     :goto_8
     new-instance v10, Ljava/lang/StringBuffer;
 
@@ -1772,6 +1942,7 @@
 
     invoke-virtual {p1, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    .line 14
     new-instance v5, Ljava/lang/StringBuffer;
 
     invoke-direct {v5}, Ljava/lang/StringBuffer;-><init>()V
@@ -1821,12 +1992,15 @@
 
     const-string v5, "</tr>"
 
+    .line 15
     invoke-virtual {p1, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     if-eqz v3, :cond_11
 
+    .line 16
     invoke-virtual {p1, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    .line 17
     new-instance v3, Ljava/lang/StringBuffer;
 
     invoke-direct {v3}, Ljava/lang/StringBuffer;-><init>()V
@@ -1861,11 +2035,13 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    .line 18
     invoke-virtual {p1, v5}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     :cond_11
     if-eqz v4, :cond_15
 
+    .line 19
     invoke-virtual {p0, p2}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCaseResult;->succeeded(Z)Z
 
     move-result p2
@@ -1874,6 +2050,7 @@
 
     const-string p2, "<tr><td colspan=4 bgcolor=yellow><xmp>"
 
+    .line 20
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     goto :goto_c
@@ -1881,8 +2058,10 @@
     :cond_12
     const-string p2, "<tr><td colspan=4><xmp>"
 
+    .line 21
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
+    .line 22
     :goto_c
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCaseResult;->getSvMessages()Ljava/util/Collection;
 
@@ -1899,6 +2078,7 @@
 
     if-eqz v0, :cond_13
 
+    .line 23
     invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -1907,6 +2087,7 @@
 
     goto :goto_d
 
+    .line 24
     :cond_13
     invoke-virtual {p0}, Lorg/apache/xmlbeans/impl/tool/XSTCTester$TestCaseResult;->getIvMessages()Ljava/util/Collection;
 
@@ -1923,6 +2104,7 @@
 
     if-eqz p2, :cond_14
 
+    .line 25
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object p2
@@ -1934,6 +2116,7 @@
     :cond_14
     const-string p0, "</xmp></tr></td>"
 
+    .line 26
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     :cond_15

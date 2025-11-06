@@ -51,6 +51,7 @@
 
     goto :goto_0
 
+    .line 1
     :cond_0
     invoke-interface {p3, p0, p1}, Landroid/util/AttributeSet;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -61,6 +62,7 @@
 
     const-string p3, "@string/"
 
+    .line 2
     invoke-virtual {p0, p3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p3
@@ -71,18 +73,22 @@
 
     const/16 p3, 0x8
 
+    .line 3
     invoke-virtual {p0, p3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p3
 
+    .line 4
     invoke-virtual {p2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object p4
 
     new-instance v0, Landroid/util/TypedValue;
 
+    .line 5
     invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
 
+    .line 6
     :try_start_0
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -112,9 +118,11 @@
 
     goto :goto_1
 
+    .line 7
     :catch_0
     new-instance p2, Ljava/lang/StringBuilder;
 
+    .line 8
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string p3, "Could not find resource for "
@@ -135,17 +143,20 @@
 
     invoke-static {p6, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 9
     :goto_1
     iget-object p2, v0, Landroid/util/TypedValue;->string:Ljava/lang/CharSequence;
 
     if-eqz p2, :cond_1
 
+    .line 10
     invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p0
 
     goto :goto_2
 
+    .line 11
     :cond_1
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -179,8 +190,10 @@
 
     if-nez p0, :cond_3
 
+    .line 12
     new-instance p2, Ljava/lang/StringBuilder;
 
+    .line 13
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string p3, "Required XML attribute \""

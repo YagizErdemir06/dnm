@@ -1,4 +1,4 @@
-.class final Lcom/google/common/collect/MutableClassToInstanceMap$SerializedForm;
+.class public final Lcom/google/common/collect/MutableClassToInstanceMap$SerializedForm;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -55,8 +55,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Lcom/google/common/collect/MutableClassToInstanceMap$SerializedForm;->backingMap:Ljava/util/Map;
 
     return-void
@@ -67,6 +69,7 @@
 .method public readResolve()Ljava/lang/Object;
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/common/collect/MutableClassToInstanceMap$SerializedForm;->backingMap:Ljava/util/Map;
 
     invoke-static {p0}, Lcom/google/common/collect/MutableClassToInstanceMap;->create(Ljava/util/Map;)Lcom/google/common/collect/MutableClassToInstanceMap;

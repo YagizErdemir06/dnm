@@ -1,4 +1,4 @@
-.class Landroidx/core/provider/RequestExecutor;
+.class public Landroidx/core/provider/RequestExecutor;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -17,6 +17,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,15 +35,13 @@
         .end annotation
     .end param
 
+    .line 1
     new-instance v7, Landroidx/core/provider/RequestExecutor$DefaultThreadFactory;
 
     invoke-direct {v7, p0, p1}, Landroidx/core/provider/RequestExecutor$DefaultThreadFactory;-><init>(Ljava/lang/String;I)V
 
+    .line 2
     new-instance p0, Ljava/util/concurrent/ThreadPoolExecutor;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
 
     int-to-long v3, p2
 
@@ -52,12 +51,17 @@
 
     invoke-direct {v6}, Ljava/util/concurrent/LinkedBlockingDeque;-><init>()V
 
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
     move-object v0, p0
 
     invoke-direct/range {v0 .. v7}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
 
     const/4 p1, 0x1
 
+    .line 3
     invoke-virtual {p0, p1}, Ljava/util/concurrent/ThreadPoolExecutor;->allowCoreThreadTimeOut(Z)V
 
     return-object p0
@@ -70,6 +74,7 @@
         .end annotation
     .end param
 
+    .line 1
     new-instance v0, Landroidx/core/provider/RequestExecutor$HandlerExecutor;
 
     invoke-direct {v0, p0}, Landroidx/core/provider/RequestExecutor$HandlerExecutor;-><init>(Landroid/os/Handler;)V
@@ -104,10 +109,12 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Landroidx/core/provider/CalleeHandler;->create()Landroid/os/Handler;
 
     move-result-object v0
 
+    .line 2
     new-instance v1, Landroidx/core/provider/RequestExecutor$ReplyRunnable;
 
     invoke-direct {v1, v0, p1, p2}, Landroidx/core/provider/RequestExecutor$ReplyRunnable;-><init>(Landroid/os/Handler;Ljava/util/concurrent/Callable;Landroidx/core/util/Consumer;)V
@@ -149,12 +156,14 @@
         }
     .end annotation
 
+    .line 1
     invoke-interface {p0, p1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
 
     move-result-object p0
 
     int-to-long p1, p2
 
+    .line 2
     :try_start_0
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -168,10 +177,11 @@
 
     return-object p0
 
+    .line 3
     :catch_0
     new-instance p0, Ljava/lang/InterruptedException;
 
-    const-string/jumbo p1, "timeout"
+    const-string p1, "timeout"
 
     invoke-direct {p0, p1}, Ljava/lang/InterruptedException;-><init>(Ljava/lang/String;)V
 
@@ -180,11 +190,13 @@
     :catch_1
     move-exception p0
 
+    .line 4
     throw p0
 
     :catch_2
     move-exception p0
 
+    .line 5
     new-instance p1, Ljava/lang/RuntimeException;
 
     invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V

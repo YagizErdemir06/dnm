@@ -242,6 +242,7 @@
 
     const-string v0, "Notifier must not be null"
 
+    .line 1
     invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     iget-object v0, p0, Lcom/google/android/gms/common/api/internal/ListenerHolder;->zaa:Ljava/util/concurrent/Executor;
@@ -250,6 +251,7 @@
 
     invoke-direct {v1, p0, p1}, Lcom/google/android/gms/common/api/internal/zacb;-><init>(Lcom/google/android/gms/common/api/internal/ListenerHolder;Lcom/google/android/gms/common/api/internal/ListenerHolder$Notifier;)V
 
+    .line 2
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-void
@@ -258,6 +260,7 @@
 .method public final zaa(Lcom/google/android/gms/common/api/internal/ListenerHolder$Notifier;)V
     .locals 0
 
+    .line 1
     iget-object p0, p0, Lcom/google/android/gms/common/api/internal/ListenerHolder;->zab:Ljava/lang/Object;
 
     if-nez p0, :cond_0
@@ -266,6 +269,7 @@
 
     return-void
 
+    .line 2
     :cond_0
     :try_start_0
     invoke-interface {p1, p0}, Lcom/google/android/gms/common/api/internal/ListenerHolder$Notifier;->notifyListener(Ljava/lang/Object;)V
@@ -277,7 +281,9 @@
     :catch_0
     move-exception p0
 
+    .line 3
     invoke-interface {p1}, Lcom/google/android/gms/common/api/internal/ListenerHolder$Notifier;->onNotifyListenerFailed()V
 
+    .line 4
     throw p0
 .end method

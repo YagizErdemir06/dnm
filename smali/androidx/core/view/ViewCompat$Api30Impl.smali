@@ -1,4 +1,4 @@
-.class Landroidx/core/view/ViewCompat$Api30Impl;
+.class public Landroidx/core/view/ViewCompat$Api30Impl;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -22,6 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +33,8 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
-    invoke-static {p0}, Landroidx/core/view/v;->a(Landroid/view/View;)Ljava/lang/CharSequence;
+    .line 1
+    invoke-virtual {p0}, Landroid/view/View;->getStateDescription()Ljava/lang/CharSequence;
 
     move-result-object p0
 
@@ -48,12 +50,14 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    invoke-static {p0}, Landroidx/core/view/t;->a(Landroid/view/View;)Landroid/view/WindowInsetsController;
+    .line 1
+    invoke-virtual {p0}, Landroid/view/View;->getWindowInsetsController()Landroid/view/WindowInsetsController;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
+    .line 2
     invoke-static {p0}, Landroidx/core/view/WindowInsetsControllerCompat;->toWindowInsetsControllerCompat(Landroid/view/WindowInsetsController;)Landroidx/core/view/WindowInsetsControllerCompat;
 
     move-result-object p0
@@ -72,7 +76,8 @@
     .annotation build Landroidx/annotation/DoNotInline;
     .end annotation
 
-    invoke-static {p0, p1}, Landroidx/core/view/u;->a(Landroid/view/View;Ljava/lang/CharSequence;)V
+    .line 1
+    invoke-virtual {p0, p1}, Landroid/view/View;->setStateDescription(Ljava/lang/CharSequence;)V
 
     return-void
 .end method
